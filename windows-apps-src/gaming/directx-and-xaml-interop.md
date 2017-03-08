@@ -3,13 +3,20 @@ author: mtoepke
 title: "DirectX 및 XAML interop"
 description: "UWP(유니버설 Windows 플랫폼) 게임에서 XAML(Extensible Application Markup Language)과 Microsoft DirectX를 함께 사용할 수 있습니다."
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx, xaml 상호 운용성"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 167709c7ba3470c144924801cb8cf18ffa544c5d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6934ac8bfbff487e57d0097cb129faf853a3eb9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DirectX 및 XAML interop
+# <a name="directx-and-xaml-interop"></a>DirectX 및 XAML 상호 운용성
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -22,7 +29,7 @@ UWP(유니버설 Windows 플랫폼) 게임 또는 앱에서 XAML(Extensible Appl
 
  
 
-## XAML 및 DirectX
+## <a name="xaml-and-directx"></a>XAML 및 DirectX
 
 DirectX는 각각 2D와 3D 그래픽에 대한 강력한 라이브러리인 Direct2D 및 Microsoft Direct3D를 제공합니다. XAML이 기본적인 2D 기능 및 효과, 모델링 및 게임 등의 여러 앱을 제공하지만 보다 복잡한 그래픽 지원이 필요합니다. 따라서 Direct2D 및 Direct3D를 사용하여 그래픽 전체 또는 일부를 렌더링하고 XAML을 사용하여 그 외 모든 작업을 수행할 수 있습니다.
 
@@ -41,7 +48,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 -   정기적인 짧은 대기 시간 간격으로 업데이트가 수행되어야 하는 상황에서, 또는 업데이트된 그래픽을 실시간으로 나타내는 데 DirectX를 사용하는 경우 XAML 프레임워크 새로 고침 타이머와 동기화하지 않고 그래픽을 새로 고칠 수 있도록 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 클래스를 사용하세요. 이 유형을 사용하면 그래픽 디바이스의 스왑 체인([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631))에 직접 액세스할 수 있고 렌더링 대상의 최상위 XAML 레이어에 액세스할 수 있습니다. 이 유형은 XAML 기반 사용자 인터페이스가 필요한 게임 및 전체 화면 DirectX 앱에서 잘 작동합니다. 이 방법을 사용하려면 Microsoft DXGI(DirectX Graphics Infrastructure), Direct2D 및 Direct3D 기술을 포함하여 DirectX에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Direct3D 11의 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ff476345)을 참조하세요.
 
-## SurfaceImageSource
+## <a name="surfaceimagesource"></a>SurfaceImageSource
 
 
 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)는 그릴 DirectX 공유 표면을 제공하고 비트를 앱 콘텐츠로 작성합니다.
@@ -124,7 +131,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
  
 
-## VirtualSurfaceImageSource
+## <a name="virtualsurfaceimagesource"></a>VirtualSurfaceImageSource
 
 
 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)는 콘텐츠가 화면에 맞출 수 있는 크기보다 잠재적으로 더 클 때 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)를 확장하며 최적으로 렌더링하려면 콘텐츠를 가상화해야 합니다.
@@ -256,7 +263,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
     3.  [**IVirtualSurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324)를 호출합니다. 결과로 비트맵이 생성됩니다.
 
-## SwapChainPanel 및 게임
+## <a name="swapchainpanel-and-gaming"></a>SwapChainPanel 및 게임
 
 
 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)은 개발자가 스왑 체인을 직접 관리할 수 있는 경우 고성능 그래픽 및 게임을 지원하기 위해 디자인된 Windows 런타임 유형입니다. 이때 자신만의 DirectX 스왑 체인을 만들고 렌더링된 콘텐츠의 표시를 관리합니다.
@@ -353,7 +360,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
     XAML 요소는 Windows 런타임 레이아웃/렌더링 논리가 업데이트를 알리면 새로 고쳐집니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [**Win2D**](http://microsoft.github.io/Win2D/html/Introduction.htm)
 * [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)
@@ -368,10 +375,5 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -8,9 +8,16 @@ title: "XAML 테마 리소스"
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
 label: XAML theme resources
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 9ee42532cb7f13d611e2365d7c9cf8f0532dd1c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 51e5a3dac6ab8682cd9d10efafb7e1e38f9d53d4
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
@@ -440,10 +447,5 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [**TextBlock*
 
 [{ThemeResource} 태그 확장](../xaml-platform/themeresource-markup-extension.md)은 "고대비" 사전에서 여전히 [{StaticResource} 태그 확장](../xaml-platform/staticresource-markup-extension.md) 대신 사용됩니다. 이러한 상황은 지침 앞부분에 제공된 예외에 해당합니다. "고대비" 테마에 사용되는 대부분의 브러시 값은 시스템에서 포괄적으로 제어되는 색 선택을 사용하지만 XAML에는 특수하게 명명된 리소스(이름 맨 앞에 ‘System Color’가 붙은 리소스)로 노출됩니다. 시스템은 사용자가 접근성 센터를 통해 고대비 설정에 사용하는 특정 색을 설정할 수 있도록 합니다. 이러한 색 선택 항목은 특별히 명명된 리소스에 적용됩니다. 또한 XAML 프레임워크는 동일한 테마 변경 이벤트를 사용하여 시스템 수준에서 변경된 것이 확인될 때 이러한 브러시를 업데이트합니다. 이 때문에 여기에서 {ThemeResource} 태그 확장이 사용됩니다.
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

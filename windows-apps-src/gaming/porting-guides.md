@@ -3,16 +3,23 @@ author: mtoepke
 title: "게임 포팅 가이드"
 description: "기존 게임을 Direct3D 11, UWP(유니버설 Windows 플랫폼) 및 Windows 10으로 포팅하는 방법에 대한 가이드를 제공합니다."
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 포팅, direct3d 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3cfc483052d12b89cf2707e7b9ebd666e5c49e3d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5d5dd570dca35bc06c69ba18a986d240ee2a54a5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임 포팅 가이드
+# <a name="game-porting-guides"></a>게임 포팅 가이드
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 기존 게임을 Direct3D 11, UWP(유니버설 Windows 플랫폼) 및 Windows 10으로 포팅하는 방법에 대한 가이드를 제공합니다.
 
@@ -41,7 +48,7 @@ ms.openlocfilehash: 3cfc483052d12b89cf2707e7b9ebd666e5c49e3d
 
  
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **참고**  이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
@@ -51,10 +58,5 @@ ms.openlocfilehash: 3cfc483052d12b89cf2707e7b9ebd666e5c49e3d
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

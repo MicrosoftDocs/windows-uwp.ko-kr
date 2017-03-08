@@ -3,18 +3,25 @@ author: mcleanbyron
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: "Microsoft Store Services SDK는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다."
 title: "앱에서 광고 표시"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10 uwp, 광고, 광고, 배너, 중간"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 35dfe2864958a15cf01133d6017b7dd03f382e4a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b6343d8a011a3e62a3b714c7dab280c9d9a8f81d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱에서 광고 표시
+# <a name="display-ads-in-your-app"></a>앱에서 광고 표시
 
 
 UWP(유니버설 Windows 플랫폼) 및 Windows 스토어는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다.
 
-## Microsoft Advertising 라이브러리를 사용하여 배너 및 동영상 중간 광고 표시
+## <a name="display-banner-and-video-interstitial-ads-using-the-microsoft-advertising-libraries"></a>Microsoft Advertising 라이브러리를 사용하여 배너 및 동영상 중간 광고 표시
 
 배너 및 동영상 중간 광고를 포함하면 UWP 앱과 Windows 8.1 및 Windows Phone 8.x용 앱에서 수익을 창출할 수 있습니다. 광고는 PC, 태블릿 및 휴대폰용 Windows 앱에 표시됩니다. Windows 개발자 센터 대시보드의 [광고 성과 보고서](../publish/advertising-performance-report.md)를 사용하여 광고 성과를 실시간으로 모니터링할 수 있습니다.
 
@@ -29,7 +36,7 @@ UWP(유니버설 Windows 플랫폼) 및 Windows 스토어는 광고로 앱 수�
 | XAML/C# 앱에 배너 광고를 표시합니다.     | [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)을 참조하세요.        |
 | HTML/JavaScript 앱에 배너 광고를 표시합니다.     | [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)을 참조하세요.        |
 | Windows Phone Silverlight 8.x 앱에 배너 광고를 표시합니다.     | [Windows Phone Silverlight에서의 AdControl](adcontrol-in-windows-phone-silverlight.md)을 참조하세요.        |
-| 앱에 동영상 중간 광고를 표시합니다.     | [중간 광고](interstitial-ads.md)를 참조하세요.       |
+| 앱에 중간 광고를 표시합니다.     | [중간 광고](interstitial-ads.md)를 참조하세요.       |
 | HTML과 함께 JavaScript를 사용하여 작성된 UWP(유니버설 Windows 플랫폼) 앱에서 비디오 콘텐츠에 광고를 추가합니다.   |  [HTML 5 및 JavaScript로 된 동영상 콘텐츠에 광고 추가](add-advertisements-to-video-content.md)를 참조하세요.  |
 | 배너 및 중간 광고를 앱에 추가하는 방법을 보여 주는 샘플 프로젝트를 다운로드합니다.     |[GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.       |
 | 앱의 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 오류를 처리합니다.     | [오류 처리](error-handling-with-advertising-libraries.md)와 [AdControl 오류 처리](adcontrol-error-handling.md) 아래의 연습을 참조하세요.       |
@@ -38,14 +45,14 @@ UWP(유니버설 Windows 플랫폼) 및 Windows 스토어는 광고로 앱 수�
 
                             
 
-## 배너 광고에 대한 광고 조정 사용(Windows 8.1 및 Windows Phone 8.x)
+## <a name="use-ad-mediation-for-banner-ads-windows-81-and-windows-phone-8x"></a>배너 광고에 대한 광고 조정 사용(Windows 8.1 및 Windows Phone 8.x)
 
 Windows 8.1 및 Windows Phone 8.x 앱의 경우 **AdMediatorControl** 클래스를 사용하여 여러 광고 네트워크의 배너 광고를 표시함으로써 광고 수익을 최적화할 수 있습니다. 앱에 이 컨트롤을 추가하고 나면 Windows 개발자 센터 대시보드의 광고 조정 설정을 구성하고, Microsoft에서는 선택한 광고 네트워크에서 배너 광고 요청 조정을 담당합니다. 광고 조정에 대한 자세한 내용은 [광고 조정을 사용하여 광고 수익 최대화](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359.aspx)를 참조하세요.
 
->**참고**  **AdMediatorControl** 클래스를 사용한 광고 조정은 현재 Windows 10용 UWP 앱에 지원되지 않습니다. 동일한 배너 광고용(**AdControl**) 및 동영상 중간 광고용(**InterstitialAd**) API를 사용하는 UWP 앱에 대한 서버 측 중재가 출시 예정입니다. UWP 앱에서 **AdMediatorControl**을 **AdControl**로 마이그레이션하는 방법은 [UWP 앱을 위해 AdMediatorControl을 AdControl로 마이그레이션](migrate-from-admediatorcontrol-to-adcontrol.md)을 참조하세요.
+>**참고**&nbsp;&nbsp;**AdMediatorControl** 클래스를 사용한 광고 조정은 현재 Windows 10용 UWP 앱에 지원되지 않습니다. 동일한 배너 광고용(**AdControl**) 및 동영상 중간 광고용(**InterstitialAd**) API를 사용하는 UWP 앱에 대한 서버 측 중재가 출시 예정입니다. UWP 앱에서 **AdMediatorControl**을 **AdControl**로 마이그레이션하는 방법은 [UWP 앱을 위해 AdMediatorControl을 AdControl로 마이그레이션](migrate-from-admediatorcontrol-to-adcontrol.md)을 참조하세요.
 
 <span id="silverlight_support"/>
-## Windows Phone 8.x Silverlight 프로젝트용 광고 지원
+## <a name="advertising-support-for-windows-phone-8x-silverlight-projects"></a>Windows Phone 8.x Silverlight 프로젝트용 광고 지원
 
 일부 개발자 시나리오는 Windows Phone 8.x Silverlight 프로젝트에서 더 이상 지원되지 않습니다. 자세한 내용은 다음 표를 참조하세요.
 
@@ -54,14 +61,9 @@ Windows 8.1 및 Windows Phone 8.x 앱의 경우 **AdMediatorControl** 클래스�
 | Windows Phone 8.0 Silverlight     |  Universal Ad Client SDK 또는 Microsoft Advertising SDK의 이전 릴리스에서 **AdControl** 또는 **AdMediatorControl**을 이미 사용하는 기존 Windows Phone 8.0 Silverlight 프로젝트가 있고 이 앱이 Windows 스토어에 이미 게시된 경우, 프로젝트를 수정 및 다시 빌드할 수 있으며 디바이스의 변경 내용을 디버그 또는 테스트할 수 있습니다. 에뮬레이터에서 프로젝트 디버깅 또는 테스트는 지원되지 않습니다.  |  지원되지 않음.  |
 | Windows Phone 8.1 Silverlight    |  이전 SDK의 **AdControl** 또는 **AdMediatorControl**을 사용하는 기존 Windows Phone 8.1 Silverlight 프로젝트가 있는 경우 프로젝트를 수정하고 다시 빌드할 수 있습니다. 그러나 앱을 디버그하거나 테스트하려면 에뮬레이터에서 앱을 실행하고 응용 프로그램 ID와 광고 단위 ID에 [테스트 모드 값](test-mode-values.md)을 사용해야 합니다. 디바이스에서 앱 디버깅 또는 테스트는 지원되지 않습니다.  |   새 Windows Phone 8.1 Silverlight 프로젝트에 **AdControl** 또는 **AdMediatorControl**을 추가할 수 있습니다. 그러나 앱을 디버그하거나 테스트하려면 에뮬레이터에서 앱을 실행하고 응용 프로그램 ID와 광고 단위 ID에 [테스트 모드 값](test-mode-values.md)을 사용해야 합니다. 디바이스에서 앱 디버깅 또는 테스트는 지원되지 않습니다. |
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Microsoft 스토어 서비스 SDK](microsoft-store-services-sdk.md)
 * [광고로 앱 수익 창출](http://go.microsoft.com/fwlink/p/?LinkId=699559)
 * [광고 성과 보고서](../publish/advertising-performance-report.md)
-
-
-
-<!--HONumber=Sep16_HO2-->
-
 

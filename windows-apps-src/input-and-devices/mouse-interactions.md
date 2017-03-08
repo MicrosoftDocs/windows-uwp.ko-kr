@@ -5,9 +5,16 @@ title: "마우스 조작"
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: ed0c8e86d38865fad8bb784550b9b4fc61a8b40a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 94a92c184f4c695caf29cb7a185842ccd72e4c53
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -141,7 +148,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
@@ -152,10 +159,5 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

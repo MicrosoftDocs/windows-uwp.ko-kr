@@ -3,13 +3,20 @@ author: mtoepke
 title: "DirectX 게임에 리소스 로드"
 description: "대부분의 게임은 특정 시점에 로컬 저장소 또는 몇몇 다른 데이터 스트림에서 셰이더, 텍스처, 미리 정의된 메시 또는 기타 그래픽 데이터 등, 리소스와 자산을 로드합니다."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, directx, 리소스 로드"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 09221cb853b3d327b5cb60cacec109032135eabc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 032cde6294093a2c0a1c582312b9353a146e94da
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DirectX 게임에 리소스 로드
+# <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -18,14 +25,14 @@ ms.openlocfilehash: 09221cb853b3d327b5cb60cacec109032135eabc
 
 예를 들어, 게임에서 다각형 개체에 대한 메시는 다른 도구를 사용하여 만들고 특정 형식으로 내보냈을 수도 있습니다. 텍스처와 다른 리소스도 마찬가지입니다. 압축되지 않은 일반 비트맵은 대부분의 도구로 작성할 수 있고 대부분의 그래픽 API에서 이해할 수 있지만 게임에 사용하기는 아주 비효율적입니다. 이 항목에서는 Direct3D와 함께 사용하기 위해 세 가지 다른 유형의 그래픽 리소스인 메시(모델), 텍스처(비트맵), 컴파일된 셰이더 개체를 로드하는 기본 단계를 안내합니다.
 
-## 알아야 할 사항
+## <a name="what-you-need-to-know"></a>알아야 할 사항
 
 
-### 기술
+### <a name="technologies"></a>기술
 
 -   병렬 패턴 라이브러리(ppltasks.h)
 
-### 필수 조건
+### <a name="prerequisites"></a>필수 조건
 
 -   기본 Windows 런타임 이해
 -   비동기 작업 이해
@@ -68,9 +75,9 @@ ms.openlocfilehash: 09221cb853b3d327b5cb60cacec109032135eabc
 
  
 
-## 지침
+## <a name="instructions"></a>지침
 
-### 비동기 로딩
+### <a name="asynchronous-loading"></a>비동기 로딩
 
 비동기 로딩은 PPL(병렬 패턴 라이브러리)에서 **task** 템플릿을 사용하여 처리됩니다. **task**에는 비동기 호출 완료 후 그 결과를 처리하는 람다 앞에 오는 메서드 호출이 포함되어 있으며, 대개 다음 형식을 따릅니다.
 
@@ -194,7 +201,7 @@ void ResourceLoading::CreateDeviceResources()
 
 리소스 및 자산 유형이 다르면 그래픽 파이프라인에서 사용하기 위해 준비하기 전에 추가 처리 또는 변환이 필요할 수 있습니다. 이제 세 가지 리소스 유형(메시, 텍스처, 셰이더)을 살펴보겠습니다.
 
-### 로딩 메시
+### <a name="loading-meshes"></a>로딩 메시
 
 메시는 게임 내의 코드 프로시저로 생성되거나, 3DStudio MAX, Alias WaveFront 등, 다른 앱 또는 도구에서 파일로 내보낸 꼭짓점 데이터입니다. 이러한 메시는 게임에서 큐브 및 스피어 같은 단순한 primitive부터 집이나 캐릭터에 이르기까지 다양한 모델을 나타내며, 형식에 따라 색과 애니메이션 데이터를 포함하기도 합니다. 여기서는 꼭짓점 데이터만 포함하는 메시를 중점적으로 알아보겠습니다.
 
@@ -303,7 +310,7 @@ void BasicLoader::CreateMesh(
 
 다음으로 로딩 텍스처를 살펴보겠습니다.
 
-### 로딩 텍스처
+### <a name="loading-textures"></a>로딩 텍스처
 
 게임에서 가장 많이 사용되는 자산이자 디스크 및 메모리에 있는 대부분의 파일로 구성되는 자산은 텍스처입니다. 메시와 유사하게, 텍스처는 다양한 형식으로 제공될 수 있습니다. 개발자는 텍스처를 로드할 때 Direct3D가 사용할 수 있는 형식으로 텍스처를 변환합니다. 또한 텍스처는 광범위한 형식으로 제공되며 서로 다른 효과를 만드는 데 사용됩니다. 텍스처의 MIP 수준을 사용하여 거리 개체의 모양과 성능을 향상할 수 있습니다. 더트(dirt) 맵 및 그림자(light) 맵은 및 기본 텍스처 위에 효과 및 세부 항목을 겹쳐서 표현하는 데 사용되고 보통의 맵은 픽셀당 조명 효과 계산에 사용됩니다. 첨단 게임에서 보통의 장면에는 잠재적으로 수천 개의 개별 텍스처가 사용될 수 있으며, 코드는 이 모두를 효율적으로 관리해야 합니다.
 
@@ -514,7 +521,7 @@ void BasicLoader::CreateTexture(
 
 또한 개별 텍스처 또는 텍스처 "스킨"은 특정 메시 다각형이나 표면에 매핑할 수 있습니다. 이 매핑 데이터는 주로 아티스트나 디자이너가 모델과 텍스처를 만드는 데 사용한 도구에서 내보냅니다. 내보낸 데이터를 로드할 때는 이 정보도 캡처해야 합니다. 조각 음영을 수행할 경우 올바른 텍스처를 해당 표면에 매핑하는 데 이 정보를 사용할 것이기 때문입니다.
 
-### 로딩 셰이더
+### <a name="loading-shaders"></a>로딩 셰이더
 
 셰이더는 메모리로 로드되어 그래픽 파이프라인의 특정 단계에 호출되는 컴파일된 HLSL(High Level Shader Language) 파일입니다. 가장 일반적이고 필수적인 셰이더는 꼭짓점과 픽셀 셰이더로, 장면의 뷰포트에서 메시의 개별 꼭짓점과 픽셀을 각각 처리합니다. HLSL 코드는 기하 도형을 변환하기 위해 실행되며, 조명 효과와 텍스처를 적용하고 렌더링된 장면에 대해 사후 처리를 수행합니다.
 
@@ -689,11 +696,11 @@ task<void> BasicLoader::LoadShaderAsync(
 
 헐(hull) 및 기하 도형 셰이더 등, 다른 셰이더 형식에도 특정 구성이 필요할 수 있습니다. 다양한 셰이더 로딩 메서드에 대한 전체 코드는 [BasicLoader의 전체 코드](complete-code-for-basicloader.md) 및 [Direct3D 리소스 로딩 샘플]( http://go.microsoft.com/fwlink/p/?LinkID=265132)에 제공됩니다.
 
-## 설명
+## <a name="remarks"></a>설명
 
 이제 메시, 텍스처 및 컴파일된 셰이더 등, 많이 사용되는 게임 리소스와 자산을 비동기식으로 로드하는 데 필요한 메서드를 이해하고, 만들거나 수정할 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Direct3D 리소스 로드 샘플]( http://go.microsoft.com/fwlink/p/?LinkID=265132)
 * [BasicLoader의 전체 코드](complete-code-for-basicloader.md)
@@ -706,10 +713,5 @@ task<void> BasicLoader::LoadShaderAsync(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

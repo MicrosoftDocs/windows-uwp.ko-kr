@@ -3,13 +3,20 @@ author: jnHs
 Description: "모든 Microsoft Advertising 수익금은 개발자 센터 결제 계정을 통해 지급됩니다."
 title: "pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합"
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: baf488ac70ea2937a8bfda8a47d679a23053578d
-ms.openlocfilehash: e71c038575f1779c0a8d14306b0e4b8fd8eaf959
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5b93669adff4acfe791a2f607e9d8475e6213a31
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합
+# <a name="pubcenter-devcenter-payout-account-and-tax-profile-consolidation"></a>pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합
 
 2016년 4월 1일부터 모든 Microsoft Advertising 수익금은 개발자 센터 결제 계정을 통해 지급됩니다. 모든 광고 관리 및 지급 보고에 대한 자세한 내용을 보려면 [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/apps/overview)를 방문하세요. 
 
@@ -27,9 +34,4 @@ ms.openlocfilehash: e71c038575f1779c0a8d14306b0e4b8fd8eaf959
 추가 지원이 필요하면 [지원 티켓](http://go.microsoft.com/fwlink/p/?LinkId=733342)을 여세요.
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

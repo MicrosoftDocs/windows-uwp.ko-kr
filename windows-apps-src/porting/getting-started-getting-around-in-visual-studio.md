@@ -3,17 +3,24 @@ author: mcleblanc
 description: "Visual Studio 둘러보기"
 title: "Visual Studio 둘러보기"
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3f23745d161965d08a35abbef31b8e4342cf1ff6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 57341e52ad51e446e6828e5b4ba6228094152d7f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작: Visual Studio 둘러보기
+# <a name="getting-started-getting-around-in-visual-studio"></a>시작: Visual Studio 둘러보기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-## Microsoft Visual Studio 둘러보기
+## <a name="getting-around-in-microsoft-visual-studio"></a>Microsoft Visual Studio 둘러보기
 
 이제 앞에서 만든 프로젝트로 돌아가서 Microsoft Visual Studio IDE(통합 개발 환경)를 탐색하는 방법에 대해 알아보겠습니다.
 
@@ -27,7 +34,7 @@ Microsoft Visual Studio도 매우 유사하지만 기본 보기에서 왼쪽의 
 
 익숙하지 않은 경우 Visual Studio에서 창을 다시 정렬하여 화면 왼쪽에 소스 파일을 두고, 오른쪽에 도구 상자를 둘 수 있습니다. 실제로 창의 제목 표시줄을 클릭하고 끌어서 위치를 변경할 수 있으며, 이 경우 Visual Studio에서 마우스를 놓으면 고정되는 위치를 알려 주는 음영 상자를 표시합니다. 많은 창에는 해당 제목 표시줄에 작은 그리기 고정 아이콘도 있습니다. 이를 통해 패널을 현재 위치에 잠가, 있는 그대로 고정할 수 있습니다. 창의 고정을 해제하고 축소하여 공간을 절약할 수 있습니다. 이는 모니터가 좁은 쪽에 있는 경우에 유용합니다. 작업을 망친 경우 **창** 메뉴에서 **창 레이아웃 다시 설정**을 선택하여 순서를 복원합니다.
 
-## 컨트롤 추가, 속성 설정 및 이벤트에 응답
+## <a name="adding-controls-setting-their-properties-and-responding-to-events"></a>컨트롤 추가, 속성 설정 및 이벤트에 응답
 
 이제 프로젝트에 몇 가지 컨트롤을 추가해 보겠습니다. 그런 다음 몇 가지 속성을 변경하고 컨트롤 이벤트 중 하나에 응답하도록 코드를 작성합니다.
 
@@ -119,13 +126,8 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 
 앱을 종료하려면 Visual Studio로 돌아가서 **디버그** 메뉴를 탭한 후 **디버깅 중지**를 탭하거나 Shitf+F5를 누릅니다. Visual Studio에서는 여러 장치에서 앱을 시험하여 각 장치에서 제대로 실행되는지 확인할 수 있습니다.
 
-## 다음 단계
+## <a name="next-step"></a>다음 단계
 
 [시작: 공용 컨트롤](getting-started-common-controls.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

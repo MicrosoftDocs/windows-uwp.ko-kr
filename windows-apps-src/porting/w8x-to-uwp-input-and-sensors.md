@@ -1,11 +1,18 @@
 ---
 author: mcleblanc
 description: "디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다."
-title: "I/O, 디바이스 및 앱 모델에 대해 Windows 런타임 8.x를 UWP로 포팅&quot;"
+title: "I/O, 디바이스 및 앱 모델에 대해 Windows 런타임 8.x를 UWP로 포팅"
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: c3fb6a76800198c15ef05da9ba198ac5e73b35a8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 69fdeed812eb6add3eeacb0e776e7477e061979f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -38,7 +45,7 @@ ms.openlocfilehash: c3fb6a76800198c15ef05da9ba198ac5e73b35a8
 
 실행되고 있는 운영 체제를 검색하는 유니버설 8.1 앱의 코드가 있다면 논리에 대한 원인에 따라 코드를 변경해야 할 수 있습니다. 앱이 값에 대해 작업하지 않고 통과시킨다면 계속해서 운영 체제 정보를 수집할 수 있습니다.
 
-**참고** 기능이 있는지 검색하는 데 운영 체제 또는 디바이스 패밀리를 사용하지 않는 것이 좋습니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](w8x-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
+**참고** 기능이 있는지 검색하기 위해 운영 체제 또는 디바이스 제품군을 사용하는 것은 좋은 방법이 아닙니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](w8x-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
 
  
 
@@ -74,10 +81,5 @@ bool isDeviceFamilyNameKnown = qualifiers.TryGetValue("DeviceFamily", out device
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

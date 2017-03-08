@@ -3,13 +3,20 @@ author: msatranjr
 title: "Windows 런타임 구성 요소 오류 조건 진단"
 description: "이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: da02ed10336ea2381213fd5fada153db4cc06ab1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 런타임 구성 요소 오류 조건 진단
+# <a name="diagnosing-windows-runtime-component-error-conditions"></a>Windows 런타임 구성 요소 오류 조건 진단
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -19,7 +26,7 @@ ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
 
 이 문서에 모든 오류가 다 설명되어 있지는 않습니다. 여기에서 설명하는 오류는 일반적인 범주별로 나뉘어 있으며 각 범주별로 관련 오류 메시지 표가 제공됩니다. 메시지 텍스트(자리 표시자에 대한 특정 값 생략) 또는 메시지 번호를 검색합니다. 여기에서 필요한 정보를 찾지 못한 경우 이 문서 마지막에 있는 피드백 단추를 사용하여 이 설명서를 개선할 수 있도록 도와주시기 바랍니다. 오류 메시지를 포함시켜 주세요. 또는 Microsoft Connect 웹 사이트에서 버그를 보고할 수도 있습니다.
 
-## 비동기 인터페이스 구현에 대한 오류 메시지가 잘못된 형식 제공
+## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>비동기 인터페이스 구현에 대한 오류 메시지가 잘못된 형식 제공
 
 
 관리되는 Windows 런타임 구성 요소는 비동기 작업을 나타내는 UWP(유니버설 Windows 플랫폼) 인터페이스를 구현할 수 없습니다([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) 또는 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). 대신 .NET Framework가 Windows 런타임 구성 요소에서 비동기 작업을 생성하기 위해 [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) 클래스를 제공합니다. 비동기 인터페이스를 잘못 구현하려고 할 때 Winmdexp.exe가 표시하는 오류 메시지가 이 클래스를 이전 이름인 AsyncInfoFactory로 나타냅니다. .NET Framework는 더 이상 AsyncInfoFactory 클래스를 포함하지 않습니다.
@@ -34,7 +41,7 @@ ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
 
  
 
-## mscorlib.dll 또는 System.Runtime.dll에 대해 누락된 참조
+## <a name="missing-references-to-mscorlibdll-or-systemruntimedll"></a>mscorlib.dll 또는 System.Runtime.dll에 대해 누락된 참조
 
 
 이 문제는 명령줄에서 Winmdexp.exe를 사용하는 경우에만 발생합니다. /reference 옵션을 사용하여 "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5"(32비트 컴퓨터에서는 "%ProgramFiles%\\...")에 있는 .NET Framework 핵심 참조 어셈블리에서 mscorlib.dll과 System.Runtime.dll에 대한 참조를 모두 포함시키는 것이 좋습니다.
@@ -46,7 +53,7 @@ ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
 
  
 
-## 연산자 오버로드가 허용되지 않음
+## <a name="operator-overloading-is-not-allowed"></a>연산자 오버로드가 허용되지 않음
 
 
 관리 코드로 작성된 Windows 런타임 구성 요소에서는 공용 형식에 오버로드된 연산자를 노출할 수 없습니다.
@@ -61,7 +68,7 @@ ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
 
  
 
-## 클래스의 생성자가 동일한 수의 매개 변수 사용
+## <a name="constructors-on-a-class-have-the-same-number-of-parameters"></a>클래스의 생성자가 동일한 수의 매개 변수 사용
 
 
 UWP에서 클래스 생성자의 매개 변수 수는 모두 달라야 합니다. 예를 들어 **String** 형식의 단일 매개 변수를 사용하는 생성자와 **int**(Visual Basic에서는 **Integer**) 형식의 단일 매개 변수를 사용하는 생성자를 동시에 가질 수 없습니다. 이 문제를 해결하는 방법은 생성자마다 다른 개수의 매개 변수를 사용하는 방법뿐입니다.
@@ -72,7 +79,7 @@ UWP에서 클래스 생성자의 매개 변수 수는 모두 달라야 합니다
 
  
 
-## 동일한 수의 매개 변수를 사용하는 오버로드에 대해 기본값을 지정해야 함
+## <a name="must-specify-a-default-for-overloads-that-have-the-same-number-of-parameters"></a>동일한 수의 매개 변수를 사용하는 오버로드에 대해 기본값을 지정해야 함
 
 
 UWP에서 오버로드된 메서드는 하나의 오버로드가 기본 오버로드로 지정된 경우에만 동일한 수의 매개 변수를 사용할 수 있습니다. [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)에서 "오버로드 메서드"를 참조하세요.
@@ -84,7 +91,7 @@ UWP에서 오버로드된 메서드는 하나의 오버로드가 기본 오버�
 
  
 
-## 출력 파일의 네임스페이스 오류 및 잘못된 이름
+## <a name="namespace-errors-and-invalid-names-for-the-output-file"></a>출력 파일의 네임스페이스 오류 및 잘못된 이름
 
 
 유니버설 Windows 플랫폼에서는 Windows 메타데이터(.winmd) 파일의 모든 공용 형식이 .winmd 파일 이름을 공유하는 네임스페이스에 있거나 해당 파일 이름의 하위 네임스페이스에 있어야 합니다. 예를 들어 Visual Studio 프로젝트의 이름이 A.B(즉, Windows 런타임 구성 요소가 A.B.winmd)인 경우 공용 클래스 A.B.Class1 및 A.B.C.Class2는 포함될 수 있지만 A.Class3(WME0006) 또는 D.Class4(WME1044)는 포함될 수 없습니다.
@@ -118,7 +125,7 @@ Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이
 
  
 
-## 유효한 유니버설 Windows 플랫폼 형식이 아닌 형식 내보내기
+## <a name="exporting-types-that-arent-valid-universal-windows-platform-types"></a>유효한 유니버설 Windows 플랫폼 형식이 아닌 형식 내보내기
 
 
 구성 요소의 공용 인터페이스는 UWP 형식만 노출해야 합니다. 그러나 .NET Framework는 일반적으로 사용되는 다양한 형식에 대한 매핑을 제공하며 이들은 .NET Framework와 UWP에서 거의 유사합니다. 따라서 .NET Framework 개발자는 새 형식을 학습할 필요 없이 친숙한 형식을 사용하여 작업할 수 있습니다. 구성 요소의 공용 인터페이스에서 이러한 매핑된 .NET Framework 형식을 사용할 수 있습니다. [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)의 "Windows 런타임 구성 요소에서 형식 선언" 및 "관리 코드에 유니버설 Windows 플랫폼 형식 전달"과 [Windows 런타임 형식의 .NET Framework 매핑](net-framework-mappings-of-windows-runtime-types.md)을 참조하세요.
@@ -168,7 +175,7 @@ Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이
 
  
 
-## 허용되지 않는 형식의 필드가 포함된 구조
+## <a name="structures-that-contain-fields-of-disallowed-types"></a>허용되지 않는 형식의 필드가 포함된 구조
 
 
 UWP에서 구조체는 필드만 포함할 수 있으며 필드는 구조체에만 포함될 수 있습니다. 이러한 필드는 공용이어야 합니다. 유효한 필드 형식에는 열거형, 구조체, 기본 형식 등이 있습니다.
@@ -179,7 +186,7 @@ UWP에서 구조체는 필드만 포함할 수 있으며 필드는 구조체에�
 
  
 
-## 멤버 서명의 배열에 대한 제한
+## <a name="restrictions-on-arrays-in-member-signatures"></a>멤버 서명의 배열에 대한 제한
 
 
 UWP에서 멤버 서명의 배열은 하한이 0인 1차원 배열이어야 합니다. `myArray[][]`(Visual Basic에서는 `myArray()()`)와 같은 중첩된 배열은 허용되지 않습니다.
@@ -196,7 +203,7 @@ UWP에서 멤버 서명의 배열은 하한이 0인 1차원 배열이어야 합�
 
  
 
-## 배열 매개 변수는 배열 내용의 읽기 가능 또는 쓰기 가능 여부를 지정해야 함
+## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>배열 매개 변수는 배열 내용의 읽기 가능 또는 쓰기 가능 여부를 지정해야 함
 
 
 UWP에서 매개 변수는 읽기 전용이거나 쓰기 전용이어야 합니다. 매개 변수는 **ref**(Visual Basic에서는 [OutAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.outattribute.aspx) 특성이 없는 **ByRef**)로 표시할 수 없습니다. 이는 배열의 내용에 적용되므로 배열 매개 변수는 배열 내용이 읽기 전용인지 쓰기 전용인지 여부를 나타내야 합니다. 방향은 **out** 매개 변수(Visual Basic에서는 OutAttribute 특성을 가진 **ByRef** 매개 변수)의 경우 분명하지만 값(Visual Basic에서는 ByVal)으로 전달되는 배열 매개 변수는 표시해야 합니다. [Windows 런타임 구성 요소에 배열 전달](passing-arrays-to-a-windows-runtime-component.md)을 참조하세요.
@@ -211,7 +218,7 @@ UWP에서 매개 변수는 읽기 전용이거나 쓰기 전용이어야 합니�
 | WME1106      | '{0}' 메서드의 '{1}' 매개 변수가 배열입니다. Windows 런타임에서 배열 매개 변수의 내용은 읽기 가능 또는 쓰기 가능이어야 합니다. '{1}'에 {2} 또는 {3}을(를) 적용하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
-## "value"라는 매개 변수가 있는 멤버
+## <a name="member-with-a-parameter-named-value"></a>"value"라는 매개 변수가 있는 멤버
 
 
 UWP에서 반환 값은 출력 매개 변수로 간주되고, 매개 변수 이름은 고유해야 합니다. 기본적으로 Winmdexp.exe는 반환 값에 "value"라는 이름을 제공합니다. 메서드에 "value"라는 매개 변수가 있으면 WME1092 오류가 발생합니다. 다음과 같은 두 가지 방법으로 이 문제를 해결할 수 있습니다.
@@ -245,13 +252,8 @@ JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변�
 | WME1092 | '\{0}' 메서드의 매개 변수 이름 '\{1}'이(가) 기본 반환 값 이름과 동일합니다. 매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요.<br/>**참고** 속성 접근자의 경우에만 기본 이름이 "returnValue"입니다. 다른 메서드의 기본 이름은 모두 "value"입니다. |
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
 * [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](https://msdn.microsoft.com/library/hh925576.aspx)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

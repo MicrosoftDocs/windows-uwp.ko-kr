@@ -3,15 +3,22 @@ author: Xansky
 description: "UWP 앱에서 연락처 및 일정 정보를 사용하는 방법"
 title: "연락처 및 일정"
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 연락처, 일정, 약속, 메일 메시지"
 translationtype: Human Translation
-ms.sourcegitcommit: c21a5f0f859e3a80d01786caaf6941c3d0b11c18
-ms.openlocfilehash: 0b93ab3f5e0a622fb924a752ec581bbb9df32936
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f0e61f5c586ccd1225fb9e4edf5ab93580cfd043
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 연락처 및 일정
+# <a name="contacts-and-calendar"></a>연락처 및 일정
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 사용자가 연락처 및 약속에 액세스하여 콘텐츠, 메일, 일정 정보, 메시지를 비롯하여 개발자가 디자인하는 모든 기능을 공유하도록 할 수 있습니다.
 
@@ -27,16 +34,11 @@ ms.openlocfilehash: 0b93ab3f5e0a622fb924a752ec581bbb9df32936
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [약속 API 샘플](http://go.microsoft.com/fwlink/p/?linkid=309836)
 * [연락처 관리자 API 샘플](http://go.microsoft.com/fwlink/p/?LinkID=310079)
 * [연락처 선택 기능 앱 샘플](http://go.microsoft.com/fwlink/p/?linkid=231575)
 * [접촉 동작 처리 샘플](http://go.microsoft.com/fwlink/p/?LinkID=320151)
 * [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

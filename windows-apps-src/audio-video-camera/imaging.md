@@ -3,13 +3,20 @@ author: laurenhughes
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: "이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다."
 title: "비트맵 이미지 만들기, 편집 및 저장"
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8aa20d434b4ea89d972712e48131e9a965476d1d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 비트맵 이미지 만들기, 편집 및 저장
+# <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -28,7 +35,7 @@ ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
 
 [!code-cs[네임스페이스](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
 
-## BitmapDecoder를 사용하여 이미지 파일에서 SoftwareBitmap 만들기
+## <a name="create-a-softwarebitmap-from-an-image-file-with-bitmapdecoder"></a>BitmapDecoder를 사용하여 이미지 파일에서 SoftwareBitmap 만들기
 
 파일에서 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358)을 만들려면 이미지 데이터가 포함된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 가져옵니다. 이 예제에서는 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하여 사용자가 이미지 파일을 선택할 수 있게 합니다.
 
@@ -38,7 +45,7 @@ ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
 
 [!code-cs[CreateSoftwareBitmapFromFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromFile)]
 
-## BitmapEncoder를 사용하여 파일에 SoftwareBitmap 저장
+## <a name="save-a-softwarebitmap-to-a-file-with-bitmapencoder"></a>BitmapEncoder를 사용하여 파일에 SoftwareBitmap 저장
 
 파일에 **SoftwareBitmap**을 저장하려면 이미지를 저장할 **StorageFile** 인스턴스를 가져옵니다. 이 예제에서는[**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하여 사용자가 출력 파일을 선택할 수 있게 합니다.
 
@@ -56,7 +63,7 @@ ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
 
 [!code-cs[UseEncodingOptions](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetUseEncodingOptions)]
 
-## XAML 이미지 컨트롤과 함께 SoftwareBitmap 사용
+## <a name="use-softwarebitmap-with-a-xaml-image-control"></a>XAML 이미지 컨트롤과 함께 SoftwareBitmap 사용
 
 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 컨트롤을 사용하여 XAML 페이지에 이미지를 표시하려면 먼저 XAML 페이지에 **Image** 컨트롤을 정의합니다.
 
@@ -70,13 +77,13 @@ ms.openlocfilehash: ed153b4ebd2f1b6b26f922786b3c005a57d8255d
 
 **SoftwareBitmapSource**를 사용하여 **SoftwareBitmap**을 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101)의 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/br210105)로 설정할 수도 있습니다.
 
-## WriteableBitmap에서 SoftwareBitmap 만들기
+## <a name="create-a-softwarebitmap-from-a-writeablebitmap"></a>WriteableBitmap에서 SoftwareBitmap 만들기
 
 [**SoftwareBitmap.CreateCopyFromBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887370)를 호출하고 **WriteableBitmap**의 **PixelBuffer** 속성을 제공해 픽셀 데이터를 설정하는 방법으로 기존 **WriteableBitmap**에서 **SoftwareBitmap**을 만들 수 있습니다. 두 번째 인수를 사용하면 새로 만든 **WriteableBitmap**에 대해 픽셀 형식을 요청할 수 있습니다. **WriteableBitmap**의 [**PixelWidth**](https://msdn.microsoft.com/library/windows/apps/br243253) 및 [**PixelHeight**](https://msdn.microsoft.com/library/windows/apps/br243251) 속성을 사용하여 새 이미지의 크기를 지정할 수 있습니다.
 
 [!code-cs[WriteableBitmapToSoftwareBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteableBitmapToSoftwareBitmap)]
 
-## 프로그래밍 방식으로 SoftwareBitmap 만들기 또는 편집
+## <a name="create-or-edit-a-softwarebitmap-programmatically"></a>프로그래밍 방식으로 SoftwareBitmap 만들기 또는 편집
 
 지금까지 이 항목에서는 이미지 파일 작업에 대해 설명했습니다. 코드에서 프로그래밍 방식으로 새 **SoftwareBitmap**을 만들고 같은 기술을 사용하여 **SoftwareBitmap**의 픽셀 데이터에 액세스하고 이 데이터를 수정할 수도 있습니다.
 
@@ -96,7 +103,7 @@ COM interop을 사용하려면 프로젝트의 **System.Runtime.InteropServices*
 
 이 메서드는 Windows 런타임 형식의 기반이 되는 원시 버퍼에 액세스하므로 **unsafe** 키워드를 사용하여 선언해야 합니다. 또한, 안전하지 않은 코드의 컴파일을 허용하도록 Microsoft Visual Studio에서 프로젝트를 구성해야 합니다. 그러려면 프로젝트의 **속성** 페이지를 열고 **빌드** 속성 페이지를 클릭한 후 **안전하지 않은 코드 허용** 확인란을 선택합니다.
 
-## Direct3D 화면에서 SoftwareBitmap 만들기
+## <a name="create-a-softwarebitmap-from-a-direct3d-surface"></a>Direct3D 화면에서 SoftwareBitmap 만들기
 
 Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 [**Windows.Graphics.DirectX.Direct3D11**](https://msdn.microsoft.com/library/windows/apps/dn895104) 네임스페이스를 포함해야 합니다.
 
@@ -106,19 +113,19 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 [!code-cs[CreateSoftwareBitmapFromSurface](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromSurface)]
 
-## SoftwareBitmap을 다른 픽셀 형식으로 변환
+## <a name="convert-a-softwarebitmap-to-a-different-pixel-format"></a>SoftwareBitmap을 다른 픽셀 형식으로 변환
 
 **SoftwareBitmap** 클래스는 정적 메서드 [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362)를 제공하며, 이 메서드를 사용하면 지정된 픽셀 형식과 알파 모드를 사용하는 새로운 **SoftwareBitmap**을 기존 **SoftwareBitmap**에서 쉽게 만들 수 있습니다. 새로 만들어진 비트맵에는 별도의 이미지 데이터 복사본이 있습니다. 새 비트맵을 수정해도 소스 비트맵에는 영향이 없습니다.
 
 [!code-cs[변환](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 
-## 이미지 파일 코드 변환
+## <a name="transcode-an-image-file"></a>이미지 파일 코드 변환
 
 이미지 파일을 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176)에서 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)로 바로 코드 변환할 수 있습니다. 코드 변환할 파일에서 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 만들 수 있습니다. 입력 스트림에서 새 **BitmapDecoder**를 만듭니다. 인코더가 [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214)에 쓰고 이 메서드를 호출하여 메모리 내 스트림 및 디코더 개체를 전달하도록 새 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720)을 만듭니다. 원하는 인코딩 속성을 설정합니다. 입력 이미지 파일의 속성 중 인코더에서 특정하게 설정하지 않은 속성은 변경되지 않은 상태로 출력 파일에 기록됩니다. 인코더가 메모리 내 스트림에 인코드하도록 [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216)를 호출합니다. 마지막으로, 파일 스트림 및 메모리 내 스트림을 시작 부분에서 찾고 [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827)를 호출하여 메모리 내 스트림을 파일 스트림에 씁니다.
 
 [!code-cs[TranscodeImageFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetTranscodeImageFile)]
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [BitmapEncoder 옵션 참조](bitmapencoder-options-reference.md)
 * [이미지 메타데이터](image-metadata.md)
@@ -128,10 +135,5 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

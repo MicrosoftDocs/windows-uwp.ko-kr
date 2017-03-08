@@ -1,23 +1,34 @@
 ---
 author: TylerMSFT
 title: "교육용 앱 개발."
-description: "이 섹션에서는 Windows10 플랫폼에 대한 교육용 앱을 작성하는 데 사용할 수 있는 유니버설 Windows 앱 리소스를 설명합니다."
+description: "이 섹션에서는 Windows 10 플랫폼에 대한 교육용 앱을 작성하는 데 사용할 수 있는 유니버설 Windows 앱 리소스를 설명합니다."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 translationtype: Human Translation
-ms.sourcegitcommit: 48fcfe2b033614b445a1be6d757a8d208c7b1292
-ms.openlocfilehash: bb401b73432c072d551814dec9504a7d1742b7d4
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: abeadc4fe27858afcdddfeff08362fff69ce713b
+ms.lasthandoff: 02/08/2017
 
 ---
-# 교육용 유니버설 Windows 앱 개발
-다음 리소스는 유니버설 Windows 교육용 앱을 작성하는 데 도움이 됩니다.
 
-### 접근성
+# <a name="develop-universal-windows-apps-for-education"></a>교육용 유니버설 Windows 앱 개발
+![시험 응시 앱 스크린샷](images/take-a-test-screen-small.png)
+
+다음 리소스는 교육용 유니버설 Windows 앱을 작성하는 데 도움이 됩니다.
+
+### <a name="accessibility"></a>접근성
 교육용 앱은 접근성이 높아야 합니다. 자세한 내용은 [접근성용 앱 개발](https://developer.microsoft.com/windows/accessible-apps)을 참조하세요.
 
 
-### 보안 평가
+### <a name="secure-assessments"></a>보안 평가
 평가/테스트 앱의 경우 종종 학생들이 테스트 중 다른 컴퓨터나 인터넷 리소스를 사용할 수 없도록 *잠금* 환경을 만들어야 합니다. 이 기능은 [시험 응시 API](take-a-test-api.md)를 통해 사용할 수 있습니다. 고위험 테스트를 위해 온라인 액세스가 잠긴 상태인 테스트 환경에 대한 예는 Windows IT 센터에서 [시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 웹앱을 참조하세요.
 
-### 사용자 입력
+### <a name="user-input"></a>사용자 입력
 사용자 입력은 교육용 앱에서 중요한 부분입니다. UI 컨트롤은 사용자의 포커스에 문제가 생기지 않도록 반응성이 좋고 직관적이어야 합니다. 유니버설 Windows 앱에서 사용할 수 있는 입력 옵션에 대한 일반적인 개요는 [입력 지침서](https://msdn.microsoft.com/windows/uwp/input-and-devices/input-primer)와 디자인 및 UI 섹션에서 아래의 항목을 참조하세요. 또한 다음 샘플 앱에서는 유니버설 Windows 플랫폼에서 처리하는 기본 UI를 소개합니다.
 - [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)에서는 유니버설 Windows 앱에서 입력을 처리하는 방법을 보여 줍니다.
 - [사용자 조작 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)에서는 사용자 조작 모드를 검색하고 응답하는 방법을 보여 줍니다.
@@ -26,17 +37,12 @@ ms.openlocfilehash: bb401b73432c072d551814dec9504a7d1742b7d4
 Windows Ink 플랫폼은 학생에게 익숙한 입력 모드에 맞게 조정하여 교육용 앱을 돋보이게 만들 수 있습니다. 앱에 Windows Ink를 구현하는 전체 가이드는 [펜 조작 및 Windows Ink](https://msdn.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions) 및 그 아래 항목을 참조하세요. 다음 샘플 앱은 이 API의 작업 예제를 제공합니다.
 - [잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Ink)에서는 JavaScript로 작성된 유니버설 Windows 앱에서 잉크 기능을 사용하는 방법(예: 잉크 스트로크 캡처, 조작 및 해석)을 보여 줍니다.
 - [간단한 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)에서는 C#으로 작성된 유니버설 Windows 앱에서 잉크 기능을 사용하는 방법(예: 사용자 입력에서 잉크 캡처, 잉크 스트로크에 대해 필기 인식 수행)을 보여 줍니다.
-- [복잡한 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)에서는 고급 InkPresenter 기능을 사용하여 잉크를 다른 개체와 인터리빙하고 잉크 선택, 복사/붙여넣기, 이벤트 처리를 수행하는 방법을 보여 줍니다. C++로 작성된 유니버설 Windows 플랫폼을 토대로 작성되었으며 데스크톱 및 모바일 Windows10 SKU 둘 다에서 실행할 수 있습니다.
+- [복잡한 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)에서는 고급 InkPresenter 기능을 사용하여 잉크를 다른 개체와 인터리빙하고 잉크 선택, 복사/붙여넣기, 이벤트 처리를 수행하는 방법을 보여 줍니다. C++로 작성된 유니버설 Windows 플랫폼을 토대로 작성되었으며 데스크톱 및 모바일 Windows 10 SKU 둘 다에서 실행할 수 있습니다.
 
 
-### Windows 스토어
+### <a name="windows-store"></a>Windows 스토어
 교육용 앱은 주로 특정 조직에게 특별한 상황에서 출시됩니다. 이에 대한 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises)를 참조하세요.
 
-## 관련 항목
-- Windows IT 센터의 [Windows10 for Education](https://technet.microsoft.com/edu/windows/index)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+## <a name="related-topics"></a>관련 항목
+- Windows IT 센터의 [Windows 10 for Education](https://technet.microsoft.com/edu/windows/index)
 

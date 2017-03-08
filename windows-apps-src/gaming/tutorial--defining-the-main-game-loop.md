@@ -1,27 +1,34 @@
 ---
 author: mtoepke
 title: "주 게임 개체 정의"
-description: "이제 게임 샘플의 주 개체 및 해당 개체가 구현하는 규칙이 게임 월드와 조작하도록 변환되는 방식을 자세히 살펴봅니다."
+description: "이제 게임 샘플의 주 개체 및 해당 개체가 구현하는 규칙이 게임 월드와의 상호 작용으로 변환되는 방식을 자세히 살펴봅니다."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 주 개체"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8af939fee50540e5213e624703400d99cbb6785f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f81b3eaa9b896295386232f99b789dc3857b3bad
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 주 게임 개체 정의
+# <a name="define-the-main-game-object"></a>주 게임 개체 정의
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 지금까지 샘플 게임의 기본 프레임워크를 구축하고 상위 수준의 사용자 및 시스템 동작을 처리하는 상태 시스템을 구현했습니다. 그러나 게임 샘플 및 실제 게임을 구성하는 부분인 규칙 및 기술과 구현 방법에 대해서는 검토하지 않았습니다. 이제 게임 샘플의 주 개체 및 해당 개체가 구현하는 규칙이 게임 월드와 조작하도록 변환되는 방식을 자세히 살펴봅니다.
 
-## 목표
+## <a name="objective"></a>목표
 
 
 -   DirectX로 작성된 간단한 UWP(유니버설 Windows 플랫폼) 게임의 규칙 및 기술을 구현할 때 기본 개발 기술을 적용합니다.
 
-## 게임의 흐름 고려
+## <a name="considering-the-games-flow"></a>게임의 흐름 고려
 
 
 게임의 기본 구조는 대부분 이러한 파일에 정의됩니다.
@@ -33,11 +40,11 @@ ms.openlocfilehash: 8af939fee50540e5213e624703400d99cbb6785f
 
 **Simple3DGame.cpp**에서는 게임 플레이 자체의 구현을 지정하는 **Simple3DGame** 클래스에 대한 코드를 제공합니다. 앞에서 샘플 게임을 UWP 앱으로 처리하는 것을 살펴보았습니다. 이제 이것을 게임으로 만드는 코드에 대해 알아보겠습니다.
 
-**Simple3DGame.h/.cpp**에 대한 전체 코드는 [이 섹션에 대한 전체 샘플 코드](#code_sample)에서 제공됩니다.
+**Simple3DGame.h/.cpp**에 대한 전체 코드는 [이 섹션에 대한 전체 샘플 코드](#complete-code-sample-for-this-section)에서 제공됩니다.
 
 **Simple3DGame** 클래스의 정의를 살펴보겠습니다.
 
-## 핵심 게임 개체 정의
+## <a name="defining-the-core-game-object"></a>핵심 게임 개체 정의
 
 
 앱 단일 항목이 시작되면 뷰 공급자의 **Initialize** 메서드에서 주 게임 클래스의 인스턴스인 **Simple3DGame** 개체를 만듭니다. 이 개체에는 게임 상태의 변경 사항을 앱 프레임워크에 정의된 상태 시스템에 전달하거나 앱에서 게임 개체 자체에 전달하는 메서드가 포함되어 있습니다. 또한 게임의 오버레이 비트맵과 주의 표시 업데이트 및 게임의 애니메이션과 물리학(역학) 업데이트에 대한 정보를 반환하는 메서드도 포함되어 있습니다. 게임에 사용되는 그래픽 디바이스 리소스를 가져오는 코드는 [렌더링 프레임워크 어셈블](tutorial--assembling-the-rendering-pipeline.md)에서 다루는 GameRenderer.cpp에 있습니다.
@@ -100,11 +107,11 @@ private 메서드:
 -   **LoadSavedState** 및 **SaveState**. 각각 게임의 현재 상태를 로드하고 저장합니다.
 -   **SaveHighScore** 및 **LoadHighScore**. 각각 게임에서 최고 점수를 저장하고 로드합니다.
 -   **InitializeAmmo**. 탄약으로 사용되는 각 구형 개체의 상태를 각 라운드 시작의 원래 상태로 재설정합니다.
--   **UpdateDynamics**. 만든 애니메이션 루틴, 물리학 및 컨트롤 입력을 기준으로 모든 게임 개체를 업데이트하기 때문에 이것은 중요한 메서드입니다. 게임을 정의하는 대화형 작업의 핵심입니다. 이 메서드에 대해서는 [게임 업데이트](#update_game) 섹션에서 자세히 설명합니다.
+-   **UpdateDynamics**. 만든 애니메이션 루틴, 물리학 및 컨트롤 입력을 기준으로 모든 게임 개체를 업데이트하기 때문에 이것은 중요한 메서드입니다. 게임을 정의하는 대화형 작업의 핵심입니다. 이 메서드에 대해서는 [게임 업데이트](#updating-the-game-world) 섹션에서 자세히 설명합니다.
 
 다른 public 메서드는 게임 플레이 및 오버레이 관련 정보를 앱 프레임워크에 반환하여 표시하는 속성 getter입니다.
 
-## 게임 상태 변수 정의
+## <a name="defining-the-game-state-variables"></a>게임 상태 변수 정의
 
 
 게임 개체의 기능 중 하나는 상위 수준에서 게임을 정의하는 방식에 따라 게임 세션, 레벨 또는 수명을 정의하는 데이터의 컨테이너 역할입니다. 이 경우 게임 상태 데이터는 게임의 수명에 대한 것이며, 사용자가 게임을 시작할 때 한 번 초기화됩니다.
@@ -155,7 +162,7 @@ private:
 
 나머지 게임 변수에는 원형 목록과 해당 원형의 게임 내 양, 게임 플레이 관련 데이터, 제약 조건 등이 포함됩니다. 게임이 초기화될 때 샘플에서 이러한 변수를 구성하는 방법을 살펴보겠습니다.
 
-## 게임 초기화 및 시작
+## <a name="initializing-and-starting-the-game"></a>게임 초기화 및 시작
 
 
 플레이어가 게임을 시작하면 게임 오브젝트에서 해당 상태를 초기화하고 오버레이를 만들어 추가하며 플레이어의 성과를 추적하는 변수를 설정하고 레벨을 구성하는 데 사용할 개체를 인스턴스화해야 합니다.
@@ -378,14 +385,14 @@ void Simple3DGame::Initialize(
 
 이제 게임에 월드, 플레이어, 장애물, 타겟 및 탄환 같은 모든 주요 구성 요소의 인스턴스가 있습니다. 또한 위의 모든 구성 요소 및 각 레벨별 해당 동작에 대한 구성을 나타내는 레벨 인스턴스도 있습니다. 게임에서 레벨을 구성하는 방법을 살펴보겠습니다.
 
-## 게임의 레벨 구성 및 로드
+## <a name="building-and-loading-the-games-levels"></a>게임의 레벨 구성 및 로드
 
 
 레벨 구성에 대한 대부분의 어려운 작업은 **Level.h/.cpp** 파일에서 수행되며 이 작업은 매우 구체적인 구현에 집중하므로 자세히 검토하지는 않겠습니다. 중요한 점은 각 레벨에 대한 코드가 별도의 **LevelN** 개체로 실행된다는 점입니다. 게임을 확장하려면 할당된 번호를 매개 변수로 사용하고 장애물 및 타겟을 임으로 배치하는 **Level** 개체를 만들 수 있습니다. 또는 리소스 파일이나 인터넷을 통해 레벨 구성 데이터를 로드할 수 있습니다.
 
-**Level.h/.cpp**에 대한 전체 코드는 [이 섹션에 대한 전체 샘플 코드](#code_sample)에서 제공됩니다.
+**Level.h/.cpp**에 대한 전체 코드는 [이 섹션에 대한 전체 샘플 코드](#complete-code-sample-for-this-section)에서 제공됩니다.
 
-## 게임 플레이 정의
+## <a name="defining-the-game-play"></a>게임 플레이 정의
 
 
 이제 게임을 어셈블하는 데 필요한 모든 구성 요소가 있습니다. 원형에서 레벨을 메모리에 구성했으므로 플레이어가 특정 방식으로 해당 레벨과 조작을 시작할 수 있습니다.
@@ -649,7 +656,7 @@ GameState Simple3DGame::RunGame()
 
 `UpdateDynamics()` 형식으로 키를 호출합니다. 이 호출은 게임 월드에 활력을 불어 넣습니다. 검토해 보겠습니다.
 
-## 게임 월드 업데이트
+## <a name="updating-the-game-world"></a>게임 월드 업데이트
 
 
 신속하고 유동적인 게임 환경은 월드가 *살아 있는* 것처럼 느껴지고 게임 자체가 플레이어 입력과 독립적으로 움직이는 환경입니다. 나무는 바람에 흔들리고 해안선을 따라 파도가 치며 기계 장치는 연기를 뿜어내고 빛이 나며 외계인 몬스터는 손을 앞으로 펼치며 군침을 흘립니다. 모든 요소가 고정되어 있고 플레이어가 입력을 제공할 때만 그래픽이 이동한다면 게임이 어떤 모습일지 상상해 보세요. 으스스하고 몰입하기가 어려울 것입니다. 플레이어의 몰입도는 살아 있는 세계의 요원이 되었다는 느낌에서 나옵니다.
@@ -844,7 +851,7 @@ void Simple3DGame::UpdateDynamics()
 
 이제 렌더링 방법을 살펴보겠습니다.
 
-## 게임 월드의 그래픽 렌더링
+## <a name="rendering-the-game-worlds-graphics"></a>게임 월드의 그래픽 렌더링
 
 
 게임의 그래픽은 가능하면 자주 즉, 최대 주 게임 루프가 반복될 때마다 업데이트되는 것이 좋습니다. 루프가 반복되면 플레이어 입력에 관계없이 계임이 업데이트됩니다. 따라서 계산되는 애니메이션 및 동작을 원활하게 표시할 수 있습니다. 플레이어가 단추를 누를 때만 물이 흐르는 간단한 장면을 상상해 보세요. 엄청 지루하게 보일 것입니다. 뛰어난 게임은 원활하고 유동적으로 보입니다.
@@ -1041,12 +1048,12 @@ void GameRenderer::Render()
 
 샘플 게임의 Direct2D 오버레이에 대한 상태는 두 가지가 있습니다. 하나는 게임에서 일시 중지 메뉴에 대한 비트맵을 포함하는 게임 정보 오버레이를 표시하는 상태이고 하나는 게임에서 터치 스크린 이동-보기 컨트롤러에 대한 사각형과 함께 십자 모양을 표시하는 상태입니다. 점수 텍스트는 이 두 상태로 그립니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 지금까지 실제 렌더링 엔진 즉, 업데이트된 원형에서의 **Render** 메서드 호출이 화면의 픽셀로 전환되는 방식에 대해 궁금하셨을 수 있습니다. 이 부분은 [렌더링 프레임워크 어셈블](tutorial--assembling-the-rendering-pipeline.md)에서 자세히 검토합니다. 플레이어 컨트롤에서 게임 상태를 업데이트하는 방법이 자세히 알고 싶으면 [컨트롤 추가](tutorial--adding-controls.md)를 확인하세요.
 
-## 이 섹션에 대한 전체 코드 샘플
+## <a name="complete-code-sample-for-this-section"></a>이 섹션에 대한 전체 코드 샘플
 
 
 Simple3DGame.h
@@ -3610,7 +3617,7 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-metro-style-directx-game.md)
@@ -3621,10 +3628,5 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

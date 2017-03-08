@@ -1,15 +1,22 @@
 ---
 author: DelfCo
-description: "UWP(유니버설 Windows 플랫폼) 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다."
+description: "UWP(유니버설 Windows 플랫폼) 앱 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 장치와 통신할 수 있습니다."
 title: "소켓"
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
-ms.openlocfilehash: 49a9ae4d7d3994ad7fbb78fc9dc60cdd9dca07c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0e9121dfc590a1a7f67be69b7dbce475e438dd08
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 소켓
+# <a name="sockets"></a>소켓
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -22,7 +29,7 @@ UWP(유니버설 Windows 플랫폼) 개발자는 [**Windows.Networking.Sockets**
 
 >**참고** [네트워크 격리](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)의 일부로 시스템에서는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 시스템에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 금지합니다. 두 UWP 앱 간의 통신을 위해 소켓을 사용할 수 없다는 것을 의미합니다. UWP는 앱 간 통신을 위해 다른 메커니즘을 제공합니다. 자세한 내용은 [앱 간 통신](https://msdn.microsoft.com/windows/uwp/app-to-app/index)을 참조하세요.
 
-## 기본 TCP 소켓 작업
+## <a name="basic-tcp-socket-operations"></a>기본 TCP 소켓 작업
 
 TCP 소켓은 수명이 긴 연결에 대해 각 방향으로 하위 수준 네트워크 데이터 전송을 제공합니다. TCP 소켓은 인터넷에서 사용되는 대부분의 네트워크 프로토콜에서 사용하는 기본 기능입니다. 이 섹션에서는 [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 일부로써 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 및 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 클래스를 사용하여 TCP 스트림 소켓과 함께 데이터를 보내고 받도록 UWP 앱을 설정하는 방법을 보여 줍니다. 이 섹션에서는 기본 TCP 작업을 보여 주기 위해 에코 서버 및 클라이언트의 역할을 할 아주 간단한 앱을 만들 것입니다.
 
@@ -104,7 +111,7 @@ catch (Exception e)
 }
 ```
 
-## 기본 UDP 소켓 작업
+## <a name="basic-udp-socket-operations"></a>기본 UDP 소켓 작업
 
 UDP 소켓은 연결이 필요하지 않는 네트워크 통신에 대해 어느 방향에서나 하위 수준 네트워크 데이터 전송을 제공합니다. UDP 소켓은 두 끝점에서 연결을 유지하지 않으므로 원격 컴퓨터 간 네트워킹에 대해 빠르고 간단한 솔루션을 제공합니다. 그러나 UDP 소켓은 네트워크 패킷의 무결성이나 원격 대상에 도착하는지 여부를 전혀 확인하지 않습니다. UDP 소켓을 사용하는 응용 프로그램의 몇 가지 예로는 로컬 네트워크 검색 및 로컬 채팅 클라이언트가 있습니다. 이 섹션에서는 간단한 에코 서버 및 클라이언트를 만들어 UDP 메시지를 보내고 받기 위해 [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) 클래스를 사용하는 것을 보여 줍니다.
 
@@ -190,11 +197,11 @@ private async void Socket_MessageReceived(Windows.Networking.Sockets.DatagramSoc
 }
 ```
 
-## 백그라운드 작업 및 소켓 브로커
+## <a name="background-operations-and-the-socket-broker"></a>백그라운드 작업 및 소켓 브로커
 
 앱이 소켓에서 연결 또는 데이터를 받으면 앱이 포그라운드에 있지 않을 때 이러한 작업을 올바르게 수행할 수 있도록 준비해야 합니다. 이를 위해 소켓 브로커를 사용합니다. 소켓 브로커를 사용하는 방법에 대한 자세한 내용은 [백그라운드에서의 네트워크 통신](network-communications-in-the-background.md)을 참조하세요.
 
-## 일괄 처리된 전송
+## <a name="batched-sends"></a>일괄 처리된 전송
 
 Windows 10부터 Windows.Networking.Sockets에서 일괄 처리된 전송을 지원합니다. 이를 통해 각 버퍼를 개별적으로 전송하는 경우보다 훨씬 낮은 컨텍스트 전환 오버헤드로 여러 데이터 버퍼를 함께 전송할 수 있습니다. 이는 앱에서 VoIP, VPN 또는 많은 데이터를 가급적 효율적으로 이동하는 작업이 기타 작업을 수행하는 경우에 특히 유용합니다.
 
@@ -264,11 +271,11 @@ await outputStream.FlushAsync();
 -   **FlushAsync** 패턴은 Windows 10 이상에서만 작동합니다.
 -   그 밖의 경우에는 **FlushAsync** 패턴 대신 **Task.WaitAll**을 사용합니다.
 
-## DatagramSocket에 대한 포트 공유
+## <a name="port-sharing-for-datagramsocket"></a>DatagramSocket에 대한 포트 공유
 
 Windows 10에는 새로운 [**DatagramSocketControl**](https://msdn.microsoft.com/library/windows/apps/hh701190) 속성인 [**MulticastOnly**](https://msdn.microsoft.com/library/windows/apps/dn895368)가 도입되었습니다. 이를 통해 해당 **DatagramSocket**을 같은 주소/포트에 바인딩된 Win32 또는 WinRT 멀티캐스트 소켓과 함께 사용할 수 있습니다.
 
-## StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
+## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
 
 [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
 
@@ -281,7 +288,7 @@ socket.Control.ClientCertificate = certificate;
 await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 ```
 
-## Windows.Networking.Sockets의 예외
+## <a name="exceptions-in-windowsnetworkingsockets"></a>Windows.Networking.Sockets의 예외
 
 전달된 문자열이 유효한 호스트 이름이 아닌 경우(호스트 이름에 허용되지 않는 문자 포함) 소켓과 함께 사용된 [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) 클래스에 대한 생성자에서 예외가 발생할 수 있습니다. 앱이 **HostName**에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
 
@@ -293,14 +300,9 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 
 매개 변수 유효성 검사 오류의 경우 앱은 또한 예외에서 **HRESULT**를 사용하여 예외의 원인이 된 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다.
 
-## Winsock API
+## <a name="the-winsock-api"></a>Winsock API
 
 UWP 앱에서도 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673)을 사용할 수 있습니다. 지원되는 Winsock API는 Windows Phone 8.1Microsoft Silverlight의 Winsock API를 기반으로 하며, 대부분의 형식, 속성 및 메서드를 지원합니다(오래된 것으로 간주되는 일부 API는 제거됨). Winsock 프로그래밍에 대한 자세한 내용은 [여기](https://msdn.microsoft.com/library/windows/desktop/ms740673)에서 확인할 수 있습니다.
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

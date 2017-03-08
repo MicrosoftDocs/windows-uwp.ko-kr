@@ -5,9 +5,16 @@ title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: a5a4c96723bd5c4cabdc7dd6dfc114b7af4d10f8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f3eded52428f0432cbdecfbda7d8b53e9e89ed16
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="rich-text-block"></a>서식 있는 텍스트 블록
@@ -151,9 +158,4 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 
 **개발자용(기타)**
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

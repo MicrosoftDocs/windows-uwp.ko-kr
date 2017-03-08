@@ -3,20 +3,27 @@ author: mtoepke
 title: "UWP(유니버설 Windows 플랫폼) 앱용 게임 기술"
 description: "이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 기술, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83c3fda490d7ab821e8e584291ded642c9c11dd1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7f6ad043299efa2aae7abdb1f1e0a7e898d40836
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# UWP(유니버설 Windows 플랫폼) 앱용 게임 기술
+# <a name="game-technologies-for-universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱용 게임 기술
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다.
 
-##  게임 개발을 위한 Windows 10의 이점
+##  <a name="benefits-of-windows-10-for-game-development"></a>게임 개발을 위한 Windows 10의 이점
 
 
 Windows 10에 도입된 UWP로 인해 Windows 10 타이틀이 모든 Microsoft 플랫폼을 확장할 수 있습니다. 이전 버전의 Windows에서 무료로 마이그레이션할 수 있기 때문에 Windows 10 클라이언트 수가 계속 증가합니다. 이 두 가지의 조합은 Windows 10 타이틀이 Windows 스토어를 통해 엄청난 수의 고객에게 제공될 수 있음을 의미합니다.
@@ -26,12 +33,12 @@ Windows 10에 도입된 UWP로 인해 Windows 10 타이틀이 모든 Microsoft �
 -   메모리 페이징 및 전체 메모리 시스템 크기 감소
 -   향상된 그래픽 메모리 관리를 통해 포그라운드 게임에 대한 추가 메모리 할당 및 보호
 
-## C++ 및 DirectX로 작성된 UWP 게임
+## <a name="uwp-games-with-c-and-directx"></a>C++ 및 DirectX로 작성된 UWP 게임
 
 
 고성능을 요구하는 실시간 게임에는 DirectX API를 사용해야 합니다. DirectX는 3D 게임과 같은 고성능을 필요로 하는 게임 및 멀티미디어 응용 프로그램을 만들기 위한 네이티브 API의 컬렉션입니다. DirectX API는 네이티브이기 때문에 DirectX와 함께 사용하도록 지원되는 언어는 C++뿐입니다.
 
-## 개발 환경
+## <a name="development-environment"></a>개발 환경
 
 
 UWP용 게임을 만들려면 Visual Studio 2015를 설치하여 개발 환경을 설정해야 합니다. Visual Studio 2015에서는 UWP 앱을 만들 수 있으며 게임 개발용 도구를 제공합니다.
@@ -41,12 +48,12 @@ UWP용 게임을 만들려면 Visual Studio 2015를 설치하여 개발 환경�
 
 자세한 내용은 유니버설 Windows 플랫폼 및 DirectX 게임 프로그래밍 환경 준비를 참조하세요.
 
-## DirectX 게임 프로젝트 템플릿 시작
+## <a name="getting-started-with-directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿 시작
 
 
 개발 환경을 설정한 후에는 DirectX 관련 프로젝트 템플릿 중 하나를 사용하여 UWP DirectX 게임을 만들 수 있습니다. Visual Studio 2015에는 새 UWP DirectX 프로젝트를 만들 수 있는 세 가지 템플릿이 있습니다(**DirectX 11 앱(유니버설 Windows)**, **DirectX 12 앱(유니버설 Windows)**, **DirectX 11 및 XAML 앱(유니버설 Windows)**). 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
-## Windows 10 API
+## <a name="windows-10-apis"></a>Windows 10 API
 
 
 Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제공합니다. 3D 그래픽, 2D 그래픽, 오디오, 입력, 텍스트 리소스, 사용자 인터페이스, 네트워킹 등 거의 모든 게임 측면에 사용되는 API가 있습니다.
@@ -316,19 +323,19 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
 
      
 
-## Xbox Live 서비스
+## <a name="xbox-live-services"></a>Xbox Live 서비스
 
 
 Xbox Live 기능 집합 – Xbox, 도전 과제, 게이머 점수 등으로 교차 플레이하는 기능이 Windows 10에 제공됩니다. 곧 ID@Xbox를 사용하여 UWP 게임에 Live를 포함할 수 있습니다. 향후에는 Xbox One에서 유니버설 앱 플랫폼 게임을 제공할 수도 있습니다. 자세한 내용은 [ID@Xbox](http://www.xbox.com/developers/id) 페이지를 참조하세요.
 
-##  DirectX와 UWP를 사용한 게임 작성의 대안
+##  <a name="alternatives-to-writing-games-with-directx-and-uwp"></a>DirectX와 UWP를 사용한 게임 작성의 대안
 
 
-### DirectX를 사용하지 않는 UWP 게임
+### <a name="uwp-games-without-directx"></a>DirectX를 사용하지 않는 UWP 게임
 
 카드 게임 또는 보드 게임과 같은 최소한의 성능이 필요한 간단한 게임은 DirectX 없이 작성할 수 있으며 C++로 작성하지 않아도 됩니다. 이러한 종류의 게임에는 C#, Visual Basic, C++, HTML/JavaScript 등 UWP에서 지원하는 언어를 사용할 수 있습니다. 게임에서 성능이 중요하지 않거나 그래픽이 많이 사용되지 않는 경우 [JavaScript 및 HTML5 터치 게임 샘플](http://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031)을 예제로 확인하세요.
 
-### 게임 엔진
+### <a name="game-engines"></a>게임 엔진
 
 Windows 게임 개발 API를 사용하여 게임 엔진을 작성하는 대신 Windows 게임 개발 API를 기반으로 하는 뛰어난 품질의 다양한 게임 엔진을 Windows 플랫폼에서 게임 개발에 사용할 수 있습니다. 게임 엔진 또는 라이브러리와 관련된 여러 옵션이 있습니다.
 
@@ -339,7 +346,7 @@ Windows 게임 개발 API를 사용하여 게임 엔진을 작성하는 대신 W
 -   인공 지능 및 경로 찾기 엔진 - AI 및 경로 찾기 엔진은 게임에서 에이전트의 동작을 제어하기 위한 프레임워크를 제공합니다.
 -   특수 목적 엔진 - 인벤토리 시스템 및 대화 트리 만들기 등 실행할 수 있는 거의 모든 게임 개발 관련 작업을 처리하는 다양한 추가 엔진이 있습니다.
 
-## 스토어에 게임 제출
+## <a name="submitting-a-game-to-the-store"></a>스토어에 게임 제출
 
 
 게임을 게시할 준비가 되면 개발자 계정을 만들고 게임을 Windows 스토어에 제출해야 합니다.
@@ -352,10 +359,5 @@ Windows 게임 개발 API를 사용하여 게임 엔진을 작성하는 대신 W
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

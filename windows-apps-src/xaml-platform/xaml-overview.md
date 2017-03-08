@@ -1,21 +1,28 @@
 ---
 author: jwmsft
-description: "Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다."
+description: "Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고, XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다."
 title: "XAML 개요"
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 57b406f8210a9de729deec1fd2003973ac91f9cd
-ms.openlocfilehash: b32ff4bd37a86b991a0bdfe16328304827eb01a0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 12cb0c8b911c0ddb3a45e49568c5846d4359eeba
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# XAML 개요
+# <a name="xaml-overview"></a>XAML 개요
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다.
 
-## XAML이란?
+## <a name="what-is-xaml"></a>XAML이란?
 
 XAML(Extensible Application Markup Language)은 선언적 언어입니다. 구체적으로 XAML은 여러 개체 간의 계층 구조 관계를 보여 주는 언어 구조와 형식 확장을 지원하는 백업 입력 규칙을 사용하여 개체를 초기화하고 개체 속성을 설정할 수 있습니다. 선언적 XAML 태그에서 보이는 UI 요소를 만들 수 있습니다. 그런 다음 XAML 파일별로 이벤트에 응답할 수 있는 별도의 코드 숨김 파일을 연결하고 XAML에 원래 선언된 개체를 조작할 수 있습니다.
 
@@ -23,15 +30,15 @@ XAML 언어는 개발 프로세스에서 다른 도구와 역할 간에 원본 �
 
 Windows 런타임 앱 프로젝트의 일부로 보는 경우 XAML 파일은 파일 이름 확장명이 .xaml인 XML 파일입니다.
 
-## 기본 XAML 구문
+## <a name="basic-xaml-syntax"></a>기본 XAML 구문
 
 XAML은 XML을 기반으로 하는 기본 구문을 사용합니다. 의미상 유효한 XAML은 또한 유효한 XML이 됩니다. 그러나 XAML은 XML 1.0 사양의 XML에서 유효한 반면 다른 더 완전한 의미가 할당된 구문 개념을 사용합니다. 예를 들어 XAML은 특성의 문자열 값 또는 콘텐츠 대신 요소 내부에서 속성 값을 설정할 수 있는 *속성 요소 구문*을 지원합니다. 일반적인 XML의 경우 XAML 속성 요소는 이름에 점이 있는 요소이므로 일반 XML에 유효하지만 같은 의미를 가지지는 않습니다.
 
-## XAML 및 Microsoft Visual Studio
+## <a name="xaml-and-microsoft-visual-studio"></a>XAML 및 Microsoft Visual Studio
 
 Microsoft Visual Studio를 사용하면 XAML 텍스트 편집기와 그래픽 위주의 XAML 디자인 화면 모두에서 유효한 XAML 구문을 생성할 수 있습니다. 따라서 Visual Studio를 사용하여 앱에 대한 XAML을 작성할 때는 키 입력 방식 구문에 대해서는 크게 걱정할 필요가 없습니다. IDE는 자동 완성 힌트를 제공하거나, Microsoft IntelliSense 목록 및 드롭다운에 텍스트 제안을 표시하거나, 도구 상자에 UI 요소 라이브러리를 표시하거나, 다른 기술을 제공하여 유효한 XAML 구문을 작성하는 데 도움을 줍니다. XAML을 처음 사용하는 경우 참조 또는 다른 항목에서 XAML 구문에 대해 설명할 때 구문 규칙 특히, 제한 사항이나 선택 옵션을 설명하는 데 사용되는 용어에 대해 알아두면 좋습니다. XAML 구문에 대한 이러한 세부 요점에 대해서는 [XAML 구문 가이드](xaml-syntax-guide.md) 항목에서 별도로 설명합니다.
 
-## XAML 네임스페이스
+## <a name="xaml-namespaces"></a>XAML 네임스페이스
 
 일반 프로그래밍에서 네임스페이스는 프로그래밍 엔터티에 대한 식별자의 해석 방법을 결정하는 구성 개념입니다. 네임스페이스를 사용하면 프로그래밍 프레임워크가 사용자 선언 식별자를 프레임워크 선언 식별자와 분리하고 네임스페이스 자격 부여를 통해 식별자를 명확히 하고 이름 범위 규칙을 강제하는 등의 작업이 가능합니다. XAML에는 이 용도로 XAML 언어에 제공되는 자체 XAML 네임스페이스 개념이 있습니다. XAML에서 XML 언어 네임스페이스 개념을 적용하고 확장하는 방법은 다음과 같습니다.
 
@@ -53,7 +60,7 @@ XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페
 >
 ```
 
-## XAML 언어 XAML 네임스페이스
+## <a name="the-xaml-language-xaml-namespace"></a>XAML 언어 XAML 네임스페이스
 
 거의 모든 Windows 런타임 XAML 파일에 선언되는 한 가지 특정 XAML 네임스페이스는 XAML 언어 네임스페이스입니다. 이 네임스페이스에는 XAML 언어 및 언어 사양으로 정의된 요소 및 개념이 포함되어 있습니다. 일반적으로 XAML 언어 XAML 네임스페이스는 "x" 접두사에 매핑됩니다. Windows 런타임 앱 프로젝트의 기본 프로젝트 및 파일 템플릿에서는 항상 기본 XAML 네임스페이스(접두사 없는 `xmlns=`)와 XAML 언어 XAML 네임스페이스(접두사 "x")를 모두 루트 요소의 일부로 정의합니다.
 
@@ -69,7 +76,7 @@ XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페
 
 XAML 언어 XAML 네임스페이스의 다른 프로그래밍 구조도 있지만 잘 사용되지 않습니다.
 
-## XAML 네임스페이스에 사용자 지정 유형 매핑
+## <a name="mapping-custom-types-to-xaml-namespaces"></a>XAML 네임스페이스에 사용자 지정 유형 매핑
 
 XAML이 언어로서 가진 가장 강력한 측면 중 하나는 Windows 런타임 앱에 맞게 XAML 어휘를 쉽게 확장할 수 있다는 점입니다. 앱의 프로그래밍 언어로 사용자 지정 유형을 고유하게 정의한 다음 XAML 태그에서 사용자 지정 유형을 참조할 수 있습니다. 사용자 지정 유형을 통한 확장 지원은 기본적으로 XAML 언어 작동 방식에 기본적으로 제공됩니다. 프레임워크 또는 앱 개발자는 XAML이 참조하는 백업 개체를 만들어야 합니다. 프레임워크 개발자나 앱 개발자는 어휘의 개체가 표현하는 사항에 대한 사양을 준수하지 않아도 되며 기본 XAML 구문 규칙을 벗어나지 않습니다. XAML-언어 XAML 네임스페이스 형식이 담당해야 하는 사항에 대해 어느 정도 기대치가 있지만, Windows 런타임에서 필수적인 사항이 모두 지원됩니다.
 
@@ -83,11 +90,11 @@ Windows 런타임 핵심 라이브러리와 메타데이터 이외의 다른 라
 
 Visual C++ 구성 요소 확장(C++/CX)에 대한 특수 고려 사항을 포함하여 사용자 지정 유형에 대해 XAML 네임스페이스를 매핑하는 데 대한 자세한 내용은 [XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)을 참조하세요.
 
-## 다른 XAML 네임스페이스
+## <a name="other-xaml-namespaces"></a>다른 XAML 네임스페이스
 
 "d"(디자이너 네임스페이스) 및 "mc"(태그 호환성) 접두사를 정의하는 XAML 파일이 표시되는 경우가 있습니다. 일반적으로 이러한 파일은 인프라를 지원하거나, 디자인 타임 도구의 시나리오를 가능하게 하기 위한 것입니다. 자세한 내용은 [XAML 네임스페이스 항목의 "기타 XAML 네임스페이스" 섹션](xaml-namespaces-and-namespace-mapping.md#other-XAML-namespaces)을 참조하세요.
 
-## 태그 확장
+## <a name="markup-extensions"></a>태그 확장
 
 태그 확장은 Windows 런타임 XAML 구현에서 주로 사용되는 XAML 언어 개념입니다. 태그 확장은 종종 XAML 파일이 지원 형식을 기반으로 요소를 선언하지 않는 값이나 동작에 액세스하도록 지원하는 일부 종류의 "바로 가기"를 나타냅니다. 일부 태그 확장은 구문 간소화 또는 서로 다른 XAML 파일 사이의 팩터링을 위해 일반 문자열 또는 추가 중첩 요소를 사용하여 속성을 설정할 수 있습니다.
 
@@ -130,7 +137,7 @@ Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)
 
 태그 확장으로 인해 특성의 리터럴 "{" 값에 특수 구문이 필요합니다. 자세한 내용은 [XAML 구문 가이드](xaml-syntax-guide.md)를 참조하세요.
 
-## 이벤트
+## <a name="events"></a>이벤트
 
 XAML은 개체와 개체 속성에 대한 선언적 언어이지만, 이벤트 처리기를 태그의 개체에 연결하는 구문도 포함합니다. XAML 이벤트 구문은 Windows 런타임 프로그래밍 모델을 통해 XAML로 선언된 이벤트를 통합할 수 있습니다. 이벤트가 처리되는 개체에 대한 특성 이름으로 이벤트 이름을 지정합니다. 특성 값에 대해서는 코드에 정의된 이벤트 처리기 함수의 이름을 지정합니다. XAML 프로세서는 이 이름을 사용하여 로드된 개체 트리에서 위임 표현을 만들고 지정된 처리기를 내부 처리기 목록에 추가합니다. 거의 모든 Windows 런타임 앱은 태그와 코드 숨김 소스를 모두 사용하여 정의됩니다.
 
@@ -181,23 +188,23 @@ namespace App1
 
 **참고** C++/CX의 경우 두 개의 코드 숨김 파일이 있습니다. 하나는 헤더(.xaml.h)이고 다른 하나는 구현(.xaml.cpp)입니다. 구현은 헤더를 참조하고, 엄밀히 말하자면 헤더는 코드 숨김 연결의 진입점을 나타냅니다.
 
-## 리소스 사전
+## <a name="resource-dictionaries"></a>리소스 사전
 
 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)를 만드는 것은 일반적으로 XAML 페이지의 영역 또는 개별 XAML 파일로 리소스 사전을 작성하여 수행하는 일반 작업입니다. 리소스 사전 및 이 사전을 사용하는 방법은 이 항목의 범위를 벗어나는 더 큰 개념 분야입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
 
-## XAML 및 XML
+## <a name="xaml-and-xml"></a>XAML 및 XML
 
 XAML 언어는 기본적으로 XML 언어를 기반으로 합니다. 하지만 XAML은 XML을 현저하게 확장합니다. 특히 백업 형식 개념과의 관계로 인해 스키마 개념을 완전히 다르게 처리하고 연결된 멤버, 태그 확장 등과 같은 언어 요소를 추가합니다. **xml:lang**는 XAML에서도 유효하지만, 구문 분석 동작이 아닌 런타임에 영향을 주며 일반적으로 프레임워크 수준 속성으로 별칭이 지정됩니다. 자세한 내용은 [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066)를 참조하세요. **xml:base**는 태그에 유효하지만 파서에서는 무시됩니다. **xml:space**는 유효하지만 [XAML 및 공백](xaml-and-whitespace.md) 항목에 설명된 시나리오에만 적합합니다. **encoding** 특성은 XAML에서 유효합니다. UTF-8 및 UTF-16 인코딩만 지원됩니다. UTF-32 인코딩은 지원되지 않습니다.
 
-###  XAML의 대/소문자 구분
+###  <a name="case-sensitivity-in-xaml"></a>XAML의 대/소문자 구분
 
 XAML은 대/소문자를 구분합니다. 이는 대/소문자를 구분하는 XML을 기반으로 하는 XAML의 다른 결과입니다. XAML 요소 및 특성의 이름은 대/소문자를 구분합니다. 특성 값은 대/소문자를 구분할 수 있지만, 특정 속성에 대한 특성 값이 처리되는 방법에 따라 달라집니다. 예를 들어 특성 값이 열거형의 멤버 이름을 선언하는 경우 멤버 이름 문자열의 형식을 변환하여 열거형 멤버 값을 반환하는 기본 제공 동작은 대/소문자를 구분하지 않습니다. 반대로 **Name** 속성 값과 **Name** 속성이 선언하는 이름을 기반으로 개체 작업을 하는 유틸리티 메서드는 이름 문자열의 대/소문자를 구분합니다.
 
-## XAML 이름 범위
+## <a name="xaml-namescopes"></a>XAML 이름 범위
 
 XAML 언어는 XAML namescope 개념을 정의합니다. XAML namescope 개념은 XAML 프로세서에서 XAML 요소에 적용된 **x:Name** 또는 **Name** 값을 처리하는 방법 특히, 이름을 고유한 식별자로 사용해야 하는 범위에 영향을 줍니다. XAML namescopes에 대한 자세한 내용은 [XAML namescopes](xaml-namescopes.md)를 참조하세요.
 
-## 개발 프로세스에서 XAML의 역할
+## <a name="the-role-of-xaml-in-the-development-process"></a>개발 프로세스에서 XAML의 역할
 
 XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 
@@ -211,7 +218,7 @@ XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 
 개발 프로세스에서 수행하는 고유 역할에 따라 XAML을 별로 많이 조작하지 않을 수 있습니다. XAML 파일을 조작하는 정도는 사용하는 개발 환경, 도구 상자 및 속성 편집기 같은 대화형 디자인 환경 기능을 사용하는지 여부 그리고 Windows 런타임 앱의 범위 및 목적에 따라 다릅니다. 하지만 앱 개발 중에는 텍스트 또는 XML 편집기를 사용하여 요소 수준에서 XAML 파일을 편집할 가능성이 큽니다. 이러한 정보를 사용하여 개발자는 확신을 가지고 텍스트 또는 XML 표현의 XAML을 편집할 수 있으며 도구, 태그 컴파일 작업 또는 Windows 런타임 앱의 런타임 단계에서 사용되는 경우 해당 XAML 파일의 선언 및 목적 유효성을 관리할 수 있습니다.
 
-## 로드 성능을 위해 XAML을 최적화합니다.
+## <a name="optimize-your-xaml-for-load-performance"></a>로드 성능을 위해 XAML을 최적화합니다.
 
 다음은 성능을 위한 모범 사례를 활용하여 XAML에서 UI 요소를 정의하기 위한 몇 가지 팁입니다. 이 팁의 상당수는 XAML 리소스 사용과 관련이 있지만 편의상 XAML에 대한 전반적인 개요에서 설명합니다. XAML 리소스에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요. XAML에서 사용하지 말아야 하는 성능 저하 예를 의도적으로 보여 주는 XAML을 포함하여 성능에 대한 추가 정보를 보려면 [XAML 태그 최적화](https://msdn.microsoft.com/library/windows/apps/mt204779)를 참조하세요.
 
@@ -223,7 +230,7 @@ XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 -   UI 요소를 의도적으로 과도하게 그리지 말고 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)와 같은 컨테이너를 사용합니다. 기본적으로, 같은 픽셀을 여러 번 그리지 않습니다. 과도한 그리기 및 이를 테스트하는 방법에 대한 자세한 내용은 [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/hh701823)를 참조하세요.
 -   [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 항목 템플릿을 사용하세요. 여기에는 많은 목록 항목에 대해 시각적 트리를 빌드할 때 성능 문제를 해결하는 특수한 **Presenter** 논리가 있습니다.
 
-## XAML 디버깅
+## <a name="debugging-xaml"></a>XAML 디버깅
 
 XAML은 생성 언어이기 때문에 Microsoft Visual Studio 내에서의 디버깅에 대한 일반적인 몇 가지 전략을 사용할 수 없습니다. 예를 들어, XAML 파일 내에 중단점을 설정할 수 있는 방법은 없습니다. 그러나 아직 앱을 개발하는 동안 UI 정의나 다른 XAML 태그에서 발생하는 문제를 디버그하는 데 도움이 되는 다른 기술이 있습니다.
 
@@ -236,10 +243,5 @@ XAML은 흔히 Visual Studio와 같은 IDE 및 해당 XAML 디자인 화면 중 
 **참고** 코드에 C++/CX를 사용하는 앱의 경우 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)이 발생하지 않습니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
 
 Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 시작](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)을 참조하세요.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

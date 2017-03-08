@@ -3,12 +3,20 @@ author: awkoren
 Description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)로 변환한 데스크톱 앱에 서명하는 방법에 대해 설명합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "변환된 데스크톱 앱을 지원하는 UWP API"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 translationtype: Human Translation
-ms.sourcegitcommit: 3751b16837a1e12f68954b2dec7dfaf0fb8554b6
-ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: f5ee6f103fa9a7e5f13dc68eb9c6060e6b66e227
+ms.lasthandoff: 02/08/2017
 
 ---
-# 데스크톱 브리지로 변환된 앱에 대해 지원되는 UWP API
+# <a name="supported-uwp-apis-for-apps-converted-with-the-desktop-bridge"></a>데스크톱 브리지로 변환된 앱에 대해 지원되는 UWP API
 
 변환된 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서에는 변환된 앱이 사용할 수 있는 클래스가 나와 있습니다. 
 
@@ -38,14 +46,14 @@ ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
 
 전체 데스크톱 응용 프로그램에서 사용할 수 있는 일부 UWP API가 변환된 앱에서는 지원되지 않습니다. 변환 전에 데스크톱 응용 프로그램이 UWP API를 사용한 경우 해당 API가 여전히 지원되는지 확인해야 합니다. 자세한 내용은 [데스크톱 앱용 Windows 런타임 API](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx)를 참조하세요.
 
-## API 목록
+## <a name="list-of-apis"></a>API 목록
 
 다음은 변환된 앱에서 지원되는 UWP API의 전체 목록입니다. [변환된 앱에서 새로 지원되는 API](#new) 또는 [변환된 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API](#both)를 확인할 수 있습니다. 
 
-WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 데스크톱 앱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요.
+WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 데스크톱 앱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요. Windows용 앱 빌드 블로그 게시물 [데스크톱 응용 프로그램에서 Windows 10 API 호출](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application)을 참조하세요. 
 
 <span id="new" />
-### 변환된 앱에서 새로 지원되는 API
+### <a name="apis-supported-in-newly-converted-apps"></a>변환된 앱에서 새로 지원되는 API
 
 * [Windows.ApplicationModel.DataTransfer.DataProviderHandler](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataProviderHandler)
 * [Windows.ApplicationModel.DataTransfer.DataRequest](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -371,7 +379,7 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 �
 * [Windows.UI.StartScreen.JumpListItem](https://msdn.microsoft.com/library/windows/apps/Windows.UI.StartScreen.JumpListItem)
 
 <span id="both" />
-### 변환된 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API
+### <a name="apis-supported-in-both-converted-apps-and-desktop-applications"></a>변환된 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API
 
 * [Windows.ApplicationModel.Core.AppListEntry](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.AppListEntry)
 * [Windows.ApplicationModel.DataTransfer.DataPackage](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)
@@ -1037,9 +1045,4 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 �
 * [Windows.Web.Syndication.SyndicationPerson](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationPerson)
 * [Windows.Web.Syndication.SyndicationText](https://msdn.microsoft.com/library/windows/apps/Windows.Web.Syndication.SyndicationText)
 * [Windows.Web.WebError](https://msdn.microsoft.com/library/windows/apps/Windows.Web.WebError)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

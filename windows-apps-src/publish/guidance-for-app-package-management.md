@@ -1,15 +1,22 @@
 ---
 author: jnHs
-Description: "고객에게 앱 패키지를 제공하는 방법 및 특정 패키지 시나리오를 관리하는 방법을 알아봅니다."
+Description: "고객에게 앱 패키지를 제공하는 방법 및 특정 패키지 시나리오를 관리하는 방법에 대해 알아봅니다."
 title: "앱 패키지 관리 지침"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54f6d6c786eb0787a441628452d26e46f353b3d8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 패키지 관리 지침
+# <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
 
 고객에게 앱 패키지를 제공하는 방법 및 특정 패키지 시나리오를 관리하는 방법에 대해 알아봅니다.
@@ -20,7 +27,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 -   [스토어에서 앱 제거](#removing-an-app-from-the-store)
 -   [이전에 지원되던 디바이스 패밀리용 패키지 제거](#removing-packages-for-a-previously-supported-device-family)
 
-## OS 버전 및 패키지 배포
+## <a name="os-versions-and-package-distribution"></a>OS 버전 및 패키지 배포
 
 
 여러 운영 체제에서 서로 다른 유형의 패키지를 실행할 수 있습니다. 고객의 장치에서 둘 이상의 패키지를 실행할 수 있는 경우 Windows 스토어는 최적의 패키지를 제공합니다.
@@ -31,7 +38,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 다음 예제에서는 서로 다른 OS 버전을 대상으로 하는 패키지가 포함된 앱에 대한 다양 한 시나리오를 보여 줍니다. 경우에 따라 패키지의 특정 제약 조건으로 인해 여기에 나열된 일부 OS 버전 및 장치 유형에서 패키지를 실행하지 못할 수 있지만(예: 아키텍처가 적합해야 함) 이러한 예제는 특정 패키지에서 실행할 수 있는 OS 버전을 이해하는 데 도움이 됩니다.
 
-### 예제 앱 1
+### <a name="example-app-1"></a>예제 앱 1
 
 | 패키지의 대상 운영 체제 | 이 패키지를 얻을 수 있는 운영 체제 |
 |-------------------------------------|----------------------------------------------|
@@ -42,7 +49,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 예제 앱 1에는 특별히 Windows 10 장치용으로 빌드된 UWP(유니버설 Windows 플랫폼) 패키지가 아직 없지만 Windows 10 고객은 앱을 가져올 수 있습니다. 이러한 고객은 해당 장치 유형에 따라 사용 가능한 최상의 패키지를 얻게 됩니다.
 
-### 예제 앱 2
+### <a name="example-app-2"></a>예제 앱 2
 
 | 패키지의 대상 운영 체제  | 이 패키지를 가져올 수 있는 운영 체제 |
 |--------------------------------------|----------------------------------------------|
@@ -53,7 +60,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 예제 앱 2에는 Windows 8에서 실행할 수 있는 패키지가 없습니다. 그 외에 다른 모든 OS 버전을 실행하는 고객은 앱을 받을 수 있습니다.
 
-### 예제 앱 3
+### <a name="example-app-3"></a>예제 앱 3
 
 | 패키지의 대상 운영 체제 | 이 패키지를 가져올 수 있는 운영 체제                  |
 |-------------------------------------|---------------------------------------------------------------|
@@ -64,7 +71,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 이 예제 앱에는 Windows 7.x에서 실행할 수 있는 패키지가 포함되어 있지 않습니다.
 
-### 예제 앱 4
+### <a name="example-app-4"></a>예제 앱 4
 
 | 패키지의 대상 운영 체제  | 이 패키지를 가져올 수 있는 운영 체제 |
 |--------------------------------------|----------------------------------------------|
@@ -72,7 +79,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 예제 앱 4에서는 Windows 10을 실행하는 장치에서 앱을 가져올 수 있지만 이전 OS 버전의 고객은 사용할 수 없습니다. UWP 패키지는 유니버설 디바이스 패밀리를 대상으로 하므로 데스크톱 및 모바일 Windows 10 장치 둘 다에서 사용할 수 있습니다.
 
-## 이전에 게시된 앱에 Windows 10용 패키지 추가
+## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>이전에 게시된 앱에 Windows 10용 패키지 추가
 
 
 스토어에 앱이 있는 경우 [패키지](upload-app-packages.md) 단계 중 Windows 10용 앱을 업데이트하려면 새 제출을 만들고 UWP .appxupload 패키지를 업로드합니다. 앱이 인증 프로세스를 통과하면 Windows 10으로 업그레이드하기 전에 앱이 이미 있는 고객은 스토어에서 업데이트로 UWP 패키지를 가져올 수 있습니다. Windows 10의 고객도 UWP 패키지를 새로 구매할 수 있습니다.
@@ -95,7 +102,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 > 
 > 디바이스 패밀리에 대한 자세한 내용은 [UWP(유니버설 Windows 플랫폼) 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
 
-## Windows Phone 8.1용 패키지 호환성 유지 관리
+## <a name="maintaining-package-compatibility-for-windows-phone-81"></a>Windows Phone 8.1용 패키지 호환성 유지 관리
 
 
 이전에 Windows Phone 8.1용으로 게시된 앱을 업데이트할 때 패키지 형식에 대한 특정 요구 사항이 적용됩니다.
@@ -107,7 +114,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 이러한 규칙을 따르지 않으면 패키지 업로드 오류가 발생하여 제출을 완료하지 못하게 됩니다.
 
-## 스토어에서 앱 제거
+## <a name="removing-an-app-from-the-store"></a>스토어에서 앱 제거
 
 
 고객에 대한 앱 제공을 완전히 중지, 즉 "게시를 취소"해야 할 때가 있습니다. 이렇게 하려면 앱 개요 페이지에서 **앱을 사용할 수 없도록 설정**을 클릭합니다. 앱을 사용할 수 없도록 설정하면 몇 시간 내에 해당 앱이 스토어에 더 이상 표시되지 않고 새 고객이 홍보 코드를 포함한 어떠한 방법으로도 다운로드할 수 없게 됩니다.
@@ -120,7 +127,7 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 > **참고** 앱을 계속 사용할 수 있도록 하지만 특정 OS 버전의 고객에게는 제공하지 않으려는 경우 새 제출을 만들고, 새로운 구입을 방지하려는 OS 버전의 모든 패키지를 제거할 수 있습니다. 예를 들어 Windows Phone 8, Windows Phone 8.1 및 Windows 10용 패키지가 이미 있으며 새로운 Windows Phone 8 고객에게는 앱을 계속 제공하지 않으려는 경우 제출에서 Windows Phone 8 패키지를 제거합니다. 업데이트가 게시되면 새로운 Windows Phone 8 고객은 앱을 구입할 수 없습니다. 그러나 기존 보유 고객은 계속 사용할 수 있습니다. 또한 새로운 Windows Phone 8.1 고객 및 Windows 10 고객은 여전히 앱을 사용할 수 있습니다.
 
-## 이전에 지원되던 디바이스 패밀리용 패키지 제거
+## <a name="removing-packages-for-a-previously-supported-device-family"></a>이전에 지원되던 디바이스 패밀리용 패키지 제거
 
 
 앱에서 이전에 지원하던 특정 디바이스 패밀리용 패키지를 모두 제거하는 경우 **패키지** 페이지에서 변경 내용을 저장하기 전에 먼저 이러한 제거가 의도한 내용인지 확인하는 메시지가 표시됩니다.
@@ -135,10 +142,5 @@ ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

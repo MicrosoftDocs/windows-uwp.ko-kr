@@ -3,13 +3,20 @@ author: jnHs
 Description: "pubCenter의 Microsoft Advertising이 Windows 개발자 센터로 통합되어 있습니다."
 title: "pubCenter-개발자 센터 통합"
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 609d1dd2b154b8096871ef5fbf3e26245f46dc5c
-ms.openlocfilehash: 5a7fb36d22b4f30465602c96ddc252602e462207
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e29476296eb1fc8288cc37dd5ca71ef78476727a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# pubCenter-개발자 센터 통합
+# <a name="pubcenter-dev-center-integration"></a>pubCenter-개발자 센터 통합
 
 pubCenter의 Microsoft Advertising이 Windows 개발자 센터로 통합되어 있습니다. **2016년 10월 1일부터 pubCenter에 액세스할 수 없게 되며, 개발자 센터에서 Microsoft Advertising 수익에 대한 모든 지급 정보를 사용자가 관리해야 합니다.** 자세한 내용은 다음 질문과 대답을 참조하세요.
 
@@ -35,7 +42,7 @@ pubCenter에 있는 모든 기존 광고 단위의 보고서는 개발자 센터
 
 **수익이 얼마나 되어야 지급되며 계정으로 언제 지급되나요?**
 
-Microsoft Advertising의 경우 지급 임계값은 $50 또는 동등 수준의 현지 화폐 가치가 됩니다. 금액이 계정으로 지급되는 데 소요되는 시간은 사용되는 결제 방법에 따라 다릅니다. 자세한 내용은 [지급 임계값, 방법 및 기간](payment-thresholds-methods-and-timeframes.md)에 해당하는 [Microsoft Advertising 섹션](payment-thresholds-methods-and-timeframes.md#microsoft-advertising)을 참조하세요.
+Microsoft Advertising의 경우 지급 임계값은 $50 또는 동등 수준의 현지 화폐 가치가 됩니다. 금액이 계정으로 지급되는 데 소요되는 시간은 사용되는 결제 방법에 따라 다릅니다. 자세한 내용은 [지급 임계값, 방법 및 기간](payment-thresholds-methods-and-timeframes.md#microsoft-advertising)에 해당하는 [Microsoft Advertising 섹션](payment-thresholds-methods-and-timeframes.md)을 참조하세요.
 
 **개발자 센터에서 프로모션을 만들려면 어떻게 하나요?**
 
@@ -54,9 +61,4 @@ Microsoft Advertising의 경우 지급 임계값은 $50 또는 동등 수준의 
 
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,11 +1,18 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: a128edc8-8a80-4645-ac29-908ede2d1c72
 description: "이 문서에서는 MediaFrameReader와 MediaCapture를 사용하여 색, 깊이, 적외선 카메라, 오디오 장치, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다."
 title: "MediaFrameReader를 사용하여 미디어 프레임 처리"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e6ab1fc16f150de2fed3797d89375a52b3965182
-ms.openlocfilehash: 11e09d9b447e9daa0498377a67ef235bdab168dd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 7646cce8c8aafcb881e825be1ad134ad682c362a
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -163,10 +170,5 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

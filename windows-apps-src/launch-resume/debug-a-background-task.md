@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "백그라운드 작업 디버그"
 description: "Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 6e1184729af929b771f21112083593e321cacc38
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6200a8363c8a638f2ee44bdad6902748fb9adf45
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -42,7 +49,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
     이를 위해서는 백그라운드 작업이 이미 등록되어 있고 여전히 트리거를 대기하고 있어야 합니다. 예를 들어 백그라운드 작업이 원샷 TimeTrigger로 등록되었고 Visual Studio를 통해 작업을 실행해도 아무런 효과가 없습니다.
 
 > [!Note]
-> [**Application 트리거**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [**MediaProcessing 트리거**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) 등의 트리거를 사용하는 백그라운드 작업과 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)를 [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839) 트리거 유형과 함께 사용하는 백그라운드 작업은 이런 방식으로 활성화할 수 없습니다.  
+> [**Application 트리거**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [**MediaProcessing 트리거**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) 등의 트리거를 사용하는 백그라운드 작업과 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)를 [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839) 트리거 유형과 함께 사용하는 백그라운드 작업은 이런 방식으로 활성화할 수 없습니다.  
 > 코드에서 `trigger.RequestAsync()`를 사용하여 **Application 트리거** 및 **MediaProcessingTrigger**에 수동으로 신호를 보낼 수 있습니다.     
 
     ![debugging background tasks](images/debugging-activation.png)
@@ -113,9 +120,4 @@ Visual Studio를 사용하여 백그라운드 작업을 디버그하는 방법�
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

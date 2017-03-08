@@ -3,9 +3,16 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "디바이스 포털 핵심 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
-ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -222,7 +229,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="device-manager"></a>디바이스 관리자
+## Device manager
 ---
 ### <a name="get-the-installed-devices-on-the-machine"></a>컴퓨터에 설치된 디바이스 가져오기
 
@@ -281,7 +288,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="dump-collection"></a>덤프 컬렉션
+## Dump collection
 ---
 ### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>앱에 대한 모든 크래시 덤프 목록 가져오기
 
@@ -865,7 +872,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="etw"></a>ETW
+## ETW
 ---
 ### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Websocket을 통해 실시간 ETW 세션 만들기
 
@@ -925,7 +932,7 @@ provider *{guid}* disable | *{guid}*(괄호 없음)로 표시된 공급자를 �
     "Events":[
         {
             "Timestamp": int,
-            "Provider": string,
+            "ProviderName": string,
             "ID": int, 
             "TaskName": string,
             "Keyword": int,
@@ -1060,7 +1067,7 @@ GET | /api/etw/customproviders
 * IoT
 
 ---
-## <a name="os-information"></a>OS 정보
+## OS information
 ---
 ### <a name="get-the-machine-name"></a>컴퓨터 이름 가져오기
 
@@ -1172,7 +1179,7 @@ HTTP 상태 코드      | 설명
 
 **요청**
 
-다음 요청 형식을 사용하여 디바이스 패밀리(Xbox, 휴대폰, 데스크톱 등)를 가져올 수 있습니다.
+다음 요청 형식을 사용하여 디바이스 패밀리(Xbox, 휴대폰, 데스크톱 등)을 가져올 수 있습니다.
  
 메서드      | 요청 URI
 :------     | :-----
@@ -1193,7 +1200,7 @@ GET | /api/os/devicefamily
 
 **응답**
 
-응답에는 디바이스 패밀리(SKU - 데스크톱, Xbox 등)가 포함됩니다.
+응답에는 디바이스 패밀리(SKU - 데스크톱, Xbox 등)이 포함됩니다.
 
 ```
 {
@@ -1268,7 +1275,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="performance-data"></a>성능 데이터
+## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>실행 중인 프로세스 목록 가져오기
 
@@ -1410,7 +1417,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="power"></a>전원
+## Power
 ---
 ### <a name="get-the-current-battery-state"></a>현재 배터리 상태 가져오기
 
@@ -1523,7 +1530,7 @@ HTTP 상태 코드      | 설명
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/power/cfg/
+GET | /api/power/cfg/*<power scheme path>*
 <br />
 옵션:
 - SCHEME_CURRENT
@@ -1658,7 +1665,7 @@ HTTP 상태 코드      | 설명
  
 메서드      | 요청 URI
 :------     | :-----
-POST | /api/power/cfg/
+POST | /api/power/cfg/*<power scheme path>*
 <br />
 
 **URI 매개 변수**
@@ -1831,7 +1838,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="remote-control"></a>원격 제어
+## Remote control
 ---
 ### <a name="restart-the-target-computer"></a>대상 컴퓨터 다시 시작
 
@@ -1919,7 +1926,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="task-manager"></a>작업 관리자
+## Task manager
 ---
 ### <a name="start-a-modern-app"></a>최신 앱 시작
 
@@ -2019,7 +2026,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="networking"></a>네트워킹
+## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>현재 IP 구성 가져오기
 
@@ -2336,7 +2343,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="windows-error-reporting-wer"></a>WER(Windows 오류 보고)
+## Windows Error Reporting (WER)
 ---
 ### <a name="download-a-windows-error-reporting-wer-file"></a>WER(Windows 오류 보고) 파일 다운로드
 
@@ -2502,7 +2509,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="windows-performance-recorder-wpr"></a>WPR(Windows Performance Recorder) 
+## Windows Performance Recorder (WPR) 
 ---
 ### <a name="start-tracing-with-a-custom-profile"></a>사용자 지정 프로필을 사용하여 추적 시작
 
@@ -2965,7 +2972,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## <a name="dns-sd-tags"></a>DNS-SD 태그 
+## DNS-SD Tags 
 ---
 ### <a name="view-tags"></a>태그 보기
 
@@ -3465,8 +3472,3 @@ HTTP 상태 코드      | 설명
 * HoloLens
 * Xbox
 * IoT
-
-
-<!--HONumber=Dec16_HO1-->
-
-

@@ -2,14 +2,21 @@
 author: jnHs
 Description: "계정 사용자에 대한 사용자 지정 권한 설정"
 title: "계정 사용자에 대한 사용자 지정 권한 설정"
-ms.assetid: 
+ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7dab1bf03bfc0920230d8cc57f48ad4a4f83e4d2
-ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 23d8c14bfdbfc05a1397fa67cb831d38ec092233
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 계정 사용자에 대한 사용자 지정 권한 설정
+# <a name="set-custom-permissions-for-account-users"></a>계정 사용자에 대한 사용자 지정 권한 설정
 
 계정에 사용자를 추가할 때 [표준 역할](manage-account-users.md#roles-and-permissions)을 할당할 수 있습니다. 또는 사용자에게 적절한 수준의 액세스를 제공하기 위해 권한을 사용자 지정하도록 선택할 수 있습니다. 이러한 권한 중 일부는 전체 계정에 적용되며, 일부는 모든 제품에 부여되거나 특정 제품으로 제한될 수 있습니다. 
 
@@ -30,7 +37,7 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 
 각 권한에 대한 특정 세부 정보는 아래의 표에서 설명합니다.
 
-## 계정 수준 권한
+## <a name="account-level-permissions"></a>계정 수준 권한
 
 이 섹션의 사용 권한은 특정 제품으로 제한되지 않습니다. 특정 액세스 권한을 부여하면 사용자는 전체 계정에 대해 해당 권한을 갖게 됩니다.
 
@@ -78,7 +85,7 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 
 별표(*)로 표시된 \* 사용 권한은 모든 계정에서 사용할 수 없는 기능에 대한 액세스를 허용합니다. 계정이 이러한 기능을 사용하도록 설정되지 않은 경우, 해당 사용 권한을 선택해도 아무런 영향이 없습니다.   
 
-## 제품 수준 사용 권한
+## <a name="product-level-permissions"></a>제품 수준 사용 권한
 
 이 섹션의 사용 권한을 계정의 모든 제품에 부여할 수 있습니다. 또는 하나 이상의 특정 제품에만 권한을 허용하도록 사용자 지정할 수도 있습니다. 이러한 사용 권한은 **분석**, **수익 창출**, **게시** 및 **Xbox Live**의 4개 범주로 그룹화됩니다. 각 범주에서 개별 사용 권한을 보려면 각 범주를 확장할 수 있습니다. 
 
@@ -92,16 +99,16 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 
 일부 사용 권한은 추가 기능에 대해 설정할 수 없습니다. 이는 해당 권한이 추가 기능에 적용되지 않기 때문이거나(예: **고객 의견** 권한), 상위 제품 수준에서 부여된 권한이 해당 제품의 모든 추가 기능에 적용되기 때문입니다(예: **홍보 코드**). 그러나 추가 기능에 대해 사용 가능한 권한은 별도로 설정해야 합니다. 추가 기능은 상위 제품에 대해 선택한 항목을 상속하지 않습니다. 예를 들어 사용자가 추가 기능에 대해 가격 책정 및 가용성을 선택할 수 있도록 하려면, 상위 제품에 대해 **가격 책정 및 가용성** 권한을 부여했는지와 상관없이 추가 기능에 대해(또는 **모든 추가 기능**에 대해) **가격 책정 및 가용성**을 사용하도록 설정해야 합니다. 
 
-### 분석
+### <a name="analytics"></a>분석
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한 이름</th>
-    <th align="left">읽기 전용</th>
+    <th align="left">사용 권한&nbsp;이름</th>
+    <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가 기능)  </th>
-    <th align="left">읽기-쓰기(추가 기능)</th>
+    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
+    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
     </tr>
     </thead>
     <tbody>
@@ -114,16 +121,16 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
     </tbody>
     </table>
 
-### 수익 창출
+### <a name="monetization"></a>수익 창출
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한 이름</th>
-    <th align="left">읽기 전용</th>
+    <th align="left">사용 권한&nbsp;이름</th>
+    <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가 기능)  </th>
-    <th align="left">읽기-쓰기(추가 기능)</th>
+    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
+    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
     </tr>
     </thead>
     <tbody>
@@ -133,16 +140,16 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
     </tbody>
     </table>
 
-### 게시 
+### <a name="publishing"></a>게시 
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한 이름</th>
-    <th align="left">읽기 전용</th>
+    <th align="left">사용 권한&nbsp;이름</th>
+    <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가 기능)  </th>
-    <th align="left">읽기-쓰기(추가 기능)</th>
+    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
+    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
     </tr>
     </thead>
     <tbody>
@@ -158,16 +165,16 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
     </tbody>
     </table>
 
-### Xbox Live \*
+### <a name="xbox-live-"></a>Xbox Live \*
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한 이름</th>
-    <th align="left">읽기 전용</th>
+    <th align="left">사용 권한&nbsp;이름</th>
+    <th align="left">읽기&nbsp;전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가 기능)  </th>
-    <th align="left">읽기-쓰기(추가 기능)</th>
+    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
+    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
     </tr>
     </thead>
     <tbody>
@@ -177,9 +184,4 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 </table>
 
 별표(*)로 표시된 \* 사용 권한은 모든 계정에서 사용할 수 없는 기능에 대한 액세스를 허용합니다. 계정이 이러한 기능을 사용하도록 설정되지 않은 경우, 해당 사용 권한을 선택해도 아무런 영향이 없습니다.  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

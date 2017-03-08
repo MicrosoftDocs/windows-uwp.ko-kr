@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
 description: "Windows.Services.Store 네임스페이스를 사용하여 현재 앱과 추가 기능에 대한 라이선스 정보를 가져오는 방법을 알아봅니다."
 title: "앱과 추가 기능에 대한 라이선스 정보 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 라이선스, 앱, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 0482cc192eeff4d3633898b6fa677805c635c6e1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 56fd2d02dc17e5bf7c3903315c685da077c05abd
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -13,7 +20,7 @@ ms.openlocfilehash: 0482cc192eeff4d3633898b6fa677805c635c6e1
 
 Windows 10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있는 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 메서드를 사용하여 현재 앱과 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)에 대한 라이선스 정보를 가져올 수 있습니다. 예를 들어 이 정보를 사용하여 앱이나 추가 기능에 대한 라이선스가 활성 상태인지 또는 평가판 라이선스인지 확인할 수 있습니다.
 
->**참고**   이 문서는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
+>**참고**&nbsp;&nbsp;이 문서는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -26,7 +33,7 @@ Windows 10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.S
 * 코드 파일에는 **Windows.Services.Store** 네임스페이스에 대한 **using** 문이 있습니다.
 * 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md#api_intro)을 참조하세요.
 
->**참고**  [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
+>**참고**&nbsp;&nbsp;[데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
 
 ## <a name="code-example"></a>코드 예제
 
@@ -47,9 +54,4 @@ Windows 10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.S
 * [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
 * [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
 * [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

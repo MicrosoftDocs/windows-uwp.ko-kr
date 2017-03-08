@@ -1,17 +1,24 @@
 ---
 author: DelfCo
-description: "WebSocket은 HTTP(S)를 사용하여 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 제공합니다."
+description: "WebSocket은 HTTP(S)를 사용하여 웹을 통해 클라이언트와 서버 간의 신속하고 안전한 양방향 통신을 위한 메커니즘을 제공합니다."
 title: WebSocket
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ff2429e1e9ea56c414978c126497551b1e1864b8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 203face64ddb925601d23274c4e9cf9ab6d7c6f8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# WebSocket
+# <a name="websockets"></a>WebSocket
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -36,7 +43,7 @@ WebSocket은 HTTP(S)를 사용하여 웹을 통해 클라이언트와 서버 간
 
 WebSocket 연결을 암호화하려면 사용 wss: URI 스키마(예: `wss://www.contoso.com/mywebservice`)를 사용합니다.
 
-## MessageWebSocket 사용
+## <a name="using-messagewebsocket"></a>MessageWebSocket 사용
 
 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)을 사용하면 각 읽기 작업으로 메시지의 섹션을 읽을 수 있습니다. **MessageWebSocket**은 일반적으로 메시지가 너무 크지 않은 시나리오에서 사용됩니다. UTF-8과 이진 파일이 모두 지원됩니다.
 
@@ -114,7 +121,7 @@ WebSocket 연결을 암호화하려면 사용 wss: URI 스키마(예: `wss://www
 
 WebSocket 연결을 초기화한 후에는 코드에서 데이터를 적절히 보내고 받기 위해 다음 작업을 수행해야 합니다.
 
-### MessageWebSocket.MessageReceived 이벤트에 대한 콜백 구현
+### <a name="implement-a-callback-for-the-messagewebsocketmessagereceived-event"></a>MessageWebSocket.MessageReceived 이벤트에 대한 콜백 구현
 
 WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 먼저 앱에서 데이터가 수신된 경우 알림을 받기 위한 이벤트 콜백을 등록해야 합니다. [**MessageWebSocket.MessageReceived**](https://msdn.microsoft.com/library/windows/apps/br241358) 이벤트가 발생하면 등록된 콜백이 호출되고 [**MessageWebSocketMessageReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br226852)에서 데이터를 받습니다. 다음 예제에서는 전송되는 메시지가 UTF-8 형식인 것으로 가정합니다.
 
@@ -145,7 +152,7 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 >}
 >```
 
-###  MessageWebSocket.Closed 이벤트에 대한 콜백 구현
+###  <a name="implement-a-callback-for-the-messagewebsocketclosed-event"></a>MessageWebSocket.Closed 이벤트에 대한 콜백 구현
 
 WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 먼저 앱에서 WebSocket이 WebSocket 서버에 의해 닫힌 경우 알림을 받기 위한 이벤트 콜백을 등록해야 합니다. [**MessageWebSocket.Closed**](https://msdn.microsoft.com/library/windows/apps/hh701364) 이벤트가 발생하면 등록된 콜백이 호출되어 WebSocket 서버에 의해 연결이 닫혔음을 나타냅니다.
 
@@ -172,7 +179,7 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 >}
 >```
 
-###  WebSocket에 메시지 보내기
+###  <a name="send-a-message-on-a-websocket"></a>WebSocket에 메시지 보내기
 
 연결이 설정되면 WebSocket 클라이언트에서 서버에 데이터를 보낼 수 있습니다. [**DataWriter.StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171) 메서드는 서명되지 않은 int에 매핑되는 매개 변수를 반환합니다. 따라서 연결을 설정하는 작업과 비교하여 메시지를 보내는 작업을 정의하는 방법이 변경됩니다.
 
@@ -224,7 +231,7 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 >}
 >```
 
-## WebSocket에서 고급 컨트롤 사용
+## <a name="using-advanced-controls-with-websockets"></a>WebSocket에서 고급 컨트롤 사용
 
 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 및 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)은 고급 컨트롤 사용에 대한 동일한 모델을 따릅니다. 위 기본 클래스에는 각각 고급 컨트롤에 액세스할 수 있는 관련 클래스가 있습니다.
 
@@ -241,7 +248,7 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 -   [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)의 모든 고급 컨트롤에 대해 연결 작업을 실행하기 전에 항상 앱에서 속성을 설정해야 합니다. 이 요구 사항 때문에 **StreamWebSocket** 개체를 만든 즉시 모든 컨트롤 속성을 설정하는 것이 가장 좋습니다. [**StreamWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226933) 메서드가 호출된 후 컨트롤 속성을 설정하려고 하지 마세요.
 -   메시지 형식을 제외하고 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)의 모든 고급 컨트롤에 대해 연결 작업을 실행하기 전에 속성을 설정해야 합니다. **MessageWebSocket** 개체를 만든 즉시 모든 컨트롤 속성을 설정하는 것이 가장 좋습니다. 메시지 형식 외에는 [**MessageWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226859)가 호출된 후 컨트롤 속성을 변경하지 마세요.
 
-## WebSocket 정보 클래스
+## <a name="websocket-information-classes"></a>WebSocket 정보 클래스
 
 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 및 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 각각에는 WebSocket 인스턴스에 대한 추가 정보를 제공하는 해당 클래스가 있습니다.
 
@@ -251,13 +258,13 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 
 두 Information 클래스의 모든 속성은 읽기 전용이며, 웹 소켓 객체의 수명 동안 언제든지 현재 정보를 검색할 수 있습니다.
 
-## 네트워크 예외 처리
+## <a name="handling-network-exceptions"></a>네트워크 예외 처리
 
 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [**WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529) 메서드는 네트워크 오류를 WebSocket 작업에서 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 매개 변수 유효성 검사 오류의 경우 앱은 또한 예외에서 **HRESULT**를 사용하여 예외의 원인이 된 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다.
 
-## WebSocket 작업에 대한 시간 제한 설정
+## <a name="setting-timeouts-on-websocket-operations"></a>WebSocket 작업에 대한 시간 제한 설정
 
 MessageWebSocket 및 StreamWebSocket 클래스는 내부 시스템 서비스를 사용하여 WebSocket 클라이언트 요청을 보내고 서버에서 응답을 받습니다. WebSocket 연결 작업에 사용되는 기본 시간 제한 값은 60초입니다. WebSockets을 지원하는 HTTP 서버가 일시적으로 중단되거나 네트워크 중단으로 차단되어 서버에서WebSocket 연결 요청에 응답하지 않거나 응답할 수 없는 경우 내부 시스템 서비스는 기본 60초간 대기한 후 WebSocket ConnectAsync 메서드에서 예외를 throw하는 오류를 반환합니다. URI의 HTTP 서버 이름에 대한 이름 쿼리에서 이름의 IP 주소를 여러 개 반환하는 경우 내부 시스템 서비스는 각각 실패하기까지 기본 시간 제한 60초를 사용하여 사이트에 대해 최대 5개의 IP 주소를 시도합니다. WebSocket 연결 요청을 하는 앱은 에서 오류가 반환되어 예외가 발생하기까지 몇 분 정도 기다린 후 여러 IP 주소에 대한 연결을 시도할 수 있습니다. 이 동작은 사용자에게 앱 작동이 중지된 것처럼 보일 수 있습니다. WebSocket 연결 후 보내기 및 받기 작업에 사용되는 기본 시간 제한은 30초입니다.
 
@@ -341,10 +348,5 @@ StreamWebSocket과 MessageWebSocket 둘 다에 대해 유사한 시간 제한을
         });
     }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ title: "데이터 인코드 및 디코드"
 description: "이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 base64 및 16진수 데이터를 인코딩 및 디코딩하는 방법을 보여 줍니다."
 ms.assetid: 2CC23863-E840-48F4-B087-0479045743AC
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: b07a040cafd2248f12fee571552632080e117692
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cdf4ee8d67048111b1e5e76bfd99ac555fb749ca
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 데이터 인코드 및 디코드
+# <a name="encode-and-decode-data"></a>데이터 인코드 및 디코드
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -41,9 +48,4 @@ public void EncodeDecodeHex()
     String strHexNew = CryptographicBuffer.EncodeToHexString(buffer);
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

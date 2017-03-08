@@ -3,23 +3,30 @@ author: jnHs
 Description: "스토어에 앱을 제출한 후 오류가 발생하는 경우 오류를 해결해야만 인증 프로세스를 계속할 수 있습니다."
 title: "제출 오류 해결"
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
-ms.openlocfilehash: 71f8ee9e2b8d1f892711ada30c58eefde250cca3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b97cb009078039582bfcff6cdaa678f1dd9b979
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 제출 오류 해결
+# <a name="resolve-submission-errors"></a>제출 오류 해결
 
 스토어에 앱을 제출한 후 오류가 발생하는 경우 오류를 해결해야만 [인증 프로세스](the-app-certification-process.md)를 계속할 수 있습니다. 오류 메시지는 문제가 무엇이며, 문제를 해결하기 위해 수행해야 할 수 있는 작업을 나타냅니다. 이러한 오류를 해결하는 데 도움이 될 수 있는 일부 추가 정보는 다음과 같습니다.
 
-## UWP 앱
+## <a name="uwp-apps"></a>UWP 앱
 
 UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어용으로 생성한 .appxupload 파일이 없는 경우 전처리 동안 오류가 나타날 수 있습니다. 앱 패키지 파일을 만들 때는 반드시 [Windows 10용 유니버설 Windows 앱 패키지](../packaging/packaging-uwp-apps.md)의 단계를 따르고 제출의 [패키지](upload-app-packages.md) 페이지에서 appx 또는 .appxbundle이 아닌 .appxupload 파일만 업로드하세요.
 
 컴파일 오류가 표시되면 릴리스 모드에서 응용 프로그램을 성공적으로 빌드할 수 있는지 확인합니다. 자세한 내용은 [.NET 네이티브 내부 컴파일러 오류](http://go.microsoft.com/fwlink/p/?LinkID=613098)를 참조하세요.
 
-## Windows Phone 앱
+## <a name="windows-phone-apps"></a>Windows Phone 앱
 
 전처리 중에Windows Phone 패키지의 문제가 감지되면 **오류 2001**이 표시될 수 있습니다. 대부분의 경우 오류를 수정하고 앱 패키지를 다시 작성해야 합니다. 이 작업이 끝나면 **스토어에 제출**을 다시 클릭하기 전에 제출의 [패키지](upload-app-packages.md) 페이지에서 이전 패키지를 새 패키지로 바꿉니다.
 
@@ -33,7 +40,7 @@ UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어
 
 앱을 제출한 후 표시될 수 있는 또 다른 오류는 **오류 1300**입니다. 이 오류는 하나 이상의 어셈블리(또는 전체 패키지)가 이미 미리 컴파일되어 있을 때 발생합니다. 이 문제를 해결하려면 Microsoft Visual Studio에서 앱 패키지를 다시 작성하고 새로 생성된 패키지를 제출합니다.
 
-## 이름/ID 오류
+## <a name="nameidentity-errors"></a>이름/ID 오류
 
 **패키지에 있는 이름이 예약된 앱 이름 중 하나가 아닙니다. 앱 이름을 예약하거나 이 언어에 맞는 앱 이름으로 패키지를 업데이트하세요.**라는 오류가 표시되는 경우 패키지에 잘못된 이름을 입력했기 때문일 수 있습니다. 개발자 센터에서 예약하지 않은 앱 이름을 사용하는 경우에도 이 오류가 발생할 수 있습니다. 일반적으로 다음 단계에 따라 이 오류를 해결할 수 있습니다.
 
@@ -48,10 +55,5 @@ UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

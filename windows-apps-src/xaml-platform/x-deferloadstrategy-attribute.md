@@ -3,13 +3,20 @@ author: jwmsft
 title: "xDeferLoadStrategy 특성"
 description: "xDeferLoadStrategy는 요소 및 해당 자식의 생성을 지연하므로 시작 시간은 감소하고 메모리 사용량은 약간 늘어납니다. 영향을 받는 각 요소는 메모리 사용량에 약 600바이트를 추가합니다."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:DeferLoadStrategy 특성
+# <a name="xdeferloadstrategy-attribute"></a>x:DeferLoadStrategy 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -17,13 +24,13 @@ ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
 
 그러나 지연의 기록 유지를 위해 영향받는 각 요소에 대한 메모리 사용량이 약 600바이트 추가됩니다. 지연되는 요소 트리가 클수록 시작 시간이 더 많이 단축되지만 메모리 공간이 증가합니다. 그러므로 성능이 저하될 정도로 이 특성을 지나치게 많이 사용할 수 있습니다.
 
-## XAML 특성 사용
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
 ``` syntax
 <object x:DeferLoadStrategy="Lazy" .../>
 ```
 
-## 설명
+## <a name="remarks"></a>설명
 
 **x:DeferLoadStrategy** 사용에 대한 제한 사항은 다음과 같습니다.
 
@@ -59,7 +66,7 @@ ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
 
 일반적인 지침은 이전과 이후에 응용 프로그램을 측정하여 원하는 성능을 얻었는지 확인하는 것입니다.
 
-## 예제
+## <a name="example"></a>예제
 
 ```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
@@ -86,10 +93,5 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

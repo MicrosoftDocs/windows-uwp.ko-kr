@@ -3,13 +3,20 @@ author: mtoepke
 title: "게임용 터치 컨트롤"
 description: "DirectX를 사용하는 UWP(유니버설 Windows 플랫폼) C++ 게임에 기본 터치 컨트롤을 추가하는 방법을 알아봅니다."
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 터치, 컨트롤, directx, 입력"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 901b83b1c4a2e572e4fe41e1df59910432982687
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44d5071ee0cd695351c77630d699a1a060f477d6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임용 터치 컨트롤
+# <a name="touch-controls-for-games"></a>게임용 터치 컨트롤
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -22,12 +29,12 @@ DirectX를 사용하는 UWP(유니버설 Windows 플랫폼) C++ 게임에 기본
 
  
 
-## 목표
+## <a name="objectives"></a>목표
 
 
 -   DirectX 게임에서 고정 평면 카메라를 이동하는 간단한 터치 끌기 컨트롤을 만듭니다.
 
-## 기본 터치 이벤트 인프라를 설정합니다.
+## <a name="set-up-the-basic-touch-event-infrastructure"></a>기본 터치 이벤트 인프라를 설정합니다.
 
 
 이 경우 먼저 기본 컨트롤러 유형인 **CameraPanController**를 정의합니다. 여기서는 컨트롤러를 추상적 개념 및 사용자가 수행할 수 있는 동작 집합으로 정의합니다.
@@ -126,7 +133,7 @@ private 필드에는 카메라 컨트롤러의 현재 상태가 포함되어 있
 
 이제 이러한 조각을 함께 연결해 보겠습니다.
 
-## 기본 터치 이벤트 만들기
+## <a name="create-the-basic-touch-events"></a>기본 터치 이벤트 만들기
 
 
 Windows 런타임 이벤트 디스패처에서는 다음과 같이 앱에서 처리할 3개의 이벤트를 제공합니다.
@@ -204,7 +211,7 @@ void CameraPanController::OnPointerReleased(
 }
 ```
 
-## 터치 컨트롤 및 컨트롤러 상태 초기화
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a>터치 컨트롤 및 컨트롤러 상태 초기화
 
 
 이벤트를 연결하고 카메라 컨트롤러의 모든 기본 상태 필드를 초기화해 보겠습니다.
@@ -238,7 +245,7 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 
 **Initialize**에서는 앱의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스에 대한 참조를 매개 변수로 사용하고 개발한 인벤트 처리기를 해당 **CoreWindow**의 적합한 이벤트에 등록합니다.
 
-## 카메라 컨트롤러의 위치 가져오기 및 설정
+## <a name="getting-and-setting-the-position-of-the-camera-controller"></a>카메라 컨트롤러의 위치 가져오기 및 설정
 
 
 장면 공간에서 카메라 컨트롤러의 위치를 가져오고 설정하는 몇 가지 메서드를 정의해 보겠습니다.
@@ -272,7 +279,7 @@ DirectX::XMFLOAT3 CameraPanController::get_FixedLookPoint()
 
 **get\_FixedLookPoint**는 이 예제에서 x-y 평면에 직각인 보기 지점을 가져오는 public 속성입니다. 고정된 카메라에 대해 더 큰 기울기 각도를 만들려는 경우 x, y 및 z 좌표 값을 계산하려면 이 메서드를 변경하여 삼각 함수 사인과 코사인을 사용할 수 있습니다.
 
-## 카메라 컨트롤러 상태 정보 업데이트
+## <a name="updating-the-camera-controller-state-information"></a>카메라 컨트롤러 상태 정보 업데이트
 
 
 이제 **m\_panPointerPosition**에서 추적한 포인터 좌표 정보를 3D 장면 공간과 관련된 새 좌표 정보로 변환하는 계산을 수행합니다. 앱에서는 메인 앱 루프를 새로 고칠 때마다 이 메서드를 호출합니다. 따라서 뷰포트로 투영하기 전에 보기 매트릭스를 업데이트하는 데 사용되는 앱에 전달할 새로운 위치 정보를 여기에서 계산해야 합니다.
@@ -320,7 +327,7 @@ void CameraPanController::Update( CoreWindow ^window )
 
 터치나 마우스 떨림으로 인해 카메라가 갑자기 이동하지 않도록 설정하려고 하므로 포인터 주위에 32픽셀 지름으로 데드존을 설정합니다. 속도 값도 있으며, 이 경우는 데드존을 지나는 포인터의 픽셀 통과를 사용하는 1:1입니다. 이 동작을 조정하여 이동 속도를 낮추거나 높일 수 있습니다.
 
-## 새로운 카메라 위치로 보기 매트릭스 업데이트
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>새로운 카메라 위치로 보기 매트릭스 업데이트
 
 
 이제 카메라가 초점을 맞춘 장면 공간 좌표를 가져올 수 있으며 이 좌표는 가져오도록 앱에 알릴 때마다(예: 주 앱 루프에서 60초마다) 업데이트됩니다. 다음 의사 코드는 구현할 수 있는 호출 동작을 제안합니다.
@@ -349,10 +356,5 @@ void CameraPanController::Update( CoreWindow ^window )
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

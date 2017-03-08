@@ -1,11 +1,18 @@
 ---
 author: mcleblanc
 description: "선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 유니버설 8.1 앱에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다."
-title: "Windows 런타임 8.x XAML 및 UI를 UWP로 포팅&quot;"
+title: "Windows 런타임 8.x XAML 및 UI를 UWP로 포팅"
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: ea8844925cc227d9f082595b039dd68164ad1228
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 19a6ef29265c22d1bb02464a76ab20e487c67ce4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -81,11 +88,11 @@ ms.openlocfilehash: ea8844925cc227d9f082595b039dd68164ad1228
 
 참 메뉴와 통합되는 코드를 변경할 필요는 없지만 Windows 10 셸의 일부가 아닌 참 메뉴를 대신할 UI를 앱에 추가해야 합니다. Windows 10에서 실행되는 유니버설 8.1 앱의 제목 표시줄에는 시스템 렌더링 크롬에서 제공하는 고유한 대체 UI가 있습니다.
 
-## <a name="controls-and-control-stylestemplates"></a>컨트롤 및 컨트롤 스타일/템플릿
+## <a name="controls-and-control-styles-and-templates"></a>컨트롤과 컨트롤 스타일 및 템플릿
 
-Windows 10에서 실행되는 유니버설 8.1 앱은 컨트롤에 대해 8.1 모양 및 동작을 유지합니다. 그러나 해당 앱을 Windows 10 앱에 포팅하는 경우 모양 및 동작에서 주의해야 할 일부 차이점이 있습니다. 기본적으로 Windows 10 앱에서 컨트롤의 아키텍처 및 디자인은 변경되지 않았으며 주로 [디자인 언어](#design-language), 간소화 및 유용성 개선과 관련하여 변경되었습니다.
+Windows 10에서 실행되는 유니버설 8.1 앱은 컨트롤과 관련된 8.1의 모양과 동작을 유지합니다. 그러나 해당 앱을 Windows 10 앱에 포팅하는 경우 모양 및 동작에서 주의해야 할 일부 차이점이 있습니다. 기본적으로 Windows 10 앱에서 컨트롤의 아키텍처 및 디자인은 변경되지 않았으며 주로 [디자인 언어](#design-language-in-windows-10), 간소화 및 유용성 개선과 관련하여 변경되었습니다.
 
-**참고** PointerOver 시각적 상태는 Windows 10 앱 및 Windows 스토어 앱의 사용자 지정 스타일/템플릿에서 적절하지만, Windows Phone 스토어 앱에서는 적절하지 않습니다. 이러한 이유로(그리고 Windows 10 앱에 대해 지원되는 시스템 리소스 키 때문에) Windows 10으로 앱을 포팅할 경우 Windows 스토어 앱의 사용자 지정 스타일/템플릿을 다시 사용하는 것이 좋습니다.
+**참고** PointerOver 시각적 상태는 Windows 10 앱 및 Windows 스토어 앱의 사용자 지정 스타일/템플릿에는 적절하지만 Windows Phone 스토어 앱에는 적절하지 않습니다. 이러한 이유로(그리고 Windows 10 앱에 대해 지원되는 시스템 리소스 키 때문에) Windows 10으로 앱을 포팅할 경우 Windows 스토어 앱의 사용자 지정 스타일/템플릿을 다시 사용하는 것이 좋습니다.
 사용자 지정 스타일/템플릿이 최신 시각적 상태 집합을 사용하고 기본 스타일/템플릿에 수행한 성능 개선으로부터 이점을 얻도록 하려면 새로운 Windows 10 기본 템플릿의 복사본을 편집하여 사용자 지정을 다시 적용합니다. 성능 개선의 한 가지 예는 이전에 **ContentPresenter** 또는 패널을 묶은 **Border**가 제거되었으며 이제 자식 요소가 테두리를 렌더링한다는 점입니다.
 
 다음은 컨트롤에 대한 변경의 더욱 구체적인 몇 가지 예입니다.
@@ -99,16 +106,16 @@ Windows 10에서 실행되는 유니버설 8.1 앱은 컨트롤에 대해 8.1 �
 | [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) | Windows 10 앱에서는 [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/hh701927)에서 [**EdgeGesture.Completed**](https://msdn.microsoft.com/library/windows/apps/hh701622) 이벤트와 [**UIElement.RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984) 이벤트를 처리하지 않습니다. 또한 탭과 위로 살짝 밀기에 응답하지 않습니다. 여전히 이러한 이벤트를 처리하는 옵션이 있다면 [**IsOpen**](https://msdn.microsoft.com/library/windows/apps/hh701939)으로 설정합니다. |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) 및 [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)에 대한 시각적 변경에 따른 앱의 모양 변경을 검토합니다. 모바일 장치에서 실행되는 Windows 10 앱의 경우 이러한 컨트롤이 선택 페이지를 더 이상 탐색하지 않지만, 대신에 빠른 해제가 가능한 팝업을 사용합니다. |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Windows 10 앱에서는 플라이아웃 내부에 [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) 또는 [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)를 넣을 수 없습니다. 이러한 컨트롤을 팝업 유형의 컨트롤로 표시하려는 경우 [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) 및 [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313)을 사용할 수 있습니다. |
-| **GridView**, **ListView** | **GridView**/**ListView**에 대해서는 [GridView/ListView 변경](#gridview)을 참조하세요. |
-| [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Windows Phone 스토어 앱에서는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 컨트롤이 마지막 섹션에서 첫 번째 섹션까지 래핑합니다. Windows 스토어 앱 및 Windows 10 앱에서는 허브 섹션이 래핑하지 않습니다. |
+| **GridView**, **ListView** | **GridView**/**ListView**의 경우 [GridView 및 ListView 변경](#gridview-and-listview-changes)을 참조하세요. |
+| [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Windows Phone 스토어 앱에서는 [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) 컨트롤이 마지막 섹션에서 첫 번째 섹션까지 래핑합니다. Windows 스토어 앱 및 Windows 10 앱에서는 허브 섹션이 래핑하지 않습니다. |
 | [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Windows Phone 스토어 앱에서는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 컨트롤의 배경 이미지가 허브 섹션을 기준으로 시차 효과를 내면서 이동합니다. Windows 스토어 앱 및 Windows 10 앱에서는 시차가 사용되지 않습니다. |
 | [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843)  | 유니버설 8.1 앱에서는 [**HubSection.IsHeaderInteractive**](https://msdn.microsoft.com/library/windows/apps/dn251917) 속성으로 섹션 헤더(및 그 옆에서 렌더링된 펼침 단추 문자 모양)가 대화형이 됩니다. Windows 10 앱에는 헤더 옆에 대화형 "자세히 보기" 어포던스가 있지만, 헤더 자체가 대화형은 아닙니다. **IsHeaderInteractive**에서 여전히 조작이 [**Hub.SectionHeaderClick**](https://msdn.microsoft.com/library/windows/apps/dn251953) 이벤트를 발생시킬지 여부를 결정합니다. |
 | **MessageDialog** | **MessageDialog**를 사용하려면 더욱 유연한 [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/dn633972)를 사용하는 것이 좋습니다. 또한 [XAML UI 기본 사항](http://go.microsoft.com/fwlink/p/?linkid=619992) 샘플을 참조하세요. |
 | **ListPickerFlyout**, **PickerFlyout**  | **ListPickerFlyout** 및 **PickerFlyout**은 Windows 10 앱에서 사용되지 않습니다. 단일 선택 플라이아웃의 경우 [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/dn299030)을 사용하고, 더욱 복잡한 환경의 경우 [**Flyout**](https://msdn.microsoft.com/library/windows/apps/dn279496)을 사용합니다. |
 | [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519) | [**PasswordBox.IsPasswordRevealButtonEnabled**](https://msdn.microsoft.com/library/windows/apps/hh702579) 속성은 Windows 10 앱에서 사용되지 않으며, 설정해도 아무 영향이 없습니다. 대신 [**PasswordBox.PasswordRevealMode**](https://msdn.microsoft.com/library/windows/apps/dn890867)를 사용합니다. 이 속성이 **Peek**의 기본값입니다(Windows 스토어 앱에서처럼 눈 문자 모양이 표시됨). 또한 [암호 상자에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn596103)을 참조하세요. |
 | [**피벗**](https://msdn.microsoft.com/library/windows/apps/dn608241) | [**Pivot**](https://msdn.microsoft.com/library/windows/apps/dn608241) 컨트롤은 이제 범용이며 더 이상 모바일 디바이스로 사용이 제한되지 않습니다. |
-| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803)는 범용 디바이스 패밀리에 구현되어 있지만 모바일 디바이스에서 완전히 작동하지 않습니다. [AutoSuggestBox를 위해 더 이상 사용되지 않는 SearchBox](#searchbox)를 참조하세요. |
-| **SemanticZoom** | **SemanticZoom**에 대해서는 [SemanticZoom 변경](#semantic-zoom)을 참조하세요. |
+| [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252771) | [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803)는 범용 디바이스 패밀리에 구현되어 있지만 모바일 디바이스에서 완전히 작동하지 않습니다. [AutoSuggestBox를 위해 더 이상 사용되지 않는 SearchBox](#searchbox-deprecated-in-favor-of-autosuggestbox)를 참조하세요. |
+| **SemanticZoom** | **SemanticZoom**에 대해서는 [SemanticZoom 변경](#semanticzoom-changes)을 참조하세요. |
 | [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)  | [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)의 일부 기본 속성이 변경되었습니다. [**HorizontalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209549)는 **Auto**이고, [**VerticalScrollMode**](https://msdn.microsoft.com/library/windows/apps/br209589)는 **Auto**이며, [**ZoomMode**](https://msdn.microsoft.com/library/windows/apps/br209601)는 **Disabled**입니다. 새 기본값이 앱에 적합하지 않으면 스타일에서 변경하거나 컨트롤 자체의 로컬 값으로 변경할 수 있습니다.  |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | Windows 스토어 앱에서는 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)에 대한 맞춤법 검사가 기본적으로 꺼져 있습니다. Windows Phone 스토어 앱 및 Windows 10 앱에서는 기본적으로 켜져 있습니다. |
 | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) | [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)의 기본 글꼴 크기가 11에서 15로 변경되었습니다. |
@@ -139,7 +146,7 @@ UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://ms
 
 리터럴 차원 값이 태그(크기 모양 또는 기타 요소, 입력 체계)에 사용되는 Windows 스토어 앱의 XAML 태그를 다시 사용할 수도 있습니다. 그러나 일부의 경우에 큰 배율 인수가 유니버설 8.1 앱이 아닌 Windows 10 앱의 장치에서 사용됩니다(예를 들어 150%는 이전에 140%였던 곳에서 사용되며 200%는 180%였던 곳에서 사용됨). 따라서 Windows 10에서 현재 이러한 리터럴 값이 너무 크다고 생각되면 0.8을 곱해 보세요. 자세한 내용은 [UWP 앱용 반응형 디자인 101](https://msdn.microsoft.com/library/windows/apps/dn958435)을 참조하세요.
 
-## <a name="gridviewlistview-changes"></a>GridView/ListView 변경
+## <a name="gridview-and-listview-changes"></a>GridView 및 ListView 변경
 
 컨트롤을 세로로(이전에 기본적으로 가로였던 대신) 스크롤할 수 있도록 하기 위해 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 스타일 setter에 몇 가지 변경 내용이 적용되었습니다. 프로젝트의 기본 스타일 복사본을 편집하면 복사본에 이러한 변경이 없으므로 수동으로 변경해야 합니다. 변경 목록은 다음과 같습니다.
 
@@ -457,7 +464,7 @@ Windows 스토어 앱 및 Windows Phone 스토어 앱에서 기본 글꼴 패밀
 
 Windows 스토어 앱 및 Windows Phone 스토어 앱에서 텍스트의 기본 언어는 빌드의 언어 또는 en-us로 설정됩니다. Windows 10 앱에서 기본 언어는 상위 앱 언어로 설정됩니다(글꼴 대체). [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066)를 명시적으로 설정할 수 있지만, 해당 속성에 대해 값을 설정하지 않은 경우 더 나은 글꼴 대체 동작을 사용할 수 있습니다.
 
-자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](http://go.microsoft.com/fwlink/p/?LinkID=533896)을 참조하세요. 또한 텍스트 컨트롤에 대한 변경은 위의 [컨트롤](#controls) 섹션을 참조하세요.
+자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](http://go.microsoft.com/fwlink/p/?LinkID=533896)을 참조하세요. 또한 텍스트 컨트롤에 대한 변경은 위의 [컨트롤](#controls-and-control-styles-and-templates) 섹션을 참조하세요.
 
 ## <a name="theme-changes"></a>테마 변경
 
@@ -481,10 +488,5 @@ Windows 스토어 앱 및 Windows Phone 스토어 앱에서 텍스트의 기본 
 ```
 
 다음 항목은 [I/O, 장치 및 앱 모델에 대한 포팅](w8x-to-uwp-input-and-sensors.md)입니다.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

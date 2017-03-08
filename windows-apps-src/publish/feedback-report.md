@@ -3,13 +3,20 @@ author: jnHs
 Description: "Windows 개발자 센터 대시보드의 피드백 보고서에서 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안, 찬성을 볼 수 있습니다."
 title: "피드백 보고서"
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 70020d3c6e0fb0fea321ce1951720803fd25f9c0
-ms.openlocfilehash: e6266ff7c45a49b3eece8ffaf3d0603d55a04761
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 91ca9a29609cd52db24ddddecf60307e808cc064
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 피드백 보고서
+# <a name="feedback-report"></a>피드백 보고서
 
 Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안, 찬성을 볼 수 있습니다. 대시보드에서 이 데이터를 보거나 데이터를 내보내서 오프라인으로 볼 수 있습니다.
 
@@ -21,7 +28,7 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 
 > **팁** 피드백 보고서에서 각 고객이 피드백을 남겼을 때 해당 디바이스에 설치한 특정 패키지를 보여 주기 때문에 [패키지 플라이팅](package-flights.md)을 사용하고 있는 경우 피드백이 특히 유용해집니다.
 
-## 피드백 세부 정보 보기
+## <a name="viewing-feedback-details"></a>피드백 세부 정보 보기
 
 이 보고서의 **세부 정보** 섹션에서 고객이 남긴 개별 피드백을 찾을 수 있습니다. 피드백 텍스트의 왼쪽에서 피드백 허브의 다른 고객이 해당 피드백을 찬성한 횟수를 볼 수 있습니다. 세 가지 방법으로 피드백을 정렬할 수 있습니다.
 
@@ -32,7 +39,7 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 각 메모 옆에 피드백이 남겨진 날짜와 피드백 유형이 표시됩니다. 또한 고객의 지역/국가, 피드백을 남길 때 사용한 디바이스에 설치된 앱의 특정 패키지, 해당 디바이스의 유형 및 **Windows 참가자**(피드백을 제출하는 고객이 Windows 참가자 프로그램의 구성원인 경우)가 표시됩니다.
 
 
-## 필터 적용
+## <a name="apply-filters"></a>필터 적용
 
 페이지 상단에서 **필터 적용**을 확장하여 이 페이지의 모든 데이터를 필터링할 수 있습니다.
 
@@ -45,18 +52,13 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 - **지역/국가**: 기본 설정은 **모든 시장**입니다. 해당 지역/국가 고객의 피드백만 표시하려면 특정 지역/국가를 선택할 수 있습니다.
 - **그룹**: 기본 설정은 **모두**입니다. [Windows 참가자](http://insider.windows.com)가 제출한 피드백만 보도록 선택할 수 있습니다.
 
-## 피드백 번역
+## <a name="translating-feedback"></a>피드백 번역
 
 기본적으로 기본 설정 언어로 작성되지 않은 리뷰가 번역됩니다. 필요하면 피드백 목록 위의 오른쪽 위에서 **리뷰 번역** 확인란을 선택 취소하여 피드백 번역을 사용하지 않을 수 있습니다.
 
 피드백은 자동 번역 시스템에 의해 번역되므로 번역 결과가 항상 정확하지는 않을 수 있습니다. 원본 텍스트를 번역과 비교하거나 다른 의미로 번역하고 싶은 경우를 대비해서 원본 텍스트가 제공됩니다.
 
-## 앱에서 직접 피드백 허브 시작
+## <a name="launching-feedback-hub-directly-from-your-app"></a>앱에서 직접 피드백 허브 시작
 
 위에서 설명한 대로 고객에게 피드백을 제공하도록 권유하기 위해 앱에서 직접 피드백 허브에 대한 링크를 통합하는 것이 좋습니다. 자세한 내용은 [앱에서 피드백 허브 시작](../monetize/launch-feedback-hub-from-your-app.md)을 참조하세요.
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: "이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다."
 title: "UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore1"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 631dab52c1d8f5745179d79182d299688be05d05
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 14003238ead3af2d796bab4f96dadfb050f7d595
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -133,9 +140,4 @@ Bookstore1Universal에서 ms-appx [URI 스키마](https://msdn.microsoft.com/lib
 이 사례 연구에서는 비현실적으로 간단한 앱을 포팅하는 프로세스에 대해 살펴보았습니다. 예를 들어 목록 컨트롤을 사용하여 선택하거나 탐색할 컨텍스트를 설정할 수 있습니다. 앱에서는 탭되는 항목에 대한 세부 정보가 나오는 페이지를 탐색합니다. 이 특정 앱에서는 사용자 선택과 관련하여 아무 작업도 수행하지 않고 탐색도 하지 않습니다. 하지만 이 사례 연구에서는 분위기를 쇄신하고 포팅 프로세스를 소개하고 실제 UWP 앱에서 사용할 수 있는 중요한 기술을 보여 주었습니다.
 
 다음 사례 연구는 [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

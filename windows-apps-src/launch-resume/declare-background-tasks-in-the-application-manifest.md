@@ -3,16 +3,23 @@ author: TylerMSFT
 title: "응용 프로그램 매니페스트에서 백그라운드 작업 선언"
 description: "앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 응용 프로그램 매니페스트에서 백그라운드 작업 선언
+# <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -29,7 +36,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 이 항목에서는 백그라운드 작업 클래스를 하나 이상 만들었으며 앱이 하나 이상의 트리거에 응답하여 실행할 각 백그라운드 작업을 등록한다고 가정합니다.
 
-## 수동으로 확장 추가
+## <a name="add-extensions-manually"></a>수동으로 확장 추가
 
 
 응용 프로그램 매니페스트(Package.appxmanifest)를 열고 Application 요소로 이동합니다. Extensions 요소가 없는 경우 새로 만듭니다.
@@ -55,7 +62,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
  </Application>
 ```
 
-## 백그라운드 작업 확장 추가
+## <a name="add-a-background-task-extension"></a>백그라운드 작업 확장 추가
 
 
 첫 번째 백그라운드 작업을 선언합니다.
@@ -102,7 +109,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 ```
 
 
-## 백그라운드 작업 실행 추가
+## <a name="add-additional-background-task-extensions"></a>백그라운드 작업 실행 추가
 
 앱에서 등록한 각 추가 백그라운드 작업 클래스에 대해 2단계를 반복합니다.
 
@@ -147,11 +154,11 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 </Applications>
 ```
 
-## 다른 프로세스에서 실행되도록 백그라운드 작업 선언
+## <a name="declare-your-background-task-to-run-in-a-different-process"></a>다른 프로세스에서 실행되도록 백그라운드 작업 선언
 
-Windows10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe(백그라운드 작업이 기본적으로 실행되는 프로세스)가 아닌 다른 프로세스에서 백그라운드 작업을 실행할 수 있습니다.  포그라운드 응용 프로그램과 같은 프로세스에서 실행하거나 동일한 응용 프로그램에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe의 인스턴스에서 실행되는 두 가지 옵션이 있습니다.  
+Windows 10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe(백그라운드 작업이 기본적으로 실행되는 프로세스)가 아닌 다른 프로세스에서 백그라운드 작업을 실행할 수 있습니다.  포그라운드 응용 프로그램과 같은 프로세스에서 실행하거나 동일한 응용 프로그램에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe의 인스턴스에서 실행되는 두 가지 옵션이 있습니다.  
 
-### 포그라운드 응용 프로그램에서 실행
+### <a name="run-in-the-foreground-application"></a>포그라운드 응용 프로그램에서 실행
 
 다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다. `Executable` 특성에 유의하세요.
 
@@ -168,7 +175,7 @@ Windows10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe
 > [!Note]
 > 백그라운드 작업에는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 같이 필요한 Executable 요소만 사용하세요.  
 
-### 다른 백그라운드 호스트 프로세스에서 실행
+### <a name="run-in-a-different-background-host-process"></a>다른 백그라운드 호스트 프로세스에서 실행
 
 다음은 동일한 앱에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다. 함께 실행되는 백그라운드 작업을 식별하는 `ResourceGroup` 특성에 유의하세요.
 
@@ -203,15 +210,10 @@ Windows10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe
 ```
 
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

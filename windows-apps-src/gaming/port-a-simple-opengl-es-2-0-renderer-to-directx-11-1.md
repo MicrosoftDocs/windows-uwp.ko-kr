@@ -1,15 +1,22 @@
 ---
 author: mtoepke
 title: "방법 - 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅"
-description: "첫 번째 포팅 연습에 대한 기본 사항인 Visual Studio 2015에서 DirectX 11 앱(유니버설 Windows) 템플릿을 일치시키는 것과 같이, 회전하는 꼭짓점 음영 큐브에 대한 간단한 렌더러를 OpenGL ES 2.0에서 Direct3D로 가져오기에 먼저 살펴보겠습니다."
+description: "첫 번째 포팅 연습으로 기본적인 것부터 시작합니다. 회전하는 꼭짓점 음영 큐브에 대한 간단한 렌더러를 OpenGL ES 2.0에서 Direct3D로 가져와 Visual Studio 2015의 DirectX 11 앱(유니버설 Windows) 템플릿과 일치시키는 것부터 살펴보겠습니다."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, opengl, direct3d 11, 포트"
 translationtype: Human Translation
-ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 71b4b42d2665cbeb43cbdbe2dbab9119a8f68ce9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
+# <a name="how-to-port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -77,23 +84,23 @@ typedef struct
 
 이 구조에는 하나의 인스턴스가 있으며 매우 간단한 꼭짓점 음영 메시 렌더링에 대한 모든 필요한 구성 요소가 포함되어 있습니다.
 
-> **참고** 이 항목의 모든 OpenGL ES 2.0의 코드는 Khronos Group에서 제공하는 Windows API 구현을 기반으로 하며 Windows C 프로그래밍 구문을 사용합니다.
+> **참고**  이 항목의 모든 OpenGL ES 2.0의 코드는 Khronos Group에서 제공하는 Windows API 구현을 기반으로 하며 Windows C 프로그래밍 구문을 사용합니다.
 
  
 
-## 알아야 할 사항
+## <a name="what-you-need-to-know"></a>알아야 할 사항
 
 
-### 기술
+### <a name="technologies"></a>기술
 
 -   [Microsoft Visual C++](http://msdn.microsoft.com/library/vstudio/60k1461a.aspx)
 -   OpenGL ES 2.0
 
-### 필수 조건
+### <a name="prerequisites"></a>필수 조건
 
 -   옵션. [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 검토하세요. DirectX에서 제공하는 그래픽 인터페이스를 더 잘 이해할 수 있도록 이 항목을 확인하세요.
 
-## <span id="keylinks_steps_heading"></span>단계
+## <a name="span-idkeylinksstepsheadingspansteps"></a><span id="keylinks_steps_heading"></span>단계
 
 
 <table>
@@ -129,7 +136,7 @@ typedef struct
 
  
 
-## <span id="additional_resources"></span>추가 리소스
+## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>추가 리소스
 
 
 -   [UWP DirectX 게임 개발을 위한 개발 환경 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)
@@ -142,10 +149,5 @@ typedef struct
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

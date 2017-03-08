@@ -3,9 +3,17 @@ author: awkoren
 Description: "데스크톱 UWP 브리지를 사용하여 Windows 데스크톱 응용 프로그램(Win32, WPF 및 Windows Forms)에서 변환된 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 디버깅합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "데스크톱 브리지로 변환된 앱 디버그"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 translationtype: Human Translation
-ms.sourcegitcommit: dba00371b29b3179a6dc3bdd96a092437331e61a
-ms.openlocfilehash: 537ac8e83d5f54bf83ec0e05b71be354651000f2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 9660d14a1ca28929a213d4ed5a59cdcda73ccc39
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -53,7 +61,7 @@ Microsoft Visual Studio가 "관리자 권한"으로 실행되는 경우 *디버�
 
     PackageLayout을 변환기에 의해 만들어진 AppX의 루트 위치로 설정합니다(위 참조). 그런 다음 실행할 타일을 선택합니다.
 
-8.  AppXFileList.xml을 열고 편집합니다. 이 파일은 Win32 디버그 빌드의 출력을 변환기에서 작성한 AppX 레이아웃으로 복사하는 방법을 정의합니다. 기본적으로 파일에는 예제 태그 및 설명이 있는 자리 표시자가 있습니다.
+8.    AppXFileList.xml을 열고 편집합니다. 이 파일은 Win32 디버그 빌드의 출력을 변환기에서 작성한 AppX 레이아웃으로 복사하는 방법을 정의합니다. 기본적으로 파일에는 예제 태그 및 설명이 있는 자리 표시자가 있습니다.
 
     ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -118,9 +126,9 @@ Microsoft Visual Studio가 "관리자 권한"으로 실행되는 경우 *디버�
 
     ![alt](images/desktop-to-uwp/debug-5.png)
 
-10. 마지막으로 이제 Win32 코드에 중단점을 설정하고 F5 키를 눌러 디버거를 실행할 수 있습니다. 이렇게 하면 Win32 응용 프로그램에서 업데이트한 내용이 AppX 패키지로 복사되고 Visual Studio 내에서 직접 디버깅할 수 있게 됩니다.
+10.    마지막으로 이제 Win32 코드에 중단점을 설정하고 F5 키를 눌러 디버거를 실행할 수 있습니다. 이렇게 하면 Win32 응용 프로그램에서 업데이트한 내용이 AppX 패키지로 복사되고 Visual Studio 내에서 직접 디버깅할 수 있게 됩니다.
 
-11. 응용 프로그램을 업데이트하는 경우 MakeAppX를 사용하여 앱을 다시 패키징해야 합니다. 자세한 내용은 [앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)를 참조하세요. 
+11.    응용 프로그램을 업데이트하는 경우 MakeAppX를 사용하여 앱을 다시 패키징해야 합니다. 자세한 내용은 [앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)를 참조하세요. 
 
 빌드 구성이 여러 개 있는 경우(예를 들어 릴리스용 및 디버깅용) AppXFileList.xml 파일에 다음을 추가하여 다른 위치에서 Win32 빌드를 복사할 수 있습니다.
 
@@ -134,7 +142,7 @@ Microsoft Visual Studio가 "관리자 권한"으로 실행되는 경우 *디버�
 
 또한 응용 프로그램을 UWP로 업데이트하지만 여전히 Win32용으로 빌드하려는 경우 조건부 컴파일을 사용하여 특정 코드 경로를 사용하도록 설정할 수도 있습니다. 
 
-1.  아래 예제에서 코드는 DesktopUWP용으로만 컴파일되고 WinRT API를 사용하여 타일을 표시합니다. 
+1.    아래 예제에서 코드는 DesktopUWP용으로만 컴파일되고 WinRT API를 사용하여 타일을 표시합니다. 
 
     ```C#
     [Conditional("DesktopUWP")]
@@ -148,17 +156,17 @@ Microsoft Visual Studio가 "관리자 권한"으로 실행되는 경우 *디버�
     }
     ```
 
-2.  구성 관리자를 사용하여 새 빌드 구성을 추가할 수 있습니다.
+2.    구성 관리자를 사용하여 새 빌드 구성을 추가할 수 있습니다.
 
     ![alt](images/desktop-to-uwp/debug-6.png)
 
     ![alt](images/desktop-to-uwp/debug-7.png)
 
-3.  그런 다음 프로젝트 속성에서 조건부 컴파일 기호에 대한 지원을 추가합니다.
+3.    그런 다음 프로젝트 속성에서 조건부 컴파일 기호에 대한 지원을 추가합니다.
 
     ![alt](images/desktop-to-uwp/debug-8.png)
 
-4.  이제 추가한 UWP API를 대상으로 빌드하려는 경우 빌드 대상을 DesktopUWP로 전환할 수 있습니다.
+4.    이제 추가한 UWP API를 대상으로 빌드하려는 경우 빌드 대상을 DesktopUWP로 전환할 수 있습니다.
 
 ## <a name="plmdebug"></a>PLMDebug 
 
@@ -174,9 +182,4 @@ PLMDebug는 Windows SDK에 포함되어 있습니다. 자세한 내용은 [**PLM
 Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
     <string>]  [<CommonParameters>]
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

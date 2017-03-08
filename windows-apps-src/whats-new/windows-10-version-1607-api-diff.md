@@ -1,17 +1,24 @@
 ---
 author: QuinnRadich
-title: "Windows10 버전 1607 API 변경 사항"
-description: "개발자는 다음 목록을 사용하여 Windows10 버전 1607에서 변경되었거나 새로운 네임스페이스를 식별할 수 있습니다."
-keywords: "새 소식, 새 기능, 업데이트, 업데이트, 새로운 내용, Windows10, 1607, api"
+title: "Windows 10 버전 1607 API 변경 사항"
+description: "개발자는 다음 목록을 사용하여 Windows 10 버전 1607에서 변경되었거나 새로운 네임스페이스를 식별할 수 있습니다."
+keywords: "새 소식, 새 기능, 업데이트, 업데이트, 새로운 내용, Windows 10, 1607, api"
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 translationtype: Human Translation
-ms.sourcegitcommit: 8d7ea8adcff944a9be58f164e88623861e4cf8ad
-ms.openlocfilehash: 7ab2c9f1054509f816ef9647f340e61b6a281d8a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 18d4bac980592b41479e01b8644f9bb9bf291575
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Windows10 API 변경 사항
+# <a name="windows-10-api-changes"></a>Windows 10 API 변경 사항
 
-Windows10 버전 1607에서는 많은 런타임 API가 추가되거나 변경되었습니다. 다음 표에는 이 릴리스에서 추가되거나 변경된 네임스페이스가 나열되어 있습니다.
+Windows 10 버전 1607에서는 많은 런타임 API가 추가되거나 변경되었습니다. 다음 표에는 이 릴리스에서 추가되거나 변경된 네임스페이스가 나열되어 있습니다.
 
 
 **항목**
@@ -5153,10 +5160,5 @@ Windows.Services.Store.StoreSubscriptionInfo <br /> Windows.Services.Store.Store
 
 Windows.Services.Store.StoreVideo <br /> Windows.Services.Store.StoreVideo.Caption <br /> Windows.Services.Store.StoreVideo.Height <br /> Windows.Services.Store.StoreVideo.PreviewImage <br /> Windows.Services.Store.StoreVideo.Uri <br /> Windows.Services.Store.StoreVideo.VideoPurposeTag <br /> Windows.Services.Store.StoreVideo.Width
 <hr>
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

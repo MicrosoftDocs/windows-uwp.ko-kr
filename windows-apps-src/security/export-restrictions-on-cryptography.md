@@ -3,13 +3,20 @@ title: "암호화에 대한 내보내기 제한"
 description: "이 정보를 사용하여 앱이 Windows 스토어에 나열될 수 없는 방식으로 암호화를 사용하는지 확인할 수 있습니다."
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 265f0f0d9db1a8ae53a8d6561e289f8e303e08b1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 암호화에 대한 내보내기 제한
+# <a name="export-restrictions-on-cryptography"></a>암호화에 대한 내보내기 제한
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -26,7 +33,7 @@ ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
 
 암호화가 포함된 기술의 수출을 규제하는 EAR(수출 관리 규정)에 대한 자세한 내용은 [암호화를 사용하는 항목에 대한 EAR 통제](http://go.microsoft.com/fwlink/p/?LinkID=245645)를 참조하세요.
 
-## 규제된 사용
+## <a name="governed-uses"></a>규제된 사용
 
 먼저 앱이 EAR(수출 관리 규정)에서 통제되는 암호화 유형을 사용하는지 확인합니다. 이 질문에는 아래 목록에 표시된 예가 포함되지만 가능한 모든 암호화 응용이 목록에 포함되어 있는 것은 아닙니다.
 
@@ -42,7 +49,7 @@ ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
 
 암호화 응용 프로그램의 최신 전체 목록은 [EAR Controls for Items That Use Encryption](http://go.microsoft.com/fwlink/p/?LinkID=245645)을 참조하세요.
 
-## 비 제한 사용
+## <a name="non-restricted-uses"></a>비 제한 사용
 
 일부 암호화 응용 프로그램은 제한되지 않습니다. 제한되지 않는 작업은 다음과 같습니다.
 
@@ -57,9 +64,4 @@ ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
 앱이 이 목록에 없는 작업에 대해 암호화를 호출, 지원, 포함 또는 사용하는 경우 앱에 ECCN(Export Commodity Classification Number)이 필요합니다.
 
 ECCN이 없는 경우 [ECCN Questions and Answers](http://go.microsoft.com/fwlink/p/?LinkID=245646)를 참조하세요.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

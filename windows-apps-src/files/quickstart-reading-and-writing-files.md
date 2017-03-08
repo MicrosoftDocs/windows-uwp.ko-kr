@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: "파일 만들기, 쓰기 및 읽기"
 description: "StorageFile 개체를 사용하여 파일을 읽고 씁니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 0709d9c9126dc4523eae58d5db8d9037a2fb618e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae2754f543a3bc799b3d5af4c5c3c46f654c1ed7
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -23,7 +30,7 @@ ms.openlocfilehash: 0709d9c9126dc4523eae58d5db8d9037a2fb618e
 
 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 파일을 읽고 씁니다.
 
-> **참고** [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)도 참조하세요.
+> **참고**  [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)도 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -71,7 +78,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **파일에 텍스트 쓰기**
 
-[**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 메서드를 호출하여 파일에 텍스트를 씁니다.
+[**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701505) 클래스의 [**WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701440) 메서드를 호출하여 파일에 텍스트를 씁니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -94,7 +101,7 @@ Dim buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBi
                     Windows.Security.Cryptography.BinaryStringEncoding.Utf8)
 ```
 
-2.  그런 다음 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**WriteBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701490) 메서드를 호출하여 파일에 버퍼의 바이트를 씁니다.
+2.  그런 다음 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701490) 클래스의 [**WriteBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701440) 메서드를 호출하여 파일에 버퍼의 바이트를 씁니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
@@ -171,7 +178,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **파일에서 텍스트 읽기**
 
-[**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482) 메서드를 호출하여 파일에서 텍스트를 읽습니다.
+[**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701482) 클래스의 [**ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701440) 메서드를 호출하여 파일에서 텍스트를 읽습니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
@@ -182,7 +189,7 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 
 **버퍼를 사용하여 파일에서 텍스트 읽기(2단계)**
 
-1.  먼저 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701468) 메서드를 호출합니다.
+1.  먼저 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701468) 클래스의 [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701440) 메서드를 호출합니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
@@ -256,9 +263,4 @@ Dim dataReader As New DataReader(inputStream)
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

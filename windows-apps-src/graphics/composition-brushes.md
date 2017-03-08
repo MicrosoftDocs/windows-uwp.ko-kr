@@ -3,14 +3,21 @@ author: scottmill
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: "컴퍼지션 브러시"
 description: "브러시는 해당 출력으로 Visual 영역을 그립니다. 각 브러시의 출력 유형은 서로 다릅니다."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 11989aafb86d280b93eed7c2e3f016b5914b15ab
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9affb4fab1931c7584d86bfb07797345788c28f9
+ms.lasthandoff: 02/07/2017
 
 ---
-# 컴퍼지션 브러시
+# <a name="composition-brushes"></a>컴퍼지션 브러시
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 브러시는 해당 출력으로 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 영역을 그립니다. 각 브러시의 출력 유형은 서로 다릅니다. 컴퍼지션 API는 세 가지 브러시 형식을 제공합니다.
 
@@ -27,19 +34,19 @@ ms.openlocfilehash: 11989aafb86d280b93eed7c2e3f016b5914b15ab
 -   [표면 브러시 사용](./composition-brushes.md#using-surface-brush)
 -   [늘이기 및 맞춤 구성](./composition-brushes.md#configuring-stretch-and-alignment)
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 개요에서는 [컴퍼지션 UI](visual-layer.md)에 설명된 기본 컴퍼지션 응용 프로그램 구조에 익숙하다는 것을 전제로 합니다.
 
-## 색 기본 사항
+## <a name="color-basics"></a>색 기본 사항
 
 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)를 사용하여 그리려면 먼저 색을 선택해야 합니다. 컴퍼지션 API는 Windows 런타임 구조인 색상을 사용하여 색을 나타냅니다. 색상 구조는 sRGB 인코딩을 사용합니다. sRGB 인코딩은 색을 네 개의 채널(알파, 빨간색, 녹색 및 파란색)로 구분합니다. 각 구성 요소는 일반적으로 0.0 ~ 1.0 범위의 부동 소수점 값으로 나타냅니다. 값이 0.0이면 해당 색이 완전히 없는 것이고 값이 1.0이면 해당 색이 전체적으로 나타난다는 의미입니다. 알파 구성 요소의 경우 0.0은 완전히 투명한 색이고 1.0은 완전히 불투명한 색을 나타냅니다.
 
-### 알파 모드
+### <a name="alpha-modes"></a>알파 모드
 
 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)의 색상 값은 항상 스트레이트 알파로 해석됩니다.
 
-## 색 브러시 사용
+## <a name="using-color-brush"></a>색 브러시 사용
 
 색 브러시를 만들려면 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)를 반환하는 Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx) 메서드를 호출합니다. **CompositionColorBrush**의 기본 색은 \#00000000입니다. 다음 그림 및 코드에서는 검은색 브러시로 선을 긋고 색상 값이 0x9ACD32인 단색 브러시로 칠한 사각형을 만드는 작은 시각적 트리를 보여 줍니다.
 
@@ -68,7 +75,7 @@ Visual2.Offset = new Vector3(3, 3, 0);
 
 다른 브러시와는 달리 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) 만들기는 비교적 리소스를 적게 사용하는 작업입니다. 렌더링할 때마다 성능에 거의 또는 전혀 영향을 주지 않고 **CompositionColorBrush** 개체를 만들 수 있습니다.
 
-## 표면 브러시 사용
+## <a name="using-surface-brush"></a>표면 브러시 사용
 
 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)는 컴퍼지션 표면([**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 개체에 의해 표시됨)으로 시각적 개체를 그립니다. 다음 그림에서는 D2D를 사용하여 **ICompositionSurface**에 렌더링된 licorice 비트맵으로 그려진 정사각형을 보여 줍니다.
 
@@ -92,7 +99,7 @@ LoadImage(_surfaceBrush, "ms-appx:///Assets/liqorice.png");
 visual.Brush = _surfaceBrush;
 ```
 
-## 늘이기 및 맞춤 구성
+## <a name="configuring-stretch-and-alignment"></a>늘이기 및 맞춤 구성
 
 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)의 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 콘텐츠로 작업 중인 시각적 개체의 영역을 완전히 채우지 못하는 경우가 있습니다. 이런 경우 컴퍼지션 API에서는 브러시의 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 및 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 모드 설정을 사용하여 나머지 영역을 채우는 방법을 결정합니다.
 
@@ -108,14 +115,10 @@ visual.Brush = _surfaceBrush;
 
  
 
- 
+## <a name="related-topics"></a>관련 항목
+[BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용](composition-native-interop.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

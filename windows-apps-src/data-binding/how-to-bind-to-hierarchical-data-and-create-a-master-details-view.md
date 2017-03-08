@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: "계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기"
 description: "체인으로 함께 바인딩된 CollectionViewSource 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 91786a785eece1448a36ebf48b8c8ef5c131e609
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 107d4a9778b377370632b6e8d37ad3216858d251
+ms.lasthandoff: 02/07/2017
 
 ---
-# 계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터에 바인딩하고 마스터/세부 정보 보기 만들기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -23,15 +30,15 @@ UWP(유니버설 Windows 플랫폼) 앱의 한 가지 일반적인 구조는 사
 
 ![스포츠 계층 구조의 마스터/세부 정보 보기](images/xaml-masterdetails.png)
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [C# 또는 Visual Basic을 사용하여 첫 UWP 앱 만들기](https://msdn.microsoft.com/library/windows/apps/Hh974581)를 참조하세요.
 
-## 프로젝트 만들기
+## <a name="create-the-project"></a>프로젝트 만들기
 
 **비어 있는 응용 프로그램(Windows 유니버설)** 프로젝트를 만듭니다. 이름을 "MasterDetailsBinding"으로 지정합니다.
 
-## 데이터 모델 만들기
+## <a name="create-the-data-model"></a>데이터 모델 만들기
 
 프로젝트에 새 클래스를 추가하고 이름을 ViewModel.cs로 지정한 후 다음 코드를 추가합니다. 이것이 바인딩 소스 클래스가 됩니다.
 
@@ -104,7 +111,7 @@ namespace MasterDetailsBinding
 }
 ```
 
-## 보기 만들기
+## <a name="create-the-view"></a>보기 만들기
 
 그런 다음 태그 페이지를 나타내는 클래스에서 바인딩 소스 클래스를 노출합니다. **LeagueList** 형식의 속성을 **MainPage**에 바인딩하면 됩니다.
 
@@ -221,10 +228,5 @@ namespace MasterDetailsBinding
  
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

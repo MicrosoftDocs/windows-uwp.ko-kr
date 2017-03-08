@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: "데이터 바인딩 심층 분석"
 description: "데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fa3a3cf6194f04a05301ae4dfb75a7a21ff22e73
-ms.openlocfilehash: fca2c9a795e38983f439d6df5c5a7394c29c1217
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d96565479d970bca724614768361ba390ab9d668
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 
 **중요 API**
@@ -649,10 +656,5 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | 모드 | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | 모드는 OneTime, OneWay 또는 TwoWay일 수 있습니다. {x:Bind} defaults to OneTime; {Binding} defaults to OneWay. | 
 | UpdateSourceTrigger | 지원되지 않음 | `<Binding UpdateSourceTrigger="Default [or] PropertyChanged [or] Explicit"/>` | {x:Bind}에서는 손실된 포커스에서 소스를 업데이트할 때까지 기다리는 TextBox.Text를 제외하고 모든 경우에 PropertyChanged 동작을 사용합니다. | 
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

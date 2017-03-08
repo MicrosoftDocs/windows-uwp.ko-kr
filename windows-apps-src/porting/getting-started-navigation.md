@@ -3,17 +3,24 @@ author: mcleblanc
 title: "탐색 시작"
 description: "탐색 시작"
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: daf56299b3a5e81bb756bc9fcb8112da044b00f3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: febafd9a36f021bdbf06692a34c8691d1008018f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작: 탐색
+# <a name="getting-started-navigation"></a>시작: 탐색
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-## 탐색 추가
+## <a name="adding-navigation"></a>탐색 추가
 
 iOS는 앱 내 탐색에 도움이 되는 **UINavigationController** 클래스를 제공합니다. 보기를 푸시하고 팝업하여 앱을 정의하는 **UIViewControllers** 계층을 만들 수 있습니다.
 
@@ -80,13 +87,8 @@ public BlankPage()
 
 **참고** JavaScript 및 HTML을 사용하는 Windows 스토어 앱 탐색에 대한 자세한 내용은 [빠른 시작: 단일 페이지 탐색 사용](https://msdn.microsoft.com/library/windows/apps/hh452768)을 참조하세요.
  
-### 다음 단계
+### <a name="next-step"></a>다음 단계
 
 [시작: 애니메이션](getting-started-animation.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

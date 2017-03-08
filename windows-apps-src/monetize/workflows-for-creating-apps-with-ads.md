@@ -3,14 +3,20 @@ author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
 description: "광고가 있는 앱을 개발하고 게시하기 위한 종단 간 프로세스에 알아봅니다."
 title: "광고가 포함된 앱 만들기 워크플로"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, AdControl, InterstitialAd"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 0f832674f0e635f609f09fa15acead109b1d67ff
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f01b69502d41a7128ac5f59589f6d014d92f52a3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 광고가 포함된 앱 만들기 워크플로
+# <a name="workflows-for-creating-apps-with-ads"></a>광고가 포함된 앱 만들기 워크플로
 
 
 
@@ -31,13 +37,13 @@ ms.openlocfilehash: 0f832674f0e635f609f09fa15acead109b1d67ff
 
 각 단계에 대한 자세한 내용은 아래에서 해당 섹션을 읽어보세요.
 
-## Windows 개발자 센터 계정 설정
+## <a name="set-up-your-windows-dev-center-account"></a>Windows 개발자 센터 계정 설정
 
-앱을 게시하고 광고를 수신하기 위한 Windows 개발자 센터 계정이 있어야 합니다. 광고 조정을 사용하는지 여부는 관계가 없습니다. 광고 관련 앱 관리 또한 Windows 개발자 센터에서 수행됩니다. 이전에 Microsoft pubCenter를 사용하여 앱에서 광고를 관리한 경우 이 기능이 Windows 개발자 센터의 기능으로 대체되었습니다 
+앱을 게시하고 광고를 수신하기 위한 Windows 개발자 센터 계정이 있어야 합니다. 광고 관련 앱 관리 또한 Windows 개발자 센터에서 수행됩니다. 이전에 Microsoft pubCenter를 사용하여 앱에서 광고를 관리한 경우 이 기능이 Windows 개발자 센터의 기능으로 대체되었습니다.
 
-Windows 개발자 센터에서 계정을 설정하려면 [홈페이지](https://dev.windows.com/windows-apps)를 방문합니다. 추가 정보는 Windows 개발자 센터에서 [도움말 페이지](https://dev.windows.com/develop)에서 사용할 수 있습니다.
+Windows 개발자 센터에서 계정을 설정하려면 [이 페이지](http://go.microsoft.com/fwlink/p/?LinkId=615100)를 방문하세요.
 
-## 테스트 모드 값을 사용하여 앱 개발
+## <a name="develop-your-app-using-test-mode-values"></a>테스트 모드 값을 사용하여 앱 개발
 
 다음 연습에 포함된 지침에 따라 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 또는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 추가하여 앱에 광고를 표시합니다.
 
@@ -50,11 +56,11 @@ Windows 개발자 센터에서 계정을 설정하려면 [홈페이지](https://
 
 C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영상 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
-## 라이브 광고를 수신하도록 앱 구성
+## <a name="configure-your-app-to-receive-live-ads"></a>라이브 광고를 수신하도록 앱 구성
 
 앱 테스트를 완료하고 Windows 개발자 센터에 제출할 준비가 되면 [Windows 개발자 센터 대시보드](https://msdn.microsoft.com/library/windows/apps/mt170658.aspx)의 응용 프로그램 ID 및 광고 단위 ID 값을 사용하도록 앱 코드를 업데이트해야 합니다. 라이브 앱에서 테스트 값을 사용하려고 하면 앱에 라이브 광고가 수신되지 않습니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)을 참조하세요.
 
-## 앱 제출
+## <a name="submit-your-app"></a>앱 제출
 
 앱 개발이 완료되면 Windows 개발자 센터 대시보드를 사용하여 Windows 스토어에 앱을 게시할 수 있습니다. Windows 스토어의 모든 앱에 대한 요구 사항을 충족하는 것 외에, 광고를 표시하는 앱은 몇 가지 추가 요구 사항을 충족해야 합니다. 자세한 내용은 [Windows 스토어에 광고가 포함된 앱 제출](submit-an-app-with-ads-to-the-windows-store.md)을 참조하세요.
 
@@ -63,9 +69,4 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

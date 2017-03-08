@@ -12,8 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
-ms.openlocfilehash: 34cce6acc786fe34b3d94faaec57011474e029ff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e866c3afc551cf9604809cf7fec36efd7bfa439c
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -70,17 +71,17 @@ _그림 2: Microsoft Word의 홈 탭 범위에 대한 선택키 및 연결된 �
     - 주 범위에 있고 필터링되지 않은 경우 Esc 키를 누르면 선택키 시퀀스가 해제됩니다.
         > [!NOTE]
         > Esc 키 입력은 처리를 위해 UI 계층에도 전달됩니다.
-- Tab 키를 누르면 선택키 시퀀스가 해제되고 탭 탐색으로 돌아갑니다.
-- Enter 키를 누르면 선택키 시퀀스가 해제되고 포커스가 있는 요소에 키 입력을 보냅니다.
-- 화살표 키를 누르면 선택키 시퀀스가 해제되고 포커스가 있는 요소에 키 입력을 보냅니다.
-- 마우스 클릭이나 터치와 같은 포인터 아래로 이동 이벤트는 선택키 시퀀스를 해제합니다.
-- 기본적으로 선택키를 호출하면 선택키 시퀀스가 해제됩니다.  그러나 [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) 속성을 **false**로 설정하여 이 동작을 재정의할 수 있습니다.
+    - Tab 키를 누르면 선택키 시퀀스가 해제되고 탭 탐색으로 돌아갑니다.
+    - Enter 키를 누르면 선택키 시퀀스가 해제되고 포커스가 있는 요소에 키 입력을 보냅니다.
+    - 화살표 키를 누르면 선택키 시퀀스가 해제되고 포커스가 있는 요소에 키 입력을 보냅니다.
+    - 마우스 클릭이나 터치와 같은 포인터 아래로 이동 이벤트는 선택키 시퀀스를 해제합니다.
+    - 기본적으로 선택키를 호출하면 선택키 시퀀스가 해제됩니다.  그러나 [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) 속성을 **false**로 설정하여 이 동작을 재정의할 수 있습니다.
 - DFA(결정적 유한 오토마톤)가 불가능하면 선택키 충돌이 발생합니다. 선택키 충돌은 바람직하지 않지만 많은 명령, 지역화 문제 또는 선택키의 런타임 생성으로 인해 발생할 수 있습니다.
 
  충돌이 발생하는 다음 두 가지 경우가 있습니다.
  - 두 UI 요소에 동일한 선택키 값이 있고 동일한 선택키 범위에 속하는 경우. 예를 들어 선택키 _A1_이 `button1`에 사용되고 선택 키 _A1_이 기본 범위에 속하는 `button2`입니다. 이 경우 시스템은 시각적 트리에 추가된 첫 번째 요소의 선택키를 처리하여 충돌을 해결합니다. 나머지는 무시됩니다.
  - 동일한 선택키 범위에 둘 이상의 계산 옵션이 있는 경우. 예를 들어 _A_와 _A1_이 있습니다. 사용자가 _A_를 누를 경우 시스템에 _A_ 선택키를 호출하거나 계속 진행하여 _A1_ 선택키의 A 문자를 사용하는 두 가지 옵션이 있습니다. 이 경우 시스템은 오토마톤을 통해 도달한 첫 번째 선택키 호출만 처리합니다. 예를 들어 _A_와 _A1_이 있을 경우 시스템은 _A_만 호출합니다.
--   사용자가 선택키 시퀀스에서 잘못된 선택키 값을 누르면 아무 작업도 수행되지 않습니다. 선택키 시퀀스에서 유효한 선택키로 간주되는 키에는 다음 두 가지 범주가 있습니다.
+-     사용자가 선택키 시퀀스에서 잘못된 선택키 값을 누르면 아무 작업도 수행되지 않습니다. 선택키 시퀀스에서 유효한 선택키로 간주되는 키에는 다음 두 가지 범주가 있습니다.
  - 선택키 시퀀스를 종료하는 특수 키: Esc, Alt, 화살표 키, Enter, Tab 등입니다.
  - 선택키에 할당된 영숫자 문자
 
@@ -134,10 +135,10 @@ XAML 프레임워크에서 선택키를 처리하도록 하려면 시각적 트�
 
 컨트롤 패턴은 공용 컨트롤 기능을 노출하는 인터페이스 구현입니다. 예를 들어 단추는 **Invoke** 컨트롤 패턴을 구현하고 이 패턴은 **클릭** 이벤트를 발생합니다. 선택키를 호출하면 XAML 프레임워크에서 호출된 요소가 컨트롤 패턴을 구현하는지 여부를 조회하고, 구현하는 경우 컨트롤 패턴을 실행합니다. 요소에 둘 이상의 컨트롤 패턴이 있는 경우 하나만 호출되고 나머지는 무시됩니다. 컨트롤 패턴은 다음 순서로 검색됩니다.
 
-1.  Invoke. 예를 들어 단추입니다.
-2.  Toggle. 예를 들어 확인란입니다.
-3.  Selection. 예를 들어 RadioButton입니다.
-4.  Expand/Collapse. 예를 들어 ComboBox입니다.
+1.    Invoke. 예를 들어 단추입니다.
+2.    Toggle. 예를 들어 확인란입니다.
+3.    Selection. 예를 들어 RadioButton입니다.
+4.    Expand/Collapse. 예를 들어 ComboBox입니다.
 
 컨트롤 패턴을 찾을 수 없는 경우 선택키 호출은 no-op으로 표시되며, 이러한 상황의 디버그를 지원하기 위해 다음과 같은 디버그 메시지가 기록됩니다. "이 구성 요소에 대한 자동화 패턴을 찾을 수 없습니다. AccessKeyInvoked에 대한 이벤트 처리기에서 원하는 동작을 구현하세요. 이벤트 처리기에서 Handled를 true로 설정하면 이 메시지가 표시되지 않습니다."
 
@@ -387,9 +388,4 @@ public sealed partial class ScopedAccessKeys : Page
         }
     }
 ```
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

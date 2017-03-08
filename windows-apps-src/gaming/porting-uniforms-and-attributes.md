@@ -3,13 +3,20 @@ author: mtoepke
 title: "OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교"
 description: "OpenGL ES 2.0에서 Direct3D 11로 포팅하는 프로세스 중에 앱과 셰이더 프로그램 사이에 데이터를 전달하기 위한 구문 및 API 동작을 변경해야 합니다."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, opengl, direct3d, 버퍼, 유니폼, 꼭짓점 특성"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d3a1c0d3a37f24bdf4dfec1118aa206dfd6b9ac1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43b568b046246931e24ded5f40f56d3f24d1b05a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
+# <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -33,11 +40,11 @@ OpenGL ES 2.0 데이터는 네 가지 방법으로 셰이더 프로그램 간에
 | 특성                 | 입력 레이아웃에서 지정하고 특정 HLSL 의미 체계로 표시된 꼭짓점 버퍼 요소 필드.                                                                                |
 | 버퍼 개체             | 버퍼. 일반 사용 버퍼 정의는 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 및 [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)를 참조하세요. |
 | 프레임 버퍼 개체(FBO) | 렌더링 대상. [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) 및 [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)를 참조하세요.                                       |
-| 백 버퍼               | "백 버퍼" 화면이 있는 스왑 체인. 연결된 [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)과 함께 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)을 참조하세요.                       |
+| 백 버퍼               | "백 버퍼" 화면이 있는 스왑 체인. 연결된 [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)과 함께 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)을 참조하세요.                       |
 
  
 
-## 포트 버퍼
+## <a name="port-buffers"></a>포트 버퍼
 
 
 OpenGL ES 2.0에서 모든 종류의 버퍼를 만들고 바인딩하기 위한 프로세스는 일반적으로 이 패턴을 따릅니다.
@@ -119,7 +126,7 @@ m_d3dDevice->CreateRenderTargetView(
   &m_d3dRenderTargetViewWin);
 ```
 
-## Uniform와 uniform 버퍼 개체를 Direct3D 상수 버퍼로 변경
+## <a name="change-uniforms-and-uniform-buffer-objects-to-direct3d-constant-buffers"></a>Uniform와 uniform 버퍼 개체를 Direct3D 상수 버퍼로 변경
 
 
 Open GL ES 2.0에서 uniform은 개별 셰이더 프로그램에 상수 데이터를 제공하는 메커니즘입니다. 이 데이터는 셰이더가 변경할 수 없습니다.
@@ -184,7 +191,7 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 각 상수 버퍼에 대해 레지스터를 선언해야 합니다. 여러 Direct3D 기능 수준에는 서로 다른 최대 사용 가능 레지스터가 있으므로, 대상으로 하는 가장 낮은 기능 수준에 대한 최대 수를 초과하지 마세요.
 
-## Direct3D 입력 레이아웃 및 HLSL 의미 체계에 꼭짓점 특성 포팅
+## <a name="port-vertex-attributes-to-a-direct3d-input-layouts-and-hlsl-semantics"></a>Direct3D 입력 레이아웃 및 HLSL 의미 체계에 꼭짓점 특성 포팅
 
 
 셰이더 파이프라인으로 꼭짓점 데이터를 수정할 수 있으므로 OpenGL ES 2.0을 사용하려면 "uniform" 대신 "특성"으로 이러한 데이터를 지정해야 합니다. 이는 최신 버전의 OpenGL 및 GLSL에서 변경되었습니다. 꼭짓점 위치, 법선, 접선 및 색상 값 등 꼭짓점 관련 데이터는 특성 값으로 셰이더에 제공됩니다. 이러한 특성 값은 꼭짓점 데이터의 각 요소에 대한 특정 오프셋에 해당 합니다. 예를 들어, 첫 번째 특성은 개별 꼭짓점의 위치 구성 요소를 가리키고 두 번째 특성은 법선을 가리키는 등과 같을 수 있습니다.
@@ -298,10 +305,5 @@ struct VertexShaderInput
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

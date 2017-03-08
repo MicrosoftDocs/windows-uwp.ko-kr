@@ -1,11 +1,18 @@
 ---
 author: msatranjr
 title: "지도에 POI(관심 지점) 표시"
-description: "고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(안내 표시)를 추가합니다."
+description: "고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가합니다."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 지도, 위치, 고정핀"
 translationtype: Human Translation
-ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
-ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: c8fdc16b99a9d2d57f71e32e008fa668c3404835
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -27,10 +34,10 @@ ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
 
 요약하면 다음과 같습니다.
 
--   선택적 텍스트와 함께 고정핀 등의 이미지를 표시하려면 [MapIcon을 지도에 추가](#mapicon)합니다.
--   다중 지점 셰이프를 표시하려면 [MapPolygon을 지도에 추가](#mappolygon)합니다.
--   선을 지도에 표시하려면 [MapPolyline을 지도에 추가](#mappolyline)합니다.
--   사용자 지정 UI 요소를 표시하려면 [XAML을 지도에 추가](#mapxaml)합니다.
+-   선택적 텍스트와 함께 고정핀 등의 이미지를 표시하려면 [MapIcon을 지도에 추가](#add-a-mapicon)합니다.
+-   다중 지점 셰이프를 표시하려면 [MapPolygon을 지도에 추가](#add-a-mappolygon)합니다.
+-   선을 지도에 표시하려면 [MapPolyline을 지도에 추가](#add-a-mappolyline)합니다.
+-   사용자 지정 UI 요소를 표시하려면 [XAML을 지도에 추가](#add-xaml)합니다.
 
 지도에 배치할 요소가 많은 경우 [바둑판식 이미지를 지도에 오버레이](overlay-tiled-images.md)하는 것이 좋습니다. 지도에 도로를 표시하려면 [경로 및 길 찾기를 표시](routes-and-directions.md)합니다.
 
@@ -104,7 +111,7 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
 
    });
-           
+
    mapPolygon.ZIndex = 1;
    mapPolygon.FillColor = Colors.Red;
    mapPolygon.StrokeColor = Colors.Blue;
@@ -129,7 +136,7 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
          new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },                
          new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
    });
-              
+
    mapPolyline.StrokeColor = Colors.Black;
    mapPolyline.StrokeThickness = 3;
    mapPolyline.StrokeDashed = true;
@@ -226,11 +233,4 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 * [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)
 * [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103)
 * [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114)
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

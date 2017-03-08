@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트 제출을 관리합니다."
 title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 관리"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 플라이트 제출"
 translationtype: Human Translation
-ms.sourcegitcommit: 41203bffb65de3d4d6cc0fec2c7436e0b9d5821b
-ms.openlocfilehash: 9fc42f3abf1d876f271d18c1747ed7462dd20bd6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 71e759773beedef302a78a439b1a2a77a72dc85f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -13,12 +20,14 @@ ms.openlocfilehash: 9fc42f3abf1d876f271d18c1747ed7462dd20bd6
 
 Windows 스토어 제출 API는 점진적 패키지 출시를 포함하여 앱의 패키지 플라이트 제출을 관리하는 데 사용할 수 있는 메서드를 제공합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다. 이러한 메서드를 사용하여 패키지 플라이트를 위한 제출을 만들거나 관리하려면 패키지 플라이트가 이미 해당 개발자 센터 계정에 있어야 합니다. [Windows 개발자 센터 대시보드를 사용](https://msdn.microsoft.com/windows/uwp/publish/package-flights)하거나 [패키지 플라이트 관리](manage-flights.md)에 설명된 Windows 스토어 제출 API 방법을 사용하여 패키지 플라이트를 만들 수 있습니다.
+>**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 지닌 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
+
+>**중요**&nbsp;&nbsp;Windows 스토어 제출 API를 사용하여 패키지 플라이트에 대한 제출을 생성하는 경우, 개발자 센터 대시보드 대신 API를 통해서만 제출을 추가 변경해야 합니다. API를 사용하여 처음 생성한 제출을 대시보드를 사용하여 변경하는 경우, 해당 제출은 API를 사용하여 변경 또는 커밋할 수 없게 됩니다. 경우에 따라 제출 전송 과정에서 진행할 수 없는 오류 상태로 남아 있을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-package-flight-submissions" />
 ## <a name="methods-for-managing-package-flight-submissions"></a>패키지 플라이트 제출 관리 메서드
 
-패키지 플라이트 제출의 가져오기, 만들기, 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다.
+패키지 플라이트 제출 가져오기, 만들기, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. 이러한 메서드를 사용하려면 먼저 패키지 플라이트가 개발자 센터 계정에 이미 있어야 합니다. [개발자 센터 대시보드를 사용](https://msdn.microsoft.com/windows/uwp/publish/package-flights)하거나 [패키지 플라이트 관리](manage-flights.md)에 설명된 Windows 스토어 제출 API 방법을 사용하여 패키지 플라이트를 만들 수 있습니다.
 
 <table>
 <colgroup>
@@ -138,14 +147,16 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 포함하여 앱�
 <span/>
 ### <a name="code-examples"></a>코드 예제
 
-다음 문서는 여러 다른 프로그래밍 언어로 패키지 플라이트 제출을 만드는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
+다음 문서에는 여러 가지 프로그래밍 언어로 패키지 플라이트 제출을 만드는 방법을 보여주는 상세 코드 예시가 있습니다.
 
-* [C# 코드 예제](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
+* [C# 코드 예시](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Java 코드 예시](java-code-examples-for-the-windows-store-submission-api.md)
+* [Python 코드 예시](python-code-examples-for-the-windows-store-submission-api.md)
+
+>**참고**&nbsp;&nbsp;위에 나열된 코드 예시 외에 Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 있습니다. 이 모듈은 [StoreBroker](https://aka.ms/storebroker)라고 합니다. Windows 스토어 제출 API를 직접 호출하는 대신에 이 모듈을 사용하여 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리하거나, 소스를 검색하여 이 API를 호출하는 방법에 대한 추가 예시를 간단히 찾아볼 수 있습니다. StoreBroker 모듈은 다수의 자사 응용 프로그램을 스토어에 제출하는 기본 방법으로 Microsoft 내에서 적극적으로 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 <span id="manage-gradual-package-rollout">
-## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>패키지 플라이트 제출에 대한 점진적 패키지 출시 관리
+## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>패키지 플라이트 제출의 점진적 패키지 출시 관리
 
 패키지 플라이트 제출에서 업데이트된 패키지를 앱의 Windows 10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. Windows 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
 
@@ -411,9 +422,4 @@ Windows 스토어 제출 API에서 여러 메서드를 사용하여 이 프로�
 * [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)
 * [패키지 플라이트 제출 삭제](delete-a-flight-submission.md)
 * [패키지 플라이트 제출 상태 가져오기](get-status-for-a-flight-submission.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

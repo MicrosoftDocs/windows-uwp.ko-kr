@@ -5,9 +5,16 @@ title: "하이퍼링크"
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 4d474af6930354482f9f8b6e7754ddaf6fe65dac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9af0a58478bbbb0dfc46bb18851ae78735e2c9b1
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="hyperlinks"></a>하이퍼링크
@@ -157,9 +164,4 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 **개발자용(XAML)**
 - [**Windows.UI.Xaml.Documents.Hyperlink 클래스**](https://msdn.microsoft.com/library/windows/apps/dn279356)
 - [**Windows.UI.Xaml.Controls.HyperlinkButton 클래스**](https://msdn.microsoft.com/library/windows/apps/br242739)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,13 +3,20 @@ author: mtoepke
 title: "그래픽 진단 도구"
 description: "Visual Studio의 그래픽 디버깅, 그래픽 프레임 분석 및 GPU 사용을 비롯하여 그래픽 진단 기능을 가져오고 사용하는 방법에 대해 알아봅니다."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 그래픽, 진단, 도구, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 765cde8afe32cef6515ee6ca9750365aa35984a2
-ms.openlocfilehash: 5d8f7a8dbba2da76c6093d034c2ca8c2b4592c7e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 076020d88889a9cc8b417befa2dd54b41d688e5e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 그래픽 진단 도구
+# <a name="graphics-diagnostics-tools"></a>그래픽 진단 도구
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -26,7 +33,7 @@ Windows 10에서는 이제 그래픽 진단 도구를 Windows 내에서 옵션 �
 -   Visual Studio의 그래픽 프레임 분석은 그래픽 디버깅 로그에서 실행되고 Direct3D 그리기 호출에 대한 기준 타이밍을 수집합니다. 그런 다음 다양한 그래픽 설정을 수정하여 실험 집합을 수행하고 타이밍 결과 테이블을 생성합니다. 이 데이터를 사용하여 앱에서 그래픽 성능 문제를 파악하고 다양한 실험 결과를 검토하여 성능 향상을 위한 기회를 식별할 수 있습니다.
 -   Visual Studio의 GPU 사용을 통해 실시간으로 GPU 사용을 모니터링 수 있습니다. CPU 및 GPU에서 처리하는 작업의 타이밍 데이터를 수집하고 분석하여 병목이 있는 위치를 확인할 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 [Visual Studio의 그래픽 진단 개요](http://go.microsoft.com/fwlink/p/?LinkID=526382)
@@ -37,10 +44,5 @@ Windows 10에서는 이제 그래픽 진단 도구를 Windows 내에서 옵션 �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

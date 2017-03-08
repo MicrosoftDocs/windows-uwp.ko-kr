@@ -6,9 +6,16 @@ ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
 op-migration-status: ready
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9bb39b117fe4c4e95616c06921b05199e153cddd
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -102,8 +109,8 @@ ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
 </tr>
 <tr class="odd">
 <td align="left">목록</td>
-<td align="left">[드롭다운 목록, 목록 상자, 목록 보기 및 그리드 보기](../controls-and-patterns/lists.md)</td>
-<td align="left">항목을 대화형 목록이나 그리드로 표시합니다. 사용자가 새 개봉작 목록에서 영화를 선택하거나 인벤토리를 관리할 수 있도록 하려면 이러한 요소를 선택합니다.</td>
+<td align="left">[드롭다운 목록, 목록 상자, 목록 뷰 및 표 뷰](../controls-and-patterns/lists.md)</td>
+<td align="left">항목을 대화형 목록이나 표로 표시합니다. 사용자가 새 개봉작 목록에서 영화를 선택하거나 인벤토리를 관리할 수 있도록 하려면 이러한 요소를 선택합니다.</td>
 </tr>
 <tr class="even">
 <td align="left">텍스트 및 텍스트 입력</td>
@@ -122,10 +129,5 @@ ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

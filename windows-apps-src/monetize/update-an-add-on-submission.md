@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출을 업데이트합니다."
 title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 업데이트"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능 제출, 업데이트, 앱에서 바로 구매 제품, IAP"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: ac126d8e8cf8301399a3248a1d65e19805e70255
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b06973c7c6949851bf786b1fb37026eee4b5fad
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -24,7 +31,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 �
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 * 개발자 센터 계정의 앱에 대한 추가 기능 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [추가 기능 제출 만들기](create-an-add-on-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 
->**참고**  이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 ## <a name="request"></a>요청
 
@@ -206,9 +213,4 @@ Content-Type: application/json
 * [추가 기능 제출 커밋](commit-an-add-on-submission.md)
 * [추가 기능 제출 삭제](delete-an-add-on-submission.md)
 * [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

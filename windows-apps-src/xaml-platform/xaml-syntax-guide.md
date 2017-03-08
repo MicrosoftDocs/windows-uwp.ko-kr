@@ -3,27 +3,34 @@ author: jwmsft
 description: "XAML 구문 규칙에 대해 설명하고 XAML 구문에 사용 가능한 선택 사항 및 제한 사항을 나타내는 용어에 대해서 설명합니다."
 title: "XAML 구문 가이드"
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: 1fb5f64b5fe58843c06603045a3de9576887d1c7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 36fb575659b5334c6215e1686aeb02d74b9f8fd5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# XAML 구문 가이드
+# <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 XAML 구문 규칙에 대해 설명하고 XAML 구문에 사용 가능한 선택 사항 및 제한 사항을 나타내는 용어에 대해서 설명합니다. 이 항목은 XAML 언어를 처음 사용하거나 용어나 구문의 일부를 다시 살펴보고 싶은 독자 또는 XAML 언어의 작동 방식을 알고 싶으며 자세한 배경과 상황을 원하는 독자에게 유용합니다.
 
-## XAML은 XML이다
+## <a name="xaml-is-xml"></a>XAML은 XML이다
 
 XAML(Extensible Application Markup Language)의 기본 구문은 XML을 바탕으로 만들어졌으며 정의상 유효한 XAML은 유효한 XML이어야 합니다. 그러나 XAML에는 XML을 확장하는 고유한 구문 개념도 있습니다. 지정된 XML 엔터티가 일반 XML에서 유효하지만 해당 구문을 XAML로 사용할 경우 전혀 다르고 보다 완전한 의미를 가질 수도 있습니다. 이 항목에서는 이러한 XAML 구문 개념에 대해 설명합니다.
 
-## XAML 어휘
+## <a name="xaml-vocabularies"></a>XAML 어휘
 
 XAML이 대부분의 XML 사용 시와 차이가 있는 한 가지 영역은, XAML은 일반적으로 XSD 파일과 같은 스키마가 적용되지 않는다는 점입니다. 이는 XAML은 확장 가능형이기 때문입니다(머리글자어 XAML의 "X"가 확장 가능함을 의미함). XAML이 구문 분석되면 XAML에서 참조하는 요소 및 특성이 일부 지원 코드 표현에서 Windows 런타임에 정의된 핵심 유형 또는 Windows 런타임 기반이거나 Windows 런타임에서 확장되는 유형으로 존재할 것으로 예상됩니다. SDK 설명서에서 Windows 런타임에 기본 제공되며 XAML에서 Windows 런타임용 *XAML 어휘*로 사용할 수 있는 유형을 참조하는 경우가 있습니다. Microsoft Visual Studio를 사용하면 이 XAML 어휘 내에서 유효한 태그를 생성할 수 있습니다. Visual Studio는 또한 사용자 지정 유형의 원본이 프로젝트에서 올바르게 참조되는 경우 이 유형을 XAML 용도로 포함할 수도 있습니다. XAML 및 사용자 지정 유형에 대한 자세한 내용은 [XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)을 참조하세요.
 
-##  선언하는 개체
+##  <a name="declaring-objects"></a>선언하는 개체
 
 프로그래머는 흔히 개체 및 멤버의 측면에서 생각하지만 생성 언어는 요소와 특성으로 개념화됩니다. 가장 기본적인 의미에서, XAML 태그에 선언된 요소는 지원하는 런타임 개체 표현에서 개체가 됩니다. 앱에 대한 런타임 개체를 만들려면 XAML 태그에서 XAML 요소를 선언합니다. Windows 런타임에서 XAML을 로드할 때 개체가 만들어집니다.
 
@@ -38,7 +45,7 @@ XAML 구문면에서 개체를 XAML에서 선언하는 방법은 다음 3가지�
 XAML 용어 모음에서 개체 만들기에 필요한 모든 구문을 항상 선택할 수 있는 것은 아닙니다. 일부 개체는 개체 요소 구문을 사용해야만 만들 수 있습니다. 초기에 특성에서 설정해야 만들 수 있는 개체도 있습니다. 사실, XAML 용어 모음에서 개체 요소 또는 특성 구문으로 만들 수 있는 개체는 비교적 적습니다. 두 구문 형식이 모두 가능하지만 스타일 문제로 구문 중 하나가 더 많이 사용될 것입니다.
 XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용할 수 있는 기술도 있습니다. 기존 개체는 XAML의 다른 영역에서 정의되었거나 플랫폼과 해당 응용 프로그램 또는 프로그래밍 모델의 동작을 통해 암시적으로 존재할 수 있습니다.
 
-### 개체 요소 구문을 사용하여 개체 선언
+### <a name="declaring-an-object-by-using-object-element-syntax"></a>개체 요소 구문을 사용하여 개체 선언
 
 개체 요소 구문을 사용하여 개체를 선언하려면 `<objectName>  </objectName>`처럼 태그를 작성합니다. 여기서 *objectName*은 인스턴스화할 개체의 형식 이름입니다. 다음은 개체 요소를 사용하여 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 개체를 선언하는 방법입니다.
 
@@ -49,7 +56,7 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 
 개체에 다른 개체가 포함되지 않은 경우 여는 태그/닫는 태그 쌍 대신 하나의 자체 닫는 태그를 사용하여 개체 요소를 선언할 수 있습니다. `<Canvas />`
 
-### 컨테이너
+### <a name="containers"></a>컨테이너
 
 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 같이 UI 요소로 사용되는 많은 개체에는 다른 개체가 포함될 수 있습니다. 이러한 개체를 컨테이너라고 합니다. 다음 예제에서는 한 요소([**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371))가 포함된 **Canvas** 컨테이너를 보여 줍니다.
 
@@ -59,11 +66,11 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 </Canvas>
 ```
 
-### 특성 구문을 사용하여 개체 선언
+### <a name="declaring-an-object-by-using-attribute-syntax"></a>특성 구문을 사용하여 개체 선언
 
 이 동작은 속성 설정에 연결되어 있으므로 이후 섹션에서 자세히 설명하겠습니다.
 
-### 초기화 텍스트
+### <a name="initialization-text"></a>초기화 텍스트
 
 일부 개체의 경우 구성의 초기화 값으로 사용되는 내부 텍스트를 통해 새 값을 선언할 수 있습니다. XAML에서 이 방법과 구문을 *초기화 텍스트*라고 합니다. 개념상, 초기화 텍스트는 매개 변수가 있는 생성자 호출과 유사합니다. 초기화 텍스트는 특정 구조의 초기 값을 설정하는 데 유용합니다.
 
@@ -86,7 +93,7 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 
 **참고** 일부 구조는 개체 요소로 선언할 수 없습니다. 초기화 텍스트가 지원되지 않으며 리소스로 사용할 수 없습니다. XAML에서 속성을 이러한 값으로 설정하려면 특성 구문을 사용해야 합니다. 이러한 형식은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) 및 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)입니다.
 
-## 속성 설정
+## <a name="setting-properties"></a>속성 설정
 
 개체 요소 구문을 사용하여 선언한 개체에 대해 속성을 설정할 수 있습니다. XAML에서 속성을 설정하는 방법은 여러 가지가 있습니다.
 
@@ -104,7 +111,7 @@ XAML에서는 어떠한 방법으로도 설정할 수 없고 코드를 사용해
 
 XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느낌을 주지만 실제로는 그렇지 않습니다. 이 항목의 뒷부분에 있는 "컬렉션 구문을 사용하여 속성 설정" 섹션을 참조하세요.
 
-### 특성 구문을 사용하여 속성 설정
+### <a name="setting-a-property-by-using-attribute-syntax"></a>특성 구문을 사용하여 속성 설정
 
 특성 값 설정은 XML 또는 HTML과 같은 생성 언어에서 속성 값을 설정하는 일반적인 방법입니다. XAML 특성 설정은 XML에서 특성 값을 설정하는 방법과 유사합니다. 특성 이름은 요소 이름 뒤에 있는 태그 내 임의 지점에서 지정되며 하나 이상의 공백으로 요소 이름과 구분됩니다. 특성 이름 뒤에는 등호가 옵니다. 특성 이름은 한 쌍의 따옴표 안에 포함됩니다. 따옴표는 일치하고 값을 묶기만 한다면 큰따옴표를 사용하든, 작은따옴표를 사용하든 관계 없습니다. 특성 값 자체는 문자열로 표현될 수 있어야 합니다. 문자열에 숫자가 포함된 경우도 많지만, XAML에서는 XAML 파서가 사용되고 일부 기본 값 변환을 수행할 때까지 모든 특성 값은 문자열 값입니다.
 
@@ -114,7 +121,7 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 <Rectangle Name="rectangle1" Width="100" Height="100" Fill="Blue" />
 ```
 
-### 속성 요소 구문을 사용하여 속성 설정
+### <a name="setting-a-property-by-using-property-element-syntax"></a>속성 요소 구문을 사용하여 속성 설정
 
 개체의 많은 속성은 속성 요소 구문을 사용하여 설정될 수 있습니다. 속성 요소는 다음과 같이 표시됩니다. `<`*object*`.`*property*`>`.
 
@@ -146,13 +153,13 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 </Rectangle>
 ```
 
-### XAML 용어 모음 및 개체 지향 프로그래밍
+### <a name="xaml-vocabularies-and-object-oriented-programming"></a>XAML 용어 모음 및 개체 지향 프로그래밍
 
 Windows 런타임 XAML 형식의 XAML 멤버로 표시되는 속성과 이벤트는 기본 형식에서 상속되는 경우가 많습니다. 다음 예제를 살펴보세요. `<Button Background="Blue" .../>`. [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 속성은 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스에서 직접 선언된 속성이 아닙니다. **Background**는 기본 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) 클래스에서 상속됩니다. 실제로, **Button**에 대한 참조 항목을 살펴보면 [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736), [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390), [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) 등 연속하는 기본 클래스로 구성된 각 체인에서 상속된 멤버가 멤버 목록에 하나 이상 있습니다. **속성** 목록에 있는 모든 읽기-쓰기 속성과 컬렉션 속성은 XAML 용어 모음 측면에서 상속됩니다. 이벤트(예: 다양한 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트)도 상속됩니다.
 
 Windows 런타임 참조의 XAML 지침을 사용하는 경우 구문이나 예제 코드에 표시된 요소 이름은 원래 속성을 정의한 형식과 관련된 경우가 많은데, 이는 참조 항목이 기본 클래스에서 이 형식을 상속할 수 있는 모든 형식에서 공유되기 때문입니다. XML 편집기에서 Visual Studio의 IntelliSense for XAML을 사용하는 경우 XML 편집기, IntelliSense 및 드롭다운은 효율적으로 상속을 통합하고, 클래스 인스턴스에 대한 개체 요소로 시작한 후 설정에 사용할 수 있는 정확한 특성 목록을 제공합니다.
 
-### XAML 콘텐츠 속성
+### <a name="xaml-content-properties"></a>XAML 콘텐츠 속성
 
 일부 형식은 속성이 XAML 콘텐츠 구문을 가능하게 하도록 속성 중 하나를 정의합니다. 형식에 대한 XAML 콘텐츠 속성의 경우 XAML에서 속성을 지정할 때 해당 속성의 속성 요소를 생략할 수 있습니다. 또는 소유하는 형식의 개체 요소 태그 내에 내부 텍스트를 직접 제공하여 내부 텍스트 값으로 속성을 설정할 수 있습니다. XAML 콘텐츠 속성은 해당 속성에 대해 간단한 태그 구문을 지원하며 중첩을 줄여 XAML을 사람이 읽기 쉬운 형식으로 만듭니다.
 
@@ -184,7 +191,7 @@ XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **Str
 </StackPanel>
 ```
 
-## 컬렉션 구문
+## <a name="collection-syntax"></a>컬렉션 구문
 
 지금까지 보여 준 구문은 모두 속성을 단일 개체로 설정합니다. 그러나 많은 UI 시나리오에서는 지정된 부모 요소에 여러 자식 요소가 있을 수 있어야 합니다. 예를 들어 입력 양식의 UI에 몇 가지 입력란 요소, 레이블 및 "제출" 단추가 필요합니다. 하지만 프로그래밍 개체 모델을 사용하여 이러한 여러 요소에 액세스할 경우 이러한 요소는 각 항목이 서로 다른 속성의 값이 되는 것이 아니라 대개 단일 컬렉션 속성의 항목이 됩니다. XAML은 컬렉션 형식을 사용하는 속성을 암시적으로 처리하고 컬렉션 형식의 자식 요소를 특수 처리하여 일반적인 지원 컬렉션 모델을 지원할 뿐만 아니라 여러 자식 요소를 지원합니다.
 
@@ -197,7 +204,7 @@ XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **Str
 </StackPanel>
 ```
 
-### XAML 컬렉션 구문의 메커니즘
+### <a name="the-mechanism-of-xaml-collection-syntax"></a>XAML 컬렉션 구문의 메커니즘
 
 처음에는 XAML이 읽기 전용 컬렉션 속성의 "설정"을 가능하게 하는 것처럼 보일 수 있습니다. 실제로 XAML이 여기에서 가능하게 하는 것은 기존 컬렉션에 항목을 추가하는 것입니다. XAML 지원을 구현하는 XAML 언어와 XAML 프로세서는 지원하는 컬렉션 형식의 규칙을 사용하여 이 구문을 사용하도록 설정합니다. 일반적으로 인덱서 또는 컬렉션의 특정 항목을 참조하는 **Items** 속성과 같은 지원 속성이 있습니다. 대개 이 속성은 XAML 구문에서 명시적이 아닙니다. 컬렉션의 경우 XAML 구문 분석의 기본 메커니즘은 속성이 아니라 메서드입니다. 특히 대부분의 경우 **Add** 메서드입니다. XAML 처리기가 XAML 컬렉션 구문 내에서 하나 이상의 개체 요소를 발견하면 이러한 각 개체가 요소에서 먼저 만들어진 다음 컬렉션의 **Add** 메서드를 호출하여 각 새 개체가 포함하는 컬렉션에 순서대로 추가됩니다.
 
@@ -205,13 +212,13 @@ XAML 파서가 항목을 컬렉션에 추가할 때 **Add** 메서드의 논리�
 
 컬렉션 속성의 경우 컬렉션을 개체 요소로 명시적으로 지정할 때 주의해야 합니다. XAML 파서는 개체 요소를 발견할 때마다 새 개체를 만듭니다. 사용하려는 컬렉션 속성이 읽기 전용인 경우 이로 인해 XAML 구문 분석 예외가 발생할 수 있습니다. 암시적 컬렉션 구문을 사용하면 이러한 예외가 표시되지 않습니다.
 
-## 특성 또는 속성 요소 구문을 사용하는 경우
+## <a name="when-to-use-attribute-or-property-element-syntax"></a>특성 또는 속성 요소 구문을 사용하는 경우
 
 XAML에서 지원이 설정되는 모든 속성은 직접 값 설정을 위해 특성 또는 속성 요소 구문을 지원하지만 두 구문을 서로 바꿔서 지원하지는 않습니다. 일부 속성은 두 구문 중 하나를 지원하며, XAML 콘텐츠 속성 등의 추가 구문 옵션을 지원하는 속성도 있습니다. 속성이 지원하는 XAML 구문의 형식은 속성이 속성 형식으로 사용하는 개체의 형식에 따라 달라집니다. 속성 형식이 double(float 또는 decimal), integer, Boolean 또는 string과 같은 기본 형식인 경우 속성은 항상 특성 구문을 지원합니다.
 
 속성을 설정하는 데 사용하는 개체 형식이 문자열을 처리하여 만들어질 수 있는 경우 특성 구문을 사용하여 해당 속성을 설정할 수도 있습니다. primitive의 경우 항상 형식 변환이 파서에 기본 제공됩니다. 그러나 다른 특정 개체 형식은 속성 요소 내의 개체 요소가 아니라 특성 값으로 지정된 문자열을 사용하여 만들 수도 있습니다. 이렇게 하려면 특정 속성에서 지원되거나 일반적으로 해당 속성 형식을 사용하는 모든 값에 대해 지원되는 기본 형식 변환이 있어야 합니다. 특성의 문자열 값은 새 개체 값의 초기화에 중요한 속성을 설정하는 데 사용됩니다. 특정 형식 변환기가 문자열의 정보를 어떻게 고유하게 처리하는지에 따라 일반 속성 형식의 여러 가지 서브클래스도 만들 수 있습니다. 이 동작을 지원하는 개체 형식에는 참조 설명서의 구문 섹션에 나열된 특수 문법이 있습니다. 예를 들어 [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076)에 대한 XAML 구문은 특성 구문을 사용하여 **Brush** 형식의 임의 속성에 대해 새 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) 값을 만들 수 있는 방법을 보여 주며, Windows 런타임 XAML에는 많은 **Brush** 속성이 있습니다.
 
-## XAML 구문 분석 논리 및 규칙
+## <a name="xaml-parsing-logic-and-rules"></a>XAML 구문 분석 논리 및 규칙
 
 XAML 파서에서 읽어야 하는 방법과 유사하게 XAML을 선형 순서로 발생한 문자열 토큰 집합으로 읽는 것이 유용한 경우도 있습니다. XAML 파서는 XAML 작동 방법에 대한 정의에 포함된 규칙 집합을 통해 이러한 토큰을 해석해야 합니다.
 
@@ -237,7 +244,7 @@ XAML 파서에서 읽어야 하는 방법과 유사하게 XAML을 선형 순서�
 
 **참고** XML 편집기 이외의 디자인 화면을 사용하는 경우 XAML 디자이너에서 순서 지정 규칙을 승격시키기도 하지만 나중에 XAML을 자유롭게 편집하여 특성 순서를 다시 매기거나 새 특성을 도입할 수 있습니다.
 
-## 연결된 속성
+## <a name="attached-properties"></a>연결된 속성
 
 XAML은 *연결된 속성*으로 알려진 구문 요소를 추가하여 XML을 확장합니다. 속성 요소 구문과 유사한 연결된 속성 구문에는 점이 포함되며 이러한 점은 XAML 구문 분석에 특별한 의미를 가지고 있습니다. 특히 점은 연결된 속성의 소유자 공급자 및 속성 이름을 구분합니다.
 
@@ -260,13 +267,13 @@ Windows 런타임 XAML에서는 다음 시나리오를 지원하는 연결된 �
 
 자세한 내용은 [연결된 속성 개요](attached-properties-overview.md)를 참조하세요.
 
-## 리터럴 "{" 값
+## <a name="literal--values"></a>리터럴 "{" 값
 
 여는 중괄호(\{)는 태그 확장 순서를 여는 것이므로 이스케이프 시퀀스를 사용하여 "\{"로 시작하는 리터럴 문자열 값을 지정합니다. 이스케이프 시퀀스는 "\{\}"입니다. 예를 들어 하나의 여는 중괄호를 문자열 값으로 지정하려면 특성 값을 "\{\}\{"로 지정합니다. 따옴표를 대신 사용하여(예: **""**로 구분된 특성 값 내의 **'**) "\{" 값을 문자열로 제공할 수도 있습니다.
 
 **참고** "\\}"는 따옴표가 붙은 특성 안에 있는 경우에도 작동합니다.
  
-## 열거형 값
+## <a name="enumeration-values"></a>열거형 값
 
 Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다. 멤버가 읽기-쓰기 속성인 경우 특성 값을 제공하여 해당 속성을 설정할 수 있습니다. 상수 이름의 비정규화된 이름을 통해 속성 값으로 사용할 열거형 값을 식별합니다. 예를 들어 다음은 XAML에서 [**UIElement.Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)를 설정하는 방법입니다. `<Button Visibility="Visible"/>`. 여기에서 문자열로 "표시"는 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006) 열거형, **Visible**의 명명된 상수에 직접 매핑됩니다.
 
@@ -277,11 +284,11 @@ Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다
 
 열거형은 깃발 모양이 될 수 있습니다. 즉, **FlagsAttribute**를 사용하여 특성이 지정됩니다. 플래그 수준의 열거형에 대한 값의 조합을 XAML 특성 값으로 지정해야 할 경우 각 열거형 상수 이름을 쉼표(,)로 구분하고 공백 문자 없이 사용할 수 있습니다. Windows 런타임 XAML 어휘에서는 플래그 수준의 특성이 일반적이지 않지만, [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934)는 XAML에서 플래그 수준의 열거형 값 설정이 지원되는 예입니다.
 
-## XAML의 인터페이스
+## <a name="interfaces-in-xaml"></a>XAML의 인터페이스
 
 드문 경우이긴 하지만 속성의 형식이 인터페이스인 XAML 구문을 볼 수 있습니다. XAML 형식 시스템에서 이 인터페이스를 구현하는 형식은 구문 분석될 때 값으로 허용됩니다. 값으로 제공할 수 있는 해당 형식의 인스턴스가 생성되어 있어야 합니다. [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)의 [**Command**](https://msdn.microsoft.com/library/windows/apps/br227740) 및 [**CommandParameter**](https://msdn.microsoft.com/library/windows/apps/br227741) 속성에 대한 XAML 구문에서 형식으로 사용된 인터페이스를 볼 수 있습니다. 이러한 속성은 **ICommand** 인터페이스가 보기 및 모델이 상호 작용하는 방식에 대한 계약이 되는 MVVM(Model-View-ViewModel) 디자인 패턴을 지원합니다.
 
-## Windows 런타임 참조의 XAML 자리 표시자 규칙
+## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>Windows 런타임 참조의 XAML 자리 표시자 규칙
 
 XAML을 사용할 수 있는 Windows 런타임 API에 대한 참조 항목의 **구문** 섹션을 살펴본 경우 구문에 여러 자리 표시자가 포함된 것을 본 적이 있을 것입니다. XAML 구문은 사용 구문이므로 C#, Microsoft Visual Basic 또는 Visual C++ 구성 요소 확장(C++/CX) 구문과 다릅니다. 이 구문은 자체 XAML 파일에서의 최종 사용과 비슷하지만 사용할 수 있는 값에 대해서는 지나치게 지시적이지 않습니다. 따라서 일반적으로 리터럴과 자리 표시자를 혼합하는 문법 형식을 설명하고 **XAML 값** 섹션에 있는 일부 자리 표시자를 정의합니다.
 
@@ -300,24 +307,19 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 -   *object*: 이론적으로는 개체 값이지만, 사실상 문자열 또는 개체 선택 등의 특정 개체 형식으로 제한됩니다. 자세한 내용은 참조 페이지의 "설명"에서 확인할 수 있습니다.
 -   *object**property*: *object**property*는 결합하여 표시할 구문이 여러 속성의 특성 값으로 사용할 수 있는 형식의 구문인 경우 사용됩니다. 예를 들어 [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076)에 대해 표시된 **XAML 특성 사용**에는 &lt;*object* *property*="*predefinedColorName*"/&gt;이 포함됩니다.
 -   *eventhandler*: 이벤트 특성에 대해 표시된 모든 XAML 구문의 특성 값으로 표시됩니다. 여기에서 제공하는 것은 이벤트 처리기 함수의 함수 이름입니다. 이 함수는 XAML 페이지의 코드 숨김에서 정의되어야 합니다. 프로그래밍 수준에서 이 함수는 처리 중인 이벤트의 대리자 서명과 일치해야 합니다. 그렇지 않으면 앱 코드가 컴파일되지 않습니다. 그러나 이는 프로그래밍과 관련된 고려 사항이며, XAML과 관련된 고려 사항이 아니므로 XAML 구문에서 대리자 형식에 대한 암시를 주기 위해 노력하지 않습니다. 이벤트에 대해 구현해야 할 대리자에 대해 알고 싶으면 해당 이벤트에 대한 참조 항목의 **이벤트 정보** 섹션에서 **대리자**라는 레이블의 표 행을 확인할 수 있습니다.
--   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)에 대해 표시된 구문은 &lt;*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/&gt;입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
+-   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)에 대해 표시된 구문은 <*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/>입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
 -   *double*, *int*, *string*, *bool*: XAML 언어에 알려진 기본 형식입니다. C# 또는 Visual Basic을 사용하여 프로그래밍하는 경우 이러한 형식은 Microsoft .NET의 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) 및 [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx) 등의 형식에 투영됩니다. .NET 코드 숨김에서 XAML로 정의된 값으로 작업할 경우 이러한 .NET 형식의 멤버를 사용할 수 있습니다. C++/CX를 사용하여 프로그래밍할 경우 C++ 기본 형식을 사용하지만 [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) 네임스페이스에 의해 정의된 동일한 형식을 고려할 수 있습니다(예: [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx)). 경우에 따라 특정 속성에 대해 추가 값 제한 사항이 있을 수 있습니다. 그러나 이러한 제한 사항은 코드 사용 및 XAML 사용에 모두 적용되므로 XAML 섹션이 아닌 **속성 값** 섹션 또는 '설명' 섹션에 이러한 내용이 표시됩니다.
 
-## 스타일에 대한 유용한 정보와 팁, 참고 사항
+## <a name="tips-and-tricks-notes-on-style"></a>스타일에 대한 유용한 정보와 팁, 참고 사항
 
 -   태그 확장은 일반적으로 기본 [XAML 개요](xaml-overview.md)에서 설명합니다. 이 항목에 제시된 지침에 가장 큰 영향을 미치는 마크업 확장은 [StaticResource](staticresource-markup-extension.md) 마크업 확장(및 관련 [ThemeResource](themeresource-markup-extension.md))입니다. StaticResource 태그 확장의 기능은 XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에서 가져온 재사용 가능 리소스에 대한 XAML 팩터링을 사용하는 것입니다. 거의 항상 **ResourceDictionary**에서 컨트롤 템플릿 및 관련 스타일을 정의합니다. **ResourceDictionary**에서 컨트롤 템플릿 정의의 작은 부분이나 앱 특정 스타일을 정의하는 경우도 많습니다(예: 앱이 UI의 다양한 부분에 대해 여러 번 사용하는 색의 경우 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) 정의). StaticResource를 사용하면 속성 요소를 사용해야 하는 속성을 특성 구문에서 설정할 수 있습니다. 하지만 다시 사용하기 위한 XAML 팩터링의 이점은 페이지 수준 구문을 단순화하는 것 이상입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
 -   XAML 예제에서 공백과 줄 바꿈이 적용된 방법에 대한 다양한 규칙이 표시됩니다. 특히, 서로 다른 많은 특성 집합이 있는 개체 요소를 분리하는 방법에 대해 여러 가지 규칙이 있습니다. 이것은 단지 스타일의 문제일 뿐입니다. XAML을 편집할 때 Visual Studio XML 편집기는 일부 기본 스타일 규칙을 적용하지만 설정에서 이러한 규칙을 변경할 수 있습니다. XAML 파일의 공백이 의미 있는 것으로 간주되는 경우도 간혹 있습니다. 자세한 내용은 [XAML 및 공백](xaml-and-whitespace.md)을 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
 * [XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)
 * [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

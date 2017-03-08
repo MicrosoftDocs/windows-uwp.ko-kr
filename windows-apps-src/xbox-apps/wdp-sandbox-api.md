@@ -2,16 +2,24 @@
 author: payzer
 title: "디바이스 포털 Xbox Live 샌드박스 API 참조"
 description: "프로그래밍 방식으로 Xbox Live 샌드박스에 액세스하는 방법을 알아봅니다."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 translationtype: Human Translation
-ms.sourcegitcommit: a857ba338a971e651653193ff2149f08b1665a36
-ms.openlocfilehash: 2a0bfa2eecffb2b0f5ed0bc691cb90bcd7191321
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 629e8c3d35c9b9730c07e9f810909298558ae700
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Xbox Live 샌드박스 API 참조   
+# <a name="xbox-live-sandbox-api-reference"></a>Xbox Live 샌드박스 API 참조   
 이 REST API를 사용하여 Xbox Live 샌드박스를 가져오고 설정할 수 있습니다.
 
-## Xbox Live 샌드박스 가져오기
+## <a name="get-the-xbox-live-sandbox"></a>Xbox Live 샌드박스 가져오기
 
 **요청**
 
@@ -46,7 +54,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-## Xbox Live 샌드박스를 설정합니다.
+## <a name="set-the-xbox-live-sandbox"></a>Xbox Live 샌드박스를 설정합니다.
 다음 요청을 사용하여 디바이스의 Xbox Live 샌드박스를 변경할 수 있습니다. Xbox One에서 디바이스를 다시 시작해야 설정이 적용됩니다.
 
 **요청**
@@ -86,10 +94,5 @@ HTTP 상태 코드      | 설명
 **사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

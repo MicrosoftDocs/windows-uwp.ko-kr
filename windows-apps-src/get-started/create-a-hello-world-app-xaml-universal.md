@@ -3,9 +3,16 @@ author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Hello, world 앱 만들기(XAML)"
 description: "이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
-ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 16622dbd9914907f75c8392f8e4de6e1c10b049c
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -23,8 +30,7 @@ ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
 ## <a name="before-you-start"></a>시작하기 전에...
 
 -   [유니버설 Windows 앱이란](whats-a-uwp.md)?
--   [Windows 10의 새로운 기능](https://dev.windows.com/whats-new-windows-10-dev-preview)
--   이 자습서를 완료하려면 Windows 10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
+-   이 자습서를 완료하려면 Windows 10과 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
 -   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
 
@@ -142,7 +148,7 @@ ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
 
 **로컬 컴퓨터에서 디버깅을 시작하려면**
 
-1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **로컬 컴퓨터**가 선택되었는지 확인합니다. 기본적으로 선택되어 있습니다.
+1.  **표준** 도구 모음의 대상 장치 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **로컬 컴퓨터**가 선택되었는지 확인합니다. 기본적으로 선택되어 있습니다.
 2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
 
    –또는–
@@ -190,7 +196,7 @@ Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴�
 
 **모바일 장치 에뮬레이터에서 디버깅을 시작하려면**
 
-1.  화면이 작고 메모리가 제한된 디바이스에서 앱을 테스트하는 것이 좋으므로 **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.14393.0 WVGA 4인치 512MB**를 선택합니다.
+1.  화면이 작고 메모리가 제한된 장치에서 앱을 테스트하는 것이 좋으므로 **표준** 도구 모음의 대상 장치 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.14393.0 WVGA 4인치 512MB**를 선택합니다.
 
 2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
 
@@ -255,10 +261,5 @@ private async void button_Click(object sender, RoutedEventArgs e)
 
 축하합니다. Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
 
-XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보려면 [그리드 자습서](../layout/grid-tutorial.md)를 살펴보거나 [다음 단계](learn-more.md)로 바로 이동하세요.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보려면 [표 자습서](../layout/grid-tutorial.md)를 살펴보거나 [다음 단계](learn-more.md)로 바로 이동하세요.
 

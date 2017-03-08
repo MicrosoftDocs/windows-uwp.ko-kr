@@ -4,9 +4,17 @@ Description: "반전된 목록을 사용하면 맨 아래에 새 항목을 추�
 title: "반전된 목록"
 label: Inverted lists
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 52c1d63d-69c1-48d6-a234-6f39296e4bfd
 translationtype: Human Translation
-ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
-ms.openlocfilehash: de90c49dfc961241c1da028c8f7278e370a810bd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 0a33aaf71dbf23e991591f790f7327d812b060ef
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="inverted-lists"></a>반전된 목록
@@ -39,7 +47,7 @@ ms.openlocfilehash: de90c49dfc961241c1da028c8f7278e370a810bd
 이 예제에서는 목록 보기의 항목을 아래쪽에 맞추고 항목이 변경될 때 마지막 항목이 보기에 유지되도록 지정하는 방법을 보여 줍니다.
  
  **XAML**
-```xaml
+ ```xaml
 <ListView>
     <ListView.ItemsPanel>
         <ItemsPanelTemplate>
@@ -55,9 +63,4 @@ ms.openlocfilehash: de90c49dfc961241c1da028c8f7278e370a810bd
 - 사용자가 대화 흐름을 파악하기 쉽도록 발신자/수신자의 메시지를 반대쪽에 정렬합니다.
 - 사용자가 이미 대화 끝에서 다음 메시지를 기다리고 있는 경우 최신 메시지 표시에 방해가 되지 않도록 기존 메시지에 애니메이션 효과를 줍니다.
 - 대화 끝을 읽고 있지 않은 경우 항목을 이동하여 사용자 포커스를 방해하지 않습니다.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

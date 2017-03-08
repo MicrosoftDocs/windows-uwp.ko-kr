@@ -3,9 +3,17 @@ author: awkoren
 Description: "데스크톱-UWP 브리지를 시작하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)을 변환합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 translationtype: Human Translation
-ms.sourcegitcommit: 462d2b13cefc6abb4d7c6f814ec4ee659e4afde8
-ms.openlocfilehash: 1ef54c3c45113e434333058d0f039e213ea8eed2
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: dd9f45b0ddcc201053ed8e35908da66443e47d72
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -87,14 +95,10 @@ Windows 스토어 또는 테스트용으로 로드를 사용하여 앱을 배포
 | [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md) | 앱 패키지 및 매니페스트를 직접 만드는 방법을 알아봅니다. |
 | [데스크톱 브리지 앱 확장](desktop-to-uwp-extensions.md) | 시작 작업 및 파일 탐색기 통합과 같은 기능을 사용하도록 설정하려면 확장을 사용하여 변환된 앱을 향상합니다. |
 | [데스크톱 브리지로 변환된 앱에 대해 지원되는 UWP API](desktop-to-uwp-supported-api.md) | 변환된 데스크톱 앱에서 사용할 수 있는 UWP API를 확인합니다. |
+| [Visual Studio를 사용한 .NET 데스크톱 앱용 데스크톱 브리지 패키징 가이드](desktop-to-uwp-packaging-dot-net.md) | Visual Studio 솔루션을 구성하여 .NET 앱을 편집, 디버그 및 패키징할 수 있도록 합니다. | 
 | [데스크톱 브리지로 변환된 앱 디버그](desktop-to-uwp-debug.md) | 변환된 앱 디버깅에 대한 옵션에 대해 설명합니다. | 
 | [데스크톱 브리지로 변환된 앱에 서명](desktop-to-uwp-signing.md) | 인증서로 변환된 앱 패키지에 서명하는 방법을 알아봅니다. |
 | [데스크톱 브리지로 변환된 앱 배포](desktop-to-uwp-distribute.md) | 변환된 앱을 사용자에게 배포하는 방법을 참조하세요.  |
 | [데스크톱 브리지의 백그라운드 작업](desktop-to-uwp-behind-the-scenes.md) | 데스크톱 UWP 브리지가 이면에서 작동하는 방식에 대해 깊이 있게 살펴보세요. | 
 | [데스크톱 브리지의 알려진 문제](desktop-to-uwp-known-issues.md) | 데스크톱-UWP 브리지의 알려진 문제를 나열합니다. | 
 | [UWP에 대한 데스크톱 앱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | 변환된 앱의 기능을 보여 주는 GitHub의 코드 샘플입니다. |
-
-
-<!--HONumber=Dec16_HO3-->
-
-

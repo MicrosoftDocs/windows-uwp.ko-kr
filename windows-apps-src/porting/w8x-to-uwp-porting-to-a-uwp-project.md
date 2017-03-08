@@ -3,9 +3,16 @@ author: mcleblanc
 description: "포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다."
 title: "Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅"
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: bd0526404f7e8f7fb87a0798c4e0c06bd9305c19
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d711d981a674d1516b12ee11c379e679c45dcb60
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -33,9 +40,9 @@ ms.openlocfilehash: bd0526404f7e8f7fb87a0798c4e0c06bd9305c19
 -   모든 디바이스 패밀리에 공통되는 파일의 경우 특별한 고려 사항이 필요하지 않습니다. 앱이 실행되는 모든 디바이스 패밀리에서 이러한 파일을 사용합니다. 여기에는 XAML 태그 파일, 명령적 소스 코드 파일 및 자산 파일이 포함됩니다.
 -   앱은 실행되고 있는 디바이스 패밀리를 검색하고 해당 디바이스 패밀리용으로 특별히 설계된 보기를 탐색할 수 있습니다. 자세한 내용은 [앱이 실행되고 있는 플랫폼 검색](w8x-to-uwp-input-and-sensors.md)을 참조하세요.
 -   대안이 없는 경우 유용하다고 생각할 수 있는 유사한 기술은 앱이 특정 디바이스 패밀리에서 실행될 경우에만 런타임 시 자동으로 로드되도록 태그 파일 또는 **ResourceDictionary** 파일(또는 파일이 들어 있는 폴더)의 특별한 이름을 지정하는 것입니다. [Bookstore1](w8x-to-uwp-case-study-bookstore1.md) 사례 연구에서 이 기술을 보여 줍니다.
--   Windows 10만 지원해야 하는 경우 유니버설 8.1 앱의 소스 코드에서 여러 조건부 컴파일 지시문을 제거할 수 있어야 합니다. 이 항목의 [조건부 컴파일 및 적응 코드](#reviewing-conditional-compilation)를 참조하세요.
--   모든 디바이스 패밀리(예: 프린터, 스캐너 또는 카메라 단추)에서 사용할 수 없는 기능을 사용하기 위해 적응 코드를 작성할 수 있습니다. 이 항목의 [조건부 컴파일 및 적응 코드](#reviewing-conditional-compilation)에서 세 번째 예제를 참조하세요.
--   Windows 8.1, Windows Phone 8.1 및 Windows 10을 지원하려면 동일한 솔루션에서 세 개의 프로젝트를 유지하고 공유 프로젝트와 코드를 공유할 수 있습니다. 또는 프로젝트 간에 소스 코드 파일을 공유할 수 있습니다. 방법: Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **기존 항목 추가**를 선택하고, 공유할 파일을 선택하고, **링크로 추가**를 클릭합니다. 소스 코드 파일에 연결하는 프로젝트에서 해당 파일을 볼 수 있도록 소스 코드 파일을 파일 시스템의 공통 폴더에 저장합니다. 또한 소스 코드 파일을 소스 컨트롤에 추가해야 합니다.
+-   Windows 10만 지원해야 하는 경우 유니버설 8.1 앱의 소스 코드에서 여러 조건부 컴파일 지시문을 제거할 수 있어야 합니다. 이 항목의 [조건부 컴파일 및 적응 코드](#conditional-compilation-and-adaptive-code)를 참조하세요.
+-   일부 디바이스 제품군(예: 프린터, 스캐너 또는 카메라 단추)에 제공되지 않는 기능을 사용하려면 적응 코드를 작성하세요. 이 항목의 [조건부 컴파일 및 적응 코드](#conditional-compilation-and-adaptive-code)에서 세 번째 예제를 참조하세요.
+-   Windows 8.1, Windows Phone 8.1 및 Windows 10을 지원하려면 세 프로젝트를 같은 솔루션에 유지하고 공유 프로젝트와 코드를 공유합니다. 또는 프로젝트 간에 소스 코드 파일을 공유할 수 있습니다. 방법: Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **기존 항목 추가**를 선택하고, 공유할 파일을 선택하고, **링크로 추가**를 클릭합니다. 소스 코드 파일에 연결하는 프로젝트에서 해당 파일을 볼 수 있도록 소스 코드 파일을 파일 시스템의 공통 폴더에 저장합니다. 또한 소스 코드 파일을 소스 컨트롤에 추가해야 합니다.
 -   소스 코드 수준이 아닌 이진 수준에서 재사용하려면 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](http://msdn.microsoft.com/library/windows/apps/xaml/br230301.aspx)를 참조하세요. 또한 Windows 8.1, Windows Phone 8.1 및 Windows 10 앱용 .NET Framework(.NET Core) 및 전체 .NET Framework에서 사용할 수 있는 .NET API의 하위 집합을 지원하는 포팅 가능한 클래스 라이브러리도 있습니다. 포팅 가능한 클래스 라이브러리 어셈블리는 이러한 플랫폼 모두와 이진 호환됩니다. Visual Studio를 사용하여 포팅 가능한 클래스 라이브러리를 대상으로 하는 프로젝트를 만듭니다. [포팅 가능한 클래스 라이브러리를 사용한 플랫폼 간 개발](http://msdn.microsoft.com/library/gg597391.aspx)을 참조하세요.
 
 ## <a name="extension-sdks"></a>확장 SDK
@@ -62,7 +69,7 @@ ms.openlocfilehash: bd0526404f7e8f7fb87a0798c4e0c06bd9305c19
 
 앱이 API를 구현한 디바이스 패밀리를 대상으로 하지 않는 한 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 사용하여 API가 있는지 테스트한 후 호출해야 합니다(적응 코드라고 함). 그러면 앱이 실행되는 모든 장치에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 장치에 대해서만 true로 평가합니다. 먼저 범용 API가 있는지를 확인한 후 확장 SDK 및 적응 코드만 사용합니다. 아래 섹션에 몇 가지 예제가 나와 있습니다.
 
-또한 [앱 패키지 매니페스트](#appxpackage)를 참조하세요.
+또한 [앱 패키지 매니페스트](#app-package-manifest)를 참조하세요.
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>조건부 컴파일 및 적응 코드
 
@@ -159,7 +166,7 @@ private void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input
 
 ## <a name="app-package-manifest"></a>앱 패키지 매니페스트
 
-[Windows 10의 변경된 내용](https://msdn.microsoft.com/library/windows/apps/dn705793) 항목에는 추가, 제거 및 변경된 요소를 비롯하여 Windows 10에 대한 패키지 매니페스트 스키마 참조의 변경 내용이 나열되어 있습니다. 스키마의 모든 요소, 특성 및 유형에 대한 참조 정보는 [요소 계층 구조](https://msdn.microsoft.com/library/windows/apps/dn934819)를 참조하세요. Windows Phone 스토어 앱을 포팅한다면 포팅된 앱 매니페스트의 **pm:PhoneIdentity** 요소가 포팅할 앱의 앱 매니페스트에 있는 요소와 일치하는지 확인합니다(자세한 내용은 [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) 항목 참조).
+[Windows 10의 변경된 내용](https://msdn.microsoft.com/library/windows/apps/dn705793) 항목에는 추가, 제거 및 변경된 요소를 비롯하여 Windows 10에 대한 패키지 매니페스트 스키마 참조의 변경 내용이 나열되어 있습니다. 스키마의 모든 요소, 특성 및 유형에 대한 참조 정보는 [요소 계층 구조](https://msdn.microsoft.com/library/windows/apps/dn934819)를 참조하세요. Windows Phone 스토어 앱을 포팅하거나 Windows Phone 스토어에서 앱을 업데이트하는 경우 **pm:PhoneIdentity** 요소가 이전 앱의 앱 매니페스트에 있는 항목과 일치하는지 확인합니다(스토어에서 앱에 할당한 것과 동일한 GUID 사용). 이렇게 하면 Windows 10으로 업그레이드하는 앱 사용자가 새로운 앱을 중복이 아닌 업데이트로 수신합니다. 자세한 내용은 [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) 참조 항목을 참조하세요.
 
 모든 확장 SDK 참조를 비롯하여 프로젝트의 설정은 앱에서 호출할 수 있는 API 노출 영역을 결정합니다. 하지만 앱 패키지 매니페스트는 고객이 스토어에서 앱을 설치할 수 있는 장치의 실제 집합을 결정합니다. 자세한 내용은 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)의 예제를 참조하세요.
 
@@ -173,10 +180,5 @@ private void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input
 * [템플릿을 사용하여 Windows 스토어 앱 시작(C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [포팅 가능한 클래스 라이브러리를 사용한 플랫폼 간 개발](http://msdn.microsoft.com/library/gg597391.aspx)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

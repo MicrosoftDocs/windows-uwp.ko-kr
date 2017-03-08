@@ -3,28 +3,35 @@ author: jnHs
 Description: "앱에 대해 예약한 이름을 확인하고, 추가 이름을 예약하고(다른 언어 대상이거나 앱 이름 변경 목적), 더 이상 필요가 없는 예약된 이름을 삭제합니다."
 title: "앱 이름 관리"
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
-ms.openlocfilehash: e5616be7c3f1b767e4a73af3c6fbc168333090cc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5b34723eb6d336eeacb7437a926cae7f1d3ca871
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 이름 관리
+# <a name="manage-app-names"></a>앱 이름 관리
 
 
 앱에 예약한 이름을 모두 확인하고, 추가 이름을 예약하고(다른 언어 대상이거나 앱 이름 변경 목적), 필요 없는 이름을 삭제합니다. 이렇게 하려면 Windows 개발자 센터 대시보드에 있는 앱에 대한 **앱 관리** 섹션의 **앱 이름 관리** 페이지로 이동합니다.
 
-## 앱 이름을 추가로 예약
+## <a name="reserve-additional-names-for-your-app"></a>앱 이름을 추가로 예약
 
 같은 앱에 사용할 여러 앱 이름을 예약할 수 있습니다. 이 기능은 특히 앱을 여러 언어로 제공 중이고 언어에 따라 다른 이름을 사용하려는 경우 유용합니다. 이 기능을 사용하여 아직 게시하지 않은 앱의 이름을 변경할 수도 있습니다.
 
 **앱 이름 관리** 페이지의 **더 많은 이름 예약** 섹션에 입력란이 표시됩니다. 예약할 이름을 입력하고 **가용성 확인**을 클릭합니다. 이름을 사용할 수 있으면 **이름 예약**을 클릭합니다.
 
-> **참고** 앱 이름을 예약에 대한 자세한 내용과 특정 이름을 사용할 수 없는 이유를 확인하려면 [이름을 예약하여 앱 만들기](create-your-app-by-reserving-a-name.md)를 참조하세요.
+> **참고**  앱 이름을 예약에 대한 자세한 내용과 특정 이름을 사용할 수 없는 이유를 확인하려면 [이름을 예약하여 앱 만들기](create-your-app-by-reserving-a-name.md)를 참조하세요.
 
 필요하면 여기에서 추가 앱 이름을 계속 예약할 수 있습니다.
 
-## 앱 이름 삭제
+## <a name="delete-app-names"></a>앱 이름 삭제
 
 이전에 예약한 이름을 더 이상 사용하지 않으려면 여기에서 이름을 삭제하여 해제할 수 있습니다. 이름을 삭제하기 전에 확실한지 확인하세요. 이렇게 하면 다른 사용자가 즉시 이 이름을 예약하고 사용할 수 있기 때문입니다.
 
@@ -32,7 +39,7 @@ ms.openlocfilehash: e5616be7c3f1b767e4a73af3c6fbc168333090cc
 
 앱에는 예약 이름을 하나 이상 포함해야 합니다. 대시보드에서 앱을 완전히 제거하려면(해당 앱용으로 예약한 모든 것도 해제됨) **개요** 페이지에서 **이 앱 삭제**를 클릭합니다.
 
-## 이미 게시된 앱의 이름 바꾸기
+## <a name="rename-an-app-that-has-already-been-published"></a>이미 게시된 앱의 이름 바꾸기
 
 앱이 이미 Windows 스토어에 있는데 이름을 바꾸려면 위에 설명된 단계에 따라 앱용으로 새 이름을 예약하고 앱에 대한 새 제출을 만듭니다. 앱을 스토어에서 새 이름으로 표시하려면 패키지를 업데이트하여 새 이름을 포함해야 합니다. 앱 매니페스트의 [**Package/Properties/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240) 요소에서 새 이름을 사용하고 앱 이름을 포함하는 그래픽이나 텍스트를 업데이트해야 합니다. 앱 설명을 검토하고 앱 설명에서 이름을 언급하면 해당 이름을 변경할 수도 있습니다.
 
@@ -44,10 +51,5 @@ ms.openlocfilehash: e5616be7c3f1b767e4a73af3c6fbc168333090cc
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

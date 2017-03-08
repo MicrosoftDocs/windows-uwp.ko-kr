@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "백그라운드 작업을 사용하여 앱 지원"
 description: "이 섹션의 항목에서는 트리거에 대한 응답으로 백그라운드에서 경량 코드가 실행되도록 하는 방법을 보여 줍니다."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 9f83717657fddf2df51589aae75a3aa21c6ef5da
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a9ac85483c3d7e252f24147088b928de6e781dc6
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -17,7 +24,7 @@ ms.openlocfilehash: 9f83717657fddf2df51589aae75a3aa21c6ef5da
 
 ## <a name="playing-media-in-the-background"></a>백그라운드에서 미디어 재생
 
-Windows 10 버전 1607부터 백그라운드에서 오디오를 재생하는 작업이 훨씬 쉬워졌습니다. 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
+Windows 10 버전 1607부터 백그라운드에서 오디오를 재생하는 작업이 훨씬 쉬워졌습니다. 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
 
 ## <a name="in-process-and-out-of-process-background-tasks"></a>In-process 및 out-of-process 백그라운드 작업
 
@@ -162,7 +169,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 **관련 백그라운드 작업 지침**
 
-* [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
+* [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
@@ -179,9 +186,4 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 * [Windows 스토어 장치 앱의 장치 동기화 및 업데이트](http://go.microsoft.com/fwlink/p/?LinkId=306619)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

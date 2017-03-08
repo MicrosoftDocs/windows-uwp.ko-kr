@@ -3,12 +3,19 @@ author: Jwmsft
 ms.assetid: ad7a739c-fd70-4068-9007-da28028abea3
 title: "그래픽 및 애니메이션"
 description: "이 섹션의 항목은 스토어 앱에서 그래픽 및 애니메이션 사용을 시작하도록 도와줍니다."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e06be76cadffd0ee116b0cfd28c90176e25656d5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fafb0e013e1eef5fba2c5ec24b235df5c3c8429a
+ms.lasthandoff: 02/07/2017
 
 ---
-# 그래픽 및 애니메이션
+# <a name="graphics-and-animation"></a>그래픽 및 애니메이션
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -35,10 +42,5 @@ ms.openlocfilehash: e06be76cadffd0ee116b0cfd28c90176e25656d5
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

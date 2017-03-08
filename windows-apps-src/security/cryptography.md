@@ -3,21 +3,28 @@ title: "암호화"
 description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에 사용할 수 있는 암호화 기능에 대한 개요를 제공합니다. 특정 작업에 대한 자세한 내용은 이 문서의 끝에 있는 표를 참조하세요."
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3329a873b0e86a606d6e8899dcaca62c2e127c29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 암호화
+# <a name="cryptography"></a>암호화
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에 사용할 수 있는 암호화 기능에 대한 개요를 제공합니다. 특정 작업에 대한 자세한 내용은 이 문서의 끝에 있는 표를 참조하세요.
 
-## 용어
+## <a name="terminology"></a>용어
 
 
 다음은 암호화 및 PKI(공개 키 인프라)에서 일반적으로 사용되는 용어입니다.
@@ -40,11 +47,11 @@ ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
 | X.509 인증서           | 주로 인증 기관이 발급하는 디지털 문서로, 개인, 시스템 또는 엔터티의 ID를 다른 관련 당사자에게 검증하는 데 사용됩니다.                                            |
 
  
-## 네임스페이스
+## <a name="namespaces"></a>네임스페이스
 
 앱에서 사용할 수 있는 네임스페이스는 다음과 같습니다.
 
-### Windows.Security.Cryptography
+### <a name="windowssecuritycryptography"></a>Windows.Security.Cryptography
 
 다음을 수행할 수 있는 CryptographicBuffer 클래스 및 정적 메서드를 포함합니다.
 
@@ -53,7 +60,7 @@ ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
 -   네트워크 전송을 위해 메시지 인코드
 -   전송 후 메시지 디코드
 
-### Windows.Security.Cryptography.Certificates
+### <a name="windowssecuritycryptographycertificates"></a>Windows.Security.Cryptography.Certificates
 
 다음을 수행할 수 있는 클래스, 인터페이스 및 열거 형식을 포함합니다.
 
@@ -62,7 +69,7 @@ ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
 -   PFX 파일로 인증서 가져오기
 -   인증서 요청 속성 지정 및 검색
 
-### Windows.Security.Cryptography.Core
+### <a name="windowssecuritycryptographycore"></a>Windows.Security.Cryptography.Core
 
 다음을 수행할 수 있는 클래스 및 열거 형식을 포함합니다.
 
@@ -76,19 +83,19 @@ ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
 -   MAC(컴퓨터 인증 코드) 알고리즘 공급자 사용
 -   키 파생 알고리즘 공급자 사용
 
-### Windows.Security.Cryptography.DataProtection
+### <a name="windowssecuritycryptographydataprotection"></a>Windows.Security.Cryptography.DataProtection
 
 다음을 수행할 수 있는 클래스를 포함합니다.
 
 -   정적 데이터를 비동기식으로 암호화 및 암호 해독
 -   데이터 스트림을 비동기식으로 암호화 및 암호 해독
 
-## 암호화 및 PKI 응용 프로그램 기능
+## <a name="crypto-and-pki-application-capabilities"></a>암호화 및 PKI 응용 프로그램 기능
 
 
 앱에 사용 가능한 간소화된 응용 프로그램 프로그래밍 인터페이스에서는 다음 암호화 및 PKI(공개 키 인프라) 접근 권한 값을 사용합니다.
 
-### 암호화 지원
+### <a name="cryptography-support"></a>암호화 지원
 
 다음 암호화 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547) 네임스페이스를 참조하세요.
 
@@ -106,11 +113,11 @@ SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 
 -   정적 데이터에 대한 비동기 보호
 -   데이터 스트림에 대한 비동기 보호
 
-### 인코딩 지원
+### <a name="encoding-support"></a>인코딩 지원
 
 앱은 네트워크를 통해 전송할 암호화 데이터를 인코딩하고 네트워크 소스에서 받은 데이터를 디코딩할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404) 네임스페이스에서 사용 가능한 정적 메서드를 참조하세요.
 
-### PKI 지원
+### <a name="pki-support"></a>PKI 지원
 
 앱은 다음과 같은 PKI 작업을 수행할 수 있습니다. 자세한 내용은 [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476) 네임스페이스를 참조하세요.
 
@@ -131,7 +138,7 @@ SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 
     -   지정된 발급자 집합을 통해 연결되는 인증서
     -   응용 프로그램 저장소에서 인증서 자동으로 선택
 
-## 자세한 문서
+## <a name="detailed-articles"></a>자세한 문서
 
 
 다음 문서에서는 보안 시나리오에 대한 자세한 정보를 제공합니다.
@@ -146,8 +153,3 @@ SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 
 | [일반적인 암호화 작업](common-cryptography-tasks.md)                     | 이러한 문서에서는 난수 만들기, 버퍼 비교, 문자열과 이진 데이터 간 변환, 바이트 배열에서 복사 및 데이터 인코딩 및 디코딩 등의 일반적인 UWP 암호화 작업에 대한 예제 코드를 제공합니다.                                                                                                                                                                                                                                                                                    |
 
  
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -2,22 +2,29 @@
 author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: "SD 카드에 액세스"
-description: "특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다."
+description: "특히 내부 저장 용량이 제한적인 저가대의 장치에서는 중요하지 않은 데이터를 옵션 microSD 카드에 저장하고 액세스할 수 있습니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: a13f351af3cba8d3d9e645a6f6040dff6e81e1ff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3fc8bbaa0b665b640974b5342b2b60c9b7f90143
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="access-the-sd-card"></a>SD 카드에 액세스
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다.
+특히 내부 저장 용량이 제한적인 저가대의 장치에서는 중요하지 않은 데이터를 옵션 microSD 카드에 저장하고 액세스할 수 있습니다.
 
 앱에서 SD 카드에 파일을 저장하고 액세스하려면 먼저 앱 매니페스트 파일에서 **removableStorage** 접근 권한 값을 지정해야 합니다. 일반적으로 앱이 저장하고 액세스하는 파일의 형식을 처리하려면 등록해야 합니다.
 
-다음 방법을 사용하여 선택 사항인 SD 카드에 파일을 저장하고 액세스할 수 있습니다.
+다음 방법을 사용하여 옵션 SD 카드에 파일을 저장하고 액세스할 수 있습니다.
 
 - 파일 선택기
 
@@ -145,9 +152,4 @@ using Windows.Storage;
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

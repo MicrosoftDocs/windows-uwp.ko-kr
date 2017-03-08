@@ -3,9 +3,16 @@ author: mcleblanc
 description: "이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요."
 title: "Windows 런타임 8.x를 UWP로 포팅하는 문제 해결&quot;"
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 6bb6035757c2629c5cbcc3e773703b4f659c5237
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6c10376854656abe276c53a9b6778665c1d47a4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -29,8 +36,8 @@ ms.openlocfilehash: 6bb6035757c2629c5cbcc3e773703b4f659c5237
 
 이 섹션에서는 Visual Studio에서 Windows 10 프로젝트를 열었을 때 "Visual Studio 업데이트 필요. 하나 이상의 프로젝트에 설치되지 않았거나 Visual Studio의 향후 업데이트의 일부로 포함되는 플랫폼 SDK <version>이(가) 필요합니다."라는 메시지가 표시될 경우 해야 할 일을 설명합니다.
 
--   먼저, 설치한 Windows 10용 SDK의 버전 번호를 확인합니다. **C:\\Program Files (x86)\\Windows Kits\\10\\Include\\<versionfoldername>**로 이동하고 (4중 표기의 "Major.Minor.Build.Revision"임)을 기록해 둡니다.
--   편집할 프로젝트 파일을 열고 `TargetPlatformVersion` 및 `TargetPlatformMinVersion` 요소를 찾습니다. 해당 요소를 다음과 같이 편집하고 을 디스크에 있는 4중 표기 버전 번호로 바꿉니다.
+-   먼저, 설치한 Windows 10용 SDK의 버전 번호를 확인합니다. **C:\\Program Files (x86)\\Windows Kits\\10\\Include\\<versionfoldername>**로 이동하여 *<versionfoldername>*을 적어두세요. 4중 표기인 "Major.Minor.Build.Revision"에 있습니다.
+-   편집할 프로젝트 파일을 열고 `TargetPlatformVersion` 및 `TargetPlatformMinVersion` 요소를 찾습니다. 해당 요소를 다음과 같이 편집하고 *<versionfoldername>*을 디스크에 있는 4중 표기 버전 번호로 바꿉니다.
 
 ```xml
    <TargetPlatformVersion><versionfoldername></TargetPlatformVersion>
@@ -50,10 +57,5 @@ ms.openlocfilehash: 6bb6035757c2629c5cbcc3e773703b4f659c5237
 | C# 컴파일러에서 "*\[...\]에 '<name>' 형식 또는 네임스페이스 이름이 없습니다.*" 또는 "*\[...\] 네임스페이스에 '<name>' 형식 또는 네임스페이스 이름이 없습니다.*" 또는 "*'&lt;<name>&gt;' 형식 또는 네임스페이스 이름이 현재 컨텍스트에 없습니다.*"라는 오류를 발생합니다. | 해결이 간단하지 않은 경우가 있을 수 있지만 확장 SDK에서 형식이 구현되었다는 의미일 수 있습니다. [Windows API](https://msdn.microsoft.com/library/windows/apps/bg124285) 참조 콘텐츠를 사용하여 API를 구현하는 확장 SDK를 확인한 다음 Visual Studio의 **추가** > **참조** 명령을 사용하여 해당 SDK에 대한 참조를 프로젝트에 추가합니다. 앱에서 범용 디바이스 패밀리라고 알려진 API 집합을 대상으로 하는 경우 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 호출하기 전에 확장 SDK가 있는지를 런타임으로 테스트하는 것이 중요합니다(적응 코드라고 함). 유니버설 API가 있으면 항상 확장 SDK의 API보다 더 선호됩니다. 자세한 내용은 [확장 SDK](w8x-to-uwp-porting-to-a-uwp-project.md)를 참조하세요. |
 
 다음 항목은 [XAML 및 UI 포팅](w8x-to-uwp-porting-xaml-and-ui.md)입니다.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -3,13 +3,20 @@ author: msatranjr
 title: "C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기"
 description: ".NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다."
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: e7793cd27d996ce2adbfebfbad91541bdccf0d82
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 31fddae1c163f46a56fb78f5ac29e11a84e2ddd9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
+# <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -20,7 +27,7 @@ Visual Basic 또는 C#을 사용하여 UWP 앱에서만 사용되는 구성 요�
 
 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.
 
-## Windows 런타임 구성 요소에서 형식 선언
+## <a name="declaring-types-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 형식 선언
 
 
 내부적으로, 구성 요소의 Windows 런타임 형식에서는 유니버설 Windows 앱에 허용되는 .NET Framework 기능을 사용할 수 있습니다. (자세한 내용은 [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx) 개요를 참조하세요.) 외부적으로 형식의 멤버는 해당 매개 변수 및 반환 값에 대해 Windows 런타임 형식만 표시할 수 있습니다. 다음 목록에서는 Windows 런타임 구성 요소에서 표시되는 .NET Framework 형식에 대한 제한을 설명합니다.
@@ -36,19 +43,19 @@ Visual Basic 또는 C#을 사용하여 UWP 앱에서만 사용되는 구성 요�
     -   System.Exception 및 System.EventArgs 등 Windows 런타임이 아닌 형식에서 파생될 수 없습니다.
 -   모든 공용 형식에는 어셈블리 이름과 일치하는 루트 네임스페이스가 있어야 하며 어셈블리 이름이 "Windows"로 시작해서는 안 됩니다.
 
-    > **팁** 기본적으로 Visual Studio 프로젝트에는 어셈블리 이름과 일치하는 네임스페이스 이름이 있습니다. Visual Basic에서 이 기본 네임스페이스에 대한 Namespace 문은 코드에 표시되지 않습니다.
+    > **팁**  기본적으로 Visual Studio 프로젝트에는 어셈블리 이름과 일치하는 네임스페이스 이름이 있습니다. Visual Basic에서 이 기본 네임스페이스에 대한 Namespace 문은 코드에 표시되지 않습니다.
 
 -   공용 구조에는 공용 필드 이외의 멤버를 포함할 수 없으며 이러한 필드는 값 형식 또는 문자열이어야 합니다.
 -   공용 클래스는 **sealed**(Visual Basic의 **NotInheritable**)여야 합니다. 프로그래밍 모델에 다형성이 필요한 경우 공용 인터페이스를 만들어 다형성이어야 하는 클래스에 해당 인터페이스를 구현할 수 있습니다.
 
-## 구성 요소 디버깅
+## <a name="debugging-your-component"></a>구성 요소 디버깅
 
 
 유니버설 Windows 앱 및 구성 요소가 모두 관리 코드로 작성된 경우 동시에 디버그할 수 있습니다.
 
 C++를 사용하여 유니버설 Windows 앱의 일부인 구성 요소를 테스트할 때 관리 코드와 네이티브 코드를 동시에 디버그할 수 있습니다. 기본적으로는 네이티브 코드만 디버그합니다.
 
-## **네이티브 C++ 코드와 관리 코드를 모두 디버그하려면**
+## **<a name="to-debug-both-native-c-code-and-managed-code"></a>네이티브 C++ 코드와 관리 코드를 모두 디버그하려면**
 
 1.  Visual C++ 프로젝트에서 바로 가기 메뉴를 열고 **속성**을 선택합니다.
 2.  속성 페이지의 **구성 속성**에서 **디버깅**을 클릭합니다.
@@ -57,14 +64,14 @@ C++를 사용하여 유니버설 Windows 앱의 일부인 구성 요소를 테�
 
 JavaScript를 사용하여 유니버설 Windows 앱의 일부로 구성 요소를 테스트할 때 기본적으로 솔루션은 JavaScript 디버깅 모드로 설정됩니다. Visual Studio에서는 JavaScript와 관리 코드를 동시에 디버그할 수 없습니다.
 
-## **JavaScript 대신 관리 코드를 디버그하려면**
+## **<a name="to-debug-managed-code-instead-of-javascript"></a>JavaScript 대신 관리 코드를 디버그하려면**
 
 1.  JavaScript 프로젝트에서 바로 가기 메뉴를 열고 **속성**을 선택합니다.
 2.  속성 페이지의 **구성 속성**에서 **디버깅**을 클릭합니다.
 3.  **디버거 유형**을 선택하고 드롭다운 목록 상자에서 **스크립트만**을 **관리만**으로 변경합니다. **확인**을 선택합니다.
 4.  관리 코드에 중단점을 설정하고 일반적인 방법으로 디버그합니다.
 
-## 관리 코드에 Windows 런타임 형식 전달
+## <a name="passing-windows-runtime-types-to-managed-code"></a>관리 코드에 Windows 런타임 형식 전달
 
 
 앞의 Windows 런타임 구성 요소에서 형식 선언 섹션에서 설명했듯이 공용 클래스의 멤버 서명에 특정 .NET Framework 형식이 나타날 수 있습니다. 이는 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 .NET Framework에서 제공하는 지원의 일부입니다. 여기에는 기본 형식 및 일부 클래스와 인터페이스가 포함됩니다. JavaScript 또는 C++ 코드의 구성 요소가 사용되는 경우 .NET Framework 형식이 호출자에게 어떻게 표시되는지 알아야 합니다. JavaScript 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)을 참조하세요. 이 섹션에서는 자주 사용되는 형식에 대해 설명합니다.
@@ -100,18 +107,18 @@ C# 또는 Visual Basic에서 이러한 형식에 대한 언어 키워드를 제�
 
 하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 예를 들어 Dictionary&lt;int, string&gt;(Visual Basic의 Dictionary(Of Integer, String))을 IDictionary&lt;int, string&gt; IReadOnlyDictionary&lt;int, string&gt; 또는 IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;로 전달하거나 반환할 수 있습니다.
 
-**중요** JavaScript는 관리 형식이 구현한 인터페이스 목록에서 처음 나타나는 인터페이스를 사용합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
+**중요**  JavaScript는 관리 형식이 구현한 인터페이스 목록에서 처음 나타나는 인터페이스를 사용합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
 Windows 런타임에서 IMap&lt;K, V&gt; 및 IMapView&lt;K, V&gt;는 IKeyValuePair를 사용하여 반복됩니다. 관리 코드로 전달할 경우 IDictionary&lt;TKey, TValue&gt; 및 IReadOnlyDictionary&lt;TKey, TValue&gt;로 나타나므로 자연스럽게 System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;를 사용하여 열거합니다.
 
 인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 PropertySet 클래스가 구현한 IMap&lt;K, V&gt;는 관리 코드에서 IDictionary&lt;TKey, TValue&gt;로 나타납니다. PropertySet는 IMap&lt;K, V&gt; 대신 IDictionary&lt;TKey, TValue&gt;를 구현한 것처럼 나타나므로, 관리 코드에서 Add 메서드가 있는 것처럼 나타나고 .NET Framework 사전의 Add 메서드처럼 동작합니다. Insert 메서드가 있는 것처럼 나타나지는 않습니다. 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)을 참조하세요.
 
-## Windows 런타임에 관리 형식 전달
+## <a name="passing-managed-types-to-the-windows-runtime"></a>Windows 런타임에 관리 형식 전달
 
 
 이전 섹션에서 설명한 것처럼 일부 Windows 런타임 형식은 구성 요소의 멤버 서명 또는 IDE에 사용된 Windows 런타임 멤버 서명에서 .NET Framework 형식으로 나타납니다. 이러한 멤버에 .NET Framework 형식을 전달하거나 구성 요소 멤버의 반환 값으로 사용할 경우 다른 쪽의 코드에서는 해당 Windows 런타임 형식으로 나타납니다. JavaScript에서 구성 요소를 호출할 때의 효과에 대한 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)의 "구성 요소에서 관리 형식 반환" 섹션을 참조하세요.
 
-## 오버로드된 메서드
+## <a name="overloaded-methods"></a>오버로드된 메서드
 
 
 Windows 런타임에서 메서드가 오버로드될 수 있습니다. 그러나 동일한 수의 매개 변수를 사용하여 여러 오버로드를 선언한 경우 해당 오버로드 중 하나에만 [Windows.Foundation.Metadata.DefaultOverloadAttribute](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.defaultoverloadattribute.aspx) 특성을 적용해야 합니다. 해당 오버로드만 JavaScript에서 호출할 수 있습니다. 예를 들어 다음 코드에서 **int**(Visual Basic의 **Integer**)가 사용된 오버로드가 기본 오버로드입니다.
@@ -138,11 +145,11 @@ Windows 런타임에서 메서드가 오버로드될 수 있습니다. 그러나
 > End Function
 > ```
 
- **주의** JavaScript를 사용하면 OverloadExample로 값을 전달할 수 있으며 값을 매개 변수에 필요한 형식으로 강제 변환합니다. "forty-two", "42" 또는 42.3을 사용하여 OverloadExample을 호출할 수 있지만 이러한 모든 값은 기본 오버로드에 전달됩니다. 이전 예제에서 기본 오버로드는 각각 0, 42 및 42를 반환합니다.
+ **주의**  JavaScript를 사용하면 OverloadExample로 값을 전달할 수 있으며 값을 매개 변수에 필요한 형식으로 강제 변환합니다. "forty-two", "42" 또는 42.3을 사용하여 OverloadExample을 호출할 수 있지만 이러한 모든 값은 기본 오버로드에 전달됩니다. 이전 예제에서 기본 오버로드는 각각 0, 42 및 42를 반환합니다.
 
 생성자에는 DefaultOverloadAttribute 특성을 적용할 수 없습니다. 클래스의 모든 생성자는 매개 변수 수가 달라야 합니다.
 
-## IStringable 구현
+## <a name="implementing-istringable"></a>IStringable 구현
 
 
 Windows 8.1부터 Windows 런타임에는 IStringable 인터페이스가 포함되며 이 인터페이스의 단일 메서드인 IStringable.ToString은 Object.ToString에서 제공하는 것과 비슷한 기본 형식 지원을 제공합니다. Windows 런타임 구성 요소로 내보낸 공용 관리 형식에서 IStringable을 구현하도록 선택한 경우 다음 제한이 적용됩니다.
@@ -178,7 +185,7 @@ Windows 8.1부터 Windows 런타임에는 IStringable 인터페이스가 포함�
 
 다양한 조건에서 네이티브 코드에서 관리 형식으로 호출하여 IStringable을 구현하거나 해당 ToString 구현을 숨기면 예기치 않은 동작이 발생할 수 있습니다.
 
-## 비동기 작업
+## <a name="asynchronous-operations"></a>비동기 작업
 
 
 구성 요소에서 비동기 메서드를 구현하려면 메서드 이름 끝에 "Async"를 추가하고 비동기 작업을 나타내는 Windows 런타임 인터페이스인 IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; 또는 IAsyncOperationWithProgress&lt;TResult, TProgress&gt; 중 하나를 반환합니다.
@@ -253,7 +260,7 @@ function asyncExample(id) {
 
 취소 또는 진행 상황 보고를 선택적으로 지원하는 비동기 메서드를 만드는 경우 취소 토큰 또는 IProgress&lt;T&gt; 인터페이스에 대한 매개 변수가 없는 오버로드를 추가하는 것이 좋습니다.
 
-## 예외 발생
+## <a name="throwing-exceptions"></a>예외 발생
 
 
 Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습니다. Windows 런타임 구성 요소에서 자체 공용 예외 형식을 선언할 수는 없지만 비공용 형식을 선언하고 발생시킬 수 있습니다.
@@ -262,16 +269,16 @@ Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습
 
 -   JavaScript에서 예외는 예외 메시지가 스택 추적으로 대체된 개체로 나타납니다. Visual Studio에서 앱을 디버그할 때 디버거 예외 대화 상자에서 원래 메시지 텍스트가 "WinRT 정보"로 식별되어 표시되는 것을 볼 수 있습니다. JavaScript 코드에서 원래 메시지 텍스트에 액세스할 수는 없습니다.
 
-    > **팁** 현재 스택 추적에는 관리 예외 형식이 포함되지만 추적을 구문 분석하여 예외 형식을 식별하는 것은 권장되지 않습니다. 대신 이 섹션의 뒷부분에서 설명하는 HRESULT 값을 사용하세요.
+    > **팁**  현재 스택 추적에는 관리 예외 형식이 포함되지만 추적을 구문 분석하여 예외 형식을 식별하는 것은 권장되지 않습니다. 대신 이 섹션의 뒷부분에서 설명하는 HRESULT 값을 사용하세요.
 
 -   C++에서 예외는 플랫폼 예외로 나타납니다. 관리 예외의 HResult 속성을 특정 플랫폼 예외의 HRESULT에 매핑할 수 있는 경우 해당 예외가 사용됩니다. 그렇지 않은 경우 [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx) 예외가 발생됩니다. C++ 코드에서는 관리 예외의 메시지 텍스트를 사용할 수 없습니다. 특정 플랫폼 예외가 발생된 경우 해당 예외 형식에 대한 기본 메시지 텍스트가 나타납니다. 그렇지 않은 경우 메시지 텍스트가 나타나지 않습니다. [예외(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699896.aspx)를 참조하세요.
 -   C# 또는 Visual Basic에서 예외는 일반적인 관리 예외입니다.
 
 구성 요소에서 예외가 발생할 때 HResult 속성 값이 해당 구성 요소와 관련된 비공용 예외 형식을 발생시켜 JavaScript 또는 C++ 호출자에서 예외를 쉽게 처리하도록 할 수 있습니다. 예외 개체의 숫자 속성을 통해 HRESULT를 JavaScript 호출자에 사용하고 [COMException::HResult](https://msdn.microsoft.com/library/windows/apps/xaml/hh710415.aspx) 속성을 통해 C++ 호출자에 사용할 수 있습니다.
 
-> **참고** HRESULT에 음수 값을 사용합니다. 양수 값은 성공으로 해석되어 JavaScript 또는 C++ 호출자에서 예외가 발생되지 않습니다.
+> **참고**  HRESULT에 음수 값을 사용합니다. 양수 값은 성공으로 해석되어 JavaScript 또는 C++ 호출자에서 예외가 발생되지 않습니다.
 
-## 이벤트 선언 및 발생
+## <a name="declaring-and-raising-events"></a>이벤트 선언 및 발생
 
 이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx)를 이벤트 형식으로 사용하고 이벤트 인수 형식을 제네릭 형식 인수로 사용합니다. 일반적인 .NET Framework 응용 프로그램에서와 마찬가지로 이벤트를 발생시킵니다.
 
@@ -279,21 +286,16 @@ Windows 런타임 구성 요소가 JavaScript 또는 C++에서 사용되는 경�
 
 사용자 지정 이벤트 접근자를 구현한 경우(Visual Basic에서는 **Custom** 키워드로 이벤트 선언) 해당 구현의 Windows 런타임 이벤트 패턴을 따라야 합니다. [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](custom-events-and-event-accessors-in-windows-runtime-components.md)를 참조하세요. C# 또는 Visual Basic 코드에서 이벤트를 처리하는 경우 일반 .NET Framework 이벤트처럼 나타납니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 직접 사용하기 위해 Windows 런타임 구성 요소를 만든 경우 해당 기능이 다른 개발자에게도 유용할 수 있습니다. 다른 개발자에게 배포하기 위해 구성 요소를 패키지하는 방법에는 두 가지가 있습니다. [관리되는 Windows 런타임 구성 요소 배포](https://msdn.microsoft.com/library/jj614475.aspx)를 참조하세요.
 
 Visual Basic 및 C# 언어 기능과 Windows 런타임용 .NET Framework 지원에 대한 자세한 내용은 [Visual Basic 및 C# 언어 참조](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Windows 스토어 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

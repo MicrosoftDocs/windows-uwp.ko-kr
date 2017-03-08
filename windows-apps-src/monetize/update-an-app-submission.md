@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출을 업데이트합니다."
 title: "Windows 스토어 제출 API를 사용하여 앱 제출 업데이트"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱 제출, 업데이트"
 translationtype: Human Translation
-ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
-ms.openlocfilehash: ec533c5a021d006787a7d217fa7f5eb98835fdd3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: df52b5de7751d8428a92bd3892f91159c5fdd518
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -23,7 +30,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 * 개발자 센터 계정의 앱에 대한 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 
->**참고**  이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 ## <a name="request"></a>요청
 
@@ -288,9 +295,4 @@ Content-Type: application/json
 * [앱 제출 커밋](commit-an-app-submission.md)
 * [앱 제출 삭제](delete-an-app-submission.md)
 * [앱 제출의 상태를 가져오기](get-status-for-an-app-submission.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

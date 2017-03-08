@@ -3,22 +3,29 @@ author: jnHs
 Description: "앱 제출을 만들기를 마치고 스토어에 제출을 클릭하면 인증 단계가 시작됩니다."
 title: "앱 인증 프로세스"
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 865d71374cf7d678804ce16548edd819faafed33
-ms.openlocfilehash: 07b3631ccc875222b8d2ea30a2b69e2995a09e23
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c63668b9699e641bb89fa79f5febc3397aac78a1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 인증 프로세스
+# <a name="the-app-certification-process"></a>앱 인증 프로세스
 
 
 앱 제출을 만들기를 마치고 **스토어에 제출**을 클릭하면 인증 단계가 시작됩니다. 이 프로세스는 대개 몇 시간 내에 완료되지만 경우에 따라 영업일 기준으로 3일까지 걸릴 수 있습니다. 제출이 인증을 통과한 후 스토어에서 앱의 목록(또는 이전에 게시된 앱의 업데이트)이 고객에게 표시되는 데 16시간까지 걸릴 수 있습니다. 제출이 게시되고 고객에게 제공될 때 알림이 표시되고, 대시보드에서 앱의 상태가 **스토어에 있음**이 됩니다.
 
-## 전처리
+## <a name="preprocessing"></a>전처리
 
 앱 패키지를 업로드하고 인증을 위해 앱을 제출한 후 패키지는 테스트를 위해 대기합니다. 전처리하는 동안 오류가 검색되면 메시지를 표시합니다. 가능한 오류에 대한 자세한 내용은 [제출 오류 해결](resolve-submission-errors.md)을 참조하세요.
 
-## 인증
+## <a name="certification"></a>인증
 
 이 단계에서 여러 가지 테스트가 수행됩니다.
 
@@ -28,21 +35,21 @@ ms.openlocfilehash: 07b3631ccc875222b8d2ea30a2b69e2995a09e23
 
 인증 프로세스가 완료되면 앱의 인증 통과 여부를 알리는 인증 보고서를 받게 됩니다. 앱이 인증을 통과하지 못한 경우 보고서에 실패한 테스트나 충족되지 않은 [정책](https://msdn.microsoft.com/library/windows/apps/dn764944)이 표시됩니다. 문제를 해결한 후 앱에 대한 새 제출을 만들어서 인증 프로세스를 다시 시작할 수 있습니다.
 
-## 릴리스
+## <a name="release"></a>릴리스
 
 앱이 인증을 통과하면 **게시** 프로세스로 이동할 수 있습니다. 제출이 최대한 빨리 게시되도록 지정하면 앱이 즉시 게시됩니다. 특정 날짜까지 릴리스되지 않도록 지정하면 개발자가 **릴리스 날짜 변경** 링크를 클릭하지 않는 한 해당 날짜까지 기다립니다. 제출을 수동으로 게시하도록 지정하면 개발자가 **지금 게시** 단추를 클릭하여 게시를 요청하거나, **릴리스 날짜 변경**을 클릭하고 특정 날짜를 선택하면 앱이 게시됩니다.
 
-## 게시
+## <a name="publishing"></a>게시
 
 앱 패키지에 디지털 서명하여 앱이 릴리스된 후 변경되지 않도록 보호합니다. 이 단계가 시작된 후에는 제출을 취소하거나 릴리스 날짜를 변경할 수 없습니다.
 
 앱이 게시 단계에 있는 동안 지원되는 각 OS 버전에서 고객이 새 패키지 및 스토어 목록 세부 정보를 사용할 수 있게 되면 앱 제출에 대한 상태 열의 **세부 정보 표시** 링크를 통해 알려줍니다. 앱의 모든 잠재 고객이 새 패키지 및 스토어 목록 세부 정보를 사용할 수 있을 때까지 앱이 게시 단계에 유지되며, 최대 16시간이 걸릴 수 있습니다. 
 
-## 스토어에 있음 
+## <a name="in-the-store"></a>스토어에 있음 
 
 위의 단계를 성공적으로 수행하면 제출의 상태가 **게시 중**에서 **스토어에 있음**으로 변경됩니다. 그런 다음 고객이 다운로드할 수 있도록 제출이 Windows 스토어에 제공됩니다(다른 [배포 및 표시 여부](set-app-pricing-and-availability.md#distribution-and-visibility) 옵션을 선택하지 않은 경우). 
 
-**참고** 또한 앱이 게시된 후 잠재적인 문제를 식별하고 앱이 모든 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944)을 준수하는지 확인할 수 있도록 임의 추출 검사를 수행합니다. 문제가 발견되면 해당하는 경우 또는 앱이 스토어에서 제거된 경우 문제와 문제 해결 방법에 대한 알림을 받게 됩니다.
+**참고**  또한 앱이 게시된 후 잠재적인 문제를 식별하고 앱이 모든 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944)을 준수하는지 확인할 수 있도록 임의 추출 검사를 수행합니다. 문제가 발견되면 해당하는 경우 또는 앱이 스토어에서 제거된 경우 문제와 문제 해결 방법에 대한 알림을 받게 됩니다.
 
  
 
@@ -52,10 +59,5 @@ ms.openlocfilehash: 07b3631ccc875222b8d2ea30a2b69e2995a09e23
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

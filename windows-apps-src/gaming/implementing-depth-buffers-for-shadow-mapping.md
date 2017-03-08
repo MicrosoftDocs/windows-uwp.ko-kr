@@ -3,13 +3,20 @@ author: mtoepke
 title: "연습 - Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현"
 description: "이 연습에서는 모든 Direct3D 기능 수준의 디바이스에서 Direct3D 11을 사용하여 깊이 맵을 사용하는 섀도 볼륨을 렌더링하는 방법을 보여 줍니다."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx, 섀도 볼륨, 깊이 버퍼, directx 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a323c299d588cdcff7b83d538a705d64207c96b2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 00e823b667a4622f6fa2dd213c3277bec9d616a2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
+# <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -49,7 +56,7 @@ ms.openlocfilehash: a323c299d588cdcff7b83d538a705d64207c96b2
 
  
 
-## Direct3D 9 데스크톱 포팅에 그림자 매핑 적용
+## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Direct3D 9 데스크톱 포팅에 그림자 매핑 적용
 
 
 Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가되었습니다. 이제 섀도 볼륨이 포함된 렌더링 코드를 DirectX 11로 마이그레이션할 수 있으므로 Direct3D 11 렌더러가 하위 수준인 기능 수준 9 디바이스와 호환됩니다. 이 연습에서는 깊이 테스트를 사용하여 Direct3D 11 앱이나 게임에서 기존의 섀도 볼륨을 구현할 수 있는 방법을 보여 줍니다. 코드에는 다음 프로세스가 포함됩니다.
@@ -62,12 +69,12 @@ Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가�
 
 이 연습을 완료하면 기능 수준 9\_1 이상과 호환되는 Direct3D 11에서 호환되는 기본 섀도 볼륨 기술을 구현하는 방법에 익숙해지게 됩니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 [UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 아직 템플릿은 필요하지 않지만 이 연습을 위한 코드 샘플을 작성하려면 Microsoft Visual Studio 2015가 필요합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 **Direct3D**
@@ -86,10 +93,5 @@ Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가�
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

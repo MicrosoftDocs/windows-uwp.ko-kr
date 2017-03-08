@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 오류 보고 데이터를 가져옵니다."
 title: "오류 보고 데이터 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API, 오류"
 translationtype: Human Translation
-ms.sourcegitcommit: dcf4c263ff3fd8df846d1d5620ba31a9da7a5e6c
-ms.openlocfilehash: 800405bcac9b05af0e0295c88c27cbe3d2387947
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0d99318a2a8deba78503163c76a425c132e7de01
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -169,9 +176,4 @@ Authorization: Bearer <your access token>
 * [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
 * [앱 등급 가져오기](get-app-ratings.md)
 * [앱 리뷰 가져오기](get-app-reviews.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

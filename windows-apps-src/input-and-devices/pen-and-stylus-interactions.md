@@ -5,15 +5,16 @@ title: "UWP 앱의 펜 조작 및 Windows Ink"
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
-keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas"
+keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, 필기 인식, 사용자 조작, 입력"
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: c5e42f812cc0ed128ebb5c533ef72539baeef93d
-ms.openlocfilehash: f2de946ca7210cf3f4c170c73902c1a727067e7c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fd65e2ea02ea52425656e584b3fa495512030c76
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -487,16 +488,11 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

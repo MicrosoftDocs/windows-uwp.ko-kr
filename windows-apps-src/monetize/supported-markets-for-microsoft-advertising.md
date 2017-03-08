@@ -3,13 +3,20 @@ author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
 description: "중간 광고와 배너 광고가 지원되는 국가 및 지역에 대해 알아봅니다."
 title: "Microsoft Advertising에 지원되는 시장"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, 시장"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6150c885c4159911932bf8d7c3848b1e182b2f61
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Microsoft Advertising에 지원되는 시장
+# <a name="supported-markets-for-microsoft-advertising"></a>Microsoft Advertising에 지원되는 시장
 
 
 
@@ -17,7 +24,7 @@ ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
 중간 광고 및 배너 광고는 다음 국가 및 지역에서 지원됩니다.
 
 <span id="interstitialads"/>
-## 중간 광고
+## <a name="interstitial-ads"></a>중간 광고
 
 -   오스트레일리아
 
@@ -40,7 +47,7 @@ ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
 -   미국
 
 <span id="bannerads"/>
-## 배너 광고
+## <a name="banner-ads"></a>배너 광고
 
 
 -   아프가니스탄
@@ -312,9 +319,4 @@ ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

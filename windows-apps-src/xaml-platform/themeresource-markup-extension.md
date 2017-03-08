@@ -3,31 +3,38 @@ author: jwmsft
 description: "현재 활성 테마에 따라 서로 다른 리소스를 검색하는 추가 시스템 논리를 통해 리소스에 대한 참조를 평가하여 XAML 특성의 값을 제공합니다."
 title: "ThemeResource 태그 확장"
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9c657f906e6dedb259b8a98373f56ac5a63bd845
-ms.openlocfilehash: 803c62987c3a019fc576c6f1d0c343e042ba947b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9175c998aa0dffb861697c2206c4202193b9bd9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# {ThemeResource} 태그 확장
+# <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 현재 활성 테마에 따라 서로 다른 리소스를 검색하는 추가 시스템 논리를 통해 리소스에 대한 참조를 평가하여 XAML 특성의 값을 제공합니다. [{StaticResource} 태그 확장](staticresource-markup-extension.md)과 비슷하게, 리소스는 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에 정의되어 있으며 **ThemeResource** 사용 시 **ResourceDictionary**의 해당 리소스 키가 참조됩니다.
 
-## XAML 특성 사용
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
 ``` syntax
 <object property="{ThemeResource key}" .../>
 ```
 
-## XAML 값
+## <a name="xaml-values"></a>XAML 값
 
 | 용어 | 설명 |
 |------|-------------|
 | 키 | 요청된 리소스에 대한 키입니다. 이 키는 처음에 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에 의해 할당됩니다. 리소스 키는 XamlName 문법에 정의된 문자열일 수 있습니다. |
  
-## 설명
+## <a name="remarks"></a>설명
 
 **ThemeResource**는 XAML 리소스 사전에 정의된 XAML 특성 값을 가져오기 위한 기술입니다. 태그 확장은 [{StaticResource} 태그 확장](staticresource-markup-extension.md)과 기본 용도가 같습니다. 동작 면에서 {StaticResource} 태그 확장과 다른 점은, **ThemeResource** 참조는 현재 시스템에서 사용 중인 테마에 따라 다양한 사전을 기본 조회 위치로 동적으로 사용할 수 있다는 것입니다.
 
@@ -46,7 +53,7 @@ Windows 런타임 XAML 프로세서 구현에는 **ThemeResource**을 위한 지
 
 **ThemeResource**는 태그 확장입니다. 태그 확장은 특정 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 구현되며, 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML의 모든 태그 확장은 특성 구문에 "{" 및 "}" 문자를 사용하며, 여기서 특성 구문은 XAML 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용하는 규칙입니다.
 
-### {StaticResource} 대신 {ThemeResource}를 사용하는 시기 및 방법
+### <a name="when-and-how-to-use-themeresource-rather-than-staticresource"></a>{StaticResource} 대신 {ThemeResource}를 사용하는 시기 및 방법
 
 **ThemeResource**가 리소스 사전의 항목으로 확인하는 데 적용되는 규칙은 일반적으로 **StaticResource**의 경우와 같습니다. **ThemeResource** 조회가 [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807) 컬렉션에서 참조되는 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 파일로 확장할 수 있으며, **StaticResource**도 이러한 확장이 가능합니다. 차이점은 **ThemeResource**는 런타임에 다시 평가할 수 있지만 **StaticResource**는 그럴 수 없다는 것입니다.
 
@@ -66,15 +73,15 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 **ThemeResource** 사용은 일련의 종속 값에서 확인할 수 있습니다. 예를 들어 키가 지정된 리소스이기도 한 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)에서 사용되는 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 값이 **ThemeResource** 참조를 사용할 수 있습니다. 하지만 키가 지정된 **SolidColorBrush** 리소스를 사용하는 UI 속성도 **ThemeResource** 참조를 사용하므로, 특히 각 [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) 유형 속성이 테마 변경 시 동적 값 변경을 사용합니다.
 
-**참고** Windows 8.1 XAML에서는 테마 전환 시 `{ThemeResource}` 및 런타임 리소스 평가가 지원되지만, Windows 8을 대상으로 하는 앱에 대해서는 XAML로 지원되지 않습니다.
+**참고**  Windows 8.1 XAML에서는 테마 전환 시 `{ThemeResource}` 및 런타임 리소스 평가가 지원되지만, Windows 8을 대상으로 하는 앱에 대해서는 XAML로 지원되지 않습니다.
 
-### 시스템 리소스
+### <a name="system-resources"></a>시스템 리소스
 
 일부 테마 리소스는 기본 하위 값으로 시스템 리소스 값을 참조합니다. 시스템 리소스는 XAML 리소스 사전에서 찾을 수 없는 특수 리소스 값입니다. 이 값은 Windows 런타임 XAML 지원에서 시스템 자체의 값을 전달하는 동작에 따라 결정되며 XAML 리소스가 참조할 수 있는 형태로 값이 표현됩니다. 예를 들어 RGB 색을 표현하는 "SystemColorButtonFaceColor"라는 시스템 리소스가 있습니다. 이 색은 Windows 런타임과 Windows 런타임 앱에 특정하지 않은 시스템 색 및 테마의 여러 측면에서 가져옵니다.
 
 시스템 리소스는 고대비 테마에 대한 기본값인 경우가 많습니다. 사용자는 고대비 테마의 색상 선택을 제어하며, Windows 런타임 앱에 특정하지 않은 시스템 기능을 사용하여 색상을 선택합니다. 시스템 리소스를 **ThemeResource** 참조로 참조하면 Windows 런타임 앱용 고대비 테마의 기본 동작에서 사용자가 제어하고 시스템이 공개하는 이 테마별 값이 사용될 수 있습니다. 또한 시스템에서 런타임 테마 변경이 감지되면 참조가 재평가로 표시됩니다.
 
-### {ThemeResource} 사용 예제
+### <a name="an-example-themeresource-usage"></a>{ThemeResource} 사용 예제
 
 다음은 **ThemeResource** 사용 방법을 설명하기 위해 기본 generic.xaml 및 themeresources.xaml 파일에서 가져온 몇 가지 예제 XAML입니다. 템플릿 한 개만(기본 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) 살펴보고 테마 변경에 대해 두 개의 속성([**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 및 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414))이 반응하도록 선언하는 방법에 대해 알아봅니다.
 
@@ -135,27 +142,22 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 여기서 [**Color**](https://msdn.microsoft.com/library/windows/apps/br242963) 값은 시스템 리소스에 대한 다른 **ThemeResource** 참조입니다. 시스템 리소스를 참조하는 경우 테마 변경에 따라 시스템 리소스를 변경하려면 **ThemeResource**를 사용하여 참조해야 합니다.
 
-## Windows 8 동작
+## <a name="windows-8-behavior"></a>Windows 8 동작
 
 Windows 8은 **ThemeResource** 태그 확장을 지원하지 않지만 Windows 8.1부터는 이 태그 확장을 사용할 수 있습니다. 또한 Windows 8에서는 Windows 런타임 앱에 대한 테마 관련 리소스를 동적으로 전환할 수 없습니다. XAML 템플릿 및 스타일에 대한 테마 변경을 반영하려면 앱을 다시 시작해야 합니다. 이는 좋은 사용자 환경이 아니므로, **ThemeResource**가 사용된 스타일을 사용할 수 있고 사용자 명령 시 테마를 동적으로 전환할 수 있도록 Windows 8.1을 대상으로 앱을 다시 컴파일하는 것이 좋습니다. Windows 8용으로 컴파일되었지만 Windows 8.1에서 실행하는 앱은 Windows 8 동작을 계속 사용합니다.
 
-## **{ThemeResource}** 태그 확장을 위한 디자인 타임 도구 지원
+## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>**{ThemeResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
 XAML 페이지에서 **{ThemeResource}** 태그 확장을 사용하는 경우 Microsoft Visual Studio 2013은 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{ThemeResource"를 입력하기 시작하면 즉시 [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)의 리소스 키가 표시됩니다.
 
 리소스 키가 **{ThemeResource}**에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 테마 리소스가 정의되어 있는 디자인 타임용 generic.xaml을 표시할 수 있습니다. 테마 리소스는 테마당 한 번 이상 정의되기 때문에 **정의로 이동**은 파일에서 발견되는 첫 번째 정의(**Default**에 대한 정의)로 안내합니다. 다른 정의를 원하는 경우에는 파일 내에서 키 이름을 검색하고 다른 테마의 정의를 찾으면 됩니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)
 * [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [x:Key 특성](x-key-attribute.md)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

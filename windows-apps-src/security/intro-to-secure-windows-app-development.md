@@ -3,9 +3,16 @@ title: "보안 Windows 앱 개발 소개"
 description: "이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 UWP(유니버설 Windows 플랫폼) 앱 만들기를 가속화하는 다양한 Windows 10 플랫폼 기능을 더 잘 이해할 수 있습니다."
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
-ms.openlocfilehash: 2ac9edf074ceb91d5cfea17228f0a39fef200b74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1faf53dc2f1d919af072cd52593292fc552317e9
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -28,7 +35,7 @@ ms.openlocfilehash: 2ac9edf074ceb91d5cfea17228f0a39fef200b74
 -   이러한 보안 시나리오를 설명하는 사용자 지정 코드를 구현하는 것보다 적게 코드를 작성하고 테스트, 유지합니다.
 -   운영 체제를 사용하면 앱 리소스와 로컬 또는 원격 시스템 리소스를 액세스하는 방법을 제어할 수 있으므로 더욱 안정적이고 안전한 앱이 됩니다.
 
-인증하는 동안 특정 서비스에 액세스를 요청하는 사용자의 ID가 유효한지 확인합니다. Microsoft Passport 및 Windows Hello는 Windows 앱에 더욱 안전한 인증 메커니즘을 만들 수 있도록 하는 Windows 10의 구성 요소입니다. PIN(개인 식별 번호) 또는 사용자의 지문, 얼굴 또는 홍채 같은 생체 인식을 사용하여 앱에 대한 다단계 인증을 구현할 수 있습니다.
+인증하는 동안 특정 서비스에 액세스를 요청하는 사용자의 ID가 유효한지 확인합니다. Windows Hello는 Windows 앱에 더욱 안전한 인증 메커니즘을 만들 수 있도록 하는 Windows 10의 구성 요소입니다. PIN(개인 식별 번호) 또는 사용자의 지문, 얼굴 또는 홍채 같은 생체 인식을 사용하여 앱에 대한 다단계 인증을 구현할 수 있습니다.
 
 진행 데이터(data-in-flight)는 연결 및 연결을 통해 전송되는 메시지를 나타냅니다. 이 예제는 웹 서비스를 사용하여 원격 서버에서 데이터를 검색합니다. SSL(Secure Sockets Layer) 및 HTTPS(Secure Hypertext Transfer Protocol)를 사용하면 전송된 연결 보안이 보장됩니다. 중간 당사자가 이러한 메시지나 무단 앱에 액세스하여 웹 서비스와 통신하지 못하도록 하는 것이 진행 데이터의 보안을 유지하는 키입니다.
 
@@ -155,29 +162,29 @@ Azure AD는 단일 요소 인증을 구현할 수도 있지만 기업은 일반�
 
 또한 Azure AD를 OAuth 공급자로 사용하여 표준 사용자에게 다양한 플랫폼 간 앱에 대한 인증 및 권한 부여 메커니즘을 제공할 수 있습니다. 자세한 내용은 [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) 및 [Azure에서 다단계 인증](https://azure.microsoft.com/services/multi-factor-authentication/)을 참조하세요.
 
-## <a name="24-microsoft-passport-and-windows-hello"></a>2.4 Microsoft Passport 및 Windows Hello
+## <a name="24-windows-hello"></a>2.4 Windows Hello
 
 
-Windows 10에서는 편리한 다단계 인증 메커니즘이 운영 체제에 빌드되었습니다. 관련된 두 가지 구성 요소를 Microsoft Passport 및 Windows Hello라고 합니다. Windows Hello는 Windows 10에 새롭게 기본 제공되는 생체 인식 로그인 시스템입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 디바이스의 잠금을 해제할 수 있습니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다.
+Windows 10에서는 편리한 다단계 인증 메커니즘이 운영 체제에 빌드되었습니다. Windows Hello는 Windows 10에 새롭게 기본 제공되는 생체 인식 로그인 시스템입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 디바이스의 잠금을 해제할 수 있습니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다.
 
-Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 결정하려면 먼저 사용자를 인증해야 합니다. Microsoft Passport는 Windows에 완전히 통합된 강력한 2FA(2단계 인증)를 제공하며 재사용 가능한 암호를 특정 디바이스 및 생체 인식 제스처 또는 PIN의 조합으로 대체합니다. PIN은 Microsoft Passport 등록의 일부로 사용자가 지정합니다.
+Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 장치에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 여부를 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello도 Windows에 완전히 통합된 강력한 2FA(2단계 인증)를 제공하며 재사용 가능한 암호를 특정 장치 및 생체 인식 제스처 또는 PIN의 조합으로 대체합니다. PIN은 Microsoft 계정 등록의 일부로 사용자가 지정합니다.
 
-Microsoft Passport는 단순히 기존 2FA 시스템의 대체가 아닙니다. 개념적으로 보면 스마트 카드와 유사합니다. 문자열 비교 대신 암호화 기본 방식을 사용하여 인증을 수행하고 사용자의 주요 자료를 위조 방지 하드웨어 내에서 보호합니다. Microsoft Passport는 스마트 카드 배포에 필요한 추가 인프라 구성 요소가 필요하지 않습니다. 특히, 현재 PKI(공개 키 인프라)가 없어도 인증서를 관리할 수 있습니다. Microsoft Passport는 스마트 카드의 단점을 제외하고 장점(가상 스마트 카드의 배포 유연성 및 물리적 스마트 카드의 강력한 보안성)만 가져왔습니다.
+그러나 Windows Hello는 기존 2FA 시스템을 대체하는 데 그치는 것은 아닙니다. 개념적으로 보면 스마트 카드와 유사합니다. 문자열 비교 대신 암호화 기본 방식을 사용하여 인증을 수행하고 사용자의 주요 자료를 위조 방지 하드웨어 내에서 보호합니다. Microsoft Hello는 스마트 카드 배포에 필요한 추가 인프라 구성 요소가 필요하지 않습니다. 특히, 현재 PKI(공개 키 인프라)가 없어도 인증서를 관리할 수 있습니다. Windows Hello는 가상 스마트 카드의 배포 유연성과 물리적 스마트 카드의 강력한 보안과 같은 스마트 카드 기술의 주요 장점만 가져오고 단점은 제외하였습니다.
 
-사용자가 디바이스를 인증할 수 있으려면 먼저 디바이스를 Microsoft Passport에 등록해야 합니다. Microsoft Passport는 한 당사자가 공개 키를 사용하여 데이터를 암호화하면 다른 당사자는 개인 키를 사용하여 해독할 수 있는 비대칭(공개/개인 키) 암호화를 사용합니다. Microsoft Passport의 경우에는 공개/개인 키 쌍 집합을 만들고 디바이스의 TPM(신뢰할 수 있는 플랫폼 모듈) 칩에 개인 키를 씁니다. 디바이스가 등록된 후 UWP 앱은 시스템 API를 호출하여 서버에서 사용자를 등록하는 데 사용하는 사용자의 공개 키를 검색할 수 있습니다.
+사용자가 장치를 인증할 수 있으려면 먼저 장치를 Windows Hello에 등록해야 합니다. Windows Hello는 한 당사자가 공개 키를 사용하여 데이터를 암호화하면 다른 당사자는 개인 키를 사용하여 해독할 수 있는 비대칭(공개/개인 키) 암호화를 사용합니다. Windows Hello의 경우에는 공개/개인 키 쌍 집합을 만들고 장치의 TPM(신뢰할 수 있는 플랫폼 모듈) 칩에 개인 키를 씁니다. 디바이스가 등록된 후 UWP 앱은 시스템 API를 호출하여 서버에서 사용자를 등록하는 데 사용하는 사용자의 공개 키를 검색할 수 있습니다.
 
 앱의 등록 워크플로는 다음과 같을 수 있습니다.
 
-![Microsoft Passport 등록](images/secure-passport.png)
+![Windows hello 등록](images/secure-passport.png)
 
 수집한 등록 정보에는 이처럼 간단한 시나리오에서 더 많은 식별 정보가 포함될 수 있습니다. 예를 들어, 앱이 은행 업무용 보안 서비스 같은 것에 액세스할 경우에는 등록 프로세스의 일부로 ID 증명과 다른 작업을 요청해야 합니다. 모든 조건이 충족되면 이 사용자의 공개 키가 백 엔드에 저장되고 다음에 사용자가 서비스를 사용하려고 할 때 유효성을 확인하는 데 사용됩니다.
 
-Microsoft Passport 및 Windows Hello에 대한 자세한 내용은 [Microsoft Passport 가이드](https://msdn.microsoft.com/library/mt589441) 및 [Microsoft Passport 개발자 가이드](microsoft-passport.md)를 참조하세요.
+Windows Hello에 대한 자세한 내용은 [Windows Hello 가이드](https://msdn.microsoft.com/library/mt589441) 및 [Windows Hello 개발자 가이드](microsoft-passport.md)를 참조하세요.
 
 ## <a name="3-data-in-flight-security-methods"></a>3 진행 데이터(data-in-flight) 보안 방법
 
 
-진행 데이터(data-in-flight) 보안 방법은 네트워크에 연결된 디바이스 간에 전송 중인 데이터에 적용됩니다. 데이터는 개인 회사 인트라넷의 높은 수준의 보안 환경에 있는 시스템 간 또는 웹의 비보안 환경에 있는 클라이언트와 웹 서비스 간에 전송될 수 있습니다. Windows 10은 네트워킹 API를 통해 SSL과 같은 표준을 지원하고 Azure API 관리와 같은 기술을 사용하여 작동합니다. Azure API를 통해 개발자는 해당 앱에 대한 적절한 보안 수준을 확보할 수 있습니다.
+진행 데이터(data-in-flight) 보안 방법은 네트워크에 연결된 장치 간에 전송 중인 데이터에 적용됩니다. 데이터는 개인 회사 인트라넷의 높은 수준의 보안 환경에 있는 시스템 간 또는 웹의 비보안 환경에 있는 클라이언트와 웹 서비스 간에 전송될 수 있습니다. Windows 10은 네트워킹 API를 통해 SSL과 같은 표준을 지원하고 Azure API 관리와 같은 기술을 사용하여 작동합니다. Azure API를 통해 개발자는 해당 앱에 대한 적절한 보안 수준을 확보할 수 있습니다.
 
 ## <a name="31-remote-system-authentication"></a>3.1 원격 시스템 인증
 
@@ -298,14 +305,14 @@ Windows 10 앱은 기본적으로 권한이 제한되어 있으므로 컨테이�
 
 인증된 서비스에 액세스하는 Windows 앱은 로컬 디바이스에 해당 자격 증명을 저장하는 옵션을 사용자에게 제공하는 경우가 많습니다. 이는 사용자에게 편리한 기능입니다. 사용자가 사용자 이름 및 암호를 제공한 경우 다음에 앱을 시작할 때 자동으로 해당 사용자 이름 및 암호를 사용합니다. 공격자가 저장된 이 데이터에 대한 액세스 권한을 얻는 경우 보안 문제가 될 수 있으므로 Windows 10은 Windows 앱이 보안 자격 증명 보관에 사용자 자격 증명을 저장하는 기능을 제공합니다. 앱은 앱의 저장소 컨테이너에 자격 증명을 저장하지 않고 자격 증명 보관 API를 호출하여 자격 증명 보관에 저장하고 검색합니다. 자격 증명 보관은 운영 체제에서 관리되지만 액세스가 자격 증명을 저장하는 앱에 제한되며 자격 증명 저장을 위해 안전한 관리형 솔루션을 제공합니다.
 
-사용자가 저장할 자격 증명을 제공하는 경우 앱은 [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089) 네임스페이스의 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체를 사용하여 자격 증명 보관에 대한 참조를 가져옵니다. 그런 다음 Windows 앱에 대한 식별자와 사용자 이름 및 암호가 포함된 [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) 개체를 만듭니다. 이는 자격 증명 보관에 자격 증명을 저장하기 위한 [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) 메서드로 전달됩니다. 다음의 C# 코드 예제에서는 이를 수행하는 방법을 보여 줍니다.
+사용자가 저장할 자격 증명을 제공하는 경우 앱은 [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227081) 네임스페이스의 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227089) 개체를 사용하여 자격 증명 보관에 대한 참조를 가져옵니다. 그런 다음 Windows 앱에 대한 식별자와 사용자 이름 및 암호가 포함된 [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) 개체를 만듭니다. 이는 자격 증명 보관에 자격 증명을 저장하기 위한 [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) 메서드로 전달됩니다. 다음의 C# 코드 예제에서는 이를 수행하는 방법을 보여 줍니다.
 
 ```cs
 var vault = new PasswordVault();
 vault.Add(new PasswordCredential("My App", username, password));
 ```
 
-다음 C# 코드 예제에서 앱이 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체의 [**FindAllByResource**](https://msdn.microsoft.com/library/windows/apps/br227083) 메서드를 호출하여 앱에 해당하는 모든 자격 증명을 요청합니다. 둘 이상 반환되면 해당 사용자의 이름을 입력하라는 메시지가 사용자에게 표시됩니다. 자격 증명이 자격 증명 보관에 없는 경우 앱에서 이를 위한 메시지가 사용자에게 표시됩니다. 그러면 사용자가 자격 증명을 사용하여 서버에 로그인됩니다.
+다음 C# 코드 예제에서 앱이 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227083) 개체의 [**FindAllByResource**](https://msdn.microsoft.com/library/windows/apps/br227081) 메서드를 호출하여 앱에 해당하는 모든 자격 증명을 요청합니다. 둘 이상 반환되면 해당 사용자의 이름을 입력하라는 메시지가 사용자에게 표시됩니다. 자격 증명이 자격 증명 보관에 없는 경우 앱에서 이를 위한 메시지가 사용자에게 표시됩니다. 그러면 사용자가 자격 증명을 사용하여 서버에 로그인됩니다.
 
 ```cs
 private string resourceName = "My App";
@@ -371,7 +378,7 @@ private PasswordCredential GetCredentialFromLocker()
 
 이에 대한 한 가지 해결책은 공개/개인 키 쌍이 사용되는 비대칭형 암호화입니다. 공개 키는 메시지를 암호화하는 모두가 자유롭게 공유할 수 있습니다. 개인 키는 사용자만 데이터의 암호를 해독하기 위해 사용할 수 있도록 항상 비밀로 유지됩니다. 공개 키의 검색에 허용되는 일반적인 기술은 간단히 인증서라고도 하는 디지털 인증서를 사용하는 것입니다. 인증서에는 공개 키뿐만 아니라 이름, 발급자, 메일 주소 및 국가와 같은 사용자 또는 서버에 대한 정보가 들어 있습니다.
 
-Windows 앱 개발자는 [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) 및 [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 클래스를 사용하여 해당 UWP 앱에서 대칭형 및 비대칭형 암호화를 구현할 수 있습니다. 또한 [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스가 데이터를 암호화하고 암호 해독하고 콘텐츠를 서명하고 디지털 서명을 확인하는 데 사용할 수 있습니다. 또한 앱은 [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) 네임스페이스의 [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) 클래스를 사용하여 저장된 로컬 데이터를 암호화하고 암호 해독할 수 있습니다.
+Windows 앱 개발자는 [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) 및 [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 클래스를 사용하여 해당 UWP 앱에서 대칭형 및 비대칭형 암호화를 구현할 수 있습니다. 또한 [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스가 데이터를 암호화하고 암호 해독하고 콘텐츠를 서명하고 디지털 서명을 확인하는 데 사용할 수 있습니다. 또한 앱은 [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241559) 네임스페이스의 [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241585) 클래스를 사용하여 저장된 로컬 데이터를 암호화하고 암호 해독할 수 있습니다.
 
 ## <a name="432-detecting-message-tampering-macs-hashes-and-signatures"></a>4.3.2 메시지 변조(MAC, 해시 및 서명) 검색
 
@@ -447,7 +454,7 @@ public void SampleReusableHash()
 ## <a name="5-summary"></a>5 요약
 
 
-Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드는 데에 운영 체제 기능을 활용하는 방법을 제공합니다. 단일 요소 인증, 다단계 인증, OAuth ID 공급자를 사용하여 조정된 인증 등의 여러 가지 인증 시나리오에서 API는 인증과 관련된 가장 일반적인 문제를 완화하기 위해 존재합니다. Windows Hello에서는 사용자를 인식하고 적절한 식별을 우회하려는 노력을 적극적으로 방어하는 새로운 생체 인식 로그인 시스템을 제공합니다. Microsoft Passport는 Windows Hello와 함께 작동하여 신뢰할 수 있는 플랫폼 모듈 외부에서 절대로 노출되거나 사용되지 않는 여러 계층의 인증서 및 키를 제공합니다. 또한 선택적으로 증명 확인 키 및 인증서를 사용하여 추가 보안 계층도 적용할 수 있습니다.
+Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드는 데에 운영 체제 기능을 활용하는 방법을 제공합니다. 단일 요소 인증, 다단계 인증, OAuth ID 공급자를 사용하여 조정된 인증 등의 여러 가지 인증 시나리오에서 API는 인증과 관련된 가장 일반적인 문제를 완화하기 위해 존재합니다. Windows Hello에서는 사용자를 인식하고 적절한 식별을 우회하려는 노력을 적극적으로 방어하는 새로운 생체 인식 로그인 시스템을 제공합니다. 또한 신뢰할 수 있는 플랫폼 모듈 외부에서 표시 또는 사용할 수 없는 여러 계층의 키와 인증서를 제공합니다. 또한 선택적으로 증명 확인 키 및 인증서를 사용하여 추가 보안 계층도 적용할 수 있습니다.
 
 실행 데이터를 보호하기 위해 API는 SSL을 통해 원격 시스템과 안전하게 통신하면서 SSL 고정을 이용하여 서버의 신뢰성을 확인할 가능성을 제공합니다. API를 안전하게 제어된 방식으로 게시한다는 것은 Azure API 관리가 API 끝점의 추가 난독 처리를 제공하는 프록시를 사용하여 웹을 통해 API를 노출하기 위한 강력한 구성 옵션을 제공하는 방법으로 도움을 주는 것을 의미합니다. 이러한 API에 대한 액세스는 API 키를 사용하여 보호되며 API 호출은 성능 제어를 위해 제한될 수 있습니다.
 
@@ -459,7 +466,7 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 ### <a name="61-how-to-articles"></a>6.1 방법 문서
 
 -   [인증 및 사용자 ID](authentication-and-user-identity.md)
--   [Microsoft Passport](microsoft-passport.md)
+-   [Windows Hello](microsoft-passport.md)
 -   [자격 증명 보관](credential-locker.md)
 -   [웹 인증 브로커](web-authentication-broker.md)
 -   [지문 생체 인식](fingerprint-biometrics.md)
@@ -499,8 +506,3 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585)
 -   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

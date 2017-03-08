@@ -5,12 +5,19 @@ title: "타일 및 아이콘 자산"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4aa22b9eae8ff7f7da2c73f3fdf3a63ed12ff87b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fa195ab35b0d6b1825adb8ce18ae1666d0bf1581
+ms.lasthandoff: 02/07/2017
 
 ---
-# 타일 및 아이콘 자산에 대한 지침
+# <a name="guidelines-for-tile-and-icon-assets"></a>타일 및 아이콘 자산에 대한 지침
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,14 +26,14 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 ![Windows 10 시작 및 타일](images/assetguidance01.jpg)
 
-## 적응형 크기 조정
+## <a name="adaptive-scaling"></a>적응형 크기 조정
 
 
 먼저 자산 크기 조정 방법을 더 잘 이해하기 위한 적응형 크기 조정에 대한 간략한 개요입니다. Windows 10에는 기존 크기 조정 모델의 진화된 모델이 도입되었습니다. 배율 벡터 콘텐츠 외에 다양한 화면 크기 및 디스플레이 해상도에서 UI 요소에 대한 일관된 크기를 제공하는 통합된 배율 인수 집합이 있습니다. 배율은 iOS 및 Android와 같은 다른 운영 체제의 배율과도 호환되므로 해당 플랫폼 사이에서 더욱 쉽게 자산을 공유할 수 있습니다.
 
 스토어에서는 디바이스의 DPI에 따라 다운로드할 자산을 선택합니다. 디바이스에 가장 적합한 자산만 다운로드됩니다.
 
-## 타일 요소
+## <a name="tile-elements"></a>타일 요소
 
 
 시작 타일의 기본 구성 요소는 뒷판, 아이콘, 브랜딩 표시줄, 여백 및 앱 이름으로 구성됩니다.
@@ -65,7 +72,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
  
 
-## 타일 자산
+## <a name="tile-assets"></a>타일 자산
 
 
 각 타일 자산은 해당 자산이 배치되는 타일 크기와 동일합니다. 두 개의 다른 표현 자산을 사용하여 앱의 타일을 브랜딩할 수 있습니다.
@@ -134,7 +141,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 ![여백이 너무 적은 풀 블리드 타일](images/assetguidance15.png)
 
-## 목록 보기의 타일 자산
+## <a name="tile-assets-in-list-views"></a>목록 보기의 타일 자산
 
 
 타일은 목록 보기에도 나타날 수 있습니다. 목록 보기에 표시되는 타일 자산에 대한 크기 조정 지침은 이전에 설명한 자산 타일과 약간 다릅니다. 이 섹션에서는 이러한 크기 조정 관련 내용을 자세히 설명합니다.
@@ -161,7 +168,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 ![타일에 비해 너무 작은 아이콘](images/assetguidance20b.png)
 
-## 대상 기반 자산
+## <a name="target-based-assets"></a>대상 기반 자산
 
 
 대상 기반 자산은 아이콘 및 타일을 위한 것으로 Windows 작업 표시줄, 작업 보기, Alt + Tab, 끌기 도우미 및 시작 타일의 오른쪽 아래 모서리에 표시됩니다. 이러한 자산에 안쪽 여백을 추가하지 않아도 됩니다. 필요한 경우 Windows에서 자동으로 안쪽 여백을 추가합니다. 이러한 자산에서는 16픽셀의 최소 공간을 고려해야 합니다. 다음은 Windows 작업 표시줄의 아이콘에 나타나는 이러한 자산의 예입니다.
@@ -194,7 +201,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 ![배지가 있거나 없는 정사각형이 아닌 자산 크기 조정](images/assetguidance26b.png)
 
-## 시작 화면 자산
+## <a name="splash-screen-assets"></a>시작 화면 자산
 
 
 시작 화면 이미지는 이미지 파일에 대한 직접 경로 또는 리소스로 지정될 수 있습니다. 리소스 참조를 사용하면 여러 크기의 이미지를 제공하여 Windows에서 디바이스 및 화면 해상도에 가장 잘 맞는 크기를 선택할 수 있습니다. 또한 접근성을 위한 고대비 이미지 및 다른 UI 언어에 맞게 지역화된 이미지를 제공할 수 있습니다.
@@ -212,7 +219,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 ![시작 화면 자산 크기 조정](images/assetguidance27.png)
 
-## 고대비 자산
+## <a name="high-contrast-assets"></a>고대비 자산
 
 
 고대비 모드에서는 고대비 흰색(흰색 배경과 검은색 텍스트) 및 고대비 검은색(검은색 배경과 흰색 텍스트)에 대한 별도 자산 집합을 활용합니다. 앱에 대한 고대비 자산을 제공하지 않으면 표준 자산이 사용됩니다.
@@ -223,7 +230,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 고대비 자산을 제공하려는 경우 두 집합, 즉 검은색 배경의 흰색과 흰색 배경의 검은색을 모두 포함해야 합니다. 패키지에 이러한 자산을 포함할 경우 검은색 배경의 흰색 자산을 위한 "contrast-black" 폴더와 흰색 배경의 검은색 자산을 위한 "contrast-white" 폴더를 만들 수 있습니다.
 
-## 자산 크기 테이블
+## <a name="asset-size-tables"></a>자산 크기 테이블
 
 
 최소한, 100, 200 및 400 배율 인수에 대한 자산을 제공하는 것이 좋습니다. 모든 배율 인수에 대한 자산을 제공하면 최적의 사용자 환경이 구현됩니다.
@@ -291,7 +298,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 \* 이러한 자산 크기를 기준으로 제출
 
-## 자산 유형
+## <a name="asset-types"></a>자산 유형
 
 
 모든 자산 유형, 용도 및 권장 파일 이름이 다음에 나열되어 있습니다.
@@ -372,7 +379,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 
@@ -383,10 +390,5 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

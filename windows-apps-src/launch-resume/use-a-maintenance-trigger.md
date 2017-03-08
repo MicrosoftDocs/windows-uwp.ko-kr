@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "유지 관리 트리거 사용"
 description: "디바이스가 연결되어 있는 동안 MaintenanceTrigger 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 8ca0255be671d0a2900bb7be3a66d4df4e793725
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e8e955f9449d48a6586c9648b70f9565c5278a16
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -109,9 +116,4 @@ ms.openlocfilehash: 8ca0255be671d0a2900bb7be3a66d4df4e793725
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

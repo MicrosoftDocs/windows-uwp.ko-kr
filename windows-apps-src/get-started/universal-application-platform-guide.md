@@ -3,13 +3,20 @@ author: TylerMSFT
 title: "유니버설 Windows 플랫폼 개요"
 description: "이 가이드에서는 Windows 10을 실행하는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98dd2da8e16552fcde9790bd77f17a2100b63d4f
-ms.openlocfilehash: 170bbb4e22b3ac642b0dfd0c9136d3dd39d519d0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f1e69b302f9b979423e2b38a11cd477b1b805a4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 유니버설 Windows 플랫폼 개요
+# <a name="intro-to-the-universal-windows-platform"></a>유니버설 Windows 플랫폼 개요
 
 이 가이드에서는 다음에 대해 알아봅니다.
 
@@ -19,17 +26,17 @@ ms.openlocfilehash: 170bbb4e22b3ac642b0dfd0c9136d3dd39d519d0
 
 Windows 8에서는 Windows 앱 모델의 발전된 형태인 WinRT(Windows 런타임)를 도입했습니다. 이는 일반적인 응용 프로그램 아키텍처에 사용되었습니다.
 
-Windows Phone 8.1을 사용할 수 있게 되면서 Windows 런타임은 Windows Phone 8.1과 Windows 사이에 정렬되었습니다. 이를 통해 개발자는 공유 코드베이스를 사용하여 Windows와 Windows Phone을 둘 다 대상으로 하는 *유니버설 Windows8 앱*을 만들 수 있었습니다.
+Windows Phone 8.1을 사용할 수 있게 되면서 Windows 런타임은 Windows Phone 8.1과 Windows 사이에 정렬되었습니다. 이를 통해 개발자는 공유 코드베이스를 사용하여 Windows와 Windows Phone을 둘 다 대상으로 하는 *유니버설 Windows 8 앱*을 만들 수 있었습니다.
 
-Windows 10에는 Windows 런타임 모델을 더욱 발전시키고 Windows10 통합 코드로 가져오는 UWP(Windows 10유니버설 Windows 플랫폼)가 도입되었습니다. 이제 UWP는 코어의 일부로 Windows 10을 실행하는 모든 장치에서 사용 가능한 공통 앱 플랫폼을 제공합니다. 이러한 진화 덕분에 UWP를 대상으로 하는 앱은 모든 장치에 일반적인 WinRT API뿐만 아니라 앱이 실행되는 디바이스 패밀리에 특정한 API(Win32 및 .NET API 포함)를 호출할 수 있습니다. UWP는 장치 간에 보장된 핵심 API 계층을 제공합니다. 따라서 광범위한 장치에 설치할 수 있는 단일 앱 패키지를 만들 수 있습니다. 또한 단일 앱 패키지를 통해 Windows 스토어에서는 앱을 실행할 수 있는 모든 디바이스 유형에 연결되는 통합 배포 채널을 제공합니다.
+Windows 10에는 Windows 런타임 모델을 더욱 발전시키고 Windows 10 통합 코드로 가져오는 UWP(Windows 10유니버설 Windows 플랫폼)가 도입되었습니다. 이제 UWP는 코어의 일부로 Windows 10을 실행하는 모든 장치에서 사용 가능한 공통 앱 플랫폼을 제공합니다. 이러한 진화 덕분에 UWP를 대상으로 하는 앱은 모든 장치에 일반적인 WinRT API뿐만 아니라 앱이 실행되는 디바이스 패밀리에 특정한 API(Win32 및 .NET API 포함)를 호출할 수 있습니다. UWP는 장치 간에 보장된 핵심 API 계층을 제공합니다. 따라서 광범위한 장치에 설치할 수 있는 단일 앱 패키지를 만들 수 있습니다. 또한 단일 앱 패키지를 통해 Windows 스토어에서는 앱을 실행할 수 있는 모든 디바이스 유형에 연결되는 통합 배포 채널을 제공합니다.
 
 ![유니버설 Windows 플랫폼 앱은 다양한 디바이스에서 실행되며, 적응형 사용자 인터페이스, 자연스러운 사용자 입력, 하나의 스토어, 하나의 개발자 센터, 다양한 클라우드 서비스를 지원합니다.](images/universalapps-overview.png)
 
 UWP 앱은 폼 팩터 및 입력 형식이 서로 다른 광범위한 디바이스에서 실행되므로 각 디바이스에 맞게 조정하고 각 디바이스의 고유한 기능을 활용할 수 있습니다. 장치는 보장된 API 계층에 고유한 API를 추가합니다. 다른 장치에서 다른 환경을 제공하는 동안 앱이 하나의 장치 유형에 특정한 기능을 사용할 수 있도록 이러한 고유한 API에 조건부로 액세스하는 코드를 작성할 수 있습니다. 적응형 UI 컨트롤 및 새 레이아웃 패널은 광범위한 화면 해상도에서 UI를 조정하도록 도와줍니다.
 
-## 디바이스 패밀리
+## <a name="device-families"></a>디바이스 패밀리
 
-Windows8.1 및 Windows Phone 8.1 앱은 특정 OS(운영 체제)(Windows 또는 Windows Phone)를 대상으로 합니다. Windows 10에서는 더 이상 특정 운영 체제를 대상으로 하지 않습니다. 대신 하나 이상의 디바이스 패밀리를 대상으로 합니다. 디바이스 패밀리는 디바이스 패밀리 내의 장치에서 기대할 수 있는 API, 시스템 특성 및 동작을 식별합니다. 또한 스토어에서 앱을 설치할 수 있는 장치 집합을 결정합니다. 디바이스 패밀리 계층 구조는 다음과 같습니다.
+Windows 8.1 및 Windows Phone 8.1 앱은 특정 OS(운영 체제)(Windows 또는 Windows Phone)를 대상으로 합니다. Windows 10에서는 더 이상 특정 운영 체제를 대상으로 하지 않습니다. 대신 하나 이상의 디바이스 패밀리를 대상으로 합니다. 디바이스 패밀리는 디바이스 패밀리 내의 장치에서 기대할 수 있는 API, 시스템 특성 및 동작을 식별합니다. 또한 스토어에서 앱을 설치할 수 있는 장치 집합을 결정합니다. 디바이스 패밀리 계층 구조는 다음과 같습니다.
 
 ![디바이스 패밀리](images/device-family-tree.png)
 
@@ -71,7 +78,7 @@ Windows8.1 및 Windows Phone 8.1 앱은 특정 OS(운영 체제)(Windows 또는 
 
 기본적으로 Microsoft Visual Studio는 **Windows.Universal**을 앱 패키지 매니페스트 파일에서 대상 디바이스 패밀리로 지정합니다. 저장소 내에서 앱이 제공받는 디바이스 패밀리를 지정하려면 Package.appxmanifest 파일에서 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) 요소를 수동으로 구성합니다.
 
-## UI 및 유니버설 입력
+## <a name="ui-and-universal-input"></a>UI 및 유니버설 입력
 
 UWP 앱은 입력 형식, 화면 해상도, DPI 밀도 및 기타 고유한 특성이 서로 다른 다양한 장치에서 실행될 수 있습니다. Windows 10에서는 앱을 실행할 수 있는 장치에 UI를 적응할 수 있도록 새로운 유니버설 컨트롤, 레이아웃 패널 및 도구를 제공합니다. 예를 들어 앱이 데스크톱 컴퓨터에서 실행될 때와 모바일 장치에서 실행될 때 화면 해상도의 차이를 활용할 수 있도록 UI를 조정할 수 있습니다.
 
@@ -84,7 +91,7 @@ Windows에서는 다음과 같은 기능으로 UI를 여러 장치에 맞게 조
 -   도구는 서로 다른 화면 해상도에 적응되는 UI를 디자인하도록 도와줍니다.
 -   적응형 크기 조정은 장치 간의 해상도 및 DPI 차이에 맞게 조정됩니다.
 
-### 유니버설 컨트롤 및 레이아웃 패널
+### <a name="universal-controls-and-layout-panels"></a>유니버설 컨트롤 및 레이아웃 패널
 
 Windows 10에는 일정 및 분할 보기와 같은 새로운 컨트롤이 포함되어 있습니다. 이전에 Windows Phone에서만 제공된 피벗 컨트롤을 이제 유니버설 디바이스 패밀리에 사용할 수 있습니다.
 
@@ -100,7 +107,7 @@ Windows 10에는 일정 및 분할 보기와 같은 새로운 컨트롤이 포�
 
 사용 가능한 화면 공간 크기에 따라 전체 UI 레이아웃을 적응할 수 있도록 Windows 10에 적응형 패널 및 디자인 상태가 도입되었습니다.
 
-### 적응형 패널로 적응형 UI 디자인
+### <a name="design-adaptive-ui-with-adaptive-panels"></a>적응형 패널로 적응형 UI 디자인
 
 레이아웃 패널은 사용 가능한 공간에 따라 해당 자식의 크기 및 위치를 지정합니다. 예를 들어 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)은 해당 자식을 순차적으로(가로 또는 세로) 정렬합니다. [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)는 해당 자식을 셀에 배치하는 CSS 그리드와 유사합니다.
 
@@ -118,7 +125,7 @@ Windows 10에는 일정 및 분할 보기와 같은 새로운 컨트롤이 포�
 </RelativePanel>
 ```
 
-### 시각적 상태 트리거를 사용하여 사용 가능한 화면 공간에 적응할 수 있는 UI를 빌드합니다.
+### <a name="use-visual-state-triggers-to-build-ui-that-can-adapt-to-available-screen-space"></a>시각적 상태 트리거를 사용하여 사용 가능한 화면 공간에 적응할 수 있는 UI를 빌드합니다.
 
 UI는 창 크기 변경에 적응해야 할 수 있습니다. 적응형 시각적 상태는 창 크기의 변경에 응답하여 시각적 상태를 변경할 수 있도록 해줍니다.
 
@@ -162,7 +169,7 @@ StateTriggers는 시각적 상태가 활성화된 다음 상태 변경을 트리
 </Grid>
 ```
 
-### 도구
+### <a name="tooling"></a>도구
 
 기본적으로 가장 광범위한 디바이스 패밀리를 대상으로 할 수 있습니다. 특정 장치에서 앱의 모양 및 레이아웃을 보려는 경우 Visual Studio에서 장치 미리 보기 도구 모음을 사용하여 중소형 모바일 장치, PC 또는 대형 TV 화면에서 UI를 미리 볼 수 있습니다. 이러한 방식으로 적응형 시각적 상태를 조정하고 테스트할 수 있습니다.
 
@@ -170,13 +177,13 @@ StateTriggers는 시각적 상태가 활성화된 다음 상태 변경을 트리
 
 지원할 모든 디바이스 유형을 미리 결정할 필요가 없습니다. 나중에 추가 장치 크기를 프로젝트에 추가할 수 있습니다.
 
-### 적응형 크기 조정
+### <a name="adaptive-scaling"></a>적응형 크기 조정
 
 Windows 10에는 기존 크기 조정 모델의 진화된 모델이 도입되었습니다. 배율 벡터 콘텐츠 외에 다양한 화면 크기 및 디스플레이 해상도에서 UI 요소에 대한 일관된 크기를 제공하는 통합된 배율 인수 집합이 있습니다. 배율 인수는 iOS 및 Android와 같은 다른 운영 체제의 배율 인수와도 호환됩니다. 따라서 이러한 플랫폼 간에 자산을 보다 쉽게 공유할 수 있습니다.
 
 스토어에서는 장치의 DPI에 따라 다운로드할 자산을 선택합니다. 장치에 가장 적합한 자산만 다운로드됩니다.
 
-### 일반적인 입력 처리
+### <a name="common-input-handling"></a>일반적인 입력 처리
 
 마우스, 키보드, 터치, 펜 및 컨트롤러(예: Xbox 컨트롤러) 등의 다양한 입력을 처리하는 유니버설 컨트롤을 사용하는 유니버설 Windows 앱을 빌드할 수 있습니다. 기존에는 잉크가 펜 입력에만 연결되었지만 Windows 10에서는 일부 장치의 터치 및 모든 포인터 입력으로 잉크 작업을 수행할 수 있습니다. 잉크는 많은 장치(휴대폰 포함)에서 지원되며 몇 줄의 코드만으로 쉽게 통합할 수 있습니다.
 
@@ -187,10 +194,10 @@ Windows 10에는 기존 크기 조정 모델의 진화된 모델이 도입되었
 -   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)는 디바이스에서 사용 가능한 입력 형식을 결정할 수 있도록 쿼리 디바이스 기능을 지원하는 디바이스 API입니다.
 -   새 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) XAML 컨트롤 및 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) Windows 런타임 API를 사용하여 잉크 스트로크 데이터에 액세스할 수 있습니다.
 
-## 코드 작성
+## <a name="writing-code"></a>코드 작성
 
 
-  [Visual Studio의 Windows10 프로젝트](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10)에 대한 프로그래밍 언어 옵션에는 Visual C++, C#, Visual Basic 및 JavaScript가 포함됩니다. Visual C++, C# 및 Visual Basic의 경우 고화질 네이티브 UI 환경을 위해 XAML을 사용할 수 있습니다. Visual C++의 경우 XAML 대신 또는 XAML과 함께 DirectX를 사용하여 그릴 수 있습니다. JavaScript의 경우 프레젠테이션 계층이 HTML이므로 당연히 HTML이 플랫폼 간 웹 표준입니다. 대부분의 코드와 UI는 유니버설이며, 어디서든 같은 방식으로 실행됩니다. 하지만 특정 디바이스 패밀리에 맞게 조정된 코드 및 특정 폼 팩터에 맞게 조정된 UI의 경우 적응형 코드 및 적응형 UI를 사용할 수 있습니다. 다음과 같은 여러 가지 경우를 살펴보겠습니다.
+  [Visual Studio의 Windows 10 프로젝트](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10)에 대한 프로그래밍 언어 옵션에는 Visual C++, C#, Visual Basic 및 JavaScript가 포함됩니다. Visual C++, C# 및 Visual Basic의 경우 고화질 네이티브 UI 환경을 위해 XAML을 사용할 수 있습니다. Visual C++의 경우 XAML 대신 또는 XAML과 함께 DirectX를 사용하여 그릴 수 있습니다. JavaScript의 경우 프레젠테이션 계층이 HTML이므로 당연히 HTML이 플랫폼 간 웹 표준입니다. 대부분의 코드와 UI는 유니버설이며, 어디서든 같은 방식으로 실행됩니다. 하지만 특정 디바이스 패밀리에 맞게 조정된 코드 및 특정 폼 팩터에 맞게 조정된 UI의 경우 적응형 코드 및 적응형 UI를 사용할 수 있습니다. 다음과 같은 여러 가지 경우를 살펴보겠습니다.
 
 **대상 디바이스 패밀리에서 구현하는 API 호출**
 
@@ -246,11 +253,11 @@ API를 호출하려고 하지만 대상 디바이스 패밀리가 설명서에 �
 
 **UWP의 Win32 API**
 
-C++/CX로 작성된 UWP 앱 또는 Windows 런타임 구성 요소는 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 API는 모든 Windows10 디바이스 패밀리에서 구현됩니다. 앱을 Windowsapp.lib와 연결합니다. Windowsapp.lib는 UWP API에 대한 내보내기를 제공하는 "umbrella" lib입니다. Windowsapp.lib에 연결하면 모든 Windows10 디바이스 패밀리에 존재하는 dll에 대한 종속성이 앱에 추가됩니다.
+C++/CX로 작성된 UWP 앱 또는 Windows 런타임 구성 요소는 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 API는 모든 Windows 10 디바이스 패밀리에서 구현됩니다. 앱을 Windowsapp.lib와 연결합니다. Windowsapp.lib는 UWP API에 대한 내보내기를 제공하는 "umbrella" lib입니다. Windowsapp.lib에 연결하면 모든 Windows 10 디바이스 패밀리에 존재하는 dll에 대한 종속성이 앱에 추가됩니다.
 
 UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API 집합](https://msdn.microsoft.com/library/windows/desktop/mt186421) 및 [UWP 앱의 Dll](https://msdn.microsoft.com/library/windows/desktop/mt186422)을 참조하세요.
 
-## 사용자 환경
+## <a name="user-experience"></a>사용자 환경
 
 유니버설 Windows 앱은 해당 앱이 실행되는 디바이스의 고유한 기능을 활용할 수 있도록 해줍니다. 앱은 데스크톱 디바이스의 모든 기능, 태블릿에서의 자연스러운 직접 조작(터치 및 펜 입력 포함), 모바일 디바이스의 이동성 및 편리성, [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365)의 공동 작업 기능, UWP 앱을 지원하는 기타 디바이스를 활용할 수 있습니다.
 
@@ -272,18 +279,13 @@ UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API �
 
     기존 조작 환경은 [텍스트 및 텍스트 입력에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn611864)을 참조하세요.
 
-## 대시보드를 통해 유니버설 Windows 앱 제출
+## <a name="submit-a-universal-windows-app-through-your-dashboard"></a>대시보드를 통해 유니버설 Windows 앱 제출
 
 
 새로운 통합 Windows 개발자 센터 대시보드에서는 모든 Windows 장치용 앱을 한곳에서 관리하고 제출할 수 있습니다. 새 기능 덕분에 프로세스는 간소화되고 더 세부적으로 제어할 수 있습니다. 자세한 [분석 보고서](https://msdn.microsoft.com/library/windows/apps/mt148522), 결합된 [지급 세부 정보](https://msdn.microsoft.com/library/windows/apps/dn986925), [앱을 홍보하고 고객 참여를 유도](https://msdn.microsoft.com/library/windows/apps/mt148526)하는 방법 등을 알아볼 수 있습니다.
 
 Windows 스토어에 게시하기 위해 앱을 제출하는 방법은 [통합 Windows 개발자 센터 대시보드 사용](../publish/using-the-windows-dev-center-dashboard.md)을 참조하세요.
 
-## 참고 항목 ##
-자세한 소개 자료를 보려면 [Windows10 - Windows10 디바이스용 Windows 앱 빌드 소개](https://msdn.microsoft.com/en-us/magazine/dn973012.aspx)를 참조하세요.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+## <a name="see-also"></a>참고 항목 ##
+자세한 소개 자료를 보려면 [Windows 10 - Windows 10 디바이스용 Windows 앱 빌드 소개](https://msdn.microsoft.com/magazine/dn973012.aspx)를 참조하세요.
 

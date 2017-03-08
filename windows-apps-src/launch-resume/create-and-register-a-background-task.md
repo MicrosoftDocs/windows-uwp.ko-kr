@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "Out-of-process 백그라운드 작업 만들기 및 등록"
 description: "Out-of-process 백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다."
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b052e84d284c173b21be1759e2645f4f99589c5e
-ms.openlocfilehash: 868fb7f1285ddd4f3e5120779ccf81a9ba55f8db
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ba9c5c1a59452295a07efd371ccfd632f290c837
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -348,9 +355,4 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 **백그라운드 작업 API 참조**
 
 * [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

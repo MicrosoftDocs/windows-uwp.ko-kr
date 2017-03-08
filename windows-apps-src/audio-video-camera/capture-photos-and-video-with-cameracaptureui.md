@@ -3,9 +3,16 @@ author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다."
 title: "Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 65508d32995f57672f94dffa4866a86d57903d00
-ms.openlocfilehash: 10ac3f53f0f8128985c39154f74a9348a40641b5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7ddd659bc32eb8328f993fba4bfd4f137ea99d0f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 10ac3f53f0f8128985c39154f74a9348a40641b5
 자체 카메라 UI를 제공하려고 하거나 시나리오가 캡처 작업에 대해 좀 더 강력한 하위 수준의 제어를 요구하는 경우 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체를 사용하고 자체 캡처 환경을 구현해야 합니다. 자세한 내용은 [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)를 참조하세요.
 
 > [!NOTE]
-> CameraCaptureUI를 사용 중인 경우 앱 매니페스트 파일에 **웹캠** 또는 **마이크** 기능을 지정해서는 안 됩니다. 그러면 디바이스의 카메라 개인 정보 설정에 앱이 표시되지만 사용자가 앱에 대한 카메라 액세스를 거부하더라도 CameraCaptureUI의 미디어 캡처가 차단되지 않습니다. Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. CameraCaptureUI 사용 시 웹캠 또는 마이크 기능을 지정하면 스토어에 제출된 앱이 WACK(Windows 응용 프로그램 인증 키트) 인증에 실패할 수 있습니다.
+> CameraCaptureUI를 사용 중인 경우 앱 매니페스트 파일에 **웹캠** 또는 **마이크** 기능을 지정해서는 안 됩니다. 그러면 장치의 카메라 개인 정보 설정에 앱이 표시되지만 사용자가 앱에 대한 카메라 액세스를 거부하더라도 CameraCaptureUI의 미디어 캡처가 차단되지 않습니다. Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. CameraCaptureUI 사용 시 웹캠 또는 마이크 기능을 지정하면 스토어에 제출된 앱이 WACK(Windows 응용 프로그램 인증 키트) 인증에 실패할 수 있습니다.
 > MediaCapture를 사용하여 오디오, 사진 또는 비디오를 프로그래밍 방식으로 캡처하는 경우 앱 매니페스트 파일에 웹캠 또는 마이크 기능을 지정해야 합니다.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>CameraCaptureUI로 사진 캡처
@@ -31,7 +38,7 @@ ms.openlocfilehash: 10ac3f53f0f8128985c39154f74a9348a40641b5
 사진을 캡처하려면 새 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 개체를 만듭니다. 개체의 [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) 속성을 사용하여 사진의 이미지 형식과 같은 반환된 사진에 대한 속성을 지정할 수 있습니다. 기본적으로 이 카메라 캡처 UI는 [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성을 사용하여 해제할 수 있지만 반환되기 전에 사진을 자르는 데 사용할 수 있습니다. 이 예제에서는 [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044)를 설정하여 반환된 이미지가 200x200 픽셀 단위로 되도록 요청합니다.
 
 > [!NOTE]
-> **CameraCaptureUI**의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
+> **CameraCaptureUI**의 이미징 자르기는 모바일 장치 패밀리의 장치에 대해 지원되지 않습니다. [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 장치에서 실행되는 경우 무시됩니다.
 
 [**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
@@ -118,10 +125,5 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

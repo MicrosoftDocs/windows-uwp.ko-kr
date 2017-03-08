@@ -1,13 +1,20 @@
 ---
 author: Jwmsft
-Description: "우리는 일상생활에서 메일, 책, 도로 표지판, 메뉴 가격, 타이어 압력계 수치 또는 전단지 등을 수많은 읽을 거리와 마주합니다."
+Description: "우리는 일상생활에서 메일, 책, 도로 표지판, 메뉴 가격, 타이어 압력계 수치 또는 전단지 등 수많은 읽을 거리와 마주합니다."
 title: "텍스트 컨트롤"
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 04f8e82f05c46d41657dae0b30e04f49341bb5db
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 41c5b771440a3ad88b3c1fcc2aec57b2e080741b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
@@ -190,9 +197,4 @@ TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 
 - [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length.aspx)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

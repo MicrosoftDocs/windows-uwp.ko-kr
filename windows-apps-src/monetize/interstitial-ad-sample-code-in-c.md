@@ -3,13 +3,20 @@ author: mcleanbyron
 ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
 description: "C#을 사용하여 중간 광고를 실행하는 방법을 알아봅니다."
 title: "C의 중간 광고 샘플 코드#"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 중간, c#, 샘플 코드"
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: c7554b94e67ce7f4b83a9ad4360819881d09f0fb
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4c57cf4909028d5aa81c75d9e1b6f1bf28d41ad7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="interstitial-ad-sample-code-in-c"></a>C의 중간 광고 샘플 코드# #  
+# <a name="interstitial-ad-sample-code-in-c"></a>C\의 중간 광고 샘플 코드# #  
 
 이 항목에서는 중간 광고를 게재하는 기본 C# 및 XAML UWP(유니버설 Windows 플랫폼) 앱의 전체 샘플 코드를 제공합니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
@@ -34,9 +41,4 @@ ms.openlocfilehash: c7554b94e67ce7f4b83a9ad4360819881d09f0fb
 
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

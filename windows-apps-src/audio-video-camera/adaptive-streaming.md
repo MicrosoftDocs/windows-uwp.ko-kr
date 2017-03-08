@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: AE98C22B-A071-4206-ABBB-C0F0FB7EF33C
 description: "이 문서에서는 적응 스트리밍 멀티미디어 콘텐츠의 재생을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다. 이 기능은 현재 HLS(Http 라이브 스트리밍) 및 DASH(Dynamic Streaming over HTTP) 콘텐츠의 재생을 지원합니다."
 title: "적응 스트리밍"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d0941887ebc17f3665302fae6c7b0a124dfb5a0b
-ms.openlocfilehash: 431fa345c0135a08c1da68904a8d58d969490a8d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3afd0440d8e552ebc3459c5fe30dd766db3ae8b9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 적응 스트리밍
+# <a name="adaptive-streaming"></a>적응 스트리밍
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 적응 스트리밍 멀티미디어 콘텐츠의 재생을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다. 이 기능은 현재 HLS(Http 라이브 스트리밍) 및 DASH(Dynamic Streaming over HTTP) 콘텐츠의 재생을 지원합니다.
 
@@ -20,7 +27,7 @@ ms.openlocfilehash: 431fa345c0135a08c1da68904a8d58d969490a8d
 > [!NOTE] 
 > 이 문서의 코드는 UWP [적응 스트리밍 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming)에서 조정되었습니다.
 
-## MediaPlayer 및 MediaPlayerElement의 간단한 적응 스트리밍
+## <a name="simple-adaptive-streaming-with-mediaplayer-and-mediaplayerelement"></a>MediaPlayer 및 MediaPlayerElement의 간단한 적응 스트리밍
 
 UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS 매니페스트 파일을 가리키는 **Uri** 개체를 만듭니다. [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스의 인스턴스를 만듭니다. [**MediaSource.CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn930912)를 호출하여 새 **MediaSource** 개체를 만들고 **MediaPlayer**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) 속성으로 설정합니다. [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play)를 호출하여 미디어 콘텐츠 재생을 시작합니다.
 
@@ -39,7 +46,7 @@ UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS �
 > [!NOTE] 
 > Windows 10 버전 1607부터는 **MediaPlayer** 클래스를 사용하여 미디어 항목을 재생하는 것이 좋습니다. **MediaPlayerElement**는 XAML 페이지의 **MediaPlayer** 콘텐츠를 렌더링하는 데 사용되는 간단한 XAML 컨트롤입니다. **MediaElement** 컨트롤은 이전 버전과의 호환성을 위해 계속 지원됩니다. **MediaPlayer** 및 **MediaPlayerElement**를 사용하여 미디어 콘텐츠를 재생하는 방법은 [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)을 참조하세요. **MediaSource** 및 관련 API를 미디어 콘텐츠와 함께 사용하는 방법은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
-## AdaptiveMediaSource를 이용한 적응 스트리밍
+## <a name="adaptive-streaming-with-adaptivemediasource"></a>AdaptiveMediaSource를 이용한 적응 스트리밍
 
 사용자 지정 HTTP 헤더를 제공하거나, 현재 다운로드 및 재생 비트 전송률을 모니터링하거나, 시스템이 적응 스트리밍의 비트 전송률을 전환할 때 확인할 비율을 조정하는 등의 추가적인 고급 적응 스트리밍 기능이 앱에 필요하면 [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) 개체를 사용합니다.
 
@@ -67,7 +74,7 @@ UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS �
 
 [!code-cs[AMSBitrateEvents](./code/AdaptiveStreaming_RS1/cs/MainPage.xaml.cs#SnippetAMSBitrateEvents)]
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
 * [HLS 태그 지원](hls-tag-support.md) 
 * [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
@@ -76,10 +83,5 @@ UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

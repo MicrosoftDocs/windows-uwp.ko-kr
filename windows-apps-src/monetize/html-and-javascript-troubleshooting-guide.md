@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: "JavaScript/HTML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 읽어보세요."
 title: "HTML 및 JavaScript 문제 해결 가이드"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, AdControl, 문제 해결, HTML, javascript"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 4bb959174ec158e7852cd447d9cd164ec2cd5bff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fe06749583dc42ec84dc4acd876ea96c70c916db
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -340,7 +347,7 @@ ms.openlocfilehash: 4bb959174ec158e7852cd447d9cd164ec2cd5bff
 <span id="js-adsnotrefreshing"/>
 ### <a name="ads-not-refreshing"></a>광고가 새로 고쳐지지 않음
 
-1.  **AdControl**의 [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) 속성이 false로 설정되어 있는지 확인합니다. 기본적으로 이 선택적 속성은 **true**로 설정되어 있습니다. **false**로 설정된 경우 **Refresh** 메서드를 사용하여 다른 광고를 검색해야 합니다.
+1.  **AdControl**의 [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) 속성이 false로 설정되어 있는지 확인하세요. 기본적으로 이 선택적 속성은 **true**로 설정되어 있습니다. **false**로 설정된 경우 **Refresh** 메서드를 사용하여 다른 광고를 검색해야 합니다.
 
 2.  [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **true**로 설정된 경우) **Refresh**를 사용하여 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **false**로 설정된 경우) 장치의 현재 데이터 연결에 따라 최소 30-60초가 경과된 후에만 **Refresh**가 호출됩니다.
 
@@ -380,9 +387,4 @@ ms.openlocfilehash: 4bb959174ec158e7852cd447d9cd164ec2cd5bff
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,13 +3,20 @@ author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
 description: "이 섹션에서는 Windows 8.1 버전과 달리 Windows 10 버전에 작성된 변경 사항을 지원하도록 PlayReady 웹앱을 수정하는 방법을 설명합니다."
 title: "PlayReady 암호화된 미디어 확장"
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 15b8c2cac08e59cfd9bd2c97c3a146cbc2be5548
-ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0698a01b1f846581422c5ecf4d47a45dd22762c4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# PlayReady 암호화된 미디어 확장
+# <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -18,7 +25,7 @@ ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
 
 Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹앱을 만들어, 콘텐츠 공급자가 정의한 액세스 규칙을 적용하는 한편 사용자에게 PlayReady 콘텐츠를 제공할 수 있습니다. 이 섹션에서는 HTML5와 JavaScript만 사용하여 기존 웹앱에 PlayReady 미디어 요소를 추가하는 방법을 설명합니다.
 
-## PlayReady 암호화된 미디어 확장의 새로운 기능
+## <a name="whats-new-in-playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장의 새로운 기능
 
 이 섹션에서는 Windows 10에서 PlayReady 콘텐츠 보호를 사용하기 위해 PlayReady EME(암호화된 미디어 확장)에 작성한 변경 사항 목록을 제공합니다.
 
@@ -54,13 +61,13 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 
     이 기능은 강력한 기능 키(라이선스는 아님)를 소유한 경우에도 콘텐츠를 최대 해상도로 재생하는 것을 제한하기 위해 추가되었습니다. 이 기능은 여러 스트림 크기가 단일 키로 인코드된 경우를 지원합니다.
 
-## PlayReady에서 암호화된 미디어 확장 지원
+## <a name="encrypted-media-extension-support-in-playready"></a>PlayReady에서 암호화된 미디어 확장 지원
 
 이 섹션에서는 PlayReady에서 지원하는 W3C 암호화된 미디어 확장 버전을 설명합니다.
 
 웹앱용 PlayReady는 현재 [2013년 5월 10일의 W3C EME(암호화된 미디어 확장) 초안](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/)에 바인딩되어 있습니다. 이후 Windows 버전에서는 업데이트된 EME 사양으로 변경되어 지원될 예정입니다.
 
-## 하드웨어 DRM 사용
+## <a name="use-hardware-drm"></a>하드웨어 DRM 사용
 
 이 섹션에서는 웹앱에서 PlayReady 하드웨어 DRM을 사용하는 방법과 보호된 콘텐츠에서 하드웨어 DRM을 지원하지 않는 경우 하드웨어 DRM을 사용하지 않도록 설정하는 방법을 설명합니다.
 
@@ -71,11 +78,11 @@ PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스
 > [!NOTE]
 > HEVC 콘텐츠가 지원되는지를 확인하려면 `com.microsoft.playready`를 인스턴스화한 후 [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하세요.
 
-## 웹앱에 보안 중지 추가
+## <a name="add-secure-stop-to-your-web-app"></a>웹앱에 보안 중지 추가
 
 이 섹션에서는 웹앱에 보안 중지를 추가하는 방법을 설명합니다.
 
-보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 디바이스의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
+보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 장치의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
 
 보안 중지 챌린지를 보내는 주요 시나리오는 두 가지가 있습니다.
 
@@ -261,7 +268,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 > [!NOTE]
 > 위의 샘플에 있는 보안 중지 데이터의 `<SessionID>B64 encoded session ID</SessionID>`는 기록된 모든 보안 중지 세션의 와일드 카드인 별표(\*)가 될 수 있습니다. 즉 **SessionID** 태그는 구체적인 세션이거나 모든 보안 중지 세션을 선택하도록 와일드 카드(\*)가 될 수 있습니다.
 
-## 암호화된 미디어 확장에 대한 프로그래밍 고려 사항
+## <a name="programming-considerations-for-encrypted-media-extension"></a>암호화된 미디어 확장에 대한 프로그래밍 고려 사항
 
 이 섹션에는 Windows 10용 PlayReady 사용 웹앱을 만들 때 고려해야 하는 프로그래밍 고려 사항이 나열되어 있습니다.
 
@@ -295,15 +302,10 @@ function foo() {
 
 자세한 내용은 [샘플 응용 프로그램](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738)을 참조하세요.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [PlayReady DRM](playready-client-sdk.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

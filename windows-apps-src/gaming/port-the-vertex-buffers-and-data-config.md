@@ -3,13 +3,20 @@ author: mtoepke
 title: "꼭짓점 버퍼 및 데이터 포팅"
 description: "이 단계에서는 메시를 포함하는 꼭짓점 버퍼 및 셰이더가 꼭짓점을 지정된 순서로 트래버스할 수 있게 하는 인덱스 버퍼를 정의합니다."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 포트, 꼭짓점 버퍼, 데이터, direct3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee8b3f693e40d9c0fba679a44ebcd4986d06d7ac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 85e8a47da525c0f5de7e957a0048e245e374dedc
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 꼭짓점 버퍼 및 데이터 포팅
+# <a name="port-the-vertex-buffers-and-data"></a>꼭짓점 버퍼 및 데이터 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -107,9 +114,9 @@ unsigned short cubeIndices[] =
 
 오른손 OpenGL ES 2.0 좌표계에서 왼손 Direct3D 좌표계로 큐브 메시를 이동한 것으로 가정하고 두 모델에서 처리할 큐브 데이터를 로드하는 방법을 알아보겠습니다.
 
-## 지침
+## <a name="instructions"></a>지침
 
-### 1단계: 입력 레이아웃 만들기
+### <a name="step-1-create-an-input-layout"></a>1단계: 입력 레이아웃 만들기
 
 OpenGL ES 2.0에서는 셰이더 개체에 제공하고 이 개체에서 읽는 특성으로 꼭짓점 데이터가 제공됩니다. 일반적으로 셰이더 프로그램 개체에 대한 셰이더의 GLSL 사용되는 특성 이름이 포함된 문자열을 제공하고 셰이더에 제공할 수 있는 메모리 위치를 다시 가져옵니다. 이 예제에서 꼭짓점 버퍼 개체는 다음과 같이 정의되고 서식이 지정된 사용자 지정 꼭짓점 구조 목록을 포함합니다.
 
@@ -172,7 +179,7 @@ m_d3dDevice->CreateInputLayout(
 
 입력 레이아웃을 정의 했습니다. 이제 이 레이아웃을 사용하는 버퍼를 만들고 큐브 메시 데이터를 사용하여 이 버퍼를 로드합니다.
 
-### 2단계: 꼭짓점 버퍼 만들기 및 로드
+### <a name="step-2-create-and-load-the-vertex-buffers"></a>2단계: 꼭짓점 버퍼 만들기 및 로드
 
 OpenGL ES 2.0에서는 위치 데이터의 버퍼 하나와 색상 데이터의 버퍼 하나로 버퍼 쌍을 만듭니다. 둘 다 포함하고 단일 버퍼를 포함하는 구조체를 만들 수도 있습니다. 각 버퍼를 바인딩하고 위치 및 색상 데이터를 여기에 작성합니다. 나중에 렌더 함수 중 버퍼를 다시 바인딩하고 제대로 해석할 수 있도록 버퍼에 있는 데이터의 형식으로 셰이더를 제공합니다.
 
@@ -217,7 +224,7 @@ m_d3dContext->IASetVertexBuffers(
   &offset);
 ```
 
-### 3단계: 인덱스 버퍼를 만들기 및 로드
+### <a name="step-3-create-and-load-the-index-buffer"></a>3단계: 인덱스 버퍼를 만들기 및 로드
 
 인덱스 버퍼는 꼭짓점 셰이더가 개별 꼭짓점을 조회할 수 있게 하는 효율적인 방법입니다. 필수는 아니지만 이 샘플 렌더러에서는 이 버퍼를 사용합니다. OpenGL ES 2.0의 꼭짓점 버퍼에서와 같이, 인덱스 버퍼는 범용 버퍼로 만들어지고 바인딩되며 이전에 만든 꼭짓점 인덱스가 여기에 복사됩니다.
 
@@ -287,20 +294,20 @@ m_d3dContext->DrawIndexed(
   0);
 ```
 
-## 이전 단계
+## <a name="previous-step"></a>이전 단계
 
 
 [셰이더 개체 포팅](port-the-shader-config.md)
 
-## 다음 단계
+## <a name="next-step"></a>다음 단계
 
 [GLSL 포팅](port-the-glsl.md)
 
-## 설명
+## <a name="remarks"></a>설명
 
 Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때마다 호출하는 메서드로 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)에 대한 메서드를 호출하는 코드를 구분합니다. (Direct3D 프로젝트 템플릿에서 이 코드는 렌더러 개체의 **CreateDeviceResource** 메서드에 있습니다.) 반면에 이는 실제로 셰이더 단계를 구성하고 데이터를 바인딩하는 위치이기 때문에 디바이스 컨텍스트([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385))를 업데이트하는 코드가 **Render** 메서드에 배치됩니다. .
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
@@ -314,10 +321,5 @@ Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때�
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

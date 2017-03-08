@@ -1,17 +1,24 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 Windows 런타임 앱에서 타기팅에 대한 모범 사례를 제공합니다."
-title: "대상 지정"
+title: "타기팅"
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 9710e3060410428e1a4b7cfe89442c7df8602ed2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fd4ba842a1d6f9eec6012a930a5dda5d7ff7c249
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="guidelines-for-targeting"></a>대상 지정에 대한 지침
+# <a name="guidelines-for-targeting"></a>타기팅에 대한 지침
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가락의 전체 접촉 영역을 사용합니다. 사용자가 의도했거나 대상이 될 가능성 높은 대상을 결정할 때 정확도를 높이기 위해 디지타이저가 보고하는 좀 더 크고 좀 더 복잡한 입력 데이터 집합이 사용됩니다.
@@ -173,10 +180,5 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

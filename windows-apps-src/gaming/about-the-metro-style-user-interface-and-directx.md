@@ -3,20 +3,27 @@ author: mtoepke
 title: "앱 개체 및 DirectX"
 description: "DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI 사용자 인터페이스 요소 및 개체를 거의 사용하지 않습니다."
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, directx, 앱 개체"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 78e2bbcc4c9182b09138da457c839466b49ac31a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7d3290633ead698a6c42c3accdbd2012ccfd7065
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 개체 및 DirectX
+# <a name="the-app-object-and-directx"></a>앱 개체 및 DirectX
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI 사용자 인터페이스 요소 및 개체를 거의 사용하지 않습니다. 더 정확히 말하면 그러한 요소 및 개체는 Windows 런타임 스택의 하위 수준에서 실행되므로 앱 개체에 직접 액세스하여 상호 작용하는 보다 본질적인 방식으로 사용자 인터페이스 프레임워크와 상호 작용해야 합니다. 이러한 상호 작용이 발생하는 경우와, DirectX 개발자로서 UWP 앱 개발에 이 모델을 효율적으로 사용하는 방법에 대해 학습합니다.
 
-## 중요한 핵심 사용자 인터페이스 네임스페이스
+## <a name="the-important-core-user-interface-namespaces"></a>중요한 핵심 사용자 인터페이스 네임스페이스
 
 
 먼저 (**using**을 사용하여) UWP 앱에 포함해야 할 Windows 런타임 네임스페이스에 대해 조금 자세히 살펴보겠습니다.
@@ -27,11 +34,11 @@ DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI �
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **참고** UWP 앱을 개발하는 경우가 아니면 JavaScript 또는 XAML 특정 네임스페이스에 제공된 유형 대신 이러한 라이브러리 및 네임스페이스에 제공된 사용자 인터페이스 구성 요소를 사용하세요.
+> **참고**   UWP 앱을 개발하는 경우가 아니면 JavaScript 또는 XAML 특정 네임스페이스에 제공된 유형 대신 이러한 라이브러리 및 네임스페이스에 제공된 사용자 인터페이스 구성 요소를 사용하세요.
 
  
 
-## Windows 런타임 앱 개체
+## <a name="the-windows-runtime-app-object"></a>Windows 런타임 앱 개체
 
 
 UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 창 및 보기 공급자가 필요합니다(디스플레이 버퍼). 또한 이 보기를 실행 중인 앱에 대한 창별 이벤트에 연결할 수도 있습니다. [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형으로 정의된 앱 개체의 부모 창을 가져오려면 앞 코드 조각에서 했던 대로 [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482)를 구현합니다.
@@ -58,7 +65,7 @@ UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 �
 
 이러한 기본 개념을 기반으로 하여 접근 방법을 확장해야 하는 추가 옵션에 대해 알아보겠습니다.
 
-## 핵심 사용자 인터페이스 유형
+## <a name="core-user-interface-types"></a>핵심 사용자 인터페이스 유형
 
 
 다음은 유용하게 사용할 수 있는 Windows 런타임의 다른 핵심 사용자 인터페이스 유형입니다.
@@ -79,12 +86,12 @@ UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 �
 
 요약하면, 앱 개체는 뷰 공급자 팩터리를 제공합니다. 앱 개체는 뷰 공급자를 만들고 앱에 대한 부모 창을 인스턴스화합니다. 뷰 공급자는 앱의 부모 창에 대한 앱 보기를 정의합니다. 이제 보기 및 부모 창의
 
-## CoreApplicationView 동작 및 속성
+## <a name="coreapplicationview-behaviors-and-properties"></a>CoreApplicationView 동작 및 속성
 
 
 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)는 현재 앱 보기를 나타냅니다. 앱 singleton은 초기화 중에 앱 보기를 만들지만 보기는 활성화되기 전까지 유휴 상태로 유지됩니다. 그 [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 속성에 액세스하면 보기를 표시하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 가질 수 있으며, [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트에 대리자를 등록하면 보기에 대한 활성화 및 비활성화를 처리할 수 있습니다.
 
-## CoreWindow 동작 및 속성
+## <a name="corewindow-behaviors-and-properties"></a>CoreWindow 동작 및 속성
 
 
 앱 개체가 초기화되면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스인 부모 창이 만들어지고 뷰 공급자로 전달됩니다. 앱에 표시할 창이 없으면 창을 표시합니다. 그렇지 않으면 보기를 초기화하기만 합니다.
@@ -93,7 +100,7 @@ UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 �
 
 또한 [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264) 속성에 액세스하여 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)의 인스턴스를 제공하는 창에 대한 창 이벤트 디스패처를 얻을 수 있습니다.
 
-## CoreDispatcher 동작 및 속성
+## <a name="coredispatcher-behaviors-and-properties"></a>CoreDispatcher 동작 및 속성
 
 
 창에 대해 디스패치하는 이벤트의 스레딩 동작은 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 유형으로 확인할 수 있습니다. 이 유형에서 특히 중요한 메서드 하나는 창 이벤트 처리를 시작하는 [**CoreDispatcher.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) 메서드입니다. 앱에 대해 이 메서드를 잘못된 옵션으로 호출하면 모든 종류의 예기치 않은 이벤트 처리 동작이 발생할 수 있습니다.
@@ -109,7 +116,7 @@ UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 �
 
 그래픽 업데이트를 중단시킬 수 있는 차단 동작을 방지하려면 DirectX를 사용하는 UWP가 [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217) 옵션을 사용해야 합니다.
 
-## DirectX 부분에 대한 ASTA 고려 사항
+## <a name="asta-considerations-for-directx-devs"></a>DirectX 부분에 대한 ASTA 고려 사항
 
 
 UWP 및 DirectX 앱의 런타임 표현을 정의하는 앱 개체는 ASTA(응용 프로그램 단일 스레드 아파트)라는 스레딩 모델을 사용하여 앱의 UI 보기를 호스트합니다. UWP 및 DirectX 앱을 개발하고 있는 경우 ASTA 속성에 익숙할 것입니다. UWP 및 DirectX 앱에서 디스패치하는 모든 스레드는 [**Windows::System::Threading**](https://msdn.microsoft.com/library/windows/apps/br229642) API 또는 [**CoreWindow::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)를 사용해야 하기 때문입니다. 앱에서 [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 ASTA에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 가져올 수 있습니다.
@@ -152,10 +159,5 @@ UWP DirectX 앱에 대한 앱 개체가 활성화되면 UI 보기에 사용될 A
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,19 +3,26 @@ author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: "장치 기능 사용"
 description: "이 자습서에서는 Microsoft Visual Studio에서 디바이스 접근 권한 값을 선언하는 방법을 설명합니다. 이를 통해 앱에서 카메라, 마이크, 위치 센서 및 기타 디바이스를 사용할 수 있습니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b36dd4d77821a65b1f435d755f7bb415b2e386ee
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 15b12bfafea71705a9c18464461a73e3e2f05563
+ms.lasthandoff: 02/07/2017
 
 ---
-# 디바이스 기능 사용
+# <a name="enable-device-capabilities"></a>디바이스 기능 사용
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 자습서에서는 Microsoft Visual Studio에서 장치 접근 권한 값을 선언하는 방법을 설명합니다. 이를 통해 앱에서 카메라, 마이크, 위치 센서 및 기타 디바이스를 사용할 수 있습니다.
 
-## 앱에서 사용할 장치 접근 권한 값 지정
+## <a name="specify-the-device-capabilities-your-app-will-use"></a>앱에서 사용할 장치 접근 권한 값 지정
 
 
 Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 매니페스트에 지정해야 합니다. Visual Studio에서 [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx)를 사용하여 대부분의 접근 권한 값을 선언할 수 있으며, [패키지 매니페스트에서 장치 접근 권한 값을 지정하는 방법(수동)](https://msdn.microsoft.com/library/windows/apps/Dn263092)에 설명된 대로 수동으로 해당 접근 권한 값을 추가할 수 있습니다. 이 자습서에서는 매니페스트 디자이너를 사용한다고 가정합니다.
@@ -56,7 +63,7 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 | Bluetooth RFCOMM |  | BR/EDR(기본 속도/확장된 데이터 속도) 전송을 지원하는 API에 대한 액세스를 제공하고, 또한 Windows 스토어 앱이 SPP(직렬 포트 프로필)를 구현하는 장치에 액세스할 수 있습니다. 이 접근 권한 값에는 자식 요소가 필요합니다. 자세한 내용은 [Bluetooth 관련 장치 접근 권한 값을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/Dn263090)을 참조하세요. |
 | pointOfService |  | POS(Point of Service) 바코드 스캐너와 자기 띠 판독기에 대한 액세스를 제공합니다. Windows Phone에서는 이 기능이 지원되지 않습니다. | 
 
-## Windows 런타임 API를 사용하여 장치와 통신
+## <a name="use-the-windows-runtime-api-for-communicating-with-your-device"></a>Windows 런타임 API를 사용하여 장치와 통신
 
 다음 표에서는 일부 접근 권한 값을 Windows 런타임 API에 연결합니다.
 
@@ -73,10 +80,5 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 | Bluetooth GATT           | [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) | 
 | Bluetooth RFCOMM         | [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) | 
 | POS(Point of Service)   | [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) |
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

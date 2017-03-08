@@ -3,16 +3,23 @@ author: mtoepke
 title: "화면에 그리기"
 description: "마지막으로, 화면에 회전하는 큐브를 그리는 코드를 포팅합니다."
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx, 그래픽"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1e2039743ba45d577c08c0a6d9c17c7f923b2d86
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1fe28d17aa8c943de9a2bcf6c2230237e0c931d0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 화면에 그리기
+# <a name="draw-to-the-screen"></a>화면에 그리기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 
 **중요 API**
@@ -66,9 +73,9 @@ Direct3D 장치 및 디바이스 컨텍스트와 렌더링 대상의 초기화 �
 
 EGL 및 EGLContext 형식에 관련된 Direct3D 디바이스 컨텍스트에 대한 자세한 내용은 [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 읽어 보세요.
 
-## 지침
+## <a name="instructions"></a>지침
 
-### 1단계: 장면 렌더링 및 표시
+### <a name="step-1-rendering-the-scene-and-displaying-it"></a>1단계: 장면 렌더링 및 표시
 
 큐브 데이터를 업데이트한 후(이 경우 약간 y축을 기준으로 회전) Render 메서드는 뷰포트를 그리기 컨텍스트(EGLContext)의 차원으로 설정합니다. 이 컨텍스트에는 구성된 디스플레이(EGLDisplay)를 사용하여 창 화면(EGLSurface)에 표시할 색 버퍼가 포함됩니다. 이때 예제에서는 꼭짓점 데이터 특성을 업데이트하고, 인덱스 버퍼를 다시 바인딩하고, 큐브를 그리고, 디스플레이 화면에 음영 파이프라인으로 그려진 색 버퍼에서 스왑합니다.
 
@@ -195,16 +202,16 @@ void RenderObject::Render()
 
 [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 호출하면 구성된 디스플레이에 프레임이 출력됩니다.
 
-## 이전 단계
+## <a name="previous-step"></a>이전 단계
 
 
 [GLSL 포팅](port-the-glsl.md)
 
-## 설명
+## <a name="remarks"></a>설명
 
 이 예제에서는 특히 UWP(유니버설 Windows 플랫폼) DirectX 앱에 대한 장치 리소스 구성의 복잡성이 심하기 때문에 해당 내용에 주석을 달았습니다. 전체 템플릿 코드를 검토하되, 특히 창과 장치 리소스 설정 및 관리를 수행하는 부분을 검토하는 것이 좋습니다. UWP 앱은 회전 이벤트뿐만 아니라 일시 중단/다시 시작 이벤트를 지원해야 하며, 템플릿은 인터페이스 손실이나 디스플레이 매개 변수 변경을 처리하기 위한 모범 사례를 보여 줍니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
@@ -218,10 +225,5 @@ void RenderObject::Render()
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

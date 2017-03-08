@@ -4,16 +4,24 @@ Description: "이 가이드는 개인 데이터뿐만 아니라 WIP(Windows Info
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드"
+ms.author: normesta
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, wip, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱"
+ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 translationtype: Human Translation
-ms.sourcegitcommit: bf1c47e9cca45b626a45ca664bf2bb4be9c529e0
-ms.openlocfilehash: 82b674c72126c66aff34b0396a2c32f88023dd25
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5bad765ff182fcd2fb573c3aa766fdaaaef1e2a3
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드
+# <a name="build-an-enlightened-app-that-consumes-both-enterprise-data-and-personal-data"></a>엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드
 
 
-  __참고__ WIP(Windows Information Protection) 정책을 Windows10 버전 1607에 적용할 수 있습니다.
+  __참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
 
 *지원* 앱은 회사 데이터와 개인 데이터를 구분하고 관리자에 의해 정의된 WIP(Windows Information Protection) 정책에 따라 보호할 데이터를 지원합니다.
 
@@ -25,15 +33,15 @@ WIP 및 지원 앱에 대한 자세한 내용은 [WIP(Windows Information Protec
 
 각 작업을 진행할 준비가 되었으면 시작하겠습니다.
 
-## 사전 준비 사항
+## <a name="first-gather-what-you-need"></a>사전 준비 사항
 
 다음 사항이 필요합니다.
 
-* Windows10 버전 1607이 실행되는 테스트 VM(가상 컴퓨터). 이 테스트 VM에 대해 앱을 디버그합니다.
+* Windows 10 버전 1607이 실행되는 테스트 VM(가상 컴퓨터). 이 테스트 VM에 대해 앱을 디버그합니다.
 
-* Windows10 버전1607을 실행하는 개발 컴퓨터 Visual Studio가 설치된 경우 테스트 VM이 될 수 있습니다.
+* Windows 10 버전1607을 실행하는 개발 컴퓨터 Visual Studio가 설치된 경우 테스트 VM이 될 수 있습니다.
 
-## 개발 환경 설정
+## <a name="setup-your-development-environment"></a>개발 환경 설정
 
 다음 작업을 수행합니다.
 
@@ -111,7 +119,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.Data.Xml.Dom;
 ```
 
-## 앱을 실행하는 운영 체제가 WIP를 지원하는지 확인
+## <a name="determine-whether-the-operating-system-that-runs-your-app-supports-wip"></a>앱을 실행하는 운영 체제가 WIP를 지원하는지 확인
 
 [**IsApiContractPresent**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.metadata.apiinformation.isapicontractpresent.aspx) 함수를 사용하여 지원 여부를 확인합니다.
 
@@ -128,9 +136,9 @@ else
 }
 ```
 
-Windows10 버전 1607에서는 Windows Information Protection이 지원됩니다.
+Windows 10 버전 1607에서는 Windows Information Protection이 지원됩니다.
 
-## 엔터프라이즈 데이터 읽기
+## <a name="read-enterprise-data"></a>엔터프라이즈 데이터 읽기
 
 파일, 네트워크 끝점, 클립보드 데이터, 공유 계약에서 허용하는 데이터에는 모두 엔터프라이즈 ID가 있습니다.
 
@@ -138,7 +146,7 @@ Windows10 버전 1607에서는 Windows Information Protection이 지원됩니다
 
 파일부터 살펴보겠습니다.
 
-### 파일에서 데이터 읽기
+### <a name="read-data-from-a-file"></a>파일에서 데이터 읽기
 
 **1단계: 파일 핸들 가져오기**
 
@@ -195,7 +203,7 @@ var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(file);
 ```
 
-### 네트워크 끝점에서 데이터 읽기
+### <a name="read-data-from-a-network-endpoint"></a>네트워크 끝점에서 데이터 읽기
 
 엔터프라이즈 끝점에서 읽기 위해 보호된 스레드 컨텍스트를 만듭니다.
 
@@ -329,7 +337,7 @@ public static async Task<IBuffer> getDataFromNetworkResource(Uri resourceURI)
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
-### 클립보드에서 데이터 읽기
+### <a name="read-data-from-the-clipboard"></a>클립보드에서 데이터 읽기
 
 **클립보드에서 데이터를 사용할 수 있는 권한 얻기**
 
@@ -426,7 +434,7 @@ private async void PasteText(bool isNewEmptyDocument)
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
 
-### 공유 계약에서 데이터 읽기
+### <a name="read-data-from-a-share-contract"></a>공유 계약에서 데이터 읽기
 
 직원이 정보를 공유할 앱을 선택할 경우 앱은 해당 콘텐츠를 포함하는 새 항목을 엽니다.
 
@@ -480,11 +488,11 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 [ProtectionPolicyEvaluationResult](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicyevaluationresult.aspx)<br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
-## 엔터프라이즈 데이터 보호
+## <a name="protect-enterprise-data"></a>엔터프라이즈 데이터 보호
 
 앱을 떠나는 엔터프라이즈 데이터를 보호합니다. 앱을 떠나는 데이터가 페이지에 표시되면 공유 계약을 통해 또는 파일이나 네트워크 끝점에 데이터를 저장합니다.
 
-### <a id="display-data"></a>페이지에 표시되는 데이터 보호
+### <a name="a-iddisplay-dataaprotect-data-that-appears-in-pages"></a><a id="display-data"></a>페이지에 표시되는 데이터 보호
 
 페이지에 데이터를 표시할 때 Windows에서 데이터 유형(개인 또는 엔터프라이즈)을 알 수 있도록 합니다. 이렇게 하려면 현재 앱 보기 또는 전체 앱 프로세스에 *태그*를 지정합니다.
 
@@ -530,7 +538,7 @@ bool result =
 > **API** <br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
-### 파일에 데이터 보호
+### <a name="protect-data-to-a-file"></a>파일에 데이터 보호
 
 보호된 파일을 만들고 이 파일에 씁니다.
 
@@ -601,7 +609,7 @@ FileProtectionInfo fileProtectionInfo =
 
 
 
-### 백그라운드 프로세스로 파일에 데이터 보호
+### <a name="protect-data-to-a-file-as-a-background-process"></a>백그라운드 프로세스로 파일에 데이터 보호
 
 이 코드는 디바이스 화면이 잠겨 있는 동안 실행할 수 있습니다. 관리자가 보안 "DPL(잠금 상태에서 데이터 보호)" 정책을 구성한 경우 Windows는 디바이스 메모리에서 보호된 리소스에 액세스하는 데 필요한 암호화 키를 제거합니다. 따라서 디바이스 분실 시에도 데이터 누출이 방지됩니다. 이 동일한 기능은 또한 핸들이 닫혀 있을 때 보호되는 파일과 연결된 키를 제거합니다.
 
@@ -665,7 +673,7 @@ else if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 [ProtectedFileCreateResult.Stream](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectedfilecreateresult.stream.aspx)<br>
 
-### 파일의 일부 보호
+### <a name="protect-part-of-a-file"></a>파일의 일부 보호
 
 대부분의 경우 엔터프라이즈 및 개인 데이터를 별도로 저장하는 것이 더 깔끔하지만 원하는 경우 동일한 파일에 저장할 수 있습니다. 예를 들어 Microsoft Outlook은 단일 보관 파일에 개인 메일과 함께 엔터프라이즈 메일을 저장할 수 있습니다.
 
@@ -741,7 +749,7 @@ await Windows.Storage.FileIO.WriteTextAsync
     "'></EnterpriseDataMarker>");
 ```
 
-### 보호된 파일 일부 읽기
+### <a name="read-the-protected-part-of-a-file"></a>보호된 파일 일부 읽기
 
 해당 파일에서 엔터프라이즈 데이터를 읽는 방법은 다음과 같습니다.
 
@@ -821,7 +829,7 @@ else if (dataProtectionInfo.Status == DataProtectionStatus.Revoked)
 [DataProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectionmanager.getstreamprotectioninfoasync.aspx)<br>
 
 
-### 폴더로 데이터 보호
+### <a name="protect-data-to-a-folder"></a>폴더로 데이터 보호
 
 폴더를 만들고 보호할 수 있습니다. 이렇게 하면 해당 폴더에 추가하는 항목이 자동으로 보호됩니다.
 
@@ -856,7 +864,7 @@ private async Task<bool> CreateANewFolderAndProtectItAsync(string folderName, st
 [FileProtectionInfo.Status](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.status.aspx)
 
 
-### 네트워크 끝점으로 데이터 보호
+### <a name="protect-data-to-a-network-end-point"></a>네트워크 끝점으로 데이터 보호
 
 보호된 스레드 컨텍스트를 만들어 엔터프라이즈 끝점으로 데이터를 보냅니다.  
 
@@ -908,7 +916,7 @@ else
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)<br>
 [ProtectionPolicyManager.CreateCurrentThreadNetworkContext](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.createcurrentthreadnetworkcontext.aspx)
 
-### 공유 계약을 통해 앱이 공유하는 데이터 보호
+### <a name="protect-data-that-your-app-shares-through-a-share-contract"></a>공유 계약을 통해 앱이 공유하는 데이터 보호
 
 사용자가 앱에서 콘텐츠를 공유하도록 하려면 공유 계약을 구현하고 [**DataTransferManager.DataRequested**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested) 이벤트를 처리해야 합니다.
 
@@ -940,7 +948,7 @@ private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs 
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
 
-### 다른 위치에 복사하는 파일 보호
+### <a name="protect-files-that-you-copy-to-another-location"></a>다른 위치에 복사하는 파일 보호
 
 ```csharp
 private async void CopyProtectionFromOneFileToAnother
@@ -962,7 +970,7 @@ private async void CopyProtectionFromOneFileToAnother
 [FileProtectionManager.CopyProtectionAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.copyprotectionasync.aspx)<br>
 
 
-### 디바이스의 화면이 잠겨 있을 때 엔터프라이즈 데이터 보호
+### <a name="protect-enterprise-data-when-the-screen-of-the-device-is-locked"></a>디바이스의 화면이 잠겨 있을 때 엔터프라이즈 데이터 보호
 
 디바이스가 잠겨 있을 때 메모리의 모든 중요한 데이터를 제거합니다. 사용자가 디바이스를 잠금 해제하면 앱은 다시 데이터를 안전하게 추가할 수 있습니다.
 
@@ -970,7 +978,7 @@ private async void CopyProtectionFromOneFileToAnother
 
 앱에서 화면이 잠금 해제된 경우를 알 수 있도록 [**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.protectedaccessresumed.aspx) 이벤트를 처리합니다. 이 이벤트는 관리자가 잠금 정책에 따라 보안 데이터 보호를 구성하는지 여부에 관계없이 발생합니다.
 
-#### 화면이 잠겨 있을 때 메모리에서 중요한 데이터 제거
+#### <a name="remove-sensitive-data-in-memory-when-the-screen-is-locked"></a>화면이 잠겨 있을 때 메모리에서 중요한 데이터 제거
 
 시스템이 메모리에 중요한 데이터를 캐시하지 않도록 하기 위해 중요한 데이터를 보호하고 앱이 보호된 파일에서 연 모든 파일 스트림을 닫습니다.
 
@@ -1016,7 +1024,7 @@ private async void ProtectionPolicyManager_ProtectedAccessSuspending(object send
 [ProtectedAccessSuspendingEventArgs.GetDeferral](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectedaccesssuspendingeventargs.getdeferral.aspx)<br>
 [Deferral.Complete](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx)<br>
 
-#### 디바이스 잠금이 해제될 때 중요한 데이터 다시 추가
+#### <a name="add-back-sensitive-data-when-the-device-is-unlocked"></a>디바이스 잠금이 해제될 때 중요한 데이터 다시 추가
 
 디바이스 잠금이 해제되고 디바이스에서 다시 키를 사용할 수 있는 경우 [**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.protectedaccessresumed.aspx)가 발생합니다.
 
@@ -1051,7 +1059,7 @@ private async void ProtectionPolicyManager_ProtectedAccessResumed(object sender,
 [DataProtectionManager.UnprotectAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectionmanager.unprotectasync.aspx)<br>
 [BufferProtectUnprotectResult.Status](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.bufferprotectunprotectresult.aspx)<br>
 
-## 보호된 콘텐츠 해지 시 엔터프라이즈 데이터 처리
+## <a name="handle-enterprise-data-when-protected-content-is-revoked"></a>보호된 콘텐츠 해지 시 엔터프라이즈 데이터 처리
 
 디바이스가 MDM에서 등록이 취소되거나 정책 관리자가 엔터프라이즈 데이터에 대한 액세스를 명시적으로 해지하는 경우에 앱이 알림을 받도록 하려면 [**ProtectionPolicyManager_ProtectedContentRevoked**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.protectedcontentrevoked.aspx) 이벤트를 처리합니다.
 
@@ -1082,15 +1090,10 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 > **API** <br>
 [ProtectionPolicyManager_ProtectedContentRevoked](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.protectedcontentrevoked.aspx)<br>
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 [WIP(Windows Information Protection) 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
  
 
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

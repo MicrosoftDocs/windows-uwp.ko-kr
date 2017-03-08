@@ -1,25 +1,32 @@
 ---
 author: jnHs
-Description: "다음은 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다."
+Description: "다음은 Windows 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다."
 title: "VAT 정보"
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9ff913999f0697b379df868277fb45597150aa6e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a26cb43d230cd7dbb050254cceb70d3158c3af5d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# VAT 정보
+# <a name="vat-info"></a>VAT 정보
 
 
-다음은 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다.
+다음은 Windows 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다.
 
-## VAT 번호 이해
+## <a name="understanding-vat-numbers"></a>VAT 번호 이해
 
 
 VAT(부가가치세) 번호는 유럽 연합의 국가 또는 지역에 사용되는 식별자입니다. 자세한 내용은 유럽 연합의 공식 [VIES 사이트](http://go.microsoft.com/fwlink/p/?LinkId=258372)를 참조하세요.
 
-## 허용되는 VAT 번호 형식
+## <a name="accepted-formats-for-vat-numbers"></a>허용되는 VAT 번호 형식
 
 
 Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침용으로만 제공됩니다. 이 지침을 통해 Microsoft에 VAT 번호를 제공할 수 없는 경우 현지 조세 기관에 최근 변경 내용이 있는지 확인해야 합니다.
@@ -247,10 +254,5 @@ Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

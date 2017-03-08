@@ -2,10 +2,17 @@
 author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: "홈 그룹 콘텐츠 액세스"
-description: "사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다."
+description: "사진, 음악, 비디오 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 04d34aa8f1cff2460462fff8100ab345a04d9000
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
@@ -13,7 +20,7 @@ ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
 -   [**Windows.Storage.KnownFolders 클래스**](https://msdn.microsoft.com/library/windows/apps/br227151)
 
@@ -29,7 +36,7 @@ ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
 
     홈 그룹 콘텐츠에 액세스하려면 사용자의 컴퓨터에 홈 그룹이 설정되어 있고 앱에는 **picturesLibrary**, **musicLibrary** 또는 **videosLibrary** 접근 권한 값 중 하나 이상이 있어야 합니다. 앱에서 홈 그룹 폴더에 액세스하면 앱의 매니페스트에 선언된 접근 권한 값에 해당하는 라이브러리만 표시됩니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
-    **참고** 홈 그룹의 문서 라이브러리에 있는 콘텐츠는 앱의 매니페스트에 선언된 접근 권한 값 및 사용자의 공유 설정에 관계없이 앱에 표시되지 않습니다.
+    **참고**  홈 그룹의 문서 라이브러리에 있는 콘텐츠는 앱의 매니페스트에 선언된 접근 권한 값 및 사용자의 공유 설정에 관계없이 앱에 표시되지 않습니다.
 
      
 
@@ -208,9 +215,4 @@ ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

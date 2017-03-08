@@ -9,9 +9,16 @@ ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
 op-migration-status: ready
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 9f711fbd6f3562fb05fee70f42304204e602bc0b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a46e26491e909d825ceaff04d008b8cb56c9aff3
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -218,7 +225,7 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 
 그러나 모든 앱 시나리오가 데이터 바인딩에 적합한 것은 아닙니다. 경우에 따라 런타임에 새 UI 요소를 만들고 표시되도록 해야 합니다. `BoxPanel` 이 이 시나리오에 적합합니다. `BoxPanel`은 자식 개수를 계산에 사용하고 모두 들어가도록 기존 자식 요소와 새 자식 요소를 새 레이아웃으로 조정하기 때문에 자식 항목 수의 변경은 문제가 되지 않습니다.
 
-여기에는 나와 있지 않지만 `BoxPanel`을 추가로 확장하는 고급 시나리오는 동적 자식을 수용하고 개별 셀의 크기를 조정하기 위한 더 강력한 요소로 자식의 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)를 사용합니다. 이 시나리오에서는 "불필요하게 사용된" 공간을 좀 더 줄이기 위해 다양한 행 또는 열 크기나 그리드가 아닌 모양을 사용할 수 있습니다. 이 경우 미적 요인과 가장 작은 크기를 위해 다양한 크기와 가로 세로 비율의 여러 직사각형이 컨테이너 직사각형에 모두 들어가도록 하는 방법에 대한 전략이 필요합니다. `BoxPanel` 은 이 작업을 수행하지 않고 공간을 나누는 더 간단한 기법을 사용합니다. `BoxPanel`의 기법은 자식 개수보다 큰 최소 정사각형 수를 결정하는 것입니다. 예를 들어 9개 항목은 3x3 정사각형에 들어갑니다. 10 개 항목에는 4x4 정사각형이 필요합니다. 그러나 공간을 절약하기 위해 시작 정사각형의 행이나 열을 하나 제거하고 항목을 맞출 수도 있습니다. 개수=10 예제에서는 4x3 또는 3x4 직사각형에 들어갑니다.
+여기에는 나와 있지 않지만 `BoxPanel`을 추가로 확장하는 고급 시나리오는 동적 자식을 수용하고 개별 셀의 크기를 조정하기 위한 더 강력한 요소로 자식의 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)를 사용합니다. 이 시나리오에서는 "불필요하게 사용된" 공간을 좀 더 줄이기 위해 다양한 행 또는 열 크기나 표가 아닌 모양을 사용할 수 있습니다. 이 경우 미적 요인과 가장 작은 크기를 위해 다양한 크기와 가로 세로 비율의 여러 직사각형이 컨테이너 직사각형에 모두 들어가도록 하는 방법에 대한 전략이 필요합니다. `BoxPanel` 은 이 작업을 수행하지 않고 공간을 나누는 더 간단한 기법을 사용합니다. `BoxPanel`의 기법은 자식 개수보다 큰 최소 정사각형 수를 결정하는 것입니다. 예를 들어 9개 항목은 3x3 정사각형에 들어갑니다. 10 개 항목에는 4x4 정사각형이 필요합니다. 그러나 공간을 절약하기 위해 시작 정사각형의 행이나 열을 하나 제거하고 항목을 맞출 수도 있습니다. 개수=10 예제에서는 4x3 또는 3x4 직사각형에 들어갑니다.
 
 패널에서 10개 항목에 대해 5x2를 선택하지 않는 이유가 궁금할 수도 있습니다. 이렇게 하면 항목 수에 정확히 맞기 때문입니다. 그러나 실제로 패널은 가로 세로 비율이 비슷한 직사각형으로 크기가 조정됩니다. 최소 정사각형 기법은 일반적인 레이아웃 모양에서 제대로 작동하도록 크기 조정 논리를 보정하고 셀 모양의 가로 세로 비율이 특이한 크기 조정을 권장하지 않는 방법입니다.
 
@@ -236,9 +243,4 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 **개념**
 
 * [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

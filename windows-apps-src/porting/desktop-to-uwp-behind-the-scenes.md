@@ -2,13 +2,21 @@
 author: awkoren
 Description: "이 문서에서는 데스크톱-UWP 브리지가 이면에서 작동하는 방식에 대해 깊이 있게 살펴봅니다."
 title: "데스크톱 브리지의 백그라운드 작업"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: c261f40734ab40475ca3a8e0b7c3bea7b64afacd
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e9a26e201d5059a0e5f7d41f6f11afbb41549596
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 데스크톱 브리지의 백그라운드 작업
+# <a name="behind-the-scenes-of-the-desktop-bridge"></a>데스크톱 브리지의 백그라운드 작업
 
 이 문서에서는 데스크톱-UWP 브리지가 이면에서 작동하는 방식에 대해 깊이 있게 살펴봅니다.
 
@@ -16,13 +24,13 @@ ms.openlocfilehash: c261f40734ab40475ca3a8e0b7c3bea7b64afacd
 
 변환된 앱 패키지는 데스크톱 전용으로 완전 신뢰 응용 프로그램으로 가상화되거나 샌드박스가 적용되지 않습니다. 이렇게 하면 기존의 데스크톱 응용 프로그램이 수행한 방식과 동일하게 다른 앱을 조작할 수 있습니다.
 
-## 설치 
+## <a name="installation"></a>설치 
 
 앱 패키지는 *C:\Program Files\WindowsApps\package_name* 아래 *app_name.exe* 실행 파일을 사용하여 설치됩니다. 각 패키지 폴더에는 변환된 앱에 대한 특수 XML 네임스페이스를 포함하는 매니페스트(AppxManifest.xml라고 함)가 포함됩니다. 매니페스트 파일 내에는 완전 신뢰 앱을 참조하는 ```<EntryPoint>``` 요소가 있습니다. 앱이 시작되면 앱 컨테이너 내에서 실행되지 않고 대신 평소와 같이 해당 사용자 권한으로 실행됩니다.
 
 배포 후 패키지 파일은 읽기 전용으로 표시되며 운영 체제에 의해 엄격하게 잠깁니다. Windows에서는 이러한 파일이 손상되는 경우 앱이 실행되지 않게 합니다. 
 
-## 파일 시스템
+## <a name="file-system"></a>파일 시스템
 
 브리지는 앱 상태를 포함하기 위해 앱에서 수행한 변경 내용을 AppData로 캡처하려고 합니다. 만들기, 삭제 및 업데이트를 포함하여 AppData 폴더(예: *C:\Users\user_name\AppData*)에 대한 사용자의 모든 쓰기가 사용자별/앱별 개인 위치에 기록 중 복사됩니다. 이 경우 변환된 앱에서 실제로 개인 복사본을 수정하는 경우 실제 AppData를 편집하고 있다고 착각할 수 있습니다. 이 방식으로 쓰기를 리디렉션하면 시스템에서는 앱에서 수정한 모든 파일 내용을 추적할 수 있습니다. 이렇게 하면 앱을 제거하는 경우 시스템에서 해당 파일을 제거하여 시스템 문제가 줄어들고 사용자를 위해 더 나은 앱 제거 환경이 제공됩니다. 
 
@@ -30,7 +38,7 @@ AppData 리디렉션 외에도 브리지는 Windows의 잘 알려진 폴더(Syst
 
 변환된 앱 패키지에서 파일/폴더에 대한 쓰기는 허용되지 않습니다. 패키지에 포함되지 않은 파일과 폴더에 대한 쓰기는 브리지에서 무시되며 사용자에게 권한이 있어야만 허용됩니다.
 
-### 일반 작업
+### <a name="common-operations"></a>일반 작업
 
 다음 간단한 참조 테이블에서는 일반적인 파일 시스템 작업과, 브리지에서 처리하는 방법을 보여 줍니다. 
 
@@ -41,7 +49,7 @@ AppData에서 쓰기 | 사용자별/앱별 위치에 기록 중 복사됩니다.
 패키지 내 기록 | 허용되지 않음 패키지는 읽기 전용입니다. | *C:\Program Files\WindowsApps\package_name* 내 기록은 허용되지 않습니다.
 패키지 외부에 기록 | 브리지에서 무시됩니다. 사용자에게 권한이 있으면 허용됩니다. | *C:\Windows\System32\foo.dll*에 대한 기록은 패키지에 *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\foo.dll*이 없고 사용자에게 권한이 있으면 허용됩니다.
 
-### 패키지에 포함된 VFS 위치
+### <a name="packaged-vfs-locations"></a>패키지에 포함된 VFS 위치
 
 다음 표에서 패키지의 일부로 제공된 파일이 앱에 대한 시스템에 오버레이된 위치를 보여 줍니다. 앱은 이러한 파일이 실제로 *C:\Program Files\WindowsApps\package_name\VFS* 내 리디렉션된 위치에 있을 경우 나열된 시스템 위치에 있다고 인식합니다. FOLDERID 위치는 [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx) 상수입니다.
 
@@ -62,7 +70,7 @@ FOLDERID_System\driverstore | AppVSystem32Driverstore | x86, amd64
 FOLDERID_System\logfiles | AppVSystem32Logfiles | x86, amd64 
 FOLDERID_System\spool | AppVSystem32Spool | x86, amd64 
 
-## 레지스트리
+## <a name="registry"></a>레지스트리
 
 브리지는 파일 시스템과 유사하게 레지스트리를 처리합니다. 변환된 앱 패키지에는 registry.dat 파일이 포함되어 있어 실제 레지스트리의 *HKLM\Software*와 논리적으로 같은 역할을 합니다. 런타임에 이 가상 레지스트리는 이 하이브의 콘텐츠를 네이티브 시스템 하이브로 병합하여 두 하이브에 대해 단일 보기를 제공합니다. 예를 들어, registry.dat에 단일 키 "Foo"가 포함되어 있으면 런타임에 *HKLM\Software*를 읽으면 모든 네이티브 시스템 키뿐 아니라 “Foo”도 포함되어 표시됩니다. 
 
@@ -72,7 +80,7 @@ HKCU에서 모든 쓰기는 사용자별/앱별 위치에 기록 중 복사됩�
 
 모든 쓰기는 패키지 업그레이드 중에는 유지 되며 앱을 완전히 제거해야 만 삭제됩니다. 
 
-### 일반 작업
+### <a name="common-operations"></a>일반 작업
 
 다음 간단한 참조 테이블에서는 일반적인 레지스트리 작업과, 브리지에서 처리하는 방법을 보여 줍니다. 
 
@@ -83,12 +91,7 @@ HKCU에서 쓰기 | 사용자별/앱별 개인 위치에 기록 중 복사됩니
 패키지 내에 씁니다. | 허용되지 않음 패키지는 읽기 전용입니다. | *HKLM\Software* 내 쓰기의 경우 패키지 하이브에 해당 키/값이 있는 경우 허용되지 않습니다.
 패키지 외부에 기록 | 브리지에서 무시됩니다. 사용자에게 권한이 있으면 허용됩니다. | *HKLM\Software* 내 쓰기의 경우 패키지 하이브에 해당 키/값이 없고 사용자에게 정확한 액세스 권한이 있는 한 허용됩니다.
 
-## 제거 
+## <a name="uninstallation"></a>제거 
 
 사용자가 패키지를 제거하면 *C:\Program Files\WindowsApps\package_name*에 있는 모든 파일 및 폴더가 제거되고, 브리지에서 캡처한 레지스트리 또는 AppData로 리디렉션된 기록도 제거됩니다. 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

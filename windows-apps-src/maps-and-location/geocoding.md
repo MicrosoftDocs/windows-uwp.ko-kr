@@ -3,13 +3,20 @@ author: PatrickFarley
 title: "지오코딩 및 리버스 지오코딩 수행"
 description: "Windows.Services.Maps 네임스페이스에 있는 MapLocationFinder 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩)."
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 지오코딩, 지도, 위치"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d42708a82f99e345183b6cbcb87cfdd136b10e52
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 16be7bcafaf286a71e79fb4bca01511ddc7a1ae0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 지오코딩 및 리버스 지오코딩 수행
+# <a name="perform-geocoding-and-reverse-geocoding"></a>지오코딩 및 리버스 지오코딩 수행
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -32,7 +39,7 @@ ms.openlocfilehash: d42708a82f99e345183b6cbcb87cfdd136b10e52
 
  
 
-## 위치 가져오기(지오코드)
+## <a name="get-a-location-geocode"></a>위치 가져오기(지오코드)
 
 
 다음 단계를 수행하여 주소나 장소 이름을 지리적 위치(지오코딩)로 변환합니다.
@@ -81,7 +88,7 @@ private async void geocodeButton_Click(object sender, RoutedEventArgs e)
 result = (47.6406099647284,-122.129339994863)
 ```
 
-## 주소 가져오기(리버스 지오코드)
+## <a name="get-an-address-reverse-geocode"></a>주소 가져오기(리버스 지오코드)
 
 
 다음 단계를 수행하여 지리적 위치를 주소로 변환합니다(리버스 지오코딩).
@@ -123,7 +130,7 @@ private async void reverseGeocodeButton_Click(object sender, RoutedEventArgs e)
 town = Redmond
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -133,11 +140,4 @@ town = Redmond
 * [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)
 * [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)
 * [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,13 +3,20 @@ title: "앱 간에 공유 인증서"
 description: "사용자 ID 및 암호 조합 이상의 보안 인증이 필요한 UWP(유니버설 Windows 플랫폼) 앱은 인증을 위해 인증서를 사용할 수 있습니다."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ca4c7b82fdb7f950d3f68323dec37c2f31e02c87
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 간에 공유 인증서
+# <a name="share-certificates-between-apps"></a>앱 간에 공유 인증서
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -19,7 +26,7 @@ ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 
 앱은 인증서를 사용하여 웹 서비스에 인증할 수 있으며, 여러 개의 앱이 인증서 저장소의 단일 인증서를 사용하여 동일한 사용자를 인증할 수 있습니다. 저장소에 인증서가 없는 경우 앱에 코드를 추가하여 PFX 파일에서 인증서를 가져올 수 있습니다.
 
-## Microsoft IIS(인터넷 정보 서비스) 및 클라이언트 인증서 매핑 사용
+## <a name="enable-microsoft-internet-information-services-iis-and-client-certificate-mapping"></a>Microsoft IIS(인터넷 정보 서비스) 및 클라이언트 인증서 매핑 사용
 
 
 이 문서에서는 Microsoft IIS(인터넷 정보 서비스)를 예제 목적으로 사용합니다. IIS는 기본적으로 사용되지 않습니다. 제어판을 통해 IIS를 사용하도록 설정할 수 있습니다.
@@ -29,7 +36,7 @@ ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 3.  **인터넷 정보 서비스**를 확장한 다음 **World Wide Web 서비스**를 확장합니다. **응용 프로그램 개발 기능**을 확장하고 **ASP.NET 3.5** 및 **ASP.NET 4.5**를 선택합니다. 이러한 기능을 선택하면 **인터넷 정보 서비스**를 자동으로 사용할 수 있습니다.
 4.  **확인**을 클릭하여 변경 내용을 적용합니다.
 
-## 보안 웹 서비스 만들기 및 게시
+## <a name="create-and-publish-a-secured-web-service"></a>보안 웹 서비스 만들기 및 게시
 
 
 1.  관리자 권한으로 Microsoft Visual Studio를 실행하고 시작 페이지에서 **새 프로젝트**를 선택합니다. IIS 서버에 웹 서비스를 게시하려면 관리자 액세스 권한이 필요합니다. 새 프로젝트 대화 상자에서 프레임워크를 **.NET Framework 3.5**로 변경합니다. **Visual C#** -&gt; **웹** -&gt; **Visual Studio** -&gt; **ASP.NET 웹 서비스 응용 프로그램**을 선택합니다. 응용 프로그램 이름을 "FirstContosoBank"로 지정합니다. **확인**을 클릭하여 프로젝트를 만듭니다.
@@ -51,7 +58,7 @@ ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 5.  **웹 게시** 대화 상자에서 새 프로필을 만들고 이름을 "ContosoProfile"로 지정합니다. **다음**을 클릭합니다.
 6.  다음 페이지에서 IIS 서버의 서버 이름을 입력하고 사이트 이름을 "Default Web Site/FirstContosoBank"로 지정합니다. **게시**를 클릭하여 웹 서비스를 게시합니다.
 
-## 클라이언트 인증서 인증을 사용하도록 웹 서비스 구성
+## <a name="configure-your-web-service-to-use-client-certificate-authentication"></a>클라이언트 인증서 인증을 사용하도록 웹 서비스 구성
 
 
 1.  **IIS(인터넷 정보 서비스) 관리자**를 실행합니다.
@@ -64,14 +71,14 @@ ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 
 이전 단계를 반복하여 동일한 클라이언트 인증서로 액세스할 수 있는 웹 서비스를 여러 개 만들 수 있습니다.
 
-## 인증서 인증을 사용하는 Windows 스토어 앱 만들기
+## <a name="create-a-windows-store-app-that-uses-certificate-authentication"></a>인증서 인증을 사용하는 Windows 스토어 앱 만들기
 
 
 이제 보안 웹 서비스가 하나 이상 있으므로 앱에서 인증서를 사용하여 해당 웹 서비스에 인증할 수 있습니다. [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 개체를 사용하여 인증된 웹 서비스를 요청하는 경우 초기 요청에는 클라이언트 인증서가 포함되지 않습니다. 인증된 웹 서비스에서 클라이언트 인증 요청으로 응답합니다. 그러면 Windows 클라이언트가 인증서 저장소에서 사용 가능한 클라이언트 인증서를 자동으로 쿼리합니다. 사용자는 이러한 인증서 중에서 웹 서비스에 인증할 인증서를 선택할 수 있습니다. 일부 인증서는 암호로 보호되어 있으므로 인증서 암호를 입력하는 방법을 사용자에게 제공해야 합니다.
 
 사용 가능한 클라이언트 인증서가 없으면 사용자가 인증서 저장소에 인증서를 추가 해야 합니다. 사용자가 클라이언트 인증서를 포함하는 PFX 파일을 선택하고 해당 인증서를 클라이언트 인증서 저장소로 가져올 수 있도록 하는 코드를 앱에 포함할 수 있습니다.
 
-**팁** makecert.exe를 통해 이 빠른 시작에서 사용할 PFX 파일을 만들 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)를 참조하세요.
+**팁**  makecert.exe를 통해 이 빠른 시작에서 사용할 PFX 파일을 만들 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)를 참조하세요.
 
  
 
@@ -203,8 +210,3 @@ ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 8.  앱을 실행하고 보안 웹 서비스에 로그인하거나 PFX 파일을 로컬 인증서 저장소로 가져올 수 있습니다.
 
 이러한 단계를 따르면 동일한 사용자 인증서를 사용하여 같거나 서로 다른 보안 웹 서비스에 액세스하는 앱을 여러 개 만들 수 있습니다.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

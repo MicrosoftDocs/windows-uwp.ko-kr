@@ -3,23 +3,30 @@ author: jnHs
 Description: "제출 프로세스 중에 앱 속성 페이지의 앱 선언 섹션에서 앱에 대한 추가 정보를 제공할 수 있습니다."
 title: "앱 선언"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 419d41de3ba26f6470ad99b44826f2935aea4eff
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: feacd96ca2fa0cc4cd3d1087a982f61bc18d4604
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 선언
+# <a name="app-declarations"></a>앱 선언
 
 [제출 프로세스](app-submissions.md) 중에 **앱 속성** 페이지의 **앱 선언** 섹션에서 앱에 대한 추가 정보를 제공할 수 있습니다. 이들 선언을 통해 앱이 제대로 표시되고 올바른 고객 집합에 제공되는지 확인하거나 고객이 앱을 사용하는 방법을 표시할 수 있습니다.
 
 다음 섹션에서는 각 선언 및 각 선언을 앱에 적용할지를 결정할 때 고려해야 하는 사항을 설명합니다.
 
-## 이 앱은 사용자가 구매할 수 있지만 Windows 스토어 상거래 시스템을 사용할 수 없습니다.
+## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-windows-store-commerce-system"></a>이 앱은 사용자가 구매할 수 있지만 Windows 스토어 상거래 시스템을 사용할 수 없습니다.
 
 앱에서 바로 구매할 수 있는 기회를 제공하는 앱에서는 일반적으로 Microsoft 앱에서 바로 구매 API를 사용하여 [추가 기능을 만들고 제출](add-on-submissions.md)하기 때문에 대부분은 앱에서는 이 상자가 선택되지 않은 상태로 유지되어야 합니다. [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에 따라 2015년 6월 29일 이전에 만들어지고 제출된 앱은 구매 기능이 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_8)을 준수하는 한 Microsoft의 상거래 엔진을 사용하지 않고 앱에서 바로 구매 기능을 제공할 수 있습니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
 
-## 이 앱은 접근성 준수하도록 테스트되었습니다.
+## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>이 앱은 접근성 준수하도록 테스트되었습니다.
 
 이 상자를 선택하면 스토어에서 접근성 있는 앱을 찾고 있는 고객이 앱을 검색할 수 있습니다.
 
@@ -35,9 +42,9 @@ ms.openlocfilehash: 419d41de3ba26f6470ad99b44826f2935aea4eff
 
 자세한 내용은 [Windows 런타임 앱의 접근성](https://msdn.microsoft.com/library/windows/apps/dn263101), [접근성 테스트](https://msdn.microsoft.com/library/windows/apps/mt297664) 및 [스토어에서 접근성](https://msdn.microsoft.com/library/windows/apps/mt297663)을 참조하세요.
 
-> **중요** 앱을 특별히 엔지니어링하고 접근성 시나리오를 테스트하지 않은 경우 접근성 있는 앱으로 나열하지 마세요. 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
+> **중요**  앱을 특별히 엔지니어링하고 접근성 시나리오를 테스트하지 않은 경우 접근성 있는 앱으로 나열하지 마세요. 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
 
-## 고객은 이 앱을 설치하여 드라이브 또는 이동식 저장소를 대체할 수 있습니다.
+## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>고객은 이 앱을 설치하여 드라이브 또는 이동식 저장소를 대체할 수 있습니다.
 
 이 확인란은 고객이 SD 카드 같은 이동식 저장 미디어 또는 외장형 드라이브와 같은 비시스템 볼륨 드라이브에 앱을 설치할 수 있도록 기본적으로 선택됩니다.
 
@@ -45,15 +52,15 @@ ms.openlocfilehash: 419d41de3ba26f6470ad99b44826f2935aea4eff
 
 앱이 이동식 저장소 미디어에만 설치되도록 설치를 제한하는 옵션은 없습니다.
 
-> **참고** Windows Phone 8.1에서 이 상자는 이전에 StoreManifest.xml을 통해 표시되었습니다.
+> **참고**  Windows Phone 8.1에서 이 상자는 이전에 StoreManifest.xml을 통해 표시되었습니다.
 
-## Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있습니다.
+## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있습니다.
 
 고객이 Windows에서 OneDrive에 자동으로 백업하도록 선택하면 앱 데이터를 포함할 수 있도록 이 상자가 기본적으로 선택됩니다.
 
 앱 데이터가 자동화된 백업에 포함되지 않게 하려면 이 상자를 선택 취소합니다.
 
-> **참고** Windows Phone 8.1에서 이 상자는 이전에 StoreManifest.xml을 통해 표시되었습니다.
+> **참고**  Windows Phone 8.1에서 이 상자는 이전에 StoreManifest.xml을 통해 표시되었습니다.
 
  
 
@@ -63,10 +70,5 @@ ms.openlocfilehash: 419d41de3ba26f6470ad99b44826f2935aea4eff
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

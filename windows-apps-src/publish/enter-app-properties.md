@@ -1,33 +1,40 @@
 ---
 author: jnHs
-Description: "앱 제출 프로세스의 앱 속성 페이지에서는 앱 범주를 정의하고 하드웨어 기본 설정이나 기타 선언을 지정할 수 있습니다."
+Description: "앱 제출 프로세스의 앱 속성 페이지에서 앱 범주를 정의하고 하드웨어 기본 설정이나 기타 선언을 지정할 수 있습니다."
 title: "앱 속성 입력"
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 345350cea16b850e49f6f958e304654aba1299bb
-ms.openlocfilehash: d2eb9a62dcaadca599136f4505f85e3ba94c0189
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 008c073844332aadbc17def774aae16f3ae01513
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 속성 입력
+# <a name="enter-app-properties"></a>앱 속성 입력
 
-[앱 제출 프로세스](app-submissions.md)의 **앱 속성** 페이지에서는 앱 범주를 정의하고 하드웨어 기본 설정이나 기타 선언을 지정할 수 있습니다. 여기에서 이 페이지의 옵션과 이 정보를 입력할 때 고려해야 하는 사항을 살펴봅니다.
+[앱 제출 프로세스](app-submissions.md)의 **앱 속성** 페이지에서 앱 범주를 정의하고 하드웨어 기본 설정이나 기타 선언을 지정할 수 있습니다. 여기에서 이 페이지의 옵션과 이 정보를 입력할 때 고려해야 하는 사항을 살펴봅니다.
 
 > **참고** 연령별 등급은 이제 제출 프로세스의 별도 페이지입니다. 자세한 내용은 [연령별 등급](age-ratings.md)을 참조하세요.
 
-## 범주 및 하위 범주
+## <a name="category-and-subcategory"></a>범주 및 하위 범주
 
 이 섹션에서는 스토어에서 앱을 분류하는 데 사용해야 하는 범주 및 하위 범주(해당하는 경우)를 지정합니다. 앱을 제출하려면 범주를 지정해야 합니다.
 
 자세한 내용은 [범주 및 하위 범주 테이블](category-and-subcategory-table.md)을 참조하세요.
 
-## 제품 선언
+## <a name="product-declarations"></a>제품 선언
 
 이 섹션에서 확인란을 선택하여 앱에 선언이 적용되는지를 지정할 수 있습니다. 이는 앱 표시 방식, 특정 고객에게 앱을 제공할지 여부 또는 고객의 앱 사용 방식에 영향을 미칠 수 있습니다.
 
 자세한 내용은 [앱 선언](app-declarations.md)을 참조하세요.
 
-## 시스템 요구 사항
+## <a name="system-requirements"></a>시스템 요구 사항
 
 이 섹션에서는 앱을 제대로 실행 및 조작하기 위해 특정 하드웨어 기능이 필요하거나 권장되는지를 지정할 수 있습니다. **최소 하드웨어** 및/또는 **권장 하드웨어**를 지정하려는 각 하드웨어 항목에 대한 확인란을 선택(또는 적절한 옵션 지정)합니다.
 
@@ -50,10 +57,5 @@ ms.openlocfilehash: d2eb9a62dcaadca599136f4505f85e3ba94c0189
 
 > **팁** 메모리 또는 DirectX 수준에 대한 최소 요구 사항에 맞지 않는 디바이스에서 UWP 앱을 완전히 다운로드하지 못하게 하려면 StoreManifest XML 파일에 최소 요구 사항을 지정할 수 있습니다. 자세한 내용은 [StoreManifest 스키마(Windows 10)](https://msdn.microsoft.com/library/windows/apps/mt617335)를 참조하세요.
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

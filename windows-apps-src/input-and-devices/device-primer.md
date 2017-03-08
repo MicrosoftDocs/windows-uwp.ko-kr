@@ -12,8 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: bc2601bcd04f410ae4c3609c078a8684e0fbdbeb
-ms.openlocfilehash: ea19592ea98eb7d9a1b47c1a8cf8f1990ca33797
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 058858be62a2d6bf3afc0c9461090d0211b39ebd
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -226,8 +227,3 @@ UI 고려 사항
 
 일반적인 디바이스 기능
 -   가변(디바이스에 따라 다름)
-
-
-<!--HONumber=Dec16_HO4-->
-
-

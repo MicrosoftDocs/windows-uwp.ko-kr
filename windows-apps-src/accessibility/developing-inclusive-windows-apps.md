@@ -5,15 +5,22 @@ ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: "포괄 Windows 10 앱 개발"
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 91f6a9d50b66064da7023599adbb058656fb1007
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 47c28e0629150ccbdf532afc645fe973c3dc8804
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="developing-inclusive-windows-apps"></a>포괄 Windows 앱 개발  
 
-이 문서에서는 접근성 있는 UWP(유니버설 Windows 플랫폼) 앱을 개발하는 방법에 대해 설명합니다. 특히 앱에 대한 논리 계층 구조 디자인 방법에 대해 이해하고 있다고 가정합니다. 키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
+이 문서에서는 액세스 가능한 UWP(유니버설 Windows 플랫폼) 앱을 개발하는 방법에 대해 설명합니다. 특히 앱에 대한 논리 계층 구조 디자인 방법에 대해 이해하고 있다고 가정합니다. 키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
 
 아직 이해하지 못했으면 [포괄 소프트웨어 디자인](designing-inclusive-software.md)을 먼저 읽고 시작하세요.
 
@@ -37,7 +44,7 @@ ms.openlocfilehash: 91f6a9d50b66064da7023599adbb058656fb1007
 * 어떻게 컨트롤을 UI 내에 배치 또는 그룹화할 것인가요?
 * 몇 가지 주요 컨트롤 그룹이 있나요?
     * 그렇다면, 이러한 그룹에 다른 수준의 그룹이 포함되나요?
-*   피어 컨트롤 간을 탐색하는 데 탭 이동, 특수 탐색(예: 화살표 키), 아니면 둘 다 사용해야 하나요?
+*     피어 컨트롤 간을 탐색하는 데 탭 이동, 특수 탐색(예: 화살표 키), 아니면 둘 다 사용해야 하나요?
 
 목표는 사용자가 UI 배치 방법을 이해하고 작동 가능한 컨트롤을 식별할 수 있도록 하는 것입니다. 사용자가 탐색 루프를 완료하기 전에 탭 정지가 너무 많다고 생각되면 관련된 컨트롤을 함께 그룹화하는 것이 좋습니다. 하이브리드 컨트롤과 같은 관련된 일부 컨트롤은 초기 탐색 단계에서 다뤄져야 할 수 있습니다. 제품 개발을 시작한 후에는 키보드 탐색 재작업이 어려우므로 신중하게 일찍 계획해야 합니다.  
 
@@ -84,9 +91,4 @@ XAML
 * [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://msdn.microsoft.com/enable)
 * [접근성](accessibility.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

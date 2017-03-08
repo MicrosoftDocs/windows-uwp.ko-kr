@@ -9,9 +9,16 @@ ms.assetid: 0CD395CD-E2AB-429D-BB49-56A71C5CC35D
 label: XAML custom panels overview (Windows apps)
 template: detail.hbs
 op-migration-status: ready
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: ff8d604be663b711bebf358f3256a5e6c55fb047
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1925d6b10eb23a6382bd63e812cade1311da178a
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -138,7 +145,7 @@ protected override Size MeasureOverride(Size availableSize)
 -   이상적인 사용자 지정 패널은 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) 또는 XAML 페이지 루트인 다른 요소의 바로 아래 수준에서 UI 컴퍼지션의 첫 번째 실제 화면 효과가 되기에 적합해야 합니다. [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현에서 값을 검사하지 않고 입력 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)를 자주 반환하지 마세요. 반환 **Size**에 **Infinity** 값이 있는 경우 이로 인해 런타임 레이아웃 논리에서 예외가 발생할 수 있습니다. **Infinity** 값은 스크롤 가능한 메인 앱 창에서 가져올 수 있으므로 최대 높이가 없습니다. 스크롤 가능한 다른 콘텐츠에도 같은 동작이 있을 수 있습니다.
 -   [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현의 다른 일반적인 실수는 새 기본 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)를 반환하는 것입니다(높이 및 너비 값이 0임). 해당 값으로 시작할 수 있으며, 패널에서 자식이 렌더링되지 않도록 결정하는 경우 올바른 값일 수도 있습니다. 그러나 기본 **Size**를 사용하면 호스트에서 패널 크기를 올바르게 조정하지 않습니다. UI 공간을 요청하지 않으므로 공간을 얻지 못하며 렌더링하지 않습니다. 또는 모든 패널 코드가 제대로 작동하지만 높이 0과 너비 0으로 작성되는 경우 패널이나 패널의 콘텐츠가 표시되지 않습니다.
 -   재정의 내에서 자식 요소를 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)로 캐스팅하고 레이아웃 결과로 계산된 속성, 특히 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 및 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707)를 사용하려고 시도하지 마세요. 대부분의 일반적인 시나리오에서는 자식의 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 값을 기준으로 논리를 작성할 수 있으며 자식 요소의 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 또는 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 관련 속성이 필요하지 않습니다. 요소 형식을 알고 있고 이미지 파일 기본 크기 등의 추가 정보가 있는 특수한 경우에서는 레이아웃 시스템에서 자주 변경되는 값이 아니므로 요소의 특수한 정보를 사용해도 됩니다. 레이아웃에서 계산된 속성을 레이아웃 논리의 일부로 포함하면 의도하지 않은 레이아웃 루프가 정의될 위험이 훨씬 증가합니다. 이러한 루프는 유효한 레이아웃을 만들 수 없는 상태를 발생시키며, 루프를 복구할 수 없는 경우 시스템에서 [**LayoutCycleException**](https://msdn.microsoft.com/library/windows/apps/hh673799)이 발생할 수 있습니다.
--   일반적으로 패널은 정확히 공간을 나누는 방법은 다르지만 사용 가능한 공간을 여러 자식 요소 간에 나눕니다. 예를 들어 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)는 해당 [**RowDefinition**](https://msdn.microsoft.com/library/windows/apps/br227606) 및 [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/br209324) 값을 사용하여 공간을 **Grid** 셀로 나누고 배율 크기 조정과 픽셀 값을 모두 지원하는 레이아웃 논리를 구현합니다. 픽셀 값인 경우 각 하위에 사용 가능한 크기가 이미 알려져 있으므로 해당 값이 그리드 스타일 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)에 대한 입력 값으로 전달됩니다.
+-   일반적으로 패널은 정확히 공간을 나누는 방법은 다르지만 사용 가능한 공간을 여러 자식 요소 간에 나눕니다. 예를 들어 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)는 해당 [**RowDefinition**](https://msdn.microsoft.com/library/windows/apps/br227606) 및 [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/br209324) 값을 사용하여 공간을 **Grid** 셀로 나누고 배율 크기 조정과 픽셀 값을 모두 지원하는 레이아웃 논리를 구현합니다. 픽셀 값인 경우 각 하위에 사용 가능한 크기가 이미 알려져 있으므로 해당 값이 표 스타일 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)에 대한 입력 값으로 전달됩니다.
 -   패널 자체에서 항목 사이의 안쪽 여백으로 예약된 공간을 적용할 수 있습니다. 이 경우 [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) 또는 **Padding** 속성과 다른 속성으로 측정을 노출해야 합니다.
 -   이전 레이아웃 단계를 기준으로 요소의 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 및 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 속성 값이 지정될 수 있습니다. 값이 변경되면 앱 UI 코드에서 실행할 특수 논리가 있는 경우 요소에 [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722)의 처리기를 배치할 수 있지만, 일반적으로 패널 논리에서 이벤트 처리를 사용하여 변경 사항을 확인할 필요는 없습니다. 레이아웃 관련 속성 값이 변경되었으며 해당 상황에서 패널의 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 또는 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)가 자동으로 호출되기 때문에 레이아웃 시스템에서 레이아웃을 다시 실행할 시기를 이미 결정합니다.
 
@@ -203,9 +210,4 @@ protected override Size ArrangeOverride(Size finalSize)
 
 **개념**
 * [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

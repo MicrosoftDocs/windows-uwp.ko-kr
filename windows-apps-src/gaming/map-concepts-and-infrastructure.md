@@ -1,15 +1,22 @@
 ---
 author: mtoepke
 title: "Direct3D 11에 OpenGL ES 2.0 매핑"
-description: "처음으로 OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요."
+description: "OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 처음 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요."
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, opengl, direct3d, 포팅"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d21bbf905797a7b0c14e666f1ec31a85203b30db
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1298f165444b31c75ca9d98f04eb82a58be46e5b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Direct3D 11에 OpenGL ES 2.0 매핑
+# <a name="map-opengl-es-20-to-direct3d-11"></a>Direct3D 11에 OpenGL ES 2.0 매핑
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -49,7 +56,7 @@ ms.openlocfilehash: d21bbf905797a7b0c14e666f1ec31a85203b30db
 
  
 
-## 특정 OpenGL ES 2.0 공급자에 대한 참고 사항
+## <a name="notes-on-specific-opengl-es-20-providers"></a>특정 OpenGL ES 2.0 공급자에 대한 참고 사항
 
 
 이러한 항목에서는 플랫폼 독립적 C와 Khronos OpenGL ES 2.0 사양을 사용합니다. iOS와 Android는 동일한 사양을 사용하며, 이러한 플랫폼용으로 개발된 OpenGL ES 2.0 코드는 앞으로 살펴볼 코드 조각과 매우 유사합니다(일반적으로 개체 지향 API로 표시되기는 함). 또한 각 플랫폼의 내부 기능 및 언어 차이 때문에 사소한 차이점은 있을 수 있으며, 특히 메서드 매개 변수 형식 또는 일반적인 언어 구문에서 사소한 차이점이 있을 수 있습니다. 예를 들어 iOS에서는 Objective-C를 사용합니다. Android에 C++를 사용할 수 있는 기능이 있기는 하지만, 일부 개발자는 순수 Java 구현에 의존해 왔을 수 있습니다. 이러한 사실을 염두에 둔다면, OpenGL ES API의 전반적인 개념, 구조 및 사용이 다르지 않으므로 이러한 항목이 여전히 도움이 될 것입니다.
@@ -60,10 +67,5 @@ ms.openlocfilehash: d21bbf905797a7b0c14e666f1ec31a85203b30db
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

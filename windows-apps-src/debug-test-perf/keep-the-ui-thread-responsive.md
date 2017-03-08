@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: "UI 스레드 응답 유지"
 description: "사용자는 컴퓨터 유형에 관계없이 계산하는 동안 앱이 계속 응답할 것으로 기대합니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: 2a215264db018dfecff897b13b24ba535e7483ec
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: eae6c26979f3aa6b1c9fabf217f6a49ed89dd38b
+ms.lasthandoff: 02/07/2017
 
 ---
-# UI 스레드 응답 유지
+# <a name="keep-the-ui-thread-responsive"></a>UI 스레드 응답 유지
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -18,9 +25,9 @@ ms.openlocfilehash: 2a215264db018dfecff897b13b24ba535e7483ec
 
 UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 대한 거의 모든 변경 작업에는 UI 스레드를 사용해야 합니다. 백그라운드 스레드에서 UI를 업데이트할 수는 없지만 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 코드가 해당 위치에서 실행되도록 메시지를 게시할 수 있습니다.
 
-> **참고** 단, 입력이 처리되는 방식이나 기본 레이아웃에 영향을 주지 않을 UI 변경을 적용할 수 있는 별도의 렌더링 스레드가 있습니다. 예를 들어 레이아웃에 영향을 주지 않는 많은 애니메이션 및 전환은 이 렌더링 스레드에서 실행할 수 있습니다.
+> **참고**  단, 입력이 처리되는 방식이나 기본 레이아웃에 영향을 주지 않을 UI 변경을 적용할 수 있는 별도의 렌더링 스레드가 있습니다. 예를 들어 레이아웃에 영향을 주지 않는 많은 애니메이션 및 전환은 이 렌더링 스레드에서 실행할 수 있습니다.
 
-## 요소 인스턴스화 지연
+## <a name="delay-element-instantiation"></a>요소 인스턴스화 지연
 
 앱의 가장 느린 단계에는 시작 및 보기 전환이 포함할 수 있습니다. 초기에 사용자에게 표시되는 UI를 불러오는 데 필요한 것 이상으로 많은 작업을 수행하지 마세요. 예를 들어 점진적으로 공개되는 UI 및 팝업 내용에 대한 UI를 만들지 마세요.
 
@@ -29,11 +36,11 @@ UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 
 
 [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918)는 사용 중이지 않을 때 UI 스레드가 처리되도록 작업을 큐에 대기시킵니다.
 
-## 비동기 API 사용
+## <a name="use-asynchronous-apis"></a>비동기 API 사용
 
 이 플랫폼은 앱을 응답 가능한 상태로 유지할 수 있도록 여러 API의 비동기 버전을 제공합니다. 비동기 API를 사용하면 활성 실행 스레드가 상당한 시간 동안 차단되는 일이 없습니다. UI 스레드에서 API를 호출할 때 비동기 버전이 있다면 이 버전을 사용하세요. **async** 패턴으로 프로그래밍하는 방법에 대한 자세한 내용은 [비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/Mt187335) 또는 [C# 또는 Visual Basic에서 비동기식 API 호출](https://msdn.microsoft.com/library/windows/apps/Mt187337)을 참조하세요.
 
-## 작업을 백그라운드 스레드로 오프로드
+## <a name="offload-work-to-background-threads"></a>작업을 백그라운드 스레드로 오프로드
 
 신속하게 반환하도록 이벤트 처리기를 작성합니다. 적지 않은 작업을 수행해야 하는 경우 백그라운드 스레드에서 작업을 예약하고 반환합니다.
 
@@ -97,15 +104,10 @@ public class AsyncExample
 
 이 예제에서는 UI 스레드의 응답을 유지하기 위해 `NextMove-Click` 처리기가 **await**에서 반환합니다. 그러나 백그라운드 스레드에서 실행되는 `ComputeNextMove`가 완료된 후에는 해당 처리기에서 실행이 다시 선택됩니다. 처리기의 나머지 코드는 결과와 함께 UI를 업데이트합니다.
 
-> **참고** 또한 UWP용 [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) 및 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) API도 비슷한 시나리오에 사용할 수 있습니다. 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/Mt187340)을 참조하세요.
+> **참고**  또한 UWP용 [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) 및 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) API도 비슷한 시나리오에 사용할 수 있습니다. 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/Mt187340)을 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

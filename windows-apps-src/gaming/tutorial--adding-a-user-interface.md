@@ -3,25 +3,32 @@ author: mtoepke
 title: "사용자 인터페이스 추가"
 description: "샘플 게임에서 주 게임 개체 및 기본 렌더링 프레임워크를 구현하는 방법을 살펴보았습니다."
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 사용자 인터페이스, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4f4ca9626e38ce7449b6476345205d136b3d9a2d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 사용자 인터페이스 추가
+# <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 샘플 게임에서 주 게임 개체 및 기본 렌더링 프레임워크를 구현하는 방법을 살펴보았습니다. 이제 샘플 게임에서 플레이어의 게임 상태에 대한 피드백을 제공하는 방법을 살펴보겠습니다. 여기서는 3D 그래픽 파이프라인 출력의 맨 위에 간단한 메뉴 옵션 및 주의 표시 구성 요소를 추가하는 방법에 대해 알아봅니다.
 
-## 목표
+## <a name="objective"></a>목표
 
 
 -   기본 사용자 인터페이스 그래픽 및 동작을 UWP(유니버설 Windows 플랫폼) DirectX 게임에 추가합니다.
 
-## 사용자 인터페이스 오버레이
+## <a name="the-user-interface-overlay"></a>사용자 인터페이스 오버레이
 
 
 DirectX 게임에 텍스트 및 사용자 인터페이스 요소를 표시하는 방법은 많이 있지만 여기서는 한 가지 [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx)(텍스트 요소에 대한 [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) 포함)를 중점적으로 살펴보겠습니다.
@@ -34,7 +41,7 @@ UWP DirectX 게임에서 XAML을 사용하여 사용자 인터페이스를 개�
 
 이 게임 샘플에는 점수와 게임 내 제어를 위한 주의 표시와 게임 상태 텍스트 및 옵션(일시 중단 정보 및 수준 시작 옵션 등)을 표시하는 데 사용되는 오버레이라는 두 개의 주요 UI 구성 요소가 있습니다.
 
-### 주의 표시에 Direct2D 사용
+### <a name="using-direct2d-for-a-heads-up-display"></a>주의 표시에 Direct2D 사용
 
 다음은 게임 화면 효과가 없는 게임 샘플의 게임 내 주의 표시입니다. 이 표시는 단순하고 깔끔하여 플레이어가 3D 세계 탐색 및 타겟 사격에만 집중할 수 있습니다. 뛰어난 인터페이스나 주의 표시는 플레이어가 게임에서 이벤트를 처리하고 대응하는 능력을 방해하면 안 됩니다.
 
@@ -177,7 +184,7 @@ void GameHud::Render(
 
  
 
-### 오버레이에 게임 상태 정보 표시
+### <a name="displaying-game-state-information-with-an-overlay"></a>오버레이에 게임 상태 정보 표시
 
 이 주의 표시 외에도 게임 샘플에는 5가지 게임 상태를 나타내는 오버레이가 있습니다. 이 상태는 모두 플레이어가 읽어야 하는 텍스트가 포함된 큰 검은색 사각형으로 되어 있습니다. 이동-보기 컨트롤러 사각형은 이러한 상태에서 활성화되지 않으므로 그려지지 않습니다. 이러한 오버레이 상태는 다음과 같습니다.
 
@@ -203,7 +210,7 @@ void GameHud::Render(
 
 이러한 5가지 상태에 대해 오버레이를 초기화하고 그리는 방법을 살펴보겠습니다.
 
-### 오버레이 초기화 및 그리기
+### <a name="initializing-and-drawing-the-overlay"></a>오버레이 초기화 및 그리기
 
 5가지 명시적 상태에는 공통된 점이 있습니다. 첫 번째는 모두 화면의 가운데에 있는 검은색 사각형을 배경으로 사용한다는 점이고, 두 번째는 표시된 텍스트가 제목 텍스트 또는 본문 텍스트라는 점, 세 번째는 텍스트에서 맑은 고딕 글꼴을 사용하고 배경 사각형 위에 그려진다는 점입니다. 따라서 필요한 리소스와 해당 리소스를 구현하는 메서드가 매우 유사합니다.
 
@@ -370,7 +377,7 @@ void GameInfoOverlay::RecreateDpiDependentResources()
 
 이제 오버레이에 몇 가지 텍스트만 표시하면 됩니다.
 
-### 오버레이에 게임 상태 표시
+### <a name="representing-game-state-in-the-overlay"></a>오버레이에 게임 상태 표시
 
 게임 샘플에 있는 5가지 오버레이의 **GameInfoOverlay** 개체에는 각각 해당하는 메서드가 있습니다. 이러한 메서드는 오버레이의 변형을 그려 게임 자체에 대한 명시적 정보를 플레이어에게 전달합니다. 물론 이러한 전달은 제목 문자열과 본문 문자열의 두 문자열로 표현됩니다. 샘플은 **RecreateDeviceResources** 메서드에서 이 정보에 대한 리소스 및 레이아웃을 이미 구성했으므로 오버레이 상태 관련 문자열만 제공하면 됩니다.
 
@@ -502,11 +509,11 @@ void DirectXApp::SetGameInfoOverlay(GameInfoOverlayState state)
 
 이제 게임 샘플에서 게임 상태에 따라 텍스트 정보를 플레이어에게 전달할 수 있습니다.
 
-### 다음 단계
+### <a name="next-steps"></a>다음 단계
 
 다음 항목인 [컨트롤 추가](tutorial--adding-controls.md)에서는 플레이어가 게임 샘플과 상호 작용하는 방법 및 입력을 통해 게임 상태를 변경하는 방법에 대해 살펴봅니다.
 
-### 이 섹션에 대한 전체 샘플 코드
+### <a name="complete-sample-code-for-this-section"></a>이 섹션에 대한 전체 샘플 코드
 
 GameHud.h
 
@@ -1478,7 +1485,7 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 }
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1489,10 +1496,5 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

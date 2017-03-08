@@ -1,26 +1,33 @@
 ---
 author: mtoepke
 title: "DirectX 게임의 2D 그래픽"
-description: "2D 비트맵 그래픽 및 효과의 용도와 게임에서 사용하는 방법에 대해 검토합니다.다."
+description: "2D 비트맵 그래픽의 사용 및 효과와 게임에서 사용하는 방법에 대해 검토합니다."
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, games, directx, 2d, 그래픽"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7a4c41b24bc4f703f035bb0daf0f1bc280af1e68
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 702b47d4002e9a2d0d62cc67e71432bb630e21d4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DirectX 게임의 2D 그래픽
+# <a name="2d-graphics-for-directx-games"></a>DirectX 게임용 2D 그래픽
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-2D 비트맵 그래픽 및 효과의 용도와 게임에서 사용하는 방법에 대해 검토합니다.다.
+2D 비트맵 그래픽의 사용 및 효과와 게임에서 사용하는 방법에 대해 검토합니다.
 
 2D 그래픽은 2D 원형 또는 비트맵을 처리하는 3D 그래픽의 하위 집합입니다. 좀더 일반적으로 말하자면 게임 플레이가 일반적으로 x-y 평면으로 제한되기 때문에 3D 게임에서 수행할 수 있는 방식에서 z 좌표를 사용하지 않는 것입니다. 경우에 따라 3D 그래픽 기술을 사용하여 화면 효과 구성 요소를 만들기도 하지만 일반적으로 개발하는 것이 더 간단합니다. 게임이 처음인 경우 2D 게임에서 시작하는 것이 좋으며 2D 그래픽 개발은 DirectX에 대한 핸들을 가져올 수 있는 좋은 방법이 될 수 있습니다.
 
 Direct2D나 Direct3D 또는 몇 가지 조합을 사용하여 DirectX에서 2D 게임 그래픽을 개발할 수 있습니다. [**Sprite**](https://msdn.microsoft.com/library/windows/desktop/bb205601) 클래스와 같이 2D 게임 개발에 보다 유용한 클래스 대부분은 Direct3D에 있습니다. Direct2D는 기본적으로 그리기 원형(예: 원, 선 및 평면 다각형 도형)에 대한 지원이 필요한 사용자 인터페이스 및 앱을 대상으로 하는 API 집합입니다. 이러한 점을 고려하여 특히 게임 오버레이, 인터페이스 및 HUD(주의 표시)를 만드는 경우처럼 게임 그래픽을 만들거나 간단한 게임부터 보다 세부적인 게임까지 다양한 2D 게임을 만들 수 있는 강력하고 성능이 우수한 클래스 및 메서드 집합을 제공합니다. 2D 게임을 만들 때 가장 효과적인 접근 방식은 라이브러리의 요소와 이 항목에서 2D 그래픽 개발에 접근하는 방식을 사용하는 것입니다.
 
-## 개념 개요
+## <a name="concepts-at-a-glance"></a>개념 개요
 
 
 현대식 3D 그래픽 및 해당 그래픽을 지원하는 하드웨어가 출시되기 전까지 게임은 기본적으로 2D였으며 대부분의 그래픽 기술은 일반적으로 1:1 방식으로 화면의 픽셀로 변환되거나 변형되는 색상 데이터의 배열인 메모리 블록 이동과 관련되었습니다.
@@ -39,7 +46,7 @@ DirectX에서 2D 그래픽은 3D 파이프라인의 일부입니다. 훨씬 더 
 -   클리핑은 디스플레이의 표시되는 영역을 벗어나거나 보기 우선 순위가 더 높은 개체에 의해 숨겨진 비트맵이나 기하 도형의 일부를 제거하는 경우입니다.
 -   프레임 버퍼는 화면에 그릴 최종 래스터 맵을 포함하는 메모리에 있는 영역이며, 그래픽 하드웨어 자체의 메모리에 있는 영역이기도 합니다. 스왑 체인은 버퍼 모음으로, 여기에서 백 버퍼에 그리고 이미지가 준비되면 전면으로 "스왑"하여 표시합니다.
 
-## 디자인 고려 사항
+## <a name="design-considerations"></a>디자인 고려 사항
 
 
 2D 그래픽 개발은 Direct3D에 개발에 익숙해질 수 있는 좋은 방법이며 이 개발을 통해 오디오, 컨트롤 및 게임 기술 같이 게임 개발의 다른 중요한 측면에 더 많은 시간을 투자할 수 있습니다.
@@ -50,7 +57,7 @@ DirectX에서 2D 그래픽은 3D 파이프라인의 일부입니다. 훨씬 더 
 
 멋진 아트 작업은 화면 효과와 관련하여 가장 귀중한 자산이 됩니다. 비트맵 그래픽에는 최신 셰이더 모델 기능을 사용하는 사실적인 3D 화면 효과가 부족할 수 있지만 뛰어난 고해상도 아트 작업으로 성능 저하는 훨씬 더 줄이면서 더 많은 스타일 및 개성을 전달할 수도 있습니다.
 
-## 참조
+## <a name="reference"></a>참조
 
 
 -   [Direct2D 개요](https://msdn.microsoft.com/library/windows/desktop/dd370987)
@@ -68,10 +75,5 @@ DirectX에서 2D 그래픽은 3D 파이프라인의 일부입니다. 훨씬 더 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

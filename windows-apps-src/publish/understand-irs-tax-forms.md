@@ -2,9 +2,17 @@
 author: jnHs
 Description: "Microsoft에서 발급하는 세금 양식의 수령인과 사용 가능한 시기 등 자세한 내용을 알아보세요."
 title: "Microsoft에서 발급하는 IRS 세금 양식 이해"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 translationtype: Human Translation
-ms.sourcegitcommit: 684a76a503a0adefb1754059ffa6aa8d4d8d940b
-ms.openlocfilehash: 2927588bc096ef1ed9e8451cea73ba78efa9d7c0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -54,10 +62,10 @@ EIN: \*\*\*\*\*4442<br>
     <td valign="top">해당 사항이 없는 경우</td>
     <td valign="top">없음</td>
   </tr>
-</table>
-
-
-<table>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
   <tr>
      <th>유료 앱을 판매하는 미국 국적의 개발자이고... </th>
      <th> 수령하게 되는 양식</th>
@@ -119,9 +127,4 @@ EIN: \*\*\*\*\*0505<br>
 
 
 > **참고** **IRS 세금 양식**과 관련하여 추가적인 질문이나 우려 사항이 있는 경우 [지원 티켓](http://aka.ms/storesupport)을 만드세요. Microsoft는 특정 세금 상황과 관련된 질문에 답할 수 없습니다. 이러한 질문에 대해서는 세무 전문가에게 조언을 구하시기 바랍니다.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -3,10 +3,16 @@ author: mcleanbyron
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: "앱에서 AdControl 오류를 검색하는 방법을 알아봅니다."
 title: "JavaScript에서 오류 처리 연습"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, 오류 처리, javascript"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: ad177c964f2a01640d33fc09f1789fc857801792
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 935ce9ca17d2b9d4a63496ab0b254960bd68e23d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -80,9 +86,4 @@ ms.openlocfilehash: ad177c964f2a01640d33fc09f1789fc857801792
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

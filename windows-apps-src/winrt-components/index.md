@@ -3,13 +3,20 @@ author: msatranjr
 title: "Windows 런타임 구성 요소"
 description: "Windows 런타임 구성 요소는 C#, Visual Basic, JavaScript, C++ 등 모든 언어에서 인스턴스화하고 사용할 수 있는 자체 포함된 개체입니다."
 ms.assetid: 55887622-828b-4318-87f2-25592268f7c1
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4e9f3de68c44cf545ceee2efd99d9db8cab08676
-ms.openlocfilehash: e0dfdce921ee910d0440f01b4f816598499925f5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 853bd782ca9b5495aeb74a4aaf3dc53f23d7c282
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 런타임 구성 요소
+# <a name="windows-runtime-components"></a>Windows 런타임 구성 요소
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -33,10 +40,5 @@ Visual Studio 및 C#, Visual Basic 또는 C++를 통해 UWP(유니버설 Windows
  
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

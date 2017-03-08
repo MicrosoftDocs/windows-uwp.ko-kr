@@ -5,9 +5,16 @@ title: "원시 알림 개요"
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 label: TBD
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 8aa2c34969b87fbe440c578d93553dbdd6f3d8c4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b8d695dbf3aa662a760f162b6fcb818d90f45c38
+ms.lasthandoff: 02/07/2017
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -125,10 +132,5 @@ Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=2
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

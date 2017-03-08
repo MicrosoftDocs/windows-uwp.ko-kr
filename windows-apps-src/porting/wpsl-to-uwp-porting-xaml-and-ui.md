@@ -3,9 +3,16 @@ author: mcleblanc
 description: "선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 Windows Phone Silverlight에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다."
 title: "Windows Phone Silverlight XAML 및 UI를 UWP로 포팅"
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 3aa68943724c008e18df63d8b0ae20f448146303
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1ec72aec1e94ff92ef30fcc206456c7614107c98
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -238,7 +245,7 @@ Windows Phone Silverlight 앱에서는 비트맵 형식의 알파 마스크를 �
     <BitmapIcon UriSource="Assets/winrt_check.png" Width="21" Height="21"/>
 ```
 
-여기서 winrt\_check.png는 wpsl\_check.png처럼 비트맵 형식의 알파 마스크이며 동일한 파일일 수도 있습니다. 하지만 다양한 배율 인수에 사용하도록 다양한 크기의 winrt\_check.png를 제공할 수도 있습니다. 이에 대한 자세한 내용과 **Width** 및 **Height** 값을 변경하는 방법에 대한 설명은 이 항목의 [보기/유효 픽셀, 가시거리 및 배율 인수](#view-effective-pixels-viewing-distance-and-scale-factors)를 참조하세요.
+여기서 winrt\_check.png는 wpsl\_check.png처럼 비트맵 형식의 알파 마스크이며 동일한 파일일 수도 있습니다. 하지만 다양한 배율 인수에 사용하도록 다양한 크기의 winrt\_check.png를 제공할 수도 있습니다. 이에 대한 자세한 내용과 **Width** 및 **Height** 값을 변경하는 방법에 대한 설명은 이 항목의 [보기 또는 유효 픽셀, 가시거리 및 배율 인수](#view-or-effective-pixels-viewing-distance-and-scale-factors)를 참조하세요.
 
 비트맵 형식의 밝은 테마와 어두운 테마 간에 차이가 있는 경우에 적절한 일반적인 방법은 어두운 전경(밝은 테마용)과 밝은 전경(어두운 테마용)을 가진 두 이미지 자산을 사용하는 것입니다. 이 비트맵 자산 집합의 이름을 지정하는 방법에 대한 자세한 내용은 [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324)을 참조하세요. 이미지 파일 집합의 이름을 올바르게 지정한 후 다음과 같이 루트 이름을 사용하여 이미지 파일 집합을 추상적으로 참조할 수 있습니다.
 
@@ -355,7 +362,7 @@ UWP 해당 버전:
 
 [타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)을 참조하세요.
 
-## <a name="vieweffective-pixels-viewing-distance-and-scale-factors"></a>보기/유효 픽셀, 가시거리 및 배율 인수
+## <a name="view-or-effective-pixels-viewing-distance-and-scale-factors"></a>보기 또는 유효 픽셀, 가시거리 및 배율 인수
 
 Windows Phone Silverlight 앱 및 Windows 10 앱은 장치의 실제 물리적 크기와 해상도에서 UI 요소의 크기 및 레이아웃을 추상화하는 방법과 다릅니다. Windows Phone Silverlight 앱은 보기 픽셀을 사용하여 이 작업을 수행합니다. Windows 10에서 보기 픽셀의 개념은 유효 픽셀의 개념으로 구체화되었습니다. 다음은 해당 용어에 대한 설명, 해당 용어의 의미, 이 개념이 제공하는 추가적인 가치입니다.
 
@@ -391,10 +398,5 @@ UWP 앱에서 명령 코드로 최소 크기(너비 및 높이)를 지정할 수
 ## <a name="related-topics"></a>관련 항목
 
 * [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

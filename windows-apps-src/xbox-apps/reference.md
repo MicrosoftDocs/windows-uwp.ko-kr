@@ -2,17 +2,25 @@
 author: v-angraf
 title: "Xbox One의 UWP API 참조"
 description: "Xbox One의 UWP에 대한 API 참조입니다."
+ms.author: v-angraf
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
+ms.assetid: 5ae8e953-0465-487b-81dd-54a85c904daf
 translationtype: Human Translation
-ms.sourcegitcommit: 3d1c06c556ac8d5bbb915bbfa9f023b0d2b4544f
-ms.openlocfilehash: 0d7fb9a2706dbcb1757c367c3e0b0c61c10eea9a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 36a005bd4af09eac94f5b83dd8a2474d0580d556
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Xbox One의 UWP API 참조
+# <a name="uwp-on-xbox-one-api-reference"></a>Xbox One의 UWP API 참조
 
 이 섹션에는 Xbox One의 UWP API에 대한 참조 항목이 포함되어 있습니다.
 
-| URI      | 설명 |
+| URI        | 설명 |
 |------------|-------------|
 |[/api/app/packagemanager/register](wdp-loose-folder-register-api.md)| 느슨한 폴더에 포함된 앱을 등록합니다. |
 |[/api/app/packagemanager/upload](wdp-folder-upload.md)| 전체 폴더를 콘솔에 업로드합니다. |
@@ -23,12 +31,7 @@ ms.openlocfilehash: 0d7fb9a2706dbcb1757c367c3e0b0c61c10eea9a
 |[/ext/update/policy](wdp-updatepolicy-api.md)| 콘솔에 적용되는 업데이트 정책을 관리합니다. |
 |[/ext/xboxlive/sandbox](wdp-sandbox-api.md)| Xbox Live 샌드박스를 관리합니다. |
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

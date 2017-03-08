@@ -3,39 +3,46 @@ author: jwmsft
 title: "xPhase 특성"
 description: "xBind 태그 확장과 함께 xPhase를 사용하여 ListView 및 GridView 항목을 증분적으로 렌더링하고 이동 환경을 개선할 수 있습니다."
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: c6100f59bb91bc3c6451fc2167d914b0a4a36ded
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 873da2adeea277e0f8f869703aac782c21b0419e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:Phase 특성
+# <a name="xphase-attribute"></a>x:Phase 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 [{x:Bind} 태그 확장](x-bind-markup-extension.md)과 함께 **x:Phase**를 사용하여 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 항목을 증분적으로 렌더링하고 이동 환경을 개선할 수 있습니다. **x:Phase**는 [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) 이벤트를 사용하여 목록 항목의 렌더링을 수동으로 제어할 때와 동일한 효과를 얻을 수 있는 선언적 방법입니다. [ListView 및 GridView 항목의 증분 업데이트](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
 
-## XAML 특성 사용
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
 
 ``` syntax
 <object x:Phase="PhaseValue".../>
 ```
 
-## XAML 값
+## <a name="xaml-values"></a>XAML 값
 
 
 | 용어 | 설명 |
 |------|-------------|
 | PhaseValue | 요소가 처리되는 단계를 나타내는 숫자입니다. 기본값은 0입니다. | 
 
-## 설명
+## <a name="remarks"></a>설명
 
 터치 또는 마우스 휠을 사용하여 목록을 빠르게 이동할 경우 데이터 템플릿의 복잡성에 따라 목록이 스크롤 속도만큼 빠르게 항목을 렌더링하지 못할 수도 있습니다. 휴대폰 또는 태블릿과 같은 전원 효율적인 CPU를 사용하는 휴대용 장치에서 특히 그렇습니다.
 
 단계를 사용하면 콘텐츠의 우선 순위를 지정하여 가장 중요한 요소가 먼저 렌더링되도록 데이터 템플릿의 증분 렌더링이 가능합니다. 이렇게 하면 빠르게 이동할 경우 각 항목에 대한 일부 콘텐츠가 목록에 표시되고 시간이 허용되면 각 템플릿의 더 많은 요소가 렌더링됩니다.
 
-## 예제
+## <a name="example"></a>예제
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
@@ -77,10 +84,5 @@ ms.openlocfilehash: c6100f59bb91bc3c6451fc2167d914b0a4a36ded
 단계는 [{x:Bind}](x-bind-markup-extension.md) 바인딩에만 영향을 주며, [{Binding}](binding-markup-extension.md) 바인딩에는 영향을 주지 않습니다.
 
 단계를 인식하는 컨트롤을 사용하여 항목 템플릿을 렌더링하는 경우에만 단계가 적용됩니다. Windows 10의 경우 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)를 의미합니다. 다른 항목 컨트롤에서 사용되는 데이터 템플릿이나 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) 또는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 섹션과 같은 다른 시나리오에는 단계가 적용되지 않습니다. 이러한 경우에는 모든 UI 요소가 한 번에 데이터 바인딩됩니다.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

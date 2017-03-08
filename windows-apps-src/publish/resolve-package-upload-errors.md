@@ -3,9 +3,16 @@ author: jnHs
 Description: "앱 제출 프로세스에서 앱 패키지를 업로드하는 동안 오류가 발생하면 앱을 스토어에 제출하기 전에 먼저 오류를 해결해야 합니다."
 title: "패키지 업로드 오류 해결"
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2ff09d43cd39967028b39b4f602f4dfdf2cbcdcc
-ms.openlocfilehash: 4f7f9698d8b8b17654b6f2e0420c7cdc6031f018
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 92a46c556303b88f8d506f5315e23d4e2b2edf5f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -27,7 +34,7 @@ ms.openlocfilehash: 4f7f9698d8b8b17654b6f2e0420c7cdc6031f018
 
 또한 제출에 Windows Phone 8.1 XAP를 두 개 이상 포함하는 경우에는 버전 번호가 동일해야 합니다.
 
-**참고** 다른 오류 메시지와 관련된 추가 질문 및 이를 해결하는 방법에 대한 도움말은 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=224196)을 참조하세요.
+**참고**  다른 오류 메시지와 관련된 추가 질문 및 이를 해결하는 방법에 대한 도움말은 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=224196)을 참조하세요.
 
  
 
@@ -37,10 +44,5 @@ ms.openlocfilehash: 4f7f9698d8b8b17654b6f2e0420c7cdc6031f018
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

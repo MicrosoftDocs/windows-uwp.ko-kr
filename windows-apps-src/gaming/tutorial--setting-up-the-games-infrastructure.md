@@ -3,30 +3,37 @@ author: mtoepke
 title: "게임 프로젝트 설정"
 description: "게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 설정, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fd8e676e66c1df530aca41e05f2ea68d96d01a32
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3bf9e6f70f71dc0b70a2f8af148c44acc1a329fb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임 프로젝트 설정
+# <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다. 적합한 템플릿을 사용하고 게임 개발에 맞게 특별히 프로젝트를 구성하면 시간을 절약하고 혼동을 줄일 수 있습니다. 여기서는 간단한 게임 프로젝트 설정 및 구성에 대한 단계별로 안내합니다.
 
-## 목표
+## <a name="objective"></a>목표
 
 
 -   Visual Studio에서 Direct3D 게임 프로젝트를 설정하는 방법을 알아봅니다.
 
-## 게임 프로젝트 설정
+## <a name="setting-up-the-game-project"></a>게임 프로젝트 설정
 
 
 간편한 텍스트 편집기, 몇 가지 샘플 및 초보적인 수준의 지능만 있으면 처음부터 게임을 빌드할 수 있습니다. 그러나 시간 절약 측면에서는 가장 효과적인 방법이 아닐 수 있습니다. 또한 UWP(유니버설 Windows 플랫폼) 개발이 처음이라면 Visual Studio 사용이 부담스럽지 않을 리가 없습니다. 다음은 프로젝트를 활발하게 시작하기 위해 수행할 작업입니다.
 
-## 1. 적합한 템플릿을 선택합니다.
+## <a name="1-pick-the-right-template"></a>1. 적합한 템플릿을 선택합니다.
 
 
 Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특정 앱 유형을 대상으로 하는 설정 및 코드 파일 모음입니다. Microsoft Visual Studio 2015에는 게임 및 그래픽 앱 개발을 상당히 쉽게 수행할 수 있는 많은 템플릿이 있습니다. 템플릿을 사용하지 않을 경우 기본 그래픽 렌더링 및 디스플레이 프레임워크 대부분을 직접 개발해야 하는데, 초보 게임 개발자에게는 매우 힘들 일이 될 수 있습니다.
@@ -120,7 +127,7 @@ void App::Run()
 
 게임 창을 닫으면 이 메서드는 모든 이벤트를 디스패치하고 타이머를 업데이트하며 그래픽 파이프라인의 결과를 렌더링하여 제공합니다. 이 메서드는 [게임의 UWP 프레임워크 정의](tutorial--building-the-games-metro-style-app-framework.md) 및 [렌더링 파이프라인 어셈블](tutorial--assembling-the-rendering-pipeline.md)에서 자세히 살펴보겠습니다. 지금은 UWP DirectX 게임의 기본 코드 구조를 알아보아야 합니다.
 
-## 2. package.appxmanifest 파일을 검토하고 업데이트합니다.
+## <a name="2-review-and-update-the-packageappxmanifest-file"></a>2. package.appxmanifest 파일을 검토하고 업데이트합니다.
 
 
 코드 파일이 템플릿과 관련된 전부가 아닙니다. **package.appxmanifest** 파일에는 게임 패키징 및 시작과 Windows 스토어에 제출하는 데 사용되는 프로젝트에 대한 메타데이터가 포함되어 있습니다. 또한 플레이어의 시스템에서 게임에서 실행되어야 하는 시스템 리소스에 액세스하는 데 사용하는 중요한 정보가 포함되어 있습니다.
@@ -137,7 +144,7 @@ void App::Run()
 
 이제 **DirectX 11 앱(유니버설 Windows)** 템플릿과 함께 제공되는 나머지 파일을 살펴보겠습니다.
 
-## 3. 포함된 라이브러리 및 헤더를 검토합니다.
+## <a name="3-review-the-included-libraries-and-headers"></a>3. 포함된 라이브러리 및 헤더를 검토합니다.
 
 
 아직 살펴보지 않은 몇 개의 파일이 있습니다. 이 파일은 Direct3D 게임 개발 시나리오에 공통적으로 적용되는 추가 도구 및 지원을 제공합니다.
@@ -153,7 +160,7 @@ void App::Run()
 
  
 
-### 다음 단계
+### <a name="next-steps"></a>다음 단계
 
 이제 DirectX를 사용하는 UWP를 만들고 DirectX 11 앱(유니버설 Windows) 템플릿에서 제공하는 구성 요소 및 파일을 식별할 수 있습니다.
 
@@ -165,10 +172,5 @@ void App::Run()
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

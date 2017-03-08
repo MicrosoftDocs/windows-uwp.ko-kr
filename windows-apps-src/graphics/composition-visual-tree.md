@@ -3,18 +3,25 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: "컴퍼지션 시각적 트리"
 description: "컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e6e40d60708189235c02a21df7e232d52ecfbfe4
+ms.lasthandoff: 02/07/2017
 
 ---
-# 컴퍼지션 시각적 트리
+# <a name="composition-visual-tree"></a>컴퍼지션 시각적 트리
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다.
 
-## 화면 효과
+## <a name="visuals"></a>화면 효과
 
 시각적 트리 구조는 세 가지 시각적 개체 형식과, 시각적 개체 콘텐츠에 영향을 주는 여러 하위 클래스가 있는 기본 브러시 클래스로 구성됩니다.
 
@@ -23,7 +30,7 @@ ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
 -   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) - 시각적 개체의 콘텐츠에 효과를 적용할 수 있습니다. CompositionBrush의 하위 클래스에는 여러 가지가 있습니다.
 
-## CompositionVisual 샘플
+## <a name="the-compositionvisual-sample"></a>CompositionVisual 샘플
 
 샘플에는 클릭하여 화면으로 끌 수 있는 단색 사각형이 여러 개 포함되어 있습니다. 사각형을 클릭하면 앞으로 가져와서 45도 회전되고 끌면 불투명해집니다.
 
@@ -44,7 +51,7 @@ ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
 
 이 샘플에서는 애니메이션 또는 더 복잡한 효과 등의 개념은 제공하지 않으며 이러한 모든 시스템에서 사용하는 구성 요소만 다룹니다.
 
-## 작성자 만들기
+## <a name="creating-a-compositor"></a>작성자 만들기
 
 변수에서 팩터리로 사용하기 위해 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 만들고 저장하는 작업은 매우 간단합니다. 다음 코드 조각은 새 **Compositor**를 만드는 방법을 보여 줍니다.
 
@@ -52,7 +59,7 @@ ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
 _compositor = new Compositor();
 ```
 
-## SpriteVisual 및 ColorBrush 만들기
+## <a name="creating-a-spritevisual-and-colorbrush"></a>SpriteVisual 및 ColorBrush 만들기
 
 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 사용하면 필요할 때마다 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 및 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) 등의 개체를 쉽게 만들 수 있습니다.
 
@@ -63,7 +70,7 @@ visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xF
 
 이 코드는 매우 간단하지만 강력한 개념을 보여 주며 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 개체는 효과 시스템의 핵심입니다. **SpriteVisual**은 뛰어난 유연성을 제공하며 색, 이미지 및 효과 생성의 상호 작용을 허용합니다. **SpriteVisual**은 브러시(이 경우 단색)로 2D 사각형을 채울 수 있는 단일 시각적 개체 형식입니다.
 
-## 시각적 개체 클리핑
+## <a name="clipping-a-visual"></a>시각적 개체 클리핑
 
 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)는 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에 대한 클립을 만드는 데도 사용할 수 있습니다. 다음은 샘플에서 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)을 사용하여 시각적 개체의 각 면을 트리밍하는 예제입니다.
 
@@ -78,7 +85,7 @@ _currentVisual.Clip = clip;
 
 참고: API의 다른 개체와 마찬가지로 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)은 속성에 애니메이션을 적용할 수 있습니다.
 
-## <span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>클립 회전
+## <a name="span-idrotatingaclipspanspan-idrotatingaclipspanspan-idrotatingaclipspanrotating-a-clip"></a><span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>클립 회전
 
 회전을 통해 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)를 변환할 수 있습니다. 이때 [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle)은 라디안과 각도를 모두 지원합니다. 기본값은 라디안이지만 다음 코드 조각에서처럼 쉽게 각도를 지정할 수 있습니다.
 
@@ -88,7 +95,7 @@ child.RotationAngleInDegrees = 45.0f;
 
 회전은 이러한 작업을 쉽게 수행하기 위해 API에서 제공하는 여러 가지 변환 구성 요소 중 하나입니다. 그 밖에 Offset, Scale, Orientation, RotationAxis 및 4x4 TransformMatrix 등이 있습니다.
 
-## 불투명도 설정
+## <a name="setting-opacity"></a>불투명도 설정
 
 부동 소수점 값을 사용하여 시각적 개체의 불투명도를 간단히 설정할 수 있습니다. 예를 들어 샘플에서 모든 사각형은 .8 불투명도로 시작합니다.
 
@@ -98,7 +105,7 @@ visual.Opacity = 0.8f;
 
 회전과 마찬가지로 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity) 속성에 애니메이션을 적용할 수 있습니다.
 
-## 컬렉션에서 시각적 개체의 위치 변경
+## <a name="changing-the-visuals-position-in-the-collection"></a>컬렉션에서 시각적 개체의 위치 변경
 
 컴퍼지션 API를 사용하면 [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection)의 시각적 개체 위치를 여러 가지 방법으로 변경할 수 있습니다. 즉, [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertabove)를 사용하여 다른 시각적 개체 위로 가져오거나, [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertbelow)를 사용하여 뒤로 보내거나, [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertattop)을 사용하여 맨 위로 이동하거나 [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertatbottom)을 사용하여 맨 아래로 이동할 수 있습니다.
 
@@ -108,7 +115,7 @@ visual.Opacity = 0.8f;
 parent.Children.InsertAtTop(_currentVisual);
 ```
 
-## 전체 예제
+## <a name="full-example"></a>전체 예제
 
 전체 샘플에서는 위의 모든 개념이 함께 사용되어 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 개체의 간단한 트리를 구성하여 XAML, WWA 또는 DirectX를 사용하지 않고 불투명도를 변경합니다. 이 샘플에서는 자식 **Visual** 개체를 만들고 추가하고 속성을 변경하는 방법을 보여 줍니다.
 
@@ -504,10 +511,5 @@ namespace compositionvisual
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

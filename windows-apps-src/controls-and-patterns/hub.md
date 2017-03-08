@@ -5,9 +5,16 @@ title: "허브 컨트롤"
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: ad5a8dfab77c78b1c53762f5de868819e0b37d6f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 32a558866457c4a9e9a359f12d43af317fc0f84a
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="hub-controlpattern"></a>허브 컨트롤/패턴
@@ -120,9 +127,4 @@ ms.openlocfilehash: ad5a8dfab77c78b1c53762f5de868819e0b37d6f
 - [탐색 기본 사항](../layout/navigation-basics.md)
 - [허브 사용](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 - [XAML 허브 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkID=310072)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

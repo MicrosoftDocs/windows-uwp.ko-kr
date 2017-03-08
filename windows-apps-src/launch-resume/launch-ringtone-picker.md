@@ -2,13 +2,21 @@
 author: TylerMSFT
 title: "ms-tonepicker 스키마"
 description: "이 항목에서는 ms-tonepicker URI 스키마에 대해 설명하고 이를 사용해 톤 선택기를 표시하여 톤을 선택하고, 톤을 저장하고, 톤의 식별 이름을 가져오는 방법을 설명합니다."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 translationtype: Human Translation
-ms.sourcegitcommit: 4c7037cc91603af97a64285fd6610445de0523d6
-ms.openlocfilehash: ef605f9d749148240ecee5e0ecfd473f8440ca25
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: bc3a34d16f8245ef2e932c46e76ce965ce8755b7
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# ms-tonepicker URI 스키마를 사용하여 신호음 선택 및 저장
+# <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장
 
 이 항목에서는 **ms tonepicker:** URI 스키마를 사용하는 방법을 설명합니다. 이 URI 스키마는 다음 작업에 사용할 수 있습니다.
 - 디바이스에서 톤 선택기를 사용할 수 있는지 확인합니다.
@@ -16,13 +24,13 @@ ms.openlocfilehash: ef605f9d749148240ecee5e0ecfd473f8440ca25
 - 사운드 파일 토큰을 입력으로 가져와서 디바이스에 저장하는 톤 보호기를 표시합니다. 저장된 톤은 톤 선택기를 통해 사용할 수 있습니다. 사용자는 톤에 식별 이름을 제공할 수도 있습니다.
 - 톤 토큰을 해당 식별 이름으로 변환합니다.
 
-## ms tonepicker: URI 스키마 참조
+## <a name="ms-tonepicker-uri-scheme-reference"></a>ms tonepicker: URI 스키마 참조
 
 이 URI 스키마는 URI 스키마 문자열을 통해 인수를 전달하지 않지만 대신 [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx)를 통해 인수를 전달합니다. 모든 문자열은 대/소문자를 구분합니다.
 
 아래 섹션은 지정된 작업을 수행하기 위해 전달해야 할 인수를 나타냅니다.
 
-## 작업: 디바이스에서 톤 선택기를 사용할 수 있는지 확인
+## <a name="task-determine-if-the-tone-picker-is-available-on-the-device"></a>작업: 디바이스에서 톤 선택기를 사용할 수 있는지 확인
 ```cs
 var status = await Launcher.QueryUriSupportAsync(new Uri("ms-tonepicker:"),     
                                      LaunchQuerySupportType.UriForResults,
@@ -34,7 +42,7 @@ if (status != LaunchQuerySupportStatus.Available)
 }
 ```
 
-## 작업: 톤 선택기 표시
+## <a name="task-display-the-tone-picker"></a>작업: 톤 선택기 표시
 
 톤 선택기를 표시하기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
@@ -44,7 +52,7 @@ if (status != LaunchQuerySupportStatus.Available)
 | CurrentToneFilePath | 문자열 | 아니요 | 기존 톤 토큰입니다. | 톤 선택기에서 현재 톤으로 표시할 톤입니다. 이 값을 설정하지 않으면 목록에서 첫 번째 톤이 기본적으로 선택됩니다.<br>이 값은 엄밀히 말해 파일 경로가 아닙니다. 톤 선택기에서 반환된 `ToneToken` 값에서 `CurrenttoneFilePath`에 적합한 값을 가져올 수 있습니다.  |
 | TypeFilter | 문자열 | 아니요 | "Ringtones", "Notifications", "Alarms", "None" | 선택기에 추가할 톤을 선택합니다. 필터가 지정되지 않은 경우에는 모든 톤이 표시됩니다. |
 
-<br>[LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
+<br>[LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
 
 | 반환 값 | 형식 | 가능한 값 | 설명 |
 |--------------|------|-------|-------------|
@@ -80,7 +88,7 @@ if (result.Status == LaunchUriStatus.Success)
 }
 ```
 
-## 작업: 톤 보호기 표시
+## <a name="task-display-the-tone-saver"></a>작업: 톤 보호기 표시
 
 톤 보호기를 표시하기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
@@ -90,7 +98,7 @@ if (result.Status == LaunchUriStatus.Success)
 | ToneFileSharingToken | 문자열 | yes | 저장할 벨소리 파일에 대한 [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) 파일 공유 토큰입니다. | 특정 사운드 파일을 벨소리로 저장합니다. 파일에 지원되는 콘텐츠 형식은 mpeg 오디오 및 x-ms-wma 오디오입니다. |
 | DisplayName | 문자열 | 아니요 | 지정된 톤의 식별 이름입니다. | 지정한 벨소리를 저장할 때 사용할 표시 이름을 설정합니다. |
 
-<br>[LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
+<br>[LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
 
 | 반환 값 | 형식 | 가능한 값 | 설명 |
 |--------------|------|-------|-------------|
@@ -144,7 +152,7 @@ if (result.Status == LaunchUriStatus.Success)
  }
 ```
 
-## 작업: 해당 식별 이름으로 톤 토큰 변환
+## <a name="task-convert-a-tone-token-to-its-friendly-name"></a>작업: 해당 식별 이름으로 톤 토큰 변환
 
 톤의 식별 이름을 가져오기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
@@ -153,7 +161,7 @@ if (result.Status == LaunchUriStatus.Success)
 | 액션 | 문자열 | yes | "GetToneName" | 톤의 식별 이름을 가져올 것인지를 나타냅니다. |
 | ToneToken | 문자열 | yes | 톤 토큰 | 표시 이름을 가져올 톤 토큰입니다. |
 
-<br>[LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
+<br>[LaunchUriResults.Result](https://msdn.microsoft.com/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
 
 | 반환 값 | 형식 | 가능한 값 | 설명 |
 |--------------|------|-------|-------------|
@@ -194,9 +202,4 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

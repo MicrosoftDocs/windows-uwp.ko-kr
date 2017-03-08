@@ -3,18 +3,25 @@ author: jnHs
 Description: "앱을 눈에 띄게 만들기! 최상의 앱을 만드는 것 외에도 Windows 스토어 및 다른 사이트에서 앱을 소개하기 쉽게 만들고 더 많은 주목을 받도록 할 수 있는 여러 방법이 있습니다."
 title: "앱을 홍보하기 쉽게 만들기"
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: aa35a1e46c5fea9bb64602af3842735f1914b039
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 07cca18b97a50fe8ced8b76094d358b948d18535
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱을 홍보하기 쉽게 만들기
+# <a name="make-your-app-easier-to-promote"></a>앱을 홍보하기 쉽게 만들기
 
 
 주목 받는 앱을 만드세요. 최상의 앱을 만드는 것 외에도 Windows 스토어 및 다른 사이트에서 앱을 소개하기 쉽게 만들고 더 많은 주목을 받도록 할 수 있는 여러 방법이 있습니다.
 
-## 추천 앱에 대한 Windows 스토어 요구 사항
+## <a name="windows-store-requirements-for-featured-apps"></a>추천 앱에 대한 Windows 스토어 요구 사항
 
 
 Windows 스토어는 범주나 테마별로 그룹화하여 다양한 앱을 소개합니다. 멋진 앱이 너무 많아서 모두 추천할 수는 없으며, 개발자 앱이 추천 앱으로 선택된다는 보장은 없습니다. 그러나 스토어에서 앱 홍보가 고려되도록 하는 몇 가지 방법이 있습니다.
@@ -45,10 +52,5 @@ Windows 스토어는 범주나 테마별로 그룹화하여 다양한 앱을 소
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

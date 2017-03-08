@@ -3,17 +3,24 @@ author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: "공용 컨트롤 시작"
 title: "공용 컨트롤 시작"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2cd4b7344074c795f14a56cddbe7807c9ffefafe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 91ea875987d5e1659fff337f95f790ef59286d03
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작: 공용 컨트롤
+# <a name="getting-started-common-controls"></a>시작: 공용 컨트롤
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-## 공용 컨트롤 목록
+## <a name="common-controls-list"></a>공용 컨트롤 목록
 
 이전 섹션에서는 두 개의 컨트롤 즉, 단추와 텍스트 블록만 사용했습니다. 이 외에도 사용할 수 있는 컨트롤이 상당히 많이 있습니다. 앱에서 사용하는 몇 가지 일반적인 컨트롤과 이와 동일한 iOS 컨트롤은 다음과 같습니다. iOS 컨트롤은 사전순으로 나열되어 있고 그 옆에 가장 유사한 UWP(유니버설 Windows 플랫폼) 컨트롤이 나열되어 있습니다.
 
@@ -22,7 +29,7 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 | iOS 컨트롤(클래스/프로토콜) | 해당 Windows 스토어 앱 컨트롤 |
 |------------------------------|--------------------------------------|
 | 활동 표시기(**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> [빠른 시작: 진행률 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) 참조 |
-| 광고 배너 보기(**ADBannerView**) 및 광고 배너 보기 대리자(**ADBannerViewDelegate**) | [Microsoft 광고 SDK](http://go.microsoft.com/fwlink/p/?LinkId=263494)(영문) 참조 |
+| 광고 배너 보기(**ADBannerView**) 및 광고 배너 보기 대리자(**ADBannerViewDelegate**) | [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> [앱에서 광고 표시](../monetize/display-ads-in-your-app.md) 참조 |
 | 단추(UIButton) | [Button](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> [빠른 시작: 단추 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) 참조 |
 | 날짜 선택기(UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | 이미지 보기(UIImageView) | [이미지](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> [Image 및 ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) 참조 |
@@ -50,18 +57,13 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 
 **참고** JavaScript 및 HTML을 사용하는 Windows 스토어 앱용 컨트롤 목록은 [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/hh465453)을 참조하세요.
 
-### 다음 단계
+### <a name="next-step"></a>다음 단계
 
 [시작: 탐색](getting-started-navigation.md)
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [2014 빌드: XAML UI 및 컨트롤은 어떤가요?](http://go.microsoft.com/fwlink/p/?LinkID=397897)
 * [2014 빌드: 일반적인 XAML UI 프레임워크를 사용하여 앱 개발](http://go.microsoft.com/fwlink/p/?LinkID=397898)
 * [2014 빌드: Visual Studio를 사용하여 XAML 수렴형 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397876)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

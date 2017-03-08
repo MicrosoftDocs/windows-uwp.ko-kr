@@ -5,9 +5,16 @@ title: "적응형 타일 만들기"
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: a00796da398d6e0246caac43b18fb688a9e03fce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 53b130c3f97440bd381adda5c40532d46823ce02
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
@@ -206,7 +213,7 @@ TileContent content = new TileContent()
 
 알림 페이로드에서 브랜딩 특성을 사용하여 라이브 타일 아래쪽의 브랜딩(표시 이름 및 모서리 로고)을 제어할 수 있습니다. "none," "name"만, "logo"만 또는 "nameAndLogo"를 사용하여 둘 다 표시하도록 선택할 수 있습니다.
 
-**참고** Windows Mobile에서는 모서리 로고를 지원하지 않으므로 Mobile에서 "logo" 및 "nameAndLogo"는 기본적으로 "name"으로 지정됩니다.
+**참고**  Windows Mobile에서는 모서리 로고를 지원하지 않으므로 Mobile에서 "logo" 및 "nameAndLogo"는 기본적으로 "name"으로 지정됩니다.
 
  
 
@@ -278,7 +285,7 @@ TileContent content = new TileContent()
 
 알림 페이로드에서 브랜딩을 지정하지 않으면 기본 타일의 속성에 따라 브랜딩이 결정됩니다. 기본 타일에 표시 이름이 표시되는 경우 브랜딩의 기본값은 "name"입니다. 그렇지 않고 표시 이름이 표시되지 않는 경우 브랜딩의 기본값은 "none"입니다.
 
-**참고** 이는 기본 브랜딩이 "logo"이던 Windows 8.x에서 변경된 내용입니다.
+**참고**  이는 기본 브랜딩이 "logo"이던 Windows 8.x에서 변경된 내용입니다.
 
  
 
@@ -287,7 +294,7 @@ TileContent content = new TileContent()
 
 **displayName** 특성에 원하는 텍스트 문자열을 입력하여 알림의 표시 이름을 재정의할 수 있습니다. 브랜딩과 마찬가지로 표시 이름은 전체 알림 페이로드에 적용되는 [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소나 개별 타일에만 적용되는 [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소에 지정할 수 있습니다.
 
-**알려진 문제** Windows Mobile에서 타일의 ShortName을 지정하면 알림에 제공된 표시 이름이 사용되지 않습니다(항상 ShortName이 표시됨). 
+**알려진 문제**  Windows Mobile에서 타일의 ShortName을 지정하면 알림에 제공된 표시 이름이 사용되지 않습니다(항상 ShortName이 표시됨). 
 
 ```XML
 <tile>
@@ -404,7 +411,7 @@ new AdaptiveText()
 
 ![적응형 타일 텍스트 스타일](images/adaptive-tiles-textstyles.png)
 
-**참고** hint-style을 지정하지 않으면 스타일의 기본값은 caption입니다.
+**참고**  hint-style을 지정하지 않으면 스타일의 기본값은 caption입니다.
 
  
 
@@ -483,7 +490,7 @@ new AdaptiveText()
 
 디바이스 및 화면 전체에서 최상의 환경을 제공하려면 여러 그룹을 제공합니다. 여러 그룹이 있으면 타일이 큰 화면에 맞게 조정될 수 있습니다.
 
-**참고** 그룹의 유효한 하위 요소는 하위 그룹뿐입니다.
+**참고**  그룹의 유효한 하위 요소는 하위 그룹뿐입니다.
 
  
 
@@ -677,7 +684,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 
 ![하위 그룹, 가중치 합계가 100](images/adaptive-tiles-subgroups03.png)
 
-**참고** 열 사이에는 8픽셀 여백이 자동으로 추가됩니다.
+**참고**  열 사이에는 8픽셀 여백이 자동으로 추가됩니다.
 
  
 
@@ -790,7 +797,7 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 
 &lt;image&gt; 요소는 타일 알림에 이미지를 표시하는 데 사용됩니다. 이미지는 타일 콘텐츠 내에 인라인으로 배치되거나(기본값) 콘텐츠 뒤에 배경 이미지로 배치되거나 알림 위에서 애니메이션 효과를 주는 미리 보기 이미지로 배치될 수 있습니다.
 
-**참고** [이미지의 파일 크기와 이미지 크기에 대한 제한](https://msdn.microsoft.com/library/windows/apps/hh781198)이 있습니다.
+**참고**  [이미지의 파일 크기와 이미지 크기에 대한 제한](https://msdn.microsoft.com/library/windows/apps/hh781198)이 있습니다.
 
  
 
@@ -1399,10 +1406,5 @@ TileWide = new TileBinding()
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

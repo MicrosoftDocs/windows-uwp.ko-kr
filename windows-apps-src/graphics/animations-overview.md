@@ -3,19 +3,26 @@ author: Jwmsft
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: "애니메이션 개요"
 description: "Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하여 Windows 모양과 느낌을 앱에 통합할 수 있습니다."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2a08d1def7c4d2fde0ae08eb26076526058e8aae
-ms.openlocfilehash: e3e21c55ea8ddeab0969e304080394b940da010d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8f7e56f1bca5ecea6078dd70840d083eab6e30dd
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="animations-overview"></a>애니메이션 개요
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 Windows 런타임의 애니메이션은 움직임과 대화형 작업을 추가하여 앱을 향상시킬 수 있습니다. Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하면 Windows 모양과 느낌을 앱에 통합할 수 있습니다. 이 항목에서는 애니메이션 및 각 애니메이션이 사용되는 일반적인 시나리오의 예를 간략하게 소개합니다.
 
-**팁** XAML용 Windows 런타임 컨트롤에는 일부 유형의 애니메이션이 애니메이션 라이브러리에서 가져온 기본 제공 동작으로 포함되어 있습니다. 앱에서 이러한 컨트롤을 사용하면 직접 프로그래밍하지 않고도 애니메이션 효과를 준 모양과 느낌을 얻을 수 있습니다.
+**팁**  XAML용 Windows 런타임 컨트롤에는 일부 유형의 애니메이션이 애니메이션 라이브러리에서 가져온 기본 제공 동작으로 포함되어 있습니다. 앱에서 이러한 컨트롤을 사용하면 직접 프로그래밍하지 않고도 애니메이션 효과를 준 모양과 느낌을 얻을 수 있습니다.
 
 Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용할 경우 다음과 같은 이점이 있습니다.
 
@@ -206,7 +213,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 
 ![보기로 전환하는 자식 직사각형을 보여 주는 애니메이션](./images/animation-child-rectangles.gif)
 
-컨테이너의 하위 개체 중 하나 이상의 위치가 바뀔 경우에도 이 하위 개체들은 재배치될 수 있습니다. 다음 예제에서는 직사각형의 그리드에 [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429)을 적용합니다. 직사각형 중 하나를 제거하면 나머지 직사각형들은 새로운 위치로 재배치됩니다.
+컨테이너의 하위 개체 중 하나 이상의 위치가 바뀔 경우에도 이 하위 개체들은 재배치될 수 있습니다. 다음 예제에서는 직사각형의 표에 [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429)을 적용합니다. 직사각형 중 하나를 제거하면 나머지 직사각형들은 새로운 위치로 재배치됩니다.
 
 ```xml
 <Button Content="Remove Rectangle" Click="RemoveButton_Click"/>
@@ -292,7 +299,7 @@ UI 요소를 추가하거나, 제거하거나, UI 요소의 순서를 다시 매
 | [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) | 컨트롤이 처음으로 나타날 때 애니메이션 전환 동작을 제공합니다. |
 | [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969160) | 패널(큰 가장자리 UI) UI 전환에 애니메이션 전환 동작을 제공합니다. |
 | [**PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969172) | 컨트롤의 팝 인 구성 요소(예: 개체의 도구 설명 같은 UI)가 나타날 때 적용되는 애니메이션 전환 동작을 제공합니다. |
-| [**ReorderThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210409) | 목록 보기 컨트롤 항목의 순서가 바뀔 때 애니메이션 전환 동작을 제공합니다. 일반적으로 이는 끌어서 놓기 동작의 결과로 일어납니다. 여러 컨트롤과 테마가 애니메이션에 다양한 특성을 부여할 수 있습니다. |
+| [**ReorderThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210409) | 목록 뷰 컨트롤 항목의 순서가 바뀔 때 애니메이션 전환 동작을 제공합니다. 일반적으로 이는 끌어서 놓기 동작의 결과로 일어납니다. 여러 컨트롤과 테마가 애니메이션에 다양한 특성을 부여할 수 있습니다. |
 | [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) | 컨트롤의 위치가 바뀔 때 애니메이션 전환 동작을 제공합니다. |
 
  
@@ -341,7 +348,7 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 
 전환 애니메이션과 달리, 테마 애니메이션에는 자동으로 실행되는 기본 제공 트리거(전환)가 없습니다. XAML에서 정의할 때 테마 애니메이션을 포함하려면 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)를 사용해야 합니다. 애니메이션의 기본 동작을 변경할 수도 있습니다. 예를 들어 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302)에서 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 시간 값을 늘려 페이드 아웃의 속도를 늦출 수 있습니다.
 
-**참고** 기본 애니메이션 기술을 보여 주기 위해 앱 코드를 사용해 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 메서드를 호출하여 애니메이션을 시작합니다. [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) 및 [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **Storyboard** 메서드를 사용하여 **Storyboard** 애니메이션이 실행되는 방법을 제어할 수 있습니다. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함하는 방법은 아닙니다. 대신 컨트롤 또는 요소에 적용된 XAML 스타일 및 템플릿에 라이브러리 애니메이션을 통합합니다. 템플릿 및 시각적 상태에 대해 알아보는 과정은 약간 더 복잡합니다. 그러나 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용하는 방법을 설명합니다.
+**참고**  기본 애니메이션 기술을 보여 주기 위해 앱 코드를 사용해 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 메서드를 호출하여 애니메이션을 시작합니다. [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) 및 [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **Storyboard** 메서드를 사용하여 **Storyboard** 애니메이션이 실행되는 방법을 제어할 수 있습니다. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함하는 방법은 아닙니다. 대신 컨트롤 또는 요소에 적용된 XAML 스타일 및 템플릿에 라이브러리 애니메이션을 통합합니다. 템플릿 및 시각적 상태에 대해 알아보는 과정은 약간 더 복잡합니다. 그러나 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용하는 방법을 설명합니다.
 
  
 
@@ -380,10 +387,5 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

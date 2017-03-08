@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다."
 title: "Windows 스토어 제출 API를 사용하여 앱 제출 관리"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱 제출"
 translationtype: Human Translation
-ms.sourcegitcommit: 020c8b3f4d9785842bbe127dd391d92af0962117
-ms.openlocfilehash: ef7727befa20606800fb9747f9402be9be5cc9e4
+ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
+ms.openlocfilehash: 21a421b057a55120865c01cc3dffb80318ab38ed
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -13,12 +20,14 @@ ms.openlocfilehash: ef7727befa20606800fb9747f9402be9be5cc9e4
 
 Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 제출을 관리하는 데 사용할 수 있는 메서드를 제공합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
+>**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 지닌 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
+
+>**중요**&nbsp;&nbsp;Windows 스토어 제출 API를 사용하여 앱에 대한 제출을 생성하는 경우, 개발자 센터 대시보드 대신 API를 통해서만 제출을 추가 변경해야 합니다. API를 사용하여 처음 생성한 제출을 대시보드를 사용하여 변경하는 경우, 해당 제출은 API를 사용하여 변경 또는 커밋할 수 없게 됩니다. 경우에 따라 제출 전송 과정에서 진행할 수 없는 오류 상태로 남아 있을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-app-submissions" />
 ## <a name="methods-for-managing-app-submissions"></a>앱 제출 관리 메서드
 
-앱 제출 가져오기 또는 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다.
+앱 제출 가져오기, 생성, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. 이러한 메서드를 사용하려면 앱이 개발자 센터 계정에 이미 있어야 하고 앱에 대한 제출 한 개를 대시보드에 먼저 만들어야 합니다. 자세한 내용은 [전제 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 참조하세요.
 
 <table>
 <colgroup>
@@ -140,11 +149,13 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 <span/>
 ### <a name="code-examples-for-managing-app-submissions"></a>앱 제출 관리에 대한 코드 예제
 
-다음 문서는 여러 다른 프로그래밍 언어로 앱 제출 API를 만드는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
+다음 문서에는 여러 가지 프로그래밍 언어로 앱 제출을 만드는 방법을 보여주는 상세 코드 예시가 있습니다.
 
-* [C# 코드 예제](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
+* [C# 코드 예시](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Java 코드 예시](java-code-examples-for-the-windows-store-submission-api.md)
+* [Python 코드 예시](python-code-examples-for-the-windows-store-submission-api.md)
+
+>**참고**&nbsp;&nbsp;위에 나열된 코드 예시 외에 Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 있습니다. 이 모듈은 [StoreBroker](https://aka.ms/storebroker)라고 합니다. Windows 스토어 제출 API를 직접 호출하는 대신에 이 모듈을 사용하여 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리하거나, 소스를 검색하여 이 API를 호출하는 방법에 대한 추가 예시를 간단히 찾아볼 수 있습니다. StoreBroker 모듈은 다수의 자사 응용 프로그램이 스토어에 제출되는 기본 방법으로 Microsoft 내에서 적극적으로 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 <span id="manage-gradual-package-rollout">
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>점진적 패키지 출시 관리 메서드
@@ -212,7 +223,8 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
     "trialPeriod": "FifteenDays",
     "marketSpecificPricings": {},
     "sales": [],
-    "priceId": "Tier2"
+    "priceId": "Tier2",
+    "isAdvancedPricingModel": "true"
   },
   "visibility": "Public",
   "targetPublishMode": "Manual",
@@ -329,8 +341,8 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 | packageDeliveryOptions    | object  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함하는 [패키지 전송 옵션 리소스](#package-delivery-options-object)입니다.  |
 | enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 장치 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 장치 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
-| FriendlyName           |   문자열  |  표시 목적으로 사용되는 앱의 식별 이름입니다.       |  
+| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 장치 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 삼도록 허용할지 여부를 나타내는 부울입니다.     |    
+| friendlyName           |   문자열  |  개발자 센터 대시보드와 같이 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.       |  
 
 
 <span id="listing-object" />
@@ -353,8 +365,8 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 |  copyrightAndTrademarkInfo                |   문자열      |  선택적 [저작권 및/또는 상표 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info)입니다.  |
 |  키워드                |  배열       |  검색 결과에 앱을 표시하는 데 도움이 되는 [키워드](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords)의 배열입니다.    |
 |  licenseTerms                |    문자열     | 앱에 대한 선택적 [사용 조건](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms)입니다.     |
-|  privacyPolicy                |   문자열      |   앱의 [개인 정보 취급 방침](https://msdn.microsoft.com/windows/uwp/publish/privacy-policy) URL입니다.    |
-|  supportContact                |   문자열      |  앱의 [연락처 정보 지원](https://msdn.microsoft.com/windows/uwp/publish/support-contact-info)을 위한 URL 또는 메일 주소입니다.     |
+|  privacyPolicy                |   문자열      |   앱의 [개인 정보 취급 방침](../publish/create-app-store-listings.md#privacy-policy) URL입니다.    |
+|  supportContact                |   문자열      |  앱의 [연락처 정보 지원](../publish/create-app-store-listings.md#support-contact-info)을 위한 URL 또는 메일 주소입니다.     |
 |  websiteUrl                |   문자열      |  앱에 대한 [웹 페이지](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#website)의 URL입니다.    |    
 |  description               |    문자열     |   앱 목록에 대한 [설명](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description)입니다.   |     
 |  기능               |    배열     |  앱의 [기능](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features)을 나열하는 최대 20개 문자열의 배열입니다.     |
@@ -387,7 +399,8 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 |  trialPeriod               |    문자열     |  앱에 대한 평가 기간을 지정하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
 |  sales               |   배열      |  **사용되지 않음**. 앱에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.   |     
-|  priceId               |   문자열      |  앱에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.   |
+|  priceId               |   문자열      |  앱에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.   |     
+|  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
 
 
 <span id="sale-object" />
@@ -547,14 +560,14 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 <span id="price-tiers" />
 ### <a name="price-tiers"></a>기준 가격
 
-다음 값은 앱 제출에 사용 가능한 기준 가격을 나타냅니다.
+다음 값은 앱 제출에 대한 [가격 리소스](#pricing-object) 리소스에서 사용할 수 있는 기준 가격을 나타냅니다.
 
 | 값           | 설명        |
 |-----------------|------|
-|  기본               |   기준 가격이 설정되지 않았습니다. 앱에 대한 기본 가격을 사용합니다.      |     
-|  NotAvailable              |   지정된 영역에 앱을 사용할 수 없습니다.    |     
+|  기본               |   기준 가격이 설정되지 않았으므로 앱에 대한 기본 가격을 사용합니다.      |     
+|  NotAvailable              |   지정된 영역에서 앱을 사용할 수 없습니다.    |     
 |  무료              |   앱은 무료입니다.    |    
-|  Tier2~Tier194               |   Tier2는 .99 USD 기준 가격을 나타냅니다. 각 추가 기준은 가격 증가를 나타냅니다(1.29 USD, 1.49 USD, 1.99 USD 등).    |
+|  계층*xxx*               |   앱에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련된 시장별 가격을 포함하여 개발자 계정에 사용할 수 있는 기준 가격을 나열한 전체 표를 보려면 개발자 센터 대시보드에서 앱 제출에 대한 **가격 책정 및 가용성** 페이지로 이동하여 **지역/국가 및 사용자 지정 가격** 섹션에 있는 **표 보기** 링크를 클릭합니다(일부 개발자 계정의 경우, 이 링크는 **가격 책정** 섹션에 있음).    |
 
 
 <span id="enterprise-licensing" />
@@ -598,9 +611,4 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [Windows 스토어 제출 API를 사용하여 앱 데이터 가져오기](get-app-data.md)
 * [Windows 개발자 센터 대시보드에서 앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

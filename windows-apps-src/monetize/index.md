@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: "Windows SDK, Microsoft Store Services SDK 및 Windows 스토어는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다."
-title: "수익 창출, 고객 참여 및 저장소 서비스"
+title: "수익 창출, 고객 참여 및 스토어 서비스"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10 uwp, 수익 창출, 참여, 홍보, 스토어 서비스"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: e8a4c40dbc715d82d6f41fef8a49df5bfdfa79ae
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5a3497d5aa1c8a4415b7b4fb9f7888448ae74f9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="monetization-customer-engagement-and-store-services"></a>수익 창출, 고객 참여 및 저장소 서비스
+# <a name="monetization-customer-engagement-and-store-services"></a>수익 창출, 고객 참여 및 스토어 서비스
 
 Windows SDK, Microsoft Store Services SDK 및 Windows 스토어는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 기능을 제공합니다. 이 섹션의 항목에서는 이러한 기능을 앱에 빌드하는 방법을 보여 줍니다.
 
@@ -35,9 +42,4 @@ Windows 스토어에서 청구되는 수수료 및 앱으로 번 돈을 지급 �
 * [고객층 만들기](../publish/create-customer-segments.md)
 * [피드백 보고서](../publish/feedback-report.md)
 * [사용 보고서](../publish/usage-report.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

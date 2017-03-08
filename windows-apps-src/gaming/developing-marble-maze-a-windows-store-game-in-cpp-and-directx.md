@@ -3,13 +3,20 @@ author: mtoepke
 title: "C++ 및 DirectX로 UWP 게임 Marble Maze 개발"
 description: "이 설명서 섹션에서는 DirectX 및 Visual C++를 사용하여 3D UWP(유니버설 Windows 플랫폼) 게임을 만드는 방법을 설명합니다."
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 샘플, directx, 3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d660e05ab43f1c45f21b028a78c6cfa3e0897164
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 738be6a129158fbd6058ff7407aca0b8ece7ea3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# C++ 및 DirectX로 UWP 게임 Marble Maze 개발
+# <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>C++ 및 DirectX로 UWP 게임 Marble Maze 개발
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -25,7 +32,7 @@ ms.openlocfilehash: d660e05ab43f1c45f21b028a78c6cfa3e0897164
 
  
 
-## Marble Maze 소개
+## <a name="introducing-marble-maze"></a>Marble Maze 소개
 
 
 Marble Maze가 선택된 이유는 비교적 기본적이면서도 대부분의 게임에 있는 다양한 기능을 보여 주기 때문입니다. Marble Maze는 그래픽, 입력 처리 및 오디오를 사용하는 방법을 보여 줍니다. 또한 규칙 및 목표와 같은 게임 방법을 보여 줍니다.
@@ -36,7 +43,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 
 ![Marble Maze 게임의 스크린샷](images/marblemaze.png)
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 -   Windows 10
@@ -45,14 +52,14 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 -   DirectX 및 DirectX 용어 숙지
 -   COM에 대한 기본 지식
 
-## 대상 사용자
+## <a name="who-should-read-this"></a>대상 사용자
 
 
 3D 게임 또는 그래픽을 많이 사용하는 Windows 10용 기타 응용 프로그램을 만들려는 경우에 유용합니다. 이 설명서에서 제공하는 원칙과 사례를 사용하여 고유한 UWP 게임을 만들어 보세요. C++ 및 DirectX 프로그래밍에 대한 배경 지식이나 관심이 있으면 이 설명서를 활용하는 데 도움이 됩니다. DirectX 사용 경험이 없는 경우 유사한 3D 그래픽 프로그래밍 환경의 사용 경험이 있어도 도움이 될 수 있습니다.
 
 [연습: DirectX를 사용하여 간단한 UWP 게임 만들기](tutorial--create-your-first-metro-style-directx-game.md)에서는 DirectX 및 C++를 사용하여 기본적인 3D 슈팅 게임을 구현하는 다른 샘플에 대해 설명합니다.
 
-## 이 설명서에서 다루는 내용
+## <a name="what-this-documentation-covers"></a>이 설명서에서 다루는 내용
 
 
 이 설명서에서는 다음을 수행하는 방법을 설명합니다.
@@ -62,7 +69,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 -   터치, 가속도계, Xbox 360 컨트롤러 등의 입력 메커니즘을 통합합니다.
 -   [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049)를 사용하여 음악 및 소리 효과를 통합합니다.
 
-## 이 설명서에서 다루지 않는 내용
+## <a name="what-this-documentation-does-not-cover"></a>이 설명서에서 다루지 않는 내용
 
 
 이 설명서에서는 다음과 같은 게임 개발 측면을 다루지 않습니다. 이러한 측면 뒤에는 해당 측면을 설명하는 추가 리소스가 제공됩니다.
@@ -78,12 +85,12 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 
 Marble Maze는 많은 재사용 가능 구성 요소를 제공하지만 전체 게임 개발 프레임워크는 아닙니다. Marble Maze 구성 요소가 게임에 재사용 가능한 경우 설명서에서 강조됩니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 Marble Maze 소스 코드가 따르는 코딩 및 스타일 지침과 Marble Maze 구조에 대해 알아보려면 Marble Maze 샘플 기본 사항에서 시작하는 것이 좋습니다. 다음 표에서는 더 쉽게 참조할 수 있도록 이 섹션의 문서에 대해 간단히 설명합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 | 제목                                                                                                                    | 설명                                                                                                                                                                                                                                        |
@@ -102,10 +109,5 @@ Marble Maze 소스 코드가 따르는 코딩 및 스타일 지침과 Marble Maz
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

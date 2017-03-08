@@ -3,13 +3,20 @@ author: mtoepke
 title: "앱 시작 및 다시 시작(DirectX 및 C++)"
 description: "UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 중단 및 다시 시작하는 방법을 알아봅니다."
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx, 시작, 다시 시작"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9a0a1314aa0b174bfb1c44e5280455ab668a42b7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c3557a11f8f18262f0b5e0c6ad6cac88d5274f73
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 시작 및 다시 시작(DirectX 및 C++)
+# <a name="launching-and-resuming-apps-directx-and-c"></a>앱 시작 및 다시 시작(DirectX 및 C++)
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -29,10 +36,5 @@ UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 중단 및 다
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,19 +3,26 @@ author: mcleanbyron
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
 description: "이 섹션의 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
 title: "Windows 스토어 제출 API에 대한 코드 예제"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 코드 예제"
 translationtype: Human Translation
-ms.sourcegitcommit: 841a6aeaf0a7ecfd49cda0f519ba2c297f91af92
-ms.openlocfilehash: df29d34b7e1b4b4e2ee715ecc013758df65fc9c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 44dd7cbf39825c47783886d12b116bf99a6630e8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 스토어 제출 API에 대한 코드 예제
+# <a name="code-examples-for-the-windows-store-submission-api"></a>Windows 스토어 제출 API에 대한 코드 예제
 
-이 섹션에서는 여러 다른 프로그래밍 언어로 *Windows 스토어 제출 API*를 사용하기 위한 코드 예제를 제공합니다. 
+이 섹션에서는 여러 다른 프로그래밍 언어로 *Windows 스토어 제출 API*를 사용하기 위한 코드 예제를 제공합니다.
 
-Windows 스토어 제출 API를 사용하여 사용자 또는 조직의 Windows 개발자 센터 계정에 대한 앱, 추가 기능 및 패키지 플라이트를 프로그래밍 방식으로 쿼리하고 이에 대한 제출을 만듭니다. 이 API는 계정에서 많은 앱 또는 추가 기능을 관리하고 이러한 자산의 제출 프로세스를 자동화 및 최적화하려는 경우 유용합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
+>**참고**&nbsp;&nbsp;아래에 나열된 코드 예제 외에도 the Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
-## 이 섹션의 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 | 항목                                                                                                       | 설명                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -23,12 +30,7 @@ Windows 스토어 제출 API를 사용하여 사용자 또는 조직의 Windows 
 | [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md) | 이 섹션의 Java 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다. |
 | [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)  | 이 섹션의 Python 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다.  |
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

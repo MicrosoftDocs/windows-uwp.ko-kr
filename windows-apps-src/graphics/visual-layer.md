@@ -3,9 +3,16 @@ author: scottmill
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: "시각적 계층"
 description: "Windows.UI.Composition API는 프레임워크 계층(XAML)과 그래픽 계층(DirectX) 간의 컴퍼지션 계층에 대한 액세스를 제공합니다."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9ea05f7ba76c7813b200a4c8cd021613f980355d
-ms.openlocfilehash: de6fe0688bec196fc90433ab9274f2e4c4fd9b90
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d1c676808b8b63f42b89a22862eaab63ddc94141
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="visual-layer"></a>시각적 계층
@@ -30,7 +37,7 @@ API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내�
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체입니다. 대부분의 속성은 여기에 있으며 다른 시각적 개체에 상속됩니다.
 -   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 파생되며 자식 시각적 개체를 삽입할 수 있는 기능을 추가합니다.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 이미지, 효과 및 swapchain 형태의 콘텐츠를 포함합니다.
--   [**LayerVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.layervisual.aspx) - 자식이 단일 레이어로 병합되는 ContainerVisual입니다.  
+-   [**LayerVisual**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.layervisual.aspx) - 자식이 단일 레이어로 병합되는 ContainerVisual입니다.  
 -   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – 응용 프로그램과 시스템 작성자 프로세스 간의 관계를 관리하는 개체 팩터리입니다.
 
 작성자는 트리의 시각적 개체를 클리핑 또는 변환하는 데 사용되는 다른 많은 컴퍼지션 개체뿐 아니라 다양한 애니메이션 및 효과 집합의 팩터리이기도 합니다.
@@ -66,7 +73,7 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 식 애니메이�
 -   이 API에 대한 Kenny Kerr의 MSDN 문서 [Graphics and Animation - Windows Composition Turns 10](https://msdn.microsoft.com/magazine/mt590968)(그래픽 및 애니메이션 - Windows 컴퍼지션(Windows 10))을 참조하세요.
 -   [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
 -   [**API에 대한 전체 참조 설명서**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   [알려진 문제](http://go.microsoft.com/fwlink/?LinkId=823237).
+
 
  
 
@@ -74,10 +81,5 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 식 애니메이�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

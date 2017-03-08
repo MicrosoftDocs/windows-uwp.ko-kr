@@ -2,10 +2,17 @@
 author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 등급 데이터를 가져옵니다."
-title: "앱 평점 가져오기"
+title: "앱 등급 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API, 등급"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: 86685984256459e0bb125340daa1616b09982429
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 25f057eba5827be34b4fcf9d31a6e0ae71dc9893
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -156,9 +163,4 @@ Authorization: Bearer <your access token>
 * [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
 * [앱 리뷰 가져오기](get-app-reviews.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

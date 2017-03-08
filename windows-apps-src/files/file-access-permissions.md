@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "파일 액세스 권한"
 description: "앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3a5069620fa665d4508af70df5543a2d42744210
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
@@ -162,9 +169,4 @@ ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
 | 홈 그룹 라이브러리  | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
 | 미디어 서버 장치(DLNA) | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
 | UNC(범용 명명 규칙) 폴더 | 다음과 같은 접근 권한 값의 조합이 필요합니다. <br><br>홈 및 회사 네트워크 접근 권한 값: <br>- PrivateNetworkClientServer <br><br>하나 이상의 인터넷 및 공용 네트워크 접근 권한 값: <br>- InternetClient <br>- InternetClientServer <br><br>해당되는 경우 도메인 자격 증명 접근 권한 값:<br>- EnterpriseAuthentication <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. | 다음을 사용하여 폴더 검색: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>다음을 사용하여 파일 검색: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

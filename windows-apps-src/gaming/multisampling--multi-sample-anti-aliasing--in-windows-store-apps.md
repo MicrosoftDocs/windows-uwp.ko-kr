@@ -3,25 +3,32 @@ author: mtoepke
 title: "UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링"
 description: "Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다."
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 다중 샘플링, direct3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: cf82c34e23a1c66bfc2d59f9ea3b4ebce99ab52e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
+# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다. 다중 샘플 앤티앨리어싱이라고도 하는 다중 샘플링은 울퉁불퉁한 가장자리를 다듬기 위해 사용되는 그래픽 기법입니다. 작동 방식은, 최종 렌더링 대상에 실제로 있는 것보다 더 많은 픽셀을 그린 후 값을 평준화하여 특정 픽셀에서 "부분적인" 가장자리의 외양을 유지하는 것입니다. Direct3D에서 다중 샘플링이 실제로 작동하는 방식에 대해 자세히 알아보려면 [다중 샘플링 앤티앨리어싱 래스터화 규칙](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample)을 참조하세요.
 
-## 다중 샘플링 및 대칭 이동 모델 스왑 체인
+## <a name="multisampling-and-the-flip-model-swap-chain"></a>다중 샘플링 및 대칭 이동 모델 스왑 체인
 
 
 DirectX를 사용하는 UWP 앱은 대칭 이동 모델 스왑 체인을 사용해야 합니다. 대칭 이동 스왑 체인은 다중 샘플링을 직접 지원하지 않지만, 다른 방식으로 다중 샘플링을 여전히 적용할 수 있습니다. 즉, 장면을 다중 샘플링된 렌더링 대상 보기로 렌더링한 후 다중 샘플링된 렌더링 대상을 표시 전에 백 버퍼로 해제하면 됩니다. 이 문서에서는 UWP 앱에 다중 샘플링을 추가하기 위해 필요한 단계에 대해 설명합니다.
 
-### 다중 샘플링을 사용하는 방법
+### <a name="how-to-use-multisampling"></a>다중 샘플링을 사용하는 방법
 
 Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 지원을 보장하며, 다중 샘플링을 지원하는 특정 버퍼 형식을 사용할 수 있도록 보장합니다. 그래픽 장치는 필수 최소 사양보다 종종 더 넓은 범위의 형식과 샘플 수를 지원합니다. 특정 DXGI 형식을 이용한 다중 샘플링에 대한 기능 지원을 점검한 후 지원되는 각 형식으로 사용할 수 있는 샘플 수를 점검하여 런타임 시 다중 샘플링의 지원 여부를 확인할 수 있습니다.
 
@@ -79,7 +86,7 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
     }
     ```
 
-    > **참고** 타일식 리소스 버퍼에 대한 다중 샘플 지원을 확인하려면 대신 [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494)을 사용합니다.
+    > **참고** 타일식 리소스 버퍼에 대한 다중 샘플 지원을 확인하려면 대신에 [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494)을 사용하세요.
 
      
 
@@ -206,10 +213,5 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

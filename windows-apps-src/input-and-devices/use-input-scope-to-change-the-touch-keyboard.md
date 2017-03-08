@@ -14,8 +14,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
-ms.openlocfilehash: caaa6228f2d5b2bb6566ccb285d90a396a1caf01
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 43cbc8999d21d0534c4b6e557822345a69f66007
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -262,9 +263,4 @@ phoneNumberTextBox.InputScope = new InputScope()
 |------------------------------------------------------------|------------------------------------------------------------------|
 | ![기본 Windows 터치 키보드](images/input-scopes/kbdpcdefault.png)<br>**Default**와 동일한 레이아웃입니다.| ![이름 또는 전화 번호용 Windows Phone 터치 키보드](images/input-scopes/kbdwpnameorphonenumber.png)<br>**;** 및 **@** 키가 포함됩니다. **&amp;123** 키가 전화 키패드를 여는 **123** 키로 대체됩니다(**TelephoneNumber** 참조).|
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 수정: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 대문자화: 기본적으로 해제되어 있으며, 활성화할 수 있음 각 단어의 첫 번째 문자가 대문자로 표시됩니다.</li><li>텍스트 자동 완성: 기본적으로 해제되어 있으며, 활성화할 수 있음</li></ul> |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

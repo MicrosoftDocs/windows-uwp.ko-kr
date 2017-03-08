@@ -3,13 +3,20 @@ author: mtoepke
 title: "Marble Maze 샘플에 오디오 추가"
 description: "이 문서에서는 오디오 작업을 할 때 고려할 몇 가지 주요 사항을 설명하고 Marble Maze가 이러한 사례를 적용하는 방법을 보여 줍니다."
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 오디오, 게임, 샘플"
 translationtype: Human Translation
-ms.sourcegitcommit: c663692e31a62fdf40df9d706070d0d2ce0e1cdd
-ms.openlocfilehash: 9c35ca4d475783e52ba68d611c7bea49a927a4e5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3530880da3bc74b146c6f6fbb9bb9220caaca0d0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Marble Maze 샘플에 오디오 추가
+# <a name="adding-audio-to-the-marble-maze-sample"></a>Marble Maze 샘플에 오디오 추가
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -19,7 +26,7 @@ ms.openlocfilehash: 9c35ca4d475783e52ba68d611c7bea49a927a4e5
 
 Marble Maze는 백그라운드에서 음악을 재생할 뿐 아니라 게임 플레이 소리를 사용하여 구슬이 벽에 부딪치는 경우 등의 게임 이벤트를 나타냅니다. 구현의 중요한 부분 중 하나는 Marble Maze가 반향 또는 에코 효과를 사용하여 구슬이 튀어 나갈 때 나는 소리를 시뮬레이트하는 것입니다. 반향 효과 구현에서는 에코가 작은 방에서 더 빠르고 크게 들리고, 큰 방에서 더 조용하고 느리게 들립니다.
 
-> **참고** 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
+> **참고**   이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
 
 게임에서 오디오 작업을 하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.
 
@@ -31,7 +38,7 @@ Marble Maze는 백그라운드에서 음악을 재생할 뿐 아니라 게임 �
 -   모든 오디오 리소스와 인터페이스를 해제하고 다시 만들어 헤드폰을 비롯한 장치 변경을 처리합니다.
 -   디스크 공간 및 스트리밍 비용 최소화가 요구 사항인 경우 오디오 파일을 압축할지 여부를 고려합니다. 그렇지 않으면 오디오가 더 빨리 로드되도록 오디오를 압축되지 않은 상태로 둘 수 있습니다.
 
-## XAudio2 및 Microsoft 미디어 파운데이션 소개
+## <a name="introducing-xaudio2-and-microsoft-media-foundation"></a>XAudio2 및 Microsoft 미디어 파운데이션 소개
 
 
 XAudio2는 특히 게임 오디오를 지원하는 Windows용 하위 수준 오디오 라이브러리입니다. 게임에 대해 DSP(디지털 신호 처리) 및 오디오 그래프 엔진을 제공합니다. XAudio2는 SIMD 부동 소수점 아키텍처, HD 오디오 등의 컴퓨팅 추세를 지원하여 기존의 DirectSound 및 XAudio를 확장합니다. 또한 최신 게임의 복잡한 소리 처리 요구를 지원합니다.
@@ -44,7 +51,7 @@ XAudio2는 특히 게임 오디오를 지원하는 Windows용 하위 수준 오�
 -   서브믹스 음성은 오디오 데이터를 처리합니다. 이 처리에는 오디오 스트림을 변경하거나 여러 스트림을 하나로 결합하는 작업이 포함될 수 있습니다. Marble Maze는 서브믹스를 사용하여 반향 효과를 만듭니다.
 -   마스터 음성은 원본 및 서브믹스 음성의 데이터를 결합하고 해당 데이터를 오디오 하드웨어에 보냅니다.
 -   오디오 그래프에는 각 활성 소리의 원본 음성 1개, 서브믹스 음성 0개 이상 및 마스터 음성 1개만 포함됩니다.
--   콜백은 음성 또는 엔진 개체에서 일부 이벤트가 발생했다고 클라이언트 코드에 알립니다. 콜백을 사용하면 XAudio2가 버퍼를 완료할 때 메모리를 다시 사용하고, 오디오 장치가 변경될 때(예: 헤드폰을 연결하거나 분리할 때) 반응할 수 있습니다. 이 문서의 뒷부분에 있는 [헤드폰 및 장치 변경 처리 섹션](#phones)에서는 Marble Maze가 이 메커니즘을 사용하여 장치 변경을 처리하는 방법을 설명합니다.
+-   콜백은 음성 또는 엔진 개체에서 일부 이벤트가 발생했다고 클라이언트 코드에 알립니다. 콜백을 사용하면 XAudio2가 버퍼를 완료할 때 메모리를 다시 사용하고, 오디오 장치가 변경될 때(예: 헤드폰을 연결하거나 분리할 때) 반응할 수 있습니다. 이 문서의 뒷부분에 있는 [헤드폰 및 장치 변경 처리](#handling-headphones-and-device-changes) 섹션에서는 Marble Maze가 이 메커니즘을 사용하여 장치 변경을 처리하는 방법을 설명합니다.
 
 Marble Maze는 오디오 엔진 2개(즉, [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) 개체 2개)를 사용하여 오디오를 처리합니다. 한 엔진은 배경 음악을 처리하고, 다른 엔진은 게임 플레이 소리를 처리합니다.
 
@@ -54,14 +61,14 @@ Marble Maze는 오디오 엔진 2개(즉, [**IXAudio2**](https://msdn.microsoft.
 
 XAudio2에 대한 자세한 내용은 [프로그래밍 가이드](https://msdn.microsoft.com/library/windows/desktop/ee415737)를 참조하세요. 미디어 파운데이션에 대한 자세한 내용은 [Microsoft 미디어 파운데이션](https://msdn.microsoft.com/library/windows/desktop/ms694197)을 참조하세요.
 
-## 오디오 리소스 초기화
+## <a name="initializing-audio-resources"></a>오디오 리소스 초기화
 
 
 Marble Maze는 배경 음악에 Windows Media 오디오(.wma) 파일을 사용하고 게임 플레이 소리에 WAV(.wav) 파일을 사용합니다. 두 형식은 미디어 파운데이션에서 지원됩니다. .wav 파일 형식은 XAudio2에서 기본적으로 지원되지만 게임이 파일 형식을 수동으로 구문 분석하여 적절한 XAudio2 데이터 구조를 작성해야 합니다. Marble Maze는 .wav 파일을 더욱 쉽게 사용하기 위해 미디어 파운데이션을 사용합니다. 미디어 파운데이션에서 지원되는 전체 미디어 형식 목록은 [미디어 파운데이션에서 지원되는 미디어 형식](https://msdn.microsoft.com/library/windows/desktop/dd757927)을 참조하세요. Marble Maze는 별도의 디자인 타임 및 런타임 오디오 형식을 사용하지 않고 XAudio2 ADPCM 압축 지원을 사용하지 않습니다. XAudio2의 ADPCM 압축에 대한 자세한 내용은 [ADPCM 개요](https://msdn.microsoft.com/library/windows/desktop/ee415711)를 참조하세요.
 
 **MarbleMaze::CreateDeviceIndependentResources**에서 호출되는 **Audio::CreateResources** 메서드는 파일에서 오디오 스트림을 로드하고, XAudio2 엔진 개체를 초기화하고, 원본, 서브믹스 및 마스터 음성을 만듭니다.
 
-###  XAudio2 엔진 만들기
+###  <a name="creating-the-xaudio2-engines"></a>XAudio2 엔진 만들기
 
 Marble Maze는 하나의 [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) 개체를 만들어 사용되는 각 오디오 엔진을 나타냅니다. 오디오 엔진을 만들려면 [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212) 함수를 호출합니다. 다음 예제에서는 Marble Maze가 배경 음악을 처리하는 오디오 엔진을 만드는 방법을 보여 줍니다.
 
@@ -73,9 +80,9 @@ DX::ThrowIfFailed(
 
 Marble Maze는 유사한 단계를 수행하여 게임 플레이 소리를 재생하는 오디오 엔진을 만듭니다.
 
-UWP 앱에서 [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) 인터페이스를 사용하는 방법은 데스크톱 앱과 두 가지 방식에서 서로 다릅니다. 첫째, [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212)를 호출하기 전에 **CoInitializeEx**를 호출할 필요가 없습니다. 또한 **IXAudio2**는 더 이상 디바이스 열거를 지원하지 않습니다. 오디오 장치를 열거하는 방법에 대한 자세한 내용은 [디바이스 열거](https://msdn.microsoft.com/library/windows/apps/hh464977)를 참조하세요.
+UWP 앱에서 [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) 인터페이스를 사용하는 방법은 데스크톱 앱과 두 가지 방식에서 서로 다릅니다. 첫째, [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212)를 호출하기 전에 **CoInitializeEx**를 호출할 필요가 없습니다. 또한 **IXAudio2**는 더 이상 장치 열거를 지원하지 않습니다. 오디오 장치를 열거하는 방법에 대한 자세한 내용은 [장치 열거](https://msdn.microsoft.com/library/windows/apps/hh464977)를 참조하세요.
 
-###  마스터 음성 만들기
+###  <a name="creating-the-mastering-voices"></a>마스터 음성 만들기
 
 다음 예제에서는 **Audio::CreateResources** 메서드가 배경 음악에 대한 마스터 음성을 만드는 방법을 보여 줍니다. [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048)를 호출하면 입력 채널 2개가 지정됩니다. 이 경우 반향 효과에 대한 논리가 간소화됩니다. **XAUDIO2\_DEFAULT\_SAMPLERATE** 사양은 소리 제어판에 지정된 샘플 속도를 사용하도록 오디오 엔진에 알립니다. 이 예제에서 **m\_musicMasteringVoice**는 [**IXAudio2MasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/ee415912) 개체입니다.
 
@@ -103,7 +110,7 @@ DX::ThrowIfFailed(
 
 **Audio::CreateResources** 메서드는 *StreamCategory* 매개 변수에 대해 기본값인 **AudioCategory\_GameEffects**를 지정한다는 점을 제외하고 유사한 단계를 수행하여 게임 플레이 소리에 대한 마스터 음성을 만듭니다. Marble Maze는 사용자가 게임을 플레이할 때 다른 응용 프로그램에서 음악을 들을 수 있도록 배경 음악에 대해 **AudioCategory\_GameMedia**를 지정합니다. 음악 앱이 재생 중이면 Windows는 **AudioCategory\_GameMedia** 옵션으로 생성된 음성을 모두 음소거합니다. 게임 플레이 소리는 **AudioCategory\_GameEffects** 옵션으로 생성되기 때문에 사용자가 들을 수 있습니다. 오디오 범주에 대한 자세한 내용은 [**AUDIO\_STREAM\_CATEGORY**](https://msdn.microsoft.com/library/windows/desktop/hh404178) 열거형을 참조하세요.
 
-###  반향 효과 만들기
+###  <a name="creating-the-reverb-effect"></a>반향 효과 만들기
 
 각 음성에 대해 XAudio2를 사용하여 오디오를 처리하는 효과 시퀀스를 만들 수 있습니다. 이러한 시퀀스를 효과 체인이라고 합니다. 음성에 하나 이상의 효과를 적용하려는 경우 효과 체인을 사용합니다. 효과 체인은 파괴적일 수 있습니다. 즉, 체인의 각 효과가 오디오 버퍼를 덮어쓸 수 있습니다. XAudio2에서 출력 버퍼가 자동으로 초기화되도록 보장하지 않으므로 이 속성은 중요합니다. 효과 개체는 XAudio2에서 XAPO(플랫폼 간 오디오 처리 개체)로 표현됩니다. XAPO에 대한 자세한 내용은 [XAPO 개요](https://msdn.microsoft.com/library/windows/desktop/ee415735)를 참조하세요.
 
@@ -147,7 +154,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-> **팁** 기존 효과 체인을 기존 서브믹스 음성에 연결하거나 현재 효과 체인을 바꾸려는 경우 [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594) 메서드를 사용합니다.
+> **팁**  기존 효과 체인을 기존 서브믹스 음성에 연결하거나 현재 효과 체인을 바꾸려는 경우 [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594) 메서드를 사용합니다.
 
  
 
@@ -189,7 +196,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-**Audio::CreateReverb** 메서드는 **enableEffect** 플래그가 설정된 경우 효과를 사용하도록 설정하고 해당 볼륨 및 출력 매트릭스를 설정하여 완료합니다. 이 부분에서는 볼륨을 전체(1.0)로 설정한 다음 왼쪽 및 오른쪽 입력과 왼쪽 및 오른쪽 출력 스피커에 대해 볼륨 매트릭스를 무음으로 지정합니다. 나중에 다른 코드가 두 반향 간을 크로스 페이드하여 벽 근처에서 큰 방으로의 전환을 시뮬레이트하거나, 필요한 경우 두 반향을 모두 음소거하기 때문입니다. 나중에 반향 경로의 음소거를 해제하는 경우 게임은 {1.0f, 0.0f, 0.0f, 1.0f} 행렬을 설정하여 왼쪽 반향 출력을 마스터 음성의 왼쪽 입력으로 보내고 오른쪽 반향 출력을 마스터 음성의 오른쪽 입력으로 보냅니다.
+**Audio::CreateReverb** 메서드는 **enableEffect** 플래그가 설정된 경우 효과를 사용하도록 설정하고 해당 볼륨 및 출력 매트릭스를 설정하여 완료합니다. 이 부분에서는 볼륨을 전체(1.0)로 설정한 다음 왼쪽 및 오른쪽 입력과 왼쪽 및 오른쪽 출력 스피커에 대해 볼륨 매트릭스를 무음으로 지정합니다. 나중에 다른 코드가 두 반향 간을 크로스 페이드하여 벽 근처에서 큰 방으로의 전환을 시뮬레이트하거나, 필요한 경우 두 반향을 모두 음소거하기 때문입니다. 나중에 반향 경로의 음소거를 해제하는 경우 게임은 {1.0f, 0.0f, 0.0f, 1.0f} 매트릭스를 설정하여 왼쪽 반향 출력을 마스터 음성의 왼쪽 입력으로 보내고 오른쪽 반향 출력을 마스터 음성의 오른쪽 입력으로 보냅니다.
 
 ```cpp
 if (enableEffect)
@@ -230,7 +237,7 @@ CreateReverb(
 
 XAudio2에 사용할 수 있는 효과 원본 목록은 [XAudio2 오디오 효과](https://msdn.microsoft.com/library/windows/desktop/ee415756)를 참조하세요.
 
-### 파일에서 오디오 데이터 로드
+### <a name="loading-audio-data-from-file"></a>파일에서 오디오 데이터 로드
 
 Marble Maze는 미디어 파운데이션을 사용하여 파일에서 오디오 리소스를 로드하는 **MediaStreamer** 클래스를 정의합니다. Marble Maze는 하나의 **MediaStreamer** 개체를 사용하여 각 오디오 파일을 로드합니다.
 
@@ -300,7 +307,7 @@ CopyMemory(&m_waveFormat, waveFormat, sizeof(m_waveFormat));
 CoTaskMemFree(waveFormat);
 ```
 
-> **중요** [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) 함수는 **CoTaskMemAlloc**을 사용하여 [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) 개체를 할당합니다. 따라서 이 개체의 사용이 완료되면 **CoTaskMemFree**를 호출해야 합니다.
+> **중요**  [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) 함수는 **CoTaskMemAlloc**을 사용하여 [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) 개체를 할당합니다. 따라서 이 개체의 사용이 완료되면 **CoTaskMemFree**를 호출해야 합니다.
 
  
 
@@ -322,7 +329,7 @@ m_maxStreamLengthInBytes =
 m_maxStreamLengthInBytes = (m_maxStreamLengthInBytes + 3) / 4 * 4;
 ```
 
-### 원본 음성 만들기
+### <a name="creating-the-source-voices"></a>원본 음성 만들기
 
 Marble Maze는 XAudio2 원본 음성을 만들어 원본 음성의 각 음악과 게임 소리를 재생합니다. **Audio** 클래스는 배경 음악에 사용할 [**IXAudio2SourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee415914) 개체와 게임 플레이 소리를 저장할 **SoundEffectData** 개체 배열을 정의합니다. **SoundEffectData** 구조체는 효과에 대한 **IXAudio2SourceVoice** 개체를 저장하고 오디오 버퍼 등의 다른 효과 관련 데이터도 정의합니다. Audio.h는 **SoundEvent** 열거형을 정의합니다. Marble Maze는 이 열거형을 사용하여 각 게임 플레이 소리를 식별합니다. 또한 Audio 클래스는 이 열거형을 사용하여 **SoundEffectData** 개체 배열을 인덱싱합니다.
 
@@ -393,7 +400,7 @@ else
 }
 ```
 
-## 배경 음악 재생
+## <a name="playing-background-music"></a>배경 음악 재생
 
 
 원본 음성은 중지된 상태로 생성됩니다. Marble Maze는 게임 루프에서 배경 음악을 시작합니다. **MarbleMaze::Update**를 처음 호출하면 **Audio::Start**가 호출되어 배경 음악을 시작합니다.
@@ -429,13 +436,13 @@ void Audio::Start()
 
 원본 음성은 오디오 데이터를 오디오 그래프의 다음 단계로 전달합니다. Marble Maze의 경우 반향 효과 2개를 오디오에 적용하는 서브믹스 음성 2개가 다음 단계에 포함됩니다. 한 서브믹스 음성은 가까운 지연 필드 반향을 적용하고, 두 번째 서브믹스 음성은 먼 지연 필드 반향을 적용합니다. 각 서브믹스 음성이 최종 믹스에 기여하는 정도는 방의 크기와 모양에 따라 결정됩니다. 근거리 반향은 구슬이 벽 근처나 작은 방에 있을 때 더 많이 기여하고, 지연 필드 반향은 구슬이 큰 공간에 있을 때 더 많이 기여합니다. 이 기술은 구슬이 미로를 통과할 때 보다 사실적인 에코 효과를 생성합니다. Marble Maze가 이 효과를 구현하는 방법에 대한 자세한 내용은 Marble Maze 소스 코드의 **Audio::SetRoomSize** 및 **Physics::CalculateCurrentRoomSize**를 참조하세요.
 
-> **참고** 대부분의 방 크기가 비교적 동일한 게임에서는 더 기본적인 반향 모델을 사용할 수 있습니다. 예를 들어 하나의 반향 설정을 모든 방에 사용하거나 각 방에 대해 사전 정의된 반향 설정을 만들 수 있습니다.
+> **참고**  대부분의 방 크기가 비교적 동일한 게임에서는 더 기본적인 반향 모델을 사용할 수 있습니다. 예를 들어 하나의 반향 설정을 모든 방에 사용하거나 각 방에 대해 사전 정의된 반향 설정을 만들 수 있습니다.
 
  
 
 **Audio::CreateResources** 메서드는 미디어 파운데이션을 사용하여 배경 음악을 로드합니다. 그러나 이 시점에는 원본 음성에 작업할 오디오 데이터가 없습니다. 또한 배경 음악은 반복되기 때문에 음악이 계속 재생되도록 정기적으로 원본 음성을 데이터로 업데이트해야 합니다. 원본 음성을 데이터가 채워진 상태로 유지하기 위해 게임 루프는 매 프레임마다 오디오 버퍼를 업데이트합니다. **MarbleMaze::Render** 메서드는 **Audio::Render**를 호출하여 배경 음악 오디오 버퍼를 처리합니다. **Audio::Render**는 3개의 오디오 버퍼로 구성된 배열인 **m\_audioBuffers**를 정의합니다. 각 버퍼는 64KB(65536바이트)의 데이터를 저장합니다. 루프는 미디어 파운데이션 개체에서 데이터를 읽고, 원본 음성에 대기 중인 버퍼 3개가 있을 때까지 해당 데이터를 원본 음성에 씁니다.
 
-> **주의** Marble Maze는 64KB 버퍼를 사용하여 음악 데이터를 저장하지만 더 크거나 작은 버퍼를 사용해야 할 수도 있습니다. 이 크기는 게임의 요구 사항에 따라 달라집니다.
+> **주의**  Marble Maze는 64KB 버퍼를 사용하여 음악 데이터를 저장하지만 더 크거나 작은 버퍼를 사용해야 할 수도 있습니다. 이 크기는 게임의 요구 사항에 따라 달라집니다.
 
  
 
@@ -533,11 +540,11 @@ if(sound == RollingEvent)
 
 그러나 배경 음악의 경우 Marble Maze는 사용되는 메모리 양을 더 효율적으로 제어할 수 있도록 버퍼를 직접 관리합니다. 음악 파일이 큰 경우 음악 데이터를 더 작은 버퍼로 스트리밍 할 수 있습니다. 이렇게 하면 오디오 데이터를 처리하고 스트리밍하는 게임 기능의 빈도와 메모리 크기의 균형을 이루는 데 도움이 될 수 있습니다.
 
-> **팁** 게임의 프레임 속도가 부족하거나 변하는 경우 주 스레드에서 오디오를 처리하면 오디오 엔진에 작업할 버퍼링된 오디오 데이터가 부족하기 때문에 오디오가 예기치 않게 일시 중지되거나 발생할 수 있습니다. 이 문제가 게임에서 중요한 경우 렌더링을 수행하지 않는 별도의 스레드에서 오디오를 처리하는 것이 좋습니다. 이 방법은 게임이 유휴 프로세서를 사용할 수 있기 때문에 여러 개의 프로세서가 있는 컴퓨터에서 특히 유용합니다.
+> **팁**  게임의 프레임 속도가 부족하거나 변하는 경우 주 스레드에서 오디오를 처리하면 오디오 엔진에 작업할 버퍼링된 오디오 데이터가 부족하기 때문에 오디오가 예기치 않게 일시 중지되거나 발생할 수 있습니다. 이 문제가 게임에서 중요한 경우 렌더링을 수행하지 않는 별도의 스레드에서 오디오를 처리하는 것이 좋습니다. 이 방법은 게임이 유휴 프로세서를 사용할 수 있기 때문에 여러 개의 프로세서가 있는 컴퓨터에서 특히 유용합니다.
 
  
 
-##  게임 이벤트에 반응
+##  <a name="reacting-to-game-events"></a>게임 이벤트에 반응
 
 
 **MarbleMaze** 클래스는 **PlaySoundEffect**, **IsSoundEffectStarted**, **StopSoundEffect**, **SetSoundEffectVolume**, **SetSoundEffectPitch** 및 **SetSoundEffectFilter** 등의 메서드를 제공하여 게임에서 소리가 재생 및 중지되는 시기를 제어하고 볼륨, 피치 등의 소리 속성을 제어할 수 있게 합니다. 예를 들어 구슬이 미로에서 떨어질 경우 **MarbleMaze::Update** 메서드는 **Audio::PlaySoundEffect** 메서드를 호출하여 **FallingEvent** 소리를 재생합니다.
@@ -633,7 +640,7 @@ else
 }
 ```
 
-## 일시 중단 및 다시 시작 이벤트에 반응
+## <a name="reacting-to-suspend-and-resume-events"></a>일시 중단 및 다시 시작 이벤트에 반응
 
 
 Marble Maze 응용 프로그램 구조 문서에서는 Marble Maze에서 일시 중단 및 다시 시작을 지원하는 방법을 설명합니다. 게임을 일시 중단하면 오디오가 일시 중지됩니다. 게임을 다시 시작하면 오디오가 중지된 위치부터 다시 시작됩니다. 이 작업을 위해 필요하지 않을 경우 리소스를 사용하지 않는 모범 사례를 따릅니다.
@@ -688,7 +695,7 @@ void Audio::ResumeAudio()
 }
 ```
 
-## 헤드폰 및 장치 변경 처리
+## <a name="handling-headphones-and-device-changes"></a>헤드폰 및 장치 변경 처리
 
 
 Marble Maze는 엔진 콜백을 사용하여 오디오 장치가 변경되는 경우 등의 XAudio2 엔진 오류를 처리합니다. 게임 사용자가 헤드폰을 연결하거나 분리할 때 장치가 변경될 가능성이 큽니다. 장치 변경을 처리하는 엔진 콜백을 구현하는 것이 좋습니다. 그렇지 않으면 사용자가 헤드폰을 연결하거나 분리할 경우 게임을 다시 시작할 때까지 게임에서 소리 재생이 중지됩니다.
@@ -763,13 +770,13 @@ if (m_engineExperiencedCriticalError)
 }
 ```
 
-또한 Marble Maze는 사용 가능한 오디오 디바이스가 없을 경우 **m\_engineExperiencedCriticalError** 플래그를 사용하여 XAudio2가 호출되지 않도록 합니다. 예를 들어 **MarbleMaze::Update** 메서드는 이 플래그가 설정된 경우 구르기 또는 충돌 이벤트에 대한 오디오를 처리하지 않습니다. 필요한 경우 앱은 매 프레임마다 오디오 엔진을 복구하려고 합니다. 그러나 컴퓨터에 오디오 디바이스가 없거나 헤드폰이 분리되었으며 사용 가능한 다른 오디오 디바이스가 없을 경우 **m\_engineExperiencedCriticalError** 플래그가 항상 설정될 수도 있습니다.
+또한 Marble Maze는 사용 가능한 오디오 장치가 없을 경우 **m\_engineExperiencedCriticalError** 플래그를 사용하여 XAudio2가 호출되지 않도록 합니다. 예를 들어 **MarbleMaze::Update** 메서드는 이 플래그가 설정된 경우 구르기 또는 충돌 이벤트에 대한 오디오를 처리하지 않습니다. 필요한 경우 앱은 매 프레임마다 오디오 엔진을 복구하려고 합니다. 그러나 컴퓨터에 오디오 장치가 없거나 헤드폰이 분리되었으며 사용 가능한 다른 오디오 장치가 없을 경우 **m\_engineExperiencedCriticalError** 플래그가 항상 설정될 수도 있습니다.
 
-> **주의** 일반적으로 엔진 콜백 본문에서 차단 작업을 수행하지 마세요. 이렇게 하면 성능 문제가 발생할 수 있습니다. Marble Maze는 **OnCriticalError** 콜백에 플래그를 설정하고 나중에 일반적인 오디오 처리 단계에서 오류를 처리합니다. XAudio2 콜백에 대한 자세한 내용은 [XAudio2 콜백](https://msdn.microsoft.com/library/windows/desktop/ee415745)을 참조하세요.
+> **주의**   일반적으로 엔진 콜백 본문에서 차단 작업을 수행하지 마세요. 이렇게 하면 성능 문제가 발생할 수 있습니다. Marble Maze는 **OnCriticalError** 콜백에 플래그를 설정하고 나중에 일반적인 오디오 처리 단계에서 오류를 처리합니다. XAudio2 콜백에 대한 자세한 내용은 [XAudio2 콜백](https://msdn.microsoft.com/library/windows/desktop/ee415745)을 참조하세요.
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [Marble Maze 샘플에 입력 및 대화형 작업 추가](adding-input-and-interactivity-to-the-marble-maze-sample.md)
@@ -781,10 +788,5 @@ if (m_engineExperiencedCriticalError)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

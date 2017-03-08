@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "실행, 다시 시작 및 백그라운드 작업"
 description: "이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 32737991b31eaceb33fc2ecb5152def167c36fdd
-ms.openlocfilehash: 6b350ef65f381d18585c8b080c6259f7607c7bf9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 40400b8b17da9b010c0f03e9976201a1def025f8
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -116,9 +123,4 @@ ms.openlocfilehash: 6b350ef65f381d18585c8b080c6259f7607c7bf9
 |-------|-------------|
 | [시작 화면 추가](add-a-splash-screen.md) | 앱의 시작 화면 이미지와 배경색을 설정합니다. |
 | [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) | 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하며 사용자 지정할 수 있습니다. |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

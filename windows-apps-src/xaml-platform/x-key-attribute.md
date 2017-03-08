@@ -3,19 +3,26 @@ author: jwmsft
 description: "리소스로 만들어지고 참조되며 ResourceDictionary 내에 있는 요소를 고유하게 식별합니다."
 title: "xKey 특성"
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
-ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 67b2b3b60ab6faba5ca30bb585205aba007597ca
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:Key 특성
+# <a name="xkey-attribute"></a>x:Key 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 리소스로 만들어지고 참조되며 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 내에 있는 요소를 고유하게 식별합니다.
 
-## XAML 특성 사용
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
 ``` syntax
 <ResourceDictionary>
@@ -23,7 +30,7 @@ ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
 </ResourceDictionary>
 ```
 
-## XAML 특성 사용(암시적 **ResourceDictionary**)
+## <a name="xaml-attribute-usage-implicit-resourcedictionary"></a>XAML 특성 사용(암시적 **ResourceDictionary**)
 
 ``` syntax
 <object.Resources>
@@ -31,14 +38,14 @@ ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
 </object.Resources>
 ```
 
-## XAML 값
+## <a name="xaml-values"></a>XAML 값
 
 | 용어 | 설명 |
 |------|-------------|
 | object | 공유 가능한 모든 개체입니다. [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 참조하세요. |
 | stringKeyValue | 키로 사용되는 실제 문자열이며 _XamlName_&gt; 문법을 따라야 합니다. 아래 "XamlName 문법"을 참조하세요. | 
 
-##  XamlName 문법
+##  <a name="xamlname-grammar"></a>XamlName 문법
 
 다음은 UWP(유니버설 Windows 플랫폼) XAML 구현에서 키로 사용되는 문자열에 대한 규범 문법입니다.
 
@@ -55,7 +62,7 @@ CombiningCharacter::= none
 -   유니코드 문자 범위는 지원되지 않습니다.
 -   이름은 숫자로 시작될 수 없습니다.
 
-## 설명
+## <a name="remarks"></a>설명
 
 일반적으로 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 자식 요소는 해당 사전 내에서 고유한 키 값을 지정하는 **x:Key** 특성을 포함합니다. 키 고유성은 요소가 로드될 때 XAML 프로세서에 의해 적용됩니다. **x:Key** 값이 고유하지 않으면 XAML 구문 분석 예외가 발생합니다. [{StaticResource} 태그 확장](staticresource-markup-extension.md)에서 요청하는 경우 확인되지 않은 키가 있어도 XAML 구문 분석 예외가 발생합니다.
 
@@ -66,10 +73,5 @@ CombiningCharacter::= none
 **x:Key** 지정에 해당하는 코드는 기본 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)와 함께 키를 사용하는 모든 작업입니다. 예를 들어 리소스의 태그에 적용된 **x:Key**는 리소스를 **ResourceDictionary**에 추가할 때 지정하는 **Insert**의 *key* 매개 변수 값과 동일합니다.
 
 리소스 사전의 항목은 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) 또는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)을 대상으로 하는 경우 **x:Key**에 대한 값을 생략할 수 있습니다. 각각의 경우 리소스 항목의 암시적인 키는 문자열로 해석된 **TargetType** 값입니다. 자세한 내용은 [빠른 시작: 컨트롤 스타일 지정](https://msdn.microsoft.com/library/windows/apps/hh465498) 및 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

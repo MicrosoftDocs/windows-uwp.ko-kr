@@ -3,13 +3,20 @@ title: "일반적인 암호화 작업"
 description: "이러한 문서에서는 난수 만들기, 버퍼 비교, 문자열과 이진 데이터 간 변환, 바이트 배열에서 복사 및 데이터 인코드 및 디코드 등의 일반적인 UWP(유니버설 Windows 플랫폼) 암호화 작업에 대한 예제 코드를 제공합니다."
 ms.assetid: 2DE094F4-28E2-4C5D-BF8C-617BD90AB119
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 5122c7d9750a9f37582b27752926da1c9f44b321
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3ce185e4bdd247c8b0ac71401a2ff863c64f880a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 일반적인 암호화 작업
+# <a name="common-cryptography-tasks"></a>일반적인 암호화 작업
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -25,9 +32,4 @@ ms.openlocfilehash: 5122c7d9750a9f37582b27752926da1c9f44b321
 | [바이트 배열에 및 바이트 배열에서 복사](copy-to-and-from-byte-arrays.md)                       | 이 예제 코드는 UWP 앱에서 바이트 배열 간에 복사하는 방법을 보여 줍니다.                             |
 | [데이터 인코드 및 디코드](encode-and-decode-data.md)                                   | 이 예제 코드는 UWP 앱에서 base64 및 16진수 데이터를 인코딩 및 디코딩하는 방법을 보여 줍니다.            |
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

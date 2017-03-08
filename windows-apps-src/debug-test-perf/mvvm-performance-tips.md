@@ -2,19 +2,26 @@
 author: mcleblanc
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
 title: "MVVM 및 언어 성능 팁"
-description: "이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 설명합니다."
+description: "이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 살펴봅니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4be8fd69752dac70c316164fca79bb73c6666c43
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5833422a3074ddfa581011d91c8364bddb3c3088
+ms.lasthandoff: 02/07/2017
 
 ---
-# MVVM 및 언어 성능 팁
+# <a name="mvvm-and-language-performance-tips"></a>MVVM 및 언어 성능 팁
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 설명합니다.
 
-## MVVM(Model-View-ViewModel) 패턴
+## <a name="the-model-view-viewmodel-mvvm-pattern"></a>MVVM(Model-View-ViewModel) 패턴
 
 MVVM(Model-View-ViewModel) 패턴은 다양한 XAML 앱에서 일반적으로 사용됩니다. (MVVM은 Model-View-Presenter 패턴에 대한 Fowler의 설명과 매우 유사하지만 XAML에 맞게 조정되었습니다.) MVVM 패턴의 문제는 의도와 달리 계층이 너무 많고 할당이 너무 많이 포함된 앱이 생길 수 있다는 점입니다. MVVM의 이점은 다음과 같습니다.
 
@@ -28,7 +35,7 @@ MVVM 패턴에 대한 여러 개의 구체적인 정의와 이를 구현하는 �
 -   MVVM에서는 일반적인 DelegateCommand 또는 RelayCommand 도우미와 같은 ICommand를 사용하여 Button.Click을 보기 모델에 연결하는 방법을 많이 사용합니다. 이러한 명령은 CanExecuteChanged 이벤트 수신기 포함, 작업 집합에 추가, 페이지의 시작/탐색 시간에 추가 등을 포함한 추가 할당입니다. **권장 사항:** 편리한 ICommand 인터페이스를 사용하는 대신, 이벤트 처리기를 코드 숨김에 배치하고 보기 이벤트에 추가한 다음 이러한 이벤트 발생 시 보기 모델에 대해 명령을 호출합니다. 또한 명령을 사용할 수 없는 경우 단추를 비활성화하는 추가 코드를 추가해야 합니다.
 -   MVVM에서는 가능한 모든 UI 구성을 사용하여 페이지를 만든 다음 VM의 속성에 표시 여부 속성을 바인딩하여 트리의 일부를 축소하는 방법을 많이 사용합니다. 이렇게 하면 시작 시간이 불필요하게 늘어나며 작업 집합도 많아질 수 있습니다(트리의 일부가 전혀 표시되지 않을 수 있기 때문). **권장 사항:** x:DeferLoadStrategy 기능을 사용하여 트리의 불필요한 부분을 시작에서 지연되도록 만듭니다. 또한 페이지의 다양한 모드별로 별도의 사용자 컨트롤을 만들고 코드 숨김을 사용하여 필수 컨트롤만 로드된 상태로 유지합니다.
 
-## C++/CX 권장 사항
+## <a name="ccx-recommendations"></a>C++/CX 권장 사항
 
 -   **최신 버전을 사용합니다**. C++/CX 컴파일러의 성능이 지속적으로 향상되고 있습니다. 최신 도구 집합을 사용하여 앱을 빌드해야 합니다.
 -   **RTTI를 사용하지 않도록 설정합니다(/GR-)**. 컴파일러에서 RTTI는 기본적으로 켜져 있으므로, 빌드 환경에서 해제하지 않는 한 RTTI를 사용하게 됩니다. RTTI에는 상당한 오버헤드가 따르므로, 코드에 싶은 종속성이 없다면 RTTI를 해제해야 합니다. XAML 프레임워크에서는 코드에 RTTI를 사용하도록 하는 요구 사항이 없습니다.
@@ -41,10 +48,5 @@ MVVM 패턴에 대한 여러 개의 구체적인 정의와 이를 구현하는 �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

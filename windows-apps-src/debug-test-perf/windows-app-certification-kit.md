@@ -3,19 +3,26 @@ author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: "Windows 앱 인증 키트"
 description: "앱이 Windows 스토어에 게시될 가능성 또는 Windows 인증을 받을 가능성을 최대한 높이려면 인증을 받기 위해 앱을 제출하기 전에 로컬로 앱의 유효성을 검사하고 테스트하세요. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 478ba4a24cff3c2df34d98157624c9c4339d432a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f30eaa7edf229872170a3f661c931787938acb2d
+ms.lasthandoff: 02/07/2017
 
 ---
-# Windows 앱 인증 키트
+# <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 앱이 [Windows 스토어에 게시될](https://msdn.microsoft.com/library/windows/apps/Hh694062) 가능성 또는 [Windows 인증을 받을](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 가능성을 최대한 높이려면 인증을 받기 위해 앱을 제출하기 전에 로컬로 앱의 유효성을 검사하고 테스트하세요. 이 항목에서는 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666)를 설치하고 실행하는 방법을 보여 줍니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 유니버설 Windows 앱을 테스트하기 위한 필수 구성 요소:
 
@@ -28,7 +35,7 @@ ms.openlocfilehash: 478ba4a24cff3c2df34d98157624c9c4339d432a
 
 최신 [Windows 앱 인증 키트]( http://go.microsoft.com/fwlink/p/?LinkID=309666)를 설치하면 컴퓨터에 설치되어 있는 이전 버전의 키트가 대체됩니다.
 
-## 대화식으로 Windows 앱 인증 키트를 사용하여 Windows 앱의 유효성 검사
+## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a>대화식으로 Windows 앱 인증 키트를 사용하여 Windows 앱의 유효성 검사
 
 1.  **시작** 메뉴에서 **앱**을 검색하고 **Windows 키트**를 찾은 다음 **Windows 앱 인증 키트**를 클릭합니다.
 
@@ -52,7 +59,7 @@ ms.openlocfilehash: 478ba4a24cff3c2df34d98157624c9c4339d432a
 
  
 
-## 명령줄에서 Windows 앱 인증 키트를 사용하여 Windows 앱의 유효성 검사
+## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a>명령줄에서 Windows 앱 인증 키트를 사용하여 Windows 앱의 유효성 검사
 
 **중요** Windows 앱 인증 키트는 활성 사용자 세션에서 실행되어야 합니다.
 
@@ -78,7 +85,7 @@ ms.openlocfilehash: 478ba4a24cff3c2df34d98157624c9c4339d432a
 
 **참고** Windows 앱 인증 키트 명령줄에 대한 자세한 내용을 보려면 다음 명령을 입력하세요. `appcert.exe /?`
 
-## 절전 컴퓨터를 사용하여 테스트
+## <a name="testing-with-a-low-power-computer"></a>절전 컴퓨터를 사용하여 테스트
 
 Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 성능을 기반으로 합니다.
 
@@ -86,7 +93,7 @@ Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 �
 
 저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)을 참조하고 최신 버전의 Windows 앱 인증 키트로 앱을 테스트하여 앱이 최신 성능 요구 사항을 준수하는지 확인하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md)
 * [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)
@@ -96,10 +103,5 @@ Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

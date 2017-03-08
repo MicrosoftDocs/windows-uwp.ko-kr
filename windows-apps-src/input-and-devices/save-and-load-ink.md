@@ -5,22 +5,23 @@ title: "Windows Ink 스트로크 데이터 저장 및 검색"
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
-keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format"
+keywords: "Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format, 사용자 조작, 입력"
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 11bd4c1d8c4f675fb1dad38e249d64324fa29ecf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7c4f0ac39decede933f10fc94ebeb09fa41415e4
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다.
+Windows Ink를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -450,10 +451,5 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

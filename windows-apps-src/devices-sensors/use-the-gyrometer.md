@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
 title: "회전계 사용"
 description: "회전계를 사용하여 사용자의 동작 변화를 탐지하는 방법을 알아봅니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: f53ae8de70ddca0d8293283012bedb8a39ac7ac1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c5e02bcd4912a5db5d691f4172baeff2378433e4
+ms.lasthandoff: 02/07/2017
 
 ---
-# 회전계 사용
+# <a name="use-the-gyrometer"></a>회전계 사용
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-** 중요 API **
+**중요 API**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**회전계**](https://msdn.microsoft.com/library/windows/apps/BR225718)
@@ -23,17 +30,17 @@ ms.openlocfilehash: f53ae8de70ddca0d8293283012bedb8a39ac7ac1
 
 회전계는 가속도계를 게임 컨트롤러로서 보완합니다. 가속도계는 선형 동작을 측정할 수고 회전계는 각속도 또는 회전 동작을 측정합니다.
 
-## 사전 요구 사항
+## <a name="prerequisites"></a>사전 요구 사항
 
 XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트에 대해 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 회전계를 지원해야 합니다.
 
-## 간단한 회전계 앱 만들기
+## <a name="create-a-simple-gyrometer-app"></a>간단한 회전계 앱 만들기
 
 이 섹션은 두 개의 하위 섹션으로 나뉩니다. 첫 번째 하위 섹션에서는 처음부터 간단한 회전계 응용 프로그램을 만드는 데 필요한 단계를 안내합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명합니다.
 
-###  지침
+###  <a name="instructions"></a>지침
 
 -   **Visual C#** 프로젝트 템플릿에서 **빈 앱(유니버설 Windows)**를 선택하여 새 프로젝트를 만듭니다.
 
@@ -66,8 +73,8 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
         public sealed partial class MainPage : Page
         {
             private Gyrometer _gyrometer; // Our app' s gyrometer object
-     
-            // This event handler writes the current gyrometer reading to 
+
+            // This event handler writes the current gyrometer reading to
             // the three textblocks on the app' s main page.
 
             private async void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
@@ -85,7 +92,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
             {
                 this.InitializeComponent();
                 _gyrometer = Gyrometer.GetDefault(); // Get the default gyrometer sensor object
-                
+
                 if (_gyrometer != null)
                 {
                     // Establish the report interval for all scenarios
@@ -106,7 +113,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
 
 -   MainPage.xaml 파일을 열고 원본 콘텐츠를 다음 XML로 바꿉니다.
 
-```xml 
+```xml
         <Page
         x:Class="App1.MainPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -136,7 +143,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
 
 -   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
 
-###  설명
+###  <a name="explanation"></a>설명
 
 앞의 예는 앱에서 회전계 입력을 통합하기 위해 작성해야 하는 코드의 양이 얼마나 작은지를 보여줍니다.
 
@@ -157,7 +164,7 @@ _gyrometer.ReportInterval = reportInterval;
 새 회전계 데이터는 **ReadingChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
 
 ```csharp
-_gyrometer.ReadingChanged += new TypedEventHandler<Gyrometer, 
+_gyrometer.ReadingChanged += new TypedEventHandler<Gyrometer,
 GyrometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -172,13 +179,7 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
         <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="21" Margin="54,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" Foreground="#FFF8F3F3"/>
 ```
 
- ## 관련 항목
+ ## <a name="related-topics"></a>관련 항목
 
 * [회전계 샘플](http://go.microsoft.com/fwlink/p/?linkid=241379)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,9 +3,16 @@ author: jnHs
 Description: "앱의 계열사 광고에 대한 성능 데이터를 보려면 Windows 개발자 센터 대시보드에서 앱 수준 및 계정 수준 계열사 성과 보고서를 사용합니다."
 title: "계열사 성과 보고서"
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9646b9614bb2935db5880cad9bf1a58648330671
-ms.openlocfilehash: 76bb607fb0abf11c863be24489a4eea0747a4e40
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3b85abb11049a1e52e9d6a9cc61aebab407207a4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -16,7 +23,7 @@ ms.openlocfilehash: 76bb607fb0abf11c863be24489a4eea0747a4e40
 -   [앱 수준 계열사 성과 보고서](#app-level-affiliate-ads-performance-report). 이 보고서는 대시보드에서 현재 선택된 앱의 계열사 광고에 대한 성능 데이터를 제공합니다.
 -   [대시보드 수준 계열사 성과 보고서](#dashboard-level-affiliate-ads-performance-report). 이 보고서에서는 Microsoft 계열사 광고 프로그램에 옵트인(opt in)한 모든 앱의 계열사 광고에 대한 성과 데이터를 요약하여 설명합니다.
 
-이러한 보고서는 매일 업데이트됩니다. 기본적으로 보고서는 모든 디바이스에서 지난 30일 간의 성능을 필터링합니다. 이러한 필터를 변경하려면 **페이지 필터**를 클릭하고 다른 시간 프레임 또는 개별 장치 유형을 선택합니다. 모든 데이터는 해당하는 특정 표준 시간대가 아니라 UTC를 기반으로 집계됩니다.
+이러한 보고서는 매일 업데이트됩니다. 기본적으로 보고서는 모든 장치에서 지난 30일 간의 성능을 필터링합니다. 이러한 필터를 변경하려면 **페이지 필터**를 클릭하고 다른 시간 프레임 또는 개별 장치 유형을 선택합니다. 모든 데이터는 해당하는 특정 표준 시간대가 아니라 UTC를 기반으로 집계됩니다.
 
 다음 섹션에서는 이러한 보고서에 대한 자세한 내용을 제공합니다.
 
@@ -34,7 +41,7 @@ ms.openlocfilehash: 76bb607fb0abf11c863be24489a4eea0747a4e40
 -   **구매(승인)**: 앱에서 사용자가 계열사 광고를 클릭하여 승인한 구매의 수입니다.
 -   **구매(승인 보류)**: 앱에서 사용자가 계열사 광고를 클릭하여 승인 보류 중인 구매의 수입니다.
 
-> **참고** 사용자가 스토어에서 제품을 구매한 후 45일 대기 기간이 지나면 계열사 광고 프로그램에서 이 구매를 승인할 수 있습니다. 이 대기 시간으로 인해 지정된 날의 **예상 수익(승인)**, **예상 수익(승인 보류)**, **구매(승인)** 및 **구매(승인 보류)** 데이터는 구매가 승인되거나 거부된 후에 변경할 수 있습니다.
+> **참고**  사용자가 스토어에서 제품을 구매한 후 45일 대기 기간이 지나면 계열사 광고 프로그램에서 이 구매를 승인할 수 있습니다. 이 대기 시간으로 인해 지정된 날의 **예상 수익(승인)**, **예상 수익(승인 보류)**, **구매(승인)** 및 **구매(승인 보류)** 데이터는 구매가 승인되거나 거부된 후에 변경할 수 있습니다.
 
 ## <a name="dashboard-level-affiliate-ads-performance-report"></a>대시보드 수준 계열사 광고 성과 보고서
 
@@ -47,9 +54,4 @@ ms.openlocfilehash: 76bb607fb0abf11c863be24489a4eea0747a4e40
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

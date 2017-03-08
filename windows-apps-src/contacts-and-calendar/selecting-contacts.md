@@ -10,8 +10,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
-ms.openlocfilehash: 7181a51a91997124b2c5c8ba184261de63de9caf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5e53332ae3596341e4322bc16882cf678672083d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -234,9 +235,4 @@ public class ContactItemAdapter
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
 지금까지 연락처 선택 기능을 사용하여 연락처 정보를 검색하는 방법을 간략히 살펴보았습니다. 연락처 및 연락처 선택 기능을 사용하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](http://go.microsoft.com/fwlink/p/?linkid=619979)을 다운로드합니다.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

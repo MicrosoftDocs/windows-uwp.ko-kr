@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: "광원 센서 사용"
 description: "주변 광원 센서를 사용하여 광원 변화를 탐지하는 방법을 알아봅니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fe1b9a508e3b540f202e187dbe1696423c7cd373
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f3ebf555d943e302ed5f505a91659bf1d9489e17
+ms.lasthandoff: 02/07/2017
 
 ---
-# 광원 센서 사용
+# <a name="use-the-light-sensor"></a>광원 센서 사용
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-** 중요 API **
+**중요 API**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**LightSensor**](https://msdn.microsoft.com/library/windows/apps/BR225790)
@@ -21,17 +28,17 @@ ms.openlocfilehash: fe1b9a508e3b540f202e187dbe1696423c7cd373
 
 주변 광원 센서는 앱이 사용자 환경의 변화에 응답하는 것을 허용하는 몇 가지 환경 센서 유형 중 하나입니다.
 
-## 사전 요구 사항
+## <a name="prerequisites"></a>사전 요구 사항
 
 XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트에 대해 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 주변 광원 센서를 지원해야 합니다.
 
-## 간단한 광원 센서 앱 만들기
+## <a name="create-a-simple-light-sensor-app"></a>간단한 광원 센서 앱 만들기
 
 이 섹션은 두 개의 하위 섹션으로 나뉩니다. 첫 번째 하위 섹션에서는 처음부터 간단한 광원 센서 응용 프로그램을 만드는 데 필요한 단계를 안내합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명합니다.
 
-###  지침
+###  <a name="instructions"></a>지침
 
 -   **Visual C#** 프로젝트 템플릿에서 **빈 앱(유니버설 Windows)**를 선택하여 새 프로젝트를 만듭니다.
 
@@ -65,8 +72,8 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
         public sealed partial class BlankPage : Page
         {
             private LightSensor _lightsensor; // Our app' s lightsensor object
-           
-            // This event handler writes the current light-sensor reading to 
+
+            // This event handler writes the current light-sensor reading to
             // the textbox named "txtLUX" on the app' s main page.
 
             private void ReadingChanged(object sender, LightSensorReadingChangedEventArgs e)
@@ -133,7 +140,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
 
 -   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
 
-###  설명
+###  <a name="explanation"></a>설명
 
 앞의 예는 앱에서 광원 센서 입력을 통합하기 위해 작성해야 하는 코드의 양이 얼마나 작은지를 보여줍니다.
 
@@ -153,7 +160,7 @@ _lightsensor.ReportInterval = reportInterval;
 새 광원 센서 데이터는 **ReadingChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
 
 ```csharp
-_lightsensor.ReadingChanged += new TypedEventHandler<LightSensor, 
+_lightsensor.ReadingChanged += new TypedEventHandler<LightSensor,
 LightSensorReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -164,14 +171,8 @@ LightSensorReadingChangedEventArgs>(ReadingChanged);
  <TextBlock x:Name="txtLuxValue" HorizontalAlignment="Left" Height="44" Margin="224,38,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="217"/>
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [LightSensor 샘플](http://go.microsoft.com/fwlink/p/?linkid=241381)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

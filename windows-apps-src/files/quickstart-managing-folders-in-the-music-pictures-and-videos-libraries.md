@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: "음악, 사진 및 비디오 라이브러리의 파일 및 폴더"
 description: "음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 4e2b7d10e1d24427aede21ccae176d7cd55f9de8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 18acfda780211a008a3c5febdcbff2bf007ff379
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -39,7 +46,7 @@ ms.openlocfilehash: 4e2b7d10e1d24427aede21ccae176d7cd55f9de8
 ## <a name="get-a-reference-to-a-library"></a>라이브러리에 대한 참조 가져오기
 
 
-**참고** 적절한 접근 권한 값을 선언해야 합니다.
+**참고**  적절한 접근 권한 값을 선언해야 합니다.
  
 
 사용자의 음악, 사진 또는 비디오 라이브러리에 대한 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) 메서드를 호출합니다. [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) 열거형에서 해당 값을 제공합니다.
@@ -243,9 +250,4 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

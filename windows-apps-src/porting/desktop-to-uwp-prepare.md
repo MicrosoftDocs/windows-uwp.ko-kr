@@ -3,9 +3,17 @@ author: awkoren
 Description: "이 문서에는 데스크톱-UWP 브리지를 사용하여 앱을 변환하기 전에 알아야 할 사항이 나열되어 있습니다. 앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "데스크톱-UWP 브리지용 앱 준비"
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 translationtype: Human Translation
-ms.sourcegitcommit: d22d51d52c129534f8766ab76e043a12d140e8b7
-ms.openlocfilehash: a93d5ad1c1f429182c8df7d29df85dee70064e2f
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 238d3520bc4890a030327ad0bc799ab90b83ef40
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -68,13 +76,14 @@ ms.openlocfilehash: a93d5ad1c1f429182c8df7d29df85dee70064e2f
 Windows 스토어에서 설치하는 동안 앱이 설치되기 전에 적절한 버전(x86 또는 x64)의 VCLibs 11 프레임워크가 설치됩니다.  
 테스트용으로 로드하여 앱을 설치하는 경우에는 종속성이 설치되지 않습니다. 수동으로 컴퓨터에 종속성을 설치하려면 [데스크톱 브리지용 VC 11.0 프레임워크 패키지](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064)를 다운로드하고 설치해야 합니다. 이러한 시나리오에 대한 자세한 내용은 [Centennial 프로젝트에서 Visual C++ 런타임 사용](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)을 참조하세요.
 
-+ __앱이 점프 목록 항목을 만들고 [ICustomDestinationList::SetAppID](https://msdn.microsoft.com/library/windows/desktop/dd378403(v=vs.85).aspx) 또는 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422(v=vs.85).aspx)__를 호출합니다. 코드에 프로그래밍 방식으로 AppID를 설정하지 마세요. 그러면 점프 목록 항목이 나타나지 않게 됩니다. 앱에 사용자 지정 ID가 필요할 경우 매니페스트 파일을 사용하여 지정하세요. 자세한 내용은 [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md)을 참조하세요. 응용 프로그램의 AppID는 *YOUR_PRAID_HERE* 섹션에 지정됩니다. 
++ __앱에 사용자 지정 점프 목록이 포함됩니다__. 점프 목록을 사용할 때 고려해야 할 몇 가지 문제와 주의 사항이 있습니다. 
 
-+ __앱은 패키지의 실행 파일을 참조하는 점프 목록 셸 링크를 추가합니다__. 점프 목록에서 바로 패키지의 실행 파일을 시작할 수는 없습니다(앱 자체의 .exe에 대한 절대 경로는 예외). 대신, 앱 실행 별칭을 등록하고 별칭에 링크 대상 경로를 설정하면 변환된 앱이 해당 경로에 있는 것처럼 키워드를 통해 시작할 수 있습니다. appExecutionAlias 확장을 사용하는 방법에 대한 자세한 내용은 [데스크톱 브리지 앱 확장](desktop-to-uwp-extensions.md)을 참조하세요. 점프 목록에 원래 .exe와 일치하는 링크의 자산이 필요할 경우 [**SetIconLocation**](https://msdn.microsoft.com/library/windows/desktop/bb761047(v=vs.85).aspx)을 사용하여 아이콘과 같은 자산을 설정하고 다른 사용자 지정 항목에 사용하는 것 같은 PKEY_Title로 표시 이름을 설정해야 합니다. 
+    - __앱의 아키텍처가 OS와 일치하지 않습니다.__  점프 목록이 현재 제대로 작동 하지 않습니다. 앱과 운영 체제 아키텍처가 일치 하지 않는 경우(예: x64 Windows에서 x86앱을 실행)일 수 있습니다. 현재로서는 앱을 아키텍처와 일치하도록 다시 컴파일하는 해결 방법 외에는 없습니다.
 
-+ __앱은 절대 경로를 사용하여 앱 패키지의 자산을 참조하는 점프 목록 항목을 추가합니다__. 패키지가 업데이트되어 아이콘, 문서, 실행 파일 등과 같은 자산의 위치가 변경될 경우 앱의 설치 경로가 변경될 수 있습니다. 점프 목록 항목이 절대 경로를 사용하여 이러한 자산을 참조할 경우 앱은 경로를 정확히 확인하기 위해 점프 목록을 정기적으로(예: 앱 시작 시) 새로 고쳐야 합니다. 또는 package-relative ms-resource URI 스키마(언어, DPI 및 고대비 인식 가능)를 사용하여 문자열 및 이미지 자산을 참조할 수 있는 UWP [**Windows.UI.StartScreen.JumpList**](https://msdn.microsoft.com/library/windows/apps/windows.ui.startscreen.jumplist.aspx) API를 사용하세요. 
+    - __앱이 점프 목록 항목을 만들고 [ICustomDestinationList::SetAppID](https://msdn.microsoft.com/library/windows/desktop/dd378403(v=vs.85).aspx) 또는 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422(v=vs.85).aspx)__를 호출합니다. 코드에 프로그래밍 방식으로 AppID를 설정하지 마세요. 그러면 점프 목록 항목이 나타나지 않게 됩니다. 앱에 사용자 지정 ID가 필요할 경우 매니페스트 파일을 사용하여 지정하세요. 자세한 내용은 [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md)을 참조하세요. 응용 프로그램의 AppID는 *YOUR_PRAID_HERE* 섹션에 지정됩니다. 
 
+    - __앱은 패키지의 실행 파일을 참조하는 점프 목록 셸 링크를 추가합니다__. 점프 목록에서 바로 패키지의 실행 파일을 시작할 수는 없습니다(앱 자체의 .exe에 대한 절대 경로는 예외). 대신, 앱 실행 별칭을 등록하고 별칭에 링크 대상 경로를 설정하면 변환된 앱이 해당 경로에 있는 것처럼 키워드를 통해 시작할 수 있습니다. appExecutionAlias 확장을 사용하는 방법에 대한 자세한 내용은 [데스크톱 브리지 앱 확장](desktop-to-uwp-extensions.md)을 참조하세요. 점프 목록에 원래 .exe와 일치하는 링크의 자산이 필요할 경우 [**SetIconLocation**](https://msdn.microsoft.com/library/windows/desktop/bb761047(v=vs.85).aspx)을 사용하여 아이콘과 같은 자산을 설정하고 다른 사용자 지정 항목에 사용하는 것 같은 PKEY_Title로 표시 이름을 설정해야 합니다. 
 
-<!--HONumber=Dec16_HO1-->
+    - __앱은 절대 경로를 사용하여 앱 패키지의 자산을 참조하는 점프 목록 항목을 추가합니다__. 패키지가 업데이트되어 아이콘, 문서, 실행 파일 등과 같은 자산의 위치가 변경될 경우 앱의 설치 경로가 변경될 수 있습니다. 점프 목록 항목이 절대 경로를 사용하여 이러한 자산을 참조할 경우 앱은 경로를 정확히 확인하기 위해 점프 목록을 정기적으로(예: 앱 시작 시) 새로 고쳐야 합니다. 또는 package-relative ms-resource URI 스키마(언어, DPI 및 고대비 인식 가능)를 사용하여 문자열 및 이미지 자산을 참조할 수 있는 UWP [**Windows.UI.StartScreen.JumpList**](https://msdn.microsoft.com/library/windows/apps/windows.ui.startscreen.jumplist.aspx) API를 사용하세요.
 
 

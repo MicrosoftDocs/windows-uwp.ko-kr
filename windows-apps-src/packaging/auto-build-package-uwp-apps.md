@@ -2,16 +2,24 @@
 author: rmpablos
 title: "UWP 앱에 대한 자동화된 빌드 설정"
 description: "자동화된 빌드를 구성하여 패키지를 테스트용으로 로드하거나 저장하는 방법입니다."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 translationtype: Human Translation
-ms.sourcegitcommit: 1e30c20b38b9e6b00cd4f56bf9ffb3752ceed6a9
-ms.openlocfilehash: 681019d708b859d117992cde6d2ad3d37fa4833a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 54dcebb0dc4b1a41acdae655b9caf14f72161f36
+ms.lasthandoff: 02/08/2017
 
 ---
-# UWP 앱에 대한 자동화된 빌드 설정
+# <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
 VSTS(Visual Studio Team Services)를 사용하여 UWP 프로젝트에 대해 자동화된 빌드를 만들 수 있습니다. 이 문서에서는 이 작업을 수행하는 여러 방법에 대해 살펴보겠습니다.  또한 AppVeyor 같은 다른 빌드 시스템과 통합할 수 있도록 이러한 작업을 명령줄을 사용하여 수행하는 방법도 알아보겠습니다. 
 
-## 올바른 빌드 에이전트 유형 선택
+## <a name="select-the-right-type-of-build-agent"></a>올바른 빌드 에이전트 유형 선택
 
 빌드 프로세스를 실행할 때 VSTS에서 사용할 빌드 에이전트 유형을 선택합니다. 호스트된 빌드 에이전트는 가장 일반적인 도구 및 sdk를 사용하여 배포되며, 대부분의 시나리오에 적용됩니다. 자세한 내용은 [Software on the hosted build server](https://www.visualstudio.com/en-us/docs/build/admin/agents/hosted-pool#software)(호스트된 빌드 서버의 소프트웨어) 문서를 참조하세요. 그러나 빌드 단계를 더 제어 해야 할 경우에는 사용자 지정 빌드 에이전트를 만들 수 있습니다. 다음 테이블을 사용하면 이러한 결정을 내리는 데 도움이 됩니다.
 
@@ -27,17 +35,17 @@ VSTS(Visual Studio Team Services)를 사용하여 UWP 프로젝트에 대해 자
 
 >참고: Windows 1주년 업데이트 SDK(빌드 14393)를 대상으로 지정하려는 경우에는 호스트 빌드 풀에서 SDK 10586 및 10240만 지원하므로 사용자 지정 빌드 에이전트를 설정해야 합니다. [UWP 버전 선택](https://msdn.microsoft.com/en-us/windows/uwp/updates-and-versions/choose-a-uwp-version)에 대한 자세한 정보
 
-#### 사용자 지정 빌드 에이전트 만들기(옵션)
+#### <a name="create-a-custom-build-agent-optional"></a>사용자 지정 빌드 에이전트 만들기(옵션)
 
 사용자 지정 빌드 에이전트를 만들려는 경우 유니버설 Windows 플랫폼 도구가 필요합니다. 이러한 도구는 Visual Studio에 포함되어 제공됩니다. Visual Studio의 커뮤니티 버전을 사용할 수 있습니다.
 
 자세한 내용은 [Deploy an agent on Windows](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows)(Windows에 에이전트 배포)를 참조하세요. 
 
-UWP 단위 테스트를 실행하려면 다음을 수행해야 합니다. • 앱을 배포하고 시작합니다. • VSTS 에이전트를 대화형 모드로 실행합니다. • 에이전트를 다시 부팅 한 후 자동 로그온되도록 구성합니다.
+UWP 단위 테스트를 실행하려면 다음을 수행해야 합니다. •    앱을 배포하고 시작합니다. •    VSTS 에이전트를 대화형 모드로 실행합니다. •    에이전트를 다시 부팅 한 후 자동 로그온되도록 구성합니다.
 
 이제 자동화된 빌드를 설정하는 방법에 대해 알아보겠습니다.
 
-## 자동화된 빌드 설정
+## <a name="set-up-an-automated-build"></a>자동화된 빌드 설정
 먼저 VSTS에서 사용할 수 있는 기본 UWP 빌드 정의부터 살펴본 다음 해당 정의를 구성하는 방법을 알아 보겠습니다. 이렇게 하면 고급 빌드 작업을 더 많이 수행할 수 있습니다.
 
 **소스 코드 리포지토리에 프로젝트 인증서 추가**
@@ -64,13 +72,13 @@ VSTS에서 첫 번째 빌드 정의를 만들려면 빌드 탭으로 이동한 �
 - 기호 게시
 - 아티팩트 게시: 놓기
 
-#### NuGet 복원 빌드 작업 구성
+#### <a name="configure-the-nuget-restore-build-task"></a>NuGet 복원 빌드 작업 구성
 
 이 작업에서는 프로젝트에 정의된 NuGet 패키지를 복원합니다. 일부 패키지에는 NuGet.exe의 사용자 지정 버전이 필요합니다. 이 버전이 필요한 패키지를 사용하는 경우에는 리포지토리에서 해당 버전의 NuGet.exe를 참조한 다음 *NuGet.exe 경로*의 고급 속성에서 참조하세요.
 
 ![기본 빌드 정의](images/building-screen4.png)
 
-#### 솔루션 빌드에 대한 빌드 작업 구성
+#### <a name="configure-the-build-solution-build-task"></a>솔루션 빌드에 대한 빌드 작업 구성
 
 이 작업은 작업 폴더에 있는 솔루션을 이진 파일로 컴파일하여 출력 AppX 파일을 생성합니다. 이 작업에서는 MSbuild 인수가 사용됩니다.  이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요. 
 
@@ -97,7 +105,7 @@ $() 구문을 사용하여 정의된 매개 변수는 해당 빌드 정의에 �
 
 미리 정의된 변수를 모두 보려면 [빌드 변수 사용](https://www.visualstudio.com/docs/build/define/variables)을 참조하세요.
 
-#### 아티팩트 게시 빌드 작업 구성 
+#### <a name="configure-the-publish-artifact-build-task"></a>아티팩트 게시 빌드 작업 구성 
 이 작업에서는 생성된 아티팩트를 VSTS에 저장합니다. 저장된 아티팩트는 빌드 결과 페이지의 아티팩트 탭에서 볼 수 있습니다. VSTS에서는 이전에 정의한 `$Build.ArtifactStagingDirectory)\AppxPackages` 폴더를 사용합니다.
 
 ![아티팩트](images/building-screen6.png)
@@ -107,7 +115,7 @@ $() 구문을 사용하여 정의된 매개 변수는 해당 빌드 정의에 �
 
 >참고: 기본적으로 VSTS 에이전트는 최신 appx 생성 패키지를 유지 관리합니다. 현재 빌드의 아티팩트만 저장하려면 이진 디렉터리가 정리되도록 빌드를 구성하세요. 이렇게 하려면 이름이 `Build.Clean`인 변수를 추가한 다음 변수 값을 `all`로 설정합니다. 자세한 내용은 [Specify the repository](https://www.visualstudio.com/en-us/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way)(리포지토리 지정)를 참조하세요.
 
-#### 자동화된 빌드 형식
+#### <a name="the-types-of-automated-builds"></a>자동화된 빌드 형식
 다음으로 빌드 정의를 사용하여 자동화된 빌드를 만들어 보겠습니다. 다음 표에서는 만들 수 있는 자동화된 빌드 형식 각각에 대해 설명합니다. 
 
 |**빌드 형식**|**아티팩트**|**권장 빈도**|**설명**|
@@ -119,7 +127,7 @@ $() 구문을 사용하여 정의된 매개 변수는 해당 빌드 정의에 �
 각각 구성하는 방법에 대해 살펴보겠습니다.
 
 
-## CI(연속 통합) 빌드 설정 
+## <a name="set-up-a-continuous-integration-ci-build"></a>CI(연속 통합) 빌드 설정 
 이 빌드 형식을 사용하면 코드 관련 문제를 신속하게 진단할 수 있습니다. 일반적으로 하나의 플랫폼에 대해서만 실행되며, .NET 네이티브 도구 체인에서 처리할 필요가 없습니다. 또한 CI 빌드를 사용하여 테스트 결과 보고서를 생성하는 단위 테스트를 실행할 수 있습니다.  
 
 UWP 단위 테스트를 CI 빌드의 일부로 실행하려면 호스트된 빌드 에이전트 대신 사용자 지정 빌드 에이전트를 사용해야 합니다.
@@ -127,7 +135,7 @@ UWP 단위 테스트를 CI 빌드의 일부로 실행하려면 호스트된 빌�
 >참고: 같은 솔루션에서 둘 이상의 앱을 번들로 만들면 오류가 표시될 수도 있습니다. 해당 오류를 해결하려면 [같은 솔루션에서 둘 이상의 앱을 번들로 만들 때 나타나는 오류 해결](#bundle-errors) 항목을 참조하세요. 
 
 
-### CI 빌드 정의 구성
+### <a name="configure-a-ci-build-definition"></a>CI 빌드 정의 구성
 빌드 정의를 만들려면 기본 UWP 템플릿을 사용합니다. 그런 다음 각 체크 인에서 실행하도록 트리거를 구성합니다.  
 
 ![ci 트리거](images/building-screen7.png)
@@ -135,14 +143,14 @@ UWP 단위 테스트를 CI 빌드의 일부로 실행하려면 호스트된 빌�
 CI 빌드는 사용자에게 배포되지 않으므로 CD 빌드와의 혼동을 피하기 위해 다른 버전 관리 번호를 유지하는 것이 좋습니다. 예를 들면 `$(BuildDefinitionName)_0.0.$(DayOfYear)$(Rev:.r)`와 같습니다.
 
 
-#### 단위 테스트를 위한 사용자 지정 빌드 에이전트 구성
+#### <a name="configure-a-custom-build-agent-for-unit-testing"></a>단위 테스트를 위한 사용자 지정 빌드 에이전트 구성
 
-1. 먼저 PC에서 개발자 모드를 사용하도록 설정합니다. 디바이스를 개발에 사용하도록 설정을 참조하세요. 2. 서비스가 대화형 프로세스로 실행되도록 설정합니다. Deploy an agent on Windows(Windows에 에이전트 배포)를 참조하세요. 3. 에이전트에 서명 인증서를 배포합니다.
+1. 먼저 PC에서 개발자 모드를 사용하도록 설정합니다. 장치를 개발에 사용하도록 설정을 참조하세요. 2. 서비스가 대화형 프로세스로 실행되도록 설정합니다. Deploy an agent on Windows(Windows에 에이전트 배포)를 참조하세요. 3. 에이전트에 서명 인증서를 배포합니다.
 
 이렇게 하려면.cer 파일을 두 번 클릭하고 로컬 컴퓨터, 신뢰할 수 있는 사용자 저장소를 차례로 선택합니다.
 
 <span id="uwp-unit-tests" />
-### 빌드 정의에서 UWP 단위 테스트를 실행하도록 구성
+### <a name="configure-the-build-definition-to-run-uwp-unit-tests"></a>빌드 정의에서 UWP 단위 테스트를 실행하도록 구성
 단위 테스트를 실행하려면 Visual Studio 테스트 빌드 단계를 사용합니다.
 
 
@@ -157,26 +165,26 @@ $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp.UnitTest\x86\MyUWPApp.Un
 >참고: 명령줄에서 단위 테스트를 로컬로 실행하려면 다음 명령을 사용하세요.
 `"%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe"`
 
-#### 테스트 결과 액세스
+#### <a name="access-test-results"></a>테스트 결과 액세스
 VSTS의 빌드 요약 페이지에서는 단위 테스트를 실행하는 각 빌드에 대한 테스트 결과를 보여줍니다.  여기에서 테스트 결과 페이지를 열어 테스트 결과에 대한 자세한 정보를 볼 수 있습니다. 
 
 ![테스트 결과](images/building-screen9.png)
 
-#### CI 빌드 속도 향상
+#### <a name="improve-the-speed-of-a-ci-build"></a>CI 빌드 속도 향상
 CI 빌드 체크 인을 체크 인의 품질을 모니터링하는 데에만 사용하면 빌드 시간을 줄일 수 있습니다.
 
-#### CI 빌드 속도를 개선하려면
-1.  플랫폼 하나에 대해서만 빌드합니다.
-2.  x86만 사용하여 BuildPlatform 변수를 편집합니다. ![구성 ci](images/building-screen10.png) 
-3.  빌드 단계에서 MSBuild 인수 속성에 /p:AppxBundle=Never를 추가한 다음 플랫폼 속성을 설정합니다. ![플랫폼 구성](images/building-screen11.png)
-4.  단위 테스트 프로젝트에서.NET 네이티브를 사용하지 않도록 설정합니다. 
+#### <a name="to-improve-the-speed-of-a-ci-build"></a>CI 빌드 속도를 개선하려면
+1.    플랫폼 하나에 대해서만 빌드합니다.
+2.    x86만 사용하여 BuildPlatform 변수를 편집합니다. ![구성 ci](images/building-screen10.png) 
+3.    빌드 단계에서 MSBuild 인수 속성에 /p:AppxBundle=Never를 추가한 다음 플랫폼 속성을 설정합니다. ![플랫폼 구성](images/building-screen11.png)
+4.    단위 테스트 프로젝트에서.NET 네이티브를 사용하지 않도록 설정합니다. 
 
 이렇게 하려면 프로젝트 파일을 열고 프로젝트 속성에서 `UseDotNetNativeToolchain` 속성을 `false`로 설정합니다.
 
 >참고. .NET 네이티브 도구 체인은 릴리스 빌드를 테스트하는 데 계속 사용해야 하므로 이 도구 체인을 사용하는 것은 워크플로에 중요한 부분입니다. 
 
 <span id="bundle-errors" />
-#### 같은 솔루션에서 둘 이상의 앱을 번들로 만들 때 나타나는 오류 해결 
+#### <a name="address-errors-that-appear-when-you-bundle-more-than-one-app-in-the-same-solution"></a>같은 솔루션에서 둘 이상의 앱을 번들로 만들 때 나타나는 오류 해결 
 솔루션에 UWP 프로젝트를 두 개 이상 추가하고 번들을 만들려는 경우 다음과 같은 오류가 나타날 수 있습니다. 
 
 ```
@@ -192,11 +200,11 @@ MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "A
 
 그런 다음 빌드 단계에서 `AppxBundle` msbuild 인수를 제거합니다.
 
-## 테스트용 로드를 위한 연속 배포 빌드 설정
+## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>테스트용 로드를 위한 연속 배포 빌드 설정
 이 빌드 형식이 완료되면 사용자는 빌드 결과 페이지의 아티팩트 섹션에서 appxbundle 파일을 다운로드할 수 있습니다. 좀 더 완벽한 배포를 만들어 앱을 베타 테스트하려는 경우라면 HockeyApp 서비스를 사용할 수 있습니다. 이 서비스는 베타 테스트, 사용자 분석 및 크래시 진단에 대한 고급 기능을 제공합니다.
 
 
-### 빌드에 버전 번호 적용
+### <a name="applying-version-numbers-to-your-builds"></a>빌드에 버전 번호 적용
 
 매니페스트 파일에는 앱 버전 번호가 포함되어 있습니다.  버전 번호를 변경하려면 소스 제어 리포지토리에 매니페스트 파일을 업데이트합니다. 앱의 버전 번호 업데이트하는 다른 방법은 VSTS에서 생성한 빌드 번호를 사용하여 앱을 컴파일하기 바로 전에 앱 매니페스트를 수정하는 것입니다. 이러한 변경 내용은 소스 코드 리포지토리로 커밋하지 마세요.
 
@@ -226,7 +234,7 @@ CI_MyUWPApp_1.1.2501.0
 `$(AppxVersion)` 변수에는 버전 번호가 포함되어 있습니다. 이 번호는 다른 빌드 단계에서도 사용할 수 있습니다. 
 
 
-#### 옵션: HockeyApp과 통합
+#### <a name="optional-integrate-with-hockeyapp"></a>옵션: HockeyApp과 통합
 먼저 [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) Visual Studio 확장을 설치합니다. 
 
 >참고: 이 확장은 VSTS 관리자로 설치해야 합니다. 
@@ -252,7 +260,7 @@ $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUW
 
 테스트용으로 로드된 패키지를 설치하고 실행하는 작업은 이 가이드에서 [나중](#sideloading-best-practices)에 살펴보겠습니다. 
 
-## 저장소에 패키지를 제출하는 연속 배포 빌드 설정 
+## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>저장소에 패키지를 제출하는 연속 배포 빌드 설정 
 
 저장소 제출 패키지를 생성하려면 Visual Studio에서 스토어 연결 마법사를 사용하여 스토어에 앱을 연결합니다.
 
@@ -271,7 +279,7 @@ $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUW
 이렇게 하면 스토어에 전송할 수 있는 appxupload 파일이 생성됩니다.
 
 
-#### 자동 저장소 제출 구성
+#### <a name="configure-automatic-store-submission"></a>자동 저장소 제출 구성
 
 저장소 API와 통합하는 Windows 스토어용 Visual Studio Team Services 확장을 사용하여 저장소에 appxupload 패키지를 보냅니다.
 
@@ -290,17 +298,17 @@ AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 
 >참고. 이 빌드는 수동으로 활성화해야 합니다. 기존 앱 업데이트에 사용할 수 있지만 스토어에 대한 첫 번째 제출에는 사용할 수 없습니다. 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](https://msdn.microsoft.com/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services)를 참조하세요.
 
-## 모범 사례
+## <a name="best-practices"></a>모범 사례
 
 <span id="sideloading-best-practices"/>
-### 앱의 테스트용 로드에 대한 모범 사례
+### <a name="best-practices-for-sideloading-apps"></a>앱의 테스트용 로드에 대한 모범 사례
 
-스토어에 게시하지 않고 앱을 배포하려는 경우 디바이스에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 디바이스에 앱을 직접 테스트용으로 로드할 수 있습니다. 
+스토어에 게시하지 않고 앱을 배포하려는 경우 장치에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 장치에 앱을 직접 테스트용으로 로드할 수 있습니다. 
 
 앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대해 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가한 다음 appx 파일을 설치하거나 업데이트합니다.
 
-#### Windows10 1주년 업데이트를 사용하여 앱을 테스트용으로 로드
-Windows10 1주년 업데이트에서 appxbundle 파일을 두 번 클릭하고 대화 상자에서 설치 단추를 선택하여 앱을 설치할 수 있습니다. 
+#### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Windows 10 1주년 업데이트를 사용하여 앱을 테스트용으로 로드
+Windows 10 1주년 업데이트에서 appxbundle 파일을 두 번 클릭하고 대화 상자에서 설치 단추를 선택하여 앱을 설치할 수 있습니다. 
 
 
 ![rs1에 테스트용으로 로드](images/building-screen18.png) 
@@ -310,11 +318,11 @@ Windows10 1주년 업데이트에서 appxbundle 파일을 두 번 클릭하고 �
 VSTS 또는 HockeyApp 등 웹 사이트에서 appx 패키지를 배포하려는 경우 브라우저에서 신뢰할 수 있는 사이트 목록에 해당 사이트를 추가해야 합니다. 그렇지 않으면 파일이 잠금 상태로 표시됩니다. 
 
 <span id="certificates-best-practices"/>
-### 인증서 서명에 대한 모범 사례 
-Visual Studio는 각 프로젝트에 대한 인증서를 생성합니다. 이렇게 하면 유효한 인증서의 조정된 목록을 유지 관리하기가 어렵습니다. 앱을 여러 개 만드는 경우에는 모든 앱에 서명하는 단일 인증서를 만들 수 있습니다. 그런 다음 인증서를 신뢰하는 각 디바이스에 다른 인증서를 설치하지 않고 임의의 앱을 테스트용으로 로드할 수 있게 됩니다. 자세한 내용은 [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)을 참조하세요.
+### <a name="best-practices-for-signing-certificates"></a>인증서 서명에 대한 모범 사례 
+Visual Studio는 각 프로젝트에 대한 인증서를 생성합니다. 이렇게 하면 유효한 인증서의 조정된 목록을 유지 관리하기가 어렵습니다. 앱을 여러 개 만드는 경우에는 모든 앱에 서명하는 단일 인증서를 만들 수 있습니다. 그런 다음 인증서를 신뢰하는 각 장치에 다른 인증서를 설치하지 않고 임의의 앱을 테스트용으로 로드할 수 있게 됩니다. 자세한 내용은 [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)을 참조하세요.
 
 
-#### 서명 인증서 만들기
+#### <a name="create-a-signing-certificate"></a>서명 인증서 만들기
 인증서를 만들려면 [MakeCert.exe](https://msdn.microsoft.com/en-us/library/windows/desktop/ff548309(%09v=vs.85).aspx) 도구를 사용합니다. 다음 예제에서는 MakeCert.exe 도구를 사용하여 인증서를 만듭니다.
 
 ```
@@ -333,7 +341,7 @@ MakeCert /n publisherName /r /h 0 /eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.1
 
 >참고: 사용자가 이미 신뢰할 수 있는 엔터프라이즈 인증서를 사용할 수도 있습니다.
 
-#### UWP 앱에 서명
+#### <a name="sign-your-uwp-app"></a>UWP 앱에 서명
 Visual Studio 및 MSBuild는 앱에 서명하는 데 사용하는 인증서를 관리하는 다양한 옵션을 제공합니다.
 
 한 가지 옵션으로 솔루션에 개인 키와 인증서를 포함하고(일반적으로 .PFX 파일 형식) 프로젝트 파일에서 pfx를 참조하는 것입니다. 매니페스트 편집기의 패키지 탭을 사용하여 관리할 수 있습니다.
@@ -343,21 +351,16 @@ Visual Studio 및 MSBuild는 앱에 서명하는 데 사용하는 인증서를 �
 
 또 다른 옵션은 빌드 컴퓨터(현재 사용자/개인)에 인증서를 설치한 다음 인증서 저장소 옵션에서 선택을 사용하는 것입니다. 프로젝트를 빌드하는 데 사용할 모든 컴퓨터에서 인증서를 설치해야 하므로 인증서의 지문을 프로젝트 파일에서 지정합니다.
 
-#### 대상 디바이스에서 서명 인증서 신뢰
+#### <a name="trust-the-signing-certificate-in-the-target-devices"></a>대상 장치에서 서명 인증서 신뢰
 앱에서 인증서를 설치하기 전에 먼저 인증서를 신뢰해야 합니다. 
 
 로컬 컴퓨터 인증서 저장소에 신뢰할 수 있는 사용자 또는 신뢰 루트 위치에 인증서의 공개 키를 등록합니다.
 
 인증서를 등록하는 가장 쉬운 방법은 .cer 파일을 두 번 클릭한 다음 마법사의 단계에 따라 로컬 컴퓨터와 신뢰할 수 있는 사용자 저장소에서 인증서를 저장하는 것입니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 * [Windows용 .NET 앱 빌드](https://www.visualstudio.com/en-us/docs/build/get-started/dot-net) 
 * [UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
 * [Windows 10에서 LOB 앱을 테스트용으로 로드](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
 * [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

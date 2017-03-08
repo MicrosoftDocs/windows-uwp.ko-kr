@@ -3,13 +3,20 @@ author: msatranjr
 title: "지도 인증 키 요청"
 description: "Windows.Services.Maps 네임스페이스에서 MapControl 및 지도 서비스를 사용하려면 먼저 유니버설 Windows 앱을 인증해야 합니다."
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 지도 인증 키, 지도 컨트롤"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 841a3bf42faaaa12df94ad9be2ffc9eb3a833ae5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 지도 인증 키 요청
+# <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -21,7 +28,7 @@ ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
 
 -   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## 키 가져오기
+## <a name="get-a-key"></a>키 가져오기
 
 
 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)를 사용하여 유니버설 Windows 앱을 위한 지도 인증 키를 만들고 관리합니다.
@@ -53,12 +60,12 @@ ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
 
 8.  **만들기**를 클릭한 후 **키 만들기** 양식 아래에 새 키가 나타납니다. 안전한 장소에 복사하거나 다음 단계에서 설명한 대로 즉시 앱에 추가합니다.
 
-## 앱에 키 추가
+## <a name="add-the-key-to-your-app"></a>앱에 키 추가
 
 
 유니버설 Windows 앱에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979))를 사용하려면 지도 인증 키가 필요합니다. 지도 컨트롤에 인증 키를 추가하고 해당하는 경우 서비스 개체를 매핑합니다.
 
-### 지도 컨트롤에 키를 추가하려면
+### <a name="to-add-the-key-to-a-map-control"></a>지도 컨트롤에 키를 추가하려면
 
 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 인증하려면 [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) 속성을 인증 키 값으로 설정합니다. 기본 설정에 따라 코드 또는 XAML 태그에서 이 속성을 설정할 수 있습니다. **MapControl** 사용에 대한 자세한 내용은 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
 
@@ -74,7 +81,7 @@ ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
     <Maps:MapControl x:Name="MapControl1" MapServiceToken="abcdef-abcdefghijklmno"/>
     ```
 
-### 지도 서비스에 키를 추가하려면
+### <a name="to-add-the-key-to-map-services"></a>지도 서비스에 키를 추가하려면
 
 [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 서비스를 사용하려면 [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) 속성을 인증 키 값으로 설정합니다. 지도 서비스 사용에 대한 자세한 내용은 [경로 및 길 찾기 표시](routes-and-directions.md) 및 [지오코딩 및 리버스 지오코딩 수행](geocoding.md)을 참조하세요.
 
@@ -84,18 +91,11 @@ ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
     MapService.ServiceToken = "abcdef-abcdefghijklmno";
     ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

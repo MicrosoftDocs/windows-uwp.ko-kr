@@ -2,16 +2,24 @@
 author: payzer
 title: "디바이스 포털 Xbox 개발자 설정 API 참조"
 description: "Xbox 개발자 설정에 액세스하는 방법을 알아봅니다."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 translationtype: Human Translation
-ms.sourcegitcommit: c51eff41e63d815f6298b4fc46a9b11314bc8bc9
-ms.openlocfilehash: 5a983714cda9b5a5f45e555e2cb6f980f082a003
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a17a489944fdc2d78831549c1afdc2bd87deabdf
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 개발자 설정 API 참조   
+# <a name="developer-settings-api-reference"></a>개발자 설정 API 참조   
 이 API를 사용하여 개발에 유용한 Xbox One 설정에 액세스할 수 있습니다.
 
-## 한 번에 모든 개발자 설정 가져오기
+## <a name="get-all-developer-settings-at-once"></a>한 번에 모든 개발자 설정 가져오기
 
 **요청**
 
@@ -51,7 +59,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-## 한 번에 하나씩 설정 가져오기
+## <a name="get-settings-one-at-a-time"></a>한 번에 하나씩 설정 가져오기
 설정을 개별적으로 검색할 수도 있습니다.
 
 **요청**
@@ -92,7 +100,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-## 설정값 설정
+## <a name="set-the-value-of-a-setting"></a>설정값 설정
 설정값을 설정할 수 있습니다.
 
 **요청**
@@ -133,10 +141,5 @@ HTTP 상태 코드      | 설명
 **사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

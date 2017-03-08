@@ -3,9 +3,17 @@ author: awkoren
 Description: "데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)을 수동으로 변환합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop App Converter
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 translationtype: Human Translation
-ms.sourcegitcommit: bf6da2f4d780774819fe7a4abf6367345304767c
-ms.openlocfilehash: 3ffd664892fe5ee589d3bf5704e2eeed178bf5f3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 046a3b474aa281b1b09002a922dc2acdb7833599
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -21,72 +29,11 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 
 ## <a name="whats-new"></a>새로운 기능
 
-이 섹션에서는 Desktop App Converter 버전 간의 변경 내용을 대략적으로 설명합니다. 
+DAC의 최신 버전은 v1.0.6.0입니다. 이 업데이트의 새로운 기능:
 
-### <a name="12142016-v104"></a>2016/12/14(v1.0.4)
-
-* 기본 이미지 유효성 검사가 유효하지 않은 .wim 파일을 확인하도록 향상되었습니다. 
-* ```-Publisher``` 매개 변수의 특수 문자에 대한 버그가 수정되었습니다. 
-* 자산이 업데이트되었습니다.
-
-### <a name="1122016-v101"></a>2016/11/2(v1.0.1)
-
-* 매니페스트 스키마 유효성 검사가 향상되었습니다. 
-* 오류 메시지가 향상되었습니다. 
-* 지원되는 Windows 버전의 유효성 검사가 추가되었습니다. 
-* 레지스트리 필터 테스트의 버그가 수정되었습니다.
-
-### <a name="9142016-v10"></a>2016/9/14(v1.0)
-
-* Desktop App Converter는 이제 [Windows 스토어](https://aka.ms/converter)에서 다운로드할 수 있습니다. 
-* [다운로드 센터](https://aka.ms/converterimages)에서 DAC에 사용할 최신 Windows 10 기본 이미지(.wim)를 가져옵니다.
-* 이제 스토어 앱에서 새 진입점 *DesktopAppConverter.exe <arguments>*를 사용하여 관리자 권한 명령 프롬프트 또는 PowerShell 창의 어디에서든 변환기를 실행할 수 있습니다.  
-
-
-### <a name="922016-v0125"></a>2016/9/2(v0.1.25)
-
-* 최신 dotnet-computervirtualization NuGet 패키지가 통합되었습니다.
-* 새로 도입된 common.dll에 대한 종속성이 추가되었습니다.
-* 여러 버그가 수정되었습니다.
-
-### <a name="842016-v0124"></a>2016/8/4(v0.1.24)
-
-* 테스트 목적으로 DAC에서 생성한 변환된 앱을 자동 서명하는 지원이 추가되었습니다. 한 번 시도해 보려면 ```–Sign``` 플래그를 확인하세요. 
-* 패키지에 포함된 AppX 내에서 가상 레지스트리 하이브의 COM 등록이 지원되지 않을 경우 경고가 추가되었습니다.  
-* VC++ 라이브러리에 대한 앱 종속성을 자동 검색한 다음 AppX 매니페스트 종속성으로 변환하는 지원이 추가되었습니다. VC++ 런타임을 사용하여 앱을 테스트용으로 로드하여 테스트하려면 [Using Visual C++ Runtime in a Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)(Centennial 프로젝트에서 Visual C++ 런타임 사용) 블로그 게시물에 설명된 대로 VCLib 프레임워크 패키지를 다운로드해야 합니다. 컴퓨터의 ```Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop``` 폴더 아래에서 패키지를 찾아 사용하는 버전(예: 11.0, 12.0, 14.0)으로 이동하고 적절한 아키텍처 패키지(x64, x86)를 두 번 클릭하여 설치합니다.
-* Windows 10 1주년 업데이트(10.0.14393.0)에 맞게 매니페스트 스키마가 업데이트되었습니다. 
-* 여러 버그가 수정되고 출력 레이아웃이 향상되었습니다. 
-
-### <a name="772016-v0122"></a>2016/7/7(v0.1.22)
-
-* 데스크톱 응용 프로그램에서 자동으로 셸 확장을 검색하고 UWP 패키지의 AppXManifest에서 해당 셸 확장을 선언하기 위한 지원이 추가되었습니다. 데스크톱 확장에 대한 자세한 내용은 [**변환된 데스크톱 앱 확장**](desktop-to-uwp-extensions.md) 항목을 참조하세요. 
-* 대규모 앱 집합에 대한 AppExecutable 검색이 개선되었습니다. 
-
-### <a name="6162016-v0120"></a>2016/6/16(v0.1.20)
-
-* 최신 Windows 10 Insider Preview 빌드에서 성공적인 변환을 방해하는 문제가 해결되었습니다. 
-* ```–CreateX86Package```가 ```–PackageArch```로 대체되어 생성된 패키지에 대한 아키텍처를 지정할 수 있습니다. 
-
-### <a name="682016"></a>6/8/2016
-
-* 변환기를 실행하는 AMD64 호스트 컴퓨터에 x86 appx 패키지를 생성하기 위한 지원이 추가되었습니다.
-* 이전에 확장된 기본 이미지를 제거하여 디스크 공간 사용이 감소했습니다.
-* 임시 파일과 불필요한 기본 이미지를 정리하기 위한 지원이 추가되었습니다.
-* 파일 형식 및 프로토콜 연결을 검색하기 위한 지원이 개선되었습니다.
-* 큰 앱 집합에 대한 AppExecutable 속성을 검색하는 논리가 개선되었습니다.
-* MSI 기반 설치 관리자에 추가 –InstallerArguments를 제공하기 위한 지원이 추가되었습니다.
-* 변환 프로세스 중에 PathTooLongException 오류에 대한 버그가 수정되었습니다.
-
-### <a name="5122016"></a>5/12/2016
-
-- Windows Pro 버전에 대한 지원이 복원되었습니다. 
-- 변환기 ```-Setup``` 플래그는 이제 Windows 컨테이너 기능을 사용하도록 설정하고 기본 이미지 확장을 처리합니다. 관리자 권한의 PowerShell 프롬프트에서 다음을 실행하여 일회용 설치를 수행합니다. ```PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage BaseImage-12345.wim -Verbose```
-- 런타임에 불필요한 파일 시스템 리디렉션을 줄이기 위해 앱 설치 경로의 자동 검색과 VFS 외부로의 응용 프로그램 루트 이동 기능이 추가되었습니다.
-- 변환 프로세스의 일부로 확장된 기본 이미지에 대한 자동 검색 기능이 추가되었습니다.
-- 파일 형식 연결 및 프로토콜에 대한 자동 검색 기능이 추가되었습니다.
-- 시작 메뉴 바로 가기를 감지하는 논리가 개선되었습니다.
-- 앱 설치 MUI 파일을 유지하는 파일 시스템 필터링 기능이 개선되었습니다.
-- 매니페스트에서 최소 지원 데스크톱 버전(10.0.14342.0)이 업데이트되었습니다.
+* 아이콘 압축 풀기: DAC는 데스크톱 앱의 아이콘을 사용하여 변환된 앱 패키지에 사용되는 시각적 자산을 생성합니다.
+* 확장된 기본 이미지, 임시 파일 및 컨테이너 네트워크 및 기능의 정리 기능이 향상되었습니다.
+* 여러 버그가 수정되었습니다. 
 
 ## <a name="system-requirements"></a>시스템 요구 사항
 
@@ -108,11 +55,11 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 
 Desktop App Converter는 최신 Windows 10 기능을 사용합니다. Windows 10 1주년 업데이트(14393.0) 또는 이후 빌드를 사용 중인지 확인하세요.
 
-1.  [Windows 스토어의 DesktopAppConverter](https://aka.ms/converter) 및 [빌드에 맞는 기본 이미지 .wim 파일](https://aka.ms/converterimages)을 다운로드합니다.  
-2.  DesktopAppConverter를 관리자로 실행합니다. 이 작업은 시작 메뉴에서 타일을 마우스 오른쪽 단추로 클릭하고 *자세히*에서 *관리자 권한으로 실행*을 선택하거나, 작업 표시줄에서 타일을 마우스 오른쪽 단추로 클릭하여 나타나는 앱 이름을 마우스 오른쪽 단추로 짧게 클릭한 다음 *관리자 권한으로 실행*을 선택합니다.
-3.  앱 콘솔 창에서 ```Set-ExecutionPolicy bypass```를 실행합니다.
-4.  앱 콘솔 창에서 ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose```를 실행하여 변환기를 설정합니다.
-5.  이전 명령을 실행할 경우 다시 부팅하라는 메시지가 표시되면 컴퓨터를 다시 시작하세요.
+1.    [Windows 스토어의 DesktopAppConverter](https://aka.ms/converter) 및 [빌드에 맞는 기본 이미지 .wim 파일](https://aka.ms/converterimages)을 다운로드합니다.  
+2.    DesktopAppConverter를 관리자로 실행합니다. 이 작업은 시작 메뉴에서 타일을 마우스 오른쪽 단추로 클릭하고 *자세히*에서 *관리자 권한으로 실행*을 선택하거나, 작업 표시줄에서 타일을 마우스 오른쪽 단추로 클릭하여 나타나는 앱 이름을 마우스 오른쪽 단추로 짧게 클릭한 다음 *관리자 권한으로 실행*을 선택합니다.
+3.    앱 콘솔 창에서 ```Set-ExecutionPolicy bypass```를 실행합니다.
+4.    앱 콘솔 창에서 ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose```를 실행하여 변환기를 설정합니다.
+5.    이전 명령을 실행할 경우 다시 부팅하라는 메시지가 표시되면 컴퓨터를 다시 시작하세요.
 
 ## <a name="run-the-desktop-app-converter"></a>Desktop App Converter 실행
 
@@ -308,8 +255,3 @@ Desktop App Converter는 유니코드를 지원하지 않으므로 중국어 문
 
 + [Desktop App Converter를 사용하여 데스크톱 앱을 UWP로 가져오기](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: 기존 데스크톱 응용 프로그램을 유니버설 Windows 플랫폼으로 가져오기](https://channel9.msdn.com/events/Build/2016/B829)  
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -1,15 +1,22 @@
 ---
 author: mtoepke
-title: "기본 요소에 깊이 및 효과 사용"
-description: "여기에서는 원형에 깊이, 원근, 색 및 기타 효과를 사용하는 방법에 대해 설명합니다."
+title: "기본 형식에 깊이 및 효과 사용"
+description: "여기서는 기본 형식에 깊이, 원근, 색 및 기타 효과를 사용하는 방법에 대해 설명합니다."
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 깊이, 효과, 기본 형식, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6c58e23a0831a0850a4e28887b4717abedbc7086
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 기본 요소에 깊이 및 효과 사용
+# <a name="use-depth-and-effects-on-primitives"></a>기본 형식에 깊이 및 효과 사용
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -18,7 +25,7 @@ ms.openlocfilehash: 6c58e23a0831a0850a4e28887b4717abedbc7086
 
 **목표:** 3D 개체를 만들고 기본 꼭짓점 조명 및 색을 적용합니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
@@ -27,10 +34,10 @@ ms.openlocfilehash: 6c58e23a0831a0850a4e28887b4717abedbc7086
 
 **완료 시간:** 20분입니다.
 
-지침
+<a name="instructions"></a>지침
 ------------
 
-### 1. 큐브 변수 정의
+### <a name="1-defining-cube-variables"></a>1. 큐브 변수 정의
 
 먼저 큐브에 대해 **SimpleCubeVertex** 및 **ConstantBuffer** 구조를 정의해야 합니다. 이러한 구조는 큐브에 대한 꼭짓점 위치와 색을 지정하고 큐브를 보는 방법도 지정합니다. [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)을 사용하여 [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) 및 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 선언하고 **ConstantBuffer**의 인스턴스를 선언합니다.
 
@@ -62,7 +69,7 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. 깊이 스텐실 보기 만들기
+### <a name="2-creating-a-depth-stencil-view"></a>2. 깊이 스텐실 보기 만들기
 
 렌더링-대상 보기를 만드는 것 외에도 깊이-스텐실 보기를 만듭니다. 깊이-스텐실 보기를 만들면 Direct3D는 카메라에 더 가까운 개체를 카메라에서 더 먼 개체 앞에 효과적으로 렌더링할 수 있습니다. 깊이-스텐실 버퍼에 대한 보기를 만들기 전에 깊이-스텐실 버퍼를 만들어야 합니다. [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253)를 채워 깊이-스텐실 버퍼를 설명한 다음 [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521)를 호출하여 깊이-스텐실 버퍼를 만듭니다. 깊이-스텐실 보기를 만들기 위해 [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112)를 채워 깊이-스텐실 보기를 설명하고, 깊이-스텐실 보기 설명 및 깊이-스텐실 버퍼를 [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507)에 전달합니다.
 
@@ -109,7 +116,7 @@ private:
             );
 ```
 
-### 3. 창으로 원근 업데이트
+### <a name="3-updating-perspective-with-the-window"></a>3. 창으로 원근 업데이트
 
 창 크기에 따라 상수 버퍼에 대한 원근 투영 매개 변수를 업데이트합니다. 매개 변수를 70도 보기 필드(깊이 범위 0.01 - 100)로 고정합니다.
 
@@ -142,7 +149,7 @@ private:
             );
 ```
 
-### 4. 색 요소와 함께 꼭짓점 및 픽셀 셰이더 만들기
+### <a name="4-creating-vertex-and-pixel-shaders-with-color-elements"></a>4. 색 요소와 함께 꼭짓점 및 픽셀 셰이더 만들기
 
 이 앱에서는 이전 자습서인 [셰이더 및 그리기 원형 만들기](creating-shaders-and-drawing-primitives.md)에서 설명한 것보다 좀 더 복잡한 꼭짓점 및 픽셀 셰이더를 만듭니다. 앱의 꼭짓점 셰이더는 각 꼭짓점 위치를 투영 공간으로 변환하고 꼭짓점 색을 픽셀 셰이더에 전달합니다.
 
@@ -332,7 +339,7 @@ private:
         
 ```
 
-### 5. 큐브 회전하고 그리기 및 렌더링된 이미지 표시
+### <a name="5-rotating-and-drawing-the-cube-and-presenting-the-rendered-image"></a>5. 큐브 회전하고 그리기 및 렌더링된 이미지 표시
 
 장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. 회전 양과 함께 **rotationY** 인라인 함수(BasicMath.h)를 호출하여 Y축을 중심으로 큐브의 모델 행렬을 회전할 값을 설정합니다. [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486)를 호출하여 상수 버퍼를 업데이트하고 큐브 모델을 회전합니다. [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상을 출력 대상으로 지정합니다. 이 **OMSetRenderTargets** 호출의 경우 깊이-스텐실 보기를 전달합니다. [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지우고 [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387)를 호출하여 깊이 버퍼를 지웁니다.
 
@@ -439,7 +446,7 @@ private:
                 );
 ```
 
-## 요약 및 다음 단계
+## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
 
 원형에 깊이, 원근, 색 및 기타 효과를 사용했습니다.
@@ -454,10 +461,5 @@ private:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

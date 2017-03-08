@@ -1,11 +1,20 @@
 ---
 author: Jwmsft
 Description: "단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다."
+title: "단추"
 label: Buttons
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: bb670533769d8bae9cdea0f18e9cbb5717eb3877
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 41d86777b3e8aa0b7d32c408beec3f55a4a35d7b
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="buttons"></a>단추
@@ -179,10 +188,5 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 - [확인란](checkbox.md)
 - [**Button 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

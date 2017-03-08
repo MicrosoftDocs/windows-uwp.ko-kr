@@ -4,16 +4,24 @@ Description: "중첩된 UI를 사용하여 한 목록 항목에서 여러 작업
 title: "목록 항목의 중첩된 UI"
 label: Nested UI in list items
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
+ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: cfda479d2a05dfac4125688d3666abfb23bc45a2
+ms.lasthandoff: 02/08/2017
 
 ---
-# 목록 항목의 중첩된 UI
+# <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-중첩된 UI는 중첩된 실행 가능한 컨트롤을 독립적인 포커스를 가질 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다.
+중첩된 UI는 중첩된 실행 가능 컨트롤을 독립적인 포커스를 가질 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다.
 
 중첩된 UI를 사용하여 중요 작업 실행을 가속화하는 추가 옵션을 사용자에게 제공할 수 있습니다. 그러나 표시하는 작업이 많을수록 UI가 복잡해집니다. 이 UI 패턴을 사용할 경우 더 많은 주의가 필요합니다. 이 문서에서는 특정 UI에 가장 적합한 작업 과정을 결정하는 지침을 제공합니다.
 
@@ -26,9 +34,9 @@ ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
 
 ![중첩된 UI 부분](images/nested-ui-example-1.png)
 
-> 참고   ListView 및 GridView 모두 [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
+> 참고&nbsp;&nbsp; ListView 및 GridView 모두 [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
 
-## 기본 및 보조 작업
+## <a name="primary-and-secondary-actions"></a>기본 및 보조 작업
 
 목록을 사용하여 UI를 만들 때 사용자가 이러한 목록 항목을 사용하여 수행할 수 있는 작업을 고려합니다.  
 
@@ -43,7 +51,7 @@ ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
 
 *보조 작업*은 일반적으로 목록 항목과 관련된 바로 가기입니다. 이러한 바로 가기는 목록 관리 또는 목록 항목과 관련된 작업일 수 있습니다.
 
-## 보조 작업에 대한 옵션
+## <a name="options-for-secondary-actions"></a>보조 작업에 대한 옵션
 
 목록 UI를 만들 때는 먼저 UWP를 지원하는 모든 입력 방법을 고려해야 합니다. 다른 종류의 입력에 대한 자세한 내용은 [입력 지침서](../input-and-devices/input-primer.md)를 참조하세요.
 
@@ -53,13 +61,13 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 보조 작업을 반드시 기본 목록 UI에 배치할 필요가 없다고 결정한 경우에는 다른 여러 가지 방법으로 사용자에게 표시할 수 있습니다. 다음은 보조 작업을 배치할 수 있는 몇 가지 옵션입니다.
 
-### 세부 정보 페이지에 보조 작업 배치
+### <a name="put-secondary-actions-on-the-detail-page"></a>세부 정보 페이지에 보조 작업 배치
 
 목록 항목을 누를 때 이동할 페이지에 보조 작업을 배치합니다. 마스터/세부 정보 패턴을 사용하는 경우 세부 정보 페이지에 보조 작업을 배치하는 것이 좋습니다.
 
 자세한 내용은 [마스터/세부 정보 패턴](master-details.md)을 참조하세요.
 
-### 상황에 맞는 메뉴에 보조 작업 배치
+### <a name="put-secondary-actions-in-a-context-menu"></a>상황에 맞는 메뉴에 보조 작업 배치
 
 사용자가 마우스 오른쪽 단추를 클릭하거나 길게 누르기를 통해 액세스할 수 있는 상황에 맞는 메뉴에 보조 작업을 배치합니다. 이렇게 하면 사용자가 세부 정보 페이지를 로드하지 않고 메일을 삭제하는 등의 작업을 수행할 수 있습니다. 세부 정보 페이지에 이러한 옵션을 배치하면 상황에 맞는 메뉴가 기본 UI가 아닌 바로 가기가 되므로 유용합니다.
 
@@ -67,7 +75,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 자세한 내용은 [상황에 맞는 메뉴와 플라이아웃](menus.md)을 참조하세요.
 
-### 가리키기 UI에 보조 작업을 배치하여 포인터 입력 최적화
+### <a name="put-secondary-actions-in-hover-ui-to-optimize-for-pointer-input"></a>가리키기 UI에 보조 작업을 배치하여 포인터 입력 최적화
 
 마우스와 펜 등의 포인터 입력을 통해 앱을 자주 사용하고 이러한 입력에서만 보조 작업을 쉽게 사용할 수 있게 하려면 가리킬 때에만 보조 작업을 표시할 수 있습니다. 이 바로 가기는 포인터 입력이 사용될 때만 표시되므로 다른 입력 유형을 지원하려면 다른 옵션을 사용해야 합니다.
 
@@ -76,7 +84,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 자세한 내용은 [마우스 조작](../input-and-devices/mouse-interactions.md)을 참조하세요.
 
-## 기본 및 보조 작업에 대한 UI 배치
+## <a name="ui-placement-for-primary-and-secondary-actions"></a>기본 및 보조 작업에 대한 UI 배치
 
 보조 작업을 기본 목록 UI에 표시하려는 경우 다음 지침이 권장됩니다.
 
@@ -84,15 +92,15 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 이 예제에서는 항목이 가로 방향으로 더 많이 나열되는(높이보다 너비가 더 긴) UI에 대해 설명합니다. 그러나 목록 항목이 정사각형에 가깝거나 너비보다 높이가 더 길 수도 있습니다. 일반적으로 이러한 경우에는 그리드를 사용합니다. 이러한 항목의 경우 목록이 세로 방향으로 스크롤되지 않으면 목록 항목의 오른쪽이 아닌 아래쪽에 보조 작업을 배치할 수 있습니다.
 
-## 모든 입력 고려
+## <a name="consider-all-inputs"></a>모든 입력 고려
 
 중첩된 UI를 사용할 경우 모든 입력 유형으로 사용자 환경을 평가해야 합니다. 앞서 언급했듯이 중첩된 UI는 몇 가지 입력 유형에서는 올바르게 작동합니다. 그러나 일부 유형에서는 올바르게 작동하지 않을 수 있습니다. 특히 키보드, 컨트롤러 및 원격 입력은 중첩된 UI 요소에 액세스하는 것이 어려울 수 있습니다. UWP가 모든 입력 유형에 대해 올바르게 작동하려면 아래 지침을 따라야 합니다.
 
-## 중첩된 UI 처리
+## <a name="nested-ui-handling"></a>중첩된 UI 처리
 
 목록 항목에 둘 이상의 작업이 중첩된 경우 이 지침을 참조하여 키보드, 게임 패드, 리모콘 또는 기타 포인터 방식이 아닌 입력을 사용하여 탐색을 처리하는 것이 좋습니다.
 
-### 목록 항목이 작업을 수행하는 중첩된 UI
+### <a name="nested-ui-where-list-items-perform-an-action"></a>목록 항목이 작업을 수행하는 중첩된 UI
 
 중첩된 요소가 있는 목록 UI에서 호출, 선택(단일 또는 다중) 또는 끌어서 놓기 등의 작업을 지원하는 경우 이러한 화살표 지정 기술을 사용하여 중첩된 UI 요소를 탐색하는 것이 좋습니다.
 
@@ -130,7 +138,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 이를 구현하는 코드에 대해서는 이 문서의 [예제](#example) 섹션을 참조하세요.
 
-### 목록 항목이 작업을 수행하지 않는 중첩된 UI
+### <a name="nested-ui-where-list-items-do-not-perform-an-action"></a>목록 항목이 작업을 수행하지 않는 중첩된 UI
 
 목록 보기에서 가상화 및 최적화된 스크롤 동작을 제공하지만 목록 항목과 연결된 작업이 없는 경우가 있습니다. 이러한 UI는 일반적으로 요소를 그룹화하여 집합으로 스크롤하는 용도로만 목록 항목을 사용합니다.
 
@@ -175,7 +183,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 - 중첩된 UI 항목 중 하나에서 Tab 키를 누르면 탭 순서에 따라 중첩된 UI 항목 사이를 이동합니다.  중첩된 UI 항목 사이를 모두 이동한 후에는 탭 순서상 ListView 다음인 컨트롤로 포커스가 이동합니다.
 - Shift+Tab을 누르면 탭 동작이 반대 방향으로 수행됩니다.
 
-## 예제
+## <a name="example"></a>예제
 
 이 예제에서는 [목록 항목이 작업을 수행하는 중첩된 UI](#nested-ui-where-list-items-perform-an-action)를 구현하는 방법을 보여 줍니다.
 
@@ -302,9 +310,4 @@ public static class DependencyObjectExtensions
     }
 }
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

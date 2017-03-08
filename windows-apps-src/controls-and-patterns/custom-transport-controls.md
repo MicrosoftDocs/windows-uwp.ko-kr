@@ -5,9 +5,16 @@ title: "사용자 지정 미디어 전송 컨트롤을 만드는 방법"
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 28528b77fdd2e01a9e2feaa33a3a38f2f9b86661
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4dc1cd837b7ac7849125e0a1737873fec4a15cd3
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
@@ -35,7 +42,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 
 ## <a name="when-should-you-customize-the-template"></a>템플릿을 사용자 지정해야 하는 경우
 
-**MediaPlayerElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 디바이스로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
+**MediaPlayerElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 장치로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
 
 그러나 추가로 컨트롤의 모양을 사용자 지정하거나 컨트롤 동작을 변경해야 하는 시나리오가 있을 수 있습니다. 예를 들면 다음과 같습니다.
 - 아이콘, 슬라이더 동작 및 색을 변경합니다.
@@ -285,9 +292,4 @@ private void MediaPlayerElement_MediaPlayer_MediaOpened(object sender, RoutedEve
 ## <a name="related-articles"></a>관련 문서
 
 - [미디어 재생](media-playback.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

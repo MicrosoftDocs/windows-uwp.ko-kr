@@ -3,9 +3,16 @@ author: mcleblanc
 description: "이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요."
 title: "Windows Phone Silverlight를 UWP로 포팅하는 문제 해결"
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 3b7e68803a0391ea850b513014aa56a380df4d5c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae120cedbf0ab42fcb091ba5b01b58e8796d6a4a
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -58,10 +65,5 @@ ms.openlocfilehash: 3b7e68803a0391ea850b513014aa56a380df4d5c
 | xaml.cs 파일에서 InitializeComponent가 호출되었을 때 System.InvalidCastException이 발생했습니다. | 이 예외는 동일한 xaml.cs 파일을 공유하는 둘 이상의 xaml 파일(이 중 하나 이상이 MRT 정규화됨)이 있고 요소가 두 xaml 파일 간에 일관되지 않은 x:Name 특성을 갖고 있는 경우 발생할 수 있습니다. 두 xaml 파일의 동일한 요소에 동일한 이름을 추가하거나 이름을 완전히 생략하세요. | 
 
 다음 항목은 [XAML 및 UI 포팅](wpsl-to-uwp-porting-xaml-and-ui.md)입니다.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -3,13 +3,20 @@ author: jnHs
 Description: "Windows 스토어에 게시한 앱 또는 추가 기능에 대한 홍보 코드를 생성할 수 있습니다."
 title: "홍보 코드 생성"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a92f642b2d28eb801106388648455752c10e013a
-ms.openlocfilehash: cf1f6cf680d4ae57513dde2c6a356e8ba4b1cb56
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb97ccb1555e214871603861a3e5edeaaf3a55d7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 홍보 코드 생성
+# <a name="generate-promotional-codes"></a>홍보 코드 생성
 
 
 Windows 스토어에 게시한 앱 또는 추가 기능에 대한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 홍보 코드를 사용하면 사용자에게 앱이나 추가 기능 또는 Windows 10에서의 [베타 테스트](beta-testing-and-targeted-distribution.md)에 대한 무료 액세스를 제공하여 고객 서비스 시나리오를 해결할 수도 있습니다.
@@ -26,7 +33,7 @@ Windows 개발자 센터 대시보드에서 다음을 수행할 수 있습니다
 
 > **참고** 앱의 [가격 책정 및 가용성](set-app-pricing-and-availability.md) 대시보드 페이지에서 **이 앱을 숨기고 구입을 방지합니다. 홍보 코드가 있는 고객은 Windows 10 디바이스에서 해당 앱을 계속 다운로드할 수 있습니다.** 옵션을 선택한 경우에도 홍보 코드를 생성할 수 있습니다. 사용자가 홍보 코드를 사용하여 설치하기 전에 앱은 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과해야 합니다.
 
-## 홍보 코드 정책
+## <a name="promotional-code-policies"></a>홍보 코드 정책
 
 
 홍보 코드에 대한 다음 정책을 알아야 합니다.
@@ -36,7 +43,7 @@ Windows 개발자 센터 대시보드에서 다음을 수행할 수 있습니다
 -   각 앱 또는 추가 기능에 대해 6개월마다 최대 500개의 홍보 코드를 생성할 수 있습니다. 6개월의 기간은 첫 번째 홍보 코드 주문이 제출된 날부터 시작됩니다.
 -   **3k. 홍보 코드** 섹션을 포함하여 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에 정의된 요구 사항을 따라야 합니다.
 
-## 홍보 코드 주문
+## <a name="order-promotional-codes"></a>홍보 코드 주문
 
 
 Windows 스토어에 게시한 앱 또는 추가 기능에 대한 홍보 코드를 주문하려면
@@ -57,7 +64,7 @@ Windows 스토어에 게시한 앱 또는 추가 기능에 대한 홍보 코드�
 
 일부 주문은 처리하는 데 더 오래 걸릴 수 있지만 일반적으로 주문 후 60분 이내에 홍보 코드를 다운로드할 수 있습니다. 주문이 접수되고 코드를 다운로드할 수 있게 되면 주문 상태가 **사용 가능**으로 변경됩니다.
 
-## 홍보 코드 다운로드 및 배포
+## <a name="download-and-distribute-promotional-codes"></a>홍보 코드 다운로드 및 배포
 
 
 접수된 홍보 코드 주문을 다운로드하고 앱 사용자에게 코드를 배포하려면
@@ -91,7 +98,7 @@ Windows 스토어에 게시한 앱 또는 추가 기능에 대한 홍보 코드�
     -   코드의 교환 가능 URL
     -   교환 가능 URL을 방문하여 Microsoft 계정으로 로그인하고 지침에 따라 앱을 다운로드 및 설치하라는 안내문
 
-## 코드 교환 사용자 환경
+## <a name="code-redemption-user-experience"></a>코드 교환 사용자 환경
 
 
 교환 가능 URL을 사용자에게 배포한 후 사용자는 다음 단계에 따라 앱을 교환합니다.
@@ -114,7 +121,7 @@ Windows 스토어에 게시한 앱 또는 추가 기능에 대한 홍보 코드�
 
     > **참고** 홍보 코드를 통해 앱을 성공적으로 교환한 경우에도 앱 페이지에 **설치** 대신 **구입** 단추가 표시될 수 있습니다. 이 경우 **구입**을 클릭하여 무료로 앱을 설치할 수 있습니다.
 
-## 홍보 코드 검토
+## <a name="review-your-promotional-codes"></a>홍보 코드 검토
 
 
 여러 방법으로 홍보 코드 사용을 검토할 수 있습니다.
@@ -136,10 +143,5 @@ Windows 스토어에 게시한 앱 또는 추가 기능에 대한 홍보 코드�
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO4-->
 
 

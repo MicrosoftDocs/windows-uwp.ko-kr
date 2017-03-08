@@ -3,17 +3,24 @@ author: mcleblanc
 title: "시작: 다음에 할 일"
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: "이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d71c0026c8658e8aa88827915b8f2d815f10c6ef
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작: 다음에 할 일
+# <a name="getting-started-what-next"></a>시작: 다음에 할 일
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다. 다음 단계를 위해 아래 항목을 읽고 Microsoft Visual Studio를 실행하여 코드 작성을 시작하세요.
 
@@ -24,20 +31,15 @@ ms.openlocfilehash: d71c0026c8658e8aa88827915b8f2d815f10c6ef
 -   [C# 또는 Visual Basic을 사용하여 첫 Windows 런타임 앱 만들기](http://go.microsoft.com/fwlink/p/?LinkID=394138): Windows Phone 개발에 초점을 두는 항목입니다.
 -   [iOS 및 Android 개발용 동영상](https://msdn.microsoft.com/library/windows/apps/dn393982): 시각적 형식의 추가 도움말입니다.
 
-개발자 포럼, 블로그, 개발자 캠프 및 워크샵, 로컬 Microsoft 이벤트 및 계약을 통해 지원을 받고 상호 연결하는 방법은 [커뮤니티 리소스](http://go.microsoft.com/fwlink/p/?LinkId=263513)를 참조하세요.
+개발자 포럼, 블로그, 개발자 캠프 및 워크샵, 로컬 Microsoft 이벤트 및 계약을 통해 지원을 받고 상호 연결하는 방법은 [커뮤니티 리소스](https://developer.microsoft.com/en-us/windows/support)를 참조하세요.
 
 Windows 10은 개발자에게 새로운 앱 빌드 기회를 제공합니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 **iOS 개발자용 항목**
 * [iOS 개발자용 리소스](https://msdn.microsoft.com/library/windows/apps/jj945493)
 * [iOS 개발자를 위한 Windows 컨트롤](https://msdn.microsoft.com/library/windows/apps/dn263255)
 * [iOS 개발자용 Windows 도움말](https://msdn.microsoft.com/library/windows/apps/dn263256)
 * [Windows용 앱 빌드 블로그](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

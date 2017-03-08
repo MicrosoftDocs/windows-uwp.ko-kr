@@ -5,18 +5,26 @@ MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: WIP(Windows Information Protection)
+ms.author: normesta
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱"
+ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 translationtype: Human Translation
-ms.sourcegitcommit: 8a0ce7282ffaf76bcea94eec5ec3e3ceb99aa5ac
-ms.openlocfilehash: 81bd77d0153c17c80ccdce77332ed57fb751c8ec
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b9bde047a70d31105680361d34cf71b33f708f93
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
-
-  __참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
+__참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
 
 WIP는 조직에서 정의한 정책을 적용하여 조직에 속한 데이터를 보호합니다. 앱이 이러한 정책에 포함된 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 이 항목은 사용자의 개인 데이터에 영향을 주지 않고 더욱 원활하게 이러한 정책을 적용하는 앱을 빌드하는 데 도움이 됩니다.
+<iframe src="https://channel9.msdn.com/Blogs/Windows-Development-for-the-Enterprise/Securing-Enterprise-Data-with-Windows-Information-Protection/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="first-what-is-wip"></a>WIP란?
 
@@ -92,9 +100,4 @@ MDM 정책은 플래그를 요구하지 않지만 MAM 정책은 플래그를 요
 
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

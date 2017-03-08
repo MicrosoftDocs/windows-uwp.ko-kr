@@ -3,14 +3,21 @@ author: laurenhughes
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: "UWP 앱 패키징"
 description: "UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6decb122b56bb8835b4d0fc5178af61b59455876
-ms.openlocfilehash: 312c8fb0bbbb6231da91e7d477b800a797160e96
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ca57f50f4827ba5de7a140f1353ba864c5e2fb6c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="packaging-uwp-apps"></a>UWP 앱 패키징
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다. appxupload를 만들면 테스트 및 테스트용으로 로드하는 데 사용할 다른 appx 패키지도 생성됩니다. 이 appx 패키지를 장치에 테스트용으로 로드하여 앱을 직접 배포할 수 있습니다. 이 문서에서는 UWP 앱 패키지 구성, 생성, 테스트 프로세스에 대해 설명합니다. 테스트용 로드에 대한 자세한 내용은 [Windows 10에서 앱을 테스트용으로 로드](https://technet.microsoft.com/library/mt269549.aspx)를 참조하세요.
 
@@ -91,11 +98,11 @@ Visual Studio는 패키지를 스토어와 연결할 수 있습니다. 이렇게
 **원격 Windows 10 디바이스에서 앱 패키지 유효성 검사**
 
 1.  [개발을 위해 디바이스 사용](https://msdn.microsoft.com/library/windows/apps/Dn706236) 지침에 따라 Windows 10 디바이스를 개발용으로 사용하도록 설정합니다.
-    **중요** Windows 10용 원격 ARM 디바이스에서는 앱 패키지의 유효성을 검사할 수 없습니다.
+    **중요**  Windows 10용 원격 ARM 장치에서는 앱 패키지의 유효성을 검사할 수 없습니다.
 2.  Visual Studio용 원격 도구를 다운로드하여 설치합니다. 이러한 도구를 사용하여 Windows 앱 인증 키트를 원격으로 실행합니다. 이러한 도구를 다운로드할 위치를 포함하여 자세한 관련 내용은 [원격 컴퓨터에서 Windows 스토어 앱 실행](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor)을 참조하세요.
 3.  필요한 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666)를 다운로드한 다음 원격 Windows 10 디바이스에 설치합니다.
 4.  마법사 **Package Creation Completed** 페이지에서 **Remote Machine** 옵션 단추를 선택하고 **Test Connection** 단추 옆에 있는 줄임표 단추를 선택합니다.
-    **참고** **Remote Machine** 옵션 단추는 유효성 검사를 지원하는 솔루션 구성을 하나 이상 선택한 경우에만 사용할 수 있습니다. WACK로 앱을 테스트하는 방법에 대한 자세한 내용은 [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/Mt186449)를 참조하세요.
+    **참고**  **Remote Machine** 옵션 단추는 유효성 검사를 지원하는 솔루션 구성을 하나 이상 선택한 경우에만 사용할 수 있습니다. WACK로 앱을 테스트하는 방법에 대한 자세한 내용은 [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/Mt186449)를 참조하세요.
 5.  서브넷 내부에서 디바이스 양식을 지정하거나 서브넷 외부 디바이스의 DNS(도메인 이름 서버) 이름 또는 IP 주소를 제공합니다.
 6.  디바이스에서 Windows 자격 증명을 사용해 로그온하도록 요구하지 않는 경우 **Authentication Mode** 목록에서 **None**을 선택합니다.
 7.  **Select** 단추를 선택한 다음 **Launch Windows App Certification Kit** 단추를 선택합니다. 해당 디바이스에서 원격 도구가 실행 중인 경우 Visual Studio는 디바이스에 연결한 다음 유효성 검사 테스트를 수행합니다. [Windows 앱 인증 키트 테스트](https://msdn.microsoft.com/library/windows/apps/mt186450)를 참조하세요.
@@ -128,10 +135,5 @@ UWP 앱 패키지를 사용할 때는 장치에 데스크톱 앱과 같은 앱�
 
     앱 패키지가 설치되면 PowerShell 창에 앱이 설치되었습니다라는 메시지가 나타납니다.
 
-    **참고** 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭할 위치에서 화면을 터치하고 완전한 원이 나타날 때까지 계속 누르고 있다가 손가락을 뗍니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
+    **참고**  태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭할 위치에서 화면을 터치하고 완전한 원이 나타날 때까지 계속 누르고 있다가 손가락을 뗍니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
 4.  시작 단추를 클릭한 다음 앱 이름을 입력하여 앱을 시작합니다.
-
-
-<!--HONumber=Dec16_HO1-->
-
-

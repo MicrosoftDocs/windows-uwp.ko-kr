@@ -3,17 +3,24 @@ author: DBirtolo
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: "인쇄 미리 보기 UI 사용자 지정"
 description: "이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: dd64266c2015e1bb640cf159b0836b9819cf7845
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fa1a8c487d3fef2b0caa322d81c0ebdbdfe3865f
+ms.lasthandoff: 02/07/2017
 
 ---
-# 인쇄 미리 보기 UI 사용자 지정
+# <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
 -   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
 -   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
@@ -21,11 +28,11 @@ ms.openlocfilehash: dd64266c2015e1bb640cf159b0836b9819cf7845
 
 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다. 인쇄에 대한 자세한 내용은 [앱에서 인쇄](print-from-your-app.md)를 참조하세요.
 
-**팁** 이 항목의 예제는 대부분 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
+**팁**  이 항목의 예제는 대부분 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
 
  
 
-## 인쇄 옵션 사용자 지정
+## <a name="customize-print-options"></a>인쇄 옵션 사용자 지정
 
 기본적으로 인쇄 미리 보기 UI에는 [**ColorMode**](https://msdn.microsoft.com/library/windows/apps/BR226478), [**Copies**](https://msdn.microsoft.com/library/windows/apps/BR226479) 및 [**Orientation**](https://msdn.microsoft.com/library/windows/apps/BR226486) 인쇄 옵션이 표시됩니다. 이외에도 인쇄 미리 보기 UI에 추가할 수 있는 몇 가지 다른 일반 프린터 옵션이 있습니다.
 
@@ -44,11 +51,11 @@ ms.openlocfilehash: dd64266c2015e1bb640cf159b0836b9819cf7845
 
 단, 이 메서드를 사용하여 수정한 사항은 인쇄 미리 보기 UI에만 적용됩니다. 사용자는 인쇄 미리 보기 UI에서 **기타 설정**을 탭하여 프린터에서 지원하는 모든 옵션에 항상 액세스할 수 있습니다.
 
-**참고** 앱에서는 표시될 인쇄 옵션을 어떤 것이든 지정할 수 있지만 선택한 프린터에서 지원하는 옵션만 인쇄 미리 보기 UI에 표시됩니다. 선택한 프린터가 지원하지 않는 옵션은 인쇄 UI에 표시되지 않습니다.
+**참고**  앱에서는 표시될 인쇄 옵션을 어떤 것이든 지정할 수 있지만 선택한 프린터에서 지원하는 옵션만 인쇄 미리 보기 UI에 표시됩니다. 선택한 프린터가 지원하지 않는 옵션은 인쇄 UI에 표시되지 않습니다.
 
  
 
-### 표시할 옵션 정의
+### <a name="define-the-options-to-display"></a>표시할 옵션 정의
 
 앱의 화면이 로드되면 앱이 인쇄 계약을 등록합니다. 등록 과정에 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기를 정의하는 것이 포함됩니다. 인쇄 미리 보기 UI에 표시되는 옵션을 사용자 지정할 코드가 **PrintTaskRequested** 이벤트 처리기에 추가됩니다.
 
@@ -92,9 +99,9 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**중요** [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()을 호출하면 인쇄 미리 보기 UI에서 **기타 설정** 링크를 비롯한 모든 인쇄 옵션이 제거됩니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
+**중요**  [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()을 호출하면 인쇄 미리 보기 UI에서 **기타 설정** 링크를 비롯한 모든 인쇄 옵션이 제거됩니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
 
-### 기본 옵션 지정
+### <a name="specify-default-options"></a>기본 옵션 지정
 
 또한 인쇄 미리 보기 UI에서 옵션의 기본값을 설정할 수 있습니다. 이전 예제에서 가져온 다음 코드 줄은 [**MediaSize**](https://msdn.microsoft.com/library/windows/apps/BR226483) 옵션의 기본값을 설정합니다.
 
@@ -103,7 +110,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
          printTask.Options.MediaSize = PrintMediaSize.NorthAmericaLegal;
 ```         
 
-## 새 인쇄 옵션 추가
+## <a name="add-new-print-options"></a>새 인쇄 옵션 추가
 
 이 섹션에서는 새 인쇄 옵션을 만들고, 옵션이 지원하는 값 목록을 정의한 다음 이 옵션을 인쇄 미리 보기에 추가하는 방법을 보여 줍니다. 이전 섹션과 마찬가지로 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기에서 새 인쇄 옵션을 추가합니다.
 
@@ -179,15 +186,9 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 }
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [인쇄에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//빌드 2015 동영상: Windows 10에서 인쇄하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

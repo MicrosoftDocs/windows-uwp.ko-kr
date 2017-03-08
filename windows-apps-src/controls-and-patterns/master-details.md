@@ -5,16 +5,23 @@ title: "마스터/세부"
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
-ms.openlocfilehash: ef57c6d1a00797e2a68291475b6a38778e5d73ad
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96f9f9855dba48203e4372cef88d1f6ab7d435f5
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 메일 및 주소록에 자주 사용됩니다.
+마스터/세부 정보 패턴에는 마스터 창(대개 [목록 보기](lists.md)가 있음) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 메일 및 주소록에 자주 사용됩니다.
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
 
@@ -88,9 +95,4 @@ ms.openlocfilehash: ef57c6d1a00797e2a68291475b6a38778e5d73ad
 - [검색](search.md)
 - [앱 및 명령 모음](app-bars.md)
 - [**ListView 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

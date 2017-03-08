@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "백그라운드 작업 등록"
 description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: d65b8d3312e49469bd99d458b45bf5a46f345e6a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: eb3ab08cd26cd39ada38a1428b221157ebf55558
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -394,9 +401,4 @@ ms.openlocfilehash: d65b8d3312e49469bd99d458b45bf5a46f345e6a
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

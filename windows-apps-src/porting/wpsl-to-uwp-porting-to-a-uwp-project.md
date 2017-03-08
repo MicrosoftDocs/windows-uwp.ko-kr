@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Visual Studio에서 새 Windows 10 프로젝트를 만든 다음 파일을 프로젝트로 복사하여 포팅 프로세스를 시작합니다."
 title: "Windows Phone Silverlight 프로젝트를 UWP 프로젝트로 포팅"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 273017f4607c25ee56d7400debe59e94acb36d4f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 95cd7958979dd5c2a7955bb098c8b34fbf024b0f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -49,7 +56,7 @@ Visual Studio에서 새 Windows 10 프로젝트를 만든 다음 파일을 프�
 
 앱이 API를 구현한 디바이스 패밀리를 대상으로 하지 않는 한 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 사용하여 API가 있는지 테스트한 후 호출해야 합니다(적응 코드라고 함). 그러면 앱이 실행되는 모든 장치에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 장치에 대해서만 true로 평가합니다. 먼저 범용 API가 있는지를 확인한 후 확장 SDK 및 적응 코드만 사용합니다. 아래 섹션에 몇 가지 예제가 나와 있습니다.
 
-또한 [앱 패키지 매니페스트](#appxpackage)를 참조하세요.
+또한 [앱 패키지 매니페스트](#the-app-package-manifest)를 참조하세요.
 
 ## <a name="maximizing-markup-and-code-reuse"></a>태그 및 코드 재사용 최대화
 
@@ -58,7 +65,7 @@ Visual Studio에서 새 Windows 10 프로젝트를 만든 다음 파일을 프�
 -   모든 디바이스 패밀리에 공통되는 파일의 경우 특별한 고려 사항이 필요하지 않습니다. 앱이 실행되는 모든 디바이스 패밀리에서 이러한 파일을 사용합니다. 여기에는 XAML 태그 파일, 명령적 소스 코드 파일 및 자산 파일이 포함됩니다.
 -   앱은 실행되고 있는 디바이스 패밀리를 검색하고 해당 디바이스 패밀리용으로 특별히 설계된 보기를 탐색할 수 있습니다. 자세한 내용은 [앱이 실행되고 있는 플랫폼 검색](wpsl-to-uwp-input-and-sensors.md)을 참조하세요.
 -   대안이 없는 경우 유용하다고 생각할 수 있는 유사한 기술은 앱이 특정 디바이스 패밀리에서 실행될 경우에만 런타임 시 자동으로 로드되도록 태그 파일 또는 **ResourceDictionary** 파일(또는 파일이 들어 있는 폴더)의 특별한 이름을 지정하는 것입니다. [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) 사례 연구에서 이 기술을 보여 줍니다.
--   모든 디바이스 패밀리(예: 프린터, 스캐너 또는 카메라 단추)에서 사용할 수 없는 기능을 사용하기 위해 적응 코드를 작성할 수 있습니다. 이 항목의 [조건부 컴파일 및 적응 코드](#conditional-compilation)에서 세 번째 예제를 참조하세요.
+-   일부 디바이스 제품군(예: 프린터, 스캐너 또는 카메라 단추)에 제공되지 않는 기능을 사용하려면 적응 코드를 작성하세요. 이 항목의 [조건부 컴파일 및 적응 코드](#conditional-compilation-and-adaptive-code)에서 세 번째 예제를 참조하세요.
 -   Windows Phone Silverlight 및 Windows 10을 모두 지원하려는 경우 프로젝트 간에 소스 코드 파일을 공유할 수 있습니다. 방법: Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **기존 항목 추가**를 선택하고, 공유할 파일을 선택하고, **링크로 추가**를 클릭합니다. 소스 코드 파일에 연결된 프로젝트에서 해당 파일을 인식할 수 있도록 소스 코드 파일을 파일 시스템의 공통 폴더에 저장하고, 소스 컨트롤에 해당 파일을 추가합니다. 전부는 아니지만 대부분의 파일이 두 플랫폼 모두에서 작동하도록 명령적 소스 코드를 팩터링할 수 있는 경우 코드를 두 번 복사할 필요가 없습니다. 파일의 조건부 컴파일 지시문(가능한 경우) 또는 런타임 조건(필요한 경우) 내에 플랫폼별 논리를 래핑할 수 있습니다. 아래에 나오는 다음 섹션과 [C# 전처리기 지시문](http://msdn.microsoft.com/library/ed8yd1ha.aspx)을 참조하세요.
 -   소스 코드 수준이 아닌 이진 수준에서의 재사용을 위한 포팅 가능한 클래스 라이브러리도 있습니다. 이 라이브러리는 Windows Phone Silverlight와 Windows 10 앱(.NET Core)의 하위 집합에서 사용 가능한 .NET API의 하위 집합을 지원합니다. 포팅 가능한 클래스 라이브러리 어셈블리는 이러한 .NET 플랫폼 등과 이진 호환됩니다. Visual Studio를 사용하여 포팅 가능한 클래스 라이브러리를 대상으로 하는 프로젝트를 만듭니다. [포팅 가능한 클래스 라이브러리를 사용한 플랫폼 간 개발](http://msdn.microsoft.com/library/gg597391.aspx)을 참조하세요.
 
@@ -145,10 +152,5 @@ Windows Phone Silverlight 앱과 Windows 스토어 앱 간에 공유되지 않�
 [Windows 10 용 패키지 매니페스트 스키마](https://msdn.microsoft.com/library/windows/apps/dn934820)를 참조하세요.
 
 다음 항목은 [문제 해결](wpsl-to-uwp-troubleshooting.md)입니다.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -5,9 +5,16 @@ title: "토글 스위치 컨트롤에 대한 지침"
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 685ef17e17fb17fa620eea84335ce6688a5cfb3e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3d98936788057d4bd16f1ef44841ef0d8fb0648b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="toggle-switches"></a>토글 스위치
@@ -161,8 +168,3 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)
 - [확인란](checkbox.md)
-
-
-<!--HONumber=Dec16_HO2-->
-
-

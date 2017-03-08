@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: "XAML 태그 최적화"
 description: "메모리에서 개체를 생성하기 위해 XAML 태그를 구문 분석하는 작업은 복잡한 UI의 경우 시간이 많이 걸립니다. 다음은 XAML 태그 구문 분석 및 로드 시간과 앱의 메모리 효율성을 개선하기 위해 수행할 수 있는 몇 가지 작업입니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 655603e7fa8687480b5376806bc199afecd425fd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 24a5696a6e835a40b9b4e800677596514b56d53b
+ms.lasthandoff: 02/07/2017
 
 ---
-# XAML 태그 최적화
+# <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -84,7 +91,7 @@ ms.openlocfilehash: 655603e7fa8687480b5376806bc199afecd425fd
 
 위의 반대 예제를 보다 효율적으로 만들려면 `SecondPageTextBrush`를 SecondPage.xaml로 이동하고 `ThirdPageTextBrush`를 ThirdPage.xaml로 이동하면 됩니다. `InitialPageTextBrush` (은)는 항상 앱 시작 시 응용 프로그램 리소스를 구문 분석해야 하므로 App.xaml에서 유지할 수 있습니다.
 
-## 요소 수 최소화
+## <a name="minimize-element-count"></a>요소 수 최소화
 
 XAML 플랫폼은 많은 요소를 표시할 수 있지만 원하는 시각 효과를 달성하려면 최소한의 요소를 사용하여 앱 배치 및 렌더링을 보다 빠르게 만들어야 합니다.
 
@@ -106,7 +113,7 @@ XAML 플랫폼은 많은 요소를 표시할 수 있지만 원하는 시각 효�
 
 -   동일한 벡터 기반 요소를 다시 사용할 시간이 충분한 경우 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소를 대신 사용하는 것이 보다 효율적입니다. 벡터 기반 요소는 CPU에서 각 개별 요소를 별도로 만들어야 하므로 비용이 더 많이 소요될 수 있습니다. 이미지 파일을 한 번만 디코딩해야 합니다.
 
-## 같은 모양의 여러 브러시를 하나의 리소스에 통합
+## <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>같은 모양의 여러 브러시를 하나의 리소스에 통합
 
 XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시 사용할 수 있도록 캐시하려고 합니다. 그러나 XAML은 하나의 태그 조각에 선언된 브러시가 다른 태그 조각에 선언된 브러시와 동일한지 쉽게 구별할 수 없습니다. 다음 예제에서는 보여 주기 위해 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하지만 [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068)를 사용하는 것이 더 중요하고 더 일반적입니다.
 
@@ -146,7 +153,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 </Page>
 ```
 
-## 과도한 그리기 최소화
+## <a name="minimize-overdrawing"></a>과도한 그리기 최소화
 
 과도한 그리기는 둘 이상의 개체가 동일한 화면 픽셀에 그려지는 경우입니다. 이 지침과 요소 수 최소화 간에는 간혹 상충 관계가 있습니다.
 
@@ -240,9 +247,9 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823)를 시각적 진단으로 사용합니다. 장면에서 인식하지 못한 개체가 그려지는 경우가 있을 수 있습니다.
 
-## 정적 콘텐츠 캐시
+## <a name="cache-static-content"></a>정적 콘텐츠 캐시
 
-과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에서 [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
+과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR228084)에서 [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR208911)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
 
 **비효율적인 경우**
 
@@ -272,7 +279,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
 
-## ResourceDictionaries
+## <a name="resourcedictionaries"></a>ResourceDictionaries
 
 ResourceDictionaries는 일반적으로 전역 수준에서 리소스를 저장하는 데 사용됩니다. 앱에서 여러 위치에서 참조하려는 리소스로서 예를 들어 스타일, 브러시, 템플릿 등이 포함됩니다. 일반적으로 요청되지 않은 경우 리소스를 인스턴스화하지 않도록 ResourceDictionaries를 최적화했습니다. 그러나 약간 주의가 필요한 몇몇 위치가 있습니다.
 
@@ -280,17 +287,12 @@ ResourceDictionaries는 일반적으로 전역 수준에서 리소스를 저장�
 
 **UserControl의 ResourceDictionaries**. UserControl 내부에서 정의된 ResourceDictionaries에는 페널티가 있습니다. 플랫폼에서는 UserControl의 모든 인스턴스에 대해 이러한 ResourceDictionary의 복사본을 만듭니다. 많이 사용되는 UserControl이 있는 경우에는 ResourceDictionary를 UserControl 외부로 이동하여 페이지 수준에 배치합니다.
 
-## XBF2 사용
+## <a name="use-xbf2"></a>XBF2 사용
 
 XBF2는 런타임 시 모든 텍스트 구문 분석을 방지하는 XAML 태그의 이진 표현입니다. 또한 부하 및 트리 생성을 위한 이진 파일을 최적화하고 XAML 유형에 대해 "빠른 경로"를 허용하여 VSM, ResourceDictionary, 스타일 등과 같은 힙 및 개체 생성 비용을 개선합니다. 메모리가 완전히 매핑되었으므로 XAML 페이지 로드 및 읽기를 위한 힙 공간이 없습니다. 뿐만 아니라 appx에서 저장된 XAML 페이지의 디스크 공간이 줄어듭니다. XBF2는 보다 압축된 표현이며 비교되는 XAML/XBF1 파일의 디스크 공간을 최대 50%까지 줄일 수 있습니다. 예를 들어 ~1mb 정도의 XBF1 자산에서 ~400kb의 XBF2 자산으로 XBF2 삭제 변환 이후 기본 제공 사진 앱에서 디스크 공간이 60% 줄었습니다. 앱의 CPU 공간이 15~20%, Win32 힙이 10~15% 정도 개선되었습니다.
 
 XAML 기본 제공 컨트롤 및 프레임워크에서 제공되는 사전은 이미 XBF2가 전적으로 지원됩니다. 고유한 앱의 경우 프로젝트 파일에서 TargetPlatformVersion 8.2 이상을 선언해야 합니다.
 
 XBF2가 있는지를 확인하려면 바이너리 편집기에서 앱을 엽니다. XBF2가 있는 경우 12번째와 13번째 바이트가 00 02입니다.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

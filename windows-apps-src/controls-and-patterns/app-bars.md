@@ -1,11 +1,21 @@
 ---
 author: Jwmsft
+Description: "명령 모음을 통해 앱에서 가장 많이 수행하는 작업에 쉽게 액세스할 수 있습니다."
+title: "앱 바 및 명령 모음"
 label: App bars/command bars
 template: detail.hbs
 op-migration-status: ready
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
 translationtype: Human Translation
-ms.sourcegitcommit: a652189d0595bb6dffbc5228a91a68261eb7e5ef
-ms.openlocfilehash: c6d295a21825d1e89eaafcba59ca3a1b85669da9
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b14f83d9e834fcefbb3f9d1f9870f81686b44084
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="app-bar-and-command-bar"></a>앱 바 및 명령 모음
@@ -44,7 +54,7 @@ Windows Phone의 Outlook 일정 명령 모음입니다.
 
 ## <a name="anatomy"></a>구조
 
-기본적으로 명령 모음에는 아이콘 단추 행 및 줄임표 \[•••\]로 표현되는 선택적 "자세히 보기" 단추가 표시됩니다. 다음은 나중에 표시된 예제 코드로 만든 명령 모음입니다. 닫힘 컴팩트 상태로 표시됩니다.
+기본적으로 명령 모음에는 아이콘 단추 행 및 줄임표 \[•••\]로 표현되는 옵션 "자세히 보기" 단추가 표시됩니다. 다음은 나중에 표시된 예제 코드로 만든 명령 모음입니다. 닫힘 컴팩트 상태로 표시됩니다.
 
 ![닫힌 명령 모음](images/command-bar-compact.png)
 
@@ -244,15 +254,15 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 
 ![앱 바 배치의 예 1](images/AppbarGuidelines_Placement1.png)
 
--   소형 핸드헬드 디바이스의 경우 접근이 쉽도록 화면의 맨 아래쪽에 명령 모음을 배치하는 것이 좋습니다.
--   큰 화면이 있는 디바이스의 경우 하나의 명령 모음만 배치할 경우 창 맨 위 근처에 배치하는 것이 좋습니다.
+-   소형 핸드헬드 장치의 경우 접근이 쉽도록 화면의 맨 아래쪽에 명령 모음을 배치하는 것이 좋습니다.
+-   큰 화면이 있는 장치의 경우 하나의 명령 모음만 배치할 경우 창 맨 위 근처에 배치하는 것이 좋습니다.
 [**DiagonalSizeInInches**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.diagonalsizeininches.aspx) API를 사용하여 실제 화면 크기를 결정합니다.
 
 단일 보기 화면(왼쪽 예) 및 여러 보기 화면(오른쪽 예)에서는 다음 화면 영역에 명령 모음을 배치할 수 있습니다. 인라인 명령 모음은 작업 공간 내 어디에나 배치할 수 있습니다.
 
 ![앱 바 배치의 예 2](images/AppbarGuidelines_Placement2.png)
 
->**터치 디바이스**: 터치 키보드 또는 SIP(Soft Input Panel)가 나타날 때 명령 모음이 사용자에게 계속 표시되어야 하는 경우 명령 모음을 페이지의 [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) 속성에 할당할 수 있으며 SIP가 있는 경우 명령 모음은 계속 표시되도록 이동하게 됩니다. 그러지 않으면 명령 모음을 인라인으로 앱 콘텐츠 기준으로 배치해야 합니다.
+>**터치 장치**: 터치 키보드 또는 SIP(Soft Input Panel)가 나타날 때 명령 모음이 사용자에게 계속 표시되어야 하는 경우 명령 모음을 페이지의 [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx) 속성에 할당할 수 있으며 SIP가 있는 경우 명령 모음은 계속 표시되도록 이동하게 됩니다. 그러지 않으면 명령 모음을 인라인으로 앱 콘텐츠 기준으로 배치해야 합니다.
 
 ### <a name="actions"></a>동작
 
@@ -283,11 +293,11 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 
 ## <a name="adaptability"></a>적응성
 
--   앱 바에서 동일한 수의 작업이 세로 및 가로 방향으로 표시되어야 인지적 부하가 줄어듭니다. 사용 가능한 작업 수는 세로 방향의 디바이스 너비에 따라 결정되어 합니다.
+-   앱 바에서 동일한 수의 작업이 세로 및 가로 방향으로 표시되어야 인지적 부하가 줄어듭니다. 사용 가능한 작업 수는 세로 방향의 장치 너비에 따라 결정되어 합니다.
 -   한 손으로 사용할 수 있는 작은 화면에서는 앱 바가 화면 아래쪽에 배치되어야 합니다.
 -   더 큰 화면에서는 앱 바를 창의 위쪽에 배치하면 더 눈에 띄고 찾기 쉽습니다.
 -   중단점을 대상으로 하여 창 크기의 변경에 따라 메뉴 안팎으로 작업을 이동할 수 있습니다.
--   화면의 대각선을 대상으로 하여 디바이스의 화면 크기에 따라 앱 바 위치를 수정할 수 있습니다.
+-   화면의 대각선을 대상으로 하여 장치의 화면 크기에 따라 앱 바 위치를 수정할 수 있습니다.
 -   가독성을 개선하려면 레이블을 앱 바 단추 아이콘의 오른쪽으로 이동하는 것이 좋습니다. 레이블이 아래쪽에 있으면 명령 모음을 열어야 레이블 표시되지만 레이블이 오른쪽에 있으면 명령 모음이 닫혀 있더라도 표시됩니다. 창이 더 커지면 이 기능이 정상적으로 최적화됩니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
@@ -298,9 +308,4 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 
 * [UWP 앱의 명령 디자인 기본 사항](../layout/commanding-basics.md)
 * [**CommandBar 클래스**](https://msdn.microsoft.com/library/windows/apps/dn279427)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

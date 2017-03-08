@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: "이 항목에서는 작동하는 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 포팅하는 사례 연구를 제공합니다."
 title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구, QuizGame 피어 투 피어 샘플 앱"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 62d747a06f26bd2d069d2f23f36f48249fd11e95
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2756fc75b7a780ae0361671127423dcb898cae4b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -193,9 +200,4 @@ Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩
 ## <a name="conclusion"></a>결론
 
 이 사례 연구에서 포팅한 앱은 여러 프로젝트, 클래스 라이브러리 1개 및 상당한 양의 코드 및 사용자 인터페이스가 관련된 상대적으로 복잡한 앱이었습니다. 그럼에도 불구하고 포팅은 간단했습니다. 이렇게 포팅이 손쉬웠던 직접적인 이유 중에는 Windows 10 개발자 플랫폼과 Windows 8.1 및 Windows Phone 8.1 플랫폼이 유사하기 때문인 것도 있습니다. 또 다른 이유는 원래 앱이 모델, 보기 모델 및 보기를 별도로 유지하도록 설계된 방식 때문입니다.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

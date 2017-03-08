@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: "이 항목은 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다."
 title: "미리 보기 프레임 가져오기"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e19fa2a574e6824941c89db1db1e7e69f9e38ae9
-ms.openlocfilehash: d8d5780672592b1888a9c894dcc3ed58ebc2be36
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 420f9b8c3bb6573fbc12bc974ef2382b9ba6ec03
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 미리 보기 프레임 가져오기
+# <a name="get-a-preview-frame"></a>미리 보기 프레임 가져오기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 이 항목은 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
 
@@ -51,7 +58,7 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
 
 [!code-cs[CleanUpPreviewFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpPreviewFrame)]
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -61,10 +68,5 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

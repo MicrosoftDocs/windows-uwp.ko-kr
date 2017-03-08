@@ -3,22 +3,29 @@ author: jnHs
 Description: "광고 조정 보고서를 통해 유효 노출률 및 사용 중인 광고 네트워크에 대한 각 노출률을 확인할 수 있습니다."
 title: "광고 조정 보고서"
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 07b4e34cc5e91ec70b88631560dd1429f11d2d6b
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3f3f3dd3b594e174def693b7decd21a5753172b9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 광고 조정 보고서
+# <a name="ad-mediation-report"></a>광고 조정 보고서
 
 
 **광고 조정** 보고서를 통해 유효 노출률 및 사용 중인 광고 네트워크에 대한 각 노출률을 확인할 수 있습니다. 각 조정 구성의 채택률도 보여 주고 광고 네트워크와 조정자가 보고한 오류에 대한 정보를 제공합니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다.
 
-**중요** **광고 조정** 보고서는 앱에서 [Windows 광고 조정](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359)을 사용 중인 경우에만 데이터를 제공합니다.
+**중요**  **광고 조정** 보고서는 앱에서 [Windows 광고 조정](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359)을 사용 중인 경우에만 데이터를 제공합니다.
 
  
 
-## 페이지 필터
+## <a name="page-filters"></a>페이지 필터
 
 
 페이지 위쪽에서 **페이지 필터**를 확장하여 날짜 범위 및/또는 지역/국가를 기준으로 이 페이지의 모든 데이터를 필터링할 수 있습니다.
@@ -29,31 +36,31 @@ ms.openlocfilehash: 07b4e34cc5e91ec70b88631560dd1429f11d2d6b
 
 아래 나열된 모든 차트의 정보는 **페이지 필터**에서 선택한 기간을 반영합니다. **페이지 필터**를 사용하여 특정 지역/국가 및/또는 플랫폼을 지정하지 않는 한 기본적으로 여기에는 앱이 나열된 모든 지역/국가 및 플랫폼의 데이터가 포함됩니다.
 
-## 광고 조정 성능
+## <a name="ad-mediation-performance"></a>광고 조정 성능
 
 
 **광고 조정 성능** 차트는 선택한 기간의 평균 총 유효 노출률을 보여 줍니다. 이 비율은 조정 구성이나 다른 광고 네트워크가 호출되는 빈도와 관계없이 모든 사용자 세션에 대한 평균 유효 노출률입니다.
 
 **조정 요청** 제목을 클릭하여 평균 개별 조정 요청 수를 확인하거나 **제공한 광고**를 클릭하여 평균 총 제공한 광고 수를 확인할 수 있습니다.
 
-## 광고 공급자 유효 노출률
+## <a name="ad-provider-fill-rates"></a>광고 공급자 유효 노출률
 
 
 **광고 공급자 유효 노출률** 차트는 선택한 기간의 각 광고 네트워크에 대한 평균 유효 노출률을 보여 줍니다.
 
 각 광고 네트워크의 성능을 비교할 수 있도록 각 광고 네트워크에 대한 정보가 함께 표시됩니다.
 
-## 조정 구성별 고유한 사용자
+## <a name="unique-users-per-mediation-configuration"></a>조정 구성별 고유한 사용자
 
 
 **조정 구성별 고유한 사용자** 차트는 선택한 기간의 각 조정 구성 버전을 받은 총 고유한 사용자 수를 보여 줍니다.
 
-## 광고 네트워크별 오류
+## <a name="errors-by-ad-network"></a>광고 네트워크별 오류
 
 
 **광고 네트워크별 오류** 차트는 각 광고 네트워크에 대한 총 요청 및 오류 수와 오류를 발생시킨 요청 백분율을 함께 보여 줍니다.
 
-## 유형별 오류
+## <a name="errors-by-type"></a>유형별 오류
 
 
 **유형별 오류** 차트는 각 광고 네트워크에서 발생한 특정 오류를 보여 줍니다. 특정 오류가 나타내는 해당 네트워크에 대한 총 오류 백분율도 보여 주므로 광고 네트워크별로 자주 발생하는 오류를 파악할 수 있습니다.
@@ -64,10 +71,5 @@ ms.openlocfilehash: 07b4e34cc5e91ec70b88631560dd1429f11d2d6b
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

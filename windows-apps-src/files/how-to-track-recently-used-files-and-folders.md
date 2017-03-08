@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: "최근에 사용한 파일 및 폴더 추적"
 description: "사용자가 자주 액세스하는 파일을 앱의 MRU(최근에 사용한 목록)에 추가하여 추적할 수 있습니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: fc873da2d0b48cdc614fa319a294e67642440cdf
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c8f8cd6681b4e00e8430d7ddfacdd8fad395365c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="track-recently-used-files-and-folders"></a>최근에 사용한 파일 및 폴더 추적
@@ -13,7 +20,7 @@ ms.openlocfilehash: fc873da2d0b48cdc614fa319a294e67642440cdf
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
 - [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)
 - [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)
@@ -103,9 +110,4 @@ MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 �
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

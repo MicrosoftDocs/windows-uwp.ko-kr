@@ -5,13 +5,19 @@ description: "축하합니다! 이제 기본 UWP(유니버설 Windows 플랫폼)
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 keywords:
 - DirectX, XAML
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 17d34f0edcbe6729fe63204123faf4b7393beea7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e3f4abdb0a0f42d1b25a3adc1a78ab414affa77a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임 샘플 확장
+# <a name="extend-the-game-sample"></a>게임 샘플 확장
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -22,7 +28,7 @@ ms.openlocfilehash: 17d34f0edcbe6729fe63204123faf4b7393beea7
 -   [Direct3D 11 개요](https://msdn.microsoft.com/library/windows/desktop/ff476345)
 -   [Direct3D 11 참조](https://msdn.microsoft.com/library/windows/desktop/ff476147)
 
-## 게임 샘플 확장: 오버레이에 XAML 사용
+## <a name="extending-the-game-sample-using-xaml-for-the-overlay"></a>게임 샘플 확장: 오버레이에 XAML 사용
 
 
 자세히 살펴보지 않은 한 가지 다른 방법은 오버레이에 Direct2D 대신 XAML을 사용하는 것입니다. XAML은 사용자 인터페이스 요소를 그릴 때 Direct2D에 비해 많은 장점이 있으며, 가장 중요한 점은 Windows 10 모양과 느낌을 DirectX 게임에 보다 편리하게 통합할 수 있다는 것입니다. UWP 앱을 정의하는 대부분의 공통 요소, 스타일 및 동작이 XAML 모델로 긴밀하게 통합되어 게임 개발자가 훨씬 더 적은 작업으로 구현할 수 있습니다. 고유한 게임 디자인에 복잡한 사용자 인터페이스가 있는 경우 Direct2D 대신 XAML 사용을 고려해 보세요.
@@ -191,7 +197,7 @@ void App::OnLaunched(LaunchActivatedEventArgs^ /* args */)
 
 이 프로세스에 대한 자세한 내용은 [DirectX 및 XAML 상호 운용](https://msdn.microsoft.com/library/windows/apps/hh825871)을 참조하세요.
 
-## XAML 게임 샘플 XAML 코드 숨김에 대한 전체 코드
+## <a name="complete-code-for-the-xaml-game-sample-xaml-codebehinds"></a>XAML 게임 샘플 XAML 코드 숨김에 대한 전체 코드
 
 
 다음은 Direct3D 11.1 슈팅 게임 샘플의 XAML 버전에 있는 코드 숨김에 대한 전체 코드입니다.
@@ -1517,10 +1523,5 @@ void MainPage::OnResetButtonClicked(Object^ sender, RoutedEventArgs^ args)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

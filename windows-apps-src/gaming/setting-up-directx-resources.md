@@ -1,15 +1,22 @@
 ---
 author: mtoepke
 title: "DirectX 리소스 설정 및 이미지 표시"
-description: "여기에서는 Direct3D 디바이스, 스왑 체인 및 렌더링 대상 보기를 만드는 방법과 렌더링된 이미지를 디스플레이에 표시하는 방법에 대해 설명합니다."
+description: "여기에서는 Direct3D 장치, 스왑 체인 및 렌더링 대상 보기를 만드는 방법과 렌더링된 이미지를 디스플레이에 표시하는 방법에 대해 설명합니다."
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, directx 리소스, 이미지"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: af52969011a90f0c665dc8a5508c213d3a73b5b7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DirectX 리소스 설정 및 이미지 표시
+# <a name="set-up-directx-resources-and-display-an-image"></a>DirectX 리소스 설정 및 이미지 표시
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -18,16 +25,16 @@ ms.openlocfilehash: af52969011a90f0c665dc8a5508c213d3a73b5b7
 
 **목표:** C++ UWP(유니버설 Windows 플랫폼) 앱에서 DirectX 리소스를 설정하고 단색을 표시합니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
 
 **완료 시간:** 20분입니다.
 
-## 지침
+## <a name="instructions"></a>지침
 
-### 1. ComPtr로 Direct3D 인터페이스 변수 선언
+### <a name="1-declaring-direct3d-interface-variables-with-comptr"></a>1. ComPtr로 Direct3D 인터페이스 변수 선언
 
 WRL(Windows 런타임 C++ 템플릿 라이브러리)의 ComPtr [스마트 포인터](https://msdn.microsoft.com/library/windows/apps/hh279674.aspx) 템플릿으로 Direct3D 인터페이스 변수를 선언하므로 예외가 발생하지 않는 안전한 방식으로 이러한 변수의 수명을 관리할 수 있습니다. 그런 다음 해당 변수를 사용하여 [**ComPtr class**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)와 그 멤버에 액세스할 수 있습니다. 예를 들면 다음과 같습니다.
 
@@ -44,7 +51,7 @@ ComPtr로 [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/window
 
 샘플 앱이 시작되면 초기화되어 로드된 후 실행 준비가 됩니다.
 
-### 2. Direct3D 디바이스 만들기
+### <a name="2-creating-the-direct3d-device"></a>2. Direct3D 디바이스 만들기
 
 Direct3D API를 사용하여 장면을 렌더링하려면 먼저 디스플레이 어댑터를 나타내는 Direct3D 디바이스를 만들어야 합니다. Direct3D 디바이스를 만들기 위해 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 함수를 호출합니다. [**D3D\_FEATURE\_LEVEL**](https://msdn.microsoft.com/library/windows/desktop/ff476329) 값의 배열에서 9.1 수준부터 11.1 수준까지 지정합니다. Direct3D는 배열을 차례로 이동하고 지원되는 가장 높은 기능 수준을 반환합니다. 그러므로 사용 가능한 가장 높은 수준의 기능을 가져올 수 있도록 **D3D\_FEATURE\_LEVEL** 배열 항목을 가장 높은 수준에서 가장 낮은 수준으로 나열합니다. Direct3D 리소스가 Direct2D와 상호 작용하도록 [**D3D11\_CREATE\_DEVICE\_BGRA\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_BGRA_SUPPORT) 플래그를 *Flags* 매개 변수에 전달합니다. 디버그 빌드를 사용하는 경우 [**D3D11\_CREATE\_DEVICE\_DEBUG**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_DEBUG) 플래그도 전달합니다. 앱 디버그에 대한 자세한 내용은 [디버그 계층을 사용한 앱 디버그](https://msdn.microsoft.com/library/windows/desktop/jj200584)를 참조하세요.
 
@@ -99,7 +106,7 @@ Direct3D 11 디바이스 및 [**D3D11CreateDevice**](https://msdn.microsoft.com/
             );
 ```
 
-### 3. 스왑 체인 만들기
+### <a name="3-creating-the-swap-chain"></a>3. 스왑 체인 만들기
 
 이제 디바이스가 렌더링 및 화면 표시에 사용하는 스왑 체인을 만듭니다. [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528) 구조를 선언하고 초기화하여 스왑 체인을 설명합니다. 스왑 체인을 대칭 이동 모델(즉, **SwapEffect** 구성원에서 설정된 [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077#DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL) 값이 있는 스왑 체인)로 설정하고 **Format** 구성원을 [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM)으로 설정합니다. 대칭 이동 모델이 MSAA(multiple sample antialiasing)를 지원하지 않으므로 **SampleDesc** 구성원이 지정하는 [**DXGI\_SAMPLE\_DESC**](https://msdn.microsoft.com/library/windows/desktop/bb173072) 구조의 **Count** 구성원을 1로 설정하고 **DXGI\_SAMPLE\_DESC**의 **Quality** 구성원을 0으로 설정합니다. 스왑 체인이 전면 버퍼를 사용하여 렌더링 대상으로 사용되는 백 버퍼 및 디스플레이 디바이스에 제공할 수 있도록 **BufferCount** 구성원을 2로 설정합니다.
 
@@ -174,7 +181,7 @@ Direct3D 11.1 디바이스를 쿼리하여 기본 DXGI 디바이스를 얻습니
                 );
 ```
 
-### 4. 렌더링 대상 보기 만들기
+### <a name="4-creating-the-render-target-view"></a>4. 렌더링 대상 보기 만들기
 
 그래픽을 창에 렌더링하기 위해 렌더링 대상 보기를 만들어야 합니다. 렌더링 대상 보기를 만들 때 사용할 스왑 체인의 백 버퍼를 가져오기 위해 [**IDXGISwapChain::GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb174570)를 호출합니다. 백 버퍼를 2D 텍스처([**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635))로 지정합니다. 렌더링 대상 보기를 만들기 위해, 스왑 체인의 백 버퍼가 있는 [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517)를 호출합니다. 보기 포트([**D3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476260))를 스왑 체인 백 버퍼의 전체 크기로 지정하여 전체 핵심 창을 그리도록 지정해야 합니다. [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480)에 대한 호출의 보기 포트를 사용하여 보기 포트를 파이프라인의 [래스터라이저 단계](https://msdn.microsoft.com/library/windows/desktop/bb205125)에 바인딩합니다. 래스터라이저 단계는 벡터 정보를 래스터 이미지로 변환합니다. 이 경우에는 단색을 표시하는 것이므로 변환이 필요하지 않습니다.
 
@@ -214,7 +221,7 @@ Direct3D 11.1 디바이스를 쿼리하여 기본 DXGI 디바이스를 얻습니
         m_d3dDeviceContext->RSSetViewports(1, &viewport);
 ```
 
-### 5. 렌더링된 이미지 표시
+### <a name="5-presenting-the-rendered-image"></a>5. 렌더링된 이미지 표시
 
 장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다.
 
@@ -256,7 +263,7 @@ Direct3D 11.1 디바이스를 쿼리하여 기본 DXGI 디바이스를 얻습니
         }
 ```
 
-### 6. 앱 창과 스왑 체인의 버퍼의 크기 조절
+### <a name="6-resizing-the-app-window-and-the-swap-chains-buffer"></a>6. 앱 창과 스왑 체인의 버퍼의 크기 조절
 
 앱 창의 크기가 바뀌면, 앱은 스왑 체인의 버퍼 크기를 변경하고 렌더링 대상 보기를 다시 만든 다음 크기가 변경된 렌더링된 이미지를 표시해야 합니다. 스왑 체인의 버퍼 크기를 변경하기 위해 [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)를 호출합니다. 이 호출에서, 버퍼의 수와 버퍼의 형식을 변경하지 않고 그대로 둡니다(*BufferCount* 매개 변수를 2로, *NewFormat* 매개 변수를 [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM)으로). 스왑 체인의 백 버퍼 크기를, 크기가 변경된 창과 동일하게 만듭니다. 스왑 체인의 버퍼 크기를 변경한 후 새 렌더링 대상을 만들고, 렌더링된 새 이미지를 앱을 초기화했을 때와 유사하게 표시합니다.
 
@@ -273,7 +280,7 @@ Direct3D 11.1 디바이스를 쿼리하여 기본 DXGI 디바이스를 얻습니
                 );
 ```
 
-## 요약 및 다음 단계
+## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
 
 Direct3D 디바이스, 스왑 체인 및 렌더링 대상 보기를 만들었고, 렌더링된 이미지를 디스플레이에 표시했습니다.
@@ -288,10 +295,5 @@ Direct3D 디바이스, 스왑 체인 및 렌더링 대상 보기를 만들었고
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

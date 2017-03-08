@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 4a311d20-ba8c-4816-8091-35726428dc94
 description: "Microsoft Advertising 라이브러리에 있는 AdControl 및 InterstitialAd 클래스의 속성, 메서드 및 이벤트를 사용하는 방법을 보여 주는 추가 예제를 가져오세요."
 title: "코드 샘플"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, 코드 샘플"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: a8f18048915927f9e93d4469e7288e5a06a69070
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ae6e806f8aead387afe55dec2d70c04b7fc21284
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -38,9 +45,4 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

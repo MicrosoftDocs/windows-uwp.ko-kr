@@ -3,18 +3,25 @@ author: jnHs
 Description: "추가 기능을 제출할 때 스토어 목록 단계에서 제공하는 정보가 고객에게 표시됩니다."
 title: "추가 기능 저장소 목록 만들기"
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
-ms.openlocfilehash: 607dab75b8e446109cbb60c6c149732501f5b43c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ecf24a0a51734d159a412824d6b43d76d92b3002
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 추가 기능 저장소 목록 만들기
+# <a name="create-add-on-store-listings"></a>추가 기능 저장소 목록 만들기
 
 
 추가 기능을 제출할 때 **스토어 목록** 단계에서 제공하는 정보가, 고객이 추가 기능을 구입하려고 옵션을 확인할 때 고객에게 표시됩니다. 고객에게 매력적인 방식으로 추가 기능을 정확히 표현하려면 스토어 목록을 주의해서 고려해야 합니다. 다른 언어에 대한 사용자 지정된 스토어 목록을 제공할 수 있습니다.
 
-## 언어
+## <a name="languages"></a>언어
 
 
 스토어 목록 정보를 입력하기 전에 먼저 [언어](supported-languages.md)를 하나 이상 지정해야 합니다. 앱에서 지원하는 모든 언어에 대한 스토어 목록을 제공하는 것이 좋습니다.
@@ -25,15 +32,15 @@ ms.openlocfilehash: 607dab75b8e446109cbb60c6c149732501f5b43c
 
 스토어 목록을 편집하려면 추가 기능 제출 개요에서 언어 이름을 클릭합니다. 각 언어에 대해 입력할 수 있는 정보는 아래에서 설명합니다.
 
-## 제목
+## <a name="title"></a>제목
 
 이 추가 기능에 대해 고객에게 표시될 이름인 제목을 여기에 제공해야 합니다. 제목은 최대 100자까지 입력할 수 있습니다.
 
-## 설명
+## <a name="description"></a>설명
 
 제목만이 아니라 추가 정보를 표시하려면 여기에 200자 이내로 입력할 수 있습니다. 이 필드는 옵션입니다.
 
-## 아이콘
+## <a name="icon"></a>아이콘
 
 고객에게 표시될 수 있는 이미지를 제공할 수도 있습니다. 이 아이콘은 정확히 300 x 300픽셀의 .png 파일이어야 합니다.
 
@@ -43,10 +50,5 @@ ms.openlocfilehash: 607dab75b8e446109cbb60c6c149732501f5b43c
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

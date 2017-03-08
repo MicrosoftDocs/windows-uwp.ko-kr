@@ -3,10 +3,16 @@ author: mcleanbyron
 ms.assetid: B356C442-998F-4B2C-B550-70070C5E4487
 description: "Windows.Services.Store 네임스페이스를 사용하여 앱 또는 해당 추가 기능 중 하나를 구매하는 방법을 알아봅니다."
 title: "앱에서 바로 앱 및 추가 기능 구매 사용"
-keywords: "앱에서 바로 판매 코드 샘플"
+keywords: "windows 10, uwp, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 05a93f3124324d7308f5494ad14a15bfd6a4e698
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b45d8b34bed361471c1fc95594ad6fd28e41fa6
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -20,7 +26,7 @@ Windows 10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.S
 
 각 메서드는 표준 구매 UI를 사용자에게 제공하고 트랜잭션을 마치면 비동기적으로 완료됩니다. 메서드가 트랜잭션이 성공했는지 여부를 나타내는 개체를 반환합니다.
 
->**참고**   이 문서는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
+>**참고**&nbsp;&nbsp;이 문서는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -33,7 +39,7 @@ Windows 10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.S
 * 코드 파일에는 **Windows.Services.Store** 네임스페이스에 대한 **using** 문이 있습니다.
 * 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md#api_intro)을 참조하세요.
 
->**참고**  [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
+>**참고**&nbsp;&nbsp;[데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
 
 ## <a name="code-example"></a>코드 예제
 
@@ -52,9 +58,4 @@ Windows 10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.S
 * [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
 * [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
 * [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

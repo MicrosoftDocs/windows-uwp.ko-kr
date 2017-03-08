@@ -5,9 +5,16 @@ title: "진행률 컨트롤에 대한 지침"
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 5679c2bb8e8b3fff205f8071fcf52a52e0c939cd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6ff820d49ef6fe788a44822d8f966ce54b2730ae
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
@@ -173,9 +180,4 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 **개발자용(XAML)**
 - [진행률 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)
 - [Windows Phone에 대한 확정되지 않은 사용자 지정 진행률 표시줄을 만드는 방법](http://go.microsoft.com/fwlink/p/?LinkID=392426)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

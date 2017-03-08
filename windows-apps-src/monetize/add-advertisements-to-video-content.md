@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: "AdScheduler 클래스를 사용하여 비디오 콘텐츠에 광고를 추가하는 방법을 알아봅니다."
 title: "HTML 5 및 JavaScript로 된 동영상 콘텐츠에 광고 추가"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: 5573d37068a6b6c10ff9e380bb8b34bb83516c35
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b42b57f385857301bb74037dbb5c0c7200653316
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -96,9 +103,4 @@ ms.openlocfilehash: 5573d37068a6b6c10ff9e380bb8b34bb83516c35
 
   > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

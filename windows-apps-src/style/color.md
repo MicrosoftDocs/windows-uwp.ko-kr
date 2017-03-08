@@ -5,9 +5,16 @@ title: "색"
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
 template: detail.hbs
 extraBodyClass: style-color
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: a9f9974cee58dd3c347f9f74ae1ed4c86f6c49e1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 98158e8dc1531c1d4059b5462a6839d775fb6336
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -216,9 +223,4 @@ App.xaml에서 **RequestedTheme** 속성을 변경하여 쉽게 테마를 변경
 
 * [XAML 스타일](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 * [XAML 테마 리소스](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

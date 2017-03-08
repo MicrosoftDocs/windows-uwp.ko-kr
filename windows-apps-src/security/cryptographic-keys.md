@@ -3,21 +3,28 @@ title: "암호화 키"
 description: "이 문서에서는 표준 키 파생 함수를 사용하여 키를 파생하는 방법과 대칭 및 비대칭 키를 사용하여 콘텐츠를 암호화하는 방법을 보여 줍니다."
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e7fba930c108744815f261e7d01d198626d7e7c9
-ms.openlocfilehash: 420c8daa47fb36e8b7cebbc7a18bc8eb666188d3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1396382c90b370aa9d610749a92dd256c92dedab
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 암호화 키
+# <a name="cryptographic-keys"></a>암호화 키
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 표준 키 파생 함수를 사용하여 키를 파생하는 방법과 대칭 및 비대칭 키를 사용하여 콘텐츠를 암호화하는 방법을 보여 줍니다. 
 
-## 대칭 키
+## <a name="symmetric-keys"></a>대칭 키
 
 
 대칭 키 암호화는 비밀 키 암호화하고도 하며, 암호화에 사용된 키가 암호 해독에도 사용되어야 합니다. [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) 클래스를 사용하면 대칭 알고리즘을 지정하고 키를 만들거나 가져올 수 있습니다. [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스에 정적 메서드를 사용하면 알고리즘과 키를 통해 데이터를 암호화하고 암호 해독할 수 있습니다.
@@ -42,7 +49,7 @@ CBC와 같은 일부 모드에서는 첫 번째 암호 텍스트 블록에 IV(In
 
 다음 예제에서는 [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) 클래스를 사용하여 대칭 키를 만들고 이 키를 사용하여 데이터를 암호화 및 암호 해독하는 방법을 보여 줍니다.
 
-## 비대칭 키
+## <a name="asymmetric-keys"></a>비대칭 키
 
 
 비대칭 키 암호화는 공개 키 암호화라고도 하며, 공개 키와 개인 키를 사용하여 암호화와 암호 해독을 수행합니다. 두 키는 서로 다르지만 수학적으로 관련이 있습니다. 일반적으로 개인 키는 비밀 상태로 유지되고 데이터의 암호를 해독하는 데 사용되는 반면, 공개 키는 관련 당사자에게 배포되고 데이터를 암호화하는 데 사용됩니다. 또한 비대칭형 암호화는 데이터에 서명하는 데도 유용합니다.
@@ -61,7 +68,7 @@ CBC와 같은 일부 모드에서는 첫 번째 암호 텍스트 블록에 IV(In
 
 [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 개체를 사용하면 비대칭 알고리즘 또는 서명 알고리즘을 지정하고, 사용 후 삭제되는 키 쌍을 만들거나 가져오고, 또는 키 쌍의 공개 키 부분을 가져올 수 있습니다.
 
-## 키 파생
+## <a name="deriving-keys"></a>키 파생
 
 
 공유 암호에서 추가 키를 파생해야 하는 경우가 많습니다. [**KeyDerivationAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241518) 클래스와 [**KeyDerivationParameters**](https://msdn.microsoft.com/library/windows/apps/br241524) 클래스의 다음 특수 메서드 중 하나를 사용하여 키를 파생할 수 있습니다.
@@ -73,9 +80,4 @@ CBC와 같은 일부 모드에서는 첫 번째 암호 텍스트 블록에 IV(In
 | [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | SP800-56A 키 파생 함수에서 사용할 KeyDerivationParameters 개체를 만듭니다.                                                 |
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

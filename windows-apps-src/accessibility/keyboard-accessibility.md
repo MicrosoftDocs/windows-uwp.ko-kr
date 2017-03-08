@@ -5,13 +5,20 @@ ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: "키보드 접근성"
 label: Keyboard accessibility
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2215aeae041ff975d99d29ea42350f6ce0f2a681
-ms.openlocfilehash: 112c7be4cb5418332a19565be9b739e7032ba834
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9b1261de60bf0a45940fe9a284d8a5276b42e0a3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 키보드 접근성  
+# <a name="keyboard-accessibility"></a>키보드 접근성  
 
 
 
@@ -20,12 +27,12 @@ ms.openlocfilehash: 112c7be4cb5418332a19565be9b739e7032ba834
 <span id="keyboard_navigation_among_UI_elements"/>
 <span id="keyboard_navigation_among_ui_elements"/>
 <span id="KEYBOARD_NAVIGATION_AMONG_UI_ELEMENTS"/>
-## UI 요소 간 키보드 탐색  
+## <a name="keyboard-navigation-among-ui-elements"></a>UI 요소 간 키보드 탐색  
 컨트롤로 키보드를 사용하려면 컨트롤에 포커스가 있어야 하고, (포인터를 사용하지 않고) 포커스를 받으려면 탭 탐색을 통해 UI 디자인에서 컨트롤에 액세스할 수 있어야 합니다. 기본적으로 컨트롤의 탭 순서는 디자인 화면에 추가되는 순서, XAML에 표시되는 순서 또는 컨테이너에 프로그래밍 방식으로 추가된 순서와 같습니다.
 
 대부분의 경우, XAML에서 컨트롤을 정의한 방법에 따른 기본 순서가 특히 화면 읽기 프로그램에서 컨트롤을 읽는 순서이므로 최적의 순서입니다. 그러나 기본 순서가 시각적 순서와 반드시 일치하는 것은 아닙니다. 실제 디스플레이 위치는 레이아웃에 적용하기 위해 자식 요소에 설정할 수 있는 부모 레이아웃 컨테이너 및 특정 속성에 따라 달라질 수 있습니다. 앱이 적합한 탭 순서를 갖도록 하려면 이 동작을 직접 테스트하세요. 특히 레이아웃에 대한 그리드 메타포 또는 테이블 메타포가 있는 경우 사용자가 읽는 순서와 탭 순서가 달라질 수 있습니다. 이것은 자체로는 항상 문제는 아닙니다. 하지만 터치 가능한 UI와 키보드로 액세스 가능한 UI로서의 앱의 기능을 테스트하여 두 방식 모두 UI가 제대로 작동하는지 확인해야 합니다.
 
-XAML을 조정하여 탭 순서가 시각적 순서와 일치하도록 할 수 있습니다. 또는 열 우선 탭 탐색을 사용하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 레이아웃의 다음 예에 표시된 대로 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) 속성을 설정하여 기본 탭 순서를 재정의할 수 있습니다.
+XAML을 조정하여 탭 순서가 시각적 순서와 일치하도록 할 수 있습니다. 또는 열 우선 탭 탐색을 사용하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR209461) 레이아웃의 다음 예에 표시된 대로 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR242704) 속성을 설정하여 기본 탭 순서를 재정의할 수 있습니다.
 
 XAML
 ```xml
@@ -60,12 +67,12 @@ XAML
 <span id="keyboard_navigation_within_a_UI_element"/>
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
-## UI 요소 내 키보드 탐색  
+## <a name="keyboard-navigation-within-a-ui-element"></a>UI 요소 내 키보드 탐색  
 복합 요소의 경우 포함된 요소 간에 적절한 내부 탐색이 보장되어야 합니다. 복합 요소는 현재 활성 자식 요소를 관리하여 모든 자식 요소를 포커스 가능 상태가 되게 하는 오버헤드를 줄일 수 있습니다. 그러한 복합 요소는 탭 순서대로 포함되며 키보드 탐색 이벤트 자체를 처리합니다. 많은 복합 컨트롤에는 몇 가지 내부 탐색 논리가 컨트롤의 이벤트 처리에 이미 내장되어 있습니다. 예를 들어 항목의 화살표 키 통과는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) 및 [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) 컨트롤에서 기본적으로 사용됩니다.
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
-## 특정 컨트롤 이벤트의 포인터 동작 및 이벤트를 대신하는 키보드  
+## <a name="keyboard-alternatives-to-pointer-actions-and-events-for-specific-control-elements"></a>특정 컨트롤 이벤트의 포인터 동작 및 이벤트를 대신하는 키보드  
 클릭할 수 있는 UI 요소는 키보드를 사용해서도 호출할 수 있어야 합니다. UI 요소와 함께 키보드를 사용하려면 요소에 포커스가 있어야 합니다. [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)에서 파생되는 클래스만 포커스 및 탭 탐색을 지원합니다.
 
 호출할 수 있는 UI 요소의 경우 스페이스바 및 Enter 키에 대한 키보드 이벤트 처리기를 구현합니다. 이렇게 하면 기본 키보드 접근성 지원이 완벽해지고 사용자가 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 UI 요소에 액세스하고 기본 기능을 활성화할 수 있습니다.
@@ -85,7 +92,7 @@ XAML
 
 <span id="keyboard_shortcuts"/>
 <span id="KEYBOARD_SHORTCUTS"/>
-## 바로 가기 키  
+## <a name="keyboard-shortcuts"></a>바로 가기 키  
 앱의 키보드 탐색 및 활성화 구현뿐 아니라 앱 기능에 대한 바로 가기를 구현하는 것이 좋습니다. 탭 탐색은 기본 수준의 키보드 지원을 제공하지만 복잡한 양식을 사용할 경우 바로 가기 키에 대한 지원을 추가해야 합니다. 이를 통해 키보드와 포인팅 디바이스를 모두 사용하는 사람에게도 훨씬 사용하기 편리한 응용 프로그램이 될 수 있습니다.
 
 *바로 가기*는 사용자가 앱 기능에 효율적으로 액세스할 수 있도록 하여 생산성을 향상하는 키보드 조합입니다. 다음과 같은 두 종류의 바로 가기가 있습니다.
@@ -145,7 +152,7 @@ XAML
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
 <span id="IMPLEMENTING_A_KEY_EVENT_HANDLER"/>
-### 키보드 이벤트 처리기 구현  
+### <a name="implementing-a-key-event-handler"></a>키보드 이벤트 처리기 구현  
 키 이벤트와 같은 입력 이벤트에서는 *라우트된 이벤트*라는 이벤트 개념을 사용합니다. 라우트된 이벤트는 복합 컨트롤의 자식 요소로 넘쳐날 수 있으므로 공용 컨트롤 부모에서 여러 자식 요소에 대한 이벤트를 처리할 수 있습니다. 이 이벤트 모델은 기본적으로 포커스가 없거나 탭 순서의 일부가 아닐 수 있는 여러 복합 부분을 포함하는 컨트롤의 바로 가기 키 동작을 정의하는 데 편리합니다.
 
 Ctrl 키 등의 보조키 확인을 포함하는 키 이벤트 처리기 작성 방법을 보여 주는 예제 코드는 [키보드 조작](https://msdn.microsoft.com/library/windows/apps/Mt185607)을 참조하세요.
@@ -153,7 +160,7 @@ Ctrl 키 등의 보조키 확인을 포함하는 키 이벤트 처리기 작성 
 <span id="Keyboard_navigation_for_custom_controls"/>
 <span id="keyboard_navigation_for_custom_controls"/>
 <span id="KEYBOARD_NAVIGATION_FOR_CUSTOM_CONTROLS"/>
-## 사용자 지정 컨트롤의 키보드 탐색  
+## <a name="keyboard-navigation-for-custom-controls"></a>사용자 지정 컨트롤의 키보드 탐색  
 자식 요소를 탐색하는 키보드 바로 가기로 화살표 키를 사용하는 것이 좋습니다. 이 경우 자식 요소는 서로 특별한 관계가 있습니다. 트리 뷰 노드에 확장/축소 처리와 노드 활성화에 대한 별도의 하위 요소가 있는 경우 왼쪽 및 오른쪽 화살표 키를 사용하여 키보드 확장/축소 기능을 제공합니다. 컨트롤 콘텐츠 내에 방향 통과를 지원하는 방향이 지정된 컨트롤이 있는 경우 적절한 화살표 키를 사용합니다.
 
 일반적으로 [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982.aspx) 및 [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983.aspx) 메서드의 재정의를 클래스 논리의 일부로 포함하여 사용자 지정 컨트롤에 대한 사용자 지정 키 처리를 구현합니다.
@@ -161,7 +168,7 @@ Ctrl 키 등의 보조키 확인을 포함하는 키 이벤트 처리기 작성 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
-## 포커스 표시기의 시각적 상태 예제  
+## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>포커스 표시기의 시각적 상태 예제  
 앞에서 사용자가 포커스를 설정할 수 있는 모든 사용자 지정 컨트롤에 시각적 포커스 표시기가 있어야 한다고 설명했습니다. 일반적으로 포커스 표시기는 컨트롤의 일반 경계 사각형 주위에 사각형 모양을 그리는 것처럼 단순합니다. 시각적 포커스의 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)은 컨트롤 템플릿에 있는 컨트롤 컴퍼지션의 나머지 부분에 대한 피어 요소이지만 컨트롤이 아직 포커스되지 않았으므로 초기에 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 값 **Collapsed**를 사용하여 설정됩니다. 그런 다음 컨트롤에 포커스가 있으면 구체적으로 시각적 포커스의 **Visibility**를 **Visible**로 설정하는 시각적 상태가 호출됩니다. 포커스가 다른 곳으로 이동되면 다른 시각적 상태가 호출되고 **Visibility**는 **Collapsed**가 됩니다.
 
 모든 기본 XAML 컨트롤은 포커스되었을 때 해당하는 시각적 포커스 표시기를 표시합니다(포커스될 수 있는 경우). 또한 사용자가 선택한 테마에 따라 모양이 다를 수 있습니다(특히 사용자가 고대비 모드를 사용 중인 경우). UI에서 XAML 컨트롤을 사용 중이며 컨트롤 템플릿을 바꾸지 않는 경우 제대로 작동하고 표시하는 컨트롤에 대한 시각적 포커스 표시기를 얻기 위해 추가로 어떤 작업도 수행할 필요가 없습니다. 하지만 컨트롤을 다시 템플릿으로 지정하려는 경우나 XAML 컨트롤이 시각적 포커스 지시기를 제공하는 방법을 알고 싶은 경우를 위해 이 섹션의 나머지 부분에서는 XAML 및 컨트롤 논리에서 이를 수행하는 방법을 설명합니다.
@@ -226,22 +233,17 @@ XAML
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>
 <span id="KEYBOARD_ACCESSIBILITY_AND_WINDOWS_PHONE"/>
-## 키보드 접근성 및 Windows Phone
+## <a name="keyboard-accessibility-and-windows-phone"></a>키보드 접근성 및 Windows Phone
 Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없습니다. 그러나 SIP(Soft Input Panel)가 여러 가지 키보드 접근성 시나리오를 지원할 수 있습니다. 화면 읽기 프로그램은 **텍스트** SIP에서 삭제 알림을 포함한 텍스트 입력을 읽을 수 있습니다. 화면 읽기 프로그램은 사용자가 키를 검색하고 있음을 감지하고 검색한 키 이름을 소리 내어 읽을 수 있으므로 사용자가 손가락의 위치를 검색할 수 있습니다. 또한 키보드 지향 접근성 개념 일부를 키보드를 전혀 사용하지 않는 관련 보조 기술 동작에 매핑할 수 있습니다. 예를 들어 SIP에 Tab 키가 포함되지 않은 경우에도 내레이터는 Tab 키를 누르는 것과 동일한 터치 제스처를 지원하므로 UI의 컨트롤을 통과하는 유용한 탭 순서가 있는 것도 중요한 접근성 원칙입니다. 복잡한 컨트롤 내 일부를 탐색하는 데 사용되는 화살표 키도 내레이터 터치 제스처를 통해 지원됩니다. 포커스가 텍스트 입력용이 아닌 컨트롤에 도달하면 내레이터는 해당 컨트롤의 동작을 호출하는 제스처를 지원합니다.
 
 바로 가기 키는 일반적으로 Windows Phone 앱에 적합하지 않습니다. SIP에 Control 키나 Alt 키가 없기 때문입니다.
 
 <span id="related_topics"/>
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
 * [키보드 조작](https://msdn.microsoft.com/library/windows/apps/Mt185607)
 * [입력: 터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

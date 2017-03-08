@@ -2,9 +2,17 @@
 author: mukin
 Description: "이 문서는 자습서 형식으로 기본 응용 프로그램 사용자 인터페이스를 만드는 단계를 안내합니다. 가장 일반적인 XAML 요소인 Grid 및 StackPanel을 사용하는 방법을 설명하고 보여 줍니다."
 title: "Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 translationtype: Human Translation
-ms.sourcegitcommit: c30aed9681d7c091e9831df3f53d8779dfacce38
-ms.openlocfilehash: 1990a3ad4e56fa039d024c53a04b021e60bed145
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 87947b5bd1c1db008a21828c3940475c2b53fd6d
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -14,7 +22,7 @@ XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱�
 
 ## <a name="prerequisites"></a>필수 조건
 - Windows 10 및 Microsoft Visual Studio 2015. [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](../get-started/get-set-up.md).
-- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 잘 모르는 경우 ["Hellow World" 앱을 만드는 방법을 알아보려면 여기를 클릭하세요](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>1단계: 빈 앱 만들기
 1. Visual Studio 메뉴에서 **파일** > **새 프로젝트**를 선택합니다.
@@ -115,9 +123,4 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 UWP 앱 레이아웃 디자인 소개를 보려면 [UWP 앱 디자인 소개](https://msdn.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
 
 다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

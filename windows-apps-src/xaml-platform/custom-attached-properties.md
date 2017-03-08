@@ -3,29 +3,36 @@ author: jwmsft
 description: "XAML 연결된 속성을 종속성 속성으로 구현하는 방법 및 연결된 속성을 XAML에서 사용 가능하게 하는 데 필요한 접근자 규칙을 정의하는 방법에 대해 설명합니다."
 title: "사용자 지정 연결된 속성"
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 21ca5391fc4f29c33b3501d05d5ebed986188a3e
-ms.openlocfilehash: 77858a864929c99425f9c008e8f6fb8dfbad0b44
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e05c1b2e8c8391901c28c12b57415ec0e599859d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 사용자 지정 연결된 속성
+# <a name="custom-attached-properties"></a>사용자 지정 연결된 속성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 *연결된 속성*은 XAML 개념입니다. 연결된 속성은 일반적으로 특수 형태의 종속성 속성으로 정의됩니다. 이 항목에서는 연결된 속성을 종속성 속성으로 구현하는 방법 및 연결된 속성을 XAML에서 사용 가능하게 하는 데 필요한 접근자 규칙을 정의하는 방법에 대해 설명합니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽은 것으로 가정합니다. [연결된 속성 개요](attached-properties-overview.md)도 읽어야 합니다. 이 항목에 있는 예를 이해하려면 XAML과 C++, C# 또는 Visual Basic을 사용하여 기본 Windows 런타임 앱을 작성하는 방법도 알고 있어야 합니다.
 
-## 연결된 속성 시나리오
+## <a name="scenarios-for-attached-properties"></a>연결된 속성 시나리오
 
 정의 클래스가 아닌 클래스에 사용할 수 있는 속성 설정 메커니즘이 있어야 하는 이유가 있는 경우 연결된 속성을 만들 수 있습니다. 이러한 경우에 대한 가장 일반적인 시나리오는 레이아웃 및 서비스 지원입니다. 기존 레이아웃 속성에 대한 예로는 [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/hh759773) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772)이 있습니다. 레이아웃 시나리오에서는 레이아웃 제어 요소의 자식 요소로 존재하는 요소가 해당 부모 요소에 대한 레이아웃 요구 사항을 개별적으로 표시하고 각각 해당 부모가 연결된 속성으로 정의하는 속성 값을 설정할 수 있습니다. Windows 런타임 API의 서비스 지원 시나리오 예로는 [**ScrollViewer.IsZoomChainingEnabled**](https://msdn.microsoft.com/library/windows/apps/br209561) 같은 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)의 연결된 속성 집합이 있습니다.
 
-**주의** Windows 런타임 XAML 구현의 기존 제한 사항은 사용자 지정 연결된 속성을 애니메이션할 수 없다는 점입니다.
+**주의**  Windows 런타임 XAML 구현의 기존 제한 사항은 사용자 지정 연결된 속성에 애니메이션 효과를 줄 수 없다는 점입니다.
 
-## 사용자 지정 연결된 속성 등록
+## <a name="registering-a-custom-attached-property"></a>사용자 지정 연결된 속성 등록
 
 엄격하게 기타 형식에서만 사용하도록 연결된 속성을 정의하는 경우 속성이 등록된 클래스가 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생할 필요는 없습니다. 그러나 연결된 속성이 종속성 속성이기도 한 일반 모델을 따를 경우 백업 속성 저장소를 사용할 수 있도록 접근자의 대상 매개 변수에 **DependencyObject**가 사용되게 해야 합니다.
 
@@ -33,9 +40,9 @@ ms.openlocfilehash: 77858a864929c99425f9c008e8f6fb8dfbad0b44
 
 사용자 지정 연결된 속성 정의가 사용자 지정 종속성 속성과 가장 다른 부분은 접근자 또는 래퍼 정의 방식입니다. [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명된 래퍼 기술을 사용하지 않고 연결된 속성에 대해 정적 **Get***PropertyName* 및 **Set***PropertyName* 메서드도 접근자로 제공해야 합니다. 비XAML 시나리오에서는 다른 호출자도 접근자를 사용하여 값을 설정할 수 있으나 접근자는 주로 XAML 파서에서 사용합니다.
 
-**중요** 접근자를 올바르게 정의하지 않으면 XAML 프로세서가 연결된 속성에 액세스할 수 없고 연결된 속성을 사용하려는 사용자에게 XAML 파서 오류가 발생할 수 있습니다. 디자인 및 코딩 도구도 참조된 어셈블리에서 사용자 지정 종속성 속성이 발견되는 경우 "\*Property" 규칙에 따라 식별자를 명명하는 경우가 많습니다.
+**중요**  접근자를 올바르게 정의하지 않으면 XAML 프로세서가 연결된 속성에 액세스할 수 없고 연결된 속성을 사용하려는 사용자에게 XAML 파서 오류가 발생할 수 있습니다. 디자인 및 코딩 도구도 참조된 어셈블리에서 사용자 지정 종속성 속성이 발견되는 경우 "\*Property" 규칙에 따라 식별자를 명명하는 경우가 많습니다.
 
-## 접근자
+## <a name="accessors"></a>접근자
 
 **Get**_PropertyName_ 접근자의 서명은 다음이어야 합니다.
 
@@ -57,9 +64,9 @@ Visual Basic의 경우 다음과 같습니다.
 
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *value* 개체 및 해당 *valueType*의 형식도 구현에서 더 구체적일 수 있습니다. 이 메서드의 값은 태그에서 연결된 속성을 발견하는 경우 XAML 프로세서에서 제공하는 입력입니다. 특성 값(최종적으로는 문자열임)으로 적절한 형식을 만들 수 있으려면 사용하는 형식에 대한 형식 변환 또는 기존 태그 확장 지원이 있어야 합니다. 기본 **Object** 형식을 사용할 수 있으나 형식 안전성을 강화하려는 경우가 많습니다. 이 경우 접근자에 형식 적용을 넣으세요.
 
-**참고** 속성 요소 구문을 통해 사용하려는 연결된 속성을 정의할 수도 있습니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
+**참고**  속성 요소 구문을 통해 사용하려는 연결된 속성을 정의할 수도 있습니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
 
-## 코드 예제
+## <a name="code-example"></a>코드 예제
 
 다음 예에서는 종속성 속성 등록([**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 메서드 사용)을 보여 주며 사용자 지정 연결된 속성의 경우 **Get** 및 **Set** 접근자도 보여 줍니다. 이 예에서 연결된 속성 이름은 `IsMovable`입니다. 따라서 접근자는 `GetIsMovable` 및 `SetIsMovable`로 명명되어야 합니다. 연결된 속성의 소유자는 고유 UI가 없는 `GameService`라는 서비스 클래스이며, 이 클래스는 **GameService.IsMovable** 연결된 속성이 사용되는 경우 연결된 속성 서비스를 제공하는 것만을 목적으로 합니다.
 
@@ -174,7 +181,7 @@ GameService::RegisterDependencyProperties() {
 }
 ```
 
-## XAML에서 사용자 지정 연결된 속성 사용
+## <a name="using-your-custom-attached-property-in-xaml"></a>XAML에서 사용자 지정 연결된 속성 사용
 
 연결된 속성을 정의하고 해당 지원 멤버를 사용자 지정 형식의 일부로 포함한 후에는 XAML 사용에서 정의를 사용할 수 있게 해야 합니다. 이렇게 하려면 관련 클래스가 있는 코드 네임스페이스를 참조할 XAML 네임스페이스를 매핑해야 합니다. 연결된 속성을 라이브러리의 일부로 정의한 경우에는 해당 라이브러리를 앱의 앱 패키지 일부로 포함해야 합니다.
 
@@ -200,9 +207,9 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 <uc:ImageWithLabelControl uc:GameService.IsMovable="true" .../>
 ```
 
-**참고** C++로 XAML UI를 작성하는 경우 연결된 속성을 정의하는 사용자 지정 형식을 XAML 페이지에서 사용할 때면 언제든 해당 형식에 대한 헤더를 포함해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
+**참고**  C++로 XAML UI를 작성하는 경우 연결된 속성을 정의하는 사용자 지정 형식을 XAML 페이지에서 사용할 때면 언제든 해당 형식에 대한 헤더를 포함해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
 
-## 사용자 지정 연결된 속성의 값 형식
+## <a name="value-type-of-a-custom-attached-property"></a>사용자 지정 연결된 속성의 값 형식
 
 사용자 지정 연결된 속성의 값 형식으로 사용되는 형식은 사용이나 정의 또는 사용과 정의 둘 다에 영향을 줍니다. 연결된 속성의 값 형식은 **Get** 및 **Set** 접근자 메서드의 시그니처, [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 호출의 *propertyType* 매개 변수 등 여러 위치에서 선언됩니다.
 
@@ -211,7 +218,7 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 - 연결된 속성을 그대로 둘 수 있으나 연결된 속성이 속성 요소인 경우에만 연결된 속성이 사용을 지원할 수 있고 해당 값은 개체 요소로 선언됩니다. 이 경우 속성 형식이 XAML 사용을 개체 요소로 지원해야 합니다. 기존 Windows 런타임 참조 클래스의 경우 XAML 구문에서 해당 형식이 XAML 개체 요소 사용을 지원하는지 확인합니다.
 - 연결된 속성을 그대로 둘 수 있으나 문자열로 표시 가능한 **Binding** 또는 **StaticResource** 같은 XAML 참조 기술을 통한 특성 사용에서만 연결된 속성을 사용합니다.
 
-## **Canvas.Left** 예제에 대한 자세한 정보
+## <a name="more-about-the-canvasleft-example"></a>**Canvas.Left** 예제에 대한 자세한 정보
 
 연결된 속성 사용의 이전 예제에서는 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 연결된 속성을 설정하는 다양한 방법을 보여 주었습니다. 그러나 연결된 속성에 의해 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 개체의 상호 작용 방법은 어떻게 변경되고 언제 변경될까요? 연결된 속성을 구현하면 일반적인 연결된 속성 소유자 클래스가 다른 개체에서 발견할 경우 연결된 속성 값에 대해 다른 어떤 작업을 수행하는지 확인하는 것도 흥미로울 수 있으므로 이 특정 예제를 좀더 살펴보겠습니다.
 
@@ -235,18 +242,13 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
     }
 ```
 
-**참고** 패널 작동 방법에 대한 자세한 내용은 [XAML 사용자 지정 패널 개요](https://msdn.microsoft.com/library/windows/apps/mt228351)를 참조하세요.
+**참고**  패널 작동 방법에 대한 자세한 내용은 [XAML 사용자 지정 패널 개요](https://msdn.microsoft.com/library/windows/apps/mt228351)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)
 * [연결된 속성 개요](attached-properties-overview.md)
 * [사용자 지정 종속성 속성](custom-dependency-properties.md)
 * [XAML 개요](xaml-overview.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

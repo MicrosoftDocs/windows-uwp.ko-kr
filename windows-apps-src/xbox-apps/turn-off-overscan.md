@@ -2,13 +2,21 @@
 author: payzer
 title: "화면 가장자리까지 UI를 그리는 방법"
 description: 
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 1adb221f-6f70-4255-9329-2046a486ca45
 translationtype: Human Translation
-ms.sourcegitcommit: b5961d3266a031ab09a9da63319e9883cf050789
-ms.openlocfilehash: cddde27a17e897ab8a68bbed099e532a8cd48f07
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 9a221672391dfbfb4af664438448307800020c6f
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 화면 가장자리까지 UI를 그리는 방법   
+# <a name="how-to-draw-ui-to-the-edge-of-the-screen"></a>화면 가장자리까지 UI를 그리는 방법   
 기본적으로 응용 프로그램에는 TV 안전 영역에 맞게 뷰포트 가장자리에 배치된 테두리가 있습니다. 자세한 내용은 [Xbox 및 TV용 디자인](../input-and-devices/designing-for-tv.md#tv-safe-area)을 참조하세요. 
 
 이 기능을 끄고 화면 가장자리까지 그리는 것이 좋습니다. 응용 프로그램이 시작될 때 다음 코드를 추가하여 화면 가장자리까지 그릴 수 있습니다.
@@ -20,12 +28,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 > [!NOTE]
 > C++/DirectX 응용 프로그램의 경우 이에 대해 걱정할 필요가 없습니다. 시스템에서 항상 화면 가장자리까지 응용 프로그램을 렌더링합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [Xbox에 적용할 수 있는 최선의 방법](tailoring-for-xbox.md)
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -2,15 +2,23 @@
 author: Mtoepke
 title: "질문과 대답"
 description: "Xbox의 UWP에 대한 FAQ입니다."
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 translationtype: Human Translation
-ms.sourcegitcommit: 1ee75d73cc42455677bc2c0df08b41f33fc4f7b0
-ms.openlocfilehash: a6d410e3a4873bb96fba46789b28185c392a7492
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 059fac41c0c0557dbc3d4739c1da78f794505839
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="frequently-asked-questions"></a>질문과 대답
 
-예상하는 대로 작동하지 않나요? 질문과 대답 페이지를 검토합니다. 또한 [알려진 문제](known-issues.md) 항목 및 [유니버설 Windows 앱 개발](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop) 포럼을 확인합니다. 
+예상하는 대로 작동하지 않나요? 질문과 대답 페이지를 검토합니다. 또한 [알려진 문제](known-issues.md) 항목 및 [유니버설 Windows 앱 개발](https://go.microsoft.com/fwlink/?linkid=839446) 포럼을 확인합니다. 
 
 ### <a name="why-are-my-games-and-apps-not-working"></a>게임과 앱이 작동하지 않는 이유는 무엇인가요?
 
@@ -38,6 +46,9 @@ ms.openlocfilehash: a6d410e3a4873bb96fba46789b28185c392a7492
 ### <a name="will-my-games-and-apps-still-work-if-i-activate-developer-mode"></a>개발자 모드를 활성화해도 게임과 앱이 계속 작동하나요?
 
 예, 개발자 모드에서 게임을 플레이할 수 있는 정품 모드로 전환할 수 있습니다. 자세한 내용은 [Xbox One 개발자 모드 활성화](devkit-activation.md) 페이지를 참조하세요. 
+
+### <a name="can-i-develop-and-publish-x86-apps-for-xbox"></a>Xbox용 x86 앱을 개발하고 게시할 수 있나요?
+Xbox는 이제 x86 앱 개발이나 x86 스토어로의 앱 전송을 지원하지 않습니다. 
 
 ### <a name="will-i-lose-my-games-and-apps-or-saved-changes"></a>게임과 앱 또는 저장된 변경 내용이 손실되나요?
 
@@ -131,9 +142,4 @@ TVHelpers는 JavaScript 및 XAML/C#의 샘플 및 라이브러리 집합으로�
 ## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP에 대해 알려진 문제](known-issues.md)
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

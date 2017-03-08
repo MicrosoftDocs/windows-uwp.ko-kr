@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Windows 스토어 제출 API를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 제출을 프로그래밍 방식으로 만들고 관리합니다."
 title: "Windows 스토어 서비스를 사용하여 제출 만들기 및 관리"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: 8467cddd5eec2348cd35f4f5dc1564b47813a6ca
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f73470c456bf59544bc702b137da64f57c6a6943
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -18,15 +25,17 @@ ms.openlocfilehash: 8467cddd5eec2348cd35f4f5dc1564b47813a6ca
 
 1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
 3.  Windows 스토어 제출 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Windows 스토어 제출 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.
-4.  [Windows 스토어 제출 API를 호출합니다](#call-the-windows-store-submission-api).
+4.  [Windows 스토어 제출 API 호출](#call-the-windows-store-submission-api).
 
 
 <span id="not_supported" />
->**중요**
+>**중요 정보**
 
 > * 이 API는 API를 사용할 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 이 권한은 단계별로 개발자 계정에서 사용할 수 있으며 이때 모든 계정에서 이 권한을 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
 <br/><br/>
-> * 이 API는 필수 앱 업데이트와 스토어 관리 소모성 추가 기능을 포함하여(하지만 여기에 국한되지는 않음) 2016년 8월에 개발자 센터 대시보드에 도입된 특정 기능을 사용하는 앱 또는 추가 기능에는 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Windows 스토어 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 대시보드를 사용하여 앱 또는 추가 기능에 대한 제출을 관리해야 합니다.
+>* 이 API를 사용하여 앱, 또는 추가 기능에 대한 제출을 만드는 경우 Windows 개발자 센터 대시보드보다는 API를 사용하여 제출만 추가로 변경하세요. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 경우 제출을 삭제하고 새 제출을 만들어야 합니다.
+<br/><br/>
+> * 이 API는 필수 앱 업데이트와 스토어 관리 소모성 추가 기능을 포함하여(하지만 여기에 국한되지는 않음) 2016년 8월에 Windows 개발자 센터 대시보드에 도입된 특정 기능을 사용하는 앱 또는 추가 기능에는 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Windows 스토어 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 대시보드를 사용하여 앱 또는 추가 기능에 대한 제출을 관리해야 합니다.
 
 
 <span id="prerequisites" />
@@ -111,17 +120,19 @@ Azure AD 액세스 토큰이 있으면 Windows 스토어 제출 API에서 메서
 * [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
 * [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
 
+>**참고**&nbsp;&nbsp;위에 나열된 코드 예제 외에도 the Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+
 ## <a name="troubleshooting"></a>문제 해결
 
-| 문제      | 해결 방법                                          |
+| 문제      | 해상도                                          |
 |---------------|---------------------------------------------|
-| PowerShell에서 Windows 스토어 제출 API를 호출한 후 API에 대한 응답 데이터를 [ConvertFrom Json](https://technet.microsoft.com/en-us/library/hh849898.aspx) cmdlet을 사용하여 JSON 형식에서 PowerShell 개체로 변환하고 [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) cmdlet을 사용하여 다시 JSON 형식으로 변환하면 API에 대한 응답 데이터가 손상됩니다. |  기본적으로 [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) cmdlet에 대한 *-Depth* 매개 변수는 개체의 2개 수준으로 설정되며 이는 Windows 스토어 제출 API에 에서 반환하는 대부분의 JSON 개체에는 너무 얕습니다. [ConvertTo Json](https://technet.microsoft.com/en-us/library/hh849922.aspx) cmdlet을 호출할 때 *-Depth* 매개 변수를 20과 같이 큰 수로 설정합니다. |
+| PowerShell에서 Windows 스토어 제출 API를 호출한 후 API에 대한 응답 데이터를 [ConvertFrom Json](https://technet.microsoft.com/library/hh849898.aspx) cmdlet을 사용하여 JSON 형식에서 PowerShell 개체로 변환하고 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 사용하여 다시 JSON 형식으로 변환하면 API에 대한 응답 데이터가 손상됩니다. |  기본적으로 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet에 대한 *-Depth* 매개 변수는 개체의 2개 수준으로 설정되며 이는 Windows 스토어 제출 API에 에서 반환하는 대부분의 JSON 개체에는 너무 얕습니다. [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 호출할 때 *-Depth* 매개 변수를 20과 같이 큰 수로 설정합니다. |
 
 ## <a name="additional-help"></a>추가 도움말
 
 Windows 스토어 제출 API에 대한 질문이 있거나 이 API의 제출을 관리하는 데 도움이 필요한 경우 다음 리소스를 사용합니다.
 
-* [포럼](https://social.msdn.microsoft.com/Forums/windowsapps/en-us/home?forum=wpsubmit)에서 궁금한 사항을 질문합니다.
+* [포럼](https://social.msdn.microsoft.com/Forums/windowsapps/home?forum=wpsubmit)에서 궁금한 사항을 질문합니다.
 * [지원 페이지](https://developer.microsoft.com/windows/support)를 방문하여 개발자 센터 대시보드에 대한 보조 지원 옵션 중 하나를 요청합니다. 문제 유형 및 범주를 선택하라는 메시지가 표시되면 **앱 제출 및 인증**과 **앱 제출**을 각각 선택합니다.  
 
 ## <a name="related-topics"></a>관련 항목
@@ -133,9 +144,4 @@ Windows 스토어 제출 API에 대한 질문이 있거나 이 API의 제출을 
 * [패키지 플라이트 관리](manage-flights.md)
 * [패키지 플라이트 제출 관리](manage-flight-submissions.md)
  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "백그라운드 작업 진행 및 완료 모니터링"
 description: "앱에서 백그라운드 작업이 보고하는 진행 및 완료를 인식하는 방법을 알아봅니다."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: c7b6062a624b194b2806788c5f498d87aaa209a2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 709f3da69e95985512835994a9bb7cf5e0e91a7f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -210,9 +217,4 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

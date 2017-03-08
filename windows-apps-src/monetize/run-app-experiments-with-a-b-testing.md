@@ -3,19 +3,26 @@ author: mcleanbyron
 Description: "Windows 개발자 센터 대시보드를 사용하여 A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에 대한 실험을 실행할 수 있습니다."
 title: "A/B 테스트로 앱 실험 실행"
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험"
 translationtype: Human Translation
-ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
-ms.openlocfilehash: f6c8e830a3ffcff8db9c280b6a9df5b515b1a356
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 02e6ebbe6d3c02d08ae21ea71e7daa38b7e77255
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# A/B 테스트로 앱 실험 실행
+# <a name="run-app-experiments-with-ab-testing"></a>A/B 테스트로 앱 실험 실행
 
 Windows 개발자 센터 대시보드를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에서 런타임 시 검색할 수 있는 원격 변수를 정의할 수 있고, 이러한 값의 변형을 테스트하여 원하는 사용자 동작을 유도하는 데 가장 효과적인 값을 확인할 수 있습니다. 원격 변수를 사용하여 앱에서 바로 구매, 등록 흐름, 캡션 및 광고 배치 등의 앱 환경을 구성할 수 있습니다.
 
 A/B 테스트의 목적은 보다 흥미로운 앱 환경을 제공하여 전환율 향상(예: 앱에서 바로 구매 증가) 가능성이 큰 원격 변수 값의 변형을 식별하는 것입니다. 성공적인 변형을 식별한 후 즉시 실험을 종료하고, 앱을 다시 게시할 필요 없이 개발자 센터 대시보드에서 전체 사용자 대상 그룹에 대해 해당 변형을 사용하도록 설정할 수 있습니다.
 
-## A/B 테스트 만들기 및 실행
+## <a name="create-and-run-an-ab-test"></a>A/B 테스트 만들기 및 실행
 
 A/B 테스트를 만들고 실행하려면 다음 단계를 따르세요.
 
@@ -26,16 +33,16 @@ A/B 테스트를 만들고 실행하려면 다음 단계를 따르세요.
 
 종단 간 프로세스를 보여 주는 연습은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
-## 요구 사항
+## <a name="requirements"></a>요구 사항
 
 Windows 개발자 센터의 A/B 테스트는 UWP 앱에 대해서만 지원됩니다.
 
 A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해야 합니다.
 
 * [여기](../get-started/get-set-up.md)에 있는 지침에 따라 UWP 개발용으로 개발 컴퓨터를 설정합니다.
-* [Microsoft Store Services SDK를 설치합니다.](microsoft-store-services-sdk.md#install-the-sdk) 실험에 대한 API 외에, 이 SDK는 광고 표시, 앱에 대한 피드백을 수집하기 위해 고객을 피드백 허브로 보내기 등의 다른 기능을 위한 API도 제공합니다. 
+* [Microsoft Store Services SDK를 설치합니다.](microsoft-store-services-sdk.md#install-the-sdk) 실험에 대한 API 외에, 이 SDK는 광고 표시, 앱에 대한 피드백을 수집하기 위해 고객을 피드백 허브로 보내기 등의 다른 기능을 위한 API도 제공합니다.
 
-## 모범 사례
+## <a name="best-practices"></a>모범 사례
 
 가장 유용한 결과를 얻으려면 A/B 테스트로 실험을 실행할 때 다음과 같은 권장 사항을 따르는 것이 좋습니다.
 
@@ -43,7 +50,7 @@ A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해�
 * 통계적으로 의미가 있고 작업 가능한 충분한 데이터를 수집하기 위해 최소 2-4주 동안 실험을 실행합니다.
 
 <span id="terms" />
-## 관련 용어
+## <a name="related-terms"></a>관련 용어
 
 |  용어  |  정의  |
 |--------|--------------|
@@ -55,16 +62,11 @@ A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해�
 | 보기 이벤트    |  사용자가 실험의 일부인 변형을 보기 시작할 때 작업을 나타내는 임의의 문자열입니다. 일반적으로 코드의 이벤트 이름입니다.  앱 코드는 사용자가 변형을 보기 시작할 때 개발자 센터에 이 보기 이벤트 문자열을 전송합니다. 자세한 내용은 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 참조하세요.
 | 전환 이벤트    |  실험의 목표를 나타내는 임의의 문자열입니다. 일반적으로 코드의 이벤트 이름입니다.  앱 코드는 사용자가 목표에 도달할 때 개발자 센터에 이 전환 이벤트 문자열을 전송합니다. 자세한 내용은 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 참조하세요.  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [실험용 앱 코딩](code-your-experiment-in-your-app.md)
 * [개발자 센터 대시보드에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
 * [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

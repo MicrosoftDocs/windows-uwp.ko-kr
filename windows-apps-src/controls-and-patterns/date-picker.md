@@ -6,16 +6,23 @@ ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
 isNew: true
 label: Date picker
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 76d5cd756f462ebaad5a200cf4bcf7f4076e4652
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 19551174cebd33785ac21910b52adf31e354373b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="date-picker"></a>날짜 선택기
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-날짜 선택은 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 지역화된 날짜 값을 선택할 수 있는 표준화된 방법을 제공합니다. 
+날짜 선택기는 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 지역화된 날짜 값을 선택할 수 있는 표준화된 방법을 제공합니다. 
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -65,9 +72,4 @@ birthDatePicker.Header = "Date of birth";
 - [달력 날짜 선택](calendar-date-picker.md)
 - [달력 보기](calendar-view.md)
 - [시간 선택기](time-picker.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,13 +3,20 @@ author: mtoepke
 title: "OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교"
 description: "개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다."
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, opengl, direct3d, 셰이더 파이프라인"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교
+# <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,7 +30,7 @@ ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
 
 개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다. 그러나 API 디자인의 관점에서 셰이더 단계를 만들고 관리하기 위한 주요 구성 요소는 두 가지 주 인터페이스 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)의 일부입니다. 이 항목에서는 일반적인 OpenGL ES 2.0 셰이더 파이프라인 API 패턴을 이러한 인터페이스의 Direct3D 11 셰이더 파이프라인 API 패턴에 매핑하려고 합니다.
 
-## Direct3D 11 셰이더 파이프라인 검토
+## <a name="reviewing-the-direct3d-11-shader-pipeline"></a>Direct3D 11 셰이더 파이프라인 검토
 
 
 셰이더 개체는 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 인터페이스에 대한 메서드(예: [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) 및 [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513))로 만듭니다.
@@ -39,7 +46,7 @@ Direct3D 11 그래픽 파이프라인은 [**ID3D11DeviceContext1**](https://msdn
 
 (기하 도형 셰이더, 헐 셰이더, 테설레이터 및 도메인 셰이더에 대한 단계도 있지만 이러한 단계는 OpenGL ES 2.0에 아날로그가 없으므로 여기서 다루지 않습니다.) 이러한 단계에 대한 전체 메서드 목록은 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 참조 페이지를 참조하세요. **ID3D11DeviceContext1**은 Direct3D 11용으로 **ID3D11DeviceContext**를 확장합니다.
 
-## 셰이더 만들기
+## <a name="creating-a-shader"></a>셰이더 만들기
 
 
 Direct3D에서는 셰이더 리소스를 컴파일 및 로드하기 전에 셰이더 리소스가 만들어지지 않습니다. 대신 이 리소스는 HLSL이 로드될 때 만들어집니다. 따라서 glCreateShader와 직접적으로 유사한 함수는 없습니다. glCreateShader는 특정 형식의 초기화된 셰이더 리소스를 만듭니다(예: GL\_VERTEX\_SHADER or GL\_FRAGMENT\_SHADER). 대신 셰이더는 [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) 및 [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)와 같은 특정 함수를 통해 HLSL이 로드된 후 만들어지며, 이러한 함수는 형식과 컴파일된 HLSL을 매개 변수로 사용합니다.
@@ -50,7 +57,7 @@ Direct3D에서는 셰이더 리소스를 컴파일 및 로드하기 전에 셰�
 
  
 
-## 셰이더 컴파일
+## <a name="compiling-a-shader"></a>셰이더 컴파일
 
 
 Direct3D 셰이더는 UWP(유니버설 Windows 플랫폼) 앱에서 컴파일된 셰이더 개체(.cso) 파일로 미리 컴파일되고 Windows 런타임 파일 API 중 하나를 사용하여 로드되어야 합니다. (데스크톱 앱은 런타임에 텍스트 파일이나 문자열에서 셰이더를 컴파일할 수 있습니다). CSO 파일은 Microsoft Visual Studio 프로젝트의 일부인 .hlsl 파일에서 작성되며 .cso 파일 확장명만 포함하면서 동일한 이름을 유지합니다. 배포 시 CSO 파일이 패키지에 포함되어 있는지 확인하세요!
@@ -62,7 +69,7 @@ Direct3D 셰이더는 UWP(유니버설 Windows 플랫폼) 앱에서 컴파일된
 
  
 
-## 셰이더 로드
+## <a name="loading-a-shader"></a>셰이더 로드
 
 
 셰이더 만들기 섹션에 나와 있는 것처럼, Direct3D 11은 해당 CSO 파일이 버퍼에 로드되어 다음 표의 메서드 중 하나로 전달되면 셰이더를 만듭니다.
@@ -73,7 +80,7 @@ Direct3D 셰이더는 UWP(유니버설 Windows 플랫폼) 앱에서 컴파일된
 
  
 
-## 파이프라인 설정
+## <a name="setting-up-the-pipeline"></a>파이프라인 설정
 
 
 OpenGL ES 2.0에는 실행을 위한 여러 셰이더가 포함되어 있는 "셰이더 프로그램" 개체가 있습니다. 개별 셰이더는 셰이더 프로그램 개체에 연결됩니다. 그러나 Direct3D 11에서는 렌더링 컨텍스트([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598))와 직접 작업하여 해당 컨텍스트에 대한 셰이더를 만듭니다.
@@ -109,7 +116,7 @@ D3D11CreateDevice(
 );
 ```
 
-## 뷰포트 설정
+## <a name="setting-the-viewports"></a>뷰포트 설정
 
 
 Direct3D 11에서 뷰포트를 설정하는 작업은 OpenGL ES 2.0에서 뷰포트를 설정하는 방법과 매우 유사합니다. Direct3D 11에서 구성된 [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722)를 사용하여 [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480)를 호출합니다.
@@ -132,7 +139,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
  
 
-## 꼭짓점 셰이더 구성
+## <a name="configuring-the-vertex-shaders"></a>꼭짓점 셰이더 구성
 
 
 셰이더가 로드되면 Direct3D 11에서 꼭짓점 셰이더 구성이 완료됩니다. uniform은 [**ID3D11DeviceContext1::VSSetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446795)을 통해 상수 버퍼로 전달됩니다.
@@ -145,7 +152,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
  
 
-## 픽셀 셰이더 구성
+## <a name="configuring-the-pixel-shaders"></a>픽셀 셰이더 구성
 
 
 셰이더가 로드되면 Direct3D 11에서 픽셀 셰이더 구성이 완료됩니다. uniform은 [**ID3D11DeviceContext1::PSSetConstantBuffers1.**](https://msdn.microsoft.com/library/windows/desktop/hh404649)을 통해 상수 버퍼로 전달됩니다.
@@ -158,7 +165,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
  
 
-## 최종 결과 생성
+## <a name="generating-the-final-results"></a>최종 결과 생성
 
 
 파이프라인이 완료되면 셰이더 단계의 결과를 백 버퍼에 그립니다. Direct3D 11에서는 Open GL ES 2.0과 마찬가지로 그리기 명령을 호출하여 결과를 백 버퍼에 색상 맵으로 출력한 다음 해당 백 버퍼를 다시 디스플레이로 보내는 작업이 여기에 포함됩니다.
@@ -170,7 +177,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
  
 
-## GLSL을 HLSL로 포팅
+## <a name="porting-glsl-to-hlsl"></a>GLSL을 HLSL로 포팅
 
 
 GLSL과 HLSL은 복합 형식 지원 및 구문(일부 전체 구문)을 제외하고는 그렇게 다르지 않습니다. 많은 개발자는 일반적인 OpenGL ES 2.0 명령 및 정의를 HLSL의 명령 및 정의로 별칭을 지정하여 둘 사이를 포팅하는 것이 가장 쉽다는 사실을 알고 있습니다. Direct3D에서는 셰이더 모델 버전을 사용하여 그래픽 인터페이스에서 지원하는 HLSL의 기능 집합을 표현합니다. OpenGL에는 HLSL에 대한 다양한 버전 사양이 포함되어 있습니다. 다음 표는 다른 버전의 관점에서 Direct3D 11 및 OpenGL ES 2.0에 대해 정의된 셰이더 언어 기능 집합의 대략적인 아이디어를 제공합니다.
@@ -184,7 +191,7 @@ GLSL과 HLSL은 복합 형식 지원 및 구문(일부 전체 구문)을 제외�
 
 두 셰이더 언어 간 차이점 및 일반적인 구문 매핑에 대한 자세한 내용은 [GLSL-HLSL 참조](glsl-to-hlsl-reference.md)를 읽어 보세요.
 
-## OpenGL 내부 기능을 HLSL 의미 체계로 포팅
+## <a name="porting-the-opengl-intrinsics-to-hlsl-semantics"></a>OpenGL 내부 기능을 HLSL 의미 체계로 포팅
 
 
 Direct3D 11 HLSL 의미 체계는 uniform 또는 특성 이름과 같은 문자열로서, 앱과 셰이더 프로그램 간에 전달되는 값을 식별하는 데 사용됩니다. 이러한 의미 체계는 가능한 다양한 문자열 중 어느 것도 될 수 있지만, 모범 사례는 용도를 나타내는 POSITION 또는 COLOR와 같은 문자열을 사용하는 것입니다. 상수 버퍼 또는 버퍼 입력 레이아웃을 만들 때 이러한 의미 체계를 할당합니다. 또한 유사한 값에 대해 별도의 레지스터를 사용하도록 0과 7 사이의 숫자를 의미 체계에 추가할 수 있습니다. 예를 들어 COLOR0, COLOR1, COLOR2...와 같이 합니다.
@@ -246,10 +253,5 @@ Direct3D에서 의미 체계를 사용하는 방법에 대한 자세한 내용�
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

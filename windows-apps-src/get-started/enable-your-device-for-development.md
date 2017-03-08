@@ -10,13 +10,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
-ms.openlocfilehash: 3641fdd1f7eb74a11233115d9dfb809ea959926e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc1bf476c93ef9843c20244f24a199c7888eb4a5
+ms.lasthandoff: 02/07/2017
 
 ---
+
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
-앱을 작성하기 전에 개발 PC 및 코드를 테스트할 디바이스에서 모두 개발자 모드를 사용하도록 설정해야 합니다.
+앱을 작성하기 전에 개발 PC 및 코드를 테스트할 디바이스에서 모두 개발자 모드를 사용하도록 설정해야 합니다. 
+
+![디바이스를 개발에 사용하도록 설정](images/developer-poster.png)
 
 ## <a name="use-developer-features"></a>개발자 기능 사용
 
@@ -77,7 +81,7 @@ Windows 10 버전 1511 이하에서 Visual Studio의 UWP 앱 프로젝트를 열
 
 디바이스별 설치 지침은 다음을 참조하세요.
 - [데스크톱 디바이스 포털](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [HoloLens용 디바이스 포털](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [HoloLens용 디바이스 포털](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
 - [IoT용 디바이스 포털](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [모바일용 디바이스 포털](../debug-test-perf/device-portal-mobile.md)
 - [Xbox용 디바이스 포털](../debug-test-perf/device-portal-xbox.md)
@@ -215,9 +219,4 @@ Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는
 이후에도 이 디바이스에서 계속 개발하려면 이 항목에 설명된 대로 디바이스를 개발용으로 설정해야 합니다. 그러지 않으면 앱을 디버그하거나 앱의 패키지를 만들려고 할 때 오류가 발생할 수 있습니다. 다음은 이러한 오류의 예입니다.
 
 오류: DEP0700: 앱을 등록하지 못했습니다.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

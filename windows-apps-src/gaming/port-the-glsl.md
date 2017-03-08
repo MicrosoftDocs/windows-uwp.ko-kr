@@ -1,18 +1,25 @@
 ---
 author: mtoepke
 title: "GLSL 포팅"
-description: "버퍼 및 셰이더 개체를 만들고 구성하는 코드를 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다."
+description: "버퍼 및 셰이더 개체를 만들고 구성하는 코드로 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, glsl, 포트"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 883f4423f72f044435ffc0ee9eccdcd5b0d63bfa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7416a4dafe24f86243a3a9962d01db1dc7b61031
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# GLSL 포팅
+# <a name="port-the-glsl"></a>GLSL 포팅
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -53,10 +60,10 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 여기서 상수 버퍼는 레지스터 b0을 사용하여 압축된 버퍼를 유지합니다. 모든 레지스터는 b\# 형식으로 참조됩니다. 상수 버퍼, 레지스터, 데이터 압축의 HLSL 구현에 대한 자세한 내용은 [셰이더 상수(HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)를 참조하세요.
 
-지침
+<a name="instructions"></a>지침
 ------------
 
-### 1단계: 꼭짓점 셰이더 포팅
+### <a name="step-1-port-the-vertex-shader"></a>1단계: 꼭짓점 셰이더 포팅
 
 간단한 OpenGL ES 2.0 예제에서는 꼭짓점 셰이더에는 상수 model-view-projection 4x4 행렬 및 두 개의 4좌표 벡터라는 세 개의 입력이 있습니다. 이러한 두 벡터는 꼭짓점 위치 및 해당 색상을 포함합니다. 셰이더는 위치 벡터를 원근 좌표로 변환하고 래스터화를 위해 이를 gl\_Position 내장 항목에 할당합니다. 또한 꼭짓점 색상은 래스터화 중에 보간을 위해 다양한 변수에 복사됩니다.
 
@@ -115,7 +122,7 @@ PixelShaderInput main(VertexShaderInput input)
 
 출력 데이터 형식 PixelShaderInput은 래스터화하는 동안 채워지며 조각(픽셀) 셰이더에 제공됩니다.
 
-### 2단계: 조각 셰이더 포팅
+### <a name="step-2-port-the-fragment-shader"></a>2단계: 조각 셰이더 포팅
 
 GLSL의 예제 조각 셰이더는 매우 간단합니다. 보간된 색상 값과 함께 gl\_FragColor 내장 항목을 제공합니다. OpenGL ES 2.0은 기본 렌더링 대상에 이를 작성합니다.
 
@@ -150,7 +157,7 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
 위치에서 픽셀의 색상이 렌더링 대상에 쓰여집니다. 이제, [화면에 그리기](draw-to-the-screen.md)에서 렌더링 대상의 콘텐츠를 표시하는 방법을 살펴보겠습니다!
 
-## 이전 단계
+## <a name="previous-step"></a>이전 단계
 
 
 [꼭짓점 버퍼 및 데이터 포팅](port-the-vertex-buffers-and-data-config.md) 다음 단계
@@ -168,7 +175,7 @@ HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 
 -   각 셰이더를 대상으로 하는 Direct3D 기능 수준을 알아야 합니다. 기능 수준 9\_\*의 의미 체계는 11\_1의 의미 체계와 다릅니다.
 -   The SV\_POSITION 의미 체계는 관련된 사후 보간 위치 데이터를 결정하여 값을 조정합니다. 여기서 x는 0과 렌더링 대상 너비 사이입니다. y는 0과 렌더링 대상 높이 사이입니다. z는 원래 같은 유형의 좌표 w 값으로 나눕니다(z/w). w는 원래 w 값으로 1을 나눈 값입니다(1/w).
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 [방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
@@ -185,10 +192,5 @@ HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

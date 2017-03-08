@@ -2,16 +2,23 @@
 author: Xansky
 Description: "UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는 앱으로 등록하기 위한 요구 사항에 대해 설명합니다."
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
-title: "스토어의 접근성"
+title: "스토어에서의 접근성"
 label: Accessibility in the Store
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 137e8671655c0d20b0343ee7f87086d271fdc531
-ms.openlocfilehash: 8d987e9c1c9476625b8544ee95abc62e2b2c09f5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1d3a2ce095b4250f5bdc1fdac8b1646184bc3e1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 스토어의 접근성  
+# <a name="accessibility-in-the-store"></a>스토어에서의 접근성  
 
 
 
@@ -42,11 +49,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는
 이러한 절차와 해당 절차를 완료하는 데 도움이 되는 리소스에 대한 링크를 검토하려면 [접근성 검사 목록](accessibility-checklist.md)을 참조하세요.
 
 <span id="related_topics"/>
-## 관련 항목    
+## <a name="related-topics"></a>관련 항목    
 * [접근성](accessibility.md) 
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

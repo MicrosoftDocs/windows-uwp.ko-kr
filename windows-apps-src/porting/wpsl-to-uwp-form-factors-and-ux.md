@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이스에서 일반적인 모양과 느낌을 공유합니다. 사용자 인터페이스, 입력 및 조작 패턴이 매우 비슷하고, 디바이스 간에 이동하면 친숙한 환경이 제공됩니다."
 title: "폼 팩터 및 UX에 대해 Windows Phone Silverlight를 UWP로 포팅"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 71e762410b1c7dbf416e3bb81310d74115938102
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 301f1b55644842225f1b8d040d5b02a035d1940b
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -68,10 +75,5 @@ Windows Phone Silverlight 인터페이스는 터치와 관련이 있습니다. �
 ## <a name="related-topics"></a>관련 항목
 
 * [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

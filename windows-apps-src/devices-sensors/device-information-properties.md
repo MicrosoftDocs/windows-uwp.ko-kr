@@ -3,19 +3,26 @@ author: DBirtolo
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
 title: "디바이스 정보 속성"
 description: "각 디바이스에는 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 DeviceInformation 속성이 연결되어 있습니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dbe72dd476903083518dcf4b9d299b04e87f6e85
+ms.lasthandoff: 02/07/2017
 
 ---
-# 디바이스 정보 속성
+# <a name="device-information-properties"></a>디바이스 정보 속성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 각 디바이스에는 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 속성이 연결되어 있습니다. 이러한 속성은 지정된 특성의 디바이스를 찾기 위해 열거하는 디바이스를 제한하는 AQS 필터로 지정할 수 있습니다. 또한 이러한 속성을 사용하여 각 디바이스에 대해 반환할 정보를 지정할 수도 있습니다. 이를 통해 응용 프로그램으로 반환되는 디바이스 정보를 지정할 수 있습니다.
 
@@ -23,17 +30,17 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체는 ID([**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id)), 종류([**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)) 및 속성 모음([**DeviceInformation.Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx))으로 구성됩니다. **DeviceInformation** 개체의 다른 속성은 모두 **Properties** 속성 모음에서 파생됩니다. 예를 들어 [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name)은 **System.ItemNameDisplay**에서 파생됩니다. 즉, 속성 모음에는 다른 속성을 결정하는 데 필요한 정보가 항상 포함되어 있습니다.
 
-## 속성 요청
+## <a name="requesting-properties"></a>속성 요청
 
 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체에는 [**Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 및 [**Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)와 같은 몇 가지 기본 속성이 있지만 대부분의 속성은 [**Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx) 아래의 속성 모음에 저장됩니다. 이 때문에 속성 모음에는 속성 모음의 외부 속성을 가져오는 데 사용되는 속성이 포함되어 있습니다. 예를 들어 [System.ItemNameDisplay](https://msdn.microsoft.com/library/windows/desktop/Bb760770)를 사용하여 [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name) 속성을 가져옵니다. 이는 사용자에게 친숙한 이름을 가진 잘 알려진 공용 속성의 경우입니다. Windows에서는 속성을 더 쉽게 쿼리할 수 있도록 사용자에게 친숙한 이러한 이름을 여럿 제공합니다.
 
 속성을 요청할 때 사용자에게 친숙한 이름의 공용 속성만 요청할 수 있는 것은 아닙니다. 기본 GUID와 PID(속성 ID)를 지정하면 개별 디바이스나 드라이버에서 제공하는 사용자 지정 속성을 비롯하여 사용 가능한 모든 속성을 요청할 수 있습니다. 사용자 지정 속성을 지정하는 형식은 "`{GUID} PID`"입니다. 예를 들어 "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`"입니다.
 
-일부 속성은 모든 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind) 개체에서 공통적으로 사용되지만 대부분은 특정 종류에 고유합니다. 다음 섹션에는 몇 가지 공통 속성이 개별 **DeviceInformationKind**별로 정렬되어 있습니다. 여러 종류가 서로 어떤 관련성을 가지는지에 대한 자세한 내용은 **DeviceInformationKind**를 참조하세요.
+일부 속성은 모든 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind) 개체에서 공통적으로 사용되지만 대부분은 특정 종류에 고유합니다. 다음 섹션에는 몇 가지 공통 속성이 개별 **DeviceInformationKind**별로 정렬되어 있습니다. 여러 종류가 서로 어떤 관련성을 가지는지에 대한 자세한 내용은 **DeviceInformationKind**를 참조하세요.
 
-## DeviceInterface 속성
+## <a name="deviceinterface-properties"></a>DeviceInterface 속성
 
-**DeviceInterface**는 앱 시나리오에 사용되는 가장 일반적인 기본 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind) 개체입니다. 디바이스 API에서 다른 특정 **DeviceInformationKind**를 지정하지 않는 경우 이 개체 종류를 사용해야 합니다.
+**DeviceInterface**는 앱 시나리오에 사용되는 가장 일반적인 기본 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind) 개체입니다. 디바이스 API에서 다른 특정 **DeviceInformationKind**를 지정하지 않는 경우 이 개체 종류를 사용해야 합니다.
 
 | 이름                                  | 유형    | 설명                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +55,7 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
  
 
-## 디바이스 속성
+## <a name="device-properties"></a>디바이스 속성
 
 | 이름                                  | 유형       | 설명                                                                                                                                                                                                                                                                              |
 |---------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +73,7 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
  
 
-## DeviceContainer 속성
+## <a name="devicecontainer-properties"></a>DeviceContainer 속성
 
 | 이름                              | 유형       | 설명                                                                                                                                                        |
 |-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +93,7 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
  
 
-## DeviceInterfaceClass 속성
+## <a name="deviceinterfaceclass-properties"></a>DeviceInterfaceClass 속성
 
 | 이름                       | 유형   | 설명                            |
 |----------------------------|--------|----------------------------------------|
@@ -94,7 +101,7 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
  
 
-## AssociationEndpoint 속성
+## <a name="associationendpoint-properties"></a>AssociationEndpoint 속성
 
 | 이름                                  | 유형       | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -105,7 +112,7 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 | **System.Devices.Aep.DeviceAddress**  | 문자열     | 디바이스의 주소입니다. 디바이스가 네트워크 디바이스인 경우 이는 IP 주소입니다.                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **System.Devices.Aep.IsConnected**    | 부울    | 디바이스가 현재 시스템에 연결되어 있는지 여부를 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **System.Devices.Aep.IsPaired**       | 부울    | 디바이스가 현재 페어링되어 있는지 여부를 나타냅니다. [**DeviceInformationPairing.IsPaired**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.ispaired.aspx)는 이 속성에서 파생됩니다.                                                                                                                                                                                                                                                                                                                      |
-| **System.Devices.Aep.IsPresent**      | 부울    | 디바이스가 현재 있는지 여부 즉, 디바이스가 라이브이며 네트워크 또는 무선 프로토콜을 통해 검색되는지 여부를 나타냅니다. 시스템과 페어링된 디바이스는 캐시됩니다. 그 이후에는 **AssociationEndpoint** 개체를 쿼리할 때 디바이스가 자동으로 검색됩니다. 이 때문에 쿼리에서 디바이스가 검색되는 것만으로 디바이스가 현재 사용 가능하다고 할 수는 없습니다. 이 속성이 중요한 이유입니다. |
+| **System.Devices.Aep.IsPresent**      | 부울    | 디바이스가 현재 있는지 여부 즉, 디바이스가 라이브이며 네트워크 또는 무선 프로토콜을 통해 검색되는지 여부를 나타냅니다. 시스템과 페어링된 장치는 캐시됩니다. 그 이후에는 **AssociationEndpoint** 개체를 쿼리할 때 디바이스가 자동으로 검색됩니다. 이 때문에 쿼리에서 디바이스가 검색되는 것만으로 디바이스가 현재 사용 가능하다고 할 수는 없습니다. 이 속성이 중요한 이유입니다. |
 | **System.Devices.Aep.Manufacturer**   | 문자열     | 디바이스의 제조업체입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | **System.Devices.Aep.ModelId**        | GUID       | 디바이스의 모델 ID입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **System.Devices.Aep.ModelName**      | 문자열     | 디바이스의 모델 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -115,7 +122,7 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
  
 
-## AssociationEndpointContainer 속성
+## <a name="associationendpointcontainer-properties"></a>AssociationEndpointContainer 속성
 
 | 이름                                                | 유형       | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-----------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -137,7 +144,7 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
  
 
-## AssociationEndpointService 속성
+## <a name="associationendpointservice-properties"></a>AssociationEndpointService 속성
 
 | 이름                                            | 유형    | 설명                                                                                                      |
 |-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
@@ -154,13 +161,4 @@ ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "모바일용 디바이스 포털"
 description: "Windows Device Portal에서 모바일 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea4f755afbf16d4ba5043ebb6be586f19dcc4370
-ms.openlocfilehash: c39c1a843c4f466e1999b4e80bf87f5842ad1996
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54660777706fbfdc54b08da025c2f280f194c010
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
@@ -75,8 +82,3 @@ Windows Mobile Device Portal에는 임의 프로세스를 종료하는 기능이
 - 성능 추적(WPR) 
 - 디바이스
 - 네트워킹
-
-
-<!--HONumber=Dec16_HO1-->
-
-

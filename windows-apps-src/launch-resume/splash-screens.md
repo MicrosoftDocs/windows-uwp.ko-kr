@@ -2,9 +2,17 @@
 author: PatrickFarley
 title: "시작 화면"
 description: "이 섹션에서는 앱의 시작 화면을 설정 및 구성하는 방법을 설명합니다."
+ms.assetid: 6b954bb3-e5b0-46d1-8afc-fb805536cf6d
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 023e37bb6f9b8d8d780bb0a536cb469c87a31ed4
-ms.openlocfilehash: bb0f3ff68b7dc15623e4f337e589989354e08b65
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 51add4631b807940e051a8f4cbaca92063e41d4a
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -28,8 +36,3 @@ ms.openlocfilehash: bb0f3ff68b7dc15623e4f337e589989354e08b65
 |-------|-------------|
 | [시작 화면 추가](add-a-splash-screen.md) | 앱의 시작 화면 이미지와 배경색을 설정합니다. |
 | [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) | 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하며 사용자 지정할 수 있습니다. |
-
-
-<!--HONumber=Dec16_HO1-->
-
-

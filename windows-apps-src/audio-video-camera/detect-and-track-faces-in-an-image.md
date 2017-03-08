@@ -3,13 +3,20 @@ author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: "이 항목에서는 FaceDetector를 사용하여 이미지로 얼굴을 감지하는 방법을 보여 줍니다. FaceTracker는 비디오 프레임의 시퀀스에서 시간에 따라 얼굴을 추적하도록 최적화되어 있습니다."
 title: "이미지 또는 동영상에서 얼굴 감지"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7526d5ddfbaa6f5128ef5775bc75cc48768f647d
-ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 72e5804ea592dc2a9478cba766decaadf611e88e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 이미지 또는 동영상에서 얼굴 감지
+# <a name="detect-faces-in-images-or-videos"></a>이미지 또는 동영상에서 얼굴 감지
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -22,7 +29,7 @@ ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
 
 이 문서의 코드는 [기본 얼굴 감지](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) 및 [기본 얼굴 추적](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409) 샘플에서 가져왔습니다. 이러한 샘플을 다운로드하여 코드가 사용되는 컨텍스트를 확인하거나 직접 앱을 만들 때 샘플을 기준으로 삼을 수 있습니다.
 
-## 이미지 하나로 얼굴 감지
+## <a name="detect-faces-in-a-single-image"></a>이미지 하나로 얼굴 감지
 
 [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) 클래스를 사용하면 정지 이미지에서 하나 이상의 얼굴을 감지할 수 있습니다.
 
@@ -68,7 +75,7 @@ ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
 
 [!code-cs[ShowDetectedFaces](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetShowDetectedFaces)]
 
-## 프레임 시퀀스에서 얼굴 추적
+## <a name="track-faces-in-a-sequence-of-frames"></a>프레임 시퀀스에서 얼굴 추적
 
 동영상에서 얼굴을 감지하려면 구현 단계는 아주 유사하지만 [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) 클래스보다 [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) 클래스를 사용하는 것이 더 효율적입니다. **FaceTracker**는 이전에 처리된 프레임에 대한 정보를 사용하여 감지 프로세스를 최적화합니다.
 
@@ -92,7 +99,7 @@ ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)
 * [기본 얼굴 감지 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
@@ -100,9 +107,4 @@ ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
 * [Camera](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [미디어 재생](media-playback.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

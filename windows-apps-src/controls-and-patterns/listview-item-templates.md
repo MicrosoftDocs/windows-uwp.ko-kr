@@ -4,9 +4,17 @@ Description: "템플릿을 사용하여 목록 보기 또는 그리드 보기 �
 title: "목록 보기 항목 템플릿"
 label: List view item templates
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: d8eb818d-b62e-4314-a612-f29142dbd93f
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: e64264dfa52706dd912dadb27d5109b35b5ba6b3
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 91827b88d7b8ce2a216f8c10b56905b925b6c1ce
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="item-containers-and-templates"></a>항목 컨테이너 및 템플릿
@@ -466,10 +474,5 @@ ListViewItemPresenter에는 데이터 자리 표시자 및 끌기 상태에 대�
 
 - [목록](lists.md)
 - [ListView 및 GridView](listview-and-gridview.md)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

@@ -3,9 +3,17 @@ author: seksenov
 title: "호스트된 웹앱 - 유니버설 Windows 플랫폼 앱으로 Chrome 앱 변환"
 description: "Chrome 앱 또는 Chrome 확장을 Windows 스토어용 UWP(유니버설 Windows 플랫폼) 앱으로 변환합니다."
 kw: Package Chrome Extension for Windows Store tutorial, Port Chrome Extension to Windows 10, How to convert Chrome App to Windows, How to add Chrome Extension to Windows Store, hwa-cli, Hosted Web Apps Command Line Interface CLI Tool, Install Chrome Extension on Windows 10 Device, convert .crx to .AppX
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows용 Chrome 확장, Windows용 Chrome 앱, hwa-cli, .crx를 .AppX로 변환"
+ms.assetid: 04f37333-48ba-441b-875e-246fbc3e1a4d
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 84cdd12e2a38aafeb989c0f33b1212077dc1d98e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 84d8875cc7b1c8540f54fec78cd675bd96919fd2
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -46,11 +54,12 @@ Windows 스토어에 표시되는 메시지에 정보를 입력합니다.
     During the conversion process, you will be prompted for an Identity Name, Publisher Identity, and Publisher Display Name. To retrieve these values, visit the Dashboard in the [Windows Dev Center](https://developer.microsoft.com/windows).
     - Click on "[Create a new app](https://developer.microsoft.com/dashboard/Application/New)" and reserve your app name.
 ![Windows 개발자 센터 대시보드에서 이름 예약](images/hwa-to-uwp/reserve_a_name.png)
- - 다음으로, "앱 관리" 섹션에서 왼쪽 메뉴에 있는 "앱 ID"를 클릭합니다.
+    - 그런 다음, "앱 관리" 섹션 왼쪽 아래 메뉴에서 "앱 ID"를 클릭합니다.
     ![Windows 개발자 센터 대시보드 앱 ID](images/hwa-to-uwp/app_identity.png)
- - 페이지에 다음과 같이 세 가지의 값을 묻는 메시지가 표시됩니다. 1. ID 이름: `Package/Identity/Name`
- 2. 게시지 ID: `Package/Identity/Publisher`
- 3. 게시자 표시 이름: `Package/Properties/PublisherDisplayName`
+    - 페이지에서 입력하도록 요청한 세 가지 값이 나열됩니다. 
+        1. ID 이름: `Package/Identity/Name`
+        2. 게시자 ID: `Package/Identity/Publisher`
+        3. 게시자 표시 이름: `Package/Properties/PublisherDisplayName`
 
 
 ## <a name="guide-for-migrating-your-hosted-web-app"></a>호스트된 웹앱 마이그레이션 가이드
@@ -59,13 +68,13 @@ Windows 스토어용으로 웹앱을 패키징한 후 PC, 태블릿, 휴대폰, 
 
 ### <a name="application-content-uri-rules"></a>응용 프로그램 콘텐츠 URI 규칙
 
-[ACUR(응용 프로그램 콘텐츠 URI 규칙)](/hwa-access-features.md) 또는 콘텐츠 URI는 앱 패키지 매니페스트의 URL 허용 목록을 통해 호스트된 웹앱의 범위를 정의합니다. 원격 콘텐츠를 주고받는 통신을 제어하려면 이 목록에 포함 및/또는 이 목록에서 제외할 URL을 정의해야 합니다. 사용자가 명시적으로 포함되지 않은 URL을 클릭하는 경우 Windows는 기본 브라우저에서 대상 경로를 엽니다. ACUR을 사용하면 [유니버설 Windows API](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)에 대한 액세스 권한을 URL에 부여할 수도 있습니다.
+[ACUR(응용 프로그램 콘텐츠 URI 규칙)](./hwa-access-features.md) 또는 콘텐츠 URI는 앱 패키지 매니페스트의 URL 허용 목록을 통해 호스트된 웹앱의 범위를 정의합니다. 원격 콘텐츠를 주고받는 통신을 제어하려면 이 목록에 포함 및/또는 이 목록에서 제외할 URL을 정의해야 합니다. 사용자가 명시적으로 포함되지 않은 URL을 클릭하는 경우 Windows는 기본 브라우저에서 대상 경로를 엽니다. ACUR을 사용하면 [유니버설 Windows API](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)에 대한 액세스 권한을 URL에 부여할 수도 있습니다.
 
 최소한 앱의 시작 페이지를 포함해야 합니다. 변환 도구에서는 시작 페이지 및 해당 도메인에 따라 ACUR 집합을 자동으로 만듭니다. 그러나 서버 또는 클라이언트에 프로그래밍 방식의 리디렉션이 있는 경우 이러한 대상은 허용 목록에 추가해야 합니다.
 
 *참고: ACUR은 페이지 탐색에만 적용됩니다. 이미지, JavaScript 라이브러리 및 기타 유사한 자산은 이러한 제한의 영향을 받지 않습니다.*
 
-여러 앱이 로그인 흐름에 Facebook, Google 등 타사 사이트를 사용합니다. 변환 도구에서는 가장 인기 있는 사이트에 따라 ACUR 집합을 자동으로 만듭니다. 인증 방법이 해당 목록에 포함되지 않았으며 리디렉션 흐름인 경우 해당 경로를 ACUR로 추가해야 합니다. 또한 [웹 인증 브로커](/hwa-access-features.md)의 사용도 고려할 수 있습니다.
+여러 앱이 로그인 흐름에 Facebook, Google 등 타사 사이트를 사용합니다. 변환 도구에서는 가장 인기 있는 사이트에 따라 ACUR 집합을 자동으로 만듭니다. 인증 방법이 해당 목록에 포함되지 않았으며 리디렉션 흐름인 경우 해당 경로를 ACUR로 추가해야 합니다. 또한 [웹 인증 브로커](./hwa-access-features.md)의 사용도 고려할 수 있습니다.
 
 ### <a name="flash"></a>Flash
 
@@ -95,12 +104,7 @@ Chrome은 백그라운드 스크립트로 실행할 수 있는 [특별한 용도
 
 ## <a name="related-topics"></a>관련 항목
 
-- [UWP(유니버설 Windows 플랫폼) 기능에 액세스하여 웹앱 향상](/hwa-access-features.md)
+- [UWP(유니버설 Windows 플랫폼) 기능에 액세스하여 웹앱 향상](./hwa-access-features.md)
 - [UWP(유니버설 Windows 플랫폼) 앱 지침](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Windows 스토어 앱용 디자인 자산 다운로드](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

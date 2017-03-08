@@ -3,30 +3,37 @@ author: msatranjr
 Description: "지도 컨트롤은 도로 지도와 위성뷰, 길 찾기, 검색 결과, 교통 정보를 표시할 수 있습니다."
 title: "지도에 대한 지침"
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 지도 컨트롤, 지도, 위치"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: e094e29220a0f8fcae6ca2af36ab86ecd22b520d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ad6267e0294e4a62c1e586c066ce9d0489940d7d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 지도 컨트롤
+# <a name="map-control"></a>지도 컨트롤
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 지도 컨트롤은 도로 지도, 위성뷰, 3D, 뷰, 길 찾기, 검색 결과, 교통 정보 등을 표시할 수 있습니다. 지도에서 사용자의 위치, 방향, 관심 지점을 표시할 수 있습니다. 또한 3D 위성뷰, Streetside 뷰, 교통 정보, 대중교통 및 지역 기업을 지도에 표시할 수도 있습니다.
 
 ![지도, 기본 보기의 예](./images/win10fa/controls-maps-basic.jpg)
 
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 
 사용자가 앱 관련 정보 또는 일반 지리 정보를 볼 수 있는 지도를 앱에 포함하려는 경우 지도 컨트롤을 사용합니다. 앱에 지도 컨트롤을 두면 사용자가 해당 정보를 얻기 위해 앱을 벗어나지 않아도 됩니다.
 
-**참고** 사용자가 앱을 벗어나도 상관없는 경우 Windows 지도 앱을 사용하여 해당 정보를 제공하는 것이 좋습니다. 앱에서 Windows 지도 앱을 실행하여 특정 지도, 길 찾기 및 검색 결과를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/library/windows/apps/mt228341)을 참조하세요.
+**참고**  사용자가 앱을 벗어나도 상관없는 경우 Windows 지도 앱을 사용하여 해당 정보를 제공하는 것이 좋습니다. 앱에서 Windows 지도 앱을 실행하여 특정 지도, 길 찾기 및 검색 결과를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/library/windows/apps/mt228341)을 참조하세요.
 
-## 예제
+## <a name="examples"></a>예제
 
 
 이 예제에서는 Streetside 뷰가 있는 지도를 보여 줍니다.
@@ -46,7 +53,7 @@ ms.openlocfilehash: e094e29220a0f8fcae6ca2af36ab86ecd22b520d
 ![Streetside 뷰가 있는 3D 지도 뷰의 예](./images/win10fa/controls-maps-3dstreetview.png)
 
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 
 -   사용자가 지리적 정보를 보기 위해 지나치게 이동하거나 확대/축소하지 않도록 충분한 화면 공간이나 전체 화면 공간을 사용하여 지도를 표시합니다.
@@ -55,7 +62,7 @@ ms.openlocfilehash: e094e29220a0f8fcae6ca2af36ab86ecd22b520d
 
 -   [**map elements**](https://msdn.microsoft.com/library/windows/apps/dn637034)를 사용하여 지도 장면에 관심 지점을 포함합니다. 지도 장면에 오버레이되는 임시 UI로 모든 추가 정보를 표시할 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [2D, 3D 및 Streetside 뷰가 있는 지도 표시](https://msdn.microsoft.com/library/windows/apps/mt219695)
@@ -67,13 +74,4 @@ ms.openlocfilehash: e094e29220a0f8fcae6ca2af36ab86ecd22b520d
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

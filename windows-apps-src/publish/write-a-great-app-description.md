@@ -1,18 +1,25 @@
 ---
 author: jnHs
-Description: "호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하므로 고객의 앱 다운로드를 유도하는 데 도움이 됩니다."
+Description: "호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하여 고객의 앱 다운로드를 유도하는 데 도움이 됩니다."
 title: "호소력 있는 앱 설명 쓰기"
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 1591a9a84db2d0b00345d522ee5fc076142e0054
-ms.openlocfilehash: 01bc284b74568651012acfc7fb29c8912bb1f4d1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 632d18270a34a7d975aa8d7216e49769a3cd7b84
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 호소력 있는 앱 설명 쓰기
+# <a name="write-a-great-app-description"></a>호소력 있는 앱 설명 쓰기
 
 
-호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하므로 고객의 앱 다운로드를 유도하는 데 도움이 됩니다. [앱을 제출할 때 입력한 설명](create-app-store-listings.md#description)은 앱의 스토어 목록에 표시됩니다. 처음 몇 줄을 스토어의 검색 결과 및 알고리즘 목록에 표시할 수도 있습니다.
+호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하여 고객의 앱 다운로드를 유도하는 데 도움이 됩니다. [앱을 제출할 때 입력한 설명](create-app-store-listings.md#description)은 앱의 스토어 목록에 표시됩니다. 처음 몇 줄을 스토어의 검색 결과 및 알고리즘 목록에 표시할 수도 있습니다.
 
 
 다음은 앱 설명을 최대한 적합하게 작성할 수 있는 몇 가지 팁입니다.
@@ -36,10 +43,5 @@ ms.openlocfilehash: 01bc284b74568651012acfc7fb29c8912bb1f4d1
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

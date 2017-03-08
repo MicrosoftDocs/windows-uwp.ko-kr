@@ -5,13 +5,20 @@ ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: "컨트롤 패턴 및 인터페이스"
 label: Control patterns and interfaces
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 74e5af4c3eb5a2e17c95afce156474b613e966c5
-ms.openlocfilehash: d2ae98f95538c014ef256f5d4a400aabb36c3118
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bec52abfca19634948e3ad2a1959b51b1df3eced
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 컨트롤 패턴 및 인터페이스  
+# <a name="control-patterns-and-interfaces"></a>컨트롤 패턴 및 인터페이스  
 
 
 
@@ -30,8 +37,8 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 | **끌기** | [**IDragProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750322) | 끌기 가능 컨트롤이나 끌기 가능 항목이 있는 컨트롤을 지원하는 데 사용됩니다. |
 | **DropTarget** | [**IDropTargetProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750327) | 끌어서 놓기 작업의 대상이 될 수 있는 컨트롤을 지원하는 데 사용됩니다. |
 | **ExpandCollapse** | [**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/apps/BR242568) | 시각적으로 확장하여 더 많은 내용을 표시하고 축소하여 내용을 숨기는 컨트롤을 지원하는 데 사용됩니다. |
-| **그리드** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | 크기 조정, 지정한 셀로 이동 등의 그리드 기능을 지원하는 컨트롤에 사용됩니다. 그리드 자체는 레이아웃을 제공하지만 컨트롤이 아니기 때문에 이 패턴을 구현하지 않습니다. |
-| **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | 그리드 내에 셀이 있는 컨트롤에 사용됩니다. |
+| **표** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | 크기 조정, 지정한 셀로 이동 등의 표 기능을 지원하는 컨트롤에 사용됩니다. 표 자체는 레이아웃을 제공하지만 컨트롤이 아니기 때문에 이 패턴을 구현하지 않습니다. |
+| **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | 표 내에 셀이 있는 컨트롤에 사용됩니다. |
 | **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 등 호출할 수 있는 컨트롤에 사용됩니다. |
 | **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | 가상화된 목록 등 응용 프로그램이 컨테이너에서 요소를 찾을 수 있게 합니다. |
 | **MultipleView** | [**IMultipleViewProvider**](https://msdn.microsoft.com/library/windows/apps/BR242585) | 동일한 정보, 데이터 또는 자식 세트의 여러 표현을 전환할 수 있는 컨트롤에 사용됩니다. |
@@ -41,11 +48,11 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 | **ScrollItem** | [**IScrollItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242599) | 스크롤되는 목록에 개별 항목이 있는 컨트롤에 사용됩니다. 예를 들어 콤보 상자 컨트롤 등 스크롤 목록에 개별 항목이 있는 목록 컨트롤입니다. |
 | **Selection** | [**ISelectionProvider**](https://msdn.microsoft.com/library/windows/apps/BR242616) | 선택 컨테이너 컨트롤에 사용됩니다. 예를 들어 [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) 및 [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/BR209348)입니다. |
 | **SelectionItem** | [**ISelectionItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242610) | 목록 상자, 콤보 상자 등 선택 컨테이너 컨트롤의 개별 항목에 사용됩니다. |
-| **Spreadsheet** | [**ISpreadsheetProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251821) | 스프레드시트 또는 기타 그리드 기반 문서의 내용을 표시하는 데 사용됩니다. |
-| **SpreadsheetItem** | [**ISpreadsheetItemProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251817) | 스프레드시트 또는 기타 그리드 기반 문서에 있는 셀의 속성을 표시하는 데 사용됩니다. |
+| **Spreadsheet** | [**ISpreadsheetProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251821) | 스프레드시트 또는 기타 표 기반 문서의 내용을 표시하는 데 사용됩니다. |
+| **SpreadsheetItem** | [**ISpreadsheetItemProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251817) | 스프레드시트 또는 기타 표 기반 문서에 있는 셀의 속성을 표시하는 데 사용됩니다. |
 | **스타일** | [**IStylesProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251823) | 특정 스타일, 채우기 색, 채우기 패턴 또는 도형이 있는 UI 요소를 설명하는 데 사용됩니다. |
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | UI 자동화 클라이언트 앱이 마우스 또는 키보드 입력을 특정 UI 요소로 리디렉션하도록 합니다. |
-| **Table** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | 그리드 및 헤더 정보가 있는 컨트롤에 사용됩니다. 예를 들어 표 형식 일정 컨트롤입니다. |
+| **Table** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | 표 및 헤더 정보가 있는 컨트롤에 사용됩니다. 예를 들어 표 형식 일정 컨트롤입니다. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | 표의 항목에 사용됩니다. |
 | **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | 텍스트 정보를 표시하는 편집 컨트롤 및 문서에 사용됩니다. [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) 및 [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2)을(를) 참조하세요. |
 | **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextchildprovider) | **Text** 컨트롤 패턴을 지원하는 요소의 가장 가까운 상위 항목에 액세스하는 데 사용됩니다. |
@@ -64,12 +71,7 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 > Windows Phone 스토어 앱은 여기에 나열된 일부 UI 자동화 컨트롤 패턴을 지원하지 않습니다. **Annotation**, **Dock**, **Drag**, **DropTarget**, **ObjectModel**은 지원되지 않는 패턴 중 일부입니다.
 
 <span id="related_topics"/>
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
 * [사용자 지정 자동화 피어](custom-automation-peers.md)
 * [접근성](accessibility.md) 
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,19 +1,26 @@
 ---
 author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: "Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다."
+description: "Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있도록 돕습니다."
 title: "Visual Studio에서 프로젝트 만들기"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 40dc6a52dbd495a78e5aa0d95a590d3e878d4068
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c8aba48fba1badcfeebc9868215b904c76ac6b98
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작: 프로젝트 만들기
+# <a name="getting-started-creating-a-project"></a>시작: 프로젝트 만들기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-## 프로젝트 만들기
+## <a name="creating-a-project"></a>프로젝트 만들기
 
 Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다. 또한 시작하기 위해 알고 있어야 하는 기본 사항을 보여 줍니다. 앱을 만들 때마다 다음과 같은 단계를 수행합니다.
 
@@ -50,12 +57,7 @@ Visual Studio에는 다음 그림과 같은 몇 가지 프로젝트 템플릿이
 
 ![visual studio 새 프로젝트 대화 상자 ](images/ios-to-uwp/ios-to-uwp-vs-choose-template.png)이 연습에서는 **Visual C#**을 탭한 후 **Windows**, **Windows 유니버설** 및 **비어 있는 앱(Windows 유니버설)**을 차례로 탭합니다. **이름** 상자에 "MyApp"을 입력하고 **확인**을 탭합니다. Visual Studio에서 개발자의 첫 번째 프로젝트를 만든 다음 표시합니다. 이제 앱을 디자인하여 코드를 추가할 수 있습니다.
 
-## 다음 단계
+## <a name="next-step"></a>다음 단계
 
 [시작: 프로그래밍 언어 선택](getting-started-choosing-a-programming-language.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

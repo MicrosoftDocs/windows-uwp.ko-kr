@@ -3,9 +3,16 @@ author: msatranjr
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: "NFC 스마트 카드 앱 만들기"
 description: "Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
-ms.openlocfilehash: c5a7293874bd71b50aa31d6af9a687d289d07ce5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ee62e0d1ddd41ce1cce61bc854168f0cac6ad038
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="create-an-nfc-smart-card-app"></a>NFC 스마트 카드 앱 만들기
@@ -36,7 +43,7 @@ Windows 10은 ISO-DEP(ISO-IEC 14443-4)를 기반으로 하는 스마트 카드 �
 
 Windows 10 Mobile 장치만 카드 에뮬레이션 기능을 통해 사용하도록 설정할 수 있습니다. SIM 기반 및 HCE 기반 카드 에뮬레이션은 다른 버전의 Windows 10에서 사용할 수 없습니다.
 
-HCE 및 SIM 기반 카드 에뮬레이션 지원에 대한 아키텍처가 아래 다이어그램에 표시되어 있습니다. 
+HCE 및 SIM 기반 카드 에뮬레이션 지원에 대한 아키텍처가 아래 다이어그램에 표시되어 있습니다.
 
 ![HCE 및 SIM 카드 에뮬레이션에 대한 아키텍처](./images/nfc-architecture.png)
 
@@ -220,7 +227,7 @@ public static byte[] AID_PPSE =
         };
 
 var appletIdGroup = new SmartCardAppletIdGroup(
-                        "Example DisplayName", 
+                        "Example DisplayName",
                                 new List<IBuffer> {AID_PPSE.AsBuffer()},
                                 SmartCardEmulationCategory.Payment,
                                 SmartCardEmulationType.Host);
@@ -237,7 +244,7 @@ public static byte[] AID_OTHER =
         };
 
 var appletIdGroup = new SmartCardAppletIdGroup(
-                        "Example DisplayName", 
+                        "Example DisplayName",
                                 new List<IBuffer> {AID_OTHER.AsBuffer()},
                                 SmartCardEmulationCategory.Other,
                                 SmartCardEmulationType.Host);
@@ -296,7 +303,7 @@ public static byte[] AID_Foreground =
         {};
 
 var appletIdGroup = new SmartCardAppletIdGroup(
-                        "Example DisplayName", 
+                        "Example DisplayName",
                                 new List<IBuffer> {AID_Foreground.AsBuffer()},
                                 SmartCardEmulationCategory.Other,
                                 SmartCardEmulationType.Host);
@@ -341,15 +348,15 @@ case Never:
 // you can take the user to the NFC settings to turn "tap and pay" on
 await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings-nfctransactions:"));
 break;
- 
- case Always: 
+
+ case Always:
 return "Card emulation always on";
 
  case ScreenOn:
  return "Card emulation on only when screen is on";
 
  case ScreenUnlocked:
- return "Card emulation on only when screen unlocked"; 
+ return "Card emulation on only when screen unlocked";
 }
 ```
 
@@ -363,7 +370,7 @@ return "Card emulation always on";
         {
             // Launch above the lock with some arguments
             var result = await eventDetails.TryLaunchSelfAsync("app-specific arguments", SmartCardLaunchBehavior.AboveLock);
-        } 
+        }
 ```
 
 ## <a name="aid-registration-and-other-updates-for-sim-based-apps"></a>AID 등록 및 SIM 기반 앱에 대한 기타 업데이트
@@ -372,7 +379,7 @@ SIM을 보안 요소로 사용하는 카드 에뮬레이션 앱에서 Windows �
 
 ```csharp
 var appletIdGroup = new SmartCardAppletIdGroup(
-                        "Example DisplayName", 
+                        "Example DisplayName",
                                 new List<IBuffer> {AID_PPSE.AsBuffer()},
                                 SmartCardEmulationCategory.Payment,
                                 SmartCardEmulationType.Uicc);
@@ -380,12 +387,4 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 
 ** 중요 **  
 Windows Phone 8.1에서 레거시 이진 SMS 가로채기 지원이 제거되었으며 Windows 10 Mobile에서는 더 광범위한 새로운 SMS 지원으로 바뀌었지만 해당 지원을 사용하는 모든 레거시 Windows Phone 8.1 앱은 새로운 Windows 10 Mobile SMS API를 사용하도록 업데이트해야 합니다.
-
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

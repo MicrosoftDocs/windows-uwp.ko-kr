@@ -5,9 +5,16 @@ title: "설정 및 기타 앱 데이터 저장 및 검색"
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
-ms.openlocfilehash: 08ad1fbddc3db2c8329594419fefdc1aa0659092
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1e615e989a25520cff86c53e383d0cc5e87956d1
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -44,11 +51,13 @@ ms.openlocfilehash: 08ad1fbddc3db2c8329594419fefdc1aa0659092
 
 ## <a name="storing-app-data-in-the-app-data-stores"></a>앱 데이터 저장소에 앱 데이터 저장
 
+
 앱이 설치되면 시스템은 설정 및 파일에 대한 사용자별 데이터 저장소를 앱에 할당합니다. 시스템이 실제 저장소를 관리하므로 개발자는 이 데이터가 어디에 또는 어떻게 저장되는지는 알 필요가 없습니다. 데이터가 다른 앱 및 다른 사용자와 격리된 상태로 유지됩니다. 또한 시스템은 사용자가 앱에 업데이트를 설치할 때는 이러한 데이터 저장소의 콘텐츠를 보호하고, 앱을 제거할 때는 데이터 저장소의 콘텐츠가 완전하게 깨끗하게 제거합니다.
 
 각 앱의 앱 데이터 저장소 내에는 시스템에서 정의한 루트 디렉터리가 있습니다. 총 3개로, 각각 로컬 파일, 로밍 파일, 임시 파일을 위한 것입니다. 이러한 각 루트 디렉터리에 새 파일 및 새 컨테이너를 추가할 수 있습니다.
 
 ## <a name="local-app-data"></a>로컬 앱 데이터
+
 
 로컬 앱 데이터는 앱 세션 간에 유지해야 하고 로밍 앱 데이터에 적절하지 않은 모든 정보에 사용해야 합니다. 다른 장치에서 적용할 수 없는 데이터도 여기에 저장해야 합니다. 저장된 로컬 데이터에 대한 일반 크기 제한은 없습니다. 로밍하기 적절하지 않은 데이터 및 대규모 데이터 집합에 대해 로컬 앱 데이터 저장소를 사용합니다.
 
@@ -451,10 +460,5 @@ localSettings.DeleteContainer("exampleContainer");
 * [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)
 * [**Windows.Storage.ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588)
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

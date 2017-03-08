@@ -3,13 +3,20 @@ author: mtoepke
 title: "게임용 이동-보기 컨트롤"
 description: "기존 마우스 및 키보드 이동-보기 컨트롤(마우스 보기 컨트롤이라고도 함)을 DirectX 게임에 추가하는 방법을 알아봅니다."
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 이동-보기, 컨트롤"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임용 이동-보기 컨트롤
+# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임용 이동-보기 컨트롤
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -22,13 +29,13 @@ ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
 
 일반적으로 게임에서는 이러한 컨트롤을 WASD 컨트롤이라고 합니다. 여기서 W, A, S 및 D 키는 x-z 평면 고정 카메라 이동에 사용되며 마우스는 x 및 y-축 주위의 카메라 회전을 제어합니다.
 
-## 목표
+## <a name="objectives"></a>목표
 
 
 -   마우스/키보드 및 터치 스크린에 대한 기본 이동-보기 컨트롤을 DirectX 게임에 추가합니다.
 -   3D 환경을 탐색하는 데 사용되는 1인칭 카메라를 구현합니다.
 
-## 터치 컨트롤 구현에 대한 참고 사항
+## <a name="a-note-on-touch-control-implementations"></a>터치 컨트롤 구현에 대한 참고 사항
 
 
 터치 컨트롤에 대해 카메라의 보기 지점을 기준으로 x-z 평면에서의 이동을 처리하는 이동 컨트롤러와 카메라의 보기 지점을 목표로 하는 보기 컨트롤러의 두 가지 컨트롤러를 구현합니다. 이동 컨트롤러는 키보드 WASD 단추에 매핑되고 보기 컨트롤러는 마우스에 매핑됩니다. 그러나 터치 컨트롤인 경우 방향 입력 역할을 하는 화면 영역 또는 가상 WASD 단추를 보기 컨트롤의 입력 공간 역할을 하는 나머지 화면으로 정의해야 합니다.
@@ -39,7 +46,7 @@ ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
 
 화면의 왼쪽 아래에서 터치 포인터(마우스 아님)를 이동하는 경우 위쪽으로 이동하면 카메라는 앞으로 이동하게 됩니다. 아래쪽으로 이동하면 카메라는 뒤로 이동하게 됩니다. 이동 컨트롤러의 포인터 공간 내에서 왼쪽 및 오른쪽 이동을 동일하게 유지합니다. 해당 공간 외부에서는 보기 컨트롤러가 되며 카메라가 향하도록 하려는 위치로 카메라를 터치하거나 끌면 됩니다.
 
-## 기본 입력 이벤트 인프라 설정
+## <a name="set-up-the-basic-input-event-infrastructure"></a>기본 입력 이벤트 인프라 설정
 
 
 먼저 마우스 및 키보드의 입력 이벤트를 처리하는 데 사용할 컨트롤 클래스를 만들고 해당 입력에 따라 카메라 관점을 업데이트해야 합니다. 이동-보기 컨트롤러를 구현하는 것이므로 **MoveLookController**라고 합니다.
@@ -184,7 +191,7 @@ internal:
 
 이제 이동-보기 컨트롤을 구현하는 데 필요한 모든 구성 요소가 있습니다. 따라서 이러한 요소를 함께 연결해 보겠습니다.
 
-## 기본 입력 이벤트 만들기
+## <a name="create-the-basic-input-events"></a>기본 입력 이벤트 만들기
 
 
 Windows 런타임 이벤트 디스패처는 다음과 같이 클래스의 인스턴스를 처리할 이벤트 5개를 제공합니다.**MoveLookController**
@@ -376,7 +383,7 @@ void MoveLookController::OnKeyUp(
 
 또한 키를 놓으면 다시 false로 설정합니다. **Update**를 호출하면 이러한 방향 이동 상태를 확인하고 그에 따라 카메라를 이동합니다. 터치 구현보다 약간 더 간단합니다.
 
-## 터치 컨트롤 및 컨트롤러 상태 초기화
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a>터치 컨트롤 및 컨트롤러 상태 초기화
 
 
 이제 이벤트를 연결하고 모든 컨트롤러 상태 필드를 초기화하겠습니다.
@@ -423,7 +430,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 
 **Initialize**에서는 앱의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스에 대한 참조를 매개 변수로 사용하고 개발한 인벤트 처리기를 해당 **CoreWindow**의 적합한 이벤트에 등록합니다. 또한 이동 및 보기 포인터의 ID를 초기화하고, 터치 스크린 이동 컨트롤러 구현에 대한 명령 벡터를 0으로 설정하며, 앱이 시작될 때 카메라가 똑바로 앞을 보도록 설정합니다.
 
-## 카메라의 위치/방향 가져오기 및 설정
+## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>카메라의 위치/방향 가져오기 및 설정
 
 
 뷰포트를 기준으로 카메라의 위치를 가져오고 설정하는 몇 가지 메서드를 정의해 보겠습니다.
@@ -464,7 +471,7 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 }
 ```
 
-## 컨트롤러 상태 정보 업데이트
+## <a name="updating-the-controller-state-info"></a>컨트롤러 상태 정보 업데이트
 
 
 이제 **m\_movePointerPosition** 에서 추적된 포인터 좌표 정보를 표준 좌표계의 새 좌표 정보로 변환하는 계산을 수행합니다. 앱에서는 메인 앱 루프를 새로 고칠 때마다 이 메서드를 호출합니다. 따라서 뷰포트로 투영하기 전에 보기 매트릭스를 업데이트하려면 앱에 전달한 새로운 보기 지점 위치 정보를 여기에서 계산해야 합니다.
@@ -556,7 +563,7 @@ void MoveLookController::Update(CoreWindow ^window)
 
 플레이어에 대한 보기 지점의 최종 위치는 마지막 위치에 계산된 속도를 더한 위치이며 렌더러에서 **get\_Position** 메서드를 호출할 때(대부분 각 프레임을 설정하는 동안) 읽는 값입니다. 그런 다음 이동 명령을 0으로 재설정합니다.
 
-## 새 카메라 위치로 보기 매트릭스 업데이트
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>새 카메라 위치로 보기 매트릭스 업데이트
 
 
 카메라가 초점을 맞춘 장면 공간 좌표를 가져올 수 있으며 이 좌표는 앱에서 해당 작업을 수행하도록 할 때마다 업데이트됩니다(예: 메인 앱 루프에서 매 60초마다). 이 의사 코드에서는 구현할 수 있는 호출 동작을 제안합니다.
@@ -585,10 +592,5 @@ myFirstPersonCamera->SetViewParameters(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

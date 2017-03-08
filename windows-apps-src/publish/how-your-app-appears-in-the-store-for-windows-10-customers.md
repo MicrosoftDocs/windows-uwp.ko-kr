@@ -1,15 +1,22 @@
 ---
 author: jnHs
 Description: "이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다."
-title: "앱이 Windows 10 고객용 스토어에 표시되는 방법"
+title: "앱이 Windows 10 고객용 스토어에 표시되는 방법"
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
-ms.openlocfilehash: a3ecb8a4a1aebc719f8a8a4eb140776685f53b4e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4a7c10d93a3145466007bfe4fac63422400a9830
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱이 Windows 10 고객용 스토어에 표시되는 방법
+# <a name="how-your-app-appears-in-the-store-for-windows-10-customers"></a>앱이 Windows 10 고객용 스토어에 표시되는 방법
 
 
 이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다. 스토어에서 Windows 10을 실행하는 고객에게 앱을 제공하고 분류하는 방식이 약간 변경되었기 때문에 이 항목은 변경된 내용을 이해하는 데 도움이 됩니다.
@@ -18,19 +25,19 @@ ms.openlocfilehash: a3ecb8a4a1aebc719f8a8a4eb140776685f53b4e
 
  
 
-## Windows 스토어와 Windows Phone 스토어에서 ID를 공유하는 앱에 대한 고려 사항
+## <a name="consideration-for-apps-that-shared-identity-in-the-windows-store-and-windows-phone-store"></a>Windows 스토어와 Windows Phone 스토어에서 ID를 공유하는 앱에 대한 고려 사항
 
 
 두 스토어에 게시된 앱에 대해 동일한 예약된 이름을 사용한 경우(앱의 ID 공유라고도 함) 이들은 두 개가 아닌 하나의 앱으로 간주됩니다. 대시보드에서 이들은 Windows 및 Windows Phone 패키지가 포함된 단일 앱으로 표시됩니다.
 
 대부분의 개발자가 각 스토어에서 앱 및 모든 추가 기능에 대해 동일한 가격 및 다른 속성을 설정했지만 이러한 값 중 일부가 다른 경우 Windows 10 고객에게 표시되는 내용을 이해해야 합니다.
 
-### 가격 책정
+### <a name="pricing"></a>가격 책정
 각 스토어에서 앱(또는 추가 기능)에 대해 다른 기본 가격을 선택한 경우 Windows 스토어의 기본 가격이 사용됩니다.
 
 **참고** Windows Phone 스토어에서 지역/국가별 가격을 설정한 경우 사용자 지정 가격도 Windows 10 고객에게 표시됩니다.
 
-### 무료 평가판
+### <a name="free-trials"></a>무료 평가판
 평가판 옵션이 두 개의 이전 저장소에서 다르므로 평가판 옵션을 사용한 경우 각 스토어에 대해 다른 옵션을 선택했을 수 있습니다. Windows 10 고객에게 제공되는 평가판 옵션은 다음 표에 따라 결정됩니다.
 
 | Windows 8 앱       | Windows Phone 앱   | Windows 10에 대한 평가판 설정                                                  |
@@ -42,27 +49,27 @@ ms.openlocfilehash: a3ecb8a4a1aebc719f8a8a4eb140776685f53b4e
 | 시간 제한 평가판  | 평가판의 만료 기간 없음 | Windows Phone 8.1 및 이전 버전의 경우 무료 평가판이 없거나 시간 제한 평가판으로 제공됨 |
 | 시간 제한 평가판  | 무료 평가판 없음       | Windows Phone 8.1 및 이전 버전의 경우 무료 평가판이 없거나 시간 제한 평가판으로 제공됨 |
 
-### 지역/국가
+### <a name="markets"></a>지역/국가
 이전에 앱을 게시한 모든 지역/국가에서 Windows 10 고객이 앱을 사용할 수 있습니다. 각 스토어에 대해 다른 지역/국가를 선택한 경우에도 마찬가지입니다.
 
-### 범주
+### <a name="categories"></a>범주
 앱이 두 스토어에서 다른 범주에 나타나는 경우 Windows 스토어의 범주를 사용하여 새 범주를 결정합니다. 일부 범주는 Windows 10 고객용 스토어에서 다르므로 아래 [표](#cat)를 검토해야 합니다.
 
-### 연령별 등급
+### <a name="age-rating"></a>연령별 등급
 여러 연령별 등급을 제공하는 경우 더 엄격한(더 높은 연령) 등급이 사용됩니다.
 
-### 개인 정보 취급 방침
+### <a name="privacy-policy"></a>개인 정보 취급 방침
 앱에 개인 정보 취급 방침이 있는 경우 Windows 8 앱을 제출할 때 제공한 방침이 Windows 10 고객에게도 표시됩니다.
 
-### 스크린샷
+### <a name="screenshots"></a>스크린샷
 제출되는 모든 스크린샷을 가져와 사용되는 디바이스 유형에 따라 적절한 버전을 사용하여 Windows 10 고객에게 표시합니다. 드물게 각 스토어에 대해 지원되는 언어가 다른 경우, 일부 고객에게는 앱을 구매할 때 제공되는 환경을 가장 나타내는 다른 언어의 스크린샷이 표시됩니다.
 
-### 스토어 목록
+### <a name="store-listings"></a>스토어 목록
 언어에 따라 Windows 10 고객에게 가장 적절한 스토어 목록을 표시합니다. 동일한 언어에서 둘 이상의 원본으로부터 스토어 목록을 사용할 수 있는 경우 Windows 스토어 앱의 목록이 Windows 10 고객에게 표시됩니다. 드물게, 지원되는 언어가 각 스토어마다 다른 경우 Windows Phone 앱의 스토어 목록이 해당 언어로 제공된 유일한 스토어 목록이면 일부 고객에게는 이 스토어 목록이 표시될 수 있습니다.
 
 여러 디바이스에서 작동하는 환경에 대해 알릴 수 있도록 Windows 10 고객에게 표시되는 스토어 목록을 업데이트하려는 경우 [앱 설명](create-app-store-listings.md)을 업데이트하여 이 작업을 수행할 수 있습니다. Windows 10 고객에게는 앱의 기본 설명이 표시되지만 여러 OS 버전의 고객에게 서로 다른 스토어 목록을 표시하려는 경우 [플랫폼별 스토어 목록을 작성](create-platform-specific-store-listings.md)할 수도 있습니다.
 
-## 범주 변경
+## <a name="category-changes"></a>범주 변경
 
 
 대부분의 경우에 앱 및 게임의 새 [범주와 하위 범주](category-and-subcategory-table.md)는 이전 OS 버전용 스토어에서와 같습니다. 그러나 몇 가지 변경 사항이 있습니다. 이전 범주를 기준으로 앱이 Windows 10 고객용 스토어에서 어떻게 분류되는지 알아보려면 아래 표를 참조하세요.
@@ -119,9 +126,4 @@ ms.openlocfilehash: a3ecb8a4a1aebc719f8a8a4eb140776685f53b4e
 | 게임 &gt; 가족           | 게임 &gt; 가족 + 어린이             |
 | 게임 &gt; 퍼즐           | 게임 &gt; 퍼즐 + 퀴즈           |
 | 게임 &gt; 레이싱           | 게임 &gt; 레이싱 + 비행           |
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

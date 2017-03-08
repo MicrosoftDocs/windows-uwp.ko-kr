@@ -3,13 +3,20 @@ author: mtoepke
 title: "기본 요소에 텍스처 적용"
 description: "여기에서는 원형에 깊이 및 효과 사용에서 만든 큐브를 사용해 원시 텍스처 데이터를 로드하고 3D 원형에 적용합니다."
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 텍스처, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 기본 요소에 텍스처 적용
+# <a name="apply-textures-to-primitives"></a>기본 요소에 텍스처 적용
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -18,7 +25,7 @@ ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
 
 **목표:** 원형에 텍스처를 적용합니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
@@ -27,10 +34,10 @@ ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
 
 **완료 시간:** 20분입니다.
 
-지침
+<a name="instructions"></a>지침
 ------------
 
-### 1. 텍스처 처리된 큐브용 변수 정의
+### <a name="1-defining-variables-for-a-textured-cube"></a>1. 텍스처 처리된 큐브용 변수 정의
 
 먼저 텍스처 처리된 큐브에 대해 **BasicVertex** 및 **ConstantBuffer** 구조를 정의해야 합니다. 이러한 구조는 큐브에 대한 꼭짓점 위치, 방향 및 텍스처를 지정하고 큐브를 보는 방법도 지정합니다. 그렇지 않으면 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서와 유사한 변수를 선언합니다.
 
@@ -63,9 +70,9 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. 표면 및 텍스처 요소와 함께 꼭짓점 및 픽셀 셰이더 만들기
+### <a name="2-creating-vertex-and-pixel-shaders-with-surface-and-texture-elements"></a>2. 표면 및 텍스처 요소와 함께 꼭짓점 및 픽셀 셰이더 만들기
 
-여기에서는 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서보다 좀 더 복잡한 꼭짓점 및 픽셀 셰이더를 만듭니다. 이 앱의 꼭짓점 셰이더는 각 꼭짓점 위치를 투영 공간으로 변환하고 꼭짓점 텍스처 좌표를 픽셀 셰이더에 전달합니다.
+여기에서는 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서보다 좀 더 복잡한 꼭짓점 및 픽셀 셰이더를 만듭니다. 이 앱의 꼭짓점 셰이더는 각 꼭짓점 위치를 프로젝션 공간으로 변환하고 꼭짓점 텍스처 좌표를 픽셀 셰이더에 전달합니다.
 
 꼭짓점 셰이더 코드의 레이아웃을 설명하는 [**D3D11_INPUT_ELEMENT_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조의 앱 배열에는 세 개의 레이아웃 요소가 있습니다. 첫 번째 요소는 꼭짓점 위치를 정의하고, 두 번째 요소는 표면 일반 꼭짓점(표면이 일반적으로 향하는 방향)을 정의하고, 세 번째 요소는 텍스처 좌표를 정의합니다.
 
@@ -75,8 +82,8 @@ private:
 
 1.  먼저 큐브를 정의합니다. 각 꼭짓점에 위치, 표면 일반 벡터 및 텍스처 좌표를 할당합니다. 각 면에 대해 서로 다른 일반 벡터 및 텍스처 좌표가 정의될 수 있도록 각 모서리에 여러 꼭짓점을 사용합니다.
 2.  그런 다음 큐브 정의를 사용해 꼭짓점 및 인덱스 버퍼([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 및 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220))를 설명합니다. 각 버퍼에 대해 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 한 번 호출합니다.
-3.  이제 꼭짓점 셰이더에 모델, 보기 및 투영 행렬을 전달하기 위해 상수 버퍼([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092))를 만듭니다. 나중에 상수 버퍼를 사용하여 큐브를 회전하고 큐브에 원근 투영을 적용할 수 있습니다. [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 호출하여 상수 버퍼를 만듭니다.
-4.  마지막으로 X = 0, Y = 1, Z = 2의 카메라 위치에 해당하는 보기 변환을 지정합니다.
+3.  이제 꼭짓점 셰이더에 모델, 뷰 및 프로젝션 매트릭스를 전달하기 위해 상수 버퍼([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092))를 만듭니다. 나중에 상수 버퍼를 사용하여 큐브를 회전하고 큐브에 원근 프로젝션을 적용할 수 있습니다. [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 호출하여 상수 버퍼를 만듭니다.
+4.  마지막으로 X = 0, Y = 1, Z = 2의 카메라 위치에 해당하는 뷰 변환을 지정합니다.
 
 ```cpp
         
@@ -267,7 +274,7 @@ private:
        });
 ```
 
-### 3. 텍스처 및 샘플러 만들기
+### <a name="3-creating-textures-and-samplers"></a>3. 텍스처 및 샘플러 만들기
 
 여기에서는 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서와 마찬가지로 색을 적용하기보다는 큐브에 텍스처 데이터를 적용합니다.
 
@@ -278,7 +285,7 @@ private:
 1.  먼저 디스크의 texturedata.bin 파일에서 원시 텍스처 데이터를 읽습니다.
 2.  해당 원시 텍스처 데이터를 참조하는 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조를 구성합니다.
 3.  텍스처를 설명하기 위해 [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) 구조를 채웁니다. 호출의 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 및 **D3D11\_TEXTURE2D\_DESC** 구조를 [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521)에 전달하여 텍스처를 만듭니다.
-4.  셰이더가 텍스처를 사용할 수 있도록 텍스처의 셰이더-리소스 보기를 만듭니다. 셰이더-리소스 보기를 만들기 위해 [**D3D11\_SHADER\_RESOURCE\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476211)를 채워 셰이더-리소스 보기를 설명하고, 셰이더-리소스 보기 설명 및 텍스처를 [**ID3D11Device::CreateShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476519)에 전달합니다. 일반적으로 보기 설명을 텍스처 설명과 같게 합니다.
+4.  셰이더가 텍스처를 사용할 수 있도록 텍스처의 셰이더-리소스 뷰를 만듭니다. 셰이더-리소스 뷰를 만들기 위해 [**D3D11\_SHADER\_RESOURCE\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476211)를 채워 셰이더-리소스 뷰를 설명하고, 셰이더-리소스 뷰 설명 및 텍스처를 [**ID3D11Device::CreateShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476519)에 전달합니다. 일반적으로 뷰 설명을 텍스처 설명과 같게 합니다.
 5.  텍스처의 샘플러 상태를 만듭니다. 이 샘플러 상태는 관련 텍스처 데이터를 사용해 특정 텍스처 좌표에 대해 색을 결정하는 방법을 정의합니다. 샘플러 상태를 설명하기 위해 [**D3D11\_SAMPLER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476207) 구조를 채웁니다. 호출의 **D3D11\_SAMPLER\_DESC** 구조를 [**ID3D11Device::CreateSamplerState**](https://msdn.microsoft.com/library/windows/desktop/ff476518)에 전달하여 샘플러 상태를 만듭니다.
 6.  마지막으로 모든 프레임을 회전하여 큐브 애니메이션을 만드는 데 사용할 *degree* 변수를 선언합니다.
 
@@ -391,9 +398,9 @@ private:
         float degree = 0.0f;
 ```
 
-### 4. 텍스처 처리된 큐브를 회전하고 그리기 및 렌더링된 이미지 표시
+### <a name="4-rotating-and-drawing-the-textured-cube-and-presenting-the-rendered-image"></a>4. 텍스처 처리된 큐브를 회전하고 그리기 및 렌더링된 이미지 표시
 
-이전 자습서에서와 마찬가지로 장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. 회전 양과 함께 **rotationY** 인라인 함수(BasicMath.h)를 호출하여 Y축을 중심으로 큐브의 모델 행렬을 회전할 값을 설정합니다. [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486)를 호출하여 상수 버퍼를 업데이트하고 큐브 모델을 회전합니다. [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상 및 깊이-스텐실 보기를 지정합니다. [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지우고 [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387)를 호출하여 깊이 버퍼를 지웁니다.
+이전 자습서에서와 마찬가지로 장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. 회전 양과 함께 **rotationY** 인라인 함수(BasicMath.h)를 호출하여 Y축을 중심으로 큐브의 모델 매트릭스를 회전할 값을 설정합니다. [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486)를 호출하여 상수 버퍼를 업데이트하고 큐브 모델을 회전합니다. [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상 및 깊이-스텐실 뷰를 지정합니다. [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지우고 [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387)를 호출하여 깊이 버퍼를 지웁니다.
 
 무한 루프에서, 파란색 표면에 텍스처 처리된 큐브도 그립니다.
 
@@ -404,7 +411,7 @@ private:
 3.  [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)를 [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) 값과 함께 호출하여, 꼭짓점 데이터를 삼각형 스트립으로 해석할 입력-어셈블러 단계를 지정합니다.
 4.  [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)를 호출하여 꼭짓점 셰이더 단계를 꼭짓점 셰이더 코드로 초기화하고, [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)를 호출하여 픽셀 셰이더 단계를 픽셀 셰이더 코드로 초기화합니다.
 5.  [**ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491)를 호출하여 꼭짓점 셰이더 파이프라인 단계에서 사용되는 상수 버퍼를 설정합니다.
-6.  [**PSSetShaderResources**](https://msdn.microsoft.com/library/windows/desktop/ff476473)를 호출하여 텍스처의 셰이더-리소스 보기를 픽셀 셰이더 파이프라인 단계로 바인딩합니다.
+6.  [**PSSetShaderResources**](https://msdn.microsoft.com/library/windows/desktop/ff476473)를 호출하여 텍스처의 셰이더-리소스 뷰를 픽셀 셰이더 파이프라인 단계로 바인딩합니다.
 7.  [**PSSetSamplers**](https://msdn.microsoft.com/library/windows/desktop/ff476471)를 호출하여 샘플러 상태를 픽셀 셰이더 파이프라인 단계로 바인딩합니다.
 8.  마지막으로 [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)를 호출하여 큐브를 그린 후 렌더링 파이프라인에 제출합니다.
 
@@ -512,7 +519,7 @@ private:
                 );
 ```
 
-## 요약
+## <a name="summary"></a>요약
 
 
 원시 텍스처 데이터를 로드하여 3D 원형에 적용했습니다.
@@ -523,10 +530,5 @@ private:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -6,9 +6,16 @@ ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
 op-migration-status: ready
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
-ms.openlocfilehash: b1c3d5ca03a99e2fff1c37cfddfb7a00db45d251
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 329c4c507e94b08f948f4984dfbd96239eb3cd9d
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="layout-panels"></a>레이아웃 패널
@@ -225,9 +232,4 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 ## <a name="panels-for-itemscontrol"></a>ItemsControl용 패널
 
 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)에서 항목을 표시하기 위한 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx)로만 사용할 수 있는 몇 가지 특별한 용도의 패널이 있습니다. [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 
