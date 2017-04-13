@@ -3,14 +3,11 @@ Description: "다음은 휴대폰, 태블릿, PC 등 Windows 10 기반 디바이
 title: "Windows 10 앱 사용 방법 가이드 - Windows 앱 개발"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 redirect_url: https://developer.microsoft.com/windows/develop
-translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
 ms.openlocfilehash: 5b07b46627ca19f2a3cc02e72212a9870d778c7c
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
-# Windows 10 앱 사용 방법 가이드
+# <a name="how-to-guides-for-windows-10-apps"></a>Windows 10 앱 사용 방법 가이드
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -45,9 +42,3 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 | [스레딩 및 비동기 프로그래밍](threading-async/index.md) | 비동기 프로그래밍을 사용하여 시간이 오래 걸릴 수 있는 다른 작업을 완료하는 동안 계속 실행되고 UI에 응답하도록 함으로써 앱의 응답성을 유지할 수 있습니다. |
 | [Windows 런타임 구성 요소](winrt-components/index.md) | C#, Visual Basic, JavaScript, C++ 등 모든 언어로 시작하고 사용할 수 있는 이러한 자체 포함된 개체에 대해 자세히 알아봅니다. 예를 들어 타사 라이브러리를 사용하여 계산 비용이 많이 드는 작업을 수행하는 C++로 Windows 런타임 구성 요소를 만들거나, 유니버설 Windows 앱에서 일부 Visual Basic 또는 C#을 다시 사용할 수 있습니다. 
 | [XAML 플랫폼](xaml-platform/index.md) | XAML 프로그래밍 언어의 기본 개념을 시작합니다. 또는 이미 XAML에 익숙한 경우 기본 개념을 건너뛰고 Visual Studio를 사용하여 뛰어난 유니버설 Windows 앱을 만들 수 있는 XAML에서 Windows 런타임 기능을 구현하는 방법을 알아봅니다. |
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

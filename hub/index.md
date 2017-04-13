@@ -1,6 +1,6 @@
 ---
 layout: HubPage
-hide_bc: true
+hide_bc: True
 title: "Windows 설명서"
 description: "Windows 솔루션을 구축 및 유지 관리하는 데 도움이 되는 개발자, 하드웨어 및 IT 전문가용 설명서를 확인할 수 있습니다."
 ms.assetid: 56bbc230-b855-426e-b849-4f65a747b944
@@ -8,11 +8,9 @@ ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: hub-page
 ms.prod: windows
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: cb15f417c4254776af4548a5b962392431c9a75b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b04722c101d6647eca8d97ebb33ded7fb3ba8c3a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -80,7 +78,7 @@ ms.lasthandoff: 02/08/2017
             <a data-default="true" href="#developer">개발자</a>
             <ul id="developer">
                 <li>
-                    <a href="#developer-all">모든</a>
+                    <a href="#developer-all">모두</a>
                     <ul id="developer-all" class="cardsF">
                         <li>
                             <div class="cardSize">
@@ -108,6 +106,9 @@ ms.lasthandoff: 02/08/2017
                                             <p>
                                                 <a href="https://msdn.microsoft.com/windows/uwp/monetize/index">수익 창출</a>
                                             </p>
+                                            <p>
+                                                <a href="https://docs.microsoft.com/en-us/uwp/api/">API 참조</a>
+                                            <p>
                                         </div>
                                     </div>
                                 </div>
@@ -213,18 +214,18 @@ ms.lasthandoff: 02/08/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Holographic</h3>
+                                            <h3>혼합 현실</h3>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/holographic/getting_started">시작</a>
+                                                <a href="https://developer.microsoft.com/windows/mixed-reality/academy">Academy</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/holographic/academy">Academy</a>
+                                                <a href="https://developer.microsoft.com/windows/mixed-reality/development">개발</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/holographic/documentation">설명서</a>
+                                                <a href="https://developer.microsoft.com/windows/mixed-reality/design">디자인</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/holographic/community">커뮤니티</a>
+                                                <a href="https://developer.microsoft.com/windows/mixed-reality/community">커뮤니티 및 지원</a>
                                             </p>
                                         </div>
                                     </div>
@@ -411,7 +412,7 @@ ms.lasthandoff: 02/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Windows Server 2016</h3>
+                                                <h3>WindowsServer 2016</h3>
                                                 <p>Windows Server 2016의 계획, 배포, 보안, 크기 조정 방법을 알아봅니다.</p>
                                             </div>
                                         </div>
@@ -515,7 +516,7 @@ ms.lasthandoff: 02/08/2017
                             </a>
                         </li> 
                         <li>
-                            <a href="https://technet.microsoft.com/en-us/library/mt267544.aspx">
+                            <a href="https://technet.microsoft.com/library/mt267544.aspx">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -539,4 +540,3 @@ ms.lasthandoff: 02/08/2017
         </li>
     </ul>
 </div>
-

@@ -3,15 +3,12 @@ Description: "다음은 휴대폰, 태블릿, PC 등 Windows 10 기반 디바이
 title: "Windows 10 앱 사용 방법 가이드 - Windows 앱 개발"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 author: martinekuan
-redirect_url: https://developer.microsoft.com/en-us/windows/develop
-translationtype: Human Translation
-ms.sourcegitcommit: 753a917c0ecbf445560203dbc1406acae52e5265
-ms.openlocfilehash: 2b4bae1606f9b51e2d4901218ebd2d616e4c5edc
-
+redirect_url: https://developer.microsoft.com/en-us/windows/apps
+ms.openlocfilehash: 84a4aebb5c41e713c0038cd203b320ff607fa25a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
-# Windows 10의 UWP 앱 사용 방법 가이드
+# <a name="how-to-guides-for-uwp-apps-on-windows-10"></a>Windows 10의 UWP 앱 사용 방법 가이드
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -22,10 +19,4 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 -   [첫 번째 유니버설 Windows 플랫폼 앱을 만들어 보세요.](get-started/create-a-hello-world-app-xaml-universal.md)
 -   [UWP(유니버설 Windows 플랫폼) 앱 지침](get-started/universal-application-platform-guide.md)
 -   [유니버설 Windows 플랫폼 앱이란?](get-started/whats-a-uwp.md)
-
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 
