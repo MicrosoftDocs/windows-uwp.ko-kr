@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "스왑 체인 확장 및 오버레이"
-description: "모바일 디바이스에서 더 빠른 렌더링을 위해 크기 조정된 스왑 체인을 만들고 오버레이 스왑 체인(사용 가능한 경우)을 사용하여 시각적 품질을 향상시키는 방법을 알아봅니다."
+description: "모바일 디바이스에서 보다 신속한 렌더링을 위해 크기 조정된 스왑 체인을 만들고 오버레이 스왑 체인(사용 가능한 경우)을 사용하여 시각적 품질을 향상시키는 방법을 알아봅니다."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 스왑 체인 크기 조정, 오버레이, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="swap-chain-scaling-and-overlays"></a>스왑 체인 크기 조정 및 오버레이
 
 
@@ -203,7 +200,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
 4.  포그라운드 스왑 체인은 항상 프리멀티플라이된 알파를 사용합니다. 각 픽셀의 색 값은 프레임을 표시하기 전에 이미 알파 값이 곱해져 있어야 합니다. 예를 들어 50% 알파의 100% 흰색 BGRA 픽셀은 (0.5, 0.5, 0.5, 0.5)로 설정됩니다.
 
-    알파 미리 곱하기 단계는 [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476349) 구조의 **SrcBlend** 필드가 **D3D11\_SRC\_ALPHA**로 설정된 앱 혼합 상태([**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476200) 참조)를 적용하여 출력 병합 단계에서 수행할 수 있습니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
+    알파 미리 곱하기 단계는 [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476200) 구조의 **SrcBlend** 필드가 **D3D11\_SRC\_ALPHA**로 설정된 앱 혼합 상태([**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349) 참조)를 적용하여 출력 병합 단계에서 수행할 수 있습니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
 
     알파 미리 곱하기 단계를 수행하지 않으면 포그라운드 스왑 체인의 색이 예상보다 밝아집니다.
 
@@ -329,7 +326,6 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
  
 
  
-
 
 
 

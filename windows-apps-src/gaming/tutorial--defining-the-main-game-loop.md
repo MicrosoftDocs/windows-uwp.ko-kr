@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "주 게임 개체 정의"
-description: "이제 게임 샘플의 주 개체 및 해당 개체가 구현하는 규칙이 게임 월드와의 상호 작용으로 변환되는 방식을 자세히 살펴봅니다."
+description: "이제 게임 샘플의 주 개체 및 해당 개체가 구현하는 규칙이 게임 월드와 조작하도록 변환되는 방식을 자세히 살펴봅니다."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 주 개체"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f81b3eaa9b896295386232f99b789dc3857b3bad
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="define-the-main-game-object"></a>주 게임 개체 정의
 
 
@@ -3625,7 +3622,6 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
  
 
  
-
 
 
 

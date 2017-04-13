@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 렌더링, 그림자 지도, 깊이 버퍼, direct3d"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>그림자 맵을 깊이 버퍼로 렌더링
 
 
@@ -157,7 +154,6 @@ PixelShaderInput main(VertexShaderInput input)
  
 
  
-
 
 
 

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1d15bfb6bfed16d1b71313fd5a5f29ceeef3bd3e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b460a20dd88da1745008ea84fe252137df8a82d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="receive-data"></a>데이터 수신
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP(유니버설 Windows 플랫폼) 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다.
@@ -103,7 +100,7 @@ shareOperation.ReportError("Could not reach the server! Try again later.");
 shareOperation.ReportCompleted();
 ```
 
-이러한 메서드를 사용할 때는 일반적으로 설명된 순서대로 메서드를 호출하고 두 번 이상 호출하지 않습니다. 그러나 대상 앱이 [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) 전에 [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted)를 호출할 수 있는 경우가 있습니다. 예를 들어 앱은 활성화 처리기의 작업의 일부로 데이터를 검색할 수 있지만 사용자가 **공유** 단추를 선택할 때까지 **ReportStarted**를 호출하지 않습니다.
+이러한 메서드를 사용할 때는 일반적으로 설명된 순서대로 메서드를 호출하고 두 번 이상 호출하지 않습니다. 그러나 대상 앱이 [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted) 전에 [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved)를 호출할 수 있는 경우가 있습니다. 예를 들어 앱은 활성화 처리기의 작업의 일부로 데이터를 검색할 수 있지만 사용자가 **공유** 단추를 선택할 때까지 **ReportStarted**를 호출하지 않습니다.
 
 ## <a name="return-a-quicklink-if-sharing-was-successful"></a>공유가 성공한 경우 QuickLink 반환
 
@@ -147,4 +144,3 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
 * [QuickLink](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.aspx)
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
-

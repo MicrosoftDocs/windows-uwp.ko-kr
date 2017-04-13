@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8f8236a68fd7628f1f53eebc13731a72414e3217
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f0665bf071b4c75ee6a3ea8bcc11cefb357c6825
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 
@@ -178,4 +176,3 @@ AccelerometerReadingChangedEventArgs>(ReadingChanged);
 ## <a name="related-topics"></a>관련 항목
 
 * [가속도계 샘플](http://go.microsoft.com/fwlink/p/?linkid=241377)
-

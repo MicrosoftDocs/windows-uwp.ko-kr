@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d4eae4379fb74d36a97db9be9a100408825682a7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 226b2fd19777deb5135d1e1f059596883f95d3d3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-your-xaml-layout"></a>XAML 레이아웃 최적화
 
@@ -189,5 +187,4 @@ UI에서 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 
 개별 패널 중에서 선택할 경우 성능은 일반적인 고려 사항이 아닙니다. 일반적으로 구현할 UI에 가장 근접한 레이아웃 동작을 제공하는 패널을 고려하여 선택합니다. 예를 들어 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) 중에서 선택하는 경우 구현의 멘탈 모델에 가장 근접한 매핑을 제공하는 패널을 선택해야 합니다.
 
 모든 XAML 패널은 우수한 성능에 최적화되어 있으며, 모든 패널은 유사한 UI에 비슷한 성능을 제공합니다.
-
 

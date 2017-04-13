@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, egl, dxgi, direct3d
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7d7e4058eccd39911bd84d3967ef07b93b6ee89d
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>EGL 코드와 DXGI 및 Direct3D 비교
 
 
@@ -68,9 +65,9 @@ EGL에는 Direct3D 11에 비해 매우 적은 수의 API가 포함되어 있으�
 
 다음은 단순 그래픽 디스플레이와 UWP 앱용 DXGI 및 Direct3D에서 리소스 및 컨텍스트를 설정하기 위한 가장 기본적인 프로세스입니다.
 
-1.  [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/br208225)를 호출하여 앱의 핵심 UI 스레드에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/hh701589) 개체의 핸들을 가져옵니다.
-2.  UWP 앱의 경우 [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404537)를 사용하여 [**IDXGIAdapter2**](https://msdn.microsoft.com/library/windows/desktop/hh404559)에서 스왑 체인을 가져온 다음 1단계에서 얻은 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 이 체인에 전달합니다. 그에 대한 대가로 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) 인스턴스를 얻게 됩니다. 렌더러 개체와 렌더링 스레드로 범위를 지정합니다.
-3.  [**D3D11Device::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 메서드를 호출하여 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 인스턴스를 가져옵니다. 이러한 인스턴스의 범위도 렌더러 개체로 지정합니다.
+1.  [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 앱의 핵심 UI 스레드에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체의 핸들을 가져옵니다.
+2.  UWP 앱의 경우 [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)를 사용하여 [**IDXGIAdapter2**](https://msdn.microsoft.com/library/windows/desktop/hh404537)에서 스왑 체인을 가져온 다음 1단계에서 얻은 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 이 체인에 전달합니다. 그에 대한 대가로 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) 인스턴스를 얻게 됩니다. 렌더러 개체와 렌더링 스레드로 범위를 지정합니다.
+3.  [**D3D11Device::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 메서드를 호출하여 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 인스턴스를 가져옵니다. 이러한 인스턴스의 범위도 렌더러 개체로 지정합니다.
 4.  렌더러의 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 개체에 대해 메서드를 사용하여 셰이더, 텍스처 및 기타 리소스를 만듭니다.
 5.  렌더러의 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 개체에 대해 메서드를 사용하여 버퍼를 정의하고 셰이더를 실행한 다음 파이프라인 단계를 관리합니다.
 6.  파이프라인을 실행했으며 백 버퍼에 프레임을 그렸으면 [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 사용하여 이 프레임을 화면에 표시합니다.
@@ -129,7 +126,7 @@ Direct3D에 대한 CoreWindow를 가져옵니다.
 CoreWindow::GetForCurrentThread();
 ```
 
-[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 가져온 후 창을 활성화해야 합니다. 그러면 주 개체의 **Run** 메서드가 실행되고 창 이벤트 처리가 시작됩니다. 그런 다음 [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 구성을 기반으로 스왑 체인 리소스를 만들기 위해 [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 개체를 가져올 수 있도록, [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/ff471331) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/bb174523)을 만들고 사용하여 기본 [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404556) 및 [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/hh404528)를 가져옵니다.
+[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 가져온 후 창을 활성화해야 합니다. 그러면 주 개체의 **Run** 메서드가 실행되고 창 이벤트 처리가 시작됩니다. 그런 다음 [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528) 구성을 기반으로 스왑 체인 리소스를 만들기 위해 [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556) 개체를 가져올 수 있도록, [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)을 만들고 사용하여 기본 [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/ff471331) 및 [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523)를 가져옵니다.
 
 Direct3D에 대한 CoreWindow에서 DXGI 스왑 체인을 구성 및 설정합니다.
 
@@ -387,7 +384,7 @@ UWP 앱에서 [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows
 | eglBindTexImage                  | [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521)를 호출하여 2D 텍스처를 설정합니다.                                                                                                                                                                                                                                                                                                                                                                                          |
 | eglChooseConfig                  | Direct3D는 기본 프레임 버퍼 구성 집합을 제공하지 않습니다. 스왑 체인의 구성입니다.                                                                                                                                                                                                                                                                                                                                                                                           |
 | eglCopyBuffers                   | 버퍼 데이터를 복사하려면 [**ID3D11DeviceContext::CopyStructureCount**](https://msdn.microsoft.com/library/windows/desktop/ff476393)를 호출합니다. 리소스를 복사하려면 [**ID3DDeviceCOntext::CopyResource**](https://msdn.microsoft.com/library/windows/desktop/ff476392)를 호출합니다.                                                                                                                                                                                                                                                      |
-| eglCreateContext                 | Direct3D 디바이스에 대한 핸들 및 기본 Direct3D 즉각적인 컨텍스트([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 개체)를 둘 다 반환하는 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/hh404598)를 호출하여 Direct3D 디바이스 컨텍스트를 만듭니다. 또한 반환된 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/dn280495) 개체에 대해 [**ID3D11Device2::CreateDeferredContext**](https://msdn.microsoft.com/library/windows/desktop/hh404575)를 호출하여 Direct3D 지연된 컨텍스트를 만들 수 있습니다. |
+| eglCreateContext                 | Direct3D 디바이스에 대한 핸들 및 기본 Direct3D 즉각적인 컨텍스트([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 개체)를 둘 다 반환하는 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082)를 호출하여 Direct3D 디바이스 컨텍스트를 만듭니다. 또한 반환된 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 개체에 대해 [**ID3D11Device2::CreateDeferredContext**](https://msdn.microsoft.com/library/windows/desktop/dn280495)를 호출하여 Direct3D 지연된 컨텍스트를 만들 수 있습니다. |
 | eglCreatePbufferFromClientBuffer | 모든 버퍼는 Direct3D 하위 리소스(예: [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635))로 읽히고 쓰여집니다. [**ID3D11DeviceContext1:CopyResource**](https://msdn.microsoft.com/library/windows/desktop/ff476392)와 같은 메서드를 사용하여 호환되는 하위 리소스 형식 간에 복사합니다.                                                                                                                                                                                                     |
 | eglCreatePbufferSurface          | 스왑 체인 없는 Direct3D 디바이스를 만들려면 정적 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 메서드를 호출합니다. Direct3D 렌더링 대상 뷰의 경우 [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517)를 호출합니다.                                                                                                                                                                                                                               |
 | eglCreatePixmapSurface           | 스왑 체인 없는 Direct3D 디바이스를 만들려면 정적 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 메서드를 호출합니다. Direct3D 렌더링 대상 뷰의 경우 [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517)를 호출합니다.                                                                                                                                                                                                                               |
@@ -416,7 +413,6 @@ UWP 앱에서 [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows
  
 
  
-
 
 
 

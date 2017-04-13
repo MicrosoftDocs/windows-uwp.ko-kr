@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx 11, 장치 분실"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2202d8ea4584f7755464fd3035829d348cfbff8d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3d7a93ed0b1ce78cba278232eb5325e463c12789
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Direct3D 11에서 디바이스 제거 시나리오 처리
 
 
@@ -32,7 +29,7 @@ DirectX 9에서는 D3D 장치가 비작동 상태에 들어서는 경우 응용 
 
 그러한 상황이 발생하면 DXGI는 Direct3D 장치를 다시 초기화하고 장치 리소스를 다시 만들어야 한다고 알리는 오류 코드를 반환합니다. 이 연습에서는 Direct3D 11 앱과 게임이 그래픽 어댑터의 재설정, 제거 또는 변경 상황을 검색하고 이에 대응하는 방법에 대해 설명합니다. 코드 예제는 Microsoft Visual Studio 2015에 포함된 DirectX 11 앱(유니버설 Windows) 템플릿에서 가져온 것입니다.
 
-# <a name="instructions"></a>지침
+## <a name="instructions"></a>지침
 
 ### <a name="spanspanstep-1"></a><span></span>1단계:
 
@@ -171,14 +168,3 @@ DXGI 장치 제거 오류가 반복해서 발생하면 그리기 루틴 중에 �
 Visual Studio 개발자의 명령 프롬프트에서 Visual Studio 그래픽 진단과 관련된 Direct3D 이벤트 캡처 및 재생에 대한 명령줄 도구 'dxcap'를 지원합니다. 앱이 실행되는 동안 명령줄 옵션 "-forcetdr"을 사용하여 GPU 시간 제한 검색 및 복구 이벤트를 강제로 발생시킬 수 있으므로 DXGI\_ERROR\_DEVICE\_REMOVED를 트리거하고 오류 처리 코드를 테스트할 수 있습니다.
 
 > **참고** DXCap와 해당 지원 DLL이 Windows SDK를 통해 더 이상 배포되지 않는 Windows 10용 그래픽 도구의 일부로 system32/syswow64에 설치됩니다. 대신 선택적 OS 구성 요소인 주문형 그래픽 도구 기능을 통해 제공되며 Windows 10에서 그래픽 도구를 사용하기 위해 설치되어야 합니다. Windows 10용 그래픽 도구를 설치하는 방법에 대한 자세한 내용은 <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>를 참조하세요.
-
- 
-
- 
-
- 
-
-
-
-
-

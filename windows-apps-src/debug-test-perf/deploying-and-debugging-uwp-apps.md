@@ -9,14 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 디버그, 테스트, 성능"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a7ce6c003c24a1efd03cc48419438b59e4f2ec11
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6f399136be121288dcff4b482f9e022fc0323181
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="deploying-and-debugging-universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅
+# <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -95,7 +92,7 @@ C++ 또는 JavaScript UWP 앱에 대한 원격 컴퓨터 대상을 지정하려�
 
 **인증 없음**으로 변경하려면 **원격 디버거**에서 **도구** -&gt; **옵션**으로 이동하여 **인증 없음**으로 설정합니다. 원격 디버거를 설정한 후 호스트 디바이스를 [개발자 모드](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)로 설정했는지도 확인해야 합니다. 그런 다음 개발 컴퓨터에서 배포할 수 있습니다.
 
-자세한 내용은 [Visual Studio용 원격 도구](http://go.microsoft.com/fwlink/p/?LinkId=717039) 다운로드 페이지를 참조하세요.
+자세한 내용은 [Visual Studio 다운로드 센터](https://www.visualstudio.com/downloads/)를 참조하세요.
 
 ## <a name="authentication-modes"></a>인증 모드
 
@@ -229,4 +226,3 @@ WinDbg에서 자주 사용하는 명령 중 하나는 다음을 포함하여 현
 ## <a name="related-topics"></a>관련 항목
 - [PLM(프로세스 수명 관리) 테스트 및 디버깅 도구](testing-debugging-plm.md)
 - [디버깅, 테스트 및 성능](index.md)
-

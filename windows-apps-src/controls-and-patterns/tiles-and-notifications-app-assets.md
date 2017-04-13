@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fa195ab35b0d6b1825adb8ce18ae1666d0bf1581
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0d3b58b8ea03c3ba836078e507495beeebe74fb8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="guidelines-for-tile-and-icon-assets"></a>타일 및 아이콘 자산에 대한 지침
 
@@ -387,7 +385,6 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
  
 
  
-
 
 
 

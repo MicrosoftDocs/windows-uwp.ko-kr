@@ -1,5 +1,5 @@
 ---
-description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 공유 계약을 지원하는 방법을 설명합니다."
+description: "이 문서에서는 UWP(Universal Windows Platform) 앱에서 공유 계약을 지원하는 방법을 설명합니다."
 title: "데이터 공유"
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 59039fbd2cc54c757acabba7f0c981059ef95c56
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 00c59ef7d62fb5518bf6e935b7913d4ca8180f7b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="share-data"></a>데이터 공유
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -109,5 +106,4 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 * [FailWithDisplayText](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx)
 * [ShowShareUi](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx)
  
-
 

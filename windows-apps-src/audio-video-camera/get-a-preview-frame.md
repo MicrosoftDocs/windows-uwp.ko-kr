@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 420f9b8c3bb6573fbc12bc974ef2382b9ba6ec03
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3dca5108988e4a3c0fe3903d26f31733685d66a4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-a-preview-frame"></a>미리 보기 프레임 가져오기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목은 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
 
@@ -65,7 +62,6 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
  
 
  
-
 
 
 

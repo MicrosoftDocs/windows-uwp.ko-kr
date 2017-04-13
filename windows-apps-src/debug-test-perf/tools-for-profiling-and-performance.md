@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 51304d873261466afc9014224b918b82603f00e8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0a1a955d464fe875afdeef74d3ffa23a43e1406b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="tools-for-profiling-and-performance"></a>프로파일링 및 성능 도구
 
@@ -33,5 +31,4 @@ Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상�
 | [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/apps/xaml/hh448170.aspx) | Windows ADK(Windows 평가 및 배포 키트)에 포함된 WPA(Windows Performance Analyzer)는 WPR(Windows 성능 분석), Xperf 또는 평가 플랫폼에서 실행되는 평가에 의해 기록된 ETW(Windows용 이벤트 추적)의 그래프 및 데이터 테이블을 만드는 도구입니다. WPA는 분석을 위해 모든 ETL(이벤트 추적 로그) 파일을 열 수 있습니다. |
 
  
-
 

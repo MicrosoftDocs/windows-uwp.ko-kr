@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1d3a2ce095b4250f5bdc1fdac8b1646184bc3e1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c6b9a1d8cec20b75aeb90775471461e7811fecb4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility-in-the-store"></a>스토어에서의 접근성  
 
 
@@ -51,4 +48,3 @@ UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는
 <span id="related_topics"/>
 ## <a name="related-topics"></a>관련 항목    
 * [접근성](accessibility.md) 
-

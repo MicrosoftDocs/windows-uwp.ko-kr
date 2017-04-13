@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx, 시작, 다시 시작"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: c3557a11f8f18262f0b5e0c6ad6cac88d5274f73
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launching-and-resuming-apps-directx-and-c"></a>앱 시작 및 다시 시작(DirectX 및 C++)
 
 
@@ -33,7 +30,6 @@ UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 중단 및 다
  
 
  
-
 
 
 

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d65d09349850f580d8bcee2d3875b38b8ed189f1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5e6a38c34f080310eeca7e904ef21e399639de71
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="display-the-camera-preview"></a>카메라 미리 보기 표시
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 XAML 페이지 내의 카메라 미리 보기 스트림을 빠르게 표시하는 방법을 설명합니다. 카메라를 사용하여 사진 및 동영상을 캡처하는 앱을 만들려면 디바이스 및 카메라 방향을 다루거나 캡처된 파일에 대한 인코딩 옵션을 설정하는 것과 같은 작업을 수행해야 합니다. 일부 앱 시나리오의 경우 다른 고려 사항에 신경 쓰지 않고 카메라에서 미리 보기 스트림을 간단히 표시하고자 할 수 있습니다. 이 문서에서는 최소한의 코드로 이 작업을 수행하는 방법을 보여 줍니다. 아래 단계에 따라 작업을 완료했을 때 미리 보기 스트림을 항상 제대로 종료해야 합니다.
 
@@ -97,4 +94,3 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [미리 보기 프레임 가져오기](get-a-preview-frame.md)
-

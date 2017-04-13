@@ -2,21 +2,17 @@
 title: "확산 조명"
 description: "확산 조명은 조명 방향과 개체 표면 법선 모두에 따라 달라집니다."
 ms.assetid: 8AF78742-76B1-4BBB-86E3-94AE6F48B847
-keywords:
-- "확산 조명"
+keywords: "확산 조명"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 256d3ed1dd6236abe4ca93e362c52316eb548bda
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d7916bf421a56125691da9be3505039e9cb1d71d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="diffuse-lighting"></a>확산 조명
 
 
@@ -53,7 +49,7 @@ ms.lasthandoff: 02/07/2017
 
 수식에 따라 물체 색과 광원 색을 조합한 결과가 개체 꼭짓점의 색이 됩니다.
 
-다음 두 그림은 물질 색(회색)과 광원 색(밝은 빨강)을 보여 줍니다.
+다음 두 그림은 재질 색(회색)과 조명 색(밝은 빨강)을 보여 줍니다.
 
 ![회색 구 그림](images/amb1.jpg)![빨강 구 그림](images/lightred.jpg)
 
@@ -75,7 +71,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

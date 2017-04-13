@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 52c1d63d-69c1-48d6-a234-6f39296e4bfd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 0a33aaf71dbf23e991591f790f7327d812b060ef
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 332271894b5e11657bd2b0b1ca40f0bd7620889d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inverted-lists"></a>반전된 목록
 
@@ -63,4 +61,3 @@ ms.lasthandoff: 02/08/2017
 - 사용자가 대화 흐름을 파악하기 쉽도록 발신자/수신자의 메시지를 반대쪽에 정렬합니다.
 - 사용자가 이미 대화 끝에서 다음 메시지를 기다리고 있는 경우 최신 메시지 표시에 방해가 되지 않도록 기존 메시지에 애니메이션 효과를 줍니다.
 - 대화 끝을 읽고 있지 않은 경우 항목을 이동하여 사용자 포커스를 방해하지 않습니다.
-

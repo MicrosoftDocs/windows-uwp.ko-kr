@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "Windows.Globalization.DateTimeFormatting API와 사용자 지정 패턴을 함께 사용하여 날짜와 시간을 원하는 형식으로 표시하세요."
+Description: "정확히 개발자가 원하는 날짜 및 시간을 표시하려면 Windows.Globalization.DateTimeFormatting API와 사용자 지정 패턴을 사용하세요."
 title: "날짜 및 시간 형식 지정 패턴 사용"
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c28210a6fca27976a2a4428d8001da87951f1e87
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ced02d2307263e85af158298eefc2e109702d2fb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 패턴 사용
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) API와 사용자 지정 패턴을 함께 사용하여 날짜와 시간을 원하는 형식으로 표시하세요.
+날짜 및 시간을 원하는 형식으로 정확히 표시하려면 [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) API와 사용자 지정 패턴을 사용하세요.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -195,7 +192,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
  
 
  
-
 
 
 

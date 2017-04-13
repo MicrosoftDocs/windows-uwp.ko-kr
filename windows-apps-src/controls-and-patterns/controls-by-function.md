@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e665814f2d65affd89973879332ba0a2732e1509
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7082b8f81f45d5035cbe2d9b4bf482d0c985bb8f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -141,7 +139,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [대칭 이동 뷰 컨트롤 가이드](flipview.md) 
 
-### <a name="grid-view"></a>표 뷰
+### <a name="grid-view"></a>그리드 뷰
 가로로 스크롤할 수 있는 행과 열 형태로 항목 컬렉션을 제공하는 컨트롤입니다.
 
 ```xaml
@@ -380,10 +378,10 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 참조: [Canvas](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)
  
-### <a name="grid"></a>표
+### <a name="grid"></a>그리드
 자식 요소에 대한 열과 행 형태의 배열을 지원하는 레이아웃 패널입니다.
 
-![모눈 레이아웃 패널](images/controls/grid.png) 
+![그리드 레이아웃 패널](images/controls/grid.png) 
 
 ```xaml
 <Grid>
@@ -463,7 +461,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ### <a name="variablesizedwrapgrid"></a>VariableSizedWrapGrid
 자식 요소에 대한 열과 행 형태의 배열을 지원하는 레이아웃 패널입니다. 각 자식 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.
 
-![가변 크기 랩 모눈 레이아웃 패널](images/controls/variable-sized-wrap-grid.png) 
+![가변 크기 랩 그리드 레이아웃 패널](images/controls/variable-sized-wrap-grid.png) 
 
 ```xaml
 <VariableSizedWrapGrid MaximumRowsOrColumns="3" ItemHeight="44" ItemWidth="44">
@@ -855,4 +853,3 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 참조: [ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.toggleswitch.aspx) 
 
 디자인 및 방법: [토글 컨트롤 가이드](toggles.md) 
-

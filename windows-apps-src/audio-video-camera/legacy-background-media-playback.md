@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 9c66df378534825d191740d5eea4beb0f560687e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 68695125c2056adca8186120db7875cb3a68baf8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="legacy-background-media-playback"></a>레거시 백그라운드 미디어 재생
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -67,7 +64,7 @@ ms.lasthandoff: 02/08/2017
 
 [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드는 백그라운드 작업은 앱이 포그라운드 앱에서 실행되는 코드의 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528)에 처음으로 액세스할 때와 [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 이벤트에 대한 처리기를 등록할 때 중에서 먼저 일어나는 작업 후에 호출됩니다. 포그라운드 앱이 백그라운드 프로세스에서 보낸 메시지를 누락하지 않도록 하기 위해 **BackgroundMediaPlayer.Current**를 처음 호출하기 전에 메시지 수신 처리기를 등록하는 것이 좋습니다.
 
-백그라운드 작업을 계속 유지하려면 앱이 **Run** 메서드 내에서 [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499)을 요청하고 작업 인스턴스가 [**Canceled**](https://msdn.microsoft.com/library/windows/apps/hh700504) 또는 [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224798) 이벤트를 수신할 때 [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/br224788)를 호출해야 합니다. 리소스가 사용되고 앱의 백그라운드 작업이 시스템에 의해 종료될 수 있으므로 **Run** 메서드에서 루핑하거나 기다리지는 마세요.
+백그라운드 작업을 계속 유지하려면 앱이 **Run** 메서드 내에서 [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499)을 요청하고 작업 인스턴스가 [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) 또는 [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 이벤트를 수신할 때 [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504)를 호출해야 합니다. 리소스가 사용되고 앱의 백그라운드 작업이 시스템에 의해 종료될 수 있으므로 **Run** 메서드에서 루핑하거나 기다리지는 마세요.
 
 백그라운드 작업은 **Run** 메서드가 완료되고 지연이 요청되지 않을 때 **Completed** 이벤트를 가져옵니다. 경우에 따라 앱이 **Canceled** 이벤트를 가져올 때 **Completed** 이벤트도 따라올 수 있습니다. 작업은 **Run**가 실행되는 동안 **Canceled** 이벤트를 수신할 수 있으므로 이러한 잠재적인 동시 상황을 관리해야 합니다.
 
@@ -125,7 +122,6 @@ ms.lasthandoff: 02/08/2017
  
 
  
-
 
 
 

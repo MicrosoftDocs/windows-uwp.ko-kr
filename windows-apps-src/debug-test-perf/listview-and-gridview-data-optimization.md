@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0b1dfaeb098ac4b73c89f4d1a51ec658312aee4e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 722389a7440110eaffa5458e8ef5e85fccb39671
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView 및 GridView 데이터 가상화
 
@@ -83,7 +81,6 @@ ms.lasthandoff: 02/07/2017
 -   쿼리 결과가 변경된 경우 서비스에서 어떤 종류의 알림이 제공되나요? 항목이 인덱스 33에 삽입된 경우 이를 알 수 있나요? 서비스가 key-plus-offset 기반의 쿼리를 지원하는 경우 인덱스만 사용하는 것보다 더 나을 수 있습니다.
 -   항목 사전 가져오기가 어느 정도 지능적으로 수행되기를 원하시나요? 스크롤 방향 및 속도를 추적하여 필요한 항목을 예측하려고 하시나요?
 -   캐시 지우기가 어느 정도 적극적이기를 원하시나요? 메모리와 환경 간에 상충 관계가 있습니다.
-
 
 
 

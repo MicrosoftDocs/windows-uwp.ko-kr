@@ -12,16 +12,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱"
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b9bde047a70d31105680361d34cf71b33f708f93
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f624d20d33f560f151b40bd1a405711d697fd4cb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
-__참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
+__참고__ WIP(Windows Information Protection) 정책을 Windows10 버전 1607에 적용할 수 있습니다.
 
 WIP는 조직에서 정의한 정책을 적용하여 조직에 속한 데이터를 보호합니다. 앱이 이러한 정책에 포함된 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 이 항목은 사용자의 개인 데이터에 영향을 주지 않고 더욱 원활하게 이러한 정책을 적용하는 앱을 빌드하는 데 도움이 됩니다.
 <iframe src="https://channel9.msdn.com/Blogs/Windows-Development-for-the-Enterprise/Securing-Enterprise-Data-with-Windows-Information-Protection/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
@@ -66,11 +63,11 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 인식 앱으
 
 **C를 사용하여 빌드하는 UWP(유니버설 Windows 플랫폼) 앱의 경우#**
 
-[엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 인식 앱 빌드](wip-dev-guide.md)
+[WIP(Windows Information Protection) 개발자 가이드](wip-dev-guide.md).
 
 **C++를 사용하여 빌드하는 데스크톱 앱의 경우**
 
-[엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 인식 앱 빌드(C++)](http://go.microsoft.com/fwlink/?LinkId=822192)
+[WIP(Windows Information Protection) 개발자 가이드(C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>미인식 엔터프라이즈 앱 만들기
@@ -100,4 +97,3 @@ MDM 정책은 플래그를 요구하지 않지만 MAM 정책은 플래그를 요
 
 
  
-

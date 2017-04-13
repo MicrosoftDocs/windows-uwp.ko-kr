@@ -1,13 +1,11 @@
 ---
 title: "UWP(유니버설 Windows 플랫폼) 앱에서 PGO(프로필 기반 최적화) 실행"
 author: erwals-msft
-translationtype: Human Translation
-ms.sourcegitcommit: cb0c425b9764cb20aeab500a0c47db9f573a0042
 ms.openlocfilehash: 60182879f9cf3d364974d6ec4d3c26ec76e0e105
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# 유니버설 Windows 플랫폼 앱에서 프로필 기반 최적화 실행 
+# <a name="running-profile-guided-optimization-on-universal-windows-platform-apps"></a>유니버설 Windows 플랫폼 앱에서 프로필 기반 최적화 실행 
  
 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에 PGO(프로필 기반 최적화)를 적용하는 단계별 가이드를 제공합니다. 클래식 win32 응용 프로그램에서 사용할 수 있는 모든 단계를 UWP 앱에서 사용할 수 있는 것은 아니므로 최적화 및 UWP 개발자의 접근성 향상을 위해 PGO를 통합하는 데 필요한 프로세스를 설명하는 것이 목표입니다.
 
@@ -77,14 +75,8 @@ DirectX 11 앱 템플릿에 PGO를 적용하려면
  
 10. 이제 프로젝트가 빌드되면 링커가 pgomgr.exe를 호출하여 `<PGDName>!*.pgc` 파일을 기본 가중치 값 1로 .pgd와 병합하고 프로파일링 데이터를 기준으로 결과 응용 프로그램이 최적화됩니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [성능](performance-and-xaml-ui.md)
 
  
-
-
-
-
-<!--HONumber=Sep16_HO2-->
-
 

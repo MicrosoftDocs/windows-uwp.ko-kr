@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
-description: "이 문서에서는 AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 및 조명이 어두운 상태에서 사진을 캡처하는 방법을 보여 줍니다."
+description: "이 문서에서는 AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 및 낮은 조명 사진을 캡처하는 방법을 보여 줍니다."
 title: "HDR(High Dynamic Range) 및 어두운 조명 사진 캡처"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e4ed8175e0f35733972474bbcc01cce9830f1e5b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 32badfb6cc2a069370623357ba96800cebd11c03
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -173,4 +170,3 @@ HDR 사진 캡처는 두 단계로 진행됩니다. 먼저, 여러 프레임이 
 
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-

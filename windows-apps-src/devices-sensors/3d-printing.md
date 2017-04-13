@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: de1c06d67db78cdc4638c27220d25f769912308e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: af636e445d2cad70922b8f846140e0886cf7ef28
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="3d-printing"></a>3D 인쇄
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 [3D 인쇄 API](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)를 활용하여 유니버설 Windows 앱에 3D 인쇄 기능을 추가하는 방법을 설명합니다.  
 
@@ -37,4 +35,3 @@ ms.lasthandoff: 02/07/2017
 * [Unity에서 UWP 3D 인쇄 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrintingFromUnity)
 
  
-

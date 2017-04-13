@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f78c828faded1d7efbd82bc41245052ce95862c7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b136c53cd39028c15ff55be803ae314c773a9be6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="get-battery-information"></a>배터리 정보 가져오기
 
@@ -342,5 +340,4 @@ namespace App1
 **팁** [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체에서 숫자 값을 받으려면 **로컬 컴퓨터** 또는 외부 **디바이스**(예: Windows Phone)에서 앱을 디버그합니다. 장치 에뮬레이터에서 디버그하는 경우 **BatteryReport** 개체는 용량 및 속도 속성에 **null**을 반환합니다.
 
  
-
 

@@ -12,11 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3700751db4b00405d3f2b5b41f6e487a32b56f38
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 85c23206d421d061b81f46645b6e6820fb079df3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="auto-suggest-box"></a>자동 제안 상자
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -49,7 +47,7 @@ Groove 음악 앱의 자동 제안 상자입니다.
 ![Groove 음악 앱의 자동 제안 상자](images/control-examples/auto-suggest-box-groove.png)
 
 ## <a name="anatomy"></a>구조
-자동 제안 상자에 대한 진입점은 옵션 힌트 텍스트가 있는 입력란과 옵션 헤더로 구성됩니다.
+자동 제안 상자에 대한 진입점은 선택적 힌트 텍스트가 있는 입력란과 선택적 헤더로 구성됩니다.
 
 ![자동 제안 컨트롤의 진입점 예](images/controls_autosuggest_entrypoint.png)
 
@@ -180,4 +178,3 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length.aspx)
-

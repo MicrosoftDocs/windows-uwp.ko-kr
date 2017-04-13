@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 터치, 컨트롤, directx, 입력"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 44d5071ee0cd695351c77630d699a1a060f477d6
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="touch-controls-for-games"></a>게임용 터치 컨트롤
 
 
@@ -353,7 +350,6 @@ void CameraPanController::Update( CoreWindow ^window )
  
 
  
-
 
 
 

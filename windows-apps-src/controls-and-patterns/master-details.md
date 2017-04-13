@@ -11,17 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96f9f9855dba48203e4372cef88d1f6ab7d435f5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-마스터/세부 정보 패턴에는 마스터 창(대개 [목록 보기](lists.md)가 있음) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 메일 및 주소록에 자주 사용됩니다.
+마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 메일 및 주소록에 자주 사용됩니다.
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
 
@@ -95,4 +93,3 @@ ms.lasthandoff: 02/07/2017
 - [검색](search.md)
 - [앱 및 명령 모음](app-bars.md)
 - [**ListView 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
-

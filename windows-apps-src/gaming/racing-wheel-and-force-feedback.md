@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 레이싱 휠, 힘 피드백"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ca8413a857fd4d8925a6767280a32a8336eeba19
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="racing-wheel-and-force-feedback"></a>레이싱 휠 및 힘 피드백
 
 이 페이지에서는 UWP(유니버설 Windows 플랫폼)용 [Windows.Gaming.Input.RacingWheel][racingwheel] 및 관련 API를 사용하여 Xbox One 레이싱 휠용 프로그래밍의 기본 사항을 설명합니다.
@@ -62,7 +59,7 @@ Xbox One 레이싱 휠은 종류마다 다양한 옵션 장치 기능 모음을 
 |              오른쪽으로 | D 패드 오른쪽으로        |
 |               보기 | 보기 버튼        |
 |               메뉴 | 메뉴 버튼        |
-|             동의 | A 버튼           |
+|             수락 | A 버튼           |
 |             취소 | B 버튼           |
 
 또한 일부 레이싱 휠은 탐색 명령에 대한 [선택 집합](ui-navigation-controller.md#optional-set) 중 일부를 지원되는 다른 입력에 매핑할 수 있지만 명령 매핑은 장치마다 다를 수 있습니다. 그러한 명령의 지원도 고려해 볼 수 있으나 해당 명령이 게임 인터페이스의 탐색에 필수적이지 않아야 합니다.
@@ -387,4 +384,3 @@ else
 [wheelmotor]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheel.wheelmotor.aspx
 [racingwheelreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelreading.aspx
 [racingwheelbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.racingwheelbuttons.aspx
-

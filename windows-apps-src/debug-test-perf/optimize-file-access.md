@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 31869b116096052bed9e1c462de3f93e4d1335c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 967ed4b6db682524bd06f81d4c6d7771cc41d84b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-file-access"></a>파일 액세스 최적화
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 
@@ -240,6 +238,5 @@ Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 읽기 및 쓰기의 대기 시간이 짧아야 하고 기본 UWP 스트림에서 큰 블록을 읽지 않는 경우에도 버퍼링을 방지할 수 있습니다. 예를 들어 네트워크 통신을 위해 스트림을 사용하는 경우 읽기 및 쓰기의 대기 시간이 짧아야 합니다.
 
 채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.
-
 
 

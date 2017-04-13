@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8aa20d434b4ea89d972712e48131e9a965476d1d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f0cf9d2928c8d6a0494092643daa19d9b437d3eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -132,7 +129,6 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
  
 
  
-
 
 
 

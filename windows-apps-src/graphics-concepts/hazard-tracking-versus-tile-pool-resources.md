@@ -2,21 +2,17 @@
 title: "위험 추적 및 타일 풀 리소스"
 description: "비 스트리밍 리소스의 경우, Direct3D는 렌더링하는 동안 특정 위험 조건을 예방할 수 있지만, 위험 추적이 스트리밍 리소스에 대해 타일 수준에 있기 때문에 스트리밍 리소스 렌더링 중 위험 조건 추적에 너무 많은 리소스가 필요할 수 있습니다."
 ms.assetid: 8B0C73D3-3F77-41E8-B17D-C595DEE39E49
-keywords:
-- "위험 추적 및 타일 풀 리소스"
+keywords: "위험 추적 및 타일 풀 리소스"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5321da19c4c168b48d7e2ba2f3edb7da7880e944
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2bdec458e13e3f2df54555716d59aefcc946ef7b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hazard-tracking-versus-tile-pool-resources"></a>위험 추적 및 타일 풀 리소스
 
 
@@ -36,7 +32,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

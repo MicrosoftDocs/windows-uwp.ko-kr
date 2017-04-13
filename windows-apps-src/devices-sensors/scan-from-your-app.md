@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2dc8ef975c58ba5eb1d8b59bee773c7b6219a03c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5233437bf1676cd63b4beebaf6b7004df2a8f0c6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="scan-from-your-app"></a>앱에서 스캔
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -178,4 +176,3 @@ cancellationToken = new CancellationTokenSource();
 ## <a name="scanning-to-the-pictures-library"></a>사진 라이브러리로 스캔
 
 사용자는 [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/BR207881) 클래스를 사용하여 동적으로 폴더로 스캔할 수 있지만, 사용자가 해당 폴더로 스캔할 수 있도록 하려면 매니페스트에 *사진 라이브러리* 기능을 선언해야 합니다. 앱 기능에 대한 자세한 내용은 [앱 기능 선언](https://msdn.microsoft.com/library/windows/apps/Mt270968)을 참조하세요.
-

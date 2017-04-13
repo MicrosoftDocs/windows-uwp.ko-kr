@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 10d8799b73a941a4a0eb89fd369d67b2fc6a68c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
 Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 REST API를 기반으로 합니다.
@@ -1179,7 +1176,7 @@ HTTP 상태 코드      | 설명
 
 **요청**
 
-다음 요청 형식을 사용하여 디바이스 패밀리(Xbox, 휴대폰, 데스크톱 등)을 가져올 수 있습니다.
+다음 요청 형식을 사용하여 디바이스 패밀리(Xbox, 휴대폰, 데스크톱 등)를 가져올 수 있습니다.
  
 메서드      | 요청 URI
 :------     | :-----
@@ -1200,7 +1197,7 @@ GET | /api/os/devicefamily
 
 **응답**
 
-응답에는 디바이스 패밀리(SKU - 데스크톱, Xbox 등)이 포함됩니다.
+응답에는 디바이스 패밀리(SKU - 데스크톱, Xbox 등)가 포함됩니다.
 
 ```
 {

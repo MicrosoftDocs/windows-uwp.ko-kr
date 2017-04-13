@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ffbccf88cd00331b622c158a7e46773ae62197e2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 28d005d76fa8d412eb283e409ea7f5d673bfd857
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="enterprise"></a>엔터프라이즈
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 로드맵은 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 대한 주요 엔터프라이즈 기능을 간략하게 설명합니다. Windows 10에서는 모든 디바이스에 맞게 조정되는 하나의 앱을 만들어 한 번 작성하여 모든 디바이스에 배포할 수 있습니다. 조직에서 필요로 하는 보안, 관리 및 구성에 대한 제어 기능을 제공하는 동시에 사용자가 기대하는 멋진 환경을 빌드할 수 있습니다.
 
@@ -117,4 +114,3 @@ Prism에 대한 자세한 내용은 [GitHub 리포지토리](https://github.com/
  
 
  
-

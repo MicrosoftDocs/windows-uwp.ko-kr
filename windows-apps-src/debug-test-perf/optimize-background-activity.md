@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 045dfeb4696a4854b114d88da2a2cbb75d621a58
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="optimize-background-activity"></a>백그라운드 작업 최적화
 
-유니버설 Windows 앱은 모든 장치 패밀리에서 일관된 성능으로 작동해야 합니다. 배터리 전원을 사용하는 디바이스에서는 전원 소비가 사용자의 전반적인 앱 환경에서 중요한 요소입니다. 배터리 사용 시간이 하루 종일 유지되는 것은 모든 사용자에게 유용한 기능이지만 해당 앱을 포함하여 디바이스에 설치된 모든 소프트웨어의 효율성이 필요합니다. 
+유니버설 Windows 앱은 모든 디바이스 패밀리에서 일관된 성능으로 작동해야 합니다. 배터리 전원을 사용하는 디바이스에서는 전원 소비가 사용자의 전반적인 앱 환경에서 중요한 요소입니다. 배터리 사용 시간이 하루 종일 유지되는 것은 모든 사용자에게 유용한 기능이지만 해당 앱을 포함하여 디바이스에 설치된 모든 소프트웨어의 효율성이 필요합니다. 
 
 백그라운드 작업 동작은 앱의 총 에너지 비용에서 가장 큰 요소입니다. 백그라운드 작업은 앱을 열지 않고 실행되도록 시스템에 등록된 모든 프로그램 활동입니다. 자세한 내용은 [out-of-process 백그라운드 작업 만들기 및 등록](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)을 참조하세요.
 
@@ -44,7 +41,7 @@ Windows 10 버전 1607부터 사용자는 설정 앱의 **배터리** 섹션에�
 ## <a name="further-optimize-background-tasks"></a>추가 백그라운드 작업 최적화
 다음은 백그라운드 작업을 등록할 때 배터리 인식을 향상하기 위해 수행할 수 있는 추가 단계입니다.
 
-유지 관리 트리거를 사용합니다. [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.maintenancetrigger.aspx) 개체 대신 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) 개체를 사용하여 백그라운드 작업이 시작되는 시기를 결정할 수 있습니다. 유지 관리 트리거를 사용하는 작업은 디바이스가 AC 전원에 연결된 경우에만 실행되며, 더 오래 실행할 수 있습니다. 지침은 [유지 관리 트리거 사용](https://msdn.microsoft.com/windows/uwp/launch-resume/use-a-maintenance-trigger)을 참조하세요.
+유지 관리 트리거를 사용합니다. [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) 개체 대신 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.maintenancetrigger.aspx) 개체를 사용하여 백그라운드 작업이 시작되는 시기를 결정할 수 있습니다. 유지 관리 트리거를 사용하는 작업은 디바이스가 AC 전원에 연결된 경우에만 실행되며, 더 오래 실행할 수 있습니다. 지침은 [유지 관리 트리거 사용](https://msdn.microsoft.com/windows/uwp/launch-resume/use-a-maintenance-trigger)을 참조하세요.
 
 **BackgroundWorkCostNotHigh** 시스템 조건 유형을 사용합니다. 백그라운드 작업을 실행하려면 시스템 조건을 충족해야 합니다(자세한 내용은 [백그라운드 작업 실행 조건 설정](https://msdn.microsoft.com/windows/uwp/launch-resume/set-conditions-for-running-a-background-task) 참조). 백그라운드 작업 비용은 백그라운드 작업 실행이 에너지에 미치는 *상대적인* 영향을 나타내는 측정값입니다. 디바이스가 AC 전원에 연결되어 있을 때 실행 중인 작업은 **낮음**(배터리에 미치는 영향이 거의/전혀 없음)으로 표시됩니다. 화면이 꺼진 상태로 디바이스가 배터리 전원을 사용할 때 실행 중인 작업은 당시에 디바이스에서 실행 중인 프로그램 활동이 거의 없어서 백그라운드 작업의 상대적인 비용이 커지기 때문에 **높음**으로 표시됩니다. 화면이 *켜진* 상태로 디바이스가 배터리 전원을 사용할 때 실행 중인 작업은 이미 실행 중인 일부 프로그램 활동이 있고 백그라운드 작업으로 인해 에너지 비용이 약간 더 추가되므로 **중간**으로 표시됩니다. **BackgroundWorkCostNotHigh** 시스템 조건은 단순히 화면이 켜지거나 디바이스가 AC 전원에 연결될 때까지 작업 실행을 연기합니다.
 
@@ -56,5 +53,4 @@ Windows 10 버전 1607부터 사용자는 설정 앱의 **배터리** 섹션에�
 
 * [out-of-process 백그라운드 작업 만들기 및 등록](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
 * [성능 계획](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
-
 

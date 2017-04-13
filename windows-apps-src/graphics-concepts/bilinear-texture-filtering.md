@@ -2,21 +2,17 @@
 title: "쌍선형 텍스처 필터링"
 description: "쌍선형 필터링은 샘플링 점에 가장 가까운 4텍셀의 가중 평균을 계산합니다."
 ms.assetid: 0851AD28-8246-4547-A663-47884DDDFC3E
-keywords:
-- "쌍선형 텍스처 필터링"
+keywords: "쌍선형 텍스처 필터링"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 635ca5b2e09c32c8d9644b1f3196ef888ef5ebc2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f2b23fc0665695663875125f4e226e233c3ef7e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bilinear-texture-filtering"></a>쌍선형 텍스처 필터링
 
 
@@ -97,7 +93,6 @@ UV: (0.375, 0.375)
  
 
  
-
 
 
 

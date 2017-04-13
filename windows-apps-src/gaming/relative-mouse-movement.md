@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 마우스, 입력"
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f207c1b7de4fd4a885c05c6988ecf685359d1d8b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dff08052af7f005366f9cb5154b307c13a316953
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="relative-mouse-movement-and-corewindow"></a>상대 마우스 이동 및 CoreWindow
 
-게임에서 마우스는 많은 플레이어에게 익숙한 공용 컨트롤 옵션이며 1인칭 및 3인칭 슈팅 게임과 실시간 전략 게임을 포함하여 많은 게임 장르에 필요합니다. 여기서는 시스템 커서를 사용하지 않고 절대 화면 좌표를 반환하지 않는 상대 마우스 컨트롤 구현에 대해 설명합니다. 대신 이 컨트롤은 마우스 이동 사이의 픽셀 델타를 추적합니다.
+게임에서 마우스는 많은 플레이어에게 익숙한 공용 컨트롤 옵션이며 첫 번째 및 세 번째 슈터와 실시간 전략 게임을 포함하여 많은 게임 장르에 필요합니다. 여기서는 시스템 커서를 사용하지 않고 절대 화면 좌표를 반환하지 않는 상대 마우스 컨트롤 구현에 대해 설명합니다. 대신 이 컨트롤은 마우스 이동 사이의 픽셀 델타를 추적합니다.
 
 게임 등의 일부 앱은 마우스를 보다 일반적인 입력 장치로 사용합니다. 예를 들어 3D 모델러는 마우스 입력을 통해 가상 트랙볼을 시뮬레이션하여 3D 개체의 방향을 지정할 수 있습니다. 또는 게임에서 마우스를 사용하여 마우스 모양 컨트롤을 통해 보기 카메라의 방향을 변경할 수 있습니다. 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0698a01b1f846581422c5ecf4d47a45dd22762c4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4c2664f214dca41ad5e7a5f82ca50af02cc45737
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -82,7 +79,7 @@ PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스
 
 이 섹션에서는 웹앱에 보안 중지를 추가하는 방법을 설명합니다.
 
-보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 장치의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
+보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 디바이스의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
 
 보안 중지 챌린지를 보내는 주요 시나리오는 두 가지가 있습니다.
 
@@ -304,7 +301,6 @@ function foo() {
 
 ## <a name="see-also"></a>참고 항목
 - [PlayReady DRM](playready-client-sdk.md)
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "DirectX 게임용 기본 3D 그래픽"
+title: "DirectX 게임의 기본 3D 그래픽"
 description: "DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하는 방법을 소개합니다."
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx, 그래픽"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 2ac11ce220bc1c62c81df12fbf9c2a41fda1d940
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="basic-3d-graphics-for-directx-games"></a>DirectX 게임용 기본 3D 그래픽
 
 
@@ -46,7 +43,7 @@ DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하�
 -   Windows 런타임을 사용해 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) 인터페이스 초기화
 -   꼭짓점별 셰이더 작업 적용 방법
 -   기하 도형 설정 방법
--   장면 래스터화(3D 장면을 2D 프로젝션으로 평면화) 방법
+-   장면 래스터화(3D 장면을 2D 투영으로 평면화) 방법
 -   숨겨진 표면 선별 방법
 
 > **참고**  
@@ -68,7 +65,6 @@ DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하�
  
 
  
-
 
 
 

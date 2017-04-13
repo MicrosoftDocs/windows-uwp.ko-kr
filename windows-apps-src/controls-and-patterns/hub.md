@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 32a558866457c4a9e9a359f12d43af317fc0f84a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: df2ed32801cbf1377e72b10aac0049575528408c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="hub-controlpattern"></a>허브 컨트롤/패턴
 
@@ -127,4 +125,3 @@ ms.lasthandoff: 02/07/2017
 - [탐색 기본 사항](../layout/navigation-basics.md)
 - [허브 사용](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 - [XAML 허브 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkID=310072)
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx, 템플릿"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 8b25dcd0de8d82e8bf8b6bf651ac6c264ade48c9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿
 
 
@@ -90,7 +87,6 @@ DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
  
 
  
-
 
 
 

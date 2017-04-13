@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 헤드셋"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 04baee2a3011cee63933fe1fdab759d1b6d29c89
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="headset"></a>헤드셋
 
-이 페이지는 [Windows.Gaming.Input.Headset][headset] 및 UWP(유니버설 Windows 플랫폼)에 대해 관련 API를 사용하는 헤드셋 프로그래밍의 기본 사항에 대해 설명합니다.
+이 페이지는 [Windows.Gaming.Input.Headset][헤드셋] 및 UWP(유니버설 Windows 플랫폼)에 대해 관련 API를 사용하는 헤드셋 프로그래밍의 기본 사항에 대해 설명합니다.
 
 이 페이지에서는 다음에 대해 알아봅니다.
 * 입력 장치 또는 탐색 장치에 연결된 헤드셋에 액세스하는 방법
@@ -76,5 +73,4 @@ XAudio 사용에 대한 세부 내용은 여기에서 다루지 않습니다. �
 [igamecontroller.headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headset.aspx
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
-[headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
-
+[헤드셋]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx

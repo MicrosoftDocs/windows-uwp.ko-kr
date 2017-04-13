@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 사용자 인터페이스, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 샘플 게임에서 주 게임 개체 및 기본 렌더링 프레임워크를 구현하는 방법을 살펴보았습니다. 이제 샘플 게임에서 플레이어의 게임 상태에 대한 피드백을 제공하는 방법을 살펴보겠습니다. 여기서는 3D 그래픽 파이프라인 출력의 맨 위에 간단한 메뉴 옵션 및 주의 표시 구성 요소를 추가하는 방법에 대해 알아봅니다.
 
@@ -1493,7 +1490,6 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
  
 
  
-
 
 
 

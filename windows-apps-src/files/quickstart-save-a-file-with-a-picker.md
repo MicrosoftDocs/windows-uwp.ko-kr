@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 46f79b34762eeb3424b887662418105e2e8a3ec2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ff685c37d1759d6f15542ed0716f6d4b6feef56f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="save-a-file-with-a-picker"></a>선택기를 사용하여 파일 저장
 
 
@@ -68,7 +65,7 @@ savePicker.SuggestedFileName = "New Document";
 > **참고**  [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) 개체는 [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891)를 사용하여 파일 선택기를 표시합니다.
 
      
-- 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br207880)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br241621)를 앱의 로컬 폴더로 설정합니다. [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
+- 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880)를 앱의 로컬 폴더로 설정합니다. [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
 
 - 파일이 저장된 후 앱에서 파일을 열 수 있는지 확인하려고 하므로 [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875)를 사용하여 샘플에서 지원하는 파일 형식(Microsoft Word 문서 및 텍스트 파일)을 지정합니다. 지정하는 모든 파일 형식이 앱에서 지원되는지 확인합니다. 사용자는 자신의 파일을 지정한 파일 형식으로 저장할 수 있습니다. 또한 지정된 다른 파일 형식을 선택하여 파일 형식을 변경할 수 있습니다. 목록에서 첫 번째 파일 형식 항목은 기본적으로 선택됩니다. 이를 제어하려면 [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873) 속성을 설정합니다.
 
@@ -118,4 +115,3 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
  
 
  
-

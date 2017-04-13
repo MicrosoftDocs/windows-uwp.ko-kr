@@ -2,21 +2,17 @@
 title: "데이터 형식 변환"
 description: "다음 섹션 Direct3D가 데이터 형식 간 변환을 처리하는 방법을 설명합니다."
 ms.assetid: B50AB8DE-CAED-465B-B18C-81F3A984B8AC
-keywords:
-- "데이터 형식 변환"
+keywords: "데이터 형식 변환"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d6c9e684f4e555bc725077696973be2d3f15a2c5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6813f7b55957c185a85fe82b90297b6ba5a470eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="data-type-conversion"></a>데이터 형식 변환
 
 
@@ -227,8 +223,8 @@ ms.lasthandoff: 02/07/2017
 <ul>
 <li>FixedMin 계산 = -2⁽ⁱ⁻¹⁾</li>
 <li>FixedMax 계산 = 2⁽ⁱ⁻¹⁾ - 2<sup>(-f)</sup></li>
-<li>n이 NaN이면 결과는 0이며, n이 +Inf인 경우 결과는 FixedMax*2<sup>f</sup>, n이 -Inf인 경우 결과는 FixedMin*2<sup>f입니다.</sup></li>
-<li>n &gt;= FixedMax인 경우 결과는 Fixedmax*2<sup>f</sup>이며, n &lt;= FixedMin인 경우 결과는 FixedMin*2<sup>f입니다.</sup></li>
+<li>n이 NaN이면 결과는 0이며, n이 +Inf인 경우 결과는 FixedMax*2<sup>f</sup>, n이 -Inf인 경우 결과는 FixedMin*2<sup>f</sup>입니다.</li>
+<li>n &gt;= FixedMax인 경우 결과는 Fixedmax*2<sup>f</sup>이며, n &lt;= FixedMin인 경우 결과는 FixedMin*2<sup>f</sup>입니다.</li>
 <li>다른 경우 n*2<sup>f</sup>를 계산하고 정수로 변환합니다.</li>
 </ul>
 <p>위 마지막 단계 후 무한 정밀 값인 n*2<sup>f</sup> 대신, 정수 결과에서 D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP 마지막 위치 단위 오차 범위 내의 구현이 허용됩니다.</p></td>
@@ -253,7 +249,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

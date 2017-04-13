@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dc0bad7d8625817cfffcc84f89afeed96a07a21f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef9d4c390112be66035ab2ace6b6b799ee9d99ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="out-of-band-pairing"></a>대역 외 페어링
 
-대역 외 페어링을 사용하면 앱이 검색 없이 POS(Point-of-Service) 주변 장치에 연결할 수 있습니다. 앱은 [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) 네임스페이스를 사용하고 구체적으로 서식이 지정된 문자열(대역 외 Blob)을 원하는 주변 디바이스에 적합한 **FromIdAsync** 메서드에 전달해야 합니다. **FromIdAsync**를 실행하면 작업이 호출자에게 반환되기 전에 호스트 디바이스가 페어링되고 주변 디바이스에 연결합니다.
+대역 외 페어링을 사용하면 앱이 검색 없이 POS(Point-of-Service) 주변 디바이스에 연결할 수 있습니다. 앱은 [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) 네임스페이스를 사용하고 구체적으로 서식이 지정된 문자열(대역 외 Blob)을 원하는 주변 디바이스에 적합한 **FromIdAsync** 메서드에 전달해야 합니다. **FromIdAsync**를 실행하면 작업이 호출자에게 반환되기 전에 호스트 디바이스가 페어링되고 주변 디바이스에 연결합니다.
 
 ## <a name="out-of-band-blob-format"></a>대역 외 Blob 형식
 
@@ -94,4 +92,3 @@ string oobBlobBTPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 ```
-

@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "플라이아웃은 사용자가 현재 수행하고 있는 작업과 관련된 UI를 일시적으로 표시할 때 사용하는 경량 팝업입니다."
+Description: "플라이아웃은 사용자가 현재 수행하고 있는 작업과 관련된 UI를 일시적으로 표시하는 데 사용되는 경량 팝업입니다."
 title: "메뉴 및 상황에 맞는 메뉴"
 label: Menus and context menus
 template: detail.hbs
@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: 0327d8c1-8329-4be2-84e3-66e1e9a0aa60
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 515c63d5612358cf90684427f8f747e19384c6ff
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3e194902b9fb166600ee58ec601993dc808a6853
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
@@ -166,9 +164,8 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 *   [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    대화형 형식의 모든 XAML 컨트롤을 보여 줍니다.
+    대화형 형식의 모든 XAML 컨트롤을 참조하세요.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [**MenuFlyout 클래스**](https://msdn.microsoft.com/library/windows/apps/dn299030)
-

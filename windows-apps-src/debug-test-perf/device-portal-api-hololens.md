@@ -3,18 +3,17 @@ author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: "HoloLens용 디바이스 포털 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 HoloLens REST API의 Windows Device Portal에 대해 알아봅니다."
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 638ebca167b2ca56f00a83aab13b15c57b2dca2a
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# HoloLens용 디바이스 포털 API 참조
+# <a name="device-portal-api-reference-for-hololens"></a>HoloLens용 디바이스 포털 API 참조
 
 Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 REST API를 기반으로 합니다.
 
-## 홀로그램 OS
+## <a name="holographic-os"></a>홀로그램 OS
 ---
-### 디바이스 포털에 대한 HTTPS 요구 사항 가져오기
+### <a name="get-https-requirements-for-the-device-portal"></a>디바이스 포털에 대한 HTTPS 요구 사항 가져오기
 
 **요청**
 
@@ -46,7 +45,7 @@ GET | /api/holographic/os/webmanagement/settings/https
 - 표준 상태 코드입니다.
 
 ---
-### 저장된 IPD(동공 간 거리) 가져오기
+### <a name="get-the-stored-interpupillary-distance-ipd"></a>저장된 IPD(동공 간 거리) 가져오기
 
 **요청**
 
@@ -78,7 +77,7 @@ GET | /api/holographic/os/settings/ipd
 - 표준 상태 코드입니다.
 
 ---
-### HoloLens 특정 ETW 공급자 목록 가져오기
+### <a name="get-a-list-of-hololens-specific-etw-providers"></a>HoloLens 특정 ETW 공급자 목록 가져오기
 
 **요청**
 
@@ -110,7 +109,7 @@ GET | /api/holographic/os/etw/customproviders
 - 표준 상태 코드입니다.
 
 ---
-### 모든 활성 서비스의 상태를 반환합니다.
+### <a name="return-the-state-for-all-active-services"></a>모든 활성 서비스의 상태를 반환합니다.
 
 **요청**
 
@@ -142,7 +141,7 @@ GET | /api/holographic/os/services
 - 표준 상태 코드입니다.
 
 ---
-### 디바이스 포털에 대한 HTTPS 요구 사항 설정
+### <a name="set-the-https-requirement-for-the-device-portal"></a>디바이스 포털에 대한 HTTPS 요구 사항 설정
 
 **요청**
 
@@ -178,7 +177,7 @@ required   | (**필수**) HTTPS가 디바이스 포털에 필요한지 여부를
 - 표준 상태 코드입니다.
 
 ---
-### IPD(I동공 간 거리)를 설정합니다.
+### <a name="set-the-interpupillary-distance-ipd"></a>IPD(I동공 간 거리)를 설정합니다.
 
 **요청**
 
@@ -214,9 +213,9 @@ ipd   | (**필수**) 저장될 새 IPD 값입니다. 이 값은 밀리미터 단
 - 표준 상태 코드입니다.
 
 ---
-## 홀로그램 인식
+## Holographic perception
 ---
-### Websocket 업그레이드를 수락하고 업데이트를 보내는 mirage 클라이언트 실행
+### <a name="accept-websocket-upgrades-and-run-a-mirage-client-that-sends-updates"></a>Websocket 업그레이드를 수락하고 업데이트를 보내는 mirage 클라이언트 실행
 
 **요청**
 
@@ -252,9 +251,9 @@ clientmode   | (**필수**) 추적 모드를 결정합니다. **active** 값은 
 - 표준 상태 코드입니다.
 
 ---
-## 홀로그램 열
+## Holographic thermal
 ---
-### 디바이스의 열 단계 가져오기
+### <a name="get-the-thermal-stage-of-the-device"></a>디바이스의 열 단계 가져오기
 
 **요청**
 
@@ -291,9 +290,9 @@ GET | /api/holographic/
 - 표준 상태 코드입니다.
 
 ---
-## HSimulation 컨트롤
+## HSimulation control
 ---
-### 컨트롤 스트림을 만들거나 만든 스트림에 데이터 게시
+### <a name="create-a-control-stream-or-post-data-to-a-created-stream"></a>컨트롤 스트림을 만들거나 만든 스트림에 데이터 게시
 
 **요청**
 
@@ -330,7 +329,7 @@ streamid   | (**만든 스트림에 게시하는 경우 필수**) 게시할 스�
 - 표준 상태 코드입니다.
 
 ---
-### 컨트롤 스트림 삭제
+### <a name="delete-a-control-stream"></a>컨트롤 스트림 삭제
 
 **요청**
 
@@ -362,7 +361,7 @@ DELETE | /api/holographic/simulation/control/stream
 - 표준 상태 코드입니다.
 
 ---
-### 컨트롤 스트림 가져오기
+### <a name="get-a-control-stream"></a>컨트롤 스트림 가져오기
 
 **요청**
 
@@ -394,7 +393,7 @@ GET/WebSocket | /api/holographic/simulation/control/stream
 - 표준 상태 코드입니다.
 
 ---
-### 시뮬레이션 모드 가져오기
+### <a name="get-the-simluation-mode"></a>시뮬레이션 모드 가져오기
 
 **요청**
 
@@ -426,7 +425,7 @@ GET | /api/holographic/simulation/control/mode
 - 표준 상태 코드입니다.
 
 ---
-### 시뮬레이션 모드 설정
+### <a name="set-the-simluation-mode"></a>시뮬레이션 모드 설정
 
 **요청**
 
@@ -462,9 +461,9 @@ URI 매개 변수 | 설명
 - 표준 상태 코드입니다.
 
 ---
-## HSimulation 재생
+## HSimulation playback
 ---
-### 기록 삭제
+### <a name="delete-a-recording"></a>기록 삭제
 
 **요청**
 
@@ -500,7 +499,7 @@ recording   | (**필수**) 삭제할 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 모든 기록 가져오기
+### <a name="get-all-recordings"></a>모든 기록 가져오기
 
 **요청**
 
@@ -532,7 +531,7 @@ GET | /api/holographic/simulation/playback/files
 - 표준 상태 코드입니다.
 
 ---
-### 로드된 기록의 데이터 유형 가져오기
+### <a name="get-the-types-of-data-in-a-loaded-recording"></a>로드된 기록의 데이터 유형 가져오기
 
 **요청**
 
@@ -568,7 +567,7 @@ recording   | (**필수**) 관심 있는 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 로드된 모든 기록 가져오기
+### <a name="get-all-the-loaded-recordings"></a>로드된 모든 기록 가져오기
 
 **요청**
 
@@ -600,7 +599,7 @@ GET | /api/holographic/simulation/playback/session/files
 - 표준 상태 코드입니다.
 
 ---
-### 기록의 현재 재생 상태 가져오기 
+### <a name="get-the-current-playback-state-of-a-recording"></a>기록의 현재 재생 상태 가져오기 
 
 **요청**
 
@@ -636,7 +635,7 @@ recording   | (**필수**) 관심 있는 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 기록 로드
+### <a name="load-a-recording"></a>기록 로드
 
 **요청**
 
@@ -672,7 +671,7 @@ recording   | (**필수**) 로드할 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 기록 일시 중지
+### <a name="pause-a-recording"></a>기록 일시 중지
 
 **요청**
 
@@ -708,7 +707,7 @@ recording   | (**필수**) 일시 중지할 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 기록 재생
+### <a name="play-a-recording"></a>기록 재생
 
 **요청**
 
@@ -744,7 +743,7 @@ recording   | (**필수**) 재생할 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 기록 중지
+### <a name="stop-a-recording"></a>기록 중지
 
 **요청**
 
@@ -780,7 +779,7 @@ recording   | (**필수**) 중지할 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 기록 언로드
+### <a name="unload-a-recording"></a>기록 언로드
 
 **요청**
 
@@ -816,7 +815,7 @@ recording   | (**필수**) 언로드할 기록의 이름입니다.
 - 표준 상태 코드입니다.
 
 ---
-### 기록 업로드
+### <a name="upload-a-recording"></a>기록 업로드
 
 **요청**
 
@@ -848,9 +847,9 @@ POST | /api/holographic/simulation/playback/file
 - 표준 상태 코드입니다.
 
 ---
-## HSimulation 기록
+## HSimulation recording
 ---
-### 기록 상태 가져오기
+### <a name="get-the-recording-state"></a>기록 상태 가져오기
 
 **요청**
 
@@ -882,7 +881,7 @@ GET | /api/holographic/simulation/recording/status
 - 표준 상태 코드입니다.
 
 ---
-### 기록 시작
+### <a name="start-a-recording"></a>기록 시작
 
 **요청**
 
@@ -925,7 +924,7 @@ singleSpatialMappingFrame   | (**선택**) 단일 공간 매핑 프레임만 기
 - 표준 상태 코드입니다.
 
 ---
-### 현재 기록 중지
+### <a name="stop-the-current-recording"></a>현재 기록 중지
 
 **요청**
 
@@ -957,9 +956,9 @@ POST | /api/holographic/simulation/recording/stop
 - 표준 상태 코드입니다.
 
 ---
-## 혼합 현실 캡처
+## Mixed reality capture
 ---
-### 디바이스에서 MRC(혼합 현실 캡처)를 삭제합니다.
+### <a name="delete-a-mixed-reality-capture-mrc-recording-from-the-device"></a>디바이스에서 MRC(혼합 현실 캡처)를 삭제합니다.
 
 **요청**
 
@@ -995,7 +994,7 @@ filename   | (**필수**) 삭제할 동영상 파일의 이름입니다. 이름�
 - 표준 상태 코드입니다.
 
 ---
-### MRC(혼합 현실 캡처) 파일 다운로드
+### <a name="download-a-mixed-reality-capture-mrc-file"></a>MRC(혼합 현실 캡처) 파일 다운로드
 
 **요청**
 
@@ -1032,7 +1031,7 @@ op   | (**선택**) 스트림을 다운로드하려면 이 값을 **stream**으�
 - 표준 상태 코드입니다.
 
 ---
-### MRC(혼합 현실 캡처) 설정 가져오기
+### <a name="get-the-mixed-reality-capture-mrc-settings"></a>MRC(혼합 현실 캡처) 설정 가져오기
 
 **요청**
 
@@ -1064,7 +1063,7 @@ GET | /api/holographic/mrc/settings
 - 표준 상태 코드입니다.
 
 ---
-### MRC(혼합 현실 캡처) 기록 상태를 가져옵니다.
+### <a name="get-the-status-of-the-mixed-reality-capture-mrc-recording"></a>MRC(혼합 현실 캡처) 기록 상태를 가져옵니다.
 
 **요청**
 
@@ -1096,7 +1095,7 @@ GET | /api/holographic/mrc/status
 - 표준 상태 코드입니다.
 
 ---
-### MRC(혼합 현실 캡처) 파일 목록 가져오기
+### <a name="get-the-list-of-mixed-reality-capture-mrc-files"></a>MRC(혼합 현실 캡처) 파일 목록 가져오기
 
 **요청**
 
@@ -1128,7 +1127,7 @@ GET | /api/holographic/mrc/files
 - 표준 상태 코드입니다.
 
 ---
-### MRC(혼합 현실 캡처) 설정 지정
+### <a name="set-the-mixed-reality-capture-mrc-settings"></a>MRC(혼합 현실 캡처) 설정 지정
 
 **요청**
 
@@ -1160,7 +1159,7 @@ POST | /api/holographic/mrc/settings
 - 표준 상태 코드입니다.
 
 ---
-### MRC(혼합 현실 캡처) 기록 시작
+### <a name="starts-a-mixed-reality-capture-mrc-recording"></a>MRC(혼합 현실 캡처) 기록 시작
 
 **요청**
 
@@ -1192,7 +1191,7 @@ POST | /api/holographic/mrc/video/control/start
 - 표준 상태 코드입니다.
 
 ---
-### 현재 MRC(혼합 현실 캡처) 기록 중지
+### <a name="stop-the-current-mixed-reality-capture-mrc-recording"></a>현재 MRC(혼합 현실 캡처) 기록 중지
 
 **요청**
 
@@ -1224,7 +1223,7 @@ POST | /api/holographic/mrc/video/control/stop
 - 표준 상태 코드입니다.
 
 ---
-### MRC(혼합 현실 캡처) 사진 촬영
+### <a name="take-a-mixed-reality-capture-mrc-photo"></a>MRC(혼합 현실 캡처) 사진 촬영
 
 **요청**
 
@@ -1256,9 +1255,9 @@ GET | /api/holographic/mrc/photo
 - 표준 상태 코드입니다.
 
 ---
-## 혼합 현실 스트리밍
+## Mixed reality streaming
 ---
-### 조각난 mp4의 청크 분할 다운로드를 시작합니다.
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>조각난 mp4의 청크 분할 다운로드를 시작합니다.
 
 **요청**
 
@@ -1297,7 +1296,7 @@ loopback   | (**선택**) 응용 프로그램 오디오 캡처 여부를 나타�
 - 표준 상태 코드입니다.
 
 ---
-### 조각난 mp4의 청크 분할 다운로드를 시작합니다.
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>조각난 mp4의 청크 분할 다운로드를 시작합니다.
 
 **요청**
 
@@ -1336,7 +1335,7 @@ loopback   | (**선택**) 응용 프로그램 오디오 캡처 여부를 나타�
 - 표준 상태 코드입니다.
 
 ---
-### 조각난 mp4의 청크 분할 다운로드를 시작합니다.
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>조각난 mp4의 청크 분할 다운로드를 시작합니다.
 
 **요청**
 
@@ -1375,7 +1374,7 @@ loopback   | (**선택**) 응용 프로그램 오디오 캡처 여부를 나타�
 - 표준 상태 코드입니다.
 
 ---
-### 조각난 mp4의 청크 분할 다운로드를 시작합니다.
+### <a name="initiates-a-chunked-download-of-a-fragmented-mp4"></a>조각난 mp4의 청크 분할 다운로드를 시작합니다.
 
 **요청**
 
@@ -1412,9 +1411,3 @@ loopback   | (**선택**) 응용 프로그램 오디오 캡처 여부를 나타�
 **상태 코드**
 
 - 표준 상태 코드입니다.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

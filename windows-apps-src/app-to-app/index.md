@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4e8c90996324e7481a7a4dab5a1ff3f30b139276
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8d700c707a3a3cdebe338ac51c8ebb5b37d94da3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-to-app-communication"></a>앱 간 통신
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -41,4 +38,3 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="see-also"></a>참고 항목
 - [UWP 앱 개발](https://developer.microsoft.com/windows/develop)
-

@@ -1,20 +1,18 @@
 ---
-title: "Windows as a service용 응용 프로그램 개발(Windows 10)"
+title: "Windows as a Service용 응용 프로그램 개발"
 description: "특정 Windows 빌드에서 앱 릴리스와 지원을 분리합니다."
-author: jdeckerMS
+author: jken
 redirect_url: ../updates-and-versions/application-development-for-windows-as-a-service/
-translationtype: Human Translation
-ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
-ms.openlocfilehash: 561f5ea0ab4ba5b456456cedf786479ef168e7c0
-
+ms.openlocfilehash: 4a5c3a502c857c286078e21563246aee62ae4f5f
+ms.sourcegitcommit: 253ed634522773e15199084a6f74a3a465c2b218
+translationtype: HT
 ---
-
-# Windows as a service용 응용 프로그램 개발
+# <a name="application-development-for-windows-as-a-service"></a>Windows as a Service용 응용 프로그램 개발
 
 **이 페이지는 ../updates-and-versions/application-development-for-windows-as-a-service/로 이동되었습니다.**
 
 **적용 대상**
--   Windows 10
+-   Windows10
 -   Windows 10 Mobile
 -   Windows 10 IoT Core K 
 
@@ -22,7 +20,7 @@ ms.openlocfilehash: 561f5ea0ab4ba5b456456cedf786479ef168e7c0
 
 Insider Preview 빌드로 배포된 빌드는 Windows 엔지니어링 팀에게 빌드가 실제 사용에서 얼마나 잘 수행되는지에 대한 중요한 데이터를 제공합니다. 또한 Windows 참가자들이 포함된 플라이팅을 통해 Microsoft는 이전보다 훨씬 더 많은 다양한 하드웨어, 응용 프로그램 및 네트워킹 환경에서 빌드를 테스트하고 훨씬 더 신속하게 문제점을 식별할 수 있습니다. 따라서 Microsoft는 커뮤니티에 초점을 맞춘 플라이팅이 이전보다 더 빠른 속도의 혁신 전달과 더 나은 공개 릴리스 품질을 가능하게 할 것이라고 믿습니다.
 
-## Windows 10 릴리스 유형 및 일정 계획
+## <a name="windows-10-release-types-and-cadences"></a>Windows 10 릴리스 유형 및 일정 계획
 
 Microsoft에서는 Windows 참가자에게 Insider Preview 빌드를 릴리스하지만 다음과 같은 두 가지 유형의 Windows 10 릴리스를 지속적으로 일반 사용자에게 널리 게시합니다.
 
@@ -42,7 +40,7 @@ Windows 10 개발 과정에서 Microsoft는 전보다 훨씬 빠르게 고객이
  
 자세한 내용은 [업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)을 참조하세요.
 
-## Windows as a service에서 앱 지원
+## <a name="supporting-apps-in-windows-as-a-service"></a>Windows as a service에서 앱 지원
 
 앱을 지원하는 기존의 접근 방식은 Windows 릴리스에 대한 응답으로 새로운 앱 버전을 릴리스하는 것이었습니다. 이 경우 기본 OS의 주요 변경 내용으로 인해 응용 프로그램 성능이 저하될 수 있다고 가정합니다. 이 모델에서는 ISV 파트너가 Windows 릴리스 빈도에 일치시켜야 하는 전용 개발 및 유효성 검사 주기가 사용됩니다.
 
@@ -58,7 +56,7 @@ Windows as a service 모델에서 Microsoft는 기본 OS의 호환성을 유지�
  
 다음 섹션에서는 Microsoft가 기본 OS의 호환성을 유지하기 위해 수행하는 단계에 대한 추가 정보를 확인할 수 있습니다. 결합된 OS 및 앱 에코시스템의 호환성을 유지하기 위해 수행할 수 있는 단계에 대한 지침도 제공됩니다. Windows Insider Preview 빌드를 활용하여 Windows 빌드를 릴리스하기 전에 앱 성능 저하를 감지하는 방법에 대한 섹션이 있습니다. 마지막으로, 계측 및 원격 분석 기반 접근 방식을 사용하여 Windows 빌드의 품질을 높이는 방법을 설명합니다. ISV도 앱 포트폴리오에 이와 유사한 접근 방식을 사용하는 것이 좋습니다.
 
-## 앱 호환성을 보장하기 위한 Windows 7 이후의 주요 변경 내용
+## <a name="key-changes-since-windows-7-to-ensure-app-compatibility"></a>앱 호환성을 보장하기 위한 Windows 7 이후의 주요 변경 내용
 
 Microsoft는 호환성이 개발자에게 중요하다는 것을 알고 있습니다. ISV와 개발자는 앱이 지원되는 모든 버전의 Windows OS에서 예상대로 실행될 것을 확인하려고 합니다. 소비자와 기업은 여기에 많은 투자를 하므로 구입한 앱이 계속 작동할 것을 확인하려고 합니다. Microsoft는 호환성이 구매 결정의 주요 기준임을 알고 있습니다. 모범 사례에 따라 잘 작성된 앱은 새로운 Windows 버전이 릴리스될 때 코드 변동이 훨씬 더 적으며 조각화를 줄입니다. 이러한 앱은 유지 관리를 위한 엔지니어링 투자를 줄이고 출시 시간을 단축합니다.
 
@@ -69,13 +67,13 @@ Windows 7 시간 범위에서 호환성은 사후 접근 방식이었습니다. 
 -   **통신**: API 변경 내용을 보다 엄격하게 제어하고 통신을 개선합니다.
 -   **플라이팅 및 피드백 루프**: Windows 참가자는 최종 빌드를 고객에게 릴리스하기 전에 호환성 문제를 찾는 능력을 향상하는 데 도움이 되는 Insider Preview 빌드를 받습니다. 이 피드백 프로세스는 버그를 노출할 뿐 아니라 사용자가 원하는 기능을 제공하도록 합니다.
 
-## 앱 호환성에 대한 모범 사례
+## <a name="best-practices-for-app-compatibility"></a>앱 호환성에 대한 모범 사례
 
 Microsoft는 진단 및 사용 현황 데이터를 사용하여 문제를 식별 및 해결하고, 제품 및 서비스를 개선하며, 사용자에게 개인 설정된 환경을 제공합니다. 수집하는 사용 현황 데이터는 Windows 에코시스템의 PC에서 실행하는 앱까지 확장됩니다. 고객이 사용하는 항목에 따라 목록을 작성하여 이러한 앱, 디바이스 및 드라이버를 새 버전의 Windows OS에 대해 테스트합니다. Windows 10은 지금까지 릴리스된 버전 중 가장 호환성이 큰 Windows 버전으로, 수천 개의 인기 앱에 대해 90% 이상의 호환성을 제공합니다. Windows 호환성 팀은 협력하여 해결 방법을 찾을 수 있도록 자주 ISV 파트너에게 연락하여 문제가 발견된 경우 피드백을 제공합니다. 공동 고객이 생산성이나 엔터테인먼트를 위해 사용하는 앱 또는 OS의 기능 손실 없이 원활하게 Windows를 업데이트할 수 있도록 해야 합니다.
 
 다음 섹션에는 앱이 Windows 10과 호환되도록 하는 몇 가지 Microsoft 권장 모범 사례가 포함되어 있습니다.
 
-### Windows 버전 확인
+### <a name="windows-version-check"></a>Windows 버전 확인
 
 Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호가 10.0으로 변경되었습니다. 이전처럼 OS 버전 변경 후 응용 프로그램 및 디바이스 호환성을 유지하기 위해 최선을 다하고 있습니다. 커널 종속성이 없는 대부분의 앱 범주에서 변경 내용은 앱 기능에 부정적인 영향을 주지 않으며, 기존 앱이 Windows 10에서 계속 잘 작동합니다.
 
@@ -92,11 +90,11 @@ Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호�
 
 맬웨어 방지 앱, 방화벽 앱 등의 앱을 소유한 경우 일반적인 피드백 채널 및 Windows 참가자 프로그램을 통해 작업해야 합니다.
 
-### 문서화되지 않은 API
+### <a name="undocumented-apis"></a>문서화되지 않은 API
 
 앱은 문서화되지 않은 Windows API를 호출하거나 특정 Windows 파일 내보내기 또는 레지스트리 키에 종속되면 안 됩니다. 이 경우 기능 손상, 데이터 손실, 잠재적 보안 문제 등이 발생할 수 있습니다. 앱에 필요한 기능을 사용할 수 없는 경우 일반적인 피드백 채널 및 Windows 참가자 프로그램을 통해 피드백을 제공할 수 있습니다.
 
-### UWP(유니버설 Windows 플랫폼) 및 Centennial 앱 개발
+### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>UWP(유니버설 Windows 플랫폼) 및 Centennial 앱 개발
 
 모든 Win32 앱 ISV는 앞으로 [UWP(유니버설 Windows 플랫폼)](http://go.microsoft.com/fwlink/?LinkID=780560) 및 특히 [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562) 앱을 개발하는 것이 좋습니다. 기존의 Win32 설치 관리자를 사용하지 않고 이러한 앱 패키지를 개발할 경우 유용한 이점이 있습니다. UWP 앱은 [Windows 스토어](http://go.microsoft.com/fwlink/?LinkID=780563)에서도 지원되므로 사용자를 일관된 버전으로 쉽게 자동 업데이트하여 지원 비용을 절감할 수 있습니다.
 
@@ -108,13 +106,13 @@ Win32 앱 형식이 Centennial 모델에서 작동하지 않는 경우 올바른
 -   모든 Windows 재배포 가능 구성 요소를 원래 패키징에 유지합니다. 이러한 구성 요소를 다시 패키징하는 경우 설치 관리자가 손상될 수 있습니다.
 -   설치 관리자 개발 시간을 예약합니다. 소프트웨어 개발 수명 주기 동안 설치 관리자가 결과물로 간과되는 경우가 많습니다.
 
-## 최적화된 테스트 전략 및 Insider Preview 빌드
+## <a name="optimized-test-strategies-and-flighting"></a>최적화된 테스트 전략 및 Insider Preview 빌드
 
 Windows OS Insider Preview 빌드는 최종 빌드를 일반 사용자에게 릴리스하기 전에 Windows 참가자에게 제공되는 중간 빌드를 가리킵니다. 이러한 중간 빌드를 사용하는 참가자가 많을수록 빌드 품질, 호환성 등에 대해 더 많은 피드백을 받을 수 있으며, 이러한 피드백은 최종 빌드의 품질 개선에 도움이 됩니다. 이 Insider Preview 빌드 프로그램에 참가하여 반복 OS 빌드에서 앱이 예상대로 작동하는지 확인할 수 있습니다. 또한 이러한 Insider Preview 빌드의 작동 상태, 발생한 문제 등에 대한 피드백을 제공하는 것이 좋습니다.
 
 앱이 스토어에 있는 경우 스토어를 통해 앱의 Insider Preview 빌드를 배포할 수 있습니다. 즉, Windows 참가자가 앱을 설치할 수 있습니다. 사용자가 앱을 설치할 수 있으며, 일반 사용자에게 앱을 릴리스하기 전에 앱에 대한 예비 피드백을 받을 수 있습니다. 다음 섹션에서는 Windows Insider Preview 빌드에 대해 앱을 테스트하는 단계를 간략하게 설명합니다.
 
-### 1단계: Windows 참가자 등록 및 Insider Preview 빌드에 참여
+### <a name="step-1-become-a-windows-insider-and-participate-in-flighting"></a>1단계: Windows 참가자 등록 및 Insider Preview 빌드에 참여
 [Windows 참가자](http://go.microsoft.com/fwlink/p/?LinkId=521639)는 플랫폼의 기능과 특징을 개선하는 데 도움이 되는 피드백을 통해 Windows 미래를 구체화할 수 있습니다. 활기찬 커뮤니티로, 여기서 다른 매니아에 연결하고, 포럼에 가입하고, 조언을 주고받고, 예정된 참가자 전용 이벤트에 대해 알아볼 수 있습니다.
 
 Windows 10, Windows 10 Mobile, 최신 Windows SDK 및 에뮬레이터의 Preview 빌드에 액세스할 수 있으므로 멋진 앱을 개발하고 유니버설 Windows 플랫폼 및 Windows 스토어에서 새로운 기능을 탐색하는 데 필요한 모든 도구를 자유롭게 사용할 수 있습니다.
@@ -129,7 +127,7 @@ Windows 참가자로 등록하기 전에 다음과 같은 참가자 조건을 �
 -   ISO 파일이 무엇이며 사용하는 방법을 아는 경우
 -   매일 사용하는 컴퓨터나 디바이스에 설치하지 않는 경우
 
-### 2단계: 시나리오 테스트
+### <a name="step-2-test-your-scenarios"></a>2단계: 시나리오 테스트
 
 Insider Preview 빌드로 업데이트한 후 테스트 및 피드백 수집을 시작하는 데 도움이 되는 몇 가지 샘플 테스트 사례는 다음과 같습니다. 대체로 이러한 테스트에 대해 x86 및 AMD64 시스템을 둘 다 확인해야 합니다.
 **새로 설치 테스트:** Windows 10을 새로 설치하는 경우 앱이 제대로 작동하는지 확인합니다. 앱이 이 테스트와 업그레이드 테스트에 실패할 경우 앱의 기본 OS 변경 내용 또는 버그로 인한 문제일 가능성이 큽니다. 조사 후 기본 OS 변경 내용으로 인해 문제가 발생한 경우 Windows 참가자 프로그램을 사용하여 피드백을 제공하고 협력해서 해결 방법을 찾아야 합니다.
@@ -150,18 +148,12 @@ Insider Preview 빌드로 업데이트한 후 테스트 및 피드백 수집을 
 -   센서(가속도계, 퓨전 등)
 -   카메라
 
-### 3단계: 피드백 제공
+### <a name="step-3-provide-feedback"></a>3단계: 피드백 제공
 
 Insider Preview 빌드에서 앱의 수행 방식을 알려주세요. 테스트 중에 앱에서 문제를 발견하면 파트너 포털(액세스 권한이 있는 경우)이나 Microsoft 담당자를 통해 버그를 로깅하세요. 사용자 전체를 위한 고품질 환경을 빌드할 수 있도록 이 정보를 제공하는 것이 좋습니다.
 
-### 4단계: Windows 10에서 등록
+### <a name="step-4-register-on-windows-10"></a>4단계: Windows 10에서 등록
 [Windows 10 준비](http://go.microsoft.com/fwlink/?LinkID=780580) 웹 사이트는 Windows 10을 지원하는 소프트웨어 디렉터리입니다. 배포에 Windows 10을 고려 중인 전 세계 회사 및 조직의 IT 관리자를 위한 것입니다. IT 관리자는 엔터프라이즈에 배포된 소프트웨어가 Windows 10에서 지원되는지 여부를 사이트에서 확인할 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 [업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-

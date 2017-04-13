@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: eae6c26979f3aa6b1c9fabf217f6a49ed89dd38b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 921af1b7f408bed5f846af631592755d48a37dd4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="keep-the-ui-thread-responsive"></a>UI 스레드 응답 유지
 
@@ -109,5 +107,4 @@ public class AsyncExample
 ## <a name="related-topics"></a>관련 항목
 
 * [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-
 

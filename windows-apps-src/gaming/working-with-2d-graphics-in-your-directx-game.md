@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "DirectX 게임의 2D 그래픽"
+title: "DirectX 게임용 2D 그래픽"
 description: "2D 비트맵 그래픽의 사용 및 효과와 게임에서 사용하는 방법에 대해 검토합니다."
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
 ms.author: mtoepke
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, games, directx, 2d, 그래픽"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 702b47d4002e9a2d0d62cc67e71432bb630e21d4
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="2d-graphics-for-directx-games"></a>DirectX 게임용 2D 그래픽
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-2D 비트맵 그래픽의 사용 및 효과와 게임에서 사용하는 방법에 대해 검토합니다.
+2D 비트맵 그래픽 및 효과의 용도와 게임에서 사용하는 방법에 대해 검토합니다.다.
 
 2D 그래픽은 2D 원형 또는 비트맵을 처리하는 3D 그래픽의 하위 집합입니다. 좀더 일반적으로 말하자면 게임 플레이가 일반적으로 x-y 평면으로 제한되기 때문에 3D 게임에서 수행할 수 있는 방식에서 z 좌표를 사용하지 않는 것입니다. 경우에 따라 3D 그래픽 기술을 사용하여 화면 효과 구성 요소를 만들기도 하지만 일반적으로 개발하는 것이 더 간단합니다. 게임이 처음인 경우 2D 게임에서 시작하는 것이 좋으며 2D 그래픽 개발은 DirectX에 대한 핸들을 가져올 수 있는 좋은 방법이 될 수 있습니다.
 
@@ -72,7 +69,6 @@ DirectX에서 2D 그래픽은 3D 파이프라인의 일부입니다. 훨씬 더 
  
 
  
-
 
 
 

@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: e062ed2910e20ba187b8a0726a0061f0dd4b07f8
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 0d10a0c7f269cc6c7d0b2e9476a926226fe94f82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 
@@ -53,9 +51,9 @@ RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 �
 
 **목록 보기 템플릿 수정**
 
-당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) 위의 [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx)에 배치됩니다.
+당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx) 위의 [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)에 배치됩니다.
 
-> **참고**&nbsp;&nbsp; `DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
+> **참고**&nbsp;&nbsp;`DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
 
 다음은 기본 ListView 템플릿에서 수정된 컨트롤 템플릿의 일부입니다.
 

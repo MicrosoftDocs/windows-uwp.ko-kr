@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
-description: "Windows.Media.Transcoding API를 사용하여 동영상 파일을 한 형식에서 다른 형식으로 코드 변환할 수 있습니다."
+description: "동영상 파일을 한 형식에서 다른 형식으로 코드 변환하려면 Windows.Media.Transcoding API를 사용할 수 있습니다."
 title: "미디어 파일 코드 변환"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bcf9532f65b9f0574942d1fb4dd23f5a63613ec9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c9e6a6437e427ca6b5bd063d467fd713526ea8ee
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="transcode-media-files"></a>미디어 파일 코드 변환
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -43,15 +40,27 @@ ms.lasthandoff: 02/07/2017
 
 [**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 클래스는 미리 정의된 인코딩 프로필을 만들기 위한 정적 메서드를 제공합니다.
 
--   Wav
--   AAC 오디오(M4A)
--   MP3 오디오
--   WMA(Windows Media 오디오)
--   Avi
--   MP4 비디오(H.264 비디오 및 AAC 오디오)
--   WMV(Windows Media 비디오)
+### <a name="methods-for-creating-audio-only-encoding-profiles"></a>오디오 전용 인코딩 프로필 만들기 위한 메서드
 
-이 목록의 처음 네 개 프로필에는 오디오만 포함되어 있습니다. 다른 세 개의 프로필에는 비디오와 오디오가 포함되어 있습니다.
+메서드  |프로필  |
+---------|---------|
+[CreateAlac](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateAlac_Windows_Media_MediaProperties_AudioEncodingQuality_)     |ALAC(Apple 무손실 오디오 코덱) 오디오         |
+[CreateFlac](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateFlac_Windows_Media_MediaProperties_AudioEncodingQuality_)     |FLAC(무료 무손실 오디오 코덱) 오디오.         |
+[CreateM4a](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateM4a_Windows_Media_MediaProperties_AudioEncodingQuality_)     |AAC 오디오(M4A)         |
+[CreateMp3](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateMp3_Windows_Media_MediaProperties_AudioEncodingQuality_)     |MP3 오디오         |
+[CreateWav](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateWav_Windows_Media_MediaProperties_AudioEncodingQuality_)     |WAV 오디오         |
+[CreateWmv](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateWmv_Windows_Media_MediaProperties_VideoEncodingQuality_)     |WMA(Windows Media 오디오)         |
+
+### <a name="methods-for-creating-audio--video-encoding-profiles"></a>오디오/비디오 인코딩 프로필을 만들기 위한 메서드
+
+메서드  |프로필  |
+---------|---------|
+[CreateAvi](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateAvi_Windows_Media_MediaProperties_VideoEncodingQuality_)     |AVI         |
+[CreateHevc](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateHevc_Windows_Media_MediaProperties_VideoEncodingQuality_)     |HEVC(고효율성 비디오 코딩) 비디오, H.265 비디오라고도 함         |
+[CreateMp4](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateMp4_Windows_Media_MediaProperties_VideoEncodingQuality_)     |MP4 비디오(H.264 비디오 및 AAC 오디오)         |
+
+[CreateWmv](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile#Windows_Media_MediaProperties_MediaEncodingProfile_CreateWmv_Windows_Media_MediaProperties_VideoEncodingQuality_)     |WMV(Windows Media 비디오)         |
+
 
 다음 코드는 MP4 동영상용 프로필을 만듭니다.
 
@@ -76,7 +85,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

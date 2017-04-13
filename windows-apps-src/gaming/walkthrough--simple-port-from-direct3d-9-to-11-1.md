@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "연습 - 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅"
+title: "연습 - Direct3D 9에서 DirectX 11 및 UWP로 포팅"
 description: "이 포팅 연습에서는 간단한 렌더링 프레임워크를 Direct3D 9에서 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 가져오는 방법을 보여 줍니다."
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1e3f9b7fbfaa110661ebb111c60d0089757dc885
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ee5d1f0af65debe309c64fc334a1c2bd5dc15f98
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 
 
@@ -87,5 +84,4 @@ ms.lasthandoff: 02/07/2017
 
 * [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 * [**개체 운영자에 대한 핸들(^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
-
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6251ff13e6cc751ad370a43950cfdbb9dca0ecc8
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 148bb77f9386864a1b127341aa875beb7123bae9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="play-media-in-the-background"></a>백그라운드에서 미디어 재생
 이 문서에서는 앱이 포그라운드에서 백그라운드로 이동될 때 미디어가 계속 재생되도록 앱을 구성하는 방법을 보여 줍니다. 즉, 사용자가 홈 화면에서 반환된 앱을 최소화했거나 다른 방법으로 앱에서 외부로 이동한 후에도 앱은 오디오를 계속 재생할 수 있습니다. 
 
@@ -25,13 +22,13 @@ ms.lasthandoff: 02/08/2017
 
 -   **작업 전환기 사용:** 사용자가 간단하게 포그라운드 앱을 표시하여 오디오 재생을 시작한 다음 작업 전환을 사용하여 열려 있는 다른 앱으로 전환할 수 있습니다. 사용자는 예상대로 백그라운드에서 오디오를 계속 재생할 수 있습니다.
 
-이 문서에 설명된 배경 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 장치에서 앱을 실행할 수 있습니다.
+이 문서에 설명된 배경 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 디바이스에서 앱을 실행할 수 있습니다.
 
 > [!NOTE]
 > 이 문서의 코드는 UWP [배경 오디오 샘플](http://go.microsoft.com/fwlink/p/?LinkId=800141)에서 조정되었습니다.
 
 ## <a name="explanation-of-one-process-model"></a>단일 프로세스 모델에 대한 설명
-Windows 10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 프로세스를 훨씬 간소화하는 새로운 단일 프로세스 모델이 도입되었습니다. 이전에는 앱이 포그라운드 앱뿐 아니라 백그라운드 프로세스도 관리한 다음 두 프로세스 간에 상태 변경을 수동으로 통신해야 했습니다. 새 모델에서는 앱 매니페스트에 배경 오디오 접근 권한 값을 추가하기만 하면 앱이 백그라운드로 이동될 때 자동으로 오디오 재생을 계속합니다. 새로운 두 가지 응용 프로그램 수명 주기 이벤트인 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 및 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)를 사용하면 앱이 백그라운드로 이동하고 나가는 시기를 알 수 있습니다. 앱이 백그라운드로 이동하거나 나갈 때 시스템에서 적용하는 메모리 제약 조건이 변경될 수 있으므로 이러한 이벤트를 사용하여 현재 메모리 사용을 확인하고 제한 아래로 유지하기 위해 리소스를 해제할 수 있습니다.
+Windows10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 프로세스를 훨씬 간소화하는 새로운 단일 프로세스 모델이 도입되었습니다. 이전에는 앱이 포그라운드 앱뿐 아니라 백그라운드 프로세스도 관리한 다음 두 프로세스 간에 상태 변경을 수동으로 통신해야 했습니다. 새 모델에서는 앱 매니페스트에 배경 오디오 접근 권한 값을 추가하기만 하면 앱이 백그라운드로 이동될 때 자동으로 오디오 재생을 계속합니다. 새로운 두 가지 응용 프로그램 수명 주기 이벤트인 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 및 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)를 사용하면 앱이 백그라운드로 이동하고 나가는 시기를 알 수 있습니다. 앱이 백그라운드로 이동하거나 나갈 때 시스템에서 적용하는 메모리 제약 조건이 변경될 수 있으므로 이러한 이벤트를 사용하여 현재 메모리 사용을 확인하고 제한 아래로 유지하기 위해 리소스를 해제할 수 있습니다.
 
 새 모델을 사용하면 복잡한 프로세스 간 통신 및 상태 관리가 제거되므로 코드 작업이 훨씬 감소하며 배경 오디오를 보다 신속하게 구현할 수 있습니다. 그러나 이전 버전과의 호환성을 위해 현재 릴리스에서는 두 프로세스 모델도 계속 지원됩니다. 자세한 내용은 [레거시 배경 오디오 모델](legacy-background-media-playback.md)을 참조하세요.
 
@@ -102,7 +99,6 @@ Windows 10 버전 1607에서는 배경 오디오를 사용하도록 설정하�
  
 
  
-
 
 
 

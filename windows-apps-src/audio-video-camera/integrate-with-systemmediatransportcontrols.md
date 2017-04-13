@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: eb690f2b-3bf8-4a65-99a4-2a3a8c7760b7
-description: "이 문서에서는 시스템 미디어 전송 컨트롤을 조작하는 방법을 보여줍니다."
+description: "이 문서에서는 시스템 미디어 전송 컨트롤을 조작하는 방법을 보여 줍니다."
 title: "시스템 미디어 전송 컨트롤과 통합"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 166e63659d138db2c4a6c49f11a2277eae790529
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ca8910129ba0993597be905a24fb5b2c5c4061a4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="integrate-with-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤과 통합
 
-이 문서에서는 SMTC(시스템 미디어 전송 컨트롤)를 조작하는 방법을 보여줍니다. SMTC는 모든 Windows 10 디바이스에 공통적으로 적용되고 사용자가 재생을 위해 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)를 사용하는 실행 중인 모든 앱의 미디어 재생을 제어할 수 있는 일관된 방법을 제공하는 컨트롤 집합입니다.
+이 문서에서는 SMTC(시스템 미디어 전송 컨트롤)를 조작하는 방법을 보여 줍니다. SMTC는 모든 Windows 10 디바이스에 공통적으로 적용되고 사용자가 재생을 위해 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)를 사용하는 실행 중인 모든 앱의 미디어 재생을 제어할 수 있는 일관된 방법을 제공하는 컨트롤 집합입니다.
 
 SMTC와 통합을 보여 주는 전체 샘플을 보려면 [github의 시스템 미디어 전송 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)을 참조하세요.
                     
@@ -32,7 +29,7 @@ XAML 페이지에서 [**MediaPlayerElement**](https://msdn.microsoft.com/library
 **MediaSource**, **MediaPlaybackItem**, **MediaPlaybackList** 작업 방법에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
 ##<a name="add-metadata-to-be-displayed-by-the-smtc"></a>SMTC에서 표시할 메타데이터 추가
-SMTC에서 비디오 또는 노래 제목과 같은 미디어 항목에 표시되는 메타데이터를 수정하거나 추가하려는 경우 미디어 항목을 나타내는 **MediaPlaybackItem**의 표시 속성을 업데이트해야 합니다. 먼저 [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties)를 호출하여 [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties) 개체에 대한 참조를 가져옵니다. [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type) 속성을 사용하여 항목에 대한 미디어 유형(음악 또는 비디오)을 설정합니다. 지정한 미디어 유형에 따라 [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) 또는 [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) 필드를 채웁니다. 마지막으로, [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923)를 호출하여 미디어 항목에 대한 메타데이터를 업데이트합니다.
+SMTC에서 비디오 또는 노래 제목과 같은 미디어 항목에 표시되는 메타데이터를 수정하거나 추가하려는 경우 미디어 항목을 나타내는 **MediaPlaybackItem**의 표시 속성을 업데이트해야 합니다. 먼저 [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties)를 호출하여 [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties) 개체에 대한 참조를 가져옵니다. [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type) 속성을 사용하여 항목에 대한 미디어 유형(음악 또는 비디오)을 설정합니다. 지정한 미디어 유형에 따라 [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) 또는 [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) 필드를 채웁니다. 마지막으로, [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923)를 호출하여 미디어 항목에 대한 메타데이터를 업데이트합니다.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
@@ -57,7 +54,7 @@ SMTC에서 비디오 또는 노래 제목과 같은 미디어 항목에 표시�
 
 [!code-cs[EnableNextButton](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetEnableNextButton)]
 
-앱이 포그라운드에 있는 동안 재생을 제어하기 위한 고유한 UI가 있을 수 있으므로 처리기에 전달된 [**MediaPlaybackCommandManagerCommandBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabledChanged)의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabled)에 액세스하여 명령이 사용할 수 있거나 사용할 수 없도록 설정될 때 [**IsEnabledChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior) 이벤트를 사용하여 해당 UI를 SMTC에 맞게 업데이트할 수 있습니다.
+앱이 포그라운드에 있는 동안 재생을 제어하기 위한 고유한 UI가 있을 수 있으므로 처리기에 전달된 [**MediaPlaybackCommandManagerCommandBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior)의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabled)에 액세스하여 명령이 사용할 수 있거나 사용할 수 없도록 설정될 때 [**IsEnabledChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabledChanged) 이벤트를 사용하여 해당 UI를 SMTC에 맞게 업데이트할 수 있습니다.
 
 [!code-cs[IsEnabledChanged](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetIsEnabledChanged)]
 
@@ -86,7 +83,6 @@ SMTC 명령의 동작을 완전히 재정의하려는 경우도 있습니다. �
  
 
  
-
 
 
 

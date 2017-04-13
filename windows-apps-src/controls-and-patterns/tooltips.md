@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5ea37534ab88391954f72cbf80b21fd994dc1ee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 07a4b7fdd600c49cf545c69f9d87eb21ef8d9a67
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="tooltips"></a>도구 설명
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -78,4 +76,3 @@ Bing 지도 앱의 도구 설명입니다.
 관련 항목
 
 * [**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)
-

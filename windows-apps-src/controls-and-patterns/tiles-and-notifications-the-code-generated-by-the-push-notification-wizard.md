@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96086cb73a091964b2108c64dcc5ce6b32891629
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3aadc2c4d7e40b2d5df6bc32c5c040c5f5cc1e56
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -252,7 +249,6 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
  
 
  
-
 
 
 

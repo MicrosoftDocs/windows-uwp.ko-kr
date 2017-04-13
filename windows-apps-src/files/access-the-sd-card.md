@@ -2,32 +2,28 @@
 author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: "SD 카드에 액세스"
-description: "특히 내부 저장 용량이 제한적인 저가대의 장치에서는 중요하지 않은 데이터를 옵션 microSD 카드에 저장하고 액세스할 수 있습니다."
+description: "중요하지 않은 데이터는 옵션인 microSD 카드에 저장하고 액세스할 수 있습니다. 특히 내부 저장 용량이 제한적인 저가대의 장치에서는 이 기능이 유용합니다."
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3fc8bbaa0b665b640974b5342b2b60c9b7f90143
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, uwp, sd 카드, 저장소"
+ms.openlocfilehash: 89dfed0cbd8a4a87f432a747e4155cdef3bbc757
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="access-the-sd-card"></a>SD 카드에 액세스
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 
-특히 내부 저장 용량이 제한적인 저가대의 장치에서는 중요하지 않은 데이터를 옵션 microSD 카드에 저장하고 액세스할 수 있습니다.
+중요하지 않은 데이터는 옵션인 microSD 카드에 저장하고 액세스할 수 있습니다. 특히 내부 저장 용량이 제한적인 저가대의 장치에 SD 카드 슬롯이 있을 때 이 기능이 유용합니다.
 
 앱에서 SD 카드에 파일을 저장하고 액세스하려면 먼저 앱 매니페스트 파일에서 **removableStorage** 접근 권한 값을 지정해야 합니다. 일반적으로 앱이 저장하고 액세스하는 파일의 형식을 처리하려면 등록해야 합니다.
 
-다음 방법을 사용하여 옵션 SD 카드에 파일을 저장하고 액세스할 수 있습니다.
-
+다음 방법을 사용하여 선택 사항인 SD 카드에 파일을 저장하고 액세스할 수 있습니다.
 - 파일 선택기
-
 - [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) API
 
 ## <a name="what-you-can-and-cant-access-on-the-sd-card"></a>SD 카드에서 액세스할 수 있는 항목 및 액세스할 수 없는 항목
@@ -35,15 +31,12 @@ ms.lasthandoff: 02/07/2017
 ### <a name="what-you-can-access"></a>액세스할 수 있는 항목
 
 - 앱은 앱 매니페스트 파일에서 앱이 처리하는 것으로 등록되어 있는 파일 형식의 파일만 읽고 쓸 수 있습니다.
-
 - 앱은 폴더를 만들고 관리할 수도 있습니다.
 
 ### <a name="what-you-cant-access"></a>액세스할 수 없는 항목
 
 - 앱은 시스템 폴더 및 이 폴더에 있는 파일을 표시하거나 액세스할 수 없습니다.
-
 - 앱은 Hidden 특성으로 표시된 파일을 볼 수 없습니다. Hidden 특성은 일반적으로 데이터를 실수로 삭제하는 위험을 줄이는 데 사용됩니다.
-
 - 앱은 [**KnownFolders.DocumentsLibrary**](https://msdn.microsoft.com/library/windows/apps/br227152)를 사용하여 문서 라이브러리를 보거나 액세스할 수 없습니다. 그러나 파일 시스템을 트래버스하여 SD 카드의 문서 라이브러리에 액세스할 수 있습니다.
 
 ## <a name="security-and-privacy-considerations"></a>보안 및 개인 정보 설정 고려 사항
@@ -51,7 +44,6 @@ ms.lasthandoff: 02/07/2017
 앱이 SD 카드의 전역 위치에 파일을 저장하면 해당 파일은 암호화되지 않으므로 일반적으로 다른 앱에서 파일에 액세스할 수 있습니다.
 
 - SD 카드가 장치에 있는 동안에는 동일한 파일 형식을 처리하도록 등록되어 있는 다른 앱에서 해당 파일에 액세스할 수 있습니다.
-
 - SD 카드를 장치에서 빼고 PC에서 열면 파일을 파일 탐색기에서 볼 수 있으며 다른 앱에서 액세스할 수 있습니다.
 
 SD 카드에 설치된 앱이 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)에 파일을 저장하면 해당 파일은 암호화되고 다른 앱에서 파일에 액세스할 수 없습니다.
@@ -78,23 +70,24 @@ SD 카드가 있는지 여부를 확인하고 이 카드에 대한 참조를 [**
 ```csharp
 using Windows.Storage;
 
-...
+// Get the logical root folder for all external storage devices.
+StorageFolder externalDevices = Windows.Storage.KnownFolders.RemovableDevices;
 
-            // Get the logical root folder for all external storage devices.
-            StorageFolder externalDevices = Windows.Storage.KnownFolders.RemovableDevices;
+// Get the first child folder, which represents the SD card.
+StorageFolder sdCard = (await externalDevices.GetFoldersAsync()).FirstOrDefault();
 
-            // Get the first child folder, which represents the SD card.
-            StorageFolder sdCard = (await externalDevices.GetFoldersAsync()).FirstOrDefault();
-
-            if (sdCard != null)
-            {
-                // An SD card is present and the sdCard variable now contains a reference to it.
-            }
-            else
-            {
-                // No SD card is present.
-            }
+if (sdCard != null)
+{
+    // An SD card is present and the sdCard variable now contains a reference to it.
+}
+else
+{
+    // No SD card is present.
+}
 ```
+
+> [!NOTE]
+> SD 카드 판독기가 내장 판독기(예: 노트북이나 PC 자체의 슬롯)인 경우, KnownFolders.RemovableDevices를 통해 액세스할 수 없습니다.
 
 ### <a name="querying-the-contents-of-the-sd-card"></a>SD 카드의 콘텐츠 쿼리
 
@@ -107,7 +100,6 @@ SD 카드는 알려진 폴더로 인식되지 않는 파일과 많은 폴더를 
 [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158)에서 파생된 경로를 사용하여 SD 카드에 있는 파일 시스템에 액세스하는 경우, 다음 메서드는 다음과 같은 방법으로 동작합니다.
 
 -   [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227273) 메서드는 사용자가 처리하기 위해 등록한 파일 확장명과 사용자가 지정한 모든 미디어 라이브러리 접근 권한 값과 관련된 파일 확장명의 합집합을 반환합니다.
-
 -   액세스하려는 파일의 파일 확장명을 처리하도록 등록하지 않은 경우 [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206) 메서드가 실패합니다.
 
 ## <a name="identifying-the-individual-sd-card"></a>개별 SD 카드 식별
@@ -121,35 +113,32 @@ SD 카드를 처음 끼우면 운영 체제에서 카드의 고유 식별자를 
 ```csharp
 using Windows.Storage;
 
-...
+// Get the logical root folder for all external storage devices.
+StorageFolder externalDevices = Windows.Storage.KnownFolders.RemovableDevices;
 
-            // Get the logical root folder for all external storage devices.
-            StorageFolder externalDevices = Windows.Storage.KnownFolders.RemovableDevices;
+// Get the first child folder, which represents the SD card.
+StorageFolder sdCard = (await externalDevices.GetFoldersAsync()).FirstOrDefault();
 
-            // Get the first child folder, which represents the SD card.
-            StorageFolder sdCard = (await externalDevices.GetFoldersAsync()).FirstOrDefault();
+if (sdCard != null)
+{
+    var allProperties = sdCard.Properties;
+    IEnumerable<string> propertiesToRetrieve = new List<string> { "WindowsPhone.ExternalStorageId" };
 
-            if (sdCard != null)
-            {
-                var allProperties = sdCard.Properties;
-                IEnumerable<string> propertiesToRetrieve = new List<string> { "WindowsPhone.ExternalStorageId" };
+    var storageIdProperties = await allProperties.RetrievePropertiesAsync(propertiesToRetrieve);
 
-                var storageIdProperties = await allProperties.RetrievePropertiesAsync(propertiesToRetrieve);
+    string cardId = (string)storageIdProperties["WindowsPhone.ExternalStorageId"];
 
-                string cardId = (string)storageIdProperties["WindowsPhone.ExternalStorageId"];
-
-                if (...) // If cardID matches the cached ID of a recognized card.
-                {
-                    // Card is recognized. Index contents opportunistically.
-                }
-                else
-                {
-                    // Card is not recognized. Index contents immediately.
-                }
-            }
+    if (...) // If cardID matches the cached ID of a recognized card.
+    {
+        // Card is recognized. Index contents opportunistically.
+    }
+    else
+    {
+        // Card is not recognized. Index contents immediately.
+    }
+}
 ```
 
  
 
  
-

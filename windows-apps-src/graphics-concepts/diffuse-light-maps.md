@@ -2,21 +2,17 @@
 title: "확산 조명 맵"
 description: "매트 표면에는 확산 조명 반사가 있습니다."
 ms.assetid: D02E76DB-1DA8-4B51-86EF-4DDB07C02541
-keywords:
-- "확산 조명 맵"
+keywords: "확산 조명 맵"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8084e603e979d54dace2f3f60aa43f48e8f1df05
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8defe6c73c9e9d809d10a75ee6208ef6781f1162
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="diffuse-light-maps"></a>확산 조명 맵
 
 
@@ -32,7 +28,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

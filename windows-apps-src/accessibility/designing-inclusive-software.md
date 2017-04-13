@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 23d5f86377dd88877987a9d149377aaee8a4ac48
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 124c0eb2d8640559c2573c532c8dc6089f75d0e7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="designing-inclusive-software-for-windows-10"></a>Windows 10용 포괄 소프트웨어 디자인  
 
 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 사용하여 포괄 디자인으로 진화해 나가는 방법에 대해 알아보세요.  접근성을 염두에 둔 포괄 소프트웨어를 디자인하고 빌드하세요.
@@ -123,4 +120,3 @@ ADA(미국 장애인 복지법)의 업데이트된 섹션 508 및 기타 입법�
 * [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/windows/accessible-apps)
 * [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) 
 * [접근성](accessibility.md)
-

@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1d8ced4a3dfcf0994d969ad045550ea0cc44a2af
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f2754cea4442fd0333b620f82d1db92d8be1c578
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 
-이 문서에서는 오디오 스트림에 대한 사용자 지정 효과를 만들 수 있는 [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect) 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. 사용자 지정 효과는 장치의 카메라에 액세스할 수 있도록 하는 [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), 미디어 클립에서 복잡한 컴퍼지션을 만들 수 있도록 하는 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), 다양한 오디오 입출력 및 서브믹스 노드 그래프를 빠르게 조합할 수 있도록 하는 [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph)를 비롯한 여러 다른 Windows 런타임 API에서 사용할 수 있습니다.
+이 문서에서는 오디오 스트림에 대한 사용자 지정 효과를 만들 수 있는 [**IBasicAudioEffect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IBasicAudioEffect) 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. 사용자 지정 효과는 디바이스의 카메라에 액세스할 수 있도록 하는 [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), 미디어 클립에서 복잡한 컴퍼지션을 만들 수 있도록 하는 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), 다양한 오디오 입출력 및 서브믹스 노드 그래프를 빠르게 조합할 수 있도록 하는 [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph)를 비롯한 여러 다른 Windows 런타임 API에서 사용할 수 있습니다.
 
 ## <a name="add-a-custom-effect-to-your-app"></a>앱에 사용자 지정 효과 추가
 
@@ -154,7 +151,6 @@ TimeIndependent[**TimeIndependent**](https://msdn.microsoft.com/library/windows/
 * [미디어 재생](media-playback.md)
 
  
-
 
 
 

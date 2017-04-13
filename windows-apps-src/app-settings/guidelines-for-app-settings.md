@@ -11,15 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e995023cd8a4216c60d5691f9f87be3aff9d8498
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 493e491bd16b7346046394d66587788caf06db4f
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
-
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 앱 설정은 앱의 사용자 지정 가능한 부분이고 앱 설정 페이지 내에 있습니다. 예를 들어 사용자는 뉴스 뷰어 앱의 앱 설정을 사용하여 표시할 뉴스 소스를 지정하거나 화면에 표시할 칼럼 수를 지정할 수 있지만, 날씨 앱의 설정을 사용하여 섭씨 및 화씨 중에서 기본 측정 단위를 선택할 수 있습니다. 이 문서에서는 앱 설정을 만들고 표시하기 위한 모범 사례에 대해 설명합니다.
 
@@ -72,7 +70,7 @@ ms.lasthandoff: 02/07/2017
 
 **마스터-세부 정보**
 
-앱 설정 진입점을 마스터-세부 정보 창 내에 깊이 넣는 대신 마스터 창의 최상위에 마지막 고정 항목으로 설정합니다.
+앱 설정 진입점을 마스터-세부 창 내에 깊이 포함하는 대신 마스터 창의 최상위에 마지막 고정 항목으로 설정합니다.
 
 ## <a name="layout"></a>레이아웃
 
@@ -142,7 +140,7 @@ ms.lasthandoff: 02/07/2017
 -   컨트롤 또는 웹 콘텐츠를 로드하는 데 시간이 걸리는 경우 확정되지 않은 진행률 컨트롤을 사용하여 정보가 로드되고 있음을 사용자에게 표시합니다. 자세한 내용은 [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)을 참조하세요.
 -   탐색이나 변경 내용 커밋에 단추를 사용하지 마세요. 하이퍼링크를 사용하여 다른 페이지를 탐색하고, 단추를 사용하여 변경 내용을 커밋하는 대신 사용자가 설정 플라이아웃을 해제할 때 변경 내용을 앱 설정에 자동으로 저장합니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows�10과 관련된 정보가 있습니다. Windows�8.1 참고 자료를 보려면 [Windows�8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## <a name="related-articles"></a>관련 문서
 
@@ -150,4 +148,3 @@ ms.lasthandoff: 02/07/2017
 * [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-

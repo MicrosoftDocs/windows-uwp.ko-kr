@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 123776d100b0308248e6d715d8253b69f700f1d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fd873b6d1abd4187f1b8ff1d9040da3242c0ee65
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
 
@@ -53,10 +50,10 @@ XAML 용어의 일부인 컨트롤 및 기타 UI 요소는 해당 정의의 일�
 <span id="Influencing_the_UI_Automation_tree_views"/>
 <span id="influencing_the_ui_automation_tree_views"/>
 <span id="INFLUENCING_THE_UI_AUTOMATION_TREE_VIEWS"/>
-## <a name="influencing-the-ui-automation-tree-views"></a>UI 자동화 트리 뷰에 미치는 영향  
-UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨트롤, 콘텐츠 등 세 가지 뷰를 사용하여 UI에 있는 요소 사이의 관계를 검색할 수 있는 트리 뷰 개념이 있습니다. 컨트롤 뷰는 표현 기능이 좋고 UI 요소가 대화형으로 구성되어 있기 때문에 UI 자동화 클라이언트에서 자주 사용되는 뷰입니다. 일반적으로 테스트 도구를 사용하면 도구에서 요소 구성을 표시할 때 사용할 트리 뷰를 선택할 수 있습니다.
+## <a name="influencing-the-ui-automation-tree-views"></a>UI 자동화 트리 보기에 미치는 영향  
+UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨트롤, 콘텐츠 등 세 가지 보기를 사용하여 UI에 있는 요소 사이의 관계를 검색할 수 있는 트리 보기 개념이 있습니다. 컨트롤 보기는 표현 기능이 좋고 UI 요소가 대화형으로 구성되어 있기 때문에 UI 자동화 클라이언트에서 자주 사용되는 보기입니다. 일반적으로 테스트 도구를 사용하면 도구에서 요소 구성을 표시할 때 사용할 트리 보기를 선택할 수 있습니다.
 
-기본적으로 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 파생 클래스 및 다수의 다른 요소는 UI 자동화 프레임워크가 UWP(유니버설 Windows 플랫폼) 앱의 UI를 표시할 때 컨트롤 뷰에 나타납니다. 하지만 특정 요소가 정보를 복제하거나 접근성 시나리오에 중요하지 않은 정보를 표시하는 UI 컴퍼지션으로 인해 해당 요소를 컨트롤 뷰에 표시하지 않으려는 경우가 가끔 있습니다. 연결된 속성 [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/Dn251788)를 사용하면 요소가 트리 뷰에 표시되는 방식을 변경할 수 있습니다. 요소를 **Raw** 트리에 넣으면 대부분의 보조 기술이 해당 요소를 뷰의 일부로 보고하지 않습니다. 기존 컨트롤에서 작동하는 방식의 몇 가지 예를 보려면 generic.xaml 디자인 참조 XAML 파일을 텍스트 편집기에서 열고 템플릿에서 **AutomationProperties.AccessibilityView**를 검색합니다.
+기본적으로 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 파생 클래스 및 다수의 다른 요소는 UI 자동화 프레임워크가 UWP(유니버설 Windows 플랫폼) 앱의 UI를 표시할 때 컨트롤 보기에 나타납니다. 하지만 특정 요소가 정보를 복제하거나 접근성 시나리오에 중요하지 않은 정보를 표시하는 UI 컴퍼지션으로 인해 해당 요소를 컨트롤 보기에 표시하지 않으려는 경우가 가끔 있습니다. 연결된 속성 [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/Dn251788)를 사용하면 요소가 트리 보기에 표시되는 방식을 변경할 수 있습니다. 요소를 **Raw** 트리에 넣으면 대부분의 보조 기술이 해당 요소를 보기의 일부로 보고하지 않습니다. 기존 컨트롤에서 작동하는 방식의 몇 가지 예를 보려면 generic.xaml 디자인 참조 XAML 파일을 텍스트 편집기에서 열고 템플릿에서 **AutomationProperties.AccessibilityView**를 검색합니다.
 
 <span id="name_from_inner_text"/>
 <span id="NAME_FROM_INNER_TEXT"/>
@@ -150,4 +147,3 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [접근성 테스트](accessibility-testing.md)
-

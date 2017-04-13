@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "화면 방향 지원(DirectX 및 C++)"
-description: "여기서는 Windows 10 장치의 그래픽 하드웨어가 효율적이면서 효과적으로 사용되도록 UWP DirectX 앱에서 화면 회전을 처리하는 모범 사례에 대해 설명합니다."
+description: "여기서는 Windows 10 디바이스의 그래픽 하드웨어가 효율적이면서 효과적으로 사용되도록 UWP DirectX 앱에서 화면 회전을 처리하는 모범 사례에 대해 설명합니다."
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 화면 방향, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 606d32d16ad94e45cb63c73f1869735a9fbd7d25
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="supporting-screen-orientation-directx-and-c"></a>화면 방향 지원(DirectX 및 C++)
 
 
@@ -558,7 +555,6 @@ render 메서드를 호출하면 현재 회전 행렬(클래스 변수 **m\_orie
  
 
  
-
 
 
 

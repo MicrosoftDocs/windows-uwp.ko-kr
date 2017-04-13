@@ -9,23 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c29c05e7397e87851ebb0fa5fa29df3b9b58907b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: adfd360c22fd6737d9e95e6e3153f4e2767a4c99
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bitmapencoder-options-reference"></a>BitmapEncoder 옵션 참조
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다. 인코딩 옵션은 문자열인 이름과 특정 데이터 형식([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871))의 값으로 정의됩니다. 이미지 작업 방법은 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요.
 
 | 이름                    | PropertyType | 사용법 참고 사항                                                                                        | 유효한 형식 |
 |-------------------------|--------------|----------------------------------------------------------------------------------------------------|---------------|
 | ImageQuality            | single       | 유효한 값은 0에서 1.0 사이입니다. 값이 높으면 품질이 더 높습니다.                                 | JPEG, JPEG-XR |
-| CompressionQuality      | single       | 유효한 값은 0에서 1.0 사이입니다. 값이 높으면 더 효율적이고 더 느린 압축 체계입니다. | TIFF          |
+| CompressionQuality      | single       | 유효한 값은 0에서 1.0 사이입니다. 값이 높으면 더 효율적이고 더 느린 압축 구조입니다. | TIFF          |
 | Lossless                | boolean      | true로 설정되면 ImageQuality 옵션이 무시됩니다.                                        | JPEG-XR       |
 | InterlaceOption         | boolean      | 이미지를 인터레이스할지 여부입니다.                                                                    | PNG           |
 | FilterOption            | uint8        | [**PngFilterMode**](https://msdn.microsoft.com/library/windows/apps/br226389) 열거형을 사용합니다.                                | PNG           |
@@ -44,7 +41,6 @@ ms.lasthandoff: 02/07/2017
 * [지원되는 코덱](supported-codecs.md)
 
  
-
 
 
 

@@ -11,16 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 47c28e0629150ccbdf532afc645fe973c3dc8804
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5e4668a185e003150cf9d72aeb5c55c2e092d549
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="developing-inclusive-windows-apps"></a>포괄 Windows 앱 개발  
 
-이 문서에서는 액세스 가능한 UWP(유니버설 Windows 플랫폼) 앱을 개발하는 방법에 대해 설명합니다. 특히 앱에 대한 논리 계층 구조 디자인 방법에 대해 이해하고 있다고 가정합니다. 키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
+이 문서에서는 접근성 있는 UWP(유니버설 Windows 플랫폼) 앱을 개발하는 방법에 대해 설명합니다. 특히 앱에 대한 논리 계층 구조 디자인 방법에 대해 이해하고 있다고 가정합니다. 키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
 
 아직 이해하지 못했으면 [포괄 소프트웨어 디자인](designing-inclusive-software.md)을 먼저 읽고 시작하세요.
 
@@ -91,4 +88,3 @@ XAML
 * [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://msdn.microsoft.com/enable)
 * [접근성](accessibility.md)
-

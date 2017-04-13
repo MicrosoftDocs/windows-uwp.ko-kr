@@ -2,31 +2,29 @@
 author: DBirtolo
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: "AEP 서비스 클래스 ID"
-description: "AEP(연결 끝점) 서비스는 장치에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다."
+description: "AEP(연결 끝점) 서비스는 디바이스에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다."
 ms.author: dbirtolo
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d2259c82acf700d21f4c3f51a367180bb976f636
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 354ed6c8d2a58bff68c798e66bfde0be03c5b140
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="aep-service-class-ids"></a>AEP 서비스 클래스 ID
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
 
 - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-AEP(연결 끝점) 서비스는 장치에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다. 이러한 계약은 **System.Devices.AepService.ServiceClassId** 속성으로 식별됩니다. 이 항목에서는 널리 알려진 몇 가지 AEP 서비스 클래스 ID를 설명합니다. AEP 서비스 클래스 ID는 사용자 지정 클래스 ID를 사용하는 프로토콜에도 적용됩니다.
+AEP(연결 끝점) 서비스는 디바이스에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다. 이러한 계약은 **System.Devices.AepService.ServiceClassId** 속성으로 식별됩니다. 이 항목에서는 널리 알려진 몇 가지 AEP 서비스 클래스 ID를 설명합니다. AEP 서비스 클래스 ID는 사용자 지정 클래스 ID를 사용하는 프로토콜에도 적용됩니다.
 
-앱 개발자는 클래스 ID를 기반으로 하는 AQS(고급 쿼리 구문) 필터를 사용하여 해당 쿼리를 사용하려는 AEP 서비스로 제한해야 합니다. 이는 쿼리 결과를 관련 서비스로 제한하며, 장치의 성능, 배터리 수명 및 서비스 품질을 크게 증가시킵니다. 예를 들어 응용 프로그램에서는 이러한 서비스 클래스 ID를 사용하여 장치를 Miracast 동기화 또는 DLNA DMR(디지털 미디어 렌더러)로 사용할 수 있습니다. 장치와 서비스가 상호 작용하는 방식에 대한 자세한 내용은 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)를 참조하세요.
+앱 개발자는 클래스 ID를 기반으로 하는 AQS(고급 쿼리 구문) 필터를 사용하여 해당 쿼리를 사용하려는 AEP 서비스로 제한해야 합니다. 이는 쿼리 결과를 관련 서비스로 제한하며, 디바이스의 성능, 배터리 수명 및 서비스 품질을 크게 증가시킵니다. 예를 들어 응용 프로그램에서는 이러한 서비스 클래스 ID를 사용하여 디바이스를 Miracast 동기화 또는 DLNA DMR(디지털 미디어 렌더러)로 사용할 수 있습니다. 디바이스와 서비스가 상호 작용하는 방식에 대한 자세한 내용은 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)를 참조하세요.
 
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Bluetooth 및 Bluetooth LE 서비스
 
@@ -50,14 +48,14 @@ Bluetooth 프로토콜은 여러 서비스를 지원하며, 모두 동일한 기
 | GATT - 현재 시간 서비스          | **18050000-0000-1000-8000-00805F9B34FB** |
 | GATT - 순환 전원                 | **18180000-0000-1000-8000-00805F9B34FB** |
 | GATT - 순환 속도 및 흐름     | **18160000-0000-1000-8000-00805F9B34FB** |
-| GATT - 장치 정보            | **180A0000-0000-1000-8000-00805F9B34FB** |
+| GATT - 디바이스 정보            | **180A0000-0000-1000-8000-00805F9B34FB** |
 | GATT - 환경 감지         | **181A0000-0000-1000-8000-00805F9B34FB** |
 | GATT - 일반 액세스                | **18000000-0000-1000-8000-00805F9B34FB** |
 | GATT - 일반 특성             | **18010000-0000-1000-8000-00805F9B34FB** |
 | GATT - 혈당                       | **18080000-0000-1000-8000-00805F9B34FB** |
 | GATT - 건강 온도계            | **18090000-0000-1000-8000-00805F9B34FB** |
 | GATT - 심박수                    | **180D0000-0000-1000-8000-00805F9B34FB** |
-| GATT - 휴먼 인터페이스 장치        | **18120000-0000-1000-8000-00805F9B34FB** |
+| GATT - 휴먼 인터페이스 디바이스        | **18120000-0000-1000-8000-00805F9B34FB** |
 | GATT - 즉각적 경고               | **18020000-0000-1000-8000-00805F9B34FB** |
 | GATT - 실내 위치 지정            | **18210000-0000-1000-8000-00805F9B34FB** |
 | GATT - 인터넷 프로토콜 지원     | **18200000-0000-1000-8000-00805F9B34FB** |
@@ -131,4 +129,3 @@ System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}
  
 
  
-

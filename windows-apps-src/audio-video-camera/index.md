@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2d3b61b35307536bc54f19b5857acfe946a010ce
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4264912469d1da56d980b50575926ecf105e1f97
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="audio-video-and-camera"></a>오디오 비디오 및 카메라
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다.
  
@@ -49,7 +46,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

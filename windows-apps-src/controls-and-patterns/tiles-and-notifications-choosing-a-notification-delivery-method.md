@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 42cb565c9cb1592d90d9f46d2faf783117d0a8bd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 39418d553eceb6b38d9b0cecc633c984f38465b9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -172,7 +170,6 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
  
 
  
-
 
 
 

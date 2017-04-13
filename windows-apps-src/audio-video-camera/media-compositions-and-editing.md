@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: "Windows.Media.Editing 네임스페이스의 API를 사용하면 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 해주는 앱을 신속하게 개발할 수 있습니다."
+description: "Windows.Media.Editing 네임스페이스의 API를 사용하면 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발할 수 있습니다."
 title: "미디어 컴퍼지션 및 편집"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d31cb88d1cea00bd291478b612b1759b1d6fd0b4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 66d14ae9335edcc5535d0dcc37cca2273874f61d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="media-compositions-and-editing"></a>미디어 컴퍼지션 및 편집
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) 네임스페이스의 API를 사용하여 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발하는 방법에 대해 설명합니다. 이 프레임워크의 기능에는 여러 비디오 클립을 프로그래밍 방식으로 함께 추가하는 기능과 비디오 및 이미지 오버레이 추가, 백그라운드 오디오 추가, 오디오 효과와 비디오 효과 적용 등의 기능이 포함됩니다. 생성된 미디어 컴퍼지션은 재생 또는 공유를 위한 플랫 미디어 파일로 렌더링할 수 있습니다. 그러나 컴퍼지션을 디스크로 직렬화하거나 디스크에서 역직렬화함으로써 사용자가 이전에 만든 컴퍼지션을 로드하고 수정할 수 있게 할 수도 있습니다. 이 모든 기능은 낮은 수준의 [Microsoft 미디어 파운데이션](https://msdn.microsoft.com/library/windows/desktop/ms694197) API와 비교해 볼 때 이러한 작업을 수행하는 데 필요한 코드의 양과 복잡성이 상당히 줄어드는 편리한 Windows 런타임 인터페이스에서 제공됩니다.
@@ -40,7 +37,7 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="add-media-clips-to-a-composition"></a>컴퍼지션에 미디어 클립 추가
 
-미디어 컴퍼지션에는 일반적으로 하나 이상의 비디오 클립이 포함됩니다. [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)를 사용하면 사용자가 비디오 파일을 선택할 수 있게 만들 수 있습니다. 파일을 선택했으면 [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652596)를 호출하여 비디오 클립을 포함할 새 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652607) 개체를 만듭니다. 그런 다음, **MediaComposition** 개체의 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 목록에 클립을 추가합니다.
+미디어 컴퍼지션에는 일반적으로 하나 이상의 비디오 클립이 포함됩니다. [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)를 사용하면 사용자가 비디오 파일을 선택할 수 있게 만들 수 있습니다. 파일을 선택했으면 [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607)를 호출하여 비디오 클립을 포함할 새 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) 개체를 만듭니다. 그런 다음, **MediaComposition** 개체의 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 목록에 클립을 추가합니다.
 
 [!code-cs[PickFileAndAddClip](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetPickFileAndAddClip)]
 
@@ -48,7 +45,7 @@ ms.lasthandoff: 02/07/2017
 
 -   **MediaClip**은 컴퍼지션에 한 번만 포함할 수 있습니다. 이미 컴퍼지션에서 사용 중인 **MediaClip**을 추가하려고 하면 오류가 발생합니다. 비디오 클립을 컴퍼지션에서 여러 번 다시 사용하려면 [**Clone**](https://msdn.microsoft.com/library/windows/apps/dn652599)을 호출하여 컴퍼지션에 추가할 수 있는 새 **MediaClip** 개체를 만듭니다.
 
--   유니버설 Windows 앱에는 전체 파일 시스템에 액세스할 수 있는 권한이 없습니다. [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207457) 클래스의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207456) 속성은 앱이 사용자가 선택한 파일의 레코드를 저장할 수 있게 하여 이 파일에 대한 액세스 권한을 보유할 수 있습니다. **FutureAccessList**에 허용되는 항목 수는 최대 1000개이므로, 앱은 가득 차지 않도록 이 목록을 관리해야 합니다. 이 작업은 이전에 만든 컴퍼지션에 대한 로드 및 수정을 지원하려는 경우에 특히 중요합니다.
+-   유니버설 Windows 앱에는 전체 파일 시스템에 액세스할 수 있는 권한이 없습니다. [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) 클래스의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 속성은 앱이 사용자가 선택한 파일의 레코드를 저장할 수 있게 하여 이 파일에 대한 액세스 권한을 보유할 수 있습니다. **FutureAccessList**에 허용되는 항목 수는 최대 1000개이므로, 앱은 가득 차지 않도록 이 목록을 관리해야 합니다. 이 작업은 이전에 만든 컴퍼지션에 대한 로드 및 수정을 지원하려는 경우에 특히 중요합니다.
 
 -   **MediaComposition**은 MP4 형식의 비디오 클립을 지원합니다.
 
@@ -71,7 +68,7 @@ ms.lasthandoff: 02/07/2017
 
 [!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
 
-**MediaComposition** 개체의 [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) 메서드를 호출하여 컴퍼지션에 대한 **MediaStreamSource**를 만듭니다. 팩터리 메서드 [**CreateFromMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource)를 호출하여 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930907) 개체를 만들고 **MediaPlayerElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.Source) 속성을 할당합니다. 이제 이 컴퍼지션을 UI에서 볼 수 있습니다.
+**MediaComposition** 개체의 [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) 메서드를 호출하여 컴퍼지션에 대한 **MediaStreamSource**를 만듭니다. 팩터리 메서드 [**CreateFromMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn930907)를 호출하여 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) 개체를 만들고 **MediaPlayerElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.Source) 속성을 할당합니다. 이제 이 컴퍼지션을 UI에서 볼 수 있습니다.
 
 
 [!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
@@ -102,14 +99,14 @@ ms.lasthandoff: 02/07/2017
 
 [!code-cs[TrimClipBeforeCurrentPosition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetTrimClipBeforeCurrentPosition)]
 
--   원하는 임의의 UI를 사용하여 사용자가 트리밍 시작 값과 트리밍 종료 값을 지정할 수 있게 할 수 있습니다. 위의 예제에서는 **MediaPlayerElement**와 연결된 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position)의 [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 속성을 사용하여 먼저 컴퍼지션의 현재 위치에서 재생 중인 **MediaClip**을 확인합니다. 이때 [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) 및 [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618)을 확인하면 됩니다. 그런 다음, **Position** 및 **StartTimeInComposition** 속성을 다시 사용하여 클립의 시작 부분 이후 자를 시간의 양을 계산합니다. **FirstOrDefault** 메서드는 목록에서 항목을 선택하기 위한 코드를 간소화하는 **System.Linq** 네임스페이스의 확장 메서드입니다.
+-   원하는 임의의 UI를 사용하여 사용자가 트리밍 시작 값과 트리밍 종료 값을 지정할 수 있게 할 수 있습니다. 위의 예제에서는 **MediaPlayerElement**와 연결된 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession)의 [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position) 속성을 사용하여 먼저 컴퍼지션의 현재 위치에서 재생 중인 **MediaClip**을 확인합니다. 이때 [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) 및 [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618)을 확인하면 됩니다. 그런 다음, **Position** 및 **StartTimeInComposition** 속성을 다시 사용하여 클립의 시작 부분 이후 자를 시간의 양을 계산합니다. **FirstOrDefault** 메서드는 목록에서 항목을 선택하기 위한 코드를 간소화하는 **System.Linq** 네임스페이스의 확장 메서드입니다.
 -   **MediaClip** 개체의 [**OriginalDuration**](https://msdn.microsoft.com/library/windows/apps/dn652625) 속성은 클리핑을 적용하지 않고도 미디어 클립의 지속 시간을 알 수 있게 합니다.
 -   [**TrimmedDuration**](https://msdn.microsoft.com/library/windows/apps/dn652631) 속성을 통해 자르기를 적용한 후의 미디어 클립 지속 시간을 알 수 있습니다.
 -   클립의 원래 지속 시간보다 큰 자르기 값을 지정해도 오류가 발생하지 않습니다. 그러나 컴퍼지션에 단일 클립만이 있고 큰 자르기 값을 지정하여 이 클립이 길이 0으로 잘린 경우에는 후속 [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) 호출에서 마치 컴퍼지션에 클립이 없는 것처럼 null이 반환됩니다.
 
 ## <a name="add-a-background-audio-track-to-a-composition"></a>컴퍼지션에 백그라운드 오디오 트랙 추가
 
-컴퍼지션에 백그라운드 트랙을 추가하려면 오디오 파일을 로드한 다음 팩터리 메서드 [**BackgroundAudioTrack.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652544)를 호출하여 [**BackgroundAudioTrack**](https://msdn.microsoft.com/library/windows/apps/dn652561) 개체를 만듭니다. 그런 다음, 컴퍼지션의 [**BackgroundAudioTracks**](https://msdn.microsoft.com/library/windows/apps/dn652647) 속성에 **BackgroundAudioTrack**을 추가합니다.
+컴퍼지션에 백그라운드 트랙을 추가하려면 오디오 파일을 로드한 다음 팩터리 메서드 [**BackgroundAudioTrack.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652561)를 호출하여 [**BackgroundAudioTrack**](https://msdn.microsoft.com/library/windows/apps/dn652544) 개체를 만듭니다. 그런 다음, 컴퍼지션의 [**BackgroundAudioTracks**](https://msdn.microsoft.com/library/windows/apps/dn652647) 속성에 **BackgroundAudioTrack**을 추가합니다.
 
 [!code-cs[AddBackgroundAudioTrack](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddBackgroundAudioTrack)]
 
@@ -151,12 +148,11 @@ ms.lasthandoff: 02/07/2017
 
 [!code-cs[OpenComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOpenComposition)]
 
--   컴퍼지션의 미디어 파일이 앱에서 액세스할 수 있는 위치에 없으며 앱에 대한 [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207457) 클래스의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207456) 속성에 없는 경우 컴퍼지션을 로드할 때 오류가 발생합니다.
+-   컴퍼지션의 미디어 파일이 앱에서 액세스할 수 있는 위치에 없으며 앱에 대한 [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) 클래스의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 속성에 없는 경우 컴퍼지션을 로드할 때 오류가 발생합니다.
 
  
 
  
-
 
 
 

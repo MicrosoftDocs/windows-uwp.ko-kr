@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 대기 시간, dxgi, 스왑 체인, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 9f2babdac40e3baf27bec9b2e214e9350d1f2539
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>DXGI 1.3 스왑 체인으로 대기 시간 단축
 
 
@@ -33,7 +30,7 @@ DXGI 1.3을 사용하여 스왑 체인이 새로운 프레임 렌더링을 시�
 ## <a name="step-1-create-a-waitable-swap-chain"></a>1단계: 대기 가능 스왑 체인 만들기
 
 
-[**CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/bb173076)를 호출할 때 [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**](https://msdn.microsoft.com/library/windows/desktop/hh404559) 플래그를 지정합니다.
+[**CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)를 호출할 때 [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**](https://msdn.microsoft.com/library/windows/desktop/bb173076) 플래그를 지정합니다.
 
 ```cpp
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
@@ -57,7 +54,7 @@ HRESULT hr = m_swapChain->ResizeBuffers(
 ## <a name="step-2-set-the-frame-latency"></a>2단계: 프레임 지연 설정
 
 
-[**IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/dn268313)를 호출하는 대신 [**IDXGISwapChain2::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334) API를 사용하여 프레임 지연을 설정합니다.
+[**IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334)를 호출하는 대신 [**IDXGISwapChain2::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/dn268313) API를 사용하여 프레임 지연을 설정합니다.
 
 기본적으로 대기 가능 스왑 체인의 프레임 지연은 1로 설정되어 대기 시간이 최대한 적을 뿐만 아니라 CPU GPU 병렬 처리도 줄어듭니다. 60FPS를 얻기 위해 향상된 CPU-GPU 병렬 처리가 필요한 경우 즉, CPU 및 GPU가 각각 렌더링 작업을 처리하는 데 프레임당 16.7ms보다 적게 걸리지만 합계가 16.7ms보다 큰 경우 프레임 지연을 2로 설정합니다. 따라서 GPU는 이전 프레임 중에 CPU에서 대기한 작업을 처리할 수 있으며, 동시에 CPU에서 현재 프레임에 대해 독립적으로 렌더링 명령을 제출하도록 할 수 있습니다.
 
@@ -163,7 +160,6 @@ Windows의 다중 스레드 프로그래밍에 대한 자세한 내용은 다음
  
 
  
-
 
 
 

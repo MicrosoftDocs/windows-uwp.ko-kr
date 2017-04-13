@@ -9,20 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7349188a9b735ac887c1afbc09c572f598407471
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8bde7d6b65ae6fd96c38e2748a4e7ea0f9821aa2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="pair-devices"></a>장치 페어링
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 일부 디바이스는 페어링해야 사용할 수 있습니다. [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스는 세 가지 방법으로 장치를 페어링하도록 지원합니다.
 
@@ -48,7 +46,7 @@ ms.lasthandoff: 02/07/2017
 
 기본 페어링을 시도하려면 먼저 관심 있는 디바이스에 대한 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져와야 합니다. 해당 개체를 받으면 [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 속성을 조작합니다. 이제 [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 개체입니다. 페어링을 시도하려면 [**DeviceInformationPairing.PairAsync**](https://msdn.microsoft.com/library/windows/apps/mt608800)를 호출하면 됩니다. 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
 
-기본 페어링을 사용하는 경우 장치의 페어링 상태에 대한 추가 정보에도 액세스할 수 있습니다. 예를 들어 페어링 상태([**IsPaired**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.ispaired.aspx)) 및 디바이스를 페어링할 수 있는지 여부([**CanPair**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.canpair.aspx))를 알 수 있습니다. 이러한 두 가지는 모두 [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 개체의 속성입니다. 자동 페어링을 사용하는 경우 관련 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져오지 않는 한 이 정보에 액세스하지 못할 수도 있습니다.
+기본 페어링을 사용하는 경우 장치의 페어링 상태에 대한 추가 정보에도 액세스할 수 있습니다. 예를 들어 페어링 상태([**IsPaired**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing#Windows_Devices_Enumeration_DeviceInformationPairing_IsPaired)) 및 디바이스를 페어링할 수 있는지 여부([**CanPair**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing#Windows_Devices_Enumeration_DeviceInformationPairing_CanPair))를 알 수 있습니다. 이러한 두 가지는 모두 [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx) 개체의 속성입니다. 자동 페어링을 사용하는 경우 관련 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져오지 않는 한 이 정보에 액세스하지 못할 수도 있습니다.
 
 ## <a name="custom-pairing"></a>사용자 지정 페어링
 
@@ -76,8 +74,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
-
-
-
-

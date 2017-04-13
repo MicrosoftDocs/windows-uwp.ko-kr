@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, SQLite, 데이터베이스"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 70f0ae8d4f67e0b24199d7dd56ddebe5a643fae5
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sqlite-databases"></a>SQLite 데이터베이스
 
@@ -95,4 +93,3 @@ SQLite 작동 방식을 잘 이해하려면 SQL 문을 평가하는 SQL 데이�
  
 
  
-

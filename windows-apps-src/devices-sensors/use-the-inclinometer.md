@@ -9,22 +9,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b8ebfaf4c294fccf61534203bce0326f9dbec977
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6544d4a598edb12d8d114bb27fac84831ce31d14
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-the-inclinometer"></a>경사계 사용
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**경사계**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
-경사계를 사용하여 피치, 롤 및 요를 확인하는 방법을 알아봅니다.
+경사계를 사용하여 피치, 롤 및 요를 판단하는 방법을 알아봅니다.
 
 일부 3차원 게임에는 입력 장치로서 경사계가 필요합니다. 일반적인 한 예로, 경사계의 세 축(X, Y 및 Z)을 항공기의 승강키, 보조 날개 및 방향타 입력에 매핑하는 비행 시뮬레이터가 있습니다.
 
@@ -180,4 +178,3 @@ InclinometerReadingChangedEventArgs>(ReadingChanged);
  ## <a name="related-topics"></a>관련 항목
 
 * [경사계 샘플](http://go.microsoft.com/fwlink/p/?linkid=241380)
-

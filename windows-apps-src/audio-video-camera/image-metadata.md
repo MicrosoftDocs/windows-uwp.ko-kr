@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: af9a4c243c939ddc04e5d0763b58df00e70d7017
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e69508ae558d93281e0170913fa0ccdc5891cc64
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="image-metadata"></a>이미지 메타데이터
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683) 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다.
@@ -92,7 +89,6 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
  
 
  
-
 
 
 

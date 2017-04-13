@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60b3d3874ea90b7d626ff1a78c104348ff80dc09
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7e8d65576347308eea7dd2f445961ba366557fa3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="effects-for-video-capture"></a>비디오 캡처 효과
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 카메라 미리 보기에 효과를 적용하는 방법과 비디오 녹화 스트림을 보여 주고, 동영상 보정 효과를 사용하는 방법을 보여 줍니다.
 
@@ -37,7 +34,7 @@ ms.lasthandoff: 02/07/2017
 
 **AddVideoEffectAsync**는 추가된 비디오 효과를 나타내는 [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.IMediaExtension)를 구현하는 개체를 반환합니다. 몇 가지 효과를 사용하면 [**PropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.PropertySet)를 [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 메서드로 전달하여 효과 설정을 변경할 수 있습니다.
 
-Windows 10 버전 1607부터는 **AddVideoEffectAsync**에서 반환된 개체를 통해 [**RemoveEffectAsync**](https://msdn.microsoft.com/library/windows/apps/mt667957)로 전달하여 비디오 파이프라인에서 효과를 제거할 수도 있습니다. **RemoveEffectAsync**는 미리 보기 또는 녹화 스트림에 효과 개체 매개 변수를 추가했는지 자동으로 확인하므로 호출할 때 스트림 형식을 지정할 필요가 없습니다.
+Windows10 버전 1607부터는 **AddVideoEffectAsync**에서 반환된 개체를 통해 [**RemoveEffectAsync**](https://msdn.microsoft.com/library/windows/apps/mt667957)로 전달하여 비디오 파이프라인에서 효과를 제거할 수도 있습니다. **RemoveEffectAsync**는 미리 보기 또는 녹화 스트림에 효과 개체 매개 변수를 추가했는지 자동으로 확인하므로 호출할 때 스트림 형식을 지정할 필요가 없습니다.
 
 [!code-cs[RemoveOneEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetRemoveOneEffect)]
 
@@ -110,7 +107,6 @@ Windows 10 버전 1607부터는 **AddVideoEffectAsync**에서 반환된 개체�
  
 
  
-
 
 
 

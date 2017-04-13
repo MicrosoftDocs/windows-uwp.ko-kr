@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4dc1cd837b7ac7849125e0a1737873fec4a15cd3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 34c3aab3e9a04eb535014182c0dbc8c140670b89
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 
@@ -42,7 +40,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 
 ## <a name="when-should-you-customize-the-template"></a>템플릿을 사용자 지정해야 하는 경우
 
-**MediaPlayerElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 장치로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
+**MediaPlayerElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 디바이스로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
 
 그러나 추가로 컨트롤의 모양을 사용자 지정하거나 컨트롤 동작을 변경해야 하는 시나리오가 있을 수 있습니다. 예를 들면 다음과 같습니다.
 - 아이콘, 슬라이더 동작 및 색을 변경합니다.
@@ -269,7 +267,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 
 MediaTransportControls의 "검색" 컨트롤은 [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) 요소에서 제공됩니다. 이 컨트롤을 사용자 지정할 수 있는 한 가지 방법은 검색 동작의 세분성을 변경하는 것입니다.
 
-기본 검색 슬라이더는 100개의 부분으로 나뉘어져 있으므로 검색 동작은 이 수만큼의 섹션으로 제한됩니다. [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx)의 [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 이벤트 처리기에 있는 XAML 시각적 트리에서 Slider를 가져와서 검색 슬라이더의 세분성을 변경할 수 있습니다. 이 예제는 [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx)를 사용하여 Slider에 대한 참조를 가져온 다음 미디어가 120분보다 긴 경우 1%에서 0.1%까지(1000단계) 슬라이더의 기본 단계 빈도를 변경하는 방법을 보여 줍니다. MediaPlayerElement는 `MediaPlayerElement1`라고 합니다.
+기본 검색 슬라이더는 100개의 부분으로 나뉘어져 있으므로 검색 동작은 이 수만큼의 섹션으로 제한됩니다. [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx)의 [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 이벤트 처리기에 있는 XAML 시각적 트리에서 Slider를 가져와서 검색 슬라이더의 세분성을 변경할 수 있습니다. 이 예제는 [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx)를 사용하여 Slider에 대한 참조를 가져온 다음 미디어가 120분보다 긴 경우 1%에서 0.1%까지(1000단계) 슬라이더의 기본 단계 빈도를 변경하는 방법을 보여 줍니다. MediaPlayerElement는 `MediaPlayerElement1`라고 합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -292,4 +290,3 @@ private void MediaPlayerElement_MediaPlayer_MediaOpened(object sender, RoutedEve
 ## <a name="related-articles"></a>관련 문서
 
 - [미디어 재생](media-playback.md)
-

@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 네트워킹, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ce94dda0eaf156f1e09fefbd76f50bc764050970
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="networking-for-games"></a>게임의 네트워킹
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 네트워킹 기능을 개발하고 DirectX 게임에 통합하는 방법을 알아봅니다.
 
@@ -396,4 +393,3 @@ using namespace Windows::Web::Http;
 * [HttpClient 샘플]( http://go.microsoft.com/fwlink/p/?linkid=242550)
 * [근접 연결 샘플](http://go.microsoft.com/fwlink/p/?linkid=245082)
 * [StreamSocket 샘플](http://go.microsoft.com/fwlink/p/?linkid=243037)
-

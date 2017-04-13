@@ -2,18 +2,16 @@
 author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: "Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트"
-description: "Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하여 실제 장치 조작을 시뮬레이트하고 앱의 기능을 테스트합니다."
+description: "Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하여 실제 디바이스 조작을 시뮬레이트하고 앱의 기능을 테스트합니다."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c20b64cdc2a1335d4739d6790512eddd76bc8a08
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 26345315e9e09d2fd9134ba7264028c460d888ea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -662,5 +660,4 @@ Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문�
 * [에뮬레이터에서 Windows Phone 앱 실행](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Windows 및 Windows Phone SDK 아카이브](https://dev.windows.com/downloads/sdk-archive)
  
-
 

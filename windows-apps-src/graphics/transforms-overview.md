@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 30f73484bde4948e4b0bac5609197f08be5968a0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2643606fa3dcbf1c95669bb09bef0aae49f86529
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="transforms-overview"></a>변환 개요
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임 API에서 변형을 사용하는 방법을 알아봅니다. 이 방법을 사용하여 크기 조정, 회전 또는 x-y 공간에서 위치 변형과 같은 개별 XAML 요소의 모양을 조정할 수 있습니다.
@@ -138,7 +135,6 @@ Windows 10에서 XAML에는 UI로 3D 효과를 만드는 데 사용할 수 있�
  
 
  
-
 
 
 

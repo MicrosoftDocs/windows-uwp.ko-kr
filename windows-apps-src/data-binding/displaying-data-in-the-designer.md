@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
-ms.openlocfilehash: 35df3de9b56b9539a559e161e80658c23a9d0480
-ms.lasthandoff: 01/19/2017
-
+ms.openlocfilehash: 4997895e73e7c8bf0f20a2bc504b7b8c17c45339
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
@@ -149,4 +147,3 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
 **새 샘플 데이터** 기능은 **d:DataContext**가 아니라 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)를 사용하므로 스케치 또는 프로토타입을 디자인할 때뿐 아니라 실행할 때도 샘플 데이터를 사용할 수 있습니다. 그리고 **데이터** 패널을 사용하면 디자인 및 바인딩 작업이 실제로 단축됩니다. 예를 들어 컬렉션 속성을 **데이터** 패널에서 디자인 화면으로 끌어다 놓기만 하면 데이터 바인딩된 항목 컨트롤과 필요한 템플릿이 생성되므로, 곧바로 빌드하고 실행할 수 있습니다.
 
 ![프로토타입 생성용 샘플 데이터](images/displaying-data-in-the-designer-04.png)
-

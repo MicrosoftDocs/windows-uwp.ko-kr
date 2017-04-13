@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dbe72dd476903083518dcf4b9d299b04e87f6e85
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 68e427a4d94b7c599e1fec375f0f66b5ff2704e0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="device-information-properties"></a>디바이스 정보 속성
 
@@ -112,7 +110,7 @@ ms.lasthandoff: 02/07/2017
 | **System.Devices.Aep.DeviceAddress**  | 문자열     | 디바이스의 주소입니다. 디바이스가 네트워크 디바이스인 경우 이는 IP 주소입니다.                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **System.Devices.Aep.IsConnected**    | 부울    | 디바이스가 현재 시스템에 연결되어 있는지 여부를 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **System.Devices.Aep.IsPaired**       | 부울    | 디바이스가 현재 페어링되어 있는지 여부를 나타냅니다. [**DeviceInformationPairing.IsPaired**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.ispaired.aspx)는 이 속성에서 파생됩니다.                                                                                                                                                                                                                                                                                                                      |
-| **System.Devices.Aep.IsPresent**      | 부울    | 디바이스가 현재 있는지 여부 즉, 디바이스가 라이브이며 네트워크 또는 무선 프로토콜을 통해 검색되는지 여부를 나타냅니다. 시스템과 페어링된 장치는 캐시됩니다. 그 이후에는 **AssociationEndpoint** 개체를 쿼리할 때 디바이스가 자동으로 검색됩니다. 이 때문에 쿼리에서 디바이스가 검색되는 것만으로 디바이스가 현재 사용 가능하다고 할 수는 없습니다. 이 속성이 중요한 이유입니다. |
+| **System.Devices.Aep.IsPresent**      | 부울    | 디바이스가 현재 있는지 여부 즉, 디바이스가 라이브이며 네트워크 또는 무선 프로토콜을 통해 검색되는지 여부를 나타냅니다. 시스템과 페어링된 디바이스는 캐시됩니다. 그 이후에는 **AssociationEndpoint** 개체를 쿼리할 때 디바이스가 자동으로 검색됩니다. 이 때문에 쿼리에서 디바이스가 검색되는 것만으로 디바이스가 현재 사용 가능하다고 할 수는 없습니다. 이 속성이 중요한 이유입니다. |
 | **System.Devices.Aep.Manufacturer**   | 문자열     | 디바이스의 제조업체입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | **System.Devices.Aep.ModelId**        | GUID       | 디바이스의 모델 ID입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **System.Devices.Aep.ModelName**      | 문자열     | 디바이스의 모델 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -161,4 +159,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

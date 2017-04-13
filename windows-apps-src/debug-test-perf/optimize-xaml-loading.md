@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 24a5696a6e835a40b9b4e800677596514b56d53b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9728eced6de3d246dc1ec9950b90d77fea0d576d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 
@@ -249,7 +247,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 ## <a name="cache-static-content"></a>정적 콘텐츠 캐시
 
-과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR228084)에서 [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR208911)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
+과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에서 [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
 
 **비효율적인 경우**
 
@@ -294,5 +292,4 @@ XBF2는 런타임 시 모든 텍스트 구문 분석을 방지하는 XAML 태그
 XAML 기본 제공 컨트롤 및 프레임워크에서 제공되는 사전은 이미 XBF2가 전적으로 지원됩니다. 고유한 앱의 경우 프로젝트 파일에서 TargetPlatformVersion 8.2 이상을 선언해야 합니다.
 
 XBF2가 있는지를 확인하려면 바이너리 편집기에서 앱을 엽니다. XBF2가 있는 경우 12번째와 13번째 바이트가 00 02입니다.
-
 

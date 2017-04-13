@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 47f40261b3829400c06c4ff071404e5d06cdbf7d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 17d3d310ed1dbefb9fbe9c248db4533a6f760066
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a>적응형 타일 템플릿: 스키마 및 지침
 
@@ -147,7 +145,6 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
  
 
  
-
 
 
 

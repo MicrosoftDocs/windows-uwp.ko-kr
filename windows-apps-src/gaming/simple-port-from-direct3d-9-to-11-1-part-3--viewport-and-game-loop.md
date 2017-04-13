@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 23631bf464095e1d2f2aab97740d89c6a82f4a70
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-the-game-loop"></a>게임 루프 포팅
 
 
@@ -144,7 +141,6 @@ DirectX UWP 템플릿에는 UWP 게임에 사용할 수 있는 강력한 Direct3
  
 
  
-
 
 
 

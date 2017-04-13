@@ -9,13 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 722a14b7fbad2a8914888a6d6a135e88d1aa8095
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a4296c7ba149abce2173e816aa99406a44f75618
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="universal-windows-platform-components-and-optimizing-interop"></a>유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
+# <a name="uwp-components-and-optimizing-interop"></a>UWP 구성 요소 및 interop 최적화
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -93,5 +91,4 @@ C++ 또는 JavaScript로 개발되는 앱에서 사용하기 위한 UWP 구성 �
 앱의 성능을 높이기 위한 모든 제안은 구성 요소의 성능을 높이는 데에도 적용됩니다. 구성 요소를 측정하여 어떤 API가 높은 트래픽 패턴을 보이는지 확인하고, 그러한 영역에서는 사용자가 적은 수의 호출로 작업을 수행할 수 있는 API를 제공하세요. 앱에서 interop 경계를 자주 넘지 않고 UWP를 사용할 수 있도록 하기 위해 UWP를 설계하는 데 상당한 노력을 기울였습니다.
 
  
-
 

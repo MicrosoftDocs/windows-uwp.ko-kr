@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10 uwp, 게임, 입력"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: ee6017648974d5283f59708550092f26d88388ce
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="input-for-games"></a>게임용 입력 시스템
 
-이 섹션에서는 Windows 10과 Xbox One의 UWP(유니버설 Windows 플랫폼) 게임에서 사용할 수 있는 다양한 입력 장치에 대해 설명하고 기본 사용법을 보여주며 효과적인 게임 입력 프로그래밍을 위한 권장 패턴과 기술을 제안합니다.
+이 섹션에서는 Windows 10과 Xbox One의 UWP(유니버설 Windows 플랫폼) 게임에서 사용할 수 있는 다양한 입력 장치에 대해 설명하고 기본 사용법을 보여 주며 효과적인 게임 입력 프로그래밍을 위한 권장 패턴과 기술을 제안합니다.
 
 > **참고**    장르 관련 또는 게임 관련 사용자 지정 입력 장치의 경우와 같이 UWP 게임에 사용할 수 있는 다른 종류의 입력 장치가 존재하며 사용 가능합니다. 그러나 그러한 장치 및 프로그래밍에 대해서는 이 섹션에서 다루지 않습니다. 사용자 지정 입력 장치의 원활한 사용을 돕는 인터페이스에 대해 자세한 내용은 [Windows.Gaming.Input.Custom][] 네임스페이스를 참조하세요.
 
@@ -68,4 +65,3 @@ UWP 게임에서 헤드셋을 사용하는 방법에 대해 자세한 내용은 
 
 [Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.Custom]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.gaming.input.custom.aspx
-

@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "방법 - 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅"
-description: "첫 번째 포팅 연습으로 기본적인 것부터 시작합니다. 회전하는 꼭짓점 음영 큐브에 대한 간단한 렌더러를 OpenGL ES 2.0에서 Direct3D로 가져와 Visual Studio 2015의 DirectX 11 앱(유니버설 Windows) 템플릿과 일치시키는 것부터 살펴보겠습니다."
+description: "첫 번째 포팅 연습에 대한 기본 사항인 Visual Studio 2015에서 DirectX 11 앱(유니버설 Windows) 템플릿을 일치시키는 것과 같이, 회전하는 꼭짓점 음영 큐브에 대한 간단한 렌더러를 OpenGL ES 2.0에서 Direct3D로 가져오기에 먼저 살펴보겠습니다."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, opengl, direct3d 11, 포트"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 71b4b42d2665cbeb43cbdbe2dbab9119a8f68ce9
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-to-port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
 
 
@@ -146,7 +143,6 @@ typedef struct
  
 
  
-
 
 
 

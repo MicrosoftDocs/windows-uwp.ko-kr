@@ -2,21 +2,17 @@
 title: "리소스 데이터 복사 및 액세스"
 description: "사용법 플래그는 성능이 가장 좋은 메모리 영역에 리소스를 배치할 수 있도록 응용 프로그램에서 리소스 데이터를 사용하는 방법을 나타냅니다. 리소스 데이터는 성능에 영향을 주지 않고 CPU나 GPU에서 액세스할 수 있도록 전체 리소스에 복사됩니다."
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
-keywords:
-- "리소스 데이터 복사 및 액세스"
+keywords: "리소스 데이터 복사 및 액세스"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1dc6853a5675b6e22300650a5c44519436c391d0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e26e6abf4b15584f8c04a837dcc6bd23aad0f1d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="copying-and-accessing-resource-data"></a>리소스 데이터 복사 및 액세스
 
 
@@ -139,7 +135,6 @@ Direct3D의 비동기 호출(대부분 메서드와 렌더링 호출)은 *명령
  
 
  
-
 
 
 

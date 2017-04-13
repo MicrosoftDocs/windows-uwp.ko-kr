@@ -2,21 +2,17 @@
 title: "HLSL 스트리밍 리소스 노출"
 description: "셰이더 모델 5에서 스트리밍 리소스를 지원하려면 특정 Microsoft HLSL(High Level Shader Language) 구문이 필요합니다."
 ms.assetid: 00A40D82-0565-43DC-82AB-0675B7E772E3
-keywords:
-- "HLSL 스트리밍 리소스 노출"
+keywords: "HLSL 스트리밍 리소스 노출"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4a6164c2a2dca3dd14998627ab7d9b4b62e02541
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 143e2379e64b38cc30384bd0fb4c983eeacb7f37
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hlsl-streaming-resources-exposure"></a>HLSL 스트리밍 리소스 노출
 
 
@@ -121,7 +117,6 @@ HLSL 컴파일러가 클램프를 0.0f으로, 피드백이 사용되지 않는 �
  
 
  
-
 
 
 

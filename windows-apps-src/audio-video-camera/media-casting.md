@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: "이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 알려드립니다."
+description: "이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다."
 title: "미디어 캐스팅"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f399007426f5a973a06d473ef98a9eb7e24184dd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8ba90e1538962fdb7ef1434698ea52845713c634
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="media-casting"></a>미디어 캐스팅
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다.
@@ -70,11 +67,11 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 [!code-xml[CastPickerButton](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetCastPickerButton)]
 
-단추에 대한 **Click** 이벤트 처리기에서 [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/br208986)을 호출하여 다른 요소에 대해 상대적인 UI 요소의 변환을 가져옵니다. 이 예제에서 변환은 응용 프로그램 창의 시각적 루트에 대해 상대적인 캐스트 선택기 단추의 위치입니다. [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972542) 개체의 [**Show**](https://msdn.microsoft.com/library/windows/apps/dn972525) 메서드를 호출하여 캐스팅 선택기 대화 상자를 시작합니다. 시스템이 사용자가 누른 단추에서 대화 상자를 펼칠 수 있도록 캐스트 선택기 단추의 크기와 위치를 지정합니다.
+단추에 대한 **Click** 이벤트 처리기에서 [**TransformToVisual**](https://msdn.microsoft.com/library/windows/apps/br208986)을 호출하여 다른 요소에 대해 상대적인 UI 요소의 변환을 가져옵니다. 이 예제에서 변환은 응용 프로그램 창의 시각적 루트에 대해 상대적인 캐스트 선택기 단추의 위치입니다. [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525) 개체의 [**Show**](https://msdn.microsoft.com/library/windows/apps/dn972542) 메서드를 호출하여 캐스팅 선택기 대화 상자를 시작합니다. 시스템이 사용자가 누른 단추에서 대화 상자를 펼칠 수 있도록 캐스트 선택기 단추의 크기와 위치를 지정합니다.
 
 [!code-cs[CastPickerButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastPickerButtonClick)]
 
-**CastingDeviceSelected** 이벤트 처리기에서 이벤트 인수 중 사용자가 선택한 캐스팅 디바이스를 나타내는 [**SelectedCastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972547) 속성의 [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972546) 메서드를 호출합니다. [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) 및 [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) 이벤트에 대한 처리기를 등록합니다. 마지막으로 [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520)를 호출하여 캐스팅을 시작하고 **MediaPlayerElement** 컨트롤의 **MediaPlayer** 개체에 대한 [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) 메서드로 결과를 전달하여 캐스팅할 미디어가 **MediaPlayerElement**와 연관된 **MediaPlayer**의 콘텐츠임을 지정합니다.
+**CastingDeviceSelected** 이벤트 처리기에서 이벤트 인수 중 사용자가 선택한 캐스팅 디바이스를 나타내는 [**SelectedCastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972546) 속성의 [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547) 메서드를 호출합니다. [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) 및 [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523) 이벤트에 대한 처리기를 등록합니다. 마지막으로 [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520)를 호출하여 캐스팅을 시작하고 **MediaPlayerElement** 컨트롤의 **MediaPlayer** 개체에 대한 [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012) 메서드로 결과를 전달하여 캐스팅할 미디어가 **MediaPlayerElement**와 연관된 **MediaPlayer**의 콘텐츠임을 지정합니다.
 
 > [!NOTE] 
 > UI 스레드에서 캐스팅 연결을 시작해야 합니다. **CastingDeviceSelected**는 UI 스레드에서 호출되지 않으므로 이 호출을 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 호출 내에 배치해야 UI 스레드에서 호출될 수 있습니다.
@@ -97,7 +94,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 -   사용 가능한 캐스팅 디바이스를 찾는 디바이스 감시자를 시작하는 단추
 -   캐스팅 열거가 진행 중이라는 피드백을 사용자에게 제공하는 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 컨트롤
--   검색된 캐스팅 디바이스를 나열하는 [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868). 캐스팅 디바이스 개체를 컨트롤에 직접 할당하고 [**FriendlyName**](https://msdn.microsoft.com/library/windows/apps/br242830) 속성을 계속 표시할 수 있도록 컨트롤에 대한 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/dn972549)을 정의합니다.
+-   검색된 캐스팅 디바이스를 나열하는 [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868). 캐스팅 디바이스 개체를 컨트롤에 직접 할당하고 [**FriendlyName**](https://msdn.microsoft.com/library/windows/apps/dn972549) 속성을 계속 표시할 수 있도록 컨트롤에 대한 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830)을 정의합니다.
 -   사용자가 캐스팅 디바이스 연결을 끊을 수 있게 하는 단추.
 
 [!code-xml[CustomPickerXAML](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetCustomPickerXAML)]
@@ -114,7 +111,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 [!code-cs[StartWatcherButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetStartWatcherButtonClick)]
 
-감시자에서 새 디바이스를 발견하면 **Added** 이벤트가 발생합니다. 이 이벤트에 대한 처리기에서 [**CastingDevice.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn972524)를 호출하고 검색된 캐스팅 디바이스의 ID(처리기에 전달된 **DeviceInformation** 개체에 포함됨)를 전달하여 새 [**CastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972550) 개체를 만듭니다.
+감시자에서 새 디바이스를 발견하면 **Added** 이벤트가 발생합니다. 이 이벤트에 대한 처리기에서 [**CastingDevice.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn972550)를 호출하고 검색된 캐스팅 디바이스의 ID(처리기에 전달된 **DeviceInformation** 개체에 포함됨)를 전달하여 새 [**CastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972524) 개체를 만듭니다.
 
 사용자가 선택할 수 있도록 캐스팅 디바이스 **ListBox**에 **CastingDevice**를 추가합니다. XAML에 정의된 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830)으로 인해 [**FriendlyName**](https://msdn.microsoft.com/library/windows/apps/dn972549) 속성은 목록 상자에서 해당 항목 텍스트로 사용됩니다. 이 이벤트 처리기는 UI 스레드에서 호출되지 않기 때문에 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 호출 내에서 UI를 업데이트해야 합니다.
 
@@ -160,7 +157,6 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
  
 
  
-
 
 
 

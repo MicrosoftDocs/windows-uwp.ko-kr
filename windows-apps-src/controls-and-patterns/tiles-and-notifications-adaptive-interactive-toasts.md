@@ -11,15 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b1962e58d3513ddff908a0d556731d83cce20af4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d9808feeabfa4ffce19d0e669352331804dfd751
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="adaptive-and-interactive-toast-notifications"></a>적응형 및 대화형 알림 메시지
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 적응형 및 대화형 알림 메시지를 사용하면 더 많은 콘텐츠, 선택적 인라인 이미지 및 선택적 사용자 조작이 포함된 유연한 팝업 알림을 만들 수 있습니다.
 
@@ -119,6 +117,29 @@ ToastContent content = new ToastContent()
 };
 ```
 
+다음은 알림을 [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx) 개체로 변환해야 합니다. XML 파일(이 경우에는 "content.xml")에 알림을 정의한 경우 이 코드를 사용하세요.
+
+```CSharp
+string xmlText = File.ReadAllText("content.xml");
+XmlDocument xmlContent = new XmlDocument();
+xmlContent.LoadXml(xmlText);
+```
+
+또는 C#에 알림 템플릿을 정의한 경우 이 코드를 사용하세요.
+
+```CSharp
+XmlDocument xmlContent = content.GetXml();
+```
+
+XMLDocument를 만든 방법과 상관없이 이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
+
+```CSharp
+ToastNotification notification = new ToastNotification(xmlContent);
+ToastNotificationManager.CreateToastNotifier().Show(notification);
+```
+
+알림 메시지를 표시하는 완전한 앱이 작동하는 모습을 보려면 [로컬 알림 메시지 보내기에 대한 빠른 시작](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)을 참조하세요.
+
 구조의 시각적 표현은 다음과 같습니다.
 
 ![알림 메시지 구조](images/adaptivetoasts-structure.jpg)
@@ -130,7 +151,7 @@ ToastContent content = new ToastContent()
 UWP(유니버설 Windows 플랫폼) 앱의 타일 알림은 다양한 타일 크기를 기반으로 하는 여러 템플릿을 지원합니다. 그러나 알림 메시지에는 단 하나의 템플릿 이름 **ToastGeneric**이 있습니다. 템플릿 이름이 하나만 있다는 것은 다음을 의미합니다.
 
 -   다른 텍스트 줄을 추가하거나, 인라인 이미지를 추가하거나, 앱 아이콘 표시부터 다른 작업까지 미리 보기 이미지를 변경하는 것과 같이 알림 콘텐츠를 변경하고 템플릿 이름과 콘텐츠가 일치하지 않아서 잘못된 페이로드를 만들거나 전체 템플릿을 변경하는 것에 대해 결정하지 않고 이러한 작업을 수행할 수 있습니다.
--   같은 코드를 사용하여 휴대폰, 태블릿, PC, Xobx One을 비롯한 다양한 Microsoft Windows 디바이스 유형에 배달하도록 대상이 지정된 **toast notification**에 대한 같은 페이로드를 구성할 수 있습니다. 이러한 각 디바이스는 알림을 허용하고 적절한 시각적 어포던스 및 조작 모델을 사용하여 UI 정책에 따라 사용자에게 표시합니다.
+-   같은 코드를 사용하여 휴대폰, 태블릿, PC, Xbox One을 비롯한 다양한 Microsoft Windows 장치 유형에 배달하도록 대상이 지정된 **알림 메시지**에 대한 같은 페이로드를 구성할 수 있습니다. 이러한 각 디바이스는 알림을 허용하고 적절한 시각적 어포던스 및 조작 모델을 사용하여 UI 정책에 따라 사용자에게 표시합니다.
 
 시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제를 보려면 아래 XML 예제 섹션을 참조하세요.
 
@@ -249,9 +270,9 @@ ToastContent content = new ToastContent()
 
  
 
-**작업이 있는 알림, 예제 1**
+**작업이 있는 알림**
 
-이 예제의 내용...
+이 예제에서는 가능한 응답 작업이 2개인 알림을 만듭니다.
 
 ```XML
 <toast launch="app-defined-string">
@@ -309,73 +330,11 @@ ToastContent content = new ToastContent()
 
 ![작업이 있는 알림, 예제 1](images/adaptivetoasts-xmlsample02.jpg)
 
- 
 
-**작업이 있는 알림, 예제 2**
-
-이 예제의 내용...
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![작업이 있는 알림, 예제 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
 
 **텍스트 입력 및 작업이 있는 알림, 예제 1**
 
-이 예제의 내용...
+이 예제에서는 응답 작업이 2개이고 텍스트 입력을 허용하는 알림을 만듭니다.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -456,7 +415,7 @@ ToastContent content = new ToastContent()
 
 **텍스트 입력 및 작업이 있는 알림, 예제 2**
 
-이 예제의 내용...
+이 예제에서는 텍스트 입력과 단일 작업을 허용하는 알림을 만듭니다.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -533,7 +492,7 @@ ToastContent content = new ToastContent()
 
 **선택 입력 및 작업이 있는 알림**
 
-이 예제의 내용...
+이 예제에서는 드롭다운 선택 메뉴가 1개이고 가능한 작업이 2개인 알림을 만듭니다.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -617,7 +576,7 @@ ToastContent content = new ToastContent()
 
 **미리 알림**
 
-이 예제의 내용...
+이전 예제와 마찬가지로 선택 메뉴 1개와 작업 2개를 사용하여 미리 알림을 만들 수 있습니다.
 
 ```XML
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">

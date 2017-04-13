@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8c8defd41ea1b65ac78d159b52eea926c7252e9e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cf46cefc6491178444a13917a3ce2b0ffb73c19a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>MediaCapture용 형식, 해상도 및 프레임 속도 선택
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -90,7 +87,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

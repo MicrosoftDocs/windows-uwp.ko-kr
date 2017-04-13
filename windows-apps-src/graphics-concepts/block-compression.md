@@ -2,21 +2,17 @@
 title: "블록 압축"
 description: "블록 압축은 성능 향상을 위해 텍스처 크기와 메모리 공간을 줄이는 손실 허용 텍스처 압축 기술입니다. 블록이 압축된 텍스처는 색당 32비트인 텍스처보다 작을 수 있습니다."
 ms.assetid: 2FAD6BE8-C6E4-4112-AF97-419CD27F7C73
-keywords:
-- "블록 압축"
+keywords: "블록 압축"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 45f860a184400f0d50584ae0fa2e5a8a777f1651
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d67ec99494dc0b598d9eeb8c4aa5b29255a415ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="block-compression"></a>블록 압축
 
 
@@ -422,4 +418,3 @@ u = f; // 'u' becomes 1.
 
 
 [압축된 텍스처 리소스](compressed-texture-resources.md)
-

@@ -2,21 +2,17 @@
 title: "감쇠 및 스포트라이트 계수"
 description: "전역 조명 수식의 확산 및 반사 조명 구성 요소에는 조명 감쇠와 스포트라이트 원뿔을 설명하는 용어가 있습니다."
 ms.assetid: F61D4ACB-09AB-4087-9E2D-224E472D6196
-keywords:
-- "감쇠 및 스포트라이트 계수"
+keywords: "감쇠 및 스포트라이트 계수"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6ca596ae1deebadc4bb192c7e2622daa9bf6b348
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 41b2b16e6eea6eb3edceb523b4db7cf207af48fb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="attenuation-and-spotlight-factor"></a>감쇠 및 스포트라이트 계수
 
 
@@ -100,7 +96,6 @@ rho = norm(L<sub>dcs</sub>)<sup>.</sup>norm(L<sub>dir</sub>)
  
 
  
-
 
 
 

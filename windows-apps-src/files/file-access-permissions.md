@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3a5069620fa665d4508af70df5543a2d42744210
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0cd8b5dc8870deb0f98d185519017ece27fc236c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
@@ -169,4 +167,3 @@ ms.lasthandoff: 02/07/2017
 | 홈 그룹 라이브러리  | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
 | 미디어 서버 장치(DLNA) | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
 | UNC(범용 명명 규칙) 폴더 | 다음과 같은 접근 권한 값의 조합이 필요합니다. <br><br>홈 및 회사 네트워크 접근 권한 값: <br>- PrivateNetworkClientServer <br><br>하나 이상의 인터넷 및 공용 네트워크 접근 권한 값: <br>- InternetClient <br>- InternetClientServer <br><br>해당되는 경우 도메인 자격 증명 접근 권한 값:<br>- EnterpriseAuthentication <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. | 다음을 사용하여 폴더 검색: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>다음을 사용하여 파일 검색: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
-

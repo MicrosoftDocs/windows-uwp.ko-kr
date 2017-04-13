@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의"
-description: "DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 작업은 게임 개체가 Windows와 상호 작용할 수 있는 프레임워크를 구축하는 것입니다."
+title: "게임의 UWP 앱 프레임워크 정의"
+description: "DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 부분은 게임 개체가 Windows와 조작할 수 있도록 하는 프레임워크의 구축입니다."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 82a44a3499297b3988815ad10091cd351a194cbd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9c19c2ca89b2d38929ade8596c10beb3c3a16104
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="define-the-games-universal-windows-platform-uwp-app-framework"></a>게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의
 
 
@@ -323,7 +320,7 @@ void App::InitializeGameState()
 <td align="left">OnLogicalDpiChanged</td>
 <td align="left">[<strong>DisplayProperties::LogicalDpiChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br226150)를 처리합니다. 주 게임 창의 DPI가 변경되었으며 게임 앱이 해당 리소스를 적절하게 조정합니다.
 <div class="alert">
-<strong>참고</strong> [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) 좌표는 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)에서와 같이 DIP(디바이스 독립적 픽셀) 단위입니다. 따라서 2D 자산이나 기본 요소를 올바르게 표시하려면 Direct2D에 DPI 변경을 알려야 합니다.
+<strong>참고</strong>  [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) 좌표는 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)에서와 같이 DIP(디바이스 독립적 픽셀) 단위입니다. 따라서 2D 자산이나 기본 요소를 올바르게 표시하려면 Direct2D에 DPI 변경을 알려야 합니다.
 </div>
 <div>
  
@@ -1427,7 +1424,6 @@ int main(Platform::Array<Platform::String^>^)
  
 
  
-
 
 
 

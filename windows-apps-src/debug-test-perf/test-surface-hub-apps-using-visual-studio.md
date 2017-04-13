@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 426670f9b8d24a770f74aa0bdfaa5abb043c39ef
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ed2f7dc63e478d3dde2eb58b502d373db3181501
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Visual Studio를 사용하여 Surface Hub 앱 테스트
 Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터는 Surface Hub와 동일한 사용자 인터페이스를 사용하지 않지만 Surface Hub의 화면 크기와 해상도에서 앱의 모양과 동작을 테스트하는 데 유용합니다.
 
@@ -106,4 +103,3 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
 3. **디버깅 시작(F5)**을 선택하여 Surface Hub에 앱을 배포하고 디버그하거나 Ctrl+F5를 눌러 앱 배포만 수행합니다.
 
    > **팁**&nbsp;&nbsp;Surface Hub가 시작 화면에 있으면 아무 단추나 선택하여 해제합니다.
-

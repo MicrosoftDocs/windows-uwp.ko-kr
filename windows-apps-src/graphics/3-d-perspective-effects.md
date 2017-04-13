@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b0855392c9e9e3f18d08a16cf39cdfa5c0910701
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c16506ddb58043b5cba9af7989c34c7f453fe6e8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>XAML UI에 대한 3D 원근감 효과
 
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="planeprojection-class"></a>PlaneProjection 클래스
 
-[**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192)을 사용하여 [**UIElement의 Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection) 속성을 설정하면 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 에 3D 효과를 적용할 수 있습니다. **PlaneProjection**은 변형이 공간에 렌더링되는 방법을 정의합니다. 다음 예에서는 간단한 사례를 보여 줍니다.
+[**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192)을 사용하여 UIElement의 [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection) 속성을 설정하면 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에 3D 효과를 적용할 수 있습니다. **PlaneProjection**은 변형이 공간에 렌더링되는 방법을 정의합니다. 다음 예에서는 간단한 사례를 보여 줍니다.
 
 ```xml
 <Image Source="kid.png">
@@ -190,4 +188,3 @@ ms.lasthandoff: 02/07/2017
 ## <a name="positioning-an-object"></a>개체 위치 지정
 
 [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) 및 [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) 유형을 사용하면 [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192)을 사용할 때보다 더 복잡한 반3D 시나리오를 구현할 수 있습니다. **Matrix3DProjection**은 임의의 모델 변환 매트릭스 및 원근 매트릭스를 요소에 적용할 수 있도록 모든 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에 적용할 수 있는 전체 3D 변환 매트릭스를 제공합니다. 이러한 API는 최소한의 코드로 구성된 것이므로 이러한 API를 사용하려면 3D 변형 매트릭스를 제대로 만드는 코드를 작성해야 합니다. 따라서 간단한 3D 시나리오에는 **PlaneProjection**을 사용하는 것이 더 쉽습니다.
-

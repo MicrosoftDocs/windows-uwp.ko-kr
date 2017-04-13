@@ -1,5 +1,5 @@
 ---
-title: "GitHub에서 UWP(유니버설 Windows 플랫폼) 샘플 가져오기"
+title: "GitHub에서 UWP(유니버설 Windows 플랫폼) 코드 샘플 가져오기"
 description: "GitHub에서 UWP 기능 샘플을 다운로드하는 방법을 알아봅니다."
 author: JoshuaPartlow
 ms.author: wdg-dev-content
@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 93dde6fe68275987c16562370ba277072e5467a9
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e576150cd06000405fa4754e147fbc1546cdf703
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #<a name="get-the-universal-windows-platform-uwp-samples-from-github"></a>GitHub에서 UWP(유니버설 Windows 플랫폼) 샘플 가져오기
 UWP 앱 샘플은 GitHub 리포지토리를 통해 사용할 수 있습니다. 처음으로 UWP 작업을 하는 경우라면 [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "Universal Windows Platform app samples GitHub repository") 리포지토리부터 시작합니다. 여기에 UWP 기능 및 API 사용 패턴을 모두 보여 주는 샘플도 포함되어 있습니다.  
 ![GitHub UWP 샘플 리포지토리](images/GitHubUWPSamplesPage.png) 추가 샘플은 개발자 센터의 [샘플](https://developer.microsoft.com/windows/samples "Dev Center samples")을 사용하여 찾을 수 있습니다.  
@@ -54,4 +51,3 @@ zip 파일을 다운로드한 후 Visual Studio에서 샘플을 엽니다.
 문제가 발생하거나 질문이 있는 경우 리포지토리의 문제 탭을 사용하여 새 문제를 만들면 지원하겠습니다.
 
 ![피드백 이미지](images/GitHubUWPSamplesFeedback.png)
-

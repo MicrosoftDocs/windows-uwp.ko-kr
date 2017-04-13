@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "기본 형식에 깊이 및 효과 사용"
+title: "기본 요소에 깊이 및 효과 사용"
 description: "여기서는 기본 형식에 깊이, 원근, 색 및 기타 효과를 사용하는 방법에 대해 설명합니다."
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 깊이, 효과, 기본 형식, directx"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 923bce3dd5f340b97fd6d4e7b31c4ed2e949ca94
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-depth-and-effects-on-primitives"></a>기본 형식에 깊이 및 효과 사용
 
 
@@ -458,7 +455,6 @@ private:
  
 
  
-
 
 
 

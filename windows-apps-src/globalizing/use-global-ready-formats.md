@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발하세요."
+Description: "날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발합니다."
 title: "세계화를 대비한 형식 사용"
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a733f3d87f2e6598e49d8926a7b10797e335c79c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 84e53b5093d2d288dbe95f51b0a3f9a8e5e06fe0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-global-ready-formats"></a>세계화를 대비한 형식 사용
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발하세요. 그러면 나중에 전 세계 지역/국가의 다른 문화, 지역 및 언어에 맞춰 앱을 조정할 수 있습니다.
+날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발합니다. 그러면 나중에 전 세계 지역/국가의 다른 문화, 지역 및 언어에 맞춰 앱을 조정할 수 있습니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -173,4 +170,3 @@ ms.lasthandoff: 02/07/2017
 * [날짜 및 시간 형식 지정 샘플](http://go.microsoft.com/fwlink/p/?linkid=231618)
 * [세계화 기본 설정 샘플](http://go.microsoft.com/fwlink/p/?linkid=231608)
 * [숫자 형식 지정 및 구문 분석 샘플](http://go.microsoft.com/fwlink/p/?linkid=231620)
-

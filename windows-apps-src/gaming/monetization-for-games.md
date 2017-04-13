@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 수익 창출"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: eccff6f037890fdd375eb150520db99a67aa718d
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 
-게임 개발자라면 비즈니스를 지속적으로 유지하고 멋진 게임을 만드는 것과 같이 열정을 느낄 수 있는 일을 계속하기 위해서는 수익 창출 옵션을 알아야 할 필요가 있습니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 게임의 수익 창출 방법 및 구현 방법을 대략적으로 설명합니다.
+게임 개발자라면 비즈니스를 지속하고 열정을 느낄 수 있는 일을 계속하기 위해 멋진 게임을 만드는 것과 같은 수익 창출 옵션을 알아야 할 필요가 있습니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 게임의 수익 창출 방법 및 구현 방법을 대략적으로 설명합니다.
 
 과거에는 게임에 가격을 지정하고 사람들이 스토어에서 구입하기만 기다리면 되었습니다. 하지만 요즘에는 옵션이 있습니다. "오프라인" 스토어에 게임을 배포하거나, 온라인으로 게임을 판매하거나(실제 또는 소프트 카피), 모든 사람이 무료로 게임을 즐길 수 있도록 하면서 구매 가능한 일종의 광고나 게임 내 항목을 포함하도록 선택할 수 있습니다. 게임 또한 더 이상 독립 실행형 제품이 아닙니다. 주 게임 외에 구매할 수 있는 추가 콘텐츠가 함께 제공되기도 합니다. 
 
@@ -54,11 +52,11 @@ Windows 스토어에서는 전 세계 200개 이상의 국가 및 지역에서 �
 
 스토어에는 _지속성_ 또는 _소모성_의 두 가지 추가 기능 유형을 만들 수 있습니다. 지속성은 지정된 기간 동안 지속되며 만료될 때까지 한 번만 구입할 수 있는 항목을 나타냅니다. 소모성은 반복해서 구입하여 사용할 수 있는 항목을 나타냅니다.
 
-소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, _개발자가 관리하는지_ 또는 _스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows 10 버전 1607부터 사용할 수 있음). 개발자가 관리하는 소모성 항목의 경우 개발자가 게이머의 항목 잔액을 추적해야 하며, 스토어에서 관리하는 소모성 항목의 경우는 Windows 스토어에서 항목 잔액을 추적합니다. 자세한 내용은 [소모성 추가 기능 개요](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons)를 참조하세요.
+소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, _개발자가 관리하는지_ 또는 _스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows10 버전 1607부터 사용할 수 있음). 개발자가 관리하는 소모성 항목의 경우 개발자가 게이머의 항목 잔액을 추적해야 하며, 스토어에서 관리하는 소모성 항목의 경우는 Windows 스토어에서 항목 잔액을 추적합니다. 자세한 내용은 [소모성 추가 기능 개요](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons)를 참조하세요.
 
 ### <a name="create-in-game-purchases"></a>게임에서 바로 구매 만들기
 
-최신 앱에서 바로 구매 및 라이선스 정보 API는 Windows SDK(Windows 10, 버전 1607부터)의 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있습니다. 1607 이상 릴리스를 대상으로 하는 새 게임을 개발하는 경우 __Windows.Services.Store__ 네임스페이스가 최신 추가 기능 유형을 지원하 고 더 나은 성능을 제공하기 때문에 권장됩니다.
+최신 앱에서 바로 구매 및 라이선스 정보 API는 Windows SDK(Windows10, 버전 1607부터)의 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있습니다. 1607 이상 릴리스를 대상으로 하는 새 게임을 개발하는 경우 __Windows.Services.Store__ 네임스페이스가 최신 추가 기능 유형을 지원하 고 더 나은 성능을 제공하기 때문에 권장됩니다.
 또한 이 네임스페이스는 향후 제공될 제품 유형은 물론, Windows 개발자 센터 및 스토어에서 지원하는 기능과 호환되도록 디자인되었습니다. 이전 버전의 Windows 10용으로 개발할 때는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 대신 사용합니다.
 
 자세한 내용은 [앱에서 바로 구매 및 평가판](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요.
@@ -85,7 +83,7 @@ Windows 스토어에서는 전 세계 200개 이상의 국가 및 지역에서 �
 
 #### <a name="create-a-package"></a>패키지 만들기
 
-게임이 게시되려면 최소 Windows 앱 인증 요구 사항을 충족해야 합니다. Windows 10 SDK의 일부인 [Windows 앱 인증 키트](https://msdn.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 통해 게임 테스트를 실행하여 스토어에 게시할 준비가 되었는지 확인할 수 있습니다. Windows 앱 인증 키트를 포함하는 Windows 10 SDK를 아직 다운로드하지 않은 경우 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)로 이동합니다.
+게임이 게시되려면 최소 Windows 앱 인증 요구 사항을 충족해야 합니다. Windows10 SDK의 일부인 [Windows 앱 인증 키트](https://msdn.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 통해 게임 테스트를 실행하여 스토어에 게시할 준비가 되었는지 확인할 수 있습니다. Windows 앱 인증 키트를 포함하는 Windows10 SDK를 아직 다운로드하지 않은 경우 [Windows10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)로 이동합니다.
 
 스토어에 업로드할 수 있는 패키지를 만들려면
 
@@ -180,7 +178,7 @@ AdControl을 사용하여 광고를 표시하는 경우 게임에 표시되는 �
 |AdType             | AdUnitId  | AppId                              |
 |-------------------|-----------|------------------------------------|
 |배너 광고         |10865270   |3f83fe91-d6be-434d-a0ae-7351c5a997f1|
-|중간 광고   |11389925   |d25517cb-12d4-4699-8bdc-52040c712cab|
+|중간 광고    |11389925   |d25517cb-12d4-4699-8bdc-52040c712cab|
 
 디자인 및 구현 프로세스에 도움이 되는 몇 가지 모범 사례는 다음과 같습니다.
 
@@ -210,11 +208,11 @@ Smaato에서는 UWP 앱 및 게임에 배너 광고를 통합할 수 있습니�
 
 AdDuplex를 사용하여 게임에서 배너 또는 중간 광고를 구현할 수 있습니다.
 
-Windows 10 XAML 프로젝트에 직접 AdDuplex를 통합하는 방법을 알아보려면 AdDuplex 웹 사이트로 이동합니다.
-* 광고 배너: [Windows 10 SDK for XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) 
-* 중간 광고: [Windows 10 XAML AdDuplex 중간 광고 설치 및 사용](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
+Windows10 XAML 프로젝트에 직접 AdDuplex를 통합하는 방법을 알아보려면 AdDuplex 웹 사이트로 이동합니다.
+* 광고 배너: [Windows10 SDK for XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) 
+* 중간 광고: [Windows10 XAML AdDuplex 중간 광고 설치 및 사용](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
 
-Unity를 사용하여 만든 Windows 10 UWP 게임에 AdDuplex SDK를 통합하는 방법에 대한 자세한 내용은 [Unity 앱 설치 및 사용에 대한 Windows 10 SDK](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage)를 참조하세요.
+Unity를 사용하여 만든 Windows10 UWP 게임에 AdDuplex SDK를 통합하는 방법에 대한 자세한 내용은 [Unity 앱 설치 및 사용에 대한 Windows10 SDK](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage)를 참조하세요.
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>광고 캠페인을 통해 게임 잠재력 극대화
 
@@ -225,8 +223,8 @@ Unity를 사용하여 만든 Windows 10 UWP 게임에 AdDuplex SDK를 통합하
 |캠페인 유형             | 게임 광고가 표시되는 위치...                                                                                                                                                                   |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |유료                      |게임의 디바이스 또는 범주에 해당하는 앱입니다.                                                                                                                                                   |
-|무료 커뮤니티            |커뮤니티 광고 캠페인도 옵트인(opt in)한 다른 개발자가 게시하는 앱입니다. 자세한 내용은 [커뮤니티 광고 정보](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads)를 참조하세요.|
-|무료 하우스                |게시한 앱만 무료인 경우입니다. 자세한 내용은 [하우스 광고 정보](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads)를 참조하세요.                                                            |
+|무료 커뮤니티               |커뮤니티 광고 캠페인도 옵트인(opt in)한 다른 개발자가 게시하는 앱입니다. 자세한 내용은 [커뮤니티 광고 정보](https://msdn.microsoft.com/windows/uwp/publish/about-community-ads)를 참조하세요.|
+|무료 하우스                   |게시한 앱만 무료인 경우입니다. 자세한 내용은 [하우스 광고 정보](https://msdn.microsoft.com/windows/uwp/publish/about-house-ads)를 참조하세요.                                                            |
 
 ## <a name="related-links"></a>관련 링크
 

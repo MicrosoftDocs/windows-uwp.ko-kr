@@ -10,13 +10,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b75d36d6a537f465545729cf90b36fdde1f552e0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 61e2c95ee67247360082b948bdfb532f84772b12
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="high-contrast-themes"></a>고대비 테마  
 
 Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용자가 사용하도록 설정할 수 있습니다. 고대비 테마는 인터페이스를 보기 쉽게 만드는 대비색의 작은 색상표를 사용합니다.
@@ -304,4 +301,3 @@ ThemeDictionaries 컬렉션에 있는 Style을 통해 조건부로 Foreground를
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [XAML 고대비 샘플](http://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)
-

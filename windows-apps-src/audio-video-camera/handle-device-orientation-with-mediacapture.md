@@ -9,15 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4e7895f65a6d16fc43acab9f1804e5a44bd8cb35
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 0cca599b448ab663d4ebf0004329ecce8f4309c4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-device-orientation-with-mediacapture"></a>MediaCapture를 사용하여 디바이스 방향 처리
-앱이 사용자 디바이스의 파일에 저장하거나 온라인으로 공유하는 등 앱 외부에서 보려는 사진 또는 비디오를 캡처하는 경우, 다른 앱이나 디바이스에서 이미지를 표시할 때 올바른 방향으로 표시되도록 적절한 방향 메타데이터를 사용하여 이미지를 인코드하는 것이 중요합니다. 디바이스 섀시 방향, 디스플레이 방향, 섀시의 카메라 배치(전면 또는 후면 카메라) 등 고려할 여러 가지 변수가 있기 때문에 미디어 파일에 포함할 올바른 방향 데이터를 결정하는 작업은 복잡할 수 있습니다. 
+앱이 사용자 디바이스의 파일에 저장하거나 온라인으로 공유하는 등 앱 외부에서 보려는 사진 또는 비디오를 캡처하는 경우 다른 앱이나 디바이스에서 이미지를 표시할 때 올바른 방향으로 표시되도록 적절한 방향 메타데이터를 사용하여 이미지를 인코드하는 것이 중요합니다. 디바이스 섀시 방향, 디스플레이 방향, 섀시의 카메라 배치(전면 또는 후면 카메라) 등 고려할 여러 가지 변수가 있기 때문에 미디어 파일에 포함할 올바른 방향 데이터를 결정하는 작업은 복잡할 수 있습니다. 
 
 방향 처리 프로세스를 단순화하려면 이 문서의 끝에 전체 정의가 나와 있는 도우미 클래스 **CameraRotationHelper**를 사용하는 것이 좋습니다. 이 클래스를 프로젝트에 추가한 다음 이 문서의 단계에 따라 카메라 앱에 방향 지원을 추가할 수 있습니다. 도우미 클래스는 사용자 관점에서 올바르게 렌더링되도록 카메라 UI에서 컨트롤을 쉽게 회전하는 데에도 도움이 됩니다.
 
@@ -118,7 +115,6 @@ GUID를 키로 지정하고 미리 보기 회전을 값으로 지정하여 스�
  
 
  
-
 
 
 

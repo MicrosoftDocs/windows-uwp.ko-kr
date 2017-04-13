@@ -2,21 +2,17 @@
 title: "CS 단계"
 description: "CS(계산 셰이더) 단계는 일반적인 용도의 고속 계산을 제공하고 GPU(그래픽 처리 장치)의 많은 병렬 프로세서를 활용합니다."
 ms.assetid: 300D4C0C-5450-45F8-9F29-E1A101D38F73
-keywords:
-- "CS 단계"
+keywords: "CS 단계"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 43d24876e6773f5e4a9f660e2b2e75b77cffc2c5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 910965862f923750a8be6beb59dcd6ac7edf7e69
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="compute-shader-cs-stage"></a>CS 단계
 
 
@@ -36,7 +32,6 @@ CS 단계는 일반적인 용도의 고속 계산을 제공하고 GPU(그래픽 
  
 
  
-
 
 
 

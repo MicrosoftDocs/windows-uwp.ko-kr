@@ -14,11 +14,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e24b411c5a966d48e4db07a4ddfce1248454e78d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 40f1bdad88ebcbd226dc935730766449d40d4595
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -496,7 +494,6 @@ C\# 또는 Microsoft Visual Basic 코드에서 인덱서([**Item**](https://msdn
  
 
  
-
 
 
 

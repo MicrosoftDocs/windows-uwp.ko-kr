@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 포트, 꼭짓점 버퍼, 데이터, direct3d"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 85e8a47da525c0f5de7e957a0048e245e374dedc
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-the-vertex-buffers-and-data"></a>꼭짓점 버퍼 및 데이터 포팅
 
 
@@ -318,7 +315,6 @@ Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때�
  
 
  
-
 
 
 

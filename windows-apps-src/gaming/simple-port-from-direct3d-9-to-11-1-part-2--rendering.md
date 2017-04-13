@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 렌더링 프레임 워크, 변환, direct3d 9, direct3d 11"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="convert-the-rendering-framework"></a>렌더링 프레임워크 변환
 
 
@@ -493,7 +490,6 @@ m_swapChain->Present(1, 0);
  
 
  
-
 
 
 

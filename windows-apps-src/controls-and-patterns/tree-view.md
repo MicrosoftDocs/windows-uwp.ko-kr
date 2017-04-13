@@ -4,10 +4,9 @@ Description: "확장 가능한 트리를 만들려면 트리 뷰 예제 코드�
 title: "트리 뷰"
 label: Tree view
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
 ms.openlocfilehash: 88e3e79b7ebdf06c200f3525095d7685f7e3e6dc
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="hierarchical-layout-with-treeview"></a>TreeView를 사용한 계층적 레이아웃
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -187,9 +186,3 @@ TreeView에서 항목을 추가/제거하는 기능을 사용자에게 제공하
 - [TreeView 샘플](http://go.microsoft.com/fwlink/?LinkId=785018)
 - [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
 - [ListView 및 GridView](listview-and-gridview.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
-

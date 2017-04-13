@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2eb40a8787479e6abd03ef2f0adb2d7462bfef16
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7b0eca20b947a69d1e5f2125de8a376594a40320
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 선형 키 프레임 애니메이션, **KeySpline** 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술로, 약간 더 복잡하며 시작 상태에서 종료 상태까지 비선형 애니메이션 동작을 사용하는 스토리보드 애니메이션을 만듭니다.
@@ -154,7 +152,7 @@ ms.lasthandoff: 02/07/2017
 
 -   이전 섹션에서 설명한 대로 키 프레임 애니메이션에서 감속/가속 키 프레임을 사용합니다. [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) 또는 [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279)을 사용합니다.
 -   **From**/**To**/**By** 애니메이션 형식 중 하나에서 **EasingFunction** 속성을 설정합니다. [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 또는 [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354)을 사용합니다.
--   [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209037)의 일부로 [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209034)을 설정합니다. 이 방법은 컨트롤에 대한 시각적 상태 정의와 관련이 있습니다. 자세한 내용은 [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) 또는 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요.
+-   [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034)의 일부로 [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037)을 설정합니다. 이 방법은 컨트롤에 대한 시각적 상태 정의와 관련이 있습니다. 자세한 내용은 [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) 또는 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요.
 
 다음은 감속/가속 함수의 목록입니다.
 
@@ -172,7 +170,7 @@ ms.lasthandoff: 02/07/2017
 
 일부 감속/가속 함수에는 고유한 속성이 있습니다. 예를 들어 [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057)에는 특정 **BounceEase**의 시간에 따른 함수 동작을 수정하는 두 가지 [**Bounces**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) 및 [**Bounciness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) 속성이 있습니다. [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126)와 같은 다른 감속/가속 함수에는 모든 감속/가속 함수가 공유하는 [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) 속성 외에 다른 속성이 없으며 항상 동일한 시간에 따른 함수 동작을 생성합니다.
 
-이러한 감속/가속 함수 일부는 속성이 있는 감속/가속 함수에서 속성을 설정하는 방법에 따라 약간 겹칩니다. 예를 들어 [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403)는 [**Power**](https://msdn.microsoft.com/library/windows/apps/BR210399)가 2인 [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power)와 정확하게 동일합니다. 또한 [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063)는 기본적으로 기본값 [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294)입니다.
+이러한 감속/가속 함수 일부는 속성이 있는 감속/가속 함수에서 속성을 설정하는 방법에 따라 약간 겹칩니다. 예를 들어 [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403)는 [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power)가 2인 [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399)와 정확하게 동일합니다. 또한 [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063)는 기본적으로 기본값 [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294)입니다.
 
 [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049) 감속/가속 함수는 **From**/**To** 또는 키 프레임의 값에 따라 설정되는 일반 범위를 벗어나는 값을 변경할 수 있기 때문에 고유합니다. 이 함수는 값을 변경하여 일반 **From**/**To** 동작에서 예상되는 것과 반대되는 방향으로 애니메이션을 시작하고 **From** 또는 시작 값으로 다시 이동한 다음 정상적으로 애니메이션을 실행합니다.
 
@@ -202,9 +200,9 @@ ms.lasthandoff: 02/07/2017
 
 한 가지 애니메이션 형식은 애니메이션 효과를 준 값을 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 또는 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 형식이 아닌 속성에 적용할 수 있는 유일한 방법이므로 특별히 검토할 가치가 있습니다. 이는 키 프레임 애니메이션 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)입니다. [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) 값을 사용하여 애니메이션 효과를 주는 작업은 프레임 사이에서 값을 보간할 수 없기 때문에 어렵습니다. 프레임의 [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342)에 도달하면 애니메이션 효과를 준 값이 키 프레임의 **Value**에서 지정한 값으로 바로 설정됩니다. 보간이 없기 때문에 **ObjectAnimationUsingKeyFrames** 키 프레임 컬렉션에서 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) 키 프레임 하나만 사용할 수 있습니다.
 
-설정하려는 개체 값이 특성 구문에서 **Value**를 채우는 문자열로 나타낼 수 없는 경우가 자주 있기 때문에 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210344)의 [**Value**](https://msdn.microsoft.com/library/windows/apps/BR243132)는 종종 속성 요소 구문을 사용하여 설정됩니다. [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588)와 같은 참조를 사용하는 경우 특성 구문을 계속 사용할 수 있습니다.
+설정하려는 개체 값이 특성 구문에서 **Value**를 채우는 문자열로 나타낼 수 없는 경우가 자주 있기 때문에 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132)의 [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344)는 종종 속성 요소 구문을 사용하여 설정됩니다. [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588)와 같은 참조를 사용하는 경우 특성 구문을 계속 사용할 수 있습니다.
 
-기본 템플릿에서 사용된 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 확인할 수 있는 한 위치는 템플릿 속성이 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 리소스를 참조하는 경우입니다. 이러한 리소스는 [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242962) 값이 아닌 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 개체이며 시스템 테마 ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807))로 정의되는 리소스를 사용합니다. 이러한 리소스는 [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665)와 같은 **Brush** 형식 값에 직접 할당할 수 있으며 간접 대상을 사용할 필요가 없습니다. 그러나 **SolidColorBrush**는 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 또는 **Color**가 아니므로 **ObjectAnimationUsingKeyFrames**를 사용하여 리소스를 사용해야 합니다.
+기본 템플릿에서 사용된 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 확인할 수 있는 한 위치는 템플릿 속성이 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 리소스를 참조하는 경우입니다. 이러한 리소스는 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 값이 아닌 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) 개체이며 시스템 테마 ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807))로 정의되는 리소스를 사용합니다. 이러한 리소스는 [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665)와 같은 **Brush** 형식 값에 직접 할당할 수 있으며 간접 대상을 사용할 필요가 없습니다. 그러나 **SolidColorBrush**는 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 또는 **Color**가 아니므로 **ObjectAnimationUsingKeyFrames**를 사용하여 리소스를 사용해야 합니다.
 
 ```xml
 <Style x:Key="TextButtonStyle" TargetType="Button">
@@ -241,7 +239,7 @@ ms.lasthandoff: 02/07/2017
 </Style>
 ```
 
-또한 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 사용하여 열거형 값을 사용하는 속성에 애니메이션 효과를 줄 수 있습니다. 다음은 Windows 런타임 기본 템플릿에서 가져온 명명된 스타일의 다른 예입니다. [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 열거형 상수를 사용하는 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR209006) 속성을 설정하는 방법을 확인하세요. 이 경우 특성 구문을 사용하여 값을 설정할 수 있습니다. “Collapsed”와 같이 열거형 값으로 속성을 설정하려면 열거형의 비정규화된 상수 이름만 필요합니다.
+또한 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 사용하여 열거형 값을 사용하는 속성에 애니메이션 효과를 줄 수 있습니다. 다음은 Windows 런타임 기본 템플릿에서 가져온 명명된 스타일의 다른 예입니다. [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR209006) 열거형 상수를 사용하는 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 속성을 설정하는 방법을 확인하세요. 이 경우 특성 구문을 사용하여 값을 설정할 수 있습니다. “Collapsed”와 같이 열거형 값으로 속성을 설정하려면 열거형의 비정규화된 상수 이름만 필요합니다.
 
 ```xml
 <Style x:Key="BackButtonStyle" TargetType="Button">
@@ -269,7 +267,7 @@ ms.lasthandoff: 02/07/2017
 </Style>
 ```
 
-[**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR243132) 프레임 집합에 둘 이상의 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210320)을 사용할 수 있습니다. 이 방법은 [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760)의 값에 애니메이션 효과를 주어 "슬라이드 쇼" 애니메이션을 만드는 흥미 있는 방법이며, 여러 개체 값이 유용할 수 있는 시나리오를 예로 들 수 있습니다.
+[**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) 프레임 집합에 둘 이상의 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132)을 사용할 수 있습니다. 이 방법은 [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760)의 값에 애니메이션 효과를 주어 "슬라이드 쇼" 애니메이션을 만드는 흥미 있는 방법이며, 여러 개체 값이 유용할 수 있는 시나리오를 예로 들 수 있습니다.
 
  ## <a name="related-topics"></a>관련 항목
 

@@ -11,32 +11,20 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a5f15129c424c92ac537116458c8433f6c96fa87
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
+ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
+translationtype: HT
 ---
 # <a name="nav-panes"></a>탐색 창
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-탐색 창은 실제 화면 공간을 절약함과 동시에 많은 수의 최상위 수준 탐색 항목을 허용하는 패턴입니다. 탐색 창은 모바일 앱에서 널리 사용되지만, 더욱 큰 화면에서도 잘 작동합니다. 창이 오버레이로 사용될 경우 사용자가 단추를 누를 때까지 축소된 상태를 유지하고 표시되지 않으므로 더 작은 화면에 편리합니다. 창이 고정 모드로 사용될 경우 열린 상태를 유지하므로 실제 화면 공간이 충분한 경우 더욱 실용적입니다.
+탐색 창은 실제 화면 공간을 절약하면서 많은 수의 최상위 수준 탐색 항목을 허용하는 패턴입니다. 탐색 창은 모바일 앱에서 널리 사용되지만, 더욱 큰 화면에서도 잘 작동합니다. 창이 오버레이로 사용될 경우 사용자가 단추를 누를 때까지 축소된 상태를 유지하고 표시되지 않으므로 더 작은 화면에 편리합니다. 창이 고정 모드로 사용될 경우 열린 상태를 유지하므로 실제 화면 공간이 충분한 경우 더욱 실용적입니다.
 
 ![탐색 창의 예](images/navHero.png)
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**SplitView 클래스**](https://msdn.microsoft.com/library/windows/apps/dn864360)</li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-<li> </li>
-</ul>
-</div>
 
+**중요 API**
+
+* [**SplitView 클래스**](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>올바른 패턴인가요?
 
@@ -54,9 +42,6 @@ ms.lasthandoff: 02/07/2017
 
 이 패턴을 구현하는 코드를 사용해 보려면 GitHub에서 [XAML 탐색 솔루션](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlNavigation)을 다운로드하세요.
 
-<div class="microsoft-internal-note">
-탐색 창과 햄버거 단추에 대한 검토는 [UNI](http://uni/DesignDepot.FrontEnd/#/Search?c=t&t=Windows%2BRS1%2BControls&f=NavPane_Hamburger)에서 수행할 수 있습니다.
-</div>
 
 ### <a name="pane"></a>창
 
@@ -132,4 +117,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

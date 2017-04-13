@@ -9,32 +9,29 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0bf7959be6278577cc8fe93011591e4523bee623
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0c21257db05a058c2d92f32218b73d920cc7156c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 # <a name="whats-next"></a>다음 작업
 
-앱을 작성하고 Windows 스토어에 게시하려면 무엇부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#을 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
+앱을 작성하고 Windows 스토어에 게시하려면 무엇부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오, <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a> 및 [LinkedIn Learning](https://www.linkedin.com/topic/windows-programming) 과정을 살펴보세요. 이미 Windows 개발에 대해 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
 
 앱을 작성하는 데 도움이 되는 많은 도구와 프레임워크를 사용할 수 있으며, 대부분 플랫폼 간 개발을 지원합니다. 예를 들어 2D 게임을 작성하려는 경우 <a href="http://www.monogame.net">Monogame</a> 또는 다양한 [JavaScript/HTML 프레임워크](https://html5gameengine.com/)를 참조할 수 있습니다. 3D 게임의 경우 <a href="http://www.unity3d.com">Unity</a>가 있으며, 모바일 장치에 집중한다면 <a href="http://www.xamarin.com">Xamarin</a>을 살펴보세요.
 
-시작하는 경우 UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스를 만드는 방법을 알아보는 것이 좋습니다. XAML을 사용하여 앱의 레이아웃을 지정하지만(방법을 안내하는 [자습서](../layout/grid-tutorial.md) 참조), XAML의 주요 강점은 앱에서 표시하려는 정보에 컨트롤을 연결하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다. 
+게임이 아닌 다른 앱을 제작하기 시작하는 경우 UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스를 만드는 방법을 알아보는 것이 좋습니다. XAML을 사용하여 앱을 디자인(방법을 안내하는 [자습서](../layout/grid-tutorial.md) 참조)하지만, XAML의 주요 강점은 앱에서 표시하려는 정보에 컨트롤을 연결하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다. 
 <table class="wdg-noborder">
 <tr>
- <td width=60><img src="images/icon3.png" width=64></td>
+ <td width=60><img src="images/icon3.png" alt="Bullet point" width=64></td>
     <td><h2>UWP 및 UWP 앱 수명 주기</h2><p>앱은 어떻게 시작하고 다른 앱을 시작하면 어떻게 될까요? 다음을 참조하세요.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP(유니버설 Windows 플랫폼) 앱 지침</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">UWP 앱 수명 주기</a></li>
     <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Windows 10의 새로운 기능</a></ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon7.png" width=64></td>
+ <td width=60><img src="images/icon7.png" alt="Bullet point" width=64></td>
     <td><h2>UX 및 UI</h2><p>사용할 수 있는 컨트롤은 무엇이며 어떻게 사용할 수 있을까요? 다음 항목에서는 컨트롤과 코드가 함께 작동하는 방법과 앱의 모양에 맞게 사용자 지정할 수 있는 방법을 설명합니다.</p> <ul>
     <li><a href="https://developer.microsoft.com/windows/design">디자인 및 UI</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml">XAML을 사용하여 페이지 레이아웃 정의</a></li>
@@ -46,7 +43,7 @@ ms.lasthandoff: 02/07/2017
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon6.png" width=64></td>
+ <td width=60><img src="images/icon6.png" alt="Bullet point" width=64></td>
     <td><h2>데이터 및 서비스</h2><p>코드가 목록과 그리드를 자동으로 채우게 하는 데이터 바인딩에 대해 알아봅니다. 외부 리소스에 연결하여 앱에 데이터를 가져오는 방법을 알아봅니다.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/data-binding/index">데이터 바인딩</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/listview-and-gridview">Listview, Gridview 및 데이터 바인딩</a></li>
@@ -54,14 +51,14 @@ ms.lasthandoff: 02/07/2017
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon4.png" width=64></td>
+ <td width=60><img src="images/icon4.png" alt="Bullet point" width=64></td>
     <td><h2>Publishing</h2><p>전 세계와 작업을 공유하여 수익을 창출합니다. 스토어에 앱을 게시하는 프로세스를 안내합니다.</p> <ul>
     <li><a href="https://msdn.microsoft.com/windows/uwp/publish/index">Windows 앱 게시</a></li>
     <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">앱 패키징</a></li>
     </ul></td>  
 </tr>
 <tr>
- <td width=60><img src="images/icon2.png" width=64></td>
+ <td width=60><img src="images/icon2.png" alt="Bullet point" width=64></td>
     <td><h2>기타 리소스</h2><p>샘플, 자습서, 비디오, 다른 도구 및 SDK입니다. 이를 통해 기술 수준을 한 단계 높일 수 있습니다.</p>
     <ul>
     <li><a href="https://developer.microsoft.com/windows/develop">방법 문서</a></li>
@@ -95,14 +92,12 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="finding-help-in-the-dev-center"></a>개발자 센터에서 도움말 검색
 
-[Microsoft 개발자 센터](http://developer.microsoft.com)에는 다양한 도구, 프레임워크 및 플랫폼에 대한 방대한 문서가 포함되어 있습니다. 항목과 샘플을 검색할 때 UWP 특정 콘텐츠를 읽고 있는지 확인해야 합니다. 올바른 콘텐츠를 읽고 있는지 어떻게 확인할 수 있나요?
-개념 콘텐츠, 즉 비API 참조 콘텐츠는 항목의 URL에 UWP가 있습니다. API 콘텐츠에는 Windows 런타임 API가 포함된 경로가 있습니다. 
+[docs.microsoft.com](http://docs.microsoft.com) 사이트에는 다양한 도구, 프레임워크 및 플랫폼에 대한 다양한 문서가 포함되어 있습니다. 항목과 샘플을 찾을 때 UWP 특정 콘텐츠를 읽고 있는지 확인해야 합니다. [Windows 개발자 센터](https://developer.microsoft.com/windows/apps)에서 UWP 참조를 시작할 수 있으며, 필요한 API 참조는 [UWP 앱 개발](https://docs.microsoft.com/uwp/api/)에 있습니다.
+UWP만을 위한 콘텐츠를 읽을 때는 URL 경로에 **uwp**가 포함되어 있으므로 페이지의 맨 위에 다음과 같이 경로가 표시됩니다.
 
-![예제 UWP 개념 항목](images/devcenter-topic2.png)
+![UWP 문서 찾기](images/UWP-docs.png)
 
-![예제 UWP 참조 항목](images/devcenter-topic1.png)
-
-검색 엔진을 사용할 때 검색 문자열에 "Windows 앱 개발"을 추가하면 대게 UWP 콘텐츠로 안내합니다.
+검색 엔진을 사용할 때 검색 문자열에 "Windows 앱 개발"을 추가하면 대개 UWP 콘텐츠로 안내합니다.
 
 
 <hr>
@@ -169,7 +164,6 @@ ms.lasthandoff: 02/07/2017
 <td align="left"><a href="https://www.microsoftstore.com/store/msusa/en_US/cat/Developer/categoryID.69418300?icid=en_US_Store_UH_BusEd_Dev">Microsoft 스토어의 개발자용 하드웨어입니다.</a></td>
 </tr>
 </table>
-
 
 
 

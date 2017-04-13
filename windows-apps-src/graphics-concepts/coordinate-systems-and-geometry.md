@@ -2,21 +2,17 @@
 title: "좌표계 및 기하 도형"
 description: "Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙 작업에 익숙해야 합니다. 이 섹션에서는 3D 장면을 만드는 데 필요한 가장 중요한 기하 도형 개념을 소개합니다."
 ms.assetid: E82EB0A9-0678-496B-96B3-8993BA580099
-keywords:
-- "좌표계 및 기하 도형"
+keywords: "좌표계 및 기하 도형"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 655e8587d103843bf2e040519b60f82160bc7b5d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 01885f6e2014e1659b1e59cc13bc6ce275f1ad03
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="coordinate-systems-and-geometry"></a>좌표계 및 기하 도형
 
 
@@ -82,7 +78,6 @@ Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙
  
 
  
-
 
 
 

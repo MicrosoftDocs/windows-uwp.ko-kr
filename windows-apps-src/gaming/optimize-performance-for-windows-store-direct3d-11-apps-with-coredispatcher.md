@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화"
+title: "UWP DirectX 게임에 대한 입력 대기 시간 최적화"
 description: "입력 대기 시간은 게임 환경에 큰 영향을 줄 수 있으며, 최적화하면 게임에 더 세련된 느낌을 줄 수 있습니다."
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, directx, 입력 대기 시간"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c7cb4b72ed035e77a2054daffa9f105449f3b501
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cf83b02a6388f71f94641e7c24e011a540790fa0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 
 
@@ -186,7 +183,7 @@ void App::Run()
 
 일부 게임은 시나리오 3의 입력 대기 시간 증가를 무시하거나 보상할 수 있습니다. 그러나 짧은 입력 대기 시간이 게임 환경과 플레이어 피드백에 중요한 경우 초당 60프레임을 렌더링하는 게임이 별도 스레드에서 입력을 처리해야 합니다.
 
-퍼즐 게임의 네 번째 반복은 시나리오 3을 기반으로 하며, 게임 루프의 입력 처리와 그래픽 렌더링을 별도 스레드로 분할합니다. 각각 별도 스레드를 사용하면 입력이 그래픽 출력으로 인해 지연되지 않지만, 그 결과로 코드가 더 복잡해집니다. 시나리오 4에서 입력 스레드는 [**CoreProcessEventsOption::ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208215)로 [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208217)를 호출하며, 새 이벤트를 기다리고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 게임이 [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260)를 호출할 때까지 이 동작을 계속합니다.
+퍼즐 게임의 네 번째 반복은 시나리오 3을 기반으로 하며, 게임 루프의 입력 처리와 그래픽 렌더링을 별도 스레드로 분할합니다. 각각 별도 스레드를 사용하면 입력이 그래픽 출력으로 인해 지연되지 않지만, 그 결과로 코드가 더 복잡해집니다. 시나리오 4에서 입력 스레드는 [**CoreProcessEventsOption::ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)로 [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)를 호출하며, 새 이벤트를 기다리고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 게임이 [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260)를 호출할 때까지 이 동작을 계속합니다.
 
 ``` syntax
 void App::Run()
@@ -261,7 +258,6 @@ Windows 8.1에서 DXGI는 스왑 체인에 대한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRA
  
 
  
-
 
 
 

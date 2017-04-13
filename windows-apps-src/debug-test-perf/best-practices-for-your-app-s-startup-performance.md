@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b59a4eb056e36156b847c769778b2609863ec1fc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9ab3eeeffbab26f5d26d28160a750c50d53b7e96
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
@@ -362,10 +360,9 @@ XAML, 이미지, 앱에 중요한 기타 파일을 포함한 콘텐츠를 로컬
 
 **페이지 캐싱**. 기본적으로 Frame.Navigate 메서드를 사용하여 임의 페이지로 이동하면 해당 페이지의 새 인스턴스가 인스턴스화됩니다. 마찬가지로 Frame.GoBack을 사용하여 이전 페이지로 다시 이동하면 이전 페이지의 새 인스턴스가 할당됩니다.
 
-그러나 프레임은 이러한 인스턴스화를 피할 수 있는 옵션 페이지 캐시를 제공합니다. 페이지를 캐시에 넣으려면 Page.NavigationCacheMode 속성을 사용합니다. 해당 모드를 필수로 설정하면 페이지가 강제로 캐시되고 사용으로 설정하면 페이지가 캐시되는 것을 허용합니다. 기본적으로 캐시 크기는 10페이지이지만 Frame.CacheSize 속성으로 재정의할 수 있습니다. 모든 필수 페이지가 캐시된 다음에 CacheSize 필수 페이지보다 적은 경우 사용 페이지도 캐시될 수 있습니다.
+그러나 프레임은 이러한 인스턴스화를 피할 수 있는 선택적 페이지 캐시를 제공합니다. 페이지를 캐시에 넣으려면 Page.NavigationCacheMode 속성을 사용합니다. 해당 모드를 필수로 설정하면 페이지가 강제로 캐시되고 사용으로 설정하면 페이지가 캐시되는 것을 허용합니다. 기본적으로 캐시 크기는 10페이지이지만 Frame.CacheSize 속성으로 재정의할 수 있습니다. 모든 필수 페이지가 캐시된 다음에 CacheSize 필수 페이지보다 적은 경우 사용 페이지도 캐시될 수 있습니다.
 
 페이지 캐싱은 인스턴스화를 방지하여 성능에 도움이 되어 탐색 성능을 향상시킬 수 있습니다. 페이지 캐싱은 과도한 캐싱으로 성능에 손상을 입혀서 작업 집합에 영향을 미칠 수 있습니다.
 
 따라서 응용 프로그램에 적절하게 페이지 캐싱을 사용하는 것이 좋습니다. 예를 들어 프레임의 항목 목록을 표시하는 앱이 있다고 가정했을 때 한 항목을 탭하면 해당 항목에 대한 세부 정보 페이지로 프레임을 이동합니다. 목록 페이지는 캐시하도록 설정되어 있을 것입니다. 세부 정보 페이지가 모든 항목에 대해 동일한 경우 이 페이지 역시 캐시될 것입니다. 하지만 세부 정보 페이지의 형식이 더 다른 유형이면 캐시하지 않는 것이 더 나을 수 있습니다.
-
 

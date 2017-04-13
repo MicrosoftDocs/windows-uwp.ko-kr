@@ -2,21 +2,17 @@
 title: "좌표계"
 description: "일반적으로 3D 그래픽 응용 프로그램은 두 가지 유형의 카티전 좌표계(왼손 또는 오른손) 중 하나를 사용합니다. 두 좌표계에서 양의 x-축은 오른쪽을 가리키고 양의 y-축은 위를 가리킵니다."
 ms.assetid: 138D9B81-146F-4E9F-B742-1EDED8FBF2AE
-keywords:
-- "좌표계"
+keywords: "좌표계"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 47096c67d97212a5090f1a9b9a14e6ca57aa8f18
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 64ee2dee2944af1d256b825fc08fb01c992d3218
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="coordinate-systems"></a>좌표계
 
 
@@ -58,7 +54,6 @@ Direct3D는 왼손 좌표계를 사용합니다. 왼손 좌표와 오른손 좌�
  
 
  
-
 
 
 

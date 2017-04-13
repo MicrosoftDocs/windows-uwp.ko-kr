@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 15b12bfafea71705a9c18464461a73e3e2f05563
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ade00b4084ffb990444573a2128623c9ef29c5ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="enable-device-capabilities"></a>디바이스 기능 사용
 
@@ -80,5 +78,4 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 | Bluetooth GATT           | [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) | 
 | Bluetooth RFCOMM         | [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) | 
 | POS(Point of Service)   | [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) |
-
 

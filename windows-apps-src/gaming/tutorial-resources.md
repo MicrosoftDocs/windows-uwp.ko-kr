@@ -3,20 +3,16 @@ author: mtoepke
 title: "게임 샘플 확장"
 description: "축하합니다! 이제 기본 UWP(유니버설 Windows 플랫폼) DirectX 3D 게임의 주요 구성 요소에 대해 이해하셨습니다."
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
-keywords:
-- DirectX, XAML
+keywords: DirectX, XAML
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e3f4abdb0a0f42d1b25a3adc1a78ab414affa77a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2d36c8f8f4e3f51928f1c7707e0cb6f69386645d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="extend-the-game-sample"></a>게임 샘플 확장
 
 
@@ -1520,7 +1516,6 @@ void MainPage::OnResetButtonClicked(Object^ sender, RoutedEventArgs^ args)
  
 
  
-
 
 
 

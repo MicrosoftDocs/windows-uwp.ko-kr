@@ -1,6 +1,6 @@
 ---
 author: Xansky
-Description: "UWP(유니버설 Windows 플랫폼) 앱이 접근 가능한지 확인하는 검사 목록을 제공합니다."
+Description: "UWP(유니버설 Windows 플랫폼) 앱에 접근성이 있는지 확인하는 검사 목록을 제공합니다."
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
 title: "접근성 검사 목록"
 label: Accessibility checklist
@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c5db2b89c52f77cb92da06c246e07a215fd2d02d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bbdff40a10e61be6be498af65701a026a53a8cf0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility-checklist"></a>접근성 검사 목록
 
 
@@ -65,11 +62,10 @@ UWP(유니버설 Windows 플랫폼) 앱이 접근 가능한지 확인하는 검�
 
     기준 접근성 지원을 구현한 경우 Windows 스토어에 접근성 있는 앱으로 등록하면 더욱 많은 고객에게 도달하고 좋은 평가를 받을 수 있습니다.
 
-    자세한 내용은 [스토어에서의 접근성](accessibility-in-the-store.md)을 참조하세요.
+    자세한 내용은 [스토어의 접근성](accessibility-in-the-store.md)을 참조하세요.
 
 <span id="related_topics"/>
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
 * [접근성을 위한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [피해야 할 사례](practices-to-avoid.md) 
-

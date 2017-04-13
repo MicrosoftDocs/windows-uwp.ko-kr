@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c5e02bcd4912a5db5d691f4172baeff2378433e4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6f50ad39420f3154c437a58d19971ed01e638528
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="use-the-gyrometer"></a>회전계 사용
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -182,4 +180,3 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
  ## <a name="related-topics"></a>관련 항목
 
 * [회전계 샘플](http://go.microsoft.com/fwlink/p/?linkid=241379)
-

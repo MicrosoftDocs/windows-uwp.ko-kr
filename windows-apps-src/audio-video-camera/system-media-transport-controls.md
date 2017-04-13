@@ -9,18 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8b8af1942ed50df9f382773113a903360f8cb19b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c0b24bce21ed145d61f6b5d05392a6fc3cc30aa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manual-control-of-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤의 수동 컨트롤
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Windows 10 버전 1607부터 미디어를 재생하는 데 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하는 UWP 앱이 기본적으로 SMTC(시스템 미디어 전송 컨트롤)와 자동으로 통합됩니다. 대부분의 시나리오에서 이러한 방식으로 SMTC와 상호 작용하는 것이 좋습니다. **MediaPlayer**와 SMTC의 기본 통합을 사용자 지정하는 방법은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요.
+Windows10 버전 1607부터 미디어를 재생하는 데 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하는 UWP 앱이 기본적으로 SMTC(시스템 미디어 전송 컨트롤)와 자동으로 통합됩니다. 대부분의 시나리오에서 이러한 방식으로 SMTC와 상호 작용하는 것이 좋습니다. **MediaPlayer**와 SMTC의 기본 통합을 사용자 지정하는 방법은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요.
 
 SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습니다. 여기에는 하나 이상의 미디어 플레이어 재생을 제어하는 데 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController)를 사용 중인 경우가 포함됩니다. 또는 여러 미디어 플레이어를 사용 중이고 앱에서 하나의 SMTC 인스턴스만 실행하려는 경우입니다. [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaElement)를 사용하여 미디어를 재생하는 경우 SMTC를 수동으로 제어해야 합니다.
 
@@ -119,7 +116,6 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 * [시스템 미디어 전송 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
-
 
 
 

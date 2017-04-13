@@ -12,11 +12,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2131b6db9d9d72b574a0d0bed7c07aef7fcc4f37
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 51d8a53de21623516d6d582834cf9d854f2a5403
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="media-player"></a>미디어 플레이어
 
@@ -48,7 +46,7 @@ Windows 10 시작 앱의 미디어 플레이어입니다.
 ![Windows 10 시작 앱의 미디어 요소입니다.](images/control-examples/mtc_getstarted_example.png)
 
 ## <a name="create-a-media-player"></a>미디어 플레이어 만들기
-XAML에서 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 개체를 만들어 앱에 미디어를 추가하고 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 오디오 또는 비디오 파일을 가리키는 [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx)로 설정합니다.
+XAML에서 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 개체를 만들어 앱에 미디어를 추가하고 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 오디오 또는 비디오 파일을 가리키는 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx)로 설정합니다.
 
 이 XAML은 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)를 만들고 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) 속성을 앱에 로컬인 비디오 파일의 URI로 설정합니다. **MediaPlayerElement**는 페이지가 로드되면 재생을 시작합니다. 미디어가 바로 시작되지 않게 하려면 [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.autoplay.aspx) 속성을 **false**로 설정할 수 있습니다.
 
@@ -88,7 +86,7 @@ XAML에서 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/a
 
 
 ### <a name="set-the-media-source"></a>미디어 원본 설정
-네트워크의 파일 또는 앱에 포함된 파일을 재생하려면 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) 속성을 파일의 경로와 함께 [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx)로 설정합니다.
+네트워크의 파일 또는 앱에 포함된 파일을 재생하려면 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) 속성을 파일의 경로와 함께 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx)로 설정합니다.
 
 **팁**  인터넷에서 파일을 열려면 앱의 매니페스트(Package.appxmanifest)에서 **Internet (Client)** 기능을 선언해야 합니다. 접근 권한 값 선언에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/library/windows/apps/mt270968)을 참조하세요.
 
@@ -136,7 +134,7 @@ private void LoadMediaFromString(string path)
 }
 ```
 
-미디어 원본을 앱에 포함된 미디어 파일로 설정하려면 경로 앞에 **ms-appx:///**를 붙여 [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017)를 초기화한 다음 이 URI로 [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx)를 만들고 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 이 URI로 설정합니다. 예를 들어 **Videos** 하위 폴더에 있는 **video1.mp4** 파일의 경우 경로는 **ms-appx:///Videos/video1.mp4**와 같습니다.
+미디어 원본을 앱에 포함된 미디어 파일로 설정하려면 경로 앞에 **ms-appx:///**를 붙여 [**URI**](https://msdn.microsoft.com/library/windows/apps/br226017)를 초기화한 다음 이 URI로 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx)를 만들고 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 이 URI로 설정합니다. 예를 들어 **Videos** 하위 폴더에 있는 **video1.mp4** 파일의 경우 경로는 **ms-appx:///Videos/video1.mp4**와 같습니다.
 
 다음 코드는 이전에 XAML로 정의된 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 속성을 **ms-appx:///Videos/video1.mp4**로 설정합니다.
 
@@ -172,9 +170,9 @@ private void LoadEmbeddedAppFile()
 
     [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하여 미디어 파일을 선택합니다. [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850)를 설정하여 **FileOpenPicker**가 표시하는 파일 형식을 지정합니다. 파일 선택기를 실행하여 파일을 가져오려면 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)를 호출합니다.
 
-2.  [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx)를 사용하여 선택한 미디어 파일을 [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)로 설정합니다.
+2.  [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx)를 사용하여 선택한 미디어 파일을 [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)로 설정합니다.
 
-    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br227171)에서 반환된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br207847)을 사용하려면 [**MediaSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.createfromstoragefile.aspx)에서 [**CreateFromStorageFile**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.core.mediasource.aspx) 메서드를 호출하고 이를 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)로 설정해야 합니다. 그런 다음 [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.play.aspx)에서 [**Play**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)를 호출하여 미디어를 시작합니다.
+    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br227171)에서 반환된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br207847)을 사용하려면 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.createfromstoragefile.aspx)에서 [**CreateFromStorageFile**](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx) 메서드를 호출하고 이를 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)로 설정해야 합니다. 그런 다음 [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.play.aspx)에서 [**Play**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)를 호출하여 미디어를 시작합니다.
 
 
 이 예제는 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하여 파일을 선택하고 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)로 설정하는 방법을 보여 줍니다.
@@ -215,8 +213,8 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 ### <a name="set-the-poster-source"></a>포스터 원본 설정
 [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.PosterSource.aspx) 속성을 사용하여 미디어가 로드되기 전에 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)에 시각적 표현을 제공할 수 있습니다. **PosterSource**는 미디어 대신 표시되는 이미지(예제: 스크린샷, 영화 포스터)입니다. **PosterSource**는 다음과 같은 경우에 표시됩니다.
 
--   유효한 원본이 설정되지 않은 경우. 예를 들어 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)가 설정되지 않았거나, **Source**가 **Null**로 설정되어 있거나, 원본이 잘못된 경우(예: [**MediaFailed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediafailed.aspx) 이벤트가 발생한 경우)가 있습니다.
--   미디어를 로드하는 중. 예를 들어 유효한 원본이 설정되어 있지만 [**MediaOpened**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx) 이벤트가 아직 발생하지 않은 경우가 있습니다.
+-   유효한 원본이 설정되지 않은 경우. 예를 들어 [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)가 설정되지 않았거나, **Source**가 **Null**로 설정되어 있거나, 원본이 잘못된 경우(예: [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.mediafailed.aspx) 이벤트가 발생한 경우)가 있습니다.
+-   미디어를 로드하는 중. 예를 들어 유효한 원본이 설정되어 있지만 [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx) 이벤트가 아직 발생하지 않은 경우가 있습니다.
 -   미디어가 다른 장치로 스트리밍되는 경우
 -   미디어가 오디오 전용인 경우
 
@@ -251,7 +249,7 @@ private DisplayRequest appDisplayRequest = null;
 
 3.  동영상 재생이 재생 오류로 인해 중지, 일시 중지 또는 중단될 경우 디스플레이 요청을 해제하려면 [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819)를 호출합니다. 앱에 활성 디스플레이 요청이 더 이상 없으면 Windows는 장치가 사용되지 않을 때 디스플레이를 흐리게 하고 결국에는 꺼서 배터리 사용 시간을 절약합니다.
 
-    각 [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)에는 [**PlaybackRate**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx), [**PlaybackState**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.aspx) 및 [**Position**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx) 등 미디어 재생의 다양한 면을 제어하는 [**MediaPlaybackSession**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstate.aspx) 형식의 [**PlaybackSession**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx)이 있습니다. 여기서는 [**MediaPlayer.PlaybackSession**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx)에서 [**PlaybackStateChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstatechanged.aspx) 이벤트를 사용하여 디스플레이 요청을 해제해야 하는 상황을 감지합니다. 그런 다음 [**NaturalVideoHeight**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacksession.naturalvideoheight.aspx) 속성을 사용하여 오디오 또는 비디오 파일의 재생 여부를 결정하고 비디오가 재생되는 경우에만 화면을 활성 상태로 유지합니다.
+    각 [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)에는 [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx), [**PlaybackState**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.aspx) 및 [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx) 등 미디어 재생의 다양한 면을 제어하는 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstate.aspx) 형식의 [**PlaybackSession**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx)이 있습니다. 여기서는 [**MediaPlayer.PlaybackSession**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.playbacksession.aspx)에서 [**PlaybackStateChanged**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackstatechanged.aspx) 이벤트를 사용하여 디스플레이 요청을 해제해야 하는 상황을 감지합니다. 그런 다음 [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.naturalvideoheight.aspx) 속성을 사용하여 오디오 또는 비디오 파일의 재생 여부를 결정하고 비디오가 재생되는 경우에만 화면을 활성 상태로 유지합니다.
     ```xaml
 <MediaPlayerElement x:Name="mpe" Source="Media/video1.mp4"/>
     ```
@@ -292,10 +290,10 @@ private DisplayRequest appDisplayRequest = null;
     ```
 
 ### <a name="control-the-media-player-programmatically"></a>프로그래밍 방식으로 미디어 플레이어 제어
-[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)는 [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) 속성을 통해 오디오 및 비디오 재생을 제어하기 위한 다양한 속성, 메서드 및 이벤트를 제공합니다. 전체 속성, 메서드 및 이벤트 목록을 보려면 [**MediaPlayer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.aspx) 참조 페이지를 참조하세요.
+[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)는 [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) 속성을 통해 오디오 및 비디오 재생을 제어하기 위한 다양한 속성, 메서드 및 이벤트를 제공합니다. 전체 속성, 메서드 및 이벤트 목록을 보려면 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) 참조 페이지를 참조하세요.
 
 ### <a name="advanced-media-playback-scenarios"></a>고급 미디어 재생 시나리오
-재생 목록 재생, 오디오 언어 전환 또는 사용자 지정 메타데이터 트랙 만들기와 같은 복잡한 미디어 재생 시나리오의 경우에는 [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 [**MediaPlaybackItem**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) 또는 [**MediaPlaybackList**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx)로 설정합니다. 다양한 고급 미디어 기능 사용 방법은 개발자 센터의 [**미디어 재생**](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/media-playback-with-mediasource) 페이지를 참조하세요.
+재생 목록 재생, 오디오 언어 전환 또는 사용자 지정 메타데이터 트랙 만들기와 같은 복잡한 미디어 재생 시나리오의 경우에는 [**MediaPlayerElement.Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) 또는 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx)로 설정합니다. 다양한 고급 미디어 기능 사용 방법은 개발자 센터의 [**미디어 재생**](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) 페이지를 참조하세요.
 
 ### <a name="enable-full-window-video-rendering"></a>전체 창 동영상 렌더링을 사용하도록 설정
 
@@ -360,9 +358,9 @@ private void PictureSize_Click(object sender, RoutedEventArgs e)
 
 ### <a name="enable-low-latency-playback"></a>짧은 대기 시간 재생을 사용하도록 설정
 
-[**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.realtimeplayback.aspx)에서 [**RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) 속성을 **true**로 설정하면 미디어 플레이어 요소의 재생에 대한 초기 대기 시간을 줄일 수 있습니다. 이는 양방향 통신 앱에 중요하며 일부 게임 시나리오에 적용될 수 있습니다. 이 모드는 리소스를 더 많이 사용하고 전력 효율성이 떨어집니다.
+[**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.realtimeplayback.aspx)에서 [**RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) 속성을 **true**로 설정하면 미디어 플레이어 요소의 재생에 대한 초기 대기 시간을 줄일 수 있습니다. 이는 양방향 통신 앱에 중요하며 일부 게임 시나리오에 적용될 수 있습니다. 이 모드는 리소스를 더 많이 사용하고 전력 효율성이 떨어집니다.
 
-이 예제에서는 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)를 만들고 [**RealTimePlayback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.realtimeplayback.aspx)을 **true**로 설정합니다.
+이 예제에서는 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)를 만들고 [**RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.realtimeplayback.aspx)을 **true**로 설정합니다.
 
 
 ```csharp
@@ -386,4 +384,3 @@ mp.MediaPlayer.RealTimePlayback = true;
 
 - [UWP 앱의 명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)
 - [UWP 앱의 콘텐츠 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958434)
-

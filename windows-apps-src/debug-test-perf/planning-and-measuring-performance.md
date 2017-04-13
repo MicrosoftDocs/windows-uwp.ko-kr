@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f66617e3131399a1cfcac17f258cc3b42c6810d2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d80ff77c380d8c4f03cb2ef415126cba46d77062
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="planning-for-performance"></a>성능 계획
 
@@ -197,5 +195,4 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 ## <a name="optimizing"></a>최적화
 
 앱에서 성능에 중요한 코드 경로만 최적화하세요. 이는 대부분 시간이 소요되는 경로입니다. 프로파일링을 통해 확인할 수 있습니다. 종종 좋은 디자인 사례에 따라 소프트웨어를 만드는 작업과 최고로 최적화된 성능을 제공하는 코드를 작성하는 작업은 서로 상충되는 점이 있습니다. 일반적으로 성능이 중요하지 않은 영역에서는 개발자 생산성과 양호한 소프트웨어 디자인을 우선적으로 처리하는 것이 더 좋습니다.
-
 

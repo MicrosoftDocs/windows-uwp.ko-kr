@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9a7c1c5e4352f80aee65cd828f8113ac0bd35d49
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: af862471fcac7ee7f0ab8ad61f57c485d995bae2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="sensors"></a>센서
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 센서를 사용하면 앱에서 디바이스와 디바이스를 둘러싼 실제 주변 환경 간의 관계를 알 수 있습니다. 센서는 장치의 방향과 움직임을 앱에 알려줄 수 있습니다. 이러한 센서는 장치의 동작을 사용하여 화면의 캐릭터 정렬, 조종석에서 장치를 조종 핸들로 사용하는 상황 시뮬레이트 등 고유한 형태의 입력을 제공하여 게임, 증강 현실 앱 또는 유틸리티 앱을 더 유용하고 대화형으로 만드는 데 도움이 될 수 있습니다.
@@ -132,5 +130,4 @@ ms.lasthandoff: 02/07/2017
 ## <a name="samples"></a>샘플
 
 다양한 센서를 사용하는 방법을 보여 주는 몇 가지 샘플은 [Windows 센서 샘플](http://go.microsoft.com/fwlink/?LinkID=616041)을 참조하세요.
-
 

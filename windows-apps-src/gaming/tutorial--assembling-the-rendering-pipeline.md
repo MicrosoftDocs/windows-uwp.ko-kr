@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 렌더링"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7b97a70094c953e9614a84979c9f98fc91a82451
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="assemble-the-rendering-framework"></a>렌더링 프레임워크 어셈블
 
 
@@ -6326,7 +6323,6 @@ void Material::RenderSetup(
  
 
  
-
 
 
 

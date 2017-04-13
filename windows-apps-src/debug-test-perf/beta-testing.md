@@ -2,25 +2,23 @@
 author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: "베타 테스트"
-description: "베타 테스트를 수행하면 앱 개발 팀 외부에 있는 사용자의 장치에서 아직 릴리스되지 않은 앱을 시험해보고 사용자의 피드백에 따라 앱을 개선할 수 있습니다."
+description: "베타 테스트를 수행하면 앱 개발 팀 외부에 있는 사용자의 디바이스에서 아직 릴리스되지 않은 앱을 시험해보고 사용자의 피드백에 따라 앱을 향상시킬 수 있습니다."
 ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7f84b573a051bca38000d2d480368147110ea22c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a48a18fdb2c75f334a4ac9cb5916cab6b43d8c7e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="beta-testing"></a>베타 테스트
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-*베타 테스트*를 수행하면 앱 개발 팀 외부에 있는 사용자의 장치에서 아직 릴리스되지 않은 앱을 시험해보고 사용자의 피드백에 따라 앱을 개선할 수 있습니다.
+*베타 테스트*를 수행하면 앱 개발 팀 외부에 있는 사용자의 디바이스에서 아직 릴리스되지 않은 앱을 시험해 보고 사용자의 피드백에 따라 앱을 향상시킬 수 있습니다.
 
 이 섹션에서는 유니버설 Windows 앱 베타 테스트에 대한 옵션을 설명합니다.
 
@@ -50,7 +48,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

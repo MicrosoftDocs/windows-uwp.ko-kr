@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c3779262c24ef1bd124330fc7709b38abead1a7a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b033c58fed79db197858db99d71ad6a174a9a662
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="calendar-view"></a>달력 보기
 
@@ -207,4 +205,3 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [달력 날짜 선택](calendar-date-picker.md)
 - [날짜 선택기](date-picker.md)
 - [시간 선택기](time-picker.md)
-

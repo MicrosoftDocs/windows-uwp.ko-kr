@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0a92a3962a6e46f6086b07e548ea39887a780c21
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b85d14b037fc65f10a6a24ed6c1a04b4be3ff6d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
 
@@ -233,4 +231,3 @@ Windows 도구 모음에서 작업으로 검색:
  
 
  
-

@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "RTL(오른쪽에서 왼쪽) 방향으로 읽기를 포함하여 여러 언어의 레이아웃과 글꼴을 지원하는 앱을 개발합니다."
+Description: "RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 개발합니다."
 title: "레이아웃 및 글꼴 조정, RTL 지원"
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
@@ -11,17 +11,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b7d34aaf891497af80ed8c94609e6a8fbbd3bec
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9c700928d2ec0da21b518528289034296637eeff
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>레이아웃 및 글꼴 조정, RTL 지원
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-RTL(오른쪽에서 왼쪽) 방향으로 읽기를 포함하여 여러 언어의 레이아웃과 글꼴을 지원하는 앱을 개발합니다.
+RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 개발합니다. 
 
 ## <a name="layout-guidelines"></a>레이아웃 지침
 
@@ -117,4 +114,3 @@ C++:
 
 ## <a name="related-topics"></a>관련 항목
 [FlowDirection](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.flowdirection.aspx)
-

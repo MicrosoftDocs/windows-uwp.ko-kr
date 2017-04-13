@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 93297899c341366788f1d7dfa06507c1f3003884
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 14186f0623f16426a98b5184020736bd4321857d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="intro-to-controls-and-patterns"></a>컨트롤 및 패턴 소개
 
@@ -150,4 +148,3 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 -     [레이아웃](../layout/index.md)
 -     [스타일](../style/index.md)
 -     [유용성](../usability/index.md)
-

@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ee62e0d1ddd41ce1cce61bc854168f0cac6ad038
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bc8064cd5446ca4c481c60b08cdf626ec85be646
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
 # <a name="create-an-nfc-smart-card-app"></a>NFC 스마트 카드 앱 만들기
 
@@ -252,13 +250,13 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 
 AID 그룹당 최대 9개의 AID(각기 5-16바이트 길이)를 포함할 수 있습니다.
 
-[**RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) 메서드를 사용하여 시스템에 AID 그룹을 등록합니다. 그러면 [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration) 개체가 반환됩니다. 기본적으로 등록 개체의 [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) 속성은 **Disabled**로 설정됩니다. 즉, AID가 시스템에 등록되어 있는 경우에도 아직 활성화되지 않아서 트래픽을 수신하지 못합니다.
+[**RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) 메서드를 사용하여 시스템에 AID 그룹을 등록합니다. 그러면 [**SmartCardAppletIdGroupRegistration**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) 개체가 반환됩니다. 기본적으로 등록 개체의 [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) 속성은 **Disabled**로 설정됩니다. 즉, AID가 시스템에 등록되어 있는 경우에도 아직 활성화되지 않아서 트래픽을 수신하지 못합니다.
 
 ```csharp
 reg = await SmartCardEmulator.RegisterAppletIdGroupAsync(appletIdGroup);
 ```
 
-아래와 같이 [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) 클래스의 [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration) 메서드를 사용하여 등록된 카드(AID 그룹)를 사용하도록 설정할 수 있습니다. 시스템에서 한 번에 한 결제 카드만 사용하도록 설정할 수 있으므로 결제 AID 그룹의 [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy)를 **Enabled**로 설정하는 동작은 기본 결제 카드를 설정하는 동작과 같습니다. 이미 선택한 기본 결제 카드가 있는지와 상관없이 이 카드를 기본 결제 카드로 허용할 것인지를 묻는 메시지가 표시됩니다. 앱이 이미 기본 결제 응용 프로그램이며 단순히 자체 AID 그룹 사이에서 변경되고 있는 경우에는 이 내용이 해당하지 않습니다. 앱당 AID 그룹을 최대 10개 등록할 수 있습니다.
+아래와 같이 [**SmartCardAppletIdGroupRegistration**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) 클래스의 [**RequestActivationPolicyChangeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) 메서드를 사용하여 등록된 카드(AID 그룹)를 사용하도록 설정할 수 있습니다. 시스템에서 한 번에 한 결제 카드만 사용하도록 설정할 수 있으므로 결제 AID 그룹의 [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration)를 **Enabled**로 설정하는 동작은 기본 결제 카드를 설정하는 동작과 같습니다. 이미 선택한 기본 결제 카드가 있는지와 상관없이 이 카드를 기본 결제 카드로 허용할 것인지를 묻는 메시지가 표시됩니다. 앱이 이미 기본 결제 응용 프로그램이며 단순히 자체 AID 그룹 사이에서 변경되고 있는 경우에는 이 내용이 해당하지 않습니다. 앱당 AID 그룹을 최대 10개 등록할 수 있습니다.
 
 ```csharp
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.Enabled);
@@ -290,7 +288,7 @@ bgTask = taskBuilder.Register();
 
 ## <a name="foreground-override-behavior"></a>포그라운드 재정의 동작
 
-앱이 포그라운드에 있는 동안 사용자에게 메시지를 표시하지 않고 임의의 AID 그룹 등록에 대한 [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy)를 **ForegroundOverride**로 변경할 수 있습니다. 앱이 포그라운드에 있는 동안 사용자가 터미널에 장치를 탭하면 사용자가 기본 결제 카드로 선택한 결제 카드가 없는 경우에도 트래픽이 앱으로 라우트됩니다. 카드의 활성화 정책을 **ForegroundOverride**로 변경하면 해당 변경 사항은 앱이 포그라운드에 있는 동안에만 일시적으로 유지되며 사용자가 설정한 현재 기본 결제 카드를 변경하지 않습니다. 다음과 같이 포그라운드 앱에서 결제 또는 미결제 카드의 **ActivationPolicy**를 변경할 수 있습니다. [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) 메서드는 포그라운드 앱에서만 호출할 수 있으며 백그라운드 작업에서는 호출할 수 없습니다.
+앱이 포그라운드에 있는 동안 사용자에게 메시지를 표시하지 않고 임의의 AID 그룹 등록에 대한 [**ActivationPolicy**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration)를 **ForegroundOverride**로 변경할 수 있습니다. 앱이 포그라운드에 있는 동안 사용자가 터미널에 장치를 탭하면 사용자가 기본 결제 카드로 선택한 결제 카드가 없는 경우에도 트래픽이 앱으로 라우트됩니다. 카드의 활성화 정책을 **ForegroundOverride**로 변경하면 해당 변경 사항은 앱이 포그라운드에 있는 동안에만 일시적으로 유지되며 사용자가 설정한 현재 기본 결제 카드를 변경하지 않습니다. 다음과 같이 포그라운드 앱에서 결제 또는 미결제 카드의 **ActivationPolicy**를 변경할 수 있습니다. [**RequestActivationPolicyChangeAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) 메서드는 포그라운드 앱에서만 호출할 수 있으며 백그라운드 작업에서는 호출할 수 없습니다.
 
 ```csharp
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.ForegroundOverride);
@@ -387,4 +385,3 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 
 ** 중요 **  
 Windows Phone 8.1에서 레거시 이진 SMS 가로채기 지원이 제거되었으며 Windows 10 Mobile에서는 더 광범위한 새로운 SMS 지원으로 바뀌었지만 해당 지원을 사용하는 모든 레거시 Windows Phone 8.1 앱은 새로운 Windows 10 Mobile SMS API를 사용하도록 업데이트해야 합니다.
-

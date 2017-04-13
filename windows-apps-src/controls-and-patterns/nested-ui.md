@@ -11,17 +11,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: cfda479d2a05dfac4125688d3666abfb23bc45a2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b3b41e81f48f790c85377208816668ba302d3738
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-중첩된 UI는 중첩된 실행 가능 컨트롤을 독립적인 포커스를 가질 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다.
+중첩된 UI는 중첩된 실행 가능한 컨트롤을 독립적인 포커스를 가질 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다.
 
 중첩된 UI를 사용하여 중요 작업 실행을 가속화하는 추가 옵션을 사용자에게 제공할 수 있습니다. 그러나 표시하는 작업이 많을수록 UI가 복잡해집니다. 이 UI 패턴을 사용할 경우 더 많은 주의가 필요합니다. 이 문서에서는 특정 UI에 가장 적합한 작업 과정을 결정하는 지침을 제공합니다.
 
@@ -310,4 +308,3 @@ public static class DependencyObjectExtensions
     }
 }
 ```
-

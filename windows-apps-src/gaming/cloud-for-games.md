@@ -9,26 +9,24 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 클라우드 서비스"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 72f357cbf8e370512f9230978de546aa3d54c660
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
-Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 장치 간의 게임 개발에 사용할 수 있는 API 집합을 제공합니다. 플랫폼 및 장치 간의 게임을 개발하는 경우 수요에 따라 게임을 확장하기 위해 클라우드 백 엔드를 활용할 수 있습니다.
+Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간의 게임 개발에 사용할 수 있는 API 집합을 제공합니다. 플랫폼 및 디바이스 간의 게임을 개발하는 경우 수요에 따라 게임을 확장하기 위해 클라우드 백 엔드를 활용할 수 있습니다.
 
 ##  <a name="what-is-cloud-computing"></a>클라우드 컴퓨팅이란?
 
-클라우드 컴퓨팅은 인터넷을 통해 요청 시 IT 리소스와 응용 프로그램을 사용하여 장치에 대한 데이터를 저장 및 처리합니다. _클라우드_란 용어는 비특정 위치에서 액세스할 수 있는 방대한 외부 리소스(로컬 리소스 아님)의 가용성을 상징적으로 비유한 것입니다.
+클라우드 컴퓨팅은 인터넷을 통해 요청 시 IT 리소스와 응용 프로그램을 사용하여 디바이스에 대한 데이터를 저장 및 처리합니다. _클라우드_란 용어는 비특정 위치에서 액세스할 수 있는 방대한 외부 리소스(로컬 리소스 아님)의 가용성을 상징적으로 비유한 것입니다.
 클라우드 컴퓨팅의 원칙은 리소스와 소프트웨어를 사용할 수 있는 새로운 방법을 제공하는 것입니다. 사용자는 더 이상 전체 제품이나 리소스의 요금을 미리 지불할 필요가 없으며 플랫폼, 소프트웨어 및 리소스를 서비스로 사용할 수 있습니다. 클라우드 공급자는 사용량이나 서비스 계획 제공에 따라 고객에게 요금을 청구하는 경우가 많습니다.
 
 ##  <a name="why-use-cloud-services"></a>클라우드 서비스를 사용하는 이유
 
 게임에 클라우드 서비스를 사용할 경우의 한 가지 장점은 물리적 하드웨어에 미리 투자할 필요 없이 이후 단계에서 사용량이나 서비스 계획에 따라 요금을 지불하면 된다는 것입니다. 이는 새 게임 타이틀 개발과 관련된 위험을 관리하는 데 도움이 되는 한 가지 방법입니다. 
 
-또 다른 장점은 게임이 방대한 클라우드 리소스를 활용하여 확장성을 실현할 수 있다는 것입니다(동시 플레이어 수, 리소스를 많이 사용하는 실시간 게임 계산 또는 데이터 요구 사항의 갑작스러운 급증을 효과적으로 관리). 이 경우 게임 성능이 항상 안정적인 상태로 유지됩니다. 또한 세계 어디서나 어떤 플랫폼에서 실행되는 어떤 장치에서도 클라우드 리소스에 액세스할 수 있으므로 전 세계 모든 사용자에게 게임을 제공할 수 있습니다.
+또 다른 장점은 게임이 방대한 클라우드 리소스를 활용하여 확장성을 실현할 수 있다는 것입니다(동시 플레이어 수, 리소스를 많이 사용하는 실시간 게임 계산 또는 데이터 요구 사항의 갑작스러운 급증을 효과적으로 관리). 이 경우 게임 성능이 항상 안정적인 상태로 유지됩니다. 또한 세계 어디서나 어떤 플랫폼에서 실행되는 어떤 디바이스에서도 클라우드 리소스에 액세스할 수 있으므로 전 세계 모든 사용자에게 게임을 제공할 수 있습니다.
 
 플레이어에게 뛰어난 게임 플레이 환경을 제공하는 것이 중요합니다. 클라우드에서 실행되는 게임 서버는 클라이언트 쪽 업데이트와 별개이므로 전반적으로 보다 제어되고 안전한 게임 환경을 제공할 수 있습니다.   또한 클라이언트를 신뢰하지 않고 서버 쪽 게임 논리를 포함하여 클라우드를 통해 게임 플레이 일관성을 얻을 수도 있습니다. 서비스 간 연결을 구성하여 보다 통합된 게임 환경을 허용할 수도 있습니다. 예를 들어 게임에서 바로 구매를 다양한 결제 방법에 연결, 다양한 게임 네트워크를 통해 브리징, Facebook, Twitter 등의 인기 있는 소셜 미디어 포털에 게임 내 업데이트 공유 등이 포함됩니다. 
 
@@ -67,7 +65,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 장치 간의 게
     </tr>
     <tr>
         <td>[Illyriad Games](http://web.ageofascent.com/)</td>
-        <td>Illyriad Games는 최신 브라우저가 있는 장치에서 플레이할 수 있는 서사적 MMO(다중 접속 온라인) 3D 우주 게임인 _Age of Ascent_를 만들었습니다. 따라서 이 게임은 PC, 노트북, 휴대폰 및 기타 모바일 장치에서 플러그 인 없이 재생할 수 있습니다. 게임은 ASP.NET Core, HTML5, WebGL 및 Microsoft Azure를 사용합니다.</td>
+        <td>Illyriad Games는 최신 브라우저가 있는 디바이스에서 플레이할 수 있는 서사적 MMO(다중 접속 온라인) 3D 우주 게임인 _Age of Ascent_를 만들었습니다. 따라서 이 게임은 PC, 노트북, 휴대폰 및 기타 모바일 디바이스에서 플러그 인 없이 재생할 수 있습니다. 게임은 ASP.NET Core, HTML5, WebGL 및 Microsoft Azure를 사용합니다.</td>
         <td>
             <ul>
                 <li>플랫폼 간 브라우저 기반 게임 <li>하나의 큰 영구적 개방형 월드 <li>리소스를 많이 사용하는 실시간 게임 플레이 계산 처리 <li>플레이어 수에 따라 확장 </ul>
@@ -118,7 +116,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 장치 간의 게
 
 ## <a name="how-to-design-your-cloud-backend"></a>클라우드 백 엔드를 디자인하는 방법
 
-제작자와 게임 디자이너가 게임에 필요한 게임 기능과 특성에 대해 논의하는 동안 게임 인프라의 디자인 방법을 고려하는 것이 좋습니다. 다양한 장치 및 여러 주요 플랫폼용 게임을 개발하려는 경우 Azure를 게임 백 엔드로 사용할 수 있습니다.
+제작자와 게임 디자이너가 게임에 필요한 게임 기능과 특성에 대해 논의하는 동안 게임 인프라의 디자인 방법을 고려하는 것이 좋습니다. 다양한 디바이스 및 여러 주요 플랫폼용 게임을 개발하려는 경우 Azure를 게임 백 엔드로 사용할 수 있습니다.
 
 ### <a name="step-by-step-learning-guides"></a>단계별 학습 가이드
 
@@ -149,24 +147,24 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 장치 간의 게
 
 | 요구 사항                 | 활동 시나리오                            | 제품 제공                      | 제품 기능                               |
 |-----------------------------------|-----------------------------------------------|---------------------------------------|----------------------------------------------------|
-| 클라우드에서 도메인 호스트     | 효율적으로 DNS 쿼리에 응답            | [Azure DNS](https://azure.microsoft.com/services/dns/) | 고성능 및 가용성을 사용하여 도메인 호스트  |
+| 클라우드에서 도메인 호스트     | 효율적으로 DNS 쿼리에 응답            | [Azure DNS](https://azure.microsoft.com/services/dns/) | 고성능 및 가용성을 사용하여 도메인 호스트    |
 | 로그인, ID 확인      | 게이머 로그인 및 게이머 ID가 인증됩니다.  | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) | 다단계 인증을 사용하여 클라우드 및 온-프레미스 웹앱에 대한 Single Sign-On            |
 | IaaS(Infrastructure as a Service) 모델을 사용하는 게임      | 게임이 클라우드의 가상 컴퓨터에 호스트됩니다.       | [Azure VM](https://azure.microsoft.com/services/virtual-machines/) | 기본 제공 가상 네트워킹 및 부하 분산을 사용하여 1개에서 수천 개의 가상 컴퓨터 인스턴스까지 게임 서버로 확장, 온-프레미스 시스템을 사용한 하이브리드 일관성           |
 | PaaS(Platform as a Service) 모델을 사용하는 웹 또는 모바일 게임            | 게임이 관리되는 플랫폼에서 호스트됩니다.                | [Azure 앱 서비스](https://azure.microsoft.com/services/app-service/) | 웹 사이트 또는 모바일 게임에 대한 PaaS(미들웨어/개발 도구/BI/DB 관리 및 Azure VM)   |
-| 게임 데이터에 대한 클라우드 저장소       | 최신 게임 데이터가 클라우드에 저장되고 클라이언트 장치로 전송됩니다. | [Azure Blob 저장소](https://azure.microsoft.com/services/storage/blobs/)| 저장할 수 있는 파일 종류에 제한이 없습니다. 이미지, 오디오, 동영상 등 다량의 구조화되지 않은 데이터에 대한 개체 저장소입니다.  |
+| 게임 데이터에 대한 클라우드 저장소       | 최신 게임 데이터가 클라우드에 저장되고 클라이언트 디바이스로 전송됩니다. | [Azure Blob 저장소](https://azure.microsoft.com/services/storage/blobs/)| 저장할 수 있는 파일 종류에 제한이 없습니다. 이미지, 오디오, 동영상 등 다량의 구조화되지 않은 데이터에 대한 개체 저장소입니다.  |
 | 임시 데이터 저장소 테이블| 게임 트랜잭션(게임 상태 변화)이 일시적으로 테이블에 저장됩니다. | [Azure 테이블 저장소](https://azure.microsoft.com/services/storage/tables/)| 게임의 요구에 따라 유연한 스키마에 게임 데이터를 저장할 수 있습니다. |
 | 게임 트랜잭션/요청 큐| 게임 트랜잭션이 큐의 형태로 처리됩니다. | [Azure 큐 저장소](https://azure.microsoft.com/services/storage/queues/)| 큐는 예기치 않은 트래픽 급증을 흡수하고 서버가 게임 중 갑작스러운 요청 증가로 과부하되지 않도록 방지할 수 있습니다.   |
 | 확장 가능한 관계형 게임 데이터베이스| 데이터베이스에 대한 게임 내 트랜잭션과 같은 관계형 데이터의 구조화된 저장소 | [Azure SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)| 서비스로 제공되는 SQL 데이터베이스([VM의 SQL과 비교](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
 | 대기 시간이 짧은 확장 가능한 분산 게임 데이터베이스| 스키마 유연성을 사용하여 게임 및 플레이어 데이터의 빠른 읽기, 쓰기 및 쿼리 | [Azure DocumentDB](https://azure.microsoft.com/services/documentdb/)| 서비스로 제공되는 대기 시간이 짧은 NoSQL 문서 데이터베이스   |
-| Azure 서비스와 함께 고유한 데이터 센터 사용 | 고유한 데이터 센터에서 게임이 검색되고 클라이언트 장치로 전송됩니다. | [Azure 스택](https://azure.microsoft.com/overview/azure-stack/) | 보다 효율적인 작업을 위해 조직이 고유한 데이터 센터에서 Azure 서비스를 제공할 수 있도록 합니다.  |
-| 큰 데이터 청크 전송| Azure CDN을 사용하여 가장 가까운 CDN(Content Delivery Network) 팝 위치에서 게임 이미지, 오디오, 비디오 등의 큰 파일을 사용자에게 보낼 수 있습니다.    | [Azure Content Delivery Network](https://azure.microsoft.com/services/cdn/) | 큰 중앙 집중식 노드의 최신 네트워크 토폴로지를 기반으로 하는 Azure CDN은 갑작스러운 트래픽 급증과 부하 증가를 처리하여 속도와 가용성을 훨씬 증가시키고 사용자 환경을 개선합니다.  |
+| Azure 서비스와 함께 고유한 데이터 센터 사용 | 고유한 데이터 센터에서 게임이 검색되고 클라이언트 디바이스로 전송됩니다. | [Azure 스택](https://azure.microsoft.com/overview/azure-stack/) | 보다 효율적인 작업을 위해 조직이 고유한 데이터 센터에서 Azure 서비스를 제공할 수 있도록 합니다.  |
+| 큰 데이터 청크 전송| Azure CDN을 사용하여 가장 가까운 CDN(Content Delivery Network) 팝 위치에서 게임 이미지, 오디오, 비디오 등의 큰 파일을 사용자에게 보낼 수 있습니다.     | [Azure Content Delivery Network](https://azure.microsoft.com/services/cdn/) | 큰 중앙 집중식 노드의 최신 네트워크 토폴로지를 기반으로 하는 Azure CDN은 갑작스러운 트래픽 급증과 부하 증가를 처리하여 속도와 가용성을 훨씬 증가시키고 사용자 환경을 개선합니다.  |
 | 짧은 대기 시간               | 캐싱을 수행하여 제어가 강화되고 데이터 격리가 보장되는 빠르고 확장 가능한 게임을 빌드합니다. 게임의 일치 기능을 개선하는 데 사용할 수 있습니다. | [Azure Redis Cache](https://azure.microsoft.com/services/cache/) | 처리량이 높고 대기 시간이 짧은 일관성 있는 데이터 액세스를 통해 빠르고 확장 가능한 Azure 응용 프로그램 지원  |
 | 높은 확장성, 짧은 대기 시간 | 대기 시간이 짧은 읽기 및 쓰기로 게임 사용자 수의 변동 처리 | [Azure 서비스 패브릭](https://azure.microsoft.com/services/service-fabric/) | 가장 복잡하고 대기 시간이 짧으며 데이터를 많이 사용하는 시나리오를 지원하고 한 번에 더 많은 사용자를 처리하기 위해 안정적으로 확장될 수 있습니다. 서비스 패브릭을 사용하면 상태 비저장 앱에 필요에 따라 별도의 저장소나 캐시를 만들 필요 없이 게임을 빌드할 수 있습니다. |
-| 장치에서 초당 수백만 개의 이벤트 수집 가능                         | 장치에서 초당 수백만 개의 이벤트 기록 | [Azure 이벤트 허브](https://azure.microsoft.com/services/event-hubs/) | 게임, 웹 사이트, 앱 및 장치에서 클라우드 규모의 원격 분석 수집  |
+| 디바이스에서 초당 수백만 개의 이벤트 수집 가능                         | 디바이스에서 초당 수백만 개의 이벤트 기록 | [Azure 이벤트 허브](https://azure.microsoft.com/services/event-hubs/) | 게임, 웹 사이트, 앱 및 디바이스에서 클라우드 규모의 원격 분석 수집  |
 | 실시간 게임 데이터 처리  | 실시간 게이머 데이터 분석을 통해 게임 플레이 향상| [Azure 스트림 분석](https://azure.microsoft.com/services/stream-analytics/) | 클라우드에서 실시간 스트림 처리  |
-| 예측 게임 플레이 개발         | 게이머 데이터에 따라 사용자 지정 동적 게임 플레이 만들기  | [Azure 기계 학습](https://azure.microsoft.com/services/machine-learning/) | 예측 분석 솔루션을 쉽게 빌드, 배포 및 공유할 수 있도록 하는 완전히 관리되는 클라우드 서비스  |
+| 예측 게임 플레이 개발          | 게이머 데이터에 따라 사용자 지정 동적 게임 플레이 만들기    | [Azure 기계 학습](https://azure.microsoft.com/services/machine-learning/) | 예측 분석 솔루션을 쉽게 빌드, 배포 및 공유할 수 있도록 하는 완전히 관리되는 클라우드 서비스  |
 | 게임 데이터 수집 및 분석| 관계형 및 비관계형 데이터베이스의 대량 병렬 처리 데이터 | [Azure 데이터 웨어하우스](https://azure.microsoft.com/services/sql-data-warehouse/)| 서비스로 제공되는 엔터프라이즈급 기능을 갖춘 탄력적인 데이터 웨어하우스   |
-| 마케팅 캠페인을 만들어 사용 및 보존 증가  | 대상 플레이어에게 푸시 알림을 보내 관심을 생성하고 데이터 분석에 따라 특정 게임 작업 권장 | [모바일 참여](https://azure.microsoft.com/services/mobile-engagement/) |  iOS, Android, Windows, Windows Phone 등 모든 주요 플랫폼에서 게임 플레이 시간 및 사용자 보존 증가 |
+| 마케팅 캠페인을 만들어 사용 및 보존 증가  |    대상 플레이어에게 푸시 알림을 보내 관심을 생성하고 데이터 분석에 따라 특정 게임 작업 권장 | [모바일 참여](https://azure.microsoft.com/services/mobile-engagement/) |  iOS, Android, Windows, Windows Phone 등 모든 주요 플랫폼에서 게임 플레이 시간 및 사용자 보존 증가 |
 
 
 ##  <a name="startup-and-developer-resources"></a>스타트업 및 개발자 리소스
@@ -177,7 +175,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 장치 간의 게
     
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
-    멀티 플레이 게임, 플랫폼 간 연결, 게임 점수, 도전 과제, 순위표 등의 Xbox Live 기능을 Windows 10 게임에 추가하려는 경우 ID@Xbox에 등록하여 창의력을 발휘하고 성공을 극대화하는 데 필요한 도구와 지원을 받으세요. ID@Xbox에 신청하기 전에 [Windows 개발자 센터](https://developer.microsoft.com/windows/programs/join)에서 개발자 계정을 등록하세요.
+    멀티 플레이 게임, 플랫폼 간 연결, 게임 점수, 도전 과제, 순위표 등의 Xbox Live 기능을 Windows10 게임에 추가하려는 경우 ID@Xbox에 등록하여 창의력을 발휘하고 성공을 극대화하는 데 필요한 도구와 지원을 받으세요. ID@Xbox에 적용하기 전에 [Windows 개발자 센터](https://developer.microsoft.com/windows/programs/join)에서 개발자 계정을 등록하세요.
 
 ## <a name="software-as-a-service-for-game-backend"></a>게임 백 엔드에 대한 SaaS(Software as a Service)
 
@@ -197,7 +195,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 장치 간의 게
 
 ## <a name="related-links"></a>관련 링크
 
-* [Windows 10 게임 개발 가이드](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
+* [Windows10 게임 개발 가이드](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
 * [게임용 Azure](https://azure.microsoft.com/solutions/gaming/)
 * [Microsoft BizSpark](https://www.microsoft.com/bizspark/)
 * [ID@Xbox](http://www.xbox.com/Developers/id)
@@ -206,4 +204,3 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 장치 간의 게
  
 
  
-

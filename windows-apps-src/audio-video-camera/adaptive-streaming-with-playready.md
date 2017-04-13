@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 861ec2823080192a5b2d9b557af14ca5e3ab43fb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f7bd47c4c8ae7ce5515e3c53571655fd32d36e1a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -301,7 +298,6 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 ## <a name="see-also"></a>참고 항목
 - [PlayReady DRM](playready-client-sdk.md)
-
 
 
 

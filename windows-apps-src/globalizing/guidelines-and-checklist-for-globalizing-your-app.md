@@ -1,7 +1,7 @@
 ---
 author: DelfCo
 Description: "앱을 더 광범위한 사용자를 위해 세계화하거나 특정 시장을 위해 지역화할 때는 다음과 같은 모범 사례를 따르세요."
-Search.Refinement.TopicID: 180
+Search.Refinement.TopicID: "180"
 title: "세계화 및 지역화에 대한 지침"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
@@ -12,13 +12,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a5b3945f67ec1aa52b588b6364dbd04533968d24
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 84d502b9fd10e82be428cd775cc1225d849b68e1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="globalization-and-localization-dos-and-donts"></a>세계화 및 지역화 권장 사항 및 금지 사항
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -194,7 +191,6 @@ UI에 전 세계적으로 적합한 단어와 이미지를 선택하고, [**세�
  
 
  
-
 
 
 

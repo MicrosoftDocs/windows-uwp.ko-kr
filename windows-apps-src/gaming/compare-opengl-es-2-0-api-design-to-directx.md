@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, opengl, direct3d"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>OpenGL ES 2.0에서 Direct3D로의 포팅 계획
 
 
@@ -85,29 +82,29 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 ## <a name="change-your-coordinate-system"></a>좌표계 변경
 
 
-초기 포팅 작업에서 혼란을 일으키는 한 가지 차이점은 OpenGL의 경우 전통적인 오른손 좌표계를 사용하는 반면, Direct3D의 경우 기본적으로 왼손 좌표계를 사용한다는 점입니다. 이러한 좌표 모델링 변경은 꼭짓점 버퍼의 설정 및 구성에서 많은 매트릭스 수학 함수에 이르기까지 게임의 많은 부분에 영향을 줍니다. 수행할 가장 중요한 두 가지 변경 사항은 다음과 같습니다.
+초기 포팅 작업에서 혼란을 일으키는 한 가지 차이점은 OpenGL의 경우 전통적인 오른손 좌표계를 사용하는 반면, Direct3D의 경우 기본적으로 왼손 좌표계를 사용한다는 점입니다. 이러한 좌표 모델링 변경은 꼭짓점 버퍼의 설정 및 구성에서 많은 행렬 수학 함수에 이르기까지 게임의 많은 부분에 영향을 줍니다. 수행할 가장 중요한 두 가지 변경 사항은 다음과 같습니다.
 
 -   Direct3D가 앞쪽에서부터 시계 방향으로 트래버스하도록 삼각형 꼭짓점의 순서를 대칭 이동합니다. 예를 들어, OpenGL 파이프라인에서 꼭짓점의 색인을 0, 1 및 2로 지정한 경우 대신 꼭짓점을 0, 2, 1로 Direct3D에 전달합니다.
--   세계 좌표 공간을 z 방향으로 -1.0f씩 크기 조정하려면 뷰 매트릭스를 사용합니다(효과적으로 z축 좌표를 반전시킴). 이렇게 하려면 뷰 매트릭스에서 위치 M31, M32 및 M33에 있는 값의 부호를 반대로 합니다([**Matrix**](https://msdn.microsoft.com/library/windows/desktop/bb147180) 형식으로 포팅하는 경우). M34가 0이 아닌 경우 해당 부호도 반대로 합니다.
+-   월드 공간을 z 방향으로 -1.0f씩 크기 조정하려면 보기 행렬을 사용합니다(효과적으로 z축 좌표를 반전시킴). 이렇게 하려면 보기 행렬에서 위치 M31, M32 및 M33에 있는 값의 부호를 반대로 합니다([**Matrix**](https://msdn.microsoft.com/library/windows/desktop/bb147180) 형식으로 포팅하는 경우). M34가 0이 아닌 경우 해당 부호도 반대로 합니다.
 
-그러나 Direct3D는 오른손 좌표계를 지원할 수 있습니다. DirectXMath는 왼손 좌표계와 오른손 좌표계 둘 다에서 및 둘 다에 대해 작동하는 많은 함수를 제공합니다. 이러한 함수는 원래 메시 데이터 및 매트릭스 처리 중 일부를 유지하는 데 사용할 수 있습니다. 해당 함수는 다음과 같습니다.
+그러나 Direct3D는 오른손 좌표계를 지원할 수 있습니다. DirectXMath는 왼손 좌표계와 오른손 좌표계 둘 다에서 및 둘 다에 대해 작동하는 많은 함수를 제공합니다. 이러한 함수는 원래 메시 데이터 및 행렬 처리 중 일부를 유지하는 데 사용할 수 있습니다. 해당 함수는 다음과 같습니다.
 
-| DirectXMath 매트릭스 함수                                                   | 설명                                                                                                                 |
+| DirectXMath 행렬 함수                                                   | 설명                                                                                                                 |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| [**XMMatrixLookAtLH**](https://msdn.microsoft.com/library/windows/desktop/ee419969)                               | 카메라 위치, 위쪽 방향 및 초점을 사용하여 왼손 좌표계용 뷰 매트릭스를 작성합니다.       |
-| [**XMMatrixLookAtRH**](https://msdn.microsoft.com/library/windows/desktop/ee419970)                               | 카메라 위치, 위쪽 방향 및 초점을 사용하여 오른손 좌표계용 뷰 매트릭스를 작성합니다.      |
-| [**XMMatrixLookToLH**](https://msdn.microsoft.com/library/windows/desktop/ee419971)                               | 카메라 위치, 위쪽 방향 및 카메라 방향을 사용하여 왼손 좌표계용 뷰 매트릭스를 작성합니다.  |
-| [**XMMatrixLookToRH**](https://msdn.microsoft.com/library/windows/desktop/ee419972)                               | 카메라 위치, 위쪽 방향 및 카메라 방향을 사용하여 오른손 좌표계용 뷰 매트릭스를 작성합니다. |
-| [**XMMatrixOrthographicLH**](https://msdn.microsoft.com/library/windows/desktop/ee419975)                   | 왼손 좌표계용 직교 프로젝션 매트릭스를 작성합니다.                                                 |
-| [**XMMatrixOrthographicOffCenterLH**](https://msdn.microsoft.com/library/windows/desktop/ee419976) | 왼손 좌표계용 사용자 지정 직교 프로젝션 매트릭스를 작성합니다.                                           |
-| [**XMMatrixOrthographicOffCenterRH**](https://msdn.microsoft.com/library/windows/desktop/ee419977) | 오른손 좌표계용 사용자 지정 직교 프로젝션 매트릭스를 작성합니다.                                          |
-| [**XMMatrixOrthographicRH**](https://msdn.microsoft.com/library/windows/desktop/ee419978)                   | 오른손 좌표계용 직교 프로젝션 매트릭스를 작성합니다.                                                |
-| [**XMMatrixPerspectiveFovLH**](https://msdn.microsoft.com/library/windows/desktop/ee419979)               | 뷰의 필드를 기준으로 왼손 원근 프로젝션 매트릭스를 작성합니다.                                                |
-| [**XMMatrixPerspectiveFovRH**](https://msdn.microsoft.com/library/windows/desktop/ee419980)               | 뷰의 필드를 기준으로 오른손 원근 프로젝션 매트릭스를 작성합니다.                                               |
-| [**XMMatrixPerspectiveLH**](https://msdn.microsoft.com/library/windows/desktop/ee419981)                     | 왼손 원근 프로젝션 매트릭스를 작성합니다.                                                                         |
-| [**XMMatrixPerspectiveOffCenterLH**](https://msdn.microsoft.com/library/windows/desktop/ee419982)   | 왼손 원근 프로젝션 매트릭스의 사용자 지정 버전을 작성합니다.                                                     |
-| [**XMMatrixPerspectiveOffCenterRH**](https://msdn.microsoft.com/library/windows/desktop/ee419983)   | 오른손 원근 프로젝션 매트릭스의 사용자 지정 버전을 작성합니다.                                                    |
-| [**XMMatrixPerspectiveRH**](https://msdn.microsoft.com/library/windows/desktop/ee419984)                     | 오른손 원근 프로젝션 매트릭스를 작성합니다.                                                                        |
+| [**XMMatrixLookAtLH**](https://msdn.microsoft.com/library/windows/desktop/ee419969)                               | 카메라 위치, 위쪽 방향 및 초점을 사용하여 왼손 좌표계용 보기 행렬을 작성합니다.       |
+| [**XMMatrixLookAtRH**](https://msdn.microsoft.com/library/windows/desktop/ee419970)                               | 카메라 위치, 위쪽 방향 및 초점을 사용하여 오른손 좌표계용 보기 행렬을 작성합니다.      |
+| [**XMMatrixLookToLH**](https://msdn.microsoft.com/library/windows/desktop/ee419971)                               | 카메라 위치, 위쪽 방향 및 카메라 방향을 사용하여 왼손 좌표계용 보기 행렬을 작성합니다.  |
+| [**XMMatrixLookToRH**](https://msdn.microsoft.com/library/windows/desktop/ee419972)                               | 카메라 위치, 위쪽 방향 및 카메라 방향을 사용하여 오른손 좌표계용 보기 행렬을 작성합니다. |
+| [**XMMatrixOrthographicLH**](https://msdn.microsoft.com/library/windows/desktop/ee419975)                   | 왼손 좌표계용 직교 투영 행렬을 작성합니다.                                                 |
+| [**XMMatrixOrthographicOffCenterLH**](https://msdn.microsoft.com/library/windows/desktop/ee419976) | 왼손 좌표계용 사용자 지정 직교 투영 행렬을 작성합니다.                                           |
+| [**XMMatrixOrthographicOffCenterRH**](https://msdn.microsoft.com/library/windows/desktop/ee419977) | 오른손 좌표계용 사용자 지정 직교 투영 행렬을 작성합니다.                                          |
+| [**XMMatrixOrthographicRH**](https://msdn.microsoft.com/library/windows/desktop/ee419978)                   | 오른손 좌표계용 직교 투영 행렬을 작성합니다.                                                |
+| [**XMMatrixPerspectiveFovLH**](https://msdn.microsoft.com/library/windows/desktop/ee419979)               | 보기의 필드를 기준으로 왼손 원근 투영 행렬을 작성합니다.                                                |
+| [**XMMatrixPerspectiveFovRH**](https://msdn.microsoft.com/library/windows/desktop/ee419980)               | 보기의 필드를 기준으로 오른손 원근 투영 행렬을 작성합니다.                                               |
+| [**XMMatrixPerspectiveLH**](https://msdn.microsoft.com/library/windows/desktop/ee419981)                     | 왼손 원근 투영 행렬을 작성합니다.                                                                         |
+| [**XMMatrixPerspectiveOffCenterLH**](https://msdn.microsoft.com/library/windows/desktop/ee419982)   | 왼손 원근 투영 행렬의 사용자 지정 버전을 작성합니다.                                                     |
+| [**XMMatrixPerspectiveOffCenterRH**](https://msdn.microsoft.com/library/windows/desktop/ee419983)   | 오른손 원근 투영 행렬의 사용자 지정 버전을 작성합니다.                                                    |
+| [**XMMatrixPerspectiveRH**](https://msdn.microsoft.com/library/windows/desktop/ee419984)                     | 오른손 원근 투영 행렬을 작성합니다.                                                                        |
 
  
 
@@ -120,7 +117,6 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
  
 
  
-
 
 
 

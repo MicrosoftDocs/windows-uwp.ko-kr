@@ -3,31 +3,27 @@ author: normesta
 Description: "이 가이드는 개인 데이터뿐만 아니라 WIP(Windows Information Protection) 정책에 의해 관리되는 엔터프라이즈 데이터를 처리하는 앱을 지원하는 데 도움이 됩니다."
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: "엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드"
+title: "WIP(Windows Information Protection) 개발자 가이드"
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, wip, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱"
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5bad765ff182fcd2fb573c3aa766fdaaaef1e2a3
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: a2888b804e66e2630e4ae93b0be31974740d9f99
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="build-an-enlightened-app-that-consumes-both-enterprise-data-and-personal-data"></a>엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드
-
-
-  __참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
+# <a name="windows-information-protection-wip-developer-guide"></a>WIP(Windows Information Protection) 개발자 가이드
 
 *지원* 앱은 회사 데이터와 개인 데이터를 구분하고 관리자에 의해 정의된 WIP(Windows Information Protection) 정책에 따라 보호할 데이터를 지원합니다.
 
 이 가이드에서는 앱을 빌드하는 방법을 살펴보겠습니다. 완료되면 정책 관리자는 앱을 신뢰하여 조직의 데이터를 사용할 수 있습니다. 또한 직원은 조직의 MDM(모바일 디바이스 관리)에서 등록을 취소하거나 조직에서 완전히 퇴사한 경우에도 자신의 개인 데이터가 디바이스에 그대로 유지되기를 바랍니다.
 
-WIP 및 지원 앱에 대한 자세한 내용은 [WIP(Windows Information Protection)](wip-hub.md)를 참조하세요.
+__참고__ 이 가이드는 UWP 앱을 인식하는 데 도움이 됩니다. C++ Windows 데스크톱 앱을 인식하려는 경우 [WIP(Windows Information Protection) 개발자 가이드(C++)](http://go.microsoft.com/fwlink/?LinkId=822192)를 참조하세요.
+
+WIP 및 인식 앱에 대한 자세한 내용은 [WIP(Windows Information Protection)](wip-hub.md)를 참조하세요.
 
 전체 샘플은 [여기](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)에서 찾을 수 있습니다.
 
@@ -37,37 +33,38 @@ WIP 및 지원 앱에 대한 자세한 내용은 [WIP(Windows Information Protec
 
 다음 사항이 필요합니다.
 
-* Windows 10 버전 1607이 실행되는 테스트 VM(가상 컴퓨터). 이 테스트 VM에 대해 앱을 디버그합니다.
+* Windows10 버전 1607 이상이 실행되는 테스트 VM(가상 컴퓨터). 이 테스트 VM에 대해 앱을 디버그합니다.
 
-* Windows 10 버전1607을 실행하는 개발 컴퓨터 Visual Studio가 설치된 경우 테스트 VM이 될 수 있습니다.
+* Windows10 버전 1607 이상을 실행하는 개발 컴퓨터. Visual Studio가 설치된 경우 테스트 VM이 될 수 있습니다.
 
 ## <a name="setup-your-development-environment"></a>개발 환경 설정
 
 다음 작업을 수행합니다.
 
-* 테스트 VM에 WIP 설정 개발자 도우미를 설치합니다.
+* [테스트 VM에 WIP 설정 개발자 도우미 설치](#install-assistant)
 
-* WIP 설정 개발자 도우미를 사용하여 보호 정책을 만듭니다.
+* [WIP 설정 개발자 도우미를 사용하여 보호 정책 작성](#create-protection-policy)
 
-* Visual Studio 프로젝트를 설정합니다.
+* [Visual Studio 프로젝트 설정](#setup-vs-project)
 
-* 원격 디버깅을 설정합니다.
+* [원격 디버깅 설정](#setup-remote-debugging)
 
-* 코드 파일에 네임스페이스를 추가합니다.
+* [코드 파일에 네임스페이스 추가](#add-namespaces)
 
-**테스트 VM에 WIP 설정 개발자 도우미 설치**
+<span id="install-assistant" />
+### <a name="install-the-wip-setup-developer-assistant-onto-your-test-vm"></a>테스트 VM에 WIP 설정 개발자 도우미 설치
 
  이 도구를 사용하여 테스트 VM에서 Windows Information Protection 정책을 설정합니다.
 
  여기서 [WIP 설정 개발자 도우미](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf) 도구를 다운로드합니다.
-
-**보호 정책 만들기**
+<span id="create-protection-policy" />
+### <a name="create-a-protection-policy"></a>보호 정책 만들기
 
 WIP 설정 개발자 도우미의 각 섹션에 정보를 추가하여 정책을 정의합니다. 설정 옆에 있는 도움말 아이콘을 선택하여 사용 방법을 자세히 알아볼 수 있습니다.
 
 이 도구를 사용하는 방법에 대한 일반적인 지침은 앱 다운로드 페이지에서 버전 참고 섹션을 참조하세요.
-
-**Visual Studio 프로젝트 설정**
+<span id="setup-vs-project" />
+### <a name="setup-a-visual-studio-project"></a>Visual Studio 프로젝트 설정
 
 1. 개발 컴퓨터에서 프로젝트를 엽니다.
 
@@ -95,57 +92,71 @@ WIP 설정 개발자 도우미의 각 섹션에 정보를 추가하여 정책을
     ```
 
     이렇게 하면 제한된 접근 권한 값을 지원하지 않는 Windows 운영 체제 버전에서 앱을 실행하는 경우 Windows가 ``enterpriseDataPolicy`` 접근 권한 값을 무시합니다.
-
-**원격 디버깅 설정**
+<span id="setup-remote-debugging" />
+### <a name="setup-remote-debugging"></a>원격 디버깅 설정
 
 VM이 아닌 컴퓨터에서 앱을 개발하는 경우에만 테스트 VM에 Visual Studio 원격 도구를 설치합니다. 그런 다음 개발 컴퓨터에서 원격 디버거를 시작하고 테스트 VM에서 앱이 실행되는지 확인합니다.
 
 [원격 PC 지침](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions)을 참조하세요.
-
-**코드 파일에 네임스페이스 추가**
+<span id="add-namespaces" />
+### <a name="add-these-namespaces-to-your-code-files"></a>코드 파일에 네임스페이스 추가
 
 코드 파일의 위쪽에 다음 using 문을 추가합니다(이 가이드의 코드 조각에서 사용).
 
 ```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.EnterpriseData;
-using Windows.ApplicationModel.DataTransfer;
 using Windows.Web.Http;
 using Windows.Storage.Streams;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml;
+using Windows.ApplicationModel.Activation;
 using Windows.Web.Http.Filters;
 using Windows.Storage;
-using Windows.Foundation.Metadata;
-using Windows.UI.Xaml.Controls;
 using Windows.Data.Xml.Dom;
+using Windows.Foundation.Metadata;
+using Windows.Web.Http.Headers;
 ```
 
-## <a name="determine-whether-the-operating-system-that-runs-your-app-supports-wip"></a>앱을 실행하는 운영 체제가 WIP를 지원하는지 확인
+## <a name="determine-whether-to-use-wip-apis-in-your-app"></a>앱에서 WIP API를 사용할지 결정
 
-[**IsApiContractPresent**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.metadata.apiinformation.isapicontractpresent.aspx) 함수를 사용하여 지원 여부를 확인합니다.
+앱을 실행하는 운영 체제가 WIP를 지원하며, 장치에서 WIP를 사용하도록 설정되어 있는지 확인하십시오.
 
 ```csharp
-bool wipSupported = ApiInformation.IsApiContractPresent("Windows.Security.EnterpriseData.EnterpriseDataContract", 3);
+bool use_WIP_APIs = false;
 
-if (wipSupported)
+if ((ApiInformation.IsApiContractPresent
+    ("Windows.Security.EnterpriseData.EnterpriseDataContract", 3)
+    && ProtectionPolicyManager.IsProtectionEnabled))
 {
-    // WIP is supported on the platform
+    use_WIP_APIs = true;
 }
 else
 {
-    // WIP is not supported on the platform
+    use_WIP_APIs = false;
 }
 ```
-
-Windows 10 버전 1607에서는 Windows Information Protection이 지원됩니다.
+운영 체제가 WIP를 지원하지 않거나 사용하지 않도록 설정된 경우 WIP API를 호출하지 마십시오.
 
 ## <a name="read-enterprise-data"></a>엔터프라이즈 데이터 읽기
 
-파일, 네트워크 끝점, 클립보드 데이터, 공유 계약에서 허용하는 데이터에는 모두 엔터프라이즈 ID가 있습니다.
+보호된 파일, 네트워크 끝점, 클립보드 데이터 및 공유 계약에서 수락한 데이터를 읽으려면 앱에서 액세스를 요청해야 합니다.
 
-해당 소스에서 데이터를 읽으려면 앱이 엔터프라이즈 ID가 정책에 따라 관리되는지 확인해야 합니다.
+Windows Information Protection은 앱이 보호 정책의 허용된 목록에 있으면 앱에 권한을 제공합니다.
 
-파일부터 살펴보겠습니다.
+**이 섹션의 내용:**
 
+* [파일에서 데이터 읽기](#read-file)
+* [네트워크 끝점에서 데이터 읽기](#read-network)
+* [클립보드에서 데이터 읽기](#read-clipboard)
+* [공유 계약에서 데이터 읽기](#read-contract)
+
+<span id="read-file" />
 ### <a name="read-data-from-a-file"></a>파일에서 데이터 읽기
 
 **1단계: 파일 핸들 가져오기**
@@ -160,22 +171,15 @@ Windows 10 버전 1607에서는 Windows Information Protection이 지원됩니�
 
 **2단계: 앱에서 파일을 열 수 있는지 확인**
 
-파일이 보호되는지 확인합니다. 파일이 보호될 경우 다음 두 가지 사항을 만족하면 앱에서 해당 파일을 열 수 있습니다.
-
-* 파일의 ID가 정책에 따라 관리됩니다.
-* 앱이 해당 정책의 허용 목록에 있습니다.
-
-이러한 조건 중 하나를 만족하지 않으면 [**ProtectionPolicyManager.IsIdentityManaged**](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged.aspx)가 **false**를 반환하고 해당 파일을 열 수 없습니다.
+[FileProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.getprotectioninfoasync.aspx)를 호출하여 앱에서 파일을 열 수 있는지 확인합니다.
 
 ```csharp
 FileProtectionInfo protectionInfo = await FileProtectionManager.GetProtectionInfoAsync(file);
 
-if (protectionInfo.Status == FileProtectionStatus.Protected)
+if ((protectionInfo.Status != FileProtectionStatus.Protected &&
+    protectionInfo.Status != FileProtectionStatus.Unprotected))
 {
-    if (!ProtectionPolicyManager.IsIdentityManaged(protectionInfo.Identity))
-    {
-        return false;
-    }
+    return false;
 }
 else if (protectionInfo.Status == FileProtectionStatus.Revoked)
 {
@@ -183,6 +187,11 @@ else if (protectionInfo.Status == FileProtectionStatus.Revoked)
     // saying that the user's data has been revoked.
 }
 ```
+
+[FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx) 값이 **Protected**이면 파일이 보호되어 있고, 앱이 정책의 허용된 목록에 있어 앱에서 파일을 열 수 있다는 것을 의미합니다.
+
+[FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx) 값이 **UnProtected**이면 파일이 보호되지 않아 앱이 정책의 허용된 목록에 없어도 읽을 수 있음을 의미합니다.
+
 > **API** <br>
 [FileProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.getprotectioninfoasync.aspx)<br>
 [FileProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.aspx)<br>
@@ -202,7 +211,7 @@ var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
 ```csharp
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(file);
 ```
-
+<span id="read-network" />
 ### <a name="read-data-from-a-network-endpoint"></a>네트워크 끝점에서 데이터 읽기
 
 엔터프라이즈 끝점에서 읽기 위해 보호된 스레드 컨텍스트를 만듭니다.
@@ -232,17 +241,17 @@ string identity = await ProtectionPolicyManager.
 또한 해당 정책에 따라 관리되는 엔터프라이즈 네트워크 리소스에 액세스할 수 있습니다.
 
 ```csharp
-HttpClient client = null;
-
 if (!string.IsNullOrEmpty(identity))
 {
     using (ThreadNetworkContext threadNetworkContext =
             ProtectionPolicyManager.CreateCurrentThreadNetworkContext(identity))
     {
-        client = new HttpClient();
-
-        // Add code here to get data from the endpoint.
+        return await GetDataFromNetworkRedirectHelperMethod(resourceURI);
     }
+}
+else
+{
+    return await GetDataFromNetworkRedirectHelperMethod(resourceURI);
 }
 ```
 이 예제에서는 ``using`` 블록으로 소켓 호출을 묶습니다. 이렇게 하지 않으면 리소스를 검색한 후 스레드 컨텍스트를 닫아야 합니다. [ThreadNetworkContext.Close](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.threadnetworkcontext.close.aspx)를 참조하세요.
@@ -259,9 +268,57 @@ if (!string.IsNullOrEmpty(identity))
 **3단계: 버퍼로 리소스 읽기**
 
 ```csharp
-IBuffer data = await client.GetBufferAsync(resourceURI);
+private static async Task<IBuffer> GetDataFromNetworkHelperMethod(Uri resourceURI)
+{
+    HttpClient client;
+
+    client = new HttpClient();
+
+    try { return await client.GetBufferAsync(resourceURI); }
+
+    catch (Exception) { return null; }
+}
 ```
 
+**(선택 사항) 보호된 스레드 컨텍스트를 만드는 대신 헤더 토큰 사용**
+
+```csharp
+public static async Task<IBuffer> GetDataFromNetworkbyUsingHeader(Uri resourceURI)
+{
+    HttpClient client;
+
+    Windows.Networking.HostName hostName =
+        new Windows.Networking.HostName(resourceURI.Host);
+
+    string identity = await ProtectionPolicyManager.
+        GetPrimaryManagedIdentityForNetworkEndpointAsync(hostName);
+
+    if (!string.IsNullOrEmpty(identity))
+    {
+        client = new HttpClient();
+
+        HttpRequestHeaderCollection headerCollection = client.DefaultRequestHeaders;
+
+        headerCollection.Add("X-MS-Windows-HttpClient-EnterpriseId", identity);
+
+        return await GetDataFromNetworkbyUsingHeaderHelperMethod(client, resourceURI);
+    }
+    else
+    {
+        client = new HttpClient();
+        return await GetDataFromNetworkbyUsingHeaderHelperMethod(client, resourceURI);
+    }
+
+}
+
+private static async Task<IBuffer> GetDataFromNetworkbyUsingHeaderHelperMethod(HttpClient client, Uri resourceURI)
+{
+
+    try { return await client.GetBufferAsync(resourceURI); }
+
+    catch (Exception) { return null; }
+}
+```
 
 **페이지 리디렉션 처리**
 
@@ -272,63 +329,44 @@ IBuffer data = await client.GetBufferAsync(resourceURI);
 그런 다음 해당 응답의 URI를 사용하여 끝점의 ID를 가져옵니다. 이 작업을 수행하는 한 가지 방법은 다음과 같습니다.
 
 ```csharp
-public static async Task<IBuffer> getDataFromNetworkResource(Uri resourceURI)
+private static async Task<IBuffer> GetDataFromNetworkRedirectHelperMethod(Uri resourceURI)
 {
-    bool finalURL = false;
+    HttpClient client = null;
+
+    HttpBaseProtocolFilter filter = new HttpBaseProtocolFilter();
+    filter.AllowAutoRedirect = false;
+
+    client = new HttpClient(filter);
 
     HttpResponseMessage response = null;
 
-    while (!finalURL)
-    {
-
-        Windows.Networking.HostName hostName =
-            new Windows.Networking.HostName(resourceURI.Host);
-
-        string identity = await ProtectionPolicyManager.
-            GetPrimaryManagedIdentityForNetworkEndpointAsync(hostName);
-
-        HttpClient client = null;
-
-        HttpBaseProtocolFilter filter = new HttpBaseProtocolFilter();
-        filter.AllowAutoRedirect = false;
-
-        if (!string.IsNullOrEmpty(m_EnterpriseId))
-        {
-            using (ThreadNetworkContext threadNetworkContext =
-                    ProtectionPolicyManager.CreateCurrentThreadNetworkContext(identity))
-            {
-                client = new HttpClient(filter);
-            }
-        }
-        else
-        {
-            client = new HttpClient(filter);
-        }
         HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, resourceURI);
         response = await client.SendRequestAsync(message);
 
-        if (response.StatusCode == HttpStatusCode.MultipleChoices &&
-            response.StatusCode == HttpStatusCode.MovedPermanently &&
-            response.StatusCode == HttpStatusCode.Found &&
-            response.StatusCode == HttpStatusCode.SeeOther &&
-            response.StatusCode == HttpStatusCode.NotModified &&
-            response.StatusCode == HttpStatusCode.UseProxy &&
-            response.StatusCode == HttpStatusCode.TemporaryRedirect &&
-            response.StatusCode == HttpStatusCode.PermanentRedirect)
-        {
-            resourceURI = message.RequestUri;
-        }
-        else
-        {
-            finalURL = true;
-        }
+    if (response.StatusCode == HttpStatusCode.MultipleChoices ||
+        response.StatusCode == HttpStatusCode.MovedPermanently ||
+        response.StatusCode == HttpStatusCode.Found ||
+        response.StatusCode == HttpStatusCode.SeeOther ||
+        response.StatusCode == HttpStatusCode.NotModified ||
+        response.StatusCode == HttpStatusCode.UseProxy ||
+        response.StatusCode == HttpStatusCode.TemporaryRedirect ||
+        response.StatusCode == HttpStatusCode.PermanentRedirect)
+    {
+        message = new HttpRequestMessage(HttpMethod.Get, message.RequestUri);
+        response = await client.SendRequestAsync(message);
+
+        try { return await response.Content.ReadAsBufferAsync(); }
+
+        catch (Exception) { return null; }
     }
+    else
+    {
+        try { return await response.Content.ReadAsBufferAsync(); }
 
-    IBuffer data = await response.Content.ReadAsBufferAsync();
-
-    return data;
-
+        catch (Exception) { return null; }
+    }
 }
+
 ```
 
 > **API** <br>
@@ -337,6 +375,7 @@ public static async Task<IBuffer> getDataFromNetworkResource(Uri resourceURI)
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
+<span id="read-clipboard" />
 ### <a name="read-data-from-the-clipboard"></a>클립보드에서 데이터 읽기
 
 **클립보드에서 데이터를 사용할 수 있는 권한 얻기**
@@ -433,7 +472,7 @@ private async void PasteText(bool isNewEmptyDocument)
 [ProtectionPolicyEvaluationResult](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicyevaluationresult.aspx)<br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
-
+<span id="read-share" />
 ### <a name="read-data-from-a-share-contract"></a>공유 계약에서 데이터 읽기
 
 직원이 정보를 공유할 앱을 선택할 경우 앱은 해당 콘텐츠를 포함하는 새 항목을 엽니다.
@@ -492,7 +531,20 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 앱을 떠나는 엔터프라이즈 데이터를 보호합니다. 앱을 떠나는 데이터가 페이지에 표시되면 공유 계약을 통해 또는 파일이나 네트워크 끝점에 데이터를 저장합니다.
 
-### <a name="a-iddisplay-dataaprotect-data-that-appears-in-pages"></a><a id="display-data"></a>페이지에 표시되는 데이터 보호
+**이 섹션의 내용:**
+
+* [페이지에 표시되는 데이터 보호](#protect-pages)
+* [백그라운드 프로세스로 파일에 데이터 보호](#protect-background)
+* [파일의 일부 보호](#protect-part-file)
+* [보호된 파일 일부 읽기](#read-protected)
+* [폴더로 데이터 보호](#protect-folder)
+* [네트워크 끝점으로 데이터 보호](#protect-network)
+* [공유 계약을 통해 앱이 공유하는 데이터 보호](#protect-share)
+* [다른 위치에 복사하는 파일 보호](#protect-other-location)
+* [디바이스의 화면이 잠겨 있을 때 엔터프라이즈 데이터 보호](#protect-locked)
+
+<span id="protect-pages" />
+### <a name="protect-data-that-appears-in-pages"></a>페이지에 표시되는 데이터 보호
 
 페이지에 데이터를 표시할 때 Windows에서 데이터 유형(개인 또는 엔터프라이즈)을 알 수 있도록 합니다. 이렇게 하려면 현재 앱 보기 또는 전체 앱 프로세스에 *태그*를 지정합니다.
 
@@ -538,6 +590,7 @@ bool result =
 > **API** <br>
 [ProtectionPolicyManager.TryApplyProcessUIPolicy](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy.aspx)
 
+<span id="protect-file" />
 ### <a name="protect-data-to-a-file"></a>파일에 데이터 보호
 
 보호된 파일을 만들고 이 파일에 씁니다.
@@ -573,8 +626,7 @@ FileProtectionInfo fileProtectionInfo =
 *스트림 작성*
 
 ```csharp
-    if (fileProtectionInfo.Identity == identity &&
-        fileProtectionInfo.Status == FileProtectionStatus.Protected)
+    if (fileProtectionInfo.Status == FileProtectionStatus.Protected)
     {
         var stream = await storageFile.OpenAsync(FileAccessMode.ReadWrite);
 
@@ -592,8 +644,7 @@ FileProtectionInfo fileProtectionInfo =
 *버퍼 작성*
 
 ```csharp
-     if (fileProtectionInfo.Identity == identity &&
-         fileProtectionInfo.Status == FileProtectionStatus.Protected)
+     if (fileProtectionInfo.Status == FileProtectionStatus.Protected)
      {
          var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
              enterpriseData, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
@@ -607,8 +658,7 @@ FileProtectionInfo fileProtectionInfo =
 [FileProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.aspx)<br>
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 
-
-
+<span id="protect-background" />
 ### <a name="protect-data-to-a-file-as-a-background-process"></a>백그라운드 프로세스로 파일에 데이터 보호
 
 이 코드는 디바이스 화면이 잠겨 있는 동안 실행할 수 있습니다. 관리자가 보안 "DPL(잠금 상태에서 데이터 보호)" 정책을 구성한 경우 Windows는 디바이스 메모리에서 보호된 리소스에 액세스하는 데 필요한 암호화 키를 제거합니다. 따라서 디바이스 분실 시에도 데이터 누출이 방지됩니다. 이 동일한 기능은 또한 핸들이 닫혀 있을 때 보호되는 파일과 연결된 키를 제거합니다.
@@ -646,8 +696,7 @@ ProtectedFileCreateResult protectedFileCreateResult =
 이 예제에서는 파일에 스트림을 작성합니다.
 
 ```csharp
-if (protectedFileCreateResult.ProtectionInfo.Identity == identity &&
-    protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
+if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
 {
     IOutputStream outputStream =
         protectedFileCreateResult.Stream.GetOutputStreamAt(0);
@@ -673,6 +722,7 @@ else if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus
 [FileProtectionStatus](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionstatus.aspx)<br>
 [ProtectedFileCreateResult.Stream](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectedfilecreateresult.stream.aspx)<br>
 
+<span id="protect-part-file" />
 ### <a name="protect-part-of-a-file"></a>파일의 일부 보호
 
 대부분의 경우 엔터프라이즈 및 개인 데이터를 별도로 저장하는 것이 더 깔끔하지만 원하는 경우 동일한 파일에 저장할 수 있습니다. 예를 들어 Microsoft Outlook은 단일 보관 파일에 개인 메일과 함께 엔터프라이즈 메일을 저장할 수 있습니다.
@@ -748,7 +798,7 @@ await Windows.Storage.FileIO.WriteTextAsync
     (metaDataFile, "<EnterpriseDataMarker start='0' end='" + enterpriseData.Length.ToString() +
     "'></EnterpriseDataMarker>");
 ```
-
+<span id="read-protected" />
 ### <a name="read-the-protected-part-of-a-file"></a>보호된 파일 일부 읽기
 
 해당 파일에서 엔터프라이즈 데이터를 읽는 방법은 다음과 같습니다.
@@ -828,7 +878,7 @@ else if (dataProtectionInfo.Status == DataProtectionStatus.Revoked)
 [DataProtectionInfo](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectioninfo.aspx)<br>
 [DataProtectionManager.GetProtectionInfoAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.dataprotectionmanager.getstreamprotectioninfoasync.aspx)<br>
 
-
+<span id="protect-folder" />
 ### <a name="protect-data-to-a-folder"></a>폴더로 데이터 보호
 
 폴더를 만들고 보호할 수 있습니다. 이렇게 하면 해당 폴더에 추가하는 항목이 자동으로 보호됩니다.
@@ -845,8 +895,7 @@ private async Task<bool> CreateANewFolderAndProtectItAsync(string folderName, st
     FileProtectionInfo fileProtectionInfo =
         await FileProtectionManager.ProtectAsync(newStorageFolder, identity);
 
-    if (fileProtectionInfo.Identity != identity ||
-        fileProtectionInfo.Status != FileProtectionStatus.Protected)
+    if (fileProtectionInfo.Status != FileProtectionStatus.Protected)
     {
         // Protection failed.
         return false;
@@ -863,7 +912,7 @@ private async Task<bool> CreateANewFolderAndProtectItAsync(string folderName, st
 [FileProtectionInfo.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.identity.aspx)<br>
 [FileProtectionInfo.Status](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectioninfo.status.aspx)
 
-
+<span id="protect-network" />
 ### <a name="protect-data-to-a-network-end-point"></a>네트워크 끝점으로 데이터 보호
 
 보호된 스레드 컨텍스트를 만들어 엔터프라이즈 끝점으로 데이터를 보냅니다.  
@@ -916,6 +965,7 @@ else
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)<br>
 [ProtectionPolicyManager.CreateCurrentThreadNetworkContext](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.createcurrentthreadnetworkcontext.aspx)
 
+<span id="protect-share" />
 ### <a name="protect-data-that-your-app-shares-through-a-share-contract"></a>공유 계약을 통해 앱이 공유하는 데이터 보호
 
 사용자가 앱에서 콘텐츠를 공유하도록 하려면 공유 계약을 구현하고 [**DataTransferManager.DataRequested**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested) 이벤트를 처리해야 합니다.
@@ -947,7 +997,7 @@ private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs 
 [ProtectionPolicyManager.GetForCurrentView](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview.aspx)<br>
 [ProtectionPolicyManager.Identity](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.protectionpolicymanager.aspx)
 
-
+<span id="protect-other-location" />
 ### <a name="protect-files-that-you-copy-to-another-location"></a>다른 위치에 복사하는 파일 보호
 
 ```csharp
@@ -969,7 +1019,7 @@ private async void CopyProtectionFromOneFileToAnother
 > **API** <br>
 [FileProtectionManager.CopyProtectionAsync](https://msdn.microsoft.com/library/windows/apps/windows.security.enterprisedata.fileprotectionmanager.copyprotectionasync.aspx)<br>
 
-
+<span id="protect-locked" />
 ### <a name="protect-enterprise-data-when-the-screen-of-the-device-is-locked"></a>디바이스의 화면이 잠겨 있을 때 엔터프라이즈 데이터 보호
 
 디바이스가 잠겨 있을 때 메모리의 모든 중요한 데이터를 제거합니다. 사용자가 디바이스를 잠금 해제하면 앱은 다시 데이터를 안전하게 추가할 수 있습니다.
@@ -1093,7 +1143,3 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 ## <a name="related-topics"></a>관련 항목
 
 [WIP(Windows Information Protection) 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
- 
-
- 
-

@@ -3,20 +3,18 @@ author: mtoepke
 title: "OpenGL ES 2.0에서의 연습 샘플 포팅"
 description: "이 항목에서는 각각 복잡한 정도가 다른 다양한 OpenGL ES 2.0 그래픽 파이프라인 포팅 시나리오를 살펴봅니다."
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3a8ea00144b707bc4bf01a26a91ca7f7567b31de
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# OpenGL ES 2.0에서의 연습 샘플 포팅
+# <a name="walkthrough-sample-ports-from-opengl-es-20"></a>OpenGL ES 2.0에서의 연습 샘플 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 각각 복잡한 정도가 다른 다양한 OpenGL ES 2.0 그래픽 파이프라인 포팅 시나리오를 살펴봅니다.
 
-## OpenGL ES 2.0과 Direct3D 11 연습
+## <a name="opengl-es-20-to-direct3d-11-walkthroughs"></a>OpenGL ES 2.0과 Direct3D 11 연습
 
 ## 
 <table>
@@ -45,11 +43,5 @@ ms.openlocfilehash: 3a8ea00144b707bc4bf01a26a91ca7f7567b31de
  
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

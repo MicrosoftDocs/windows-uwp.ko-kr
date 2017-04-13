@@ -2,21 +2,17 @@
 title: "발광 조명"
 description: "발광 조명은 개체(예: 불빛)에서 발산하는 빛입니다."
 ms.assetid: 262EB9E2-DF96-401F-93D6-51A7BB60074B
-keywords:
-- "발광 조명"
+keywords: "발광 조명"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 50bc904e5810340846b3fd84ffca214d07d38750
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6e67a38f1ec7d036646abd06d641e8bf9d900ce3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="emissive-lighting"></a>발광 조명
 
 
@@ -59,7 +55,6 @@ Cₑ에 대한 값은 색 1 또는 색 2입니다. 꼭짓점 색을 입력하지
  
 
  
-
 
 
 

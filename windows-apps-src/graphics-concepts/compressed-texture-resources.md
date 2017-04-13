@@ -2,21 +2,17 @@
 title: "압축된 텍스처 리소스"
 description: "텍스처 맵은 더 선명하게 표시되도록 3차원 셰이프에 그려지는 디지털화된 이미지입니다."
 ms.assetid: 2DD5FF94-A029-4694-B103-26946C8DFBC1
-keywords:
-- "압축된 텍스처 리소스"
+keywords: "압축된 텍스처 리소스"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 16432df29e040455227b5400690d24902fec10d6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2bfe93bf5b50fb1206611697113a84cebe0e35d0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="compressed-texture-resources"></a>압축된 텍스처 리소스
 
 
@@ -82,7 +78,6 @@ Direct3D는 3D 모델 텍스처링에 사용되는 표면을 압축하는 서비
  
 
  
-
 
 
 

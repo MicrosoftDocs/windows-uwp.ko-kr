@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8918b120394def3ba12d5932dc66cb38279cc124
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dbdc65fb842c6f8d6439f0041a33d991e27bd6b6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/08/2017
 
 ## <a name="add-capability-declarations-to-the-app-manifest"></a>앱 매니페스트에 접근 권한 값 선언 추가
 
-앱에서 장치의 카메라에 액세스해야 하는 경우 앱에 *webcam* and *microphone* 장치 기능이 사용된다고 선언해야 합니다. 캡처한 사진 또는 비디오를 사용자의 사진 라이브러리에 저장하려는 경우에도 *picturesLibrary* 및 *videosLibrary* 접근 권한 값을 선언해야 합니다.
+앱에서 디바이스의 카메라에 액세스해야 하는 경우 앱에 *webcam* and *microphone* 디바이스 기능이 사용된다고 선언해야 합니다. 캡처한 사진 또는 비디오를 사용자의 사진 라이브러리에 저장하려는 경우에도 *picturesLibrary* 및 *videosLibrary* 접근 권한 값을 선언해야 합니다.
 
 **앱 매니페스트에 접근 권한 값을 추가하려면**
 
@@ -66,7 +63,7 @@ XAML 페이지에 표시하는 방법을 비롯한 **SoftwareBitmap** 개체 작
 
 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.Streams.InMemoryRandomAccessStream)을 만든 다음 [**CapturePhotoToStreamAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.CapturePhotoToStreamAsync)를 호출하여 사진을 스트림에 캡처하고 스트림 및 사용해야 하는 이미지 형식을 지정하는 [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaProperties.ImageEncodingProperties) 개체를 전달합니다. 직접 개체를 초기화하여 사용자 지정 인코딩 속성을 만들 수 있지만, 클래스에서 일반적인 인코딩 형식에 대해 [**ImageEncodingProperties.CreateJpeg**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaProperties.ImageEncodingProperties.CreateJpeg) 등의 정적 메서드를 제공합니다. [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.StorageFile.OpenAsync)를 호출하여 출력 파일에 대한 파일 스트림을 만듭니다. 메모리 내 스트림에서 이미지를 디코드하는 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapDecoder)를 만든 다음 [**CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapEncoder.CreateForTranscodingAsync)를 호출하여 이미지를 파일로 인코드하는 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapEncoder)를 만듭니다.
 
-필요에 따라 [**BitmapPropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapPropertySet) 개체를 만든 다음 이미지 인코더에서 [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252.aspx)를 호출하여 사진에 대한 메타데이터를 이미지 파일에 포함할 수 있습니다. 인코딩 속성에 대한 자세한 내용은 [**이미지 메타데이터**](image-metadata.md)를 참조하세요. 적절한 장치 방향 처리는 대부분의 사진 앱에서 필수입니다. 자세한 내용은 [**MediaCapture를 사용하여 장치 방향 처리**](handle-device-orientation-with-mediacapture.md)를 참조하세요.
+필요에 따라 [**BitmapPropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapPropertySet) 개체를 만든 다음 이미지 인코더에서 [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252.aspx)를 호출하여 사진에 대한 메타데이터를 이미지 파일에 포함할 수 있습니다. 인코딩 속성에 대한 자세한 내용은 [**이미지 메타데이터**](image-metadata.md)를 참조하세요. 적절한 디바이스 방향 처리는 대부분의 사진 앱에서 필수입니다. 자세한 내용은 [**MediaCapture를 사용하여 디바이스 방향 처리**](handle-device-orientation-with-mediacapture.md)를 참조하세요.
 
 마지막으로, 인코더 개체에서 [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.BitmapEncoder.FlushAsync)를 호출하여 메모리 내 스트림에서 파일로 사진을 코드 변환합니다.
 
@@ -137,8 +134,7 @@ Windows 10 버전 1607부터 비디오 녹화를 일시 중지하고 녹화가 �
 
 * [카메라](camera.md)
 * [Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-cameracaptureui.md)
-* [MediaCapture를 사용하여 장치 방향 처리](handle-device-orientation-with-mediacapture.md)
+* [MediaCapture를 사용하여 디바이스 방향 처리](handle-device-orientation-with-mediacapture.md)
 * [비트맵 이미지 만들기, 편집 및 저장](imaging.md)
 * [파일, 폴더 및 라이브러리](https://msdn.microsoft.com/windows/uwp/files/index)
-
 

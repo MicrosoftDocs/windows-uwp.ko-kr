@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 041a591cc3e53ee6f5e4b5d51e41a0e1032c6cac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b9bf56e9f4fa4632623ae2d644a4e9958ee02443
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="print-from-your-app"></a>앱에서 인쇄하기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/07/2017
 
 유니버설 Windows 앱에서 문서를 인쇄하는 방법을 알아봅니다. 이 항목에서는 특정 페이지를 인쇄하는 방법도 보여 줍니다. 인쇄 미리 보기 UI에 대한 고급 변경 내용은 [인쇄 미리 보기 UI 사용자 지정](customize-the-print-preview-ui.md)을 참조하세요.
 
-**팁**  이 항목의 예제는 대부분 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619984)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619979)을 다운로드하세요.
+**팁**  이 항목의 예제는 대부분 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [Universal Windows Platform (UWP) print sample](http://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
 
 ## <a name="register-for-printing"></a>인쇄 등록
 
@@ -138,7 +136,7 @@ async private void OnPrintButtonClick(object sender, RoutedEventArgs e)
 
 ## <a name="format-your-apps-content"></a>앱 콘텐츠 형식 지정
 
-**ShowPrintUIAsync**가 호출되면 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트가 발생합니다. 이 단계에 나오는 **PrintTaskRequested** 이벤트 처리기는 [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) 메서드를 호출하여 [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx)를 만들고 인쇄 페이지의 제목과 [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source) 대리자의 이름을 전달합니다. 이 예제에서 **PrintTaskSourceRequestedHandler**는 인라인으로 정의되어 있습니다. **PrintTaskSourceRequestedHandler**는 인쇄용 콘텐츠를 제공하고 나중에 설명됩니다.
+**ShowPrintUIAsync**가 호출되면 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트가 발생합니다. 이 단계에 나오는 **PrintTaskRequested** 이벤트 처리기는 [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx) 메서드를 호출하여 [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436)를 만들고 인쇄 페이지의 제목과 [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source) 대리자의 이름을 전달합니다. 이 예제에서 **PrintTaskSourceRequestedHandler**는 인라인으로 정의되어 있습니다. **PrintTaskSourceRequestedHandler**는 인쇄용 콘텐츠를 제공하고 나중에 설명됩니다.
 
 이 예제에서는 완료 처리기가 catch 오류에도 정의되어 있습니다. 완료 이벤트를 처리하는 것은 오류가 발생했을 때 이를 사용자에게 알리고 가능한 해결 방법도 제공할 수 있으므로 좋은 방법입니다. 또한 인쇄 작업이 성공한 후 사용자가 수행할 다음 단계를 안내하는 데도 완료 이벤트를 사용할 수 있습니다.
 
@@ -399,4 +397,3 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 * [인쇄에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//빌드 2015 동영상: Windows 10에서 인쇄하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-

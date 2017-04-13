@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지"
-description: "대규모 UWP(유니버설 Windows 플랫폼) 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 쉽게 크기가 늘어날 수 있습니다."
+description: "대규모 UWP(유니버설 Windows 플랫폼) 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 크기가 쉽게 급증할 수 있습니다."
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, directx, 패키지"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: db31338d908f4c18eaa6b5090b8cf35ac5305655
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
 
 
@@ -197,7 +194,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 
      
 
--   이제 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078)를 사용하여 현재 DirectX 기능 수준과 일치하는 파일을 찾습니다. **ResourceManager**는 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/br206089)을 반환하며, [**ResourceMap::GetValue**](https://msdn.microsoft.com/library/windows/apps/br206098)(또는 [**ResourceMap::TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj655438)) 및 제공된 [**ResourceContext**](https://msdn.microsoft.com/library/windows/apps/br206064)로 쿼리합니다. 그러면 [**SetGlobalQualifierValue**](https://msdn.microsoft.com/library/windows/apps/br206051)를 호출하여 지정된 DirectX 기능 수준과 가장 일치하는 [**ResourceCandidate**](https://msdn.microsoft.com/library/windows/apps/mt622101)가 반환됩니다.
+-   이제 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078)를 사용하여 현재 DirectX 기능 수준과 일치하는 파일을 찾습니다. **ResourceManager**는 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/br206089)을 반환하며, [**ResourceMap::GetValue**](https://msdn.microsoft.com/library/windows/apps/br206098)(또는 [**ResourceMap::TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj655438)) 및 제공된 [**ResourceContext**](https://msdn.microsoft.com/library/windows/apps/br206064)로 쿼리합니다. 그러면 [**SetGlobalQualifierValue**](https://msdn.microsoft.com/library/windows/apps/mt622101)를 호출하여 지정된 DirectX 기능 수준과 가장 일치하는 [**ResourceCandidate**](https://msdn.microsoft.com/library/windows/apps/br206051)가 반환됩니다.
     
     ```cpp
     // An explicit ResourceContext is needed to match the DirectX feature level for the display on which the current view is presented.
@@ -229,7 +226,6 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
  
 
  
-
 
 
 

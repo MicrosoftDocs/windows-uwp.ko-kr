@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 사운드"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 11553a22274a36094a3e839e8fda648f78cfaaf8
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-sound"></a>소리 추가
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 단계에서는 슈팅 게임 샘플에서 [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) API를 사용하여 사운드 재생을 위한 개체를 만드는 방법을 검토합니다.
 
@@ -564,7 +561,6 @@ void SoundEffect::PlaySound(_In_ float volume)
  
 
  
-
 
 
 

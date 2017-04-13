@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "Windows에서 제공하는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다."
+Description: "Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다."
 title: "언어 및 지역 관리"
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c9d42dfd76c613c615e35aaa02e54037cd666b47
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7c5c7024fbcf3533150f470b15cabc8a9d1d2cb3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-language-and-region"></a>언어 및 지역 관리
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Windows에서 제공하는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다.
+Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -227,7 +224,6 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
  
 
  
-
 
 
 

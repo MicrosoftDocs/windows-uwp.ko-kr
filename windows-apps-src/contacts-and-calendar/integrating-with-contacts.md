@@ -1,6 +1,6 @@
 ---
 author: normesta
-description: "연락처 카드의 작업 옆에 앱을 추가하는 방법을 보여줍니다."
+description: "연락처 카드의 작업 옆에 앱을 추가하는 방법을 보여 줍니다."
 MSHAttr: PreferredLib:/library/windows/apps
 title: "연락처 카드의 작업에 앱 연결"
 ms.author: normesta
@@ -10,13 +10,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 연락처, 연락처 카드, 주석"
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: da64e23714035b6763104d48430371469272a939
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e882566fcc81941669dd4844235bcbd899ea3079
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>연락처 카드의 작업에 앱 연결
 
 연락처 카드 또는 미니 연락처 카드의 작업 옆에 앱을 표시할 수 있습니다. 사용자는 앱을 선택하여 프로필 페이지 열기, 전화 걸기, 메시지 보내기 등의 작업을 수행할 수 있습니다.
@@ -186,11 +183,11 @@ public async void OpenContactCard(object sender, RoutedEventArgs e)
 
 **App.cs** 파일의 [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드를 재정의하고 사용자를 앱의 페이지로 이동합니다. [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)에서는 이 작업을 수행하는 한 가지 방법을 보여 줍니다.
 
-페이지의 코드 숨김 파일에서 [Page.OnNavigatedTo](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx) 메서드를 재정의합니다. 연락처 카드는 이 메서드에 작업 이름과 사용자 ID를 전달합니다.
+페이지의 코드 숨김 파일에서 [Page.OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx) 메서드를 재정의합니다. 연락처 카드는 이 메서드에 작업 이름과 사용자 ID를 전달합니다.
 
 영상 통화나 음성 통화를 시작하려면 [VoIP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP)을 참조하세요. [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx) 네임스페이스에서 전체 API를 확인할 수 있습니다.
 
-메시지를 간편하게 하려면 [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.aspx) 네임스페이스를 참조하세요.
+메시지를 간편하게 하려면 [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.aspx) 네임스페이스를 참조하세요.
 
 다른 앱을 시작할 수도 있습니다. 다음 코드에서는 이 작업을 수행합니다.
 
@@ -217,4 +214,3 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 ```
 
 ```args.uri.scheme``` 속성에는 작업 이름이 포함되고 ```args.uri.Query``` 속성에는 사용자 ID가 포함됩니다.
-

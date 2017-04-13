@@ -9,29 +9,26 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 5d98b5366160ca52c02330a05e8b8d749e2296bd
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="audio-graphs"></a>오디오 그래프
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**Windows.Media.Audio**](https://msdn.microsoft.com/library/windows/apps/dn914341) 네임스페이스의 API를 사용하여 오디오 라우팅, 믹싱 및 처리 시나리오에 대한 오디오 그래프를 만드는 방법을 보여 줍니다.
 
 *오디오 그래프*는 오디오 데이터가 흐르는 상호 연결된 오디오 노드 집합입니다. 
 
-- *오디오 입력 노드*는 오디오 입력 장치, 오디오 파일 또는 사용자 지정 코드에서 그래프로 오디오 데이터를 제공합니다. 
+- *오디오 입력 노드*는 오디오 입력 디바이스, 오디오 파일 또는 사용자 지정 코드에서 그래프로 오디오 데이터를 제공합니다. 
 
-- *오디오 출력 노드*는 그래프에 의해 처리되는 오디오의 대상입니다. 오디오는 그래프에서 오디오 출력 장치, 오디오 파일 또는 사용자 지정 코드로 라우팅될 수 있습니다. 
+- *오디오 출력 노드*는 그래프에 의해 처리되는 오디오의 대상입니다. 오디오는 그래프에서 오디오 출력 디바이스, 오디오 파일 또는 사용자 지정 코드로 라우팅될 수 있습니다. 
 
 - *서브믹스 노드*는 하나 이상의 노드에서 오디오를 가져온 후 그래프의 다른 노드로 라우팅될 수 있는 단일 출력으로 결합합니다. 
 
-모든 노드가 만들어지고 노드 간 연결이 설정된 후에는 오디오 그래프와 입력 노드로부터 서브믹스 노드를 통해 출력 노드로 진행되는 오디오 데이터 흐름을 시작하면 됩니다. 이 모델을 사용하면 장치의 마이크에서 오디오 파일로의 기록, 파일에서 장치의 스피커로 오디오 재생, 여러 소스의 오디오 혼합 등의 시나리오를 빠르고 쉽게 구현할 수 있습니다.
+모든 노드가 만들어지고 노드 간 연결이 설정된 후에는 오디오 그래프와 입력 노드로부터 서브믹스 노드를 통해 출력 노드로 진행되는 오디오 데이터 흐름을 시작하면 됩니다. 이 모델을 사용하면 디바이스의 마이크에서 오디오 파일로의 기록, 파일에서 디바이스의 스피커로 오디오 재생, 여러 소스의 오디오 혼합 등의 시나리오를 빠르고 쉽게 구현할 수 있습니다.
 
 오디오 그래프에 오디오 효과를 추가하면 추가 시나리오도 가능해집니다. 오디오 그래프의 모든 노드는 노드를 통해 지나가는 오디오를 처리하는 0개 이상의 오디오 효과로 채울 수 있습니다. 단지 몇 줄의 코드로 오디오 노드에 연결될 수 있는 에코, 이퀄라이저, 제한, 반향 등의 몇 가지 기본 제공 효과가 있습니다. 기본 제공 효과와 정확히 동일하게 작동하는 고유한 사용자 지정 오디오 효과를 만들 수도 있습니다.
 
@@ -48,7 +45,7 @@ Windows 런타임 오디오 그래프 API:
 -   C++에 대해 지원될 뿐 아니라 C#에서도 사용할 수 있습니다.
 -   압축된 파일 형식을 포함하여 오디오 파일을 직접 사용할 수 있습니다. XAudio2는 오디오 버퍼에만 작동하며 파일 I/O 기능을 제공하지 않습니다.
 -   Windows 10의 짧은 대기 시간 오디오 파이프라인을 사용할 수 있습니다.
--   기본 끝점 매개 변수를 사용할 때 자동 끝점 자동 전환을 지원합니다. 예를 들어 사용자가 장치의 스피커에서 헤드셋으로 전환하면 오디오는 새 입력으로 자동 리디렉션됩니다.
+-   기본 끝점 매개 변수를 사용할 때 자동 끝점 자동 전환을 지원합니다. 예를 들어 사용자가 디바이스의 스피커에서 헤드셋으로 전환하면 오디오는 새 입력으로 자동 리디렉션됩니다.
 
 ## <a name="audiograph-class"></a>AudioGraph 클래스
 
@@ -70,11 +67,11 @@ Windows 런타임 오디오 그래프 API:
 -   [**EncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn958523)는 그래프에서 사용되는 오디오 형식을 결정합니다. 32비트 부동 소수점 형식만이 지원됩니다.
 -   [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524)는 오디오 그래프에 대한 기본 렌더 장치를 설정합니다. 이를 설정하지 않으면 기본 시스템 장치가 사용됩니다. 기본 렌더 장치는 그래프의 다른 노드에 대한 퀀텀 크기를 계산하는 데 사용됩니다. 시스템에 오디오 렌더 장치가 없으면 오디오 그래프가 만들어지지 않습니다.
 
-오디오 그래프에서 기본 오디오 렌더 장치를 사용하도록 하거나 [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 클래스를 통해 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)를 호출하고 [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817)에서 반환된 오디오 렌더 장치 선택기를 제공하여 시스템의 사용 가능한 오디오 렌더 장치 목록을 가져올 수 있습니다. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 장치를 선택한 후 해당 장치를 사용하여 [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) 속성을 설정하도록 허용하는 UI를 표시할 수 있습니다.
+오디오 그래프에서 기본 오디오 렌더 디바이스를 사용하도록 하거나 [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 클래스를 통해 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)를 호출하고 [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817)에서 반환된 오디오 렌더 디바이스 선택기를 제공하여 시스템의 사용 가능한 오디오 렌더 디바이스 목록을 가져올 수 있습니다. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 사용하여 [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524) 속성을 설정하도록 허용하는 UI를 표시할 수 있습니다.
 
 [!code-cs[EnumerateAudioRenderDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioRenderDevices)]
 
-##  <a name="device-input-node"></a>장치 입력 노드
+##  <a name="device-input-node"></a>디바이스 입력 노드
 
 장치 입력 노드는 마이크와 같이 시스템에 연결된 오디오 캡처 장치에서 그래프로 오디오를 공급합니다. [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)를 호출하여 시스템의 기본 오디오 캡처 장치를 사용하는 [**DeviceInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914082) 개체를 만듭니다. [**AudioRenderCategory**](https://msdn.microsoft.com/library/windows/apps/dn297724)를 제공하여 시스템에서 지정된 범주에 대해 오디오 파이프라인을 최적화할 수 있도록 합니다.
 
@@ -83,11 +80,11 @@ Windows 런타임 오디오 그래프 API:
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-장치 입력 노드에 대해 특정 오디오 캡처 장치를 지정하려는 경우 [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 클래스를 통해 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)를 호출하고 [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817)에서 반환된 오디오 렌더 장치 선택기를 제공하여 시스템의 사용 가능한 오디오 캡처 장치 목록을 가져올 수 있습니다. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 장치를 선택한 후 해당 장치를 [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
+디바이스 입력 노드에 대해 특정 오디오 캡처 디바이스를 지정하려는 경우 [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 클래스를 통해 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)를 호출하고 [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817)에서 반환된 오디오 렌더 디바이스 선택기를 제공하여 시스템의 사용 가능한 오디오 캡처 디바이스 목록을 가져올 수 있습니다. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
-##  <a name="device-output-node"></a>장치 출력 노드
+##  <a name="device-output-node"></a>디바이스 출력 노드
 
 장치 출력 노드는 그래프의 오디오를 스피커 또는 헤드셋과 같은 오디오 렌더 장치로 밀어넣습니다. [**CreateDeviceOutputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn958525)를 호출하여 [**DeviceOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914098)를 만듭니다. 출력 노드는 오디오 그래프의 [**PrimaryRenderDevice**](https://msdn.microsoft.com/library/windows/apps/dn958524)를 사용합니다.
 
@@ -178,15 +175,15 @@ Windows 런타임 오디오 그래프 API:
 
 ## <a name="node-connections-and-submix-nodes"></a>노드 연결 및 서브믹스 노드
 
-모든 입력 노드 형식은 노드에 의해 생성된 오디오를 메서드로 전달되는 노드로 라우트하는 **AddOutgoingConnection** 메서드를 노출합니다. 다음 예제에서는 [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108)를 [**AudioDeviceOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914098)에 연결합니다. 이것은 장치 스피커에서 오디오 파일을 재생하기 위한 간단한 설정입니다.
+모든 입력 노드 형식은 노드에 의해 생성된 오디오를 메서드로 전달되는 노드로 라우트하는 **AddOutgoingConnection** 메서드를 노출합니다. 다음 예제에서는 [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108)를 [**AudioDeviceOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914098)에 연결합니다. 이것은 디바이스 스피커에서 오디오 파일을 재생하기 위한 간단한 설정입니다.
 
 [!code-cs[AddOutgoingConnection1](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection1)]
 
-입력 노드에서 다른 노드로의 연결을 두 개 이상 만들 수 있습니다. 다음 예제에서는 [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108)에서 [**AudioFileOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914133)로의 또 다른 연결을 추가합니다. 이제 오디오 파일의 오디오는 장치 스피커로 재생된 후 오디오 파일에도 쓰여집니다.
+입력 노드에서 다른 노드로의 연결을 두 개 이상 만들 수 있습니다. 다음 예제에서는 [**AudioFileInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914108)에서 [**AudioFileOutputNode**](https://msdn.microsoft.com/library/windows/apps/dn914133)로의 또 다른 연결을 추가합니다. 이제 오디오 파일의 오디오는 디바이스 스피커로 재생된 후 오디오 파일에도 쓰여집니다.
 
 [!code-cs[AddOutgoingConnection2](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection2)]
 
-출력 노드는 다른 노드에서 둘 이상의 연결을 받을 수도 있습니다. 다음 예제에서는 [**AudioDeviceInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914082)에서 [**AudioDeviceOutput**](https://msdn.microsoft.com/library/windows/apps/dn914098) 노드로 연결이 설정됩니다. 출력 노드는 파일 입력 노드와 장치 입력 노드에서 연결되므로 출력에는 두 소스의 오디오가 혼합되어 포함됩니다. **AddOutgoingConnection**은 연결을 통과하는 신호의 게인 값을 지정할 수 있는 오버로드를 제공합니다.
+출력 노드는 다른 노드에서 둘 이상의 연결을 받을 수도 있습니다. 다음 예제에서는 [**AudioDeviceInputNode**](https://msdn.microsoft.com/library/windows/apps/dn914082)에서 [**AudioDeviceOutput**](https://msdn.microsoft.com/library/windows/apps/dn914098) 노드로 연결이 설정됩니다. 출력 노드는 파일 입력 노드와 디바이스 입력 노드에서 연결되므로 출력에는 두 소스의 오디오가 혼합되어 포함됩니다. **AddOutgoingConnection**은 연결을 통과하는 신호의 게인 값을 지정할 수 있는 오버로드를 제공합니다.
 
 [!code-cs[AddOutgoingConnection3](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection3)]
 
@@ -248,7 +245,6 @@ Windows 10 버전 1607부터 **AudioGraph**는 입력 또는 서브믹스 노드
  
 
  
-
 
 
 

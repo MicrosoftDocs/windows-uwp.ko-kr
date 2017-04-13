@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
-description: "이 문서에서는 가변 사진 시퀀스를 캡처하여 여러 이미지 프레임을 빠른 속도로 연속으로 캡처하고 서로 다른 초점, 플래시, ISO, 노출 및 노출 보정 설정을 사용하도록 각 프레임을 구성하는 방법을 보여 줍니다."
+description: "이 문서에서는 가변 사진 시퀀스를 캡처하여 여러 이미지 프레임을 빠른 속도로 연속으로 캡처하고 서로 다른 초점, 플래시, ISO, 노출 및 노출 보정 설정을 사용하도록 각 프레임을 구성할 수 있도록 하는 방법을 보여 줍니다."
 title: "가변 사진 시퀀스"
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 780ee8a28f0c272b4cbf7e4fe770784aa4f11b9d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4c6a6ef37af9f860e4ff1c77fd8e5e5151bb271e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="variable-photo-sequence"></a>가변 사진 시퀀스
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에서는 가변 사진 시퀀스를 캡처하여 여러 이미지 프레임을 빠른 속도로 연속으로 캡처하고 서로 다른 초점, 플래시, ISO, 노출 및 노출 보정 설정을 사용하도록 각 프레임을 구성하는 방법을 보여 줍니다. 이 기능을 사용하면 HDR(High Dynamic Range) 이미지 만들기 같은 시나리오가 가능합니다.
+이 문서에서는 가변 사진 시퀀스를 캡처하여 여러 이미지 프레임을 빠른 속도로 연속으로 캡처하고 서로 다른 초점, 플래시, ISO, 노출 및 노출 보정 설정을 사용하도록 각 프레임을 구성할 수 있도록 하는 방법을 보여 줍니다. 이 기능을 사용하면 HDR(High Dynamic Range) 이미지 만들기 같은 시나리오가 가능합니다.
 
 HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 않으려는 경우에는 [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) API를 사용하여 Windows에서 기본 제공되는 HDR 기능을 사용할 수 있습니다. 자세한 내용은 [HDR(High Dynamic Range) 사진 캡처](high-dynamic-range-hdr-photo-capture.md)를 참조하세요.
 
@@ -102,7 +99,6 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
  
 
  
-
 
 
 

@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9b1261de60bf0a45940fe9a284d8a5276b42e0a3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b41e7a03d3ca2ac6d146ed706421699dc66066a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="keyboard-accessibility"></a>키보드 접근성  
 
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 02/07/2017
 
 대부분의 경우, XAML에서 컨트롤을 정의한 방법에 따른 기본 순서가 특히 화면 읽기 프로그램에서 컨트롤을 읽는 순서이므로 최적의 순서입니다. 그러나 기본 순서가 시각적 순서와 반드시 일치하는 것은 아닙니다. 실제 디스플레이 위치는 레이아웃에 적용하기 위해 자식 요소에 설정할 수 있는 부모 레이아웃 컨테이너 및 특정 속성에 따라 달라질 수 있습니다. 앱이 적합한 탭 순서를 갖도록 하려면 이 동작을 직접 테스트하세요. 특히 레이아웃에 대한 그리드 메타포 또는 테이블 메타포가 있는 경우 사용자가 읽는 순서와 탭 순서가 달라질 수 있습니다. 이것은 자체로는 항상 문제는 아닙니다. 하지만 터치 가능한 UI와 키보드로 액세스 가능한 UI로서의 앱의 기능을 테스트하여 두 방식 모두 UI가 제대로 작동하는지 확인해야 합니다.
 
-XAML을 조정하여 탭 순서가 시각적 순서와 일치하도록 할 수 있습니다. 또는 열 우선 탭 탐색을 사용하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR209461) 레이아웃의 다음 예에 표시된 대로 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR242704) 속성을 설정하여 기본 탭 순서를 재정의할 수 있습니다.
+XAML을 조정하여 탭 순서가 시각적 순서와 일치하도록 할 수 있습니다. 또는 열 우선 탭 탐색을 사용하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 레이아웃의 다음 예에 표시된 대로 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) 속성을 설정하여 기본 탭 순서를 재정의할 수 있습니다.
 
 XAML
 ```xml
@@ -245,5 +242,4 @@ Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없�
 * [입력: 터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
-
 

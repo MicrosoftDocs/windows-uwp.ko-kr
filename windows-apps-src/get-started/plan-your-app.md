@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 21e08e22e6c6ebada4445a05f32d2bd37244758f
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="plan-your-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱 계획
 
 Microsoft 디자인 팀의 앱을 생성하는 프로세스는 개념, 구조, 역동성, 화면 효과 및 프로토타입의 5가지 단계로 구성됩니다. 유사한 프로세스를 채택하여 전 세계에 즐거움을 줄 새로운 환경을 만들어 보세요.
@@ -242,4 +239,3 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 앱 개발을 많이 진행하기 전에 지침, 사용자 인상 및 요구 사항을 기준으로 디자인 또는 프로토타입의 유효성을 검사하여 나중에 다시 작업하는 일이 없도록 합니다. 각 기능에는 앱을 세련되게 꾸미는 데 도움이 되는 UX 지침 집합과 Windows 스토어에 앱을 게시하기 위해 충족해야 하는 스토어 요구 사항 집합이 있습니다. [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit)를 사용하여 기술 사양이 스토어 요구 사항에 맞는지 테스트할 수 있습니다. Microsoft Visual Studio의 성능 도구를 사용하여 모든 시나리오에서 최상의 환경을 사용자에게 제공하도록 설정할 수도 있습니다.
 
 [UWP 앱에 대한 자세한 UX 지침](https://msdn.microsoft.com/library/windows/apps/hh465424)을 사용하여 중요한 기능에 집중할 수 있습니다. [Visual Studio 성능 도구](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx)를 사용하여 각 앱의 시나리오 성능을 분석할 수 있습니다.
-

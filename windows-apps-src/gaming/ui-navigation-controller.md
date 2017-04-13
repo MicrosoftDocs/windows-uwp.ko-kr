@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, ui, 탐색"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 5b5789b90cefb6ba22c2a3d8b5ebbb45be5b0dad
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ui-navigation-controller"></a>UI 탐색 컨트롤러
 
 이 페이지에서는 UWP(유니버설 Windows 플랫폼)용 [Windows.Gaming.Input.UINavigationController][uinavigationcontroller] 및 관련 API를 사용하여 UI 탐색 장치용 프로그래밍의 기본 사항을 설명합니다.
@@ -236,4 +233,3 @@ if (OptionalUINavigationButtons::Context1 == (reading.OptionalButtons & Optional
 [uinavigationreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationreading.aspx
 [requireduinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.requireduinavigationbuttons.aspx
 [optionaluinavigationbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.optionaluinavigationbuttons.aspx
-

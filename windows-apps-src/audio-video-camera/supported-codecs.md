@@ -9,19 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0973195b8777a0154b733ba2625327bb9296bd6b
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="supported-codecs"></a>지원되는 코덱
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에는 UWP 앱의 오디오, 비디오, 이미지 코덱 및 지원 형식이 나열되어 있습니다.
+이 문서에서는 각 장치 제품군에서 UWP 앱에 기본적으로 사용할 수 있는 오디오, 동영상, 이미지 코덱 및 형식을 나열합니다. 이 표에 나열된 코덱은 지정된 장치 제품군에 대한 Windows 10 설치에 포함되어 있는 코덱입니다. 사용자와 앱은 사용할 수 있는 추가 코덱을 설치할 수 있습니다. 특정 장치에서 현재 사용할 수 있는 코덱의 집합을 런타임에 쿼리할 수 있습니다. 자세한 내용은 [디바이스에 설치된 코덱에 대한 쿼리](codec-query.md)를 참조하세요.
 
 아래 표에서 “D”는 디코더 지원을 나타내고 “E”는 인코더 지원을 나타냅니다.
 
@@ -2759,8 +2756,8 @@ ms.lasthandoff: 02/07/2017
 </tr>
 </table>
 
-<sup>1</sup> BC1에서 BC5의 압축을 사용하는 DDS 이미지가 지원됩니다.  
-<sup>2</sup> 원시가 아닌 미리 보기가 포함된 DNG 이미지가 지원됩니다.  
-<sup>3</sup> 특정 카메라 원시 형식만 지원됩니다.  
+<sup>1</sup> BC1에서 BC5까지의 압축을 사용하는 DDS 이미지가 지원됩니다.  
+<sup>2</sup> RAW가 아닌 미리 보기가 포함된 DNG 이미지가 지원됩니다.  
+<sup>3</sup> 특정 카메라 RAW 형식만 지원됩니다.  
 
 이미지 코덱에 대한 자세한 내용은 [네이티브 WIC 코덱](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx)을 참조하세요.

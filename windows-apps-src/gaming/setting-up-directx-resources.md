@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "DirectX 리소스 설정 및 이미지 표시"
-description: "여기에서는 Direct3D 장치, 스왑 체인 및 렌더링 대상 보기를 만드는 방법과 렌더링된 이미지를 디스플레이에 표시하는 방법에 대해 설명합니다."
+description: "여기에서는 Direct3D 디바이스, 스왑 체인 및 렌더링 대상 보기를 만드는 방법과 렌더링된 이미지를 디스플레이에 표시하는 방법에 대해 설명합니다."
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, directx 리소스, 이미지"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-directx-resources-and-display-an-image"></a>DirectX 리소스 설정 및 이미지 표시
 
 
@@ -292,7 +289,6 @@ Direct3D 디바이스, 스왑 체인 및 렌더링 대상 보기를 만들었고
  
 
  
-
 
 
 

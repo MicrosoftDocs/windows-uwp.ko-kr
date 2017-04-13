@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c7275475e245d8fd68eb2979c16d0afe6ddc4a4c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d8240af0a610541cea5352ed841a08eb7093db96
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility"></a>접근성  
 
 
@@ -35,7 +32,7 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 | [포괄 소프트웨어 디자인](designing-inclusive-software.md) | Windows 10용 UWP 앱을 사용하여 포괄 디자인을 개발하는 방법에 대해 알아보세요.  접근성을 염두에 둔 포괄 소프트웨어를 디자인하고 빌드하세요. |
 | [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) | 이 문서는 접근성 있는 UWP 앱을 개발하기 위한 로드맵입니다. |
 | [접근성 테스트](accessibility-testing.md) | UWP 앱에 접근성을 구현하기 위해 따라야 할 몇 가지 테스트 절차입니다. |
-| [스토어에서의 접근성](accessibility-in-the-store.md) | UWP 앱을 Windows 스토어에 접근 가능한 앱으로 등록하기 위한 요구 사항에 대해 설명합니다. |
+| [스토어의 접근성](accessibility-in-the-store.md) | UWP 앱을 Windows 스토어에 접근 가능한 앱으로 등록하기 위한 요구 사항에 대해 설명합니다. |
 | [접근성 검사 목록](accessibility-checklist.md) | UWP 앱이 접근 가능한지 확인하는 검사 목록을 제공합니다. |
 | [기본적인 접근성 정보 표시](basic-accessibility-information.md) | 경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다. |
 | [키보드 접근성](keyboard-accessibility.md) | 따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다. |
@@ -45,7 +42,6 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 | [사용자 지정 자동화 피어](custom-automation-peers.md) | UI 자동화의 자동화 피어 개념과 고유한 사용자 지정 UI 클래스에 대해 자동화 지원을 제공하는 방법을 설명합니다. |
 | [컨트롤 패턴 및 인터페이스](control-patterns-and-interfaces.md) | Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 액세스하는 데 사용하는 클래스 및 공급자가 컨트롤 패턴을 구현하는 데 사용하는 인터페이스를 나열합니다. |
 
-<span id="related_topics"/>
 ## <a name="related-topics"></a>관련 항목  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179) 
-
+* [내레이터 시작](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)

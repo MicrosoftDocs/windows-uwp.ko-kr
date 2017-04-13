@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 70b737625f5301d3147f4570b4e6f7216c2212c7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6d3251e9e67f7a49b51493bf13216bfd72826d62
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="epson-escpos-with-formatting"></a>서식 지정을 사용하는 Epson ESC/POS
 
@@ -63,4 +61,3 @@ printJob.ExecuteAsync();
 ```
 
 사용 가능한 명령을 포함하여 ESC/POS에 대한 자세한 내용은 [Epson ESC/POS FAQ](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf)를 확인하세요. [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) 및 사용 가능한 모든 기능에 대해서는 MSDN의 [서비스 지점 프린터](https://msdn.microsoft.com/library/windows/apps/Mt426652)를 참조하세요.
-

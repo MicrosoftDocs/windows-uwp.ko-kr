@@ -2,21 +2,17 @@
 title: "카메라 공간 변환"
 description: "카메라 공간의 꼭짓점은 세계 좌표 뷰 매트릭스로 개체 꼭짓점을 변환하여 계산됩니다."
 ms.assetid: 86EDEB95-8348-4FAA-897F-25251B32B076
-keywords:
-- "카메라 공간 변환"
+keywords: "카메라 공간 변환"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 478202cc8fd4f968539e3081edd6c6feddcec38b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 907df69fdd0c785294283de858a0fcebd0c63513
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="camera-space-transformations"></a>카메라 공간 변환
 
 
@@ -65,7 +61,6 @@ L<sub>dir</sub> = norm(V \* Lₚ). 여기의 매개 변수는 다음 표에 정�
  
 
  
-
 
 
 

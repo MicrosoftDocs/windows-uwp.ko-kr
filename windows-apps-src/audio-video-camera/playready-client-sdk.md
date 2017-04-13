@@ -9,21 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 161a048a4bfa9479821aec542db17ded8243d231
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="playready-drm"></a>PlayReady DRM
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에 PlayReady 보호된 미디어 콘텐츠를 추가하는 방법을 설명합니다.
 
-PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어, 콘텐츠 공급자가 정의한 액세스 규칙을 적용하는 한편 사용자에게 PlayReady 콘텐츠를 제공할 수 있습니다. 이 섹션에서는 Windows 10용 Microsoft PlayReady DRM 변경 내용과 이전 Windows 8.1 버전에서 Windows 10 버전까지 작성된 변경 내용을 지원하도록 PlayReady UWP 앱을 수정하는 방법을 설명합니다.
+PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어, 콘텐츠 공급자가 정의한 액세스 규칙을 적용하는 한편 사용자에게 PlayReady 콘텐츠를 제공할 수 있습니다. 이 섹션에서는 Windows 10용 Microsoft PlayReady DRM 변경 내용과 이전 Windows8.1 버전에서 Windows10 버전까지 작성된 변경 내용을 지원하도록 PlayReady UWP 앱을 수정하는 방법을 설명합니다.
  
 | 항목                                                                     | 설명                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -61,7 +58,7 @@ PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어
 -   이제 출력으로서의 Miracast는 암시적입니다.
 -   보안 중지가 추가되었습니다.
 
-    보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 장치의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
+    보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 장치의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
 
 -   오디오 및 동영상 라이선스 분리가 추가되었습니다.
 
@@ -401,17 +398,17 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
 
 PlayReady 보호된 UWP 앱 만들기를 시작하기 전에 다음 소프트웨어를 시스템에 설치해야 합니다.
 
--   Windows 10.
--   UWP용 PlayReady DRM의 샘플을 컴파일하는 경우 Microsoft Visual Studio 2015 이상을 사용하여 샘플을 컴파일해야 합니다. Windows 8.1 스토어 앱용 PlayReady DRM의 샘플을 컴파일하는 데도 Microsoft Visual Studio 2013을 사용할 수 있습니다.
+-   Windows10.
+-   UWP용 PlayReady DRM의 샘플을 컴파일하는 경우 Microsoft Visual Studio 2015 이상을 사용하여 샘플을 컴파일해야 합니다. Windows8.1 스토어 앱용 PlayReady DRM의 샘플을 컴파일하는 데도 Microsoft Visual Studio 2013을 사용할 수 있습니다.
 
 <!--This is no longer available-->
 <!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
 ## <a name="playready-windows-store-app-migration-guide"></a>PlayReady Windows 스토어 앱 마이그레이션 가이드
 
-이 섹션에는 기존 PlayReady Windows 8.x 스토어 앱을 Windows 10으로 마이그레이션하는 방법에 대한 정보를 포함합니다.
+이 섹션에는 기존 PlayReady Windows8.x 스토어 앱을 Windows 10으로 마이그레이션하는 방법에 대한 정보를 포함합니다.
 
-Windows 10에서 PlayReady UWP 앱의 네임스페이스는 **Microsoft.Media.PlayReadyClient**에서 [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454)로 변경되었습니다. 즉, 코드에서 이전 네임스페이스를 검색하여 새 네임스페이스로 바꿔야 합니다. 여전히 winmd 파일을 참조합니다. 이 파일은 Windows 10 운영 체제에서 windows.media.winmd의 일부입니다. 이 파일은 TH의 Windows SDK의 일부로 windows.winmd에 있습니다. UWP의 경우 windows.foundation.univeralappcontract.winmd에서 참조됩니다.
+Windows 10에서 PlayReady UWP 앱의 네임스페이스는 **Microsoft.Media.PlayReadyClient**에서 [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454)로 변경되었습니다. 즉, 코드에서 이전 네임스페이스를 검색하여 새 네임스페이스로 바꿔야 합니다. 여전히 winmd 파일을 참조합니다. 이 파일은 Windows10 운영 체제에서 windows.media.winmd의 일부입니다. 이 파일은 TH의 Windows SDK의 일부로 windows.winmd에 있습니다. UWP의 경우 windows.foundation.univeralappcontract.winmd에서 참조됩니다.
 
 PlayReady 보호된 HD(고해상도) 콘텐츠(1080) 및 UHD(초고해상도) 콘텐츠를 재생하려면 PlayReady 하드웨어 DRM을 구현해야 합니다. PlayReady 하드웨어 DRM을 구현하는 방법에 대한 정보는 [하드웨어 DRM](hardware-drm.md)을 참조하세요.
 
@@ -477,7 +474,7 @@ PlayReady DRM의 이전 버전에서는 비영구적 라이선스를 사후 방�
 
 이 섹션에서는 UWP 앱에 보안 중지를 추가하는 방법을 설명합니다.
 
-보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 장치의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
+보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 디바이스의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
 
 보안 중지 챌린지를 보내는 주요 시나리오는 두 가지가 있습니다.
 
@@ -514,7 +511,6 @@ Xbox One의 UWP 앱에서 PlayReady DRM을 사용하려면 먼저 앱을 게시�
 
 ## <a name="see-also"></a>참고 항목
 - [미디어 재생](media-playback.md)
-
 
 
 

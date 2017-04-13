@@ -4,18 +4,19 @@ ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "설정 방법"
 description: "생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요."
 ms.author: jken
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 96b6b477efd42b46b8aaf553de2482e1946c9cd7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 202480cd8e9107e18c7fa8c84a17089177f91dcb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="get-set-up"></a>설정
+# <a name="get-set-up"></a>설정 방법
+
+![Visual Studio 사용 준비](images/VisualStudio2017Hero_ImageXL-LG.png)
+
 
 생각보다 쉽게 시작할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
 
@@ -33,17 +34,22 @@ MSDN 구독자인 경우 다음 위치에서 ISO 다운로드를 가져올 수 �
 
 ## <a name="2-download-or-update-visual-studio"></a>2. Visual Studio 다운로드 또는 업데이트
 
-Microsoft Visual Studio 2015는 앱을 디자인, 코딩, 테스트 및 디버그하는 데 도움이 됩니다.
+Microsoft Visual Studio 2017은 앱을 디자인, 코딩, 테스트 및 디버그하는 데 도움이 됩니다.
 
-Visual Studio 2015가 없는 경우 다음 링크를 클릭하여 Microsoft Visual Studio Community 2015를 무료로 설치하세요. 이 다운로드에는 앱 테스트를 위한 장치 및 휴대폰 시뮬레이터가 포함되어 있습니다.
+Microsoft Visual Studio Community 2015가 없는 경우 무료 Microsoft Visual Studio Community 2017을 설치할 수 있습니다. 이 다운로드에는 앱 테스트를 위한 디바이스 시뮬레이터가 포함되어 있습니다.
 
 -   [Windows 10 개발자 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 
-Visual Studio를 설치하는 경우 사용자 지정 옵션을 사용하고 다음과 같이 모든 유니버설 Windows 앱 개발 도구 옵션을 선택했는지 확인해야 합니다.
+Visual Studio를 설치할 때 다음과 같이 유니버설 Windows 앱 개발 도구 옵션을 선택해야 합니다.
 
-![UWP용 Visual Studio 도구](images/vs-2015-community-setup.png)
+![UWP용 Visual Studio 도구](images/vs-2017-community-setup.png)
 
 Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](https://www.visualstudio.com/vs/getting-started)을 참조하세요.
+
+이미 Visual Studio를 사용하고 있지만 일부 구성 요소가 없는 것을 발견한 경우 *새 프로젝트* 대화 상자에서 설치 관리자를 다시 실행할 수 있습니다.
+
+   ![설치 과정을 다시 실행하는 방법](images/win10-cs-install.png)
+
 
 ## <a name="3-enable-your-device-for-development"></a>3. 디바이스를 개발에 사용하도록 설정
 
@@ -68,3 +74,11 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 도구 및 다운로드의 전체 목록을 보려면 [다운로드](http://go.microsoft.com/fwlink/p/?linkid=285935)를 참조하세요.
 
 
+## <a name="see-also"></a>참고 항목
+
+* [첫 번째 앱](your-first-app.md)
+* [Windows 스토어 앱 게시](https://developer.microsoft.com/store/publish-apps).
+* [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
+* [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
+* [유니버설 Windows 앱이란?](whats-a-uwp.md)
+* [Windows 계정 등록](sign-up.md)

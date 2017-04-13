@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8d4e9a87009b50538adac2357badc0a7dfe8f88c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 439d39dab1b628ff484de587f47a3cf9129d639f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-schedule-and-manage-media-breaks"></a>미디어 휴지 만들기, 예약 및 관리
 
 이 문서에서는 미디어 재생 앱에서 미디어 중단을 만들고, 예약하고, 관리하는 방법을 보여 줍니다. 미디어 중단은 일반적으로 미디어 콘텐츠에 오디오 또는 비디오 광고를 추가하는 데 사용됩니다. Windows 10 버전 1607부터 [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) 클래스를 사용하여 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)에서 재생하는 [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)에 미디어 중단을 쉽고 빠르게 추가할 수 있습니다.
@@ -109,7 +106,6 @@ ms.lasthandoff: 02/08/2017
  
 
  
-
 
 
 

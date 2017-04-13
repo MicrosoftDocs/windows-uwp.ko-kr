@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: def5e4e75f4208eb91f129160807728e57322064
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7da7002a95c107e64278e8bc67064542ed183d8b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>파일 및 폴더 열거 및 쿼리
 
@@ -221,7 +219,7 @@ ms.lasthandoff: 02/07/2017
 
 다음 예제에서는 월별로 그룹화된 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)에서 모든 파일을 쿼리하고, 이번에는 하위 폴더를 재귀적으로 사용합니다. 먼저 [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262)를 호출하고 [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) 값을 메서드로 전달합니다. 그러면 [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066) 개체가 제공됩니다.
 
-그런 다음 가상 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br208074) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227230)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
+그런 다음 가상 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -330,4 +328,3 @@ July ‎2015 (2)
    MyImage1.png
    MyImage2.png
 ```
-

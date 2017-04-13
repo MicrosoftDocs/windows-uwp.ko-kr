@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, glsl, hlsl, opengl, directx, 셰이더"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f2d5f5a363abf026e865ed07221ba9075a6a67e7
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="glsl-to-hlsl-reference"></a>GLSL-HLSL 참조
 
 
@@ -69,7 +66,7 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 <td align="left">셰이더 컴파일이 그래픽 API에 통합되어 있음</td>
 <td align="left">HLSL 컴파일러는 Direct3D가 셰이더를 드라이버에 전달하기 전에 중간 이진 표현으로 [셰이더를 컴파일](https://msdn.microsoft.com/library/windows/desktop/bb509633)합니다.
 <div class="alert">
-<strong>참고</strong> 이 이진 표현은 하드웨어 독립적입니다. 일반적으로 앱 런타임이 아니라 앱 빌드 시간에 컴파일됩니다.
+<strong>참고</strong>  이 이진 표현은 하드웨어 독립적입니다. 일반적으로 앱 런타임이 아니라 앱 빌드 시간에 컴파일됩니다.
 </div>
 <div>
  
@@ -98,7 +95,7 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 <td align="left">행 중심 행렬(기본값)</td>
 <td align="left">열 중심 행렬(기본값)
 <div class="alert">
-<strong>참고</strong> 한 변수의 레이아웃을 변경하려면 <strong>row_major</strong> 형식 한정자를 사용합니다. 자세한 내용은 [변수 구문](https://msdn.microsoft.com/library/windows/desktop/bb509706)을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
+<strong>참고</strong>   한 변수의 레이아웃을 변경하려면 <strong>row_major</strong> 형식 한정자를 사용합니다. 자세한 내용은 [변수 구문](https://msdn.microsoft.com/library/windows/desktop/bb509706)을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
 </div>
 <div>
  
@@ -571,7 +568,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
  
 
  
-
 
 
 

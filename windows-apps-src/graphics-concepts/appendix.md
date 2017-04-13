@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bececce2784e1b76c73e147bb89efc84be48a5d7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 93635403ad919381599211436b7ae70a8dd13ef1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="appendices"></a>부록
 
 이 섹션에서는 기술 세부 정보를 제공합니다.
@@ -64,7 +61,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

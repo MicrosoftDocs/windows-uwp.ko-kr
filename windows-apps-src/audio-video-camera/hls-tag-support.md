@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 34bac5b7332bcc258c76f15a6005f82f545eef4d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7bf47b166dfd05b906b37deded909d5a3b26ac6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="http-live-streaming-hls-tag-support"></a>HLS(HTTP 라이브 스트리밍) 태그 지원
 다음 표에서는 UWP 앱에서 지원되는 HLS 태그를 보여 줍니다.
 
 > [!NOTE] 
 > [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md) 문서에 설명된 대로 "X-"로 시작하는 사용자 지정 태그는 시간이 제한된 메타데이터로 액세스할 수 있습니다.
 
-|태그 |도입된 HLS 프로토콜 버전|HLS 프로토콜 문서 초안 버전|필수인 클라이언트|Windows 10 7월 릴리스|Windows 10 버전 1511|Windows 10 버전 1606 |
+|태그 |도입된 HLS 프로토콜 버전|HLS 프로토콜 문서 초안 버전|필수인 클라이언트|Windows 10 7월 릴리스|Windows 10 버전 1511|Windows 10 버전 1607 |
 |---------------------|-----------|--------------|---------|--------------|-----|-----|
 |4.3.1.  기본 태그                 |             |                   |         |             |     |    |
 | 4.3.1.1.  EXTM3U |1|0|필수|지원|지원|지원|
@@ -63,11 +60,11 @@ ms.lasthandoff: 02/08/2017
 |&nbsp;&nbsp;&nbsp;  CHARACTERISTICS|5|9|특성|지원되지 않음|지원되지 않음|지원되지 않음|
 | 4.3.4.2.  EXT-X-STREAM-INF  |1|0|필수|지원|지원|지원|
 |&nbsp;&nbsp;&nbsp;  BANDWIDTH|1|0|특성|지원|지원|지원|
-|&nbsp;&nbsp;&nbsp;  PROGRAM-ID|1|0|특성|NA|미지원|NA|
+|&nbsp;&nbsp;&nbsp;  PROGRAM-ID|1|0|특성|NA|NA|NA|
 |&nbsp;&nbsp;&nbsp;  AVERAGE-BANDWIDTH|7|14|특성|지원되지 않음|지원되지 않음|지원되지 않음|
 |&nbsp;&nbsp;&nbsp;  CODECS|1|0|특성|지원|지원|지원|
 |&nbsp;&nbsp;&nbsp;  RESOLUTION|2|3|특성|지원|지원|지원|
-|&nbsp;&nbsp;&nbsp;  FRAME-RATE|7|15|특성|NA|미지원|NA|
+|&nbsp;&nbsp;&nbsp;  FRAME-RATE|7|15|특성|NA|NA|NA|
 |&nbsp;&nbsp;&nbsp;  AUDIO|4|7|특성|지원|지원|지원|
 |&nbsp;&nbsp;&nbsp;  비디오|4|7|특성|지원|지원|지원|
 |&nbsp;&nbsp;&nbsp;  SUBTITLES|5|9|특성|지원되지 않음|지원되지 않음|지원|
@@ -90,7 +87,6 @@ ms.lasthandoff: 02/08/2017
  
 
  
-
 
 
 

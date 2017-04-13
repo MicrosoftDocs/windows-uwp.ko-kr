@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a5315534fc305c85dcf410b4808d2f8ebd844b3e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 14b8892790b2a2b486b2ddd3e8cb529545c327bd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
 
 UWP 앱과 기존 데스크톱 응용 프로그램 간의 주요 차이점 중 하나는 PLM(Process Lifecycle Management)이 적용되는 앱 컨테이너에 UWP 타이틀이 있다는 것입니다. 런타임 브로커 서비스가 모든 플랫폼에서 UWP 앱을 일시 중단, 다시 시작 또는 종료할 수 있으며, 처리하는 코드를 테스트 또는 디버그할 때 강제로 이러한 전환을 수행하는 데 사용할 전용 도구가 있습니다.
@@ -89,4 +86,3 @@ plmdebug /enableDebug 279f7062-ce35-40e8-a69f-cc22c08e0bb8_1.0.0.0_x86__c6sq6kwg
 ## <a name="related-topics"></a>관련 항목
 - [UWP 앱 배포 및 디버그](deploying-and-debugging-uwp-apps.md)
 - [디버깅, 테스트 및 성능](index.md)
-

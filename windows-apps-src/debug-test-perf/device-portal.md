@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8dfbdad7604e3aa7fad60ed777d16b4acd56b5ab
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e729236ae7d506eb59af1a38506931865eff4f14
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
 
@@ -178,7 +176,7 @@ ETW 추적 사용에 대한 자세한 내용은 ETW 추적을 사용하여 앱�
 
 디바이스 포털은 DNS-SD를 사용하여 로컬 네트워크에서 존재 여부를 알립니다.  모든 디바이스 포털 인스턴스는 디바이스 유형에 관계없이 "WDP._wdp._tcp.local"에서 알립니다. 서비스 인스턴스에 대한 TXT 레코드는 다음을 제공합니다.
 
-키 | 형식 | 설명 
+키 | 유형 | 설명 
 ----|------|-------------
 S | int | 디바이스 포털의 보안 포트입니다.  0(영)인 경우 디바이스 포털은 HTTPS 연결을 수신 대기하지 않습니다. 
 D | string | 디바이스의 유형입니다.  "Windows.*" 형식으로 제공됩니다(예: Windows.Xbox 또는 Windows.Desktop).
@@ -204,4 +202,3 @@ T | null 문자로 구분된 문자열 목록 | 디바이스에 대해 사용자
 #### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>CSWSH(사이트 간 WebSocket 하이재킹) 보호
 
 [CSWSH 공격](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html)으로부터 보호하려면 디바이스 포털에 대한 WebSocket 연결을 여는 모든 클라이언트에서 호스트 헤더와 일치하는 원본 헤더도 제공해야 합니다.  이를 통해 요청이 디바이스 포털 UI 또는 유효한 클라이언트 응용 프로그램에서 비롯되었음을 디바이스 포털에 입증할 수 있습니다.  원본 헤더가 없으면 요청이 거부됩니다. 
-

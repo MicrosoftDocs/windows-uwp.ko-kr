@@ -2,21 +2,17 @@
 title: "스트리밍 리소스에 사용할 수 있는 주소 공간"
 description: "이 섹션에서는 스트리밍 리소스에 사용할 수 있는 가상 주소 공간을 지정합니다."
 ms.assetid: 145EB4A3-3910-4126-BC7E-A4CF53E2A098
-keywords:
-- "스트리밍 리소스에 사용할 수 있는 주소 공간"
+keywords: "스트리밍 리소스에 사용할 수 있는 주소 공간"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c120e79518abfed35cbb6b0da6fc659b13602a3f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a63136f04570c4bf964c461f7296c930f5e168b5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="address-space-available-for-streaming-resources"></a>스트리밍 리소스에 사용할 수 있는 주소 공간
 
 
@@ -38,7 +34,6 @@ CPU와 GPU가 페이지 테이블을 공유하는 향후 시스템에서는 프�
  
 
  
-
 
 
 

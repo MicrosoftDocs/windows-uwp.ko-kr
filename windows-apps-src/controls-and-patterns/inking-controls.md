@@ -11,11 +11,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 541f7e8c45190cfd597869ad1040801d368b77e8
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 50c18f0ef72ad990971323921eae282c76c70be3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="inking-controls"></a>수동 입력 컨트롤
 
@@ -170,4 +168,3 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 - [UWP 앱에서 펜 및 스타일러스 조작](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
 - [잉크 스트로크 인식](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
 - [잉크 스트로크 저장 및 검색](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
-

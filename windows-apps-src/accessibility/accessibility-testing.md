@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bf56b564b383ee90e276416bf1dda29f55bb771c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a5a0a20ffa8ca27c123d139f25f636587db07aba
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessibility-testing"></a>접근성 테스트  
 
 UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하기 위해 따라야 할 테스트 절차입니다.
@@ -149,4 +146,3 @@ Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되�
 * [피해야 할 사례](practices-to-avoid.md)
 * [UI 자동화](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
 * [Windows의 접근성](http://go.microsoft.com/fwlink/p/?LinkId=320802) 
-

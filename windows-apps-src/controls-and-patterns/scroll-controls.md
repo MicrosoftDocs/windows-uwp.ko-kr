@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ffa13b2bfc89a94370beee7fa47372f948c3f700
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8e167fd07d589b8ad159fe3cb535dd884eeab0ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="scroll-bars"></a>스크롤 막대
 
@@ -126,4 +124,3 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 **개발자용(XAML)**
 * [**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)
-

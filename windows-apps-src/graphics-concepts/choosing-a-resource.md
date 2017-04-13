@@ -2,21 +2,17 @@
 title: "리소스 선택"
 description: "리소스는 3D 파이프라인에서 사용하는 데이터의 모음입니다."
 ms.assetid: 6BAD6287-2930-42F8-BF51-69A379D1D2C3
-keywords:
-- "리소스 선택"
+keywords: "리소스 선택"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73f2d2f6b6a925a425c94bcf1b5f957a82569236
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1722558dfbb9620d4d265a2a479109366780a514
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choosing-a-resource"></a>리소스 선택
 
 
@@ -97,7 +93,6 @@ CPU에서 상대적으로 자주 업데이트(프레임당 1번 이상)하는 �
  
 
  
-
 
 
 

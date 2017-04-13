@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: "셰이더 개체 포팅"
-description: "OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우, 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다."
+description: "OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다."
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 포트, 셰이더, direct3d, opengl"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f683e8b6ad04b1350adae1c962da09e2f15f5cec
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="port-the-shader-objects"></a>셰이더 개체 포팅
 
 
@@ -172,7 +169,7 @@ GLuint __cdecl LoadShaderProgram (const char *vertShaderSrcStr, const char *frag
 glUseProgram(renderer->programObject);
 ```
 
-Direct3D에는 셰이더 프로그램 개체의 개념이 없습니다. 대신 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) 인터페이스(예:[**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) 또는 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513))에서 셰이더 만들기 메서드 중 하나를 호출하면 셰이더가 만들어집니다. 현재 그리기 텍스트에 대한 셰이더를 설정하기 위해 꼭짓점 셰이더의 [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476385) 또는 조각 셰이더의 [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) 등 집합 셰이더 메서드와 함께 해당 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476472)에 이러한 셰이더를 제공합니다.
+Direct3D에는 셰이더 프로그램 개체의 개념이 없습니다. 대신 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) 인터페이스(예:[**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) 또는 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513))에서 셰이더 만들기 메서드 중 하나를 호출하면 셰이더가 만들어집니다. 현재 그리기 텍스트에 대한 셰이더를 설정하기 위해 꼭짓점 셰이더의 [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) 또는 조각 셰이더의 [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) 등 집합 셰이더 메서드와 함께 해당 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 이러한 셰이더를 제공합니다.
 
 Direct3D 11: 그래픽 디바이스 그리기 컨텍스트에 대한 셰이더를 설정합니다.
 
@@ -323,7 +320,6 @@ m_d3dContext->UpdateSubresource(
  
 
  
-
 
 
 

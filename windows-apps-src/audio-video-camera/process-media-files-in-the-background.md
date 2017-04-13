@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c7f3262c30797c8ce447b3e97a5cb7dd6d2ea025
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8d3166b40120799818598300a049a4148a40d2cc
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다.
@@ -122,7 +119,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 백그라운드 작업을 등록하기 위해 새 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다. 나중에 식별할 수 있도록 백그라운드 작업 작성기의 이름을 설정합니다. 매니페스트 파일에서 사용하는 네임스페이스 및 클래스 이름 문자열과 동일하게 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)를 설정합니다. [**Trigger**](https://msdn.microsoft.com/library/windows/apps/dn641725) 속성을 **MediaProcessingTrigger** 인스턴스로 설정합니다.
 
-작업을 등록하기 전에 [**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 컬렉션에서 루프 실행하고 [**BackgroundTaskBuilder.Name**](https://msdn.microsoft.com/library/windows/apps/br229870) 속성에 지정한 이름의 작업에서 [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br224771)를 호출하여 이전에 등록한 작업의 등록을 취소하세요.
+작업을 등록하기 전에 [**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 컬렉션에서 루프 실행하고 [**BackgroundTaskBuilder.Name**](https://msdn.microsoft.com/library/windows/apps/br224771) 속성에 지정한 이름의 작업에서 [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229870)를 호출하여 이전에 등록한 작업의 등록을 취소하세요.
 
 [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)를 호출하여 백그라운드 작업을 등록합니다. [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 및 [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224808) 이벤트에 대한 처리기를 등록합니다.
 
@@ -144,7 +141,6 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
  
 
  
-
 
 
 

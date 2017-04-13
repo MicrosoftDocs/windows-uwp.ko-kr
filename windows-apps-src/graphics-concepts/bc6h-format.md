@@ -2,21 +2,17 @@
 title: "BC6H 형식"
 description: "BC6H 형식은 원본 데이터의 HDR(High Dynamic Range) 색 공간을 지원하도록 설계된 텍스처 압축 형식입니다."
 ms.assetid: 6781D967-9262-4EE7-B354-7A6D0EA0498E
-keywords:
-- "BC6H 형식"
+keywords: "BC6H 형식"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a1cc569adbf15876693e91ac92e6bd364a267cb7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2bca4f5e86229a9b6ffc622a65628f1b588c9ac6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bc6h-format"></a>BC6H 형식
 
 
@@ -331,7 +327,6 @@ unsigned short finish_unquantize(int comp)
  
 
  
-
 
 
 

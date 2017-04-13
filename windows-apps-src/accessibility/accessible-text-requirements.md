@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c1decefe507ccebbaee1055426fbde06eb9670e7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4f3bb71d1aef8917e14514521393ef1ba7c782d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="accessible-text-requirements"></a>접근성 있는 텍스트 요구 사항  
 
 
@@ -121,7 +118,7 @@ HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑�
 ## <a name="text-font-size"></a>텍스트 글꼴 크기  
 다수의 읽기 프로그램은 너무 작아 읽을 수 없는 텍스트 글꼴 크기가 사용된 경우 앱에서 텍스트를 읽는 데 어려움이 있습니다. 앱 UI의 텍스트를 첫 번째 위치에서 적절히 크게 표시하면 이 문제를 방지할 수 있습니다. Windows에 포함된 보조 기술도 있으며, 이 기술을 통해 사용자는 앱의 보기 크기나 전체적인 디스플레이를 변경할 수 있습니다.
 
-* 일부 사용자는 기본 디스플레이의 dpi(인치당 도트 수) 값을 접근성 옵션으로 변경합니다. 이 옵션은 **접근성**의 **화면의 항목을 더 크게 표시**에서 사용할 수 있으며 **모양 및 개인 설정** / **디스플레이**를 위한 **제어판** UI로 리디렉션됩니다. 사용 가능한 크기 조정 옵션이 정확히 어느 것인지는 디스플레이 장치의 접근 권한 값에 달려 있기 때문에 달라질 수 있습니다.
+* 일부 사용자는 기본 디스플레이의 dpi(인치당 도트 수) 값을 접근성 옵션으로 변경합니다. 이 옵션은 **접근성**의 **화면의 항목을 더 크게 표시**에서 사용할 수 있으며 **모양 및 개인 설정** / **디스플레이**를 위한 **제어판** UI로 리디렉션됩니다. 사용 가능한 크기 조정 옵션이 정확히 어느 것인지는 디스플레이 디바이스의 접근 권한 값에 달려 있기 때문에 달라질 수 있습니다.
 * 돋보기 도구는 UI의 선택된 영역을 확대할 수 있습니다. 그러나 돋보기 도구를 사용하여 텍스트를 읽기는 어렵습니다.
 
 <span id="Text_scale_factor"/>
@@ -176,4 +173,3 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 * [XAML 텍스트 표시 샘플](http://go.microsoft.com/fwlink/p/?linkid=238579)
 * [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?linkid=251417)
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570) 
-

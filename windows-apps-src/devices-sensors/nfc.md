@@ -9,15 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: 15a113b5-8231-41c9-b724-ce5add813967
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8eff676b6b1a60a93d8e35aaf50b0e67e81f69ae
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 8e2438793ed154e083cca5bdd881012ddd90f42b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="nfc"></a>NFC
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱에 NFC를 통합하는 방법에 대한 문서가 포함되어 있습니다.
 

@@ -1,6 +1,6 @@
 ---
 author: mtoepke
-title: "OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교"
+title: "OpenGL ES 2.0 버퍼, 유니폼, 꼭짓점을 Direct3D로 포팅"
 description: "OpenGL ES 2.0에서 Direct3D 11로 포팅하는 프로세스 중에 앱과 셰이더 프로그램 사이에 데이터를 전달하기 위한 구문 및 API 동작을 변경해야 합니다."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
 ms.author: mtoepke
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, opengl, direct3d, 버퍼, 유니폼, 꼭짓점 특성"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 43b568b046246931e24ded5f40f56d3f24d1b05a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d25495b282dce38c3dcad0ec996c185e64165b13
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
 
 
@@ -40,7 +37,7 @@ OpenGL ES 2.0 데이터는 네 가지 방법으로 셰이더 프로그램 간에
 | 특성                 | 입력 레이아웃에서 지정하고 특정 HLSL 의미 체계로 표시된 꼭짓점 버퍼 요소 필드.                                                                                |
 | 버퍼 개체             | 버퍼. 일반 사용 버퍼 정의는 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 및 [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)를 참조하세요. |
 | 프레임 버퍼 개체(FBO) | 렌더링 대상. [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) 및 [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)를 참조하세요.                                       |
-| 백 버퍼               | "백 버퍼" 화면이 있는 스왑 체인. 연결된 [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)과 함께 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)을 참조하세요.                       |
+| 백 버퍼               | "백 버퍼" 화면이 있는 스왑 체인. 연결된 [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)과 함께 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)을 참조하세요.                       |
 
  
 
@@ -302,7 +299,6 @@ struct VertexShaderInput
  
 
  
-
 
 
 

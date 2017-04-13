@@ -12,17 +12,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 60ab406a5908b1a21c7a0f579664b7632722dd4e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5a2e44448877ddc7906a8d4e41ec9c0b809f9a7e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-video-effects"></a>사용자 지정 비디오 효과
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 비디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. 사용자 지정 효과는 장치의 카메라에 액세스할 수 있도록 하는 [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124)와 미디어 클립에서 복잡한 컴퍼지션을 만들 수 있도록 하는 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)을 비롯한 여러 다른 Windows 런타임 API에서 사용할 수 있습니다.
@@ -249,7 +246,6 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://msdn
 * [미디어 재생](media-playback.md)
 
  
-
 
 
 

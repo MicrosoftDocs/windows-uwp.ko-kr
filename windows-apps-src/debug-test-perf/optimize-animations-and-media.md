@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7eeb8b79b3c50593470f62c3eddd29a9f218d528
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 29383c65d36b7bc9e5946e4c55298ac0e04107c6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="optimize-animations-media-and-images"></a>애니메이션, 미디어 및 이미지 최적화
 
@@ -35,7 +33,7 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 -   제로 기간 애니메이션
 -   [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772) 속성에 대한 애니메이션
 -   [**UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) 속성에 대한 애니메이션
--   [**SolidColorBrush.Color**](https://msdn.microsoft.com/library/windows/apps/BR228076) 하위 속성을 대상으로 할 때 유형 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR242963)의 속성에 대한 애니메이션
+-   [**SolidColorBrush.Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) 하위 속성을 대상으로 할 때 유형 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)의 속성에 대한 애니메이션
 -   반환 값 유형의 하위 속성을 대상으로 할 때 다음 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성에 대한 애니메이션
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
@@ -46,7 +44,7 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 
 XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립적이므로 몇 가지 작업으로 이 최적화를 비활성화할 수 있습니다. 특히 다음과 같은 경우에 주의하세요.
 
--   종속 애니메이션이 UI 스레드에서 실행될 수 있도록 [**EnableDependentAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210356) 속성을 설정할 경우. 이 애니메이션을 독립 버전으로 변환합니다. 예를 들어 개체의 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR242946) 및 [**Height**](https://msdn.microsoft.com/library/windows/apps/BR242948)가 아니라 [**ScaleTransform.ScaleX**](https://msdn.microsoft.com/library/windows/apps/BR208751) 및 [**ScaleTransform.ScaleY**](https://msdn.microsoft.com/library/windows/apps/BR208718)를 애니메이션합니다. 이미지, 텍스트와 같은 개체의 크기를 주저 없이 조정하세요. 프레임워크에서는 [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940)이 애니메이션되는 동안 쌍선형 크기 조정을 적용합니다. 이미지/텍스트는 최종 크기로 다시 변환되므로 항상 분명하게 표시됩니다.
+-   종속 애니메이션이 UI 스레드에서 실행될 수 있도록 [**EnableDependentAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210356) 속성을 설정할 경우. 이 애니메이션을 독립 버전으로 변환합니다. 예를 들어 개체의 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) 및 [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718)가 아니라 [**ScaleTransform.ScaleX**](https://msdn.microsoft.com/library/windows/apps/BR242946) 및 [**ScaleTransform.ScaleY**](https://msdn.microsoft.com/library/windows/apps/BR242948)를 애니메이션합니다. 이미지, 텍스트와 같은 개체의 크기를 주저 없이 조정하세요. 프레임워크에서는 [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940)이 애니메이션되는 동안 쌍선형 크기 조정을 적용합니다. 이미지/텍스트는 최종 크기로 다시 변환되므로 항상 분명하게 표시됩니다.
 -   종속 애니메이션에 효과적인 프레임당 업데이트를 만드는 경우. 이와 같은 예는 [**CompositonTarget.Rendering**](https://msdn.microsoft.com/library/windows/apps/BR228127) 이벤트 처리기의 변형에 적용됩니다.
 -   [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.cachemode) 속성이 **BitmapCache**로 설정된 요소에서 독립적으로 간주된 애니메이션을 실행하는 경우. 각 프레임에 대한 캐시가 다시 변환되어야 하므로 이 애니메이션은 종속으로 간주됩니다.
 
@@ -87,7 +85,7 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 ### <a name="display-full-screen-video-playback-when-possible"></a>가능한 경우 전체 화면 동영상 재생 표시
 
-UWP 앱에서는 항상 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx)에서 [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 속성을 사용하여 전체 창 렌더링을 사용하거나 사용하지 않습니다. 그러면 미디어를 재생하는 동안 시스템 수준 최적화가 사용됩니다.
+UWP 앱에서는 항상 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)에서 [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx) 속성을 사용하여 전체 창 렌더링을 사용하거나 사용하지 않습니다. 그러면 미디어를 재생하는 동안 시스템 수준 최적화가 사용됩니다.
 
 XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표시를 최적화하므로 전원이 덜 사용되고 프레임 속도가 높아진 환경이 이루어집니다. 가장 효율적인 미디어 재생을 위해 **MediaPlayerElement** 크기를 화면 너비 및 높이로 설정하며 기타 XAML 요소를 표시하지 않습니다.
 
@@ -111,13 +109,15 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 포함 모드인 경우 동영상의 맨 위에 XAML 요소를 그리지 마세요. 그릴 경우 프레임워크에서 장면을 구성하는 추가 작업을 수행해야 합니다. 동영상 맨 위가 아니라 포함된 미디어 요소 아래에 전송 컨트롤을 배치하는 것이 이 상황에 대한 좋은 최적화 예입니다. 이 이미지에서 빨간색 막대는 일련의 전송 컨트롤을 나타냅니다(재생, 일시 정지, 중지 등).
 
-![오버레이 요소가 있는 MediaPlayerElement](images/videowithoverlay.png) 이러한 컨트롤을 전체 화면이 아닌 미디어 맨 위에 배치하지 마세요. 대신에 전송 컨트롤을 미디어가 렌더링되는 영역의 외부에 배치합니다. 다음 이미지에서 컨트롤은 미디어 아래에 배치됩니다.
+![오버레이 요소가 있는 MediaPlayerElement](images/videowithoverlay.png)
+
+이러한 컨트롤을 전체 화면이 아닌 미디어의 맨 위에 배치하지 마십시오. 대신에 전송 컨트롤을 미디어가 렌더링되는 영역의 외부에 배치합니다. 다음 이미지에서 컨트롤은 미디어 아래에 배치됩니다.
 
 ![인접 요소가 있는 MediaPlayerElement](images/videowithneighbors.png)
 
 ### <a name="delay-setting-the-source-for-a-mediaplayerelement"></a>MediaPlayerElement에 대한 소스 설정 지연
 
-미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [**소스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 속성을 통해 소스가 설정된 후 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaPlayerElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
+미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [**소스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) 속성을 통해 소스가 설정된 후 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaPlayerElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
 
 ### <a name="set-mediaplayerelementpostersource"></a>MediaPlayerElement.PosterSource 설정
 
@@ -127,7 +127,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 언제나 스크러빙은 미디어 플랫폼의 응답 성능을 실현하기 위한 힘든 작업입니다. 일반적으로 사람들은 슬라이더 값을 변경하여 이 목적을 달성합니다. 다음은 스크러빙을 가능한 효율적으로 만드는 방법에 대한 몇 가지 팁입니다.
 
--   [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/BR209614)의 [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx)을 쿼리하는 타이머에 따라 [**Slider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) 값을 업데이트합니다. 타이머에 대한 적절한 업데이트 빈도를 사용해야 합니다. **Position** 속성만 재생하는 동안 모든 250밀리초마다 업데이트합니다.
+-   [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)의 [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx)을 쿼리하는 타이머에 따라 [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) 값을 업데이트합니다. 타이머에 대한 적절한 업데이트 빈도를 사용해야 합니다. **Position** 속성만 재생하는 동안 모든 250밀리초마다 업데이트합니다.
 -   슬라이더에서 단계 빈도 크기는 동영상 길이를 통해 조정되어야 합니다.
 -   슬라이더에서 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트를 구독하여 사용자가 슬라이더의 위치 조정 컨트롤을 끌 때 [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx) 속성을 0으로 설정합니다.
 -   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트 처리기에서 수동으로 미디어 위치를 슬라이더 위치 값으로 설정하여 스크러빙하는 동안 최적의 위치 조정 컨트롤 끌기를 제공합니다.
@@ -154,7 +154,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 금지 사항:
 
 ```xaml
-<Image Source="ms-appx:///Assets/highresCar.jpg" 
+<Image Source="ms-appx:///Assets/highresCar.jpg"
        Width="300" Height="200"/>    <!-- BAD CODE DO NOT USE.-->
 ```
 
@@ -163,7 +163,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 ```xaml
 <Image>
     <Image.Source>
-    <BitmapImage UriSource="ms-appx:///Assets/highresCar.jpg" 
+    <BitmapImage UriSource="ms-appx:///Assets/highresCar.jpg"
                  DecodePixelWidth="300" DecodePixelHeight="200"/>
     </Image.Source>
 </Image>
@@ -273,14 +273,14 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 > picker.FileTypeFilter.Add(".jpeg");
 > picker.FileTypeFilter.Add(".png");
 > picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
-> 
+>
 > StorageFile file = await picker.PickSingleFileAsync();
-> 
+>
 > StorageItemThumbnail fileThumbnail = await file.GetThumbnailAsync(ThumbnailMode.SingleItem, 64);
-> 
+>
 > BitmapImage bmp = new BitmapImage();
 > bmp.SetSource(fileThumbnail);
-> 
+>
 > Image img = new Image();
 > img.Source = bmp;
 > ```
@@ -291,14 +291,14 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 > picker.FileTypeFilter.Add(".jpeg")
 > picker.FileTypeFilter.Add(".png")
 > picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary
-> 
+>
 > Dim file As StorageFile = Await picker.PickSingleFileAsync()
-> 
+>
 > Dim fileThumbnail As StorageItemThumbnail = Await file.GetThumbnailAsync(ThumbnailMode.SingleItem, 64)
-> 
+>
 > Dim bmp As New BitmapImage()
 > bmp.SetSource(fileThumbnail)
-> 
+>
 > Dim img As New Image()
 > img.Source = bmp
 > ```
@@ -306,5 +306,3 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 ### <a name="decode-images-once"></a>이미지를 한 번 디코딩
 
 이미지를 두 번 이상 디코딩하지 않으려면 메모리 스트림을 사용하지 않고 URI에서 [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760) 속성을 할당합니다. XAML 프레임워크는 여러 위치에서 동일한 URI를 단일 디코딩 이미지와 연결할 수 있지만 동일한 데이터가 포함되고 메모리 스트림별로 다른 디코딩 이미지를 만드는 여러 메모리 스트림에 대해 동일 작업을 수행할 수 없습니다.
-
-

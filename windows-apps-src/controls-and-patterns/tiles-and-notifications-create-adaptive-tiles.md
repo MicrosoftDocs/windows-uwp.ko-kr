@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 53b130c3f97440bd381adda5c40532d46823ce02
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 27d3de280201d92ee98f6e8a17afd85f76acd7d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="how-to-send-a-tile-notification"></a>타일 알림을 보내는 방법
 
-[로컬 타일 알림 보내기에 대한 빠른 시작](tiles-and-notifications-create-adaptive-tiles.md)을 참조하세요. 이 페이지의 문서에서는 적응형 타일에 사용할 수 있는 모든 시각적 UI를 설명합니다.
+[로컬 타일 알림 보내기에 대한 빠른 시작](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/)을 참조하세요. 이 페이지의 문서에서는 적응형 타일에 사용할 수 있는 모든 시각적 UI를 설명합니다.
 
 
 ## <a name="usage-guidance"></a>사용법 지침
@@ -1397,13 +1395,12 @@ TileWide = new TileBinding()
 
 
 * [적응형 타일 스키마](tiles-and-notifications-adaptive-tiles-schema.md)
-* [빠른 시작: 로컬 타일 알림 보내기](tiles-and-notifications-create-adaptive-tiles.md)
+* [빠른 시작: 로컬 타일 알림 보내기](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/10/05/quickstart-sending-a-local-tile-notification-in-windows-10/)
 * [GitHub의 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 * [특수 타일 템플릿 카탈로그](tiles-and-notifications-special-tile-templates-catalog.md)
  
 
  
-
 
 
 

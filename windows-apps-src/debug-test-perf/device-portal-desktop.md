@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="device-portal-for-desktop"></a>데스크톱용 디바이스 포털
 
@@ -78,7 +76,7 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
     - UseDynamicPorts: 필수 DWORD. 선택한 포트 번호를 유지하려면 이 항목을 0으로 설정합니다.
-    - HttpPort: 필수 DWORD. Device Portal이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.  
+    - HttpPort: 필수 DWORD. Device Portal이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.    
     - HttpsPort: 필수 DWORD. Device Portal이 HTTPS 연결을 수신 대기하는 포트 번호를 포함합니다.
 
 ## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>개발자 모드 패키지 설치 또는 Device Portal 시작 실패
@@ -112,4 +110,3 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 
 1. 설정 &gt; 업데이트 및 보안 &gt; Windows 업데이트에서 Windows 업데이트가 있는지 확인합니다.
 2. 컴퓨터를 다시 부팅하여 모든 업데이트가 적용되도록 합니다.
-

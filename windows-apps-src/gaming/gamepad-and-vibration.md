@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 게임 패드, 진동"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: b92ddbaadd7fd09b252d5c8842ed89daf53a6982
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 
 이 페이지에서는 UWP(유니버설 Windows 플랫폼)용 [Windows.Gaming.Input.Gamepad][gamepad] 및 관련 API를 사용하여 Xbox One 게임 패드용 프로그래밍의 기본 사항을 설명합니다.
@@ -56,7 +53,7 @@ Xbox One 게임 패드는 강력한 게임 패드 진동과 미세한 게임 패
 
 ### <a name="ui-navigation"></a>UI 탐색
 
-사용자 인터페이스 탐색에 다양한 입력 장치를 지원해야 하는 부담을 덜어주고 게임과 장치 간에 일관성을 도모하기 위해 대부분의 _물리적_ 입력 장치는 [UI 탐색 컨트롤러](ui-navigation-controller.md)라고 하는 별도의 _논리적_ 입력 장치 역할도 동시에 수행합니다. UI 탐색 컨트롤러는 여러 입력 장치의 UI 탐색 명령에 대한 공통 용어 모음집을 제공합니다.
+사용자 인터페이스 탐색을 위해 다양한 입력 장치를 지원해야 하는 부담을 덜고 게임과 장치 간 일관성을 추구하기 위해 대부분의 _물리적_ 입력 장치는 [UI 탐색 컨트롤러](ui-navigation-controller.md)라고 하는 별도의 _논리적_ 입력 장치 역할을 동시에 수행합니다. UI 탐색 컨트롤러는 여러 입력 장치의 UI 탐색 명령에 대한 공통 용어 모음집을 제공합니다.
 
 UI 탐색 컨트롤러 역할을 하는 게임 패드는 탐색 명령의 [필수 집합](ui-navigation-controller.md#required-set)을 왼쪽 섬스틱(thumbstick), D 패드, **보기**, **메뉴**, **A** 및 **B** 버튼에 매핑합니다.
 
@@ -321,4 +318,3 @@ gamepad.Vibration = vibration;
 [gamepadreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
 [gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
 [gamepadvibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx
-

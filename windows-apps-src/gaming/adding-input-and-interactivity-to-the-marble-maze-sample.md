@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 입력, 샘플"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: dc667be326950151b08bbaded6d4e9a0b109523b
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Marble Maze 샘플에 입력 및 대화형 작업 추가
 
 
@@ -29,7 +26,7 @@ UWP(유니버설 Windows 플랫폼) 앱 게임은 데스크톱 컴퓨터, 노트
  
 게임에서 입력 작업을 하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.
 
--   가능한 경우 게임이 고객의 광범위한 기본 설정과 기능을 수용할 수 있도록 여러 입력 장치를 지원합니다. 게임 컨트롤러 및 센서 사용은 옵션이지만 플레이어 환경을 향상시키기 위해 사용하는 것이 좋습니다. 이러한 입력 장치를 더 쉽게 통합할 수 있도록 게임 컨트롤러 및 센서 API를 디자인했습니다.
+-   가능한 경우 게임이 고객의 광범위한 기본 설정과 기능을 수용할 수 있도록 여러 입력 장치를 지원합니다. 게임 컨트롤러 및 센서 사용은 선택 사항이지만 플레이어 환경을 향상시키기 위해 사용하는 것이 좋습니다. 이러한 입력 장치를 더 쉽게 통합할 수 있도록 게임 컨트롤러 및 센서 API를 디자인했습니다.
 -   터치를 초기화하려면 포인터가 활성화, 해제 및 이동되는 경우 등의 창 이벤트를 등록해야 합니다. 가속도계를 초기화하려면 응용 프로그램을 초기화할 때 [**Windows::Devices::Sensors::Accelerometer**](https://msdn.microsoft.com/library/windows/apps/br225687) 개체를 만듭니다. Xbox 360 컨트롤러는 초기화가 필요하지 않습니다.
 -   싱글 플레이어 게임의 경우 가능한 모든 Xbox 360 컨트롤러의 입력을 결합할지 여부를 고려합니다. 이렇게 하면 어떤 입력이 어떤 컨트롤러에서 제공되었는지 추적할 필요가 없습니다.
 -   입력 장치를 처리하기 전에 Windows 이벤트를 처리합니다.
@@ -527,7 +524,6 @@ if (marblePosition.z >= resetDepth)
  
 
  
-
 
 
 

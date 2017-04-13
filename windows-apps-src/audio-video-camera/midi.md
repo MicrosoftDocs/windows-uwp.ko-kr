@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
-description: "이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법에 대해 살펴봅니다."
+description: "이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다."
 title: MIDI
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bd494a814155d72642bb721a939fcc8c50668a2d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bccc087b561699ec72bb99cd160d532b95c49530
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="midi"></a>MIDI
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다.
@@ -107,7 +104,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 사용자가 MIDI 입력 **ListBox**에서 항목을 선택하면 [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) 이벤트가 발생합니다. 이 이벤트에 대한 처리기에서 도우미 클래스의 **DeviceInformationCollection** 속성에 액세스하여 현재 디바이스 목록을 가져옵니다. 선택 목록에 항목이 있는 경우 **ListBox** 컨트롤의 [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/br209768)와 일치하는 인덱스를 가진 **DeviceInformation** 개체를 선택합니다.
 
-[**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894770)를 호출하고 선택한 디바이스의 [**Id**](https://msdn.microsoft.com/library/windows/apps/dn894776) 속성을 전달하여 선택한 입력 디바이스를 나타내는 [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/br225437) 개체를 만듭니다.
+[**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894776)를 호출하고 선택한 디바이스의 [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) 속성을 전달하여 선택한 입력 디바이스를 나타내는 [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/dn894770) 개체를 만듭니다.
 
 지정된 디바이스를 통해 MIDI 메시지를 수신할 때마다 발생하는 [**MessageReceived**](https://msdn.microsoft.com/library/windows/apps/dn894781) 이벤트에 대한 처리기를 등록합니다.
 
@@ -121,7 +118,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 [!code-cs[OutPortSelectionChanged](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetOutPortSelectionChanged)]
 
-출력 디바이스가 만들어지면 보내려는 메시지 유형에 대한 새 [**IMidiMessage**](https://msdn.microsoft.com/library/windows/apps/dn911508)를 만들어 메시지를 보낼 수 있습니다. 이 예제에서 메시지는 [**NoteOnMessage**](https://msdn.microsoft.com/library/windows/apps/dn894817)입니다. [**IMidiOutPort**](https://msdn.microsoft.com/library/windows/apps/dn894730) 개체의 [**SendMessage**](https://msdn.microsoft.com/library/windows/apps/dn894727) 메서드가 호출되어 메시지를 보냅니다.
+출력 디바이스가 만들어지면 보내려는 메시지 유형에 대한 새 [**IMidiMessage**](https://msdn.microsoft.com/library/windows/apps/dn911508)를 만들어 메시지를 보낼 수 있습니다. 이 예제에서 메시지는 [**NoteOnMessage**](https://msdn.microsoft.com/library/windows/apps/dn894817)입니다. [**IMidiOutPort**](https://msdn.microsoft.com/library/windows/apps/dn894727) 개체의 [**SendMessage**](https://msdn.microsoft.com/library/windows/apps/dn894730) 메서드가 호출되어 메시지를 보냅니다.
 
 [!code-cs[SendMessage](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetSendMessage)]
 
@@ -145,7 +142,6 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
  
 
  
-
 
 
 

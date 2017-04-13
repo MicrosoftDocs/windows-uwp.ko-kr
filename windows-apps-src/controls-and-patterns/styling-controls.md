@@ -14,13 +14,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60eb44ab45873b638181bb4b3194e443d21356bc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b9bc1e68e26830a283ed49b753f63a8f7ae63637
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="styling-controls"></a>컨트롤 스타일 지정
 
 
@@ -157,5 +154,4 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 ## <a name="the-template-property"></a>Template 속성
 
 스타일 setter는 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390)의 [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465) 속성에 사용할 수 있으며 사실 대부분의 일반적인 XAML 스타일과 앱의 XAML 리소스를 구성합니다. 이 스타일 setter는 [컨트롤 템플릿](control-templates.md)에서 더 자세히 알아봅니다.
-
 
