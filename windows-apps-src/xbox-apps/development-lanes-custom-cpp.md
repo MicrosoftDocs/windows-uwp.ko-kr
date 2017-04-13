@@ -9,11 +9,9 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ff4686aeefbce41330a0fb3bf112a30ffe2b504e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7fd316ba63d0b5e6a98e96841905b13d3680a39f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="bringing-custom-c-games-to-uwp-on-xbox"></a>Xbox의 UWP에 사용자 지정 C++ 게임 가져오기
 
@@ -32,5 +30,4 @@ UWP(유니버설 Windows 플랫폼)에서의 C++ 게임은 렌더링에 DirectX�
 ## <a name="see-also"></a>참고 항목
 - [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One의 UWP](index.md)
-
 

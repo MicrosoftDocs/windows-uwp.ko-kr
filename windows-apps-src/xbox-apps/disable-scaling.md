@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 908620cd9f8bb3b1155b3e5d1fd777a91d254ef1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 4361437c8b6d67431bf879f9eb1cfbf3c03e592e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="how-to-turn-off-scaling"></a>크기 조정을 끄는 방법   
 기본적으로 응용 프로그램은 XAML 앱의 경우 200%로, HTML 앱의 경우 150%로 크기가 조정됩니다. 기본 배율 인수를 끌 수 있습니다. 이렇게 하면 응용 프로그램에서 디바이스의 실제 픽셀 크기(1910 x 1080 픽셀)를 사용합니다.   
    
@@ -49,4 +46,3 @@ DirectX/C++ 응용 프로그램은 크기가 조정되지 않습니다. 자동 �
 ## <a name="see-also"></a>참고 항목
 - [Xbox에 적용할 수 있는 최선의 방법](tailoring-for-xbox.md)
 - [Xbox One의 UWP](index.md)
-

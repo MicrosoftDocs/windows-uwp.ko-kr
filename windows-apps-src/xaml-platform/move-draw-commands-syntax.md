@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ea01f8191190db0a9b13b8081bc6fef687369c13
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e360869cd8406fac057046412fc135a42b3e0ccd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -33,11 +30,11 @@ Windows 런타임에는 이동 및 그리기 명령을 표현하는 문자열을
   Data="M4.12,0 L9.67,5.47 L4.12,10.94 L0,10.88 L5.56,5.47 L0,0.06" />
 ```
 
-[**PathGeometry.Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) 역시 이동 및 그리기 명령을 사용할 수 있습니다. 이동 및 그리기 명령을 사용하는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) 개체를 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br210041) 값으로 사용하게 될 [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057) 개체의 다른 [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br243356) 유형과 결합할 수도 있습니다. 하지만 이것은 특성 정의 데이터에 대해 이동 및 그리기 명령을 사용하는 것만큼 일반적이지는 않습니다.
+[**PathGeometry.Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) 역시 이동 및 그리기 명령을 사용할 수 있습니다. 이동 및 그리기 명령을 사용하는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) 개체를 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356) 값으로 사용하게 될 [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057) 개체의 다른 [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041) 유형과 결합할 수도 있습니다. 하지만 이것은 특성 정의 데이터에 대해 이동 및 그리기 명령을 사용하는 것만큼 일반적이지는 않습니다.
 
 ## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>이동 및 그리기 명령 사용과 **PathGeometry** 사용 비교
 
-Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](https://msdn.microsoft.com/library/windows/apps/br210168) 속성 값이 있는 단일 [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/br210143) 개체를 사용하여 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210169)를 생성합니다. 각각의 그리기 명령은 이 단일 **PathFigure**의 [**Segments**](https://msdn.microsoft.com/library/windows/apps/br210174) 컬렉션에서 [**PathSegment**](https://msdn.microsoft.com/library/windows/apps/br210164) 파생 클래스를 생성하고, 이동 명령은 [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/br210166)를 변경하며, 닫기 명령의 존재는 [**IsClosed**](https://msdn.microsoft.com/library/windows/apps/br210159)를 **true**로 설정합니다. 런타임에 **Data** 값을 검사하는 경우 이 구조를 개체 모델로 탐색할 수 있습니다.
+Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) 속성 값이 있는 단일 [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/br210143) 개체를 사용하여 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)를 생성합니다. 각각의 그리기 명령은 이 단일 **PathFigure**의 [**Segments**](https://msdn.microsoft.com/library/windows/apps/br210164) 컬렉션에서 [**PathSegment**](https://msdn.microsoft.com/library/windows/apps/br210174) 파생 클래스를 생성하고, 이동 명령은 [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/br210166)를 변경하며, 닫기 명령의 존재는 [**IsClosed**](https://msdn.microsoft.com/library/windows/apps/br210159)를 **true**로 설정합니다. 런타임에 **Data** 값을 검사하는 경우 이 구조를 개체 모델로 탐색할 수 있습니다.
 
 ## <a name="the-basic-syntax"></a>기본 구문
 
@@ -131,7 +128,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 **입방형 3차원 곡선 명령**
 
-두 개의 지정된 제어점(*controlPoint1* 및 *controlPoint2*)을 사용하여 현재 점과 지정된 끝점 사이에 입방형 3차원 곡선을 만듭니다. `C 100,200 200,400 300,200` 은 유효한 곡선 명령의 예입니다. [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210168) 개체가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br228068) 개체에 상응하는 항목을 정의합니다.
+두 개의 지정된 제어점(*controlPoint1* 및 *controlPoint2*)을 사용하여 현재 점과 지정된 끝점 사이에 입방형 3차원 곡선을 만듭니다. `C 100,200 200,400 300,200` 은 유효한 곡선 명령의 예입니다. [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/br228068) 개체가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168) 개체에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
@@ -145,7 +142,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 **정방형 3차원 곡선 명령**
 
-지정된 제어점(*controlPoint*)을 사용하여 현재 점과 지정된 끝점 사이에 정방형 3차원 곡선을 만듭니다. `q 100,200 300,200` 은 유효한 정방형 3차원 곡선 명령의 예입니다. [**QuadraticBezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210168)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210249)에 상응하는 항목을 정의합니다.
+지정된 제어점(*controlPoint*)을 사용하여 현재 점과 지정된 끝점 사이에 정방형 3차원 곡선을 만듭니다. `q 100,200 300,200` 은 유효한 정방형 3차원 곡선 명령의 예입니다. [**QuadraticBezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210249)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
@@ -158,7 +155,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 **부드러운 입방형 3차원 곡선 명령**
 
-현재 점과 지정된 끝점 사이에 입방형 3차원 곡선을 만듭니다. 첫 번째 제어점은 현재 점에 대해 상대적인 이전 명령의 두 번째 제어점의 반사로 간주됩니다. 이전 명령이 없는 경우 또는 이전 명령이 입방형 3차원 곡선 명령이나 부드러운 입방형 3차원 곡선 명령이 아닌 경우에는 첫 번째 제어점이 현재 점과 일치한다고 가정합니다. 두 번째 제어점, 즉 곡선 끝에 대한 제어점은 *controlPoint2*에 의해 지정됩니다. 예를 들어 `S 100,200 200,300`은 유효한 부드러운 입방형 3차원 곡선 명령입니다. 이 명령은 이전 곡선 세그먼트가 있던 [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210168)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br228068)에 상응하는 항목을 정의합니다.
+현재 점과 지정된 끝점 사이에 입방형 3차원 곡선을 만듭니다. 첫 번째 제어점은 현재 점에 대해 상대적인 이전 명령의 두 번째 제어점의 반사로 간주됩니다. 이전 명령이 없는 경우 또는 이전 명령이 입방형 3차원 곡선 명령이나 부드러운 입방형 3차원 곡선 명령이 아닌 경우에는 첫 번째 제어점이 현재 점과 일치한다고 가정합니다. 두 번째 제어점, 즉 곡선 끝에 대한 제어점은 *controlPoint2*에 의해 지정됩니다. 예를 들어 `S 100,200 200,300`은 유효한 부드러운 입방형 3차원 곡선 명령입니다. 이 명령은 이전 곡선 세그먼트가 있던 [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/br228068)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
@@ -171,7 +168,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 **부드러운 정방형 3차원 곡선 명령**
 
-현재 점과 지정된 끝점 사이에 정방형 3차원 곡선을 만듭니다. 제어점은 현재 점에 대해 상대적인 이전 명령의 제어점의 반사로 간주됩니다. 이전 명령이 없는 경우 또는 이전 명령이 정방형 3차원 곡선 명령이나 부드러운 정방형 3차원 곡선 명령이 아닌 경우에는 제어점이 현재 점과 일치합니다. 이 명령은 이전 곡선 세그먼트가 있던 [**QuadraticBezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210168)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210249)에 상응하는 항목을 정의합니다.
+현재 점과 지정된 끝점 사이에 정방형 3차원 곡선을 만듭니다. 제어점은 현재 점에 대해 상대적인 이전 명령의 제어점의 반사로 간주됩니다. 이전 명령이 없는 경우 또는 이전 명령이 정방형 3차원 곡선 명령이나 부드러운 정방형 3차원 곡선 명령이 아닌 경우에는 제어점이 현재 점과 일치합니다. 이 명령은 이전 곡선 세그먼트가 있던 [**QuadraticBezierSegment**](https://msdn.microsoft.com/library/windows/apps/br210249)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
@@ -184,7 +181,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 **타원형 호 명령**
 
-현재 점과 지정된 끝점 사이에 타원형 호를 만듭니다. [**ArcSegment**](https://msdn.microsoft.com/library/windows/apps/br210168)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br228054)에 상응하는 항목을 정의합니다.
+현재 점과 지정된 끝점 사이에 타원형 호를 만듭니다. [**ArcSegment**](https://msdn.microsoft.com/library/windows/apps/br228054)가 있는 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)에 상응하는 항목을 정의합니다.
 
 | 구문 |
 |--------|
@@ -235,7 +232,7 @@ Blend for Microsoft Visual Studio 2015에서 **펜** 도구 및 다른 그리기
 
 컨트롤에 대한 Windows 런타임 XAML 기본 템플릿에 정의된 일부 컨트롤 파트에 기존 이동 및 그리기 명령 데이터가 있을 수 있습니다. 예를 들어 일부 컨트롤은 이동 및 그리기 명령으로 정의된 데이터가 포함된 [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)을 사용합니다.
 
-XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는 다른 벡터 그래픽 디자인 도구에 사용할 수 있는 내보내기 또는 플러그 인이 있습니다. 이 내보내기 또는 플러그 인은 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243355)에 대한 이동 및 그리기 명령과 함께 레이아웃 컨테이너에서 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243356) 개체를 만듭니다. 다양한 브러시를 적용할 수 있도록 XAML에서 여러 **Path** 요소가 있을 수 있습니다. 이 내보내기 또는 플러그 인 중 상당수는 원래 WPF(Windows Presentation Foundation) XAML 또는 Silverlight용으로 작성되었지만, XAML 경로 구문은 Windows 런타임 XAML과 동일합니다. 일반적으로 내보내기에서 가져온 XAML의 청크를 사용하여 Windows 런타임 XAML 페이지에 직접 붙여 넣을 수 있습니다. 하지만 변환된 XAML의 일부인 경우 **RadialGradientBrush**를 사용할 수 없습니다. Windows 런타임 XAML에서 해당 브러시가 지원되지 않기 때문입니다.
+XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는 다른 벡터 그래픽 디자인 도구에 사용할 수 있는 내보내기 또는 플러그 인이 있습니다. 이 내보내기 또는 플러그 인은 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)에 대한 이동 및 그리기 명령과 함께 레이아웃 컨테이너에서 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) 개체를 만듭니다. 다양한 브러시를 적용할 수 있도록 XAML에서 여러 **Path** 요소가 있을 수 있습니다. 이 내보내기 또는 플러그 인 중 상당수는 원래 WPF(Windows Presentation Foundation) XAML 또는 Silverlight용으로 작성되었지만, XAML 경로 구문은 Windows 런타임 XAML과 동일합니다. 일반적으로 내보내기에서 가져온 XAML의 청크를 사용하여 Windows 런타임 XAML 페이지에 직접 붙여 넣을 수 있습니다. 하지만 변환된 XAML의 일부인 경우 **RadialGradientBrush**를 사용할 수 없습니다. Windows 런타임 XAML에서 해당 브러시가 지원되지 않기 때문입니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -243,5 +240,4 @@ XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는
 * [브러시 사용](https://msdn.microsoft.com/library/windows/apps/mt280383)
 * [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)
 * [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)
-
 

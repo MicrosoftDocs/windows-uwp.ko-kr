@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cb5391dcd210b28b2971d39cfe8c9f2964889839
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7f4ca6fdbd93d42dbefd955f31bd514b93886d03
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="lighting-overview"></a>조명 개요
 
 Direct3D 조명을 사용하는 경우 Direct3D가 조명의 세부 사항을 대신 처리하도록 허용합니다. 고급 사용자는 필요에 따라 직접 조명 작업을 수행할 수 있습니다.
@@ -81,7 +78,6 @@ Direct3D는 서로 결합되어 최종 색상을 형성하는 네 개 구성 요
  
 
  
-
 
 
 

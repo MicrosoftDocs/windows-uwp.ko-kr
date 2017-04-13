@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 059fac41c0c0557dbc3d4739c1da78f794505839
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ac4a09180a678e8da197bfb030e27fa001eb74f0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="frequently-asked-questions"></a>질문과 대답
 
 예상하는 대로 작동하지 않나요? 질문과 대답 페이지를 검토합니다. 또한 [알려진 문제](known-issues.md) 항목 및 [유니버설 Windows 앱 개발](https://go.microsoft.com/fwlink/?linkid=839446) 포럼을 확인합니다. 
@@ -72,9 +69,7 @@ Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터�
 
 ### <a name="can-i-publish-my-game"></a>내 게임을 게시할 수 있나요?
 
-개발자 모드에서 UWP와 Xbox One을 사용하여 Xbox One에서 게임을 빌드하고 테스트할 수 있습니다. UWP 게임을 게시하려면 [ID@XBOX](http://www.xbox.com/Developers/id)에 등록해야 합니다. 
-[ID@XBOX](http://www.xbox.com/Developers/id)는 개발자에게 게이머 점수와 도전 과제 등 게임용 Xbox Live API에 대한 모든 권한을 제공하며 디바이스 간 멀티플레이어, 클라우드 저장, Xbox One에서 Xbox Live의 모든 기능을 활용하도록 해 줍니다. 
-[ID@XBOX](http://www.xbox.com/Developers/id)를 통해 Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 위한 Xbox One 개발자 키트에 액세스할 수도 있습니다.
+개발자 모드에서 UWP와 Xbox One을 사용하여 Xbox One에서 게임을 빌드하고 테스트할 수 있습니다. UWP 게임을 게시하려면 [ID@XBOX](http://www.xbox.com/Developers/id) 또는 [Xbox Live Creators 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)의 일부로 등록해야 합니다. 자세한 내용은 [개발자 프로그램 개요](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html)를 참조하세요.
 
 ### <a name="will-the-standard-game-engines-work"></a>표준 게임 엔진이 작동하나요?
 
@@ -142,4 +137,3 @@ TVHelpers는 JavaScript 및 XAML/C#의 샘플 및 라이브러리 집합으로�
 ## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP에 대해 알려진 문제](known-issues.md)
 - [Xbox One의 UWP](index.md)
-

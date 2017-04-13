@@ -9,14 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9ce20fbfc1289eb02faf8868415feda054d6f691
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="distributing-a-managed-windows-runtime-component"></a>관리되는 Windows 런타임 구성 요소 배포
 
 
@@ -80,4 +76,3 @@ For example: Microsoft.Cpp.Build.dll
 * [리소스 관리 시스템(Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx)
 * [Visual Studio 확장 찾기 및 사용](https://msdn.microsoft.com/library/dd293638.aspx)
 * [MakePRI.exe 명령 옵션](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx)
-

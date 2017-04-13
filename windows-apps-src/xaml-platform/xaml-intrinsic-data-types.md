@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f6a1ca4850ffbc19afc8defa6d2d373dbfbf2b2b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9f6c8ebe6285981e0af74448b88e0290de3a66ee
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-intrinsic-data-types"></a>XAML 기본 데이터 형식
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -49,5 +46,4 @@ XAML 2009 사양에서는 **x:Uri** 및 **x:Single** 같은 다른 XAML 언어 �
 * [XAML 구문 가이드](xaml-syntax-guide.md)
 * [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)
  
-
 

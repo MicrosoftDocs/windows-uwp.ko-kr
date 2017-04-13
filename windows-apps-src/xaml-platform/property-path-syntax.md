@@ -1,28 +1,25 @@
 ---
 author: jwmsft
 description: "PropertyPath 클래스 및 문자열 구문을 사용하여 XAML이나 코드에서 PropertyPath 값을 인스턴스화할 수 있습니다."
-title: "속성 경로 구문&quot;"
+title: "속성 경로 구문"
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 301f411f1911e12163ba123b93f99f5f15b5e479
-ms.lasthandoff: 02/07/2017
-
+keywords: windows 10, uwp
+ms.openlocfilehash: 3209028f151608c83e69d6750e978132a6c8b83c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="property-path-syntax"></a>속성 경로 구문
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) 클래스 및 문자열 구문을 사용하여 XAML이나 코드에서 **PropertyPath** 값을 인스턴스화할 수 있습니다. **PropertyPath** 값은 데이터 바인딩에 사용됩니다. 유사한 구문이 대상 스토리보드 애니메이션에 사용됩니다. 두 시나리오에서 속성 경로는 결국 단일 속성으로 확인되는 여러 개체-속성 관계의 통과를 설명합니다.
 
-속성 경로 문자열을 XAML의 특성으로 직접 설정할 수 있습니다. 동일한 문자열 구문을 사용하면 코드에서 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br244259)을 설정하는 [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br209820)를 생성하거나 [**SetTargetProperty**](https://msdn.microsoft.com/library/windows/apps/br210503)를 사용하여 코드에서 애니메이션 대상을 설정할 수 있습니다. Windows 런타임에는 속성 경로를 사용하는 두 가지 고유한 기능 영역인 데이터 바인딩과 애니메이션 대상이 있습니다. 애니메이션 대상은 Windows 런타임 구현에서 기본 Property-path 구문 값을 만들지 않고 정보를 문자열로 유지하지만 개체-속성 통과의 개념이 매우 유사합니다. 데이터 바인딩과 애니메이션 대상은 각각 속성 경로를 약간 다르게 평가합니다. 따라서 각각의 경우에 대한 속성 경로 구문을 별도로 설명합니다.
+속성 경로 문자열을 XAML의 특성으로 직접 설정할 수 있습니다. 동일한 문자열 구문을 사용하면 코드에서 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)을 설정하는 [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)를 생성하거나 [**SetTargetProperty**](https://msdn.microsoft.com/library/windows/apps/br210503)를 사용하여 코드에서 애니메이션 대상을 설정할 수 있습니다. Windows 런타임에는 속성 경로를 사용하는 두 가지 고유한 기능 영역인 데이터 바인딩과 애니메이션 대상이 있습니다. 애니메이션 대상은 Windows 런타임 구현에서 기본 Property-path 구문 값을 만들지 않고 정보를 문자열로 유지하지만 개체-속성 통과의 개념이 매우 유사합니다. 데이터 바인딩과 애니메이션 대상은 각각 속성 경로를 약간 다르게 평가합니다. 따라서 각각의 경우에 대한 속성 경로 구문을 별도로 설명합니다.
 
 ## <a name="property-path-for-objects-in-data-binding"></a>데이터 바인딩의 개체에 대한 속성 경로
 
@@ -40,7 +37,7 @@ Windows 런타임에서는 종속성 속성의 대상 값에 바인딩할 수 �
 
 이 경로가 평가되는 방법은 다음과 같습니다.
 
-1.  데이터 컨텍스트 개체(또는 동일한 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209832)에서 지정된 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209820))가 "Customer" 속성에 대해 검색됩니다.
+1.  데이터 컨텍스트 개체(또는 동일한 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)에서 지정된 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832))가 "Customer" 속성에 대해 검색됩니다.
 2.  "Customer" 속성 값인 개체가 "Address" 속성에 대해 검색됩니다.
 3.  "Address" 속성 값인 개체가 "StreetAddress1" 속성에 대해 검색됩니다.
 
@@ -80,7 +77,7 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 ## <a name="simple-targeting"></a>간단한 대상
 
-대상 개체 자체에 있는 속성을 애니메이션하려는 경우 해당 속성의 유형에 속성 값의 하위 속성이 아닌 해당 속성에 직접 적용된 애니메이션이 있으면 추가 자격 부여 없이 애니메이션할 속성의 이름만 지정하면 됩니다. 예를 들어 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243377) 같은 [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243371) 하위 클래스를 대상으로 지정하고 애니메이션된 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)을 [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378) 속성에 적용하려는 경우 속성 경로는 "Fill"이 될 수 있습니다.
+대상 개체 자체에 있는 속성을 애니메이션하려는 경우 해당 속성의 유형에 속성 값의 하위 속성이 아닌 해당 속성에 직접 적용된 애니메이션이 있으면 추가 자격 부여 없이 애니메이션할 속성의 이름만 지정하면 됩니다. 예를 들어 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) 같은 [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377) 하위 클래스를 대상으로 지정하고 애니메이션된 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)을 [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378) 속성에 적용하려는 경우 속성 경로는 "Fill"이 될 수 있습니다.
 
 ## <a name="indirect-property-targeting"></a>간접 속성 대상
 
@@ -90,13 +87,13 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 컬렉션 속성에서 자식 항목을 지정하려면 숫자 인덱서를 사용할 수 있습니다. 정수 인덱스 값 주위에 대괄호("\[\]") 문자를 사용합니다. 사전이 아닌 순서가 지정된 목록만 참조할 수 있습니다. 컬렉션은 애니메이션할 수 있는 값이 아니므로 인덱서 사용은 속성 경로에서 끝 속성이 될 수 없습니다.
 
-예를 들어 컨트롤의 [**Background**](https://msdn.microsoft.com/library/windows/apps/br210108) 속성에 적용되는 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/br209395)에서 첫 번째 색 정지 색을 애니메이션하도록 지정하려는 경우 속성 경로는 "(Control.Background).(GradientBrush.GradientStops)\[0\].(GradientStop.Color)"입니다. 어떻게 인덱서가 경로의 마지막 단계가 될 수 없는지 확인하고 특히 마지막 단계에서는 컬렉션에 있는 항목 0의 [**GradientStop.Color**](https://msdn.microsoft.com/library/windows/apps/br210094) 속성을 참조하여 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 애니메이션 값을 적용해야 함을 확인합니다.
+예를 들어 컨트롤의 [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 속성에 적용되는 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/br210108)에서 첫 번째 색 정지 색을 애니메이션하도록 지정하려는 경우 속성 경로는 "(Control.Background).(GradientBrush.GradientStops)\[0\].(GradientStop.Color)"입니다. 어떻게 인덱서가 경로의 마지막 단계가 될 수 없는지 확인하고 특히 마지막 단계에서는 컬렉션에 있는 항목 0의 [**GradientStop.Color**](https://msdn.microsoft.com/library/windows/apps/br210094) 속성을 참조하여 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 애니메이션 값을 적용해야 함을 확인합니다.
 
 ## <a name="animating-an-attached-property"></a>연결된 속성 애니메이션
 
 일반적인 시나리오는 아니지만 연결된 속성에 애니메이션 유형과 일치하는 속성 값이 있으면 연결된 속성을 애니메이션할 수 있습니다. 연결된 속성을 식별하는 이름에는 점이 이미 포함되어 있으므로 점이 개체-속성 단계로 처리되지 않도록 하려면 연결된 속성 이름을 괄호로 묶어야 합니다. 예를 들어 개체의 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) 연결된 속성을 애니메이션하도록 지정하는 문자열은 속성 경로 "(Grid.Row)"를 사용합니다.
 
-**참고**  이 예제에서 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795)의 값은 **Int32** 속성 유형입니다. 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210320)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210344)를 정의했습니다.
+**참고**  이 예제에서 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795)의 값은 **Int32** 속성 유형입니다. 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)를 정의했습니다.
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>애니메이션 대상 속성 경로의 속성에 대한 규칙
 
@@ -122,5 +119,4 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 * [**바인딩**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**바인딩 생성자**](https://msdn.microsoft.com/library/windows/apps/br209825)
 * [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)
-
 

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c2d6590d21607cec7718617a0657e28ba56c072e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0358443abbfb753ace9276f1cca8dfa0a4745508
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="binding-markup-extension"></a>{Binding} 태그 확장
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **참고**  성능 및 개발자 생산성에 최적화된 새 바인딩 메커니즘을 Windows 10에 사용할 수 있습니다. [{x:Bind} 태그 확장](x-bind-markup-extension.md)을 참조하세요.
 
@@ -46,7 +43,7 @@ ms.lasthandoff: 02/07/2017
 | *propertyPath* | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
 | *bindingProperties* | *propName*=*value*\[, *propName*=*value*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | *propName* | [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
-| *value* | 속성을 설정할 값. 인수 구문은 아래 [{Binding}으로 설정할 수 있는 Binding 클래스의 속성](#properties-of-binding) 섹션의 속성에 따라 달라집니다. |
+| *value* | 속성을 설정할 값. 인수 구문은 아래 [{Binding}으로 설정할 수 있는 Binding 클래스의 속성](#properties-of-the-binding-class-that-can-be-set-with-binding) 섹션의 속성에 따라 달라집니다. |
 
 ## <a name="property-path"></a>속성 경로
 
@@ -88,7 +85,7 @@ ms.lasthandoff: 02/07/2017
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 
 > [!NOTE]
-> Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> Windows10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) 및 [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828)은 바인딩 소스를 지정하므로 상호 배타적입니다.
 
@@ -130,4 +127,3 @@ ms.lasthandoff: 02/07/2017
 Microsoft Visual Studio의 Microsoft IntelliSense는 XAML 태그 편집기에서 **{Binding}**을 작성하는 동안 데이터 컨텍스트의 속성을 표시합니다. "{Binding"을 입력하는 즉시 [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)에 적합한 데이터 컨텍스트 속성이 드롭다운에 표시됩니다. IntelliSense는 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)의 다른 속성에도 도움이 됩니다. 이렇게 하려면 데이터 컨텍스트 또는 디자인 타임 데이터 컨텍스트를 태그 페이지에 설정해야 합니다. **정의로 이동**(F12)도 **{Binding}**과 함께 작동합니다. 또는 데이터 바인딩 대화 상자를 사용할 수 있습니다.
 
  
-

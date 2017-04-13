@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3fa6cf80bf569703a7fbbc532c9114bee89c7403
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 21d73b60ba3856f81a6d93331982135e188e122e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xuid-directive"></a>x:Uid 지시어
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 태그 요소의 고유 식별자를 제공합니다. UWP(유니버설 Windows 플랫폼) XAML의 경우 이 고유 식별자는 .resw 리소스 파일의 리소스 사용과 같은 XAML 지역화 프로세스 및 도구에서 사용됩니다.
 
@@ -53,5 +50,4 @@ UWP XAML은 **x:Uid** 고유성에 있어서 이전에 활용된 XAML 기술하�
 PRI(패키지 리소스 인덱스) 시스템의 기본 제공 기능이 아니라 리소스 경로를 사용하는 경우도 있습니다. **x:Uid** 값으로 사용된 문자열은 모두 ms-resource:///Resources/로 시작하는 리소스 경로를 정의하며 **x:Uid** 문자열을 포함합니다. 경로는 리소스 파일에 지정되거나 달리 대상으로 지정된 속성 이름으로 완료됩니다.
 
 Windows 런타임 XAML에서 허용되지 않는 **x:Uid**를 속성 요소에 사용하지 마세요.
-
 

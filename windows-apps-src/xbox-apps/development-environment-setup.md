@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 93319caaa16afe84a897dbc4bd6370a5cef3cdd1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: dcceab233f19696f11075fdc4e46fe4a3aa7e5b9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Xbox 개발 환경에서의 UWP 설정
 
-Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워크를 통해 Xbox One 본체에 연결된 개발 PC로 구성됩니다.
+Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워크를 통해 Xbox One 본체에 연결된 개발 PC로 구성됩니다. 
 개발 PC에는 Windows 10, Visual Studio 2015 업데이트 2, Windows 10 SDK Preview 빌드 14295, 그리고 다양한 지원 도구가 필요합니다.
 
 
@@ -119,4 +116,3 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 - [Xbox One의 UWP](index.md)
 
 ----
-

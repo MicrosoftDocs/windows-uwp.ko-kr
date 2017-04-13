@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d44b9fafa0687bdd9f5e507fc7444313eff4ca3b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d3105e8ac345e1eb6f0d974f8ea29e741dae9f58
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xclass-attribute"></a>x:Class 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 조인합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
 
@@ -49,5 +46,4 @@ XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래�
 ## <a name="clr-language-rules"></a>CLR 언어 규칙
 
 코드 숨김 파일이 C++ 파일이어도 CLR 언어 폼을 계속 따르는 특정 규칙이 있어서 XAML 구문에서 차이가 없습니다. 특히 XAML과 연관된 C++ 코드 파일에서 네임스페이스와 클래스이름 사이의 구분 기호가 "::"일지라도 **x:Class** 값의 네임스페이스와 클래스 이름 구성 요소 사이의 구분 기호는 항상 점(".")입니다. C++에서 중첩 네임스페이스를 선언하는 경우 **x:Class** 값의 *namespace* 부분을 지정할 때 연속된 중첩 네임스페이스 문자열 사이의 구분 기호도 "::"이 아닌 "."이어야 합니다.
-
 

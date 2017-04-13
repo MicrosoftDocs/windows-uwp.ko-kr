@@ -1,14 +1,19 @@
----  
+---
 author: WilliamsJason
 title: "Xbox Live 테스트 사용자 관리 API 참조"
 description: "프로그래밍 방식으로 사용자 관리 API에 액세스하는 방법을 알아봅니다."
-translationtype: Human Translation
-ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
-ms.openlocfilehash: 66fe038fdb54ac5cb9086bf9225d0a5d573b39c8
-
----  
-
-#Xbox Live 사용자 관리#
+ms.author: jaswill
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
+ms.openlocfilehash: c1a2517aa8716cff9201351a12a3c391110aafab
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
+---
+#<a name="xbox-live-user-management"></a>Xbox Live 사용자 관리#
 
 **요청**
 
@@ -41,7 +46,7 @@ PUT 호출에는 다음 구조를 사용하는 JSON 배열이 포함되어야 �
   * SponsoredUser(선택 사항): 보증된 사용자를 추가할지 여부를 지정하는 부울입니다.
   * Delete(선택 사항): 콘솔에서 이 사용자를 삭제하도록 지정하는 부울입니다.
 
-###응답###
+###<a name="response"></a>응답###
 
 **응답 본문**
 
@@ -67,11 +72,5 @@ GET 호출은 다음 속성이 있는 JSON 배열을 반환합니다.
 | 4XX                | 잘못된 요청 데이터 또는 형식에 대한 다양한 오류 |
 | 5XX                | 예기치 않은 오류에 대한 오류 코드 |
 <br>
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

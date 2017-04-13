@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 835d5393-427f-4155-a737-d509ea1de99f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 51076aed4ae55956164efaf3a3c01461e4b7338b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7e37846e7696213093e84d7409c6900e0aad5ed5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="whats-new-in-windows"></a>Windows의 새로운 기능
 
 Windows 10 버전 1607 Preview 및 Windows 개발자 도구 업데이트는 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
@@ -34,4 +31,3 @@ Bluetooth API | 이제 앱에서 원격 Bluetooth 주변 장치와 먼저 페어
 Windows IoT | Windows 10 IoT Core는 친숙한 Windows 기능을 사용하여 IoT 응용 프로그램을 만들 수 있도록 하며, 최신 Raspberry Pi 보드인 Raspberry Pi 3에서 사용할 수 있습니다.
 미디어 API | Windows.Media.Playback 네임스페이스의 새 MediaBreak API를 사용하면 MediaSource 및 MediaPlaybackItem으로 미디어를 재생할 때 미디어 중단을 쉽게 예약하고 관리할 수 있습니다. Windows.Media.Audio 네임스페이스의 새 AudioGraph API는 오디오 그래프 노드에 3D 위치 송신기 및 수신기를 할당할 수 있는 공간 오디오 처리 기능을 추가적으로 제공합니다.
 지도 API | 개발자가 거리가 멀거나 수평선 가까이의 시야가 심하게 경사진 지역을 제외하고 카메라 가까이에 있는 보이는 지역을 파악할 수 있도록 [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank)이 개선되었습니다. [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank) 클래스가 확장되어 개발자들은 원하는 정확도를 지정함으로써 역 지오코딩을 수행할 때 네트워크 트래픽을 최적화할 수 있습니다. 이제 개발자들은 [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) 메서드를 사용하고 경도와 위도를 지정하여 오프라인 지도를 다운로드할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank)을 참조하세요.
-

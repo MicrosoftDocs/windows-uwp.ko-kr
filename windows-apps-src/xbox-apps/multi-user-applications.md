@@ -9,19 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 31866c400683c61b432c3fe620487f93a9187771
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b150b50c1072a96ae0017bae848eeff94bb07ce0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-multi-user-applications"></a>다중 사용자 응용 프로그램 소개
 
 이 항목은 Xbox 다중 사용자 모델에 대한 높은 수준의 소개를 간략히 드리기 위한 것입니다.
-
-> [!NOTE]
-> 다중 사용자 응용 프로그램은 현재 사용할 수 없습니다. 
 
 Xbox One 사용자 모델은 하나의 디바이스에서 여러 사용자가 협력해서 게임을 하는 기능을 지원하는 게임 콘솔의 요구 사항에 맞게 조정되어 있습니다. 따라서 각각 자신의 컨트롤러가 있는 여러 사용자가 로그인하고 단일 대화형 세션에서 동시에 콘솔을 사용할 수 있습니다. 이는 다른 Windows 디바이스와 다른 점입니다. 예제:
 * **Windows 데스크톱 PC**에서는 여러 사용자가 동일한 디바이스를 사용할 수 있지만, 사용자마다 고유한 대화형 세션이 있으며 각 세션이 디바이스의 다른 세션과 완전히 독립적입니다.
@@ -58,4 +52,3 @@ Windows.System.UserDeviceAssociation.FindUserFromDeviceId 메서드를 사용하
 
 ## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP](index.md)
-

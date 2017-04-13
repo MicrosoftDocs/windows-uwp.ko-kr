@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 비동기, 스레드, 스레딩"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fb249a1c7a562cb4b1eb7ff8590e8525c00c64f2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8b51cf845f7bd9e5efdc5fa9ae611caf4bf7d71f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="threading-and-async-programming"></a>스레딩 및 비동기 프로그래밍
 
@@ -42,4 +40,3 @@ ms.lasthandoff: 02/07/2017
 | [정기 작업 항목 만들기](create-a-periodic-work-item.md)                                                   | 주기적으로 반복되는 작업 항목을 만드는 방법을 알아봅니다. |
 | [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)                               | 스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요. |
 | [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)                                       | 타이머가 경과된 후 실행되는 작업 항목을 만드는 방법을 알아봅니다. |
-

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "XAML의 연결된 속성에 대한 개념을 설명하고 몇 가지 예제를 제공합니다."
+description: "XAML의 연결된 속성에 대한 개념을 설명하고 몇 가지 예를 제공합니다."
 title: "연결된 속성 개요"
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
 ms.author: jimwalk
@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5185eb704f94e33031684aef761c701398c0dbd7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e3e4ba56438746c257ac917f61d9f1703f20ecdd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 *연결된 속성*은 XAML 개념입니다. 연결된 속성을 통해 추가 속성/값 쌍이 개체에 설정될 수 있지만 속성은 원본 개체 정의의 일부가 아닙니다. 일반적으로 연결된 속성은 소유자 형식의 개체 모델에 기존의 속성 래퍼가 없는 특수한 형태의 종속성 속성으로 정의됩니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 종속성 속성의 기본 개념을 이해하고 있고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 간주합니다.
 
@@ -124,5 +121,4 @@ XAML 프로세서는 XAML이 개체 트리로 구문 분석될 때 연결된 속
 * [빠른 시작: UI 리소스 번역](https://msdn.microsoft.com/library/windows/apps/hh943060)
 * [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)
 * [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)
-
 

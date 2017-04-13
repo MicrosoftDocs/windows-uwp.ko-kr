@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4ccc18920a98b3c2258b4965e96fa063124d0546
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0fd1e58549ba19397948864fe5fe0b31fcaf01d7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xdeferloadstrategy-attribute"></a>x:DeferLoadStrategy 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -36,7 +33,7 @@ ms.lasthandoff: 02/07/2017
 
 -   나중에 요소를 찾을 방법이 필요하므로 [x:Name](x-name-attribute.md)을 정의해야 합니다.
 -   [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)에서 파생된 형식을 제외하고 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)만 지연되는 것으로 표시할 수 있습니다.
--   루트 요소는 [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)에서 지연될 수 없습니다.
+-   루트 요소는 [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)에서 지연될 수 없습니다.
 -   [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 요소는 지연될 수 없습니다.
 -   [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)를 통해 로드된 느슨한 XAML과는 작동하지 않습니다.
 -   부모 요소를 이동하면 실현되지 않은 모든 요소가 지워집니다.
@@ -93,5 +90,4 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
     this.FindName("DeferredGrid"); // This will realize the deferred grid
 }
 ```
-
 

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 260aa6c4bae2f7e9d051e172f83563f430e4e6c4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 88d4b155acb38a3ab11cc180d112fb3434af87a0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-and-whitespace"></a>XAML 및 공백
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 XAML에서 사용되는 공백 처리 규칙에 대해 알아봅니다.
 
@@ -57,5 +54,4 @@ XAML 프로세서 공백 정규화의 영향을 받지 않고 최종 표시되�
 `xml:space="preserve"`: 이 특성은 공백을 유지해야 하는 요소의 수준에서 지정합니다. 이 방법은 코드 편집기 또는 디자인 화면에서 태그 요소를 시각적인 면에서 직관적인 중첩으로 정렬하기 위해 추가할 수 있는 공백을 포함하여 모든 공백을 유지합니다. 이러한 공백의 렌더링 여부는 포함 요소의 콘텐츠 모델에 따라 다릅니다. 대부분의 개체 모델은 공백을 중요하게 간주하지 않으므로 `xml:space="preserve"`를 루트 레벨에서 지정하지 않는 것이 좋습니다. 이 특성은 문자열 내의 공백을 렌더링하는 요소 또는 중요한 공백 컬렉션인 요소의 수준에서만 설정하는 것이 좋습니다.
 
 엔터티 및 줄 바꿈하지 않는 공백: XAML에서는 텍스트 개체 모델 내에 유니코드 엔터티를 삽입할 수 있습니다. 줄 바꿈하지 않는 공백(UTF-8 인코딩의 경우)과 같은 전용 엔터티를 사용하거나, 줄 바꿈하지 않는 공백 문자를 지원하는 서식 있는 텍스트 컨트롤을 사용할 수도 있습니다. 엔터티의 런타임 출력은 패널 및 여백을 올바르게 사용할 때처럼 일반적인 레이아웃 기능에서 사용할 때보다 더 많은 요인의 영향을 받을 수 있기 때문에 엔터티를 사용하여 들여쓰기 같은 레이아웃 특성을 시뮬레이트할 때는 주의해야 합니다.
-
 
