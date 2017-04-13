@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출을 업데이트합니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 업데이트"
+title: "추가 기능 제출 업데이트"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능 제출, 업데이트, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8b06973c7c6949851bf786b1fb37026eee4b5fad
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 867a8495d5dea50d5b362822955e7605eddf4bb9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-an-add-on-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 제출 업데이트
+# <a name="update-an-add-on-submission"></a>추가 기능 제출 업데이트
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능(앱 내 제품 또는 IAP라고도 함) 제출을 업데이트합니다. 이 메서드를 사용하여 제출을 성공적으로 업데이트한 후 수집 및 게시를 위해 [제출을 커밋](commit-an-add-on-submission.md)합니다.
@@ -213,4 +210,3 @@ Content-Type: application/json
 * [추가 기능 제출 커밋](commit-an-add-on-submission.md)
 * [추가 기능 제출 삭제](delete-an-add-on-submission.md)
 * [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
-

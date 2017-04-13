@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: "이 문서에서는 ppltasks.h의 concurrency 네임스페이스에 정의된 task 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법을 설명합니다."
+description: "이 문서에서는 ppltasks.h의 concurrency 네임스페이스에 정의된 task 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다."
 title: "C++의 비동기 프로그래밍"
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스레드, 비동기, C++"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 112b5d58064ae6cd006d791a2c4534848baee259
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c74a2d18a0852d28cf33715a540356a61438ff48
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="asynchronous-programming-in-c"></a>C++의 비동기 프로그래밍
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -323,4 +320,3 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 [taskParallelism]: <https://msdn.microsoft.com/library/windows/apps/xaml/dd492427.aspx> "작업 병렬 처리"
 [taskThen]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
 [useArbitrary]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
-

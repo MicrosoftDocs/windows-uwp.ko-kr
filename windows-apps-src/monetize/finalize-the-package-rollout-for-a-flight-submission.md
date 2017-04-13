@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 패키지 출시를 마무리합니다."
-title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출에 대한 패키지 출시 마무리"
+title: "플라이트 제출에 대한 출시 마무리"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 롤아웃, 플라이트 제출, 완료"
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 출시, 플라이트 제출, 완료"
 ms.assetid: e4a645f6-1f00-4af5-80d6-d2ee179acc8a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 163ca2144f460a3ff992a19c366b3cf6d9654978
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f6000337efe2ded818a7dac44a61d202e96c1faa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="finalize-the-package-rollout-for-a-package-flight-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출에 대한 패키지 출시 마무리
+# <a name="finalize-the-rollout-for-a-flight-submission"></a>플라이트 제출에 대한 출시 마무리
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 [패키지 출시를 마무리](../publish/gradual-package-rollout.md#completing-the-rollout)합니다. Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [패키지 플라이트 제출 관리](manage-flight-submissions.md)를 참조하세요.
@@ -82,7 +79,7 @@ Authorization: Bearer <your access token>
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 100,
+    "packageRolloutPercentage": 100.0,
     "packageRolloutStatus": "PackageRolloutComplete",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -105,4 +102,3 @@ Authorization: Bearer <your access token>
 * [점진적 패키지 배포](../publish/gradual-package-rollout.md)
 * [Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 관리](manage-flight-submissions.md)
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-

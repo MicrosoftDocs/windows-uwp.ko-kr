@@ -2,21 +2,17 @@
 title: "기본 요소"
 description: "3D 기본 요소는 단일한 3D 엔터티를 형성하는 꼭짓점의 모음입니다."
 ms.assetid: A1FE6F49-B0D4-4665-90E1-40AD98E668B1
-keywords:
-- "기본 요소"
+keywords: "기본 요소"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e6734ff8534302d3866374adba45c34d70ae440a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 22f143030d3973cf77cd3b0857cf9b67ff5503fb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="primitives"></a>기본 요소
 
 
@@ -70,7 +66,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5e03fbb7971e5526d542d409bccb1c7fee6fd3ee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c9bf682e6818f7c9854604448e52aa0111605a05
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.
 
@@ -26,10 +23,10 @@ ms.lasthandoff: 02/07/2017
 
 백그라운드 작업을 개발할 때와 앱을 게시하기 전에 다음 지침을 고려하세요.
 
-백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows 10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
+백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
 
 
-  **In-process 및 Out-of-process 백그라운드 작업:** Windows 10 버전 1607에서는 포그라운드 앱과 동일한 프로세스에서 백그라운드 코드를 실행할 수 있는 [In-process 프로세스 백그라운드 작업](create-and-register-an-inproc-background-task.md)이 도입되었습니다. 백그라운드 작업에 대해 In-process를 사용할지 또는 Out-of-process를 사용할지를 결정할 때 고려할 요소는 다음과 같습니다.
+  **In-process 및 Out-of-process 백그라운드 작업:** Windows10 버전 1607에서는 포그라운드 앱과 동일한 프로세스에서 백그라운드 코드를 실행할 수 있는 [In-process 프로세스 백그라운드 작업](create-and-register-an-inproc-background-task.md)이 도입되었습니다. 백그라운드 작업에 대해 In-process를 사용할지 또는 Out-of-process를 사용할지를 결정할 때 고려할 요소는 다음과 같습니다.
 
 |고려 사항 | 영향 |
 |--------------|--------|
@@ -94,7 +91,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 -   [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 등록된 백그라운드 작업을 포함하며 앱 매니페스트에서 백그라운드 작업을 선언합니다. 진입점과 트리거 형식이 올바른지 확인합니다. 이는 인증하는 데 필요하며 사용자가 앱을 잠금 화면에 배치할 수 있도록 해줍니다.
 
 **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -116,4 +113,3 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
  
 
  
-

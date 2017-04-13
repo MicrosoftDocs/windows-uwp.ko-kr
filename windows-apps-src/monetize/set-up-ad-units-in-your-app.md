@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10 uwp, 광고, 광고, 광고 단위"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 32a934f1d113d561c72ab3ac48a8ef3d0820c176
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: daf0887462a4c84aa827a6261793a0eaf4d512ca
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-up-ad-units-in-your-app"></a>앱에서 광고 단위 설정
 
 
@@ -28,22 +25,29 @@ ms.lasthandoff: 02/07/2017
 라이브 앱에 대한 응용 프로그램 ID 및 광고 단위를 설정하려면
 
 1.  Windows 개발자 센터 대시보드에서 앱을 선택하고 **수익 창출 &gt; 광고로 수익 창출**을 클릭합니다.
-2.  이 페이지의 **Microsoft Advertising 광고 단위** 섹션에서 광고 단위를 만듭니다. **AdControl**을 사용하는 경우에는 광고 단위 유형으로 **배너**를 선택하고, **InterstitialAd**를 사용하는 경우에는 **동영상 중간 광고**를 선택합니다. 이 페이지에 대한 자세한 내용은 [광고를 통한 수익 창출](../publish/monetize-with-ads.md)을 참조하세요.
+
+2.  이 페이지의 **Microsoft Advertising 광고 단위** 섹션에서 광고 단위를 만듭니다. 광고 단위 유형에 대한 다음 옵션 중에서 선택합니다.
+
+  * 앱에서 배너 광고를 표시하기 위해 **AdControl**을 사용하는 경우에는 광고 단위 유형에 **배너**를 선택합니다.
+
+  * 앱에서 동영상 또는 배너 중간 광고를 표시하기 위해 **InterstitialAd**를 사용하는 경우에는 **동영상 중간 광고** 또는 **배너 중간 광고**를 선택합니다(표시하려는 중간 광고 유형에 적합한 옵션을 선택하세요).
 
 3.  이 페이지에는 생성된 각 광고 단위에 대해 **응용 프로그램 ID** 및 **광고 단위 ID**가 표시됩니다. 앱에 광고를 표시하려면 다음과 같이 앱 코드에 이러한 값을 사용해야 합니다.
 
-    * 앱에서 배너 광고를 표시하는 경우 **AdControl** 개체의 **ApplicationId** 및 **AdUnitId** 속성에 이러한 값을 할당합니다.
+  * 앱에서 배너 광고를 표시하는 경우 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) 개체의 [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) 및 **AdUnitId** 속성에 이러한 값을 할당합니다. 자세한 내용은 [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md) 및 [HTML 5 및 JavaScript의 AdControl](adcontrol-in-html-5-and-javascript.md)을 참조하세요.
 
-    * 앱에서 동영상 중간 광고를 표시하는 경우 **InterstitialAd** 개체의 **RequestAd** 메서드에 이러한 값을 전달합니다.
+  * 앱에서 중간 광고를 표시하는 경우 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 개체의 **RequestAd** 메서드에 이러한 값을 전달합니다. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.
 
- 
+**광고를 통한 수익 창출** 페이지에 대한 자세한 내용은 [광고를 통한 수익 창출](../publish/monetize-with-ads.md)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-[테스트 모드 값](test-mode-values.md)
+* [테스트 모드 값](test-mode-values.md)
+* [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)
+* [HTML 5 및 JavaScript의 AdControl](adcontrol-in-html-5-and-javascript.md)
+* [중간 광고](interstitial-ads.md)
 
 
  
 
  
-

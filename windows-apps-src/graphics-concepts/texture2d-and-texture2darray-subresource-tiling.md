@@ -2,21 +2,17 @@
 title: "Texture2D 및 Texture2DArray 하위 리소스 타일링"
 description: "다음은 Texture2D 및 Texture2DArray 하위 리소스 타일 방식을 나타낸 표입니다."
 ms.assetid: 2DC14DFC-5299-44D9-895F-5A223D3FD530
-keywords:
-- "Texture2D 및 Texture2DArray 하위 리소스 타일링"
+keywords: "Texture2D 및 Texture2DArray 하위 리소스 타일링"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8f6ca928fe9c4d93663c337ae57d3894995f35d2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4e4c4cb0293f2d595c7e009ddf1b86d17efe9e37
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Texture2D 및 Texture2DArray 하위 리소스 타일링
 
 
@@ -72,7 +68,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: "리소스 종류"
 description: "다양한 리소스 종류는 고유한 레이아웃(또는 메모리 공간)을 가지고 있습니다."
 ms.assetid: BCDDF227-1837-44DA-ABD4-E39BCFF2B8EF
-keywords:
-- "리소스 종류"
+keywords: "리소스 종류"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1e21222b97f7a8711de93345623d2d82b3e8e4d2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 77f1b408533d37ecf18bdc1c6c364e6d6c88b94d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resource-types"></a>리소스 종류
 
 
@@ -66,9 +62,9 @@ ms.lasthandoff: 02/07/2017
 
 버퍼는 요소의 모음입니다. 꼭짓점 버퍼에는 꼭짓점별 데이터가 포함됩니다. 가장 단순한 예는 위치 데이터 등 한 가지 형식의 데이터를 포함하는 꼭짓점 버퍼입니다. 다음 그림과 같이 표현할 수 있습니다.
 
-![위치 데이터를 포함하는 꼭짓점 버퍼의 그림](images/d3d10-resources-single-element-vb2.png)
+![위치 데이터를 포함한 꼭짓점 버퍼의 그림](images/d3d10-resources-single-element-vb2.png)
 
-꼭짓점 버퍼는 3D 꼭짓점을 완전히 지정하는 데 필요한 모든 데이터를 포함하는 경우가 더 많습니다. 꼭짓점별 위치, 일반 및 텍스처 좌표가 포함된 꼭짓점 버퍼가 한 예입니다. 이 데이터는 일반적으로 다음 그림과 같이 꼭짓점별 요소 집합으로 구성됩니다.
+3D 꼭짓점을 완벽하게 지정하는 데 필요한 모든 데이터를 포함하는 경우가 더 많습니다. 꼭짓점별 위치, 일반 및 텍스처 좌표가 포함된 꼭짓점 버퍼가 한 예입니다. 이 데이터는 일반적으로 다음 그림과 같이 꼭짓점별 요소 집합으로 구성됩니다.
 
 ![위치, 일반 및 텍스처 데이터가 포함된 꼭짓점 버퍼의 그림](images/d3d10-vertex-buffer-element.png)
 
@@ -253,4 +249,3 @@ Direct3D API는 전체 리소스 또는 리소스의 하위 집합을 참조합�
 
 
 [리소스](resources.md)
-

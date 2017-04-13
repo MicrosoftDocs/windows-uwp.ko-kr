@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6fbcf24984fde4b86e94481d6ad1104a827a8c31
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5cbff0011a4a96c61d7f7bad7e57bd130e09c39b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="sign-an-app-package-using-signtool"></a>SignTool을 사용하여 앱 패키지에 서명
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **SignTool**은 인증서를 사용하여 디지털 방식으로 앱 패키지 또는 번들에 서명하는 데 사용되는 명령줄 도구입니다. 인증서는 사용자가 만들거나(테스트용) 회사가 발급할 수 있습니다(배포용). 앱 패키지 서명은 사용자에게 서명 이후 앱 데이터가 수정되지 않았다는 확인을 제공하는 동시에 앱 패키지에 서명한 사용자 또는 회사의 신원도 확인합니다. **SignTool**은 암호화되었거나 암호화되지 않은 앱 패키지 및 번들에 서명할 수 있습니다.
+
+> [!IMPORTANT] 
+> Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만들고 서명하는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
 
 코드 서명 및 인증서 전반에 대한 자세한 내용은 [코드 서명 소개](https://msdn.microsoft.com/library/windows/desktop/aa380259.aspx#introduction_to_code_signing)를 참조하세요.
 

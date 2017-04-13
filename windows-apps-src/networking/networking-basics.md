@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-description: "네트워크 지원 앱을 위해 해야 하는 작업입니다."
+description: "네트워크 지원 앱에 대해 수행해야 하는 사항입니다."
 title: "네트워킹 기본 사항"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 ms.author: bobdel
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d24d1ff9408585246aae4c4849d3af5e8f4846be
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a2220b8c31877efdbef6a102efdb32158a709939
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="networking-basics"></a>네트워킹 기본 사항
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.
 
@@ -91,7 +88,7 @@ SSL/TLS를 통해 [**StreamSocket**](https://msdn.microsoft.com/library/windows/
 이러한 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) 메서드 중 하나에 사용할 일반적인 순서는 동일합니다.
 
 -   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 만듭니다.
--   소켓에 대한 고급 옵션이 필요하면 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) 속성을 사용하여 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체와 연결된 [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226882) 인스턴스를 가져옵니다. **StreamSocketControl**에 대한 속성을 설정합니다.
+-   소켓에 대한 고급 옵션이 필요하면 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) 속성을 사용하여 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체와 연결된 [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) 인스턴스를 가져옵니다. **StreamSocketControl**에 대한 속성을 설정합니다.
 -   위 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) 메서드 중 하나를 호출하여 원격 대상에 연결하는 작업을 시작하고 SSL/TLS를 사용하도록 즉시 협상합니다.
 -   실제로 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)를 사용하여 협상된 SSL 수준은 비동기 작업이 완료된 후에 [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) 속성을 가져와서 결정할 수 있습니다.
 
@@ -178,7 +175,7 @@ using Windows::Networking::Sockets;
 [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드에 사용하는 일반적인 순서는 다음과 같습니다.
 
 -   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 만듭니다.
--   소켓에 대한 고급 옵션이 필요하면 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) 속성을 사용하여 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체와 연결된 [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226882) 인스턴스를 가져옵니다. **StreamSocketControl**에 대한 속성을 설정합니다.
+-   소켓에 대한 고급 옵션이 필요하면 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) 속성을 사용하여 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체와 연결된 [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) 인스턴스를 가져옵니다. **StreamSocketControl**에 대한 속성을 설정합니다.
 -   데이터를 암호화하지 않은 상태로 보내고 받아야 할 경우 지금 보냅니다.
 -   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드를 호출하여 작업을 시작하고 SSL/TLS를 사용하도록 연결을 업그레이드합니다.
 -   실제로 [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)를 사용하여 협상된 SSL 수준은 비동기 작업이 완료된 후에 [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) 속성을 가져와서 결정할 수 있습니다.
@@ -394,16 +391,13 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 |  | [**MessageWebSocketControl.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br226847) |
 |  | [**StreamWebSocketControl.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br226928) |
 |  | [**StreamWebSocketControl.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br226927) |
-|  |  |
 | **백그라운드 전송** | [**BackgroundDownloader.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/hh701076) |
 |  | [**BackgroundDownloader.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/hh701068) |
 |  | [**BackgroundUploader.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/hh701184) |
 |  | [**BackgroundUploader.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/hh701178) |
-|  |  |
 | **신디케이션** | [**SyndicationClient(PasswordCredential)**](https://msdn.microsoft.com/library/windows/apps/hh702355) |
 |  | [**SyndicationClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461) |
 |  | [**SyndicationClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459) |
-|  |  |
 | **AtomPub** | [**AtomPubClient(PasswordCredential)**](https://msdn.microsoft.com/library/windows/apps/hh702262) |
 |  | [**AtomPubClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243428) |
 |  | [**AtomPubClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243423) |
@@ -425,5 +419,4 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 
 * [Windows 10의 향상된 네트워킹 API 기능](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
  
-
 

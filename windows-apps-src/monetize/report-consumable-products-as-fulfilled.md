@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, Windows 스토어 컬렉션 API, 충족, 소모품"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 201e4fedc5f36202cba4c495ae9344d5a7975d62
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="report-consumable-products-as-fulfilled"></a>소모성 제품을 처리됨으로 보고
 
 지정된 고객에 대해 소모성 제품을 처리됨으로 보고하려면 Windows 스토어 컬렉션 API에서 이 메서드를 사용합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다.
@@ -65,7 +62,7 @@ ms.lasthandoff: 02/07/2017
 | itemId        | 문자열       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *itemId* 값. 이 매개 변수를 *trackingId*에 사용하지 마세요.      | 아니요       |
 | trackingId    | guid         | 개발자가 제공하는 고유한 추적 ID입니다. 이 매개 변수를 *itemId*에 사용하지 마세요.         | 아니요       |
 | productId     | 문자열       | [제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *productId* 값. 이 매개 변수를 *transactionId*에 사용하지 마세요.   | 아니요       |
-| transactionId | guid         | 다음 소스 중 하나에서 가져온 트랜잭션 ID 값입니다. 이 매개 변수를 *productId*에 사용하지 마세요.  <br/><br/><ul><li>[PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263396) 클래스의 [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263392) 속성.</li><li>[RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) 또는 [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811)에서 반환되는 앱 또는 제품 영수증입니다.</li><li>[제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *transactionId* 매개 변수.</li></ul>   | 아니요       |
+| transactionId | guid         | 다음 소스 중 하나에서 가져온 트랜잭션 ID 값입니다. 이 매개 변수를 *productId*에 사용하지 마세요.  <br/><br/><ul><li>[PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) 클래스의 [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) 속성.</li><li>[RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) 또는 [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811)에서 반환되는 앱 또는 제품 영수증입니다.</li><li>[제품에 대한 쿼리](query-for-products.md)에 의해 반환되는 *transactionId* 매개 변수.</li></ul>   | 아니요       |
 
  
 <span/>
@@ -156,4 +153,3 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 * [제품에 대한 쿼리](query-for-products.md)
 * [무료 제품에 대한 권한 부여](grant-free-products.md)
 * [Windows 스토어 ID 키 갱신](renew-a-windows-store-id-key.md)
-

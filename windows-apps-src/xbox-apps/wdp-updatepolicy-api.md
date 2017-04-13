@@ -2,22 +2,20 @@
 author: payzer
 title: "Device Portal Xbox 개발자 devkit 업데이트 정책 API 참조"
 description: "프로그래밍 방식으로 콘솔에 대한 업데이트 정책을 설정하는 방법을 알아봅니다."
-translationtype: Human Translation
-ms.sourcegitcommit: 8f02e0c2f6fa30a3ac56945347c5bec253189bd8
 ms.openlocfilehash: f9313d3c8b93ba13074c547f1f63c9f3204f0f58
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 참고: 이 API는 다음 개발자 미리 보기에서 지원됩니다.
 
-# 시스템 업데이트 정책 API 참조   
+# <a name="system-update-policy-api-reference"></a>시스템 업데이트 정책 API 참조   
 이 API를 사용하여 콘솔에 적용되는 업데이트 정책을 확인하고 업데이트 정책을 새 정책으로 변경할 수 있습니다.
 
 중요: 대부분의 콘솔에서 이 API를 호출하려고 하면 "액세스 거부" 응답이 전달됩니다. 이는 모든 개발 콘솔이 업데이트 정책을 변경할 수 있는 것은 아니기 때문입니다.
 
 이 API는 정품 콘솔이 아닌 개발자 모드의 콘솔에 대한 업데이트 정책에 영향을 줍니다.
 
-## 콘솔 업데이트 정책 가져오기
+## <a name="get-the-console-update-policy"></a>콘솔 업데이트 정책 가져오기
 
 **요청**
 
@@ -58,7 +56,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-## 콘솔의 시스템 업데이트 정책 설정
+## <a name="set-a-consoles-system-update-policy"></a>콘솔의 시스템 업데이트 정책 설정
 이 API를 사용하여 콘솔의 시스템 업데이트 그룹 구성원을 전환할 수 있습니다.
 
 참고: 콘솔은 한 번에 한 시스템 업데이트 그룹에만 있을 수 있습니다.
@@ -109,10 +107,4 @@ HTTP 상태 코드      | 설명
 **사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

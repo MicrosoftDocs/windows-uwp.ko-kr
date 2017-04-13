@@ -2,21 +2,17 @@
 title: "Mipmap을 사용하는 텍스처 필터링"
 description: "Mipmap이란 순차적으로 이어지는 텍스처로서 각각 동일한 이미지의 해상도가 점차 낮아지면서 표현됩니다. Mipmap에서 각 이미지 또는 수준의 높이와 너비는 이전 수준보다 2의 제곱 더 작습니다."
 ms.assetid: 28E863A2-C776-40E4-8551-9851DF7EC93E
-keywords:
-- "Mipmap을 사용하는 텍스처 필터링"
+keywords: "Mipmap을 사용하는 텍스처 필터링"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d5644fb4e57962de06874d15f7c9e97ed74106b4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 65c775a265f7c5a0b15f76d867a9403308fc7128
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering-with-mipmaps"></a>Mipmap을 사용하는 텍스처 필터링
 
 
@@ -64,7 +60,6 @@ Direct3D는 Mipmap 텍스처 필터링을 자동 실행할 수 있습니다. 응
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "UWP(유니버설 Windows 플랫폼) 앱에서 명령 요소는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 하는 대화형 UI 요소입니다."
+Description: "UWP(유니버설 Windows 플랫폼) 앱에서 명령 요소는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 해주는 대화형 UI 요소입니다."
 title: "UWP(유니버설 Windows 플랫폼) 앱용 명령 디자인 기본 사항"
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
@@ -12,18 +12,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ec6e7879faf3c33edc97b26b2d0721808a02dfdc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a9e7cda7794b3463ffa567bcf36ebec2d2d02687
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 하는 대화형 UI 요소입니다. 이 문서에서는 단추 및 확인란과 같은 명령 요소, 이러한 명령 요소에서 지원하는 조작 및 명령 요소를 호스트하기 위한 명령 화면(예: 명령 모음 및 상황에 맞는 메뉴)에 대해 설명합니다.
+UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 해주는 대화형 UI 요소입니다. 이 문서에서는 단추 및 확인란과 같은 명령 요소, 이러한 명령 요소에서 지원하는 조작 및 명령 요소를 호스트하기 위한 명령 화면(예: 명령 모음 및 상황에 맞는 메뉴)에 대해 설명합니다.
 
 ## <a name="provide-the-right-type-of-interactions"></a>올바른 유형의 조작 제공
 
@@ -41,7 +38,7 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | 단추               | [단추](https://msdn.microsoft.com/library/windows/apps/hh465470)                                                                                                                                                     | 메일 보내기, 대화 상자의 작업 확인, 양식 데이터 제출과 같은 즉각적인 작업을 트리거합니다.                                    |
 | 날짜 및 시간 선택 | [달력 날짜 선택, 달력 보기, 날짜 선택, 시간 선택](https://msdn.microsoft.com/library/windows/apps/hh465466)                                                                                                                 | 신용 카드 만료 날짜를 입력하거나 알람을 설정하는 등의 경우에 날짜 및 시간 정보를 보고 수정할 수 있습니다.                   |
-| 목록                 | [드롭다운 목록, 목록 상자, 목록 뷰 및 표 뷰](https://msdn.microsoft.com/library/windows/apps/mt186889)                                                                                                                                              | 항목을 대화형 목록이나 표로 표시합니다. 사용자가 새 개봉작 목록에서 영화를 선택하거나 인벤토리를 관리할 수 있도록 하려면 이러한 요소를 선택합니다. |
+| 목록                 | [드롭다운 목록, 목록 상자, 목록 보기 및 그리드 보기](https://msdn.microsoft.com/library/windows/apps/mt186889)                                                                                                                                              | 항목을 대화형 목록이나 그리드로 표시합니다. 사용자가 새 개봉작 목록에서 영화를 선택하거나 인벤토리를 관리할 수 있도록 하려면 이러한 요소를 선택합니다. |
 | 자동 완성 텍스트 입력 | [자동 제안 상자](https://msdn.microsoft.com/library/windows/apps/dn997762)                                                                                                                                                                    | 사용자가 입력함에 따라 제안을 제공하여 데이터 입력 또는 쿼리 수행 시 사용자의 시간을 절약해 줍니다.                                                   |
 | 선택 컨트롤    | [확인란](https://msdn.microsoft.com/library/windows/apps/hh700393), [라디오 단추](https://msdn.microsoft.com/library/windows/apps/hh700395), [토글 스위치](https://msdn.microsoft.com/library/windows/apps/hh465475) | 설문 조사를 작성하거나 앱 설정을 구성하는 등의 경우에 다양한 옵션 중에서 선택할 수 있습니다.                                      |
 
@@ -152,7 +149,7 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 ##  <a name="optimize-for-specific-input-types"></a>특정 입력 유형에 대한 최적화
 
 
-특정 입력 유형 또는 장치에 맞게 사용자 환경을 최적화하는 방법에 대한 자세한 내용은 [상호 작용 입문서](../input-and-devices/input-primer.md)를 참조하세요.
+특정 입력 유형 또는 디바이스에 맞게 사용자 환경을 최적화하는 방법에 대한 자세한 내용은 [상호 작용 입문서](../input-and-devices/input-primer.md)를 참조하세요.
 
 
 
@@ -160,7 +157,6 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
  
 
  
-
 
 
 

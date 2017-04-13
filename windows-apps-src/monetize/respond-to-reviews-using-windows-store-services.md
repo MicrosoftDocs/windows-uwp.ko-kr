@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: c92c0ea8-f742-4fc1-a3d7-e90aac11953e
 description: "Windows 스토어 리뷰 API를 사용하여 스토어의 앱 리뷰에 프로그래밍 방식으로 응답을 제출할 수 있습니다."
-title: "Windows 스토어 서비스를 사용하여 리뷰에 응답"
+title: "스토어 서비스를 사용하여 리뷰에 응답"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, Windows 스토어 리뷰 API, 리뷰에 응답"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 657149304048a88bf85f0dd6f205e7db0497e591
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 6a345fe3d8d5f8e9df7a01d94a8101d31aa312e5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="respond-to-reviews-using-windows-store-services"></a>Windows 스토어 서비스를 사용하여 리뷰에 응답
+# <a name="respond-to-reviews-using-store-services"></a>스토어 서비스를 사용하여 리뷰에 응답
 
 *Windows 스토어 리뷰 API*를 사용하여 스토어의 앱 리뷰에 프로그래밍 방식으로 응답할 수 있습니다. 이 API는 Windows 개발자 센터 대시보드를 사용하지 않고 많은 리뷰에 대량으로 응답하려는 개발자에게 특히 유용합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
@@ -90,4 +87,3 @@ Windows 스토어 리뷰 API에는 주어진 리뷰에 대한 응답이 허용�
 * [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md)
 
  
-

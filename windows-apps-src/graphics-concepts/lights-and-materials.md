@@ -2,21 +2,17 @@
 title: "조명"
 description: "조명은 장면에서 물체를 비추는 데 사용됩니다. 각 개체 꼭짓점의 색상은 현재 텍스처 맵, 꼭짓점 색상, 광원을 기반으로 합니다."
 ms.assetid: AB16CF5B-47CE-455C-A8BD-36305E54BEA9
-keywords:
-- "조명"
+keywords: "조명"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9b2449f6d461acb0cb19b3e5b332bbb6d903fdb6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6102c070a10d44e8882fe72c8168fb244353fd68
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="lighting"></a>조명
 
 
@@ -70,7 +66,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

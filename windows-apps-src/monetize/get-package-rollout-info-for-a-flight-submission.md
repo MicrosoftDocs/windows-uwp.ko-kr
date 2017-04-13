@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 패키지 출시 정보를 받습니다."
-title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출에 대한 패키지 출시 정보 가져오기"
+title: "패키지 제출에 대한 출시 정보 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,14 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 출시, 플라이트 제출"
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: d47bd0a5df654ba723c1c7650ea9779ee5962993
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: a1c12c7cb0e9a32502396bfa1da49351f63163e0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-package-rollout-info-for-a-package-flight-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출에 대한 패키지 출시 정보 가져오기
+# <a name="get-rollout-info-for-a-flight-submission"></a>패키지 제출에 대한 출시 정보 가져오기
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 [패키지 출시](../publish/gradual-package-rollout.md) 정보를 받습니다. Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [패키지 플라이트 제출 관리](manage-flight-submissions.md)를 참조하세요.
@@ -80,7 +77,7 @@ Authorization: Bearer <your access token>
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 25,
+    "packageRolloutPercentage": 25.0,
     "packageRolloutStatus": "PackageRolloutInProgress",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -91,7 +88,7 @@ Authorization: Bearer <your access token>
 ```json
 {
     "isPackageRollout": false,
-    "packageRolloutPercentage": 0,
+    "packageRolloutPercentage": 0.0,
     "packageRolloutStatus": "PackageRolloutNotStarted",
     "fallbackSubmissionId": "0"
 }
@@ -114,4 +111,3 @@ Authorization: Bearer <your access token>
 * [점진적 패키지 배포](../publish/gradual-package-rollout.md)
 * [Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 관리](manage-flight-submissions.md)
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-

@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 패키지 출시를 중지합니다."
-title: "Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 중지"
+title: "앱 제출에 대한 출시 중지"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,17 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 출시, 앱 제출, 중지"
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a0da2fe0b8c859a774588d27d12ce3c9e3f24d9b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7bc86db250f27f0785bf505a15975bcf65cb5eff
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="halt-the-package-rollout-for-an-app-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 중지
+# <a name="halt-the-rollout-for-an-app-submission"></a>앱 제출에 대한 출시 중지
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 [패키지 출시를 중지](../publish/gradual-package-rollout.md#completing-the-rollout)합니다. Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
+
+>**참고**&nbsp;&nbsp;앱 제출에 대한 출시를 중지한 후 [새 앱 제출을 생성](create-an-app-submission.md)할 경우 새 제출이 중지된 제출의 복제본입니다.
 
 
 ## <a name="prerequisites"></a>필수 조건
@@ -81,7 +80,7 @@ Authorization: Bearer <your access token>
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 0,
+    "packageRolloutPercentage": 0.0,
     "packageRolloutStatus": "PackageRolloutStopped",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -104,4 +103,3 @@ Authorization: Bearer <your access token>
 * [점진적 패키지 배포](../publish/gradual-package-rollout.md)
 * [Windows 스토어 제출 API를 사용하여 앱 제출 관리](manage-app-submissions.md)
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-

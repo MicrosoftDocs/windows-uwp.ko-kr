@@ -11,11 +11,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: f76bdf6052228e5588ea7e34d95360f698525eb2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d05db2899fe2ad26eaf5e200ae2673b8efafddd0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="usability-for-uwp-apps"></a>UWP 앱의 유용성
 
@@ -117,7 +115,7 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[권장 사항 및 금지 사항](../globalizing/guidelines-and-checklist-for-globalizing-your-app.md)</b><br/>앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요.</p>
+<p><b>[권장 사항 및 금지 사항](../globalizing/guidelines-and-checklist-for-globalizing-your-app.md)</b><br/>앱을 더 광범위한 사용자를 위해 세계화하거나 특정 시장을 위해 지역화할 때는 다음과 같은 모범 사례를 따르세요.</p>
   </div>
   <div class="side-by-side-content-right">
 <p><b>[세계화를 대비한 형식 사용](../globalizing/use-global-ready-formats.md)</b><br/>날짜, 시간, 숫자 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발합니다.</p>
@@ -200,4 +198,3 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
   </div>
 </div>
 </div>
-

@@ -2,21 +2,17 @@
 title: "조명 속성"
 description: "조명 속성은 광원의 유형(점, 방향성, 스포트라이트), 감쇠, 색상, 방향, 위치, 범위를 설명합니다."
 ms.assetid: E832C3FD-9921-41C4-87B8-056E16B61B77
-keywords:
-- "조명 속성"
+keywords: "조명 속성"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 76e7c7bb404aadd4962dfbda69c55b3407555772
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 04a985f5005b88d4457551c8a62abd90f08ff1d2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="light-properties"></a>조명 속성
 
 
@@ -77,7 +73,6 @@ Direct3D가 조명에 RGBA 값을 사용하더라도 알파 색 구성 요소는
  
 
  
-
 
 
 

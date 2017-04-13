@@ -2,21 +2,17 @@
 title: "텍스처"
 description: "텍스처는 컴퓨터에서 생성되는 3D 이미지에 현실감을 불어넣을 수 있는 강력한 도구입니다. Direct3D는 광범위한 텍스처 기능 세트를 지원하여 개발자가 고급 텍스처 기법에 쉽게 접근할 수 있습니다."
 ms.assetid: B9E85C9E-B779-4852-9166-6FA2240B7046
-keywords:
-- "텍스처"
+keywords: "텍스처"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4c78099f6bd30956c45a907a960a595288e0eaf4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef5c72f3c667c63cb48c469349ae26c364050c19
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="textures"></a>텍스처
 
 
@@ -45,7 +41,7 @@ ms.lasthandoff: 02/07/2017
 </tr>
 <tr class="even">
 <td align="left"><p>[기본 텍스처 지정 개념](basic-texturing-concepts.md)</p></td>
-<td align="left"><p>초기에 컴퓨터에서 생성된 3D 이미지는 시기적으로 진보한 기술이기는 했지만 빛나는 플라스틱처럼 보이는 경향이 있었습니다. 긁힌 흠이나 균열, 지문 및 얼룩 같이 3D 객체에 시각적 복잡성으로 사실감을 더해주는 세부적인 표시가 부족했습니다. 오늘날 텍스처는 컴퓨터에서 생성되는 3D 이미지의 사실감을 높여준다는 점에서 인기가 매우 높아졌습니다.</p></td>
+<td align="left"><p>초기에 컴퓨터에서 생성된 3D 이미지는 시기적으로 진보한 기술이기는 했지만 빛나는 플라스틱처럼 보이는 경향이 있었습니다. 이러한 이미지에는 3D 개체에 사실적인 시각적 복잡성을 더하는 스친 자국, 금, 지문, 얼룩 등의 무늬가 없었습니다. 오늘날 텍스처는 컴퓨터에서 생성되는 3D 이미지의 사실감을 높여준다는 점에서 인기가 매우 높아졌습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[텍스처 주소 지정 모드](texture-addressing-modes.md)</p></td>
@@ -69,11 +65,11 @@ ms.lasthandoff: 02/07/2017
 </tr>
 <tr class="even">
 <td align="left"><p>[텍스처와 조명 매핑](light-mapping-with-textures.md)</p></td>
-<td align="left"><p>조명 맵은 3D 장면에서 조명 정보가 저장되는 텍스처 또는 텍스처 그룹으로서 조명 및 음영 영역을 기본 객체로 매핑합니다. 애플리케이션은 멀티패스 및 다중 텍스처 혼합 기능을 사용하여 셰이딩 기법보다 더욱 사실적인 장면을 렌더링할 수 있습니다.</p></td>
+<td align="left"><p>조명 맵은 3D 장면에서 조명 정보가 저장되는 텍스처 또는 텍스처 그룹으로서 조명 맵은 원형에 빛과 그림자 영역을 매핑합니다. 애플리케이션은 멀티패스 및 다중 텍스처 혼합 기능을 사용하여 셰이딩 기법보다 더욱 사실적인 장면을 렌더링할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[압축된 텍스처 리소스](compressed-texture-resources.md)</p></td>
-<td align="left"><p>텍스처 맵은 3D 형상으로 그려진 디지털 이미지로서 시각적 디테일을 높여줍니다. 이 맵들은 래스터화 단계에서 3D 형상으로 매핑되지만 이 프로세스로 인해 많은 양의 시스템 버스와 메모리가 사용될 수 있습니다. Direct3D는 텍스처에서 소비되는 메모리 사용량을 줄일 목적으로 텍스처 표면에 대한 압축 기능을 지원합니다. 일부 Direct3D 장치는 압축된 텍스처 표면을 기본적으로 지원하기도 합니다.</p></td>
+<td align="left"><p>텍스처 맵은 3D 형상으로 그려진 디지털 이미지로서 시각적 디테일을 높여줍니다. 래스터화 중 이러한 셰이프에 텍스처 맵이 매핑되고 프로세스에서 시스템 버스와 메모리를 많이 사용할 수 있습니다. 텍스처에서 사용하는 메모리 양을 줄이기 위해 Direct3D에서 텍스처 표면의 압축을 지원합니다. 일부 Direct3D 장치는 압축된 텍스처 표면을 기본적으로 지원하기도 합니다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -88,7 +84,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

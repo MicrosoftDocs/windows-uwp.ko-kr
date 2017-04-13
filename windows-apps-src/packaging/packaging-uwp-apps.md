@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca57f50f4827ba5de7a140f1353ba864c5e2fb6c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6c699b357a2c1271f6765514331eb2ca0a6ff0b3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-# <a name="packaging-uwp-apps"></a>UWP 앱 패키징
+# <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다. appxupload를 만들면 테스트 및 테스트용으로 로드하는 데 사용할 다른 appx 패키지도 생성됩니다. 이 appx 패키지를 장치에 테스트용으로 로드하여 앱을 직접 배포할 수 있습니다. 이 문서에서는 UWP 앱 패키지 구성, 생성, 테스트 프로세스에 대해 설명합니다. 테스트용 로드에 대한 자세한 내용은 [Windows 10에서 앱을 테스트용으로 로드](https://technet.microsoft.com/library/mt269549.aspx)를 참조하세요.
 
@@ -38,7 +36,7 @@ Windows 10의 경우 Windows 스토어에 업로드할 수 있는 하나의 패�
 
 ## <a name="configure-an-app-package"></a>앱 패키지 구성
 
-앱 매니페스트 파일(package.appxmanifest.xml)에는 앱 패키지를 만드는 데 필요한 속성과 설정이 들어 있습니다. 예를 들어 매니페스트 파일의 속성에서는 앱의 타일로 사용할 이미지 및 사용자가 장치를 회전할 때 앱에서 지원되는 방향을 설명합니다.
+앱 매니페스트 파일(package.appxmanifest)에는 앱 패키지를 만드는 데 필요한 속성과 설정이 들어 있습니다. 예를 들어 매니페스트 파일의 속성에서는 앱의 타일로 사용할 이미지 및 사용자가 장치를 회전할 때 앱에서 지원되는 방향을 설명합니다.
 
 Visual Studio에는 파일의 원시 XML을 편집하지 않고도 매니페스트 파일을 쉽게 업데이트할 수 있게 지원하는 매니페스트 디자이너가 있습니다.
 

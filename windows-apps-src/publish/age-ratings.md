@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6841355976d74a21429df1c91dced9b702a3af4a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2546ef6141095a0033f197e1e43e68276253aba3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="age-ratings"></a>연령별 등급
 
 [앱 제출 프로세스](app-submissions.md)의 **연령별 등급** 페이지를 사용하면 [IARC(국제 연령 등급 연합)](http://go.microsoft.com/fwlink/p/?LinkId=716854) 등급 시스템에서 관리하는 적합한 연령 및 콘텐츠 등급을 수신할 수 있도록 앱에 대한 정보를 제공할 수 있습니다. 연령별 등급은 앱 대상 그룹의 연령보다는 앱의 콘텐츠 적합성에 따라 부여됩니다.
@@ -54,4 +51,3 @@ ms.lasthandoff: 02/07/2017
 | 12+(12세 이상에 적합) | 이 연령 등급의 앱에는 성적이지 않은 노출, 비현실적인 등장인물에 대한 약간의 폭력 또는 실제 인간이나 동물 등장인물에 대한 상세하지 않은 폭력 묘사가 일부 포함될 수 있습니다. 또한 욕설은 포함될 수 있지만 성적 묘사는 금지됩니다. 이 연령별 등급 이상의 앱은 (i) 온라인 소셜 네트워크에 대한 제어되지 않은 액세스 또는 (ii) 다른 게이머나 온라인 대화 상대를 포함하여 다른 사람과 개인 정보의 제어되지 않은 공유를 허용할 수 있습니다. (이러한 활동이 보호되는 것으로 간주되려면, 해당 공유 기능을 사용하기 위해 부모의 허락을 받아야 하는 자녀 보호 기능을 앱에 포함해야 하며, [인증에 대한 참고 사항](notes-for-certification.md)에 해당 기능을 명시하고 설명해야 합니다.) |
 | 16+(16세 이상에 적합) | 이 연령 등급의 앱에는 최소한의 피로 현실적인 폭력을 묘사할 수 있으며 성행위를 묘사할 수 있습니다. 또한 스토어 정책에 명시된 한도 내에서 약물이나 담배, 범죄 행위를 포함할 수 있고, 12세 이상 등급의 앱보다 심한 욕설이 허용됩니다.                                                                                                                           |
 | 18+(성인에게 적합)            | 이 연령 등급의 게임에는 성인에게만 적합한 잔인하거나 저속하거나 구체적인 폭력, 낭자한 피 등이 포함될 수 있습니다. 모든 콘텐츠는 [콘텐츠 정책](https://msdn.microsoft.com/library/windows/apps/dn764944) 조건을 충족해야 합니다.                                                                                                                                                            |
-

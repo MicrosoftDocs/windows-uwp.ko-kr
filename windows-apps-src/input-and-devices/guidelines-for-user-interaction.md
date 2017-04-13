@@ -6,13 +6,11 @@ ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
 redirect_url: https://msdn.microsoft.com/windows/uwp/input-and-devices/touch-interactions
-translationtype: Human Translation
-ms.sourcegitcommit: 2db7aaccfd56b1bdfda099b197a695bad8a9cba1
 ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# 터치 디자인 지침
+# <a name="touch-design-guidelines"></a>터치 디자인 지침
 
 
 
@@ -20,7 +18,7 @@ ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
 
 터치에 최적화된 동시에 입력 장치 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
 
 
 -   터치 조작이 있는 응용 프로그램을 기본 입력 방법으로 디자인합니다.
@@ -31,7 +29,7 @@ ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
 -   가능하면 기간이 정해진 조작을 사용하지 마세요(적절한 사용의 예제: 길게 누르기).
 -   가능하면 조작을 구분하기 위해 손가락 수를 사용하지 마세요.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
 
 
 먼저 터치가 사용자의 기본적인 입력 방법이 될 것이라는 가정 하에 앱을 디자인하세요. 플랫폼 컨트롤을 사용하는 경우 터치 패드, 마우스 및 펜/스타일러스 지원은 Windows 8에서 무료로 제공되기 때문에 추가 프로그래밍이 필요하지 않습니다.
@@ -157,13 +155,13 @@ ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
 -   조작 방식은 복합적인 조작을 지원해야 합니다. 예를 들어, 손가락을 끌어서 이동하는 동안 손가락을 모아 확대/축소할 경우
 -   조작은 시간으로 구분되어서는 안 됩니다. 같은 조작은 수행하는 데 걸린 시간과 상관 없이 결과가 같아야 합니다. 시간 기반 활성화는 사용자를 강제로 지연시키며 직접 조작의 몰입성과 시스템 응답 성능의 인식 능력을 모두 저하시킵니다.
 
-    **참고** 학습 및 탐색에 도움이 되도록 특정 시간이 지정된 조작(예: 길게 누르기)을 사용하는 경우는 예외입니다.
+    **참고**  학습 및 탐색에 도움이 되도록 특정 시간이 지정된 조작(예: 길게 누르기)을 사용하는 경우는 예외입니다.
 
      
 
 -   적절한 설명 및 시각 신호는 앞으로의 조작에 큰 영향을 미칩니다.
 
-## <span id="related_topics"></span>관련 문서
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>관련 문서
 
 **개발자용(XAML)**
 * [터치 조작](https://msdn.microsoft.com/library/windows/apps/mt185617)
@@ -173,11 +171,5 @@ ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
  
 
 
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
 
 

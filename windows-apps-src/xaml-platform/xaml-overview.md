@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고, XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다."
+description: "Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다."
 title: "XAML 개요"
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
 ms.author: jimwalk
@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 12cb0c8b911c0ddb3a45e49568c5846d4359eeba
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 60b47a2c2c072efbf3ccedfcc48b9cba1611a370
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-overview"></a>XAML 개요
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다.
 
@@ -243,5 +240,4 @@ XAML은 흔히 Visual Studio와 같은 IDE 및 해당 XAML 디자인 화면 중 
 **참고** 코드에 C++/CX를 사용하는 앱의 경우 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)이 발생하지 않습니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
 
 Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 시작](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)을 참조하세요.
-
 

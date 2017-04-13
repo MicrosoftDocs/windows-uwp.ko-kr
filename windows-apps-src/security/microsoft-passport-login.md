@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2ffec3d72ab0b3ca87a5cc0ec9325fe805ae9b6f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 336bb3b58e9f6cfeb3c173a8bb1c9e72bc7929b7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 \[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
@@ -33,7 +30,7 @@ ms.lasthandoff: 02/07/2017
 ## <a name="get-started"></a>시작
 
 
-이 프로젝트를 빌드하려면 C# 및 XAML 사용 경험이 약간 필요합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
+이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
 
 -   Visual Studio 2015를 열고 파일 &gt; 새로 만들기 &gt; 프로젝트를 선택합니다.
 -   "새 프로젝트" 창이 열립니다. 템플릿 &gt; Visual C#으로 이동합니다.
@@ -970,7 +967,7 @@ ms.lasthandoff: 02/07/2017
 
     ![Windows Hello 새 사용자 등록](images/passport-login-11.png)
 
-이 실습에서는 새로운 Windows Hello API를 사용하여 기존 사용자를 인증하고 신규 사용자의 계정을 만드는 데 필요한 필수 기술을 배웠습니다. 이 새로운 기술을 사용하면 사용자가 응용 프로그램의 암호를 기억하지 않아도 사용자 인증을 통해 응용 프로그램이 계속해서 보호를 받는다는 것을 확신할 수 있습니다. Windows 10에서는 Windows Hello의 새 인증 기술을 사용하여 생체 인식 로그인 옵션을 지원합니다.
+이 실습에서는 새로운 Windows Hello API를 사용하여 기존 사용자를 인증하고 신규 사용자의 계정을 만드는 데 필요한 필수 기술을 배웠습니다. 이 새로운 기술을 사용하면 사용자가 응용 프로그램에 대한 암호를 기억하지 않아도 사용자 인증으로 응용 프로그램을 계속 보호할 수 있습니다. Windows 10에서는 Windows Hello의 새 인증 기술을 사용하여 생체 인식 로그인 옵션을 지원합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

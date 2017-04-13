@@ -1,25 +1,22 @@
 ---
 author: mcleanbyron
-description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 패키지 출시를 마무리합니다."
-title: "Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 마무리"
+description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 패키지 출시를 마무리합니다."
+title: "앱 제출에 대한 출시 완료"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 롤아웃, 앱 제출, 완료"
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 출시, 앱 제출, 완료"
 ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6c7fa8fc509faf2c662732e7e6b998d355fcbd66
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 1f26b826595b439c20b1582265dbe690d314277e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="finalize-the-rollout-for-an-app-submission"></a>앱 제출에 대한 출시 완료
 
-# <a name="finalize-the-package-rollout-for-an-app-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 마무리
 
-
-Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 [패키지 출시를 마무리](../publish/gradual-package-rollout.md#completing-the-rollout)합니다. Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
+Windows 스토어 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 [패키지 출시를 마무리](../publish/gradual-package-rollout.md#completing-the-rollout)합니다. Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -80,7 +77,7 @@ Authorization: Bearer <your access token>
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 100,
+    "packageRolloutPercentage": 100.0,
     "packageRolloutStatus": "PackageRolloutComplete",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -104,4 +101,3 @@ Authorization: Bearer <your access token>
 * [점진적 패키지 배포](../publish/gradual-package-rollout.md)
 * [Windows 스토어 제출 API를 사용하여 앱 제출 관리](manage-app-submissions.md)
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-

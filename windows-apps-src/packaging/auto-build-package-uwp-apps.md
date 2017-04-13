@@ -3,17 +3,15 @@ author: rmpablos
 title: "UWP 앱에 대한 자동화된 빌드 설정"
 description: "자동화된 빌드를 구성하여 패키지를 테스트용으로 로드하거나 저장하는 방법입니다."
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 54dcebb0dc4b1a41acdae655b9caf14f72161f36
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -21,7 +19,7 @@ VSTS(Visual Studio Team Services)를 사용하여 UWP 프로젝트에 대해 자
 
 ## <a name="select-the-right-type-of-build-agent"></a>올바른 빌드 에이전트 유형 선택
 
-빌드 프로세스를 실행할 때 VSTS에서 사용할 빌드 에이전트 유형을 선택합니다. 호스트된 빌드 에이전트는 가장 일반적인 도구 및 sdk를 사용하여 배포되며, 대부분의 시나리오에 적용됩니다. 자세한 내용은 [Software on the hosted build server](https://www.visualstudio.com/en-us/docs/build/admin/agents/hosted-pool#software)(호스트된 빌드 서버의 소프트웨어) 문서를 참조하세요. 그러나 빌드 단계를 더 제어 해야 할 경우에는 사용자 지정 빌드 에이전트를 만들 수 있습니다. 다음 테이블을 사용하면 이러한 결정을 내리는 데 도움이 됩니다.
+빌드 프로세스를 실행할 때 VSTS에서 사용할 빌드 에이전트 유형을 선택합니다. 호스트된 빌드 에이전트는 가장 일반적인 도구 및 sdk를 사용하여 배포되며, 대부분의 시나리오에 적용됩니다. 자세한 내용은 [Software on the hosted build server](https://www.visualstudio.com/docs/build/admin/agents/hosted-pool#software)(호스트된 빌드 서버의 소프트웨어) 문서를 참조하세요. 그러나 빌드 단계를 더 제어 해야 할 경우에는 사용자 지정 빌드 에이전트를 만들 수 있습니다. 다음 테이블을 사용하면 이러한 결정을 내리는 데 도움이 됩니다.
 
 |**시나리오**|**사용자 지정 에이전트**|**호스트된 빌드 에이전트**|
 -------------|----------------|----------------------|
@@ -33,13 +31,13 @@ VSTS(Visual Studio Team Services)를 사용하여 UWP 프로젝트에 대해 자
 |단위 테스트 실행|: white_check_mark:||
 |증분 빌드 사용|: white_check_mark:||
 
->참고: Windows 1주년 업데이트 SDK(빌드 14393)를 대상으로 지정하려는 경우에는 호스트 빌드 풀에서 SDK 10586 및 10240만 지원하므로 사용자 지정 빌드 에이전트를 설정해야 합니다. [UWP 버전 선택](https://msdn.microsoft.com/en-us/windows/uwp/updates-and-versions/choose-a-uwp-version)에 대한 자세한 정보
+>참고: Windows 1주년 업데이트 SDK(빌드 14393)를 대상으로 지정하려는 경우에는 호스트 빌드 풀에서 SDK 10586 및 10240만 지원하므로 사용자 지정 빌드 에이전트를 설정해야 합니다. [UWP 버전 선택](https://msdn.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version)에 대한 자세한 정보
 
 #### <a name="create-a-custom-build-agent-optional"></a>사용자 지정 빌드 에이전트 만들기(옵션)
 
 사용자 지정 빌드 에이전트를 만들려는 경우 유니버설 Windows 플랫폼 도구가 필요합니다. 이러한 도구는 Visual Studio에 포함되어 제공됩니다. Visual Studio의 커뮤니티 버전을 사용할 수 있습니다.
 
-자세한 내용은 [Deploy an agent on Windows](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows)(Windows에 에이전트 배포)를 참조하세요. 
+자세한 내용은 [Deploy an agent on Windows](https://www.visualstudio.com/docs/build/admin/agents/v2-windows)(Windows에 에이전트 배포)를 참조하세요. 
 
 UWP 단위 테스트를 실행하려면 다음을 수행해야 합니다. •    앱을 배포하고 시작합니다. •    VSTS 에이전트를 대화형 모드로 실행합니다. •    에이전트를 다시 부팅 한 후 자동 로그온되도록 구성합니다.
 
@@ -113,7 +111,7 @@ $() 구문을 사용하여 정의된 매개 변수는 해당 빌드 정의에 �
 `UapAppxPackageBuildMode` 속성을 `StoreUpload`로 설정했으므로 아티팩트 폴더에는 스토어에 업로드한 패키지(appxupload)와 테스트용 로드를 사용하도록 설정한 패키지(appxbundle)가 포함됩니다.
 
 
->참고: 기본적으로 VSTS 에이전트는 최신 appx 생성 패키지를 유지 관리합니다. 현재 빌드의 아티팩트만 저장하려면 이진 디렉터리가 정리되도록 빌드를 구성하세요. 이렇게 하려면 이름이 `Build.Clean`인 변수를 추가한 다음 변수 값을 `all`로 설정합니다. 자세한 내용은 [Specify the repository](https://www.visualstudio.com/en-us/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way)(리포지토리 지정)를 참조하세요.
+>참고: 기본적으로 VSTS 에이전트는 최신 appx 생성 패키지를 유지 관리합니다. 현재 빌드의 아티팩트만 저장하려면 이진 디렉터리가 정리되도록 빌드를 구성하세요. 이렇게 하려면 이름이 `Build.Clean`인 변수를 추가한 다음 변수 값을 `all`로 설정합니다. 자세한 내용은 [Specify the repository](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way)(리포지토리 지정)를 참조하세요.
 
 #### <a name="the-types-of-automated-builds"></a>자동화된 빌드 형식
 다음으로 빌드 정의를 사용하여 자동화된 빌드를 만들어 보겠습니다. 다음 표에서는 만들 수 있는 자동화된 빌드 형식 각각에 대해 설명합니다. 
@@ -145,7 +143,7 @@ CI 빌드는 사용자에게 배포되지 않으므로 CD 빌드와의 혼동을
 
 #### <a name="configure-a-custom-build-agent-for-unit-testing"></a>단위 테스트를 위한 사용자 지정 빌드 에이전트 구성
 
-1. 먼저 PC에서 개발자 모드를 사용하도록 설정합니다. 장치를 개발에 사용하도록 설정을 참조하세요. 2. 서비스가 대화형 프로세스로 실행되도록 설정합니다. Deploy an agent on Windows(Windows에 에이전트 배포)를 참조하세요. 3. 에이전트에 서명 인증서를 배포합니다.
+1. 먼저 PC에서 개발자 모드를 사용하도록 설정합니다. 디바이스를 개발에 사용하도록 설정을 참조하세요. 2. 서비스가 대화형 프로세스로 실행되도록 설정합니다. Deploy an agent on Windows(Windows에 에이전트 배포)를 참조하세요. 3. 에이전트에 서명 인증서를 배포합니다.
 
 이렇게 하려면.cer 파일을 두 번 클릭하고 로컬 컴퓨터, 신뢰할 수 있는 사용자 저장소를 차례로 선택합니다.
 
@@ -303,12 +301,12 @@ AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 <span id="sideloading-best-practices"/>
 ### <a name="best-practices-for-sideloading-apps"></a>앱의 테스트용 로드에 대한 모범 사례
 
-스토어에 게시하지 않고 앱을 배포하려는 경우 장치에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 장치에 앱을 직접 테스트용으로 로드할 수 있습니다. 
+스토어에 게시하지 않고 앱을 배포하려는 경우 디바이스에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 디바이스에 앱을 직접 테스트용으로 로드할 수 있습니다. 
 
 앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대해 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가한 다음 appx 파일을 설치하거나 업데이트합니다.
 
-#### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Windows 10 1주년 업데이트를 사용하여 앱을 테스트용으로 로드
-Windows 10 1주년 업데이트에서 appxbundle 파일을 두 번 클릭하고 대화 상자에서 설치 단추를 선택하여 앱을 설치할 수 있습니다. 
+#### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Windows10 1주년 업데이트를 사용하여 앱을 테스트용으로 로드
+Windows10 1주년 업데이트에서 appxbundle 파일을 두 번 클릭하고 대화 상자에서 설치 단추를 선택하여 앱을 설치할 수 있습니다. 
 
 
 ![rs1에 테스트용으로 로드](images/building-screen18.png) 
@@ -319,11 +317,11 @@ VSTS 또는 HockeyApp 등 웹 사이트에서 appx 패키지를 배포하려는 
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>인증서 서명에 대한 모범 사례 
-Visual Studio는 각 프로젝트에 대한 인증서를 생성합니다. 이렇게 하면 유효한 인증서의 조정된 목록을 유지 관리하기가 어렵습니다. 앱을 여러 개 만드는 경우에는 모든 앱에 서명하는 단일 인증서를 만들 수 있습니다. 그런 다음 인증서를 신뢰하는 각 장치에 다른 인증서를 설치하지 않고 임의의 앱을 테스트용으로 로드할 수 있게 됩니다. 자세한 내용은 [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)을 참조하세요.
+Visual Studio는 각 프로젝트에 대한 인증서를 생성합니다. 이렇게 하면 유효한 인증서의 조정된 목록을 유지 관리하기가 어렵습니다. 앱을 여러 개 만드는 경우에는 모든 앱에 서명하는 단일 인증서를 만들 수 있습니다. 그런 다음 인증서를 신뢰하는 각 디바이스에 다른 인증서를 설치하지 않고 임의의 앱을 테스트용으로 로드할 수 있게 됩니다. 자세한 내용은 [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)을 참조하세요.
 
 
 #### <a name="create-a-signing-certificate"></a>서명 인증서 만들기
-인증서를 만들려면 [MakeCert.exe](https://msdn.microsoft.com/en-us/library/windows/desktop/ff548309(%09v=vs.85).aspx) 도구를 사용합니다. 다음 예제에서는 MakeCert.exe 도구를 사용하여 인증서를 만듭니다.
+인증서를 만들려면 [MakeCert.exe](https://msdn.microsoft.com/library/windows/desktop/ff548309.aspx) 도구를 사용합니다. 다음 예제에서는 MakeCert.exe 도구를 사용하여 인증서를 만듭니다.
 
 ```
 MakeCert /n publisherName /r /h 0 /eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" /e expirationDate /sv MyKey.pvk MyKey.cer
@@ -351,7 +349,7 @@ Visual Studio 및 MSBuild는 앱에 서명하는 데 사용하는 인증서를 �
 
 또 다른 옵션은 빌드 컴퓨터(현재 사용자/개인)에 인증서를 설치한 다음 인증서 저장소 옵션에서 선택을 사용하는 것입니다. 프로젝트를 빌드하는 데 사용할 모든 컴퓨터에서 인증서를 설치해야 하므로 인증서의 지문을 프로젝트 파일에서 지정합니다.
 
-#### <a name="trust-the-signing-certificate-in-the-target-devices"></a>대상 장치에서 서명 인증서 신뢰
+#### <a name="trust-the-signing-certificate-in-the-target-devices"></a>대상 디바이스에서 서명 인증서 신뢰
 앱에서 인증서를 설치하기 전에 먼저 인증서를 신뢰해야 합니다. 
 
 로컬 컴퓨터 인증서 저장소에 신뢰할 수 있는 사용자 또는 신뢰 루트 위치에 인증서의 공개 키를 등록합니다.
@@ -359,8 +357,7 @@ Visual Studio 및 MSBuild는 앱에 서명하는 데 사용하는 인증서를 �
 인증서를 등록하는 가장 쉬운 방법은 .cer 파일을 두 번 클릭한 다음 마법사의 단계에 따라 로컬 컴퓨터와 신뢰할 수 있는 사용자 저장소에서 인증서를 저장하는 것입니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [Windows용 .NET 앱 빌드](https://www.visualstudio.com/en-us/docs/build/get-started/dot-net) 
+* [Windows용 .NET 앱 빌드](https://www.visualstudio.com/docs/build/get-started/dot-net) 
 * [UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
 * [Windows 10에서 LOB 앱을 테스트용으로 로드](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx)
-
+* [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)

@@ -9,14 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 7da8727d3f901cfbab7c68d0b7f7362438d3fc65
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2d2f586a1125f12c1034e002e2245e0fe155c1b4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 
 예상 지급 전달 시간, 적용 가능한 지급 임계값 및 지급을 받을 수 있는 Microsoft 마켓플레이스는 국가/지역 및 지급 계좌 형식에 따라 달라질 수 있습니다. 이 항목에서는 각 국가/지역에서 지원되는 지급 임계값 및 결제 방법에 대해 설명합니다.
@@ -43,6 +39,11 @@ ms.lasthandoff: 02/08/2017
 ## <a name="payment-thresholds-and-methods"></a>지급 임계값 및 방법
 
 > **참고** 지급 임계값은 USD 단위로 표시됩니다. 일부 마켓플레이스에서는 현지 통화로 환산한 동일한 금액이 사용됩니다. 
+
+- [Windows 스토어](#windows-store)
+- [Microsoft Advertising](#microsoft-advertising)
+- [Azure Marketplace](#azure-marketplace)
+- [Office 스토어](#office-store)
 
 ### <a name="windows-store"></a>Windows 스토어 
 
@@ -627,7 +628,7 @@ ms.lasthandoff: 02/08/2017
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아어(구 유고슬라비아 마케도니아 공화국)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -1689,7 +1690,7 @@ ms.lasthandoff: 02/08/2017
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아어(구 유고슬라비아 마케도니아 공화국)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>50 USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -2744,7 +2745,7 @@ ms.lasthandoff: 02/08/2017
     <td>PayPal</td>
   </tr>
  <tr>
-    <td>마케도니아어(구 유고슬라비아 마케도니아 공화국)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -3749,7 +3750,7 @@ ms.lasthandoff: 02/08/2017
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아어(구 유고슬라비아 마케도니아 공화국)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -4169,4 +4170,3 @@ ms.lasthandoff: 02/08/2017
     <td>해당 없음</td>
   </tr>
 </table>
-

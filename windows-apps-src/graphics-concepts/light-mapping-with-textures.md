@@ -2,21 +2,17 @@
 title: "텍스처를 사용한 조명 매핑"
 description: "조명 맵은 3D 장면에서 조명에 대한 정보를 포함하는 텍스처 또는 텍스처 그룹입니다."
 ms.assetid: 5C7518D2-AC92-4A97-B7AF-4469D213D7BD
-keywords:
-- "텍스처를 사용한 조명 매핑"
+keywords: "텍스처를 사용한 조명 매핑"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1154be19719cc3101c114c0bd700fb735824bcda
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 18e24c1bc60c37a01cb99335e7a8e984697b19b7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="light-mapping-with-textures"></a>텍스처를 사용한 조명 매핑
 
 
@@ -78,7 +74,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

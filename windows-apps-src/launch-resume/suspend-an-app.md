@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f51e92c95676d924725d06e70f098965f3c9f5c7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a69bead489f5d155145b7389199e743792f53f85
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-app-suspend"></a>앱 일시 중단 처리
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -141,4 +138,3 @@ Windows 10 버전 1607 이전에는 일시 중단 처리기에 상태를 저장�
  
 
  
-

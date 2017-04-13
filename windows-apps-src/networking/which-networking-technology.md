@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ee88a22fe50fc3d782febafdc82c2a68c386dab
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4cbb423d8fdddfc6cc158c1cbca2398b21dc205c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -140,5 +137,4 @@ Windows 10에서는 이전에 장치 제조업체 및 통신사에만 노출된 
 ### <a name="sms"></a>SMS
 
 [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567) 네임스페이스는 SMS 및 관련 메시지를 하위 수준 엔터티로 처리합니다. 이는 통신사에서 앱 지정 SMS에 사용하도록 제공되며, 대부분의 앱 개발자용으로 승인되지 않는 접근 권한 값으로 제어됩니다. 메시지를 처리할 앱을 작성하는 경우 대신 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321) API를 사용해야 합니다. 이 API는 SMS 메시지뿐만 아니라 실시간 채팅 앱과 같은 다른 소스의 메시지도 처리하도록 디자인되었으므로 훨씬 풍부한 채팅/메시징 환경을 지원합니다.
-
 

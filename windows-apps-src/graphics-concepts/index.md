@@ -2,21 +2,17 @@
 title: "Direct3D 그래픽 학습 가이드"
 description: "Microsoft Direct3D의 기반이 되는 그래픽 개념을 설명합니다."
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
-keywords:
-- "Direct3D 그래픽 학습 가이드"
+keywords: "Direct3D 그래픽 학습 가이드"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e62f9cfde35580dd384ef69fe6e5658d927ce3d8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9d46a13844fafc5f517fce16c39e33257ff8e9a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="direct3d-graphics-learning-guide"></a>Direct3D 그래픽 학습 가이드
 
 
@@ -43,7 +39,7 @@ Microsoft Direct3D의 기반이 되는 그래픽 개념을 설명합니다. 이 
 </tr>
 <tr class="even">
 <td align="left"><p>[꼭짓점 및 인덱스 버퍼](vertex-and-index-buffers.md)</p></td>
-<td align="left"><p><em>꼭짓점 버퍼</em>는 꼭짓점 데이터를 포함한 메모리 버퍼입니다. 꼭짓점 버퍼의 꼭짓점은 변환, 조명, 클리핑을 수행하도록 처리됩니다. <em>인덱스 버퍼</em>는 인덱스 데이터를 포함한 메모리 버퍼입니다. 이 데이터는 원형 렌더링에 사용되는 꼭짓점 버퍼에 대한 정수 오프셋입니다.</p></td>
+<td align="left"><p><em>꼭짓점 버퍼</em>는 꼭짓점 데이터를 포함한 메모리 버퍼입니다. 꼭짓점 버퍼의 꼭짓점을 처리하여 변환, 조명 및 클리핑을 수행합니다. <em>인덱스 버퍼</em>는 인덱스 데이터를 포함하는 메모리 버퍼로써 기본 요소를 렌더링하는 데 사용되는 꼭짓점 버퍼에 대한 정수 오프셋입니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[장치](devices.md)</p></td>
@@ -93,4 +89,3 @@ Microsoft Direct3D의 기반이 되는 그래픽 개념을 설명합니다. 이 
  
 
  
-

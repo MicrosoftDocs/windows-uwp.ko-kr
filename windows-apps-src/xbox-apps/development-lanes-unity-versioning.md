@@ -2,13 +2,11 @@
 author: JordanEllis6809
 title: "Unity - UWP 프로젝트 버전 제어"
 description: "Unity UWP 프로젝트 버전 관리."
-translationtype: Human Translation
-ms.sourcegitcommit: a1b759b00e35092323b8c4634907dd5c0fffa68c
 ms.openlocfilehash: 3b796c31e6b284cea628ba68a34799cf9317ee2e
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# Unity: UWP 프로젝트 버전 제어
+# <a name="unity-version-control-your-uwp-project"></a>Unity: UWP 프로젝트 버전 제어
 
 UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아직 빌드하지 않았나요?  먼저 [Xbox의 UWP에 Unity 게임 가져오기](development-lanes-unity.md)를 참조하세요.
 
@@ -46,7 +44,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 
 ![UWP 빌드 디렉터리](images/uwp-build-directory.png)  
 
-## 폴더  
+## <a name="folders"></a>폴더  
 
 `Assets` | ***포함*** | Windows 스토어 이미지 포함  
 `Data`   | ***무시*** | Unity에서 프로젝트를 컴파일하는 위치(장면, 셰이더, 스크립트, Prefabs 등)  
@@ -54,7 +52,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 `Properties` | ***포함*** | 개발자가 수정할 수 있는 추가 고급 설정이 포함됨  
 `Unprocessed` | ***무시*** | Unity `.dll` 및 `.pdb` 파일이 포함됨  
 
-## 파일  
+## <a name="files"></a>파일  
 
 `App.cs` | ***포함*** | UWP 응용 프로그램에 대한 진입점입니다. 다른 원본 파일을 사용하여 수정 및 확장될 수 있습니다.  
 `Package.appxmanifest` | ***포함*** | AppX의 패키지 매니페스트  
@@ -62,7 +60,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 `ScrapyardPhoenix.csproj` | ***포함*** | UWP 빌드 대상을 설명합니다. UWP 프로젝트에 종속성을 추가하는 경우 이 `*.csproj` 파일에 해당 정보가 포함됩니다.  
 `ScrapyardPhoenix.csproj.user` | ***무시*** | 이 파일에 로컬 사용자 정보가 포함됨
 
-## 결과 .gitignore
+## <a name="resulting-gitignore"></a>결과 .gitignore
 
     ##################################################################
     # The original .gitignore file can be found at
@@ -88,7 +86,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 
 UWP 폴더 버전 관리의 일부 추가 예는 [이러한 예제](https://bitbucket.org/Unity-Technologies/windowsstoreappssamples/overview)에서 찾아볼 수 있습니다.
 
-## UWP 앱에 종속성 추가
+## <a name="adding-dependencies-to-your-uwp-app"></a>UWP 앱에 종속성 추가
 
 **Plugins** 폴더 아래 **Unity Assets** 폴더에 종속성을 넣어 DLL 및 WINMD에 추가한 다음 종속성을 선택하여 검사기에서 해당 대상 플랫폼 설정을 적절하게 설정합니다.
 
@@ -96,12 +94,6 @@ UWP 폴더 버전 관리의 일부 추가 예는 [이러한 예제](https://bitb
 
 ***ScrapyardPhoenix(유니버설 Windows)***는 참조를 추가할 프로젝트(예: Xbox Live SDK)입니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Aug16_HO4-->
-
-

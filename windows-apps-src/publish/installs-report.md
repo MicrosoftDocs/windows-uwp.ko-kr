@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 앱, 설치, 보고서, 분석"
 ms.assetid: 46c08fd2-00bd-4be5-b29f-01a3b5fea4c2
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 9e4dec61e275443db42b50ef9a231b5b3c46ffe4
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7912775e17a70c1d6fe9810c780017dcfa2db60e
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="installs-report"></a>설치 보고서
 
-Windows 개발자 센터 대시보드의 **설치** 보고서에서 고객이 Windows 10 장치에 앱을 몇 번 설치했는지 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다.
+Windows 개발자 센터 대시보드의 **설치** 보고서에서 고객이 Windows 10 장치에 앱을 몇 번 설치했는지 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [앱 설치 받기](../monetize/get-app-installs.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 
 ## <a name="apply-filters"></a>필터 적용
@@ -65,4 +62,3 @@ Windows 개발자 센터 대시보드의 **설치** 보고서에서 고객이 Wi
  
 
  
-

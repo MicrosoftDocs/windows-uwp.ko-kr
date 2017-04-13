@@ -2,21 +2,17 @@
 title: "삼각형 목록"
 description: "삼각형 목록은 격리된 삼각형 목록입니다. 격리된 삼각형은 서로 가까울 수도 있고 가깝지 않을 수도 있습니다. 삼각형 목록에는 3개 이상의 꼭짓점이 있어야 하고 꼭짓점의 총수는 3의 배수여야 합니다."
 ms.assetid: BC50D532-9E9C-4AAE-B466-9E8C4AD1862A
-keywords:
-- "삼각형 목록"
+keywords: "삼각형 목록"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3f04e1b830b2d82b0ddcc9ae08186680df404ea3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f333f73977d777871a5c2a8df4d5966bd7acf890
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="triangle-lists"></a>삼각형 목록
 
 
@@ -71,7 +67,6 @@ d3dDevice->DrawPrimitive( D3DPT_TRIANGLELIST, 0, 2 );
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b97cb009078039582bfcff6cdaa678f1dd9b979
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b72b5593f4266a015b14e2b61a70c87ce199cdfd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 
 스토어에 앱을 제출한 후 오류가 발생하는 경우 오류를 해결해야만 [인증 프로세스](the-app-certification-process.md)를 계속할 수 있습니다. 오류 메시지는 문제가 무엇이며, 문제를 해결하기 위해 수행해야 할 수 있는 작업을 나타냅니다. 이러한 오류를 해결하는 데 도움이 될 수 있는 일부 추가 정보는 다음과 같습니다.
@@ -52,7 +49,6 @@ UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어
  
 
  
-
 
 
 

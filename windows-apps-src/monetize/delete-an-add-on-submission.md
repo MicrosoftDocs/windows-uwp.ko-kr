@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: D677E126-C3D6-46B6-87A5-6237EBEDF1A9
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출을 삭제합니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 삭제"
+title: "추가 기능 제출 삭제"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능 제출, 삭제, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 117ed98dc961231cdbc7258b1097b7e0452efe35
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a1f2a545b75ac4416ac016d36836328b24433917
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-an-add-on-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 제출 삭제
+# <a name="delete-an-add-on-submission"></a>추가 기능 제출 삭제
 
 
 
@@ -99,4 +96,3 @@ Authorization: Bearer <your access token>
 * [추가 기능 제출 커밋](commit-an-add-on-submission.md)
 * [추가 기능 제출 업데이트](update-an-add-on-submission.md)
 * [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
-

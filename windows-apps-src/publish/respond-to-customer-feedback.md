@@ -9,18 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ce908bd14065143f71062bf5792d256c7ac775e9
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 8ce325c212b9f5aba11ab35f3cfcfeea9a44bcbe
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="respond-to-customer-feedback"></a>고객 피드백에 응답
 
 [피드백 보고서](feedback-report.md)를 사용하여 Windows 10 고객이 피드백 허브에서 앱에 대해 남긴 피드백을 검토한 다음 해당 피드백에 직접 응답할 수 있습니다. 모든 사람이 볼 수 있도록 피드백 허브에 응답을 게시(개인 메모로 남기거나 일부 피드백 상태를 업데이트하고 설명을 추가하는 방식으로 게시)하여 고객에게 새로운 기능 또는 버그 수정에 대해 알리거나 앱을 개선하는 방법에 대한 특정 피드백을 요청할 수 있습니다. 피드백을 남긴 고객에게 직접 메일로 응답을 보낼 수도 있습니다.
 
-> **팁** 고객이 직접 [UWP 앱에서 피드백 허브를 시작](http://aka.ms/store-em-sdk)할 수 있는 컨트롤을 추가하려면 고객이 [Microsoft Store Services SDK](../monetize/launch-feedback-hub-from-your-app.md)에서 피드백 API를 사용하여 피드백을 남기도록 권유할 수 있습니다. 피드백 허브를 지원하는 Windows 10 디바이스에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 통해 직접 해당 피드백을 남길 수 있습니다. 이로 인해 앱 내에서 특별히 피드백을 요청하지 않은 경우에도 이 보고서에서 고객 의견을 볼 수 있습니다.
+> **팁** 고객이 직접 [UWP 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)할 수 있는 컨트롤을 추가하려면 고객이 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 피드백 API를 사용하여 피드백을 남기도록 권유할 수 있습니다. 피드백 허브를 지원하는 Windows 10 디바이스에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 통해 직접 해당 피드백을 남길 수 있습니다. 이로 인해 앱 내에서 특별히 피드백을 요청하지 않은 경우에도 이 보고서에서 고객 의견을 볼 수 있습니다.
 
 피드백에 응답을 제공하려면 **피드백 보고서**의 피드백 옆에 나타나는 **피드백에 응답** 링크를 클릭합니다.
 
@@ -64,4 +61,3 @@ Windows 개발자 센터는 앱에 대한 피드백을 제공하는 고객에게
 > **참고** 고객은 부적절한 피드백 응답을 받을 경우 개발자를 Microsoft에 보고할 수 있습니다. 피드백 응답을 메일로 받는 것을 옵트아웃(opt out)할 수도 있습니다.
 
 고객과의 관계는 여러분의 책임입니다. 개발자와 고객 간에 분쟁이 있을 경우 Microsoft는 관여하지 않습니다. 그러나 제품에 대한 고객의 피드백 내용이 부적절하다고 생각되는 경우에는 [지원 티켓](http://go.microsoft.com/fwlink/p/?LinkID=401178)을 제출하세요.
-

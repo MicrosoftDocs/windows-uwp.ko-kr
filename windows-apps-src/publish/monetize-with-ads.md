@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "앱에서 광고 조정을 사용하거나 Microsoft Advertising의 배너 또는 동영상 중간 광고를 표시하는 경우, 수익 창출 &gt; 광고를 통한 수익 창출 페이지를 사용하여 광고 사용을 관리하세요."
+Description: "앱에서 광고 조정을 사용하거나 Microsoft Advertising의 배너 또는 중간 광고를 표시하는 경우, 수익 창출 &gt; 광고를 통한 수익 창출 페이지를 사용하여 광고 사용을 관리하세요."
 title: "광고를 통한 수익 창출"
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e82431c9b39999af9fe19ac147a6c031b9a3edc3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6418fe1b47ac89e8decb135aa9a2108b3b95ef82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="monetize-with-ads"></a>광고를 통한 수익 창출
 
 
-앱에서 **AdMediatorControl**, **AdControl** 또는 **InterstitialAd** 컨트롤을 사용하여 배너 또는 동영상 중간 광고를 표시하는 경우, **수익 창출** &gt; **광고로 수익 창출** 페이지를 사용하여 광고 사용을 관리하세요.
+앱에서 **AdMediatorControl**, **AdControl** 또는 **InterstitialAd** 컨트롤을 사용하여 배너 또는 중간 광고를 표시하는 경우, **수익 창출** &gt; **광고로 수익 창출** 페이지를 사용하여 광고 사용을 관리하세요.
 
 ## <a name="windows-ad-mediation"></a>Windows 광고 조정
 
@@ -52,26 +49,25 @@ COPPA에 따른 의무 조항에 대한 자세한 내용은 [이 페이지](http
 
 이 섹션을 사용하여 Microsoft Advertising 광고 단위를 만들 수 있습니다. 다음 시나리오에서만 광고 단위를 만들어야 합니다.
 
--   앱에서 [AdControl](https://msdn.microsoft.com/library/mt313154.aspx) 개체를 사용하여 Microsoft Advertising의 배너 광고를 표시합니다.
--   앱에서 [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx) 개체를 사용하여 Microsoft Advertising의 동영상 중간 광고를 표시합니다.
+-   앱이 [AdControl](https://msdn.microsoft.com/library/mt313154.aspx) 개체를 사용하여 배너 광고를 표시합니다.
+-   앱이 [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx) 개체를 사용하여 중간 광고를 표시합니다.
 
 이러한 시나리오를 위한 광고 단위를 만들려면 다음을 수행합니다.
 
 1.  광고 단위의 이름을 지정합니다.
-2.  광고 단위 유형(**배너 광고** 또는 **동영상 중간 광고**)을 선택합니다.
+2.  광고 단위(**배너**, **동영상 중간 광고** 또는 **배너 중간 광고**)를 선택합니다.
 3.  디바이스 유형(**모바일** 또는 **PC/태블릿**)을 선택합니다.
 4.  **광고 단위 만들기**를 클릭합니다.
 
 광고 단위가 이 섹션의 맨 아래에 있는 표에 표시됩니다. 각 광고 단위에 대해 **응용 프로그램 ID** 및 **광고 단위 ID**가 표시됩니다. 앱에 광고를 표시하려면 다음과 같이 코드에 이러한 값을 사용해야 합니다.
 
--   앱에서 배너 광고를 표시하는 경우 [AdControl](https://msdn.microsoft.com/library/mt313174.aspx) 개체의 [ApplicationId](https://msdn.microsoft.com/library/mt313171.aspx) 및 [AdUnitId](https://msdn.microsoft.com/library/mt313154.aspx) 속성에 이러한 값을 할당합니다.
--   앱에서 동영상 중간 광고를 표시하는 경우 [InterstitialAd](https://msdn.microsoft.com/library/mt313192.aspx) 개체의 [RequestAd](https://msdn.microsoft.com/library/mt313189.aspx) 메서드에 이러한 값을 전달합니다.
+-   앱에서 배너 광고를 표시하는 경우 [AdControl](https://msdn.microsoft.com/library/mt313154.aspx) 개체의 [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) 및 [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) 속성에 이러한 값을 할당합니다. 자세한 내용은 [XAML 및 .NET의 AdControl](../monetize/adcontrol-in-xaml-and--net.md) 및 [HTML5 및 Javascript의 AdControl](../monetize/adcontrol-in-html-5-and-javascript.md)을 참조하세요.
+-   앱에서 중간 광고를 표시하는 경우 [InterstitialAd](https://msdn.microsoft.com/library/mt313192.aspx) 개체의 [RequestAd](https://msdn.microsoft.com/library/mt313189.aspx) 메서드에 이러한 값을 전달합니다. 자세한 내용은 [중간 광고](../monetize/interstitial-ads.md)를 참조하세요.
 
-> **참고** 앱에서 광고 조정을 사용하여 Microsoft Advertising의 배너 광고를 표시하는 경우(즉 앱에서 **AdMediatorControl** 개체를 사용하는 경우) 광고 단위를 요청하지 않아도 됩니다. 이 시나리오에서는 Microsoft Advertising 광고 단위가 자동으로 생성됩니다.
-
- 
+> **참고** 앱에서 **AdMediatorControl** 개체를 사용하여 Microsoft Advertising의 배너 광고를 표시하는 경우 광고 단위를 요청하지 않아도 됩니다. 이 시나리오에서는 Microsoft Advertising 광고 단위가 자동으로 생성됩니다.
 
  
 
  
 
+ 

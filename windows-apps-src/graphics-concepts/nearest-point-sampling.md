@@ -2,21 +2,17 @@
 title: "가장 가까운 점 샘플링"
 description: "응용 프로그램에서는 텍스처 필터링을 사용하지 않아도 됩니다."
 ms.assetid: D7F88320-2C61-47E9-9B92-EC31D48DB079
-keywords:
-- "가장 가까운 점 샘플링"
+keywords: "가장 가까운 점 샘플링"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a2ead1b197ce4e504212f722aaf09d2038ec46f8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 351acc87764fadc2cd967aaf1d918f4b4837c81f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>가장 가까운 점 샘플링
 
 
@@ -54,7 +50,6 @@ Direct3D 참조 래스터라이저는 각 픽셀 위치의 텍스처 인덱스�
  
 
  
-
 
 
 

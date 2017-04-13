@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5ca55f04d919e273017530ab4c14d09c7a2ec20a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0a2d8562774c00544fcdcab8941bfbb04f889a45
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="managing-your-account-settings-and-profile-info"></a>계정 설정 및 프로필 정보 관리
 
@@ -40,5 +38,4 @@ ms.lasthandoff: 02/07/2017
 또한 이 섹션에는 [지급 계좌 및 세금 양식을 설정](setting-up-your-payout-account-and-tax-forms.md)하기 위한 링크도 포함되어 있습니다. 앱 또는 추가 기능에 대한 금액을 청구하려면 먼저 이 작업을 수행해야 합니다.
 
 일부 프로그램에서는 계정의 기능을 확장할 수 있게 하는 코드를 제공할 수 있습니다. 이러한 코드는 **계정 설정**에 입력할 수 있습니다. 또한 이 페이지에서 [테스트를 위해 잠금을 해제한 Windows Phone 8 또는 Windows Phone 8.1 디바이스](http://go.microsoft.com/fwlink/p/?LinkId=533897)에 대한 세부 정보를 보고 [개발자 센터 참가자 프로그램](dev-center-insider-program.md)을 옵트인(opt in)하거나 옵트아웃(opt out)할 수 있습니다.
-
 

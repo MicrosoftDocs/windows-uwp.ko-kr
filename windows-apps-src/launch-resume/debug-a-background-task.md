@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6200a8363c8a638f2ee44bdad6902748fb9adf45
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 46b60f180642e509eca76a68d78b1099008746eb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 -   [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847)
@@ -26,7 +23,7 @@ ms.lasthandoff: 02/07/2017
 Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다.
 
 ## <a name="debugging-out-of-process-vs-in-process-background-tasks"></a>Out-of-process 및 In-process 백그라운드 작업 디버그
-이 항목에서는 호스트 앱이 아닌 별도 프로세스에서 실행되는 백그라운드 작업을 주로 설명합니다. In-process 백그라운드 작업을 디버그하는 경우 별도 백그라운드 작업 프로젝트가 없으며 **OnBackgroundActivated()**(In-process 프로세스 백그라운드 코드가 실행되는 위치)에 중단점을 설정할 수 있습니다. 실행할 백그라운드 코드를 트리거하는 방법에 대한 자세한 내용은 아래의 [백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그](#Trigger-background-tasks-manually-to-debug-background-task-code)에서 2단계를 참조하세요.
+이 항목에서는 호스트 앱이 아닌 별도 프로세스에서 실행되는 백그라운드 작업을 주로 설명합니다. In-process 백그라운드 작업을 디버그하는 경우 별도 백그라운드 작업 프로젝트가 없으며 **OnBackgroundActivated()**(In-process 프로세스 백그라운드 코드가 실행되는 위치)에 중단점을 설정할 수 있습니다. 실행할 백그라운드 코드를 트리거하는 방법에 대한 자세한 내용은 아래의 [백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그](#trigger-background-tasks-manually-to-debug-background-task-code)에서 2단계를 참조하세요.
 
 ## <a name="make-sure-the-background-task-project-is-set-up-correctly"></a>백그라운드 작업 프로젝트가 올바르게 설정되어 있는지 확인합니다.
 
@@ -120,4 +117,3 @@ Visual Studio를 사용하여 백그라운드 작업을 디버그하는 방법�
  
 
  
-

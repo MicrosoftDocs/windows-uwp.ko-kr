@@ -2,25 +2,21 @@
 title: "알파 채널을 사용하는 텍스처"
 description: "투명도 복잡성이 더욱 큰 텍스처 맵을 인코딩하는 방법은 두 가지입니다."
 ms.assetid: 768A774A-4F21-4DDE-B863-14211DA92926
-keywords:
-- "알파 채널을 사용하는 텍스처"
+keywords: "알파 채널을 사용하는 텍스처"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 708f6a7903df2ead18cf40e01675c3d244c7f9b0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1ea2282bb00f309f0dd2616898ce8d4a43215ff4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="textures-with-alpha-channels"></a>알파 채널을 사용하는 텍스처
 
 
-투명도 복잡성이 더욱 큰 텍스처 맵을 인코딩하는 방법은 두 가지입니다. 각 방법마다 투명도를 설명하는 블록이 이미 설명한 64비트 블록보다 선행합니다. 투명도는 픽셀당 4비트(명시적 인코딩)이거나, 혹은 비트 수가 더 적을 뿐만 아니라 선형 보간이 색상 인코딩에 사용되는 것과 유사한 4x4 비트맵으로 표현됩니다.
+투명도 복잡성이 더욱 큰 텍스처 맵을 인코딩하는 방법은 두 가지입니다. 각 경우에서 투명성을 설명하는 블록이 이미 설명된 64비트 블록 앞에 옵니다. 투명도는 픽셀당 4비트(명시적 인코딩)이거나, 혹은 비트 수가 더 적을 뿐만 아니라 선형 보간이 색상 인코딩에 사용되는 것과 유사한 4x4 비트맵으로 표현됩니다.
 
 투명도 블록과 색상 블록은 다음 표와 같이 정렬됩니다.
 
@@ -150,7 +146,6 @@ else {
  
 
  
-
 
 
 

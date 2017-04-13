@@ -2,21 +2,17 @@
 title: "타일 풀 만들기"
 description: "응용 프로그램은 Direct3D 장치 하나당 1개 이상의 타일 풀을 만들 수 있습니다. 각 타일 풀의 전체 크기는 Direct3D 11의 리소스 크기 제한인 GPU RAM의 약 1/4로 한정됩니다."
 ms.assetid: BD51EDD3-4AD3-4733-B014-DD77B9D743BB
-keywords:
-- "타일 풀 만들기"
+keywords: "타일 풀 만들기"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5289bcb57572ede45c6853b0077f5baa82af7ca2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 315c1b2e1a2b8c89b432a89278ae1b3b240c5ad5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tile-pool-creation"></a>타일 풀 만들기
 
 
@@ -32,7 +28,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

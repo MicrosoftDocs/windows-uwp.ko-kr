@@ -2,23 +2,20 @@
 author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Windows 스토어 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다."
-title: "Windows 스토어 서비스를 사용하여 분석 데이터에 액세스"
+title: "스토어 서비스를 사용하여 분석 데이터에 액세스"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1538f06b09bd4143750c10a2774137f87359ebce
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: aa33af63a49d890b3c60ec1bee32528cfc78af93
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
+# <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
-# <a name="access-analytics-data-using-windows-store-services"></a>Windows 스토어 서비스를 사용하여 분석 데이터에 액세스
-
-*Windows 스토어 분석 API*를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다. 이 API를 사용하면 앱 및 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 구입, 오류, 앱 평점 및 리뷰에 대한 데이터를 검색할 수 있습니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
+*Windows 스토어 분석 API*를 사용하여 프로그래밍 방식으로 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다. 이 API를 사용하면 앱 및 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 구입, 오류, 앱 평점 및 리뷰에 대한 데이터를 검색할 수 있습니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
 다음 단계에서는 종단 간 프로세스를 설명합니다.
 
@@ -74,12 +71,20 @@ POST URI의 *tenant\_id* 값, *client\_id* 및 *client\_secret* 매개 변수에
 
 Azure AD 액세스 토큰이 있으면 Windows 스토어 분석 API를 호출할 준비가 된 것입니다. 각 메서드의 구문에 대한 내용은 다음 문서를 참조하세요. 액세스 토큰을 각 메서드의 **Authorization** 헤더로 전달해야 합니다.
 
+| 시나리오       | 메서드      |
+|---------------|--------------------|
+| 취득 및 설치 |  <ul><li>[앱 취득 가져오기](get-app-acquisitions.md)</li><li>[추가 기능 취득 가져오기](get-in-app-acquisitions.md)</li><li>[앱 설치 받기](get-app-installs.md)</li></ul> |
+| 앱 오류 | <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li></ul> |
+| 평점 및 리뷰 | <ul><li>[앱 평점 가져오기](get-app-ratings.md)</li><li>[앱 리뷰 가져오기](get-app-reviews.md)</li></ul> |
+| 앱 내 광고 및 광고 캠페인 | <ul><li>[광고 성과 데이터 가져오기](get-ad-performance-data.md)</li><li>[광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)</li></ul> |
+
+[Windows 하드웨어 개발자 센터 프로그램](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard)에 속하는 개발자 계정으로 다음과 같은 추가 메서드를 사용할 수 있습니다.
+
 | 시나리오       | 설명      |
 |---------------|--------------------|
-| 구입 |  앱과 추가 기능에 대한 구입 데이터를 가져옵니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[앱 구입 가져오기](get-app-acquisitions.md)</li><li>[추가 기능 구입 가져오기](get-in-app-acquisitions.md)</li></ul> |
-| 오류 | 앱의 오류에 대한 데이터를 가져옵니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li></ul> |
-| 평점 및 리뷰 | 앱에 대한 평점 및 리뷰 정보를 가져옵니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[앱 등급 가져오기](get-app-ratings.md)</li><li>[앱 리뷰 가져오기](get-app-reviews.md)</li></ul> |
-| 앱 내 광고 및 광고 캠페인 | 앱 내 광고와 홍보 광고 캠페인의 성과 데이터를 가져옵니다. 이러한 메서드에 대한 자세한 내용은 다음 문서를 참조하세요. <ul><li>[광고 성과 데이터 가져오기](get-ad-performance-data.md)</li><li>[광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)</li></ul> |
+| Windows 10 드라이버의 오류(IHV용) |  <ul><li>[Windows 10 드라이버에 대한 오류 보고 데이터 가져오기](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Windows 10 드라이버 오류에 대한 세부 정보 가져오기](get-details-for-a-windows-10-driver-error.md)</li><li>[Windows 10 드라이버 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
+| Windows 7/Windows 8.x 드라이버의 오류(IHV용) |  <ul><li>[Windows 7 및 Windows 8.x 드라이버에 대한 오류 보고 데이터 가져오기](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Windows 7 또는 Windows 8.x 드라이버 오류에 대한 세부 정보 가져오기](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Windows 7 또는 Windows 8.x 드라이버 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |
+| 하드웨어 오류(OEM용) |  <ul><li>[OEM 하드웨어 오류 보고 데이터 가져오기](get-oem-hardware-error-reporting-data.md)</li><li>[OEM 하드웨어 오류에 대한 세부 정보 가져오기](get-details-for-an-oem-hardware-error.md)</li><li>[OEM 하드웨어 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-oem-hardware-error.md)</li></ul> |
 
 ## <a name="code-example"></a>코드 예제
 
@@ -110,16 +115,3 @@ Windows 스토어 분석 API는 오류 코드와 메시지를 포함하는 오�
     "source":"AnalyticsAPI"
 }
 ```
-
-## <a name="related-topics"></a>관련 항목
-
-* [앱 구입 가져오기](get-app-acquisitions.md)
-* [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
-* [오류 보고 데이터 가져오기](get-error-reporting-data.md)
-* [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)
-* [앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)
-* [앱 등급 가져오기](get-app-ratings.md)
-* [앱 리뷰 가져오기](get-app-reviews.md)
-* [광고 성과 데이터 가져오기](get-ad-performance-data.md)
-* [홍보 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
-

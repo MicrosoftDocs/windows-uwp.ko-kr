@@ -2,21 +2,17 @@
 title: "사각형"
 description: "Direct3D 및 Windows 프로그래밍에서 화면의 개체는 경계 사각형의 관점에서 참조됩니다."
 ms.assetid: 3B78AE66-2C1A-4191-BDCA-D737E33460BA
-keywords:
-- "사각형"
+keywords: "사각형"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a532179df604a1b241564b0d134871e384c6b32d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2128dd8fa6ff22e20cd8a25dea0fd44431c1fae2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="rectangles"></a>사각형
 
 
@@ -52,7 +48,6 @@ typedef struct tagRECT {
  
 
  
-
 
 
 

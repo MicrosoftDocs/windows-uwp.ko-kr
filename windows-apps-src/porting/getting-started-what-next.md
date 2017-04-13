@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-what-next"></a>시작: 다음에 할 일
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -42,4 +39,3 @@ Windows 10은 개발자에게 새로운 앱 빌드 기회를 제공합니다. �
 * [iOS 개발자를 위한 Windows 컨트롤](https://msdn.microsoft.com/library/windows/apps/dn263255)
 * [iOS 개발자용 Windows 도움말](https://msdn.microsoft.com/library/windows/apps/dn263256)
 * [Windows용 앱 빌드 블로그](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
-

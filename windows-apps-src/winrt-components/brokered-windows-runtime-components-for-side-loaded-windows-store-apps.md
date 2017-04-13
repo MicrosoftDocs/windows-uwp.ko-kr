@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8844196503c45e9488d3fa2a543d588229d01cdd
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e3acc609e5db083bda023643ef4dae4c5d9d0248
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #<a name="brokered-windows-runtime-components-for-a-side-loaded-windows-store-app"></a>테스트용으로 로드하는 Windows 스토어 앱의 조정된 Windows 런타임 구성 요소
 
 이 문서에서는 Windows 10에서 지원되며, 쉽게 터치할 수 있는 .NET 앱에서 업무에 중요한 핵심 작업을 담당하는 기존 코드를 사용할 수 있도록 하는 기업 대상 기능에 대해 설명합니다.
@@ -582,6 +579,5 @@ struct PersonStruct
 -   [Windows 10에서 앱을 테스트용으로 로드하는 방법](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#GroupPolicy)
 
 -   [기업에 Windows 스토어 앱 배포](http://go.microsoft.com/fwlink/p/?LinkID=264770)
-
 
 

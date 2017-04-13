@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "앱 내 광고의 UI 및 사용자 환경 지침을 알아봅니다."
-title: "앱 내 광고의 UI 및 사용자 환경 지침"
+title: "광고의 UI 및 사용자 환경 지침"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, 지침, 모범 사례"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e1c3fef6e8cc7cc483b72b6ba142d323055c960c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 75a68977e5edb996a5e2fc1ae9265d11b7492ad9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>앱 내 광고의 UI 및 사용자 환경 지침
+# <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
 
 이 문서에서는 앱 내 배너 광고와 중간 광고로 뛰어난 환경을 제공하기 위한 지침을 제시합니다. 앱의 모양과 느낌을 디자인하는 방법에 대한 일반적인 지침은 [디자인 및 UI](https://developer.microsoft.com/windows/apps/design)를 참조하세요.
 
@@ -75,7 +72,7 @@ ms.lasthandoff: 02/07/2017
 
 과하지 않게 사용될 경우 중간 광고는 사용자 만족도에 부정적인 영향을 주지 않으면서 앱 수익을 크게 높일 수 있습니다. 그렇지만 잘못 사용하면 이러한 광고는 정반대의 효과를 가져올 수 있습니다.
 
-다음 섹션에서는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 사용하여 앱 내 중간 광고를 구현하는 방법에 대한 권장 사항과 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 구현의 예를 제시합니다. 정책이 관련되는 경우를 제외하고, 개발자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 평점 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
+다음 섹션에서는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 사용하여 앱 내 동영상 및 배너 중간 광고를 구현하는 방법에 대한 권장 사항과 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 구현의 예를 제시합니다. 정책이 관련되는 경우를 제외하고, 개발자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 평점 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
 
 ### <a name="best-practices"></a>모범 사례
 
@@ -91,7 +88,7 @@ ms.lasthandoff: 02/07/2017
 
     * 사용자 지정 아바타 특징(예: 문신 또는 모자)
 
-* 앱이 동영상 광고를 시청해야 완료되는 경우 닫기 단추를 누를 때 오류 메시지가 나타나도 놀라지 않도록 해당 규칙을 미리 언급합니다.
+* 앱이 동영상 중간 광고를 시청해야 완료되는 경우 닫기 단추를 누를 때 오류 메시지가 나타나도 놀라지 않도록 해당 규칙을 미리 언급합니다.
 
 * 이상적으로 광고를 표시해야 하는 시간보다 30-60초 전쯤에 광고를 미리 가져옵니다([InterstitialAd.RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 호출).
 
@@ -105,13 +102,13 @@ ms.lasthandoff: 02/07/2017
 
     * [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx)을 기준으로 사용자 대역폭을 저장하도록 선택하는 경우 **ConnectionProfile** 클래스에 도움이 될 수 있는 API가 있습니다.
 
-* 10초 이내에 이동할 수 없는 경우와 같은 타당한 이유가 있는 경우가 아니면 기본(30초) 시간 제한을 사용합니다. 동영상 광고는 특히, 고속 연결이 제공되지 않는 시장에서 배너보다 다운로드하는 데 훨씬 더 오래 걸립니다.
+* 10초 이내에 이동할 수 없는 경우와 같은 타당한 이유가 있는 경우가 아니면 기본(30초) 시간 제한을 사용합니다. 중간 광고는 특히, 고속 연결이 제공되지 않는 시장에서 표준 배너 광고보다 다운로드하는 데 훨씬 더 오래 걸립니다.
 
 <span/>
 
-* 사용자의 데이터 요금제를 염두에 둡니다. 예를 들어 데이터 제한에 가까워졌거나 제한을 초과하는 모바일 디바이스에서는 동영상 광고를 표시하지 않거나 광고를 제공하기 전에 사용자에게 경고를 합니다. [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) 클래스에 도움이 될 수 있는 API가 있습니다.
+* 사용자의 데이터 요금제를 염두에 둡니다. 예를 들어 데이터 제한에 가까워졌거나 제한을 초과하는 모바일 디바이스에서는 동영상 중간 광고를 표시하지 않거나 광고를 제공하기 전에 사용자에게 경고를 합니다. [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) 클래스에 도움이 될 수 있는 API가 있습니다.
 
-* 초기 전송 후 앱을 지속적으로 향상시킵니다. [광고 보고서](../publish/advertising-performance-report.md)를 살펴보고 채우기 및 동영상 완료 속도 향상에 도움이 되도록 디자인을 변경합니다.
+* 초기 전송 후 앱을 지속적으로 향상시킵니다. [광고 보고서](../publish/advertising-performance-report.md)를 살펴보고 채우기 및 동영상 중간 광고 완료 속도 향상에 도움이 되도록 디자인을 변경합니다.
 
 <span />
 ### <a name="practices-to-avoid"></a>피해야 할 사례
@@ -120,13 +117,13 @@ ms.lasthandoff: 02/07/2017
 
 * 지나친 광고를 삼갑니다. 사용자가 게임을 하는 것 외에 분명하게 선택적인 구체적 혜택을 받는 경우가 아니면 5분 간격 이상으로 광고를 제공하지 않도록 합니다.
 
-* 사용자가 잘못된 타일을 클릭한 것으로 오인할 수 있으므로 앱을 시작할 때는 동영상 중간 광고를 표시하지 않습니다.
+* 사용자가 잘못된 타일을 클릭한 것으로 오인할 수 있으므로 앱을 시작할 때는 중간 광고를 표시하지 않습니다.
 
-* 종료할 때 동영상 중간 광고를 표시하지 않습니다. 완료 속도가 거의 제로에 가까워지므로 잘못된 인벤토리입니다.
+* 종료할 때 중간 광고를 표시하지 않습니다. 완료 속도가 거의 제로에 가까워지므로 잘못된 인벤토리입니다.
 
 * 두 개 이상의 중간 광고를 연속으로 표시하지 않습니다. 진행률 표시줄이 시작점으로 다시 설정되게 되어 사용자에게 혼란을 줍니다. 많은 사람들이 코딩 버그나 광고 제공 버그 정도로 생각합니다.
 
-* 동영상 광고를 가져오고 5분 이상 경과한 후 [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx)를 호출하지 않습니다. 좋은 인벤토리는 미리 가져온 광고가 청구 가능한 광고 노출로 최대한 많이 변환되도록 합니다.
+* 동영상 중간 광고를 가져오고 5분 이상 경과한 후 [InterstitialAd.Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx)를 호출하지 않습니다. 좋은 인벤토리는 미리 가져온 광고가 청구 가능한 광고 노출로 최대한 많이 변환되도록 합니다.
 
 * 광고 제공이 실패할 경우 광고를 사용할 수 없는 것과 같은 벌칙을 부과하지 않습니다. 예를 들어 "광고를 시청하여 *xxx* 받기" UI 옵션을 표시한다면 사용자가 광고를 시청한 후 *xxx*를 제공해야 합니다. 다음 두 가지 옵션을 고려해야 합니다.
 
@@ -160,4 +157,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

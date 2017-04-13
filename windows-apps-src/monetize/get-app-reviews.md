@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API, 리뷰"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 68ad995341d0d4bedbe566e8a491a80b9b0a8ed2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 79ba971e64958ab83e2674a91be37be754d2d9b6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-app-reviews"></a>앱 리뷰 가져오기
 
 
@@ -73,7 +70,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 | 필드        | 지원되는 연산자   |  설명        |
 |---------------|--------|-----------------|
 | 출시 | eq, ne | 디바이스 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
-| OSVersion  | eq, ne  | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>알 수 없음</strong></li></ul>  |
+| OSVersion  | eq, ne  | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows8</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows10</strong></li><li><strong>알 수 없음</strong></li></ul>  |
 | deviceType  | eq, ne  | 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul>  |
 | isRevised  | eq, ne  | 수정된 리뷰를 필터링하려면 <strong>true</strong>를 지정하고, 그렇지 않으면 <strong>false</strong>를 지정합니다.  |
 | packageVersion  | eq, ne  | 검토된 앱 패키지의 버전입니다.  |
@@ -115,7 +112,7 @@ Authorization: Bearer <your access token>
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 값      | 배열  | 리뷰 데이터를 포함하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [리뷰 값](#review-values) 섹션을 참조하세요.                                                                                                                                      |
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 리뷰 데이터 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 리뷰 데이터 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                                                                                                                                                                                                             |
 
 <span/>
@@ -197,7 +194,6 @@ Authorization: Bearer <your access token>
 * [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md)
 * [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md)
 * [앱 집계 정보 가져오기](get-app-acquisitions.md)
-* [추가 기능 집계 정보 가져오기](get-in-app-acquisitions.md)
+* [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
 * [앱 평점 가져오기](get-app-ratings.md)
-

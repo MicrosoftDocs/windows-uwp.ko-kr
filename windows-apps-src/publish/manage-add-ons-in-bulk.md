@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6d1ffcc1-b3c6-4e2f-8fbe-d243b20a6272
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 3d7c8f1ab468e4797096e83fbbf256f46b494439
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d5ef4c90aa9bb66ff6589d3dbe7aa6491fbf80a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-add-ons-in-bulk"></a>대량으로 추가 기능 관리
 
 > **중요** 이 기능은 현재 [개발자 센터 참가자 프로그램](dev-center-insider-program.md)에 가입한 개발자 계정으로만 사용할 수 있습니다. 모든 개발자에게 제공되기 전에 이 기능의 구현이 변경될 수 있습니다. 이 예비 설명서에서는 기능의 작동 방식에 대한 몇 가지 기본 정보를 제공합니다.
@@ -56,5 +53,4 @@ ms.lasthandoff: 02/08/2017
 새 추가 기능을 제출하려면 새 행을 추가하고 새 추가 기능에 대한 정보를 입력합니다. 모든 필수 정보를 입력해야 합니다. 
 
 모든 변경 내용을 적용했으면 동일한 파일 이름으로 .csv 파일을 저장한 다음 지정한 필드로 끌어 파일을 업로드하거나 **파일 찾아보기**를 클릭합니다. 제출하기 전에 수정해야 하는 오류와 함께 변경 내용의 요약이 표시됩니다. 정보가 올바른지 확인한 후 **스토어에 제출**을 클릭할 수 있습니다. 제공한 정보를 사용하여 각 추가 기능이 제출 프로세스를 통과합니다.
-
 

@@ -9,20 +9,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 2332abe43732299dfb0f4bc265bf1b12877a17aa
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 47bd2d7db1517c7cb54b018ee014e3714e71cf3e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-a-certificate-for-package-signing"></a>패키지 서명용 인증서 만들기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 PowerShell 도구를 사용하여 앱 패키지 서명용 인증서를 만들고 내보내는 방법을 설명합니다. [UWP 앱 패키지](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)에 Visual Studio를 사용하는 것도 좋지만, Visual Studio를 사용하여 앱을 개발하지 않은 경우 스토어용 앱을 수동으로 패키지할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+> [!IMPORTANT] 
+> Visual Studio를 사용하여 앱을 개발하는 경우, Visual Studio 마법사를 사용하여 인증서를 가져오고 앱 패키지에 서명하는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
+
+## <a name="prerequisites"></a>필수 구성 요소
 
 - **패키지된 앱 또는 패키지되지 않은 앱**  
 AppxManifest.xml 파일이 들어 있는 앱 최종 앱 패키지에 서명하는 데 사용될 인증서를 만드는 동안 매니페스트 파일을 참조해야 합니다. 앱을 수동으로 패키지하는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구를 사용하여 앱 패키지 만들기](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요.

@@ -2,21 +2,17 @@
 title: "삼각형 스트립"
 description: "삼각형 스트립은 일련의 연결된 삼각형입니다. 삼각형이 연결되었기 때문에 응용 프로그램에서 각 삼각형의 세 꼭짓점을 반복해서 지정할 필요가 없습니다."
 ms.assetid: BACC74C5-14E5-4ECC-9139-C2FD1808DB82
-keywords:
-- "삼각형 스트립"
+keywords: "삼각형 스트립"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 910b4b6aa536e0956b06c33a796a8d929e77acb9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fa94534e10bcf124f0a5ba24e59a51b525f2d44e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="triangle-strips"></a>삼각형 스트립
 
 
@@ -85,7 +81,6 @@ d3dDevice->DrawPrimitive( D3DPT_TRIANGLESTRIP, 0, 4);
  
 
  
-
 
 
 

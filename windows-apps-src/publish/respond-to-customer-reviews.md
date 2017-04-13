@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 06be2dad7022a25e07a159bec7f1d007ff608ed3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7de4e53df32979d87a19b7d0556ef716b901687b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
 
@@ -54,4 +51,3 @@ ms.lasthandoff: 02/07/2017
 
 
 고객의 의견에 귀를 기울이고 응답하는 것은 시작에 불과합니다. 의견을 반영하여 조치를 취하는 것이 중요합니다. 파격적으로 개선된 경우에는 앱을 업데이트하는 [새 제출을 만들어](app-submissions.md) 스토어에서 자신 있게 선보이세요.
-

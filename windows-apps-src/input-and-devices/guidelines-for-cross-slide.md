@@ -5,13 +5,11 @@ title: "교차 방향으로 밀기에 대한 지침"
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# 교차 방향으로 밀기에 대한 지침
+# <a name="guidelines-for-cross-slide"></a>교차 방향으로 밀기에 대한 지침
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -25,14 +23,14 @@ ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
 
 교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
+## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
 
 
 -   단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다.
 -   탭 조작이 다른 용도로 사용되는 경우 항목 선택에 교차 방향으로 밀기를 사용합니다.
 -   큐에 항목을 추가할 때는 교차 방향으로 밀기를 사용하지 마세요.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
+## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
 
 
 선택 및 끌기는 한 방향(세로 또는 가로)으로 이동 가능한 콘텐츠 영역 내에서만 사용할 수 있습니다. 다른 조작이 작동하려면 하나의 이동 방향을 잠그고 이동 방향에 수직으로 제스처를 수행해야 합니다.
@@ -55,7 +53,7 @@ ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
 
 단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다. 자세한 내용은 [ListView 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/hh465382)를 참조하세요.
 
-**참고** 웹 브라우저나 전자 판독기와 같이 콘텐츠 영역이 양방향으로 이동될 수 있는 경우 시간이 제한된 누르고 있기 조작을 사용해서 이미지 및 하이퍼링크와 같은 개체에 대한 상황에 맞는 메뉴를 호출해야 합니다.
+**참고**  웹 브라우저나 전자 판독기와 같이 콘텐츠 영역이 양방향으로 이동될 수 있는 경우 시간이 제한된 누르고 있기 조작을 사용해서 이미지 및 하이퍼링크와 같은 개체에 대한 상황에 맞는 메뉴를 호출해야 합니다.
 
  
 
@@ -128,7 +126,7 @@ ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
 
 여러 개체를 이동해야 하는 경우 사용자가 여러 항목을 선택한 다음 모든 항목을 한 번에 끌 수 있게 합니다.
 
-## <span id="related_topics"></span>관련 문서
+## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>관련 문서
 
 
 **샘플**
@@ -150,11 +148,5 @@ ms.openlocfilehash: 6f89875b5ef14c029103155f4e3c333dbdad0cab
  
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

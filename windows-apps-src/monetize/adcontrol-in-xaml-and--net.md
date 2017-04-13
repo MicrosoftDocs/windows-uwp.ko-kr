@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
-description: "Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 XAML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다."
+description: "Windows10(UWP), Windows8.1 또는 Windows Phone 8.1용 XAML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다."
 title: "XAML 및 .NET의 AdControl"
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,24 +9,21 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, AdControl, XAML, .net, 연습"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: db84e03d0cefb4692689ed901f25930a064f9a31
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9db232709d3aa4ca1b7a6c6672cb2d1c1dea5049
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-in-xaml-and-net"></a>XAML 및 .NET의 AdControl
 
 
-이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스를 사용하여 Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 XAML 앱에서 배너 광고를 표시하는 방법을 보여 줍니다. 이 연습에서는 **AdMediatorControl** 또는 광고 조정을 사용하지 않습니다.
+이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스를 사용하여 Windows10(UWP), Windows8.1 또는 Windows Phone 8.1용 XAML 앱에서 배너 광고를 표시하는 방법을 보여 줍니다. 이 연습에서는 **AdMediatorControl** 또는 광고 조정을 사용하지 않습니다.
 
 C# 및 C++를 사용하여 XAML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
 * UWP 앱: Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치합니다.
-* Windows 8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
+* Windows8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
 
 ## <a name="code-development"></a>코드 개발
 
@@ -40,13 +37,13 @@ C# 및 C++를 사용하여 XAML 앱에 배너 광고를 추가하는 방법을 �
 
     -   UWP(유니버설 Windows 플랫폼) 프로젝트: **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
+    -   Windows8.1 프로젝트: **Windows8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
     -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
   ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
-    > **참고**&nbsp;&nbsp;이 이미지는 Visual Studio 2015에서 Windows 10용 UWP 프로젝트를 빌드하는 방법을 보여 줍니다. Windows 8.1 또는 Windows Phone 8.1 앱을 빌드하거나 Visual Studio 2013을 사용하는 경우 화면이 다르게 나타납니다.
+    > **참고**&nbsp;&nbsp;이 이미지는 Visual Studio 2015에서 Windows 10용 UWP 프로젝트를 빌드하는 방법을 보여 줍니다. Windows8.1 또는 Windows Phone 8.1 앱을 빌드하거나 Visual Studio 2013을 사용하는 경우 화면이 다르게 나타납니다.
 
 3.  **참조 관리자**에서 확인을 클릭합니다.
 4.  광고를 포함하는 페이지의 XAML을 **Microsoft.Advertising.WinRT.UI** 네임스페이스를 포함하도록 수정합니다. 예를 들어 Visual Studio에서 생성된 기본 샘플 앱(이 앱에서는 MyAdFundedWindows10AppXAML)에서 XAML 페이지는 **MainPage.XAML**입니다.
@@ -155,4 +152,3 @@ C# 및 C++를 사용하여 XAML 앱에 배너 광고를 추가하는 방법을 �
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 
  
-

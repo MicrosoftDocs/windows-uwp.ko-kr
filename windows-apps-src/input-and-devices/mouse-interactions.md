@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 94a92c184f4c695caf29cb7a185842ccd72e4c53
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: be99225c0691c8813a071a314ab3df4573fb11f5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mouse-interactions"></a>마우스 조작
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -139,7 +136,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 ## <a name="related-articles"></a>관련 문서
 
 * [포인터 입력 처리](handle-pointer-input.md)
-* [입력 장치 식별](identify-input-devices.md)
+* [입력 디바이스 식별](identify-input-devices.md)
 
 **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
@@ -156,7 +153,6 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
  
 
  
-
 
 
 

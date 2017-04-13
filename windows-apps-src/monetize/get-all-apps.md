@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 모든 앱에 대한 정보를 검색합니다."
-title: "Windows 스토어 제출 API를 사용하여 모든 앱 가져오기"
+title: "모든 앱 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 12466a50c6cabe5ceca907cdd2f0d600ec95121f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 93e973eb20835160e6b580bc932ce559b47e0ce1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-all-apps-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 모든 앱 가져오기
+# <a name="get-all-apps"></a>모든 앱 가져오기
 
 
 
@@ -125,7 +122,7 @@ Authorization: Bearer <your access token>
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | value      | 배열  | 계정에 등록된 각 앱에 대한 정보가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [응용 프로그램 리소스](get-app-data.md#application_object)를 참조하세요.                                                                                                                           |
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 계정에 등록된 앱이 20개인 경우 응답 본문에는 ```applications?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10```을 호출하여 다음 10개의 앱을 호출할 수 있음을 나타냅니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 계정에 등록된 앱이 20개인 경우 응답 본문에는 ```applications?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications?skip=10&top=10```을 호출하여 다음 10개의 앱을 호출할 수 있음을 나타냅니다. |
 | totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 계정에 등록된 총 앱 수)입니다.                                                                                                                                                                                                                             |
 
 <span/>
@@ -147,4 +144,3 @@ Authorization: Bearer <your access token>
 * [앱 가져오기](get-an-app.md)
 * [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md)
 * [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)
-

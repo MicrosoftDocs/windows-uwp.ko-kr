@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 51add4631b807940e051a8f4cbaca92063e41d4a
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="splash-screens"></a>시작 화면
 
 모든 UWP 앱에는 사용자 지정할 수 있는 이미지와 배경색이 조합된 시작 화면이 있어야 합니다.

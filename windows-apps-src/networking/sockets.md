@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-description: "UWP(유니버설 Windows 플랫폼) 앱 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 장치와 통신할 수 있습니다."
+description: "UWP(유니버설 Windows 플랫폼) 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다."
 title: "소켓"
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 ms.author: bobdel
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0e9121dfc590a1a7f67be69b7dbce475e438dd08
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8933fb5c970203746fe1a00c71c0630fa264ebf6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="sockets"></a>소켓
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -303,6 +300,5 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 ## <a name="the-winsock-api"></a>Winsock API
 
 UWP 앱에서도 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673)을 사용할 수 있습니다. 지원되는 Winsock API는 Windows Phone 8.1Microsoft Silverlight의 Winsock API를 기반으로 하며, 대부분의 형식, 속성 및 메서드를 지원합니다(오래된 것으로 간주되는 일부 API는 제거됨). Winsock 프로그래밍에 대한 자세한 내용은 [여기](https://msdn.microsoft.com/library/windows/desktop/ms740673)에서 확인할 수 있습니다.
-
 
 

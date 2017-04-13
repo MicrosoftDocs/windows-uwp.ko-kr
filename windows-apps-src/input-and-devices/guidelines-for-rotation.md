@@ -11,17 +11,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6b5d2e6a41c1566c7c03b61b91bf9c641f674cea
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 189358c20ce934a946e4f4c034dc058d904b05d3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="rotation"></a>회전
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-이 문서에서는 새로운 회전 Windows UI에 대해 설명하고 UWP 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
+이 문서에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 UWP 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -130,7 +127,6 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
  
 
  
-
 
 
 

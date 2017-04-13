@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고 네트워크, 앱 메타데이터"
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8ee555d335007a09c61247a929705aa2fff2469d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d377fe7e1eb71132ffa21dd1b11dddf9ca9bb084
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-metadata-api-for-advertising-networks"></a>광고 네트워크용 앱 메타데이터 API
 
 광고 네트워크는 *앱 메타데이터 API*를 사용하여 Windows 스토어에서 앱의 스토어 목록에 대한 설명 및 범주와 같은 세부 정보와, 앱이 13세 미만의 어린이를 대상으로 하는지 여부와 같이, 앱에 대한 메타데이터를 프로그래밍 방식으로 검색합니다. 이 API는 현재 Microsoft에서 API에 대한 권한을 부여받은 개발자로만 액세스가 제한됩니다.
@@ -77,7 +74,7 @@ ms.lasthandoff: 02/08/2017
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------|
-| app_id | 문자열 | 필수. 메타데이터를 검색할 앱의 ID입니다. 다음 값 중 하나일 수 있습니다.<br/><br/><ul><li>앱의 스토어 ID입니다. 예를 들어 스토어 ID는 9NBLGGH29DM8입니다.</li><li>Windows 8.x 또는 Windows Phone 8.x용으로 작성한 앱의 제품 ID(*앱 ID*라고도 함)입니다. 제품 ID는 GUID입니다.</li></ul> |
+| app_id | 문자열 | 필수. 메타데이터를 검색할 앱의 ID입니다. 다음 값 중 하나일 수 있습니다.<br/><br/><ul><li>앱의 스토어 ID입니다. 예를 들어 스토어 ID는 9NBLGGH29DM8입니다.</li><li>Windows8.x 또는 Windows Phone 8.x용으로 작성한 앱의 제품 ID(*앱 ID*라고도 함)입니다. 제품 ID는 GUID입니다.</li></ul> |
 
 <span/>
 
@@ -119,7 +116,7 @@ Ocp-Apim-Subscription-Key: <subscription key>
 | name           | 문자열  | 앱의 이름입니다.   |
 | 설명           | 문자열  | 앱의 스토어 목록에 대한 설명입니다.  |
 | phoneStoreGuid           | 문자열  | 앱의 제품 ID(Windows Phone 8.x)입니다. 이 ID는 GUID입니다.  |
-| windowsStoreGuid           | 문자열  | 앱의 제품 ID(Windows 8.x)입니다. 이 ID는 GUID입니다. |
+| windowsStoreGuid           | 문자열  | 앱의 제품 ID(Windows8.x)입니다. 이 ID는 GUID입니다. |
 | storeCategory           | 문자열  | 스토어에서 앱 범주입니다. 지원되는 값은 스토어에서 앱의 [범주 및 하위 범주 테이블](../publish/category-and-subcategory-table.md)을 참조하세요.  |
 | iabCategory           | 문자열  | IAB(Interactive Advertising Bureau)에서 정의한 앱의 콘텐츠 범주입니다. 예를 들면 **뉴스** 또는 **스포츠**가 됩니다. 콘텐츠 범주 목록은 IAB 웹 사이트에서[IAB Tech Lab Content Taxonom](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy)(IAB 기술 랩 콘텐츠 분류) 페이지를 참조하세요.   |
 | iabCategoryId           | 문자열  | 앱에 대한 콘텐츠 범주의 ID입니다. 예를 들어 **IAB12**는 뉴스 범주에 대한 ID, **IAB17**은 스포츠 범주에 대한 ID입니다. 콘텐츠 범주 ID 목록은 [OpenRTB API Specification](http://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf)(OpenRTB API 사양)의 섹션 5.1을 참조하세요. |
@@ -135,4 +132,3 @@ Ocp-Apim-Subscription-Key: <subscription key>
  
 
  
-

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 특정 앱에 대한 정보를 검색합니다."
-title: "Windows 스토어 제출 API를 사용하여 앱 가져오기"
+title: "앱 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 176e3b584137e503c4adfe2eb612d9329226baac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6087bf65ac297b12f92a9082db4e6a12e93130ef
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-app-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 가져오기
+# <a name="get-an-app"></a>앱 가져오기
 
 
 
@@ -114,4 +111,3 @@ Authorization: Bearer <your access token>
 * [모든 앱 가져오기](get-all-apps.md)
 * [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md)
 * [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)
-

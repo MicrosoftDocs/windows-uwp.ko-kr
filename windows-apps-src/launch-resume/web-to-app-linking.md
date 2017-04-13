@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 225f0d2bd5d8a2434c3e548064960f44f1df530e
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: df5d232cc997c0c888b3a2f092efeb937e991a85
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="support-web-to-app-linking-with-app-uri-handlers"></a>앱 URI 처리기로 웹과 앱 연결 지원
 
 웹과 앱 연결을 지원하여 사용자의 앱 참여를 강화하는 방법을 알아봅니다. 웹과 앱 연결을 통해 웹 사이트와 앱을 연결할 수 있습니다. 사용자가 브라우저를 여는 대신 웹 사이트에 대한 http 또는 https 링크를 열면 앱이 시작됩니다. 앱이 설치되지 않은 경우 브라우저에서 웹 사이트를 여는 링크가 제공됩니다. 확인된 콘텐츠 소유자만 링크를 등록할 수 있기 때문에 사용자는 이 환경을 신뢰할 수 있습니다.
@@ -199,4 +196,3 @@ protected override void OnActivated(IActivatedEventArgs e)
 [URI 활성화 처리](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 
 [연결 시작 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)에서는 LaunchUriAsync() API를 사용하는 방법을 보여 줍니다.
-

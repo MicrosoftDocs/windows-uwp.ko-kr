@@ -9,13 +9,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: df66981ae8355ea62128a881f02fd6fb891ffb30
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8d6764051a6f3d9d5c6d851f0ba15353da5f9d5e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-submissions"></a>앱 제출
 
 
@@ -53,7 +50,7 @@ ms.lasthandoff: 02/07/2017
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **범주 및 하위 범주**  | 필수                                    | [범주 및 하위 범주 테이블](category-and-subcategory-table.md)       |
 | **시스템 요구 사항**      | 옵션                                    | [시스템 요구 사항](enter-app-properties.md#system-requirements)      |
-| **앱 선언**          | 기본값: 고객이 장치 또는 이동식 저장소를 대체하기 위해 이 앱을 설치할 수 있음, Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있음 | [앱 선언](app-declarations.md) |
+| **앱 선언**          | 기본값: 고객이 디바이스 또는 이동식 저장소를 대체하기 위해 이 앱을 설치할 수 있음, Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있음 | [앱 선언](app-declarations.md) |
 
 <span/>
 
@@ -70,7 +67,7 @@ ms.lasthandoff: 02/07/2017
 | 필드 이름                    | 참고                                  | 자세한 정보                          |
 |-------------------------------|----------------------------------------|----------------------------------------|
 | **패키지 업로드 제어**    | 필수(패키지 하나 이상)        | [앱 패키지 업로드](upload-app-packages.md) |
-| **장치 패밀리 가용성** | 기본값: 패키지에 따름       | [장치 패밀리 가용성](upload-app-packages.md#device-family-availability) |
+| **디바이스 패밀리 가용성** | 기본값: 패키지에 따름       | [디바이스 패밀리 가용성](upload-app-packages.md#device-family-availability) |
 | **점진적 패키지 배포**   | 옵션(업데이트에만 해당)            | [점진적 패키지 배포](gradual-package-rollout.md) |
 | **필수 업데이트**          | 옵션(업데이트에만 해당)            | [필수 업데이트](upload-app-packages.md#mandatory-update)
 
@@ -85,15 +82,15 @@ ms.lasthandoff: 02/07/2017
 | **설명**               | 필수                                    | [호소력 있는 앱 설명 쓰기](write-a-great-app-description.md) |
 | **릴리스 정보**             | 옵션                                    | [릴리스 정보](create-app-store-listings.md#release-notes)         |
 | **스크린샷**               | 필수(스크린샷 하나 이상)          | [앱 스크린샷 및 이미지](app-screenshots-and-images.md)       |
-| **앱 타일 아이콘**             | 옵션이지만, Windows Phone 8.1 이하의 경우 매우 권장 | [앱 타일 아이콘](create-app-store-listings.md#app-tile-icon) |
-| **판촉 아트워크**       | 옵션                                    | [앱 스크린샷 및 이미지](app-screenshots-and-images.md)       |
-| **앱 기능**              | 옵션                                    | [기능](create-app-store-listings.md#app-features)               |
+| **앱 타일 아이콘**             | 선택 사항이지만, Windows Phone 8.1 이하의 경우 매우 권장 | [앱 타일 아이콘](create-app-store-listings.md#app-tile-icon) |
+| **판촉 아트워크**       | 선택 사항                                    | [앱 스크린샷 및 이미지](app-screenshots-and-images.md)       |
+| **앱 기능**              | 선택 사항                                    | [기능](create-app-store-listings.md#app-features)               |
 | **추가 시스템 요구 사항**      | 옵션                                    | [추가 시스템 요구 사항](create-app-store-listings.md#additional-system-requirements) |
-| **키워드**                  | 옵션                                    | [키워드](create-app-store-listings.md#keywords)                   |
-| **저작권 및 상표 정보** | 옵션                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
-| **추가 사용 조건**  | 옵션                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |
-| **웹 사이트**                   | 옵션                                    | [웹 사이트](create-app-store-listings.md#website)                     |
-| **지원 연락처 정보**      | 옵션                                    | [지원 연락처 정보](create-app-store-listings.md)                |
+| **키워드**                  | 선택 사항                                    | [키워드](create-app-store-listings.md#keywords)                   |
+| **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
+| **추가 사용 조건**  | 선택 사항                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |
+| **웹 사이트**                   | 선택 사항                                    | [웹 사이트](create-app-store-listings.md#website)                     |
+| **지원 연락처 정보**      | 선택 사항                                    | [지원 연락처 정보](create-app-store-listings.md)                |
 | **개인 정보 취급 방침**            | 일부 앱에 필요. [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058) 및 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1) 참조 | [개인 정보 취급 방침](create-app-store-listings.md#privacy-policy) |
 | **플랫폼별 스토어 목록** | 옵션                               | [플랫폼별 스토어 목록 만들기](create-platform-specific-store-listings.md) |
 
@@ -108,4 +105,3 @@ ms.lasthandoff: 02/07/2017
 <span/>
 
 **참고**&nbsp;&nbsp;LOB(기간 업무) 앱을 엔터프라이즈에 직접 게시하는 방법은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
-

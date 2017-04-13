@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: feacd96ca2fa0cc4cd3d1087a982f61bc18d4604
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d17fd77759911e11c2efeaf84058526d8819781f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-declarations"></a>앱 선언
 
 [제출 프로세스](app-submissions.md) 중에 **앱 속성** 페이지의 **앱 선언** 섹션에서 앱에 대한 추가 정보를 제공할 수 있습니다. 이들 선언을 통해 앱이 제대로 표시되고 올바른 고객 집합에 제공되는지 확인하거나 고객이 앱을 사용하는 방법을 표시할 수 있습니다.
@@ -67,7 +64,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

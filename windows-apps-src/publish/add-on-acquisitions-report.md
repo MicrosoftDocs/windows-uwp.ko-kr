@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 189b15728fd5013a1f976803ffb0e55f57e95142
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c2001e93fd06cc93fa5cfe9d2a10a029e13c82d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-on-acquisitions-report"></a>추가 기능 구입 보고서
 
 
-Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows](../monetize/access-analytics-data-using-windows-store-services.md) 스토어 분석 REST API의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 이 보고서에서 추가 기능 구입은 고객이 추가 기능을 구매했음을 의미합니다. 같은 고객이 같은 소모성 추가 기능을 여러 번 구매한 경우 각 구매는 별도의 추가 기능 구입으로 계산됩니다.
 
@@ -32,7 +29,7 @@ Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 �
 
 -   **날짜**: 기본 필터는 **지난 30일**이지만 **지난 12개월**까지 이 필터를 확장할 수 있습니다.
 -   **추가 기능**: 기본 필터는 **모든 추가 기능**입니다. 추가 기능 중 하나에 대해서만 구입 데이터를 표시하려면 여기서 특정 추가 기능을 선택하면 됩니다.
--   **장치 유형**: 기본 설정은 **모든 장치**입니다. 특정 장치 유형에서만 추가 기능 구입에 대한 데이터를 표시하려는 경우 여기에서 특정한 장치를 선택할 수 있습니다.
+-   **장치 유형**: 기본 설정은 **모든 장치**입니다. 특정 디바이스 유형에서만 추가 기능 구입에 대한 데이터를 표시하려는 경우 여기에서 특정한 디바이스를 선택할 수 있습니다.
 
 아래 나열된 차트의 정보는 **필터 적용** 섹션에서 선택한 기간을 반영합니다.
 
@@ -70,4 +67,3 @@ Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 �
  
 
  
-

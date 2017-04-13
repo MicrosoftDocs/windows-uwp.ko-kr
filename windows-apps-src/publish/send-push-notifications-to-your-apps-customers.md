@@ -1,21 +1,18 @@
 ---
-author: shawjohn
+author: JnHs
 Description: "앱을 평가하거나 추가 기능을 구매하는 등의 행동을 유도하기 위해 Windows 개발자 센터에서 앱으로 대상 푸시 알림을 전송하는 방법을 알아보세요."
 title: "앱의 고객에게 대상 푸시 알림 보내기"
-ms.author: johnshaw
-ms.date: 02/08/2017
+ms.author: wdg-dev-content
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: a2bd3308863b6343a7616bf86e0b0036f1631bcd
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ca57ff45d440ebd68f7fb85b7d6a5da0a9f1995c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="send-targeted-push-notifications-to-your-apps-customers"></a>앱의 고객에게 대상 푸시 알림 보내기
 
 올바른 시간에 올바른 메시지로 고객의 참여를 유도하는 것이 앱 개발자로서 성공하기 위한 핵심입니다. Windows 개발자 센터에서는 푸시 알림을 모든 고객에게 또는 [고객층](create-customer-segments.md)에서 정의한 기준을 충족하는 Windows 10의 일부 고객에게만 전송하기 위해 사용할 수 있는 데이터 기반 고객 참여 플랫폼을 제공합니다.
@@ -23,6 +20,13 @@ ms.lasthandoff: 02/08/2017
 대상 푸시 알림을 사용하면 앱 평가, 추가 기능 구매, 새 기능 확인, 다른 앱 다운로드 등 고객의 참여를 유도할 수 있습니다.
 
 > **중요** 대상 지정 푸시 알림은 UWP 앱에만 사용할 수 있습니다.
+
+알림의 콘텐츠를 고려할 때 다음을 유의하십시오.
+- 알림의 콘텐츠는 스토어 [콘텐츠 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies)을 준수해야 합니다.
+- 알림 콘텐츠에는 기밀 정보나 민감한 정보가 포함되어서는 안 됩니다.
+- 알림이 일정에 따라 전달되도록 최선을 다할 것이지만, 전달에 영향을 미치는 지연 문제가 간혹 있을 수 있습니다.
+- 너무 자주 알림을 보내지 마십시오. 30분 간격보다 짧게 알림을 보내면 방해가 될 수 있으며, 많은 경우에 사람들은 알림을 덜 자주 받기를 선호합니다.
+- 여러분의 앱을 사용하는 고객이 나중에 장치를 다른 사람에게 사용하라고 주었을 경우(또한 고객층 멤버 자격을 판단할 때 본래 사용자의 Microsoft 계정으로 로그인되어 있을 경우), 원래 목표한 대상이 아닌 다른 사람에게 알림이 전달될 수 있음을 유의하십시오. 자세한 내용은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md#notification-customers)을 참조하세요.
 
 ## <a name="getting-started-with-push-notifications"></a>푸시 알림 시작
 
@@ -33,18 +37,21 @@ ms.lasthandoff: 02/08/2017
 
 ## <a name="to-create-and-send-a-targeted-push-notification"></a>대상 알림 만들기 및 보내기
 
-1. 아직 수행하지 않은 경우, [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치하고 앱의 시작 코드에서 [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 메서드를 호출하여 알림을 수신하도록 앱을 등록합니다. 이 메서드를 호출하는 방법에 대한 자세한 내용은 [Configure your app to receive Dev Center notifications](../monetize/configure-your-app-to-receive-dev-center-notifications.md)(개발자 센터 알림을 받도록 앱 구성)를 참조하세요.
-2.    [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)에서 앱을 선택합니다.
-3.    왼쪽 탐색 메뉴에서 **서비스**를 확장하고 **푸시 알림**을 선택합니다.
-4.    **대상 푸시 알림** 페이지에서 **새 알림**을 선택합니다.
-5.    **템플릿 선택** 섹션에서 보낼 알림 유형을 선택합니다. 자세한 내용은 [알림 템플릿 유형](#notification-template-types)을 참조하세요.
+다음 단계를 따라 대시보드에서 푸시 알림을 만들고 특정 고객층에 보냅니다.
+
+> **참고** 앱이 개발자 센터에서 대상 푸시 알림을 받으려면, 먼저 앱에서 [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 메서드를 호출하여 알림을 받도록 앱을 등록해야 합니다. 이 메서드는 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 사용할 수 있습니다. 코드 예제와 함께 이 메서드를 호출하는 방법은 [개발자 센터 알림을 받도록 앱 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
+
+1.    [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)에서 앱을 선택합니다.
+2.    왼쪽 탐색 메뉴에서 **서비스**를 확장하고 **푸시 알림**을 선택합니다.
+3.    **대상 푸시 알림** 페이지에서 **새 알림**을 선택합니다.
+4.    **템플릿 선택** 섹션에서 보낼 알림 유형을 선택합니다. 자세한 내용은 [알림 템플릿 유형](#notification-template-types)을 참조하세요.
   ![알림 템플릿](images/push-notifications-template.png)
-6.    **알림 설정** 섹션에서 알림의 **이름**을 선택하고, 알림을 보낼 **고객 그룹**을 선택합니다.
+5.    **알림 설정** 섹션에서 알림의 **이름**을 선택하고, 알림을 보낼 **고객 그룹**을 선택합니다.
 고객층을 아직 만들지 않은 경우 **새 고객 그룹 만들기**를 선택합니다. 알림에 새 고객층을 사용할 수 있으려면 24시간이 소요됩니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
-7.    알림을 언제 보낼지를 지정하려면 **알림 즉시 보내기** 확인란을 지우고 특정 날짜와 시간을 선택합니다.
-8.    알림의 만료 시점을 지정하려면 **알림 만료 없음** 확인란을 지우고 특정 만료 날짜와 시간을 선택합니다.
-9.    **알림 콘텐츠** 섹션의 **언어** 메뉴에서 알림을 표시할 언어를 선택합니다. 자세한 내용은 [알림 번역](#translate-your-notifications)을 참조하세요.
-10.    **옵션** 섹션에서 텍스트를 입력하고 원하는 다른 옵션을 구성합니다. 템플릿으로 시작한 경우 몇몇 옵션은 기본적으로 제공되지만 원하는 대로 변경할 수 있습니다.
+6.    알림을 언제 보낼지를 지정하려면 **알림 즉시 보내기** 확인란을 지우고 특정 날짜와 시간을 선택합니다.
+7.    알림의 만료 시점을 지정하려면 **알림 만료 없음** 확인란을 지우고 특정 만료 날짜와 시간을 선택합니다.
+8.    **알림 콘텐츠** 섹션의 **언어** 메뉴에서 알림을 표시할 언어를 선택합니다. 자세한 내용은 [알림 번역](#translate-your-notifications)을 참조하세요.
+9.    **옵션** 섹션에서 텍스트를 입력하고 원하는 다른 옵션을 구성합니다. 템플릿으로 시작한 경우 몇몇 옵션은 기본적으로 제공되지만 원하는 대로 변경할 수 있습니다.
    사용 가능한 옵션은 사용하는 알림 유형에 따라 달라집니다. 몇몇 옵션은 다음과 같습니다.
    - **정품 인증 유형**(대화형 알림 유형). **포그라운드**, **백그라운드** 또는 **프로토콜**을 선택할 수 있습니다.
    - **시작**(대화형 알림 유형). 알림에서 앱 또는 웹 사이트를 열도록 선택할 수 있습니다.
@@ -59,9 +66,7 @@ ms.lasthandoff: 02/08/2017
 
    > **팁**  적응형 타일 및 대화형 알림 메시지를 디자인하고 테스트하려면 [알림 시각화 도우미](https://www.microsoft.com/store/apps/9nblggh5xsl1) 앱을 사용해 보세요.
 
-11.    나중에 알림 작업을 계속 수행하려면 **초안으로 저장**을 선택하고, 모두 완료했으면 **보내기**를 선택합니다.
-
-> **참고** 알림의 콘텐츠는 스토어 [콘텐츠 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies)을 준수해야 합니다.
+10.    나중에 알림 작업을 계속 수행하려면 **초안으로 저장**을 선택하고, 모두 완료했으면 **보내기**를 선택합니다.
 
 ## <a name="notification-template-types"></a>알림 템플릿 유형
 
@@ -126,4 +131,3 @@ ms.lasthandoff: 02/08/2017
 - [알림 시각화 도우미 앱](https://www.microsoft.com/store/apps/9nblggh5xsl1)
 - [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync() 메서드](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)
 - [고객 구분 및 푸시 알림: 새로운 Windows 개발자 센터 참가자 프로그램 기능(블로그 게시물)](https://blogs.windows.com/buildingapps/2016/08/17/customer-segmentation-and-push-notifications-a-new-windows-dev-center-insider-program-feature/#XTuCqrG8G5IMgWew.97)
-

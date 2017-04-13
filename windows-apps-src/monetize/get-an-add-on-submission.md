@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출에 대한 데이터를 가져옵니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 가져오기"
+title: "추가 기능 제출 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: 2f6211c1ec399c5b6234ee4181dd319130c606b4
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 21bed5bd2b0c3b4e1fb2224cce9f6e3c9a2fd6b4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-add-on-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 제출 가져오기
+# <a name="get-an-add-on-submission"></a>추가 기능 제출 가져오기
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능(앱에서 바로 구매 또는 IAP라고도 함) 제출에 대한 데이터를 가져옵니다. Windows 스토어 제출 API를 사용하여 추가 기능 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
 
@@ -108,7 +105,7 @@ Authorization: Bearer <your access token>
     },
     "sales": [],
     "priceId": "Free",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -159,4 +156,3 @@ Authorization: Bearer <your access token>
 * [추가 기능 제출 업데이트](update-an-add-on-submission.md)
 * [추가 기능 제출 삭제](delete-an-add-on-submission.md)
 * [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
-

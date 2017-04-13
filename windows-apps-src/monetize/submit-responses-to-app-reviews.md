@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
 description: "Windows 스토어 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 응답을 제출합니다."
-title: "앱 리뷰에 대한 응답 제출"
+title: "리뷰에 대한 응답 제출"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 리뷰 API, 추가 기능 구입"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1531059831b4c20d11661eb87fceda7b8dcb7f02
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d418e64bf1608591e877da8339d1dda308611285
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="submit-responses-to-app-reviews"></a>앱 리뷰에 대한 응답 제출
+# <a name="submit-responses-to-reviews"></a>리뷰에 대한 응답 제출
 
 
 Windows 스토어 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 프로그래밍 방식으로 응답할 수 있습니다. 이 메서드를 호출하는 경우 응답하려는 리뷰의 ID를 지정해야 합니다. 리뷰 ID는 Windows 스토어 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다.
@@ -149,4 +146,3 @@ Content-Type: application/json
 * [Windows 스토어 서비스를 사용하여 리뷰에 응답](respond-to-reviews-using-windows-store-services.md)
 * [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md)
 * [앱 리뷰 가져오기](get-app-reviews.md)
-

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
 description: "Windows 스토어 리뷰 API에서 이 메서드를 사용하여 특정 리뷰에 응답할 수 있는지, 지정된 앱에 대한 리뷰에 응답할 수 있는지 판단할 수 있습니다."
-title: "앱 리뷰에 대한 응답 정보 가져오기"
+title: "리뷰에 대한 응답 정보 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 리뷰 API, 응답 정보"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 88e6158bfc5df23e5c2056624e353b38b39c7331
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 46f5cb04fcea1b06205999743205396a875ebbce
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-response-info-for-app-reviews"></a>앱 리뷰에 대한 응답 정보 가져오기
+# <a name="get-response-info-for-reviews"></a>리뷰에 대한 응답 정보 가져오기
 
 앱의 고객 리뷰에 프로그래밍 방식으로 응답하려면 Windows 스토어에서 리뷰 API에서 이 메서드를 사용하여 먼저 리뷰에 응답할 권한이 있는지 확인할 수 있습니다. 리뷰 응답을 받지 않기로 선택한 고객이 제출한 리뷰에는 응답할 수 없습니다. 리뷰에 응답할 수 있는지 확인한 후 [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md) 메서드를 사용하여 프로그래밍 방식으로 응답할 수 있습니다.
 
@@ -95,4 +92,3 @@ Authorization: Bearer <your access token>
 * [개발자 센터 대시보드를 사용하여 고객 리뷰에 응답](../publish/respond-to-customer-reviews.md)
 * [Windows 스토어 서비스를 사용하여 리뷰에 응답](respond-to-reviews-using-windows-store-services.md)
 * [앱 리뷰 가져오기](get-app-reviews.md)
-

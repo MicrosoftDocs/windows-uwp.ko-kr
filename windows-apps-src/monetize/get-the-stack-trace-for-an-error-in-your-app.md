@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 저장소 서비스, Windows 스토어 분석 API, 스택 추적, 오류"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8b10c7f9e2de962aca719055a26d8c3954ea052f
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: fb99c65e91e02e3e60b12258e30083183c213324
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>앱에서 오류에 대한 스택 추적 가져오기
 
 Windows 스토어 분석 API에서 이 메서드를 사용하여 앱에서 오류에 대한 스택 추적을 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 스택 추적만 다운로드할 수 있습니다. 스택 추적은 Windows 개발자 센터 대시보드에서 [상태 보고서](../publish/health-report.md)의 **오류** 섹션을 통해서도 확인할 수 있습니다.
@@ -76,7 +73,7 @@ Authorization: Bearer <your access token>
 | 값      | 유형    | 설명                  |
 |------------|---------|--------------------------------|
 | 값      | array   | 각각 스택 추적 데이터의 한 프레임을 포함하는 개체 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [스택 추적 값](#stack-trace-values) 섹션을 참조하세요. |
-| @nextLink  | 문자열  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
+| @nextLink  | string  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | inumber | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
 
 <span/>
@@ -132,4 +129,3 @@ Authorization: Bearer <your access token>
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
 * [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)
-

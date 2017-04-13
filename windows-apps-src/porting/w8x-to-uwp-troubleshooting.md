@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6c10376854656abe276c53a9b6778665c1d47a4b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b30d26041718a74b9e2f3b9b93440e8fdf02b6c5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x를 UWP로 포팅하는 문제 해결
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -57,5 +54,4 @@ ms.lasthandoff: 02/07/2017
 | C# 컴파일러에서 "*\[...\]에 '<name>' 형식 또는 네임스페이스 이름이 없습니다.*" 또는 "*\[...\] 네임스페이스에 '<name>' 형식 또는 네임스페이스 이름이 없습니다.*" 또는 "*'&lt;<name>&gt;' 형식 또는 네임스페이스 이름이 현재 컨텍스트에 없습니다.*"라는 오류를 발생합니다. | 해결이 간단하지 않은 경우가 있을 수 있지만 확장 SDK에서 형식이 구현되었다는 의미일 수 있습니다. [Windows API](https://msdn.microsoft.com/library/windows/apps/bg124285) 참조 콘텐츠를 사용하여 API를 구현하는 확장 SDK를 확인한 다음 Visual Studio의 **추가** > **참조** 명령을 사용하여 해당 SDK에 대한 참조를 프로젝트에 추가합니다. 앱에서 범용 디바이스 패밀리라고 알려진 API 집합을 대상으로 하는 경우 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 호출하기 전에 확장 SDK가 있는지를 런타임으로 테스트하는 것이 중요합니다(적응 코드라고 함). 유니버설 API가 있으면 항상 확장 SDK의 API보다 더 선호됩니다. 자세한 내용은 [확장 SDK](w8x-to-uwp-porting-to-a-uwp-project.md)를 참조하세요. |
 
 다음 항목은 [XAML 및 UI 포팅](w8x-to-uwp-porting-xaml-and-ui.md)입니다.
-
 

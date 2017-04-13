@@ -2,25 +2,22 @@
 author: mcleanbyron
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 추가 기능을 관리합니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 관리"
+title: "추가 기능 관리"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 55a6b548246e801c9fcc0392265263123f24de00
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b442f48b7d03f0f972882ec240dbc1f37f018fd9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-add-ons-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 관리
+# <a name="manage-add-ons"></a>추가 기능 관리
 
 Windows 스토어 제출 API에서는 다음 메서드를 사용하여 앱의 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 지닌 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
+>**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
 
 이러한 메서드는 추가 기능을 가져오거나, 만들거나, 삭제하는 데만 사용될 수 있습니다. 추가 기능 제출을 만들려면 [추가 기능 제출 관리](manage-add-on-submissions.md)의 메서드를 참조하세요.
 
@@ -166,4 +163,3 @@ Windows 스토어 제출 API에서는 다음 메서드를 사용하여 앱의 �
 * [추가 기능 가져오기](get-an-add-on.md)
 * [추가 기능 만들기](create-an-add-on.md)
 * [추가 기능 삭제](delete-an-add-on.md)
-

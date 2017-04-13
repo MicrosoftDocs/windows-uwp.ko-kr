@@ -1,7 +1,7 @@
 ---
 author: Mtoepke
-title: "Xbox One 개발자 프로그램의 UWP에 대해 알려진 문제"
-description: 
+title: "Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제"
+description: "Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제를 나열합니다."
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 4b13b9bbbc75de47ed69112680894d5e3f34d8a1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 203d1abede2607617e0175103f54bf3068d53ff4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
 이 항목에서는 Xbox One 개발자 프로그램에서 UWP에 대해 알려진 문제를 설명합니다. 이 프로그램에 대한 자세한 내용은 [Xbox의 UWP](index.md)를 참조하세요. 
@@ -58,7 +55,17 @@ There is currently no workaround for this issue. Apps should govern their memory
 
 이 시점에서는 앱을 제거하고 다시 설치하는 경우에도 사용자를 로그아웃시킬 때까지 권한은 _고정_되어 있습니다.
  
-자녀 계정에만 사용할 수 있는 다른 유형의 예외가 있습니다. 자녀 계정에는 부모가 로그인하여 권한을 부여해야 하지만 권한을 부여할 때 부모는 자녀가 앱을 시작하는 것을 **항상** 허용하도록 선택할 수 있습니다. 이 예외는 클라우드에 저장되고 자녀가 로그아웃하고 다시 로그인하는 경우에도 유지됩니다.   
+자녀 계정에만 사용할 수 있는 다른 유형의 예외가 있습니다. 자녀 계정에는 부모가 로그인하여 권한을 부여해야 하지만 권한을 부여할 때 부모는 자녀가 앱을 시작하는 것을 **항상** 허용하도록 선택할 수 있습니다. 이 예외는 클라우드에 저장되고 자녀가 로그아웃하고 다시 로그인하는 경우에도 유지됩니다.
+
+## <a name="storagefilecopyasync-fails-to-copy-encrypted-files-to-unencrypted-destination"></a>암호화된 파일을 암호화되지 않은 대상으로 복사할 때 StorageFile.CopyAsync 실패 
+
+암호화된 파일을 암호화되지 않은 대상으로 복사하는 데 StorageFile.CopyAsync를 사용하면 다음 예외와 함께 호출이 실패합니다.
+
+```
+System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070005)
+```
+
+이는 앱 패키지의 일부로 배포된 파일을 다른 위치로 복사하려는 Xbox 개발자에게 영향을 줄 수 있습니다. 이 문제의 이유는 정품 모드에서는 콘텐츠가 Xbox에서 암호화되지만, 개발자 모드에서는 그렇지 않기 때문입니다. 그 결과로, 개발과 테스트 동안에는 앱이 기대한 대로 작동하는 것처럼 보이지만, 게시되어 Xbox에 설치되면 오류가 발생하게 됩니다.
 
 <!--### x86 vs. x64
 
@@ -233,4 +240,3 @@ namespace TestDNLA {
 ## <a name="see-also"></a>참고 항목
 - [질문과 대답](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)
-

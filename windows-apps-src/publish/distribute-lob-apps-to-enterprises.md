@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 94d12656a122f623240463886297c2378753924b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e29809f34facafc442b9b26580b91e17ed0a364e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
 
@@ -87,7 +84,6 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
  
 
  
-
 
 
 

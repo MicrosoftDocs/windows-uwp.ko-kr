@@ -10,14 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "Windows용 Chrome 확장, Windows용 Chrome 앱, hwa-cli, .crx를 .AppX로 변환"
 ms.assetid: 04f37333-48ba-441b-875e-246fbc3e1a4d
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 84d8875cc7b1c8540f54fec78cd675bd96919fd2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b2168242d5464dbf41f12c777aa5672753a4ae6e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="convert-your-existing-chrome-app-to-a-universal-windows-platform-app"></a>유니버설 Windows 플랫폼 앱으로 기존 Chrome 앱 변환
+# <a name="convert-your-existing-chrome-app-to-a-uwp-app"></a>기존 Chrome 앱을 UWP 앱으로 변환
 
 기존의 Chrome 호스트된 앱을 UWP(유니버설 Windows 플랫폼)에서 실행되는 앱으로 쉽게 변환할 수 있습니다. Chrome 앱을 변환하는 방법은 다음과 같이 두 가지가 있습니다.
 
@@ -80,9 +77,9 @@ Windows 스토어용으로 웹앱을 패키징한 후 PC, 태블릿, 휴대폰, 
 
 플래시는 Windows 10 앱에서 허용되지 않습니다. 플래시를 사용할 수 없으면 앱 환경이 영향을 받지 않는지 확인해야 합니다.
 
-광고의 경우 광고 공급자에 HTML5 옵션이 있는지 확인해야 합니다. [Bing 광고](https://bingads.microsoft.com/) 및 [앱 내 광고](http://adsinapps.microsoft.com/)를 확인할 수 있습니다.
+광고의 경우 광고 공급자에 HTML5 옵션이 있는지 확인해야 합니다. [Bing Ads](https://bingads.microsoft.com/) 및 [Microsoft 광고 라이브러리](../monetize/display-ads-in-your-app.md)를 참조할 수 있습니다. 
 
-[`<iframe>` embed 메서드](https://developers.google.com/youtube/iframe_api_reference)를 사용하는 한, YouTube 동영상은 이제 [기본적으로 HTML5`<video>`](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html)로 설정되므로 계속 작동합니다. 앱에서 여전히 플래시 API를 사용하는 경우 앞에서 언급한 embed 스타일로 전환해야 합니다.
+[`<iframe>` embed 메서드](https://developers.google.com/youtube/iframe_api_reference)를 사용하는 한, YouTube 동영상은 이제 [기본적으로 HTML5 `<video>`,](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html)로 설정되므로 계속 작동합니다. 앱에서 여전히 플래시 API를 사용하는 경우 앞에서 언급한 embed 스타일로 전환해야 합니다.
 
 ### <a name="image-assets"></a>이미지 자산
 
@@ -107,4 +104,3 @@ Chrome은 백그라운드 스크립트로 실행할 수 있는 [특별한 용도
 - [UWP(유니버설 Windows 플랫폼) 기능에 액세스하여 웹앱 향상](./hwa-access-features.md)
 - [UWP(유니버설 Windows 플랫폼) 앱 지침](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Windows 스토어 앱용 디자인 자산 다운로드](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-

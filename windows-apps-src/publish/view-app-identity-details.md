@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b9cbe976eb5aece26cac54f7ae8693aef5009ca3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b48f99d4146bfa5e4d9b2af3184e1ce3c1aea491
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="view-app-identity-details"></a>앱 ID 세부 정보 보기
 
 
@@ -58,7 +55,6 @@ Windows 개발자 센터 대시보드에서 앱 작업을 할 때 Windows 스토
  
 
  
-
 
 
 

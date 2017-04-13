@@ -2,21 +2,17 @@
 title: "계층 2"
 description: "스트리밍 리소스에 대한 계층 2 지원은 크기가 표준 타일 모양 1개 이상일 때 비압축 텍스처 Mipmap 보장, LOD를 고정하거나 셰이더 연산에 대한 상태를 가져올 수 있는 셰이더 명령어, 그리고 샘플링 값을 0으로 처리하는 NULL-매핑된 타일의 읽기 등 계층 1보다 지원하는 기능이 추가됩니다."
 ms.assetid: 111A28EA-661A-4D29-921A-F2E376A46DC5
-keywords:
-- "계층 2"
+keywords: "계층 2"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0416d6751a002f51310fe609e862b52fd35623a2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c8a1d1c830c201018c3384096d3eeae3b25962b4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tier-2"></a>계층 2
 
 
@@ -72,7 +68,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "앱을 제출할 때 인증에 대한 참고 사항 페이지를 사용하여 인증 테스터에게 추가 정보를 제공할 수 있습니다. 이 정보는 앱을 제대로 테스트하도록 하는 데 도움이 됩니다."
+Description: "앱을 제출할 때 인증에 대한 참고 사항 페이지를 사용하여 인증 테스터에게 추가 정보를 제공할 수 있습니다. 이 정보는 앱이 제대로 테스트되도록 도와줍니다."
 title: "인증에 대한 참고 사항"
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
 ms.author: wdg-dev-content
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 92a110879f6ff92b3e1e41964ff6acea6b7cb5ec
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6b2973e2f7303ac39571fd69a0e14fa0dfacef32
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="notes-for-certification"></a>인증에 대한 참고 사항
 
 
@@ -48,7 +45,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

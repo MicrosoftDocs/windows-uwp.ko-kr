@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 8d6876ee6235546e74341609a55db995a77323d6
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 81a437807332ff60a1401c00abdcff78e41a7496
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 
 Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 리소스를 공유합니다. 따라서 UWP 앱 및 게임은 다음 리소스에 액세스할 수 있습니다.
@@ -41,4 +38,3 @@ Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 �
 
 ## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP](index.md)
-

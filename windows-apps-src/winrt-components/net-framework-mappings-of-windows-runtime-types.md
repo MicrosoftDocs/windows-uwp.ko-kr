@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ab2c2307376f3fad8cd404f7ddf8056f1ef2e8d3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a69ad9bdff70dc04f9bdf9eb4f5117a22a005969
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Windows 런타임 형식의 .NET Framework 매핑
 
 
@@ -27,8 +24,6 @@ ms.lasthandoff: 02/07/2017
 
 
 UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일한 대부분의 형식은 구조(또는 열거 등의 구조와 관련된 형식)입니다. UWP에서 구조에는 필드 외에 다른 멤버가 없기 때문에 .NET Framework가 숨기고 있는 도우미 형식이 필요합니다. 이러한 구조의 .NET Framework 버전에는 숨겨진 도우미 형식의 기능을 제공하는 속성 및 메서드가 있습니다.
-
-.NET Framework가 Windows 메타데이터를 사용하여 Windows 런타임으로 프로그래밍을 간소화하는 방법에 대한 자세한 내용은 Windows 개발자 센터의 [CLR 및 Windows 런타임](http://download.microsoft.com/download/2/3/E/23E1E9BE-41AA-4716-A7B3-82040271394C/CLR%20and%20the%20Windows%20Runtime.docx) 백서를 다운로드하세요.
 
 표 1: 다른 이름 및/또는 네임스페이스를 사용하여 .NET Framework 형식에 매핑하는 UWP 형식
 
@@ -90,4 +85,3 @@ UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일
 ## <a name="related-topics"></a>관련 항목
 
 * [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-

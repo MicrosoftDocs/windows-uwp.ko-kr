@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6e033ffa-502e-4daa-b5b2-6f853f68b66c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 59090536600e3e45345832c6ca61baa3fe1f5b15
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 5b70e6376dbea0e3858a2a12542ff26dfe61ed20
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #<a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Xbox One에서 UWP 앱 개발 시작
 
 UWP(유니버설 Windows 플랫폼) 개발에 대해 PC 및 Xbox One을 성공적으로 설정하려면 **신중하게** 이러한 단계를 따르세요. 설정을 마친 후 [Xbox One용 UWP](index.md) 페이지에서 Xbox One의 개발자 모드 및 UWP 앱 빌드에 대해 자세히 알아볼 수 있습니다. 
@@ -70,4 +67,3 @@ UWP(유니버설 Windows 플랫폼) 개발에 대해 PC 및 Xbox One을 성공�
 - [FAQ](frequently-asked-questions.md)  
 - [알려진 문제](known-issues.md)
 - [Xbox One의 UWP](index.md) 
-

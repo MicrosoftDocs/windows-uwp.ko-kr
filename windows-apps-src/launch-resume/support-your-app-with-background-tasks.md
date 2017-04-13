@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a9ac85483c3d7e252f24147088b928de6e781dc6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 38f5ecd06d257553a275fb6d5bb508fcd9fdb94d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="support-your-app-with-background-tasks"></a>백그라운드 작업을 사용하여 앱 지원
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -24,17 +21,17 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="playing-media-in-the-background"></a>백그라운드에서 미디어 재생
 
-Windows 10 버전 1607부터 백그라운드에서 오디오를 재생하는 작업이 훨씬 쉬워졌습니다. 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
+Windows10 버전 1607부터 백그라운드에서 오디오를 재생하는 작업이 훨씬 쉬워졌습니다. 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
 
 ## <a name="in-process-and-out-of-process-background-tasks"></a>In-process 및 out-of-process 백그라운드 작업
 
-백그라운드 작업을 구현하는 두 가지 방법이 있습니다. 하나는 앱과 백그라운드 프로세스가 동일한 프로세스에서 실행되는 in-process이고, 다른 하나는 앱과 백그라운드 프로세스가 별도의 프로세스에서 실행되는 out-of-process입니다. In-process 백그라운드 지원은 쓰기 백그라운드 작업을 단순화하기 위해 Windows 10 버전 1607에서 처음 소개되었습니다. 그러나 Out of Process 백그라운드 작업도 계속 작성할 수 있습니다. In Process 및 Out of Process 백그라운드 작업을 작성하는 경우에 대한 자세한 내용은 [백그라운드 작업 지침](guidelines-for-background-tasks.md)을 참조하세요.
+백그라운드 작업을 구현하는 두 가지 방법이 있습니다. 하나는 앱과 백그라운드 프로세스가 동일한 프로세스에서 실행되는 in-process이고, 다른 하나는 앱과 백그라운드 프로세스가 별도의 프로세스에서 실행되는 out-of-process입니다. In-process 백그라운드 지원은 쓰기 백그라운드 작업을 단순화하기 위해 Windows10 버전 1607에서 처음 소개되었습니다. 그러나 Out of Process 백그라운드 작업도 계속 작성할 수 있습니다. In Process 및 Out of Process 백그라운드 작업을 작성하는 경우에 대한 자세한 내용은 [백그라운드 작업 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
 Out of process 백그라운드 작업의 경우 오류가 발생해도 백그라운드 프로세스로 인해 앱 프로세스가 중단되는 일이 없기 때문에 훨씬 복원성이 큽니다. 그러나 복원성이 큰 대신 프로세스 간 통신 관리가 더 복잡합니다.
 
 Out of process 백그라운드 작업은 OS가 별도의 프로세스(backgroundtaskhost.exe)에서 실행되는 경량 클래스로 구현됩니다. Out of process 백그라운드 작업은 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하도록 작성한 클래스입니다. [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 백그라운드 작업을 등록합니다. 클래스 이름은 백그라운드 작업을 등록할 때 진입점을 지정하는 데 사용됩니다.
 
-Windows 10 버전 1607에서는 백그라운드 작업을 만들지 않고 백그라운드 활동을 사용하도록 설정할 수 있습니다. 대신 포그라운드 응용 프로그램 내에서 직접 백그라운드 코드를 실행할 수 있습니다.
+Windows10 버전 1607에서는 백그라운드 작업을 만들지 않고 백그라운드 활동을 사용하도록 설정할 수 있습니다. 대신 포그라운드 응용 프로그램 내에서 직접 백그라운드 코드를 실행할 수 있습니다.
 
 In-process 백그라운드 작업을 빠르게 시작하려면 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
 
@@ -159,7 +156,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 
 **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  ## <a name="related-topics"></a>관련 항목
 
@@ -186,4 +183,3 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 * [Windows 스토어 장치 앱의 장치 동기화 및 업데이트](http://go.microsoft.com/fwlink/p/?LinkId=306619)
-

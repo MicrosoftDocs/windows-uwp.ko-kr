@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 추가 기능에 대한 정보를 검색합니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 가져오기"
+title: "추가 기능 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e000c435b8a271085872bfb1ce42dd09352847c5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a79c93c1ed7d38b4de1da2bbd05456fd0884692e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-an-add-on-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 가져오기
+# <a name="get-an-add-on"></a>추가 기능 가져오기
 
 
 
@@ -121,4 +118,3 @@ Authorization: Bearer <your access token>
 * [모든 추가 기능 가져오기](get-all-add-ons.md)
 * [추가 기능 만들기](create-an-add-on.md)
 * [추가 기능 삭제](delete-an-add-on.md)
-

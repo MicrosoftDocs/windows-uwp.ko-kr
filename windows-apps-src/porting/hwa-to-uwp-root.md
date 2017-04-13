@@ -8,13 +8,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "호스트된 웹앱, 웹 사이트를 Windows 앱으로 변환, Windows 스토어의 웹앱, Windows용 Chrome 앱"
-translationtype: Human Translation
-ms.sourcegitcommit: 2e230e95be01f0b14fa6346be9fa836c66a812cf
 ms.openlocfilehash: c9239f3a3c14bf9da99e60cfef8154eefb4305b4
-ms.lasthandoff: 01/20/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="hosted-web-apps---access-windows-10-features-from-your-web-app"></a>호스트된 웹앱 - 웹앱에서 Windows 10 기능 액세스
 
 웹 응용 프로그램은 서버에 호스트된 스크립트에서 직접 Windows 런타임 API를 호출하고, Cortana 통합을 활용하고, 온라인 인증 공급자를 사용하는 등 UWP(유니버설 Windows 플랫폼)에 대한 모든 권한을 가질 수 있습니다. 호스트된 스크립트에서 호출할 로컬 코드를 포함하고 원격 페이지와 로컬 페이지 간 앱 탐색을 관리할 수 있으므로 하이브리드 앱도 지원됩니다.
@@ -48,5 +45,4 @@ Windows 호스트된 웹앱으로 쉽게 [기존의 Chrome 호스트된 앱을 �
 ## <a name="demos"></a>데모
 
 - [Contoso 여행 앱](http://contosotravel.azurewebsites.net/)
-
 

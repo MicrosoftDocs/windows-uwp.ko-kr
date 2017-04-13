@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "다음은 Windows 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다."
+Description: "다음은 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다."
 title: "VAT 정보"
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
 ms.author: wdg-dev-content
@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a26cb43d230cd7dbb050254cceb70d3158c3af5d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c931b4d8d2241efb80a3a87ba4550a045ea3b675
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="vat-info"></a>VAT 정보
 
 
-다음은 Windows 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다.
+다음은 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다.
 
 ## <a name="understanding-vat-numbers"></a>VAT 번호 이해
 
@@ -251,7 +248,6 @@ Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침
  
 
  
-
 
 
 

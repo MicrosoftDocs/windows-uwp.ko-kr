@@ -1,28 +1,25 @@
 ---
 author: QuinnRadich
 title: "개발자를 위한 Windows 10의 새로운 기능"
-description: "Windows 10 버전 1607 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
-keywords: "새 소식, 새 기능, 업데이트, 업데이트, 새로운 내용, Windows 10, 1607, 7월, 최신"
+description: "Windows10 버전 1607 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
+keywords: "새 소식, 새 기능, 업데이트, 업데이트, 새로운 내용, Windows10, 1607, 7월, 최신"
 ms.author: quradic
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: fff2eb225bcadaefa6bead622d953dd8b8ed4a76
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: bac2705bd57c0b6874c58eaac66b4ecb19ebb5af
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="whats-new-in-windows-version-1607"></a>Windows버전 1607의 새로운 기능
 
-# <a name="whats-new-in-windows-version-1607"></a>Windows 버전 1607의 새로운 기능
+Windows10 버전 1607 및 Windows 개발자 도구 업데이트는 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
 
-Windows 10 버전 1607 및 Windows 개발자 도구 업데이트는 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
+다음은 개발자에게 흥미로운 새로운 기능 및 향상된 기능 목록입니다. Windows SDK에 추가된 새 네임스페이스의 원시 목록은 [Windows10 버전 1607 API 변경 내용](windows-10-version-1607-api-diff.md)을 참조하세요. 이 업데이트의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요.
 
-다음은 개발자에게 흥미로운 새로운 기능 및 향상된 기능 목록입니다. Windows SDK에 추가된 새 네임스페이스의 원시 목록은 [Windows 10 버전 1607 API 변경 내용](windows-10-version-1607-api-diff.md)을 참조하세요. 이 업데이트의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요.
-
-## <a name="windows-10-version-1607---july-2016"></a>Windows 10 버전 1607 - 2016년 7월
+## <a name="windows-10-version-1607---july-2016"></a>Windows10 버전 1607 - 2016년 7월
 
 기능 | 설명
  :---- | :----
@@ -30,7 +27,7 @@ XAML 요소에 대한 선택키 | 새로운 [**AccessKey**](https://msdn.microso
 애니메이션 GIF 지원 | 이제 XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx) 요소에서 애니메이션 GIF를 지원합니다. [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.aspx)에서 이러한 새 멤버를 사용하여 [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.autoplay.aspx), [**IsAnimatedBitmap**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.isanimatedbitmap.aspx), [**IsPlaying**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.isplaying.aspx), [**Play**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.play.aspx), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.stop.aspx) 등의 재생을 제어할 수 있습니다.
 앱 확장성 | UWP 앱에 대한 [확장](http://aka.ms/appextensibility)을 씁니다. Windows 스토어 앱을 사용하여 다른 Windows 스토어 앱에서 제공하는 콘텐츠를 호스트합니다.  해당 앱의 읽기 전용 콘텐츠를 검색, 열거 및 액세스합니다.
 평가 테스트 | [시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10?f=255&MSPPError=-2147217396)는 고위험 테스트를 위해 잠긴 온라인 평가를 렌더링하는 브라우저 기반 앱입니다. [시험 응시 API](../apps-for-education/take-a-test-api.md)를 사용하여 학생들이 테스트 중 다른 컴퓨터나 인터넷 리소스를 사용할 수 없도록 합니다.
-BITS(Background Intelligent Transfer Service) | 이제 [BITS](https://msdn.microsoft.com/library/windows/desktop/bb968799.aspx) COM API 및 PowerShell cmdlet(사용 가능한 경우)을 PowerShell 원격 세션에서 사용할 수 있습니다. 특히 로컬 로그인 기능이 없는 Windows Server Technical Preview 2016 버전을 관리할 때 유용합니다. PowerShell 원격 세션을 통해 시작된 BITS 작업은 세션의 사용자 계정 컨텍스트에서 실행되며 활성 로컬 로그온 세션이나 해당 사용자 계정에 연결된 PowerShell 원격 세션이 하나 이상 있는 경우에만 진행됩니다. 장기 실행 전송을 위해 세션을 관리하는 방법에 대한 자세한 내용은 [PowerShell 원격 세션을 관리하려면](https://msdn.microsoft.com/library/windows/desktop/ee663885.aspx#manage_ps_remote_sessions)을 참조하세요.<br/><br/>[BITS 도우미 토큰](https://msdn.microsoft.com/library/windows/desktop/dd904467.aspx)을 지원한 이전 버전의 Windows에서 작업 소유자는 도우미 토큰을 설정하기 위해 관리자 권한을 효과적으로 사용해야 했습니다. 이 릴리스에서는 도우미 토큰에 관리자 기능이 없는 한 BITS 작업 소유자가 관리자가 아니어도 도우미 토큰을 설정할 수 있습니다. 이렇게 하면 백그라운드 다운로드 또는 업데이트 도구를 관리 권한이 있는 계정이 아닌 권한이 낮은 NetworkService 계정으로 실행하도록 하여 해당 도구의 취약성 공간을 줄일 수 있습니다.
+BITS(Background Intelligent Transfer Service) | 이제 [BITS](https://msdn.microsoft.com/library/windows/desktop/bb968799.aspx) COM API 및 PowerShell cmdlet(사용 가능한 경우)을 PowerShell 원격 세션에서 사용할 수 있습니다. 특히 로컬 로그인 기능이 없는 WindowsServer Technical Preview 2016 버전을 관리할 때 유용합니다. PowerShell 원격 세션을 통해 시작된 BITS 작업은 세션의 사용자 계정 컨텍스트에서 실행되며 활성 로컬 로그온 세션이나 해당 사용자 계정에 연결된 PowerShell 원격 세션이 하나 이상 있는 경우에만 진행됩니다. 장기 실행 전송을 위해 세션을 관리하는 방법에 대한 자세한 내용은 [PowerShell 원격 세션을 관리하려면](https://msdn.microsoft.com/library/windows/desktop/ee663885.aspx#manage_ps_remote_sessions)을 참조하세요.<br/><br/>[BITS 도우미 토큰](https://msdn.microsoft.com/library/windows/desktop/dd904467.aspx)을 지원한 이전 버전의 Windows에서 작업 소유자는 도우미 토큰을 설정하기 위해 관리자 권한을 효과적으로 사용해야 했습니다. 이 릴리스에서는 도우미 토큰에 관리자 기능이 없는 한 BITS 작업 소유자가 관리자가 아니어도 도우미 토큰을 설정할 수 있습니다. 이렇게 하면 백그라운드 다운로드 또는 업데이트 도구를 관리 권한이 있는 계정이 아닌 권한이 낮은 NetworkService 계정으로 실행하도록 하여 해당 도구의 취약성 공간을 줄일 수 있습니다.
 향상된 컬러 글꼴 지원 | 이제 Direct2D에서 매우 다양한 컬러 글꼴 형식의 렌더링을 지원하여 개발자가 Direct2D 기반 앱에서 이전보다 더 많은 종류의 글꼴을 사용할 수 있습니다. 여기에는 다음에 대한 지원이 포함됩니다. <br/>&bull; 'sbix' OpenType 테이블 - 글꼴에서 컬러 비트맵 콘텐츠를 사용합니다.<br/>&bull; 'SVG' OpenType 테이블 - 글꼴에서 SVG 콘텐츠를 사용합니다.<br/>&bull; 'CBDT' OpenType 테이블 - 글꼴에서 컬러 비트맵 콘텐츠를 사용합니다. <br/><br/>Direct2D는 **D2D1_DRAW_TEXT_OPTIONS_ENABLE_COLOR_FONT** 플래그가 사용되는 경우 이러한 컬러 글꼴 형식을 자동으로 지원합니다.  자세한 내용은 다음 항목을 참조하세요. <br>&bull;[**ID2D1DeviceContext4**](http://go.microsoft.com/fwlink/?LinkId=822793)<br>&bull;[**D2D1_DRAW_TEXT_OPTIONS**](http://go.microsoft.com/fwlink/?LinkId=822794)<br>&bull;[**ID2D1SvgGlyphStyle**](http://go.microsoft.com/fwlink/?LinkId=822795)     
 CommandBar 동적 오버플로 | 공간이 부족하여 명령을 모두 표시할 수 없는 경우 [**Commandbar**](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/app-bars)의 주 명령이 오버플로 메뉴로 자동으로 이동합니다.
 컴퍼지션 상호 작용 API| 새로운 [**Windows.UI.Composition.Interactions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.interactions.aspx) 네임스페이스를 사용하여 드라이브 애니메이션 및 효과에 대한 입력에 액세스할 수 있습니다.  시각적 계층의 이 새로운 API 제품군은 UI 스레드가 교착 상태에 빠지고 사용 중인 경우에도 앱이 빠르고 매끄럽게 응답하는 것처럼 보이도록 합니다.  
@@ -39,7 +36,7 @@ Windows.UI.Composition | [**Windows.UI.Composition**](https://msdn.microsoft.com
 연결된 앱 | 클라우드 연결이나 근접한 디바이스를 검색하고 디바이스 간에 원활하게 전환할 수 있는 환경을 구축합니다. 자세한 내용은 [연결된 앱 및 디바이스](http://aka.ms/Bttm1d)를 참조하세요.
 데스크톱 앱 변환기 | 데스크톱 앱 변환기는 .NET 4.6.1 또는 Win32용으로 작성된 기존 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져올 수 있는 도구입니다.
 접근성용 앱 개발 | 유용성 및 고객 만족도를 개선하기 위해 [앱 접근성 지침](https://developer.microsoft.com/windows/accessible-apps)을 사용하여 포괄적인 소프트웨어를 설계합니다. 접근성 있는 기술 제품 사례를 통해 영감을 얻어보세요. 이 새로운 개발자 허브에서 누구나 액세스할 수 있는 앱 만들기에 대한 정보를 찾아보세요.
-Direct3D | Direct 3D 설명서에 여러 가지 새로운 항목이 추가되었습니다. 이러한 업데이트에 대한 자세한 내용은 [Direct3D 12 새 릴리스 페이지](https://msdn.microsoft.com/library/windows/desktop/mt748631(v=vs.85).aspx)의 **Windows 10 버전 1607**을 참조하세요.
+Direct3D | Direct 3D 설명서에 여러 가지 새로운 항목이 추가되었습니다. 이러한 업데이트에 대한 자세한 내용은 [Direct3D 12 새 릴리스 페이지](https://msdn.microsoft.com/library/windows/desktop/mt748631(v=vs.85).aspx)의 **Windows10 버전 1607**을 참조하세요.
 게임 - 아케이드 스틱 및 레이싱 휠 지원 | [**Windows.Gaming.Input**](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx)은 아케이드 스틱과 레이싱 휠이라는 두 가지 새로운 입력 디바이스를 지원합니다. 따라서 타이틀은 해당 디바이스의 개별 버전에 맞는 코드를 작성하지 않고도 아케이드 스틱 및 레이싱 휠 디바이스를 디바이스 클래스로 지원할 수 있습니다. 해당 클래스의 모든 Xbox 360 및 Xbox One 디바이스와 선택한 PC(HID) 디바이스를 지원합니다.
 게임 - 힘 피드백 지원 | [**Windows.Gaming.Input.ForceFeedback**](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.forcefeedback.aspx) API는 PC(HID) 레이싱 휠의 힘 피드백 제어를 지원합니다.
 게임 - 새 입력 디바이스의 사용자 지정 WinRT 클래스 라이브러리에 대한 OEM 지원 | [**Windows.Gaming.Input.Custom**](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.custom.aspx) API는 타사 액세서리 OEM을 지원하여 Xbox 360 및 Xbox One 보조프로그램에 대한 사용자 지정 WinRT 클래스 라이브러리를 작성합니다.     
@@ -63,7 +60,6 @@ Xbox One의 UWP | 이 업데이트는 Xbox One에서 UWP(유니버설 Windows �
 WebSocket | [**MessageWebSockets**](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.messagewebsocket.aspx) 및 [**StreamWebSockets**](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamwebsocket.aspx)에 대한 지원이 추가되어 서버 인증서 보기, SSL 협상 중 서버에서 보낸 중간 인증서 보기, 사용자 지정 서버 유효성 검사 수행, 특정 서버 인증서 오류는 무시하도록 지정 등을 수행할 수 있습니다.
 WIP(Windows Information Protection) API | [**WIP**](https://msdn.microsoft.com/windows/uwp/enterprise/wip-hub)는 MDM(모바일 디바이스 관리)을 위한 데스크톱, 노트북, 태블릿 및 휴대폰의 기능 모음입니다. WIP를 통해 엔터프라이즈는 엔터프라이즈 관리 디바이스에서 데이터가 처리되는 방식을 더 적절히 제어할 수 있습니다. <br/><br/>WIP API를 사용하면 직원의 개인 데이터가 데이터 정책의 영향을 받지 않도록 분리하는 동시에 데이터 정책을 준수하는 앱을 빌드할 수 있습니다. 정책 관리자는 앱을 신뢰하여 조직의 데이터를 사용합니다. 또한 직원은 조직의 MDM(모바일 디바이스 관리)에서 등록을 취소하거나 조직에서 완전히 퇴사한 경우에도 자신의 개인 데이터가 디바이스에 그대로 유지되기를 바랍니다.
 Windows IOT Core | Windows IoT Core는 원격 디스플레이 환경뿐만 아니라 Raspberry Pi 3을 완벽하게 지원하므로 사용자가 IoT Core 디바이스에서 실행되는 UWP 응용 프로그램을 원격으로 보고 제어할 수 있습니다.
-도우미(IoT) 디바이스에서 Windows 잠금 해제 | 도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. 
-  [도우미 디바이스 프레임워크](https://msdn.microsoft.com/windows/uwp/security/companion-device-unlock)를 사용하면 Windows Hello를 사용할 수 없는 경우(예: Windows 10 데스크톱에 안면 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Microsoft Passport에 풍부한 환경을 제공할 수 있습니다.
+도우미(IoT) 디바이스에서 Windows 잠금 해제 | 도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows10 데스크톱과 함께 실행할 수 있습니다. 
+  [도우미 디바이스 프레임워크](https://msdn.microsoft.com/windows/uwp/security/companion-device-unlock)를 사용하면 Windows Hello를 사용할 수 없는 경우(예: Windows10 데스크톱에 안면 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Microsoft Passport에 풍부한 환경을 제공할 수 있습니다.
 Winsock | TCP 소켓을 [Winsock](https://tools.ietf.org/html/rfc7413)으로 구성하면 TCP_FASTOPEN 소켓 옵션을 설정하여 [RFC 7413](https://tools.ietf.org/html/rfc7413) TCP Fast Open을 사용할 수 있습니다.
-

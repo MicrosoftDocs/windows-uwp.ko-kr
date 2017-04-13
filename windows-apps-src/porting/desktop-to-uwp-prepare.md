@@ -1,37 +1,34 @@
 ---
-author: awkoren
+author: normesta
 Description: "이 문서에는 데스크톱-UWP 브리지를 사용하여 앱을 변환하기 전에 알아야 할 사항이 나열되어 있습니다. 앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다."
 Search.Product: eADQiWindows 10XVcnh
-title: "데스크톱-UWP 브리지용 앱 준비"
-ms.author: alkoren
-ms.date: 02/08/2017
+title: "데스크톱-UWP 브리지 준비"
+ms.author: normesta
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 238d3520bc4890a030327ad0bc799ab90b83ef40
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 1f18efd5738d357ee88b481c65fc02f503afb703
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="prepare-an-app-for-conversion-with-the-desktop-bridge"></a>데스크톱 브리지를 사용하여 앱 변환 준비
+# <a name="desktop-to-uwp-bridge-prepare"></a>데스크톱-UWP 브리지: 준비
 
 이 문서에는 데스크톱-UWP 브리지를 사용하여 앱을 변환하기 전에 알아야 할 사항이 나열되어 있습니다. 앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다. 하지만 아래의 항목이 사용 중인 응용 프로그램에 적용되는 경우 변환 전에 문제를 해결해야 합니다. Windows 스토어는 라이선스 및 자동 업데이트를 처리하므로 코드베이스에서 해당 기능을 제거해도 됩니다.
 
-+ __앱에서 4.6.1 이전 버전의 .NET을 사용합니다__. .NET 4.6.1만 지원됩니다. 변환하기 전에 앱의 대상을 .NET 4.6.1로 변경해야 합니다. 
++ __앱에서 4.6.1 이전 버전의 .NET을 사용합니다__. .NET 4.6.1만 지원됩니다. 변환하기 전에 앱의 대상을 .NET 4.6.1로 변경해야 합니다.
 
 + __앱은 항상 관리자 보안 권한으로 실행됩니다__. 대화형 사용자로 실행하는 동안 앱은 계속 작동해야 합니다. Windows 스토어에서 앱을 설치하는 사용자가 시스템 관리자가 아닐 수 있으므로 앱을 관리자 권한으로 실행하도록 요구해도 표준 사용자의 경우는 제대로 진행되지 않습니다.
 
 + __앱에는 커널 모드 드라이버 또는 Windows 서비스가 필요합니다__. 브리지는 앱에 적합하지만 시스템 계정으로 실행해야 하는 커널 모드 드라이버 또는 Windows 서비스를 지원하지 않습니다. Windows 서비스 대신, [백그라운드 작업](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)을 사용합니다.
 
-+ __앱 모듈은 AppX 패키지에 없는 프로세스에 in-process로 로드됩니다__. 이것은 허용되지 않습니다. 즉 [셸 확장](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx)과 같은 in-process 확장은 지원되지 않습니다. 그렇지만 두 앱이 같은 패키지에 있는 경우 두 앱의 프로세스 간 통신을 수행할 수 있습니다.
++ __앱 모듈은 Windows 앱 패키지에 없는 프로세스에 in-process로 로드됩니다. 이것은 허용되지 않습니다. 즉 [셸 확장](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx)과 같은 in-process 확장은 지원되지 않습니다. 그렇지만 두 앱이 같은 패키지에 있는 경우 두 앱의 프로세스 간 통신을 수행할 수 있습니다.
 
-+ __앱에서 [SetDllDirectory](https://msdn.microsoft.com/library/windows/desktop/ms686203) 또는 [AddDllDirectory](https://msdn.microsoft.com/library/windows/desktop/hh310513)를 호출합니다__. 이러한 함수는 현재 변환된 앱에서 지원되지 않습니다. 이후 릴리스에서 지원을 추가하기 위해 노력 중입니다. 이 문제를 해결하기 위해 이러한 함수를 사용하여 찾은 모든 .dll을 패키지 루트에 복사할 수 있습니다. 
++ __앱에서 [SetDllDirectory](https://msdn.microsoft.com/library/windows/desktop/ms686203) 또는 [AddDllDirectory](https://msdn.microsoft.com/library/windows/desktop/hh310513)를 호출합니다__. 이러한 함수는 현재 변환된 앱에서 지원되지 않습니다. 이후 릴리스에서 지원을 추가하기 위해 노력 중입니다. 이 문제를 해결하기 위해 이러한 함수를 사용하여 찾은 모든 .dll을 패키지 루트에 복사할 수 있습니다.
 
-+ __앱이 사용자 지정 AUMID(응용 프로그램 사용자 모델 ID)를 사용합니다__. 프로세스가 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx)를 호출하여 자체 AUMID를 설정하는 경우 앱 모델 환경/AppX 패키지에 의해 생성된 AUMID만 사용할 수 있습니다. 사용자 지정 AUMID를 정의할 수 없습니다.
++ __앱이 사용자 지정 AUMID(응용 프로그램 사용자 모델 ID)를 사용합니다__. 프로세스가 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx)를 호출하여 자체 AUMID를 설정하는 경우 앱 모델 환경/Windows 앱 패키지에 의해 생성된 AUMID만 사용할 수 있습니다. 사용자 지정 AUMID를 정의할 수 없습니다.
 
 + __앱은 HKEY_LOCAL_MACHINE (HKLM) 레지스트리 하이브를 수정합니다__. 앱에서 HKLM 키를 만들거나 수정을 위해 이 키를 열려고 하면 액세스 거부 오류가 발생합니다. 앱에는 레지스트리의 자체 가상화 보기가 있으므로 사용자 및 컴퓨터 전체 레지스트리 하이브(HKLM의 유형) 개념이 적용되지 않습니다. 대신 HKEY_CURRENT_USER(HKCU)에 쓰는 것과 같은 HKLM 사용 목적을 달성할 수 있는 다른 방법을 찾아야 합니다.
 
@@ -47,13 +44,13 @@ ms.lasthandoff: 02/08/2017
 
 + __앱에는 UIAccess가 필요합니다__. 응용 프로그램에서 UAC 매니페스트의 `requestedExecutionLevel` 요소에 `UIAccess=true`를 지정하는 경우 현재는 UWP로 변환할 수 없습니다. 자세한 내용은 [UI 자동화 보안 개요](https://msdn.microsoft.com/library/ms742884.aspx)를 참조하세요.
 
-+ __다른 프로세스에서 사용할 수 있도록 앱에서 COM 개체 또는 GAC 어셈블리를 노출합니다__. 현재 릴리스에서 앱은 AppX 패키지 외부의 실행 파일에서 발생한 프로세스에서 사용할 수 있도록 COM 개체 또는 GAC 어셈블리를 노출할 수 없습니다. 패키지 내의 프로세스는 정상적으로 COM 개체와 GAC 어셈블리를 등록하고 사용할 수 있지만 이들 항목이 외부에 표시되지는 않습니다. 즉, OLE와 같은 interop 시나리오는 외부 프로세스에서 호출되는 경우 작동하지 않습니다. 
++ __다른 프로세스에서 사용할 수 있도록 앱에서 COM 개체 또는 GAC 어셈블리를 노출합니다__. 현재 릴리스에서 앱은 Windows 앱 패키지 외부의 실행 파일에서 발생한 프로세스에서 사용할 수 있도록 COM 개체 또는 GAC 어셈블리를 노출할 수 없습니다. 패키지 내의 프로세스는 정상적으로 COM 개체와 GAC 어셈블리를 등록하고 사용할 수 있지만 이들 항목이 외부에 표시되지는 않습니다. 즉, OLE와 같은 interop 시나리오는 외부 프로세스에서 호출되는 경우 작동하지 않습니다.
 
-+ __앱에서 지원되지 않는 방식으로 CRT(C 런타임 라이브러리)를 연결하고 있습니다__. Microsoft C/C++ 런타임 라이브러리는 Microsoft Windows 운영 체제용 프로그래밍 루틴을 제공합니다. 이러한 루틴은 C 및 C++ 언어에서 제공하지 않는 많은 일반적인 프로그래밍 작업을 자동화합니다. 앱에서 C/C++ 런타임 라이브러리를 사용하는 경우 해당 라이브러리가 지원되는 방식으로 연결되는지 확인해야 합니다. 
-    
-    Visual Studio 2015에서는 현재 버전의 CRT 코드에 대한 동적 연결(코드에서 공통 DLL 파일을 사용할 수 있도록 함)과 정적 연결(라이브러리를 코드에 직접 연결함)을 둘 다 지원합니다. 가능하면 앱에서 VS 2015와 함께 동적 연결을 사용하는 것이 좋습니다. 
++ __앱에서 지원되지 않는 방식으로 CRT(C 런타임 라이브러리)를 연결하고 있습니다__. Microsoft C/C++ 런타임 라이브러리는 Microsoft Windows 운영 체제용 프로그래밍 루틴을 제공합니다. 이러한 루틴은 C 및 C++ 언어에서 제공하지 않는 많은 일반적인 프로그래밍 작업을 자동화합니다. 앱에서 C/C++ 런타임 라이브러리를 사용하는 경우 해당 라이브러리가 지원되는 방식으로 연결되는지 확인해야 합니다.
 
-    이전 버전의 Visual Studio에서의 지원은 각기 다릅니다. 자세한 내용은 다음 표를 참조하세요. 
+    Visual Studio 2015에서는 현재 버전의 CRT 코드에 대한 동적 연결(코드에서 공통 DLL 파일을 사용할 수 있도록 함)과 정적 연결(라이브러리를 코드에 직접 연결함)을 둘 다 지원합니다. 가능하면 앱에서 VS 2015와 함께 동적 연결을 사용하는 것이 좋습니다.
+
+    이전 버전의 Visual Studio에서의 지원은 각기 다릅니다. 자세한 내용은 다음 표를 참조하세요.
 
     <table>
     <th>Visual Studio 버전</td><th>동적 연결</th><th>정적 연결</th></th>
@@ -64,26 +61,24 @@ ms.lasthandoff: 02/08/2017
     <tr><td>2013(VC 12)</td><td>지원함</td><td>지원되지 않음</td>
     <tr><td>2015(VC 14)</td><td>지원</td><td>지원</td>
     </table>
-    
+
     참고: 모든 경우에 공개적으로 사용 가능한 최신 CRT에 연결해야 합니다.
 
 + __앱에서 Windows side-by-side 폴더의 어셈블리를 설치하고 로드합니다__. 예를 들어 앱에서 C 런타임 라이브러리 VC8 또는 VC9를 사용하고 Windows side-by-side 폴더에 있는 해당 라이브러리를 동적으로 연결하고 있는 경우 코드에서 공유 폴더의 공통 DLL 파일을 사용하고 있는 것입니다. 이는 지원되지 않습니다. 재배포 가능 라이브러리 파일을 코드에 직접 연결하여 정적으로 연결해야 합니다.
 
-+ __앱에서 System32/SysWOW64 폴더의 종속성을 사용합니다__. 해당 DLL이 작동하려면 AppX 패키지의 가상 파일 시스템 부분에 포함해야 합니다. 이렇게 하면 **System32**/**SysWOW64** 폴더에 DLL이 설치된 것처럼 앱이 동작합니다. 패키지의 루트에 **VFS**라는 폴더를 만듭니다. 해당 폴더 안에 **SystemX64** 및 **SystemX86** 폴더를 만듭니다. 그런 다음 32비트 버전의 DLL은 **SystemX86** 폴더에 넣고 64비트 버전은 **SystemX64** 폴더에 넣습니다.
++ __앱에서 System32/SysWOW64 폴더의 종속성을 사용합니다__. 해당 DLL이 작동하려면 Windows 앱 패키지의 가상 파일 시스템 부분에 포함해야 합니다. 이렇게 하면 **System32**/**SysWOW64** 폴더에 DLL이 설치된 것처럼 앱이 동작합니다. 패키지의 루트에 **VFS**라는 폴더를 만듭니다. 해당 폴더 안에 **SystemX64** 및 **SystemX86** 폴더를 만듭니다. 그런 다음 32비트 버전의 DLL은 **SystemX86** 폴더에 넣고 64비트 버전은 **SystemX64** 폴더에 넣습니다.
 
-+ __앱에서 Dev11 VCLibs 프레임워크 패키지를 사용합니다__. AppX 패키지에서 종속성으로 정의된 경우 Windows 스토어에서 직접 VCLibs 11 라이브러리를 설치할 수 있습니다. 이렇게 하려면 앱 패키지 매니페스트를 다음과 같이 변경합니다. `<Dependencies>` 노드 아래에 다음을 추가합니다.  
++ __앱에서 Dev11 VCLibs 프레임워크 패키지를 사용합니다__. Windows 앱 패키지에서 종속성으로 정의된 경우 Windows 스토어에서 직접 VCLibs 11 라이브러리를 설치할 수 있습니다. 이렇게 하려면 앱 패키지 매니페스트를 다음과 같이 변경합니다. `<Dependencies>` 노드 아래에 다음을 추가합니다.  
 `<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
 Windows 스토어에서 설치하는 동안 앱이 설치되기 전에 적절한 버전(x86 또는 x64)의 VCLibs 11 프레임워크가 설치됩니다.  
 테스트용으로 로드하여 앱을 설치하는 경우에는 종속성이 설치되지 않습니다. 수동으로 컴퓨터에 종속성을 설치하려면 [데스크톱 브리지용 VC 11.0 프레임워크 패키지](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064)를 다운로드하고 설치해야 합니다. 이러한 시나리오에 대한 자세한 내용은 [Centennial 프로젝트에서 Visual C++ 런타임 사용](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)을 참조하세요.
 
-+ __앱에 사용자 지정 점프 목록이 포함됩니다__. 점프 목록을 사용할 때 고려해야 할 몇 가지 문제와 주의 사항이 있습니다. 
++ __앱에 사용자 지정 점프 목록이 포함됩니다__. 점프 목록을 사용할 때 고려해야 할 몇 가지 문제와 주의 사항이 있습니다.
 
     - __앱의 아키텍처가 OS와 일치하지 않습니다.__  점프 목록이 현재 제대로 작동 하지 않습니다. 앱과 운영 체제 아키텍처가 일치 하지 않는 경우(예: x64 Windows에서 x86앱을 실행)일 수 있습니다. 현재로서는 앱을 아키텍처와 일치하도록 다시 컴파일하는 해결 방법 외에는 없습니다.
 
-    - __앱이 점프 목록 항목을 만들고 [ICustomDestinationList::SetAppID](https://msdn.microsoft.com/library/windows/desktop/dd378403(v=vs.85).aspx) 또는 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422(v=vs.85).aspx)__를 호출합니다. 코드에 프로그래밍 방식으로 AppID를 설정하지 마세요. 그러면 점프 목록 항목이 나타나지 않게 됩니다. 앱에 사용자 지정 ID가 필요할 경우 매니페스트 파일을 사용하여 지정하세요. 자세한 내용은 [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md)을 참조하세요. 응용 프로그램의 AppID는 *YOUR_PRAID_HERE* 섹션에 지정됩니다. 
+    - __앱이 점프 목록 항목을 만들고 [ICustomDestinationList::SetAppID](https://msdn.microsoft.com/library/windows/desktop/dd378403(v=vs.85).aspx) 또는 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422(v=vs.85).aspx)__를 호출합니다. 코드에 프로그래밍 방식으로 AppID를 설정하지 마세요. 그러면 점프 목록 항목이 나타나지 않게 됩니다. 앱에 사용자 지정 ID가 필요할 경우 매니페스트 파일을 사용하여 지정하세요. 자세한 내용은 [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md)을 참조하세요. 응용 프로그램의 AppID는 *YOUR_PRAID_HERE* 섹션에 지정됩니다.
 
-    - __앱은 패키지의 실행 파일을 참조하는 점프 목록 셸 링크를 추가합니다__. 점프 목록에서 바로 패키지의 실행 파일을 시작할 수는 없습니다(앱 자체의 .exe에 대한 절대 경로는 예외). 대신, 앱 실행 별칭을 등록하고 별칭에 링크 대상 경로를 설정하면 변환된 앱이 해당 경로에 있는 것처럼 키워드를 통해 시작할 수 있습니다. appExecutionAlias 확장을 사용하는 방법에 대한 자세한 내용은 [데스크톱 브리지 앱 확장](desktop-to-uwp-extensions.md)을 참조하세요. 점프 목록에 원래 .exe와 일치하는 링크의 자산이 필요할 경우 [**SetIconLocation**](https://msdn.microsoft.com/library/windows/desktop/bb761047(v=vs.85).aspx)을 사용하여 아이콘과 같은 자산을 설정하고 다른 사용자 지정 항목에 사용하는 것 같은 PKEY_Title로 표시 이름을 설정해야 합니다. 
+    - __앱은 패키지의 실행 파일을 참조하는 점프 목록 셸 링크를 추가합니다__. 점프 목록에서 바로 패키지의 실행 파일을 시작할 수는 없습니다(앱 자체의 .exe에 대한 절대 경로는 예외). 대신, 앱 실행 별칭을 등록하고 별칭에 링크 대상 경로를 설정하면 변환된 앱이 해당 경로에 있는 것처럼 키워드를 통해 시작할 수 있습니다. appExecutionAlias 확장을 사용하는 방법에 대한 자세한 내용은 [데스크톱 브리지 앱 확장](desktop-to-uwp-extensions.md)을 참조하세요. 점프 목록에 원래 .exe와 일치하는 링크의 자산이 필요할 경우 [**SetIconLocation**](https://msdn.microsoft.com/library/windows/desktop/bb761047(v=vs.85).aspx)을 사용하여 아이콘과 같은 자산을 설정하고 다른 사용자 지정 항목에 사용하는 것 같은 PKEY_Title로 표시 이름을 설정해야 합니다.
 
     - __앱은 절대 경로를 사용하여 앱 패키지의 자산을 참조하는 점프 목록 항목을 추가합니다__. 패키지가 업데이트되어 아이콘, 문서, 실행 파일 등과 같은 자산의 위치가 변경될 경우 앱의 설치 경로가 변경될 수 있습니다. 점프 목록 항목이 절대 경로를 사용하여 이러한 자산을 참조할 경우 앱은 경로를 정확히 확인하기 위해 점프 목록을 정기적으로(예: 앱 시작 시) 새로 고쳐야 합니다. 또는 package-relative ms-resource URI 스키마(언어, DPI 및 고대비 인식 가능)를 사용하여 문자열 및 이미지 자산을 참조할 수 있는 UWP [**Windows.UI.StartScreen.JumpList**](https://msdn.microsoft.com/library/windows/apps/windows.ui.startscreen.jumplist.aspx) API를 사용하세요.
-
-

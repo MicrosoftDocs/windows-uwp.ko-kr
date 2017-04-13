@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3b85abb11049a1e52e9d6a9cc61aebab407207a4
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5187a644e4a952a8d3b199c68c2266e6e7c634f1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="affiliates-performance-report"></a>계열사 성과 보고서
 
 [Microsoft 계열사 광고 프로그램에 옵트인(opt in)](about-affiliate-ads.md)한 경우 Windows 개발자 센터 대시보드의 다음 보고서에서 앱에 표시되는 계열사 광고에 대한 성능 데이터를 볼 수 있습니다.
@@ -23,7 +20,7 @@ ms.lasthandoff: 02/07/2017
 -   [앱 수준 계열사 성과 보고서](#app-level-affiliate-ads-performance-report). 이 보고서는 대시보드에서 현재 선택된 앱의 계열사 광고에 대한 성능 데이터를 제공합니다.
 -   [대시보드 수준 계열사 성과 보고서](#dashboard-level-affiliate-ads-performance-report). 이 보고서에서는 Microsoft 계열사 광고 프로그램에 옵트인(opt in)한 모든 앱의 계열사 광고에 대한 성과 데이터를 요약하여 설명합니다.
 
-이러한 보고서는 매일 업데이트됩니다. 기본적으로 보고서는 모든 장치에서 지난 30일 간의 성능을 필터링합니다. 이러한 필터를 변경하려면 **페이지 필터**를 클릭하고 다른 시간 프레임 또는 개별 장치 유형을 선택합니다. 모든 데이터는 해당하는 특정 표준 시간대가 아니라 UTC를 기반으로 집계됩니다.
+이러한 보고서는 매일 업데이트됩니다. 기본적으로 보고서는 모든 디바이스에서 지난 30일 간의 성능을 필터링합니다. 이러한 필터를 변경하려면 **페이지 필터**를 클릭하고 다른 시간 프레임 또는 개별 장치 유형을 선택합니다. 모든 데이터는 해당하는 특정 표준 시간대가 아니라 UTC를 기반으로 집계됩니다.
 
 다음 섹션에서는 이러한 보고서에 대한 자세한 내용을 제공합니다.
 
@@ -54,4 +51,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

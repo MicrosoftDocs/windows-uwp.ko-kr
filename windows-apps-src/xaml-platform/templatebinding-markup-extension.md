@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7f279590cc1351efee2552e237ab095674768463
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ca551ff53a0a91b5bc60263b6e282b95c32bf976
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -67,5 +64,4 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 * [XAML 개요](xaml-overview.md)
 * [종속성 속성 개요](dependency-properties-overview.md)
  
-
 

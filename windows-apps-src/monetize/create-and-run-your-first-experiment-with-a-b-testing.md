@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 Description: "이 연습에서는 A/B 테스트로 첫 번째 실험을 만들고, 실행하고, 관리합니다."
-title: "A/B 테스트로 첫 번째 실험 만들기 및 실행"
+title: "첫 번째 실험 만들기 및 실행"
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Microsoft 스토어 서비스 SDK, A/B 테스트, 실험"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fb9e93747fa77031fe906d9ab7463fc41b73cdeb
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험"
+ms.openlocfilehash: 8da21ae0968540cf43994673ceeeefa92cf56b18
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
-# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>A/B 테스트로 첫 번째 실험 만들기 및 실행
+# <a name="create-and-run-your-first-experiment"></a>첫 번째 실험 만들기 및 실행
 
 이 연습에서는 다음을 수행합니다.
 * 개발자 센터 대시보드에서 앱 단추의 텍스트 및 색을 나타내는 여러 원격 변수를 정의하는 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms)를 만듭니다.
@@ -56,7 +53,6 @@ ms.lasthandoff: 02/07/2017
 7. 디자이너에서 단추를 두 번 클릭하여 코드 파일을 열고 **Click** 이벤트에 대한 이벤트 처리기를 추가합니다.  
 8. 코드 파일의 전체 내용을 다음 코드로 바꿉니다. 이전 섹션에서 개발자 센터 대시보드를 통해 얻은 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값에 ```projectId``` 변수를 할당합니다.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 10. 코드 파일을 저장하고 프로젝트를 빌드합니다.
@@ -79,7 +75,8 @@ ms.lasthandoff: 02/07/2017
   9. 드롭다운 컨트롤을 다시 클릭하여 **b**를 선택하고 **변수 추가**를 클릭합니다. **128** 문자열이 **변형 A** 열에 자동으로 표시됩니다. **변형 B** 열에 **255**를 입력합니다.  
 10. **저장**을 클릭한 다음 **활성화**를 클릭합니다.
 
-> **중요**&nbsp;&nbsp;실험을 활성화한 후 실험을 만들 때 **편집 가능 실험** 확인란을 클릭하지 않은 경우 더 이상 실험 매개 변수를 수정할 수 없습니다. 일반적으로 실험을 활성화하기 전에 앱에서 실험을 코딩하는 것이 좋습니다.
+> [!IMPORTANT]
+> 실험을 만들 때 **편집 가능한 실험** 확인란을 클릭하지 않은 경우 실험을 활성화한 후에는 더 이상 실험 매개 변수를 수정할 수 없습니다. 일반적으로 실험을 활성화하기 전에 앱에서 실험을 코딩하는 것이 좋습니다.
 
 ## <a name="run-the-app-to-gather-experiment-data"></a>실험 데이터를 수집하는 앱 실행
 
@@ -91,13 +88,15 @@ ms.lasthandoff: 02/07/2017
 
 이전 섹션을 완료한 후 몇 시간 동안 기다린 후 다음 단계를 수행하여 실험의 결과를 검토하고 실험을 완료합니다.
 
-> **참고**&nbsp;&nbsp;실험을 활성화하자마자 개발자 센터에서 즉시 실험에 대한 데이터를 기록하도록 계측되는 모든 앱에서 데이터를 수집하기 시작합니다. 그러나 실험 데이터를 대시보드에 표시하려면 몇 시간이 걸릴 수 있습니다.
+> [!NOTE]
+> 실험을 활성화하면 개발자 센터에서 실험에 대한 데이터를 기록하기 위해 계측되는 모든 앱에서 즉시 데이터를 수집하기 시작합니다. 그러나 실험 데이터를 대시보드에 표시하려면 몇 시간이 걸릴 수 있습니다.
 
 1. 개발자 센터에서 앱의 **실험** 페이지로 돌아갑니다.
 2. **활성 실험** 섹션에서 **단추 클릭 최적화**를 클릭하여 이 실험 페이지로 이동합니다.
 3. **결과 요약** 및 **결과 세부 정보** 섹션에 표시되는 결과가 예상과 일치하는지 확인합니다. 이러한 섹션에 대한 자세한 내용은 [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md#review-the-results-of-your-experiment)를 참조하세요.
+    > [!NOTE]
+    > 개발자 센터에서는 24시간 내의 각 사용자에 대한 첫 번째 전환 이벤트만 보고합니다. 사용자가 24시간 내에 앱에서 여러 전환 이벤트를 트리거하는 경우 첫 번째 전환 이벤트만 보고됩니다. 이렇게 하면 많은 전환 이벤트를 트리거하는 단일 사용자가 샘플 그룹 사용자의 실험 결과를 왜곡시키지 않을 수 있습니다.
 
-  >**참고**&nbsp;&nbsp;개발자 센터에서는 24시간 내의 각 사용자에 대한 첫 번째 전환 이벤트만 보고합니다. 사용자가 24시간 내에 앱에서 여러 전환 이벤트를 트리거하는 경우 첫 번째 전환 이벤트만 보고됩니다. 이렇게 하면 많은 전환 이벤트를 트리거하는 단일 사용자가 샘플 그룹 사용자의 실험 결과를 왜곡시키지 않을 수 있습니다.
 4. 이제 실험을 끝낼 준비가 완료되었습니다. **결과 요약** 섹션의 **변형 B** 열에서 **스위치**를 클릭합니다. 이렇게 하면 앱의 모든 사용자가 파란색 단추로 전환됩니다.
 5. **확인**을 클릭하여 실험을 종료할 것인지 확인합니다.
 6. 이전 섹션에서 만든 **SampleExperiment** 앱을 실행합니다.
@@ -110,4 +109,3 @@ ms.lasthandoff: 02/07/2017
 * [개발자 센터 대시보드에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
 * [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
-

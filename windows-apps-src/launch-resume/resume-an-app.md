@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 113f0ce8e59bab716443c0a74ca39649a1bb83ac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1bfd2c4a6f9dc2cb01241b2ee9899ff7edd46ae2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="handle-app-resume"></a>앱 다시 시작 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -109,4 +106,3 @@ Windows Phone 스토어 앱에서는 앱이 현재 일시 중단되었으며 사
 * [앱 수명 주기](app-lifecycle.md)
 * [앱 활성화 처리](activate-an-app.md)
 * [앱 일시 중단 처리](suspend-an-app.md)
-

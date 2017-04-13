@@ -9,20 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Microsoft Store Services SDK, 이벤트 기록"
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 80cc3ec6aab90549c55ff8c8f78b54f5827f61ff
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: b2fad3ea78a2007b2519e4b0b27276f9f003af2c
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="log-custom-events-for-dev-center"></a>개발자 센터에 대한 사용자 지정 이벤트 로깅
 
 Windows 개발자 센터 대시보드에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)를 사용하면 UWP(유니버설 Windows 플랫폼) 앱에서 정의한 사용자 지정 이벤트에 대한 정보를 얻을 수 있습니다. 사용자 지정 이벤트는 앱의 이벤트 또는 활동을 나타내는 임의의 문자열입니다. 예를 들어, 게임에서 *firstLevelPassed*, *secondLevelPassed* 등과 같이 사용자 지정 이벤트를 정의할 수 있어 사용자가 게임 단계를 통과할 때마다 기록됩니다.
 
 앱에서 사용자 지정 이벤트를 기록하려면 Microsoft Store Services SDK에서 제공한 [로그](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) 메서드에 사용자 지정 이벤트 문자열을 전달합니다. 사용자 지정 이벤트에 대한 총 발생 횟수는 개발자 센터 대시보드에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)의 **사용자 지정 이벤트** 섹션에서 검토할 수 있습니다.
 
->**참고**&nbsp;&nbsp;개발자 센터에 기록한 사용자 지정 이벤트는 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)와 관련이 없으며 **이벤트 뷰어**에 표시되지 않습니다.
+> [!NOTE]
+> 개발자 센터에 기록한 사용자 지정 이벤트는 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)와 관련이 없으며 **이벤트 뷰어**에 표시되지 않습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -50,4 +48,3 @@ Windows 개발자 센터 대시보드에서 [사용 보고서](https://msdn.micr
 * [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)
 * [로그 메서드](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)
 * [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
-

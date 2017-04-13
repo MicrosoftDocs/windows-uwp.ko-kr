@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: "이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다."
-title: "앱이 Windows 10 고객용 스토어에 표시되는 방법"
+title: "앱이 Windows10 고객용 스토어에 표시되는 방법"
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
@@ -9,14 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4a7c10d93a3145466007bfe4fac63422400a9830
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ef76bf9a26336f89b1b1a93099dec56191823a2e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="how-your-app-appears-in-the-store-for-windows-10-customers"></a>앱이 Windows 10 고객용 스토어에 표시되는 방법
+# <a name="how-your-app-appears-in-the-store-for-windows-10-customers"></a>앱이 Windows10 고객용 스토어에 표시되는 방법
 
 
 이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다. 스토어에서 Windows 10을 실행하는 고객에게 앱을 제공하고 분류하는 방식이 약간 변경되었기 때문에 이 항목은 변경된 내용을 이해하는 데 도움이 됩니다.
@@ -25,7 +22,7 @@ ms.lasthandoff: 02/07/2017
 
  
 
-## <a name="consideration-for-apps-that-shared-identity-in-the-windows-store-and-windows-phone-store"></a>Windows 스토어와 Windows Phone 스토어에서 ID를 공유하는 앱에 대한 고려 사항
+## <a name="apps-that-shared-identity-in-the-windows-store-and-windows-phone-store"></a>Windows 스토어와 Windows Phone 스토어에서 ID를 공유하는 앱
 
 
 두 스토어에 게시된 앱에 대해 동일한 예약된 이름을 사용한 경우(앱의 ID 공유라고도 함) 이들은 두 개가 아닌 하나의 앱으로 간주됩니다. 대시보드에서 이들은 Windows 및 Windows Phone 패키지가 포함된 단일 앱으로 표시됩니다.
@@ -53,7 +50,7 @@ ms.lasthandoff: 02/07/2017
 이전에 앱을 게시한 모든 지역/국가에서 Windows 10 고객이 앱을 사용할 수 있습니다. 각 스토어에 대해 다른 지역/국가를 선택한 경우에도 마찬가지입니다.
 
 ### <a name="categories"></a>범주
-앱이 두 스토어에서 다른 범주에 나타나는 경우 Windows 스토어의 범주를 사용하여 새 범주를 결정합니다. 일부 범주는 Windows 10 고객용 스토어에서 다르므로 아래 [표](#cat)를 검토해야 합니다.
+앱이 두 스토어에서 다른 범주에 나타나는 경우 Windows 스토어의 범주를 사용하여 새 범주를 결정합니다. 일부 범주는 Windows 10 고객용 스토어에서 다르므로 아래 [표](#category-changes)를 검토해야 합니다.
 
 ### <a name="age-rating"></a>연령별 등급
 여러 연령별 등급을 제공하는 경우 더 엄격한(더 높은 연령) 등급이 사용됩니다.
@@ -126,4 +123,3 @@ ms.lasthandoff: 02/07/2017
 | 게임 &gt; 가족           | 게임 &gt; 가족 + 어린이             |
 | 게임 &gt; 퍼즐           | 게임 &gt; 퍼즐 + 퀴즈           |
 | 게임 &gt; 레이싱           | 게임 &gt; 레이싱 + 비행           |
-

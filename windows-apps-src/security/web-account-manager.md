@@ -1,6 +1,6 @@
 ---
 title: "웹 계정 관리자"
-description: "이 문서에서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법을 설명합니다."
+description: "이 문서는 새로운 Windows10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
 author: awkoren
 ms.author: alkoren
 ms.date: 02/08/2017
@@ -9,15 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c3d1cdab94fc8b4f693ef9294cbb12580a9e199b
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e5e4f615ae66b3e551456258270f316df8f3c0d1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
-이 문서에서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법을 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
+이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
 
 > 참고: 전체 코드 샘플을 보려면 [GitHub의 WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)을 참조하세요.
 
@@ -166,7 +164,7 @@ AccountsSettingsPane에 Microsoft 계정 옵션이 표시되면 사용자가 선
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 {
     WebTokenRequest request = new WebTokenRequest(command.WebAccountProvider, "wl.basic");
-    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+    WebTokenRequestResult result = await WebAuthenticationCoreManager.RequestTokenAsync(request);
 }
 ```
 
@@ -185,7 +183,7 @@ private async void GetAadTokenAsync(WebAccountProviderCommand command)
     string clientId = "your_guid_here"; // Obtain your clientId from the Azure Portal
     WebTokenRequest request = new WebTokenRequest(provider, "User.Read", clientId);
     request.Properties.Add("resource", "https://graph.microsoft.com");
-    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+    WebTokenRequestResult result = await WebAuthenticationCoreManager.RequestTokenAsync(request);
 }
 ```
 
@@ -406,4 +404,3 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 [웹 인증 브로커](web-authentication-broker.md)
 
 [WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)
-

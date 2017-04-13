@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 19364d7d3e8e29364f527c09f931ef637cbf03d9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fa9d9fcb7f82a5dbe75e3b7249b32226552422ad
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="ratings-report"></a>평점 보고서
 
 
-Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 스토어에서 고객의 앱 평가 분포를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/get-app-ratings.md)에서 [앱 평점 가져오기](../monetize/access-analytics-data-using-windows-store-services.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 스토어에서 고객의 앱 평가 분포를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [앱 평점 가져오기](../monetize/get-app-ratings.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 이 보고서에서 평점은 고객이 스토어에서 앱을 평가할 때 앱에 제공한 별 수(1~5개)를 의미합니다. **평점** 보고서에는 리뷰로 남긴 개별 의견에 대한 정보가 포함되지 않습니다. 의견은 [리뷰 보고서](reviews-report.md)에서 확인할 수 있습니다.
 
@@ -77,4 +74,3 @@ Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 
  
 
  
-

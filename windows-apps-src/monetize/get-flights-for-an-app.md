@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 패키지 플라이트 정보를 검색합니다."
-title: "Windows 스토어 제출 API를 사용하여 앱의 패키지 플라이트 가져오기"
+title: "앱의 패키지 플라이트 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 플라이트, 패키지 플라이트"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ee49b494f3b0dd88229e3f40fd2c5cedb57ffe7c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c5cbedc868725bf1ad81179f59d7a2ac9a3a0818
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-package-flights-for-an-app-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱의 패키지 플라이트 가져오기
+# <a name="get-package-flights-for-an-app"></a>앱의 패키지 플라이트 가져오기
 
 
 
@@ -112,7 +109,7 @@ Authorization: Bearer <your access token>
 
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 2로 설정되어 있지만 앱의 패키지 플라이트가 4개인 경우 응답 본문에는 ```applications/{applicationid}/listflights/?skip=2&top=2```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```을 호출하여 다음 2개의 패키지 플라이트를 호출할 수 있음을 나타냅니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 2로 설정되어 있지만 앱의 패키지 플라이트가 4개인 경우 응답 본문에는 ```applications/{applicationid}/listflights/?skip=2&top=2```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listflights/?skip=2&top=2```를 호출하여 다음 2개의 패키지 플라이트를 호출할 수 있음을 나타냅니다. |
 | value      | 배열  | 지정된 앱의 패키지 플라이트에 대한 정보를 제공하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [플라이트 리소스](get-app-data.md#flight-object)를 참조하세요.                                                                                                                           |
 | totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱의 총 패키지 플라이트 수)입니다.                                                                                                                                                                                                                             |
 
@@ -135,4 +132,3 @@ Authorization: Bearer <your access token>
 * [모든 앱 가져오기](get-all-apps.md)
 * [앱 가져오기](get-an-app.md)
 * [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)
-

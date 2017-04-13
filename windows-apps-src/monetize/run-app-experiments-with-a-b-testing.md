@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 02e6ebbe6d3c02d08ae21ea71e7daa38b7e77255
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d95f42d7a57c191e371f06b21427d52c5c51773e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="run-app-experiments-with-ab-testing"></a>A/B 테스트로 앱 실험 실행
 
 Windows 개발자 센터 대시보드를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에서 런타임 시 검색할 수 있는 원격 변수를 정의할 수 있고, 이러한 값의 변형을 테스트하여 원하는 사용자 동작을 유도하는 데 가장 효과적인 값을 확인할 수 있습니다. 원격 변수를 사용하여 앱에서 바로 구매, 등록 흐름, 캡션 및 광고 배치 등의 앱 환경을 구성할 수 있습니다.
@@ -69,4 +66,3 @@ A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해�
 * [개발자 센터 대시보드에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
 * [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
-

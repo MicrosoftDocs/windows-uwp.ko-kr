@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 265f0f0d9db1a8ae53a8d6561e289f8e303e08b1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a2d2582150146ed8f7eb416e9d6e2c8f990ff818
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="export-restrictions-on-cryptography"></a>암호화에 대한 내보내기 제한
 
 
@@ -64,4 +61,3 @@ ms.lasthandoff: 02/07/2017
 앱이 이 목록에 없는 작업에 대해 암호화를 호출, 지원, 포함 또는 사용하는 경우 앱에 ECCN(Export Commodity Classification Number)이 필요합니다.
 
 ECCN이 없는 경우 [ECCN Questions and Answers](http://go.microsoft.com/fwlink/p/?LinkID=245646)를 참조하세요.
-

@@ -2,21 +2,17 @@
 title: "텍스처 필터링"
 description: "텍스처 필터링은 3D 기본 객체를 2D 화면으로 매핑하여 기본 객체를 렌더링할 때 기본 객체의 2D 렌더링 이미지를 구성하는 각 픽셀 색상을 생성합니다."
 ms.assetid: 1CCF4138-5D48-4B07-9490-996844F994D8
-keywords:
-- "텍스처 필터링"
+keywords: "텍스처 필터링"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 97b2dc04c518bfec4b09a50707c08767932f05c6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 43dccdc8a8834830b6c15fcfc1cd56216e27ee90
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-filtering"></a>텍스처 필터링
 
 
@@ -56,11 +52,11 @@ Direct3D는 다음과 같은 텍스처 필터링 방법을 지원합니다.
 </tr>
 <tr class="even">
 <td align="left"><p>[쌍선형 텍스처 필터링](bilinear-texture-filtering.md)</p></td>
-<td align="left"><p><em>쌍선형 필터링</em>은 샘플링 지점에 가장 가까운 텍셀 4개의 가중 평균을 계산합니다. 이 필터링 방법은 근접점 필터링보다 더욱 정확하고 일반적입니다. 또한 최신 그래픽 하드웨어에 구현된다는 점에서 효율적이기도 합니다.</p></td>
+<td align="left"><p><em>쌍선형 필터링</em>은 샘플링 점에 가장 가까운 4텍셀의 가중 평균을 계산합니다. 이 필터링 방식이 가장 가까운 점 필터링보다 더 정확하고 일반적입니다. 또한 최신 그래픽 하드웨어에 구현된다는 점에서 효율적이기도 합니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[이방성 텍스처 필터링](anisotropic-texture-filtering.md)</p></td>
-<td align="left"><p><em>이방성</em>이란 화면의 평면에 대해 표면이 비스듬한 3D 객체의 텍셀에서 시각적으로 나타나는 왜곡 현상을 말합니다. 이방성 기본 객체의 픽셀을 텍셀로 매핑할 때는 그 형상이 왜곡됩니다.</p></td>
+<td align="left"><p><em>이방성</em>은 표면 방향이 화면의 평면 기준 각도인 3D 개체의 텍셀에 표시되는 왜곡입니다. 이방성 기본 객체의 픽셀을 텍셀로 매핑할 때는 그 형상이 왜곡됩니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Mipmap을 사용하는 텍스처 필터링](texture-filtering-with-mipmaps.md)</p></td>
@@ -79,7 +75,6 @@ Direct3D는 다음과 같은 텍스처 필터링 방법을 지원합니다.
  
 
  
-
 
 
 

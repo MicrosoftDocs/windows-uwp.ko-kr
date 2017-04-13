@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 67b2b3b60ab6faba5ca30bb585205aba007597ca
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4b76c16d276af295a1b2eed292ebeffc56b2e604
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xkey-attribute"></a>x:Key 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 리소스로 만들어지고 참조되며 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 내에 있는 요소를 고유하게 식별합니다.
 
@@ -73,5 +70,4 @@ CombiningCharacter::= none
 **x:Key** 지정에 해당하는 코드는 기본 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)와 함께 키를 사용하는 모든 작업입니다. 예를 들어 리소스의 태그에 적용된 **x:Key**는 리소스를 **ResourceDictionary**에 추가할 때 지정하는 **Insert**의 *key* 매개 변수 값과 동일합니다.
 
 리소스 사전의 항목은 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) 또는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)을 대상으로 하는 경우 **x:Key**에 대한 값을 생략할 수 있습니다. 각각의 경우 리소스 항목의 암시적인 키는 문자열로 해석된 **TargetType** 값입니다. 자세한 내용은 [빠른 시작: 컨트롤 스타일 지정](https://msdn.microsoft.com/library/windows/apps/hh465498) 및 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
-
 

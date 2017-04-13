@@ -10,16 +10,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 984bafe92bf23f13bc206d6b438aa4f3b32bc3d5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 021a88fe80cc270082080ad55bd98b71097cea7e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="move-from-ios-to-uwp"></a>iOS에서 UWP로 이동
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 사용자 기반을 확장하는 방법에 대해 궁금한 iOS 개발자인 경우 도움이 되는 방법이 다양하게 늘어나고 있습니다. 사용할 수 있는 방법은 작업 중인 앱 유형(게임, 라이프스타일, 엔터프라이즈 등)과 개발 프로세스의 진행 정도에 따라 달라집니다. 예를 들면 주로 OpenGL 또는 Cocos2D에 종속되어 완성되었거나 거의 완성된 게임은 [iOS용 Windows 브리지](https://dev.windows.com/bridges/ios)에 적합하고, 중소기업용 플랫폼 간 앱을 계획하고 있는 경우에는 [Xamarin.Forms](https://www.xamarin.com/forms)를 사용해 보세요. Unity와 같은 플랫폼 간 도구에서 앱을 작성한 경우 [Windows에 게시](http://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/)하는 작업은 매우 간단합니다.
@@ -44,4 +41,3 @@ Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 �
 * [모든 Windows 장치용 유니버설 Windows 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [Windows 스토어 앱용 디자인 자산 다운로드](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
  
-

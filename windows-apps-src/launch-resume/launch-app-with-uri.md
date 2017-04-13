@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 6dceda60b60b29f772ec4fab8b142b45cc387e75
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-an-app-with-a-uri"></a>URI를 사용하여 앱 실행
 
 이 섹션에서는 유용한 앱 간 시나리오를 지원하기 위해 URI(Uniform Resource Identifier)를 사용하여 다른 앱에서 앱을 실행하는 방법을 설명합니다.

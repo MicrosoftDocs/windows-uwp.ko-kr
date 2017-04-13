@@ -11,18 +11,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 567c3bc66c78924bc33ec3a336db6e2ce8592d68
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5598f5278b6d4aff1dd9ebd786c6a344e14529ec
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="optical-zoom-and-resizing"></a>광학 줌 및 크기 조정
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘을 사용하는 방법에 대한 사용자 환경 지침을 제공합니다.
+이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -101,7 +98,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

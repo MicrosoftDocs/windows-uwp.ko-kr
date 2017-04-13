@@ -2,27 +2,24 @@
 author: mcleanbyron
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 추가 기능 제출을 관리합니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 관리"
+title: "추가 기능 제출 관리"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: 589946e159202c3ed5d13057642c808d5df4f738
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 7743faa9e2fda84d85468193ff46c87bab267a6c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-add-on-submissions-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 제출 관리
+# <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
 Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여 앱에 대한 추가 기능(앱에서 바로 구매 또는 IAP라고도 함) 제출을 관리할 수 있습니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 지닌 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
+>**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
 
->**중요**&nbsp;&nbsp;Windows 스토어 제출 API를 사용하여 추가 기능에 대한 제출을 생성하는 경우, 개발자 센터 대시보드 대신 API를 통해서만 제출을 추가 변경해야 합니다. API를 사용하여 처음 생성한 제출을 대시보드를 사용하여 변경하는 경우, 해당 제출은 API를 사용하여 변경 또는 커밋할 수 없게 됩니다. 경우에 따라 제출 전송 과정에서 진행할 수 없는 오류 상태로 남아 있을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+>**중요**&nbsp;&nbsp;Windows 스토어 제출 API를 사용하여 추가 기능에 대한 제출을 생성하는 경우, 개발자 센터 대시보드 대신 API를 통해서만 제출을 추가 변경해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-add-on-submissions" />
 ## <a name="methods-for-managing-add-on-submissions"></a>추가 기능 제출 관리 메서드
@@ -149,11 +146,11 @@ Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여
 
 다음 문서는 여러 다른 프로그래밍 언어로 추가 기능 제출을 만드는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
 
-* [C# 코드 예시](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java 코드 예시](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python 코드 예시](python-code-examples-for-the-windows-store-submission-api.md)
+* [C# 코드 예제](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
+* [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
 
->**참고**&nbsp;&nbsp;위에 나열된 코드 예시 외에 Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 있습니다. 이 모듈은 [StoreBroker](https://aka.ms/storebroker)라고 합니다. Windows 스토어 제출 API를 직접 호출하는 대신에 이 모듈을 사용하여 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리하거나, 소스를 검색하여 이 API를 호출하는 방법에 대한 추가 예시를 간단히 찾아볼 수 있습니다. StoreBroker 모듈은 다수의 자사 응용 프로그램이 스토어에 제출되는 기본 방법으로 Microsoft 내에서 적극적으로 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+>**참고**&nbsp;&nbsp;위에 나열된 코드 예제 외에도 the Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 다수의 자사 응용 프로그램이 스토어에 제출되는 기본 방법으로 Microsoft 내에서 적극적으로 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 <span/>
 ## <a name="data-resources"></a>데이터 리소스
@@ -198,7 +195,7 @@ Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여
     },
     "sales": [],
     "priceId": "Free",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -245,7 +242,7 @@ Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여
 | status  | 문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다. |
 | fileUploadUrl           | 문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [추가 기능 제출 만들기](#create-an-add-on-submission)를 참조하세요.  |
-| friendlyName  | 문자열  |  개발자 센터 대시보드와 같이 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
+| FriendlyName  | 문자열  |  개발자 센터 대시보드와 같이 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
 
 <span id="listing-object" />
 ### <a name="listing-resource"></a>목록 리소스
@@ -379,4 +376,3 @@ Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [Windows 스토어 제출 API를 사용하여 추가 기능 관리](manage-add-ons.md)
 * [Windows 개발자 센터 대시보드에서 추가 기능 제출](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)
-

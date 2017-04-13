@@ -2,21 +2,17 @@
 title: "부동 소수점 규칙"
 description: "Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소수점 계산은 IEEE 754 32비트 단정밀도 부동 소수점 규칙의 정의된 하위 집합 하에서 작동합니다."
 ms.assetid: 3B0C95E2-1025-4F70-BF14-EBFF2BB53AFF
-keywords:
-- "부동 소수점 규칙"
+keywords: "부동 소수점 규칙"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c36ef44bf02e6bbfe7a201004b19b2e99c1c27ca
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f802bcc2e70a622e6ce8a80744908cfe185f31b0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>부동 소수점 규칙
 
 
@@ -160,7 +156,6 @@ float11/float10 값(v)은 다음 규칙을 따릅니다.
  
 
  
-
 
 
 

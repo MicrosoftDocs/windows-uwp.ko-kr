@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c78122e3bd1a860359cb482ff54fe7cfc673081e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f3eee810f11d1d079da8436ba6d7eac6d0982cb3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="touch-interactions"></a>터치 조작
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -647,7 +644,6 @@ End Sub
  
 
  
-
 
 
 

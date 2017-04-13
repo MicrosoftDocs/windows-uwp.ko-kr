@@ -2,15 +2,13 @@
 title: "Windows 10 UWP(유니버설 Windows 플랫폼) 앱 시작 자동화"
 description: "개발자는 프로토콜 활성화 및 시작 활성화를 사용하여 자동화 테스트를 위해 해당 UWP 앱 또는 게임을 자동으로 시작할 수 있습니다."
 author: listurm
-translationtype: Human Translation
-ms.sourcegitcommit: c5d0f685f4c733cbe4ba4c07aab565b888ddfe58
 ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="automate-launching-windows-10-uwp-apps"></a>Windows 10 UWP 앱 시작 자동화
 
-# Windows 10 UWP 앱 시작 자동화
-
-## 소개
+## <a name="introduction"></a>소개
 
 개발자는 UWP(유니버설 Windows 플랫폼) 앱의 자동 시작을 실현하기 위해 몇 가지 옵션을 사용할 수 있습니다. 이 문서에서는 프로토콜 활성화 및 시작 활성화를 사용하여 앱을 시작하는 방법을 알아봅니다.
 
@@ -20,7 +18,7 @@ ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
 
 각 활성화 방법에서 명령줄 또는 시작 관리자 응용 프로그램 중 하나를 선택하여 사용할 수 있습니다. 모든 활성화 방법에서, 앱이 현재 실행되고 있는 경우 활성화를 수행하면 앱이 포그라운드로 나오고(다시 활성화) 새로운 활성화 인수가 제공됩니다. 따라서 활성화 명령을 유연하게 사용하여 앱에 새 메시지를 제공할 수 있습니다. 활성화 방법에서 새로 업데이트된 앱을 실행하려면 프로젝트를 컴파일한 후 배포해야 합니다. 
 
-## 프로토콜 활성화
+## <a name="protocol-activation"></a>프로토콜 활성화
 
 다음 단계에 따라 앱에 대한 프로토콜 활성화를 설정합니다. 
 
@@ -37,7 +35,7 @@ ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
 
 프로토콜 활성화를 설정했으므로 이 프로토콜을 사용하여 앱을 활성화하기 위한 두 가지 옵션(명령줄 또는 시작 관리자 응용 프로그램) 중 하나를 사용할 수 있습니다. 
 
-### 명령줄
+### <a name="command-line"></a>명령줄
 
 앱은 명령줄에 start 명령, 이전에 설정한 프로토콜 이름, 콜론(“:”) 및 매개 변수를 차례로 사용하여 프로토콜을 통해 앱을 활성화할 수 있습니다. 매개 변수는 임의의 문자열일 수 있지만 URI(Uniform Resource Identifier) 기능을 활용하려면 표준 URI 형식에 따르는 것이 좋습니다. 
 
@@ -57,7 +55,7 @@ Uri 개체에는 다음 형식으로 URI 문자열을 구문 분석하는 메서
 
 프로토콜 명령줄 활성화에서는 유니코드 문자가 지원되며 원시 URI의 경우 2038자의 제한이 적용됩니다. 
 
-### 시작 관리자 응용 프로그램
+### <a name="launcher-application"></a>시작 관리자 응용 프로그램
 
 시작하는 경우 WinRT API를 지원하는 별도의 응용 프로그램을 만듭니다. 시작 관리자 프로그램에서 프로토콜 활성화로 시작하기 위한 C++ 코드는 다음 샘플에 나와 있습니다. 여기서 **PackageURI**는 인수가 있는 응용 프로그램의 URI(예: `myapplication:` 또는 `myapplication:protocol activation arguments`)입니다.
 
@@ -100,7 +98,7 @@ Uri(URI));
 ```
 시작 관리자 응용 프로그램을 사용한 프로토콜 활성화는 인수에 대해 명령줄을 사용한 프로토콜 활성화의 경우와 동일한 제한이 적용됩니다. 둘 다 유니코드 문자를 지원하며, 원시 URI에 대해 2038자의 제한이 적용됩니다. 
 
-## 시작 활성화
+## <a name="launch-activation"></a>시작 활성화
 
 시작 활성화를 사용하여 앱을 시작할 수도 있습니다. 필요한 설정은 없지만 UWP 앱의 AUMID(응용 프로그램 사용자 모델 ID)가 필요합니다. AUMID는 패키지 제품군 이름, 느낌표 및 응용 프로그램 ID로 구성됩니다. 
 
@@ -115,7 +113,7 @@ Uri(URI));
 
 응용 프로그램 ID는 XML 뷰에 열려 있는 **Package.appxmanifest** 파일의 `<Applications>` 요소 아래에서 볼 수 있습니다.
 
-### 명령줄
+### <a name="command-line"></a>명령줄
 
 UWP 앱의 시작 활성화를 수행하기 위한 도구는 Windows 10 SDK와 함께 설치됩니다. 이 도구를 명령줄에서 실행할 수도 있고 시작할 앱의 AUMID가 인수로 사용될 수도 있습니다.
 
@@ -131,7 +129,7 @@ C:\Program Files (x86)\Windows Kits\10\App Certification Kit\microsoft.windows.s
 
 이 옵션은 명령줄 인수를 지원하지 않습니다. 
 
-### 시작 관리자 응용 프로그램
+### <a name="launcher-application"></a>시작 관리자 응용 프로그램
 
 시작하는 데 COM을 사용하도록 지원하는 별도의 응용 프로그램을 만들 수 있습니다. 다음 예제에서는 시작 관리자 프로그램에서 시작 활성화로 시작하기 위한 C++ 코드를 보여 줍니다. 이 코드를 사용하여 **ApplicationActivationManager** 개체를 만들고, 앞에서 찾은 AUMID 및 인수를 전달하여 **ActivateApplication**을 호출합니다. 다른 매개 변수에 대한 자세한 내용은 [IApplicationActivationManager::ActivateApplication 메서드(MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx)를 참조하세요.
 
@@ -177,7 +175,7 @@ Manager. hr = 0x%08lx \n", AUMID, hr);
 
 앞에 나오는 시작 방법(명령줄 사용)과 달리, 이 메서드는 전달되는 인수를 지원합니다.
 
-## 인수 수락
+## <a name="accepting-arguments"></a>인수 수락
 
 UWP 앱의 활성화 시 전달된 인수를 수락하려면 앱에 일부 코드를 추가해야 합니다. 프로토콜 활성화 또는 시작 활성화가 발생했는지 확인하려면 **OnActivated** 이벤트를 재정의하고 인수 형식을 확인한 후 원시 문자열 또는 URI 개체의 사전 분석된 값을 가져옵니다. 
 
@@ -189,7 +187,7 @@ void OnActivated(IActivatedEventArgs^ args)
         // Check for launch activation
         if (args->Kind == ActivationKind::Launch)
         {
-            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args); 
+            auto launchArgs = static_cast<LaunchActivatedEventArgs^>(args);    
 Platform::String^ argval = launchArgs->Arguments;
             // Manipulate arguments …
         }
@@ -204,15 +202,9 @@ Platform::String^ argval = launchArgs->Arguments;
     }
 ```
 
-## 요약
+## <a name="summary"></a>요약
 다양한 방법으로 UWP 앱을 시작할 수 있습니다. 요구 사항 및 사용 사례에 따라 좀 더 적절한 방법을 사용하는 것이 좋습니다. 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

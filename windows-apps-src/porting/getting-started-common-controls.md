@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91ea875987d5e1659fff337f95f790ef59286d03
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4df9785b0d8ccea0561a780fa2b807201332cda8
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-common-controls"></a>시작: 공용 컨트롤
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -66,4 +63,3 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 * [2014 빌드: XAML UI 및 컨트롤은 어떤가요?](http://go.microsoft.com/fwlink/p/?LinkID=397897)
 * [2014 빌드: 일반적인 XAML UI 프레임워크를 사용하여 앱 개발](http://go.microsoft.com/fwlink/p/?LinkID=397898)
 * [2014 빌드: Visual Studio를 사용하여 XAML 수렴형 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397876)
-

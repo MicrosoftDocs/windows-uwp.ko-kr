@@ -9,26 +9,23 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e7d13a55ba545758e01452103c3380ac67ad6610
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7de8b6db65bb9ec58f16643dc8b477c274513c9a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-on-submissions"></a>추가 기능 제출
 
 추가 기능(앱에서 바로 구매 제품이라고도 함)은 고객이 구매할 수 있는 앱에 대한 보충 항목입니다. 추가 기능은 재미있는 새 추가 기능, 새 게임 레벨 또는 사용자의 지속적인 사용을 유도하는 기타 모든 항목일 수 있습니다. 추가 기능은 수익을 창출하는 뛰어난 방법일 뿐 아니라 고객 조작 및 참여를 추진하는 데 도움이 됩니다.
 
 추가 기능은 Windows 개발자 센터 대시보드를 통해 게시됩니다. 또한 앱 코드에서 [추가 기능을 사용](../monetize/in-app-purchases-and-trials.md)해야 합니다.
 
-추가 기능 제출 프로세스의 첫 번째 단계에서는 [제품 유형과 제품 ID를 정의](set-your-add-on-product-id.md)하여 대시보드에서 추가 기능을 만듭니다. 그러고 나서 Windows 스토어를 통해 추가 기능을 구매할 수 있도록 제출을 만들 수 있습니다. [앱을 제출](app-submissions.md)할 때 추가 기능을 함께 제출하거나 개별적으로 작업할 수 있습니다. 또한 앱을 다시 제출할 필요 없이 앱이 스토어에 나열된 후에 추가 기능을 [업데이트](#updating-an-add-on-after-submission)할 수 있습니다.
+추가 기능 제출 프로세스의 첫 번째 단계에서는 [제품 유형과 제품 ID를 정의](set-your-add-on-product-id.md)하여 대시보드에서 추가 기능을 만듭니다. 그러고 나서 Windows 스토어를 통해 추가 기능을 구매할 수 있도록 제출을 만들 수 있습니다. [앱을 제출](app-submissions.md)할 때 추가 기능을 함께 제출하거나 개별적으로 작업할 수 있습니다. 또한 앱을 다시 제출할 필요 없이 앱이 스토어에 나열된 후에 추가 기능을 [업데이트](#updating-an-add-on-after-publication)할 수 있습니다.
 
 > **참고**&nbsp;&nbsp;설명서의 이 섹션에서는 개발자 센터 대시보드에서 추가 기능을 제출하는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 추가 기능 제출을 자동화할 수 있습니다.
 
 ## <a name="checklist-for-submitting-an-add-on"></a>추가 기능 제출에 대한 검사 목록
 
-추가 기능 제출을 만들 때 제공하는 정보 목록은 다음과 같습니다. 제공해야 하는 항목은 다음과 같습니다. 일부 항목은 옵션이거나 원하는 대로 변경할 수 있는 기본값이 이미 있습니다.
+추가 기능 제출을 만들 때 제공하는 정보 목록은 다음과 같습니다. 제공해야 하는 항목은 다음과 같습니다. 일부 항목은 선택 사항이거나 원하는 대로 변경할 수 있는 기본값이 이미 있습니다.
 
 ### <a name="create-a-new-add-on-page"></a>새 추가 기능 페이지 만들기
 | 필드 이름                    | 참고                            |
@@ -44,8 +41,8 @@ ms.lasthandoff: 02/07/2017
 | [**제품 수명**](enter-add-on-properties.md#product-lifetime)  | 제품 유형이 **지속형**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다. |
 | [**수량**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다.
 | [**콘텐츠 형식**](enter-add-on-properties.md#content-type)          | 필수       |               
-| [**키워드**](enter-add-on-properties.md#keywords)                  | 옵션(키워드 최대 10개, 각각 30자 제한) |
-| [**사용자 지정 개발자 데이터**](enter-add-on-properties.md#custom-developer-data)                               | 옵션(3,000자 제한)             |
+| [**키워드**](enter-add-on-properties.md#keywords)                  | 선택 사항(키워드 최대 10개, 각각 30자 제한) |
+| [**사용자 지정 개발자 데이터**](enter-add-on-properties.md#custom-developer-data)                               | 선택 사항(3,000자 제한)             |
 
 <span/>
 
@@ -66,8 +63,8 @@ ms.lasthandoff: 02/07/2017
 | 필드 이름                    | 참고                                       |
 |-------------------------------|---------------------------------------------|
 | [**제목**](create-add-on-store-listings.md#title)                    | 필수(100자 제한)              |
-| [**설명**](create-add-on-store-listings.md#description)       | 옵션(200자 제한)              |
-| [**아이콘**](create-add-on-store-listings.md#icon)                    | 옵션(.png, 300 x 300픽셀)             |
+| [**설명**](create-add-on-store-listings.md#description)       | 선택 사항(200자 제한)              |
+| [**아이콘**](create-add-on-store-listings.md#icon)                    | 선택 사항(.png, 300 x 300픽셀)             |
 
 <span/>
 
@@ -80,9 +77,8 @@ ms.lasthandoff: 02/07/2017
 
 언제든지 게시된 추가 기능을 변경할 수 있습니다. 추가 기능 변경 사항은 앱과 별개로 제출 및 게시되므로 일반적으로 가격이나 설명 업데이트 같은 추가 기능 변경을 위해 전체 앱을 업데이트할 필요가 없습니다.
 
-> **중요**&nbsp;&nbsp;고객이 Windows 8.x에서 앱을 사용할 수 있는 경우 추가 기능 업데이트가 해당 고객에게 표시되게 하려면 새 앱 제출을 만들고 게시해야 합니다. 마찬가지로 앱이 게시된 후 Windows 8.x가 대상으로 지정된 앱에 새 추가 기능을 추가할 경우 해당 추가 기능을 참조하도록 앱 코드를 업데이트하고 앱을 다시 제출해야 합니다. 그러지 않으면 새 추가 기능이 Windows 8.x의 고객에게 표시되지 않습니다.
+> **중요**&nbsp;&nbsp;고객이 Windows8.x에서 앱을 사용할 수 있는 경우 추가 기능 업데이트가 해당 고객에게 표시되게 하려면 새 앱 제출을 만들고 게시해야 합니다. 마찬가지로 앱이 게시된 후 Windows8.x가 대상으로 지정된 앱에 새 추가 기능을 추가할 경우 해당 추가 기능을 참조하도록 앱 코드를 업데이트하고 앱을 다시 제출해야 합니다. 그러지 않으면 새 추가 기능이 Windows8.x의 고객에게 표시되지 않습니다.
 
 업데이트를 제출하려면 대시보드에서 추가 기능 페이지로 이동하고 **업데이트**를 클릭합니다. 이렇게 하면 이전 제출의 정보를 기반으로 추가 기능에 대한 새 제출이 만들어집니다. 원하는 정보를 변경하고 **스토어에 제출**을 클릭합니다.
 
 이전에 제공한 추가 기능을 제거하려면 새 제출을 만들고 [배포 및 표시](set-add-on-pricing-and-availability.md) 옵션을 **더 이상 구입할 수 없습니다. 앱 목록에 표시되지 않습니다.**로 변경하면 됩니다. 또한 필요에 따라 앱의 코드를 업데이트하여 추가 기능에 대한 참조를 제거해야 합니다.
-

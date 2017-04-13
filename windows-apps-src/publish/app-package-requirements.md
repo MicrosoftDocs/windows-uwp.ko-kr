@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 59660de0adb6ff1247ea90f0ace3bcca35f19d1a
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
 Windows 스토어에 제출할 앱 패키지를 준비하려면 다음 지침을 따르세요.
@@ -80,12 +77,11 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 
 ## <a name="storemanifest-xml-file"></a>StoreManifest XML 파일
 
-StoreManifest.xml은 앱 패키지에 포함될 수 있는 옵션 구성 파일입니다. 이 구성 파일은 앱을 Windows 스토어 장치 앱으로 선언하거나 패키지를 장치에 적용하려면 필요한 요구 사항을 선언하는 등과 같이 패키지 매니페스트에서 다루지 않는 기능을 사용하도록 설정하기 위한 것입니다. StoreManifest.xml은 앱 패키지와 함께 제출되며 앱 기본 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://msdn.microsoft.com/library/windows/apps/mt617325)를 참조하세요.
+StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파일입니다. 이 구성 파일은 앱을 Windows 스토어 장치 앱으로 선언하거나 패키지를 장치에 적용하려면 필요한 요구 사항을 선언하는 등과 같이 패키지 매니페스트에서 다루지 않는 기능을 사용하도록 설정하기 위한 것입니다. StoreManifest.xml은 앱 패키지와 함께 제출되며 앱 기본 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://msdn.microsoft.com/library/windows/apps/mt617325)를 참조하세요.
 
  
 
  
-
 
 
 

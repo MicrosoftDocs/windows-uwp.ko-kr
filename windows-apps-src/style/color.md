@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 98158e8dc1531c1d4059b5462a6839d775fb6336
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0d4266d1335198cffb74900b0d1eb2bb48cd1879
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="color"></a>색
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -150,10 +147,30 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
 하이퍼링크는 기본적으로 사용자의 테마 컬러를 사용 합니다. 페이지 배경이 유사한 색인 경우 효과적인 대비를 위해 하이퍼링크에 테마 음영을 더 밝거나 더 어둡게 지정할 수 있습니다.
 
 
-<div class="uwpd-image-with-caption">
-    <img src="images/shades.png" alt="A single accent color with its 6 shades" />
-    <div>기본 테마 컬러의 다양한 음영(밝음/어두움)입니다.</div>
-</div>
+<table class="uwpd-color-table" style="border: solid 4px white; width: 30pc">
+   <caption>기본 테마 컬러의 다양한 음영(밝음/어두움)입니다.</caption>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #A6D8FF; color: black">3 색조 밝게</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #76B9ED; color: black">2 색조 밝게</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #429CE3; color: black">1 색조 밝게</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #0078D7; color: white">샘플 테마 컬러</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #005A9E; color: white">1 색조 어둡게</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #004275; color: white">2 색조 어둡게</td>
+    </tr>
+    <tr>
+        <td class="uwpd-color-table" style="background-color: #002642; color: white">3 색조 어둡게</td>
+    </tr>
+</table>
 
 <div class="uwpd-image-with-caption">
     <img src="images/action_center_redline_zoom.png" alt="Redlines for Colored Action Center" />
@@ -223,4 +240,3 @@ App.xaml에서 **RequestedTheme** 속성을 변경하여 쉽게 테마를 변경
 
 * [XAML 스타일](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 * [XAML 테마 리소스](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
-

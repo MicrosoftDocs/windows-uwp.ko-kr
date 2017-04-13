@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: e4cc17bf268ddb470c3c64dfe3e471053d8fca55
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e9d66feb6117fddfff62c217b55da813a63c4331
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -383,4 +380,3 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
         <td>ms-settings:developers</td>
     </tr>
 </table><br/>
-

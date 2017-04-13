@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 추가 기능을 삭제합니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 삭제"
+title: "추가 기능 삭제"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능, 삭제, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 56ae310a13401b733eadf08f2f1992bfe0130884
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 74149837e43b65998069c8724b5cd6c55df8703b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="delete-an-add-on-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 삭제
+# <a name="delete-an-add-on"></a>추가 기능 삭제
 
 
 
@@ -96,4 +93,3 @@ Authorization: Bearer <your access token>
 * [모든 추가 기능 가져오기](get-all-add-ons.md)
 * [추가 기능 가져오기](get-an-add-on.md)
 * [추가 기능 만들기](create-an-add-on.md)
-

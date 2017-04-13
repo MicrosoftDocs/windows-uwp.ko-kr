@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 8C1E9E36-13AF-4386-9D0F-F9CB320F02F5
 description: "Windows 스토어 제출 API에서는 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트를 만듭니다."
-title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 만들기"
+title: "패키지 플라이트 만들기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 플라이트 만들기"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2b2b8acb1cfa2a1eaa0ce586cace250cedb5cf71
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 64064e8eaa7586f3ea8fbf569aa08f8789aa5c52
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="create-a-package-flight-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 패키지 플라이트 만들기
+# <a name="create-a-package-flight"></a>패키지 플라이트 만들기
 
 
 
@@ -132,4 +129,3 @@ Content-Type: application/json
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [패키지 플라이트 가져오기](get-a-flight.md)
 * [패키지 플라이트 삭제](delete-a-flight.md)
-

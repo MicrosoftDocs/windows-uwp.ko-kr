@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: fe0bc3c6a178aa635ab8a5463e9c7663f27e8ccc
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f58b2c244a99580b038609c5bd5ef0a4c3ffe030
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
 
@@ -168,7 +165,6 @@ ms.lasthandoff: 02/07/2017
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
-
 
 
 

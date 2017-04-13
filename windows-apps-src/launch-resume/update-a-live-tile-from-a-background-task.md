@@ -10,14 +10,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 76521772e4f93ee143ad698ad798f4b88ebcf3a7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 00cbeca54b67f0f9112fe1a85f5e31faf9fb8560
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="update-a-live-tile-from-a-background-task"></a>백그라운드 작업에서 라이브 타일 업데이트
 
 
@@ -274,4 +270,3 @@ namespace ContosoApp
  
 
  
-

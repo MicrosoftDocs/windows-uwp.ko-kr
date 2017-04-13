@@ -2,21 +2,17 @@
 title: "DS(도메인 셰이더) 단계"
 description: "DS(도메인 셰이더) 단계는 출력 패치에서 세분화된 지점의 꼭짓점 위치를 계산합니다. 이 단계에서 각 도메인 샘플에 해당하는 꼭짓점 위치도 계산합니다."
 ms.assetid: 673CC04A-A74F-495F-AFB7-49157538749C
-keywords:
-- "DS(도메인 셰이더) 단계"
+keywords: "DS(도메인 셰이더) 단계"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 8bb2b3c731f3612b7142bfd136b3d57d277c2e03
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3a94f30af955853a87958ae65a548f63c78b83ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="domain-shader-ds-stage"></a>DS(도메인 셰이더) 단계
 
 
@@ -69,7 +65,6 @@ void main( out    MyDSOutput result,
  
 
  
-
 
 
 

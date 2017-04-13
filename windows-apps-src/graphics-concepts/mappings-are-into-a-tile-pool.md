@@ -2,21 +2,17 @@
 title: "타일 풀에 대한 매핑"
 description: "리소스를 스트리밍 리소스로 만들면 리소스를 구성하는 타일이 타일 풀 내 위치를 가리키는 데서부터 생성됩니다. 타일 풀은 응용 프로그램으로는 보이지 않는 막후에서 하나 이상의 할당이 지원하는 메모리 풀입니다."
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
-keywords:
-- "타일 풀에 대한 매핑"
+keywords: "타일 풀에 대한 매핑"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9c8ba46cdd1968fd72307849005f91aa5e872260
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bc5787333c266491e432abbb3c5039f73bdeb1f2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="mappings-are-into-a-tile-pool"></a>타일 풀에 대한 매핑
 
 
@@ -86,7 +82,6 @@ Direct3D 11에 리소스 제한이 있는 조건에서 단일면에 최악의 �
  
 
  
-
 
 
 

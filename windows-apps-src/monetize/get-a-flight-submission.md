@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다."
-title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 가져오기"
+title: "패키지 플라이트 제출 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 플라이트 제출"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a989e9d081ec9cb709b59e1ff4ceff2d517ae48f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2571bb25ce407a9c44ed40aae0a865708e6154d5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-a-package-flight-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 가져오기
+# <a name="get-a-package-flight-submission"></a>패키지 플라이트 제출 가져오기
 
 
 
@@ -104,7 +101,7 @@ Authorization: Bearer <your access token>
   "packageDeliveryOptions": {
     "packageRollout": {
         "isPackageRollout": false,
-        "packageRolloutPercentage": 0,
+        "packageRolloutPercentage": 0.0,
         "packageRolloutStatus": "PackageRolloutNotStarted",
         "fallbackSubmissionId": "0"
     },
@@ -138,4 +135,3 @@ Authorization: Bearer <your access token>
 * [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)
 * [패키지 플라인트 제출 업데이트](update-a-flight-submission.md)
 * [패키지 플라이트 제출 삭제](delete-a-flight-submission.md)
-

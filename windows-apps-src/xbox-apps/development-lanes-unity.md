@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: fca3267a-0c0f-4872-8017-90384fb34215
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6c01cc5afa3b3c1266464c9f04c79cea533c9741
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ec26b5533e378cd10517ef8cf766171bc8ef717f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="bringing-unity-games-to-uwp-on-xbox"></a>Xbox의 UWP에 Unity 게임 가져오기
 
 
@@ -64,4 +61,3 @@ Unity 게임 프로젝트에서 **파일 -&gt; 빌드 설정**에 있는 **빌�
 ## <a name="see-also"></a>참고 항목
 - [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
 - [Xbox One의 UWP](index.md)
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 401ab153ec737a0a82825dc3b2065156b50d4589
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f31d6da73c274fc4f14e0851cf956a43fa441b76
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -178,4 +175,3 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. 이전 사례 연구와 마찬가지로 이 특정 보기 모델에는 작업이 필요하지 않으며 주로 사용자 인터페이스를 리팩터링하는 데 노력을 기울였습니다. 일부 변경 내용은 계속해서 여러 폼 팩터(사실상 이전보다 훨씬 많음)를 지원하면서 두 프로젝트를 하나로 결합하는 데 따른 필연적인 결과였습니다. 몇 가지 변경은 플랫폼에 적용한 변경과 관계가 있었습니다.
 
 다음 사례 연구는 [QuizGame](w8x-to-uwp-case-study-quizgame.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
-

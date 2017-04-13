@@ -2,21 +2,17 @@
 title: "꼭짓점 및 인덱스 버퍼"
 description: "꼭짓점 버퍼는 꼭짓점 데이터를 포함한 메모리 버퍼입니다. 꼭짓점 버퍼의 꼭짓점을 처리하여 변환, 조명 및 클리핑을 수행합니다."
 ms.assetid: 8A39CD23-85FB-4424-9AC3-37919704CD68
-keywords:
-- "꼭짓점 및 인덱스 버퍼"
+keywords: "꼭짓점 및 인덱스 버퍼"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cdf65da6504114029c4937ee7db531a1339ed4c2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f06ee013f5c09522df387d69afa0096f7a3f7044
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="vertex-and-index-buffers"></a>꼭짓점 및 인덱스 버퍼
 
 
@@ -47,7 +43,7 @@ ms.lasthandoff: 02/07/2017
 </tr>
 <tr class="even">
 <td align="left"><p>[인덱스 버퍼](index-buffers.md)</p></td>
-<td align="left"><p><em>인덱스 버퍼</em>는 인덱스 데이터를 포함하는 메모리 버퍼로써 기본 형식을 렌더링하는 데 사용되는 꼭짓점 버퍼의 정수 오프셋입니다.</p></td>
+<td align="left"><p><em>인덱스 버퍼</em>는 인덱스 데이터를 포함하는 메모리 버퍼로써 기본 요소를 렌더링하는 데 사용되는 꼭짓점 버퍼에 대한 정수 오프셋입니다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -62,7 +58,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

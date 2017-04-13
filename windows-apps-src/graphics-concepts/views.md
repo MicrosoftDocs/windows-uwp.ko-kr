@@ -2,21 +2,17 @@
 title: "보기"
 description: "\\ 0034;보기 \\ 0034;라는 용어는 \\ 0034;필요한 형식의 데이터 \\ 0034;를 뜻하는 데 사용됩니다. 예를 들어 CBV(상수 버퍼 보기)는 올바른 형식의 상수 버퍼 데이터일 것입니다. 이 섹션에서는 가장 일반적이고 유용한 보기를 설명합니다."
 ms.assetid: 0C7FB99F-7391-472F-BA53-576888DFC171
-keywords:
-- "보기"
+keywords: "보기"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: beaed3bbaf6cab56c826788d0361b1200c73a003
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 0091afb549c778f367e12726054cb908eb0c3eba
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="views"></a>보기
 
 
@@ -47,7 +43,7 @@ ms.lasthandoff: 02/07/2017
 </tr>
 <tr class="odd">
 <td align="left"><p>[SRV(셰이더 리소스 보기) 및 UAV(정렬되지 않은 액세스 보기)](shader-resource-view--srv-.md)</p></td>
-<td align="left"><p>셰이더 리소스 보기는 일반적으로 셰이더에서 액세스할 수 있는 형식으로 텍스처를 래핑합니다. 순서가 지정되지 않은 액세스 보기는 유사한 기능을 제공하지만, 순서와 상관없이 텍스처(또는 다른 리소스)에 대한 읽기 및 쓰기가 가능합니다.</p></td>
+<td align="left"><p>셰이더 리소스 뷰는 일반적으로 셰이더가 텍스처에 액세스할 수 있는 형식으로 텍스처를 래핑합니다. 순서가 지정되지 않은 액세스 보기는 유사한 기능을 제공하지만, 순서와 상관없이 텍스처(또는 다른 리소스)에 대한 읽기 및 쓰기가 가능합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[샘플러](sampler.md)</p></td>
@@ -59,11 +55,11 @@ ms.lasthandoff: 02/07/2017
 </tr>
 <tr class="even">
 <td align="left"><p>[DSV(깊이 스텐실 보기)](depth-stencil-view--dsv-.md)</p></td>
-<td align="left"><p>깊이 스텐실 보기는 깊이 및 스텐실 정보를 보관하는 형식 및 버퍼를 제공합니다. 깊이 버퍼는 더 가까운 개체에 가려서 뷰어에게 보이지 않는 픽셀 그림을 제거하는 데 사용됩니다. 스텐실 버퍼는 정의된 셰이프를 제외한 모든 그리기를 제거하는 데 사용할 수 있습니다.</p></td>
+<td align="left"><p>깊이 스텐실 보기는 깊이 및 스텐실 정보를 보관하는 형식 및 버퍼를 제공합니다. 깊이 버퍼는 더 가까운 개체에 의해 가려져 뷰어에서 픽셀의 그림이 보이지 않게 되면 이를 제거하는 데 사용됩니다. 스텐실 버퍼는 정의된 셰이프를 제외한 모든 그리기를 제거하는 데 사용할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[SOV(스트림 출력 보기)](stream-output-view--sov-.md)</p></td>
-<td align="left"><p>스트림 출력 보기를 사용하면 꼭짓점, 공간 분할 및 기하 도형 셰이더가 제공하는 꼭짓점 정보를 나중에 사용할 수 있도록 응용 프로그램에 다시 스트리밍할 수 있습니다. 예를 들어 이러한 셰이더에 의해 왜곡된 개체를 응용 프로그램에 다시 작성하여 물리 또는 기타 엔진에 보다 정확한 입력을 제공할 수 있습니다. 하지만 실제로는 스트림 출력 보기는 그래픽 파이프라인에서 자주 사용되지 않는 기능입니다.</p></td>
+<td align="left"><p>스트림 출력 보기를 사용하면 꼭짓점, 공간 분할 및 기하 도형 셰이더가 제공하는 꼭짓점 정보를 나중에 사용할 수 있도록 응용 프로그램에 다시 스트리밍할 수 있습니다. 예를 들어, 이러한 셰이더에 의해 왜곡되는 개체는 응용 프로그램에 다시 작성되어 물리 또는 기타 엔진에 더 정확하게 입력할 수 있습니다. 하지만 실제로는 스트림 출력 보기는 그래픽 파이프라인에서 자주 사용되지 않는 기능입니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[ROV(정렬된 래스터라이저 보기)](rasterizer-ordered-view--rov-.md)</p></td>
@@ -82,7 +78,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

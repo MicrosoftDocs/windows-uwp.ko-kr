@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Windows 스토어 제출 API를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 제출을 프로그래밍 방식으로 만들고 관리합니다."
-title: "Windows 스토어 서비스를 사용하여 제출 만들기 및 관리"
+title: "제출 만들기 및 관리"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f73470c456bf59544bc702b137da64f57c6a6943
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ca8bb623d06da0001b1b0751a5ac1ccc310bbd84
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
-# <a name="create-and-manage-submissions-using-windows-store-services"></a>Windows 스토어 서비스를 사용하여 제출 만들기 및 관리
+# <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
 
 *Windows 스토어 제출 API*를 사용하여 사용자 또는 조직의 Windows 개발자 센터 계정에 대한 앱, 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 및 패키지 플라이트를 프로그래밍 방식으로 쿼리하고 이에 대한 제출을 만듭니다. 이 API는 계정에서 많은 앱 또는 추가 기능을 관리하고 이러한 자산의 제출 프로세스를 자동화 및 최적화하려는 경우 유용합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
@@ -35,7 +32,7 @@ ms.lasthandoff: 02/07/2017
 <br/><br/>
 >* 이 API를 사용하여 앱, 또는 추가 기능에 대한 제출을 만드는 경우 Windows 개발자 센터 대시보드보다는 API를 사용하여 제출만 추가로 변경하세요. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 경우 제출을 삭제하고 새 제출을 만들어야 합니다.
 <br/><br/>
-> * 이 API는 필수 앱 업데이트와 스토어 관리 소모성 추가 기능을 포함하여(하지만 여기에 국한되지는 않음) 2016년 8월에 Windows 개발자 센터 대시보드에 도입된 특정 기능을 사용하는 앱 또는 추가 기능에는 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Windows 스토어 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 대시보드를 사용하여 앱 또는 추가 기능에 대한 제출을 관리해야 합니다.
+> * 이 API는 필수 앱 업데이트와 스토어 관리 소모성 추가 기능을 포함하여(하지만 여기에 국한되지는 않음) 2016년 8월에 개발자 센터 대시보드에 도입된 특정 기능을 사용하는 앱 또는 추가 기능에는 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Windows 스토어 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 대시보드를 사용하여 앱 또는 추가 기능에 대한 제출을 관리해야 합니다.
 
 
 <span id="prerequisites" />
@@ -124,7 +121,7 @@ Azure AD 액세스 토큰이 있으면 Windows 스토어 제출 API에서 메서
 
 ## <a name="troubleshooting"></a>문제 해결
 
-| 문제      | 해상도                                          |
+| 문제      | 해결 방법                                          |
 |---------------|---------------------------------------------|
 | PowerShell에서 Windows 스토어 제출 API를 호출한 후 API에 대한 응답 데이터를 [ConvertFrom Json](https://technet.microsoft.com/library/hh849898.aspx) cmdlet을 사용하여 JSON 형식에서 PowerShell 개체로 변환하고 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 사용하여 다시 JSON 형식으로 변환하면 API에 대한 응답 데이터가 손상됩니다. |  기본적으로 [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet에 대한 *-Depth* 매개 변수는 개체의 2개 수준으로 설정되며 이는 Windows 스토어 제출 API에 에서 반환하는 대부분의 JSON 개체에는 너무 얕습니다. [ConvertTo Json](https://technet.microsoft.com/library/hh849922.aspx) cmdlet을 호출할 때 *-Depth* 매개 변수를 20과 같이 큰 수로 설정합니다. |
 
@@ -143,5 +140,3 @@ Windows 스토어 제출 API에 대한 질문이 있거나 이 API의 제출을 
 * [추가 기능 제출 관리](manage-add-on-submissions.md)
 * [패키지 플라이트 관리](manage-flights.md)
 * [패키지 플라이트 제출 관리](manage-flight-submissions.md)
- 
-

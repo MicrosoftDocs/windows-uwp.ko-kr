@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
-title: "Windows 10 UWP 앱 수명 주기"
-description: "이 항목에서는 활성화된 시점부터 닫힐 때까지의 Windows 10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기에 대해 설명합니다."
+title: "Windows10 UWP 앱 수명 주기"
+description: "이 항목에서는 활성화된 시점부터 닫힐 때까지의 Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기에 대해 설명합니다."
 keywords: "앱 수명 주기 일시 중단됨 다시 시작 실행 활성화"
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ms.author: twhitney
@@ -9,22 +9,19 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 75b7dde9ba658cc427845cb1c1d2cab9c2117d17
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d2dad86795fe97514ff08750fb90a884e93cea02
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
 
-# <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows 10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 실행된 시점부터 닫힐 때까지의 UWP(유니버설 Windows 플랫폼) 앱 수명 주기에 대해 설명합니다.
 
 ## <a name="a-little-history"></a>배경 정보
 
-Windows 8 이전에는 앱에 간단한 수명 주기가 있었습니다. Win32 및 .NET 앱은 실행되거나 실행되지 않습니다. 사용자가 앱을 최소화하거나 벗어날 경우 계속 실행됩니다. 그래도 휴대용 장치와 전원 관리가 점점 중요해질 때까지는 문제가 되지 않았습니다.
+Windows8 이전에는 앱에 간단한 수명 주기가 있었습니다. Win32 및 .NET 앱은 실행되거나 실행되지 않습니다. 사용자가 앱을 최소화하거나 벗어날 경우 계속 실행됩니다. 그래도 휴대용 디바이스와 전원 관리가 점점 중요해질 때까지는 문제가 되지 않았습니다.
 
 Windows 8에서는 Windows 스토어 앱을 사용하는 새 응용 프로그램 모델이 도입되었습니다. 상위 수준에서 일시 중단 상태가 새로 추가되었습니다. 사용자가 앱을 최소화하거나 다른 앱으로 전환하면 즉시 Windows 스토어 앱이 일시 중단됩니다. 즉, 앱의 스레드가 중지되고 운영 체제에서 리소스를 확보해야 하는 경우가 아니면 앱이 메모리에 남아 있습니다. 사용자가 앱으로 다시 전환하면 실행 상태로 빠르게 복원할 수 있습니다.
 
@@ -34,11 +31,11 @@ Windows 8에서는 Windows 스토어 앱을 사용하는 새 응용 프로그램
 
 운영 체제에서 리소스를 확보하기 위해 일시 중단된 앱을 종료할 수 있기 때문에 일시 중단 상태는 개발자에게 새로운 요구 사항을 추가합니다. 종료된 앱이 작업 표시줄에 계속 표시됩니다. 사용자는 시스템에서 앱을 닫은 것을 알지 못하기 때문에 앱을 클릭할 때 앱이 종료되기 전의 상태를 복원해야 합니다. 다른 작업을 수행하는 동안 앱이 백그라운드에서 대기 중이라고 생각하며 앱에서 전환할 때와 동일한 상태에 있을 것으로 예상합니다. 이 항목에서는 이 작업을 수행하는 방법을 설명합니다.
 
-Windows 10 버전 1607에서는 **Running in foreground** 및 **Running in background**라는 두 가지 앱 모델 상태가 추가로 도입되었습니다. 이후 섹션에서 이러한 새 상태에 대해서도 살펴보겠습니다.
+Windows10 버전 1607에서는 **Running in foreground** 및 **Running in background**라는 두 가지 앱 모델 상태가 추가로 도입되었습니다. 이후 섹션에서 이러한 새 상태에 대해서도 살펴보겠습니다.
 
 ## <a name="app-execution-state"></a>앱 실행 상태
 
-이 그림은 Windows 10 버전 1607부터 가능한 앱 모델 상태를 나타냅니다. Windows 스토어 앱의 일반적인 수명 주기를 살펴보겠습니다.
+이 그림은 Windows10 버전 1607부터 가능한 앱 모델 상태를 나타냅니다. Windows 스토어 앱의 일반적인 수명 주기를 살펴보겠습니다.
 
 ![앱 실행 상태의 전환을 보여 주는 상태 다이어그램](images/updated-lifecycle.png)
 
@@ -61,7 +58,7 @@ Windows 10 버전 1607에서는 **Running in foreground** 및 **Running in back
 
 **참고**  *현재 사용자 세션*은 Windows 로그온 기준입니다. 현재 사용자가 Windows를 로그오프, 종료 또는 다시 시작하지 않는 한 잠금 화면 인증, 사용자 전환 등의 이벤트가 발생해도 현재 사용자 세션이 유지됩니다. 
 
-주의해야 할 한 가지 중요한 상황은 장치에 충분한 리소스가 있을 경우 운영 체제에서 응답성을 최적화하기 위해 해당 동작을 옵트인한 자주 사용하는 앱을 사전 실행한다는 것입니다. 사전 실행된 앱은 백그라운드에서 실행된 후 바로 일시 중단되므로 사용자가 앱으로 전환할 경우 앱을 실행하는 것보다 더 빠르게 다시 시작할 수 있습니다.
+주의해야 할 한 가지 중요한 상황은 디바이스에 충분한 리소스가 있을 경우 운영 체제에서 응답성을 최적화하기 위해 해당 동작을 옵트인한 자주 사용하는 앱을 사전 실행한다는 것입니다. 사전 실행된 앱은 백그라운드에서 실행된 후 바로 일시 중단되므로 사용자가 앱으로 전환할 경우 앱을 실행하는 것보다 더 빠르게 다시 시작할 수 있습니다.
 
 사전 실행 때문에 사용자가 아니라 시스템에서 앱의 **OnLaunched()** 메서드를 시작할 수 있습니다. 앱이 백그라운드에서 사전 실행되므로 **OnLaunched()**에서 다른 작업을 수행해야 할 수도 있습니다. 예를 들어 앱을 실행할 때 음악 재생이 시작되는 경우 앱이 백그라운드에서 사전 실행되었기 때문에 어디서 재생되는지 알 수 없습니다. 앱이 백그라운드에서 사전 실행되고 나면 **Application.Suspending**이 호출됩니다. 그런 다음 사용자가 앱을 실행할 때 **OnLaunched()** 메서드와 resuming 이벤트가 호출됩니다. 사전 실행 시나리오를 처리하는 방법에 대한 자세한 내용은 [앱 사전 실행 처리](handle-app-prelaunch.md)를 참조하세요. 옵트인한 앱만 사전 실행됩니다.
 
@@ -91,7 +88,7 @@ Windows 10 버전 1607에서는 **Running in foreground** 및 **Running in back
 
 ## <a name="running-in-the-background"></a>백그라운드에서 실행 ##
 
-Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서 백그라운드 작업을 실행할 수 있습니다. 자세한 내용은 [단일 프로세스 모델을 사용하는 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)을 참조하세요. 이 문서에서는 In-process 백그라운드 처리를 다루지 않지만 앱 수명 주기에 미치는 영향은 앱이 백그라운드에 있는 경우와 관련된 두 가지 이벤트가 새로 추가되었다는 것입니다. 해당 이벤트는 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground)와 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)입니다.
+Windows10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서 백그라운드 작업을 실행할 수 있습니다. 자세한 내용은 [단일 프로세스 모델을 사용하는 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/06/07/background-activity-with-the-single-process-model/#tMmI7wUuYu5CEeRm.99)을 참조하세요. 이 문서에서는 In-process 백그라운드 처리를 다루지 않지만 앱 수명 주기에 미치는 영향은 앱이 백그라운드에 있는 경우와 관련된 두 가지 이벤트가 새로 추가되었다는 것입니다. 해당 이벤트는 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground)와 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)입니다.
 
 이러한 이벤트는 사용자가 앱의 UI를 볼 수 있는지 여부도 반영합니다.
 
@@ -143,13 +140,13 @@ Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서
 
 사용자가 앱을 최소화할 때 Windows는 사용자가 바로 앱으로 다시 전환하는지 확인하기 위해 몇 초간 기다립니다. 이 기간 내에 다시 전환하지 않으면 활성화된 확장 실행, 백그라운드 작업 또는 작업 후원 실행이 없을 경우 Windows에서 앱을 일시 중단합니다. 앱에서 활성화된 확장 실행 세션 등이 없는 한 잠금 화면이 나타나는 경우에도 앱이 일시 중단됩니다.
 
-앱이 일시 중단되면 [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 호출합니다. Visual Studio의 UWP 프로젝트 템플릿은 **App.xaml.cs**에 **OnSuspending**이라는 이 이벤트의 처리기를 제공합니다. Windows 10 버전 1607 이전에는 여기에 상태를 저장하는 코드를 넣었습니다. 이제 위에서 설명한 대로 백그라운드 상태를 시작할 때 상태를 저장하는 것이 좋습니다.
+앱이 일시 중단되면 [**Application.Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 호출합니다. Visual Studio의 UWP 프로젝트 템플릿은 **App.xaml.cs**에 **OnSuspending**이라는 이 이벤트의 처리기를 제공합니다. Windows10 버전 1607 이전에는 여기에 상태를 저장하는 코드를 넣었습니다. 이제 위에서 설명한 대로 백그라운드 상태를 시작할 때 상태를 저장하는 것이 좋습니다.
 
-앱이 일시 중단된 동안 다른 앱이 액세스할 수 있도록 단독 리소스와 파일 핸들을 해제해야 합니다. 단독 리소스의 예로는 카메라, I/O 장치, 외부 장치 및 네트워크 리소스가 있습니다. 단독 리소스와 파일 핸들을 명시적으로 해제하면 앱이 일시 중단된 동안 다른 앱이 액세스하는 데 도움이 됩니다. 앱이 다시 시작되면 단독 리소스와 파일 핸들을 다시 획득해야 합니다.
+앱이 일시 중단된 동안 다른 앱이 액세스할 수 있도록 단독 리소스와 파일 핸들을 해제해야 합니다. 단독 리소스의 예로는 카메라, I/O 디바이스, 외부 디바이스 및 네트워크 리소스가 있습니다. 단독 리소스와 파일 핸들을 명시적으로 해제하면 앱이 일시 중단된 동안 다른 앱이 액세스하는 데 도움이 됩니다. 앱이 다시 시작되면 단독 리소스와 파일 핸들을 다시 획득해야 합니다.
 
 ### <a name="be-aware-of-the-deadline"></a>기한 주의
 
-빠르고 즉각적으로 응답하는 장치를 위해 suspending 이벤트 처리기에서 코드를 실행할 수 있는 시간이 제한됩니다. 시간 제한은 장치마다 다르며, 기한이라는 [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) 개체의 속성을 사용하여 확인할 수 있습니다.
+빠르고 즉각적으로 응답하는 디바이스를 위해 suspending 이벤트 처리기에서 코드를 실행할 수 있는 시간이 제한됩니다. 시간 제한은 디바이스마다 다르며, 기한이라는 [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) 개체의 속성을 사용하여 확인할 수 있습니다.
 
 **EnteredBackground** 이벤트 처리기와 마찬가지로, 처리기에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 일시 중단 상태로 이동합니다. 이벤트 인수를 통해 사용할 수 있는 [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) 개체의 [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) 메서드를 사용하여 반환된 [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684) 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) 메서드가 호출될 때까지 일시 중단 상태 시작을 지연할 수 있습니다.
 
@@ -165,9 +162,9 @@ Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서
 
 ## <a name="app-resume"></a>앱 다시 시작
 
-일시 중단된 앱은 사용자가 앱으로 다시 전환하거나 장치의 전원 부족 상태가 해소되어 활성 상태가 되면 다시 시작됩니다.
+일시 중단된 앱은 사용자가 앱으로 다시 전환하거나 디바이스의 전원 부족 상태가 해소되어 활성 상태가 되면 다시 시작됩니다.
 
-앱이 **Suspended** 상태에서 다시 시작될 경우 **Running in background** 상태가 되며, 계속 실행된 것처럼 사용자에게 표시되도록 시스템이 중단된 위치에서 앱을 복원합니다. 메모리에 저장된 앱 데이터는 손실되지 않습니다. 따라서 대부분의 앱은 다시 시작될 때 상태를 복원할 필요가 없지만 일시 중단될 때 해제한 파일 또는 장치 핸들을 다시 획득하고 앱이 일시 중단될 때 명시적으로 해제된 상태를 복원해야 합니다.
+앱이 **Suspended** 상태에서 다시 시작될 경우 **Running in background** 상태가 되며, 계속 실행된 것처럼 사용자에게 표시되도록 시스템이 중단된 위치에서 앱을 복원합니다. 메모리에 저장된 앱 데이터는 손실되지 않습니다. 따라서 대부분의 앱은 다시 시작될 때 상태를 복원할 필요가 없지만 일시 중단될 때 해제한 파일 또는 디바이스 핸들을 다시 획득하고 앱이 일시 중단될 때 명시적으로 해제된 상태를 복원해야 합니다.
 
 앱이 몇 시간이나 며칠 동안 일시 중단되었을 수 있습니다. 앱의 콘텐츠나 네트워크 연결이 최신 상태가 아닌 경우 다시 시작할 때 새로 고쳐야 합니다. 앱이 [**Application.Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) 이벤트에 대한 이벤트 처리기를 등록했다면 앱이 **Suspended** 상태에서 다시 시작될 경우 이 이벤트 처리기가 호출됩니다. 이 이벤트 처리기에서 앱 콘텐츠와 데이터를 새로 고칠 수 있습니다.
 
@@ -185,7 +182,7 @@ Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서
 
 일반적으로 사용자는 앱을 닫을 필요가 없으며 Windows에서 관리합니다. 그러나 사용자는 닫기 제스처를 사용하거나 Alt+F4를 누르거나 Windows Phone에서 작업 전환기를 사용하여 앱을 닫도록 선택할 수 있습니다.
 
-사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종료되지 않고 화면과 전환 목록에서만 제거됩니다.
+사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종료되지 않고 화면과 전환 목록에서만 제거됩니다.
 
 **Closed-by-user behavior:**  앱을 사용자가 닫을 때 Windows에서 닫을 때와 다른 작업을 수행해야 하는 경우 활성화 이벤트 처리기를 사용하여 앱을 종료한 주체가 사용자인지 Windows인지를 확인할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
 
@@ -216,7 +213,7 @@ Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서
 -   [**Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) 클래스(XAML)
 
 **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -232,4 +229,3 @@ Windows 10, 버전 1607부터 앱은 앱 자체와 동일한 프로세스에서
  
 
  
-

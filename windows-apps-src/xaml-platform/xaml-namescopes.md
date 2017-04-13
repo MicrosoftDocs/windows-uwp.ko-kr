@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 9734690f4446d9d5f44013fb370d5a31625473f9
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 973207d480327ced18b6136796ef92d5d5b81dd5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-namescopes"></a>XAML 이름 범위
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 *XAML 이름 범위*에는 개체의 XAML 정의 이름과 이에 해당하는 인스턴스 항목 사이의 관계가 저장됩니다. 이 개념은 다른 프로그래밍 언어 및 기술에서 사용되는 *이름 범위*라는 용어의 보다 넓은 의미에 가깝습니다.
 
@@ -90,5 +87,4 @@ XAML 이름 범위는 서로 독립적이므로 템플릿이 적용되는 페이
 * [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)
 * [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)
  
-
 

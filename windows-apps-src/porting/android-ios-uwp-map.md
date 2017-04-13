@@ -2,7 +2,7 @@
 author: GrantMeStrength
 Description: "iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: "Android 및 iOS 개발자용 Windows 앱 개념 매핑"
+title: "Android 및 iOS 개발자용 Windows 개념"
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,14 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: e5cf0a75515458a558e94a9f8bb54913e7df4a14
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ce32bd7ebaca20827a637c456b2dbe82811817cb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
+#<a name="windows-concepts-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 개념
 
 Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니버설 Windows 플랫폼)로 이동하려는 개발자의 경우 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있는 이 리소스를 참조하세요.
 
@@ -50,14 +47,14 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 <tr class="even">
 <td align="left"><strong>사용자 인터페이스 생성 언어.</strong> <br><br>UI와 해당 구성 요소를 렌더링 및 설명하는 생성 언어입니다. 각 플랫폼은 디자인 및 태그 편집을 위한 편집기를 제공합니다.<br/></td>
-<td align="left"><strong><strong>Android Studio</strong> 또는 <strong>Eclipse</strong>를 사용하여 편집된 XML 레이아웃</strong></td>
-<td align="left"><strong>Xcode 내의 <strong>인터페이스 작성기</strong>를 사용하여 편집된 XIB</strong> 및 <strong>스토리보드</strong></td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt185595.aspx"><strong><a href="https://www.visualstudio.com/">Microsoft Visual Studio</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend for Visual Studio</a></strong>를 사용하여 편집된 XAML</a></strong><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228259.aspx">XAML 플랫폼</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228349.aspx">XAML을 사용하여 UI 만들기</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228350.aspx">XAML을 사용하여 레이아웃 정의</a></td>
+<td align="left"><strong>Android Studio</strong> 또는 <strong>Eclipse</strong>를 사용하여 편집된 <strong>XML 레이아웃</strong>.</td>
+<td align="left">Xcode 내의 <strong>Interface Builder</strong>를 사용하여 편집된 <strong>XIB</strong> 및 <strong>스토리보드</strong></td>
+<td align="left"><strong><a href="https://www.visualstudio.com/">Microsoft Visual Studio</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend for Visual Studio</a></strong>를 사용하여 편집된 <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt185595.aspx">XAML</a></strong><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228259.aspx">XAML 플랫폼</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228349.aspx">XAML을 사용하여 UI 만들기</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228350.aspx">XAML을 사용하여 레이아웃 정의</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>기본 제공 사용자 인터페이스 컨트롤.</strong> <br><br>단추, 목록 컨트롤, 텍스트 컨트롤 등 플랫폼에서 제공하는 재사용 가능 UI 요소입니다.</td>
 <td align="left">클래스 위젯, 레이아웃, 텍스트 필드, 컨테이너, 날짜/시간 컨트롤 및 전문가 컨트롤이라고도 하는 미리 만들어진 <strong>보기</strong> 및 <strong>보기 그룹</strong>입니다.</td>
-<td align="left"><strong>Xcode 개체 라이브러리에 있고 UIKit 사용자 인터페이스 카탈로그에 나열된 ###보기</strong> 및 <strong>컨트롤</strong>입니다. 보기에는 이미지 보기, 선택기 보기 및 스크롤 보기가 있습니다. 컨트롤에는 단추, 날짜 선택 및 텍스트 필드가 포함됩니다.</td>
+<td align="left">Xcode 개체 라이브러리에 있고 UIKit 사용자 인터페이스 카탈로그에 나열된 <strong>보기</strong> 및 <strong>컨트롤</strong>입니다. 보기에는 이미지 보기, 선택기 보기 및 스크롤 보기가 있습니다. 컨트롤에는 단추, 날짜 선택 및 텍스트 필드가 포함됩니다.</td>
 <td align="left">XAML 플랫폼은 단추, 목록 컨트롤, 패널, 텍스트 컨트롤, 명령 모음, 선택기 및 수동 입력 등 일반적인 <strong>기본 제공 컨트롤</strong> 집합을 제공합니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228345.aspx">컨트롤 추가 및 이벤트 처리</a></td>
 </tr>
 <tr class="even">
@@ -74,7 +71,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 <tr class="even">
 <td align="left"><strong>UI 자동화.</strong> <br><br>UI 요소에 대한 프로그래밍 방식의 액세스, 보조 기술 제품에 액세스할 수 있는 앱 만들기 및 UI를 조작하는 자동화된 테스트 스크립트 설정입니다.</td>
-<td align="left"><strong>텍스트 레이블</strong>, <strong>contentDescription</strong> 및 <strong>hint</strong> 값을 사용하면 자동화에서 UI 요소를 찾을 수 있습니다. Android Studio를 사용하면 <strong>UI Automator</strong> 및 <strong>Espresso</strong> 테스트 프레임워크를 사용하여 UI 테스트를 작성할 수 있습니다.</td>
+<td align="left"><strong>텍스트 레이블</strong>, <strong>contentDescription</strong> 및 <strong>힌트</strong> 값을 사용하면 자동화에서 UI 요소를 찾을 수 있습니다. Android Studio를 사용하면 <strong>UI Automator</strong> 및 <strong>Espresso</strong> 테스트 프레임워크를 사용하여 UI 테스트를 작성할 수 있습니다.</td>
 <td align="left"><strong>자동화 방법</strong>을 사용하면 <strong>접근성</strong> 설정 또는 <strong>요소 계층 구조</strong>의 요소 위치를 사용하여 요소를 식별하는 자동화된 UI 테스트 스크립트를 작성할 수 있습니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/ee684076.aspx">UI 자동화</a></strong>를 사용하여 기본 UWP의 기본 제공 UI 요소에 프로그래밍 방식으로 액세스합니다.<br/><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt297667.aspx">사용자 지정 자동화 피어</a></strong>를 사용하면 고유한 사용자 지정 UI 클래스에 대한 자동화 지원을 제공할 수 있습니다. Visual Studio의 <strong><a href="https://msdn.microsoft.com/library/dd286726.aspx#VerifyingCodeUsingCUITCreate">코딩된 UI 테스트 프로젝트</a></strong>를 사용하면 UI를 통해 전체 응용 프로그램을 자동으로 테스트하거나 격리된 상태에서 UI를 테스트할 수 있습니다.</td>
 </tr>
@@ -178,9 +175,9 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 <tr class="even">
 <td align="left"><strong>사용자 지정 사용자 입력.</strong> <br><br>키보드, 마우스, 스타일러스 및 기타 입력을 처리합니다.</td>
-<td align="left"><strong>터치</strong>, <strong>터치 패드</strong>, <strong>스타일러스</strong>, <strong>마우스</strong> 및 <strong>키보드</strong> 조작이 지원됩니다. 동작 및 입력은 터치와 동일한 방식으로 보고되지만 <strong>입력 장치</strong>에 대한 더 많은 정보를 검색할 수 있습니다.</td>
+<td align="left"><strong>터치</strong>, <strong>터치 패드</strong>, <strong>스타일러스</strong>, <strong>마우스</strong> 및 <strong>키보드</strong> 조작이 지원됩니다. 동작 및 입력은 터치와 동일한 방식으로 보고되지만 <strong>입력 디바이스</strong>에 대한 더 많은 정보를 검색할 수 있습니다.</td>
 <td align="left"><strong>터치</strong>, <strong>Apple 연필</strong> 및 하드웨어 <strong>키보드</strong>에 대한 지원이 제공됩니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185617.aspx">터치</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187313.aspx">터치 패드</a></strong>, 디지털 잉크를 사용하는 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187311.aspx">펜/스타일러스</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187308.aspx">마우스</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185607.aspx">키보드</a></strong>를 포함하여 다양한 조작이 지원됩니다. 사용된 입력 장치와 필요한 경우 원시 입력 장치 데이터에 액세스할 수 있는 여부를 몰라도 앱에서 데이터를 처리할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt404610.aspx">포인터 입력 처리</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185599.aspx">사용자 지정 사용자 조작</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185617.aspx">터치</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187313.aspx">터치 패드</a></strong>, 디지털 잉크를 사용하는 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187311.aspx">펜/스타일러스</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187308.aspx">마우스</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185607.aspx">키보드</a></strong>를 포함하여 다양한 조작이 지원됩니다. 사용된 입력 디바이스와 필요한 경우 원시 입력 디바이스 데이터에 액세스할 수 있는 여부를 몰라도 앱에서 데이터를 처리할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt404610.aspx">포인터 입력 처리</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185599.aspx">사용자 지정 사용자 조작</a></td>
 </tr>
 </tbody>
 </table>
@@ -222,8 +219,8 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tr class="even">
 <td align="left"><strong>클라우드 백업 서비스.</strong> <br><br>앱 데이터를 위해 플랫폼에서 제공한 백업 서비스입니다.</td>
 <td align="left">Android의 <strong>백업 관리자</strong>는 Google의 <strong>Android 백업 서비스</strong>에서 응용 프로그램 데이터 백업을 처리합니다.</td>
-<td align="left"><strong>사용자가 앱 데이터를 포함하여 해당 백업을 처리하도록 ###iCloud 백업</strong>을 구성할 수 있습니다. iCloud 호환 <strong>핵심 데이터</strong>, <strong>iCloud 키-값 저장소</strong> 및 <strong>iCloud 문서 저장소</strong>를 사용하는 앱입니다.</td>
-<td align="left">로밍 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx">ApplicationData API</a></strong>(<strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingfolder.aspx">RoamingFolder</a></strong> 및 <a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingsettings.aspx"><strong>RoamingSettings</strong></a> 포함)를 사용하여 저장한 모든 앱 데이터는 자동으로 클라우드 및 사용자의 기타 장치와 동기화됩니다. 동기화는 사용자의 Microsoft 계정을 통해 수행됩니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465094.aspx">로밍 중인 앱 데이터 지침</a></td>
+<td align="left">사용자가 앱 데이터를 포함하여 해당 백업을 처리하도록 <strong>iCloud 백업</strong>을 구성할 수 있습니다. iCloud 호환 <strong>핵심 데이터</strong>, <strong>iCloud 키-값 저장소</strong> 및 <strong>iCloud 문서 저장소</strong>를 사용하는 앱입니다.</td>
+<td align="left">로밍 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx">ApplicationData API</a></strong>(<strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingfolder.aspx">RoamingFolder</a></strong> 및 <a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingsettings.aspx"><strong>RoamingSettings</strong></a> 포함)를 사용하여 저장한 모든 앱 데이터는 자동으로 클라우드 및 사용자의 기타 디바이스와 동기화됩니다. 동기화는 사용자의 Microsoft 계정을 통해 수행됩니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465094.aspx">로밍 중인 앱 데이터 지침</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>HTTP 파일 다운로드.</strong> <br><br>HTTP를 통해 크고 작은 파일을 다운로드합니다.</td>
@@ -246,8 +243,8 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tr class="even">
 <td align="left"><strong>OAuth 라이브러리.</strong> <br><br>타사 OAuth 공급자에 대한 액세스를 허용하는 OAuth 라이브러리와 플랫폼에 기본 제공되는 계정 관리입니다.</td>
 <td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. Google Play Services를 사용한 OAuth 인증을 위해 <strong>GoogleAuthUtil</strong> 클래스가 제공됩니다.<br/></td>
-<td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. <strong>계정 프레임워크</strong>는 Facebook 및 Twitter와 같이 장치에 이미 저장된 사용자 계정에 대한 액세스를 제공합니다.</td>
-<td align="left">일반 OAuth 라이브러리 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270196.aspx">웹 인증 브로커</a></strong>를 사용하여 타사 ID 공급자 서비스에 연결할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270189.aspx">자격 증명 보관</a></strong>을 사용하여 사용자가 로그인을 저장하고 여러 장치에서 사용하도록 할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn896755.aspx">Microsoft.Live</a></strong> 네임스페이스를 사용하면 Microsoft 서비스 액세스를 위해 Live SDK OAuth에 쉽게 액세스할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt270184.aspx">인증 및 사용자 ID</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.aspx">Windows.Security.Authentication.Web API 설명서</a><br/><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker">WebAuthenticationBroker 코드 예제</a></td>
+<td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. <strong>계정 프레임워크</strong>는 Facebook 및 Twitter와 같이 디바이스에 이미 저장된 사용자 계정에 대한 액세스를 제공합니다.</td>
+<td align="left">일반 OAuth 라이브러리 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270196.aspx">웹 인증 브로커</a></strong>를 사용하여 타사 ID 공급자 서비스에 연결할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270189.aspx">자격 증명 보관</a></strong>을 사용하여 사용자가 로그인을 저장하고 여러 디바이스에서 사용하도록 할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn896755.aspx">Microsoft.Live</a></strong> 네임스페이스를 사용하면 Microsoft 서비스 액세스를 위해 Live SDK OAuth에 쉽게 액세스할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt270184.aspx">인증 및 사용자 ID</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.aspx">Windows.Security.Authentication.Web API 설명서</a><br/><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker">WebAuthenticationBroker 코드 예제</a></td>
 </tr>
 </tbody>
 </table>
@@ -270,9 +267,9 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>IDE.</strong> <br><br>앱을 만드는 데 사용되는 도구 집합입니다.</td>
-<td align="left"><strong>Android의 Studio</strong> 및 <strong>Eclipse</strong>. Google에서는 개발자에게 Android Studio를 사용하도록 권장합니다.</td>
+<td align="left"><strong>Android Studio</strong> 및 <strong>Eclipse</strong>, Google에서는 개발자에게 Android Studio를 사용하도록 권장합니다.</td>
 <td align="left"><strong>Xcode</strong></td>
-<td align="left"><strong><a href="https://www.visualstudio.com/features/universal-windows-platform-vs.aspx">Visual Studio</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend for Visual Studio</a></strong>에는 UWP 앱을 코딩, 디자인, 연결, 디버그, 분석, 최적화 및 테스트하는 데 필요한 모든 도구가 있습니다. Visual Studio에서는 Windows 10 장치용 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt188754.aspx">에뮬레이터</a></strong>를 제공하므로 다양한 에뮬레이트 장치에서 앱을 테스트할 수 있습니다.<br/><br/><a href="https://dev.windows.com/downloads">UWP용 다운로드 및 도구</a></td>
+<td align="left"><strong><a href="https://www.visualstudio.com/features/universal-windows-platform-vs.aspx">Visual Studio</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend for Visual Studio</a></strong>에는 UWP 앱을 코딩, 디자인, 연결, 디버그, 분석, 최적화 및 테스트하는 데 필요한 모든 도구가 있습니다. Visual Studio에서는 Windows 10 디바이스용 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt188754.aspx">에뮬레이터</a></strong>를 제공하므로 다양한 에뮬레이트 디바이스에서 앱을 테스트할 수 있습니다.<br/><br/><a href="https://dev.windows.com/downloads">UWP용 다운로드 및 도구</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>코드 구성.</strong> <br><br>앱의 기본 폴더 구조로, 초기 템플릿에서 생성됩니다.</td>
@@ -301,7 +298,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>앱 수명 주기.</strong> <br><br>앱 시작, 일시 중단, 다시 시작 및 닫기 시 이벤트 처리는 응용 프로그램 상태를 저장/복원하고 다른 작업을 실행할 수 있는 기회를 제공합니다.</td>
-<td align="left">각 작업에는 자체 <strong>작업 수명 주기</strong>와 <strong>다시 시작</strong> 등의 상태가 있습니다. <strong><strong>onResume</strong> 등의 ###수명 주기 콜백</strong>은 <strong>활동 클래스</strong>에서 구현됩니다.</td>
+<td align="left">각 작업에는 자체 <strong>작업 수명 주기</strong>와 <strong>다시 시작</strong> 등의 상태가 있습니다. <strong>onResume</strong> 등의 <strong>수명 주기 콜백</strong>은 <strong>활동 클래스</strong>에서 구현됩니다.</td>
 <td align="left"><strong>응용 프로그램 수명 주기</strong>에는 <strong>일시 중단</strong> 등의 상태가 있습니다. <strong>applicationDidEnterBackground:</strong>와 같은 메서드가 <strong>응용 프로그램 대리자 개체</strong>에서 구현되어 상태 변경 시 코드를 실행합니다.</td>
 <td align="left">응용 프로그램의 <strong>앱 실행 상태</strong>는 NotRunning, Activated, Running, Suspending, Suspended 및 Resuming입니다.<br/><br/>상태가 변경될 때 앱에서 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.aspx">응용 프로그램 클래스</a></strong> 메서드 OnLaunched, OnActivated, Suspending 또는 Resuming을 구현하여 코드를 실행할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt243287.aspx">앱 수명 주기</a></td>
 </tr>
@@ -352,10 +349,10 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>비동기 프로그래밍.</strong> <br><br>비동기 프로그래밍 패턴을 통해 UI 스레드 응답을 유지하여 스레딩 복잡성을 방지합니다.</td>
 <td align="left">자체 비동기 클래스를 만들려면 <strong>스레딩 필요</strong>를 사용합니다. 일부 기본 제공 클래스는 비동기입니다.</td>
 <td align="left">자체 비동기 클래스를 만들려면 <strong>스레딩 필요</strong>를 사용합니다. 일부 기본 제공 클래스는 비동기입니다.</td>
-<td align="left">자체 API를 만들 때 비동기 패턴(예: C# 및 Visual Basic의 <strong>async</strong> 및 <strong>await</strong>)을 사용하여 주 스레드 차단을 방지할 수 있습니다. 단어가 <strong>Async</strong>로 끝나는 비동기 기본 제공 API를 사용할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187335.aspx">비동기 프로그래밍</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187337.aspx">C# 또는 Visual Basic에서 비동기 API 호출</a></td>
+<td align="left">자체 API를 만들 때 비동기 패턴(예: C# 및 Visual Basic의 <strong>async</strong> 및 <strong>await</strong>)을 사용하여 주 스레드 차단을 방지할 수 있습니다. 단어가 <strong>Async</strong>로 끝나는 비동기 기본 제공 API를 사용할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187335.aspx">비동기 프로그래밍</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187337.aspx">C# 또는 Visual Basic에서 비동기식 API 호출</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>목록 뷰 최적화.</strong> <br><br>데이터 목록 최적화를 지원하는 기본 제공 패턴이며 많은 양의 데이터를 표시해야 할 경우 성능이 저하될 수 있습니다.</td>
+<td align="left"><strong>목록 보기 최적화.</strong> <br><br>데이터 목록 최적화를 지원하는 기본 제공 패턴이며 많은 양의 데이터를 표시해야 할 경우 성능이 저하될 수 있습니다.</td>
 <td align="left"><strong>ViewHolder</strong> 디자인 패턴은 여러 보기 조회를 방지하는 데 사용됩니다. 이를 통해 재사용 가능한 UI 요소를 사용할 수 있습니다.</td>
 <td align="left">다양한 최적화를 통해 <strong>UITableView</strong>의 성능을 향상시킬 수 있습니다. 기본 제공되는 항목은 없습니다.</td>
 <td align="left">기본 <strong>UI 가상화</strong>를 제공하는 <a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx">ListView</a> 및 <a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx">GridView</a> 컨트롤을 사용하여 이동 및 스크롤 환경을 제공하고 시작 시간을 단축할 수 있습니다. 데이터 원본에서 <a href="https://msdn.microsoft.com/library/windows/apps/system.collections.ilist.aspx">IList</a> 및 <a href="https://msdn.microsoft.com/library/windows/apps/system.collections.specialized.inotifycollectionchanged.aspx">INotifyCollectionChanged</a>를 구현하여 <strong>데이터 가상화</strong> 및 개선된 성능을 제공할 수도 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt204776.aspx">ListView 및 GridView UI 최적화</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt574120.aspx">ListView 및 GridView 데이터 가상화</a></td>
@@ -441,9 +438,9 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstate.aspx">VisualState</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager.aspx">VisualStateManager</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.aspx">AdaptiveTrigger</a></strong>를 사용한 창 크기 변경에 대한 응답으로 런타임 시 UI에 대해 쉽게 재배치, 위치 변경, 크기 변경, 노출 또는 섹션 바꾸기 등을 수행할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#visual_states_and_state_triggers">XAML을 사용하여 레이아웃 정의 - 시각적 상태 및 상태 트리거</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/dn958435.aspx">반응형 디자인 101</a></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>다른 장치 기능 지원.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 장치를 지원합니다.</td>
-<td align="left">런타임 시 <strong>PackageManager.hasSystemFeature</strong>를 사용하여 장치 기능을 테스트하면 하드웨어 관련 코드 실행 가능 여부를 확인할 수 있습니다.</td>
-<td align="left">런타임 시 장치 기능을 테스트하기 위해 수행할 수 있는 <strong>단일 검사는 없으며</strong> 특정 방법으로 각 기능을 테스트하여 하드웨어 관련 코드를 실행할 수 있는지 확인합니다.</td>
+<td align="left"><strong>다른 디바이스 기능 지원.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 장치를 지원합니다.</td>
+<td align="left">런타임 시 <strong>PackageManager.hasSystemFeature</strong>를 사용하여 디바이스 기능을 테스트하면 하드웨어 관련 코드 실행 가능 여부를 확인할 수 있습니다.</td>
+<td align="left">런타임 시 디바이스 기능을 테스트하기 위해 수행할 수 있는 <strong>단일 검사는 없으며</strong> 특정 방법으로 각 기능을 테스트하여 하드웨어 관련 코드를 실행할 수 있는지 확인합니다.</td>
 <td align="left"><strong>플랫폼 확장 SDK</strong>를 패키지에 추가하여 휴대폰, 데스크톱, IoT 등 다른 장치 패밀리의 추가 기능을 대상으로 할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx">ApiInformation API</a></strong>를 사용하여 런타임 시 형식과 멤버의 존재 여부를 테스트하고 있는 경우에만 이러한 형식 및 멤버를 호출할 수 있습니다.</td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
@@ -473,8 +470,8 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>타일 및 배지.</strong> <br><br>홈 화면에서 사용자에게 업데이트를 제공합니다.</td>
-<td align="left"><strong>앱 위젯</strong>은 홈 화면에 포함하여 정기 업데이트를 받을 수 있는 응용 프로그램의 보기입니다. <strong>Android에는 ###배지 시스템이 없습니다</strong>. 타일에 동일한 시스템이 없습니다.</td>
-<td align="left"><strong>iOS에는 ###타임 또는 위젯이 없습니다</strong>. 아이콘에 숫자와 함께 <strong>배지</strong>를 추가할 수 있으며 이는 로컬 또는 원격 알림에 대한 응답으로 변경될 수 있습니다.</td>
+<td align="left"><strong>앱 위젯</strong>은 홈 화면에 포함하여 정기 업데이트를 받을 수 있는 응용 프로그램의 보기입니다. Android에는 <strong>배지 시스템이 없습니다</strong>. 타일에 동일한 시스템이 없습니다.</td>
+<td align="left">iOS에는 <strong>타일 또는 위젯이 없습니다</strong>. 아이콘에 숫자와 함께 <strong>배지</strong>를 추가할 수 있으며 이는 로컬 또는 원격 알림에 대한 응답으로 변경될 수 있습니다.</td>
 <td align="left">앱에는 시작 화면에 고정하여 선택한 텍스트를 표시할 수 있는 <strong>타일</strong>과, 숫자 및 문자 모양이 있는 <strong>배지</strong>가 있습니다. 푸시 알림 또는 미리 정의된 일정에 따라 앱에서 타일 콘텐츠를 업데이트할 수 있습니다. 타일은 적응형이 될 수 있으며 표시 중인 위치에 따라 변경될 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt185605.aspx">타일 만들기</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt590880.aspx">적응형 타일 만들기</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt187193.aspx">알림 전달 방법 선택</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465403.aspx">타일 및 배지에 대한 지침</a></td>
 </tr>
 <tr class="even">
@@ -486,7 +483,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>로컬 알림 예약.</strong> <br><br>예약된 시간에 앱에서 보낸 로컬 알림입니다.</td>
 <td align="left">알림 및 작업은 <strong>NotificationCompat.Builder</strong>를 사용하여 정의되며 앱에서 <strong>AlarmManager</strong> 및 <strong>BroadcastReceiver</strong>를 사용하여 예약 및 처리할 수 있습니다.</td>
-<td align="left">로컬 알림은 <strong>UILocalNotification</strong>을 사용하여 만들어지며 ** UILocalNotification.scheduleLocalNotification:<strong>을 통해 예약할 수 있습니다. </strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtoastnotification.aspx">ScheduledToastNotification</a><strong>을 사용하여 알림 메시지를 예약할 수 있습니다. </strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.tilenotification.aspx">TileNotification 클래스</a><strong>를 사용하여 앱에서 타일 알림을 보내거나 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtilenotification.aspx">ScheduledTileNotification</a>을 사용하여 타일 알림을 예약할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt631604.aspx">적응형 및 대화형 알림 메시지</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt593299.aspx">로컬 타일 알림 보내기</a> | | </strong>푸시 알림 보내기.* * 푸시 알림 서버에서 보내고 필요에 따라 앱에서 처리되는 알림입니다.</td>
+<td align="left">로컬 알림은 <strong>UILocalNotification</strong>을 사용하여 만들어지며, <strong>**UILocalNotification.scheduleLocalNotification</strong>으로 일정을 조정합니다. | <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtoastnotification.aspx">ScheduledToastNotification</a></strong>을 사용하여 알림 메시지의 일정을 조정할 수 있습니다. 타일 알림은 앱에서 <strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.tilenotification.aspx">TileNotification 클래스</a>를 사용하여 보낼 수 있으며, 일정은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.notifications.scheduledtilenotification.aspx">ScheduledTileNotification</a>으로 조정할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt631604.aspx">적응형 및 대화형 알림 메시지</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt593299.aspx">로컬 타일 알림 보내기</a> | | </strong>푸시 알림 보내기.** 푸시 알림 서버에서 보내고 필요에 따라 앱에서 처리되는 알림입니다.</td>
 <td align="left"><strong>Google Cloud Messaging</strong>에서는 Android용 푸시 알림 지원을 제공합니다.</td>
 </tr>
 </tbody>
@@ -571,15 +568,15 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </thead>
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>위치.</strong> <br><br>장치의 <strong>현재</strong> 위치를 찾고 <strong>변경 내용</strong>을 추적합니다.</td>
+<td align="left"><strong>위치.</strong> <br><br>디바이스의 <strong>현재</strong> 위치를 찾고 <strong>변경 내용</strong>을 추적합니다.</td>
 <td align="left">Google Play Services 위치 API는 <strong>getLastLocation</strong> 및 <strong>requestLocationUpdates</strong> 메서드를 사용하여 <strong>퓨즈 위치 공급자</strong>에게 <strong>마지막으로 알려진 위치</strong>에 대한 높은 수준 액세스를 제공합니다. <strong>LocationManager</strong>를 사용하여 Android 라이브러리에 낮은 수준 액세스를 제공합니다.</td>
-<td align="left"><strong>핵심 위치</strong> <strong>CLLocationManager</strong> 클래스는 표준 위치 서비스에 대한 <strong>startUpdatingLocation</strong> 및 표준 위치 서비스 및 <strong>중요한 변경</strong> 위치 서비스에 대한 <strong>startMonitoringSignificantLocationChanges</strong>를 사용하여 장치의 위치를 모니터링하는데 사용됩니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.aspx">Windows.Devices.Geolocation</a></strong>의 클래스를 사용하여 장치 위치를 추적할 수 있습니다. 한 번 읽으려면 <strong><a href="https://msdn.microsoft.com/library/windows/apps/br225537.aspx">Geolocator.GetGeopositionAsync</a></strong>를 사용합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.positionchanged.aspx">Geolocator.PositionChanged</a></strong>를 사용하여 타이머를 통해 위치를 정기적으로 가져오거나 위치가 변경될 때 알림을 받을 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219698.aspx">사용자 위치 가져오기</a></td>
+<td align="left"><strong>핵심 위치</strong> <strong>CLLocationManager</strong> 클래스는 표준 위치 서비스에 대한 <strong>startUpdatingLocation</strong> 및 표준 위치 서비스 및 <strong>중요한 변경</strong> 위치 서비스에 대한 <strong>startMonitoringSignificantLocationChanges</strong>를 사용하여 디바이스의 위치를 모니터링하는데 사용됩니다.</td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.aspx">Windows.Devices.Geolocation</a></strong>의 클래스를 사용하여 디바이스 위치를 추적할 수 있습니다. 한 번 읽으려면 <strong><a href="https://msdn.microsoft.com/library/windows/apps/br225537.aspx">Geolocator.GetGeopositionAsync</a></strong>를 사용합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.positionchanged.aspx">Geolocator.PositionChanged</a></strong>를 사용하여 타이머를 통해 위치를 정기적으로 가져오거나 위치가 변경될 때 알림을 받을 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219698.aspx">사용자 위치 가져오기</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>지도 표시.</strong> <br><br><strong>대화형 기본 제공 지도</strong>를 표시하고 <strong>관심 지점</strong>을 추가합니다.</td>
 <td align="left"><strong>Google 지도 Android API</strong>의 <strong>GoogleMap</strong>, <strong>MapFragment</strong> 및 <strong>MapView</strong> 클래스를 사용하여 지도를 앱에 포함할 수 있습니다. 관심 지점은 <strong>표식</strong> 및 사용자 지정 가능한 <strong>Marker</strong> 클래스를 사용하여 표시할 수 있습니다.</td>
-<td align="left">지도는 <strong>MapKit 프레임워크</strong>의 <strong>MKMapView</strong> 클래스를 사용하여 iOS 앱에 포함됩니다. <strong>앱에 ###주석</strong>을 추가하여 <strong>MKPointAnnotation</strong> 등의 개체 클래스와 <strong>MKPinAnnotationView</strong> 등의 보기 클래스를 통해 관심 지점을 표시할 수 있습니다.</td>
+<td align="left">지도는 <strong>MapKit 프레임워크</strong>의 <strong>MKMapView</strong> 클래스를 사용하여 iOS 앱에 포함됩니다. 앱에 <strong>주석</strong>을 추가하여 <strong>MKPointAnnotation</strong> 등의 개체 클래스와 <strong>MKPinAnnotationView</strong> 등의 보기 클래스를 통해 관심 지점을 표시할 수 있습니다.</td>
 <td align="left">2D, 3D 및 Streetside 뷰를 제공하는 기본 제공 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx">MapControl</a></strong> XAML 컨트롤을 사용하여 앱에 지도를 포함할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapicon.aspx">MapIcon</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mappolygon.aspx">MapPolygon</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mappolyline.aspx">MapPolyline</a></strong> 등의 클래스를 사용하여 고정핀, 이미지 또는 셰이프로 관심 지점을 추가할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219695.aspx">2D, 3D 및 Streetside 뷰가 있는 지도 표시</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219696.aspx">지도에 POI(관심 지점) 표시</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
@@ -621,7 +618,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>다른 앱 호출.</strong> <br><br>다른 앱을 시작하고 필요에 따라 링크, 텍스트, 사진, 동영상 및 파일을 공유합니다.</td>
-<td align="left"><strong>암시적 의도</strong>는 <strong>의도</strong>에서 <strong>작업</strong> 및 옵션 데이터를 정의하고 <strong>startActivityForResult</strong>를 통해 호출하여 다른 앱을 실행하는 데 사용됩니다.<br/></td>
+<td align="left"><strong>암시적 의도</strong>는 <strong>의도</strong>에서 <strong>작업</strong> 및 선택적 데이터를 정의하고 <strong>startActivityForResult</strong>를 통해 호출하여 다른 앱을 실행하는 데 사용됩니다.<br/></td>
 <td align="left"><strong>앱 확장</strong>은 앱 데이터에 대한 액세스를 다른 앱에 제공하는 데 사용할 수 있습니다. <strong>URL 체계</strong>를 사용하면 URL을 다른 앱에 전달할 수 있습니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.system.launcher.launchuriasync.aspx">Launcher.LaunchUriAsync</a></strong> 또는 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.system.launcher.launchuriforresultsasync.aspx">Launcher.LaunchUriForResultsAsync</a></strong>를 사용하여 URI에 등록된 다른 앱을 실행하여 결과를 실행하고 실행된 앱에서 데이터를 다시 가져올 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/hh701471.aspx">Launcher.LaunchFileAsync</a></strong>를 사용하여 다른 앱에서 처리하도록 파일을 전달할 수 있습니다.<br/><br/><strong>공유 계약</strong>을 사용하여 앱 간에 데이터를 쉽게 공유할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228340.aspx">URI에 대한 기본 앱 실행</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt269386.aspx">결과에 대한 앱 실행</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt299102.aspx">파일에 대한 기본 앱 시작</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt243293.aspx">데이터 공유</a></td>
 </tr>
@@ -670,4 +667,3 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 </tbody>
 </table>
-

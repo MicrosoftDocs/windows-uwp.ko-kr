@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cbb3b501fcaf1e51ca313423e812a4119ffca49c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: fc4590f9fd976fcf87bcd24355261061e6900b98
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="porting-apps-to-windows-10"></a>Windows 10으로 앱 포팅
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -30,7 +27,6 @@ WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할
 |-------|-------------|
 | [Windows Phone Silverlight에서 UWP로 이동](wpsl-to-uwp-root.md) | Windows Phone Silverlight 앱을 사용하는 개발자는 Windows 10으로 이동하는 과정에서 자신의 기술과 소스 코드를 최대한 활용할 수 있습니다. Windows 10을 사용하면 모든 종류의 디바이스에 설치할 수 있는 단일 앱 패키지인 UWP 앱을 만들 수 있습니다. |
 | [Windows 런타임 8.x에서 UWP로 이동](w8x-to-uwp-root.md) | Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다. Windows 10을 사용하면 모든 종류의 디바이스에 설치할 수 있는 단일 앱 패키지인 UWP 앱을 만들 수 있습니다. |
-| [RTM으로 UWP Microsoft Visual Studio 2015 RC 프로젝트 업데이트](update-your-visual-studio-2015-rc-project-to-rtm.md) | Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트가 있는 경우 Visual Studio 2015 RTM에 적합한 형식으로 프로젝트 파일을 업데이트할 수 있는 두 가지 옵션이 있습니다. 권장되는 방법은 Visual Studio 2015 RTM에서 새 Windows 10 프로젝트를 만들고 해당 프로젝트에 파일을 복사하는 것입니다. 또는 고급 설명서에 따라 기존 프로젝트 파일을 편집하고 새 형식으로 이동할 수 있습니다. |
 | [Android 및 iOS 개발자용 Windows 앱 개념 매핑](android-ios-uwp-map.md) | Android 또는 iOS 기술이나 코드를 사용하는 개발자로, Windows 10 및 유니버설 Windows 플랫폼으로 이동하려는 경우 이 리소스에는 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있습니다. |
 | [iOS에서 UWP로 이동](ios-to-uwp-root.md) | iOS 개발자로, Windows 10 및 UWP를 이동하는 방법이 궁금한가요? 생각만큼 겁내지 않아도 됩니다. iOS 디바이스에서와 마찬가지로 Windows에서도 원활하게 작동하는 멋진 앱을 만드는 데 필요한 도구, 기술 및 정보를 갖추었습니다. 이제 더 멋진 앱을 만들 수 있습니다. |
 | [데스크톱에서 UWP로 이동](desktop-to-uwp-root.md) | Win32 및.NET 4.6.1 데스크톱 응용 프로그램을 UWP(유니버설 Windows 플랫폼) 앱으로 변환합니다. |
@@ -41,4 +37,3 @@ WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할
 * [WPF 및 Silverlight에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/dn263237)
 * [Android에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/jj945421)
 * [웹에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/hh465151)
-

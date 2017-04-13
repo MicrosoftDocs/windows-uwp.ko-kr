@@ -4,25 +4,22 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: "계정 유형, 위치 및 수수료"
 description: "여러 국가 및 지역의 개별 개발자 계정과 회사 개발자 계정을 제공합니다."
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 0e59913e18bdc521eb37b874f90a2ce0442373ce
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9f6cdace7d619ede77956fb081756e0bc5682e16
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
 Microsoft에서는 개인 계정과 회사 계정의 두 가지 개발자 계정 유형을 제공합니다. 개발자 계정은 여러 [국가와 지역](#developer-account-and-app-submission-markets)에서 제공됩니다. 어떤 형식의 계정이든 앱을 스토어에 게시하고 추가적인 Microsoft 개발자 프로그램에 참가하기 위한 액세스 권한을 제공합니다.
 
 > **참고**  회사 계정과 개인 계정 중 어떤 계정을 만들든 개발자 계정에는 Microsoft 계정을 하나만 연결할 수 있습니다. 계정을 등록할 때 개발자 계정에 사용할 원하는 Microsoft 계정으로 로그인 해야 합니다.
 
-[등록 프로세스를 시작](http://go.microsoft.com/fwlink/p/?LinkId=615100)할 때는 개인 계정을 만들지 또는 회사 계정을 만들지 여부를 선택해야 합니다. 개별 계정은 혼자서 작업하는 단일 개발자용입니다. 회사 계정은 조직 및 비즈니스용입니다. 회사 계정을 사용하면 일부 추가 앱 기능에 액세스할 수 있습니다. 등록한 후에는 본인이 회사에 대한 계정을 설정할 권한이 있는지 확인하기 위해 회사 계정에 대해 세부적으로 확인해야 합니다. 이러한 확인은 며칠에서 몇 주까지 걸릴 수 있으며 회사에 전화로 문의할 수 있습니다. 두 유형의 계정 모두 앱, 추가 기능 및 서비스를 제출하는 데 사용할 수 있습니다.
+[등록 프로세스를 시작](http://go.microsoft.com/fwlink/p/?LinkId=615100)할 때는 개인 계정을 만들지 또는 회사 계정을 만들지 여부를 선택해야 합니다. 두 유형의 계정 모두 앱, 추가 기능 및 서비스를 제출하는 데 사용할 수 있습니다. 개별 계정은 혼자서 작업하는 단일 개발자용입니다. 회사 계정은 조직과 기업을 위해 고안된 것으로, 일부 추가 앱 기능에 액세스할 수 있습니다. 회사 계정의 경우, 회사를 위해 계정을 설정할 권한이 있는지 검사하기 위해 더 많은 [확인](#account-verification)이 필요합니다. 
 
 > **중요**  선택한 다음에는 계정 유형을 변경할 수 없으므로 올바른 유형을 선택해야 합니다.
 
@@ -32,9 +29,7 @@ Microsoft에서는 개인 계정과 회사 계정의 두 가지 개발자 계정
 |--------------------|-----------------|
 | <ul><li>특정 앱 접근 권한 값 사용이 제한됨</li><li>약 $19 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li></ul> | <ul><li>Symantec 또는 Dun &amp; Bradstreet를 통한 검증 필요</li><li>앱 기능에 대한 더 나은 액세스 제공</li><li>회사가 위치하는 국가 또는 지역에서 회사로 인식되어야 함</li><li>약 $99 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li></ul> |
 
-> **중요**  회사 계정을 만들기로 한 경우 [회사 계정에 대한 지침](opening-a-developer-account.md#additional-guidelines-for-company-accounts)을 검토하세요.
-
-회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. 회사 계정을 보유하는 주요 이점 중 하나는 추가 [앱 접근 권한 선언](https://msdn.microsoft.com/library/windows/apps/Mt270968)을 선언하는 앱을 제출할 수 있는 기능입니다.
+회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. 회사 계정을 사용하면 추가적인 [앱 접근 권한 값 선언](https://msdn.microsoft.com/library/windows/apps/Mt270968)을 선언하는 앱을 제출할 수도 있습니다.
 
 특히 다음과 같은 세 가지 접근 권한 값을 사용하는 앱을 게시하려면 회사 계정이 있어야 합니다.
 
@@ -44,9 +39,13 @@ Microsoft에서는 개인 계정과 회사 계정의 두 가지 개발자 계정
 
 > **참고**  또한 지원 팀에 문의하고 먼저 승인을 받아야 **documentsLibrary** 기능을 선언하는 앱을 제출할 수 있습니다.
 
-회사 계정을 사용하면 이러한 기능을 사용하는 앱이 인증서를 통과하지 못할 수도 있습니다. 이러한 접근 권한 값은 매우 특정한 시나리오에만 사용할 수 있으며 대부분의 앱에서는 이 기능을 선언해서는 안 됩니다. 자세한 내용은 [앱 접근 권한 선언](https://msdn.microsoft.com/library/windows/apps/Mt270968)을 참조하세요.
+회사 계정을 사용하면 이러한 기능을 사용하는 앱이 인증서를 통과하지 못할 수도 있습니다. 이러한 접근 권한 값은 매우 특정한 시나리오에만 사용할 수 있으며 대부분의 앱에서는 이 기능을 선언해서는 안 됩니다. 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/library/windows/apps/Mt270968)을 참조하세요.
 
-회사 계정의 경우 Symantec 또는 Dun &amp; Bradstreet를 사용하여 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지도 검증합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 최신 연락처 정보를 입력해야 합니다. 앱이 검증되기 전까지는 회사 계정에서 앱을 제출할 수 없지만, 기다리는 동안 [앱 이름을 예약](https://msdn.microsoft.com/library/windows/apps/JJ657967)하고, Windows 개발자 센터 대시보드에 액세스하며, 앱을 계속 빌드 및 테스트할 수 있습니다.
+## <a name="account-verification"></a>계정 확인
+
+등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 Symantec 또는 Dun &amp; Bradstreet를 사용하여 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지도 검증합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 앱이 검증되기 전까지는 회사 계정에서 앱을 제출할 수 없지만, 기다리는 동안 [앱 이름을 예약](create-your-app-by-reserving-a-name.md)하고, Windows 개발자 센터 대시보드에 액세스하며, 앱을 계속 빌드 및 테스트할 수 있습니다.
+
+**계정 설정** 페이지에서 확인 상태를 점검할 수 있습니다. 
 
 ## <a name="developer-account-and-app-submission-markets"></a>개발자 계정 및 앱 제출 국가/지역
 
@@ -56,13 +55,13 @@ Microsoft에서는 개인 계정과 회사 계정의 두 가지 개발자 계정
 
 > **참고**  등록 시 등록 회비에 관련 세금과 수수료가 추가됩니다. 또한 지급 시 은행에서 지급 수신 수수료를 부과할 수도 있습니다.
 
-**지급액** 열에서는 앱으로 번 돈을 지급 받는 방법에 대해 설명합니다. 이 돈을 보관할 [지급 계좌](setting-up-your-payout-account-and-tax-forms.md)를 선택할 수 있습니다.
+**지급액** 열에서는 앱으로 번 돈을 [지급 받는](getting-paid-apps.md) 방법에 대해 설명합니다. 이 돈을 보관할 [지급 계좌](setting-up-your-payout-account-and-tax-forms.md)를 선택할 수 있습니다.
 
 > **참고**  일부 시장에서는 유료 앱(**지급액**)을 지원하지 않습니다. 해당 지역/국가에서는 무료 앱만 제출할 수 있습니다.
 
-**PayPal** 열은 PayPal이 [지급 계좌](https://msdn.microsoft.com/library/windows/apps/Bg124529) 및 개발자 계정 등록 회비(명시된 경우 제외)에 사용할 수 있는 지원되는 결제 방법인지 여부를 나타냅니다.
+**PayPal** 열은 PayPal이 [지급 계좌](setting-up-your-payout-account-and-tax-forms.md) 및 개발자 계정 등록 회비(명시된 경우 제외)에 사용할 수 있는 지원되는 결제 방법인지 여부를 나타냅니다.
 
-| 국가/지역 | 개별 등록 요금 | 회사 등록 요금 | 지급 | PayPal |
+| 국가/ 지역 | 개별 등록 요금 | 회사 등록 요금 | 지급 | PayPal |
 |----------------|---------------------|------------------|--------|--------|
 | 아프가니스탄 | 19 USD | 99 USD | 은행에 USD로 지급 | 아니요 |
 | 알바니아 | 19 USD | 99 USD | 은행에 USD로 지급 | 아니요 |
@@ -257,11 +256,4 @@ Microsoft에서는 개인 계정과 회사 계정의 두 가지 개발자 계정
 |  짐바브웨 | 19 USD | 99 USD | 은행에 USD로 지급 | 아니요 |
 
 \* PayPal은 이 시장에서 지급 계좌의 결제 방법으로 사용할 수 있지만 개발자 계정 등록 회비 결제에는 사용할 수 없습니다.
-
-## <a name="related-topics"></a>관련 항목
-
-* [개발자 계정 열기](opening-a-developer-account.md)
-* [지급 계좌 및 세금 양식 설정](setting-up-your-payout-account-and-tax-forms.md)
-* [지급 받기](getting-paid-apps.md)
- 
 

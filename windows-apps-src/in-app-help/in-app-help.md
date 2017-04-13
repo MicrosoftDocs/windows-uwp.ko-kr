@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-Description: "앱 내부에서 사용자의 동작에 반응해 표시할 효과적인 도움말을 디자인합니다."
+Description: "앱 내부에 사후 방식으로 표시할 효과적인 도움말을 디자인합니다."
 title: "앱 내 도움말 디자인에 대한 지침"
 label: In-app help
 template: detail.hbs
@@ -11,13 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 19d4a4e00692bc983a56416951e82f71bf5f6be2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 659a2871e540398d34b93c288d34fb80699c36c9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="in-app-help-pages"></a>앱 내 도움말 페이지
 
 대부분의 경우 도움말은 사용자가 보려고 선택할 때 응용 프로그램 내에 표시되는 것이 좋습니다.
@@ -62,4 +59,3 @@ ms.lasthandoff: 02/08/2017
 ## <a name="related-articles"></a>관련 문서
 
 * [앱 도움말에 대한 지침](guidelines-for-app-help.md)
-

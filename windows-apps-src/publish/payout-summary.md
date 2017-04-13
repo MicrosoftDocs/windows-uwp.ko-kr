@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "지급 요약에는 앱 및 추가 기능으로 벌어들인 금액에 대한 세부 정보가 나와 있습니다. 또한 지급 요약을 통해 언제 지급받을 수 있는지와 지급받는 금액도 알 수 있습니다."
+Description: "지급 요약에는 앱 및 추가 기능으로 벌어들인 금액에 대한 세부 정보가 나와 있습니다. 또한, 지급 요약을 통해 언제 지급받을 수 있는지와 지급받는 금액도 알 수 있습니다."
 title: "지급 요약"
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.author: wdg-dev-content
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ad3f2a584f9867e72e2d93df659990424e9ac611
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: be33881f015bfa1f91a545cfb571bb5f3da66c20
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="payout-summary"></a>지급 요약
 
 
@@ -114,7 +111,6 @@ Azure 마켓플레이스에서 제품을 판매할 경우 2015년 11월 1일부�
  
 
  
-
 
 
 

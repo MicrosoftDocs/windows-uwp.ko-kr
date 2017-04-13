@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, AdControl, 이벤트"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: cf285ebb4207b9a9a215bfb4a739b0bc6a2d934b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a0b1130f8177166eef5b524ac4c4f1b065176eeb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-events-in-c"></a>C\의 AdControl 이벤트# #  
 
 
@@ -37,4 +34,3 @@ C#에서 이벤트를 처리하는 방법에 대한 자세한 내용은 [이벤�
  
 
  
-

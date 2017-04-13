@@ -2,21 +2,17 @@
 title: "텍스처 래핑"
 description: "텍스처 래핑은 Direct3D가 각 꼭짓점마다 고유의 텍스처 좌표를 사용하여 텍스처 폴리곤을 래스터화하는 기본적인 방식을 바꿔놓았습니다."
 ms.assetid: C28FB369-9A91-4D57-A96D-4A5D36484B35
-keywords:
-- "텍스처 래핑"
+keywords: "텍스처 래핑"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4743672c757fbbe67770e95d61080ac678c600ac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a5c53a4a9fdaf166e9010da1e72f43b8dccf81e2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-wrapping"></a>텍스처 래핑
 
 
@@ -59,7 +55,6 @@ u-방향으로 래핑을 사용하면 텍스처 처리된 기둥이 환경 맵�
  
 
  
-
 
 
 

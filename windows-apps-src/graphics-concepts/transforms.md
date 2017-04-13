@@ -2,25 +2,21 @@
 title: "변환"
 description: "Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 도형을 푸시하는 변환 엔진입니다."
 ms.assetid: 0DF2A99A-335C-4D14-9720-6D7996DD635A
-keywords:
-- "변환"
+keywords: "변환"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 2036573c0a5b2967bda38473b126b85f259c278c
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 342dd40bd6cc69ebf1faf93753b91096e7ecfbe9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="transforms"></a>변환
 
 
-Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 도형을 푸시하는 변환 엔진입니다. 월드의 모델 및 뷰어를 찾아내고, 표시할 꼭짓점을 화면에 투사하고, 뷰포트에 대한 꼭짓점을 잘라냅니다. 또한 변환 엔진은 조명 계산을 수행하여 각 꼭짓점의 확산 및 반사 구성 요소를 결정합니다.
+Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 도형을 푸시하는 변환 엔진입니다. 세계 좌표의 모델 및 뷰어를 찾아내고, 표시할 꼭짓점을 화면에 투사하고, 뷰포트에 대한 꼭짓점을 잘라냅니다. 또한 변환 엔진은 조명 계산을 수행하여 각 꼭짓점의 확산 및 반사 구성 요소를 결정합니다.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
@@ -47,7 +43,7 @@ Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 
 </tr>
 <tr class="odd">
 <td align="left"><p>[변환 보기](view-transform.md)</p></td>
-<td align="left"><p><em>변환 보기</em>는 월드 공간에서 뷰어를 배치하여 꼭짓점을 카메라 공간으로 변환합니다. 카메라 공간에서 카메라 또는 뷰어는 원점에 있으며 z축 양의 방향을 바라봅니다. 뷰 매트릭스는 카메라의 위치(카메라 공간의 원점) 및 방향 주변에 있는 월드의 개체를 다시 배치합니다.</p></td>
+<td align="left"><p><em>변환 보기</em>는 월드 공간에서 뷰어를 배치하여 꼭짓점을 카메라 공간으로 변환합니다. 카메라 공간에서 카메라 또는 뷰어는 원점에 있으며 양의 z축 방향을 바라봅니다. 뷰 매트릭스는 카메라의 위치(카메라 공간의 원점) 및 방향 주변에 있는 월드의 개체를 다시 배치합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[프로젝션 변환](projection-transform.md)</p></td>
@@ -66,7 +62,6 @@ Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 
  
 
  
-
 
 
 

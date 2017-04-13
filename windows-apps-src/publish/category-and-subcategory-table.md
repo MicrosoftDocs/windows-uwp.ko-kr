@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a69521d9ff9adb682a370b421458269507e9befe
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1234a1209f7cc32901b093a44c2b71fc90a6f3b5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 
 
@@ -67,5 +64,4 @@ Windows 스토어는 앱을 다음 범주와 하위 범주로 구성합니다.
  
 
 > **참고**  Windows 8.1 이하의 Windows 스토어 및 Windows Phone 스토어에 사용된 범주에 대한 정보 및 이 범주와 위 범주 목록의 관계에 대해서는 [앱이 Windows 10 고객용 스토어에 표시되는 방법](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes)을 참조하세요.
-
 

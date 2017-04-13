@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91ca9a29609cd52db24ddddecf60307e808cc064
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e861ce5d7c34098616fdc57c884402df4e4b0a7f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="feedback-report"></a>피드백 보고서
 
 Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안, 찬성을 볼 수 있습니다. 대시보드에서 이 데이터를 보거나 데이터를 내보내서 오프라인으로 볼 수 있습니다.
@@ -61,4 +58,3 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 ## <a name="launching-feedback-hub-directly-from-your-app"></a>앱에서 직접 피드백 허브 시작
 
 위에서 설명한 대로 고객에게 피드백을 제공하도록 권유하기 위해 앱에서 직접 피드백 허브에 대한 링크를 통합하는 것이 좋습니다. 자세한 내용은 [앱에서 피드백 허브 시작](../monetize/launch-feedback-hub-from-your-app.md)을 참조하세요.
-

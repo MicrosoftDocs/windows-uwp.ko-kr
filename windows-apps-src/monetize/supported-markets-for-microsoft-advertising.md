@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, 시장"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6150c885c4159911932bf8d7c3848b1e182b2f61
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 822c8a3bc9b427edbadb47293bfa1f75aa94a880
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="supported-markets-for-microsoft-advertising"></a>Microsoft Advertising에 지원되는 시장
 
 
@@ -194,7 +191,7 @@ ms.lasthandoff: 02/07/2017
 
 -   룩셈부르크
 
--   마케도니아어(구 유고슬라비아 마케도니아 공화국)
+-   마케도니아(이전 유고슬라비아 마케도니아 공화국)
 
 -   마다가스카르
 
@@ -319,4 +316,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

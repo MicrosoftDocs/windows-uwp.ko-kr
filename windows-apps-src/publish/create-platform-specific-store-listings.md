@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: aaeedd655e5ae84dc4ee71683a9831412c8ef5ac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4a4aac5c5990807f2988be1ba818992b1bccbea3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-platform-specific-store-listings"></a>플랫폼별 스토어 목록 만들기
 
 
@@ -23,7 +20,7 @@ ms.lasthandoff: 02/07/2017
 
 > **중요**  Windows 10 고객에게는 항상 기본 스토어 목록이 표시됩니다.
 
-플랫폼별 스토어 목록은 모든 고객에게 동일한 스토어 목록을 표시하지 않고 하나의 OS 버전에서만 표시되는 기능을 설명하거나, 특정 OS(장치 유형에 독립적)에 특정한 스크린샷을 제공하려는 경우에 유용할 수 있습니다.
+플랫폼별 스토어 목록은 모든 고객에게 동일한 스토어 목록을 표시하지 않고 하나의 OS 버전에서만 표시되는 기능을 설명하거나, 특정 OS(디바이스 유형에 독립적)에 특정한 스크린샷을 제공하려는 경우에 유용할 수 있습니다.
 
 > **참고**  플랫폼별 스토어 목록을 한 언어로 만들면 이러한 언어에 대해 [스토어 목록 정보를 입력](create-app-store-listings.md)해도 앱에서 지원하는 다른 언어로는 플랫폼별 스토어 목록이 만들어지지 않습니다. 각 언어에 대해 플랫폼별 스토어 목록을 개별적으로 만들어야 합니다.
 
@@ -50,7 +47,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

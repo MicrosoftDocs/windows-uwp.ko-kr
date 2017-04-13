@@ -2,19 +2,17 @@
 title: "게임 개발용 CPUSets"
 description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)에 새로 도입된 CPUSets API에 대해 개략적으로 설명하고 게임 및 응용 프로그램 개발과 관련된 핵심적인 정보를 다룹니다."
 author: hammondsp
-translationtype: Human Translation
-ms.sourcegitcommit: 9f15d551715d9ccf23e4eb397637f4fafacec350
 ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="cpusets-for-game-development"></a>게임 개발용 CPUSets
 
-# 게임 개발용 CPUSets
-
-## 소개
+## <a name="introduction"></a>소개
 
 UWP(유니버설 Windows 플랫폼)는 광범위한 소비자 전자 디바이스의 핵심입니다. 따라서 게임에서 포함 앱, 서버에서 실행되는 엔터프라이즈 소프트웨어에 이르는 모든 유형의 응용 프로그램에 대한 요구 사항을 처리하기 위해 UWP에는 범용 API가 필요합니다. API에서 제공하는 올바른 정보를 활용하여 게임이 모든 하드웨어에서 최상으로 실행되도록 할 수 있습니다.
 
-## CPUSets API
+## <a name="cpusets-api"></a>CPUSets API
 
 CPUSets API를 사용하면 스레드를 예약하기 위해 사용할 수 있는 CPU 집합을 제어할 수 있습니다. 스레드가 예약되는 위치를 제어하기 위해 두 함수를 사용할 수 있습니다.
 - **SetProcessDefaultCpuSets** – 이 함수를 사용하여 특정 CPU 집합에 할당되지 않은 새 스레드가 실행될 수 있는 CPU 집합을 지정할 수 있습니다.
@@ -22,7 +20,7 @@ CPUSets API를 사용하면 스레드를 예약하기 위해 사용할 수 있�
 
 **SetProcessDefaultCpuSets** 함수를 사용하지 않는 경우 새로 만들어진 스레드는 프로세스에서 사용할 수 있는 임의의 CPU 집합에서 예약될 수 있습니다. 이 섹션에서는 CPUSets API의 기본 사항을 설명합니다.
 
-### GetSystemCpuSetInformation
+### <a name="getsystemcpusetinformation"></a>GetSystemCpuSetInformation
 
 정보를 수집하는 데 사용되는 첫 번째 API는 **GetSystemCpuSetInformation** 함수입니다. 이 함수는 제목 코드에서 제공하는 **SYSTEM_CPU_SET_INFORMATION** 개체의 배열에 정보를 채웁니다. 대상의 메모리는 게임 코드에서 할당되어야 하며 그 크기는 **GetSystemCpuSetInformation** 자체를 호출하여 결정됩니다. 이를 위해서는 다음 예제와 같이 **GetSystemCpuSetInformation**을 두 번 호출해야 합니다.
 
@@ -40,7 +38,7 @@ GetSystemCpuSetInformation(cpuSets, size, &size, curProc, 0);
 
 반환되는 **SYSTEM_CPU_SET_INFORMATION**의 각 인스턴스에는 CPU 집합이라고도 하는 하나의 고유한 처리 장치에 대한 정보가 포함되어 있습니다. 이는 반드시 고유한 실제 하드웨어 항목을 나타내는 것을 의미하지는 않습니다. 하이퍼스레딩을 활용하는 CPU에는 단일한 물리적 처리 코어에서 실행되는 여러 논리 코어가 있습니다. 동일한 물리적 코어에 있는 여러 논리 코어에서 스레드를 여러 개 예약하면 커널 수준에서 추가 작업이 수행될 필요가 없으므로 하드웨어 수준의 리소스 최적화가 가능합니다. 동일한 물리적 코어에 있는 서로 다른 논리 코어에서 예약된 두 스레드는 CPU 시간을 공유해야 하지만 동일한 논리 코어에 예약된 경우보다 효율적으로 실행됩니다.
 
-### SYSTEM_CPU_SET_INFORMATION
+### <a name="systemcpusetinformation"></a>SYSTEM_CPU_SET_INFORMATION
 
 **GetSystemCpuSetInformation**에서 반환된 이 데이터 구조체의 각 인스턴스에 있는 정보에는 스레드가 예약될 수 있는 고유한 처리 장치에 대한 정보가 포함되어 있습니다. 대상 디바이스의 가능한 범위 때문에 **SYSTEM_CPU_SET_INFORMATION** 데이터 구조체의 많은 정보가 게임 개발에 해당하지 않을 수 있습니다. 표 1에서는 게임 개발에 유용한 데이터 멤버에 대해 설명합니다.
 
@@ -73,7 +71,7 @@ GetSystemCpuSetInformation(cpuSets, size, &size, curProc, 0);
 
   ![표 4](images/cpusets-table4.png)
 
-### SetThreadSelectedCpuSets
+### <a name="setthreadselectedcpusets"></a>SetThreadSelectedCpuSets
 
 CPU 집합에 대한 정보를 사용할 수 있으므로 이 정보를 사용하여 스레드를 구성할 수 있습니다. **CreateThread**를 사용하여 만든 스레드의 핸들은 스레드가 예약될 수 있는 CPU 집합의 ID 배열과 함께 이 함수에 전달됩니다. 이 함수를 사용하는 예가 다음 코드에 나와 있습니다.
 
@@ -84,15 +82,15 @@ SetThreadSelectedCpuSets(audioHandle, cores, 2);
 ```
 이 예제에서는 스레드가 **AudioThread**로 선언된 함수를 기반으로 만들어집니다. 그런 다음 이 스레드가 두 CPU 집합 중 하나에 예약되도록 허용됩니다. CPU 집합의 스레드 소유권은 독점적이 아닙니다. 특정 CPU 집합에 잠겨 있지 않은 상태로 만들어진 스레드는 **AudioThread**에서 시간을 사용할 수 있습니다. 마찬가지로, 만들어진 다른 스레드는 이후에 이러한 CPU 집합 중 하나 또는 둘 다에 잠겨 있을 수도 있습니다.
 
-### SetProcessDefaultCpuSets
+### <a name="setprocessdefaultcpusets"></a>SetProcessDefaultCpuSets
 
 **SetThreadSelectedCpuSets**의 반대가 **SetProcessDefaultCpuSets**입니다. 스레드는 만들어질 때 특정 CPU 집합에 잠겨 있을 필요가 없습니다. 이러한 스레드가 특정 CPU 집합(예: 렌더링 스레드 또는 오디오 스레드에서 사용되는 CPU 집합)에서 실행되지 않게 하려면 이 함수를 사용하여 이러한 스레드가 예약될 수 있는 코어를 지정할 수 있습니다.
 
-## 게임 개발에 대한 고려 사항
+## <a name="considerations-for-game-development"></a>게임 개발에 대한 고려 사항
 
 지금까지 살펴봤듯이 CPUSets API는 스레드 예약 측면에서 많은 정보와 유연성을 제공합니다. 상향식 접근법으로 이 데이터의 사용 방법을 찾으려는 대신 일반적인 시나리오를 수용하기 위해 데이터를 사용하는 방법을 찾는 하향식 접근법을 택하는 것이 더 효과적입니다.
 
-### 시간이 중요한 스레드 및 하이퍼스레딩 작업
+### <a name="working-with-time-critical-threads-and-hyperthreading"></a>시간이 중요한 스레드 및 하이퍼스레딩 작업
 
 이 방법은 게임에 상대적으로 적은 CPU 시간이 필요한 다른 작업자 스레드와 함께 실시간으로 실행되어야 하는 스레드가 몇 개 있는 경우 효과적입니다. 연속되는 배경 음악과 같은 일부 작업은 최적의 게임 환경을 위해 중단 없이 실행되어야 합니다. 오디오 스레드의 단일 프레임 결핍조차도 튕김이나 결함을 발생시킬 수 있으므로 프레임마다 필요한 양의 CPU 시간을 받는 것이 중요합니다.
 
@@ -131,7 +129,7 @@ bool hyperthreaded = processors.size() != cores.size();
 
 물리적 코어를 기준으로 스레드를 구성하는 예는 [추가 리소스](#additional-resources) 섹션에 연결된 GitHub 리포지토리에서 사용할 수 있는 CPUSets 샘플에서 찾을 수 있습니다.
 
-### 마지막 수준 캐시를 사용하여 캐시 일관성 비용 절감
+### <a name="reducing-the-cost-of-cache-coherence-with-last-level-cache"></a>마지막 수준 캐시를 사용하여 캐시 일관성 비용 절감
 
 캐시 일관성은 캐시된 메모리가 같은 데이터를 대상으로 작동하는 여러 하드웨어 리소스에서 동일함을 나타내는 개념입니다. 스레드가 여러 코어에 예약되어 있지만 동일한 데이터를 대상으로 작업하는 경우 서로 다른 캐시에 있는 해당 데이터의 개별 복사본을 대상으로 작업 중일 수 있습니다. 올바른 결과를 얻기 위해 이러한 캐시는 서로 일관성 있게 유지되어야 합니다. 여러 캐시 간에 일관성을 유지하는 것은 상대적으로 비용이 많이 들지만 모든 다중 코어 시스템이 작동하는 데 필수적입니다. 또한 캐시 일관성 유지는 클라이언트 코드의 제어를 완전히 벗어납니다. 기본 시스템은 코어 간의 공유 메모리 리소스에 액세스하여 캐시를 최신 상태로 유지하기 위해 독립적으로 작동합니다.
 
@@ -183,18 +181,12 @@ for (size_t i = 0; i < count; ++i)
 
 ![Lumia 950 캐시](images/cpusets-lumia950cache.png)
 
-## 요약
+## <a name="summary"></a>요약
 
 UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대한 상당한 양의 정보와 제어 기능을 제공합니다. Windows 개발을 위한 이전의 다중 스레드 API와 비교할 때 더 복잡해졌으므로 학습 기간이 어느 정도 필요하지만, 유연성 향상으로 결국 다양한 소비자 PC와 기타 하드웨어 대상 전체에서 성능을 높일 수 있습니다. 
 
-## 추가 리소스
+## <a name="additional-resources"></a>추가 리소스
 - [CPU 집합(MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
 - [ATG에서 제공한 CPUSets 샘플](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [Xbox One의 UWP](index.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

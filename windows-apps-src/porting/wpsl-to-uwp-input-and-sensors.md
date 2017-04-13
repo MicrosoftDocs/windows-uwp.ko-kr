@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 975f364fec4edfcf90ee65912f509741bd1f80dd
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5df57d0bd5d2104278f653d78b1e478a034a38ac
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="porting-windows-phone-silverlight-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대해 Windows Phone Silverlight를 UWP로 포팅
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -99,5 +96,4 @@ UWP 앱에서 **PhoneApplicationPage.SupportedOrientations** 및 **Orientation**
 디바이스 방향과 화면 크기와 상관없이 UWP 앱의 UI를 보기 좋게 디자인하는 것이 좋습니다. 자세한 내용은 다음 항목인 [폼 팩터 및 사용자 환경에 대한 포팅](wpsl-to-uwp-form-factors-and-ux.md)을 참조하세요.
 
 다음 항목은 [비즈니스 및 데이터 계층 포팅](wpsl-to-uwp-business-and-data.md)입니다.
-
 

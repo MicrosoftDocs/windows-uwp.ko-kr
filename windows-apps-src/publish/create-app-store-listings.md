@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: dcce4d53dd095c634f893d40f87eaf69cf546f1d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 84b00674e06433625010a976f7237b26ea062d7c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-app-store-listings"></a>앱 스토어 목록 만들기
 
 
@@ -57,7 +54,7 @@ ms.lasthandoff: 02/07/2017
 
 ### <a name="screenshots"></a>스크린샷
 
-대부분 경우에 다양한 장치 유형에 대한 스크린샷을 제공할 수 있는 여러 필드가 표시됩니다. 장치 유형별로 다른 스크린샷을 제공할 필요는 없습니다. 제출을 위해 스크린샷 하나는 필수입니다(장치 유형별로 최대 9개를 제공할 수 있음). 대부분 경우에 고객이 장치에서 앱이 표시되는 대로 이미지를 볼 수 있도록 앱에서 지원하는 장치 유형 수만큼 스크린샷을 제공하는 것이 좋습니다.
+대부분 경우에 다양한 디바이스 유형에 대한 스크린샷을 제공할 수 있는 여러 필드가 표시됩니다. 디바이스 유형별로 다른 스크린샷을 제공할 필요는 없습니다. 제출을 위해 스크린샷 하나는 필수입니다(디바이스 유형별로 최대 9개를 제공할 수 있음). 대부분 경우에 고객이 디바이스에서 앱이 표시되는 대로 이미지를 볼 수 있도록 앱에서 지원하는 디바이스 유형 수만큼 스크린샷을 제공하는 것이 좋습니다.
 
 자세한 내용은 [앱 스크린샷 및 이미지](app-screenshots-and-images.md)를 참조하세요.
 
@@ -120,4 +117,3 @@ ms.lasthandoff: 02/07/2017
 앱에 대한 기본 개인 정보 취급 방침이 있으면 여기에 해당 URL을 입력합니다. 앱이 개인 정보 관련 법률 및 규정을 준수하는지 확인하고 필요할 경우 개인 정보 취급 방침을 제공하는 것은 개발자의 책임입니다.
 
 **중요**  Microsoft는 앱에 대한 기본 개인 정보 취급 방침을 제공하지 않습니다. 마찬가지로, 사용자 앱에는 Microsoft 개인 정보 취급 방침이 적용되지 않습니다. 앱에 개인 정보 취급 방침이 필요한지를 확인하려면 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)과 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1)을 검토하세요.
-

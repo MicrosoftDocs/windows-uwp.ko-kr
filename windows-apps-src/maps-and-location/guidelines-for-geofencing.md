@@ -1,6 +1,6 @@
 ---
 author: PatrickFarley
-Description: "앱에서 지오펜싱에 대한 다음 모범 사례를 따릅니다."
+Description: "앱에서 지오펜스에 대한 다음 모범 사례를 따릅니다."
 title: "지오펜싱 앱에 대한 지침"
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ms.author: pafarley
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 지도, 위치, 지오펜싱"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: e21b5b89c95a6b4988e1e95fc924ec3eefd46942
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-geofencing-apps"></a>지오펜싱 앱에 대한 지침
 
 
@@ -137,4 +134,3 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
  
 
  
-

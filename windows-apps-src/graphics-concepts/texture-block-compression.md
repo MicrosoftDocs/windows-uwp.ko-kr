@@ -2,21 +2,17 @@
 title: "텍스처 블록 압축"
 description: "Direct3D 11에서 텍스처에 대한 블록 압축(BC) 지원 기능이 확장되면서 이제 BC6H 및 BC7 알고리즘도 지원합니다."
 ms.assetid: 63506C46-BF14-464B-B20C-8B8F359E7AFE
-keywords:
-- "텍스처 블록 압축"
+keywords: "텍스처 블록 압축"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3930d5d2350fcbb7878edec8a5a93dfd4c36caee
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3288232e0010c1b23d58992cfd6c9f038a74a552
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-block-compression"></a>텍스처 블록 압축
 
 
@@ -103,7 +99,6 @@ BC7 형식은 4x4 픽셀 블록마다 다른 인코딩 모드를 선택할 수 �
  
 
  
-
 
 
 

@@ -2,21 +2,17 @@
 title: "래스터화 규칙 소개"
 description: "흔히 꼭짓점에 지정된 점은 화면의 픽셀과 정확히 일치하지는 않습니다. 이 경우, Direct3D가 삼각형 래스터화 규칙을 적용하여 주어진 삼각형에 어떤 픽셀을 적용할지 결정합니다."
 ms.assetid: 4232CDBA-F669-4417-9378-F9013E83462C
-keywords:
-- "래스터화 규칙 소개"
+keywords: "래스터화 규칙 소개"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b7814c01d18e7a5ef121d151438a25921f35aaf2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c22f17991462ddf190ece2baa0360fa3e1d12a5
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-rasterization-rules"></a>래스터화 규칙 소개
 
 
@@ -79,7 +75,6 @@ Direct3D가 사용하는 삼각형 래스터화 규칙에 대한 설명이 모�
  
 
  
-
 
 
 

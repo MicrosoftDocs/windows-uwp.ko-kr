@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 13963ddf9f745c6de2e6d7ef7d948f649b2f6f5e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 708f46dc0be53961d8fd26f41a933e5756720a98
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="about-community-ads"></a>커뮤니티 광고 정보
 
 **AdMediatorControl** 또는 **AdControl**을 사용하여 배너 광고를 표시하는 개발자 앱을 Windows 스토어에서 무료로 다른 개발자의 앱과 함께 서로 홍보할 수 있습니다. 이 기능을 *커뮤니티 광고*라고 합니다.  
@@ -44,4 +41,3 @@ ms.lasthandoff: 02/07/2017
 
 * [광고를 통한 수익 창출](monetize-with-ads.md)
 * [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
-

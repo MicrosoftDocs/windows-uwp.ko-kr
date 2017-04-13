@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스레드, 스레드 풀"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d3b45da6a11bab926812682c209207bbbb436bf1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: db5231c925575bef21b3d412feda367cd89fe7f4
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>스레드 풀을 사용하기 위한 모범 사례
 
@@ -35,7 +33,7 @@ ms.lasthandoff: 02/07/2017
 
 -   **Sleep** 함수 대신 [**ThreadPoolTimer.CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)를 사용합니다.
 
--   고유한 스레드 관리 시스템을 만드는 대신 스레드 풀을 사용합니다. 스레드 풀은 고급 접근 권한 값을 사용하여 OS 수준에서 실행되며 장치 리소스 및 활동에 따라 시스템 전체와 프로세스 내에서 동적으로 조정되도록 최적화되어 있습니다.
+-   고유한 스레드 관리 시스템을 만드는 대신 스레드 풀을 사용합니다. 스레드 풀은 고급 접근 권한 값을 사용하여 OS 수준에서 실행되며 디바이스 리소스 및 활동에 따라 시스템 전체와 프로세스 내에서 동적으로 조정되도록 최적화되어 있습니다.
 
 -   C++에서 작업 항목 대리자가 Agile 스레딩 모델을 사용하는지 확인합니다(C++ 대리자는 기본적으로 Agile임).
 
@@ -60,4 +58,3 @@ ms.lasthandoff: 02/07/2017
 * [정기 작업 항목 만들기](create-a-periodic-work-item.md)
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
 * [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
-

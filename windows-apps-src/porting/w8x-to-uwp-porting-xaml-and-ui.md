@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 19a6ef29265c22d1bb02464a76ab20e487c67ce4
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -107,7 +104,7 @@ Windows 10에서 실행되는 유니버설 8.1 앱은 컨트롤과 관련된 8.1
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) 및 [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)에 대한 시각적 변경에 따른 앱의 모양 변경을 검토합니다. 모바일 장치에서 실행되는 Windows 10 앱의 경우 이러한 컨트롤이 선택 페이지를 더 이상 탐색하지 않지만, 대신에 빠른 해제가 가능한 팝업을 사용합니다. |
 | [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584), [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280) | Windows 10 앱에서는 플라이아웃 내부에 [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/dn298584) 또는 [**TimePicker**](https://msdn.microsoft.com/library/windows/apps/dn299280)를 넣을 수 없습니다. 이러한 컨트롤을 팝업 유형의 컨트롤로 표시하려는 경우 [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) 및 [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313)을 사용할 수 있습니다. |
 | **GridView**, **ListView** | **GridView**/**ListView**의 경우 [GridView 및 ListView 변경](#gridview-and-listview-changes)을 참조하세요. |
-| [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Windows Phone 스토어 앱에서는 [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) 컨트롤이 마지막 섹션에서 첫 번째 섹션까지 래핑합니다. Windows 스토어 앱 및 Windows 10 앱에서는 허브 섹션이 래핑하지 않습니다. |
+| [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Windows Phone 스토어 앱에서는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 컨트롤이 마지막 섹션에서 첫 번째 섹션까지 래핑합니다. Windows 스토어 앱 및 Windows 10 앱에서는 허브 섹션이 래핑하지 않습니다. |
 | [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843) | Windows Phone 스토어 앱에서는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 컨트롤의 배경 이미지가 허브 섹션을 기준으로 시차 효과를 내면서 이동합니다. Windows 스토어 앱 및 Windows 10 앱에서는 시차가 사용되지 않습니다. |
 | [**허브**](https://msdn.microsoft.com/library/windows/apps/dn251843)  | 유니버설 8.1 앱에서는 [**HubSection.IsHeaderInteractive**](https://msdn.microsoft.com/library/windows/apps/dn251917) 속성으로 섹션 헤더(및 그 옆에서 렌더링된 펼침 단추 문자 모양)가 대화형이 됩니다. Windows 10 앱에는 헤더 옆에 대화형 "자세히 보기" 어포던스가 있지만, 헤더 자체가 대화형은 아닙니다. **IsHeaderInteractive**에서 여전히 조작이 [**Hub.SectionHeaderClick**](https://msdn.microsoft.com/library/windows/apps/dn251953) 이벤트를 발생시킬지 여부를 결정합니다. |
 | **MessageDialog** | **MessageDialog**를 사용하려면 더욱 유연한 [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/dn633972)를 사용하는 것이 좋습니다. 또한 [XAML UI 기본 사항](http://go.microsoft.com/fwlink/p/?linkid=619992) 샘플을 참조하세요. |
@@ -488,5 +485,4 @@ Windows 스토어 앱 및 Windows Phone 스토어 앱에서 텍스트의 기본 
 ```
 
 다음 항목은 [I/O, 장치 및 앱 모델에 대한 포팅](w8x-to-uwp-input-and-sensors.md)입니다.
-
 

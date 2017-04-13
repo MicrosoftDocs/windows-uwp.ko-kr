@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1aea4f2da584124050665d159b1d83f34368b819
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 38bafd7c63b101e495748c169a1b566115c2a1e6
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xbox-dev-mode-companion"></a>Xbox 개발자 모드 도우미
 
 Xbox 개발자 모드 도우미를 사용하면 원격으로 Xbox One 콘솔에 연결하고 제어할 수 있습니다. 이 도구는 Xbox 개발자 모드를 사용하는 개발자를 위해 만들어졌습니다.
@@ -48,4 +45,3 @@ Xbox 개발자 모드 도우미를 사용하면 원격으로 Xbox One 콘솔에 
 
 ## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP](index.md)
-

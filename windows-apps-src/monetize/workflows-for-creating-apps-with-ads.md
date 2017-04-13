@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, AdControl, InterstitialAd"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f01b69502d41a7128ac5f59589f6d014d92f52a3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 93b56259314c54a56cd8ebbef89694319a95e41c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="workflows-for-creating-apps-with-ads"></a>광고가 포함된 앱 만들기 워크플로
 
 
@@ -54,7 +51,7 @@ Windows 개발자 센터에서 계정을 설정하려면 [이 페이지](http://
 
 **AdControl** 또는 **InterstitialAd**를 사용하여 앱에서 광고를 표시하려면 코드에 응용 프로그램 ID와 광고 단위 ID를 지정하여 앱을 Windows 개발자 센터 계정에 연결하고 광고를 제공해야 합니다. 앱을 개발하는 동안 테스트 응용 프로그램 ID 및 광고 단위 ID 값을 사용하여 테스트 동안 앱이 광고를 렌더링하는 방법을 확인합니다. 이렇게 하면 테스트하는 동안 앱이 광고를 수신하고 렌더링하는 방식을 확인할 수 있습니다. 자세한 내용은 [테스트 모드 값](test-mode-values.md)을 참조하세요.
 
-C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영상 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
+C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
 ## <a name="configure-your-app-to-receive-live-ads"></a>라이브 광고를 수신하도록 앱 구성
 
@@ -69,4 +66,3 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
  
 
  
-

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 83c7f52f0d55773c3bb0d5802eb1166aa6cf40a7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7eaddcfc2d02805e60043132328ef482872a9000
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="manage-account-users"></a>계정 사용자 관리
 
 
@@ -279,4 +276,3 @@ Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸
  
 
  
-

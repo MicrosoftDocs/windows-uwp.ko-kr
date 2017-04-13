@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 분석, 보고서, 대시보드, 앱"
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
 ms.openlocfilehash: 13a37a4ae2cea67fdce843ed4e6189797d85b93e
-ms.lasthandoff: 02/08/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="analytics"></a>분석
 
 Windows 개발자 센터 대시보드에서 앱에 대한 자세한 분석을 볼 수 있습니다. 통계와 차트를 통해 연결된 고객 수, 고객들이 앱을 사용하는 방식, 고객들의 앱 평가를 기반으로 앱의 상태를 알 수 있습니다. 앱 상태, 광고 사용 등에 대한 정보를 찾을 수도 있습니다. 대시보드에서 보고서를 보거나 [필요한 보고서를 다운로드](download-analytic-reports.md)하여 데이터를 오프라인으로 분석합니다. 또한 [대시보드를 사용하지 않고 분석 데이터에 액세스](#no-dashboard)할 수 있는 여러 가지 방법을 제공합니다.
@@ -81,8 +78,7 @@ Power BI 사용을 시작하여 분석 데이터에 액세스하려면 다음 �
 ### <a name="dev-center-app"></a>개발자 센터 앱
 
 
-  [개발자 센터](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) 앱을 설치하면 Windows 10 장치에서 앱의 상태와 성능에 대한 세부 정보를 빠르게 확인할 수 있습니다.
+  [개발자 센터](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) 앱을 설치하면 Windows10 디바이스에서 앱의 상태와 성능에 대한 세부 정보를 빠르게 확인할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 - [Windows 앱 게시](index.md)
-

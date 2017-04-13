@@ -9,18 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 36d19f660bc3c03377f864b1d659a19396917130
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 82c8fd0945ed49f8accf5e101acfbea151caa3a1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="uwp-on-xbox-one"></a>Xbox One의 UWP
 
 Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱의 빌드를 시작합니다.
 
-Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. [ID@Xbox](http://www.xbox.com/Developers/id) 개발자가 아니어도 Xbox에서 게임이나 앱을 실험, 생성 및 테스트할 수 있지만, Xbox One에서 게임을 게시 및 판매하거나 Windows 10에서 Xbox Live를 활용하려는 경우 [ID@Xbox](http://www.xbox.com/Developers/id)에 등록해야 합니다. 독립 개발자 및 동호회 커뮤니티에 참여하려면 [ID@Xbox](http://www.xbox.com/Developers/id)에 등록하세요. 
+Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. Xbox에서 게임이나 앱을 실험, 제작, 테스트하기 위해 개발자 프로그램에 참여할 필요는 없습니다. Xbox One에 게임을 게시하고 판매할 준비가 되었거나 Windows 10의 Xbox Live이 제공하는 장점을 누리려면 [Xbox Live Creators 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)에 참여하거나 [ID@Xbox](http://www.xbox.com/Developers/id) 개발자가 되어야 합니다. 자세한 내용은 [개발자 프로그램 개요](https://developer.microsoft.com/games/xbox/docs/xboxlive/get-started/developer-program-overview.html)를 참조하세요.
 
 이 섹션에는 설정 단계, 인증 프로세스 안내, 필요한 버전의 Visual Studio 및 Windows 10 도구 설치 정보, 간단한 첫 번째 응용 프로그램을 빌드, 실행, 디버그하는 단계 등이 포함되어 있습니다. 
 
@@ -47,4 +44,3 @@ Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. [ID@Xbox](ht
 - [Windows 10 UWP 앱 시작 자동화](automate-launching-uwp-apps.md)
 - [게임 개발용 CPUSets](cpusets-games.md)
   
-

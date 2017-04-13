@@ -9,11 +9,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 소매 데모 앱"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 843f98782410559d47bdb8dc0b23b50fa96552d6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2fa839c3a559ff0065c98712f73b9bb3ed81b276
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 #  <a name="create-a-retail-demo-experience-rdx-app"></a>RDX(소매 데모 환경) 앱 만들기
 
@@ -105,7 +103,7 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="preparing-codebase-for-retail-demo-mode-development"></a>소매 데모 모드 개발을 위한 코드베이스 준비
 
-Windows 10 SDK에서 [Windows.System.Profile](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) 네임스페이스의 일부인 [**RetailInfo**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.aspx) 유틸리티 클래스의 [**IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.aspx) 속성이 응용 프로그램을 실행할 코드 경로(_표준_ 모드 또는 _소매_ 모드)를 지정하기 위한 부울 표시기로 사용됩니다.
+Windows10 SDK에서 [Windows.System.Profile](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx) 네임스페이스의 일부인 [**RetailInfo**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.aspx) 유틸리티 클래스의 [**IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.aspx) 속성이 응용 프로그램을 실행할 코드 경로(_표준_ 모드 또는 _소매_ 모드)를 지정하기 위한 부울 표시기로 사용됩니다.
 
 [**RetailInfo.IsDemoModeEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.isdemomodeenabled.aspx)가 true를 반환하면, 더욱 사용자 지정 가능한 소매 데모 환경을 구축하기 위해 [**RetailInfo.Properties**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.retailinfo.properties.aspx)를 사용하여 장치에 대한 속성 집합을 쿼리할 수 있습니다. 이러한 속성에는 [**ManufacturerName**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.manufacturername.aspx), [**Screensize**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.screensize.aspx), [**Memory**](https://msdn.microsoft.com/library/windows/apps/windows.system.profile.knownretailinfoproperties.memory.aspx) 등이 포함됩니다.
 
@@ -264,4 +262,3 @@ namespace MyCompany.MyApp
  
 
  
-

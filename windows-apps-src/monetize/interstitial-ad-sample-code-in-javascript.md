@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 중간, javascript, 샘플 코드"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 91a54bdd2e41b3e7df0ee0aad32448ab9ed66ac0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 192ea42e9d55bbafcd6c6dbd463681832ac28c86
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="interstitial-ad-sample-code-in-javascript"></a>JavaScript의 중간 광고 샘플 코드
 
 이 항목에서는 중간 광고를 게재하는 기본 JavaScript 및 HTML UWP(유니버설 Windows 플랫폼) 앱의 전체 샘플 코드를 제공합니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
@@ -29,6 +26,8 @@ ms.lasthandoff: 02/07/2017
 >**참고(Windows 8.x 및 Windows Phone 8.1의 경우)**&nbsp;&nbsp;Windows 8.1 또는 Windows Phone 8.1 대상의 프로젝트인 경우 프로젝트의 기본 HTML 파일 이름이 index.html이 아닌 default.html이고 프로젝트의 기본 JavaScript 파일 이름이 main.js가 아닌 default.js입니다.
 
 앱을 스토어에 제출하기 전에 ```applicationId``` 및 ```adUnitId``` 변수의 값을 Windows 개발자 센터에서 라이브 값으로 바꿉니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)을 참조하세요.
+
+>**참고**&nbsp;&nbsp;동영상 중간 광고 대신 배너 중간 광고를 표시하도록 이 예제를 변경하려면  [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 메서드의 첫 번째 매개 변수에 **InterstitialAdType.video** 대신 **InterstitialAdType.display** 값을 전달하세요. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.
 
 ### <a name="indexhtml"></a>index.html
 
@@ -53,4 +52,3 @@ ms.lasthandoff: 02/07/2017
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 
  
-

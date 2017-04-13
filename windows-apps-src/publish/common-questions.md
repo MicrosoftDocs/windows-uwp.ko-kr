@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 20a05337052392446d733af7da180f9466fef05f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8171301a628e173128689765914faea622fd4837
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="common-questions-about-ad-campaigns"></a>광고 캠페인에 대한 일반적인 질문
 
 ## <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>내 앱에 대한 광고를 실행하려면 비용이 얼마나 듭니까?
@@ -71,4 +68,3 @@ ms.lasthandoff: 02/07/2017
 * [하우스 광고 정보](about-house-ads.md)
 * [커뮤니티 광고 정보](about-community-ads.md)
 * [앱 설치 광고 보고서](app-install-ads-reports.md)
-

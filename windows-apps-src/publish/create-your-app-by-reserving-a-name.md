@@ -9,17 +9,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c36f8296f65efcc107ade545c20ab7e3db32c824
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 957caca6fb71cb8cfe5a84e258c0679b0780e6a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 
 
-Windows 개발자 센터 대시보드에서 새 앱을 만드는 첫 번째 단계는 앱 이름을 예약하는 것입니다. 앱 이름을 예약하고 [적합한 앱 이름을 선택](#choosing-your-app-s-name)하기 위한 제안을 확인하세요. 각 예약된 이름은 스토어 전체에서 고유해야 합니다.
+Windows 개발자 센터 대시보드에서 새 앱을 만드는 첫 번째 단계는 앱 이름을 예약하는 것입니다. 앱 이름을 예약하고 [적합한 앱 이름을 선택](#choosing-your-apps-name)하기 위한 제안을 확인하세요. 각 예약된 이름은 스토어 전체에서 고유해야 합니다.
 
 > **참고**  이전에 Windows Phone 앱을 만들었는데 이름을 예약하지 않았으면 해당 앱을 관리하고 제출할 수 있습니다. 그러나 .appx 패키지를 업로드하거나 .appx 패키지 만들기에 특정한 [앱 ID 세부 정보를 보려면](view-app-identity-details.md) 아래 단계에 따라 고유한 이름을 예약해야 합니다. 이렇게 하면 누구도 이 이름을 예약할 수 없습니다.
 
@@ -64,7 +61,6 @@ Windows 개발자 센터 대시보드에 있는 각 앱에 대한 **앱 관리**
  
 
  
-
 
 
 

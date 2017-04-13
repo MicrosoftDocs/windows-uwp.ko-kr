@@ -2,22 +2,20 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: "개발자 계정 열기"
-description: "Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법을 개략적으로 설명한 이 문서는 계정 설정 프로세스를 이해하는 데 도움이 됩니다."
+description: "Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 이 개요는 계정을 설정하는 프로세스를 파악하도록 도움을 줍니다."
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 26329304df64689ea7938d4fc838bd730696e4a2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 6b7f11330c5849d0df4e54c10a71c2a70fc77a08
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
-Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법을 개략적으로 설명한 이 문서는 계정 설정 프로세스를 이해하는 데 도움이 됩니다.
+Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 이 개요는 계정을 설정하는 프로세스를 파악하도록 도움을 줍니다.
 
 > **참고** 개발자 계정을 등록할 때 연락처 정보에 입력한 메일 주소를 사용하여 계정과 관련된 메일 내용을 전송합니다. 때때로 해당 프로그램에 대한 알림 메일이 포함될 수 있습니다. [옵트아웃(opt out)](http://go.microsoft.com/fwlink/p/?LinkId=533280)하여 이러한 알림 메일을 받지 않도록 선택할 경우에도 거래용 메일은 계속 전송됩니다(예: 앱이 인증을 통과했거나 결제가 진행 중임을 알리기 위해). 이러한 메일이 계정 운영의 필수적인 부분이고, 계정을 해지하지 않는 한 이러한 거래용 메일을 계속 받게 됩니다.
 
@@ -90,6 +88,5 @@ Windows 개발자 센터 대시보드에 로그인하면 ID를 확인하라는 �
 -   이전에 앱을 구입한 고객은 앱을 계속 사용할 수 있지만 스토어에서는 앱 목록이 제거됩니다. 새 고객은 더 이상 앱을 구입할 수 없습니다.
 -   다른 개발자가 사용할 수 있도록 앱 이름이 해제됩니다.
 -   이전의 앱 매출에 대한 미지급액이 있을 경우 금액이 일반 지급 임계값을 충족하지 않을지라도 해당 잔액에 대한 지급을 요청할 수 있습니다.
-
 
 

@@ -2,21 +2,17 @@
 title: "스텐실 버퍼"
 description: "스텐실 버퍼는 특수 효과를 생성하기 위해 이미지의 마스크 픽셀에 사용됩니다."
 ms.assetid: 544B3B9E-31E3-41DA-8081-CC3477447E94
-keywords:
-- "스텐실 버퍼"
+keywords: "스텐실 버퍼"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 981d9d25b860d1c168227c9f67537cf033165aac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 131b573d990db4d24f33b33c38e4534a7932571b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="stencil-buffers"></a>스텐실 버퍼
 
 
@@ -112,7 +108,6 @@ Direct3D 응용 프로그램은 스와이프에 대해 비슷한 기법을 사�
  
 
  
-
 
 
 

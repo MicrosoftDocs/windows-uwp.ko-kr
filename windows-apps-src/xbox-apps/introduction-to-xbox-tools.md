@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 6f2744a571e7a601eca058957cbe181a14143b68
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 536502316db43ccc04a42b935064294dc5173151
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="introduction-to-xbox-one-tools"></a>Xbox One 도구 소개
 
 이 섹션에서는 Windows Device Portal을 사용하는 Xbox One 특정 도구 _개발자 홈_에 대해 설명합니다.
@@ -136,4 +133,3 @@ Xbox 개발자 모드 도우미는 PC를 종료하지 않고 콘솔에서 작업
 
 
 ----
-

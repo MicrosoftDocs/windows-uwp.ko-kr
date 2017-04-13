@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 873da2adeea277e0f8f869703aac782c21b0419e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: a629fb07bfa2e3f8bb3d070e9fe4994baba4336b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xphase-attribute"></a>x:Phase 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 [{x:Bind} 태그 확장](x-bind-markup-extension.md)과 함께 **x:Phase**를 사용하여 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 항목을 증분적으로 렌더링하고 이동 환경을 개선할 수 있습니다. **x:Phase**는 [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) 이벤트를 사용하여 목록 항목의 렌더링을 수동으로 제어할 때와 동일한 효과를 얻을 수 있는 선언적 방법입니다. [ListView 및 GridView 항목의 증분 업데이트](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
 
@@ -84,5 +81,4 @@ ms.lasthandoff: 02/07/2017
 단계는 [{x:Bind}](x-bind-markup-extension.md) 바인딩에만 영향을 주며, [{Binding}](binding-markup-extension.md) 바인딩에는 영향을 주지 않습니다.
 
 단계를 인식하는 컨트롤을 사용하여 항목 템플릿을 렌더링하는 경우에만 단계가 적용됩니다. Windows 10의 경우 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)를 의미합니다. 다른 항목 컨트롤에서 사용되는 데이터 템플릿이나 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) 또는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 섹션과 같은 다른 시나리오에는 단계가 적용되지 않습니다. 이러한 경우에는 모든 UI 요소가 한 번에 데이터 바인딩됩니다.
-
 

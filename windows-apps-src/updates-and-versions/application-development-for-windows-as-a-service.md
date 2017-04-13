@@ -1,51 +1,48 @@
 ---
-title: "Windows as a service용 응용 프로그램 개발(Windows 10)"
+title: "Windows as a service용 앱 개발"
 description: "특정 Windows 빌드에서 앱 릴리스와 지원을 분리합니다."
-author: jdeckerMS
-ms.author: jdecker
+author: jken
+ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bdec771cae57c1bf2afd66feff9530a7a453c18d
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: deebfc4c80b09445c5e6ba55951e6f06054fbf42
+ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+translationtype: HT
 ---
-
 # <a name="application-development-for-windows-as-a-service"></a>Windows as a service용 응용 프로그램 개발
 
 **적용 대상**
--   Windows 10
--   Windows 10 Mobile
--   Windows 10 IoT Core K 
+-   Windows10
+-   Windows 10 Mobile
+-   Windows 10 IoT Core K 
 
-오늘날 환경에서 사용자는 종종 장치 중심 환경을 기대하기 때문에 전체 제품 주기는 연 단위가 아닌 월 단위로 측정되어야 합니다. 또한 새 릴리스는 지속적으로 사용 가능하고 사용자에 대한 영향을 최소화하면서 배포할 수 있어야 합니다. Microsoft는 [WaaS(Windows as a Service)](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)라는 새로운 혁신, 개발, 전달 접근 방식을 구현함으로써 이러한 요구 사항을 충족하도록 Windows 10을 디자인했습니다. Microsoft는 Windows 10 테스트에 대한 혁신적인 커뮤니티 중심 접근 방식을 핵심으로 하여 높은 품질 수준을 유지하면서 제품 주기를 눈에 띄게 줄일 수 있도록 했습니다. Windows 참가자라고 알려진 커뮤니티는 전세계 수백만 사용자로 이루어져 있습니다. Windows 참가자는 커뮤니티에 옵트인(opt in)할 때 제품 주기 과정에서 많은 빌드를 테스트하고 플라이팅이라는 반복적인 방법론을 통해 Microsoft에 피드백을 제공합니다.
+오늘날 환경에서 사용자는 종종 장치 중심 환경을 기대하기 때문에 전체 제품 주기는 연 단위가 아닌 월 단위로 측정되어야 합니다. 또한 새 릴리스는 지속적으로 사용 가능하고 사용자에 대한 영향을 최소화하면서 배포할 수 있어야 합니다. Microsoft는 [WaaS(Windows as a Service)](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)라는 새로운 혁신, 개발, 전달 접근 방식을 구현함으로써 이러한 요구 사항을 충족하도록 Windows 10을 디자인했습니다. Microsoft는 Windows 10 테스트에 대한 혁신적인 커뮤니티 중심 접근 방식을 핵심으로 하여 높은 품질 수준을 유지하면서 제품 주기를 눈에 띄게 줄일 수 있도록 했습니다. Windows 참가자라고 알려진 커뮤니티는 전세계 수백만 사용자로 이루어져 있습니다. Windows 참가자는 커뮤니티에 옵트인(opt in)할 때 제품 주기 과정에서 많은 빌드를 테스트하고 플라이팅이라는 반복적인 방법론을 통해 Microsoft에 피드백을 제공합니다.
 
 Insider Preview 빌드로 배포된 빌드는 Windows 엔지니어링 팀에게 빌드가 실제 사용에서 얼마나 잘 수행되는지에 대한 중요한 데이터를 제공합니다. 또한 Windows 참가자들이 포함된 플라이팅을 통해 Microsoft는 이전보다 훨씬 더 많은 다양한 하드웨어, 응용 프로그램 및 네트워킹 환경에서 빌드를 테스트하고 훨씬 더 신속하게 문제점을 식별할 수 있습니다. 따라서 Microsoft는 커뮤니티에 초점을 맞춘 플라이팅이 이전보다 더 빠른 속도의 혁신 전달과 더 나은 공개 릴리스 품질을 가능하게 할 것이라고 믿습니다.
 
-## <a name="windows-10-release-types-and-cadences"></a>Windows 10 릴리스 유형 및 일정 계획
+## <a name="windows-10-release-types-and-cadences"></a>Windows 10 릴리스 유형 및 일정 계획
 
-Microsoft에서는 Windows 참가자에게 Insider Preview 빌드를 릴리스하지만 다음과 같은 두 가지 유형의 Windows 10 릴리스를 지속적으로 일반 사용자에게 널리 게시합니다.
+Microsoft에서는 Windows 참가자에게 Insider Preview 빌드를 릴리스하지만 다음과 같은 두 가지 유형의 Windows 10 릴리스를 지속적으로 일반 사용자에게 널리 게시합니다.
 
-**기능 업데이트**는 이미 Windows 10을 실행 중인 장치에 새로운 최신 기능, 환경 및 특징을 설치합니다. 또한 기능 업데이트에는 Windows 전체 복사본이 들어 있기 때문에 Windows 7 또는 Windows 8.1을 실행하는 기존 장치와 운영 체제가 설치되지 않은 새 장치에 Windows 10을 설치하는 데도 사용됩니다. Microsoft는 평균적으로 매년 한두 개의 새로운 기능 업데이트를 게시할 예정입니다.
+**기능 업데이트**는 이미 Windows 10을 실행 중인 디바이스에 새로운 최신 기능, 환경 및 특징을 설치합니다. 또한 기능 업데이트에는 Windows 전체 복사본이 들어 있기 때문에 Windows 7 또는 Windows 8.1을 실행하는 기존 디바이스와 운영 체제가 설치되지 않은 새 디바이스에 Windows 10을 설치하는 데도 사용됩니다. Microsoft는 평균적으로 매년 한두 개의 새로운 기능 업데이트를 게시할 예정입니다.
 
 **품질 업데이트**는 보안 문제 해결 방법과 기타 중요한 버그 수정을 제공합니다. 품질 업데이트는 매월 한 번 이상의 빈도로 현재 지원되는 각 기능을 개선하기 위해 제공됩니다. Microsoft는 업데이트 화요일(패치 화요일이라고도 함)에 품질 업데이트를 계속 게시합니다. 또한 Microsoft는 고객의 요구를 해결하기 위해 필요할 때 업데이트 화요일 프로세스 외에도 Windows 10에 대한 추가 품질 업데이트를 게시할 수 있습니다.
 
-Windows 10 개발 과정에서 Microsoft는 전보다 훨씬 빠르게 고객이 원하는 기능과 환경을 제공할 수 있도록 Windows 제품 엔지니어링 및 릴리스 주기를 간소화했습니다. 또한 기능 업데이트와 품질 업데이트를 제공하고 설치하는 새로운 방법을 만들어 배포 및 지속적인 관리를 간소화하고 최신 Windows 기능 및 환경을 적용할 수 있는 직원 기반을 확대하며 총 소유 비용을 낮추었습니다. 이런 이유로 CB(현재 분기), CBB(비즈니스용 현재 분기) 및 LTSB(장기 서비스 분기)라는 새로운 서비스 옵션을 구현하여 엔터프라이즈 환경에서 이전에 가능했던 것보다 더 많은 장치를 최신 상태로 유지하기 위한 실용적인 솔루션을 제공하게 되었습니다.
+Windows 10 개발 과정에서 Microsoft는 전보다 훨씬 빠르게 고객이 원하는 기능과 환경을 제공할 수 있도록 Windows 제품 엔지니어링 및 릴리스 주기를 간소화했습니다. 또한 기능 업데이트와 품질 업데이트를 제공하고 설치하는 새로운 방법을 만들어 배포 및 지속적인 관리를 간소화하고 최신 Windows 기능 및 환경을 적용할 수 있는 직원 기반을 확대하며 총 소유 비용을 낮추었습니다. 이런 이유로 CB(현재 분기), CBB(비즈니스용 현재 분기) 및 LTSB(장기 서비스 분기)라는 새로운 서비스 옵션을 구현하여 엔터프라이즈 환경에서 이전에 가능했던 것보다 더 많은 디바이스를 최신 상태로 유지하기 위한 실용적인 솔루션을 제공하게 되었습니다.
 
 다음 표에서는 다양한 서비스 지점과 주요 특성을 설명합니다.
 
 | 서비스 옵션                  | 새 기능 업그레이드 설치 가용성     | 최소 서비스 수명 기간 | 주요 이점                                                                              | 지원되는 버전                                                                         |
 |-----------------------------------|-----------------------------------------------------------|--------------------------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| CB(현재 분기)               | Microsoft에서 처음 게시된 직후            | 약 4개월               | 가능한 한 빨리 사용자가 새 기능을 사용할 수 있도록 함                                 | Home, Pro, Education, Enterprise, Mobile, IoT Core, Windows 10 IoT Core Pro(IoT Core Pro) |
+| CB(현재 분기)               | Microsoft에서 처음 게시된 직후            | 약 4개월               | 가능한 한 빨리 사용자가 새 기능을 사용할 수 있도록 함                                 | Home, Pro, Education, Enterprise, Mobile, IoT Core, Windows 10 IoT Core Pro(IoT Core Pro) |
 | CBB(비즈니스용 현재 분기) | Microsoft에서 처음 게시되고 약 4개월 후 | 약 8개월               | 배포하기 전에 새 기능 업그레이드를 테스트하기 위한 추가 시간을 제공함                   | Pro, Education, Enterprise, Mobile Enterprise, IoT Core Pro                                |
-| LTSB(장기 서비스 분기) | Microsoft에서 게시된 직후                  | 10년                             | 잦은 구성 변경 없이 선택한 Windows 10 릴리스의 장기 배포가 가능함 | Enterprise LTSB                                                                            |
+| LTSB(장기 서비스 분기) | Microsoft에서 게시된 직후                  | 10년                             | 잦은 구성 변경 없이 선택한 Windows 10 릴리스의 장기 배포가 가능함 | Enterprise LTSB                                                                            |
  
-자세한 내용은 [업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)을 참조하세요.
+자세한 내용은 [업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)을 참조하세요.
 
 ## <a name="supporting-apps-in-windows-as-a-service"></a>Windows as a service에서 앱 지원
 
@@ -63,11 +60,11 @@ Windows as a service 모델에서 Microsoft는 기본 OS의 호환성을 유지�
  
 다음 섹션에서는 Microsoft가 기본 OS의 호환성을 유지하기 위해 수행하는 단계에 대한 추가 정보를 확인할 수 있습니다. 결합된 OS 및 앱 에코시스템의 호환성을 유지하기 위해 수행할 수 있는 단계에 대한 지침도 제공됩니다. Windows Insider Preview 빌드를 활용하여 Windows 빌드를 릴리스하기 전에 앱 성능 저하를 감지하는 방법에 대한 섹션이 있습니다. 마지막으로, 계측 및 원격 분석 기반 접근 방식을 사용하여 Windows 빌드의 품질을 높이는 방법을 설명합니다. ISV도 앱 포트폴리오에 이와 유사한 접근 방식을 사용하는 것이 좋습니다.
 
-## <a name="key-changes-since-windows-7-to-ensure-app-compatibility"></a>앱 호환성을 보장하기 위한 Windows 7 이후의 주요 변경 내용
+## <a name="key-changes-since-windows-7-to-ensure-app-compatibility"></a>앱 호환성을 보장하기 위한 Windows 7 이후의 주요 변경 내용
 
 Microsoft는 호환성이 개발자에게 중요하다는 것을 알고 있습니다. ISV와 개발자는 앱이 지원되는 모든 버전의 Windows OS에서 예상대로 실행될 것을 확인하려고 합니다. 소비자와 기업은 여기에 많은 투자를 하므로 구입한 앱이 계속 작동할 것을 확인하려고 합니다. Microsoft는 호환성이 구매 결정의 주요 기준임을 알고 있습니다. 모범 사례에 따라 잘 작성된 앱은 새로운 Windows 버전이 릴리스될 때 코드 변동이 훨씬 더 적으며 조각화를 줄입니다. 이러한 앱은 유지 관리를 위한 엔지니어링 투자를 줄이고 출시 시간을 단축합니다.
 
-Windows 7 시간 범위에서 호환성은 사후 접근 방식이었습니다. Windows 8부터 호환성을 다른 시각에서 바라보기 시작했으며, Windows 내에서 작업하여 호환성이 보충 항목이 아니라 처음부터 디자인되도록 했습니다. Windows 10은 지금까지 릴리스된 버전 중 가장 호환성이 크도록 디자인된 OS 버전입니다. 이러한 구현을 가능하게 했던 몇 가지 주요 방법은 다음과 같습니다.
+Windows 7 시간 범위에서 호환성은 사후 접근 방식이었습니다. Windows 8부터 호환성을 다른 시각에서 바라보기 시작했으며, Windows 내에서 작업하여 호환성이 보충 항목이 아니라 처음부터 디자인되도록 했습니다. Windows 10은 지금까지 릴리스된 버전 중 가장 호환성이 크도록 디자인된 OS 버전입니다. 이러한 구현을 가능하게 했던 몇 가지 주요 방법은 다음과 같습니다.
 -   **앱 원격 분석**: 호환성 테스트를 알리기 위해 Windows 에코시스템에서 앱 인기를 이해하는 데 도움이 됩니다.
 -   **ISV 파트너 관계**: 외부 파트너와 직접 작업하여 데이터를 제공하고 사용자가 경험하는 문제를 해결하도록 돕습니다.
 -   **디자인 검토, 업스트림 검색**: 기능 팀과 협력하여 Windows의 주요 변경 수를 줄입니다. 호환성 검토는 기능 팀이 통과해야 하는 게이트입니다.
@@ -76,13 +73,13 @@ Windows 7 시간 범위에서 호환성은 사후 접근 방식이었습니다.
 
 ## <a name="best-practices-for-app-compatibility"></a>앱 호환성에 대한 모범 사례
 
-Microsoft는 진단 및 사용 현황 데이터를 사용하여 문제를 식별 및 해결하고, 제품 및 서비스를 개선하며, 사용자에게 개인 설정된 환경을 제공합니다. 수집하는 사용 현황 데이터는 Windows 에코시스템의 PC에서 실행하는 앱까지 확장됩니다. 고객이 사용하는 항목에 따라 목록을 작성하여 이러한 앱, 장치 및 드라이버를 새 버전의 Windows OS에 대해 테스트합니다. Windows 10은 지금까지 릴리스된 버전 중 가장 호환성이 큰 Windows 버전으로, 수천 개의 인기 앱에 대해 90% 이상의 호환성을 제공합니다. Windows 호환성 팀은 협력하여 해결 방법을 찾을 수 있도록 자주 ISV 파트너에게 연락하여 문제가 발견된 경우 피드백을 제공합니다. 공동 고객이 생산성이나 엔터테인먼트를 위해 사용하는 앱 또는 OS의 기능 손실 없이 원활하게 Windows를 업데이트할 수 있도록 해야 합니다.
+Microsoft는 진단 및 사용 현황 데이터를 사용하여 문제를 식별 및 해결하고, 제품 및 서비스를 개선하며, 사용자에게 개인 설정된 환경을 제공합니다. 수집하는 사용 현황 데이터는 Windows 에코시스템의 PC에서 실행하는 앱까지 확장됩니다. 고객이 사용하는 항목에 따라 목록을 작성하여 이러한 앱, 디바이스 및 드라이버를 새 버전의 Windows OS에 대해 테스트합니다. Windows 10은 지금까지 릴리스된 버전 중 가장 호환성이 큰 Windows 버전으로, 수천 개의 인기 앱에 대해 90% 이상의 호환성을 제공합니다. Windows 호환성 팀은 협력하여 해결 방법을 찾을 수 있도록 자주 ISV 파트너에게 연락하여 문제가 발견된 경우 피드백을 제공합니다. 공동 고객이 생산성이나 엔터테인먼트를 위해 사용하는 앱 또는 OS의 기능 손실 없이 원활하게 Windows를 업데이트할 수 있도록 해야 합니다.
 
 다음 섹션에는 앱이 Windows 10과 호환되도록 하는 몇 가지 Microsoft 권장 모범 사례가 포함되어 있습니다.
 
 ### <a name="windows-version-check"></a>Windows 버전 확인
 
-Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호가 10.0으로 변경되었습니다. 이전처럼 OS 버전 변경 후 응용 프로그램 및 장치 호환성을 유지하기 위해 최선을 다하고 있습니다. 커널 종속성이 없는 대부분의 앱 범주에서 변경 내용은 앱 기능에 부정적인 영향을 주지 않으며, 기존 앱이 Windows 10에서 계속 잘 작동합니다.
+Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호가 10.0으로 변경되었습니다. 이전처럼 OS 버전 변경 후 응용 프로그램 및 디바이스 호환성을 유지하기 위해 최선을 다하고 있습니다. 커널 종속성이 없는 대부분의 앱 범주에서 변경 내용은 앱 기능에 부정적인 영향을 주지 않으며, 기존 앱이 Windows 10에서 계속 잘 작동합니다.
 
 이 변경 내용의 징후는 앱과 관련이 있습니다. 즉, 구체적으로 OS 버전을 확인하는 앱이 더 높은 버전 번호를 받게 되어 다음과 같은 상황이 하나 이상 발생할 수 있습니다.
 -   앱 설치 관리자가 앱을 설치할 수 없고 앱이 시작되지 않을 수 있습니다.
@@ -93,8 +90,7 @@ Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호�
 -   앱을 특정 API 기능에 종속된 경우 올바른 API 버전을 대상으로 지정합니다.
 -   APISet 또는 다른 공용 API를 통해 변경 내용을 검색하고 해당 버전을 일부 기능이나 수정에 대한 프록시로 사용하지 않습니다. 주요 변경 내용이 있는데 적절한 확인이 표시되지 않는 경우 버그가 있는 것입니다.
 -   앱이 레지스트리, 파일 버전, 오프셋, 커널 모드, 드라이버 또는 기타 수단 등의 특이한 방법으로 버전이 확인하지 않도록 합니다. 앱이 버전을 확인해야 하는 경우 주 버전, 부 버전 및 빌드 번호를 반환하는 GetVersion API를 사용합니다.
--   
-  [GetVersion](http://go.microsoft.com/fwlink/?LinkID=780555) API를 사용하는 경우 이 API의 동작이 Windows 8.1 이후 변경되었다는 것에 유의하세요.
+-   [GetVersion](http://go.microsoft.com/fwlink/?LinkID=780555) API를 사용하는 경우 이 API의 동작이 Windows 8.1 이후 변경되었다는 것에 유의하세요.
 
 맬웨어 방지 앱, 방화벽 앱 등의 앱을 소유한 경우 일반적인 피드백 채널 및 Windows 참가자 프로그램을 통해 작업해야 합니다.
 
@@ -123,7 +119,7 @@ Windows OS Insider Preview 빌드는 최종 빌드를 일반 사용자에게 릴
 ### <a name="step-1-become-a-windows-insider-and-participate-in-flighting"></a>1단계: Windows 참가자 등록 및 Insider Preview 빌드에 참여
 [Windows 참가자](http://go.microsoft.com/fwlink/p/?LinkId=521639)는 플랫폼의 기능과 특징을 개선하는 데 도움이 되는 피드백을 통해 Windows 미래를 구체화할 수 있습니다. 활기찬 커뮤니티로, 여기서 다른 매니아에 연결하고, 포럼에 가입하고, 조언을 주고받고, 예정된 참가자 전용 이벤트에 대해 알아볼 수 있습니다.
 
-Windows 10, Windows 10 Mobile, 최신 Windows SDK 및 에뮬레이터의 Preview 빌드에 액세스할 수 있으므로 멋진 앱을 개발하고 유니버설 Windows 플랫폼 및 Windows 스토어에서 새로운 기능을 탐색하는 데 필요한 모든 도구를 자유롭게 사용할 수 있습니다.
+Windows 10, Windows 10 Mobile, 최신 Windows SDK 및 에뮬레이터의 Preview 빌드에 액세스할 수 있으므로 멋진 앱을 개발하고 유니버설 Windows 플랫폼 및 Windows 스토어에서 새로운 기능을 탐색하는 데 필요한 모든 도구를 자유롭게 사용할 수 있습니다.
 
 Windows용 유니버설 드라이버를 개발할 수 있도록 하드웨어 개발 키트의 Preview 빌드를 사용하여 멋진 하드웨어를 빌드할 좋은 기회이기도 합니다. IoT Core Insider Preview도 지원되는 IoT 개발 보드에서 제공되므로 유니버설 Windows 플랫폼을 사용하여 멋진 연결된 솔루션을 빌드할 수 있습니다.
 
@@ -133,21 +129,20 @@ Windows 참가자로 등록하기 전에 다음과 같은 참가자 조건을 �
 -   업데이트를 많이 하거나 시간이 지나면서 UI 디자인이 크게 바뀌어도 상관 없는 경우
 -   PC를 잘 다루며 문제 해결, 데이터 백업, 하드 드라이브 포맷, 운영 체제 새로 설치, 필요한 경우 이전 운영 체제 복원 등에 익숙한 경우
 -   ISO 파일이 무엇이며 사용하는 방법을 아는 경우
--   매일 사용하는 컴퓨터나 장치에 설치하지 않는 경우
+-   매일 사용하는 컴퓨터나 디바이스에 설치하지 않는 경우
 
 ### <a name="step-2-test-your-scenarios"></a>2단계: 시나리오 테스트
 
 Insider Preview 빌드로 업데이트한 후 테스트 및 피드백 수집을 시작하는 데 도움이 되는 몇 가지 샘플 테스트 사례는 다음과 같습니다. 대체로 이러한 테스트에 대해 x86 및 AMD64 시스템을 둘 다 확인해야 합니다.
 **새로 설치 테스트:** Windows 10을 새로 설치하는 경우 앱이 제대로 작동하는지 확인합니다. 앱이 이 테스트와 업그레이드 테스트에 실패할 경우 앱의 기본 OS 변경 내용 또는 버그로 인한 문제일 가능성이 큽니다. 조사 후 기본 OS 변경 내용으로 인해 문제가 발생한 경우 Windows 참가자 프로그램을 사용하여 피드백을 제공하고 협력해서 해결 방법을 찾아야 합니다.
 
-
-  **업그레이드 테스트:** 하위 버전의 Windows(Windows 7 또는 Windows 8.1)에서 Windows 10으로 업그레이드한 후 앱이 작동하는지 확인합니다. 업그레이드 중에 앱에서 롤백이 발생하지 않아야 하며, 업그레이드 후에 앱이 예상대로 계속 작동해야 합니다. 이는 원활한 업그레이드 환경을 구현하는 데 중요합니다.
+**업그레이드 테스트:** 하위 버전의 Windows(Windows 7 또는 Windows 8.1)에서 Windows 10으로 업그레이드한 후 앱이 작동하는지 확인합니다. 업그레이드 중에 앱에서 롤백이 발생하지 않아야 하며, 업그레이드 후에 앱이 예상대로 계속 작동해야 합니다. 이는 원활한 업그레이드 환경을 구현하는 데 중요합니다.
 
 **다시 설치 테스트:** 하위 수준 OS에서 Windows 10으로 PC를 업그레이드한 후 앱을 다시 설치하여 앱 기능을 복원할 수 있는지 확인합니다. 앱이 업그레이드 테스트를 통과하지 못했으며 이러한 문제의 원인을 파악할 수 없는 경우 다시 설치하면 손실된 기능을 복원할 수 있습니다. 다시 설치 테스트 통과는 앱의 일부가 Windows 10으로 마이그레이션되지 않았을 수 있음을 나타냅니다.
 
-**OS\\장치 기능 테스트:** 앱이 OS의 특정 기능을 사용하는 경우 예상대로 작동하는지 확인합니다. 일반적인 테스트 영역에는 다음이 포함되며, 대체로 자주 사용하는 선택한 PC 모델에 대해 테스트하여 검사를 보장합니다.
+**OS\\디바이스 기능 테스트:** 앱이 OS의 특정 기능을 사용하는 경우 예상대로 작동하는지 확인합니다. 일반적인 테스트 영역에는 다음이 포함되며, 대체로 자주 사용하는 선택한 PC 모델에 대해 테스트하여 검사를 보장합니다.
 -   오디오
--   USB 장치 기능(키보드, 마우스, 메모리 스틱, 외장형 하드 디스크 등)
+-   USB 디바이스 기능(키보드, 마우스, 메모리 스틱, 외장형 하드 디스크 등)
 -   Bluetooth
 -   그래픽\\디스플레이(다중 모니터, 프로젝션, 화면 회전 등)
 -   터치 스크린(방향, 화상 키보드, 펜, 제스처 등)
@@ -165,5 +160,4 @@ Insider Preview 빌드에서 앱의 수행 방식을 알려주세요. 테스트 
 [Windows 준비](http://go.microsoft.com/fwlink/?LinkID=780580) 웹 사이트는 Windows 10을 지원하는 소프트웨어 디렉터리입니다. 배포에 Windows 10을 고려 중인 전 세계 회사 및 조직의 IT 관리자를 위한 것입니다. IT 관리자는 엔터프라이즈에 배포된 소프트웨어가 Windows 10에서 지원되는지 여부를 사이트에서 확인할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
-[업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
-
+[업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)

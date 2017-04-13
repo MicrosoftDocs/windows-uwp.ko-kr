@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
-ms.openlocfilehash: e02d7fabf6337fa23ab97858046c3b089c39a087
-ms.lasthandoff: 01/19/2017
-
+ms.openlocfilehash: cff0af6b2cebbc28ab5641b1b0571cb6b01ce885
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 <h1>연습: C++로 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#</h1>
 
 
@@ -639,4 +636,3 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 ## <a name="related-topics"></a>관련 항목
 
 * [C++로 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md)
-

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: "Microsoft Store Services SDK에 있는 Microsoft Advertising 라이브러리 최신 릴리스의 알려진 문제에 대해 알아봅니다."
-title: "Microsoft Advertising 라이브러리의 알려진 문제"
+title: "Advertising 라이브러리의 알려진 문제"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 알려진 문제"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54e3361ce9fdfc67495d41903b8b291931b7ee9f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 33bf3c2db5db7e8ec07df3f4d13cc0ad074e99a3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="known-issues-for-the-microsoft-advertising-libraries"></a>Microsoft Advertising 라이브러리의 알려진 문제
+# <a name="known-issues-for-the-advertising-libraries"></a>Advertising 라이브러리의 알려진 문제
 
 
 
@@ -43,9 +40,9 @@ Windows Phone 8.x Silverlight 프로젝트용 Microsoft Advertising 어셈블리
 
 ## <a name="interstitial-ads-and-navigation-buttons-on-phones"></a>휴대폰의 중간 광고 및 탐색 단추
 
-하드웨어 단추 대신 소프트웨어 **뒤로**, **시작**, 및 **검색** 단추가 있는 휴대폰(또는 에뮬레이터)에서 동영상 중간 광고에 대한 카운트다운 타이와 클릭 단추가 가려질 수 있습니다.
+하드웨어 단추 대신 소프트웨어 **뒤로**, **시작**, 및 **검색** 단추가 있는 휴대폰(또는 에뮬레이터)에서 중간 광고에 대한 카운트다운 타이와 클릭 단추가 가려질 수 있습니다.
 
-## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>최근에 만든된 광고가 앱에 제공되지 않음
+## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>최근에 생성된 광고가 앱에 제공되지 않음
 
 최근(하루 이내)에 광고를 만든 경우 즉시 사용하지 못할 수도 있습니다. 광고의 편집 콘텐츠가 승인되면 광고 서버에서 해당 광고를 처리하고 광고가 제공됩니다. 그러면 광고를 인벤토리로 사용할 수 있게 됩니다.
 
@@ -123,4 +120,3 @@ Microsoft Advertising 라이브러리 관련 문제를 해결하기 위해 제�
  
 
  
-

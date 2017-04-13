@@ -9,17 +9,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 4b8d8b81b1807681d3aa3c5ed61359a5da64dfac
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3fd841f824e09ab74c303571e5d917c56c659b9b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="add-a-splash-screen"></a>시작 화면 추가
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 Microsoft Visual Studio 2015를 사용하여 앱의 시작 화면 이미지와 배경색을 설정합니다.
@@ -57,7 +54,7 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
 
 6.  **시작 화면** 섹션의 **배경색** 필드에서 시작 화면 이미지와 함께 표시할 배경색을 설정합니다. 색 이름이나 '\#'과 색의 16진수 값을 입력할 수 있습니다. 사용 가능한 색 이름 목록은 [**SplashScreen element**](https://msdn.microsoft.com/library/windows/apps/br211467)를 참조하세요.
 
-    시작 화면의 배경색을 설정하는 것은 옵션입니다. UWP 앱의 색을 지정하지 않으면 시작 화면 배경색이 기본적으로 연한 회색(16진수 값 \#464646)으로 설정됩니다. 이 색은 기본 **타일** 배경색과 같습니다(**시각적 자산** 탭에 있는 **타일 이미지 및 로고** 섹션의 **배경색** 필드 참조). Windows Phone의 색을 지정하지 않거나 "투명"으로 설정하면 시작 화면 배경색이 투명하게 됩니다.
+    시작 화면의 배경색을 설정하는 것은 선택적인 작업입니다. UWP 앱의 색을 지정하지 않으면 시작 화면 배경색이 기본적으로 연한 회색(16진수 값 \#464646)으로 설정됩니다. 이 색은 기본 **타일** 배경색과 같습니다(**시각적 자산** 탭에 있는 **타일 이미지 및 로고** 섹션의 **배경색** 필드 참조). Windows Phone의 색을 지정하지 않거나 "투명"으로 설정하면 시작 화면 배경색이 투명하게 됩니다.
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
@@ -81,4 +78,3 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
  
 
  
-

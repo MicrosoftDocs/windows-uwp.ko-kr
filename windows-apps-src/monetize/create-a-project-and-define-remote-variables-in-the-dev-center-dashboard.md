@@ -1,22 +1,19 @@
 ---
 author: mcleanbyron
 Description: "A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에서 실험을 실행하려면 먼저 프로젝트를 만들고 개발자 센터 대시보드에서 원격 변수를 정의해야 합니다."
-title: "Windows 개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의"
+title: "대시보드에서 실험 프로젝트 만들기"
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Microsoft 스토어 서비스 SDK, A/B 테스트, 실험"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ad24e9a52458b826f3ce1bc7aba3dbdcf302f87d
-ms.lasthandoff: 02/07/2017
-
+keywords: "windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험"
+ms.openlocfilehash: bc38e5cc7438ff2dede5267b60bc925369defa51
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
-# <a name="create-a-project-and-define-remote-variables-in-the-dev-center-dashboard"></a>Windows 개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의
+# <a name="create-an-experiment-project-in-the-dashboard"></a>대시보드에서 실험 프로젝트 만들기
 
 실험을 시작하려면 개발자 센터 대시보드에서 앱에 대한 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms)를 만들고 앱이 액세스할 수 있는 원격 변수를 정의합니다.
 
@@ -35,7 +32,8 @@ ms.lasthandoff: 02/07/2017
   3. 변수 추가를 마쳤으면 **저장**을 클릭합니다.
 3. **SDK 통합** 섹션에서 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱을 코딩](code-your-experiment-in-your-app.md)하는 경우 변형 데이터를 받고 보기 및 변환 이벤트를 개발자 센터에 보고할 수 있도록 코드에서 이 프로젝트 ID를 참조해야 합니다.
 
->**참고**&nbsp;&nbsp;프로젝트에서 실험이 활성화된 경우에는 원격 변수를 편집, 추가 또는 제거할 수 없습니다. 이 제한 사항은 활성 실험의 컨트롤 그룹에 대해 데이터 무결성을 보호하는 데 도움이 됩니다.
+> [!NOTE]
+> 프로젝트에서 실험이 활성화된 경우에는 원격 변수를 편집, 추가 또는 제거할 수 없습니다. 이 제한 사항은 활성 실험의 컨트롤 그룹에 대해 데이터 무결성을 보호하는 데 도움이 됩니다.
 
 
 ## <a name="next-steps"></a>다음 단계
@@ -49,4 +47,3 @@ ms.lasthandoff: 02/07/2017
 * [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
-

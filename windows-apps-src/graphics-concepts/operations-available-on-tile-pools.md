@@ -2,21 +2,17 @@
 title: "타일 풀에서 할 수 있는 작업"
 description: "타일 풀에서 할 수 있는 작업으로는 타일 풀 크기 조정, 리소스 제공(전체 타일 풀에 대한 시스템에 일시적으로 메모리 양보), 리소스 회수가 있습니다."
 ms.assetid: 90347F7F-C991-4287-BD70-494533ECDC8A
-keywords:
-- "타일 풀에서 할 수 있는 작업"
+keywords: "타일 풀에서 할 수 있는 작업"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 414e6a2f224d7c171b2268fba58954f7ebcbea6f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e144b42782f8479bc55dc22f8505c7cfa4455713
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="operations-available-on-tile-pools"></a>타일 풀에서 할 수 있는 작업
 
 
@@ -37,7 +33,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

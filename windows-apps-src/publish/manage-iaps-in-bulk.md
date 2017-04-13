@@ -1,17 +1,9 @@
 ---
 redirect_url: https://msdn.microsoft.com/windows/uwp/publish/manage-add-ons-in-bulk
-translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 73589979db2ebac96d9168159089d562ef6398e2
-
+ms.openlocfilehash: e65b288aa1fb8d83f78e937786be3e4c365e1ca1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# 대량으로 IAP 관리
+# <a name="manage-iaps-in-bulk"></a>대량으로 IAP 관리
 
 이 페이지는 대량으로 추가 기능 관리로 리디렉션되었습니다.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

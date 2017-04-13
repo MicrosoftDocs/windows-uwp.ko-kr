@@ -9,20 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 피드백 허브, 시작"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 65a54d96b556b58a83af58b3d52d666372f337bb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70607e99ba646cab1805c13e8779871c1e3ec611
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 
 피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예: 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 피드백 허브를 통해 앱에 대해 제출된 모든 고객 피드백은 수집되어 Windows 개발자 센터 대시보드의 [피드백 보고서](../publish/feedback-report.md)에서 제공되므로 고객이 제출한 문제, 제안 및 좋아요를 하나의 보고서에서 볼 수 있습니다.
 
 앱에서 피드백 허브를 시작하려면 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 제공하는 API를 사용합니다. 이 API를 사용하여 디자인 지침을 따르는 앱의 UI 요소에서 피드백 허브를 시작하는 것이 좋습니다.
 
->**참고**&nbsp;&nbsp;피드백 허브는 데스크톱과 모바일 [장치 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families) 기반의 Windows 10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다. 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 앱에 피드백 컨트롤을 표시하는 것이 좋습니다. 이 항목의 코드는 이 작업을 수행하는 방법을 보여 줍니다.
+> [!NOTE]
+> 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다. 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 앱에 피드백 컨트롤을 표시하는 것이 좋습니다. 이 항목의 코드는 이 작업을 수행하는 방법을 보여 줍니다.
 
 ## <a name="how-to-launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브를 시작하는 방법
 
@@ -37,29 +35,26 @@ ms.lasthandoff: 02/07/2017
   * 컨트롤에 표시된 콘텐츠의 글꼴을 **Segoe MDL2 자산**으로 설정합니다.
   * 컨트롤의 텍스트를 16진수 유니코드 문자 코드 E939로 설정합니다. 이는 **Segoe MDL2 자산** 글꼴에서 권장되는 피드백 아이콘에 대한 문자 코드입니다.
   * 컨트롤의 표시 여부를 숨김으로 설정합니다.
-
-    > **참고**&nbsp;&nbsp;기본적으로 피드백 컨트롤을 숨기고 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 초기화 코드에 표시하는 것이 좋습니다. 다음 단계에서는 이 작업을 수행하는 방법을 보여 줍니다.
+    > [!NOTE]
+    > 기본적으로 피드백 컨트롤을 숨기고 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 초기화 코드에 표시하는 것이 좋습니다. 다음 단계에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
   다음 코드는 위에서 설명한 대로 구성된 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)의 XAML 정의를 보여 줍니다.
 
-  > [!div class="tabbedCodeSnippets"]
-  ```xml
+  ```XML
   <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
   ```
 
-7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) 클래스의 정적 [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 메서드를 사용하여 사용자 장치에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows 10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다.
+7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) 클래스의 정적 [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 메서드를 사용하여 사용자 장치에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다.
 
   이 속성이 **true**를 반환하는 경우 컨트롤을 표시되도록 설정합니다. 다음 코드는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)에 대해 이 작업을 수행하는 방법을 보여 줍니다.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#ToggleFeedbackVisibility)]
 
-  <span/>
-  >**참고**&nbsp;&nbsp;피드백 허브는 현재 Xbox 장치에서 지원되지 않지만 **IsSupported** 속성은 Windows 10 버전 10.0.14271 이상을 실행하는 Xbox 장치에서 현재 **true**를 반환합니다. 이것은 알려진 문제로 Microsoft Store Services SDK의 이후 릴리스에서 수정될 예정입니다.  
+    > [!NOTE]
+    > 피드백 허브는 현재 Xbox 장치에서 지원되지 않지만 **IsSupported** 속성은 Windows 10 버전 10.0.14271 이상을 실행하는 Xbox 장치에서 현재 **true**를 반환합니다. 이것은 알려진 문제로 Microsoft Store Services SDK의 이후 릴리스에서 수정될 예정입니다.  
 
 8. 사용자가 컨트롤을 클릭할 때 실행되는 이벤트 처리기에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 개체를 가져오고 [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) 메서드를 호출하여 피드백 허브 앱을 시작합니다. 이 메서드에 대한 두 개의 오버로드가 있습니다. 하나는 매개 변수가 없고, 다른 하나는 피드백과 연결하려는 메타데이터를 포함하는 키/값 쌍의 사전을 사용합니다. 다음 예제는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)의 [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) 이벤트 처리기에서 피드백 허브를 실행하는 방법을 보여 줍니다.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 
 ## <a name="design-recommendations-for-your-feedback-ui"></a>피드백 UI에 대한 디자인 권장 사항
@@ -83,4 +78,3 @@ ms.lasthandoff: 02/07/2017
 ## <a name="related-topics"></a>관련 항목
 
 * [피드백 보고서](../publish/feedback-report.md)
-

@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 새 추가 기능 제출을 만듭니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 만들기"
+title: "추가 기능 제출 만들기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능 제출 만들기, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: e5d9d3e08aaae7e349f7aaf23f6683e2ce9a4f88
-ms.openlocfilehash: f824fe7d37a4a2db4e336fd43c335047e09aa323
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 3bf7379856a5011d5323351d7952091b0ff9d179
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="create-an-add-on-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 추가 기능 제출 만들기
+# <a name="create-an-add-on-submission"></a>추가 기능 제출 만들기
 
 
 
@@ -124,7 +121,7 @@ Authorization: Bearer <your access token>
       }
     ],
     "priceId": "Free",
-    "isAdvancedPricingModel": "true"
+    "isAdvancedPricingModel": true
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
   "targetPublishMode": "Immediate",
@@ -175,4 +172,3 @@ Authorization: Bearer <your access token>
 * [추가 기능 제출 업데이트](update-an-add-on-submission.md)
 * [추가 기능 제출 삭제](delete-an-add-on-submission.md)
 * [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
-

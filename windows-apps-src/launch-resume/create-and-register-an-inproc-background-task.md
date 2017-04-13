@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1955f4981f09c2632fe2236ebd6a772e7b0ed8a1
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f89537416b409642adab894ba9e3a413e4b0b828
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-and-register-an-in-process-background-task"></a>In-process 백그라운드 작업 만들기 및 등록
 
 **중요 API**
@@ -115,4 +112,3 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 **백그라운드 작업 API 참조**
 
 * [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
-

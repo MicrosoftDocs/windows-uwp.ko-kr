@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b7bda3b25e2c268926223da429abf559524ad38c
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: bd9ccaa4cb87a24906c531996d4fc3f88875b060
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="run-while-minimized-with-extended-execution"></a>확장된 실행을 사용할 경우 최소화된 상태로 실행
 
 이 문서에서는 확장 실행을 사용하여 앱이 일시 중단되는 경우 중단 연기를 통해 앱이 최소화된 상태에서 실행될 수 있도록 하는 방법을 보여 줍니다.
@@ -24,7 +21,7 @@ ms.lasthandoff: 02/08/2017
 
 앱이 최소화된 상태에서 일시 중단되지 않고 계속 실행되어야 하는 경우도 있습니다. 앱을 계속 실행해야 하는 경우 OS에서 앱을 계속 실행시키거나 계속 실행시키도록 요청할 수 있습니다. 예를 들어 백그라운드에서 오디오를 재생할 때 [백그라운드 미디어 재생](../audio-video-camera/background-audio.md)에 대한 몇 가지 단계를 따르면 OS에서 앱 실행 시간을 길게 지속할 수 있습니다. 그렇지 않으면 수동으로 추가 시간을 요청해야 합니다.
 
-백그라운드에서 작업을 완료하기 위해 추가 시간을 요청하려면 [ExtendedExecutionSession](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx)을 만듭니다. 이때 만드는 **ExtendedExecutionSession**의 종류는 만들 때 제공하는 [ExtendedExecutionReason](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx)에 의해 결정됩니다. **ExtendedExecutionReason** 열거형 값으로는 **Unspecified, LocationTracking**, **SavingData**의 세 가지가 있습니다.
+백그라운드에서 작업을 완료하기 위해 추가 시간을 요청하려면 [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx)을 만듭니다. 이때 만드는 **ExtendedExecutionSession**의 종류는 만들 때 제공하는 [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx)에 의해 결정됩니다. **ExtendedExecutionReason** 열거형 값으로는 **Unspecified, LocationTracking**, **SavingData**의 세 가지가 있습니다.
 
 ## <a name="run-while-minimized"></a>최소화된 상태로 실행
 
@@ -36,7 +33,7 @@ ms.lasthandoff: 02/08/2017
 
 ## <a name="track-the-users-location"></a>사용자 위치 추적
 
-앱이 [GeoLocator](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.geolocation.geolocator.aspx)에서 위치를 정기적으로 기록해야 하는 경우라면 **ExtendedExecutionSession**을 만들 때 **ExtendedExecutionReason.LocationTracking**을 지정합니다. 사용자의 위치를 정기적으로 모니터링해야 하는 피트니스 추적 및 탐색 앱은 그러한 이유를 사용해야 합니다.
+앱이 [GeoLocator](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx)에서 위치를 정기적으로 기록해야 하는 경우라면 **ExtendedExecutionSession**을 만들 때 **ExtendedExecutionReason.LocationTracking**을 지정합니다. 사용자의 위치를 정기적으로 모니터링해야 하는 피트니스 추적 및 탐색 앱은 그러한 이유를 사용해야 합니다.
 
 위치 추적 확장 실행 세션은 필요한 만큼 긴 시간 실행할 수 있습니다. 그러나 장치마다 그러한 세션은 하나만 실행 가능합니다. 위치 추적 확장 실행 세션은 포그라운드에서만 요청할 수 있으며 앱 상태는 **실행 중**이어야 합니다. 이를 통해 사용자는 앱에서 확장된 위치 추적 세션이 시작되었음을 알 수 있습니다. 앱이 위치 추적 확장 실행 세션의 요청 없이 백그라운드 작업 또는 앱 서비스를 사용하여 백그라운드에 있는 동안에도 GeoLocator를 사용할 수 있습니다.
 
@@ -44,7 +41,7 @@ ms.lasthandoff: 02/08/2017
 
 **ExtendedExecutionSession**을 만들 때 **ExtendedExecutionReason.SavingData**를 지정하면 앱이 종료되기 전에 데이터를 저장하지 않아 데이터 손실과 함께 부정적인 사용자 경험이 발생할 수 있는 상황에서 사용자의 데이터를 보호할 수 있습니다.
 
-이러한 세션을 사용하여 앱의 수명을 연장하고 데이터를 업로드하거나 다운로드하면 안 됩니다. 데이터를 업로드해야 하는 경우에는 [백그라운드 전송](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers)을 요청하거나 **MaintenanceTrigger**를 등록하여 AC 전원을 사용할 수 있을 때 전송을 처리합니다. **ExtendedExecutionReason.SavingData** 확장 실행 세션은 앱이 포그라운드에 있으며 **실행 중** 상태일 때, 또는 백그라운드에 있으며 **일시 중단** 상태일 때 요청할 수 있습니다.
+이러한 세션을 사용하여 앱의 수명을 연장하고 데이터를 업로드하거나 다운로드하면 안 됩니다. 데이터를 업로드해야 하는 경우에는 [백그라운드 전송](https://msdn.microsoft.com/windows/uwp/networking/background-transfers)을 요청하거나 **MaintenanceTrigger**를 등록하여 AC 전원을 사용할 수 있을 때 전송을 처리합니다. **ExtendedExecutionReason.SavingData** 확장 실행 세션은 앱이 포그라운드에 있으며 **실행 중** 상태일 때, 또는 백그라운드에 있으며 **일시 중단** 상태일 때 요청할 수 있습니다.
 
 **일시 중단** 상태는 앱 수명 주기 중 앱이 종료되기 전에 작업을 수행할 수 있는 마지막 기회입니다. 앱이 **일시 중단** 상태일 때 **ExtendedExecutionReason.SavingData** 확장 실행 세션을 요청하면 잠재적인 문제가 발생할 수 있다는 사실을 알아 두어야 합니다. **Suspending** 상태에서 확장 실행 세션을 요청한 후 사용자가 앱을 다시 시작하도록 요청하면 시작되기까지 시간이 오래 걸릴 수 있습니다. 이는 앱의 이전 인스턴스를 닫고 앱의 새 인스턴스를 시작하기 전에 확장 실행 세션 시간부터 완료해야 하기 때문입니다. 사용자 상태가 손실되지 않도록 하려면 시작 작업 수행 시간이 길어집니다.
 
@@ -77,7 +74,7 @@ switch (result)
 
 **RequestExtensionAsync** 호출로 앱의 백그라운드 작업을 사용자가 승인했는지 여부와 백그라운드 실행에 사용 가능한 리소스가 시스템에 있는지 여부를 운영 체제에서 확인합니다.
 
-[BackgroundExecutionManager](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 통하여 [BackgroundAccessStatus](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundaccessstatus.aspx?f=255&MSPPError=-2147217396)를 미리 확인할 수 있습니다. 이 사용자 설정은 사용자의 앱을 백그라운드에서 실행할 수 있는지 여부를 나타냅니다. 이러한 사용자 설정에 대해 자세한 내용은 [백그라운드 작업 및 에너지 인식](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#XWK8mEgWD7JHvC10.97)을 참조하세요.
+[BackgroundExecutionManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 통하여 [BackgroundAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundaccessstatus.aspx?f=255&MSPPError=-2147217396)를 미리 확인할 수 있습니다. 이 사용자 설정은 사용자의 앱을 백그라운드에서 실행할 수 있는지 여부를 나타냅니다. 이러한 사용자 설정에 대해 자세한 내용은 [백그라운드 작업 및 에너지 인식](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#XWK8mEgWD7JHvC10.97)을 참조하세요.
 
 **ExtendedExecutionReason**은 사용자의 앱이 백그라운드에서 수행 중인 작업을 나타냅니다. **Description** 문자열은 사람이 읽을 수 있는 형태의 문자열로, 앱이 해당 작업을 수행해야 하는 이유를 설명합니다. **Revoked** 이벤트 처리기는 사용자 또는 시스템의 판단으로 앱이 더 이상 백그라운드에서 실행될 수 없는 경우 확장 실행 세션이 정상적으로 중지되도록 하는 데 필요합니다.
 
@@ -237,16 +234,16 @@ static class ExtendedExecutionHelper
 
 ## <a name="ensure-that-your-app-uses-resources-well"></a>앱이 리소스를 제대로 사용하고 있는지 확인
 
-앱의 메모리와 에너지 사용을 조정하는 일은 앱이 포그라운드에 있지 않아도 운영 체제에서 계속 실행될 수 있는지 확인하는 것이 관건입니다. [메모리 관리 API](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx)를 사용하면 앱에서 사용 중인 메모리의 양을 확인할 수 있습니다. 앱이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 앱을 계속 실행시키기가 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.
+앱의 메모리와 에너지 사용을 조정하는 일은 앱이 포그라운드에 있지 않아도 운영 체제에서 계속 실행될 수 있는지 확인하는 것이 관건입니다. [메모리 관리 API](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx)를 사용하면 앱에서 사용 중인 메모리의 양을 확인할 수 있습니다. 앱이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 앱을 계속 실행시키기가 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.
 
-[BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다.
+[BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [확장 실행 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ExtendedExecution)  
-[응용 프로그램 수명 주기](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/app-lifecycle)  
-[백그라운드 메모리 관리](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/reduce-memory-usage)  
-[백그라운드 전송](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers)  [배터리 인식 및 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
-[MemoryManager 클래스](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx)  
-[백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)  
-
+[응용 프로그램 수명 주기](https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle)  
+[백그라운드 메모리 관리](https://msdn.microsoft.com/windows/uwp/launch-resume/reduce-memory-usage)  
+[백그라운드 전송](https://msdn.microsoft.com/windows/uwp/networking/background-transfers)  
+[배터리 인식 및 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
+[MemoryManager 클래스](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx)  
+[백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)  

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: beaf73f0bf4709bcda2edda4afb97869eaccc27b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9c660e480402c584fad2b0f6444d7051d1cd234b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="tax-details-for-paid-apps"></a>유료 앱의 세금 세부 정보
 
 
@@ -247,7 +244,6 @@ ms.lasthandoff: 02/07/2017
 | 멕시코                             |
 | 페루                               |
 | 필리핀                        |
-| 푸에르토리코                        |
 | 남아프리카 공화국                       |
 | 베트남                            |
 
@@ -260,7 +256,7 @@ ms.lasthandoff: 02/07/2017
 
 |                    재판매인 국가/지역                                                                          |
 |------------------------------------------------------------------------------------------------------------------------|
-| 중국(Windows Phone 7.x를 실행하는 모바일 통신 디바이스 및 Windows 8.x를 실행하는 개인용 컴퓨터 제외) |
+| 중국(Windows Phone 7.x를 실행하는 모바일 통신 디바이스 및 Windows8.x를 실행하는 개인용 컴퓨터 제외) |
 | 브라질(Windows 10을 실행하는 디바이스를 통한 구매와 통신사 청구를 통한 구매만 해당)     |
 
  
@@ -283,7 +279,6 @@ ms.lasthandoff: 02/07/2017
  
 
  
-
 
 
 

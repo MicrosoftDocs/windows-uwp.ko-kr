@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 84187230ee8e10c5e9a1a75f67065e202c4bff00
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1fb3424b56da696aa5fa99603209b379c1a5b66e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="intro-to-certificates"></a>인증서 소개
 
 
@@ -103,5 +100,4 @@ X.509 버전 3 인증서에는 버전 1과 버전 2에 정의된 기본 필드�
 | 주체 대체 이름     | 인증서 요청의 주체에 대한 대체 이름 형식을 하나 이상 지정합니다. 대체 형식의 예에는 메일 주소, DNS 이름, IP 주소, URI 등이 있습니다.                           |
 | 주체 디렉터리 특성 | 인증서 주체의 국적과 같은 식별 특성을 전달합니다. 확장 값은 일련의 OID 값 쌍입니다.                                                              |
 | 주체 키 식별자       | 인증서 주체가 보유한 여러 공개 키를 구분합니다. 확장 값은 일반적으로 키의 SHA-1 해시입니다.                                                                   |
-
 

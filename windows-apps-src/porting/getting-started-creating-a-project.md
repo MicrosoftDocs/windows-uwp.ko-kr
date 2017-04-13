@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: "Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있도록 돕습니다."
+description: "Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다."
 title: "Visual Studio에서 프로젝트 만들기"
 ms.author: markl
 ms.date: 02/08/2017
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c8aba48fba1badcfeebc9868215b904c76ac6b98
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 76307f16fddc094331847f11855d2dbf0467dddf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-creating-a-project"></a>시작: 프로젝트 만들기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -60,4 +57,3 @@ Visual Studio에는 다음 그림과 같은 몇 가지 프로젝트 템플릿이
 ## <a name="next-step"></a>다음 단계
 
 [시작: 프로그래밍 언어 선택](getting-started-choosing-a-programming-language.md)
-

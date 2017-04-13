@@ -2,25 +2,21 @@
 title: "뷰포트 및 클리핑"
 description: "뷰포트는 2차원(2D) 사각형으로 여기에 3D 장면이 프로젝션됩니다."
 ms.assetid: D0DD646E-13AE-452A-AD22-8C35000D0BA9
-keywords:
-- "뷰포트 및 클리핑"
+keywords: "뷰포트 및 클리핑"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7bbd0c2f2254cb5c65f7ae211124c4b3b1e523ed
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b392f267c370bd075d5c0d1ac953ee76a9cff0af
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="viewports-and-clipping"></a>뷰포트 및 클리핑
 
 
-*뷰포트*는 2차원(2D) 사각형으로 여기에 3D 장면이 프로젝션됩니다. Direct3D에서 사각형은 시스템에서 렌더링 대상으로 사용하는 Direct3D 표면 내의 좌표로 존재합니다. 프로젝션 변환은 꼭짓점을 뷰포트에 사용되는 좌표계로 변환합니다. 뷰포트는 장면이 렌더링될 렌더링 대상 표면의 깊이 값 범위를 지정하는 데에도 사용됩니다(일반적으로 0.0~1.0).
+*뷰포트*는 2차원(2D) 사각형으로 여기에 3D 장면이 프로젝션됩니다. Direct3D에서 사각형은 시스템이 렌더링 대상으로 사용하는 Direct3D 표면 내의 좌표로 존재합니다. 프로젝션 변환은 꼭짓점을 뷰포트에 사용되는 좌표계로 변환합니다. 뷰포트는 장면이 렌더링될 렌더링 대상 표면의 깊이 값 범위를 지정하는 데에도 사용됩니다(일반적으로 0.0~1.0).
 
 ## <a name="span-idtheviewingfrustumspanspan-idtheviewingfrustumspanspan-idtheviewingfrustumspanthe-viewing-frustum"></a><span id="The_Viewing_Frustum"></span><span id="the_viewing_frustum"></span><span id="THE_VIEWING_FRUSTUM"></span>절두체 보기
 
@@ -90,7 +86,6 @@ Direct3D는 뷰포트 위치 및 차원을 사용하여 렌더링된 장면이 �
  
 
  
-
 
 
 

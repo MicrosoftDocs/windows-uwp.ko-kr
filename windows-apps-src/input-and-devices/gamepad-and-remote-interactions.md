@@ -5,20 +5,17 @@ title: "게임 패드 및 리모컨 조작"
 ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
 label: Gamepad and remote interactions
 template: detail.hbs
-isNew: true
+isNew: True
 ms.author: mijacobs
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b1ee5409cfca253b3bb084b95365d22526c66920
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c58ef4e48a91a57643e39f7fd87a700904e77dd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="gamepad-and-remote-control-interactions"></a>게임 패드 및 리모컨 조작
 
 이제 UWP(유니버설 Windows 플랫폼) 앱에서 게임 패드 및 원격 제어 입력을 지원합니다. 게임 패드 및 원격 제어는 Xbox 및 TV 환경에 대한 기본 입력 디바이스입니다. UWP 앱은 PC의 키보드 및 마우스 입력과 휴대폰 또는 태블릿의 터치식 입력과 같은 이러한 입력 디바이스 유형에 최적화되어야 합니다. 앱이 이러한 입력 디바이스와 잘 작동하는지 확인하는 작업은 Xbox 및 TV에 최적화할 때 가장 중요한 단계입니다.
@@ -34,4 +31,3 @@ XY 포커스 탐색은 앱의 UI를 탐색할 수 있도록 합니다.
 
 * [마우스 모드](designing-for-tv.md#mouse-mode) -
 마우스 모드를 통해 XY 포커스 탐색이 충분하지 않은 경우 앱이 마우스 환경을 에뮬레이트할 수 있습니다.
-

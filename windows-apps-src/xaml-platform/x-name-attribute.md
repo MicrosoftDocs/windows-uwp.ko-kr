@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a80a5cdeae5adc2af59072400aa42428eac28431
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9fa472869ed3b81a9f688652a487b1b93986b777
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xname-attribute"></a>x:Name 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 코드 숨김 또는 일반 코드에서 인스턴스화된 개체에 액세스하기 위해 개체 요소를 고유하게 식별합니다. 백업 프로그래밍 모델에 적용하는 경우 **x:Name**은 생성자에서 반환한 개체 참조를 보유하는 변수와 같은 것으로 간주됩니다.
 
@@ -74,5 +71,4 @@ UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습�
 ### <a name="xname-and-xkey"></a>x:Name 및 x:Key
 
 **x:Name**은 [x:Key 특성](x-key-attribute.md)의 대체 항목으로 작용하도록 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 내의 요소에 특성으로 적용할 수 있습니다. 일반적으로 **ResourceDictionary**의 모든 요소에는 x:Key 또는 x:Name 특성이 있어야 합니다. 이는 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)에서 일반적입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273) 섹션을 참조하세요.
-
 

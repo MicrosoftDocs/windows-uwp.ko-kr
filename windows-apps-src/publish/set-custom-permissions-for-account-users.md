@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 23d8c14bfdbfc05a1397fa67cb831d38ec092233
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2ce4ddc5240281618fefa16587067c4ad9382b2e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="set-custom-permissions-for-account-users"></a>계정 사용자에 대한 사용자 지정 권한 설정
 
 계정에 사용자를 추가할 때 [표준 역할](manage-account-users.md#roles-and-permissions)을 할당할 수 있습니다. 또는 사용자에게 적절한 수준의 액세스를 제공하기 위해 권한을 사용자 지정하도록 선택할 수 있습니다. 이러한 권한 중 일부는 전체 계정에 적용되며, 일부는 모든 제품에 부여되거나 특정 제품으로 제한될 수 있습니다. 
@@ -184,4 +181,3 @@ ms.lasthandoff: 02/08/2017
 </table>
 
 별표(*)로 표시된 \* 사용 권한은 모든 계정에서 사용할 수 없는 기능에 대한 액세스를 허용합니다. 계정이 이러한 기능을 사용하도록 설정되지 않은 경우, 해당 사용 권한을 선택해도 아무런 영향이 없습니다.  
-

@@ -10,13 +10,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "호스트된 웹앱, Windows 10으로 웹앱 포팅, Windows로 웹 사이트 변환, Windows 스토어를 위한 웹앱 패키징"
 ms.assetid: a58d2c67-77f8-4d01-bea3-a6ebce2d73b9
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: b6781883a3e48d35a558798f369e91c4a7ea3bec
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: e135b63e2ba5f455dbbf6524e5519a33acd822b0
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="convert-your-web-application-to-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱으로 웹 응용 프로그램 변환
 
 웹 사이트 URL만으로 시작되는 Windows 10용 유니버설 Windows 플랫폼 앱을 빠르게 만드는 방법을 알아봅니다. 
@@ -104,4 +101,3 @@ function cameraCapture() {
 - [UWP(유니버설 Windows 플랫폼) 기능에 액세스하여 웹앱 향상](hwa-access-features.md)
 - [UWP(유니버설 Windows 플랫폼) 앱 지침](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 - [Windows 스토어 앱용 디자인 자산 다운로드](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
-

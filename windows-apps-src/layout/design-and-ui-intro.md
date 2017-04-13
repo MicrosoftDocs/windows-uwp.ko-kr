@@ -12,13 +12,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 90096443a0b67b816869e6c9e607ccfd43f0cea1
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4ca7e133f930ff4663de0cc1769ac26caa9f44ad
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개 
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -224,7 +221,6 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 - [UWP 앱이란 무엇인가요?](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
 
  
-
 
 
 

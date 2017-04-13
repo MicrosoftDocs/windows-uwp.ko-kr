@@ -9,14 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 28d03486f6fb2f7a249af82d2c3be6006c9d80ed
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2adebf94f016baf014788062f82d7fe933b7fb10
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-
 # <a name="creating-windows-runtime-components-in-c"></a>C++로 Windows 런타임 구성 요소 만들기
 
 
@@ -30,7 +26,7 @@ ms.lasthandoff: 02/07/2017
 
 -   이미 작성되고 테스트된 코드를 다시 사용할 수 있습니다.
 
-JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 장치에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발자 키트 만들기](https://msdn.microsoft.com/library/hh768146.aspx)를 참조하세요.
+JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 디바이스에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발자 키트 만들기](https://msdn.microsoft.com/library/hh768146.aspx)를 참조하세요.
 
 일반적으로 C++ 구성 요소를 코딩할 때, 다른 .winmd 패키지의 코드에(서) 데이터를 전달하는 ABI(추상 이진 인터페이스) 경계를 제외하고는 일반 C++ 라이브러리 및 기본 제공 형식을 사용합니다. 여기서 Windows 런타임 형식 및 해당 형식을 만들고 조작하기 위해 Visual C++가 지원하는 특수 구문을 사용합니다. 또한 Visual C++ 코드에서 대리자 및 이벤트와 같은 형식을 사용하여 구성 요소에서 발생하고 JavaScript, Visual Basic 또는 C#에서 처리할 수 있는 이벤트를 구현합니다. 새로운 Visual C++ 구문에 대한 자세한 내용은 [Visual C++ 언어 참조(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx)를 참조하세요.
 
@@ -602,4 +598,3 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 ## <a name="related-topics"></a>관련 항목
 
 * [연습: C++로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)
-

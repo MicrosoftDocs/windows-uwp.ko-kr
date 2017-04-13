@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: bc3a34d16f8245ef2e932c46e76ce965ce8755b7
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 84cc1c7347b71a174b25635188ef2972c2bb39d9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장
 
 이 항목에서는 **ms tonepicker:** URI 스키마를 사용하는 방법을 설명합니다. 이 URI 스키마는 다음 작업에 사용할 수 있습니다.
@@ -202,4 +199,3 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
-

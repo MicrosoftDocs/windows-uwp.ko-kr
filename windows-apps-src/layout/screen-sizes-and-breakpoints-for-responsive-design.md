@@ -12,13 +12,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7c992aa651069f6876aa920da88ada659480132e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cd6ba1378aeddb44aa66c53088f32286aff8d29f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 #  <a name="screen-sizes-and-break-points-for-responsive-design"></a>반응형 디자인에 대한 화면 크기 및 중단점
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -107,4 +104,3 @@ Windows 10 에코시스템에서는 장치 대상 및 화면 크기가 너무 �
 
 호환되는 Windows 10 Mobile 장치를 위한 새 환경인 [**휴대폰용 Continuum**](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하면 사용자가 휴대폰을 모니터, 마우스 및 키보드에 연결하여 노트북처럼 사용할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 작은 크기 클래스로 유지되지는 않습니다.
  
-

@@ -11,13 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 56afd553-c520-4a28-b63d-2e1b3c1d3606
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: dbe54f5c033a14ad6f9d8acae6b1ec3e62eead67
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 27b3fa1d1765d548e0d290d989eac542e63bc853
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="external-help-pages"></a>외부 도움말 페이지
 
 
@@ -48,4 +45,3 @@ ms.lasthandoff: 02/08/2017
 ## <a name="related-articles"></a>관련 문서
 
 * [앱 도움말에 대한 지침](guidelines-for-app-help.md)
-

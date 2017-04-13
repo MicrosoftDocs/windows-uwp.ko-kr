@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
 description: "Windows 스토어 프로모션 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 홍보용 앱 광고를 관리합니다."
-title: "Windows 스토어 서비스를 사용하여 광고 캠페인 실행"
+title: "스토어 서비스를 사용하여 광고 캠페인 실행"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, Windows 스토어 프로모션 API, 광고 캠페인"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: ec245f07098a662c80517de49ba5637a69b30f35
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: d1575c686080fb8c4c35c032cdc1beca587aeb37
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="run-ad-campaigns-using-windows-store-services"></a>Windows 스토어 서비스를 사용하여 광고 캠페인 실행
+# <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용하여 광고 캠페인 실행
 
 *Windows 스토어 프로모션 API*를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 홍보용 앱 광고를 관리합니다. 이 API를 사용하여 대상 지정 및 창작 광고와 같은 캠페인 및 기타 관련 자산을 만들고 업데이트하고 모니터링할 수 있습니다. 이 API는 Windows 개발자 센터 대시보드를 사용하지 않고 대량의 캠페인을 만들려는 개발자에게 특히 유용합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
@@ -34,6 +31,8 @@ ms.lasthandoff: 02/08/2017
 ## <a name="step-1-complete-prerequisites-for-using-the-windows-store-promotions-api"></a>1단계: Windows 스토어 프로모션 API를 사용하기 위한 필수 조건 완료
 
 Windows 스토어 프로모션 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
+
+* 이 API를 사용하여 광고 캠페인을 성공적으로 만들고 시작하려면 먼저 [개발자 센터 대시보드의 **앱 홍보** 페이지를 사용하여 유료 광고 캠페인을 하나 생성](../publish/create-an-ad-campaign-for-your-app.md)하고 이 페이지에서 하나 이상의 결제 방법을 추가해야 합니다. 이렇게 하면 이 API를 사용하여 광고 캠페인의 청구 가능한 배달 라인을 성공적으로 만들 수 있습니다. 이 API를 사용하여 만든 광고 캠페인의 배달 라인은 대시보드의 **앱 홍보** 페이지에 선택된 기본 결제 방법에 자동으로 요금을 청구합니다.
 
 * 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
@@ -112,4 +111,3 @@ Windows 스토어 프로모션 API 컨텍스트에서 광고 캠페인은 캠페
 
 
  
-

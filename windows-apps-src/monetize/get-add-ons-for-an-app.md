@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 앱에서 바로 구매에 대한 정보를 검토합니다."
-title: "Windows 스토어 제출 API를 사용하여 앱의 추가 기능 가져오기"
+title: "앱에 대한 추가 기능 가져오기"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 73ce08bfa72a8508d71811267f8cd8e2377a3613
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 198db630fbba8d4145454a6912f118225b13ac1c
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="get-add-ons-for-an-app-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱의 추가 기능 가져오기
+# <a name="get-add-ons-for-an-app"></a>앱에 대한 추가 기능 가져오기
 
 
 
@@ -108,7 +105,7 @@ Authorization: Bearer <your access token>
 
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 앱의 추가 기능이 50개인 경우 응답 본문에는 ```applications/{applicationid}/listinappproducts/?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10```을 호출하여 다음 10개의 추가 기능을 호출할 수 있음을 나타냅니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 앱의 추가 기능이 50개인 경우 응답 본문에는 ```applications/{applicationid}/listinappproducts/?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10```을 호출하여 다음 10개의 추가 기능을 호출할 수 있음을 나타냅니다. |
 | value      | 배열  | 지정한 앱에 대한 각 추가 기능의 스토어 ID를 나열하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [추가 기능 리소스](get-app-data.md#add-on-object)를 참조하세요.                                                                                                                           |
 | totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱에 대한 추가 기능의 총 수)입니다.                                                                                                                                                                                                                             |
 
@@ -131,4 +128,3 @@ Authorization: Bearer <your access token>
 * [모든 앱 가져오기](get-all-apps.md)
 * [앱 가져오기](get-an-app.md)
 * [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md)
-

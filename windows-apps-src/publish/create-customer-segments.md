@@ -9,16 +9,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1c1aa77ee989344f5e09ddaeb864d5ddceb03660
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 2ba423d7f7624575e7cf743e9589d31a90d05295
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="create-customer-segments"></a>고객층 만들기
 
-프로모션 및 참여를 목적으로 앱 고객의 하위 집합을 대상으로 지정하려는 경우가 있습니다. 선택한 인구 또는 수익 기준을 충족하는 Windows 10 고객을 포함하는 *세그먼트*로 알려진 [고객 그룹](create-customer-groups.md) 유형을 Windows 개발자 센터에서 만들어 이 작업을 수행할 수 있습니다.
+프로모션 및 참여를 목적으로 앱 고객의 하위 집합을 대상으로 지정하려는 경우가 있습니다. 선택한 인구 또는 수익 기준을 충족하는 Windows10 고객을 포함하는 *세그먼트*로 알려진 [고객 그룹](create-customer-groups.md) 유형을 Windows 개발자 센터에서 만들어 이 작업을 수행할 수 있습니다.
 
 예를 들어 50세 이상의 고객만 포함하거나 Windows 스토어에서 10달러 이상을 소비한 고객을 포함하는 고객층을 만들 수 있습니다. 또한 이러한 조건을 결합하여 50세 이상이면서 스토어에서 10달러 이상을 소비한 모든 고객을 포함하는 고객층을 만들 수도 있습니다. 시작할 수 있도록 몇 개의 고객층 템플릿이 제공되지만 원하는 방식으로 기준을 정의하고 결합할 수 있습니다.
 
@@ -65,4 +62,3 @@ ms.lasthandoff: 02/08/2017
 
 - **포함 조건 정의** 섹션에서 세그먼트에 더 많은 고객이 포함되도록 필터 조건을 조정합니다.
 - **고객 그룹** 페이지의 **비활성화 상태인 세그먼트** 섹션에서 **새로 고침**을 선택하여 현재 세그먼트에 충분한 고객이 포함되어 있는지 확인합니다. 예를 들어 세그먼트를 처음 만든 이후 앱을 다운로드한 고객 수가 세그먼트 조건을 충족할 경우 이 방식이 적용됩니다.
-

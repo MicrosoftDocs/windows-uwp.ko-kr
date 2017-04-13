@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
 description: "Microsoft Store Services SDK에 있는 Microsoft Advertising 라이브러리에 대한 릴리스 정보를 검토합니다."
-title: "Microsoft Advertising 라이브러리에 대한 릴리스 정보"
+title: "Advertising 라이브러리에 대한 릴리스 정보"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 광고, 광고, 릴리스 정보"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 666071bccd562f2f95e8ae69f50797fdc464548b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: f3d07df6e64c96e9070cb82bd7ac6e96b9cad1ee
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
-# <a name="release-notes-for-the-microsoft-advertising-libraries"></a>Microsoft Advertising 라이브러리에 대한 릴리스 정보
+# <a name="release-notes-for-the-advertising-libraries"></a>Advertising 라이브러리에 대한 릴리스 정보
 
 
 
@@ -51,11 +48,7 @@ Microsoft Store Services SDK 또는 Microsoft Advertising SDK for Windows 및 Wi
 
 **AdControl** 클래스에는 더 이상 UWP 앱에 대한 **Latitude** 및 **Longitude** 속성이 없습니다. 대신, 광고 컨트롤에 기본 제공된 코드가 앱을 대신해서 이러한 값을 검색한 후 광고 서버로 보냅니다.
 
-## <a name="important-notice"></a>중요 정보
-
-EULA(최종 사용자 사용권 계약)를 모두 읽으세요. [중요 알림 - EULA](important-notice-eula.md) 항목을 참조하세요.
 
  
 
  
-

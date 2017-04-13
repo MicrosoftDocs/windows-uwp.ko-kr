@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, Windows 스토어 컬렉션 API, 제품 보기"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: 29db10862533e7b15c7a676fc3aecd4ba58f9514
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="query-for-products"></a>제품에 대한 쿼리
 
 
@@ -144,7 +141,7 @@ CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | inAppOfferToken      | 문자열             | Windows 개발자 센터 대시보드에서 항목에 할당되는 개발자가 지정한 제품 ID 문자열입니다. 제품 ID의 예는 *product123*입니다. | 아니요       |
 | itemId               | 문자열             | 사용자가 소유한 다른 항목에서 이 컬렉션 항목을 식별하는 ID입니다. 이 ID는 제품마다 고유합니다.   | 예      |
 | localTicketReference | 문자열             | 요청 본문에서 이전에 제공된 *localTicketReference*의 ID.                  | 예      |
-| modifiedDate         | 날짜/시간           | 이 항목을 마지막으로 수정한 날짜입니다.              | 예      |
+| modifiedDate         | datetime           | 이 항목을 마지막으로 수정한 날짜입니다.              | 예      |
 | orderId              | 문자열             | 있는 경우 이 항목을 받은 주문 ID입니다.              | 아니요       |
 | orderLineItemId      | 문자열             | 있는 경우 이 항목을 받은 특정 주문의 품목입니다.              | 아니요       |
 | ownershipType        | 문자열             | 문자열 *OwnedByBeneficiary*입니다.   | 예      |
@@ -219,4 +216,3 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [소모성 제품을 처리됨으로 보고](report-consumable-products-as-fulfilled.md)
 * [무료 제품에 대한 권한 부여](grant-free-products.md)
 * [Windows 스토어 ID 키 갱신](renew-a-windows-store-id-key.md)
-

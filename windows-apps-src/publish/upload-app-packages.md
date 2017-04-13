@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 10523df0297013573dad62d32901c597ba850175
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1bc2ce82688db20315113efc9b080b449a850f05
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
 
@@ -107,7 +104,6 @@ Microsoft에서 이후의 Windows 10 디바이스 패밀리에 앱을 제공하�
 자세한 내용은 [앱에 대한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조하세요.
 
  
-
 
 
 

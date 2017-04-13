@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 지도, 위치, 이미지, 오버레이"
-translationtype: Human Translation
-ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
 ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="overlay-tiled-images-on-a-map"></a>지도에서 바둑판식 이미지 오버레이
 
 
@@ -36,7 +33,7 @@ ms.lasthandoff: 02/07/2017
 **중요**  
 타일 소스를 사용하면 개별 타일을 요청하거나 배치하는 코드를 작성할 필요가 없습니다. [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)이 필요한 타일을 요청합니다. 각 요청은 개별 타일의 X 및 Y 좌표와 확대/축소 수준을 지정합니다. 사용할 URI 또는 파일 이름의 형식만 지정하여 **UriFormatString** 속성에서 타일을 검색합니다. 즉, 기본 URI 또는 파일 이름에 대체 가능한 매개 변수를 삽입하여 각 타일에 대해 X 및 Y 좌표와 확대/축소 수준을 전달할 위치를 나타냅니다.
 
-다음 예에서는 X 및 Y 좌표와 확대/축소 수준에 대한 대체 가능한 매개 변수를 표시하는 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636992)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636986) 속성을 보여 줍니다.
+다음 예에서는 X 및 Y 좌표와 확대/축소 수준에 대한 대체 가능한 매개 변수를 표시하는 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성을 보여 줍니다.
 
 ``` syntax
     http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
@@ -69,7 +66,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
 2.  [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)를 인스턴스화하고 구성합니다. 이전 단계에서 구성한 [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141)를 **MapTileSource**의 [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149)로 지정합니다.
 
-    다음 예에서는 [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637149)의 생성자에서 [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)를 지정합니다.
+    다음 예에서는 [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)의 생성자에서 [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149)를 지정합니다.
 
     ```cs
         MapTileSource tileSource = new MapTileSource(dataSource);
@@ -82,7 +79,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
     선택적으로, 타일 표시 또는 로드에 영향을 주는 [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)의 다른 속성(예제: [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157), [**AllowOverstretch**](https://msdn.microsoft.com/library/windows/apps/dn637145), [**IsRetryEnabled**](https://msdn.microsoft.com/library/windows/apps/dn637153), [**IsTransparencyEnabled**](https://msdn.microsoft.com/library/windows/apps/dn637155))을 구성합니다.
 
-3.  [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)를 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637053)의 [**TileSources**](https://msdn.microsoft.com/library/windows/apps/dn637004) 컬렉션에 추가합니다.
+3.  [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)를 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 [**TileSources**](https://msdn.microsoft.com/library/windows/apps/dn637053) 컬렉션에 추가합니다.
 
     ```cs
          MapControl1.TileSources.Add(tileSource);
@@ -205,10 +202,10 @@ void MainPage::AddHttpMapTileSource()
 ## <a name="provide-a-custom-uri"></a>사용자 지정 URI 제공
 
 
-[**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636992)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636986) 속성 또는 [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636998)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636994) 속성과 함께 사용할 수 있는 대체 가능한 매개 변수가 타일을 검색하는 데 충분하지 않은 경우 사용자 지정 URI를 만들어야 합니다. **UriRequested** 이벤트에 대한 사용자 지정 처리기를 제공하여 사용자 지정 URI를 만들고 반환합니다. 각 개별 타일에 대해 **UriRequested** 이벤트가 발생합니다.
+[**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성 또는 [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) 속성과 함께 사용할 수 있는 대체 가능한 매개 변수가 타일을 검색하는 데 충분하지 않은 경우 사용자 지정 URI를 만들어야 합니다. **UriRequested** 이벤트에 대한 사용자 지정 처리기를 제공하여 사용자 지정 URI를 만들고 반환합니다. 각 개별 타일에 대해 **UriRequested** 이벤트가 발생합니다.
 
-1.  **UriRequested** 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn610743)의 [**X**](https://msdn.microsoft.com/library/windows/apps/dn610744), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610745) 및 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637177) 속성과 결합하여 사용자 지정 URI를 만듭니다.
-2.  [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn610748)의 [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637173) 속성에 포함된 [**MapTileUriRequest**](https://msdn.microsoft.com/library/windows/apps/dn637179)의 [**Uri**](https://msdn.microsoft.com/library/windows/apps/dn637177) 속성에 사용자 지정 URI를 반환합니다.
+1.  **UriRequested** 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177)의 [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) 및 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) 속성과 결합하여 사용자 지정 URI를 만듭니다.
+2.  [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177)의 [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637179) 속성에 포함된 [**MapTileUriRequest**](https://msdn.microsoft.com/library/windows/apps/dn637173)의 [**Uri**](https://msdn.microsoft.com/library/windows/apps/dn610748) 속성에 사용자 지정 URI를 반환합니다.
 
 다음 예에서는 **UriRequested** 이벤트에 대한 사용자 지정 처리기를 만들어 사용자 지정 URI를 제공하는 방법을 보여 줍니다. 또한 사용자 지정 URI를 만들기 위해 비동기적으로 작업을 수행해야 하는 경우에 지연 패턴을 구현하는 방법을 보여 줍니다.
 
@@ -255,10 +252,10 @@ using System.Threading.Tasks;
 
 사용자 지정 타일을 만들거나 로드하려면 [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984) 이벤트에 대한 사용자 지정 처리기를 제공합니다. 각 개별 타일에 대해 **BitmapRequested** 이벤트가 발생합니다.
 
-1.  [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984) 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637135)의 [**X**](https://msdn.microsoft.com/library/windows/apps/dn637136), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637137) 및 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637132) 속성과 결합하여 사용자 지정 타일을 만들거나 검색합니다.
-2.  [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637140)의 [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637128) 속성에 포함된 [**MapTileBitmapRequest**](https://msdn.microsoft.com/library/windows/apps/dn637134)의 [**PixelData**](https://msdn.microsoft.com/library/windows/apps/dn637132) 속성에 사용자 지정 타일을 반환합니다. **PixelData** 속성은 [**IRandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701664) 형식입니다.
+1.  [**BitmapRequested**](https://msdn.microsoft.com/library/windows/apps/dn636984) 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132)의 [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) 및 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) 속성과 결합하여 사용자 지정 타일을 만들거나 검색합니다.
+2.  [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132)의 [**Request**](https://msdn.microsoft.com/library/windows/apps/dn637134) 속성에 포함된 [**MapTileBitmapRequest**](https://msdn.microsoft.com/library/windows/apps/dn637128)의 [**PixelData**](https://msdn.microsoft.com/library/windows/apps/dn637140) 속성에 사용자 지정 타일을 반환합니다. **PixelData** 속성은 [**IRandomAccessStreamReference**](https://msdn.microsoft.com/library/windows/apps/hh701664) 형식입니다.
 
-다음 예에서는 **BitmapRequested** 이벤트에 대한 사용자 지정 처리기를 만들어 사용자 지정 타일을 제공하는 방법을 보여 줍니다. 이 예에서는 부분적으로 불투명하고 동일한 빨간색 타일을 만듭니다. 이 예에서는 [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637135)의 [**X**](https://msdn.microsoft.com/library/windows/apps/dn637136), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637137) 및 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637132) 속성을 무시합니다. 실제 사례는 아니지만 이 예에서는 메모리 내 사용자 지정 타일을 즉시 만드는 방법을 보여 줍니다. 또한 사용자 지정 타일을 만들기 위해 비동기적으로 작업을 수행해야 하는 경우에 지연 패턴을 구현하는 방법을 보여 줍니다.
+다음 예에서는 **BitmapRequested** 이벤트에 대한 사용자 지정 처리기를 만들어 사용자 지정 타일을 제공하는 방법을 보여 줍니다. 이 예에서는 부분적으로 불투명하고 동일한 빨간색 타일을 만듭니다. 이 예에서는 [**MapTileBitmapRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637132)의 [**X**](https://msdn.microsoft.com/library/windows/apps/dn637135), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn637136) 및 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637137) 속성을 무시합니다. 실제 사례는 아니지만 이 예에서는 메모리 내 사용자 지정 타일을 즉시 만드는 방법을 보여 줍니다. 또한 사용자 지정 타일을 만들기 위해 비동기적으로 작업을 수행해야 하는 경우에 지연 패턴을 구현하는 방법을 보여 줍니다.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -362,8 +359,8 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
 
 기본 지도를 타사 또는 사용자 지정 타일로 완전히 바꾸려면
 
--   [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement**를 [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637157)의 [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637144) 속성 값으로 지정합니다.
--   [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None**를 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637051)의 [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637004) 속성 값으로 지정합니다.
+-   [**MapTileLayer**](https://msdn.microsoft.com/library/windows/apps/dn637143).**BackgroundReplacement**를 [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)의 [**Layer**](https://msdn.microsoft.com/library/windows/apps/dn637157) 속성 값으로 지정합니다.
+-   [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127).**None**를 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) 속성 값으로 지정합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -372,4 +369,3 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-

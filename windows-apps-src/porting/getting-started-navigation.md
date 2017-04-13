@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: febafd9a36f021bdbf06692a34c8691d1008018f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 5cf5fa2ca6abe8b4bc53867587490bae3ab6d551
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-started-navigation"></a>시작: 탐색
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -90,5 +87,4 @@ public BlankPage()
 ### <a name="next-step"></a>다음 단계
 
 [시작: 애니메이션](getting-started-animation.md)
-
 

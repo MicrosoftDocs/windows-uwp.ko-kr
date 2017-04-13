@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: af5c30aae3927f901bb93fd2c79bfee202754a1e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: c27e06491b66fea4f451b70309a9a8c3802aff18
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="getting-paid"></a>지급 받기
 다음은 앱과 추가 기능 및 Microsoft Advertising 수익에 대한 지급을 받는 데 필요한 중요한 정보입니다.
 
@@ -61,7 +58,6 @@ Windows 개발자 센터 대시보드의 **지급 요약**에서 결제 정보�
  
 
  
-
 
 
 

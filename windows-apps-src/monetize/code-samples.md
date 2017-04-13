@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, 코드 샘플"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ae6e806f8aead387afe55dec2d70c04b7fc21284
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: cb10a81c2fac1a14ae6e3a7eec20953d4267164d
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="code-samples"></a>코드 샘플
 
 
@@ -23,7 +20,7 @@ ms.lasthandoff: 02/07/2017
 
 이 섹션에서는 Microsoft Advertising 라이브러리에서 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 및 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 클래스의 속성, 메서드 및 이벤트를 사용하여 사용자를 대상으로 지정하고, 광고를 수동으로 새로 고치고, 이벤트를 처리하는 방법을 보여 주는 예제를 제공합니다. 앱에 이러한 컨트롤을 추가하는 방법을 보여 주는 기본 연습 과정에 대해서는 [개발자 연습](developer-walkthroughs.md)을 참조하세요.
 
-C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영상 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
+C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
 ## <a name="in-this-section"></a>이 섹션의 내용
 
@@ -45,4 +42,3 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
  
 
  
-

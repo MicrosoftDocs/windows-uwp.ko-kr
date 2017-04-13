@@ -9,16 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 36fb575659b5334c6215e1686aeb02d74b9f8fd5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1c8d44bdbbad763ad4c24b37b3bd7760c8d630c1
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 XAML 구문 규칙에 대해 설명하고 XAML 구문에 사용 가능한 선택 사항 및 제한 사항을 나타내는 용어에 대해서 설명합니다. 이 항목은 XAML 언어를 처음 사용하거나 용어나 구문의 일부를 다시 살펴보고 싶은 독자 또는 XAML 언어의 작동 방식을 알고 싶으며 자세한 배경과 상황을 원하는 독자에게 유용합니다.
 
@@ -307,7 +304,7 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 -   *object*: 이론적으로는 개체 값이지만, 사실상 문자열 또는 개체 선택 등의 특정 개체 형식으로 제한됩니다. 자세한 내용은 참조 페이지의 "설명"에서 확인할 수 있습니다.
 -   *object**property*: *object**property*는 결합하여 표시할 구문이 여러 속성의 특성 값으로 사용할 수 있는 형식의 구문인 경우 사용됩니다. 예를 들어 [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076)에 대해 표시된 **XAML 특성 사용**에는 &lt;*object* *property*="*predefinedColorName*"/&gt;이 포함됩니다.
 -   *eventhandler*: 이벤트 특성에 대해 표시된 모든 XAML 구문의 특성 값으로 표시됩니다. 여기에서 제공하는 것은 이벤트 처리기 함수의 함수 이름입니다. 이 함수는 XAML 페이지의 코드 숨김에서 정의되어야 합니다. 프로그래밍 수준에서 이 함수는 처리 중인 이벤트의 대리자 서명과 일치해야 합니다. 그렇지 않으면 앱 코드가 컴파일되지 않습니다. 그러나 이는 프로그래밍과 관련된 고려 사항이며, XAML과 관련된 고려 사항이 아니므로 XAML 구문에서 대리자 형식에 대한 암시를 주기 위해 노력하지 않습니다. 이벤트에 대해 구현해야 할 대리자에 대해 알고 싶으면 해당 이벤트에 대한 참조 항목의 **이벤트 정보** 섹션에서 **대리자**라는 레이블의 표 행을 확인할 수 있습니다.
--   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)에 대해 표시된 구문은 <*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/>입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
+-   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)에 대해 표시된 구문은 &lt;*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/&gt;입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
 -   *double*, *int*, *string*, *bool*: XAML 언어에 알려진 기본 형식입니다. C# 또는 Visual Basic을 사용하여 프로그래밍하는 경우 이러한 형식은 Microsoft .NET의 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) 및 [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx) 등의 형식에 투영됩니다. .NET 코드 숨김에서 XAML로 정의된 값으로 작업할 경우 이러한 .NET 형식의 멤버를 사용할 수 있습니다. C++/CX를 사용하여 프로그래밍할 경우 C++ 기본 형식을 사용하지만 [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) 네임스페이스에 의해 정의된 동일한 형식을 고려할 수 있습니다(예: [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx)). 경우에 따라 특정 속성에 대해 추가 값 제한 사항이 있을 수 있습니다. 그러나 이러한 제한 사항은 코드 사용 및 XAML 사용에 모두 적용되므로 XAML 섹션이 아닌 **속성 값** 섹션 또는 '설명' 섹션에 이러한 내용이 표시됩니다.
 
 ## <a name="tips-and-tricks-notes-on-style"></a>스타일에 대한 유용한 정보와 팁, 참고 사항
@@ -321,5 +318,4 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 * [XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)
 * [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)
  
-
 

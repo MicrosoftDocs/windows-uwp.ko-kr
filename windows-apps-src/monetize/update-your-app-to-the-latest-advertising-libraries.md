@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: "앱을 업데이트하여 지원되는 최신 Microsoft 광고 라이브러리를 사용하고 앱이 배너 광고를 계속 받도록 하는 방법을 알아봅니다."
-title: "최신 Microsoft Advertising 라이브러리로 앱 업데이트"
+title: "최신 Advertising 라이브러리로 앱 업데이트"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,33 +9,34 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이그레이션"
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 3cdb1f41fda7bd4e4af1ce9e5f8fb4396da53f63
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 25435ebf314327db7288ac853819c90ebba35669
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="update-your-app-to-the-latest-advertising-libraries"></a>최신 Advertising 라이브러리로 앱 업데이트
 
-# <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>최신 Microsoft Advertising 라이브러리로 앱 업데이트
+Microsoft Advertising의 배너 광고를 표시하는 앱이 2017년 4월 1일 이후 배너 광고를 계속 받으려면 다음 SDK 중 하나의 **AdControl** 또는 **AdMediatorControl**을 사용해야 합니다.
 
-다음 SDK만 **AdControl** 또는 **AdMediatorControl**을 사용하여 앱에 있는 Microsoft 광고에서 배너 광고를 보여주도록 지원됩니다.
+  * [Microsoft Store Services SDK](http://aka.ms/store-services-sdk)(UWP 앱의 경우)
+  * [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱의 경우)
 
-* [Microsoft Store Services SDK](http://aka.ms/store-services-sdk)(UWP 앱의 경우)
-* [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱의 경우)
+이러한 SDK가 제공되기 전에 Microsoft에서는 Windows 및 Windows Phone 앱을 위한 여러 가지 이전 광고 SDK 릴리스에서 이러한 컨트롤을 출시했습니다. 이러한 이전 광고 SDK 릴리스는 더 이상 지원되지 않습니다. 2017년 4월 1일 이후 Microsoft는 추가 경고 없이 언제든지 이전 광고 SDK 릴리스를 사용하는 앱에 대한 배너 광고 서비스를 중지할 수 있습니다.
 
-이러한 SDK가 제공되기 전에 Microsoft에서는 Windows 및 Windows Phone 앱용으로 여러 이전 광고 SDK 릴리스를 출시했습니다. 이러한 이전 광고 SDK 릴리스는 더 이상 지원되지 않습니다. 향후 이러한 이전 SDK를 사용하는 앱에 대한 배너 광고를 제공하지 않도록 중지할 계획입니다.
+**AdControl** 또는 **AdMediatorControl**을 사용하여 배너 광고를 표시하는 기존 앱(스토어에 이미 있거나 아직 개발 중인 앱)이 있다면 이 문서의 지침을 따라 해당 앱이 이 변경에 영향을 받는지 확인하고 필요할 경우 앱을 업데이트하는 방법을 알아보세요.
 
-**AdControl** 또는 **AdMediatorControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 스토어에 있거나 개발 중인)이 향후에도 배너 광고를 계속 받으려면 대상 플랫폼에 최신 광고 SDK를 사용할 수 있도록 앱을 업데이트해야 할 수 있습니다. 본 문서의 지침에 따라 이 변경 내용이 본인의 앱에 영향을 미치는지 확인하고, 필요한 경우 앱 업데이트 방법을 알아보세요.
+>**참고**&nbsp;&nbsp;또한 2017년 4월 1일 이후에는 둘 이상의 앱에서 사용되는 모든 광고 단위에 대한 배너 광고 서비스도 중지됩니다. 이러한 변경에 대비하려면 광고 단위가 각각 하나의 앱에서만 사용되는지 확인하세요.
 
-이 변경 내용이 본인의 앱에 영향을 주며 최신 광고 SDK를 사용하도록 앱을 업데이트하지 않은 경우 지원되지 않는 광고 SDK 릴리스를 사용하는 앱에 대한 배너 광고가 중지되면 다음 동작이 발생합니다.
+## <a name="more-details-about-this-change"></a>이 변경에 대한 세부 정보
 
-* 앱의 **AdControl** 또는 **AdMediatorControl** 컨트롤에 배너 광고가 더 이상 제공되지 않으며 해당 컨트롤에서 더 이상 광고 수익을 얻지 못합니다.
+이러한 변경에 대한 추가 컨텍스트를 제공하기 위해 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)을 통해 HTML5 리치 미디어를 제공하는 기능을 비롯한 최소 기능 집합을 지원하지 않는 이전 광고 SDK 릴리스에 대한 지원이 제거될 예정입니다. 많은 광고주가 이러한 기능을 원하고 있으므로 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 사용자가 더 많은 수익을 보도록 이러한 변경을 진행하고 있습니다.
 
-* 앱의 **AdControl** 또는 **AdMediatorControl**이 새 광고를 요청하면 해당 컨트롤의 **ErrorOccurred** 이벤트가 발생하고 이벤트 인수의 **ErrorCode** 속성이 **NoAdAvailable** 값을 갖게 됩니다.
+이 변경에 영향을 받는 앱을 대상 플랫폼의 최신 광고 SDK를 사용하도록 업데이트하지 않을 경우 Microsoft에서 지원되지 않는 광고 SDK 릴리스를 사용하는 앱에 대한 배너 광고 서비스를 중지하면 다음과 같은 동작이 나타납니다.
 
-이 변경 내용에 대한 추가 컨텍스트를 제공하기 위해 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)을 통해 HTML5 리치 미디어를 제공하는 기능을 비롯한 최소 기능 집합을 지원하지 않는 이전 광고 SDK 릴리스를 더 이상 지원하지 않습니다. 많은 광고주가 이러한 기능을 원하고 있으므로 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 사용자가 더 많은 수익을 보도록 이러한 변경을 진행하고 있습니다.
+* 앱의 **AdControl** 또는 **AdMediatorControl** 컨트롤에 배너 광고가 더 이상 제공되지 않을 것이며 해당 컨트롤에서 광고 수익을 얻지 못합니다.
 
-문제가 발생하거나 도움이 필요한 경우 [고객 지원에 문의](http://go.microsoft.com/fwlink/?LinkId=393643)하세요.
+* 앱의 **AdControl** 또는 **AdMediatorControl**이 새 광고를 요청하는 경우 컨트롤의 **ErrorOccurred** 이벤트가 발생하고 이벤트 인수의 **ErrorCode** 속성이 **NoAdAvailable** 값을 갖게 됩니다.
+
+문제가 발생하거나 지원이 필요할 경우 [고객 지원 센터에 문의](http://go.microsoft.com/fwlink/?LinkId=393643)하세요.
 
 >**참고**&nbsp;&nbsp;앱에서 이미 [Microsoft Store Services SDK](http://aka.ms/store-services-sdk)(UWP 앱의 경우) 또는 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱의 경우)를 사용하고 있거나 이러한 SDK 중 하나를 사용하도록 이전에 앱을 업데이트한 경우에는 이미 앱에서 최신 SDK를 사용하고 있으므로 추가로 앱을 변경할 필요가 없습니다.
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 02/08/2017
 
 <span/>
 
-**Windows 8.1 또는 Windows Phone 8.x 앱**
+**Windows8.1 또는 Windows Phone 8.x 앱**
 
 1. 원본을 손상시키지 않기 위해 앱용 .appx 또는 .xap 패키지의 복사본을 만들고 .zip 확장명으로 이름을 바꾸고 파일의 압축을 풉니다.
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/08/2017
     </thead>
     <tbody>
       <tr class="odd">
-        <td align="left"><p>Windows 8.1 XAML</p></td>
+        <td align="left"><p>Windows8.1 XAML</p></td>
         <td align="left"><p>UniversalXamlAdControl.Windows.dll</p></td>
         <td align="left"><p>8.5.1601.07018</p></td>
       </tr>
@@ -112,7 +113,7 @@ ms.lasthandoff: 02/08/2017
         <td align="left"><p>8.5.1601.07018</p></td>
       </tr>
       <tr class="odd">
-        <td align="left"><p>Windows 8.1 JavaScript/HTML<br/>Windows Phone 8.1 JavaScript/HTML</p></td>
+        <td align="left"><p>Windows8.1 JavaScript/HTML<br/>Windows Phone 8.1 JavaScript/HTML</p></td>
         <td align="left"><p>UniversalSharedLibrary.Windows.dll</p></td>
         <td align="left"><p>8.5.1601.07018</p></td>
       </tr>
@@ -135,15 +136,15 @@ ms.lasthandoff: 02/08/2017
 
 <span/>
 
-**Windows 8.0 앱**
+**Windows8.0 앱**
 
-* 향후 Windows 8.0을 대상으로 하는 앱에는 더 이상 배너 광고가 제공되지 않을 수 있습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 8.0 앱 트래픽은 Windows 10 디바이스에서 실행됩니다.
+* 향후 Windows8.0을 대상으로 하는 앱에는 더 이상 배너 광고가 제공되지 않을 수 있습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows8.0 앱 트래픽은 Windows10 디바이스에서 실행됩니다.
 
 <span/>
 
 **Windows Phone 7.x 앱**
 
-* Windows Phone 7.x를 대상으로 하는 앱에는 나중에 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows Phone 8.1 앱을 대상으로 하도록 변환하거나 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 7.x 앱 트래픽은 Windows Phone 8.1 또는 Windows 10 디바이스에서 실행됩니다.
+* WindowsPhone 7.x를 대상으로 하는 앱에는 나중에 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows Phone 8.1 앱을 대상으로 하도록 변환하거나 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows7.x 앱 트래픽은 Windows Phone 8.1 또는 Windows10 디바이스에서 실행됩니다.
 
 <span/>
 
@@ -157,7 +158,7 @@ ms.lasthandoff: 02/08/2017
 
 <span/>
 
-**Windows 8.1 또는 Windows Phone 8.1 앱**
+**Windows8.1 또는 Windows Phone 8.1 앱**
 
 1. 원본을 손상시키지 않기 위해 앱용 .appx 또는 .xap 패키지의 복사본을 만들고 .zip 확장명으로 이름을 바꾸고 파일의 압축을 풉니다.
 
@@ -177,7 +178,7 @@ ms.lasthandoff: 02/08/2017
 
 앱이 이전 SDK 릴리스를 사용하는 경우 다음 지침에 따라 개발 컴퓨터에 최신 SDK가 있는지 확인하세요.
 
-1. 개발 컴퓨터에 Visual Studio 2015(UWP, Windows 8.1 또는 Windows Phone 8.x 프로젝트용) 또는 Visual Studio 2013(Windows 8.1 또는 Windows Phone 8.x 프로젝트용)이 설치되어 있는지 확인합니다.
+1. 개발 컴퓨터에 Visual Studio 2015(UWP, Windows8.1 또는 Windows Phone 8.x 프로젝트용) 또는 Visual Studio 2013(Windows8.1 또는 Windows Phone 8.x 프로젝트용)이 설치되어 있는지 확인합니다.
 
   >**참고**&nbsp;&nbsp;개발 컴퓨터에 Visual Studio가 열려 있으면 먼저 닫은 후 다음 단계를 수행해야 합니다.
 
@@ -210,7 +211,7 @@ ms.lasthandoff: 02/08/2017
 
 <span/>
 
-### <a name="windows-81-or-windows-phone-81-xaml-or-javascripthtml-projects"></a>Windows 8.1 또는 Windows Phone 8.1(XAML 또는 JavaScript/HTML) 프로젝트
+### <a name="windows-81-or-windows-phone-81-xaml-or-javascripthtml-projects"></a>Windows8.1 또는 Windows Phone 8.1(XAML 또는 JavaScript/HTML) 프로젝트
 
 <span/>
 
@@ -259,4 +260,3 @@ ms.lasthandoff: 02/08/2017
 
 
  
-

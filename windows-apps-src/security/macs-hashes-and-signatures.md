@@ -1,6 +1,6 @@
 ---
 title: "MAC, 해시, 서명"
-description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 MAC(메시지 인증 코드), 해시 및 서명을 사용하여 메시지 변조를 감지하는 방법에 대해 설명합니다."
+description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)에서 MAC(메시지 인증 코드), 해시 및 서명을 사용하여 메시지 변조를 감지하는 방법에 대해 설명합니다."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
 ms.author: alkoren
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: f29b77317e0b03aff7e56087aa3a882720170b29
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4de3b93cb6f86f409d6f915386b9d763056e89fa
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="macs-hashes-and-signatures"></a>MAC, 해시, 서명
 
 

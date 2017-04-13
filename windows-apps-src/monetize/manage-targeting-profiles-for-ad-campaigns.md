@@ -2,21 +2,18 @@
 author: mcleanbyron
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: "Windows 스토어 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인 타기팅 프로필을 관리합니다."
-title: "광고 캠페인 타기팅 프로필 관리"
+title: "타기팅 프로필 관리"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, Windows 스토어 프로모션 API, 광고 캠페인"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: c737e27df4a911d3fcbdcb3128ece865bda2b703
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 30fb160e389edd18fb3782d332b5603fc6207757
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-targeting-profiles-for-ad-campaigns"></a>광고 캠페인 타기팅 프로필 관리
+# <a name="manage-targeting-profiles"></a>타기팅 프로필 관리
 
 
 Windows 스토어 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인에서 각 배달 라인의 대상으로 지정할 사용자, 지역 및 인벤토리 유형을 선택합니다. 다수의 배달 라인에 대해 타기팅 프로필을 만들고 다시 사용할 수 있습니다.
@@ -28,7 +25,7 @@ Windows 스토어 프로모션 API에서 이 메서드를 사용하여 홍보용
 이 메서드를 사용하려면 먼저 다음 작업을 완료해야 합니다.
 
 * 아직 완료하지 않은 경우 Windows 스토어 프로모션 API의 [필수 조건](run-ad-campaigns-using-windows-store-services.md#prerequisites)을 모두 완료합니다.
-* 이 메서드의 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
+* 이 메서드의 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
 ## <a name="request"></a>요청
 
@@ -45,7 +42,7 @@ Windows 스토어 프로모션 API에서 이 메서드를 사용하여 홍보용
 
 | 헤더        | 유형   | 설명         |
 |---------------|--------|---------------------|
-| 권한 부여 | 문자열 | 필수 사항입니다. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 | 추적 ID   | GUID   | 선택 사항입니다. 호출 흐름을 추적하는 ID입니다.                                  |
 
 
@@ -161,7 +158,7 @@ Authorization: Bearer <your access token>
 
 |  *age* 필드의 정수 값  |  해당 연령대  |  
 |---------------------------------|---------------------------|
-|     621     |            13~17             |
+|     651     |            13~17             |
 |     652     |           18~24             |
 |     653     |            25~34             |
 |     654     |            35~49             |
@@ -235,7 +232,7 @@ Authorization: Bearer <your access token>
 |     504     |           Windows Phone 8.0             |
 |     505     |           Windows Phone 8.1             |
 |     506     |           Windows 8.0             |
-|     507     |           Windows 8.1             |
+|     507     |           Windows8.1             |
 |     508     |           Windows 10             |
 |     509     |           Windows 10 Mobile             |
 
@@ -620,4 +617,3 @@ Authorization: Bearer <your access token>
 * [광고 캠페인 배달 라인 관리](manage-delivery-lines-for-ad-campaigns.md)
 * [광고 캠페인 크리에이티브 관리](manage-creatives-for-ad-campaigns.md)
 * [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
-

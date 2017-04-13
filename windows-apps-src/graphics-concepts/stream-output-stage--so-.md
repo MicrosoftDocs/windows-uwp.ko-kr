@@ -2,21 +2,17 @@
 title: "SO(스트림 출력) 단계"
 description: "SO(스트림 출력) 단계에서는 이전의 활성 단계에서 하나 이상의 메모리 내 버퍼로 꼭짓점 데이터를 연속적으로 출력(또는 스트리밍)합니다. 메모리로 스트리밍된 데이터는 입력 데이터 또는 CPU에서 다시 읽기로 파이프라인으로 다시 재순환될 수 있습니다."
 ms.assetid: DE89E99F-39BC-4B34-B80F-A7D373AA7C0A
-keywords:
-- "SO(스트림 출력) 단계"
+keywords: "SO(스트림 출력) 단계"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 52a5e886cb2e5ddd8f9bda459f7bd658fb3f7a1b
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 07bc125426854bdd82c7cebaed6f3585197353db
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="stream-output-so-stage"></a>SO(스트림 출력) 단계
 
 
@@ -61,7 +57,6 @@ SO(스트림 출력) 단계에서는 이전 활성 단계(예: GS(기하 도형 
  
 
  
-
 
 
 

@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 46b48e8e1ef1efbff7248ddf54c22e5a8bc29deb
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 8827e579a595146b72fd71092609aebb90e3c211
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="relativesource-markup-extension"></a>{RelativeSource} 태그 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -53,7 +50,7 @@ ms.lasthandoff: 02/07/2017
 
 **Self** 모드는 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용하며, [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) 바인딩에 대한 변형이지만 요소의 명명과 자체 참조가 필요하지 않습니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 경우 속성이 동일한 속성 형식을 사용해야 하거나, 사용자가 바인딩에 대해 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826)를 사용하여 값을 변환해야 합니다. 예를 들어 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)를 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)의 원본으로 사용하는 경우 변환하지 않아도 되지만 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419)를 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006)의 원본으로 사용하려면 변환기가 필요합니다.
 
-예를 들면 다음과 같습니다. 이 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)은 해당 [**Height**](binding-markup-extension.md) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208718)가 항상 같고 자체가 정사각형으로 렌더링되도록 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/br208751)을 사용합니다. 높이만 고정 값으로 설정됩니다. 이 **Rectangle**의 경우 기본 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)는 **null**이며 **this**가 아닙니다. 따라서 데이터 컨텍스트 원본이 개체 자체가 되도록 설정하고 다른 속성에 대한 바인딩을 지원할 수 있도록 {Binding} 태그 확장 사용법에서 `RelativeSource={RelativeSource Self}` 인수를 사용합니다.
+예를 들면 다음과 같습니다. 이 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)은 해당 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)가 항상 같고 자체가 정사각형으로 렌더링되도록 [{Binding} 태그 확장](binding-markup-extension.md)을 사용합니다. 높이만 고정 값으로 설정됩니다. 이 **Rectangle**의 경우 기본 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)는 **null**이며 **this**가 아닙니다. 따라서 데이터 컨텍스트 원본이 개체 자체가 되도록 설정하고 다른 속성에 대한 바인딩을 지원할 수 있도록 {Binding} 태그 확장 사용법에서 `RelativeSource={RelativeSource Self}` 인수를 사용합니다.
 
 ```XML
 <Rectangle
@@ -73,5 +70,4 @@ ms.lasthandoff: 02/07/2017
 * [{Binding} 태그 확장](binding-markup-extension.md)
 * [**바인딩**](https://msdn.microsoft.com/library/windows/apps/br209820)
 * [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)
-
 

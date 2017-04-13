@@ -9,24 +9,25 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10 uwp, 광고, 광고, 배너, 중간"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b6343d8a011a3e62a3b714c7dab280c9d9a8f81d
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: ceae17d34ba400876f912ba9932d76f59d773e63
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="display-ads-in-your-app"></a>앱에서 광고 표시
 
 
 UWP(유니버설 Windows 플랫폼) 및 Windows 스토어는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다.
 
-## <a name="display-banner-and-video-interstitial-ads-using-the-microsoft-advertising-libraries"></a>Microsoft Advertising 라이브러리를 사용하여 배너 및 동영상 중간 광고 표시
+## <a name="display-banner-and-interstitial-ads-using-the-microsoft-advertising-libraries"></a>Microsoft Advertising 라이브러리를 사용하여 배너 및 중간 광고 표시
 
-배너 및 동영상 중간 광고를 포함하면 UWP 앱과 Windows 8.1 및 Windows Phone 8.x용 앱에서 수익을 창출할 수 있습니다. 광고는 PC, 태블릿 및 휴대폰용 Windows 앱에 표시됩니다. Windows 개발자 센터 대시보드의 [광고 성과 보고서](../publish/advertising-performance-report.md)를 사용하여 광고 성과를 실시간으로 모니터링할 수 있습니다.
+앱에 배너 또는 중간 광고를 포함하여 앱으로 더 큰 수익을 창출하세요.
+
+* *배너 광고*는 일반적으로 앱 페이지의 위쪽 또는 아래쪽 부분을 활용하는 작은 광고입니다.
+* *중간 광고*는 일반적으로 사용자가 앱 또는 게임을 계속하기 위해 강제로 비디오를 시청하거나 광고를 클릭해야 하는 전체 화면 광고입니다. UWP 앱에는 비디오와 배너라는 두 가지 중간 광고가 지원됩니다.
 
 앱에 이러한 유형의 광고를 포함하려면 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)(UWP 앱용)와 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱용)에 배포된 광고 라이브러리의 **AdControl** 및 **InterstitialAd** 컨트롤을 사용합니다.
 
+Windows 개발자 센터 대시보드의 [광고 성과 보고서](../publish/advertising-performance-report.md)를 사용하여 광고 성과를 실시간으로 모니터링할 수 있습니다.
 
 다음 항목에서는 Windows Advertising 라이브러리와 관련된 일반적인 작업에 대한 정보를 제공합니다.
 
@@ -47,9 +48,10 @@ UWP(유니버설 Windows 플랫폼) 및 Windows 스토어는 광고로 앱 수�
 
 ## <a name="use-ad-mediation-for-banner-ads-windows-81-and-windows-phone-8x"></a>배너 광고에 대한 광고 조정 사용(Windows 8.1 및 Windows Phone 8.x)
 
-Windows 8.1 및 Windows Phone 8.x 앱의 경우 **AdMediatorControl** 클래스를 사용하여 여러 광고 네트워크의 배너 광고를 표시함으로써 광고 수익을 최적화할 수 있습니다. 앱에 이 컨트롤을 추가하고 나면 Windows 개발자 센터 대시보드의 광고 조정 설정을 구성하고, Microsoft에서는 선택한 광고 네트워크에서 배너 광고 요청 조정을 담당합니다. 광고 조정에 대한 자세한 내용은 [광고 조정을 사용하여 광고 수익 최대화](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359.aspx)를 참조하세요.
+Windows 8.1 및 Windows Phone 8.x 앱의 경우 **AdMediatorControl** 클래스를 사용하여 여러 광고 네트워크의 배너 광고를 표시함으로써 광고 수익을 최적화할 수 있습니다. 앱에 이 컨트롤을 추가하고 나면 Windows 개발자 센터 대시보드의 광고 조정 설정을 구성하고, Microsoft에서는 선택한 광고 네트워크에서 배너 광고 요청 조정을 담당합니다. 자세한 내용은 [광고 조정을 사용하여 광고 수익 최대화](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359.aspx)를 참조하세요.
 
->**참고**&nbsp;&nbsp;**AdMediatorControl** 클래스를 사용한 광고 조정은 현재 Windows 10용 UWP 앱에 지원되지 않습니다. 동일한 배너 광고용(**AdControl**) 및 동영상 중간 광고용(**InterstitialAd**) API를 사용하는 UWP 앱에 대한 서버 측 중재가 출시 예정입니다. UWP 앱에서 **AdMediatorControl**을 **AdControl**로 마이그레이션하는 방법은 [UWP 앱을 위해 AdMediatorControl을 AdControl로 마이그레이션](migrate-from-admediatorcontrol-to-adcontrol.md)을 참조하세요.
+> [!NOTE]
+> **AdMediatorControl** 클래스를 사용한 광고 조정은 현재 Windows 10용 UWP 앱에 지원되지 않습니다. 동일한 배너 광고용(**AdControl**) 및 동영상 중간 광고용(**InterstitialAd**) API를 사용하는 UWP 앱에 대한 서버 측 중재가 출시 예정입니다. UWP 앱에서 **AdMediatorControl**을 **AdControl**로 마이그레이션하는 방법은 [UWP 앱을 위해 AdMediatorControl을 AdControl로 마이그레이션](migrate-from-admediatorcontrol-to-adcontrol.md)을 참조하세요.
 
 <span id="silverlight_support"/>
 ## <a name="advertising-support-for-windows-phone-8x-silverlight-projects"></a>Windows Phone 8.x Silverlight 프로젝트용 광고 지원
@@ -66,4 +68,3 @@ Windows 8.1 및 Windows Phone 8.x 앱의 경우 **AdMediatorControl** 클래스�
 * [Microsoft 스토어 서비스 SDK](microsoft-store-services-sdk.md)
 * [광고로 앱 수익 창출](http://go.microsoft.com/fwlink/p/?LinkId=699559)
 * [광고 성과 보고서](../publish/advertising-performance-report.md)
-

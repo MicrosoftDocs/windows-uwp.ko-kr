@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: c73a1d1695e3b8a2eee8f073a5d25586a24a9d24
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="setting-up-your-mac-with-windows-10"></a>Windows 10에서 Mac 설정
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -47,5 +44,4 @@ VMWare의 Fusion 8을 사용하면 Mac 바탕 화면에서 바로 Visual Studio�
 ## <a name="oracle-virtualbox"></a>Oracle VirtualBox
 
 VirtualBox는 컴퓨터에서 가상 컴퓨터를 실행하기 위한 무료 응용 프로그램으로, Mac에서 Windows를 실행하도록 지원합니다. 꼭 필요한 요소를 포함하지만 가격은 적절합니다. 자세한 내용은 [VirtualBox](http://go.microsoft.com/fwlink/p/?LinkId=280599)를 참조하세요.
-
 

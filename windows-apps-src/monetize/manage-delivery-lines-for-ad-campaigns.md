@@ -2,32 +2,34 @@
 author: mcleanbyron
 ms.assetid: dc632a4c-ce48-400b-8e6e-1dddbd13afff
 description: "Windows 스토어 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인 배달 라인을 관리합니다."
-title: "광고 캠페인 배달 라인 관리"
+title: "배달 라인 관리"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, Windows 스토어 프로모션 API, 광고 캠페인"
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5f9ede6a2e645a644e4650f3af7e5476bd52dd53
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 419dbc2ef8de66b0cb8cf51b483174f5c086a092
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="manage-delivery-lines-for-ad-campaigns"></a>광고 캠페인 배달 라인 관리
+# <a name="manage-delivery-lines"></a>배달 라인 관리
 
 Windows 스토어 프로모션 API에서 이 메서드를 사용하여 하나 이상의 *배달 라인*을 만들어 인벤토리를 구입하고 홍보용 광고 캠페인 광고를 제공합니다. 각 배달 라인에 대해 타기팅을 설정하고 입찰 가격을 설정할 수 있으며, 예산을 설정하고 사용할 크리에이티브와 연결하여 지출할 금액을 결정할 수 있습니다.
 
 배달 라인과 광고 캠페인, 대상 프로필, 크리에이티브 간의 관계에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api)을 참조하세요.
+
+>**참고**&nbsp;&nbsp;이 API를 사용하여 광고 캠페인의 배달 라인을 성공적으로 만들려면 먼저 [개발자 센터 대시보드의 **앱 홍보** 페이지를 사용하여 유료 광고 캠페인을 하나 생성](../publish/create-an-ad-campaign-for-your-app.md)하고 이 페이지에서 하나 이상의 결제 방법을 추가해야 합니다. 이렇게 하면 이 API를 사용하여 광고 캠페인의 청구 가능한 배달 라인을 성공적으로 만들 수 있습니다. API를 사용하여 만든 광고 캠페인은 대시보드의 **앱 홍보** 페이지에 선택된 기본 결제 방법에 자동으로 요금을 청구합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
 이 메서드를 사용하려면 먼저 다음 작업을 완료해야 합니다.
 
 * 아직 완료하지 않은 경우 Windows 스토어 프로모션 API의 [필수 조건](run-ad-campaigns-using-windows-store-services.md#prerequisites)을 모두 완료합니다.
-* 이 메서드의 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
+
+  >**참고**&nbsp;&nbsp;필수 조건의 일부로, [개발자 센터 대시보드에서 하나 이상의 유료 광고 캠페인을 생성](../publish/create-an-ad-campaign-for-your-app.md)하고 대시보드에서 광고 캠페인에 대한 결제 방법을 하나 이상 추가해야 합니다. 이 API를 사용하여 만든 배달 라인은 대시보드의 **앱 홍보** 페이지에 선택된 기본 결제 방법에 자동으로 요금을 청구합니다.
+
+* 이 메서드의 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
 ## <a name="request"></a>요청
 
@@ -44,7 +46,7 @@ Windows 스토어 프로모션 API에서 이 메서드를 사용하여 하나 �
 
 | 헤더        | 유형   | 설명         |
 |---------------|--------|---------------------|
-| 권한 부여 | 문자열 | 필수 사항입니다. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 | 추적 ID   | GUID   | 선택 사항입니다. 호출 흐름을 추적하는 ID입니다.                                  |
 
 <span/>
@@ -160,4 +162,3 @@ Authorization: Bearer <your access token>
 * [광고 캠페인 타기팅 프로필 관리](manage-targeting-profiles-for-ad-campaigns.md)
 * [광고 캠페인 크리에이티브 관리](manage-creatives-for-ad-campaigns.md)
 * [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
-

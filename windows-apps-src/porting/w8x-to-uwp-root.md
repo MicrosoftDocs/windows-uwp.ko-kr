@@ -1,6 +1,6 @@
 ---
 author: mcleblanc
-description: "&\\#8212;Windows 8.1, Windows Phone 8.1 또는 둘 모두를 대상으로 하는&\\#8212; 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는 것을 확인하실 수 있습니다."
+description: "Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다."
 title: "Windows 런타임 8.x에서 UWP로 이동&quot;"
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.author: markl
@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a4ee1fd29b276958ed6a18b4eadcd89d5ea914b6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 37da1d6385bf18fcf44f6425b843715e1a462379
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x에서 UWP로 이동
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -63,10 +60,6 @@ Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관�
 
 포팅 전이나 포팅 중에 비슷한 용도를 가진 코드가 임의적으로 분산되지 않고 계층으로 함께 수집되도록 앱을 리펙터링하여 개선할 수 있는지 여부를 고려하세요. 위에서 설명한 것처럼 앱을 계층으로 팩터링하면 앱을 수정하고 테스트한 다음 지속적으로 읽고 유지 관리하기가 쉬워집니다. Model-View-ViewModel([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)) 패턴에 따라 기능을 재사용하기 쉽게 만들 수 있습니다. 이 패턴은 앱의 데이터, 비즈니스 및 UI 부분을 서로 별도로 유지합니다. UI 내에서도 상태와 동작을 시각적으로 분리하고 별도로 테스트할 수 있습니다. MVVM을 사용하면 데이터와 비즈니스 논리를 한 번 작성하여 UI에 관계없이 모든 장치에서 사용할 수 있습니다. 또한 장치 간에 많은 보기 모델 및 보기 부분이 다시 사용될 수 있습니다.
 
-## <a name="if-you-have-a-microsoft-visual-studio-2015-rc-project"></a>Microsoft Visual Studio 2015 RC 프로젝트가 있는 경우
-
-Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트가 있는 경우 [RTM으로 UWP Microsoft Visual Studio 2015 RC 프로젝트 업데이트](update-your-visual-studio-2015-rc-project-to-rtm.md)를 참조하세요.
- 
 | 항목 | 설명 |
 |-------|-------------|
 | [프로젝트 포팅](w8x-to-uwp-porting-to-a-uwp-project.md) | 포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다. 하나는 앱 패키지 매니페스트를 비롯하여 기존 프로젝트 파일의 복사본을 편집하는 옵션입니다(해당 옵션은 [UWP(유니버설 Windows 플랫폼)으로 앱 마이그레이션](https://msdn.microsoft.com/library/mt148501.aspx)에서 프로젝트 파일을 업데이트하는 방법에 대한 정보 참조). 다른 하나는 Visual Studio에서 새 Windows 10 프로젝트를 만들고 해당 프로젝트에 파일을 복사하는 옵션입니다. |
@@ -83,5 +76,3 @@ Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트�
 * [Windows 런타임 참조](https://msdn.microsoft.com/library/windows/apps/br211377)
 * [모든 Windows 장치용 유니버설 Windows 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [앱용 UX 디자인](https://msdn.microsoft.com/library/windows/apps/hh767284)
-
-

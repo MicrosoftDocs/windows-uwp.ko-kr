@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-Description: "스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품&\\#8212;구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목&\\#8212;을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다."
+Description: "스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품&amp;\\#8212;구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목&amp;\\#8212;을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다."
 title: "앱에서 바로 구매 소모성 제품 사용"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
 keywords: "uwp, 소모성, 추가 기능, 앱에서 바로 구매, IAP, Windows.ApplicationModel.Store"
@@ -9,17 +9,15 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7395cf28f96b2f7aa9bc6a1d4c461385d50fcbf6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e2ecaf364c581e82406c76831dd3e33c82594601
+ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
+translationtype: HT
 ---
-
 # <a name="enable-consumable-in-app-product-purchases"></a>앱에서 바로 구매 소모성 제품 사용
 
 
->**참고**&nbsp;&nbsp;이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여 줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+> [!NOTE]
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품(구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목)을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다. 이 기능은 특정 회복 아이템을 구매하여 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다.
 
@@ -42,7 +40,8 @@ ms.lasthandoff: 02/07/2017
 
 고객에게 앱에서 바로 구매 소모성 제품에 대한 액세스 권한을 부여하는 경우 이행되고 있는 제품(*productId*)과 이행이 연결된 거래(*transactionId*)를 추적해야 합니다.
 
->**중요**&nbsp;&nbsp;앱은 스토어에 이행을 정확하게 보고할 책임이 있습니다. 이 단계는 고객을 위해 공정하고 믿을 만한 구매 환경을 유지하는 데 필요합니다.
+> [!IMPORTANT]
+> 앱은 스토어에 이행을 정확하게 보고할 책임이 있습니다. 이 단계는 고객을 위해 공정하고 믿을 만한 구매 환경을 유지하는 데 필요합니다.
 
 다음 예제에서는 이전 단계에서 수행한 [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381) 호출의 [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) 속성을 사용하여 이행할 구매한 제품을 확인하는 방법을 보여 줍니다. 컬렉션은 나중에 로컬 이행이 성공했는지 확인하기 위해 참조할 수 있는 위치에 제품 정보를 저장하는 데 사용됩니다.
 
@@ -51,7 +50,8 @@ ms.lasthandoff: 02/07/2017
 
 다음 예제에서는 이전 예제의 배열을 사용하여 제품 ID/거래 ID 쌍에 액세스하는 방법을 보여 줍니다. 이러한 쌍은 나중에 스토어에 이행을 보고할 때 사용됩니다.
 
->**중요**&nbsp;&nbsp;앱에서 이행을 추적하고 확인하는 데 사용하는 방법에 관계없이 고객이 받지 않은 항목에 대해 비용을 지불하지 않도록 하려면 앱이 적절한 노력을 기울여야 합니다.
+> [!IMPORTANT]
+> 앱에서 이행을 추적하고 확인하는 데 사용하는 방법에 관계없이 고객이 받지 않은 항목에 대해 비용을 지불하지 않도록 하려면 앱이 적절한 노력을 기울여야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#IsLocallyFulfilled)]
@@ -60,7 +60,8 @@ ms.lasthandoff: 02/07/2017
 
 로컬 이행이 완료되면 앱은 *productId* 및 제품 구매가 포함된 거래를 사용하여 [ReportConsumableFulfillmentAsync](https://msdn.microsoft.com/library/windows/apps/dn263380)를 호출해야 합니다.
 
->**중요**&nbsp;&nbsp;이행된 앱에서 바로 구매 소모성 제품을 스토어에 보고하지 못하면 이전 구매에 대한 이행이 보고될 때까지 사용자가 해당 제품을 다시 구매할 수 없습니다.
+> [!IMPORTANT]
+> 이행된 앱에서 바로 구매 소모성 제품을 스토어에 보고하지 못하면 이전 구매에 대한 이행이 보고될 때까지 사용자가 해당 제품을 다시 구매할 수 없습니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#ReportFulfillment)]
@@ -82,4 +83,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

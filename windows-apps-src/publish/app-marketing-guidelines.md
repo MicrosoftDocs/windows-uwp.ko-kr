@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 518631e791746259dc4ee6f23184c8fc01ace427
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e7d327cbe8d99b6b10ae4ccdeb8c7a6f0ee2ac5e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="windows-store-app-marketing-guidelines"></a>Windows 스토어 앱 마케팅 지침
 
 Windows 스토어에서 앱 및 콘텐츠를 홍보하는 방법을 알아봅니다. 이러한 지침에서는 사용 가능한 자산을 사용하는 방법과 인쇄물, TV, 소셜 미디어 및 디지털 광고에서 앱을 홍보하는 것에 대한 권장 사항을 설명합니다.
@@ -36,7 +33,7 @@ Windows 스토어에서 더 많은 고객이 앱 목록에 관심을 가질 수 
 
 앱을 홍보하기 위해 Windows 장치에서 실행할 경우 앱이 어떻게 표시되는지를 보여 주고 싶을 수 있습니다. 휴대폰, 태블릿, 노트북, PC 등 선택할 수 있는 다양한 장치 섀시 이미지가 마련되어 있습니다. 이러한 이미지를 사용하는 방법에 대한 모범 사례 및 기술 사양은 [Windows 스토어 마케팅 지침](http://go.microsoft.com/fwlink/p/?LinkId=529769)에 있습니다.
 
-[![다운로드 단추](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Windows 장치 아트
+[![다운로드 단추](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Windows 디바이스 아트
 
 ## <a name="license-to-microsoft-marks"></a>Microsoft 마크에 사용권 부여
 
@@ -55,7 +52,6 @@ Microsoft는 Microsoft 마크 및 관련 영업권의 독점 소유자이며 Mic
  
 
  
-
 
 
 

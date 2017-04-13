@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 3ce185e4bdd247c8b0ac71401a2ff863c64f880a
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 3a4dfeb102d8db35a6ae032eb5001b4873456b82
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="common-cryptography-tasks"></a>일반적인 암호화 작업
 
 
@@ -32,4 +29,3 @@ ms.lasthandoff: 02/07/2017
 | [바이트 배열에 및 바이트 배열에서 복사](copy-to-and-from-byte-arrays.md)                       | 이 예제 코드는 UWP 앱에서 바이트 배열 간에 복사하는 방법을 보여 줍니다.                             |
 | [데이터 인코드 및 디코드](encode-and-decode-data.md)                                   | 이 예제 코드는 UWP 앱에서 base64 및 16진수 데이터를 인코딩 및 디코딩하는 방법을 보여 줍니다.            |
  
-

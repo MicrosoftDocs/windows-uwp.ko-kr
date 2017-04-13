@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5823fce5aa5b5d0e98bc43828dc7469a08fdb9d0
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 7c88e927a88dbef928deedd6f92b2aa7b60da1cf
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="put-apps-and-add-ons-on-sale"></a>앱 및 추가 기능 판매
 
 Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다.
@@ -71,5 +68,4 @@ Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의
 제출에 대한 인증 프로세스가 완료될 때까지 할인 판매가 시작되지 않는 한 삭제된 할인 판매는 실행되지 않습니다. 이미 종료된 판매를 할인 판매를 삭제하면 **가격 책정 및 가용성** 페이지에서 제거될 뿐입니다.
 
 > **중요**   고객이 앱 스토어 목록을 볼 때 예약된 종료 날짜를 볼 수 있기 때문에 시작된 후에는 할인 판매를 삭제하지 않는 것이 좋습니다. 이미 진행 중인 할인 판매를 삭제하면 제출에 대한 인증 프로세스가 완료될 때 할인 판매가 종료되므로 잠재 고객에게 혼동을 일으킬 수 있습니다.
-
 

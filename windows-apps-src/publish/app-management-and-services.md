@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1aaab8d122968265ff17b352a53b69081e84f01e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 48e48d1a350b01777c1d7e5ed4ab1f82b1d66d26
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
 Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보를 관리 및 확인하고, 푸시 알림, A/B 테스트, 지도와 같은 서비스를 구성할 수 있습니다.
@@ -48,7 +45,7 @@ Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보�
 
 Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도 서비스 응용 프로그램 ID와 토큰을 앱 코드에 포함해야 합니다. **서비스** 섹션의 **지도** 페이지에서 이 토큰을 가져올 수 있습니다.
 
-> **참고**  Windows 10 또는 Windows 8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. 자세한 내용은 [맵 인증 키 요청](https://msdn.microsoft.com/library/windows/apps/mt219694)을 참조하세요.
+> **참고**  Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. 자세한 내용은 [맵 인증 키 요청](https://msdn.microsoft.com/library/windows/apps/mt219694)을 참조하세요.
 
 자세한 내용은 [지도 서비스 사용](use-map-services.md)을 참조하세요.
 
@@ -87,4 +84,3 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
  
 
  
-

@@ -2,23 +2,20 @@
 author: mcleanbyron
 ms.assetid: 9621641A-7462-425D-84CC-101877A738DA
 description: "UWP 앱에서 AdMediatorControl에서 AdControl로 마이그레이션하는 방법에 대해 알아봅니다."
-title: "UWP 앱을 위해 AdMediatorControl에서 AdControl로 마이그레이션"
+title: "AdMediatorControl에서 AdControl로 마이그레이션"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, AdMediatorControl, AdControl, 마이그레이션"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 83235595a6a7f9e9b0b5d8de154d6e5d8a8db8ef
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 71928b67d3c2799b3d8d3711f6f7e5a3610e9c76
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
+# <a name="migrate-from-admediatorcontrol-to-adcontrol"></a>AdMediatorControl에서 AdControl로 마이그레이션
 
-# <a name="migrate-from-admediatorcontrol-to-adcontrol-for-uwp-apps"></a>UWP 앱을 위해 AdMediatorControl에서 AdControl로 마이그레이션
-
-Microsoft의 이전 광고 SDK 릴리스에서는 UWP(유니버설 Windows 플랫폼) 앱에서 **AdMediatorControl** 클래스를 사용하여 배너 광고를 표시할 수 있었습니다. 따라서 개발자가 AdDuplex뿐만 아니라 파트너 네트워크(AOL 및 AppNexus)의 배너 광고를 표시하여 광고 수익을 최적화할 수 있게 했습니다. [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)는 더 이상 **AdMediatorControl** 클래스를 지원하지 않습니다. 이전 SDK의 **AdMediatorControl** 클래스를 사용하는 기존 앱을 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 사용하는 UWP 앱으로 마이그레이션하려는 경우 이 문서의 지침에 따라 **AdMediatorControl** 클래스 대신 **AdControl** 클래스를 사용하도록 코드를 업데이트합니다. 필요에 따라 AdDuplex를 사용하여 가중치 또는 순위 접근 방식으로 광고를 조정하도록 앱을 구성할 수 있습니다.
+이전 Microsoft Advertising SDK 릴리스에서는 UWP(유니버설 Windows 플랫폼) 앱에서 **AdMediatorControl** 클래스를 사용하여 배너 광고를 표시할 수 있었습니다. 따라서 개발자가 AdDuplex뿐만 아니라 파트너 네트워크(AOL 및 AppNexus)의 배너 광고를 표시하여 광고 수익을 최적화했습니다. [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)는 더 이상 **AdMediatorControl** 클래스를 지원하지 않습니다. 이전 SDK의 **AdMediatorControl** 클래스를 사용하는 기존 앱을 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 사용하는 UWP 앱으로 마이그레이션하려는 경우 이 문서의 지침에 따라 **AdMediatorControl** 클래스 대신 **AdControl** 클래스를 사용하도록 코드를 업데이트합니다. 필요에 따라 AdDuplex를 사용하여 가중치 또는 순위 접근 방식으로 광고를 조정하도록 앱을 구성할 수 있습니다.
 
 >**참고**&nbsp;&nbsp;이 문서의 코드 예제는 설명 목적으로만 제공됩니다. 앱에서 작동하도록 코드 예제를 조정해야 할 수 있습니다.
 
@@ -165,4 +162,3 @@ Microsoft 유료 광고뿐만 아니라 Microsoft 하우스 광고 또는 AdDupl
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[AdControl](./code/AdvertisingSamples/MigrateToAdControl/cs/ExamplePage1.xaml.cs#Snippet5)]
-

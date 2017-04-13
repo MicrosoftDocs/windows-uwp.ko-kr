@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: eaf52a930b5419f0c2a53aa14c9dc0fba5b404f6
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e46a092298ce183212384155492ea73a79ebe86f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -56,7 +53,7 @@ ms.lasthandoff: 02/07/2017
 |------|-------------|
 | 종속성 속성 | [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자에 존재하는 속성(아래 참조)입니다. 일반적으로 이 식별자는 정의하는 **DependencyObject** 파생 클래스의 정적 멤버로 사용할 수 있습니다. |
 | 종속성 속성 식별자 | 속성을 식별하는 상수 값이며 일반적으로 공개 읽기 전용입니다. |
-| 속성 래퍼 | Windows 런타임 속성의 호출 가능한 **get** 및 **set** 구현. 또는 원래 정의의 언어별 프로젝션. **get** 속성 래퍼 구현은 [**GetValue**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.getvalue.aspx)를 호출하여 관련 종속성 속성 식별자를 전달합니다. | 
+| 속성 래퍼 | Windows 런타임 속성의 호출 가능한 **get** 및 **set** 구현. 또는 원래 정의의 언어별 프로젝션. **get** 속성 래퍼 구현은 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.getvalue.aspx)를 호출하여 관련 종속성 속성 식별자를 전달합니다. | 
 
 속성 래퍼는 호출자에게 편의를 제공할 뿐만 아니라 속성에 대한 Windows 런타임 정의를 사용하는 모든 프로세스, 도구 또는 프로젝션에 종속성 속성을 노출합니다.
 
@@ -186,7 +183,7 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 
 속성 변경 동작은 종속성 속성 용어의 "종속성" 부분에 대한 출처입니다. 다른 속성이 첫 번째 속성의 값에 영향을 미칠 수 있는 경우 유효한 속성 값을 유지하는 것은 많은 프레임워크에서 어려운 개발 문제입니다. Windows 런타임 속성 시스템에서 각 종속성 속성은 속성 값이 변경될 때마다 호출되는 콜백을 지정할 수 있습니다. 이 콜백을 사용하여 일반적으로 동기식으로 관련 속성 값을 알리거나 변경할 수 있습니다. 많은 기존 종속성 속성에는 속성 변경 동작이 있습니다. 유사한 콜백 동작을 사용자 지정 종속성 속성에 추가하고 고유한 속성 변경 콜백을 구현할 수도 있습니다. 예는 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.
 
-Windows 10에는 [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx) 메서드가 도입되었습니다. 이를 통해 응용 프로그램 코드를 사용하여 지정된 종속성 속성이 [**DependencyObject**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.aspx)의 인스턴스에서 변경될 때 변경 알림을 등록할 수 있습니다.
+Windows 10에는 [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx) 메서드가 도입되었습니다. 이를 통해 응용 프로그램 코드를 사용하여 지정된 종속성 속성이 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.aspx)의 인스턴스에서 변경될 때 변경 알림을 등록할 수 있습니다.
 
 ### <a name="default-value-and-clearvalue"></a>기본값 및 **ClearValue**
 
@@ -212,5 +209,4 @@ Windows 10에는 [**RegisterPropertyChangedCallback**](https://msdn.microsoft.co
 **종속성 속성 관련 API**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
-
 

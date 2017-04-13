@@ -11,13 +11,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: d11efb262dfbdd604dc249f19ae35e4110369654
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4092969ce730e74ad2359dd0fd7ada9c9ef4c00a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="interaction-primer"></a>조작 입문서
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -31,7 +28,7 @@ UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부�
 
 ## <a name="surface-dial"></a>Surface Dial
 
-Windows 10 1주년 업데이트를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 장치급에서 제일 첫 번째 장치입니다. 
+Windows10 1주년 업데이트를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 장치급에서 제일 첫 번째 장치입니다. 
 
 ### <a name="device-support"></a>장치 지원
 
@@ -219,7 +216,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 
 키보드는 텍스트를 위한 기본 입력 장치이며, 일반적으로 키보드가 앱을 조작하는 보다 빠르고 효율적인 방법이라고 생각하는 사용자나 일정한 장애가 있는 사람들에게는 필수 도구입니다.
 
-Windows 10 Mobile 장치와 호환 가능한 새로운 환경인 [휴대폰용 Continuum](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하여 사용자는 휴대폰을 마우스와 키보드에 연결하여 노트북처럼 사용할 수 있습니다.
+Windows10 Mobile 장치와 호환 가능한 새로운 환경인 [휴대폰용 Continuum](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하여 사용자는 휴대폰을 마우스와 키보드에 연결하여 노트북처럼 사용할 수 있습니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -354,4 +351,3 @@ Windows에서 지원하는 조작 환경 수렴 때문에 전적으로 터치식
  
 
  
-

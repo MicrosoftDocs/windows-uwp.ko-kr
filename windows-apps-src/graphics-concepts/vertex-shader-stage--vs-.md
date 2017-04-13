@@ -2,21 +2,17 @@
 title: "VS(꼭짓점 셰이더) 단계"
 description: "VS(꼭짓점 셰이더) 단계에서는 꼭짓점을 처리하며, 일반적으로 변환, 스킨 지정, 조명 등의 작업을 수행합니다. 꼭짓점 셰이더는 항상 단일 입력 꼭짓점을 사용하여 단일 출력 꼭짓점을 생성합니다."
 ms.assetid: 5133C4BB-B4E6-4697-9276-F718AD44869C
-keywords:
-- "VS(꼭짓점 셰이더) 단계"
+keywords: "VS(꼭짓점 셰이더) 단계"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6819826d829036c6b2cb2de4f2f42025820de9fe
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 761296a9897ad99ec57527f073a1ad1c2d792966
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="vertex-shader-vs-stage"></a>VS(꼭짓점 셰이더) 단계
 
 
@@ -52,7 +48,7 @@ VS(꼭짓점 셰이더) 단계에서는 입력 어셈블러에서 꼭짓점을 �
 ## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>출력
 
 
-단일 꼭짓점입니다. 각 출력 꼭짓점은 16개의 32비트 4-구성 요소 벡터로 구성될 수 있습니다.
+단일 꼭짓점. 각 출력 꼭짓점은 16개의 32비트 4-구성 요소 벡터로 구성될 수 있습니다.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
@@ -62,7 +58,6 @@ VS(꼭짓점 셰이더) 단계에서는 입력 어셈블러에서 꼭짓점을 �
  
 
  
-
 
 
 

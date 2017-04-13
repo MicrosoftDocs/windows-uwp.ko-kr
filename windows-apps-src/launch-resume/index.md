@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 40400b8b17da9b010c0f03e9976201a1def025f8
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 412876d0b05b2e703482f8cc79a1f07268ac200f
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -71,7 +68,7 @@ ms.lasthandoff: 02/07/2017
 | 항목 | 설명 |
 |-------|-------------|
 | [예약된 파일 및 URI 체계 이름](reserved-uri-scheme-names.md) | 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다. |
-| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다. |
+| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다. |
 
 ## <a name="app-services"></a>앱 서비스
 
@@ -107,11 +104,11 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="remote-systems"></a>원격 시스템
 
-[연결된 앱 및 장치(프로젝트 "로마")](connected-apps-and-devices.md) 섹션에서는 원격 시스템 플랫폼을 사용하여 원격 장치를 검색하고, 원격 장치에서 앱을 실행하고, 원격 장치의 앱 서비스와 통신하는 방법을 설명합니다.
+[연결된 앱 및 장치(프로젝트 로마)](connected-apps-and-devices.md) 섹션에서는 원격 시스템 플랫폼을 사용하여 원격 장치를 검색하고, 원격 장치에서 앱을 실행하고, 원격 장치의 앱 서비스와 통신하는 방법을 설명합니다.
 
 | 항목 | 설명 |
 |-------|-------------|
-| [원격 장치 검색](discover-remote-devices.md)  | 연결할 수 있는 장치를 검색하는 방법을 알아봅니다. |
+| [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 장치를 검색하는 방법을 알아봅니다. |
 | [원격 장치에서 앱 시작](launch-a-remote-app.md) | 원격 장치에서 앱을 시작하는 방법을 알아봅니다.  |
 | [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 장치에서 앱을 조작하는 방법을 알아봅니다. |
 
@@ -123,4 +120,3 @@ ms.lasthandoff: 02/07/2017
 |-------|-------------|
 | [시작 화면 추가](add-a-splash-screen.md) | 앱의 시작 화면 이미지와 배경색을 설정합니다. |
 | [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) | 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하며 사용자 지정할 수 있습니다. |
-

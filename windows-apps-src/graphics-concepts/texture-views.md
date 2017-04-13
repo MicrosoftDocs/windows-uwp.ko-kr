@@ -2,21 +2,17 @@
 title: "텍스처 뷰"
 description: "Direct3D에서 텍스처 리소스는 메모리 리소스에 대한 하드웨어 해석 메커니즘인 뷰를 통해 액세스됩니다."
 ms.assetid: 18DABFCE-8A36-4C4E-B08E-10428B05D701
-keywords:
-- "텍스처 뷰"
+keywords: "텍스처 뷰"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bd5f49364f40876747e34aaade3ca119230407aa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 70b7b5da92f5be038fd1eb16ca27875704410449
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-views"></a>텍스처 뷰
 
 
@@ -42,7 +38,6 @@ CreateRenderTargetView를 호출하여 렌더링 대상을 위한 뷰 객체를 
  
 
  
-
 
 
 

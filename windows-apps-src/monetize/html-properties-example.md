@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, AdControl, HTML, 속성"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a879944dc14ca161c3e52a49ffe4a8cebfa7d69f
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: efc94b723b3bfe97b35484882ae784e9ef4d6807
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="adcontrol-html-properties-example"></a>AdControl HTML 속성 예제
 
 다음 예제에서는 HTML에서 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 속성을 할당하는 방법을 보여 줍니다. **applicationId** 및 **adUnitId**는 필수 속성입니다. 다른 속성 및 이벤트는 선택적입니다. 선택적 속성의 값을 제공하지 않는 경우 컨트롤에서 앱의 사용자 환경과 일치하는 광고를 만드는 기본값을 사용합니다.
@@ -44,4 +41,3 @@ ms.lasthandoff: 02/07/2017
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 
  
-

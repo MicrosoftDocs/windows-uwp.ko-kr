@@ -2,24 +2,18 @@
 author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
 description: "Microsoft Store Services SDK의 Microsoft Advertising 라이브러리에 대한 일반 개발자 정보를 가져옵니다."
-title: "Microsoft Advertising 라이브러리에 대한 개발자 정보"
+title: "개발자 정보"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 44b5266a104b2f706537cea2167b395487f275d2
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: bb272c5589c0734e04bdb591e766d4c6bd1b07a2
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="developer-information-about-the-microsoft-advertising-libraries"></a>Microsoft Advertising 라이브러리에 대한 개발자 정보
-
-
-
+# <a name="developer-information"></a>개발자 정보
 
 이 섹션의 항목에서는 Microsoft Store Services SDK(UWP 앱용)와 Microsoft Advertising SDK for Windows 및 Windows Phone 8.x(Windows 8.1 및 Windows Phone 8.x 앱용)의 Microsoft Advertising 라이브러리에 대한 개발자에게 유용한 정보를 제공합니다.
 
@@ -41,4 +35,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

@@ -11,13 +11,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b3adb444389716274f32d1f62af026b625624ea7
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 9442787d187bab77adc0b24d1f270d7ceffc9092
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="cortana-interactions-in-uwp-apps"></a>UWP 앱에서 Cortana 조작
 
 Cortana는 앱 또는 서비스의 기능을 Cortana 환경에 원활하게 통합할 수 있도록 강력하고 포괄적인 확장성 프레임워크를 제공합니다.
@@ -43,7 +40,6 @@ Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cor
  
 
  
-
 
 
 

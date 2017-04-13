@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 패키지 출시 백분율을 업데이트합니다."
-title: "Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 백분율 업데이트"
+title: "앱 제출에 대한 출시 백분율 업데이트"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,14 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 출시, 앱 제출, 업데이트, 백분율"
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 18dee2374ad1daa33520438d348aa8ea0805c30a
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 506384c4ddff064e29a0a938f6ee97552a777ebb
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
-# <a name="update-the-package-rollout-percentage-for-an-app-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 백분율 업데이트
+# <a name="update-the-rollout-percentage-for-an-app-submission"></a>앱 제출에 대한 출시 백분율 업데이트
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 [출시 백분율을 업데이트](../publish/gradual-package-rollout.md#setting-the-rollout-percentage)합니다. Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
@@ -82,7 +79,7 @@ Authorization: Bearer <your access token>
 ```json
 {
     "isPackageRollout": true,
-    "packageRolloutPercentage": 25,
+    "packageRolloutPercentage": 25.0,
     "packageRolloutStatus": "PackageRolloutInProgress",
     "fallbackSubmissionId": "1212922684621243058"
 }
@@ -105,4 +102,3 @@ Authorization: Bearer <your access token>
 * [점진적 패키지 배포](../publish/gradual-package-rollout.md)
 * [Windows 스토어 제출 API를 사용하여 앱 제출 관리](manage-app-submissions.md)
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-

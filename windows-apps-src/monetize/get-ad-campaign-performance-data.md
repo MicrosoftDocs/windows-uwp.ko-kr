@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 저장소 서비스, Windows 스토어 분석 API, 광고 캠페인"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ca7ba9ad8817a68c8dd5f74a8bf2674d76f9eadf
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 2c0e696488af33731459bdef2c8dc24477755078
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="get-ad-campaign-performance-data"></a>광고 캠페인 성과 데이터 가져오기
 
 
@@ -64,7 +61,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 | skip   | int    |  쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다.   |   아니요    |
 | filter   |  문자열   |  응답에서 행을 필터링하는 하나 이상의 문입니다. 지원되는 유일한 필터는 **campaignId**입니다. 각 문은 **eq** 또는 **ne** 연산자를 사용할 수 있으며, 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다.  다음은 *filter* 매개 변수: ```filter=campaignId eq '100023'```에 대한 예제입니다.   |   아니요    |
 |  aggregationLevel  |  문자열   | 집계 데이터를 검색할 시간 범위를 지정합니다. <strong>day</strong>, <strong>week</strong> 또는 <strong>month</strong> 문자열 중 하나일 수 있습니다. 지정하지 않을 경우 기본값은 <strong>day</strong>입니다.    |   아니요    |
-| orderby   |  문자열   |  <p>광고 캠페인 성과 데이터에 대한 결과 데이터 값의 순서를 지정하는 문입니다. 구문은 <em>orderby=field [order],field [order],...</em>입니다. <em>field</em> 매개 변수는 다음 문자열 중 하나일 수 있습니다.</p><ul><li><strong>date</strong></li><li><strong>campaignId</strong></li></ul><p><em>order</em> 매개 변수는 옵션이며 <strong>asc</strong> 또는 <strong>desc</strong>로 각 필드를 내림차순 또는 오름차순으로 지정할 수 있습니다. 기본값은 <strong>asc</strong>입니다.</p><p>다음은 <em>orderby</em> 문자열 예입니다. <em>orderby=date,market</em></p>   |   아니요    |
+| orderby   |  문자열   |  <p>광고 캠페인 성과 데이터에 대한 결과 데이터 값의 순서를 지정하는 문입니다. 구문은 <em>orderby=field [order],field [order],...</em>입니다. <em>field</em> 매개 변수는 다음 문자열 중 하나일 수 있습니다.</p><ul><li><strong>date</strong></li><li><strong>campaignId</strong></li></ul><p><em>order</em> 매개 변수는 옵션이며 <strong>asc</strong> 또는 <strong>desc</strong>로 각 필드를 내림차순 또는 오름차순으로 지정할 수 있습니다. 기본값은 <strong>asc</strong>입니다.</p><p>다음은 <em>orderby</em> 문자열 예입니다. <em>orderby=date,campaignId</em></p>   |   아니요    |
 |  groupby  |  문자열   |  <p>지정된 필드에 대한 데이터 집계에만 적용되는 문입니다. 다음 필드를 지정할 수 있습니다.</p><ul><li><strong>campaignId</strong></li><li><strong>applicationId</strong></li><li><strong>date</strong></li><li><strong>currencyCode</strong></li></ul><p><em>groupby</em> 매개 변수는 <em>aggregationLevel</em> 매개 변수와 함께 사용할 수 있습니다. 예: <em>&amp;groupby=applicationId&amp;aggregationLevel=week</em></p>   |   아니요    |
 
 
@@ -91,7 +88,7 @@ Authorization: Bearer <your access token>
 | 값      | 유형   | 설명  |
 |------------|--------|---------------|
 | 값      | 배열  | 광고 캠페인 집계 성과 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [캠페인 성과 개체](#campaign-performance-object) 섹션을 참조하세요.          |
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 5로 설정되어 있지만 쿼리에 대한 데이터가 5개 항목보다 많은 경우 이 값이 반환됩니다. |
+| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 5로 설정되어 있지만 쿼리에 대한 데이터가 5개 항목보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                                                                                                                                                                                                             |
 
 <span id="campaign-performance-object" />
@@ -159,4 +156,3 @@ Authorization: Bearer <your access token>
 * [앱 광고 캠페인 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app)
 * [Windows 스토어 서비스를 사용하여 광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-

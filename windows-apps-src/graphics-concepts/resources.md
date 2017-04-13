@@ -2,25 +2,21 @@
 title: "리소스"
 description: "리소스는 Direct3D 파이프라인에서 액세스할 수 있는 메모리 내 영역입니다."
 ms.assetid: 2E68E5A8-83DA-4DC8-B7F3-B8988CF8090C
-keywords:
-- "리소스"
+keywords: "리소스"
 author: mtoepke
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a95762696905bcb5e1ae900c96a47ee9fc5d1a73
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 361e5e1489e976776015ec9401f1473b9d3c8bdd
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="resources"></a>리소스
 
 
-리소스는 Direct3D 파이프라인에서 액세스할 수 있는 메모리 내 영역입니다. 파이프라인이 메모리에 효율적으로 액세스하려면 파이프라인에 제공된 데이터(입력 기하 도형, 셰이더 리소스, 텍스처 등)를 리소스에 저장해야 합니다. 모든 Direct3D 리소스가 파생되는 리소스 종류는 버퍼와 텍스처, 두 가지입니다. 각 파이프라인 단계에 최대 128개 리소스를 활성화할 수 있습니다.
+리소스는 Direct3D 파이프라인에서 액세스할 수 있는 메모리 내 영역입니다. 파이프라인에서 메모리에 효율적으로 액세스하려면 파이프라인에 제공된 데이터(입력 기하 도형, 셰이더 리소스, 텍스처 등)를 리소스에 저장해야 합니다. 모든 Direct3D 리소스가 파생되는 리소스 종류는 버퍼와 텍스처, 두 가지입니다. 각 파이프라인 단계에 최대 128개 리소스를 활성화할 수 있습니다.
 
 일반적으로 각 응용 프로그램은 여러 개의 리소스를 만듭니다. 리소스의 예: 버텍스 버퍼, 인덱스 버퍼, 상수 버퍼, 텍스처, 셰이더 리소스. 리소스를 사용할 수 있는 방법을 결정하는 다음과 같은 몇 가지 옵션이 있습니다. 강력한 형식이거나 형식이 없는 리소스를 만들 수 있습니다. 리소스의 읽기 및 쓰기 액세스가 모두 가능하도록 할지 여부를 제어할 수 있습니다. CPU나 GPU만 또는 CPU와 GPU 모두 리소스에 액세스할 수 있도록 할 수 있습니다. 당연히 속도와 기능의 상충 관계가 생깁니다. 리소스에 허용하는 기능이 많아질수록 성능은 떨어진다고 예상해야 합니다.
 
@@ -51,7 +47,7 @@ ms.lasthandoff: 02/07/2017
 </tr>
 <tr class="even">
 <td align="left"><p>[리소스 선택](choosing-a-resource.md)</p></td>
-<td align="left"><p>리소스는 3D 파이프라인이 사용하는 데이터의 모음입니다. 리소스를 만들고 그 동작을 정의하는 것이 응용 프로그램 프로그래밍의 첫 단계입니다. 이 가이드에서는 응용 프로그램에 필요한 리소스를 선택하기 위한 기본적 항목을 다룹니다.</p></td>
+<td align="left"><p>리소스는 3D 파이프라인이 사용하는 데이터의 모음입니다. 리소스를 만들고 리소스의 동작을 정의하는 것이 응용 프로그램 프로그래밍의 첫 단계입니다. 이 가이드에서는 응용 프로그램에 필요한 리소스를 선택하기 위한 기본적 항목을 다룹니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[리소스 데이터 복사 및 액세스](copying-and-accessing-resource-data.md)</p></td>
@@ -76,4 +72,3 @@ ms.lasthandoff: 02/07/2017
 [부동 소수점 규칙](floating-point-rules.md)
 
 [데이터 형식 변환](data-type-conversion.md)
-

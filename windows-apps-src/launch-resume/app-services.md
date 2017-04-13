@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 63c0634905b14ca9f9546c9fcc678c05edb67780
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1a9647a9b915359f00ac22c88b715c9e938f6110
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="use-app-services"></a>앱 서비스 사용
 
 이 섹션에서는 앱 간에 데이터와 기능을 공유할 수 있도록 앱 서비스를 UWP 앱에 통합하는 방법을 설명합니다.
@@ -27,3 +24,4 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="related-topics"></a>관련 항목
 * [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md)
+* [유니버설 Windows 플랫폼(UWP) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices) 

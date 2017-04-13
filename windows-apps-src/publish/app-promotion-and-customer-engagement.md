@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1177acd3f5bea2a53cb0d76217dcf5a4edc86647
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 72beedaf83c684d0cfab7416d25804a34d4ac62a
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-promotion-and-customer-engagement"></a>앱 홍보 및 고객 참여 유도
 
 
@@ -35,4 +32,3 @@ ms.lasthandoff: 02/07/2017
  
 
  
-

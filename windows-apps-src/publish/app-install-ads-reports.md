@@ -10,15 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치"
 redirect_url: https://msdn.microsoft.com/windows/uwp/publish/promote-your-app-report
-translationtype: Human Translation
-ms.sourcegitcommit: b01924366a0bc2afabe2f381e72e45862f0dd682
-ms.openlocfilehash: df9bc656a909aeaca7207263c8dc46fd903e45d2
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: f40b6a6e7bfb2748d53c5c4472cf05b63e617703
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="app-install-ads-report"></a>앱 설치 광고 보고서
  
 이 페이지는 "앱 홍보 보고서"로 리디렉션되었습니다.
  
-

@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: "자동 실행을 사용한 자동 시작"
-description: "자동 실행을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어와 같은 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다."
+description: "자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 디바이스나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 디바이스가 포함됩니다."
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,20 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 60d4e40d056671f19149a031eb7774809060729e
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 02215be4cff7bbd42bdc1911777f62bacd22b6c7
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-**자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어와 같은 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
+**자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
 
 > **참고**  장치 제조업체이며 해당 [Windows 스토어 장치 앱](http://go.microsoft.com/fwlink/p/?LinkID=301381)을 장치의 **자동 실행** 처리기로 연결하려는 경우 장치 메타데이터에서 앱을 식별할 수 있습니다. 자세한 내용은 [Windows 스토어 장치 앱의 자동 실행](http://go.microsoft.com/fwlink/p/?LinkId=306684)을 참조하세요.
 
@@ -258,7 +255,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 ### <a name="step-2-add-assembly-reference-for-the-desktop-extensions"></a>2단계: 데스크톱 확장에 대한 어셈블리 참조 추가
 
-Windows 휴대용 장치의 저장소에 액세스하는 데 필요한 API인 [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654)는 [데스크톱 장치 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 이는 API를 사용하려면 특수 어셈블리가 필요하고 해당 호출은 PC와 같은 데스크톱 장치 패밀리의 장치에서만 작동한다는 것입니다.
+Windows 휴대용 장치의 저장소에 액세스하는 데 필요한 API인 [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654)는 [데스크톱 디바이스 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 이는 API를 사용하려면 특수 어셈블리가 필요하고 해당 호출은 PC와 같은 데스크톱 디바이스 패밀리의 장치에서만 작동한다는 것입니다.
 
 1.  **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가...**를 클릭합니다.
 2.  **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
@@ -428,11 +425,11 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 여기서는 볼륨 장치를 **자동 실행** 장치로 식별하는 방법을 보여 줍니다.
 
-볼륨 장치를 **자동 실행** 장치로 식별하려면 장치의 루트 드라이브에 autorun.inf 파일을 추가합니다. autorun.inf 파일에서 **CustomEvent** 키를 **AutoRun** 섹션에 추가합니다. 볼륨 장치가 PC에 연결되면 **자동 실행**에서 autorun.inf 파일을 찾고 볼륨을 장치로 처리합니다. **자동 실행**에서 **CustomEvent** 키에 제공한 이름을 사용하여 **자동 실행** 이벤트를 만듭니다. 그런 다음 앱을 만들고 해당 **자동 실행** 이벤트에 대한 처리기로 등록할 수 있습니다. 장치가 PC에 연결되면 **자동 실행**에서 앱을 볼륨 장치에 대한 처리기로 표시합니다. autorun.inf 파일에 대한 자세한 내용은 [autorun.inf 항목](https://msdn.microsoft.com/library/windows/desktop/cc144200)을 참조하세요.
+볼륨 디바이스를 **자동 실행** 디바이스로 식별하려면 디바이스의 루트 드라이브에 autorun.inf 파일을 추가합니다. autorun.inf 파일에서 **CustomEvent** 키를 **AutoRun** 섹션에 추가합니다. 볼륨 디바이스가 PC에 연결되면 **자동 실행**에서 autorun.inf 파일을 찾고 볼륨을 디바이스로 처리합니다. **자동 실행**에서 **CustomEvent** 키에 제공한 이름을 사용하여 **자동 실행** 이벤트를 만듭니다. 그런 다음 앱을 만들고 해당 **자동 실행** 이벤트에 대한 처리기로 등록할 수 있습니다. 장치가 PC에 연결되면 **자동 실행**에서 앱을 볼륨 장치에 대한 처리기로 표시합니다. autorun.inf 파일에 대한 자세한 내용은 [autorun.inf 항목](https://msdn.microsoft.com/library/windows/desktop/cc144200)을 참조하세요.
 
 ### <a name="step-1-create-an-autoruninf-file"></a>1단계: autorun.inf 파일 만들기
 
-볼륨 장치의 루트 드라이브에서 autorun.inf라는 파일을 추가합니다. autorun.inf 파일을 열고 다음 텍스트를 추가합니다.
+볼륨 디바이스의 루트 드라이브에서 autorun.inf라는 파일을 추가합니다. autorun.inf 파일을 열고 다음 텍스트를 추가합니다.
 
 ``` syntax
 [AutoRun]
@@ -584,4 +581,3 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
  
 
  
-

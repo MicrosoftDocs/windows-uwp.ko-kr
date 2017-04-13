@@ -9,13 +9,10 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6f928e9d3ad67773f36a0ae8c110df3e17ad88c5
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: b26ee59be9c309326eeb93546d3702bc161513f3
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -62,7 +59,7 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 종속성 속성 정의는 개념 집합으로 간주될 수 있습니다. 구현에서는 코드의 한 줄에 여러 개념이 언급될 수 있으므로 이러한 개념이 반드시 절차적 단계일 필요는 없습니다. 이 목록은 간단한 개요만 제공합니다. 이 항목의 뒷 부분에서 각 개념을 더 자세히 설명하고 여러 언어로 코드 예를 제공합니다.
 
 -   속성 시스템에 속성 이름을 등록하여([**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출) 소유자 형식 및 속성 값 형식을 지정합니다. 
-    -  속성 메타데이터를 예상하는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에는 필수 매개 변수가 있습니다. 해당 값으로 **null**을 지정하거나, 속성 변경 동작이나 [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357)를 호출하여 복원할 수 있는 메타데이터 기반 기본값을 원하는 경우 [**PropertyMetadata**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.propertymetadata) 인스턴스를 지정합니다.
+    -  속성 메타데이터를 예상하는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에는 필수 매개 변수가 있습니다. 해당 값으로 **null**을 지정하거나, 속성 변경 동작이나 [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357)를 호출하여 복원할 수 있는 메타데이터 기반 기본값을 원하는 경우 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata) 인스턴스를 지정합니다.
 -   [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자를 소유자 형식의 **public static readonly** 속성 멤버로 정의합니다.
 -   구현하는 언어에 사용되는 속성 접근자 모델 다음에 래퍼 속성을 정의합니다. 래퍼 속성 이름은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에서 사용한 *name* 문자열과 일치해야 합니다. [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출하고 고유 속성의 식별자를 매개 변수로 전달하여 **get** 및 **set** 접근자를 구현하고 래핑하는 종속성 속성과 래퍼를 연결합니다.
 -   (옵션) [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) 같은 특성을 래퍼에 지정합니다.
@@ -380,5 +377,4 @@ C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵�
 * [종속성 속성 개요](dependency-properties-overview.md)
 * [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)
  
-
 

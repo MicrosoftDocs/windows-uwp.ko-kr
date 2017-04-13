@@ -9,13 +9,10 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 5f51e1c5a44767e49b5c3dc5f578c2532da11008
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: 068a940a54048b10e8f66bd3267b3a22c42beb50
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
 귀하는 거주 지역과 매출액 및/또는 기지급액에 따라 매년 Microsoft로부터 하나 이상의 세금 양식을 받을 수 있습니다. Microsoft는 이러한 양식을 발급하고 IRS(미국 국세청)에 제출해야 합니다.
@@ -127,4 +124,3 @@ EIN: \*\*\*\*\*0505<br>
 
 
 > **참고** **IRS 세금 양식**과 관련하여 추가적인 질문이나 우려 사항이 있는 경우 [지원 티켓](http://aka.ms/storesupport)을 만드세요. Microsoft는 특정 세금 상황과 관련된 질문에 답할 수 없습니다. 이러한 질문에 대해서는 세무 전문가에게 조언을 구하시기 바랍니다.
-

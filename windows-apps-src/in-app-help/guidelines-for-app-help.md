@@ -11,18 +11,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: c3e73f9b-4839-4804-b379-c95b0ca4fbe8
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 64cb4871178ad712189e672bbde9f0ca9ffc6d26
-ms.lasthandoff: 02/08/2017
-
+ms.openlocfilehash: ced5455cb910a4872aca23491970688888cff70b
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="guidelines-for-app-help"></a>앱 도움말에 대한 지침
 
 
 
-응용 프로그램은 복잡할 수 있으므로, 사용자에게 효과적인 도움말을 제공하면 환경을 훨씬 개선할 수 있습니다. 모든 응용 프로그램이 사용자에게 도움말을 제공할 필요는 없으며, 응용 프로그램에 따라 제공해야 하는 종류의 도움말이 달라질 수 있습니다.
+응용 프로그램은 복잡할 수 있으며, 사용자에게 효과적인 도움말을 제공하면 환경을 훨씬 더 유용하게 개선할 수 있습니다. 모든 응용 프로그램이 사용자에게 도움말을 제공할 필요는 없으며, 응용 프로그램에 따라 제공해야 하는 종류의 도움말이 달라질 수 있습니다.
 
 도움말을 제공하려는 경우 만들 때 다음 지침을 따르세요. 유용하지 않은 도움말은 도움말이 없는 것보다 더 나쁠 수 있습니다.
 
@@ -69,6 +66,5 @@ ms.lasthandoff: 02/08/2017
 너무 커서 응용 프로그램에 맞지 않는 자세한 자습서, 고급 함수 또는 도움말 항목 라이브러리의 경우 외부 웹 페이지에 대한 링크가 적합합니다. 이러한 링크는 응용 프로그램 환경에서 사용자를 벗어나게 하므로 가능한 한 사용하지 않도록 해야 합니다.
 
 [외부 도움말에 대한 지침 참조](external-help.md)
-
 
 

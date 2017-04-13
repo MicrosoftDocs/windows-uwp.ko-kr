@@ -2,21 +2,17 @@
 title: "디바이스"
 description: "Direct3D 디바이스는 Direct3D의 렌더링 구성 요소입니다. 디바이스는 렌더링 상태를 캡슐화하여 저장하고, 변환 및 조명 작업을 수행하고 이미지를 표면에 래스터화합니다."
 ms.assetid: BC903462-A32A-46BA-8411-FB294F5D2CD9
-keywords:
-- "디바이스"
+keywords: "디바이스"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 5f2d86f3ceeb5a7026d5ad8e445e47cb69402879
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: e95c1e1cc9cf1b26553ec9e148438ae837dbdf0e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="devices"></a>디바이스
 
 
@@ -89,7 +85,6 @@ Direct3D 9와 함께 제공된 소프트웨어와 참조 디바이스의 동작�
  
 
  
-
 
 
 

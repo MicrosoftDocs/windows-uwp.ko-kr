@@ -12,16 +12,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
 ms.openlocfilehash: f3c05105dc1415ccb2a7c1671f9021b84c997e91
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="activate-a-background-app-with-voice-commands-through-cortana"></a>Cortana를 통해 음성 명령으로 백그라운드 앱 활성화
 
 이 항목은 https&#58;//msdn.microsoft.com/ko-kr/cortana/voicecommands/launch-a-background-app-with-voice-commands-in-cortana로 이동되었습니다.
 
 Github: https://github.com/Microsoft/cortana-docs/blob/master/docs/voicecommands/launch-a-background-app-with-voice-commands-in-cortana.md
-

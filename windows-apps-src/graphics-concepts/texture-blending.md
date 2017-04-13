@@ -2,21 +2,17 @@
 title: "텍스처 혼합"
 description: "Direct3D는 싱글패스에 최대 8개까지 텍스처를 기본 객체로 혼합할 수 있습니다."
 ms.assetid: 9AD388FA-B2B9-44A9-B73E-EDBD7357ACFB
-keywords:
-- "텍스처 혼합"
+keywords: "텍스처 혼합"
 author: PeterTurcan
 ms.author: pettur
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 363adc6537fe2c8421f938dbeee7735c9d336771
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1fed6a38121402e1aa0273b9186a9eab80fdf4ea
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+translationtype: HT
 ---
-
 # <a name="texture-blending"></a>텍스처 혼합
 
 
@@ -83,7 +79,6 @@ Direct3D는 텍스처 스테이지를 사용하여 싱글패스 방식의 다중
  
 
  
-
 
 
 
