@@ -9,8 +9,8 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 5d98b5366160ca52c02330a05e8b8d749e2296bd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.openlocfilehash: 1b286a9fcfd71bb2dc219fb3c03a363a41d24346
+ms.sourcegitcommit: bccf9bcc39f0c4ee8801d90e2d7fcae3ad6e3b3e
 translationtype: HT
 ---
 # <a name="audio-graphs"></a>오디오 그래프
@@ -159,9 +159,12 @@ Windows 런타임 오디오 그래프 API:
 
 [!code-cs[CreateFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFrameOutputNode)]
 
-오디오 그래프가 오디오 데이터의 퀀텀 처리를 끝내면 [**AudioGraph.QuantumProcessed**](https://msdn.microsoft.com/library/windows/apps/dn914240) 이벤트가 발생합니다. 이 이벤트의 처리기 내에서 오디오 데이터에 액세스할 수 있습니다.
+오디오 그래프가 오디오 데이터의 퀀텀 처리를 시작하면 [**AudioGraph.QuantumStarted**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Audio.AudioGraph#Windows_Media_Audio_AudioGraph_QuantumStarted) 이벤트가 발생합니다. 이 이벤트의 처리기 내에서 오디오 데이터에 액세스할 수 있습니다. 
 
-[!code-cs[QuantumProcessed](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumProcessed)]
+> [!NOTE]  
+> 오디오 그래프와 동기화를 유지하며 규칙적인 흐름에 따라 오디오 프레임을 검색하려면 동시 **QuantumStarted** 이벤트 처리기 내에서 [AudioFrameOutputNode.GetFrame](https://docs.microsoft.com/en-us/uwp/api/windows.media.audio.audioframeoutputnode#Windows_Media_Audio_AudioFrameOutputNode_GetFrame)을 호출하세요. **QuantumProcessed** 이벤트는 오디오 엔진이 오디오 처리를 완료함과 동시에 발생하므로 흐름이 불규칙적일 수 있습니다. 따라서 오디오 프레임 데이터 처리를 동기화하려면 **QuantumProcessed** 이벤트를 사용해서는 안 됩니다.
+
+[!code-cs[SnippetQuantumStartedFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStartedFrameOutput)]
 
 -   [**GetFrame**](https://msdn.microsoft.com/library/windows/apps/dn914171)을 호출하여 그래프의 오디오 데이터로 채워진 [**AudioFrame**](https://msdn.microsoft.com/library/windows/apps/dn930871) 개체를 가져옵니다.
 -   **ProcessFrameOutput** 도우미 메서드의 구현 예제는 다음과 같습니다.
