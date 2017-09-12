@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: "베타 테스트"
 description: "베타 테스트를 수행하면 앱 개발 팀 외부에 있는 사용자의 디바이스에서 아직 릴리스되지 않은 앱을 시험해보고 사용자의 피드백에 따라 앱을 향상시킬 수 있습니다."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a48a18fdb2c75f334a4ac9cb5916cab6b43d8c7e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6f5a4e7f2961143f44acb533f045783fb4e4b7c1
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="beta-testing"></a>베타 테스트
 

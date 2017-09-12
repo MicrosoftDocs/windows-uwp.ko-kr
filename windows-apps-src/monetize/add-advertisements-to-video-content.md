@@ -1,24 +1,27 @@
 ---
 author: mcleanbyron
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
-description: "AdScheduler 클래스를 사용하여 비디오 콘텐츠에 광고를 추가하는 방법을 알아봅니다."
-title: "비디오 콘텐츠에 광고 추가"
+description: "AdScheduler 클래스를 사용하여 비디오 콘텐츠에 광고를 표시하는 방법을 알아봅니다."
+title: "비디오 콘텐츠에 광고 표시"
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript"
-ms.openlocfilehash: 88e0bb4ceb9cba12d1eb5857761f5b59afaa15f2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 834547db2d58291e3bbf75a738d9775e25fbb8e5
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/09/2017
 ---
-# <a name="add-advertisements-to-video-content"></a>비디오 콘텐츠에 광고 추가
+# <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 
 
-이 연습에서는 HTML과 함께 JavaScript를 사용하여 작성된 UWP(유니버설 Windows 플랫폼) 앱에서 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) 클래스를 사용하여 비디오 콘텐츠에 광고를 추가하는 방법을 보여 줍니다.
+이 연습에서는 HTML과 함께 JavaScript를 사용하여 작성된 UWP(유니버설 Windows 플랫폼) 앱에서 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) 클래스를 사용하여 비디오 콘텐츠에 광고를 표시하는 방법을 보여 줍니다.
 
->**참고**&nbsp;&nbsp;이 기능은 현재 HTML과 함께 JavaScript를 사용하여 작성된 UWP 앱에만 지원됩니다.
+> [!NOTE]
+> 이 기능은 현재 HTML과 함께 JavaScript를 사용하여 작성된 UWP 앱에만 지원됩니다.
 
 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)는 프로그레시브 및 스트리밍 미디어에서 모두 작동하며 IAB 표준인 VAST(Video Ad Serving Template) 2.0/3.0과 VMAP 페이로드 형식을 사용합니다. 이러한 표준이 적용되는 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)는 상호 작용하는 광고 서비스에 독립적입니다.
 
@@ -26,13 +29,12 @@ translationtype: HT
 
 ## <a name="prerequisites"></a>필수 조건
 
-* Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치합니다.
+* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다.
 
 * 프로젝트는 [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) 컨트롤을 사용하여 광고가 예약되는 비디오 콘텐츠를 제공해야 합니다. 이 컨트롤은 GitHub의 Microsoft에서 사용할 수 있는 라이브러리의 [TVHelpers](https://github.com/Microsoft/TVHelpers) 컬렉션에서 사용할 수 있습니다.
 
   다음 예제는 HTML 태그로 [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview)를 선언하는 방법을 보여 줍니다. 일반적으로 이 태그는 index.html 파일(또는 프로젝트에 해당하는 다른 html 파일)의 `<body>` 섹션에 속합니다.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` html
   <div id="MediaPlayerDiv" data-win-control="TVJS.MediaPlayer">
     <video src="URL to your content">
@@ -42,7 +44,6 @@ translationtype: HT
 
   다음 예제에서는 JavaScript 코드로 [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview)를 설정하는 방법을 보여 줍니다.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet1)]
 
 ## <a name="how-to-use-the-adscheduler-class-in-your-code"></a>코드에서 AdScheduler 클래스를 사용하는 방법
@@ -67,7 +68,6 @@ translationtype: HT
 
 5.  index.html 파일(또는 프로젝트에 해당하는 다른 html 파일)을 엽니다. `<head>` 섹션에서 default.css 및 main.js에 대한 프로젝트의 JavaScript 참조 다음에 ad.js 및 adscheduler.js에 대한 참조를 추가합니다.
 
-  > [!div class="tabbedCodeSnippets"]
   ``` html
   <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
   <script src="/js/adscheduler.js"></script>
@@ -78,19 +78,16 @@ translationtype: HT
 
 6.  프로젝트의 main.js 파일에 새 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) 개체를 만드는 코드를 추가합니다. 비디오 콘텐츠를 호스트하는 **MediaPlayer**를 전달합니다. 이 코드는 [WinJS.UI.processAll](https://msdn.microsoft.com/library/windows/apps/hh440975.aspx) 후에 실행되도록 배치해야 합니다.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
 
 7.  [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx) 또는 [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx) 메서드를 사용하여 서버에서 광고 예약을 요청하고 이를 **MediaPlayer** 타임라인에 삽입한 다음 비디오 미디어를 재생합니다.
 
   * Microsoft 광고 서버에서 광고 예약을 요청하는 권한을 받은 Microsoft 파트너인 경우 [requestSchedule](https://msdn.microsoft.com/library/windows/apps/mt732208.aspx)을 사용하고 Microsoft 담당자가 제공한 응용 프로그램 ID와 광고 단위 ID를 지정합니다. 이 메서드는 두 개의 함수 포인터가 성공 및 실패 사례를 각각 처리하도록 전달되는 비동기 구문인 **Promise** 형식을 사용합니다. 자세한 내용은 [JavaScript로 작성된 UWP의 비동기 패턴](https://msdn.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript)을 참조하세요.
 
-      > [!div class="tabbedCodeSnippets"]
       [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet3)]
 
   * Microsoft가 아닌 타사 광고 서버에서 광고 예약을 요청하려면 [requestScheduleByUrl](https://msdn.microsoft.com/library/windows/apps/mt732210.aspx)을 사용하고 서버 URL을 전달합니다. 이 메서드 또한 **Promise** 형식을 사용합니다.
 
-      > [!div class="tabbedCodeSnippets"]
       [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet4)]
 
     <span/>
@@ -98,5 +95,4 @@ translationtype: HT
 
 8.  재생하는 동안 앱 트랙을 진행시키거나 초기 광고 일치 프로세스 후 발생할 수 있는 오류에 대한 추가 이벤트를 처리할 수 있습니다. 다음 코드에서는 [onPodStart](https://msdn.microsoft.com/library/windows/apps/mt732206.aspx), [onPodEnd](https://msdn.microsoft.com/library/windows/apps/mt732205.aspx), [onPodCountdown](https://msdn.microsoft.com/library/windows/apps/mt732204.aspx), [onAdProgress](https://msdn.microsoft.com/library/windows/apps/mt732201.aspx), [onAllComplete](https://msdn.microsoft.com/library/windows/apps/mt732202.aspx) 및 [onErrorOccurred](https://msdn.microsoft.com/library/windows/apps/mt732203.aspx) 등 이러한 이벤트 중 일부를 보여 줍니다.
 
-  > [!div class="tabbedCodeSnippets"]
   [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]

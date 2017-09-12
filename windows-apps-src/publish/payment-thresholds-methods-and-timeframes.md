@@ -3,15 +3,17 @@ author: jnHs
 Description: "예상 지급 전달 시간, 적용 가능한 지급 임계값 및 지급을 받을 수 있는 Microsoft 마켓플레이스는 국가/지역 및 지급 계좌 형식에 따라 달라질 수 있습니다."
 title: "지급 임계값, 방법 및 기간"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
-ms.openlocfilehash: 2d2f586a1125f12c1034e002e2245e0fe155c1b4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0d0e421108de5daecb552c606b3f2c00b722fb89
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 
@@ -23,14 +25,15 @@ translationtype: HT
 
 일반적으로 해당 월의 15일에 지정된 월에 대한 결제 대금을 보내지만 계좌에 입금될 때까지 추가 시간이 필요합니다. 이 시간은 아래 설명과 같이 해당 계좌에 대해 사용하는 결제 방법에 따라 달라집니다. 
 
-> **참고** 아래에 표시된 일 수는 근사값이므로 시간은 더 길거나 짧아질 수 있습니다.
+> [!NOTE]
+> 아래에 표시된 일 수는 근사값이므로 시간은 더 길거나 짧아질 수 있습니다.
 
 
-| 결제 방법 | 지급 계좌에 입금되기까지의 일 수 |
+| 결제 방법     | 지급 계좌에 입금되기까지의 일 수     |
 |--------------------|--------------------------------------------|
-| PayPal | 1일(영업일 기준) |    
-| ACH/SEPA |2-3일(영업일 기준) |
-| 전신 송금 | 7-10일(영업일 기준) |
+| PayPal             | 1일(영업일 기준)                             | 
+| ACH/SEPA           | 2-3일(영업일 기준)                          |
+| 전신 송금      | 7-10일(영업일 기준)                         |
 
 &nbsp;
 
@@ -38,7 +41,8 @@ translationtype: HT
 
 ## <a name="payment-thresholds-and-methods"></a>지급 임계값 및 방법
 
-> **참고** 지급 임계값은 USD 단위로 표시됩니다. 일부 마켓플레이스에서는 현지 통화로 환산한 동일한 금액이 사용됩니다. 
+> [!NOTE]
+> 지급 임계값은 여기에서 USD 단위로 표시됩니다. 일부 마켓플레이스에서는 현지 통화로 환산한 동일한 금액이 사용됩니다. 
 
 - [Windows 스토어](#windows-store)
 - [Microsoft Advertising](#microsoft-advertising)

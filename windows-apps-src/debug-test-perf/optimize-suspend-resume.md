@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: "일시 중단/다시 시작 최적화"
 description: "프로세스 수명 시스템의 사용을 간소화하여 일시 중단 또는 종료 후 효율적으로 다시 시작하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 491ce616f557d26ad7a5fdf1c068f1c9784bd046
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f9e045c381fc6c51a769be31403114ad15cf06bd
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="optimize-suspendresume"></a>일시 중단/다시 시작 최적화
 

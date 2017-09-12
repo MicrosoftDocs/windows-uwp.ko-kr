@@ -7,14 +7,16 @@ label: Screen sizes and break points
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: cd6ba1378aeddb44aa66c53088f32286aff8d29f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b56cdeeb9a3c3d3ca89e19d8057e3d93241e6c3c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="screen-sizes-and-break-points-for-responsive-design"></a>반응형 디자인에 대한 화면 크기 및 중단점
 
@@ -78,7 +80,7 @@ Windows 10 에코시스템에서는 장치 대상 및 화면 크기가 너무 �
 <li>접근성 향상을 위해 창의 맨 아래에 [앱 바](../controls-and-patterns/app-bars.md)를 도킹합니다.</li>
 <li>한 번에 하나의 열/영역을 사용합니다.</li>
 <li>아이콘을 사용하여 검색을 나타냅니다(검색 상자를 표시하지 않음).</li>
-<li>[탐색 창](../controls-and-patterns/nav-pane.md)을 오버레이 모드로 전환하여 화면 공간 절약</li>
+<li>[탐색 창](../controls-and-patterns/navigationview.md)을 오버레이 모드로 전환하여 화면 공간 절약</li>
 <li>[마스터 세부 정보 패턴](../controls-and-patterns/master-details.md)을 사용하는 경우 누적된 프레젠테이션 모드를 사용하여 화면 공간을 절약할 수 있습니다.</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -87,7 +89,7 @@ Windows 10 에코시스템에서는 장치 대상 및 화면 크기가 너무 �
 <li>[앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
 <li>최대 2개의 열/영역</li>
 <li>검색 상자를 표시합니다.</li>
-<li>좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/nav-pane.md)을 작은 모드로 전환합니다.</li>
+<li>좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 작은 모드로 전환합니다.</li>
 <li>[TV 환경](http://go.microsoft.com/fwlink/?LinkId=760736)에 맞는 추가 조정을 고려합니다.</li>
 </ul></td>
 <td style="vertical-align:top;"><ul>
@@ -96,7 +98,7 @@ Windows 10 에코시스템에서는 장치 대상 및 화면 크기가 너무 �
 <li>[앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
 <li>최대 3개의 열/영역</li>
 <li>검색 상자를 표시합니다.</li>
-<li>항상 표시되도록 [탐색 창](../controls-and-patterns/nav-pane.md)을 도킹 모드로 전환합니다.</li>
+<li>항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 도킹 모드로 전환합니다.</li>
 </ul></td>
 </tr>
 </tbody>

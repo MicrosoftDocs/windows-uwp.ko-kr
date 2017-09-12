@@ -1,17 +1,19 @@
 ---
-author: eliotcowley
+author: drewbatgit
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼)앱에 PlayReady 하드웨어 기반 DRM(디지털 권한 관리)을 추가하는 방법의 개요를 제공합니다."
 title: "하드웨어 DRM"
-ms.author: elcowle
+ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ba561b340796a175815a37f5c3d8d4c125ef35c4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 98e1732b3c32f302a37899c58e94f7342f8221f0
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="hardware-drm"></a>하드웨어 DRM
 

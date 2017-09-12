@@ -9,17 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 364edc93c52d3c7c8cbe5f1a85c8ca751eb44b35
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 65ee6cd32e1fdb6900c859725b8deb6b5031d297
+ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/24/2017
 ---
-
 # <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -30,7 +29,7 @@ ms.lasthandoff: 02/07/2017
 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 
 > [!Important]
->  이 문서는 Out-of-process 백그라운드 작업과 관련이 있습니다. In-process 백그라운드 작업은 매니페스트에서 선언되지 않습니다.
+>  이 문서는 Out-of-process 백그라운드 작업과 관련이 있습니다. In-process 백그라운드 작업은 매니페스트에 선언되지 않습니다.
 
 Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 합니다. 그렇지 않으면 앱에서 등록할 수 없습니다(예외가 발생함). 또한 인증을 통과하려면 응용 프로그램 매니페스트에서 Out-of-process 백그라운드 작업을 선언해야 합니다.
 
@@ -62,8 +61,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
  </Application>
 ```
 
-## <a name="add-a-background-task-extension"></a>백그라운드 작업 확장 추가
-
+## <a name="add-a-background-task-extension"></a>백그라운드 작업 확장 추가  
 
 첫 번째 백그라운드 작업을 선언합니다.
 
@@ -108,12 +106,11 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 </Extension>
 ```
 
-
-## <a name="add-additional-background-task-extensions"></a>백그라운드 작업 실행 추가
+### <a name="add-multiple-background-task-extensions"></a>여러 백그라운드 작업 확장 추가
 
 앱에서 등록한 각 추가 백그라운드 작업 클래스에 대해 2단계를 반복합니다.
 
-다음 예제는 [백그라운드 작업 샘플]( http://go.microsoft.com/fwlink/p/?linkid=227509)의 전체 Application 요소입니다. 총 3개의 트리거 유형이 있는 백그라운드 작업 클래스 2개를 사용하는 방법을 보여 줍니다. 응용 프로그램 매니페스트에서 백그라운드 작업을 선언하려면 이 예제의 Extensions 섹션을 복사하고 필요에 따라 수정합니다.
+다음 예제는 [백그라운드 작업 샘플]( http://go.microsoft.com/fwlink/p/?linkid=227509)의 전체 Application 요소입니다. 총 3개의 트리거 유형이 있는 백그라운드 작업 클래스 2개를 사용하는 방법을 보여 줍니다. 응용 프로그램 매니페스트에서 백그라운드 작업을 선언하려면 이 예의 Extensions 섹션을 복사하고 필요에 따라 수정합니다.
 
 ```xml
 <Applications>
@@ -154,17 +151,22 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 </Applications>
 ```
 
-## <a name="declare-your-background-task-to-run-in-a-different-process"></a>다른 프로세스에서 실행되도록 백그라운드 작업 선언
+## <a name="declare-where-your-background-task-will-run"></a>어디에서 백그라운드 작업이 실행될지 선언
 
-Windows 10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe(백그라운드 작업이 기본적으로 실행되는 프로세스)가 아닌 다른 프로세스에서 백그라운드 작업을 실행할 수 있습니다.  포그라운드 응용 프로그램과 같은 프로세스에서 실행하거나 동일한 응용 프로그램에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe의 인스턴스에서 실행되는 두 가지 옵션이 있습니다.  
+어디에서 백그라운드 작업이 실행될지 지정할 수 있습니다.
 
-### <a name="run-in-the-foreground-application"></a>포그라운드 응용 프로그램에서 실행
+* 백그라운드 작업은 기본적으로 BackgroundTaskHost.exe 프로세스에서 실행됩니다.
+* 포그라운드 응용 프로그램과 동일한 프로세스에서
+* 여러 백그라운드 작업을 동일한 호스팅 프로세스에 넣거나 다른 프로세스로 나누려면 `ResourceGroup`을 사용합니다.
+* 새 트리거가 실행될 때마다 리소스 제한을 가져오는 새 프로세스로 백그라운드 프로세스를 실행하려면 `SupportsMultipleInstances`를 사용합니다.
 
-다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다. `Executable` 특성에 유의하세요.
+### <a name="run-in-the-same-process-as-your-foreground-application"></a>포그라운드 응용 프로그램과 동일한 프로세스에서 실행
+
+다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 XML 예입니다.
 
 ```xml
 <Extensions>
-    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask" Executable="$targetnametoken$.exe">
+    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask">
         <BackgroundTasks>
             <Task Type="systemEvent" />
         </BackgroundTasks>
@@ -172,10 +174,9 @@ Windows 10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.e
 </Extensions>
 ```
 
-> [!Note]
-> 백그라운드 작업에는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 같이 필요한 Executable 요소만 사용하세요.  
+**EntryPoint**를 지정하면 응용 프로그램에서 트리거가 실행될 때 지정된 메서드에 대한 콜백을 받습니다. **EntryPoint**를 지정하지 않으면 응용 프로그램에서 [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)를 통해 콜백을 받습니다.  자세한 내용은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
 
-### <a name="run-in-a-different-background-host-process"></a>다른 백그라운드 호스트 프로세스에서 실행
+### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>어디에서 ResourceGroup 특성을 사용하여 백그라운드 작업을 실행할지 지정합니다.
 
 다음은 동일한 앱에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다. 함께 실행되는 백그라운드 작업을 식별하는 `ResourceGroup` 특성에 유의하세요.
 
@@ -209,11 +210,33 @@ Windows 10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.e
 </Extensions>
 ```
 
+### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>SupportsMultipleInstances 특성을 사용하여 트리거가 실행될 때마다 새 프로세스에서 실행
+
+이 예에서는 새 트리거가 실행될 때마다 자체 리소스 제한(메모리 및 CPU)을 가져오는 새 프로세스에서 실행되는 백그라운드 작업을 선언합니다. `SupportsMultipleInstances`를 사용하면 이 동작이 활성화됩니다. 이 특성을 사용하려면 SDK 버전 '10.0.15063'(Windows 10 크리에이터스 업데이트) 이상을 대상으로 해야 합니다.
+
+```xml
+<Package
+    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+    ...
+    <Applications>
+        <Application ...>
+            ...
+            <Extensions>
+                <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimerTriggerTask">
+                    <BackgroundTasks uap4:SupportsMultipleInstances=“True”>
+                        <Task Type="timer" />
+                    </BackgroundTasks>
+                </Extension>
+            </Extensions>
+        </Application>
+    </Applications>
+```
+
+> [!NOTE]
+> `SupportsMultipleInstances`와 함께 `ResourceGroup` 또는 `ServerName`을 지정할 수 없습니다.
 
 ## <a name="related-topics"></a>관련 항목
-
 
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-

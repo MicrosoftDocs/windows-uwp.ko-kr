@@ -1,50 +1,58 @@
 ---
 author: Jwmsft
 Description: "이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다."
-title: "스크롤 막대에 대한 지침"
+title: "스크롤 뷰어 컨트롤"
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
-label: Scroll bars
+label: Scrollbars
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8e167fd07d589b8ad159fe3cb535dd884eeab0ef
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: Abarlow, pagildea
+design-contact: ksulliv
+dev-contact: regisb
+doc-status: Published
+ms.openlocfilehash: b60842d25c54c15c7c478e1e5183ecd3317bb82c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
-# <a name="scroll-bars"></a>스크롤 막대
+# <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다.
+UI가 너무 많아 한 영역에 다 표시할 수 없는 경우 스크롤 뷰어 컨트롤을 사용합니다.
 
-스크롤 뷰어 컨트롤은 뷰포트에 맞춰질 만큼 많은 콘텐츠와 한두 개 스크롤 막대로 구성됩니다. 터치 제스처를 사용하여 이동 및 확대/축소할 수 있고(스크롤 막대는 조작 중에만 사라짐) 포인터를 사용하여 스크롤할 수 있습니다. 긋기 제스처는 관성을 사용하여 이동합니다.
+> **중요 API**: [ScrollViewer 클래스](https://msdn.microsoft.com/library/windows/apps/br209527), [ScrollBar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)
 
-**참고**  Windows에는 사용자의 입력 모드를 기반으로 하는 두 개의 모두 보기 시각화(터치 또는 게임 패드 사용 시 스크롤 표시기 및 마우스, 키보드, 펜 등의 기타 입력 장치용 대화형 스크롤 막대)가 있습니다.
+스크롤 뷰어를 사용하면 콘텐츠가 뷰포트(표시 영역)의 경계를 넘어 확장될 수 있습니다. 사용자는 마우스 또는 펜 커서를 사용하여 스크롤 뷰어의 스크롤 막대를 조작하거나 터치, 마우스휠, 키보드 또는 게임 패드를 통해 스크롤 뷰어 표면을 조작하여 이 콘텐츠에 도달합니다. 이 이미지는 스크롤 뷰어 컨트롤의 몇 가지 예를 보여 줍니다.
+
+![표준 스크롤 막대 컨트롤을 보여 주는 스크린샷](images/ScrollBar_Standard.jpg)
+
+스크롤 뷰어의 스크롤 막대는 다음 그림과 같이 상황에 따라 이동 표시기(왼쪽)와 기본 스크롤 막대(오른쪽)라는 2가지 시각화를 사용합니다.
 
 ![표준 스크롤 막대 및 이동 표시기 컨트롤의 모양 샘플](images/SCROLLBAR.png)
 
+스크롤 뷰어는 사용자의 입력 방식을 인식하고 이를 사용하여 표시할 시각화를 결정합니다.
+
+* 스크롤 막대를 직접 조작하지 않고 터치 등으로 영역을 스크롤하는 경우 현재 스크롤 위치 표시와 함께 이동 표시기가 나타납니다.
+* 마우스나 펜 커서가 이동 표시기 위로 이동하면 이동 표시기가 기존 스크롤 막대로 변형됩니다.  스크롤 막대 위치 조정 컨트롤을 끌어 스크롤 영역을 조작합니다.
+
+<!--
 <div class="microsoft-internal-note">
-[Design Depot](http://designdepot/DesignDepot.FrontEnd/#/ML/Dashboard/1805)에서 전체 검토 보기
+See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/0/dv/?t=Windows|Controls|ScrollControls&f=RS2
 </div>
+-->
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)</li>
-<li>[**ScrollBar 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</li>
-</ul>
-</div>
+![작동 중인 스크롤 막대](images/conscious-scroll.gif)
 
+> [!NOTE]
+> 스크롤 막대는 ScrollViewer 내의 콘텐츠 위쪽에 16px로 겹쳐서 표시됩니다. 훌륭한 UX 디자인을 보장하려면 스크롤 막대가 겹쳐서 대화형 콘텐츠가 잘 보이지 않는 일이 없도록 합니다. 또한 UX가 겹치지 않게 하려면 뷰포트의 가장자리에 스크롤 막대를 위한 16px 패딩을 남겨 둡니다.
 
-## <a name="examples"></a>예제
-
-[**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx)를 사용하면 실제 크기보다 작은 영역에 콘텐츠를 표시할 수 있습니다. 스크롤 뷰어의 콘텐츠를 완전히 볼 수 없는 경우 스크롤 뷰어에 표시되는 스크롤 막대를 사용하여 표시되는 콘텐츠 영역을 이동할 수 있습니다. 스크롤 뷰어의 모든 콘텐츠가 포함된 영역은 *범위*입니다. 표시되는 콘텐츠 영역은 *뷰포트*입니다.
-
-![표준 스크롤 막대 컨트롤을 보여 주는 스크린샷](images/ScrollBar_Standard.jpg)
 
 ## <a name="create-a-scroll-viewer"></a>스크롤 뷰어 만들기
 페이지에 세로 스크롤을 추가하려면 스크롤 뷰어에 페이지 콘텐츠를 래핑하세요.
@@ -64,6 +72,7 @@ translationtype: HT
     </ScrollViewer>
 </Page>
 ```
+
 이 XAML은 스크롤 뷰어에 이미지를 배치하고 확대/축소를 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```xaml
@@ -76,15 +85,16 @@ translationtype: HT
 
 ## <a name="scrollviewer-in-a-control-template"></a>컨트롤 템플릿의 ScrollViewer
 
-ScrollViewer 컨트롤은 다른 컨트롤의 복합 파트로 사용되는 것이 일반적입니다. ScrollViewer 파트는 호스트 컨트롤의 레이아웃 공간이 확장된 콘텐츠 크기보다 더 작게 제한되는 경우에만 지원용 [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) 클래스와 더불어 스크롤 막대와 함께 뷰포트를 표시합니다. 종종 목록에도 이러한 경우가 발생하므로 [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) 템플릿에는 항상 ScrollViewer가 포함됩니다. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) 및 [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)의 템플릿에도 ScrollViewer가 포함됩니다.
+ScrollViewer 컨트롤은 다른 컨트롤의 복합 파트로 사용되는 것이 일반적입니다. ScrollViewer 파트는 호스트 컨트롤의 레이아웃 공간이 확장된 콘텐츠 크기보다 더 작게 제한되는 경우에만 지원용 [ScrollContentPresenter](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) 클래스와 더불어 스크롤 막대와 함께 뷰포트를 표시합니다. 종종 목록에도 이러한 경우가 발생하므로 [ListView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) 및 [GridView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) 템플릿에는 항상 ScrollViewer가 포함됩니다. [TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) 및 [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)의 템플릿에도 ScrollViewer가 포함됩니다.
 
-**ScrollViewer** 파트가 컨트롤에 있는 경우 대체로 호스트 컨트롤에 콘텐츠를 스크롤할 수 있게 하는 특정 입력 이벤트 및 조작에 대한 기본 제공 이벤트 처리가 있습니다. 예를 들어 GridView가 살짝 밀기 제스처를 해석하고 이로 인해 콘텐츠가 가로로 스크롤됩니다. 호스트 컨트롤이 수신하는 입력 이벤트와 원시 조작은 컨트롤에 의해 처리된 것으로 간주되며 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx)와 같은 하위 수준 이벤트가 발생하지 않고 부모 컨테이너로 버블링되지도 않습니다. 컨트롤 클래스 및 이벤트에 대한 **On*** 가상 메서드를 재정의하거나 컨트롤을 다시 템플릿으로 작성하여 기본 제공 컨트롤 처리의 일부를 변경할 수 있습니다. 하지만 두 경우 모두 일반적으로 컨트롤이 이벤트와 사용자의 입력 동작 및 제스처에 예상된 방식으로 반응하도록 하는 원래 기본 동작을 재현하는 것은 쉽지 않습니다. 따라서 해당 입력 이벤트를 반드시 발생해야 하는지 여부를 고려해야 합니다. 컨트롤에 의해 처리되지 않는 다른 입력 이벤트 또는 제스처가 있는지 조사하고 앱 또는 컨트롤 조작 디자인에 사용하는 것이 좋습니다.
+**ScrollViewer** 파트가 컨트롤에 있는 경우 대체로 호스트 컨트롤에 콘텐츠를 스크롤할 수 있게 하는 특정 입력 이벤트 및 조작에 대한 기본 제공 이벤트 처리가 있습니다. 예를 들어 GridView가 살짝 밀기 제스처를 해석하고 이로 인해 콘텐츠가 가로로 스크롤됩니다. 호스트 컨트롤이 수신하는 입력 이벤트와 원시 조작은 컨트롤에 의해 처리된 것으로 간주되며 [PointerPressed](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx)와 같은 하위 수준 이벤트가 발생하지 않고 부모 컨테이너로 버블링되지도 않습니다. 컨트롤 클래스 및 이벤트에 대한 **On*** 가상 메서드를 재정의하거나 컨트롤을 다시 템플릿으로 작성하여 기본 제공 컨트롤 처리의 일부를 변경할 수 있습니다. 하지만 두 경우 모두 일반적으로 컨트롤이 이벤트와 사용자의 입력 동작 및 제스처에 예상된 방식으로 반응하도록 하는 원래 기본 동작을 재현하는 것은 쉽지 않습니다. 따라서 해당 입력 이벤트를 반드시 발생해야 하는지 여부를 고려해야 합니다. 컨트롤에 의해 처리되지 않는 다른 입력 이벤트 또는 제스처가 있는지 조사하고 앱 또는 컨트롤 조작 디자인에 사용하는 것이 좋습니다.
 
 ScrollViewer를 포함하는 컨트롤이 ScrollViewer 파트 내에 있는 일부 동작과 속성에 영향을 줄 수 있도록 ScrollViewer는 스타일에서 설정하고 템플릿 바인딩에 사용할 수 있는 많은 XAML 연결 속성을 정의합니다. 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../xaml-platform/attached-properties-overview.md)를 참조하세요.
 
 **ScrollViewer XAML 연결 속성**
 
 ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
+
 - [ScrollViewer.BringIntoViewOnFocusChange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.bringintoviewonfocuschange.aspx)
 - [ScrollViewer.HorizontalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility.aspx)
 - [ScrollViewer.HorizontalScrollMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode.aspx)
@@ -102,7 +112,8 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 이러한 XAML 연결 속성은 ScrollViewer가 암시적이며(예: ScrollViewer가 ListView 또는 GridView의 기본 템플릿에 있는 경우) 템플릿 파트에 액세스하지 않고 컨트롤의 스크롤 동작에 영향을 주려는 경우에 사용됩니다.
 
-예를 들어 다음은 ListView의 기본 제공 스크롤 뷰어에 세로 스크롤 막대가 항상 표시되도록 하는 방법입니다.
+예를 들어, 다음은 ListView의 기본 제공 스크롤 뷰어에 세로 스크롤 막대가 항상 표시되도록 하는 방법입니다.
+
 ```xaml
 <ListView ScrollViewer.VerticalScrollBarVisibility="Visible"/>
 ```
@@ -123,4 +134,5 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 ## <a name="related-topics"></a>관련 항목
 
 **개발자용(XAML)**
-* [**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)
+
+* [ScrollViewer 클래스](https://msdn.microsoft.com/library/windows/apps/br209527)

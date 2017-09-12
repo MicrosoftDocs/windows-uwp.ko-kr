@@ -6,14 +6,16 @@ ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 34c3aab3e9a04eb535014182c0dbc8c140670b89
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f92791a1c98e87d41c26f8f80b31870aeffe2592
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 
@@ -21,19 +23,12 @@ translationtype: HT
 
 MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 비디오 콘텐츠의 컨트롤을 관리하기 위해 사용자 지정 가능한 XAML 전송 컨트롤이 있습니다. 여기에서 MediaTransportControls 템플릿을 사용자 지정하는 방법을 설명합니다. 오버플로 메뉴에 대한 작업을 수행하고 사용자 지정 단추를 추가하며 슬라이더를 수정하는 방법을 살펴보겠습니다.
 
+> **중요 API**: [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx), [MediaPlayerElement.AreTransportControlsEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx), [MediaTransportControls](https://msdn.microsoft.com/library/windows/apps/dn278677)
+
 시작하기 전에 MediaPlayerElement 및 MediaTransportControls 클래스에 익숙해야 합니다. 자세한 내용은 MediaPlayerElement 컨트롤 가이드를 참조하세요.
 
 > [!TIP]
 > 이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)에 기반을 두고 있습니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
-
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)</li>
-<li>[**MediaPlayerElement.AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx) </li>
-<li>[**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)</li>
-</ul>
-</div>
 
 > [!NOTE]
 > **MediaPlayerElement**는 Windows 10, 버전 1607 이상에서만 사용 가능합니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지의 모든 예제는 **MediaElement**에서도 작동합니다.
@@ -80,13 +75,16 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
 **MediaTransportControls 기본 스타일 및 템플릿을 사용자 지정하려면**
 1. MediaTransportControls 스타일 및 템플릿의 기본 스타일을 프로젝트의 ResourceDictionary로 복사합니다.
 2. Style에 x:Key 값을 지정하여 다음과 같이 식별합니다.
+
 ```xaml
 <Style TargetType="MediaTransportControls" x:Key="myTransportControlsStyle">
     <!-- Style content ... -->
 </Style>
 ```
+
 3. MediaTransportControls와 함께 MediaPlayerElement를 UI에 추가합니다.
 4. 여기에 나와 있는 것처럼 MediaTransportControls 요소의 Style 속성을 사용자 지정 Style 리소스로 설정합니다.
+
 ```xaml
 <MediaPlayerElement AreTransportControlsEnabled="True">
     <MediaPlayerElement.TransportControls>
@@ -106,20 +104,25 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
     - Visual Studio에서 프로젝트 &gt; 클래스 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
     - 새 항목 추가 대화 상자에서 클래스 파일의 이름을 입력한 다음 추가를 클릭합니다. 미디어 전송 컨트롤 샘플에서 클래스 이름은 `CustomMediaTransportControls`입니다.
 2. MediaTransportControls 클래스에서 파생되도록 클래스 코드를 수정합니다.
+
 ```csharp
 public sealed class CustomMediaTransportControls : MediaTransportControls
 {
 }
 ```
+
 3. [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx)의 기본 스타일을 프로젝트의 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.resourcedictionary.aspx)로 복사합니다. 이는 수정하는 스타일 및 템플릿입니다.
 (미디어 전송 컨트롤 샘플에서 "Themes"라는 새 폴더가 생성되고 generic.xaml이라는 ResourceDictionary 파일이 추가됩니다.
 4. 스타일의 [**TargetType**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.targettype.aspx)을 새 사용자 지정 컨트롤 유형으로 변경합니다. (샘플에서 TargetType이 `local:CustomMediaTransportControls`로 변경됩니다.)
+
 ```xaml
 xmlns:local="using:CustomMediaTransportControls">
 ...
 <Style TargetType="local:CustomMediaTransportControls">
 ```
+
 5. 사용자 지정 클래스의 [**DefaultStyleKey**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.defaultstylekey.aspx)를 설정합니다. 이렇게 하면 사용자 지정 클래스가 `local:CustomMediaTransportControls`의 TargetType과 함께 Style을 사용합니다.
+
 ```csharp
 public sealed class CustomMediaTransportControls : MediaTransportControls
 {
@@ -129,7 +132,9 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
     }
 }
 ```
+
 6. [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)를 XAML 태그에 추가하고 사용자 지정 전송 컨트롤을 여기에 추가합니다. 한 가지 주의할 점은 기본 단추를 숨기고 표시하고, 사용하지 않도록 설정하고, 사용하도록 설정하는 API는 사용자 지정된 템플릿에서 여전히 작동한다는 것입니다.
+
 ```xaml
 <MediaPlayerElement Name="MediaPlayerElement1" AreTransportControlsEnabled="True" Source="video.mp4">
     <MediaPlayerElement.TransportControls>
@@ -145,6 +150,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
     </MediaPlayerElement.TransportControls>
 </MediaPlayerElement>
 ```
+
 이제 컨트롤 스타일 및 템플릿을 수정하여 사용자 지정 컨트롤의 모양을 업데이트하고 제어 코드를 수정하여 해당 동작을 업데이트할 수 있습니다.
 
 ### <a name="working-with-the-overflow-menu"></a>오버플로 메뉴에 대한 작업
@@ -158,6 +164,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 **오버플로 메뉴로 명령을 이동하려면**
 1. 컨트롤 템플릿에서 `MediaControlsCommandBar`라는 CommandBar 요소를 찾습니다.
 2. [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) 섹션을 CommandBar에 대한 XAML에 추가합니다. 이 섹션을 [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx)의 닫는 태그 뒤에 넣습니다.
+
 ```xaml
 <CommandBar x:Name="MediaControlsCommandBar" ... >  
   <CommandBar.PrimaryCommands>
@@ -178,10 +185,12 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
   </CommandBar.SecondaryCommands>
 </CommandBar>
 ```
+
 3. 명령으로 이 메뉴를 채우려면 원하는 [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) 개체에 대한 XAML을 PrimaryCommands에서 잘라내어 SecondaryCommands에 붙여넣습니다. 이 예제에서 `PlaybackRateButton`를 오버플로 메뉴로 이동합니다.
 
 4. 다음과 같이 단추에 레이블을 추가하고 스타일 지정 정보를 제거합니다.
 오버플로 메뉴는 텍스트 단추로 구성되어 있기 때문에 단추에 텍스트 레이블을 추가하고 단추의 너비와 높이를 설정하는 스타일도 제거해야 합니다. 그러지 않으면 단추가 오버플로 메뉴에 제대로 나타나지 않습니다.
+
 ```xaml
 <CommandBar.SecondaryCommands>
     <AppBarButton x:Name='PlaybackRateButton'
@@ -199,6 +208,7 @@ MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 �
 
 **사용자 지정 명령 단추를 추가하려면**
 1. AppBarButton 개체를 만들고 컨트롤 템플릿의 CommandBar에 추가합니다.
+
 ```xaml
 <AppBarButton x:Name="LikeButton"
               Icon="Like"
@@ -206,11 +216,13 @@ MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 �
               MediaTransportControlsHelper.DropoutOrder="3"
               VerticalAlignment="Center" />
 ```
+
     You must add it to the CommandBar in the appropriate location. (For more info, see the Working with the overflow menu section.) How it's positioned in the UI is determined by where the button is in the markup. For example, if you want this button to appear as the last element in the primary commands, add it at the very end of the primary commands list.
 
     You can also customize the icon for the button. For more info, see the [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) reference.
 
 2. [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) 재정의에서, 템플릿의 단추를 가져와서 해당 [**Click**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트에 대한 처리기를 등록합니다. 이 코드는 `CustomMediaTransportControls` 클래스에 포함됩니다.
+
 ```csharp
 public sealed class CustomMediaTransportControls :  MediaTransportControls
 {
@@ -230,6 +242,7 @@ public sealed class CustomMediaTransportControls :  MediaTransportControls
 
 3. Click 이벤트 처리기에 단추를 클릭할 때 발생하는 작업을 수행하는 코드를 추가합니다.
 다음은 해당 클래스의 전체 코드입니다.
+
 ```csharp
 public sealed class CustomMediaTransportControls : MediaTransportControls
 {

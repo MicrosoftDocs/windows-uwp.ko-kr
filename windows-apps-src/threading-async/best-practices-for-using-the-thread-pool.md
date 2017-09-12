@@ -1,17 +1,19 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
 title: "스레드 풀을 사용하기 위한 모범 사례"
 description: "이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다."
-ms.author: twhitney
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스레드, 스레드 풀"
-ms.openlocfilehash: db5231c925575bef21b3d412feda367cd89fe7f4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e4203a613fdc1af64a8234ac6fef6b248c01e15c
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>스레드 풀을 사용하기 위한 모범 사례
 

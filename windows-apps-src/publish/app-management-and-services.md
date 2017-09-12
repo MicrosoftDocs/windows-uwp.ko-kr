@@ -1,21 +1,23 @@
 ---
 author: jnHs
-Description: "Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보를 관리 및 확인하고, 푸시 알림, A/B 테스트, 지도와 같은 서비스를 구성합니다."
+Description: "Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보를 관리 및 확인하고, 알림, A/B 테스트, 지도와 같은 서비스를 구성합니다."
 title: "앱 관리 및 서비스"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 48e48d1a350b01777c1d7e5ed4ab1f82b1d66d26
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2ff75a5e85a37f4f47b6b32f3e8338524752bb2f
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
-Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보를 관리 및 확인하고, 푸시 알림, A/B 테스트, 지도와 같은 서비스를 구성할 수 있습니다.
+Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보를 관리 및 확인하고, 알림, A/B 테스트, 지도와 같은 서비스를 구성합니다.
 
 대시보드에서 앱 작업을 수행할 때 왼쪽 탐색 메뉴에는 **서비스** 및 **앱 관리**에 대한 섹션이 표시됩니다. 이들 섹션을 확장하여 아래 설명된 기능에 액세스할 수 있습니다.
 
@@ -23,9 +25,9 @@ Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보�
 
 **서비스** 섹션을 통해 앱에 대한 다양한 서비스를 관리할 수 있습니다.
 
-### <a name="push-notifications"></a>푸시 알림
+## <a name="push-notifications"></a>푸시 알림
 
-**푸시 알림** 섹션에서는 대상 푸시 알림을 만들어 앱 고객에게 보낼 수 있습니다. 푸시 알림을 모든 앱 고객이나 [고객층](create-customer-segments.md)에서 정의한 기준을 충족하는 Windows 10의 일부 고객에게 전송할 수 있습니다. 자세한 내용은 [앱의 고객에게 대상 푸시 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.
+**푸시 알림** 섹션에서는 알림을 만들어 앱 고객에게 보낼 수 있습니다. 모든 앱 고객이나 [고객층](create-customer-segments.md)에서 정의한 기준을 충족하는 Windows 10의 일부 고객에게 알림을 전송할 수 있습니다. 자세한 내용은 [앱의 고객에게 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.
 
 앱의 패키지 유형 및 특정 요구 사항에 따라 왼쪽 탐색 메뉴의 **WNS/MPNS** 페이지를 클릭하여 푸시 알림에 대한 다음 옵션 중 하나를 사용할 수도 있습니다. 
 
@@ -35,47 +37,49 @@ Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보�
 
 -   **MPNS(Microsoft 푸시 알림 서비스)**를 Windows Phone의 .xap 패키지와 함께 사용할 수 있습니다. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. MPNS를 사용하고 있으면 인증서를 **푸시 알림** 페이지에 제공된 필드로 업로드해야 합니다. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](http://go.microsoft.com/fwlink/p/?LinkId=528736)을 참조하세요.
 
-### <a name="experimentation"></a>실험
+## <a name="experimentation"></a>실험
 
 **실험** 페이지를 사용하여 A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에 대한 실험을 만들어 실행합니다. A/B 테스트에서 모든 고객에 대해 변경하기 전에 일부 고객의 앱에서 기능 변경(또는 변형)의 효과를 측정합니다.
 
 자세한 내용은 [A/B 테스트로 앱 실험 실행](../monetize/run-app-experiments-with-a-b-testing.md)을 참조하세요.
 
-### <a name="maps"></a>지도
+## <a name="maps"></a>지도
 
 Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도 서비스 응용 프로그램 ID와 토큰을 앱 코드에 포함해야 합니다. **서비스** 섹션의 **지도** 페이지에서 이 토큰을 가져올 수 있습니다.
 
-> **참고**  Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. 자세한 내용은 [맵 인증 키 요청](https://msdn.microsoft.com/library/windows/apps/mt219694)을 참조하세요.
+> [!NOTE]
+> Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. 자세한 내용은 [맵 인증 키 요청](https://msdn.microsoft.com/library/windows/apps/mt219694)을 참조하세요.
 
 자세한 내용은 [지도 서비스 사용](use-map-services.md)을 참조하세요.
 
-### <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
+## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
 Windows 스토어 컬렉션 API 및 Windows 스토어 구입 API를 사용하여 앱과 추가 기능에 대한 소유권 정보에 액세스하려면 관련 Azure AD 클라이언트 ID를 여기에 입력해야 합니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
 
-자세한 내용은 [서비스에서 제품 보기 및 권한 부여](https://msdn.microsoft.com/library/windows/apps/mt609002)를 참조하세요.
+자세한 내용은 [서비스에서 제품 권리 유형 관리](../monetize/view-and-grant-products-from-a-service.md)를 참조하세요.
 
 ## <a name="app-management"></a>앱 관리
 
 **앱 관리** 섹션을 통해 ID 및 패키지 세부 정보를 보고 앱 이름을 관리할 수 있습니다.
 
-### <a name="app-identity"></a>앱 ID
+## <a name="app-identity"></a>앱 ID
 
 이 페이지에서는 앱 목록 링크의 URL을 포함하여 앱의 고유 ID에 관련된 세부 정보를 보여 줍니다.
 
 자세한 내용은 [앱 ID 세부 정보 보기](view-app-identity-details.md)를 참조하세요.
 
-### <a name="manage-app-names"></a>앱 이름 관리
+## <a name="manage-app-names"></a>앱 이름 관리
 
 여기에서는 앱용으로 예약한 모든 이름을 볼 수 있습니다. 여기에서 추가 이름을 예약하거나 더 사용하지 않는 이름을 삭제할 수 있습니다.
 
 자세한 내용은 [앱 이름 관리](manage-app-names.md)를 참조하세요.
 
-### <a name="current-packages"></a>현재 패키지
+## <a name="current-packages"></a>현재 패키지
 
 이 페이지에서는 모든 게시된 패키지에 관련된 세부 정보를 볼 수 있습니다.
 
-> **참고**  앱이 게시되고 나서 여기에 모든 정보가 표시됩니다.
+> [!NOTE]
+> 앱이 게시되고 나서 여기에 모든 정보가 표시됩니다.
 
 각 패키지의 이름, 버전 및 아키텍처가 표시됩니다. **세부 정보**를 클릭하여 지원되는 언어, 앱 기능 및 파일 크기와 같은 추가 정보를 표시합니다. 각 패키지에 대해 표시되는 정보는 대상 운영 체제 및 기타 요소에 따라 다를 수 있습니다. 
 

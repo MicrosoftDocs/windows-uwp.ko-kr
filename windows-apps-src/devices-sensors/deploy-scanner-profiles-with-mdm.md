@@ -1,11 +1,13 @@
 ---
 title: "MDM을 사용한 바코드 스캐너 프로필 배포"
-author: mukin
+author: PatrickFarley
 description: "MDM 서버를 사용하여 바코드 스캐너 프로필을 배포할 수 있습니다."
 ms.assetid: 99ED3BD8-022C-40C2-9C65-F599186548FE
-ms.openlocfilehash: 51d3b90dd7f202fd86285bb3f95c78ded4a8b6d8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a63a09e64b6e2b935963a3f49ed7cbc6b82bdcef
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="deploy-barcode-scanner-profiles-with-mdm"></a>MDM을 사용한 바코드 스캐너 프로필 배포
 

@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
 title: "디바이스 정보 속성"
 description: "각 디바이스에는 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 DeviceInformation 속성이 연결되어 있습니다."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 68e427a4d94b7c599e1fec375f0f66b5ff2704e0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 37b88b501c3bdb0f38b04f2f7b6d936cb0d201b4
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="device-information-properties"></a>디바이스 정보 속성
 
@@ -77,7 +79,7 @@ translationtype: HT
 |-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System.Devices.Category**       | 문자열\[\] | 디바이스가 속한 범주에 대한 설명 목록입니다. 이 목록은 단수 범주로 제공됩니다. 예를 들면 "Display", "Phone" 또는 "Audio device"입니다.  |
 | **System.Devices.CategoryIds**    | 문자열\[\] | 이 장치가 속한 범주 목록을 포함합니다. 예를 들면 **Audio.Headphone**, **Display.Monitor** 또는 **Input.Gaming**입니다.                                  |
-| **System.Devices.CateogryPlural** | 문자열\[\] | 디바이스가 속한 범주에 대한 설명 목록입니다. 이 목록은 복수 범주로 제공됩니다. 예를 들면 "Displays", "Phones" 또는 "Audio devices"입니다. |
+| **System.Devices.CategoryPlural** | 문자열\[\] | 디바이스가 속한 범주에 대한 설명 목록입니다. 이 목록은 복수 범주로 제공됩니다. 예를 들면 "Displays", "Phones" 또는 "Audio devices"입니다. |
 | **System.Devices.CompatibleIds**  | 문자열\[\] | 모든 자식 **DeviceInformationKind.Device** 개체의 호환 가능 ID 컬렉션입니다.                                                                       |
 | **System.Devices.Connected**      | 부울    | 디바이스가 현재 시스템에 연결되어 있는지 여부를 나타냅니다.                                                                                          |
 | **System.Devices.GlyphIcon**      | 문자열     | 문자 모양의 아이콘 경로입니다.                                                                                                                                           |

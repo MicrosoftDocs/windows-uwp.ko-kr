@@ -1,3 +1,19 @@
+---
+author: jwmsft
+title: "앱 분석"
+description: "성능 문제를 위해 앱을 분석합니다."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.openlocfilehash: bedd4ce683622935488f9cc210d71f568a167f51
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/10/2017
+---
 # <a name="app-analysis-overview"></a>앱 분석 개요
 
 앱 분석은 개발자에게 성능 문제를 미리 알려 주는 도구입니다. 앱 분석은 성능 지침 및 모범 사례 집합에 대해 앱 코드를 실행합니다.
@@ -105,7 +121,7 @@ DecodePixelWidth/Height가 이미지가 화면에 표시되는 것보다 명시�
 
 ## <a name="collapsed-elements-at-load-time"></a>로드 시 축소된 요소
 
-앱의 일반 패턴은 처음에 UI의 요소를 숨기고 나중에 표시하는 것입니다. 대부분의 경우 이러한 요소는 로드 시 요소를 만드는 비용을 지불하지 않도록 x:DeferLoadStrategy를 사용하여 지연되어야 합니다.
+앱의 일반 패턴은 처음에 UI의 요소를 숨기고 나중에 표시하는 것입니다. 대부분의 경우 이러한 요소는 로드 시 요소를 만드는 비용을 지불하지 않도록 x:Load 또는 x:DeferLoadStrategy를 사용하여 지연되어야 합니다.
 
 여기에는 나중까지 항목을 숨기는 데 부울-표시 변환기가 사용되는 경우가 포함됩니다.
 
@@ -119,9 +135,9 @@ DecodePixelWidth/Height가 이미지가 화면에 표시되는 것보다 명시�
 
 ### <a name="solution"></a>솔루션
 
-x:DeferLoadStrategy를 사용하면 UI 일부의 로드를 지연시켰다가 필요할 때 로드할 수 있습니다. 이는 첫 번째 프레임에 표시되지 않는 UI 처리를 지연하는 좋은 방법입니다. 필요할 때 또는 지연된 논리 집합의 일부로 요소를 로드할 수 있습니다. 로딩을 트리거하려면 로드하려는 요소에서 findName을 호출합니다.
+[x:Load attribute](../xaml-platform/x-load-attribute.md) 또는 [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785)를 사용하면 UI 일부의 로드를 지연시켰다가 필요할 때 로드할 수 있습니다. 이는 첫 번째 프레임에 표시되지 않는 UI 처리를 지연하는 좋은 방법입니다. 필요할 때 또는 지연된 논리 집합의 일부로 요소를 로드할 수 있습니다. 로딩을 트리거하려면 로드하려는 요소에서 findName을 호출합니다. x:Load는 요소를 활성화하는 x:DeferLoadStrategy의 기능이 로드되지 않도록 확장하며 로딩 상태가 x:Bind를 통해 제어되도록 합니다.
 
-경우에 따라 UI 부분을 표시하는 데 findName을 사용하지 않는 것이 좋을 수 있습니다. 이는 매우 짧은 대기 시간을 사용하여 단추 클릭 시 UI의 중요한 부분을 실현하려고 하는 경우에 해당됩니다. 이 경우 x:DeferLoadStrategy를 사용하고 실현하려는 요소에서 Visibility를 Collapsed로 설정해야 합니다. 페이지가 로드되고 UI 스레드를 사용할 수 있게 되면 요소를 로드하는 데 필요한 경우 findName을 호출할 수 있습니다. 요소의 Visibility를 Visible로 설정하기 전에는 사용자에게 요소가 표시되지 않습니다.
+경우에 따라 UI 부분을 표시하는 데 findName을 사용하지 않는 것이 좋을 수 있습니다. 이는 매우 짧은 대기 시간을 사용하여 단추 클릭 시 UI의 중요한 부분을 실현하려고 하는 경우에 해당됩니다. 이 경우 추가 메모리 비용을 지불하고 더욱 빠른 UI 지연 시간을 원할 수 있으며 이 경우 x:DeferLoadStrategy를 사용하고 실현하고자 하는 요소의 Visibility를 Collapsed로 설정해야 합니다. 페이지가 로드되고 UI 스레드를 사용할 수 있게 되면 요소를 로드하는 데 필요한 경우 findName을 호출할 수 있습니다. 요소의 Visibility를 Visible로 설정하기 전에는 사용자에게 요소가 표시되지 않습니다.
 
 ## <a name="listview-is-not-virtualized"></a>ListView가 가상화되지 않음
 

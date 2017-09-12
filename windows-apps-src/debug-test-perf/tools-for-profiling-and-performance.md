@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: "프로파일링 및 성능 도구"
 description: "Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상시킬 수 있는 여러 가지 도구를 제공합니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 0a1a955d464fe875afdeef74d3ffa23a43e1406b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fa1e8ebefc8db877099f3cc5b775f70250733c2a
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="tools-for-profiling-and-performance"></a>프로파일링 및 성능 도구
 

@@ -4,22 +4,23 @@ ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 추가 기능 제출을 관리합니다."
 title: "추가 기능 제출 관리"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP"
-ms.openlocfilehash: 7743faa9e2fda84d85468193ff46c87bab267a6c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a69857f6df3b23e9cf31fb1c7cc3ec52e95da7ae
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
 Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여 앱에 대한 추가 기능(앱에서 바로 구매 또는 IAP라고도 함) 제출을 관리할 수 있습니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
-
->**중요**&nbsp;&nbsp;Windows 스토어 제출 API를 사용하여 추가 기능에 대한 제출을 생성하는 경우, 개발자 센터 대시보드 대신 API를 통해서만 제출을 추가 변경해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> [!IMPORTANT]
+> Windows 스토어 제출 API를 사용하여 추가 기능에 대한 제출을 생성하는 경우 개발자 센터 대시보드 대신 API만 사용하여 제출을 추가 변경해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-add-on-submissions" />
 ## <a name="methods-for-managing-add-on-submissions"></a>추가 기능 제출 관리 메서드
@@ -84,60 +85,52 @@ Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여
 
 3. Windows 스토어 제출 API에서 다음 메서드를 실행합니다. 이 메서드는 마지막으로 게시된 제출의 복사본인 새 진행 중 제출을 만듭니다. 자세한 내용은 [추가 기능 제출 만들기](create-an-add-on-submission.md)를 참조하세요.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions
+    ```
 
-  응답 본문에는 새 제출의 ID, 새 제출의 데이터(모든 목록 및 가격 정보) 및 제출에 대한 추가 기능 아이콘을 Azure Blob Storage에 업로드하기 위한 SAS(공유 액세스 서명) URI가 포함되어 있습니다.
-
-  >**참고**&nbsp;&nbsp;SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS URI 및 Azure Blob Storage를 통한 SAS URI 사용에 대한 배경 정보는 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) 및  [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
+    응답 본문에는 새 제출 ID, Azure Blob Storage 제출을 위한 추가 기능 아이콘 업로딩용 SAS(Shared Access Signature) RUI, 새 제출에 대한 모든 데이터(목록과 가격 정보 등)가 포함된 [추가 기능 제출](#add-on-submission-object) 리소스가 포함되어 있습니다.
+        > [!NOTE]
+        > A SAS URI provides access to a secure resource in Azure storage without requiring account keys. For background information about SAS URIs and their use with Azure Blob storage, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) and [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. 제출에 대한 새 아이콘을 추가하는 경우 [아이콘을 준비](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon)하고 ZIP 보관 파일에 추가합니다.
 
-5. 새 제출에 대해 필요한 변경 사항으로 제출 데이터를 업데이트하고 다음 메서드를 실행하여 제출을 업데이트합니다. 자세한 내용은 [추가 기능 제출 업데이트](update-an-add-on-submission.md)를 참조하세요.
+5. 새 제출에 대해 필요한 변경 사항으로 [추가 기능 제출](#add-on-submission-object) 데이터를 업데이트하고 다음 메서드를 실행하여 제출을 업데이트합니다. 자세한 내용은 [추가 기능 제출 업데이트](update-an-add-on-submission.md)를 참조하세요.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  PUT https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}
-  ```
-
-  <span/>
-  >**참고**&nbsp;&nbsp;제출에 대한 새 아이콘을 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
+    ```
+    PUT https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}
+    ```
+      > [!NOTE]
+      > 제출에 대한 새 아이콘을 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
 
 4. 제출에 대한 새 아이콘을 추가하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공된 SAS URI를 사용하여 [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage)에 ZIP 보관 파일을 업로드합니다. 다음과 같이 다양한 플랫폼에서 이 작업을 수행할 수 있는 여러 Azure 라이브러리가 있습니다.
 
-  * [.NET용 Azure Storage Client Library](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-  * [Java용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-  * [Python용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
-
-  <span/>
+    * [.NET용 Azure Storage Client Library](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [Java용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [Python용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
   다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
 
-  > [!div class="tabbedCodeSnippets"]
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
   Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob blockBob =
-      new Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob(new System.Uri(sasUrl));
+    new Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob(new System.Uri(sasUrl));
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
 5. 다음 메서드를 실행하여 제출을 커밋합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다. 자세한 내용은 [추가 기능 제출 커밋](commit-an-add-on-submission.md)을 참조하세요.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
+    ```
 
 6. 다음 메서드를 실행하여 커밋 상태를 확인합니다. 자세한 내용은 [추가 기능 제출의 상태 가져오기](get-status-for-an-add-on-submission.md)를 참조하세요.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status
-  ```
+    ```
+    GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status
+    ```
 
-  제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
+    제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
 7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 Windows 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
 
@@ -150,7 +143,8 @@ Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여
 * [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
 * [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
 
->**참고**&nbsp;&nbsp;위에 나열된 코드 예제 외에도 the Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 다수의 자사 응용 프로그램이 스토어에 제출되는 기본 방법으로 Microsoft 내에서 적극적으로 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+> [!NOTE]
+> 위에 나열된 코드 예제 외에도 Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈이 제공됩니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 <span/>
 ## <a name="data-resources"></a>데이터 리소스
@@ -283,12 +277,10 @@ Windows 스토어 제출 API에서 제공하는 여러 메서드를 사용하여
 
 이 리소스는 추가 기능에 대한 판매 정보를 포함합니다.
 
->**중요**&nbsp;&nbsp;**판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
-
-   > * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져올 수 있습니다.
-   > * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 판매 데이터를 변경할 수 있습니다.
-
-> 앞으로 Windows 스토어 제출 API를 업데이트하여 추가 기능 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
+> [!IMPORTANT]
+> **판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 추가 기능 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
+>    * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져올 수 있습니다.
+>    * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 판매 데이터를 변경할 수 있습니다.
 
 이 리소스의 값은 다음과 같습니다.
 

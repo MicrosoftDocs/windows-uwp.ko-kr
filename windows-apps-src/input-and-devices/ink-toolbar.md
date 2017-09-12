@@ -1,8 +1,8 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 기본 InkToolbar를 추가하고, InkToolbar에 사용자 지정 펜 단추를 추가하고, 사용자 지정 펜 정의에 사용자 지정 펜 단추를 바인딩합니다."
-title: "UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가"
-label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
+title: "UWP(유니버설 Windows 플랫폼) 앱에 InkToolbar 추가"
+label: Add an InkToolbar to a Universal Windows Platform (UWP) app
 template: detail.hbs
 keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, InkToolbar, 유니버설 Windows 플랫폼, UWP, 사용자 조작, 입력"
 ms.author: kbridge
@@ -11,11 +11,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
-ms.openlocfilehash: dd307bd6d7551c1e95de29360a8601484b37e742
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a4bff46c2ab0f0f1f9a689f2744c9a77ac90630d
+ms.sourcegitcommit: c519e3d34bef37f87bb44f02b295187849bb5eea
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/25/2017
 ---
-# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱에 InkToolbar 추가
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
@@ -31,7 +33,7 @@ UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하�
 
   InkPresenter API는 수동 입력 환경의 광범위한 사용자 지정을 지원합니다. 자세한 내용은 [UWP 앱에서 펜 및 스타일러스 조작](pen-and-stylus-interactions.md)을 참조하세요.
 
-- [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)를 InkCanvas에 바인딩합니다. 기본적으로 InkToolbar는 잉크 기능을 활성화하고 스트로크 크기, 잉크 색, 펜 팁 모양 등의 잉크 속성을 설정하기 위한 기본 UI를 제공합니다.
+- [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)를 InkCanvas에 바인딩합니다. 기본적으로 InkToolbar는 스트로크 크기, 잉크 색, 펜 팁 등의 잉크 관련 기능을 활성화하는 사용자 지정 가능하고 확장 가능한 단추 컬렉션을 제공합니다.
 
   이 항목에서는 InkToolbar에 대해 설명합니다.
 
@@ -47,16 +49,18 @@ UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하�
 
 ## <a name="default-inktoolbar"></a>기본 InkToolbar
 
-기본적으로 InkToolbar에는 그리기, 지우기, 강조 표시 및 눈금자 표시 단추가 포함되어 있습니다. 기능에 따라 잉크 색, 스트로크 두께, 모든 잉크 지우기 등의 기타 설정 및 명령이 플라이아웃에 제공됩니다.
+기본적으로 [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)에는 스텐실(눈금자 또는 각도기)을 그리고 지우고 강조하고 표시하는 단추가 포함되어 있습니다. 기능에 따라 잉크 색, 스트로크 두께, 모든 잉크 지우기 등의 기타 설정 및 명령이 플라이아웃에 제공됩니다.
 
 ![InkToolbar](.\images\ink\ink-tools-invoked-toolbar-small.png)  
 *기본 Windows Ink 도구 모음*
 
-기본 InkToolbar를 추가하려면
+기본 [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)를 수동 입력 앱에 추가하려면, [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)와 동일한 페이지에 배치하고 두 개의 컨트롤을 연결합니다.
+
 1. MainPage.xaml에서 수동 입력 화면에 대한 컨테이너 개체(이 예제에서는 그리드 컨트롤 사용)를 선언합니다.
 2. InkCanvas 개체를 컨테이너의 자식으로 선언합니다. InkCanvas 크기는 컨테이너에서 상속됩니다.
 3. InkToolbar를 선언하고 TargetInkCanvas 특성을 사용하여 InkCanvas에 바인딩합니다.
-  InkCanvas 뒤에 InkToolbar를 선언해야 합니다. 순서가 바뀌면 InkCanvas 오버레이로 인해 InkToolbar에 액세스할 수 없게 됩니다.
+    > [!NOTE]  
+    > InkCanvas 뒤에 InkToolbar를 선언해야 합니다. 순서가 바뀌면 InkCanvas 오버레이로 인해 InkToolbar에 액세스할 수 없게 됩니다.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -808,6 +812,10 @@ namespace Ink_Basic_InkToolbar
 * [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
 **샘플**
-* [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [간단한 잉크 샘플(C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [복잡한 잉크 샘플(C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [잉크 샘플(JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [시작 자습서: UWP 앱에서 잉크 지원](https://aka.ms/appsample-ink)
+* [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
+* [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
+

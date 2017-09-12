@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 title: "버전 적응 코드"
-description: "이전 버전과 호환성을 유지하면서 새로운 API를 활용하는 방법을 알아봅니다."
+description: "ApiInformation 클래스를 사용하여 이전 버전과 호환성을 유지하면서 새로운 API 활용"
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -9,49 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
-ms.openlocfilehash: 4076bd9edf26108e896e3a7734c2108a00577cd0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d5b9a3b02c5acbb2ad7bcd00b9af4f7d6edd91de
+ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2017
 ---
-# <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 코드: 이전 버전과 호환성을 유지하면서 새로운 API 사용
+# <a name="version-adaptive-code"></a>버전 적응 코드
 
-Windows 10 SDK의 각 릴리스에서는 활용하고 싶어할 만한 멋진 기능이 새로 추가됩니다. 그러나 모든 고객이 동시에 최신 버전의 Windows 10으로 디바이스를 업데이트하지는 않을 것이므로 앱이 가능한 한 가장 광범위한 디바이스에서 작동하도록 해야 합니다. 여기서는 이전 버전의 Windows 10에서 실행되지만 최신 업데이트가 설치된 디바이스에서 앱이 실행될 때마다 새로운 기능도 활용하도록 앱을 설계하는 방법을 보여 줍니다.
+[적응 UI를 만드는](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것은 적응 코드 작성과 유사하게 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
 
-앱이 가장 광범위한 Windows 10 디바이스를 지원하도록 하려면 두 단계를 수행해야 합니다. 첫째, 최신 API를 대상으로 하도록 Visual Studio 프로젝트를 구성합니다. 이렇게 하면 앱을 컴파일할 때 발생하는 상황에 영향을 주게 됩니다. 둘째, 앱이 실행되고 있는 디바이스에 있는 API만 호출하도록 런타임 검사를 수행합니다.
-
-## <a name="configure-your-visual-studio-project"></a>Visual Studio 프로젝트 구성
-
-여러 Windows 10 버전을 지원하기 위한 첫 번째 단계는 Visual Studio 프로젝트에서 *대상* 및 *최소* 지원 OS/SDK 버전을 지정하는 것입니다.
-- *대상*: Visual Studio에서 앱 코드를 컴파일하고 모든 도구를 실행하는 SDK 버전입니다. 이 SDK 버전의 모든 API 및 리소스는 컴파일 시에 앱 코드에서 사용할 수 있습니다.
-- *최소*: 앱이 실행될 수 있는 가장 이전 OS 버전을 지원하는(그리고 스토어에서 배포될) SDK 버전과 Visual Studio에서 앱 태그 코드를 컴파일하는 버전입니다. 
-
-런타임 중에 앱은 배포 대상인 OS 버전에 대해 실행되므로 해당 버전에서 사용할 수 없는 리소스를 사용하거나 API를 호출하는 경우 앱에서 예외가 발생합니다. 이 문서의 뒷부분에서 런타임 검사를 사용하여 올바른 API를 호출하는 방법을 보여 줍니다.
-
-대상 및 최소 설정은 OS/SDK 버전 범위의 끝을 지정합니다. 그러나 최소 버전에서 앱을 테스트하는 경우 최소 및 대상 간의 모든 버전에서 앱이 실행될 것을 확인할 수 있습니다.
-
-> [!TIP]
-> Visual Studio에서는 API 호환성에 대해 경고하지 않습니다. 최소 및 대상을 포함하여 그 사이에 속하는 모든 OS 버전에서 앱이 예상대로 수행되는지 테스트하고 확인하는 것은 사용자의 책임입니다.
-
-Visual Studio 2015, 업데이트 2 이상에서 새 프로젝트를 만들 때 앱이 지원하는 대상 및 최소 버전을 설정하라는 메시지가 표시됩니다. 기본적으로 대상 버전은 설치된 최상위 SDK 버전이고, 최소 버전은 설치된 최하위 SDK 버전입니다. 컴퓨터에 설치된 SDK 버전에서만 대상 및 최소를 선택할 수 있습니다. 
-
-![Visual Studio에서 대상 SDK 설정](images/vs-target-sdk-1.png)
-
-일반적으로 기본값을 그대로 유지하는 것이 좋습니다. 그러나 SDK의 Preview 버전이 설치되어 있고 프로덕션 코드를 작성하는 경우 대상 버전을 Preview SDK에서 최신 공식 SDK 버전으로 변경해야 합니다. 
-
-Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상 버전을 변경하려면 프로젝트 -&gt; 속성 -&gt; 응용 프로그램 탭 -&gt; 대상 지정으로 이동합니다.
-
-![Visual Studio에서 대상 SDK 변경](images/vs-target-sdk-2.png) 
-
-참조를 위해, 각 SDK에 대한 빌드 번호는 다음과 같습니다.
-- Windows 10, 버전 1506: SDK 버전 10240
-- Windows 10, 버전 1511(11월 업데이트): SDK 버전 10586
-- Windows 10 버전 1607(1주년 업데이트): SDK 버전 14393
-
-출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
-
-## <a name="write-adaptive-code"></a>적응 코드 작성
-
-[적응 UI를 만드는](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것과 유사하게 적응 코드 작성에 대해 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
+ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 정보는 [버전 적응 앱](version-adaptive-apps.md)을 참조하세요.
 
 ### <a name="runtime-api-checks"></a>런타임 API 검사
 
@@ -476,6 +444,7 @@ class IsEnumPresentTrigger : StateTriggerBase
     </VisualStateManager.VisualStateGroups>
 </Grid>
 ```
+
 ## <a name="related-articles"></a>관련 문서
 
 - [UWP 앱 가이드](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)

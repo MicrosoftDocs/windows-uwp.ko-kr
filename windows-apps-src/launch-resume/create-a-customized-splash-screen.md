@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0a7a51cdd330bc361b7d0cec3a002c5b1aee9de4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 83551438a629e39407c24cfd98d4a761ba3c039b
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>시작 화면을 더 오래 표시
 
@@ -189,14 +191,14 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
     앱 설치가 완료되면 연장된 시작 화면을 닫습니다. 다음 코드에서는 앱의 MainPage.xaml 파일에 정의된 `MainPage`로 이동하는 `DismissExtendedSplash` 메서드를 정의합니다.
 
     ```cs
-    void DismissExtendedSplash()
-    {
-        // Navigate to mainpage
-        rootFrame.Navigate(typeof(MainPage));
-        // Place the frame in the current Window
-        Window.Current.Content = rootFrame;
-    }
-    ```
+    async void DismissExtendedSplash()
+      {
+         await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,() =>            {
+              rootFrame = new Frame();
+              rootFrame.Content = new MainPage(); Window.Current.Content = rootFrame;
+            });
+      }
+      ```
 
 7.  **클래스 내에서 Window.SizeChanged 이벤트 처리기 정의**
 

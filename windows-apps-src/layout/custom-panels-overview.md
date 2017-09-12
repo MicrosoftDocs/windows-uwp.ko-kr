@@ -10,14 +10,16 @@ label: XAML custom panels overview (Windows apps)
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: aeea966a40b551bf4fc54901e622f57745720c43
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: cd9d9e2129fe08ba0b2ef4dd08240adfbceda625
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="xaml-custom-panels-overview"></a>XAML 사용자 지정 패널 개요
 

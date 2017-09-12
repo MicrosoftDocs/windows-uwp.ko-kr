@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: "XAML 레이아웃 최적화"
 description: "레이아웃은 CPU 사용과 메모리 오버헤드 모두에서 비용이 많이 드는 XAML 앱 요소입니다. 다음은 XAML 앱의 레이아웃 성능 향상을 위해 수행할 수 있는 몇 가지 간단한 절차입니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 226b2fd19777deb5135d1e1f059596883f95d3d3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 40afd15da7e225ea82814ab2fa680a3c95e00488
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="optimize-your-xaml-layout"></a>XAML 레이아웃 최적화
 

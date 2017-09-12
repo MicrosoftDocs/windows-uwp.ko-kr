@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f0cf9d2928c8d6a0494092643daa19d9b437d3eb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8679dfd073a3b756e37059a5b0bf35cc6b000e6a
+ms.sourcegitcommit: bfa61aae632cca0c68dbfb0168424d38fd607f84
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 
@@ -118,7 +120,7 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 ## <a name="transcode-an-image-file"></a>이미지 파일 코드 변환
 
-이미지 파일을 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176)에서 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)로 바로 코드 변환할 수 있습니다. 코드 변환할 파일에서 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 만들 수 있습니다. 입력 스트림에서 새 **BitmapDecoder**를 만듭니다. 인코더가 [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214)에 쓰고 이 메서드를 호출하여 메모리 내 스트림 및 디코더 개체를 전달하도록 새 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720)을 만듭니다. 원하는 인코딩 속성을 설정합니다. 입력 이미지 파일의 속성 중 인코더에서 특정하게 설정하지 않은 속성은 변경되지 않은 상태로 출력 파일에 기록됩니다. 인코더가 메모리 내 스트림에 인코드하도록 [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216)를 호출합니다. 마지막으로, 파일 스트림 및 메모리 내 스트림을 시작 부분에서 찾고 [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827)를 호출하여 메모리 내 스트림을 파일 스트림에 씁니다.
+이미지 파일을 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176)에서 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)로 바로 코드 변환할 수 있습니다. 코드 변환할 파일에서 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 만들 수 있습니다. 입력 스트림에서 새 **BitmapDecoder**를 만듭니다. 인코더가 [**BitmapEncoder.CreateForTranscodingAsync**](https://msdn.microsoft.com/library/windows/apps/br226214)에 쓰고 이 메서드를 호출하여 메모리 내 스트림 및 디코더 개체를 전달하도록 새 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720)을 만듭니다. 인코드 옵션은 코드 변환 시 지원되지 않습니다. 대신 [**CreateAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.imaging.bitmapencoder#Windows_Graphics_Imaging_BitmapEncoder_CreateAsync_System_Guid_Windows_Storage_Streams_IRandomAccessStream_Windows_Foundation_Collections_IIterable_Windows_Foundation_Collections_IKeyValuePair_System_String_Windows_Graphics_Imaging_BitmapTypedValue___)를 사용해야 합니다. 입력 이미지 파일의 속성 중 인코더에서 특정하게 설정하지 않은 속성은 변경되지 않은 상태로 출력 파일에 기록됩니다. 인코더가 메모리 내 스트림에 인코드하도록 [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216)를 호출합니다. 마지막으로, 파일 스트림 및 메모리 내 스트림을 시작 부분에서 찾고 [**CopyAsync**](https://msdn.microsoft.com/library/windows/apps/hh701827)를 호출하여 메모리 내 스트림을 파일 스트림에 씁니다.
 
 [!code-cs[TranscodeImageFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetTranscodeImageFile)]
 

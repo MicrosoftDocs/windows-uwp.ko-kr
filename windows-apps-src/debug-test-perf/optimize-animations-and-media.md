@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: DE5B084C-DAC1-430B-A15B-5B3D5FB698F7
 title: "애니메이션, 미디어 및 이미지 최적화"
 description: "매끄러운 애니메이션, 높은 프레임 속도 및 고성능 미디어 캡처 및 재생을 지원하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 29383c65d36b7bc9e5946e4c55298ac0e04107c6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 74f8b5a47a0ebee123ccad13bee2177870630a27
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="optimize-animations-media-and-images"></a>애니메이션, 미디어 및 이미지 최적화
 
@@ -37,6 +39,7 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 -   반환 값 유형의 하위 속성을 대상으로 할 때 다음 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성에 대한 애니메이션
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
+    -   [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)
     -   [**프로젝션**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection)
     -   [**클립**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
 

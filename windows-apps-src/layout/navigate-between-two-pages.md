@@ -7,35 +7,30 @@ label: Peer-to-peer navigation between two pages
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 7e1529d641920c93ce7914c39d38001c2cbdfd78
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e5d0b0303218415d529b60e2dcaf28a21a28e430
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
-# <a name="peer-to-peer-navigation-between-two-pages"></a>두 페이지 간의 피어 투 피어 탐색
+# <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-기본 두 페이지 피어 투 피어 UWP(유니버설 Windows 플랫폼) 앱에서 탐색하는 방법을 알아봅니다.
+앱에서 기본 탐색을 할 수 있도록 프레임과 페이지를 사용하는 방법을 알아봅니다. 
+<p></p>
+<table>
+    <tr>
+        <td>중요 API:</td><td>[**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스, [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스, [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300) 네임스페이스</td>
+    </tr>
+</table>
 
-![두 페이지 피어 투 피어 탐색 예제](images/nav-peertopeer-2page.png)
-
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)</li>
-<li>[**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503)</li>
-<li>[**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)</li>
-</ul>
-</div>
-
-
-
-## <a name="create-the-blank-app"></a>빈 앱 만들기
+## <a name="1-create-a-blank-app"></a>1. 빈 앱 만들기
 
 
 1.  Microsoft Visual Studio 메뉴에서 **파일 &gt; 새 프로젝트**를 선택합니다.
@@ -51,9 +46,9 @@ translationtype: HT
 
 6.  디버깅을 중지하고 Visual Studio로 돌아가려면 Shift+F5를 누릅니다.
 
-## <a name="add-basic-pages"></a>기본 페이지 추가
+## <a name="2-add-basic-pages"></a>2. 기본 페이지 추가
 
-이제 프로젝트에 두 개의 콘텐츠 페이지를 추가하는데,
+이제 프로젝트에 두 개의 콘텐츠 페이지를 추가합니다.
 
 다음 단계를 두 번 수행하여 탐색할 두 페이지를 추가합니다.
 
@@ -195,7 +190,7 @@ app.xaml 코드 숨김 파일을 열고 `OnLaunched` 처리기를 변경합니�
 > 
 >     if (rootFrame.Content == null)
 >     {
->         // When the navigation stack isn&#39;t restored navigate to the first page,
+>         // When the navigation stack isn't restored navigate to the first page,
 >         // configuring the new page by passing required information as a navigation
 >         // parameter
 >         rootFrame.Navigate(typeof(Page1), e.Arguments);
@@ -219,7 +214,7 @@ app.xaml 코드 숨김 파일을 열고 `OnLaunched` 처리기를 변경합니�
 > 
 >         rootFrame->NavigationFailed += 
 >             ref new Windows::UI::Xaml::Navigation::NavigationFailedEventHandler(
->                 this, &amp;App::OnNavigationFailed);
+>                 this, &App::OnNavigationFailed);
 > 
 >         if (e->PreviousExecutionState == ApplicationExecutionState::Terminated)
 >         {
@@ -232,7 +227,7 @@ app.xaml 코드 숨김 파일을 열고 `OnLaunched` 처리기를 변경합니�
 > 
 >     if (rootFrame->Content == nullptr)
 >     {
->         // When the navigation stack isn&#39;t restored navigate to the first page,
+>         // When the navigation stack isn't restored navigate to the first page,
 >         // configuring the new page by passing required information as a navigation
 >         // parameter
 >         rootFrame->Navigate(Windows::UI::Xaml::Interop::TypeName(Page1::typeid), e->Arguments);
@@ -247,7 +242,7 @@ app.xaml 코드 숨김 파일을 열고 `OnLaunched` 처리기를 변경합니�
 
 이제 앱을 빌드하고 실행합니다. "Click to go to page 2"라는 링크를 클릭합니다. 맨 위의 "Page 2"라는 두 번째 페이지가 로드되어 프레임에 표시됩니다.
 
-## <a name="frame-and-page-classes"></a>Frame 및 Page 클래스
+## <a name="about-the-frame-and-page-classes"></a>Frame 및 Page 클래스 정보
 
 앱이 기능을 추가하기 전에, 지금 추가한 페이지에서 앱의 탐색을 지원하는 방법을 살펴보겠습니다.
 
@@ -263,7 +258,7 @@ app.xaml 코드 숨김 파일을 열고 `OnLaunched` 처리기를 변경합니�
 
 프레임에 페이지가 로드되면 해당 페이지가 [**Frame**](https://msdn.microsoft.com/library/windows/apps/dn298572)의 [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) 또는 [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547)에 [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/br227504)로 추가됩니다.
 
-## <a name="pass-information-between-pages"></a>페이지 간 정보 전달
+## <a name="3-pass-information-between-pages"></a>3. 페이지 간 정보 전달
 
 이 앱은 두 페이지 간에 탐색하지만, 아직 흥미로운 것은 나오지 않았습니다. 앱에 여러 페이지가 있으면 정보를 공유해야 하는 경우가 많습니다. 첫 번째 페이지에서 두 번째 페이지로 정보를 전달해보겠습니다.
 
@@ -297,15 +292,28 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 }
 ```
 
+Page2.xaml에서, 앞서 추가한 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)을 다음 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)로 바꿉니다.
+
+여기에 Page1에서 전달된 텍스트 문자열을 표시하기 위한 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)을 추가합니다.
+
+```xaml
+<StackPanel>
+    <TextBlock HorizontalAlignment="Center" Name="greeting"/>
+    <HyperlinkButton Content="Click to go to page 1" 
+                     Click="HyperlinkButton_Click"
+                     HorizontalAlignment="Center"/>
+</StackPanel>
+```
+
 Page2.xaml 코드 숨김 파일에서 다음을 사용하여 `OnNavigatedTo` 메서드를 재정의합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
-    if (e.Parameter is string)
+    if (e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
     {
-        greeting.Text = "Hi, " + e.Parameter.ToString();
+        greeting.Text = $"Hi, {e.Parameter.ToString()}";
     }
     else
     {
@@ -329,9 +337,9 @@ void Page2::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-앱을 실행하고, 입력란에 이름을 입력하고, **Click to go to page 2**라는 링크를 클릭합니다. [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br227737)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br242739) 이벤트에서 `this.Frame.Navigate(typeof(Page2), tb1.Text)`를 호출할 때 `name.Text` 속성이 `Page2`로 전달되었으며 이벤트 데이터의 값은 페이지에 표시되는 메시지에 사용됩니다.
+앱을 실행하고, 입력란에 이름을 입력하고, **Click to go to page 2**라는 링크를 클릭합니다. [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br227737)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br242739) 이벤트에서 `this.Frame.Navigate(typeof(Page2), name.Text)`를 호출할 때 `name.Text` 속성이 `Page2`로 전달되었으며 이벤트 데이터의 값은 페이지에 표시되는 메시지에 사용됩니다.
 
-## <a name="cache-a-page"></a>페이지 캐시
+## <a name="4-cache-a-page"></a>4. 페이지 캐시
 
 페이지 콘텐츠 및 상태는 기본적으로 캐시되지 않으므로, 앱의 각 페이지에서 사용하도록 설정해야 합니다.
 

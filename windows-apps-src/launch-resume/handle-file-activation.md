@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b35b8a9dcd6ea23b734de1041d829f620103fa6e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e05cc939d4a836e2f385a20f63d6ffb2242696db
+ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="handle-file-activation"></a>파일 활성화 처리
 
@@ -80,8 +82,7 @@ translationtype: HT
 -   파일 선택기
 -   시작 화면의 검색 결과
 
-앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 예제 아이콘은 [연결 시작 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620490)를 참조하세요.
-![images 폴더의 파일이 표시된 솔루션 탐색기 'icon.targetsize'와 'smalltile-sdk' 모두 16, 32, 48 및 256픽셀 버전이 있습니다.](images/seviewofimages.png)
+이러한 위치에 로고가 표시될 수 있도록 프로젝트에 44x44 아이콘을 포함합니다. 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 아이콘에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets)을 참조하세요.
 
 ## <a name="step-3-handle-the-activated-event"></a>3단계: 활성화된 이벤트 처리
 
@@ -124,7 +125,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 받게 되는 파일은 신뢰할 수 없는 원본에서 올 수 있으므로 파일에 대한 작업을 수행하기 전에 파일 내용의 유효성을 검사하는 것이 좋습니다. 입력 유효성 검사에 대한 자세한 내용은 [안전한 코드 작성](http://go.microsoft.com/fwlink/p/?LinkID=142053)을 참조하세요.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 

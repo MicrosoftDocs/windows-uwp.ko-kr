@@ -3,15 +3,17 @@ author: mcleanbyron
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트에 대한 패키지 출시를 중지합니다."
 title: "플라이트에 대한 출시 중지"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 출시, 플라이트 제출, 중지"
 ms.assetid: f8ee0687-a421-48e7-a6eb-3fd5633c352b
-ms.openlocfilehash: 804e447f5b650a986580752fcba2a29014560e98
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e5a05b33a96e5f4b19fdfdf8d6cad04e247a46c8
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="halt-the-rollout-for-a-flight"></a>플라이트에 대한 출시 중지
 
@@ -27,8 +29,6 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플�
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 * 개발자 센터 계정의 앱에 대한 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 * 제출에 대한 점진적 패키지 출시를 사용하도록 설정합니다. 이 작업은 [개발자 센터 대시보드](../publish/gradual-package-rollout.md)에서 수행하거나 [Windows 스토어 제출 API를 사용하여](manage-flight-submissions.md#manage-gradual-package-rollout) 수행할 수 있습니다.
-
->**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 ## <a name="request"></a>요청
 

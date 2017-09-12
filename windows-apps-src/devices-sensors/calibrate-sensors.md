@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: ECE848C2-33DE-46B0-BAE7-647DB62779BB
 title: "센서 보정"
 description: "나침반, 경사계 방향 센서 같이 자력계를 기반으로 한 디바이스의 센서는 환경 요인으로 인해 보정이 필요해질 수 있습니다."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d67146cd0382032eddf8cfe1b47f9348727cb79a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 066332395dde8d52d970bc79e2597ccaacaddb18
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="calibrate-sensors"></a>센서 보정
 

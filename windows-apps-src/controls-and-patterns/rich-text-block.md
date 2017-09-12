@@ -6,14 +6,19 @@ ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 464a726f4429eb24ad04acae130c7fc812971b3b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: af9a6883ac20d59c319c663c1f489247e2bb6f2e
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="rich-text-block"></a>서식 있는 텍스트 블록
 
@@ -21,15 +26,7 @@ translationtype: HT
 
 서식 있는 텍스트 블록은 단락, 인라인 UI 요소 또는 복잡한 텍스트 레이아웃에 대한 지원이 필요한 경우 사용할 수 있는 몇 가지 고급 텍스트 레이아웃 기능을 제공합니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**RichTextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
-<li>[**RichTextBlockOverflow 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx)</li>
-<li>[**Paragraph 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx)</li>
-<li> [**Typography 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)</li>
-</ul>
-</div>
+> **중요 API**: [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [RichTextBlockOverflow 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [Paragraph 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [Typography 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -50,7 +47,7 @@ RichTextBlock은 다음을 지원합니다.
 
 ### <a name="paragraphs"></a>단락
 
-[**Paragraph**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 요소를 사용하여 RichTextBlock 컨트롤 내에 표시할 텍스트 블록을 정의할 수 있습니다. 모든 RichTextBlock은 Paragraph를 하나 이상 포함해야 합니다. 
+[Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 요소를 사용하여 RichTextBlock 컨트롤 내에 표시할 텍스트 블록을 정의할 수 있습니다. 모든 RichTextBlock은 Paragraph를 하나 이상 포함해야 합니다. 
 
 RichTextBlock.TextIndent 속성을 설정하여 [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.textindent.aspx)에서 모든 단락에 대한 들여쓰기 양을 설정할 수 있습니다. [Paragraph.TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.textindent.aspx) 속성을 다른 값으로 설정하면 RichTextBlock에서 특정 단락에 대한 이 설정을 재정의할 수 있습니다.
 
@@ -64,7 +61,7 @@ RichTextBlock.TextIndent 속성을 설정하여 [RichTextBlock](https://msdn.mic
 
 ### <a name="inline-ui-elements"></a>인라인 UI 요소
 
-[**InlineUIContainer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) 클래스를 사용하면 UIElement 인라인 텍스트를 포함할 수 있습니다. 일반적인 시나리오는 Image 인라인 텍스트를 배치하는 것이지만, Button 또는 CheckBox와 같은 대화형 요소를 사용할 수도 있습니다.
+[InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) 클래스를 사용하면 UIElement 인라인 텍스트를 포함할 수 있습니다. 일반적인 시나리오는 Image 인라인 텍스트를 배치하는 것이지만, Button 또는 CheckBox와 같은 대화형 요소를 사용할 수도 있습니다.
 
 동일한 위치에 둘 이상의 인라인 요소를 포함하려는 경우 패널을 단일 InlineUIContainer 자식으로 사용한 후 해당 패널 내에 여러 요소를 배치하는 것이 좋습니다.
 
@@ -84,7 +81,7 @@ RichTextBlock.TextIndent 속성을 설정하여 [RichTextBlock](https://msdn.mic
 
 ## <a name="overflow-containers"></a>오버플로 컨테이너
 
-[**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) 요소와 함께 RichTextBlock을 사용하여 다중 열 또는 기타 고급 페이지 레이아웃을 만들 수 있습니다. RichTextBlockOverflow 요소의 콘텐츠는 항상 RichTextBlock 요소에서 가져옵니다. RichTextBlock의 OverflowContentTarget 또는 다른 RichTextBlockOverflow로 설정하여 RichTextBlockOverflow 요소를 링크합니다.
+[RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) 요소와 함께 RichTextBlock을 사용하여 다중 열 또는 기타 고급 페이지 레이아웃을 만들 수 있습니다. RichTextBlockOverflow 요소의 콘텐츠는 항상 RichTextBlock 요소에서 가져옵니다. RichTextBlock의 OverflowContentTarget 또는 다른 RichTextBlockOverflow로 설정하여 RichTextBlockOverflow 요소를 링크합니다.
 
 다음은 2열 레이아웃을 만드는 간단한 예제입니다. 더 복잡한 예제는 예제 섹션을 참조하세요.
 
@@ -150,8 +147,8 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 - [텍스트 입력에 대한 지침](text-controls.md)
 
 **개발자용(XAML)**
-- [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
 **개발자용(기타)**

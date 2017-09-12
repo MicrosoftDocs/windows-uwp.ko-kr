@@ -2,22 +2,27 @@
 author: mukin
 Description: "이 문서는 자습서 형식으로 기본 응용 프로그램 사용자 인터페이스를 만드는 단계를 안내합니다. 가장 일반적인 XAML 요소인 Grid 및 StackPanel을 사용하는 방법을 설명하고 보여 줍니다."
 title: "Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기"
-ms.author: wdg-dev-content
-ms.date: 02/08/2017
+template: detail.hbs
+ms.author: mukin
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
-ms.openlocfilehash: 094cabc642884f57af2dbeb5125a2a8b81365824
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 12a48ec9e907a65abbbd9ec1e9f9c60c3519fa20
+ms.sourcegitcommit: 2de58584a42e580dbc0d19bdecee12bfee7fd7e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/23/2017
 ---
 # <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기
 
 XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱의 레이아웃을 만들 수 있습니다. 이러한 도구를 사용하면 Windows 10을 실행하는 모든 디바이스에서 작동하는 근사한 앱을 만들 수 있습니다. 이 자습서는 10-20분 정도 걸립니다.
 
-## <a name="prerequisites"></a>필수 조건
+> **중요 API**: [Grid 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.stackpanel)
+
+## <a name="prerequisites"></a>필수 구성 요소
 - Windows 10 및 Microsoft Visual Studio 2015. [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](../get-started/get-set-up.md).
 - XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
@@ -46,7 +51,7 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 </Grid>
 ```
 
-새 **Grid**는 앱 인터페이스의 레이아웃을 정의하는 두 개의 행과 열 집합을 만듭니다. 첫 번째 열은 **Width**가 "3\*"이고, 두 번째 열은 "5\*"이므로 두 열 사이의 가로 공간이 3:5 비율로 분할됩니다. 마찬가지로, 두 행의 **Height**는 각각 "3\*" 및 "\*"이므로 **Grid**에서 두 번째 행보다 세 배의 공간이 첫 번째 행에 할당됩니다("\*"는 "1\*"와 같음). 이러한 비율은 창 크기를 조정하거나 디바이스를 변경하는 경우에도 유지됩니다.
+새 **Grid**는 앱 인터페이스의 레이아웃을 정의하는 두 개의 행과 열 집합을 만듭니다. 첫 번째 열은 **Width**가 "3\*"이고, 두 번째 열은 "5\*"이므로 두 열 사이의 가로 공간이 3:5 비율로 분할됩니다. 마찬가지로, 두 행의 **Height**는 각각 "2\*" 및 "\*"이므로 **Grid**에서 두 번째 행보다 2배의 공간이 첫 번째 행에 할당됩니다("\*"는 "1\*"와 같음). 이러한 비율은 창 크기를 조정하거나 디바이스를 변경하는 경우에도 유지됩니다.
 
 행과 열의 크기를 조정하는 다른 방법을 알아보려면 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml#layout-properties)를 참조하세요.
 

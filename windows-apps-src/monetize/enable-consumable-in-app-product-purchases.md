@@ -9,15 +9,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: e2ecaf364c581e82406c76831dd3e33c82594601
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 9190000a2c5a35a0b7125429a19e4743b388d503
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>앱에서 바로 구매 소모성 제품 사용
 
 
 > [!NOTE]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여 줍니다. 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스의 멤버를 사용하여 추가 기능을 관리하는 것이 좋습니다. 자세한 내용은 [이 문서](enable-consumable-add-on-purchases.md)를 참조하세요.
 
 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품(구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목)을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다. 이 기능은 특정 회복 아이템을 구매하여 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다.
 

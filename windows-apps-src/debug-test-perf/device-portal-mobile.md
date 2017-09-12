@@ -1,19 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "모바일용 디바이스 포털"
 description: "Windows Device Portal에서 모바일 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 54660777706fbfdc54b08da025c2f280f194c010
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: d0a85a780bf71bd43a0482494a1de939582a4b56
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
 
@@ -27,7 +27,7 @@ Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바�
 
 ### <a name="turn-on-device-discovery-and-pairing"></a>디바이스 검색 및 페어링 켜기
 
-디바이스 포털에 연결하려면 디바이스 검색 및 디바이스 포털을 사용하도록 설정해야 합니다. 이렇게 하면 휴대폰을 PC 또는 다른 Windows 10 디바이스와 페어링할 수 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다.
+디바이스 포털에 연결하려면 휴대폰 설정에서 디바이스 검색 및 디바이스 포털을 사용하도록 설정해야 합니다. 이렇게 하면 휴대폰을 PC 또는 다른 Windows 10 디바이스와 페어링할 수 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다.
 
 처음으로 디바이스 포털에 연결할 때 대/소문자가 구분된 6개의 문자로 된 보안 코드를 입력해야 합니다. 이렇게 하면 휴대폰에 액세스할 수 있으며 공격자로부터 보안을 유지할 수 있습니다. 휴대폰의 페어링 단추를 눌러 코드를 생성하고 표시한 다음 브라우저의 텍스트 상자에 6개의 문자를 입력합니다.
 
@@ -63,7 +63,7 @@ USB, 로컬 호스트 및 로컬 네트워크(VPN 및 테더링 포함)를 통�
 
 ![디바이스 포털 설정](images/device-portal/mob-dev-mode-portal.png)
 
-로컬 네트워크에 있는 모든 사용자를 신뢰하고, 디바이스에 개인 정보가 없고, 고유한 요구 사항이 있는 테스트 랩 같은 보호 환경에서 디바이스 포털을 사용하는 경우 인증을 사용하지 않도록 설정할 수 있습니다. 이렇게 하면 암호화되지 않은 통신이 가능하며 휴대폰의 IP 주소를 가진 모든 사용자가 제어할 수 있습니다.
+로컬 네트워크에 있는 모든 사용자를 신뢰하고, 디바이스에 개인 정보가 없고, 고유한 요구 사항이 있는 테스트 랩 같은 보호 환경에서 Device Portal을 사용하는 경우 인증을 사용하지 않도록 설정할 수 있습니다. 이렇게 하면 암호화되지 않은 통신이 가능하며 휴대폰의 IP 주소를 가진 모든 사용자가 제어할 수 있습니다.
 
 ## <a name="tool-notes"></a>도구 참고 사항
 

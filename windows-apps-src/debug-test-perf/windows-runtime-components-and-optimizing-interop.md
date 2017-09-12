@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
 title: "유니버설 Windows 플랫폼 구성 요소 및 interop 최적화"
 description: "Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a4296c7ba149abce2173e816aa99406a44f75618
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8562454b976362ebc65884203775b3891216d8b7
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>UWP 구성 요소 및 interop 최적화
 

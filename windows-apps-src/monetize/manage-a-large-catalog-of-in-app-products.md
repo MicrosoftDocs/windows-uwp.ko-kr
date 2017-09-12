@@ -9,15 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 카탈로그, Windows.ApplicationModel.Store"
-ms.openlocfilehash: 69747b5700db9785d5e782cd71245ce60ee4150b
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 264db118c3d9f84cffcc966f017ddab4c14e28fb
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>앱에서 바로 구매 제품의 큰 카탈로그 관리
 
 
 > [!NOTE]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여 줍니다. 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스의 멤버를 사용하여 추가 기능을 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
 앱에서 대규모 앱에서 바로 구매 제품 카탈로그를 제공하는 경우 이 항목에 설명된 프로세스를 선택적으로 수행하여 카탈로그를 관리할 수 있습니다. Windows 10 이전 릴리스에서는 개발자 계정별로 200개의 제품 목록을 스토어에 표시하도록 제한되었으며 이 항목에 설명된 프로세스를 사용하여 이 제한 사항 문제를 해결할 수 있습니다. Windows 10부터 스토어에 표시되는 개발자 계정별 제품 목록 수가 제한되지 않으며 이 문서에 설명된 프로세스는 더 이상 필요하지 않습니다.
 

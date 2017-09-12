@@ -4,18 +4,20 @@ ms.assetid: 9630AF6D-6887-4BE3-A3CB-D058F275B58F
 description: "Windows.Services.Store 네임스페이스를 사용하여 현재 앱과 추가 기능에 대한 라이선스 정보를 가져오는 방법을 알아봅니다."
 title: "앱과 추가 기능에 대한 라이선스 정보 가져오기"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 라이선스, 앱, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store"
-ms.openlocfilehash: 2680ac184bdb876d0b8c834115ff2b93cb7e9771
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: dbd37ed219d47ad2c7631170c4299af708404243
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 라이선스 정보 가져오기
 
-Windows10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있는 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 메서드를 사용하여 현재 앱과 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)에 대한 라이선스 정보를 가져올 수 있습니다. 예를 들어 이 정보를 사용하여 앱이나 추가 기능에 대한 라이선스가 활성 상태인지 또는 평가판 라이선스인지 확인할 수 있습니다.
+Windows10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있는 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 메서드를 사용하여 현재 앱과 추가 기능에 대한 라이선스 정보를 가져올 수 있습니다. 예를 들어 이 정보를 사용하여 앱이나 추가 기능에 대한 라이선스가 활성 상태인지 또는 평가판 라이선스인지 확인할 수 있습니다.
 
 > [!NOTE]
 > 이 문서는 Windows10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
@@ -24,7 +26,8 @@ Windows10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Sto
 
 이 예제의 필수 조건은 다음과 같습니다.
 * Windows10 버전 1607 이상을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* Windows 개발자 센터 대시보드에서 앱을 만들었으며, 이 앱은 스토어에서 게시되고 사용할 수 있습니다. 고객에게 릴리스하려는 앱일 수도 있고, 테스트용으로만 사용 중인 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는 기본 앱일 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* Windows 개발자 센터 대시보드에서 [앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 만들었으며, 이 앱은 스토어에서 게시되었습니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 앱 추가 기능에 대한 라이선스 정보를 얻고 싶다면, [개발자 센터 대시보드에서 추가 기능을 생성](../publish/add-on-submissions.md)해야 합니다. 
 
 이 예제의 코드에서는 다음과 같이 가정합니다.
 * 코드는 ```workingProgressRing```이라는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx)과 ```textBlock```이라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 포함하는 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.

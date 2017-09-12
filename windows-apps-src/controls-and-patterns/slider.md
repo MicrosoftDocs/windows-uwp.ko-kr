@@ -6,14 +6,20 @@ ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 392b0b0acf1443b2260a33bbf389d505f8cc7d0e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: ksulliv
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: c705c2fc4d53c77391236604f8edb86e164a1177
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="sliders"></a>슬라이더
 
@@ -21,16 +27,9 @@ translationtype: HT
 
 슬라이더는 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 범위에서 값을 선택할 수 있도록 하는 컨트롤입니다.
 
-![슬라이더 컨트롤](images/controls/slider.png)
+> **중요 API**: [Slider 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx), [Value 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx), [ValueChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**Slider 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)</li>
-<li>[**Value 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)</li>
-<li>[**ValueChanged 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)</li>
-</ul>
-</div>
+![슬라이더 컨트롤](images/controls/slider.png)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -89,7 +88,7 @@ volumeSlider.ValueChanged += Slider_ValueChanged;
 stackPanel1.Children.Add(volumeSlider);
 ```
 
-[**Value**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx) 속성에서 슬라이더 값을 가져오고 설정합니다. 값 변경에 응답하기 위해 데이터 바인딩을 사용하여 Value 속성에 바인딩하거나 [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx) 이벤트를 처리할 수 있습니다.
+[Value](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx) 속성에서 슬라이더 값을 가져오고 설정합니다. 값 변경에 응답하기 위해 데이터 바인딩을 사용하여 Value 속성에 바인딩하거나 [ValueChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx) 이벤트를 처리할 수 있습니다.
 
 ```csharp
 private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -177,4 +176,4 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 ## <a name="related-topics"></a>관련 항목
 - [토글 스위치](toggles.md)
-- [**Slider 클래스**](https://msdn.microsoft.com/library/windows/apps/br209614)
+- [Slider 클래스](https://msdn.microsoft.com/library/windows/apps/br209614)

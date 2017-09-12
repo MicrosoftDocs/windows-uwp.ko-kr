@@ -11,14 +11,19 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 81d3a37103f1dcea6b68850d163fa5cc9aded5bc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 52a8a309758a02db072de5f8050b4e7183ff629d
+ms.sourcegitcommit: c519e3d34bef37f87bb44f02b295187849bb5eea
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/25/2017
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다.
+
+> [!NOTE]
+> ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GIF 파일과 같은 이진 문서 형식에 포함하거나 클립보드에 직접 배치할 수 있습니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -28,9 +33,6 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 </ul>
 </div>
 
-
-> [!NOTE]
-> ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GIF 파일과 같은 이진 문서 형식에 포함하거나 클립보드에 직접 배치할 수 있습니다.
 
  
 
@@ -149,7 +151,7 @@ public MainPage()
                 }
                 else
                 {
-                    // File couldn&#39;t be saved.
+                    // File couldn't be saved.
                 }
             }
             // User selects Cancel and picker returns null.
@@ -437,15 +439,12 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
 **샘플**
-* [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [간단한 잉크 샘플(C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [복잡한 잉크 샘플(C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [잉크 샘플(JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [시작 자습서: UWP 앱에서 잉크 지원](https://aka.ms/appsample-ink)
 * [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
 * [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
-
-
- 
-
 
 
 

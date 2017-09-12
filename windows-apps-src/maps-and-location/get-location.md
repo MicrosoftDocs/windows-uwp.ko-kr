@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 지도, 위치, 위치 기능"
-ms.openlocfilehash: 05fa3330f5346f69061cb60cf8b54de451845e06
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f5af2815783568cb234f1196e065f18b145c7e68
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="get-the-users-location"></a>사용자 위치 가져오기
 
@@ -29,7 +31,7 @@ translationtype: HT
 
 
 1.  **솔루션 탐색기**에서 **package.appxmanifest**를 두 번 클릭하고**접근 권한 값** 탭을 선택합니다.
-2.  **기능** 목록에서 **기능** 탭을 선택합니다. 그러면 `Location` 디바이스 접근 권한 값이 패키지 매니페스트 파일에 추가됩니다.
+2.  **기능** 목록에서 **위치** 상자를 선택합니다. 그러면 `location` 디바이스 접근 권한 값이 패키지 매니페스트 파일에 추가됩니다.
 
 ```XML
   <Capabilities>

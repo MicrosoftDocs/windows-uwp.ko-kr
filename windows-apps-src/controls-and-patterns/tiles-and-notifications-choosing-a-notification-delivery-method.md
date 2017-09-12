@@ -6,14 +6,16 @@ ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 39418d553eceb6b38d9b0cecc633c984f38465b9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: ddbc04afd6571ac5692c2202fa292185d11e05b0
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -111,7 +113,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 자세한 내용은 아래 항목을 참조하세요.
 
 -   [로컬 타일 알림 보내기](tiles-and-notifications-sending-a-local-tile-notification.md)
--   [로컬 알림 메시지 보내기](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
+-   [로컬 알림 메시지 보내기](tiles-and-notifications-send-local-toast.md)
 -   [UWP(유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="scheduled-notifications"></a>예약된 알림
@@ -161,7 +163,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 
 * [로컬 타일 알림 보내기](tiles-and-notifications-sending-a-local-tile-notification.md)
-* [로컬 알림 메시지 보내기](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)
+* [로컬 알림 메시지 보내기](tiles-and-notifications-send-local-toast.md)
 * [푸시 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761462)
 * [알림 메시지에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465391)
 * [정기 알림 개요](tiles-and-notifications-periodic-notification-overview.md)

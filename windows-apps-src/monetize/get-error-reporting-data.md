@@ -4,20 +4,22 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 오류 보고 데이터를 가져옵니다."
 title: "앱에 대한 오류 보고 데이터 가져오기"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API, 오류"
-ms.openlocfilehash: dc5c4092368c0b395e42be122a9e0e7feec8f03e
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: 68e54c955d865669907c68d7cf1ef5a0f8986d8d
+ms.sourcegitcommit: 7aabd2e59d45bbc5512dd4ddd9110ae62b79d552
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/19/2017
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>앱에 대한 오류 보고 데이터 가져오기
 
 Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 앱의 집계 오류 보고 데이터를 JSON 형식으로 가져올 수 있습니다. 이 정보는 Windows 개발자 센터 대시보드에서 [상태 보고서](../publish/health-report.md)의 **오류** 섹션을 통해서도 확인할 수 있습니다.
 
-[앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 및 [앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md) 메서드를 사용하여 추가 오류 정보를 검색할 수 있습니다.
+[오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md), [스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md), [CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md) 메서드를 사용해 추가 오류 정보를 검색할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -168,6 +170,7 @@ Authorization: Bearer <your access token>
 * [상태 보고서](../publish/health-report.md)
 * [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)
 * [앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)
+* [앱의 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [앱 획득 가져오기](get-app-acquisitions.md)
 * [추가 기능 구입 가져오기](get-in-app-acquisitions.md)

@@ -4,19 +4,18 @@ ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 새 제출을 만듭니다."
 title: "앱 제출 만들기"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱 제출 만들기"
-ms.openlocfilehash: 13b1b1cc83b6a8659bf38f5a97caf8b2f50a3ee0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6ed90a764701e40ed513b623a9ddb5aa6a2be466
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="create-an-app-submission"></a>앱 제출 만들기
-
-
-
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 새 제출을 만듭니다. 이 메서드를 사용하여 새 제출을 성공적으로 만든 후 [제출을 업데이트](update-an-app-submission.md)하여 제출 데이터에 필요한 변경을 수행한 다음 수집 및 게시를 위해 [제출을 커밋](commit-an-app-submission.md)합니다.
 
@@ -30,8 +29,6 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발�
 * 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 * 앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
-
->**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 ## <a name="request"></a>요청
 
@@ -131,6 +128,7 @@ Authorization: Bearer <your access token>
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -182,7 +180,8 @@ Authorization: Bearer <your access token>
     "Xbox": false,
     "Team": true
   },
-  "friendlyName": "Submission 2"
+  "friendlyName": "Submission 2",
+  "trailers": []
 }
 ```
 

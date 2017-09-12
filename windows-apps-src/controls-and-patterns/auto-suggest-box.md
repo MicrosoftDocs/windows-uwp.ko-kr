@@ -7,31 +7,28 @@ dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 85c23206d421d061b81f46645b6e6820fb079df3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 61e0d0c1d368a515a7d0b6aba24c7de4b5898092
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="auto-suggest-box"></a>자동 제안 상자
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 있는 제안 사항 목록을 제공합니다.
 
-![자동 제안 상자](images/controls/auto-suggest-box-open.png)
+> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [TextChanged 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx), [SuggestionChose 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx), [QuerySubmitted 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**AutoSuggestBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
-<li>[**TextChanged 이벤트**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)</li>
-<li>[**SuggestionChose 이벤트**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.suggestionchosen.aspx)</li>
-<li>[**QuerySubmitted 이벤트**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.querysubmitted.aspx)</li>
-</ul>
-</div>
+![자동 제안 상자](images/controls/auto-suggest-box-open.png)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -65,7 +62,7 @@ AutoSuggestBox를 사용하려면 세 가지 사용자 작업에 응답해야 �
 
 ### <a name="text-changed"></a>텍스트가 변경됨
 
-입력란의 콘텐츠가 업데이트될 때마다 [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx) 이벤트가 발생합니다. 이벤트 인수 [Reason](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason.aspx) 속성을 사용하여 사용자 입력으로 인해 변경되었는지 확인합니다. 변경 이유가 **UserInput**이면 입력에 따라 데이터를 필터링합니다. 그런 다음 필터링된 데이터를 AutoSuggestBox의 [ItemsSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)로 설정하여 제안 사항 목록을 업데이트합니다.
+입력란의 콘텐츠가 업데이트될 때마다 [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx) 이벤트가 발생합니다. 이벤트 인수 [Reason](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason.aspx) 속성을 사용하여 사용자 입력으로 인해 변경되었는지 확인합니다. 변경 이유가 **UserInput**이면 입력에 따라 데이터를 필터링합니다. 그런 다음 필터링된 데이터를 AutoSuggestBox의 [ItemsSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)로 설정하여 제안 사항 목록을 업데이트합니다.
 
 [DisplayMemberPath](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx) 또는 [ItemTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)을 사용하여 제안 사항 목록에 항목이 표시되는 방법을 제어할 수 있습니다.
 
@@ -156,18 +153,20 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
     ![검색 결과가 없는 자동 제안 상자의 예](images/controls_autosuggest_noresults.png)
 
+<!--
 <div class="microsoft-internal-note">
-**세계화 및 지역화 검사 목록**
+**Globalization and localization checklist**
 
 <table>
 <tr>
-<th>세로 간격</th><td>세로 간격에 라틴어가 아닌 문자를 사용하여 라틴어가 아닌 스크립트가 숫자까지 제대로 표시되게 합니다.</td>
+<th>Vertical spacing</th><td>Use non-Latin characters for vertical spacing to ensure non-Latin scripts will display properly, including numbers.</td>
 </tr>
 <tr>
-<th>스크롤</th><td>자동 제안 텍스트가 선택되면 사용자는 문자열의 끝까지 스크롤할 수 있어야 합니다.</td>
+<th>Scrolling</th><td>When auto suggest text is selected, user should be able to scroll to end of string.</td>
 </tr>
 </table>
 </div>
+-->
 
 
 ## <a name="related-articles"></a>관련 문서
@@ -175,6 +174,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사](spell-checking-and-prediction.md)
 - [검색](search.md)
-- [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length.aspx)

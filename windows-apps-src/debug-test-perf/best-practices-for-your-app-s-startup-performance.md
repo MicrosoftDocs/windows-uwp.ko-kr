@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: "앱 시작 성능 모범 사례"
 description: "시작 및 활성화 처리 방법을 개선하여 시작 시간이 최적화된 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9ab3eeeffbab26f5d26d28160a750c50d53b7e96
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e36103953ad3fb04ee5beef7e263fc326f817c0b
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
@@ -108,7 +110,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 
 ![실시간 시각적 트리.](images/live-visual-tree.png)
 
-**x:DeferLoadStrategy 사용**. 요소를 축소하거나 불투명도를 0으로 설정하면 요소가 만들어지는 것을 방지하지 않습니다. x:DeferLoadStrategy를 사용하면 UI 일부의 로드를 지연시켰다가 필요할 때 로드할 수 있습니다. 이는 시작 화면 중에 표시되지 않는 UI 처리를 지연시키는 좋은 방법이므로 필요할 때 로드하거나 지연된 논리 집합의 일부로 로드할 수 있습니다. 로드를 트리거하려면 요소의 FindName만 호출하면 됩니다. 예제 및 자세한 내용은 [X:deferloadstrategy 특성](https://msdn.microsoft.com/library/windows/apps/Mt204785)을 참조하세요.
+**지연 사용**. 요소를 축소하거나 불투명도를 0으로 설정하면 요소가 만들어지는 것을 방지하지 않습니다. x:Load 또는 x:DeferLoadStrategy를 사용하면 UI 일부의 로드를 지연시켰다가 필요할 때 로드할 수 있습니다. 이는 시작 화면 중에 표시되지 않는 UI 처리를 지연시키는 좋은 방법이므로 필요할 때 로드하거나 지연된 논리 집합의 일부로 로드할 수 있습니다. 로드를 트리거하려면 요소의 FindName만 호출하면 됩니다. 예제 및 자세한 내용은 [x:Load attribute](../xaml-platform/x-load-attribute.md) 및 [x:DeferLoadStrategy 특성](https://msdn.microsoft.com/library/windows/apps/Mt204785)을 참조하세요.
 
 **가상화**. UI에 목록 또는 반복기 콘텐츠가 있는 경우 UI 가상화를 사용하는 것이 좋습니다. 목록 UI가 가상화되지 않은 경우 먼저 모든 요소를 만드는 비용을 지불하고 시작을 늦출 수 있습니다. [ListView 및 GridView UI 최적화](optimize-gridview-and-listview.md)를 참조하세요.
 
@@ -365,4 +367,3 @@ XAML, 이미지, 앱에 중요한 기타 파일을 포함한 콘텐츠를 로컬
 페이지 캐싱은 인스턴스화를 방지하여 성능에 도움이 되어 탐색 성능을 향상시킬 수 있습니다. 페이지 캐싱은 과도한 캐싱으로 성능에 손상을 입혀서 작업 집합에 영향을 미칠 수 있습니다.
 
 따라서 응용 프로그램에 적절하게 페이지 캐싱을 사용하는 것이 좋습니다. 예를 들어 프레임의 항목 목록을 표시하는 앱이 있다고 가정했을 때 한 항목을 탭하면 해당 항목에 대한 세부 정보 페이지로 프레임을 이동합니다. 목록 페이지는 캐시하도록 설정되어 있을 것입니다. 세부 정보 페이지가 모든 항목에 대해 동일한 경우 이 페이지 역시 캐시될 것입니다. 하지만 세부 정보 페이지의 형식이 더 다른 유형이면 캐시하지 않는 것이 더 나을 수 있습니다.
-

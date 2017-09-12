@@ -6,14 +6,20 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 33a8b62a378e4a9abe20be04a49c94d886144cc5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 370c5266277ff442f26c9aeb951d869ec70b31c5
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="radio-buttons"></a>라디오 단추
 
@@ -21,19 +27,11 @@ translationtype: HT
 
 라디오 단추를 사용하면 두 가지 이상의 옵션 중 하나를 선택할 수 있습니다. 각 옵션은 하나의 라디오 단추로 표시됩니다. 사용자는 라디오 단추 그룹에서 하나의 라디오 단추만 선택할 수 있습니다.
 
+> **중요 API**: [RadioButton 클래스](https://msdn.microsoft.com/library/windows/apps/br227544), [Checked 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [IsChecked 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+
 이름에 대해 궁금할 수 있는데, 라디오의 채널에 미리 설정된 단추에 라디오 단추의 이름이 지정됩니다.
 
 ![라디오 단추](images/controls/radio-button.png)
-
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**RadioButton 클래스**](https://msdn.microsoft.com/library/windows/apps/br227544)</li>
-<li>[**Checked 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
-<li>[**IsChecked 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)</li>
-</ul>
-</div>
-
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -68,7 +66,7 @@ Microsoft Edge 브라우저 설정의 라디오 단추입니다.
 
 라디오 단추는 그룹으로 작동합니다. 다음 두 가지 방법으로 라디오 단추 컨트롤을 그룹화할 수 있습니다.
 - 동일한 부모 컨테이너 내에 배치합니다.
-- 각 라디오 단추의 [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) 속성을 동일한 값으로 설정합니다.
+- 각 라디오 단추의 [GroupName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) 속성을 동일한 값으로 설정합니다.
 
 > **참고**&nbsp;&nbsp;라디오 단추 그룹은 키보드를 통해 액세스한 경우 단일 컨트롤처럼 동작합니다. Tab 키를 사용하면 선택한 항목만 액세스할 수 있지만, 사용자가 화살표 키를 사용하면 그룹을 순환할 수 있습니다.
 
@@ -158,7 +156,7 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 ![두 그룹으로 나뉜 라디오 단추](images/radio-button-groups.png)
 
-라디오 단추에는 *selected* 또는 *cleared*의 두 가지 상태가 있습니다. 라디오 단추가 선택된 경우 해당 [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 속성은 **true**입니다. 라디오 단추가 선택 취소된 경우 해당 **IsChecked** 속성은 **false**입니다. 동일한 그룹의 다른 라디오 단추를 클릭하여 라디오 단추 선택을 취소할 수 있지만 다시 클릭하여 선택을 취소할 수는 없습니다. 그러나 IsChecked 속성을 **false**로 설정하여 프로그래밍 방식으로 라디오 단추 선택을 취소할 수 있습니다.
+라디오 단추에는 *selected* 또는 *cleared*의 두 가지 상태가 있습니다. 라디오 단추가 선택된 경우 해당 [IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 속성은 **true**입니다. 라디오 단추가 선택 취소된 경우 해당 **IsChecked** 속성은 **false**입니다. 동일한 그룹의 다른 라디오 단추를 클릭하여 라디오 단추 선택을 취소할 수 있지만 다시 클릭하여 선택을 취소할 수는 없습니다. 그러나 IsChecked 속성을 **false**로 설정하여 프로그래밍 방식으로 라디오 단추 선택을 취소할 수 있습니다.
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -193,4 +191,4 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 
 **개발자용(XAML)**
-- [**Windows.UI.Xaml.Controls RadioButton 클래스**](https://msdn.microsoft.com/library/windows/apps/br227544)
+- [Windows.UI.Xaml.Controls RadioButton 클래스](https://msdn.microsoft.com/library/windows/apps/br227544)

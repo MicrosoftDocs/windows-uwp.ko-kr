@@ -1,19 +1,21 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: "Windows 앱 인증 키트 테스트"
 description: "Windows 앱 인증 키트에는 앱을 Windows 스토어에 게시할 준비가 되었는지 확인하는 데 도움이 되는 다양한 테스트가 들어 있습니다."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2dab2719eae86487b93b9030b430b84aea7b2737
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 5e3ae74ba4392b5021159f9fcb825009137701d3
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
-## <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
+# <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -668,8 +670,8 @@ Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업
 
 > **참고** 이 문서는 UWP 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
- 
+## <a name="related-topics"></a>관련 항목
 
- 
-
+* [Windows 데스크톱 브리지 앱 테스트](windows-desktop-bridge-app-tests.md)
+* [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)
  

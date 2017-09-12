@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP"
-ms.openlocfilehash: bb31d8cbe60703aff179913648556f408ba65586
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 82d05e49f087dda903a0bc5c1010df98ae64c016
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="get-all-add-ons"></a>모든 추가 기능 가져오기
 
 
 
 
-Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 모든 앱의 모든 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 데이터를 검색합니다.
+Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 모든 앱의 모든 추가 기능 데이터를 검색합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -26,8 +28,6 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발�
 
 * 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-
->**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 ## <a name="request"></a>요청
 

@@ -3,37 +3,42 @@ author: QuinnRadich
 title: "UWP 버전 선택"
 description: "Microsoft Visual Studio에서 UWP 앱을 작성하는 경우 대상 버전을 선택할 수 있습니다. 다른 UWP 버전 간 차이점과 새 프로젝트 및 기존 프로젝트에서 선택을 구성하는 방법을 알아봅니다."
 ms.author: quradic
-ms.date: 02/08/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
-ms.openlocfilehash: 2fe7d9017919166992b13a5cc5f058591fecda3e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 141560d379efab8f0bf8f745ec9e77972d847eec
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/09/2017
 ---
 # <a name="choose-a-uwp-version"></a>UWP 버전 선택
 
-Microsoft Visual Studio에서 UWP 앱을 작성하는 경우 대상 버전을 선택할 수 있습니다. 현재는 세 개의 버전만 사용 가능합니다.
+각 Windows 10 버전은 UWP 플랫폼에 새로운 기능과 향상된 기능을 가져 왔습니다. Microsoft Visual Studio에서 UWP 앱을 만들 때 대상 버전을 선택할 수 있습니다.
+
+다음 표에는 사용 가능한 Windows 10 버전이 설명되어 있습니다. 이 표는 UWP 앱 빌드에만 적용되며, UWP 앱은 Windows 10에서만 지원됩니다. 이전 버전의 Windows에 대한 UWP 앱은 개발할 수 없으며, 대상 버전을 지정하려면 [적절한 SDK 빌드를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)해야 합니다. 
 
 | 버전 | 설명 |
 | --- | --- |
-| 빌드 14393(Anniversary Edition) | 2016년 7월에 릴리스된 Windows 10의 최신 버전입니다. 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows Ink:** 새 InkCanvas 및 InkToolbar 컨트롤입니다. </br> \* **Cortana API:** 새 Cortana 작업을 사용하여 Cortana 지원과 앱의 특정 기능을 통합합니다. </br> \* **Windows Hello:** 이제 Microsoft Edge에서 Windows Hello를 지원하여 웹 개발자가 생체 인식 인증에 액세스할 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-version-1607.md)에 있는 세부 정보 페이지를 방문하세요.  |
+| 빌드 15063(크리에이터 업데이트) | 2017년 3월에 출시된 Windows 10 최신 버전입니다. **이 Windows 버전을 대상으로 지정하려면 _반드시_ Visual Studio 2017을 사용해야 합니다**. 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다.  </br> \* **잉크 분석:** 이제 Windows Ink는 잉크 스트로크를 쓰기 또는 그리기 스트로크로 분류하고 텍스트, 모양 및 기본 레이아웃 구조를 인식할 수 있습니다. </br> \* **Windows.Ui.Composition API:** 앱에서 간단하게 애니메이션을 결합하고 적용할 수 있습니다. </br> \* **라이브 편집:** 앱이 실행 중인 XAML을 편집하고 변경 내용이 적용되는 것을 실시간으로 볼 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-version-1703.md)에 있는 세부 정보 페이지를 방문하세요.  |
+| 빌드 14393 (1주년 업데이트) | 이 Windows 10 버전은 2016년 7월에 출시되었습니다. 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows Ink:** 새 InkCanvas 및 InkToolbar 컨트롤입니다. </br> \* **Cortana API:** 새 Cortana 작업을 사용하여 Cortana 지원과 앱의 특정 기능을 통합합니다. </br> \* **Windows Hello:** 이제 Microsoft Edge에서 Windows Hello를 지원하여 웹 개발자가 생체 인식 인증에 액세스할 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-version-1607.md)에 있는 세부 정보 페이지를 방문하세요.  |
 | 빌드 10586 | Windows 10의 이 버전은 2015년 11월에 릴리스되었습니다. 주요 기능으로 Microsoft Edge의 비디오 통신을 위한 ORTC(개체 실시간 통신) API와 앱에서 Windows Hello 얼굴 인증을 사용할 수 있도록 해주는 공급자 API가 있습니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-version-1511.md) |
 | 빌드 10240 | 이 버전은 2015년 7월의 Windows10 초기 릴리스 버전입니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-version-1507.md) |
 
-새 개발자와 모든 연령 시청가용 코드를 작성하는 개발자는 항상 Windows의 최신 빌드(14393)를 사용하는 것이 좋습니다. 엔터프라이즈 앱을 작성하는 개발자는 이전 **최소 버전**을 지원하는 것을 고려해야 합니다.
+새 개발자와 모든 연령 시청가용 코드를 작성하는 개발자는 항상 Windows의 최신 빌드(15063)를 사용하는 것이 좋습니다. 엔터프라이즈 앱을 작성하는 개발자는 이전 **최소 버전**을 지원하는 것을 고려해야 합니다.
 
 ## <a name="whats-different-in-each-uwp-version"></a>각 UWP 버전의 차이점은 무엇인가요?
 
-UWP의 새 API 및 변경된 API는 Windows 10의 모든 후속 버전에서 사용할 수 있습니다. 버전에 추가된 기능에 대한 특정 정보는 [Windows 10 개발자를 위한 새로운 기능](../whats-new/windows-10-version-1607.md)을 참조하세요.
+UWP의 새 API 및 변경된 API는 Windows 10의 모든 후속 버전에서 사용할 수 있습니다. 버전에 추가된 기능에 대한 특정 정보는 [Windows 10 개발자를 위한 새로운 기능](../whats-new/windows-10-version-1703.md)을 참조하세요.
 
 모든 디바이스 패밀리 및 해당 버전과 모든 API 계약 및 해당 버전을 열거하는 참조 항목은 [디바이스 패밀리](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) 및 [API 계약](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx)을 참조하세요.
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>앱에 사용할 버전 선택
 
-Visual Studio의 **새 유니버설 Windows 프로젝트** 대화 상자에서 **대상 버전** 및 **최소 버전**용 버전을 선택할 수 있습니다.
+Visual Studio의 **새 유니버설 Windows 프로젝트** 대화 상자에서 **대상 버전** 및 **최소 버전**용 버전을 선택할 수 있습니다. 또한 앱 **속성**의 **응용 프로그램** 섹션에서 UWP 앱의 *대상 버전* 및 **최소 버전**을 변경할 수 있습니다.
 
 * **대상 버전**. 프로젝트 파일에서 *TargetPlatformVersion* 설정을 지정합니다. 또한 앱 패키지 매니페스트에서 *TargetDeviceFamily@MaxVersionTested* 특성의 값을 결정합니다. 선택하는 값은 프로젝트가 대상으로 하는 UWP 플랫폼의 버전을 지정하므로(따라서 앱에 사용할 수 있는 API 집합) 가능한 한 최신 버전을 선택하는 것이 좋습니다. 앱 패키지 매니페스트에 대한 자세한 내용과 TargetDeviceFamily를 수동으로 구성하는 데 대한 몇 가지 지침은 [TargetDeviceFamily](https://msdn.microsoft.com/library/windows/apps/dn986903)를 참조하세요.
 * **최소 버전**. 프로젝트 파일에서 *TargetPlatformMinVersion* 설정을 지정합니다. 또한 앱 패키지 매니페스트에서 *TargetDeviceFamily@MinVersion* 특성의 값을 결정합니다. 선택하는 값은 프로젝트가 작동할 수 있는 UWP 플랫폼의 최소 버전을 지정합니다.

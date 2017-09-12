@@ -1,17 +1,19 @@
 ---
-author: Xansky
+author: normesta
 description: "사용자가 메일 메시지를 보낼 수 있도록 메일 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 메일의 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다."
 title: "메일 보내기"
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: "연락처, 메일, 보내기"
-ms.author: mhopkins
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 67c2f808050547f5a56cbeb4e1087cdf3555727d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: bfeec341b0b4e63b4fe37118c1f7daac67929018
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="send-email"></a>메일 보내기
 
@@ -31,8 +33,8 @@ translationtype: HT
 메일 작성 대화 상자에서 새 [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) 개체를 만들고 미리 채울 데이터를 설정합니다. [**ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269)를 호출하여 대화 상자를 표시합니다.
 
 ``` cs
-private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient, 
-    string messageBody, 
+private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
+    string messageBody,
     StorageFile attachmentFile)
 {
     var emailMessage = new Windows.ApplicationModel.Email.EmailMessage();
@@ -57,7 +59,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
     }
 
     await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
-        
+
 }
 ```
 
@@ -72,7 +74,3 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
  
 
  
-
-
-
-

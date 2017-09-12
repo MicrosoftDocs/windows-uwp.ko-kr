@@ -1,387 +1,328 @@
 ---
-author: Karl-Bridge-Microsoft
-Description: "사용자가 키보드를 사용하여 UI 요소를 탐색할 수 있도록 탭 탐색과 선택키를 사용한 키보드 액세스를 가능하게 합니다."
-title: "선택키"
-ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
-label: Access keys
+author: kbridge
+Description: "사용자가 터치 또는 마우스 같은 포인터 디바이스 대신 키보드를 통해 앱의 시각적 UI를 신속하게 탐색하고 상호 작용할 수 있는 직관적인 방법을 제공하여 UWP 앱의 사용 편의성과 접근성을 개선하는 방법을 알아보세요."
+title: "선택키 설계 지침"
+label: Access keys design guidelines
+keywords: "키보드, 선택키, 키 팁, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 조작"
 template: detail.hbs
-keywords: "선택키, 키보드, 접근성, 사용자 상호 작용, 입력"
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8d62135680e13f866654c168364bb3393651bd2d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: kimsea
+dev-contact: niallm
+doc-status: Published
+ms.openlocfilehash: ae8bd60311bc7ead44ee3c9a137a233888be55f3
+ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="access-keys"></a>선택키
 
-행동 장애가 있는 사용자와 같이 마우스를 사용하기 어려운 사용자는 키보드를 사용하여 앱을 탐색 및 조작하는 경우가 많습니다.  XAML 프레임워크를 사용하면 탭 탐색과 선택키를 통해 키보드에서 UI 요소에 액세스할 수 있습니다.
-
-- 탭 탐색은 사용자가 키보드의 Tab 키와 화살표 키를 사용하여 UI 요소 간에 포커스를 이동할 수 있는 기본 키보드 접근성 어포던스(기본적으로 사용)입니다.
-- 선택키는 키보드 한정자(Alt 키)와 하나 이상의 영숫자 키(일반적으로 명령과 연결된 문자)의 조합을 사용하여 앱 명령에 빠르게 액세스할 수 있도록 앱에서 구현하는 보충 접근성 어포던스입니다. 일반적인 선택키에는 파일 메뉴를 여는 _Alt+F_, 왼쪽에 맞추는 _Alt+AL_ 등이 있습니다.  
-
-키보드 탐색과 접근성에 대한 자세한 내용은 [키보드 조작](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) 및 [키보드 접근성](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)을 참조하세요. 이 문서에서는 이러한 문서에 설명된 개념을 알고 있다고 가정합니다.
-
-## <a name="access-key-overview"></a>선택키 개요
-
-선택키를 사용하면 화살표 키와 Tab 키를 반복적으로 누르지 않고도 키보드를 사용하여 직접 단추를 호출하거나 포커스를 설정할 수 있습니다. 선택키는 쉽게 검색할 수 있어야 하므로 선택키가 있는 컨트롤 위의 부동 배지 등과 같이 UI에서 직접 문서화해야 합니다.
-
-![Microsoft Word의 선택키 및 연결된 키 팁의 예](images/keyboard/accesskeys-keytips.png)
-
-_그림 1: Microsoft Word의 선택키 및 연결된 키 팁의 예_
-
-선택키는 UI 요소와 연결된 하나 이상의 영숫자 문자입니다. 예를 들어 Microsoft Word에서는 _H_를 홈 탭, _2_를 실행 취소 단추, _JI_를 그리기 탭에 사용합니다.
-
-**선택키 범위**
-
-선택키는 특정 범위에 속합니다. 예를 들어 그림 1에서 _F_, _H_, _N_ 및 _JI_는 페이지 범위에 속합니다.  사용자가 _H_를 누르면 범위가 홈 탭의 범위로 변경되고 해당 선택키가 그림 2와 같이 표시됩니다. 선택키 _V_, _FP_, _FF_ 및 _FS_는 홈 탭의 범위에 속합니다.
-
-![Microsoft Word의 홈 탭 범위에 대한 선택키 및 연결된 키 팁의 예](images/keyboard/accesskeys-keytips-hometab.png)
-
-_그림 2: Microsoft Word의 홈 탭 범위에 대한 선택키 및 연결된 키 팁의 예_
-
-두 요소가 서로 다른 범위에 속하는 경우 동일한 선택키를 가질 수 있습니다. 예를 들어 _2_는 페이지 범위에서 실행 취소의 선택키(그림 1)인 동시에 홈 탭 범위에서 기울임꼴의 선택키(그림 2)입니다. 다른 범위를 지정하지 않을 경우 모든 선택키는 기본 범위에 속합니다.
-
-**선택키 시퀀스**
-
-선택키 조합은 일반적으로 키를 동시에 누르는 대신 한 번에 하나씩 키를 눌러 작업을 수행합니다. 이에 대한 예외는 다음 섹션에서 설명합니다. 작업을 수행하는 데 필요한 키 입력 시퀀스가 _선택키 시퀀스_입니다. 사용자가 Alt 키를 누르면 선택키 시퀀스가 시작됩니다. 사용자가 선택키 시퀀스의 마지막 키를 누르면 선택키가 호출됩니다. 예를 들어 Word에서 보기 탭을 열려면 선택키 시퀀스인 _Alt, W_를 누릅니다.
-
-사용자는 선택키 시퀀스에서 여러 개의 선택키를 호출할 수 있습니다. 예를 들어 Word 문서에서 서식 복사를 열려면 Alt 키를 눌러 시퀀스를 초기화하고 _H_ 키를 눌러 홈 섹션으로 이동한 다음 선택키 범위를 변경하고 _F_, _P_ 키를 차례로 누릅니다. _H_ 및 _FP_ 키는 각각 홈 탭과 서식 복사 단추의 선택키입니다.
-
-호출된 후 선택키 시퀀스를 완료하는 요소도 있고(예: 서식 복사 단추) 완료하지 않는 요소도 있습니다(예: 홈 탭). 선택키를 호출하면 명령이 실행되거나, 포커스가 이동되거나, 선택키 범위가 변경되거나, 다른 연결된 작업이 수행됩니다.
-
-## <a name="access-key-user-interaction"></a>선택키 사용자 조작
-
-선택키 API를 이해하려면 먼저 사용자 조작 모델을 이해해야 합니다. 다음은 선택키 사용자 조작 모델에 대한 요약입니다.
-
-- 사용자가 Alt 키를 누르면 입력 컨트롤에 포커스가 있는 경우에도 선택키 시퀀스가 시작됩니다. 그런 다음 사용자는 선택키를 눌러 연결된 작업을 호출할 수 있습니다. 이 사용자 조작을 사용하는 경우 Alt 키를 누를 때 표시되는 시각적 어포던스(예: 부동 배지)로 사용 가능한 선택키를 UI 내에서 문서화해야 합니다.
-- 사용자가 Alt 키와 선택키를 동시에 누르면 선택키가 즉시 호출됩니다. 이는 Alt+_선택키_로 정의된 바로 가기 키를 사용하는 것과 비슷합니다. 이 경우 선택키의 시각적 어포던스가 표시되지 않습니다. 그러나 선택키 호출 시 선택키 범위가 변경될 수 있습니다. 이 경우 선택키 시퀀스가 시작되고 새 범위에 대한 시각적 어포던스가 표시됩니다.
-    > [!NOTE]
-    > 한 문자로 이루어진 선택키만 이 사용자 조작을 이용할 수 있습니다. 둘 이상의 문자로 이루어진 선택 키에 대해서는 Alt+_선택키_ 조합이 지원되지 않습니다.    
-- 일부 문자를 공유하는 여러 개의 다중 문자 선택키가 있을 경우 사용자가 공유 문자를 누르면 선택키가 필터링됩니다. 예를 들어 _A1_, _A2_, _C_라는 세 개의 선택키가 표시되어 있다고 가정합니다. 사용자가 _A_를 누르면 _A1_ 및 _A2_ 선택키만 표시되고 C에 대한 시각적 어포던스는 숨겨집니다.
-- Esc 키를 누르면 한 수준의 필터링이 제거됩니다. 예를 들어 _B_, _ABC_, _ACD_, _ABD_라는 선택키가 있고 사용자가 _A_를 누르면 _ABC_, _ACD_ 및 _ABD_만 표시됩니다. 그런 다음 사용자가 _B_를 누르면 _ABC_ 및 _ABD_가 표시됩니다. 사용자가 Esc 키를 누르면 한 수준의 필터링이 제거되고 _ABC_, _ACD_ 및 _ABD_ 선택키가 표시됩니다. 사용자가 Esc 키를 다시 누르면 다른 한 수준의 필터링이 제거되고 _B_, _ABC_, _ACD_, _ABD_ 등의 모든 선택키가 활성화되고 해당 시각적 어포던스가 표시됩니다.
-- Esc 키를 누르면 이전 범위로 다시 이동합니다. 많은 명령이 있는 앱에서 탐색하기 쉽도록 선택키가 여러 범위에 속할 수 있습니다. 선택키 시퀀스는 항상 주 범위에서 시작합니다. 특정 UI 요소를 범위 소유자로 지정하는 선택키를 제외하고 모든 선택키는 주 범위에 속합니다. 사용자가 범위 소유자인 요소의 선택키를 호출하면 XAML 프레임워크가 자동으로 범위를 해당 요소로 이동하고 내부 선택키 탐색 스택에 추가합니다. Esc 키를 누르면 선택키 탐색 스택을 뒤로 이동합니다.
-- 선택키 시퀀스를 해제하는 방법에는 여러 가지가 있습니다.
-    - 사용자는 Alt 키를 눌러 진행 중인 선택키 시퀀스를 해제할 수 있습니다. Alt 키를 누르면 선택키 시퀀스가 시작된다는 것도 기억하세요.
-    - 주 범위에 있고 필터링되지 않은 경우 Esc 키를 누르면 선택키 시퀀스가 해제됩니다.
-        > [!NOTE]
-        > Esc 키 입력은 처리를 위해 UI 계층에도 전달됩니다.
-    - Tab 키를 누르면 선택키 시퀀스가 해제되고 탭 탐색으로 돌아갑니다.
-    - Enter 키를 누르면 선택키 시퀀스가 해제되고 포커스가 있는 요소에 키 입력을 보냅니다.
-    - 화살표 키를 누르면 선택키 시퀀스가 해제되고 포커스가 있는 요소에 키 입력을 보냅니다.
-    - 마우스 클릭이나 터치와 같은 포인터 아래로 이동 이벤트는 선택키 시퀀스를 해제합니다.
-    - 기본적으로 선택키를 호출하면 선택키 시퀀스가 해제됩니다.  그러나 [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) 속성을 **false**로 설정하여 이 동작을 재정의할 수 있습니다.
-- DFA(결정적 유한 오토마톤)가 불가능하면 선택키 충돌이 발생합니다. 선택키 충돌은 바람직하지 않지만 많은 명령, 지역화 문제 또는 선택키의 런타임 생성으로 인해 발생할 수 있습니다.
-
- 충돌이 발생하는 다음 두 가지 경우가 있습니다.
- - 두 UI 요소에 동일한 선택키 값이 있고 동일한 선택키 범위에 속하는 경우. 예를 들어 선택키 _A1_이 `button1`에 사용되고 선택 키 _A1_이 기본 범위에 속하는 `button2`입니다. 이 경우 시스템은 시각적 트리에 추가된 첫 번째 요소의 선택키를 처리하여 충돌을 해결합니다. 나머지는 무시됩니다.
- - 동일한 선택키 범위에 둘 이상의 계산 옵션이 있는 경우. 예를 들어 _A_와 _A1_이 있습니다. 사용자가 _A_를 누를 경우 시스템에 _A_ 선택키를 호출하거나 계속 진행하여 _A1_ 선택키의 A 문자를 사용하는 두 가지 옵션이 있습니다. 이 경우 시스템은 오토마톤을 통해 도달한 첫 번째 선택키 호출만 처리합니다. 예를 들어 _A_와 _A1_이 있을 경우 시스템은 _A_만 호출합니다.
--     사용자가 선택키 시퀀스에서 잘못된 선택키 값을 누르면 아무 작업도 수행되지 않습니다. 선택키 시퀀스에서 유효한 선택키로 간주되는 키에는 다음 두 가지 범주가 있습니다.
- - 선택키 시퀀스를 종료하는 특수 키: Esc, Alt, 화살표 키, Enter, Tab 등입니다.
- - 선택키에 할당된 영숫자 문자
-
-## <a name="access-key-apis"></a>선택키 API
-
-선택키 사용자 조작을 지원하기 위해 XAML 프레임워크는 여기에 설명된 API를 제공합니다.
-
-**AccessKeyManager**
-
-[AccessKeyManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx)는 선택키가 표시되거나 숨겨진 경우 UI를 관리하는 데 사용할 수 있는 도우미 클래스입니다. [IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) 이벤트는 앱이 선택키 시퀀스를 시작하고 종료할 때마다 발생합니다. [IsDisplayModeEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabled.aspx) 속성을 쿼리하여 시각적 어포던스를 표시할지 또는 숨길지를 결정할 수 있습니다.  [ExitDisplayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.exitdisplaymode.aspx)를 호출하여 강제로 선택키 시퀀스를 해제할 수도 있습니다.
+선택키는 사용자가 터치 또는 마우스 같은 포인터 디바이스 대신 키보드를 통해 앱의 시각적 UI를 신속하게 탐색하고 상호 작용할 수 있는 직관적인 방법을 제공하여 Windows 앱의 사용 편의성과 접근성을 개선할 수 있습니다.
 
 > [!NOTE]
-> 선택키의 시각적 개체에 대한 기본 제공 구현은 없습니다. 직접 제공해야 합니다.  
+> 키보드는 특정 장애([키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility) 참조)가 있는 사용자에게 필수이며, 앱과 좀 더 효과적으로 상호 작용하는 수단으로 키보드를 선호하는 사용자에게도 중요한 도구입니다.
 
-**AccessKey**
+UWP(유니버설 Windows 플랫폼)는 모든 플랫폼 컨트롤에서 키 팁이라고 하는 시각적 큐를 통해 키보드 기반 선택키 및 연결된 UI 피드백에 대한 기본 지원을 제공합니다.
 
-[AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) 속성을 사용하면 UIElement 또는 [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.accesskey.aspx)에 선택키를 지정할 수 있습니다. 두 요소의 선택키와 범위가 같은 경우 시각적 트리에 추가된 첫 번째 요소만 처리됩니다.
+## <a name="overview"></a>개요
 
-XAML 프레임워크에서 선택키를 처리하도록 하려면 시각적 트리에서 UI 요소를 실현해야 합니다. 시각적 트리에 선택키를 가진 요소가 없으면 선택키 이벤트가 발생하지 않습니다.
+선택키는 Alt 키와 하나 이상의 영숫자 키 조합(*니모닉*이라고도 함)으로 구성되며 일반적으로 동시에 누르지 않고 순차적으로 누릅니다.
 
-선택키 API는 생성되기 위해 두 개의 키 입력이 필요한 문자를 지원하지 않습니다. 개별 문자는 특정 언어의 기본 자판 배열에 있는 키와 일치해야 합니다.  
-
-**AccessKeyDisplayRequested/Dismissed**
-
-[AccessKeyDisplayRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplayrequested.aspx) 및 [AccessKeyDisplayDismissed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplaydismissed.aspx) 이벤트는 선택키의 시각적 어포던스를 표시하거나 해제해야 할 때 발생합니다. [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx) 속성이 **Collapsed**로 설정된 요소에 대해서는 이러한 이벤트가 발생하지 않습니다. 선택키 시퀀스 중 사용자가 선택키에서 사용되는 문자를 누를 때마다 AccessKeyDisplayRequested 이벤트가 발생합니다. 예를 들어 선택키가 _AB_로 설정된 경우 이 이벤트는 사용자가 Alt 키를 누를 때 발생하고 _A_를 누를 때 다시 발생합니다. 사용자가 _B_를 누르면 AccessKeyDisplayDismissed 이벤트가 발생합니다.
-
-**AccessKeyInvoked**
-
-[AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) 이벤트는 사용자가 선택키의 마지막 문자에 도달할 때 발생합니다. 선택키는 하나 또는 여러 문자로 구성될 수 있습니다. 예를 들어 선택키 _A_와 _BC_의 경우 사용자가 _Alt, A_ 또는 _Alt, B, C_를 누를 때는 이벤트가 발생하지만 _Alt, B_만 누를 때는 발생하지 않습니다. 이 이벤트는 키를 놓을 때가 아니라 키를 누를 때 발생합니다.
-
-**IsAccessKeyScope**
-
-[IsAccessKeyScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.isaccesskeyscope.aspx) 속성을 사용하면 UIElement를 선택키 범위의 루트로 지정할 수 있습니다. 이 요소에 대해서는 AccessKeyDisplayRequested 이벤트가 발생하지만 자식 요소에 대해서는 발생하지 않습니다. 사용자가 이 요소를 호출하면 XAML 프레임워크가 자동으로 범위를 변경하고 자식 요소에서는 AccessKeyDisplayRequested 이벤트를, 다른 UI 요소(부모 요소 포함)에서는 AccessKeyDisplayDismissed 이벤트를 발생합니다.  범위를 변경할 때는 선택키 시퀀스가 종료되지 않습니다.
-
-**AccessKeyScopeOwner**
-
-요소가 시각적 트리에서 부모 요소가 아닌 다른 요소(원본)의 범위에 참여하도록 하려면 [AccessKeyScopeOwner](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyscopeowner.aspx) 속성을 설정합니다. AccessKeyScopeOwner 속성에 바인딩된 요소의 IsAccessKeyScope는 **true**로 설정되어 있어야 합니다. 설정되지 않은 경우 예외가 발생합니다.
-
-**ExitDisplayModeOnAccessKeyInvoked**
-
-기본적으로 요소가 범위 소유자가 아닌 경우 선택키를 호출하면 선택키 시퀀스가 완료되고 [AccessKeyManager.IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) 이벤트가 발생합니다. [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) 속성을 **false**로 설정하여 이 동작을 재정의하고 호출된 후 선택키 시퀀스를 종료하지 않도록 할 수 있습니다. 이 속성은 [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) 및 [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.exitdisplaymodeonaccesskeyinvoked.aspx) 둘 다에 있습니다.
+키 팁은 사용자가 Alt 키를 누를 때 선택키를 지원하는 컨트롤 옆에 표시되는 배지입니다. 각 키 팁에는 연결된 컨트롤을 활성화하는 영숫자 키가 포함되어 있습니다.
 
 > [!NOTE]
-> 요소가 범위 소유자이면(`IsAccessKeyScope="True"`) 앱이 새 선택키 범위를 시작하며 IsDisplayModeEnabledChanged 이벤트가 발생하지 않습니다.
+> 바로 가기 키는 단일 영숫자 문자를 사용하는 선택키에 대해 자동으로 지원됩니다. 예를 들어 Word에서 Alt + F를 동시에 누르면 파일 메뉴가 열리고 키 팁은 표시되지 않습니다.
 
-**지역화**
+Alt 키를 누르면 선택키 기능이 초기화되고 현재 사용 가능한 모든 키 조합이 키 팁에 표시됩니다. 이후의 키 입력은 선택키 프레임워크를 통해 처리됩니다. 유효한 선택키를 누르거나 Enter, Esc, Tab 또는 화살표 키를 눌러 선택키를 비활성화하고 키 입력 처리를 앱에 반환할 때까지 잘못된 키가 거부됩니다.
 
-선택키를 여러 언어로 지역화하고 [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx) API를 사용하여 런타임에 로드할 수 있습니다.
+Microsoft Office 앱은 선택키에 대한 다양한 지원을 제공합니다. 다음 이미지는 선택키가 활성화된 Word의 홈 탭을 보여 줍니다(숫자 및 여러 키 입력을 지원).
 
-## <a name="control-patterns-used-when-an-access-key-is-invoked"></a>선택키를 호출할 때 사용되는 컨트롤 패턴
+![Microsoft Word의 선택키에 대한 키 팁 배지](images/accesskeys/keytip-badges-word.png)
 
-컨트롤 패턴은 공용 컨트롤 기능을 노출하는 인터페이스 구현입니다. 예를 들어 단추는 **Invoke** 컨트롤 패턴을 구현하고 이 패턴은 **클릭** 이벤트를 발생합니다. 선택키를 호출하면 XAML 프레임워크에서 호출된 요소가 컨트롤 패턴을 구현하는지 여부를 조회하고, 구현하는 경우 컨트롤 패턴을 실행합니다. 요소에 둘 이상의 컨트롤 패턴이 있는 경우 하나만 호출되고 나머지는 무시됩니다. 컨트롤 패턴은 다음 순서로 검색됩니다.
+_Microsoft Word의 선택키에 대한 키 팁 배지_
 
-1.    Invoke. 예를 들어 단추입니다.
-2.    Toggle. 예를 들어 확인란입니다.
-3.    Selection. 예를 들어 RadioButton입니다.
-4.    Expand/Collapse. 예를 들어 ComboBox입니다.
+컨트롤에 선택키를 추가하려면 **AccessKey 속성**을 사용합니다. 이 속성의 값은 선택키 순서, 바로 가기(단일 영숫자인 경우) 및 키 팁을 지정합니다.
 
-컨트롤 패턴을 찾을 수 없는 경우 선택키 호출은 no-op으로 표시되며, 이러한 상황의 디버그를 지원하기 위해 다음과 같은 디버그 메시지가 기록됩니다. "이 구성 요소에 대한 자동화 패턴을 찾을 수 없습니다. AccessKeyInvoked에 대한 이벤트 처리기에서 원하는 동작을 구현하세요. 이벤트 처리기에서 Handled를 true로 설정하면 이 메시지가 표시되지 않습니다."
+``` xaml
+<Button Content="Accept" AccessKey="A" Click="AcceptButtonClick" />
+```
 
-> [!NOTE]
-> 이 메시지를 표시하려면 Visual Studio의 디버그 설정에서 디버거의 응용 프로그램 프로세스 유형이 _혼합(관리/네이티브)_ 또는 _네이티브_여야 합니다.
+## <a name="when-to-use-access-keys"></a>선택키를 사용해야 하는 경우
 
-선택키에서 기본 컨트롤 패턴을 실행하지 않거나 요소에 컨트롤 패턴이 없는 경우 [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) 이벤트를 처리하고 원하는 동작을 구현해야 합니다.
-```csharp
-private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
+적합한 경우 UI 어디서나 선택키를 지정하고 모든 사용자 지정 컨트롤에서 선택키를 지원하는 것이 좋습니다.
+
+1.  키를 한 번에 하나만 누를 수 있거나 마우스 사용에 어려움이 있는 사용자를 포함하여 거동 장애가 있는 사용자를 위해 **선택키로 앱의 접근성을 향상**합니다.
+
+    잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 요소입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다. 이러한 사용자에게는 포괄적인 명령 범위가 매우 중요합니다.
+
+2.  키보드로 조작하는 것을 선호하는 고급 사용자를 위해 **선택키로 앱의 사용 편의성을 향상**합니다.
+
+    숙련된 사용자는 키보드 기반 명령을 더 빠르게 입력할 수 있고 키보드에서 손을 떼지 않아도 되기 때문에 키보드를 선호하는 경향이 강합니다. 이러한 사용자에게는 효율성과 일관성이 매우 중요합니다. 포괄성은 가장 자주 사용하는 명령에만 중요합니다.
+
+## <a name="set-access-key-scope"></a>선택키 범위 설정
+
+화면에 선택키를 지원하는 요소가 많이 있는 경우 선택키 범위를 조정하여 **인지적 부하**를 줄이는 것이 좋습니다. 이렇게 하면 화면의 선택키 수가 최소화되어 쉽게 찾을 수 있으며, 효율성과 생산성이 향상됩니다.
+
+예를 들어 Microsoft Word는 두 가지 선택키 범위를 제공합니다. 하나는 리본 탭의 주 범위이고 다른 하나는 선택한 탭의 명령에 대한 보조 범위입니다.
+
+다음 이미지는 Word의 두 선택키 범위를 보여 줍니다. 첫 번째는 사용자가 탭 및 다른 최상위 수준 명령을 선택할 수 있는 주 선택키를 보여 주고, 두 번째는 홈 탭의 선택키를 보여 줍니다.
+
+![Microsoft Word의 주 선택키](images/accesskeys/primary-access-keys-word.png)
+
+_Microsoft Word의 주 선택키_
+
+![Microsoft Word의 보조 선택키](images/accesskeys/secondary-access-keys-word.png)
+
+Microsoft Word의 보조 선택키
+
+선택키는 여러 범위의 요소에 대해 중복 가능합니다. 위 예제에서 "2"는 주 범위의 실행 취소 그리고 보조 범위의 "기울임꼴"에 대한 선택키입니다.
+
+CommandBar 같은 일부 컨트롤은 기본 선택키 범위를 지원하지 않으며, 따라서 사용자가 직접 구현해야 합니다. 다음 예제는 Word의 리본처럼 부모 명령이 호출되면 선택키가 제공되는 CommandBar의 SecondaryCommands를 지원하는 방법을 보여 줍니다.
+
+``` C#
+public class CommandBarHack : CommandBar
 {
-    args.Handled = true;
-    //Do something
+    CommandBarOverflowPresenter secondaryItemsControl;
+    Popup overflowPopup;
+
+    public CommandBarHack()
+    {
+        this.ExitDisplayModeOnAccessKeyInvoked = false;
+        AccessKeyInvoked += OnAccessKeyInvoked;
+    }
+
+    protected override void OnApplyTemplate()
+    {
+        base.OnApplyTemplate();
+
+        Button moreButton = GetTemplateChild("MoreButton") as Button;
+        moreButton.SetValue(Control.IsTemplateKeyTipTargetProperty, true);
+        moreButton.IsAccessKeyScope = true;
+
+        // SecondaryItemsControl changes
+        secondaryItemsControl = GetTemplateChild("SecondaryItemsControl") as CommandBarOverflowPresenter;
+        secondaryItemsControl.AccessKeyScopeOwner = moreButton;
+
+        overflowPopup = GetTemplateChild("OverflowPopup") as Popup;
+
+    }
+    private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
+    {
+
+        if (overflowPopup != null)
+        {
+            overflowPopup.Opened += SecondaryMenuOpened;
+        }
+    }
+
+    private void SecondaryMenuOpened(object sender, object e)
+    {
+        //This is not neccesay given we are automatically pushing the scope.
+        var item = secondaryItemsControl.Items.First();
+        if (item != null && item is Control)
+        {
+            (item as Control).Focus(FocusState.Keyboard);
+        }
+        overflowPopup.Opened -= SecondaryMenuOpened;
+    }
 }
 ```
 
-컨트롤 패턴에 대한 자세한 내용은 [UI 자동화 컨트롤 패턴 개요](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx)를 참조하세요.
+
+``` xaml
+<local:CommandBarHack x:Name="MainCommandBar" AccessKey="M" >
+    <AppBarButton AccessKey="G" Icon="Globe" Label="Go"/>
+    <AppBarButton AccessKey="S" Icon="Stop" Label="Stop"/>
+    <AppBarSeparator/>
+    <AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">
+        <AppBarButton.Flyout>
+            <MenuFlyout>
+                <MenuFlyoutItem AccessKey="A" Icon="Globe" Text="Refresh A" />
+                <MenuFlyoutItem AccessKey="B" Icon="Globe" Text="Refresh B" />
+                <MenuFlyoutItem AccessKey="C" Icon="Globe" Text="Refresh C" />
+                <MenuFlyoutItem AccessKey="D" Icon="Globe" Text="Refresh D" />
+            </MenuFlyout>
+        </AppBarButton.Flyout>
+    </AppBarButton>
+    <AppBarButton AccessKey="B" Icon="Back" Label="Back"/>
+    <AppBarButton AccessKey="F" Icon="Forward" Label="Forward"/>
+    <AppBarSeparator/>
+    <AppBarToggleButton AccessKey="V" Icon="Favorite" Label="Favorite"/>
+    <CommandBar.SecondaryCommands>
+        <AppBarToggleButton Icon="Like" AccessKey="L" Label="Like"/>
+        <AppBarButton Icon="Setting" AccessKey="T" Label="Settings" />
+    </CommandBar.SecondaryCommands>
+</local:CommandBarHack>
+```
+
+![CommandBar에 대한 기본 선택키](images/accesskeys/primary-access-keys-commandbar.png)
+
+_CommandBar 주 범위 및 지원되는 선택키_
+
+![CommandBar에 대한 보조 선택키](images/accesskeys/secondary-access-keys-commandbar.png)
+
+_CommandBar 보조 범위 및 지원되는 선택키_
+
+## <a name="avoid-access-key-collisions"></a>선택키 충돌 방지
+
+동일한 범위에 있는 두 개 이상의 요소가 중복되는 선택키를 갖고 있거나 동일한 영숫자 문자로 시작하는 경우 선택키 충돌이 발생합니다.
+
+시스템에서는 시각적 트리에 추가된 첫 번째 요소의 선택키를 처리하고 나머지는 무시하여 중복 선택키를 해결합니다.
+
+여러 선택키가 동일한 문자로 시작하는 경우(예: “A”, “A1”, “AB”) 시스템에서는 단일 문자 선택키를 처리하고 나머지는 무시합니다.
+
+고유한 선택키를 사용하거나 명령의 범위를 지정하여 충돌을 방지해야 합니다.
+
+## <a name="choose-access-keys"></a>선택키를 선택
+
+선택키를 선택할 때 다음 사항을 고려해야 합니다.
+
+-   단일 문자를 사용하여 키 입력을 최소화하고 바로 가기 키를 기본적으로 지원(Alt + AccessKey)
+-   문자를 3개 이상 사용하지 말 것
+-   선택키 충돌 방지
+-   문자 "I"와 숫자 "1" 또는 문자 "O"와 숫자 "0"처럼 다른 문자와 구분하기 어려운 문자를 사용하지 말 것
+-   Word처럼 많이 사용되는 앱의 잘 알려진 선례를 사용할 것(“파일”은 “F”, “홈”은 “H” 등)
+-   명령 이름의 첫 번째 문자 또는 명령과 밀접하게 관련되어 기억하기 쉬운 문자를 사용할 것
+    -   첫 번째 문자가 이미 할당된 경우 명령 이름의 첫 번째 문자와 최대한 가까운 문자를 사용할 것(삽입은 "N")
+    -   명령 이름의 고유한 자음 사용(보기는 "W")
+    -   명령 이름의 모음 사용.
+
+## <a name="localize-access-keys"></a>선택키 지역화
+
+또한 앱이 여러 언어로 지역화되는 경우 **선택키 지역화를 고려**해야 합니다. 예를 들어 en-US에서는 “Home”에 "H"를 사용하고 es-ES에서는 “Incio”에 “I”를 사용합니다.
+
+다음과 같이 태그에 x:Uid 확장을 사용하여 지역화된 리소스를 적용합니다.
+
+``` xaml
+<Button Content="Home" AccessKey="H" x:Uid="HomeButton" />
+```
+각 언어에 대한 리소스는 프로젝트의 해당 문자열 폴더에 추가됩니다.
+
+![영어 및 스페인어 리소스 문자열 폴더](images/accesskeys/resource-string-folders.png)
+
+_영어 및 스페인어 리소스 문자열 폴더_
+
+지역화된 선택키는 프로젝트 resources.resw 파일에 지정됩니다.
+
+![resources.resw 파일에 지정된 AccessKey 속성 지정](images/accesskeys/resource-resw-file.png)
+
+_resources.resw 파일에 지정된 AccessKey 속성 지정_
+
+자세한 내용은 [UI 리소스 번역](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965329(v=win.10).aspx)을 참조하세요.
+
+## <a name="position-key-tips"></a>키 팁 배치
+
+키 팁은 다른 UI 요소의 존재, 다른 키 팁 및 화면 가장자리를 고려하여 해당 UI 요소에 대한 부동 배지로 표시됩니다.
+
+일반적으로 기본 키 팁 위치면 충분하며 기본 키 팁 위치는 적응형 UI에 대한 기본 지원을 제공합니다.
+
+![자동 키 팁 배치의 예](images/accesskeys/auto-keytip-position.png)
+
+_자동 키 팁 배치의 예_
+
+그러나 키 팁 위치를 보다 세밀하게 제어해야 하는 경우 다음 사항을 따르는 것이 좋습니다.
+
+1.  **명확한 연관성 원칙**: 사용자가 컨트롤을 키 팁과 쉽게 연결할 수 있습니다.
+
+    a.  키 팁은 선택키를 갖고 있는 요소(소유자)와 **가까이** 있어야 합니다.  
+    b.  키 팁은 선택키를 갖고 있는 **활성화된 요소를 포함하면 안 됩니다**.   
+    c.  키 팁을 소유자와 가까운 곳에 배치할 수 없는 경우 소유자와 겹쳐야 합니다. 
+
+2.  **검색 기능**: 사용자가 키 팁을 사용하여 신속하게 컨트롤을 검색할 수 있습니다.
+
+    a.  키 팁은 절대로 다른 키 팁과 **겹치면** 안 됩니다.  
+
+3.  **쉬운 검사:** 사용자가 키 팁을 간단하게 살펴볼 수 있습니다.
+
+    a.  키 팁을 다른 키 팁 및 UI 요소와 일직선으로 **정렬**해야 합니다.
+    b.  키 팁을 최대한 많이 **그룹화**해야 합니다. 
+
+### <a name="relative-position"></a>상대 위치
+
+**KeyTipPlacementMode** 속성을 사용하여 요소 또는 그룹별로 키 팁의 배치를 사용자 지정합니다.
+
+배치 모드는 위, 아래, 오른쪽, 왼쪽, 숨김, 가운데 및 자동입니다.
+
+![키 팁 배치 모드](images/accesskeys/keytip-postion-modes.png)
+
+_키 팁 배치 모드_
+
+컨트롤의 중심선을 사용하여 키 팁의 세로 및 가로 정렬을 계산합니다.
+
+다음 예제는 StackPanel 컨테이너의 KeyTipPlacementMode 속성을 사용하여 컨트롤 그룹의 키 팁 배치를 설정하는 방법을 보여 줍니다.
+
+``` xaml
+<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" KeyTipPlacementMode="Top">
+  <Button Content="File" AccessKey="F" />
+  <Button Content="Home" AccessKey="H" />
+  <Button Content="Insert" AccessKey="N" />
+</StackPanel>
+```
+
+### <a name="offsets"></a>오프셋
+
+키 팁 위치를 훨씬 세밀하게 제어하려면 요소의 KeyTipHorizontalOffset 및 KeyTipVerticalOffset 속성을 사용합니다.
+
+> [!NOTE]
+> KeyTipPlacementMode가 자동으로 설정되면 오프셋을 설정할 수 없습니다.
+
+KeyTipHorizontalOffset 속성은 키 팁을 왼쪽 또는 오른쪽으로 얼마나 이동할지를 나타냅니다. 다음 예제는 단추의 키 팁 오프셋을 설정하는 방법을 보여 줍니다.
+
+![키 팁 배치 모드](images/accesskeys/keytip-offsets.png)
+
+_키 팁의 세로 및 가로 오프셋 설정_
+
+``` xaml
+<Button
+  Content="File"
+  AccessKey="F"
+  KeyTipPlacementMode="Bottom"
+  KeyTipHorizontalOffset="20"
+  KeyTipVerticalOffset="-8" />
+```
+
+### <a name="screen-edge-alignment-screen-edge-alignment-listparagraph"></a>화면 가장자리 맞춤 {#screen-edge-alignment .ListParagraph}
+
+키 팁이 완전하게 표시되도록 화면 가장자리를 기준으로 키 팁의 위치가 자동으로 조정됩니다. 이 동작이 발생할 때 컨트롤과 키 팁 정렬 지점 간의 거리가 가로 및 세로 오프셋에 지정된 값과 다를 수 있습니다.
+
+![키 팁 배치 모드](images/accesskeys/keytips-screen-edge.png)
+
+_화면 가장자리를 사용하면 키 팁이 자동으로 위치를 변경합니다._
+
+## <a name="style-key-tips"></a>스타일 키 팁
+
+고대비를 비롯한 플랫폼 테마에 대한 기본 키 팁 지원을 사용하는 것이 좋습니다.
+
+사용자 고유의 키 팁 스타일을 지정해야 하는 경우 KeyTipFontSize(글꼴 크기), KeyTipFontFamily(글꼴 패밀리), KeyTipBackground(배경), KeyTipForeground(전경), KeyTipPadding(안쪽 여백), KeyTipBorderBrush(테두리 색), KeyTipBorderThemeThickness(테두리 두께) 등의 응용 프로그램 리소스를 사용합니다.
+
+![키 팁 배치 모드](images/accesskeys/keytip-customization.png)
+
+_키 팁 사용자 지정 옵션_
+
+이 예제에서는 이러한 응용 프로그램 리소스를 변경하는 방법을 보여 줍니다.
+
+ ```xaml  
+<Application.Resources>
+  <SolidColorBrush Color="DarkGray" x:Key="MyBackgroundColor" />
+  <SolidColorBrush Color="White" x:Key="MyForegroundColor" />
+  <SolidColorBrush Color="Black" x:Key="MyBorderColor" />
+  <StaticResource x:Key="KeyTipBackground" ResourceKey="MyBackgroundColor" />
+  <StaticResource x:Key="KeyTipForeground" ResourceKey="MyForegroundColor" />
+  <StaticResource x:Key="KeyTipBorderBrush" ResourceKey="MyBorderColor"/>
+  <FontFamily x:Key="KeyTipFontFamily">Consolas</FontFamily>
+  <x:Double x:Key="KeyTipContentThemeFontSize">18</x:Double>
+  <Thickness x:Key="KeyTipBorderThemeThickness">2</Thickness>
+  <Thickness x:Key="KeyTipThemePadding">4,4,4,4</Thickness>
+</Application.Resources>
+```
 
 ## <a name="access-keys-and-narrator"></a>선택키 및 내레이터
 
-Windows 런타임에는 Microsoft UI 자동화 요소의 속성을 노출하는 UI 자동화 공급자가 있습니다. UI 자동화 클라이언트 응용 프로그램은 이러한 속성을 통해 사용자 인터페이스 부분에 대한 정보를 검색할 수 있습니다. [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) 속성을 사용하면 내레이터 등의 클라이언트가 요소와 연결된 선택키를 검색할 수 있습니다. 내레이터는 요소가 포커스를 받을 때마다 이 속성을 읽습니다. AutomationProperties.AccessKey에 값이 없는 경우 XAML 프레임워크는 UIElement 또는 TextElement의 [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) 속성 값을 반환합니다. AccessKey 속성에 이미 값이 있는 경우에는 AutomationProperties.AccessKey를 설정할 필요가 없습니다.
+XAML 프레임워크는 UI 자동화 클라이언트가 사용자 인터페이스의 요소에 대한 정보를 검색할 수 있게 해주는 자동화 속성을 노출합니다.
 
-## <a name="example-access-key-for-button"></a>예제: 단추의 선택키
-
-이 예제에서는 단추의 선택키를 만드는 방법을 보여 줍니다. 도구 설명을 시각적 어포던스로 사용하여 선택키가 포함된 부동 배지를 구현합니다.
-
-> [!NOTE]
-> 편의상 도구 설명을 사용하지만 고유한 컨트롤을 만들어 표시하는 데 사용하는 것이 좋습니다(예: [팝업](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.popup.aspx)).
-
-XAML 프레임워크에서 Click 이벤트 처리기를 자동으로 호출하므로 AccessKeyInvoked 이벤트를 처리할 필요는 없습니다. 이 예제에서는 [AccessKeyDisplayRequestedEventArgs.PressedKeys](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeydisplayrequestedeventargs.pressedkeys.aspx) 속성을 사용하여 선택키 호출을 위해 남아 있는 문자에 대해서만 시각적 어포던스를 제공합니다. 예를 들어 _A1_, _A2_, _C_라는 세 개의 선택키가 표시되어 있고 사용자가 _A_를 누르면 _A1_ 및 _A2_ 선택키만 필터링되지 않고 _A1_과 _A2_ 대신 _1_과 _2_로 표시됩니다.
-
-```xaml
-<StackPanel
-        VerticalAlignment="Center"
-        HorizontalAlignment="Center"
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Press"
-                AccessKey="PB"
-                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                Click="DoSomething" />
-        <TextBlock Text="" x:Name="textBlock" />
-    </StackPanel>
-```
-
-```csharp
- public sealed partial class ButtonSample : Page
-    {
-        public ButtonSample()
-        {
-            this.InitializeComponent();
-        }
-
-        private void DoSomething(object sender, RoutedEventArgs args)
-        {
-            textBlock.Text = "Access Key is working!";
-        }
-
-        private void OnAccessKeyDisplayRequested(UIElement sender, AccessKeyDisplayRequestedEventArgs args)
-        {
-            var tooltip = ToolTipService.GetToolTip(sender) as ToolTip;
-
-            if (tooltip == null)
-            {
-                tooltip = new ToolTip();
-                tooltip.Background = new SolidColorBrush(Windows.UI.Colors.Black);
-                tooltip.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
-                tooltip.Padding = new Thickness(4, 4, 4, 4);
-                tooltip.VerticalOffset = -20;
-                tooltip.Placement = PlacementMode.Bottom;
-                ToolTipService.SetToolTip(sender, tooltip);
-            }
-
-            if (string.IsNullOrEmpty(args.PressedKeys))
-            {
-                tooltip.Content = sender.AccessKey;
-            }
-            else
-            {
-                tooltip.Content = sender.AccessKey.Remove(0, args.PressedKeys.Length);
-            }
-
-            tooltip.IsOpen = true;
-        }
-        private void OnAccessKeyDisplayDismissed(UIElement sender, AccessKeyDisplayDismissedEventArgs args)
-        {
-            var tooltip = ToolTipService.GetToolTip(sender) as ToolTip;
-            if (tooltip != null)
-            {
-                tooltip.IsOpen = false;
-                //Fix to avoid show tooltip with mouse
-                ToolTipService.SetToolTip(sender, null);
-            }
-        }
-    }
-```
-
-## <a name="example-scoped-access-keys"></a>예제: 범위가 지정된 선택키
-
-이 예제에서는 범위가 지정된 선택키를 만드는 방법을 보여 줍니다. PivotItem의 IsAccessKeyScope 속성은 사용자가 Alt 키를 누를 때 PivotItem 자식 요소의 선택키가 표시되지 않도록 합니다. XAML 프레임워크에서 범위를 자동으로 전환하기 때문에 이러한 선택키는 사용자가 PivotItem을 호출할 때만 표시됩니다. 또한 프레임워크에서 다른 범위의 선택키를 숨깁니다.
-
-이 예제에서는 AccessKeyInvoked 이벤트를 처리하는 방법도 보여 줍니다. PivotItem은 컨트롤 패턴을 구현하지 않으므로 XAML 프레임워크에서 기본적으로 아무 작업도 호출하지 않습니다. 이 구현은 선택키를 사용하여 호출된 PivotItem을 선택하는 방법을 보여 줍니다.
-
-마지막으로, 이 예제에서는 표시 모드가 변경될 때 작업을 수행할 수 있는 IsDisplayModeChanged 이벤트를 보여 줍니다. 이 예제에서는 사용자가 Alt 키를 누를 때까지 피벗 컨트롤이 축소됩니다. 사용자가 피벗 조작을 마치면 다시 축소됩니다. IsDisplayModeEnabled를 사용하여 선택키 표시 모드가 사용하도록 설정되었는지 여부를 확인할 수 있습니다.
-
-```xaml   
-<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot x:Name="MyPivot" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <Pivot.Items>
-                <PivotItem
-                    x:Name="PivotItem1"
-                    AccessKey="A"
-                    AccessKeyInvoked="OnAccessKeyInvoked"
-                    AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                    AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                    IsAccessKeyScope="True">
-                    <PivotItem.Header>
-                        <TextBlock Text="A Options"/>
-                    </PivotItem.Header>
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Content="ButtonAA" AccessKey="A"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested" />
-                        <Button Content="ButtonAD1" AccessKey="D1"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button Content="ButtonAD2" AccessKey="D2"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"/>
-                    </StackPanel>
-                </PivotItem>
-                <PivotItem
-                    x:Name="PivotItem2"
-                    AccessKeyInvoked="OnAccessKeyInvoked"
-                    AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                    AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"
-                    AccessKey="B"
-                    IsAccessKeyScope="true">
-                    <PivotItem.Header>
-                        <TextBlock Text="B Options"/>
-                    </PivotItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Button AccessKey="B" Content="ButtonBB"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button AccessKey="F1" Content="ButtonBF1"
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"  />
-                        <Button AccessKey="F2" Content="ButtonBF2"  
-                                AccessKeyDisplayDismissed="OnAccessKeyDisplayDismissed"
-                                AccessKeyDisplayRequested="OnAccessKeyDisplayRequested"/>
-                    </StackPanel>
-                </PivotItem>
-            </Pivot.Items>
-        </Pivot>
-    </Grid>
-```
-
-```csharp
-public sealed partial class ScopedAccessKeys : Page
-    {
-        public ScopedAccessKeys()
-        {
-            this.InitializeComponent();
-            AccessKeyManager.IsDisplayModeEnabledChanged += OnDisplayModeEnabledChanged;
-            this.Loaded += OnLoaded;
-        }
-
-        void OnLoaded(object sender, object e)
-        {
-            //To let the framework discover the access keys, the elements should be realized
-            //on the visual tree. If there are no elements in the visual
-            //tree with access key, the framework won't raise the events.
-            //In this sample, if you define the Pivot as collapsed on the constructor, the Pivot
-            //will have a lazy loading and the access keys won't be enabled.
-            //For this reason, we make it visible when creating the object
-            //and we collapse it when we load the page.
-            MyPivot.Visibility = Visibility.Collapsed;
-        }
-
-        void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
-        {
-            args.Handled = true;
-            MyPivot.SelectedItem = sender as PivotItem;
-        }
-        void OnDisplayModeEnabledChanged(object sender, object e)
-        {
-            if (AccessKeyManager.IsDisplayModeEnabled)
-            {
-                MyPivot.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                MyPivot.Visibility = Visibility.Collapsed;
-
-            }
-        }
-
-        DependencyObject AdjustTarget(UIElement sender)
-        {
-            DependencyObject target = sender;
-            if (sender is PivotItem)
-            {
-                PivotItem pivotItem = target as PivotItem;
-                target = (sender as PivotItem).Header as TextBlock;
-            }
-            return target;
-        }
-
-        void OnAccessKeyDisplayRequested(UIElement sender, AccessKeyDisplayRequestedEventArgs args)
-        {
-            DependencyObject target = AdjustTarget(sender);
-            var tooltip = ToolTipService.GetToolTip(target) as ToolTip;
-
-            if (tooltip == null)
-            {
-                tooltip = new ToolTip();
-                tooltip.Background = new SolidColorBrush(Windows.UI.Colors.Black);
-                tooltip.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
-                tooltip.Padding = new Thickness(4, 4, 4, 4);
-                tooltip.VerticalOffset = -20;
-                tooltip.Placement = PlacementMode.Bottom;
-                ToolTipService.SetToolTip(target, tooltip);
-            }
-
-            if (string.IsNullOrEmpty(args.PressedKeys))
-            {
-                tooltip.Content = sender.AccessKey;
-            }
-            else
-            {
-                tooltip.Content = sender.AccessKey.Remove(0, args.PressedKeys.Length);
-            }
-
-            tooltip.IsOpen = true;
-        }
-        void OnAccessKeyDisplayDismissed(UIElement sender, AccessKeyDisplayDismissedEventArgs args)
-        {
-            DependencyObject target = AdjustTarget(sender);
-
-            var tooltip = ToolTipService.GetToolTip(target) as ToolTip;
-            if (tooltip != null)
-            {
-                tooltip.IsOpen = false;
-                //Fix to avoid show tooltip with mouse
-                ToolTipService.SetToolTip(target, null);
-            }
-        }
-    }
-```
+UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정하는 경우 [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) 속성을 사용하여 이 값을 가져올 수 있습니다. 내레이터 같은 접근성 클라이언트의 경우 요소가 포커스를 받을 때마다 이 속성 값을 읽습니다.

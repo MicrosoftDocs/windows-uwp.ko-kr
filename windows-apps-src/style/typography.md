@@ -5,14 +5,16 @@ title: "입력 체계"
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 92fd3ee66768fcf1c98d9760ecb44811c9b0f9b3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0609622053d0ae25b5039766137db1b195c0d69d
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/22/2017
 ---
 # <a name="typography"></a>입력 체계
 
@@ -50,7 +52,7 @@ XAML에서 이 작업을 수행하려면 두 개의 [TextBlock](https://msdn.mic
          puts the baseline of the body text exactly 24px
          below the baseline of the header. 24px is the
          recommended line height for a 20px font size,
-         which is what's set in SubtitleTextBlockStyle.
+         which is what’s set in SubtitleTextBlockStyle.
          The bottom margin will be different for
          different font size pairings. -->
     <TextBlock
@@ -172,9 +174,11 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
 >대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다.
 
 
+<!--
 <div class="microsoft-internal-note">
-SubtitleAlt, BaseAlt 및 CaptionAlt는 현재 포함되어 있지 않습니다. 위의 링크에 있는 코드 조각을 따라 앱의 스타일을 만들 수 있습니다. 또한 XAML은 현재 줄 높이와 정확히 맞지 않는다는 사실도 유의하세요.
+SubtitleAlt, BaseAlt, and CaptionAlt are not currently included. You can create the styles in your own app following the code snippets in the above link. Also note that XAML does not currently match the line height exactly.
 </div>
+-->
 
 
 ## <a name="primary-and-secondary-text"></a>기본 및 보조 텍스트

@@ -10,18 +10,17 @@ label: BoxPanel, an example custom panel
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: a46e26491e909d825ceaff04d008b8cb56c9aff3
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 4fbc5c2e7bea43c2f18cf9e247b0143795bdfc1a
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
-
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, 예제 사용자 지정 패널
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -51,7 +50,7 @@ ms.lasthandoff: 02/07/2017
 -   패널에 자체 공간에 대한 제약 조건이 있는 경우
 -   패널 논리가 최종적으로 자식의 렌더링된 UI 레이아웃을 생성하는 모든 측정, 배치, 위치 및 크기 조정을 결정하는 방식
 
-이 점을 감안하여, 여기에 표시된 `BoxPanel`은 특정 시나리오에서 사용됩니다. 이 예제에서는 코드에 중점을 두기 위해 시나리오를 자세히 설명하지 않고 필요한 단계 및 코딩 패턴에 집중합니다. 먼저 시나리오에 대해 자세히 알아보려면 ["`BoxPanel`에 대한 시나리오"](#scenario)로 건너뛴 다음 코드로 돌아오세요.
+이 점을 감안하여, 여기에 표시된 `BoxPanel`은 특정 시나리오에서 사용됩니다. 이 예제에서는 코드에 중점을 두기 위해 시나리오를 자세히 설명하지 않고 필요한 단계 및 코딩 패턴에 집중합니다. 먼저 시나리오에 대해 자세히 알아보려면 ["`BoxPanel`에 대한 시나리오"](#the-scenario-for-boxpanel)로 건너뛴 다음 코드로 돌아오세요.
 
 ## <a name="start-by-deriving-from-panel"></a>**Panel**에서 파생시켜 시작
 
@@ -113,15 +112,15 @@ protected override Size MeasureOverride(Size availableSize)
     if (aspectratio > 1)
     {
         rowcount = maxrc;
-        colcount = (maxrc > 2 &amp;&amp; Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
+        colcount = (maxrc > 2 && Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
     } 
     else 
     {
-        rowcount = (maxrc > 2 &amp;&amp; Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
+        rowcount = (maxrc > 2 && Children.Count < maxrc * (maxrc - 1)) ? maxrc - 1 : maxrc;
         colcount = maxrc;
     }
 
-    // Now that we have a column count, divide available horizontal, that&#39;s our cell width.
+    // Now that we have a column count, divide available horizontal, that's our cell width.
     cellwidth = (int)Math.Floor(availableSize.Width / colcount);
     // Next get a cell height, same logic of dividing available vertical by rowcount.
     cellheight = Double.IsInfinity(availableSize.Height) ? Double.PositiveInfinity : availableSize.Height / rowcount;
@@ -137,7 +136,7 @@ protected override Size MeasureOverride(Size availableSize)
 
 필요한 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현의 패턴은 [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)에 있는 각 요소의 반복입니다. 각 요소에서 항상 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 메서드를 호출합니다. **Measure**에는 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) 형식의 매개 변수가 있습니다. 여기서는 패널에서 특정 자식 요소에 사용할 수 있도록 할 크기를 전달합니다. 따라서 루프를 수행하고 **Measure** 호출을 시작하기 전에 각 셀이 사용할 수 있는 공간 크기를 알아야 합니다. **MeasureOverride** 메서드 자체의 *availableSize* 값을 사용합니다. 호출되는 이 **MeasureOverride**의 트리거인 **Measure**를 호출할 때 패널의 부모가 사용한 크기입니다. 따라서 일반적인 논리는 각 자식 요소가 패널의 전체 *availableSize* 공간을 나누는 체계를 작성하는 것입니다. 그런 다음 나눈 각 크기를 각 자식 요소의 **Measure**에 전달합니다.
 
-`BoxPanel`에서 크기를 나누는 방법은 비교적 간단합니다. 공간을 항목 수로 제어되는 상자 수로 나눕니다. 행 및 열 개수와 사용 가능한 크기에 따라 상자 크기가 지정됩니다. 때때로 정사각형의 행 또는 열 하나는 필요하지 않으므로 삭제되며, 행 : 열 비율 측면에서 패널이 정사각형이 아니라 직사각형이 됩니다. 이 논리에 도달한 방식에 대한 자세한 내용을 보려면 ["BoxPanel에 대한 시나리오"](#scenario)로 건너뛰세요.
+`BoxPanel`에서 크기를 나누는 방법은 비교적 간단합니다. 공간을 항목 수로 제어되는 상자 수로 나눕니다. 행 및 열 개수와 사용 가능한 크기에 따라 상자 크기가 지정됩니다. 때때로 정사각형의 행 또는 열 하나는 필요하지 않으므로 삭제되며, 행 : 열 비율 측면에서 패널이 정사각형이 아니라 직사각형이 됩니다. 이 논리에 도달한 방식에 대한 자세한 내용을 보려면 ["BoxPanel에 대한 시나리오"](#the-scenario-for-boxpanel)로 건너뛰세요.
 
 그러면 측정 단계에서는 어떤 작업을 수행할까요? [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208921)가 호출된 각 요소에서 읽기 전용 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208952) 속성의 값을 설정합니다. **DesiredSize**는 정렬 시 및 최종 렌더링에서 가능한 크기나 필수 크기를 전달하기 때문에 정렬 단계에 도달한 후에는 **DesiredSize** 값을 사용하는 것이 중요할 수 있습니다. 고유한 논리에 **DesiredSize**를 사용하지 않는 경우에도 시스템에 필요합니다.
 
@@ -225,7 +224,7 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 
 그러나 모든 앱 시나리오가 데이터 바인딩에 적합한 것은 아닙니다. 경우에 따라 런타임에 새 UI 요소를 만들고 표시되도록 해야 합니다. `BoxPanel` 이 이 시나리오에 적합합니다. `BoxPanel`은 자식 개수를 계산에 사용하고 모두 들어가도록 기존 자식 요소와 새 자식 요소를 새 레이아웃으로 조정하기 때문에 자식 항목 수의 변경은 문제가 되지 않습니다.
 
-여기에는 나와 있지 않지만 `BoxPanel`을 추가로 확장하는 고급 시나리오는 동적 자식을 수용하고 개별 셀의 크기를 조정하기 위한 더 강력한 요소로 자식의 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)를 사용합니다. 이 시나리오에서는 "불필요하게 사용된" 공간을 좀 더 줄이기 위해 다양한 행 또는 열 크기나 표가 아닌 모양을 사용할 수 있습니다. 이 경우 미적 요인과 가장 작은 크기를 위해 다양한 크기와 가로 세로 비율의 여러 직사각형이 컨테이너 직사각형에 모두 들어가도록 하는 방법에 대한 전략이 필요합니다. `BoxPanel` 은 이 작업을 수행하지 않고 공간을 나누는 더 간단한 기법을 사용합니다. `BoxPanel`의 기법은 자식 개수보다 큰 최소 정사각형 수를 결정하는 것입니다. 예를 들어 9개 항목은 3x3 정사각형에 들어갑니다. 10 개 항목에는 4x4 정사각형이 필요합니다. 그러나 공간을 절약하기 위해 시작 정사각형의 행이나 열을 하나 제거하고 항목을 맞출 수도 있습니다. 개수=10 예제에서는 4x3 또는 3x4 직사각형에 들어갑니다.
+여기에는 나와 있지 않지만 `BoxPanel`을 추가로 확장하는 고급 시나리오는 동적 자식을 수용하고 개별 셀의 크기를 조정하기 위한 더 강력한 요소로 자식의 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)를 사용합니다. 이 시나리오에서는 "불필요하게 사용된" 공간을 좀 더 줄이기 위해 다양한 행 또는 열 크기나 그리드가 아닌 모양을 사용할 수 있습니다. 이 경우 미적 요인과 가장 작은 크기를 위해 다양한 크기와 가로 세로 비율의 여러 직사각형이 컨테이너 직사각형에 모두 들어가도록 하는 방법에 대한 전략이 필요합니다. `BoxPanel` 은 이 작업을 수행하지 않고 공간을 나누는 더 간단한 기법을 사용합니다. `BoxPanel`의 기법은 자식 개수보다 큰 최소 정사각형 수를 결정하는 것입니다. 예를 들어 9개 항목은 3x3 정사각형에 들어갑니다. 10 개 항목에는 4x4 정사각형이 필요합니다. 그러나 공간을 절약하기 위해 시작 정사각형의 행이나 열을 하나 제거하고 항목을 맞출 수도 있습니다. 개수=10 예제에서는 4x3 또는 3x4 직사각형에 들어갑니다.
 
 패널에서 10개 항목에 대해 5x2를 선택하지 않는 이유가 궁금할 수도 있습니다. 이렇게 하면 항목 수에 정확히 맞기 때문입니다. 그러나 실제로 패널은 가로 세로 비율이 비슷한 직사각형으로 크기가 조정됩니다. 최소 정사각형 기법은 일반적인 레이아웃 모양에서 제대로 작동하도록 크기 조정 논리를 보정하고 셀 모양의 가로 세로 비율이 특이한 크기 조정을 권장하지 않는 방법입니다.
 
@@ -243,4 +242,3 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 **개념**
 
 * [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)
-

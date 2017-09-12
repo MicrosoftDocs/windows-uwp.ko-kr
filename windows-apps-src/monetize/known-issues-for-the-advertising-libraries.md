@@ -1,32 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Microsoft Store Services SDK에 있는 Microsoft Advertising 라이브러리 최신 릴리스의 알려진 문제에 대해 알아봅니다."
+description: "Microsoft Advertising 라이브러리 최신 버전의 알려진 문제에 대해 알아보세요."
 title: "Advertising 라이브러리의 알려진 문제"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 알려진 문제"
-ms.openlocfilehash: 33bf3c2db5db7e8ec07df3f4d13cc0ad074e99a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b18c4568770afb70bcca991c79d59a9912981705
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="known-issues-for-the-advertising-libraries"></a>Advertising 라이브러리의 알려진 문제
 
 
 
 
-이 항목에서는 Microsoft Store Services SDK(UWP 앱용)와 Microsoft Advertising SDK for Windows 및 Windows Phone 8.x(Windows 8.1 및 Windows Phone 8.x 앱용)에 있는 Microsoft Advertising 라이브러리의 현재 릴리스에 대한 알려진 문제를 나열합니다.
-
-## <a name="installation-of-microsoft-store-services-sdk-requires-visual-studio-tools-for-universal-windows-apps"></a>Microsoft Store Services SDK를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools가 필요합니다.
-
-Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools 버전 1.1 이상이 설치되어 있어야 합니다. 자세한 내용은 Visual Studio [릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=624516)를 참조하세요.
+이 항목에서는 Microsoft Advertising SDK(UWP 앱용)와 Microsoft Advertising SDK for Windows 및 Windows Phone 8.x(Windows 8.1 및 Windows Phone 8.x 앱용)에 있는 Microsoft Advertising 라이브러리의 최신 릴리스에 대한 알려진 문제를 나열합니다.
 
 ## <a name="windows-phone-8x-silverlight-projects"></a>Windows Phone 8.x Silverlight 프로젝트
 
-Microsoft Advertising SDK for Windows 및 Windows Phone 8.x는 Windows Phone 8.x Silverlight 프로젝트를 제한적으로 지원합니다. 자세한 내용은 [앱에서 광고 표시](display-ads-in-your-app.md#silverlight_support)를 참조하세요.
+Microsoft Advertising SDK for Windows 및 Windows Phone 8.x는 Windows Phone 8.x Silverlight 프로젝트를 제한적으로 지원합니다. 자세한 정보는 [Windows Phone 8.x Silverlight 프로젝트용 광고 지원](adcontrol-in-windows-phone-silverlight.md#silverlight_support)을 참조합니다.
 
 Windows Phone 8.x Silverlight 프로젝트용 Microsoft Advertising 어셈블리를 가져오려면 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)를 설치하고 Visual Studio에서 프로젝트를 연 다음 **프로젝트** > **연결된 서비스 추가** > **Ad Mediator**로 이동하여 어셈블리를 자동으로 다운로드 합니다. 이 작업을 수행한 후 광고 조정을 사용하지 않으려면 프로젝트에서 광고 조정자 참조를 제거할 수 있습니다. 자세한 내용은 [Windows Phone Silverlight의 AdControl](adcontrol-in-windows-phone-silverlight.md)을 참조하세요.
 
@@ -64,7 +62,7 @@ Windows Phone 8.x Silverlight 프로젝트용 Microsoft Advertising 어셈블리
 
 라이브 광고가 나와야 하는데 테스트 광고가 표시될 수 있습니다. 이러한 상황은 다음과 같은 시나리오에서 발생할 수 있습니다.
 
-* Microsoft Advertising에서 앱 스토어에 사용되는 라이브 응용 프로그램 ID를 확인하거나 찾을 수 없습니다. 이 경우 사용자가 광고 단위를 만들면 해당 상태가 라이브(비테스트)로 시작될 수 있지만 처음 광고 요청이 있고 6시간 이내에 테스트 상태로 전환됩니다. 테스트 앱에서 10일 동안 요청이 없는 경우 라이브로 다시 변경됩니다.
+* Microsoft의 광고 플랫폼은 스토어에서 사용되는 라이브 응용 프로그램 ID를 확인하거나 찾을 수 없습니다. 이 경우 사용자가 광고 단위를 만들면 해당 상태가 라이브(비테스트)로 시작될 수 있지만 처음 광고 요청이 있고 6시간 이내에 테스트 상태로 전환됩니다. 테스트 앱에서 10일 동안 요청이 없는 경우 라이브로 다시 변경됩니다.
 
 * 테스트용으로 로드된 앱 또는 에뮬레이터에서 실행되는 앱에는 라이브 광고가 표시되지 않습니다.
 

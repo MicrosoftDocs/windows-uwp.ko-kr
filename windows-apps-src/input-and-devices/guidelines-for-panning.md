@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: bf0abd41262704ccf634350ae53e8f428d412bf5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 288cca64cc93438c8f8c0000cfeba1fdda918733
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="guidelines-for-panning"></a>이동에 대한 지침
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -82,8 +84,13 @@ translationtype: HT
 
 ## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
-
 터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. API에서 구분되거나 일부 디바이스별 Windows UI에 필요한 경우가 아니면 두 조작을 모두 이동으로 간주합니다.
+
+> <div id="main">
+> <strong><span class="uwpd-prelease">시험판.</span> 가을 크리에이터 업데이트(Windows 10 Insider Preview 빌드 16215 이상) - 동작 변경</strong>
+> </div>
+> 이제는 기본적으로 텍스트를 선택하는 대신 터치, 터치 패드, 패시브 펜 등의 활성 펜이 UWP 앱을 스크롤/이동합니다.  
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [ScrollViewer 클래스] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) API 참조 항목을 참조하세요.
 
 입력 장치에 따라 사용자는 다음 중 하나를 사용하여 이동 가능한 영역 내에서 이동합니다.
 

@@ -6,30 +6,27 @@ title: "텍스트 블록"
 label: Text block
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 904f0982deb596783ae886c26fee03c180d51987
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 0ee72a3111fd64fc4cd17a9a0a4283255ce2d3ff
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="text-block"></a>텍스트 블록
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
  텍스트 블록은 앱에서 읽기 전용 텍스트를 표시하기 위한 주 컨트롤입니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
-
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
-<li>[**Text 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx)</li>
-<li>[**Inlines 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)</li>
-</ul>
-</div>
-
+ 
+ > **중요 API**: [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [Text 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx), [Inlines 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -76,14 +73,14 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 가능한 경우 언제나 XAML에서는 레이아웃 텍스트에 대한 더 효율적인 코드 경로를 사용합니다. 이 빠른 경로는 텍스트를 측정하고 정렬하는 드는 전체 메모리 사용량을 줄이고 CPU 시간을 크게 단축합니다. 이 빠른 경로는 TextBlock에만 적용되므로 가능한 경우에는 RichTextBlock 대신 이 경로를 사용해야 합니다.
 
 특정 조건에서는 텍스트 렌더링을 위해 TextBlock이 기능이 풍부하고 CPU를 많이 사용하는 코드 경로를 사용해야 합니다. 텍스트 렌더링을 빠른 경로에서 유지하려면 여기에 나열된 속성을 설정할 때 다음 지침에 따야 합니다.
-- [**Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): 가장 중요한 조건은 XAML 또는 코드에서(이전 예제에 나온 대로) 명시적으로 Text 속성을 설정하여 텍스트를 설정할 때만 빠른 경로를 사용한다는 점입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
-- [**CharacterSpacing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): 기본값 0만 빠른 경로입니다.
-- [**TextTrimming**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): **None**, **CharacterEllipsis** 및 **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
+- [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): 가장 중요한 조건은 XAML 또는 코드에서(이전 예제에 나온 대로) 명시적으로 Text 속성을 설정하여 텍스트를 설정할 때만 빠른 경로를 사용한다는 점입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): 기본값 0만 빠른 경로입니다.
+- [TextTrimming](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): **None**, **CharacterEllipsis** 및 **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
 
 > **참고**&nbsp;&nbsp;Windows 10 버전 1607 이전에는 추가 속성도 빠른 경로에 영향을 주었습니다. 앱이 이전 버전의 Windows에서 실행되는 경우 이러한 조건으로 인해 텍스트가 느린 경로로 렌더링됩니다. 버전에 대한 자세한 내용은 버전 적응 코드를 참조하세요.
-- [**Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양한 Typography 속성에 대한 기본값만 빠른 경로입니다.
-- [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
-- [**IsTextSelectionEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양한 Typography 속성에 대한 기본값만 빠른 경로입니다.
+- [LineStackingStrategy](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
+- [IsTextSelectionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
 
 디버그 도중에 [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) 속성을 **true**로 설정하여 텍스트가 빠른 경로 렌더링을 사용하고 있는지 여부를 확인할 수 있습니다. 이 속성이 true로 설정된 경우 빠른 경로에 있는 텍스트가 밝은 녹색으로 표시됩니다.
 
@@ -136,18 +133,18 @@ TextBlock에서 일련의 문자열을 표시할 수 있으며, 여기서 각 �
 
 다음은 LineBreak로 분리된 Run 개체를 사용하여 TextBlock에서 서로 다른 서식이 지정된 여러 텍스트 문자열을 정의하는 방법입니다.
 ```xaml
-<TextBlock FontFamily="Arial" Width="400" Text="Sample text formatting runs">
+<TextBlock FontFamily="Segoe UI" Width="400" Text="Sample text formatting runs">
     <LineBreak/>
-    <Run Foreground="Gray" FontFamily="Courier New" FontSize="24">
-        Courier New 24
+    <Run Foreground="Gray" FontFamily="Segoe UI Light" FontSize="24">
+        Segoe UI Light 24
     </Run>
     <LineBreak/>
-    <Run Foreground="Teal" FontFamily="Times New Roman" FontSize="18" FontStyle="Italic">
-        Times New Roman Italic 18
+    <Run Foreground="Teal" FontFamily="Georgia" FontSize="18" FontStyle="Italic">
+        Georgia Italic 18
     </Run>
     <LineBreak/>
-    <Run Foreground="SteelBlue" FontFamily="Verdana" FontSize="14" FontWeight="Bold">
-        Verdana Bold 14
+    <Run Foreground="Black" FontFamily="Arial" FontSize="14" FontWeight="Bold">
+        Arial Bold 14
     </Run>
 </TextBlock>
 ```
@@ -183,6 +180,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 - [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md)
 - [검색 추가](search.md)
 - [텍스트 입력에 대한 지침](text-controls.md)
-- [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

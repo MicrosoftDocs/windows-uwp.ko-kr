@@ -9,14 +9,16 @@ ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 825b6a8b2689143b5a68b9e7e1862ac2e6e92d28
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 44f272f3c93ab56623897e5d9c801256a12f0a18
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -24,13 +26,8 @@ translationtype: HT
 
 XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각적 구조와 동작을 사용자 지정할 수 있습니다. 컨트롤에는 [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) 및 [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404) 등 다양한 속성이 있으며, 이러한 속성을 설정하여 컨트롤 모양의 다양한 측면을 지정할 수 있습니다. 하지만 이러한 속성을 설정하여 수행할 수 있는 변경은 제한되어 있습니다. [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) 클래스를 사용하는 템플릿을 만들어 추가로 사용자 지정할 수 있습니다. 여기서는 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 컨트롤의 모양을 사용자 지정하기 위해 **ControlTemplate**을 만드는 방법을 보여 줍니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**ControlTemplate 클래스**](https://msdn.microsoft.com/library/windows/apps/br209391)</li>
-<li>[**Control.Template 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)</li>
-</ul>
-</div>
+> **중요 API**: [**ControlTemplate 클래스**](https://msdn.microsoft.com/library/windows/apps/br209391), [**Control.Template 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
+
 
 ## <a name="custom-control-template-example"></a>사용자 지정 컨트롤 템플릿 예
 

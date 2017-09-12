@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: "지도 인증 키 요청"
 description: "Windows.Services.Maps 네임스페이스에서 MapControl 및 지도 서비스를 사용하려면 먼저 유니버설 Windows 앱을 인증해야 합니다."
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 지도 인증 키, 지도 컨트롤"
-ms.openlocfilehash: 42078becbc5853787ca057dcbfb58b8d8de7967d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 7b964c19933db460b8f6b0cc7791165ad86adb6c
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
@@ -40,9 +42,9 @@ translationtype: HT
 
 4.  Bing 지도 계정이 아직 없는 경우 새 Bing 지도 계정을 만듭니다. **계정 이름**, **연락처 이름**, **회사 이름**, **메일 주소** 및 **전화 번호**를 입력합니다. 사용 약관을 수락한 후 **만들기**를 클릭합니다.
 
-5.  **내 계정** 메뉴에서 **키 만들기 또는 보기**를 클릭합니다.
+5.  **내 계정** 메뉴 아래에서 **내 키**를 클릭합니다.
 
-6.  링크를 클릭하여 **새 키를 만듭니다**.
+6.  키를 이미 만든 경우 새로운 키를 만들려면 링크를 클릭합니다. 그렇지 않으면 키 만들기 양식으로 이동합니다.
 
 7.  **키 만들기** 양식을 작성한 다음 **만들기**를 클릭합니다.
 

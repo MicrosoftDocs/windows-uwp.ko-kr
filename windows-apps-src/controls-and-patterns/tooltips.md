@@ -6,14 +6,20 @@ ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 07a4b7fdd600c49cf545c69f9d87eb21ef8d9a67
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: yulikl
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: d5bde19c1d3dfba375b370cf8aed46979b6173f0
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="tooltips"></a>도구 설명
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -22,13 +28,8 @@ translationtype: HT
 
 ![도구 설명](images/controls/tool-tip.png)
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)</li>
-<li>[**ToolTipService 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)</li>
-</ul>
-</div>
+> **중요 API**: [ToolTip 클래스](https://msdn.microsoft.com/library/windows/apps/br227608), [ToolTipService 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
+
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -75,4 +76,4 @@ Bing 지도 앱의 도구 설명입니다.
 
 관련 항목
 
-* [**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)
+* [ToolTip 클래스](https://msdn.microsoft.com/library/windows/apps/br227608)

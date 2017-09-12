@@ -4,14 +4,16 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Windows 스토어 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다."
 title: "스토어 서비스를 사용하여 분석 데이터에 액세스"
 ms.author: mcleans
-ms.date: 03/17/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API"
-ms.openlocfilehash: aa33af63a49d890b3c60ec1bee32528cfc78af93
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: f739676d02ae5af4c3960fdde6461779c1533885
+ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -28,21 +30,21 @@ translationtype: HT
 
 Windows 스토어 분석 API를 호출하는 코드를 작성하기 전에 다음과 같은 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account).
 
 * Azure AD 응용 프로그램을 개발자 센터 계정과 연결하고 응용 프로그램에 대한 테넌트 ID 및 클라이언트 ID를 검색하고 키를 생성해야 합니다. Azure AD 응용 프로그램은 Windows 스토어 분석 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
-
-  >**참고**&nbsp;&nbsp;이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
+    > [!NOTE]
+    > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 
 Azure AD 응용 프로그램을 개발자 센터 계정에 연결하고 필요한 값을 검색하려면
 
-1.  개발자 센터에서 **계정 설정**으로 이동하여 **사용자 관리**를 클릭하고 조직의 개발자 센터 계정을 조직의 Azure AD 디렉터리와 연결합니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users)를 참조하세요.
+1.  개발자 센터에서 **계정 설정**으로 이동한 후, **사용자 관리**를 클릭하고 [조직의 개발자 센터 계정을 조직의 Azure AD 디렉토리와 연결합니다](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 분석 데이터에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [Azure AD 응용 프로그램 추가 및 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications)를 참조하세요.
+2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 분석 데이터에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [Azure AD 응용 프로그램을 개발자 센터 계정과 연결](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications)을 참조하세요.
 
 3.  **사용자 관리** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 
-4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [Azure AD 응용 프로그램 추가 및 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications)에서 키 관리에 대한 내용을 참조하세요.
+4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [AD 응용 프로그램 키 관리](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys)를 참조하세요.
 
 <span id="obtain-an-azure-ad-access-token" />
 ## <a name="step-2-obtain-an-azure-ad-access-token"></a>단계 2: Azure AD 액세스 토큰 가져오기
@@ -73,14 +75,14 @@ Azure AD 액세스 토큰이 있으면 Windows 스토어 분석 API를 호출할
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
-| 취득 및 설치 |  <ul><li>[앱 취득 가져오기](get-app-acquisitions.md)</li><li>[추가 기능 취득 가져오기](get-in-app-acquisitions.md)</li><li>[앱 설치 받기](get-app-installs.md)</li></ul> |
+| 취득, 변환, 설치 |  <ul><li>[앱 취득 가져오기](get-app-acquisitions.md)</li><li>[앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md)</li><li>[채널 별 앱 변환 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 취득 가져오기](get-in-app-acquisitions.md)</li><li>[채널 별 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 받기](get-app-installs.md)</li></ul> |
 | 앱 오류 | <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li></ul> |
 | 평점 및 리뷰 | <ul><li>[앱 평점 가져오기](get-app-ratings.md)</li><li>[앱 리뷰 가져오기](get-app-reviews.md)</li></ul> |
 | 앱 내 광고 및 광고 캠페인 | <ul><li>[광고 성과 데이터 가져오기](get-ad-performance-data.md)</li><li>[광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)</li></ul> |
 
 [Windows 하드웨어 개발자 센터 프로그램](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard)에 속하는 개발자 계정으로 다음과 같은 추가 메서드를 사용할 수 있습니다.
 
-| 시나리오       | 설명      |
+| 시나리오       | 메서드      |
 |---------------|--------------------|
 | Windows 10 드라이버의 오류(IHV용) |  <ul><li>[Windows 10 드라이버에 대한 오류 보고 데이터 가져오기](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Windows 10 드라이버 오류에 대한 세부 정보 가져오기](get-details-for-a-windows-10-driver-error.md)</li><li>[Windows 10 드라이버 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
 | Windows 7/Windows 8.x 드라이버의 오류(IHV용) |  <ul><li>[Windows 7 및 Windows 8.x 드라이버에 대한 오류 보고 데이터 가져오기](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Windows 7 또는 Windows 8.x 드라이버 오류에 대한 세부 정보 가져오기](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Windows 7 또는 Windows 8.x 드라이버 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |

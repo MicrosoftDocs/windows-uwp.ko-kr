@@ -5,24 +5,25 @@ title: "앱에서 바로 구매 제품 사용"
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: "uwp, 추가 기능, 앱에서 바로 구매, IAP, Windows.ApplicationModel.Store"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b7cd3f5d2c566958aaf83b8f633418ce444a2eaa
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 1f7d4c60d077e3c556f0d369cc41d2e50ab9092b
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
+# <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 구매 사용
 
-# <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 사용
-
->**참고**&nbsp;&nbsp;이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여 줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+> [!NOTE]
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱 내 구매를 할 수 있도록 만드는 방법을 설명합니다. 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스의 멤버를 사용하는 것이 좋습니다. 자세한 내용은 [이 문서](enable-in-app-purchases-of-apps-and-add-ons.md)를 참조하세요.
 
 앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.
 
-> **참고**&nbsp;&nbsp;앱의 평가판에서는 앱에서 바로 구매 제품을 제공할 수 없습니다. 앱 평가판을 사용하는 고객은 처음 사용자용 앱 버전을 구매한 경우에만 앱에서 바로 구매 제품을 구입할 수 있습니다.
+> [!NOTE]
+> 앱의 평가판에서는 앱에서 바로 구매 제품을 제공할 수 없습니다. 앱 평가판을 사용하는 고객은 처음 사용자용 앱 버전을 구매한 경우에만 앱에서 바로 구매 제품을 구입할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -41,17 +42,19 @@ ms.lasthandoff: 02/07/2017
 
 앱에서 바로 구매 제품을 통해 제공하려는 각 기능에 대해 판매를 만들어 앱에 추가합니다.
 
-> **중요**&nbsp;&nbsp;스토어에 앱을 제출하기 전에 고객에게 제공하려는 앱에서 바로 구매 제품을 앱에 모두 추가해야 합니다. 나중에 새로운 앱에서 바로 구매 제품을 추가하려면 앱을 업데이트하고 새 버전을 다시 제출해야 합니다.
+> [!IMPORTANT]
+> 스토어에 앱을 제출하기 전에 고객에게 제공하려는 앱에서 바로 구매 제품을 앱에 모두 추가해야 합니다. 나중에 새로운 앱에서 바로 구매 제품을 추가하려면 앱을 업데이트하고 새 버전을 다시 제출해야 합니다.
 
 1.  **앱에서 바로 판매 토큰 만들기**
 
     앱에서는 각 앱에서 바로 구매 제품을 토큰으로 식별합니다. 이 토큰은 사용자가 정의하고 앱과 스토어에서 특정 앱에서 바로 구매 제품을 식별하는 데 사용하는 문자열입니다. 코딩하는 동안 토큰이 나타내는 올바른 기능을 빨리 식별할 수 있도록 앱에서 고유하고 의미 있는 이름을 지정하세요. 다음은 이름의 몇 가지 예입니다.
 
-    -   "SpaceMissionLevel4"
+    * "SpaceMissionLevel4"
+    * "ContosoCloudSave"
+    * "RainbowThemePack"
 
-    -   "ContosoCloudSave"
-
-    -   "RainbowThemePack"
+  > [!NOTE]
+  > 코드에 사용하는 앱 내 제품 토큰은 [개발자 센터 대시보드에서 앱에 해당 추가 기능을 정의할 때](../publish/add-on-submissions.md) 지정하는 [제품 ID](../publish/set-your-add-on-product-id.md#product-id) 값과 일치해야 합니다.
 
 2.  **조건부 블록에 기능 코딩**
 
@@ -77,7 +80,10 @@ ms.lasthandoff: 02/07/2017
 
 ## <a name="step-4-configure-the-in-app-product-offer-in-the-store"></a>4단계: 스토어에서 앱에서 바로 제품 판매 구성
 
-개발자 센터 대시보드에서 제품 ID, 유형, 가격 및 앱에서 바로 구매 제품에 대한 기타 속성을 정의합니다. 테스트할 때 WindowsStoreProxy.xml에서 설정한 구성과 동일하게 구성해야 합니다. 자세한 내용은 [IAP 제출](https://msdn.microsoft.com/library/windows/apps/mt148551)을 참조하세요.
+개발자 센터 대시보드에서 앱으로 이동, 앱 내 제품과 일치하는 [추가 기능을 생성](../publish/add-on-submissions.md)합니다. 추가 기능에 제품 ID 종류, 가격, 기타 속성을 정의합니다. 테스트할 때 WindowsStoreProxy.xml에서 설정한 구성과 동일하게 구성해야 합니다.
+
+  > [!NOTE]
+  > 코드에 사용하는 앱 내 제품 토큰은 대시보드의 해당되는 추가 기능에 지정한 [제품 ID](../publish/set-your-add-on-product-id.md#product-id) 값과 일치해야 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -92,4 +98,3 @@ ms.lasthandoff: 02/07/2017
 * [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)
 * [확인 메일을 사용하여 제품 구매 검증](use-receipts-to-verify-product-purchases.md)
 * [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
-

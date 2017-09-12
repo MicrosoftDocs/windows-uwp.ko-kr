@@ -1,17 +1,19 @@
 ---
-author: eliotcowley
+author: drewbatgit
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에 PlayReady 보호된 미디어 콘텐츠를 추가하는 방법을 설명합니다."
 title: PlayReady DRM
-ms.author: elcowle
+ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 161a048a4bfa9479821aec542db17ded8243d231
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 803070143a3d07bfbdbb4f3e1b7b70858b75e0f9
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="playready-drm"></a>PlayReady DRM
 
@@ -470,6 +472,33 @@ PlayReady DRM의 이전 버전에서는 비영구적 라이선스를 사후 방�
     videoPlayer.msSetMediaProtectionManager( mediaProtectionManager );
     ```
     
+## <a name="query-for-protection-capabilities"></a>보호 기능에 대한 쿼리
+Windows 10 버전 1703부터, 디코드 코덱, 해상도, 출력 보호(HDCP)와 같은 HW DRM 기능을 쿼리할 수 있습니다. 쿼리는 [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities#Windows_Media_Protection_ProtectionCapabilities_IsTypeSupported_System_String_System_String_) 메서드를 사용하여 수행되며, 지원되는지 쿼리하는 기능에 대한 문자열 표현과 쿼리가 적용되는 주요 시스템을 지정하는 문자열을 받습니다. 지원되는 문자열 값 목록은 [**IsTypeSupported**](https://docs.microsoft.com/uwp/api/windows.media.protection.protectioncapabilities#Windows_Media_Protection_ProtectionCapabilities_IsTypeSupported_System_String_System_String_)에 대한 API 참조 페이지를 참조하세요. 다음 코드 예제는 이 메서드의 사용 방법을 보여 줍니다.  
+
+    ```cs
+    using namespace Windows::Media::Protection;
+
+    ProtectionCapabilities^ sr = ref new ProtectionCapabilities();
+
+    ProtectionCapabilityResult result = sr->IsTypeSupported(
+    L"video/mp4; codecs=\"avc1.640028\"; features=\"decode-bpp=10,decode-fps=29.97,decode-res-x=1920,decode-res-y=1080\"",
+    L"com.microsoft.playready");
+
+    switch (result)
+    {
+        case ProtectionCapabilityResult::Probably:
+        // Queue up UHD HW DRM video
+        break;
+
+        case ProtectionCapabilityResult::Maybe:
+        // Check again after UI or poll for more info.
+        break;
+
+        case ProtectionCapabilityResult::NotSupported:
+        // Do not queue up UHD HW DRM video.
+        break;
+    }
+    ```
 ## <a name="add-secure-stop"></a>보안 중지 추가
 
 이 섹션에서는 UWP 앱에 보안 중지를 추가하는 방법을 설명합니다.
@@ -508,6 +537,7 @@ Xbox One의 UWP 앱에서 PlayReady DRM을 사용하려면 먼저 앱을 게시�
 * 인증된 특정 테스트 계정만 특정 콘텐츠에 대해 SL150 라이선스를 획득할 수 있도록 논리를 구현합니다.
 
 회사 및 제품에 가장 적합한 방법을 사용합니다.
+
 
 ## <a name="see-also"></a>참고 항목
 - [미디어 재생](media-playback.md)

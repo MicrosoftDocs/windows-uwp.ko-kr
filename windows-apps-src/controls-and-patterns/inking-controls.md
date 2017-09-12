@@ -5,21 +5,23 @@ title: "수동 입력 컨트롤"
 label: Inking Controls
 template: detail.hbs
 ms.author: kbridge
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
-ms.openlocfilehash: 50c18f0ef72ad990971323921eae282c76c70be3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3efbda64a872a59cd1e3e5da03cd9ab896642766
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="inking-controls"></a>수동 입력 컨트롤
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 및 [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)입니다.
+UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [InkCanvas](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 및 [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)입니다.
 
 InkCanvas 컨트롤은 펜 입력을 잉크 스트로크(색과 두께에 기본 설정 사용) 또는 지우기 스트로크로 렌더링합니다. 이 컨트롤은 기본 잉크 스트로크 속성을 변경하기 위한 기본 제공 UI를 포함하지 않는 투명 오버레이입니다.
 
@@ -33,18 +35,9 @@ InkCanvas 컨트롤은 기본 잉크 스트로크 설정 변경 지원을 포함
 > [!NOTE]
 > InkToolbar는 펜 및 마우스 입력을 지원하며 터치식 입력을 인식하도록 구성할 수 있습니다.
 
-<img src="images/ink-tools-invoked-toolbar.png" width="300">
+<img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**InkCanvas 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)</li>
-<li>[**InkToolbar 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)</li>
-<li>[**InkPresenter 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx)</li>
-<li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
-</ul>
-</div>
-
+> **중요 API**: [InkCanvas 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx), [InkToolbar 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx), [InkPresenter 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx), [Windows.UI.Input.Inking](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -56,7 +49,7 @@ InkCanvas 컨트롤은 기본 잉크 스트로크 설정 변경 지원을 포함
 InkToolbar와 InkCanvas를 연결하여 잉크 기능을 활성화하고 스트로크 크기, 색, 펜 팁 모양 등의 기본적인 잉크 속성을 설정하기 위한 UI를 제공합니다.
 
 > [!NOTE] 
-> InkCanvas에서 잉크 스트로크 렌더링을 보다 광범위하게 사용자 지정하려면 기본 [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) 개체를 사용합니다.
+> InkCanvas에서 잉크 스트로크 렌더링을 보다 광범위하게 사용자 지정하려면 기본 [InkPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) 개체를 사용합니다.
 
 ## <a name="examples"></a>예제
 
@@ -88,7 +81,7 @@ InkToolbar 컨트롤은 InkCanvas와 함께 사용해야 합니다. InkToolbar(�
  ```
 
 이 경우 다음과 같은 InkToolbar가 표시됩니다.
-<img src="images/ink-tools-uninvoked-toolbar.png" width="250">
+<img src="images/ink-tools-uninvoked-toolbar.png" width="250" alt="Basic InkToolbar">
 
 ### <a name="built-in-buttons"></a>기본 제공 단추
 

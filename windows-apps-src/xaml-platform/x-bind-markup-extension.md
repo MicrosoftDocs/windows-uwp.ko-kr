@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ba08e426fea4c494276978d96cf0b36f6956bdb8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0adc0789c4e52e8b9943f774d786aea6efb60c91
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
@@ -181,7 +183,8 @@ Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Orde
 | **FallbackValue** | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
 | **모드** | “OneTime”, “OneWay” 또는 “TwoWay” 문자열 중 하나로 바인딩 모드를 지정합니다. 기본값은 "OneTime"입니다. 이 값은 **{Binding}**에 대한 기본값(대부분의 경우 "OneWay"임)과 다릅니다. |
 | **TargetNullValue** | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
-| **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. | 
+| **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
+| **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. TextBox.Text를 제외한 모든 속성의 기본값은 PropertyChanged이며, TextBox.Text는 LostFocus입니다.| 
 
 **참고** **{Binding}**에서 **{x:Bind}**로 태그를 변환하는 경우 **Mode** 속성에 대한 기본값의 차이에 주의하세요.
  

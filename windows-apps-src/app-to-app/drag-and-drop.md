@@ -2,16 +2,18 @@
 description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에 끌어서 놓기를 추가하는 방법을 설명합니다."
 title: "끌어서 놓기"
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 84f78d43a0d9a34b8ba992a2357f08ad374b32d1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b3efc0a30c3407fbc05d0fa800df8596af548931
+ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
 

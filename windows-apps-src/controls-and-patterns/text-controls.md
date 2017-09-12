@@ -6,14 +6,19 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 8be1dac30047a647d7f80464b53fe2fc3527d2c3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 16b019678e94e131ba1105bb92d7ea3ab301828c
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
 
@@ -24,17 +29,8 @@ translationtype: HT
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
 - 텍스트 입력 및 편집에 대한 컨트롤은 [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) 및 [RichEditBox](rich-edit-box.md)입니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**AutoSuggestBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
-<li>[**PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
-<li>[**RichEditBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
-<li>[**RichTextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
-<li> [**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
-<li>[**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
-</ul>
-</div>
+> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [RichEditBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
+
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -73,7 +69,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 -   **유효한 값을 모두 효율적으로 열거하는 것이 효과적인가요?** 그렇다면 선택 컨트롤(예: [확인란](checkbox.md), [드롭다운 목록](lists.md), 목록 상자 [라디오 단추](radio-button.md), [슬라이더](slider.md), [토글 스위치](toggles.md), [날짜 선택기](date-and-time.md), 또는 시간 선택기) 중 하나를 사용하는 것이 좋습니다.
 -   **유효한 값 집합이 매우 적은가요?** 이때 값이 일부 문자 길이보다 큰 경우 [드롭다운 목록](lists.md) 또는 목록 상자를 사용하는 것이 좋습니다.
 -   **유효한 데이터는 아무런 제약이 없나요? 아니면 형식에 의해서만 제약을 받나요(길이 제한 또는 문자 형식 제한)?** 그렇다면 텍스트 입력 컨트롤을 사용합니다. 입력할 수 있는 문자 수를 제한하고 앱 코드 형식의 유효성을 검사할 수 있습니다.
--   **값이 특수한 공통 컨트롤이 있는 데이터 형식을 나타내나요?** 그렇다면 텍스트 입력 컨트롤 대신 적절한 컨트롤을 사용합니다. 예를 들어 데이터 입력을 수락하려면 텍스트 입력 컨트롤 대신 [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681)를 사용합니다.
+-   **값이 특수한 공통 컨트롤이 있는 데이터 형식을 나타내나요?** 그렇다면 텍스트 입력 컨트롤 대신 적절한 컨트롤을 사용합니다. 예를 들어, 데이터 입력을 수락하려면 텍스트 입력 컨트롤 대신 [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681)를 사용합니다.
 -   데이터가 엄격히 숫자인 경우
     -   **값을 근사값 및/또는 동일한 페이지에 있는 다른 수량을 기준으로 입력하나요?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
     -   **설정을 변경하면 어떤 효과가 있는지에 대해 즉각적인 피드백을 받게 되면 사용자에게 이익이 되나요?** 그렇다면 함께 표시되는 컨트롤과 함께 [슬라이더](slider.md)를 사용하세요.
@@ -97,18 +93,18 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 각 텍스트 컨트롤과 관련된 정보와 예제는 다음 문서를 참조하세요.
 
--   [**AutoSuggestBox**](auto-suggest-box.md)
--   [**PasswordBox**](password-box.md)
--   [**RichEditBox**](rich-edit-box.md)
--   [**RichTextBlock**](rich-text-block.md)
--   [**TextBlock**](text-block.md)
--   [**TextBox**](text-box.md)
+-   [AutoSuggestBox](auto-suggest-box.md)
+-   [PasswordBox](password-box.md)
+-   [RichEditBox](rich-edit-box.md)
+-   [RichTextBlock](rich-text-block.md)
+-   [TextBlock](text-block.md)
+-   [TextBox](text-box.md)
 
 ## <a name="font-and-style-guidelines"></a>글꼴 및 스타일 지침
 글꼴 지침은 다음 문서를 참조하세요.
 
-- [**글꼴 지침**](fonts.md)
-- [**Segoe MDL2 아이콘 목록 및 지침**](segoe-ui-symbol-font.md)
+- [글꼴 지침](fonts.md)
+- [Segoe MDL2 아이콘 목록 및 지침](segoe-ui-symbol-font.md)
 
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>텍스트 컨트롤에 맞는 키보드를 선택합니다.
@@ -144,7 +140,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 ![컬러 글꼴을 사용하는 텍스트 블록](images/text-block-color-fonts.png)
 
-자세한 내용은 [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx) 속성을 참조하세요.
+자세한 내용은 [IsColorFontEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx) 속성을 참조하세요.
 
 ## <a name="guidelines-for-line-and-paragraph-separators"></a>줄 및 단락 구분 기호에 대한 지침
 
@@ -187,11 +183,11 @@ TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 
 ## <a name="related-articles"></a>관련 문서
 
 **디자이너용**
-- [**글꼴 지침**](fonts.md)
-- [**Segoe MDL2 아이콘 목록 및 지침**](segoe-ui-symbol-font.md)
+- [글꼴 지침](fonts.md)
+- [Segoe MDL2 아이콘 목록 및 지침](segoe-ui-symbol-font.md)
 - [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **개발자용(XAML)**
-- [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length.aspx)

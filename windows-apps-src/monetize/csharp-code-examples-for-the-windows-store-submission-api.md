@@ -2,27 +2,27 @@
 author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: "이 섹션의 C# 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
-title: "제출 API에 대한 C# 코드 예제"
+title: "C# 샘플 - 앱, 추가 기능, 플라이트 제출"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Windows 스토어 제출 API, 코드 예제"
-ms.openlocfilehash: 59b9c0b2cc503a56e0a1c9a75ce5ef471983c699
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 코드 예제, C#"
+ms.openlocfilehash: 77c0f2ddbe0e76ede2580129d7d0a0ae118b3554
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="c-code-examples-for-the-submission-api"></a>제출 API에 대한 C\# 코드 예제
+# <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\# 샘플: 앱, 추가 기능, 플라이트 제출
 
-이 문서는 *Windows 스토어 제출 API* 사용을 위한 C# 코드 예제를 제공합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
+이 문서는 이런 작업에 [Windows 스토어 제출 API](create-and-manage-submissions-using-windows-store-services.md)를 사용하는 방법을 설명하는 C# 코드 예제를 제공합니다.
 
-이러한 코드 예제는 다음 작업을 보여 줍니다.
-
-* [앱 제출 업데이트](#update-app-submission)
-* [새 추가 기능 제출 만들기](#create-add-on-submission)
+* [앱 제출 만들기](#create-app-submission)
+* [추가 기능 제출 만들기](#create-add-on-submission)
 * [추가 기능 제출 업데이트](#update-add-on-submission)
-* [패키지 플라이트 제출 업데이트](#update-flight-submission)
+* [패키지 플라이트 제출 만들기](#create-flight-submission)
 
 각 예제를 검토하여 각 예제에서 보여 주는 작업에 대해 자세히 알아보거나 이 문서의 모든 코드 예제를 콘솔 응용 프로그램으로 빌드할 수 있습니다. 예제를 빌드하려면 Visual Studio에서 **DeveloperApiCSharpSample**이라는 C# 콘솔 응용 프로그램을 만들고 각 예제를 프로젝트의 별도 코드 파일에 복사하여 프로젝트를 빌드합니다.
 
@@ -31,13 +31,13 @@ translationtype: HT
 이러한 예제는 다음 라이브러리를 사용합니다.
 
 * Microsoft.WindowsAzure.Storage.dll. 이 라이브러리는 [.NET용 Azure SDK](https://azure.microsoft.com/downloads/)에서 사용할 수 있으며 또는 [WindowsAzure.Storage NuGet 패키지](https://www.nuget.org/packages/WindowsAzure.Storage)를 설치하여 가져올 수 있습니다.
-* Newtonsoft의 [Json.NET](http://www.newtonsoft.com/json).
+* Newtonsoft의 [Newtonsoft.Json](http://www.newtonsoft.com/json) NuGet 패키지.
 
 ## <a name="main-program"></a>기본 프로그램
 
-다음 예제에서는 Windows 스토어 제출 API를 사용하는 여러 가지 방법을 보여 주기 위해 이 문서의 다른 예제 메서드를 호출하는 명령줄 프로그램을 구현합니다. 이 프로그램을 필요에 따라 조정하려면
+다음 예제에서는 Windows 스토어 제출 API를 사용하는 여러 가지 방법을 보여 주기 위해 이 문서의 다른 예제 메서드를 호출하는 명령줄 프로그램을 구현합니다. 이 프로그램을 필요에 따라 조정하려면,
 
-* 관리하려는 앱, 추가 기능(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함) 및 패키지 플라이트의 ID에 ```ApplicationId```, ```InAppProductId``` 및 ```FlightId``` 속성을 할당합니다. 이러한 ID는 개발자 센터 대시보드에서 사용할 수 있습니다.
+* 관리하려는 앱, 추가 기능, 패키지 플라이트의 ID에 ```ApplicationId```, ```InAppProductId``` 및 ```FlightId``` 속성을 할당합니다.
 * 앱의 클라이언트 ID 및 키에 ```ClientId``` 및 ```ClientSecret``` 속성을 할당하고 ```TokenEndpoint``` URL의 *tenantid* 문자열을 앱의 테넌트 ID로 바꿉니다. 자세한 내용은 [Azure AD 응용 프로그램을 Windows 개발자 센터 계정과 연결하는 방법](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account)을 참조하세요.
 
 > [!div class="tabbedCodeSnippets"]
@@ -51,8 +51,8 @@ translationtype: HT
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/ClientConfiguration.cs#ClientConfiguration)]
 
-<span id="update-app-submission" />
-## <a name="update-an-app-submission"></a>앱 제출 업데이트
+<span id="create-app-submission" />
+## <a name="create-an-app-submission"></a>앱 제출 만들기
 
 다음 예제는 Windows 스토어 제출 API에서 여러 메서드를 사용하여 앱 제출을 업데이트하는 클래스를 구현합니다. 이 클래스의 ```RunAppSubmissionUpdateSample``` 메서드는 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```RunAppSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
@@ -67,7 +67,7 @@ translationtype: HT
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/AppSubmissionUpdateSample.cs#AppSubmissionUpdateSample)]
 
 <span id="create-add-on-submission" />
-## <a name="create-a-new-add-on-submission"></a>새 추가 기능 제출 만들기
+## <a name="create-an-add-on-submission"></a>추가 기능 제출 만들기
 
 다음 예제는 Windows 스토어 제출 API에서 여러 메서드를 사용하여 새 추가 기능 제출을 만드는 클래스를 구현합니다. 이 클래스의 ```RunInAppProductSubmissionCreateSample``` 메서드는 다음과 같은 작업을 수행합니다.
 
@@ -94,8 +94,8 @@ translationtype: HT
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/InAppProductSubmissionUpdateSample.cs#InAppProductSubmissionUpdateSample)]
 
-<span id="update-flight-submission" />
-## <a name="update-a-package-flight-submission"></a>패키지 플라이트 제출 업데이트
+<span id="create-flight-submission" />
+## <a name="create-a-package-flight-submission"></a>패키지 플라이트 제출 만들기
 
 다음 예제는 Windows 스토어 제출 API에서 여러 메서드를 사용하여 패키지 플라이트 제출을 업데이트하는 클래스를 구현합니다. 이 클래스의 ```RunFlightSubmissionUpdateSample``` 메서드는 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```RunFlightSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 

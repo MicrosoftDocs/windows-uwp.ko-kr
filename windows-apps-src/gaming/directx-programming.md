@@ -4,14 +4,16 @@ title: "DirectX 프로그래밍"
 description: "DirectX를 사용한 UWP 게임 프로그래밍입니다."
 ms.assetid: ba77b081-b8c0-4674-b8bf-7a94466a67f7
 ms.author: joanlee
-ms.date: 02/08/2017
+ms.date: 06/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 개요, 프로그래밍, directx"
-ms.openlocfilehash: 742501139b8ffb6a728b2e44b4dd0ac8b319e566
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d780a8a8848bceb8a011d02f4e788eb47ed28c6f
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="directx-programming"></a>DirectX 프로그래밍
 
@@ -49,13 +51,21 @@ translationtype: HT
 <td align="left"><p>[최적화 및 고급 항목](directx-optimization-and-advanced-topics.md)</p></td>
 <td align="left"><p>최적화 및 기타 고급 항목에 대해 알아봅니다.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p>[DirectX 9에서 UWP로 포팅](porting-your-directx-9-game-to-windows-store.md)</p></td>
+<td align="left"><p>DirectX 9 게임을 UWP로 이식하는 방법을 알아봅시다.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[OpenGL을 Direct3D로 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)</p></td>
+<td align="left"><p>OpenGL ES 2.0 게임을 Direct3D 11로 포팅하는 방법을 알아봅니다.</p></td>
+</tr>
 </tbody>
 </table>
  
-
+DirectX 프로그래밍 가이드를 보려면 [Direct3D 11 그래픽](https://msdn.microsoft.com/library/windows/desktop/ff476080.aspx) 및 [Direct3D 12 그래픽](https://msdn.microsoft.com/library/windows/desktop/dn903821.aspx)으로 이동하세요.
  
 
- 
+
 
 
 

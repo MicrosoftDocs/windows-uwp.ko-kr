@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4997895e73e7c8bf0f20a2bc504b7b8c17c45339
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 00a6bbf06f918c0b86bcaed7ae7891b474baefe8
+ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2017
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
@@ -22,6 +24,11 @@ translationtype: HT
 **참고** 샘플 데이터가 얼마나 필요한지 그리고 얼마나 도움이 될지는 바인딩에서 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하는지 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)을 사용하는지에 달려 있습니다. 이 항목에서 설명하는 기술은 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) 사용을 기준으로 하므로 **{Binding}**에만 적합합니다. 그러나 **{x:Bind}**를 사용하는 경우에는 바인딩에서 적어도 항목 컨트롤에 대한 값을 비롯해 자리 표시자 값을 디자인 화면에 표시하므로 샘플 데이터가 똑같이 필요하지는 않습니다.
 
 앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다. 컨트롤에 데이터를 채워 앱의 레이아웃, 템플릿 및 기타 시각적 속성을 작업할 수 있도록 하기 위해 다양한 방법으로 디자인 타임 샘플 데이터를 사용할 수 있습니다. 스케치(또는 프로토타입) 앱을 빌드하는 경우에도 샘플 데이터를 사용하면 정말 유용하고 시간을 절약할 수 있습니다. 스케치 또는 프로토타입에서 런타임에 샘플 데이터를 사용하면 실제 라이브 데이터에 연결하지 않더라도 아이디어를 설명할 수 있습니다.
+
+**{Binding}을 보여 주는 샘플 앱**
+
+-   [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) 앱 다운로드
+-   [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) 앱 다운로드
 
 <a name="setting-datacontext-in-markup"></a>태그에서 DataContext 설정
 -----------------------------

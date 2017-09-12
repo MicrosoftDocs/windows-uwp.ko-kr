@@ -1,17 +1,19 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 23FE28F1-89C5-4A17-A732-A722648F9C5E
 title: "비동기 프로그래밍"
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic .NET, Visual C\\+\\+ 구성 요소 확장(C\\+\\+/CX) 및 JavaScript에서의 표현에 대해 설명합니다."
-ms.author: twhitney
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 비동기"
-ms.openlocfilehash: 06eceae9c7736ce59bc0ab1b842425c3dc56d299
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 042ebc335d0e0a401b3aeb761daed1ba00a43f59
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 

@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: "UI 스레드 응답 유지"
 description: "사용자는 컴퓨터 유형에 관계없이 계산하는 동안 앱이 계속 응답할 것으로 기대합니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 921af1b7f408bed5f846af631592755d48a37dd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d5be2a8ea14f35d048b4402f2cfb1018d5998c3d
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="keep-the-ui-thread-responsive"></a>UI 스레드 응답 유지
 
@@ -29,7 +31,7 @@ UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 
 
 앱의 가장 느린 단계에는 시작 및 보기 전환이 포함할 수 있습니다. 초기에 사용자에게 표시되는 UI를 불러오는 데 필요한 것 이상으로 많은 작업을 수행하지 마세요. 예를 들어 점진적으로 공개되는 UI 및 팝업 내용에 대한 UI를 만들지 마세요.
 
--   [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785)를 사용하여 요소를 지연 인스턴스화합니다.
+-   [x:Load attribute](../xaml-platform/x-load-attribute.md) 또는 [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785)를 사용하여 요소를 지연-인스턴스화합니다.
 -   요청 시 프로그래밍 방식으로 트리에 요소를 삽입합니다.
 
 [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918)는 사용 중이지 않을 때 UI 스레드가 처리되도록 작업을 큐에 대기시킵니다.
@@ -107,4 +109,3 @@ public class AsyncExample
 ## <a name="related-topics"></a>관련 항목
 
 * [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-

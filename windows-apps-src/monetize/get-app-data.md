@@ -4,20 +4,20 @@ ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: "Windows 스토어 제출 API에서 이러한 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 데이터를 검색합니다."
 title: "앱 데이터 가져오기"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱 데이터"
-ms.openlocfilehash: dc0aa91aa417689866aa6bd666f0446c0eb2e242
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0bb01250756c464113570ece433afe11506a5399
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 
 Windows 스토어 제출 API에서 다음 메서드를 사용하여 개발자 센터 계정의 기존 앱에 대한 데이터를 가져옵니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
-
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
 
 이러한 메서드를 사용하려면 먼저 앱이 개발자 센터 계정에 이미 있어야 합니다. 앱에 대한 제출을 만들거나 관리하려면 [앱 제출 관리](manage-app-submissions.md)의 메서드를 참조하세요.
 
@@ -88,7 +88,8 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 개발자 �
   "pendingApplicationSubmission": {
     "id": "1152921504621243487",
     "resourceLocation": "applications/9NBLGGH4R315/submissions/1152921504621243487"
-  }
+  },
+  "hasAdvancedListingPermission": false
 }
 ```
 
@@ -103,7 +104,8 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 개발자 �
 | publisherName       | 문자열  | 앱과 연결된 Windows 게시자 ID입니다. 이 ID는 Windows 개발자 센터 대시보드에서 앱의 [앱 ID](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) 페이지에 나타나는 **패키지/ID/게시자** 값에 해당합니다.       |
 | firstPublishedDate      | 문자열  | ISO 8601 형식으로 앱이 처음 게시된 날짜입니다.   |
 | lastPublishedApplicationSubmission       | 개체 | 앱의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.    |
-| pendingApplicationSubmission        | 개체  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |   |
+| pendingApplicationSubmission        | 개체  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |   
+| hasAdvancedListingPermission        | object  |  앱 제출에서 [gamingOptions](manage-app-submissions.md#gaming-options-object)이나 [예고편](manage-app-submissions.md#trailer-object)을 구성할 수 있는지 알려줍니다 자세한 내용은 [이 섹션](manage-app-submissions.md#advanced-listings)을 참조하세요. |  |
 
 
 <span id="add-on-object" />

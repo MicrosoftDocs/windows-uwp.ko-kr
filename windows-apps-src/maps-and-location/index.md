@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: "지도 및 위치 개요"
-description: "이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여줍니다."
+description: "이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 지도, 위치, 지도 서비스"
-ms.openlocfilehash: 33cf0a7a69ff40434ecb46977e4a6f67ca2a07e4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 9f2c15c8d4bab5a764b8973c4eecb220ed6d8f38
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 
@@ -34,9 +36,8 @@ translationtype: HT
 
 | 항목 | 설명 |
 |-------|-------------|
-| [지도 인증 키 요청](authentication-key.md) | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 앱을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 문서에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다. |
-| [지도 컨트롤](controls-map.md) | 지도 컨트롤은 도로 지도와 위성뷰, 길 찾기, 검색 결과, 교통 정보를 표시할 수 있습니다. |
-| [2D, 3D 및 Streetside 뷰가 있는 지도 표시](display-maps.md) | [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다. |
+| [지도 인증 키 요청](authentication-key.md) | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 앱을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 문서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하여 앱에 추가하는 방법에 대해 설명합니다. |
+| [2D, 3D, Streetside 뷰로 지도 표시](display-maps.md) | [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다. |
 | [지도에 POI(관심 지점) 표시](display-poi.md) | 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가하는 방법을 알아봅니다. |
 | [지도에서 바둑판식 이미지 오버레이](overlay-tiled-images.md) | 타일 소스를 사용하여 지도에 타사 또는 사용자 지정 바둑판식 이미지를 오버레이합니다. 타일 소스를 사용하여 특수 정보(예제: 날씨 데이터, 인구 데이터, 지진 데이터 등)를 오버레이하거나 기본 지도를 전체적으로 바꿉니다. |
 

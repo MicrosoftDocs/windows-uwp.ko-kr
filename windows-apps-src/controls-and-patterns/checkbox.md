@@ -6,14 +6,20 @@ ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7e00ac2aa08033292ba8d3ce1cebe836fdc3808c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 13ca87313835541abffe6190d8a3bc07e67b40f8
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="check-boxes"></a>확인란
 
@@ -21,16 +27,9 @@ translationtype: HT
 
 확인란은 작업 항목을 선택하거나 선택 취소하는 데 사용됩니다. 사용자가 선택할 수 있는 단일 항목이나 여러 항목의 목록에도 사용할 수 있습니다. 컨트롤에는 3개의 선택 상태, 즉 선택되지 않음, 선택됨 및 확정되지 않음이 있습니다. 하위 항목 컬렉션에 선택되지 않음과 선택됨 상태가 둘 다 있는 경우에 확정되지 않은 상태를 사용합니다.
 
-![확인란 상태의 예](images/templates-checkbox-states-default.png)
+> **중요 API**: [CheckBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209316), [Checked 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx), [IsChecked 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**CheckBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209316)</li>
-<li>[**Checked 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
-<li>[**IsChecked 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) </li>
-</ul>
-</div>
+![확인란 상태의 예](images/templates-checkbox-states-default.png)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -39,7 +38,7 @@ translationtype: HT
 
 ![개별 선택에 사용되는 단일 확인란](images/checkbox1.png)
 
-이진 선택의 경우 **확인란**과 [**토글 스위치**](toggles.md)의 주요 차이점은 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
+이진 선택의 경우 **확인란**과 [토글 스위치](toggles.md)의 주요 차이점은 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
 
 사용자가 함께 사용할 수 있는 선택 항목 그룹에서 항목을 하나 이상 선택하는 다중 선택 시나리오에 **여러 확인란**을 사용합니다.
 
@@ -51,21 +50,12 @@ translationtype: HT
 
 ![혼합 선택을 표시하는 데 사용되는 확인란](images/checkbox3.png)
 
-**확인란** 및 **라디오 단추** 컨트롤을 통해 사용자는 옵션 목록에서 선택할 수 있습니다. 확인란을 사용하여 사용자는 옵션 조합을 선택할 수 있습니다. 반면, 라디오 단추를 사용하면 함께 사용할 수 없는 옵션에서 한 가지 옵션을 선택할 수 있습니다. 둘 이상의 옵션이 있지만 하나만 선택할 수 있는 경우 대신 라디오 단추를 사용합니다.
+**확인란** 및 **라디오 단추** 컨트롤을 통해 사용자는 옵션 목록에서 선택할 수 있습니다. 확인란을 사용하여 사용자는 옵션 조합을 선택할 수 있습니다. 반면, 라디오 단추를 사용하면 함께 사용할 수 없는 옵션에서 한 가지 옵션을 선택할 수 있습니다. 둘 이상의 옵션이 있지만 하나만 선택할 수 있는 경우 라디오 단추를 대신 사용합니다.
 
-## <a name="examples"></a>예제
-
-Microsoft Edge 브라우저 대화 상자의 확인란입니다.
-
-![Microsoft Edge 브라우저 대화 상자의 확인란](images/control-examples/check-box-edge.png)
-
-Windows의 알람 및 시계 앱 확인란입니다.
-
-![Windows의 알람 및 시계 앱 확인란](images/control-examples/check-box-alarm.png)
 
 ## <a name="create-a-checkbox"></a>확인란 만들기
 
-확인란에 레이블을 할당하려면 [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx) 속성을 사용합니다. 이 레이블은 확인란 옆에 표시됩니다.
+확인란에 레이블을 할당하려면 [Content](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content.aspx) 속성을 사용합니다. 이 레이블은 확인란 옆에 표시됩니다.
 
 이 XAML은 양식이 제출되기 전 서비스 약관에 동의하는 데 사용되는 단일 확인란을 만듭니다. 
 
@@ -83,9 +73,9 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### <a name="bind-to-ischecked"></a>IsChecked에 바인딩
 
-[**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다. 그러나 IsChecked가 [nullable](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx) 부울 값이므로 값 변환기를 사용하여 부울 값으로 바인딩해야 합니다.
+[IsChecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다. 그러나 IsChecked가 [nullable](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx) 부울 값이므로 값 변환기를 사용하여 부울 값으로 바인딩해야 합니다.
 
-이 예제에서는 서비스 약관에 동의하는 확인란의 **IsChecked** 속성을 제출 단추의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx) 속성으로 바인딩합니다. 제출 단추는 서비스 약관에 동의하는 경우에만 사용할 수 있습니다.
+이 예제에서는 서비스 약관에 동의하는 확인란의 **IsChecked** 속성을 제출 단추의 [IsEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx) 속성으로 바인딩합니다. 제출 단추는 서비스 약관에 동의하는 경우에만 사용할 수 있습니다.
 
 > 참고&nbsp;&nbsp;기에서는 관련 코드만 표시합니다. 데이터 바인딩 및 값 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](../data-binding/data-binding-quickstart.md)를 참조하세요.
 
@@ -128,7 +118,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 
 ### <a name="handle-click-and-checked-events"></a>Click 및 Checked 이벤트 처리
 
-확인란 상태가 변경될 때 작업을 수행하려면 [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트 또는 [**Checked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) 및 [**Unchecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx) 이벤트를 처리할 수 있습니다. 
+확인란 상태가 변경될 때 작업을 수행하려면 [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트 또는 [Checked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx) 및 [Unchecked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.unchecked.aspx) 이벤트를 처리할 수 있습니다. 
 
 선택된 상태가 변경될 때마다 **Click** 이벤트가 발생합니다. Click 이벤트를 처리하는 경우 **IsChecked** 속성을 사용하여 확인란의 상태를 결정합니다.
 
@@ -189,7 +179,7 @@ CheckBox 컨트롤은 [ToggleButton](https://msdn.microsoft.com/library/windows/
 선택되지 않음 | IsChecked | **false** 
 확정되지 않음 | IsChecked | **null** 
 
-확인란이 확정되지 않은 상태를 보고하도록 하려면 [**IsThreeState**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.isthreestate.aspx) 속성을 **true**로 설정해야 합니다. 
+확인란이 확정되지 않은 상태를 보고하도록 하려면 [IsThreeState](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.isthreestate.aspx) 속성을 **true**로 설정해야 합니다. 
 
 옵션을 그룹화하는 경우 확정되지 않은 상태 확인란을 사용하여 전체 그룹을 나타낼 수 있습니다. 사용자가 그룹의 하위 항목 전부가 아닌 일부 항목을 선택하는 경우 확인란의 확정되지 않은 상태를 사용합니다.
 
@@ -299,7 +289,7 @@ private void SetCheckedState()
 
 ## <a name="related-articles"></a>관련 문서
 
--   [**CheckBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209316) 
+-   [CheckBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209316) 
 -   [라디오 단추](radio-button.md)
 -   [토글 스위치](toggles.md)
 

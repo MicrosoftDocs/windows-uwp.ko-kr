@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
-description: "이 섹션에는 작성하는 앱에 일반적으로 적용할 수 있는 프로그래밍 개념을 설명하는 항목이 포함되어 있습니다."
+description: "이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱을 위한 XAML 프레임워크를 설명하는 항목이 포함되어 있습니다."
 title: "XAML 플랫폼"
 ms.author: jimwalk
 ms.date: 02/08/2017
@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3a5a638a2b8caf63cc3353d7bd6a43068ec61119
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 82ef0c06fa706837f5cbd35d3975c464e14315fa
+ms.sourcegitcommit: a9e4be98688b3a6125fd5dd126190fcfcd764f95
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="xaml-platform"></a>XAML 플랫폼
 

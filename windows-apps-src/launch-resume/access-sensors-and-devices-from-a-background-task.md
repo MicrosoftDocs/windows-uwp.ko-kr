@@ -1,17 +1,19 @@
 ---
-author: dbirtolo
+author: mukin
 title: "백그라운드 작업에서 센서 및 디바이스에 액세스"
 description: "DeviceUseTrigger를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다."
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9acef8f03bcdd4a9c4d40133ab2507853d4d0145
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0b09237f0e1e010d1dfa8fd5e1b5ce4f890d919e
+ms.sourcegitcommit: a2908889b3566882c7494dc81fa9ece7d1d19580
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/31/2017
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>백그라운드 작업에서 센서 및 장치에 액세스
 

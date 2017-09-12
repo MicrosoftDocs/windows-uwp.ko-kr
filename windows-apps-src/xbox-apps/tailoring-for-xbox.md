@@ -8,15 +8,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.assetid: 0cfa8e22-7345-47b7-b132-880bbc050d44
-ms.openlocfilehash: c7bf5db6eb7a624766438c60067c311b9e137138
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fb896ed67b79e97b504be0253081a4c29ee5fcc9
+ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 기본적으로 모든 UWP 앱은 추가 작업 없이 Xbox One에서 실행됩니다. 그러나 고객이 편리하게 사용할 수 있도록 앱을 꾸미고 Xbox에서 앱 환경의 경쟁력을 유지하려면 아래 사례를 따릅니다.
   > [!NOTE]
   > 시작하기 전에 [Xbox 및 TV용 디자인](../input-and-devices/designing-for-tv.md)의 디자인 지침을 참조하세요.   
+
 
 ## <a name="to-build-the-best-experiences-for-xbox-one"></a>Xbox One을 위한 최상의 환경을 조성하려면
 
@@ -26,7 +28,7 @@ Xbox 사용자는 컨트롤러를 사용하는 것을 선호합니다. 컨트롤
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*작업:* 약 10피트 환경에 적합한 포커스 사각형 그리기
 대부분의 Xbox 사용자는 거실에서 TV 주위에 앉아 있으므로 표준 포커스 사각형이 10피트를 넘는 일은 거의 없습니다. 입력 포커스가 있는 UI 요소가 항상 사용자에게 명확하게 표시되도록 하려면 [포커스 화면 효과](../input-and-devices/designing-for-tv.md#focus-visual) 지침을 따릅니다. XAML에서는 Xbox에서 앱이 실행될 때 이 동작을 무료로 사용할 수 있지만 HTML 앱에서는 사용자 지정 CSS 스타일을 사용해야 합니다.
 
-###    <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*작업:* SystemMediaTransportControls 클래스와 통합 
+### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*작업:* SystemMediaTransportControls 클래스와 통합 
 Xbox 사용자는 Xbox 미디어 리모컨, Cortana(특히 "실행" 및 "일시 중지" 음성 명령) 및 Xbox SmartGlass를 사용하여 미디어 앱을 제어하려고 합니다. 이 기능을 무료로 사용하려면 앱에서 Xbox 미디어 컨트롤에 자동으로 포함된 [SystemMediaTransportControls](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.systemmediatransportcontrols.aspx) 클래스를 사용해야 합니다. 앱에 사용자 지정 미디어 컨트롤이 있는 경우 **SystemMediaTransportControls** 클래스와 통합하여 사용자에게 이러한 기능을 제공해야 합니다. 배경 음악 앱을 만드는 경우 Xbox 멀티태스킹 탭에서 배경 음악 컨트롤이 올바르게 작동되도록 **SystemMediaTransportControls** 클래스와 통합합니다.
 
 ### <a name="do-use-adaptive-ui-to-account-for-snapped-apps"></a>*작업:* 사이드 앱에 맞게 적응 UI 사용
@@ -37,11 +39,18 @@ Xbox One의 고유 기능 중 하나는 앱이 *채우기 모드*로 실행 중�
 > [!IMPORTANT]
   > 오버스캔을 사용하지 않도록 설정한 경우 대화형 요소와 텍스트가 TV 안전 영역 내에 모두 포함되도록 해야 합니다. 
 
-###    <a name="consider-use-tv-safe-colors"></a>*고려 사항:* TV에 적합한 색 사용 
+### <a name="consider-use-tv-safe-colors"></a>*고려 사항:* TV에 적합한 색 사용 
 TV는 컴퓨터 모니터처럼 극단적인 색 농도를 처리하지 못합니다. 사용자에게 이상한 밴드 효과 또는 흐린 이미지가 표시되지 않도록 앱에 고농도 색을 사용하지 마세요. 또한 TV 간에 차이가 있어 *사용 중*인 TV에서 보이는 색과 사용자에게 표시되는 색이 다를 수 있다는 점을 명심해야 합니다. 모든 사용자에게 앱이 올바르게 표시되도록 하는 방법은 [TV 색](../input-and-devices/designing-for-tv.md#colors)을 참조하세요.
 
 ### <a name="remember-you-can-disable-scaling"></a>*유의 사항:* 배율을 사용하지 않도록 설정할 수 있음
 UWP 앱에서는 컨트롤과 글꼴 등의 UI 요소가 모든 디바이스에서 올바르게 표시되도록 자동으로 배율이 조정됩니다. XAML을 사용하는 앱은 200%, HTML을 사용하는 앱은 150%로 배율이 조정됩니다. Xbox에서의 앱 모양을 더 자세히 제어하려면 기본 배율 요소를 사용하지 말고 HDTV의 실제 픽셀 치수(1920x1080)를 사용합니다. Xbox에 가장 적합하도록 앱을 조정하는 방법은 [크기 조정을 끄는 방법](disable-scaling.md) 및 [유효 픽셀 및 크기 조정](../layout/design-and-ui-intro.md#effective-pixels-and-scaling)을 참조하세요.
+
+
+UWP 앱에 적용된 이러한 사례를 간략하게 보려면 이 동영상을 확인하세요.
+</br>
+</br>
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Tailoring-your-UWP-app-for-Xbox/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
 
 ## <a name="channel-9"></a>Channel 9
 [Channel 9](https://channel9.msdn.com/)에 대한 다음 문서에서도 Xbox에서 멋진 앱을 빌드하는 방법에 대한 유용한 정보를 제공합니다.

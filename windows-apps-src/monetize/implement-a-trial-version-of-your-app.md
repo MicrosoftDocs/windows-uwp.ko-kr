@@ -3,24 +3,26 @@ author: mcleanbyron
 ms.assetid: 571697B7-6064-4C50-9A68-1374F2C3F931
 description: "Windows.Services.Store 네임스페이스를 사용하여 앱의 평가판을 구현하는 방법을 알아봅니다."
 title: "앱의 평가판 구현"
-keywords: "windows 10, uwp, 평가판, 앱에서 바로 구매, IAP, Windows.Services.Store"
+keywords: "windows 10, uwp, 평가판, 앱 내 구매, IAP, Windows.Services.Store"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 7cc8ae05bdf496b9d3a9973f8ebd09a7d3f0210a
-ms.sourcegitcommit: d053f28b127e39bf2aee616aa52bb5612194dc53
-translationtype: HT
+ms.openlocfilehash: 2419c78e74a69d986ae23e70ced86683a7543cb4
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>앱의 평가판 구현
 
 평가 기간에 고객이 앱을 무료로 사용할 수 있도록 [Windows 개발자 센터 대시보드에서 무료 평가판](../publish/set-app-pricing-and-availability.md#free-trial)으로 앱을 구성하면 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
-Windows10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 멤버를 사용하여 사용자에게 앱의 평가판 라이선스가 있는지 확인하고 앱이 실행되는 동안 라이선스 상태가 변경되면 알림을 받을 수 있습니다.
+이 문서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 멤버를 사용하여 사용자에게 앱의 평가판 라이선스가 있는지 확인하고 앱이 실행되는 동안 라이선스 상태가 변경되면 알림을 받는 방법을 설명합니다. Windows 10 버전 1607 이상을 대상으로 하는 앱에서 네임스페이스를 사용할 수 있습니다. 
 
 > [!NOTE]
-> 이 문서는 Windows10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
+> 이 문서는 Windows10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [이 문서](exclude-or-limit-features-in-a-trial-version-of-your-app.md)를 참조하세요.
 
 ## <a name="guidelines-for-implementing-a-trial-version"></a>평가판 구현 지침
 
@@ -61,7 +63,7 @@ Windows10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Sto
 
 이 예제의 필수 조건은 다음과 같습니다.
 * Windows10 버전 1607 이상을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* 시간 제한이 없는 [무료 평가판](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)으로 구성된 Windows 개발자 센터 대시보드에서 앱을 만들었으며, 이 앱은 스토어에서 게시되고 사용할 수 있습니다. 고객에게 릴리스하려는 앱일 수도 있고, 테스트용으로만 사용 중인 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는 기본 앱일 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 시간 제한이 없는 [무료 평가판](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)으로 구성된 Windows 개발자 센터 대시보드에서 앱을 만들었으며, 이 앱은 스토어에서 게시되고 사용할 수 있습니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
 
 이 예제의 코드에서는 다음과 같이 가정합니다.
 * 코드는 ```workingProgressRing```이라는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx)과 ```textBlock```이라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 포함하는 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.

@@ -6,14 +6,16 @@ ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: e0fccee6ede019b6bb8d8792956d2dca791bf63b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8907b57bce9c39c1c508b97536485a08e8e1bf83
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="tiles-for-uwp-apps"></a>UWP 앱의 타일
 
@@ -26,6 +28,8 @@ translationtype: HT
 
 Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고를 표시하는 간단한 기본 타일이 만들어집니다.
 
+타일을 편집하려면 주 UWP 프로젝트에서 **Package.appxmanifest** 파일을 두 번 클릭하여 디자이너를 엽니다(또는 해당 파일을 마우스 오른쪽 단추로 클릭하고 코드 보기 선택).
+
 ```XML
   <Applications>
     <Application Id="App"
@@ -33,8 +37,8 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
       EntryPoint="ExampleApp.App">
       <uap:VisualElements
         DisplayName="ExampleApp"
-        Square150x150Logo="Assets\Logo.png"
-        Square44x44Logo="Assets\SmallLogo.png"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
         Description="ExampleApp"
         BackgroundColor="#464646">
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
@@ -49,15 +53,15 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 -   ShortName: 표시 이름을 타일에 맞추기 위해서는 공간이 제한되어 있으므로 앱 이름이 잘리지 않도록 ShortName도 지정하는 것이 좋습니다.
 -   로고 이미지:
 
-    이러한 이미지를 고유한 이미지로 바꿔야 합니다. 다양한 표시 배율로 이미지를 제공할 수도 있지만 이미지를 모두 제공할 필요는 없습니다. 앱이 다양한 디바이스에서 올바르게 표시되도록 하려면 각 이미지의 100%, 200% 및 400% 배율 버전을 제공하는 것이 좋습니다.
+    이러한 이미지를 고유한 이미지로 바꿔야 합니다. 다양한 표시 배율로 이미지를 제공할 수도 있지만 이미지를 모두 제공할 필요는 없습니다. 앱이 다양한 디바이스에서 올바르게 표시되도록 하려면 각 이미지의 100%, 200% 및 400% 배율 버전을 제공하는 것이 좋습니다. 이러한 자산 생성에 대해 자세히 알아보려면 [타일 및 아이콘 자산](tiles-and-notifications-app-assets.md)을 참조하세요.
 
-    크기 조정된 이미지는 다음 명명 규칙(테스트)을 따릅니다.
+    크기 조정된 이미지는 다음 명명 규칙을 따릅니다.
     
     *&lt;이미지 이름&gt;*.scale-*&lt;배율 인수&gt;*.*&lt;이미지 파일 확장명&gt;* 
 
-    예: SmallLogo.scale-100.png
+    예: SplashScreen.scale-100.png
 
-    이미지를 참조할 때 *&lt;image name&gt;*.*&lt;image file extension&gt;*(이 예제의 경우 SmallLogo.png)으로 참조합니다. 제공한 이미지 중에서 디바이스에 적절한 크기의 이미지가 자동으로 선택됩니다.
+    이미지를 참조할 때 *&lt;image name&gt;*.*&lt;image file extension&gt;*(이 예제의 경우 "SplashScreen.png")으로 참조합니다. 제공한 이미지 중에서 디바이스에 적절한 크기의 이미지가 자동으로 선택됩니다.
 
 -   사용자가 앱 타일을 해당 크기로 조정할 수 있도록 넓고 큰 타일 크기에 대한 로고를 제공하는 것이 좋습니다. 이러한 추가 이미지를 제공하려면 `DefaultTile` 요소를 만들고 `Wide310x150Logo` 및 `Square310x310Logo` 특성을 사용하여 추가 이미지를 지정합니다.
 ```    XML
@@ -67,13 +71,13 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
           EntryPoint="ExampleApp.App">
           <uap:VisualElements
             DisplayName="ExampleApp"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
+            Square150x150Logo="Assets\Square150x150Logo.png"
+            Square44x44Logo="Assets\Square44x44Logo.png"
             Description="ExampleApp"
             BackgroundColor="#464646">
             <uap:DefaultTile
-              Wide310x150Logo="Assets\WideLogo.png"
-              Square310x310Logo="Assets\LargeLogo.png">
+              Wide310x150Logo="Assets\Wide310x150Logo.png"
+              Square310x310Logo="Assets\Square310x310Logo.png">
             </uap:DefaultTile>
             <uap:SplashScreen Image="Assets\SplashScreen.png" />
           </uap:VisualElements>
@@ -84,25 +88,6 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 ## <a name="use-notifications-to-customize-your-tile"></a>알림을 사용하여 타일 사용자 지정
 
 
-앱이 설치된 후 알림을 사용하여 타일을 사용자 지정할 수 있습니다. 앱이 처음 실행되거나 푸시 알림과 같은 일부 이벤트에 응답할 때 이렇게 할 수 있습니다.
+앱이 설치된 후 알림을 사용하여 타일을 사용자 지정할 수 있습니다. 앱이 처음으로 실행될 때 또는 푸시 알림과 같은 이벤트에 응답할 때 이렇게 할 수 있습니다.
 
-1.  타일을 설명하는 XML 페이로드([**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173) 형식)를 만듭니다.
-
-    -   Windows 10에는 새로운 적응형 타일 스키마가 도입되었습니다. 자세한 내용은 [적응형 타일](tiles-and-notifications-create-adaptive-tiles.md)을 참조하세요. 이 스키마에 대한 자세한 내용은 [적응형 타일 스키마](tiles-and-notifications-adaptive-tiles-schema.md)를 참조하세요. 
-
-    -   Windows 8.1 타일 템플릿을 사용하여 타일을 정의할 수 있습니다. 자세한 내용은 [타일 및 배지 만들기(Windows 8.1)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260)를 참조하세요.
-
-2.  타일 알림 개체를 만들어 만든 [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173)로 전달합니다. 여러 유형의 알림 개체가 있습니다.
-    -   [**Windows.UI.NotificationsTileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) 개체는 타일을 즉시 업데이트합니다.
-    -   [**Windows.UI.Notifications.ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) 개체는 타일을 나중에 업데이트합니다.
-
-3.  [**Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication**](https://msdn.microsoft.com/library/windows/apps/br208623)을 사용하여 [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628) 개체를 만듭니다.
-4.  [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632) 메서드를 호출하여 2단계에서 만든 타일 알림 개체로 전달합니다.
-
- 
-
- 
-
-
-
-
+타일 알림을 전송하는 방법을 알아보려면 [로컬 타일 알림 보내기](tiles-and-notifications-sending-a-local-tile-notification.md)를 참조하세요.

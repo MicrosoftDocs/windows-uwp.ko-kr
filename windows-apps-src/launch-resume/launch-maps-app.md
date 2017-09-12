@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: cfaa7c96a3ec8bf50f19ee699ff74b037500a838
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3d36708b5b11a089ffa126b760f0990f2da39e38
+ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="launch-the-windows-maps-app"></a>Windows 지도 앱 실행
 
@@ -19,7 +21,7 @@ translationtype: HT
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. 이 항목에서는 **bingmaps:, ms-drive-to:, ms-walk-to:** 및 **ms-settings:** URI(Uniform Resource Identifier) 체계에 대해 설명합니다. 이러한 URI 체계로 Windows 지도 앱을 실행하여 특정 지도, 길 찾기 및 검색 결과를 표시하거나 설정 앱에서 Windows 지도 오프라인 지도를 다운로드할 수 있습니다.
+앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. 이 항목에서는 **bingmaps:, *ms-drive-to:, ms-walk-to:** 및 **ms-settings:** URI(Uniform Resource Identifier) 체계에 대해 설명합니다. 이러한 URI 체계로 Windows 지도 앱을 실행하여 특정 지도, 길 찾기 및 검색 결과를 표시하거나 설정 앱에서 Windows 지도 오프라인 지도를 다운로드할 수 있습니다.
 
 **팁** 앱에서 Windows 지도 앱을 실행하는 방법을 알아보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 
@@ -68,37 +70,37 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 ## <a name="display-known-locations"></a>알려진 위치 표시
 
-지도의 중심점 및 확대/축소 수준을 제어할 수 있는 여러 방법이 있습니다. *cp*(중심점) 및 *lvl*(확대/축소 수준)을(를) 사용하는 매개 변수는 가장 간단한 방법이며 예측 가능한 결과를 만들어냅니다. *bb* 매개 변수 사용(위도 및 경도 값으로 둘러싸인 영역 지정)은 예측하기가 더 어렵습니다. 이는 매개 변수가 화면 해상도를 고려하고 제공되는 좌표를 바탕으로 중심점 및 확대/축소 수준을 결정하기 때문입니다. 세 개의 모든 매개 변수(*bb*, *cp* 및 *lvl*)가 존재하는 경우 *bb* 매개 변수가 무시됩니다.
+지도의 어느 부분을 표시할 것인지 제어하는 여러 가지 옵션이 있습니다. *cp*(중심점) 매개 변수를 *rad*(반경) 또는 *lvl*(확대/축소 수준) 매개 변수와 함께 사용하여 위치를 표시하고 얼마나 가까이 확대할 것인지 선택할 수 있습니다. *cp* 매개 변수를 사용할 때 *hdg*(방향) 및 *pit*(피치)를 지정하여 어느 방향을 바라볼 것인지 제어할 수 있습니다. 또 다른 방법은 *bb*(경계 상자) 매개 변수를 사용하여 표시하려는 영역의 최대 동서남북 좌표를 제공하는 것입니다.
 
-뷰 유형을 제어하려면 *ss*(Streetside) 및 *sty*(style) 매개 변수를 사용합니다. *ss* 매개 변수는 지도를 Streetside 뷰로 표시합니다. *sty* 매개 변수는 도로, 위성 및 3D 뷰 간에 전환할 수 있도록 합니다. 3D 스타일을 사용하는 경우 *hdg*, *pit* 및 *rad* 매개 변수를 사용하여 3D 뷰를 지정할 수 있습니다. *hdg*는 뷰의 방향을 지정하고, *pit*는 뷰의 피치를 지정하며, *rad*는 뷰에 표시할 중심점에서의 거리를 지정합니다. 이러한 매개 변수 및 기타 매개 변수에 대한 자세한 내용은 [bingmaps: 매개 변수 참조](#bingmaps-param-reference)를 참조하세요.
+뷰 유형을 제어하려면 *sty*(스타일) 및 *ss*(Streetside) 매개 변수를 사용합니다. *sty* 매개 변수를 사용하여 도로 뷰와 위성 뷰 간에 전환할 수 있습니다. *ss* 매개 변수는 지도를 Streetside 뷰로 표시합니다. 이러한 매개 변수 및 기타 매개 변수에 대한 자세한 내용은 [bingmaps: 매개 변수 참조](#bingmaps-param-reference)를 참조하세요.
 
-| 샘플 URI                                                                 | 결과                                                                                                                                                                                                   |
-|----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?                                                                 | 지도 앱을 엽니다.                                                                                                                                                                                       |
-| bingmaps:?cp=40.726966~-74.006076                                          | 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                                                               |
-| bingmaps:?cp=40.726966~-74.006076&amp;lvl=10                                   | 확대/축소 수준을 10으로 하여 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                                       |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | 화면의 크기를 경계 상자로 하여 뉴욕시의 지도를 표시합니다.                                                                                                                          |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&amp;cp=47~-122                        | 경계 상자 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다. **cp** 인수에 지정된 시애틀의 중심점이 무시됩니다.                                      |
-| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&amp;cp=47~-122&amp;lvl=8                  | **bb** 인수에 지정된 영역인 뉴욕의 지도를 표시합니다. **bb**를 지정한 경우 **cp** 및 **lvl**는 무시되므로 시애틀을 지정하는 **cp** 인수는 무시됩니다. |
-| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&amp;lvl=16 | Caesar's Palace(라스베이거스)라는 지점이 포함된 지도를 표시하고 확대/축소 수준을 16으로 설정합니다.                                                                                                            |
-| bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | Some\_Business(라스베가스)라는 지점이 포함된 지도를 표시합니다.                                                                                                                                          |
-| bingmaps:?cp=40.726966~-74.006076&amp;trfc=1&amp;sty=a                             | 교통량을 켜고 항공 지도 스타일로 뉴욕시 지도를 표시합니다.                                                                                                                                               |
-| bingmaps:?cp=47.6204~-122.3491&amp;sty=3d                                      | Space Needle의 3D 뷰를 표시합니다.                                                                                                                                                                   |
-| bingmaps:?cp=47.6204~-122.3491&amp;sty=3d&amp;rad=200&amp;pit=75&amp;hdg=165               | 200m 반경, 75도 피치 및 165도 방향으로 Space Needle의 3D 뷰를 표시합니다.                                                                                        |
-| bingmaps:?cp=47.6204~-122.3491&amp;ss=1                                        | Space Needle의 Streetside 뷰를 표시합니다.                                                                                                                                                           |
 
- 
+| 샘플 URI                                                                 | 결과                                                                                                                                                                                        |
+|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| bingmaps:?                                                                 | 지도 앱을 엽니다.                                                                                                                                                                            |
+| bingmaps:?cp=40.726966~-74.006076                                          | 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                                                    |
+| bingmaps:?cp=40.726966~-74.006076&amp;lvl=10                                   | 확대/축소 수준을 10으로 하여 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                            |
+| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | **bb** 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다.                                                                                                           |
+| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&cp=47~-122                        | 경계 상자 인수에 지정된 영역인 뉴욕시의 지도를 표시합니다. *bb*가 지정되었기 때문에 **cp** 인수에 지정된 시애틀의 중심점이 무시됩니다. |
+| bingmaps:?collection=point.36.116584\_-115.176753\_Caesars%20Palace&lvl=16 | Caesar's Palace(라스베이거스)라는 지점이 포함된 지도를 표시하고 확대/축소 수준을 16으로 설정합니다.                                                                                                 |
+| bingmaps:?collection=point.40.726966\_-74.006076\_Some%255FBusiness        | Some\_Business(라스베가스)라는 지점이 포함된 지도를 표시합니다.                                                                                                                               |
+| bingmaps:?cp=40.726966~-74.006076&trfc=1&sty=a                             | 교통량을 켜고 항공 지도 스타일로 뉴욕시 지도를 표시합니다.                                                                                                                          |
+| bingmaps:?cp=47.6204~-122.3491&sty=3d                                      | Space Needle의 3D 뷰를 표시합니다.                                                                                                                                                        |
+| bingmaps:?cp=47.6204~-122.3491&amp;sty=3d&amp;rad=200&amp;pit=75&amp;hdg=165               | 200m 반경, 75도 피치 및 165도 방향으로 Space Needle의 3D 뷰를 표시합니다.                                                                             |
+| bingmaps:?cp=47.6204~-122.3491&ss=1                                        | Space Needle의 Streetside 뷰를 표시합니다.                                                                                                                                                |
+
+
 ## <a name="display-search-results"></a>검색 결과 표시
 
-*q* 매개 변수를 사용하여 비즈니스 검색을 수행할 때 가능한 조건을 특정하며 *cp* 또는 *where* 매개 변수와 함께 사용하여 위치를 특정하는 것이 좋습니다. 사용자가 지도 앱의 위치 사용 권한에 동의하지 않았고 비즈니스 검색에 대한 위치를 지정하지 않는 경우, 검색은 국가 수준에서 수행되며 의미 있는 결과를 반환하지 않습니다. 검색 결과는 가장 적합한 지도 보기로 표시되므로 *lvl*(확대/축소 수준)을 설정해야 할 필요가 있지 않은 한 지도 앱에서 결정할 수 있도록 허용하는 것이 좋습니다. 이러한 매개 변수 및 기타 매개 변수에 대한 자세한 내용은 [bingmaps: 매개 변수 참조](#bingmaps-param-reference)를 참조하세요.
+*q* 매개 변수를 사용하여 장소를 검색할 때에는 조건을 최대한 구체적으로 지정하고 *cp*, *bb* 또는 *where* 매개 변수를 사용하여 검색 위치를 지정하는 것이 좋습니다. 검색 위치를 지정하지 않아서 사용자의 현재 위치를 사용할 수 없으면 검색 결과에 의미 있는 결과가 반환되지 않을 수 있습니다. 검색 결과는 가장 적합한 지도 뷰에 표시됩니다. 이러한 매개 변수 및 기타 매개 변수에 대한 자세한 내용은 [bingmaps: 매개 변수 참조](#bingmaps-param-reference)를 참조하세요.
 
-| 샘플 URI                                                    | 결과                                                                                                                                         |
-|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:?where=1600%20Pennsylvania%20Ave,%20Washington,%20DC | 지도를 표시하고 워싱턴 D.C.의 백악관 주소를 검색합니다.                                                              |
-| bingmaps:?cp=40.726966~-74.006076&amp;lvl=10&amp;where=New%20York     | 지정된 중심점 부근에서 뉴욕을 검색하고 지도에 결과를 표시하며 확대/축소 수준을 10으로 설정합니다.                            |
-| bingmaps:?lvl=10&amp;where=New%20York                             | 뉴욕을 검색하여 확대/축소 수준 10에서 결과를 보여 줍니다.                                                                                    |
-| bingmaps:?cp=40.726966~-74.006076&amp;lvl=14.5&amp;q=pizza            | 지정된 중심점 부근(즉, 뉴욕시)에 있는 피자 배달점을 검색하고 지도에 결과를 표시하며 확대/축소 수준을 14.5로 설정합니다. |
-| bingmaps:?q=coffee&amp;where=Seattle                              | 시애틀에서 커피를 검색합니다.                                                                                                                 |
+
+| 샘플 URI                                                    | 결과                                                                            |
+|---------------------------------------------------------------|------------------------------------------------------------------------------------|
+| bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC     | 지도를 표시하고 워싱턴 D.C.의 백악관 주소를 검색합니다. |
+| bingmaps:?q=coffee&where=Seattle                              | 시애틀에서 커피를 검색합니다.                                                    |
+| bingmaps:?cp=40.726966~-74.006076&where=New%20York            | 지정된 중심점 근처의 뉴욕을 검색합니다.                             |
+| bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | 지정된 경계 상자(즉, 뉴욕시) 내부의 피자를 검색합니다.      |
 
  
 ## <a name="display-multiple-points"></a>여러 지점 표시
@@ -119,7 +121,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 ## <a name="display-directions-and-traffic"></a>길 찾기 및 교통량 표시
 
 
-*rtp* 매개 변수를 사용하여 두 지점 간의 길 찾기를 표시할 수 있습니다. 이러한 지점은 주소 또는 위도 및 경도 좌표일 수 있습니다. *trfc* 매개 변수를 사용하여 교통 정보를 표시할 수 있습니다. 길 찾기 유형(운전, 도보 또는 대중교통)을 지정하려면 *mode* 매개 변수를 사용합니다. *mode*를 지정하지 않으면 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다. 이러한 매개 변수 및 기타 매개 변수에 대한 자세한 내용은 [bingmaps: 매개 변수 참조](#bingmaps-param-reference)를 참조하세요.
+*rtp* 매개 변수를 사용하여 두 지점 간의 길 찾기를 표시할 수 있습니다. 이러한 지점은 주소일 수도 있고 위도 및 경도 좌표일 수도 있습니다. *trfc* 매개 변수를 사용하여 교통 정보를 표시할 수 있습니다. 길 찾기 유형(운전, 도보 또는 대중교통)을 지정하려면 *mode* 매개 변수를 사용합니다. *mode*를 지정하지 않으면 사용자의 기본 교통 설정 모드를 사용하여 길 찾기가 제공됩니다. 이러한 매개 변수 및 기타 매개 변수에 대한 자세한 내용은 [bingmaps: 매개 변수 참조](#bingmaps-param-reference)를 참조하세요.
 
 ![길 찾기의 예](images/windowsmapgcdirections.png)
 
@@ -292,7 +294,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>ss=1</p></td>
 <td align="left"><p><code>ss=1</code>이면 거리 수준 이미지가 표시됩니다. **ss** 매개 변수를 생략하면 <code>ss=0</code>과 동일한 결과가 생성됩니다. **cp** 매개 변수와 함께 사용하여 거리 수준 보기의 위치를 지정합니다.</p>
 <div class="alert">
-> **참고**  일부 지역에서는 거리 수준 이미지를 사용할 수 없습니다.
+**참고**  일부 지역에서는 거리 수준 이미지를 사용할 수 없습니다.
 </div>
 <div>
  
@@ -306,7 +308,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>trfc=1</p></td>
 <td align="left"><p>지도에 교통 정보가 포함되는지 여부를 지정합니다. trfc 매개 변수를 생략하면 <code>trfc=0</code>과 동일한 결과가 생성됩니다.</p>
 <div class="alert">
-> **참고**  교통량 데이터는 일부 지역에서는 사용할 수 없습니다.
+**참고**  교통량 데이터는 일부 지역에서는 사용할 수 없습니다.
 </div>
 <div>
  
@@ -375,14 +377,12 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>이름과 여러 지점을 물결표(**~**)로 구분합니다.</p>
 <p>지정한 항목에 물결표가 있는 경우 물결표가 <code>%7E</code>로 인코딩되어 있는지 확인합니다. 중심점 및 확대/축소 수준 매개 변수가 함께 제공되지 않는 경우, 컬렉션에서는 최상의 지도 보기가 제공됩니다.</p>
 
-<p>**중요** 지정한 항목에 밑줄이 있는 경우, 밑줄이 %255F로 이중 인코드되어 있는지 확인합니다.</p>
-
-<p>지정한 항목에 밑줄이 있는 경우, 밑줄이 %255F로 이중 인코딩되어 있는지 확인합니다.</p></td>
+<p>**중요** 지정한 항목에 밑줄이 있는 경우, 밑줄이 %255F로 이중 인코드되어 있는지 확인합니다.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+  
 <span id="ms-drive-to-param-reference"/>
 ## ms-drive-to: 매개 변수 참조
 
@@ -407,7 +407,6 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 턴바이턴 도보 길 찾기 요청을 실행하는 URI는 인코드할 필요가 없으며 다음과 같은 형식을 사용합니다.
 
 > **참고**  이 URI 체계에서는 시작점을 지정하지 않습니다. 항상 현재 위치가 시작점으로 간주됩니다. 현재 위치와 다른 시작점을 지정해야 하는 경우 [길 찾기 및 교통량 표시](#display-directions-and-traffic)를 참조하세요.
-
  
 
 | 매개 변수 | 정의 | 예제 | 세부 정보 |

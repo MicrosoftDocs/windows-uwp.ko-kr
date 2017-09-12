@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 게임 패드, 진동"
-ms.openlocfilehash: b92ddbaadd7fd09b252d5c8842ed89daf53a6982
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d09bfcd3dae004f07e07401f4e6ba65ac5027b32
+ms.sourcegitcommit: ae93435e1f9c010a054f55ed7d6bd2f268223957
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 
@@ -188,7 +190,7 @@ auto oppositeSquared = leftStickY * leftStickY;
 auto adjacentSquared = leftStickX * leftStickX;
 
 // accept and process input if true; otherwise, reject and ignore it.
-if((oppositeSquared + adjacentSquared) < deadzoneSquared)
+if((oppositeSquared + adjacentSquared) > deadzoneSquared)
 {
     // input accepted, process it
 }

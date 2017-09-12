@@ -1,17 +1,19 @@
 ---
-author: rmpablos
+author: laurenhughes
 title: "UWP 앱에 대한 자동화된 빌드 설정"
-description: "자동화된 빌드를 구성하여 패키지를 테스트용으로 로드하거나 저장하는 방법입니다."
-ms.author: wdg-dev-content
-ms.date: 02/15/2017
+description: "자동화된 빌드를 구성하여 사이드로드/스토어 패키지를 생성하는 방법"
+ms.author: lahugh
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
-ms.openlocfilehash: f4c68af97e5d5b11a0c5320c9fa6040b9ab94e5a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c8c1765e2983484ddc57e47a995867aa3b401ad4
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -39,7 +41,7 @@ VSTS(Visual Studio Team Services)를 사용하여 UWP 프로젝트에 대해 자
 
 자세한 내용은 [Deploy an agent on Windows](https://www.visualstudio.com/docs/build/admin/agents/v2-windows)(Windows에 에이전트 배포)를 참조하세요. 
 
-UWP 단위 테스트를 실행하려면 다음을 수행해야 합니다. •    앱을 배포하고 시작합니다. •    VSTS 에이전트를 대화형 모드로 실행합니다. •    에이전트를 다시 부팅 한 후 자동 로그온되도록 구성합니다.
+UWP 단위 테스트를 실행하려면 다음을 수행해야 합니다. •    앱을 배포하고 시작합니다. •    VSTS 에이전트를 대화형 모드로 실행합니다. •   에이전트를 다시 부팅한 후 자동 로그온되도록 구성합니다.
 
 이제 자동화된 빌드를 설정하는 방법에 대해 알아보겠습니다.
 
@@ -104,11 +106,11 @@ $() 구문을 사용하여 정의된 매개 변수는 해당 빌드 정의에 �
 미리 정의된 변수를 모두 보려면 [빌드 변수 사용](https://www.visualstudio.com/docs/build/define/variables)을 참조하세요.
 
 #### <a name="configure-the-publish-artifact-build-task"></a>아티팩트 게시 빌드 작업 구성 
-이 작업에서는 생성된 아티팩트를 VSTS에 저장합니다. 저장된 아티팩트는 빌드 결과 페이지의 아티팩트 탭에서 볼 수 있습니다. VSTS에서는 이전에 정의한 `$Build.ArtifactStagingDirectory)\AppxPackages` 폴더를 사용합니다.
+이 작업에서는 생성된 아티팩트를 VSTS에 저장합니다. 저장된 아티팩트는 빌드 결과 페이지의 아티팩트 탭에서 볼 수 있습니다. VSTS에서는 이전에 정의한 `$(Build.ArtifactStagingDirectory)\AppxPackages` 폴더를 사용합니다.
 
 ![아티팩트](images/building-screen6.png)
 
-`UapAppxPackageBuildMode` 속성을 `StoreUpload`로 설정했으므로 아티팩트 폴더에는 스토어에 업로드한 패키지(appxupload)와 테스트용 로드를 사용하도록 설정한 패키지(appxbundle)가 포함됩니다.
+`UapAppxPackageBuildMode` 속성을 `StoreUpload`로 설정했기 때문에, 아티팩트 폴더에는 스토어 제출이 권장되는 패키지(.appxupload)가 포함되어 있습니다. 또한 스토어에 일반 앱 패키지(.appx)나 앱 번들(.appxbundle)도 제출할 수 있습니다. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
 
 
 >참고: 기본적으로 VSTS 에이전트는 최신 appx 생성 패키지를 유지 관리합니다. 현재 빌드의 아티팩트만 저장하려면 이진 디렉터리가 정리되도록 빌드를 구성하세요. 이렇게 하려면 이름이 `Build.Clean`인 변수를 추가한 다음 변수 값을 `all`로 설정합니다. 자세한 내용은 [Specify the repository](https://www.visualstudio.com/docs/build/define/repository#how-can-i-clean-the-repository-in-a-different-way)(리포지토리 지정)를 참조하세요.
@@ -120,7 +122,7 @@ $() 구문을 사용하여 정의된 매개 변수는 해당 빌드 정의에 �
 |-----------------|------------|-------------------------|---------------|
 |연속 통합|빌드 로그, 테스트 결과|커밋할 때마다|이 빌드 형식은 빠르며 하루에도 여러 번 실행됩니다.|
 |테스트용 로드를 위한 연속 배포 빌드|배포 패키지|매일 |이 빌드 형식에는 단위 테스트가 포함될 수 있지만 약간 더 오래 걸립니다. 수동 테스트가 가능하며, HockeyApp 등 다른 도구와 통합할 수 있습니다.|
-|저장소에 패키지를 제출하는 연속 배포 빌드|패키지 게시|주문형|이 빌드 형식은 저장소에 게시할 수 있는 패키지를 만듭니다.|
+|스토어에 패키지를 제출하는 연속 배포 빌드|패키지 게시|주문형|이 빌드 형식은 스토어에 게시할 수 있는 패키지를 생성합니다.|
 
 각각 구성하는 방법에 대해 살펴보겠습니다.
 
@@ -164,7 +166,7 @@ $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp.UnitTest\x86\MyUWPApp.Un
 `"%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe"`
 
 #### <a name="access-test-results"></a>테스트 결과 액세스
-VSTS의 빌드 요약 페이지에서는 단위 테스트를 실행하는 각 빌드에 대한 테스트 결과를 보여줍니다.  여기에서 테스트 결과 페이지를 열어 테스트 결과에 대한 자세한 정보를 볼 수 있습니다. 
+VSTS의 빌드 요약 페이지에서는 단위 테스트를 실행하는 각 빌드에 대한 테스트 결과를 보여 줍니다.  여기에서 테스트 결과 페이지를 열어 테스트 결과에 대한 자세한 정보를 볼 수 있습니다. 
 
 ![테스트 결과](images/building-screen9.png)
 
@@ -172,10 +174,10 @@ VSTS의 빌드 요약 페이지에서는 단위 테스트를 실행하는 각 �
 CI 빌드 체크 인을 체크 인의 품질을 모니터링하는 데에만 사용하면 빌드 시간을 줄일 수 있습니다.
 
 #### <a name="to-improve-the-speed-of-a-ci-build"></a>CI 빌드 속도를 개선하려면
-1.    플랫폼 하나에 대해서만 빌드합니다.
-2.    x86만 사용하여 BuildPlatform 변수를 편집합니다. ![구성 ci](images/building-screen10.png) 
-3.    빌드 단계에서 MSBuild 인수 속성에 /p:AppxBundle=Never를 추가한 다음 플랫폼 속성을 설정합니다. ![플랫폼 구성](images/building-screen11.png)
-4.    단위 테스트 프로젝트에서.NET 네이티브를 사용하지 않도록 설정합니다. 
+1.  플랫폼 하나에 대해서만 빌드합니다.
+2.  x86만 사용하여 BuildPlatform 변수를 편집합니다. ![구성 ci](images/building-screen10.png) 
+3.  빌드 단계에서 MSBuild 인수 속성에 /p:AppxBundle=Never를 추가한 다음 플랫폼 속성을 설정합니다. ![플랫폼 구성](images/building-screen11.png)
+4.  단위 테스트 프로젝트에서.NET 네이티브를 사용하지 않도록 설정합니다. 
 
 이렇게 하려면 프로젝트 파일을 열고 프로젝트 속성에서 `UseDotNetNativeToolchain` 속성을 `false`로 설정합니다.
 
@@ -258,13 +260,13 @@ $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUW
 
 테스트용으로 로드된 패키지를 설치하고 실행하는 작업은 이 가이드에서 [나중](#sideloading-best-practices)에 살펴보겠습니다. 
 
-## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>저장소에 패키지를 제출하는 연속 배포 빌드 설정 
+## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>스토어에 패키지를 제출하는 연속 배포 빌드 설정 
 
-저장소 제출 패키지를 생성하려면 Visual Studio에서 스토어 연결 마법사를 사용하여 스토어에 앱을 연결합니다.
+스토어 제출 패키지를 생성하려면 Visual Studio에서 스토어 연결 마법사를 사용하여 스토어에 앱을 연결합니다.
 
 ![스토어에 연결](images/building-screen16.png) 
 
->참고: 이 마법사에서는 스토어 연결 정보를 포함하는 Package.StoreAssociation.xml이라는 파일이 생성됩니다. GitHub와 같은 공용 리포지토리에 소스 코드를 저장하는 경우 이 파일에는 해당 계정에 대한 예약된 앱 이름이 모두 포함됩니다. 이 파일을 공개하기 전에 제외하거나 삭제할 수 있습니다.
+>참고: 이 마법사에서는 스토어 연결 정보를 포함하는 Package.StoreAssociation.xml 파일이 생성됩니다. GitHub와 같은 공용 리포지토리에 소스 코드를 저장하는 경우 이 파일에는 해당 계정에 대한 예약된 앱 이름이 모두 포함됩니다. 이 파일을 공개하기 전에 제외하거나 삭제할 수 있습니다.
 
 앱을 게시하는 데 사용된 개발자 센터 계정에 액세스할 수 없으면 [타사 앱을 빌드 중인 경우 스토어 앱을 패키징하는 방법은 무엇인가요?](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97) 문서의 지침에 따라 수행하면 됩니다. 
 
@@ -274,16 +276,16 @@ $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUW
 /p:UapAppxPackageBuildMode=StoreUpload 
 ```
 
-이렇게 하면 스토어에 전송할 수 있는 appxupload 파일이 생성됩니다.
+이렇게 하면 스토어에 전송할 수 있는 .appxupload 파일이 생성됩니다.
 
 
-#### <a name="configure-automatic-store-submission"></a>자동 저장소 제출 구성
+#### <a name="configure-automatic-store-submission"></a>자동 스토어 제출 구성
 
-저장소 API와 통합하는 Windows 스토어용 Visual Studio Team Services 확장을 사용하여 저장소에 appxupload 패키지를 보냅니다.
+스토어 API와 통합하는 Windows 스토어용 Visual Studio Team Services 확장을 사용하여 스토어에 appxupload 패키지를 보냅니다.
 
 Azure AD(Active Directory)를 사용하여 개발자 센터 계정에 연결한 다음 AD에 요청을 인증할 수 있는 앱을 만들어야 합니다. 작업을 수행하는 확장 페이지의 지침에 따라 수행할 수 있습니다. 
 
-확장을 구성한 후에 빌드 작업을 추가하고 앱 ID와 appxupload 파일의 위치를 사용하여 구성할 수 있습니다.
+확장을 구성한 후에 빌드 작업을 추가하고 앱 ID와 .appxupload 파일의 위치를 사용하여 구성할 수 있습니다.
 
 ![개발자 센터 구성](images/building-screen17.png) 
 
@@ -301,7 +303,7 @@ AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 <span id="sideloading-best-practices"/>
 ### <a name="best-practices-for-sideloading-apps"></a>앱의 테스트용 로드에 대한 모범 사례
 
-스토어에 게시하지 않고 앱을 배포하려는 경우 디바이스에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 디바이스에 앱을 직접 테스트용으로 로드할 수 있습니다. 
+스토어에 게시하지 않고 앱을 배포하려는 경우 장치에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 장치에 앱을 직접 테스트용으로 로드할 수 있습니다. 
 
 앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대해 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가한 다음 appx 파일을 설치하거나 업데이트합니다.
 
@@ -317,7 +319,7 @@ VSTS 또는 HockeyApp 등 웹 사이트에서 appx 패키지를 배포하려는 
 
 <span id="certificates-best-practices"/>
 ### <a name="best-practices-for-signing-certificates"></a>인증서 서명에 대한 모범 사례 
-Visual Studio는 각 프로젝트에 대한 인증서를 생성합니다. 이렇게 하면 유효한 인증서의 조정된 목록을 유지 관리하기가 어렵습니다. 앱을 여러 개 만드는 경우에는 모든 앱에 서명하는 단일 인증서를 만들 수 있습니다. 그런 다음 인증서를 신뢰하는 각 디바이스에 다른 인증서를 설치하지 않고 임의의 앱을 테스트용으로 로드할 수 있게 됩니다. 자세한 내용은 [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)을 참조하세요.
+Visual Studio는 각 프로젝트에 대한 인증서를 생성합니다. 이렇게 하면 유효한 인증서의 조정된 목록을 유지 관리하기가 어렵습니다. 앱을 여러 개 만드는 경우에는 모든 앱에 서명하는 단일 인증서를 만들 수 있습니다. 그런 다음 인증서를 신뢰하는 각 장치에 다른 인증서를 설치하지 않고 임의의 앱을 테스트용으로 로드할 수 있게 됩니다. 자세한 내용은 [패키지 서명 인증서를 만드는 방법](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)을 참조하세요.
 
 
 #### <a name="create-a-signing-certificate"></a>서명 인증서 만들기
@@ -360,4 +362,4 @@ Visual Studio 및 MSBuild는 앱에 서명하는 데 사용하는 인증서를 �
 * [Windows용 .NET 앱 빌드](https://www.visualstudio.com/docs/build/get-started/dot-net) 
 * [UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
 * [Windows 10에서 LOB 앱을 테스트용으로 로드](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)
-* [앱 패키지 서명 인증서를 만드는 방법](https://msdn.microsoft.com/library/windows/desktop/jj835832(v=vs.85).aspx)
+* [패키지 서명용 인증서 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

@@ -2,7 +2,7 @@
 author: GrantMeStrength
 Description: "iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: "Android 및 iOS 개발자용 Windows 개념"
+title: "Android 및 iOS 개발자용 Windows 앱 개념 매핑"
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,11 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
-ms.openlocfilehash: ce32bd7ebaca20827a637c456b2dbe82811817cb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 72bb41939b0676dab7c212770cc9eddaef538c3f
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/28/2017
 ---
-#<a name="windows-concepts-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 개념
+#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
 Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니버설 Windows 플랫폼)로 이동하려는 개발자의 경우 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있는 이 리소스를 참조하세요.
 
@@ -128,13 +130,13 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>피어 탐색.</strong> <br><br>사용자에게 계층적 중요도가 동일한 페이지 간을 이동하는 방법을 제공합니다.</td>
 <td align="left"><strong>탭</strong>, <strong>살짝 밀기 보기</strong> 및 <strong>탐색 창</strong>은 <strong>측면 탐색</strong>을 제공합니다.</td>
 <td align="left"><strong>탭 바 컨트롤러</strong>, <strong>분할 보기 컨트롤러</strong> 및 <strong>페이지 보기 컨트롤러</strong>를 사용하면 동일한 계층의 보기 간을 탐색할 수 있습니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">탭/피벗</a></strong>을 사용하여 콘텐츠 위에 링크/탭의 영구 목록을 표시할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">탐색 창/분할 보기</a></strong>를 사용하면 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">탭/피벗</a></strong>을 사용하여 콘텐츠 위에 링크/탭의 영구 목록을 표시할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">탐색 창/분할 보기</a></strong>를 사용하면 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>계층적 탐색.</strong> <br><br>계층에서 부모와 자식 페이지 간을 탐색합니다.</td>
 <td align="left"><strong>목록</strong>, <strong>눈금 목록</strong>, <strong>단추</strong> 및 기타 컨트롤은 <strong>의도</strong>와 함께 사용하여 다른 <strong>활동</strong>을 로드할 때 <strong>하위 탐색</strong>을 제공합니다.</td>
 <td align="left"><strong>탐색 컨트롤러</strong>를 사용하면 사용자가 계층 구조 수준 간을 탐색할 수 있습니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">허브</a></strong>를 사용하면 하위 페이지로 이동하는 데 선택할 수 있도록 사용자에게 콘텐츠의 미리 보기를 표시합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">마스터/세부 정보</a></strong>를 사용하면 사용자가 해당 세부 정보 섹션 옆에 표시되는 항목 요약 목록에서 선택할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">허브</a></strong>를 사용하면 하위 페이지로 이동하는 데 선택할 수 있도록 사용자에게 콘텐츠의 미리 보기를 표시합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">마스터/세부 정보</a></strong>를 사용하면 사용자가 해당 세부 정보 섹션 옆에 표시되는 항목 요약 목록에서 선택할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://msdn.microsoft.com/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>뒤로 단추 탐색.</strong> <br><br>응용 프로그램을 통해 뒤로 탐색합니다.</td>
@@ -170,7 +172,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>음성.</strong> <br><br>음성 입식 및 추가 음성 기능을 위해 음성을 인식합니다.</td>
 <td align="left">음성 입력은 <strong>Google 음성 검색</strong> 등의 <strong>RecognizerIntent</strong>를 구현하는 앱에서 제공할 수 있습니다. <strong>SpeechRecognizer</strong> 클래스를 사용하면 앱에서 Google의 음성 인식 API를 사용할 수 있습니다.</td>
-<td align="left">기본 제공 음성 인식 또는 음성 입력 API는 없습니다.</td>
+<td align="left">앱은 <strong>SFSpeechRecognizer</strong> 클래스를 사용, 음성 입력 및 음성 인식 기능을 구현합니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">음성 인식</a></strong> API를 사용하여 포그라운드에서 앱을 조작할 수 있습니다. 음성 기반 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">Cortana 조작</a></strong>을 사용하여 포그라운드 또는 백그라운드에서 앱을 시작하고 백그라운드 앱을 조작할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">음성 조작</a></td>
 </tr>
 <tr class="even">

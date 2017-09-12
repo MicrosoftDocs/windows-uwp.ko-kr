@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 9f4ebe843b30d5bc408a705cfc9dda5d6731d4d1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a3e224fc51245a5f91c29da2d745a3740029cda9
+ms.sourcegitcommit: 11664964e548a2af30d6e176c515cdbf330934ac
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="put-ui-strings-into-resources"></a>리소스에 UI 문자열 배치
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -65,10 +67,10 @@ UI용 문자열 리소스를 리소스 파일에 넣습니다. 그러면 코드 
 
 리소스 이름에는 **Uid** 특성 값을 사용해야 하며, 번역된 문자열을 가져오는 데 사용할 속성을 지정해야 합니다(이 경우 Text 속성). 다른 언어에 대해 Greeting.Width 등의 다른 속성/값을 지정할 수 있지만, 그러한 레이아웃 관련 속성은 주의해서 사용해야 합니다. 장치의 화면을 기반으로 컨트롤이 동적으로 배치될 수 있도록 고려해야 합니다.
 
-첨부된 속성은 resw 파일에서 다르게 처리됩니다(예: AutomationPeer.Name). 네임스페이스를 이와 같이 명확하게 표시해야 합니다.
+첨부된 속성은 resw 파일에서 다르게 처리됩니다(예: AutomationProperties.Name). 네임스페이스를 이와 같이 명확하게 표시해야 합니다.
 
 ```XML
-MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name</code></pre></td>
+MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 ```
 
 ## <a name="add-string-resource-identifiers-to-code-and-markup"></a>코드 및 태그에 문자열 리소스 식별자를 추가합니다.
@@ -101,7 +103,9 @@ auto str = loader->GetString("Farewell");
 
 3.  프랑스어(프랑스)용으로 "fr-FR"이라는 폴더를 하나 더 만듭니다. 새 리소스 파일을 만들고 다음을 추가합니다.
 
-    strings/fr-FR/Resources.resw ![리소스 추가, 프랑스어](images/addresource-fr-fr.png)
+    strings/fr-FR/Resources.resw
+    
+    ![리소스 추가, 프랑스어](images/addresource-fr-fr.png)
 
 ## <a name="build-and-run-the-app"></a>앱을 빌드하여 실행합니다.
 

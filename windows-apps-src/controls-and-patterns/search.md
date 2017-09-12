@@ -6,14 +6,19 @@ ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b85d14b037fc65f10a6a24ed6c1a04b4be3ff6d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 9a12e7490cc1cf7bd1aa65b694a3aeb345ba1128
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
 
@@ -21,12 +26,7 @@ translationtype: HT
 
 검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**AutoSuggestBox 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)</li>
-</ul>
-</div>
+> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
 ## <a name="elements-of-the-search-experience"></a>검색 환경의 요소
 
@@ -209,23 +209,12 @@ Windows 도구 모음에서 작업으로 검색:
 
 명령 모음에 명령을 추가하는 방법에 대한 자세한 내용은 [명령 모음](app-bars.md)을 참조하세요.
 
-<div class="microsoft-internal-note">
-## 세계화 및 지역화 검사 목록
-
-<table>
-<tr>
-<th>세로 간격</th><td>세로 간격에 라틴어가 아닌 문자를 사용하여 라틴어가 아닌 스크립트가 숫자까지 제대로 표시되게 합니다.</td>
-</tr>
-<tr>
-<th>양방향 고려 사항</th><td>돋보기 아이콘은 양방향 미러링으로 표시되면 안 됩니다.</td>
-</tr>
-</table>
-</div>
+ 
 
 
 ## <a name="related-articles"></a>관련 문서
 
-* [**자동 제안 상자**](auto-suggest-box.md)
+* [자동 제안 상자](auto-suggest-box.md)
 
 
  

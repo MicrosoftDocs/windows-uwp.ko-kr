@@ -3,14 +3,11 @@ layout: HubPage
 hide_bc: True
 title: "Windows 설명서"
 description: "Windows 솔루션을 구축 및 유지 관리하는 데 도움이 되는 개발자, 하드웨어 및 IT 전문가용 설명서를 확인할 수 있습니다."
-ms.assetid: 56bbc230-b855-426e-b849-4f65a747b944
-ms.author: wdg-dev-content
-ms.date: 02/08/2017
-ms.topic: hub-page
-ms.prod: windows
-ms.openlocfilehash: b04722c101d6647eca8d97ebb33ded7fb3ba8c3a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3837a3649acd5b9656c3d1b76973fca9f26ba740
+ms.sourcegitcommit: d6cf700ed2771c7a88f32972abdd0e192ae71b73
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/14/2017
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -107,8 +104,8 @@ translationtype: HT
                                                 <a href="https://msdn.microsoft.com/windows/uwp/monetize/index">수익 창출</a>
                                             </p>
                                             <p>
-                                                <a href="https://docs.microsoft.com/en-us/uwp/api/">API 참조</a>
-                                            <p>
+                                                <a href="/uwp/">API 참조</a>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -157,16 +154,13 @@ translationtype: HT
                                         <div class="cardText">
                                             <h3>게임</h3>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/games/getstarted">시작</a>
+                                                <a href="https://developer.microsoft.com/games/uwp">UWP</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/games/design">UI 디자인</a>
+                                                <a href="https://developer.microsoft.com/games/xbox/xboxlive">Xbox Live</a>
                                             </p>
                                             <p>
-                                                <a href="https://developer.microsoft.com/windows/games/develop">개발</a>
-                                            </p>
-                                            <p>
-                                                <a href="https://developer.microsoft.com/windows/games/publish">게시</a>
+                                                <a href="https://developer.microsoft.com/games/support">지원</a>
                                             </p>
                                         </div>
                                     </div>
@@ -273,7 +267,26 @@ translationtype: HT
                             </div>
                         </li>
                         <li>
-                            <a href="https://msdn.microsoft.com/windows/hardware/commercialize/design/index">
+                            <a href="https://docs.microsoft.com/windows-hardware/get-started/index">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img data-scaleimage="/media/hubs/windows/win_hardware-dev-get-started.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>시작</h3>
+                                                <p>Windows 10으로 장치를 처음 빌드하시나요?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.microsoft.com/windows-hardware/design/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -292,7 +305,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://msdn.microsoft.com/library/windows/hardware/mt269767(v=vs.85).aspx">
+                            <a href="https://docs.microsoft.com/windows-hardware/drivers/develop/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -311,7 +324,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://msdn.microsoft.com/windows/hardware/commercialize/customize/index">
+                            <a href="https://docs.microsoft.com/windows-hardware/customize/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -330,7 +343,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://msdn.microsoft.com/windows/hardware/commercialize/test/index">
+                            <a href="https://docs.microsoft.com/windows-hardware/test/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -349,7 +362,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/index">
+                            <a href="https://docs.microsoft.com/windows-hardware/manufacture/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -368,7 +381,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://msdn.microsoft.com/windows/hardware/commercialize/service/index">
+                            <a href="https://docs.microsoft.com/windows-hardware/service/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -402,7 +415,7 @@ translationtype: HT
                             </div>
                         </li>
                         <li>
-                            <a href="https://technet.microsoft.com/windows-server-docs/get-started/windows-server-2016 ">
+                            <a href="https://docs.microsoft.com/en-us/windows-server/windows-server-2016">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -421,7 +434,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://technet.microsoft.com/itpro/windows/index">
+                            <a href="https://docs.microsoft.com/en-us/windows/windows-10/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -440,7 +453,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://technet.microsoft.com/edu/windows/index">
+                            <a href="https://docs.microsoft.com/en-us/education/windows">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -457,28 +470,66 @@ translationtype: HT
                                     </div>
                                 </div>
                             </a>
-                        </li>
-                         <li>
-                            <a href="https://technet.microsoft.com/itpro/hololens/index">
+                        </li>  
+                        <li>
+                            <a href="https://docs.microsoft.com/en-us/microsoft-store/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_it-pro-7.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_it-pro-store-business.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>HoloLens</h3>
-                                                <p>HoloLens 상업용 제품군을 설정하고 관리하는 방법을 알아봅니다.</p>
+                                                <h3>비즈니스용 Microsoft 스토어</h3>
+                                                <p>귀하의 비즈니스를 위한 비즈니스용 Microsoft 스토어를 사용하여 앱을 검색, 구입, 배포, 관리하는 방법을 알아보세요.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </a>
-                        </li> 
+                        </li>  
+                         <li>
+                            <a href="https://docs.microsoft.com/en-us/microsoft-store/index?toc=/microsoft-store/education/toc.json">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img data-scaleimage="/media/hubs/windows/win_it-pro-store-education.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>교육용 Microsoft 스토어</h3>
+                                                <p>귀하의 학교를 위한 교육용 Microsoft 스토어를 사용하여 앱을 검색, 구입, 배포, 관리하는 방법을 알아보세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                         <li>
-                            <a href="https://technet.microsoft.com/itpro/surface/index">
+                            <a href="https://docs.microsoft.com/en-us/microsoft-edge/deploy/">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img data-scaleimage="/media/hubs/windows/win_it-pro-4.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Microsoft Edge</h3>
+                                                <p>Microsoft Edge 및 Internet Explorer 11을 배포하고 관리하는 방법을 알아봅니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.microsoft.com/en-us/surface/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -497,7 +548,7 @@ translationtype: HT
                             </a>
                         </li>
                         <li>
-                            <a href="https://technet.microsoft.com/itpro/surface-hub/index">
+                            <a href="https://docs.microsoft.com/en-us/surface-hub/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -514,20 +565,20 @@ translationtype: HT
                                     </div>
                                 </div>
                             </a>
-                        </li> 
-                        <li>
-                            <a href="https://technet.microsoft.com/library/mt267544.aspx">
+                        </li>
+                         <li>
+                            <a href="https://docs.microsoft.com/en-us/hololens/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_it-pro-4.svg" alt="" />
+                                                    <img data-scaleimage="/media/hubs/windows/win_it-pro-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>브라우저</h3>
-                                                <p>Microsoft Edge 및 Internet Explorer 11을 배포하고 관리하는 방법을 알아봅니다.</p>
+                                                <h3>HoloLens</h3>
+                                                <p>HoloLens 상업용 제품군을 설정하고 관리하는 방법을 알아봅니다.</p>
                                             </div>
                                         </div>
                                     </div>

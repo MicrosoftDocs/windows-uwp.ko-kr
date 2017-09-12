@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 저장소 서비스, Windows 스토어 분석 API, 앱 구매"
-ms.openlocfilehash: b6ffd8300871e06d8b93682bed8d42546d1b88fc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: daaab1a06b4a0cdcbb1644faa4341202dbbafdf3
+ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="get-app-acquisitions"></a>앱 집계 정보 가져오기
 
@@ -78,7 +80,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 | gender | 다음 문자열 중 하나입니다.<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | 출시 | 구입이 발생한 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
 | OSVersion | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows8</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows10</strong></li><li><strong>알 수 없음</strong></li></ul> |
-| deviceType | 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul> |
+| deviceType | 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | orderName | 앱을 구입하는 데 사용한 홍보 코드 주문 이름을 지정하는 문자열입니다(이는 사용자가 홍보 코드를 사용하여 앱을 구입한 경우에만 적용됩니다). |
 
 <span/> 
@@ -91,7 +93,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0  HTTP/1.1
 Authorization: Bearer <your access token>
 
-GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=8/1/2015&endDate=8/31/2015&skip=0&filter=market eq 'US'; and gender eq 'm'  HTTP/1.1
+GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=8/1/2015&endDate=8/31/2015&skip=0&filter=market eq 'US' and gender eq 'm'  HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
@@ -160,7 +162,6 @@ Authorization: Bearer <your access token>
 
 * [구입 보고서](../publish/acquisitions-report.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
-* [오류 보고 데이터 가져오기](get-error-reporting-data.md)
-* [앱 등급 가져오기](get-app-ratings.md)
-* [앱 리뷰 가져오기](get-app-reviews.md)
+* [앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md)
+* [채널 별 앱 변환 가져오기](get-app-conversions-by-channel.md)
+* [추가 기능 취득 가져오기](get-in-app-acquisitions.md)

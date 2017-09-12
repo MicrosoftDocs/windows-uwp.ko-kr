@@ -6,14 +6,16 @@ ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 label: TBD
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 35268ea199c139680c4a11c30744ecf54867e592
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 16c5092c8eb3c6d7460dd94c61c85522ef68a2fb
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -154,7 +156,7 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 
 기본적으로 타일 및 배지 알림은 다운로드된 후 3일이 경과하면 만료됩니다. 알림이 만료되면 콘텐츠가 타일 또는 큐에서 제거되고 더 이상 사용자에게 표시되지 않습니다. 앱에 적절한 시간을 사용하여 모든 타일 및 배지 알림에 대한 만료를 설정함으로써 타일의 콘텐츠를 관련이 있을 때까지만 유지하는 것이 좋습니다. 명시적 만료 시간은 수명이 정의되어 있는 콘텐츠에 필수적입니다. 이를 지정하면 클라우드 서비스에서 알림 보내기를 중지할 경우나 사용자의 네트워크 연결이 장기간 끊길 경우에 부실 콘텐츠도 제거됩니다.
 
-클라우드 서비스는 X-WNS-Expires HTTP 헤더를 설정하여 알림의 전송 후 유효 기간을 지정함으로써 각 알림에 대해 만료를 설정할 수 있습니다. 자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl)를 참조하세요.
+클라우드 서비스는 X-WNS-TTL HTTP 헤더를 설정하여 알림의 전송 후 유효 기간을 지정함으로써 각 알림에 대해 만료를 설정할 수 있습니다. 자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl)를 참조하세요.
 
 예를 들어 주식시장 거래일 중에 주가 업데이트 만료를 보내기 간격의 두 배(예제: 30분마다 알림을 보낼 경우 접수 1시간 후)로 설정할 수 있습니다. 다른 예로 뉴스 앱에서는 일간 뉴스 타일 업데이트에 적절한 만료 시간을 1일로 결정할 수 있습니다.
 
@@ -200,9 +202,9 @@ async public void CheckForEnergySaving()
       dontAskAgain = Convert.ToBoolean(dontAskSetting);
    }
    
-   // Check if battery saver is on and that it&#39;s okay to raise dialog
+   // Check if battery saver is on and that it's okay to raise dialog
    if ((PowerManager.EnergySaverStatus == EnergySaverStatus.On)
-         &amp;&amp; (dontAskAgain == false))
+         && (dontAskAgain == false))
    {
       // Check dialog results
       ContentDialogResult dialogResult = await saveEnergyDialog.ShowAsync();
@@ -214,7 +216,7 @@ async public void CheckForEnergySaving()
 
       // Save reminder preference
       if (dontAskAgainBox.IsChecked == true)
-      {  // Don&#39;t raise dialog again
+      {  // Don't raise dialog again
          localSettings.Values["dontAskAgainSetting"] = "true";
       }
    }

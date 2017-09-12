@@ -1,11 +1,13 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: "HoloLens용 디바이스 포털"
 description: "HoloLens용 Windows Device Portal을 사용하여 HoloLens 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다."
-ms.openlocfilehash: 00dec1110ba8cc27f759f05bc4a6f352a235d18d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 5272d6e1de4f684bac84d8eda6a5c56e08a58e24
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 

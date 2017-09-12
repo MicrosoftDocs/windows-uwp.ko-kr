@@ -4,14 +4,16 @@ Description: "Windows 스토어에서 앱 및 콘텐츠를 홍보하는 방법�
 title: "Windows 스토어 앱 마케팅 지침"
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e7d327cbe8d99b6b10ae4ccdeb8c7a6f0ee2ac5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e953bf1b7392a93ddb8323167ca1bf191e162076
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="windows-store-app-marketing-guidelines"></a>Windows 스토어 앱 마케팅 지침
 
@@ -21,19 +23,23 @@ Windows 스토어에서 앱 및 콘텐츠를 홍보하는 방법을 알아봅니
 
 Windows 스토어에서 더 많은 고객이 앱 목록에 관심을 가질 수 있도록 특별한 홍보용 배지를 만들었습니다. 이러한 배지는 44개 언어로 제공됩니다. 이러한 이미지를 사용할 경우 따라야 할 특정한 요구 사항이 있다는 사실에 주의하세요. 이러한 요구 사항은 사용 예제 및 지침과 함께 PDF 파일로 제공됩니다.
 
-[![다운로드 단추](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) Windows 스토어 마케팅 지침(PDF, 영문)
+[![다운로드 단추](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Windows 스토어 마케팅 지침(PDF, 영문)**
+
 
 ## <a name="badge-generator-and-images"></a>배지 생성기 및 이미지
 
-[배지 생성기](http://go.microsoft.com/fwlink/p/?LinkID=534236)를 사용하여 원하는 언어로 스토어 배지를 표시하고 앱의 스토어 목록으로 바로 연결되는 HTML을 생성할 수 있습니다. 아래 링크에서 PNG 및 PDF 형식의 배지 이미지 전체 집합을 다운로드할 수도 있습니다.
+[배지 생성기](http://go.microsoft.com/fwlink/p/?LinkID=534236)를 사용하여 원하는 언어로 스토어 배지를 표시하고 앱의 스토어 목록으로 바로 연결되는 HTML을 생성할 수 있습니다.
 
-[![다운로드 단추](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) 모든 배지 이미지
+아래 링크에서 PNG 및 PDF 형식의 배지 이미지 전체 집합을 다운로드할 수도 있습니다.
+
+[![다운로드 단추](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) **모든 배지 이미지**
+
 
 ## <a name="device-images"></a>장치 이미지
 
 앱을 홍보하기 위해 Windows 장치에서 실행할 경우 앱이 어떻게 표시되는지를 보여 주고 싶을 수 있습니다. 휴대폰, 태블릿, 노트북, PC 등 선택할 수 있는 다양한 장치 섀시 이미지가 마련되어 있습니다. 이러한 이미지를 사용하는 방법에 대한 모범 사례 및 기술 사양은 [Windows 스토어 마케팅 지침](http://go.microsoft.com/fwlink/p/?LinkId=529769)에 있습니다.
 
-[![다운로드 단추](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Windows 디바이스 아트
+[![다운로드 단추](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Windows 장치 아트**
 
 ## <a name="license-to-microsoft-marks"></a>Microsoft 마크에 사용권 부여
 

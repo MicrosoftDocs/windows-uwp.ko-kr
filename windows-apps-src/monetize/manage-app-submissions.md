@@ -4,22 +4,23 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다."
 title: "앱 제출 관리"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱 제출"
-ms.openlocfilehash: f6f0342619f91190bf021842c3ac3b0c61964d25
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c3da5bea559eb85b67fc2673df6f66c2b2ea78b6
+ms.sourcegitcommit: e7e8de39e963b73ba95cb34d8049e35e8d5eca61
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
 Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 제출을 관리하는 데 사용할 수 있는 메서드를 제공합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 이 권한은 개발자 계정에서 단계별로 사용할 수 있으며, 현재로서는 이 권한을 모든 계정에서 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
-
->**중요**&nbsp;&nbsp;Windows 스토어 제출 API를 사용하여 앱에 대한 제출을 생성하는 경우, 개발자 센터 대시보드 대신 API를 통해서만 제출을 추가 변경해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> [!IMPORTANT]
+> Windows 스토어 제출 API를 사용하여 앱에 대한 제출을 생성하는 경우 개발자 센터 대시보드 대신 API만 사용하여 제출을 추가 변경해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-app-submissions" />
 ## <a name="methods-for-managing-app-submissions"></a>앱 제출 관리 메서드
@@ -79,45 +80,41 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 앱에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
 1. 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
-
-  >**참고**&nbsp;&nbsp;앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
+    > [!NOTE]
+    > 앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Windows 스토어 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
 3. Windows 스토어 제출 API에서 다음 메서드를 실행하여 [앱 제출을 만듭니다](create-an-app-submission.md). 이 메서드는 마지막으로 게시된 제출의 복사본인 새 진행 중 제출을 만듭니다.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
+    ```
 
-  응답 본문에는 새 제출의 ID, 새 제출의 데이터(모든 목록 및 가격 정보) 및 제출의 앱 패키지 및 목록 이미지를 Azure Blob Storage에 업로드하기 위한 SAS(공유 액세스 서명) URI가 포함되어 있습니다.
+    응답 본문에는 새 제출의 ID, Azure Blob Storage 제출용 관련 파일(앱 패키지, 목록 이미지, 예고편 파일 등)을 업로드 할 수 있는 SAS URI, 기타 새 제출 데이터 일체(목록 및 가격 정보 등)가 포함된 [앱 제출](#app-submission-object) 리소스가 포함되어 있습니다.
+        > [!NOTE]
+        > A SAS URI provides access to a secure resource in Azure storage without requiring account keys. For background information about SAS URIs and their use with Azure Blob storage, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) and [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
-  >**참고**&nbsp;&nbsp;SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS URI 및 Azure Blob Storage를 통한 SAS URI 사용에 대한 배경 정보는 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) 및 [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
+4. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하려면 [앱 패키지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements)하고 [앱 스크린샷 및 이미지, 예고편을 준비](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다. ZIP 보관 파일에 이러한 파일을 모두 추가합니다.
+    > [!NOTE]
+    > API를 사용해 앱 제출에 예고편을 제출할 수 있는 기능은 현재 모든 개발자 계정에서 사용할 수 없습니다. 계정에서 이러한 리소스에 액세스 할 수 없는 경우, 제출을 가져오거나 생성할 때 [앱 제출 리소스](#app-submission-object)의 *예고편* 배열은 null입니다.
 
-4. 제출에 대한 새 패키지 또는 이미지를 추가하려면 [앱 패키지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements)하고 [앱 스크린샷 및 이미지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다. ZIP 보관 파일에 이러한 파일을 모두 추가합니다.
+5. 새 제출에 필요한 변경 사항으로 [앱 제출](#app-submission-object) 데이터를 수정하고, 다음 메서드를 실행하여 [앱 제출을 업데이트](update-an-app-submission.md) 합니다.
 
-5. 새 제출에 대해 필요한 변경 사항으로 제출 데이터를 수정하고 다음 메서드를 실행하여 [앱 제출을 업데이트](update-an-app-submission.md)합니다.
+    ```
+    PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
+    ```
+      > [!NOTE]
+      > 제출에 대한 새 파일을 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
-  ```
+4. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공된 SAS URI를 사용하여 [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage)에 ZIP 보관 파일을 업로드합니다. 다음과 같이 다양한 플랫폼에서 이 작업을 수행할 수 있는 여러 Azure 라이브러리가 있습니다.
 
-  <span/>
-  >**참고**&nbsp;&nbsp;제출에 대한 새 패키지 또는 이미지를 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
-
-4. 제출에 대한 새 패키지 또는 이미지를 추가하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공된 SAS URI를 사용하여 [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage)에 ZIP 보관 파일을 업로드합니다. 다음과 같이 다양한 플랫폼에서 이 작업을 수행할 수 있는 여러 Azure 라이브러리가 있습니다.
-
-  * [.NET용 Azure Storage Client Library](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-  * [Java용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-  * [Python용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
-
-  <span/>
+    * [.NET용 Azure Storage Client Library](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [Java용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [Python용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
   다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
 
-  > [!div class="tabbedCodeSnippets"]
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
   Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob blockBob =
@@ -127,32 +124,43 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 
 5. 다음 메서드를 실행하여 [앱 제출을 커밋](commit-an-app-submission.md)합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
-  ```
+    ```
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
+    ```
 
 6. 다음 메서드 실행을 통해 [앱 제출의 상태를 가져와](get-status-for-an-app-submission.md) 커밋 상태를 확인합니다.
 
-  > [!div class="tabbedCodeSnippets"]
-  ``` syntax
-  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
-  ```
+    ```
+    GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
+    ```
 
-  제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
+    제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
 7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 Windows 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
+
+<span id="advanced-listings"/>
+### <a name="game-options-and-trailers"></a>게임 옵션과 예고편
+
+일부 제출에서 사용할 수 없는 두 가지 고급 목록 옵션이 있습니다. [게임 옵션](#gaming-options-object) 및 [예고편](#trailer-object)입니다.
+
+Windows 스토어 제출 API를 개발자에게 처음 출시한 후 추가한 목록 옵션들입니다. 목록 옵션이 도입되기 전에 제출 API를 통해 앱 제출을 생성하고, 이런 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 이러한 목록 옵션에 액세스할 수 없습니다.
+
+제출 API를 사용할 때 해당 앱의 목록 옵션에 액세스할 수 있는지 판단하려면, [앱 가져오기](get-an-app.md) 메서드를 사용, [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드가 true인지 확인합니다. 앱에서 이러한 목록 옵션에 액세스할 수 없는 경우, [앱 제출을 생성](create-an-app-submission.md)할 때 [앱 제출 리소스](#app-submission-object)의 *gamingOptions* 및 *trailers* 값은 null입니다.
 
 <span/>
 ### <a name="code-examples-for-managing-app-submissions"></a>앱 제출 관리에 대한 코드 예제
 
 다음 문서는 여러 다른 프로그래밍 언어로 앱 제출 API를 만드는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
 
-* [C# 코드 예제](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
+* [C# 샘플: 앱, 추가 기능, 플라이트 제출](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [C# 샘플: 앱의 게임 옵션과 예고편 제출](csharp-code-examples-for-submissions-game-options-and-trailers.md)
+* [Java 샘플: 앱, 추가 기능, 플라이트 제출](java-code-examples-for-the-windows-store-submission-api.md)
+* [Java 샘플: 앱의 게임 옵션과 예고편 제출](java-code-examples-for-submissions-game-options-and-trailers.md)
+* [Python 샘플: 앱, 추가 기능, 플라이트 제출](python-code-examples-for-the-windows-store-submission-api.md)
+* [Python 샘플: 앱의 게임 옵션과 예고편 제출](python-code-examples-for-submissions-game-options-and-trailers.md)
 
->**참고**&nbsp;&nbsp;위에 나열된 코드 예제 외에도 the Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 다수의 자사 응용 프로그램을 스토어에 제출하는 기본 방법으로 Microsoft 내에서 적극적으로 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+> [!NOTE]
+> 위에 나열된 코드 예제 외에도 Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈이 제공됩니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 <span id="manage-gradual-package-rollout">
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>점진적 패키지 출시 관리 메서드
@@ -267,6 +275,7 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -318,7 +327,8 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
     "Xbox": false,
     "Team": true
   },
-  "friendlyName": "Submission 2"
+  "friendlyName": "Submission 2",
+  "trailers": []
 }
 ```
 
@@ -337,18 +347,55 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 | automaticBackupEnabled           |  boolean  |   Windows에서 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.   |   
 | canInstallOnRemovableMedia           |  boolean  |   고객이 이동식 저장소에 앱을 설치할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
 | isGameDvrEnabled           |  boolean |   앱에 대한 게임 DVR을 사용할지 여부를 나타냅니다.    |   
+| gamingOptions           |  array |   앱에 대한 게임 관련 설정을 정의한 [게임 옵션 리소스](#gaming-options-object)가 포함된 배열입니다.<br/><br/>**참고**&nbsp;&nbsp;현재 이 API를 사용해 게임 옵션을 구성하는 기능은 모든 개발자 계정에서 사용할 수 없습니다. 계정에서 이러한 리소스에 액세스할 수 없다면, *gamingOptions* 값은 null입니다. 앱 제출에 *gamingOptions*을 구성할 수 있는지 확인하려면 [앱 가져오기](get-an-app.md) 메서드를 사용하고, [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드가 true인지 확인합니다.      |   
 | hasExternalInAppProducts           |     boolean          |   Windows 스토어 상거래 시스템 밖에서 사용자가 이 앱을 구매할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
 | meetAccessibilityGuidelines           |    boolean           |  이 앱이 접근성 지침을 준수하도록 테스트되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.      |   
 | notesForCertification           |  문자열  |   앱의 [인증에 대한 참고 사항](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification)이 포함됩니다.    |    
 | status           |   문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   object  | 오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다.       |    
-| fileUploadUrl           |   문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지 또는 이미지를 추가하는 경우 패키지 및 이미지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [앱 제출 만들기](#create-an-app-submission)를 참조하세요.       |    
+| fileUploadUrl           |   문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하는 경우 패키지 및 이미지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [앱 제출 만들기](#create-an-app-submission)를 참조하세요.       |    
 | applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 [응용 프로그램 패키지 리소스](#application-package-object) 배열입니다. |    
 | packageDeliveryOptions    | object  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함하는 [패키지 전송 옵션 리소스](#package-delivery-options-object)입니다.  |
 | enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
 | allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows10 장치 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
 | FriendlyName           |   문자열  |  개발자 센터 대시보드와 같이 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.       |  
+| trailers           |  array |   앱 목록에 대한 비디오 예고편을 나타내는 최대 15개의 [예고편 리소스](#trailer-object) 가 포함된 배열입니다.<br/><br/>**참고**&nbsp;&nbsp;이 API를 사용해 앱 제출에 예고편을 제출할 수 있는 기능은 현재 모든 개발자 계정에서 사용할 수 없습니다. 계정에서 이러한 리소스에 액세스할 수 없다면, *gamingOptions* 값은 null입니다. 앱 제출에 *예고편*을 구성할 수 있는지 확인하려면 [앱 가져오기](get-an-app.md) 메서드를 사용하고, [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드가 true인지 확인합니다.   |  
+
+
+<span id="pricing-object" />
+### <a name="pricing-resource"></a>가격 리소스
+
+이 리소스는 앱에 대한 가격 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
+
+| 값           | 유형    | 설명        |
+|-----------------|---------|------|
+|  trialPeriod               |    문자열     |  앱에 대한 평가 기간을 지정하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
+|  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
+|  sales               |   배열      |  **사용되지 않음**. 앱에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.   |     
+|  priceId               |   문자열      |  앱에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.   |     
+|  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
+
+
+<span id="sale-object" />
+### <a name="sale-resource"></a>판매 리소스
+
+이 리소스는 앱에 대한 판매 정보를 포함합니다.
+
+> [!IMPORTANT]
+> **판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
+>    * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 가져올 수 있습니다.
+>    * [PUT 메서드를 호출하여 앱 제출을 업데이트하는 경우](update-an-app-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 변경할 수 있습니다.
+
+이 리소스의 값은 다음과 같습니다.
+
+| 값           | 유형    | 설명    |
+|-----------------|---------|------|
+|  name               |    문자열     |   판매의 이름입니다.    |     
+|  basePriceId               |   문자열      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
+|  startDate               |   문자열      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
+|  endDate               |   문자열      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
+|  marketSpecificPricings               |   object      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
 
 
 <span id="listing-object" />
@@ -378,58 +425,79 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 |  기능               |    배열     |  앱의 [기능](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features)을 나열하는 최대 20개 문자열의 배열입니다.     |
 |  releaseNotes               |  문자열       |  앱의 [릴리스 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes)입니다.    |
 |  이미지               |   배열      |  앱 목록의 [이미지 및 아이콘](#image-object) 리소스의 배열입니다.  |
-|  recommendedHardware               |   배열      |  앱의 [권장되는 하드웨어 구성](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#recommended-hardware)을 나열하는 최대 11개 문자열의 배열입니다.     |
+|  recommendedHardware               |   배열      |  앱의 [권장 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.     |
+|  minimumHardware               |     string    |  앱의 [최소 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.    |  
 |  title               |     문자열    |   앱 목록에 대한 제목입니다.   |  
+|  shortDescription               |     string    |  이 값은 Xbox 목록에만 적용됩니다. 이는 목록에 대한 간단한 설명입니다. 간단한 설명은 사용자가 게임의 내용, 종류, 게임을 즐길 수 있는 사용자에 대해 이해하는 데 도움을 줍니다. 항목은 500자로 제한됩니다.   |  
+|  shortTitle               |     string    |  이 값은 Xbox 목록에만 적용됩니다. 이는 일반 설명이 지나치게 긴 컨텍스트에서의 간단한 제품 설명 버전입니다. 일반, 지역화, 재정의를 포함해 간단한 제목의 최대 길이는 50자입니다. 재정의 버전은 다른 언어를 사용하는 하나의 지역에 표시됩니다.    |  
+|  sortTitle               |     string    |   이 값은 Xbox 목록에만 적용됩니다. 이는 목록의 간단한 제목을 지정합니다. 항목은 255자로 제한됩니다.   |  
+|  voiceTitle               |     string    |   이 값은 Xbox 목록에만 적용됩니다. 이는 목록의 음성 제목을 지정합니다. 항목은 255자로 제한됩니다.    |  
+|  devStudio               |     string    |   목록에 **Developed by** 필드를 포함시키고 싶을 때 이 값을 지정합니다. (**Published by** 필드는 *devStudio* 값 제공 여부와 상관 없이 계정과 관련이 있는 게시자 표시 이름을 목록으로 제시합니다.)    |  
 
 <span id="image-object" />
 ### <a name="image-resource"></a>이미지 리소스
 
-이 리소스에는 앱 목록에 대한 이미지 및 아이콘 데이터가 포함되어 있습니다. 목록의 이미지 및 아이콘에 대한 자세한 내용은 [앱 스크린샷 및 이미지](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images)를 참조하세요. 이 리소스의 값은 다음과 같습니다.
+이 리소스에는 앱 목록에 대한 이미지 및 아이콘 데이터가 포함되어 있습니다. 목록의 이미지 및 아이콘에 대한 자세한 내용은 [앱 스크린샷 및 이미지](../publish/app-screenshots-and-images.md)를 참조하세요. 이 리소스의 값은 다음과 같습니다.
 
 | 값           | 유형    | 설명           |
 |-----------------|---------|------|
 |  fileName               |    문자열     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 이미지 파일의 이름입니다.    |     
 |  fileStatus               |   문자열      |  이미지 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
-|  id  |  문자열  | 개발자 센터에서 지정한 대로 이미지에 대한 ID입니다.  |
+|  id  |  string  | 이미지 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
 |  description  |  문자열  | 이미지에 대한 설명입니다.  |
-|  imageType  |  문자열  | 이미지의 유형을 나타내는 다음 문자열 중 하나입니다. <ul><li>알 수 없음</li><li>스크린샷</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>아이콘</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
+|  imageType  |  string  | 이미지의 형식을 나타냅니다. 현재 다음 문자열을 지원하고 있습니다. <p/>[스크린샷 이미지](../publish/app-screenshots-and-images.md#screenshots): <ul><li>스크린샷(데스크톱 스크린샷에 이 값을 사용)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[스토어 로고](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>아이콘(1:1 300 x 300 픽셀 로고에 이 값을 사용)</li></ul><p/>[홍보 이미지](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Xbox 이미지](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[선택할 수 있는 홍보 이미지](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
-<span id="pricing-object" />
-### <a name="pricing-resource"></a>가격 리소스
+<span id="gaming-options-object" />
+### <a name="gaming-options-resource"></a>게임 옵션 리소스
 
-이 리소스는 앱에 대한 가격 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
+이 리소스에는 앱의 게임 관련 설정이 포함되어 있습니다. 이 리소스의 값은 개발자 센터 대시보드 제출의 [게임 설정](../publish/enter-app-properties.md#game-settings)과 일치합니다.
 
-| 값           | 유형    | 설명        |
-|-----------------|---------|------|
-|  trialPeriod               |    문자열     |  앱에 대한 평가 기간을 지정하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
-|  sales               |   배열      |  **사용되지 않음**. 앱에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.   |     
-|  priceId               |   문자열      |  앱에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.   |     
-|  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
+> [!NOTE]
+> 이 리소스를 [모든 제출에 사용하지 못할 수도](#advanced-listings) 있습니다.
 
+목록 옵션이 도입되기 전에 제출 API를 통해 앱 제출을 생성하고, 이런 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 앱 제출에 대한 목록 옵션에 액세스할 수 없습니다. 제출 API를 사용할 때 해당 앱의 목록 옵션에 액세스할 수 있는지 판단하려면, [앱 가져오기](get-an-app.md) 메서드를 사용, [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드가 true인지 확인합니다.
 
-<span id="sale-object" />
-### <a name="sale-resource"></a>판매 리소스
-
-이 리소스는 앱에 대한 판매 정보를 포함합니다.
-
->**중요**&nbsp;&nbsp;**판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
-
-   > * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 가져올 수 있습니다.
-   > * [PUT 메서드를 호출하여 앱 제출을 업데이트하는 경우](update-an-app-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 변경할 수 있습니다.
-
-> 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
+```json
+{
+  "gamingOptions": [
+    {
+      "genres": [
+        "Games_ActionAndAdventure",
+        "Games_Casino"
+      ],
+      "isLocalMultiplayer": true,
+      "isLocalCooperative": true,
+      "isOnlineMultiplayer": false,
+      "isOnlineCooperative": false,
+      "localMultiplayerMinPlayers": 2,
+      "localMultiplayerMaxPlayers": 12,
+      "localCooperativeMinPlayers": 2,
+      "localCooperativeMaxPlayers": 12,
+      "isBroadcastingPrivilegeGranted": true,
+      "isCrossPlayEnabled": false,
+      "kinectDataForExternal": "Enabled"
+    }
+  ],
+}
+```
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 유형    | 설명    |
+| 값           | 유형    | 설명        |
 |-----------------|---------|------|
-|  name               |    문자열     |   판매의 이름입니다.    |     
-|  basePriceId               |   문자열      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
-|  startDate               |   문자열      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
-|  endDate               |   문자열      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
-|  marketSpecificPricings               |   object      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
+|  genres               |    배열     |  게임 장르를 설명하는 다음 문자열을 하나 이상 배열한 것입니다. <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
+|  isLocalMultiplayer               |    boolean     |  게임이 로컬 멀티 플레이어를 지원하는지 나타냅니다.      |     
+|  isLocalCooperative               |   boolean      |  게임이 로컬 협동 게임을 지원하는지 나타냅니다.    |     
+|  isOnlineMultiplayer               |   boolean      |  게임이 온라인 멀티플레이어를 지원하는지 나타냅니다.    |     
+|  isOnlineCooperative               |   boolean      |  게임이 온라인 협동 게임을 지원하는지 나타냅니다.    |     
+|  localMultiplayerMinPlayers               |   int      |   게임이 로컬 멀티플레이어에서 지원하는 플레이어의 최소 수를 지정합니다.   |     
+|  localMultiplayerMaxPlayers               |   int      |   게임이 로컬 멀티플레이어에서 지원하는 플레이어의 최대 수를 지정합니다.  |     
+|  localCooperativeMinPlayers               |   int      |   게임이 로컬 협동 게임에서 지원하는 플레이어의 최소 수를 지정합니다.  |     
+|  localCooperativeMaxPlayers               |   int      |   게임이 로컬 협동 게임에서 지원하는 플레이어의 최대 수를 지정합니다.  |     
+|  isBroadcastingPrivilegeGranted               |   boolean      |  게임이 브로드캐스팅을 지원하는지 나타냅니다.   |     
+|  isCrossPlayEnabled               |   boolean      |   게임이 Windows 10 PC와 Xbox 플레이어 간 멀티플레이어 세션을 지원하는지 나타냅니다.  |     
+|  kinectDataForExternal               |   string      |  다음 문자열 값은 게임이 Kinect 데이터를 수집해 외부 서비스로 전송할 수 있는지 나타냅니다. <ul><li>NotSet</li><li>Unknown</li><li>Enabled</li><li>Disabled</li></ul>   |
 
 
 <span id="status-details-object" />
@@ -489,16 +557,17 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 
 이 리소스의 값은 다음과 같습니다.  
 
->**참고**&nbsp;&nbsp;[앱 제출 업데이트](update-an-app-submission.md)를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion*, *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
+> [!NOTE]
+> [update an app submission](update-an-app-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
 
 | 값           | 유형    | 설명                   |
 |-----------------|---------|------|
 | fileName   |   문자열      |  패키지의 이름입니다.    |  
 | fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 개발자 센터에서 사용됩니다.   |     
-| version    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
+| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 개발자 센터에서 제공됩니다.   |     
+| 버전    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
 | architecture    |  문자열   |  패키지의 아키텍처(예: ARM)입니다.   |     
-| languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
+| languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 | capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
 | minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |       
@@ -557,11 +626,78 @@ Windows 스토어 제출 API는 점진적 패키지 출시를 비롯하여 앱 �
 | packageRolloutStatus    |  문자열   |  점진적 패키지 출시의 상태를 나타내는 다음 문자열 중 하나입니다. <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  문자열   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
 
->**참고**&nbsp;&nbsp;*packageRolloutStatus* 및 *fallbackSubmissionId* 값은 개발자 센터에서 할당하며, 개발자가 설정할 필요가 없습니다. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다. 
+> [!NOTE]
+> *packageRolloutStatus* 및 *fallbackSubmissionId* 값은 개발자 센터에서 할당하며, 개발자가 설정할 필요가 없습니다. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다.
+
+<span id="trailer-object" />
+### <a name="trailer-resource"></a>예고편 리소스
+
+이 리소스는 앱 목록의 비디오 예고편을 나타냅니다. 이 리소스의 값은 개발자 센터 대시보드 제출의 [예고편](../publish/app-screenshots-and-images.md#trailers) 옵션과 일치합니다.
+
+최대 15개의 예고편 리소스를 [앱 제출 리소스](#app-submission-object)의 *예고편* 배열에 추가할 수 있습니다. 제출용으로 예고편 비디오 파일과 미리 보기 이미지를 업로드하려면, 이 파일을 제출용 패키지 및 목록 이미지가 든 동일한 ZIP 보관 파일에 추가한 다음 ZIP 보관 파일을 제출용 SAS URI로 업로드 합니다. ZIP 보관 파일을 SAS URI로 업로드 하는 것에 대한 자세한 내용은 [앱 제출 생성](#create-an-app-submission)을 참조하세요.
+
+> [!NOTE]
+> 이 리소스를 [모든 제출에 사용하지 못할 수도](#advanced-listings) 있습니다.
+
+```json
+{
+  "trailers": [
+    {
+      "id": "1158943556954955699",
+      "videoFileName": "Trailers\\ContosoGameTrailer.mp4",
+      "videoFileId": "1159761554639123258",
+      "trailerAssets": {
+        "en-us": {
+          "title": "Contoso Game",
+          "imageList": [
+            {
+              "fileName": "Images\\ContosoGame-Thumbnail.png",
+              "id": "1155546904097346923",
+              "description": "This is a still image from the video."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+이 리소스의 값은 다음과 같습니다.
+
+| 값           | 유형    | 설명        |
+|-----------------|---------|------|
+|  id               |    string     |   예고편 ID입니다. 이 값은 개발자 센터에서 제공됩니다.   |
+|  videoFileName               |    string     |    제출용 파일이 든 ZIP 보관 파일의 예고편 비디오 파일 이름입니다.    |     
+|  videoFileId               |   string      |  예고편 비디오 파일 ID입니다. 이 값은 개발자 센터에서 제공됩니다.   |     
+|  trailerAssets               |   object      |  키와 값 쌍의 사전입니다. 여기서 각 키는 언어 코드이며 각 값은 예고편에 대한 지역에 특정적인 추가 자산이 포함된 [예고편 자산 리소스](#trailer-assets-object)입니다. 지원 언어 코드에 대한 자세한 내용은 [지원 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
+
+
+<span id="trailer-assets-object" />
+### <a name="trailer-assets-resource"></a>예고편 자산 리소스
+
+이 리소스에는 [예고편 리소스](#trailer-object)에서 정의된 예고편에 대한 지역에 특정적인 추가 자산이 포함되어 있습니다. 이 리소스의 값은 다음과 같습니다.
+
+| 값           | 유형    | 설명        |
+|-----------------|---------|------|
+| title   |   string      |  예고편의 지역화 된 제목입니다. 사용자가 전체 화면으로 예고편을 재생할 때 제목이 표시됩니다.     |  
+| imageList    | array    |   예고편 미리 보기를 제공하는 하나의 [이미지](#image-for-trailer-object) 리소스가 포함된 배열입니다. 이 배열에 하나의 [이미지](#image-for-trailer-object)만 포함할 수 있습니다.  |   
+
+
+<span id="image-for-trailer-object" />
+### <a name="image-resource-for-a-trailer"></a>이미지 리소스(예고편)
+
+이 리소스는 예고편 미리 보기 이미지를 설명합니다. 이 리소스의 값은 다음과 같습니다.
+
+| 값           | 유형    | 설명           |
+|-----------------|---------|------|
+|  fileName               |    string     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 미리 보기 이미지 파일의 이름입니다.    |     
+|  ID  |  string  | 미리 보기 이미지 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
+|  description  |  string  | 미리 보기 이미지에 대한 설명입니다. 이 값은 메타데이터입니다. 그리고 사용자에게 표시되지 않습니다.   |
 
 <span/>
 
-## <a name="enums"></a>열거
+## <a name="enums"></a>Enums
 
 이러한 메서드는 다음 열거형을 사용합니다.
 

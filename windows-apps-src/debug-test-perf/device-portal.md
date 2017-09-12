@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Windows Device Portal 개요"
 description: "Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e729236ae7d506eb59af1a38506931865eff4f14
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f22600f2bbd5dc43996550c853c6defd04565ad4
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
 
@@ -41,7 +43,7 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 \* 디바이스의 기존 포트 클레임과 충돌을 방지하기 위해 데스크톱의 디바이스 포털은 임시 범위(&gt;50,000)의 포트를 클레임하기 때문에 항상 적용되지는 않습니다.  자세한 내용은 데스크톱용 [포트 설정](device-portal-desktop.md#setting-port-numbers) 섹션을 참조하세요.  
 
 디바이스별 설치 지침은 다음을 참조하세요.
-- [HoloLens용 디바이스 포털](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [HoloLens용 디바이스 포털](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-hololens)
 - [IoT용 디바이스 포털](https://go.microsoft.com/fwlink/?LinkID=616499)
 - [모바일용 디바이스 포털](device-portal-mobile.md)
 - [Xbox용 디바이스 포털](device-portal-xbox.md)
@@ -71,28 +73,28 @@ AppX 패키지와 디바이스에 있는 번들에 대해 설치/제거 및 관�
 ![모바일용 디바이스 포털](images/device-portal/mob-device-portal-apps.png)
 
 - **설치된 앱**: 앱을 제거하고 시작합니다.
-- **실행 중인 앱**: 현재 실행 중인 앱을 나열합니다.
+- **앱 실행**: 현재 실행 중인 앱을 나열하고 닫을 수 있는 옵션이 제공됩니다.
 - **앱 설치**: 컴퓨터 또는 네트워크 폴더에서 설치할 앱 패키지를 선택합니다.
 - **종속성**: 설치하려는 앱에 대한 종속성을 추가합니다.
 - **배포**: 선택한 앱과 종속성을 디바이스에 배포합니다.
 
 **앱을 설치하려면**
 
-1.    [앱 패키지를 만들면](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx) 이를 원격으로 디바이스에 설치할 수 있습니다. Visual Studio에서 빌드한 후 출력 폴더가 생성됩니다.
+1.  [앱 패키지를 만들면](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx) 이를 원격으로 디바이스에 설치할 수 있습니다. Visual Studio에서 빌드한 후 출력 폴더가 생성됩니다.
 
     ![앱 설치](images/device-portal/iot-installapp0.png)
-2.    찾아보기를 클릭하고 앱 패키지(.appx)를 찾습니다.
-3.    찾아보기를 클릭하고 인증서 파일(.cer)을 찾습니다(일부 디바이스에서는 필요 없음).
-4.    종속성을 추가합니다. 두 개 이상 있는 경우 개별적으로 각각 추가합니다.     
-5.    **배포**에서 **이동**을 클릭합니다. 
-6.    다른 앱을 설치하려면 **초기화** 단추를 클릭하여 필드를 지웁니다.
+2.  찾아보기를 클릭하고 앱 패키지(.appx)를 찾습니다.
+3.  찾아보기를 클릭하고 인증서 파일(.cer)을 찾습니다(일부 디바이스에서는 필요 없음).
+4.  종속성을 추가합니다. 두 개 이상 있는 경우 개별적으로 각각 추가합니다.     
+5.  **배포**에서 **이동**을 클릭합니다. 
+6.  다른 앱을 설치하려면 **초기화** 단추를 클릭하여 필드를 지웁니다.
 
 
 **앱을 제거하려면**
 
-1.    앱이 실행되고 있지 않은지 확인합니다. 
-2.    실행 중이면 '실행 중인 앱'으로 이동하고 앱을 닫습니다. 앱이 실행되는 동안 제거를 시도할 경우 해당 앱을 다시 설치하려고 할 때 문제가 발생합니다. 
-3.    준비되면 **제거**를 클릭합니다.
+1.  앱이 실행되고 있지 않은지 확인합니다. 
+2.  실행 중이면 '실행 중인 앱'으로 이동하고 앱을 닫습니다. 앱이 실행되는 동안 제거를 시도할 경우 해당 앱을 다시 설치하려고 할 때 문제가 발생합니다. 
+3.  준비되면 **제거**를 클릭합니다.
 
 ### <a name="processes"></a>Processes
 

@@ -1,57 +1,59 @@
 ---
 author: normesta
-Description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)로 변환한 데스크톱 앱에 서명하는 방법에 대해 설명합니다."
+Description: "패키지 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서는 패키지로 만든 앱이 사용할 수 있는 클래스를 나열합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: "데스크톱-UWP 브리지 지원 UWP API"
+title: "패키지 데스크톱 앱에서 사용할 수 있는 UWP API(데스크톱 브리지)"
 ms.author: normesta
-ms.date: 03/09/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
-ms.openlocfilehash: 34b29f8e68c77acdb19a1b0005f039097c8d2cbb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 796e47167c8462357764c78223dca34a11888aaf
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/26/2017
 ---
-# <a name="desktop-to-uwp-bridge-supported-uwp-apis"></a>데스크톱-UWP 브리지: 지원 UWP API
+# <a name="uwp-apis-available-to-a-packaged-desktop-app-desktop-bridge"></a>패키지 데스크톱 앱에서 사용할 수 있는 UWP API(데스크톱 브리지)
 
-변환된 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서는 변환된 앱이 사용할 수 있는 클래스를 나열합니다.
+패키지 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서는 패키지로 만든 앱이 사용할 수 있는 클래스를 나열합니다.
 
-대부분의 UWP API는 변환된 데스크톱 앱에서 잘 작동합니다. 그러나 일부 기능 영역은 아직 완전히 테스트되지 않았거나 현재 의도한 대로 작동하지 않습니다.
+대부분의 UWP API는 패키지 데스크톱 앱에서 잘 작동합니다. 그러나 일부 기능 영역은 아직 완전히 테스트되지 않았거나 현재 의도한 대로 작동하지 않습니다.
 
 <table><tr><th>기능 영역</th><th>세부 정보</th><tr>
-<tr><td>약속, 연락처 및 메일</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>인증 및 사용자 ID</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>백그라운드 작업</td><td>변환된 앱에서 백그라운드 작업을 등록할 수는 있지만 완전한 UWP 앱만 백그라운드 작업*으로* 실행할 수 있습니다. 자세한 내용은 [GitHub의 백그라운드 작업 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample)을 참조하세요.</td></tr>
-<tr><td>Bluetooth</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>채팅 및 전화 통화</td><td>변환된 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
+<tr><td>약속, 연락처 및 메일</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>인증 및 사용자 ID</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>백그라운드 작업</td><td>패키지 앱에서 백그라운드 작업을 등록할 수는 있지만 완전한 UWP 앱만 백그라운드 작업*으로* 실행할 수 있습니다. 자세한 내용은 [GitHub의 백그라운드 작업 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample)을 참조하세요.</td></tr>
+<tr><td>Bluetooth</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>채팅 및 전화 통화</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
 <tr><td>계약 활성화</td><td>완전한 UWP 앱만 계약을 통해 활성화할 수 있습니다.</td></tr>
-<tr><td>암호화</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>지리적 위치</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>파일 및 폴더 선택기</td><td>변환된 앱은 파일 시스템에 대한 모든 권한을 가지며 UWP 선택기가 필요하지 않습니다.</td></tr>
-<tr><td>미디어</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>서비스 지점</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>스마트 카드</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>PlayReady</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>VPN</td><td>일부 API는 현재 변환된 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>Wallet</td><td>변환된 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
+<tr><td>암호화</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>지리적 위치</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>파일 및 폴더 선택기</td><td>패키지로 만든 앱은 파일 시스템에 대한 모든 권한을 가지며 UWP 선택기가 필요하지 않습니다.</td></tr>
+<tr><td>미디어</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>서비스 지점</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>스마트 카드</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>PlayReady</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>VPN</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
+<tr><td>전자지갑</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
 <tr><td>XAML UI</td><td>Win32 앱 프로세스에 XAML UI를 추가할 수 없습니다.</td></tr>
 </table>
 
 
 이러한 영역의 API가 올바르게 작동하는 것처럼 보이는 경우도 있습니다. 그러나 지원되는 API로 명시적으로 나열되지 않은 경우 의도하지 않은 부작용이나 동작이 발생할 수 있으므로 사용하면 안 됩니다. 향후 릴리스에서 이러한 API가 지원될 수도 있습니다. 그동안 앱에서 적절한 Win32 또는 .NET API를 대신 사용해야 합니다.
 
-전체 데스크톱 응용 프로그램에서 사용할 수 있는 일부 UWP API가 변환된 앱에서는 지원되지 않습니다. 변환 전에 데스크톱 응용 프로그램이 UWP API를 사용한 경우 해당 API가 여전히 지원되는지 확인해야 합니다. 자세한 내용은 [데스크톱 앱용 Windows 런타임 API](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx)를 참조하세요.
+전체 데스크톱 응용 프로그램에서 사용할 수 있는 일부 UWP API가 패키지 앱에서는 지원되지 않습니다. 변환 전에 데스크톱 응용 프로그램이 UWP API를 사용한 경우 해당 API가 여전히 지원되는지 확인해야 합니다. 자세한 내용은 [데스크톱 앱용 Windows 런타임 API](https://msdn.microsoft.com/library/windows/desktop/dn554295(v=vs.85).aspx)를 참조하세요.
 
 ## <a name="list-of-apis"></a>API 목록
 
-다음은 변환된 앱에서 지원되는 UWP API의 전체 목록입니다. [변환된 앱에서 새로 지원되는 API](#new) 또는 [변환된 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API](#both)를 확인할 수 있습니다.
+다음은 패키지 앱에서 지원되는 UWP API의 전체 목록입니다. [패키지로 만든 앱에서 새로 지원되는 API](#new) 또는 [패키지로 만든 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API](#both)를 확인할 수 있습니다.
 
-WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 데스크톱 앱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요. Windows용 앱 빌드 블로그 게시물 [데스크톱 응용 프로그램에서 Windows 10 API 호출](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application)을 참조하세요.
+WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [데스크톱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요. Windows용 앱 빌드 블로그 게시물 [데스크톱 응용 프로그램에서 Windows 10 API 호출](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application)을 참조하세요.
 
 <span id="new" />
-### <a name="apis-supported-in-newly-converted-apps"></a>변환된 앱에서 새로 지원되는 API
+### <a name="apis-supported-in-newly-packaged-apps"></a>새 패키지 앱에서 지원되는 API
 
 * [Windows.ApplicationModel.DataTransfer.DataProviderHandler](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataProviderHandler)
 * [Windows.ApplicationModel.DataTransfer.DataRequest](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -134,7 +136,7 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 �
 * [Windows.Foundation.AsyncActionProgressHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionProgressHandler<TProgress>)
 * [Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>)
 * [Windows.Foundation.AsyncOperationCompletedHandler<TResult>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationCompletedHandler<TResult>)
-* [Windows.Foundation.Collections.VectorChangedEventHandler<T>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.VectorChangedEventHandler<T>)
+* [Windows.Foundation.Collections.VectorChangedEventHandler<T>](https://msdn.microsoft.com/library/windows/apps/br206656.aspx)
 * [Windows.Foundation.DeferralCompletedHandler](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.DeferralCompletedHandler)
 * [Windows.Foundation.Diagnostics.FileLoggingSession](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Diagnostics.FileLoggingSession)
 * [Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs)
@@ -302,7 +304,6 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 �
 * [Windows.Services.Store.StoreRequestHelper](https://msdn.microsoft.com/library/windows/apps/Windows.Services.Store.StoreRequestHelper)
 * [Windows.Services.Store.StoreSendRequestResult](https://msdn.microsoft.com/library/windows/apps/Windows.Services.Store.StoreSendRequestResult)
 * [Windows.Services.Store.StoreSku](https://msdn.microsoft.com/library/windows/apps/Windows.Services.Store.StoreSku)
-* [Windows.Services.Store.StoreSubscriptionData](https://msdn.microsoft.com/library/windows/apps/Windows.Services.Store.StoreSubscriptionData)
 * [Windows.Services.Store.StoreVideo](https://msdn.microsoft.com/library/windows/apps/Windows.Services.Store.StoreVideo)
 * [Windows.Storage.ApplicationDataSetVersionHandler](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.ApplicationDataSetVersionHandler)
 * [Windows.Storage.CachedFileManager](https://msdn.microsoft.com/library/windows/apps/Windows.Storage.CachedFileManager)
@@ -377,7 +378,7 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 �
 * [Windows.UI.StartScreen.JumpListItem](https://msdn.microsoft.com/library/windows/apps/Windows.UI.StartScreen.JumpListItem)
 
 <span id="both" />
-### <a name="apis-supported-in-both-converted-apps-and-desktop-applications"></a>변환된 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API
+### <a name="apis-supported-in-both-packaged-apps-and-desktop-applications"></a>패키지로 만든 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API
 
 * [Windows.ApplicationModel.Core.AppListEntry](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.AppListEntry)
 * [Windows.ApplicationModel.DataTransfer.DataPackage](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)
@@ -632,15 +633,15 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 �
 * [Windows.Devices.WiFiDirect.WiFiDirectDevice](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.WiFiDirect.WiFiDirectDevice)
 * [Windows.Devices.WiFiDirect.WiFiDirectInformationElement](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.WiFiDirect.WiFiDirectInformationElement)
 * [Windows.Devices.WiFiDirect.WiFiDirectLegacySettings](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.WiFiDirect.WiFiDirectLegacySettings)
-* [Windows.Foundation.AsyncOperationProgressHandler&lt;Tresult,.TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationProgressHandler<Tresult,.TProgress>)
+* [Windows.Foundation.AsyncOperationProgressHandler&lt;Tresult,.TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206573.aspx(d=robot))
 * [Windows.Foundation.AsyncOperationWithProgressCompletedHandler&lt;Tresult,.TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Tresult,.TProgress>)
-* [Windows.Foundation.Collections.MapChangedEventHandler&lt;K,.V&gt;](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.MapChangedEventHandler<K,.V>)
+* [Windows.Foundation.Collections.MapChangedEventHandler&lt;K,.V&gt;](https://msdn.microsoft.com/library/windows/apps/br206644.aspx)
 * [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.PropertySet)
 * [Windows.Foundation.Collections.StringMap](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.StringMap)
 * [Windows.Foundation.Collections.ValueSet](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.ValueSet)
 * [Windows.Foundation.Deferral](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral)
 * [Windows.Foundation.PropertyValue](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.PropertyValue)
-* [Windows.Foundation.TypedEventHandler&lt;Tsender,.TResult&gt;](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.TypedEventHandler<Tsender,.TResult>)
+* [Windows.Foundation.TypedEventHandler&lt;Tsender,.TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br225997.aspx(d=robot))
 * [Windows.Foundation.Uri](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Uri)
 * [Windows.Foundation.WwwFormUrlDecoder](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.WwwFormUrlDecoder)
 * [Windows.Foundation.WwwFormUrlDecoderEntry](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.WwwFormUrlDecoderEntry)
@@ -947,7 +948,7 @@ WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 �
 * [Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties)
 * [Windows.UI.Input.Inking.InkInputProcessingConfiguration](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkInputProcessingConfiguration)
 * [Windows.UI.Input.Inking.InkManager](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkManager)
-* [Windows.UI.Input.Inking.InkPoint](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPoint)
+* [Windows.UI.Input.Inking.InkPoint](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPoint)
 * [Windows.UI.Input.Inking.InkPresenter](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenter)
 * [Windows.UI.Input.Inking.InkPresenterRuler](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkPresenterRuler)
 * [Windows.UI.Input.Inking.InkRecognitionResult](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.Inking.InkRecognitionResult)

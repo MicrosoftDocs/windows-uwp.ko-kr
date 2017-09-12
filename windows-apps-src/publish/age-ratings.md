@@ -4,14 +4,16 @@ Description: "앱 제출 프로세스의 연령별 등급 페이지를 사용하
 title: "연령별 등급"
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2546ef6141095a0033f197e1e43e68276253aba3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 4adac59c0508bcdd9c21180a1c6dcb70fc4532b3
+ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="age-ratings"></a>연령별 등급
 
@@ -21,7 +23,8 @@ translationtype: HT
 
 앱을 처음 제출하면(또는 더 높은 연령층을 위한 프로세스를 사용하여 게시했던 앱을 처음 업데이트하면) 해당 앱의 연령별 등급을 결정하기 위한 선다형 설문지를 작성하라는 메시지가 나타납니다.
 
-> **중요**  다른 상점에서 앱에 대한 설문지를 이미 작성하고 IARC 등급 ID를 받은 경우 해당 등급 ID를 제공하는 옵션을 선택할 수 있습니다. 해당 ID를 사용하여 기존 등급이 Windows 스토어의 앱에 연결됩니다.
+> [!IMPORTANT]
+> 다른 상점에서 앱에 대한 설문지를 이미 작성하고 IARC 등급 ID를 받은 경우 해당 등급 ID를 제공하는 옵션을 선택할 수 있습니다. 해당 ID를 사용하여 기존 등급이 Windows 스토어의 앱에 연결됩니다.
 
 설문지에 정확하게 답변해야 합니다. 이 과정에서 Microsoft는 게시자의 표시 이름 및 메일 주소를 IARC와 공유합니다. 설문지를 완료하면 IARC 등급 시스템에서 응답에 따라 기간 및 콘텐츠 등급 정보를 제공합니다. 다양한 지역/국가에서 고객에게 앱을 표시할 때 이 등급 정보를 사용합니다. 또한 앱이 게시된 후 IARC로부터 앱의 등급을 확인하는 메일을 받게 됩니다.
 
@@ -31,16 +34,20 @@ translationtype: HT
 
 다음에 앱을 업데이트하면 모든 앱에 할당된 등급이 이 페이지에 표시됩니다. 또한 **편집**을 클릭하여 앱의 콘텐츠가 변경되어 답변을 조정해야 하는 경우 설문지를 다시 작성할 수 있습니다. IARC가 질문을 수시로 업데이트할 수도 있습니다. 그런 경우에는 업데이트를 제출할 때 설문지를 다시 작성하라는 메시지가 나타날 수도 있습니다.
 
-> **참고**  대한민국 법률에 따라 대한민국에서 사용할 수 있는 게임은 대한민국 [게임물 등급 위원회](http://go.microsoft.com/fwlink/p/?LinkId=228256)를 통해 등급을 지정받아야 합니다. 앱이 게임이고 이 앱을 대한민국에서 제공하려면 이 추가 섹션을 작성하고 등급 인증서를 업로드해야 합니다. 앱이 게임이 아니거나 이 앱을 대한민국에서 제공하지 않으려면 이 섹션을 비워 둘 수 있습니다.
+<span id="boards" />
 
+> [!NOTE]
+> 대한민국 법률에 따라 대한민국에서 사용할 수 있는 게임은 대한민국 [게임 등급 위원회](http://go.microsoft.com/fwlink/p/?LinkId=228256)를 통해 등급을 지정받아야 합니다. 앱이 게임이고 이 앱을 대한민국에서 제공하려면 이 추가 섹션을 작성하고 등급 인증서를 업로드해야 합니다. 앱이 게임이 아니거나 이 앱을 대한민국에서 제공하지 않으려면 이 섹션을 비워 둘 수 있습니다.
+
+<span id="appeal" />
 ## <a name="appealing-ratings-or-refused-classifications"></a>할당된 등급 또는 등급 분류 거부에 대한 이의 제기
 
 자신의 앱에 할당된 연령별 등급에 대해서 의문이 있거나 이의 제기를 하려면 앱이 게시된 후 전송되는 등급 인증서 메일에 포함된 링크를 통해 IARC로 연락할 수 있습니다.
 
 특정 국가나 지역에서는 앱의 등급이 부적절한 것으로 분류되는 경우도 있을 수 있습니다. 그런 경우에는 앱을 제공할 수 없는 지역/국가라는 메시지가 나타납니다. 이 분류(또는 다른 중요한 사항)에 동의하지 않는 경우에는 IARC가 보내는 등급 인증서 메일에 포함된 링크를 사용하여 이의 제기를 할 수 있습니다.
 
-## <a name="previous-windows-store-age-ratings"></a>이전 Windows 스토어 연령별 등급
 
+## <a name="previous-windows-store-age-ratings"></a>이전 Windows 스토어 연령별 등급
 
 이전의 개발자들은 설문지를 작성하는 대신 자신이 게시할 앱의 연령별 등급을 직접 지정했습니다. 다음은 이전 Windows 스토어 연령별 등급의 내용입니다.
 

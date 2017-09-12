@@ -6,20 +6,21 @@ keywords: "UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 
 label: Layout
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 08/9/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
-ms.openlocfilehash: 1034588565032301cb0746d79a122e8388dad8f9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 4c1b4617b3b58cb613bcca8d5df456621af730fa
+ms.sourcegitcommit: 0d5b3daddb3ae74f91178c58e35cbab33854cb7f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="layout-for-uwp-apps"></a>UWP 앱의 레이아웃
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-
-앱 구조, 페이지 레이아웃 및 탐색은 앱 사용자 환경의 기본입니다. 이 섹션의 문서는 다양한 장치 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 앱을 만드는 데 도움이 됩니다.
+앱 구조, 페이지 레이아웃 및 탐색은 앱 사용자 환경의 기본입니다. 이 섹션의 문서에서는 Fluent 디자인 시스템을 사용하여 다양한 장치 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 앱을 만드는 방법을 설명합니다.
 
 ## <a name="intro"></a>소개
 
@@ -27,7 +28,7 @@ translationtype: HT
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
   <p><b>[앱 UI 디자인 소개](design-and-ui-intro.md)</b><br />
-UWP 앱을 디자인할 때 다양한 디스플레이 크기를 가진 여러 장치에 맞는 사용자 인터페이스를 만듭니다. 이 문서에서는 UI 관련 기능 개요, UWP 앱의 이점 및 반응형 UI 개발에 대한 몇 가지 팁과 유용한 정보를 제공합니다. </p>
+UWP 앱을 디자인할 때 다양한 디스플레이 크기를 가진 여러 장치에 맞는 사용자 인터페이스를 만듭니다. 이 문서에서는 Fluent 디자인 시스템 소개, UI 관련 기능 개요, UWP 앱의 이점 및 반응형 UI 개발에 대한 몇 가지 팁과 유용한 정보를 제공합니다. </p>
   </div>
   <div class="side-by-side-content-right">
     ![여러 장치에서 실행되는 앱](images/rspd-reposition-type1-sm.png)
@@ -60,30 +61,31 @@ UWP 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의
 ## <a name="page-layout"></a>페이지 레이아웃 
 아래 문서는 다양한 화면 크기, 창 크기, 해상도 및 방향에서 멋지게 보이는 유연한 UI를 만드는 데 도움이 됩니다. 
 
+<div style="column-count: 2; column-gap: 40px; margin-top: 40px;">
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-   <p><b>[화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)</b><br/>
+<div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid;">
+<p style="margin-top: 0px; padding-top: 0px;"><b>[화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)</b><br/>
 Windows 10 에코시스템에서는 장치 대상 및 화면 크기가 너무 다양해서 각각에 맞게 UI를 최적화하는 것에 대해 걱정할 수조차 없습니다. 대신 360, 640, 1024, 1366 epx 등의 몇 가지 주요 너비("중단점"이라고도 함)에 대해 디자인하는 것이 좋습니다.</p>
-  </div>
-  <div class="side-by-side-content-right">
- <p><b>[XAML을 사용하여 레이아웃 정의](layouts-with-xaml.md)</b> <br/>
+</div>
+
+<div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid;">
+  <p><b>[XAML을 사용하여 레이아웃 정의](layouts-with-xaml.md)</b> <br/>
 XAML 속성 및 레이아웃 패널을 사용하여 반응성이 뛰어난 적응형 앱을 만드는 방법입니다.</p>
-  </div>
 </div>
-</div>
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
+<div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid;">
    <p><b>[레이아웃 패널](layout-panels.md)</b> <br />
-각 패널의 레이아웃 유형을 설명하고 패널을 사용하여 XAML UI 요소를 배치하는 방법을 보여 줍니다.</p>
-  </div>
-  <div class="side-by-side-content-right">
+각 패널의 레이아웃 유형을 설명하고 패널을 사용하여 XAML UI 요소를 배치하는 방법을 보여 줍니다.</p> 
+</div>
+<div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid;">
  <p><b>[맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)</b> <br />
 차원 속성(너비, 높이 및 제약 조건) 외에도 요소에는 요소가 레이아웃 단계를 통과하고 UI에 렌더링될 때 레이아웃 동작에 영향을 주는 맞춤, 여백 및 안쪽 여백 속성이 있을 수도 있습니다.</p> 
-  </div>
 </div>
+<div style="-webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid;">
+ <p><b>[Grid 및 StackPanel을 사용하여 레이아웃 만들기](grid-tutorial.md)</b> <br />
+XAML을 사용하여 Grid 및 StackPanel 요소로 간단한 날씨 앱의 레이아웃을 만들 수 있습니다. </p> 
 </div>
+
+</div>
+
 
 

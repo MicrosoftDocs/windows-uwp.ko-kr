@@ -6,14 +6,18 @@ ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
 template: detail.hbs
 extraBodyClass: style-color
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0d4266d1335198cffb74900b0d1eb2bb48cd1879
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+design-contact: rybick
+doc-status: Published
+ms.openlocfilehash: fd37d69c2e9b20b46c34e6071f302bd55bbbba26
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="color"></a>색
 
@@ -132,13 +136,47 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
       </tr>
   </table>
 
+특히 텍스트와 아이콘에는 테마 컬러를 배경으로 사용하지 마세요. 테마 컬러가 변할 수 있으므로 테마 컬러를 배경으로 사용해야 하는 경우 전경 텍스트를 쉽게 읽을 수 있도록 몇 가지 추가 작업을 수행해야 합니다. 예를 들어 텍스트가 흰색이고 테마 컬러가 밝은 회색인 경우 흰색과 밝은 회색 사이의 명암비가 작기 때문에 텍스트가 잘 안 보입니다. 테마 컬러를 테스트하여 어두운 색인지 확인하는 방법으로 이 문제를 해결할 수 있습니다.  
 
-<div class="microsoft-internal-note">
-경험상, 테마 컬러가 배경으로 사용될 경우에는 그 위에 항상 흰색 텍스트를 삽입하는 것이 좋습니다. Windows와 함께 제공되는 기본 테마 컬러는 흰색 텍스트와 뛰어난 명암비를 이룹니다. 사용자는 자신의 선호도에 따라 흰색과 낮은 대비를 이루는 테마 컬러를 선택할 수도 있습니다. 텍스트를 분간하기 힘들 경우에는 항상 더 어두운 테마 컬러를 선택해야 합니다.
-</div>
+다음 알고리즘을 사용하여 배경색이 밝은 색인지 아니면 어두운 색인지 확인합니다.
+
+```C#
+void accentColorUpdated(FrameworkElement elementWithText)
+{
+    var uiSettings = new Windows.UI.ViewManagement.UISettings();
+    Windows.UI.Color c = uiSettings.GetColorValue(UIColorType.Accent);
+
+    bool colorIsDark = (5 * c.G + 2 * c.R + c.B) <= 8 * 128;
+    if (colorIsDark)
+    {
+        elementWithText.RequestedTheme = ElementTheme.Light;
+    }
+    else
+    {
+        elementWithText.RequestedTheme = ElementTheme.Dark;
+    }
+}
+```
 
 
-사용자가 테마 컬러를 선택하면 시스템 테마의 일부로 나타납니다. 영향을 받는 영역은 시작, 작업 표시줄, 창 크롬, [공용 컨트롤](../controls-and-patterns/index.md) 내의 선택한 상호 작용 상태 및 하이퍼링크입니다. 각 앱은 해당 앱의 입력 체계, 배경 및 상호 작용에 테마 컬러를 추가로 통합하거나 재정의하여 특정 브랜딩을 유지합니다.
+```JS
+function accentColorUpdated(elementWithText)
+{
+    var uiSettings = new Windows.UI.ViewManagement.UISettings();
+    Windows.UI.Color c = uiSettings.GetColorValue(UIColorType.Accent);
+    var colorIsDark (5 * c.g + 2 * c.r + c.b) <= 8 * 128;
+    if (colorIsDark)
+    {
+        elementWithText.RequestedTheme = ElementTheme.Light;
+    }
+    else
+    {
+        elementWithText.RequestedTheme = ElementTheme.Dark;
+    }     
+}
+```
+
+테마 컬러가 밝은 색인지 아니면 어두운 색인지 확인한 후에는 적절한 전경 색을 선택합니다. 어두운 배경에는 밝은 테마의 SystemControlForegroundBaseHighBrush를 사용하고 밝은 배경에는 어두운 테마 버전을 사용하는 것이 좋습니다.
 
 ## <a name="color-palette-building-blocks"></a>색상표 구성 요소
 
@@ -228,7 +266,7 @@ App.xaml에서 **RequestedTheme** 속성을 변경하여 쉽게 테마를 변경
 </Application>
 ```
 
-**RequestedTheme**를 제거하면 응용 프로그램에 사용자의 앱 모드 설정이 적용되고 어둡거나 밝은 테마로 앱을 표시하도록 선택할 수 있음을 의미합니다. 
+**RequestedTheme**를 제거하면 응용 프로그램에 사용자의 앱 모드 설정이 적용되고 어둡거나 밝은 테마로 앱을 표시하도록 선택할 수 있음을 의미합니다.
 
 테마는 앱의 모양에 큰 영향을 미치므로 앱을 만들 때 테마를 고려해야 합니다.
 

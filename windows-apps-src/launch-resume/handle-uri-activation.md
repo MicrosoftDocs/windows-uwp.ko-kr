@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b655bea614f1c395959a12e9c3b8a5b1af61d694
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 40c70770028853d5912ef63f84259245252ce881
+ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="handle-uri-activation"></a>URI 활성화 처리
 
@@ -73,12 +75,7 @@ translationtype: HT
 
 ## <a name="step-2-add-the-proper-icons"></a>2단계: 적절한 아이콘 추가
 
-
-URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양한 위치(예제: 기본 프로그램 제어판)에 표시되는 아이콘이 있습니다.
-
-로고가 이러한 모든 위치에서 제대로 표시되도록 프로젝트에 적절한 아이콘을 포함하는 것이 좋습니다. 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 예제 아이콘은 [연결 시작 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620490)를 참조하세요.
-
-![images 폴더의 파일이 표시된 솔루션 탐색기 'icon.targetsize'와 'smalltile-sdk' 모두 16, 32, 48 및 256픽셀 버전이 있습니다.](images/seviewofimages.png)
+URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양한 위치(예: 기본 프로그램 제어판)에 표시되는 아이콘이 있습니다. 이 목적을 위해 프로젝트에 44x44 아이콘을 포함합니다. 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 아이콘에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets)을 참조하세요.
 
 ## <a name="step-3-handle-the-activated-event"></a>3단계: 활성화된 이벤트 처리
 

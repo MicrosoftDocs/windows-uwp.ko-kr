@@ -5,21 +5,29 @@ title: "당겨서 새로 고침"
 label: Pull-to-refresh
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
-ms.openlocfilehash: 0d10a0c7f269cc6c7d0b2e9476a926226fe94f82
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 51a8c9a2e4618e054374308918a74cf2095119ef
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 당겨서 새로 고침 패턴을 사용하면 데이터 목록을 터치하고 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 당겨서 새로 고침은 모바일 앱에서 널리 사용되지만 터치 스크린이 있는 디바이스에서 유용합니다. [조작 이벤트](../input-and-devices/touch-interactions.md#manipulation-events)를 처리하여 앱에서 당겨서 새로 고침을 구현할 수 있습니다.
+
+> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 [당겨서 새로 고침 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620635)은 이 패턴을 지원하는 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 컨트롤을 확장하는 방법을 보여 줍니다. 이 문서에서는 이 샘플을 사용하여 당겨서 새로 고침을 구현하는 주요 사항을 설명합니다.
 
@@ -39,7 +47,7 @@ RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 �
 - 꺼짐: `PullThreshold`를 초과했을 때 목록이 해제되는 경우에만 새로 고침을 요청합니다. 사용자가 스크롤러를 놓을 때 표시기가 사라지는 애니메이션 효과가 주어집니다. 휴대폰에서 사용할 수 있는 경우 상태 표시줄 표시기가 표시됩니다.
 - 켜짐: `PullThreshold`를 초과하자마자 해제 여부에 상관없이 새로 고침을 요청합니다. 표시기는 새 데이터를 검색할 때까지 표시되며 새 데이터가 검색되면 사라지는 애니메이션 효과가 주어집니다. **Deferral**은 데이터 가져오기가 완료되면 앱에 알리는 데 사용됩니다.
 
-> **참고**&nbsp;&nbsp;샘플의 코드는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)에 적용될 수도 있습니다. GridView를 수정하려면 ListView 대신 GridView에서 사용자 지정 클래스를 파생하고 기본 GridView 템플릿을 수정합니다.
+> **참고**&nbsp;&nbsp;샘플의 코드는 [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)에 적용될 수도 있습니다. GridView를 수정하려면 ListView 대신 GridView에서 사용자 지정 클래스를 파생하고 기본 GridView 템플릿을 수정합니다.
 
 ## <a name="add-a-refresh-indicator"></a>새로 고침 표시기 추가
 
@@ -51,7 +59,7 @@ RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 �
 
 **목록 보기 템플릿 수정**
 
-당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx) 위의 [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)에 배치됩니다.
+당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [ItemsPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) 위의 [Grid](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx)에 배치됩니다.
 
 > **참고**&nbsp;&nbsp;`DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
 
@@ -123,7 +131,7 @@ XAML에서 목록 보기에 대한 새로 고침 표시기의 콘텐츠를 설�
 
 **회전자에 애니메이션 효과 주기**
 
-목록을 아래로 당기면 RefreshableListView의 `PullProgressChanged` 이벤트가 발생합니다. 앱에서 이 이벤트를 처리하여 새로 고침 표시기를 제어합니다. 샘플에서는 이 스토리보드가 표시기의 [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx)에 애니메이션 효과를 주고 새로 고침 표시기를 회전하는 작업부터 시작합니다. 
+목록을 아래로 당기면 RefreshableListView의 `PullProgressChanged` 이벤트가 발생합니다. 앱에서 이 이벤트를 처리하여 새로 고침 표시기를 제어합니다. 샘플에서는 이 스토리보드가 표시기의 [RotateTransform](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx)에 애니메이션 효과를 주고 새로 고침 표시기를 회전하는 작업부터 시작합니다. 
 
 **XAML**
 ```xaml
@@ -142,13 +150,13 @@ XAML에서 목록 보기에 대한 새로 고침 표시기의 콘텐츠를 설�
 
 ## <a name="handle-scroll-viewer-manipulation-events"></a>스크롤 뷰어 조작 이벤트 처리
 
-목록 보기 컨트롤 템플릿에는 사용자가 목록 항목을 스크롤할 수 있도록 해 주는 기본 제공 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)가 포함되어 있습니다. 당겨서 새로 고침을 구현하려면 기본 제공 스크롤 뷰어의 조작 이벤트뿐만 아니라 여러 관련 이벤트를 처리해야 합니다. 조작 이벤트에 대한 자세한 내용은 [터치 조작](../input-and-devices/touch-interactions.md)을 참조하세요.
+목록 보기 컨트롤 템플릿에는 사용자가 목록 항목을 스크롤할 수 있도록 해 주는 기본 제공 [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)가 포함되어 있습니다. 당겨서 새로 고침을 구현하려면 기본 제공 스크롤 뷰어의 조작 이벤트뿐만 아니라 여러 관련 이벤트를 처리해야 합니다. 조작 이벤트에 대한 자세한 내용은 [터치 조작](../input-and-devices/touch-interactions.md)을 참조하세요.
 
 ** OnApplyTemplate**
 
-이벤트 처리기를 추가하고 나중에 코드에서 호출할 수 있도록 스크롤 뷰어 및 기타 템플릿 부분에 액세스하려면 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) 메서드를 재정의해야 합니다. 코드에서 나중에 사용하도록 저장할 수 있는 컨트롤 템플릿의 명명된 부분에 대한 참조를 가져오려면 OnApplyTemplate 템플릿에서 [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx)를 호출합니다.
+이벤트 처리기를 추가하고 나중에 코드에서 호출할 수 있도록 스크롤 뷰어 및 기타 템플릿 부분에 액세스하려면 [OnApplyTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) 메서드를 재정의해야 합니다. 코드에서 나중에 사용하도록 저장할 수 있는 컨트롤 템플릿의 명명된 부분에 대한 참조를 가져오려면 OnApplyTemplate 템플릿에서 [GetTemplateChild](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx)를 호출합니다.
 
-샘플에서는 템플릿 부분을 저장하는 데 사용된 변수를 개인 변수 영역에서 선언합니다. OnApplyTemplate 메서드에서 검색된 후 [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) 및 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) 이벤트의 이벤트 처리기가 추가됩니다.
+샘플에서는 템플릿 부분을 저장하는 데 사용된 변수를 개인 변수 영역에서 선언합니다. OnApplyTemplate 메서드에서 검색된 후 [DirectManipulationStarted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [DirectManipulationCompleted](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [ViewChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) 및 [PointerPressed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) 이벤트의 이벤트 처리기가 추가됩니다.
 
 **DirectManipulationStarted**
 
@@ -162,7 +170,7 @@ XAML에서 목록 보기에 대한 새로 고침 표시기의 콘텐츠를 설�
 
 애니메이션에 대한 이벤트 처리기도 제거됩니다.
 
-`AutoRefresh` 속성 값에 따라 목록에 즉시 애니메이션 효과를 다시 주거나 새로 고침이 완료될 때까지 기다린 후 다시 애니메이션 효과를 줄 수도 있습니다. [**Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체가 새로 고침 완료 표시에 사용됩니다. 이때 새로 고침 표시기 UI가 숨겨집니다.
+`AutoRefresh` 속성 값에 따라 목록에 즉시 애니메이션 효과를 다시 주거나 새로 고침이 완료될 때까지 기다린 후 다시 애니메이션 효과를 줄 수도 있습니다. [Deferral](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체가 새로 고침 완료 표시에 사용됩니다. 이때 새로 고침 표시기 UI가 숨겨집니다.
 
 DirectManipulationCompleted 이벤트 처리기의 이 부분에서 `RefreshRequested` 이벤트가 발생하고 필요한 경우 Deferral을 가져옵니다.
 
@@ -232,7 +240,7 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 
 ## <a name="composition-animations"></a>컴퍼지션 애니메이션
 
-기본적으로 스크롤 막대가 맨 위에 도달하면 스크롤 뷰어의 콘텐츠는 중지됩니다. 사용자가 계속해서 목록을 아래로 당기면 시각적 계층에 액세스하고 목록 콘텐츠에 애니메이션 효과를 줘야 합니다. 샘플에서는 이를 위해 [컴퍼지션 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation), 특히 [식 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)을 사용합니다.
+기본적으로 스크롤 막대가 맨 위에 도달하면 스크롤 뷰어의 콘텐츠는 중지됩니다. 사용자가 계속해서 목록을 아래로 당기면 시각적 계층에 액세스하고 목록 콘텐츠에 애니메이션 효과를 줘야 합니다. 샘플에서는 이를 위해 [컴퍼지션 애니메이션](https://msdn.microsoft.com/windows/uwp/composition/composition-animation), 특히 [식 애니메이션](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations)을 사용합니다.
 
 샘플에서 이 작업은 주로 `CompositionTarget_Rendering` 이벤트 처리기 및 `UpdateCompositionAnimations` 메서드에서 수행됩니다.
 
@@ -242,4 +250,4 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 - [터치 조작](../input-and-devices/touch-interactions.md)
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [목록 보기 항목 템플릿](listview-item-templates.md)
-- [식 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+- [식 애니메이션](https://msdn.microsoft.com/windows/uwp/composition/composition-animation#expression-animations)

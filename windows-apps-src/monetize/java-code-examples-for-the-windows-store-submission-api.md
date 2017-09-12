@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "이 섹션의 Java 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
-title: "제출 API에 대한 Java 코드 예제"
+title: "Java 샘플 - 앱, 추가 기능, 플라이트 제출"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Windows 스토어 제출 API, 코드 예제"
-ms.openlocfilehash: ff5e857e0f5ce110ab7afc64bd2faa28f7bea517
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 코드 예제, Java"
+ms.openlocfilehash: daa91b5354abc070b1ba538f7d818125e4bc94a9
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
-# <a name="java-code-examples-for-the-submission-api"></a>제출 API에 대한 Java 코드 예제
+# <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java 샘플: 앱, 추가 기능, 플라이트 제출
 
-이 문서에서는 *Windows 스토어 제출 API*를 사용하기 위한 Java 코드 예제를 제공합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
-
-이러한 코드 예제는 다음 작업을 보여 줍니다.
+이 문서는 이런 작업에 [Windows 스토어 제출 API](create-and-manage-submissions-using-windows-store-services.md)를 사용하는 방법을 설명하는 Java 코드 예제를 제공합니다.
 
 * [Azure AD 액세스 토큰 가져오기](#token)
 * [추가 기능 만들기](#create-add-on)
@@ -52,7 +52,7 @@ translationtype: HT
 <span id="create-add-on" />
 ## <a name="create-an-add-on"></a>추가 기능 만들기
 
-다음 예제에서는 추가 기능 [만들기](create-an-add-on.md) 및 [삭제](delete-an-add-on.md) 방법을 보여 줍니다(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함).
+다음 예제에서는 추가 기능 [만들기](create-an-add-on.md) 및 [삭제](delete-an-add-on.md) 방법을 보여 줍니다.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L310-L345)]
 

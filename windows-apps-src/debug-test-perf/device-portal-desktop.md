@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "데스크톱용 Device Portal"
 description: "Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7b8b396078d59cc2ab3180e9af8b6017fd5edbda
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 32155bfbb676a5f79dd4b1629f0a88368da36828
+ms.sourcegitcommit: 0fa9ae00117e8e6b04ed38956e605bb74c1261c6
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="device-portal-for-desktop"></a>데스크톱용 디바이스 포털
 
@@ -76,37 +78,11 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
     - UseDynamicPorts: 필수 DWORD. 선택한 포트 번호를 유지하려면 이 항목을 0으로 설정합니다.
-    - HttpPort: 필수 DWORD. Device Portal이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.    
+    - HttpPort: 필수 DWORD. Device Portal이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.  
     - HttpsPort: 필수 DWORD. Device Portal이 HTTPS 연결을 수신 대기하는 포트 번호를 포함합니다.
 
-## <a name="failure-to-install-developer-mode-package-or-launch-device-portal"></a>개발자 모드 패키지 설치 또는 Device Portal 시작 실패
-경우에 따라 네트워크 또는 호환성 문제로 인해 개발자 모드가 제대로 설치되지 않습니다. 개발자 모드 패키지는 **원격** 배포(Device Portal 및 SSH)에 필요하며 로컬 개발에는 필요하지 않습니다.  이러한 문제가 발생하더라도 Visual Studio를 사용하여 앱을 로컬로 계속 배포할 수 있습니다. 
+## <a name="failure-to-install-developer-mode-package"></a>개발자 모드 패키지 설치 실패
+경우에 따라 네트워크 또는 호환성 문제로 인해 개발자 모드가 제대로 설치되지 않습니다. PC에 **원격**으로 배포하려면, 다시 말해서 브라우저 또는 디바이스 검색에서 디바이스 포털을 사용하여 SSH를 설정하려면 개발자 모드 패키지가 필요하지만 로컬 배포에는 필요하지 않습니다.  이러한 문제가 발생하더라도 Visual Studio를 사용하여 앱을 로컬로 계속 배포할 수 있습니다. 
 
-[알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼을 참조하여 이러한 문제에 대한 해결 방법 등을 찾을 수 있습니다. 
+[알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼과 [개발자 모드 페이지](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#failure-to-install-developer-mode-package)를 참조하여 이러한 문제 등에 대한 해결책을 찾아보십시오. 
 
-### <a name="failed-to-locate-the-package"></a>패키지 찾기 실패
-
-"개발자 모드 패키지가 Windows 업데이트에서 없을 수 있습니다. 오류 코드 0x001234 자세한 정보"   
-
-이 오류는 네트워크 연결 문제, 엔터프라이즈 설정 또는 패키지 누락으로 인해 발생할 수 있습니다. 
-
-이 문제를 해결하려면
-
-1. 컴퓨터가 인터넷에 연결되어 있는지 확인합니다. 
-2. 도메인에 가입된 컴퓨터를 사용하는 경우 네트워크 관리자에게 문의하세요. 
-3. 설정 &gt; 업데이트 및 보안 &gt; Windows 업데이트에서 Windows 업데이트가 있는지 확인합니다.
-4. 설정 &gt; 시스템 &gt; 앱 및 기능 &gt; 선택적 기능 관리 &gt; 기능 추가에서 Windows 개발자 모드 패키지가 있는지 확인합니다. 없는 경우 Windows는 컴퓨터에 적합한 패키지를 찾을 수 없습니다. 
-
-위의 단계를 수행한 후 개발자 모드를 사용하도록 설정했다가 다시 사용하지 않도록 설정하여 문제를 해결하세요. 
-
-
-### <a name="failed-to-install-the-package"></a>패키지 설치 실패
-
-"개발자 모드 패키지를 설치하지 못했습니다. 오류 코드 0x001234 자세한 정보"
-
-이 오류는 사용 중인 Windows 빌드와 개발자 모드 패키지 간의 비호환성으로 인해 발생할 수 있습니다. 
-
-이 문제를 해결하려면
-
-1. 설정 &gt; 업데이트 및 보안 &gt; Windows 업데이트에서 Windows 업데이트가 있는지 확인합니다.
-2. 컴퓨터를 다시 부팅하여 모든 업데이트가 적용되도록 합니다.

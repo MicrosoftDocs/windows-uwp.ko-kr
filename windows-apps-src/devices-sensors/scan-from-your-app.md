@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: PatrickFarley
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: "앱에서 스캔"
 description: "여기서는 평판, 문서 공급 장치 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다."
-ms.author: dbirtolo
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 5233437bf1676cd63b4beebaf6b7004df2a8f0c6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c1db020b242c43808d356076641e375cb1581ed3
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="scan-from-your-app"></a>앱에서 스캔
 

@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f0fd2e03c58ac5ffa575cf2381df4c652422efea
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 230480343a3f63ece4935e34101b1d3ec5408b84
+ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="accessibility-overview"></a>접근성 개요  
 
@@ -22,11 +24,12 @@ translationtype: HT
 
 이 문서는 UWP(유니버설 Windows 플랫폼) 앱의 접근성 시나리오와 관련된 개념 및 기술에 대한 개요입니다.
 
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
 <span id="Accessibility_and_your_app"/>
 <span id="accessibility_and_your_app"/>
 <span id="ACCESSIBILITY_AND_YOUR_APP"/>
-## <a name="accessibility-and-your-app"></a>접근성 및 앱  
-장애 형식은 신체의 움직임, 시각, 색 지각, 청각, 말하기, 인지 능력, 읽고 쓰는 능력 제약 등을 비롯하여 매우 다양합니다. 그러나 여기에 제공된 지침을 따르면 대부분의 요구 사항을 충족할 수 있습니다. 이는 다음과 같은 경우를 의미합니다.
+## 접근성 및 앱. 장애 형식은 신체의 움직임, 시각, 색 지각, 청각, 말하기, 인지 능력, 읽고 쓰는 능력 제약 등을 비롯하여 매우 다양합니다. 그러나 여기에 제공된 지침을 따르면 대부분의 요구 사항을 충족할 수 있습니다. 이는 다음과 같은 경우를 의미합니다.
 
 * 키보드 조작 및 화면 읽기 프로그램 지원
 * 글꼴, 확대/축소 설정(확대), 색 및 고대비 설정 지원
@@ -181,4 +184,4 @@ XAML UI([**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn2
 * [접근성을 위한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [접근성](accessibility.md)
-* [내레이터 시작](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)
+* [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

@@ -3,15 +3,17 @@ author: jnHs
 Description: "Microsoft에서 발급하는 세금 양식의 수령인과 사용 가능한 시기 등 자세한 내용을 알아보세요."
 title: "Microsoft에서 발급하는 IRS 세금 양식 이해"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.openlocfilehash: 068a940a54048b10e8f66bd3267b3a22c42beb50
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
@@ -26,7 +28,8 @@ translationtype: HT
 |1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄본은 **1월 31일** 당일 또는 이전 날짜로 소인이 찍혀 발송되고, .pdf 사본은 동일한 시기에 개발자 센터(**대시보드 > 계정 설정 > 세금 프로필**)에서 사용할 수 있게 됩니다. |
 |1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄본은 **3월 15일** 당일 또는 이전 날짜로 소인이 찍혀 발송되고, .pdf 사본은 동일한 시기에 개발자 센터(**대시보드 > 계정 설정 > 세금 프로필**)에서 사용할 수 있게 됩니다. |
 
-> **참고** IRS 세금 양식에 기재되는 주소는 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)의 주소를 기준으로 합니다. 주소가 변경된 경우 **세금 프로필**에서 주소를 업데이트하세요.
+> [!NOTE]
+> IRS 세금 양식에 기재되는 주소는 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)의 주소를 기준으로 합니다. 주소가 변경된 경우 **세금 프로필**에서 주소를 업데이트하세요.
 
 ## <a name="for-developers-located-in-the-united-states"></a>미국에 거주하는 개발자
 
@@ -68,7 +71,7 @@ EIN: \*\*\*\*\*4442<br>
      <th> 수령하게 되는 양식</th>
   </tr>
   <tr> 
-     <td valign="top">당해 과세 연도에 앱 내 광고(Microsoft Advertising)를 통해 **$600 이상의 지급금**을 받은 경우</td>
+     <td valign="top">당해 과세 연도에 앱 내 광고를 통해 **$600 이상의 지급금**을 받은 경우</td>
     <td valign="top">**1099-MISC**:<br>
 지급인: Microsoft Online Inc<br>
 EIN: \*\*\*\*\*0505<br>
@@ -76,7 +79,7 @@ EIN: \*\*\*\*\*0505<br>
 **중요:** 특정 법인은 Microsoft로부터 받은 지급 금액에 관계없이 1099-MISC 양식을 수령하지 않습니다.  자세한 정보는 세무 전문가에게 문의하세요.  </td>
   </tr>
   <tr> 
-     <td valign="top">당해 과세 연도에 앱 내 광고(Microsoft Advertising)를 통해 **$600 미만의 지급금**을 받은 경우</td>
+     <td valign="top">당해 과세 연도에 앱 내 광고를 통해 **$600 미만의 지급금**을 받은 경우</td>
      <td valign="top">없음</td>
   </tr>
 </table>
@@ -123,4 +126,5 @@ EIN: \*\*\*\*\*0505<br>
 </table>
 
 
-> **참고** **IRS 세금 양식**과 관련하여 추가적인 질문이나 우려 사항이 있는 경우 [지원 티켓](http://aka.ms/storesupport)을 만드세요. Microsoft는 특정 세금 상황과 관련된 질문에 답할 수 없습니다. 이러한 질문에 대해서는 세무 전문가에게 조언을 구하시기 바랍니다.
+> [!NOTE]
+> **IRS 세금 양식**과 관련하여 추가적인 질문이나 우려 사항이 있는 경우 [지원 티켓](http://aka.ms/storesupport)을 만드세요. Microsoft는 특정 세금 상황과 관련된 질문에 답할 수 없습니다. 이러한 질문에 대해서는 세무 전문가에게 조언을 구하시기 바랍니다.

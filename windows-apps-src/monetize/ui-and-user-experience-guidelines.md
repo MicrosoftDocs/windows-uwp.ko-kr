@@ -9,15 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 광고, 광고, 지침, 모범 사례"
-ms.openlocfilehash: 75a68977e5edb996a5e2fc1ae9265d11b7492ad9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8dc9c00bdeb47b5f07af0b9b27ef843e2afd4456
+ms.sourcegitcommit: 9d1ca16a7edcbbcae03fad50a4a10183a319c63a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/09/2017
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
 
 이 문서에서는 앱 내 배너 광고와 중간 광고로 뛰어난 환경을 제공하기 위한 지침을 제시합니다. 앱의 모양과 느낌을 디자인하는 방법에 대한 일반적인 지침은 [디자인 및 UI](https://developer.microsoft.com/windows/apps/design)를 참조하세요.
 
->**중요**&nbsp;&nbsp;앱 내 광고를 사용할 때는 [정책 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)(광고 수행 및 콘텐츠)을 포함하되 이에 국한되지 않는 Windows 스토어 정책을 준수해야 합니다. 특히 앱의 배너 광고 또는 중간 광고 구현은 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) 요구 사항을 충족해야 합니다. 이 문서에는 이 정책을 위반하는 구현의 예가 포함되어 있습니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 정보 제공의 목적으로만 제공됩니다. 일부만 예로 든 것이며 이 문서에는 열거되지 않았지만 Windows 스토어 정책을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
+> [!IMPORTANT]
+> 앱 내 광고를 사용할 때는 [정책 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)(광고 수행 및 콘텐츠)을 포함하되 이에 국한되지 않는 Windows 스토어 정책을 준수해야 합니다. 특히 앱의 배너 광고 또는 중간 광고 구현은 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) 요구 사항을 충족해야 합니다. 이 문서에는 이 정책을 위반하는 구현의 예가 포함되어 있습니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 정보 제공의 목적으로만 제공됩니다. 일부만 예로 든 것이며 이 문서에는 열거되지 않았지만 Windows 스토어 정책을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
 
 ## <a name="guidelines-for-banner-ads"></a>배너 광고에 대한 지침
 

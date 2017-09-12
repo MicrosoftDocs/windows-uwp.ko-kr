@@ -6,14 +6,19 @@ title: "입력란"
 label: Text box
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 29ab04588088907a851700fcbd04a64bcea77d63
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: e3b39208db6cd0cb8954d773b704b68888cc5ff0
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="text-box"></a>입력란
 
@@ -23,26 +28,20 @@ TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수
 
 TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 있습니다. 텍스트 복사 및 붙여넣기를 지원하는 친숙한 기본 제공 상황에 맞는 메뉴와 함께 제공됩니다. "모두 지우기" 단추를 통해 사용자는 입력된 모든 텍스트를 빠르게 삭제할 수 있습니다. 또한 맞춤법 검사 기능이 기본 제공되며 기본적으로 사용됩니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
-<li>[**Text 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)</li>
-</ul>
-</div>
+> **중요 API**: [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [Text 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 사용자가 양식 등에서 서식 없는 텍스트를 입력하고 편집할 수 있게 하려면 **TextBox** 컨트롤을 사용합니다. [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) 속성을 사용하여 TextBox에 텍스트를 가져오고 설정할 수 있습니다.
 
-TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상태여야 합니다. 텍스트를 편집할 수 없는 경우 [**TextBlock**](text-block.md)을 대신 사용하는 것이 좋습니다.
+TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상태여야 합니다. 텍스트를 편집할 수 없는 경우 [TextBlock](text-block.md)을 대신 사용하는 것이 좋습니다.
 
-[**PasswordBox**](password-box.md) 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 개인 데이터를 수집합니다. 암호 상자는 텍스트 입력란처럼 보이지만 입력된 텍스트 대신 글머리 기호를 렌더링합니다.
+[PasswordBox](password-box.md) 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 개인 데이터를 수집합니다. 암호 상자는 텍스트 입력란처럼 보이지만 입력된 텍스트 대신 글머리 기호를 렌더링합니다.
 
-사용자가 검색어를 입력할 수 있게 하거나 입력 시 선택할 제안 목록을 사용자에게 표시하려면 [**AutoSuggestBox**](auto-suggest-box.md)를 사용합니다.
+사용자가 검색어를 입력할 수 있게 하거나 입력 시 선택할 제안 목록을 사용자에게 표시하려면 [AutoSuggestBox](auto-suggest-box.md)를 사용합니다.
 
-서식 있는 텍스트 파일을 표시하고 편집하려면 [**RichEditBox**](rich-edit-box.md)를 사용합니다.
+서식 있는 텍스트 파일을 표시하고 편집하려면 [RichEditBox](rich-edit-box.md)를 사용합니다.
 
 올바른 텍스트 컨트롤을 선택하는 방법에 대한 자세한 내용은 [텍스트 컨트롤](text-controls.md) 문서를 참조하세요.
 
@@ -104,8 +103,8 @@ IsEnabled
 ### <a name="enable-multi-line-input"></a>여러 줄 입력 사용
 
 입력란에서 여러 줄에 텍스트를 표시할지 여부를 제어하는 데 사용할 수 있는 두 개의 속성이 있습니다. 일반적으로 여러 줄 입력란을 만들려면 두 속성을 모두 설정합니다.
-- 입력란에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [**AcceptsReturn**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) 속성을 **true**로 설정합니다.
-- 텍스트 줄 바꿈을 사용하도록 설정하려면 [**TextWrapping**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
+- 입력란에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) 속성을 **true**로 설정합니다.
+- 텍스트 줄 바꿈을 사용하도록 설정하려면 [TextWrapping](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
 
 > **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 발생합니다.
 
@@ -282,6 +281,6 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 - [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md)
 - [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
 - [텍스트 입력에 대한 지침](text-controls.md)
-- [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209683)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/br227519)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)

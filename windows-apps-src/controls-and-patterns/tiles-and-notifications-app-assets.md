@@ -6,14 +6,16 @@ ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 0d3b58b8ea03c3ba836078e507495beeebe74fb8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 54ad78d5799a96ddcec7b060704ee198e0bf8db5
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="guidelines-for-tile-and-icon-assets"></a>타일 및 아이콘 자산에 대한 지침
 
@@ -123,7 +125,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 ![와이드 타일 크기 조정 비율](images/assetguidance11.png)
 
-큰 타일의 경우 타일 크기의 50%로 아이콘 너비와 높이를 제한합니다.
+큰 타일의 경우 타일 크기의 66%로 아이콘 너비를 제한하고 50%로 높이를 제한합니다.
 
 ![큰 타일 크기 비율](images/assetguidance12.png)
 
@@ -181,24 +183,6 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 ![100% 배율의 대상 기반 자산 크기 조정](images/assetguidance23.png)
 
-**아이콘 템플릿 앱 자산**
-
-아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows 10은 휴대폰과 태블릿/데스크톱 둘 다에서 이 템플릿을 지원합니다. ([특수 타일 템플릿 문서](tiles-and-notifications-special-tile-templates-catalog.md)에서 아이콘 타일을 만드는 방법을 알아봅니다.)
-
-스토어, 메시지, 휴대폰 등 아이콘 템플릿을 사용하는 앱에는 배지(라이브 카운터 포함)를 특징으로 할 수 있는 대상 기반 자산이 있습니다. 다른 대상 기반 자산과 마찬가지로 안쪽 여백은 필요하지 않습니다. 아이콘 자산은 앱 매니페스트의 일부가 아닌 라이브 타일 페이로드의 일부입니다. 자산은 적합하게 배율 조정되고 3 2 비율 컨테이너 내에서 가운데에 배치됩니다.
-
-![배지가 있는 자산 및 배지가 없는 자산에 대한 크기 조정](images/assetguidance24.png)
-
-정사각형 자산의 경우 컨테이너 내에서 자동으로 가운데에 배치됩니다.
-
-![배지가 있거나 없는 정사각형 자산 크기 조정](images/assetguidance25.png)
-
-정사각형이 아닌 자산의 경우 컨테이너의 너비/높이에 대한 자동 가로/세로 가운데 배치 및 맞추기가 발생합니다.
-
-![배지가 있거나 없는 정사각형이 아닌 자산 크기 조정](images/assetguidance26a.png)
-
-![배지가 있거나 없는 정사각형이 아닌 자산 크기 조정](images/assetguidance26b.png)
-
 ## <a name="splash-screen-assets"></a>시작 화면 자산
 
 
@@ -233,38 +217,217 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 최소한, 100, 200 및 400 배율 인수에 대한 자산을 제공하는 것이 좋습니다. 모든 배율 인수에 대한 자산을 제공하면 최적의 사용자 환경이 구현됩니다.
 
-**배율 기반 자산**
+<br/>
 
-| 범주             | 요소 이름      | 100% 배율에서 | 125% 배율에서 | 150% 배율에서 | 200% 배율에서 | 400% 배율에서 |
-|----------------------|-------------------|---------------|---------------|---------------|---------------|---------------|
-| 작은 타일                | Square71x71Logo   | 71x71         | 89x89         | 107x107       | 142x142       | 284x284       |
-| 중간 크기 타일               | Square150x150Logo | 150x150       | 188x188       | 225x225       | 300x300       | 600x600       |
-| 와이드 타일                 | Square310x150Logo | 310x150       | 388x188       | 465x225       | 620x300       | 1240x600      |
-| 큰 타일(데스크톱만 해당) | Square310x310Logo | 310x310       | 388 x 388       | 465 x 465       | 620 x 620       | 1240 x 1240     |
-| 앱 목록(아이콘)      | Square44x44Logo   | 44 x 44         | 55 x 55         | 66 x 66         | 88 x 88         | 176 x 176       |
+<table>
+<thead>
+<tr><th colspan="3">작은 타일(Square71x71Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">100% 배율</td>
+    <td width="20%">71x71</td>
+    <td>Square71x71Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>125% 배율</td>
+    <td>89x89</td>
+    <td>Square71x71Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>150% 배율</td>
+    <td>107x107</td>
+    <td>Square71x71Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>200% 배율</td>
+    <td>142x142</td>
+    <td>Square71x71Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>400% 배율</td>
+    <td>284x284</td>
+    <td>Square71x71Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
- 
+<br/>
 
-**배율 기반 자산에 대한 파일 이름 예제**
+<table>
+<thead>
+<tr><th colspan="3">중간 타일(Square150x150Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">100% 배율</td>
+    <td width="20%">150x150</td>
+    <td>Square150x150Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>125% 배율</td>
+    <td>188x188</td>
+    <td>Square150x150Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>150% 배율</td>
+    <td>225x225</td>
+    <td>Square150x150Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>200% 배율</td>
+    <td>300x300</td>
+    <td>Square150x150Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>400% 배율</td>
+    <td>600x600</td>
+    <td>Square150x150Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
-| 범주             | 요소 이름      | 100% 배율에서                  | 125% 배율에서                  | 150% 배율에서                  |
-|----------------------|-------------------|--------------------------------|--------------------------------|--------------------------------|
-| 작은 타일                | Square71x71Logo   | AppNameSmallTile.scale-100.png | AppNameSmallTile.scale 125.png | AppNameSmallTile.scale 150.png |
-| Medium               | Square150x150Logo | AppNameMedTile.scale-100.png   | AppNameMedTile.scale 125.png   | AppNameMedTile.scale 150.png   |
-| 와이드 타일                 | Square310x150Logo | AppNameWideTile.scale-100.png  | AppNameWideTile.scale 125.png  | AppNameWideTile.scale 150.png  |
-| 큰 타일(데스크톱만 해당) | Square310x310Logo | AppNameLargeTile.scale-100.png | AppNameLargeTile.scale 125.png | AppNameLargeTile.scale 150.png |
-| 앱 목록(아이콘)      | Square44x44Logo   | AppNameLargeTile.scale-100.png | AppNameLargeTile.scale 125.png | AppNameLargeTile.scale 150.png |
+<br/>
 
- 
+<table>
+<thead>
+<tr><th colspan="3">와이드 타일(Wide310x150Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">100% 배율</td>
+    <td width="20%">310x150</td>
+    <td>Wide310x150Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>125% 배율</td>
+    <td>388x188</td>
+    <td>Wide310x150Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>150% 배율</td>
+    <td>465x225</td>
+    <td>Wide310x150Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>200% 배율</td>
+    <td>620x300</td>
+    <td>Wide310x150Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>400% 배율</td>
+    <td>1240x600</td>
+    <td>Wide310x150Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
 
-| 범주             | 요소 이름      | 200% 배율에서                  | 400% 배율에서                  |
-|----------------------|-------------------|--------------------------------|--------------------------------|
-| 작은 타일                | Square71x71Logo   | AppNameSmallTile.scale 200.png | AppNameSmallTile.scale 400.png |
-| 중간 크기 타일               | Square150x150Logo | AppNameMedTile.scale 200.png   | AppNameMedTile.scale 400.png   |
-| 와이드 타일                 | Square310x150Logo | AppNameWideTile.scale 200.png  | AppNameWideTile.scale 400.png  |
-| 큰 타일(데스크톱만 해당) | Square310x310Logo | AppNameLargeTile.scale 200.png | AppNameLargeTile.scale 400.png |
-| 앱 목록(아이콘)      | Square44x44Logo   | AppNameLargeTile.scale 200.png | AppNameLargeTile.scale 400.png |
+<br/>
 
+<table>
+<thead>
+<tr><th colspan="3">큰 타일(Square310x310Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">100% 배율</td>
+    <td width="20%">310x310</td>
+    <td>Square310x310Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>125% 배율</td>
+    <td>388x388</td>
+    <td>Square310x310Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>150% 배율</td>
+    <td>465x465</td>
+    <td>Square310x310Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>200% 배율</td>
+    <td>620x620</td>
+    <td>Square310x310Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>400% 배율</td>
+    <td>1240x1240</td>
+    <td>Square310x310Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<table>
+<thead>
+<tr><th colspan="3">앱 목록 아이콘(Square44x44Logo)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">100% 배율</td>
+    <td width="20%">44x44</td>
+    <td>Square44x44Logo.scale-100.png</td>
+</tr>
+<tr>
+    <td>125% 배율</td>
+    <td>55x55</td>
+    <td>Square44x44Logo.scale-125.png</td>
+</tr>
+<tr>
+    <td>150% 배율</td>
+    <td>66x66</td>
+    <td>Square44x44Logo.scale-150.png</td>
+</tr>
+<tr>
+    <td>200% 배율</td>
+    <td>88x88</td>
+    <td>Square44x44Logo.scale-200.png</td>
+</tr>
+<tr>
+    <td>400% 배율</td>
+    <td>176x176</td>
+    <td>Square44x44Logo.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<table>
+<thead>
+<tr><th colspan="3">시작 화면(SplashScreen)</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td width="20%">100% 배율</td>
+    <td width="20%">620x300</td>
+    <td>SplashScreen.scale-100.png</td>
+</tr>
+<tr>
+    <td>125% 배율</td>
+    <td>775x375</td>
+    <td>SplashScreen.scale-125.png</td>
+</tr>
+<tr>
+    <td>150% 배율</td>
+    <td>930x450</td>
+    <td>SplashScreen.scale-150.png</td>
+</tr>
+<tr>
+    <td>200% 배율</td>
+    <td>1240x600</td>
+    <td>SplashScreen.scale-200.png</td>
+</tr>
+<tr>
+    <td>400% 배율</td>
+    <td>2480x1200</td>
+    <td>SplashScreen.scale-400.png</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
  
 
 **대상 기반 자산**
@@ -275,22 +438,22 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 다음 표에서는 모든 대상 기반 자산 크기와 해당 파일 이름 예제를 나열합니다.
 
-| 자산 크기 | 파일 이름 예제                 |
-|------------|-----------------------------------|
-| 16x16\*    | AppNameAppList.targetsize 16.png  |
-| 24x24\*    | AppNameAppList.targetsize 24.png  |
-| 32x32\*    | AppNameAppList.targetsize 32.png  |
-| 48x48\*    | AppNameAppList.targetsize 48.png  |
-| 256x256\*  | AppNameAppList.targetsize 256.png |
-| 20x20      | AppNameAppList.targetsize 20.png  |
-| 30x30      | AppNameAppList.targetsize 30.png  |
-| 36x36      | AppNameAppList.targetsize 36.png  |
-| 40x40      | AppNameAppList.targetsize 40.png  |
-| 60x60      | AppNameAppList.targetsize 60.png  |
-| 64x64      | AppNameAppList.targetsize 64.png  |
-| 72x72      | AppNameAppList.targetsize 72.png  |
-| 80x80      | AppNameAppList.targetsize 80.png  |
-| 96x96      | AppNameAppList.targetsize 96.png  |
+| 자산 크기 | 파일 이름 예제                  |
+|------------|------------------------------------|
+| 16x16\*    | Square44x44Logo.targetsize-16.png  |
+| 24x24\*    | Square44x44Logo.targetsize-24.png  |
+| 32x32\*    | Square44x44Logo.targetsize-32.png  |
+| 48x48\*    | Square44x44Logo.targetsize-48.png  |
+| 256x256\*  | Square44x44Logo.targetsize-256.png |
+| 20x20      | Square44x44Logo.targetsize-20.png  |
+| 30x30      | Square44x44Logo.targetsize-30.png  |
+| 36x36      | Square44x44Logo.targetsize-36.png  |
+| 40x40      | Square44x44Logo.targetsize-40.png  |
+| 60x60      | Square44x44Logo.targetsize-60.png  |
+| 64x64      | Square44x44Logo.targetsize-64.png  |
+| 72x72      | Square44x44Logo.targetsize-72.png  |
+| 80x80      | Square44x44Logo.targetsize-80.png  |
+| 96x96      | Square44x44Logo.targetsize-96.png  |
 
  
 
@@ -304,7 +467,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 **타일 자산**
 
 -   가운데 자산은 보통 시작 화면에서 앱을 표시하는 데 사용됩니다.
--   파일 이름 형식: \*Tile.scale-\*.PNG
+-   파일 이름 형식: [Square\Wide]\*x\*Logo.scale-\*.png
 -   영향을 받는 앱: 모든 UWP 앱
 -   용도:
     -   기본 시작 타일(데스크톱 및 모바일)
@@ -317,7 +480,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 **판이 있는 확장 가능한 목록 자산**
 
 -   이러한 자산은 배율 인수를 요청하는 화면에서 사용됩니다. 자산은 시스템을 통해 판을 가지거나 자체 배경색과 함께 제공됩니다(앱이 배경색을 포함하는 경우).
--   파일 이름 형식: \*AppList.scale-\*.PNG
+-   파일 이름 형식: Square44x44Logo.scale-\*.png
 -   영향을 받는 앱: 모든 UWP 앱
 -   용도:
     -   모든 앱 목록 시작(데스크톱)
@@ -330,7 +493,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 **판이 있는 대상 크기 목록 자산**
 
 -   플라토에 따라 크기 조정되지 않는 고정된 자산 크기가 있습니다. 레거시 환경에 주로 사용됩니다. 자산은 시스템에 의해 확인됩니다.
--   파일 이름 형식: \*AppList.targetsize-\*.PNG
+-   파일 이름 형식: Square44x44Logo.targetsize-\*.png
 -   영향을 받는 앱: 모든 UWP 앱
 -   용도:
     -   점프 목록 시작(데스크톱)
@@ -341,7 +504,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 **판이 없는 대상 크기 목록 자산**
 
 -   시스템에 의해 판이 제공되지 않거나 크기 조정되지 않는 자산이 있습니다.
--   파일 이름 형식: \*AppList.targetsize-\*\_altform-unplated.PNG
+-   파일 이름 형식: Square44x44Logo.targetsize-\*\_altform-unplated.png
 -   영향을 받는 앱: 모든 UWP 앱
 -   용도:
     -   작업 표시줄 및 작업 표시줄 미리 보기(데스크톱)
@@ -352,7 +515,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 **파일 확장명 자산**
 
 -   파일 확장명과 관련된 특정 자산이 있습니다. 이러한 자산은 파일 탐색기에서 Win32 스타일 파일 연결 아이콘 옆에 표시되며 테마 독립적이어야 합니다. 크기 조정은 데스크톱과 모바일 플랫폼에서 다릅니다.
--   파일 이름 형식: \*LogoExtensions.targetsize-\*.PNG
+-   파일 이름 형식: \*LogoExtensions.targetsize-\*.png
 -   영향을 받는 앱: 음악, 동영상, 사진, Microsoft Edge, Microsoft Office
 -   용도:
     -   파일 탐색기
@@ -362,30 +525,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 **시작 화면**
 
 -   앱의 시작 화면에 표시되는 자산입니다. 데스크톱 및 모바일 플랫폼에서 자동으로 조정됩니다.
--   파일 이름 형식: \*SplashScreen.screen-100.PNG
+-   파일 이름 형식: SplashScreen.scale-*.png
 -   영향을 받는 앱: 모든 UWP 앱
 -   용도:
     -   앱의 시작 화면
-
-**아이콘 타일 자산**
-
--   아이콘 템플릿을 활용하는 앱용 자산입니다.
--   파일 이름 형식: 해당 없음
--   영향을 받는 앱: 메시지, 휴대폰, 스토어 등
--   용도:
-    -   아이콘 타일
-
-
-
-## <a name="related-topics"></a>관련 항목
-
-
-
-* [특수 타일 템플릿](tiles-and-notifications-special-tile-templates-catalog.md)
- 
-
- 
-
-
-
-

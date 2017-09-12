@@ -4,19 +4,21 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Windows 스토어 제출 API를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 제출을 프로그래밍 방식으로 만들고 관리합니다."
 title: "제출 만들기 및 관리"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API"
-ms.openlocfilehash: ca8bb623d06da0001b1b0751a5ac1ccc310bbd84
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: cea6f7c1f542fa91506063331e8c68345c4cca54
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
 
-*Windows 스토어 제출 API*를 사용하여 사용자 또는 조직의 Windows 개발자 센터 계정에 대한 앱, 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 및 패키지 플라이트를 프로그래밍 방식으로 쿼리하고 이에 대한 제출을 만듭니다. 이 API는 계정에서 많은 앱 또는 추가 기능을 관리하고 이러한 자산의 제출 프로세스를 자동화 및 최적화하려는 경우 유용합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
+*Windows 스토어 제출 API*를 사용하여 사용자 또는 조직의 Windows 개발자 센터 계정에 대한 앱, 추가 기능 및 패키지 플라이트를 프로그래밍 방식으로 쿼리하고 이에 대한 제출을 만듭니다. 이 API는 계정에서 많은 앱 또는 추가 기능을 관리하고 이러한 자산의 제출 프로세스를 자동화 및 최적화하려는 경우 유용합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
 다음 단계에서는 Windows 스토어 제출 API를 사용하는 종단 간 프로세스를 설명합니다.
 
@@ -26,13 +28,11 @@ translationtype: HT
 
 
 <span id="not_supported" />
->**중요 정보**
+> [!Important]
+> 이 API를 사용하여 앱, 또는 추가 기능에 대한 제출을 만드는 경우 Windows 개발자 센터 대시보드보다는 API를 사용하여 제출만 추가로 변경하세요. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 경우 제출을 삭제하고 새 제출을 만들어야 합니다.
 
-> * 이 API는 API를 사용할 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 이 권한은 단계별로 개발자 계정에서 사용할 수 있으며 이때 모든 계정에서 이 권한을 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
-<br/><br/>
->* 이 API를 사용하여 앱, 또는 추가 기능에 대한 제출을 만드는 경우 Windows 개발자 센터 대시보드보다는 API를 사용하여 제출만 추가로 변경하세요. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 경우 제출을 삭제하고 새 제출을 만들어야 합니다.
-<br/><br/>
-> * 이 API는 필수 앱 업데이트와 스토어 관리 소모성 추가 기능을 포함하여(하지만 여기에 국한되지는 않음) 2016년 8월에 개발자 센터 대시보드에 도입된 특정 기능을 사용하는 앱 또는 추가 기능에는 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Windows 스토어 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 대시보드를 사용하여 앱 또는 추가 기능에 대한 제출을 관리해야 합니다.
+> [!NOTE]
+이 API는 필수 앱 업데이트와 스토어 관리 소모성 추가 기능을 포함하여(하지만 여기에 국한되지는 않음) 2016년 8월에 개발자 센터 대시보드에 도입된 특정 기능을 사용하는 앱 또는 추가 기능에는 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Windows 스토어 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 대시보드를 사용하여 앱 또는 추가 기능에 대한 제출을 관리해야 합니다.
 
 
 <span id="prerequisites" />
@@ -40,7 +40,7 @@ translationtype: HT
 
 Windows 스토어 제출 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account).
 
 * [Azure AD 응용 프로그램을 Windows 개발자 센터 계정에 연결](#associate-an-azure-ad-application-with-your-windows-dev-center-account)해야 하며 테넌트 ID, 클라이언트 ID 및 키를 가져와야 합니다. 이러한 값은 Windows 스토어 제출 API에 대한 호출에 사용하는 Azure AD 액세스 토큰을 가져오는 데 필요합니다.
 
@@ -61,18 +61,19 @@ Windows 스토어 제출 API를 호출하는 코드 작성을 시작하기 전�
 
 Windows 스토어 제출 API를 사용하려면 먼저 Azure AD 응용 프로그램을 개발자 센터 계정에 연결하고 해당 응용 프로그램에 대한 테넌트 ID 및 클라이언트 ID를 검색하고 키를 생성합니다. Azure AD 응용 프로그램은 Windows 스토어 제출 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
 
->**참고**&nbsp;&nbsp;이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
+> [!NOTE]
+> 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 
-1.  개발자 센터에서 **계정 설정**으로 이동하여 **사용자 관리**를 클릭하고 조직의 개발자 센터 계정을 조직의 Azure AD 디렉터리와 연결합니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users)를 참조하세요.
+1.  개발자 센터에서 **계정 설정**으로 이동한 후, **사용자 관리**를 클릭하고 [조직의 개발자 센터 계정을 조직의 Azure AD 디렉토리와 연결합니다](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 제출에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [Azure AD 응용 프로그램 추가 및 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications)를 참조하세요.
+2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 제출에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그렇지 않은 경우 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [Azure AD 응용 프로그램을 개발자 센터 계정과 연결](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications)을 참조하세요.
 
 3.  **사용자 관리** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 
-4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [Azure AD 응용 프로그램 추가 및 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications)에서 키 관리에 대한 내용을 참조하세요.
+4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [AD 응용 프로그램 키 관리](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys)를 참조하세요.
 
 <span id="obtain-an-azure-ad-access-token" />
-## <a name="step-2-obtain-an-azure-ad-access-token"></a>단계 2: Azure AD 액세스 토큰 가져오기
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>2단계: Azure AD 액세스 토큰 가져오기
 
 Windows 스토어 제출 API에서 메서드를 호출하기 전에 먼저 API에 있는 각 메서드의 **Authorization** 헤더에 전달하는 Azure AD 액세스 토큰을 가져와야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 API에 대한 추가 호출에 계속 사용할 수 있도록 해당 토큰을 새로 고칠 수 있습니다.
 
@@ -100,7 +101,8 @@ C#, Java 또는 Python 코드를 사용하여 액세스 토큰을 가져오는 �
 
 Azure AD 액세스 토큰이 있으면 Windows 스토어 제출 API에서 메서드를 호출할 수 있습니다. API에는 앱, 추가 기능 및 패키지 플라이트에 대한 시나리오로 그룹화된 많은 메서드가 포함되어 있습니다. 제출을 만들거나 업데이트하려면 일반적으로 Windows 스토어 제출 API에서 특정 순서로 여러 메서드를 호출합니다. 각 시나리오와 각 메서드의 구문에 대한 자세한 내용은 다음 표의 문서를 참조하세요.
 
->**참고**&nbsp;&nbsp;액세스 토큰을 가져온 후 만료되기 전에 Windows 스토어 제출 API에서 메서드를 호출할 수 있는 시간은 60분입니다.
+> [!NOTE]
+> 액세스 토큰을 가져온 후 만료되기 전에 Windows 스토어 제출 API에서 메서드를 호출할 수 있는 시간은 60분입니다.
 
 | 시나리오       | 설명                                                                 |
 |---------------|----------------------------------------------------------------------|
@@ -113,11 +115,15 @@ Azure AD 액세스 토큰이 있으면 Windows 스토어 제출 API에서 메서
 
 다음 문서는 여러 다른 프로그래밍 언어로 Windows 스토어 제출 API를 사용하는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
 
-* [C# 코드 예제](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
+* [C# 샘플: 앱, 추가 기능, 플라이트 제출](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [C# 샘플: 앱의 게임 옵션과 예고편 제출](csharp-code-examples-for-submissions-game-options-and-trailers.md)
+* [Java 샘플: 앱, 추가 기능, 플라이트 제출](java-code-examples-for-the-windows-store-submission-api.md)
+* [Java 샘플: 앱의 게임 옵션과 예고편 제출](java-code-examples-for-submissions-game-options-and-trailers.md)
+* [Python 샘플: 앱, 추가 기능, 플라이트 제출](python-code-examples-for-the-windows-store-submission-api.md)
+* [Python 샘플: 앱의 게임 옵션과 예고편 제출](python-code-examples-for-submissions-game-options-and-trailers.md)
 
->**참고**&nbsp;&nbsp;위에 나열된 코드 예제 외에도 the Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+> [!NOTE]
+> 위에 나열된 코드 예제 외에도 Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈이 제공됩니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
 

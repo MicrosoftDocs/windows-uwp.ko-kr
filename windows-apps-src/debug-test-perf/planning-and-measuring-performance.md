@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: "성능 계획"
 description: "사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d80ff77c380d8c4f03cb2ef415126cba46d77062
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="planning-for-performance"></a>성능 계획
 
@@ -85,7 +87,7 @@ translationtype: HT
 -   [XAML 태그를 최적화](optimize-xaml-loading.md)하여 앱 UI의 각 페이지(특히 초기 페이지)에 대한 구문 분석 및 로드 시간과 메모리 효율성을 극대화합니다. nutshell에서는 필요할 때까지 UI 및 코드 로드를 지연합니다.
 -   [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)의 경우 모든 항목을 같은 크기로 설정하고 최대한 많은 [ListView 및 GridView 최적화 기술](optimize-gridview-and-listview.md)을 사용합니다.
 -   프레임워크가 코드로 작성하는 대신 청크로 로드하고 다시 사용할 수 있는 태그 형식으로 UI를 선언합니다.
--   사용자가 필요로 할 때까지 UI 요소를 축소합니다. [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 속성을 참조하세요.
+-   사용자가 필요로 할 때까지 UI 요소의 생성을 연기합니다. [**x:Load**](../xaml-platform/x-load-attribute.md) 특성을 참조하세요.
 -   테마 전환 및 애니메이션이 스토리보드 애니메이션보다 좋습니다. 자세한 내용은 [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/Mt187350)를 참조하세요. 스토리보드 애니메이션은 화면을 지속적으로 업데이트해야 하고 CPU 및 그래픽 파이프라인을 활성 상태로 유지해야 합니다. 배터리를 절약하기 위해 사용자가 앱을 조작하지 않는 경우 애니메이션을 실행하지 마세요.
 -   로드하는 이미지는 [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210) 메서드를 사용하여 이미지를 표시할 뷰에 적합한 크기로 로드되어야 합니다.
 
@@ -195,4 +197,3 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 ## <a name="optimizing"></a>최적화
 
 앱에서 성능에 중요한 코드 경로만 최적화하세요. 이는 대부분 시간이 소요되는 경로입니다. 프로파일링을 통해 확인할 수 있습니다. 종종 좋은 디자인 사례에 따라 소프트웨어를 만드는 작업과 최고로 최적화된 성능을 제공하는 코드를 작성하는 작업은 서로 상충되는 점이 있습니다. 일반적으로 성능이 중요하지 않은 영역에서는 개발자 생산성과 양호한 소프트웨어 디자인을 우선적으로 처리하는 것이 더 좋습니다.
-

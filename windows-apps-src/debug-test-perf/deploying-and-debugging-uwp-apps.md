@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: "이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다."
 title: "UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅"
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 디버그, 테스트, 성능"
-ms.openlocfilehash: 6f399136be121288dcff4b482f9e022fc0323181
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2d4f49b0b9756162a22adf5c52910102d4a37281
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
@@ -70,7 +72,7 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 
 ![디버그 탭](images/debug-remote-machine-config.png)
 
-원격 PC에 앱을 배포하려면 Visual Studio 원격 도구를 대상 PC에 다운로드하고 설치해야 합니다. 전체 지침을 보려면 [원격 PC 지침](#remote-pc-instructions)을 참조하세요.
+크리에이터스 업데이트 이전 버전의 원격 PC에 앱을 배포하려면 Visual Studio 원격 도구를 대상 PC에 다운로드하고 설치해야 합니다. 전체 지침을 보려면 [원격 PC 지침](#remote-pc-instructions)을 참조하세요.  그러나 크리에이터스 업데이트 PC부터는 원격 배포도 지원합니다.  
 
 ### <a name="c-and-javascript"></a>C++ 및 JavaScript
 
@@ -86,7 +88,10 @@ C++ 또는 JavaScript UWP 앱에 대한 원격 컴퓨터 대상을 지정하려�
 
 ### <a name="remote-pc-instructions"></a>원격 PC 지침
 
-원격 PC에 배포하려면 대상 PC에 Visual Studio 원격 도구가 설치되어 있어야 합니다. 원격 PC에도 앱의 **대상 플랫폼 최소 버전** 속성보다 크거나 같은 버전의 Windows가 실행되고 있어야 합니다. 원격 도구를 설치한 후 대상 PC에서 원격 디버거를 실행해야 합니다.
+> [!NOTE]
+> 이러한 지침은 이전 버전의 Windows 10에서만 필요합니다.  크리에이터스 업데이트부터 PC를 Xbox와 같이 처리할 수 있습니다.  즉, PC의 개발자 모드에서 장치 검색을 사용하도록 설정하고, 유니버설 인증을 사용하여 PIN 페어링하고 PC에 연결할 수 있습니다. 
+
+크리에이터스 업데이트 이전 버전의 원격 PC에 배포하려면 대상 PC에 Visual Studio 원격 도구가 설치되어 있어야 합니다. 원격 PC에도 앱의 **대상 플랫폼 최소 버전** 속성보다 크거나 같은 버전의 Windows가 실행되고 있어야 합니다. 원격 도구를 설치한 후 대상 PC에서 원격 디버거를 실행해야 합니다.
 
 이렇게 하려면 **시작** 메뉴에서 **원격 디버거**를 검색하여 열고 메시지가 나타나면 디버거에서 방화벽 설정을 구성하도록 허용합니다. 기본적으로 디버거는 Windows 인증을 사용하여 실행됩니다. 따라서 로그인된 사용자가 두 PC에서 동일하지 않으면 사용자 자격 증명이 필요합니다.
 
@@ -94,13 +99,31 @@ C++ 또는 JavaScript UWP 앱에 대한 원격 컴퓨터 대상을 지정하려�
 
 자세한 내용은 [Visual Studio 다운로드 센터](https://www.visualstudio.com/downloads/)를 참조하세요.
 
+## <a name="passing-command-line-debug-arguments"></a>명령줄 디버그 인수 전달 
+Visual Studio 2017에서는 디버깅 UWP 응용 프로그램을 시작할 때 명령줄 디버그 인수를 전달할 수 있습니다. [**응용 프로그램**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application) 클래스의 **OnLaunched** 메서드에 있는 *args* 매개 변수에서 명령줄 디버그 인수에 액세스할 수 있습니다. 명령줄 디버그 인수를 지정하려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다. 
+
+> [!NOTE]
+> 이 기능은 C#, VB, C++용 Visual Studio 2017(버전 15.1)에 사용할 수 있습니다. JavaScript는 Visual Studio 2017의 이후 버전에서 제공됩니다. 명령줄 디버그 인수는 시뮬레이터를 제외한 모든 배포 형식에서 사용할 수 있습니다.
+
+C# 및 VB UWP 프로젝트의 경우 **시작 옵션** 아래에 **명령줄 인수** 필드가 나타납니다. 
+
+![명령줄 인수](images/command-line-arguments.png)
+
+C++ 및 JS UWP 프로젝트의 경우 **디버깅 속성**에 **명령줄 인수**가 필드로 나타납니다.
+
+![명령줄 인수 C++ 및 JS](images/command-line-arguments-cpp.png)
+
+명령줄 인수를 지정하면 앱의 **OnLaunched** 메서드에서 인수 값에 액세스할 수 있습니다. [**LaunchActivatedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) 개체 *args*는 **인수** 속성을 가지며 값이 **명령줄 인수** 필드에서 문자로 설정됩니다. 
+
+![명령줄 인수 C++ 및 JS](images/command-line-arguments-debugging.png)
+
 ## <a name="authentication-modes"></a>인증 모드
 
 원격 컴퓨터 배포에 세 가지 인증 모드를 사용할 수 있습니다.
 
-- **유니버설(암호화되지 않은 프로토콜)**: Windows PC(데스크톱 또는 노트북)가 아닌 원격 장치에 배포할 때마다 이 인증 모드를 사용합니다. 현재 이 인증 모드는 IoT 디바이스, Xbox 디바이스 및 HoloLens 디바이스용입니다. 유니버설(암호화되지 않은 프로토콜)은 신뢰할 수 있는 네트워크에서만 사용해야 합니다. 디버깅 연결은 개발 컴퓨터와 원격 컴퓨터 간에 전달되는 데이터를 가로채고 변경할 수 있는 악의적인 사용자에게 취약합니다.
-- **Windows**: 이 인증 모드는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 대상 컴퓨터의 로그인된 사용자의 자격 증명에 액세스할 수 있는 경우 이 인증 모드를 사용합니다. 원격 배포에 가장 안전한 채널입니다.
-- **없음**: 이 인증 모드는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 테스트 계정이 로그인되어 있는 환경에서 테스트 컴퓨터가 설정되어 있고 자격 증명을 입력할 수 없는 경우 이 인증 모드를 사용합니다. 원격 디버거 설정이 인증 없음을 허용하도록 설정되어 있는지 확인합니다.
+- **유니버설(암호화되지 않은 프로토콜)**: 원격 장치에 배포할 때마다 이 인증 모드를 사용합니다. 현재 이 인증 모드는 IoT 디바이스, Xbox 디바이스 및 HoloLens 디바이스, 크리에이터스 업데이트 버전 이상의 PC용입니다. 유니버설(암호화되지 않은 프로토콜)은 신뢰할 수 있는 네트워크에서만 사용해야 합니다. 디버깅 연결은 개발 컴퓨터와 원격 컴퓨터 간에 전달되는 데이터를 가로채고 변경할 수 있는 악의적인 사용자에게 취약합니다.
+- **Windows**: 이 인증 모드는 Visual Studio 원격 도구를 실행하는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 대상 컴퓨터의 로그인된 사용자의 자격 증명에 액세스할 수 있는 경우 이 인증 모드를 사용합니다. 원격 배포에 가장 안전한 채널입니다.
+- **없음**: 이 인증 모드는 Visual Studio 원격 도구를 실행하는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 테스트 계정이 로그인되어 있는 환경에서 테스트 컴퓨터가 설정되어 있고 자격 증명을 입력할 수 없는 경우 이 인증 모드를 사용합니다. 원격 디버거 설정이 인증 없음을 허용하도록 설정되어 있는지 확인합니다.
 
 ## <a name="advanced-remote-deployment-options"></a>고급 원격 배포 옵션
 Visual Studio 2015 업데이트 3과 Windows 10 1주년 업데이트 릴리스를 사용하면 특정 Windows 10 디바이스를 위한 새로운 고급 원격 배포 옵션이 있습니다. 고급 원격 배포 옵션은 프로젝트 속성의 **디버그** 메뉴에 있습니다.
@@ -113,7 +136,7 @@ Visual Studio 2015 업데이트 3과 Windows 10 1주년 업데이트 릴리스�
 ### <a name="requirements"></a>요구 사항
 고급 원격 배포 옵션을 활용하려면 다음 요구 사항을 충족해야 합니다.
 * Windows 10 도구 1.4.1(Windows 10 1주년 업데이트 SDK 포함)과 함께 Visual Studio 2015 업데이트 3 설치
-* Windows 10 1주년 업데이트 Xbox 원격 디바이스를 대상으로 지정
+* Windows 10 1주년 업데이트 Xbox 원격 디바이스 또는 Windows 10 크리에이터스 업데이트 PC를 대상으로 지정 
 * 유니버설 인증 모드 사용
 
 ### <a name="properties-pages"></a>속성 페이지
@@ -131,10 +154,10 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 **디바이스에 파일 복사** 시 지정된 **패키지 등록 경로**는 파일이 복사되는 원격 디바이스의 실제 위치입니다. 이 경로는 상대 경로로 지정할 수 있습니다. 파일이 배포되는 위치는 개발 파일 루트를 기준으로 지정되며 이는 대상 디바이스에 따라 달라집니다. 이 경로 지정은 여러 개발자가 동일한 디바이스를 공유하고 일부 빌드 차이가 있는 패키지에서 작업하는 데 유용합니다.
 
 > [!NOTE]
-> **디바이스에 파일 복사**는 현재 Windows 10 1주년 업데이트를 실행하는 Xbox에서 지원됩니다.
+> **디바이스에 파일 복사**는 현재 Windows 10 1주년 업데이트를 실행하는 Xbox 또는 Windows 10 크리에이터스 업데이트를 실행하는 PC에서 지원됩니다.
 
-원격 디바이스에서 레이아웃은 디바이스 패밀리에 따라 다음 기본 위치에 복사됩니다.
-  `Xbox: \\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
+원격 디바이스에서 레이아웃은 다음 기본 위치에 복사됩니다.
+  `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
 
 ### <a name="register-layout-from-network"></a>네트워크에서 레이아웃 등록
 네트워크에서 레이아웃을 등록하려는 경우 네트워크 공유로 패키지 레이아웃을 빌드한 다음 네트워크에서 직접 원격 디바이스에 레이아웃을 등록할 수 있습니다. 그러려면 원격 디바이스에서 액세스할 수 있는 레이아웃 폴더 경로(네트워크 공유)를 지정해야 합니다. **레이아웃 폴더 경로** 속성은 Visual Studio를 실행하는 PC를 기준으로 설정된 경로이고, **패키지 등록 경로** 속성은 동일한 경로지만 원격 디바이스를 기준으로 지정됩니다.
@@ -156,10 +179,10 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 원격 디바이스에 실제로 복사된 파일이 없기 때문에 네트워크에서 레이아웃을 등록할 때 **디바이스에 모든 파일 보관**을 선택할 수 없습니다.
 
 > [!NOTE]
-> **네트워크에서 레이아웃 등록**은 현재 Windows 10 1주년 업데이트를 실행하는 Xbox에서 지원됩니다.
+> **네트워크에서 레이아웃 등록**은 현재 Windows 10 1주년 업데이트를 실행하는 Xbox 또는 Windows 10 크리에이터스 업데이트를 실행하는 PC에서 지원됩니다.
 
-원격 디바이스에서 레이아웃은 디바이스 패밀리에 따라 다음 기본 위치에 등록됩니다.
-  `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles`
+원격 디바이스에서 레이아웃은 디바이스 패밀리에 따라 다음 기본 위치에 등록됩니다.   `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` - 이는 **패키지 등록 경로**에 대한 symlink입니다.
+  PC는 symlink를 사용하는 대신 **패키지 등록 경로**에 직접 등록합니다.
 
 
 ## <a name="debugging-options"></a>디버깅 옵션

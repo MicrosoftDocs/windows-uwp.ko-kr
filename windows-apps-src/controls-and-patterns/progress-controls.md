@@ -6,14 +6,20 @@ ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: ed43df4e1702064fbff0bd2f6fa4e4d736edc48c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: jeffarn
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: d85c32a1e0cbd826877fa22182647103bdc9eac9
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
@@ -21,15 +27,7 @@ translationtype: HT
 
 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다. 이는 진행률 표시기가 표시될 때 사용자가 앱을 조작할 수 없다는 의미이며 사용되는 표시기에 따라 대기 시간을 예측할 수도 있다는 의미입니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**ProgressBar 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx)</li>
-<li>[**IsIndeterminate 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx)</li>
-<li>[**ProgressRing 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx)</li>
-<li>[**IsActive 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)</li>
-</ul>
-</div>
+> **중요 API**: [ProgressBar 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx), [IsIndeterminate 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx), [ProgressRing 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx), [IsActive 속성](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)
 
 ## <a name="types-of-progress"></a>진행률 유형
 
@@ -172,8 +170,8 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 ## <a name="related-articles"></a>관련 문서
 
 
-- [**ProgressBar 클래스**](https://msdn.microsoft.com/library/windows/apps/br227529)
-- [**ProgressRing 클래스**](https://msdn.microsoft.com/library/windows/apps/br227538)
+- [ProgressBar 클래스](https://msdn.microsoft.com/library/windows/apps/br227529)
+- [ProgressRing 클래스](https://msdn.microsoft.com/library/windows/apps/br227538)
 
 **개발자용(XAML)**
 - [진행률 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651)

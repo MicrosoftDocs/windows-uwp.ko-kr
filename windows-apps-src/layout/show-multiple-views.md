@@ -6,34 +6,37 @@ ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
 op-migration-status: ready
-ms.author: jimwalk
-ms.date: 02/08/2017
+ms.author: mijacobs
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 87f3d5e75b361d1ba9d2c304e58542803da66cd4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 629e6b4bc2b192f5e81bf49e2cc4c18fbd9a0d54
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="show-multiple-views-for-an-app"></a>앱에 대한 여러 보기 표시
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-개별 창에서 앱의 여러 독립 부분을 볼 수 있도록 하여 사용자의 생산성을 높일 수 있습니다. 일반적인 예로 주 UI에 메일 목록 및 선택한 메일의 미리 보기가 표시되는 메일 앱이 있습니다. 하지만 사용자가 개별 창에서 메시지를 열고 나란히 볼 수도 있습니다.
+개별 창에서 앱의 독립 부분을 볼 수 있도록 하여 사용자의 생산성을 높이는 데 도움을 줍니다. 여러 개의 앱 창을 만드는 경우 각 창이 독립적으로 동작합니다. 작업 표시줄에 각 창이 개별적으로 표시됩니다. 사용자는 앱 창을 독립적으로 이동, 크기 조정, 표시 및 숨길 수 있으며, 별도의 앱인 것처럼 앱 창 간에 전환할 수 있습니다. 각 창은 해당 스레드에서 작동합니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094)</li>
-<li>[**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)</li>
-</ul>
-</div> 
+![여러 창으로 앱을 보여 주는 와이어프레임](images/multi-view.png)
 
-여러 개의 앱 창을 만드는 경우 각 창이 독립적으로 동작합니다. 작업 표시줄에 각 창이 개별적으로 표시됩니다. 사용자는 앱 창을 독립적으로 이동, 크기 조정, 표시 및 숨길 수 있으며, 별도의 앱인 것처럼 앱 창 간에 전환할 수 있습니다. 각 창은 해당 스레드에서 작동합니다.
+> **중요 API**: [**ApplicationViewSwitcher**](https://msdn.microsoft.com/library/windows/apps/dn281094), [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)
+
+## <a name="when-should-an-app-use-multiple-views"></a>앱에서 언제 여러 보기를 사용해야 하나요?
+여러 보기를 활용할 수 있는 다양한 시나리오가 있습니다. 다음은 몇 가지 예입니다.
+ - 사용자가 받은 메시지 목록을 보면서 새 이메일을 작성할 수 있는 이메일 앱
+ - 사용자가 여러 사람의 연락처 정보를 나란히 비교할 수 있는 주소록 앱
+ - 사용자가 현재 재생 중인 음악과 재생 가능한 음악의 목록을 동시에 볼 수 있는 음악 플레이어 앱
+ - 사용자가 노트의 한 페이지에서 다른 페이지로 정보를 복사할 수 있는 메모 작성 앱
+ - 사용자가 모든 상위 헤드라인을 정독한 후 나중에 읽을 수 있도록 여러 기사를 열어 둘 수 있는 읽기 앱
 
 ## <a name="what-is-a-view"></a>보기란?
-
 
 앱 보기는 앱이 콘텐츠를 표시하는 데 사용하는 창과 스레드의 1:1 연결입니다. [**Windows.ApplicationModel.Core.CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 개체로 표시됩니다.
 
@@ -45,8 +48,9 @@ translationtype: HT
 
 ## <a name="show-a-new-view"></a>새 보기 표시
 
+각 앱 레이아웃은 고유하지만, 콘텐츠의 오른쪽 위 모서리와 같은 예측 가능한 위치에 "새 창" 단추를 배치하여 새 창으로 열 수 있도록 하는 것이 좋습니다. 또한 상황에 맞는 메뉴 옵션에 "새 창에서 열기"를 넣는 것도 고려하십시오.
 
-더 진행하기 전에 새 보기를 만드는 단계를 살펴보겠습니다. 여기서 새 보기는 단추 클릭에 대한 응답으로 시작됩니다.
+새로운 보기를 만드는 단계를 살펴보겠습니다. 여기서 새 보기는 단추 클릭에 대한 응답으로 시작됩니다.
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -131,7 +135,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 ## <a name="switch-from-one-view-to-another"></a>보기 간에 전환
 
-사용자가 보조 창에서 주 창으로 다시 이동할 수 있는 방법을 제공해야 합니다. 이렇게 하려면 [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097) 메서드를 사용합니다. 전환 중인 창의 스레드에서 이 메서드를 호출하고 전환할 창의 보기 ID를 전달합니다.
+사용자가 보조 창에서 부모 창으로 다시 이동할 수 있는 방법을 제공합니다. 이렇게 하려면 [**ApplicationViewSwitcher.SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097) 메서드를 사용합니다. 전환 중인 창의 스레드에서 이 메서드를 호출하고 전환할 창의 보기 ID를 전달합니다.
 
 ```csharp
 await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
@@ -139,10 +143,16 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
 
 [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097)를 사용하는 경우 [**ApplicationViewSwitchingOptions**](https://msdn.microsoft.com/library/windows/apps/dn281105) 값을 지정하여 초기 창을 닫고 작업 표시줄에서 제거할지 여부를 선택할 수 있습니다.
 
- 
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
+
+* "새 창 열기" 기호를 활용하여 보조 보기로의 깔끔한 진입점을 제공합니다.
+* 사용자에게 보조 보기 목적을 알립니다.
+* 앱은 단일 보기에서 완벽하게 작동하며, 보조 보기는 사용자의 편의를 위해서만 열립니다.
+* 알림이나 기타 일시적인 시각 효과를 제공하기 위해 보조 보기에 의존하지 마십시오.
+
+## <a name="related-topics"></a>관련 항목
+
+* [ApplicationViewSwitcher](https://msdn.microsoft.com/library/windows/apps/dn281094)
+* [CreateNewView](https://msdn.microsoft.com/library/windows/apps/dn297278)
 
  
-
-
-
-

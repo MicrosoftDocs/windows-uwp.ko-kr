@@ -5,102 +5,107 @@ title: "단추"
 label: Buttons
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
-ms.openlocfilehash: e5c8b5056581540abd5e0ddf75da7785648df1d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: mitra
+doc-status: Published
+ms.openlocfilehash: 2cb15d21496c080002411849682278df7f927e41
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="buttons"></a>단추
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다.
 
-![단추 예제](images/controls/button.png)
+> **중요 API**: [Button 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), [RepeatButton 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx), [Click 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**Button 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)</li>
-<li>[**RepeatButton 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)</li>
-<li>[**Click 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)</li>
-</ul>
-</div>
+![단추 예](images/controls/button.png)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 단추를 사용하면 양식을 전송하는 등의 즉각적인 작업을 시작할 수 있습니다.
 
 다른 페이지를 탐색하는 작업인 경우에는 단추 대신 링크를 사용합니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
-    
+
 > 예외: 마법사 탐색인 경우에는 '뒤로' 및 '다음'이라는 레이블이 붙은 단추를 사용합니다. 역방향 탐색 또는 상위 수준 탐색 등의 경우에는 뒤로 단추를 사용합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-이 예제에서는 Microsoft Edge 브라우저의 대화 상자에서 모두 닫기 및 취소의 두 가지 단추를 사용합니다. 
+이 예에서는 위치 액세스를 요청하는 대화 상자에서 허용 및 차단의 두 가지 단추를 사용합니다.
 
-![대화 상자에서 사용되는 단추의 예제](images/control-examples/buttons-edge.png)
+![대화 상자에서 사용되는 단추의 예](images/dialogs/dialog_RS2_two_button.png)
 
 ## <a name="create-a-button"></a>단추 만들기
 
-이 예제에서는 클릭에 응답하는 단추를 보여 줍니다. 
+이 예제에서는 클릭에 응답하는 단추를 보여 줍니다.
 
 XAML에서 단추를 만듭니다.
 
 ```xaml
-<Button Content="Submit" Click="SubmitButton_Click"/>
+<Button Content="Subscribe" Click="SubscribeButton_Click"/>
 ```
 
 또는 코드에서 단추를 만듭니다.
 
 ```csharp
-Button submitButton = new Button();
-submitButton.Content = "Submit";
-submitButton.Click += SubmitButton_Click;
+Button subscribeButton = new Button();
+subscribeButton.Content = "Subscribe";
+subscribeButton.Click += SubscribeButton_Click;
 
 // Add the button to a parent container in the visual tree.
-stackPanel1.Children.Add(submitButton);
+stackPanel1.Children.Add(subscribeButton);
 ```
 
 Click 이벤트를 처리합니다.
 
 ```csharp
-private async void SubmitButton_Click(object sender, RoutedEventArgs e)
+private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 {
-    // Call app specific code to submit form. For example:
-    // form.Submit();
-    Windows.UI.Popups.MessageDialog messageDialog = 
-        new Windows.UI.Popups.MessageDialog("Thank you for your submission.");
-    await messageDialog.ShowAsync();
+    // Call app specific code to subscribe to the service. For example:
+    ContentDialog subscribeDialog = new ContentDialog
+    {
+        Title = "Subscribe to App Service?",
+        Content = "Listen, watch, and play in high definition for only $9.99/month. Free to try, cancel anytime.",
+        CloseButtonText = "Not Now",
+        PrimaryButtonText = "Subscribe",
+        SecondaryButtonText = "Try it"
+    };
+
+    ContentDialogResult result = await subscribeDialog.ShowAsync();
 }
 ```
 
 ### <a name="button-interaction"></a>단추 조작
 
-손가락 또는 스타일러스로 단추를 탭하거나 포인터가 단추 위에 있을 때 마우스 왼쪽 단추를 누르면 [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트가 발생합니다. 단추에 키보드 포커스가 있는 경우 Enter 키 또는 스페이스바 키를 눌러도 Click 이벤트가 발생합니다.
+손가락 또는 스타일러스로 단추를 탭하거나 포인터가 단추 위에 있을 때 마우스 왼쪽 단추를 누르면 [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트가 발생합니다. 단추에 키보드 포커스가 있는 경우 Enter 키 또는 스페이스바 키를 눌러도 Click 이벤트가 발생합니다.
 
-단추에는 대신 클릭 동작이 있기 때문에 일반적으로 단추에서 하위 수준의 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) 이벤트를 처리할 수 없습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx)를 참조하세요.
+단추에는 대신 클릭 동작이 있기 때문에 일반적으로 단추에서 하위 수준의 [PointerPressed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) 이벤트를 처리할 수 없습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx)를 참조하세요.
 
-[**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx) 속성을 변경하여 단추가 Click 이벤트를 발생시키는 방법을 변경할 수 있습니다. 기본 ClickMode 값은 **Release**입니다. ClickMode가 **Hover**인 경우 키보드 또는 터치로 Click 이벤트를 발생시킬 수 없습니다. 
+[ClickMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx) 속성을 변경하여 단추가 Click 이벤트를 발생시키는 방법을 변경할 수 있습니다. 기본 ClickMode 값은 **Release**입니다. ClickMode가 **Hover**인 경우 키보드 또는 터치로 Click 이벤트를 발생시킬 수 없습니다.
 
 
 ### <a name="button-content"></a>단추 콘텐츠
 
-단추는 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx)입니다. 단추의 XAML 콘텐츠 속성은 [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx)이며 XAML에 대해 다음과 같은 구문을 가능하게 합니다. `<Button>A button's content</Button>`. 어떠한 개체라도 단추 콘텐츠로 설정할 수 있습니다. 콘텐츠가 [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx)인 경우 단추에서 렌더링됩니다. 콘텐츠가 다른 유형의 개체인 경우 해당 문자열 표현이 단추에 표시됩니다.
+단추는 [ContentControl](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx)입니다. 단추의 XAML 콘텐츠 속성은 [Content](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx)이며 XAML에 대해 다음과 같은 구문을 가능하게 합니다. `<Button>A button's content</Button>`. 어떠한 개체라도 단추 콘텐츠로 설정할 수 있습니다. 콘텐츠가 [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx)인 경우 단추에서 렌더링됩니다. 콘텐츠가 다른 유형의 개체인 경우 해당 문자열 표현이 단추에 표시됩니다.
 
 여기에서는 오렌지 이미지와 텍스트가 포함된 **StackPanel**이 단추의 콘텐츠로 설정됩니다.
 
 ```xaml
-<Button Click="Button_Click" 
-        Background="#FF0D6AA3" 
+<Button Click="Button_Click"
+        Background="LightGray"
         Height="100" Width="80">
     <StackPanel>
-        <Image Source="Assets/Slices.png" Height="62"/>
-        <TextBlock Text="Orange"  Foreground="White"
+        <Image Source="Assets/Photo.png" Height="62"/>
+        <TextBlock Text="Photos" Foreground="Black"
                    HorizontalAlignment="Center"/>
     </StackPanel>
 </Button>
@@ -112,7 +117,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-repeat-button"></a>반복 단추 만들기
 
-[**RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)은 사용자가 눌렀다가 놓을 때까지 반복해서 [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트를 발생시키는 컨트롤입니다. [**Delay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx) 속성을 설정하여 RepeatButton이 클릭 동작 반복을 시작하기 전에 눌러진 후 대기해야 하는 시간을 지정합니다. [**Interval**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx) 속성을 설정하여 클릭 동작의 반복 간 시간을 지정합니다. 두 속성에 대한 시간은 밀리초로 지정됩니다.
+[RepeatButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)은 사용자가 눌렀다가 놓을 때까지 반복해서 [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트를 발생시키는 컨트롤입니다. [Delay](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx) 속성을 설정하여 RepeatButton이 클릭 동작 반복을 시작하기 전에 눌러진 후 대기해야 하는 시간을 지정합니다. [Interval](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx) 속성을 설정하여 클릭 동작의 반복 간 시간을 지정합니다. 두 속성에 대한 시간은 밀리초로 지정됩니다.
 
 다음 예제에서는 두 RepeatButton 컨트롤(해당 Click 이벤트는 텍스트 블록에 표시되는 값을 늘리고 줄이는 데 사용함)을 보여 줍니다.
 
@@ -146,7 +151,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 -   단추의 목적과 상태가 사용자에게 명확하게 전달되는지 확인합니다.
 -   단추가 수행하는 작업을 명확히 설명해 주는 간결하고 구체적이며 설명적인 텍스트를 사용합니다. 일반적으로 단추 텍스트 콘텐츠는 한 단어로 된 동사입니다.
--   확인 대화 상자 등에서 동일한 결정에 대한 단추가 여러 개 있을 경우 다음과 같은 순서로 커밋 단추를 표시하세요. 
+-   확인 대화 상자 등에서 동일한 결정에 대한 단추가 여러 개 있을 경우 다음과 같은 순서로 커밋 단추를 표시하세요.
     -   확인/[그렇게 함]/예
     -   [그렇게 하지 않음]/아니요
     -   취소
@@ -163,12 +168,27 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   단추를 사용자 지정하는 것이 좋습니다. 단추의 모양은 기본적으로 사각형이지만 단추의 모양을 구성하는 시각 효과를 사용자 지정할 수 있습니다. Button의 Content는 일반적으로 텍스트(예: 수락 또는 취소)이지만 텍스트를 아이콘으로 바꾸거나 아이콘과 텍스트를 함께 사용할 수도 있습니다.
 -   사용자가 단추를 조작할 때 단추의 상태와 모양이 변경되어 사용자에게 피드백을 제공하는지 확인합니다. 단추는 보통, 누름, 사용 안 함 상태 중 하나입니다.
 -   사용자가 단추를 탭하거나 누르면 단추의 동작이 트리거됩니다. 일반적으로 사용자가 단추를 놓으면 작업이 트리거되지만 손가락으로 처음 누를 때 트리거하도록 단추 동작을 설정할 수도 있습니다.
--   상태를 설정하는 데 명령 단추를 사용하지 마세요.
--   앱이 실행 중일 때 단추의 텍스트를 변경하지 마세요. 예를 들어 "다음"이라는 단추 텍스트를 "계속"으로 변경하지 마세요.
 -   기본 제출, 리셋 및 단추 스타일을 바꾸지 마세요.
--   단추 안에 너무 많은 콘텐츠를 넣지 마세요. 콘텐츠를 간결하고 이해하기 쉽게 유지하세요(그림과 일부 텍스트만 사용).
+-   단추 안에 너무 많은 콘텐츠를 넣지 마세요. 콘텐츠를 간결하고 이해하기 쉽게 만드세요.
+
+### <a name="recommended-single-button-layout"></a>권장 단일 단추 레이아웃
+
+레이아웃에 단추가 하나만 필요한 경우 컨테이너 컨텍스트에 따라 왼쪽 또는 오른쪽에 맞춰야 합니다.
+
+-   단추가 하나만 있는 대화 상자의 경우 단추를 **오른쪽에 맞춰야** 합니다. 대화 상자에 단추가 하나만 있는 겨우 단추가 안전한 비파괴 작업을 수행하는지 확인하세요. [ContentDialog](dialogs.md)를 사용하고 단일 단추를 지정하면 자동으로 오른쪽에 맞춰집니다.
+
+![대화 상자 내의 단추](images/pushbutton_doc_dialog.png)
+
+-   단추가 알림 메시지, 플라이아웃 또는 목록 보기 항목과 같은 컨테이너 UI 내에 나타나는 경우 컨테이너 내에서 단추를 **오른쪽에 맞춰야**합니다.
+
+![컨테이너 내의 단추](images/pushbutton_doc_container.png)
+
+-   설정 페이지의 아래쪽에 있는 "적용" 단추와 같이 단일 단추가 있는 페이지에서는 단추를 **왼쪽에 맞춰야** 합니다. 이를 통해 단추가 나머지 페이지 콘텐츠와 맞춰집니다.
+
+![페이지의 단추](images/pushbutton_doc_page.png)
 
 ## <a name="back-buttons"></a>뒤로 단추
+
 뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 요소입니다. 뒤로 단추를 직접 만들지 않아도 되지만 좋은 뒤로 탐색 환경을 사용하려면 일부 작업을 수행해야 할 수 있습니다. 자세한 내용은 [검색 기록 및 뒤로 탐색](../layout/navigation-history-and-backwards-navigation.md)을 참조하세요.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
@@ -181,6 +201,4 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)
 - [확인란](checkbox.md)
-- [**Button 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
-
-
+- [Button 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)

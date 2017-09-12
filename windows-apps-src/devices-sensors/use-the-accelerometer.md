@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: "가속도계 사용"
 description: "가속도계를 사용하여 사용자의 동작에 응답하는 방법을 알아봅니다."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f0665bf071b4c75ee6a3ea8bcc11cefb357c6825
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f0a09faebf554fd0d669ecb4fc3c37dd61a742e4
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 
@@ -21,6 +23,10 @@ translationtype: HT
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**가속도계**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+
+**샘플**
+
+-   더 완전한 구현은 [가속도계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer)을 참조하세요.
 
 \[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
@@ -173,6 +179,3 @@ AccelerometerReadingChangedEventArgs>(ReadingChanged);
  <TextBlock x:Name="txtYAxis" HorizontalAlignment="Left" Height="15" Margin="70,49,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFF2EEEE"/>
  <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="15" Margin="70,80,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="53" Foreground="#FFFFF8F8"/>
 ```
-## <a name="related-topics"></a>관련 항목
-
-* [가속도계 샘플](http://go.microsoft.com/fwlink/p/?linkid=241377)

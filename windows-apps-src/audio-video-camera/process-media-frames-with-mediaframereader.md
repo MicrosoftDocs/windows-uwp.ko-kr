@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 8c41f85c7d49d9019a2dc3a94242271a6fa9eb9a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: bc0cfc468613429d7989c9c0d93bd98246c0195b
+ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/26/2017
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
@@ -155,6 +157,47 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 > **SoftwareBitmap** 이미지에서 픽셀 조작을 수행하려면 원시 메모리 버퍼에 액세스해야 합니다. 이렇게 하려면 아래 나열된 코드에 포함된 IMemoryBufferByteAccess COM 인터페이스를 사용하고 안전하지 않은 코드의 컴파일을 허용하도록 프로젝트 속성을 업데이트해야 합니다. 자세한 내용은 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요.
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetFrameRenderer)]
+
+## <a name="use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources"></a>MultiSourceMediaFrameReader를 사용하여 여러 원본에서 시간 연관 프레임 가져오기
+Windows 10 버전 1607부터 [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.multisourcemediaframereader)를 사용하여 다양한 원본에서 시간 연관 프레임을 가져올 수 있습니다. 이 API를 사용하면 [**DepthCorrelatedCoordinateMapper**](https://docs.microsoft.com/en-us/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper) 클래스를 사용한 임시 근접 연결에서 얻은 여러 원본의 프레임을 필요로 하는 프로세싱을 더 쉽게 처리할 수 있습니다. 이 새로운 메서드의 한 가지 제한은 프레임 도착 이벤트가 가장 느린 캡처 원본의 속도로만 발생한다는 점입니다. 더 빠른 원본의 추가 프레임은 삭제됩니다. 또한 시스템이 다른 원본의 프레임이 다른 속도로 도착할 것으로 예상하기 때문에, 원본에서 프레임 생성을 모두 함께 중단한 경우에도 자동으로 인식하지 못합니다. 이 섹션의 예제 코드에서는 시간 연관 프레임이 앱에서 정의한 시간 제한 내에 도착하지 않으면 호출되는 자체 시간 초과 논리를 만들기 위해 이벤트를 사용하는 방법을 보여 줍니다.
+
+[**MultiSourceMediaFrameReader**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.multisourcemediaframereader)를 사용하는 단계는 이 문서의 앞에서 설명한 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)를 사용하는 단계와 유사합니다. 이 예에서는 색상 원본과 깊이 원본을 사용합니다. 몇몇 문자열 변수를 정의하여 각 원본의 프레임을 선택하는 데 사용되는 미디어 프레임 소스 ID를 저장합니다. 다음, 이 예의 시간 초과 논리를 구현하는 데 사용되는 [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim?view=netframework-4.7), [**CancellationTokenSource**](https://msdn.microsoft.com/library/system.threading.cancellationtokensource.aspx) 및 [**EventHandler**](https://msdn.microsoft.com/library/system.eventhandler.aspx)를 선언합니다. 
+
+[!code-cs[MultiFrameDeclarations](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameDeclarations)]
+
+이 문서에서 설명한 기술을 사용하여, 이 예제 시나리오에 필요한 색상 및 깊이 원본을 포함하는 [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup)을 쿼리합니다. 원하는 프레임 원본 그룹을 선택한 후, 각 프레임 원본에서 [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo)를 가져옵니다.
+
+[!code-cs[SelectColorAndDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSelectColorAndDepth)]
+
+**MediaCapture** 개체를 만들어 초기화하고, 초기화 설정에서 선택된 프레임 원본 그룹에 전달합니다.
+
+[!code-cs[MultiFrameInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameInitMediaCapture)]
+
+**MediaCapture** 개체를 초기화한 후, 색상 및 깊이 카메라에 대한 [**MediaFrameSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource) 개체를 가져옵니다. 각 원본의 ID를 저장하여 해당 원본에서 도착하는 프레임을 선택할 수 있도록 합니다.
+
+[!code-cs[GetColorAndDepthSource](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetColorAndDepthSource)]
+
+[**CreateMultiSourceFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture#Windows_Media_Capture_MediaCapture_CreateMultiSourceFrameReaderAsync_Windows_Foundation_Collections_IIterable_Windows_Media_Capture_Frames_MediaFrameSource__)를 호출하고 읽기 프로그램이 사용할 프레임 원본 배열을 전달하여 **MultiSourceMediaFrameReader**를 만들고 초기화합니다. [**FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader#Windows_Media_Capture_Frames_MultiSourceMediaFrameReader_FrameArrived) 이벤트에 대한 이벤트 처리기를 등록합니다. 이 예에서는 이 문서에서 이미 설명한 **FrameRenderer** 도우미 클래스의 인스턴스를 만들어 프레임을 **Image** 컨트롤로 렌더링합니다. [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader#Windows_Media_Capture_Frames_MultiSourceMediaFrameReader_StartAsync)를 호출하여 프레임 읽기 프로그램을 시작합니다.
+
+이 예의 앞에서 선언한 **CorellationFailed** 이벤트에 대한 이벤트 처리기를 등록합니다. 사용 중인 미디어 프레임 원본 중 하나가 프레임 생성을 중단하면 이 이벤트에 신호를 보낼 것입니다. 마지막으로, [**Task.Run**](https://msdn.microsoft.com/en-us/library/hh195051.aspx)을 호출하여 시간 초과 도우미 메서드인 **NotifyAboutCorrelationFailure**를 별도 스레드에서 호출합니다. 이 메서드의 구현 방법은 이 문서의 뒷부분에서 설명합니다.
+
+[!code-cs[InitMultiFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMultiFrameReader)]
+
+**MultiSourceMediaFrameReader**에서 관리하는 모든 미디어 프레임 원본에서 새 프레임을 사용할 수 있게 되면 **FrameArrived** 이벤트가 발생합니다. 즉, 이벤트가 가장 느린 미디어 원본의 흐름에 따라 발생하게 됩니다. 한 원본에서 더 느린 원본이 한 프레임을 생성하는 동안 여러 프레임을 생성한 경우, 빠른 원본의 추가 프레임은 삭제됩니다. 
+
+[**TryAcquireLatestFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader#Windows_Media_Capture_Frames_MultiSourceMediaFrameReader_TryAcquireLatestFrame)을 호출하여 이벤트와 관련된 [**MultiSourceMediaFrameReference**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference)를 가져옵니다. [**TryGetFrameReferenceBySourceId**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference#Windows_Media_Capture_Frames_MultiSourceMediaFrameReference_TryGetFrameReferenceBySourceId_System_String_)를 호출하고 프레임 읽기 프로그램이 초기화되었을 때 저장된 ID 문자열을 전달하여 각 미디어 프레임 원본에 관련된 **MediaFrameReference**를 가져옵니다.
+
+**ManualResetEventSlim** 개체의 [**Set**](https://msdn.microsoft.com/library/system.threading.manualreseteventslim.set.aspx) 메서드를 호출하여 프레임이 도착했다는 신호를 보냅니다. 이 이벤트는 별도의 스레드에서 실행 중인 **NotifyCorrelationFailure** 메서드에서 확인합니다. 
+
+마지막으로, 시간 연관 프레임을 위한 처리를 수행합니다. 이 예에서는 간단히 깊이 원본의 프레임만 표시합니다.
+
+[!code-cs[MultiFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameArrived)]
+
+프레임 읽기 프로그램이 다시 시작된 후 **NotifyCorrelationFailure** 도우미 메서드가 별도 스레드에서 실행됩니다. 이 메서드는 프레임 수신 이벤트의 신호를 받았는지 확인합니다. **FrameArrived** 처리기에서 상호 관련 프레임의 집합이 도착할 때마다 이 이벤트가 발생하도록 설정했습니다. 앱에서 정의한 기간(5초 정도가 적당) 동안 이벤트에서 신호를 보내지 않을 경우나 **CancellationToken**을 사용하여 작업이 취소된 경우는 미디어 프레임 중 하나에서 읽기를 중지한 것일 수 있습니다. 이런 경우 일반적으로 프레임 읽기 프로그램을 종료해야 하므로, 앱에서 정의한 **CorrelationFailed** 이벤트를 발생시킵니다. 이 이벤트의 처리기에서 프레임 읽기 프로그램을 중지하고 이 문서 앞부분에서 설명한 방법으로 관련된 리소스를 정리할 수 있습니다.
+
+[!code-cs[NotifyCorrelationFailure](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetNotifyCorrelationFailure)]
+
+[!code-cs[CorrelationFailure](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCorrelationFailure)]
 
 ## <a name="related-topics"></a>관련 항목
 

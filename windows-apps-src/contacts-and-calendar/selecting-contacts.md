@@ -1,17 +1,19 @@
 ---
-author: Xansky
+author: normesta
 description: "Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다."
 title: "연락처 선택"
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
 keywords: "연락처, 연락처 선택, 단일 연락처 선택, 여러 연락처 선택, 여러 데이터 연락처 선택, 특정 연락처 선택, 특정 데이터 연락처 선택, 특정 필드 선택"
-ms.author: mhopkins
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 5a375851f5b9be63c9780b806dd45721b0f8291f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 861d3d7a68596cbec289050391775d665ac6979d
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="select-contacts"></a>연락처 선택
 

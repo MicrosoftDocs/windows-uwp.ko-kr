@@ -6,20 +6,24 @@ ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: d5933eec7b2f34b2c5939bb083113dfd3a1f965d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 49a586aac0c846cdad02f8448532238bd3eb8551
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 메일 및 주소록에 자주 사용됩니다.
+
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
 
@@ -73,17 +77,11 @@ translationtype: HT
 
 세부 정보 창의 경우 가장 적합한 콘텐츠 요소를 사용합니다. 별도의 필드가 많은 경우 그리드 레이아웃을 사용하여 요소를 양식에 정렬하는 것이 좋습니다.
 
-## <a name="examples"></a>예제
+## <a name="get-the-code-samples"></a>코드 샘플 다운로드
 
-주식 시장을 추적하는 앱의 이 디자인은 마스터/세부 정보 패턴을 사용합니다. 앱의 이 예제에서는 앱이 휴대폰에 표시될 때 마스터 창/목록이 왼쪽에, 세부 정보 창이 오른쪽에 표시됩니다.
+마스터/세부 정보 패턴을 보여 주는 샘플 코드는 다음 샘플을 참조하세요. 
 
-![휴대폰에서 마스터 세부 정보 패턴을 사용하는 앱의 예](images/uap-finance-phone-masterdetails-600.png)
-
-주식 시장을 추적하는 앱의 이 디자인은 마스터/세부 정보 패턴을 사용합니다. 앱의 이 예제에서는 앱이 데스크톱에 표시될 때 마스터 창/목록과 세부 정보 창이 둘 다 전체 화면에 표시됩니다. 마스터 창에는 위쪽에 검색 상자가, 아래쪽에 명령 모음이 표시됩니다.
-
-![데스크톱에서 마스터 세부 정보 패턴을 사용하는 앱의 예](images/uap-finance-desktop700.png)
-
-마스터/세부 정보 패턴을 보여 주는 샘플 코드는 다음을 참조하세요.
+- [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 
 - [ListView 및 GridView 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619900)
 - [RSS 수집기 샘플](https://github.com/Microsoft/Windows-appsample-rssreader)
 
@@ -92,4 +90,4 @@ translationtype: HT
 - [목록](lists.md)
 - [검색](search.md)
 - [앱 및 명령 모음](app-bars.md)
-- [**ListView 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)

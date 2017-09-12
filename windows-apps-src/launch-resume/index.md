@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 412876d0b05b2e703482f8cc79a1f07268ac200f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 6eed2ecb5766edea8678ea2af10c02332d5a5928
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/15/2017
 ---
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 
@@ -24,6 +26,7 @@ translationtype: HT
 - UWP(유니버설 Windows) 앱이 다른 앱과 데이터 및 기능을 공유할 수 있도록 하는 앱 서비스를 사용하는 방법
 - UWP 앱 자체가 포그라운드에 없는 동안 작동할 수 있도록 하는 백그라운드 작업을 사용하는 방법
 - 장치 간에 일관된 사용자 환경을 만들 수 있도록 연결된 장치를 검색하고, 다른 장치에서 앱을 실행하고, 원격 장치의 앱 서비스와 통신하는 방법
+- 앱 확장 및 구성 요소화를 위한 올바른 기술을 선택하는 방법
 - 앱의 시작 화면을 추가 및 구성하는 방법
 
 ## <a name="the-app-lifecycle"></a>앱 수명 주기
@@ -68,7 +71,7 @@ translationtype: HT
 | 항목 | 설명 |
 |-------|-------------|
 | [예약된 파일 및 URI 체계 이름](reserved-uri-scheme-names.md) | 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다. |
-| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다. |
+| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 디바이스나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 디바이스가 포함됩니다. |
 
 ## <a name="app-services"></a>앱 서비스
 
@@ -78,6 +81,7 @@ translationtype: HT
 |-------|-------------|
 | [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md) | 다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법을 알아봅니다. |
 | [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md) | 별도 백그라운드 프로세스에서 실행된 앱 서비스 코드를 앱 서비스 공급자와 동일한 프로세스 내에서 실행되는 코드로 변환합니다. |
+| [앱 서비스, 확장 및 패키지로 앱 확장](extend-your-app-with-services-extensions-packages.md) | Windows 10은 앱 확장 및 구성 요소화에 도움이 되는 여러 기술을 제공합니다. 이 항목은 어느 기술이 사용하기에 적절하고 각각에 대한 간단한 개요를 제공하는지 결정하는 데 도움이 됩니다. |
 
 ## <a name="background-tasks"></a>백그라운드 작업
 
@@ -85,22 +89,26 @@ translationtype: HT
 
 | 항목 | 설명 |
 |-------|-------------|
-| [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
-| [백그라운드 작업 지침](guidelines-for-background-tasks.md)                                           | 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.                                                                                                                          |
-| [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)                               | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다.                                                                                                 |
-| [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)                               | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다.                                                                                                 |
-| [Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환](convert-out-of-process-background-task.md)                               | Out-of-process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스로 실행하는 In-process 백그라운드 작업으로 변환하는 방법에 대해 알아봅니다.
-| [백그라운드 작업 디버그](debug-a-background-task.md)                                                           | Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다.                                                                        |
-| [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md) | 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.                                                                                                       |
-| [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                     | 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.                                     |
-| [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)           | 앱에서 백그라운드 작업 진행률 및 완료를 인식하는 방법에 대해 알아봅니다.                                                                                                                     |
-| [백그라운드 작업 등록](register-a-background-task.md)                                                     | 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다.                                                                                                  |
-| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)             | [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.                                                                         |
-| [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)                                        | 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다.                                                                                                          |
-| [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)                 | 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.                                                                                                                  |
-| [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/mt280377)                                           | 백그라운드 전송 API를 사용하여 백그라운드에서 파일을 복사합니다.                                                                                                                              |
-| [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)                       | 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.                                                                                                                      |
-| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                       | 장치가 연결되어 있는 동안 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다.                             |
+| [백그라운드 작업 지침](guidelines-for-background-tasks.md)                                       | 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다. |
+| [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)       | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다. |
+| [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)           | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다. |
+| [Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환](convert-out-of-process-background-task.md) | Out-of-process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스로 실행하는 In-process 백그라운드 작업으로 변환하는 방법에 대해 알아봅니다.|
+| [백그라운드 작업 디버그](debug-a-background-task.md)                                                       | Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다. |
+| [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md) | 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다. |
+| [백그라운드 작업 등록 그룹화](group-background-tasks.md)                                             | 그룹으로 백그라운드 작업 등록 격리 |
+| [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                 | 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
+| [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)       | 앱에서 백그라운드 작업 진행률 및 완료를 인식하는 방법에 대해 알아봅니다. |
+| [백그라운드 작업 등록](register-a-background-task.md)                                                 | 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다. |
+| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)         | [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
+| [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)                                    | 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다. |
+| [앱 내에서 백그라운드 작업 트리거](trigger-background-task-from-app.md) | [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 사용하여 앱 내에서 백그라운드 작업을 활성화하는 방법을 알아봅니다.|
+| [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
+| [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)             | 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다. |
+| [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/mt280377)                 | 백그라운드 전송 API를 사용하여 백그라운드에서 파일을 복사합니다. |
+| [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)                   | 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다. |
+| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                   | 장치가 연결되어 있는 동안 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다. |
+### <a name="see-also"></a>참고 항목
+* [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) - 백그라운드에서 사용하는 에너지를 줄이고 백그라운드 작업에 대한 사용자 설정을 조작하는 방법을 알아봅니다.
 
 ## <a name="remote-systems"></a>원격 시스템
 
@@ -109,7 +117,7 @@ translationtype: HT
 | 항목 | 설명 |
 |-------|-------------|
 | [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 장치를 검색하는 방법을 알아봅니다. |
-| [원격 장치에서 앱 시작](launch-a-remote-app.md) | 원격 장치에서 앱을 시작하는 방법을 알아봅니다.  |
+| [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 장치에서 앱을 시작하는 방법을 알아봅니다.  |
 | [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 장치에서 앱을 조작하는 방법을 알아봅니다. |
 
 ## <a name="splash-screens"></a>시작 화면

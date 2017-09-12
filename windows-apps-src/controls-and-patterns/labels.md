@@ -6,14 +6,19 @@ ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b14c775896984095f580aed8cf41d010f408f67e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: miguelrb
+design-contact: ksulliv
+doc-status: Published
+ms.openlocfilehash: 2a3f3d6795276df6e3436c5ae6eff42551d03478
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="labels"></a>레이블
 
@@ -21,20 +26,9 @@ translationtype: HT
 
 레이블은 컨트롤 또는 관련 컨트롤 그룹의 이름이나 제목입니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>Header 속성</li>
-<li>[**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/br209652)</li>
-</ul>
-</div>
+> **중요 API**: Header 속성, [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
 
-
-XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)을 사용할 수 있습니다.
-
-
-## <a name="example"></a>예제
-
+XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)을 사용할 수 있습니다.
 
 ![표준 레이블 컨트롤을 보여 주는 스크린샷](images/label-standard.png)
 
@@ -51,17 +45,15 @@ XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 
 
 ## <a name="related-topics"></a>관련 항목
 * [텍스트 컨트롤](text-controls.md)
-
-**개발자용**
-* [**TextBox.Header 속성**](https://msdn.microsoft.com/library/windows/apps/dn252861)
-* [**PasswordBox.Header 속성**](https://msdn.microsoft.com/library/windows/apps/dn299051)
-* [**ToggleSwitch.Header 속성**](https://msdn.microsoft.com/library/windows/apps/br209713)
-* [**DatePicker.Header 속성**](https://msdn.microsoft.com/library/windows/apps/dn279460)
-* [**TimePicker.Header 속성**](https://msdn.microsoft.com/library/windows/apps/dn299286)
-* [**Slider.Header 속성**](https://msdn.microsoft.com/library/windows/apps/dn252829)
-* [**ComboBox.Header 속성**](https://msdn.microsoft.com/library/windows/apps/dn279416)
-* [**RichEditBox.Header 속성**](https://msdn.microsoft.com/library/windows/apps/dn252726)
-* [**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/br209652)
+* [TextBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn252861)
+* [PasswordBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn299051)
+* [ToggleSwitch.Header 속성](https://msdn.microsoft.com/library/windows/apps/br209713)
+* [DatePicker.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn279460)
+* [TimePicker.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn299286)
+* [Slider.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn252829)
+* [ComboBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn279416)
+* [RichEditBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn252726)
+* [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
 
  
 

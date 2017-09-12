@@ -6,14 +6,16 @@ ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7082b8f81f45d5035cbe2d9b4bf482d0c985bb8f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 32e2ba7bc3aebf2d1fae80632f0ea663a203d73c
+ms.sourcegitcommit: 00c3f5a1208bd0125f5b275f972cf2a82d8eb9b6
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/13/2017
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -21,7 +23,7 @@ translationtype: HT
 
 Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨트롤 라이브러리를 제공합니다. 이러한 컨트롤에는 시각적으로 표시되는 컨트롤도 있고, 이미지와 미디어 같이 다른 컨트롤이나 콘텐츠의 컨테이너 역할을 하는 컨트롤도 있습니다. 
 
-[**XAML UI 기본 사항 샘플**](http://go.microsoft.com/fwlink/p/?LinkId=619992)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다. 
+[XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다. 
 
 다음은 앱에서 사용할 수 있는 일반적인 XAML 컨트롤의 기능별 목록입니다. 
 
@@ -140,7 +142,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 디자인 및 방법: [대칭 이동 뷰 컨트롤 가이드](flipview.md) 
 
 ### <a name="grid-view"></a>그리드 뷰
-가로로 스크롤할 수 있는 행과 열 형태로 항목 컬렉션을 제공하는 컨트롤입니다.
+세로로 스크롤할 수 있는 행과 열 형태로 항목 컬렉션을 제공하는 컨트롤입니다.
 
 ```xaml
 <GridView x:Name="gridView1" SelectionChanged="GridView_SelectionChanged">
@@ -354,7 +356,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
         Height="108" Width="64" 
         Padding="8" CornerRadius="4">
     <Canvas>
-        <Rectangle Fill="Yellow"/>
+        <Rectangle Fill="Orange"/>
         <Rectangle Fill="Green" Margin="0,44"/>
     </Canvas>
 </Border>
@@ -372,7 +374,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue" Canvas.Left="20" Canvas.Top="20"/>
     <Rectangle Fill="Green" Canvas.Left="40" Canvas.Top="40"/>
-    <Rectangle Fill="Yellow" Canvas.Left="60" Canvas.Top="60"/>
+    <Rectangle Fill="Orange" Canvas.Left="60" Canvas.Top="60"/>
 </Canvas>
 ```
 
@@ -396,7 +398,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue" Grid.Row="1"/>
     <Rectangle Fill="Green" Grid.Column="1"/>
-    <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1"/>
+    <Rectangle Fill="Orange" Grid.Row="1" Grid.Column="1"/>
 </Grid>
 ```
 
@@ -452,7 +454,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
     <Rectangle Fill="Red"/>
     <Rectangle Fill="Blue"/>
     <Rectangle Fill="Green"/>
-    <Rectangle Fill="Yellow"/>
+    <Rectangle Fill="Orange"/>
 </StackPanel>
 ```
 
@@ -470,7 +472,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
                VariableSizedWrapGrid.RowSpan="2"/>
     <Rectangle Fill="Green" Width="80" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
-    <Rectangle Fill="Yellow" Height="80" Width="80" 
+    <Rectangle Fill="Orange" Height="80" Width="80" 
                VariableSizedWrapGrid.RowSpan="2" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
 </VariableSizedWrapGrid>

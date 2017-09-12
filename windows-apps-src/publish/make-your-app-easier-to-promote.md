@@ -4,34 +4,36 @@ Description: "앱을 눈에 띄게 만들기! 최상의 앱을 만드는 것 외
 title: "앱을 홍보하기 쉽게 만들기"
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9dee8e05dbf2384fc87c1974a732ff36459fa229
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8976e616910246366048cffa3c971b93b974e09d
+ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/04/2017
 ---
 # <a name="make-your-app-easier-to-promote"></a>앱을 홍보하기 쉽게 만들기
 
 
 주목 받는 앱을 만드세요. 최상의 앱을 만드는 것 외에도 Windows 스토어 및 다른 사이트에서 앱을 소개하기 쉽게 만들고 더 많은 주목을 받도록 할 수 있는 여러 방법이 있습니다.
 
-## <a name="windows-store-requirements-for-featured-apps"></a>추천 앱에 대한 Windows 스토어 요구 사항
 
+## <a name="windows-store-requirements-for-featured-apps"></a>추천 앱에 대한 Windows 스토어 요구 사항
 
 Windows 스토어는 범주나 테마별로 그룹화하여 다양한 앱을 소개합니다. 멋진 앱이 너무 많아서 모두 추천할 수는 없으며, 개발자 앱이 추천 앱으로 선택된다는 보장은 없습니다. 그러나 스토어에서 앱 홍보가 고려되도록 하는 몇 가지 방법이 있습니다.
 
 -   **멋진 스크린샷 및 홍보용 이미지 포함**
 
-    앱을 추천할 때 Windows 스토어에서는 [앱 스크린샷 및 이미지](app-screenshots-and-images.md)를 다양한 레이아웃으로 사용할 수 있습니다. 앱을 나타내는 첫 번째 스크린샷을 멋지게 디자인하고 첫 번째 스크린샷은 특히 잘 표현되고 눈에 띄어야 합니다.
+    앱을 추천할 때 Windows 스토어에서는 [앱 스크린샷 및 이미지](app-screenshots-and-images.md)를 다양한 레이아웃으로 사용할 수 있습니다. 앱을 나타내는 첫 번째 스크린샷을 멋지게 디자인하고 첫 번째 스크린샷은 특히 잘 표현되고 눈에 띄어야 합니다. 다양한 스크린샷 집합을 제공하여 지원되는 각 장치 유형에서 앱의 모양을 보여줄 수 있습니다.
 
-    스토어에서 앱 추천 가능성을 최대화하려면 앱 제출 시 홍보용 이미지도 하나 이상 제공해야 합니다. 2400 x 1200픽셀 크기를 제공하는 것이 가장 중요합니다. 이 크기의 이미지가 Windows 10 고객을 위해 스토어에서 다양한 방식으로 사용될 수 있기 때문입니다. 일부 레이아웃에서는 이 이미지가 잘릴 수 있으므로 앱의 가장 중요한 시각적 요소와 브랜딩/로고를 그림의 가운데에 포함해야 합니다. 또한 앱이 초기 OS 버전에서 실행되는 경우 추가 이미지 크기를 제공할 수도 있습니다. 자세한 내용과 지침은 [판촉 아트워크](app-screenshots-and-images.md#promotional-artwork)를 참조하세요.
+    스토어에서 앱 추천 가능성을 최대화하려면 앱 제출 시 홍보용 이미지도 포함시켜야 합니다. 자세한 내용과 지침은 [홍보 이미지](app-screenshots-and-images.md#promotional-images)를 참조하세요.
 
 -   **무료 버전과 유료 버전을 각각 하나씩 빌드하지 않고 하나의 앱 버전 빌드**
 
-    동일한 앱을 무료 버전과 유료 버전으로 별도로 게시하는 것보다 유료 앱의 무료 평가판 버전을 제공하거나, 무료 앱으로 만든 다음 앱에서 바로 구매를 통해 향상된 기능을 추가할 수 있도록 하세요. 이렇게 하면 무료 다운로드에만 관심 있는 사용자와 구매할 의향이 있는 사용자를 비롯하여 모든 사용자에게 하나의 앱 목록이 표시됩니다.
+    동일한 앱을 무료 버전과 유료 버전으로 별도로 게시하는 것보다 유료 앱의 무료 평가판 버전을 제공하거나, 무료 앱으로 만든 다음 고객이 향상된 기능을 구매하도록 추가 기능을 제공하세요. 이렇게 하면 무료 다운로드에만 관심 있는 사용자와 구매할 의향이 있는 사용자를 비롯하여 모든 사용자에게 하나의 앱 목록이 표시됩니다.
 
 -   **16+ 및 18+ 콘텐츠를 포함하는 앱에 대해 필터 사용**
 

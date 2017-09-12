@@ -6,14 +6,16 @@ ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 14186f0623f16426a98b5184020736bd4321857d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 566f43b83f410ccd690abca95b9de2323fd2631d
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="intro-to-controls-and-patterns"></a>컨트롤 및 패턴 소개
 
@@ -21,7 +23,9 @@ translationtype: HT
 
 UWP 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다.
 
-*패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어 [탐색 창](nav-pane.md) 패턴은 앱 탐색을 위해 [SplitView](split-view.md) 컨트롤을 사용할 수 있는 방법입니다. 마찬가지로, 탭 패턴을 구현하도록 [피벗](tabs-pivot.md) 컨트롤의 템플릿을 사용자 지정할 수 있습니다.
+> **중요 API**: [Windows.UI.Xaml.Controls 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+
+*패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어 [탐색 창](navigationview.md) 패턴은 앱 탐색을 위해 [SplitView](split-view.md) 컨트롤을 사용할 수 있는 방법입니다. 마찬가지로, 탭 패턴을 구현하도록 [피벗](tabs-pivot.md) 컨트롤의 템플릿을 사용자 지정할 수 있습니다.
 
 대부분의 경우 컨트롤은 있는 그대로 사용할 수 있습니다. 하지만 XAML 컨트롤은 구조 및 모양과 기능을 분리하기 때문에 다양한 수준의 수정을 통해 요구에 맞게 수정할 수 있습니다. [스타일](../style/index.md) 섹션에서 [XAML 스타일](xaml-styles.md) 및 [컨트롤 템플릿](control-templates.md)을 사용하여 컨트롤을 수정하는 방법을 배울 수 있습니다.
 

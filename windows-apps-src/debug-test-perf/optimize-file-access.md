@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: jwmsft
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
 title: "파일 액세스 최적화"
 description: "파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
-ms.author: markl
+ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 967ed4b6db682524bd06f81d4c6d7771cc41d84b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 00ad06179ed4a77cb3e5144df12d5490f79a5df2
+ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="optimize-file-access"></a>파일 액세스 최적화
 

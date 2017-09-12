@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8238076131d932900e8edfb53ab963de8c98402c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 8b55968a93f09dae396353e73d72566feb188a89
+ms.sourcegitcommit: 77bbd060f9253f2b03f0b9d74954c187bceb4a30
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="background-transfers"></a>백그라운드 전송
 
@@ -36,6 +38,10 @@ translationtype: HT
 ### <a name="how-does-the-background-transfer-feature-work"></a>백그라운드 전송 기능은 어떻게 작동하나요?
 
 앱에서 백그라운드 전송을 사용하여 전송을 시작하면 [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) 또는 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) 클래스 개체를 사용하여 요청이 구성 및 초기화됩니다. 각 전송 작업은 호출 앱과는 별도로 시스템에서 개별적으로 처리됩니다. 앱의 UI를 통해 사용자에게 상태를 제공하려는 경우 진행률 정보를 사용할 수 있으며, 전송 중에도 앱이 일시 중지, 다시 시작 또는 취소되거나 데이터를 읽을 수 있습니다. 시스템에서 전송을 처리하는 방법에서는 스마트 전원 사용이 이루어지며, 연결된 앱에서 앱 일시 중단, 종료 또는 갑작스러운 네트워크 상태 변경 등의 이벤트 발생 시 생길 수 있는 문제가 방지됩니다.
+
+또한 백그라운드 전송은 시스템 브로커 이벤트를 사용합니다. 따라서 다운로드 수가 시스템에서 사용 가능한 이벤트 수로 제한됩니다. 기본적으로 500 이벤트이지만, 이벤트를 모든 프로세스가 공유합니다. 따라서 단일 응용 프로그램에서 한 번에 100개 이상의 백그라운드 전송을 만들지 마십시오.
+
+애플리케이션이 백그라운드 전송을 시작할 때, 응용 프로그램이 기존의 모든 [**DownloadOperation**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation) 개체에서 [**AttachAsync**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.BackgroundTransfer.DownloadOperation#methods_)를 호출해야 합니다. 이렇게 하지 않으면 이벤트 누수가 발생하고, 백그라운드 전송을 사용할 수 없습니다.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>백그라운드 전송을 사용하여 인증된 파일 요청 수행
 
@@ -182,6 +188,8 @@ function uploadFiles() {
 
 빠르게 완료되는 작은 리소스를 다운로드하는 경우 백그라운드 전송 대신 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) API를 사용해야 합니다.
 
+앱당 리소스 제한 때문에, 특정 주어진 시간 동안 앱의 전송이 200을 초과할 수 없습니다(DownloadOperations + UploadOperations). 이런 제한 기준을 초과하면 앱의 전송 큐가 복구할 수 없는 상태가 됩니다.
+
 다음 예에서는 기본 다운로드를 만들고 초기화하는 방법과 이전 앱 세션의 지속형 작업을 열거 및 다시 시도하는 방법을 안내합니다.
 
 ### <a name="configure-and-start-a-background-transfer-file-download"></a>백그라운드 전송 파일 다운로드 구성 및 시작
@@ -228,7 +236,7 @@ Windows 10의 한 가지 새로운 기능은 앱이 실행되지 않는 경우�
 
 다음과 같이 사후 처리를 사용하여 백그라운드 전송을 시작합니다.
 
-1.  [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209) 개체를 만듭니다. 그런 다음 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 만듭니다. 작성기 개체의 **Trigger** 속성을 완료 그룹 개체로 설정하고, 작성기의 **TaskEngtyPoint** 속성을 전송 완료 시 실행해야 하는 백그라운드 작업의 진입점으로 설정합니다. 마지막으로 [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 호출하여 백그라운드 작업을 등록합니다. 여러 완료 작업이 하나의 백그라운드 작업 진입점을 공유할 수 있지만 백그라운드 작업 등록당 하나의 완료 그룹만 유지할 수 있습니다.
+1.  [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209) 개체를 만듭니다. 그런 다음 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 만듭니다. 작성기 개체의 **Trigger** 속성을 완료 그룹 개체로 설정하고, 작성기의 **TaskEntryPoint** 속성을 전송 완료 시 실행해야 하는 백그라운드 작업의 진입점으로 설정합니다. 마지막으로 [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 호출하여 백그라운드 작업을 등록합니다. 여러 완료 작업이 하나의 백그라운드 작업 진입점을 공유할 수 있지만 백그라운드 작업 등록당 하나의 완료 그룹만 유지할 수 있습니다.
 
    ```csharp
     var completionGroup = new BackgroundTransferCompletionGroup();

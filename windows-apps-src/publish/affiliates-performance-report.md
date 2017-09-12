@@ -1,53 +1,12 @@
 ---
-author: jnHs
-Description: "앱의 계열사 광고에 대한 성능 데이터를 보려면 Windows 개발자 센터 대시보드에서 앱 수준 및 계정 수준 계열사 성과 보고서를 사용합니다."
-title: "계열사 성과 보고서"
-ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
-ms.author: wdg-dev-content
-ms.date: 02/08/2017
-ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 5187a644e4a952a8d3b199c68c2266e6e7c634f1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+redirect_url: https://msdn.microsoft.com/windows/uwp/publish/advertising-performance-report
+ms.openlocfilehash: 647bbb3cf211ecaa7872a11f5cb654112abfcbe9
+ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/21/2017
 ---
 # <a name="affiliates-performance-report"></a>계열사 성과 보고서
 
-[Microsoft 계열사 광고 프로그램에 옵트인(opt in)](about-affiliate-ads.md)한 경우 Windows 개발자 센터 대시보드의 다음 보고서에서 앱에 표시되는 계열사 광고에 대한 성능 데이터를 볼 수 있습니다.
-
--   [앱 수준 계열사 성과 보고서](#app-level-affiliate-ads-performance-report). 이 보고서는 대시보드에서 현재 선택된 앱의 계열사 광고에 대한 성능 데이터를 제공합니다.
--   [대시보드 수준 계열사 성과 보고서](#dashboard-level-affiliate-ads-performance-report). 이 보고서에서는 Microsoft 계열사 광고 프로그램에 옵트인(opt in)한 모든 앱의 계열사 광고에 대한 성과 데이터를 요약하여 설명합니다.
-
-이러한 보고서는 매일 업데이트됩니다. 기본적으로 보고서는 모든 디바이스에서 지난 30일 간의 성능을 필터링합니다. 이러한 필터를 변경하려면 **페이지 필터**를 클릭하고 다른 시간 프레임 또는 개별 장치 유형을 선택합니다. 모든 데이터는 해당하는 특정 표준 시간대가 아니라 UTC를 기반으로 집계됩니다.
-
-다음 섹션에서는 이러한 보고서에 대한 자세한 내용을 제공합니다.
-
-## <a name="app-level-affiliate-ads-performance-report"></a>앱 수준 계열사 광고 성과 보고서
-
-이 보고서는 대시보드에서 현재 선택된 앱의 계열사 광고 성능 데이터를 그래프 및 표 형식으로 제공합니다. 이 보고서를 보려면 대시보드에서 앱 중 하나를 선택하고 탐색 창에서 **분석** &gt; **계열사 성과**를 클릭합니다.
-
-앱에서 광고를 추적하는 다음 7가지의 성능 메트릭에서 데이터를 가져옵니다.
-
--   **예상 수익(승인)**: 앱에서 사용자가 계열사 광고를 클릭하여 승인한 구매에 대해 수수료로 받는 예상 금액입니다.
--   **예상 수익(승인 보류)**: 승인 보류 중인 구매에 대해 수수료로 받는 예상 금액입니다.
--   **광고 노출**: 앱에 계열사 광고가 표시된 횟수입니다.
--   **클릭 수**: 앱에서 계열사 광고를 클릭한 횟수입니다.
--   **CTR**: 광고 클릭률(Click-through rate)을 나타내며 계열사 광고가 클릭된 횟수를 계열사 광고가 노출된 수로 나눕니다.
--   **구매(승인)**: 앱에서 사용자가 계열사 광고를 클릭하여 승인한 구매의 수입니다.
--   **구매(승인 보류)**: 앱에서 사용자가 계열사 광고를 클릭하여 승인 보류 중인 구매의 수입니다.
-
-> **참고**  사용자가 스토어에서 제품을 구매한 후 45일 대기 기간이 지나면 계열사 광고 프로그램에서 이 구매를 승인할 수 있습니다. 이 대기 시간으로 인해 지정된 날의 **예상 수익(승인)**, **예상 수익(승인 보류)**, **구매(승인)** 및 **구매(승인 보류)** 데이터는 구매가 승인되거나 거부된 후에 변경할 수 있습니다.
-
-## <a name="dashboard-level-affiliate-ads-performance-report"></a>대시보드 수준 계열사 광고 성과 보고서
-
-**대시보드 개요** 페이지의 **계열사 성과** 섹션에서는 Microsoft 계열사 광고 프로그램에 옵트인(opt in)한 모든 앱의 계열사 광고에 대한 성능 데이터의 요약을 그래프 및 표 형식으로 제공합니다. 이 보고서에는 위에서 설명한 앱 수준 계열사 성과 보고서와 동일한 성능 메트릭 및 필터가 표시됩니다.
-
-## <a name="related-topics"></a>관련 항목
-
-* [계열사 광고 정보](about-affiliate-ads.md)
-* [광고를 통한 수익 창출](monetize-with-ads.md)
- 
-
+이 항목은 광고 성과 보고서로 리디렉션되었습니다.
  

@@ -1,17 +1,19 @@
 ---
-author: msatranjr
+author: normesta
 title: "지도에서 바둑판식 이미지 오버레이"
 description: "타일 소스를 사용하여 지도에 타사 또는 사용자 지정 바둑판식 이미지를 오버레이합니다. 타일 소스를 사용하여 특수 정보(예제: 날씨 데이터, 인구 데이터, 지진 데이터 등)를 오버레이하거나 기본 지도를 전체적으로 바꿉니다."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
-ms.author: misatran
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, 지도, 위치, 이미지, 오버레이"
-ms.openlocfilehash: dd52df5f95b25e26ddb0fb8db50c9faf27df02ee
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: d6def6405c8a5d731259b4522dff10cb996d178c
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>지도에서 바둑판식 이미지 오버레이
 
@@ -97,13 +99,12 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
         http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
-    웹 서비스에서 대체 가능한 매개 변수 {x}, {y} 및 {zoomlevel}을 포함하는 URI를 지원해야 합니다. 대부분의 웹 서비스(예제: Nokia, Bing 및 Google)에서는 이 형식의 URI를 지원합니다. 웹 서비스에 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성과 함께 사용할 수 없는 추가 인수가 필요한 경우 사용자 지정 URI를 만들어야 합니다. [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993) 이벤트를 처리하여 사용자 지정 URI를 만들고 반환합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [사용자 지정 URI 제공](#provide-a-custom-uri) 섹션을 참조하세요.
+    웹 서비스에서 대체 가능한 매개 변수 {x}, {y} 및 {zoomlevel}을 포함하는 URI를 지원해야 합니다. 대부분의 웹 서비스(예제: Nokia, Bing 및 Google)에서는 이 형식의 URI를 지원합니다. 웹 서비스에 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성과 함께 사용할 수 없는 추가 인수가 필요한 경우 사용자 지정 URI를 만들어야 합니다. [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993) 이벤트를 처리하여 사용자 지정 URI를 만들고 반환합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [사용자 지정 URI 제공](#customuri) 섹션을 참조하세요.
 
-3.  그런 다음 이전에 [바둑판식 이미지 개요](#tiled-image-overview)에 설명된 나머지 단계를 수행합니다.
+3.  그런 다음 이전에 [바둑판식 이미지 개요](#tileintro)에 설명된 나머지 단계를 수행합니다.
 
 다음 예에서는 북미 지역 지도에 가상 웹 서비스의 타일을 오버레이합니다. [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)의 값은 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)의 생성자에서 지정합니다. 이 예에서 타일은 선택적 [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147) 속성에 지정된 지리적 경계 내에만 표시됩니다.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
         private void AddHttpMapTileSource()
         {
@@ -129,6 +130,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
             MapControl1.TileSources.Add(tileSource);
         }
 ```
+
 ```cpp
 void MainPage::AddHttpMapTileSource()
 {
@@ -160,9 +162,9 @@ void MainPage::AddHttpMapTileSource()
         Tile_{zoomlevel}_{x}_{y}.png
     ```
 
-    파일 이름 형식에 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) 속성과 함께 사용할 수 없는 추가 인수가 필요한 경우 사용자 지정 URI를 만들어야 합니다. [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001) 이벤트를 처리하여 사용자 지정 URI를 만들고 반환합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [사용자 지정 URI 제공](#provide-a-custom-uri) 섹션을 참조하세요.
+    파일 이름 형식에 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) 속성과 함께 사용할 수 없는 추가 인수가 필요한 경우 사용자 지정 URI를 만들어야 합니다. [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn637001) 이벤트를 처리하여 사용자 지정 URI를 만들고 반환합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [사용자 지정 URI 제공](#customuri) 섹션을 참조하세요.
 
-3.  그런 다음 이전에 [바둑판식 이미지 개요](#tiled-image-overview)에 설명된 나머지 단계를 수행합니다.
+3.  그런 다음 이전에 [바둑판식 이미지 개요](#tileintro)에 설명된 나머지 단계를 수행합니다.
 
 다음 프로토콜 및 위치를 사용하여 로컬 저장소의 타일을 로드할 수 있습니다.
 

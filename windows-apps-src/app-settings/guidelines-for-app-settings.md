@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 493e491bd16b7346046394d66587788caf06db4f
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.openlocfilehash: 67714d0b7a95e1034486d39853c91c9a7590bfa5
+ms.sourcegitcommit: 45490bd85e6f8d247a041841d547ecac2ff48250
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/23/2017
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
@@ -97,9 +99,11 @@ translationtype: HT
 
 !["모드 선택" 섹션](images/appsettings_mode.png)
 
-<div class=”microsoft-internal-note”>
-"모드 선택" 섹션에 사용할 수 있는 기본 텍스트 문자열을 보여 주는 자세한 수정 내용은 [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2)에서 볼 수 있습니다.
+<!--
+<div class="microsoft-internal-note">
+Detailed redlines showing preferred text strings for the "Choose a mode" section are available on [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2).
 </div>
+-->
 
 ## <a name="about-section-and-give-feedback-button"></a>"정보" 섹션 및 "피드백 보내기" 단추
 

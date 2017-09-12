@@ -5,13 +5,15 @@ title: "앱 제출"
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: "검사 목록"
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8d6764051a6f3d9d5c6d851f0ba15353da5f9d5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fdef30d07386a1c5ab7dc6bd62b9507ff5852194
+ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="app-submissions"></a>앱 제출
 
@@ -20,12 +22,12 @@ translationtype: HT
 
 앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 제출은 대시보드에 저장되므로 필요할 때마다 작업을 할 수 있습니다.
 
-앱이 게시된 후에는 대시보드에서 또 다른 제출을 만들어서 업데이트된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 앱에 대한 새 제출을 만들려면 앱 개요 페이지에 표시된 최근 제출 옆의 **업데이트**를 클릭합니다.
+앱이 게시된 후에는 대시보드에서 또 다른 제출을 만들어서 업데이트된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시된 앱에 대한 새 제출을 만들려면 앱 개요 페이지에 표시된 최근 제출 옆의 **업데이트**를 클릭합니다.
 
-> **참고**&nbsp;&nbsp;설명서의 이 섹션에서는 개발자 센터 대시보드에서 앱 제출을 만드는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
+> [!NOTE]
+> 설명서의 이 섹션에서는 개발자 센터 대시보드에서 앱 제출을 만드는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
 
 ## <a name="app-submission-checklist"></a>앱 제출 검사 목록
-
 
 앱 제출을 만들 때 제공할 수 있는 세부 정보 및 추가 정보 링크는 다음과 같습니다.
 
@@ -34,23 +36,24 @@ translationtype: HT
 ### <a name="pricing-and-availability-page"></a>가격 책정 및 가용성 페이지
 | 필드 이름                    | 참고                                       | 자세한 정보                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **기본 가격**                | 필수                                    | [기본 가격](set-app-pricing-and-availability.md#base-price)              |
-| **무료 평가판**                | 기본값: 무료 평가판 없음                      | [평가판 및 앱에서 바로 구매 추가](https://msdn.microsoft.com/library/windows/apps/jj193599)  |
-| **지역/국가 및 사용자 지정 가격** | 기본값: 모든 가능한 지역/국가, 사용자 지정 가격 없음 | [가격 책정 및 지역/국가 선택 정의](define-pricing-and-market-selection.md)              |
-| **할인 판매 가격 책정**              | 옵션                                    | [앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)                                       |
-| **배포 및 표시** | 기본값: 이 앱을 스토어에서 다운로드할 수 있도록 설정 | [배포 및 표시](set-app-pricing-and-availability.md#distribution-and-visibility) |
-| **조직 라이선스**    | 기본값: 조직에서 대량 구입할 수 있음 | [조직 라이선스 옵션](organizational-licensing.md)                        |
+| **지역/국가**                   | 기본값: 모든 가능한 지역/국가,  | [가격 책정 및 지역/국가 선택 정의](define-pricing-and-market-selection.md)         |
+| **표시 여부**                | 기본값: 이 앱을 스토어에서 다운로드해 사용할 수 있도록 설정 | [표시 여부](set-app-pricing-and-availability.md#visibility) |
+| **일정**                  | 기본값: 최대한 빨리 게시        | [정확한 릴리스 일정 구성](configure-precise-release-scheduling.md) |
+| **기본 가격**                | 필수                                    | [앱 가격 설정 및 예약](set-and-schedule-app-pricing.md)              |
+| **무료 평가판**                | 기본값: 무료 평가판 없음                      | [무료 평가판](set-app-pricing-and-availability.md#free-trial)              |
+| **할인 판매 가격 책정**              | 옵션                                    | [앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)           |
+| **조직 라이선스**    | 기본값: 조직에서 대량 구입할 수 있음 | [조직 라이선스 옵션](organizational-licensing.md)        |
 | **게시 날짜**                | 기본값: 최대한 빨리 게시      | [게시 날짜](set-app-pricing-and-availability.md#publish-date)          |
 
 <span/>
 
-### <a name="app-properties-page"></a>앱 속성 페이지
+### <a name="properties-page"></a>속성 페이지
 
 | 필드 이름                    | 참고                                       | 자세한 정보                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **범주 및 하위 범주**  | 필수                                    | [범주 및 하위 범주 테이블](category-and-subcategory-table.md)       |
 | **시스템 요구 사항**      | 옵션                                    | [시스템 요구 사항](enter-app-properties.md#system-requirements)      |
-| **앱 선언**          | 기본값: 고객이 디바이스 또는 이동식 저장소를 대체하기 위해 이 앱을 설치할 수 있음, Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있음 | [앱 선언](app-declarations.md) |
+| **제품 선언**          | 기본값: 고객이 디바이스 또는 이동식 저장소를 대체하기 위해 이 앱을 설치할 수 있음, Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있음 | [제품 선언](app-declarations.md) |
 
 <span/>
 
@@ -80,19 +83,22 @@ translationtype: HT
 | 필드 이름                    | 참고                                       | 자세한 정보                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **설명**               | 필수                                    | [호소력 있는 앱 설명 쓰기](write-a-great-app-description.md) |
-| **릴리스 정보**             | 옵션                                    | [릴리스 정보](create-app-store-listings.md#release-notes)         |
-| **스크린샷**               | 필수(스크린샷 하나 이상)          | [앱 스크린샷 및 이미지](app-screenshots-and-images.md)       |
-| **앱 타일 아이콘**             | 선택 사항이지만, Windows Phone 8.1 이하의 경우 매우 권장 | [앱 타일 아이콘](create-app-store-listings.md#app-tile-icon) |
-| **판촉 아트워크**       | 선택 사항                                    | [앱 스크린샷 및 이미지](app-screenshots-and-images.md)       |
-| **앱 기능**              | 선택 사항                                    | [기능](create-app-store-listings.md#app-features)               |
-| **추가 시스템 요구 사항**      | 옵션                                    | [추가 시스템 요구 사항](create-app-store-listings.md#additional-system-requirements) |
-| **키워드**                  | 선택 사항                                    | [키워드](create-app-store-listings.md#keywords)                   |
-| **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
+| **릴리스 정보**             | 옵션                                    | [릴리스 정보](create-app-store-listings.md#release-notes)       |
+| **스크린샷**               | 필수(스크린샷 하나 이상)          | [스크린샷](app-screenshots-and-images.md#screenshots)          |
+| **스토어 로고**               | 선택 사항이지만, Windows Phone 8.1 이하의 경우 매우 권장 | [스토어 로고](app-screenshots-and-images.md#store-logos)             |
+| **홍보 이미지**        | 선택 사항                                    | [홍보 이미지](app-screenshots-and-images.md#promotional-images) |
+| **Xbox 이미지**               | 옵션                                    | [Xbox 이미지](app-screenshots-and-images.md#xbox-images)              |
+| **선택할 수 있는 홍보 이미지**       | 선택 사항                            | [선택할 수 있는 홍보 이미지](app-screenshots-and-images.md#optional-promotional-images)       |
+| **예고편**                  | 선택 사항                                    | [예고편](app-screenshots-and-images.md#trailers)                | 
+| **앱 기능**              | 선택 사항                                    | [기능](create-app-store-listings.md#app-features)             |
+| **추가 시스템 요구 사항**      | 선택 사항                                    | [추가 시스템 요구 사항](create-app-store-listings.md#additional-system-requirements) 
+| **검색어**              | 선택 사항                                    | [검색어](create-app-store-listings.md#search-terms)         |
+| **개인 정보 취급 방침**            | 일부 앱에 필요. [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058) 및 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1) 참조 | [개인 정보 취급 방침](create-app-store-listings.md#privacy-policy)        |
+| **저작권 및 상표 정보** | 옵션                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
 | **추가 사용 조건**  | 선택 사항                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |
-| **웹 사이트**                   | 선택 사항                                    | [웹 사이트](create-app-store-listings.md#website)                     |
-| **지원 연락처 정보**      | 선택 사항                                    | [지원 연락처 정보](create-app-store-listings.md)                |
-| **개인 정보 취급 방침**            | 일부 앱에 필요. [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058) 및 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1) 참조 | [개인 정보 취급 방침](create-app-store-listings.md#privacy-policy) |
-| **플랫폼별 스토어 목록** | 옵션                               | [플랫폼별 스토어 목록 만들기](create-platform-specific-store-listings.md) |
+| **웹 사이트**                   | 선택 사항                                    | [웹 사이트](create-app-store-listings.md#website)                   |
+| **지원 연락처 정보**      | 선택 사항                                    | [지원 연락처 정보](create-app-store-listings.md)              |
+| **플랫폼별 스토어 목록** | 옵션                               | [플랫폼별 스토어 목록 만들기](create-platform-specific-store-listings.md)  |
 
 <span/>
 

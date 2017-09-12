@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: normesta
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: "SQLite 데이터베이스"
 description: "SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. 이 문서에서는 SDK에 포함된 SQLite 라이브러리를 사용하거나, 유니버설 Windows 앱에서 고유한 SQLite 라이브러리를 패키지하거나, 소스에서 빌드하는 방법을 설명합니다."
-ms.author: markl
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, SQLite, 데이터베이스"
-ms.openlocfilehash: 70f0ae8d4f67e0b24199d7dd56ddebe5a643fae5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3b075a6c55373e91e9f12fb5359f5aa4a985f602
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="sqlite-databases"></a>SQLite 데이터베이스
 

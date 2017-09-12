@@ -1,17 +1,19 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: "Windows 앱 인증 키트"
 description: "앱이 Windows 스토어에 게시될 가능성 또는 Windows 인증을 받을 가능성을 최대한 높이려면 인증을 받기 위해 앱을 제출하기 전에 로컬로 앱의 유효성을 검사하고 테스트하세요. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다."
-ms.author: markl
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 118d4643c3d4fcb8549549e9d58d4b64d64f0885
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fb5303898bfb0d7021ba4c0aa48afd5038bcad4d
+ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/27/2017
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
@@ -26,7 +28,7 @@ translationtype: HT
 
 -   Windows 10을 설치하고 실행해야 합니다.
 -   Windows 10용 Windows SDK(소프트웨어 개발 키트)에 포함된 [Windows 앱 인증 키트 버전 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666)을 설치해야 합니다.
--   컴퓨터에 유효한 개발자 라이선스가 있어야 합니다. 방법을 알아보려면 [개발자 라이선스 가져오기](https://msdn.microsoft.com/library/windows/apps/Hh974578)를 참조하세요.
+-   [개발을 위해 디바이스를 사용](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)하도록 설정해야 합니다.
 -   테스트할 Windows 앱을 컴퓨터에 배포해야 합니다.
 
 **현재 위치 업그레이드에 대한 참고 사항**

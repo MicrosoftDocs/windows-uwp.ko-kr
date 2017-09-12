@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f74a93714b32613b6bee606a3916961b861b2d08
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0fe93670739a89c9416fdbfc28117a794a6a345d
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -77,11 +79,11 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-경우에 따라 운영 체제에서 사용자에게 실제로 앱을 전환할지 묻는 메시지를 표시합니다.
+경우에 따라 운영 체제에서 사용자에게 실제로 앱을 전환할 것인지 묻는 메시지를 표시합니다.
 
 ![회색으로 표시된 앱 배경에 오버레이된 경고 대화 상자. 이 대화 상자에서는 앱을 전환할지 여부를 사용자에게 질문하며 오른쪽 아래에는 '예'와 '아니요' 단추가 있고 ‘아니요' 단추가 강조 표시되어 있습니다.](images/warningdialog.png)
 
-이 메시지가 항상 발생하도록 하려면 [**Windows.System.LauncherOptions.TreatAsUntrusted**](https://msdn.microsoft.com/library/windows/apps/hh701442) 속성을 사용하여 운영 체제에 경고가 표시됨을 나타냅니다.
+이 메시지가 항상 발생하도록 하려면 [**Windows.System.LauncherOptions.TreatAsUntrusted**](https://msdn.microsoft.com/library/windows/apps/hh701442) 속성을 사용하여 운영 체제에 경고를 표시하라고 지시합니다.
 
 ```cs
 // The URI to launch

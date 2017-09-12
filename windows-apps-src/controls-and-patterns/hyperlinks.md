@@ -6,14 +6,20 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e2c04ea39eee88c225bfef277037363c084e8eff
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: kisai
+design-contact: kimsea
+dev-contact: stpete
+doc-status: Published
+ms.openlocfilehash: 5079d1782188b6d2e49fc14741a23a5651995c67
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="hyperlinks"></a>하이퍼링크
 
@@ -21,15 +27,9 @@ translationtype: HT
 
 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다. XAML 앱에 하이퍼링크를 추가할 수 있는 두 가지 방법(**Hyperlink** 텍스트 요소 및 **HyperlinkButton** 컨트롤)이 있습니다.
 
-![하이퍼링크 단추](images/controls/hyperlink-button.png)
+> **중요 API**: [Hyperlink 텍스트 요소](https://msdn.microsoft.com/library/windows/apps/dn279356), [HyperlinkButton 컨트롤](https://msdn.microsoft.com/library/windows/apps/br242739)
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**Hyperlink 텍스트 요소**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
-<li>[**HyperlinkButton 컨트롤**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
-</ul>
-</div>
+![하이퍼링크 단추](images/controls/hyperlink-button.png)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -41,12 +41,6 @@ translationtype: HT
 -   텍스트 컨트롤 내부에 인라인 **Hyperlink** 텍스트 요소를 사용합니다. Hyperlink 요소는 다른 텍스트 요소와 함께 제공되며 모든 InlineCollection에서 사용할 수 있습니다. 자동 텍스트 배치를 원하며 누르기 대상이 반드시 클 필요가 없는 경우에 텍스트 하이퍼링크를 사용합니다. 하이퍼링크 텍스트가 작아 터치하기 어려울 수도 있습니다.
 -   **HyperlinkButton**은 독립 실행형 하이퍼링크에 사용합니다. HyperlinkButton은 특수화된 단추 컨트롤로, 단추를 사용하는 모든 위치에서 사용할 수 있습니다.
 -   클릭할 수 있는 이미지를 만들려면 콘텐츠로 [이미지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx)가 있는 **HyperlinkButton**을 사용합니다.
-
-## <a name="examples"></a>예제
-
-계산기 앱의 하이퍼링크
-
-![계산기 앱에 있는 하이퍼링크의 예](images/control-examples/hyperlinks-calculator.png)
 
 ## <a name="create-a-hyperlink-text-element"></a>Hyperlink 텍스트 요소 만들기
 
@@ -150,7 +144,7 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 ## <a name="recommendations"></a>권장 사항
 
 -   하이퍼링크는 탐색하는 데만 사용하고 다른 작업에는 사용하지 않도록 합니다.
--   텍스트 기반 하이퍼링크의 유형 램프에서 본문 스타일을 사용합니다. [**fonts and the Windows 10 type ramp**](fonts.md)를 참조하세요.
+-   텍스트 기반 하이퍼링크의 유형 램프에서 본문 스타일을 사용합니다. [fonts and the Windows 10 type ramp](fonts.md)를 참조하세요.
 -   사용자 구별할 수 있고 각각을 쉽게 선택할 수 있게 하이퍼링크 사이에 충분한 공간을 둡니다.
 -   사용자가 이동될 위치를 나타내는 도구 설명을 하이퍼링크에 추가합니다. 사용자가 외부 사이트로 이동되면 도구 설명 내에 최상위 도메인 이름을 포함하고 텍스트에 보조 글꼴 색을 지정합니다.
 
@@ -160,5 +154,5 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 - [도구 설명에 대한 지침](tooltips.md)
 
 **개발자용(XAML)**
-- [**Windows.UI.Xaml.Documents.Hyperlink 클래스**](https://msdn.microsoft.com/library/windows/apps/dn279356)
-- [**Windows.UI.Xaml.Controls.HyperlinkButton 클래스**](https://msdn.microsoft.com/library/windows/apps/br242739)
+- [Windows.UI.Xaml.Documents.Hyperlink 클래스](https://msdn.microsoft.com/library/windows/apps/dn279356)
+- [Windows.UI.Xaml.Controls.HyperlinkButton 클래스](https://msdn.microsoft.com/library/windows/apps/br242739)

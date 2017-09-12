@@ -7,14 +7,16 @@ label: Layout panels
 template: detail.hbs
 op-migration-status: ready
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 45c7c541ab278da1f00899a16636337dcdc20d3f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 55b7c431482b171e56e670cd5d2ce0fc9148a5f9
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 
@@ -91,7 +93,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
                RelativePanel.Below="RedRect" 
                RelativePanel.AlignLeftWith="RedRect" 
                RelativePanel.AlignRightWith="BlueRect"/>
-    <Rectangle Fill="Yellow"
+    <Rectangle Fill="Orange"
                RelativePanel.Below="GreenRect" 
                RelativePanel.AlignLeftWith="BlueRect" 
                RelativePanel.AlignRightWithPanel="True"
@@ -106,7 +108,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 사각형의 크기를 조정하는 방법에 대해 참고할 몇 가지 사항이 있습니다.
 - 빨간색 사각형은 명시적으로 크기가 44x44로 지정되어 패널의 왼쪽 위 모서리에 위치가 지정되며 이는 기본 위치입니다.
 - 녹색 사각형은 명시적으로 높이가 44로 지정되며 왼쪽 면은 빨간색 사각형에 맞춰 정렬되고 오른쪽 면은 파란색 사각형에 맞춰 정렬됨으로써 너비가 결정됩니다.
-- 노란색 사각형은 크기가 명시적으로 지정되지 않고 왼쪽 면이 파란색 사각형에 맞춰 정렬됩니다. 오른쪽 및 아래쪽 가장자리는 패널의 가장자리에 맞춰 정렬됩니다. 크기가 이러한 맞춤에 따라 결정되므로 패널 크기가 조정되면 같이 조정됩니다.
+- 주황색 사각형은 크기가 명시적으로 지정되지 않고 왼쪽 면이 파란색 사각형에 맞춰 정렬됩니다. 오른쪽 및 아래쪽 가장자리는 패널의 가장자리에 맞춰 정렬됩니다. 크기가 이러한 맞춤에 따라 결정되므로 패널 크기가 조정되면 같이 조정됩니다.
 
 ## <a name="stackpanel"></a>StackPanel
 
@@ -121,7 +123,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
     <Rectangle Fill="Red" Height="44"/>
     <Rectangle Fill="Blue" Height="44"/>
     <Rectangle Fill="Green" Height="44"/>
-    <Rectangle Fill="Yellow" Height="44"/>
+    <Rectangle Fill="Orange" Height="44"/>
 </StackPanel>
 ```
 
@@ -155,7 +157,7 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
     <Rectangle Fill="Red" Width="44"/>
     <Rectangle Fill="Blue" Grid.Row="1"/>
     <Rectangle Fill="Green" Grid.Column="1"/>
-    <Rectangle Fill="Yellow" Grid.Row="1" Grid.Column="1"/>
+    <Rectangle Fill="Orange" Grid.Row="1" Grid.Column="1"/>
 </Grid>
 ```
 
@@ -188,7 +190,7 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
                VariableSizedWrapGrid.RowSpan="2"/>
     <Rectangle Fill="Green" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
-    <Rectangle Fill="Yellow" 
+    <Rectangle Fill="Orange" 
                VariableSizedWrapGrid.RowSpan="2" 
                VariableSizedWrapGrid.ColumnSpan="2"/>
 </VariableSizedWrapGrid>
@@ -216,7 +218,7 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
     <Rectangle Fill="Red" Height="44" Width="44"/>
     <Rectangle Fill="Blue" Height="44" Width="44" Canvas.Left="20" Canvas.Top="20"/>
     <Rectangle Fill="Green" Height="44" Width="44" Canvas.Left="40" Canvas.Top="40"/>
-    <Rectangle Fill="Yellow" Height="44" Width="44" Canvas.Left="60" Canvas.Top="60"/>
+    <Rectangle Fill="Orange" Height="44" Width="44" Canvas.Left="60" Canvas.Top="60"/>
 </Canvas>
 ```
 

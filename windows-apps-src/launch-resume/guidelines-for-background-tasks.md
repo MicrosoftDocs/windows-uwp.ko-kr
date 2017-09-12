@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c9bf682e6818f7c9854604448e52aa0111605a05
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 457c31a0657839632cbc60db0c908dca2cc4fafd
+ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/15/2017
 ---
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 
@@ -35,6 +37,8 @@ translationtype: HT
 |사용 가능한 트리거 | In-process 백그라운드 작업은 [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx), **IoTStartupTask** 등의 트리거를 지원하지 않습니다. |
 |VoIP | In-process 프로세스 백그라운드 작업은 응용 프로그램 내에서 VoIP 백그라운드 작업 활성화를 지원하지 않습니다. |  
 
+**트리거 인스턴스 수에 대한 제한:** 앱에서 등록할 수 있는 일부 트리거의 인스턴스 수에 대한 제한이 있습니다. 앱은 앱 인스턴스당 [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) 및 [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396)를 한 번씩만 등록할 수 있습니다. 앱이 이 제한을 초과하는 경우 등록이 예외를 throw합니다.
+
 **CPU 할당량:** 백그라운드 작업은 트리거 유형에 따라 가져오는 벽시계로 측정하는 시간으로 제한됩니다. 대부분의 트리거는 벽시계로 측정하는 30초로 제한되지만 일부는 집중적인 작업을 완료하기 위해 최대 10분을 실행할 수 있습니다. 배터리 사용 시간을 절약하고 포그라운드 앱에 대한 효율적인 사용자 환경을 제공하도록 백그라운드 작업은 간결해야 합니다. 백그라운드 작업에 적용되는 리소스 제약 조건은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 **백그라운드 작업 관리:** 앱에서는 등록된 백그라운드 작업 목록을 가져오고, 진행률 및 완료 처리기를 등록하고, 해당 이벤트를 적절하게 처리해야 합니다. 백그라운드 작업 클래스는 진행률, 취소 및 완료를 보고해야 합니다. 자세한 내용은 [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md) 및 [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)을 참조하세요.
@@ -53,7 +57,7 @@ translationtype: HT
 
 > **중요**  Windows 10부터 백그라운드 작업을 실행하기 위한 필수 조건으로 앱을 잠금 화면에 배치하지 않아도 됩니다.
 
-UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아도 지원되는 모든 작업 형식을 실행할 수 있습니다. 그러나 모든 형식의 백그라운드 작업을 등록하기 전에 앱이 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다. 사용자가 장치 설정에서 해당 앱에 대해 명시적으로 백그라운드 작업 권한을 거부한 경우에는 이 메서드가 [**BackgroundAccessStatus.Denied**](https://msdn.microsoft.com/library/windows/apps/hh700439)를 반환합니다.
+UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아도 지원되는 모든 작업 형식을 실행할 수 있습니다. 그러나 모든 형식의 백그라운드 작업을 등록하기 전에 앱이 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다. 사용자가 장치 설정에서 해당 앱에 대해 명시적으로 백그라운드 작업 권한을 거부한 경우에는 이 메서드가 [**BackgroundAccessStatus.DeniedByUser**](https://msdn.microsoft.com/library/windows/apps/hh700439)를 반환합니다. 백그라운드 작업 및 배터리 절약 모드와 관련된 사용자 선택에 대한 자세한 내용은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요. 
 ## <a name="background-task-checklist"></a>백그라운드 작업 검사 목록
 
 *In-process 및 out of process 백그라운드 작업 모두에 적용*
@@ -79,16 +83,6 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 - 작업을 취소하는 경우 취소가 발생하기 전에 `BackgroundActivated` 이벤트 처리기가 종료되는지 확인합니다. 종료되지 않을 경우 전체 프로세스가 종료됩니다.
 -   지속 시간이 짧은 백그라운드 작업을 씁니다. 백그라운드 작업은 벽시계로 측정하는 30초로 제한됩니다.
 -   백그라운드 작업에서 사용자 조작을 요구하지 않습니다.
-
-## <a name="windows-background-task-checklist-for-lock-screen-capable-apps"></a>Windows: 잠금 화면 지원 앱에 대한 백그라운드 작업 검사 목록
-
-잠금 화면에 배치할 수 있는 앱에 대한 백그라운드 작업을 개발하는 경우 다음 지침을 따릅니다. [잠금 화면 타일에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465403)의 지침을 따르세요.
-
--   앱을 잠금 화면 지원으로 개발하기 전에 앱을 잠금 화면에 배치해야 하는지를 확인합니다. 자세한 내용은 [잠금 화면 개요](https://msdn.microsoft.com/library/windows/apps/hh779720)를 참조하세요.
-
--   잠금 화면에 배치하지 않아도 앱이 작동하는지 확인합니다.
-
--   [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 등록된 백그라운드 작업을 포함하며 앱 매니페스트에서 백그라운드 작업을 선언합니다. 진입점과 트리거 형식이 올바른지 확인합니다. 이는 인증하는 데 필요하며 사용자가 앱을 잠금 화면에 배치할 수 있도록 해줍니다.
 
 **참고**  
 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.

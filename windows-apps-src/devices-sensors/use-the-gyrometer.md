@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
 title: "회전계 사용"
 description: "회전계를 사용하여 사용자의 동작 변화를 탐지하는 방법을 알아봅니다."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 6f50ad39420f3154c437a58d19971ed01e638528
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 7b4dc5be2c6e9cd2dfb0b1f8d6f83250430d2c8b
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-gyrometer"></a>회전계 사용
 
@@ -21,6 +23,10 @@ translationtype: HT
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**회전계**](https://msdn.microsoft.com/library/windows/apps/BR225718)
+
+**샘플**
+
+-   더 완전한 구현은 [회전계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer)을 참조하세요.
 
 \[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 

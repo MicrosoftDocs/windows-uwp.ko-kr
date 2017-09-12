@@ -3,15 +3,17 @@ author: GrantMeStrength
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: "UWP(유니버설 Windows 플랫폼) 앱이란?"
 description: "다양한 유형의 유니버설 Windows 앱(Windows 스토어 앱, Windows Phone 스토어 앱 및 Windows 런타임 앱)에 대해 알아보세요."
-ms.author: susanw
+ms.author: jken
 ms.date: 03/22/2017
 ms.topic: article
 pms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2afb5cbc74b381e85fa861562e7de57d877b0c7f
-ms.sourcegitcommit: 253ed634522773e15199084a6f74a3a465c2b218
-translationtype: HT
+ms.openlocfilehash: 3bbced2db33210952b6c8a45f98e36582330d7d9
+ms.sourcegitcommit: 214a1dcb24e0811811bd7a4a07bfe707ecd93b18
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -29,7 +31,7 @@ UWP(유니버설 Windows 플랫폼)는 Windows 10용 앱 플랫폼입니다. 하
 
 -   **모든 디바이스 간의 공통 API 표면이 있습니다.**
 
-    UWP(유니버설 Windows 플랫폼) 핵심 API가 모든 Windows 장치 클래스에 대해 동일합니다. 앱이 핵심 API만 사용하는 경우 데스크톱 PC, Xbox 또는 혼합 현실 헤드셋 중 무엇을 대상으로 하든 모든 Windows 10 디바이스에서 실행됩니다.
+    UWP(유니버설 Windows 플랫폼) 핵심 API가 모든 Windows 장치 클래스에 대해 동일합니다. 앱이 핵심 API만 사용하는 경우 데스크톱 PC, Xbox 또는 혼합 현실 헤드셋 중 무엇을 대상으로 하든 모든 Windows 10 장치에서 실행됩니다.
 
 -   **확장 SDK를 사용하면 앱이 특정 디바이스 유형에서 유용한 작용을 합니다.**
 
@@ -103,4 +105,4 @@ UWP에 대한 자세한 내용은 [유니버설 Windows 플랫폼 앱 가이드]
 
 * [.NET 네이티브 - UWP(유니버설 Windows 플랫폼) 개발자를 위한 의미](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
 * [.NET의 유니버설 Windows 앱](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)
-* [UWP 앱용 .NET](https://msdn.microsoft.com/en-us/library/mt185501.aspx)
+* [UWP 앱용 .NET](https://msdn.microsoft.com/library/mt185501.aspx)

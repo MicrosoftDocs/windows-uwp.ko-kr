@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: "경사계 사용"
 description: "경사계를 사용하여 피치, 롤 및 요를 확인하는 방법을 알아봅니다."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 6544d4a598edb12d8d114bb27fac84831ce31d14
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b0fcc9e45d1a9e1921e77ce8b59817a5ca1c0dd2
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="use-the-inclinometer"></a>경사계 사용
 
@@ -21,6 +23,10 @@ translationtype: HT
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**경사계**](https://msdn.microsoft.com/library/windows/apps/BR225766)
+
+**샘플**
+
+-   더 완전한 구현은 [경사계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer)을 참조하세요.
 
 경사계를 사용하여 피치, 롤 및 요를 판단하는 방법을 알아봅니다.
 
@@ -175,6 +181,3 @@ InclinometerReadingChangedEventArgs>(ReadingChanged);
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
 
- ## <a name="related-topics"></a>관련 항목
-
-* [경사계 샘플](http://go.microsoft.com/fwlink/p/?linkid=241380)

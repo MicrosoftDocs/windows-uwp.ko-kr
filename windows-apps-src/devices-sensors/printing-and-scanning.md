@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: PatrickFarley
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
 title: "인쇄 및 스캔"
 description: "이 섹션에서는 유니버설 Windows 앱에서 인쇄 및 스캔하는 방법을 설명합니다."
-ms.author: dbirtolo
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: b3081680c0d2324585fa5550aa7c6e8548673219
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 701c3f5b7efe32971c6c5c9aaa3d6644d31e69f5
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="printing-and-scanning"></a>인쇄 및 스캔
 

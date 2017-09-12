@@ -1,11 +1,13 @@
 ---
-author: mcleblanc
+author: PatrickFarley
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: "HoloLens용 디바이스 포털 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 HoloLens REST API의 Windows Device Portal에 대해 알아봅니다."
-ms.openlocfilehash: 638ebca167b2ca56f00a83aab13b15c57b2dca2a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 3c000bc19c0bd45050e5be1ca73e5dc7b73d8103
+ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/26/2017
 ---
 # <a name="device-portal-api-reference-for-hololens"></a>HoloLens용 디바이스 포털 API 참조
 

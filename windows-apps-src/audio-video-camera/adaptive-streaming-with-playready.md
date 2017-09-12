@@ -1,17 +1,19 @@
 ---
-author: eliotcowley
+author: drewbatgit
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: "이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다."
 title: "PlayReady를 사용한 적응 스트리밍"
-ms.author: elcowle
+ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f7bd47c4c8ae7ce5515e3c53571655fd32d36e1a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: aebd2e2de0b1c4991b69b02f1f215ab58feef4a9
+ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 

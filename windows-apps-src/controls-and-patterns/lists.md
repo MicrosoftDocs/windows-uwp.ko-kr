@@ -6,18 +6,25 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4c17bab575be207106abfac44104bb32bcffd6ac
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+dev-contact: ranjeshj
+doc-status: Published
+ms.openlocfilehash: 0249132942cbb15a009c85c929185bffcba23cd9
+ms.sourcegitcommit: 690320e6cbfc16ed9e935a136fecc44d68e95719
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="lists"></a>목록
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
 
 목록은 컬렉션 기반 콘텐츠를 표시하고 조작할 수 있게 합니다. 이 문서에서 다루는 네 가지 목록 패턴은 다음과 같습니다.
 
@@ -26,16 +33,15 @@ translationtype: HT
 -   드롭다운 목록 - 사용자가 확장 목록에서 하나의 항목을 선택할 수 있음
 -   목록 상자 - 사용자가 스크롤할 수 있는 상자에서 하나 이상의 항목을 선택할 수 있음
 
-각 목록 패턴에 대한 디자인 지침, 기능 및 예제가 제공됩니다. 문서의 끝에는 관련 항목 및 API에 대한 링크가 있습니다.
+각 목록 패턴에 대한 디자인 지침, 기능 및 예제가 제공됩니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242878)</li>
-<li>[**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242705)</li>
-<li>[**ComboBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209348)</li>
-</ul>
-</div>
+> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/br242878), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/br242705), [ComboBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209348)
+
+> <div id="main">
+> <strong><span class="uwpd-prelease">시험판.</span> 가을 크리에이터 업데이트(Windows 10 Insider Preview 빌드 16215 이상) - 동작 변경</strong>
+> </div>
+> 이제는 기본적으로 선택을 수행하는 대신 터치, 터치 패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [ScrollViewer 클래스] (https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) API 참조 항목을 참조하세요.
 
 ## <a name="list-views"></a>목록 보기
 
@@ -180,10 +186,12 @@ translationtype: HT
 
 -   콤보 상자 항목의 텍스트 콘텐츠를 한 줄로 제한합니다.
 -   가장 논리적인 순서로 콤보 상자의 항목을 정렬합니다. 관련 옵션을 그룹화하고 가장 일반적인 옵션을 맨 위에 배치합니다. 이름은 사전순으로 정렬하고, 숫자는 숫자순으로 정렬하고, 날짜는 시간순으로 정렬합니다.
+-   사용자가 글꼴 선택 드롭다운과 같은 화살표 키를 사용하고 있는 동안 라이브로 업데이트되는 콤보 상자를 만들려면 SelectionChangedTrigger를 “항상”으로 설정합니다.  
 
 ### <a name="text-search"></a>텍스트 검색
 
-콤보 상자는 자동으로 컬렉션 내의 검색을 지원합니다. 사용자가 열리거나 닫힌 콤보 상자에 포커스가 있는 상태에서 실제 키보드를 통해 문자를 입력하면 사용자 문자열과 일치하는 항목이 표시됩니다. 이 기능은 긴 목록을 탐색할 때 특히 유용합니다. 예를 들어 상태 목록이 포함된 드롭다운을 조작하는 경우 사용자는 빠른 선택을 위해 "w" 키를 눌러 "워싱턴"을 표시할 수 있습니다. 
+콤보 상자는 자동으로 컬렉션 내의 검색을 지원합니다. 사용자가 열리거나 닫힌 콤보 상자에 포커스가 있는 상태에서 실제 키보드를 통해 문자를 입력하면 사용자 문자열과 일치하는 항목이 표시됩니다. 이 기능은 긴 목록을 탐색할 때 특히 유용합니다. 예를 들어 상태 목록이 포함된 드롭다운을 조작하는 경우 사용자는 빠른 선택을 위해 "w" 키를 눌러 "워싱턴"을 표시할 수 있습니다.
+
 
 ## <a name="list-boxes"></a>목록 상자
 
@@ -252,12 +260,12 @@ translationtype: HT
 
 - [허브](hub.md)
 - [마스터/세부](master-details.md)
-- [탐색 창](nav-pane.md)
+- [탐색 창](navigationview.md)
 - [시맨틱 줌](semantic-zoom.md)
 - [끌어서 놓기](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **개발자용**
-- [**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242878)
-- [**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242705)
-- [**ComboBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [**ListBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/br242878)
+- [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/br242705)
+- [ComboBox 클래스](https://msdn.microsoft.com/library/windows/apps/br209348)
+- [ListBox 클래스](https://msdn.microsoft.com/library/windows/apps/br242868)

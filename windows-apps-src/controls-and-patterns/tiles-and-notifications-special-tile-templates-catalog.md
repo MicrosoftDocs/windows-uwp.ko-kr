@@ -6,14 +6,16 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
-ms.openlocfilehash: 11c8fbdfd8653fe93ab712c865dc1d23e7a76581
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: ebeac8bb4d2787514c788ecfa0ab1381ff40820b
+ms.sourcegitcommit: 9a1310468970c8d1ade0fb200126dff56ea8c9e1
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/14/2017
 ---
 # <a name="special-tile-templates"></a>특수 타일 템플릿
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -35,13 +37,25 @@ translationtype: HT
 
 **1단계: PNG 형식으로 이미지 자산 만들기**
 
-타일에 대한 아이콘 자산을 만들고 다른 자산과 함께 프로젝트 리소스에 배치합니다. 최소한 휴대폰과 데스크톱에서 작은 타일과 중간 크기 타일에 대해 작동하는 200x200 픽셀 아이콘을 만듭니다. 최상의 사용자 환경을 제공하려면 각 크기에 대한 아이콘을 만듭니다. 아래 이미지에서 크기 조정 세부 정보를 참조하세요.
+타일에 대한 아이콘 자산을 만들고 다른 자산과 함께 프로젝트 리소스에 배치합니다. 최소한 휴대폰과 데스크톱에서 작은 타일과 중간 크기 타일에 대해 작동하는 200x200 픽셀 아이콘을 만듭니다. 최상의 사용자 환경을 제공하려면 각 크기에 대한 아이콘을 만듭니다. 이러한 자산에는 안쪽 여백이 필요 없습니다. 아래 이미지에서 크기 조정 세부 정보를 참조하세요.
 
 아이콘 자산을 투명성이 있는 PNG 형식으로 저장합니다. Windows Phone에서 모든 불투명 픽셀은 흰색(RGB 255, 255, 255)으로 표시됩니다. 일관성과 단순성을 위해 데스크톱 아이콘에도 흰색을 사용합니다.
 
 태블릿, 노트북 및 데스크톱의 Windows 10에서는 정사각형 아이콘 자산만 지원합니다. 휴대폰은 정사각형 자산과 너비:높이 비율이 최대 2:3까지 너비보다 높이가 큰 자산(휴대폰 아이콘 등의 이미지에 유용함)을 둘 다 지원합니다.
 
 ![휴대폰과 데스크톱에서 작은 타일과 중간 크기 타일의 아이콘 크기 조정](images/iconic-template-sizing-info.png)
+
+![배지가 있는 자산 및 배지가 없는 자산에 대한 크기 조정](images/assetguidance24.png)
+
+정사각형 자산의 경우 컨테이너 내에서 자동으로 가운데에 배치됩니다.
+
+![배지가 있거나 없는 정사각형 자산 크기 조정](images/assetguidance25.png)
+
+정사각형이 아닌 자산의 경우 컨테이너의 너비/높이에 대한 자동 가로/세로 가운데 배치 및 맞추기가 발생합니다.
+
+![배지가 있거나 없는 정사각형이 아닌 자산 크기 조정](images/assetguidance26a.png)
+
+![배지가 있거나 없는 정사각형이 아닌 자산 크기 조정](images/assetguidance26b.png)
 
 **2단계: 기본 타일 만들기**
 

@@ -1,22 +1,24 @@
 ---
 author: jnHs
-Description: "패키지 페이지에서는 제출 중인 앱의 모든 패키지 파일(.xap, .appx, .appxupload 및/또는 .appxbundle)을 업로드합니다. 이 단계에서 앱의 대상으로 지정한 운영 체제의 패키지를 업로드할 수 있습니다."
+Description: "패키지 페이지에서는 제출 중인 앱의 모든 패키지 파일(.xap, .appx, .appxupload 및/또는 .appxbundle)을 업로드합니다."
 title: "앱 패키지 업로드"
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1bc2ce82688db20315113efc9b080b449a850f05
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: a1f7654ebd0d896ef61d861bd95ca5ae7c96d173
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
 
-**패키지** 페이지에서는 제출 중인 앱의 모든 패키지 파일(.appx, .appxupload, .appxbundle 및/또는 .xap)을 업로드합니다. 이 단계에서 앱의 대상으로 지정한 운영 체제의 패키지를 업로드할 수 있습니다. 고객이 앱을 다운로드하면 스토어에서는 각 고객에게 해당 디바이스에 가장 적합한 패키지를 자동으로 제공합니다. 패키지를 업로드하면 [특정 Windows 10 디바이스 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
+**패키지** 페이지에서는 제출 중인 앱의 모든 패키지 파일(.appx, .appxupload, .appxbundle 및/또는 .xap)을 업로드합니다. 이 단계에서 앱의 대상으로 지정한 운영 체제의 패키지를 업로드할 수 있습니다. 고객이 앱을 다운로드하면 스토어에서는 각 고객에게 해당 장치에 가장 적합한 패키지를 자동으로 제공합니다. 패키지를 업로드하면 [특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
 
 패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. [버전 번호가 특정 고객에게 전달되는 패키지에 미칠 수 있는 영향](package-version-numbering.md) 및 [여러 운영 체제에 패키지를 배포하는 방법](guidance-for-app-package-management.md)도 알아볼 수 있습니다.
 
@@ -26,64 +28,70 @@ translationtype: HT
 
 앱에 대한 [패키지 플라이트](package-flights.md)를 만든 경우 패키지 플라이트 중 하나에서 패키지를 복사하는 옵션이 포함된 드롭다운이 표시됩니다. 끌어오려는 패키지가 있는 패키지 플라이트를 선택합니다. 그런 다음 해당 패키지를 일부 또는 전부 선택하여 이 제출에 포함할 수 있습니다.
 
-> **중요** Windows 10의 경우 여기서 항상 .appx 또는 .appxbundle이 아니라 .appxupload 파일을 업로드해야 합니다. 스토어용 UWP 앱을 패키징하는 방법에 대한 자세한 내용은 [Windows 10용 유니버설 Windows 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
+> [!IMPORTANT]
+> Windows 10의 경우 여기에 .appx 또는.appxbundle이 아니라 .appxupload 파일을 업로드하는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
 
 패키지 유효성을 검사하는 동안 패키지에서 문제를 검색하는 경우 해당 패키지를 제거하고 문제를 해결한 후 다시 업로드해야 합니다. 자세한 내용은 [패키지 업로드 오류 해결](resolve-package-upload-errors.md)을 참조하세요.
 
 문제를 일으킬 수 있지만 제출을 계속하지 못하게 차단하지는 않는 정보를 알리는 경고가 표시될 수도 있습니다.
 
-## <a name="device-family-availability"></a>디바이스 패밀리 가용성
+## <a name="device-family-availability"></a>장치 패밀리 가용성
 
-패키지가 성공적으로 업로드되면 **디바이스 패밀리 가용성** 섹션에 특정 Windows 10 디바이스 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지를 등급순으로 나타내는 표가 표시됩니다. 이 섹션에서는 특정 Windows 10 디바이스 패밀리의 고객에게 제출을 제공할 것인지도 선택할 수 있습니다.
+패키지가 성공적으로 업로드되면 **장치 패밀리 가용성** 섹션에 특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지를 등급순으로 나타내는 표가 표시됩니다. 이 섹션에서는 특정 Windows 10 장치 패밀리의 고객에게 제출을 제공할 것인지도 선택할 수 있습니다.
 
-> **참고** 아직 패키지를 업로드하지 않은 경우 **디바이스 패밀리 가용성** 섹션에 Windows 10 디바이스 패밀리와 함께 제출이 이러한 디바이스 패밀리 고객에게 제공될지 여부를 나타내는 확인란이 표시됩니다. 표는 패키지를 업로드할 때까지 표시되지 않습니다.
+> [!NOTE]
+> 아직 패키지를 업로드하지 않은 경우 **장치 패밀리 가용성** 섹션에 Windows 10 장치 패밀리와 함께 제출이 이러한 장치 패밀리 고객에게 제공될지 여부를 나타내는 확인란이 표시됩니다. 표는 패키지를 업로드할 때까지 표시되지 않습니다.
 
-Microsoft에서 이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록 허용할지 여부를 지정할 수 있는 확인란도 제공됩니다. 새 디바이스 패밀리가 도입됨에 따라 더 많은 잠재 고객에게 앱을 제공할 수 있도록 이 상자를 선택된 상태로 유지하는 것이 좋습니다.
+Microsoft에서 이후의 Windows 10 장치 패밀리에 앱을 제공하도록 허용할지 여부를 지정할 수 있는 확인란도 제공됩니다. 새 장치 패밀리가 도입됨에 따라 더 많은 잠재 고객에게 앱을 제공할 수 있도록 이 상자를 선택된 상태로 유지하는 것이 좋습니다.
 
-### <a name="choosing-which-device-families-to-support"></a>지원할 디바이스 패밀리 선택
+### <a name="choosing-which-device-families-to-support"></a>지원할 장치 패밀리 선택
 
-해당 디바이스 형식의 고객에게 제출을 제공하지 않으려는 경우 Windows 10 디바이스 패밀리에 대한 확인란의 선택을 취소할 수 있습니다. 디바이스 패밀리 확인란을 선택하지 않은 경우 해당 디바이스 형식의 새 고객은 앱을 다운로드할 수 없습니다. 그러나 앱을 이미 다운로드한 고객은 계속 사용하고 제출한 업데이트를 받을 수 있습니다. 
+해당 장치 형식의 고객에게 제출을 제공하지 않으려는 경우 Windows 10 장치 패밀리에 대한 확인란의 선택을 취소할 수 있습니다. 장치 패밀리 확인란을 선택하지 않은 경우 해당 장치 형식의 새 고객은 앱을 다운로드할 수 없습니다. 그러나 앱을 이미 다운로드한 고객은 계속 사용하고 제출한 업데이트를 받을 수 있습니다. 
 
-> **참고** **Windows 8/8.1** 및 **Windows Phone 8.x 이하 버전**에 대한 확인란은 없습니다. 제출에 이러한 OS 버전에서 실행할 수 있는 패키지가 포함된 경우 고객이 이러한 패키지를 사용할 수 있습니다. 이전 OS 버전의 고객에게 앱을 제공하지 않으려면 제출에서 해당 패키지를 제거해야 합니다.
+> [!NOTE]
+> **Windows 8/8.1** 및 **Windows Phone 8.x 이하** 버전에 대한 확인란은 없습니다. 제출에 이러한 OS 버전에서 실행할 수 있는 패키지가 포함된 경우 고객이 이러한 패키지를 사용할 수 있습니다. 이전 OS 버전의 고객에게 앱을 제공하지 않으려면 제출에서 해당 패키지를 제거해야 합니다.
 
-앱이 모바일 및 데스크톱 디바이스 패밀리를 지원하는 경우 앱을 다운로드할 수 있는 Windows 10 디바이스 형식에 제한이 없는 한 **Windows 10 Mobile** 및 **Windows 10 Desktop** 확인란을 선택하는 것이 좋습니다. 예를 들어 Windows 유니버설 패키지를 만들었지만 모바일 디바이스에서 앱의 몇 가지 문제를 테스트해야 할 수 있습니다. 새 고객이 Windows 10 Mobile 디바이스에서 앱을 다운로드하지 못하도록 하려면 여기에서 **Windows 10 Mobile** 확인란의 선택을 취소하면 됩니다. 그런 다음 나중에 Windows 10 Mobile 디바이스 고객에게 제공할 준비가 되면 **Windows 10 Mobile** 상자를 선택하여 새 제출을 만들 수 있습니다.
+앱이 모바일 및 데스크톱 장치 패밀리를 지원하는 경우 앱을 다운로드할 수 있는 Windows 10 장치 형식에 제한이 없는 한 **Windows 10 Mobile** 및 **Windows 10 Desktop** 확인란을 선택하는 것이 좋습니다. 예를 들어 Windows 유니버설 패키지를 만들었지만 모바일 장치에서 앱의 몇 가지 문제를 테스트해야 할 수 있습니다. 새 고객이 Windows 10 Mobile 장치에서 앱을 다운로드하지 못하도록 하려면 여기에서 **Windows 10 Mobile** 확인란의 선택을 취소하면 됩니다. 그런 다음 나중에 Windows 10 Mobile 장치 고객에게 제공할 준비가 되면 **Windows 10 Mobile** 상자를 선택하여 새 제출을 만들 수 있습니다.
 
 앱이 게임이 아니거나 또는 게임인데 [개념 승인](../gaming/concept-approval.md) 프로세스를 마쳤으며 제출에 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일된 중립 및/또는 x64 UWP 패키지가 포함된 경우 **Windows 10 Xbox** 확인란을 선택하여 Xbox 고객에게 앱을 제공할 수 있습니다. 
 
-> **중요** Xbox 디바이스에서 앱을 시작하려면 Windows SDK 14393 이상 버전을 사용하여 컴파일된 중립 또는 x64 패키지를 포함해야 합니다. 그러나 Windows 10 Xbox를 선택한 경우 이전 버전의 SDK를 사용하여 컴파일된 경우에도 항상 Xbox에서 적용할 수 있는 가장 높은 버전의 패키지(즉, Xbox 또는 유니버설 디바이스 패밀리를 대상으로 하는 중립 또는 x64 패키지)가 Xbox 고객에게 제공됩니다. 그러므로 Xbox에 적용할 수 있는 가장 높은 버전의 패키지가 Windows SDK 버전 14393 이상을 사용하여 컴파일되었는지 확인하는 것이 중요합니다. 그렇지 않은 경우 Xbox 고객이 앱을 시작할 수 없음을 나타내는 오류 메시지가 표시됩니다. 
+> [!IMPORTANT]
+> Xbox 장치에서 앱을 시작하려면 Windows SDK 버전 14393 이상으로 컴파일된 중립 또는 x64 패키지를 포함해야 합니다. 그러나 **Windows 10 Xbox**를 선택한 경우, 이전 버전의 SDK를 사용하여 컴파일된 경우에도 항상 Xbox에서 적용할 수 있는 가장 높은 버전의 패키지(즉, Xbox 또는 유니버설 장치 패밀리를 대상으로 하는 중립 또는 x64 패키지)가 Xbox 고객에게 제공됩니다. 그러므로 Xbox에 적용할 수 있는 가장 높은 버전의 패키지가 Windows SDK 버전 14393 이상을 사용하여 컴파일되었는지 확인하는 것이 중요합니다. 그렇지 않은 경우 Xbox 고객이 앱을 시작할 수 없음을 나타내는 오류 메시지가 표시됩니다. 
 > 
 > 이 오류를 해결하려면 다음 중 하나를 수행합니다.
-> -    해당 패키지를 Windows SDK 버전 14393 이상을 사용하여 컴파일된 새 패키지로 바꿉니다.
-> -    패키지가 Xbox를 지원하고 Windows SDK 14393 이상 버전으로 컴파일된 경우 제출에 더 높은 버전의 패키지가 포함되도록 해당 버전 번호를 높입니다.
-> -    **Windows 10 Xbox** 확인란의 선택을 취소합니다.
->     
+> - 해당 패키지를 Windows SDK 버전 14393 이상을 사용하여 컴파일된 새 패키지로 바꿉니다.
+> - 패키지가 Xbox를 지원하고 Windows SDK 14393 이상 버전으로 컴파일된 경우 제출에 더 높은 버전의 패키지가 포함되도록 해당 버전 번호를 높입니다.
+> - **Windows 10 Xbox** 확인란의 선택을 취소합니다.
+>   
 > 이 문제를 계속 해결할 수 없는 경우 고객 지원 센터에 문의합니다.
 
 테스트를 통해 앱이 Microsoft HoloLens에서 제대로 실행되는지 확인한 경우 **Windows 10 Holographic** 확인란을 선택하여 HoloLens 고객에게 앱을 제공할 수도 있습니다. 홀로그램 앱의 빌드, 테스트 및 게시에 대한 자세한 내용은 [Windows Holographic 개발 개요](http://dev.windows.com/holographic/development_overview)를 참조하세요.
 
-> **중요** 특정 Windows 10 디바이스 패밀리에서 앱을 다운로드하는 것을 완전히 방지하려면 Microsoft Visual Studio에서 appx 매니페스트에 기본적으로 포함하는 Windows.Universal 값(범용 디바이스 패밀리의 경우)으로 그대로 두지 말고 지원하려는 디바이스 패밀리(즉, Windows.Mobile 또는 Windows.Desktop)만을 대상으로 하도록 appx 매니페스트의 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) 요소를 업데이트해야 합니다.
+> [!IMPORTANT]
+> 특정 Windows 10 장치 패밀리에서 앱을 다운로드하는 것을 완전히 방지하려면 Microsoft Visual Studio가 appx 매니페스트에 기본적으로 포함하고 있는 Windows.Universal 값(유니버설 장치 패밀리의 경우)을 그대로 두지 말고 지원하려는 장치 패밀리(즉, Windows.Mobile 또는 Windows.Desktop)만을 대상으로 하도록 appx 매니페스트의 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) 요소를 업데이트해야 합니다.
 
-여기에서 선택한 항목은 새 다운로드에만 적용됩니다. 앱에 이미 있는 사용자는 앱을 계속 사용할 수 있으며, 여기에서 해당 디바이스 패밀리를 제거한 경우에도 제출한 업데이트를 받게 됩니다. 이는 Windows 10으로 업그레이드하기 전에 앱을 다운로드한 고객에게도 적용됩니다. 예를 들어 Windows Phone 8.1 패키지로 앱을 게시하고 나중에 유니버설 디바이스 패밀리를 대상으로 하는 동일한 앱에 Windows 10(UWP) 패키지를 추가한 경우 Windows Phone 8.1 패키지를 가진 Windows 10 Mobile 고객은 **Windows 10 Mobile** 상자의 선택을 취소한 경우에도 이 Windows 10(UWP) 패키지에 대한 업데이트를 받게 됩니다(이는 새 다운로드가 아니라 업데이트이기 때문). 그러나 유니버설 또는 모바일 디바이스 패밀리를 대상으로 하는 Windows 10(UWP) 패키지를 제공하지 않은 경우 Windows 10 Mobile 고객은 계속 Windows Phone 8.1 패키지를 사용하게 됩니다.
+**장치 패밀리 가용성** 섹션에서 선택한 내용은 새 구입에만 적용되는 점을 기억하세요. 앱을 이미 소유하고 있는 사용자는 이를 계속 사용할 수 있으며, 여기에서 해당 장치 패밀리를 제거한 경우에도 제출한 업데이트를 받게 됩니다. 이는 Windows 10으로 업그레이드하기 전에 앱을 다운로드한 고객에게도 적용됩니다.
 
-디바이스 패밀리에 대한 자세한 내용은 [UWP(유니버설 Windows 플랫폼) 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631) 및 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)를 참조하세요.
+예를 들어 Windows Phone 8.1 패키지로 앱을 게시하고 나중에 유니버설 장치 패밀리를 대상으로 하는 동일한 앱에 Windows 10(UWP) 패키지를 추가한 경우 Windows Phone 8.1 패키지를 가진 Windows 10 Mobile 고객은 **Windows 10 Mobile** 상자의 선택을 취소한 경우에도 이 Windows 10(UWP) 패키지에 대한 업데이트를 받게 됩니다(이는 새 다운로드가 아니라 업데이트이기 때문). 그러나 유니버설 또는 모바일 장치 패밀리를 대상으로 하는 Windows 10(UWP) 패키지를 제공하지 않은 경우 Windows 10 Mobile 고객은 계속 Windows Phone 8.1 패키지를 사용하게 됩니다.
+
+장치 패밀리에 대한 자세한 내용은 [유니버설 Windows 플랫폼 개요](https://msdn.microsoft.com/library/windows/apps/dn894631) 및 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)를 참조하세요.
 
 ### <a name="understanding-ranking"></a>순위 이해
 
-이 섹션에서는 제출을 다운로드할 수 있는 Windows 10 디바이스 패밀리를 알리는 것 외에 특정 디바이스 패밀리에서 사용할 수 있는 패키지도 표시합니다. 특정 디바이스 패밀리에서 실행할 수 있는 패키지가 두 개 이상 있는 경우 패키지 버전 번호를 기준으로 패키지를 제공할 순서가 표에 나타납니다. 버전 번호를 기준으로 스토어에서 패키지의 순위를 매기는 방법은 [패키지 버전 번호](package-version-numbering.md)를 참조하세요. 
+**장치 패밀리 가용성** 섹션에서는 제출을 다운로드할 수 있는지 Windows 10 장치 패밀리 외에도 다른 장치 패밀리에서 사용할 수 있는 특정 패키지를 표시합니다. 특정 장치 패밀리에서 실행할 수 있는 패키지가 두 개 이상 있는 경우 패키지 버전 번호를 기준으로 패키지를 제공할 순서가 표에 나타납니다. 버전 번호를 기준으로 스토어에서 패키지의 순위를 매기는 방법은 [패키지 버전 번호](package-version-numbering.md)를 참조하세요. 
 
-예를 들어 Package_A.appxupload 및 Package_B.appxupload 두 가지 패키지가 있다고 가정합니다. 특정 디바이스 패밀리의 경우 Package_A.appxupload의 순위가 1이고 Package_B.appxupload의 순위가 2이면 해당 디바이스 형식의 고객이 앱을 다운로드할 때 스토어에서 먼저 Package_A.appxupload를 제공한다는 의미입니다. 고객의 디바이스에서 Package_A.appxupload를 실행할 수 없는 경우 스토어에서는 Package_B.appxupload를 제공합니다. 고객의 디바이스에서 해당 디바이스 패밀리에 대한 패키지를 모두 실행할 수 없는 경우 예를 들어, 앱에서 지원하는 **MinVersion**이 고객 디바이스의 버전보다 높으면 고객이 해당 디바이스에 앱을 다운로드할 수 없습니다.
+예를 들어 Package_A.appxupload 및 Package_B.appxupload 두 가지 패키지가 있다고 가정합니다. 특정 장치 패밀리의 경우 Package_A.appxupload의 순위가 1이고 Package_B.appxupload의 순위가 2이면 해당 장치 형식의 고객이 앱을 다운로드할 때 스토어에서 먼저 Package_A.appxupload를 제공한다는 의미입니다. 고객의 장치에서 Package_A.appxupload를 실행할 수 없는 경우 스토어에서는 Package_B.appxupload를 제공합니다. 고객의 장치에서 해당 장치 패밀리에 대한 패키지를 모두 실행할 수 없는 경우 예를 들어, 앱에서 지원하는 **MinVersion**이 고객 장치의 버전보다 높으면 고객이 해당 장치에 앱을 다운로드할 수 없습니다.
 
-> **참고** .xap 패키지의 버전 번호는 지정된 고객에게 제공할 패키지를 결정할 때 고려되지 않습니다. 그러므로 동일한 순위의 .xap 패키지가 두 개 이상인 경우 번호 대신 별표가 표시되고 고객이 두 패키지 중 하나를 받게 됩니다. 한 .xap 패키지에서 최신 패키지로 고객을 업데이트하려면 새 제출에서 이전 .xap를 제거해야 합니다.
-
+> [!NOTE]
+> .xap 패키지의 버전 번호는 지정된 고객에게 제공할 패키지를 결정할 때 고려되지 않습니다. 그러므로 동일한 순위의 .xap 패키지가 두 개 이상인 경우 번호 대신 별표가 표시되고 고객이 두 패키지 중 하나를 받게 됩니다. 한 .xap 패키지에서 최신 패키지로 고객을 업데이트하려면 새 제출에서 이전 .xap를 제거해야 합니다.
 
 
 ## <a name="package-details"></a>패키지 세부 정보
 
-패키지가 성공적으로 업로드된 후 패키지는 대상 운영 체제별로 나열됩니다. 패키지의 이름, 버전 및 아키텍처가 표시됩니다. 각 패키지의 지원되는 언어, 앱 접근 권한 값 및 파일 크기와 같은 추가 정보를 표시하려면 **세부 정보 표시**를 클릭합니다.
-
-[Windows 광고 조정](../monetize/use-ad-mediation-to-maximize-revenue.md)을 사용하는 경우 각 패키지에 대한 광고 조정을 구성하는 링크도 표시됩니다.
+패키지가 성공적으로 업로드된 후 패키지는 대상 운영 체제별로 나열됩니다. 패키지의 이름, 버전 및 아키텍처가 표시됩니다. 각 패키지에서 지원되는 언어, 앱 기능 및 파일 크기 등 추가 정보를 표시하려면 **세부 정보 표시**를 클릭합니다.
 
 제출에서 패키지를 제거해야 하는 경우 각 패키지의 **세부 정보** 섹션 아래쪽에서 **제거** 링크를 클릭합니다.
+
 
 ## <a name="removing-redundant-packages"></a>중복 패키지 제거
 
@@ -91,11 +99,13 @@ Microsoft에서 이후의 Windows 10 디바이스 패밀리에 앱을 제공하�
 
 중복 패키지가 감지되면 모든 중복 패키지를 이 제출에서 자동으로 제거하도록 설정할 수 있습니다. 필요하면 패키지를 개별적으로 제출에서 제거할 수도 있습니다.
 
+
 ## <a name="gradual-package-rollout"></a>점진적 패키지 배포
 
 제출이 이전에 게시된 앱에 대한 업데이트인 경우 **이 제출을 게시(Windows 10 고객에게만)한 후 업데이트를 단계적으로 롤아웃하세요.**라는 확인란이 표시됩니다. 이렇게 하면 제출에서 패키지를 가져올 고객의 비율을 선택하고 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들 필요 없이 언제든지 비율을 늘리거나 업데이트를 중지할 수 있습니다. 
 
 자세한 내용은 [점진적 패키지 출시](gradual-package-rollout.md)를 참조하세요.
+
 
 ## <a name="mandatory-update"></a>필수 업데이트
 

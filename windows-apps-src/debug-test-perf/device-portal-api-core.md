@@ -1,17 +1,19 @@
 ---
-author: dbirtolo
+author: mukin
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "디바이스 포털 핵심 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다."
-ms.author: dbirtolo
+ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 347d658f346ab14c60a4468c4a9935e555c2e016
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b6df8f361df82ef65098877027cf1857fa575b0b
+ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/28/2017
 ---
 # <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
@@ -1272,6 +1274,69 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
+## User information
+---
+### <a name="get-the-active-user"></a>활성 사용자 받기
+
+**요청**
+
+다음 요청 형식을 사용하여 디바이스의 현재 사용자 이름을 가져올 수 있습니다.
+ 
+메서드      | 요청 URI
+:------     | :-----
+GET | /api/users/activeuser
+<br />
+
+**URI 매개 변수**
+
+- 없음
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+응답에는 다음 형식의 사용자 정보가 포함됩니다. 
+
+성공 시: 
+```
+{
+    "UserDisplayName" : string, 
+    "UserSID" : string
+}
+```
+실패 시:
+```
+{
+    "Code" : int, 
+    "CodeText" : string, 
+    "Reason" : string, 
+    "Success" : bool
+}
+```
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows 데스크톱
+* HoloLens
+* IoT
+
+---
 ## Performance data
 ---
 ### <a name="get-the-list-of-running-processes"></a>실행 중인 프로세스 목록 가져오기
@@ -2023,6 +2088,52 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
+### <a name="kill-process-by-pid"></a>PID를 사용하여 프로세스를 중단
+
+**요청**
+
+다음 요청 형식을 사용하여 프로세스를 중단할 수 있습니다.
+ 
+메서드      | 요청 URI
+:------     | :-----
+DELETE | /api/taskmanager/process
+<br />
+
+**URI 매개 변수**
+
+요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+
+URI 매개 변수 | 설명
+:---          | :---
+pid   | (**필수**) 중단할 프로세스에 대한 고유 프로세스 id입니다.
+<br />
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows 데스크톱
+* HoloLens
+* IoT
+
+---
 ## Networking
 ---
 ### <a name="get-the-current-ip-configuration"></a>현재 IP 구성 가져오기
@@ -2262,8 +2373,8 @@ URI 매개 변수 | 설명
 :---          | :---
 interface   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다.
 op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.
-ssid   | (**op == connect인 경우 필수****) 연결할 SSID입니다.
-key   | (**op == connect이고 네트워크에 인증이 필요한 경우 필수****) 공유 키입니다.
+ssid   | (***op* == connect인 경우 필수**) 연결할 SSID입니다.
+key   | (***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다.
 createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. 
 
 **요청 헤더**
@@ -3230,7 +3341,7 @@ GET | /api/filesystem/apps/files
 URI 매개 변수 | 설명
 :------     | :-----
 knownfolderid | (**필수**) 원하는 파일 목록이 있는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
+packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
 path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. 
 
 **요청 헤더**
@@ -3290,7 +3401,7 @@ URI 매개 변수 | 설명
 :------     | :-----
 knownfolderid | (**필수**) 파일을 다운로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
 filename | (**필수**) 다운로드할 파일의 이름입니다. 
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 패키지 전체 이름입니다. 
+packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 패키지 전체 이름입니다. 
 path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다.
 
 **요청 헤더**
@@ -3340,7 +3451,7 @@ URI 매개 변수 | 설명
 knownfolderid | (**필수**) 파일이 위치한 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
 filename | (**필수**) 이름을 변경할 원래 파일의 이름입니다. 
 newfilename | (**필수**) 파일의 새 이름입니다.
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
+packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
 path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. 
 
 **요청 헤더**
@@ -3390,7 +3501,7 @@ URI 매개 변수 | 설명
 :------     | :-----
 knownfolderid | (**필수**) 파일을 삭제하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
 filename | (**필수**) 삭제할 파일의 이름입니다. 
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
+packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
 path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다.
 
 **요청 헤더**
@@ -3439,7 +3550,7 @@ POST | /api/filesystem/apps/file
 URI 매개 변수 | 설명
 :------     | :-----
 knownfolderid | (**필수**) 파일을 업로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다.
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
+packagefullname | (***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
 path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다.
 
 **요청 헤더**

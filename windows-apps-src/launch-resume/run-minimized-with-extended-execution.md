@@ -1,27 +1,29 @@
 ---
 author: TylerMSFT
 description: "확장 실행을 사용하여 앱이 최소화된 상태에서 계속 실행되도록 하는 방법을 알아봅니다."
-title: "확장된 실행을 사용할 경우 최소화된 상태로 실행"
+title: "확장 실행을 사용하여 앱 일시 중단 연기"
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: "windows 10, uwp, 확장 실행, 최소화, ExtendedExecutionSession, 백그라운드 작업, 응용 프로그램 수명 주기, 잠금 화면"
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
-ms.openlocfilehash: bd9ccaa4cb87a24906c531996d4fc3f88875b060
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: f82fa37ade38d6a92fa1fec427079f75057a1a4a
+ms.sourcegitcommit: e7e8de39e963b73ba95cb34d8049e35e8d5eca61
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="run-while-minimized-with-extended-execution"></a>확장된 실행을 사용할 경우 최소화된 상태로 실행
+# <a name="postpone-app-suspension-with-extended-execution"></a>확장 실행을 사용하여 앱 일시 중단 연기
 
-이 문서에서는 확장 실행을 사용하여 앱이 일시 중단되는 경우 중단 연기를 통해 앱이 최소화된 상태에서 실행될 수 있도록 하는 방법을 보여 줍니다.
+이 문서에서는 앱이 최소화된 상태 또는 잠금 화면에서도 실행될 수 있도록 확장 실행을 사용하여 앱이 일시 중단되는 시기를 연장하는 방법을 보여 줍니다.
 
 사용자가 앱을 최소화하거나 벗어날 경우 앱이 일시 중단됩니다.  메모리는 유지되지만 코드는 실행되지 않습니다. 이는 시각적 사용자 인터페이스를 갖춘 모든 OS 버전에서 마찬가지입니다. 앱 일시 중단의 경우에 대해 자세한 내용은 [응용 프로그램 수명 주기](app-lifecycle.md)를 참조하세요.
 
-앱이 최소화된 상태에서 일시 중단되지 않고 계속 실행되어야 하는 경우도 있습니다. 앱을 계속 실행해야 하는 경우 OS에서 앱을 계속 실행시키거나 계속 실행시키도록 요청할 수 있습니다. 예를 들어 백그라운드에서 오디오를 재생할 때 [백그라운드 미디어 재생](../audio-video-camera/background-audio.md)에 대한 몇 가지 단계를 따르면 OS에서 앱 실행 시간을 길게 지속할 수 있습니다. 그렇지 않으면 수동으로 추가 시간을 요청해야 합니다.
+앱이 최소화된 상태에서 일시 중단되지 않고 계속 실행되어야 하는 경우도 있습니다. 앱을 계속 실행해야 하는 경우 OS에서 앱을 계속 실행시키거나 계속 실행시키도록 요청할 수 있습니다. 예를 들어 백그라운드에서 오디오를 재생할 때 [백그라운드 미디어 재생](../audio-video-camera/background-audio.md)에 대한 몇 가지 단계를 따르면 OS에서 앱 실행 시간을 길게 지속할 수 있습니다. 그렇지 않으면 수동으로 추가 시간을 요청해야 합니다. 백그라운드 실행을 수행할 수 있는 시간은 대개 몇 분이지만 언제든지 취소 중인 세션을 처리할 수 있는 준비가 되어 있어야 합니다.
 
-백그라운드에서 작업을 완료하기 위해 추가 시간을 요청하려면 [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx)을 만듭니다. 이때 만드는 **ExtendedExecutionSession**의 종류는 만들 때 제공하는 [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx)에 의해 결정됩니다. **ExtendedExecutionReason** 열거형 값으로는 **Unspecified, LocationTracking**, **SavingData**의 세 가지가 있습니다.
+백그라운드에서 작업을 완료하기 위해 추가 시간을 요청하려면 [ExtendedExecutionSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionsession.aspx)을 만듭니다. 이때 만드는 **ExtendedExecutionSession**의 종류는 만들 때 제공하는 [ExtendedExecutionReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.extendedexecutionreason.aspx)에 의해 결정됩니다. **ExtendedExecutionReason** 열거형 값으로는 **Unspecified, LocationTracking**, **SavingData**의 세 가지가 있습니다. 언제든지 **ExtendedExecutionSession** 하나만 요청할 수 있으며, 세션 하나가 활성 상태인 동안 다른 세션을 만들려고 시도하면 **ExtendedExecutionSession** 생성자에서 예외가 발생합니다. [ExtendedExecutionForegroundSession](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession.aspx) 및 [ExtendedExecutionForegroundReason](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason.aspx)을 사용하면 안 됩니다. 이들은 제한된 기능을 필요로 하며 스토어 응용 프로그램에 사용할 수 없습니다.
 
 ## <a name="run-while-minimized"></a>최소화된 상태로 실행
 
@@ -35,7 +37,7 @@ translationtype: HT
 
 앱이 [GeoLocator](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx)에서 위치를 정기적으로 기록해야 하는 경우라면 **ExtendedExecutionSession**을 만들 때 **ExtendedExecutionReason.LocationTracking**을 지정합니다. 사용자의 위치를 정기적으로 모니터링해야 하는 피트니스 추적 및 탐색 앱은 그러한 이유를 사용해야 합니다.
 
-위치 추적 확장 실행 세션은 필요한 만큼 긴 시간 실행할 수 있습니다. 그러나 장치마다 그러한 세션은 하나만 실행 가능합니다. 위치 추적 확장 실행 세션은 포그라운드에서만 요청할 수 있으며 앱 상태는 **실행 중**이어야 합니다. 이를 통해 사용자는 앱에서 확장된 위치 추적 세션이 시작되었음을 알 수 있습니다. 앱이 위치 추적 확장 실행 세션의 요청 없이 백그라운드 작업 또는 앱 서비스를 사용하여 백그라운드에 있는 동안에도 GeoLocator를 사용할 수 있습니다.
+모바일 장치에서 화면이 잠긴 경우를 포함하여 위치 추적 확장 실행 세션을 필요한 만큼 실행할 수 있습니다. 그러나 장치마다 그러한 세션은 하나만 실행 가능합니다. 위치 추적 확장 실행 세션은 포그라운드에서만 요청할 수 있으며 앱 상태는 **실행 중**이어야 합니다. 이를 통해 사용자는 앱에서 확장된 위치 추적 세션이 시작되었음을 알 수 있습니다. 앱이 위치 추적 확장 실행 세션의 요청 없이 백그라운드 작업 또는 앱 서비스를 사용하여 백그라운드에 있는 동안에도 GeoLocator를 사용할 수 있습니다.
 
 ## <a name="save-critical-data-locally"></a>중요한 데이터를 로컬에 저장
 
@@ -43,7 +45,7 @@ translationtype: HT
 
 이러한 세션을 사용하여 앱의 수명을 연장하고 데이터를 업로드하거나 다운로드하면 안 됩니다. 데이터를 업로드해야 하는 경우에는 [백그라운드 전송](https://msdn.microsoft.com/windows/uwp/networking/background-transfers)을 요청하거나 **MaintenanceTrigger**를 등록하여 AC 전원을 사용할 수 있을 때 전송을 처리합니다. **ExtendedExecutionReason.SavingData** 확장 실행 세션은 앱이 포그라운드에 있으며 **실행 중** 상태일 때, 또는 백그라운드에 있으며 **일시 중단** 상태일 때 요청할 수 있습니다.
 
-**일시 중단** 상태는 앱 수명 주기 중 앱이 종료되기 전에 작업을 수행할 수 있는 마지막 기회입니다. 앱이 **일시 중단** 상태일 때 **ExtendedExecutionReason.SavingData** 확장 실행 세션을 요청하면 잠재적인 문제가 발생할 수 있다는 사실을 알아 두어야 합니다. **Suspending** 상태에서 확장 실행 세션을 요청한 후 사용자가 앱을 다시 시작하도록 요청하면 시작되기까지 시간이 오래 걸릴 수 있습니다. 이는 앱의 이전 인스턴스를 닫고 앱의 새 인스턴스를 시작하기 전에 확장 실행 세션 시간부터 완료해야 하기 때문입니다. 사용자 상태가 손실되지 않도록 하려면 시작 작업 수행 시간이 길어집니다.
+**일시 중단** 상태는 앱 수명 주기 중 앱이 종료되기 전에 작업을 수행할 수 있는 마지막 기회입니다. **ExtendedExecutionReason.SavingData**는 **일시 중단** 상태에서 요청할 수 있는 유일한 **ExtendedExecutionSession**입니다. 앱이 **일시 중단** 상태일 때 **ExtendedExecutionReason.SavingData** 확장 실행 세션을 요청하면 잠재적인 문제가 발생할 수 있다는 사실을 알아 두어야 합니다. **Suspending** 상태에서 확장 실행 세션을 요청한 후 사용자가 앱을 다시 시작하도록 요청하면 시작되기까지 시간이 오래 걸릴 수 있습니다. 이는 앱의 이전 인스턴스를 닫고 앱의 새 인스턴스를 시작하기 전에 확장 실행 세션 시간부터 완료해야 하기 때문입니다. 사용자 상태가 손실되지 않도록 하려면 시작 작업 수행 시간이 길어집니다.
 
 ## <a name="request-disposal-and-revocation"></a>요청, 삭제, 해지
 
@@ -54,7 +56,6 @@ translationtype: HT
 ```csharp
 var newSession = new ExtendedExecutionSession();
 newSession.Reason = ExtendedExecutionReason.Unspecified;
-newSession.Description = "Raising periodic toasts";
 newSession.Revoked += SessionRevoked;
 ExtendedExecutionResult result = await newSession.RequestExtensionAsync();
 
@@ -163,7 +164,6 @@ static class ExtendedExecutionHelper
 
         var newSession = new ExtendedExecutionSession();
         newSession.Reason = ExtendedExecutionReason.Unspecified;
-        newSession.Description = "Running multiple tasks";
         newSession.Revoked += SessionRevoked;
 
         if(revoked != null)

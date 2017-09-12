@@ -6,14 +6,19 @@ ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: c5a34805941d72981f84a5d515e01d404fb30650
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: predavid
+design-contact: kimsea
+doc-status: Published
+ms.openlocfilehash: 8b901f6077b3f2eb765b53caf9bba188eae5ff0e
+ms.sourcegitcommit: 10f8dcf69d37cdb61562fc9f4d268ccb499c368f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -26,14 +31,7 @@ translationtype: HT
 
 예를 들어 주소록을 볼 때 사용자는 화면을 축소하여 "W" 문자로 신속하게 이동하거나, 화면을 확대하여 해당 문자와 연결된 이름을 확인할 수 있습니다. 
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li>[**SemanticZoom 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702601)</li>
-<li>[**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)</li>
-<li>[**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)</li>
-</ul>
-</div>
+> **중요 API**: [SemanticZoom 클래스](https://msdn.microsoft.com/library/windows/apps/hh702601), [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)
 
 **기능**:
 
@@ -45,7 +43,7 @@ translationtype: HT
 
 **SemanticZoom** 컨트롤은 하나 또는 두 페이지에 모두 표시할 수 없을 정도로 큰 그룹화된 데이터 집합 그룹을 표시해야 할 때 필요합니다.
 
-시맨틱 줌을 광학 줌과 혼동하지 마세요. 두 확대 방식은 조작 방식과 기본 동작(확대 축소 비율에 따라 더 많이 또는 더 자세히 표시)은 같지만, 광학 줌은 사진처럼 개체나 콘텐츠 영역에 대해 배율을 조정하는 것을 의미합니다. 광학 줌을 수행하는 컨트롤에 대한 정보는 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) 컨트롤을 참조하세요.
+시맨틱 줌을 광학 줌과 혼동하지 마세요. 두 확대 방식은 조작 방식과 기본 동작(확대 축소 비율에 따라 더 많이 또는 더 자세히 표시)은 같지만, 광학 줌은 사진처럼 개체나 콘텐츠 영역에 대해 배율을 조정하는 것을 의미합니다. 광학 줌을 수행하는 컨트롤에 대한 정보는 [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) 컨트롤을 참조하세요.
 
 ## <a name="examples"></a>예제
 
@@ -63,7 +61,7 @@ translationtype: HT
 
 ## <a name="create-a-semantic-zoom"></a>시맨틱 줌 만들기
 
-**SemanticZoom** 컨트롤은 자체적인 시각적 표현이 없습니다. 콘텐츠 보기를 제공하는 두 가지 다른 컨트롤(일반적으로 **ListView** 또는 **GridView** 컨트롤) 간의 전환을 관리하는 호스트 컨트롤입니다.  보기 컨트롤을 SemanticZoom의 [**ZoomedInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) 및 [**ZoomedOutView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) 속성으로 설정합니다.
+**SemanticZoom** 컨트롤은 자체적인 시각적 표현이 없습니다. 콘텐츠 보기를 제공하는 두 가지 다른 컨트롤(일반적으로 **ListView** 또는 **GridView** 컨트롤) 간의 전환을 관리하는 호스트 컨트롤입니다.  보기 컨트롤을 SemanticZoom의 [ZoomedInView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) 및 [ZoomedOutView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) 속성으로 설정합니다.
 
 시맨틱 줌에 필요한 3가지 요소는 다음과 같습니다.
 - 그룹화된 데이터 원본
@@ -72,30 +70,28 @@ translationtype: HT
 
 시맨틱 줌을 사용하기 전에 그룹화된 데이터를 사용하여 목록 보기를 사용하는 방법을 이해해야 합니다. 자세한 내용은 [목록 보기 및 그리드 보기](listview-and-gridview.md) 및 [목록의 항목 그룹화]()를 참조하세요. 
 
-> **참고**&nbsp;&nbsp;SemanticZoom 컨트롤의 확대 보기와 축소 보기를 정의하려면 [**ISemanticZoomInformation**]() 인터페이스를 구현하는 두 개의 컨트롤을 사용할 수 있습니다. XAML 프레임워크는 이 인터페이스를 구현하는 세 가지 컨트롤(ListView, GridView 및 Hub)을 제공합니다.
+> **참고**&nbsp;&nbsp;SemanticZoom 컨트롤의 확대 보기와 축소 보기를 정의하려면 [ISemanticZoomInformation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.isemanticzoominformation.aspx) 인터페이스를 구현하는 두 개의 컨트롤을 사용할 수 있습니다. XAML 프레임워크는 이 인터페이스를 구현하는 세 가지 컨트롤(ListView, GridView 및 Hub)을 제공합니다.
  
  이 XAML은 SemanticZoom 컨트롤의 구조를 보여 줍니다. ZoomedInView 및 ZoomedOutView 속성에 다른 컨트롤을 할당합니다.
  
- **XAML**
  ```xaml
 <SemanticZoom>
     <SemanticZoom.ZoomedInView>
-        <!-- Put the GridView for the zoomed out view here. -->   
+        <!-- Put the GridView for the zoomed in view here. -->   
     </SemanticZoom.ZoomedInView>
 
     <SemanticZoom.ZoomedOutView>
-        <!-- Put the ListView for the zoomed in view here. -->       
+        <!-- Put the ListView for the zoomed out view here. -->       
     </SemanticZoom.ZoomedOutView>
 </SemanticZoom>
  ```
  
-다음 예제에서는 [XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)의 SemanticZoom 페이지에서 가져온 것입니다. 샘플을 다운로드하여 데이터 원본을 비롯한 전체 코드를 볼 수 있습니다. 이 시맨틱 줌은 GridView를 사용하여 확대 보기를 제공하고 ListView를 사용하여 축소 보기를 제공합니다.
+다음 예는 [XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)의 SemanticZoom 페이지에서 가져온 것입니다. 샘플을 다운로드하여 데이터 원본을 비롯한 전체 코드를 볼 수 있습니다. 이 시맨틱 줌은 GridView를 사용하여 확대 보기를 제공하고 ListView를 사용하여 축소 보기를 제공합니다.
   
 **확대 보기 정의**
 
-확대 보기의 GridView 컨트롤은 다음과 같습니다. 확대 보기에는 그룹의 개별 데이터 항목이 표시됩니다. 이 예제에서는 이미지 및 텍스트를 사용하여 항목을 그리드에 표시하는 방법을 보여 줍니다. 
+확대 보기의 GridView 컨트롤은 다음과 같습니다. 확대 보기에는 그룹의 개별 데이터 항목이 표시됩니다. 이 예에서는 이미지 및 텍스트를 사용하여 항목을 그리드에 표시하는 방법을 보여 줍니다. 
 
-**XAML**
 ```xaml
 <SemanticZoom.ZoomedInView>
     <GridView ItemsSource="{x:Bind cvsGroups.View}" 
@@ -111,7 +107,6 @@ translationtype: HT
  
 그룹 헤더의 모양은 `ZoomedInGroupHeaderTemplate` 리소스에 정의되어 있습니다. 항목의 모양은 `ZoomedInTemplate` 리소스에 정의되어 있습니다. 
 
-**XAML**   
 ```xaml
 <DataTemplate x:Key="" x:DataType="data:ControlInfoDataGroup">
     <TextBlock Text="{x:Bind Title}" 
@@ -135,9 +130,8 @@ translationtype: HT
 
 **축소 보기 정의**
 
-이 XAML은 축소 보기의 ListView 컨트롤을 정의합니다. 이 예제에서는 그룹 헤더를 목록의 텍스트로 표시하는 방법을 보여 줍니다.
+이 XAML은 축소 보기의 ListView 컨트롤을 정의합니다. 이 예에서는 그룹 헤더를 목록의 텍스트로 표시하는 방법을 보여 줍니다.
 
-**XAML**
 ```xaml
 <SemanticZoom.ZoomedOutView>
     <ListView ItemsSource="{x:Bind cvsGroups.View.CollectionGroups}" 
@@ -148,7 +142,6 @@ translationtype: HT
 
  모양은 `ZoomedOutTemplate` 리소스에 정의되어 있습니다.
  
- **XAML**   
 ```xaml    
 <DataTemplate x:Key="ZoomedOutTemplate" x:DataType="wuxdata:ICollectionViewGroup">
     <TextBlock Text="{x:Bind Group.(data:ControlInfoDataGroup.Title)}" 
@@ -158,18 +151,16 @@ translationtype: HT
 
 **보기 동기화**
 
-확대 보기 및 축소 보기를 동기화해야 하므로 사용자가 축소 보기에서 그룹을 선택하면 동일한 그룹의 세부 정보가 확대 보기에 표시됩니다. [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx)를 사용하거나 코드를 추가하여 보기를 동기화할 수 있습니다.
+확대 보기 및 축소 보기를 동기화해야 하므로 사용자가 축소 보기에서 그룹을 선택하면 동일한 그룹의 세부 정보가 확대 보기에 표시됩니다. [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx)를 사용하거나 코드를 추가하여 보기를 동기화할 수 있습니다.
 
-동일한 CollectionViewSource에 바인딩되는 모든 컨트롤은 항상 현재 항목이 동일합니다. 두 보기에서 동일한 CollectionViewSource를 데이터 원본으로 사용하는 경우 CollectionViewSource가 자동으로 보기를 동기화합니다. 자세한 내용은 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx)를 참조하세요.
+동일한 CollectionViewSource에 바인딩되는 모든 컨트롤은 항상 현재 항목이 동일합니다. 두 보기에서 동일한 CollectionViewSource를 데이터 원본으로 사용하는 경우 CollectionViewSource가 자동으로 보기를 동기화합니다. 자세한 내용은 [CollectionViewSource](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.data.collectionviewsource.aspx)를 참조하세요.
 
-CollectionViewSource를 사용하여 보기를 동기화하지 않는 경우 [**ViewChangeStarted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.viewchangestarted.aspx) 이벤트를 처리하고 이벤트 처리기에서 다음과 같이 항목을 동기화해야 합니다.
+CollectionViewSource를 사용하여 보기를 동기화하지 않는 경우 [ViewChangeStarted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.viewchangestarted.aspx) 이벤트를 처리하고 이벤트 처리기에서 다음과 같이 항목을 동기화해야 합니다.
 
-**XAML**
 ```xaml
 <SemanticZoom x:Name="semanticZoom" ViewChangeStarted="SemanticZoom_ViewChangeStarted">
 ```
 
-**C#**
 ```csharp
 private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChangedEventArgs e)
 {

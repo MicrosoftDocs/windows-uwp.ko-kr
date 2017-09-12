@@ -7,14 +7,16 @@ label: Command design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a9e7cda7794b3463ffa567bcf36ebec2d2d02687
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 868221cce04688ea2f7ab50e3062579932fbbd80
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 
@@ -22,8 +24,9 @@ translationtype: HT
 
 UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 해주는 대화형 UI 요소입니다. 이 문서에서는 단추 및 확인란과 같은 명령 요소, 이러한 명령 요소에서 지원하는 조작 및 명령 요소를 호스트하기 위한 명령 화면(예: 명령 모음 및 상황에 맞는 메뉴)에 대해 설명합니다.
 
-## <a name="provide-the-right-type-of-interactions"></a>올바른 유형의 조작 제공
+> **중요 API**: [ICommand 인터페이스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Input.ICommand), [Button 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Button), [CommandBar 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.commandbar), [MenuFlyout 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout)
 
+## <a name="provide-the-right-type-of-interactions"></a>올바른 유형의 조작 제공
 
 명령 인터페이스를 디자인할 때 가장 중요한 결정은 작업을 수행할 수 있어야 하는 사용자를 선택하는 것입니다. 예를 들어 사진 앱을 만드는 경우 사용자에게는 사진을 편집하는 도구가 필요합니다. 그러나 사진을 표시하는 소셜 미디어 앱을 만드는 경우 이미지 편집이 우선순위가 아닐 수 있으므로 공간 절약을 위해 편집 도구를 생략할 수 있습니다. 사용자가 수행하려는 작업을 파악하고 도움이 되는 도구를 제공합니다.
 

@@ -4,16 +4,14 @@ Description: "확장 가능한 트리를 만들려면 트리 뷰 예제 코드�
 title: "트리 뷰"
 label: Tree view
 template: detail.hbs
-ms.openlocfilehash: 88e3e79b7ebdf06c200f3525095d7685f7e3e6dc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: c7ad99d20fe30ea4b94ad62de45b3832aae3805e
+ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="hierarchical-layout-with-treeview"></a>TreeView를 사용한 계층적 레이아웃
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-<div class="microsoft-internal-note">
-Design Depot의 TreeView에 대한 검토: http://designdepotweb1/DesignDepot.FrontEnd/#/Dashboard/856
-</div>
 
 TreeView는 중첩된 항목이 포함된 노드를 확장 및 축소하는 계층적 목록 패턴입니다. 중첩된 항목은 추가 노드 또는 일반 목록 항목일 수 있습니다. [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)를 사용하여 UI에서 폴더 구조 또는 중첩된 관계를 설명하는 트리 뷰를 빌드할 수 있습니다.
 

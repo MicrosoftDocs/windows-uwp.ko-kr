@@ -11,9 +11,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a5a0a20ffa8ca27c123d139f25f636587db07aba
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 73fe48744346b2fd784b36d1fa29bd419c0fea02
+ms.sourcegitcommit: f6dd9568eafa10ee5cb2b849c0d82d84a1c5fb93
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="accessibility-testing"></a>접근성 테스트  
 
@@ -82,15 +84,18 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 <span id="verify_your_app_with_make_everything_on_your_screen_bigger"/>
 <span id="VERIFY_YOUR_APP_WITH_MAKE_EVERYTHING_ON_YOUR_SCREEN_BIGGER"/>
 ## <a name="verify-your-app-with-display-settings"></a>디스플레이 설정으로 앱 확인  
+
 디스플레이의 dpi(인치당 도트 수) 값을 조정하는 시스템 디스플레이 옵션을 사용하고 dpi 값이 변경되면 앱 UI 크기가 올바르게 조정되도록 합니다. 일부 사용자는 접근성 옵션으로 DPI 값을 변경하며 이 옵션은 **접근성** 또는 디스플레이 속성에서 사용할 수 있습니다. 문제가 있으면 [레이아웃 크기 조정 지침](https://msdn.microsoft.com/library/windows/apps/Dn611863)에 따라 다른 크기 조정 인수에 대한 추가 리소스를 제공합니다.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
 ## <a name="verify-main-app-scenarios-by-using-narrator"></a>내레이터를 사용하여 메인 앱 시나리오 확인  
-다음 단계를 수행하여 내레이터를 통해 앱의 화면 판독 환경을 테스트합니다.
+내레이터를 사용해 앱의 화면 읽기 환경을 테스트하세요.
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 **마우스와 키보드로 내레이터를 사용하여 앱을 테스트하려면 다음 단계를 따르세요.**
-1.  _Windows 로고 키 + Enter_를 눌러 내레이터를 시작합니다.
+1.  _Windows 로고 키 + Ctrl + Enter_를 눌러 내레이터를 시작합니다. Windows 10 버전 1607 이전 버전에서는 _Windows 로고 키 + Enter_를 눌러 내레이터를 시작합니다.
 2.  키보드의 _Tab_ 키, 화살표 키 및 _Caps Lock + 화살표 키_를 사용하여 앱을 탐색합니다.
 3.  앱을 탐색할 때 내레이터가 UI의 요소를 읽는 내용을 듣고 다음을 확인합니다.
     * 각 컨트롤에 대해 내레이터가 표시되는 모든 콘텐츠를 읽는지 확인합니다. 또한 내레이터가 각 컨트롤의 이름, 해당 상태(확인됨, 선택됨 등) 및 컨트롤 형식(단추, 확인란, 목록 항목 등)을 읽는지 확인합니다.
@@ -145,4 +150,5 @@ Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되�
 * [접근성](accessibility.md)
 * [피해야 할 사례](practices-to-avoid.md)
 * [UI 자동화](https://msdn.microsoft.com/library/windows/desktop/Ee684009)
-* [Windows의 접근성](http://go.microsoft.com/fwlink/p/?LinkId=320802) 
+* [Windows의 접근성](http://go.microsoft.com/fwlink/p/?LinkId=320802)
+* [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)

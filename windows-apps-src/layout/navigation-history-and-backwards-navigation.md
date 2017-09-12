@@ -8,20 +8,24 @@ label: History and backwards navigation
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: c2037c4b313b45309162ea4c0874418fe9463d17
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: cd3184ebe5e94c410d55a725129a38907aa6a01e
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 웹에서 개별 웹 사이트는 목차, 단추, 메뉴, 간단한 링크 목록 등과 같은 자체 탐색 시스템을 제공합니다. 탐색 환경은 웹 사이트마다 크게 다를 수 있습니다. 그러나 일관된 한 가지 탐색 환경은 바로 뒤로 기능입니다. 대부분의 브라우저는 웹 사이트와 관계없이 동일한 방식으로 동작하는 뒤로 단추를 제공합니다.
+
+> **중요 API**: [SystemNavigationManager 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Core.SystemNavigationManager), [BackRequested 이벤트](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Core.SystemNavigationManager#Windows_UI_Core_SystemNavigationManager_BackRequested), [OnNavigatedTo](https://msdn.microsoft.com/library/windows/apps/br227508)
 
 비슷한 이유로, UWP(유니버설 Windows 플랫폼)에서 앱 내에서 그리고 장치에 따라 앱 간에 사용자의 탐색 기록을 트래버스할 수 있도록 일관된 뒤로 탐색 시스템을 제공합니다.
 
@@ -111,7 +115,7 @@ Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
 Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
     BackRequested += ref new Windows::Foundation::EventHandler<
     Windows::UI::Core::BackRequestedEventArgs^>(
-        this, &amp;App::App_BackRequested);
+        this, &App::App_BackRequested);
 ```
 
 다음은 앱의 루트 프레임에서 [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn893596)을 호출하는 해당 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn996568) 이벤트 처리기입니다.
@@ -129,7 +133,7 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
 >
 >    // Navigate back if possible, and if the event has not 
 >    // already been handled .
->    if (rootFrame.CanGoBack &amp;&amp; e.Handled == false)
+>    if (rootFrame.CanGoBack && e.Handled == false)
 >    {
 >        e.Handled = true;
 >        rootFrame.GoBack();

@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d3be03785e977229c6aa38dba728e6ef6552a23e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 0acdcf6b9500c017cea70eebf9a41bec78e63ed2
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/22/2017
 ---
 <a name="data-binding-overview"></a>데이터 바인딩 개요
 =====================

@@ -1,17 +1,19 @@
 ---
-author: DBirtolo
+author: mukin
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: "센서"
 description: "센서를 사용하면 앱에서 디바이스와 디바이스를 둘러싼 실제 주변 환경 간의 관계를 알 수 있습니다. 센서는 장치의 방향과 움직임을 앱에 알려줄 수 있습니다."
-ms.author: dbirtolo
-ms.date: 02/08/2017
+ms.author: mukin
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: af862471fcac7ee7f0ab8ad61f57c485d995bae2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: eee6bb0c70c39a6676639f5b6da0f5465811dbad
+ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
 # <a name="sensors"></a>센서
 
@@ -65,17 +67,25 @@ translationtype: HT
 
 가속도계 센서를 사용할 수 있는 앱에는 장치를 기울이는 방향으로 화면의 구슬이 굴러가는 게임(중력 벡터)이 포함됩니다. 이러한 유형의 기능은 [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766)의 기능과 유사하며, 피치 및 롤의 조합을 사용하여 해당 센서로 수행할 수도 있습니다. 가속도계의 중력 벡터를 사용하면 장치 이동을 위해 수학적으로 쉽게 조작되는 벡터가 제공되므로 이 작업이 간소화됩니다. 또 다른 예로 사용자가 장치를 그을 때 채찍 소리를 내는 앱(선형 가속도 벡터)이 있습니다.
 
+구현의 예는 [가속도계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer)을 참조하세요.
+
 ## <a name="activity-sensor"></a>활동 센서
 
 [**Activity**](https://msdn.microsoft.com/library/windows/apps/Dn785096) 센서는 센서에 연결된 장치의 현재 상태를 확인합니다. 이 센서는 디바이스를 휴대한 사용자가 뛰거나 걸을 때 이를 추적하는 피트니스 응용 프로그램에 자주 사용됩니다. 이 센서 API에서 감지할 수 있는 활동 목록은 [**ActivityType**](https://msdn.microsoft.com/library/windows/apps/Dn785128)을 참조하세요.
+
+구현의 예는 [활동 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ActivitySensor)을 참조하세요.
 
 ## <a name="altimeter"></a>고도계
 
 [**Altimeter**](https://msdn.microsoft.com/library/windows/apps/Dn858893) 센서는 센서의 고도를 나타내는 값을 반환합니다. 이를 통해 해수면으로부터의 고도 변화를 추적할 수 있습니다. 이 센서를 사용할 수 있는 앱의 한 가지 예로는 뛰는 동안의 고도 변화를 추적하여 소모된 칼로리를 계산하는 런닝 앱이 있습니다. 이 경우 이 센서 데이터를 [**Activity**](https://msdn.microsoft.com/library/windows/apps/Dn785096) 센서와 함께 사용하면 더 정확한 추적 정보를 얻을 수 있습니다.
 
+구현의 예는 [고도계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Altimeter)을 참조하세요.
+
 ## <a name="barometer"></a>기압계
 
 [**Barometer**](https://msdn.microsoft.com/library/windows/apps/Dn872405) 센서는 응용 프로그램에 기압 판독값을 제공합니다. 날씨 응용 프로그램에서 이 정보를 사용하여 현재 대기압을 제공할 수 있습니다. 이 센서는 보다 자세한 정보를 제공하고 잠재적인 날씨 변화를 예측하는 데 사용될 수 있습니다.
+
+구현의 예는 [기압계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Barometer)을 참조하세요.
 
 ## <a name="compass"></a>나침반
 
@@ -85,6 +95,8 @@ translationtype: HT
 
 나침도를 표시하거나 지도를 탐색하려는 앱은 일반적으로 나침반 센서를 사용합니다.
 
+구현의 예는 [나침반 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass)을 참조하세요.
+
 ## <a name="gyrometer"></a>회전계
 
 [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718) 센서는 X, Y 및 Z축에서 각 속도를 측정합니다. 장치 방향은 관련이 없고 장치 회전 속도가 중요한 간단한 동작 기반 앱에서 유용합니다. 회전계에서 하나 이상의 축을 따라 데이터 노이즈나 일정한 바이어스가 발생할 수 있습니다. 회전계에서 바이어스가 발생하는지 확인한 다음 앱에서 적절하게 보정하기 위해 가속도계 쿼리를 통해 장치가 이동 중인지 여부를 확인해야 합니다.
@@ -92,6 +104,8 @@ translationtype: HT
 ![피치, 롤 및 요가 있는 회전계](images/gyrometer.png)
 
 회전계 센서를 사용할 수 있는 앱의 예로 장치의 빠른 회전을 기준으로 룰렛 휠을 돌리는 게임이 있습니다.
+
+구현의 예는 [회전계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Gyrometer)을 참조하세요.
 
 ## <a name="inclinometer"></a>경사계
 
@@ -101,9 +115,13 @@ translationtype: HT
 
 장치의 방향에 맞게 보기를 변경하는 앱은 경사계 센서를 사용할 수 있습니다. 장치의 요, 피치 및 롤과 일치하는 비행기를 표시하는 앱도 경사계 값을 사용합니다.
 
+구현의 예는 경사계 샘플([https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer))을 참조하세요.
+
 ## <a name="light-sensor"></a>광원 센서
 
 [**Light**](https://msdn.microsoft.com/library/windows/apps/BR225790) 센서는 센서 주변 광원을 확인할 수 있습니다. 이를 통해 앱에서 장치 주변의 광원 설정이 변경된 경우를 확인할 수 있습니다. 예를 들어 슬레이트 장치를 가진 사용자가 화창한 날 실내에서 야외로 나갈 수 있습니다. 스마트 응용 프로그램은 이 값을 사용하여 배경과 렌더링할 글꼴 간의 대비를 높일 수 있습니다. 따라서 밝은 야외 설정에서도 콘텐츠를 읽을 수 있습니다.
+
+구현의 예는 [광원 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LightSensor)을 참조하세요.
 
 ## <a name="orientation-sensor"></a>방향 센서
 
@@ -113,13 +131,19 @@ translationtype: HT
 
 방향 센서는 장치의 뒤쪽이 가리키는 방향에 따라 환경에 오버레이를 그리는 고급 강화 현실 앱에서 자주 사용됩니다.
 
+구현의 예는 [방향 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)을 참조하세요.
+
 ## <a name="pedometer"></a>만보계
 
 [**Pedometer**](https://msdn.microsoft.com/library/windows/apps/Dn878203) 센서는 연결된 장치를 휴대한 사용자의 도보 횟수를 추적합니다. 이 센서는 지정된 기간 동안의 도보 횟수를 추적하도록 구성되어 있습니다. 여러 피트니스 응용 프로그램에서 사용자가 여러 목표를 설정하고 이를 달성하도록 도와주기 위해 도보 횟수를 추적합니다. 그런 다음 이 정보를 수집하고 저장하여 시간별 진행률을 표시할 수 있습니다.
 
+구현의 예는 [만보계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Pedometer)을 참조하세요.
+
 ## <a name="proximity-sensor"></a>근접 센서
 
 [**Proximity**](https://msdn.microsoft.com/library/windows/apps/Dn872427) 센서를 사용하여 개체가 센서에 의해 감지되는지 여부를 나타낼 수 있습니다. 근접 센서는 개체가 장치 범위 내에 있는지 여부뿐 아니라 감지된 개체까지의 거리도 확인할 수 있습니다. 이 센서를 사용할 수 있는 한 가지 예로는 사용자가 지정된 범위 내로 들어오면 절전 상태를 해제하려는 응용 프로그램을 들 수 있습니다. 장치는 근접 센서가 개체를 감지할 때까지 저전력 절전 상태로 있다가 활성 상태로 전환할 수 있습니다.
+
+구현의 예는 [근접 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ProximitySensor)을 참조하세요.
 
 ## <a name="simple-orientation"></a>단순 방향
 
@@ -127,7 +151,4 @@ translationtype: HT
 
 지면에 수평 또는 수직으로 디바이스를 잡고 있는지에 따라 표시를 변경하는 뷰어 앱은 SimpleOrientationSensor의 값을 사용하여 디바이스를 잡고 있는 방식을 확인합니다.
 
-## <a name="samples"></a>샘플
-
-다양한 센서를 사용하는 방법을 보여 주는 몇 가지 샘플은 [Windows 센서 샘플](http://go.microsoft.com/fwlink/?LinkID=616041)을 참조하세요.
-
+구현의 예는 [단순 방향 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)을 참조하세요.

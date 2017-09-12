@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
-description: "Windows 10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다."
+description: "Windows10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다."
 title: "Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판"
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -9,13 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
-ms.lasthandoff: 02/07/2017
-
+ms.openlocfilehash: 06ee6eba5e4dc2f13b1ca8f8555b0e29770d1ec8
+ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/09/2017
 ---
-
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 
 앱으로 수익을 창출할 수 있도록 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에 앱에서 바로 구매 및 평가판 기능을 추가할 수 있습니다. 이러한 API를 통해 앱에 대한 라이선스 정보에 액세스할 수도 있습니다.
@@ -24,15 +23,15 @@ ms.lasthandoff: 02/07/2017
 
 **Windows.ApplicationModel.Store** 네임스페이스를 사용하여 평가판 및 앱에서 바로 구매를 구현하는 방법을 보여 주는 전체 샘플은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)을 참조하세요.
 
->**참고**&nbsp;&nbsp;
->
-> * 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스의 멤버를 사용하는 것이 좋습니다. **Windows.Services.Store** 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 또한 **Windows.Services.Store** 네임스페이스는 보다 나은 성능을 제공하도록 디자인되었습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
-<br/><br/>
-> * **Windows.ApplicationModel.Store** 네임스페이스는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램에서 지원되지 않습니다. 해당 응용 프로그램은 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
+> [!NOTE]
+> 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스의 멤버를 사용하는 것이 좋습니다. **Windows.Services.Store** 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 또한 **Windows.Services.Store** 네임스페이스는 보다 나은 성능을 제공하도록 디자인되었습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+
+> [!NOTE]
+> **Windows.ApplicationModel.Store** 네임스페이스는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램에서 지원되지 않습니다. 해당 응용 프로그램은 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>CurrentApp 및 CurrentAppSimulator 클래스 시작
 
-**Windows.ApplicationModel.Store** 네임스페이스의 기본 진입점은 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) 클래스입니다. 이 클래스는 현재 앱과 사용 가능한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)에 대한 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업에 사용할 수 있는 정적 속성과 메서드를 제공합니다.
+**Windows.ApplicationModel.Store** 네임스페이스의 기본 진입점은 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) 클래스입니다. 이 클래스는 현재 앱과 사용 가능한 추가 기능에 대한 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업에 사용할 수 있는 고정 속성 메서드를 제공합니다.
 
 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) 클래스는 Windows 스토어에서 해당 데이터를 가져오므로 개발자 계정이 있고 앱을 스토어에 게시해야 앱에서 이 클래스를 성공적으로 사용할 수 있습니다. 스토어에 앱을 제출하기 전에 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx)라는 이 클래스의 시뮬레이트된 버전을 사용하여 코드를 테스트할 수 있습니다. 앱을 테스트한 후 Windows 스토어에 제출하기 전에 **CurrentAppSimulator** 인스턴스를 **CurrentApp**으로 바꾸어야 합니다. 앱이 **CurrentAppSimulator**를 사용하는 경우 인증에 실패합니다.
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 02/07/2017
 
 | 항목       | 설명                 |
 |----------------------------|-----------------------------|
-| [평가판의 기능 제외 또는 제한](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | 체험 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 체험 기간 동안 일부 기능을 제외하거나 제한하여 고객이 처음 사용자용 앱 버전으로 업그레이드하도록 유도할 수 있습니다. |
+| [평가판의 기능 제외 또는 제한](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | 평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다. |
 | [앱에서 바로 구매 제품 구매 사용](enable-in-app-product-purchases.md)      |  앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.  |
 | [앱에서 바로 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)      | 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품(구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목)을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다. 이 기능은 구매한 후 특정 회복 아이템을 구매하는 데 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다. |
 | [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)      |   앱에서 대규모 앱에서 바로 구매 제품 카탈로그를 제공하는 경우 이 항목에 설명된 프로세스를 선택적으로 수행하여 카탈로그를 관리할 수 있습니다.    |
@@ -57,7 +56,8 @@ WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다
 
 이 파일의 값을 수정할 수는 있지만 **CurrentAppSimulator**에 대한 고유한 WindowsStoreProxy.xml 파일(Visual Studio 프로젝트의 데이터 폴더)을 만들어 대신 사용하는 것이 좋습니다. 거래를 시뮬레이트하는 경우 [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx)를 호출하여 파일을 로드합니다. **ReloadSimulatorAsync**를 호출하여 고유한 WindowsStoreProxy.xml 파일을 로드하지 않으면 **CurrentAppSimulator**에서 기본 WindowsStoreProxy.xml 파일을 만들고 로드합니다(덮어쓰지 않음).
 
->**참고**&nbsp;&nbsp;**ReloadSimulatorAsync**가 완료되기 전에는 **CurrentAppSimulator**가 완전히 초기화되지 않은 것입니다. 또한 **ReloadSimulatorAsync**는 비동기 메서드이므로 다른 스레드에서 초기화되는 동안 한 스레드에서 **CurrentAppSimulator**를 쿼리하는 경합 상태가 발생하지 않도록 주의해야 합니다. 한 가지 방법은 플래그를 사용하여 초기화가 완료되었음을 나타내는 것입니다. Windows 스토어에서 설치된 앱은 **CurrentAppSimulator** 대신 **CurrentApp**을 사용해야 하며, 이 경우 **ReloadSimulatorAsync**가 호출되지 않으므로 방금 언급한 경합 상태가 적용되지 않습니다. 이 때문에 비동기적 및 동기적으로 두 경우에서 모두 작동하도록 코드를 설계합니다.
+> [!NOTE]
+> **ReloadSimulatorAsync**가 완료되기 전에는 **CurrentAppSimulator**가 완전히 초기화되지 않은 것입니다. 또한 **ReloadSimulatorAsync**는 비동기 메서드이므로 다른 스레드에서 초기화되는 동안 한 스레드에서 **CurrentAppSimulator**를 쿼리하는 경합 상태가 발생하지 않도록 주의해야 합니다. 한 가지 방법은 플래그를 사용하여 초기화가 완료되었음을 나타내는 것입니다. Windows 스토어에서 설치된 앱은 **CurrentAppSimulator** 대신 **CurrentApp**을 사용해야 하며, 이 경우 **ReloadSimulatorAsync**가 호출되지 않으므로 방금 언급한 경합 상태가 적용되지 않습니다. 이 때문에 비동기적 및 동기적으로 두 경우에서 모두 작동하도록 코드를 설계합니다.
 
 
 <span id="proxy-examples" />
@@ -467,8 +467,8 @@ WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다
 |  시뮬레이트할 조건  |  IsActive  |  IsTrial  | ExpirationDate   |
 |-------------|------------|--------|--------|
 |  완전히 사용이 허가됨  |    true   |  false  |    없음. 실제로 만료 날짜가 있고 이후 날짜를 지정할 수도 있지만 XML 파일에서는 이 요소를 생략하는 것이 좋습니다. 만료 날짜가 있고 이전 날짜를 지정하는 경우에는 **IsActive**가 무시되고 false로 간주됩니다.          |
-|  체험 기간 내  |    true  |  true   |      &lt;이후 datetime&gt; **IsTrial**이 true이기 때문에 이 요소가 있어야 합니다. 현재 UTC(협정 세계시)를 표시하는 웹 사이트를 방문하여 원하는 남은 체험 기간을 얻기 위해 이 날짜를 얼마나 이후로 설정해야 하는지 확인할 수 있습니다.         |
-|  만료된 평가판  |    false  |  true   |      &lt;이전 datetime&gt; **IsTrial**이 true이기 때문에 이 요소가 있어야 합니다. 현재 UTC(협정 세계시)를 표시하는 웹 사이트를 방문하여 "이전 날짜"가 UTC로 언제인지 확인할 수 있습니다.         |
+|  체험 기간 내  |    true  |  true   |      &lt;a datetime in the future&gt; **IsTrial**이 true이기 때문에 이 요소를 표시해야 합니다. 현재 UTC(협정 세계시)를 표시하는 웹 사이트를 방문하여 원하는 남은 체험 기간을 얻기 위해 이 날짜를 얼마나 이후로 설정해야 하는지 확인할 수 있습니다.         |
+|  만료된 평가판  |    false  |  true   |      &lt;a datetime in the past&gt; **IsTrial**이 true이기 때문에 이 요소를 표시해야 합니다. 현재 UTC(협정 세계시)를 표시하는 웹 사이트를 방문하여 "이전 날짜"가 UTC로 언제인지 확인할 수 있습니다.         |
 |  잘못됨  |    false  | false       |     &lt;임의 값 또는 생략&gt;          |  |
 
 <span id="app-child-of-licenseinformation"/>
@@ -544,4 +544,3 @@ WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다
 |  **TransactionId**  |     예       |   앱에서 이행 프로세스를 통해 소모성의 구매 거래를 추적하는 데 사용하는 GUID(문자열)를 포함합니다. [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)을 참조하세요.            |
 |  **Status**  |      예      |  앱에서 소모성의 이행 상태를 나타내는 데 사용하는 문자열을 포함합니다. 값은 **Active**, **PurchaseReverted**, **PurchasePending** 또는 **ServerError**일 수 있습니다.             |
 |  **OfferId**  |     아니요       |    앱에서 소모성이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |
-

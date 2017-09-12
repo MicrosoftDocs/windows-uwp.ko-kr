@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 저장소 서비스, Windows 스토어 분석 API, 추가 기능 구입 정보"
-ms.openlocfilehash: cdd43c6e5df73ec1983593eb6198eba77c9df6e2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 2c641d9fb7e4835df2cf1da05467efcb01cd3681
+ms.sourcegitcommit: 2b436dc5e5681b8884e0531ee303f851a3e3ccf2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="get-add-on-acquisitions"></a>추가 기능 구입 정보 가져오기
 
 
 
 
-Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대해 앱의 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)의 집계 구입 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [추가 기능 보고서](../publish/add-on-acquisitions-report.md)를 통해서도 사용할 수 있습니다.
+Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 앱 추가 기능의 집계 취득 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [추가 기능 보고서](../publish/add-on-acquisitions-report.md)를 통해서도 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -83,7 +85,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 | gender | 다음 문자열 중 하나입니다.<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | 출시 | 구입이 발생한 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
 | OSVersion | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows8</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows10</strong></li><li><strong>알 수 없음</strong></li></ul> |
-| deviceType | 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul> |
+| deviceType | 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | orderName | 추가 기능을 구입하는 데 사용한 홍보 코드 주문 이름을 지정하는 문자열입니다(사용자가 홍보 코드를 사용하여 추가 기능을 구입한 경우에만 적용됨). |
 
 <span/> 
@@ -173,10 +175,10 @@ Authorization: Bearer <your access token>
 
 * [추가 기능 구입 보고서](../publish/add-on-acquisitions-report.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
+* [채널별 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)
 * [앱 획득 가져오기](get-app-acquisitions.md)
-* [오류 보고 데이터 가져오기](get-error-reporting-data.md)
-* [앱 등급 가져오기](get-app-ratings.md)
-* [앱 리뷰 가져오기](get-app-reviews.md)
+* [앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md)
+* [채널별 앱 변환 가져오기](get-app-conversions-by-channel.md)
 
  
 

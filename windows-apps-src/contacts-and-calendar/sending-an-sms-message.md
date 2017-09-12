@@ -1,17 +1,19 @@
 ---
-author: Xansky
+author: normesta
 description: "이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다."
 title: "SMS 메시지 보내기"
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: "연락처, SMS, 보내기"
-ms.author: mhopkins
+ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 3d2edd2e26633abacce07a2a6fe9f8c9d14b0afe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: e5c3678e6c12a65b6821d2fc2a54e0710f7dcef3
+ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="send-an-sms-message"></a>SMS 메시지 보내기
 

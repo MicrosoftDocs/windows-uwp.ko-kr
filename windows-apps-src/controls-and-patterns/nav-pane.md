@@ -1,21 +1,26 @@
 ---
 author: Jwmsft
+redirect_url: https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview
 Description: "화면 공간을 절약하는 동시에 최상위 수준 탐색을 제공합니다."
 title: "탐색 창에 대한 지침"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 2d48a92d5af75f8543f7b69ac59865e51bd334ee
-ms.sourcegitcommit: d1d53f5100edffe3f3ee57b853dc8cd1568fe7a2
-translationtype: HT
+ms.openlocfilehash: d5c838675eb8cb568f0dabd1c6b776a8a53d3bf4
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="nav-panes"></a>탐색 창
+
+이 문서는 [탐색 보기](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/navigationview)로 옮겨졌습니다.
 
 탐색 창은 실제 화면 공간을 절약하면서 많은 수의 최상위 수준 탐색 항목을 허용하는 패턴입니다. 탐색 창은 모바일 앱에서 널리 사용되지만, 더욱 큰 화면에서도 잘 작동합니다. 창이 오버레이로 사용될 경우 사용자가 단추를 누를 때까지 축소된 상태를 유지하고 표시되지 않으므로 더 작은 화면에 편리합니다. 창이 고정 모드로 사용될 경우 열린 상태를 유지하므로 실제 화면 공간이 충분한 경우 더욱 실용적입니다.
 
@@ -24,7 +29,7 @@ translationtype: HT
 
 **중요 API**
 
-* [**SplitView 클래스**](https://msdn.microsoft.com/library/windows/apps/dn864360)
+* [SplitView 클래스](https://msdn.microsoft.com/library/windows/apps/dn864360)
 
 ## <a name="is-this-the-right-pattern"></a>올바른 패턴인가요?
 
@@ -114,6 +119,3 @@ translationtype: HT
 * [분할 보기 컨트롤](split-view.md)
 * [마스터/세부](master-details.md)
 * [탐색 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)
- 
-
- 

@@ -5,15 +5,20 @@ title: "목록 항목의 중첩된 UI"
 label: Nested UI in list items
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
-ms.openlocfilehash: b3b41e81f48f790c85377208816668ba302d3738
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+pm-contact: chigy
+design-contact: kimsea
+doc-status: Published
+ms.openlocfilehash: a8d7ac9ad5cad6d88c0fac0c1e7bba53eaf0045d
+ms.sourcegitcommit: 10d6736a0827fe813c3c6e8d26d67b20ff110f6c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/22/2017
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
@@ -22,6 +27,8 @@ translationtype: HT
 중첩된 UI는 중첩된 실행 가능한 컨트롤을 독립적인 포커스를 가질 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다.
 
 중첩된 UI를 사용하여 중요 작업 실행을 가속화하는 추가 옵션을 사용자에게 제공할 수 있습니다. 그러나 표시하는 작업이 많을수록 UI가 복잡해집니다. 이 UI 패턴을 사용할 경우 더 많은 주의가 필요합니다. 이 문서에서는 특정 UI에 가장 적합한 작업 과정을 결정하는 지침을 제공합니다.
+
+> **중요 API**: [ListView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), [GridView 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
 
 이 문서에서는 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 및 [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) 항목에서 중첩된 UI를 생성하는 방법에 대해 설명합니다. 이 섹션에서는 다른 중첩 UI 사례에 대해 다루지 않지만 이러한 개념에 대해서는 설명합니다. 시작하기 전에 UI에 있는 ListView 또는 GridView 컨트롤 사용에 대한 일반 지침을 잘 알고 있어야 합니다. 이에 대한 내용은 [목록](lists.md) 및 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
 

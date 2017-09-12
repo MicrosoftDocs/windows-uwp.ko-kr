@@ -4,14 +4,16 @@ ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출을 업데이트합니다."
 title: "앱 제출 업데이트"
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, Windows 스토어 제출 API, 앱 제출, 업데이트"
-ms.openlocfilehash: a4b7816d0d6e47282864992044eea58eaaa05d1d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: b3c071c0d4f070c1a0ac95d6f35c73fcbb4e0455
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="update-an-app-submission"></a>앱 제출 업데이트
 
@@ -26,8 +28,6 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 * 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 * 개발자 센터 계정의 앱에 대한 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용하여 수행할 수 있습니다.
-
->**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 ## <a name="request"></a>요청
 
@@ -73,6 +73,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 | automaticBackupEnabled           |  boolean  |   Windows에서 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.   |   
 | canInstallOnRemovableMedia           |  boolean  |   고객이 이동식 저장소에 앱을 설치할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
 | isGameDvrEnabled           |  boolean |   앱에 대한 게임 DVR을 사용할지 여부를 나타냅니다.    |   
+| gamingOptions           |  object |   앱에 대한 게임 관련 설정을 정의한 [게임 옵션 리소스](manage-app-submissions.md#gaming-options-object)가 포함된 배열입니다<br/><br/>**참고**&nbsp;&nbsp;현재 이 API를 사용해 게임 옵션을 구성하는 기능은 모든 개발자 계정에서 사용할 수 없습니다. 여러분 계정에서 이러한 리소스에 액세스 할 수 없다면, *gamingOptions* 값은 null입니다.     |   
 | hasExternalInAppProducts           |     boolean          |   Windows 스토어 상거래 시스템 밖에서 사용자가 이 앱을 구매할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
 | meetAccessibilityGuidelines           |    boolean           |  이 앱이 접근성 지침을 준수하도록 테스트되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.      |   
 | notesForCertification           |  문자열  |   앱의 [인증에 대한 참고 사항](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification)이 포함됩니다.    |    
@@ -80,7 +81,8 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 | packageDeliveryOptions    | 개체  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 [패키지 배달 옵션 개체](manage-app-submissions.md#package-delivery-options-object)를 참조하세요.  |
 | enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](manage-app-submissions.md#enterprise-licensing) 값 중 하나입니다.  |    
 | allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | boolean   |  앱에서 [이후의 Windows10 디바이스 패밀리를 대상으로](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 할 수 있는지 여부를 나타냅니다.     |    
+| allowTargetFutureDeviceFamilies           | boolean   |  앱에서 [이후의 Windows10 장치 패밀리를 대상으로](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 할 수 있는지 여부를 나타냅니다.     |   
+| trailers           |  array |   앱 목록에 대한 비디오 예고편을 나타내는 [예고편 리소스](manage-app-submissions.md#trailer-object) 가 포함된 배열입니다. <br/><br/>**참고**&nbsp;&nbsp;이 API를 사용해 앱 제출에 예고편을 제출할 수 있는 기능은 현재 모든 개발자 계정에서 사용할 수 없습니다. 여러분 계정에서 이러한 리소스에 액세스 할 수 없다면, *trailers* 값은 null입니다.  |   
 
 <span/>
 
@@ -108,16 +110,16 @@ Content-Type: application/json
       "baseListing": {
         "copyrightAndTrademarkInfo": "",
         "keywords": [
-          "epub"
-        ],
+              "epub"
+            ],
         "licenseTerms": "",
         "privacyPolicy": "",
         "supportContact": "",
         "websiteUrl": "",
         "description": "Description",
         "features": [
-          "Free ebook reader"
-        ],
+              "Free ebook reader"
+            ],
         "releaseNotes": "",
         "images": [
           {
@@ -143,6 +145,7 @@ Content-Type: application/json
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -172,7 +175,8 @@ Content-Type: application/json
     "Holographic": true,
     "Xbox": false,
     "Team": true
-  }
+  },
+  "trailers": []
 }
 ```
 
@@ -233,6 +237,7 @@ Content-Type: application/json
   "automaticBackupEnabled": false,
   "canInstallOnRemovableMedia": true,
   "isGameDvrEnabled": false,
+  "gamingOptions": [],
   "hasExternalInAppProducts": false,
   "meetAccessibilityGuidelines": true,
   "notesForCertification": "",
@@ -284,7 +289,8 @@ Content-Type: application/json
     "Xbox": false,
     "Team": true
   },
-  "friendlyName": "Submission 2"
+  "friendlyName": "Submission 2",
+  "trailers": []
 }
 ```
 

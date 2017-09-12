@@ -2,16 +2,18 @@
 description: "이 문서에서는 UWP(Universal Windows Platform) 앱에서 공유 계약을 지원하는 방법을 설명합니다."
 title: "데이터 공유"
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
-author: awkoren
-ms.author: alkoren
+author: msatranjr
+ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 00c59ef7d62fb5518bf6e935b7913d4ca8180f7b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: fe6da350fbfe006b55e90aee8c12da90967f5711
+ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="share-data"></a>데이터 공유
 

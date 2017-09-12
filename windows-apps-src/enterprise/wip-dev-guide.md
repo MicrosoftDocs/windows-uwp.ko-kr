@@ -5,15 +5,17 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "WIP(Windows Information Protection) 개발자 가이드"
 ms.author: normesta
-ms.date: 02/24/2017
+ms.date: 06/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, wip, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱"
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
-ms.openlocfilehash: a2888b804e66e2630e4ae93b0be31974740d9f99
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 23604e4ca549bbb11885e681500f4f41531c2b6f
+ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/22/2017
 ---
 # <a name="windows-information-protection-wip-developer-guide"></a>WIP(Windows Information Protection) 개발자 가이드
 
@@ -72,10 +74,9 @@ WIP 설정 개발자 도우미의 각 섹션에 정보를 추가하여 정책을
 
     ![UWP 확장 추가](images/extensions.png)
 
-3. 패키지 매니페스트 파일에 다음 기능을 추가합니다.
+3. 패키지 매니페스트 파일에 이 기능을 추가합니다.
 
     ```xml
-       <Capability Name="privateNetworkClientServer" />
        <rescap:Capability Name="enterpriseDataPolicy"/>
     ```
    >*참고*: "rescap" 접두사는 *제한된 접근 권한 값*을 의미합니다. [특수 및 제한된 접근 권한 값](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.

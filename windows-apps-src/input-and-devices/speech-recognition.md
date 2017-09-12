@@ -11,9 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 49cd1e7ac0fceff7e39679f337ea4c029fa98806
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.openlocfilehash: 246db868cda1b1d6e61a33981fc756767ebdbd8d
+ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="speech-recognition"></a>음성 인식
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
@@ -54,48 +56,32 @@ translationtype: HT
 
     받아쓰기 문법과 같은 웹 검색 문법에는 사용자가 말할 수 있는 매우 많은 단어 및 구가 포함되어 있습니다. 그러나 웹 검색 문법은 사람들이 일반적으로 웹을 검색할 때 사용하는 용어를 인식하도록 최적화되어 있습니다.
 
-    **참고**  미리 정의된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있으며 장치가 아니라 온라인상에 있으므로 장치에 설치된 사용자 지정 문법만큼 성능이 빠르지 않을 수 있습니다.
-
-     
+    **참고**  미리 정의된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있으며 장치가 아니라 온라인상에 있으므로 장치에 설치된 사용자 지정 문법만큼 성능이 빠르지 않을 수 있습니다.     
 
     이러한 미리 정의된 문법은 최대 10초의 음성 입력을 인식하는 데 사용할 수 있으며 특별한 작성 작업이 필요하지 않습니다. 그러나 네트워크에 연결되어 있어야 합니다.
 
-    웹 서비스 제약 조건을 사용하려면 Settings -&gt; Privacy -&gt; Speech, inking, and typing 페이지에서 내 정보 표시 옵션을 설정하여 **설정**에서 음성 입력 및 받아쓰기 지원을 사용하도록 설정해야 합니다.
+    웹 서비스 제약 조건을 사용하려면 설정 -> 개인 정보 -> 음성, 수동 입력 및 입력 페이지에서 "내 정보 표시" 옵션을 켜고 **설정**에서 음성 입력 및 받아쓰기 지원을 사용하도록 설정해야 합니다.
 
-    여기에서는 음성 입력이 사용되도록 설정되어 있는지 테스트하고 설정되어 있지 않으면 Settings -&gt; Privacy -&gt; Speech, inking, and typing 페이지를 여는 방법을 보여 줍니다.
+    여기에서는 음성 입력이 사용되도록 설정되어 있는지 테스트하고 설정되어 있지 않으면 설정 -> 개인 정보 -> 음성, 수동 입력 및 입력 페이지를 여는 방법을 보여 줍니다.
 
     먼저, 전역 변수(HResultPrivacyStatementDeclined)를 0x80045509의 HResult 값으로 초기화합니다. [C\# 또는 Visual Basic으로 작성된 예외 처리](https://msdn.microsoft.com/library/windows/apps/dn532194)를 참조하세요.
 
-```    CSharp
-private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></td>
-    </tr>
-    </tbody>
-    </table>
-```
+    ```csharp
+    private static uint HResultPrivacyStatementDeclined = 0x80045509;
+    ```
 
-    We then catch any standard exceptions during recogntion and test if the [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) value is equal to the value of the HResultPrivacyStatementDeclined variable. If so, we display a warning and call `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` to open the Settings page.
-
+    그런 다음 인식하는 동안 표준 예외를 catch하여 [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) 값이 HResultPrivacyStatementDeclined 변수 값과 같은지 테스트합니다. 같으면 경고를 표시하고 `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));`를 호출하여 설정 페이지를 엽니다.
     
-```    CSharp
-    <colgroup>
-    <col width="100%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th align="left">C#</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-catch (Exception exception)
+    ```csharp
+    catch (Exception exception)
     {
       // Handle the speech privacy policy error.
       if ((uint)exception.HResult == HResultPrivacyStatementDeclined)
       {
         resultTextBlock.Visibility = Visibility.Visible;
-        resultTextBlock.Text = "The privacy statement was declined. 
-          Go to Settings -> Privacy -> Speech, inking and typing, and ensure you 
-          have viewed the privacy policy, and &#39;Get To Know You&#39; is enabled.";
+        resultTextBlock.Text = "The privacy statement was declined." + 
+          "Go to Settings -> Privacy -> Speech, inking and typing, and ensure you" +
+          "have viewed the privacy policy, and 'Get To Know You' is enabled.";
         // Open the privacy/speech, inking, and typing settings page.
         await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts")); 
       }
@@ -105,7 +91,7 @@ catch (Exception exception)
         await messageDialog.ShowAsync();
       }
     }
-```
+    ```
 
 2.  **프로그래밍 방식 목록 제약 조건**([**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421))
 
@@ -193,7 +179,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
     speechRecognizer.UIOptions.AudiblePrompt = "Say what you want to search for...";
-    speechRecognizer.UIOptions.ExampleText = @"Ex. &#39;weather for London&#39;";
+    speechRecognizer.UIOptions.ExampleText = @"Ex. 'weather for London'";
     speechRecognizer.Constraints.Add(webSearchGrammar);
 
     // Compile the constraint.
