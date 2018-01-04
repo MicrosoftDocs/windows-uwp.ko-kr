@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: e7b80edf6f0434e336b6b146ca4a9bc737d262ba
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="encode-and-decode-data"></a>데이터 인코드 및 디코드
 

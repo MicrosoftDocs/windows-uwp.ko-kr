@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, directx 9, directx 11, 포팅"
 ms.openlocfilehash: 9ea27288fd239b2af4b63985a3c8e0ad4055b0b9
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>DirectX 9에서 UWP(유니버설 Windows 플랫폼)로 포팅
 

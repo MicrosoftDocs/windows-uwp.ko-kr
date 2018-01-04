@@ -9,13 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, sd 카드, 저장소"
-ms.openlocfilehash: 89dfed0cbd8a4a87f432a747e4155cdef3bbc757
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 44354bbacd5ea775c8a973fe7f82aaf65b3f70db
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="access-the-sd-card"></a>SD 카드에 액세스
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 
 중요하지 않은 데이터는 옵션인 microSD 카드에 저장하고 액세스할 수 있습니다. 특히 내부 저장 용량이 제한적인 저가대의 장치에 SD 카드 슬롯이 있을 때 이 기능이 유용합니다.

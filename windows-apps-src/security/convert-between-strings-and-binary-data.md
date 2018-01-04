@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 3317c1c05c8a9a51f0a4d3c363db9c92809c1919
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="convert-between-strings-and-binary-data"></a>문자열과 이진 데이터 간 변환
 

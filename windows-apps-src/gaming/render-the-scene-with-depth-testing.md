@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, 렌더링, 장면, 깊이 테스트, direct3d, 그림자"
 ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="render-the-scene-with-depth-testing"></a>깊이 테스트로 장면 렌더링
 

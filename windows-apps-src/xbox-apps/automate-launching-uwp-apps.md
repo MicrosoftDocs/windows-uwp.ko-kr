@@ -4,7 +4,8 @@ description: "개발자는 프로토콜 활성화 및 시작 활성화를 사용
 author: listurm
 ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Windows 10 UWP 앱 시작 자동화
 

@@ -11,7 +11,8 @@ keywords: windows 10, uwp
 ms.assetid: 9ac96766-df89-4403-89f2-200549436921
 ms.openlocfilehash: 1f2306469468bf1990534d27ca633bba3a582a33
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="bringing-existing-games-to-xbox"></a>기존 게임을 Xbox로 가져오기
 

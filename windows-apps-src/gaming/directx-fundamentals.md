@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx, 로드, 래스터화, 메시, 비트맵, 2D, 3D"
 ms.openlocfilehash: 2633bba5425ca78c3f109a4571fd8c0529f17b56
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="fundamentals-of-directx-programming"></a>DirectX 프로그래밍의 기본 사항
 

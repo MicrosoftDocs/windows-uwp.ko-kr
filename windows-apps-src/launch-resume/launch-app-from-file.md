@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: c0426320e978c88bc2db67398e626c0ed3794edc
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="launch-an-app-through-file-activation"></a>파일 활성화를 통해 앱 실행
 

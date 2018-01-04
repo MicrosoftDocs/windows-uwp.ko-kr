@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>관리되는 Windows 런타임 구성 요소 배포
 

@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: e9f0a148238b8f91c4643954c7f575e742f69d5e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Windows 런타임 구성 요소에 배열 전달
 

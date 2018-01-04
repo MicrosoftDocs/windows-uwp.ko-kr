@@ -9,13 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 07b8b769cbcaf86bfa70a562de568cab65c91a77
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 62dc1cf81bd26ca5ba4adf181cc9f710e41565c2
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="download-and-install-package-updates-for-your-app"></a>앱에 대한 패키지 업데이트 다운로드 및 설치
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스에서 API를 사용하여 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. [Windows 개발자 센터 대시보드에 필수로 표시된](#mandatory-dashboard) 패키지를 쿼리하고 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 할 수 있습니다.
 

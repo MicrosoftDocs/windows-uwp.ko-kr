@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "Windows 10, uwp, 게임, directx, 입력 대기 시간"
 ms.openlocfilehash: cf83b02a6388f71f94641e7c24e011a540790fa0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 

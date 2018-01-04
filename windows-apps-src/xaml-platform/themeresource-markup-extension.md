@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.openlocfilehash: 3d770bba434a065e5589311e34000006051ab672
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 

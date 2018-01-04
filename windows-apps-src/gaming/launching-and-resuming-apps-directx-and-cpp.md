@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "windows 10, uwp, 게임, directx, 시작, 다시 시작"
 ms.openlocfilehash: c3557a11f8f18262f0b5e0c6ad6cac88d5274f73
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="launching-and-resuming-apps-directx-and-c"></a>앱 시작 및 다시 시작(DirectX 및 C++)
 

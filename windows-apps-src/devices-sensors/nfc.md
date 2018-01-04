@@ -11,7 +11,8 @@ keywords: Windows 10, uwp
 ms.assetid: 15a113b5-8231-41c9-b724-ce5add813967
 ms.openlocfilehash: 8e2438793ed154e083cca5bdd881012ddd90f42b
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="nfc"></a>NFC
 

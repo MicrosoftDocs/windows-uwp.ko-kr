@@ -11,7 +11,8 @@ keywords: windows 10, uwp
 ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 ms.openlocfilehash: d31c943336b36c325218b0b2a8830daf54ed25ca
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="xbox-live-sandbox-api-reference"></a>Xbox Live 샌드박스 API 참조   
 이 REST API를 사용하여 Xbox Live 샌드박스를 가져오고 설정할 수 있습니다.

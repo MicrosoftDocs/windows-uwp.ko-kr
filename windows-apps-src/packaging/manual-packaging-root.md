@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "windows 10, uwp, 패키징"
 ms.openlocfilehash: 8eca88588b2e444450daccd997aebb9e838a90d4
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="manual-app-packaging"></a>수동 앱 패키징
 

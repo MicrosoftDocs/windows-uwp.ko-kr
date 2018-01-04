@@ -11,7 +11,8 @@ keywords: windows 10, uwp
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.openlocfilehash: 390e7255e381bdbb004bfe5e0e95f3ccbcbeb490
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환
 

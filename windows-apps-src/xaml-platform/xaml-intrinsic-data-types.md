@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 9f6c8ebe6285981e0af74448b88e0290de3a66ee
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="xaml-intrinsic-data-types"></a>XAML 기본 데이터 형식
 

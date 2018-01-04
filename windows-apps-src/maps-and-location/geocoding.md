@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "windows 10, uwp, 지오코딩, 지도, 위치"
 ms.openlocfilehash: a68898e86ad2e901499077e8f856c5318a7feae7
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>지오코딩 및 리버스 지오코딩 수행
 

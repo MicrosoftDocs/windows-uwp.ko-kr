@@ -11,7 +11,8 @@ ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 비동기 프로그래밍, directx"
 ms.openlocfilehash: fe3798e475654d4d0ae7773ac26889906d40b3df
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>비동기 프로그래밍(DirectX 및 C++)
 

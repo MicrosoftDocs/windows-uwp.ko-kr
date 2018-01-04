@@ -4,7 +4,8 @@ description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)에 새로 
 author: hammondsp
 ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 # <a name="cpusets-for-game-development"></a>게임 개발용 CPUSets
 
