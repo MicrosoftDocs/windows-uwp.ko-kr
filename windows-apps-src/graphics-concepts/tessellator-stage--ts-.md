@@ -3,15 +3,18 @@ title: "TS(분할기) 단계"
 description: "TS(분할기) 단계에서는 기하 도형 패치를 나타내는 도메인의 샘플링 패턴을 만들고 이러한 샘플을 연결하는 일단의 더 작은 개체(삼각형, 점 또는 선)를 생성합니다."
 ms.assetid: 2F006F3D-5A04-4B3F-8BC7-55567EFCFA6C
 keywords: "TS(분할기) 단계"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 0a18a2ba4172fb4c7aad1d4e8a071bf077afeead
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f2bdcf77a9c150195a7a4c27a064d26c525472a
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tessellator-ts-stage"></a>TS(분할기) 단계
 

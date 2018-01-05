@@ -3,15 +3,18 @@ title: "이방성 텍스처 필터링"
 description: "이방성은 표면 방향이 화면의 평면 기준 각도인 3D 개체의 텍셀에 표시되는 왜곡입니다. 이방성 원형이 텍셀에 매핑되면 셰이프가 왜곡됩니다."
 ms.assetid: 58923809-EF76-4C16-BCE7-922A66425F83
 keywords: "이방성 텍스처 필터링"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: a185caebf2067afcacf5f287b3b6af320894f6f6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b6f4b74d64b7a3f9768697b5b6f495a322686c59
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anisotropic-texture-filtering"></a>이방성 텍스처 필터링
 

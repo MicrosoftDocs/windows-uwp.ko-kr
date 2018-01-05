@@ -1,17 +1,20 @@
 ---
-author: DelfCo
+author: PatrickFarley
 description: "프로세스 수명 관리에서 앱의 작동 방식을 디버깅 및 테스트하기 위한 도구와 기술입니다."
 title: "PLM(프로세스 수명 관리) 테스트 및 디버깅 도구"
-ms.author: bobdel
+ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
-ms.openlocfilehash: 14b8892790b2a2b486b2ddd3e8cb529545c327bd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1936d7fa789e99a475cbf82c3c0096060f23c4b4
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
 

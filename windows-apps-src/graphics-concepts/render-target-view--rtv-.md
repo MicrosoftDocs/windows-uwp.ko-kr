@@ -3,15 +3,18 @@ title: "RTV(렌더링 대상 뷰)"
 description: "렌더링 대상을 사용하면 화면에 렌더링될 백 버퍼가 아닌 임시 중간 버퍼로 장면이 렌더링되게 할 수 있습니다."
 ms.assetid: 9BA8FC35-9A51-438D-BFEA-02E254D6C93E
 keywords: "RTV(렌더링 대상 뷰)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 9d2ee26c8773c41b3409eea389ed489bc5142333
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1ee9f7eec5a76d2a4cbea1106570d82c273d2758
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="render-target-view-rtv"></a>RTV(렌더링 대상 뷰)
 

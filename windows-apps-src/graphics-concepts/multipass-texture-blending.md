@@ -3,15 +3,18 @@ title: "멀티패스 텍스처 혼합"
 description: "Direct3D 응용 프로그램은 여러 렌더링 패스가 진행되는 동안 원형에 다양한 텍스처를 적용하여 수많은 특수 효과를 얻을 수 있습니다."
 ms.assetid: FB4D6E3F-4EF5-4D20-BF7E-1008E790E30C
 keywords: "멀티패스 텍스처 혼합"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1ea0f10e4cec774a0b7d85bd813b8c4f720d0048
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 36af11829728e07c00b3306d5a997764db130c9f
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multipass-texture-blending"></a>멀티패스 텍스처 혼합
 

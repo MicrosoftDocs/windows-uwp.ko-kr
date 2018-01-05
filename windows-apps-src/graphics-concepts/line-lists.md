@@ -3,15 +3,18 @@ title: "선 목록"
 description: "선 목록은 격리된 선 세그먼트의 목록입니다. 선 목록은 진눈깨비나 폭우를 3D 장면에 추가하는 등의 작업에 유용합니다. 응용 프로그램은 꼭짓점 배열을 채워 선 목록을 만듭니다."
 ms.assetid: 42BF32A1-3535-42A3-82C5-3945CB309F2C
 keywords: "선 목록"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 8ebe6c67bd6b68023f59599cdcbd1f8f44f80e84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 66e2c6a455e64ce7ac782c268045f4c14dadcf7b
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="line-lists"></a>선 목록
 

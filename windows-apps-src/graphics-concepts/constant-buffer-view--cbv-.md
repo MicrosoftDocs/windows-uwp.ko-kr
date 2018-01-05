@@ -3,15 +3,18 @@ title: "CBV(상수 버퍼 뷰)"
 description: "상수 버퍼에는 셰이더 상수 데이터가 들어 있습니다. 이러한 데이터의 가치는 데이터 변경이 필요할 때까지 데이터가 유지되고 모든 GPU 셰이더에서 데이터에 액세스할 수 있다는 점입니다."
 ms.assetid: 99AEC6B0-A43B-4B61-8C3A-ECC8DE1B69A7
 keywords: "CBV(상수 버퍼 뷰)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 755c80e895281b93e9e37144526ed1790c63199f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 9e26a446bdd1e5a692e826d2c0ba303688bbd3d7
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constant-buffer-view-cbv"></a>CBV(상수 버퍼 뷰)
 

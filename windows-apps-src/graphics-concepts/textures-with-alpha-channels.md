@@ -3,15 +3,18 @@ title: "알파 채널을 사용하는 텍스처"
 description: "투명도 복잡성이 더욱 큰 텍스처 맵을 인코딩하는 방법은 두 가지입니다."
 ms.assetid: 768A774A-4F21-4DDE-B863-14211DA92926
 keywords: "알파 채널을 사용하는 텍스처"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1ea2282bb00f309f0dd2616898ce8d4a43215ff4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 73a2a619c32e7d6a7f2fff768c9cec5b7986c3c1
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textures-with-alpha-channels"></a>알파 채널을 사용하는 텍스처
 

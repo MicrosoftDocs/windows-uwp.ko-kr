@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1eb756c794e23a17420c14af7e27ec315305f232
-ms.sourcegitcommit: c5c96ec4b6ccef57f69eb341b06e6280994c9767
+ms.localizationpriority: medium
+ms.openlocfilehash: 2aae0e634ea219ef602eafdb1516d1d42b9c7913
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Device Portal에 대한 사용자 지정 플러그 인 작성
 
@@ -187,15 +188,15 @@ Device Portal 공급자에서 제공되는 정적 콘텐츠는 코어 Device Por
 백그라운드 작업을 디버깅하기 위해 Visual Studio에서 코드를 실행하는 방법을 변경해야 합니다. 공급자가 HTTP 요청을 처리하는 방법을 검사하기 위해 앱 서비스 연결을 디버깅하려면 아래 단계를 따르세요.
 
 1.  디버그 메뉴에서 DevicePortalProvider 속성을 선택합니다. 
-1.  디버깅 탭 아래에서 시작 작업 섹션에서 "시작하지 않음(시작 시 코드 디버그)"을 선택합니다.  
+2.  디버깅 탭 아래에서 시작 작업 섹션에서 "시작하지 않음(시작 시 코드 디버그)"을 선택합니다.  
 ![플러그 인 디버그 모드로 전환](images/device-portal/plugin-debug-mode.png)
-1.  RequestReceived 처리기 함수에서 중단점을 설정합니다.
+3.  RequestReceived 처리기 함수에서 중단점을 설정합니다.
 ![requestreceived 처리기의 중단점](images/device-portal/plugin-requestreceived-breakpoint.png)
-    > [!NOTE]
-    > 빌드 아키텍처가 대상의 아키텍처와 정확하게 일치하는지 확인합니다.  64비트 PC를 사용하는 경우 AMD64 빌드를 사용하여 배포해야 합니다.
-1.  F5 키를 눌러 앱을 배포합니다.
-1.  Device Portal을 끈 다음 다시 켜 앱을 찾습니다.(앱 매니페스트 변경 시에만 필요. 그 이외에는 다시 배포하고 이 단계를 건너뛸 수 있습니다.) 
-1.  브라우저에서 공급자의 네임스페이스에 액세스하면 중단점이 발생할 것입니다.
+> [!NOTE] 
+> 빌드 아키텍처가 대상의 아키텍처와 정확하게 일치하는지 확인합니다. 64비트 PC를 사용하는 경우 AMD64 빌드를 사용하여 배포해야 합니다. 
+4.  F5 키를 눌러 앱을 배포합니다.
+5.  Device Portal을 끈 다음 다시 켜 앱을 찾습니다.(앱 매니페스트 변경 시에만 필요. 그 이외에는 다시 배포하고 이 단계를 건너뛸 수 있습니다.) 
+6.  브라우저에서 공급자의 네임스페이스에 액세스하면 중단점이 발생할 것입니다.
 
 ## <a name="related-topics"></a>관련 항목
 * [Windows Device Portal 개요](device-portal.md)

@@ -3,15 +3,18 @@ title: "카메라 공간 변환"
 description: "카메라 공간의 꼭짓점은 세계 좌표 뷰 매트릭스로 개체 꼭짓점을 변환하여 계산됩니다."
 ms.assetid: 86EDEB95-8348-4FAA-897F-25251B32B076
 keywords: "카메라 공간 변환"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 907df69fdd0c785294283de858a0fcebd0c63513
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 032518fe793db99309d098b28f2f8e94bbb072ba
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="camera-space-transformations"></a>카메라 공간 변환
 

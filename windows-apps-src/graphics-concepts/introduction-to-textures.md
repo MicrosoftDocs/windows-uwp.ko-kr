@@ -3,15 +3,18 @@ title: "텍스처 소개"
 description: "텍스처 리소스는 읽거나 쓸 수 있는 텍스처의 최소 단위인 텍셀을 저장하기 위한 데이터 구조입니다. 텍스처가 셰이더에서 사용할 준비가 되면 텍스처 샘플러에서 필터링할 수 있습니다."
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
 keywords: "텍스처 소개"
-author: mtoepke
-ms.author: mtoepke
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: d642668a9af1e62f232e13e411e51e6d850de7f5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d2390568efc43e89da8aa8df73767bbd7b752538
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-textures"></a>텍스처 소개
 

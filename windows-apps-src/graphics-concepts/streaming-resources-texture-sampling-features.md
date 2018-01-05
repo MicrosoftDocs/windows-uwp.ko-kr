@@ -3,15 +3,18 @@ title: "스트리밍 리소스 텍스처 샘플링 기능"
 description: "스트리밍 리소스 텍스처 샘플링 기능에는 매핑된 영역에 대한 셰이더 상태 피드백 받기, 액세스되는 모든 데이터가 리소스에서 매핑되었는지 확인, 비매핑으로 알려진 mipmap 스트리밍 리소스의 영역을 셰이더가 피하도록 돕는 고정, 전체 텍스처 필터 공간에 대해 완전히 매핑된 최소 LOD 발견이 포함됩니다."
 ms.assetid: C2B2DD69-8354-417A-894D-6235A8B48B53
 keywords: "스트리밍 리소스 텍스처 샘플링 기능"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 7d03ba6eec780a3c05e4d15247c423852d7d75f6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ee5dc703fe52b0ac8b7163a8067e8b8b87ac8103
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>스트리밍 리소스 텍스처 샘플링 기능
 

@@ -3,15 +3,18 @@ title: "투영 변환"
 description: "투영 변환은 카메라의 렌즈를 선택하는 등 카메라 내부를 제어합니다. 해당 기능은 세 개의 변환 유형 중에서 가장 복잡합니다."
 ms.assetid: 378F205D-3800-4477-9820-5EBE6528B14A
 keywords: "투영 변환"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: cb6704383bafe9ee3e5785701c78f92e84b90b3d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bbaa0a6e02529bad55e2d90c90510a2ec1b40dd5
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="projection-transform"></a>투영 변환
 

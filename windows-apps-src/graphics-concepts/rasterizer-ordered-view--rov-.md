@@ -3,15 +3,18 @@ title: "ROV(정렬된 래스터라이저 뷰)"
 description: "정렬된 래스터라이저 뷰는 깊이 버퍼의 일부 제한 사항, 특히 투명도가 포함된 여러 텍스처가 모두 동일한 픽셀에 적용되는 제한 사항을 해결할 수 있습니다."
 ms.assetid: BCB1EE0D-4C1D-4E17-BDB7-173F448E0A7B
 keywords: "ROV(정렬된 래스터라이저 뷰)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 313b599a402ba00e220aca649834a217daf3eaaa
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bb75d903bee3990b13e261393f3801b4089ec1b0
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rasterizer-ordered-view-rov"></a>ROV(정렬된 래스터라이저 뷰)
 

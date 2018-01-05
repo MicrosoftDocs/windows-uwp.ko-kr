@@ -2,16 +2,19 @@
 title: "변환 개요"
 description: "매트릭스 변환은 수많은 하위 수준의 3D 그래픽 연산을 처리합니다."
 ms.assetid: B5220EE8-2533-4B55-BF58-A3F9F612B977
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f161462c352cf898a6b81920a3b81aec04cb6cc2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 02c23d7ff41f45edcb2a1f4f0ae8b18c25b9843f
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transform-overview"></a>변환 개요
 
@@ -87,7 +90,7 @@ C++에서 좌표 이동 매트릭스를 수동으로 만들 수 있습니다. �
 D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
     D3DXMATRIX ret;
 
-    D3DXMatrixIdentity(&amp;ret);
+    D3DXMatrixIdentity(&ret);
     ret(3, 0) = dx;
     ret(3, 1) = dy;
     ret(3, 2) = dz;
@@ -126,7 +129,7 @@ D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
 ```
     // Inputs are a pointer to a matrix (pOut) and an angle in radians.
     float sin, cos;
-    sincosf(angle, &amp;sin, &amp;cos);  // Determine sin and cos of angle
+    sincosf(angle, &sin, &cos);  // Determine sin and cos of angle
 
     pOut->_11 = 1.0f; pOut->_12 =  0.0f;   pOut->_13 = 0.0f; pOut->_14 = 0.0f;
     pOut->_21 = 0.0f; pOut->_22 =  cos;    pOut->_23 = sin;  pOut->_24 = 0.0f;

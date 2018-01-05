@@ -3,15 +3,18 @@ title: "깊이 버퍼"
 description: "깊이 버퍼 또는 z-버퍼는 깊이 정보를 저장하여 다각형의 어떤 부분이 시야에서 숨겨지지 않고 렌더링될지 제어합니다."
 ms.assetid: BE83A1D7-D43D-4013-8817-EFD2B24DC58E
 keywords: "깊이 버퍼"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: b33ca3f4c4557578a3f0878308db45281b315201
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bbdd567a6ed9af523c720b6ad5a7136a5c59d1cd
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="depth-buffers"></a>깊이 버퍼
 

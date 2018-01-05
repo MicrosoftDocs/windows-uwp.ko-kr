@@ -3,15 +3,18 @@ title: "중복 매핑을 사용하는 타일 액세스 제한"
 description: "중복되는 원본과 대상을 이용해 스트리밍 리소스를 복사하거나, 혹은 렌더링 영역의 공유 타일로 렌더링할 때처럼 중복 매핑을 사용하여 타일에 액세스하는 데는 제한이 따릅니다."
 ms.assetid: 6E40B1DC-BCF1-4B09-82A8-7B2D9B209A61
 keywords: "중복 매핑을 사용하는 타일 액세스 제한"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 13895acb5bb14cb1f0e5b91a2060e4eed9265a1c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e66fd373f2c1aaa18ca7cd0a7e8a463fce024e14
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tile-access-limitations-with-duplicate-mappings"></a>중복 매핑을 사용하는 타일 액세스 제한
 

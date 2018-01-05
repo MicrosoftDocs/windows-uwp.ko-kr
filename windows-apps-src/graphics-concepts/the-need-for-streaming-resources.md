@@ -3,15 +3,18 @@ title: "스트리밍 리소스 필요"
 description: "스트리밍 리소스는 접근하지 못하는 표면 지역을 저장하는 데 GPU 메모리를 낭비하지 않고, 하드웨어에게 인접 타일에 대한 필터링 방식을 지정하는 데 필요합니다."
 ms.assetid: A88BE65B-104F-4176-9809-C12580A3684C
 keywords: "스트리밍 리소스 필요"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 5060d0076d93f8bca7e1547c4d9fb05ad4b1a3f5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f166fd4d645c5308ae5351503061fe3bfa1d7c4e
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-need-for-streaming-resources"></a>스트리밍 리소스 필요
 

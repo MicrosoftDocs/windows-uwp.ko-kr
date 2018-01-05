@@ -3,15 +3,18 @@ title: "시스템 생성 값 사용"
 description: "시스템 생성 값은 셰이더 작업에서 어느 정도의 효율성을 허용하기 위해 IA(입력 어셈블러) 단계(사용자가 제공한 입력 의미 체계 기반)에서 생성됩니다."
 ms.assetid: C7CBA81D-68CA-4E9A-95E3-8185C280C843
 keywords: "시스템 생성 값 사용"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: f2b9918161f99a6a841e57d9b2705093eb85809b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6a99cb28818cd8fc3fd9057b3df72a678c2d1aca
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>시스템 생성 값 사용
 

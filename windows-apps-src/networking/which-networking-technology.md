@@ -1,21 +1,23 @@
 ---
-author: DelfCo
+author: stevewhims
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
 description: "UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다."
 title: "네트워킹 기술 선택"
-ms.author: bobdel
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4cbb423d8fdddfc6cc158c1cbca2398b21dc205c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 70ac6eb26c13d8fca3196fa64bfce2bb76f9d1b2
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다.
 

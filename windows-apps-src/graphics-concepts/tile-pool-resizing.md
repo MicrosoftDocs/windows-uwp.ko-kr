@@ -3,15 +3,18 @@ title: "타일 풀 크기 조정"
 description: "응용 프로그램이 스트리밍 리소스 매핑을 위한 작업 집합이 더 필요하거나, 혹은 필요한 공간이 적다면 타일 풀 크기를 늘리거나 줄일 수 있습니다."
 ms.assetid: A54A06DC-BDDB-42DC-85E8-C64241100ED5
 keywords: "타일 풀 크기 조정"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 57d2f919b2813e31345e057a515ed9184ae40cd9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: fba4197a8d290d7677558b82ed2fcdc28a8dbdf2
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tile-pool-resizing"></a>타일 풀 크기 조정
 

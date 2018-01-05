@@ -3,15 +3,18 @@ title: "디바이스 유형"
 description: "Direct3D 디바이스 유형에는 hal(하드웨어 추상화 계층) 디바이스와 기준 래스터라이저가 포함됩니다."
 ms.assetid: 64084B23-10C0-4541-8E93-FB323385D2F0
 keywords: "디바이스 유형"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: d863c3f45269c448f1f6fc1055ee765f323dbcd7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1aff4fed2f69c455157b21b6cce93e37a1b48c39
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="device-types"></a>디바이스 유형
 

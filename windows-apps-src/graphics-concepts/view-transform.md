@@ -3,15 +3,18 @@ title: "변환 보기"
 description: "변환 보기는 월드 공간에서 뷰어를 배치하여 꼭짓점을 카메라 공간으로 변환합니다."
 ms.assetid: DA4C2051-4C28-4ABF-8C06-241C8CB87F2F
 keywords: "변환 보기"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 62b0958bfa298ed924a62de73c1747f353e63033
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b7e0fdf265bdbc28d4d81e3a2ead8ca0ee7ca35d
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-transform"></a>변환 보기
 

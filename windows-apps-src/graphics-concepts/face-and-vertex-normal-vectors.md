@@ -3,15 +3,18 @@ title: "면 및 꼭짓점 법선 벡터"
 description: "메시의 각 면에는 수직 단위 법선 벡터가 있습니다. 벡터의 방향은 꼭짓점이 정의된 순서와 좌표계가 오른손용인지 왼손용인지에 따라 결정됩니다."
 ms.assetid: 02333579-9749-4612-B121-23F97898A3E0
 keywords: "면 및 꼭짓점 법선 벡터"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 04725508694370c1fff20ae34736fbd05948328c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7f8a38eeca0516082a64f5b4d2778f74436bbdb7
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="face-and-vertex-normal-vectors"></a>면 및 꼭짓점 법선 벡터
 

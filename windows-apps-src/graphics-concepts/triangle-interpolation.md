@@ -3,15 +3,18 @@ title: "삼각형 보간"
 description: "렌더링 중에 파이프라인은 각 삼각형에서 꼭짓점 데이터를 보간합니다."
 ms.assetid: 1A76DD78-CED7-42BE-BA81-B9050CD3AF9B
 keywords: "삼각형 보간"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: c440a499de801c3da62b2c2f9d4e436b44d5ce28
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 26705e9481a96d54eff70d04c004bf62fe049091
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="triangle-interpolation"></a>삼각형 보간
 

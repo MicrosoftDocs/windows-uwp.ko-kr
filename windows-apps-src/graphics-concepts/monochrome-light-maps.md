@@ -3,15 +3,18 @@ title: "단색 조명 맵"
 description: "이전 3D 가속기 보드가 대상 픽셀의 알파 값을 사용하는 텍스처 혼합을 지원하지 않는 경우, 단색 조명 매핑을 사용하면 이전 어댑터가 멀티패스 텍스처 혼합을 수행할 수 있습니다."
 ms.assetid: 60F8F8F6-9DB7-452B-8DC0-407FFAA4BFE1
 keywords: "단색 조명 맵"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 088e109cde92515305e474b2b03bd03526aaab87
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 67029443f59d87c7f3e38560595dca1b7b399632
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monochrome-light-maps"></a>단색 조명 맵
 

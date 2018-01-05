@@ -3,15 +3,18 @@ title: "기본 텍스처 지정 개념"
 description: "초기의 컴퓨터 생성 3D 이미지는 그 당시에는 고급이었지만 반짝거리는 플라스틱 느낌이었습니다."
 ms.assetid: 3CA3905D-E837-48EB-A81F-319AA1C6537E
 keywords: "기본 텍스처 지정 개념"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 52c21ff88f09c5136579fabf0b699fd71a8717bd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7bbcdd17643f64ada02ff1045e57c873f40b2c36
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-texturing-concepts"></a>기본 텍스처 지정 개념
 

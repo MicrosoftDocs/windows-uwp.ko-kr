@@ -3,15 +3,18 @@ title: "Texture3D 하위 리소스 타일링"
 description: "다음은 Texture3D 하위 리소스 타일 방식을 나타낸 표입니다."
 ms.assetid: 210D03E4-CF12-47E0-BA2F-C8D059B17D3E
 keywords: "Texture3D 하위 리소스 타일링"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 3232ac03c2d0079faabff40b9325e819f8aca147
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d51d20ddaeca5aa0689104b3dd71e36b1a5d4132
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="texture3d-subresource-tiling"></a>Texture3D 하위 리소스 타일링
 

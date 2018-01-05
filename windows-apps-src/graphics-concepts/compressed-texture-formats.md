@@ -3,15 +3,18 @@ title: "압축된 텍스처 형식"
 description: "이 섹션에는 압축된 텍스처 형식의 내부 구성에 대한 정보가 있습니다."
 ms.assetid: 24D17B9F-8CA7-4006-9E0F-178C6B3CAEC9
 keywords: "압축된 텍스처 형식"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1bf94307093913c3b89b1d2a80e1e77d8dec81eb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: a37246ff409b0a18992af32172bd4f6a8e535da7
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compressed-texture-formats"></a>압축된 텍스처 형식
 

@@ -3,15 +3,18 @@ title: "확산 조명"
 description: "확산 조명은 조명 방향과 개체 표면 법선 모두에 따라 달라집니다."
 ms.assetid: 8AF78742-76B1-4BBB-86E3-94AE6F48B847
 keywords: "확산 조명"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: d7916bf421a56125691da9be3505039e9cb1d71d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 84036edd2071d9545b3a492ea5cf0b397d9e722e
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diffuse-lighting"></a>확산 조명
 

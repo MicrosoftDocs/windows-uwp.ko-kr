@@ -3,15 +3,18 @@ title: "좌표계"
 description: "일반적으로 3D 그래픽 응용 프로그램은 두 가지 유형의 카티전 좌표계(왼손 또는 오른손) 중 하나를 사용합니다. 두 좌표계에서 양의 x-축은 오른쪽을 가리키고 양의 y-축은 위를 가리킵니다."
 ms.assetid: 138D9B81-146F-4E9F-B742-1EDED8FBF2AE
 keywords: "좌표계"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 64ee2dee2944af1d256b825fc08fb01c992d3218
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 738f9f5852642bdc1431358979f633cd91d1399d
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coordinate-systems"></a>좌표계
 

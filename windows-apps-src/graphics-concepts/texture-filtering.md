@@ -3,15 +3,18 @@ title: "텍스처 필터링"
 description: "텍스처 필터링은 3D 기본 객체를 2D 화면으로 매핑하여 기본 객체를 렌더링할 때 기본 객체의 2D 렌더링 이미지를 구성하는 각 픽셀 색상을 생성합니다."
 ms.assetid: 1CCF4138-5D48-4B07-9490-996844F994D8
 keywords: "텍스처 필터링"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 43dccdc8a8834830b6c15fcfc1cd56216e27ee90
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 42d184b15de4fdeac18549b41447da81580d6b99
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="texture-filtering"></a>텍스처 필터링
 

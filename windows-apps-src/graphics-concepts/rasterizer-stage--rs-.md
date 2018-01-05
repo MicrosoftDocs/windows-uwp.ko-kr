@@ -3,15 +3,18 @@ title: "RS(래스터라이저) 단계"
 description: "래스터라이저는 뷰에 없는 기본 요소를 잘라내고, PS(픽셀 셰이더) 단계에 대해 기본 요소를 준비하고, 픽셀 셰이더를 호출하는 방법을 결정합니다."
 ms.assetid: 7E80724B-5696-4A99-91AF-49744B5CD3A9
 keywords: "RS(래스터라이저) 단계"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 1226ad54c6af2f064badf2b1e00088e3b1c70a29
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b707356b2d90ad4839fdc7f6e52370b74ea4857a
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rasterizer-rs-stage"></a>RS(래스터라이저) 단계
 

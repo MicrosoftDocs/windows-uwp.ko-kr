@@ -8,18 +8,18 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리"
-localizationpriority: medium
-ms.openlocfilehash: 11c11e339cacccbaa841fd6442009946d53d8890
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: 098ec71f2f3e487b76f9992c297ad7cba9ac5538
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 
 ## <a name="overview"></a>개요
 
-.NET 및 Win32 응용 프로그램 및 게임은 종종 다른 언어로 지역화되어 전체 대상 시장을 확장합니다. 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../globalizing/globalizing-portal.md)를 참조하세요. .NET 또는 Win32 앱 또는 게임을 AppX 패키지로 패키징하면 리소스 관리 시스템을 사용하여 실행 시 컨텍스트에 맞게 조정된 앱 리소스를 로드할 수 있습니다. 이 항목에서는 그 기술에 대해 자세히 설명합니다.
+.NET 및 Win32 응용 프로그램 및 게임은 종종 다른 언어로 지역화되어 전체 대상 시장을 확장합니다. 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요. .NET 또는 Win32 앱 또는 게임을 AppX 패키지로 패키징하면 리소스 관리 시스템을 사용하여 실행 시 컨텍스트에 맞게 조정된 앱 리소스를 로드할 수 있습니다. 이 항목에서는 그 기술에 대해 자세히 설명합니다.
 
 레거시 Win32 응용 프로그램을 지역화하는 방법은 여러 가지가 있지만 Windows 8에는 여러 프로그래밍 언어와 응용 프로그램 유형에서 사용할 수 있으며 간편한 지역화 이상의 기능을 제공하는 [새로운 리소스 관리 시스템](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx)이 도입되었습니다. 이 시스템은 이 항목에서 "MRT"라고 부르겠습니다. 이는 지금까지 "최신 리소스 기술"이라고 불렀지만 "최신"이라는 용어는 이제 사용되지 않습니다. 리소스 관리자는 MRM(최신 리소스 관리자) 또는 PRI(패키지 리소스 인덱스)라고도 알려져 있습니다.
 

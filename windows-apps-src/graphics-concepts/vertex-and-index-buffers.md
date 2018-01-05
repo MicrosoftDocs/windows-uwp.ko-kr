@@ -3,15 +3,18 @@ title: "꼭짓점 및 인덱스 버퍼"
 description: "꼭짓점 버퍼는 꼭짓점 데이터를 포함한 메모리 버퍼입니다. 꼭짓점 버퍼의 꼭짓점을 처리하여 변환, 조명 및 클리핑을 수행합니다."
 ms.assetid: 8A39CD23-85FB-4424-9AC3-37919704CD68
 keywords: "꼭짓점 및 인덱스 버퍼"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: f06ee013f5c09522df387d69afa0096f7a3f7044
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f7153696f135d8fa559933d4e7a7c6e925850565
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vertex-and-index-buffers"></a>꼭짓점 및 인덱스 버퍼
 

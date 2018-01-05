@@ -3,15 +3,18 @@ title: "스트리밍 리소스에 사용할 수 있는 주소 공간"
 description: "이 섹션에서는 스트리밍 리소스에 사용할 수 있는 가상 주소 공간을 지정합니다."
 ms.assetid: 145EB4A3-3910-4126-BC7E-A4CF53E2A098
 keywords: "스트리밍 리소스에 사용할 수 있는 주소 공간"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: a63136f04570c4bf964c461f7296c930f5e168b5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d3ae9729270967269d6543ed80bb136a04dc9edc
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="address-space-available-for-streaming-resources"></a>스트리밍 리소스에 사용할 수 있는 주소 공간
 

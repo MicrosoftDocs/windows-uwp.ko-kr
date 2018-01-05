@@ -3,15 +3,18 @@ title: "조명의 수학"
 description: "Direct3D 조명 모델은 주변, 확산, 반사 및 발광 조명을 포함합니다. 따라서 광범위한 조명 상황을 해결하기에 충분한 유연성이 있습니다. 한 장면에 비치는 빛의 총량을 전역 조명이라고 합니다."
 ms.assetid: D0521F56-050D-4EDF-9BD1-34748E94B873
 keywords: "조명의 수학"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: fd26d7253de1422f81ff4c0b9bf94d45cd02b2fc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 74d6caed069327efd0262158d7d3781cb5a5c02e
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mathematics-of-lighting"></a>조명의 수학
 

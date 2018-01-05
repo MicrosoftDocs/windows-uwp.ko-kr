@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, uwp, 게임, 렌더링"
-localizationpriority: medium
-ms.openlocfilehash: 7d2f0850dff8b3e22fbbc487068f2db37b0f107a
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: 42662d7ecfa415f9528f0acd3e4d4b7ce25cf40a
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임워크 II: 게임 렌더링
 

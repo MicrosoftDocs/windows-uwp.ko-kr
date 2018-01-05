@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "windows 10, 게임, 캡처, 오디오, 비디오, 메타데이터"
-localizationpriority: medium
-ms.openlocfilehash: a642e93fc81fa69acc8f692c526e617403416432
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: medium
+ms.openlocfilehash: 064231d6b778afa427bd6c32657d100a5b508bdd
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처
 이 문서는 앱 등에서 게임 플레이 이벤트가 동기화되는 동적 환경을 만들 수 있도록 게임 비디오, 오디오, 스크린샷을 캡처하는 방법과 시스템이 캡처된 미디어 및 브로드캐스트 미디어에 포함할 메타데이터를 전송하는 방법에 대해 설명합니다. 

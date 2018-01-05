@@ -3,15 +3,18 @@ title: "SOV(스트림 출력 뷰)"
 description: "스트림 출력 뷰를 사용하면 꼭짓점, 공간 분할 및 기하 도형 셰이더가 제공되는 꼭짓점 정보를 계속 사용하려는 응용 프로그램에 다시 스트리밍할 수 있습니다."
 ms.assetid: F528A920-0EAD-4634-BA5F-CB34A8FAEFFA
 keywords: "SOV(스트림 출력 뷰)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: a7af4ab83f796ce5f506fd5ec956faec108024d9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8268a93eba804af1c16ffec5a9ef07a4c05e69ec
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stream-output-view-sov"></a>SOV(스트림 출력 뷰)
 

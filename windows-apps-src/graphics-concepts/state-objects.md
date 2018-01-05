@@ -3,15 +3,18 @@ title: "상태 개체"
 description: "장치 상태가 상태 개체로 그룹화되어 상태 변경 비용이 크게 줄어듭니다. 상태 개체는 여러 개이며 각 상태 개체는 특정 파이프라인 단계의 상태 집합을 초기화합니다. 상태 개체는 Direct3D 버전에 따라 다릅니다."
 ms.assetid: D998745C-2B75-4E59-9923-AD1A17A92E05
 keywords: "상태 개체"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: f046ab40ef4e05a8542f259330269e75ceb06f5f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 763df332ab64fcc536f5358df8b22eecc08e7527
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-objects"></a>상태 개체
 

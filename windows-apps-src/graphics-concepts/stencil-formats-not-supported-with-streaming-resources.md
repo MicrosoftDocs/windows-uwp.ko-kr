@@ -3,15 +3,18 @@ title: "스트리밍 리소스에서 지원되지 않는 스텐실 형식"
 description: "스텐실을 포함하는 형식은 스트리밍 리소스에서 지원되지 않습니다."
 ms.assetid: 90A572A4-3C76-4795-BAE9-FCC72B5F07AD
 keywords: "스트리밍 리소스에서 지원되지 않는 스텐실 형식"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 15e64263a6b529fbc14be936195d33ad7ec69a1c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 330b768c0f00f36ce8ce539b9ce41c7ac812e6fc
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stencil-formats-not-supported-with-streaming-resources"></a>스트리밍 리소스에서 지원되지 않는 스텐실 형식
 

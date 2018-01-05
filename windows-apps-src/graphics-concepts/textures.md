@@ -3,15 +3,18 @@ title: "텍스처"
 description: "텍스처는 컴퓨터에서 생성되는 3D 이미지에 현실감을 불어넣을 수 있는 강력한 도구입니다. Direct3D는 광범위한 텍스처 기능 세트를 지원하여 개발자가 고급 텍스처 기법에 쉽게 접근할 수 있습니다."
 ms.assetid: B9E85C9E-B779-4852-9166-6FA2240B7046
 keywords: "텍스처"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: ef5c72f3c667c63cb48c469349ae26c364050c19
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: b52aeb2c697389d9d5d15cb05701082ad11c94e8
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textures"></a>텍스처
 

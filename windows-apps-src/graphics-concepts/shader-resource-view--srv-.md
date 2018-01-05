@@ -3,15 +3,18 @@ title: "SRV(셰이더 리소스 뷰) 및 UAV(순서기 지정되지 않은 액�
 description: "셰이더 리소스 뷰는 일반적으로 셰이더가 텍스처에 액세스할 수 있는 형식으로 텍스처를 래핑합니다. 순서가 지정되지 않은 액세스 뷰는 유사한 기능을 제공하지만, 순서와 상관없이 텍스처(또는 다른 리소스)에 대한 읽기 및 쓰기를 허용합니다."
 ms.assetid: 4505BCD2-0EDA-40F2-887C-EC081FE32E8F
 keywords: "셰이더 리소스 뷰(SRV)"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 2413c37dc7a19f110597a4e5664c6d4ac7b5508c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 213ff4e2a120c91211720d887ab8f777b9265106
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a>SRV(셰이더 리소스 뷰) 및 UAV(순서가 지정되지 않은 액세스 뷰)
 

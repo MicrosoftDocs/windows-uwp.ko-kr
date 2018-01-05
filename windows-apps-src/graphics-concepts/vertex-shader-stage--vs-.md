@@ -3,15 +3,18 @@ title: "VS(꼭짓점 셰이더) 단계"
 description: "VS(꼭짓점 셰이더) 단계에서는 꼭짓점을 처리하며, 일반적으로 변환, 스킨 지정, 조명 등의 작업을 수행합니다. 꼭짓점 셰이더는 항상 단일 입력 꼭짓점을 사용하여 단일 출력 꼭짓점을 생성합니다."
 ms.assetid: 5133C4BB-B4E6-4697-9276-F718AD44869C
 keywords: "VS(꼭짓점 셰이더) 단계"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 761296a9897ad99ec57527f073a1ad1c2d792966
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 521b3254fd8f3f86e8b55923627b8560d2991ae6
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vertex-shader-vs-stage"></a>VS(꼭짓점 셰이더) 단계
 

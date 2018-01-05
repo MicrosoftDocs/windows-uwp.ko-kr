@@ -3,15 +3,18 @@ title: "IA(입력 어셈블러) 단계"
 description: "IA(입력 어셈블러) 단계는 의미 체계 ID를 포함해 삼각형, 직선과 점 같은 기본 및 인접 데이터를 파이프라인에 제공하여 이미 처리된 원형에 대한 처리를 줄임으로써 셰이더의 효율성을 높입니다."
 ms.assetid: AF1DC611-C872-47F1-BF1A-92C68C8903E6
 keywords: "IA(입력 어셈블러) 단계"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 3093fc58a3432fae64e9324773a9277d907a15fd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c05572c71f3863f6c6218d15a28ee620c4c645bb
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-assembler-ia-stage"></a>IA(입력 어셈블러) 단계
 

@@ -3,15 +3,18 @@ title: "뷰포트 및 클리핑"
 description: "뷰포트는 2차원(2D) 사각형으로 여기에 3D 장면이 프로젝션됩니다."
 ms.assetid: D0DD646E-13AE-452A-AD22-8C35000D0BA9
 keywords: "뷰포트 및 클리핑"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: b392f267c370bd075d5c0d1ac953ee76a9cff0af
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: defea1e9adbb4d0f9edb24c936069191944b94be
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewports-and-clipping"></a>뷰포트 및 클리핑
 

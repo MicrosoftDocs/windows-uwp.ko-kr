@@ -3,15 +3,18 @@ title: "변환"
 description: "Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 도형을 푸시하는 변환 엔진입니다."
 ms.assetid: 0DF2A99A-335C-4D14-9720-6D7996DD635A
 keywords: "변환"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 342dd40bd6cc69ebf1faf93753b91096e7ecfbe9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e5eb63a41ad04577196b6a622736211c1d1576f9
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transforms"></a>변환
 

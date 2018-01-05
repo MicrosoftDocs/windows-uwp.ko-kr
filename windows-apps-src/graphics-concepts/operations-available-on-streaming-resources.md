@@ -3,15 +3,18 @@ title: "스트리밍 리소스에서 할 수 있는 작업"
 description: "이 섹션에서는 스트리밍 리소스에서 할 수 있는 작업이 무엇인지 설명합니다."
 ms.assetid: 700D8C54-0E20-4B2B-BEA3-20F6F72B8E24
 keywords: "스트리밍 리소스에서 할 수 있는 작업"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 86f610131d406db69cfcf23be51fca839d889772
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ee9f6b3744b038d9f4ae0f5b490cbd763eda08ee
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operations-available-on-streaming-resources"></a>스트리밍 리소스에서 할 수 있는 작업
 

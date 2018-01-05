@@ -3,15 +3,18 @@ title: "타일 풀 생성 매개 변수"
 description: "이 섹션의 매개 변수를 사용하여 버퍼 생성 시 타일 풀을 정의합니다."
 ms.assetid: FDC1AD88-BC41-49EE-881E-F21743D407DB
 keywords: "타일 풀 생성 매개 변수"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 7bf3a83641c09f557c021b216f7422d7eaf5ea56
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: a41e37e9483521877cfd5787f47e989c2d5cdcb2
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tile-pool-creation-parameters"></a>타일 풀 생성 매개 변수
 

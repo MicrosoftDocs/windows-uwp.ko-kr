@@ -3,15 +3,18 @@ title: "점 목록"
 description: "점 목록은 격리된 점으로 렌더링되는 꼭짓점의 모음입니다. 응용 프로그램은 스타 필드용 3D 장면에서 점 목록을 사용하거나 다각형 표면에서 점선을 사용할 수 있습니다."
 ms.assetid: 332954AE-019F-4A91-B773-E3A7C92F3297
 keywords: "점 목록"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: d5f2ee1c9a42a0d2f380f4f9a98c204088b1379a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6b9bff41dd1963bf2703fae63573949d96f7f436
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="point-lists"></a>점 목록
 

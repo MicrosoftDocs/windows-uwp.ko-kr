@@ -3,15 +3,18 @@ title: "텍스처 리소스"
 description: "텍스처는 렌더링에 사용되는 일종의 리소스입니다."
 ms.assetid: 016F6CDA-D361-4E6B-BA99-49E915A19364
 keywords: "텍스처 리소스"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: c82079666f2ee32a4e858414c824142d2bcff932
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7991d4e611bc27c59f9d63b5ff1d34823f60ed60
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="texture-resources"></a>텍스처 리소스
 

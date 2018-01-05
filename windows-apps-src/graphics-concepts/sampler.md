@@ -3,15 +3,18 @@ title: "샘플러"
 description: "샘플링은 텍스처 또는 기타 리소스로부터 입력 값을 읽는 프로세스입니다. \\ 0034;샘플러\\ 0034;는 리소스로부터 읽는 객체입니다."
 ms.assetid: 7ECE13BB-9FC5-44A3-B1B2-2FE163F1D627
 keywords: "샘플러"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 919de99d9f0680ea63f70a027344c49f3fbd093e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ec409f734e2f3e338f6bfe064a0bed29936980f6
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sampler"></a>샘플러
 

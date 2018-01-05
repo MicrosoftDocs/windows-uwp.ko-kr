@@ -3,15 +3,18 @@ title: "스트리밍 리소스에 대한 파이프라인 액세스"
 description: "스트리밍 리소스는 셰이더 리소스 뷰(SRV), 렌더링 대상 뷰(RTV), 깊이 스텐실 뷰(DSV), 순서가 지정되지 않은 액세스 뷰(UAV)뿐 아니라 꼭짓점 버퍼 바인딩 같이 뷰가 사용되지 않는 일부 바인딩 포인트에서 사용할 수 있습니다."
 ms.assetid: 18DA5D61-930D-4466-8EFE-0CED566EA4A6
 keywords: "스트리밍 리소스에 대한 파이프라인 액세스"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: b730a8c15f4327397e945b616c6c1edc2e1ad5a9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2eabbe1b5b7ffc848243f75237e90bc69d8a43dc
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pipeline-access-to-streaming-resources"></a>스트리밍 리소스에 대한 파이프라인 액세스
 

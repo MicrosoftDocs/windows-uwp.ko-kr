@@ -3,15 +3,18 @@ title: "가장 가까운 점 샘플링"
 description: "응용 프로그램에서는 텍스처 필터링을 사용하지 않아도 됩니다."
 ms.assetid: D7F88320-2C61-47E9-9B92-EC31D48DB079
 keywords: "가장 가까운 점 샘플링"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: 351acc87764fadc2cd967aaf1d918f4b4837c81f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 048ff2755343e5e6230900ea9acb819e85ba654b
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>가장 가까운 점 샘플링
 

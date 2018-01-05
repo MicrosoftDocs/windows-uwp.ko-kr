@@ -3,15 +3,18 @@ title: "비매핑된 타일을 사용하는 래스터라이저 동작"
 description: "이 섹션에서는 비매핑된 타일을 사용하는 래스터라이저 동작을 설명합니다."
 ms.assetid: AC7B818D-E52B-4727-AEA2-39CFDC279CE7
 keywords: "비매핑된 타일을 사용하는 래스터라이저 동작"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: b4f85689af4d1f4d69c7f50f094fc8487e4b59e6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 218b53872fc8fd99a961dceefd2bfbd091c52511
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="span-iddirect3dconceptsrasterizerbehaviorwithnon-mappedtilesspanrasterizer-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.rasterizer_behavior_with_non-mapped_tiles"></span>비매핑된 타일을 사용하는 래스터라이저 동작
 

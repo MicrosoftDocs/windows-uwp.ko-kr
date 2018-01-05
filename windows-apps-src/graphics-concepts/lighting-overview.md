@@ -2,16 +2,19 @@
 title: "조명 개요"
 description: "Direct3D 조명을 사용하는 경우 Direct3D가 조명의 세부 사항을 대신 처리하도록 허용합니다. 고급 사용자는 필요에 따라 직접 조명 작업을 수행할 수 있습니다."
 ms.assetid: FCBF6A92-4EAC-4CCC-A76C-79985AF348AE
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7f4ca6fdbd93d42dbefd955f31bd514b93886d03
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 47280437ad902d0679e0ef266bbd7ad9b6b635af
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lighting-overview"></a>조명 개요
 

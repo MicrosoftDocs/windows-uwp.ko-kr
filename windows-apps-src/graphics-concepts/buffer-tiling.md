@@ -3,15 +3,18 @@ title: "버퍼 타일링"
 description: "버퍼 리소스는 64KB의 크기로 분할되며, 크기가 64KB의 곱이 아닌 경우 마지막 타일에 약간의 빈 공간이 포함됩니다."
 ms.assetid: 577DC6B0-F373-4748-AD80-2784C597C366
 keywords: "버퍼 타일링"
-author: PeterTurcan
-ms.author: pettur
+author: michaelfromredmond
+ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.openlocfilehash: f79d04675722c2bcc84c9c79f4da338c7b46732d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 03769964bfe3eff13314e62b8594edd5509b26fb
+ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="buffer-tiling"></a>버퍼 타일링
 
