@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "앱 제출 시 조직 라이선스 섹션에서 비즈니스용 Microsoft 스토어 및 교육용 Microsoft 스토어를 통해 앱을 대량 구매용으로 제공할지 여부 및 그 방법을 지정할 수 있습니다."
+Description: You can indicate whether and how your app can be offered for volume purchases through the Microsoft Store for Business and Microsoft Store for Education in the Organizational licensing section of an app submission.
 title: "조직 라이선스 옵션"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
 ms.author: wdg-dev-content
-ms.date: 06/14/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, 비즈니스용 스토어, 교육용 스토어, 조직, 볼륨 라이선싱"
-ms.openlocfilehash: 8bb44a65f2ded280cfe8eda39663b64ef2edb3c8
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: "Windows 10, uwp, 비즈니스용 Store, 교육용 Store, 조직, 볼륨 라이선싱, 엔터프라이즈, 교육 Store, 비즈니스 Store, 대량 구매, 대량"
+localizationpriority: high
+ms.openlocfilehash: 7437b087c0966939bb5f5d8110d310f4dd5e73df
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="organizational-licensing-options"></a>조직 라이선스 옵션
 
@@ -22,10 +23,14 @@ ms.lasthandoff: 06/21/2017
 
 이러한 설정을 통해 여러 사용자 라이선스를 취득하고 배포하는 조직(비즈니스 및 교육)에서 앱을 사용하도록 하여, PC, 태블릿, 휴대폰 등 여러 Windows 10 장치 유형에서 조직에 접근할 수 있는 기회를 늘릴 수 있습니다.
 
+또한 엔터프라이즈에 직접 게시하는 [LOB(기간 업무) 앱](distribute-lob-apps-to-enterprises.md)에 대해 조직 라이선스를 허용해야 합니다.
+
 > [!NOTE]
 > 각 앱에 대한 선택은 서로 독립적으로 구성됩니다. 언제든지 새 제출을 만들어 앱의 기본 설정을 변경할 수 있으며, 변경 내용은 제출에서 [인증 프로세스](the-app-certification-process.md)를 완료한 후 적용됩니다.
 
-또한 엔터프라이즈에 직접 게시하는 [LOB(기간 업무) 앱](distribute-lob-apps-to-enterprises.md)에 대해 조직 라이선스를 허용해야 합니다.
+> [!IMPORTANT]
+> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하는 제출은 비즈니스용 Microsoft Store 및 교육용 Microsoft Store에서 사용할 수 없습니다. 조직에서 앱을 대량 구매할 수 있도록 하려면 Windows 개발자 센터 대시보드를 사용하여 제출을 만들고 제출해야 합니다.
+
 
 ## <a name="allowing-your-app-to-be-offered-to-organizations"></a>앱을 조직에 제공하도록 허용
 
@@ -57,7 +62,7 @@ ms.lasthandoff: 06/21/2017
 현재 특정 시장에 위치한 개발자 계정은 비즈니스용 Microsoft 스토어를 통해 유료 앱의 대량 구매 서비스를 제공할 수 있습니다. 
 
 > [!NOTE]
-> 일부 시장에서는 비즈니스용 Microsoft 스토어 또는 교육용 Microsoft 스토어에서 표시되는 앱 가격이 동일한 기준 가격에 대해 Windows 스토어 소매 고객에게 표시되는 가격과 다를 수 있습니다. 조직 구매를 통해 얻은 수익 지급액은 앱을 소비자가 구매한 경우와 동일하게 적용됩니다. 자세한 내용은 [지급 받기](getting-paid-apps.md) 및 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)을 참조하세요. 비즈니스용 Microsoft 스토어 및 교육용 Microsoft 스토어가 제공되는 시장의 목록은 [비즈니스용 Microsoft 스토어 및 교육용 Microsoft 스토어 개요](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets)를 참조하세요.
+> 일부 시장에서는 비즈니스용 Microsoft Store 또는 교육용 Microsoft Store에서 표시되는 앱 가격이 동일한 기준 가격에 대해 Microsoft Store 소매 고객에게 표시되는 가격과 다를 수 있습니다. 조직 구매를 통해 얻은 수익 지급액은 앱을 소비자가 구매한 경우와 동일하게 적용됩니다. 자세한 내용은 [지급 받기](getting-paid-apps.md) 및 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)을 참조하세요. 비즈니스용 Microsoft 스토어 및 교육용 Microsoft 스토어가 제공되는 시장의 목록은 [비즈니스용 Microsoft 스토어 및 교육용 Microsoft 스토어 개요](https://technet.microsoft.com/itpro/windows/manage/windows-store-for-business-overview#supported-markets)를 참조하세요.
 
 국가 또는 지역이 아래에 나열되지 않은 경우에는 유료 앱이 비즈니스용 Microsoft 스토어 및 교육용 Microsoft 스토어에서 현재 제공되지 않고 있다는 뜻입니다. 이 경우, 나중에 추가 개발자 계정 시장에서 제출 지원을 추가할 수 있기 때문에 유료 앱에 대해 선택한 조직 라이선스가 나중에 적용될 수 있습니다.
 

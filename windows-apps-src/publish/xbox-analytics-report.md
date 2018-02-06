@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Windows 개발자 센터 대시보드의 Xbox 분석 보고서에는 고객이 제품에서 Xbox 기능을 사용하는 방식에 대한 통계가 표시됩니다."
+Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
 title: "Xbox 분석 보고서"
 ms.author: wdg-dev-content
 ms.date: 10/30/2017
@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: "Windows 10, uwp, xbox 분석, xbox live 분석, xbox 통계"
-localizationpriority: high
-ms.openlocfilehash: 2e6d0553479a54493d505cc93c6e2c504ced1e4d
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: high
+ms.openlocfilehash: ad40d33d51287126cd1940eb830b1be0c5ba7812
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="xbox-analytics-report"></a>Xbox 분석 보고서
 

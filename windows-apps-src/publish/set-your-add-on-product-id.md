@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Windows 개발자 센터 대시보드에서 새 추가 기능을 만드는 경우 제품 유형을 지정하고 제품 ID를 할당해야 합니다."
+Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
 title: "추가 기능 제품 유형 및 제품 ID 설정"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ms.author: wdg-dev-content
-ms.date: 06/28/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 136077edcf4704f3ea71416719e7c37db43dafda
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+keywords: "Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품"
+ms.localizationpriority: high
+ms.openlocfilehash: 24731a378ddc0defada7a94282afd790dfb5b780
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 
@@ -49,14 +50,11 @@ ms.lasthandoff: 08/09/2017
 
 추가 기능에 대해 고객에게 반복적으로 비용을 청구하고 싶은 경우에는 **구독**을 선택합니다.
 
-> [!NOTE]
-> 현재 구독 추가 기능을 생성하는 기능은 초기 채택 프로그램에 참여한 개발자 계정 집합에서만 사용할 수 있습니다. 향후 모든 개발자 계정에서 구독 추가 기능을 사용할 수 있도록 만들 계획입니다. 우리는 개발자들에게 기능 미리 보기를 제공하기 위해 이 예비 자료를 제공하고 있습니다. 자세한 정보는 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요.
-
 고객이 처음에 구독 추가 기능을 구입한 이후에 추가 기능을 계속해서 사용할 수 있도록 반복해서 비용이 청구됩니다. 고객은 추가 요금이 부과되지 않도록 언제든 구독을 취소할 수 있습니다. 제출의 **속성** 단계에서 구독 기간과 무료 평가판의 제공 여부를 지정해야 합니다.
 
 구독 추가 기능은 Windows 10 버전 1607 이상을 실행하는 고객에게만 지원됩니다. Windows10 SDK 버전 14393 이상을 사용하여 상위 앱을 컴파일하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스에서 앱에서 바로 구매 API를 사용해야 합니다. 이러한 네임스페이스 차이점에 대한 자세한 내용은 [앱에서 바로 구매 및 평가판](../monetize/in-app-purchases-and-trials.md)을 참조하세요.
 
-대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만, 상위 제품을 제출해야 스토어에 구독 추가 기능을 게시할 수 있습니다.
+대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만, 상위 제품을 제출해야 Store에 구독 추가 기능을 게시할 수 있습니다.
 
 ## <a name="product-id"></a>제품 ID
 
@@ -69,5 +67,5 @@ ms.lasthandoff: 08/09/2017
 -   제품 ID는 100자 이내여야 합니다.
 -   제품 ID에는 다음 문자를 사용할 수 없습니다. **&lt; &gt; \* % & : \\ ? + ,**
 -   추가 기능을 모든 OS 버전에서 제공하려면 영숫자 문자, 마침표 및/또는 밑줄만 사용해야 합니다. 다른 종류의 문자를 사용하면 Windows Phone 8.1 이하를 실행하는 고객이 추가 기능을 구매할 수 없습니다.
--   제품 ID는 Windows 스토어 내에서 고유할 필요가 없지만 개발자 계정에서는 고유해야 합니다.
+-   제품 ID는 Microsoft Store 내에서 고유할 필요가 없지만 개발자 계정에서는 고유해야 합니다.
  

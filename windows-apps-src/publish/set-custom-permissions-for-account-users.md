@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "계정 사용자에 대한 사용자 지정 권한 설정"
+Description: Set custom permissions for account users.
 title: "계정 사용자에 대한 사용자 지정 권한 설정"
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 07/17/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: d45ae4001dbb14a11e2beeecc3f98fb72bbc8a86
-ms.sourcegitcommit: eaacc472317eef343b764d17e57ef24389dd1cc3
+keywords: "Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할"
+ms.localizationpriority: high
+ms.openlocfilehash: 1fdde4be606abae849ff3350d27afbbced157f75
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -26,6 +27,9 @@ ms.lasthandoff: 07/17/2017
 -   사용자(그룹 및 Azure AD 응용 프로그램 포함)는 할당된 역할과 관련된 권한으로 전체 개발자 센터 계정에 액세스할 수 있습니다. 단, 특정 앱 및/또는 추가 기능에 적용되도록 [사용 권한 사용자 지정](#custom)을 하고 [제품 수준 사용 권한](#product-level-permissions)을 할당한 경우는 제외합니다.
 -   여러 역할을 선택하거나, 원하는 액세스 권한을 부여하도록 사용자 지정 권한을 사용하여 사용자, 그룹 또는 Azure AD 응용 프로그램이 둘 이상의 역할 기능에 액세스하도록 할 수 있습니다.
 -   특정 역할이 있는 사용자(또는 사용자 지정 권한 집합)는 다른 역할(또는 권한 집합)이 있는 그룹의 일부가 될 수도 있습니다. 이런 경우 사용자는 그룹과 개별 계정 모두와 연결된 기능 모두에 액세스할 수 있습니다.
+
+> [!TIP]
+> 이 항목은 Windows 앱 개발자 프로그램에만 해당합니다. 하드웨어 개발자 프로그램에서 사용자 역할에 대한 정보는 [사용자 역할 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles)를 참조하세요.
 
 
 <span id="roles" />
@@ -41,7 +45,7 @@ ms.lasthandoff: 07/17/2017
 
 | 역할                 | 설명              |
 |----------------------|--------------------------|
-| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 여기에는 개발자 센터의 사용자를 관리하는 권한이 포함되지만 사용자를 생성하고 삭제하는 기능은 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자에게 관리자 역할이 할당되었지만 조직의 Azure AD에서 관리자 권한을 가지고 있지 않은 경우에는 새 사용자를 만들거나 디렉터리에서 사용자를 삭제할 수 없습니다(사용자의 개발자 센터 역할은 변경할 수 있음). |
+| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 여기에는 개발자 센터의 사용자를 관리하는 권한이 포함되지만 Azure AD 테넌트에서 사용자를 생성하고 삭제하는 기능은 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자에게 전역 관리자 역할이 할당되었지만 조직의 Azure AD에서 관리자 권한을 가지고 있지 않은 경우에는 새 사용자를 만들거나 디렉터리에서 사용자를 삭제할 수 없습니다(사용자의 개발자 센터 역할은 변경할 수 있음). <p> 개발자 센터 계정이 여러 개의 Azure AD 테넌트와 연결된 경우 관리자는 해당 테넌트에 대해 전역 관리자 권한이 있는 계정을 가진 사용자와 동일한 테넌트에 로그인하지 않으면 사용자에 대한 전체 정보(이름, 성, 암호 복구 메일, Azure AD 전역 관리자인지 여부 포함)를 볼 수 없습니다. 그러나 개발자 센터 계정과 연결된 모든 테넌트에서 사용자를 추가 및 제거할 수 있습니다. |
 | 개발자            | 패키지를 업로드하고 앱 및 추가 기능을 제출할 수 있으며 원격 분석 세부 사항에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
 | 비즈니스 기여자 | [상태](health-report.md) 및 [사용](usage-report.md) 보고서를 볼 수 있습니다. 제품을 만들거나 제출할 수 없고, 계정 설정을 변경하거나 재무 정보를 볼 수 없습니다.                                         |
 | 재무 기여자  | [지급 보고서](payout-summary.md), 재무 정보 및 구입 보고서를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.                                                                                                                                   |
@@ -99,19 +103,19 @@ ms.lasthandoff: 07/17/2017
     </thead>
     <tbody>
 <tr><td align="left">    **계정 설정**                    </td><td align="left">  [연락처 정보](managing-your-profile.md)를 포함하여 **계정 설정** 섹션의 모든 페이지를 볼 수 있습니다.       </td><td align="left">  **계정 설정** 섹션의 모든 페이지를 볼 수 있습니다. [연락처 정보](managing-your-profile.md) 및 다른 페이지를 변경할 수 있지만, 지급 계좌 또는 세금 프로필은 변경할 수 없습니다(해당 권한을 별도로 부여하지 않는 한).            </td></tr>
-<tr><td align="left">    **계정 사용자**                       </td><td align="left">  **사용자 관리** 섹션에서 계정에 추가된 사용자를 볼 수 있습니다.          </td><td align="left">  사용자를 계정에 추가하고 **사용자 관리** 섹션에서 기존 사용자를 변경할 수 있습니다.             </td></tr>
+<tr><td align="left">    **계정 사용자**                       </td><td align="left">  **사용자** 섹션에서 계정에 추가된 사용자를 볼 수 있습니다.          </td><td align="left">  사용자를 계정에 추가하고 **사용자** 섹션에서 기존 사용자를 변경할 수 있습니다.             </td></tr>
 <tr><td align="left">    **계정 수준 광고 성과 보고서** </td><td align="left">  계정 수준 [광고 성과 보고서](advertising-performance-report.md)를 볼 수 있습니다.      </td><td align="left">  해당 없음   </td></tr>
 <tr><td align="left">    **광고 캠페인**                        </td><td align="left">  계정에서 만든 [광고 캠페인](create-an-ad-campaign-for-your-app.md)을 볼 수 있습니다.      </td><td align="left">  계정에서 [광고 캠페인](create-an-ad-campaign-for-your-app.md)을 만들고 관리하고 볼 수 있습니다.          </td></tr>
 <tr><td align="left">    **광고 조정**                        </td><td align="left">  계정의 모든 제품에 대한 [광고 조정 구성](https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx)을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대한 [광고 조정 구성](https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx)을 보고 변경할 수 있습니다.        </td></tr>
 <tr><td align="left">    **광고 조정 보고서**                </td><td align="left">  계정의 모든 제품에 대한 [광고 조정 보고서](ad-mediation-report.md)를 볼 수 있습니다.    </td><td align="left">  해당 없음    </td></tr>
 <tr><td align="left">    **광고 성과 보고서**              </td><td align="left">  계정의 모든 제품에 대한 [광고 성과 보고서](advertising-performance-report.md)를 볼 수 있습니다.       </td><td align="left">  해당 없음         </td></tr>
-<tr><td align="left">    **광고 단위**                            </td><td align="left">  계정에 대해 생성된 [광고 단위](monetize-with-ads.md)를 볼 수 있습니다.    </td><td align="left">  계정에 대한 [광고 단위](monetize-with-ads.md)를 만들고 관리하고 볼 수 있습니다.             </td></tr>
+<tr><td align="left">    **광고 단위**                            </td><td align="left">  계정에 대해 생성된 [광고 단위](in-app-ads.md)를 볼 수 있습니다.    </td><td align="left">  계정에 대한 [광고 단위](in-app-ads.md)를 만들고 관리하고 볼 수 있습니다.             </td></tr>
 <tr><td align="left">    **계열사 광고**                       </td><td align="left">  계정의 모든 제품에서 [계열사 광고](about-affiliate-ads.md) 사용을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대한 [계열사 광고](about-affiliate-ads.md) 사용을 관리하고 볼 수 있습니다.                </td></tr>
 <tr><td align="left">    **계열사 성과 보고서**      </td><td align="left">  계정의 모든 제품에 대한 [계열사 성과 보고서](affiliates-performance-report.md)를 볼 수 있습니다.   </td><td align="left">  해당 없음   </td></tr>
 <tr><td align="left">    **앱 설치 광고 보고서**             </td><td align="left">  [광고 캠페인 보고서](promote-your-app-report.md)를 볼 수 있습니다.           </td><td align="left">  해당 없음   </td></tr>
 <tr><td align="left">    **커뮤니티 광고**                       </td><td align="left">  계정의 모든 제품에 대한 무료 [커뮤니티 광고](about-community-ads.md) 사용을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대한 무료 [커뮤니티 광고](about-community-ads.md) 사용을 만들고 관리하고 볼 수 있습니다.               </td></tr>
 <tr><td align="left">    **연락처 정보**                        </td><td align="left">  계정 설정 섹션에서 [연락처 정보](managing-your-profile.md)를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 [연락처 정보](managing-your-profile.md)를 편집하고 볼 수 있습니다.            </td></tr>
-<tr><td align="left">    **COPPA 준수**                    </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](monetize-with-ads.md#coppa-compliance) 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](monetize-with-ads.md#coppa-compliance) 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
+<tr><td align="left">    **COPPA 준수**                    </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](in-app-ads.md#coppa-compliance) 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](in-app-ads.md#coppa-compliance) 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
 <tr><td align="left">    **고객 그룹**                     </td><td align="left">  **고객** 섹션의 [고객 그룹](create-customer-groups.md)(고객층 및 플라이트 그룹)을 볼 수 있습니다.      </td><td align="left">  **고객** 섹션의 [고객 그룹](create-customer-groups.md)(고객층 및 플라이트 그룹)을 만들고 편집하고 볼 수 있습니다.       </td></tr>
 <tr><td align="left">    **새 앱**                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 [새 앱을 만들](create-your-app-by-reserving-a-name.md) 수 있으며, 제출을 만들고 스토어에 앱을 제출할 수 있습니다.     </td></tr>
 <tr><td align="left">    **새 번들**&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 계정에서 실제로 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
@@ -208,7 +212,7 @@ ms.lasthandoff: 07/17/2017
     <tr><td align="left">    **속성**   </td><td>    제품 제출의 [속성](enter-app-properties.md) 페이지를 볼 수 있습니다.      </td><td>    제품 제출의 [속성](enter-app-properties.md) 페이지를 보고 편집할 수 있습니다.       </td><td>    추가 기능 제출의 [속성](enter-add-on-properties.md) 페이지를 볼 수 있습니다.     </td><td>    추가 기능 제출의 [속성](enter-add-on-properties.md) 페이지를 보고 편집할 수 있습니다.               </td></tr>
     <tr><td align="left">    **연령별 등급**    </td><td>    제품 제출의 [연령별 등급](age-ratings.md) 페이지를 볼 수 있습니다.       </td><td>    제품 제출의 [연령별 등급](age-ratings.md) 페이지를 보고 편집할 수 있습니다.    </td><td>    * 추가 기능 제출의 연령별 등급 페이지를 볼 수 있습니다.          </td><td>    * 추가 기능 제출의 연령별 등급 페이지를 보고 편집할 수 있습니다.       </td></tr>
     <tr><td align="left">    **패키지**        </td><td>    제품 제출의 [패키지](upload-app-packages.md) 페이지를 볼 수 있습니다.  </td><td>    제품 제출의 [패키지](upload-app-packages.md) 페이지를 보고 편집할 수 있습니다(패키지 업로드 포함).     </td><td>    * 추가 기능 제출의 장치 패밀리 타기팅 및 패키지(해당되는 경우)를 볼 수 있습니다.   </td><td>    * 추가 기능 제출의 장치 패밀리 타기팅을 보고 편집할 수 있습니다(해당되는 경우 패키지 업로드 포함).             </td></tr>
-    <tr><td align="left">    **스토어 목록**  </td><td>    제품 제출의 [스토어 목록 페이지](create-app-store-listings.md)를 볼 수 있습니다.  </td><td>    제품 제출의 [스토어 목록 페이지](create-app-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 새로운 스토어 목록을 추가할 수 있습니다.     </td><td>    추가 기능 제출의 [스토어 목록 페이지](create-add-on-store-listings.md)를 볼 수 있습니다.            </td><td>    추가 기능 제출의 [스토어 목록 페이지](create-add-on-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 스토어 목록을 추가할 수 있습니다.                 </td></tr>
+    <tr><td align="left">    **Store 목록**  </td><td>    제품 제출의 [Store 목록 페이지](create-app-store-listings.md)를 볼 수 있습니다.  </td><td>    제품 제출의 [Store 목록 페이지](create-app-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 새로운 Store 목록을 추가할 수 있습니다.     </td><td>    추가 기능 제출의 [Store 목록 페이지](create-add-on-store-listings.md)를 볼 수 있습니다.            </td><td>    추가 기능 제출의 [Store 목록 페이지](create-add-on-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 Store 목록을 추가할 수 있습니다.                 </td></tr>
     <tr><td align="left">    **스토어 제출**     </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.           </td><td>    제품을 스토어에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다. </td><td>이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.     </td><td>    추가 기능을 스토어에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다.</td></tr>
     <tr><td align="left">    **새 제출 만들기**       </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.        </td><td>    제품의 새 [제출](app-submissions.md)을 만들 수 있습니다.  </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.   </td><td>    추가 기능의 새 [제출](add-on-submissions.md)을 만들 수 있습니다.        </td></tr>
     <tr><td align="left">    **새 추가 기능**    </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다. </td><td>    제품의 새 [추가 기능](set-your-add-on-product-id.md)을 만들 수 있습니다. </td><td>    해당 없음    </td><td>    해당 없음        </td></tr>

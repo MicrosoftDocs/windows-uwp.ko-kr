@@ -1,20 +1,20 @@
 ---
 author: jnHs
-Description: "앱에서 Microsoft Advertising SDK를 사용하여 광고를 표시하는 경우 Windows 개발자 센터 대시보드의 인앱 광고 페이지를 사용하여 광고 사용을 관리하세요."
+Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of the Dev Center dashboard to manage your use of ads.
 title: "인앱 광고"
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-localizationpriority: high
-ms.openlocfilehash: eb835269cd9df7385d8d03e032d8b41cb7f92a19
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+ms.localizationpriority: high
+ms.openlocfilehash: f0faa69cef0f98171c4679d6a94b01199b215cb4
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -120,10 +120,13 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 | AOL 및 AppNexus |  Microsoft가 관리하는 광고 네트워크로 파트너 네트워크, AOL, AppNexus를 통해 광고를 제공합니다.<p/>**참고**: AOL 및 AppNexus는 항상 배너 광고 단위의 **유료 광고 네트워크** 목록 맨 위에 표시되며, 이런 유형의 광고에서는 순위를 낮게 조정할 수 없습니다. | 배너, 동영상 중간 광고 |
 | AppNexus(직접) | [AppNexus](https://www.appnexus.com)에서 동영상 중간 광고를 지원하려면 이 옵션을 선택합니다. | 동영상 중간 광고, 기본  |
 | Microsoft 앱 설치 광고 | Windows 에코시스템에서 [앱에 대해 홍보 광고 캠페인을 생성](create-an-ad-campaign-for-your-app.md)하는 다른 개발자가 생성한 앱 설치 광고 또는 앱 Re-engagement 광고를 지원하려면 이 옵션을 선택합니다.  |  배너, 배너 중간 광고, 기본  |
+| Outbrain |  [Outbrain](https://www.outbrain.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
+| Revcontent |  [Revcontent](http://www.revcontent.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
 | Smaato |  [Smaato](https://www.smaato.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
 | smartclip |  [smartclip](http://www.smartclip.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | SpotX |  [SpotX](https://www.spotx.tv/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | Taboola |  [Taboola](https://www.taboola.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
+
 
 <span id="other-networks" />
 ### <a name="other-ad-networks"></a>기타 광고 네트워크
@@ -143,12 +146,18 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 |  광고 네트워크  |  지원되는 지역/국가  |
 |--------------|---------------------|
+| Revcontent | 브라질, 캐나다, 프랑스, 독일, 이탈리아, 일본, 스페인, 영국, 미국  |
 | Smaato | 브라질, 캐나다, 프랑스, 독일, 이탈리아, 일본, 스페인, 영국, 미국 |
 | smartclip | 오스트리아, 벨기에, 덴마크, 핀란드, 독일, 이탈리아, 네덜란드, 노르웨이, 스웨덴, 스위스  |
 
 <span id="coppa" />
 ## <a name="coppa-compliance"></a>COPPA 규정 준수
 
-“COPPA”(아동에 관한 온라인 개인 정보 보호법)를 위해 13세 미만 아동을 대상으로 하는 앱인 경우 Microsoft에 이를 알려야 합니다. Windows 개발자 센터를 사용하여 앱이 13세 미만 아동을 대상으로 한다는 것을 Microsoft에 알리는 경우 Microsoft에서 앱에 광고를 제공할 때 동작 광고 서비스를 사용하지 않도록 설정하는 단계를 진행합니다. 앱이 13세 미만 아동을 대상으로 하는 경우 COPPA에 따른 특정한 의무 조항이 있습니다.
+[광고 단위 만들거나](#create-ad-unit) [기존 광고 단위를 선택](#available-ad-units)할 때 광고 단위에 대해 선택된 앱에 앱 인증 과정의 [Store 내](../publish/the-app-certification-process.md#in-the-store) 단계에 도달한 제출이 하나 이상 있는 경우 **COPPA 규정 준수** 섹션이 대시보드 페이지의 맨 아래에 나타납니다.
 
-COPPA에 따른 의무 조항에 대한 자세한 내용은 [이 페이지](http://go.microsoft.com/fwlink/p/?linkid=536558)를 참조하세요.
+“COPPA”(아동에 관한 온라인 개인 정보 보호법)를 위해 귀하의 앱이 13세 미만 아동을 대상으로 하는 경우 이 섹션의 **이 응용 프로그램은 13세 미만 아동을 대상으로 합니다**를 선택해야 합니다. 이 옵션을 선택하면 Microsoft는 앱에 광고를 제공할 때 동작 광고 서비스를 사용하지 않도록 설정하는 단계를 진행합니다.
+
+선택한 **COPPA 규정 준수** 설정은 선택한 앱에 대한 모든 광고 단위에 자동으로 적용됩니다.
+
+> [!IMPORTANT]
+> 앱이 13세 미만 아동을 대상으로 하는 경우 COPPA에 따른 특정한 의무 조항이 있습니다. 의무 조항에 대한 자세한 내용은 [이 페이지](http://go.microsoft.com/fwlink/p/?linkid=536558)를 참조하세요.

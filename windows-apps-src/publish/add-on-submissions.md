@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "추가 기능은 Windows 개발자 센터 대시보드를 통해 게시됩니다."
+Description: Add-ons are published through the Windows Dev Center dashboard.
 title: "추가 기능 제출"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ms.author: wdg-dev-content
-ms.date: 06/26/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 85ad5e297eed8daa5205aedc1253191fcff5fd49
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+keywords: "Windows 10, uwp, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품, iap 제출"
+ms.localizationpriority: high
+ms.openlocfilehash: 5591542370f8ed47be37c10e8e8b7afd9ac69d65
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="add-on-submissions"></a>추가 기능 제출
 
@@ -21,10 +22,10 @@ ms.lasthandoff: 06/27/2017
 
 추가 기능은 Windows 개발자 센터 대시보드를 통해 게시됩니다. 또한 앱 코드에서 [추가 기능을 사용](../monetize/in-app-purchases-and-trials.md)해야 합니다.
 
-추가 기능 제출 프로세스의 첫 번째 단계에서는 [제품 유형과 제품 ID를 정의](set-your-add-on-product-id.md)하여 대시보드에서 추가 기능을 만듭니다. 그러고 나서 Windows 스토어를 통해 추가 기능을 구매할 수 있도록 제출을 만들 수 있습니다. [앱을 제출](app-submissions.md)할 때 추가 기능을 함께 제출하거나 개별적으로 작업할 수 있습니다. 또한 앱을 다시 제출할 필요 없이 앱이 스토어에 나열된 후에 추가 기능을 [업데이트](#updating-an-add-on-after-publication)할 수 있습니다.
+추가 기능 제출 프로세스의 첫 번째 단계에서는 [제품 유형과 제품 ID를 정의](set-your-add-on-product-id.md)하여 대시보드에서 추가 기능을 만듭니다. 그러고 나서 Microsoft Store를 통해 추가 기능을 구매할 수 있도록 제출을 만들 수 있습니다. [앱을 제출](app-submissions.md)할 때 추가 기능을 함께 제출하거나 개별적으로 작업할 수 있습니다. 또한 앱을 다시 제출할 필요 없이 앱이 스토어에 나열된 후에 추가 기능을 [업데이트](#updating-an-add-on-after-publication)할 수 있습니다.
 
 > [!NOTE]
-> 설명서의 이 섹션에서는 개발자 센터 대시보드에서 추가 기능을 제출하는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 추가 기능 제출을 자동화할 수 있습니다.
+> 설명서의 이 섹션에서는 개발자 센터 대시보드에서 추가 기능을 제출하는 방법을 설명합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 추가 기능 제출을 자동화할 수 있습니다.
 
 ## <a name="checklist-for-submitting-an-add-on"></a>추가 기능 제출에 대한 검사 목록
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 06/27/2017
 ### <a name="create-a-new-add-on-page"></a>새 추가 기능 페이지 만들기
 | 필드 이름                    | 참고                            |
 |-------------------------------|----------------------------------|
-| [**제품 유형**](set-your-add-on-product-id.md#product-type)      | 필수. **소모성**에 대한 **제품 수명**은 필수입니다. |  
+| [**제품 유형**](set-your-add-on-product-id.md#product-type)      | 필수 |  
 | [**제품 ID**](set-your-add-on-product-id.md#product-id)          | 필수 |        
 
 <span/>
@@ -42,10 +43,12 @@ ms.lasthandoff: 06/27/2017
 | 필드 이름                    | 참고                              |   
 |-------------------------------|------------------------------------|
 | [**제품 수명**](enter-add-on-properties.md#product-lifetime)  | 제품 유형이 **지속형**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다. |
-| [**수량**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다.
-| [**콘텐츠 형식**](enter-add-on-properties.md#content-type)          | 필수       |               
+| [**수량**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다. |
+| [**구독 기간**](enter-add-on-properties.md#subscription-period)          | 제품 유형이 **구독**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다.       |  
+| [**무료 평가판**](enter-add-on-properties.md#free-trial)          | 제품 유형이 **구독**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다.       |
+| [**콘텐츠 형식**](enter-add-on-properties.md#content-type)          | 필수    |               
 | [**키워드**](enter-add-on-properties.md#keywords)                  | 선택 사항(키워드 최대 10개, 각각 30자 제한) |
-| [**사용자 지정 개발자 데이터**](enter-add-on-properties.md#custom-developer-data)                               | 선택 사항(3,000자 제한)             |
+| [**사용자 지정 개발자 데이터**](enter-add-on-properties.md#custom-developer-data)   | 선택 사항(3,000자 제한)            |
 
 <span/>
 
@@ -61,14 +64,14 @@ ms.lasthandoff: 06/27/2017
 
 <span/>
 
-### <a name="store-listings"></a>스토어 목록
-하나의 스토어 목록이 필요합니다. 앱에서 지원하는 모든 [언어](create-add-on-store-listings.md#store-listing-languages)에 대한 스토어 목록을 제공하는 것이 좋습니다.
+### <a name="store-listings"></a>Store 목록
+하나의 Store 목록이 필요합니다. 앱에서 지원하는 모든 [언어](create-add-on-store-listings.md#store-listing-languages)에 대한 Store 목록을 제공하는 것이 좋습니다.
 
 | 필드 이름                    | 참고                                       |
 |-------------------------------|---------------------------------------------|
-| [**제목**](create-add-on-store-listings.md#title)                    | 필수(100자 제한)              |
-| [**설명**](create-add-on-store-listings.md#description)       | 선택 사항(200자 제한)              |
-| [**아이콘**](create-add-on-store-listings.md#icon)                    | 선택 사항(.png, 300 x 300픽셀)             |
+| [**제목**](create-add-on-store-listings.md#title)                    | 필수(100자 제한)           |
+| [**설명**](create-add-on-store-listings.md#description)       | 선택 사항(200자 제한)            |
+| [**아이콘**](create-add-on-store-listings.md#icon)                    | 선택 사항(.png, 300 x 300픽셀)            |
 
 <span/>
 
@@ -87,4 +90,4 @@ ms.lasthandoff: 06/27/2017
 
 업데이트를 제출하려면 대시보드에서 추가 기능 페이지로 이동하고 **업데이트**를 클릭합니다. 이렇게 하면 이전 제출의 정보를 기반으로 추가 기능에 대한 새 제출이 만들어집니다. 원하는 정보를 변경하고 **스토어에 제출**을 클릭합니다.
 
-이전에 제공한 추가 기능을 제거하려면 새 제출을 만들고 [배포 및 표시](set-add-on-pricing-and-availability.md) 옵션을 **더 이상 구입할 수 없습니다. 앱 목록에 표시되지 않습니다.**로 변경하면 됩니다. 또한 필요에 따라 앱의 코드를 업데이트하여 추가 기능에 대한 참조를 제거해야 합니다.
+이전에 제공한 추가 기능을 제거하려면 새 제출을 만들고 [배포 및 표시](set-add-on-pricing-and-availability.md) 옵션을 **Store에서 숨김** 및 **취득 중지** 옵션으로 변경하면 됩니다. 추가 기능에 대한 참조도 제거하려면 필요에 따라 앱의 코드를 업데이트해야 합니다(특히 앱이 Windows 8.1 이전 버전을 지원하는 경우 이 표시 설정이 해당 고객에게 적용되지 않음).

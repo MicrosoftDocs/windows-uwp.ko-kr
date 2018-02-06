@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "추가 기능을 제출할 때 속성 페이지의 옵션을 통해 고객에게 제공되었을 때 나타나는 추가 기능의 동작을 결정할 수 있습니다."
+Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
 title: "추가 기능 속성 입력"
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 253e008d3622094dcfe765531d71e5f37b7777b0
-ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
+keywords: "Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품"
+ms.localizationpriority: high
+ms.openlocfilehash: 63fc414c230e5a988013b1509280bfdb083a93c0
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -29,28 +30,31 @@ ms.lasthandoff: 08/17/2017
 
 이 페이지에 표시되는 필드는 추가 기능의 제품 유형에 따라 달라집니다.
 
-## <a name="product-lifetime"></a>제품 수명
 
+## <a name="product-lifetime"></a>제품 수명
 
 제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 **계속**으로, 추가 기능이 만료되지 않음을 나타냅니다. 원하는 경우 1~365일 옵션으로 정해진 기간 후에 추가 기능이 만료되도록 **제품 수명**을 설정할 수 있습니다.
 
-## <a name="quantity"></a>수량
 
+## <a name="quantity"></a>수량
 
 **스토어 관리 소모성** 제품 유형을 선택한 경우 **수량**이 여기에 표시됩니다. 1과 1000000 사이의 숫자를 입력해야 합니다. 이 수량은 추가 기능을 구입할 때 고객에게 부여되고 스토어는 고객의 추가 기능 소비를 보고하는 앱으로 잔액을 추적합니다.
 
 
 ## <a name="subscription-period"></a>구독 기간
 
-제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 사용 가능한 옵션 중 하나(**월별**, **3개월**, **6개월**, **매년**, **24개월**)를 선택하여 고객에게 구독 요금이 얼마나 자주 청구되는지 표시해야 합니다. 추가 기능을 게시한 후에는 선택한 **구독 기간**을 변경할 수 없습니다.
+제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **매월이지만 **3개월**, **6개월**, **매년**, 또는 **24개월**을 선택할 수도 있습니다. 
 
-> [!NOTE]
-> 구독 추가 기능은 현재 초기 채택 프로그램에 참여하고 있는 개발자 계정에서만 사용할 수 있습니다. 향후 모든 개발자 계정에서 구독 추가 기능을 사용할 수 있도록 만들 계획입니다. 우리는 개발자들에게 기능 미리 보기를 제공하기 위해 이 예비 자료를 제공하고 있습니다. 자세한 정보는 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요.
+> [!IMPORTANT]
+> 추가 기능을 게시한 후에는 선택한 **구독 기간**을 변경할 수 없습니다.
 
 
 ## <a name="free-trial"></a>무료 평가판
 
-구독 추가 기능에 대한 **무료 평가판**이 여기 표시됩니다. 설정된 기간(**1주** 또는 **1개월**) 동안 고객이 추가 기능을 무료로 사용할 수 있도록 할 것인지, 또는 **무료 평가판 없음**을 제안할 것인지 선택해야 합니다. 추가 기능을 게시한 후에는 선택한 **무료 평가판**을 변경할 수 없습니다.
+제품 유형으로 **구독**을 선택한 경우 **무료 평가판** 또한 여기에 표시됩니다. 기본 옵션은 **무료 평가판 없음**입니다. 원하는 경우 설정된 시간 동안 고객이 무료로 추가 기능을 사용하도록 설정할 수 있습니다(**1주** 또는 **1개월**). 
+
+> [!IMPORTANT]
+> 추가 기능을 게시한 후에는 선택한 **무료 평가판**을 변경할 수 없습니다.
 
 
 ## <a name="content-type"></a>콘텐츠 유형

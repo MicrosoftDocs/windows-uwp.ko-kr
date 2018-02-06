@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "LOB(기간 업무) 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다."
+Description: You can publish line-of-business (LOB) apps directly to enterprises for volume acquisition via the Microsoft Store for Business or Microsoft Store for Education, without making the apps broadly available in the Store.
 title: "엔터프라이즈에 LOB 앱 배포"
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10 uwp, lob, LOB, 엔터프라이즈 앱, 비즈니스용 스토어, 교육용 스토어"
-ms.openlocfilehash: 5dab364d495334d102e73550e5d879d2f530d44e
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+keywords: "Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈"
+ms.localizationpriority: high
+ms.openlocfilehash: 3857e8e6e494700233d41832fb9edce6c65b89bc
+ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -21,7 +22,10 @@ ms.lasthandoff: 07/20/2017
 LOB 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다.
 
 > [!NOTE]
-> 지금은 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 무료 앱만 독점적으로 엔터프라이즈에 배포할 수 있습니다. LOB로 유료 앱을 제출하는 경우 이번에는 엔터프라이즈에서 사용할 수 없습니다. 
+> 지금은 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 무료 앱만 독점적으로 엔터프라이즈에 배포할 수 있습니다. LOB로 유료 앱을 제출하는 경우 엔터프라이즈에서 사용할 수 없습니다. 
+
+> [!IMPORTANT]
+> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. LOB 앱에 대한 모든 제출은 Windows 개발자 센터 대시보드를 사용해야 합니다.
 
 
 ## <a name="set-up-the-enterprise-association"></a>엔터프라이즈 연결 설정
@@ -29,16 +33,16 @@ LOB 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고
 LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계는 계정과 엔터프라이즈의 개인 저장소 간에 연결을 설정하는 것입니다.
 
 > [!IMPORTANT]
-> 이 연결 프로세스는 엔터프라이즈에서 시작해야 하며, 계정의 **연락처 정보**에서 메일 주소를 사용해야 합니다. 자세한 내용은 [기간 업무 앱 작업](http://go.microsoft.com/fwlink/p/?LinkId=698846)을 참조하세요.
+> 이 연결 프로세스는 엔터프라이즈에 의해 시작되어야 하고 개발자 계정을 만들 때 사용한 Microsoft 계정과 연결된 메일 주소를 사용해야 합니다. 자세한 내용은 [기간 업무 앱 작업](http://go.microsoft.com/fwlink/p/?LinkId=698846)을 참조하세요.
 
-엔터프라이즈에서 독점적으로 사용하기 위해 앱을 게시하도록 초대하는 경우 해당 연결을 확인하는 링크가 포함된 메일을 받게 됩니다. 또한 **계정 설정**의 **엔터프라이즈 연결** 섹션으로 이동하여 이러한 연결을 확인할 수도 있습니다.
+엔터프라이즈에서 독점적으로 사용하기 위해 앱을 게시하도록 초대하는 경우 해당 연결을 확인하는 링크가 포함된 메일을 받게 됩니다. **계정 설정**의 **엔터프라이즈 연결** 섹션으로 이동하여 이러한 연결을 확인할 수도 있습니다(개발자 계정을 여는 데 사용된 Microsoft 계정으로 로그인한 경우).
 
 연결을 확인하려면 **동의**를 클릭합니다. 그러면 계정에서 해당 엔터프라이즈의 독점적 사용을 위해 앱을 게시할 수 있습니다.
 
 
 ## <a name="submit-lob-apps"></a>LOB 앱 제출
 
-엔터프라이즈의 독점적 사용을 위해 앱을 게시할 준비가 된 후 프로세스는 앱 제출 프로세스와 유사합니다. 앱은 동일한 [인증 프로세스](the-app-certification-process.md)를 거치며 모든 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944)을 준수해야 합니다. 프로세스 중 몇 부분만 서로 다릅니다.
+엔터프라이즈의 독점적 사용을 위해 앱을 게시할 준비가 된 후 프로세스는 앱 제출 프로세스와 유사합니다. 앱은 동일한 [인증 프로세스](the-app-certification-process.md)를 거치며 모든 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/dn764944)을 준수해야 합니다. 프로세스 중 몇 부분만 서로 다릅니다.
 
 
 ### <a name="visibility"></a>표시 여부
