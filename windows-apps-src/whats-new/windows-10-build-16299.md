@@ -1,19 +1,19 @@
 ---
 author: QuinnRadich
-title: "개발자, 도구 및 기능을 위한 Windows 10의 새로운 기능"
-description: "Windows10 빌드 16299 및 새로운 개발자 도구는 유니버설 Windows 플랫폼이 지원되는 도구, 기능 및 환경을 제공합니다."
-keywords: "새로운 기능, 업데이트, 기능, 신규, Windows 10, 1709, 10월, 최신, 개발자, 16299, Fall Creators"
+title: 개발자, 도구 및 기능을 위한 Windows 10의 새로운 기능
+description: Windows10 빌드 16299 및 새로운 개발자 도구는 유니버설 Windows 플랫폼이 지원되는 도구, 기능 및 환경을 제공합니다.
+keywords: 새로운 기능, 업데이트, 기능, 신규, Windows 10, 1709, 10월, 최신, 개발자, 16299, Fall Creators
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 852d59433f3dfe24da6509e588e350dbe1011bbf
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 1e61ede3d16d9c92c28a0e40a0dd65951444ef3a
+ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>개발자용 Windows 10 빌드 16299의 새로운 기능
 
@@ -31,6 +31,8 @@ Fluent 디자인 효과 | 이러한 새로운 효과는 Fluent Design 시스템�
 키보드 가속기 | [키보드 가속기](../design/input/keyboard-accelerators.md) 또는 바로 가기로 앱의 사용 편의성과 접근성을 높입니다. 사용자가 앱 UI를 탐색하지 않고도 일반적인 작업이나 명령을 호출하는 직관적인 방법을 제공하며 기능에 필요한 범위에 맞게 구성할 수 있습니다.
 잉크 입력 | [CoreIncrementalInkStroke](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.coreincrementalinkstroke) API를 통해 개별 **InkPoint** 개체를 사용하여 점진적으로 렌더링할 수 있는 개별 잉크 스트로크를 만들 수 있습니다. </br></br> [CoreInkPresenterHost](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.coreinkpresenterhost) API를 통해 관련된 **InkCanvas** 컨트롤 없이 **InkPresenter** 개체를 호스팅할 수 있습니다.
 Radial Controller | [RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration) API가 앱의 보기 또는 프로세스에 대한 **RadialController** 메뉴를 포함하는 기능으로 업데이트되었습니다.
+Live Tile | [데스크톱 브리지 Win32 앱에서 보조 타일](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md)을 고정합니다.
+알림 메시지 | 단추에 있는 [보류 중인 업데이트](../design/shell/tiles-and-notifications/toast-pending-update.md)를 사용하여 알림 내에서 다단계 상호 작용을 만들 수 있습니다.
 UI 컨트롤 | 이러한 새 컨트롤은 멋진 UI를 신속하고 손쉽게 빌드할 수 있도록 합니다. </br>* [색 선택 컨트롤](../design/controls-and-patterns/color-picker.md)은 사용자를 색상을 검색해서 선택할 수 있도록 해줍니다. </br>* [탐색 보기 컨트롤](../design/controls-and-patterns/navigationview.md)는 앱에 최상위 탐색을 손쉽게 추가할 수 있게 해줍니다. </br>* [사람 그림 컨트롤](../design/controls-and-patterns/person-picture.md)은 사람에 대한 아바타 이미지를 표시합니다. </br>* [평점 컨트롤](../design/controls-and-patterns/rating.md)은 사용자가 콘텐츠 및 서비스에 대한 만족도를 반영하는 평점을 손쉽게 확인 및 설정할 수 있도록 해줍니다.
 음성 및 톤 | 앱에서 텍스트를 작성하는 방법에 대한 조언을 제공하기 위해 [UWP 앱의 음성과 톤에 대한 지침](../design/style/voice-and-tone.md)을 새로 추가했습니다. 어떤 앱을 제작하든, 이해하기 쉽고 친근하며 필요한 정보를 주는 언어를 사용해야 합니다.
 

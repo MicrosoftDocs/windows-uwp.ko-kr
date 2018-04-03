@@ -1,25 +1,22 @@
 ---
 author: TylerMSFT
-title: "URI 활성화 처리"
-description: "앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다."
+title: URI 활성화 처리
+description: 앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다.
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 10/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 40c70770028853d5912ef63f84259245252ce881
-ms.sourcegitcommit: 7f03e200ef34f7f24b6f8b6489ecb44aa2b870bc
+ms.localizationpriority: high
+ms.openlocfilehash: 754fa7c1fe805b45b33be1d560d07c22646d497c
+ms.sourcegitcommit: 444eaccbdcd4be2f1a1e6d4ce5525ba57e363b56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="handle-uri-activation"></a>URI 활성화 처리
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 **중요 API**
 
@@ -30,12 +27,11 @@ ms.lasthandoff: 08/01/2017
 
 해당 형식의 URI 스키마에 대해 모든 URI 시작을 처리하려는 경우에만 URI 스키마 이름을 등록하는 것이 좋습니다. URI 스키마 이름을 등록할 경우에는 앱이 해당 URI 스키마에 대해 활성화될 때 기대되는 기능을 최종 사용자에게 제공해야 합니다. 예를 들어 mailto: URI 스키마 이름에 대해 등록된 앱은 사용자가 새 메일을 작성할 수 있도록 새 메일 메시지로 열려야 합니다. URI 연결에 대한 자세한 내용은 [파일 형식 및 URI에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh700321)을 참조하세요.
 
-다음 단계에서는 사용자 지정 URI 스키마 이름인 .alsdk://를 등록하는 방법 및 사용자가 alsdk:// URI를 시작할 때 앱을 활성화하는 방법을 보여 줍니다.
+다음 단계에서는 사용자 지정 URI 스키마 이름인 `alsdk://`를 등록하는 방법 및 사용자가 `alsdk://` URI를 시작할 때 앱을 활성화하는 방법을 보여 줍니다.
 
 > **참고** UWP 앱에서 특정 URI 및 파일 확장명은 기본 제공 앱과 운영 체제에서 사용하기 위해 예약되어 있습니다. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 예약되거나 금지되어 UWP 앱에 등록할 수 없는 URI 스키마의 사전순 목록은 [예약된 URI 스키마 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요.
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>1단계: 패키지 매니페스트에서 확장점 지정
-
 
 앱은 패키지 매니페스트에 나열된 URI 스키마 이름에 대해서만 활성화 이벤트를 받습니다. 다음은 앱이 `alsdk` URI 스키마 이름을 처리하도록 지정하는 방법입니다.
 
@@ -63,22 +59,26 @@ ms.lasthandoff: 08/01/2017
     이렇게 하면 이와 같은 [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) 요소가 패키지 매니페스트에 추가됩니다. **windows.protocol** 범주는 앱이 `alsdk` URI 체계 이름을 처리함을 나타냅니다.
 
     ```xml
-          <Extensions>
-            <uap:Extension Category="windows.protocol">
-              <uap:Protocol Name="alsdk">
-                <uap:Logo>images\icon.png</uap:Logo>
-                <uap:DisplayName>SDK Sample URI Scheme</uap:DisplayName>
-              </uap:Protocol>
-            </uap:Extension>
+    <Applications>
+        <Application Id= ... >
+            <Extensions>
+                <uap:Extension Category="windows.protocol">
+                  <uap:Protocol Name="alsdk">
+                    <uap:Logo>images\icon.png</uap:Logo>
+                    <uap:DisplayName>SDK Sample URI Scheme</uap:DisplayName>
+                  </uap:Protocol>
+                </uap:Extension>
           </Extensions>
+          ...
+        </Application>
+   <Applications>
     ```
 
 ## <a name="step-2-add-the-proper-icons"></a>2단계: 적절한 아이콘 추가
 
-URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양한 위치(예: 기본 프로그램 제어판)에 표시되는 아이콘이 있습니다. 이 목적을 위해 프로젝트에 44x44 아이콘을 포함합니다. 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 아이콘에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets)을 참조하세요.
+URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양한 위치(예: 기본 프로그램 제어판)에 표시되는 아이콘이 있습니다. 이 목적을 위해 프로젝트에 44x44 아이콘을 포함합니다. 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 아이콘에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://docs.microsoft.com/windows/uwp/shell/tiles-and-notifications/app-assets)을 참조하세요.
 
 ## <a name="step-3-handle-the-activated-event"></a>3단계: 활성화된 이벤트 처리
-
 
 [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 이벤트 처리기는 모든 활성화 이벤트를 받습니다. **Kind** 속성은 활성화 이벤트의 형식을 나타냅니다. 이 예제는 [**Protocol**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol) 활성화 이벤트를 처리하도록 설정되었습니다.
 
@@ -123,12 +123,21 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 
 > **참고** 프로토콜 계약을 통해 시작될 때 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작된 화면으로 다시 돌아가도록 해야 합니다.
 
+다음 코드는 프로그래밍 방식으로 URI를 통해 앱을 시작합니다.
+
+```cs
+   // Launch the URI
+   var uri = new Uri("alsdk:");
+   var success = await Windows.System.Launcher.LaunchUriAsync(uri)
+```
+
+URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 앱 실행](launch-default-app.md)을 참조하세요.
+
 앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다. 시작 및 파일 계약에 단일 XAML **Frame**을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다.
 
 프로토콜 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
 
 ## <a name="remarks"></a>설명
-
 
 악의적인 경우를 비롯하여 어떤 앱이나 웹 사이트도 URI 스키마 이름을 사용할 수 있습니다. 따라서 URI를 통해 가져오는 데이터는 신뢰할 수 없는 원본에서 온 것일 수 있으므로 URI를 통해 받은 매개 변수를 기반으로 영구 작업을 수행하지 않는 것이 좋습니다. 예를 들어 사용자의 계정 페이지로 앱을 실행하는 데 URI 매개 변수를 사용할 수 있지만 사용자의 계정을 직접 수정하는 데는 사용하지 않는 것이 좋습니다.
 
@@ -140,16 +149,11 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 
 앱에서 시작 및 프로토콜 계약에 단일 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 사용하도록 결정하는 경우 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다. 프로토콜 계약을 통해 시작된 경우 사용자가 앱의 맨 위로 다시 이동할 수 있도록 하는 UI를 앱에 포함하는 것이 좋습니다.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
-
- 
-
 ## <a name="related-topics"></a>관련 항목
-
 
 **전체 예제**
 
-* [연결 시작 예제](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+* [연결 시작 예제](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 
 **개념**
 
@@ -167,9 +171,9 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 
 **참조**
 
-* [**AppX 패키지 매니페스트**](https://msdn.microsoft.com/library/windows/apps/dn934791)
-* [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742)
-* [**Windows.UI.Xaml.Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)
+* [AppX 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/dn934791)
+* [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
+* [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)~~
 
  
 

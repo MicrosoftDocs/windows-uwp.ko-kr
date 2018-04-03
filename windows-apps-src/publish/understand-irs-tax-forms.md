@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "Microsoft에서 발급하는 세금 양식의 수령인과 사용 가능한 시기 등 자세한 내용을 알아보세요."
-title: "Microsoft에서 발급하는 IRS 세금 양식 이해"
+Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
+title: Microsoft에서 발급하는 IRS 세금 양식 이해
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, uwp, 조세, irs, 미국 국세청, 세금, 소득세, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
-ms.openlocfilehash: bffb666184f52e6e6491d8651414ecbc269352b8
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 0bdae8a8489ddf4f2ec7eb7a619631bd4fa26e9e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 06/21/2017
      <th> 수령하게 되는 양식</th>
   </tr>
   <tr> 
-     <td valign="top">당해 과세 연도를 기준으로 **200개가 넘는 앱이 판매**되었고 이러한 매출 중 총 구매 금액이 **$20,000 USD 이상**인 경우(브라질과 중국에서 Windows 10 스토어를 통해 이루어진 매출은 **제외**)</td>
+     <td valign="top">당해 과세 연도를 기준으로 **200개가 넘는 앱이 판매**되었고 이러한 매출 중 총 구매 금액이 **$20,000 USD 이상**인 경우(브라질과 중국에서 Microsoft Store on Windows 10을 통해 이루어진 매출은 **제외**)</td>
     <td valign="top">**1099-K**:<br>
 제출인: Microsoft Corporation<br>
 EIN: \*\*\*\*\*4442<br>
@@ -47,7 +48,7 @@ EIN: \*\*\*\*\*4442<br>
 **중요:** 1099-K 양식에는 귀하에게 지급되는 금액이 아닌 **총 구매** 금액이 포함됩니다.</td>
   </tr>
   <tr> 
-     <td valign="top">브라질과 중국에서 Windows 10 스토어를 통해 이루어진 앱 매출에 대해 **$10 이상의 지급금**을 받은 경우<br>
+     <td valign="top">(i) 브라질과 중국에서 Microsoft Store on Windows 10을 통해 이루어진 앱 매출 또는 (ii) Minecraft 마켓플레이스의 판매에 대해 **$10 이상의 지급금**을 받은 경우<br>
 <br>
 **또는**<br>
 <br>

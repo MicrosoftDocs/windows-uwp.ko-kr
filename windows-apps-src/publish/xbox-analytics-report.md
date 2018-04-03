@@ -1,19 +1,19 @@
 ---
 author: jnHs
 Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
-title: "Xbox 분석 보고서"
+title: Xbox 분석 보고서
 ms.author: wdg-dev-content
-ms.date: 10/30/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, xbox 분석, xbox live 분석, xbox 통계"
+keywords: Windows 10, uwp, xbox 분석, xbox live 분석, xbox 통계
 ms.localizationpriority: high
-ms.openlocfilehash: ad40d33d51287126cd1940eb830b1be0c5ba7812
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 2b6ab5c15b4683456502ce1b94b1bf3ca74c239c
+ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xbox-analytics-report"></a>Xbox 분석 보고서
 
@@ -55,7 +55,6 @@ Windows 개발자 센터 대시보드의 **Xbox 분석** 보고서에는 고객�
 이 섹션에는 게임 고객을 위해 다른 데이터를 표시하도록 선택할 수 있는 탭이 포함되어 있습니다. 이 섹션의 통계는 특정 제품 내에서가 아니라 일반적인 기능 사용을 나타냅니다.
 
 - **소셜 사용** 탭에는 고객이 사회적으로 상호 작용하는 방식과 관련된 데이터가 표시됩니다.
-   - **게임 허브**에는 게임 허브와 상호 작용하는 고객의 비율이 표시됩니다. 이 데이터는 Xbox의 제품에서만 사용할 수 있으며 제품의 게임 허브가 아닌 일반 게임 허브를 사용하는 고객 수를 나타냅니다.
    - **게임 초대**는 초대장을 보낸 고객의 비율을 표시합니다(모든 게임).
    - **파티 채팅**은 파티 채팅을 사용하는 고객의 비율을 표시합니다(모든 게임).
    - **문자 메시지**는 Xbox 셸을 통해 메시지를 보내는 고객의 비율을 표시합니다(모든 게임).
@@ -117,7 +116,7 @@ Windows 개발자 센터 대시보드의 **Xbox 분석** 보고서에는 고객�
 
 ### <a name="service-availability"></a>서비스 가용성
 
-**서비스 가용성** 차트는 선택한 기간 동안 각 Xbox Live 서비스의 일일 가용성을 표시합니다. 이는 *1-(총 서버 (5xx) 오류/총 응답)*으로 계산되며 제품에 따라 다르고 Xbox Live 전체에는 해당되지 않습니다.
+**서비스 가용성** 차트는 선택한 기간 동안 각 Xbox Live 서비스의 일일 가용성을 표시합니다. 이는 *1-(총 서버(5xx) 오류/총 응답)*으로 계산되며 제품에 따라 다르고 Xbox Live 전체에는 해당되지 않습니다.
 
 기본적으로 이 차트는 가용성이 가장 낮은 6개의 서비스를 표시합니다. 이 섹션의 오른쪽 상단 모서리에 있는 필터 아이콘을 선택하여 다른 서비스를 선택할 수 있습니다. 한 번에 최대 6개의 서비스에 대한 가용성을 볼 수 있습니다. 
 

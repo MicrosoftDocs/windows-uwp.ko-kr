@@ -1,19 +1,19 @@
 ---
 author: jnHs
 Description: In order to add and manage account users, you must first associate your Dev Center account with your organization's Azure Active Directory.
-title: "개발자 센터 계정에 Azure Active Directory 연결"
+title: 개발자 센터 계정에 Azure Active Directory 연결
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, azure ad, azure 테넌트, aad 테넌트, azure ad 테넌트, 테넌트 관리, 테넌트"
+keywords: windows 10, uwp, azure ad, azure 테넌트, aad 테넌트, azure ad 테넌트, 테넌트 관리, 테넌트
 ms.localizationpriority: high
-ms.openlocfilehash: ef53a8b339f7f6444373d7445721b641926f00a3
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>개발자 센터 계정에 Azure Active Directory 연결
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 01/12/2018
 Windows 개발자 센터는 다중 사용자 계정 액세스 및 관리를 위해 Azure AD를 활용합니다. 조직에서 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD가 있습니다. 아니면 추가 요금 없이 개발자 센터 내에서 Azure AD 테넌트를 새로 만들 수 있습니다.
 
 > [!TIP]
-> 이 항목은 Windows 앱 개발자 프로그램을 위해 작성되었지만 테넌트 연결 및 사용자 관리는 Windows 하드웨어 개발자 프로그램의 계정과 유사하게 작동합니다. 이 섹션에서 **관리자** 역할에 대한 참조는 **관리자** 역할의 하드웨어 계정 하드웨어 계정에도 적용됩니다. 하드웨어 개발자 프로그램에서 사용자 관리에 대한 자세한 내용은 [대시보드 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration)를 참조하세요.
+> 이 항목은 Windows 앱 개발자 프로그램에 한정되지만 테넌트 연결 및 사용자 관리는 Windows 데스크톱 응용 프로그램 프로그램(자세한 내용은 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504#users) 참조) 및 Windows 하드웨어 개발자 프로그램(여기에서 **관리자** 역할에 대한 참조는 **시스템 관리자** 역할의 하드웨어 계정에도 적용됨. 자세한 내용은 [대시보드 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) 참조)의 계정과 유사하게 작동합니다.
 
 단일 Azure AD 테넌트는 여러 개발자 센터 계정과 연결할 수 있습니다. 여러 계정 사용자를 추가하려면 개발자 센터 계정과 연결된 단일 Azure AD 테넌트만 필요하지만 단일 개발자 센터 계정에 여러 Azure AD 테넌트를 추가할 수도 있습니다. 개발자 센터 계정에서 **관리자** 역할을 가진 모든 사용자는 Azure AD 테넌트를 추가하고 제거할 수 있습니다.
 

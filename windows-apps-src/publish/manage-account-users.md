@@ -1,20 +1,20 @@
 ---
 author: jnHs
 Description: Add users to your Dev Center account and assign them roles with specific permissions.
-title: "계정 사용자 관리"
+title: 계정 사용자 관리
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ms.author: wdg-dev-content
-ms.date: 01/10/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 계정 사용자, 사용자 관리, azure ad, 여러 사용자"
+keywords: Windows 10, uwp, 계정 사용자, 사용자 관리, azure ad, 여러 사용자
 ms.localizationpriority: high
-ms.openlocfilehash: e9a08225f0eac5018b3634df3bfb055d38ccb895
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: efc7ad17a7a018b86748c31bc7423e4d841a0b6d
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-account-users"></a>계정 사용자 관리
 
@@ -29,4 +29,4 @@ Azure Active Directory를 사용하여 개발자 센터 계정에서 사용자�
 -   [계정 사용자에 대한 역할 및 사용자 지정 권한 설정](set-custom-permissions-for-account-users.md)
 
 > [!TIP]
-> 이 섹션은 Windows 앱 개발자 프로그램을 위해 작성되었지만 테넌트 연결 및 사용자 관리는 Windows 하드웨어 개발자 프로그램의 계정과 유사하게 작동합니다. 하드웨어 개발자 프로그램에서 사용자 관리에 대한 자세한 내용은 [대시보드 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration)를 참조하세요.
+> 이 섹션은 Windows 앱 개발자 프로그램에 한정되지만 테넌트 연결 및 사용자 관리는 Windows 하드웨어 개발자 프로그램(자세한 내용은 [대시보드 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) 참조) 또는 Windows 데스크톱 응용 프로그램(자세한 내용은 [Windows 데스크톱 응용 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504#users) 참조)의 계정과 유사하게 작동합니다.

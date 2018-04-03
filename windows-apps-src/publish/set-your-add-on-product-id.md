@@ -1,20 +1,20 @@
 ---
 author: jnHs
 Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
-title: "추가 기능 제품 유형 및 제품 ID 설정"
+title: 추가 기능 제품 유형 및 제품 ID 설정
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ms.author: wdg-dev-content
 ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품"
+keywords: Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: high
-ms.openlocfilehash: 24731a378ddc0defada7a94282afd790dfb5b780
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 12ed8eb58f9f7f7a5fec55c62f19afe0bf6fa2d5
+ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 
@@ -39,11 +39,11 @@ ms.lasthandoff: 01/12/2018
 <span id="consumable" />
 ### <a name="consumable"></a>소모성
 
-추가 기능을 구매, 사용(소비) 및 재구매할 수 있는 경우 **소모성** 제품 유형 중 하나를 선택합니다. 소모성 추가 기능은 일반적으로 고객이 정해진 금액으로 구매하고 다 사용할 수 있는 게임 내 통화(골드, 코인 등) 같은 항목에 사용됩니다. 앱에 소모성 추가 기능을 포함하는 방법은 [소모성 추가 기능 구매 사용](../monetize/enable-consumable-add-on-purchases.md)을 참조하세요.
+추가 기능을 구매, 사용(소비) 및 재구매할 수 있는 경우 **소모성** 제품 유형 중 하나를 선택합니다. 소모성 추가 기능은 일반적으로 고객이 정해진 금액으로 구매하고 다 사용할 수 있는 게임 내 통화(골드, 코인 등) 같은 항목에 사용됩니다. 자세한 내용은 [소모성 추가 기능 구매 사용](../monetize/enable-consumable-add-on-purchases.md)를 참조하세요.
 
 소모성 추가 기능에는 다음 두 가지 유형이 있습니다.
 - **개발자 관리 소모성**: 잔액 및 이행이 앱 내에서 관리되어야 합니다. 모든 OS 버전에서 지원됩니다.
-- **스토어 관리 소모성:** Windows 10 버전 1607 이상을 실행하는 모든 고객 장치의 잔액을 Microsoft에서 추적합니다. 이전 버전의 OS에서는 지원되지 않습니다. 이 옵션을 사용하려면 상위 제품이 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일되어야 합니다. 또한 대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만 상위 제품이 게시될 때까지 스토어 관리 소모성 추가 기능을 스토어에 제출할 수 없습니다. 제출의 **속성** 단계에서 스토어 관리 소모성 추가 기능에 대한 수량을 입력해야 합니다.
+- **Microsoft Store 관리 소모성:** Windows 10 버전 1607 이상을 실행하는 모든 고객 장치의 잔액을 Microsoft에서 추적합니다. 이전 버전의 OS에서는 지원되지 않습니다. 이 옵션을 사용하려면 상위 제품이 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일되어야 합니다. 또한 대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만 상위 제품이 게시될 때까지 Microsoft Store 관리 소모성 추가 기능을 Microsoft Store에 제출할 수 없습니다. 제출의 **속성** 단계에서 Microsoft Store 관리 소모성 추가 기능에 대한 수량을 입력해야 합니다.
 
 <span id="subscription" />
 ### <a name="subscription"></a>구독
@@ -52,9 +52,9 @@ ms.lasthandoff: 01/12/2018
 
 고객이 처음에 구독 추가 기능을 구입한 이후에 추가 기능을 계속해서 사용할 수 있도록 반복해서 비용이 청구됩니다. 고객은 추가 요금이 부과되지 않도록 언제든 구독을 취소할 수 있습니다. 제출의 **속성** 단계에서 구독 기간과 무료 평가판의 제공 여부를 지정해야 합니다.
 
-구독 추가 기능은 Windows 10 버전 1607 이상을 실행하는 고객에게만 지원됩니다. Windows10 SDK 버전 14393 이상을 사용하여 상위 앱을 컴파일하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스에서 앱에서 바로 구매 API를 사용해야 합니다. 이러한 네임스페이스 차이점에 대한 자세한 내용은 [앱에서 바로 구매 및 평가판](../monetize/in-app-purchases-and-trials.md)을 참조하세요.
+구독 추가 기능은 Windows 10 버전 1607 이상을 실행하는 고객에게만 지원됩니다. Windows10 SDK 버전 14393 이상을 사용하여 상위 앱을 컴파일하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스에서 앱에서 바로 구매 API를 사용해야 합니다. 자세한 정보는 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요.
 
-대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만, 상위 제품을 제출해야 Store에 구독 추가 기능을 게시할 수 있습니다.
+대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만, 상위 제품을 제출해야 Microsoft Store에 구독 추가 기능을 게시할 수 있습니다.
 
 ## <a name="product-id"></a>제품 ID
 

@@ -1,20 +1,20 @@
 ---
 author: jnHs
 Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of the Dev Center dashboard to manage your use of ads.
-title: "인앱 광고"
+title: 인앱 광고
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
-ms.date: 12/04/2017
+ms.date: 2/24/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: f0faa69cef0f98171c4679d6a94b01199b215cb4
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 66c0ae56c3722162ebef5a8660cc2322d69a278b
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -78,6 +78,8 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 
 UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 사용되는 앱에 대해 [COPPA 규정 준수](#coppa)를 편집하려면 광고 단위 이름을 클릭합니다.
 
+광고 단위에 지난 6개월에 대한 활동이 없으면 **비활성**으로 지정되며 나중에는 대시보드에서 제거됩니다. 필터를 사용하여 **활성** 또는 **비활성** 광고 단위만 표시할 수 있습니다. 잘못 **비활성**으로 표시된 광고 단위가 있는 경우 [고객 지원에 문의](http://aka.ms/storesupport)합니다.
+
 <span id="mediation" />
 ## <a name="mediation-settings"></a>조정 설정
 
@@ -98,7 +100,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 4. **대상** 드롭다운 목록에서 **기본**을 선택해 광고 조정 설정을 기본값으로 구성할 수 있습니다. 이 기본 설정이 지역/국가에 특정적인 구성을 적용한 지역/국가를 제외한 모든 지역/국가에 적용됩니다.
 
-6. 다음은 유료 네트워크(광고 컨트롤을 유료 네트워크 (노출에 대한 수익을 지급하는)와 다른 광고 네트워크(노출에 대한 수익을 지급하지 않는)의 컨트롤에 표시할 광고의 비율을 지정합니다. **유료 광고 네트워크** 및 **다른 광고 네트워크**의 **가중치** 필드에 0~100의 값을 입력해야 합니다.  
+6. 다음은 유료 네트워크(광고 컨트롤을 유료 네트워크(노출에 대한 수익을 지급하는)와 다른 광고 네트워크(노출에 대한 수익을 지급하지 않는)의 컨트롤에 표시할 광고의 비율을 지정합니다. **유료 광고 네트워크** 및 **다른 광고 네트워크**의 **가중치** 필드에 0~100의 값을 입력해야 합니다.  
 
 7. **유료 광고 네트워크** 섹션에서 사용하고 싶은 각 [유료 네트워크](#paid-networks)의 **활성** 열의 확인란을 선택한 후, **순위** 열 옆 화살표를 사용하여 순위 별로 네트워크를 주문합니다(컨트롤이 각 네트워크를 얼마나 많이 사용할지 지정).
 
@@ -108,7 +110,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 9. 기본 조정 구성을 재구성하려는 각 지역/국가의 경우, **대상** 드롭다운 목록에서 지역/국가를 선택한 후 광고 네트워크 선택 및 순위를 업데이트합니다.
 
-10. **광고 단위 만들기 **(새로운 광고 단위를 만드는 경우) 또는 **저장**(기존 광고 단위를 편집하는 경우)을 클릭합니다.
+10. **광고 단위 만들기**(새로운 광고 단위를 만드는 경우) 또는 **저장**(기존 광고 단위를 편집하는 경우)을 클릭합니다.
 
 <span id="paid-networks" />
 ### <a name="supported-paid-ad-networks"></a>지원되는 유료 광고 네트워크
@@ -120,8 +122,8 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 | AOL 및 AppNexus |  Microsoft가 관리하는 광고 네트워크로 파트너 네트워크, AOL, AppNexus를 통해 광고를 제공합니다.<p/>**참고**: AOL 및 AppNexus는 항상 배너 광고 단위의 **유료 광고 네트워크** 목록 맨 위에 표시되며, 이런 유형의 광고에서는 순위를 낮게 조정할 수 없습니다. | 배너, 동영상 중간 광고 |
 | AppNexus(직접) | [AppNexus](https://www.appnexus.com)에서 동영상 중간 광고를 지원하려면 이 옵션을 선택합니다. | 동영상 중간 광고, 기본  |
 | Microsoft 앱 설치 광고 | Windows 에코시스템에서 [앱에 대해 홍보 광고 캠페인을 생성](create-an-ad-campaign-for-your-app.md)하는 다른 개발자가 생성한 앱 설치 광고 또는 앱 Re-engagement 광고를 지원하려면 이 옵션을 선택합니다.  |  배너, 배너 중간 광고, 기본  |
-| Outbrain |  [Outbrain](https://www.outbrain.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
-| Revcontent |  [Revcontent](http://www.revcontent.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
+| Outbrain |  [Outbrain](https://www.outbrain.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너, 배너 중간 광고  |
+| Revcontent |  [Revcontent](http://www.revcontent.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  기본 배너  |
 | Smaato |  [Smaato](https://www.smaato.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
 | smartclip |  [smartclip](http://www.smartclip.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | SpotX |  [SpotX](https://www.spotx.tv/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |

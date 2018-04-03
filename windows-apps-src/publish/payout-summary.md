@@ -1,19 +1,20 @@
 ---
 author: jnHs
-Description: "지급 요약에는 앱 및 추가 기능으로 벌어들인 금액에 대한 세부 정보가 나와 있습니다. 또한, 지급 요약을 통해 언제 지급받을 수 있는지와 지급받는 금액도 알 수 있습니다."
-title: "지급 요약"
+Description: The Payout summary shows you details about the money you’ve earned with your apps and add-ons. It also lets you know when you’ll receive payments and how much you'll be paid.
+title: 지급 요약
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: d6a069bab6bc24c6f6388eec7ad63c0c79525fd9
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
+ms.localizationpriority: high
+ms.openlocfilehash: 5be84a7fe6918a0ba272aead83ec26e68669c477
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="payout-summary"></a>지급 요약
 
@@ -29,6 +30,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 >
 > 해당 결제 임계값이 충족되는 경우 결제는 월 단위로 이루어집니다. 일반적으로 해당 월의 15일에 지정된 월에 대한 결제 대금을 보냅니다. 결제는 일반적으로 영업일 3~10일 내에 지급 계좌로 입금됩니다. 자세한 내용은 [지급 임계값, 방법 및 기간](payment-thresholds-methods-and-timeframes.md)을 참조하세요.
 
+사용자 **지급 요약**을 보려면 개발자 센터의 오른쪽 위 모서리에 나타나는 **지급** 아이콘을 클릭한 다음 **지급 요약**합니다.
 
 ## <a name="current-proceeds-and-payments"></a>현재 수익 및 지급
 
@@ -56,7 +58,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 
 각 명세서 맨 위에는 월별 지급 총액이 표시됩니다. **발행된 명세서** 바로 아래에는 지급 금액을 계산한 방식이 요약되어 표시됩니다.
 
-아래의 **진행 분석** 섹션에서는 앱에서 지역/국가 및 수입원(예: Windows Phone 스토어, Windows 스토어 8, Windows 스토어 등)당 벌어들인 금액에 대해 자세히 알아볼 수 있습니다. 또한 날짜, 금액, 조정 이유를 비롯한 [조정](#proceeds-by-app-and-adjustments) 세부 정보도 살펴보겠습니다.
+아래의 **진행 분석** 섹션에서는 앱에서 지역/국가 및 수입원(예: Microsoft Store, Microsoft Store 8, Windows Phone Store 등)당 벌어들인 금액에 대해 자세히 알아볼 수 있습니다. 또한 날짜, 금액, 조정 이유를 비롯한 [조정](#proceeds-by-app-and-adjustments) 세부 정보도 살펴보겠습니다.
 
 위에서 언급한 섹션에서는 앱 판매 수익(및 조정)의 정보만 표시합니다. 광고를 통해 수익이 발생하는 경우 지급액 및 통화 환산에 대한 세부 정보가 포함된 별도의 Microsoft Advertising 섹션이 표시됩니다.
 
@@ -80,7 +82,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 
 | 필드 이름              | 설명                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| 수입원          | 거래가 발생한 위치를 기반으로 하는 수입원입니다(예: Windows Store, Windows Phone 스토어, Windows 스토어 8, 광고 등). |
+| 수입원          | 거래가 발생한 위치를 기반으로 하는 수입원입니다(예: Microsoft Store, Windows Phone Microsoft Store, Windows 8 Microsoft Store, 광고 등). |
 | 주문 ID                |  고유한 주문 식별자입니다. 이 ID를 사용하면 구매 거래를 해당하는 비구매 거래(반품, 환불 등)와 함께 식별할 수 있습니다. 두 거래 모두 주문 ID는 동일합니다. 또한 한 구매에 여러 결제 방법이 사용되는 분할 청구의 경우 주문 ID를 사용하면 구매 거래를 연결할 수 있습니다.                                                                                                          |
 | 거래 ID          |       고유한 거래 식별자입니다.  |
 | 거래 날짜/시간   | 거래가 발생한 날짜 및 시간(UTC)입니다.                                                                                        |
@@ -89,7 +91,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 | 상위 제품 이름     | 상위 제품의 이름입니다. 참고: 거래에 대한 상위 제품이 없는 경우 상위 제품 이름 = 제품 이름입니다.   |
 | 제품 이름            | 제품 이름입니다.                                                                                                                     |
 | 제품 유형            | 제품 유형입니다(예: 앱, 애드온, 게임 등).                                                                                        |
-| 수량                | 수입원이 비즈니스용 Windows 스토어이면 수량은 구매한 라이선스 수를 나타냅니다. 다른 모든 수입원의 경우 수량은 항상 1이 됩니다. 참고: 단일 거래에서 두 개의 다른 결제 방법이 사용되어 라인 항목이 2개로 분할되더라도 각 라인 항목은 수량을 1로 표시합니다.    |
+| 수량                | 수입원이 비즈니스용 Microsoft Store이면 수량은 구매한 라이선스 수를 나타냅니다. 다른 모든 수입원의 경우 수량은 항상 1이 됩니다. 참고: 단일 거래에서 두 개의 다른 결제 방법이 사용되어 라인 항목이 2개로 분할되더라도 각 라인 항목은 수량을 1로 표시합니다.    |
 | 거래 유형        | 거래 유형입니다(예: 구매, 환불, 취소, 지불 거절 등).                                                                |
 | 결제 방법          | 거래에 사용된 고객 결제 방법입니다(카드, 모바일 통신사 청구, PayPal 등).                                 |
 | 국가/지역        | 거래가 발생한 국가/지역입니다.                                                                                            |
@@ -98,8 +100,8 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 | 거래 금액      | 거래의 금액입니다.                                                                                                                |
 | 송금된 세금            | 송금된 세금 금액(판매세, 이용세 또는 VAT/GST 세금)입니다.                                                                                    |
 | 순수입            | 송금된 세금을 제외한 거래 금액입니다.                                                                                                     |
-| 스토어 수수료               | Microsoft가 스토어에 앱이나 추가 기능을 제공하기 위한 요금으로 보유하는 순수입의 백분율을 의미합니다.                        |
-| 앱 수익            | 순수입에서 스토어 수수료를 공제한 금액입니다.                                                                                                         |
+| Microsoft Store 수수료               | Microsoft가 Microsoft Store에 앱이나 추가 기능을 제공하기 위한 요금으로 보유하는 순수입의 백분율을 의미합니다.                        |
+| 앱 수익            | 순수입에서 Microsoft Store 수수료를 공제한 금액입니다.                                                                                                         |
 | 원천징수된 세금          | 원천징수된 소득세 금액입니다. (**예약됨** .csv 파일에 포함되지 않습니다.)                                                                  |
 | 결제                 | 앱 수익에서 해당 소득세 원천징수액을 뺀 금액(거래 통화에 표시된 금액)입니다. (**예약됨** .csv 파일에 포함되지 않습니다.) |
 | 환율                 | 거래 통화를 지급 통화로 변환하는 데 사용된 환율입니다.                                                           |

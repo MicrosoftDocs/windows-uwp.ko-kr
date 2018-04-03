@@ -1,20 +1,20 @@
 ---
 author: jnHs
-Description: Set custom permissions for account users.
-title: "계정 사용자에 대한 사용자 지정 권한 설정"
+Description: Set roles or custom permissions for account users.
+title: 계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할"
+keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: high
-ms.openlocfilehash: 1fdde4be606abae849ff3350d27afbbced157f75
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 3c62ff8a028af62512936e51bd81d3f3e229bd24
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/12/2018
 -   특정 역할이 있는 사용자(또는 사용자 지정 권한 집합)는 다른 역할(또는 권한 집합)이 있는 그룹의 일부가 될 수도 있습니다. 이런 경우 사용자는 그룹과 개별 계정 모두와 연결된 기능 모두에 액세스할 수 있습니다.
 
 > [!TIP]
-> 이 항목은 Windows 앱 개발자 프로그램에만 해당합니다. 하드웨어 개발자 프로그램에서 사용자 역할에 대한 정보는 [사용자 역할 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles)를 참조하세요.
+> 이 항목은 Windows 앱 개발자 프로그램에만 해당합니다. 하드웨어 개발자 프로그램에서 사용자 역할에 대한 정보는 [사용자 역할 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles)를 참조하세요. Windows 데스크톱 응용 프로그램에서 사용자 역할에 대한 정보는 [Windows 데스크톱 응용 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504#users)을 참조하세요.
 
 
 <span id="roles" />
@@ -80,13 +80,13 @@ ms.lasthandoff: 01/12/2018
 - **읽기/쓰기**: 사용자가 영역과 관련된 내용을 변경할 수도 있고 볼 수도 있습니다.
 - **혼합**:이 옵션은 직접 선택할 수 없으며, 해당 권한에 대한 액세스 조합을 허용한 경우 **혼합** 표시기가 나타납니다. 예를 들어, **모든 제품**에 대한 **가격 책정 및 가용성**에 대해 **읽기 전용** 권한을 부여한 다음 특정 제품 하나의 **가격 책정 및 가용성**에 대해 **읽기/쓰기** 권한을 부여하는 경우, **모든 제품**에 대한 **가격 책정 및 가용성** 표시기가 혼합으로 표시됩니다. 일부 제품에는 **액세스 권한 없음**이 부여되었지만 다른 제품에는 **읽기/쓰기** 및/또는 **읽기 전용** 액세스 권한이 부여된 경우에도 동일한 원리가 적용됩니다.
 
-분석 데이터 보기와 관련된 권한 등 일부 권한의 경우 **읽기 전용** 권한만 허용됩니다. 현재 구현에서 일부 권한은 **읽기 전용**과 **읽기/쓰기** 액세스 권한을 구분하지 않습니다. **읽기 전용** 및 **읽기/쓰기** 액세스 권한이 부여되는 특정 기능을 파악하려면 각 권한에 대한 세부 정보를 검토하세요.
+분석 데이터 보기와 관련된 권한 등 일부 권한의 경우 **읽기 전용** 권한만 허용됩니다. 현재 구현에서 일부 권한은 **읽기 전용**과 **읽기/쓰기** 액세스 권한을 구분하지 않습니다. **읽기 전용** 및/또는 **읽기/쓰기** 권한에 의해 부여되는 특정 기능을 파악하려면 각 권한에 대한 세부 정보를 검토하세요.
 
 각 권한에 대한 특정 세부 정보는 아래의 표에서 설명합니다.
 
 ## <a name="account-level-permissions"></a>계정 수준 권한
 
-이 섹션의 사용 권한은 특정 제품으로 제한되지 않습니다. 특정 액세스 권한을 부여하면 사용자는 전체 계정에 대해 해당 권한을 갖게 됩니다.
+이 섹션의 사용 권한은 특정 제품으로 제한되지 않습니다. 이러한 액세스 권한 중 하나를 부여하면 사용자는 전체 계정에 대해 해당 권한을 갖게 됩니다.
 
 <table>
     <colgroup>
@@ -117,7 +117,8 @@ ms.lasthandoff: 01/12/2018
 <tr><td align="left">    **연락처 정보**                        </td><td align="left">  계정 설정 섹션에서 [연락처 정보](managing-your-profile.md)를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 [연락처 정보](managing-your-profile.md)를 편집하고 볼 수 있습니다.            </td></tr>
 <tr><td align="left">    **COPPA 준수**                    </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](in-app-ads.md#coppa-compliance) 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](in-app-ads.md#coppa-compliance) 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
 <tr><td align="left">    **고객 그룹**                     </td><td align="left">  **고객** 섹션의 [고객 그룹](create-customer-groups.md)(고객층 및 플라이트 그룹)을 볼 수 있습니다.      </td><td align="left">  **고객** 섹션의 [고객 그룹](create-customer-groups.md)(고객층 및 플라이트 그룹)을 만들고 편집하고 볼 수 있습니다.       </td></tr>
-<tr><td align="left">    **새 앱**                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 [새 앱을 만들](create-your-app-by-reserving-a-name.md) 수 있으며, 제출을 만들고 스토어에 앱을 제출할 수 있습니다.     </td></tr>
+<tr><td align="left">    **제품 그룹 관리**&nbsp;\*                            </td><td align="left">  제품 그룹 만들기 페이지를 볼 수는 있지만 계정에서 제품 그룹을 실제로 만들 수는 없습니다.    </td><td align="left">  제품 그룹을 만들고 편집할 수 있습니다.     </td></tr>
+<tr><td align="left">    **새 앱**                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 [새 앱을 만들](create-your-app-by-reserving-a-name.md) 수 있으며, 제출을 만들고 Microsoft Store에 앱을 제출할 수 있습니다.     </td></tr>
 <tr><td align="left">    **새 번들**&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 계정에서 실제로 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
 <tr><td align="left">    **파트너 서비스**&nbsp;*                  </td><td align="left">  XToken을 검색하는 서비스를 설치하기 위한 인증서를 볼 수 있습니다.     </td><td align="left">  XToken을 검색하는 서비스를 설치하기 위한 인증서를 관리하고 볼 수 있습니다.       </td></tr>
 <tr><td align="left">    **지급 계좌**                      </td><td align="left">  **계정 설정**에서 [지급 계정 정보](setting-up-your-payout-account-and-tax-forms.md#payout-account)를 볼 수 있습니다.     </td><td align="left">  **계정 설정**에서 [지급 계정 정보](setting-up-your-payout-account-and-tax-forms.md#payout-account)를 편집하고 볼 수 있습니다.       </td></tr>
@@ -125,6 +126,7 @@ ms.lasthandoff: 01/12/2018
 <tr><td align="left">    **신뢰 당사자**&nbsp;*                   </td><td align="left">  XToken을 검색하는 신뢰 당사자를 볼 수 있습니다.    </td><td align="left">  XToken을 검색하는 신뢰 당사자를 관리하고 볼 수 있습니다.     </td></tr>
 <tr><td align="left">    **디스크 요청**&nbsp;*                   </td><td align="left">  게임 디스크 요청을 볼 수 있습니다.    </td><td align="left">  게임 디스크 요청을 구성하고 볼 수 있습니다.     </td></tr>
 <tr><td align="left">    **샌드박스**&nbsp;*                         </td><td align="left">  **샌드박스** 페이지에 액세스하여 계정의 샌드박스 및 해당 샌드박스에 적용되는 구성을 볼 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다. </td><td align="left">  **샌드박스** 페이지에 액세스하고, 샌드박스 만들기와 삭제 및 구성 관리를 포함하여 계정의 샌드박스를 보고 관리할 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다.    </td></tr>
+<tr><td align="left">    **Microsoft Store 영업 이벤트**&nbsp;\*                            </td><td align="left">  해당 없음    </td><td align="left">  자동으로 Microsoft Store 영업 이벤트에서 제품을 포함하는 옵션을 구성할 수 있습니다.     </td></tr>
 <tr><td align="left">    **세금 프로필**                         </td><td align="left">  **계정 설정**의 [세금 프로필 정보 및 양식](setting-up-your-payout-account-and-tax-forms.md#tax-forms)을 볼 수 있습니다.     </td><td align="left">  **계정 설정**에서 세금 양식을 작성하고 [세금 프로필 정보](setting-up-your-payout-account-and-tax-forms.md#tax-forms)를 업데이트할 수 있습니다.     </td></tr>
 <tr><td align="left">    **테스트 계정**&nbsp;*                     </td><td align="left">  Xbox Live 구성을 테스트하기 위한 계정을 볼 수 있습니다.      </td><td align="left">  Xbox Live 구성을 테스트하기 위한 계정을 만들고 관리하고 볼 수 있습니다.      </td></tr>
 <tr><td align="left">    **Xbox 장치**                        </td><td align="left">  **계정 설정** 섹션에서 계정에 대해 사용하도록 설정된 Xbox 개발 콘솔을 볼 수 있습니다.       </td><td align="left">  **계정 설정** 섹션에서 계정에 대해 사용하도록 설정된 Xbox 개발 콘솔을 추가하고 제거하고 볼 수 있습니다.     </td></tr>
@@ -191,6 +193,7 @@ ms.lasthandoff: 01/12/2018
     <tr><td align="left">    **대상 제품**     </td><td>    제품에 대한 [대상 제품](use-targeted-offers-to-maximize-engagement-and-conversions.md)을 볼 수 있습니다.         </td><td>    제품에 대한 [대상 제품](use-targeted-offers-to-maximize-engagement-and-conversions.md)을 확인하고 관리하고 만들 수 있습니다.          </td><td>    해당 없음     </td><td>    해당 없음      </td></tr>
     <tr><td align="left">    **고객에게 문의**  </td><td>    **고객 의견** 권한도 부여된 경우에 한해 [고객 의견에 대한 응답](respond-to-customer-feedback.md) 및 [고객 리뷰에 대한 응답](respond-to-customer-reviews.md)을 볼 수 있습니다. 제품에 대해 생성된 [대상이 지정된 알림](send-push-notifications-to-your-apps-customers.md)을 볼 수 있습니다.    </td><td>    **고객 의견** 권한도 부여된 경우에 한해 [고객 의견에 대해 응답](respond-to-customer-feedback.md)하고, [고객 리뷰에 대해 응답](respond-to-customer-reviews.md)할 수 있습니다. 제품에 대해 [대상이 지정된 알림을 만들고 보낼](send-push-notifications-to-your-apps-customers.md) 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
     <tr><td align="left">    **실험**</td><td>    제품에 대한 [실험(A/B 테스트)](../monetize/run-app-experiments-with-a-b-testing.md) 및 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대한 [실험(A/B 테스트)](../monetize/run-app-experiments-with-a-b-testing.md)을 만들고 관리하고 볼 수 있으며, 실험 데이터를 볼 수 있습니다.     </td><td>    해당 없음  </td><td>    해당 없음                 </td></tr>
+    <tr><td align="left">    **Microsoft Store 영업 이벤트**&nbsp;\*</td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td></tr>
 
     </tbody>
     </table>
@@ -213,7 +216,7 @@ ms.lasthandoff: 01/12/2018
     <tr><td align="left">    **연령별 등급**    </td><td>    제품 제출의 [연령별 등급](age-ratings.md) 페이지를 볼 수 있습니다.       </td><td>    제품 제출의 [연령별 등급](age-ratings.md) 페이지를 보고 편집할 수 있습니다.    </td><td>    * 추가 기능 제출의 연령별 등급 페이지를 볼 수 있습니다.          </td><td>    * 추가 기능 제출의 연령별 등급 페이지를 보고 편집할 수 있습니다.       </td></tr>
     <tr><td align="left">    **패키지**        </td><td>    제품 제출의 [패키지](upload-app-packages.md) 페이지를 볼 수 있습니다.  </td><td>    제품 제출의 [패키지](upload-app-packages.md) 페이지를 보고 편집할 수 있습니다(패키지 업로드 포함).     </td><td>    * 추가 기능 제출의 장치 패밀리 타기팅 및 패키지(해당되는 경우)를 볼 수 있습니다.   </td><td>    * 추가 기능 제출의 장치 패밀리 타기팅을 보고 편집할 수 있습니다(해당되는 경우 패키지 업로드 포함).             </td></tr>
     <tr><td align="left">    **Store 목록**  </td><td>    제품 제출의 [Store 목록 페이지](create-app-store-listings.md)를 볼 수 있습니다.  </td><td>    제품 제출의 [Store 목록 페이지](create-app-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 새로운 Store 목록을 추가할 수 있습니다.     </td><td>    추가 기능 제출의 [Store 목록 페이지](create-add-on-store-listings.md)를 볼 수 있습니다.            </td><td>    추가 기능 제출의 [Store 목록 페이지](create-add-on-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 Store 목록을 추가할 수 있습니다.                 </td></tr>
-    <tr><td align="left">    **스토어 제출**     </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.           </td><td>    제품을 스토어에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다. </td><td>이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.     </td><td>    추가 기능을 스토어에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다.</td></tr>
+    <tr><td align="left">    **Microsoft Store 제출**     </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.           </td><td>    제품을 Microsoft Store에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다. </td><td>이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.     </td><td>    추가 기능을 Microsoft Store에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다.</td></tr>
     <tr><td align="left">    **새 제출 만들기**       </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.        </td><td>    제품의 새 [제출](app-submissions.md)을 만들 수 있습니다.  </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.   </td><td>    추가 기능의 새 [제출](add-on-submissions.md)을 만들 수 있습니다.        </td></tr>
     <tr><td align="left">    **새 추가 기능**    </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다. </td><td>    제품의 새 [추가 기능](set-your-add-on-product-id.md)을 만들 수 있습니다. </td><td>    해당 없음    </td><td>    해당 없음        </td></tr>
     <tr><td align="left">    **이름 예약**   </td><td>    제품의 [앱 이름 관리](manage-app-names.md) 페이지를 볼 수 있습니다.</td><td>    제품의 [앱 이름 관리](manage-app-names.md) 페이지를 보고 편집할 수 있습니다(추가 이름 예약 및 예약된 이름 삭제 포함). </td><td>   * 추가 기능의 예약된 이름을 볼 수 있습니다.    </td><td>   * 추가 기능의 예약된 이름을 보고 편집할 수 있습니다.          </td></tr>

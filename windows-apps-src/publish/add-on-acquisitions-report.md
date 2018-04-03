@@ -1,26 +1,27 @@
 ---
 author: jnHs
-Description: "Windows 개발자 센터 대시보드의 추가 기능 구입 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다."
-title: "추가 기능 구입 보고서"
+Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
+title: 추가 기능 구입 보고서
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 08/04/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 46d5ee3d0e0ac9c2a3599f51e17ea4d7425ab5af
-ms.sourcegitcommit: a8e7dc247196eee79b67aaae2b2a4496c54ce253
+keywords: Windows 10, uwp, 추가 기능 판매, 추가 기능 구입, iap 판매, 앱 내 제품, iaps, 추가 기능
+ms.localizationpriority: high
+ms.openlocfilehash: 5b8d0bb140206612a5096f48d87029b2285a0770
+ms.sourcegitcommit: 980e604c3767e7a73619d027bebd78cf4bfe9678
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="add-on-acquisitions-report"></a>추가 기능 구입 보고서
 
 
-Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다. 또한 Windows 10의 고객을 위한 변환 정보를 얻을 수 있습니다.
+Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다. 또한 Windows 10(Xbox 포함)의 고객을 위한 변환 정보를 얻을 수 있습니다.
 
-대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 이 보고서에서 추가 기능 구입은 고객이 추가 기능을 구매했거나 무료로 제공되는 경우 비용을 지불하지 않고 추가 기능을 얻게 된 것을 의미합니다. 같은 고객이 같은 소모성 추가 기능을 여러 번 구매한 경우 각 구매는 별도의 추가 기능 구입으로 계산됩니다.
 
@@ -36,7 +37,7 @@ Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 �
 
 -   **추가 기능**: 기본 필터는 **모든 추가 기능**이지만, 하나 이상의 앱 추가 기능으로 데이터를 제한할 수 있습니다.
 -   **시장**: 기본 필터는 **모든 시장**이지만, 하나 이상의 시장에서 구입으로 데이터를 제한할 수 있습니다.
--   **장치 유형**: 기본 설정은 **모든 장치**입니다. 특정 장치 유형에서의 구입에 대한 데이터를 표시하려는 경우 여기에서 특정 장치를 선택할 수 있습니다.
+-   **장치 유형**: 기본 설정은 **모든 장치**입니다. 특정 디바이스 유형(PC, 콘솔, 태블릿 등)에서만 구입에 대한 데이터를 표시하려는 경우 여기에서 특정한 디바이스를 선택할 수 있습니다.
 
 아래에 나열된 모든 차트의 정보는 선택한 날짜 범위와 모든 필터를 반영합니다. 또한 일부 섹션에서는 추가 필터를 적용 할 수 있습니다.
 
@@ -67,17 +68,17 @@ Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 �
 
 ## <a name="add-on-page-views-and-conversions-by-campaign-id"></a>캠페인 ID별 추가 기능 페이지 보기 및 변환
 
-**캠페인 ID별 추가 기능 보기 및 변환** 차트는 선택한 기간 동안 캠페인 ID별로 추가 기능 변환(구입) 총계를 표시하여 [사용자 지정 홍보 캠페인](create-a-custom-app-promotion-campaign.md) 각각에 대해 Windows 10 사용자의 변환 및 페이지 보기를 추적할 수 있도록 도와줍니다. 이 차트에는 추가 기능 변환만 표시됩니다.
+**캠페인 ID별 추가 기능 보기 및 변환** 차트는 선택한 기간 동안 캠페인 ID별로 추가 기능 변환(구입) 총계를 표시하여 [사용자 지정 홍보 캠페인](create-a-custom-app-promotion-campaign.md) 각각에 대해 Windows 10(Xbox 포함) 사용자의 변환 및 페이지 보기를 추적할 수 있도록 도와줍니다. 이 차트에는 추가 기능 변환만 표시됩니다.
 
 > [!NOTE]
-> 고객이 사용자가 만들지 않은 사용자 지정 캠페인을 클릭하여 앱 목록에 도달할 수 있습니다. 고객이 스토어에 처음 들어올 때 사용한 캠페인 ID로 세션 내의 모든 페이지 보기가 스탬핑됩니다. 그런 다음 24 시간 이내에 모든 구입에서 해당 캠페인 ID로 특성 변환이 됩니다. 따라서 캠페인 ID에 대한 변환 총계보다 변환 총계가 더 높게 나타나고 제로 페이지 보기가 있는 변환 또는 추가 기능 변환이 있을 수 있습니다. 
+> 고객이 사용자가 만들지 않은 사용자 지정 캠페인을 클릭하여 앱 목록에 도달할 수 있습니다. 고객이 Microsoft Store에 처음 들어올 때 사용한 캠페인 ID로 세션 내의 모든 페이지 보기가 스탬핑됩니다. 그런 다음 24 시간 이내에 모든 구입에서 해당 캠페인 ID로 특성 변환이 됩니다. 따라서 캠페인 ID에 대한 변환 총계보다 변환 총계가 더 높게 나타나고 제로 페이지 보기가 있는 변환 또는 추가 기능 변환이 있을 수 있습니다. 
 
 
 ## <a name="conversions-breakdown-by-campaign-id"></a>캠페인 ID별 변환 분석
 
 **캠페인 ID별 변환 분석** 차트에서 위에서 설명한 대로 [사용자 지정 홍보 캠페인](create-a-custom-app-promotion-campaign.md) 각각에 대해 Windows 10 사용자의 변환 및 페이지 보기를 추적할 수 있습니다. 앱 및 추가 기능 변환은 캠페인 ID별로 표시됩니다.
 
-이 차트에서 *페이지 보기*는 고객이 앱의 스토어 목록을 확인했음을 의미합니다. *변환*은 고객이 앱 또는 추가 기능에 대한 라이선스를 새로 획득했음을 의미합니다(금액이 청구되었거나 무료로 제공받았는지와 관계없음).
+이 차트에서 *페이지 보기*는 고객이 앱의 Microsoft Store 목록을 확인했음을 의미합니다. *변환*은 고객이 앱 또는 추가 기능에 대한 라이선스를 새로 획득했음을 의미합니다(금액이 청구되었거나 무료로 제공받았는지와 관계없음).
 
 이러한 페이지 보기 및 변환 수는 고유한 고객의 수가 아니라는 점에 유의하십시오. 
 

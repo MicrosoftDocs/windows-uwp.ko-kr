@@ -2,7 +2,7 @@
 author: normesta
 Description: Create a modern Windows app package for your existing Windows Forms, WPF, or Win32 app or game. Add modern experiences for Windows 10 users and simplify deployment and monitization.
 Search.Product: eADQiWindows 10XVcnh
-title: "데스크톱 브리지"
+title: 데스크톱 브리지
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: b8a70a249a91f654354d27faeffdf5f605fd9c26
-ms.sourcegitcommit: 12cc05b59b2a249a7683a8692ed453da03a91b28
+ms.openlocfilehash: 3cbaa8a8e78ad14472a34e107521d9c966ba434f
+ms.sourcegitcommit: 884b79b4c6fd8014fab9953faca557e56bb8c400
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="desktop-bridge"></a>데스크톱 브리지
 
-Windows 10 사용자를 위해 최신 환경을 추가하고, 배포와 수익 창출을 능률화합니다. 그런 다음 Microsoft Store를 통해 배포, 글로벌 시장에 더 효과적으로 도달하는 성과를 이루세요. Store에 내장된 기능을 사용, 훨씬 간단한 방법으로 앱에서 수익을 창출할 수 있습니다. 물론 스토어를 이용하지 않아도 됩니다. 기존 채널을 자유롭게 이용하세요.
+Windows 10 사용자를 위해 최신 환경을 추가하고, 배포와 수익 창출을 능률화합니다. 그런 다음 Microsoft Store를 통해 배포, 글로벌 시장에 더 효과적으로 도달하는 성과를 이루세요. Store에 내장된 기능을 사용, 훨씬 간단한 방법으로 앱에서 수익을 창출할 수 있습니다. 물론 Microsoft Store를 이용하지 않아도 됩니다. 기존 채널을 자유롭게 이용하세요.
 
 ![데스크톱 브리지](images/desktop-to-uwp/desktop-bridge-4.png)
 
@@ -30,7 +30,7 @@ Windows 10 사용자를 위해 최신 환경을 추가하고, 배포와 수익 �
 Windows 10 환경을 향상시키기 위해 사용하는 코드를 제외하고, 앱은 그대로 유지됩니다. 따라서 기존 Windows 7, Windows Vista, Windows XP 사용자에게 계속 배포할 수 있습니다. Windows 10에서 앱은 지금처럼 완전 신뢰 상태의 사용자 모드로 계속 실행됩니다.
 
 >[!IMPORTANT]
->데스크톱 브리지는 Windows 10 버전, 1607에 도입되었으며 Windows 10 Anniversary Edition (10.0, 빌드 14393) 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다.
+>데스크톱 브리지는 Windows 10 버전, 1607에 도입되었으며 Windows 10 1주년 업데이트(10.0, 빌드 14393) 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다.
 
 > [!NOTE]
 > Microsoft Virtual Academy가 게시한 짧은 동영상에서 <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">이 시리즈</a>를 확인하세요. 이들 동영상은 유니버설 Windows 플랫폼(UWP)에 데스크톱 앱을 제공하는 전체 프로세스를 설명합니다.
@@ -53,7 +53,7 @@ Windows 10 환경을 향상시키기 위해 사용하는 코드를 제외하고,
 
 ## <a name="prepare"></a>준비
 
-앱을 [Windows 스토어 앱](https://www.microsoft.com/store/apps)에 게시할 계획을 가지고 계십니까? 그렇다면 [이 양식](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge)을 작성하는 것부터 시작합니다. 그러면 온보딩 프로세스를 시작하라는 메시지가 표시됩니다. 이 과정의 일환으로, 스토어에서 이름을 예약하면 Windows 앱 패키지를 생성하기 위해 필요한 정보를 얻게 됩니다.
+앱을 [Windows Microsoft Store 앱](https://www.microsoft.com/store/apps)에 게시할 계획을 가지고 계십니까? 그렇다면 [이 양식](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge)을 작성하는 것부터 시작합니다. 그러면 온보딩 프로세스를 시작하라는 메시지가 표시됩니다. 이 과정의 일환으로, Microsoft Store에서 이름을 예약하면 Windows 앱 패키지를 생성하기 위해 필요한 정보를 얻게 됩니다.
 
 그 다음으로 [데스크톱 앱용 패키지 준비](desktop-to-uwp-prepare.md) 문서를 살펴보고, Windows 앱 패키지 생성 전에 앱에 적용되는 문제를 해결하세요. 패키지 생성 전에 앱을 많이 변경할 필요가 없는 경우도 있습니다. 그러나 패키지 생성 전에 앱을 조정해야 하는 몇 가지 상황들이 있습니다.
 
@@ -147,7 +147,7 @@ Microsoft의 기술 혁신을 빠르게 지원하는 것으로 [잘 알려진](h
 
 Install**Aware**는 Visual Studio 버전 2012-2017용 무료 Install**Aware** 확장을 제공합니다. 단 한 번의 클릭으로 [Visual Studio 도구 모음](https://www.installaware.com/visual-studio-installer-2015.htm)에서 직접 Windows 앱 패키지를 만들 수 있습니다.
 
-또한 Package **Aware** (스냅숏 없이 설정 캡처)나 데이터베이스 가져오기 마법사(MSI 설치 관리자 및 MSM 병합 모듈용)를 사용, 설정에 대한 소스 코드가 없는 경우에도 모든 설정을 가져올 수 있습니다. 또한 [GUI 도구](https://www.installaware.com/scripting-two-way-integrated-ide.htm)를 사용해 시각적으로 스크립팅 측면에서 가져오기를 유지 및 향상시킬 수 있습니다.
+또한 Package **Aware**(스냅숏 없이 설정 캡처)나 데이터베이스 가져오기 마법사(MSI 설치 관리자 및 MSM 병합 모듈용)를 사용, 설정에 대한 소스 코드가 없는 경우에도 모든 설정을 가져올 수 있습니다. 또한 [GUI 도구](https://www.installaware.com/scripting-two-way-integrated-ide.htm)를 사용해 시각적으로 스크립팅 측면에서 가져오기를 유지 및 향상시킬 수 있습니다.
 
 [고급 APPX 생성 옵션](https://www.installaware.com/mhtml5/desktop/appx.htm)은 Microsoft Store 제출 대상 지정이나 최종 사용자에 테스트용 로드 배포할 서명한 Windows 앱 패키지 바이너리 생성에 도움을 줍니다. 심지어 단일 소스로 **Nano Server**를 대상으로 배포를 지정할 수 있는 **WSA**(Windows Server Applications) Installer 패키지를 빌드 할 수도 있습니다. GUI에 추가해 [명령줄 자동화](https://www.installaware.com/scripting-automation-interface.htm)를 완전하게 지원합니다.
 
@@ -163,7 +163,7 @@ InstallShield 프로젝트를 몇 초면 검사할 수 있습니다. 응용 프�
 
 기존 InstallShield 프로젝트에서 UWP 앱 패키지를 빌드, Microsoft Store를 준비하고 Windows 10에서의 소프트웨어 설치 환경을 단순화하세요. 고객이 원하는 배포 시나리오를 모두 지원하는 Windows 설치 관리자 및 UWP 앱 패키지를 모두 빌드합니다. 기존 InstallShield 프로젝트에서 WSA 패키지를 빌드, Nano Server와 Windows Server 2016 배포를 지원하세요.
 
-더 쉽게 배포 및 유지 관리할 수 있도록 모듈에서 설치를 개발하고, 빌드 타임의 구성 요소 및 종속성을 Microsoft Store용 단일 UWP 앱 패키지로 병합하세요. 스토어 외부로 직접 배포하는 경우, UWP 앱 및 다른 종속성을 Suite/고급 UI 설치 관리자와 묶습니다.
+더 쉽게 배포 및 유지 관리할 수 있도록 모듈에서 설치를 개발하고, 빌드 타임의 구성 요소 및 종속성을 Microsoft Store용 단일 UWP 앱 패키지로 병합하세요. Microsoft Store 외부로 직접 배포하는 경우, UWP 앱 및 다른 종속성을 Suite/고급 UI 설치 관리자와 묶습니다.
 
 자세한 내용은 여기 [eBook](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fresources.flexerasoftware.com%2Fweb%2Fpdf%2FeBook-IS-Your-Fast-Track-to-Profit.pdf&data=02%7C01%7Cnormesta%40microsoft.com%7C86b9a00bc8e345c2ac6208d4ba464802%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C1%7C636338258409706554&sdata=IAYNp9nFc8B5ayxwrs%2FQTWowUmOda6p%2Fn%2BjdHea257M%3D&reserved=0)을 참조하세요.
 
@@ -193,7 +193,7 @@ Windows 앱 패키지를 만드는 것 외에 PACE Suite를 사용하여 Windows
 
 앱을 시스템에 통합해야 하는 경우(예, 기존 방화벽 규칙), 앱의 패키지 매니페스트에서 설명하면 시스템이 나머지를 알아서 처리합니다. 이런 작업 대부분에서 코드를 작성할 필요가 없습니다. 매니페스트의 몇몇 XML을 사용하여 사용자가 로그인할 때 프로세스를 시작하고, 파일 탐색기에 앱을 통합하며, 다른 앱에 표시되는 인쇄 대상 목록에 앱을 추가하는 등 다양한 작업을 수행할 수 있습니다.
 
-[앱을 Windows 10 (Windows 데스크톱 브리지)에 통합](desktop-to-uwp-extensions.md)을 참조하세요.
+[앱을 Windows 10(Windows 데스크톱 브리지)에 통합](desktop-to-uwp-extensions.md)을 참조하세요.
 
 ## <a name="enhance"></a>향상
 
@@ -223,13 +223,13 @@ Windows 앱 패키지를 만드는 것 외에 PACE Suite를 사용하여 Windows
 앱 배포를 준비할 때 현실적인 설정에서 앱을 테스트하려면 앱에 로그인한 다음 설치하는 것이 가장 좋습니다. [앱 테스트](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app)를 참조합니다.
 
 >[!IMPORTANT]
-> 앱을 Microsoft Store에 게시할 계획이 있다면, Windows 10 S가 실행되는 장치에서 올바르게 작동하는지 확인하세요. 이는 스토어의 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
+> 앱을 Microsoft Store에 게시할 계획이 있다면, Windows 10 S가 실행되는 장치에서 올바르게 작동하는지 확인하세요. 이는 Microsoft Store의 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
 
 ## <a name="validate"></a>유효성 검사
 
 앱이 Microsoft Store에 게시될 가능성 또는 [Windows 인증](http://go.microsoft.com/fwlink/p/?LinkID=309666)을 받을 가능성을 최대한 높이려면 인증을 받기 위해 앱을 제출하기 전에 로컬로 앱의 유효성을 검사하고 테스트하세요.
 
-앱 패키징을 위해 DAC를 사용하고 있는 경우에는 새로운 ``-Verify``플래그를 사용해 데스크톱 브리지 및 스토어 요구 사항에 맞는지 패키지의 유효성 검사를 합니다. [앱의 패키징, 서명, 스토어 제출 준비](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters)를 참조하세요.
+앱 패키징을 위해 DAC를 사용하고 있는 경우에는 새로운 ``-Verify``플래그를 사용해 데스크톱 브리지 및 Microsoft Store 요구 사항에 맞는지 패키지의 유효성 검사를 합니다. [앱의 패키징, 서명, Microsoft Store 제출 준비](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters)를 참조하세요.
 
 Visual Studio를 사용하는 경우, **앱 패키지 만들기** 마법사에서 앱의 유효성 검사를 할 수 있습니다. [앱 패키지 업로드 파일 만들기](../packaging/packaging-uwp-apps.md#create-an-app-package-upload-file)를 참조하세요.
 
