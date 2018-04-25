@@ -4,17 +4,17 @@ Description: The App properties page of the app submission process lets you defi
 title: 앱 속성 입력
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 01/24/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, 게임 설정, 디스플레이 모드, 시스템 요구 사항, 하드웨어 요구 사항, 최소 하드웨어, 권장 하드웨어
+keywords: Windows 10, UWP, 게임 설정, 표시 모드, 시스템 요구 사항, 하드웨어 요구 사항, 최소 하드웨어, 권장 하드웨어, 개인 정보 취급 방침, 지원 연락처 정보, 앱 웹 사이트, 지원 정보
 ms.localizationpriority: high
-ms.openlocfilehash: 8ecdeb0dd4ebba83a387666ab87067ff419a9303
-ms.sourcegitcommit: 8d9d4f17e272b78e38b346f846b96260c922bbb2
+ms.openlocfilehash: 35d7be3aa88ca17219c2f2e4024bd2e692fb1abc
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="enter-app-properties"></a>앱 속성 입력
 
@@ -26,6 +26,37 @@ ms.lasthandoff: 01/24/2018
 Microsoft Store에서 앱을 분류하는 데 사용해야 하는 범주 및 하위 범주/장르(해당하는 경우)를 지정합니다. 앱을 제출하려면 범주를 지정해야 합니다.
 
 자세한 내용은 [범주 및 하위 범주 테이블](category-and-subcategory-table.md)을 참조하세요.
+
+
+## <a name="support-info"></a>지원 정보
+
+이 섹션에는 고객이 앱과 지원을 받을 수 있는 방법에 대해 자세히 이해하는 데 도움이 되는 정보가 제공됩니다.
+
+### <a name="privacy-policy-url"></a>개인 정보 취급 방침 URL
+
+앱이 개인 정보 관련 법률 및 규정을 준수하는지 확인하고, 필요할 경우 유효한 개인 정보 취급 방침 URL을 제공하는 것은 개발자의 책임입니다.
+
+이 섹션에서는 앱이 [개인 정보](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information)를 액세스, 수집 또는 전송하는지 여부를 표시해야 합니다. **예**라고 답하려면 개인 정보 취급 방침 URL이 필요합니다. 그렇지 않은 경우에는 선택 사항입니다(앱에서 개인 정보 취급 방침이 필요하다고 판단되지만 없는 경우에는 제출이 인증 실패할 수 있음).
+
+> [!NOTE]
+> 패키지가 개인 정보의 액세스, 전송 또는 수집을 허용하는 [기능](../packaging/app-capability-declarations.md)을 선언하는 것으로 감지가 되면 이 질문을 **예**로 표시하고 개인 정보 취급 방침 URL을 입력해야 합니다.
+
+앱에서 개인 정보 취급 압침이 필요한지 여부를 판단하는 데 도움을 얻으려면 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies#105-personal-information)을 검토하세요. 
+
+> [!NOTE]
+> Microsoft는 앱에 대한 기본 개인 정보 취급 방침을 제공하지 않습니다. 마찬가지로, 사용자 앱에는 Microsoft 개인 정보 취급 방침이 적용되지 않습니다. 
+
+
+### <a name="website"></a>웹 사이트
+
+앱에 대한 웹 페이지의 URL을 입력합니다. 이 URL은 Store의 앱 웹 목록이 아니라 사용자 웹 사이트의 페이지를 가리켜야 합니다. 이 필드는 선택 사항이지만 권장 사항이기도 합니다.
+
+### <a name="support-contact-info"></a>지원 연락처 정보
+
+고객이 앱에 대한 지원을 받을 수 있는 웹 페이지의 URL(또는 지원을 받기 위해 연락할 메일 주소)을 입력합니다. 고객이 필요할 경우 지원을 받을 수 있는 방법을 알 수 있도록 모든 제출에 이 정보를 포함시키는 것이 좋습니다. Microsoft는 고객에게 앱에 대한 지원을 제공하지 않습니다.
+
+> [!IMPORTANT]
+> Xbox에서 앱이나 게임을 사용할 수 있는 경우에는 **지원 연락처 정보** 필드가 필요합니다. 그렇지 않은 경우에는 선택 사항이면서 권장 사항입니다.
 
 
 ## <a name="game-settings"></a>게임 설정

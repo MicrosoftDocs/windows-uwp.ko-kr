@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 대상 알림, 푸시 알림, 알림, 타일
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: high
-ms.openlocfilehash: f7b4558b6c5ea2cc9dbc30cb605f1cb06432504f
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: e41b6f10a41fa954c92a0de0a258ab6482ac8456
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>앱의 고객에게 알림 보내기
 
@@ -50,16 +50,15 @@ Windows 개발자 센터에서는 알림을 모든 앱 고객에게 또는 [고�
 > [!NOTE]
 > 앱이 개발자 센터에서 알림을 받으려면, 먼저 앱에서 [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 메서드를 호출하여 알림을 수신하도록 앱을 등록해야 합니다. 이 메서드는 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 사용할 수 있습니다. 코드 예제와 함께 이 메서드를 호출하는 방법은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
 
-1.  [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)에서 **참여** 섹션을 확장하고 **알림**을 선택합니다.
-2.  **알림** 페이지에서 **새 알림**을 선택합니다.
-3.  **템플릿 선택** 섹션에서 보내고 싶은 알림 유형을 선택합니다. 자세한 내용은 [알림 템플릿 유형](#notification-template-types)을 참조하세요. <!-- ![Notification templates](images/push-notifications-template.png) -->
-4.      다음 페이지에서 <!-- use the drop-down menu to choose either a **Single app** or **Multiple apps** for which you want to generate a notification. --> 앱 <!-- or apps -->을 선택합니다(Microsoft Store Services SDK를 사용하여 알림을 받도록 구성해야 함).
-5.  **알림 설정** 섹션에서 알림의 **이름**을 선택하고, 적용 가능한 경우, 알림을 보낼 **고객 그룹**을 선택합니다. <!-- (Notifications sent to multiple apps can only be sent to all customers of those apps.) --> 아직 만들지 않은 고객층을 사용하고자 하는 경우 **새 고객 그룹 만들기**를 선택합니다. 알림에 새 고객층을 사용할 수 있으려면 24시간이 소요됩니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
-6.  알림을 보낼 시간을 지정하고자 하는 경우 **즉시 알림 보내기** 확인란의 선택을 취소하고 특정 날짜 및 시간을 선택합니다(모든 고객의 현지 시간대를 지정하지 않는 이상 모든 고객에 대해 UTC 형식으로).
-7.  알림의 만료 시점을 지정하려면 **알림 만료 없음** 확인란을 지우고 특정 만료 날짜와 시간(UTC 형식으로)을 선택합니다.
-8.  <!-- For notifications to a single app: --> If you want to filter the recipients so that your notification is only delivered to people who use certain languages or are in specific time zones, check the **Use filters** checkbox. You can then specify the language and/or time zone options you want to use.
-<!-- and don't forget to update numbers when this comes back... 9.      For notifications to multiple apps: Specify whether to send the notification only to the last active app on each device (per customer), or to all apps on each device. -->
-9.  **알림 콘텐츠** 섹션의 **언어** 메뉴에서 알림을 표시할 언어를 선택합니다. 자세한 내용은 [알림 번역](#translate-your-notifications)을 참조하세요.
+1. [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)에서 **참여** 섹션을 확장하고 **알림**을 선택합니다.
+2. **알림** 페이지에서 **새 알림**을 선택합니다.
+3. **템플릿 선택** 섹션에서 보내고 싶은 알림 유형을 선택합니다. 자세한 내용은 [알림 템플릿 유형](#notification-template-types)을 참조하세요.
+4. 다음 페이지에서 앱(Microsoft Store Services SDK를 사용하여 알림을 받도록 구성해야 함)을 선택합니다.
+5. **알림 설정** 섹션에서 알림의 **이름**을 선택하고, 적용 가능한 경우, 알림을 보낼 **고객 그룹**을 선택합니다. 아직 만들지 않은 고객층을 사용하고자 하는 경우 **새 고객 그룹 만들기**를 선택합니다. 알림에 새 고객층을 사용할 수 있으려면 24시간이 소요됩니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
+6. 알림을 보낼 시간을 지정하고자 하는 경우 **즉시 알림 보내기** 확인란의 선택을 취소하고 특정 날짜 및 시간을 선택합니다(모든 고객의 현지 시간대를 지정하지 않는 이상 모든 고객에 대해 UTC 형식으로).
+7. 알림의 만료 시점을 지정하려면 **알림 만료 없음** 확인란을 지우고 특정 만료 날짜와 시간(UTC 형식으로)을 선택합니다.
+8. 특정 언어 사용자, 특정 시간대의 사용자에게만 알림을 전달하기 위해 수신자를 필터링하려면 **필터 사용** 확인란을 클릭하세요. 사용하고 싶은 언어 및/또는 시간대를 지정할 수 있습니다.
+9. **알림 콘텐츠** 섹션의 **언어** 메뉴에서 알림을 표시할 언어를 선택합니다. 자세한 내용은 [알림 번역](#translate-your-notifications)을 참조하세요.
 10. **옵션** 섹션에서 텍스트를 입력하고 원하는 다른 옵션을 구성합니다. 템플릿으로 시작한 경우 몇몇 옵션은 기본적으로 제공되지만 원하는 대로 변경할 수 있습니다.
    사용 가능한 옵션은 사용하는 알림 유형에 따라 달라집니다. 몇몇 옵션은 다음과 같습니다.
    - **정품 인증 유형**(대화형 알림 유형). **포그라운드**, **백그라운드** 또는 **프로토콜**을 선택할 수 있습니다.
@@ -67,11 +66,11 @@ Windows 개발자 센터에서는 알림을 모든 앱 고객에게 또는 [고�
    - **앱 시작 속도 추적**(대화형 알림 유형). 각 알림을 통해 고객의 참여를 얼마나 잘 유도하는지를 측정하려면 이 확인란을 선택합니다. 자세한 내용은 [알림 성과 측정](#measure-notification-performance)을 참조하세요.
    - **기간**(대화형 알림 유형). **짧게** 또는 **길게**를 선택합니다.
    - **시나리오**(대화형 알림 유형). **기본**, **알람**, **미리 알림** 또는 **수신 전화**를 선택할 수 있습니다.
-   - **기본 URI**(대화형 알림 유형). 자세한 내용은 [BaseUri](https://msdn.microsoft.com/library/windows/apps/br208712)를 참조하세요.
-   - **이미지 쿼리 추가**(대화형 알림 유형). 자세한 내용은 [addImageQuery](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
-   - **시각 효과**. 이미지, 동영상 또는 소리. 자세한 내용은 [visual](https://msdn.microsoft.com/library/windows/apps/br230847)을 참조하세요.
+   - **기본 URI**(대화형 알림 유형). 자세한 내용은 [BaseUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.baseuri#Windows_UI_Xaml_FrameworkElement_BaseUri)를 참조하세요.
+   - **이미지 쿼리 추가**(대화형 알림 유형). 자세한 내용은 [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements)를 참조하세요.
+   - **시각 효과**. 이미지, 동영상 또는 소리. 자세한 내용은 [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual)을 참조하세요.
    - **입력**/**작업**/**선택**(대화형 알림 유형). 사용자와 알림의 상호 작용을 허용할 수 있습니다. 자세한 내용은 [적응형 및 대화형 알림 메시지](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)를 참조하세요.
-   - **바인딩**(대화형 타일 유형). 알림 템플릿. 자세한 내용은 [binding](https://msdn.microsoft.com/library/windows/apps/br230843)을 참조하세요.
+   - **바인딩**(대화형 타일 유형). 알림 템플릿. 자세한 내용은 [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding)을 참조하세요.
 
    > [!TIP]
    > 적응형 타일 및 대화형 알림 메시지를 디자인하고 테스트하려면 [알림 시각화 도우미](https://www.microsoft.com/store/apps/9nblggh5xsl1) 앱을 사용해 보세요.
@@ -106,17 +105,17 @@ Windows 개발자 센터에서는 알림을 모든 앱 고객에게 또는 [고�
 각 알림을 통해 고객의 참여를 얼마나 잘 유도하는지를 측정할 수 있습니다.
 
 
-###<a name="to-measure-notification-performance"></a>알림 성과를 측정하려면
+### <a name="to-measure-notification-performance"></a>알림 성과를 측정하려면
 
 1.  알림을 만들 때 **알림 콘텐츠** 섹션에서 **앱 시작 속도 추적** 확인란을 선택합니다.
 2.  대상 지정 알림에 대한 응답으로 앱이 시작되었음을 개발자 센터에 알리려면 앱에서 [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) 메서드를 호출합니다. 이 메서드는 Microsoft Store Services SDK에서 제공됩니다. 이 메서드를 호출하는 방법에 대한 자세한 내용은 [개발자 센터 알림을 받도록 앱 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
 
 
-###<a name="to-view-notification-performance"></a>알림 성과 보기
+### <a name="to-view-notification-performance"></a>알림 성과 보기
 
 위에서 설명한 대로 알림 성과를 측정하도록 알림과 앱을 구성한 경우 대시보드를 사용하여 알림의 성과를 확인할 수 있습니다.
 
-1.  [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)에서 **참여** 섹션을 확장하고 **알림**을 선택합니다.
+1.  Windows 개발자 센터 대시보드에서 **참여** 섹션을 확장하고 **알림**을 선택합니다.
 2.  각 알림의 전체적인 성과를 살펴보려면 **대상 푸시 알림** 페이지에서 **진행 중** 또는 **완료됨**을 선택하고, **배달 속도** 및 **앱 실행 속도**를 확인합니다.
 3.  좀 더 자세한 성과 세부 정보를 보려면 알림 이름을 선택합니다. **배달 통계** 섹션이 나타나고, 다음 알림**상태** 유형에 대한 **개수** 및 **백분율** 정보가 표시됩니다.
  - **실패**: 어떤 이유에서든 알림이 배달되지 않았습니다. 예를 들어 Windows 알림 서비스에서 문제가 발생하는 경우 이 오류가 발생할 수 있습니다.
@@ -129,7 +128,7 @@ Windows 개발자 센터에서는 알림을 모든 앱 고객에게 또는 [고�
 
 ## <a name="translate-your-notifications"></a>알림 번역
 
-알림의 영향을 최대화하려면 고객이 기본적으로 사용하는 언어로 알림을 번역하는 것이 좋습니다. [Microsoft Translator](https://msdn.microsoft.com/library/dd576287.aspx) 서비스를 활용하면 개발자 센터에서 알림을 원하는 언어로 자동으로 손쉽게 번역할 수 있습니다.
+알림의 영향을 최대화하려면 고객이 기본적으로 사용하는 언어로 알림을 번역하는 것이 좋습니다. [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) 서비스를 활용하면 개발자 센터에서 알림을 원하는 언어로 자동으로 손쉽게 번역할 수 있습니다.
 
 1.  기본 언어로 알림을 작성한 후 **언어 추가**(**알림 콘텐츠** 섹션의 **언어** 메뉴 아래)를 선택합니다.
 2.  **언어 추가** 창에서 알림을 표시할 추가 언어를 선택한 다음 **업데이트**를 선택합니다.
@@ -146,4 +145,3 @@ Windows 개발자 센터에서는 알림을 모든 앱 고객에게 또는 [고�
 - [Windows 푸시 알림 서비스 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
 - [알림 시각화 도우미 앱](https://www.microsoft.com/store/apps/9nblggh5xsl1)
 - [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync() 메서드](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx)
-- [고객 구분 및 푸시 알림: 새로운 Windows 개발자 센터 참가자 프로그램 기능(블로그 게시물)](https://blogs.windows.com/buildingapps/2016/08/17/customer-segmentation-and-push-notifications-a-new-windows-dev-center-insider-program-feature/#XTuCqrG8G5IMgWew.97)

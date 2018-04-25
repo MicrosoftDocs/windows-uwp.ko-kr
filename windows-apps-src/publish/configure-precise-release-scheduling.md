@@ -1,18 +1,19 @@
 ---
 author: jnHs
-Description: "스토어에서 앱을 사용할 수 있는 정확한 날짜와 시간을 설정할 수 있습니다. 지역/국가 별로 날짜를 사용자 지정할 수 있습니다."
-title: "정확한 릴리스 일정 구성"
+Description: You can set the precise date and time that your app should become available in the Store, giving you greater flexibility and the ability to customize dates for different markets.
+title: 정확한 릴리스 일정 구성
 ms.author: wdg-dev-content
-ms.date: 08/03/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 77e954e3d8b85c0cf517a154447957a2d81d5bcf
-ms.sourcegitcommit: 968187e803a866b60cda0528718a3d31f07dc54c
+keywords: Windows 10, UWP, 일정, 발매 날짜, 날짜, 실행
+ms.localizationpriority: high
+ms.openlocfilehash: 7c6f39622c4b64e787a7d9a226121dac7dcefdfa
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-precise-release-scheduling"></a>정확한 릴리스 일정 구성
 
@@ -23,25 +24,25 @@ ms.lasthandoff: 08/03/2017
 
 스토어에서 앱을 더 이상 사용할 수 없게 만드는 날짜도 추가로 설정할 수 있습니다. 스토어에서 검색이나 탐색으로 제품을 찾을 수 없지만, 직접 링크가 있는 고객은 제품의 스토어 목록을 볼 수 있습니다. 그러나 제품을 이미 소유하고 있거나, [홍보 코드](generate-promotional-codes.md)를 갖고 있으며, Windows 10 장치를 사용하고 있는 경우에만 다운로드 할 수 있습니다.
 
-기본적으로 ([표시 여부](set-app-pricing-and-availability.md#visibility) 섹션에서 **앱을 사용할 수 있지만, 스토어에서 검색할 수 없도록 설정** 옵션을 선택한 경우를 제외하고), 앱 인증과 게시 프로세스가 완료되는 즉시 고객이 앱을 사용할 수 있습니다. 다른 날짜를 선택 하려면 **옵션 표시**를 선택해 이 섹션을 확장하세요.
+기본적으로 ([표시 여부](choose-visibility-options.md#discoverability) 섹션에서 **앱을 사용할 수 있지만, 스토어에서 검색할 수 없도록 설정** 옵션을 선택한 경우를 제외하고), 앱 인증과 게시 프로세스가 완료되는 즉시 고객이 앱을 사용할 수 있습니다. 다른 날짜를 선택 하려면 **옵션 표시**를 선택해 이 섹션을 확장하세요.
 
-[표시 여부](set-app-pricing-and-availability.md#visibility) 섹션에서 **앱을 사용할 수 있지만 스토어에서 검색할 수 없도록 설정** 옵션을 선택했다면 **일정**에서 날짜를 구성할 수 없습니다. 앱이 고객에게 릴리스되지 않아 구성할 릴리스 날짜가 없기 때문입니다.
+[표시 여부](choose-visibility-options.md#discoverability) 섹션에서 **앱을 사용할 수 있지만 스토어에서 검색할 수 없도록 설정** 옵션을 선택했다면 **일정**에서 날짜를 구성할 수 없습니다. 앱이 고객에게 릴리스되지 않아 구성할 릴리스 날짜가 없기 때문입니다.
 
 > [!IMPORTANT]
 > 일정 섹션에서 지정한 날짜는 Windows 10 고객에게만 적용됩니다.
 >
->앱이 이전 OS 버전을 지원하는 경우, 이후의 릴리스 날짜를 선택했다 하더라도 해당 OS 버전을 이용하는 고객은 인증과 게시 프로세스가 완료된 즉시 앱 목록을 확인할 수 있습니다. 이들 고객에게는 **취득 중지** 날짜가 적용되지 않습니다. ([표시 여부](set-app-pricing-and-availability.md#visibility) 섹션에서 다른 선택으로 업데이트를 제출하건, **앱 개요** 페이지에서 **앱을 사용할 수 없도록 설정**을 선택한 경우를 제외하고)여전히 앱을 취득할 수 있습니다.
+>앱이 이전 OS 버전을 지원하는 경우, 이후의 릴리스 날짜를 선택했다 하더라도 해당 OS 버전을 이용하는 고객은 인증과 게시 프로세스가 완료된 즉시 앱 목록을 확인할 수 있습니다. 이들 고객에게는 **취득 중지** 날짜가 적용되지 않습니다. ([표시 여부](choose-visibility-options.md#discoverability) 섹션에서 다른 선택으로 업데이트를 제출하건, **앱 개요** 페이지에서 **앱을 사용할 수 없도록 설정**을 선택한 경우를 제외하고)여전히 앱을 취득할 수 있습니다.
 
 
 ## <a name="base-schedule"></a>기본 일정
 
 기본 일정에서 선택한 사항은 나중에 [특정 지역/국가 대해 사용자 지정](#customize-the-schedule-for-specific-markets)을 선택해 특정 지역/국가(또는 지역/국가 그룹)을 대상으로 날짜를 추가한 경우를 제외하고, 앱을 사용할 수 있는 모든 지역/국가에 적용됩니다.
 
- **릴리스** 및 **취득 중지** 두 가지 옵션이 표시됩니다. 
+**릴리스** 및 **취득 중지** 두 가지 옵션이 표시됩니다. 
 
-### <a name="release"></a>릴리스
+## <a name="release"></a>릴리스
 
- **릴리스** 드롭다운을 이용, 스토어에서 앱을 사용할 수 있는 때를 설정할 수 있습니다. 스토어에서 검색이나 탐색으로 앱을 찾을 수 있고, 고객이 스토어 목록을 확인해 앱을 취득할 수 있습니다.
+**릴리스** 드롭다운을 이용, 스토어에서 앱을 사용할 수 있는 때를 설정할 수 있습니다. 스토어에서 검색이나 탐색으로 앱을 찾을 수 있고, 고객이 스토어 목록을 확인해 앱을 취득할 수 있습니다.
 
 >[!NOTE]
 > 앱이 스토어에 게시되어 사용할 수 있는 상태가 된 후에는 **릴리스** 날짜를 선택할 수 없습니다(앱을 이미 출시했기 때문).
@@ -56,20 +57,20 @@ ms.lasthandoff: 08/03/2017
 > [!TIP]
 > 또 [다른 릴리스 날짜 입력](set-app-pricing-and-availability.md#display-release-date)을 통해 앱 스토어 목록에 표시되도록 설정할 수 있습니다. 
 
-### <a name="stop-acquisition"></a>취득 중지
+## <a name="stop-acquisition"></a>취득 중지
 
 **취득 중지** 드롭다운을 이용, 새 고객이 스토어에서 앱을 취득하지 못하고, 발견하지 못하도록 만드는 날짜와 시간을 설정할 수 있습니다. 하나 이상의 앱을 사용하는 것을 조정해야 할 때 등, 새 고객에게 더 이상 앱을 제공하지 않는 시기를 정확히 관리하기 원할 때 유용합니다.
 
-**취득 주지**의 기본값은 '사용하지 않음'으로 설정되어 있습니다. 이를 변경하려면 드롭다운에서 **지정(at)**을 선택해, 위에서 설명한대로 날짜와 시간을 지정하세요. 선택한 날짜와 시간부터 고객이 더 이상 앱을 취득할 수 없습니다.
+**취득 주지**의 기본값은 '사용하지 않음'으로 설정되어 있습니다. 이를 변경하려면 드롭다운에서 **지정(at)** 을 선택해, 위에서 설명한대로 날짜와 시간을 지정하세요. 선택한 날짜와 시간부터 고객이 더 이상 앱을 취득할 수 없습니다.
 
-[표시 여부](set-app-pricing-and-availability.md#visibility) 섹션에서 **앱을 검색할 수 있지만 사용할 수 없도록 설정** 을 선택하고, **취득 중지: 직접 링크가 있는 고객은 제품의 스토어 목록을 확인할 수 있지만, 과거 제품을 소유했거나, 판촉 코드가 있고, Windows 10 장치를 사용 중인 경우에만 다운로드 가능**을 선택했을 때와 같은 효과가 있습니다. 앱이 새 고객에게 제공되지 않게 하려면 앱 개요 페이지에서 **앱을 사용할 수 없도록 설정**을 클릭합니다. 자세한 내용은 [스토어에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store)를 참조하세요.
+[표시 여부](choose-visibility-options.md#discoverability) 섹션에서 **앱을 검색할 수 있지만 사용할 수 없도록 설정** 을 선택하고, **취득 중지: 직접 링크가 있는 고객은 제품의 스토어 목록을 확인할 수 있지만, 과거 제품을 소유했거나, 판촉 코드가 있고, Windows 10 장치를 사용 중인 경우에만 다운로드 가능**을 선택했을 때와 같은 효과가 있습니다. 앱이 새 고객에게 제공되지 않게 하려면 앱 개요 페이지에서 **앱을 사용할 수 없도록 설정**을 클릭합니다. 자세한 내용은 [스토어에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store)를 참조하세요.
 
 > [!TIP]
 > **취득 중지**날짜를 선택했는데, 나중에 앱을 다시 사용할 수 있도록 만들려면 새로 제출하고, **취득 중지**를 **사용 안함**으로 바꿔야 합니다. 업데이트한 제출이 게시된 후 앱이 다시 사용할 수 있는 상태가 됩니다.
 
-### <a name="customize-the-schedule-for-specific-markets"></a>특정 지역/국가의 일정을 사용자 지정 
+## <a name="customize-the-schedule-for-specific-markets"></a>특정 지역/국가의 일정을 사용자 지정 
 
-위에서 선택한 옵션이 앱을 제공하는 모든 지역/국가에 적용되는 것이 기본값입니다. 특정 지역/국가의 가격을 사용자 지정하려면 **특정 지역/국가 사용자 지정**을 클릭합니다. **지역/국가 선택** 팝업 창이 앱을 사용할 수 있도록 설정한 모든 지역/국가 목록을 표시합니다. [지역/국가]((define-pricing-and-market-selection.md) 섹션에서 제외한 지역/국가는 표시되지 않습니다. 
+위에서 선택한 옵션이 앱을 제공하는 모든 지역/국가에 적용되는 것이 기본값입니다. 특정 지역/국가의 가격을 사용자 지정하려면 **특정 지역/국가 사용자 지정**을 클릭합니다. **지역/국가 선택** 팝업 창이 앱을 사용할 수 있도록 설정한 모든 지역/국가 목록을 표시합니다. [시장](define-pricing-and-market-selection.md) 섹션에서 제외한 시장들은 표시가 되지 않습니다. 
 
 특정 지역/국가에 대한 일정을 추가하려면, 지역/국가를 선택한 후 **저장**을 클릭합니다. 위에서 설명한 **릴리스** 및 **취득 중지** 옵션이 표시되지만, 해당 지역/국가에만 선택 사항이 적용될 것입니다.
 

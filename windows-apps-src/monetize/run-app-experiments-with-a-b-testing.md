@@ -1,17 +1,20 @@
 ---
 author: mcleanbyron
-Description: "Windows 개발자 센터 대시보드를 사용하여 A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에 대한 실험을 실행할 수 있습니다."
-title: "A/B 테스트로 앱 실험 실행"
+Description: You can use the Windows Dev Center dashboard to run experiments for your Universal Windows Platform (UWP) apps with A/B testing.
+title: A/B 테스트로 앱 실험 실행
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험"
-ms.openlocfilehash: d95f42d7a57c191e371f06b21427d52c5c51773e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10 uwp, Microsoft Store Services SDK A/B 테스트, 실험
+ms.localizationpriority: high
+ms.openlocfilehash: 0ed6fab97d5e4172601b3c2e549e8feab4f8db57
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>A/B 테스트로 앱 실험 실행
 
@@ -47,6 +50,7 @@ A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해�
 * 통계적으로 의미가 있고 작업 가능한 충분한 데이터를 수집하기 위해 최소 2-4주 동안 실험을 실행합니다.
 
 <span id="terms" />
+
 ## <a name="related-terms"></a>관련 용어
 
 |  용어  |  정의  |

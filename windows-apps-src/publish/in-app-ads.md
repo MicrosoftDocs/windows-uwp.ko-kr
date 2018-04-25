@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 66c0ae56c3722162ebef5a8660cc2322d69a278b
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 04d4ca665a8f0dff495b144868767506d7a210f8
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -26,6 +26,7 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 이러한 SDK를 앱과 통합하여 광고를 표시하는 방법에 대한 자세한 내용은 [Microsoft Advertising SDK를 사용하여 앱에 광고 표시](../monetize/display-ads-in-your-app.md)를 참조하세요.
 
 <span id="create-ad-unit" />
+
 ## <a name="create-ad-units"></a>광고 단위 생성
 
 앱에서 [배너](../monetize/banner-ads.md), [중간 광고](../monetize/interstitial-ads.md) 또는 [기본 광고](../monetize/native-ads.md)에 대한 광고 단위를 생성하려면:
@@ -46,7 +47,7 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
       > [!NOTE]
       > 현재 **기본** 광고 단위를 생성하는 기능은 파일럿 프로그램에 참여하고 있는 일부 개발자만 사용할 수 입습니다. 그러나 조만간 모든 개발자가 이 기능을 사용할 수 있도록 지원할 계획입니다. 파일럿 프로그램에 참여하고 싶다면 aiacare@microsoft.com에 문의하세요.
 
-5. **장치 패밀리** 드롭다운 목록에서 광고 단위가 사용될 앱의 대상이 되는 장치 패밀리를 선택합니다. 사용 가능한 옵션은 **UWP(Windows 10)**, **PC/태블릿(Windows 8.1)** 또는 **모바일(Windows Phone 8.x)**입니다.
+5. **장치 패밀리** 드롭다운 목록에서 광고 단위가 사용될 앱의 대상이 되는 장치 패밀리를 선택합니다. 사용 가능한 옵션은 **UWP(Windows 10)**, **PC/태블릿(Windows 8.1)** 또는 **모바일(Windows Phone 8.x)** 입니다.
 
 6. 필요에 따라 다음과 같은 추가 설정을 구성합니다.
 
@@ -61,6 +62,7 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 새 광고 단위를 만든 후에는 **수익 창출** &gt; **인앱 광고** 페이지에 사용 가능한 광고 단위 표가 표시됩니다.
 
 <span id="available-ad-units" />
+
 ## <a name="review-and-edit-ad-units"></a>광고 단위 검토 및 편집
 
 계정에서 하나 이상의 앱에 대한 광고 단위를 만든 후에는 **수익 창출** &gt; **인앱 광고** 페이지 하단의 표에 해당 광고 단위가 표시됩니다. 이 표에는 각 광고 단위에 대한 **응용 프로그램 ID** 및 **광고 단위 ID**와 기타 정보가 표시됩니다. 앱에 광고를 표시하려면 다음과 같이 코드에 이러한 값을 사용해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](../monetize/set-up-ad-units-in-your-app.md)을 참조하세요.
@@ -81,6 +83,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 광고 단위에 지난 6개월에 대한 활동이 없으면 **비활성**으로 지정되며 나중에는 대시보드에서 제거됩니다. 필터를 사용하여 **활성** 또는 **비활성** 광고 단위만 표시할 수 있습니다. 잘못 **비활성**으로 표시된 광고 단위가 있는 경우 [고객 지원에 문의](http://aka.ms/storesupport)합니다.
 
 <span id="mediation" />
+
 ## <a name="mediation-settings"></a>조정 설정
 
 [새 UWP 광고 단위를 만들거나](#create-ad-unit) [기존 UWP 광고 단위를 편집](#available-ad-units)할 때 이 섹션의 옵션을 사용하여 광고 단위에 대한 광고 조정을 구성합니다. 광고 조정을 통해 기타 유료 광고 네트워크의 광고와 Microsoft 앱 프로모션 캠페인 비수익 광고 등 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 홍보 기능을 최대화할 수 있습니다. Microsoft는 사용자가 선택한 광고 네트워크의 배너 광고 요청을 조정합니다. 앱에서 UWP 광고 단위가 배너, 중간 광고 또는 기본 광고에 이미 연결되어 있는 경우에는 광고 조정을 지원하기 위해 앱에서 코드를 변경할 필요가 없습니다.
@@ -113,6 +116,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 10. **광고 단위 만들기**(새로운 광고 단위를 만드는 경우) 또는 **저장**(기존 광고 단위를 편집하는 경우)을 클릭합니다.
 
 <span id="paid-networks" />
+
 ### <a name="supported-paid-ad-networks"></a>지원되는 유료 광고 네트워크
 
 다음 표에는 각 광고 유형에 대해 현재 지원되는 유료 네트워크가 나와 있습니다. [일부 지역/국가에서 사용할 수 없는](#network-markets) 네트워크도 있습니다.
@@ -131,6 +135,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 
 <span id="other-networks" />
+
 ### <a name="other-ad-networks"></a>기타 광고 네트워크
 
 다음 표에는 각 광고 유형에 대해 현재 지원되는 기타 네트워크가 나와 있습니다.
@@ -142,6 +147,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 
 <span id="network-markets" />
+
 ### <a name="supported-markets-for-ad-networks"></a>광고 네트워크 지원 지역/국가
 
 사용 가능한 광고 네트워크가 (다음을 제외한) [지원 지역/국가](define-pricing-and-market-selection.md#microsoft-store-consumer-markets)에 광고를 서비스합니다.
@@ -153,6 +159,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 | smartclip | 오스트리아, 벨기에, 덴마크, 핀란드, 독일, 이탈리아, 네덜란드, 노르웨이, 스웨덴, 스위스  |
 
 <span id="coppa" />
+
 ## <a name="coppa-compliance"></a>COPPA 규정 준수
 
 [광고 단위 만들거나](#create-ad-unit) [기존 광고 단위를 선택](#available-ad-units)할 때 광고 단위에 대해 선택된 앱에 앱 인증 과정의 [Store 내](../publish/the-app-certification-process.md#in-the-store) 단계에 도달한 제출이 하나 이상 있는 경우 **COPPA 규정 준수** 섹션이 대시보드 페이지의 맨 아래에 나타납니다.

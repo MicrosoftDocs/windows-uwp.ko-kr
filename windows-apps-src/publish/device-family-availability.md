@@ -1,19 +1,19 @@
 ---
 author: jnHs
 Description: After your packages have been successfully uploaded, you'll see a table that indicates which packages will be offered to specific Windows 10 device families (and earlier OS versions, if applicable), in ranked order.
-title: "장치 패밀리 가용성"
+title: 장치 패밀리 가용성
 ms.author: wdg-dev-content
-ms.date: 10/12/2017
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 패키지, 업로드, 장치 패밀리 가용성"
+keywords: Windows 10, uwp, 패키지, 업로드, 장치 패밀리 가용성
 ms.localizationpriority: high
-ms.openlocfilehash: a3ae23a08ec305285569de8b6d55e805beaa86ba
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 44c20c05457669edb31067b6d7ac8bc60f09e72e
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="device-family-availability"></a>장치 패밀리 가용성
 
@@ -36,6 +36,7 @@ Windows.Universal 장치 패밀리를 대상으로 하는 패키지는 모든 Wi
 앱이 이를 지원하는 경우 앱을 다운로드할 수 있는 Windows 10 장치 형식에 제한이 없는 한 모든 확인란을 선택하는 것이 좋습니다. 예를 들어 앱이 [Surface Hub](https://developer.microsoft.com/windows/surfacehub) 및/또는 [Microsoft HoloLens](http://dev.windows.com/holographic/development_overview)에 대해 적절한 환경을 제공하지 않는 경우 **Windows 10 Team** 및/또는 **Windows 10 Holographic** 확인란을 선택 해제할 수 있습니다. 이렇게 하면 새로운 고객이 해당 장치에서 앱을 다운로드할 수 없습니다. 나중에 이러한 고객에게 제공할 준비가 되면 이 확인란을 선택하여 새 제출을 생성할 수 있습니다.
 
 <span id="xbox" />
+
 Windows.Universal 패키지에 대해 기본적으로 선택되지 않은 유일한 Windows 10 장치 패밀리는 **Windows 10 Xbox**입니다. 앱이 게임이 아니거나 또는 게임인데 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 활성화했거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 마쳤고 제출에 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일된 중립 및/또는 x64 UWP 패키지가 포함된 경우 **Windows 10 Xbox** 확인란을 선택하여 Xbox One 고객에게 앱을 제공할 수 있습니다.
 
 > [!IMPORTANT]
@@ -48,6 +49,8 @@ Windows.Universal 패키지에 대해 기본적으로 선택되지 않은 유일
 >   
 > 이 문제를 계속 해결할 수 없는 경우 고객 지원 센터에 문의합니다.
 
+Windows 10 IoT Core에 대한 UWP 앱을 제출하는 경우, 패키지를 업로드한 후 기본 선택을 변경해서는 안 되기 때문에 Windows 10 IoT을 위한 별도의 확인란이 없습니다. IoT Core UWP 앱 게시에 대한 자세한 내용은 [IoT Core UWP앱에 대한 Microsoft Store 지원](https://docs.microsoft.com/windows/iot-core/commercialize-your-device/installingandservicing)을 참조하세요.
+
 제출에 **Windows 8/8.1** 및 **Windows Phone 8.x 이하**에서 실행할 수 있는 패키지가 포함되어 있는 경우 해당 패키지는 표에 표시된 대로 고객이 사용할 수 있게 됩니다. 이 OS 버전에는 확인란이 없습니다. 이러한 고객에게 앱을 제공하지 않으려면 제출에서 해당 패키지를 제거합니다.
 
 > [!IMPORTANT]
@@ -57,8 +60,7 @@ Windows.Universal 패키지에 대해 기본적으로 선택되지 않은 유일
 
 예를 들어 Windows Phone 8.1 패키지로 앱을 게시하고 나중에 유니버설 장치 패밀리를 대상으로 하는 동일한 앱에 Windows 10(UWP) 패키지를 추가한 경우 Windows Phone 8.1 패키지를 가진 Windows 10 Mobile 고객은 **Windows 10 Mobile** 상자의 선택을 취소한 경우에도 이 Windows 10(UWP) 패키지에 대한 업데이트를 받게 됩니다(이는 새 다운로드가 아니라 업데이트이기 때문). 그러나 유니버설 또는 모바일 장치 패밀리를 대상으로 하는 Windows 10(UWP) 패키지를 제공하지 않은 경우 Windows 10 Mobile 고객은 계속 Windows Phone 8.1 패키지를 사용하게 됩니다.
 
-장치 패밀리에 대한 자세한 내용은 [유니버설 Windows 플랫폼 개요](../get-started/universal-application-platform-guide.md) 및 [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)를 참조하세요.
-
+장치 패밀리에 대한 자세한 내용은 [**장치 패밀리 개요**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)를 참조하세요.
 
 ## <a name="understanding-ranking"></a>순위 이해
 

@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 754fa7c1fe805b45b33be1d560d07c22646d497c
-ms.sourcegitcommit: 444eaccbdcd4be2f1a1e6d4ce5525ba57e363b56
+ms.openlocfilehash: 1810cf1568ab40621ccc981a6ec1f561d0e8a296
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="handle-uri-activation"></a>URI 활성화 처리
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/29/2018
 
 앱은 패키지 매니페스트에 나열된 URI 스키마 이름에 대해서만 활성화 이벤트를 받습니다. 다음은 앱이 `alsdk` URI 스키마 이름을 처리하도록 지정하는 방법입니다.
 
-1.  **솔루션 탐색기**에서 package.appxmanifest를 두 번 클릭하여 매니페스트 디자이너를 엽니다. **선언** 탭을 선택하고 **사용 가능한 선언** 드롭다운 목록에서 **프로토콜**을 선택한 다음 **추가**를 클릭합니다.
+1. **솔루션 탐색기**에서 package.appxmanifest를 두 번 클릭하여 매니페스트 디자이너를 엽니다. **선언** 탭을 선택하고 **사용 가능한 선언** 드롭다운 목록에서 **프로토콜**을 선택한 다음 **추가**를 클릭합니다.
 
     다음은 프로토콜에 대한 매니페스트 디자이너에서 입력할 수 있는 각 필드에 대한 간략한 설명입니다(자세한 내용은 [**AppX Package Manifest**](https://msdn.microsoft.com/library/windows/apps/dn934791) 참조).
 
@@ -50,11 +50,12 @@ ms.lasthandoff: 01/29/2018
 | **진입점** | 프로토콜 확장명을 처리하는 작업을 지정합니다. 이는 일반적으로 Windows 런타임 형식의 정규화된 네임스페이스 이름입니다. 지정하지 않으면 앱에 대한 진입점이 사용됩니다. |
 | **시작 페이지** | 확장성 지점을 처리하는 웹 페이지입니다. |
 | **리소스 그룹** | 리소스 관리 목적으로 확장명 활성화를 그룹화하기 위해 사용할 수 있는 태그입니다. |
-| **원하는 보기**(Windows만 해당) | **Desired View** 필드를 지정하여 URI 체계 이름에 대해 시작을 처리할 때 앱의 창에 필요한 공간을 나타냅니다. **Desired View**에 사용 가능한 값은 **Default**, **UseLess**, **UseHalf**, **UseMore** 또는 **UseMinimum**입니다. <br/>**참고** Windows는 대상 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. **원하는 보기**를 설정해도 대상 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.<br/> **모바일 디바이스 패밀리: 원하는 보기**는 모바일 디바이스 패밀리에서 지원되지 않습니다. |
-2.  **로고**로 `images\Icon.png`를 입력합니다.
-3.  **표시 이름**으로 `SDK Sample URI Scheme`를 입력합니다.
-4.  **이름**으로 `alsdk`를 입력합니다.
-5.  Ctrl+S를 눌러 package.appxmanifest에 변경 사항을 저장합니다.
+| **원하는 보기**(Windows만 해당) | **Desired View** 필드를 지정하여 URI 체계 이름에 대해 시작을 처리할 때 앱의 창에 필요한 공간을 나타냅니다. **Desired View**에 사용 가능한 값은 **Default**, **UseLess**, **UseHalf**, **UseMore** 또는 **UseMinimum**입니다.<br/>**참고** Windows는 대상 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. **원하는 보기**를 설정해도 대상 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.<br/>**모바일 디바이스 패밀리: Desired View**는 모바일 디바이스 패밀리에서 지원되지 않습니다. |
+
+2. **로고**로 `images\Icon.png`를 입력합니다.
+3. **표시 이름**으로 `SDK Sample URI Scheme`를 입력합니다.
+4. **이름**으로 `alsdk`를 입력합니다.
+5. Ctrl+S를 눌러 package.appxmanifest에 변경 사항을 저장합니다.
 
     이렇게 하면 이와 같은 [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) 요소가 패키지 매니페스트에 추가됩니다. **windows.protocol** 범주는 앱이 `alsdk` URI 체계 이름을 처리함을 나타냅니다.
 
@@ -142,7 +143,6 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 악의적인 경우를 비롯하여 어떤 앱이나 웹 사이트도 URI 스키마 이름을 사용할 수 있습니다. 따라서 URI를 통해 가져오는 데이터는 신뢰할 수 없는 원본에서 온 것일 수 있으므로 URI를 통해 받은 매개 변수를 기반으로 영구 작업을 수행하지 않는 것이 좋습니다. 예를 들어 사용자의 계정 페이지로 앱을 실행하는 데 URI 매개 변수를 사용할 수 있지만 사용자의 계정을 직접 수정하는 데는 사용하지 않는 것이 좋습니다.
 
 > **참고** 앱에 대해 새 URI 체계 이름을 만들려는 경우 [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550)의 지침에 따라야 합니다. 그러면 이름이 URI 스키마에 대한 표준을 충족하게 됩니다.
-
 > **참고** 프로토콜 계약을 통해 시작될 때 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작된 화면으로 다시 돌아가도록 해야 합니다.
 
 앱이 새 URI 대상을 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다.
@@ -153,28 +153,24 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 
 **전체 예제**
 
-* [연결 시작 예제](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
+- [연결 시작 예제](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 
 **개념**
 
-* [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [파일 형식 및 URI 연결 모델](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+- [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+- [파일 형식 및 URI 연결 모델](https://msdn.microsoft.com/library/windows/desktop/hh848047)
 
 **작업**
 
-* [URI에 대한 기본 앱 실행](launch-default-app.md)
-* [파일 활성화 처리](handle-file-activation.md)
+- [URI에 대한 기본 앱 실행](launch-default-app.md)
+- [파일 활성화 처리](handle-file-activation.md)
 
 **지침**
 
-* [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
+- [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
 **참조**
 
-* [AppX 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/dn934791)
-* [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
-* [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)~~
-
- 
-
- 
+- [AppX 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/dn934791)
+- [Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/br224742)
+- [Windows.UI.Xaml.Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)

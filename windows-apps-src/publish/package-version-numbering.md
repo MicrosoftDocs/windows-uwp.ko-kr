@@ -1,24 +1,25 @@
 ---
 author: jnHs
-Description: "Windows 스토어에서는 버전 번호와 관련 특정 규칙을 적용하며, 이는 OS 버전마다 약간 다르게 작동합니다."
-title: "패키지 버전 번호"
+Description: The Microsoft Store enforces certain rules related to version numbers, which work somewhat differently in different OS versions.
+title: 패키지 버전 번호
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 67c90f87fe0d02a0a906392409103e93e83103c3
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: a5c9c676a3ccd8ff7f1e7d53d9019d722fefa722
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
 
-제공하는 각 패키지에는 버전 번호가 있어야 합니다(app 매니페스트 내 **Package/Identity** 요소의 **Version** 속성 값으로 제공됨). Windows 스토어에서는 버전 번호와 관련 특정 규칙을 적용하며, 이는 OS 버전마다 약간 다르게 작동합니다.
+제공하는 각 패키지에는 버전 번호가 있어야 합니다(app 매니페스트 내 **Package/Identity** 요소의 **Version** 속성 값으로 제공됨). Microsoft Store에서는 버전 번호와 관련된 특정 규칙을 적용하며, 이는 OS 버전마다 약간 다르게 작동합니다.
 
 > [!NOTE]
 > 이 항목에서는 "패키지"를 참조하지만 별도로 언급되지 않은 한 .appx 파일과 .appxbundle 파일 모두에 동일한 버전 번호 규칙이 적용됩니다.
@@ -26,12 +27,12 @@ ms.lasthandoff: 06/21/2017
 
 ## <a name="version-numbering-for-windows-10-packages"></a>Windows 10 패키지에 대한 버전 번호
 
-Windows 10 패키지의 버전 번호는 동일한 앱에 대해 게시할 예정인 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지나 이전에 게시한 OS 버전용 패키지의 모든 버전 번호보다 항상 높아야 합니다. 자세한 내용은 [이전에 게시된 앱에 Windows 10용 패키지 추가](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)를 참조하세요.
+Windows 10 패키지의 버전 번호는 동일한 앱에 대해 게시할 예정인 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지나 이전에 게시한 OS 버전용 패키지의 모든 버전 번호보다 항상 높아야 합니다. 자세한 내용은 [이전에 게시된 앱에 Windows 10용 패키지 추가](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)를 참조하세요.
 
 > [!IMPORTANT]
 > 버전 번호의 마지막(네 번째) 섹션은 스토어 사용을 위해 예약되며 패키지를 빌드할 때 0이어야 합니다. 단, 스토어가 이 섹션의 값을 변경할 수 있습니다.
 
-게시된 제출에서 Windows 10 패키지를 선택할 때 Windows 스토어는 항상 고객의 장치에 적용되는 가장 높은 버전의 패키지를 사용합니다. 따라서 특정 장치 유형의 고객에게 제공되는 패키지에 대한 유연성 및 제어 기능이 향상됩니다. 특히, 이러한 패키지를 순서에 상관없이 제출할 수 있습니다. 이후의 각 제출에서 더 높은 버전의 패키지를 제공하지 않아도 됩니다.
+게시된 제출에서 Windows 10 패키지를 선택할 때 Microsoft Store는 항상 고객의 장치에 적용할 수 있는 가장 높은 버전의 패키지를 사용합니다. 따라서 특정 장치 유형의 고객에게 제공되는 패키지에 대한 유연성 및 제어 기능이 향상됩니다. 특히, 이러한 패키지를 순서에 상관없이 제출할 수 있습니다. 이후의 각 제출에서 더 높은 버전의 패키지를 제공하지 않아도 됩니다.
 
 동일한 버전 번호의 여러 Windows 10 패키지를 제공할 수도 있습니다. 그러나 버전 번호를 공유하는 패키지는 아키텍처가 같을 수 없습니다. 스토어에서 각 패키지에 사용하는 전체 ID는 고유해야 하기 때문입니다. 자세한 내용은 [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-identity)를 참조하세요.
 
@@ -65,11 +66,12 @@ Windows 10에서는 모든 곳에서 실행되는 코드베이스를 작성할 �
 
 문제가 있는 패키지를 이미 받은 고객에 대한 문제를 해결하려면 가능한 한 빨리 잘못된 패키지보다 버전 번호가 더 높은 새 Windows 10 패키지를 제출하면 됩니다. 제출에 대한 인증 프로세스가 완료되면 모든 고객이 새 패키지(버전 번호가 더 높으므로)로 업데이트됩니다.
 
+
 ## <a name="version-numbering-for-windows-81-and-earlier-and-windows-phone-81-packages"></a>Windows 8.1 이하 및 Windows Phone 8.1 패키지에 대한 버전 번호
 
 Windows Phone 8.1을 대상으로 하는 .appx 패키지의 경우 새 제출의 패키지 버전 번호는 항상 마지막 제출(또는 이전 제출)에 포함된 패키지보다 높아야 합니다.
 
-Windows 8 및 Windows 8.1을 대상으로 하는 .appx 패키지의 경우 아키텍처별로 동일한 규칙이 적용됩니다. 새 제출의 패키지 버전 번호가 같은 아키텍처에 대해 Windows 스토어에 마지막으로 제공된 패키지보다 항상 높아야 합니다.
+Windows 8 및 Windows 8.1을 대상으로 하는 .appx 패키지의 경우 아키텍처별로 동일한 규칙이 적용됩니다. 새 제출의 패키지 버전 번호가 같은 아키텍처에 대해 Store에 마지막으로 게시된 패키지보다 항상 높아야 합니다.
 
 또한 Windows 8.1 패키지의 버전 번호는 동일한 앱에 대한 모든 Windows 8 패키지의 버전 번호보다 항상 커야 합니다. 즉, 제출하는 모든 Windows 8 패키지의 버전 번호가 동일한 앱에 대해 제출한 모든 Windows 8.1 패키지의 버전 번호보다 작아야 합니다.
 
@@ -78,7 +80,7 @@ Windows 8 및 Windows 8.1을 대상으로 하는 .appx 패키지의 경우 아�
 
 다음은 Windows 8 및 Windows 8.1에 대한 다양한 버전 번호 업데이트 시나리오에서 발생하는 상황의 몇 가지 예입니다.
 
-| 스토어에 있는 앱의 현재 버전  | 업로드할 버전 | 새 버전이 Windows 스토어에 나열된 후 새 구입에 설치되는 버전 | 새 버전이 Windows 스토어에 나열된 후 고객에게 이미 앱이 있는 경우 업데이트되는 버전 |
+| 스토어에 있는 앱의 현재 버전  | 업로드할 버전 | 새 버전이 Store에 나열된 후 새 구입에 설치되는 버전 | 새 버전이 Store에 나열된 후 고객에게 이미 앱이 있는 경우 업데이트되는 버전 |
 |---------------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------|----------|
 | 없음                                     | x86, v1.0.0.0               | x86 및 x64 컴퓨터의 x86, v1.0.0.0                                                | 없음. |
 | x86, v1.0.0.0                               | x64, v1.0.0.0               | 고객의 아키텍처용 v1.0.0.0                                                   | 없음. 버전 번호가 동일함 |
@@ -87,6 +89,6 @@ Windows 8 및 Windows 8.1을 대상으로 하는 .appx 패키지의 경우 아�
 | 중립, v1.0.0.1                           | x86, v1.0.0.0 <br> x64, v1.0.0.0 <br> ARM, v1.0.0.0 | 고객 컴퓨터의 아키텍처용 v1.0.0.0          | 없음. 앱의 중립, v1.0.0.1 버전이 있는 고객의 경우 계속 사용함 |
 | 중립, v1.0.0.1 <br> x86, v1.0.0.0 <br> x64, v1.0.0.0 <br> ARM, v1.0.0.0 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | 고객 컴퓨터의 아키텍처용 v1.0.0.1 | 중립, v1.0.0.1 버전 앱을 실행하는 고객의 경우 없음 <br> 컴퓨터의 특정 아키텍처용으로 빌드된 앱의 v1.0.0.0을 실행하는 고객의 경우 v1.0.0.0이 v1.0.0.1로 업데이트됨 |
 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | x86, v1.0.0.2 <br> x64, v1.0.0.2 <br> ARM, v1.0.0.2 | 고객 컴퓨터의 아키텍처용 v1.0.0.2  | 컴퓨터의 특정 아키텍처용으로 빌드된 앱의 v1.0.0.1을 실행하는 고객의 경우 v1.0.0.1이 v1.0.0.2로 업데이트됩니다. |
- 
+
 > [!NOTE]
 > .appx 패키지와 달리 모든 .xap 패키지의 버전 번호는 지정된 고객에게 제공할 패키지를 결정할 때 고려되지 않습니다. 한 .xap 패키지에서 최신 패키지로 고객을 업데이트하려면 새 제출에서 이전 .xap를 제거해야 합니다.

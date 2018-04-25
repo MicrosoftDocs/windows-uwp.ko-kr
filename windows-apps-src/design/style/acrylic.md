@@ -14,17 +14,17 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: 21fccc72081d1825cad91e9d44bdc458c62d99d4
-ms.sourcegitcommit: 9666ef4cf5bb63dd62ee95f89a6ad0ac1bf7ac9d
+ms.openlocfilehash: 3f42a839f29b13d7245770675b1f3eea84ffa5d5
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
 아크릴은 부분적으로 투명한 텍스처를 만드는 일종의 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush)입니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, Acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **중요한 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Background)
+> **중요한 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
 
 
 ![밝은 테마의 아크릴](images/Acrylic_DarkTheme_Base.png)
@@ -143,7 +143,7 @@ ms.lasthandoff: 02/28/2018
     <tr>
         <th align="center">리소스 키</th>
         <th align="center">색조 불투명도</th>
-        <th align="center">[대체 색](color.md)</th>
+        <th align="center"><a href="color.md">대체 색</a> </th>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowBrush, SystemControlAcrylicElementBrush <br/> SystemControlChromeLowAcrylicWindowBrush, SystemControlChromeLowAcrylicElementBrush <br/> SystemControlBaseHighAcrylicWindowBrush, SystemControlBaseHighAcrylicElementBrush <br/> SystemControlBaseLowAcrylicWindowBrush, SystemControlBaseLowAcrylicElementBrush <br/> SystemControlAltHighAcrylicWindowBrush, SystemControlAltHighAcrylicElementBrush <br/> SystemControlAltLowAcrylicWindowBrush, SystemControlAltLowAcrylicElementBrush </td>
@@ -151,7 +151,7 @@ ms.lasthandoff: 02/28/2018
         <td> ChromeMedium <br/> ChromeLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltHigh <br/><br/> AltLow </td>
     </tr>
     </tr>
-        <td> **권장 사용법:** 다음은 다양한 사용법에서 제대로 작동하는 범용 아크릴 리소스입니다. 앱에서 텍스트 크기가 18픽셀보다 작은 AltMedium 컬러 보조 텍스트를 사용하는 경우 [명암비 요구 사항을 충족](../accessibility/accessible-text-requirements.md)하도록 80% 아크릴 리소스를 텍스트 뒤에 배치합니다. </td>
+        <td> <b>권장 사용법:</b> 다음은 다양한 사용법에서 제대로 작동하는 범용 아크릴 리소스입니다. 앱에서 텍스트 크기가 18픽셀보다 작은 AltMedium 컬러 보조 텍스트를 사용하는 경우 <a href="../accessibility/accessible-text-requirements.md">명암비 요구 사항을 충족</a>하도록 80% 아크릴 리소스를 텍스트 뒤에 배치합니다. </td>
     </tr>
     <tr>
         <td> SystemControlAcrylicWindowMediumHighBrush, SystemControlAcrylicElementMediumHighBrush <br/> SystemControlBaseHighAcrylicWindowMediumHighBrush, SystemControlBaseHighAcrylicElementMediumHighBrush </td>
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/28/2018
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> **권장 사용법:** 앱에서 텍스트 크기가 18픽셀 이상인 AltMedium 컬러 보조 텍스트를 사용하는 경우 보다 투명한 70% 아크릴 리소스를 텍스트 뒤에 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
+        <td> <b>권장 사용법:</b> 앱에서 텍스트 크기가 18픽셀 이상인 AltMedium 컬러 보조 텍스트를 사용하는 경우 보다 투명한 70% 아크릴 리소스를 텍스트 뒤에 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -167,7 +167,7 @@ ms.lasthandoff: 02/28/2018
         <td> ChromeHigh <br/><br/> ChromeMedium <br/><br/> ChromeMediumLow <br/><br/> BaseHigh <br/><br/> BaseLow <br/><br/> AltMediumLow </td>
     </tr>
     <tr>
-        <td> **권장 사용법:** 아크릴 위에 AltHigh 색의 기본 텍스트만 배치할 경우 앱에서 이러한 60% 리소스를 활용할 수 있습니다. 앱의 [세로 탐색 창](../controls-and-patterns/navigationview.md), 다시 말해서 햄버거 메뉴는 60% 아크릴로 그리는 것이 좋습니다. </td>
+        <td> <b>권장 사용법:</b> 아크릴 위에 AltHigh 색의 기본 텍스트만 배치할 경우 앱에서 이러한 60% 리소스를 활용할 수 있습니다. 앱의 <a href="../controls-and-patterns/navigationview.md">세로 탐색 창</a>, 다시 말해서 햄버거 메뉴는 60% 아크릴로 그리는 것이 좋습니다. </td>
     </tr>
 </table>
 
@@ -176,7 +176,7 @@ ms.lasthandoff: 02/28/2018
     <tr>
         <th align="center">리소스 키</th>
         <th align="center">색조 불투명도</th>
-        <th align="center">[색조 및 대체 색](color.md)</th>
+        <th align="center"><a href="color.md">색조 및 대체 색</a> </th>
     </tr>
     <tr>
         <td> SystemControlAccentAcrylicWindowAccentMediumHighBrush, SystemControlAccentAcrylicElementAccentMediumHighBrush  </td>
@@ -264,7 +264,7 @@ else
 
 ## <a name="extend-acrylic-into-the-title-bar"></a>아크릴을 제목 표시줄로 확장
 
-앱의 창 원활하게 보이게 하려면 제목 표시줄 영역에서 아크릴을 사용할 수 있습니다. 이 예에서는 [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) 개체의 [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar#Windows_UI_ViewManagement_ApplicationViewTitleBar_ButtonBackgroundColor) 및 [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar#Windows_UI_ViewManagement_ApplicationViewTitleBar_ButtonInactiveBackgroundColor) 속성을 [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors#Windows_UI_Colors_Transparent)로 설정하여 제목 표시줄로 아크릴을 확장합니다. 
+앱의 창 원활하게 보이게 하려면 제목 표시줄 영역에서 아크릴을 사용할 수 있습니다. 이 예에서는 [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) 개체의 [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor) 및 [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) 속성을 [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors.Transparent)로 설정하여 제목 표시줄로 아크릴을 확장합니다. 
 
 ```csharp
 /// Extend acrylic into the title bar. 
@@ -277,7 +277,7 @@ private void ExtendAcrylicIntoTitleBar()
 }
 ```
 
-여기에 표시된 대로 [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window#Windows_UI_Xaml_Window_Activate)를 호출한 이후 이 코드를 앱의 [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) 메서드(_App.xaml.cs_)에 배치하거나 앱의 첫 번째 페이지에 배치할 수 있습니다. 
+여기에 표시된 대로 [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate)를 호출한 이후 이 코드를 앱의 [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) 메서드(_App.xaml.cs_)에 배치하거나 앱의 첫 번째 페이지에 배치할 수 있습니다. 
 
 
 ```csharp

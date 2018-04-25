@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 5d416ad13c2e689c5265164c0269244a387a6c7f
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 518cc64fec2524bb3cc02daca72a990d016c8ce5
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-windows-10-for-developers-sdk-preview-build-17110"></a>개발자용 Windows 10 SDK Preview 빌드 17110의 새로운 기능
 
 Visual Studio 2017 및 업데이트된 SDK와 함께 Windows 10 SDK Preview 빌드 17110은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
-다음은 이 SDK Preview에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. 지금은 이러한 기능은 [Windows 참가자 프로그램](https://insider.windows.com/en-us/)의 회원만 액세스할 수 있으며 다음 주요 Windows 10 업데이트에서 공개될 예정입니다. Windows SDK에 추가된 새로운 네임스페이스의 전체 목록을 보려면 [Windows 10 빌드 17110 API의 변경 내용](windows-10-build-17110-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 자세한 내용은 [Windows 10의 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
+다음은 이 SDK Preview에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. 지금은 이러한 기능은 [Windows 참가자 프로그램](https://insider.windows.com/)의 회원만 액세스할 수 있으며 다음 주요 Windows 10 업데이트에서 공개될 예정입니다. Windows SDK에 추가된 새로운 네임스페이스의 전체 목록을 보려면 [Windows 10 빌드 17110 API의 변경 내용](windows-10-build-17110-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 자세한 내용은 [Windows 10의 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=823181)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
 ## <a name="design--ui"></a>디자인 및 UI
 
@@ -63,7 +63,7 @@ Fluent 디자인 업데이트 | 새로운 정보 및 지침으로 많은 Fluent 
 PlayReady | Microsoft PlayReady는 무단 사용으로부터 디지털 콘텐츠를 보호하기 위한 일련의 기술입니다. PlayReady는 모든 종류의 디바이스 및 앱 및 모든 운영 체제에서 실행됩니다. [앱에 PlayReady를 포함하는 방법을 알아봅니다.](https://docs.microsoft.com/playready/)
 화면 캡처 | [Windows.Graphics.Capture 네임스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)는 디스플레이 또는 응용 프로그램 창에서 프레임을 획득하고 비디오 스트림 또는 스냅숏을 만들어 공동 작업 및 대화형 환경을 빌드하기 위해 API를 제공합니다. 자세한 내용은 [화면 캡처](../audio-video-camera/screen-capture.md)를 참고하십시오.
 시스템 트리거 | [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger)를 사용하여 OS가 필요한 시스템 트리거를 제공하지 않는 경우 사용자가 시스템 트리거를 지정할 수 있습니다. 이러한 경우는 하드웨어 드라이버 및 UWP 앱이 둘 다 타사 제품인 경우, 하드웨어 드라이버가 앱이 처리하는 사용자 지정 이벤트를 발생하게 해야 할 때입니다. 예를 들어, 오디오 잭이 연결되어 있을 때 사용자에게 알려야 하는 오디오 카드가 있습니다.
-사용자 작업 | **UserActivitySessionHistoryItem** 클래스에 사용자의 최근 활동을 검색하는 새로운 메서드가 있습니다. 자세한 내용은 [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel#Windows_ApplicationModel_UserActivities_UserActivityChannel_GetRecentUserActivitiesAsync_System_Int32_) 및 해당 오버 로드를 참조하세요.
+사용자 작업 | **UserActivitySessionHistoryItem** 클래스에 사용자의 최근 활동을 검색하는 새로운 메서드가 있습니다. 자세한 내용은 [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) 및 해당 오버 로드를 참조하세요.
 Windows Mixed Reality | 확장 중인 Windows Mixed Reality 플랫폼을 지원하기 위해 신규 API가 [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) 및 [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial) 네임스페이스에 추가되었습니다.
 
 ## <a name="publish--monetize-windows-apps"></a>Windows 앱 게시 및 수익 창출

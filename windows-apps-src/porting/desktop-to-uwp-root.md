@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: 3cbaa8a8e78ad14472a34e107521d9c966ba434f
-ms.sourcegitcommit: 884b79b4c6fd8014fab9953faca557e56bb8c400
+ms.openlocfilehash: a16f86512a3c33055cb4825966282f1487ea158d
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="desktop-bridge"></a>데스크톱 브리지
 
@@ -58,6 +58,7 @@ Windows 10 환경을 향상시키기 위해 사용하는 코드를 제외하고,
 그 다음으로 [데스크톱 앱용 패키지 준비](desktop-to-uwp-prepare.md) 문서를 살펴보고, Windows 앱 패키지 생성 전에 앱에 적용되는 문제를 해결하세요. 패키지 생성 전에 앱을 많이 변경할 필요가 없는 경우도 있습니다. 그러나 패키지 생성 전에 앱을 조정해야 하는 몇 가지 상황들이 있습니다.
 
 <a id="convert" />
+
 ## <a name="package"></a>패키지
 
 다음은 앱을 Windows 앱 패키지로 만들 때 사용할 수 있는 몇 가지 도구들입니다.
@@ -114,6 +115,9 @@ Desktop App Converter는 Hyper-V 및 [VMware](http://www.vmware.com/)에도 통�
 또한 고급 설치 관리자는 [데스크톱 브리지 앱 빌드 및 디버그](http://www.advancedinstaller.com/debug-desktop-bridge-apps.html)에 사용할 수 있는 Visual Studio 2017 및 2015용 확장을 제공합니다.
 
 빠른 개요는 이 [비디오](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be)를 참조하세요.
+
+> [!TIP]
+> 최근에 출시된 [고급 설치 관리자 Express Edition](https://www.advancedinstaller.com/express-edition.html)을 확인하세요.
 
 #### <a name="cloudhouse-compatibility-containers"></a>Cloudhouse 호환성 컨테이너
 

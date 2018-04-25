@@ -1,23 +1,24 @@
 ---
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
-title: "개발자 계정 열기"
-description: "Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 이 개요는 계정을 설정하는 프로세스를 파악하도록 도움을 줍니다."
+title: 개발자 계정 열기
+description: 이 문서는 Microsoft Store 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 개요로, 계정을 설정하는 프로세스를 이해하는 데 도움을 줍니다.
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 726c2edebe5c12120c0f034414516b3076bf3795
-ms.sourcegitcommit: fadde8afee46238443ec1cb71846d36c91db9fb9
+ms.localizationpriority: high
+ms.openlocfilehash: 5a82afad1c56a5e06e3d82d6b6e6e381fa8934dd
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
-Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 이 개요는 계정을 설정하는 프로세스를 파악하도록 도움을 줍니다.
+이 문서는 Microsoft Store 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 개요로, 계정을 설정하는 프로세스를 이해하는 데 도움을 줍니다.
 
 > [!NOTE]
 > 개발자 계정을 등록할 때 연락처 정보에 입력한 메일 주소를 사용하여 계정과 관련된 메일 내용을 전송합니다. 때때로 해당 프로그램에 대한 알림 메일이 포함될 수 있습니다. [옵트아웃(opt out)](http://go.microsoft.com/fwlink/p/?LinkId=533280)하여 이러한 알림 메일을 받지 않도록 선택할 경우에도 거래용 메일은 계속 전송됩니다(예: 앱이 인증을 통과했거나 결제가 진행 중임을 알리기 위해). 이러한 메일이 계정 운영의 필수적인 부분이고, 계정을 해지하지 않는 한 이러한 거래용 메일을 계속 받게 됩니다.
@@ -35,7 +36,8 @@ Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등�
 
   > [!NOTE]
   > 여기에 입력하는 이름을 사용할 권한이 있는지 확인하세요. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/Hh694058)을 참조하세요. 여러분이 상표 또는 기타 법적 권한을 보유하고 있는 판매자 표시 이름을 다른 사람이 사용하는 경우 [Microsoft에 문의](http://go.microsoft.com/fwlink/p/?LinkId=233777)하세요.    
-6.  개발자 계정에 사용할 연락처 정보를 입력합니다.
+
+  6.  개발자 계정에 사용할 연락처 정보를 입력합니다.
 
   > [!NOTE]
   > Microsoft에서 계정 관련 문제로 연락하는 경우에 이 정보를 사용합니다. 예를 들어 등록을 완료하면 메일 확인 메시지를 받게 됩니다. 이후에는 금액을 지불받거나 계정과 관련된 정보를 수정해야 하는 경우에 메시지를 받습니다. 비거래 메일을 받지 않도록 선택하지 않았다면 위에서 설명한 대로 알림 메일을 받을 수 있습니다.
@@ -59,7 +61,7 @@ Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등�
 > [!IMPORTANT]
 > 여러 사용자 개발자 센터 계정에 액세스할 수 있도록 Azure Active Directory를 사용하여 개별 사용자에게 역할을 할당하는 것이 좋습니다. 각 사용자는 개별 Azure AD 자격 증명으로 로그인하여 개발자 센터 계정에 액세스할 수 있습니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
 
--   MyCompany_DevCenter@outlook.com 등 자신이나 다른 사람에게 속해 있지 않는 이메일 주로 Microsoft 계정을 만듭니다. 회사가 Azure AD를 이용하고 있는 경우를 중심으로 회사 도메인의 이메일 주소를 사용하지 못할 수도 있습니다.
+-   MyCompany_DevCenter@outlook.com 등 자신이나 다른 사람에게 속해 있지 않는 이메일 주소를 이용해 Microsoft 계정을 만듭니다. 특히 회사가 Azure AD를 이용하고 있는 경우에는 회사 도메인의 이메일 주소를 사용하지 못할 수도 있습니다.
 -   이 Microsoft 계정에 대한 액세스 권한을 최소한의 사용자로 제한합니다.
 -   해당 개발자 계정에 액세스해야 하는 모든 사람을 포함하는 회사 메일 그룹을 설정하고 이 메일 주소를 보안 정보에 추가합니다. 따라서 목록에 있는 모든 직원이 필요할 때 보안 코드를 받을 수 있습니다. 배포 목록 설정이 불가능한 경우, 요청 메시지가 나타나면(예: 새 보안 정보가 계정에 추가된 경우 또는 새 장치에서 계정에 액세스하는 경우) 보안 코드를 액세스하고 공유하기 위해 개별 메일 계정 소유자 정보를 사용할 수 있어야 합니다.
 -   주요 팀 구성원이 액세스할 수 있고 내선 번호를 요구하지 않는 직장 번호를 추가합니다.
@@ -83,7 +85,7 @@ Windows 개발자 센터 대시보드에 로그인하면 ID를 확인하라는 �
 
 개발자 계정이 만료되지 않으므로 사용할 수 있는 상태를 유지하기 위해 계정을 갱신할 필요가 없습니다. 계정을 완전히 종료하려는 경우에는 지원 부서에 문의하면 됩니다.
 
-계정을 종료하면 Windows 스토어에 게시한 모든 앱이 어떻게 되는지 아는 것이 중요합니다.
+계정을 종료할 때는 Microsoft Store에 게시한 모든 앱이 어떻게 되는지 아는 것이 중요합니다.
 
 -   앱의 현재 고객은 계속 앱을 사용할 수 있습니다. 그러나 앱에서 바로 구매는 할 수 없습니다.
 -   이전에 앱을 구입한 고객은 앱을 계속 사용할 수 있지만 스토어에서는 앱 목록이 제거됩니다. 새 고객은 더 이상 앱을 구입할 수 없습니다.

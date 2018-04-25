@@ -1,20 +1,20 @@
 ---
 author: jnHs
 Description: You can publish line-of-business (LOB) apps directly to enterprises for volume acquisition via the Microsoft Store for Business or Microsoft Store for Education, without making the apps broadly available in the Store.
-title: "엔터프라이즈에 LOB 앱 배포"
+title: 엔터프라이즈에 LOB 앱 배포
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈"
+keywords: Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈
 ms.localizationpriority: high
-ms.openlocfilehash: 3857e8e6e494700233d41832fb9edce6c65b89bc
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: 97a56ec68e2aa51f0ee733c2eedaee18dc3cedb9
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -54,6 +54,7 @@ LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계�
 앱을 LOB로 게시하기 위해서는 하나 이상의 엔터프라이즈를 선택해야 합니다.
 
 <span id="organizational" />
+
 ### <a name="organizational-licensing"></a>조직 라이선스
 
 기본적으로 앱을 제출할 때 **스토어 관리(온라인) 볼륨 라이선싱** 상자가 클릭되어 있습니다. LOB 앱을 게시할 때 엔터프라이즈에서 앱을 대량으로 구매할 수 있도록 이 상자가 계속 클릭한 상태를 유지해야 합니다. 이렇게 하면 **배포 및 표시 여부** 섹션에서 선택한 엔터프라이즈의 외부에 있는 사용자는 해당 앱을 사용할 수 없게 됩니다.
@@ -82,7 +83,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 이미 LOB로 게시한 앱에 대한 업데이트를 게시하려면 새 제출을 만들기만 하면 됩니다. 새 패키지를 업로드하거나 다른 사항을 변경한 다음 **스토어에 제출**을 클릭하면 업데이트된 버전을 사용할 수 있습니다. 앱을 구입하는 엔터프라이즈를 추가로 선택하거나 이전에 해당 앱을 배포한 엔터프라이즈 중 하나를 제거하는 등 의도적으로 변경하려고 하지 않는 한, **표시 여부**의 엔터프라이즈 선택은 동일하게 유지되어야 합니다.
 
-이전에 기간 업무로 게시한 앱 제공을 중지하고 새로운 구입을 방지하려는 경우 새 제출을 만들어야 합니다. 먼저, **LOB(기간 업무) 배포**에서 **소매 배포**로 **표시 여부** 선택을 변경해야 합니다. 그런 다음 **표시 여부** 섹션에서 **사용할 수 있지만, 스토어에서 검색되지 않는 제품으로 설정**과 **취득 중지** 옵션을 선택합니다.
+이전에 기간 업무로 게시한 앱 제공을 중지하고 새로운 구입을 방지하려는 경우 새 제출을 만들어야 합니다. 먼저, **LOB(기간 업무) 배포**에서 **소매 배포**로 **표시 여부** 선택을 변경해야 합니다. 그런 다음 [검색 기능](choose-visibility-options.md#discoverability) 섹션에서 **Store에서 사용할 수 있지만 검색 되지 않는 제품으로 설정**과 **취득 중지** 옵션을 선택합니다.
 
 제출이 인증 프로세스를 거치면 더 이상 이 앱을 새로 구입할 수 없습니다(이미 해당 앱을 보유한 경우 계속 사용할 수는 있음).
 

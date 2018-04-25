@@ -1,8 +1,8 @@
 ---
 author: mijacobs
 Description: Use the ParallaxView control to add depth and movement to your app.
-title: "ParallaxView 컨트롤을 사용하여 앱에 깊이 및 동작을 추가하는 방법입니다."
-ms.assetid: 
+title: ParallaxView 컨트롤을 사용하여 앱에 깊이 및 동작을 추가하는 방법입니다.
+ms.assetid: ''
 label: Parallax View
 template: detail.hbs
 ms.author: mijacobs
@@ -16,17 +16,17 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: high
-ms.openlocfilehash: ae11bb0c3d2d3230f4111a08d33b4fa839ffedd7
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 69bb202a7e13f087ead7ea2a379f803219bbd2d4
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="parallax"></a>시차
 
 시차는 뷰어에 가까이 있는 항목이 배경의 항목보다 빠르게 움직이는 시각 효과입니다. 시차는 깊이감, 원근감 및 운동성을 만듭니다. UWP 앱에서 ParallaxView 컨트롤을 사용하여 시차 효과를 만들 수 있습니다.  
 
-> **중요 API**: [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [VerticalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_VerticalShift), [HorizontalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_HorizontalShift)
+> **중요 API**: [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [VerticalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [HorizontalShift 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>예
 
@@ -59,7 +59,7 @@ UI에서 UI가 스크롤하거나 이동할 때 여러 개체를 서로 다른 �
 
 시차 효과를 만들려면 [ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 컨트롤을 사용합니다. 이 컨트롤은 목록 같은 전경 요소의 스크롤 위치를 이미지 같은 배경 요소와 연결합니다. 사용자가 전경 요소를 스크롤할 때 배경 요소에 애니메이션 효과를 적용하여 시차 효과를 만듭니다. 
 
-ParallaxView 컨트롤을 사용하려면 Source 요소를 제공하고, 배경 요소를 제공하고, [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_VerticalShift)(세로 스크롤에 대한) 및/또는 [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview#Windows_UI_Xaml_Controls_ParallaxView_HorizontalShift)(가로 스크롤에 대한) 속성을 0보다 큰 값으로 설정합니다. 
+ParallaxView 컨트롤을 사용하려면 Source 요소를 제공하고, 배경 요소를 제공하고, [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift)(세로 스크롤에 대한) 및/또는 [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)(가로 스크롤에 대한) 속성을 0보다 큰 값으로 설정합니다. 
 * Source 속성은 전경 요소에 대한 참조를 사용합니다. 시차 효과가 발생하려면 전경은 [ScrollViewer](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 또는 ScrollViewer가 포함된 요소여야 합니다(예: [ListView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview) 또는 [RichTextBox](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)). 
 
 * 배경 요소를 설정하려면 해당 요소를 ParallaxView 컨트롤의 자식으로 추가합니다. 배경 요소는 추가 UI 요소를 포함하고 있는 [이미지](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Image) 또는 패널 같은 모든 [UIElement](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement)일 수 있습니다. 

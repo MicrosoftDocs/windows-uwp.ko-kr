@@ -9,11 +9,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, azure ad, azure 테넌트, aad 테넌트, azure ad 테넌트, 테넌트 관리, 테넌트
 ms.localizationpriority: high
-ms.openlocfilehash: c430bb279d0b9da6126212a8af7400df8cd1693e
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: f488a72b916e2950a46a5b48e79be2795806a900
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>개발자 센터 계정에 Azure Active Directory 연결
 
@@ -51,9 +51,9 @@ Windows 개발자 센터는 다중 사용자 계정 액세스 및 관리를 위�
 1.  **계정 설정**으로 이동하여 **테넌트**를 클릭합니다.
 2.  **새 Azure AD 만들기**를 선택합니다.
 3.  새 Azure AD에 대한 디렉터리 정보를 입력합니다.
- - **도메인 이름**: Azure AD 도메인에 사용할 고유한 이름으로 ".onmicrosoft.com"과 함께 사용합니다. 예를 들어 "example"을 입력한 경우 Azure AD 도메인은 "example.onmicrosoft.com"이 됩니다.
- - **연락처 메일**: 필요한 경우 계정에 대해 문의할 수 있는 메일 주소입니다.
- - **전역 관리자 사용자 계정 정보**: 새 전역 관리자 계정에 사용할 성, 이름, 사용자 이름 및 암호입니다.
+    - **도메인 이름**: Azure AD 도메인에 사용할 고유한 이름으로 ".onmicrosoft.com"과 함께 사용합니다. 예를 들어 "example"을 입력한 경우 Azure AD 도메인은 "example.onmicrosoft.com"이 됩니다.
+    - **연락처 메일**: 필요한 경우 계정에 대해 문의할 수 있는 메일 주소입니다.
+    - **전역 관리자 사용자 계정 정보**: 새 전역 관리자 계정에 사용할 성, 이름, 사용자 이름 및 암호입니다.
 4.  **만들기**를 클릭하여 새 도메인 및 계정 정보를 확인합니다.
 5.  새로운 Azure AD 전역 관리자 사용자 이름 및 암호로 로그인하여 [사용자 계정 추가 및 관리](add-users-groups-and-azure-ad-applications.md)를 시작합니다.
 

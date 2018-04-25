@@ -1,19 +1,20 @@
 ---
 author: JnHs
-Description: "Windows 개발자 센터 대시보드로 광고 캠페인을 만들어 앱을 홍보하고 앱의 사용자 기반을 성장시킬 수 있습니다."
-title: "앱 광고 캠페인 만들기"
+Description: You can create an ad campaign using the Dev Center dashboard to help promote your app and grow your app's user base.
+title: 앱 광고 캠페인 만들기
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, 광고, 캠페인, 홍보"
-ms.openlocfilehash: 04074261b7efd38f0309f08910e4ee1350302e4c
-ms.sourcegitcommit: 5ece992c31870df4c089360ef47501bd4ce14fa9
+keywords: windows 10, uwp, 광고, 캠페인, 홍보
+ms.localizationpriority: high
+ms.openlocfilehash: 7506ee6e793e38a7babbf88ef4f63467fc044182
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 06/22/2017
 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과한 앱을 위한 광고 캠페인만 만들 수 있습니다.
 
 > [!NOTE]
-> 설명서의 이 섹션에서는 개발자 센터 대시보드에서 광고 캠페인을 만드는 방법을 설명합니다. 또는 [Windows 스토어 프로모션 API](../monetize/run-ad-campaigns-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 광고 캠페인을 만들고 관리할 수 있습니다.
+> 설명서의 이 섹션에서는 개발자 센터 대시보드에서 광고 캠페인을 만드는 방법을 설명합니다. 또는 [Microsoft Store 홍보 API](../monetize/run-ad-campaigns-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 광고 캠페인을 만들고 관리할 수 있습니다.
 
 ## <a name="instructions"></a>지침
 
@@ -37,9 +38,9 @@ ms.lasthandoff: 06/22/2017
 4.  이 캠페인을 통해 홍보하려는 앱을 선택합니다. 앱이 스토어에서 이미 제공되고 있어야 합니다.
 5.  **캠페인 이름** 필드에 입력한 캠페인 이름을 검토하고 필요한 경우 이를 변경합니다.
 6.  **캠페인 종류**에서 이러한 옵션 중 하나를 선택합니다.
-        -   **유료 광고**: 이러한 광고는 앱의 장치 및 범주와 일치하는 모든 앱에서 실행됩니다. 2017년 1월 9일 후 만들어진 새 캠페인의 경우 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품 내에도 이러한 광고가 표시됩니다. 앱과 Microsoft 프리미엄 제품을 대상으로 하는 앱 홍보 캠페인을 *유니버설* 캠페인이라고 합니다.
-        -   **커뮤니티 광고(무료)**: 이러한 광고는 커뮤니티 광고 캠페인을 만드는 다른 개발자가 게시한 앱에서 실행됩니다. 이 옵션을 선택하려면 먼저 앱의 **광고를 통한 수익 창출** 페이지에서 커뮤니티 광고 표시에 옵트인을 해야 합니다. 자세한 내용은 [커뮤니티 광고 정보](about-community-ads.md)를 참조하세요.
-        -   **하우스 광고(무료)**: 이러한 광고는 광고 앱의 장치 유형과 일치하는 앱에서만 실행됩니다. 하우스 광고는 무료입니다. 자세한 내용은 [하우스 광고 정보](about-house-ads.md)를 참조하세요.
+    -   **유료 광고**: 이러한 광고는 앱의 장치 및 범주와 일치하는 모든 앱에서 실행됩니다. 2017년 1월 9일 후 만들어진 새 캠페인의 경우 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품 내에도 이러한 광고가 표시됩니다. 앱과 Microsoft 프리미엄 제품을 대상으로 하는 앱 홍보 캠페인을 *유니버설* 캠페인이라고 합니다.
+    -   **커뮤니티 광고(무료)**: 이러한 광고는 커뮤니티 광고 캠페인을 만드는 다른 개발자가 게시한 앱에서 실행됩니다. 이 옵션을 선택하려면 먼저 **수익 창출** -> **앱 내 광고** 페이지에서 커뮤니티 광고 표시에 옵트인을 해야 합니다. 자세한 내용은 [커뮤니티 광고 정보](about-community-ads.md)를 참조하세요.
+    -   **하우스 광고(무료)**: 이러한 광고는 광고 앱의 장치 유형과 일치하는 앱에서만 실행됩니다. 하우스 광고는 무료입니다. 자세한 내용은 [하우스 광고 정보](about-house-ads.md)를 참조하세요.
 
 7.  유료 광고 캠페인의 경우, **캠페인 기간**(캠페인 예산이 지출되는 기간)을 확인합니다. 기본 옵션은 **월별**로, 이 경우 캠페인 예산이 캠페인을 중지할 때까지 매달 반복적으로 사용됩니다. 프리미엄 계정이 있는 경우 **사용자 지정**을 선택하여 캠페인 예산이 지출되는 사용자 지정 날짜 및 시간 범위를 지정할 수 있습니다. 프리미엄 계정에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign)을 참조하세요.
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
 
 10.  **광고 디자인** 페이지에서 다음 옵션 중 하나를 선택합니다.
     -   **자동 생성**. 이는 기본 템플릿에서 광고를 만들 수 있도록 하는 기본 옵션입니다. 옵션을 선택하여 광고 콘텐츠를 사용자 지정할 수 있으며, 옵션에 따른 광고 모양을 미리 볼 수 있습니다(선택 시 자동 업데이트).
-        -   **언어** 드롭다운 목록에서 광고에 사용할 언어를 선택합니다. Windows 스토어 배지에 대한 텍스트가 선택한 언어로 표시됩니다.
+        -   **언어** 드롭다운 목록에서 광고에 사용할 언어를 선택합니다. Microsoft Store 배지에 대한 텍스트가 선택한 언어로 표시됩니다.
         -   광고에 추가 텍스트 줄을 더하려면 **사용자 지정 태그 줄** 필드에 텍스트를 입력합니다.
             > [!NOTE]
             > 여기에 입력한 텍스트는 선택한 언어로 지역화되어야 합니다. 텍스트가 [Bing 광고 정책](http://go.microsoft.com/fwlink?LinkId=398341)을 준수하지 않는 경우 사용자 지정 태그 줄은 거부됩니다. 이 페이지에서 스타일 및 허용되지 않는 콘텐츠에 대한 지침을 참조하세요.
@@ -94,11 +95,11 @@ ms.lasthandoff: 06/22/2017
 
 11.  [프리미엄 계정](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign)이 있는 경우 **대상 URL** 상자를 사용하여 고객이 광고를 클릭할 때 발생하는 상황을 제어할 수 있습니다.
     - 상자를 비워 두면 고객이 광고를 클릭할 때 앱의 스토어 목록이 표시됩니다.
-    - Kochava 또는 Tune을 사용하여 앱에 대한 설치 분석을 측정하는 경우 Kochava 또는 Tune에서 설치 추적 URL을 입력합니다. 캠페인을 저장할 때 추적 URL이 Windows 스토어의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. Kochava 및 Tune을 사용한 설치 추적에 대한 자세한 내용은 [Kochava](http://support.kochava.com/) 및 [Tune](https://help.tune.com/) 설명서를 참조하세요.
+    - Kochava 또는 Tune을 사용하여 앱에 대한 설치 분석을 측정하는 경우 Kochava 또는 Tune에서 설치 추적 URL을 입력합니다. 캠페인을 저장할 때 추적 URL이 Microsoft Store의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. Kochava 및 Tune을 사용한 설치 추적에 대한 자세한 내용은 [Kochava](http://support.kochava.com/) 및 [Tune](https://help.tune.com/) 설명서를 참조하세요.
     - 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 [딥 링크 URI](../launch-resume/handle-uri-activation.md)를 지정하여 선택한 고객층을 앱 내의 특정 페이지로 리디렉션할 수 있습니다.
     - 앱 설명 페이지 또는 앱 내부 페이지가 아닌 대상을 지정하면 캠페인이 자동으로 일시 중지됩니다.
 
-13.  마지막으로, **검토**를 클릭하여 광고 캠페인의 설정을 확인하고, 유료 광고 캠페인인 경우 예산 및 결제 정보도 확인합니다. **확인**을 클릭하면 광고는 보통 몇 시간 내에 장치에 나타나기 시작합니다.
+12.  마지막으로, **검토**를 클릭하여 광고 캠페인의 설정을 확인하고, 유료 광고 캠페인인 경우 예산 및 결제 정보도 확인합니다. **확인**을 클릭하면 광고는 보통 몇 시간 내에 장치에 나타나기 시작합니다.
 
 ## <a name="review-ad-campaign-performance"></a>광고 캠페인 성과 검토
 

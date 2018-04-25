@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: high
-ms.openlocfilehash: 3c62ff8a028af62512936e51bd81d3f3e229bd24
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 0c60b3992192185e8c7bec9b84a7d59f3505afd8
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -33,6 +33,7 @@ ms.lasthandoff: 03/08/2018
 
 
 <span id="roles" />
+
 ## <a name="assign-roles-to-account-users"></a>계정 사용자에게 역할 할당
 
 기본적으로 사용자, 그룹 또는 Azure AD 응용 프로그램을 개발자 센터 계정에 추가할 때 선택할 수 있는 표준 역할 집합이 표시됩니다. 각 역할에는 계정 내에서 특정 기능을 수행하기 위해 특정 사용 권한 집합이 있습니다. 
@@ -67,6 +68,7 @@ ms.lasthandoff: 03/08/2018
 
 
 <span id="custom" />
+
 ## <a name="assign-custom-permissions-to-account-users"></a>계정 사용자에게 사용자 지정 권한 할당
 
 표준 역할 대신 사용자 지정 권한을 할당하려면 사용자 계정을 추가 또는 편집할 때 **역할** 섹션에서 **사용 권한 사용자 지정**을 클릭합니다. 
@@ -102,34 +104,34 @@ ms.lasthandoff: 03/08/2018
     </tr>
     </thead>
     <tbody>
-<tr><td align="left">    **계정 설정**                    </td><td align="left">  [연락처 정보](managing-your-profile.md)를 포함하여 **계정 설정** 섹션의 모든 페이지를 볼 수 있습니다.       </td><td align="left">  **계정 설정** 섹션의 모든 페이지를 볼 수 있습니다. [연락처 정보](managing-your-profile.md) 및 다른 페이지를 변경할 수 있지만, 지급 계좌 또는 세금 프로필은 변경할 수 없습니다(해당 권한을 별도로 부여하지 않는 한).            </td></tr>
-<tr><td align="left">    **계정 사용자**                       </td><td align="left">  **사용자** 섹션에서 계정에 추가된 사용자를 볼 수 있습니다.          </td><td align="left">  사용자를 계정에 추가하고 **사용자** 섹션에서 기존 사용자를 변경할 수 있습니다.             </td></tr>
-<tr><td align="left">    **계정 수준 광고 성과 보고서** </td><td align="left">  계정 수준 [광고 성과 보고서](advertising-performance-report.md)를 볼 수 있습니다.      </td><td align="left">  해당 없음   </td></tr>
-<tr><td align="left">    **광고 캠페인**                        </td><td align="left">  계정에서 만든 [광고 캠페인](create-an-ad-campaign-for-your-app.md)을 볼 수 있습니다.      </td><td align="left">  계정에서 [광고 캠페인](create-an-ad-campaign-for-your-app.md)을 만들고 관리하고 볼 수 있습니다.          </td></tr>
-<tr><td align="left">    **광고 조정**                        </td><td align="left">  계정의 모든 제품에 대한 [광고 조정 구성](https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx)을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대한 [광고 조정 구성](https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx)을 보고 변경할 수 있습니다.        </td></tr>
-<tr><td align="left">    **광고 조정 보고서**                </td><td align="left">  계정의 모든 제품에 대한 [광고 조정 보고서](ad-mediation-report.md)를 볼 수 있습니다.    </td><td align="left">  해당 없음    </td></tr>
-<tr><td align="left">    **광고 성과 보고서**              </td><td align="left">  계정의 모든 제품에 대한 [광고 성과 보고서](advertising-performance-report.md)를 볼 수 있습니다.       </td><td align="left">  해당 없음         </td></tr>
-<tr><td align="left">    **광고 단위**                            </td><td align="left">  계정에 대해 생성된 [광고 단위](in-app-ads.md)를 볼 수 있습니다.    </td><td align="left">  계정에 대한 [광고 단위](in-app-ads.md)를 만들고 관리하고 볼 수 있습니다.             </td></tr>
-<tr><td align="left">    **계열사 광고**                       </td><td align="left">  계정의 모든 제품에서 [계열사 광고](about-affiliate-ads.md) 사용을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대한 [계열사 광고](about-affiliate-ads.md) 사용을 관리하고 볼 수 있습니다.                </td></tr>
-<tr><td align="left">    **계열사 성과 보고서**      </td><td align="left">  계정의 모든 제품에 대한 [계열사 성과 보고서](affiliates-performance-report.md)를 볼 수 있습니다.   </td><td align="left">  해당 없음   </td></tr>
-<tr><td align="left">    **앱 설치 광고 보고서**             </td><td align="left">  [광고 캠페인 보고서](promote-your-app-report.md)를 볼 수 있습니다.           </td><td align="left">  해당 없음   </td></tr>
-<tr><td align="left">    **커뮤니티 광고**                       </td><td align="left">  계정의 모든 제품에 대한 무료 [커뮤니티 광고](about-community-ads.md) 사용을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대한 무료 [커뮤니티 광고](about-community-ads.md) 사용을 만들고 관리하고 볼 수 있습니다.               </td></tr>
-<tr><td align="left">    **연락처 정보**                        </td><td align="left">  계정 설정 섹션에서 [연락처 정보](managing-your-profile.md)를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 [연락처 정보](managing-your-profile.md)를 편집하고 볼 수 있습니다.            </td></tr>
-<tr><td align="left">    **COPPA 준수**                    </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](in-app-ads.md#coppa-compliance) 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 [COPPA 준수](in-app-ads.md#coppa-compliance) 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
-<tr><td align="left">    **고객 그룹**                     </td><td align="left">  **고객** 섹션의 [고객 그룹](create-customer-groups.md)(고객층 및 플라이트 그룹)을 볼 수 있습니다.      </td><td align="left">  **고객** 섹션의 [고객 그룹](create-customer-groups.md)(고객층 및 플라이트 그룹)을 만들고 편집하고 볼 수 있습니다.       </td></tr>
-<tr><td align="left">    **제품 그룹 관리**&nbsp;\*                            </td><td align="left">  제품 그룹 만들기 페이지를 볼 수는 있지만 계정에서 제품 그룹을 실제로 만들 수는 없습니다.    </td><td align="left">  제품 그룹을 만들고 편집할 수 있습니다.     </td></tr>
-<tr><td align="left">    **새 앱**                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 [새 앱을 만들](create-your-app-by-reserving-a-name.md) 수 있으며, 제출을 만들고 Microsoft Store에 앱을 제출할 수 있습니다.     </td></tr>
-<tr><td align="left">    **새 번들**&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 계정에서 실제로 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
-<tr><td align="left">    **파트너 서비스**&nbsp;*                  </td><td align="left">  XToken을 검색하는 서비스를 설치하기 위한 인증서를 볼 수 있습니다.     </td><td align="left">  XToken을 검색하는 서비스를 설치하기 위한 인증서를 관리하고 볼 수 있습니다.       </td></tr>
-<tr><td align="left">    **지급 계좌**                      </td><td align="left">  **계정 설정**에서 [지급 계정 정보](setting-up-your-payout-account-and-tax-forms.md#payout-account)를 볼 수 있습니다.     </td><td align="left">  **계정 설정**에서 [지급 계정 정보](setting-up-your-payout-account-and-tax-forms.md#payout-account)를 편집하고 볼 수 있습니다.       </td></tr>
-<tr><td align="left">    **지급 요약**                      </td><td align="left">  지급 보고 정보에 액세스하고 다운로드할 수 있는 [지급 요약](payout-summary.md)을 볼 수 있습니다.       </td><td align="left">  지급 보고 정보에 액세스하고 다운로드할 수 있는 [지급 요약](payout-summary.md)을 볼 수 있습니다.   </td></tr>
-<tr><td align="left">    **신뢰 당사자**&nbsp;*                   </td><td align="left">  XToken을 검색하는 신뢰 당사자를 볼 수 있습니다.    </td><td align="left">  XToken을 검색하는 신뢰 당사자를 관리하고 볼 수 있습니다.     </td></tr>
-<tr><td align="left">    **디스크 요청**&nbsp;*                   </td><td align="left">  게임 디스크 요청을 볼 수 있습니다.    </td><td align="left">  게임 디스크 요청을 구성하고 볼 수 있습니다.     </td></tr>
-<tr><td align="left">    **샌드박스**&nbsp;*                         </td><td align="left">  **샌드박스** 페이지에 액세스하여 계정의 샌드박스 및 해당 샌드박스에 적용되는 구성을 볼 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다. </td><td align="left">  **샌드박스** 페이지에 액세스하고, 샌드박스 만들기와 삭제 및 구성 관리를 포함하여 계정의 샌드박스를 보고 관리할 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다.    </td></tr>
-<tr><td align="left">    **Microsoft Store 영업 이벤트**&nbsp;\*                            </td><td align="left">  해당 없음    </td><td align="left">  자동으로 Microsoft Store 영업 이벤트에서 제품을 포함하는 옵션을 구성할 수 있습니다.     </td></tr>
-<tr><td align="left">    **세금 프로필**                         </td><td align="left">  **계정 설정**의 [세금 프로필 정보 및 양식](setting-up-your-payout-account-and-tax-forms.md#tax-forms)을 볼 수 있습니다.     </td><td align="left">  **계정 설정**에서 세금 양식을 작성하고 [세금 프로필 정보](setting-up-your-payout-account-and-tax-forms.md#tax-forms)를 업데이트할 수 있습니다.     </td></tr>
-<tr><td align="left">    **테스트 계정**&nbsp;*                     </td><td align="left">  Xbox Live 구성을 테스트하기 위한 계정을 볼 수 있습니다.      </td><td align="left">  Xbox Live 구성을 테스트하기 위한 계정을 만들고 관리하고 볼 수 있습니다.      </td></tr>
-<tr><td align="left">    **Xbox 장치**                        </td><td align="left">  **계정 설정** 섹션에서 계정에 대해 사용하도록 설정된 Xbox 개발 콘솔을 볼 수 있습니다.       </td><td align="left">  **계정 설정** 섹션에서 계정에 대해 사용하도록 설정된 Xbox 개발 콘솔을 추가하고 제거하고 볼 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>계정 설정</b>                    </td><td align="left">  <a href="managing-your-profile.md">연락처 정보</a>를 포함하여 <b>계정 설정</b> 섹션의 모든 페이지를 볼 수 있습니다.       </td><td align="left">  <b>계정 설정</b> 섹션의 모든 페이지를 볼 수 있습니다. <a href="managing-your-profile.md">연락처 정보</a> 및 다른 페이지를 변경할 수 있지만, 지급 계좌 또는 세금 프로필은 변경할 수 없습니다(해당 권한을 별도로 부여하지 않는 한).            </td></tr>
+<tr><td align="left">    <b>계정 사용자</b>                       </td><td align="left">  <b>사용자</b> 섹션에서 계정에 추가된 사용자를 볼 수 있습니다.          </td><td align="left">  사용자를 계정에 추가하고 <b>사용자</b> 섹션에서 기존 사용자를 변경할 수 있습니다.             </td></tr>
+<tr><td align="left">    <b>계정 수준 광고 성과 보고서</b> </td><td align="left">  계정 수준 <a href="advertising-performance-report.md">광고 성과 보고서</a>를 볼 수 있습니다.      </td><td align="left">  해당 없음   </td></tr>
+<tr><td align="left">    <b>광고 캠페인</b>                        </td><td align="left">  계정에서 만든 <a href="create-an-ad-campaign-for-your-app.md">광고 캠페인</a>을 볼 수 있습니다.      </td><td align="left">  계정에서 <a href="create-an-ad-campaign-for-your-app.md">광고 캠페인</a>을 만들고 관리하고 볼 수 있습니다.          </td></tr>
+<tr><td align="left">    <b>광고 조정</b>                        </td><td align="left">  계정의 모든 제품에 대한 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx">광고 조정 구성</a>을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대한 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt149935.aspx">광고 조정 구성</a>을 보고 변경할 수 있습니다.        </td></tr>
+<tr><td align="left">    <b>광고 조정 보고서</b>                </td><td align="left">  계정의 모든 제품에 대한 <a href="ad-mediation-report.md">광고 조정 보고서</a>를 볼 수 있습니다.    </td><td align="left">  해당 없음    </td></tr>
+<tr><td align="left">    <b>광고 성과 보고서</b>              </td><td align="left">  계정의 모든 제품에 대한 <a href="advertising-performance-report.md">광고 성과 보고서</a>를 볼 수 있습니다.       </td><td align="left">  해당 없음         </td></tr>
+<tr><td align="left">    <b>광고 단위</b>                            </td><td align="left">  계정에 대해 생성된 <a href="in-app-ads.md">광고 단위</a>를 볼 수 있습니다.    </td><td align="left">  계정에 대한 <a href="in-app-ads.md">광고 단위</a>를 만들고 관리하고 볼 수 있습니다.             </td></tr>
+<tr><td align="left">    <b>계열사 광고</b>                       </td><td align="left">  계정의 모든 제품에서 <a href="about-affiliate-ads.md">계열사 광고</a> 사용을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대한 <a href="about-affiliate-ads.md">계열사 광고</a> 사용을 관리하고 볼 수 있습니다.                </td></tr>
+<tr><td align="left">    <b>계열사 성과 보고서</b>      </td><td align="left">  계정의 모든 제품에 대한 <a href="affiliates-performance-report.md">계열사 성과 보고서</a>를 볼 수 있습니다.   </td><td align="left">  해당 없음   </td></tr>
+<tr><td align="left">    <b>앱 설치 광고 보고서</b>             </td><td align="left">  <a href="promote-your-app-report.md">광고 캠페인 보고서</a>를 볼 수 있습니다.           </td><td align="left">  해당 없음   </td></tr>
+<tr><td align="left">    <b>커뮤니티 광고</b>                       </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 만들고 관리하고 볼 수 있습니다.               </td></tr>
+<tr><td align="left">    <b>연락처 정보</b>                        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 편집하고 볼 수 있습니다.            </td></tr>
+<tr><td align="left">    <b>COPPA 준수</b>                    </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
+<tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <b>고객</b> 섹션의 <a href="create-customer-groups.md">고객 그룹</a>(고객층 및 플라이트 그룹)을 볼 수 있습니다.      </td><td align="left">  <b>고객</b> 섹션의 <a href="create-customer-groups.md">고객 그룹</a>(고객층 및 플라이트 그룹)을 만들고 편집하고 볼 수 있습니다.       </td></tr>
+<tr><td align="left">    <b>제품 그룹 관리</b>&nbsp;*                            </td><td align="left">  제품 그룹 만들기 페이지를 볼 수는 있지만 계정에서 제품 그룹을 실제로 만들 수는 없습니다.    </td><td align="left">  제품 그룹을 만들고 편집할 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>새 앱</b>                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 <a href="create-your-app-by-reserving-a-name.md">새 앱을 만들</a> 수 있으며, 제출을 만들고 Microsoft Store에 앱을 제출할 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>새 번들</b>&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 계정에서 실제로 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
+<tr><td align="left">    <b>파트너 서비스</b>&nbsp;*                  </td><td align="left">  XToken을 검색하는 서비스를 설치하기 위한 인증서를 볼 수 있습니다.     </td><td align="left">  XToken을 검색하는 서비스를 설치하기 위한 인증서를 관리하고 볼 수 있습니다.       </td></tr>
+<tr><td align="left">    <b>지급 계좌</b>                      </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">지급 계정 정보</a>를 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">지급 계정 정보</a>를 편집하고 볼 수 있습니다.       </td></tr>
+<tr><td align="left">    <b>지급 요약</b>                      </td><td align="left">  지급 보고 정보에 액세스하고 다운로드할 수 있는 <a href="payout-summary.md">지급 요약</a>을 볼 수 있습니다.       </td><td align="left">  지급 보고 정보에 액세스하고 다운로드할 수 있는 <a href="payout-summary.md">지급 요약</a>을 볼 수 있습니다.   </td></tr>
+<tr><td align="left">    <b>신뢰 당사자</b>&nbsp;*                   </td><td align="left">  XToken을 검색하는 신뢰 당사자를 볼 수 있습니다.    </td><td align="left">  XToken을 검색하는 신뢰 당사자를 관리하고 볼 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>디스크 요청</b>&nbsp;*                   </td><td align="left">  게임 디스크 요청을 볼 수 있습니다.    </td><td align="left">  게임 디스크 요청을 구성하고 볼 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>샌드박스</b>&nbsp;*                         </td><td align="left">  <b>샌드박스</b> 페이지에 액세스하여 계정의 샌드박스 및 해당 샌드박스에 적용되는 구성을 볼 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다. </td><td align="left">  <b>샌드박스</b> 페이지에 액세스하고, 샌드박스 만들기와 삭제 및 구성 관리를 포함하여 계정의 샌드박스를 보고 관리할 수 있습니다. 적절한 제품 수준 사용 권한이 부여되지 않으면 각 샌드박스에 대한 제품과 제출을 볼 수 없습니다.    </td></tr>
+<tr><td align="left">    <b>Microsoft Store 영업 이벤트</b>&nbsp;*                            </td><td align="left">  해당 없음    </td><td align="left">  자동으로 Microsoft Store 영업 이벤트에서 제품을 포함하는 옵션을 구성할 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>세금 프로필</b>                         </td><td align="left">  <b>계정 설정</b>의 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보 및 양식</a>을 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 세금 양식을 작성하고 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보</a>를 업데이트할 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>테스트 계정</b>&nbsp;*                     </td><td align="left">  Xbox Live 구성을 테스트하기 위한 계정을 볼 수 있습니다.      </td><td align="left">  Xbox Live 구성을 테스트하기 위한 계정을 만들고 관리하고 볼 수 있습니다.      </td></tr>
+<tr><td align="left">    <b>Xbox 장치</b>                        </td><td align="left">  <b>계정 설정</b> 섹션에서 계정에 대해 사용하도록 설정된 Xbox 개발 콘솔을 볼 수 있습니다.       </td><td align="left">  <b>계정 설정</b> 섹션에서 계정에 대해 사용하도록 설정된 Xbox 개발 콘솔을 추가하고 제거하고 볼 수 있습니다.     </td></tr>
     </tbody>
     </table>
 
@@ -167,12 +169,12 @@ ms.lasthandoff: 03/08/2018
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    **구입**     </td><td>    제품에 대한 [구입](acquisitions-report.md) 및 [추가 기능 구입](add-on-acquisitions-report.md) 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음(상위 제품에 대한 설정에 추가 기능 구입 보고서 포함)        </td><td>    해당 없음                         </td></tr>
-    <tr><td align="left">    **사용** </td><td>    제품에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
-    <tr><td align="left">    **상태** </td><td>    제품에 대한 [상태 보고서](health-report.md)를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
-    <tr><td align="left">    **고객 피드백**    </td><td>    제품에 대한 [리뷰](reviews-report.md) 및 [피드백](feedback-report.md) 보고서를 볼 수 있습니다.       </td><td>    해당 없음(피드백이나 리뷰에 응답하려면 **고객에게 문의** 권한을 부여받아야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
-    <tr><td align="left">    **Xbox 분석** </td><td>    제품에 대한 Xbox 분석 보고서를 볼 수 있습니다. (참고: 이 보고서는 아직 사용할 수 없습니다.)    </td><td>    해당 없음   </td><td>    해당 없음       </td><td>    해당 없음          </td></tr>
-    <tr><td align="left">    **실시간**   </td><td>    제품에 대한 실시간 보고서를 볼 수 있습니다. (주: 이 보고서는 [개발자 센터 참가자 프로그램](dev-center-insider-program.md)을 통해서만 제공되고 있습니다.)      </td><td>    해당 없음   </td><td>    해당 없음     </td><td>    해당 없음                 </td></tr>
+    <tr><td align="left">    <b>구입</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음(상위 제품에 대한 설정에 추가 기능 구입 보고서 포함)        </td><td>    해당 없음                         </td></tr>
+    <tr><td align="left">    <b>사용</b> </td><td>    제품에 대한 <a href="usage-report.md">사용 보고서</a>를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
+    <tr><td align="left">    <b>상태</b> </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
+    <tr><td align="left">    <b>고객 피드백</b>    </td><td>    제품에 대한 <a href="reviews-report.md">리뷰</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음(피드백이나 리뷰에 응답하려면 <b>고객에게 문의</b> 권한을 부여받아야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
+    <tr><td align="left">    <b>Xbox 분석</b> </td><td>    제품에 대한 Xbox 분석 보고서를 볼 수 있습니다. (참고: 이 보고서는 아직 사용할 수 없습니다.)    </td><td>    해당 없음   </td><td>    해당 없음       </td><td>    해당 없음          </td></tr>
+    <tr><td align="left">    <b>실시간</b>   </td><td>    제품에 대한 실시간 보고서를 볼 수 있습니다. (주: 이 보고서는 <a href="dev-center-insider-program.md">개발자 센터 참가자 프로그램</a>을 통해서만 제공되고 있습니다.)      </td><td>    해당 없음   </td><td>    해당 없음     </td><td>    해당 없음                 </td></tr>
     </tbody>
     </table>
 
@@ -189,12 +191,11 @@ ms.lasthandoff: 03/08/2018
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    **홍보 코드**     </td><td>    제품 및 추가 기능에 대한 [홍보 코드](generate-promotional-codes.md) 주문과 사용 정보를 볼 수 있습니다.         </td><td>    제품 및 추가 기능에 대한 [홍보 코드](generate-promotional-codes.md) 주문을 보고 관리하고 만들 수 있으며, 사용 정보를 볼 수 있습니다.          </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td></tr>
-    <tr><td align="left">    **대상 제품**     </td><td>    제품에 대한 [대상 제품](use-targeted-offers-to-maximize-engagement-and-conversions.md)을 볼 수 있습니다.         </td><td>    제품에 대한 [대상 제품](use-targeted-offers-to-maximize-engagement-and-conversions.md)을 확인하고 관리하고 만들 수 있습니다.          </td><td>    해당 없음     </td><td>    해당 없음      </td></tr>
-    <tr><td align="left">    **고객에게 문의**  </td><td>    **고객 의견** 권한도 부여된 경우에 한해 [고객 의견에 대한 응답](respond-to-customer-feedback.md) 및 [고객 리뷰에 대한 응답](respond-to-customer-reviews.md)을 볼 수 있습니다. 제품에 대해 생성된 [대상이 지정된 알림](send-push-notifications-to-your-apps-customers.md)을 볼 수 있습니다.    </td><td>    **고객 의견** 권한도 부여된 경우에 한해 [고객 의견에 대해 응답](respond-to-customer-feedback.md)하고, [고객 리뷰에 대해 응답](respond-to-customer-reviews.md)할 수 있습니다. 제품에 대해 [대상이 지정된 알림을 만들고 보낼](send-push-notifications-to-your-apps-customers.md) 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
-    <tr><td align="left">    **실험**</td><td>    제품에 대한 [실험(A/B 테스트)](../monetize/run-app-experiments-with-a-b-testing.md) 및 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대한 [실험(A/B 테스트)](../monetize/run-app-experiments-with-a-b-testing.md)을 만들고 관리하고 볼 수 있으며, 실험 데이터를 볼 수 있습니다.     </td><td>    해당 없음  </td><td>    해당 없음                 </td></tr>
-    <tr><td align="left">    **Microsoft Store 영업 이벤트**&nbsp;\*</td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td></tr>
-
+    <tr><td align="left">    <b>홍보 코드</b>     </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문과 사용 정보를 볼 수 있습니다.         </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문을 보고 관리하고 만들 수 있으며, 사용 정보를 볼 수 있습니다.          </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td></tr>
+    <tr><td align="left">    <b>대상 제품</b>     </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 볼 수 있습니다.         </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 확인하고 관리하고 만들 수 있습니다.          </td><td>    해당 없음     </td><td>    해당 없음      </td></tr>
+    <tr><td align="left">    <b>고객에게 문의</b>  </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대한 응답</a> 및 <a href="respond-to-customer-reviews.md">고객 리뷰에 대한 응답</a>을 볼 수 있습니다. 제품에 대해 생성된 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림</a>을 볼 수 있습니다.    </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대해 응답</a>하고, <a href="respond-to-customer-reviews.md">고객 리뷰에 대해 응답</a>할 수 있습니다. 제품에 대해 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림을 만들고 보낼</a> 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
+    <tr><td align="left">    <b>실험</b></td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a> 및 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a>을 만들고 관리하고 볼 수 있으며, 실험 데이터를 볼 수 있습니다.     </td><td>    해당 없음  </td><td>    해당 없음                 </td></tr>
+    <tr><td align="left">    <b>Microsoft Store 영업 이벤트</b>&nbsp;*</td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td></tr>
     </tbody>
     </table>
 
@@ -211,15 +212,15 @@ ms.lasthandoff: 03/08/2018
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    **가격 책정 및 가용성**  </td><td>    제품 제출의 [가격 책정 및 가용성](set-app-pricing-and-availability.md) 페이지를 볼 수 있습니다.     </td><td>    제품 제출의 [가격 책정 및 가용성](set-app-pricing-and-availability.md) 페이지를 보고 편집할 수 있습니다. </td><td>    추가 기능 제출의 [가격 책정 및 가용성](set-add-on-pricing-and-availability.md) 페이지를 볼 수 있습니다.   </td><td>    추가 기능 제출의 [가격 책정 및 가용성](set-add-on-pricing-and-availability.md) 페이지를 보고 편집할 수 있습니다.          </td></tr>
-    <tr><td align="left">    **속성**   </td><td>    제품 제출의 [속성](enter-app-properties.md) 페이지를 볼 수 있습니다.      </td><td>    제품 제출의 [속성](enter-app-properties.md) 페이지를 보고 편집할 수 있습니다.       </td><td>    추가 기능 제출의 [속성](enter-add-on-properties.md) 페이지를 볼 수 있습니다.     </td><td>    추가 기능 제출의 [속성](enter-add-on-properties.md) 페이지를 보고 편집할 수 있습니다.               </td></tr>
-    <tr><td align="left">    **연령별 등급**    </td><td>    제품 제출의 [연령별 등급](age-ratings.md) 페이지를 볼 수 있습니다.       </td><td>    제품 제출의 [연령별 등급](age-ratings.md) 페이지를 보고 편집할 수 있습니다.    </td><td>    * 추가 기능 제출의 연령별 등급 페이지를 볼 수 있습니다.          </td><td>    * 추가 기능 제출의 연령별 등급 페이지를 보고 편집할 수 있습니다.       </td></tr>
-    <tr><td align="left">    **패키지**        </td><td>    제품 제출의 [패키지](upload-app-packages.md) 페이지를 볼 수 있습니다.  </td><td>    제품 제출의 [패키지](upload-app-packages.md) 페이지를 보고 편집할 수 있습니다(패키지 업로드 포함).     </td><td>    * 추가 기능 제출의 장치 패밀리 타기팅 및 패키지(해당되는 경우)를 볼 수 있습니다.   </td><td>    * 추가 기능 제출의 장치 패밀리 타기팅을 보고 편집할 수 있습니다(해당되는 경우 패키지 업로드 포함).             </td></tr>
-    <tr><td align="left">    **Store 목록**  </td><td>    제품 제출의 [Store 목록 페이지](create-app-store-listings.md)를 볼 수 있습니다.  </td><td>    제품 제출의 [Store 목록 페이지](create-app-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 새로운 Store 목록을 추가할 수 있습니다.     </td><td>    추가 기능 제출의 [Store 목록 페이지](create-add-on-store-listings.md)를 볼 수 있습니다.            </td><td>    추가 기능 제출의 [Store 목록 페이지](create-add-on-store-listings.md)를 보고 편집할 수 있으며, 서로 다른 언어에 대한 Store 목록을 추가할 수 있습니다.                 </td></tr>
-    <tr><td align="left">    **Microsoft Store 제출**     </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.           </td><td>    제품을 Microsoft Store에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다. </td><td>이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.     </td><td>    추가 기능을 Microsoft Store에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다.</td></tr>
-    <tr><td align="left">    **새 제출 만들기**       </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.        </td><td>    제품의 새 [제출](app-submissions.md)을 만들 수 있습니다.  </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.   </td><td>    추가 기능의 새 [제출](add-on-submissions.md)을 만들 수 있습니다.        </td></tr>
-    <tr><td align="left">    **새 추가 기능**    </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다. </td><td>    제품의 새 [추가 기능](set-your-add-on-product-id.md)을 만들 수 있습니다. </td><td>    해당 없음    </td><td>    해당 없음        </td></tr>
-    <tr><td align="left">    **이름 예약**   </td><td>    제품의 [앱 이름 관리](manage-app-names.md) 페이지를 볼 수 있습니다.</td><td>    제품의 [앱 이름 관리](manage-app-names.md) 페이지를 보고 편집할 수 있습니다(추가 이름 예약 및 예약된 이름 삭제 포함). </td><td>   * 추가 기능의 예약된 이름을 볼 수 있습니다.    </td><td>   * 추가 기능의 예약된 이름을 보고 편집할 수 있습니다.          </td></tr>
+    <tr><td align="left">    <b>가격 책정 및 가용성</b>  </td><td>    제품 제출의 <a href="set-app-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 볼 수 있습니다.     </td><td>    제품 제출의 <a href="set-app-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 보고 편집할 수 있습니다. </td><td>    추가 기능 제출의 <a href="set-add-on-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 볼 수 있습니다.   </td><td>    추가 기능 제출의 <a href="set-add-on-pricing-and-availability.md">가격 책정 및 가용성</a> 페이지를 보고 편집할 수 있습니다.          </td></tr>
+    <tr><td align="left">    <b>속성</b>   </td><td>    제품 제출의 <a href="enter-app-properties.md">속성</a> 페이지를 볼 수 있습니다.      </td><td>    제품 제출의 <a href="enter-app-properties.md">속성</a> 페이지를 보고 편집할 수 있습니다.       </td><td>    추가 기능 제출의 <a href="enter-add-on-properties.md">속성</a> 페이지를 볼 수 있습니다.     </td><td>    추가 기능 제출의 <a href="enter-add-on-properties.md">속성</a> 페이지를 보고 편집할 수 있습니다.               </td></tr>
+    <tr><td align="left">    <b>연령별 등급</b>    </td><td>    제품 제출의 <a href="age-ratings.md">연령별 등급</a> 페이지를 볼 수 있습니다.       </td><td>    제품 제출의 <a href="age-ratings.md">연령별 등급</a> 페이지를 보고 편집할 수 있습니다.    </td><td>    <i> 추가 기능 제출의 연령별 등급 페이지를 볼 수 있습니다.          </td><td>    </i> 추가 기능 제출의 연령별 등급 페이지를 보고 편집할 수 있습니다.       </td></tr>
+    <tr><td align="left">    <b>패키지</b>        </td><td>    제품 제출의 <a href="upload-app-packages.md">패키지</a> 페이지를 볼 수 있습니다.  </td><td>    제품 제출의 <a href="upload-app-packages.md">패키지</a> 페이지를 보고 편집할 수 있습니다(패키지 업로드 포함).     </td><td>    <i> 추가 기능 제출의 장치 패밀리 타기팅 및 패키지(해당되는 경우)를 볼 수 있습니다.   </td><td>    </i> 추가 기능 제출의 장치 패밀리 타기팅을 보고 편집할 수 있습니다(해당되는 경우 패키지 업로드 포함).             </td></tr>
+    <tr><td align="left">    <b>Store 목록</b>  </td><td>    제품 제출의 <a href="create-app-store-listings.md">Store 목록 페이지</a>를 볼 수 있습니다.  </td><td>    제품 제출의 <a href="create-app-store-listings.md">Store 목록 페이지</a>를 보고 편집할 수 있으며, 서로 다른 언어에 대한 새로운 Store 목록을 추가할 수 있습니다.     </td><td>    추가 기능 제출의 <a href="create-add-on-store-listings.md">Store 목록 페이지</a>를 볼 수 있습니다.            </td><td>    추가 기능 제출의 <a href="create-add-on-store-listings.md">Store 목록 페이지</a>를 보고 편집할 수 있으며, 서로 다른 언어에 대한 Store 목록을 추가할 수 있습니다.                 </td></tr>
+    <tr><td align="left">    <b>Microsoft Store 제출</b>     </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.           </td><td>    제품을 Microsoft Store에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다. </td><td>이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.     </td><td>    추가 기능을 Microsoft Store에 제출하고 인증 보고서를 볼 수 있습니다. 새 제출 및 업데이트된 제출이 포함됩니다.</td></tr>
+    <tr><td align="left">    <b>새 제출 만들기</b>       </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.        </td><td>    제품의 새 <a href="app-submissions.md">제출</a>을 만들 수 있습니다.  </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다.   </td><td>    추가 기능의 새 <a href="add-on-submissions.md">제출</a>을 만들 수 있습니다.        </td></tr>
+    <tr><td align="left">    <b>새 추가 기능</b>    </td><td>    이 사용 권한이 읽기 전용으로 설정된 경우 액세스 권한 없음이 허용됩니다. </td><td>    제품의 새 <a href="set-your-add-on-product-id.md">추가 기능</a>을 만들 수 있습니다. </td><td>    해당 없음    </td><td>    해당 없음        </td></tr>
+    <tr><td align="left">    <b>이름 예약</b>   </td><td>    제품의 <a href="manage-app-names.md">앱 이름 관리</a> 페이지를 볼 수 있습니다.</td><td>    제품의 <a href="manage-app-names.md">앱 이름 관리</a> 페이지를 보고 편집할 수 있습니다(추가 이름 예약 및 예약된 이름 삭제 포함). </td><td>   <i> 추가 기능의 예약된 이름을 볼 수 있습니다.    </td><td>   </i> 추가 기능의 예약된 이름을 보고 편집할 수 있습니다.          </td></tr>
     </tbody>
     </table>
 
@@ -236,8 +237,8 @@ ms.lasthandoff: 03/08/2018
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    **앱 채널**&nbsp;\*</td><td>    해당 없음  </td><td>    OneGuide를 통해 볼 수 있도록 홍보 비디오 채널을 Xbox 콘솔에 게시할 수 있습니다.  </td><td>  해당 없음 </td><td> 해당 없음 </td></tr>
-    <tr><td align="left">    **서비스 구성**&nbsp;\*    </td><td>    도전 과제, 멀티플레이어, 순위표 및 제품에 대한 기타 Xbox Live 구성과 관련된 설정을 볼 수 있습니다.  </td><td>    도전 과제, 멀티플레이어, 순위표 및 제품에 대한 기타 Xbox Live 구성과 관련된 설정을 보고 편집할 수 있습니다.  </td><td>    해당 없음     </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>앱 채널</b>&nbsp;*</td><td>    해당 없음  </td><td>    OneGuide를 통해 볼 수 있도록 홍보 비디오 채널을 Xbox 콘솔에 게시할 수 있습니다.  </td><td>  해당 없음 </td><td> 해당 없음 </td></tr>
+    <tr><td align="left">    <b>서비스 구성</b>&nbsp;*    </td><td>    도전 과제, 멀티플레이어, 순위표 및 제품에 대한 기타 Xbox Live 구성과 관련된 설정을 볼 수 있습니다.  </td><td>    도전 과제, 멀티플레이어, 순위표 및 제품에 대한 기타 Xbox Live 구성과 관련된 설정을 보고 편집할 수 있습니다.  </td><td>    해당 없음     </td><td>    해당 없음                      </td></tr>
 </tbody>
 </table>
 

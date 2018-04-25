@@ -4,17 +4,17 @@ Description: You can generate promotional codes for an app or add-on that you ha
 title: 홍보 코드 생성
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 01/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: high
-ms.openlocfilehash: 634c0857982924ca1b588519172d77d97dd74791
-ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
+ms.openlocfilehash: 7043b12dc3b9d6e7a9813fb1d7b81b836902f92f
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
@@ -33,7 +33,7 @@ Windows 개발자 센터 대시보드에서 다음을 수행할 수 있습니다
 -   홍보 코드 사용량 검토.
 
 > [!NOTE]
-> [표시 여부](set-app-pricing-and-availability.md#visibility) 옵션 **취득 중지: 직접 링크가 있는 고객은 제품의 Microsoft Store 목록을 확인할 수 있지만, 과거 제품을 소유했거나, 판촉 코드가 있고, Windows 10 장치를 사용 중인 경우에만 다운로드 가능**을 선택한 경우에도 홍보 코드를 생성할 수 있습니다.
+> 제출의 [검색 기능](choose-visibility-options.md#discoverability) 섹션에 **취득 중지: 직접 링크가 있는 고객은 제품의 Store 목록을 확인할 수 있지만, 과거 제품을 소유했거나, 홍보 코드가 있고 Windows 10 장치를 사용 중인 경우에만 다운로드가 가능** 옵션이 있는 경우 **Store에서 사용할 수 있지만 검색 되지 않는 제품으로 설정**을 선택한 경우에도 홍보 코드를 생성할 수 있습니다.
 
 사용자가 홍보 코드를 사용하여 설치하기 전에 앱은 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과해야 합니다.
 
@@ -80,7 +80,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
     -   **제품 이름**: 코드와 연결된 앱 또는 추가 기능의 이름입니다.
     -   **주문 이름**:이 코드가 생성된 주문의 이름입니다.
     -   **홍보 코드**: 코드 자체입니다. 하이픈으로 구분된 영숫자 문자의 5x5 문자열입니다. 예: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **교환 가능 URL**: 고객이 코드를 교환하고 앱 또는 추가 기능을 설치할 수 있는 URL입니다. 다음과 같은 형식의 URL: http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;promotional_code >
+    -   **교환 가능 URL**: 고객이 코드를 교환하고 앱 또는 추가 기능을 설치할 수 있는 URL입니다. URL의 형식은 http://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt;promotional_code>입니다.
     -   **시작 날짜**: 이 코드가 활성화 되는 날짜입니다.
     -   **만료 날짜**: 이 코드가 만료되는 날짜입니다.
     -   **코드 ID**: 이 코드의 고유 ID입니다.
@@ -97,7 +97,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 
 ## <a name="code-redemption-user-experience"></a>코드 교환 사용자 환경
 
-고객에게 홍보 코드(또는 교환할 수 있는 URL)를 배포한 후, 고객이 URL에서 해당 제품을 무료로 얻을 수 있습니다. 교환할 수 있는 URL을 클릭하면 인증된 **코드 교환** 페이지(<https://account.microsoft.com/billing/redeem>)가 시작됩니다. 이 페이지에는 교환하려는 앱에 대한 설명이 포함되어 있습니다. 고객이 Microsoft 계정으로 로그인하지 않은 경우, 로그인 메시지가 표시됩니다. 고객이 <https://account.microsoft.com/billing/redeem>를 방문, 직접 코드를 입력할 수도 있습니다.
+고객에게 홍보 코드(또는 교환할 수 있는 URL)를 배포한 후, 고객이 URL에서 해당 제품을 무료로 얻을 수 있습니다. 교환 가능 URL을 클릭하면 <https://account.microsoft.com/billing/redeem>에서 인증된 **코드 교환** 페이지가 시작됩니다. 이 페이지에는 교환하려는 앱에 대한 설명이 포함되어 있습니다. 고객이 Microsoft 계정으로 로그인하지 않은 경우, 로그인 메시지가 표시됩니다. 고객은 <https://account.microsoft.com/billing/redeem>을 방문하여 직접 코드를 입력할 수 있습니다.
 
 > [!IMPORTANT]
 > (**사용할 수 있지만, Microsoft Store에서 검색되지 않는 제품으로 설정**한 경우에도)제품 게시 프로세스를 완료한 후, 고객에게 홍보 코드를 배포하는 것이 좋습니다. 게시되지 않은 제품에 홍보 코드를 사용하려 시도할 경우 오류 메시지가 표시됩니다.
@@ -111,12 +111,12 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 ## <a name="review-your-promotional-codes"></a>홍보 코드 검토
 
 특정 앱과 추가 기능의 홍보 코드 주문에 대한 상세 요약을 검토하려면, 사용자 앱의 **홍보 코드** 페이지로 이동합니다(개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **유치**를 확장하고 **홍보 코드**를 클릭). 모든 현재 및 비활성 홍보 코드에 대한 다음 정보를 검토할 수 있습니다.
-    -   주문 이름
-    -   앱 또는 추가 기능
-    -   시작 날짜
-    -   만료 날짜
-    -   사용 가능
-    -   교환됨
+-   주문 이름
+-   앱 또는 추가 기능
+-   시작 날짜
+-   만료 날짜
+-   사용 가능
+-   교환됨
 
 이 테이블에서 주문을 [다운로드](#download-and-distribute-promotional-codes)할 수도 있습니다.
 

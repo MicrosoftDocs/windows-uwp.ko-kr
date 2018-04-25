@@ -1,22 +1,25 @@
 ---
 author: jnHs
-Description: "호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하므로 고객의 앱 다운로드를 유도하는 데 도움이 됩니다."
-title: "호소력 있는 앱 설명 쓰기"
+Description: A great description can make your app stand out in the Microsoft Store and help encourage customers to download it.
+title: 호소력 있는 앱 설명 쓰기
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 27848c7aef38999c37c8a2675783d243614f05e2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+keywords: Windows 10, UWP, 설명, 설명, Store 목록, 마케팅
+ms.localizationpriority: high
+ms.openlocfilehash: 6a9b9ef122f2d733a2cf225ee47263bb07879538
+ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="write-a-great-app-description"></a>호소력 있는 앱 설명 쓰기
 
 
-호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하므로 고객의 앱 다운로드를 유도하는 데 도움이 됩니다. [앱을 제출할 때 입력한 설명](create-app-store-listings.md#description)은 앱의 스토어 목록에 표시됩니다. 처음 몇 줄을 스토어의 검색 결과 및 알고리즘 목록에 표시할 수도 있습니다.
+호소력 있는 설명은 Microsoft Store에서 앱을 돋보이게 하므로 고객의 앱 다운로드를 유도하는 데 도움이 됩니다. [앱을 제출할 때 입력한 설명](create-app-store-listings.md#description)은 앱의 Store 목록에 표시됩니다. 처음 몇 줄을 스토어의 검색 결과 및 알고리즘 목록에 표시할 수도 있습니다.
 
 
 다음은 앱 설명을 최대한 적합하게 작성할 수 있는 몇 가지 팁입니다.
@@ -24,7 +27,10 @@ translationtype: HT
 -   **처음 몇 개의 문장에서 주의를 끕니다.** 설명의 시작 부분이 가장 중요하므로 주의를 끌도록 지정하세요. 자치 제안으로 시작하겠습니다. 잠재 고객이 앱을 받기 위해 시간과 비용을 들여야 하는 이유는 무엇일까요? 해당 앱을 선택할 경우 다른 앱보다 혜택이 있나요? 명확하고 분명한 언어를 사용하여 한두 문장 정도로 앱의 고유한 특징을 설명하고 사용자가 이 앱을 원하는 이유에 대해 설명합니다.
 -   **앱에 대해 쉽게 알아볼 수 있도록 작성합니다.** 초기 후크 뒤에 추가적인 혜택, 앱에서 바로 구매 기회 및 고객이 알고 싶어 할 기타 앱 정보를 설명합니다. 앱을 배포하는 지역/국가의 법률에 따라 제공해야 하는 공개 정보 또는 정보를 포함해야 합니다.
 -   **목록 및 간단한 단락을 사용합니다.** 잠재 고객은 앱을 잠시 살펴만 볼 수 있습니다. 해당하는 경우 짧은 단락과 목록을 사용하여 콘텐츠를 나누면 검사가 더 쉬워집니다.
-    > **참고** [앱 기능](create-app-store-listings.md#app-features) 목록을 추가하는 것도 앱 기능을 빠르게 표시하는 데 도움이 됩니다. 이 목록은 앱 설명 바로 아래에 나타납니다.
+
+    > [!NOTE]
+    > [앱 기능](create-app-store-listings.md#app-features) 목록을 추가하는 것도 앱 기능을 빠르게 표시하는 데 도움이 됩니다. 이 목록은 앱 설명 바로 아래에 나타납니다.
+
 -   **건조한 언어는 사용하지 마세요.** 친근한 언어로 설명을 작성합니다. 앱 기능을 명확하게 설명하는 용어를 사용하되 지겨운 어조가 되지 않도록 하세요. 일상적이고 친근한 어조는 대부분의 앱에 효과적입니다.
 -   **적합한 길이를 사용합니다.** 좋은 설명은 빠르게 읽힐 뿐 아니라 읽는 사람의 흥미를 유발하고 앱 기능을 설명하는 정보를 포함합니다. 복잡한 앱은 설명하는 데 더 많은 문장이 필요하지만 단순한 앱은 몇 문장만 사용하면 됩니다. 대부분의 경우 적합한 길이는 200 단어에서 3000 단어 사이입니다.
 -   **무료 평가판 및 추가 기능을 명확하게 표시합니다.** 앱의 무료 평가판을 제공하는 경우 고객이 제한되는 기능을 이해할 수 있도록 체험 작동 방식을 설명해야 합니다. 특히 앱 기능에 상당한 영향을 주는 경우 사용 가능한 추가 기능 유형을 언급하는 것도 좋은 방법입니다.

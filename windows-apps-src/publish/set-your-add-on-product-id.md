@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: high
-ms.openlocfilehash: 12ed8eb58f9f7f7a5fec55c62f19afe0bf6fa2d5
-ms.sourcegitcommit: b6915c7fa2c7292e9b4e3d3e9927dc8746ec1ffb
+ms.openlocfilehash: f3611f74a33aaed0867df343829312c82dd16785
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 
@@ -30,6 +30,7 @@ ms.lasthandoff: 01/22/2018
 > 이 페이지를 저장하여 추가 기능을 만든 후에는 제품 유형을 변경할 수 없습니다. 잘못된 제품 유형을 선택한 경우 언제든지 진행 중인 추가 기능 제출을 삭제하고 새 추가 기능을 만들어 다시 시작할 수 있습니다.
 
 <span id="durable" />
+
 ### <a name="durable"></a>지속형
 
 추가 기능을 보통 단 한 번 구입하는 경우에는 제품 유형으로 **지속형**을 선택합니다. 지속형 추가 기능은 일반적으로 앱에서 추가 기능을 잠금 해제하는 데 사용됩니다.
@@ -37,6 +38,7 @@ ms.lasthandoff: 01/22/2018
 지속형 추가 기능의 기본 **제품 수명**은 **계속**으로, 이는 추가 기능이 만료되지 않음을 나타냅니다. 추가 기능 제출 프로세스의 [속성](enter-add-on-properties.md) 단계에서 **제품 수명**을 다른 기간으로 설정할 수 있습니다. 이렇게 할 경우 지정한 기간(1-365일 중 선택) 이후에 추가 기능이 만료되고, 고객은 만료 이후에 다시 구입을 할 수 있습니다.
 
 <span id="consumable" />
+
 ### <a name="consumable"></a>소모성
 
 추가 기능을 구매, 사용(소비) 및 재구매할 수 있는 경우 **소모성** 제품 유형 중 하나를 선택합니다. 소모성 추가 기능은 일반적으로 고객이 정해진 금액으로 구매하고 다 사용할 수 있는 게임 내 통화(골드, 코인 등) 같은 항목에 사용됩니다. 자세한 내용은 [소모성 추가 기능 구매 사용](../monetize/enable-consumable-add-on-purchases.md)를 참조하세요.
@@ -46,6 +48,7 @@ ms.lasthandoff: 01/22/2018
 - **Microsoft Store 관리 소모성:** Windows 10 버전 1607 이상을 실행하는 모든 고객 장치의 잔액을 Microsoft에서 추적합니다. 이전 버전의 OS에서는 지원되지 않습니다. 이 옵션을 사용하려면 상위 제품이 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일되어야 합니다. 또한 대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만 상위 제품이 게시될 때까지 Microsoft Store 관리 소모성 추가 기능을 Microsoft Store에 제출할 수 없습니다. 제출의 **속성** 단계에서 Microsoft Store 관리 소모성 추가 기능에 대한 수량을 입력해야 합니다.
 
 <span id="subscription" />
+
 ### <a name="subscription"></a>구독
 
 추가 기능에 대해 고객에게 반복적으로 비용을 청구하고 싶은 경우에는 **구독**을 선택합니다.

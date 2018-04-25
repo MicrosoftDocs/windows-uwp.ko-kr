@@ -1,20 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
-title: "앱에 대한 패키지 업데이트 다운로드 및 설치"
-description: "개발자 센터 대시보드에 패키지를 필수로 표시하고 패키지 업데이트를 다운로드 및 설치하도록 앱에 코드를 작성하는 방법을 알아봅니다."
+title: 앱에 대한 패키지 업데이트 다운로드 및 설치
+description: 개발자 센터 대시보드에 패키지를 필수로 표시하고 패키지 업데이트를 다운로드 및 설치하도록 앱에 코드를 작성하는 방법을 알아봅니다.
 ms.author: mcleans
-ms.date: 03/15/2017
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 62dc1cf81bd26ca5ba4adf181cc9f710e41565c2
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
+ms.openlocfilehash: ce2f6d6607f09186a3969f37b6808fa1f04fb338
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-and-install-package-updates-for-your-app"></a>앱에 대한 패키지 업데이트 다운로드 및 설치
 
@@ -29,9 +29,9 @@ Windows10 버전 1607 이상을 대상으로 하는 앱은 [StoreContext](https:
 
 |  메서드  |  설명  |
 |----------|---------------|
-| [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_GetAppAndOptionalStorePackageUpdatesAsync) | 사용할 수 있는 패키지 업데이트의 목록을 가져오려면 이 메서드를 호출합니다. 패키지가 인증 프로세스를 통과한 후 **GetAppAndOptionalStorePackageUpdatesAsync** 메서드에서 패키지 업데이트를 앱에서 사용할 수 있다고 인식할 때까지 최대 1일의 지연 시간이 있음을 참고하십시오. |
-| [RequestDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_RequestDownloadStorePackageUpdatesAsync_Windows_Foundation_Collections_IIterable_Windows_Services_Store_StorePackageUpdate__) | 사용 가능한 패키지 업데이트를 다운로드하려면(설치하지는 않음) 이 메서드를 호출합니다. 이 OS에 업데이트를 다운로드할 수 있는 사용자 권한을 요청하는 대화 상자가 표시됩니다. |
-| [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_RequestDownloadAndInstallStorePackageUpdatesAsync_Windows_Foundation_Collections_IIterable_Windows_Services_Store_StorePackageUpdate__) | 사용 가능한 패키지 업데이트를 다운로드 및 설치하려면 이 메서드를 호출합니다. OS에 업데이트를 다운로드 및 설치하기 위한 사용자의 권한을 요청하는 대화 상자가 표시됩니다. **RequestDownloadStorePackageUpdatesAsync**를 호출하여 패키지 업데이트를 이미 다운로드한 경우 이 메서드는 다운로드 프로세스를 건너뛰고 업데이트 설치만 진행합니다.  |
+| [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetAppAndOptionalStorePackageUpdatesAsync) | 사용할 수 있는 패키지 업데이트의 목록을 가져오려면 이 메서드를 호출합니다. 패키지가 인증 프로세스를 통과한 후 **GetAppAndOptionalStorePackageUpdatesAsync** 메서드에서 패키지 업데이트를 앱에서 사용할 수 있다고 인식할 때까지 최대 1일의 지연 시간이 있음을 참고하십시오. |
+| [RequestDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadstorepackageupdatesasync) | 사용 가능한 패키지 업데이트를 다운로드하려면(설치하지는 않음) 이 메서드를 호출합니다. 이 OS에 업데이트를 다운로드할 수 있는 사용자 권한을 요청하는 대화 상자가 표시됩니다. |
+| [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) | 사용 가능한 패키지 업데이트를 다운로드 및 설치하려면 이 메서드를 호출합니다. OS에 업데이트를 다운로드 및 설치하기 위한 사용자의 권한을 요청하는 대화 상자가 표시됩니다. **RequestDownloadStorePackageUpdatesAsync**를 호출하여 패키지 업데이트를 이미 다운로드한 경우 이 메서드는 다운로드 프로세스를 건너뛰고 업데이트 설치만 진행합니다.  |
 
 <span/>
 
@@ -39,8 +39,8 @@ Windows10 버전 1607 이상을 대상으로 하는 앱은 [StoreContext](https:
 
 |  속성  |  설명  |
 |----------|---------------|
-| [Mandatory](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate#Windows_Services_Store_StorePackageUpdate_Mandatory) | 이 속성을 사용하여 개발자 센터 대시보드에 패키지가 필수로 표시되어 있는지 확인합니다. |
-| [Package](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate#Windows_Services_Store_StorePackageUpdate_Package) | 이 속성을 사용하여 기본 패키지 관련 데이터에 액세스합니다. |
+| [Mandatory](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate.Mandatory) | 이 속성을 사용하여 개발자 센터 대시보드에 패키지가 필수로 표시되어 있는지 확인합니다. |
+| [Package](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate.Package) | 이 속성을 사용하여 기본 패키지 관련 데이터에 액세스합니다. |
 
 <span/>
 
@@ -50,7 +50,7 @@ Windows10 버전 1607 이상을 대상으로 하는 앱은 [StoreContext](https:
 * 코드가 [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) 컨텍스트에서 실행됩니다.
 * **Page**에 다운로드 작업의 상태를 제공하는 ```downloadProgressBar```라는 이름의 [ProgressBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressbar.aspx)가 있습니다.
 * 코드 파일에는 **Windows.Services.Store**, **Windows.Threading.Tasks** 및 **Windows.UI.Popups** 네임스페이스에 대한 **using** 문이 있습니다.
-* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext#Windows_Services_Store_StoreContext_GetForUser_Windows_System_User_) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
+* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
 
 <span/>
 
@@ -221,11 +221,12 @@ private void HandleMandatoryPackageError()
 
 ### <a name="display-progress-info-for-the-download-and-install"></a>다운로드 및 설치에 대한 진행률 정보 표시
 
-**RequestDownloadStorePackageUpdatesAsync** 또는 **RequestDownloadAndInstallStorePackageUpdatesAsync**를 호출할 때, 이 요청의 각 패키지에 대해 다운로드(또는 다운로드 및 설치)의 각 단계마다 한 번씩 호출되는 [Progress](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) 처리기를 할당할 수 있습니다. 처리기는 [StorePackageUpdateStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestatus) 개체를 받으며, 이 개체는 진행률 알림을 보내는 업데이트 패키지에 대한 정보를 제공합니다. 이전 예제는 **StorePackageUpdateStatus** 개체의 **PackageDownloadProgress** 필드를 사용하여 다운로드와 설치 프로세스의 진행률을 표시합니다.
+**RequestDownloadStorePackageUpdatesAsync** 또는 **RequestDownloadAndInstallStorePackageUpdatesAsync**를 호출할 때, 이 요청의 각 패키지에 대해 다운로드(또는 다운로드 및 설치)의 각 단계마다 한 번씩 호출되는 [Progress](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncoperationwithprogress-2.progress) 처리기를 할당할 수 있습니다. 처리기는 [StorePackageUpdateStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestatus) 개체를 받으며, 이 개체는 진행률 알림을 보내는 업데이트 패키지에 대한 정보를 제공합니다. 이전 예제는 **StorePackageUpdateStatus** 개체의 **PackageDownloadProgress** 필드를 사용하여 다운로드와 설치 프로세스의 진행률을 표시합니다.
 
 패키지 다운로드와 설치를 하나의 작업으로 수행하기 위해 **RequestDownloadAndInstallStorePackageUpdatesAsync**를 호출할 경우, **PackageDownloadProgress** 필드는 패키지 다운로드 프로세스 동안 0.0에서 0.8까지 증가하고 설치하는 동안 0.8에서 1.0까지 증가함을 유의하십시오. 따라서 사용자 지정 진행률 UI에 표시되는 비율을 **PackageDownloadProgress** 필드의 값에 직접 매핑할 경우, 패키지 다운로드가 완료되면 UI가 80%까지 표시되고 OS가 설치 대화 상자를 표시합니다. 패키지가 다운로드되어 설치할 준비가 되었을 때 100%로 사용자 지정 진행률 UI가 표시되도록 하려면, **PackageDownloadProgress** 필드가 0.8에 도달했을 때 진행률 UI에 100%를 할당하도록 코드를 수정해야 합니다.
 
 <span id="mandatory-dashboard" />
+
 ## <a name="make-a-package-submission-mandatory-in-the-dev-center-dashboard"></a>개발자 센터 대시보드에 패키지 제출을 필수로 만들기
 
 Windows10 버전 1607 이상을 대상으로 하는 앱을 위해 패키지 제출을 만들면 해당 패키지를 필수로 표시하고 필수가 되는 날짜/시간을 표시할 수 있습니다. 이 속성이 설정되고 앱에서 이 문서의 앞부분에서 설명한 API를 사용하여 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
@@ -237,7 +238,7 @@ Windows10 버전 1607 이상을 대상으로 하는 앱을 위해 패키지 제�
 
 1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인하고 앱 개요 페이지로 이동합니다.
 2. 필수로 만들 패키지 업데이트가 포함된 제출의 이름을 클릭합니다.
-3. 제출의 **패키지** 페이지로 이동합니다. 이 페이지 하단에서 **이 업데이트를 필수로 설정하세요.**를 선택한 다음 패키지 업데이트가 필수가 되는 날짜와 시간을 선택합니다. 이 옵션은 제출의 모든 UWP 패키지에 적용됩니다.
+3. 제출의 **패키지** 페이지로 이동합니다. 이 페이지 하단에서 **이 업데이트를 필수로 설정하세요.** 를 선택한 다음 패키지 업데이트가 필수가 되는 날짜와 시간을 선택합니다. 이 옵션은 제출의 모든 UWP 패키지에 적용됩니다.
 
 개발자 센터 대시보드에서 패키지를 구성하는 방법은 [앱 패키지 업로드](../publish/upload-app-packages.md)를 참조하세요.
 

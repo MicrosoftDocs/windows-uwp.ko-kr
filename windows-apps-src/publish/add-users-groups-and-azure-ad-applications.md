@@ -3,17 +3,17 @@ author: jnHs
 Description: You can add users, groups, and Azure AD applications to your Dev Center account.
 title: 개발자 센터 계정에 사용자, 그룹, Azure AD 응용 프로그램 추가
 ms.author: wdg-dev-content
-ms.date: 09/20/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, UWP, Azure AD 응용 프로그램, AAD, 사용자, 그룹
 ms.localizationpriority: high
-ms.openlocfilehash: bf640dbfe642401b9a4f9c767b8c2145fed11d57
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
+ms.openlocfilehash: 463117eb14343e7e2bd19502b31774b78e4093eb
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>개발자 센터 계정에 사용자, 그룹, Azure AD 응용 프로그램 추가
 
@@ -24,15 +24,16 @@ ms.lasthandoff: 02/19/2018
 > [!IMPORTANT]
 > 계정에 사용자를 추가하려면 먼저 [개발자 센터 계정을 조직의 Azure Active Directory 테넌트와 연결](associate-azure-ad-with-dev-center.md)해야 합니다. 
 
-사용자를 추가할 때는 [역할 또는 사용자 지정 권한 집합](set-custom-permissions-for-account-users.md)을 할당하여 귀하의 개발자 센터 계정에 대한 액세스를 지정해야 합니다. 다음 고려 사항을 염두에 두십시오. (이들은 그룹 및 Azure AD 응용 프로그램을 비롯하여 개별 사용자에게 적용됩니다.)
+사용자를 추가할 때는 [역할 또는 사용자 지정 권한 집합](set-custom-permissions-for-account-users.md)을 할당하여 개발자 센터 계정에 대한 액세스를 지정해야 합니다. 
 
-모든 개발자 센터의 사용자가 [개발자 센터 계정과 연결된 Azure AD 테넌트에서](associate-azure-ad-with-dev-center.md) 활성 계정이 있어야 합니다. 사용자 관리는 한 번에 한 테넌트에서 완료되며 사용자를 추가 또는 편집하려는 테넌트에 대한 관리자 계정으로 로그인해야 합니다. 개발자 센터에서 새 사용자를 만들면 로그인한 Azure AD 테넌트의 해당 사용자에 대한 계정도 만들어지며, 개발자 센터에서 사용자의 이름을 변경하면 조직의 Azure AD 테넌트에도 동일하게 변경됩니다.
+모든 개발자 센터 사용자(그룹 및 Azure AD 응용 프로그램 포함)가 [개발자 센터 계정과 연결된 Azure AD 테넌트](associate-azure-ad-with-dev-center.md)에서 활성 계정이 있어야 합니다. 사용자 관리는 한 번에 한 테넌트에서 완료되며 사용자를 추가 또는 편집하려는 테넌트에 대한 관리자 계정으로 로그인해야 합니다. 개발자 센터에서 새 사용자를 만들면 로그인한 Azure AD 테넌트의 해당 사용자에 대한 계정도 만들어지며, 개발자 센터에서 사용자의 이름을 변경하면 조직의 Azure AD 테넌트에도 동일하게 변경됩니다.
 
 > [!NOTE]
 > 조직에서 [디렉터리 통합](http://go.microsoft.com/fwlink/p/?LinkID=724033)을 사용하여 온-프레미스 디렉터리 서비스와 Azure AD를 동기화하면 개발자 센터에서 새 사용자, 그룹 또는 Azure AD 응용 프로그램을 만들 수 없습니다. 개발자 센터에서 새 사용자, 그룹 또는 Azure AD 응용 프로그램을 보고 추가할 수 있으려면 귀하 또는 온-프레미스 디렉터리의 다른 관리자가 온-프레미스 디렉터리에서 직접 만들어야 합니다.
 
 
 <span id="users" />
+
 ## <a name="add-users-to-your-dev-center-account"></a>개발자 센터 계정에 사용자 추가
 
 개발자 센터 계정에 사용자를 추가하려면 **계정 설정**의 **사용자** 페이지로 이동한 다음 **사용자 추가**를 선택합니다. 작업하려는 Azure AD 테넌트에 대한 관리자 계정을 사용하여 로그인해야 합니다. 
@@ -42,11 +43,11 @@ ms.lasthandoff: 02/19/2018
 조직의 테넌트에 이미 존재하는 사용자를 선택하여 이들에게 개발자 센터 계정에 대한 액세스를 제공할 수 있습니다. 
 
 <span id="from-directory" />
+
 1.  **사용자** 페이지에서 **사용자 추가**를 선택합니다. 
 2.  표시되는 목록에서 하나 이상의 사용자를 선택합니다. 검색 상자를 사용하여 특정 사용자를 검색할 수 있습니다.
     > [!TIP]
     > 개발자 센터 계정에 추가할 사용자를 한 명 이상 선택하는 경우에는 동일한 역할 또는 사용자 지정 권한 집합을 할당해야 합니다. 역할/권한이 서로 다른 사용자를 여러 명 추가하려면 각 역할 또는 사용자 지정 권한 집합에 대해 다음 단계를 반복합니다.
-
 3.  사용자 선택이 완료되면 **선택된 항목 추가**를 클릭합니다.
 4.  **역할** 섹션에서 선택한 사용자에 대한 [역할 또는 사용자 지정 권한 집합](set-custom-permissions-for-account-users.md) 을 지정합니다.
 5.  **저장**을 클릭합니다.
@@ -61,6 +62,7 @@ ms.lasthandoff: 02/19/2018
 -   **외부 사용자 초대**: 현재 조직의 디렉터리에 있지 않은 사용자에게 메일 초대장을 전송합니다. 사용자가 개발자 센터 계정 액세스에 대한 초대장을 받으면 Azure AD 테넌트에서 새로운 [게스트 사용자](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) 계정이 생성됩니다.
 
 <span id="new-user" />
+
 ### <a name="create-new-users"></a>새 사용자 만들기
 
 > [!IMPORTANT]
@@ -77,6 +79,7 @@ ms.lasthandoff: 02/19/2018
 
 
 <span id="email" />
+
 ### <a name="invite-outside-users"></a>외부 사용자 초대
 
 > [!IMPORTANT]
@@ -89,6 +92,9 @@ ms.lasthandoff: 02/19/2018
 초대한 사용자가 계정에 가입하라는 메일 초대장을 받으면 Azure AD 테넌트에서 새로운 [게스트 사용자](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) 계정이 생성됩니다. 각 사용자는 계정에 액세스하려면 먼저 초대를 수락해야 합니다.
 
 초대를 다시 보내려면 **사용자** 페이지에서 사용자를 찾아 메일 주소(또는 **보류 중인 초대**라고 표시되는 텍스트)를 선택합니다. 그런 다음 페이지의 맨 아래쪽에서 **초대 다시 보내기**를 클릭합니다.
+
+> [!IMPORTANT]
+> 개발자 센터 계정에 가입하도록 초대하는 외부 사용자에게 다른 사용자와 동일한 역할 및 권한을 할당할 수 있습니다. 그러나 외부 사용자는 Microsoft Store에 앱을 연결한다든지 Microsoft Store에 업로드할 패키지를 생성하는 등의 특정 작업을 Visual Studio에서 수행할 수 없습니다. 이러한 작업을 수행해야 하는 경우에는 **외부 사용자 초대** 대신 **새 사용자 만들기**를 선택합니다 (기존 Azure AD 테넌트에 이들 사용자를 추가하고 싶지 않은 경우에는 [새 테넌트 만들기](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account)를 선택하고 해당 테넌트에서 이들 사용자를 위한 새로운 계정을 만들 수 있음). 
 
 
 ### <a name="changing-a-users-directory-password"></a>사용자의 디렉터리 암호 변경
@@ -103,6 +109,7 @@ ms.lasthandoff: 02/19/2018
     >  이 페이지를 나간 후에는 임시 암호에 액세스할 수 없으므로 이 정보를 인쇄하거나 복사하고 사용자에게 제공해야 합니다.
 
 <span id="groups" />
+
 ## <a name="add-groups-to-your-dev-center-account"></a>개발자 센터 계정에 그룹 추가
 
 조직 디렉터리의 그룹을 개발자 센터 계정으로 추가할 수 있습니다. 이렇게 하면 그룹 구성원인 모든 사용자가 그룹에 할당된 역할과 관련해 권한을 가지고 액세스를 할 수 있게 됩니다.
@@ -133,9 +140,11 @@ ms.lasthandoff: 02/19/2018
 
 
 <span id="azure-ad-applications" />
+
 ## <a name="add-azure-ad-applications-to-your-dev-center-account"></a>개발자 센터 계정에 Azure AD 응용 프로그램을 추가
 
-조직의 Azure AD에 포함된 응용 프로그램이나 서비스에서 개발자 센터 계정에 액세스하도록 허용할 수 있습니다.
+조직의 Azure AD에 포함된 응용 프로그램이나 서비스에서 개발자 센터 계정에 액세스하도록 허용할 수 있습니다. 이러한 Azure AD 응용 프로그램 사용자 계정은 [Microsoft Store 서비스](../monetize/using-windows-store-services.md)에서 제공되는 REST API를 호출하는 데 사용할 수 있습니다.
+
 
 ### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>조직 디렉터리의 Azure AD 응용 프로그램 추가
 
@@ -158,8 +167,8 @@ ms.lasthandoff: 02/19/2018
 
 1.  **사용자** 페이지에서 **Azure AD 응용 프로그램 추가**를 선택합니다.
 2.  다음 페이지에서 **새 Azure AD 응용 프로그램**을 클릭합니다.
-3.  새 Azure AD 응용 프로그램에 대한 **회신 URL**을 입력합니다. 이 URL를 통해 사용자가 Azure AD 응용 프로그램에 로그인하고 이를 사용할 수 있습니다(앱 URL 또는 로그온 URL이라고도 함). **회신 URL**은 256자 이내여야 합니다.
-4.  새 Azure AD 응용 프로그램에 대한 **앱 ID URI**를 입력합니다. 이 URI는 Azure AD에 Single Sign-On 요청을 보낼 때 제공되는 Azure AD 응용 프로그램의 논리적 식별자입니다. 디렉터리에서 각 Azure AD 응용 프로그램에 대한 **앱 ID URI**는 고유해야 하고 256자 이내여야 합니다.
+3.  새 Azure AD 응용 프로그램에 대한 **회신 URL**을 입력합니다. 이 URL를 통해 사용자가 Azure AD 응용 프로그램에 로그인하고 이를 사용할 수 있습니다(앱 URL 또는 로그온 URL이라고도 함). **회신 URL**은 256자 이내여야 하고 디렉터리 내에서 고유해야 합니다.
+4.  새 Azure AD 응용 프로그램에 대한 **앱 ID URI**를 입력합니다. 이 URI는 Azure AD에 Single Sign-On 요청을 보낼 때 제공되는 Azure AD 응용 프로그램의 논리적 식별자입니다. 디렉터리에서 각 Azure AD 응용 프로그램에 대한 **앱 ID URI**는 고유해야 하고 256자 이내여야 합니다. **앱 ID URI**에 대한 자세한 내용은 [응용 프로그램과 Azure Active Directory 통합](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#changing-the-application-registration-to-support-multi-tenant)을 참조하세요.
 5.  **역할** 섹션에서 Azure AD 응용 프로그램에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md)을 지정합니다.
 6.  **저장**을 클릭합니다.
 
@@ -169,6 +178,7 @@ Azure AD 응용 프로그램을 추가하거나 만든 후 **사용자** 섹션�
 > [Microsoft Store 서비스](../monetize/using-windows-store-services.md)에서 제공하는 REST API를 사용하려는 경우, 서비스 호출을 인증하는 데 사용할 수 있는 Azure AD 액세스 토큰을 얻으려면 이 페이지에 표시된 테넌트 ID 및 클라이언트 ID 값이 필요합니다.   
 
 <span id="manage-keys" />
+
 ### <a name="manage-keys-for-an-azure-ad-application"></a>Azure AD 응용 프로그램에 대한 키 관리
 
 Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸 경우 키가 필요합니다. 개발자 센터에서 정보를 편집하여 Azure AD 응용 프로그램에 대한 키를 만들 수 있습니다. 더 이상 필요하지 않은 키를 제거할 수도 있습니다.
@@ -185,6 +195,7 @@ Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸
 4.  키를 추가로 만들려면 **다른 키 추가**를 클릭합니다.
 
 <span id="edit" />
+
 ## <a name="edit-a-user-group-or-azure-ad-application"></a>사용자, 그룹 또는 Azure AD 응용 프로그램 편집
 
 개발자 센터 계정에 사용자 그룹 및/또는 Azure AD 응용 프로그램을 추가하고 난 후 계정 정보를 변경할 수 있습니다. 
@@ -209,11 +220,12 @@ Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸
 **사용자** 페이지에서 검색 기록을 검토할 사용자의 **마지막 작업** 아래에 표시된 링크를 클릭합니다. 지난 30일 동안 사용자가 방문한 모든 페이지의 URL을 볼 수 있습니다.
 
 <span id="remove" />
+
 ## <a name="remove-users-groups-and-azure-ad-applications"></a>사용자, 그룹 및 Azure AD 응용 프로그램 제거
 
 개발자 센터 계정에서 사용자, 그룹 또는 Azure AD 응용 프로그램을 제거하려면 **사용자** 페이지에 해당 이름으로 표시되는 **제거** 링크를 클릭합니다. 제거하기를 원한다고 확인한 후에는 나중에 다시 추가하지 않는 한 그 사용자, 그룹 또는 Azure AD 응용 프로그램이 더 이상 개발자 센터 계정에 액세스할 수 없게 됩니다.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > 사용자, 그룹 또는 Azure AD 응용 프로그램 제거는 개발자 센터 계정에 더 이상 액세스 권한이 없음을 의미합니다. 사용자, 그룹 또는 Azure AD 응용 프로그램을 조직의 디렉터리에서 삭제하지 **않습니다**.
 
  

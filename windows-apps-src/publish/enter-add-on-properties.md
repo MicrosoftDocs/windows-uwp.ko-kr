@@ -1,20 +1,20 @@
 ---
 author: jnHs
 Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
-title: "추가 기능 속성 입력"
+title: 추가 기능 속성 입력
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
 ms.date: 01/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품"
+keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: high
-ms.openlocfilehash: 63fc414c230e5a988013b1509280bfdb083a93c0
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: c3f5de17dc090989572d72c30bd9d8b85e385316
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -80,16 +80,18 @@ ms.lasthandoff: 01/12/2018
 이러한 필드는 모든 유형의 추가 기능에서 옵션으로 제공됩니다.
 
 <span id="keywords" />
+
 ### <a name="keywords"></a>키워드
 
 제출하는 각 추가 기능에 대해 각각 30자 이내의 키워드를 10개까지 제공할 수 있습니다. 그러면 앱에서 이러한 단어와 일치하는 추가 기능을 쿼리할 수 있습니다. 이 기능을 사용하면 앱 코드에서 제품 ID를 직접 지정하지 않고도 추가 기능을 로드할 수 있는 앱 화면을 만들 수 있습니다. 그러면 앱에서 코드를 변경하거나 앱을 다시 제출하지 않고도 언제든지 추가 기능의 키워드를 변경할 수 있습니다.
 
-이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.aspx)의 [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct#Windows_Services_Store_StoreProduct_Keywords) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.aspx)를 사용하는 경우 [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting#Windows_ApplicationModel_Store_ProductListing_Keywords) 속성을 사용합니다.)
+이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://msdn.microsoft.com/en-us/library/windows/apps/windows.services.store.aspx)의 [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.store.aspx)를 사용하는 경우 [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords) 속성을 사용합니다.)
 
 > [!NOTE]
 > Windows 8 및 Windows 8.1을 대상으로 하는 패키지에서는 키워드를 사용할 수 없습니다.
 
 <span id="custom-developer-data" />
+
 ### <a name="custom-developer-data"></a>사용자 지정 개발자 데이터
 
 **사용자 지정 개발자 데이터** 필드(이전의 **태그**)에 최대 3000자까지 입력하여 앱에서 바로 구매 제품에 대한 추가 컨텍스트를 제공할 수 있습니다. 대부분의 경우 이는 XML 문자열 형식이지만, 이 필드에 원하는 모든 내용을 입력할 수 있습니다. 앱이 이 필드를 쿼리하여 콘텐츠를 읽을 수 있습니다(단, 앱은 데이터를 편집하고 변경 사항을 적용할 수 없음).

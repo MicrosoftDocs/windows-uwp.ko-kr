@@ -3,17 +3,17 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: 앱 가격 설정 및 예약
 ms.author: wdg-dev-content
-ms.date: 02/05/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 가격 책정, 앱 가격 책정, 앱 가격, 앱 판매, 가격 변경, 가격 사용자 지정, 가격, 비용, 기본 가격 재정의, 자유 형식 가격, 자유 형식
 ms.localizationpriority: high
-ms.openlocfilehash: 2be7e664279cb19527a262ad3c170d04f8d026fb
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 44ded7baf563d0253c2cca6b7937cb5c8fea74e3
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="set-and-schedule-app-pricing"></a>앱 가격 설정 및 예약
 
@@ -37,6 +37,8 @@ ms.lasthandoff: 02/09/2018
 
 선택한 기준 가격에는 고객이 지불해야 하는 판매세 또는 부가가치세가 포함될 수 있습니다. 선택한 지역/국가에서 앱의 세금 관련 정보에 대해 자세히 알아보려면 [유료 앱의 세금 세부 정보](tax-details-for-paid-apps.md)를 참조하세요. 또한 [특정 지역/국가의 가격 고려 사항](define-pricing-and-market-selection.md#price-considerations-for-specific-markets)을 검토하세요.
 
+> [!NOTE]
+> [표시 여부](choose-visibility-options.md#discoverability) 섹션의 **Store에서 사용할 수 있지만 검색 되지 않는 제품으로 설정** 아래에서 **취득 중지** 옵션을 선택하면 제출에 대한 가격을 설정할 수 없습니다(앱을 무료로 다운로드하기 위해 홍보 코드를 등록하지 않는 한 누구도 앱 취득이 불가능하기 때문).
 
 ## <a name="schedule-price-changes"></a>가격 변경 예약
 

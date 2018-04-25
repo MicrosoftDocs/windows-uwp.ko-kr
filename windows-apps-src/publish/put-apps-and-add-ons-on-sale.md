@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: "Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다."
-title: "앱 및 추가 기능 판매"
+Description: You can promote your app or add-on in the Microsoft Store by putting it on sale for a limited time.
+title: 앱 및 추가 기능 판매
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
 ms.author: wdg-dev-content
 ms.date: 08/21/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: d17394808232aeffbe81404427e668fb9c06e677
-ms.sourcegitcommit: cd9b4bdc9c3a0b537a6e910a15df8541b49abf9c
+ms.localizationpriority: high
+ms.openlocfilehash: 0cc26403c10e9300e983275d28a1a969af513dc3
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>앱 및 추가 기능 판매
 
-Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다. 낮은 가격대 또는 백분율을 기반으로 한 할인 가격에 제품을 제공할 수 있습니다.
+Microsoft Store에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다. 낮은 가격대 또는 백분율을 기반으로 하는 할인 가격에 제품을 제공할 수 있습니다.
 
 제출에서 **가격 책정 및 가용성** 페이지의 **할인 가격 책정** 섹션을 사용하여 일시적으로 앱이나 추가 기능의 가격을 인하할 경우, 스토어 목록을 보고 있는 고객은 가격 취소선을 통해 가격이 인하된 것을 확인할 수 있습니다(스토어에 변경을 표시하지 않고 가격을 인하 또는 인상할 수 있는 [예약된 가격 변경](set-and-schedule-app-pricing.md#schedule-price-changes)과 달리). 
 
@@ -60,7 +61,7 @@ Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의
 
 > [!NOTE]
 > 앱의 기본 가격보다 높은 가격 계층을 선택할 수 있습니다. 그러나 할인 가격은 할인 가격이 해당 지역/국가의 앱 정가보다 낮은 경우에만 고객에게 표시됩니다.
-
+>
 > 앱의 기준 가격보다 높은 가격을 선택하는 것이 할인 판매에 적절할 수 있는 것은 다음과 같은 경우입니다. 이미 특정 지역/국가에서 앱의 기준 가격보다 높은 사용자 지정 가격을 설정했으나, 이러한 지역/국가에서 일시적으로 가격을 낮추려는 경우 (그러나 할인 가격은 앱의 기준 가격보다 여전히 높음) 입니다. 선택 항목으로 인해 특정 지역/국가에서 앱 가격이 상승하는 경우 해당 지역/국가의 고객에게 더 높은 가격을 표시하지 않습니다. 이전(더 낮은) 가격으로 앱이 계속 표시됩니다. 또한 중복되는 별도의 할인 판매가 다른 가격으로 예약된 경우 사용 가능한 최저 가격을 고객에 표시합니다.
 
 ## <a name="changing-or-canceling-a-scheduled-sale"></a>예약된 할인 판매 변경 또는 취소

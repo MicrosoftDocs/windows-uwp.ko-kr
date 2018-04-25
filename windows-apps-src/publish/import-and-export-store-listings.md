@@ -1,21 +1,22 @@
 ---
 author: jnHs
 Description: You can create Store listings for your apps without using the Dev Center dashboard by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
-title: "Store 목록 가져오기 및 내보내기"
+title: Store 목록 가져오기 및 내보내기
 ms.author: wdg-dev-content
-ms.date: 12/22/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, Store 목록 가져오기, Store 목록 내보내기, 가져오기 내보내기, Store 목록 csv"
+keywords: windows 10, uwp, Store 목록 가져오기, Store 목록 내보내기, 가져오기 내보내기, Store 목록 csv
 ms.localizationpriority: high
-ms.openlocfilehash: f003ab35fa968e7b4be8e6e0591d97baafaa8648
-ms.sourcegitcommit: 446fe2861651f51a129baa80791f565f81b4f317
+ms.openlocfilehash: fb9a3e6fd93600392ef724226368d33ed1585c76
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-and-export-store-listings"></a>Store 목록 가져오기 및 내보내기
+
 [대시보드에 바로 Store 목록 정보를 입력](create-app-store-listings.md)하지 않고 .csv 파일로 목록을 내보내고 정보 및 자산을 입력한 다음 업데이트된 파일을 가져와서 정보를 추가 또는 업데이트할 수 있습니다. 이 방법을 사용하여 목록을 처음부터 만들거나 이미 만든 목록을 업데이트할 수 있습니다.
 
 동일한 정보를 여러 필드에 복사하여 붙여넣을 수 있고 특정 언어에 적용해야 하는 내용을 쉽게 변경할 수 있기 때문에, 이 옵션은 제품에 대한 Store 목록을 여러 언어로 작성하거나 업데이트하려는 경우에 특히 유용합니다. 그러나 이 방법은 앱에 대한 [플랫폼별 Store 목록](create-platform-specific-store-listings.md)을 만들거나 업데이트하는 데 사용할 수 없습니다. 
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/12/2018
 
 앱에 대한 제출 개요 페이지에서 **목록 내보내기**(**목록 저장** 섹션의)를 클릭하여 UTF-8로 인코딩된 .csv 파일을 생성합니다. 이 파일을 컴퓨터의 한 위치에 저장합니다.
 
-Microsoft Excel이나 다른 편집기를 사용해 이 파일을 편집할 수 있습니다. Office 365 버전의 Excel에서는 .csv 파일을 **CSV UTF-8(쉼표로 구분)(*.csv)**로 저장할 수 있지만, 다른 버전에서는 이 기능이 지원되지 않습니다. 이 기능을 지원하는 Excel 버전에 대한 세부 정보는 [Excel 2016의 새로운 기능 공지](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73)를 참조하고, 다양한 편집기에서 UTF-8로의 인코딩에 대한 자세한 내용은 [여기](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16)를 참조하세요.
+Microsoft Excel이나 다른 편집기를 사용해 이 파일을 편집할 수 있습니다. Excel의 Office 365 버전은 .csv 파일을 **CSV UTF-8(쉼표로 구분)(*.csv)** 로 저장할 수 있지만, 다른 버전에서는 이 기능이 지원되지 않습니다. 이 기능을 지원하는 Excel 버전에 대한 세부 정보는 [Excel 2016의 새로운 기능 공지](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73)를 참조하고, 다양한 편집기에서 UTF-8로의 인코딩에 대한 자세한 내용은 [여기](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16)를 참조하세요.
       
 제품에 대한 목록을 아직 만들지 않은 경우에는 내보낸 .csv 파일에 사용자 지정 데이터가 포함되지 않습니다. Store 목록에 표시될 수 있는 모든 항목에 해당하는 **필드**, **ID**, **유형** 및 **기본** 행에 대한 열이 표시됩니다.
 
@@ -67,7 +68,7 @@ Microsoft Excel이나 다른 편집기를 사용해 이 파일을 편집할 수 
 
 내보낸 목록에 있는 많은 필드에서 텍스트 입력이 필요합니다. 위의 예에서는 **설명** 및 **ReleaseNotes** 같은 것들이 여기에 해당됩니다. 이러한 유형의 필드에서는 각 언어에 대한 필드에 적절한 텍스트를 입력하기만 하면 됩니다. 각 필드에 대한 길이 및 기타 요구 사항을 반드시 따라야 합니다. 이러한 요구 사항에 대한 자세한 내용은 [앱 Store 목록 만들기](create-app-store-listings.md)를 참조하세요.
 
-이미지, 예고편 같은 자산에 해당하는 필드에 정보를 제공하는 것은 좀 더 복잡합니다. 이러한 자산의 **유형**은 **텍스트**가 아니라 **상대 경로 (또는 개발자 센터의 파일에 대한 RUL)**입니다. 
+이미지, 예고편 같은 자산에 해당하는 필드에 정보를 제공하는 것은 좀 더 복잡합니다. 이러한 자산의 **유형**은 **텍스트**가 아니라 **상대 경로 (또는 개발자 센터의 파일에 대한 RUL)** 입니다. 
      
 Store 목록에 이미 자산을 업로드한 경우에는 이러한 자산이 URL로 표시됩니다. 이러한 URL은 제품에 대한 여러 설명이나 동일한 개발자 계정 내의 서로 다른 제품에서 재사용될 수 있기 때문에 URL을 복사해뒀다가 원할 경우 다른 필드에서 이를 재사용할 수 있습니다.
 

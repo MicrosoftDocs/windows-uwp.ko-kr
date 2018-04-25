@@ -4,17 +4,17 @@ Description: The Age ratings page of the app submission process lets you provide
 title: 연령별 등급
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ms.author: wdg-dev-content
-ms.date: 02/06/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 연령별 등급, 게임 등급, iarc, 등급, 설문지, 등급 위원회, 콘텐츠 등급
 ms.localizationpriority: high
-ms.openlocfilehash: 0af2d316b0d0c4705c4669ef910f37845ca78aa8
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
+ms.openlocfilehash: 8ee0b2dd91de7cf18fc71ace8b97abc795e22e6b
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="age-ratings"></a>연령별 등급
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/09/2018
 > [!IMPORTANT]
 > 다른 상점에서 앱에 대한 설문지를 이미 작성하고 IARC 등급 ID를 받은 경우 해당 등급 ID를 제공하는 옵션을 선택할 수 있습니다. 해당 ID를 사용하여 기존 등급이 Microsoft Store의 앱에 연결됩니다.
 
-설문지에 정확하게 답변해야 합니다. 이 과정에서 Microsoft는 게시자의 표시 이름 및 메일 주소를 IARC와 공유합니다. 설문지를 완료하면 IARC 등급 시스템에서 응답에 따라 기간 및 콘텐츠 등급 정보를 제공합니다. 다양한 지역/국가에서 고객에게 앱을 표시할 때 이 등급 정보를 사용합니다. 또한 앱이 게시된 후 IARC로부터 앱의 등급을 확인하는 메일을 받게 됩니다.
+설문지에 정확하게 답변해야 합니다. 어떤 질문에 대한 자세한 내용을 보려면 옆에 있는 정보 아이콘을 클릭합니다. 이 과정에서 Microsoft는 게시자의 표시 이름 및 메일 주소를 IARC와 공유합니다. 설문지를 완료하면 IARC 등급 시스템에서 응답에 따라 기간 및 콘텐츠 등급 정보를 제공합니다. 다양한 지역/국가에서 고객에게 앱을 표시할 때 이 등급 정보를 사용합니다. 또한 앱이 게시된 후 IARC로부터 앱의 등급을 확인하는 메일을 받게 됩니다.
 
 첫 번째 질문에서는 귀하의 앱(및 메타데이터)에 가장 적합한 범주를 선택해야 합니다. 적합한 범주를 선택하면 다른 질문이 나타납니다. 앞의 답변에 따라 다음 질문이 달라집니다. 답변을 잘못한 경우에는 다시 돌아가 처음부터 다시 시작하여 올바로 답변할 수 있습니다.
 
@@ -44,6 +44,7 @@ ms.lasthandoff: 02/09/2018
 > 대만에서 사용할 수 있는 게임을 제출하는 경우 법률의 요구에 따라 [이 양식](https://go.microsoft.com/fwlink/?linkid=867281)을 사용하여 제공되는 CSRR 등급을 등록해야 합니다. 
 
 <span id="appeal" />
+
 ## <a name="appealing-ratings-or-refused-classifications"></a>할당된 등급 또는 등급 분류 거부에 대한 이의 제기
 
 자신의 앱에 할당된 연령별 등급에 대해서 의문이 있거나 이의 제기를 하려면 앱이 게시된 후 전송되는 등급 인증서 메일에 포함된 링크를 통해 IARC로 연락할 수 있습니다.

@@ -1,24 +1,27 @@
 ---
 author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
-title: "계정 설정 및 프로필 정보 관리"
-description: "통합된 Windows 개발자 센터 대시보드의 계정 설정 섹션에서 개발자 계정 설정 및 프로필 정보를 보고 업데이트할 수 있습니다."
+title: 계정 설정 및 프로필 정보 관리
+description: 통합된 Windows 개발자 센터 대시보드의 계정 설정 섹션에서 개발자 계정 설정 및 프로필 정보를 보고 업데이트할 수 있습니다.
 ms.author: wdg-dev-content
-ms.date: 01/08/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 개발자 센터, 계정 설정, 프로필, 계정 프로필, 개발자 계정, 개발자 계정 설정"
+keywords: Windows 10, uwp, 개발자 센터, 계정 설정, 프로필, 계정 프로필, 개발자 계정, 개발자 계정 설정
 ms.localizationpriority: high
-ms.openlocfilehash: 840eb445eaf5cac05201a58140a7ea7f505d7e14
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
+ms.openlocfilehash: 5bedc2bb91478d86af95f45d57369f5409e7cea1
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="manage-account-settings-and-profile-info"></a>계정 설정 및 프로필 정보 관리
 
 [Windows 개발자 센터 대시보드](using-the-windows-dev-center-dashboard.md)의 **계정 설정** 섹션에서 개발자 계정 설정 및 프로필 정보를 보고 업데이트할 수 있습니다. 
+
+> [!NOTE]
+> **메시지 센터**(대시보드 상단 근처의 메시지 아이콘을 선택하여 액세스)에서 알림 기본 설정(수신할 알림 유형 및 수신 방법)을 관리할 수 있습니다.
 
 ## <a name="account-settings"></a>계정 설정
 

@@ -8,17 +8,17 @@ ms.date: 1/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp, 시작하기, 시작, c#, c++, JavaScript
+keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: high
-ms.openlocfilehash: 39c9a6c65f5eb6ca828b782e6550d92601165481
-ms.sourcegitcommit: 444eaccbdcd4be2f1a1e6d4ce5525ba57e363b56
+ms.openlocfilehash: 124c5e89923945ae740dfdc3e658b8d20bbd1286
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
-UWP([UWP란 무엇인가요?](whats-a-uwp.md)) 플랫폼에 오신 것을 환영합니다! 이 자습서는 선택한 언어로 첫 번째 UWP 앱을 만드는 데 도움이 됩니다.
+[UWP 플랫폼](universal-application-platform-guide.md)을 시작합니다! 이 자습서는 선택한 언어로 첫 번째 UWP 앱을 만드는 데 도움이 됩니다.
 
 시작하려면 즐겨 쓰는 언어를 선택하세요!
 
@@ -84,6 +84,6 @@ UWP 이상으로 JavaScript 및 HTML 기술을 확장하여 웹앱 만들기 또
 * [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)
 * [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
-* [유니버설 Windows 앱이란?](whats-a-uwp.md)
+* [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
 * [설정](get-set-up.md)
 * [Windows 계정 등록](sign-up.md)

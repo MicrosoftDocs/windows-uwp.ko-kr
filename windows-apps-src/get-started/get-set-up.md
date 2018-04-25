@@ -1,17 +1,20 @@
 ---
 author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: "설정 방법"
-description: "생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요."
+title: 설정 방법
+description: 생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 202480cd8e9107e18c7fa8c84a17089177f91dcb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: high
+ms.openlocfilehash: 85c949307183cf71f8b770d190d983db28b61a9f
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="get-set-up"></a>설정 방법
 
@@ -29,7 +32,6 @@ UWP 앱을 개발하려면 최신 버전의 Windows가 필요합니다.
 MSDN 구독자인 경우 다음 위치에서 ISO 다운로드를 가져올 수 있습니다.
 
 -   [MSDN 구독자 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=266384)에서 Windows 10 다운로드
-
 
 
 ## <a name="2-download-or-update-visual-studio"></a>2. Visual Studio 다운로드 또는 업데이트
@@ -65,7 +67,7 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 ## <a name="whats-next"></a>다음 작업
 
-도구를 설치하고 개발자 라이선스나 개발자 계정을 받았으면 자습서에 따라 첫 번째 앱을 만드세요.
+도구를 설치하고 개발에서 디바이스를 사용하도록 설정한 후에는 자습서를 사용하여 첫 번째 앱을 생성합니다.
 
 -   [첫 번째 앱 만들기](your-first-app.md) 자습서
 
@@ -77,8 +79,8 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 ## <a name="see-also"></a>참고 항목
 
 * [첫 번째 앱](your-first-app.md)
-* [Windows 스토어 앱 게시](https://developer.microsoft.com/store/publish-apps).
+* [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)
 * [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
-* [유니버설 Windows 앱이란?](whats-a-uwp.md)
+* [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
 * [Windows 계정 등록](sign-up.md)

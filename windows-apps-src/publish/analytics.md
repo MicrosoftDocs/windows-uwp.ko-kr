@@ -1,19 +1,20 @@
 ---
 author: JnHs
-Description: "대시보드를 통해서나 다른 방법으로 Windows 앱에 대한 자세한 분석 결과를 확인하세요."
-title: "앱 성능 분석"
+Description: Get detailed analytics for your Windows apps, in the dashboard or via other methods.
+title: 앱 성능 분석
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.author: wdg-dev-content
-ms.date: 06/28/2017
+ms.date: 10/13/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, 분석, 보고서, 대시보드, 앱"
-ms.openlocfilehash: 57e4a30258fa25411bb461cac56aa18d2f74981d
-ms.sourcegitcommit: a93b1da07b386a682435de58a8129d7b4ee90c14
+keywords: windows 10, uwp, 분석, 보고서, 대시보드, 앱
+ms.localizationpriority: high
+ms.openlocfilehash: 20e168b022ae8e9d35e0dfba39864d99e6ba22e8
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="analyze-app-performance"></a>앱 성능 분석
 
@@ -23,7 +24,7 @@ Windows 개발자 센터 대시보드에서 앱에 대한 자세한 분석을 �
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>모든 앱에 대한 주요 분석 보기
 
-가장 많이 다운로드 한 앱에 대한 주요 분석을 보려면 **분석**을 확장하고 **개요**를 선택합니다. 기본적으로 **분석 개요** 페이지에는 수명을 가장 높게 획득한 앱 5개에 대한 정보가 표시됩니다. 다른 게시 앱을 표시하도록 선택하려면 **필터**를 선택합니다.
+가장 많이 다운로드 한 앱에 대한 주요 분석을 보려면 **분석**을 확장하고 **개요**를 선택합니다. 기본적으로 개요 페이지에는 수명을 가장 높게 획득한 앱 5개에 대한 정보가 표시됩니다. 다른 게시 앱을 표시하도록 선택하려면 **필터**를 선택합니다.
 
 ## <a name="view-individual-reports-for-each-app"></a>각 앱에 대한 개별 보고서 보기
 
@@ -37,18 +38,20 @@ Windows 개발자 센터 대시보드에서 앱에 대한 자세한 분석을 �
 -   [피드백 보고서](feedback-report.md)
 -   [광고 성과 보고서](advertising-performance-report.md)
 -   [광고 캠페인 보고서](promote-your-app-report.md)
+-   [Xbox 분석 보고서](xbox-analytics-report.md)
 
 > [!NOTE]
 > 앱의 특정 기능 및 구현에 따라 이러한 보고서 중 일부에 데이터가 표시되지 않을 수도 있습니다.
 
 <span id="no-dashboard"/>
+
 ## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>개발자 센터 대시보드를 사용하지 않고 분석 데이터에 액세스
 
-대시보드의 분석 보고서 외에도 여러 가지 다양한 방법으로 분석 데이터에 액세스할 수 있습니다.
+대시보드에서 보고서를 보는 것 외에도 다양한 방법으로 앱 분석에 액세스할 수 있습니다.
 
-### <a name="windows-store-analytics-api"></a>Windows 스토어 분석 API
+### <a name="microsoft-store-analytics-api"></a>Microsoft Store 분석 API
 
-[Windows 스토어 분석 API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하면 앱에 대한 분석 데이터를 프로그래밍 방식으로 검색합니다. 이 REST API를 사용하면 앱 및 추가 기능 구입, 오류, 앱 평점 및 리뷰 데이터를 검색할 수 있습니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
+[Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하면 앱에 대한 분석 데이터를 프로그래밍 방식으로 검색할 수 있습니다. 이 REST API를 사용하면 앱 및 추가 기능 구입, 오류, 앱 평점 및 리뷰 데이터를 검색할 수 있습니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>Power BI용 Windows 개발자 센터 콘텐츠 팩
 
@@ -61,7 +64,7 @@ Power BI 사용을 시작하여 분석 데이터에 액세스하려면 다음 �
 * [Power BI용 Windows 개발자 센터 콘텐츠 팩을 사용하여 분석 데이터에 연결하는 방법 알아보기](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Power BI용 Windows 개발자 센터 콘텐츠 팩에 연결하려면 개발자 센터 계정과 연결된 Azure AD 디렉터리에서 자격 증명을 지정하는 것이 좋습니다. Microsoft 계정 자격 증명을 사용하는 경우에는 Power BI에서 분석 데이터가 자동으로 새로 고쳐지지 않습니다. 데이터를 새로 고치려면 Power BI에 로그인해야 합니다. 조직에서 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD가 있습니다. 그렇지 않은 경우 [무료로 얻을](http://go.microsoft.com/fwlink/p/?LinkId=703757) 수 있습니다. 개발자 센터 계정과 Azure AD를 연결하는 방법에 대한 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
+> Power BI용 Windows 개발자 센터 콘텐츠 팩에 연결하려면 개발자 센터 계정과 연결된 Azure AD 디렉터리에서 자격 증명을 지정하는 것이 좋습니다. Microsoft 계정 자격 증명을 사용하는 경우에는 Power BI에서 분석 데이터가 자동으로 새로 고쳐지지 않습니다. 데이터를 새로 고치려면 Power BI에 로그인해야 합니다. 조직에서 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD가 있습니다. 그렇지 않은 경우 [무료로 얻을](http://go.microsoft.com/fwlink/p/?LinkId=703757) 수 있습니다. 연결 설정에 대한 자세한 내용은 [개발자 센터 계정에 Azure Active Directory 연결](associate-azure-ad-with-dev-center.md)을 참조하세요.
 
 ### <a name="dev-center-app"></a>개발자 센터 앱
 
