@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 66d0c3dc-81f6-4d9a-904b-281f8a334dd0
-description: "이 문서에서는 MediaCapture 클래스를 사용하여 사진과 비디오를 캡처하는 가장 간단한 방법을 보여 줍니다."
-title: "MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처"
+description: 이 문서에서는 MediaCapture 클래스를 사용하여 사진과 비디오를 캡처하는 가장 간단한 방법을 보여 줍니다.
+title: MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: dbdc65fb842c6f8d6439f0041a33d991e27bd6b6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d6e5d69c2f86c0d57c0c1be938799d5e81bb8f00
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832277"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) 클래스를 사용하여 사진과 비디오를 캡처하는 가장 간단한 방법을 보여 줍니다. **MediaCapture** 클래스는 캡처 파이프라인에 대한 하위 수준 제어를 제공하고 고급 캡처 시나리오를 가능하게 하는 강력한 API 집합을 표시하지만, 이 문서는 기본 미디어 캡처를 쉽고 빠르게 앱에 추가할 수 있도록 돕기 위한 것입니다. **MediaCapture**에서 제공하는 더 많은 기능에 대해 알아보려면 [**카메라**](camera.md)를 참조하세요.
 
@@ -54,7 +57,13 @@ translationtype: HT
 
 [!code-cs[CaptureToSoftwareBitmap](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCaptureToSoftwareBitmap)]
 
-XAML 페이지에 표시하는 방법을 비롯한 **SoftwareBitmap** 개체 작업에 대한 자세한 내용은 [**비트맵 이미지 만들기, 편집 및 저장**](imaging.md)을 참조하세요.
+Windows 버전 1803을 시작하면서 **CaptureAsync**에서 반환된 **CapturedFrame** 클래스의 [**BitmapProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.bitmapproperties) 속성에 액세스하여 캡처된 사진에 대한 메타데이터를 검색할 수 있습니다. 이 데이터를 **BitmapEncoder**로 전달하여 메타데이터를 파일에 저장할 수 있습니다. 이전에는 압축되지 않은 이미지 형식의 이 데이터에 액세스할 수 있는 방법이 없었습니다. 또한 [**ControlValues**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.controlvalues) 속성에 액세스하여 캡처된 프레임에 대한 노출, 화이트 밸런스 등의 컨트롤 값을 설명한 [**CapturedFrameControlValues**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframecontrolvalues) 개체를 검색할 수 있습니다.
+
+**BitmapEncoder** 사용 방법뿐 아니라 XAML 페이지에 표시하는 방법 등 **SoftwareBitmap** 개체 작업에 대한 자세한 내용은 [**비트맵 이미지 만들기, 편집 및 저장**](imaging.md)을 참조하세요. 
+
+캡처 장치 제어 값 설정에 대한 자세한 내용은 [사진 및 비디오에 대한 장치 컨트롤 캡처](capture-device-controls-for-photo-and-video.md)를 참조하세요.
+
+Windows 10, 버전 1803부터는 압축되지 않은 형식으로 캡처된 사진에 대해 EXIF 정보와 같은 메타데이터를 얻기 위해서는 **MediaCapture**에서 반환한 **CapturedFrame** [**BitmapProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.bitmapproperties) 속성에 액세스해야 합니다. 이전 버전에서는 압축된 파일 형식으로 캡처된 사진의 헤더에서만 이 데이터를 액세스할 수 있었습니다. 이미지 파일에 수동으로 작성할 때 이 데이터를 [**BitmapEncoder**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder)에 제공할 수 있습니다. 인코딩 비트맵에 대한 자세한 내용은 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요.  또한 노출과 플래시 설정과 같은 프레임 제어 값에 액세스할 수 있으며, 이것은 [**ControlValues**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.capturedframe.controlvalues) 속성에 액세스하여 이미지를 캡처할 때 사용된 것입니다. 자세한 내용은 [사진과 비디오 캡처를 위한 캡처 장치 컨트롤](capture-device-controls-for-photo-and-video-capture.md)을 참조하세요.
 
 ## <a name="capture-a-photo-to-a-file"></a>파일에 사진 캡처
 일반적인 사진 앱은 캡처한 사진을 디스크 또는 클라우드 저장소에 저장하며 사진 방향 등의 메타데이터를 파일에 추가해야 합니다. 다음 예제에서는 사진을 파일에 캡처하는 방법을 보여 줍니다. 나중에 이미지 파일에서 **SoftwareBitmap**을 만들 수 있습니다. 
@@ -96,6 +105,11 @@ XAML 페이지에 표시하는 방법을 비롯한 **SoftwareBitmap** 개체 작
 
 [!code-cs[RecordLimitationExceededHandler](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRecordLimitationExceededHandler)]
 
+### <a name="play-and-edit-captured-video-files"></a>캡처한 비디오 파일 재생 및 편집
+비디오를 파일로 캡처한 후 파일을 로드하고 앱의 UI에서 다시 재생해야 합니다. **[MediaPlayerElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement)** XAML 컨트롤 및 관련 **[MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer)** 를 사용하여 이 작업을 할 수 있습니다. XAML 페이지에서 미디어를 재생하는 방법에 대한 자세한 내용은 [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)를 참조하세요.
+
+비디오 파일에서 **[MediaClip](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip)** 개체를 만들려면 **[CreateFromFileAsync](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip.createfromfileasync)** 를 호출합니다.  **[MediaComposition](https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition)** 는 **MediaClip** 개체의 시퀀스 정렬, 비디오 길이 자르기, 레이어 만들기, 백그라운드 음악 추가, 비디오 효과 적용과 같은 기본 비디오 편집 기능을 제공합니다. 미디어 컴퍼지션 작업에 대한 자세한 내용은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요.
+
 ## <a name="pause-and-resume-video-recording"></a>비디오 녹화 일시 중지 및 다시 시작
 [**PauseAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.PauseAsync)를 호출한 다음 [**ResumeAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.ResumeAsync)를 호출하면 비디오 녹화를 일시 중지한 다음 별도의 출력 파일을 만들지 않고 녹화를 다시 시작할 수 있습니다.
 
@@ -124,15 +138,34 @@ Windows 10 버전 1607부터 비디오 녹화를 일시 중지하고 녹화가 �
 
 오디오 녹음을 중지하려면 [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagPhotoSequenceCapture.StopAsync)를 호출합니다.
 
+## <a name="related-topics"></a>관련 항목
+
+* [카메라](camera.md)
 [!code-cs[StopRecording](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStopRecording)]
 
 **StartAsync** 및 **StopAsync**를 여러 번 호출하여 여러 오디오 파일을 녹음할 수 있습니다. 오디오 캡처를 마쳤으면 [**FinishAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.LowLagMediaRecording.FinishAsync)를 호출하여 캡처 세션을 삭제하고 관련된 리소스를 정리합니다. 이 호출 후에는 **StartAsync** 호출 전에 **PrepareLowLagRecordToStorageFileAsync**를 다시 호출하여 캡처 세션을 다시 초기화해야 합니다.
 
 [!code-cs[FinishAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetFinishAsync)]
 
-## <a name="related-topics"></a>관련 항목
 
-* [카메라](camera.md)
+## <a name="detect-and-respond-to-audio-level-changes-by-the-system"></a>시스템을 통해 오디오 레벨 변경 검색 및 대응
+Windows 10 버전 1803부터는 시스템이 앱의 오디오 캡처 및 오디오 렌더링 스트림의 오디오 레벨을 낮추거나 음을 소거하면 앱이 이를 검색할 수 있습니다. 예를 들어 시스템이 백그라운드로 실행하기 시작할 때 앱의 스트림 음을 소거할 수 있습니다. [**AudioStateMonitor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor) 클래스를 사용하면 시스템이 오디오 스트림의 볼륨을 수정할 때 이벤트를 수신하도록 등록할 수 있습니다. 오디오 캡처 스트림을 모니터링하기 위해 **AudioStateMonitor** 인스턴스를 가져오려면 [**CreateForCaptureMonitoring**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.createforcapturemonitoring#Windows_Media_Audio_AudioStateMonitor_CreateForCaptureMonitoring)을 호출합니다. 오디오 렌더 스트림을 모니터링하기 위해 인스턴스를 가져오려면 [**CreateForRenderMonitoring**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.createforrendermonitoring)을 호출합니다. 각 모니터의 [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged) 이벤트에 대한 처리기를 등록하여 시스템이 해당 스트림 범주의 오디오를 변경할 때 알림을 받습니다.
+
+[!code-cs[AudioStateMonitorUsing](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetAudioStateMonitorUsing)]
+
+[!code-cs[AudioStateVars](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetAudioStateVars)]
+
+[!code-cs[RegisterAudioStateMonitor](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRegisterAudioStateMonitor)]
+
+캡처 스트림에 대한 **SoundLevelChanged** 처리기에서 **AudioStateMonitor** 발신자의 [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) 속성을 확인하여 새로운 소리 레벨을 결정할 수 있습니다. 시스템이 캡처 스트림을 낮추거나 '더킹(ducked)'해서는 안 됩니다. 음을 소거하거나 전체 볼륨으로 다시 전환해야 합니다. 오디오 스트림 음이 소거된 경우 진행 중인 캡처를 중지할 수 있습니다. 오디오 스트림이 전체 볼륨으로 복원되면 다시 캡처를 시작할 수 있습니다. 다음 예제에서는 일부 부울 클래스 변수를 사용하여 앱에서 현재 오디오를 캡처하고 있는지, 그리고 오디오 상태가 변경되어 캡처가 중지되었는지를 추적합니다. 이러한 변수를 사용하여 프로그래밍 방식으로 오디오 캡처를 중지하거나 시작하는 것이 적절한지 판단할 수 있습니다.
+
+[!code-cs[CaptureSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetCaptureSoundLevelChanged)]
+
+다음 코드 예제는 오디오 렌더링을 위한 **SoundLevelChanged** 처리기 구현에 대한 설명입니다. 앱 시나리오 및 재생 중인 콘텐츠의 유형에 따라 사운드 레벨이 갑자기 낮아지면 오디오 재생을 일시 중지해야 합니다. 미디어 재생을 위한 사운드 레벨 변경 처리에 대한 자세한 내용은 [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)을 참조하세요.
+
+[!code-cs[RenderSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetRenderSoundLevelChanged)]
+
+
 * [Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-cameracaptureui.md)
 * [MediaCapture를 사용하여 디바이스 방향 처리](handle-device-orientation-with-mediacapture.md)
 * [비트맵 이미지 만들기, 편집 및 저장](imaging.md)

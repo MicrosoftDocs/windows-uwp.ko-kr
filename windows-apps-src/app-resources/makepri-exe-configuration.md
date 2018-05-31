@@ -1,23 +1,22 @@
 ---
 author: stevewhims
-Description: "이 항목에서는 MakePri.exe XML 구성 파일 스키마를 설명합니다."
-title: "MakePri.exe 구성 파일"
+Description: This topic describes the schema of the MakePri.exe XML configuration file.
+title: MakePri.exe 구성 파일
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/18/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자"
-localizationpriority: medium
-ms.openlocfilehash: 7d19d1d778b434abd25d0d087159ea79521642e8
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+ms.localizationpriority: medium
+ms.openlocfilehash: 24ba76549053ef0f88612249eb903278d8554167
+ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/12/2017
+ms.locfileid: "1393522"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="makepriexe-configuration-file"></a>MakePri.exe 구성 파일
 
 이 항목은 PRI 구성 파일이라고도 하는 [MakePri.exe](compile-resources-manually-with-makepri.md) XML 구성 파일의 스키마에 대해 설명합니다. MakePri.exe 도구에는 초기화된 새 PRI 구성 파일을 만드는 데 사용할 수 있는 [createconfig 명령](makepri-exe-command-options.md#createconfig-command)이 있습니다.
@@ -186,7 +185,6 @@ MakePri.exe는 모든 특정 차원과 함께 리소스 PRI 파일의 생성을 
 
 MakePri.exe는 모든 `index` 노드 이후의 `packaging` 요소를 구문 분석하여 모든 기본 한정자를 채울 수 있습니다. MakePri.exe는 이러한 데이터 구조의 구문 분석된 정보를 수집합니다.
 
-**C#**
 ```csharp
 enum ResourcePackageMode
 {

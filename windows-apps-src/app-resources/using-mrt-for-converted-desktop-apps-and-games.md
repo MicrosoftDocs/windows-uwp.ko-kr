@@ -1,19 +1,20 @@
 ---
 author: ptorr-msft
-title: "변환된 데스크톱 앱과 게임에 MRT 사용"
-description: ".NET 또는 Win32 앱 또는 게임을 AppX 패키지로 패키징하면 리소스 관리 시스템을 사용하여 실행 시 컨텍스트에 맞게 조정된 앱 리소스를 로드할 수 있습니다. 이 항목에서는 그 기술에 대해 자세히 설명합니다."
+title: 변환된 데스크톱 앱과 게임에 MRT 사용
+description: .NET 또는 Win32 앱 또는 게임을 AppX 패키지로 패키징하면 리소스 관리 시스템을 사용하여 실행 시 컨텍스트에 맞게 조정된 앱 리소스를 로드할 수 있습니다. 이 항목에서는 그 기술에 대해 자세히 설명합니다.
 ms.author: ptorr
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리"
+keywords: windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리
 ms.localizationpriority: medium
 ms.openlocfilehash: 098ec71f2f3e487b76f9992c297ad7cba9ac5538
 ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/12/2017
+ms.locfileid: "1396482"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 
@@ -209,7 +210,7 @@ AppX 기반 배포(예: Microsoft Store)와 함께 결합되어, MRT는 자동�
 Visual Studio에서 디자이너를 사용하려면:
 
 0. `Strings\en-us` 폴더(또는 다른 언어)를 프로젝트에 만들고, 프로젝트의 루트 폴더에 **새 항목**을 추가합니다. 이때 다음 파일의 기본 이름을 사용합니다. `resources.resw`
- * **리소스 사전**이 아니라 **리소스 파일(.resw)**을 선택합니다. 리소스 사전은 XAML 응용 프로그램에서 사용하는 파일입니다.
+ * **리소스 사전**이 아니라 **리소스 파일(.resw)** 을 선택합니다. 리소스 사전은 XAML 응용 프로그램에서 사용하는 파일입니다.
 0. 디자이너를 사용하여 다음 문자열을 입력합니다. 같은 `Names`를 사용하지만 `Values`는 응용 프로그램에 대한 적절한 텍스트로 교체합니다.
 
 <img src="images\editing-resources-resw.png"/>

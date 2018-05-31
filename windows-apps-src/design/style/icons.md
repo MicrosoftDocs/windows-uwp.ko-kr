@@ -1,0 +1,188 @@
+---
+author: mijacobs
+Description: Good icons harmonize with typography and with the rest of the design language. They don’t mix metaphors, and they communicate only what’s needed, as speedily and simply as possible.
+title: 아이콘 단추
+ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
+label: Icons
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 05/19/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+design-contact: Judysa
+doc-status: Published
+ms.localizationpriority: medium
+ms.openlocfilehash: 61157ad23eb55447137531922ea23fa0120e2b98
+ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/15/2018
+ms.locfileid: "1653922"
+---
+# <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
+
+
+
+좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다. 
+
+## <a name="linear-scaling-size-ramps"></a>선형 배율 크기 램프 
+
+<table>
+    <tr> 
+        <td>16px x 16px</td>
+        <td>24px x 24px</td>
+        <td>32px x 32px</td>
+        <td>48px x 48px</td>
+    </tr>
+    <tr> 
+        <td><img src="images/icons-16x16.png" alt="Icons at 16x16 effective pixels" /></td>
+        <td><img src="images/icons-24x24.png" alt="Icons at 24x24 effective pixels" /></td>
+        <td><img src="images/icons-32x32.png" alt="Icons at 32x32 effective pixels" /></td>
+        <td><img src="images/icons-48x48.png" alt="Icons at 48x48 effective pixels" /></td>
+    </tr>
+</table>
+
+## <a name="common-shapes"></a>일반적인 모양
+
+아이콘은 일반적으로 안쪽 여백이 거의 없이 주어진 공간을 최대화해야 합니다. 이러한 모양은 기본 모양의 크기 조정을 위한 시작점을 제공합니다. 
+
+![32px x 32px 그리드](images/icons-common-shapes.png)
+
+아이콘의 방향에 해당하는 모양을 사용하고 이러한 기본 매개 변수를 중심으로 작성합니다. 아이콘이 모양 내부를 완전히 채우거나 맞지 않아도 되며, 최적 균형을 위해 필요에 따라 조정할 수 있습니다. 
+
+<table class="uwpd-noborder">
+    <tr>
+        <td>원<td>
+        <td>정사각형</td>
+        <td>삼각형</td>
+    </tr>
+    <tr>
+        <td><img src="images/icons-common-shapes-examples-1.png" alt="A circle" /><td>
+        <td><img src="images/icons-common-shapes-examples-2.png" alt="A square" /></td>
+        <td><img src="images/icons-common-shapes-examples-3.png" alt="A triangle " /></td>
+    </tr>
+        <tr>
+        <td>가로 사각형<td>
+        <td colspan="2">세로 사각형</td>        
+        </tr>
+    <tr>
+        <td><img src="images/icons-common-shapes-examples-4.png" alt="A horizontal rectangle" /><td>
+        <td colspan="2"><img src="images/icons-common-shapes-examples-5.png" alt="A vertical rectangle" /></td>
+         
+    </tr>
+
+</table>
+
+## <a name="angles"></a>각도
+
+동일한 그리드 및 선 두께를 사용하는 것 외에도 아이콘은 공통 요소를 사용하여 생성됩니다. 
+
+모양을 작성할 때 이러한 각도만 사용하면 모든 아이콘에서 일관성이 만들어지고 아이콘이 제대로 렌더링됩니다. 
+
+아이콘을 만들 때 이러한 선을 결합, 연결, 회전 및 반사할 수 있습니다. 
+
+<table>
+    <tr>
+        <td><b>1:1</b><br/>45°</td>
+        <td><b>1:2</b><br />26.57°(세로)<br/>63.43°(가로)</td>
+        <td><b>1:3</b><br/>18.43°(세로)<br/>71.57°(가로)</td>
+        <td><b>1:4</b><br/>14.04°(세로)<br/>75.96°(가로)</td>
+    </tr>
+    <tr>
+        
+        <td><img src="images/icons-grid-1-1.png" alt="1:1" /></td>
+        <td><img src="images/icons-grid-1-2.png" alt="1:2" /></td>
+        <td><img src="images/icons-grid-1-3.png" alt="1:3" /></td>
+        <td><img src="images/icons-grid-1-4.png" alt="1:4" /></td>
+    </tr>  
+</table>
+
+<p>예를 들면 다음과 같습니다.</p>
+
+<table>
+    <tr>
+        <td><img src="images/icons-angles-examples-1.png" alt="A 1:1 angle example" /></td>
+        <td><img src="images/icons-angles-examples-2.png" alt="A 1:2 angle example" /></td>
+        <td><img src="images/icons-angles-examples-3.png" alt="A 1:3 angle example" /></td>
+        <td><img src="images/icons-angles-examples-4.png" alt="A 1:4 angle example" /></td>
+    </tr>
+</table>
+
+## <a name="curves"></a>곡선
+
+곡선은 전체 원의 섹션에서 생성되며, 픽셀 그리드에 맞춰야 하는 경우가 아니면 기울이면 안 됩니다. 
+
+<table>
+    <tr>
+        <td>1/4 원</td>
+        <td>1/8 원</td>
+    </tr>
+    <tr>
+        <td><img src="images/icons-curves-14circle.png" alt="1/4 circle" /></td>
+        <td><img src="images/icons-curves-18circle.png" alt="1/8 circle" /></td>
+    </tr>
+    <tr>
+        <td><img src="images/icons-curves-examples-1.png" alt="1/4 cirlce example" /></td>
+        <td><img src="images/icons-curves-examples-2.png" alt="1/8 circle example" /></td>
+    </tr>    
+</table>
+
+## <a name="geometric-construction"></a>기하 도형 생성
+
+아이콘을 생성할 때는 순수 기하 도형만 사용하는 것이 좋습니다.
+
+![기하 도형 오버레이를 사용한 기타 아이콘 ](images/icons-geometric-construction.png)
+
+## <a name="filled-shapes"></a>채워진 도형 
+
+필요한 경우 아이콘에 채워진 도형이 포함될 수 있지만 32px × 32px에서 4px를 넘지 않아야 합니다. 채워진 원은 6px × 6px보다 크지 않아야 합니다. 
+
+![5px x 8px 채우기 ](images/icons-filled-shapes.png)
+
+## <a name="badges"></a>배지
+
+"배지"는 기본 아이콘 요소와 통합되지 않는, 아이콘에 추가된 요소를 설명하는 데 사용되는 일반 용어입니다. 일반적으로 상태, 작업 등 아이콘에 대한 기타 정보를 전달합니다. 다른 일반 용어에는 오버레이, 주석, 한정자 등이 있습니다. 
+
+![상태 배지 ](images/icons-badge-status.png)
+
+![작업 배지 ](images/icons-badge-action.png)
+
+상태 배지는 아이콘 위에 있는 채워진 컬러 개체를 사용하고, 작업 배지는 동일한 단색 스타일과 선 두께로 아이콘에 통합됩니다.
+
+<table>
+<tr>
+    <td>일반적인 상태 배지</td>
+    <td>일반적인 작업 배지</td>
+</tr>
+<tr>
+    <td><img src="images/icons-badge-common-states-1.png" alt="Status badge " /></td>
+    <td><img src="images/icons-badge-common-states-2.png" alt="Action badge " /></td>
+</tr>
+</table>
+<p></p>
+
+### <a name="badge-color"></a>배지 색 
+
+컬러 배지는 아이콘 상태를 전달하는 용도로만 사용해야 합니다. 상태 배지에 사용된 색은 사용자에게 감정적인 특정 메시지를 전달합니다. 
+
+<table>
+<tr><td>녹색 - #128B44</td><td>파랑 - #2C71B9</td><td>노랑 - #FDC214</td></tr>
+<tr><td>양: 완료, 완료됨 </td><td>중립: 도움말, 알림 </td><td>주의: 알림, 경고 </td></tr>
+<tr><td><img src="images/icons-color-inbadging-1.png" alt="Green status" /></td><td><img src="images/icons-color-inbadging-2.png" alt="Blue status" /></td>
+<td><img src="images/icons-color-inbadging-3.png" alt="Yellow status" /></td></tr>
+</table>
+<p></p>
+
+### <a name="badge-position"></a>배지 위치
+
+모든 상태 또는 작업의 기본 위치는 오른쪽 아래입니다. 디자인에서 허용되지 않는 경우에만 다른 위치를 사용합니다. 
+
+### <a name="badge-sizing"></a>배지 크기 조정
+
+배지 크기는 32px × 32px 그리드에서 10-18 px로 조정해야 합니다. 
+
+## <a name="related-articles"></a>관련 문서
+
+* [타일 및 아이콘 자산에 대한 지침](../shell/tiles-and-notifications/app-assets.md)

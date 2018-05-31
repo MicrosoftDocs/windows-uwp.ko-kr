@@ -1,23 +1,22 @@
 ---
 author: stevewhims
-Description: "MakePri.exe에는 createconfig, dump, new, resourcepack, versioned 명령 집합이 있습니다. 이 항목에서는 그 사용에 대해 자세히 설명합니다."
-title: "MakePri.exe 명령줄 옵션"
+Description: MakePri.exe has the set of commands createconfig, dump, new, resourcepack, and versioned. This topic details their use.
+title: MakePri.exe 명령줄 옵션
 template: detail.hbs
 ms.author: stwhi
-ms.date: 10/18/2017
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자"
-localizationpriority: medium
-ms.openlocfilehash: e269984134c7313b6ea6464cd04a3ef60254d537
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+ms.localizationpriority: medium
+ms.openlocfilehash: fbfb5f6626f799878c294b0a4e21efb673147a50
+ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/30/2018
+ms.locfileid: "1817544"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
 [MakePri.exe](compile-resources-manually-with-makepri.md)에는 `createconfig`, `dump`, `new`, `resourcepack` 및 `versioned` 명령 집합이 있습니다. 이 항목에서는 이들의 사용에 대한 명령줄 옵션을 자세히 설명합니다.
@@ -113,6 +112,9 @@ Help:
 ## <a name="dump-command"></a>dump 명령
 
 `dump` 명령은 지정된 PRI 파일의 모든 리소스 목록을 포함하는 덤프된 xml 파일을 출력합니다. `MakePri.exe dump /?`를 실행하여 이 명령에 대한 자세한 도움말을 봅니다.
+
+> [!NOTE]
+> 스키마가 없는 리소스 팩은 PRI config 파일에서 *omitSchemaFromResourcePacks* 스위치를 사용하여 생성한 것입니다. 스키마가 없는 리소스 팩을 덤프하려면 `/es <main_package_PRI_file>` 스위치를 사용하세요. 주 파일을 지정하지 않으면 오류 메시지 "*패키지의 resources.pri가 손상되었으므로 암호화에 실패했습니다(오류 PRI222: 0xdef0000f - 지정되지 않은 오류 발생함)*"가 표시됩니다.
 
 ```
 C:\>makepri dump /?

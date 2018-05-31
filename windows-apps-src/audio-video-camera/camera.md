@@ -1,35 +1,41 @@
 ---
 author: drewbatgit
 ms.assetid: 370f2c14-4f1e-47b3-9197-24205ab255a3
-description: "이 문서에는 UWP 앱에 사용할 수 있는 카메라 기능 및 사용 방법을 보여 주는 방법 문서의 링크가 나와 있습니다."
-title: "카메라"
+description: 이 문서에는 UWP 앱에 사용할 수 있는 카메라 기능 및 사용 방법을 보여 주는 방법 문서의 링크가 나와 있습니다.
+title: 카메라
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 883a8977839d8f93ff878b075a52df8b9a587aa9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a1b8a63609bbc9caa452093517ca43f71e8d5ccc
+ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
+ms.lasthandoff: 03/19/2018
+ms.locfileid: "1664703"
 ---
 # <a name="camera"></a>카메라
 
 이 섹션에서는 카메라 또는 마이크를 사용하여 사진, 비디오 또는 오디오를 캡처하는 UWP(유니버설 Windows 플랫폼) 앱을 만들기 위한 지침을 제공합니다.
 
-##<a name="use-the-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI 사용
-| 항목                                                                                             | 설명                                                                                                                                                                                                                                                                                    |
+## <a name="use-the-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI 사용
+
+| 항목 | 설명 |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-cameracaptureui.md) | [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.CameraCaptureUI) 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 비디오를 캡처하는 방법을 보여 줍니다. 단순히 사용자가 사진이나 비디오를 캡처하고 결과를 앱에 반환할 수 있게 하려는 경우에 가장 빠르고 편리한 방법입니다.  |
-##<a name="basic-mediacapture-tasks"></a>기본 MediaCapture 작업
-| 항목                                                                                             | 설명                                                                                                                                                                                                                                                                                    |
+
+## <a name="basic-mediacapture-tasks"></a>기본 MediaCapture 작업
+
+| 항목 | 설명 |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [카메라 미리 보기 표시](simple-camera-preview-access.md) | UWP 앱에서 XAML 페이지 내의 카메라 미리 보기 스트림을 빠르게 표시하는 방법을 보여 줍니다. |
 | [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md) | [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) 클래스를 사용하여 사진과 비디오를 캡처하는 가장 간단한 방법을 보여 줍니다. **MediaCapture** 클래스는 캡처 파이프라인에 대한 하위 수준 제어를 제공하고 고급 캡처 시나리오를 가능하게 하는 강력한 API 집합을 표시하지만, 이 문서는 기본 미디어 캡처를 쉽고 빠르게 앱에 추가할 수 있도록 돕기 위한 것입니다. |
 | [모바일 디바이스용 카메라 UI 기능](camera-ui-features-for-mobile-devices.md) | 모바일 디바이스에만 존재하는 특수한 카메라 UI 기능을 활용하는 방법을 보여 줍니다.  |
                                                                                                                
-##<a name="advanced-mediacapture-tasks"></a>고급 MediaCapture 작업   
+## <a name="advanced-mediacapture-tasks"></a>고급 MediaCapture 작업   
                                                                                                                
 | 항목                                                                                             | 설명                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 ---
-description: "이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP(유니버설 Windows 플랫폼) 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다."
-title: "데이터 수신"
+description: 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP(유니버설 Windows 플랫폼) 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다.
+title: 데이터 수신
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 author: msatranjr
 ms.author: misatran
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 9c3054d161e45bd614e8ef42ea6f21aeb937f582
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: 3b44b3d693f6e9675f0b60e667bc434a7485eed8
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832537"
 ---
 # <a name="receive-data"></a>데이터 수신
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP(유니버설 Windows 플랫폼) 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다.
@@ -79,7 +80,7 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
 앱에서 공유할 데이터를 처리하는 데 많은 시간이 걸리는 경우도 있습니다. 예로는 파일 또는 이미지의 사용자 공유 컬렉션이 있습니다. 이러한 항목은 간단한 텍스트 공유보다 크기 때문에 처리하는 데 더 오랜 시간이 걸립니다.
 
 ```cs
-shareOperation.ReportDataRetreived(); 
+shareOperation.ReportStarted(); 
 ```
 
 [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted)를 호출한 후에는 앱과의 사용자 상호 작용이 더 이상 필요하지 않습니다. 따라서 사용자가 앱을 종료해도 되는 경우에만 이 메서드를 호출해야 합니다.
@@ -108,7 +109,7 @@ shareOperation.ReportCompleted();
 
 사용자가 콘텐츠를 받기 위해 앱을 선택한 경우 [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink)를 만드는 것이 좋습니다. **QuickLink**는 사용자가 앱과 정보를 쉽게 공유할 수 있도록 해주는 바로 가기와 비슷합니다. 예를 들어 친구의 메일 주소로 미리 구성된 새 메일 메시지를 여는 **QuickLink**를 만들 수 있습니다.
 
-**QuickLink**에는 제목, 아이콘 및 ID가 있어야 합니다. 사용자가 공유 참을 탭하면 제목(예: "엄마의 메일")과 아이콘이 나타납니다. ID는 앱에서 메일 주소, 로그인 자격 증명 등과 같은 사용자 지정 정보에 액세스하는 데 사용됩니다. 앱에서 **QuickLink**를 만들 때 [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted)를 호출하여 **QuickLink**를 시스템에 반환합니다.
+**QuickLink**에는 제목, 아이콘 및 ID가 있어야 합니다. 사용자가 공유 참을 탭하면 제목(예: "엄마에게 전자 메일 보내기")과 아이콘이 표시됩니다. ID는 앱에서 메일 주소, 로그인 자격 증명 등과 같은 사용자 지정 정보에 액세스하는 데 사용됩니다. 앱에서 **QuickLink**를 만들 때 [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted)를 호출하여 **QuickLink**를 시스템에 반환합니다.
 
 **QuickLink**에서는 실제로 데이터를 저장하지 않습니다. 대신 선택한 경우에 앱으로 전송되는 식별자를 포함합니다. 앱에서 **QuickLink**의 ID와 해당 사용자 데이터를 저장해야 합니다. 사용자가 **QuickLink**를 탭할 때 [**QuickLinkId**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.QuickLinkId) 속성을 통해 해당 ID를 가져올 수 있습니다.
 

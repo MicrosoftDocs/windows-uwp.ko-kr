@@ -1,18 +1,21 @@
 ---
 author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
-description: "이 문서에는 오디오 디바이스와 관련된 DeviceInformation 속성이 나열되어 있습니다."
-title: "오디오 장치 정보 속성"
+description: 이 문서에는 오디오 디바이스와 관련된 DeviceInformation 속성이 나열되어 있습니다.
+title: 오디오 장치 정보 속성
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 0992c0fc3c6fe9d70b7867275d28e6bba78171ab
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: c221e3d77419ca02b46e8be227f3b943fe8dc241
+ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2018
+ms.locfileid: "1639013"
 ---
 # <a name="audio-device-information-properties"></a>오디오 장치 정보 속성
 
@@ -22,7 +25,7 @@ ms.contentlocale: ko-KR
 |이름|유형|설명|
 |------------------------------------------------------------|------------|------------------------------------------------------|
 |**System.Devices.AudioDevice.Microphone.SensitivityInDbfs**|이중|마이크 민감도를 전체 범위(dBFS) 단위를 기준으로 데시벨로 지정합니다.|
-|**System.Devices.AudioDevice.Microphone.SignalToNoiseRationInDb**|이중|데시벨(dB) 단위로 측정되는 마이크 SNR(신호-잡음 비율)을 지정합니다.|
+|**System.Devices.AudioDevice.Microphone.SignalToNoiseRatioInDb**|이중|데시벨(dB) 단위로 측정되는 마이크 SNR(신호-잡음 비율)을 지정합니다.|
 |**System.Devices.AudioDevice.SpeechProcessingSupported**|부울|오디오 디바이스가 음성 처리를 지원하는지 여부를 나타냅니다.|
 |**System.Devices.AudioDevice.RawProcessingSupported**|부울|오디오 디바이스가 원시 처리를 지원하는지 여부를 나타냅니다.|
 |**System.Devices.MicrophoneArray.Geometry**|부호 없는 문자[]|마이크 배열에 대한 기하 도형 데이터입니다.|
