@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다. 특정 해상도 또는 프레임 속도를 지원하는 프로필, 여러 카메라에 대한 동시 액세스를 지원하는 프로필, HDR을 지원하는 프로필 선택 등의 작업이 포함됩니다."
-title: "카메라 프로필을 사용하여 카메라 기능 검색 및 선택"
+description: 이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다. 특정 해상도 또는 프레임 속도를 지원하는 프로필, 여러 카메라에 대한 동시 액세스를 지원하는 프로필, HDR을 지원하는 프로필 선택 등의 작업이 포함됩니다.
+title: 카메라 프로필을 사용하여 카메라 기능 검색 및 선택
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f45fea396c775a7d9e783be1d0a821ff68716279
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f842b10ce056d02d1c30c2fe285a87d5fe20dca8
+ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "1832257"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>카메라 프로필을 사용하여 카메라 기능 검색 및 선택
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다. 특정 해상도 또는 프레임 속도를 지원하는 프로필, 여러 카메라에 대한 동시 액세스를 지원하는 프로필, HDR을 지원하는 프로필 선택 등의 작업이 포함됩니다.
@@ -61,21 +64,18 @@ translationtype: HT
 
 [!code-cs[InitCaptureWithProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitCaptureWithProfile)]
 
-## <a name="select-a-profile-that-supports-concurrence"></a>동시 작업을 지원하는 프로필 선택
+## <a name="use-media-frame-source-groups-to-get-profiles"></a>미디어 프레임 소스 그룹을 사용하여 프로필 가져오기
 
-카메라 프로필을 사용하여 디바이스가 여러 카메라의 비디오 캡처를 동시에 지원하는지 여부를 확인할 수 있습니다. 이 시나리오에서는 전방 카메라와 후방 카메라에 1개씩 모두 2개의 캡처 개체 집합을 만들어야 합니다. 각 카메라에 대해 **MediaCapture**, **MediaCaptureInitializationSettings** 및 캡처 디바이스 ID를 보유하는 문자열을 만듭니다. 또한 동시성 지원 여부를 추적하는 부울 변수를 추가합니다.
+Windows 10, 버전 1803부터 [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup) 클래스를 사용하여 **MediaCapture** 개체를 초기화하기 전에 특정 기능으로 카메라 프로필을 가져올 수 있습니다. 장치 제조업체는 프레임 소스 그룹을 사용하여 센서 그룹을 나타내거나 기능을 단일 가상 디바이스로 캡처할 수 있습니다. 따라서 깊이와 컬러 카메라를 함께 사용하는 것과 같이 전산 사진 기법을 사용할 수 있지만, 단순 캡처 시나리오를 위한 카메라 프로필을 선택하는 데에도 사용할 수 있습니다. **MediaFrameSourceGroup** 사용에 대한 자세한 내용은 [Process media frames with MediaFrameReader](process-media-frames-with-mediaframereader.md)를 참조하세요.
 
-[!code-cs[ConcurrencySetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetConcurrencySetup)]
+아래의 예제 메서드는 **MediaFrameSourceGroup** 개체를 사용하여 HDR 또는 가변 사진 시퀀스를 지원하는 것과 같이 알려진 비디오 프로필을 지원하는 카메라 프로필을 찾는 방법을 보여줍니다. 먼저, [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync)를 호출하여 현재 디바이스에서 사용할 수 있는 전체 미디어 프레임 소스 그룹 목록을 가져옵니다. 각 소스 그룹을 반복 실행하고 [**MediaCapture.FindKnownVideoProfiles**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.findknownvideoprofiles)를 호출하여 지정된 프로필을 지원하는 현재 소스 그룹에 대한 모든 비디오 프로필 목록을 가져옵니다(이 경우는 WCG 사진이 있는 HDR). 기준을 충족하는 프로필이 발견되면 새로운 **MediaCaptureInitializationSettings** 개체를 만들고 **VideoProfile**을 프로필 선택으로 설정하고  **VideoDeviceId**를 현재 미디어 프레임 소스 그룹의 **Id** 속성으로 설정합니다. 따라서 값 **KnownVideoProfile.HdrWithWcgVideo**을 이 메서드로 전달하여 HDR 비디오를 지원하는 미디어 캡처 설정을 가져올 수도 있습니다. **KnownVideoProfile.VariablePhotoSequence**를 전달하여 가변 사진 시퀀스를 지원하는 설정을 가져올 수 있습니다.
 
-정적 메서드 [**MediaCapture.FindConcurrentProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926709)는 동시 작동도 지원할 수 있는 지정된 캡처 디바이스에서 지원하는 카메라 프로필의 목록을 반환합니다. Linq 쿼리를 사용하여 동시 작동을 지원하고 전방 및 후방 카메라 둘 다에서 지원하는 프로필을 찾습니다. 이러한 요구 사항을 만족하는 프로필이 있으면 각 **MediaCaptureInitializationSettings** 개체에 대해 해당 프로필을 설정하고 부울 동시 추적 변수를 true로 설정합니다.
+ [!code-cs[FindKnownVideoProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindKnownVideoProfile)]
 
-[!code-cs[FindConcurrencyDevices](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindConcurrencyDevices)]
+## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video-legacy-technique"></a>알려진 프로필을 사용하여 HDR 동영상을 지원하는 프로필 찾기(레거시 기법)
 
-앱 시나리오의 기본 카메라에 대해 **MediaCapture.InitializeAsync**를 호출합니다. 동시 작업이 지원되는 경우 두 번째 카메라도 초기화합니다.
-
-[!code-cs[InitConcurrentMediaCaptures](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitConcurrentMediaCaptures)]
-
-## <a name="use-known-profiles-to-find-a-profile-that-supports-hdr-video"></a>알려진 프로필을 사용하여 HDR 동영상을 지원하는 프로필 찾기
+> [!NOTE] 
+> 이 섹션에 설명된 API는 Windows 10, 버전 1803부터 사용되지 않습니다. 이전 섹션 **미디어 프레임 소스 그룹을 사용하여 프로필 가져오기**를 참조하세요.
 
 HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 경우처럼 시작됩니다. **MediaCaptureInitializationSettings** 및 캡처 디바이스 ID를 보유하는 문자열을 만듭니다. HDR 동영상 지원 여부를 추적하는 부울 변수를 추가합니다.
 

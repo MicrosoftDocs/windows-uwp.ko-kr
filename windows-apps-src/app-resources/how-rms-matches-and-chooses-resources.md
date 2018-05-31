@@ -1,28 +1,28 @@
 ---
 author: stevewhims
-Description: "리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하고 반환할 최적의 후보를 결정합니다. 이 항목은 이 프로세스를 자세히 설명하고 예를 제공합니다."
-title: "리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법"
+Description: When a resource is requested, there may be several candidates that match the current resource context to some degree. The Resource Management System will analyze all of the candidates and determine the best candidate to return. This topic describes that process in detail and gives examples.
+title: 리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자"
-localizationpriority: medium
-ms.openlocfilehash: 4731ae7add7d5b969ab98da60b3f6740dbbbee1b
-ms.sourcegitcommit: 44a24b580feea0f188c7eae36e72e4a4f412802b
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+ms.localizationpriority: medium
+ms.openlocfilehash: bb1168401aaa715f8d1c459691dfa1b1ca38ccbe
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690429"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법
-
 리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하고 반환할 최적의 후보를 결정합니다. 이 작업은 모든 후보의 순위를 지정할 모든 한정자를 고려하여 수행됩니다.
 
 이 순위 지정 프로세스에서 다른 한정자에 다른 우선 순위가 부여됩니다. 언어가 전반적인 순위에 가장 큰 영향을 미치며 그 다음으로 대비, 배율 등의 순서입니다. 각 한정자에 대해 후보 한정자는 일치 정도를 확인하기 위해 컨텍스트 한정자 값과 비교됩니다. 비교 방식은 한정자에 따라 다릅니다.
+
+언어 태그 일치 방법에 대한 자세한 내용은 [리소스 관리 시스템이 언어 태그를 일치하는 방법](how-rms-matches-lang-tags.md)을 참조하세요.
 
 배율 및 고대비 등의 일부 한정자의 경우 항상 최소한의 어느 정도의 일치가 있습니다. 예를 들어, "scale-100" 일치에 대해 정규화된 후보는 "scale-400" 컨텍스트와 작은 정도로 일치하지만 "scale-200" 또는 (완벽한 일치에 대해) "scale-400"에 대해 정규화된 후보만큼 일치하지는 않습니다.
 
@@ -41,7 +41,6 @@ ms.lasthandoff: 10/31/2017
 동률이 있는 경우 다음 높은 우선 순위의 컨텍스트 한정자 값이 검사되며 최적의 일치를 찾을 때까지 프로세스가 계속됩니다.
 
 ## <a name="example-of-choosing-a-resource-candidate"></a>리소스 후보 선택 예제
-
 이러한 파일을 고려해 보세요.
 
 ```
@@ -85,7 +84,7 @@ en/images/logo.scale-100.jpg
 en/images/logo.scale-400.jpg
 ```
 
-고급 [**NamedResource.ResolveAll**](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live#Windows_ApplicationModel_Resources_Core_NamedResource_ResolveAll_Windows_ApplicationModel_Resources_Core_ResourceContext_) 메서드를 사용하여 모든 후보를 컨텍스트 설정과 일치하는 순서대로 검색할 수 있습니다. 방금 언급한 예제에서 **ResolveAll**은 이 순서대로 후보를 반환합니다.
+고급 [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) 메서드를 사용하여 모든 후보를 컨텍스트 설정과 일치하는 순서대로 검색할 수 있습니다. 방금 언급한 예제에서 **ResolveAll**은 이 순서대로 후보를 반환합니다.
 
 ```
 en/images/logo.scale-400.jpg
@@ -95,7 +94,6 @@ fr/images/logo.scale-100.jpg
 ```
 
 ## <a name="example-of-producing-a-fallback-choice"></a>대체 선택을 생성하는 예
-
 이러한 파일을 고려해 보세요.
 
 ```
@@ -138,9 +136,7 @@ de/images/contrast-standard/logo.jpg
 ```
 
 ## <a name="important-apis"></a>중요 API
-
-* [NamedResource.ResolveAll](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live#Windows_ApplicationModel_Resources_Core_NamedResource_ResolveAll_Windows_ApplicationModel_Resources_Core_ResourceContext_)
+* [NamedResource.ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
-
 * [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)

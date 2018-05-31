@@ -1,26 +1,34 @@
 ---
 author: stevewhims
-Description: "MakePri.exe는 PRI 파일을 만들고 덤프하는 데 사용할 수 있는 명령줄 도구입니다. Microsoft Visual Studio 내에 MSBuild의 일부로 통합되어 있지만 수동으로 또는 사용자 지정 빌드 시스템으로 패키지를 만드는 데 도움이 될 수 있습니다."
-title: "MakePri.exe를 사용하여 수동으로 리소스 컴파일"
+Description: MakePri.exe is a command line tool that you can use to create and dump PRI files. It is integrated as part of MSBuild within Microsoft Visual Studio, but it could be useful to you for creating packages manually or with a custom build system.
+title: MakePri.exe를 사용하여 수동으로 리소스 컴파일
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자"
-localizationpriority: medium
-ms.openlocfilehash: 16d2a270a69497bc66f7b17109bc28b062f14b5e
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+ms.localizationpriority: medium
+ms.openlocfilehash: 261a2b747d25284351bb6f4e51f108158b6e2bc5
+ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/05/2018
+ms.locfileid: "1707028"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="compile-resources-manually-with-makepriexe"></a>MakePri.exe를 사용하여 수동으로 리소스 컴파일
 
 MakePri.exe는 PRI 파일을 만들고 덤프하는 데 사용할 수 있는 명령줄 도구입니다. Microsoft Visual Studio 내에 MSBuild의 일부로 통합되어 있지만 수동으로 또는 사용자 지정 빌드 시스템으로 패키지를 만드는 데 도움이 될 수 있습니다.
+
+PRI 파일의 크기 제한은 64킬로바이트입니다.
+
+## <a name="in-this-section"></a>이 섹션의 내용
+|항목|설명|
+|-|-|
+| [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md) | MakePri.exe에는 `createconfig`, `dump`, `new`, `resourcepack` 및 `versioned` 명령 집합이 있습니다. 이 항목에서는 이들의 사용에 대한 명령줄 옵션을 자세히 설명합니다. |
+| [MakePri.exe 구성 파일](makepri-exe-configuration.md) | 이 항목에서는 MakePri.exe XML 구성 파일 스키마를 설명합니다. |
+| [MakePri.exe 형식별 인덱서](makepri-exe-format-specific-indexers.md) | 이 항목에서는 리소스 인덱스를 생성하기 위해 MakePri.exe 도구에서 사용하는 형식별 인덱서에 대해 설명합니다. |
 
 ## <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
@@ -59,7 +67,6 @@ MakePri.exe 또는 MSBuild가 리소스가 명확하지 않은 언어 한정자�
 다른 구성 요소, 클래스 라이브러리, 어셈블리, DLL 및 SDK에 대해 PRI 파일을 작성할 때 구성 요소 리소스가 포함된 앱과 충돌하지 않는 자체 하위 리소스 맵을 가지도록 **initialPath** 구성을 사용해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
-
 * [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)
 * [MakePri.exe 구성](makepri-exe-configuration.md)
 * [MakePri.exe 형식별 인덱서](makepri-exe-format-specific-indexers.md)
