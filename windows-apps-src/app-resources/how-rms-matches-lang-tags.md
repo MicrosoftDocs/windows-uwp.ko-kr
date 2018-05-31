@@ -1,30 +1,31 @@
 ---
 author: stevewhims
-Description: "이전 항목(리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법)은 일반적으로 한정자 일치를 살펴봅니다. 이 항목은 언어-태그-일치에 대해 더 자세히 알아봅니다."
-title: "리소스 관리 시스템이 언어 태그를 일치하는 방법"
+Description: The previous topic (How the Resource Management System matches and chooses resources) looks at qualifier-matching in general. This topic focuses on language-tag-matching in more detail.
+title: 리소스 관리 시스템이 언어 태그를 일치하는 방법
 template: detail.hbs
 ms.author: stwhi
 ms.date: 11/02/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자"
-localizationpriority: medium
-ms.openlocfilehash: ae1c4a3093e978cc054934d991d37c31264f128d
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+ms.localizationpriority: medium
+ms.openlocfilehash: 6c01b3efe77f1933c8d9a8620a60757e14d94bd5
+ms.sourcegitcommit: dd1a2e22eadd2304afee0912fd21772a9d2d8fda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/13/2017
+ms.locfileid: "1437744"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="how-the-resource-management-system-matches-language-tags"></a>리소스 관리 시스템이 언어 태그를 일치하는 방법
 
 이전 항목([리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법](how-rms-matches-and-chooses-resources.md))은 일반적으로 한정자 일치를 살펴봅니다. 이 항목은 언어-태그-일치에 대해 더 자세히 알아봅니다.
 
 ## <a name="introduction"></a>소개
 
-언어 태그 한정자가 있는 리소스는 최종 사용자의 기본 언어 우선 순위 목록에 따라 비교되며 평가됩니다. 점수 체계는 [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) 하위 태그 레지스트리 및 기타 데이터 소스에 포함된 데이터를 사용합니다. 이로 인해 점수가 일치하는 다른 품질과 그라데이션되고 여러 후보를 사용할 수 있는 경우 가장 일치하는 점수를 가진 후보를 선택합니다.
+언어 태그 한정자가 있는 리소스는 앱 런타임 언어 목록을 기반으로 비교되고 점수가 매겨집니다. 다른 언어 목록의 정의에 대해서는 [사용자 프로필이 언어와 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)를 참조하세요. 목록의 첫 번째 언어에 대한 일치는 목록의 두 번째 언어에 대한 일치보다 앞에 나타나며, 이는 다른 국가별 변형에 대해서도 마찬가지입니다. 예를 들어 앱 런타임 언어가 en-US인 경우 en-GB에 대한 리소스가 fr-CA 리소스보다 우선적으로 선택되고, en 형식의 리소스가 없는 경우에만 fr-CA 리소스가 선택됩니다(이 경우 앱의 기본 언어는 en 형식으로 설정할 수 없음).
+
+점수 체계는 [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) 하위 태그 레지스트리 및 기타 데이터 소스에 포함된 데이터를 사용합니다. 이로 인해 점수가 일치하는 다른 품질과 그라데이션되고 여러 후보를 사용할 수 있는 경우 가장 일치하는 점수를 가진 후보를 선택합니다.
 
 따라서 일반 용어에 언어 콘텐츠를 태그로 지정할 수 있지만 필요에 따라 여전히 특정 콘텐츠를 지정할 수 있습니다. 예를 들어 귀하의 앱에는 미국, 영국 및 기타 영역에 공통된 여러 영어 문자열이 있을 수 있습니다. 이러한 문자열을 "en"(영어)로 지정하면 공간과 지역화 오버헤드가 저장됩니다. 차이를 구분해야 할 때, 예를 들면 "color/colour"라는 단어가 포함된 문자열에서 미국과 영국 버전은 모두 각각 "en-US" 및 "en-GB"라는 언어 및 지역 하위 태그를 사용하여 태그될 수 있습니다.
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/03/2017
 
 ## <a name="matching-two-languages"></a>두 개 언어 일치
 
-Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로세스의 컨텍스트에서 수행됩니다. Windows가 응용 프로그램 언어 목록을 생성하는 때와 같이 여러 언어 평가의 컨텍스트일 수 있습니다([언어 및 지역 관리](../globalizing/manage-language-and-region.md) 참조). Windows는 사용자 기본 설정의 여러 언어를 앱의 매니페스트에 지정된 언어와 비교하여 이 작업을 수행합니다. 또한 특정 리소스에 대한 다른 한정자 함께 언어 평가의 컨텍스트에서 비교될 수도 있습니다. 한 가지 예로 Windows는 특정 리소스 컨텍스트에 특정 파일 리소스를 확인하는 경우가 있습니다. 사용자의 홈 위치 또는 디바이스의 현재 배율과, 또는 리소스 선택의 요소에 포함되는 기타 요인으로 dpi(언어 이외)와 비교합니다.
+Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로세스의 컨텍스트에서 수행됩니다. Windows가 응용 프로그램 언어 목록을 생성하는 때와 같이 여러 언어 평가의 컨텍스트일 수 있습니다([사용자 프로필 언어 및 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md) 참조). Windows는 사용자 기본 설정의 여러 언어를 앱의 매니페스트에 지정된 언어와 비교하여 이 작업을 수행합니다. 또한 특정 리소스에 대한 다른 한정자 함께 언어 평가의 컨텍스트에서 비교될 수도 있습니다. 한 가지 예로 Windows는 특정 리소스 컨텍스트에 특정 파일 리소스를 확인하는 경우가 있습니다. 사용자의 홈 위치 또는 디바이스의 현재 배율과, 또는 리소스 선택의 요소에 포함되는 기타 요인으로 dpi(언어 이외)와 비교합니다.
 
 두 개의 언어 태그를 비교할 때 비교는 일치 근접성을 기준으로 점수를 지정합니다.
 
@@ -61,7 +62,7 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 ### <a name="exact-match"></a>정확한 일치
 
-태그가 정확하게 동일합니다(모든 하위 태그 요소 일치). 비교는 변형 또는 지역 일치에서 이 일치 형식으로 승격될 수 있습니다.
+태그가 정확하게 동일합니다(모든 하위 태그 요소 일치). 비교는 변형 또는 지역 일치에서 이 일치 형식으로 승격될 수 있습니다. 예를 들어 en-US는 en-US와 일치합니다.
 
 ### <a name="variant-match"></a>변형 일치
 
@@ -69,11 +70,11 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 ### <a name="region-match"></a>지역 일치
 
-태그는 언어, 스크립트, 지역 하위 태그에 대해 일치하지만 일부 다른 측면에서 다릅니다.
+태그는 언어, 스크립트, 지역 하위 태그에 대해 일치하지만 일부 다른 측면에서 다릅니다. 예를 들어, de-DE-1996은 de-DE와 일치하고 en-US-x-Pirate는 en-US와 일치합니다.
 
 ### <a name="partial-matches"></a>부분 일치
 
-태그는 언어 및 스크립트 하위 태그에 대해 일치하지만 지역 또는 일부 다른 하위 태그에서 다릅니다.
+태그는 언어 및 스크립트 하위 태그에 대해 일치하지만 지역 또는 일부 다른 하위 태그에서 다릅니다. 예를 들어 en-US는 en과 일치합니다. 또는 en-US는 en-\*와 일치합니다.
 
 #### <a name="macro-region-match"></a>매크로 지역 일치
 
@@ -93,7 +94,7 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 #### <a name="preferred-region-match"></a>선호 지역 일치
 
-태그는 언어 및 스크립트 하위 태그에 대해 일치하며 지역 하위 태그 중 하나는 언어에 대한 기본 지역 하위 태그입니다. 예를 들어 "fr-FR"은 "fr" 하위 태그에 대한 기본 지역입니다. 이는 Windows가 지역화된 각 언어에 대한 기본 지역을 정의하는 Windows에서 관리하는 데이터에 의존합니다.
+태그는 언어 및 스크립트 하위 태그에 대해 일치하며 지역 하위 태그 중 하나는 언어에 대한 기본 지역 하위 태그입니다. 예를 들어 "fr-FR"은 "fr" 하위 태그에 대한 기본 지역입니다. 따라서, fr-FR은 fr-CA보다 fr-BE와 더 일치합니다. 이는 Windows가 지역화된 각 언어에 대한 기본 지역을 정의하는 Windows에서 관리하는 데이터에 의존합니다.
 
 #### <a name="sibling-match"></a>형제 일치
 
@@ -109,19 +110,19 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 ### <a name="no-match"></a>일치하지 않음
 
-불일치 기본 언어 하위 태그는 유효한 수준의 일치 밑으로 점수가 매겨집니다.
+불일치 기본 언어 하위 태그는 유효한 수준의 일치 밑으로 점수가 매겨집니다. 예를 들어, zh-Hant는 zh-Hans와 일치하지 않습니다.
 
 ## <a name="examples"></a>예
 
 사용자 언어 "zh-Hans-CN"(중국어 간체(중국))은 표시되는 우선 순위 순서에서 다음 리소스와 일치합니다. X는 일치하지 않음을 나타냅니다.
 
-[!중국어 간체(중국)에 대해 일치](/images/language_matching_1.png)
+![중국어 간체(중국)에 대해 일치](images/language_matching_1.png)
 
 1. 정확한 일치; 2. & 3. 지역 일치; 4. 상위 일치; 5. 형제 일치.
 
-언어 하위 태그에 BCP-47 하위 태그 레지스트리에 정의된 억제 스크립트 값이 있을 때 억제 스크립트 코드의 값을 가지는 상응하는 일치가 발생합니다. 다음 예에서 사용자 언어는 "en-AU"(영어(오스트레일리아))입니다.
+언어 하위 태그에 BCP-47 하위 태그 레지스트리에 정의된 억제 스크립트 값이 있을 때 억제 스크립트 코드의 값을 가지는 상응하는 일치가 발생합니다. 예를 들어 en-Latn-US는 en-US와 일치합니다. 다음 예에서 사용자 언어는 "en-AU"(영어(오스트레일리아))입니다.
 
-[!영어(오스트레일리아)에 대해 일치](/images/language_matching_2.png)
+![영어(오스트레일리아)에 대해 일치](images/language_matching_2.png)
 
 1. 정확한 일치; 2. 매크로 지역 일치; 3. 지역 중립 일치; 4. 표기법 유사성 일치; 5. 선호 지역 일치; 6. 형제 일치.
 
@@ -193,5 +194,5 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 * [리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
-* [언어 및 지역 관리](../globalizing/manage-language-and-region.md)
+* [사용자 프로필 언어와 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)
 * [매크로 지리(대륙)적 지역, 지리적 하위 지역, 선택된 경제 및 기타 그룹의 구성](http://go.microsoft.com/fwlink/p/?LinkId=247929)
