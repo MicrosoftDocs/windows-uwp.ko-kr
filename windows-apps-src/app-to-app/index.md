@@ -1,7 +1,7 @@
 ---
 ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
-description: "이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다."
-title: "앱 간 통신"
+description: 이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다.
+title: 앱 간 통신
 author: msatranjr
 ms.author: misatran
 ms.date: 02/08/2017
@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 938c2d20067dc99a84939c8501971a06fa702515
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: 6cc0b8fb9d1388db0e79e5f029ae69bfae1e4c69
+ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 04/05/2018
+ms.locfileid: "1706968"
 ---
 # <a name="app-to-app-communication"></a>앱 간 통신
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다.
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 07/19/2017
 | [데이터 공유](share-data.md) | 이 문서에서는 UWP 앱에서 공유 계약을 지원하는 방법을 설명합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다. |
 | [데이터 수신](receive-data.md) | 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다. |
 | [복사 및 붙여넣기](copy-and-paste.md) | 이 문서에서는 UWP 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다. |
-| [끌어서 놓기](drag-and-drop.md) | 이 문서에서는 UWP 앱에 끌어서 놓기를 추가하는 방법을 설명합니다. 끌어서 놓기는 이미지 및 파일과 같은 콘텐츠를 조작하는 전형적이고 자연스러운 방법입니다. 구현되면 끌어서 놓기가 앱에서 앱, 앱에서 데스크톱, 데스크톱에서 앱을 비롯한 모든 방향으로 원활하게 작동합니다. |
+| [끌어서 놓기](../design/input/drag-and-drop.md) | 이 문서에서는 UWP 앱에 끌어서 놓기를 추가하는 방법을 설명합니다. 끌어서 놓기는 이미지 및 파일과 같은 콘텐츠를 조작하는 전형적이고 자연스러운 방법입니다. 구현되면 끌어서 놓기가 앱에서 앱, 앱에서 데스크톱, 데스크톱에서 앱을 비롯한 모든 방향으로 원활하게 작동합니다. |
 
 ## <a name="see-also"></a>참고 항목
 - [UWP 앱 개발](https://developer.microsoft.com/windows/develop)

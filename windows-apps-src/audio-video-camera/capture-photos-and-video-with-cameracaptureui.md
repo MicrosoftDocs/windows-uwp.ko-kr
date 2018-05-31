@@ -1,21 +1,24 @@
 ---
 author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
-description: "이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다."
-title: "Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처"
+description: 이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다.
+title: Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7be9a38bdb4d9489c08cd53c5b24348e16d7a74f
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: acd14b63bb877dca2f801423f9d0de73ec994acf
+ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1691972"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다. 이 기능은 사용하기 쉬우며 몇 줄의 코드로 앱이 사용자가 캡처한 사진 또는 동영상을 가져올 수 있도록 합니다.
@@ -59,7 +62,7 @@ UI에 이미지를 표시하려면 XAML 페이지에서 [**Image**](https://msdn
 
 [!code-xml[ImageControl](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트에 using [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258)네임스페이스를 포함합니다.
+XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트에 [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258)네임스페이스 사용을 포함합니다.
 
 [!code-cs[UsingSoftwareBitmapSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmapSource)]
 
@@ -77,38 +80,14 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 캡처한 비디오 파일로 수행하는 작업은 앱에 대한 시나리오에 따라 달라집니다. 이 문서의 나머지 부분에서는 하나 이상의 캡처된 비디오에서 미디어 컴퍼지션을 신속하게 만든 후 UI에 표시하는 방법을 보여 줍니다.
 
-먼저 비디오 컴퍼지션을 표시할 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 컨트롤을 XAML 페이지에 추가합니다.
+먼저 비디오 컴퍼지션을 표시할 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 컨트롤을 XAML 페이지에 추가합니다.
 
 [!code-xml[MediaElement](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetMediaElement)]
 
-프로젝트에 [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) 및 [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) 네임스페이스를 추가합니다.
 
+카메라 캡처 UI에서 반환된 동영상 파일을 사용하고 [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource)를 호출하여 새 **[CreateFromStorageFile](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfromstoragefile)** 을 만듭니다. **MediaPlayerElement**와 연결된 기본 **[MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer)** 의 **[Play](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play)** 메서드를 호출하여 비디오를 재생합니다.
 
-[!code-cs[UsingMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingMediaComposition)]
-
-페이지의 수명 범위 내에 유지하려는 [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652646) 및 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn282716) 개체에 대해 멤버 변수를 선언합니다.
-
-[!code-cs[DeclareMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetDeclareMediaComposition)]
-
-일단 모든 비디오를 캡처하기 전에 **MediaComposition** 클래스의 새 인스턴스를 만들어야 합니다.
-
-[!code-cs[InitComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetInitComposition)]
-
-카메라 캡처 UI에서 반환된 동영상 파일을 사용하고 [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652596)를 호출하여 새 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652607)을 만듭니다. 미디어 클립을 컴퍼지션의 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 컬렉션에 추가합니다.
-
-[**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674)를 호출하여 컴퍼지션에서 **MediaStreamSource** 개체를 만듭니다.
-
-[!code-cs[AddToComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetAddToComposition)]
-
-마지막으로, 스트림 소스를 미디어 요소의 [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) 메서드를 사용하도록 설정하여 컴퍼지션을 UI에 표시합니다.
-
-[!code-cs[SetMediaElementSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetMediaElementSource)]
-
-비디오 클립을 캡처한 후 컴퍼지션에 계속 추가할 수 있습니다. 미디어 컴퍼지션에 대한 자세한 내용은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요.
-
-> [!NOTE] 
-> 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
-
+[!code-cs[PlayVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetPlayVideo)]
  
 
 ## <a name="related-topics"></a>관련 항목
