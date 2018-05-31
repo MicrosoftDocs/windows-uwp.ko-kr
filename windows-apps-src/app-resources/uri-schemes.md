@@ -1,26 +1,25 @@
 ---
 author: stevewhims
-Description: "앱 패키지, 앱의 데이터 폴더 또는 클라우드에서 파일을 참조하는 데 사용할 수 있는 몇 가지 URI (Uniform Resource Identifier) 스키마가 있습니다. URI 스키마를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수 있습니다."
-title: "URI 스키마"
+Description: There are several URI (Uniform Resource Identifier) schemes that you can use to refer to files that come from your app's package, your app's data folders, or the cloud. You can also use a URI scheme to refer to strings loaded from your app's Resources Files (.resw).
+title: URI 스키마
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자"
-localizationpriority: medium
-ms.openlocfilehash: 7cbd4a6fea3ca7d179eae9857c6e98010d11439e
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+ms.localizationpriority: medium
+ms.openlocfilehash: 445f053b0243f1b9c2e54e6e9fcfa332d49cbec5
+ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/22/2018
+ms.locfileid: "1674520"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="uri-schemes"></a>URI 스키마
 
-앱 패키지, 앱의 데이터 폴더 또는 클라우드에서 파일을 참조하는 데 사용할 수 있는 몇 가지 URI (Uniform Resource Identifier) 스키마가 있습니다. URI 스키마를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수 있습니다. 코드, XAML 태그, 앱 패키지 매니페스트, 또는 사용자 타일 및 알림 메시지 템플렛에서 이러한 URI 스키마를 사용할 수 있습니다.
+앱 패키지, 앱의 데이터 폴더 또는 클라우드에서 파일을 참조하는 데 사용할 수 있는 몇 가지 URI (Uniform Resource Identifier) 스키마가 있습니다. URI 스키마를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수 있습니다. 코드, XAML 태그, 앱 패키지 매니페스트, 또는 사용자 타일 및 알림 메시지 템플릿에서 이러한 URI 스키마를 사용할 수 있습니다.
 
 ## <a name="common-features-of-the-uri-schemes"></a>URI 스키마의 일반적인 기능
 
@@ -28,7 +27,7 @@ ms.lasthandoff: 11/03/2017
 
 모든 URI 스키마는 [RFC 3986](http://go.microsoft.com/fwlink/p/?LinkId=263444)에 따라 계층 구조 부분을 기관과 URI의 경로 구성 요소로 정의합니다.
 
-```
+```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
 hier-part   = "//" authority path-abempty
             / path-absolute
@@ -109,14 +108,13 @@ ms-appx:///images/logo.png
 
 물론 전체 이름을 직접 참조하여 동일한 실제 파일을 검색할 수도 있습니다.
 
-**XAML**
-```xml
+```xaml
 <Image Source="ms-appx:///images/fr-FR/logo.scale-100_contrast-white.png"/>
 ```
 
 `ms-appx(-web)`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 리소스에 액세스하는 기본 파일 시스템이 대/소문자를 구분하는 경우(예: NTFS) 리소스 검색은 대/소문자를 구분합니다.
 
-URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두 자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 Hello#World.html이라는 파일을 검색하려면 이 URI를 사용합니다.
+URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 Hello#World.html이라는 파일을 검색하려면 이 URI를 사용합니다.
 
 ```xml
 ms-appx:///Hello%23World.html
@@ -128,9 +126,9 @@ ms-appx:///Hello%23World.html
 
 ## <a name="ms-appdata"></a>ms-appdata
 
-`ms-appdata`URI 스키마를 사용하여 앱의 로컬, 로밍, 임시 데이터 폴더에서 파일을 참조합니다. 이러한 앱 데이터 폴더에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](../app-settings/store-and-retrieve-app-data.md)을 참조하세요.
+`ms-appdata` URI 스키마를 사용하여 앱의 로컬, 로밍, 임시 데이터 폴더에서 파일을 참조합니다. 이러한 앱 데이터 폴더에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)을 참조하세요.
 
-`ms-appdata` URI 스키마는 [ms- appx 및 ms-appx-web](#ms-appx-and-ms-appx-web)이 수행하는 런타임 콘텐츠 협상을 수행하지 않습니다. 그러나 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues)의 콘텐츠에 응답하고 URI에 전체 실제 파일 이름을 사용하여 앱 데이터를 로드할 수 있습니다.
+`ms-appdata` URI 스키마는 [ms- appx 및 ms-appx-web](#ms-appx-and-ms-appx-web)이 수행하는 런타임 콘텐츠 협상을 수행하지 않습니다. 그러나 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)의 콘텐츠에 응답하고 URI에 전체 실제 파일 이름을 사용하여 앱 데이터를 로드할 수 있습니다.
 
 ### <a name="scheme-name-ms-appdata"></a>스키마 이름(ms-appdata)
 
@@ -189,7 +187,7 @@ ms-appdata:///roaming/
 
 `ms-appdata`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 리소스에 액세스하는 기본 파일 시스템이 대/소문자를 구분하는 경우(예: NTFS) 리소스 검색은 대/소문자를 구분합니다.
 
-URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두 자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 Hello#World.html이라는 로컬 파일을 검색하려면 이 URI를 사용합니다.
+URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 Hello#World.html이라는 로컬 파일을 검색하려면 이 URI를 사용합니다.
 
 ```xml
 ms-appdata://local/Hello%23World.html
@@ -225,7 +223,7 @@ ms-resource://
 
 ### <a name="authority-ms-resource"></a>기관(ms-resource)
 
-기관은 일반적으로 패키지 매니페스트에 정의된 패키지 ID 이름에 해당하는 PRI(Package Resource Index)에 정의된 최상위 수준 리소스 맵입니다. [앱 패키징](../packaging/index.md)을 참조하세요. 따라서 이는 URI 및 IRI(Internationalized resource identifier) 양식 둘 다에서 패키지 ID 이름에 사용할 수 있는 문자로 제한됩니다. 패키지 이름은 현재 실행 중인 앱 패키지 종속성 그래프의 패키지 중 하나의 이름이어야 합니다.
+기관은 일반적으로 패키지 매니페스트에 정의된 패키지 ID 이름에 해당하는 PRI(Package Resource Index)에 정의된 최상위 수준 리소스 지도입니다. [앱 패키징](../packaging/index.md)을 참조하세요. 따라서 이는 URI 및 IRI(Internationalized resource identifier) 양식 둘 다에서 패키지 ID 이름에 사용할 수 있는 문자로 제한됩니다. 패키지 이름은 현재 실행 중인 앱 패키지 종속성 그래프의 패키지 중 하나의 이름이어야 합니다.
 
 ```xml
 ms-resource://Contoso.MyApp/
@@ -253,13 +251,13 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 ### <a name="path-ms-resource"></a>경로(ms-resource)
 
-경로는 [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) 하위 트리의 계층 구조 위치([리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/jj552947) 참조) 및 그 안의 [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResourcebranch=live)를 식별합니다. 일반적으로 이는 리소스 파일(.resw)의 파일 이름(확장명 제외)과 그 안의 문자열 리소스의 식별자에 해당합니다.
+경로는 [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) 하위 트리의 계층 구조 위치([리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/jj552947) 참조) 및 그 안의 [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live)를 식별합니다. 일반적으로 이는 리소스 파일(.resw)의 파일 이름(확장명 제외)과 그 안의 문자열 리소스의 식별자에 해당합니다.
 
-자세한 내용과 예는 [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md) 및 [언어, 배율, 고대비에 대한 타일 및 알림 메시지](tile-toast-language-scale-contrast.md)를 참조하세요.
+자세한 내용과 예는 [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md) 및 [언어, 배율, 고대비에 대한 타일 및 알림 메시지](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)를 참조하세요.
 
 `ms-resource`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 기본 retrieval.does는 *ignoreCase*가 `true`로 설정된 [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628)입니다.
 
-URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두 자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 Hello#World.resw라는 리소스 파일에서 문자열 리소스를 검색하려면 이 URI를 사용합니다.
+URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 Hello#World.resw라는 리소스 파일에서 문자열 리소스를 검색하려면 이 URI를 사용합니다.
 
 ```xml
 ms-resource:///Hello%23World/String1
@@ -276,7 +274,7 @@ ms-resource:///Hello%23World/String1
 * [URI(Uniform Resource Identifier): 일반 구문](http://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [앱 패키징](../packaging/index.md)
 * [XAML 태그와 코드에서 이미지 또는 다른 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
-* [설정 및 기타 앱 데이터 저장 및 검색](../app-settings/store-and-retrieve-app-data.md)
+* [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)
 * [UI와 앱 패키지 매니페스트에 문자열 지역화](localize-strings-ui-manifest.md)
 * [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/jj552947)
-* [언어, 배율, 고대비에 대한 타일 및 알림 메시지](tile-toast-language-scale-contrast.md)
+* [언어, 배율, 고대비에 대한 타일 및 알림 메시지](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

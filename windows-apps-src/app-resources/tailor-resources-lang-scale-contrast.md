@@ -1,30 +1,29 @@
 ---
 author: stevewhims
-Description: "이 항목에서는 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 목적에 대해 설명합니다."
-title: "언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정"
+Description: This topic explains the general concept of qualifiers, how to use them, and the purpose of each of the qualifier names.
+title: 언어, 규모, 고대비 및 기타 한정자에 맞게 리소스 조정
 template: detail.hbs
 ms.author: stwhi
 ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자"
-localizationpriority: medium
-ms.openlocfilehash: 930a49ab3d9bab034f771a323b17484ae6aa0e16
-ms.sourcegitcommit: d0c93d734639bd31f264424ae5b6fead903a951d
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+ms.localizationpriority: medium
+ms.openlocfilehash: 5309b33e0f65a1a06e1a3c0060a84e4c4a88ef9d
+ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/03/2018
+ms.locfileid: "1700799"
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
-
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
-이 항목에서는 리소스 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 목적에 대해 설명합니다. 가능한 모든 한정자 값에 대한 참조 테이블은 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_QualifierValues)를 참조하세요.
+이 주제에서는 리소스 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 목적에 대해 설명합니다. 가능한 모든 한정자 값에 대한 참조 테이블은 [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)를 참조하세요.
 
-앱은 표시 언어, 고대비, [디스플레이 배율 인수](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor) 등의 런타임 컨텍스트에 맞게 조정된 자산 및 리소스를 로드할 수 있습니다. 이를 수행하는 방법은 해당 컨텍스트에 해당하는 한정자 이름 및 한정자 값과 일치하도록 리소스의 폴더 또는 파일의 이름을 지정하는 것입니다. 예를 들어, 앱이 고대비 모드에서 다른 이미지 자산 집합을 로드하도록 할 수 있습니다.
+앱은 표시 언어, 고대비, [디스플레이 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor) 등의 런타임 컨텍스트에 맞게 조정된 자산 및 리소스를 로드할 수 있습니다. 이를 수행하는 방법은 해당 컨텍스트에 해당하는 한정자 이름 및 한정자 값과 일치하도록 리소스의 폴더 또는 파일의 이름을 지정하는 것입니다. 예를 들어, 앱이 고대비 모드에서 다른 이미지 자산 집합을 로드하도록 할 수 있습니다.
 
-앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../globalizing/globalizing-portal.md)를 참조하세요.
+앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
 
 ## <a name="qualifier-name-qualifier-value-and-qualifier"></a>한정자 이름, 한정자 값 및 한정자
 
@@ -89,7 +88,7 @@ ms.lasthandoff: 11/03/2017
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
 
-한정자 일치가 작동하는 방법에 대한 자세한 내용 [리소스 관리 시스템](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj552947)을 참조하세요.
+한정자 일치가 작동하는 방법에 대한 자세한 내용 [리소스 관리 시스템](resource-management-system.md)을 참조하세요.
 
 ## <a name="multiple-qualifiers"></a>여러 한정자
 
@@ -137,7 +136,6 @@ ms.lasthandoff: 11/03/2017
 
 앱은 `custom` 한정자에 대한 값을 설정할 수 있으며 그 값과 가장 잘 일치하는 리소스가 로드됩니다. 예를 들어 앱의 라이선스에 따라 리소스를 로드할 수 있습니다. 코드 예에 나온 바와 같이, 앱이 실행되면 라이선스를 확인하고 [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출하여 `custom` 한정자의 값으로 사용합니다.
 
-**C#**
 ```csharp
 public void SetLicenseLevel(BrandID brand)
 {
@@ -160,7 +158,7 @@ public void SetLicenseLevel(BrandID brand)
 
 ## <a name="devicefamily"></a>DeviceFamily
 
-`devicefamily` 한정자 이름이 필요할 가능성은 없습니다. 대신 사용할 수 있는 훨씬 편리하고 강력한 기술이 있으므로, 가능하다면 사용하지 않아야 합니다. 이러한 기술은 [앱이 실행되고 있는 플랫폼 검색](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) 및 [코드 작성](../get-started/universal-application-platform-guide.md#writing-code)에서 설명하고 있습니다.
+`devicefamily` 한정자 이름이 필요할 가능성은 없습니다. 대신 사용할 수 있는 훨씬 편리하고 강력한 기술이 있으므로, 가능하다면 사용하지 않아야 합니다. 이러한 기술은 [앱이 실행되고 있는 플랫폼 검색](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) 및 [버전 적응 코드](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)에서 설명하고 있습니다.
 
 하지만 마지막 수단으로 devicefamily 한정자를 사용하여 XAML 보기가 포함된 폴더의 이름을 지정할 수 있습니다(XAML 보기는 UI 레이아웃과 컨트롤이 포함된 XAML 파일).
 
@@ -230,11 +228,11 @@ public void SetLicenseLevel(BrandID brand)
 
 ## <a name="layoutdirection"></a>LayoutDirection
 
-`layoutdirection` 한정자는 표시 언어 설정의 레이아웃 방향에 해당합니다. 예를 들어 이미지를 아랍어 또는 히브리어와 같이 오른쪽에서 왼쪽으로 쓰는 언어로 미러링해야 할 수 있습니다. [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement?branch=live#Windows_UI_Xaml_FrameworkElement_FlowDirection) 속성을 설정하는 경우 UI의 레이아웃 패널 및 이미지가 레이아웃 방향에 적절하게 대응합니다([레이아웃 및 글꼴 조정, RTL 지원](../globalizing/adjust-layout-and-fonts--and-support-rtl.md) 참조). 하지만 `layoutdirection` 한정자는 단순한 플리핑이 적절하지 않은 경우를 위한 것이며, 보다 일반적인 방법으로 특정 읽기 순서 및 텍스트 정렬의 방향에 대응할 수 있습니다.
+`layoutdirection` 한정자는 표시 언어 설정의 레이아웃 방향에 해당합니다. 예를 들어 이미지를 아랍어 또는 히브리어와 같이 오른쪽에서 왼쪽으로 쓰는 언어로 미러링해야 할 수 있습니다. [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 설정하는 경우 UI의 레이아웃 패널 및 이미지가 레이아웃 방향에 적절하게 대응합니다([레이아웃 및 글꼴 조정, RTL 지원](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md) 참조). 하지만 `layoutdirection` 한정자는 단순한 플리핑이 적절하지 않은 경우를 위한 것이며, 보다 일반적인 방법으로 특정 읽기 순서 및 텍스트 정렬의 방향에 대응할 수 있습니다.
 
 ## <a name="scale"></a>배율
 
-Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 각 디스플레이의 배율을 자동으로 선택합니다. [유효 픽셀 및 배율](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)을 참조하세요. Windows에서 최적 크기를 선택하거나 가장 유사한 크기를 사용하여 확장할 수 있도록 권장된 여러 크기(최소 100, 200, 및 400)에서 이미지를 만들어야 합니다. Windows에서 디스플레이 배율 인수에 대해 올바른 크기의 이미지를 포함하는 실제 파일을 식별할 수 있도록 `scale`한정자를 사용합니다. 리소스의 배율은 [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation?branch=live#Windows_Graphics_Display_DisplayInformation_ResolutionScale) 값 또는 다음으로 큰 배율의 리소스와 일치합니다.
+Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 각 디스플레이의 배율을 자동으로 선택합니다. [유효 픽셀 및 배율](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)을 참조하세요. Windows에서 최적 크기를 선택하거나 가장 유사한 크기를 사용하여 확장할 수 있도록 권장된 여러 크기(최소 100, 200, 및 400)에서 이미지를 만들어야 합니다. Windows에서 디스플레이 배율 인수에 대해 올바른 크기의 이미지를 포함하는 실제 파일을 식별할 수 있도록 `scale`한정자를 사용합니다. 리소스의 배율은 [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation.ResolutionScale) 값 또는 다음으로 큰 배율의 리소스와 일치합니다.
 
 다음은 폴더 수준에서 한정자를 설정하는 예입니다.
 
@@ -252,7 +250,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 \Assets\Images\logo.scale-400.png
 ```
 
-`scale` 및 `targetsize`에 대한 리소스를 인증하는 방법에 대한 내용은 [targetsize에 대한 이미지 리소스 인증](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize)을 참조하세요.
+`scale` 및 `targetsize`에 대한 리소스를 한정하는 방법에 대한 내용은 [targetsize에 대한 이미지 리소스 한정](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize)을 참조하세요.
 
 ## <a name="targetsize"></a>TargetSize
 
@@ -260,25 +258,26 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 앱 패키지 매니페스트 디자이너의 시각적 자산 탭에서 앱 아이콘(`/Assets/Square44x44Logo.png`)에 대한 `targetsize` 한정자 값의 여러 크기를 나타내는 자산을 정의할 수 있습니다.
 
-`scale` 및 `targetsize`에 대한 리소스를 인증하는 방법에 대한 내용은 [targetsize에 대한 이미지 리소스 인증](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize)을 참조하세요.
+`scale` 및 `targetsize`에 대한 리소스를 한정하는 방법에 대한 내용은 [targetsize에 대한 이미지 리소스 한정](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize)을 참조하세요.
 
 ## <a name="theme"></a>테마
 
-`theme` 한정자는 기본 앱 모드 설정 또는 [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master#Windows_UI_Xaml_Application_RequestedTheme)를 사용하는 앱의 재정의 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
+`theme` 한정자는 기본 앱 모드 설정 또는 [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application?branch=master.RequestedTheme)를 사용하는 앱의 재정의 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
 
 ## <a name="important-apis"></a>중요 API
 
+* [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
 * [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 
 ## <a name="related-topics"></a>관련 항목
 
-* [유효 픽셀 및 배율](../layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
-* [리소스 관리 시스템](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj552947)
+* [유효 픽셀 및 배율](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [리소스 관리 시스템](resource-management-system.md)
 * [지역화를 준비하는 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
 * [앱이 실행되고 있는 플랫폼 검색](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [코드 작성](../get-started/universal-application-platform-guide.md#writing-code)
+* [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [UI 문자열 지역화](localize-strings-ui-manifest.md)
 * [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302)
 * [United Nations Statistic Division M49 지역 코드의 구성](http://go.microsoft.com/fwlink/p/?linkid=247929)
 * [IANA 언어 하위 태그 레지스트리](http://go.microsoft.com/fwlink/p/?linkid=227303)
-* [레이아웃 및 글꼴 조정, RTL 지원](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)
+* [레이아웃 및 글꼴 조정, RTL 지원](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

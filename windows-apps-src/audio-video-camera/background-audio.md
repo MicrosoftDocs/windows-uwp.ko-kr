@@ -1,17 +1,21 @@
 ---
 author: drewbatgit
 ms.assetid: b7333924-d641-4ba5-92a2-65925b44ccaa
-description: "이 문서에서는 앱이 백그라운드에서 실행되는 동안 미디어를 재생하는 방법을 보여 줍니다."
-title: "백그라운드에서 미디어 재생"
+description: 이 문서에서는 앱이 백그라운드에서 실행되는 동안 미디어를 재생하는 방법을 보여 줍니다.
+title: 백그라운드에서 미디어 재생
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 148bb77f9386864a1b127341aa875beb7123bae9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: f8fdc99355ef5a024757cc2e415b1d259965c1ce
+ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/28/2018
+ms.locfileid: "1690499"
 ---
 # <a name="play-media-in-the-background"></a>백그라운드에서 미디어 재생
 이 문서에서는 앱이 포그라운드에서 백그라운드로 이동될 때 미디어가 계속 재생되도록 앱을 구성하는 방법을 보여 줍니다. 즉, 사용자가 홈 화면에서 반환된 앱을 최소화했거나 다른 방법으로 앱에서 외부로 이동한 후에도 앱은 오디오를 계속 재생할 수 있습니다. 
@@ -65,7 +69,7 @@ Windows10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 
 </Capabilities>
 ```
 
-##<a name="handle-transitioning-between-foreground-and-background"></a>포그라운드와 백그라운드 간 전환 처리
+## <a name="handle-transitioning-between-foreground-and-background"></a>포그라운드와 백그라운드 간 전환 처리
 앱이 포그라운드에서 백그라운드로 이동하면 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 이벤트가 발생합니다. 앱이 포그라운드로 반환되면 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) 이벤트가 발생합니다. 이러한 이벤트는 앱 수명 주기 이벤트이기 때문에 앱을 만들 때 해당 이벤트 처리기를 등록해야 합니다. 기본 프로젝트 템플릿에서 이는 App.xaml.cs의 **App** 클래스 생성자에 추가하는 것을 의미합니다. 
 
 [!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
@@ -88,7 +92,7 @@ Windows10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 
 ## <a name="network-availability-for-background-media-apps"></a>백그라운드 미디어 앱에 대한 네트워크 가용성
 스트림이나 파일에서 생성되지 않은 모든 네트워크 인식 미디어 원본은 원격 콘텐츠를 검색하는 동안 네트워크 연결을 활성 상태로 유지하고 검색하지 않을 때 해제합니다. 특히 [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaStreamSource)의 경우 응용 프로그램이 [**SetBufferedRange**](https://msdn.microsoft.com/library/windows/apps/dn282762)를 사용하여 올바른 버퍼 범위를 플랫폼에 정확하게 보고해야 합니다. 전체 콘텐츠가 완전히 버퍼링된 후에는 더 이상 앱을 위해 네트워크가 예약되지 않습니다.
 
-미디어를 다운로드하지 않을 때 백그라운드에서 발생하는 네트워크 호출을 수행해야 하는 경우 [**ApplicationTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.ApplicationTrigger), [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger), [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger) 등의 적절한 작업에 해당 호출을 래핑해야 합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
+미디어에서 다운로드하지 않을 때 백그라운드에서 발생하는 네트워크 호출을 만들려면 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger) 또는 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger)와 같은 적절한 작업에 포함되어야 합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)

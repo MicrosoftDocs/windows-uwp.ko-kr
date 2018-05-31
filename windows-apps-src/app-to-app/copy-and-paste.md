@@ -1,6 +1,6 @@
 ---
-description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다."
-title: "복사 및 붙여넣기"
+description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다.
+title: 복사 및 붙여넣기
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: msatranjr
 ms.author: misatran
@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f49a417e87199a625a023f7aa867f855cbd5d3c9
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: ca01be87619dc88cc39b0c2906d9689768c0fa46
+ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 03/17/2018
+ms.locfileid: "1662573"
 ---
-#<a name="copy-and-paste"></a>복사 및 붙여넣기
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+# <a name="copy-and-paste"></a>복사 및 붙여넣기
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다.
 
