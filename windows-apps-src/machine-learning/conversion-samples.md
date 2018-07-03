@@ -9,16 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, windows machine learning, WinML, WinMLTools, ONNX, ONNXMLTools, scikit-learn, Core ML
 ms.localizationpriority: medium
-ms.openlocfilehash: 882efca26730c990093a89a5ed3ff4b5587e05bf
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 7b2e9c8b661ccd2b0358882992da6c4f160b49f0
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832681"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843003"
 ---
 # <a name="convert-existing-ml-models-to-onnx"></a>기존 ML을 ONNX로 변환
 
-[WinMLTools](https://aka.ms/winmltools)를 사용하여 다른 프레임워크에서 학습된 모델을 ONNX 형식으로 변환할 수 있습니다. 여기서는 WinMLTools 패키지를 설치하는 방법과 Python 코드를 통해 scikit-learn 및 Core ML의 기존 모델을 ONNX로 변환하는 방법에 대해 설명합니다.
+[WinMLTools](https://pypi.org/project/winmltools/)를 사용하여 다른 프레임워크에서 학습된 모델을 ONNX 형식으로 변환할 수 있습니다. 여기서는 WinMLTools 패키지를 설치하는 방법과 Python 코드를 통해 scikit-learn 및 Core ML의 기존 모델을 ONNX로 변환하는 방법에 대해 설명합니다.
 
 ## <a name="install-winmltools"></a>WinMLTools 설치
 
@@ -50,9 +50,12 @@ WinMLTools 사용 방법에 대한 추가 세부 정보는 도움말 기능이 �
 help(winmltools)
 ```
 
+> [!NOTE]
+> Visual Studio Tools for AI 확장으로 Visual Studio IDE 내에서 WinMLTools를 사용하여 더 친숙하고 클릭이 용이한 환경에서 모델을 ONNX 형식으로 변환할 수 있습니다. 자세한 정보는 [VS Tools for AI](https://github.com/Microsoft/vs-tools-for-ai/)를 참조하세요.
+
 ## <a name="scikit-learn-models"></a>Scikit-learn 모델
 
-다음 코드 스니펫은 scikit-learn에서 선형 서포트 벡터 머신을 학습하고 모델을 ONNX로 변환합니다.
+다음 코드 스니펫은 scikit-learn에서 선형 지원 벡터 머신을 학습하고 모델을 ONNX로 변환합니다.
 
 ~~~python
 # First, we create a toy data set.
@@ -302,4 +305,4 @@ model_onnx.graph.output # Print out the ONNX output tensor's information
 ...
 ~~~
 
-보시다시피 생성된 형식은 원본 모델 입력 형식과 동일합니다. 그러나 이 경우 픽셀 값이 부동 소수점 수가 아닌 정수이므로 이미지가 아닙니다. 이를 다시 이미지로 변환하려면 255보다 큰 값을 255로 자르고 음수 값을 0으로 변경한 후 모든 소수를 정수로 반올림합니다.
+보시다시피 생성된 형식은 원본 모델 입력 유형과 동일합니다. 그러나 이 경우 픽셀 값이 부동 소수점 수가 아닌 정수이므로 이미지가 아닙니다. 이를 다시 이미지로 변환하려면 255보다 큰 값을 255로 자르고 음수 값을 0으로 변경한 후 모든 소수를 정수로 반올림합니다.

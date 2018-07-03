@@ -3,27 +3,24 @@ author: mcleanbyron
 description: UWP 앱에 기본 광고를 추가하는 방법을 알아봅니다.
 title: 기본 광고
 ms.author: mcleans
-ms.date: 03/22/2018
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 기본 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: ff7c9249989526a454ffd702f3f95d1ebc4b4566
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 5479efef22d31c5a23086b7e596553542e6e9e51
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690549"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1881114"
 ---
 # <a name="native-ads"></a>기본 광고
 
 기본 광고는 제목, 이미지, 설명, 행동 촉구 텍스트 등의 각 광고 크리에이티브 조각이 앱과 통합할 수 있는 개별 요소로 앱에 제공되는 구성 요소 기반 광고입니다. 이러한 요소를 고유의 폰트, 색상, 애니메이션, 기타 UI 구성 요소를 사용해 앱에 통합, 앱의 모양과 느낌에 부합하는 동시에 높은 광고 수익이 창출되도록 간결한 사용자 환경으로 통합할 수 있습니다.
 
 기본 광고는 광고주에게 성과가 높은 배치 형태를 제공합니다. 광고 환경이 앱과 깊이 통합되어 있고, 따라서 사용자는 이런 유형의 광고에 더 많이 상호작용을 하는 경향이 있습니다.
-
-> [!NOTE]
-> Microsoft Store의 앱 공개 버전에 기본 광고를 제공하려면, 개발자 센터 대시보드의  **수익 창출** &gt; **인앱 광고** 페이지에서 **기본** 광고 단위를 생성해야 합니다. 현재 **기본** 광고 단위를 생성하는 기능은 파일럿 프로그램에 참여하고 있는 일부 개발자만 사용할 수 있습니다. 그러나 조만간 모든 개발자가 이 기능을 사용할 수 있도록 지원할 계획입니다. 파일럿 프로그램에 참여하고 싶다면 aiacare@microsoft.com에 문의하세요.
 
 > [!NOTE]
 > 현재 Windows 10용 XAML 기반 UWP 앱에서만 기본 광고를 지원하고 있습니다. HTML과 JavaScript를 사용해 작성한 UWP 앱은 향후 Microsoft Advertising SK 릴리스에서 지원할 예정입니다.
@@ -52,21 +49,21 @@ ms.locfileid: "1690549"
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Namespaces)]
 
-5.  앱의 적절한 위치(예: ```MainPage``` 또는 다른 페이지)에서 [NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.aspx) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제는 기본 광고에 대한 set-up-ad-units-in-your-app.md#live-ad-units에 `myAppId` 및 `myAdUnitId` 필드를 할당합니다.
+5.  앱의 적절한 위치(예: ```MainPage``` 또는 다른 페이지)에서 **NativeAdsManagerV2** 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제에서는 `myAppId` 및 `myAdUnitId` 필드를 기본 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
     > [!NOTE]
-    > 모든 **NativeAdsManager**에는 컨트롤할 기본 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱을 Microsoft Store에 게시하기 전, Windows 개발자 센터에서 [이 테스트 값을 라이브 값으로](#release) 변경하세요.
+    > 모든 **NativeAdsManagerV2**에는 컨트롤할 기본 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱을 Microsoft Store에 게시하기 전, Windows 개발자 센터에서 [이 테스트 값을 라이브 값으로](#release) 변경하세요.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
-6.  시작할 때 실행되는 코드에서(예를 들면 해당 페이지에 대한 생성자에서), **NativeAdsManager** 개체를 인스턴스화하고, 개체 [AdRedady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.adready.aspx) 및 [ErroOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.erroroccurred.aspx) 이벤트에 이벤트 처리기를 연결합니다.
+6.  시작할 때 실행되는 코드에서(예를 들면 해당 페이지에 대한 생성자에서), **NativeAdsManagerV2** 개체를 인스턴스화하고, 개체 **AdReady** 및 **ErrorOccurred** 이벤트에 이벤트 처리기를 연결합니다.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ConfigureNativeAd)]
 
-7.  기본 광고를 표시할 준비가 되면 광고를 가져올 [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.requestad.aspx) 메서드를 호출합니다.
+7.  기본 광고를 표시할 준비가 되면 광고를 가져올 **RequestAd** 메서드를 호출합니다.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#RequestAd)]
 
-8.  앱에 기본 광고가 준비되면, **AdReady** 이벤트 처리기를 호출하고, 기본 광고를 표시하는 [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx) 개를 *e* 매개 변수로 전달합니다. **NativeAd** 속성을 사용해 기본 광고의 각 요소를 가져오고, 이 요소들을 페이지에 표시합니다. 기본 광고의 컨테이너로 동작하는 UI 요소를 등록하기 위해 [RegisterAdContainer](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.registeradcontainer.aspx) 메서드를 호출해야 합니다. 광고 노출과 클릭을 올바르게 추적하기 위해 필요합니다.
+8.  앱에 기본 광고가 준비되면, **AdReady** 이벤트 처리기를 호출하고, 기본 광고를 표시하는 **NativeAdV2** 개체를 *e* 매개 변수로 전달합니다. **NativeAdV2** 속성을 사용해 기본 광고의 각 요소를 가져오고, 이 요소들을 페이지에 표시합니다. 기본 광고의 컨테이너로 동작하는 UI 요소를 등록하기 위해 **RegisterAdContainer** 메서드를 호출해야 합니다. 광고 노출과 클릭을 올바르게 추적하기 위해 필요합니다.
     > [!NOTE]
     > 반드시 필요한 기본 광고 요소들이 있습니다. 이러한 요소들은 항상 앱에 표시되어야 합니다. 자세한 내용은 [기본 광고에 대한 지침](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)을 참조하세요.
 
@@ -122,7 +119,7 @@ ms.locfileid: "1690549"
 
 3. [인앱 광고](../publish/in-app-ads.md) 페이지의 [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, 기본 광고의 광고 조정을 사용하는 방법도 있습니다. 광고 조정으로 여러 광고 네트워크에서 광고를 표시해 광고 수익과 앱 홍보 기능을 극대화 할 수 있습니다.
 
-4.  코드에서 테스트 광고 단위 값([NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.nativeadsmanager.aspx) 생성자의 *applicationId* 및 *adUnitId* 매개 변수)을 개발자 센터에서 생성한 라이브 값으로 바꿉니다.
+4.  코드에서 테스트 광고 단위 값(**NativeAdsManagerV2** 생성자의 *applicationId* 및 *adUnitId* 매개 변수)을 개발자 센터에서 생성한 라이브 값으로 바꿉니다.
 
 5.  개발자 센터 대시보드를 사용하여 스토어에 [앱을 제출](../publish/app-submissions.md)합니다.
 

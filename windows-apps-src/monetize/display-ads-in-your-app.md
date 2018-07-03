@@ -4,18 +4,18 @@ ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: Microsoft Advertising SDK는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다.
 title: Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b5e8181dbf9cc661600a0ad15f5eb713621c5b3
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 601f3fe67d6ed44403c65427af75042456bdfddb
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816088"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843023"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
@@ -96,7 +96,7 @@ Microsoft Advertising SDK는 앱에서 사용할 수 있는 여러 유형의 광
 
 앱 테스트를 완료해 Microsoft Store에 제출할 준비를 마쳤으면, Windows 개발자 센터 대시보드의 [인앱 광고](../publish/in-app-ads.md)페이지에 광고 단위를 생성합니다. 그런 다음, 이 광고 단위를 사용하도록 앱 코드를 업데이트하면 앱에 실제 광고가 게재됩니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
-기본적으로 앱에는 유료 광고에 대한 Microsoft 네트워크의 광고가 표시됩니다. 광고 수익을 극대화하기 위해 Taboola 및 Smaato 등 추가 유료 광고 네트워크의 광고를 표시하도록 광고 단위에 대한 광고 조정을 사용할 수 있습니다. Microsoft 앱 홍보 캠페인에 광고를 제공하여 앱 홍보 기능을 향상시킬 수 있습니다.
+기본적으로 앱에는 유료 광고에 대한 Microsoft 네트워크의 광고가 표시됩니다. 광고 수익을 극대화하기 위해 Taboola 및 Smaato 등 추가 유료 광고 네트워크의 광고를 표시하도록 광고 단위에 대한 [광고 조정](ad-mediation-service.md)을 사용할 수 있습니다. Microsoft 앱 홍보 캠페인에 광고를 제공하여 앱 홍보 기능을 향상시킬 수 있습니다.
 
 UWP 앱의 광고 조정을 사용하기 시작하려면, 광고 단위의 [광고 조정 설정을 구성](../publish/in-app-ads.md#mediation-settings)합니다. 개발자의 앱이 제공되는 시장에서 광고 수익을 극대화할 수 있도록 기본적으로 기계 학습 알고리즘을 사용하여 조정 설정이 자동으로 구성됩니다. 하지만 사용하려는 네트워크를 수동으로 선택할 수 있는 옵션도 제공됩니다. 어떤 방식을 선택하든 조정 설정이 서버 전체에서 구성되므로 개발자는 앱에서 코드를 변경할 필요가 없습니다.    
 

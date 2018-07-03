@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 59a85512eacf880b61b3245726f4d15bb359a7ad
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: f0bed75a8201b9875f79419c0a77c8a35918b77e
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674890"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877155"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -39,23 +39,24 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 
 1. 개발자 센터 대시보드에서 구독에 대한 [추가 기능 제출을 생성](../publish/add-on-submissions.md)하고, 제출을 게시합니다. 추가 기능 제출 프로세스를 적용할 때 다음 속성에 주의하세요.
 
-  * [제품 유형](../publish/set-your-add-on-product-id.md#product-type): **구독**을 선택해야 합니다.
+    * [제품 유형](../publish/set-your-add-on-product-id.md#product-type): **구독**을 선택해야 합니다.
 
-  * [구독 기간](../publish/enter-add-on-properties.md#subscription-period): 구독에 대한 반복 청구 기간을 선택합니다. 추가 기능을 게시한 후에는 구독 기간을 변경할 수 없습니다.
+    * [구독 기간](../publish/enter-add-on-properties.md#subscription-period): 구독에 대한 반복 청구 기간을 선택합니다. 추가 기능을 게시한 후에는 구독 기간을 변경할 수 없습니다.
 
-    각 구독 추가 기능에서 단일 구독 기간과 시험 평가 일 구독 기간과 평가 기간을 지원합니다. 앱에서 제공하려는 구독 유형 별로 다른 구독 추가 기능을 만들어야 합니다. 예를 들어 평가 기간이 없는 1개월 구독, 1개월 평가 기간이 제공되는 1개월 구독, 평가 기간이 없는 1년 구독, 1개월 평가 기간이 제공되는 1년 구독을 제공하고 싶다면 4가지 구독 추가 기능을 만들어야 합니다.
+        각 구독 추가 기능에서 단일 구독 기간과 시험 평가 일 구독 기간과 평가 기간을 지원합니다. 앱에서 제공하려는 구독 유형 별로 다른 구독 추가 기능을 만들어야 합니다. 예를 들어 평가 기간이 없는 1개월 구독, 1개월 평가 기간이 제공되는 1개월 구독, 평가 기간이 없는 1년 구독, 1개월 평가 기간이 제공되는 1년 구독을 제공하고 싶다면 4가지 구독 추가 기능을 만들어야 합니다.
 
-  * [평가 기간](../publish/enter-add-on-properties.md#free-trial): 구독에서 사용자가 구매 전에 구독 콘텐츠를 평가할 수 있도록 1주 또는 1개월 평가 기간을 선택합니다. 구독 추가 기능을 게시한 후에는 평가 기간을 변경하거나 제거할 수 없습니다.
+    * [평가 기간](../publish/enter-add-on-properties.md#free-trial): 구독에서 사용자가 구매 전에 구독 콘텐츠를 평가할 수 있도록 1주 또는 1개월 평가 기간을 선택합니다. 구독 추가 기능을 게시한 후에는 평가 기간을 변경하거나 제거할 수 없습니다.
 
-    사용자는 구독 무료 평가 기간을 취득하려면, 유효한 결제 유형을 포함해 일반적인 앱 내 구매 프로세스를 통해 구독형 서비스를 구입해야 합니다. 평가 기간 동안에는 요금이 청구되지 않습니다. 평가 기간이 끝나면 구독은 자동으로 유료 구독으로 변경되고, 사용자의 결제 수단에 첫 유료 구독 기간에 대한 요금이 청구됩니다. 사용자가 평가 기간에 구독 취소를 선택해도 평가 기간이 끝날 때까지 구독이 유지됩니다. 일부 평가 기간은 모든 구독 기간에 사용할 수 없습니다.
+        사용자는 구독 무료 평가 기간을 취득하려면, 유효한 결제 유형을 포함해 일반적인 앱 내 구매 프로세스를 통해 구독형 서비스를 구입해야 합니다. 평가 기간 동안에는 요금이 청구되지 않습니다. 평가 기간이 끝나면 구독은 자동으로 유료 구독으로 변경되고, 사용자의 결제 수단에 첫 유료 구독 기간에 대한 요금이 청구됩니다. 사용자가 평가 기간에 구독 취소를 선택해도 평가 기간이 끝날 때까지 구독이 유지됩니다. 일부 평가 기간은 모든 구독 기간에 사용할 수 없습니다.
+
         > [!NOTE]
-        > Each customer can acquire a free trial for a subscription add-on only one time. After a customer acquires a free trial for a subscription, the Store prevents the same customer from ever acquiring the same free trial subscription again.
+        > 각 고객은 한 번만 구독 추가 기능에 대한 무료 평가판을 얻을 수 있습니다. 고객이 구독에 대한 무료 평가판을 획득한 후 Microsoft Store는 동일한 고객이 동일한 무료 평가판 구독을 다시 구입하는 것을 막습니다.
 
-  * [표시 여부](../publish/set-add-on-pricing-and-availability.md#visibility): 구독을 대상으로 앱에서 바로 구매 환경을 테스트하기 위해 테스트 추가 기능을 생성하고 싶다면, **Microsoft Store에서 숨김** 옵션 중 하나를 선택하는 것이 좋습니다. 그렇지 않으면 해당 시나리오에서 가장 좋은 표시 옵션을 선택할 수 있습니다.
+    * [표시 여부](../publish/set-add-on-pricing-and-availability.md#visibility): 구독을 대상으로 앱에서 바로 구매 환경을 테스트하기 위해 테스트 추가 기능을 생성하고 싶다면, **Microsoft Store에서 숨김** 옵션 중 하나를 선택하는 것이 좋습니다. 그렇지 않으면 해당 시나리오에서 가장 좋은 표시 옵션을 선택할 수 있습니다.
 
-  * [가격](../publish/set-add-on-pricing-and-availability.md?#pricing): 이 섹션에서 구독 가격을 선택합니다. 추가 기능을 게시한 후에 구독 가격을 인상할 수 없습니다. 그러나 나중에 가격을 인하할 수는 있습니다.
-      > [!IMPORTANT]
-      > 기본적으로 추가 기능을 생성할 때 처음 가격은 **무료**로 설정됩니다. 추가 기능 제출이 완료된 후에는 구독 추가 기능 가격을 인상할 수 없기 때문에 여기에서 구독 가격을 선택해야 합니다.
+    * [가격](../publish/set-add-on-pricing-and-availability.md?#pricing): 이 섹션에서 구독 가격을 선택합니다. 추가 기능을 게시한 후에 구독 가격을 인상할 수 없습니다. 그러나 나중에 가격을 인하할 수는 있습니다.
+        > [!IMPORTANT]
+        > 기본적으로 추가 기능을 생성할 때 처음 가격은 **무료**로 설정됩니다. 추가 기능 제출이 완료된 후에는 구독 추가 기능 가격을 인상할 수 없기 때문에 여기에서 구독 가격을 선택해야 합니다.
 
 2. 앱에서 [**Windows.Services.Store**](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 API를 사용해, 현재 사용자가 구독 추가 기능을 이미 취득했는지 판별하고, 앱에서 바로 구매 형식으로 사용자에게 판매용으로 제공합니다. 자세한 내용은 이 문서의 [코드 예제](#code-examples)를 참조합니다.
 

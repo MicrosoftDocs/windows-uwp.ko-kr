@@ -10,16 +10,16 @@ ms.technology: uwp
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ab0d375971bc006cd477341fc51f3e6d6d91f78
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: fc348dc4f4733feae86a94e0ada1693326a201d8
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816728"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843193"
 ---
-# <a name="color"></a>색
+# <a name="color"></a>색상
 
-![헤더 이미지](images/color/header-color.svg)
+![영웅 이미지](images/header-color.svg)
 
 색은 앱의 사용자에게 정보를 전달하는 직관적인 방법입니다. 대화형 작업을 나타내거나 사용자 작업에 대한 피드백을 제공하고 인터페이스에 시각적 연속성을 부여하는 데 사용할 수 있습니다. 
 
@@ -27,17 +27,17 @@ UWP 앱에서 색은 주로 테마 컬러와 테마로 결정됩니다. 이 문�
 
 ## <a name="color-principles"></a>색의 원칙
 
-:::행::: :::열::: **의미에 따라 색을 사용합니다.**
+:::row::: :::column::: **의미에 따라 색을 사용합니다.**
 중요한 요소를 강조할 때 색을 간간히 사용하면 유연하고 직관적인 사용자 인터페이스를 구현할 수 있습니다.
-:::마지막 열::: :::열::: **색을 사용하여 대화형 작업을 나타냅니다.**
+:::column-end::: :::column::: **색을 사용하여 대화형 작업을 나타냅니다.**
 대화형 응용 프로그램 요소를 나타내는 한 가지 색을 선택하는 것이 좋습니다. 예를 들어 많은 웹 페이지는 하이퍼링크를 나타낼 때 파란색 텍스트를 사용합니다.
-:::마지막 열::: :::마지막 행:::
+:::column-end::: :::row-end:::
 
-:::행::: :::열::: **색은 개인의 고유한 영역입니다.**
+:::row::: :::column::: **색은 개인의 고유한 영역입니다.**
 Windows에서 사용자는 테마 컬러와 밝거나 어두운 테마를 선택하여 사용 중인 전체 환경에 이것을 반영할 수 있습니다. 사용자의 테마 컬러와 테마를 응용 프로그램에 통합하는 방법을 선택하여 사용 중인 환경을 개인화할 수 있습니다.
-:::마지막 열::: :::열::: **색은 곧 문화입니다.**
+:::column-end::: :::column::: **색은 곧 문화입니다.**
 사용하는 색상이 다른 문화권의 사람들에게는 어떻게 해석되는지를 고려해야 합니다. 예를 들어 일부 문화권에서는 파란색이 미덕 및 보호와 관련이 있는 반면, 다른 문화에서는 애도를 나타내기도 합니다.
-:::마지막 열::: :::마지막 행:::
+:::column-end::: :::row-end:::
 
 ## <a name="themes"></a>테마
 
@@ -96,14 +96,14 @@ UWP 앱은 밝거나 어두운 응용 프로그램 테마를 사용할 수 있�
 
 ### <a name="using-theme-brushes"></a>테마 브러시 사용
 
-:::행::: :::열::: 사용자 지정 컨트롤용 템플릿을 만들 때에는 하드 코드 색 값보다는 테마 브러시를 사용합니다. 이런 방식으로 앱은 모든 테마에 쉽게 적응할 수 있습니다.
+:::row::: :::column::: 사용자 지정 컨트롤용 템플릿을 만들 때에는 하드 코드 색 값보다는 테마 브러시를 사용합니다. 이런 방식으로 앱은 모든 테마에 쉽게 적응할 수 있습니다.
 
         For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
     :::column-end:::
     :::column:::
          ![double line list item with icon example](images/color/list-view.svg)
     :::column-end:::
-:::마지막 행:::
+:::row-end:::
 
 ```xaml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}">
@@ -133,7 +133,7 @@ UWP 앱은 밝거나 어두운 응용 프로그램 테마를 사용할 수 있�
 
 ![Windows 컨트롤](images/color/windows-controls.svg)
 
-:::행::: :::열::: ![사용자가 선택한 테마 헤더](images/color/user-accent.svg)![사용자가 선택한 테마 컬러](images/color/user-selected-accent.svg) :::마지막 열::: :::열::: ![사용자 지정 테마 헤더](images/color/custom-accent.svg)![사용자 지정 브랜드 테마 컬러](images/color/brand-color.svg) :::마지막 열::: ::::마지막 행:::
+:::row::: :::column::: ![사용자가 선택한 테마 헤더](images/color/user-accent.svg)![사용자가 선택한 테마 컬러](images/color/user-selected-accent.svg) :::column-end::: :::column::: ![사용자 지정 테마 헤더](images/color/custom-accent.svg)![사용자 지정 브랜드 테마 컬러](images/color/brand-color.svg) :::column-end::: :::row-end:::
 
 ### <a name="overriding-the-accent-color"></a>테마 컬러를 재정의
 
@@ -237,25 +237,25 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 
 ## <a name="usability"></a>사용 편의성
 
-:::행::: :::열::: ![대비 그림](images/color/illo-contrast.svg):::마지막 열::: :::열 범위 ="2"::: **Contrast**
+:::row::: :::column::: ![대비 그림](images/color/illo-contrast.svg):::column-end::: :::column span="2"::: **대비**
 
         Make sure that elements and images have sufficient contrast to differentiate between them, regardless of the accent color or theme.
 
         When considering what colors to use in your application, accessiblity should be a primary concern. Use the guidance below to make sure your application is accessible to as many users as possible.
     :::column-end:::
-:::마지막 행:::
+:::row-end:::
 
-:::행::: :::열::: ![대비 그림](images/color/illo-lighting.svg):::마지막 열::: :::열 범위="2"::: **Lighting**
+:::row::: :::column::: ![대비 그림](images/color/illo-lighting.svg):::column-end::: :::column span="2"::: **조명**
 
         Be aware that variation in ambient lighting can affect the useability of your app. For example, a page with a black background might unreadable outside due to screen glare, while a page with a white background might be painful to look at in a dark room.
     :::column-end:::
-:::마지막 행:::
+:::row-end:::
 
-:::행::: :::열::: ![대비 그림](images/color/illo-colorblindness.svg):::마지막 열::: :::열 범위="2"::: **Colorblindness**
+:::row::: :::column::: ![대비 그림](images/color/illo-colorblindness.svg):::column-end::: :::column span="2"::: **색맹**
 
         Be aware of how colorblindness could affect the useability of your application. For example, a user with red-green colorblindness will have difficulty distinguishing red and green elements from each other. About **8 percent of men** and **0.5 percent of women** are red-green colorblind, so avoid using these color combinations as the sole differentiator between application elements.
     :::column-end:::
-:::마지막 행:::
+:::row-end:::
 
 ## <a name="related-articles"></a>관련 문서
 

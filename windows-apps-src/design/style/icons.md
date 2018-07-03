@@ -6,7 +6,7 @@ ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
 ms.author: mijacobs
-ms.date: 05/19/2017
+ms.date: 05/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,174 +14,146 @@ keywords: windows 10, uwp
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 61157ad23eb55447137531922ea23fa0120e2b98
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 077967c37f76c8f1d0942f365344de65db13b041
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653922"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983576"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
 
+![아이콘 헤더 이미지](images/icons/header-icons.png)
+
+아이콘은 작업, 개념 또는 제품에 대한 시각적 줄임을 제공합니다. 기호 이미지에 의미를 압축하여 아이콘은 언어 장벽을 넘어 매우 중요한 리소스인 화면 공간을 절약할 수 있도록 합니다. 
+
+아이콘은 앱의 내부와 외부에서 나타날 수 있습니다. 
+
+:::row::: :::column::: **앱 내 아이콘**
+
+        ![icons inside the app](images/icons/inside-icons.png)
+        Inside your app, you use icons to represent an action, such as copying text or navigating to the settings page.
+    :::column-end:::
+    :::column:::
+        **Icons outside the app**
+
+        ![icons outside the app](images/icons/outside-icons.jpg)
+         Outside your app, Windows uses an icon to represent your app in the start menu and in the taskbar. If the user chooses to pin your app to the start menu, your app's start tile can feature your app's icon. Your app's icon appears in the title bar and you can choose to create a splash screen with your app's logo.
+    :::column-end:::
+:::row-end:::
+
+이 문서에서는 앱 내 아이콘을 설명합니다. 앱 외부 아이콘(앱 아이콘)에 대한 자세한 내용은 [앱 및 타일 아이콘 문서](/windows/uwp/design/shell/tiles-and-notifications/app-assets)를 참조합니다.
+
+## <a name="when-to-use-icons"></a>아이콘을 사용하는 경우
+
+아이콘은 공간을 저장할 수 있지만 언제 사용해야 하나요? 
+
+:::row::: :::column::: ![권장](images/do.svg) ![아이콘 표준 이미지](images/icons/icons-standard.svg)<br>
+
+        Use an icon for actions, like cut, copy, paste, and save, or for navigation items in a navigation menu.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        ![icons concept image](images/icons/icons-concept.svg)<br>
+
+        Use an icon if one already exists for the concept you want to represent. (To see whether an icon exists, check the Segoe icon list.)
+    :::column-end:::
+:::row-end:::
+
+:::row::: :::column::: ![권장](images/do.svg) ![아이콘 쇼핑 카트](images/icons/icon-shopping-cart.svg)<br>
+
+        Use an icon if it's easy for the user to understand what the icon means and it's simple enough to be clear at small sizes.
+    :::column-end:::
+    :::column:::
+        ![dont](images/dont.svg)
+        ![icons concept image](images/icons/icon-bad-example.png)<br>
+
+        Don't use an icon if its meaning isn't clear, or if making it clear requires a complex shape.
+    :::column-end:::
+:::row-end:::
 
 
-좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다. 
 
-## <a name="linear-scaling-size-ramps"></a>선형 배율 크기 램프 
+## <a name="using-the-right-type-of-icon"></a>올바른 유형의 아이콘 사용
 
-<table>
-    <tr> 
-        <td>16px x 16px</td>
-        <td>24px x 24px</td>
-        <td>32px x 32px</td>
-        <td>48px x 48px</td>
-    </tr>
-    <tr> 
-        <td><img src="images/icons-16x16.png" alt="Icons at 16x16 effective pixels" /></td>
-        <td><img src="images/icons-24x24.png" alt="Icons at 24x24 effective pixels" /></td>
-        <td><img src="images/icons-32x32.png" alt="Icons at 32x32 effective pixels" /></td>
-        <td><img src="images/icons-48x48.png" alt="Icons at 48x48 effective pixels" /></td>
-    </tr>
-</table>
+여러 가지 방법으로 아이콘을 만들 수 있습니다. Segoe MDL2 자산 같은 기호 글꼴을 사용할 수 있습니다. 자신의 벡터 기반 이미지를 만들 수 있습니다. 비트맵 이미지를 사용할 수도 있지만 권장하지 않습니다. 앱에 아이콘을 추가할 수 있는 다양한 방법에 대한 요약은 다음과 같습니다. 
 
-## <a name="common-shapes"></a>일반적인 모양
+### <a name="use-a-predefined-icon"></a>미리 정의된 아이콘을 사용합니다.
+:::row::: :::column::: Microsoft는 Segoe MDL2 자산 글꼴의 형식으로 1000개 이상의 아이콘을 제공합니다. 글꼴에서 아이콘을 가져오는 것이 직관적이지는 않을 수 있지만 Microsoft의 글꼴 표시 기술은 이러한 아이콘이 모든 디스플레이, 모든 해상도 및 크기에서 선명하고 날카롭게 보이게 합니다. :::column-end::: :::column::: ![미리 정의된 아이콘 이미지](images/icons/predefined-icon.png) :::column-end::: :::row-end:::
 
-아이콘은 일반적으로 안쪽 여백이 거의 없이 주어진 공간을 최대화해야 합니다. 이러한 모양은 기본 모양의 크기 조정을 위한 시작점을 제공합니다. 
+### <a name="use-a-font"></a>글꼴을 사용합니다.
+:::row::: :::column::: Segoe MDL2 자산 글꼴을 사용하지 않아도 됩니다. Wingdings 또는 Webdings 등 시스템에 사용자가 설치한 모든 글꼴을 사용할 수 있습니다.
+:::column-end::: :::column::: ![wingdings 이미지](images/icons/wingdings.png) :::column-end::: :::row-end:::
 
-![32px x 32px 그리드](images/icons-common-shapes.png)
+### <a name="use-a-scalable-vector-graphics-svg-file"></a>SVG(확장 가능한 벡터 그래픽) 파일을 사용합니다.
+:::row::: :::column::: SVG 리소스는 모든 크기 또는 해상도에서 항상 선명하게 보이므로 아이콘에 적합합니다. 대부분의 그리기 응용 프로그램은 SVG로 내보낼 수 있습니다. :::column-end::: :::column::: ![SVG 이미지](images/icons/icon-scale.gif) :::column-end::: :::row-end:::
 
-아이콘의 방향에 해당하는 모양을 사용하고 이러한 기본 매개 변수를 중심으로 작성합니다. 아이콘이 모양 내부를 완전히 채우거나 맞지 않아도 되며, 최적 균형을 위해 필요에 따라 조정할 수 있습니다. 
+### <a name="use-geometry-objects"></a>기하 도형 개체를 사용합니다.
+:::row::: :::column::: SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 선명하게 보입니다. 그러나 각 지점과 곡선을 개별적으로 지정해야 하므로 기하 도형 만들기는 복잡합니다. 앱을 실행(예: 애니메이션)하는 동안 아이콘을 수정하는 경우에만 좋은 선택입니다. 지침은 [기하 도형용 명령 이동 및 그리기](../../xaml-platform/move-draw-commands-syntax.md)를 참조하세요. :::column-end::: :::column::: ![기하 도형 개체 이미지](images/icons/geometry-objects.png) :::column-end::: :::row-end:::
 
-<table class="uwpd-noborder">
-    <tr>
-        <td>원<td>
-        <td>정사각형</td>
-        <td>삼각형</td>
-    </tr>
-    <tr>
-        <td><img src="images/icons-common-shapes-examples-1.png" alt="A circle" /><td>
-        <td><img src="images/icons-common-shapes-examples-2.png" alt="A square" /></td>
-        <td><img src="images/icons-common-shapes-examples-3.png" alt="A triangle " /></td>
-    </tr>
-        <tr>
-        <td>가로 사각형<td>
-        <td colspan="2">세로 사각형</td>        
-        </tr>
-    <tr>
-        <td><img src="images/icons-common-shapes-examples-4.png" alt="A horizontal rectangle" /><td>
-        <td colspan="2"><img src="images/icons-common-shapes-examples-5.png" alt="A vertical rectangle" /></td>
-         
-    </tr>
+### <a name="you-can-also-use-a-bitmap-image-such-as-png-gif-or-jpeg-although-we-dont-recommend-it"></a>PNG, GIF, 또는 JPEG와 같은 비트맵 이미지를 사용할 수도 있지만 권장하지 않습니다.
+:::row::: :::column::: 비트맵 이미지는 원하는 아이콘의 크기와 화면의 해상도에 따라 확장할 수 있도록 특정 크기로 만들어집니다. 이미지가 크기가 축소되면 흐릿하게 나타날 수 있습니다. 크기가 확장되면 일그러지고 모자이크처럼 나타날 수 있습니다. 비트맵 이미지를 사용하는 경우 JPEG보다 PNG 또는 GIF를 이용하는 것이 좋습니다. :::column-end::: :::column::: ![금지](images/dont.svg) ![비트맵 이미지](images/icons/bitmap-image.png) :::column-end::: :::row-end:::
 
-</table>
+## <a name="make-the-icon-do-something"></a>아이콘으로 작업을 수행하도록 만들기
 
-## <a name="angles"></a>각도
+아이콘이 있으면, 다음 단계는 명령이나 탐색 작업을 연결하여 작업을 수행할 수 있도록 만드는 것입니다. 이 작업을 수행하는 가장 좋은 방법은 단추나 명령 모음에 아이콘을 추가하는 것입니다. 
 
-동일한 그리드 및 선 두께를 사용하는 것 외에도 아이콘은 공통 요소를 사용하여 생성됩니다. 
+![명령 모음 이미지](images/icons/app-bar-desktop.svg)
 
-모양을 작성할 때 이러한 각도만 사용하면 모든 아이콘에서 일관성이 만들어지고 아이콘이 제대로 렌더링됩니다. 
+## <a name="create-an-icon-button"></a>아이콘 단추 만들기
 
-아이콘을 만들 때 이러한 선을 결합, 연결, 회전 및 반사할 수 있습니다. 
+표준 단추에 아이콘을 넣을 수 있습니다. 보다 여러 장소에서 단추를 사용할 수 있으므로 알림 아이콘이 표시되는 것에 좀 더 많은 유연성을 제공합니다. 
 
-<table>
-    <tr>
-        <td><b>1:1</b><br/>45°</td>
-        <td><b>1:2</b><br />26.57°(세로)<br/>63.43°(가로)</td>
-        <td><b>1:3</b><br/>18.43°(세로)<br/>71.57°(가로)</td>
-        <td><b>1:4</b><br/>14.04°(세로)<br/>75.96°(가로)</td>
-    </tr>
-    <tr>
-        
-        <td><img src="images/icons-grid-1-1.png" alt="1:1" /></td>
-        <td><img src="images/icons-grid-1-2.png" alt="1:2" /></td>
-        <td><img src="images/icons-grid-1-3.png" alt="1:3" /></td>
-        <td><img src="images/icons-grid-1-4.png" alt="1:4" /></td>
-    </tr>  
-</table>
+단추에 아이콘을 추가하는 방법은 몇 가지가 있습니다.
 
-<p>예를 들면 다음과 같습니다.</p>
+:::row::: :::column span="2"::: <b>1단계</b><br>
+        단추의 글꼴 패밀리를 `Segoe MDL2 Assets`으로 설정하고 이 콘텐츠 속성을 사용할 문자 모양의 유니코드 값으로 설정합니다. :::column-end::: :::column::: ![아이콘 단추 만들기 1단계](images/icons/create-icon-step-1.svg) :::column-end::: :::row-end:::
 
-<table>
-    <tr>
-        <td><img src="images/icons-angles-examples-1.png" alt="A 1:1 angle example" /></td>
-        <td><img src="images/icons-angles-examples-2.png" alt="A 1:2 angle example" /></td>
-        <td><img src="images/icons-angles-examples-3.png" alt="A 1:3 angle example" /></td>
-        <td><img src="images/icons-angles-examples-4.png" alt="A 1:4 angle example" /></td>
-    </tr>
-</table>
+```xaml 
+<Button FontFamily="Segoe MDL2 Assets" Content="&#xE102;" />
+```
 
-## <a name="curves"></a>곡선
+:::row::: :::column span="2"::: <b>2단계</b><br>
+        [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon), 또는 [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon) 등 아이콘 요소 개체 중 하나를 사용할 수 있습니다. 이를 통해 더 많은 유형의 아이콘을 선택할 수 있으며 원하는 경우 텍스트 등의 다른 유형의 콘텐츠와 아이콘을 결합할 수 있습니다. :::column-end::: :::column::: ![아이콘 단추 만들기 2단계](images/icons/icon-text-step-2.svg) :::column-end::: :::row-end:::
 
-곡선은 전체 원의 섹션에서 생성되며, 픽셀 그리드에 맞춰야 하는 경우가 아니면 기울이면 안 됩니다. 
+```xaml 
+<Button>
+    <StackPanel>
+        <SymbolIcon Symbol="Play" />
+        <TextBlock>Play the movie</TextBlock>
+    </StackPanel>
+</Button>
+```
 
-<table>
-    <tr>
-        <td>1/4 원</td>
-        <td>1/8 원</td>
-    </tr>
-    <tr>
-        <td><img src="images/icons-curves-14circle.png" alt="1/4 circle" /></td>
-        <td><img src="images/icons-curves-18circle.png" alt="1/8 circle" /></td>
-    </tr>
-    <tr>
-        <td><img src="images/icons-curves-examples-1.png" alt="1/4 cirlce example" /></td>
-        <td><img src="images/icons-curves-examples-2.png" alt="1/8 circle example" /></td>
-    </tr>    
-</table>
+## <a name="create-a-series-of-icons-in-a-command-bar"></a>명령 모음에서 일련의 아이콘 만들기
 
-## <a name="geometric-construction"></a>기하 도형 생성
+:::row::: :::column span::: 잘라내기/복사/붙여넣기 또는 사진 편집 프로그램에 대한 그리기 명령 집합과 같이 함께 사용하는 여러 명령이 있을 때 [명령 모음](../controls-and-patterns/app-bars.md)에 함께 배치합니다. 명령 모음에는 각각 작업을 나타내는 하나 이상의 앱 바 단추 또는 앱 바 토글 단추가 있습니다. 각 단추에는 표시하는 아이콘을 제어하는 데 사용하는 [아이콘](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) 속성이 있습니다. 아이콘의 색을 지정하는 다양한 방법이 있습니다. :::column-end::: :::column::: ![아이콘의 명령 모음 예](images/icons/create-icon-command-bar.svg) :::column-end::: :::row-end:::
 
-아이콘을 생성할 때는 순수 기하 도형만 사용하는 것이 좋습니다.
+가장 쉬운 방법은 미리 정의되어 제공된 아이콘 목록을 사용하는 것입니다. 아이콘 이름을 "뒤로" 또는 "중지"와 같이 지정하기만 하면 시스템이 이 아이콘을 그릴 것입니다. 
 
-![기하 도형 오버레이를 사용한 기타 아이콘 ](images/icons-geometric-construction.png)
+``` xaml
+<CommandBar>
+    <AppBarToggleButton Icon="Shuffle" Label="Shuffle" Click="AppBarButton_Click" />
+    <AppBarToggleButton Icon="RepeatAll" Label="Repeat" Click="AppBarButton_Click"/>
+    <AppBarSeparator/>
+    <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click"/>
+    <AppBarButton Icon="Stop" Label="Stop" Click="AppBarButton_Click"/>
+    <AppBarButton Icon="Play" Label="Play" Click="AppBarButton_Click"/>
+    <AppBarButton Icon="Forward" Label="Forward" Click="AppBarButton_Click"/>
+</CommandBar>
 
-## <a name="filled-shapes"></a>채워진 도형 
+```
+아이콘 이름의 전체 목록은 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)를 참조하세요. 
 
-필요한 경우 아이콘에 채워진 도형이 포함될 수 있지만 32px × 32px에서 4px를 넘지 않아야 합니다. 채워진 원은 6px × 6px보다 크지 않아야 합니다. 
+명령 모음에 있는 단추에 아이콘을 제공하는 다른 방법은 다음과 같습니다.
 
-![5px x 8px 채우기 ](images/icons-filled-shapes.png)
++ [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon) - 아이콘이 지정된 글꼴 패밀리의 문자 모양을 기반으로 합니다.
++ [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon) - 아이콘은 지정된 **Uri**로 비트맵 이미지 파일을 기반으로 합니다.
++ [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon) - 아이콘은 [경로](/uwp/api/windows.ui.xaml.shapes.path) 데이터를 기반으로 합니다.
 
-## <a name="badges"></a>배지
+명령 모음에 대한 자세한 내용은 [명령 모음 문서](../controls-and-patterns/app-bars.md)를 참조하세요. 
 
-"배지"는 기본 아이콘 요소와 통합되지 않는, 아이콘에 추가된 요소를 설명하는 데 사용되는 일반 용어입니다. 일반적으로 상태, 작업 등 아이콘에 대한 기타 정보를 전달합니다. 다른 일반 용어에는 오버레이, 주석, 한정자 등이 있습니다. 
 
-![상태 배지 ](images/icons-badge-status.png)
-
-![작업 배지 ](images/icons-badge-action.png)
-
-상태 배지는 아이콘 위에 있는 채워진 컬러 개체를 사용하고, 작업 배지는 동일한 단색 스타일과 선 두께로 아이콘에 통합됩니다.
-
-<table>
-<tr>
-    <td>일반적인 상태 배지</td>
-    <td>일반적인 작업 배지</td>
-</tr>
-<tr>
-    <td><img src="images/icons-badge-common-states-1.png" alt="Status badge " /></td>
-    <td><img src="images/icons-badge-common-states-2.png" alt="Action badge " /></td>
-</tr>
-</table>
-<p></p>
-
-### <a name="badge-color"></a>배지 색 
-
-컬러 배지는 아이콘 상태를 전달하는 용도로만 사용해야 합니다. 상태 배지에 사용된 색은 사용자에게 감정적인 특정 메시지를 전달합니다. 
-
-<table>
-<tr><td>녹색 - #128B44</td><td>파랑 - #2C71B9</td><td>노랑 - #FDC214</td></tr>
-<tr><td>양: 완료, 완료됨 </td><td>중립: 도움말, 알림 </td><td>주의: 알림, 경고 </td></tr>
-<tr><td><img src="images/icons-color-inbadging-1.png" alt="Green status" /></td><td><img src="images/icons-color-inbadging-2.png" alt="Blue status" /></td>
-<td><img src="images/icons-color-inbadging-3.png" alt="Yellow status" /></td></tr>
-</table>
-<p></p>
-
-### <a name="badge-position"></a>배지 위치
-
-모든 상태 또는 작업의 기본 위치는 오른쪽 아래입니다. 디자인에서 허용되지 않는 경우에만 다른 위치를 사용합니다. 
-
-### <a name="badge-sizing"></a>배지 크기 조정
-
-배지 크기는 32px × 32px 그리드에서 10-18 px로 조정해야 합니다. 
 
 ## <a name="related-articles"></a>관련 문서
 

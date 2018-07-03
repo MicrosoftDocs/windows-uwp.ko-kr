@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 564f59dfd7b27e3ece1aa6811ac667cd438aae68
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.openlocfilehash: c043b20cb00873bf115ff2d65306bc727d23a02a
+ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488982"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1877225"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>DirectX로 작성된 간단한 UWP(유니버설 Windows 플랫폼) 게임 만들기
 
@@ -55,10 +55,9 @@ UWP DirectX 게임의 기본 개념 및 구성 요소를 사용하고 DirectX로
 
 ![실행 중인 게임 샘플](images/simple-dx-game-overview.png)
 
-
 | 항목 | 설명 |
-|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [게임 프로젝트 설정](tutorial--setting-up-the-games-infrastructure.md) | 게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다. 적합한 템플릿을 사용하고 게임 개발에 맞게 특별히 프로젝트를 구성하면 시간을 절약하고 혼동을 줄일 수 있습니다. 여기서는 간단한 게임 프로젝트의 설정 및 구성 과정을 안내합니다. |
+|-------|-------------|
+|[게임 프로젝트 설정](tutorial--setting-up-the-games-infrastructure.md) | 게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다. 적합한 템플릿을 사용하고 게임 개발에 맞게 특별히 프로젝트를 구성하면 시간을 절약하고 혼동을 줄일 수 있습니다. 여기서는 간단한 게임 프로젝트의 설정 및 구성 과정을 안내합니다. |
 | [게임의 UWP 앱 프레임워크 정의](tutorial--building-the-games-uwp-app-framework.md) | UWP DirectX 게임 개체가 Windows와 상호 작용하는 수 있도록 해주는 프레임워크를 빌드합니다. 일시 중단/재개 이벤트 처리, 창 포커스, 끌기 같은 Windows 런타임 속성이 포함됩니다.  |
 | [게임 흐름 관리](tutorial-game-flow-management.md) | 플레이어와 시스템 상호 작용이 가능하도록 고급 상태 시스템을 정의합니다. UI가 전체 게임의 상태 시스템과 상호 작용하는 방법과 UWP 게임에 대한 처리기 이벤트를 생성하는 방법을 자세히 알아보세요. |
 | [주 게임 개체 정의](tutorial--defining-the-main-game-loop.md) | 규칙을 만들어 게임을 실행하는 방법을 정의합니다. |
@@ -68,12 +67,3 @@ UWP DirectX 게임의 기본 개념 및 구성 요소를 사용하고 DirectX로
 | [컨트롤 추가](tutorial--adding-controls.md) | 게임&mdash; 기본 터치, 마우스 및 게임 컨트롤러 컨트롤에 이동 보기 컨트롤을 추가합니다. |
 | [소리 추가](tutorial--adding-sound.md) | [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) API를 사용하여 게임에 대한 소리를 만드는 방법을 자세히 알아보세요. |
 | [게임 샘플 확장](tutorial-resources.md) | XAML을 사용한 오버레이 생성을 포함해 DirectX 게임 개발에 대한 정보를 넓힐 수 있는 리소스입니다. |
- 
-
- 
-
- 
-
-
-
-

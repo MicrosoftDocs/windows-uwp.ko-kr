@@ -4,23 +4,20 @@ Description: With the package resource indexing (PRI) APIs, you can develop a cu
 title: 패키지 리소스 인덱싱(PRI) API 및 사용자 지정 빌드 시스템
 template: detail.hbs
 ms.author: stwhi
-ms.date: 02/20/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 8947f9305829e5045a418ac2fdd2d6c327acb2a1
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 58473101f0972040fe80c7f7f582ad33eafeb009
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707354"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862502"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>패키지 리소스 인덱싱(PRI) API 및 사용자 지정 빌드 시스템
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
-
 [패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 UWP 앱 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 상관없이 PRI(패키지 리소스 인덱스) 파일을 만들고 버전화하고 덤프할 수 있습니다(XML로). 현재 MakePri.exe 명령줄 도구를 사용하는 사용자 지정 빌드 시스템이 있는 경우([MakePri.exe를 사용하여 수동으로 리소스 컴파일](makepri-exe-command-options.md)), 성능을 높이고 제어권을 강화하기 위해 MakePri.exe를 호출하는 대신 PRI API를 호출하는 것이 좋습니다.
 
 PRI API는 Windows 10 버전 1803용 Windows SDK에서 도입되었습니다. API는 Win32 Windows API의 형식을 취합니다. 이는 호출 방법이 여러 가지가 있음을 의미합니다. Win32 앱에서 바로 호출할 수도 있고, .NET 앱이나 UWP 앱으로부터도 [플랫폼 호출](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live)을 통해 호출할 수도 있습니다.

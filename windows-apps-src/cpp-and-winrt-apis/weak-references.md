@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 약한, 참조
 ms.localizationpriority: medium
-ms.openlocfilehash: 63ffad19c0ae8a52737ae13a54e5657df875d0b5
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 69294115af93ec464abfe908df948c8ff5504efc
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832607"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842457"
 ---
 # <a name="weak-references-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 약한 참조
 순환 참조와 약한 참조의 필요성을 배제하는 방식으로 사용자 고유의 C++/WinRT API를 설계할 수 있어야 합니다. 하지만 기본적인 XAML 기반 UI frameworkL의 구현과 관련하여 프레임워크의 이전 설계로 인해 C++/WinRT의 약한 참조 메커니즘은 순환 참조를 처리해야 합니다. 이론적으로는 약한 참조에 대한 XAML 고유의 조건이 없기는 하지만 XAML 외부에서는 약한 참조를 사용해야 할 가능성이 낮습니다.

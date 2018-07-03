@@ -1,21 +1,21 @@
 ---
-author: GrantMeStrength
+author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: 설정 방법
 description: 생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
-ms.author: jken
-ms.date: 03/06/2017
+ms.author: quradic
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: high
-ms.openlocfilehash: ac918fac5d2733a39f3f5d9a469105c61328a676
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 86603443aefe08ddf684e4dc8a2df8541074e0b4
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817674"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935663"
 ---
 # <a name="get-set-up"></a>설정 방법
 
@@ -56,20 +56,22 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 ## <a name="whats-next"></a>다음 작업
 
-도구를 설치하고 개발에서 디바이스를 사용하도록 설정한 후에는 자습서를 사용하여 첫 번째 앱을 생성합니다.
+도구를 설치하고 개발을 위해 장치를 활성화했으면 Windows 10 앱 만들기를 시작하는 방법에 대한 지침을 확인합니다.
 
--   [첫 번째 앱 만들기](your-first-app.md) 자습서
+-   [코딩 시작](create-uwp-apps.md)
+
+## <a name="windows-development-setup-scripts"></a>Windows 개발 설정 스크립트
+
+디바이스를 사용자 지정하고 다른 기능이나 패키지를 설치하려는 경우 시스템 설정 스크립트에 대해 이 프로젝트를 확인합니다.
+
+- [개발자 설정 스크립트](https://github.com/Microsoft/windows-dev-box-setup-scripts)
 
 ## <a name="want-more-tools-and-downloads"></a>더 많은 도구와 다운로드가 필요한 경우
 
 도구 및 다운로드의 전체 목록을 보려면 [다운로드](http://go.microsoft.com/fwlink/p/?linkid=285935)를 참조하세요.
 
-
 ## <a name="see-also"></a>참고 항목
 
-* [UWP 앱 만들기](create-uwp-apps.md)
-* [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)
-* [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
 * [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
 * [Windows 계정 등록](sign-up.md)

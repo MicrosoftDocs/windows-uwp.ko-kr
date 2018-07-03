@@ -3,30 +3,32 @@ author: stevewhims
 description: 이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다.
 title: C++/WinRT와 ABI 사이의 상호 운용성
 ms.author: stwhi
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 84f9f557134e69c396ed63ace3474325856c6cd0
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: af9c14043fdfcc10828f87e8c954430f8f587412
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832047"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912901"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-the-abi"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 ABI 사이의 상호 운용성
-이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
+이번 항목에서는 SDK 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
 
-## <a name="what-are-windows-runtime-abi-types"></a>Windows 런타임 ABI 형식이란?
+## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>Windows 런타임 ABI란 무엇이며, ABI 형식이란 무엇인가요?
+Windows 런타임 클래스(런타임 클래스)는 추상화입니다. 이 추상화는 여러 프로그래밍 언어가 개체와 상호 작용할 수 있게 하는 이진 인터페이스(응용 프로그램 바이너리 인터페이스, ABI)를 정의합니다. 프로그래밍 언어에 관계없이 Windows 런타임 개체와의 클라이언트 코드 상호 작용은 개체의 ABI에 대한 호출로 번역되는 클라이언트 언어 구문으로 최저 수준에서 수행됩니다.
+
 "%WindowsSdkDir%Include\10.0.17134.0\winrt" 폴더(필요한 경우 SDK 버전을 사용자 요건에 맞게 조정)에 있는 Windows SDK 헤더가 Windows 런타임 ABI 헤더 파일입니다. 이 파일들은 MIDL 컴파일러에서 생성되었습니다. 다음은 이러한 헤더 중 하나를 추가하는 예제입니다.
 
 ```
 #include <windows.foundation.h>
 ```
 
-다음은 특정 헤더에서 찾을 수 있는 ABI 형식 중 하나를 간단히 표현한 예제입니다.
+다음은 특정 SDK 헤더에서 찾을 수 있는 ABI 형식 중 하나를 간단히 표현한 예제입니다. **ABI** 네임스페이스, **Windows::Foundation**, 그리고 모든 다른 Windows 네임스페이스는 **ABI** 네임스페이스 내 SDK 헤더에 의해 선언됩니다.
 
 ```
 namespace ABI::Windows::Foundation
@@ -65,8 +67,10 @@ namespace winrt::Windows::Foundation
 
 여기에서 사용하는 인터페이스는 최신 표준 C++입니다. 이 인터페이스는 **HRESULT**를 사용하지 않습니다(필요한 경우 C++/WinRT에서 예외 발생). 접근자 함수는 범위 끝에서 정리되는 단순 문자열 개체를 반환합니다.
 
+이 항목은 응용 프로그램 이진 인터페이스(ABI) 계층에서 사용할 수 있는 코드와 상호 작용하건 코드를 포트하려는 경우를 다룹니다.
+
 ## <a name="converting-to-and-from-abi-types-in-code"></a>코드의 ABI 형식 변환
-안전성과 단순성, 그리고 양방향 변환 시 편의성을 고려하여 간단하게 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) 및 [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 사용할 수 있습니다. 다음은 **콘솔 앱** 프로젝트 템플릿을 기준으로 한 코드 예제로서 프로젝션과 ABI의 네임스페이스 충돌을 어떻게 처리하는지 보여주고 잇습니다.
+안전성과 단순성, 그리고 양방향 변환 시 편의성을 고려하여 간단하게 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr), [**com_ptr::as**](/uwp/cpp-ref-for-winrt/com-ptr#comptras-function) 및 [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 사용할 수 있습니다. 다음은 C++/WinRT 프로젝션 및 ABI 간의 잠재적인 네임스페이스 충돌을 다루기 위해 다른 격리 영역에 대한 네임스페이스 별칭을 사용하는 방법을 보여 주는 코드 예제입니다(**Console App** 프로젝트 템플릿 기반).
 
 ```cppwinrt
 // main.cpp
@@ -88,7 +92,7 @@ namespace abi
 int main()
 {
     winrt::init_apartment();
-    
+
     winrt::Uri uri(L"http://aka.ms/cppwinrt");
 
     // Convert to an ABI type.
@@ -124,11 +128,11 @@ int main()
 
 ```cppwinrt
     ...
-    
+
     // Copy to an owning raw ABI pointer with copy_to_abi.
     abi::IStringable* owning = nullptr;
     winrt::copy_to_abi(uri, *reinterpret_cast<void**>(&owning));
-    
+
     // Copy from a raw ABI pointer.
     uri = nullptr;
     winrt::copy_from_abi(uri, owning);
@@ -139,13 +143,13 @@ int main()
 
 ```cppwinrt
     ...
-    
+
     // Lowest-level conversions that only copy addresses
-    
+
     // Convert to a non-owning ABI object with get_abi.
     abi::IStringable* non_owning = static_cast<abi::IStringable*>(winrt::get_abi(uri));
     WINRT_ASSERT(non_owning);
-    
+
     // Avoid interlocks this way.
     owning = static_cast<abi::IStringable*>(winrt::detach_abi(uri));
     WINRT_ASSERT(!uri);

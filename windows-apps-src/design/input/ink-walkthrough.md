@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cac6caf7f8feab86103e27d7947209bb3fd5c0a8
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 68624288ea223d0882ef0b8c33b174f000081411
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707098"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983389"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>자습서: UWP 앱에서 잉크 지원
 
@@ -41,10 +41,10 @@ Windows Ink를 사용하면 상상할 수 있는 거의 모든 펜과 종이 환
 
 * Windows 10 최신 버전을 실행하는 Windows 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2017 및 RS2 SDK](https://developer.microsoft.com/windows/downloads)
-* [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
+* [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Visual Studio를 사용하는 UWP(유니버설 Windows 플랫폼) 앱 개발을 처음 하는 경우, 이 자습서를 시작하기 전에 이러한 항목을 살펴보십시오.  
-    * [설정하기](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)
-    * ["Hello, World" 앱 만들기(XAML)](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [설정하기](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
+    * ["Hello, World" 앱 만들기(XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * **[선택 사항] ** 디지털 펜의 입력을 지원하는 디스플레이가 있는 컴퓨터와 디지털 펜.
 
 > [!NOTE] 
@@ -70,7 +70,7 @@ Windows Ink를 사용하면 상상할 수 있는 거의 모든 펜과 종이 환
 | 구성 요소 | 설명 |
 | --- | --- |
 | [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | 기본적으로 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 받아 표시하는 XAML UI 플랫폼 컨트롤입니다. |
-| [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다. |
+| [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다. |
 | [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | XAML UI 플랫폼 컨트롤에는 연결된 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 잉크 관련 기능을 활성화하는, 사용자 지정 및 확장 가능한 단추 모음이 포함됩니다. |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263)<br/>여기서는 이 기능을 다루지 않습니다. 자세한 내용은 [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)을 참조하세요. | 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 장치 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. |
 
@@ -134,12 +134,12 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 
 실망을 해소하려면, 코드의 두 번째 줄을 추가해야 합니다. 이번에는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 선언한 XAML 파일에 대한 코드 숨김입니다. 
 
-이 단계에서는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 잉크 입력(표준 및 수정)의 입력, 처리, 렌더링을 더 정밀하게 관리하는 [**InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter) 개체를 사용합니다.
+이 단계에서는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 잉크 입력(표준 및 수정)의 입력, 처리, 렌더링을 더 정밀하게 관리하는 [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) 개체를 사용합니다.
 
 > [!NOTE]
 > 표준 잉크 입력(펜 팁 또는 지우개 팁/단추)은 펜 단추, 마우스 오른쪽 단추 또는 유사한 메커니즘과 같은 보조 하드웨어 어포던스를 사용하여 수정되지 않습니다. 
 
-마우스와 터치 수동 입력을 사용하려면, [**InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter)의 [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) 속성을 원하는 [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) 값의 조합으로 설정합니다.
+마우스와 터치 수동 입력을 사용하려면, [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter)의 [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) 속성을 원하는 [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) 값의 조합으로 설정합니다.
 
 ### <a name="in-the-sample"></a>이 샘플에서:
 1. MainPage.xaml.cs 파일을 엽니다.
@@ -196,11 +196,11 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 </td>
 <td>
 
-다음은 사용자 지정 <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar">InkToolbar</a></strong>의 예(Windows Ink 작업 영역의 스케치북)입니다.
+다음은 사용자 지정 **[InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)** 의 예(Windows Ink 작업 영역의 스케치북)입니다.
 
 ![작업 영역 스케치북의 InkToolbar](images/ink/ink-inktoolbar-sketchpad-small.png)
 
-[InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)를 사용자 지정하는 방법은 [UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가](https://docs.microsoft.com/en-us/windows/uwp/input/ink-toolbar)를 참조하세요.
+[InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)를 사용자 지정하는 방법은 [UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가](ink-toolbar.md)를 참조하세요.
 
 </td>
 </tr>
@@ -294,11 +294,11 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 </td>
 <td>
 
-<p>Windows Ink는 Windows에서 지원하는 많은 언어에 대한 문자 인식을 지원합니다. 각 언어 팩에는 언어 팩과 함께 설치되는 필기 인식 엔진이 포함되어 있습니다.</p>
+Windows Ink는 Windows에서 지원하는 많은 언어에 대한 문자 인식을 지원합니다. 각 언어 팩에는 언어 팩과 함께 설치되는 필기 인식 엔진이 포함되어 있습니다.
 
-<p>설치된 필기 인식 엔진을 쿼리하여 특정 언어를 대상으로 선택합니다.</p>
+설치된 필기 인식 엔진을 쿼리하여 특정 언어를 대상으로 선택합니다.
 
-<p>국가별 필기 인식에 대한 자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/input/convert-ink-to-text">Windows Ink 스트로크를 문자로 인식</a>을 참조하세요.</p>
+국가별 필기 인식에 대한 자세한 내용은 [Windows Ink 스트로크를 문자로 인식](convert-ink-to-text.md)을 참조하세요.
 
 </td>
 </tr>
@@ -314,9 +314,9 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 </td>
 <td>
 
-<p>이 자습서의 초기 인식을 위해 단추를 눌러야 합니다. 또한 기본 타이밍 기능을 사용하여 동적 인식을 수행하고 있습니다.</p>
+이 자습서의 초기 인식을 위해 단추를 눌러야 합니다. 또한 기본 타이밍 기능을 사용하여 동적 인식을 수행하고 있습니다.
 
-<p>동적 인식에 대한 자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/input/convert-ink-to-text">Windows Ink 스트로크를 문자로 인식</a>을 참조하세요.</p>
+동적 인식에 대한 자세한 내용은 [Windows Ink 스트로크를 문자로 인식](convert-ink-to-text.md)을 참조하세요.
 
 </td>
 </tr>
@@ -327,6 +327,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
 이제 필기 노트를 조금 더 명확한 내용으로 변환할 수 있습니다. 하지만 아침 플로우차트 익명 회의에서 커피를 마시며 끄적인 낙서라면 어떨까요?
 
 잉크 분석을 사용하면, 앱이 다음을 포함한 핵심 모양을 인식할 수 있습니다.
+
 - 원
 - 다이아몬드
 - 그림
@@ -452,9 +453,9 @@ ISF 파일은 잉크 스트로크 속성과 동작에 대한 추가 메타데이
 
 <td>
 
-<p>Windows Ink는 잉크 스트로크를 클립보드에 복사하고 붙여넣는 것도 지원합니다.</p>
+Windows Ink는 잉크 스트로크를 클립보드에 복사하고 붙여넣는 것도 지원합니다.
 
-<p>잉크와 함께 클립보드를 사용하는 것에 대한 자세한 내용은 <a href="https://docs.microsoft.com/en-us/windows/uwp/input/save-and-load-ink">Windows Ink 스트로크 데이터 저장 및 가져오기</a>를 참조하세요.</p>
+잉크와 함께 클립보드를 사용하는 것에 대한 자세한 내용은 [Windows Ink 스트로크 데이터 저장 및 가져오기](save-and-load-ink.md)를 참조하세요.
 
 </td>
 </tr>
@@ -466,9 +467,16 @@ ISF 파일은 잉크 스트로크 속성과 동작에 대한 추가 메타데이
 
 ## <a name="related-articles"></a>관련 문서
 
-* [UWP 앱의 펜 조작 및 Windows Ink](https://docs.microsoft.com/windows/uwp/input/pen-and-stylus-interactions)
+* [UWP 앱의 펜 조작 및 Windows Ink](pen-and-stylus-interactions.md)
 
-**샘플**
+### <a name="samples"></a>샘플
+
+* [잉크 분석 샘플(기본)(C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+* [잉크 필기 인식 샘플(C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+* [ISF(Ink Serialized Format) 파일에서 잉크 스트로크 저장 및 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
+* [클립보드에서 잉크 스트로크 저장 및 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
+* [잉크 도구 모음 위치 및 방향 샘플(기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
+* [잉크 도구 모음 위치 및 방향 샘플(동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
 * [간단한 잉크 샘플(C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [복잡한 잉크 샘플(C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
 * [잉크 샘플(JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)

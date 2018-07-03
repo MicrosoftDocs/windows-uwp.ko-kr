@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cce355ab6f571f932d9dc10a1b185821118266c
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: a6442857f8d7914ab423c0981ae97598084f0068
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690319"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862845"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 
@@ -50,7 +50,7 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
     ![활성화 8단계](images/activation-step-8-rs2.png)    
     
-8.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 활성화 프로그램 계약 조건은 [Xbox One 개발자 모드 활성화 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=760399)에서 확인할 수 있습니다.
+8.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 정품 인증 프로그램 계약 조건은 [Xbox One 개발자 모드 정품 인증 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=760399)에서 확인할 수 있습니다.
 
 9.  활성화 코드를 입력한 후 활성화 절차에 대한 진행 화면이 콘솔에 표시됩니다.  
     
@@ -61,9 +61,9 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 ## <a name="switch-between-retail-and-developer-mode"></a>정품 및 개발자 모드 간 전환
 콘솔에서 개발자 모드를 사용하도록 설정한 후 **개발자 홈**을 사용하여 정품 모드와 개발자 모드 간을 전환할 수 있습니다. 개발자 홈 시작 및 사용에 대한 자세한 내용은 [Xbox One 도구 소개](introduction-to-xbox-tools.md)를 참조하세요.
 
-* 정품 모드로 전환하려면 **개발자 홈**을 열고 **설정** 탭으로 이동합니다. **설정 콘솔** 아래에서 **개발자 모드 나가기**를 선택합니다. 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다.    
+* 정품 모드로 전환하려면 **개발자 홈**을 엽니다. **바로 가기** 아래에서 **개발자 모드 나가기**를 선택합니다. 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다.    
 
-  ![활성화 13단계](images/activation-step-13-rs2.png)  
+  ![활성화 13단계](images/activation-step-13-rs4.png)  
   
 * 개발자 모드로 전환하려면 개발자 모드 활성화 앱을 사용합니다. 앱을 열고 **전환 및 다시 시작**을 선택합니다. 이렇게 하면 개발자 모드로 콘솔이 다시 시작됩니다.  
 

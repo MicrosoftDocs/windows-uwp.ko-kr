@@ -3,18 +3,18 @@ author: stevewhims
 description: XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* 컬렉션으로 알려져 있습니다. 이번 항목에서는 관찰 가능한 컬렉션을 구현하여 사용하는 방법과 XAML 항목에 바인딩하는 방법에 대해서 설명합니다.
 title: XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩
 ms.author: stwhi
-ms.date: 03/07/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 2384dd385208574276dc0b6d03a56f838aad7b84
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 3d9f74e6d0c755e0a247a65751bdab65964ac1f7
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832307"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935729"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML 항목 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 컬렉션 바인딩
 > [!NOTE]
@@ -33,10 +33,13 @@ XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* �
 XAML 항목 컨트롤은 업데이트된 컬렉션을 가져와 현재 요소를 표시하도록 스스로 업데이트함으로써 이러한 이벤트에 바인딩하여 처리할 수 있습니다.
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 현재 가용성에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
+> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
 
 ## <a name="implement-singlethreadedobservablevectorlttgt"></a>**single_threaded_observable_vector&lt;T&gt;** 구현
-관찰 가능한 벡터 템플릿을 [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_)의 유용한 범용 구현체로 사용하는 것은 바람직합니다. 다음은 이름이 **single_threaded_observable_vector&lt;T&gt;** 인 클래스를 나열한 것입니다. 앞으로 이 클래스가 C++/WinRT 형식이 된다면 공식 버전을 사용하여 쉽게 전환할 수 있습니다.
+관찰 가능한 벡터 템플릿을 [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_)의 유용한 범용 구현체로 사용하는 것은 바람직합니다. 아래는 이름이 **single_threaded_observable_vector\<T\>** 인 클래스를 나열한 것입니다.
+
+> [!NOTE]
+> [Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK) 이상을 설치한 경우 아래의 코드 목록 대신 **winrt::single_threaded_observable_vector\<T\>** 를 직접 사용할 수 있습니다. 아직 해당 버전의 SDK를 사용하지 않는 경우 해당 버전을 사용할 때 코드 목록을 버전을 사용하는 것에서 **winrt** 형식으로 쉽게 전환할 수 있습니다.
 
 ```cppwinrt
 // single_threaded_observable_vector.h

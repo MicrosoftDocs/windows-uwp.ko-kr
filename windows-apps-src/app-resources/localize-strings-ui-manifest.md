@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: b96ec6b28de142cd5d81230aa729d840b89b7f5c
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
+ms.openlocfilehash: d1c95c530cb8e62b5ac228798d69bfb6d0871218
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700809"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989637"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -80,6 +80,11 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Farewell");
 ```
 
+```cppwinrt
+auto resourceLoader{ Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView() };
+myXAMLTextBlockElement().Text(resourceLoader.GetString(L"Farewell"));
+```
+
 ```cpp
 auto resourceLoader = Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView();
 this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
@@ -136,24 +141,29 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 <TextBlock x:Uid="/ErrorMessages/PasswordTooWeak"/>
 ```
 
+`Resources.resw`가 *아닌* 리소스 파일에 대한 문자열 리소스 식별자 전에 `/<resources-file-name>/`을 추가하기만 하면 됩니다. 이는 "Resources.resw"가 기본 파일 이름이므로 파일 이름을 생략한 경우 이것이 파일 이름으로 간주됩니다(이 항목의 이전 예제에서 설명).
+
 아래의 코드 예제는 `ErrorMessages.resw`가 이름이 "MismatchedPasswords"고 값이 오류를 설명하는 리소스를 포함한다고 가정합니다.
 
 > [!NOTE]
 > 백그라운드/작업자 스레드에서 *실행되었을 수 있는* **GetForCurrentView** 메서드를 호출하는 경우 해당 호출을 `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` 테스트로 보호하세요. 백그라운드/작업자 스레드에서 **GetForCurrentView**를 호출하면 예외 "CoreWindow가 없는 스레드에서는 *&lt;typename&gt;을(를) 만들 수 없습니다.*"가 발생합니다.
 
 ```csharp
-var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ManifestResources");
-this.myXAMLTextBlockElement.Text = resourceLoader.GetString("/ErrorMessages/MismatchedPasswords");
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ErrorMessages");
+this.myXAMLTextBlockElement.Text = resourceLoader.GetString("MismatchedPasswords");
+```
+
+```cppwinrt
+auto resourceLoader{ Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView(L"ErrorMessages") };
+myXAMLTextBlockElement().Text(resourceLoader.GetString(L"MismatchedPasswords"));
 ```
 
 ```cpp
-auto resourceLoader = Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView("ManifestResources");
-this->myXAMLTextBlockElement->Text = resourceLoader->GetString("/ErrorMessages/MismatchedPasswords");
+auto resourceLoader = Windows::ApplicationModel::Resources::ResourceLoader::GetForCurrentView("ErrorMessages");
+this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswords");
 ```
 
 "AppDisplayName" 리소스를 `Resources.resw`에서 `ManifestResources.resw`로 이동하고자 하는 경우 앱 패키지 매니페스트에서 `ms-resource:AppDisplayName`을 `ms-resource:/ManifestResources/AppDisplayName`으로 변경합니다.
-
-`Resources.resw`가 *아닌* 리소스 파일에 대한 문자열 리소스 식별자 전에 `/<resources-file-name>/`을 추가하기만 하면 됩니다. 이는 "Resources.resw"가 기본 파일 이름이므로 파일 이름을 생략한 경우 이것이 파일 이름으로 간주됩니다(이 항목의 이전 예제에서 설명).
 
 ## <a name="load-a-string-for-a-specific-language-or-other-context"></a>특정 언어 또는 다른 컨텍스트에 대한 문자열 로드
 기본 [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)([**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView)에서 가져옴)에는 기본 런타임 컨텍스트(즉, 현재 사용자와 시스템에 대한 설정)를 나타내는 각 한정자 이름에 대한 한정자 값이 포함됩니다. 리소스 파일(.resw)은 이름의 한정자에 따라 해당 런타임 컨텍스트의 한정자 값에 대해 일치합니다.

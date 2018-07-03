@@ -11,14 +11,14 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: f867861537ddfb7fe346011cd637156854e2f7d8
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 141d87bf48b5b4835055375320f1e4a79498a42f
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817188"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989677"
 ---
-# <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>Desktop App Converter를 사용해 앱을 패키지로 만들기(데스크톱 브리지)
+# <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>데스크톱 앱 변화기를 사용해 앱을 패키지로 만들기(데스크톱 브리지)
 
 [Desktop App Converter 다운로드](https://aka.ms/converter)
 
@@ -60,10 +60,9 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 
 패키지 생성 준비가 되었으면 시작해 봅시다.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>먼저, 앱을 배포할 방법을 고려합니다.
-앱을 [Microsoft Store](https://www.microsoft.com/store/apps)에 게시하려는 경우에는 [이 양식](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge)을 작성하는 것부터 시작합니다. Microsoft에서 온보딩 프로세스 시작을 위해 연락 드리겠습니다. 이 과정의 일환으로, Microsoft Store에서 이름을 예약하면 앱을 패키징하기 위해 필요한 정보를 얻게 됩니다.
+## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-또한, 응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
+응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
 
 ## <a name="make-sure-that-your-system-can-run-the-converter"></a>시스템이 변환기를 실행할 수 있는지 확인
 
@@ -75,7 +74,6 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 * SLAT(Second Level Address Translation)
 * [Windows 10용 Windows 소프트웨어 개발 키트(SDK)](https://go.microsoft.com/fwlink/?linkid=821375)를 참조하세요.
 
-
 ## <a name="start-the-desktop-app-converter"></a>Desktop App Converter 시작
 
 1. [Desktop App Converter](https://aka.ms/converter)를 다운로드 및 설치합니다.
@@ -86,7 +84,7 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 
    콘솔 창이 나타납니다. 해당 콘솔 창을 사용해 명령을 실행하게 됩니다.
 
-## <a name="set-a-few-things-up-apps-with-installers-only"></a>몇 가지 설정 수행 (설치 관리자가 있는 앱만 해당)
+## <a name="set-a-few-things-up-apps-with-installers-only"></a>몇 가지 설정 수행(설치 관리자가 있는 앱만 해당)
 
 앱에 설치 관리자가 없는 경우에는 다음 섹션으로 건너 뛸 수 있습니다.
 

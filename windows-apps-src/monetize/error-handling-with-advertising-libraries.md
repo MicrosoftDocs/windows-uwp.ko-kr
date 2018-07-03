@@ -4,22 +4,22 @@ ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Microsoft Advertising 라이브러리의 AdControl 클래스에 의해 생성되는 오류를 처리하는 방법을 알아봅니다.
 title: 광고 오류 처리
 ms.author: mcleans
-ms.date: 08/23/2017
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 5bdbf33cba031bfbeca2216affe7c560b5521b24
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: fb60f870aa220a123bab185ef98ccca1f6a8881a
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654122"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1880974"
 ---
 # <a name="handle-ad-errors"></a>광고 오류 처리
 
-[AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx),  [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), [NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.aspx) 클래스에는 각각 광고 관련 오류가 발생할 경우 발생하는 **ErrorOccurred** 이벤트가 있습니다. 앱 코드가 이 이벤트를 처리하고, 오류의 원인을 파악하는 데 도움이 되는 이벤트 args 개체의 [ErrorCode](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.errorcode.aspx) 및 [ErrorMessage](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.errormessage.aspx) 속성을 검사할 수 있습니다.
+[AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx),  [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), **NativeAdsManagerV2** 클래스에는 각각 광고 관련 오류가 발생할 경우 발생하는 **ErrorOccurred** 이벤트가 있습니다. 앱 코드가 이 이벤트를 처리하고, 오류의 원인을 파악하는 데 도움이 되는 이벤트 args 개체의 [ErrorCode](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.errorcode.aspx) 및 [ErrorMessage](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.errormessage.aspx) 속성을 검사할 수 있습니다.
 
 <span id="bkmk-dotnet"/>
 
@@ -27,7 +27,7 @@ ms.locfileid: "1654122"
 
 XAML 앱에서 광고 관련 오류를 처리하려면
 
-1. **AdControl**, **InterstitialAd** 또는 **NativeAdsManager** 개체의 **ErrorOccurred** 이벤트를 이벤트 처리기 대리자의 이름에 할당합니다.
+1. **AdControl**, **InterstitialAd** 또는 **NativeAdsManagerV2** 개체의 **ErrorOccurred** 이벤트를 이벤트 처리기 대리자의 이름에 할당합니다.
 
 2. 발신자에 대한 **Object** 및 [AdErrorEventArgs](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aderroreventargs.aspx) 개체의 두 매개 변수를 취하도록 오류 이벤트 처리 대리자를 코딩합니다.
 

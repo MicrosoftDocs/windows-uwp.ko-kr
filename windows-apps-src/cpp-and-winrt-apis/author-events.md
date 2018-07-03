@@ -3,27 +3,24 @@ author: stevewhims
 description: 이번 항목에서는 이벤트가 발생하는 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 구성 요소를 사용하여 이벤트를 처리하는 앱에 대해서도 설명합니다.
 title: C++/WinRT의 이벤트 작성
 ms.author: stwhi
-ms.date: 04/23/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: b7574f1a3406dae665ced80294f7bc1cf91aeb8c
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 192000f937989d7218931ce1465bd96d5d9b71c6
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832027"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1880884"
 ---
 # <a name="author-events-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 이벤트 작성
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
-
 이번 항목에서는 차변 발생 시 이벤트가 발생하는 은행 계좌 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 은행 계좌 런타임 클래스를 사용하면서 함수를 호출하여 잔액을 조정하거나, 발생하는 이벤트를 처리하는 주요 앱에 대해서도 설명합니다.
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 현재 가용성에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
+> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
@@ -33,11 +30,11 @@ Windows 런타임 구성 요소에서 구현된 런타임 클래스의 이벤트
 
 이러한 제약 조건을 잊을 경우 컴파일러가 "*must be WinRT type*" 오류 메시지를 처리하는 데 도움이 될 수 있습니다.
 
-## <a name="winrtdelegatelttgt"></a>winrt::delegate&lt;...T&gt;
-C++ 형식(동일한 프로젝트에서 작성 및 사용됨)의 이벤트가 발생하도록 하려면 C++/WinRT의 **winrt::delegate&lt;...T&gt;** 를 이벤트의 대리자 형식으로 사용할 수 있습니다. 이때는 입력 매개 변수가 Windows 런타임 형식일 필요 없습니다.
+## <a name="winrtdelegatelt-tgt"></a>winrt::delegate&lt;...T&gt;
+C++ 형식(동일한 프로젝트에서 작성 및 사용됨)의 이벤트가 발생하도록 하려면 C++/WinRT의 [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate)를 이벤트의 대리자 형식으로 사용할 수 있습니다. 이때는 대리자의 형식 매개 변수가 Windows 런타임 형식일 필요 없습니다. 이벤트 및 대리인이 내부적으로 사용되는(이진 전체에서가 아니라) C++/CX 코드 베이스에서 포트하는 경우 **winrt::delegate**은 C++/WinRT에서 해당 패턴을 복제하는 데 도움이 됩니다.
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Windows 런타임 구성 요소(BankAccountWRC) 만들기
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual C++ Windows Runtime Component (C++/WinRT)** 프로젝트를 만든 다음 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual C++ Windows 런타임 Component (C++/WinRT)** 프로젝트를 만든 다음 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다.
 
 새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 파일 이름을 `BankAccountWRC.idl`로 변경합니다. 그러면 빌드 과정에서 구성 요소의 Windows 런타임 메타데이터 파일 이름이 구성 요소를 따라 자동으로 지정됩니다. `BankAccountWRC.idl`에서 아래 나열한 것과 같이 인터페이스를 정의합니다.
 
@@ -70,14 +67,14 @@ namespace winrt::BankAccountWRC::implementation
         ...
 
     private:
-        event<Windows::Foundation::EventHandler<float>> accountIsInDebitEvent;
+        winrt::event<Windows::Foundation::EventHandler<float>> accountIsInDebitEvent;
         float balance{ 0.f };
     };
 }
 ...
 ```
 
-`BankAccount.cpp`에서 아래와 같이 함수를 구현합니다.
+`BankAccount.cpp`에서 아래 예제에 표시된 대로 함수를 구현합니다. C++/WinRT에서 IDL이 선언한 이벤트는 오버로드된 함수의 집합으로 구현됩니다(속성이 오버로드된 get 및 set 함수 집합으로 구현되는 것과 유사한 방식). 한 오버로드는 등록할 대리자를 가지며 토큰을 반환합니다. 다른 오버로드는 토큰을 가지며 관련 대리자의 등록을 취소합니다.
 
 ```cppwinrt
 // BankAccount.cpp
@@ -102,14 +99,16 @@ namespace winrt::BankAccountWRC::implementation
 }
 ```
 
-잔액이 마이너스가 될 경우 **AdjustBalance** 함수의 구현체에서 **AccountIsInDebit** 이벤트가 발생합니다.
+이벤트 취소자에 대한 오버로드를 구현할 필요는 없습니다(자세한 내용은 [등록된 대리자 취소](handle-events.md#revoke-a-registered-delegate) 참조). C++/WinRT 프로젝션에 의해 처리됩니다. 다른 오버로드는 사용자 시나리오에 최적으로 구현하는 유연성을 제공하기 위해 프로젝션에 반영되지 않습니다. 이처럼 [**event::add**](/uwp/cpp-ref-for-winrt/event#eventadd-function) 및 [**event::remove**](/uwp/cpp-ref-for-winrt/event#eventremove-function) 호출은 효율적이며 동시성/스레드로부터 안전한 기본값입니다. 하지만 매우 많은 이벤트를 처리하는 경우 각각에 대한 이벤트 필드 대신 일부 밀도가 낮은 구현을 원할 수 있습니다.
+
+잔액이 마이너스가 될 경우 **AdjustBalance** 함수의 구현체에서 **AccountIsInDebit** 이벤트가 발생하는 시나리오는 위에서 확인할 수 있습니다.
 
 경고 메시지로 인해 빌드가 중단되는 경우에는 프로젝트 속성 **C/C++** > **일반** > **경고를 오류로 처리**를 **아니오(/WX-)** 로 설정한 후 프로젝트를 다시 빌드하세요.
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>주요 앱(BankAccountCoreApp)을 만들어 Windows 런타임 구성 요소 테스트
 이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). **Visual C++ Core App (C++/WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*이라고 지정합니다.
 
-참조를 추가하고 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`로 이동합니다. **추가**와 **확인**을 차례대로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 페이로드 파일인 `readme.txt`가 존재하지 않는다는 오류 메시지가 표시되면 해당 파일을 Windows 런타임 구성 요소 프로젝트에서 제외하여 리빌드한 후 BankAccountCoreApp을 리빌드합니다.
+참조를 추가하고 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`로 이동합니다(또는 두 프로젝트가 동일한 솔루션에 있는 경우 프로젝트 참조를 추가). **추가**와 **확인**을 차례대로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 페이로드 파일인 `readme.txt`가 존재하지 않는다는 오류 메시지가 표시되면 해당 파일을 Windows 런타임 구성 요소 프로젝트에서 제외하여 다시 빌드한 후 BankAccountCoreApp을 다시 빌드합니다.
 
 빌드 과정에서 `cppwinrt.exe` 도구가 실행되면서 참조된 `.winmd` 파일을 소스 코드 파일로 처리합니다. 이 소스 코드 파일에는 구성 요소를 사용할 때 지원할 목적으로 프로젝션된 형식이 포함되어 있습니다. 구성 요소의 런타임 클래스에 맞게 프로젝션된 형식의 헤더(`BankAccountWRC.h`)가 `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\` 폴더로 생성됩니다.
 

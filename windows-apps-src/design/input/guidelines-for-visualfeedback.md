@@ -12,26 +12,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a986d6de680a3024ae252ba640871f9c5d22141
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 4653e07d6d81f884ee6519206e75350aa47945f8
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707048"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917588"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
-
 시각적 피드백을 사용하여 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다. 시각적 피드백은 조작 의지를 북돋아 사용자에게 도움이 될 수 있습니다. 시각적 피드백은 조작이 성공했음을 표시하여 사용자의 제어 감각을 향상합니다. 또한 시스템 상태를 전달하고 오류를 줄여 줍니다.
 
-> **중요 API**:  [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
+> **중요 API**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 
 ## <a name="recommendations"></a>권장 사항
 
--   컨트롤 및 응용 프로그램 성능을 최적화하기 위해 원래 컨트롤 템플릿에 최대한 가까운 곳에 유지합니다.
--   앱 사용에 방해가 될 수 있는 경우에는 터치 시각화를 사용하지 마세요. 자세한 내용은 [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969)를 참조하세요.
--   반드시 필요한 경우가 아니면 피드백을 표시하지 마세요. 다른 곳에서 제공되지 않는 가치를 추가하는 경우가 아니면 시각적 피드백을 표시하지 않고 UI를 깔끔하고 간결하게 유지합니다.
--   기본 제공 Windows 제스처의 시각적 피드백 동작을 과도하게 사용자 지정하지 마세요. 사용자 지정하면 일관되지 않고 혼란을 주는 사용자 환경이 생성될 수 있습니다.
+- 광범위한 수정이 컨트롤과 응용 프로그램의 성능 및 접근성에 영향을 미칠 수 있으므로 컨트롤 템플릿의 수정을 디자인 의도와 직접 관련된 것으로만 제한하도록 합니다. 
+    - 시각적 상태 속성을 비롯한 컨트롤 속성 사용자 지정에 대한 추가 정보는 [XAML 스타일](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles)을 참조하세요.
+    - 컨트롤 템플릿 변경한 대한 자세한 내용은 [UserControl 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)를 참조하세요.
+    - 템플릿 컨트롤에 중요한 변경을 하려는 경우 사용자 지정 템플릿의 컨트롤을 만드는 것이 좋습니다. 사용자 지정 템플릿의 컨트롤의 예는 [사용자 지정 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)을 참조합니다.
+- 앱 사용에 방해가 될 수 있는 경우에는 터치 시각화를 사용하지 마세요. 자세한 내용은 [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969)를 참조하세요.
+- 반드시 필요한 경우가 아니면 피드백을 표시하지 마세요. 다른 곳에서 제공되지 않는 가치를 추가하는 경우가 아니면 시각적 피드백을 표시하지 않고 UI를 깔끔하고 간결하게 유지합니다.
+- 기본 제공 Windows 제스처의 시각적 피드백 동작을 과도하게 사용자 지정하지 마세요. 사용자 지정하면 일관되지 않고 혼란을 주는 사용자 환경이 생성될 수 있습니다.
 
 ## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
@@ -39,8 +41,8 @@ ms.locfileid: "1707048"
 
 제공된 기본 XAML 플랫폼 컨트롤을 사용하면 모든 디바이스와 모든 입력 상황에서 앱이 올바르게 작동합니다. 앱에서 사용자 지정 피드백이 필요한 사용자 지정 조작을 사용하는 경우 피드백이 적절하고 여러 입력 디바이스를 포괄하며 사용자 주의를 분산시키지 않는지 확인해야 합니다. 이 사항은 시각적 피드백이 중요한 UI와 충돌하거나 가릴 수 있는 게임 또는 그리기 앱에서 특히 문제가 됩니다.
 
-> [!Important] 
-> 기본 제공 제스처의 조작 동작은 변경하지 않는 것이 좋습니다. 
+> [!Important]
+> 기본 제공 제스처의 조작 동작은 변경하지 않는 것이 좋습니다.
 
 **디바이스 간 피드백**
 
@@ -59,6 +61,8 @@ ms.locfileid: "1707048"
 ## <a name="high-visibility-focus-visuals"></a>높은 가시성 포커스 화면 효과
 
 모든 Windows 앱은 응용 프로그램 내의 조작 가능한 컨트롤 주위에 보다 정의된 포커스 화면 효과를 표시합니다. 이러한 새 포커스 화면 효과는 완전히 사용자 지정할 수 있으며 필요에 따라 사용하지 않도록 설정할 수도 있습니다.
+
+Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 같이 게임 패드 또는 키보드 입력을 통해 포커스할 수 있는 요소의 경계를 애니메이션화하는 조명 효과인 **포커스 표시**를 지원합니다. 자세한 내용은 [Xbox 및 TV용 디자인](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv#reveal-focus)을 참조하세요.
 
 ## <a name="color-branding--customizing"></a>색 브랜딩 및 사용자 지정
 

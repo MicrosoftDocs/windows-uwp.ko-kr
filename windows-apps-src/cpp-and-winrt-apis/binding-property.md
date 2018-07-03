@@ -3,35 +3,32 @@ author: stevewhims
 description: XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이번 항목에서는 관찰 가능한 속성을 구현하여 사용하는 방법과 XAML 컨트롤에 바인딩하는 방법에 대해서 설명합니다.
 title: XAML 컨트롤, C++/WinRT 속성 바인딩
 ms.author: stwhi
-ms.date: 03/07/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: b54f0dd60a90cd13e5b3586a956b09e30f6d9755
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 25ea4c4caf5135b13b88eeea6f43bb36bd691c11
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832287"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1863219"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 속성 바인딩
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
-
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이번 항목에서는 C++/WinRT에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
 ## <a name="what-does-observable-mean-for-a-property"></a>속성을 얘기할 때 *관찰 가능하다는 것*은 무슨 뜻입니까?
-**BookSku**라고 하는 런타임 클래스에 이름이 **Title**인 속성이 있다고 가정하겠습니다. **BookSku**에서 **Title** 값이 바뀔 때마다  [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트가 발생하도록 선택한다면 **Title**은 관찰 가능한 속성이 됩니다. 이벤트가 발생하거나 발생하지 않는 **BookSku**의 동작에 따라서 관찰 가능한 속성인지 알 수 있습니다.
+**BookSku**라고 하는 런타임 클래스에 이름이 **Title**인 속성이 있다고 가정하겠습니다. **BookSku**에서 **Title** 값이 바뀔 때마다 [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트가 발생하도록 선택한다면 **Title**은 관찰 가능한 속성이 됩니다. 이벤트가 발생하거나 발생하지 않는 **BookSku**의 동작에 따라서 관찰 가능한 속성인지 알 수 있습니다.
 
 XAML 텍스트 요소, 즉 컨트롤은 업데이트된 값을 가져와 새로운 값을 표시하도록 스스로 업데이트함으로써 이러한 이벤트에 바인딩하여 처리할 수 있습니다.
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 현재 가용성에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
+> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
 
 ## <a name="create-a-blank-app-bookstore"></a>비어 있는 앱(Bookstore) 만들기
 먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual C++ Blank App (C++/WinRT)** 프로젝트를 만들어서 이름을 *Bookstore*라고 지정합니다.
@@ -209,9 +206,9 @@ namespace BookstoreCPPWinRT
 }
 ```
 
-프로젝트를 리빌드하여 **MainPage** 런타임 클래스를 구현할 소스 코드 파일(`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`)을 다시 생성합니다. ViewModel 속성에 사용할 접근자 스텁을 생성된 파일에서 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`로 복사합니다.
+프로젝트를 다시 빌드하여 **MainPage** 런타임 클래스를 구현할 소스 코드 파일(`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`)을 다시 생성합니다. ViewModel 속성에 사용할 접근자 스텁을 생성된 파일에서 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`로 복사합니다.
 
-보기 모델을 저장할 전용 멤버를 `\Bookstore\Bookstore\MainPage.h`에 추가합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 프로젝션된 형식인 **Bookstore::BookstoreViewModel**과 관련하여 구현됩니다. 구현체 형식이 동일한 프로젝트(컴파일 단위)에 있으므로 `nullptr`을 가져오는 생성자 오버로드를 통해 m_mainViewModel을 생성합니다.
+보기 모델을 저장할 전용 멤버를 `\Bookstore\Bookstore\MainPage.h`에 추가합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 프로젝션된 형식인 **Bookstore::BookstoreViewModel**과 관련하여 구현됩니다. 구현체 형식이 동일한 프로젝트(컴파일 단위)에 있으므로 `nullptr_t`을 가져오는 생성자 오버로드를 통해 m_mainViewModel을 생성합니다.
 
 ```cppwinrt
 // MainPage.h

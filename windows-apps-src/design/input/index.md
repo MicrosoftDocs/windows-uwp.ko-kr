@@ -13,12 +13,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: d1e28445a665e9d805b8633963784c08b63af6ca
-ms.sourcegitcommit: 4e39a2bdb5b895ed09b64957dc1a86ccf1f8e1af
+ms.openlocfilehash: 1699efed48c4b62a4c7d145bb2f0903cddd5897e
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "1718753"
+ms.lasthandoff: 05/18/2018
+ms.locfileid: "1896923"
 ---
 # <a name="input-and-interactions"></a>입력 및 조작
 
@@ -63,8 +63,8 @@ UWP 앱은 다양한 입력을 자동으로 처리하고 다양한 장치에서 
                         </div>
                     </div> -->
                     <div class="cardText">
-                        <h3><a href="identify-input-devices.md">입력 장치 식별</a></h3>
-                        <p>UWP 장치에 연결된 입력 장치를 식별하고 해당 기능 및 특성을 식별합니다.</p>
+                        <h3><a href="gaze-interactions.md">새로운 기능! 응시 입력</a></h3>
+                        <p>눈 및 머리의 위치와 움직임을 기반으로 사용자의 응시를 추적합니다.</p>
                     </div>
                 </div>
             </div>
@@ -85,6 +85,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>입력</h3>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/identify-input-devices">입력 장치 식별</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/handle-pointer-input">포인터</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/pen-and-stylus-interactions">펜 및 Windows Ink</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/touch-interactions">터치</a></p>
@@ -94,6 +95,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
                         <p style="display: block;"><a  href="/windows/uwp/design/input/touchpad-interactions">터치 패드</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/windows-wheel-interactions">Surface Dial</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/multiple-input-design-guidelines">여러 입력</a></p>
+                        <p style="display: block;"><a  href="/windows/uwp/design/input/input-injection">입력 주입</a></p>
                         <p style="display: block;"><a  href="/windows/uwp/design/input/custom-text-input">사용자 지정 텍스트 입력</a></p>                        
                     </div>
                 </div>

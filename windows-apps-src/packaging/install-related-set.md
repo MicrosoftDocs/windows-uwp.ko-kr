@@ -7,14 +7,14 @@ ms.date: 1/4/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
+keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 테스트용으로 로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 45d88f88963f7f4d5aad4b1c48d0e86145be6c81
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: 0b7ef1d1a9eb3e268e642cf9b0889df71a59fb44
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638467"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917618"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>앱 설치 관리자 파일을 사용하여 관련 집합 설치
 
@@ -36,7 +36,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
     Version="1.0.0.0" 
     Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" > 
    
@@ -84,7 +84,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
     Version="1.0.0.0" 
     Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" > 
 </AppInstaller>
@@ -96,7 +96,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
     Version="1.0.0.0" 
     Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" > 
    
@@ -116,7 +116,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
     Version="1.0.0.0" 
     Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" > 
    
@@ -156,7 +156,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
     Version="1.0.0.0" 
     Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" > 
    
@@ -201,7 +201,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
     Version="1.0.0.0" 
     Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" > 
    

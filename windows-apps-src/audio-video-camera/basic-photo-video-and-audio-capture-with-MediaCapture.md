@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6e5d69c2f86c0d57c0c1be938799d5e81bb8f00
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 81205dc7122c75345b686240f79200d8304704b7
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832277"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843423"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처
 
@@ -61,7 +61,7 @@ Windows 버전 1803을 시작하면서 **CaptureAsync**에서 반환된 **Captur
 
 **BitmapEncoder** 사용 방법뿐 아니라 XAML 페이지에 표시하는 방법 등 **SoftwareBitmap** 개체 작업에 대한 자세한 내용은 [**비트맵 이미지 만들기, 편집 및 저장**](imaging.md)을 참조하세요. 
 
-캡처 장치 제어 값 설정에 대한 자세한 내용은 [사진 및 비디오에 대한 장치 컨트롤 캡처](capture-device-controls-for-photo-and-video.md)를 참조하세요.
+캡처 장치 제어 값 설정에 대한 자세한 내용은 [사진 및 비디오에 대한 장치 컨트롤 캡처](capture-device-controls-for-photo-and-video-capture.md)를 참조하세요.
 
 Windows 10, 버전 1803부터는 압축되지 않은 형식으로 캡처된 사진에 대해 EXIF 정보와 같은 메타데이터를 얻기 위해서는 **MediaCapture**에서 반환한 **CapturedFrame** [**BitmapProperties**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.bitmapproperties) 속성에 액세스해야 합니다. 이전 버전에서는 압축된 파일 형식으로 캡처된 사진의 헤더에서만 이 데이터를 액세스할 수 있었습니다. 이미지 파일에 수동으로 작성할 때 이 데이터를 [**BitmapEncoder**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder)에 제공할 수 있습니다. 인코딩 비트맵에 대한 자세한 내용은 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요.  또한 노출과 플래시 설정과 같은 프레임 제어 값에 액세스할 수 있으며, 이것은 [**ControlValues**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.capturedframe.controlvalues) 속성에 액세스하여 이미지를 캡처할 때 사용된 것입니다. 자세한 내용은 [사진과 비디오 캡처를 위한 캡처 장치 컨트롤](capture-device-controls-for-photo-and-video-capture.md)을 참조하세요.
 

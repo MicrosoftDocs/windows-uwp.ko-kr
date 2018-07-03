@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 21dc29758a4622f810a02e7e5bb0ec117e4dbc2a
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: aafe2d09fc27a2693ccf2c4c9d8f189aa0164a3c
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638557"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976511"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
@@ -54,24 +54,22 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 **C/C++** 설정 그룹의 **일반** 설정에서 **Windows 런타임 확장 사용** 필드를 **예(/ZW)** 로 설정합니다.
 
-   ![Windows 런타임 확장 사용](images/desktop-to-uwp/enable-winrt-objects.png)
+   ![Windows 런타임 확장 사용](images/desktop-to-uwp/consume-runtime-extensions.png)
 
 **Additional #using Directories** 대화 상자를 열어 이러한 디렉터리를 추가합니다.
 
-* C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcpackages
+* %VSInstallDir%\Common7\IDE\VC\vcpackages
 * C:\Program Files (x86)\Windows Kits\10\UnionMetadata
 * C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\<*latest version*>
 * C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\<*latest version*>
 
-![디렉터리를 사용하여 추가](images/desktop-to-uwp/additional-using.png)
-
 **Additional Include Directories** 대화 상자를 열어 이 디렉토리를 추가합니다. C:\Program Files (x86)\Windows Kits\10\Include\<*latest version*>\um
 
-![디렉토리를 포함한 추가](images/desktop-to-uwp/additional-include.png)
+![디렉터리를 포함한 추가](images/desktop-to-uwp/additional-include.png)
 
-**C/C++** 설정 그룹의 **코드 생성**에서 **최소 리빌드 사용**설정을 **아니요(/GM-)** 로 설정합니다.
+**C/C++** 설정 그룹의 **코드 생성**에서 **최소 다시 빌드 사용**설정을 **아니요(/GM-)** 로 설정합니다.
 
-![최소 리빌드 사용](images/desktop-to-uwp/disable-min-build.png)
+![최소 다시 빌드 사용](images/desktop-to-uwp/disable-min-build.png)
 
 
 ## <a name="add-windows-10-experiences"></a>Windows 10 환경 추가
@@ -226,7 +224,7 @@ void UWP::ShowToast()
 
 ### <a name="runtime-checks"></a>런타임 검사
 
-실행 중인 Windows 버전에 관계 없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 앱은 사용자가 앱을 Windows 10에서 패키지 앱으로 실행시키는 경우에만 UWP API를 호출합니다.
+실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 앱은 사용자가 앱을 Windows 10에서 패키지 앱으로 실행시키는 경우에만 UWP API를 호출합니다.
 
 가장 쉽게 런타임 검사를 코드에 추가하는 방법은 Nuget 패키지: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/)를 설치하고, ``IsRunningAsUWP()``모든 UWP 코드 해제 메서드를 사용하는 것입니다. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
 

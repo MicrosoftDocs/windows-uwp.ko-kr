@@ -6,7 +6,7 @@ label: Access keys design guidelines
 keywords: 키보드, 선택키, 키팁, 키 팁, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 조작
 template: detail.hbs
 ms.author: kbridge
-ms.date: 02/08/2017
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -15,12 +15,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b335068762dd3999e07526962b0d6629825ad68d
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: a336109e9464052a33f5a0d8548e13b260b387a3
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707058"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018517"
 ---
 # <a name="access-keys"></a>선택키
 
@@ -77,12 +77,10 @@ _Microsoft Word의 선택키에 대한 키 팁 배지_
 다음 이미지는 Word의 두 선택키 범위를 보여 줍니다. 첫 번째는 사용자가 탭 및 다른 최상위 수준 명령을 선택할 수 있는 주 선택키를 보여 주고, 두 번째는 홈 탭의 선택키를 보여 줍니다.
 
 ![Microsoft Word의 주 선택키](images/accesskeys/primary-access-keys-word.png)
-
 _Microsoft Word의 주 선택키_
 
 ![Microsoft Word의 보조 선택키](images/accesskeys/secondary-access-keys-word.png)
-
-Microsoft Word의 보조 선택키
+_Microsoft Word의 보조 선택키_
 
 선택키는 여러 범위의 요소에 대해 중복 가능합니다. 위 예제에서 "2"는 주 범위의 실행 취소 그리고 보조 범위의 "기울임꼴"에 대한 선택키입니다.
 
@@ -122,10 +120,11 @@ _CommandBar 주 범위 및 지원되는 선택키_
 
 _CommandBar 보조 범위 및 지원되는 선택키_
 
-> [!NOTE]
-> Windows 10 Fall Creators Update 이전에는 CommandBar 등 일부 컨트롤은 기본 선택키 범위를 지원하지 않았습니다. 이 경우 다음 예에서와 같이 사용자가 선택키 범위를 구현해야 합니다.   
->
-> 다음은 Word의 리본처럼 부모 명령이 호출되면 선택키가 제공되는 CommandBar의 SecondaryCommands를 지원하는 방법입니다.
+### <a name="windows-10-creators-update-and-older"></a>Windows 10 크리에이터스 업데이트 이상
+
+Windows 10 Fall Creators Update 이전에는 CommandBar 등 일부 컨트롤은 기본 선택키 범위를 지원하지 않았습니다.
+
+다음 예제는 Word의 리본처럼 부모 명령이 호출되면 선택키가 제공되는 CommandBar의 SecondaryCommands를 지원하는 방법을 보여 줍니다.
 
 ```xaml
 <local:CommandBarHack x:Name="MainCommandBar" AccessKey="M" >
@@ -178,11 +177,10 @@ public class CommandBarHack : CommandBar
         secondaryItemsControl.AccessKeyScopeOwner = moreButton;
 
         overflowPopup = GetTemplateChild("OverflowPopup") as Popup;
-
     }
+
     private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
     {
-
         if (overflowPopup != null)
         {
             overflowPopup.Opened += SecondaryMenuOpened;

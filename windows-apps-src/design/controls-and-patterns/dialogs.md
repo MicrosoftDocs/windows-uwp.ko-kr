@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ceb698bfbe95693ff9d5785b4bea94f1ec3070c
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 7b263fda1de798473f581e2191d3fa01385060e6
+ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675380"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1893848"
 ---
 # <a name="dialogs-and-flyouts"></a>대화 상자 및 플라이아웃
 
@@ -32,7 +32,7 @@ ms.locfileid: "1675380"
 > **중요 API**: [ContentDialog 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [Flyout 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 
-:::행::: :::열::: **대화 상자**
+:::row::: :::column::: **대화 상자**
         
         ![Example of a dialog](images/dialogs/dialog_RS2_delete_file.png)
 
@@ -47,7 +47,7 @@ ms.locfileid: "1675380"
 
         Unlike a dialog, a flyout can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
     :::column-end:::
-:::행 끝:::
+:::row-end:::
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -84,7 +84,7 @@ ms.locfileid: "1675380"
 
 대화 상자는 상호 작용을 차단하고 플라이아웃은 그러지 않으므로 질문에 대답하거나 소량의 특정 정보에 중점을 두는 상황에서는 대화 상자를 예약해야 합니다. 반면 무언가에 주의를 집중시키지만 사용자가 무시해도 되는 경우 플라이아웃을 사용할 수 있습니다.
 
-:::행::: :::열:::
+:::row::: :::column:::
    <p><b>대화 상자는 다음과 같은 작업에 사용됩니다.</b> <br/>
 <ul>
 <li>사용자가 계속하기 전에 읽고 <b>반드시</b> 승인해야 하는 중요한 정보 표시 예를 들면 다음과 같습니다.
@@ -100,13 +100,13 @@ ms.locfileid: "1675380"
 <li>앱에서 사용자 대신 선택할 수 없는 경우와 같이 앱에서 사용자에게 차단 질문을 해야 하는 경우의 질문 차단 질문은 무시하거나 연기할 수 없으며 사용자에게 잘 정의된 선택 항목을 제공해야 합니다.</li>
 </ul>
 </p>
-:::열 끝::: :::행::: <p><b>플라이아웃은 다음과 같은 작업에 사용됩니다.</b> <br/>
+:::column-end::: :::row::: <p><b>플라이아웃은 다음과 같은 작업에 사용됩니다.</b> <br/>
 <ul>
 <li>작업을 완료할 수 있기 전에 필요한 추가 정보 수집</li>
 <li>특정 시간에만 관련되는 정보 표시 예를 들어 사진 갤러리 앱에서 이미지 미리 보기를 클릭할 때 플라이아웃을 사용하여 큰 버전의 이미지를 표시할 수 있습니다.</li>
 <li>페이지에 항목에 대한 세부 정보 또는 긴 설명과 같은 추가 정보 표시</li>
 </ul></p>
-:::열 끝::: :::행 끝:::
+:::column-end::: :::row-end:::
 
 
 
@@ -255,8 +255,7 @@ private async void DisplaySubscribeDialog()
 <ul>
     <li>
         <p>일반적으로 확정 단추는 왼쪽에(기본 단추), 취소 단추(보조 단추)는 오른쪽에 있어야 합니다.</p>
-         ![확인/취소 대화 상자](images/dialogs/dialog_RS2_delete_file.png)
-
+        <img alt="An OK/cancel dialog" src="images/dialogs/dialog_RS2_delete_file.png" />
     </li>
     <li>일반 권장 사항 섹션에서 설명한 대로 기본 지시 사항이나 내용에 대한 특정 응답을 식별하는 텍스트가 있는 단추를 사용합니다.
     </li>

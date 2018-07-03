@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c39243217f28dd4f88c4776c058a1b93c145c50
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 68a8a812c6e5080630254014552a8bb05747749b
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393532"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983524"
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
@@ -99,7 +99,7 @@ ms.locfileid: "1393532"
 다음 샘플은 적응형 레이아웃을 통해 마스터/세부 정보 패턴을 구현하고 정적, 데이터베이스 및 온라인 리소스에 대한 데이터 바인딩을 보여줍니다. 
 - [마스터/세부 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
 - [마스터/세부 정보 및 선택 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Windows Template Studio 마스터/세부 정보 샘플](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Pages/MasterDetail)
+- [Windows Template Studio 마스터/세부 정보 샘플](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [RSS 수집기 샘플](https://github.com/Microsoft/Windows-appsample-rssreader)
 

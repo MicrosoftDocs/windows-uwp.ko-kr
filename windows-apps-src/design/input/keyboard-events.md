@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2452e12b49e50285f4fe0c8bab0aad0b799d84d1
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
+ms.openlocfilehash: 36026eb812c4496f95f6708fd30dc1e1fcb35ca6
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488927"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895430"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -184,7 +184,7 @@ void KeyboardSupport::MainPage::MediaButton_Click(Platform::Object^ sender, Wind
 
 bool KeyboardSupport::MainPage::IsCtrlKeyPressed()
 {
-    var ctrlState = CoreWindow::GetForCurrentThread().GetKeyState(VirtualKey::Control);
+    auto ctrlState = CoreWindow::GetForCurrentThread()->GetKeyState(VirtualKey::Control);
     return (ctrlState & CoreVirtualKeyStates::Down) == CoreVirtualKeyStates::Down;
 }
 
@@ -381,7 +381,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 터치 키보드의 키를 누르면 하드웨어 키보드의 키를 누른 것처럼 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트가 발생합니다. 그러나 터치 키보드는 입력 컨트롤에서 텍스트 조작에 예약된 Ctrl+A, Ctrl+Z, Ctrl+X, Ctrl+C 및 Ctrl+V에 대해 입력 이벤트를 발생시키지 않습니다.
 
-사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 제공합니다. 예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) 속성을 [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028)로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다. 자세한 내용은 [입력 범위를 사용해서 터치 키보드 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
+사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 유형에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 유형에 대한 힌트를 제공합니다. 예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) 속성을 [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028)로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다. 자세한 내용은 [입력 범위를 사용해서 터치 키보드 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
 
 ## <a name="related-articles"></a>관련 문서
 

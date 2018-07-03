@@ -4,19 +4,19 @@ Description: Shows how to manually package a Windows desktop application (like W
 Search.Product: eADQiWindows 10XVcnh
 title: 앱을 수동으로 패키징(데스크톱 브리지)
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 81d5b9b0b52ef0f7529b277215e7fe0b95683f0a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: eeadd41debcfcf5cfde23948c52bdfe1ce32e9df
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689769"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989647"
 ---
 # <a name="package-an-app-manually-desktop-bridge"></a>앱을 수동으로 패키징(데스크톱 브리지)
 
@@ -31,8 +31,9 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 >[!IMPORTANT]
 >데스크톱 브리지는 Windows 10 버전, 1607에 도입되었으며 Windows 10 1주년 업데이트(10.0, 빌드 14393) 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>먼저, 앱을 배포할 방법을 고려합니다.
-앱을 [Microsoft Store](https://www.microsoft.com/store/apps)에 게시하려는 경우에는 [이 양식](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge)을 작성하는 것부터 시작합니다. Microsoft에서 온보딩 프로세스 시작을 위해 연락 드리겠습니다. 이 과정의 일환으로, Microsoft Store에서 이름을 예약하면 앱을 패키징하기 위해 필요한 정보를 얻게 됩니다.
+## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
+
+응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
 
 ## <a name="create-a-package-manifest"></a>패키지 매니페스트 만들기
 
@@ -111,7 +112,7 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 ```
 ### <a name="dependencies"></a>종속성
 
-데스크톱 브리지 앱에서는 항상 ``Name`` 특성을 ``Windows.Desktop``으로 설정합니다.
+데스크톱 브리지를 사용하여 패키지한 데스크톱 앱의 경우 언제든지 ``Name`` 특성을 ``Windows.Desktop``으로 설정합니다.
 
 ```XML
 <Dependencies>
@@ -120,20 +121,20 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 ```
 
 ### <a name="capabilities"></a>접근 권한 값
-데스크톱 브리지 앱에서는 ``runFullTrust`` 접근 권한 값을 추가해야 합니다.
+데스크톱 브리지를 사용하여 패키지한 데스크톱 앱의 경우 ``runFullTrust`` 접근 권한 값을 추가해야 합니다.
 
 ```XML
 <Capabilities>
   <rescap:Capability Name="runFullTrust"/>
 </Capabilities>
 ```
-## <a name="fill-in-the-application-level-elements"></a>응용 프로그램 수준에서 요소를 입력합니다.
+## <a name="fill-in-the-application-level-elements"></a>응용 프로그램 수준에서 요소 입력
 
 이 템플릿에 앱을 설명하는 정보를 입력합니다.
 
 ### <a name="application-element"></a>응용 프로그램 요소
 
-데스크톱 브리지 앱에서 응용 프로그램 요소의 ``EntryPoint``특성은 항상 ``Windows.FullTrustApplication``입니다.
+데스크톱 브리지를 사용하여 패키지한 데스크톱 앱의 경우 응용 프로그램 요소의 ``EntryPoint`` 특성은 항상 ``Windows.FullTrustApplication``입니다.
 
 ```XML
 <Applications>

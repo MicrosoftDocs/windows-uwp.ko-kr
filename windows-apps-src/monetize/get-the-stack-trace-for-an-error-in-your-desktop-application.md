@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 데스크톱 응용 프로그램에서 오류에 대한 스택 추적을 가져올 수 있습니다.
 title: 데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
 ms.author: mcleans
-ms.date: 03/06/2018
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: 64413600d1e7cb91ce3e8c90d1b64f921cfc21a2
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: dfe496c771c4e69bc51b562c476469e8fef53c92
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663083"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989327"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
 
@@ -74,7 +74,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------------------------|
 | 값      | array   | 각각 스택 추적 데이터의 한 프레임을 포함하는 개체 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [스택 추적 값](#stack-trace-values) 섹션을 참조하세요. |
 | @nextLink  | string  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
-| TotalCount | inumber | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
+| TotalCount | 정수 | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
 
 
 ### <a name="stack-trace-values"></a>스택 추적 값

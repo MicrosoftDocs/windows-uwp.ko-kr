@@ -15,12 +15,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 43150acef5c7e9ce73132cd35061d4239821f6d0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 47a2e48be14df6a59aec4404d760f416804bad6b
+ms.sourcegitcommit: 3522d888781ff6f063b129b54760a5cbefd38139
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673550"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "1937089"
 ---
 # <a name="swipe"></a>살짝 밀기
 
@@ -158,6 +158,7 @@ UWP 살짝 밀기 명령은 [표시](/uwp/api/windows.ui.xaml.controls.swipemode
     <ListView.ItemContainerStyle>
         <Style TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
         </Style>
     </ListView.ItemContainerStyle>
     <ListView.ItemTemplate>
@@ -166,7 +167,7 @@ UWP 살짝 밀기 명령은 [표시](/uwp/api/windows.ui.xaml.controls.swipemode
                           LeftItems="{StaticResource RevealOptions}"
                           RightItems="{StaticResource ExecuteDelete}"
                           Height="60">
-                <StackPanel Orientation="Vertical" Margin="5">
+                <StackPanel Orientation="Vertical">
                     <TextBlock Text="{x:Bind}" FontSize="18"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." FontSize="12"/>
@@ -214,9 +215,9 @@ UWP 살짝 밀기 명령은 [표시](/uwp/api/windows.ui.xaml.controls.swipemode
   - 실행 모드에서는 살짝 밀기를 통해 연 항목이 호출 시에도 열린 상태로 유지됩니다.
   - 표시 모드에서는 살짝 밀기를 통해 연 항목이 호출 시 축소됩니다.
 - **닫기**
-  - 항목이 호출되면 살짝 밀기 컨트롤은 모드에 관계 없이 항상 축소되고 정상 상태로 돌아갑니다.
+  - 항목이 호출되면 살짝 밀기 컨트롤은 모드에 관계없이 항상 축소되고 정상 상태로 돌아갑니다.
 - **RemainOpen**
-  - 항목이 호출되면 살짝 밀기 컨트롤은 모드에 관계 없이 항상 열린 상태로 유지됩니다.
+  - 항목이 호출되면 살짝 밀기 컨트롤은 모드에 관계없이 항상 열린 상태로 유지됩니다.
 
 여기에서 _회신_ 살짝 밀기 항목은 호출 후 닫기로 설정됩니다.
 

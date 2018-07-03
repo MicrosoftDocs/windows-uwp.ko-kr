@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ffdba499d8e38bb9248071daeddd850f921e931e
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692228"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843363"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
 
@@ -55,7 +55,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 
 ### <a name="determine-if-hdr-photo-capture-is-supported-on-the-current-device"></a>현재 디바이스에서 HDR 사진 캡처가 지원되는지 확인
 
-이 문서에 설명된 HDR 캡처 기술은 [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 개체를 사용하여 수행됩니다. 모든 장치가 **AdvancedPhotoCapture**를 통해 HDR 캡처를 지원하는 것은 아닙니다. **MediaCapture** 개체의 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)를 가져온 다음 [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) 속성을 가져와 앱이 현재 실행 중인 디바이스가 이 기술을 지원하는지 확인합니다. 비디오 디바이스 컨트롤러의 [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) 컬렉션을 확인하여  [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845)가 포함되어 있는지 확인합니다. 포함된 경우  **AdvancedPhotoCapture**를 사용한 HDR 캡처가 지원됩니다.
+이 문서에 설명된 HDR 캡처 기술은 [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 개체를 사용하여 수행됩니다. 모든 장치가 **AdvancedPhotoCapture**를 통해 HDR 캡처를 지원하는 것은 아닙니다. **MediaCapture** 개체의 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)를 가져온 다음 [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) 속성을 가져와 앱이 현재 실행 중인 디바이스가 이 기술을 지원하는지 확인합니다. 비디오 디바이스 컨트롤러의 [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) 컬렉션을 확인하여 [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845)가 포함되어 있는지 확인합니다. 포함된 경우 **AdvancedPhotoCapture**를 사용한 HDR 캡처가 지원됩니다.
 
 [!code-cs[HdrSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHdrSupported)]
 

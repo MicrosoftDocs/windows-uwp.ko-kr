@@ -6,18 +6,18 @@ title: 접근성 테스트
 label: Accessibility testing
 template: detail.hbs
 ms.author: mhopkins
-ms.date: 02/08/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b059a3088f3f8f9491cb3cccfdddee0a3eeb707
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 02ba4a94bdca7ae9964cc40e7aba40f72beb5429
+ms.sourcegitcommit: e020e9a4d947368a68e4eeba1eea65e9b3a725af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655222"
+ms.lasthandoff: 05/28/2018
+ms.locfileid: "1924356"
 ---
 # <a name="accessibility-testing"></a>접근성 테스트  
 
@@ -30,7 +30,9 @@ UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하기 위해 따�
 Windows SDK(소프트웨어 개발 키트)에는 [**AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239), [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 및 [**UI Accessibility Checker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) 같은 여러 가지 접근성 테스트 도구가 포함되어 있습니다. 이 도구는 앱의 접근성을 검증하는 데 도움이 될 수 있습니다. 모든 앱 시나리오와 UI 요소를 확인하세요.
 
 Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개발 컴퓨터에서 Windows SDK가 설치되어 있는 위치의 bin 하위 디렉터리)에서 접근성 테스트 도구를 시작할 수 있습니다.
-
+  
+> [!VIDEO https://www.youtube.com/embed/ce0hKQfY9B8]
+  
 <span id="AccScope"/>
 <span id="accscope"/>
 <span id="ACCSCOPE"/>

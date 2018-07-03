@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, winml, Windows machine learning
 ms.localizationpriority: medium
-ms.openlocfilehash: 87454c46a08b80b8a315ede1d2e6a1f6cda909df
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 8631c07b45a8642a1de700e424d3ca4f147456fc
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815478"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842580"
 ---
 # <a name="integrate-a-model-into-your-app-with-windows-ml"></a>Windows ML을 사용하여 앱에 모델 통합
 

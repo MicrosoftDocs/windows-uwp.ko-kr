@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, windows machine learning
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ef6ea1a4e1dab23f5ff6a09aec9b8c49c135f5e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: a2470cff6b5c7f07c720a38d0bff00486e4c6b27
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817664"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842873"
 ---
 # <a name="windows-ml-overview"></a>Windows ML 개요
 
@@ -54,7 +54,7 @@ Windows ML의 몇 가지 주요 기능은 다음과 같습니다.
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
-Windows ML을 사용하는 응용 프로그램을 빌드하려면 [Windows SDK - 빌드 17110 이상](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK)이 필요합니다.
+Windows ML을 사용하는 응용 프로그램을 빌드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) - 빌드 17110 이상이 필요합니다.
 
 ### <a name="onnx-models"></a>ONNX 모델
 
@@ -77,13 +77,15 @@ Visual Studio Tools for AI를 사용하여 ONNX 모델을 학습하는 방법을
 
 WinMLTools를 설치하고 사용하는 방법을 알아보려면 [모델 변환](conversion-samples.md)을 참조하세요.
 
-### <a name="onnx-operators"></a>ONNX 운영자
+Visual Studio Tools for AI 확장으로 Visual Studio IDE 내에서 WinMLTools를 사용하여 더 친숙하고 클릭이 용이한 환경에서 모델을 ONNX 형식으로 변환할 수 있습니다. 자세한 정보는 [VS Tools for AI](https://github.com/Microsoft/vs-tools-for-ai/)를 참조하세요.
 
-Windows ML은 CPU에서 100개 이상의 ONNX 운영자를 지원하고 DirectX12 호환 GPU에서 계산을 가속화합니다. 운영자 서명의 전체 목록은 ONNX 운영자 스키마 설명서에서 [ai.onnx](https://github.com/onnx/onnx/blob/rel-1.0/docs/Operators.md)(기본값) 및 [ai.onnx.ml](https://github.com/onnx/onnx/blob/rel-1.0/docs/Operators-ml.md) 네임스페이스를 참조하세요.
+### <a name="onnx-operators"></a>ONNX 연산자
 
-Windows ML은 다음과 같은 차이점은 제외하고 ONNX v1.0 설명서에 정의된 모든 운영자를 지원합니다.
+Windows ML은 CPU에서 100개 이상의 ONNX 연산자를 지원하고 DirectX12 호환 GPU에서 계산을 가속화합니다. 연산자 서명의 전체 목록은 ONNX 연산자 스키마 설명서에서 [ai.onnx](https://github.com/onnx/onnx/blob/rel-1.0/docs/Operators.md)(기본값) 및 [ai.onnx.ml](https://github.com/onnx/onnx/blob/rel-1.0/docs/Operators-ml.md) 네임스페이스를 참조하세요.
 
-- Windows ML에서 지원하는 "실험적"으로 표시된 운영자:
+Windows ML은 다음과 같은 차이점은 제외하고 ONNX v1.0 설명서에 정의된 모든 연산자를 지원합니다.
+
+- Windows ML에서 지원하는 "실험적"으로 표시된 연산자:
     - Affine
     - Crop
     - FC
@@ -96,7 +98,7 @@ Windows ML은 다음과 같은 차이점은 제외하고 ONNX v1.0 설명서에 
     - Upsample
 - MatMul - 2D 매트릭스 곱하기보다 큰 값은 현재 지원되지 않으며 CPU에서만 지원됨
 - Cast - CPU에서만 지원됨
-- 다음 운영자는 현재 지원되지 않습니다.
+- 다음 연산자는 현재 지원되지 않습니다.
     - RandomUniform
     - RandomUniformLike
     - RandomNormal
@@ -106,9 +108,9 @@ Windows ML은 다음과 같은 차이점은 제외하고 ONNX v1.0 설명서에 
 
 ONNX 모델 파일을 사용하여 Windows ML의 코드 생성기는 앱에서 모델과 상호 작용하는 인터페이스를 만듭니다. 생성된 인터페이스에는 모델, 입력 및 출력을 나타내는 래퍼 클래스가 포함됩니다. 생성된 코드는 [Windows ML API](/uwp/api/windows.ai.machinelearning.preview)를 호출하여 사용자 프로젝트에서 모델을 쉽게 로드, 바인딩 및 평가할 수 있습니다. 코드 생성기는 현재 C# 및 C++/CX를 지원합니다.
 
-UWP 개발자를 위해 Windows ML 자동 코드 생성기는 기본적으로 [Visual Studio(버전 15.7 - 미리 보기 1)](https://www.visualstudio.com/vs/preview/)와 통합됩니다. (**참고**: Visual Studio 설치 관리자에서 선택적 Windows 10 참가자 미리 보기 SDK, 빌드 17110을 선택해야 함). Visual Studio 프로젝트에서는 단순히 ONNX 파일을 기존 항목으로 추가하기만 해도 VS가 새 인터페이스 파일에서 Windows ML 래퍼 클래스를 생성합니다.
+UWP 개발자를 위해 Windows ML 자동 코드 생성기는 기본적으로 [Visual Studio](https://developer.microsoft.com/windows/downloads)와 통합됩니다. Visual Studio 프로젝트 내에서 ONNX 파일을 기존 항목으로 추가하기만 하면 VS가 새 인터페이스 파일에 Windows ML 래퍼 클래스를 생성합니다.
 
-명령줄 도구 `mlgen.exe`를 사용할 수도 있습니다. 이는 Windows SDK와 함께 제공되어 Windows ML 래퍼 클래스를 생성합니다. 이 도구는 `(SDK_root)\bin\<version>\x64` 또는 `(SDK_root)\bin\<version>\x86`에 있으며, 여기서 SDK_root는 SDK 설치 디렉토리입니다. 이 도구를 실행하려면 다음 명령을 사용합니다.
+명령줄 도구 `mlgen.exe`를 사용할 수도 있습니다. 이는 Windows SDK와 함께 제공되어 Windows ML 래퍼 클래스를 생성합니다. 이 도구는 `(SDK_root)\bin\<version>\x64` 또는 `(SDK_root)\bin\<version>\x86`에 있으며, 여기서 SDK_root는 SDK 설치 디렉터리입니다. 이 도구를 실행하려면 다음 명령을 사용합니다.
 
 ```
 mlgen -i INPUT-FILE -l LANGUAGE -n NAMESPACE [-o OUTPUT-FILE]

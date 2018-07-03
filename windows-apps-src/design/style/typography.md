@@ -9,16 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd5e6f3dbddca2f6a944ee18e32463afe029f89
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 505167775b61908be7f47068dbf3221c293f6112
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816778"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843373"
 ---
 # <a name="typography"></a>입력 체계
 
-![입력 체계 헤더 이미지](images/type/header-typography.svg)
+![영웅 이미지](images/header-typography.svg)
 
 언어의 시각적인 표현으로서 입력 체계의 주요 목적은 정보를 전달하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 이 문서에서는 사용자가 콘텐츠를 쉽고 효율적으로 이해할 수 있도록 UWP 앱에서 입력 체계 스타일을 지정하는 방법에 대해 설명합니다.
 
@@ -30,9 +30,9 @@ ms.locfileid: "1816778"
 
 영어 이외의 언어를 표시하거나 앱의 다른 글꼴을 선택하려면 UWP 앱의 권장 글꼴에서 [언어](#Languages) 및 [글꼴](#Fonts)을 참조하세요.
 
-:::행::: :::열::: ![허용](images/do.svg) UI 글꼴 하나를 선택합니다.
-:::열 끝::: :::열::: ![금지](images/dont.svg) 여러 글꼴을 혼합하지 않습니다.
-:::열 끝::: :::행 끝:::
+:::row::: :::column::: ![허용](images/do.svg) UI 글꼴 하나를 선택합니다.
+:::column-end::: :::column::: ![금지](images/dont.svg) 여러 글꼴을 혼합하지 않습니다.
+:::column-end::: :::row-end:::
 
 ## <a name="size-and-scaling"></a>크기 및 배율
 
@@ -42,14 +42,14 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 크기 조정 시스템의 작동 방식 때문에 실제 픽셀이 아닌 유효 픽셀로 디자인하고 있으므로 화면 크기나 해상도가 다른 경우에도 글꼴 크기를 변경할 필요가 없습니다.
 
-:::행::: :::열::: ![허용](images/do.svg) UWP[유형 램프](#type-ramp) 크기 조정을 따릅니다.
-:::열 끝::: :::열::: ![금지](images/dont.svg) 12픽셀보다 작은 글꼴 크기를 사용합니다.
-:::열 끝::: :::행 끝:::
+:::row::: :::column::: ![허용](images/do.svg) UWP[유형 램프](#type-ramp) 크기 조정을 따릅니다.
+:::column-end::: :::column::: ![금지](images/dont.svg) 12픽셀보다 작은 글꼴 크기를 사용합니다.
+:::column-end::: :::row-end:::
 
 ## <a name="hierarchy"></a>계층
 
-:::행::: :::열::: 사용자는 페이지를 검색할 때 시각적 계층 구조에 의존합니다. 헤더는 콘텐츠를 요약하고 본문 텍스트는 자세한 내용을 제공합니다. 앱에서 선명한 시각적 계층 구조를 만들려면 UWP 유형 램프를 따릅니다.
-:::열 끝::: :::열::: ![텍스트 차단 스타일](images/type/type-hierarchy.svg) :::열 끝::: :::행 끝:::
+:::row::: :::column::: 사용자는 페이지를 검색할 때 시각적 계층 구조에 의존합니다. 헤더는 콘텐츠를 요약하고 본문 텍스트는 자세한 내용을 제공합니다. 앱에서 선명한 시각적 계층 구조를 만들려면 UWP 유형 램프를 따릅니다.
+:::column-end::: :::column::: ![텍스트 차단 스타일](images/type/type-hierarchy.svg) :::column-end::: :::row-end:::
 
 ### <a name="type-ramp"></a>유형 램프
 
@@ -59,8 +59,8 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 
 ### <a name="using-the-type-ramp"></a>유형 램프 사용
 
-:::행::: :::열:::  XAML로 유형 램프 수준에 액세스할 수 있습니다[정적 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). 스타일은 `*TextBlockStyle`명명 규칙을 따릅니다.
-:::열 끝::: :::열::: ![텍스트 차단 스타일](images/type/text-block-type-ramp.svg) :::열 끝::: :::행 끝:::
+:::row::: :::column::: XAML로 유형 램프 수준에 액세스할 수 있습니다[정적 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). 스타일은 `*TextBlockStyle`명명 규칙을 따릅니다.
+:::column-end::: :::column::: ![텍스트 차단 스타일](images/type/text-block-type-ramp.svg) :::column-end::: :::row-end:::
 
 ```XAML
 <TextBlock Text="Header" Style="{StaticResource HeaderTextBlockStyle}"/>
@@ -72,7 +72,7 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
-:::행::: :::열::: ![허용](images/do.svg) 대부분의 텍스트에서 '본문'을 사용합니다.
+:::row::: :::column::: ![허용](images/do.svg) 대부분의 텍스트에서 '본문'을 사용합니다.
 
         Use "Base" for titles when space is constrained.
     :::column-end:::
@@ -82,7 +82,7 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 
         Use "Header" or "Subheader" if text needs to wrap.
     :::column-end:::
-:::행 끝:::
+:::row-end:::
 
 ## <a name="alignment"></a>맞춤
 
@@ -96,9 +96,9 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 
 ## <a name="character-count"></a>문자 수
 
-:::행::: :::열::: ![허용](images/do.svg) 읽기 쉽도록 한 줄당 50~60자를 유지합니다.
-:::열 끝::: :::열::: ![금지](images/dont.svg) 한 줄에 20자 미만 또는 60자 이상을 읽는 것은 어렵습니다.
-:::열 끝::: :::행 끝:::
+:::row::: :::column::: ![허용](images/do.svg) 읽기 쉽도록 한 줄당 50~60자를 유지합니다.
+:::column-end::: :::column::: ![금지](images/dont.svg) 한 줄에 20자 미만 또는 60자 이상을 읽는 것은 어렵습니다.
+:::column-end::: :::row-end:::
 
 ## <a name="clipping-and-ellipses"></a>클리핑 및 줄임표
 
@@ -110,9 +110,9 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 <TextBlock TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
 ```
 
-:::행::::::열::: ![허용](images/do.svg) 여러 줄을 사용할 수 있는 경우 텍스트를 클리핑하고 래핑합니다.
-:::열 끝::: :::열::: ![금지](images/dont.svg) 줄임표를 사용하여 시각적으로 깔끔하게 보이도록 합니다.
-:::열 끝::: :::행 끝:::
+:::row::::::column::: ![허용](images/do.svg) 여러 줄을 사용할 수 있는 경우 텍스트를 클리핑하고 래핑합니다.
+:::column-end::: :::column::: ![금지](images/dont.svg) 줄임표를 사용하여 시각적으로 깔끔하게 보이도록 합니다.
+:::column-end::: :::row-end:::
 
 **참고**: 잘 정의되지 않은(예: 차별화된 배경색 없음) 컨테이너의 경우나 추가 텍스트를 확인해야 하는 링크가 있는 경우 줄임표를 사용합니다.
 

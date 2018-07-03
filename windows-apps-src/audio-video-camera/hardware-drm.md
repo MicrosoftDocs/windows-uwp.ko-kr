@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 63dfd179fbc90be41b162d31e52e5c6b25956323
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691902"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842750"
 ---
 # <a name="hardware-drm"></a>하드웨어 DRM
 
@@ -104,7 +104,7 @@ bool isFeatureSupported = PlayReadyStatics.CheckSupportedHardware(PlayReadyHardw
 하드웨어 DRM이 지원되는지 확인하기 위해 클라이언트 인증서의 보안 수준을 얻으려면 [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx) 속성도 사용할 수 있습니다. 반환된 인증서 보안 수준이 3000 이상인 경우 클라이언트가 개별화 또는 프로비전되지 않았거나(두 경우 모두 이 속성은 0을 반환) 하드웨어 DRM이 사용 중이 아닙니다(이 경우 이 속성은 3000 미만인 값을 반환).
 
 ### <a name="detecting-support-for-aes128cbc-hardware-drm"></a>AES128CBC 하드웨어 DRM에 대한 지원 검색
-Windows 10, 버전 1709부터 디바이스에서 AES128CBC 하드웨어 암호화에 대한 지원을 검색하려면 **[PlayReadyStatics.CheckSupportedHardware](https://msdn.microsoft.com/library/windows/apps/dn986441)** 를 호출하고 열거 값 [**PlayReadyHardwareDRMFeatures.Aes128Cbc**](https://msdn.microsoft.com/library/windows/apps/dn986265)를 지정합니다. 이전 버전의 Windows 10에서 이 값을 지정하면 예외가 발생합니다. 이러한 이유로 열거 값이 있는지 확인하려면 **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** 를 호출하고 주요 계약 버전 5를 지정한 후  **CheckSupportedHardware**를 호출합니다.
+Windows 10, 버전 1709부터 디바이스에서 AES128CBC 하드웨어 암호화에 대한 지원을 검색하려면 **[PlayReadyStatics.CheckSupportedHardware](https://msdn.microsoft.com/library/windows/apps/dn986441)** 를 호출하고 열거 값 [**PlayReadyHardwareDRMFeatures.Aes128Cbc**](https://msdn.microsoft.com/library/windows/apps/dn986265)를 지정합니다. 이전 버전의 Windows 10에서 이 값을 지정하면 예외가 발생합니다. 이러한 이유로 열거 값이 있는지 확인하려면 **[ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent)** 를 호출하고 주요 계약 버전 5를 지정한 후 **CheckSupportedHardware**를 호출합니다.
 
 ```csharp
 bool supportsAes128Cbc = ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 5);

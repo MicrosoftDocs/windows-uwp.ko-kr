@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: e3eecf6e6263e0126dbdf8c50f7ddb0431b66116
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 00d6d67bccf9eb91e1d90aa547d9e857cfa83c19
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817028"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917732"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 
@@ -103,7 +103,7 @@ CoCreatableClass(NotificationActivator);
 1. **xmlns:com** 선언
 2. **xmlns:desktop** 선언
 3. **IgnorableNamespaces** 특성에서 **com**과 **desktop**
-4. 4단계에서 GUID를 사용하여 COM 서버에서 **com:Extension**. 알림에서 실행을 알 수 있도록 `Arguments="-ToastActivated"`를 포함해야 합니다.
+4. 4단계에서 GUID를 사용하여 COM 활성자에서 **com:Extension**. 알림에서 실행을 알 수 있도록 `Arguments="-ToastActivated"`를 포함해야 합니다.
 5. **windows.toastNotificationActivation**에 대한 **desktop:Extension**는 알림 활성자 CLSID(4단계의 GUID)를 선언합니다.
 
 **Package.appxmanifest**
@@ -220,9 +220,9 @@ if (SUCCEEDED(hr))
     hr = DesktopNotificationManagerCompat::CreateToastNotifier(&notifier);
     if (SUCCEEDED(hr))
     {
-        // Create the notification itself
+        // Create the notification itself (using helper method from compat library)
         ComPtr<IToastNotification> toast;
-        hr = MakeAndInitialize<ToastNotification>(&toast, doc.Get());
+        hr = DesktopNotificationManagerCompat::CreateToastNotification(doc, &toast);
         if (SUCCEEDED(hr))
         {
             // And show it!
@@ -231,6 +231,9 @@ if (SUCCEEDED(hr))
     }
 }
 ```
+
+> [!IMPORTANT]
+> 클래식 Win32 앱은 레거시 알림 템플릿(예: ToastText02)을 사용할 수 없습니다. COM CLSID가 지정되었을 때 레거시 템플릿의 활성화는 실패합니다. 위에서 설명한 대로 Windows 10 ToastGeneric 템플릿을 사용해야 합니다.
 
 
 ## <a name="step-8-handling-activation"></a>8단계: 활성화 처리
@@ -445,4 +448,5 @@ if (IsWindows10OrGreater())
 ## <a name="resources"></a>리소스
 
 * [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/desktop-toasts)
+* [데스크톱 앱에서 알림 메시지](toast-desktop-apps.md)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)

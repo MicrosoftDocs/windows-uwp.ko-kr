@@ -5,17 +5,17 @@ description: Windows.Services.Store 네임스페이스를 사용하여 소모성
 title: 소모성 추가 기능 구매 사용
 keywords: Windows 10, uwp, 소모성, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store
 ms.author: mcleans
-ms.date: 08/25/2017
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b327327448b47416e3ba113a65aa8a7b755f1f0
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: c7c36abe2d1332e5b6c94cbb936ad00769314d07
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689309"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874421"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>소모성 추가 기능 구매 사용
 
@@ -32,18 +32,18 @@ ms.locfileid: "1689309"
 
   예를 들어 게임에서 추가 기능이 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱 또는 서비스에서 사용자의 남은 새 잔액인 90개 동전을 유지 관리해야 합니다. 사용자가 100개 동전을 모두 사용한 후 앱에서 추가 기능을 처리된 것으로 보고해야 하며, 그러면 사용자가 100개 동전 추가 기능을 다시 구매할 수 있습니다.
 
-* **스토어 관리 소모성**. 이 소모성 유형의 경우 스토어에서 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다. 사용자는 항목을 사용할 때 해당 항목을 처리된 것으로 스토어에 보고해야 하며, 스토어에서 사용자 잔액을 업데이트합니다. 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. 사용자는 모든 항목을 사용한 후 추가 기능을 다시 구매할 수 있습니다.
+* **Microsoft Store 관리 소모성**. 이 소모성 유형의 경우 스토어에서 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다. 사용자는 항목을 사용할 때 해당 항목을 처리된 것으로 스토어에 보고해야 하며, 스토어에서 사용자 잔액을 업데이트합니다. 사용자는 원하는 만큼 추가 기능을 구입할 수 있습니다(항목을 먼저 소비할 필요는 없음). 앱은 언제든지 Microsoft Store에 사용자의 현재 잔액을 쿼리할 수 있습니다.
 
-  예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱은 추가 기능의 10개 단위가 처리되었다고 스토어에 보고하고 스토어에서 남은 잔액을 업데이트합니다. 사용자는 100개 동전을 모두 사용한 후 100개 동전 추가 기능을 다시 구매할 수 있습니다.
+  예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 50개 동전을 사용한 경우 앱은 추가 기능의 50개 단위가 처리되었다고 Microsoft Store에 보고하고 Microsoft Store에서 남은 잔액을 업데이트합니다. 그러면 사용자는 기능을 다시 구입하여 동전을 100개 획득하고, 동전을 총 150개 갖게 됩니다.
     > [!NOTE]
-    > Store 관리 소모성은 Windows10 버전 1607에 도입되었습니다.
+    > Microsoft Store 관리 소모성은 Windows10 버전 1607에 도입되었습니다.
 
 사용자에게 소모성 추가 기능을 제공하려면 다음과 같은 일반 프로세스를 따르세요.
 
 1. 사용자가 앱에서 [추가 기능을 구매](enable-in-app-purchases-of-apps-and-add-ons.md)할 수 있게 합니다.
 3. 사용자가 추가 기능을 사용하면(예: 게임에서 동전 소비) [추가 기능을 처리된 것으로 보고](enable-consumable-add-on-purchases.md#report_fulfilled)합니다.
 
-언제든지 스토어 관리 소모성의 [남은 잔액을 확인](enable-consumable-add-on-purchases.md#get_balance)할 수도 있습니다.
+언제든지 Microsoft Store 관리 소모성의 [남은 잔액을 확인](enable-consumable-add-on-purchases.md#get_balance)할 수도 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -71,7 +71,7 @@ ms.locfileid: "1689309"
 * 처리된 것으로 보고할 추가 기능의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)
 * 처리된 것으로 보고할 추가 기능의 단위.
   * 개발자 관리 소모성의 경우 *quantity* 매개 변수에 대해 1을 지정합니다. 그러면 소모성이 처리되었다고 스토어에 알리며 고객이 소모성을 다시 구매할 수 있습니다. 앱이 스토어에 처리되었다고 알리기 전에는 사용자가 소모성을 다시 구매할 수 없습니다.
-  * 스토어 관리 소모성의 경우 사용된 실제 단위 수를 지정합니다. 스토어에서 소모성의 남은 잔액을 업데이트합니다.
+  * Microsoft Store 관리 소모성의 경우 사용된 실제 단위 수를 지정합니다. 스토어에서 소모성의 남은 잔액을 업데이트합니다.
 * 처리의 추적 ID. 처리 작업이 연결된 특정 트랜잭션을 추적용으로 식별하는 개발자 제공 GUID입니다. 자세한 내용은 [ReportConsumableFulfillmentAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.reportconsumablefulfillmentasync)의 설명을 참조하세요.
 
 이 예제에서는 Microsoft Store에서 관리하는 소모성을 처리된 것으로 보고하는 방법을 보여 줍니다.

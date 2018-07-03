@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 게임, directx, 리소스 로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cd2ca426f5a73a6cf8953ab599f8a7332be43a4
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655615"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983556"
 ---
 # <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 
 
 
-대부분의 게임은 특정 시점에 로컬 저장소 또는 몇몇 다른 데이터 스트림에서 셰이더, 텍스처, 미리 정의된 메시 또는 기타 그래픽 데이터 등, 리소스와 자산을 로드합니다. 여기서는 UWP(유니버설 Windows 플랫폼) 게임에 사용하기 위해 이러한 파일을 로드할 때 고려해야 할 부분에 대해 심도 있게 다룹니다.
+대부분의 게임은 특정 시점에 로컬 저장소 또는 몇몇 다른 데이터 스트림에서 셰이더, 텍스처, 미리 정의된 메시 또는 기타 그래픽 데이터 등, 리소스와 자산을 로드합니다. 여기서는 DirectX C/C++ UWP(유니버설 Windows 플랫폼) 게임에 사용하기 위해 이러한 파일을 로드할 때 고려해야 할 부분에 대해 심도 있게 다룹니다.
 
 예를 들어, 게임에서 다각형 개체에 대한 메시는 다른 도구를 사용하여 만들고 특정 형식으로 내보냈을 수도 있습니다. 텍스처와 다른 리소스도 마찬가지입니다. 압축되지 않은 일반 비트맵은 대부분의 도구로 작성할 수 있고 대부분의 그래픽 API에서 이해할 수 있지만 게임에 사용하기는 아주 비효율적입니다. 이 항목에서는 Direct3D와 함께 사용하기 위해 세 가지 다른 유형의 그래픽 리소스인 메시(모델), 텍스처(비트맵), 컴파일된 셰이더 개체를 로드하는 기본 단계를 안내합니다.
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 패키징
 ms.localizationpriority: medium
-ms.openlocfilehash: cdb49ba0082c24c00bc77d8ce2a392d9a6090ce2
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 263a0b7ce4eaeb3bac132789d4970fbf2c7ccc1f
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815588"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842490"
 ---
 # <a name="packaging-apps"></a>앱 패키징
 
@@ -26,11 +26,12 @@ ms.locfileid: "1815588"
 
 | 항목 | 설명 |
 |-------|-------------|
-| [Visual Studio를 사용하여 UWP 앱 패키징](packaging-uwp-apps.md) | UWP(유니버설 Windows 플랫폼) 앱을 배포 또는 판매하려면, 여기에 대한 앱 패키지를 만들어야 합니다. |
+| [Visual Studio를 사용하여 UWP 앱 패키징](packaging-uwp-apps.md) | UWP 앱을 배포 또는 판매하려면, 여기에 대한 앱 패키지를 만들어야 합니다. |
 | [수동 앱 패키징](manual-packaging-root.md) | 앱 패키지를 만들어 서명하려 하지만 앱 개발에 Visual Studio를 사용하지 않은 경우, 수동 앱 패키징 도구를 사용해야 합니다. |
 | [앱 패키지 아키텍처](device-architecture.md) | UWP 앱 패키지를 빌드할 때 사용해야 할 프로세스 아키텍처에 대해 알아봅니다. |
 | [UWP 앱 스트리밍 설치](streaming-install.md) | UWP(유니버설 Windows 플랫폼) 앱 스트리밍 설치는 Microsoft Store에서 먼저 다운로드하고 싶은 앱의 부분을 지정할 수 있도록 해줍니다. 앱의 기본 파일이 먼저 다운로드되면, 백그라운드에서 나머지 부분이 완전히 다운로드되는 동안 사용자는 앱을 실행하고 상호 작용할 수 있습니다. |
-| [선택적 패키지 및 관련 집합 제작](optional-packages.md) | 선택적 패키지 패키지에는 주 패키지에 통합할 수 있는 콘텐츠가 포함되어 있습니다. 다운로드 가능한 콘텐츠(DLC)에서 크기 제한을 위해 대형 앱을 분할하거나, 원래 앱과의 분리를 위해 추가 콘텐츠를 배송하는 경우에 유용합니다. |
+| [선택적 패키지 및 관련 집합 제작](optional-packages.md) | 선택적 패키지에는 주 패키지에 통합할 수 있는 콘텐츠가 포함되어 있습니다. 다운로드 가능한 콘텐츠(DLC)에서 크기 제한을 위해 대형 앱을 분할하거나, 원래 앱과의 분리를 위해 추가 콘텐츠를 배송하는 경우에 유용합니다. |
+| [실행 가능한 코드가 있는 선택적 패키지](optional-packages-with-executable-code.md) | Visual Studio를 사용하여 실행 코드로 선택적 패키지를 사용하는 방법을 알아보세요. |
 | [앱 설치 관리자를 사용하여 UWP 앱 설치](appinstaller-root.md) | 앱 설치 관리자를 사용하면 앱 패키지를 두 번 클릭하여 UWP 앱을 설치할 수 있습니다. |
 | [WinAppDeployCmd.exe 도구를 사용하여 앱 설치](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Windows 응용 프로그램 배포(WinAppDeployCmd.exe)는 Windows10 컴퓨터에서 Windows10 Mobile 디바이스로 UWP 앱을 배포하는 데 사용할 수 있는 명령줄 도구입니다. Windows10 Mobile 디바이스가 Microsoft Visual Studio나 해당 앱에 대한 솔루션 없이 동일한 서브넷에서 사용 가능하거나 USB로 연결되면 이 도구를 사용하여 .appx 패키지를 배포할 수 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다. |
 | [UWP 앱에 대한 자동화된 빌드 설정](auto-build-package-uwp-apps.md) | 자동화된 빌드 프로세스의 일부로 앱을 패키징하려는 경우 이 항목에서 VSTS(Visual Studio Team Services)를 사용하여 수행하는 방법을 보여 줍니다. |

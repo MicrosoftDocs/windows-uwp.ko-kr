@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 박싱, 스칼라, 값
 ms.localizationpriority: medium
-ms.openlocfilehash: 61d5c7a35fb7a6ff9952f3fe768f4faa3f6c6347
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 9548776fe1be06c9b622870c4d3331b04a943789
+ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832008"
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "1935791"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용해 스칼라 값을 IInspectable로 박싱(boxing) 및 언박싱(unboxing) 
 [**IInspectable 인터페이스**](https://msdn.microsoft.com/library/windows/desktop/br205821)는 Windows 런타임(WinRT)에서 모든 런타임 클래스의 루트 인터페이스입니다. 이는 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)이 모든 COM 인터페이스 및 클래스의 루트에 위치하고, **System.Object**가 모든 [공용 형식 시스템](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system) 클래스의 루트에 위치하는 것과 유사합니다.
@@ -30,7 +30,7 @@ C++/WinRT는 [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value) 함수를 
 void App::OnLaunched(LaunchActivatedEventArgs const& e)
 {
     ...
-    rootFrame.Navigate(xaml_typename<BlankApp1::MainPage>(), winrt::box_value(e.Arguments()));
+    rootFrame.Navigate(winrt::xaml_typename<BlankApp1::MainPage>(), winrt::box_value(e.Arguments()));
     ...
 }
 ```
@@ -41,13 +41,13 @@ XAML [**버튼**](/uwp/api/windows.ui.xaml.controls.button)의 내용 속성을 
 Button().Content(winrt::box_value(L"Clicked"));
 ```
 
-먼저 **hstring** 변환 생성자가 문자열 리터럴을 **hstring**으로 변환합니다. 그러면 **hstring**을 가져오는 **winrt::box_value** 오버로드가 호출됩니다.
+먼저 [**hstring**](/uwp/cpp-ref-for-winrt/hstring) 변환 생성자가 문자열 리터럴을 **hstring**으로 변환합니다. 그러면 **hstring**을 가져오는 **winrt::box_value** 오버로드가 호출됩니다.
 
 ## <a name="examples-of-unboxing-an-iinspectable"></a>IInspectable을 언박싱하는 예제
 **IInspectable**이 필요한 사용자 고유의 함수에서는 [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value)를 사용해 언박싱하거나 [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or)를 사용해 기본 값으로 언박싱할 수 있습니다.
 
 ```cppwinrt
-void Unbox(Windows::Foundation::IInspectable const& object)
+void Unbox(winrt::Windows::Foundation::IInspectable const& object)
 {
     hstring hstringValue = unbox_value<hstring>(object); // Throws if object is not a boxed string.
     hstringValue = unbox_value_or<hstring>(object, L"Default"); // Returns L"Default" if object is not a boxed string.
@@ -55,8 +55,19 @@ void Unbox(Windows::Foundation::IInspectable const& object)
 }
 ```
 
+## <a name="determine-the-type-of-a-boxed-value"></a>박싱된 값 유형 확인
+박싱된 값을 받고 여기에 포함된 유형이 무엇인지 확실하지 않은 경우(언박싱하려면 유형을 알아야 함) 해당 [**IPropertyValue**](/uwp/api/windows.foundation.ipropertyvalue) 인터페이스에 대해 박싱된 값을 쿼리한 다음 거기에서 **Type**을 호출할 수 있습니다. 코드 예제는 다음과 같습니다.
+
+```cppwinrt
+float pi = 3.14f;
+auto piInspectable = winrt::box_value(pi);
+auto piPropertyValue = piInspectable.as<winrt::Windows::Foundation::IPropertyValue>();
+WINRT_ASSERT(piPropertyValue.Type() == winrt::Windows::Foundation::PropertyType::Single);
+```
+
 ## <a name="important-apis"></a>중요 API
 * [IInspectable 인터페이스](https://msdn.microsoft.com/library/windows/desktop/br205821)
 * [winrt::box_value 함수 템플릿](/uwp/cpp-ref-for-winrt/box-value)
+* [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
 * [winrt::unbox_value 함수 템플릿](/uwp/cpp-ref-for-winrt/unbox-value)
 * [winrt::unbox_value_or 함수 템플릿](/uwp/cpp-ref-for-winrt/unbox-value-or)

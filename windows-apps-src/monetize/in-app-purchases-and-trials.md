@@ -4,18 +4,18 @@ ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: UWP 앱에서 ‘앱에서 바로 구매’ 및 평가판을 사용하도록 설정하는 방법을 알아봅니다.
 title: 앱에서 바로 구매 및 평가판
 ms.author: mcleans
-ms.date: 08/25/2017
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: 28e28c5db19d9a2b397a04cc326867605d796aac
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 7b5b889dfd1dae69cbe4234bf0606127c1190522
+ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691242"
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "1874301"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱 내 구매 및 평가판
 
@@ -33,7 +33,7 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 앱에서 바로 구매와 평가판 기능을 UWP 앱에 추가하는 데 사용할 수 있는 네임스페이스는 앱에서 대상을 지정한 Windows10 버전에 따라 서로 다른 두 가지가 있습니다. 두 네임스페이스의 API는 동일한 역할을 하지만 완전히 다르게 디자인되었으며 두 API 간에 코드가 호환되지 않습니다.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Windows10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Windows10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임스페이스는 Microsoft Store 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;모든 버전의 Windows 10은 이 네임이 스페이스에서 앱에서 바로 구매 및 평가판을 위한 이전 API도 지원합니다. **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
@@ -55,9 +55,9 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 | 추가 기능 유형 |  설명  |
 |---------|-------------------|
 | 지속형  |  [Windows 개발자 센터 대시보드](../publish/enter-iap-properties.md)에서 지정한 수명 동안 지속되는 추가 기능입니다. <p/><p/>기본적으로 지속형 추가 기능은 만료되지 않으므로 한 번만 구매할 수 있습니다. 추가 기능에 대해 특정 지속 기간을 지정하면 만료 후에 사용자가 추가 기능을 다시 구매할 수 있습니다. |
-| 개발자 관리 소모성  |  구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. 이 유형의 추가 기능은 주로 앱에서 바로 구매 통화에 사용됩니다. <p/><p/>이 소모성 유형의 경우 개발자가 추가 기능이 나타내는 항목의 사용자 잔액을 추적하고 사용자가 항목을 모두 사용한 후 추가 기능 구매를 처리된 것으로 스토어에 보고해야 합니다. 사용자는 앱에서 이전 추가 기능 구매를 처리된 것으로 보고할 때까지 추가 기능을 다시 구매할 수 없습니다. <p/><p/>예를 들어 게임에서 추가 기능이 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱 또는 서비스에서 사용자의 남은 새 잔액인 90개 동전을 유지 관리해야 합니다. 사용자가 100개 동전을 모두 사용한 후 앱에서 추가 기능을 처리된 것으로 보고해야 하며, 그러면 사용자가 100개 동전 추가 기능을 다시 구매할 수 있습니다.    |
-| 스토어 관리 소모성  |  구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. 이 유형의 추가 기능은 주로 앱에서 바로 구매 통화에 사용됩니다.<p/><p/>이 소모성 유형의 경우 스토어에서 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다. 사용자는 항목을 사용할 때 해당 항목을 처리된 것으로 스토어에 보고해야 하며, 스토어에서 사용자 잔액을 업데이트합니다. 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. 사용자는 모든 항목을 사용한 후 추가 기능을 다시 구매할 수 있습니다.  <p/><p/> 예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱은 추가 기능의 10개 단위가 처리되었다고 스토어에 보고하고 스토어에서 남은 잔액을 업데이트합니다. 사용자는 100개 동전을 모두 사용한 후 100개 동전 추가 기능을 다시 구매할 수 있습니다. <p/><p/>**참고**&nbsp;&nbsp;Store에서 관리하는 소모품을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.Services.Store** 네임스페이스 대신 **Windows.ApplicationModel.Store** 네임스페이스를 사용해야 합니다.  |
-| 구독 | 고객이 계속 추가 기능을 이용하기 위해 반복적으로 계속 요금을 내는 지속적인 추가 기능. 고객은 추가 요금이 부과되지 않도록 언제든 구독을 취소할 수 있습니다. <p/><p/>**참고**&nbsp;&nbsp;구독 추가 기능은 현재 초기 채택 프로그램에 참여하고 있는 개발자만 사용할 수 있습니다. 구독 추가 기능을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용해야 합니다.  |
+| 개발자 관리 소모성  |  구매하고, 사용하고, 모두 소비한 후 다시 구매할 수 있는 추가 기능입니다. 귀하는 추가 기능이 나타내는 항목의 사용자 잔액을 추적할 책임이 있습니다.<p/><p/>사용자가 추가 기능과 관련된 모든 항목을 소비할 때 귀하는 사용자 잔액을 유지하고 사용자가 항목을 모두 소비한 후 추가 기능 구매를 처리된 것으로 Microsoft Store에 보고할 책임이 있습니다. 사용자는 앱에서 이전 추가 기능 구매를 처리된 것으로 보고할 때까지 추가 기능을 다시 구매할 수 없습니다. <p/><p/>예를 들어 게임에서 추가 기능이 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱 또는 서비스에서 사용자의 남은 새 잔액인 90개 동전을 유지 관리해야 합니다. 사용자가 100개 동전을 모두 사용한 후 앱에서 추가 기능을 처리된 것으로 보고해야 하며, 그러면 사용자가 100개 동전 추가 기능을 다시 구매할 수 있습니다.    |
+| Microsoft Store 관리 소모성  |  언제든지 구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. Microsoft Store는 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다.<p/><p/>사용자가 추가 기능과 관련된 모든 항목을 사용할 때 해당 항목을 처리된 것으로 Microsoft Store에 보고해야 하며, Microsoft Store에서 사용자 잔액을 업데이트합니다. 사용자는 원하는 만큼 추가 기능을 구입할 수 있습니다(항목을 먼저 소비할 필요는 없음). 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. <p/><p/> 예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 50개 동전을 사용한 경우 앱은 추가 기능의 50개 단위가 처리되었다고 Microsoft Store에 보고하고 Microsoft Store에서 남은 잔액을 업데이트합니다. 그러면 사용자는 기능을 다시 구입하여 동전을 100개 획득하고, 동전을 총 150개 갖게 됩니다. <p/><p/>**참고**&nbsp;&nbsp;Microsoft Store에서 관리하는 소모품을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용해야 합니다.  |
+| 구독 | 고객이 계속 추가 기능을 이용하기 위해 반복적으로 계속 요금을 내는 지속적인 추가 기능. 고객은 추가 요금이 부과되지 않도록 언제든 구독을 취소할 수 있습니다. <p/><p/>**참고**&nbsp;&nbsp;구독 추가 기능을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용해야 합니다.  |
 
 <span />
 
@@ -162,7 +162,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 앱에서 앱 내 구매 또는 평가판 기능을 구현하기 위해 **Windows.Services.Store** 네임스페이스의 API를 사용하고 있다면, 테스트 라이선스를 사용하기 위해 앱을 Store에 제출하고, 앱을 개발자 장치에 다운로드해야 합니다. 다음 프로세스로 코드를 테스트합니다.
 
-1. 앱이 아직 게시되지 않고 Store에서 사용할 수 없는 경우 앱이 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는지 확인하고, Windows 개발자 센터 대시보드에 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)하고 인증 프로세스를 전달해야 합니다. 테스트 하는 동안 [앱이 Store에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다.
+1. 앱이 아직 게시되지 않고 Store에서 사용할 수 없는 경우 앱이 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는지 확인하고, Windows 개발자 센터 대시보드에 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)하고 인증 프로세스를 전달해야 합니다. 테스트 하는 동안 [앱이 스토어에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다.
 
 2. 그런 다음 아래 작업을 완료해야 합니다.
 

@@ -4,19 +4,19 @@ Description: This article contains known issues with the Desktop Bridge.
 Search.Product: eADQiWindows 10XVcnh
 title: 알려진 문제(데스크톱 브리지)
 ms.author: normesta
-ms.date: 07/18/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 78e5ffddfa1c5005bb640baeafed7023ebdd74a3
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 76ff4fb4b7933c54e5137507e7996eefa7b46d5a
+ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662853"
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "1905384"
 ---
 # <a name="known-issues-desktop-bridge"></a>알려진 문제(데스크톱 브리지)
 
@@ -95,7 +95,7 @@ Microsoft Store에서 특정 앱을 설치하거나 실행한 후 컴퓨터가 *
 
 업데이트해도 문제가 해결되지 않거나 PC를 복구하는 방법을 잘 모를 경우 [Microsoft 지원](https://support.microsoft.com/contactus/)에 문의하세요.
 
-개발자인 경우에는 이 업데이트를 포함하지 않는 Windows 버전에서 데스크톱 브리지 앱 설치를 방지할 수 있습니다. 이렇게 하면 업데이트를 설치하지 않은 사용자는 앱을 사용할 수 없게 됩니다. 이 업데이트를 설치한 사용자에게 앱의 가용성을 제한하려면 AppxManifest.xml 파일을 다음과 같이 수정합니다.
+개발자인 경우에는 이 업데이트를 포함하지 않는 Windows 버전에서 패키지된 응용 프로그램 설치를 방지할 수 있습니다. 이렇게 하면 업데이트를 설치하지 않은 사용자는 앱을 사용할 수 없게 됩니다. 이 업데이트를 설치한 사용자에게 앱의 가용성을 제한하려면 AppxManifest.xml 파일을 다음과 같이 수정합니다.
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 

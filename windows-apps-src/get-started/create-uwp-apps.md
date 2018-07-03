@@ -3,94 +3,77 @@ author: QuinnRadich
 title: 유니버설 Windows 플랫폼을 통해 앱 제작
 description: 생각보다 쉽게 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
 ms.author: quradic
-ms.date: 08/24/2017
+ms.date: 5/7/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 66536a3059ea6d9b17709c836f4149b1ec583165
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.openlocfilehash: c31a659b7584bec5a8f71307c40a220e17d62b53
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692714"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843536"
 ---
-# <a name="create-apps-for-windows-10"></a>Windows 10용 앱 만들기
+# <a name="start-coding"></a>코딩 시작
 
 ![앱 빌드](images/build-your-app.png)
 
-[UWP 플랫폼](universal-application-platform-guide.md)을 시작합니다! 이 자습서는 첫 번째 UWP 앱을 만들려고 하거나 더 고급 기능을 사용하길 원하는 모든 사용자에게 올바른 방향을 제시합니다. 다음 항목에 대하 알아봅니다.
+[UWP 플랫폼](universal-application-platform-guide.md)을 시작합니다! 이 페이지에서 만들려는 Windows 10 앱 코딩을 시작하는 데 필요한 올바른 정보를 안내합니다.
 
--   Microsoft Visual Studio에서 UWP 프로젝트 만들기.
--   프로젝트에 UI 요소 및 코드 추가.
--   XAML, 데이터 바인딩 및 기타 기본 UWP 요소 사용.
--   앱에 Ink 및 Dial과 같은 고유한 UWP 기능 통합.
--   타사 라이브러리를 사용하여 새 기능 추가.
--   로컬 컴퓨터에서 앱 빌드 및 디버그.
+개발을 시작하기 전에 [설정해야 합니다](get-set-up.md).
 
-## <a name="ask-a-bot"></a>봇에게 물어보세요!
+## <a name="learning-tracks"></a>학습 트랙
 
-문제가 있거나 올바른 문서를 찾는 데 도움이 필요하면 아래의 실험용 채팅 봇에게 물어보세요. 예를 들어 "어디에서 Visual Studio를 다운로드할 수 있나요?" 또는 "Fluent 디자인에 대해 말해 주세요."라고 물어보세요. 유용한 답을 얻지 못하면 질문을 약간 수정해 보세요.
+다음 학습 트랙은 몇 가지 기본 작업을 완료하기 전에 알아야 할 사항과 해당 정보를 찾을 수 있는 위치를 소개합니다. 자습서는 아니지만 올바르게 작업을 수행하고 있는지 확인할 수 있는 참조 코드를 제공합니다.
 
-<iframe src='https://webchat.botframework.com/embed/DocBot4?s=T2nP6qZUXC8.cwA.lvc.AR-ZBwtULpaITu6_dAhMwrmg4R2GSLNzIoiMNFL8M7M' height="400" width="400"></iframe>
+| 작업 | 설명 |
+| --- | --- |
+| [양식 작성](construct-form-learning-track.md) | 사용하기 쉽고 화면 크기와 관계없이 멋지게 보이는 양식을 만드는 방법을 알아보세요. | 
+| [목록에서 고객 표시](display-customers-in-list-learning-track.md) | UI에서 데이터를 표시하고 편집하는 방법을 알아보세요. | 
+| [설정 저장 및 로드](settings-learning-track.md) | 설정을 저장하고 검색하는 위치와 방법에 대해 알아봅니다. |
+| [파일 작업](fileio-learning-track.md) | 파일을 읽고 쓰는 방법과 액세스할 수 있는 또는 없는 폴더를 알아봅니다. | 
 
-## <a name="write-your-first-uwp-app-in-your-favorite-programming-language"></a>즐겨 쓰는 프로그래밍 언어를 사용하여 첫 번째 UWP 앱 작성
+Windows 10에 익숙한 경험 있는 개발자를 위해 모든 학습 트랙이 기록됩니다. 막 시작하는 경우 [새 개발자를 위한](#For-new-developers) 콘텐츠로 시작합니다.
 
-새로운 개발자이거나 Windows 플랫폼에 익숙하고 UWP를 시작하려는 경우 다음 기본 자습서를 확인하세요.
+## <a name="for-new-developers"></a>새 개발자용
 
-* [C#, Visual C++ 또는 JavaScript 사용하여 첫 UWP 앱 만들기](your-first-app.md)
+새 개발자를 위해 Microsoft는 Windows 10 개발에 필요한 코드 및 도구를 사용하는 방법의 기본 사항을 학습할 수 있는 많은 리소스를 제공합니다. 
 
-IOS 개발자인 경우
+* ["Hello World" 앱 만들기](your-first-app.md)
 
-* [iOS용 Windows 브리지](https://developer.microsoft.com/windows/bridges/ios)를 사용하여 기존 코드를 UWP 앱으로 변환하고 Objective-C로 개발을 계속 진행하세요.
+코딩, the C# 언어, Visual Studio, 또는 유니버설 Windows 플랫폼의 기능에 대해 더 자세한 안내를 원하는 경우 다음 리소스를 참고하세요.
 
-계속 배우고 있는 중이거나 기억을 되살리려면 다음 외부 리소스를 읽어 보세요.
+**문서:**
 
-* [Windows 10 개발자 가이드](https://go.microsoft.com/fwlink/?linkid=850804)
-* [Microsoft Virtual Academy](http://www.microsoftvirtualacademy.com/)
+* [C# 시작](https://docs.microsoft.com/dotnet/csharp/getting-started/)
+* [C# 빠른 시작](https://docs.microsoft.com/dotnet/csharp/quick-starts/index)
+* [Visual Studio 시작](https://docs.microsoft.com/visualstudio/ide/)
 
-## <a name="customize-your-apps-layout-and-appearance-with-xaml"></a>XAML을 사용하여 앱의 레이아웃 및 모양 사용자 지정
+**비디오**
 
-대부분의 UWP 앱은 XAML 생성 언어를 사용하여 UI를 만듭니다. 핵심 기능을 사용하여 앱의 시각적 표현을 사용자 지정할 수 있는 방법을 확인하고 앱의 고유한 모습을 만드는 방법을 이 지침에서 살펴보세요.
+* [Microsoft Virtual Academy](https://mva.microsoft.com/training-topics/c-app-development#!level=Beginner&lang=1033)
+* [LinkedIn Learning](https://www.linkedin.com/learning/learning-universal-windows-app-development/welcome)
 
-* [앱 UI 디자인 소개](../design/basics/design-and-ui-intro.md)
-* [자습서: XAML에서 사용자 인터페이스 만들기](../design/basics/xaml-basics-ui.md)
-* [UWP 앱의 레이아웃](../design/layout/index.md)
-* [UWP 앱의 컨트롤 및 패턴](../design/controls-and-patterns/index.md)
+## <a name="using-the-docs"></a>문서 사용
 
-## <a name="use-features-unique-to-windows-10"></a>Windows 10 고유의 기능 사용
+우리의 학습 트랙을 이미 탐색해 보았거나 학습 트랙에서 다루지 않은 사항에 관심이 있는 경우, 설명서를 통해 스스로 둘러보는 것이 좋습니다. 각 영역에서 찾을 수 사항에 대한 간단한 개요는 다음과 같습니다.
 
-Windows 10이 특별한 이유는 무엇인가요? 고유 기능 중 일부만 사용하는 방법을 알아보세요.
+| 영역 | 설명 |
+| --- | --- |
+| **새로운 기능?** | Windows 10의 각 주요 업데이트와 함께 새로운 지침으로 확장된 문서를 볼 수 있습니다. 이 문서에는 각 릴리스에 대해 추가한 기능에 대한 정보 및 개발자 지침뿐만 아니라 새 API 목록이 들어 있습니다. </br>   [최신 Windows 10 릴리스의 개발자용 새로운 기능](../whats-new/windows-10-version-latest.md) </br> 주요 릴리스에서만 문서를 업데이트하는 것은 아닙니다. 새로운 정보를 탐색할 수 있는 새로운 정보가 항상 추가되며 최신 정보에 대해 알려 드립니다. </br>   [문서의 새 소식](../whats-new/windows-docs-latest.md) |
+| **디자인 및 UI** | 문서의 이 영역에 시각적 표시 및 앱의 UI에 있는 모든 정보가 포함되어 있습니다. XAML 표시 언어의 사양에 관심 있거나 사용자 문서에 대한 고유한 모습의 사용자 문서를 만들려는 경우 여기에서 시작합니다. </br>   [UWP 앱의 디자인 기본 사항](../design/basics/index.md) |
+| **앱 개발** | 특정 Windows 10 기능에 대한 자세한 정보를 싶거나 UWP 개발로 수행할 수 있는 작업에 관심 있는 경우 문서의 이 영역을 살펴보세요. </br>   [UWP 앱 기능](../develop/index.md) </br> Windows 10 앱에 대한 API 참조는 일련의 관련 문서에서 호스트되며, 여기서 확인할 수 있습니다. </br>   [Windows UWP 네임스페이스](https://docs.microsoft.com/en-us/uwp/api/) </br>   [파일 및 XML 스키마](https://docs.microsoft.com/uwp/schemas/) |
+| **게임 개발** | 이 문서는 Windows 또는 Xbox에서 게임을 개발하는 방법에 대한 정보를 포함합니다. 설치 지침, 개발자 프로그램 및 DirectX 또는 Xbox 기능을 사용하여 프로그래밍하는 지침을 포함합니다. </br>   [게임 개발 시작](../gaming/getting-started.md) |
+| **게시** | 이러한 문서에는 앱 제출에서 프로모션 가격 책정 및 고객 참여까지 Microsoft Store에 앱을 게시하는 방법에 대한 정보가 포함되어 있습니다. </br>   [Microsoft Store에 앱을 게시합니다.](../publish/index.md) |
 
-* [자습서: UWP 앱에서 잉크 지원](../design/input/ink-walkthrough.md)
-* [자습서: Surface Dial 지원](../design/input/radialcontroller-walkthrough.md)
-* [최신 Windows 버전의 새로운 기능 살펴보기](../whats-new/windows-10-version-latest.md)
+## <a name="other-docs"></a>기타 문서
 
-Windows 10 개발에 대한 방법 문서와 자세한 설명서를 살펴보세요.
+웹 개발 또는 Mixed Reality 같은 일부 특별한 Windows 10 플랫폼에는 자체 문서가 있습니다. 이러한 기능으로 앱을 개발하는 것에 관심이 있는 경우 해당 설명서를 살펴보세요.
 
-* [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
-* [UWP 앱에 대한 참조 API](https://docs.microsoft.com/en-us/uwp/)
-
-## <a name="develop-javascript-and-web-apps"></a>JavaScript 및 웹 앱 개발
-
-UWP는 다양한 언어와 프레임워크를 지원하는 매우 유연한 플랫폼입니다. JavaScript를 사용하여 UWP 앱을 빌드하고, 자신만의 기술을 사용하여 Microsoft Store에서 추천될 수 있는 호스트된 웹 앱을 빌드하세요.
-
-* [HTML5, CSS3, 및 JavaScript를 사용하여 웹 기술을 활용, 앱을 빌드합니다.](your-first-app.md#javascript-and-html)
-
-웹 앱 빌드에 대한 추가 정보를 살펴보고 싶으세요?
-
-* [Microsoft Edge 개발자 설명서](https://docs.microsoft.com/microsoft-edge/)
-
-## <a name="cross-platform-and-mobile-development"></a>플랫폼 간 및 모바일 개발
-
-* Android 및 iOS를 대상으로 해야 하나요? [Xamarin](https://www.xamarin.com)을 확인하세요.
-
-## <a name="see-also"></a>참고 항목
-
-* [UWP 앱 게시](https://developer.microsoft.com/store/publish-apps)
-* [UWP 앱 개발에 대한 방법 문서](https://developer.microsoft.com/windows/apps/develop)
-* [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
-* [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
-* [설정](get-set-up.md)
-* [Windows 계정 등록](sign-up.md)
+| 문서 | 설명 |
+| --- | --- |
+| **Microsoft Azure** | 클라우드 개발 및 Microsoft Azure에 대한 정보는[Microsoft Azure 개발자 설명서](https://docs.microsoft.com/azure/)에서 찾을 수 있습니다. |
+| **웹 개발** | Microsoft Edge, WebVR 및 기타 Windows 웹 개발 기능에 대한 정보는 [Microsoft Edge 개발자 설명서](https://docs.microsoft.com/microsoft-edge/)에서 찾을 수 있습니다. |
+| **Windows Mixed Reality** | Mixed Reality는 물리적 및 디지털 개체가 공존하는 환경에 실제 및 가상 콘텐츠를 혼합합니다. Microsoft HoloLens 및 기타 몰입형 헤드셋용 앱 빌드에 대한 정보는 [Windows Mixed Reality 설명서](https://docs.microsoft.com/en-us/windows/mixed-reality/)에서 찾을 수 있습니다.|

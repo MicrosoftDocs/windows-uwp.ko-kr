@@ -4,26 +4,32 @@ ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: 스토어에 앱을 제출하기 전에 Windows 개발자 센터 대시보드의 응용 프로그램 ID 및 광고 단위 ID 값을 앱에 추가하는 방법을 알아봅니다.
 title: 앱에서 광고 단위 설정
 ms.author: mcleans
-ms.date: 10/04/2017
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp, 광고, 광고, 광고 단위, 테스트
 ms.localizationpriority: medium
-ms.openlocfilehash: 6473d571ed44f60f8001b8a565d70c58d43407d1
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: 978f0599ec783b5dcfade82b97c92d1dec9fb541
+ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654662"
+ms.lasthandoff: 05/14/2018
+ms.locfileid: "1880954"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>앱에서 광고 단위 설정
 
-유니버설 Windows 플랫폼(UWP) 앱의 모든 광고 컨트롤에는 저희 서비스가 컨트롤에 광고를 제공할 때 사용하는 *광고 단위*가 있습니다. 각 광고 단위는 앱의 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx), [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 또는 [NativeAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativead.aspx)에 할당해야 하는 *광고 단위 ID* 및 *응용 프로그램 ID*로 구성됩니다.
+유니버설 Windows 플랫폼(UWP) 앱의 모든 광고 컨트롤에는 저희 서비스가 컨트롤에 광고를 제공할 때 사용하는 *광고 단위*가 있습니다. 각 광고 단위는 앱의 코드에 할당해야 하는 *광고 단위 ID* 및 *응용 프로그램 ID*로 구성됩니다.
 
 앱에 테스트 광고가 표시되는지 확인하기 위해 테스트 중에 사용할 수 있는 [테스트 광고 단위 값](#test-ad-units)이 제공됩니다. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 게시한 후에 앱에서 테스트 값을 사용하려고 하면 앱에 광고가 수신되지 않습니다.
 
 UWP 앱 테스트를 마치고 Windows 개발자 센터에 앱을 제출할 준비를 완료한 후에는 Windows 개발자 센터 대시보드의 [인앱 광고](../publish/in-app-ads.md) 페이지에서 [라이브 광고 단위를 만들고](#live-ad-units) 이 광고 단위에 해당 응용 프로그램 ID와 광고 단위 ID 값을 사용하도록 앱 코드를 업데이트해야 합니다.
+
+앱의 코드에서 응용 프로그램 ID와 광고 단위 ID 값을 할당하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+* [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)
+* [HTML 5 및 JavaScript의 AdControl](adcontrol-in-html-5-and-javascript.md)
+* [중간 광고](../monetize/interstitial-ads.md)
+* [기본 광고](../monetize/native-ads.md)
 
 <span id="test-ad-units" />
 
@@ -58,13 +64,11 @@ Windows 개발자 센터 대시보드에서 라이브 광고 단위를 가져와
     > [!NOTE]
     > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 대시보드에서 라이브 UWP 광고 단위를 만들 때 광고 단위의 응용 프로그램 ID 값은 항상 앱의 Store ID와 일치합니다(예: Store ID 값은 9NBLGGH4R315와 비슷한 형식).
 
-3.  앱 코드에서 **응용 프로그램 ID** 및 **광고 단위 ID** 값을 할당합니다.
-
-    * 앱에서 배너 광고를 표시하는 경우 [AdControl](https://msdn.microsoft.com/library/mt313174.aspx) 개체의 [ApplicationId](https://msdn.microsoft.com/library/mt313171.aspx) 및 [AdUnitId](https://msdn.microsoft.com/library/mt313154.aspx) 속성에 이러한 값을 할당합니다. 자세한 내용은 [XAML 및 .NET의 AdControl](../monetize/adcontrol-in-xaml-and--net.md) 및 [HTML5 및 Javascript의 AdControl](../monetize/adcontrol-in-html-5-and-javascript.md)을 참조하세요.
-
-    * 앱에서 중간 광고를 표시하는 경우 [InterstitialAd](https://msdn.microsoft.com/library/mt313192.aspx) 개체의 [RequestAd](https://msdn.microsoft.com/library/mt313189.aspx) 메서드에 이러한 값을 전달합니다. 자세한 내용은 [중간 광고](../monetize/interstitial-ads.md)를 참조하세요.
-
-    * 앱에서 기본 광고를 표시하는 경우 이러한 값을 [NativeAdsManager](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.nativeadsmanager.nativeadsmanager.aspx) 생성자의 *applicationId* 및 *adUnitId* 매개 변수로 전달합니다. 자세한 내용은 [기본 광고](../monetize/native-ads.md)를 참조하세요.
+3.  앱 코드에서 응용 프로그램 ID 및 광고 단위 ID 값을 할당합니다. 자세한 내용은 다음 문서를 참조하세요.
+    * [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)
+    * [HTML 5 및 JavaScript의 AdControl](adcontrol-in-html-5-and-javascript.md)
+    * [중간 광고](../monetize/interstitial-ads.md)
+    * [기본 광고](../monetize/native-ads.md)
 
 <span id="manage" />
 

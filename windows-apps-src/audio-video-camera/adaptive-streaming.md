@@ -10,17 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac00104917d41a48abda97c2d5d37c0ced3ab5e9
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: ae99a7a92ce933c8536dc30f9807d60a1441a809
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816648"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912971"
 ---
 # <a name="adaptive-streaming"></a>적응 스트리밍
 
 
-이 문서에서는 적응 스트리밍 멀티미디어 콘텐츠의 재생을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다. 이 기능은 현재 HLS(Http 라이브 스트리밍) 및 DASH(Dynamic Streaming over HTTP) 콘텐츠의 재생을 지원합니다.
+이 문서에서는 적응 스트리밍 멀티미디어 콘텐츠의 재생을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다. 이 기능은 HLS(Http 라이브 스트리밍) 및 DASH(Dynamic Streaming over HTTP) 콘텐츠의 재생을 지원합니다. Windows 10 버전 1803부터 부드러운 스트리밍이 **[AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)** 에 의해 지원됩니다.
 
 지원되는 HLS 프로토콜 태그 목록은 [HLS 태그 지원](hls-tag-support.md)을 참조하세요. 
 

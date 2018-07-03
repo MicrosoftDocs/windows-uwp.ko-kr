@@ -4,18 +4,18 @@ ms.assetid: b556a245-6359-4ddc-a4bd-76f9873ab694
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 대한 스택 추적을 가져올 수 있습니다.
 title: 앱에서 오류에 대한 스택 추적 가져오기
 ms.author: mcleans
-ms.date: 06/16/2017
+ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: d29237bfc36c745933c5c40bba9c584d2e705947
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 902bf87f1650cc5b9f4aeabd8539da4a774dce75
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662783"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989537"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>앱에서 오류에 대한 스택 추적 가져오기
 
@@ -51,7 +51,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 유형   |  설명      |  필수  |
+| 매개 변수        | 형식   |  설명      |  필수  |
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | 스택 추적을 가져오려는 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 확인할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | cabId | 문자열 | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID입니다. 이 ID를 가져오려면 [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 사용하여 앱에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabId** 값을 사용합니다. |  예  |
@@ -75,7 +75,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------------------------|
 | 값      | array   | 각각 스택 추적 데이터의 한 프레임을 포함하는 개체 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [스택 추적 값](#stack-trace-values) 섹션을 참조하세요. |
 | @nextLink  | string  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10으로 설정되어 있지만 쿼리에 대한 오류의 행이 10개보다 많은 경우 이 값이 반환됩니다. |
-| TotalCount | inumber | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
+| TotalCount | 정수 | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.          |
 
 
 ### <a name="stack-trace-values"></a>스택 추적 값

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 코덱, 인코더, 디코더, 쿼리
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e6a44bda55fc6c01e75940d9d4446160e708627
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692474"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842350"
 ---
 # <a name="query-for-codecs-installed-on-a-device"></a>디바이스에 설치된 코덱에 대한 쿼리
 **[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)** 클래스를 통해 현재 디바이스에 설치된 코덱에 대해 쿼리할 수 있습니다. 다른 장치 제품군에 대한 Windows 10에 포함되어 있는 코덱 목록은 [지원되는 코덱](supported-codecs.md)문서에 나열되어 있지만, 사용자와 앱은 추가 코덱을 장치에 설치할 수 있습니다. 따라서 런타임 시 현재 디바이스에서 사용할 수 있는 코덱을 파악하기 위해 코덱 지원에 대한 쿼리를 수행할 수 있습니다.

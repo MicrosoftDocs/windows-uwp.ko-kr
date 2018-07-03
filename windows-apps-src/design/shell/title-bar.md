@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 556234eb4047418b0798a432d917268fb3634996
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: d7c620d5e6a45d48442a2761285f8509db91961d
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691009"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1863169"
 ---
 # <a name="title-bar-customization"></a>제목 표시줄 사용자 지정
 
@@ -71,7 +71,7 @@ titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.SeaGreen;
 > [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate)를 호출한 이후 이 코드를 앱의 [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드(_App.xaml.cs_)에 배치하거나 앱의 첫 번째 페이지에 배치할 수 있습니다.
 
 > [!TIP]
-> UWP 커뮤니티 도구 키트는 XAML에서 이러한 색상 속성을 설정할 수 있는 확장을 제공합니다. 자세한 내용은 [UWP 커뮤니티 도구 키트 설명서](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions)를 참조하세요.
+> Windows 커뮤니티 도구 키트는 XAML에서 이러한 색상 속성을 설정할 수 있는 확장을 제공합니다. 자세한 내용은 [Windows 커뮤니티 도구 키트 설명서](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions)를 참조하세요.
 
 제목 표시줄 색상을 설정할 때 주의해야 할 몇 가지 사항이 있습니다.
 

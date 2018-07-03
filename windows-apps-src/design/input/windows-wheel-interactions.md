@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: 61711098d07d830d4f6a1a6cdabed1a31217d2ea
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: a443dd7505ce399d82cbd33c5691ec9b35a18b93
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396712"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983700"
 ---
 # <a name="surface-dial-interactions"></a>Surface Dial 조작
 
@@ -29,11 +29,11 @@ ms.locfileid: "1396712"
 Surface Dial 등의 Windows 휠 디바이스는 Windows 및 Windows 앱을 위한 유용하고 독특한 사용자 조작 환경을 가능하게 하는 새로운 범주의 입력 디바이스입니다. 
 
 > [!IMPORTANT]
-> 이 항목에서는 특별히 Surface Dial 조작에 대해 설명하지만 해당 정보는 모든 Windows 휠 디바이스에 적용됩니다.
+> 이 항목에서는 특별히 Surface Dial 조작에 대해 설명하지만 해당 정보는 모든 Windows 휠 디바이스에 적용됩니다. 
 
 | 비디오 |   |
 | --- | --- |
-| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
+| <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> |
 | *Surface Dial 앱 파트너* | *개발자용 Surface Dial* |
 
 *회전* 작업(또는 제스처) 기반의 폼 팩터를 사용하는 Surface Dial은 기본 디바이스의 입력을 보완하는 보조 다중 모달 입력 디바이스로 고안되었습니다. 대부분의 경우에서 주요 손으로 작업을 수행하면서 나머지 손으로 이 디바이스를 조작합니다(예: 펜으로 수동 입력 수행). 즉, 정밀 포인터 입력(예: 터치, 펜 또는 마우스)용으로 고안되지 않았습니다. 

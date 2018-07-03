@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e54af14d23b255718f5247605b9bdd611f172308
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 424ca52020bd5b9aeab745030dd6eef4cd4430b6
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663843"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862422"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 
@@ -27,7 +27,7 @@ ms.locfileid: "1663843"
 
 ## <a name="introduction-to-app-extensions"></a>앱 확장 소개
 
-플러그인 및 추가 기능은 UWP(유니버설 Windows 플랫폼)에서 앱 확장이라고 불러서 익숙할 수 있는 다른 이름입니다. Microsoft Edge 확장은 UWP 앱 확장입니다. UWP 앱 확장은 Windows 10 1주년 버전(버전 1607, 빌드 10.0.14393)에 도입되었습니다.
+유니버설 Windows 플랫폼(UWP)에서 앱 확장은 플러그 인 및 추가 기능이 다른 플랫폼에서 수행하는 것과 유사한 기능을 수행합니다. 예를 들어 Microsoft Edge 확장은 UWP 앱 확장입니다. UWP 앱 확장은 Windows 10 1주년 버전(버전 1607, 빌드 10.0.14393)에 도입되었습니다.
 
 UWP 앱 확장은 콘텐츠와 배포 이벤트를 호스트 앱과 공유할 수 있도록 하는 확장 선언을 가진 UWP 앱입니다. 확장 앱은 여러 확장을 제공할 수 있습니다.
 
@@ -423,6 +423,7 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 
 ## <a name="related-topics"></a>관련 항목
 
+* [앱 확장 소개](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/)
 * [앱 확장에 대한 빌드 2016 세션](https://channel9.msdn.com/Events/Build/2016/B808)
 * [빌드 2016 앱 확장 코드 샘플](https://github.com/Microsoft/App-Extensibility-Sample)
 * [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)

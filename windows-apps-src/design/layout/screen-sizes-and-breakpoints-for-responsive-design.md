@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d84530c1a7c3795c566495c1eae121691b0766a
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 0c61b4076ed2529fddfcec53264c95c8290297a0
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1688939"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843033"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 
@@ -27,16 +27,16 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치�
 > 특정 중단점에 맞게 디자인할 때는 화면 크기가 아닌, 앱에서 사용할 수 있는 화면 공간(앱의 창) 크기를 고려해서 디자인하세요. 앱이 전체 화면으로 실행되면 앱의 창과 화면 크기가 동일하지만 앱이 전체 화면이 아닐 때는 창이 화면보다 작습니다.
 
 ## <a name="breakpoints"></a>중단점
-이 표는 다양한 크기 클래스와 중단점을 설명한 것입니다.
+이 표는 다양한 크기 클래스와 중단점을 설명합니다.
 
-![반응형 디자인 중단점](images/rsp-design/rspd-breakpoints.png)
+![반응형 디자인 중단점](images/breakpoints/size-classes.svg)
 
 <table>
 <thead>
 <tr class="header">
 <th align="left">크기 클래스</th>
 <th align="left">중단점</th>
-<th align="left">화면 크기(대각선)</th>
+<th align="left">일반적인 화면 크기(대각선)</th>
 <th align="left">장치</th>
 <th align="left">창 크기</th>
 </tr>
@@ -45,15 +45,15 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치�
 <tr class="even">
 <td style="vertical-align:top;">소형</td>
 <td style="vertical-align:top;">640px 이하</td>
-<td style="vertical-align:top;">4&quot; ~ 6&quot;</td>
-<td style="vertical-align:top;">휴대폰</td>
+<td style="vertical-align:top;">4&quot; ~ 6&quot;; 20&quot; ~ 65&quot;</td>
+<td style="vertical-align:top;">휴대폰, TV</td>
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;">중간</td>
+<td style="vertical-align:top;">중형</td>
 <td style="vertical-align:top;">641px ~ 1007px</td>
 <td style="vertical-align:top;">7&quot; ~ 12&quot;</td>
-<td style="vertical-align:top;">패블릿, 태블릿, TV</td>
+<td style="vertical-align:top;">패블릿, 태블릿</td>
 <td style="vertical-align:top;">960 x 540</td>
 </tr>
 <tr class="even">
@@ -65,6 +65,17 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치�
 </tr>
 </tbody>
 </table>
+
+## <a name="why-are-tvs-considered-small"></a>TV가 왜 "소형"으로 간주됩니까? 
+
+대부분의 TV 물리적으로 상당히 크며(일반적으로 40~65인치) 고해상도(HD 또는 4k)를 지원하므로, 10피드 거리에서 시청하는 1080P TV 설계는 책상 앞에서 30cm 정도 거리를 두고 사용하는 1080p 모니터 설계와는 다릅니다. 거리에 대해 말할 때, TV의 1080픽셀은 훨씬 가까운 540픽셀 모니터에 가깝습니다.
+
+UWP의 효과적인 픽셀 시스템은 자동으로 시야 거리를 고려합니다. 컨트롤 또는 중단점 범위에 대한 크기를 지정하면 "유효" 픽셀을 실제로 사용하는 것입니다. 예를 들어, 1080픽셀 이상에 대해 응답 코드를 만든 경우 1080 모니터는 해당 코드를 사용하지만 1080p TV는 그렇지 않습니다. 1080p TV에 1080개의 물리적 픽셀이 있더라도 유효 픽셀은 540개이기 때문입니다. 그렇기에 TV 디자인은 휴대폰을 디자인하는 것과 유사합니다.
+
+## <a name="effective-pixels-and-scale-factor"></a>유효 픽셀 및 배율
+
+UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 UI 크기를 자동으로 조정합니다. Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 각 디스플레이에 맞게 크기를 자동으로 조정합니다. 사용자는 **설정** > **디스플레이** > **배율 및 레이아웃** 설정 페이지에서 기본 값을 재정의할 수 있습니다. 
+
 
 ## <a name="general-recommendations"></a>일반 권장 사항
 
@@ -94,6 +105,4 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치�
 >[!TIP] 
 > [**휴대폰용 Continuum**](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 통해 사용자는 호환되는 Windows 10 Mobile 장치를 모니터, 마우스 및 키보드에 연결하여 휴대폰을 노트북처럼 사용할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
 
-## <a name="effective-pixels-and-scale-factor"></a>유효 픽셀 및 배율
 
-UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 UI 크기를 자동으로 조정합니다. Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 각 디스플레이에 맞게 크기를 자동으로 조정합니다. 사용자는 **설정** > **디스플레이** > **배율 및 레이아웃** 설정 페이지에서 기본 값을 재정의할 수 있습니다. 

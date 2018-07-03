@@ -4,18 +4,18 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: Microsoft Store 제출 API를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 제출을 프로그래밍 방식으로 만들고 관리합니다.
 title: 제출 만들기 및 관리
 ms.author: mcleans
-ms.date: 02/28/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
-ms.openlocfilehash: 037f76e9d0c7c9751786ba501478057687bfa910
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 9bd8d2f800969102d6957cafa92e04f482323611
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663683"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976468"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
@@ -31,7 +31,7 @@ ms.locfileid: "1663683"
 <span id="not_supported" />
 
 > [!IMPORTANT]
-> 이 API를 사용하여 앱, 또는 추가 기능에 대한 제출을 만드는 경우 Windows 개발자 센터 대시보드보다는 API를 사용하여 제출만 추가로 변경하세요. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 경우 제출을 삭제하고 새 제출을 만들어야 합니다.
+> 이 API를 사용하여 앱, 또는 추가 기능에 대한 제출을 만드는 경우 Windows 개발자 센터 대시보드보다는 API를 사용하여 제출만 추가로 변경하세요. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 > [!IMPORTANT]
 > [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)하기 위한 제출을 게시하거나 [LOB 앱](../publish/distribute-lob-apps-to-enterprises.md)에 대한 제출을 기업에 직접 게시하는 데 이 API를 사용할 수 없습니다. 두 시나리오 모두에서 Windows 개발자 센터 대시보드를 사용하여 제출을 게시해야 합니다.
@@ -70,11 +70,11 @@ Microsoft Store 제출 API를 사용하려면 먼저 Azure AD 응용 프로그�
 > [!NOTE]
 > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 
-1.  개발자 센터에서 **계정 설정**으로 이동한 후, **사용자 관리**를 클릭하고 [조직의 개발자 센터 계정을 조직의 Azure AD 디렉토리와 연결합니다](../publish/associate-azure-ad-with-dev-center.md).
+1.  개발자 센터에서 [조직의 개발자 센터 계정을 조직의 Azure AD Directory와 연결](../publish/associate-azure-ad-with-dev-center.md)합니다.
 
-2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 제출에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [Azure AD 응용 프로그램을 개발자 센터 계정과 연결](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications)을 참조하세요.
+2.  그런 다음 개발자 센터의 **계정 설정**의 **사용자** 페이지에서 개발자 센터 계정에 대한 제출에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account)합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 존재하지 않으면 [개발자 센터에서 새 Azure AD 응용 프로그램을 만들](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account) 수 있습니다.  
 
-3.  **사용자 관리** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
+3.  **사용자** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 
 4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [AD 응용 프로그램 키 관리](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys)를 참조하세요.
 

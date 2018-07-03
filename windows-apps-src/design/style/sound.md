@@ -16,16 +16,16 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dbe59b422a83ad31727928c406a1f4a6dd550301
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: c6e85bcbf131755af6909fd0ae7ee42bc36544b8
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638397"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842803"
 ---
 # <a name="sound"></a>소리
 
- 
+![영웅 이미지](images/header-sound.svg)
 
 소리를 사용하여 앱을 향상시키는 여러 가지 방법이 있습니다. 사용자가 이벤트를 경고음으로 인식할 수 있도록 소리를 사용하여 다른 UI 요소를 보완할 수 있습니다. 소리는 시각 장애가 있는 사용자에게 효과적인 사용자 인터페이스 요소일 수 있습니다. 소리를 사용하여 사용자를 몰입시키는 분위기를 만들 수 있습니다. 예를 들어 퍼즐 게임의 백그라운드에서 기발한 사운드트랙을 재생하거나 공포/서바이벌 게임에 음울한 사운드 효과를 사용할 수 있습니다.
 

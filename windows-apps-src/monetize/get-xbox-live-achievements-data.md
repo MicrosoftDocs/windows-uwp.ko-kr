@@ -3,27 +3,27 @@ author: mcleanbyron
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 Xbox Live 도전 과제 데이터를 가져옵니다.
 title: Xbox Live 도전 과제 데이터 가져오기
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 도전 과제
 ms.localizationpriority: medium
-ms.openlocfilehash: 76cbe9abf3b6d668bb157e40f3e61aff885e3cbb
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 09800229b45b9eb1a0a456e8e421412ca1a88f8d
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816018"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976055"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Xbox Live 도전 과제 데이터 가져오기
 
 Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데이터가 사용 가능한 최근 날짜, 해당 날짜 이전 30일 및 해당 날짜까지 게임의 총 수명 동안 [Xbox Live 지원 게임](../xbox-live/index.md)에 대한 각 도전 과제를 잠금 해제한 고객 수를 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [Xbox 분석 보고서](../publish/xbox-analytics-report.md)를 통해서도 확인할 수 있습니다.
 
 > [!IMPORTANT]
-> 이 메서드는 현재 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)가 게시하고 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출되는 Xbox Live 지원 게임만 지원합니다. [Xbox Live 크리에이터스 프로그램](../xbox-live/developer-program-overview.md#xbox-live-creators-program)을 통해 제출된 게임 데이터는 반환되지 않습니다.
+> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -50,7 +50,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데
 ### <a name="request-parameters"></a>요청 매개 변수
 
 
-| 매개 변수        | 유형   |  설명      |  필수  
+| 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | Xbox Live 도전 과제 데이터를 검색하려는 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |  예  |
 | metricType | 문자열 | 검색할 Xbox Live 분석 데이터의 유형을 지정하는 문자열입니다. 이 메서드의 경우 값 **achievements**를 지정합니다.  |  예  |

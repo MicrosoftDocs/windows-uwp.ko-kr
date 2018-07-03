@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 461e3578aad11dea0d9afcd7c93dfda9a246bb10
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
+ms.openlocfilehash: 31a173efbe30cffed85336a302ced504a4cad50d
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662183"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983494"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
 앱을 SQL Server 데이터베이스에 직접 연결한 후, [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임스페이스를 사용해 데이터를 저장 및 검색할 수 있습니다.
@@ -68,7 +68,7 @@ sealed partial class App : Application
     private string connectionString =
         @"Data Source=YourServerName\SQLEXPRESS;Initial Catalog=NORTHWIND;Integrated Security=SSPI";
 
-    public string ConnectionString { get => connectionString; set => connectionString = value;  
+    public string ConnectionString { get => connectionString; set => connectionString = value; }
 
     ...
 }
@@ -223,6 +223,16 @@ public MainPage()
 
 [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임스페이스를 확인해 SQL Server 데이터베이스에서 할 수 있는 다른 작업을 확인합니다.
 
+## <a name="trouble-connecting-to-your-database"></a>데이터베이스에 연결하는 데 문제가 있나요?
+
+대부분의 경우 SQL Server 구성의 일부 기능을 변경해야 합니다. Windows Forms 또는 WPF 응용 프로그램 등의 다른 형식의 데스크톱 응용 프로그램의 데이터베이스에 연결할 수 있는 경우 SQL Server에 대해 TCP/IP를 활성화했는지 확인하세요. **컴퓨터 관리** 콘솔에서 이를 수행할 수 있습니다.
+
+![컴퓨터 관리](images/computer-management.png)
+
+그런 다음, SQL Server Browser 서비스가 실행되고 있는지 확인합니다.
+
+![SQL Server Browser 서비스](images/sql-browser-service.png)
+
 ## <a name="next-steps"></a>다음 단계
 
 **경량 데이터베이스를 사용해 사용자 장치에 데이터 저장**
@@ -231,7 +241,7 @@ public MainPage()
 
 **여러 앱이 여러 플랫폼에서 코드를 공유**
 
-[데스크톱과 UWP에서 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
+[데스크톱과 UWP에서 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)를 참조하세요.
 
 **Azure SQL 백 엔드로 마스터 세부 정보 페이지 추가**
 

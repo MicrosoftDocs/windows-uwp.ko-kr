@@ -4,19 +4,19 @@ Description: This article lists things you need to know before packaging your ap
 Search.Product: eADQiWindows 10XVcnh
 title: 앱 패키징을 위한 준비(데스크톱 브리지)
 ms.author: normesta
-ms.date: 02/21/2018
+ms.date: 05/18/20188
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4836992675f65773e9b5c890aca243e2a9e172
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 46e71812acdad92a5d017cee44490e7d8cc0de32
+ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832547"
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "1905394"
 ---
 # <a name="prepare-to-package-an-app-desktop-bridge"></a>앱 패키징을 위한 준비(데스크톱 브리지)
 
@@ -53,7 +53,7 @@ ms.locfileid: "1832547"
 
 + __앱에는 UIAccess가 필요합니다__. 응용 프로그램에서 UAC 매니페스트의 `requestedExecutionLevel` 요소에 `UIAccess=true`를 지정하는 경우 현재는 UWP로 변환할 수 없습니다. 자세한 내용은 [UI 자동화 보안 개요](https://msdn.microsoft.com/library/ms742884.aspx)를 참조하세요.
 
-+ __앱은 COM 개체를 노출합니다__. 프로세스와 패키지 내에서의 확장은 in-process 및 OOP(Out-of-Process) 방식으로 COM 및 OLE 서버를 등록해 사용할 수 있습니다.  크리에이터스 업데이트는 패키지 밖에서도 볼 수 있도록 OOP COM 및 OLE 서버를 등록할 수 있게 해주는 패키지형 COM 지원을 추가합니다.  [데스크톱 브리지에 대한 COM 서버 및 OLE 문서 지원](https://blogs.windows.com/buildingapps/2017/04/13/com-server-ole-document-support-desktop-bridge/#bjPyETFgtpZBGrS1.97)를 참조하세요.
++ __앱은 COM 개체를 노출합니다__. 프로세스와 패키지 내에서의 확장은 in-process 및 OOP(Out-of-Process) 방식으로 COM 및 OLE 서버를 등록해 사용할 수 있습니다.  크리에이터 업데이트는 패키지 밖에서도 볼 수 있도록 OOP COM 및 OLE 서버를 등록할 수 있게 해주는 패키지형 COM 지원을 추가합니다.  [데스크톱 브리지에 대한 COM 서버 및 OLE 문서 지원](https://blogs.windows.com/buildingapps/2017/04/13/com-server-ole-document-support-desktop-bridge/#bjPyETFgtpZBGrS1.97)를 참조하세요.
 
    패키지형 COM 지원 기능은 기존 COM API에서는 작동하지만, 패키지형 COM에 대한 위치가 개인 위치에 있기 때문에 레지스트리를 직접 읽을 때 사용되는 응용 프로그램 확장에서는 작동하지 않습니다.
 
@@ -105,7 +105,7 @@ Microsoft Store에서 설치하는 동안 앱이 설치되기 전에 적절한 �
 
 + __앱이 작업 수행을 위한 유틸리티를 시작합니다__. PowerShell, Cmd.exe 같은 명령 유틸리티가 시작되지 않도록 방지합니다. 사실, 사용자가 Windows 10 S를 실행하는 시스템에 앱을 설치하는 경우에는 앱이 이러한 유틸리티를 절대로 시작할 수 없습니다. 이것이 앱의 Microsoft Store 제출을 막을 수도 있습니다. Microsoft Store에 제출되는 앱은 Windows 10 S와 호환되어야 하기 때문입니다.
 
-유틸리티를 시작하는 것이 운영 체제에서 정보를 얻거나 레지스트리를 액세스하거나 시스템 기능에 액세스할 수 있는 편리한 방법일 때가 많습니다. 한편, UWP API를 사용해 이러한 종류의 작업을 대신 수행할 수 있습니다. 이러한 API는 별도의 실행 파일이 필요하지 않기 때문에 성능이 뛰어나며, 무엇보다도 앱이 패키지 외부에 도달하지 않도록 막아줍니다. 앱의 디자인은 데스크톱 브리지 앱에서 제공되는 격리, 신뢰 및 보안을 그대로 따르지만, 앱은 Windows 10 S를 실행하는 시스템에서 예상대로 작동하게 됩니다.
+유틸리티를 시작하는 것이 운영 체제에서 정보를 얻거나 레지스트리를 액세스하거나 시스템 기능에 액세스할 수 있는 편리한 방법일 때가 많습니다. 한편, UWP API를 사용해 이러한 종류의 작업을 대신 수행할 수 있습니다. 이러한 API는 별도의 실행 파일이 필요하지 않기 때문에 성능이 뛰어나며, 무엇보다도 앱이 패키지 외부에 도달하지 않도록 막아줍니다. 앱의 디자인은 데스크톱 브리지로 패키지한 앱에서 제공되는 격리, 신뢰 및 보안을 그대로 따르지만, 앱은 Windows 10 S를 실행하는 시스템에서 예상대로 작동하게 됩니다.
 
 + __앱은 추가 기능, 플러그 인 또는 확장을 호스트합니다__.   많은 경우에 COM 스타일의 확장은 확장이 패키지로 만들어지지 않고, 완전 신뢰 상태로 설치되기만 하면 계속해서 작동하게 됩니다. 왜냐하면 이러한 설치 관리자가 호스트 앱이 완전 신뢰 접근 권한 값을 찾을 수 있는 곳이라면 어디서든 이를 사용해 레지스트리 수정하고 확장 파일을 배치할 수 있기 때문입니다.
 

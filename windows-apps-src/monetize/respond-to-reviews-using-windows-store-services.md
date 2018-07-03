@@ -4,18 +4,18 @@ ms.assetid: c92c0ea8-f742-4fc1-a3d7-e90aac11953e
 description: Microsoft Store 리뷰 API를 사용하여 Microsoft Store의 앱 리뷰에 프로그래밍 방식으로 응답을 제출할 수 있습니다.
 title: 스토어 서비스를 사용하여 리뷰에 응답
 ms.author: mcleans
-ms.date: 02/08/2017
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 리뷰 API, 리뷰에 응답
 ms.localizationpriority: medium
-ms.openlocfilehash: 6800948e0aa65743278342fcf7340a6c4063b18a
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
+ms.openlocfilehash: ba921b03011b36507c9cc9f0f05ecda126a2ace5
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654232"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976438"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>스토어 서비스를 사용하여 리뷰에 응답
 
@@ -44,11 +44,11 @@ Microsoft Store 리뷰 API를 호출하는 코드를 작성하기 전에 다음�
 
 Azure AD 응용 프로그램을 개발자 센터 계정에 연결하고 필요한 값을 검색하려면
 
-1.  개발자 센터에서 **계정 설정**으로 이동한 후, **사용자 관리**를 클릭하고 [조직의 개발자 센터 계정을 조직의 Azure AD 디렉토리와 연결합니다](../publish/associate-azure-ad-with-dev-center.md).
+1.  개발자 센터에서 [조직의 개발자 센터 계정을 조직의 Azure AD Directory와 연결](../publish/associate-azure-ad-with-dev-center.md)합니다.
 
-2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 프로모션 캠페인을 관리하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [Azure AD 응용 프로그램을 개발자 센터 계정과 연결](../publish/add-users-groups-and-azure-ad-applications.md#azure-ad-applications)을 참조하세요.
+2.  그런 다음 개발자 센터의 **계정 설정**의 **사용자** 페이지에서 리뷰에 응답하는 데 사용할 앱 또는 서비스를 나타내는 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account)합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 존재하지 않으면 [개발자 센터에서 새 Azure AD 응용 프로그램을 만들](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account) 수 있습니다. 
 
-3.  **사용자 관리** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
+3.  **사용자** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 
 4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [AD 응용 프로그램 키 관리](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys)를 참조하세요.
 

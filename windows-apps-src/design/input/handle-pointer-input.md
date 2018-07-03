@@ -12,12 +12,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5da807d430683689cf38f2db6920af2dc058a99
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: a0753081af4128cf2cad3eeff9d8c919c42eb596
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707294"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895142"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
@@ -79,7 +79,7 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208965"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>다른 UI 요소가 포인터를 캡처하거나, 포인터가 해제되거나, 다른 포인터가 프로그래밍 방식으로 캡처될 때 발생합니다.</p>
 <div class="alert">
-<strong>참고</strong>  해당하는 포인터 캡처 이벤트가 없습니다.
+<strong>참고</strong> 해당하는 포인터 캡처 이벤트가 없습니다.
 </div>
 <div>
  
@@ -704,9 +704,11 @@ String QueryPointer(PointerPoint ptrPt)
 **[포인터 입력 샘플(애니메이션이 있는 UserControl)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)에서 이 샘플 다운로드**
 
 ### <a name="visual-feedback"></a>시각적 피드백
+
 XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** 개체를 기반으로 **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** 을 정의합니다. 이 개체는 캔버스에서 각 개체의 위치를 강조 표시하며 **[Storyboard](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.animation.storyboard)** 를 사용하여 기본 포인터에 해당하는 타원에 애니메이션 효과를 줍니다.
 
 **XAML은 다음과 같습니다.**
+
 ```xaml
 <UserControl
     x:Class="UWP_Pointers.PointerEllipse"

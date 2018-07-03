@@ -4,18 +4,18 @@ Description: Extend your desktop application with Windows UIs and components
 Search.Product: eADQiWindows 10XVcnh
 title: Windows UI와 구성 요소로 데스크톱 응용 프로그램 확장
 ms.author: normesta
-ms.date: 03/22/2018
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ef20366092a5f284c39f4e43d4412c69b60f12fa
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 4e1d808dd2991aa2ffd1e30967d329b3eced9f99
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691332"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018569"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
@@ -27,6 +27,8 @@ ms.locfileid: "1691332"
 >이 가이드는 데스크톱 브리지를 사용하여 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들었다고 가정합니다. 아직 완료하지 않았다면 [데스크톱 브리지](desktop-to-uwp-root.md)를 참조하세요.
 
 준비가 되었으면 시작하겠습니다.
+
+<a id="setup" />
 
 ## <a name="first-setup-your-solution"></a>먼저 솔루션 설정
 
@@ -78,27 +80,63 @@ UWP 프로젝트와 런타임 구성 요소를 사용하여 할 수 있는 몇 �
 
 예를 들어, 조금의 XAML 태그로 사용자에게 강력한 지도 관련 시각화 기능을 제공할 수 있습니다.
 
-이 이미지는 지도 컨트롤이 포함된 XAML 기반 최신 UI이 이미지를 XAML 기반 최신 UI가 열린 VB6 응용 프로그램입니다.
+이 이미지는 지도 컨트롤이 포함된 XAML 기반 최신 UI를 여는 Windows Forms 응용 프로그램을 보여 줍니다.
 
 ![적응형 디자인](images/desktop-to-uwp/extend-xaml-ui.png)
-
-### <a name="have-a-closer-look-at-this-app"></a>이 앱을 자세히 보세요.
-
-:heavy_check_mark: [앱 다운로드](https://www.microsoft.com/en-us/store/p/vb6-app-with-xaml-sample/9n191ncxf2f6)
-
-:heavy_check_mark: [코드 찾아보기](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/VB6withXaml)
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
 XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
-:1: [프로젝트에 프로토콜 확장 추가](#protocol)
+:1: [솔루션 설정](#solution-setup)
 
-:2: [데스크톱 앱에서 UWP 앱 시작](#start)
+:2: [XAML UI 만들기](#xaml-UI)
 
-:3: [UWP 프로젝트에서 원하는 페이지 표시](#parse)
+:3: [UWP 프로젝트에 프로토콜 확장 추가](#protocol)
 
-<a id="protocol" />
+:4: [데스크톱 앱에서 UWP 앱 시작](#start)
+
+:5: [UWP 프로젝트에서 원하는 페이지 표시](#parse)
+
+<a id="solution-setup" />
+
+### <a name="setup-your-solution"></a>솔루션 설정
+
+솔루션을 설정하는 방법에 대한 일반적인 지침은 이 가이드의 첫 부분에 있는 [먼저 솔루션 설치](#setup) 섹션을 참조하십시오.
+
+솔루션은 다음과 같이 보입니다.
+
+![XAML UI 솔루션](images/desktop-to-uwp/xaml-ui-solution.png)
+
+여기에서 Windows Forms 프로젝트의 이름은 **Landmarks**이며 XAML UI를 포함하는 UWP 프로젝트의 이름은 **MapUI**입니다.
+
+<a id="xaml-UI" />
+
+### <a name="create-a-xaml-ui"></a>XAML UI 만들기
+
+UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음과 같습니다.
+
+```xml
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="12,20,12,14">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <maps:MapControl x:Name="myMap" Grid.Column="0" Width="500" Height="500"
+                     ZoomLevel="{Binding ElementName=zoomSlider,Path=Value, Mode=TwoWay}"
+                     Heading="{Binding ElementName=headingSlider,Path=Value, Mode=TwoWay}"
+                     DesiredPitch="{Binding ElementName=desiredPitchSlider,Path=Value, Mode=TwoWay}"    
+                     HorizontalAlignment="Left"               
+                     MapServiceToken="<Your Key Goes Here" />
+    <Grid Grid.Column="1" Margin="12">
+        <StackPanel>
+            <Slider Minimum="1" Maximum="20" Header="ZoomLevel" Name="zoomSlider" Value="17.5"/>
+            <Slider Minimum="0" Maximum="360" Header="Heading" Name="headingSlider" Value="0"/>
+            <Slider Minimum="0" Maximum="64" Header=" DesiredPitch" Name="desiredPitchSlider" Value="32"/>
+        </StackPanel>
+    </Grid>
+</Grid>
+```
 
 ### <a name="add-a-protocol-extension"></a>프로토콜 확장 추가
 
@@ -106,13 +144,10 @@ XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
 ```xml
 <Extensions>
-      <uap:Extension
-          Category="windows.protocol"
-          Executable="MapUI.exe"
-          EntryPoint=" MapUI.App">
-        <uap:Protocol Name="desktopbridgemapsample" />
-      </uap:Extension>
-    </Extensions>     
+  <uap:Extension Category="windows.protocol" Executable="MapUI.exe" EntryPoint="MapUI.App">
+    <uap:Protocol Name="xamluidemo" />
+  </uap:Extension>
+</Extensions>    
 ```
 
 프로토콜 이름을 지정하고, UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다.
@@ -120,8 +155,6 @@ XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 또 디자이너에서 **package.appxmanifest**를 열고 **선언** 탭을 선택한 다음 확장을 추가합니다.
 
 ![선언-탭](images/desktop-to-uwp/protocol-properties.png)
-
-
 
 > [!NOTE]
 > 지도 컨트롤은 인터넷에서 데이터를 다운로드 합니다. 지도 컨트롤을 사용하고 있다면, 인터넷 클라이언트 기능을 매니페스트에 추가해야 합니다.
@@ -132,61 +165,23 @@ XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
 먼저 데스크톱 응용 프로그램에서 UWP 앱으로 보내고 싶은 매개 변수와 프로토콜 입력이 포함된 [Uri](https://msdn.microsoft.com/library/system.uri.aspx)를 생성합니다. 그런 후 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출합니다.
 
-다음은C#의 기본 예제입니다.
-
 ```csharp
 
-private async void showMap(double lat, double lon)
+private void Statue_Of_Liberty_Click(object sender, EventArgs e)
 {
-    string str = "desktopbridgemapsample://";
+    ShowMap(40.689247, -74.044502);
+}
+
+private async void ShowMap(double lat, double lon)
+{
+    string str = "xamluidemo://";
 
     Uri uri = new Uri(str + "location?lat=" +
         lat.ToString() + "&?lon=" + lon.ToString());
 
     var success = await Windows.System.Launcher.LaunchUriAsync(uri);
 
-    if (success)
-    {
-        // URI launched
-    }
-    else
-    {
-        // URI launch failed
-    }
 }
-```
-샘플에서 조금 더 간접적인 작업을 합니다. VB6 호출 Interop 기능 이름 ``LaunchMap``에서 호출을 래핑합니다. C++를 사용하여 기능을 작성합니다.
-
-VB 블록은 다음과 같습니다.
-
-```VB
-Private Declare Function LaunchMap Lib "UWPWrappers.dll" _
-  (ByVal lat As Double, ByVal lon As Double) As Boolean
- 
-Private Sub EiffelTower_Click()
-    LaunchMap 48.858222, 2.2945
-End Sub
-```
-
-C++ 기능은 다음과 같습니다.
-
-```C++
-
-DllExport bool __stdcall LaunchMap(double lat, double lon)
-{
-  try
-  {
-    String ^str = ref new String(L"desktopbridgemapsample://");
-    Uri ^uri = ref new Uri(
-      str + L"location?lat=" + lat.ToString() + L"&?lon=" + lon.ToString());
- 
-    // now launch the UWP component
-    Launcher::LaunchUriAsync(uri);
-  }
-  catch (Exception^ ex) { return false; }
-  return true;
-}
-
 ```
 
 <a id="parse" />
@@ -195,25 +190,54 @@ DllExport bool __stdcall LaunchMap(double lat, double lon)
 
 UWP 프로젝트의 **App** 클래스에서 **OnActivated** 이벤트 처리기를 재정의합니다. 프로토콜이 앱을 활성화 한 경우, 매개 변수를 구문 분석하고 원하는 페이지를 엽니다.
 
-```C++
-void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ e)
+```csharp
+protected override void OnActivated(Windows.ApplicationModel.Activation.IActivatedEventArgs e)
 {
-  if (e->Kind == ActivationKind::Protocol)
-  {
-    ProtocolActivatedEventArgs^ protocolArgs = (ProtocolActivatedEventArgs^)e;
-    Uri ^uri = protocolArgs->Uri;
-    if (uri->SchemeName == "desktopbridgemapsample")
+    if (e.Kind == ActivationKind.Protocol)
     {
-      Frame ^rootFrame = ref new Frame();
-      Window::Current->Content = rootFrame;
-      rootFrame->Navigate(TypeName(MainPage::typeid), uri->Query);
-      Window::Current->Activate();
+        ProtocolActivatedEventArgs protocolArgs = (ProtocolActivatedEventArgs)e;
+        Uri uri = protocolArgs.Uri;
+        if (uri.Scheme == "xamluidemo")
+        {
+            Frame rootFrame = new Frame();
+            Window.Current.Content = rootFrame;
+            rootFrame.Navigate(typeof(MainPage), uri.Query);
+            Window.Current.Activate();
+        }
     }
-  }
 }
 ```
 
+페이지에 전달된 매개 변수를 사용하기 위해 ``OnNavigatedTo`` 메서드를 무시합니다. 이 경우에 이 페이지에 전달된 위도 및 경도를 사용하여 지도에서 위치를 표시합니다.
+
+```csharp
+protected override void OnNavigatedTo(NavigationEventArgs e)
+ {
+     if (e.Parameter != null)
+     {
+         WwwFormUrlDecoder decoder = new WwwFormUrlDecoder(e.Parameter.ToString());
+
+         double lat = Convert.ToDouble(decoder[0].Value);
+         double lon = Convert.ToDouble(decoder[1].Value);
+
+         BasicGeoposition pos = new BasicGeoposition();
+
+         pos.Latitude = lat;
+         pos.Longitude = lon;
+
+         myMap.Center = new Geopoint(pos);
+
+         myMap.Style = MapStyle.Aerial3D;
+
+     }
+
+     base.OnNavigatedTo(e);
+ }
+```
+
 ### <a name="similar-samples"></a>비슷한 샘플
+
+[VB6 응용 프로그램에 UWP XAML 사용자 환경 추가](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/VB6withXaml)
 
 [Northwind 샘플: UWA UI 및 Win32 기존 코드에 대한 완전한 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/NorthwindSample)
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: de899d95e25489fa815f099d696752389cc3f94e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: b351b5072c6bba228d81a65b51656a81bd564daf
+ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817454"
+ms.lasthandoff: 05/09/2018
+ms.locfileid: "1862262"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -93,12 +93,12 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
         <td><a href="../xbox-live/index.md">Xbox Live 개발자 가이드</a></td>
     </tr>
     <tr>
-        <td>Xbox One 개발자 설명서(GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/documentation/Pages/home.aspx">Xbox One XDK 설명서</a></td>
+        <td>Xbox One 개발 설명서(XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-home">Xbox One 개발</a></td>
     </tr>
     <tr>
-        <td>Xbox One 개발자 백서(GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/WhitePapers.aspx">백서</a></td>
+        <td>Xbox One 개발 백서(XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-whitepapers">백서</a></td>
     </tr>
     <tr>
         <td>Mixer 대화형 설명서</td>
@@ -227,8 +227,8 @@ Windows10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는 
         <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
     </tr>
     <tr>
-        <td>Xbox One 게임 샘플(GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx">샘플</a></td>
+        <td>Xbox One 게임 샘플(XGD)</td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">샘플</a></td>
     </tr>
     <tr>
         <td>Windows 게임 샘플(MSDN 코드 갤러리)</td>
@@ -260,7 +260,7 @@ Windows10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는 
     </colgroup>
     <tr>
         <td>Windows 앱 개발자 포럼</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Windows 스토어 및 앱 포럼</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Microsoft Store 및 앱 포럼</a></td>
     </tr>
     <tr>
         <td>UWP 앱 개발자 포럼</td>
@@ -1583,7 +1583,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>스트리밍 설치 및 선택형 패키지 사용 방법 알아보기(동영상)</td>
+        <td>스트리밍 설치 및 선택적 패키지 사용 방법 알아보기(동영상)</td>
         <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">차세대 UWP 앱 배포: 확장 가능하고 스트리밍 가능하고 구성 요소화된 앱 빌드</a></td>
     </tr>
     <tr>
@@ -1591,8 +1591,8 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
         <td><a href="../packaging/streaming-install.md">UWP 앱 스트리밍 설치</a></td>
     </tr>
     <tr>
-        <td>DLC 게임 콘텐츠 같은 선택형 패키지 만들기</td>
-        <td><a href="../packaging/optional-packages.md">선택형 패키지 및 관련 집합 제작</a></td>
+        <td>DLC 게임 콘텐츠 같은 선택적 패키지 만들기</td>
+        <td><a href="../packaging/optional-packages.md">선택적 패키지 및 관련 집합 제작</a></td>
     </tr>
     <tr>
         <td>UWP 게임 패키징</td>
@@ -1698,7 +1698,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
 
 ### <a name="visual-studio-application-insights"></a>Visual Studio Application Insights
 
-Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원격 분석 및 사용 현황 분석을 제공합니다. Application Insights는 게임이 릴리스된 후 문제를 검색 및 해결하고, 지속적으로 사용을 모니터링 및 개선하며, 플레이어가 어떻게 계속해서 게임과 상호 작용하는지를 이해하도록 도와줍니다. Application Insights는 [Azure 포털](http://portal.azure.com/)에 원격 분석을 전송하는 SDK를 앱에 추가하여 작동합니다.
+Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원격 분석 및 사용 현황 분석을 제공합니다. Application Insights는 게임이 릴리스된 후 문제를 검색 및 해결하고, 지속적으로 사용을 모니터링 및 개선하며, 플레이어가 어떻게 계속해서 게임과 상호 작용하는지를 이해하도록 도와줍니다. Application Insights는 [Azure Portal](http://portal.azure.com/)에 원격 분석을 전송하는 SDK를 앱에 추가하여 작동합니다.
 
 <table>
     <colgroup>

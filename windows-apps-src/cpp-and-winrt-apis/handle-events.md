@@ -3,27 +3,24 @@ author: stevewhims
 description: 이번 항목에서는 C++/WinRT를 사용해 이벤트 처리 대리자를 등록하거나 취소하는 방법에 대해서 설명합니다.
 title: C++/WinRT의 대리자를 사용한 이벤트 처리
 ms.author: stwhi
-ms.date: 04/23/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 44eb49e0e9797ec363c160ef701e19b58f8227a1
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 1cf3c87411bb6d8eb5886e7205f96c466d707220
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832017"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976491"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 대리자를 사용한 이벤트 처리
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
-
-이 항목에서는 C++/WinRT를 사용해 이벤트 처리 대리자를 등록하거나 취소하는 방법에 대해서 설명합니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
+이번 항목에서는 C++/WinRT를 사용해 이벤트 처리 대리자를 등록하거나 취소하는 방법에 대해서 설명합니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 현재 가용성에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
+> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>이벤트 처리를 위한 대리자 등록
 다음은 버튼의 클릭 이벤트를 처리하는 간단한 예제입니다. 멤버 함수를 등록하여 이러한 이벤트를 처리할 때는 XAML 태그를 사용하는 것이 일반적입니다.
@@ -69,7 +66,7 @@ struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
 
 함수 호출 연산자의 구문 역시 알아두는 것이 좋습니다. 대리자의 매개 변수로 무엇을 사용해야 할지 알 수 있기 때문입니다. 보다시피 이 경우에는 함수 호출 연산자 구문이 **MainPage::ClickHandler**의 매개 변수와 일치합니다.
 
-이벤트 핸들러의 작업이 많지 않다면 멤버 함수가 아닌 람다 함수를 사용하는 것도 좋습니다. 한 번 더 아래 코드 예제에서는 쉽게 알 수 없지만 **RoutedEventHandler** 대리자가 람다 함수에서 생성되고 있으며, 이 람다 함수는 마찬가지로 함수 호출 연산자의 구문과 일치해야 합니다.
+이벤트 처리기의 작업이 많지 않다면 멤버 함수가 아닌 람다 함수를 사용하는 것도 좋습니다. 한 번 더 아래 코드 예제에서는 쉽게 알 수 없지만 **RoutedEventHandler** 대리자가 람다 함수에서 생성되고 있으며, 이 람다 함수는 마찬가지로 함수 호출 연산자의 구문과 일치해야 합니다.
 
 ```cppwinrt
 MainPage::MainPage()
@@ -100,7 +97,7 @@ MainPage::MainPage()
 ```
 
 ## <a name="revoke-a-registered-delegate"></a>등록된 대리자 취소
-대리자를 등록하면 일반적으로 토큰이 반환됩니다. 이후 반환된 토큰을 사용하여 대리자를 취소할 수 있습니다. 이 말은 대리자가 이벤트에서 등록 해제된 후 이벤트가 다시 발생하는 경우에는 대리자를 취소할 수 없다는 것을 의미합니다. 쉽게 말해서 위의 코드 예제에는 어디에도 취소하는 방법이 나와있지 않습니다. 하지만 다음 코드 예제에서는 구조체의 private 데이터 멤버에 토큰을 저장한 후 소멸자에서 핸들러를 취소합니다.
+대리자를 등록하면 일반적으로 토큰이 반환됩니다. 이후 반환된 토큰을 사용하여 대리자를 취소할 수 있습니다. 이 말은 대리자가 이벤트에서 등록 해제된 후 이벤트가 다시 발생하는 경우에는 대리자를 취소할 수 없다는 것을 의미합니다. 쉽게 말해서 위의 코드 예제에는 어디에도 취소하는 방법이 나와있지 않습니다. 하지만 다음 코드 예제에서는 구조체의 private 데이터 멤버에 토큰을 저장한 후 소멸자에서 처리기를 취소합니다.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -123,7 +120,9 @@ private:
 };
 ```
 
-그 밖에 대리자를 등록할 때 **winrt::auto_revoke**([**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t) 형식의 값)를 지정하여 이벤트 취소자를 요청하는 방법도 있습니다. 이후 취소자가 범위를 벗어나면 대리자가 자동으로 취소됩니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
+위의 예와 같이 강력한 참조 대신 버튼에 약한 참조를 저장할 수 있습니다([C++/WinRT의 약한 참조](weak-references.md) 참조).
+
+그 밖에 대리자를 등록할 때 **winrt::auto_revoke**([**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t) 형식의 값)를 지정하여 이벤트 취소자(**winrt::event_revoker** 형식)를 요청하는 방법도 있습니다. 이벤트 취소자는 이벤트 소스(이벤트를 발생하게 만든 개체)에 대한 약한 참조를 보유합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 소스가 여전히 존재하는지 확인합니다. 존재하는 경우 대리인을 취소합니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -151,7 +150,7 @@ winrt::event_token Click(winrt::Windows::UI::Xaml::RoutedEventHandler const& han
 void Click(winrt::event_token const& token) const;
 
 // Revoke with event_revoker
-event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
+winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
     winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
 ```
 
@@ -188,12 +187,22 @@ void ProcessFeedAsync()
         // use syndicationFeed;
     });
     
-    // or (but this function must then return IAsyncAction)
+    // or (but this function must then be a coroutine and return IAsyncAction)
     // SyndicationFeed syndicationFeed = co_await async_op_with_progress;
 }
 ```
 
-위의 주석에서도 알 수 있듯이 비동기 작업에서 완료된 이벤트에 대리자를 사용하지 않아도 코루틴을 더욱 자연스럽게 사용할 수 있다는 것을 알 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
+위의 "코루틴" 주석에서도 알 수 있듯이 비동기 작업에서 완료된 이벤트에 대리자를 사용하지 않아도 코루틴을 더욱 자연스럽게 사용할 수 있다는 것을 알 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
+
+하지만 대리자를 계속 사용하는 경우 간단한 구문을 선택할 수 있습니다.
+
+```cppwinrt
+async_op_with_progress.Completed(
+    [](auto&& /*sender*/, AsyncStatus const)
+{
+    ....
+});
+```
 
 ## <a name="delegate-types-that-return-a-value"></a>값을 반환하는 대리자 유형
 일부 대리자 유형은 스스로 값을 반환해야 합니다. 한 예로 문자열을 반환하는 [**ListViewItemToKeyHandler**](/uwp/api/windows.ui.xaml.controls.listviewitemtokeyhandler)가 있습니다. 다음은 해당 유형의 대리자를 작성하는 예제입니다(단, 람다 함수가 값을 반환합니다).
@@ -261,5 +270,5 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT의 이벤트 작성](author-events.md)
+* [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)
 * [C++/WinRT의 약한 참조](weak-references.md)
-

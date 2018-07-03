@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5b30e9fe2fb4f3bfbec81366a920cd74a19dcec
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: 724e2ce05dc439ba440f46697b736faabb1e8df0
+ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673880"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "2018497"
 ---
 # <a name="discover-remote-devices"></a>원격 장치 검색
 앱에서 무선 네트워크, Bluetooth 및 클라우드 연결을 사용하여 검색 장치와 동일한 Microsoft 계정으로 로그온된 Windows 장치를 검색할 수 있습니다. 특별한 소프트웨어가 설치되어 있지 않아도 원격 장치를 검색할 수 있습니다.
@@ -33,9 +33,12 @@ ms.locfileid: "1673880"
 
 [!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetMakeFilterList)]
 
-> [!TIP]
+> [!NOTE]
 > "근접" 필터 값이 물리적 근접도를 보증하지는 않습니다. 신뢰할 수 있는 물리적 접근성이 필요한 시나리오의 경우 필터에 [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) 값을 사용합니다. 현재 이 필터는 Bluetooth로 검색되는 장치만 허용합니다. 물리적 근접성을 보증하는 새로운 검색 메커니즘과 프로토콜이 지원됨에 따라 여기에도 이들이 포함됩니다.  
 [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) 클래스에는 검색된 장치가 물리적 근접성 내에 실제로 있는지를 나타내는 속성인 [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity)도 있습니다.
+
+> [!NOTE]
+> (검색 유형 필터 선택에 의해 결정된)로컬 네트워크를 통해 장치를 검색하려는 경우, 네트워크는 "비공개" 또는 "도메인" 프로필을 사용해야 합니다. 디바이스는 "공용" 네트워크를 통해 다른 디바이스를 검색하지 않습니다.
 
 [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter) 개체 목록이 생성되면 **RemoteSystemWatcher**의 생성자에 전달할 수 있습니다.
 
@@ -65,9 +68,6 @@ bool isRemoteSystemLaunchUriCapable = remoteSystem.GetCapabilitySupportedAsync(K
 ```
 
 ## <a name="cross-user-discovery"></a>사용자 간 검색
-
-> [!WARNING]
-> 이 섹션의 기능은 현재 개발자가 사용할 수 없습니다.
 
 개발자는 동일한 사용자에게 등록된 장치뿐만 아니라 클라이언트 장치에 근접한 _모든_ 장치의 검색을 지정할 수 있습니다. 이는 특별 **IRemoteSystemFilter**인 [**RemoteSystemAuthorizationKindFilter**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemauthorizationkindfilter)를 통해 구현됩니다. 다른 필터 유형과 같이 구현됩니다.
 

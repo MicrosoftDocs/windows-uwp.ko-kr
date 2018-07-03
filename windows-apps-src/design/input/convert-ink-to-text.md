@@ -12,15 +12,14 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f33ec4df6661861bc9ee956393cf25cad1c2cb7
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 58c654c6b35b9e7e27cc201ac71e70a92a920b79
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707384"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895338"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
-
 
 Windows Ink에 내장된 인식 기능을 사용하여 잉크 스트로크 및 셰이프를 변환합니다.
 
@@ -280,7 +279,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
 
 ## <a name="constrained-handwriting-recognition"></a>제한된 필기 인식
 
-이전 섹션 ([잉크 분석을 통한 자유 형식 인식](#free-form-recognition-with-ink-analysis))에서는 [잉크 분석 API](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis)를 사용하여 InkCanvas 영역 내에서 임의의 잉크 스트로크를 인식하는 방법을 살펴보았습니다.
+이전 섹션([잉크 분석을 통한 자유 형식 인식](#free-form-recognition-with-ink-analysis))에서는 [잉크 분석 API](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis)를 사용하여 InkCanvas 영역 내에서 임의의 잉크 스트로크를 인식하는 방법을 살펴보았습니다.
 
 이번 섹션에서는 Windows Ink 필기 인식 엔진을 사용하여(잉크 분석 아님) [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 필기된 일련의 스트로크를 텍스트로 변환(설치된 기본 언어 팩을 기반으로)하는 방법을 보여 줍니다.
 

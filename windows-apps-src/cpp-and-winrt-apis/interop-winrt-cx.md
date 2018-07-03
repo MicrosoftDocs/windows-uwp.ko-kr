@@ -3,18 +3,18 @@ author: stevewhims
 description: 이번 항목에서는 C++/CX 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다.
 title: C++/WinRT와 C++/CX 사이의 상호 운용성
 ms.author: stwhi
-ms.date: 04/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 616bd9ea8c4b89599e703ef9467206b028fd596b
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 5e1e939f6df9bd35e3717b9cc0ce810e97275494
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831787"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912921"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 C++/CX 사이의 상호 운용성
 이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. 도우미 함수는 두 언어 프로젝션을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 C++/CX에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
@@ -27,11 +27,11 @@ template <typename T>
 T from_cx(Platform::Object^ from)
 {
     T to{ nullptr };
- 
+
     winrt::check_hresult(reinterpret_cast<::IUnknown*>(from)
         ->QueryInterface(winrt::guid_of<T>(),
-                         reinterpret_cast<void**>(winrt::put_abi(to))));
- 
+            reinterpret_cast<void**>(winrt::put_abi(to))));
+
     return to;
 }
 ```
@@ -47,7 +47,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 ```
 
 ## <a name="code-example"></a>코드 예제
-다음은 두 도우미 함수가 어떻게 사용되는지 나타낸 코드 예제(C++/CX **비어 있는 앱** 프로젝트 템플릿 기반)입니다. 또한 두 프로젝션에서 네임스페이스의 충돌이 어떻게 처리되는지도 보여주고 있습니다.
+다음은 두 도우미 함수가 어떻게 사용되는지 나타낸 코드 예제(C++/CX **비어 있는 앱** 프로젝트 템플릿 기반)입니다. 또한 C++/WinRT 프로젝션 및 C++/CX 프로젝션 간의 잠재적인 네임스페이스 충돌을 다루기 위해 다른 격리 영역에 대한 네임스페이스 별칭을 사용하는 방법을 보여 줍니다.
 
 ```cppwinrt
 // MainPage.xaml.cpp

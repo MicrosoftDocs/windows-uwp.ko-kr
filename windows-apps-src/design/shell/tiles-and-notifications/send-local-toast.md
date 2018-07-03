@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: e59c90bae19116f725b58fc6ec9fdbb41e5dccb3
-ms.sourcegitcommit: 0ee9c6848cb9d624f15cdab1d0c5991ca7245e70
+ms.openlocfilehash: 4f76bc94c80a5191cf7bad86b43230f0d03e81b1
+ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
-ms.locfileid: "1641693"
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "1917712"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
@@ -25,7 +25,7 @@ ms.locfileid: "1641693"
 알림 메시지는 사용자가 앱 내에 있지 않을 때 앱에서 생성하여 사용자에게 제공할 수 있는 메시지입니다. 이 빠른 시작에서는 새로운 적응형 템플릿과 대화형 작업을 사용하여 Windows 10 알림 메시지를 만들고, 배달하고, 표시하는 단계를 안내합니다. 가장 간단하게 구현할 수 있는 로컬 알림을 통해 이러한 작업을 보여 줍니다.
 
 > [!IMPORTANT]
-> 데스크톱 응용 프로그램(데스크톱 브리지 및 클래식 Win32)에는 알림을 보내고 활성화를 처리하는 다양한 단계가 있습니다. [데스크톱 C#](send-local-toast-desktop.md) 및 [데스크톱 c + + WRL](send-local-toast-desktop-cpp-wrl.md) 설명서를 참조하여 알림 구현 방법을 알아보세요.
+> 데스크톱 응용 프로그램(데스크톱 브리지 및 클래식 Win32)에는 알림을 보내고 활성화를 처리하는 다양한 단계가 있습니다. [데스크톱 앱](toast-desktop-apps.md) 설명서를 참조하여 알림 구현 방법을 알아보세요.
 
 다음과 같은 작업을 수행합니다.
 
@@ -382,7 +382,7 @@ BackgroundAccessStatus status = await BackgroundExecutionManager.RequestAccessAs
 // Create the background task
 BackgroundTaskBuilder builder = new BackgroundTaskBuilder()
 {
-    Name = "MyToastNotificationActionTrigger",
+    Name = taskName
 };
 
 // Assign the toast action trigger

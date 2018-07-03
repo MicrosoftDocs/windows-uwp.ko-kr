@@ -10,17 +10,17 @@ pm-contact: predavid
 design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
-ms.openlocfilehash: c92d0c6517456f180dcc84b60cbc6ca3a53ea282
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 41e17d299e9bac34e58f3c8ffdffecff19ddac18
+ms.sourcegitcommit: e020e9a4d947368a68e4eeba1eea65e9b3a725af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707148"
+ms.lasthandoff: 05/28/2018
+ms.locfileid: "1924396"
 ---
 # <a name="treeview"></a>TreeView
-
-> [!IMPORTANT]
-> 이 문서에서는 아직 출시되지 않아 상업적으로 출시하기 전에 크게 수정될 수 있는 기능에 대해 설명합니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.
 
 XAML TreeView 컨트롤은 중첩된 항목이 포함된 노드를 확장 및 축소하는 계층적 목록을 지원합니다. 이 컨트롤은 UI에 폴더 구조나 중첩된 관계를 나타내는 데 사용할 수 있습니다.
 
@@ -89,6 +89,18 @@ private void InitializeTreeView()
 }
 ```
 
+```vb
+Private Sub InitializeTreeView()
+    Dim rootNode As New TreeViewNode With {.Content = "Flavors", .IsExpanded = True}
+    With rootNode.Children
+        .Add(New TreeViewNode With {.Content = "Vanilla"})
+        .Add(New TreeViewNode With {.Content = "Strawberry"})
+        .Add(New TreeViewNode With {.Content = "Chocolate"})
+    End With
+    sampleTreeView.RootNodes.Add(rootNode)
+End Sub
+```
+
 이러한 API는 트리 보기의 데이터 계층을 관리하는 데 사용할 수 있습니다.
 
 | **[TreeView](/uwp/api/windows.ui.xaml.controls.treeview)** | |
@@ -115,6 +127,11 @@ private void InitializeTreeView()
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
 TreeViewNode pictureNode = new TreeViewNode();
 pictureNode.Content = picturesFolder;
+```
+
+```vb
+Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
+Dim pictureNode As New TreeViewNode With {.Content = picturesFolder}
 ```
 
 트리 보기에 데이터 항목이 표시되는 방법을 지정하기 위해 [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate)을 제공할 수 있습니다.
@@ -160,6 +177,14 @@ private void SampleTreeView_Expanding(TreeView sender, TreeViewExpandingEventArg
 }
 ```
 
+```vb
+Private Sub SampleTreeView_Expanding(sender As TreeView, args As TreeViewExpandingEventArgs)
+    If args.Node.HasUnrealizedChildren Then
+        FillTreeNode(args.Node)
+    End If
+End Sub
+```
+
 필수 요건은 아니지만, [축소](/uwp/api/windows.ui.xaml.controls.treeview.collapsed) 이벤트를 처리하고 부모 노드가 닫힐 때 자식 노드를 제거하기를 원할 수도 있습니다. 트리 보기에 다수의 노드가 있거나 노드 데이터가 다양한 리소스를 사용하는 경우에는 중요할 수 있습니다. 닫힌 노드에 자식 노드를 남겨두는 것과 비교해 열릴 때마다 노드를 채우는 것이 성능에 미치는 영향을 고려해야 합니다. 최상의 옵션은 앱에 따라 달라집니다.
 
 축소 이벤트에 대한 처리기의 예는 다음과 같습니다.
@@ -170,6 +195,13 @@ private void SampleTreeView_Collapsed(TreeView sender, TreeViewCollapsedEventArg
     args.Node.Children.Clear();
     args.Node.HasUnrealizedChildren = true;
 }
+```
+
+```vb
+Private Sub SampleTreeView_Collapsed(sender As TreeView, args As TreeViewCollapsedEventArgs)
+    args.Node.Children.Clear()
+    args.Node.HasUnrealizedChildren = True
+End Sub
 ```
 
 ### <a name="invoking-an-item"></a>항목 호출
@@ -203,6 +235,21 @@ private void SampleTreeView_ItemInvoked(TreeView sender, TreeViewItemInvokedEven
 }
 ```
 
+```vb
+Private Sub SampleTreeView_ItemInvoked(sender As TreeView, args As TreeViewItemInvokedEventArgs)
+    Dim node = TryCast(args.InvokedItem, TreeViewNode)
+    Dim item = TryCast(node.Content, IStorageItem)
+    If item IsNot Nothing Then
+        FileNameTextBlock.Text = item.Name
+        FilePathTextBlock.Text = item.Path
+        TreeDepthTextBlock.Text = node.Depth.ToString()
+        If TypeOf node.Content Is StorageFolder Then
+            node.IsExpanded = Not node.IsExpanded
+        End If
+    End If
+End Sub
+```
+
 ### <a name="item-selection"></a>항목 선택
 
 TreeView 컨트롤은 단일 선택 및 다중 선택을 모두 지원합니다. 기본적으로 노드 선택 기능은 꺼져 있지만, 노드 선택이 가능하도록 [TreeView.SelectionMode](/uwp/api/windows.ui.xaml.controls.treeview.selectionmode) 속성을 설정할 수 있습니다. [TreeViewSelectionMode](/uwp/api/windows.ui.xaml.controls.treeviewselectionmode) 값은 **없음**, **단일** 및 **다중**입니다.
@@ -212,7 +259,7 @@ TreeView 컨트롤은 단일 선택 및 다중 선택을 모두 지원합니다.
 선택된 노드는 트리 보기의 [SelectedNodes](/uwp/api/windows.ui.xaml.controls.treeview.selectednodes) 컬렉션에 추가됩니다. [SelectAll](/uwp/api/windows.ui.xaml.controls.treeview.selectall) 메서드를 호출하여 트리 보기의 모든 노드를 선택할 수 있습니다.
 
 > [!NOTE]
-> **SelectAll**을 호출하면 SelectionMode에 관계 없이 실현된 모든 노드가 선택됩니다. 일관된 사용자 환경을 제공하려면 SelectionMode가 **다중**일 경우에 SelectAll만 호출해야 합니다.
+> **SelectAll**을 호출하면 SelectionMode에 관계없이 실현된 모든 노드가 선택됩니다. 일관된 사용자 환경을 제공하려면 SelectionMode가 **다중**일 경우에 SelectAll만 호출해야 합니다.
 
 #### <a name="selection-and-realizedunrealized-nodes"></a>선택 및 실현/미실현 노드
 
@@ -311,6 +358,26 @@ private void SelectAllButton_Click(object sender, RoutedEventArgs e)
         DessertTree.SelectAll();
     }
 }
+```
+
+```vb
+Private Sub OrderButton_Click(sender As Object, e As RoutedEventArgs)
+    FlavorList.Text = String.Empty
+    ToppingList.Text = String.Empty
+    For Each node As TreeViewNode In DessertTree.SelectedNodes
+        If node.Parent.Content?.ToString() = "Flavors" Then
+            FlavorList.Text += node.Content & "; "
+        ElseIf node.HasChildren = False Then
+            ToppingList.Text += node.Content & "; "
+        End If
+    Next
+End Sub
+
+Private Sub SelectAllButton_Click(sender As Object, e As RoutedEventArgs)
+    If DessertTree.SelectionMode = TreeViewSelectionMode.Multiple Then
+        DessertTree.SelectAll()
+    End If
+End Sub
 ```
 
 ### <a name="pictures-and-music-library-tree-view"></a>사진 및 음악 라이브러리 트리 보기
@@ -512,6 +579,104 @@ private void RefreshButton_Click(object sender, RoutedEventArgs e)
     sampleTreeView.RootNodes.Clear();
     InitializeTreeView();
 }
+```
+
+```vb
+Public Sub New()
+    InitializeComponent()
+    InitializeTreeView()
+End Sub
+
+Private Sub InitializeTreeView()
+    ' A TreeView can have more than 1 root node. The Pictures library
+    ' and the Music library will each be a root node in the tree.
+    ' Get Pictures library.
+    Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
+    Dim pictureNode As New TreeViewNode With {
+        .Content = picturesFolder,
+        .IsExpanded = True,
+        .HasUnrealizedChildren = True
+    }
+    sampleTreeView.RootNodes.Add(pictureNode)
+    FillTreeNode(pictureNode)
+
+    ' Get Music library.
+    Dim musicFolder As StorageFolder = KnownFolders.MusicLibrary
+    Dim musicNode As New TreeViewNode With {
+        .Content = musicFolder,
+        .IsExpanded = True,
+        .HasUnrealizedChildren = True
+    }
+    sampleTreeView.RootNodes.Add(musicNode)
+    FillTreeNode(musicNode)
+End Sub
+
+Private Async Sub FillTreeNode(node As TreeViewNode)
+    ' Get the contents of the folder represented by the current tree node.
+    ' Add each item as a new child node of the node that's being expanded.
+
+    ' Only process the node if it's a folder and has unrealized children.
+    Dim folder As StorageFolder = Nothing
+    If TypeOf node.Content Is StorageFolder AndAlso node.HasUnrealizedChildren Then
+        folder = TryCast(node.Content, StorageFolder)
+    Else
+        ' The node isn't a folder, or it's already been filled.
+        Return
+    End If
+
+    Dim itemsList As IReadOnlyList(Of IStorageItem) = Await folder.GetItemsAsync()
+    If itemsList.Count = 0 Then
+        ' The item is a folder, but it's empty. Leave HasUnrealizedChildren = true so
+        ' that the chevron appears, but don't try to process children that aren't there.
+        Return
+    End If
+
+    For Each item In itemsList
+        Dim newNode As New TreeViewNode With {
+            .Content = item
+        }
+        If TypeOf item Is StorageFolder Then
+            ' If the item is a folder, set HasUnrealizedChildren to True.
+            ' This makes the collapsed chevron show up.
+            newNode.HasUnrealizedChildren = True
+        Else
+            ' Item is StorageFile. No processing needed for this scenario.
+        End If
+        node.Children.Add(newNode)
+    Next
+
+    ' Children were just added to this node, so set HasUnrealizedChildren to False.
+    node.HasUnrealizedChildren = False
+End Sub
+
+Private Sub SampleTreeView_Expanding(sender As TreeView, args As TreeViewExpandingEventArgs)
+    If args.Node.HasUnrealizedChildren Then
+        FillTreeNode(args.Node)
+    End If
+End Sub
+
+Private Sub SampleTreeView_Collapsed(sender As TreeView, args As TreeViewCollapsedEventArgs)
+    args.Node.Children.Clear()
+    args.Node.HasUnrealizedChildren = True
+End Sub
+
+Private Sub SampleTreeView_ItemInvoked(sender As TreeView, args As TreeViewItemInvokedEventArgs)
+    Dim node = TryCast(args.InvokedItem, TreeViewNode)
+    Dim item = TryCast(node.Content, IStorageItem)
+    If item IsNot Nothing Then
+        FileNameTextBlock.Text = item.Name
+        FilePathTextBlock.Text = item.Path
+        TreeDepthTextBlock.Text = node.Depth.ToString()
+        If TypeOf node.Content Is StorageFolder Then
+            node.IsExpanded = Not node.IsExpanded
+        End If
+    End If
+End Sub
+
+Private Sub RefreshButton_Click(sender As Object, e As RoutedEventArgs)
+    sampleTreeView.RootNodes.Clear()
+    InitializeTreeView()
+End Sub
 ```
 
 ## <a name="related-articles"></a>관련 문서

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, windows machine learning
 ms.localizationpriority: medium
-ms.openlocfilehash: 0aea463503c53d7533354412e5840f94619fd056
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: 49af45236d262f682c5f5f28e57120c0bb209e81
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689369"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1842690"
 ---
 # <a name="windows-ml-samples"></a>Windows ML 샘플
 
@@ -30,4 +30,4 @@ ms.locfileid: "1689369"
 
 ## <a name="windows-machine-learning-explorer"></a>Windows Machine Learning 탐색기
 
-[이 샘플](https://github.com/Microsoft/Windows-Machine-Learning/tree/master/Samples/UWP/WinMLExplorer)은 검색할 수 있는 부트스트랩 ML 모델이 그림이나 실시간 카메라 피드의 회로 보드에서 검색하는 일반적인 데이터 구동 응용 프로그램입니다. 블로그 게시물 [How three lines of code and Windows Machine Learning empower .NET developers to run AI locally on Windows 10 devices](https://aka.ms/winmlfordevsblog)에서 자세히 알아볼 수 있습니다. 
+[이 샘플](https://github.com/Microsoft/Windows-Machine-Learning/tree/master/Samples/UWP/WinMLExplorer)은 검색할 수 있는 부트스트랩 ML 모델이 그림이나 실시간 카메라 피드의 회로 보드에서 검색하는 일반적인 데이터 구동 응용 프로그램입니다. 블로그 게시물 [How three lines of code and Windows Machine Learning empower .NET developers to run AI locally on Windows 10 devices](https://aka.ms/winmlfordevsblog)에서 자세히 알아볼 수 있습니다.

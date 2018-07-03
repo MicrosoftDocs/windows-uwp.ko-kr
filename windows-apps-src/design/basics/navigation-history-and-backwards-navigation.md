@@ -14,12 +14,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cefcefc9df85b512456c5fb2e556ad95e56d4999
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 824f0e83408893bf95d856067282b1fea1313876
+ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831987"
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "1895410"
 ---
 #  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
@@ -190,16 +190,16 @@ private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하지 않고 동일한 피어 그룹의 페이지 간</strong>
-<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 두 페이지로 직접 이동할 수 있도록 하는 항상 존재하는 탐색 요소(예: 탭/피벗 또는 도킹된 탐색 창)가 없습니다.</p></td>
+<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 두 페이지로 직접 이동할 수 있도록 하는 항상 존재하는 탐색 요소(예: 상단 탐색 창 또는 도킹된 왼쪽 탐색 창)가 없습니다.</p></td>
 <td style="vertical-align:top;"><strong>예</strong>
-<p>다음 그림에서 사용자는 동일한 피어 그룹의 두 페이지 간을 이동합니다. 페이지에서 탭 또는 도킹된 탐색 창이 사용되지 않으므로 해당 탐색 내용이 탐색 기록에 추가됩니다.</p>
+<p>다음 그림에서 사용자는 동일한 피어 그룹의 두 페이지 간을 이동합니다. 페이지에서 상단 탐색 모음 또는 도킹된 왼쪽 탐색 창이 사용되지 않으므로 해당 탐색 내용이 탐색 기록에 추가됩니다.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하여 페이지 간, 동일한 피어 그룹</strong>
-<p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지 모두 동일한 탐색 요소에 표시됩니다. 예를 들어 두 페이지 모두 동일한 탭/피벗 요소를 사용하거나 두 페이지 모두 도킹된 탐색 창에 표시됩니다.</p></td>
-<td style="vertical-align:top;"><strong>아니요</strong>
-<p>사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다.</p>
+<p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지 모두 동일한 탐색 요소에 표시됩니다. 예를 들어 두 페이지 모두 동일한 상단 창 요소를 사용하거나 두 페이지 모두 도킹된 왼쪽 탐색 창에 표시됩니다.</p></td>
+<td style="vertical-align:top;"><strong>유동적입니다.</strong>
+<p>예, 탐색 기록을 추가하지만 주목할 만한 예외가 2개 있습니다. 앱 사용자가 피어 그룹 간에 자주 전환할 것으로 예상되는 경우, 또는 피어 그룹의 페이지 내에서 탐색 상태/기록을 유지하려는 경우 탐색 기록에 추가하지 마십시오. 이 경우 사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

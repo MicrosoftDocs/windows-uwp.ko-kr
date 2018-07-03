@@ -10,28 +10,28 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd24bb951619e086a69a5bb0dd7752bfa3fe41dc
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: e08208b7086023654b0b2404cccc8664e123d9ec
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707118"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983618"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 
 ![Surface Studio가 있는 Surface Dial 이미지](images/radialcontroller/dial-pen-studio-600px.png)  
 *Surface Studio 및 Surface 펜이 있는 Surface Dial*([Microsoft 스토어](https://aka.ms/purchasesurfacedial)에서 구매 가능)
 
-이 자습서에서는 Surface Dial과 같은 휠 디바이스에서 지원하는 사용자 상호 작용 환경을 사용자 지정하는 방법을 단계별로 설명합니다. GitHub에서 다운로드할 수 있는 샘플 앱에서 코드 조각([샘플 코드](#sample-code) 참조)을 사용하여 다양한 기능과 연결된 [**RadialController**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller) API에 대해 설명합니다.
+이 자습서에서는 Surface Dial과 같은 휠 디바이스에서 지원하는 사용자 상호 작용 환경을 사용자 지정하는 방법을 단계별로 설명합니다. GitHub에서 다운로드할 수 있는 샘플 앱에서 코드 조각([샘플 코드](#sample-code) 참조)을 사용하여 다양한 기능과 연결된 [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) API에 대해 설명합니다.
 
 중점을 두고 살펴볼 내용은 다음과 같습니다.
-* [**RadialController**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller) 메뉴에 표시되는 기본 제공 도구 지정
+* [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) 메뉴에 표시되는 기본 제공 도구 지정
 * 사용자 지정 도구를 메뉴에 추가
 * 촉각 피드백 제어
 * 클릭 상호 작용 사용자 지정
 * 회전 상호 작용 사용자 지정
 
-이러한 기능과 기타 기능의 구현에 대한 자세한 내용은 [UWP 앱에서 Surface Dial 상호 작용](https://docs.microsoft.com/en-us/windows/uwp/input/windows-wheel-interactions)을 참조하세요.
+이러한 기능과 기타 기능의 구현에 대한 자세한 내용은 [UWP 앱에서 Surface Dial 상호 작용](windows-wheel-interactions.md)을 참조하세요.
 
 ## <a name="introduction"></a>소개
 
@@ -46,11 +46,11 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 
 * Windows 10 크리에이터 업데이트 이상을 실행하는 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2017(10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
-* [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
+* [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 휠 디바이스(지금은 [Surface Dial](https://aka.ms/purchasesurfacedial)만)
 * Visual Studio를 사용하는 UWP(유니버설 Windows 플랫폼) 앱 개발을 처음 하는 경우, 이 자습서를 시작하기 전에 이러한 항목을 살펴보십시오.  
-    * [설정하기](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)
-    * ["Hello, World" 앱 만들기(XAML)](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [설정하기](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
+    * ["Hello, World" 앱 만들기(XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 
 ## <a name="set-up-your-devices"></a>디바이스 설정
 
@@ -67,7 +67,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 > [!NOTE]
 > 휠 디바이스는 **휠** 설정을 통해 구성할 수 있습니다.
 > 1. **시작** 메뉴에서 **설정**을 선택합니다.
-> **디바이스** > **휠**을 선택합니다.    
+> 2. **디바이스** > **휠**을 선택합니다.    
 > ![휠 설정 화면](images/radialcontroller/wheel-settings.png)
 
 이제 이 자습서를 시작할 준비가 되었습니다. 
@@ -177,7 +177,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
         using Windows.UI.Input;
         ```
 
-    - 글로벌 개체([RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller), [RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration), [RadialControllerMenuItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollermenuitem))는 앱 전체에서 사용됩니다.
+    - 글로벌 개체([RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller), [RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration), [RadialControllerMenuItem](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuitem))는 앱 전체에서 사용됩니다.
     
         ```csharp
         private RadialController radialController;
@@ -192,7 +192,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
         { InitializeSample(sender, args); };
         ``` 
 
-    - 다음은 [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) 개체를 초기화하고 [RotationChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.RotationChanged) 및 [ButtonClicked](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ButtonClicked) 이벤트에 대한 처리기를 설정합니다.
+    - 다음은 [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) 개체를 초기화하고 [RotationChanged](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationChanged) 및 [ButtonClicked](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ButtonClicked) 이벤트에 대한 처리기를 설정합니다.
 
         ```csharp
         // Set up the app UI and RadialController.
@@ -210,7 +210,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
         }
         ```
 
-    - 여기에서 사용자 정의 RadialController 메뉴 항목을 초기화합니다. [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) 개체로의 참조를 가져오는 [CreateForCurrentView](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.CreateForCurrentView)를 사용하고, [RotationResolutionInDegrees](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationResolutionInDegrees) 속성을 사용하여 회전 감도를 "1"로 설정하고, [CreateFromFontGlyph](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollermenuitem.CreateFromFontGlyph)를 사용하여 [RadialControllerMenuItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollermenuitem)을 만들고, 메뉴 항목을 **RadialController** 메뉴 항목 컬렉션에 추가하고, 마지막으로 [SetDefaultMenuItems](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontrollerconfiguration.setdefaultmenuitems)를 사용하여 기본 메뉴 항목을 지우고 사용자 정의 도구만 남깁니다. 
+    - 여기에서 사용자 정의 RadialController 메뉴 항목을 초기화합니다. [RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) 개체로의 참조를 가져오는 [CreateForCurrentView](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.CreateForCurrentView)를 사용하고, [RotationResolutionInDegrees](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationResolutionInDegrees) 속성을 사용하여 회전 감도를 "1"로 설정하고, [CreateFromFontGlyph](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuitem.CreateFromFontGlyph)를 사용하여 [RadialControllerMenuItem](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuitem)을 만들고, 메뉴 항목을 **RadialController** 메뉴 항목 컬렉션에 추가하고, 마지막으로 [SetDefaultMenuItems](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration.setdefaultmenuitems)를 사용하여 기본 메뉴 항목을 지우고 사용자 정의 도구만 남깁니다. 
 
         ```csharp
         // Configure RadialController menu and custom tool.
@@ -444,14 +444,14 @@ Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는
         using Windows.Devices.Haptics;
         ```
 
-    - 여기서 사용자 지정 **RadialController** 메뉴 항목이 선택되었을 때 트리거되는 [ControlAcquired](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ControlAcquired) 이벤트에 대한 처리기를 지정합니다.
+    - 여기서 사용자 지정 **RadialController** 메뉴 항목이 선택되었을 때 트리거되는 [ControlAcquired](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ControlAcquired) 이벤트에 대한 처리기를 지정합니다.
 
         ```csharp
         radialController.ControlAcquired += (rc_sender, args) =>
         { RadialController_ControlAcquired(rc_sender, args); };
         ``` 
 
-    - 다음은 기본 촉각 피드백을 사용하지 않도록 하고 촉각 UI를 초기화하는 [ControlAcquired](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ControlAcquired) 처리기를 정의합니다.
+    - 다음은 기본 촉각 피드백을 사용하지 않도록 하고 촉각 UI를 초기화하는 [ControlAcquired](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ControlAcquired) 처리기를 정의합니다.
 
         ```csharp
         private void RadialController_ControlAcquired(
@@ -520,7 +520,7 @@ Surface Dial 및 기타 휠 디바이스는 현재 상호 작용에 해당하는
         }
         ```
 
-    - [RotationChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.RotationChanged) 및 [ButtonClicked](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.radialcontroller.ButtonClicked) 이벤트 처리기에서 해당 슬라이더와 토글 단추 컨트롤을 사용자 지정 촉각 피드백에 연결합니다. 
+    - [RotationChanged](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.RotationChanged) 및 [ButtonClicked](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.ButtonClicked) 이벤트 처리기에서 해당 슬라이더와 토글 단추 컨트롤을 사용자 지정 촉각 피드백에 연결합니다. 
 
         ```csharp
         // Connect wheel device rotation to slider control.

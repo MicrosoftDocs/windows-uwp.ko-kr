@@ -4,34 +4,34 @@ Description: Distribute a packaged desktop app (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
 title: Microsoft Store에 패키지 데스크톱 앱을 게시하거나, 이를 하나 이상의 장치에 사이드로드합니다.
 ms.author: normesta
-ms.date: 05/25/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aff2635094064c0758f9d0d2ca56b7aa73cfda1
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816838"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989627"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>패키지 데스크톱 앱(데스크톱 브리지) 배포
 
 Microsoft Store에 패키지 데스크톱 앱을 게시하거나, 이를 하나 이상의 장치에 사이드로드합니다.  
 
 > [!NOTE]
-> 사용자를 패키지 앱으로 전환할 수 있는 방법에 대해 계획이 있으십니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [데스크톱 브리지 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
+> 사용자를 패키지 앱으로 전환할 수 있는 방법에 대해 계획이 있으십니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [패키지된 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
 
-## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Microsoft Store에 게시하여 앱을 배포합니다.
+## <a name="distribute-your-app-by-publishing-it-to-the-microsoft-store"></a>Microsoft Store에 게시하여 앱 배포
 
 [Microsoft Store](https://www.microsoft.com/store/apps)는 고객이 앱을 다운로드할 수 있는 편리한 방법입니다.
 
 가장 광범위한 사용자에 도달하려면 Microsoft Store에 앱을 게시합니다. 또한 기업 고객은 [비즈니스용 Microsoft Store](https://www.microsoft.com/business-store)를 통해 회사 내부에 배포할 앱을 구입할 수 있습니다.
 
-Microsoft Store에 게시할 계획이지만 아직 Microsoft에 연락하지 않은 경우에는 [이 양식](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge)을 작성하면 Microsoft에서 온보딩 프로세스 시작을 위해 연락 드리겠습니다.
+Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 이 요구 사항에 대한 자세한 내용은 [제한된 접근 권한 값](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html)을 참조하세요.
 
 Microsoft Store에 제출하기 전에 앱에 서명할 필요가 없습니다.
 
@@ -69,19 +69,19 @@ Windows 10 S를 실행하는 장치에 앱을 배포하려는 경우에는 Micro
 
 <a id="transition-users" />
 
-## <a name="transition-users-to-your-desktop-bridge-app"></a>데스크톱 브리지 앱으로 사용자를 전환
+## <a name="transition-users-to-your-packaged-app"></a>패키지된 앱으로 사용자 전환
 
-앱을 배포하기 전에 사용자가 데스크톱 브리지 앱을 사용하는 습관을 갖도록 패키지 매니페스트에 몇 가지 확장을 추가하는 것이 좋습니다. 다음과 같이 몇 가지 방법이 가능합니다.
+앱을 배포하기 전에 사용자가 패키지된 앱을 사용하는 습관을 갖도록 패키지 매니페스트에 몇 가지 확장을 추가하는 것이 좋습니다. 다음과 같이 몇 가지 방법이 가능합니다.
 
-* 기존의 시작 타일 및 작업 표시줄 단추가 데스크톱 브리지 앱을 가리키도록 합니다.
+* 기존의 시작 타일 및 작업 표시줄 단추가 패키지 앱을 가리키도록 지정합니다.
 * 파일 형식 별로 패키징된 앱을 연결합니다.
-* 데스크톱 브리지 앱이 특정 파일 형식을 열도록 기본 설정합니다.
+* 패키지된 앱이 특정 파일 형식을 열도록 기본 설정합니다.
 
 전체 확장 목록과 사용 방법에 대한 지침은 [사용자를 앱으로 전환](desktop-to-uwp-extensions.md#transition-users-to-your-app)을 참조하세요.
 
-또한 이러한 작업을 수행하는 데스크톱 브리지 앱에 코드를 추가하는 것이 좋습니다.
+또한 이러한 작업을 수행하는 패키지된 앱에 코드를 추가하는 것이 좋습니다.
 
-* 데스크톱 앱와 관련된 사용자 데이터를 데스크톱 브리지 앱의 해당 폴더 위치로 마이그레이션합니다.
+* 데스크톱 앱과 관련된 사용자 데이터를 패키지된 앱의 해당 폴더 위치로 마이그레이션합니다.
 * 사용자에게 데스크톱 버전의 앱을 제거하는 옵션을 제공합니다.
 
 이러한 작업들을 하나씩 살펴보겠습니다. 사용자 데이터 마이그레이션부터 시작하겠습니다.
@@ -90,7 +90,7 @@ Windows 10 S를 실행하는 장치에 앱을 배포하려는 경우에는 Micro
 
 사용자 데이터를 마이그레이션하는 코드를 추가하려는 경우에는 앱이 처음 시작될 때만 해당 코드를 실행하는 것이 좋습니다. 사용자 데이터를 마이그레이션하기 전에 대화 상자를 표시하여 사용자에게 마이그레이션 과정과 이를 권장하는 이유, 기존 데이터에 미치는 영향 등을 설명합니다.
 
-여기에 .NET 기반의 데스크톱 브리지 앱에서 이를 수행할 수 있는 방법이 예로 나와 있습니다.
+여기에 .NET 기반의 패키지된 앱에서 이를 수행할 수 있는 방법이 예로 나와 있습니다.
 
 ```csharp
 private void MigrateUserData()
@@ -100,11 +100,9 @@ private void MigrateUserData()
 
     if (sourceDir != null)
     {
-        String migrateMessage =
-            "Would you like to migrate your data from the previous version of this app?";
-
         DialogResult migrateResult = MessageBox.Show
-            (migrateMessage, "Data Migration", MessageBoxButtons.YesNo);
+            ("Would you like to migrate your data from the previous version of this app?",
+             "Data Migration", MessageBoxButtons.YesNo);
 
         if (migrateResult.Equals(DialogResult.Yes))
         {
@@ -131,7 +129,7 @@ private void MigrateUserData()
 
 권한을 먼저 요청하지 않은 상태에서는 사용자 데스크톱 앱을 제거하지 않도록 합니다. 해당 사용 권한을 요청하는 대화 상자를 표시합니다. 사용자가 데스크톱 버전의 앱을 제거하지 않을 수 있습니다. 이 경우에는 데스크톱 앱의 사용을 차단하고 싶은지, 아니면 두 앱을 동시에 사용하도록 지원하고 싶은지 판단해야 합니다.
 
-여기에 .NET 기반의 데스크톱 브리지 앱에서 이를 수행할 수 있는 방법이 예로 나와 있습니다.
+여기에 .NET 기반의 패키지된 앱에서 이를 수행할 수 있는 방법이 예로 나와 있습니다.
 
 이 조각의 전체 컨텍스트를 보려면 이 샘플의 **MainWindow.cs**([전환/마이그레이션/제거와 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition))를 참조하세요.
 
@@ -146,11 +144,10 @@ private void RemoveDesktopApp()
     //Detect if the previous version of the Desktop App is installed.
     if (uninstallString != null)
     {
-        String uninstallMessage = "To have the best experience, consider uninstalling the "
-            +" previous version of this app. Would you like to do that now?";
-
         DialogResult uninstallResult = MessageBox.Show
-            (uninstallMessage, "Uninstall the previous version", MessageBoxButtons.YesNo);
+            ("To have the best experience, consider uninstalling the "
+              + " previous version of this app. Would you like to do that now?",
+              "Uninstall the previous version", MessageBoxButtons.YesNo);
 
         if (uninstallResult.Equals(DialogResult.Yes))
         {

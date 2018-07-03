@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C#, C 샤프
 ms.localizationpriority: medium
-ms.openlocfilehash: e869ebb4fad7be55ef4f31c1c7e544ce8c290e4a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 44457221d7b108563e7df030125a909da6609cbe
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816668"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983459"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C # 앱에서 로컬 알림 메시지 보내기
 
@@ -101,7 +101,7 @@ public class MyNotificationActivator : NotificationActivator
 1. **xmlns:com** 선언
 2. **xmlns:desktop** 선언
 3. **IgnorableNamespaces** 특성에서 **com**과 **desktop**
-4. 4단계에서 GUID를 사용하여 COM 서버에서 **com:Extension**. 알림에서 실행을 알 수 있도록 `Arguments="-ToastActivated"`를 포함해야 합니다.
+4. 4단계에서 GUID를 사용하여 COM 활성자에서 **com:Extension**. 알림에서 실행을 알 수 있도록 `Arguments="-ToastActivated"`를 포함해야 합니다.
 5. **windows.toastNotificationActivation**에 대한 **desktop:Extension**는 알림 활성자 CLSID(4단계의 GUID)를 선언합니다.
 
 **Package.appxmanifest**
@@ -238,6 +238,9 @@ var toast = new ToastNotification(doc);
 DesktopNotificationManagerCompat.CreateToastNotifier().Show(toast);
 ```
 
+> [!IMPORTANT]
+> 클래식 Win32 앱은 레거시 알림 템플릿(예: ToastText02)을 사용할 수 없습니다. COM CLSID가 지정되었을 때 레거시 템플릿의 활성화는 실패합니다. 위에서 설명한 대로 Windows 10 ToastGeneric 템플릿을 사용해야 합니다.
+
 
 ## <a name="step-8-handling-activation"></a>8단계: 활성화 처리
 
@@ -260,7 +263,7 @@ public class MyNotificationActivator : NotificationActivator
         Application.Current.Dispatcher.Invoke(delegate
         {
             // Tapping on the top-level header launches with empty args
-            if (arguments.Length = 0)
+            if (arguments.Length == 0)
             {
                 // Perform a normal launch
                 OpenWindowIfNeeded();
@@ -406,4 +409,6 @@ DesktopNotificationManagerCompat.History.Clear();
 ## <a name="resources"></a>리소스
 
 * [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/desktop-toasts)
+* [데스크톱 앱에서 알림 메시지](toast-desktop-apps.md)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)
+

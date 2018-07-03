@@ -15,14 +15,16 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1737408386628ea7ecf1bb42256976c5fd28cb77
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
+ms.openlocfilehash: 73b1c73fdd971eb4448aea62bc8c64ceac17a2b4
+ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707244"
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "1843353"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>키보드, 게임 패드, 원격 제어 및 접근성 도구에 대한 포커스 탐색
+
+![키보드, 원격 및 D 패드](images/dpad-remote/dpad-remote-keyboard.png)
 
 포커스 탐색을 사용하면 텔레비전 화면 및 Xbox One의 3m 환경뿐만 아니라 UWP 앱과 키보드 고급 사용자용 사용자 지정 컨트롤(장애가 있는 사용자 및 기타 접근성 요구 사항 포함)에서 포괄적이고 일관된 상호 작용 환경을 제공할 수 있습니다.
 

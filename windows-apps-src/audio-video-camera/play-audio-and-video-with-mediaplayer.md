@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 24b54e202835bb3dba9098591ae08527e12565bf
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: c06a4348ba1f974aaf7151456267ce7585b56a10
+ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832587"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "1983608"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 
@@ -23,6 +23,8 @@ ms.locfileid: "1832587"
 
 이 문서에서는 일반적인 미디어 재생 앱에서 사용하는 **MediaPlayer** 기능을 단계별로 안내합니다. **MediaPlayer**는 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) 클래스를 모든 미디어 항목의 컨테이너로 사용합니다. 이 클래스를 사용하면 로컬 파일, 메모리 스트림 및 네트워크 소스를 비롯한 다양한 소스에서 모두 동일한 인터페이스를 사용하여 미디어를 로드 및 재생할 수 있습니다. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)과 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) 등, 재생 목록과 같은 고급 기능과 여러 오디오, 비디오와 미디어 소스를 관리하는 기능 및 메타데이터 추적 기능을 제공하는 **MediaSource**에서 작동하는 상위 수준 클래스도 있습니다. **MediaSource** 및 관련 API에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
+> [!NOTE] 
+> Windows 10 N 및 Windows 10 KN 버전에는 재생을 위해 **MediaPlayer**를 사용하는 데 필요한 미디어 기능이 포함되지 않습니다. 이러한 기능을 수동으로 설치할 수 있습니다. 자세한 내용은 [Windows 10 N 및 Windows 10 KN 버전에 대한 미디어 기능 팩](https://support.microsoft.com/en-us/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions)을 참조하세요.
 
 ## <a name="play-a-media-file-with-mediaplayer"></a>MediaPlayer를 사용하여 미디어 파일 재생  
 **MediaPlayer**를 사용한 기본 미디어 재생은 매우 간단히 구현할 수 있습니다. 먼저 **MediaPlayer** 클래스의 새 인스턴스를 만듭니다. 앱에는 한 번에 여러 개의 **MediaPlayer** 인스턴스가 활성화될 수 있습니다. 다음으로 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) 또는 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList)와 같이 [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource)를 구현하는 개체에 플레이어의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) 속성을 설정합니다. 이 예제에서는 앱의 로컬 저장소에 있는 파일에서 **MediaSource**가 생성되고 소스에서 **MediaPlaybackItem**이 생성된 다음 플레이어의 **Source** 속성에 할당됩니다.
@@ -78,6 +80,10 @@ XAML에 표시하지 않고 **MediaPlayer**에서 미디어를 재생할 수는 
 다음 예제에서는 세션의 [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.PlaybackRate) 속성을 설정하여 정상 재생 속도와 2배속 간에 전환하는 토글 단추를 사용하는 방법을 보여 줍니다.
 
 [!code-cs[SpeedChecked](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSpeedChecked)]
+
+Windows 10 버전 1803부터 **MediaPlayer**에 표시되는 비디오의 회전을 90도까지 설정할 수 있습니다.
+
+[!code-cs[SetRotation](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetRotation)]
 
 ### <a name="detect-expected-and-unexpected-buffering"></a>예상 및 예기치 않은 버퍼링 검색
 이전 섹션에 설명된 **MediaPlaybackSession** 개체는 현재 재생 중인 미디어 파일이 버퍼링을 시작하고 끝낼 때를 검색하는 이벤트 2개 즉, **[BufferingStarted](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingStarted)** 와 **[BufferingEnded](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.BufferingEnded)** 를 제공합니다. 따라서 버퍼링이 일어나고 있음을 사용자에게 보여줄 수 있습니다. 초기 버퍼링은 미디어 파일을 처음 열거나 사용자가 재생 목록의 새 항목으로 전환할 때 필요합니다. 예기치 않은 버퍼링은 네트워크 속도가 저하되거나 콘텐츠를 제공하는 콘텐츠 관리 시스템에 기술적 문제가 발생하는 경우 나타날 수 있습니다. RS3으로 시작하면 **BufferingStarted** 이벤트를 사용하여 버퍼링 이벤트가 예상되는지 또는 예기치 않게 재생이 중단되는지 여부를 결정할 수 있습니다. 이 정보는 앱 또는 미디어 전송 서비스의 원격 분석 데이터로 사용할 수 있습니다. 
@@ -224,7 +230,7 @@ Windows 10 버전 1703부터 프레임 서버 모드에서 **MediaPlayer**를 �
 
 [!code-cs[VideoFrameAvailable](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetVideoFrameAvailable)]
 
-Win2D에 대한 자세한 내용은 [Win2D GitHub 저장소](https://github.com/Microsoft/Win2D)를 참조하세요. 위의 샘플 코드 사용해 보려면 다음 지침을 사용하여 프로젝트에 Win2D NuGet 패키지를 추가해야 합니다.
+Win2D에 대한 자세한 내용은 [Win2D GitHub 리포지토리](https://github.com/Microsoft/Win2D)를 참조하세요. 위의 샘플 코드 사용해 보려면 다음 지침을 사용하여 프로젝트에 Win2D NuGet 패키지를 추가해야 합니다.
 
 **효과 프로젝트에 Win2D NuGet 패키지를 추가하려면**
 

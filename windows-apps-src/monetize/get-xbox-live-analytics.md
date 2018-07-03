@@ -3,27 +3,27 @@ author: mcleanbyron
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 Xbox Live 분석 데이터를 가져옵니다.
 title: Xbox Live 분석 데이터 가져오기
 ms.author: mcleans
-ms.date: 04/16/2018
+ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석
 ms.localizationpriority: medium
-ms.openlocfilehash: 82c24ee285070d733f3310b4ccec210adeafc27f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 4ba81f88b583a2d13785b3efe8d7008bac759a2d
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817271"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976571"
 ---
 # <a name="get-xbox-live-analytics-data"></a>Xbox Live 분석 데이터 가져오기
 
 Microsoft Store 분석 API에서 이 메서드를 사용하여 [Xbox Live 지원 게임](../xbox-live/index.md)을 플레이하는 고객의 지난 30일 동안의 일반 분석 데이터를 가져옵니다. 여기에는 장치 액세서리 사용량, 인터넷 연결 유형, 게이머 점수 분포, 게임 통계 및 친구와 팔로워 데이터가 포함되어 있습니다. 이 정보는 Windows 개발자 센터 대시보드의 [Xbox 분석 보고서](../publish/xbox-analytics-report.md)를 통해서도 확인할 수 있습니다.
 
 > [!IMPORTANT]
-> 이 메서드는 현재 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)가 게시하고 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출되는 Xbox Live 지원 게임만 지원합니다. [Xbox Live 크리에이터스 프로그램](../xbox-live/developer-program-overview.md#xbox-live-creators-program)을 통해 제출된 게임 데이터는 반환되지 않습니다.
+> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
 
-Xbox Live 지원 게임은 다음 메서드를 통해 사용할 수 있습니다.
+Xbox Live 지원 게임은 다음 방법을 통해 사용할 수 있습니다.
 * [Xbox Live 도전 과제 데이터 가져오기](get-xbox-live-achievements-data.md)
 * [Xbox Live 상태 데이터 가져오기](get-xbox-live-health-data.md)
 * [Xbox Live 게임 허브 데이터 가져오기](get-xbox-live-game-hub-data.md)
@@ -57,7 +57,7 @@ Xbox Live 지원 게임은 다음 메서드를 통해 사용할 수 있습니다
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 유형   |  설명      |  필수  
+| 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | 일반 Xbox Live 분석 데이터를 검색하려는 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |  예  |
 | metricType | 문자열 | 검색할 Xbox Live 분석 데이터의 유형을 지정하는 문자열입니다. 이 메서드의 경우 값 **productvalues**를 지정합니다.  |  예  |

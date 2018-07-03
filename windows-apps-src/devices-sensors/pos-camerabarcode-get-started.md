@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbb26fb3c977917732a079f28d274f7f2bfba41
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 861233de6967a6199bae5d81c1a3938bf8645246
+ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833291"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "1976035"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>카메라 바코드 스캐너 시작하기
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>1단계: 앱 매니페스트에 기능 선언 추가
@@ -84,7 +84,7 @@ Windows와 함께 배송된 바코더를 사용하는 카메라 바코드 스캐
 [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync#Windows_Devices_PointOfService_BarcodeScanner_ClaimScannerAsync)를 사용하여 카메라 바코드 스캐너에 대한 배타적 이용권을 획득합니다.
 
 ## <a name="step-7-system-provided-preview"></a>7단계: 시스템에서 제공되는 미리 보기
-사용자가 바코드에서 성공적으로 카메라를 겨냥하려면 카메라 미리 보기가 필요합니다.  Windows가 제공하는 간단한 카메라 미리 보기를 통해 카메라 바코드 스캐너의 기본 컨트롤을 사용할 수 있도록 지정하는 대화 상자를 시작할 수 있습니다.  대화 상자를 열려면 [ClaimedBarcodeScanner.ShowideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync)를, 종료 시 대화 상자를 닫으려면  [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview)를 호출하세요.
+사용자가 바코드에서 성공적으로 카메라를 겨냥하려면 카메라 미리 보기가 필요합니다.  Windows가 제공하는 간단한 카메라 미리 보기를 통해 카메라 바코드 스캐너의 기본 컨트롤을 사용할 수 있도록 지정하는 대화 상자를 시작할 수 있습니다.  대화 상자를 열려면 [ClaimedBarcodeScanner.ShowVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.showvideopreviewasync)를, 종료 시 대화 상자를 닫으려면 [ClaimedBarcodeScanner.HideVideoPreview](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.hidevideopreview)를 호출하세요.
 
 > [!TIP]
 > 응용 프로그램에서 카메라 바코드 스캐너에 대한 미리 보기를 호스팅하는 방법은 [미리 보기 호스팅](pos-camerabarcode-hosting-preview.md)을 참조하세요.

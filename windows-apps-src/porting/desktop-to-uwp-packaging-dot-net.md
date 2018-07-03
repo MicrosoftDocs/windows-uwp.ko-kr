@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: d7ae77c499cb8398aa5557f0d422899fbe8b252d
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
+ms.openlocfilehash: 5e3dce1950de907462b62967291d456fb062bd9c
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816258"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989274"
 ---
 # <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>Visual Studio를 사용한 앱 패키징(데스크톱 브리지)
 
@@ -27,11 +27,9 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 >[!IMPORTANT]
 >데스크톱 브리지는 Windows 10 버전, 1607에 도입되었으며 Windows 10 1주년 업데이트(10.0, 빌드 14393) 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다.
 
-## <a name="first-consider-how-youll-distribute-your-app"></a>먼저, 앱을 배포할 방법을 고려합니다.
+## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-앱을 [Microsoft Store](https://www.microsoft.com/store/apps)에 게시하려는 경우에는 [이 양식](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge)을 작성하는 것부터 시작합니다. Microsoft에서 온보딩 프로세스 시작을 위해 연락 드리겠습니다. 이 과정의 일환으로, Microsoft Store에서 이름을 예약하면 앱을 패키징하기 위해 필요한 정보를 얻게 됩니다.
-
-또한, 응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
+응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
 
 <a id="new-packaging-project"/>
 
@@ -72,7 +70,8 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
 **비디오**
 
-<iframe src="https://www.youtube.com/embed/fJkbYPyd08w" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
+&nbsp;
+> [!VIDEO https://www.youtube.com/embed/fJkbYPyd08w]
 
 ## <a name="next-steps"></a>다음 단계
 

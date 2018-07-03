@@ -4,24 +4,27 @@ title: 화면 캡처
 description: Windows.Graphics.Capture 네임스페이스는 디스플레이 또는 응용 프로그램 창에서 프레임을 획득하고 비디오 스트림 또는 스냅숏을 만들어 공동 작업 및 대화형 환경을 빌드하기 위해 API를 제공합니다.
 ms.assetid: 349C959D-9C74-44E7-B5F6-EBDB5CA87B9F
 ms.author: elcowle
-ms.date: 3/1/2018
+ms.date: 5/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b7883acd351c721b4539141cd46e3c199a8d8a1
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
+ms.openlocfilehash: e407842711d1bfcac0a54fdf484a38d39bc2b237
+ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1640004"
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "1912911"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
 Windows 10 버전 1803부터 [Windows.Graphics.Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture) 네임스페이스는 디스플레이 또는 응용 프로그램 창에서 프레임을 획득하고 비디오 스트림 또는 스냅숏을 만들어 공동 작업 및 대화형 환경을 빌드하기 위해 API를 제공합니다.
 
 화면 캡처를 통해 개발자는 최종 사용자가 캡처할 디스플레이 또는 응용 프로그램 창을 선택하기 위해 보안 시스템 UI를 호출하고 적극적으로 캡처된 항목 주위에 있는 시스템을 통해 노란색 알림 테두리가 표시됩니다. 여러 개의 동시 캡처 세션의 경우 캡처 중인 각 항목 주위에 노란색 테두리가 그려집니다.
+
+> [!NOTE]
+> 화면 캡처 API를 사용하려면 Windows 10 Pro 또는 Enterprise를 실행해야 합니다.
 
 ## <a name="add-the-screen-capture-capability"></a>화면 캡처 기능 추가
 
@@ -31,9 +34,9 @@ Windows 10 버전 1803부터 [Windows.Graphics.Capture](https://docs.microsoft.c
 2. **다른 프로그램으로 열기**를 선택합니다. 
 3. **XML (텍스트) 편집기**를 선택합니다. 
 4. **확인**을 선택합니다.
-5. **패키지** 노드에서 다음 특성을 추가합니다.  `xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"`
+5. **패키지** 노드에서 다음 특성을 추가합니다. `xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"`
 6. 또한 **패키지** 노드에서 **IgnorableNamespaces** 특성에 다음을 추가합니다. `uap6`
-7. **패키지** 노드에서 다음 요소를 추가합니다.  `<uap6:Capability Name="graphicsCapture"/>`
+7. **패키지** 노드에서 다음 요소를 추가합니다. `<uap6:Capability Name="graphicsCapture"/>`
 
 ## <a name="launch-the-system-ui-to-start-screen-capture"></a>시스템 UI를 실행하여 화면 캡처 시작
 
@@ -131,7 +134,7 @@ _framePool.FrameArrived += (s, a) =>
 }; 
 ```
 
-가능하면 **FrameArrived**의 경우 UI 스레드를 사용하지 않는 것이 좋습니다. 새 프레임을 사용할 수 있게 될 때마다 이 이벤트가 자주  발생하기 때문입니다. UI 스레드에서 **FrameArrived**를 수신하기로 선택할 경우 이벤트가 발생할 때마다 얼마나 많은 작업을 수행하고 있는지에 주의해야 합니다.
+가능하면 **FrameArrived**의 경우 UI 스레드를 사용하지 않는 것이 좋습니다. 새 프레임을 사용할 수 있게 될 때마다 이 이벤트가 자주 발생하기 때문입니다. UI 스레드에서 **FrameArrived**를 수신하기로 선택할 경우 이벤트가 발생할 때마다 얼마나 많은 작업을 수행하고 있는지에 주의해야 합니다.
 
 또는 필요한 모든 프레임을 가져올 때까지 **Direct3D11CaptureFramePool.TryGetNextFrame** 메서드로 프레임을 수동으로 가져올 수 있습니다.
 
@@ -158,23 +161,24 @@ _framePool.FrameArrived += (s, a) =>
 다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현하는 방법에 대한 종단 간 예제입니다.
 
 ```cs
-using Microsoft.Graphics.Canvas; 
-using System; 
-using System.Threading.Tasks; 
-using Windows.Graphics.Capture; 
-using Windows.Graphics.DirectX; 
-using Windows.UI.Composition; 
- 
+using Microsoft.Graphics.Canvas;
+using System;
+using System.Threading.Tasks;
+using Windows.Graphics;
+using Windows.Graphics.Capture;
+using Windows.Graphics.DirectX;
+using Windows.UI.Composition;
+
 namespace CaptureSamples 
-{ 
+{
     class Sample
     {
         // Capture API objects.
-        private Vector2 _lastSize; 
+        private SizeInt32 _lastSize; 
         private GraphicsCaptureItem _item; 
         private Direct3D11CaptureFramePool _framePool; 
         private GraphicsCaptureSession _session; 
- 
+
         // Non-API related members.
         private CanvasDevice _canvasDevice; 
         private CompositionDrawingSurface _surface; 
@@ -252,7 +256,8 @@ namespace CaptureSamples
             bool needsReset = false; 
             bool recreateDevice = false; 
  
-            if (frame.ContentSize != _lastSize) 
+            if ((frame.ContentSize.Width != _lastSize.Width) || 
+                (frame.ContentSize.Height != _lastSize.Height)) 
             { 
                 needsReset = true; 
                 _lastSize = frame.ContentSize; 

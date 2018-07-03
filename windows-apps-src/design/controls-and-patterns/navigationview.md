@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fc365a7dbc69819ce88a22db2490b327412c8b4
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
+ms.openlocfilehash: c7817bf7ff60a52ea48c988bdebd6d4d2eeacdb7
+ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675370"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "1992152"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -151,9 +151,9 @@ NavigationView 창을 열거나 닫을 수 있으며 세 가지 디스플레이 
 
 NavigationView는 사용 가능한 화면 공간을 기준으로 디스플레이 모드를 자동으로 변경합니다.
 
-> [!NOTE] 
-NavigationView는 앱의 루트 컨테이너 역할을 합니다. 이 컨트롤은 앱 창의 전체 너비와 높이에 맞게 확장되도록 설계되었습니다.
-[CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) 및 [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) 속성을 사용하여 탐색 보기에서 디스플레이 모드가 변경되는 너비를 재정의할 수 있습니다. 
+> [!NOTE]
+> NavigationView는 앱의 루트 컨테이너 역할을 합니다. 이 컨트롤은 앱 창의 전체 너비와 높이에 맞게 확장되도록 설계되었습니다.
+[CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) 및 [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) 속성을 사용하여 탐색 보기에서 디스플레이 모드가 변경되는 너비를 재정의할 수 있습니다.
 
 표시 모드 동작을 사용자 지정하려는 경우를 설명하는 다음 시나리오를 고려하세요.
 
@@ -448,13 +448,13 @@ viewTitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
 
 ```xaml
 <Grid>
-
-    <TextBlock x:Name="AppTitle" 
+    <TextBlock x:Name="AppTitle"
         xmlns:appmodel="using:Windows.ApplicationModel"
-        Text="{x:Bind appmodel:Package.Current.DisplayName}" 
-        Style="{StaticResource CaptionTextBlockStyle}" 
-        IsHitTestVisible="False" 
+        Text="{x:Bind appmodel:Package.Current.DisplayName}"
+        Style="{StaticResource CaptionTextBlockStyle}"
+        IsHitTestVisible="False"
         Canvas.ZIndex="1"/>
+    
 
     <NavigationView Canvas.ZIndex="0" ... />
 
@@ -464,6 +464,10 @@ viewTitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
 또한 뒤로 단추의 가시성에 따라 AppTitle의 여백을 조정해야 합니다. 앱이 FullScreenMode에 있으면 TitleBar가 공간을 예약한 경우라도 뒤로 화살표에 대한 간격을 제거해야 합니다.
 
 ```csharp
+var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+Window.Current.SetTitleBar(AppTitle);
+coreTitleBar.ExtendViewIntoTitleBar = true;
+
 void UpdateAppTitle()
 {
     var full = (ApplicationView.GetForCurrentView().IsFullScreenMode);
