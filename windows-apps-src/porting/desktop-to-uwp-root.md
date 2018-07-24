@@ -4,19 +4,19 @@ Description: Create a modern Windows app package for your existing Windows Forms
 Search.Product: eADQiWindows 10XVcnh
 title: 데스크톱 브리지
 ms.author: normesta
-ms.date: 08/30/2017
+ms.date: 05/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: high
-ms.openlocfilehash: 3c4285d6717c27e78c13ac6588fe634c566138d9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
+ms.openlocfilehash: 321fb71d44e1298b29b6119168f67207e6df4a8d
+ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832374"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "1989697"
 ---
 # <a name="desktop-bridge"></a>데스크톱 브리지
 
@@ -54,9 +54,7 @@ Windows 10 환경을 향상시키기 위해 사용하는 코드를 제외하고,
 
 ## <a name="prepare"></a>준비
 
-앱을 [Windows Microsoft Store 앱](https://www.microsoft.com/store/apps)에 게시할 계획을 가지고 계십니까? 그렇다면 [이 양식](https://developer.microsoft.com/windows/projects/campaigns/desktop-bridge)을 작성하는 것부터 시작합니다. Microsoft에서 온보딩 프로세스 시작을 위해 연락 드리겠습니다. 이 과정의 일환으로, Microsoft Store에서 이름을 예약하면 Windows 앱 패키지를 생성하기 위해 필요한 정보를 얻게 됩니다.
-
-그 다음으로 [데스크톱 앱용 패키지 준비](desktop-to-uwp-prepare.md) 문서를 살펴보고, Windows 앱 패키지 생성 전에 앱에 적용되는 문제를 해결하세요. 패키지 생성 전에 앱을 많이 변경할 필요가 없는 경우도 있습니다. 그러나 패키지 생성 전에 앱을 조정해야 하는 몇 가지 상황들이 있습니다.
+먼저 [데스크톱 앱용 패키지 준비](desktop-to-uwp-prepare.md) 문서를 검토한 다음, Windows 앱 패키지 생성 전에 앱에 적용되는 문제를 해결하여 응용 프로그램을 준비하세요. 패키지 생성 전에 앱을 많이 변경할 필요가 없는 경우도 있습니다. 그러나 패키지 생성 전에 앱을 조정해야 하는 몇 가지 상황들이 있습니다.
 
 <a id="convert" />
 
@@ -188,6 +186,30 @@ Windows 앱 패키지를 만드는 것 외에 PACE Suite를 사용하여 Windows
 
 [Embarcadero의 RAD Studio](https://www.embarcadero.com/products/rad-studio/windows-10-store-desktop-bridge) 참조
 
+#### <a name="raypack-studio"></a>RayPack Studio
+
+Raynet의 패키징 솔루션인 [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio)는 여러 효율적이고 구성이 쉬운 변환 및 리패키징 프레임워크의 결과 중 하나인 데스크톱 브리지를 지원합니다.
+
+<img width="20%" src="images/desktop-to-uwp/RaynetLogo_v3.png">
+
+긴 환경 설치 없이 자동 대량 변환을 수행하기 위해 기존 가상 환경(VMware 워크스테이션, Hyper-V)을 사용할 수 있습니다. 이 스튜디오의 구성 요소([RayQC Advanced](https://raynet.de/Raynet-Products/RayQCad))는 변환할 수 있는 소프트웨어를 확인하기 위해 사전 변환 검사 및 호환성 테스트를 수행할 수 있습니다. 또한 사용자는 이제 1주년 및 크리에이터스 업데이트를 포함한 다양한 Windows 10 에디션에 대해 포괄적인 충돌 및 호환성 검사를 수행할 수 있습니다.
+
+Windows 10 APPX/UWP 포맷용 소프트웨어 패키지를 만드는 것 이외에, RayPack Studio는 클래식 Windows Installer 패키지(MSI), 패치(MSP), 변환(MST), App-V 패키지를 만드는 데 사용할 수도 있습니다. 또한,이 해결 방법 소프트웨어 제품과 전문가 enterprise 소프트웨어 패키지에 대 한 구성 요소 집합과 함께 제공 됩니다. 소프트웨어 패키징 및 가상화뿐만 아니라 RayPack Studio는 소프트웨어 응용 프로그램 및 패키지 충돌 및 호환성 검사([RayQC Advanced](https://raynet.de/Raynet-Products/RayQCad)), 소프트웨어 평가([RayEval](https://raynet.de/Raynet-Products/RayEval)), 및 품질 보증([RayQC](https://raynet.de/Raynet-Products/RayQC)) 등의 모든 패키징 관련 작업을 고려합니다.
+
+[RayFlow](https://raynet.de/Raynet-Products/RayFlow)와 결합하여 Raynet의 Enterprise Workflow System을 통해 사용자는 전체 엔터프라이즈 응용 프로그램 수명 주기 동안 패키지 주문에서부터 평가, 분석, 패키징, 품질 보증, 사용자 동의 테스트 및 배포에 이르기까지 소프트웨어 관련 작업을 효율적으로 수행할 수 있습니다. 모든 패키지 및 형식은 직접 SCCM 또는 다른 솔루션에 저장하거나 배포할 수 있습니다. 전체 응용 프로그램 수명 주기 프로세스는 RayFlow에서 추적 및 관리됩니다. 또한, ServiceNow 등의 모든 주문 시스템을 통합할 수 있습니다. Raynet은 서비스 공급자에 대한 도구와 함께 전 세계에 소프트웨어 패키징 공장을 빌드합니다.
+
+Raynet의 RayPack Studio 및 RayFlow에 대해 알아보고 [무료 평가판 라이선스](https://raynet.de/contact?init=license)를 다운로드하세요. 자세한 내용은 [www.raynet.de](https://raynet.de/home)를 참조하세요.
+
+**관련 링크**:
+
+* Raynet: [https://raynet.de/home](https://raynet.de/home)
+* RayPack Studio: [https://raynet.de/Raynet-Products/RayPackStudio](https://raynet.de/Raynet-Products/RayPackStudio)
+* RayFlow: [https://raynet.de/Raynet-Products/RayFlow](https://raynet.de/Raynet-Products/RayFlow)
+* RayEval: [https://raynet.de/Raynet-Products/RayEval](https://raynet.de/Raynet-Products/RayEval)
+* RayQC: [https://raynet.de/Raynet-Products/RayQC](https://raynet.de/Raynet-Products/RayQC)
+* RayQC Advanced: [https://raynet.de/Raynet-Products/RayQCad](https://raynet.de/Raynet-Products/RayQCad)
+* 무료 평가판 라이선스: [https://raynet.de/contact?init=license](https://raynet.de/contact?init=license)
+
 ### <a name="manual-packaging"></a>수동 패키징
 
 마지막 옵션으로 이러한 도구를 사용하지 않고 앱을 변환할 수 있습니다. 변환을 세부적으로 제어하고 싶다면 매니페스트 파일을 만든 다음, **MakeAppx.exe** 도구를 실행하여 Windows 앱 패키지를 만들 수 있습니다.
@@ -228,9 +250,9 @@ Windows 앱 패키지를 만드는 것 외에 PACE Suite를 사용하여 Windows
 앱 배포를 준비할 때 현실적인 설정에서 앱을 테스트하려면 앱에 로그인한 다음 설치하는 것이 가장 좋습니다. [앱 테스트](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app)를 참조합니다.
 
 >[!IMPORTANT]
-> 앱을 Microsoft Store에 게시할 계획이 있다면, Windows 10 S가 실행되는 장치에서 올바르게 작동하는지 확인하세요. 이는 Microsoft Store의 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
+> 앱을 Microsoft Store에 게시할 계획이 있다면, Windows 10 S 모드가 실행되는 장치에서 올바르게 작동하는지 확인하세요. 이는 Microsoft Store의 요구 사항입니다. [Windows 10 S 모드 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
 
-## <a name="validate"></a>유효성 검사
+## <a name="validate"></a>정품 확인
 
 앱이 Microsoft Store에 게시될 가능성 또는 [Windows 인증](http://go.microsoft.com/fwlink/p/?LinkID=309666)을 받을 가능성을 최대한 높이려면 인증을 받기 위해 앱을 제출하기 전에 로컬로 앱의 유효성을 검사하고 테스트하세요.
 
@@ -258,7 +280,7 @@ Microsoft Store에 게시하거나, 다른 시스템에 사이드로드하는 �
 
 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>이 섹션 내용
 
 | 항목 | 설명 |
 |-------|-------------|
