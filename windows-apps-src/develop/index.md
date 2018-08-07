@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: high
-ms.openlocfilehash: 191bdaed5dafc66882ab44fcc0661216eaa7e51c
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
+ms.openlocfilehash: 2cdeb0b776385d9ba21ab4d8416c442757b0c78e
+ms.sourcegitcommit: d08cf045750617c2c5a91a8777c0a9c6c9b0e6a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842189"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "2225589"
 ---
 <div> 
 <h1>UWP 앱 개발</h1>
@@ -144,8 +144,8 @@ ms.locfileid: "1842189"
             <div style="display:block"  class="cardPadding">
                 <div style="display:block"  class="card">
                     <div style="display:block"  class="cardText">
-                        <h3>데이터</h3>
-                        <p style="display:block"><a href="/windows/uwp/audio-video-camera/">오디오, 동영상 및 카메라</a></p>
+                        <h3>데이터 및 파일</h3>
+                        <p style="display:block"><a href="/windows/uwp/audio-video-camera/">오디오, 비디오 및 카메라</a></p>
                         <p><a href="/windows/uwp/data-access/" style="display:block" >데이터 액세스</a></p>
                         <p><a href="/windows/uwp/data-binding/"style="display:block" >데이터 바인딩</a></p>
                         <p><a href="/windows/uwp/files/" style="display:block" >파일, 폴더 및 라이브러리</a></p>
@@ -177,7 +177,9 @@ ms.locfileid: "1842189"
                     <div style="display:block" class="cardText">
                         <h3>플랫폼</h3>
                         <p style="display:block"><a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT</a></p>
+                        <p style="display:block"><a href="/windows/uwp/launch-resume/">실행, 다시 시작 및 백그라운드 작업</a></p>
                         <p style="display:block"><a href="/windows/uwp/security/">보안</a></p>
+                        <p style="display:block"><a href="/windows/uwp/threading-async/">스레딩 및 비동기 프로그래밍</a></p>
                         <p style="display:block"><a href="/windows/uwp/composition/visual-layer">시각적 계층</a></p>
                         <p style="display:block"><a href="/windows/uwp/updates-and-versions/application-development-for-windows-as-a-service">Windows as a Service</a></p>
                         <p style="display:block"><a href="/windows/uwp/winrt-components/">Windows 런타임 구성 요소</a></p>                 
@@ -200,31 +202,59 @@ ms.locfileid: "1842189"
             </div>
         </div>        
     </li>      
-    <li>              
-        <div style="display:block" class="cardSize">
-            <div style="display:block" class="cardPadding">
-                <div style="display:block" class="card">
-                    <div style="display:block" class="cardText">
-                        <h3>프로세스 및 스레딩</h3>
-                        <p style="display:block"><a href="/windows/uwp/launch-resume/">실행, 다시 시작 및 백그라운드 작업</a></p>
-                        <p style="display:block"><a href="/windows/uwp/threading-async/">스레딩 및 비동기 프로그래밍</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </li>                 
      <li>              
         <div style="display:block" class="cardSize">
             <div style="display:block" class="cardPadding">
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
-                        <h3>센서</h3>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/">장치, 센서 및 전원</a></p>
+                        <h3>주변 장치, 센서 및 전원</h3>
+                        <p style="display:block"><a href="/windows/uwp/contacts-and-calendar/">개요</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/enable-device-capabilities">장치 기능 사용</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/pair-devices">장치 페어링</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/point-of-service">서비스 지점</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/sensors">센서</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/printing-and-scanning">인쇄</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">3D 인쇄</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/nfc">NFC</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">배터리 정보</a></p>
                     </div>
                 </div>
             </div>
         </div>        
-    </li>         
+    </li> 
+     <li>              
+        <div style="display:block" class="cardSize">
+            <div style="display:block" class="cardPadding">
+                <div style="display:block" class="card">
+                    <div style="display:block" class="cardText">
+                        <h3>포팅</h3>
+                        <p style="display:block"><a href="/windows/uwp/porting/">개요</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/wpsl-to-uwp-root">Windows Phone Silverlight에서 UWP로</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/w8x-to-uwp-root">Windows 런타임 8.x에서 UWP로</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-root">데스크톱 브리지</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-migrate">데스크톱과 UWP 간의 코드 공유</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/android-ios-uwp-map">Android 및 iOS 개발자용 개념 매핑</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/ios-to-uwp-root">iOS에서 UWP로 이동</a></p>
+                        <p style="display:block"><a href="/microsoft-edge/progressive-web-apps">웹앱을 PWA로 변환</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/apps-on-arm">ARM 기반 Windows 10</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </li>           
+    <!-- <li>              
+        <div style="display:block" class="cardSize">
+            <div style="display:block" class="cardPadding">
+                <div style="display:block" class="card">
+                    <div style="display:block" class="cardText">
+                        <h3>Processes and threading</h3>
+                        <p style="display:block"><a href="/windows/uwp/launch-resume/">Launching, resuming, and background tasks</a></p>
+                        <p style="display:block"><a href="/windows/uwp/threading-async/">Threading and async programming</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </li>                         -->
 </ul>
 
 
