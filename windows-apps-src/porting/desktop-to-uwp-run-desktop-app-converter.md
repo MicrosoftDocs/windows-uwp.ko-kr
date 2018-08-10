@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: 141d87bf48b5b4835055375320f1e4a79498a42f
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: 3d03ad8aa066a4d3b8f5aaaf2532f09d9ce0acbe
+ms.sourcegitcommit: 6382f751f09e2f4aa8406c1ceeb25b5189e23da3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989677"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "2411203"
 ---
 # <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>데스크톱 앱 변화기를 사용해 앱을 패키지로 만들기(데스크톱 브리지)
 
@@ -363,7 +363,7 @@ Desktop App Converter는 컨테이너에서 파일과 시스템 노이즈를 걸
 변환 프로세스 동안 DesktopAppConverter는 모든 손상된 PE 헤더를 수정하기 위해 자동으로 PEHeaderCertFixTool을 실행합니다. 하지만 UWP Windows 앱 패키지, 느슨한 파일 또는 특정 이진에서 PEHeaderCertFixTool을 실행할 수도 있습니다. 예를 들면 다음과 같습니다.
 
 ```CMD
-PEHeaderCertFixTool.exe <binary file>|<.appx package>|&lt;folder> [/c] [/v]
+PEHeaderCertFixTool.exe <binary file>|<.appx package>|<folder> [/c] [/v]
  /c   -- check for corrupted certificate but do not fix (optional)
  /v   -- verbose (optional)
 example1: PEHeaderCertFixTool app.exe
