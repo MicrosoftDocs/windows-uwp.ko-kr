@@ -1,8 +1,8 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: "이 문서에서는 수동 디바이스 컨트롤을 사용하여 광학 이미지 손떨림 보정, 부드러운 줌 등의 향상된 사진 및 비디오 캡처 시나리오를 가능하게 하는 방법을 보여 줍니다."
-title: "사진 및 비디오 캡처를 위한 수동 카메라 컨트롤"
+description: 이 문서에서는 수동 디바이스 컨트롤을 사용하여 광학 이미지 손떨림 보정, 부드러운 줌 등의 향상된 사진 및 비디오 캡처 시나리오를 가능하게 하는 방법을 보여 줍니다.
+title: 사진 및 비디오 캡처를 위한 수동 카메라 컨트롤
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: d0d7a429cf702455d969e1ac1c62def6181e8dd0
 ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.locfileid: "221022"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>사진 및 비디오 캡처를 위한 수동 카메라 컨트롤
 
