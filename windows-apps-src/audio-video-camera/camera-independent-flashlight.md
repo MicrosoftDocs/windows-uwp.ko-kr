@@ -1,8 +1,8 @@
 ---
 author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
-description: "이 문서에서는 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다."
-title: "카메라 독립적 플래시"
+description: 이 문서에서는 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다.
+title: 카메라 독립적 플래시
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,7 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 7777b1b3f72090667f1e75f3c9e23b6adcd9f2d5
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.locfileid: "218904"
 ---
 # <a name="camera-independent-flashlight"></a>카메라 독립적 플래시
 
