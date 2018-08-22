@@ -4,22 +4,20 @@ ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: 스토리보드 애니메이션
 description: 스토리보드 애니메이션은 시각적 측면의 애니메이션만 의미하는 것이 아닙니다.
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5fad5bdea602767484fa55e943d262e7a1798fa
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 8c03d99781114c4fefff04cc25930748ec16182f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675580"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797867"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
-
-
 
 스토리보드 애니메이션은 시각적 측면의 애니메이션만 의미하는 것이 아닙니다. 스토리보드 애니메이션은 종속성 속성의 값을 시간의 함수로 변경하는 방법입니다. 애니메이션 라이브러리에 없는 스토리보드 애니메이션이 필요할 수 있는 주요 이유 중 하나는 컨트롤 템플릿이나 페이지 정의의 일부로 컨트롤의 시각적 상태를 정의한다는 점입니다.
 
@@ -49,17 +47,23 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 간간한 예제를 살펴보겠습니다. 이 XAML 예제에서는 특정 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체에 대한 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 애니메이션 효과를 줍니다.
 
 ```xaml
-<!-- Animates the rectangle's opacity. -->
-<Storyboard x:Name="myStoryboard">
-  <DoubleAnimation
-    Storyboard.TargetName="MyAnimatedRectangle"
-    Storyboard.TargetProperty="Opacity"
-    From="1.0" To="0.0" Duration="0:0:1"/>
-</Storyboard>
+<Page ...>
+  <Page.Resources>
+    <!-- Storyboard resource: Animates a rectangle's opacity. -->
+    <Storyboard x:Name="myStoryboard">
+      <DoubleAnimation
+        Storyboard.TargetName="MyAnimatedRectangle"
+        Storyboard.TargetProperty="Opacity"
+        From="1.0" To="0.0" Duration="0:0:1"/>
+    </Storyboard>
+  </Page.Resources>
 
-<!-- A different area of the XAML. -->
-<Rectangle x:Name="MyAnimatedRectangle"
-  Width="300" Height="200" Fill="Blue"/>
+  <!--Page root element, UI definition-->
+  <Grid>
+    <Rectangle x:Name="MyAnimatedRectangle"
+      Width="300" Height="200" Fill="Blue"/>
+  </Grid>
+</Page>
 ```
 
 ### <a name="identifying-the-object-to-animate"></a>애니메이션 효과를 줄 개체 식별
@@ -213,10 +217,10 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
     </Storyboard>
   </Page.Resources>
   <!--Page root element, UI definition-->
-  <StackPanel>
+  <Grid>
     <Rectangle x:Name="MyAnimatedRectangle"
       Width="300" Height="200" Fill="Blue"/>
-  </StackPanel>
+  </Grid>
 </Page>
 ```
 
@@ -291,6 +295,10 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 ```csharp
 myStoryboard.Begin();
+```
+
+```cppwinrt
+myStoryboard().Begin();
 ```
 
 ```cpp

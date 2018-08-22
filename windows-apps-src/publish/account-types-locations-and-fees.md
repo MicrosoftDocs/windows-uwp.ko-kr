@@ -4,18 +4,18 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: 계정 유형, 위치 및 수수료
 description: 여러 국가 및 지역의 개별 개발자 계정과 회사 개발자 계정을 제공합니다.
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
-ms.localizationpriority: high
-ms.openlocfilehash: e337c5fe18089bfd39981c04647ca1386c3a5b40
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832414"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801091"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
@@ -37,11 +37,11 @@ ms.locfileid: "1832414"
 |--------------------|-----------------|
 | <ul><li>약 $19 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li><li>더 짧은 계정 확인 프로세스</li></ul> | <ul><li>약 $99 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li><li>더 나은 계정 확인이 필요</li><li>회사가 위치하는 국가 또는 지역에서 회사로 인식되어야 함</li><li>제한된 기능으로 앱을 제출할 수 있음([Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type)에 설명된 대로)</li></ul> |
 
-회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. 금융 계정 정보에 액세스하는 앱 또는 (안전한 전용 제3자 인증 공급자를 사용하지 않고) 기본 기능에 액세스하기 위해 인증이 필요한 앱 등 특정 기능을 사용하여 앱을 게시하기 위해 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type)별로 회사 계정이 필요합니다.
+회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. [저장소 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), 특정 기능을 갖춘 앱 당 금융 계정에 액세스 하는 것과 같은 정보나는 인증이 필요한 보안 전용된 타사 인증 공급자를 사용) (없이 기본 기능에 액세스할 수 회사 계정 하 여만 게시할 수 있습니다.
 
 ## <a name="account-verification"></a>계정 확인
 
-등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 앱이 확인되기 전까지는 회사 계정에서 앱을 제출할 수 없지만, 기다리는 동안 [앱 이름을 예약](create-your-app-by-reserving-a-name.md)하고, Windows 개발자 센터 대시보드에 액세스하며, 앱을 계속 빌드 및 테스트할 수 있습니다.
+등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 를 확인 된 하지만 [응용 프로그램 이름 예약할](create-your-app-by-reserving-a-name.md) 수 있는 대기 하는 동안 때까지 회사 계정에서 앱을 전송할 수 없습니다 작성 및 테스트 앱을 계속 하 고 준비를 하 여 전송에서 작동 합니다.
 
 **계정 설정** 페이지에서 확인 상태를 점검할 수 있습니다. 
 

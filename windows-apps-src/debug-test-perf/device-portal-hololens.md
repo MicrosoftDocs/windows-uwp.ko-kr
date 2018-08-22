@@ -8,23 +8,21 @@ ms.date: 09/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e73519f57d9b08e08a7400f322367b6634cf945
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817724"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792483"
 ---
-# <a name="device-portal-for-hololens"></a>HoloLens용 장치 포털
+# <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 
 
 ## <a name="set-up-device-portal-on-hololens"></a>HoloLens에 디바이스 포털 설정
 
 ### <a name="enable-device-portal"></a>디바이스 포털 사용
-
-**디바이스 포털을 사용하도록 설정하려면**
 
 1. HoloLens의 전원을 켜고 디바이스에 배치합니다.
 2. [블룸](https://dev.windows.com/holographic/Gestures.html#Bloom) 제스처를 수행하여 주 메뉴를 시작합니다.
@@ -37,7 +35,7 @@ ms.locfileid: "1817724"
 
 ### <a name="pair-your-device"></a>디바이스 페어링
 
-### <a name="connect-over-wi-fi"></a>Wi-Fi를 통해 연결 
+#### <a name="connect-over-wi-fi"></a>Wi-Fi를 통해 연결 
 
 1. HoloLens를 Wi-Fi에 연결
 2. 디바이스의 IP 주소를 검색(설정 &gt; 네트워크 및 인터넷 &gt; Wi-Fi &gt; 고급 옵션에서 디바이스의 IP 주소 찾기)합니다.
@@ -47,18 +45,21 @@ ms.locfileid: "1817724"
     - 브라우저에 "이 웹 사이트의 보안 인증서에 문제가 있습니다"라는 메시지가 표시됩니다. 이 오류는 디바이스 포털에 발행된 인증서가 테스트 인증서이기 때문에 발생합니다.
  지금은 이 인증서 오류를 무시하고 계속 진행할 수 있습니다.
 
-### <a name="connect-over-usb"></a>USB를 통해 연결 
+#### <a name="connect-over-usb"></a>USB를 통해 연결 
 
 1. PC에 Windows 10 개발자 도구와 Visual Studio 업데이트 1이 설치되도록 도구를 설치합니다. 이렇게 하면 USB 연결을 사용할 수 있습니다.
 2. HoloLens를 마이크로-USB 케이블로 PC에 연결합니다.
 3. PC의 웹 브라우저에서 `http://127.0.0.1:10080`로 이동합니다.
 
-### <a name="connect-to-an-emulator"></a>에뮬레이터에 연결 
+> [!IMPORTANT]
+> PC, 장치를 찾을 수 없으면 평가판 HoloLens 장치의 실제 네트워크 IP 주소를 사용 하 여 보다는 `http://127.0.0.1:10080`합니다.
+
+#### <a name="connect-to-an-emulator"></a>에뮬레이터에 연결 
 
 에뮬레이터로 디바이스 포털을 사용할 수도 있습니다. 디바이스 포털에 연결하려면 도구 모음을 사용합니다. 다음 아이콘을 클릭합니다.
 - 디바이스 포털 열기: 에뮬레이터에서 HoloLens OS용 Windows Device Portal을 엽니다.
 
-### <a name="create-a-username-and-password"></a>사용자 이름 및 암호 만들기 
+#### <a name="create-a-username-and-password"></a>사용자 이름 및 암호 만들기 
 
 HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 암호를 만들어야 합니다.
 1. PC의 웹 브라우저에서 HoloLens의 IP 주소를 입력합니다. 액세스 설정 페이지가 열립니다.
@@ -71,7 +72,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 
 이 사용자 이름 또는 암호를 변경하려는 경우 언제든지 오른쪽 위의 보안 링크를 클릭하거나 `https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm`를 탐색하여 디바이스 보안 페이지를 방문하여 이 프로세스를 반복할 수 있습니다.
 
-### <a name="security-certificate"></a>보안 인증서 
+#### <a name="security-certificate"></a>보안 인증서 
 
 브라우저에 "인증서 오류"가 표시되는 경우 디바이스와 트러스트 관계를 만들어 수정할 수 있습니다.
 

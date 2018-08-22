@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cf3c87411bb6d8eb5886e7205f96c466d707220
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: a29c095e49b49baa63bd547c0bb928ad7f78aa86
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976491"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794644"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 대리자를 사용한 이벤트 처리
 이번 항목에서는 C++/WinRT를 사용해 이벤트 처리 대리자를 등록하거나 취소하는 방법에 대해서 설명합니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
@@ -122,7 +122,7 @@ private:
 
 위의 예와 같이 강력한 참조 대신 버튼에 약한 참조를 저장할 수 있습니다([C++/WinRT의 약한 참조](weak-references.md) 참조).
 
-그 밖에 대리자를 등록할 때 **winrt::auto_revoke**([**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t) 형식의 값)를 지정하여 이벤트 취소자(**winrt::event_revoker** 형식)를 요청하는 방법도 있습니다. 이벤트 취소자는 이벤트 소스(이벤트를 발생하게 만든 개체)에 대한 약한 참조를 보유합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 소스가 여전히 존재하는지 확인합니다. 존재하는 경우 대리인을 취소합니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
+또는 대리자를 등록 하는 경우 (즉, 형식 [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)값) **winrt::auto_revoke** (형식 [**winrt::event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker))의 이벤트 revoker는 요청을 지정할 수 있습니다. 이벤트 revoker 하면 이벤트 소스 (이벤트를 발생 하는 개체)에 대 한 약한 참조를 포함 합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 소스가 여전히 존재하는지 확인합니다. 존재하는 경우 대리인을 취소합니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -188,7 +188,7 @@ void ProcessFeedAsync()
     });
     
     // or (but this function must then be a coroutine and return IAsyncAction)
-    // SyndicationFeed syndicationFeed = co_await async_op_with_progress;
+    // SyndicationFeed syndicationFeed{ co_await async_op_with_progress };
 }
 ```
 

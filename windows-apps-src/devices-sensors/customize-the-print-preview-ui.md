@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 6a4088c24f801db3b25dc1d9740d261e12853d63
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+keywords: windows 10, uwp, 인쇄
+ms.localizationpriority: medium
+ms.openlocfilehash: fe4086cc87699083304594eb4ccc8e7bb137b19f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2017
-ms.locfileid: "696108"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797469"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**

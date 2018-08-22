@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: fe36fec72645558c539dd8270fd15d35d92b66b5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989627"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792682"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>패키지 데스크톱 앱(데스크톱 브리지) 배포
 
@@ -31,7 +31,7 @@ Microsoft Store에 패키지 데스크톱 앱을 게시하거나, 이를 하나 
 
 가장 광범위한 사용자에 도달하려면 Microsoft Store에 앱을 게시합니다. 또한 기업 고객은 [비즈니스용 Microsoft Store](https://www.microsoft.com/business-store)를 통해 회사 내부에 배포할 앱을 구입할 수 있습니다.
 
-Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 이 요구 사항에 대한 자세한 내용은 [제한된 접근 권한 값](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html)을 참조하세요.
+Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 이 요구 사항에 대한 자세한 내용은 [제한된 접근 권한 값](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities)을 참조하세요.
 
 Microsoft Store에 제출하기 전에 앱에 서명할 필요가 없습니다.
 

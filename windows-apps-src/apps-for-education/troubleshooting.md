@@ -1,10 +1,21 @@
 ---
-author: TylerMSFT
-Description: "이벤트 뷰어를 사용하여 Microsoft 시험 응시 이벤트 및 오류 문제 해결"
-title: "이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결"
-ms.openlocfilehash: 1b99b959cfdde997f7995c1bdf40d51921b2f1d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+Description: Troubleshoot Microsoft Take a Test events and errors with the event viewer.
+title: 이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결
+author: PatrickFarley
+ms.author: pafarley
+ms.assetid: 9218e542-f520-4616-98fc-b113d5a08e0f
+ms.date: 10/06/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp, 교육
+ms.localizationpriority: medium
+ms.openlocfilehash: 3193525316d085e56244d6f03da99e3e07c6539f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792421"
 ---
 # <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a>이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결
 

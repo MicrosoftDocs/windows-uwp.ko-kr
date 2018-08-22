@@ -4,18 +4,18 @@ ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Microsoft Store 구매 API에서 이 메서드를 사용하여 사용자의 구독 청구 상태를 변경할 수 있습니다.
 title: 사용자의 구독 청구 상태 변경
 ms.author: mcleans
-ms.date: 03/16/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb4a3de45d19b1a43af1de06a46f0b440fe53e6
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664886"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2796324"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>사용자의 구독 청구 상태 변경
 
@@ -57,7 +57,7 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 
 | 이름         | 유형  | 설명   |  필수  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | 문자열 | 변경하려는 구독의 ID입니다. 이 ID를 가져오려면 [get subscriptions for a user](get-subscriptions-for-a-user.md) 메서드를 호출하고, 변경하려는 구독 추가 기능을 나타내는 응답 본문 항목을 확인하고, 해당 항목의 **Id** 필드 값을 사용합니다.     | 예      |
+| recurrenceId | 문자열 | 변경하려는 구독의 ID입니다. 이 ID를 가져오려면 [사용자에 대 한 구독 get](get-subscriptions-for-a-user.md) 메서드를 호출, 변경할 구독 추가 기능을 나타내는 응답 본문 항목을 식별 하 고 항목에 대 한 **id** 필드의 값을 사용 합니다.     | 예      |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -74,7 +74,7 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 다음 예제는 이 메서드를 사용하여 구독 기간을 5일 연장하는 방법을 보여 줍니다. *b2bKey* 값을 변경할 구독의 사용자 ID를 나타내는 [Microsoft Store ID 키](view-and-grant-products-from-a-service.md#step-4)로 바꿉니다.
 
 ```json
-POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query HTTP/1.1
+POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/mdr:0:bc0cb6960acd4515a0e1d638192d77b7:77d5ebee-0310-4d23-b204-83e8613baaac/change HTTP/1.1
 Authorization: Bearer <your access token>
 Content-Type: application/json
 Host: https://purchase.mp.microsoft.com
@@ -120,6 +120,7 @@ Host: https://purchase.mp.microsoft.com
 | autoRenew | 부울 |  현재 구독 기간이 종료되면 구독을 자동으로 갱신할 것인지 여부를 나타냅니다.   |
 | beneficiary | 문자열 |  이 구독과 연결된 권한의 수취인 ID입니다.   |
 | expirationTime | 문자열 | 구독이 만료되는 날짜 및 시간이며, ISO 8601 형식입니다. 이 필드는 구독이 특정 상태일 때만 사용할 수 있습니다. 만료 시간은 일반적으로 현재 상태가 만료되는 시간을 나타냅니다. 예를 들어 활성 구독의 경우 만료 날짜는 다음 자동 갱신이 이루어지는 시간을 나타냅니다.    |
+| expirationTimeWithGrace | string | 날짜 및 시간 문화권이 형식 유예 기간을 포함 하 여 구독이 만료 됩니다. 이 값을 때 사용자를 잃게됩니다 구독에 대 한 액세스는 구독을 갱신 자동으로 실패 후 나타냅니다.    |
 | id | 문자열 |  구독의 ID입니다. 이 값을 사용하여 [change the billing state of a subscription for a user](change-the-billing-state-of-a-subscription-for-a-user.md) 메서드를 호출할 때 수정할 구독을 나타냅니다.    |
 | isTrial | 부울 |  구독이 평가판인지 여부를 나타냅니다.     |
 | lastModified | 문자열 |  구독이 마지막으로 수정된 날짜 및 시간이며, ISO 8601 형식입니다.      |

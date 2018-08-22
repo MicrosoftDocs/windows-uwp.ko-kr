@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
-ms.openlocfilehash: 724e2ce05dc439ba440f46697b736faabb1e8df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 02d04074ece0033da8c3454a95bc35af201903f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018497"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794664"
 ---
 # <a name="discover-remote-devices"></a>원격 장치 검색
 앱에서 무선 네트워크, Bluetooth 및 클라우드 연결을 사용하여 검색 장치와 동일한 Microsoft 계정으로 로그온된 Windows 장치를 검색할 수 있습니다. 특별한 소프트웨어가 설치되어 있지 않아도 원격 장치를 검색할 수 있습니다.
@@ -60,7 +60,7 @@ ms.locfileid: "2018497"
 
 ## <a name="querying-a-capability-on-a-remote-system"></a>원격 시스템에서 접근 권한 값 쿼리
 
-검색 필터링과 별개이지만 장치 접근 권한 값 쿼리는 검색 프로세스의 중요한 부분입니다. [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem#Windows_System_RemoteSystems_RemoteSystem_GetCapabilitySupportedAsync_System_String_) 메서드를 사용하여 검색된 원격 시스템에서 원격 세션 연결이나 공간 엔터티(홀로그램) 공유 등의 특정 기능을 지원하는지 쿼리할 수 있습니다. 쿼리 가능한 기능 목록은 [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities) 클래스를 참조하세요.
+검색 필터링과 별개이지만 장치 접근 권한 값 쿼리는 검색 프로세스의 중요한 부분입니다. [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem.GetCapabilitySupportedAsync) 메서드를 사용하여 검색된 원격 시스템에서 원격 세션 연결이나 공간 엔터티(홀로그램) 공유 등의 특정 기능을 지원하는지 쿼리할 수 있습니다. 쿼리 가능한 기능 목록은 [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities) 클래스를 참조하세요.
 
 ```csharp
 // Check to see if the given remote system can accept LaunchUri requests

@@ -4,18 +4,18 @@ ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: 앱 접근 권한 값 선언
 description: '사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 패키지 매니페스트에서 접근 권한 값을 선언해야 합니다.'
 ms.author: misatran
-ms.date: 5/02/2018
+ms.date: 7/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 5a2db50416008bae037c1bd9e3fb743d62c9fd05
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: c9ff43ac0a3aa4fb0dfdc3353029b60dbf442459
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832514"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795068"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -55,7 +55,7 @@ ms.locfileid: "1832514"
 | **VOIP 호출** | **voipCall** 접근 권한 값을 통해 앱은 [**Windows.ApplicationModel.Calls**](https://msdn.microsoft.com/library/windows/apps/Dn297266) 네임스페이스의 VOIP 호출 API에 액세스할 수 있습니다.<br /><br />**voipCall** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<table><thead><tr><th>XML</th></tr></thead><tbody><tr><td><pre><code>&lt;Capabilities&gt;&lt;uap:Capability Name="voipCall"/&gt;&lt;/Capabilities&gt;</code></pre></td></tr></tbody></table>
 | **3D 개체** | 앱에서는 **objects3D** 접근 권한 값을 통해 3D 개체 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 이 접근 권한 값은 주로 전체 3D 개체 라이브러리에 액세스해야 하는 3D 앱과 게임에서 사용됩니다.<br /><br />이 접근 권한 값은 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스에서 API를 사용하여 3D 개체를 포함하는 폴더에 액세스하는 데 필요합니다.<br /><br />**objects3D** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<table><thead><tr><th>XML</th></tr></thead><tbody><tr><td><pre><code>&lt;Capabilities&gt;&lt;uap:Capability Name="objects3d"/&gt;&lt;/Capabilities&gt;</code></pre></td></tr></tbody></table>
 | **읽기 차단된 메시지**\* | **blockedChatMessages**접근 권한 값을 통해 앱은 스팸 필터 앱에 의해 차단된 SMS 및 MMS 메시지를 읽을 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/Dn642321) 네임스페이스에서 API를 사용하여 차단된 메시지에 액세스하는 데 필요합니다.<br /><br />**blockedChatMessages** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<table><thead><tr><th>XML</th></tr></thead><tbody><tr><td><pre><code>&lt;Capabilities&gt;&lt;uap:Capability Name="blockedChatMessages"/&gt;&lt;/Capabilities&gt;</code></pre></td></tr></tbody></table>
-| **IoT 하위 수준의 버스 하드웨어** | **lowLevelDevices** 접근 권한 값을 통해 IoT 디바이스에서 실행되는 앱은 GPIO, I2C, SPI, ADC 및 PWM 같은 하위 수준의 버스 하드웨어에 액세스할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.Devices.Spi**](https://msdn.microsoft.com/library/windows/apps/Dn708178) 네임스페이스의 일부 API에 액세스하는 데 필요합니다.<br /><br />**lowLevelDevices** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **iot** 네임스페이스를 포함해야 합니다.<table><thead><tr><th>XML</th></tr></thead><tbody><tr><td><pre><code>&lt;Capabilities&gt;&lt;iot:Capability Name="lowLevelDevices"/&gt;&lt;/Capabilities&gt;</code></pre></td></tr></tbody></table>
+| **사용자 지정 장치** | **LowLevelDevices** 기능에는 다양 한 추가 요구 사항 충족 될 때 사용자 지정 장치에 액세스 하는 앱 수 있습니다. 이 기능을 GPIO, I2C, SPI, 및 PWM 장치에 대 한 액세스를 허용 하는 **lowLevel** 장치 기능을 사용 하면 혼동 하지 해야 합니다.<br /><br /> 해야 [장치 인터페이스](https://docs.microsoft.com/windows-hardware/drivers/install/device-interface-classes) 를 노출 하는 사용자 지정 드라이버를 개발 하 고이 장치에 대 한 핸들을 열고 Ioctl를 전송 하려는 경우<ul><li>응용 프로그램 매니페스트에서 **lowLevelDevices** 기능을 활성화 합니다. <table><thead><tr><th>XML</th></tr></thead><tbody><tr><td><pre><code>&lt;Capabilities&gt;&lt;iot:Capability Name="lowLevelDevices"/&gt;&lt;/Capabilities&gt;</code></pre></td></tr></tbody></table></li><li>[포함 된 모드](https://docs.microsoft.com/windows/iot-core/develop-your-app/EmbeddedMode) 를 사용 하도록 설정</li><li>으로 [제한 된](https://docs.microsoft.com/windows-hardware/drivers/install/devpkey-deviceinterface-restricted)사용자 [INF](https://msdn.microsoft.com/library/windows/desktop/hh404264(v=vs.85).aspx) 또는 드라이버의 [WdfDeviceAssignInterfaceProperty()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nf-wdfdevice-wdfdeviceassigninterfaceproperty) 을 호출 하 여 장치 인터페이스를 표시 합니다.</ul>  <br /><br />그런 다음 장치에 대 한 핸들을 열려면 [**Windows.Devices.Custom.CustomDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Custom.CustomDevice) 를 사용할 수 있습니다. 자세한 내용은 [내부 장치에 대 한 UWP 장치 앱](https://docs.microsoft.com/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices)을 참조 하십시오.
 | **IoT 시스템 관리** | **systemManagement** 접근 권한 값을 통해 앱은 종료 또는 다시 부팅, 로캘 및 표준 시간대와 같은 기본 시스템 관리 권한을 가질 수 있습니다.<br /><br />[**Windows.System**](https://msdn.microsoft.com/library/windows/apps/BR241814) 네임스페이스에서 일부 API에 액세스하려면 이 접근 권한 값이 필요합니다.<br /><br />**systemManagement** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **iot** 네임스페이스를 포함해야 합니다.<table><thead><tr><th>XML</th></tr></thead><tbody><tr><td><pre><code>&lt;Capabilities&gt;&lt;iot:Capability Name="systemManagement"/&gt;&lt;/Capabilities&gt;</code></pre></td></tr></tbody></table>
 | **백그라운드 미디어 재생** | **backgroundMediaPlayback** 접근 권한 값은 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) 및 [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/windows.media.audio.audiograph.aspx) 클래스 같은 미디어 관련 API의 동작을 변경하여 앱이 백그라운드에 있는 동안 미디어 재생을 사용하도록 설정합니다. 모든 활성 오디오 스트림은 더 이상 음소거되지 않고 앱이 백그라운드로 전환할 때 계속 들을 수 있습니다. 또한 재생 중 자동으로 앱 수명이 확장됩니다.
 | **원격 시스템** | **remoteSystem** 접근 권한 값을 통해 앱이 사용자의 Microsoft 계정과 연결된 디바이스 목록에 액세스할 수 있습니다. 디바이스 목록에 대한 액세스는 디바이스 간에 유지되는 모든 작업을 수행하는 데 필요합니다. 다음의 모든 멤버에 액세스하려면 이 접근 권한 값이 필요합니다.<br /><br />Windows.System.RemoteSystems 네임스페이스<br />Windows.System.RemoteLauncher 네임스페이스<br />AppServiceConnection.OpenRemoteAsync 메서드 |
@@ -81,15 +81,23 @@ ms.locfileid: "1832514"
 | **광 디스크** | **optical** 장치 접근 권한 값을 통해 앱은 CD, DVD 및 블루레이와 같은 광 디스크 드라이브의 접근 권한 값에 액세스할 수 있습니다.<br/>이 접근 권한 값은 [**Windows.Devices.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn263667) 네임스페이스의 일부 API를 사용하는 데 필요합니다. |
 | **동작 활동** | **activity** 장치 접근 권한 값을 통해 앱은 장치의 현재 동작을 감지할 수 있습니다.<br/>이 접근 권한 값은 [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408) 네임스페이스의 일부 API를 사용하는 데 필요합니다. |
 | **직렬 통신** | **직렬 통신** 장치 접근 권한 값은 Windows 앱이 직렬 포트나 추상 직렬 포트를 지원하는 장치와 통신할 수 있는 Windows.Devices.SerialCommunication 네임스페이스에서 API에 대한 액세스를 제공합니다. [**Windows.Devices.SerialCommnication**](https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication) 네임스페이스의 API를 사용하기 위해 필요한 접근 권한 값입니다. |
-| **아이 트래커** | **gazeInput** 접근 권한 값을 통해 앱에서 호환 아이 트래커 장치가 연결되어 있을 때 응용 프로그램 범위 내에서 사용자가 보는 위치를 검색할 수 있습니다. 이 접근 권한 값은 [Windows.Devices.Input.Preview](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview) 네임스페이스의 일부 API를 사용하는 데 필요합니다. |
+| **아이 트래커** | **gazeInput** 접근 권한 값을 통해 앱에서 호환 아이 트래커 장치가 연결되어 있을 때 응용 프로그램 범위 내에서 사용자가 보는 위치를 검색할 수 있습니다. 이 기능은 [**Windows.Devices.Input.Preview**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview) 네임 스페이스의 일부 Api를 사용 하 여 필요 합니다. |
+| **GPIO, I2C, SPI, 및 PWM** | **LowLevel** 장치 기능 GPIO, I2C, SPI, 및 PWM 장치에 대 한 액세스를 제공합니다. 이 기능은 다음 네임 스페이스에는 Api를 사용 하 여 필요: [**Windows.Devices.Gpio**](https://docs.microsoft.com/uwp/api/windows.devices.gpio), [**Windows.Devices.I2c**](https://docs.microsoft.com/uwp/api/windows.devices.i2c), [**Windows.Devices.Spi**](https://docs.microsoft.com/uwp/api/windows.devices.spi),[**Windows.Devices.Pwm**](https://docs.microsoft.com/uwp/api/windows.devices.pwm)합니다. <table><thead><tr><th>XML</th></tr></thead><tbody><tr><td><pre><code>&lt;Capabilities&gt;&lt;DeviceCapability Name="lowLevel"/&gt;&lt;/Capabilities&gt;</code></pre></td></tr></tbody></table>|
 
-## <a name="special-and-restricted-capabilities"></a>특수 및 제한된 접근 권한 값
 
-귀하의 앱이 특수 및 제한된 접근 권한 값을 선언하면 Microsoft Store에 게시하기 전에 승인을 받아야 합니다. 제출의 [제출 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서 앱이 접근 권한 값을 사용하는 방식에 대한 정보를 제공하여 이 승인을 요청할 수 있습니다.
+<span id="special-and-restricted-capabilities" />
 
-앱이 정말로 필요로 하지 않는 한 이러한 제한된 또는 특수 용도 접근 권한 값을 선언하지 마십시오. 예를 들어 사용자가 자신의 ID를 확인하는 디지털 인증서와 함께 스마트 카드를 제공하는 2단계 인증을 사용하는 뱅킹과 같이 이러한 접근 권한 값이 필요하고 적합한 경우가 있습니다. 다른 예로는 기본적으로 기업 고객용으로 디자인되고 사용자의 도메인 자격 증명 없이는 액세스할 수 없는 회사 리소스에 액세스해야 하는 앱을 들 수 있습니다.
+## <a name="restricted-capabilities"></a>제한된 접근 권한 값
+
+앱 선언 된 제한 된 기능을 하는 경우 Microsoft 저장소에 응용 프로그램을 게시를 승인 하기 위해 [app 전송 프로세스](../publish/app-submissions.md) 동안 정보를 제공 해야 합니다. 앱이를 선언 하는 각 제한 된 기능을 사용 하는 방법에 대해 설명 하 여 전송의 [전송 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서이 정보를 제공 됩니다.
+
+> [!IMPORTANT]
+> 제한 된 기능이 매우 구체적인 시나리오를 위한것입니다. 이 접근 권한 값은 사용이 엄격히 제한되며 추가 Microsoft Store 등록 정책 및 검토가 적용됩니다. 참고 모든 승인의 받이 필요 없이 제한 된 기능을 선언 된 sideload 응용 프로그램을 수행할 수 있습니다. 승인은 이러한 앱을 Microsoft Store에 제출하는 경우에만 필요합니다. 
+
+응용 프로그램에서 실제로 필요 하지 않은 경우 기능을 제한 이러한 선언 확인 해야 합니다. 예를 들어 사용자가 자신의 ID를 확인하는 디지털 인증서와 함께 스마트 카드를 제공하는 2단계 인증을 사용하는 뱅킹과 같이 이러한 접근 권한 값이 필요하고 적합한 경우가 있습니다. 다른 예로는 기본적으로 기업 고객용으로 디자인되고 사용자의 도메인 자격 증명 없이는 액세스할 수 없는 회사 리소스에 액세스해야 하는 앱을 들 수 있습니다.
 
 모든 제한된 접근 권한 값은 앱의 패키지 매니페스트에서 선언할 때 **rescap** 네임스페이스를 포함해야 합니다. 예를 들어 여기에 **appCaptureSettings** 접근 권한 값을 선언하는 방법이 나와 있습니다.
+
 ```xml
 <Capabilities>
     <rescap:Capability Name="appCaptureSettings"/>
@@ -107,35 +115,35 @@ ms.locfileid: "1832514"
     IgnorableNamespaces="uap mp wincap rescap">
 ```
 
-> [!IMPORTANT]
-> 특수 및 제한된 접근 권한 값은 매우 구체적인 시나리오를 위한 것입니다. 이 접근 권한 값은 사용이 엄격히 제한되며 추가 Microsoft Store 등록 정책 및 검토가 적용됩니다. 어떠한 제한도 없이 제한된 접근 권한 값을 선언하는 앱을 사이드로드할 수 있습니다. 승인은 이러한 앱을 Microsoft Store에 제출하는 경우에만 필요합니다. 
-
 ### <a name="restricted-capability-approval-process"></a>제한된 접근 권한 값 승인 프로세스
 
 이전에는 접근 권한 값을 사용하기 위해 승인을 받으려면 지원 팀에 문의해야 했습니다. 이제 [제출 프로세스](../publish/app-submissions.md)의 일부로 개발자 센터 대시보드에서 이 정보를 제공할 수 있습니다.
 
-제출에 대한 패키지를 업로드할 때 모든 제한된 또는 특수 용도 접근 권한 값이 선언되었는지 여부를 감지합니다. 이러한 경우 [제출 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서 제품이 각 접근 권한 값을 사용하는 방식에 대한 세부 정보를 제공해야 합니다. 제품에서 접근 권한 값을 선언해야 하는 이유를 이해하는 데 도움이 되기 위해 가능한 한 자세한 정보를 제공해야 합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다. 
+사용자가 전송한 항목에 대 한 패키지를 업로드 하는 경우 모든 제한 된 기능에 선언 되어있습니다 여부 탐지 됩니다. 이러한 경우 [제출 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서 제품이 각 접근 권한 값을 사용하는 방식에 대한 세부 정보를 제공해야 합니다. 제품에서 접근 권한 값을 선언해야 하는 이유를 이해하는 데 도움이 되기 위해 가능한 한 자세한 정보를 제공해야 합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다. 
 
 인증 과정에서 Microsoft의 테스터는 귀하가 제공한 정보를 검토하여 제출이 접근 권한 값을 사용할 수 있도록 승인되었는지 여부를 결정합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다. 접근 권한 값의 사용이 승인되면 앱은 나머지 인증 프로세스를 진행합니다. 앱에 대한 업데이트를 제출하는 경우 추가 접근 권한 값을 선언하지 않는 이상 일반적으로 접근 권한 값 승인 프로세스를 반복하지 않아도 됩니다. 
 
 접근 권한 값 사용이 승인되지 않는 경우 제출은 인증에 실패하며 인증 보고서에 피드백이 제공됩니다. 그러면 접근 권한 값을 선언하지 않는 새 제출을 만들고 패키지를 업로드하거나, 또는 해당되는 경우 접근 권한 값과 사용과 관련된 모든 문제를 처리하고 새 제출에서 승인을 요청할 수 있습니다.
 
 > [!NOTE]
-> 제출이 개발자 센터에서 개발 샌드박스를 사용하는 경우(예를 들어, Xbox Live와 통합하는 모든 게임에 대해 이러한 경우) **제출 옵션** 페이지에서 정보를 제공하는 것이 아니라 미리 승인을 요청해야 합니다. 이를 수행하려면 [Windows 개발자 지원 페이지](https://developer.microsoft.com/windows/support)를 방문하세요. **응용 프로그램** 문제 유형 및 **기타** 하위 범주를 선택한 다음 접근 권한 값을 사용하는 방법 및 제품에 필요한 이유를 설명합니다. 필요한 모든 정보를 제공하지 않거나 액세스를 요청할 수 있는 권한이 없으면 요청이 거부됩니다. 자세한 정보를 제공해야 할 수도 있습니다. 이 프로세스는 일반적으로 영업일 기준으로 5일 이상 걸리므로 사전에 요청을 제출하십시오.
+> 제출이 개발자 센터에서 개발 샌드박스를 사용하는 경우(예를 들어, Xbox Live와 통합하는 모든 게임에 대해 이러한 경우) **제출 옵션** 페이지에서 정보를 제공하는 것이 아니라 미리 승인을 요청해야 합니다. 이를 수행하려면 [Windows 개발자 지원 페이지](https://developer.microsoft.com/windows/support)를 방문하세요. 개발자 지원 항목 **대시보드 문제**, 문제점 유형 **App 전송**및 하위 범주 **기타**를 선택 합니다. 다음 기능은 사용 하는 방법 및 해당 제품에는 이유를 설명 합니다. 필요한 모든 정보를 제공하지 않으면 요청이 거부됩니다. 자세한 정보를 제공해야 할 수도 있습니다. 이 프로세스는 일반적으로 영업일 기준으로 5일 이상 걸리므로 사전에 요청을 제출하십시오.
+>
+> 승인을 요청 하 고이 메서드를 사용할 수도 있습니다 (제공이 정보에 제출 하는 동안),이 아닌 여부 사용 하는 개발 샌드박스를 시작 하기 전에 제한 된 기능을 사용 하 여 승인 된 확인 하는 것을 선호 하는 경우 사용자 전송 합니다.
 
+<span id="restricted-and-special-use-capability-list" />
 
-### <a name="restricted-and-special-use-capability-list"></a>제한된 및 특수 용도 접근 권한 값 목록
+### <a name="restricted-capability-list"></a>제한 된 기능 목록
 
-다음 표에서 특수 용도 및 제한된 접근 권한 값을 나열합니다. 위에 설명된 프로세스를 수행하여 Microsoft Store에 제출한 앱에서 이러한 접근 권한 값에 대한 승인을 요청할 수 있습니다. 
+다음 표에서 제한 된 기능을 보여줍니다. 위에 설명된 프로세스를 수행하여 Microsoft Store에 제출한 앱에서 이러한 접근 권한 값에 대한 승인을 요청할 수 있습니다. 
 
 > [!IMPORTANT]
 > 이러한 제한된 접근 권한 값 중 일부는 특정 제한된 경우를 제외하고 Microsoft Store에 제출하는 앱에 대해 거의 승인되지 않습니다. 이러한 접근 권한 값은 아래 표에서 설명되어 있습니다. Microsoft Store를 통해 배포할 계획인 경우 앱에서 이러한 접근 권한 값을 선언하지 않는 것이 좋습니다. 
 
 | 접근 권한 값 시나리오 | 접근 권한 값 사용 |
 |---------------------|------------------|
-| **Enterprise** | Windows 도메인 자격 증명은 사용자가 자신의 자격 증명을 사용하여 원격 리소스에 로그인할 수 있도록 하며, 마치 사용자가 사용자 이름과 암호를 제공한 것처럼 작동합니다. **enterpriseAuthentication** 특수 접근 권한 값은 주로 대기업에서 서버에 연결하는 LOB(기간 업무) 앱에 사용됩니다. <br /><br />인터넷을 통한 일반적인 통신에는 이 접근 권한 값이 필요하지 않습니다.<br /><br />**enterpriseAuthentication** 특수 접근 권한 값은 일반 LOB(기간 업무) 앱을 지원하기 위한 것입니다. 회사 리소스에 액세스할 필요가 없는 앱에서는 이 접근 권한 값을 선언하지 마세요. [**파일 선택기**](https://msdn.microsoft.com/library/windows/apps/BR207847)는 사용자가 앱에서 사용할 네트워크 공유의 파일을 열 수 있는 강력한 UI 메커니즘을 제공합니다. 앱의 시나리오에서 프로그래밍 방식 액세스가 필요하고 **파일 선택기**를 사용하여 이 시나리오를 실현할 수 없는 경우에만 **enterpriseAuthentication** 특수 접근 권한 값을 선언하세요.<br /><br />**enterpriseAuthentication** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="enterpriseAuthentication"/></Capabilities>```<br /><br />**enterpriseDataPolicy** 접근 권한 값을 통해 앱은 장치에 대한 엔터프라이즈별 정책을 정의하고 사용할 수 있습니다. 다음 클래스의 모든 구성원을 사용하려면 이 접근 권한 값이 필요합니다.<ul><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705151">FileProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn706017">DataProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705170">ProtectionPolicyManager</a></li></ul> |
-| **공유 사용자 인증서** | **sharedUserCertificates** 특수 접근 권한 값을 사용하면 앱에서 스마트 카드에 저장된 인증서와 같이 공유 사용자 저장소의 소프트웨어 및 하드웨어 기반 인증서를 추가하고 액세스할 수 있습니다. 이 접근 권한 값은 주로 스마트 카드로 인증하는 금융 또는 엔터프라이즈 앱에 사용됩니다.<br /><br />**sharedUserCertificates** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="sharedUserCertificates"/></Capabilities>``` |
-|**문서**\* | **documentsLibrary** 특수 접근 권한 값에서는 OneDrive에 대한 오프라인 액세스를 지원하기 위해 패키지 매니페스트에 선언된 파일 형식 연결로 필터링하여 사용자의 문서에 프로그래밍 방식으로 액세스할 수 있게 합니다. 예를 들어 DOC 뷰어 앱이 .doc 파일 형식 연결을 선언한 경우 문서에서 .doc 파일을 열 수 있지만 다른 형식의 파일은 열 수 없습니다. <br /><br />**documentsLibrary** 특수 접근 권한 값을 선언하는 앱은 홈 그룹 컴퓨터의 문서에 액세스할 수 없습니다. [파일 선택기](https://msdn.microsoft.com/library/windows/apps/Hh465174)는 사용자가 앱에서 사용할 파일을 열 수 있는 강력한 UI 메커니즘을 제공합니다. 파일 선택기를 사용할 수 없는 경우에만 **documentsLibrary** 특수 접근 권한 값을 선언합니다.<br /><br />**documentsLibrary** 특수 접근 권한 값을 사용하려면 앱에서 다음 작업을 해야 합니다.<ul><li>유효한 OneDrive URL 또는 리소스 ID를 사용하여 플랫폼 간에서 오프라인으로 특정 OneDrive 콘텐츠에 액세스할 수 있도록 합니다.</li><li>오프라인에 있는 동안 열려 있는 파일을 사용자의 OneDrive에 자동으로 저장합니다.</li></ul>이러한 두 가지 용도로 **documentsLibrary** 특수 접근 권한 값을 사용하는 앱은 선택적으로 이 접근 권한 값을 사용하여 다른 문서에 포함된 콘텐츠를 열 수도 있습니다. **documentsLibrary** 특수 접근 권한 값은 위와 같은 용도로만 사용할 수 있습니다.<ul><li>앱은 휴대폰 내부 저장소의 문서 라이브러리에 액세스할 수 없습니다. 하지만 다른 앱에서 SD 카드(옵션)에 문서 폴더를 만드는 경우 앱은 해당 폴더를 볼 수 있습니다.</li></ul>**documentsLibrary** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="documentsLibrary"/></Capabilities>``` |
+| **Enterprise** | Windows 도메인 자격 증명은 사용자가 자신의 자격 증명을 사용하여 원격 리소스에 로그인할 수 있도록 하며, 마치 사용자가 사용자 이름과 암호를 제공한 것처럼 작동합니다. **EnterpriseAuthentication** 기능에는 엔터프라이즈 내에서 서버에 연결 된 비즈니스 라인 응용 프로그램에서 일반적으로 사용 됩니다. <br /><br />인터넷을 통한 일반적인 통신에는 이 접근 권한 값이 필요하지 않습니다.<br /><br />**EnterpriseAuthentication** 기능 일반적인 비즈니스 라인 앱을 지원 하기 위한것입니다. 회사 리소스에 액세스할 필요가 없는 앱에서는 이 접근 권한 값을 선언하지 마세요. [**파일 선택기**](https://msdn.microsoft.com/library/windows/apps/BR207847)는 사용자가 앱에서 사용할 네트워크 공유의 파일을 열 수 있는 강력한 UI 메커니즘을 제공합니다. 앱에 대 한 시나리오 필요 프로그래밍 방식으로 액세스할 **파일 선택기**를 사용 하 여 인식할 수 없는 경우에 **enterpriseAuthentication** 기능을 선언 합니다.<br /><br />**enterpriseAuthentication** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="enterpriseAuthentication"/></Capabilities>```<br /><br />**enterpriseDataPolicy** 접근 권한 값을 통해 앱은 장치에 대한 엔터프라이즈별 정책을 정의하고 사용할 수 있습니다. 다음 클래스의 모든 구성원을 사용하려면 이 접근 권한 값이 필요합니다.<ul><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705151">FileProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn706017">DataProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705170">ProtectionPolicyManager</a></li></ul> |
+| **공유 사용자 인증서** | **SharedUserCertificates** 기능 앱을 추가 하 고 소프트웨어에 액세스 하 고 스마트 카드에 저장 된 인증서와 같은 공유 사용자에 대 한 하드웨어 기반 인증서를 저장 합니다. 이 접근 권한 값은 주로 스마트 카드로 인증하는 금융 또는 엔터프라이즈 앱에 사용됩니다.<br /><br />**sharedUserCertificates** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="sharedUserCertificates"/></Capabilities>``` |
+|**문서**\* | **DocumentsLibrary** 기능은 OneDrive에 대 한 오프 라인 액세스를 지원 하기 위해 패키지 매니페스트에 선언 된 파일 형식 연결을 필터링 하는 사용자의 문서에 프로그래밍 방식 액세스를 제공 합니다. 예를 들어 DOC 뷰어 앱이 .doc 파일 형식 연결을 선언한 경우 문서에서 .doc 파일을 열 수 있지만 다른 형식의 파일은 열 수 없습니다. <br /><br />**DocumentsLibrary** 기능 선언 된 응용 프로그램 홈 그룹 컴퓨터에 문서에 액세스할 수 없습니다. [파일 선택기](https://msdn.microsoft.com/library/windows/apps/Hh465174)는 사용자가 앱에서 사용할 파일을 열 수 있는 강력한 UI 메커니즘을 제공합니다. 파일 선택을 사용할 수 없는 경우에 **documentsLibrary** 기능을 선언 합니다.<br /><br />응용 프로그램 **documentsLibrary** 기능을 사용 하려면 다음을 수행 해야 합니다.<ul><li>유효한 OneDrive URL 또는 리소스 ID를 사용하여 플랫폼 간에서 오프라인으로 특정 OneDrive 콘텐츠에 액세스할 수 있도록 합니다.</li><li>오프라인에 있는 동안 열려 있는 파일을 사용자의 OneDrive에 자동으로 저장합니다.</li></ul>이러한 두 목적을 위해 **documentsLibrary** 기능을 사용 하는 기능을 사용 하 여 다른 문서 내에서 포함 된 콘텐츠를 열도 필요에 따라 될 수 있습니다. **DocumentsLibrary** 기능의 위의 사용에만 적용 됩니다.<ul><li>앱은 휴대폰 내부 저장소의 문서 라이브러리에 액세스할 수 없습니다. 하지만 다른 앱에서 SD 카드(옵션)에 문서 폴더를 만드는 경우 앱은 해당 폴더를 볼 수 있습니다.</li></ul>**documentsLibrary** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="documentsLibrary"/></Capabilities>``` |
 | **게임 DVR 설정** | **appCaptureSettings** 제한된 접근 권한 값을 통해 앱은 게임 DVR에 대한 사용자 설정을 제어할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/BR226738) 네임스페이스의 일부 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다.  |
 | **셀룰러** | **cellularDeviceControl** 제한된 접근 권한 값을 통해 앱은 셀룰러 장치를 제어할 수 있습니다.<br /><br />**cellularDeviceIdentity** 접근 권한 값을 통해 앱은 셀룰러 ID 데이터에 액세스할 수 있습니다.<br /><br />**cellularMessaging** 접근 권한 값을 통해 앱은 SMS 및 RCS를 사용할 수 있습니다.<br /><br />이러한 접근 권한 값은 [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/BR206567) 네임스페이스의 일부 API를 사용하는 데 필요합니다.  |
 | **장치 잠금 해제** | **deviceUnlock** 제한된 접근 권한 값을 통해 앱은 개발자 및 엔터프라이즈 사이드로드 시나리오에 대해 장치의 잠금을 해제할 수 있습니다.<br /><br /> Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
@@ -206,6 +214,13 @@ ms.locfileid: "1832514"
 | **개발 모드 네트워크** | **developmentModeNetwork** 접근 권한 값을 사용하면 C++/CX UWP 앱 또는 C++ Windows 런타임 구성 요소의 OpenFile Win32 API를 호출할 때 앱이 로그인한 사용자의 자격 증명을 사용하여 네트워크 경로에 액세스할 수 있습니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **다양한 파일 시스템 액세스** | **broadFileSystemAccess** 접근 권한 값을 사용하면 앱이 런타임 동안 어떠한 추가 파일 선택기 스타일 프롬프트 없이 현재 앱을 실행하는 사용자와 같은 파일 시스템에 액세스할 수 있습니다.<br/><br/>이 접근 권한 값은 [Windows.Storage](https://docs.microsoft.com/uwp/api/windows.storage) API에 대해 작동합니다. 앱 패키지 매니페스트에 선언된 이 접근 권한 값으로 모든 **Windows.Storage** API를 처음 사용하면 사용자가 권한을 부여하거나 거부할 수 있는 사용자 동의 프롬프트가 트리거됩니다. 사용자는 설정을 전환하여 언제든지 권한을 부여하거나 거부할 수 있습니다. 이 기능으로 **문서**, **사진** 또는 **동영상** 등의 특별한 폴더 접근 권한 값을 선언하지 않아야 합니다. |
 | **시스템 펌웨어 및 BIOS** | **smbios** 접근 권한 값을 통해 앱은 BIOS 데이터 및 시스템 펌웨어 데이터에 액세스할 수 있습니다. |
+| **전체 신뢰 권한 수준** | **RunFullTrust** 제한 되는 기능은 사용자의 컴퓨터에서 전체 신뢰 권한 수준에서 실행 하는 앱 수 있습니다. 이 기능은 [FullTrustProcessLauncher](https://docs.microsoft.com/uwp/api/windows.applicationmodel.fulltrustprocesslauncher) API 사용 하 여 필요 합니다.<br /><br />이 기능은 또한 필요는 appx로 전달 되는 모든 데스크톱 응용 프로그램에 대 한 패키지 (와 마찬가지로 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)) 하 고, 데스크톱 응용 프로그램 변환기 (DAC) 또는 시각적을 사용 하 여 이러한 앱을 패키지로 만들 때 자동으로 매니페스트에 표시 됩니다 Studio 지정 합니다. |
+| **권한 상승** | **AllowElevation** 제한 되는 기능은 Microsoft 파트너 및 기업 자동 상승 시작 시 또는 응용 프로그램의 수명 동안 필요로 하는 기존 데스크톱 기능을 유지 하기 위해 만든 앱 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. 비즈니스를 위한 Microsoft 저장소를 통해 자신의 개인 저장소에는 엔터프라이즈에서 배포 하는 비즈니스 라인 앱에 대 한 승인만 됩니다.  |
+| **Windows 팀 장치 자격 증명** | **TeamEditionDeviceCredentials** 제한 되는 기능은 Windows 10, 1703 이상 버전을 실행 하는 표면 허브 장치에서 장치 계정 자격 증명을 요청 하는 Api에 액세스 하는 앱 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
+| **Windows 팀 응용 프로그램 보기** | **TeamEditionView** 제한 되는 기능은 Windows 10, 1703 이상 버전을 실행 하는 표면 허브 장치에서 응용 프로그램 보기를 호스팅하기 위한 api (영문)에 액세스 하는 앱 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
+
+
+
 
 ## <a name="related-topics"></a>관련 항목
 

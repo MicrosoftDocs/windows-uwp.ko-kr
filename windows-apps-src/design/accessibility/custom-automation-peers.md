@@ -6,18 +6,18 @@ title: 사용자 지정 자동화 피어
 label: Custom automation peers
 template: detail.hbs
 ms.author: mhopkins
-ms.date: 09/25/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bab0ac8b89815a67be2c963979b3712f022248b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a2f9caf8519aa76ef9487e5318a238a6e1d53fe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656568"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800539"
 ---
 # <a name="custom-automation-peers"></a>사용자 지정 자동화 피어  
 
@@ -122,7 +122,6 @@ C\# 또는 Microsoft Visual Basic으로 작성된 UWP 앱 등 관리 코드 프�
 
 예를 들어 다음 코드는 사용자 지정 컨트롤 `NumericUpDown`이 UI 자동화를 위해 `NumericUpDownPeer` 피어를 사용하도록 선언합니다.
 
-C#
 ```csharp
 using Windows.UI.Xaml.Automation.Peers;
 ...
@@ -138,7 +137,6 @@ public class NumericUpDown : RangeBase {
 }
 ```
 
-Visual Basic
 ```vb
 Public Class NumericUpDown
     Inherits RangeBase
@@ -151,7 +149,29 @@ Public Class NumericUpDown
 End Class
 ```
 
-C++
+```cppwinrt
+// NumericUpDown.idl
+namespace MyNamespace
+{
+    runtimeclass NumericUpDown : Windows.UI.Xaml.Controls.Primitives.RangeBase
+    {
+        NumericUpDown();
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDown.h
+...
+struct NumericUpDown : NumericUpDownT<NumericUpDown>
+{
+    ...
+    Windows::UI::Xaml::Automation::Peers::AutomationPeer OnCreateAutomationPeer()
+    {
+        return winrt::make<MyNamespace::implementation::NumericUpDownAutomationPeer>(*this);
+    }
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives::RangeBase
@@ -160,7 +180,7 @@ public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives:
 protected:
     virtual AutomationPeer^ OnCreateAutomationPeer() override
     {
-         return ref new NumericUpDown(this);
+         return ref new NumericUpDownAutomationPeer(this);
     }
 };
 ```
@@ -193,20 +213,38 @@ protected:
 ## <a name="initialization-of-a-custom-peer-class"></a>사용자 지정 피어 클래스의 초기화  
 자동화 피어는 기본 초기화에 소유자 컨트롤의 인스턴스를 사용하는 형식이 안전한 생성자를 정의해야 합니다. 다음 예제의 구현에서는 *owner* 값을 [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506) 기본으로 전달하며 최종적으로는 실제로 *owner*를 사용하여 [**FrameworkElementAutomationPeer.Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner)를 설정하는 [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472)가 됩니다.
 
-C#
 ```csharp
 public NumericUpDownAutomationPeer(NumericUpDown owner): base(owner)
 {}
 ```
 
-Visual Basic
 ```vb
 Public Sub New(owner As NumericUpDown)
     MyBase.New(owner)
 End Sub
 ```
 
-C++
+```cppwinrt
+// NumericUpDownAutomationPeer.idl
+import "NumericUpDown.idl";
+namespace MyNamespace
+{
+    runtimeclass NumericUpDownAutomationPeer : Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    {
+        NumericUpDownAutomationPeer(NumericUpDown owner);
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDownAutomationPeer.h
+...
+struct NumericUpDownAutomationPeer : NumericUpDownAutomationPeerT<NumericUpDownAutomationPeer>
+{
+    ...
+    NumericUpDownAutomationPeer(MyNamespace::NumericUpDown const& owner);
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDownAutomationPeer sealed :  Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer
@@ -225,7 +263,6 @@ UWP 인프라를 위해 자동화 피어의 재정의 가능한 메서드는 UI 
 
 최소한 새 피어 클래스를 정의할 때마다 다음 예제와 같이 [**GetClassNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclassnamecore) 메서드를 구현합니다.
 
-C#
 ```csharp
 protected override string GetClassNameCore()
 {
@@ -244,7 +281,6 @@ protected override string GetClassNameCore()
 
 [**GetAutomationControlTypeCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) 구현에서는 [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182) 값을 반환하여 컨트롤을 설명합니다. **AutomationControlType.Custom**을 반환할 수 있지만 컨트롤의 주요 시나리오를 정확하게 설명하는 경우 보다 구체적인 컨트롤 형식을 반환해야 합니다. 예를 들면 다음과 같습니다.
 
-C#
 ```csharp
 protected override AutomationControlType GetAutomationControlTypeCore()
 {
@@ -268,7 +304,7 @@ protected override AutomationControlType GetAutomationControlTypeCore()
 
 리터럴 코드는 아니지만 이 예제에서는 [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506)에 이미 있는 [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore)의 구현을 근사화합니다.
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -288,7 +324,7 @@ UI 자동화 지원의 UWP 구현에서 사용할 수 있는 공급자 패턴 �
 
 다음은 사용자 지정 피어에 대한 [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 재정의의 예입니다. 이 예에서는 [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) 및 [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653)의 두 패턴에 대한 지원을 보고합니다. 다음 컨트롤은 전체 화면(토글 모드)으로 표시될 수 있는 미디어 표시 컨트롤이며 사용자가 위치(범위 컨트롤)를 선택할 수 있는 진행률 표시줄을 포함합니다. 이 코드는 [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)에서 제공됩니다.
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -311,7 +347,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 ### <a name="forwarding-patterns-from-sub-elements"></a>하위 요소에서 패턴 전달  
 [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 메서드 구현에서는 하위 요소 또는 부분을 해당 호스트의 패턴 공급자로 지정할 수도 있습니다. 이 예제에서는 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)이 스크롤 패턴 처리를 내부 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) 컨트롤의 피어로 전송하는 방법을 모방합니다. 패턴 처리를 위한 하위 요소를 지정하기 위해 이 코드는 하위 요소 개체를 가져오고 [**FrameworkElementAutomationPeer.CreatePeerForElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.createpeerforelement) 메서드를 사용하여 하위 요소에 대한 피어를 만든 다음 새 피어를 반환합니다.
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -403,7 +439,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 
 일반적인 구현에서는 공급자 API가 런타임에 컨트롤 인스턴스에 액세스하기 위해 먼저 [**Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner)를 호출합니다. 그런 다음 해당 개체에서 필요한 동작 메서드를 호출할 수 있습니다.
 
-C#
+
 ```csharp
 public class IndexCardAutomationPeer : FrameworkElementAutomationPeer, IExpandCollapseProvider {
     private IndexCard ownerIndexCard;
@@ -447,7 +483,7 @@ UI 자동화 클라이언트에서 자동화 이벤트를 구독할 수 있습�
 
 다음 코드 예제에서는 컨트롤 정의 코드 내에서 피어 개체를 가져오고 메서드를 호출하여 해당 피어에서 이벤트를 발생시키는 방법을 보여 줍니다. 최적화 방법으로 코드에서 이 이벤트 형식에 대한 수신기가 있는지 여부를 확인합니다. 수신기가 있는 경우에만 이벤트를 발생시키고 피어 개체를 만들어 불필요한 오버헤드를 방지하고 컨트롤이 계속 응답하도록 합니다.
 
-C#
+
 ```csharp
 if (AutomationPeer.ListenerExists(AutomationEvents.PropertyChanged))
 {

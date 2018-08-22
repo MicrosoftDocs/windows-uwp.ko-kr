@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a175ad48255c0179335ce9204f51a0a62fd2b4f3
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707224"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795169"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -98,7 +98,8 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 코드 또는 시각적 상태에서 요소의 Visibility 속성을 변경할 수 있습니다. 요소의 Visibility가 변경되는 경우 해당하는 모든 자식 요소도 변경됩니다. 한 패널을 표시하고 다른 패널은 축소하여 UI의 섹션을 바꿀 수 있습니다.
 
-> **팁**&nbsp;&nbsp;기본적으로 **Collapsed**인 요소가 UI에 있는 경우 비록 보이지 않아도 시작할 때 해당 개체는 여전히 만들어집니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
+> [!Tip]
+> 기본적으로 **축소** 되는 UI의 요소를 사용 하는 표시 되지 않은 경우에는 개체는 여전히 시작 시 만들어집니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
 
 ### <a name="style-resources"></a>스타일 리소스
 
@@ -138,7 +139,7 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 여기서는 [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx)에 2개의 VisualState 정의가 포함되어 있습니다. 첫 번째 정의인 `DefaultState`는 비어 있습니다. 적용되면 XAML 페이지에서 정의된 값이 적용됩니다. 두 번째 정의인 `WideState`는 [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx)의 [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) 속성을 **Inline**으로 변경하고 창을 엽니다. 이 상태는 창 너비가 640 유효 픽셀 이상인 경우 SizeChanged 이벤트 처리기에서 적용됩니다.
 
 > [!NOTE]
-Windows에서는 앱이 실행되는 특정 디바이스를 앱 내에서 검색하는 방법을 제공하지 않습니다. 물론 앱이 실행 중인 디바이스 패밀리(모바일, 데스크톱, 등), 유효 해상도 및 앱에서 사용할 수 있는 화면 공간 크기(앱의 창 크기)는 알 수 있습니다. 따라서 [화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)에 대해 시각적 상태를 정의하는 것이 좋습니다.
+> Windows에서는 앱이 실행되는 특정 디바이스를 앱 내에서 검색하는 방법을 제공하지 않습니다. 물론 앱이 실행 중인 디바이스 패밀리(모바일, 데스크톱, 등), 유효 해상도 및 앱에서 사용할 수 있는 화면 공간 크기(앱의 창 크기)는 알 수 있습니다. 따라서 [화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)에 대해 시각적 상태를 정의하는 것이 좋습니다.
 
 
 ```xaml
@@ -234,7 +235,8 @@ Windows 10부터는 여기 나와 있는 것처럼 간소화된 [**Setter**](htt
 </Page>
 ```
 
-> **중요**&nbsp;&nbsp;이전 예제에서는 VisualStateManager.VisualStateGroups 연결된 속성이 **Grid** 요소에 설정되었습니다. StateTriggers를 사용하는 경우 트리거가 자동으로 적용되도록 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. (여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.)
+> [!Important]
+> 앞의 예제에서는 연결 된 VisualStateManager.VisualStateGroups 속성 **눈금** 요소에서 설정 합니다. StateTriggers를 사용하는 경우 트리거가 자동으로 적용되도록 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. (여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.)
 
 ### <a name="attached-property-syntax"></a>연결된 속성 구문
 

@@ -4,18 +4,18 @@ ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: 브러시 사용
 description: Brush 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다.
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 872e93d5714eb832b64efb047079be9dbfc3b617
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 0473ee984461bf46be4ebf866a564f0d51e0cfc5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396522"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795960"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>브러시를 사용하여 배경, 전경 및 윤곽선 그리기
 
@@ -181,6 +181,10 @@ SolidColorBrush blueBrush = new SolidColorBrush(Windows.UI.Colors.Blue);
 
 ```vb
 Dim blueBrush as SolidColorBrush = New SolidColorBrush(Windows.UI.Colors.Blue)
+```
+
+```cppwinrt
+Windows::UI::Xaml::Media::SolidColorBrush blueBrush{ Windows::UI::Colors::Blue() };
 ```
 
 ```cpp

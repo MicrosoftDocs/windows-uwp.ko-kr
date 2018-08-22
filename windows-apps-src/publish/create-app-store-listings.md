@@ -4,18 +4,18 @@ Description: The Store listings section of the app submission process is where y
 title: 앱 Store 목록 만들기
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 06/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
-ms.localizationpriority: high
-ms.openlocfilehash: 871eb3cd8b8bdfd0cf12859dcb401df2158bf5b7
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816948"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795813"
 ---
 # <a name="create-app-store-listings"></a>앱 Store 목록 만들기
 
@@ -42,12 +42,22 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 선택을 완료하면 **저장**을 클릭하여 제출 개요 페이지로 돌아갑니다.
 
-> [!NOTE]
-> 패키지에서 지원되지 않는 언어로 Microsoft Store 목록을 만드는 경우에는 이름을 가져올 언어에 연결된 패키지가 없으므로 예약된 앱 이름 중 어느 것을 해당 Microsoft Store 목록에 표시할지 나타내야 합니다. 여기서 선택한 이름만 해당 언어에 대한 Microsoft Store 목록에 적용되며 고객이 앱을 설치할 경우 표시되는 이름에는 영향을 주지 않습니다.
+## <a name="add-and-edit-store-listing-info"></a>추가 하 고 정보를 나열 하는 저장소를 편집 합니다.
 
-Microsoft Store 목록을 편집하려면 제출 개요 페이지에서 언어 이름을 클릭합니다.
+나열 하는 저장소를 편집 하려면 전송 개요 (영문) 페이지에서 언어 이름을 선택 합니다.
 
 **Microsoft Store 목록** 페이지의 맨 위에 선택 언어에 대한 기본 Microsoft Store 목록과 관련된 필드가 있습니다. 이러한 필드는 모든 고객에게 표시되지만, 이전 OS 버전(Windows 8.x 이하, Windows Phone 8.x 이하)을 대상으로 하는 패키지가 있고 지정된 OS 버전에서 고객에게 표시될 다른 스크린샷 또는 정보를 포함하도록 플랫폼별 Microsoft Store 목록을 만든 경우는 표시되지 않습니다. 자세한 내용은 [플랫폼별 Microsoft Store 목록 만들기](create-platform-specific-store-listings.md)를 참조하세요.
+
+## <a name="product-name"></a>제품 이름
+
+이 드롭다운 목록 상자는 이름을 사용 해야 저장소 목록 (응용 프로그램에 대 한 개 이상의 이름을 예약어가) 하는 경우를 지정할 수 있습니다.
+
+패키지에서 작업 중인 저장소 목록으로 같은 언어에서 업로드 한 경우 해당 패키지에서 사용 되는 이름 선택 됩니다. 이미 게시 한 후 필요한 [응용 프로그램의](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 바꾸려면 하는 경우에 패키지의 새 이름을 사용 하는 새 전송을 만들 때 여기에 다른 예약 된 이름을 선택할 수 있습니다.
+
+언어에 대 한 패키지를 업로드 하지 않은 경우 작업 중인 하 고 둘 이상의 이름 예약어 했을 때, 중 하나를 선택 하려면 예약 된 응용 프로그램 이름에는 연결 된 패키지 이름을 가져올을 해당 언어로 없는 이후 수행 해야 합니다.
+
+> [!NOTE]
+> 만 선택 하는 **제품 이름** 에서 작업 중인 언어에 나열 하는 저장소에 적용 됩니다. 고객, 응용 프로그램을 설치 하는 경우 표시 되는 이름을 영향을 주지 않습니다. 해당 이름에서 설치 하는 패키지의 매니페스트를 가져옵니다. 혼란을 방지 하려면 각 언어 패키지 및 저장소 명단에는 이름이 같은 사용 하는 것이 좋습니다.
 
 ## <a name="description"></a>설명
 
@@ -91,8 +101,9 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 자세한 내용은 [추가 아트 자산](app-screenshots-and-images.md#additional-art-assets)을 참조하세요.
 
+<a id="supplemental-information" />
 
-## <a name="supplemental-information"></a>추가 정보
+## <a name="supplemental-fields"></a>추가 필드
 
 이 섹션의 필드는 모두 선택 사항입니다. 아래의 정보를 검토하여 이러한 정보를 제공하는 것이 제출에 도움이 되는지 판단하세요. 특히 대부분의 제출에 **간단한 설명**을 제공하는 것이 좋습니다. 다른 필드는 다른 시나리오에서 제품에 최적의 경험을 제공하는 데 도움이 될 수 있습니다.
 
@@ -123,7 +134,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 게임의 경우 Xbox One의 게임 허브의 정보 섹션에도 간단한 설명이 나타날 수 있습니다.
 
-이 필드는 500자로 제한됩니다
+최상의 결과 얻으려면에 대 한 간단한 설명을 270 문자 유지 합니다. 필드는 500 자로 제한 다르지만 일부 보기에서 처음 270 문자만 대 한 간단한 설명의 나머지 부분을 볼 수 있는 링크) (함께 표시 됩니다.
 
 
 ### <a name="additional-system-requirements"></a>추가 시스템 요구 사항
@@ -155,7 +166,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 ### <a name="additional-license-terms"></a>추가 사용 조건
 
-[앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에서 연결된 **표준 응용 프로그램 사용 조건**에 따라 고객에게 앱 사용을 허가하려면 이 필드를 비워 둡니다.
+[앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에서 연결된 **표준 응용 프로그램 사용 조건**에 따라 고객에게 앱 사용을 허가하려면 이 필드를 비워 둡니다.
 
 사용 조건이 **표준 응용 프로그램 사용 조건**과 다른 경우 여기에 입력하세요.
 

@@ -8,13 +8,13 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 7652e45cd4c5fc416429248929889eeffc04dba3
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832577"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792080"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자를 위한 Windows 10 빌드 17134의 새로운 기능
 
@@ -38,7 +38,7 @@ Fluent 디자인 업데이트 | 새로운 정보 및 지침으로 많은 Fluent 
 탐색 보기 | [탐색 보기](../design/controls-and-patterns/navigationview.md) 컨트롤은 사용자 앱의 최상위 수준 탐색에 대한 축소 가능한 탐색 메뉴를 제공합니다. 이 컨트롤은 탐색 창(햄버거 메뉴) 패턴을 구현하며 여러 창 크기에 맞춰 창의 디스플레이 모드를 자동으로 조정합니다.
 포커스 표시 | 새 [포커스 표시](../design/style/reveal-focus.md) 효과는 Xbox One 및 텔레비전 화면 등의 환경에 조명을 제공합니다. 사용자가 게임 패드 또는 키보드 포커스를 이동하면 버튼과 같이 포커스 맞출 수 있는 요소의 테두리를 애니메이션화합니다.
 소리 | XAML은 이제 **SpatialAudioMode** 속성으로 3D 오디오를 지원합니다. 구성 방법에 대한 정보는 [소리](../design/style/sound.md)를 참조하세요.
-타일 | [추적형 타일 알림](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md)이 JavaScript 기반 UWP 앱에서 지원됩니다.
+타일 | [추적형 타일 알림](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md)이 JavaScript 기반 UWP 앱에서 지원됩니다.<br><br>보조 타일 및 배지 알림은 [이제 브리지 데스크톱 앱에서 지원 됩니다](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 트리 보기 | [TreeView](../design/controls-and-patterns/tree-view.md) 컨트롤은 중첩된 항목이 포함된 노드를 확장 및 축소하는 계층적 목록을 만듭니다. 트리 보기 컨트롤을 사용하여 UI에서 폴더 구조 또는 중첩된 관계를 설명할 수 있습니다.
 쓰기 스타일 | [쓰기 스타일 지침](../design/style/writing-style.md)에 음성 및 톤과 이를 변환하는 내용이 업그레이드 및 확장되었습니다. 이 새로운 정보는 앱에서 효과적인 텍스트를 만들기 위한 원칙을 제공하며 오류 메시지 또는 대화 상자 등의 컨트롤 쓰기에 대한 모범 사례를 제안합니다.
 
@@ -59,7 +59,7 @@ C++/WinRT | [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-api
 콘솔 UWP 앱 | 이제 DOS 또는 PowerShell 콘솔 창 등의 콘솔 창에서 실행되는 C++ /WinRT 또는 /CX UWP 콘솔 앱을 작성할 수 있습니다. 콘솔 앱은 입출력에 콘솔 창을 사용합니다. 이제 UWP 콘솔 앱이 Microsoft Store에 게시될 수 있으며 앱 목록에 항목과 시작 메뉴에 고정할 수 있는 기본 타일이 있습니다. 자세한 내용은 [유니버설 Windows 플랫폼 콘솔 앱 만들기](../launch-resume/console-uwp.md)를 참조하세요.
 확장된 앱 매니페스트 접근 권한 값 | 다양한 파일 시스템 액세스, 서비스 지점 장치에 바코드 스캐너 사용, UWP 콘솔 앱 정의 등의 몇 가지 기능이 앱 패키지 매니페스트 스키마에 추가되었습니다. 자세한 내용은 [Windows 10의 앱 매니페스트 변경 사항](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10)을 참조하세요.
 접근성 기술(AT)에 대해 지원되는 이정표 및 머리글 | 주요 건물 및 머리글은 화면 읽기 프로그램 등의 보조 기술의 사용자에 대한 효율적인 탐색에 도움이 되는 사용자 인터페이스의 섹션을 정의합니다. 자세한 내용은 [주요 건물 및 머리글](../design/accessibility/landmarks-and-headings.md)을 참조하세요.
-기계 학습 | Windows 기계 학습은 미리 숙련된 기계 학습 모델을 Windows 10 디바이스에서 평가하는 앱을 빌드할 수 있습니다. 플랫폼에 대한 자세한 내용은 [Windows 기계 학습](../machine-learning/index.md)을 참조하세요. </br> [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) 네임스페이스에는 앱이 기계 학습 모델을 로드하고, 데이터를 입력으로 바인딩하고, 결과를 계산하도록 하는 클래스가 포함되어 있습니다.
+기계 학습 | Windows 기계 학습은 미리 숙련된 기계 학습 모델을 Windows 10 디바이스에서 평가하는 앱을 빌드할 수 있습니다. 플랫폼에 대한 자세한 내용은 [Windows 기계 학습](https://docs.microsoft.com/windows/ai/)을 참조하세요. </br> [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) 네임스페이스에는 앱이 기계 학습 모델을 로드하고, 데이터를 입력으로 바인딩하고, 결과를 계산하도록 하는 클래스가 포함되어 있습니다.
 지도 컨트롤 | [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) 클래스에 특정 지역(예: 시/도)의 언어에 따라 지도 컨트롤에서 콘텐츠를 표시하는 데 사용할 수 있는 **지역**이라는 새 속성이 있습니다.
 지도 요소 | [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement) 클래스에 사용자가 [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement)와 상호 작용할 수 있는지 여부를 지정하는 데 사용할 수 있는 **IsEnabled**라는 새 속성이 있습니다.
 지도 위치 정보 | [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) 클래스에는 주소 및 표시 이름을 사용하여 [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo)를 만드는 데 사용할 수 있는 새로운 메서드 **CreateFromAddress**가 포함됩니다.
@@ -73,7 +73,7 @@ PlayReady | Microsoft PlayReady는 무단 사용으로부터 디지털 콘텐츠
 시스템 트리거 | [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger)를 사용하여 OS가 필요한 시스템 트리거를 제공하지 않는 경우 사용자가 시스템 트리거를 지정할 수 있습니다. 이러한 경우는 하드웨어 드라이버 및 UWP 앱이 둘 다 타사 제품인 경우, 하드웨어 드라이버가 앱이 처리하는 사용자 지정 이벤트를 발생하게 해야 할 때입니다. 예를 들어, 오디오 잭이 연결되어 있을 때 사용자에게 알려야 하는 오디오 카드가 있습니다.
 사용자 작업 | 새 [UserActivity 설명서](../launch-resume/useractivities.md)는 여러 장치에서 사용자가 앱에서 수행하고 있었던 작업을 재개하도록 돕는 방법에 대해 설명합니다.</br>**UserActivitySessionHistoryItem** 클래스에 사용자의 최근 활동을 검색하는 새로운 메서드가 있습니다. 자세한 내용은 [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) 및 해당 오버 로드를 참조하세요.
 Windows Mixed Reality API | 확장 중인 Windows Mixed Reality 플랫폼을 지원하기 위해 신규 API가 [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) 및 [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial) 네임스페이스에 추가되었습니다.
-Windows Mixed Reality 문서 | Windows Mixed Reality 개발자 지침이 [docs.microsoft.com에 새로 호스트](https://docs.microsoft.com/windows/mixed-reality/)되었습니다. 이러한 UWP 문서에서와 같이 GitHub 문제가 포함된 피드백을 제출하거나 끌어오기 요청을 통해 사용자의 기여를 제출할 수 있습니다.
+Windows Mixed Reality 문서 | Windows 혼합 현실 개발자 설명서는 [docs.microsoft.com에서 호스팅됩니다.](https://docs.microsoft.com/windows/mixed-reality/) 와 마찬가지로 이러한 UWP 문서 이제 피드백 GitHub 문제가 있는 파일 하거나 수 끌어오기 요청을 통해 직접 기부 제출 합니다.
 
 ## <a name="publish--monetize-windows-apps"></a>Windows 앱 게시 및 수익 창출
 

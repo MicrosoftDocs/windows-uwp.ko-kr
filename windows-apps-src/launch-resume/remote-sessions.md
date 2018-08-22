@@ -1,21 +1,21 @@
 ---
 author: PatrickFarley
 title: 원격 세션을 통해 디바이스 연결
-description: 원격 세션에서 여러 디바이스를 연결하여 공유되는 환경을 만듭니다.
+description: 원격 세션에서 여러 장치를 연결하여 공유되는 환경을 만듭니다.
 ms.assetid: 1c8dba9f-c933-4e85-829e-13ad784dd3e2
 ms.author: pafarley
 ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
-ms.openlocfilehash: 0539c9b50196d98809fc01ea3f2a1950cbf27599
-ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
-ms.translationtype: HT
+ms.openlocfilehash: 8e5226b23a454bf48add22d590a3ff247c629e4f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "1658089"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794886"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>원격 세션을 통해 디바이스 연결
 
@@ -124,7 +124,7 @@ RemoteSystemSessionController manager = new RemoteSystemSessionController("Bob's
 //...
 ```
 
-초대를 보내려면 수신하는 원격 시스템에 대한 참조가 있어야 합니다(정상 원격 시스템 검색을 통해 획득). 이 참조를 세션 개체의 **[SendInvitationAsync](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession#remotesystemsession_sendinvitationasync_1664759118)** 메서드에 전달하면 됩니다. 세션의 모든 참가자는 원격 세션에 대한 참조를 가지므로(다음 섹션 참조) 모든 참가자가 초대를 보낼 수 있습니다.
+초대를 보내려면 수신하는 원격 시스템에 대한 참조가 있어야 합니다(정상 원격 시스템 검색을 통해 획득). 이 참조를 세션 개체의 **[SendInvitationAsync](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession.sendinvitationasync)** 메서드에 전달하면 됩니다. 세션의 모든 참가자는 원격 세션에 대한 참조를 가지므로(다음 섹션 참조) 모든 참가자가 초대를 보낼 수 있습니다.
 
 ```csharp
 // "currentSession" is a reference to a RemoteSystemSession.

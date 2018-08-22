@@ -4,18 +4,18 @@ Description: The Pricing and availability page of the app submission process let
 title: 앱 가격 책정 및 가용성 설정
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, 가격, 사용 가능, 검색 가능, 무료 평가판, 평가판들, 평가판, 앱들, 출시 날짜
-ms.localizationpriority: high
-ms.openlocfilehash: 6c411572bbcf048b82ff27c284dc8f9343ef4fc4
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831997"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794812"
 ---
 # <a name="set-app-pricing-and-availability"></a>앱 가격 책정 및 가용성 설정
 
@@ -74,10 +74,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 >[!NOTE]
 > 이 날짜는 Windows 10(Xbox 포함) 고객에게만 적용됩니다. 이전 OS 버전 고객이 앱을 사용할 수 있는 경우, 제품을 사용할 수 있는 한 해당 고객에게 계속 평가판이 제공됩니다. 
 
-Windows 10의 고객에게 평가판을 제공할 날짜를 설정하려면 **시작** 및 **종료** 드롭다운 메뉴를 **at**으로 변경한 후, 날짜 및 시간을 선택합니다. 이렇게 할 경우, **UTC**를 선택해 선택 시간을 UTC(Universal Coordinated Time)으로 설정하거나, **로컬**을 선택해 특정 지역/국가의 표준 시간대에 사용되는 시간으로 설정할 수 있습니다. (시간대가 하나 이상인 지역/국가의 경우, 하나의 시간대만 사용합니다. 미국에서는 동부 표준 시간대를 사용합니다.) 
-
->[!NOTE]
-> [예약(일정)](configure-precise-release-scheduling.md) 섹션과 달리, **무료 평가판**에 선택한 날짜는 특정 지역/국가를 대상으로 사용자 지정할 수 없습니다. 
+Windows 10의 고객에게 평가판을 제공할 날짜를 설정하려면 **시작** 및 **종료** 드롭다운 메뉴를 **at**으로 변경한 후, 날짜 및 시간을 선택합니다. 이렇게 할 경우, **UTC**를 선택해 선택 시간을 UTC(Universal Coordinated Time)으로 설정하거나, **로컬**을 선택해 특정 지역/국가의 표준 시간대에 사용되는 시간으로 설정할 수 있습니다. (시간대가 하나 이상인 지역/국가의 경우, 하나의 시간대만 사용합니다. 미국, 대한민국, 동부 표준 시간대 사용 됩니다.) 모든 market(s)에 대 한 서로 다른 날짜를 설정 하려는 경우 **특정 시장에 대 한 사용자 지정** 을 선택할 수 있습니다.
 
 
 ## <a name="sale-pricing"></a>할인 판매 가격 책정

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 515ac1f9a079e3791be8835f1a33c16198e27362
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: c9aaca0194f57c244bca0d6cb8ccf08e5e4eafda
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935639"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788718"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT에서는 모든 표준과 호환되는 C++17 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. Windows SDK는 C++/WinRT를 포함하며, 버전 10.0.17134.0(Windows 10, 버전 1803)에서 도입되었습니다.
@@ -35,6 +35,8 @@ C++/WinRT를 사용할 때는 표준 C++ 데이터 형식, 알고리즘 및 키�
 
 C++/WinRT는 Windows 런타임에서 사용되는 다른 언어 옵션보다 더욱 뛰어날 뿐만 아니라 더욱 작은 용량의 이진 파일을 생성합니다. 심지어 ABI 인터페이스에서 직접 작성된 코드보다 우수합니다. 이는 추상화가 Visual C++ 컴파일러가 최적화된 최신 C++ 이디엄을 사용하기 때문입니다. 여기에는 매직 정적, 빈 기본 클래스, **strlen** 생략, 그리고 C++/WinRT 성능 개선이 목표인 최신 버전의 Visual C++에서 새롭게 제공하는 다수의 최적화 기능들이 포함됩니다.
 
+### <a name="topics-about-cwinrt"></a>항목 방법에 대 한 C + + / WinRT
+
 | 항목 | 설명 |
 | - | - |
 | [C++/WinRT 소개](intro-to-using-cpp-with-winrt.md) | C++/WinRT 소개&mdash;Windows 런타임 API용 표준 C++ 언어 프로젝션 |
@@ -53,12 +55,20 @@ C++/WinRT는 Windows 런타임에서 사용되는 다른 언어 옵션보다 더
 | [동시성 및 비동기 작업](concurrency.md) | 이 항목에서는 C++/WinRT를 통해 Windows 런타임 비동기 개체를 생성하고 사용하는 방법에 대해서 설명합니다. |
 | [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md) | XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 항목에서는 관찰 가능한 속성을 구현하여 사용하는 방법과 XAML 컨트롤에 바인딩하는 방법에 대해서 설명합니다. |
 | [XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩](binding-collection.md) | XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* 컬렉션으로 알려져 있습니다. 이 항목에서는 관찰 가능한 컬렉션을 구현하여 사용하는 방법과 XAML 항목에 바인딩하는 방법에 대해서 설명합니다. |
+| [XAML 사용자 지정 (템플릿) 컨트롤을 C + + / WinRT](xaml-cust-ctrl.md) | 이 항목에서는 C +를 사용 하 여 간단한 사용자 지정 컨트롤 만들기 (영문)의 단계는 조정과 + / WinRT 합니다. 직접 기능 리치 클라이언트 및 사용자 지정할 수 있는 UI 컨트롤을 만들려면 정보를 여기에 구축할 수 있습니다. |
+| [사용 (영문) DirectX 및 기타 COM Api와 C + + / WinRT](consume-com.md) | 이 항목 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여주는 + / WinRT COM 클래스와 인터페이스를 사용 하도록 합니다. |
 | [C++/WinRT와 C++/CX 사이의 상호 운용성](interop-winrt-cx.md) | 이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. |
 | [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) | 이 항목은 C++/CX 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다. |
 | [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md) | 이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. |
 | [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md) | 이 항목은 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다. |
 | [약한 참조](weak-references.md) | C++/WinRT 약한 참조 지원은 개체가 [**IWeakReferenceSource**](https://msdn.microsoft.com/library/br224609)에 대해 쿼리를 실행하는 경우에만 비용이 발생한다는 점에서 대가성입니다. |
 | [Agile 개체](agile-objects.md) | Agile 개체란 어떤 스레드에서든지 액세스할 수 있는 개체를 말합니다. C++/WinRT 형식은 기본적으로 Agile이지만 옵트아웃으로 선택하지 않을 수도 있습니다. |
+
+### <a name="topics-about-the-c-language"></a>C + + 언어에 대 한 항목
+
+| 항목 | 설명 |
+| - | - |
+| [값 범주 및 자신에 대 한 참조](cpp-value-categories.md) | 이 항목에서는 c + +에 존재 하는 값의 다양 한 종류에 설명 합니다. 여러분가 듣지 lvalue 및 rvalue, 하지만 다른 종류 너무. |
 
 ## <a name="important-apis"></a>중요 API
 * [winrt 네임스페이스](/uwp/cpp-ref-for-winrt/winrt)

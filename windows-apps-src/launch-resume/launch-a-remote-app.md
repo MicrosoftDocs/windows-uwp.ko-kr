@@ -7,15 +7,15 @@ ms.date: 02/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: 146b7e9b642bc196558ce8f1a4da03a70a07a6e8
-ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
-ms.translationtype: HT
+ms.openlocfilehash: 58a420d73ba4a0cd51f909fd5d7d417af1cfb38f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "1658099"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2796685"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>원격 디바이스에서 앱 실행
 
@@ -29,7 +29,7 @@ Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Micros
 
 ### <a name="add-the-remotesystem-capability"></a>remoteSystem 접근 권한 값 추가
 
-앱이 원격 장치에서 다른 앱을 실행하려면 앱 패키지 매니페스트에 `remoteSystem` 접근 권한 값을 추가해야 합니다. 패키지 매니페스트 디자이너의 **접근 권한 값** 탭에서 **원격 시스템**을 선택하여 접근 권한 값을 추가하거나 프로젝트의 _Package.appxmanifest_ 파일에 다음 줄을 수동으로 추가할 수 있습니다.
+앱이 원격 디바이스에서 다른 앱을 실행하려면 앱 패키지 매니페스트에 `remoteSystem` 접근 권한 값을 추가해야 합니다. 패키지 매니페스트 디자이너의 **접근 권한 값** 탭에서 **원격 시스템**을 선택하여 접근 권한 값을 추가하거나 프로젝트의 _Package.appxmanifest_ 파일에 다음 줄을 수동으로 추가할 수 있습니다.
 
 ``` xml
 <Capabilities>

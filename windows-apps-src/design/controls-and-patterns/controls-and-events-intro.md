@@ -12,29 +12,27 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2355d9f655e1eb4e38557b11797aff1784eb8ea6
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 6f8f86a6988e68e3ff8d2dfef32512633b3761fd
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393652"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800377"
 ---
 # <a name="intro-to-controls-and-patterns"></a>컨트롤 및 패턴 소개
-
- 
 
 UWP 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다.
 
 > **중요 API**: [Windows.UI.Xaml.Controls 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-*패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어 [탐색 창](navigationview.md) 패턴은 앱 탐색을 위해 [SplitView](split-view.md) 컨트롤을 사용할 수 있는 방법입니다. 마찬가지로, 탭 패턴을 구현하도록 [피벗](tabs-pivot.md) 컨트롤의 템플릿을 사용자 지정할 수 있습니다.
+*패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예, [마스터/세부 정보](master-details.md) 패턴은 응용 프로그램 탐색에 대 한 [분할 된 뷰](split-view.md) 컨트롤을 사용할 수 있는 방법을. 마찬가지로, 탭 패턴을 구현 하는 [NavigationView](navigationview.md) 컨트롤의 서식 파일을 사용자 지정할 수 있습니다.
 
 대부분의 경우 컨트롤은 있는 그대로 사용할 수 있습니다. 하지만 XAML 컨트롤은 구조 및 모양과 기능을 분리하기 때문에 다양한 수준의 수정을 통해 요구에 맞게 수정할 수 있습니다. [스타일](../style/index.md) 섹션에서 [XAML 스타일](xaml-styles.md) 및 [컨트롤 템플릿](control-templates.md)을 사용하여 컨트롤을 수정하는 방법을 배울 수 있습니다.
 
-이 섹션에서는 앱 UI를 빌드하는 데 사용할 수 있는 각 XAML 컨트롤에 대한 지침을 제공합니다. 시작을 위해 이 문서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다. 앱에 컨트롤을 사용하기 위한 주요 3단계가 있습니다. 
+이 섹션에서는 앱 UI를 빌드하는 데 사용할 수 있는 각 XAML 컨트롤에 대한 지침을 제공합니다. 시작을 위해 이 문서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다. 앱에 컨트롤을 사용하기 위한 주요 3단계가 있습니다.
 
-- 컨트롤을 앱 UI에 추가합니다. 
-- 컨트롤의 속성(예: 너비, 높이, 전경색 등)을 설정합니다. 
+- 컨트롤을 앱 UI에 추가합니다.
+- 컨트롤의 속성(예: 너비, 높이, 전경색 등)을 설정합니다.
 - 컨트롤 이벤트 처리기에 특정 작업을 수행하는 코드를 추가합니다. 
 
 ## <a name="add-a-control"></a>컨트롤 추가
@@ -54,9 +52,9 @@ Visual Studio 도구 상자에는 앱에 사용할 수 있는 다양한 컨트�
 
 또한 도구 상자에서 XAML 디자이너로 컨트롤을 끌 수 있습니다.
 
-## <a name="set-the-name-of-a-control"></a>컨트롤 이름 설정 
+## <a name="set-the-name-of-a-control"></a>컨트롤 이름 설정
 
-코드에서 컨트롤 작업을 하려면 해당 [x:Name](../../xaml-platform/x-name-attribute.md) 특성을 설정하고 이름으로 컨트롤을 참조합니다. 컨트롤 이름은 Visual Studio 속성 창이나 XAML에서 설정할 수 있습니다. 속성 창의 맨 위에 있는 이름 입력란을 사용하여 현재 선택한 컨트롤의 이름을 설정하는 방법은 다음과 같습니다. 
+코드에서 컨트롤 작업을 하려면 해당 [x:Name](../../xaml-platform/x-name-attribute.md) 특성을 설정하고 이름으로 컨트롤을 참조합니다. 컨트롤 이름은 Visual Studio 속성 창이나 XAML에서 설정할 수 있습니다. 속성 창의 맨 위에 있는 이름 입력란을 사용하여 현재 선택한 컨트롤의 이름을 설정하는 방법은 다음과 같습니다.
 
 컨트롤의 이름을 지정하려면
 1. 이름을 지정할 요소를 선택합니다.

@@ -3,18 +3,18 @@ author: jnHs
 Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
 title: 표시 여부 옵션 선택
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 08/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, 표시 여부, 개인 대상, 사용 가능, 검색 가능
-ms.localizationpriority: high
-ms.openlocfilehash: 548b25d4e74945eadfcc8ebe8a5cb2f8d870d38f
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 07986353be41fcc9ef9dd9406fb0b30c4aa3d7f2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832087"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801859"
 ---
 # <a name="choose-visibility-options"></a>표시 여부 옵션 선택
 
@@ -75,7 +75,7 @@ ms.locfileid: "1832087"
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 
-이는 기본 옵션입니다. 고객들이 앱의 직접 링크를 통해, 또는 검색, 찾아보기, 큐레이트 목록에 포함 등 다른 방법을 사용하여 볼 수 있도록 Store에 앱을 나열하고 싶은 경우에는 이 옵션을 선택한 상태로 둡니다. 
+이는 기본 옵션입니다. 이 옵션을 직접 응용 프로그램의 링크를 통해 및/또는 curated 목록에서 검색, 탐색 및 포함을 비롯 한 다른 메서드로 찾으려고 고객을 위한 저장소에 나열 된 수 있는 응용 프로그램을 사용할 경우 선택한 상태로 둡니다. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 

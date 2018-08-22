@@ -9,13 +9,13 @@ ms.date: 05/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: cf8f0e0c7382d52eddb783b7fbbaa6ccc23a2a15
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935781"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800515"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -56,7 +56,7 @@ ms.locfileid: "1935781"
 
  디바이스를 개발에 사용할 수도 있고 단순히 테스트 용도로만 사용할 수도 있습니다.
 
--   *UWP 앱*은 기본 설정입니다. 사용하는 앱이 개발용 앱이 아니거나 회사에서 지급한 특수한 내부 앱을 사용하는 경우 이 설정을 계속 활성 상태로 유지하세요.
+-   *Microsoft 저장소 앱* 은 기본 설정입니다. 사용하는 앱이 개발용 앱이 아니거나 회사에서 지급한 특수한 내부 앱을 사용하는 경우 이 설정을 계속 활성 상태로 유지하세요.
 -   *테스트용 로드*는 Microsoft Store에서 인증되지 않은 앱을 설치한 후 실행 또는 테스트하는 것입니다. 예를 들어 회사에서만 사용하는 내부용 앱입니다.
 -   *개발자 모드*를 사용하면 앱을 테스트용으로 로드할 수 있을 뿐만 아니라 Visual Studio에서 디버그 모드로 앱을 실행할 수 있습니다. 
 
@@ -149,6 +149,9 @@ Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 �
 
 [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼을 참조하여 이러한 문제에 대한 해결 방법 등을 찾을 수 있습니다. 
 
+> [!NOTE]
+> 개발자 모드를 올바르게 설치 되지 않습니다, 내용도 확인 의견 요청 파일입니다. **피드백 허브** 응용 프로그램에 **추가 새 의견**선택 하 고 **개발자 플랫폼** 범주와 **개발자 모드** 하위 범주를 선택 합니다. 사용자 의견을 제출 하면가 발생 한 문제를 해결 하는 Microsoft 도움이 됩니다.
+
 ### <a name="failed-to-locate-the-package"></a>패키지 찾기 실패
 
 "개발자 모드 패키지가 Windows 업데이트에서 없을 수 있습니다. 오류 코드 0x80004005 자세한 정보"   
@@ -189,7 +192,7 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 2.  로컬 컴퓨터 정책 &gt; 컴퓨터 구성 &gt; 관리 템플릿 &gt; Windows 구성 요소 &gt; 앱 패키지 배포로 이동합니다.
 3.  테스트용 로드를 사용하도록 설정하려면 다음을 사용하도록 정책을 편집합니다.
 
-    -   **Allow all trusted apps to install(모든 신뢰할 수 있는 앱을 설치할 수 있음)**
+    -   **모든 신뢰할 수 있는 앱을 설치하도록 허용**
 
     - 또는 -
 

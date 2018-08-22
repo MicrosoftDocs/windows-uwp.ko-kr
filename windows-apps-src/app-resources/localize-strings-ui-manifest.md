@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: d1c95c530cb8e62b5ac228798d69bfb6d0871218
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989637"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791738"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -92,7 +92,17 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md) 프로젝트 내에서 동일할 코드를 사용할 수 있습니다. 런타임 시 라이브러리를 호스팅하는 앱의 리소스가 로드됩니다. 앱에는 뛰어난 지역화 수준이 있을 가능성이 높으므로 라이브러리를 호스팅하는 앱에서 리소스를 로드하는 것이 좋습니다. 라이브러리는 리소스를 제공한 다음 호스팅 앱에 이러한 리소스를 입력으로 교체하는 옵션을 제공해야 합니다.
 
-**참고** 이러한 방법으로 단순한 문자열 리소스 식별자에 대한 값을 로드할 수 있지만 속성 식별자에 대한 값은 로드할 수 없습니다. 따라서 이와 같이 코드를 사용하여 "Farewell"에 대한 값을 로드할 수 있지만 "Greeting.Text"에 대한 값은 로드할 수 없습니다. 이를 수행하려고 하면 빈 문자열이 반환됩니다.
+자원 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점선 슬래시 ("/")와 자원 이름에는 문자입니다. 속성 식별자에 점선; 등 포함 따라서이 substition 코드에서의 연결과 중 하나를 로드 하기 위해 수행 해야 합니다.
+
+```csharp
+this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
+```
+
+확실에서 [MakePri.exe](makepri-exe-command-options.md) 앱의 PRI 파일 덤프를 사용할 수 있습니다. 각 자원의 `uri` 덤프 파일에 표시 됩니다.
+
+```xml
+<ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
+```
 
 ## <a name="refer-to-a-string-resource-identifier-from-your-app-package-manifest"></a>앱 패키지 매니페스트에서 문자열 리소스 식별자 참조
 1. 기본적으로 앱의 표시 이름이 문자열 리터럴로 표시되는 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest` 파일)을 엽니다.
@@ -164,6 +174,18 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 ```
 
 "AppDisplayName" 리소스를 `Resources.resw`에서 `ManifestResources.resw`로 이동하고자 하는 경우 앱 패키지 매니페스트에서 `ms-resource:AppDisplayName`을 `ms-resource:/ManifestResources/AppDisplayName`으로 변경합니다.
+
+리소스 파일 이름을 분할 하는 경우 (포함 된 "." 문자), 점 참조 하는 경우에 이름에 둡니다. 자원 이름에 대 한 것 처럼 슬래시 ("/") 문자로 바꾸기 점선 **하지 마십시오** .
+
+```csharp
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
+```
+
+확실에서 [MakePri.exe](makepri-exe-command-options.md) 앱의 PRI 파일 덤프를 사용할 수 있습니다. 각 자원의 `uri` 덤프 파일에 표시 됩니다.
+
+```xml
+<ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
+```
 
 ## <a name="load-a-string-for-a-specific-language-or-other-context"></a>특정 언어 또는 다른 컨텍스트에 대한 문자열 로드
 기본 [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)([**ResourceContext.GetForCurrentView**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.GetForCurrentView)에서 가져옴)에는 기본 런타임 컨텍스트(즉, 현재 사용자와 시스템에 대한 설정)를 나타내는 각 한정자 이름에 대한 한정자 값이 포함됩니다. 리소스 파일(.resw)은 이름의 한정자에 따라 해당 런타임 컨텍스트의 한정자 값에 대해 일치합니다.
@@ -242,12 +264,24 @@ private void RefreshUIText()
 라이브러리는 자체 리소스에 대한 ResourceLoader를 가져올 수 있습니다. 예를 들어 다음 코드는 라이브러리 또는 이를 참조하는 앱이 라이브러리의 문자열 리소스에 대한 ResourceLoader를 가져오는 방법을 보여줍니다.
 
 ```csharp
-var resourceLoader = new Windows.ApplicationModel.Resources.ResourceLoader("ContosoControl/Resources");
-resourceLoader.GetString("string1");
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ContosoControl/Resources");
+this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
+```
+
+Windows 런타임 라이브러리 (범용 Windows), 기본 네임 스페이스를 분할 하는 경우에 대 한 (포함 된 "." 문자), 리소스 맵 이름에 점이 사용 합니다.
+
+```csharp
+var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
+```
+
+클래스 라이브러리 (범용 Windows)에 대 한 작업을 수행 하지 않아도 됩니다. 확실에서 [MakePri.exe](makepri-exe-command-options.md) 구성 요소 또는 라이브러리의 PRI 파일 덤프를 사용할 수 있습니다. 각 자원의 `uri` 덤프 파일에 표시 됩니다.
+
+```xml
+<NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>다른 패키지에서 문자열 로드
-앱 패키지에 대한 리소스는 현재 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 패키지의 자체 최상위 [ResourceMap](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live)을 통해 관리 및 액세스할 수 있습니다. 각 패키지 내에 다양한 구성 요소는 자체 ResourceMap 하위 트리를 가지며 [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)를 통해 액세스할 수 있습니다.
+응용 프로그램 패키지에 대 한 리소스를 관리 하 고 패키지의을 통해 액세스 현재 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위 [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에 다양한 구성 요소는 자체 ResourceMap 하위 트리를 가지며 [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)를 통해 액세스할 수 있습니다.
 
 프레임워크 패키지는 절대 리소스 식별자 URI로 자체 리소스에 액세스할 수 있습니다. [URI 스키마](uri-schemes.md)도 참조하세요.
 

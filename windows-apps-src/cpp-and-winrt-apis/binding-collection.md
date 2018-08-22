@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d9f74e6d0c755e0a247a65751bdab65964ac1f7
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 9337c0625c68970d9e68df74fa13228369e8bf41
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935729"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800333"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML 항목 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 컬렉션 바인딩
 > [!NOTE]
@@ -39,7 +39,7 @@ XAML 항목 컨트롤은 업데이트된 컬렉션을 가져와 현재 요소를
 관찰 가능한 벡터 템플릿을 [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_)의 유용한 범용 구현체로 사용하는 것은 바람직합니다. 아래는 이름이 **single_threaded_observable_vector\<T\>** 인 클래스를 나열한 것입니다.
 
 > [!NOTE]
-> [Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK) 이상을 설치한 경우 아래의 코드 목록 대신 **winrt::single_threaded_observable_vector\<T\>** 를 직접 사용할 수 있습니다. 아직 해당 버전의 SDK를 사용하지 않는 경우 해당 버전을 사용할 때 코드 목록을 버전을 사용하는 것에서 **winrt** 형식으로 쉽게 전환할 수 있습니다.
+> 이전에 설치한 [Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), 또는 나중에 다음을 수행할 수 있습니다 방금 직접 하는 경우 아래 나열 하는 코드 대신 **winrt::single_threaded_observable_vector\ < T\ >** 공장 함수를 사용 합니다. 모르는 경우 이미 해당 버전의 SDK에서, 다음 것 쉽게 하는 경우 **winrt** 함수에 코드 목록 버전을 사용을 통해 전환할 수입니다. 아래에 나열 된 형식과 [**winrt::make**]() 을 호출 하는 대신 대신 호출 하는 **winrt::single_threaded_observable_vector\ < T\ >** 함수 기억 하십시오.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -310,6 +310,8 @@ m_changed(*this, make<args>(CollectionChange::ItemInserted, Size() - 1));
 
 ```cppwinrt
 // BookstoreViewModel.h
+...
+#include "single_threaded_observable_vector.h"
 ...
     struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
     {

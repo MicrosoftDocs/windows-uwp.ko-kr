@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 79e324fecf45acf314418e37d8a6147e20d15304
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 6f446299dcf1a0bcf93d483d13c926c6e4cd230f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815548"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795376"
 ---
 # <a name="authentication-and-user-identity"></a>인증 및 사용자 ID
 

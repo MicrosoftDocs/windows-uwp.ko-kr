@@ -7,15 +7,15 @@ ms.date: 11/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 응용 프로그램 서비스
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c0414b7b7e37cf6316504979a70983134f0b18a
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a77ea3cefcc423e710ab0afebb3fa064e61507ec
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015425"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800181"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
 
@@ -42,7 +42,7 @@ Out-of-process 모델 앱 서비스를 In-process 모델로 전환하려면 두 
 >   </Applications>
 > ```
 
-제거는 `EntryPoint` 에서 특성은 `<Application>` 요소 이므로 이제 [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 응용 프로그램 서비스를 호출할 때 사용 되는 진입점입니다.
+제거는 `EntryPoint` 에서 특성은 `<Extension>` 요소 이므로 이제 [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 응용 프로그램 서비스를 호출할 때 사용 되는 진입점입니다.
 
 두 번째 변경은 별도 백그라운드 작업 프로젝트의 서비스 논리를 **OnBackgroundActivated()** 에서 호출할 수 있는 메서드로 이동하는 것입니다.
 

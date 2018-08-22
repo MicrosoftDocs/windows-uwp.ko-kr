@@ -4,21 +4,20 @@ description: 프로그래밍 언어로 C#, Visual Basic 또는 Visual C++ 구성
 title: 이벤트 및 라우트된 이벤트 개요
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 61e55fa85e54970ba48413767ccf5a65b05af471
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691192"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788798"
 ---
 # <a name="events-and-routed-events-overview"></a>이벤트 및 라우트된 이벤트 개요
-
 
 **중요 API**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -40,39 +39,50 @@ Windows 런타임 앱의 가장 일반적인 프로그래밍 작업 중 하나�
 
 XAML을 생성하여 Windows 런타임 앱의 UI를 정의합니다. 이 XAML은 대개 Visual Studio의 디자인 화면에서 제공된 출력일 수 있습니다. XAML은 일반 텍스트 편집기나 타사 XAML 편집기에서도 작성될 수 있습니다. 이 XAML을 생성하는 동안 개별 UI 요소의 속성 값을 지정하는 다른 모든 XAML 특성을 정의하는 동시에 해당 UI 요소의 이벤트 처리기를 연결할 수 있습니다.
 
-XAML에서 이벤트를 연결하려면 이미 정의했거나 나중에 코드 숨김에서 정의할 처리기 메서드의 문자열 형태 이름을 지정합니다. 예를 들어 이 XAML은 특성으로 할당된 다른 속성([x:Name 특성](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366))을 사용하여 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 개체를 정의하고 `showUpdatesButton_Click`라는 메서드를 참조하여 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트에 대한 처리기를 연결합니다.
+XAML에서 이벤트를 연결하려면 이미 정의했거나 나중에 코드 숨김에서 정의할 처리기 메서드의 문자열 형태 이름을 지정합니다. 예를 들어 이 XAML은 특성으로 할당된 다른 속성([x:Name 특성](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366))을 사용하여 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 개체를 정의하고 `ShowUpdatesButton_Click`라는 메서드를 참조하여 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트에 대한 처리기를 연결합니다.
 
-```XML
+```xaml
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
-  Click="showUpdatesButton_Click"/>
+  Click="ShowUpdatesButton_Click"/>
 ```
 
 **팁** *이벤트 연결*은 프로그래밍 용어입니다. 이벤트가 발생하면 명명된 처리기 메서드가 호출되어야 함을 나타내는 데 사용하는 프로세스 또는 코드를 나타냅니다. 대부분의 절차적 코드 모델에서 이벤트 연결은 이벤트와 메서드 둘 다를 명명하고 일반적으로 대상 개체 인스턴스와 관련된 암시적이거나 명시적인 "AddHandler" 코드입니다. XAML에서 "AddHandler"는 암시적이며, 이벤트 연결은 이벤트를 개체 요소의 속성 이름으로 명명하고 처리기를 해당 속성의 값으로 명명하는 작업으로만 구성됩니다.
 
-실제 처리기는 모든 앱 코드 및 코드 숨김에 사용하는 프로그래밍 언어로 작성합니다. `Click="showUpdatesButton_Click"` 특성을 사용하여 XAML의 태그가 컴파일되고 구문 분석될 때 IDE의 빌드 작업에 포함된 XAML 태그 컴파일 단계와 앱이 로드될 때 이벤트 XAML 런타임 구문 분석 작업에서 `showUpdatesButton_Click`이라는 메서드를 앱 코드의 일부로 발견할 수 있다는 계약을 만들었습니다. `showUpdatesButton_Click` 은 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 모든 처리기에 대해 대리자를 기반으로 호환되는 메서드 서명을 구현하는 메서드여야 합니다. 예를 들어 이 코드에서는 `showUpdatesButton_Click` 처리기를 정의합니다.
+실제 처리기는 모든 앱 코드 및 코드 숨김에 사용하는 프로그래밍 언어로 작성합니다. `Click="ShowUpdatesButton_Click"` 특성을 사용하여 XAML의 태그가 컴파일되고 구문 분석될 때 IDE의 빌드 작업에 포함된 XAML 태그 컴파일 단계와 앱이 로드될 때 이벤트 XAML 런타임 구문 분석 작업에서 `ShowUpdatesButton_Click`이라는 메서드를 앱 코드의 일부로 발견할 수 있다는 계약을 만들었습니다. `ShowUpdatesButton_Click` 은 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 모든 처리기에 대해 대리자를 기반으로 호환되는 메서드 서명을 구현하는 메서드여야 합니다. 예를 들어 이 코드에서는 `ShowUpdatesButton_Click` 처리기를 정의합니다.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
-private void showUpdatesButton_Click (object sender, RoutedEventArgs e) {
+private void ShowUpdatesButton_Click (object sender, RoutedEventArgs e) 
+{
     Button b = sender as Button;
     //more logic to do here...
 }
 ```
+
 ```vb
-Private Sub showUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+Private Sub ShowUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
     Dim b As Button = CType(sender, Button)
     '  more logic to do here...
 End Sub
 ```
+
+```cppwinrt
+void winrt::MyNamespace::implementation::BlankPage::ShowUpdatesButton_Click(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& e)
+{
+    auto b{ sender.as<Windows::UI::Xaml::Controls::Button>() };
+    // More logic to do here.
+}
+```
+
 ```cpp
-void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) {
+void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) 
+{
     Button^ b = (Button^) sender;
     //more logic to do here...
 }
 ```
 
-이 예제에서 `showUpdatesButton_Click` 메서드는 [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812) 대리자를 기반으로 합니다. MSDN 참조 페이지에서 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 메서드에 대한 구문에 이름이 지정된 대리자를 확인하게 되므로 이 대리자를 사용할 대리자로 알고 있는 것이 좋습니다.
+이 예제에서 `ShowUpdatesButton_Click` 메서드는 [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812) 대리자를 기반으로 합니다. MSDN 참조 페이지에서 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 메서드에 대한 구문에 이름이 지정된 대리자를 확인하게 되므로 이 대리자를 사용할 대리자로 알고 있는 것이 좋습니다.
 
 **팁** Visual Studio는 XAML을 편집하는 동안 이벤트 처리기의 이름을 지정하고 처리기 메서드를 정의하는 편리한 방법을 제공합니다. XAML 텍스트 편집기에서 이벤트 특성 이름을 제공하는 경우 Microsoft IntelliSense 목록이 표시될 때까지 잠시 기다려 주세요. 목록에서 **&lt;새 이벤트 처리기&gt;** 를 클릭하면 Microsoft Visual Studio에서 요소의 **x:Name**(또는 형식 이름), 이벤트 이름 및 숫자 접미사를 기반으로 메서드 이름을 제안합니다. 그런 다음, 선택한 이벤트 처리기 이름을 마우스 오른쪽 단추로 클릭하고 **이벤트 처리기 탐색**을 클릭할 수 있습니다. 이렇게 하면 XAML 페이지에 대한 코드 숨김 파일의 코드 편집기 보기에 표시된 것처럼 새로 삽입된 이벤트 처리기 정의로 바로 이동합니다. 이벤트 처리기에는 이벤트에서 사용하는 *sender* 매개 변수와 이벤트 데이터 클래스를 비롯한 올바른 서명이 이미 있습니다. 올바른 서명이 포함된 처리기 메서드가 코드 숨김에 이미 있는 경우에도 해당 메서드의 이름이 자동 완성 드롭다운에 **&lt;새 이벤트 처리기&gt;** 옵션과 함께 표시됩니다. IntelliSense 목록 항목을 클릭하지 않고 바로 가기로 Tab 키를 누를 수도 있습니다.
 
@@ -104,7 +114,7 @@ C#에서 이 구문은 `+=` 연산자를 사용하는 것입니다. 연산자 �
 
 코드를 사용하여 런타임 UI에 나타나는 개체에 이벤트 처리기를 추가하는 경우 일반적인 방법은 관련 개체에 대한 이벤트 처리기가 런타임에 사용자가 시작한 이벤트에 대한 준비를 갖추도록 [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) 또는 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737)과 같은 개체 수명 이벤트 또는 콜백에 대한 응답으로 이러한 처리기를 추가하는 것입니다. 이 예제에서는 페이지 구조의 XAML 개요를 보여 주고 개체에 이벤트 처리기를 추가하기 위한 C# 언어 구문을 제공합니다.
 
-```xml
+```xaml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -143,15 +153,19 @@ End Sub
 
 **참고** 일반적으로 Visual Studio와 XAML 디자인 화면에서는 **Handles** 키워드 대신 인스턴스 처리 방법을 장려합니다. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
 
-C++에서는 **+=** 구문도 사용하지만 기본적인 C# 형태와 다음과 같은 차이점이 있습니다.
+C + + / CX를 사용 하 여 있습니다는 **+=** 구문는 기본 C# 양식에서 차이점이 있습니다.
 
 -   대리자 유추가 없으므로 대리자 인스턴스에 대해 **ref new**를 사용해야 합니다.
 -   대리 생성자에 두 매개 변수가 있고 대상 개체가 첫 번째 매개 변수로 필요합니다. 일반적으로 **this**를 지정합니다.
 -   대리 생성자에는 두 번째 매개 변수로 메서드 주소가 필요하므로 **&** 참조 연산자가 메서드 이름보다 우선합니다.
 
+```cppwinrt
+textBlock1().PointerEntered({this, &MainPage::TextBlock1_PointerEntered });
+```
+
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerEntered);
+ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 ```
 
 ### <a name="removing-event-handlers-in-code"></a>코드에서 이벤트 처리기 제거
@@ -170,10 +184,10 @@ ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerEntered);
 
 예를 들어 다음 코드를 사용하여 대상 개체 **textBlock1**에서 **textBlock1\_PointerEntered**라는 이벤트 처리기를 제거할 수 있습니다.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 textBlock1.PointerEntered -= textBlock1_PointerEntered;
 ```
+
 ```vb
 RemoveHandler textBlock1.PointerEntered, AddressOf textBlock1_PointerEntered
 ```
@@ -294,5 +308,3 @@ Windows 런타임에 대한 사용자 지정 라우트된 이벤트를 선언할
 * [.NET 이벤트 및 대리자](http://go.microsoft.com/fwlink/p/?linkid=214364)
 * [Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)
- 
-

@@ -8,14 +8,14 @@ ms.date: 08/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 470984ce9f9a3304350a3479a01bc31a403bd8af
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 9e53c15b01a08c8c617529fe074929ce89a68ce9
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674980"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800317"
 ---
 # <a name="customize-the-print-workflow"></a>인쇄 워크플로 사용자 지정
 
@@ -220,7 +220,7 @@ internal async void OnXpsDataAvailable(PrintWorkflowForegroundSession sessionMan
 }
 ```
 
-또한 이벤트 인수에 의해 노출된 **[PrintWorkflowSubmittedOperation](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation)** 인스턴스는 인쇄 작업을 취소하거나 작업이 성공적이지만 출력물 인쇄 작업이 필요하지 않음을 나타낼 수 있는 옵션을 제공합니다. 이 작업은 **[PrintWorkflowSubmittedStatus](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedstatus)** 값을 사용해 **[Complete](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation#Windows_Graphics_Printing_Workflow_PrintWorkflowSubmittedOperation_Complete_Windows_Graphics_Printing_Workflow_PrintWorkflowSubmittedStatus_)** 메서드를 호출하여 수행됩니다.
+또한 이벤트 인수에 의해 노출된 **[PrintWorkflowSubmittedOperation](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation)** 인스턴스는 인쇄 작업을 취소하거나 작업이 성공적이지만 출력물 인쇄 작업이 필요하지 않음을 나타낼 수 있는 옵션을 제공합니다. 이 작업은 **[PrintWorkflowSubmittedStatus](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedstatus)** 값을 사용해 **[Complete](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation.Complete)** 메서드를 호출하여 수행됩니다.
 
 > [!NOTE]
 > 워크플로 앱이 인쇄 작업을 취소할 때 작업 취소 이유를 나타내는 알림 메시지를 제공하는 것이 좋습니다. 
@@ -244,9 +244,9 @@ UI가 **PrintTaskXpsDataAvailable** 이벤트에서 deferral을 완료하면(또
 
 ### <a name="set-the-workflow-apps-policy"></a>워크플로 앱의 정책 설정
 워크플로 앱 정책은 워크플로 앱을 실행할 디바이스에서 Powershell 명령에 의해 설정됩니다. Set-Printer, Add-Printer(기존 포트) 및 Add-Printer(새 WSD 포트) 명령은 워크플로 정책을 설정할 수 있도록 수정됩니다. 
-* `Off`: 워크플로 앱이 활성화되지 않습니다.
-* `Optional`: 워크플로 DCA가 시스템에 설치되어 있는 경우 워크플로 앱이 활성화됩니다. 앱이 설치되지 않은 경우에도 인쇄가 계속 진행됩니다. 
-* `On`: 워크플로 DCA가 시스템에 설치되어 있는 경우 워크플로 contract가 활성화됩니다. 앱이 설치되지 않은 경우 인쇄에 실패합니다. 
+* `Disabled`: 워크플로 앱이 활성화되지 않습니다.
+* `Uninitialized`: 워크플로 DCA가 시스템에 설치되어 있는 경우 워크플로 앱이 활성화됩니다. 앱이 설치되지 않은 경우에도 인쇄가 계속 진행됩니다. 
+* `Enabled`: 워크플로 DCA가 시스템에 설치되어 있는 경우 워크플로 contract가 활성화됩니다. 앱이 설치되지 않은 경우 인쇄에 실패합니다. 
 
 다음 명령을 사용하면 지정된 프린터에 워크플로 앱이 필요합니다.
 ```Powershell

@@ -7,15 +7,15 @@ ms.date: 12/6/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 30a072ddc3489ca310875a6fc4a2d00902986277
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 2de5c969610aa6b4fa1a3af01af565d35854b5f2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674820"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792138"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -173,12 +173,13 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 }
 ```
 
-이 예제에서는 문자열 "wl.basic"을 _scope_ 매개 변수에 전달합니다. 범위는 제공 서비스로부터 요청하는 정보 유형을 특정 사용자에 나타냅니다. 특정 범위에서는 이름 및 이메일 주소와 같은 사용자의 기본 정보에만 액세스할 수 있지만 다른 범위에서는 사용자의 사진이나 이메일 받은 편지함과 같은 중요한 정보에 대한 액세스를 허용할 수 있습니다. 일반적으로 앱은 해당 기능을 수행하는 데 필요한 최소 허용 범위를 사용해야 합니다.
-
-서비스 공급자는 서비스에 사용할 토큰을 가져오는 데 필요한 범위에 대한 설명서를 제공합니다. 
+이 예제에서는 문자열 "wl.basic"을 _scope_ 매개 변수에 전달합니다. 범위는 제공 서비스로부터 요청하는 정보 유형을 특정 사용자에 나타냅니다. 특정 범위에서는 이름 및 이메일 주소와 같은 사용자의 기본 정보에만 액세스할 수 있지만 다른 범위에서는 사용자의 사진이나 이메일 받은 편지함과 같은 중요한 정보에 대한 액세스를 허용할 수 있습니다. 일반적으로 앱은 해당 기능을 수행하는 데 필요한 최소 허용 범위를 사용해야 합니다. 서비스 공급자는 서비스에 사용할 토큰을 가져오는 데 필요한 범위에 대한 설명서를 제공합니다. 
 
 * Office 365 및 Outlook.com 범위의 경우 [v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증](https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2)을 참조하세요. 
 * OneDrive 범위의 경우 [OneDrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조하세요. 
+
+> [!TIP]
+> 필요에 따라 앱 (을 기본 전자 메일 주소를 사용 하 여 사용자 필드를 채우는) 로그인 힌트 또는 로그인 환경에 관련 된 다른 특별 한 속성을 사용 하는 경우 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 됩니다. 캐시에서 계정 불일치를 방지 하는 웹 계정 캐싱 (영문) 때 속성을 무시 하도록 시스템이 될 수 있습니다.
 
 엔터프라이즈 앱을 개발하는 경우 AAD(Azure Active Directory) 인스턴스에 연결하고 일반 MSA 서비스 대신 Microsoft Graph API를 사용하려고 할 것입니다. 이 시나리오에서는 다음 코드를 대신 사용합니다. 
 

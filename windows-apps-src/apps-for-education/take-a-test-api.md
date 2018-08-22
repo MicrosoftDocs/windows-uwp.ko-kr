@@ -4,26 +4,24 @@ title: JavaScript API 시험 응시.
 author: PatrickFarley
 ms.author: pafarley
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.date: 10/06/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
-ms.openlocfilehash: 43edadfba169ddae85818f8ef1dbd1e7f4adba64
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691362"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792587"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
 
-[시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 는 고강도 테스트를 위해 잠겨 있는 온라인 평가를 렌더링하는 브라우저 기반 앱으로, 교육자가 안전한 테스팅 환경을 제공하는 방법을 고심하지 않고 평가 내용에 집중할 수 있도록 해줍니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
+[테스트를 수행](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 보안 테스트 환경을 제공 하는 방법을 아닌 콘텐츠 교육자 평가에 초점을 맞출 수 있도록 허용 높은 위험 관리 테스트용 잠겨있는 온라인 평가 렌더링 하는 브라우저 기반 UWP 앱은입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
 
-앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요.
-
-문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
+앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요. 문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
 
 ## <a name="reference-documentation"></a>참조 설명서
 시험 응시 API는 다음 네임스페이스로 존재합니다. 모든 API는 글로벌 `SecureBrowser`개체에 따라 달라짐에 주의하십시오.
@@ -32,12 +30,9 @@ ms.locfileid: "1691362"
 |-----------|-------------|
 |[보안 네임스페이스](#security-namespace)|테스트를 위해 장치를 잠그고 테스트 환경을 제어하도록 해주는 API가 들어 있습니다. |
 
-> [!NOTE]
-> 텍스트 음성 변환(TTS) 네임스페이스는 Windows 10 버전 1709부터 제거되었습니다. [Microsoft Edge 음성 합성 API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/)([W3C 음성 API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html) 구현)가 이제 텍스트 음성 변환 구현 시 권장되는 솔루션입니다.
-
 ### <a name="security-namespace"></a>보안 네임스페이스
 
-디바이스를 잠그고, 사용자 및 시스템 프로세스 목록을 확인하고, MAC 및 IP 주소를 가져오고, 캐시된 웹 리소스를 지울 수 있습니다.
+보안 네임 스페이스를 사용 하면 장치를 잠그려면, 사용자 및 시스템 프로세스의 목록을 확인 하 고, MAC 및 IP 주소를 확보 하 고 캐시 된 웹 리소스의 선택을 취소 수 있습니다.
 
 | 메서드 | 설명   |
 |--------|---------------|

@@ -9,16 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: 422a570635fd6788b8e8b5656060a309d628b7bf
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: 71c566ff375f36108d724f3c550570b3332f4c6b
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989397"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797304"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 추가한 데스크톱 응용 프로그램의 집계 오류 보고 데이터를 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램의 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)를 통해서도 확인할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 추가한 데스크톱 응용 프로그램의 집계 오류 보고 데이터를 가져옵니다. 이 메서드는 지난 30 일 동안에서 발생 한 오류를 검색할 수 있습니다. 이 정보는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램의 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)를 통해서도 확인할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -46,16 +46,16 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스�
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 형식   |  설명      |  필수  
+| 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | 오류 보고 데이터를 검색할 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [데스크톱 응용 프로그램의 개발자 센터 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)(예: **상태 보고서**)를 열고 URL에서 제품 ID를 검색합니다. |  예  |
-| startDate | 날짜 | 검색할 오류 보고 데이터의 날짜 범위에 대한 시작 날짜입니다. 형식은 ```mm/dd/yyyy```입니다. 기본값은 현재 날짜입니다.  |  아니요  |
+| startDate | 날짜 | 검색할 오류 보고 데이터의 날짜 범위에 대한 시작 날짜입니다. 형식은 ```mm/dd/yyyy```입니다. 기본값은 현재 날짜입니다.<p/><p/>**참고:**&nbsp;&nbsp;이 메서드는 지난 30 일 동안에서 발생 한 오류를 검색할 수 있습니다.  |  아니요  |
 | endDate | 날짜 | 검색할 오류 보고 데이터의 날짜 범위에 대한 종료 날짜입니다. 형식은 ```mm/dd/yyyy```입니다. 기본값은 현재 날짜입니다.   |  아니요  |
 | top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
 | skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니요  |
 | filter |string  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 응답 본문의 다음과 같은 필드를 지정할 수 있습니다.<p/><ul><li><strong>fileName</strong></li><li><strong>applicationVersion</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>osBuild</strong></li><li><strong>osRelease</strong></li><li><strong>eventType</strong></li><li><strong>출시</strong></li><li><strong>deviceType</strong></li><li><strong>productName</strong></li><li><strong>date</strong></li></ul> | 아니요   |
 | aggregationLevel | string | 집계 데이터를 검색할 시간 범위를 지정합니다. **day**, **week** 또는 **month** 문자열 중 하나일 수 있습니다. 지정하지 않을 경우 기본값은 **day**입니다. **week** 또는 **month**를 지정하는 경우 *failureName* 및 *failureHash* 값은 1000개 버킷으로 제한됩니다.<p/>  | 아니요 |
-| orderby | string | 결과 데이터 값의 순서를 지정하는 문입니다. 구문은 *orderby=field [order],field [order],...* 입니다. *field* 매개 변수는 다음 문자열 중 하나일 수 있습니다.<ul><li><strong>fileName</strong></li><li><strong>applicationVersion</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>osBuild</strong></li><li><strong>osRelease</strong></li><li><strong>eventType</strong></li><li><strong>출시</strong></li><li><strong>deviceType</strong></li><li><strong>productName</strong></li><li><strong>date</strong></li></ul>*order* 매개 변수는 선택적이며 **asc** 또는 **desc**로 각 필드를 내림차순 또는 오름차순으로 지정할 수 있습니다. 기본값은 **asc**입니다.</p><p>다음은 *orderby* 문자열 예입니다. *orderby=date,market*</p> |  아니요  |
+| orderby | string | 결과 데이터 값의 순서를 지정하는 문입니다. 구문은 *orderby=field [order],field [order],...* 입니다. *field* 매개 변수는 다음 문자열 중 하나일 수 있습니다.<ul><li><strong>fileName</strong></li><li><strong>applicationVersion</strong></li><li><strong>failureName</strong></li><li><strong>failureHash</strong></li><li><strong>symbol</strong></li><li><strong>osVersion</strong></li><li><strong>osBuild</strong></li><li><strong>osRelease</strong></li><li><strong>eventType</strong></li><li><strong>출시</strong></li><li><strong>deviceType</strong></li><li><strong>productName</strong></li><li><strong>date</strong></li></ul>*order* 매개 변수는 옵션이며 **asc** 또는 **desc**로 각 필드를 내림차순 또는 오름차순으로 지정할 수 있습니다. 기본값은 **asc**입니다.</p><p>다음은 *orderby* 문자열 예입니다. *orderby=date,market*</p> |  아니요  |
 | groupby | string | 지정된 필드에 대한 데이터 집계에만 적용되는 문입니다. 다음 필드를 지정할 수 있습니다.<ul><li>**failureName**</li><li>**failureHash**</li><li>**symbol**</li><li>**OSVersion**</li><li>**eventType**</li><li>**출시**</li><li>**deviceType**</li></ul><p>반환되는 데이터 행은 *groupby* 매개 변수에서 지정된 필드 및 다음을 포함합니다.</p><ul><li>**date**</li><li>**applicationId**</li><li>**applicationName**</li><li>**eventCount**</li></ul><p>*groupby* 매개 변수는 *aggregationLevel* 매개 변수와 함께 사용할 수 있습니다. 예: *&amp;groupby=failureName,market&amp;aggregationLevel=week*</p></p> |  아니요  |
 
 
@@ -80,7 +80,7 @@ Authorization: Bearer <your access token>
 |------------|---------|--------------|
 | 값      | 배열   | 집계 오류 보고 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [오류 값](#error-values) 섹션을 참조하세요.     |
 | @nextLink  | string  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 오류의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
-| TotalCount | integer | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.     |
+| TotalCount | 정수 | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.     |
 
 
 ### <a name="error-values"></a>오류 값

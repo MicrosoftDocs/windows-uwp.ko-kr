@@ -10,16 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: d9c2ac6ad4de6dc67cc4c661e055ad43ecb143ec
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692804"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789808"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 
-이 문서에서는 여러 소스에서 미디어 프레임을 동시에 읽을 수 있는 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) 클래스와 함께 다양한 이미지 처리 알고리즘을 제공하는 네이티브 코드 라이브러리인 OpenCV(오픈 소스 컴퓨터 비전 라이브러리)를 사용하는 방법을 설명합니다. 이 문서의 예제 코드는 컬러 센서에서 프레임을 가져와서 OpenCV 라이브러리를 이용해 각 프레임을 흐리게 처리한 다음, 처리된 이미지를 XAML **이미지** 컨트롤로 표시하는 간단한 앱을 만드는 과정을 안내합니다.
+이 문서에서는 여러 소스에서 미디어 프레임을 동시에 읽을 수 있는 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader) 클래스와 함께 다양한 이미지 처리 알고리즘을 제공하는 네이티브 코드 라이브러리인 OpenCV(오픈 소스 컴퓨터 비전 라이브러리)를 사용하는 방법을 설명합니다. 이 문서의 예제 코드는 컬러 센서에서 프레임을 가져와서 OpenCV 라이브러리를 이용해 각 프레임을 흐리게 처리한 다음, 처리된 이미지를 XAML **이미지** 컨트롤로 표시하는 간단한 앱을 만드는 과정을 안내합니다. 
+
+>[!NOTE]
+>OpenCV.Win.Core 및 OpenCV.Win.ImgProc는 정기적으로 업데이트되지 않지만 이 페이지의 설명대로 OpenCVHelper를 만드는 데 계속 권장됩니다.
 
 이 문서는 다음 두 문서의 콘텐츠를 기반으로 합니다.
 
@@ -29,7 +32,8 @@ ms.locfileid: "1692804"
 
 이 문서 외에, 여기에서 설명하는 시나리오의 종단 간 작업 샘플 전체를 확인하고 다운로드하려면, Windows 유니버설 샘플 GitHub 리포의 [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)을 참조하세요.
 
-NuGet 패키지를 통해 OpenCV 라이브러리를 UWP 앱 프로젝트에 포함시킵니다. 이 문서의 예제는 OpenCV.Win.Core 및 OpenCV.Win.ImgProc NuGet 패키지를 사용합니다. [OpenCV를 사용하여 소프트웨어 비트맵 처리](process-software-bitmaps-with-opencv.md) 문서에는 이 패키지를 솔루션에 추가하기 위한 지침이 포함되어 있습니다. OpenCV에 관한 최신 소식은 [http://opencv.org](http://opencv.org)에서 확인할 수 있습니다.
+신속 하 게 개발 시작 하면에 포함할 수 OpenCV 라이브러리 UWP app 프로젝트 있습니다. NuGet 패키지를 사용 하 여 있지만 하므로 OpenCV를 다운로드 하는 것이 좋습니다. 하 여 저장소에 있는 응용 프로그램을 제출 하는 경우 이러한 패키지 app certficication 프로세스를 통과 하지 수 있습니다. 라이브러리 소스 코드 및 앱을 전송 하기 전에 사용자가 직접 바이너리를 구축 합니다. OpenCV에 관한 최신 소식은 [http://opencv.org](http://opencv.org)에서 확인할 수 있습니다.
+
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>OpenCVHelper 네이티브 Windows 런타임 구성 요소 구현
 [OpenCV를 사용하여 소프트웨어 비트맵 처리](process-software-bitmaps-with-opencv.md)에 제시된 단계에 따라 OpenCV 도우미 Windows 런타임 구성 요소를 만들고 구성 요소 프로젝트에 대한 참조를 UWP 앱 솔루션에 추가합니다.
