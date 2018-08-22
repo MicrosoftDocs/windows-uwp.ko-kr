@@ -4,31 +4,33 @@ description: C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱�
 title: 사용자 지정 종속성 속성
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f1b17f4ea61e28b1ba43d886455d8a3373efb79
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+dev_langs:
+- csharp
+- vb
+- cppwinrt
+- cpp
+ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675630"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801954"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
-
 
 여기에서는 C++, C# 또는 Visual Basic으로 작성된 Windows 런타임 앱의 고유 종속성 속성을 정의하고 구현하는 방법에 대해 설명합니다. 앱 개발자 및 구성 요소 작성자가 사용자 지정 종속성 속성을 만들려고 하는 이유를 나열합니다. 사용자 지정 종속성 속성 구현 단계와 종속성 속성의 성능, 유용성 또는 다양성을 향상시킬 수 있는 몇 가지 모범 사례를 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
-
 개발자가 [종속성 속성 개요](dependency-properties-overview.md)를 읽었고 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해한다고 가정합니다. 이 항목에 있는 예를 이해하려면 XAML과 C++, C# 또는 Visual Basic을 사용하여 기본 Windows 런타임 앱을 작성하는 방법도 알고 있어야 합니다.
 
 ## <a name="what-is-a-dependency-property"></a>종속성 속성이란?
-
 
 속성에 대해 스타일 지정, 데이터 바인딩, 애니메이션 및 기본값을 지원하려면 종속성 속성으로 구현해야 합니다. 종속성 속성 값은 클래스의 필드로 저장되지 않고 xaml 프레임워크에서 저장되며, [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 메서드를 호출하여 속성을 Windows 런타임 속성 시스템에 등록할 때 검색되는 키를 사용하여 참조됩니다.   종속성 속성은 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생된 형식에서만 사용할 수 있습니다. 그러나 **DependencyObject**는 클래스 계층에서 매우 상위이므로 UI 및 표시 지원을 위한 클래스는 대부분 종속성 속성을 지원할 수 있습니다. 종속성 속성과 이 설명서의 설명 내용에 사용된 일부 용어 및 규칙에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
@@ -36,7 +38,7 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 
 규칙에 따라 클래스별로 노출된 각 종속성 속성에는 동일한 클래스에 대해 노출되고 종속성 속성의 식별자를 제공하는 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 해당 **public static readonly** 속성이 있습니다. 식별자 이름 지정 규칙은 종속성 속성 이름이 오고 이름 뒤에 "Property" 문자열을 추가하는 것입니다. 예를 들어 **Control.Background** 속성의 해당 **DependencyProperty** 식별자는 [**Control.BackgroundProperty**](https://msdn.microsoft.com/library/windows/apps/br209396)입니다. 식별자는 종속성 속성에 대한 정보를 등록된 대로 저장하며, [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 호출 등 종속성 속성과 관련된 다른 작업에 사용될 수 있습니다.
 
-##  <a name="property-wrappers"></a>속성 래퍼
+## <a name="property-wrappers"></a>속성 래퍼
 
 종속성 속성에는 일반적으로 래퍼 구현이 포함되어 있습니다. 래퍼가 없으면 속성을 가져오거나 설정하는 유일한 방법은 종속성 속성 유틸리티 메서드 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 사용하여 식별자를 매개 변수로 전달하는 것입니다. 이 방법은 원칙적으로 속성인 항목에 부자연스러운 사용법입니다. 그러나 래퍼가 있으면 종속성 속성을 참조하는 고유 코드 및 모든 기타 코드에서 사용하는 언어에 자연스러운 간단한 개체-속성 구문을 사용할 수 있습니다.
 
@@ -48,26 +50,27 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 
 속성이 Windows 런타임 또는 Windows 런타임 앱의 다음 기능 중 하나 이상을 지원하도록 하려는 경우 해당 속성을 종속성 속성으로 구현하는 것을 고려할 수 있습니다.
 
--   [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)을 통한 속성 설정
--   [**{Binding}**](binding-markup-extension.md)을 사용하여 데이터 바인딩에 유효한 대상 속성 역할 수행
--   [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)를 통해 애니메이션 값 지원
--   다음에 의해 속성 값이 변경된 시점 보고
-    -   속성 시스템 자체에서 수행된 작업
-    -   환경
-    -   사용자 작업
-    -   읽기 및 쓰기 스타일
+- [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)을 통한 속성 설정
+- [**{Binding}**](binding-markup-extension.md)을 사용하여 데이터 바인딩에 유효한 대상 속성 역할 수행
+- [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)를 통해 애니메이션 값 지원
+- 다음에 의해 속성 값이 변경된 시점 보고
+  - 속성 시스템 자체에서 수행된 작업
+  - 환경
+  - 사용자 작업
+  - 읽기 및 쓰기 스타일
 
 ## <a name="checklist-for-defining-a-dependency-property"></a>종속성 속성 정의 검사 목록
 
 종속성 속성 정의는 개념 집합으로 간주될 수 있습니다. 구현에서는 코드의 한 줄에 여러 개념이 언급될 수 있으므로 이러한 개념이 반드시 절차적 단계일 필요는 없습니다. 이 목록은 간단한 개요만 제공합니다. 이 항목의 뒷 부분에서 각 개념을 더 자세히 설명하고 여러 언어로 코드 예를 제공합니다.
 
--   속성 시스템에 속성 이름을 등록하여([**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출) 소유자 형식 및 속성 값 형식을 지정합니다. 
-    -  속성 메타데이터를 예상하는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에는 필수 매개 변수가 있습니다. 해당 값으로 **null**을 지정하거나, 속성 변경 동작이나 [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357)를 호출하여 복원할 수 있는 메타데이터 기반 기본값을 원하는 경우 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata) 인스턴스를 지정합니다.
--   [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자를 소유자 형식의 **public static readonly** 속성 멤버로 정의합니다.
--   구현하는 언어에 사용되는 속성 접근자 모델 다음에 래퍼 속성을 정의합니다. 래퍼 속성 이름은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에서 사용한 *name* 문자열과 일치해야 합니다. [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출하고 고유 속성의 식별자를 매개 변수로 전달하여 **get** 및 **set** 접근자를 구현하고 래핑하는 종속성 속성과 래퍼를 연결합니다.
--   (옵션) [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) 같은 특성을 래퍼에 지정합니다.
+- 속성 시스템에 속성 이름을 등록하여([**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출) 소유자 형식 및 속성 값 형식을 지정합니다.
+  - 속성 메타데이터를 예상하는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에는 필수 매개 변수가 있습니다. 해당 값으로 **null**을 지정하거나, 속성 변경 동작이나 [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357)를 호출하여 복원할 수 있는 메타데이터 기반 기본값을 원하는 경우 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata) 인스턴스를 지정합니다.
+- [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자를 소유자 형식의 **public static readonly** 속성 멤버로 정의합니다.
+- 구현하는 언어에 사용되는 속성 접근자 모델 다음에 래퍼 속성을 정의합니다. 래퍼 속성 이름은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에서 사용한 *name* 문자열과 일치해야 합니다. [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출하고 고유 속성의 식별자를 매개 변수로 전달하여 **get** 및 **set** 접근자를 구현하고 래핑하는 종속성 속성과 래퍼를 연결합니다.
+- (옵션) [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) 같은 특성을 래퍼에 지정합니다.
 
-**참고**  사용자 지정 연결된 속성을 정의하는 경우 일반적으로 래퍼를 생략합니다. 대신 XAML 프로세서가 사용할 수 있는 다른 스타일의 접근자를 작성합니다. [사용자 지정 연결된 속성](custom-attached-properties.md)을 참조하세요. 
+> [!NOTE]
+> 사용자 지정 연결 된 속성을 정의 하는 경우 일반적으로 래퍼를 생략 합니다. 대신 XAML 프로세서가 사용할 수 있는 다른 스타일의 접근자를 작성합니다. [사용자 지정 연결된 속성](custom-attached-properties.md)을 참조하세요. 
 
 ## <a name="registering-the-property"></a>속성 등록
 
@@ -75,7 +78,11 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 
 Microsoft .NET 언어(C# 및 Microsoft Visual Basic)의 경우 클래스 본문 내에서(클래스 내부이나 멤버 정의 외부임) [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)를 호출합니다. 식별자는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 메서드 호출에서 반환 값으로 제공됩니다. [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출은 일반적으로 정적 생성자로 수행되거나, 클래스의 일부인 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public static readonly** 속성 초기화의 일부로 수행됩니다. 이 속성은 종속성 속성의 식별자를 노출합니다. 다음은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출의 예입니다.
 
-> [!div class="tabbedCodeSnippets"]
+> [!NOTE]
+> 종속성 속성을 등록 하는 식별자의 일부로 속성 정의 일반적인 구현 이지만 클래스의 정적 생성자에 대 한 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
+
+C + + /를 구현 하는 헤더와 코드 파일 간의 분할 하는 방법에 대 한 옵션을 사용할 CX 합니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
+
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
   "Label",
@@ -84,6 +91,7 @@ public static readonly DependencyProperty LabelProperty = DependencyProperty.Reg
   new PropertyMetadata(null)
 );
 ```
+
 ```vb
 Public Shared ReadOnly LabelProperty As DependencyProperty = 
     DependencyProperty.Register("Label", 
@@ -92,9 +100,35 @@ Public Shared ReadOnly LabelProperty As DependencyProperty =
       New PropertyMetadata(Nothing))
 ```
 
-**참고**  종속성 속성을 식별자 속성 정의의 일부로 등록하는 것이 일반적인 구현이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
+```cppwinrt
+// ImageWithLabelControl.idl
+namespace ImageWithLabelControlApp
+{
+    runtimeclass ImageWithLabelControl : Windows.UI.Xaml.Controls.Control
+    {
+        ImageWithLabelControl();
+        static Windows.UI.Xaml.DependencyProperty LabelProperty{ get; };
+        String Label;
+    }
+}
 
-C++의 경우 헤더 및 코드 파일 사이에서 구현을 분할하는 방법을 선택할 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
+// ImageWithLabelControl.h
+...
+private:
+    static Windows::UI::Xaml::DependencyProperty m_labelProperty;
+...
+
+// ImageWithLabelControl.cpp
+...
+Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
+    Windows::UI::Xaml::DependencyProperty::Register(
+        L"Label",
+        winrt::xaml_typename<winrt::hstring>(),
+        winrt::xaml_typename<ImageWithLabelControlApp::ImageWithLabelControl>(),
+        Windows::UI::Xaml::PropertyMetadata{ nullptr }
+);
+...
+```
 
 ```cpp
 //.h file
@@ -104,46 +138,46 @@ C++의 경우 헤더 및 코드 파일 사이에서 구현을 분할하는 방�
 //using namespace Platform;
 
 public ref class ImageWithLabelControl sealed : public Control
-{  
+{
 private:
     static DependencyProperty^ _LabelProperty;
 ...
 public:
-    static void RegisterDependencyProperties(); 
+    static void RegisterDependencyProperties();
     static property DependencyProperty^ LabelProperty
     {
         DependencyProperty^ get() {return _LabelProperty;}
     }
 ...
 };
-```
 
-```cpp
 //.cpp file
 using namespace Windows::UI::Xaml;
 using namespace Windows::UI::Xaml.Interop;
 
 DependencyProperty^ ImageWithLabelControl::_LabelProperty = nullptr;
 
-// This function is called from the App constructor in App.xaml.cpp 
+// This function is called from the App constructor in App.xaml.cpp
 // to register the properties
-void ImageWithLabelControl::RegisterDependencyProperties() 
+void ImageWithLabelControl::RegisterDependencyProperties()
 { 
-    if (_LabelProperty == nullptr) 
+    if (_LabelProperty == nullptr)
     { 
         _LabelProperty = DependencyProperty::Register(
-          "Label", Platform::String::typeid, ImageWithLabelControl::typeid, nullptr); 
+          "Label", Platform::String::typeid, ImageWithLabelControl::typeid, nullptr);
     } 
 }
 ```
 
-**참고**  C++ 코드의 경우 개인 필드와 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)를 표시하는 공개 읽기 전용 속성이 있어야 하는 이유는 해당 종속성 속성을 사용하는 다른 호출자가 공개 식별자가 필요한 속성 시스템 유틸리티 API도 사용할 수 있도록 하기 위해서입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
+> [!NOTE]
+> C + + / CX 코드, 이유 개인 필드 있고 [**보려면**](https://msdn.microsoft.com/library/windows/apps/br242362) 표면 하는 공용 읽기 전용 속성은 종속성 속성을 사용 하는 다른 호출자에 게 속성 시스템 유틸리티를 필요로 하는 Api를 사용할 수도 수 있도록 하는 이유는 공용 이어야 하는 식별자입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
 
 ## <a name="dependency-property-name-conventions"></a>종속성 속성 이름 규칙
 
 종속성 속성에 대한 명명 규칙이 있습니다. 예외 상황을 제외하고는 항상 이 규칙을 따릅니다. 종속성 속성에는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)의 첫 번째 매개 변수로 제공되는 고유 기본 이름(앞의 예에서는 "Label")이 있습니다. 이름은 각 등록 형식 내에서 고유해야 하며 이러한 고유성 요구 사항은 모든 상속되는 멤버에도 적용됩니다. 기본 형식을 통해 상속되는 종속성 속성은 이미 등록 형식의 일부로 간주됩니다. 상속되는 속성의 이름은 다시 등록될 수 없습니다.
 
-**주의**  여기에 입력하는 이름은 선택한 언어의 프로그래밍에서 유효한 어떠한 문자열 식별자도 가능하지만 일반적으로 XAML에서도 종속성 속성을 설정할 수 있도록 하고자 합니다. XAML에서 설정하도록 하려면 선택하는 속성 이름이 유효한 XAML 이름이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
+> [!WARNING]
+> 여기서 문자열 식별자가 될 수를 제공 하는 이름은 선택한 언어에 대 한 프로그래밍 시의 유효한, 일반적으로 XAML에서 너무 종속성 속성을 설정할 수 있도록 합니다. XAML에서 설정하도록 하려면 선택하는 속성 이름이 유효한 XAML 이름이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
 
 식별자 속성을 만드는 경우 등록한 속성 이름을 "Property" 접미사와 연결합니다(예: "LabelProperty"). 이 속성은 종속성 속성 식별자이며 고유 속성 래퍼에서 수행하는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 및 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 호출의 입력으로 사용됩니다. 속성 시스템 및 [**{x:Bind}**](x-bind-markup-extension.md) 등의 다른 XAML 프로세서에서도 사용됩니다.
 
@@ -151,9 +185,9 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 
 속성 래퍼는 **get** 구현에서 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)를, **set** 구현에서 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출합니다.
 
-**주의**  래퍼 구현에서는 예외적인 경우를 제외하고는 항상 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 작업만 수행해야 합니다. 그렇지 않으면 속성이 XAML을 통해 설정되는 경우와 코드를 통해 설정되는 경우에 동작이 달라집니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시하고 **SetValue**를 통해 백업 저장소에 통신합니다.
+> [!WARNING]
+> 제외 하 고 모든 예외적인 경우 래퍼 구현은 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 작업을 수행 해야 합니다. 그렇지 않으면 속성이 XAML을 통해 설정되는 경우와 코드를 통해 설정되는 경우에 동작이 달라집니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시하고 **SetValue**를 통해 백업 저장소에 통신합니다.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 public String Label
 {
@@ -161,16 +195,33 @@ public String Label
     set { SetValue(LabelProperty, value); }
 }
 ```
+
 ```vb
-Public Property Label() As String 
-    Get 
+Public Property Label() As String
+    Get
         Return DirectCast(GetValue(LabelProperty), String) 
     End Get 
-    Set(ByVal value As String) 
-        SetValue(LabelProperty, value) 
-    End Set 
+    Set(ByVal value As String)
+        SetValue(LabelProperty, value)
+    End Set
 End Property
 ```
+
+```cppwinrt
+// ImageWithLabelControl.h
+...
+winrt::hstring Label()
+{
+    return winrt::unbox_value<winrt::hstring>(GetValue(m_labelProperty));
+}
+
+void Label(winrt::hstring const& value)
+{
+    SetValue(m_labelProperty, winrt::box_value(value));
+}
+...
+```
+
 ```cpp
 //using namespace Platform;
 public:
@@ -181,7 +232,7 @@ public:
       return (String^)GetValue(LabelProperty);
     }
     void set(String^ value) {
-      SetValue(LabelProperty, value); 
+      SetValue(LabelProperty, value);
     }
   }
 ```
@@ -190,8 +241,8 @@ public:
 
 속성 메타데이터가 종속성 속성에 할당되면 속성 소유자 형식이나 서브클래스의 모든 인스턴스에 대한 해당 속성에 동일한 메타데이터가 적용됩니다. 속성 메타데이터에서는 다음 두 동작을 지정할 수 있습니다.
 
--   속성 시스템이 속성의 모든 케이스에 할당하는 기본값
--   속성 값 변경이 발견될 때마다 속성 시스템 내에서 자동으로 호출되는 정적 콜백 메서드
+- 속성 시스템이 속성의 모든 케이스에 할당하는 기본값
+- 속성 값 변경이 발견될 때마다 속성 시스템 내에서 자동으로 호출되는 정적 콜백 메서드
 
 ### <a name="calling-register-with-property-metadata"></a>속성 메타데이터로 레지스터 호출
 
@@ -199,11 +250,11 @@ public:
 
 일반적으로 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771)를 인라인으로 만든 인스턴스로서, [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)용 매개 변수 내에서 제공합니다.
 
-**참고**  [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) 구현을 정의하는 경우 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) 생성자를 호출하기보다 유틸리티 메서드 [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099)를 사용하여 **PropertyMetadata** 인스턴스를 정의해야 합니다.
+> [!NOTE]
+> [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) 구현을 정의 하는 경우 **PropertyMetadata** 인스턴스를 정의 하려면 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) 생성자를 호출 하지 않고 [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) 유틸리티 메서드를 사용 해야 합니다.
 
 이 다음 예에서는 [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770) 값으로 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) 인스턴스를 참조하여 이전에 보여진 [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 예를 수정합니다. "OnLabelChanged" 콜백의 구현은 이 섹션의 뒷부분에 설명되어 있습니다.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
   "Label",
@@ -212,19 +263,34 @@ public static readonly DependencyProperty LabelProperty = DependencyProperty.Reg
   new PropertyMetadata(null,new PropertyChangedCallback(OnLabelChanged))
 );
 ```
+
 ```vb
-Public Shared ReadOnly LabelProperty As DependencyProperty = 
-    DependencyProperty.Register("Label", 
-      GetType(String), 
-      GetType(ImageWithLabelControl), 
+Public Shared ReadOnly LabelProperty As DependencyProperty =
+    DependencyProperty.Register("Label",
+      GetType(String),
+      GetType(ImageWithLabelControl),
       New PropertyMetadata(
         Nothing, new PropertyChangedCallback(AddressOf OnLabelChanged)))
 ```
+
+```cppwinrt
+// ImageWithLabelControl.cpp
+...
+Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
+    Windows::UI::Xaml::DependencyProperty::Register(
+        L"Label",
+        winrt::xaml_typename<winrt::hstring>(),
+        winrt::xaml_typename<ImageWithLabelControlApp::ImageWithLabelControl>(),
+        Windows::UI::Xaml::PropertyMetadata{ nullptr, Windows::UI::Xaml::PropertyChangedCallback{ &ImageWithLabelControl::OnLabelChanged } }
+);
+...
+```
+
 ```cpp
-DependencyProperty^ ImageWithLabelControl::_LabelProperty = 
-    DependencyProperty::Register("Label", 
+DependencyProperty^ ImageWithLabelControl::_LabelProperty =
+    DependencyProperty::Register("Label",
     Platform::String::typeid,
-    ImageWithLabelControl::typeid, 
+    ImageWithLabelControl::typeid,
     ref new PropertyMetadata(nullptr,
       ref new PropertyChangedCallback(&ImageWithLabelControl::OnLabelChanged))
     );
@@ -236,7 +302,21 @@ DependencyProperty^ ImageWithLabelControl::_LabelProperty =
 
 기본값을 지정하지 않으면 참조 형식의 경우 종속성 속성 기본값이 Null이고, 값 형식이나 언어 primitive의 경우 해당 형식의 기본값입니다(예를 들어, 정수의 경우 0이나 문자열의 경우 빈 문자열). 기본값을 설정하는 주된 이유는 속성에서 [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357)를 호출하면 이 값이 복원된다는 것입니다. 개별 속성 기준 기본값 설정이 생성자 특히 값 형식의 기본값 설정보다 더 편리할 수 있습니다. 그러나 참조 형식의 경우 기본값 설정으로 의도하지 않은 단일 패턴이 만들어지지 않도록 해야 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [모범 사례](#best-practices)를 참조하세요.
 
-**참고**  [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371) 기본값을 사용하여 등록하지 마세요. 등록하는 경우 속성 소비자를 혼란스럽게 하고 속성 시스템 내에 의도하지 않은 결과를 발생시킵니다.
+```cppwinrt
+// ImageWithLabelControl.cpp
+...
+Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
+    Windows::UI::Xaml::DependencyProperty::Register(
+        L"Label",
+        winrt::xaml_typename<winrt::hstring>(),
+        winrt::xaml_typename<ImageWithLabelControlApp::ImageWithLabelControl>(),
+        Windows::UI::Xaml::PropertyMetadata{ winrt::box_value(L"default label"), Windows::UI::Xaml::PropertyChangedCallback{ &ImageWithLabelControl::OnLabelChanged } }
+);
+...
+```
+
+> [!NOTE]
+> [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371)의 기본값 등록 하지 마십시오. 등록하는 경우 속성 소비자를 혼란스럽게 하고 속성 시스템 내에 의도하지 않은 결과를 발생시킵니다.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 
@@ -252,7 +332,6 @@ DependencyProperty^ ImageWithLabelControl::_LabelProperty =
 
 다음 예는 [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770) 구현을 보여 줍니다. 이전 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 예에서 [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) 구성 인수의 일부로 참조된다고 표시된 메서드를 구현합니다. 이 콜백으로 설명되는 시나리오에서는 클래스에 이름이 "HasLabelValue"인, 계산된 읽기 전용 속성도 있습니다(구현 표시 안 됨). "Label" 속성이 재평가될 때마다 이 콜백 메서드가 호출되며 콜백을 통해 종속 계산 값이 종속성 속성 변경 내용과 동기화된 상태를 유지할 수 있습니다.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 private static void OnLabelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
     ImageWithLabelControl iwlc = d as ImageWithLabelControl; //null checks omitted
@@ -265,6 +344,7 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
     }
 }
 ```
+
 ```vb
     Private Shared Sub OnLabelChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
         Dim iwlc As ImageWithLabelControl = CType(d, ImageWithLabelControl) ' null checks omitted
@@ -276,6 +356,16 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
         End If
     End Sub
 ```
+
+```cppwinrt
+void ImageWithLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
+{
+    auto iwlc{ d.as<ImageWithLabelControlApp::ImageWithLabelControl>() };
+    auto s{ winrt::unbox_value<winrt::hstring>(e.NewValue()) };
+    iwlc.HasLabelValue(s.size() != 0);
+}
+```
+
 ```cpp
 static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs^ e)
 {
@@ -291,7 +381,6 @@ static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventAr
 
 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)의 유형이 열거 또는 구조인 경우 구조의 내부 값 또는 열거형 값이 변경되지 않더라도 콜백이 호출될 수 있습니다. 이것은 값이 변할 경우에만 호출되는 문자열과 같은 기본 시스템과는 다릅니다. 이것은 이 값들에 대한 boxiung 및 unboxing 작업의 부작용으로서 내부적으로 수행됩니다. 값이 열거 또는 구조인 속성에 대한 [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770) 메서드가 있을 경우 직접 값을 캐스팅하고 지금 캐스팅 값에 사용할 수 있는 오버로드된 비교 연산자를 사용하여 [**OldValue**](https://msdn.microsoft.com/library/windows/apps/br242365) 및 [**NewValue**](https://msdn.microsoft.com/library/windows/apps/br242364)를 비교해야 합니다. 또는, 그러한 연산자를 사용할 수 없을 경우(사용자 지정 구조 사례일 수 있음), 개별 값을 비교해야 할 수 있습니다. 그 결과 값이 변하지 않았다면 일반적으로 어떤 작업이든 선택하지 않게 됩니다.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 private static void OnVisibilityValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
     if ((Visibility)e.NewValue != (Visibility)e.OldValue)
@@ -300,6 +389,7 @@ private static void OnVisibilityValueChanged(DependencyObject d, DependencyPrope
     } // else this was invoked because of boxing, do nothing
 }
 ```
+
 ```vb
 Private Shared Sub OnVisibilityValueChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
     If CType(e.NewValue,Visibility) != CType(e.OldValue,Visibility) Then
@@ -308,6 +398,21 @@ Private Shared Sub OnVisibilityValueChanged(d As DependencyObject, e As Dependen
     '  else this was invoked because of boxing, do nothing
 End Sub
 ```
+
+```cppwinrt
+static void OnVisibilityValueChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
+{
+    auto oldVisibility{ winrt::unbox_value<Windows::UI::Xaml::Visibility>(e.OldValue()) };
+    auto newVisibility{ winrt::unbox_value<Windows::UI::Xaml::Visibility>(e.NewValue()) };
+
+    if (newVisibility != oldVisibility)
+    {
+        // The value really changed; invoke your property-changed logic here.
+    }
+    // Otherwise, OnVisibilityValueChanged was invoked because of boxing; do nothing.
+}
+```
+
 ```cpp
 static void OnVisibilityValueChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs^ e)
 {
@@ -342,10 +447,10 @@ Null이 아닌 값이 필요한 경우 클래스 생성자를 사용하여 참�
 
 Windows 런타임 API에서 컬렉션 형식 종속성 속성은 상대적으로 자주 사용되지 않습니다. 대부분의 경우 항목이 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) 서브클래스인 컬렉션을 사용할 수 있으나 컬렉션 속성 자체는 기본 CLR 또는 C++ 속성으로 구현됩니다. 종속성 속성이 관련된 몇 가지 일반적인 시나리오에 컬렉션이 반드시 적합한 것은 아니기 때문입니다. 예를 들면 다음과 같습니다.
 
--   일반적으로 컬렉션은 애니메이션하지 않습니다.
--   일반적으로 스타일 또는 템플릿을 사용하여 컬렉션의 항목을 미리 채우지 않습니다.
--   컬렉션에 바인딩하는 것이 주요 시나리오이긴 하지만 컬렉션이 바인딩 소스이기 위해 종속성 속성일 필요는 없습니다. 바인딩 대상의 경우 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)의 서브클래스를 사용하여 컬렉션 항목을 지원하거나 보기 모델 패턴을 사용하는 것이 더 일반적입니다. 컬렉션 바인딩에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
--   컬렉션 변경 알림은 **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 같은 인터페이스를 통해 또는 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx)에서 컬렉션 형식을 파생시키는 방법을 통해 더 효과적으로 설명됩니다.
+- 일반적으로 컬렉션은 애니메이션하지 않습니다.
+- 일반적으로 스타일 또는 템플릿을 사용하여 컬렉션의 항목을 미리 채우지 않습니다.
+- 컬렉션에 바인딩하는 것이 주요 시나리오이긴 하지만 컬렉션이 바인딩 소스이기 위해 종속성 속성일 필요는 없습니다. 바인딩 대상의 경우 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)의 서브클래스를 사용하여 컬렉션 항목을 지원하거나 보기 모델 패턴을 사용하는 것이 더 일반적입니다. 컬렉션 바인딩에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
+- 컬렉션 변경 알림은 **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 같은 인터페이스를 통해 또는 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx)에서 컬렉션 형식을 파생시키는 방법을 통해 더 효과적으로 설명됩니다.
 
 하지만 컬렉션 형식 종속성 속성에 대한 시나리오도 존재합니다. 다음의 3개 섹션에서는 컬렉션 형식 종속성 속성을 구현하는 방법에 대한 몇 가지 지침을 제공합니다.
 
@@ -375,9 +480,8 @@ C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
-* [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
-* [종속성 속성 개요](dependency-properties-overview.md)
-* [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)
+- [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
+- [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
+- [종속성 속성 개요](dependency-properties-overview.md)
+- [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)
  
-

@@ -1,6 +1,6 @@
 ---
 author: serenaz
-Description: The Universal Windows Platform (UWP) provides a consistent back navigation system for traversing the user's navigation history within an app and, depending on the device, from app to app.
+Description: Learn how to implement backwards navigation for traversing the user's navigation history within an UWP app.
 title: 탐색 기록 및 뒤로 탐색(Windows 앱)
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
@@ -8,32 +8,32 @@ label: History and backwards navigation
 template: detail.hbs
 op-migration-status: ready
 ms.author: sezhen
-ms.date: 11/22/2017
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 824f0e83408893bf95d856067282b1fea1313876
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: 0400e04a86675adccd1da14d8cb2652028fbfd30
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895410"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800968"
 ---
-#  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
+# <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
 > **중요 APIs**: [BackRequested event](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager class](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
 
 UWP(유니버설 Windows 플랫폼)에서 앱 내에서 그리고 장치에 따라 앱 간에 사용자의 탐색 기록을 트래버스할 수 있도록 일관된 뒤로 탐색 시스템을 제공합니다.
 
-앱에 뒤로 탐색을 구현하려면 앱 UI 왼쪽 위 모서리에 [뒤로 단추](#Back-button)를 배치합니다. 앱이 [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤을 사용하는 경우 [NavigationView의 기본 뒤로 단추](../controls-and-patterns/navigationview.md#backwards-navigation)를 사용할 수 있습니다. 
+앱에 뒤로 탐색을 구현하려면 앱 UI 왼쪽 위 모서리에 [뒤로 단추](#Back-button)를 배치합니다. 앱이 [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤을 사용하는 경우 [NavigationView의 기본 뒤로 단추](../controls-and-patterns/navigationview.md#backwards-navigation)를 사용할 수 있습니다.
 
 사용자는 뒤로 단추를 누르면 앱의 탐색 기록에서 이전 위치로 이동될 것으로 예상합니다. 탐색 기록에 추가할 탐색 동작과 뒤로 단추 누르기에 응답하는 방식은 사용자가 결정해야 합니다.
 
 ## <a name="back-button"></a>뒤로 단추
 
-뒤로 단추를 만들려면 `NavigationBackButtonNormalStyle` 스타일의 [단추](../controls-and-patterns/buttons.md) 컨트롤을 사용하고, 앱 UI의 왼쪽 위 모서리에 단추를 배치합니다.
+뒤로 단추를 만들려면 사용 하 여 [단추](../controls-and-patterns/buttons.md) 컨트롤을 사용 하 여는 `NavigationBackButtonNormalStyle` 스타일 및/또는 앱의 UI의 왼쪽 위 모서리에 있는 단추를 배치 (자세한 내용은 아래 XAML 코드 예제 참조).
 
 ![앱 UI 왼쪽 위 모서리의 뒤로 단추](images/back-nav/BackEnabled.png)
 
@@ -59,6 +59,7 @@ Style="{StaticResource NavigationBackButtonNormalStyle}"/>
 다음 코드 예제는 뒤로 단추로 뒤로 탐색 동작을 구현하는 방법을 설명하고 있습니다. 코드는 버튼 [**클릭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click)이벤트에 응답하고, 새 페이지 탐색 시 호출되는 [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)의 버튼 표시를 활성화/비활성화 합니다. 또한 코드 예제는 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대한 수신기를 등록해 하드웨어 및 소프트웨어 시스템 Back 키의 입력을 처리합니다.
 
 ```xaml
+<!-- MainPage.xaml -->
 <Page x:Class="AppName.MainPage">
 ...
 <Button x:Name="BackButton" Click="Back_Click" Style="{StaticResource NavigationBackButtonNormalStyle}"/>
@@ -69,6 +70,7 @@ Style="{StaticResource NavigationBackButtonNormalStyle}"/>
 코드 숨김:
 
 ```csharp
+// MainPage.xaml.cs
 public MainPage()
 {
     KeyboardAccelerator GoBack = new KeyboardAccelerator();
@@ -111,11 +113,75 @@ private void BackInvoked (KeyboardAccelerator sender, KeyboardAcceleratorInvoked
 }
 ```
 
-여기서는 `App.xaml` 코드 숨김 파일에 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested)의 글로벌 수신기를 등록합니다. 뒤로 탐색에서 특정 페이지를 제외하려는 경우 각 페이지에 이 이벤트를 등록하거나, 페이지를 표시하기 전에 페이지 수준 코드를 실행할 수 있습니다.
+```cppwinrt
+// MainPage.cpp
+#include "pch.h"
+#include "MainPage.h"
+
+#include "winrt/Windows.System.h"
+#include "winrt/Windows.UI.Xaml.Controls.h"
+#include "winrt/Windows.UI.Xaml.Input.h"
+#include "winrt/Windows.UI.Xaml.Navigation.h"
+
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Xaml;
+
+namespace winrt::PageNavTest::implementation
+{
+    MainPage::MainPage()
+    {
+        InitializeComponent();
+
+        Windows::UI::Xaml::Input::KeyboardAccelerator goBack;
+        goBack.Key(Windows::System::VirtualKey::GoBack);
+        goBack.Invoked({ this, &MainPage::BackInvoked });
+        Windows::UI::Xaml::Input::KeyboardAccelerator altLeft;
+        altLeft.Key(Windows::System::VirtualKey::Left);
+        altLeft.Invoked({ this, &MainPage::BackInvoked });
+        KeyboardAccelerators().Append(goBack);
+        KeyboardAccelerators().Append(altLeft);
+        // ALT routes here.
+        altLeft.Modifiers(Windows::System::VirtualKeyModifiers::Menu);
+    }
+
+    void MainPage::OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e)
+    {
+        BackButton().IsEnabled(Frame().CanGoBack());
+    }
+
+    void MainPage::Back_Click(IInspectable const&, RoutedEventArgs const&)
+    {
+        On_BackRequested();
+    }
+
+    // Handles system-level BackRequested events and page-level back button Click events.
+    bool MainPage::On_BackRequested()
+    {
+        if (Frame().CanGoBack())
+        {
+            Frame().GoBack();
+            return true;
+        }
+        return false;
+    }
+
+    void MainPage::BackInvoked(Windows::UI::Xaml::Input::KeyboardAccelerator const& sender,
+        Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args)
+    {
+        args.Handled(On_BackRequested());
+    }
+}
+```
+
+위의 단일 페이지에 대 한 탐색 이전 버전과 처리 합니다. 특정 페이지 후방 탐색에서 제외 하려는 또는 페이지를 표시 하기 전에 페이지 수준 코드를 실행 하려는 경우에 각 페이지의 탐색을 처리할 수 있습니다.
+
+를 처리 하기 위해 이전 버전과 전체 응용 프로그램에 대 한 탐색 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대 한 전역 수신기를 등록 하는 `App.xaml` 코드 숨김 파일입니다.
 
 App.xaml 코드 숨김:
 
 ```csharp
+// App.xaml.cs
 Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
 Frame rootFrame = Window.Current.Content;
 rootFrame.PointerPressed += On_PointerPressed;
@@ -127,12 +193,74 @@ private void App_BackRequested(object sender, Windows.UI.Core.BackRequestedEvent
 
 private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
 {
-    bool isXButton1Pressed = e.GetCurrentPoint(sender as UIElement).Properties.PointerUpdateKind == PointerUpdateKind.XButton1Pressed;
+    bool isXButton1Pressed =
+        e.GetCurrentPoint(sender as UIElement).Properties.PointerUpdateKind == PointerUpdateKind.XButton1Pressed;
 
     if (isXButton1Pressed)
     {
         e.Handled = On_BackRequested();
     }
+}
+
+private bool On_BackRequested()
+{
+    Frame rootFrame = Window.Current.Content as Frame;
+    if (rootFrame.CanGoBack)
+    {
+        rootFrame.GoBack();
+        return true;
+    }
+    return false;
+}
+```
+
+```cppwinrt
+// App.cpp
+#include <winrt/Windows.UI.Core.h>
+#include "winrt/Windows.UI.Input.h"
+#include "winrt/Windows.UI.Xaml.Input.h"
+
+#include "App.h"
+#include "MainPage.h"
+
+using namespace winrt;
+...
+
+    Windows::UI::Core::SystemNavigationManager::GetForCurrentView().BackRequested({ this, &App::App_BackRequested });
+    Frame rootFrame{ nullptr };
+    auto content = Window::Current().Content();
+    if (content)
+    {
+        rootFrame = content.try_as<Frame>();
+    }
+    rootFrame.PointerPressed({ this, &App::On_PointerPressed });
+...
+
+void App::App_BackRequested(IInspectable const& /* sender */, Windows::UI::Core::BackRequestedEventArgs const& e)
+{
+    e.Handled(On_BackRequested());
+}
+
+void App::On_PointerPressed(IInspectable const& sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e)
+{
+    bool isXButton1Pressed =
+        e.GetCurrentPoint(sender.as<UIElement>()).Properties().PointerUpdateKind() == Windows::UI::Input::PointerUpdateKind::XButton1Pressed;
+
+    if (isXButton1Pressed)
+    {
+        e.Handled(On_BackRequested());
+    }
+}
+
+// Handles system-level BackRequested events.
+bool App::On_BackRequested()
+{
+    if (Frame().CanGoBack())
+    {
+        Frame().GoBack();
+        return true;
+    }
+    return false;
 }
 ```
 
@@ -165,7 +293,24 @@ private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
 
 앱이 계속 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용한다면, 뒤로 단추가 제목 표시줄 내부에 렌더링 됩니다.
 
-![제목 표시줄 뒤로 단추](images/nav-back-pc.png)
+- 앱 **탭 하지**않으면 뒤로 단추 제목 표시줄 안에 렌더링 됩니다. 뒤로 단추에 대 한 시각적 경험 및 사용자 상호작용 이전 빌드에서 변경 되지 않습니다.
+
+    ![제목 표시줄 뒤로 단추](images/nav-back-pc.png)
+
+- 응용 프로그램 **탭**을 이면 뒤로 단추는 새 시스템을 뒤로 내에서 렌더링 됩니다 모음입니다.
+
+    ![시스템 그린 다시 단추 모음](images/back-nav/tabs.png)
+
+### <a name="system-back-bar"></a>시스템을 뒤로 표시줄
+
+> [!NOTE]
+> "시스템을 뒤로 막대"은만 대 한 설명, 공식 이름은 하지 않습니다.
+
+시스템을 뒤로 탭 밴드와 app s 콘텐츠 영역 사이 삽입 하는 밴드를 모음은 합니다. 밴드는 앱의 가로를 따라 흐르며 왼쪽 가장자리에 뒤로 단추가 표시됩니다. 밴드 뒤로 단추에 대 한 적절 한 터치 대상 크기를 확인 하는 32 픽셀의 세로 높이 있습니다.
+
+시스템 뒤로 표시줄은 뒤로 단추 표시 여부에 따라 동적으로 나타납니다. 뒤로 단추 표시 된 경우, 시스템을 뒤로 막대 삽입 되 면 x 32 픽셀 탭 밴드 아래 app 콘텐츠 이동 합니다. 뒤로 단추 숨겨진 경우, 시스템을 뒤로 표시줄 동적으로 제거 되 면 x 32 픽셀 탭 밴드를 충족 하기 위해 응용 프로그램 콘텐츠 이동 합니다. 되지 않도록 하려면 앱의 UI shift 위나 아래로, [응용 프로그램에서 뒤로 단추](#back-button)를 사용 하는 드로잉 하는 것이 좋습니다.
+
+[제목 표시줄 사용자 지정](../shell/title-bar.md) 하기 위해 수행할을 통해 응용 프로그램 탭 및 시스템을 다시 모두 모음입니다. [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)배경색과 전경색 색 속성을 지정 하는 앱 이면 탭 및 시스템 뒤에 색을 적용할 막대입니다.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>사용자 지정 뒤로 탐색 동작 지침
 
@@ -190,16 +335,16 @@ private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하지 않고 동일한 피어 그룹의 페이지 간</strong>
-<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 두 페이지로 직접 이동할 수 있도록 하는 항상 존재하는 탐색 요소(예: 상단 탐색 창 또는 도킹된 왼쪽 탐색 창)가 없습니다.</p></td>
+<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 더 화면에 나타나는 두 페이지를 직접 탐색 기능을 제공 하는 (예: [NavigationView](../controls-and-patterns/navigationview.md)) 탐색 요소입니다.</p></td>
 <td style="vertical-align:top;"><strong>예</strong>
-<p>다음 그림에서 사용자는 동일한 피어 그룹의 두 페이지 간을 이동합니다. 페이지에서 상단 탐색 모음 또는 도킹된 왼쪽 탐색 창이 사용되지 않으므로 해당 탐색 내용이 탐색 기록에 추가됩니다.</p>
+<p>다음 그림에서는 사용자가 동일한 피어 그룹에서 두 페이지 간의 탐색 및 탐색 탐색 기록에 추가 해야 합니다.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하여 페이지 간, 동일한 피어 그룹</strong>
-<p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지 모두 동일한 탐색 요소에 표시됩니다. 예를 들어 두 페이지 모두 동일한 상단 창 요소를 사용하거나 두 페이지 모두 도킹된 왼쪽 탐색 창에 표시됩니다.</p></td>
+<p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지 [NavigationView](../controls-and-patterns/navigationview.md)와 같은 동일한 탐색 요소에 표시 됩니다.</p></td>
 <td style="vertical-align:top;"><strong>유동적입니다.</strong>
-<p>예, 탐색 기록을 추가하지만 주목할 만한 예외가 2개 있습니다. 앱 사용자가 피어 그룹 간에 자주 전환할 것으로 예상되는 경우, 또는 피어 그룹의 페이지 내에서 탐색 상태/기록을 유지하려는 경우 탐색 기록에 추가하지 마십시오. 이 경우 사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다. </p>
+<p>예, 두 예외적인 경우를 제외 된 탐색 기록에 추가 합니다. 예상 되는 피어 그룹을 자주, 페이지 사이 전환 하려면 응용 프로그램의 사용자 또는 탐색 계층 구조를 유지 하려는 경우 다음에 추가 하지 마십시오 탐색 기록 합니다. 이 경우 사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
