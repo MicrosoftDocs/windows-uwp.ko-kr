@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
-ms.openlocfilehash: 65ee6cd32e1fdb6900c859725b8deb6b5031d297
-ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
+keywords: windows 10, uwp, 백그라운드 작업
+ms.localizationpriority: medium
+ms.openlocfilehash: 00e685085c004cced24b9a42ef2261a26eef10bb
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2017
-ms.locfileid: "848428"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788308"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -213,7 +213,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>SupportsMultipleInstances 특성을 사용하여 트리거가 실행될 때마다 새 프로세스에서 실행
 
-이 예에서는 새 트리거가 실행될 때마다 자체 리소스 제한(메모리 및 CPU)을 가져오는 새 프로세스에서 실행되는 백그라운드 작업을 선언합니다. `SupportsMultipleInstances`를 사용하면 이 동작이 활성화됩니다. 이 특성을 사용하려면 SDK 버전 '10.0.15063'(Windows 10 크리에이터스 업데이트) 이상을 대상으로 해야 합니다.
+이 예에서는 새 트리거가 실행될 때마다 자체 리소스 제한(메모리 및 CPU)을 가져오는 새 프로세스에서 실행되는 백그라운드 작업을 선언합니다. `SupportsMultipleInstances`를 사용하면 이 동작이 활성화됩니다. 이 특성을 사용 하기 위해 버전 '10.0.15063' (Windows 10 작성자 업데이트) sdk (영문)를 대상 지정 해야 이상입니다.
 
 ```xml
 <Package

@@ -1,6 +1,6 @@
 ---
 author: msatranjr
-Description: 이 항목에서는 사용자 위치에 액세스해야 하는 앱에 대한 성능 지침에 대해 설명합니다.
+Description: This topic describes performance guidelines for apps that require access to a user's location.
 title: 위치 인식 앱에 대한 지침
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 ms.author: misatran
@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 위치, 지도, 지리적 위치
-ms.openlocfilehash: f2035762fe99e1692d8b8b5eea5260aeb39b8d2a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220735"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2786879"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>위치 인식 앱에 대한 지침
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -50,7 +51,7 @@ ms.locfileid: "220735"
 
     사용자가 설정을 통해 위치 정보에 대한 액세스를 해제할 경우 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 해제합니다. 앱은 위치 API 호출에 대한 **ACCESS\_DENIED** 결과를 받게 됩니다. 앱이 위치 데이터를 저장하거나 캐시할 경우 사용자가 위치 정보에 대한 액세스를 취소하면 캐시된 데이터를 지웁니다. 위치 서비스를 통해 위치 데이터를 사용할 수 없을 때 위치를 수동으로 입력하는 대체 방법을 제공합니다.
 
--   위치 서비스를 다시 사용하도록 설정할 수 있는 UI를 제공합니다. 예를 들어 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 다시 인스턴스화하고 위치 정보를 다시 가져오려고 시도하는 새로 고침 단추를 제공합니다.
+-   위치 서비스를 다시 사용하도록 설정할 수 있는 UI를 제공합니다. 예, [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 다시 인스턴스화합니다 및 위치 정보를 다시 가져올 하려고 하는 새로고침 단추를 제공 합니다.
 
     앱에서 위치 서비스를 다시 사용하도록 설정할 수 있는 UI를 제공합니다.
 
@@ -90,7 +91,7 @@ ms.locfileid: "220735"
         예를 들면 다음과 같습니다.
 
         -   앱이 광고 튜닝, 날씨, 뉴스 등에 대한 위치를 얻고 있는 경우 일반적으로 5000미터 정확성이면 충분합니다.
-        -   앱이 이웃의 인근 거래를 표시하고 있는 경우 일반적으로 300미터 정확성이 결과를 제공하는 데 적합합니다.
+        -   앱의 환경에 있는 많은 거래를 체결할 근처에 있는 표시 하는 경우 300 미터의 정확도 결과 제공 하도록 일반적으로 좋습니다.
         -   사용자가 인근 음식점에 대한 추천을 찾고 있는 경우 블록 내에서 위치를 얻으려고 하므로 100미터 정확성이 충분합니다.
         -   사용자가 자신의 위치를 공유하려고 하는 경우 앱은 약 10미터 정확성을 요청해야 합니다.
     -   앱에 특정 정확성 요구 사항이 있는 경우 [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) 속성을 사용하세요. 예를 들어 내비게이션 앱은 사용 가능한 위치 데이터가 앱의 요구 사항을 충족하는지 확인하기 위해 **Geocoordinate.accuracy** 속성을 사용해야 합니다.

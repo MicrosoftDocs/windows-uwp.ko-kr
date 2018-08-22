@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 25ea4c4caf5135b13b88eeea6f43bb36bd691c11
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 367bf5d5d554bd094ce3d5b726b818c8c388d398
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1863219"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787160"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이번 항목에서는 C++/WinRT에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
@@ -49,7 +49,7 @@ namespace Bookstore
 ```
 
 > [!IMPORTANT]
-> 응용 프로그램이 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 전달한 후 Microsoft Store에 성공적으로 수집되려면 *응용 프로그램에서 선언하는* 각 런타임 클래스의 최종 기본 클래스는 Windows.* 네임스페이스로 시작하는 형식이 되어야 합니다.
+> [Windows 앱 인증 키트 (영문)을](../debug-test-perf/windows-app-certification-kit.md) 전달 하도록 응용 프로그램에 대 한 전송, 유효성을 검사 하려면 Microsoft 저장소에서 테스트를 사용 하 고 따라서 수 성공적으로 수집 된 Microsoft 저장소로,를 각 런타임 클래스 *의 궁극적인 기본 클래스에 선언 된는 응용 프로그램* Windows.* 네임 스페이스에서 발생 하는 형식 이어야 합니다.
 
 이러한 요구 사항을 만족하려면 보기 모델 클래스를 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생시키세요. 또는 **DependencyObject**에서 파생되고, 바인딩이 가능한 기본 클래스를 선언한 후 해당 클래스에서 보기 모델을 파생시키는 방법도 있습니다. 데이터 모델을 C++ 구조체로 선언할 수는 있지만 MIDL로 선언할 필요는 없습니다(보기 모델에서만 사용하고 XAML을 직접 바인딩하지 않는 경우에 한하지만 이 경우에도 정의상 보기 모델이 될 가능성이 높습니다).
 
@@ -71,16 +71,16 @@ namespace winrt::Bookstore::implementation
     struct BookSku : BookSkuT<BookSku>
     {
         BookSku() = delete;
-        BookSku(hstring const& title);
+        BookSku(winrt::hstring const& title);
 
         hstring Title();
-        void Title(hstring const& value);
+        void Title(winrt::hstring const& value);
         event_token PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& value);
-        void PropertyChanged(event_token const& token);
+        void PropertyChanged(winrt::event_token const& token);
     
     private:
-        hstring title;
-        event<Windows::UI::Xaml::Data::PropertyChangedEventHandler> propertyChanged;
+        hstring m_title;
+        event<Windows::UI::Xaml::Data::PropertyChangedEventHandler> m_propertyChanged;
     };
 }
 ```
@@ -94,33 +94,33 @@ namespace winrt::Bookstore::implementation
 
 namespace winrt::Bookstore::implementation
 {
-    BookSku::BookSku(hstring const& title)
+    hstring BookSku::Title()
+    {
+        return m_title;
+    }
+
+    BookSku::BookSku(winrt::hstring const& title)
     {
         Title(title);
     }
 
-    hstring BookSku::Title()
+    void BookSku::Title(winrt::hstring const& value)
     {
-        return title;
-    }
-
-    void BookSku::Title(hstring const& value)
-    {
-        if (title != value)
+        if (m_title != value)
         {
-            title = value;
-            propertyChanged(*this, Windows::UI::Xaml::Data::PropertyChangedEventArgs{ L"Title" });
+            m_title = value;
+            m_propertyChanged(*this, Windows::UI::Xaml::Data::PropertyChangedEventArgs{ L"Title" });
         }
     }
 
     event_token BookSku::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
     {
-        return propertyChanged.add(handler);
+        return m_propertyChanged.add(handler);
     }
 
-    void BookSku::PropertyChanged(event_token const& token)
+    void BookSku::PropertyChanged(winrt::event_token const& token)
     {
-        propertyChanged.remove(token);
+        m_propertyChanged.remove(token);
     }
 }
 ```
@@ -190,13 +190,13 @@ namespace winrt::Bookstore::implementation
 > `m_bookSku` 형식은 프로젝션된 형식(**winrt::Bookstore::BookSku**)이며, **make**와 함께 사용하는 테플릿 매개 변수는 구현체 형식(**winrt::Bookstore::implementation::BookSku**)입니다. 그렇다 하더라도 **make**는 프로젝션된 형식 인스턴스를 반환합니다.
 
 ## <a name="add-a-property-of-type-bookstoreviewmodel-to-mainpage"></a>**BookstoreViewModel** 형식의 속성을 **MainPage**에 추가
-`MainPage.idl`을 열고 메인 UI 페이지를 나타내는 런타임 클래스를 선언합니다. 가져오기 문을 추가하여 `BookstoreViewModel.idl`을 가져온 후 **BookstoreViewModel** 형식의 읽기 전용 속성(MainViewModel)을 추가합니다.
+`MainPage.idl`을 열고 메인 UI 페이지를 나타내는 런타임 클래스를 선언합니다. 가져오기 문을 추가하여 `BookstoreViewModel.idl`을 가져온 후 **BookstoreViewModel** 형식의 읽기 전용 속성(MainViewModel)을 추가합니다. 또한 **MyProperty** 속성을 제거 합니다. 아래 목록에서 **import** 지시문을 note 수도 있습니다.
 
 ```idl
 // MainPage.idl
 import "BookstoreViewModel.idl";
 
-namespace BookstoreCPPWinRT
+namespace Bookstore
 {
     runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
     {
@@ -206,9 +206,13 @@ namespace BookstoreCPPWinRT
 }
 ```
 
-프로젝트를 다시 빌드하여 **MainPage** 런타임 클래스를 구현할 소스 코드 파일(`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`)을 다시 생성합니다. ViewModel 속성에 사용할 접근자 스텁을 생성된 파일에서 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`로 복사합니다.
+파일을 저장합니다. 지금은, 완료 될 때까지 프로젝트를 만들지 않습니다 하지만 이제 구축 하는 것은 **기본 페이지** 런타임 클래스를 구현 하는 소스 코드 파일이 자동으로 다시 생성 되기 때문에 유용한 것 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`). 따라서 계속 진행 하 고 지금 작성 합니다. 이 단계에서 참조를 얻을 수 있습니다 빌드 오류는 **'MainViewModel': 'winrt::Bookstore::implementation::MainPage'의 구성원이 아닙니다**합니다.
 
-보기 모델을 저장할 전용 멤버를 `\Bookstore\Bookstore\MainPage.h`에 추가합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 프로젝션된 형식인 **Bookstore::BookstoreViewModel**과 관련하여 구현됩니다. 구현체 형식이 동일한 프로젝트(컴파일 단위)에 있으므로 `nullptr_t`을 가져오는 생성자 오버로드를 통해 m_mainViewModel을 생성합니다.
+포함을 생략 하면 `BookstoreViewModel.idl` (의 목록을 볼 `MainPage.idl` 위에), 오류를 보면 다음 **필요 합니다. \ < "MainViewModel" 가까이**합니다. 다른 팁은 동일한 네임 스페이스에서 모든 형식 유지 되도록: 코드 목록에 표시 되는 네임 스페이스입니다.
+
+것으로 예상 하는 오류를 해결 하려면 지금 해야 생성 된 파일 로그 아웃 하 고으로 **MainViewModel** 속성에 대 한 접근자 스텁을 복사 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`합니다.
+
+보기 모델을 저장할 전용 멤버를 `\Bookstore\Bookstore\MainPage.h`에 추가합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 프로젝션된 형식인 **Bookstore::BookstoreViewModel**과 관련하여 구현됩니다. 구현체 형식이 동일한 프로젝트(컴파일 단위)에 있으므로 `nullptr_t`을 가져오는 생성자 오버로드를 통해 m_mainViewModel을 생성합니다. 또한 **MyProperty** 속성을 제거 합니다.
 
 ```cppwinrt
 // MainPage.h
@@ -221,18 +225,16 @@ namespace winrt::Bookstore::implementation
 
         Bookstore::BookstoreViewModel MainViewModel();
 
-    private:
         void ClickHandler(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& args);
 
+    private:
         Bookstore::BookstoreViewModel m_mainViewModel{ nullptr };
-
-        friend class MainPageT<MainPage>;
     };
 }
 ...
 ```
 
-`\Bookstore\Bookstore\MainPage.cpp`에서 구현체 형식을 선언하는 `BookstoreViewModel.h`를 추가합니다. [**winrt::make**](/uwp/cpp-ref-for-winrt/make)(구현체 형식 포함)를 호출하여 프로젝션된 형식의 새로운 인스턴스를 m_mainViewModel에 할당합니다. 책 타이틀에 대한 초기 값을 할당합니다. MainViewModel 속성 접근자를 구현합니다. 마지막으로 버튼의 이벤트 처리기에서 책 타이틀을 업데이트합니다.
+`\Bookstore\Bookstore\MainPage.cpp`에서 구현체 형식을 선언하는 `BookstoreViewModel.h`를 추가합니다. [**winrt::make**](/uwp/cpp-ref-for-winrt/make)(구현체 형식 포함)를 호출하여 프로젝션된 형식의 새로운 인스턴스를 m_mainViewModel에 할당합니다. 책 타이틀에 대한 초기 값을 할당합니다. MainViewModel 속성 접근자를 구현합니다. 마지막으로 버튼의 이벤트 처리기에서 책 타이틀을 업데이트합니다. 또한 **MyProperty** 속성을 제거 합니다.
 
 ```cppwinrt
 // MainPage.cpp
@@ -251,14 +253,14 @@ namespace winrt::Bookstore::implementation
         InitializeComponent();
     }
 
-    Bookstore::BookstoreViewModel MainPage::MainViewModel()
-    {
-        return m_mainViewModel;
-    }
-
     void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
     {
         MainViewModel().BookSku().Title(L"To Kill a Mockingbird");
+    }
+
+    Bookstore::BookstoreViewModel MainPage::MainViewModel()
+    {
+        return m_mainViewModel;
     }
 }
 ```
@@ -271,6 +273,9 @@ namespace winrt::Bookstore::implementation
 ```
 
 이제 프로젝트를 빌드하고 실행합니다. 버튼을 클릭하여 **Click** 이벤트 처리기를 실행합니다. 처리기가 책의 타이틀 변경자 함수를 호출합니다. 그러면 변경자가 이벤트를 발생시켜 UI가 **Title** 속성이 변경되었다는 것을 알 수 있습니다. 마지막으로 버튼이 해당 속성 값에 대한 쿼리를 다시 실행하여 **Content** 값을 업데이트합니다.
+
+## <a name="using-the-binding-markup-extension-with-cwinrt"></a>{Binding} 태그 확장을 사용 하 여 C + + / WinRT
+현재 릴리스 버전의 C + + / WinRT [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 하는데 필요한 {Binding} 태그 확장을 사용할 수 있도록 합니다.
 
 ## <a name="important-apis"></a>중요 API
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)

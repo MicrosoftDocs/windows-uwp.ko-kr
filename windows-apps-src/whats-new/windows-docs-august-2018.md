@@ -4,17 +4,17 @@ title: 8 월 2018의 Windows 문서에서 새로운-UWP 앱 개발 (영문)
 description: 8 월 2018에 대 한 Windows 10 개발자 설명서의 새로운 기능, 비디오, 예제 및 개발자 지침이 추가 되었습니다.
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 년 8 월
 ms.author: quradic
-ms.date: 8/9/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06eef0c115675ba9673a81459c91e0f08f6fab71
-ms.sourcegitcommit: be5b71a8ec7b686d5f93d56d10cb9a50c3c5bb4a
+ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "2748874"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787788"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>8 월 2018 Windows 개발자 문서에 새로운 소식
 
@@ -30,17 +30,17 @@ Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=
 
 * [Windows UI 라이브러리](https://aka.ms/winui-docs) 는 UWP 앱에 대 한 컨트롤 및 기타 사용자 interfact 요소를 제공 하는 NuGet 패키지의 집합입니다. 이러한 패키지는 Windows 10의 이전 버전과 호환 되도 사용자가 최신 OS 버전 없는 경우에 작동 하는 앱입니다.
 
-* [DropDownButton, 분할 단추, 및 ToggleSplitButton](../design/controls-and-patterns/buttons.md) 앱의 사용자 환경을 향상 시키기 위해 특수 기능을 사용 하 여 단추 컨트롤을 제공 합니다.
-
-* 이제 NavigationView는 [위쪽 탐색 모음에서](../design/controls-and-patterns/navigationview.md) 앱에 탐색 옵션의 더 적은 수의 경우 지원 하 고 앱의 콘텐츠에 대 한 더 많은 공간이 필요 합니다.
-
-* 트리 보기를 지원 하도록 향상 되었습니다 [데이터 바인딩 (영문), 항목 템플릿 및 용 및 드롭.](../design/controls-and-patterns/tree-view.md)
+* [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [분할 단추](../design/controls-and-patterns/buttons.md#create-a-split-button)및 [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) 앱의 사용자 인터페이스를 향상 시키기 위해 특수 기능을 사용 하 여 단추 컨트롤을 제공 합니다.
 
 ![전경색을 선택 하는 분할 단추](../design/controls-and-patterns/images/split-button-rtb.png)
 
+* 이제 NavigationView 앱 탐색 옵션 수가 적은 고 앱의 콘텐츠에 대 한 더 많은 공간이 필요 없는 경우에 대 한 [위쪽 탐색 모음](../design/controls-and-patterns/navigationview.md)지원 합니다.
+
+* 트리 보기를 지원 하도록 향상 되었습니다 [데이터 바인딩 (영문), 서식 파일, 항목 및 끌어서 놓기.](../design/controls-and-patterns/tree-view.md)
+
 ### <a name="package-support-framework"></a>패키지 지원 프레임 워크
 
-패키지 지원 프레임 워크는 오픈 소스 키트 (영문) MSIX 컨테이너에서 실행할 수 있도록 소스 코드에 액세스할 수 없을 때 픽스 win32 응용 프로그램에 적용 하는데 도움이 되는 경우  
+패키지 지원 프레임 워크 MSIX 컨테이너에서 실행할 수 있도록 소스 코드에 액세스할 수 없을 때 픽스 win32 응용 프로그램에 적용 하는 데 도움이 되는 공개 소스 키트입니다.
 
 자세한 내용을 보려면 [적용 런타임 MSIX 패키지 패키지 지원 프레임 워크를 사용 하 여 해결](../porting/package-support-framework.md)을 참조 하십시오.
 
@@ -52,7 +52,7 @@ Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=
 
 ### <a name="cwinrt-code-examples"></a>C + + / WinRT 코드 예제
 
-250 추가 했습니다 [C + + / WinRT](../cpp-and-winrt-apis/index.md) 코드와 함께 제공 된 기존 C +,이 문서에는 항목에 대 한 조각 + / CX 코드 예제입니다.
+250 추가 했습니다 [C + + / WinRT](../cpp-and-winrt-apis/index.md) 와 함께 제공 된 기존 C +,이 문서에서 항목을 목록 코드 + / CX 코드 예제입니다.
 
 ### <a name="project-rome"></a>프로젝트 로마
 

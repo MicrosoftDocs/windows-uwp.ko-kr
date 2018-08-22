@@ -4,18 +4,18 @@ Description: You can select the screenshots, logos, and other art assets (such a
 title: 앱 스크린샷, 이미지 및 예고편
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 ms.author: wdg-dev-content
-ms.date: 4/30/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
-ms.localizationpriority: high
-ms.openlocfilehash: e0ac8e01aab07e68e0a4f22160cb58e558b4dc42
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817784"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788438"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 
@@ -85,11 +85,13 @@ Store에서 더 많은 사용자 정의 디스플레이 만들기 위해 Store �
 
 Windows Phone 8.1 이전 버전에서 적절한 표시를 위해서는 이 이미지가 필요합니다. 앱에서 Windows Phone 8.1 이전 버전이 지원되지만 이 이미지가 제공되지 않는 경우에는 고객에게 앱 목록과 함께 공백 아이콘이 표시됩니다 (앱이 Windows Phone 8.1 이전 버전을 대상으로 하는 패키지만 갖고 있는 경우에는 Windows 10 고객에게도 적용됩니다.) 제출에 *오직* UWP 패키지만 포함되어 있다면, 이 이미지를 제공할 필요가 없습니다. (제출에 Windows Phone 8.x 패키지와 UWP 패키지가 모두 포함되어 있는 상태에서 이 이미지가 제공되는 경우에는 특정 Store 레이아웃으로 Windows 10에서 이를 사용할 수 있다는 점에 유의하세요. 이러한 문제를 막으려면 앱에서 지원하는 Windows Phone 버전용 [플랫폼별 목록](create-platform-specific-store-listings.md)을 생성하여 여기에 앱 타일 아이콘만 포함시킬 수 있습니다.).
 
-Windows 10(Xbox 포함)의 고객에게 목록을 표시할 때 Store에서 앱 패키지의 로고 이미지를 사용하지 못하도록 하고, 대신에 사용자가 업로드한 이미지만 사용하도록 하는 옵션도 있습니다. 이렇게 하면 Windows 10(Xbox 포함) 고객을 위한 Store에서 다양한 디스플레이에 앱이 표시되는 모양을 훨씬 세밀하게 제어할 수 있습니다.
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>디스플레이만 로고 이미지 저장소에 업로드
 
-업로드된 이미지만 Windows 10(Xbox 포함) 기반의 Store에 표시하려면 **Windows 10 고객의 경우 패키지 이미지 대신 업로드된 로고 이미지 표시** 확인란을 선택합니다 (이 확인란을 선택하지 앱 패키지의 이미지가 사용).
+없도록 하는 저장소 등록이 (Xbox 포함), Windows 10에서 고객에 게 표시할 때 앱의 패키지에서 로고 이미지를 사용 하 고 대신 업로드 하는 이미지에만 사용 하 여 저장소에는는 옵션이 있습니다. 이렇게 하면 Windows 10(Xbox 포함) 고객을 위한 Store에서 다양한 디스플레이에 앱이 표시되는 모양을 훨씬 세밀하게 제어할 수 있습니다. (제품 이전 운영 체제 버전을 지 원하는 경우 해당 고객 표시 될 수 이미지에 패키지에서이 옵션을 사용 하는 경우에.)
 
-이 확인란을 선택하면 **업로드된 Microsoft Store 로고**라는 섹션이 새로 나타납니다. 여기에서 300 x 300 "앱 타일 아이콘" 크기 등 이미지 3개를 업로드할 수 있습니다(상자를 선택하면, 해당 이미지를 제공하는 필드가 이 섹션으로 이동). 이 옵션을 사용하는 경우 300 x 300 픽셀, 150 x 150 픽셀, 71 x 71 픽셀 등 3가지 이미지 크기를 제공하는 것이 좋습니다. 그러나 반드시 제공해야 하는 이미지 크기는 300x300입니다.
+Windows 10 및 Xbox 고객을 위한 저장소의 이미지 (고객을 위한 Xbox를 포함 하는 Windows 10), 업로드를 사용 하 여 하지 패키지에서 모든 이미지를 사용 하 여, **이라는 확인란을 표시 하려면 내 패키지에서 이미지 대신 로고 이미지를 업로드 **.
+
+이 확인란을 선택 하면 **이미지를 표시 하는 저장소** 이라는 새 섹션이 나타납니다. 여기에 (상자,이 섹션으로 이동 하는 이미지를 제공 하는 필드를 선택) 하는 경우에 **1:1 app 바둑판식 아이콘 (300 x 300 픽셀)** 크기를 포함 하 여 3 이미지를 업로드할 수 있습니다. 이 옵션을 사용하는 경우 300 x 300 픽셀, 150 x 150 픽셀, 71 x 71 픽셀 등 3가지 이미지 크기를 제공하는 것이 좋습니다. 그러나 반드시 제공해야 하는 이미지 크기는 300x300입니다.
 
 
 <span id="promotional-images" />
@@ -209,7 +211,7 @@ Store 목록에 최대 15개의 예고편을 추가할 수 있습니다. 아래 
 - 제목은 255자 이하입니다. 
 - 예고편에 연령별 등급을 포함하지 마세요.
 
-Microsoft Store 목록 페이지의 다른 필드와 마찬가지로, 승인을 받은 예고편만 Microsoft Store에 게시할 수 있습니다. 예고편이 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx)을 준수하는지 확인하세요.
+Microsoft Store 목록 페이지의 다른 필드와 마찬가지로, 승인을 받은 예고편만 Microsoft Store에 게시할 수 있습니다. 예고편이 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 준수하는지 확인하세요.
 
 파일 형식에 따라 추가 요구 사항이 있습니다.
 

@@ -8,14 +8,14 @@ ms.date: 02/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: fd196c76afe8f8cb1841ba7a7869de725177969a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 404db3963d2f9508d7c81053abf96b0e742103f7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816928"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788668"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 
@@ -197,7 +197,13 @@ Kinect 센서를 콘솔에 연결해야 이 설정을 변경할 수 있습니다
 
 ![작업 영역에 도구 추가](images/device-portal-xbox-13.png)
 
-## <a name="see-also"></a>참고 항목
+### <a name="game-event-data"></a>게임 이벤트 데이터
+
+**게임 이벤트 데이터** 페이지에서 현재 대화 Xbox 하나에 기록 하는 이벤트 추적에 대 한 ETW (Windows) 게임 이벤트 수에 실시간 그래프에 해당 스트림을 볼 수입니다. 시스템에 기록 된 게임 이벤트 경우 볼 수도 있습니다 (이벤트, 발생 한 이벤트의 이름과 게임 제목) 세부 정보 데이터 그래프 아래 데이터 테이블의 각 이벤트를 설명 하는 합니다. 기록 된 이벤트 없는 경우에 표에만 있습니다.
+
+![게임 이벤트 데이터](images/device-portal-xbox-22.PNG)
+
+## <a name="see-also"></a>기타 참조
 
 * [Windows 장치 포털 개요](device-portal.md)
 * [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

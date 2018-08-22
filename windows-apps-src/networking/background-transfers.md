@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f533ab00cd80838d630a78f6f877f65fc1d617ba
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: fb273b6a37cb2f6322b0c9e3842b69676f82c616
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691492"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788628"
 ---
 # <a name="background-transfers"></a>백그라운드 전송
 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
@@ -29,9 +29,10 @@ ms.locfileid: "1691492"
 ### <a name="how-does-the-background-transfer-feature-work"></a>백그라운드 전송 기능은 어떻게 작동하나요?
 앱에서 백그라운드 전송을 사용하여 전송을 시작하면 [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) 또는 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) 클래스 개체를 사용하여 요청이 구성 및 초기화됩니다. 각 전송 작업은 호출 앱과는 별도로 시스템에서 개별적으로 처리됩니다. 앱의 UI를 통해 사용자에게 상태를 제공하려는 경우 진행률 정보를 사용할 수 있으며, 전송 중에도 앱이 일시 중지, 다시 시작 또는 취소되거나 데이터를 읽을 수 있습니다. 시스템에서 전송을 처리하는 방법에서는 스마트 전원 사용이 이루어지며, 연결된 앱에서 앱 일시 중단, 종료 또는 갑작스러운 네트워크 상태 변경 등의 이벤트 발생 시 생길 수 있는 문제가 방지됩니다.
 
-또한 백그라운드 전송은 시스템 브로커 이벤트를 사용합니다. 따라서 다운로드 수가 시스템에서 사용 가능한 이벤트 수로 제한됩니다. 기본적으로 500 이벤트이지만, 이벤트를 모든 프로세스가 공유합니다. 따라서 단일 응용 프로그램에서 한 번에 100개 이상의 백그라운드 전송을 만들지 마십시오.
+> [!NOTE]
+> 앱당 리소스 제한 때문에, 특정 주어진 시간 동안 앱의 전송이 200을 초과할 수 없습니다(DownloadOperations + UploadOperations). 이런 제한 기준을 초과하면 앱의 전송 큐가 복구할 수 없는 상태가 됩니다.
 
-애플리케이션이 백그라운드 전송을 시작할 때, 응용 프로그램이 기존의 모든 [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) 개체에서 [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync)를 호출해야 합니다. 이렇게 하지 않으면 이벤트 누수가 발생하고, 백그라운드 전송을 사용할 수 없습니다.
+응용 프로그램을 시작 하는 경우 모든 기존 [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) 및 [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) 개체에서 [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) 를 호출 해야 합니다. 이렇게 하지 않으면 이미 완료 된 전송을 누수 포함 될 하 고 결국 렌더링할 백그라운드 전송 기능을 사용 하 여 사용할 수 없게 됩니다.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>백그라운드 전송을 사용하여 인증된 파일 요청 수행
 백그라운드 전송은 기본 서버 및 프록시 자격 증명, 쿠키를 지원하는 방법을 제공하는 것은 물론, 각 전송 작업에 대한 사용자 지정 HTTP 헤더 사용([**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)를 통해)도 지원합니다.
@@ -167,8 +168,6 @@ function uploadFiles() {
 백그라운드 전송을 사용할 경우 각 다운로드는 작업을 일시 중지, 다시 시작 및 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **DownloadOperation**별로 자동으로 처리되며 다운로드는 앱 일시 중단 또는 일시 중지 중에도 계속되며 앱 종료 후에도 유지됩니다. 모바일 네트워크 시나리오의 경우 [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 다운로드를 시작하거나 계속할지를 나타냅니다.
 
 빠르게 완료되는 작은 리소스를 다운로드하는 경우 백그라운드 전송 대신 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) API를 사용해야 합니다.
-
-앱당 리소스 제한 때문에, 특정 주어진 시간 동안 앱의 전송이 200을 초과할 수 없습니다(DownloadOperations + UploadOperations). 이런 제한 기준을 초과하면 앱의 전송 큐가 복구할 수 없는 상태가 됩니다.
 
 다음 예에서는 기본 다운로드를 만들고 초기화하는 방법과 이전 앱 세션의 지속형 작업을 열거 및 다시 시도하는 방법을 안내합니다.
 

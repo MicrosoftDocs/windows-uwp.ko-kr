@@ -4,18 +4,18 @@ Description: The Microsoft Store offers Mobile Operator Billing as a payment met
 title: 통신사 청구
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
-ms.localizationpriority: high
-ms.openlocfilehash: 8e10f3d1cdee250e2d9ca140759a90cbdf0a8773
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 4bfb2fbbea42aaf1ed3c0ffc42f71dc38b2a1ede
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817514"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788118"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -46,14 +46,13 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 네덜란드     | KPN                              |
 | 노르웨이          | Telenor, Telia                   |
 | 폴란드          | Orange                           |
-| 루마니아         | Orange                           |
-| 러시아          | Beeline                          |
-| 싱가포르       | M1 Limited                       |
+| 싱가포르       | 제한 된 M1, StarHub              |
 | 슬로바키아        | Slovak Telekom                   |
 | 스페인           | Orange                           |
 | 스웨덴          | Telenor, 3                       |
 | 스위스     | Swisscom, Sunrise                |
 | 터키          | Turkcell                         |
+| 아랍에미리트 | Etisalat                    |
 | 미국   | Sprint, Verizon                  |
 | 영국  | O2, 3 UK, EE                     |
 

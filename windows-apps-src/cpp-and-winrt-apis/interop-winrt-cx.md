@@ -9,15 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e1e939f6df9bd35e3717b9cc0ce810e97275494
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: 02aa86231cd611bd20a386d3da2f9d2b6dc5df66
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912921"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788263"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 C++/CX 사이의 상호 운용성
-이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. 도우미 함수는 두 언어 프로젝션을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 C++/CX에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
+이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. 두 언어 예측을 사용 하는 코드 간의 상호 운용성을 사용할 수 또는 C +에서 코드를 점진적으로 이동할 때 함수를 사용할 수 + / C + CX + / WinRT (참조 [이동 C + + / WinRT에서 C + + / CX](move-to-winrt-from-cx.md)).
 
 ## <a name="fromcx-and-tocx-functions"></a>from_cx 함수와 to_cx 함수
 아래 도우미 함수는 C++/CX 개체를 상응하는 C++/WinRT 개체로 변환합니다. 이 함수는 C++/CX 개체를 기본 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스 포인터로 캐스팅합니다. 그런 다음 해당 포인터에 대한 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출하여 C++/WinRT 개체의 기본 인터페이스에 대해 쿼리를 실행합니다. **QueryInterface**는 C++/CX safe_cast 확장에 상응하는 Windows 런타임 응용 프로그램 이진 인터페이스(ABI)입니다. 그러면 [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) 함수가 C++/WinRT 개체의 기본 **IUnknown** 인터페이스 포인터 주소를 다른 값으로 설정할 수 있도록 가져옵니다.

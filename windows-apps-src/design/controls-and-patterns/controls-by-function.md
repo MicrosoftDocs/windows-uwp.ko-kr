@@ -12,22 +12,35 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 21539d625dc70ded7bec77b9916c7ea4bff72536
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396812"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788528"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
- 
-
 Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨트롤 라이브러리를 제공합니다. 이러한 컨트롤에는 시각적으로 표시되는 컨트롤도 있고, 이미지와 미디어 같이 다른 컨트롤이나 콘텐츠의 컨테이너 역할을 하는 컨트롤도 있습니다. 
 
-[XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다. 
+[XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다.
 
-다음은 앱에서 사용할 수 있는 일반적인 XAML 컨트롤의 기능별 목록입니다. 
+<table>
+<th align="left">XAML 컨트롤 갤러리<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p>설치 된 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 응용 프로그램을 설치한 경우 여기를 클릭 하 <a href="xamlcontrolsgallery:/item/NavigationView">응용 프로그램을 열고 작업에서 NavigationView를 참조 하십시오.</a> </p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
+
+다음은 앱에서 사용할 수 있는 일반적인 XAML 컨트롤의 기능별 목록입니다.
 
 ## <a name="appbars-and-commands"></a>앱 바 및 명령
 
@@ -257,7 +270,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 참조: [Flyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-디자인 및 방법: [상황에 맞는 메뉴 및 대화 상자](dialogs.md) 
+디자인 및 사용 방법: [플라이 아웃](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>메뉴 플라이아웃
 사용자 현재 수행 중인 작업과 관련된 명령 또는 옵션 목록을 일시적으로 표시합니다.
@@ -277,7 +290,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 참조: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx), [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
 
-디자인 및 방법: [상황에 맞는 메뉴 및 대화 상자](dialogs.md) 
+디자인 및 사용 방법: [메뉴 및 상황에 맞는 메뉴](menus.md) 
 
 샘플 코드: [XAML 상황에 맞는 메뉴 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620021)
 
@@ -286,7 +299,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 참조: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-디자인 및 방법: [상황에 맞는 메뉴 및 대화 상자](dialogs.md) 
+디자인 및 사용 방법: [대화 상자](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>도구 설명
 요소에 대한 정보를 표시하는 팝업 창입니다. 
@@ -540,58 +553,16 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 ## <a name="navigation"></a>탐색
 
-### <a name="hub"></a>허브
-사용자가 콘텐츠의 여러 섹션을 보고 이동할 수 있는 컨테이너 컨트롤입니다.
+### <a name="navigationview"></a>NavigationView
 
-```xaml
-<Hub>
-    <HubSection>
-        <!--- hub section content -->
-    </HubSection>
-    <HubSection>
-        <!--- hub section content -->
-    </HubSection>
-</Hub>
-```
+융통성 있는 컨테이너 및 왼쪽된 탐색 창의 위쪽 탐색 모음 및 탭 패턴을 구현 하는 유연한 탐색 모델입니다.
 
-참조: [Hub](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx) 
+참조: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-디자인 및 방법: [허브 컨트롤 가이드](hub.md) 
-
-샘플 코드: [XAML 허브 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkID=309828)
-
-### <a name="pivot"></a>피벗
-일반적으로 동일한 데이터 집합에서 서로 다른 피벗(보기 또는 필터) 간에 빠르게 이동하는 방법을 제공하는 전체 화면 컨테이너 및 탐색 모델입니다.
-
-"탭" 레이아웃으로 피벗 컨트롤 스타일을 지정할 수 있습니다.
-
-참조: [Pivot](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) 
-
-디자인 및 방법: [탭 및 피벗 컨트롤 가이드](tabs-pivot.md) 
-
-샘플 코드: [피벗 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619903&amp;clcid=0x409)
-
-### <a name="semantic-zoom"></a>시맨틱 줌
-사용자가 항목 컬렉션의 두 가지 뷰 사이에서 확대/축소할 수 있도록 해 주는 컨테이너 컨트롤입니다.
-
-```xaml
-<SemanticZoom>
-    <ZoomedInView>
-        <GridView></GridView>
-    </ZoomedInView>
-    <ZoomedOutView>
-        <GridView></GridView>
-    </ZoomedOutView>
-</SemanticZoom>
-```
-
-참조: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.aspx) 
-
-디자인 및 방법: [시맨틱 줌 컨트롤 가이드](semantic-zoom.md) 
-
-샘플 코드: [XAML GridView 그룹화 및 SemanticZoom 샘플](http://go.microsoft.com/fwlink/p/?linkid=226564)
+디자인 및 사용 방법: [NavigationView 제어 가이드](navigationview.md)
 
 ### <a name="splitview"></a>분할 보기
+
 기본 콘텐츠에 대한 보기 하나와 일반적으로 탐색 메뉴에 사용되는 다른 보기 이렇게 두 개의 보기가 포함된 컨테이너 컨트롤입니다.
 
 ![분할 보기 컨트롤](images/controls/split-view.png) 
@@ -612,6 +583,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 디자인 및 방법: [분할 보기 컨트롤 가이드](split-view.md)
 
 ### <a name="web-view"></a>웹 뷰
+
 웹 콘텐츠를 호스트하는 컨테이너 컨트롤입니다.
 
 ```xaml
@@ -624,6 +596,27 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 디자인 및 방법: 웹 보기에 대한 지침 
 
 샘플 코드: [XAML WebView 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238582)
+
+### <a name="semantic-zoom"></a>시맨틱 줌
+
+사용자가 항목 컬렉션의 두 가지 뷰 사이에서 확대/축소할 수 있도록 해 주는 컨테이너 컨트롤입니다.
+
+```xaml
+<SemanticZoom>
+    <ZoomedInView>
+        <GridView></GridView>
+    </ZoomedInView>
+    <ZoomedOutView>
+        <GridView></GridView>
+    </ZoomedOutView>
+</SemanticZoom>
+```
+
+참조: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.aspx) 
+
+디자인 및 방법: [시맨틱 줌 컨트롤 가이드](semantic-zoom.md)
+
+샘플 코드: [XAML GridView 그룹화 및 SemanticZoom 샘플](http://go.microsoft.com/fwlink/p/?linkid=226564)
 
 ## <a name="progress-controls"></a>진행률 컨트롤
 

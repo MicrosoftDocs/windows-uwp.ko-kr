@@ -4,18 +4,18 @@ title: 지도에서 바둑판식 이미지 오버레이
 description: '타일 소스를 사용하여 지도에 타사 또는 사용자 지정 바둑판식 이미지를 오버레이합니다. 타일 소스를 사용하여 특수 정보(예제: 날씨 데이터, 인구 데이터, 지진 데이터 등)를 오버레이하거나 기본 지도를 전체적으로 바꿉니다.'
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 07/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 위치, 이미지, 오버레이
 ms.localizationpriority: medium
-ms.openlocfilehash: fb2fafb3feeb5242c9069ea9e871eebc90351714
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691069"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788638"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>지도에서 바둑판식 이미지 오버레이
 
@@ -34,11 +34,9 @@ ms.locfileid: "1691069"
 
 다음 예에서는 X 및 Y 좌표와 확대/축소 수준에 대한 대체 가능한 매개 변수를 표시하는 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성을 보여 줍니다.
 
-``` syntax
-    http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
+```syntax
+http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 ```
-
- 
 
 X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타일 위치를 나타냅니다. 타일 번호 지정 시스템은 지도의 왼쪽 위 모서리를 기준으로 {0, 0}부터 시작합니다. 예를 들어 {1, 2}의 타일은 타일 그리드의 세 번째 행의 두 번째 열에 있습니다.
 
@@ -58,7 +56,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
     다음 예에서는 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)를 인스턴스화합니다. 이 예제에서는 **HttpMapTileDataSource**의 생성자에서 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 값을 지정합니다.
 
-    ```cs
+    ```csharp
         HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
           "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
     ```
@@ -67,7 +65,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
     다음 예에서는 [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)의 생성자에서 [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149)를 지정합니다.
 
-    ```cs
+    ```csharp
         MapTileSource tileSource = new MapTileSource(dataSource);
     ```
 
@@ -80,7 +78,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
 3.  [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)를 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 [**TileSources**](https://msdn.microsoft.com/library/windows/apps/dn637053) 컬렉션에 추가합니다.
 
-    ```cs
+    ```csharp
          MapControl1.TileSources.Add(tileSource);
     ```
 
@@ -93,7 +91,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 2.  웹 서비스에 필요한 URI의 형식을 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성 값으로 지정합니다. 이 값을 만들려면 기본 URI에 대체 가능한 매개 변수를 삽입합니다. 예를 들어 다음 코드 샘플에서 **UriFormatString** 값은 다음과 같습니다.
 
     ``` syntax
-        http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
+    http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
     ```
 
     웹 서비스에서 대체 가능한 매개 변수 {x}, {y} 및 {zoomlevel}을 포함하는 URI를 지원해야 합니다. 대부분의 웹 서비스(예제: Nokia, Bing 및 Google)에서는 이 형식의 URI를 지원합니다. 웹 서비스에 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성과 함께 사용할 수 없는 추가 인수가 필요한 경우 사용자 지정 URI를 만들어야 합니다. [**UriRequested**](https://msdn.microsoft.com/library/windows/apps/dn636993) 이벤트를 처리하여 사용자 지정 URI를 만들고 반환합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [사용자 지정 URI 제공](#customuri) 섹션을 참조하세요.
@@ -103,47 +101,71 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 다음 예에서는 북미 지역 지도에 가상 웹 서비스의 타일을 오버레이합니다. [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)의 값은 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)의 생성자에서 지정합니다. 이 예에서 타일은 선택적 [**Bounds**](https://msdn.microsoft.com/library/windows/apps/dn637147) 속성에 지정된 지리적 경계 내에만 표시됩니다.
 
 ```csharp
-        private void AddHttpMapTileSource()
-        {
-            // Create the bounding box in which the tiles are displayed.
-            // This example represents North America.
-            BasicGeoposition northWestCorner =
-                new BasicGeoposition() { Latitude = 48.38544, Longitude = -124.667360 };
-            BasicGeoposition southEastCorner =
-                new BasicGeoposition() { Latitude = 25.26954, Longitude = -80.30182 };
-            GeoboundingBox boundingBox = new GeoboundingBox(northWestCorner, southEastCorner);
+private void AddHttpMapTileSource()
+{
+    // Create the bounding box in which the tiles are displayed.
+    // This example represents North America.
+    BasicGeoposition northWestCorner =
+        new BasicGeoposition() { Latitude = 48.38544, Longitude = -124.667360 };
+    BasicGeoposition southEastCorner =
+        new BasicGeoposition() { Latitude = 25.26954, Longitude = -80.30182 };
+    GeoboundingBox boundingBox = new GeoboundingBox(northWestCorner, southEastCorner);
 
-            // Create an HTTP data source.
-            // This example retrieves tiles from a fictitious web service.
-            HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
-                "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
+    // Create an HTTP data source.
+    // This example retrieves tiles from a fictitious web service.
+    HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
+        "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
-            // Optionally, add custom HTTP headers if the web service requires them.
-            dataSource.AdditionalRequestHeaders.Add("header name", "header value");
+    // Optionally, add custom HTTP headers if the web service requires them.
+    dataSource.AdditionalRequestHeaders.Add("header name", "header value");
 
-            // Create a tile source and add it to the Map control.
-            MapTileSource tileSource = new MapTileSource(dataSource);
-            tileSource.Bounds = boundingBox;
-            MapControl1.TileSources.Add(tileSource);
-        }
+    // Create a tile source and add it to the Map control.
+    MapTileSource tileSource = new MapTileSource(dataSource);
+    tileSource.Bounds = boundingBox;
+    MapControl1.TileSources.Add(tileSource);
+}
+```
+
+```cppwinrt
+...
+#include <winrt/Windows.Devices.Geolocation.h>
+#include <winrt/Windows.UI.Xaml.Controls.Maps.h>
+...
+void MainPage::AddHttpMapTileSource()
+{
+    Windows::Devices::Geolocation::BasicGeoposition northWest{ 48.38544, -124.667360 };
+    Windows::Devices::Geolocation::BasicGeoposition southEast{ 25.26954, -80.30182 };
+    Windows::Devices::Geolocation::GeoboundingBox boundingBox{ northWest, southEast };
+
+    Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource dataSource{
+        L"http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}" };
+
+    dataSource.AdditionalRequestHeaders().Insert(L"header name", L"header value");
+
+    Windows::UI::Xaml::Controls::Maps::MapTileSource tileSource{ dataSource };
+    tileSource.Bounds(boundingBox);
+
+    MapControl1().TileSources().Append(tileSource);
+}
+...
 ```
 
 ```cpp
 void MainPage::AddHttpMapTileSource()
 {
-       BasicGeoposition northWest = { 48.38544, -124.667360 };
-       BasicGeoposition southEast = { 25.26954, -80.30182 };
-       GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
+    BasicGeoposition northWest = { 48.38544, -124.667360 };
+    BasicGeoposition southEast = { 25.26954, -80.30182 };
+    GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
 
-       auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
-             "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
+    auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
+        "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
-       dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
+    dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
 
-       auto tileSource = ref new Windows::UI::Xaml::Controls::Maps::MapTileSource(dataSource);
-       tileSource->Bounds = boundingBox;
+    auto tileSource = ref new Windows::UI::Xaml::Controls::Maps::MapTileSource(dataSource);
+    tileSource->Bounds = boundingBox;
 
-       this->MapControl1->TileSources->Append(tileSource);
+    this->MapControl1->TileSources->Append(tileSource);
 }
 ```
 
@@ -202,7 +224,6 @@ void MainPage::AddHttpMapTileSource()
 
 ## <a name="provide-a-custom-uri"></a>사용자 지정 URI 제공
 
-
 [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992) 속성 또는 [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994)의 [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998) 속성과 함께 사용할 수 있는 대체 가능한 매개 변수가 타일을 검색하는 데 충분하지 않은 경우 사용자 지정 URI를 만들어야 합니다. **UriRequested** 이벤트에 대한 사용자 지정 처리기를 제공하여 사용자 지정 URI를 만들고 반환합니다. 각 개별 타일에 대해 **UriRequested** 이벤트가 발생합니다.
 
 1.  **UriRequested** 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileUriRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637177)의 [**X**](https://msdn.microsoft.com/library/windows/apps/dn610743), [**Y**](https://msdn.microsoft.com/library/windows/apps/dn610744) 및 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn610745) 속성과 결합하여 사용자 지정 URI를 만듭니다.
@@ -247,7 +268,6 @@ using System.Threading.Tasks;
 ```
 
 ## <a name="overlay-tiles-from-a-custom-source"></a>사용자 지정 소스의 타일 오버레이
-
 
 [**CustomMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636983)를 사용하여 사용자 지정 타일을 오버레이합니다. 타일을 프로그래밍 방식으로 메모리에서 즉시 만들거나, 코드를 작성하여 다른 소스에서 기존 타일을 로드합니다.
 
@@ -316,47 +336,87 @@ using System.Threading.Tasks;
         }
 ```
 
-```cpp
-InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
+```cppwinrt
+...
+#include <winrt/Windows.Storage.Streams.h>
+...
+Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::InMemoryRandomAccessStream> MainPage::CustomRandomAccessStream()
 {
-       int pixelHeight = 256;
-       int pixelWidth = 256;
-       int bpp = 4;
+    constexpr int pixelHeight{ 256 };
+    constexpr int pixelWidth{ 256 };
+    constexpr int bpp{ 4 };
 
-       Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
+    std::array<uint8_t, pixelHeight * pixelWidth * bpp> bytes;
 
-       for (int y = 0; y < pixelHeight; y++)
-       {
-              for (int x = 0; x < pixelWidth; x++)
-              {
-                     int pixelIndex = y * pixelWidth + x;
-                     int byteIndex = pixelIndex * bpp;
+    for (int y = 0; y < pixelHeight; y++)
+    {
+        for (int x = 0; x < pixelWidth; x++)
+        {
+            int pixelIndex{ y * pixelWidth + x };
+            int byteIndex{ pixelIndex * bpp };
 
-                     // Set the current pixel bytes.
-                     bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
-                     bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
-                     bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
-                     bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
-              }
-       }
+            // Set the current pixel bytes.
+            bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
+            bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
+            bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
+            bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
+        }
+    }
 
-       // Create RandomAccessStream from byte array.
-       InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
-       IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
-       DataWriter^ writer = ref new DataWriter(outputStream);
-       writer->WriteBytes(bytes);
+    // Create RandomAccessStream from byte array.
+    Windows::Storage::Streams::InMemoryRandomAccessStream randomAccessStream;
+    Windows::Storage::Streams::IOutputStream outputStream{ randomAccessStream.GetOutputStreamAt(0) };
+    Windows::Storage::Streams::DataWriter writer{ outputStream };
+    writer.WriteBytes(bytes);
 
-       create_task(writer->StoreAsync()).then([writer](unsigned int)
-       {
-              create_task(writer->FlushAsync());
-       });
+    co_await writer.StoreAsync();
+    co_await writer.FlushAsync();
 
-       return randomAccessStream;
+    co_return randomAccessStream;
+}
+...
+```
+
+```cpp
+InMemoryRandomAccessStream^ TileSources::CustomRandomAccessStream::get()
+{
+    int pixelHeight = 256;
+    int pixelWidth = 256;
+    int bpp = 4;
+
+    Array<byte>^ bytes = ref new Array<byte>(pixelHeight * pixelWidth * bpp);
+
+    for (int y = 0; y < pixelHeight; y++)
+    {
+        for (int x = 0; x < pixelWidth; x++)
+        {
+            int pixelIndex = y * pixelWidth + x;
+            int byteIndex = pixelIndex * bpp;
+
+            // Set the current pixel bytes.
+            bytes[byteIndex] = (byte)(std::rand() % 256);        // Red
+            bytes[byteIndex + 1] = (byte)(std::rand() % 256);    // Green
+            bytes[byteIndex + 2] = (byte)(std::rand() % 256);    // Blue
+            bytes[byteIndex + 3] = (byte)((std::rand() % 56) + 200);    // Alpha (0xff = fully opaque)
+        }
+    }
+
+    // Create RandomAccessStream from byte array.
+    InMemoryRandomAccessStream^ randomAccessStream = ref new InMemoryRandomAccessStream();
+    IOutputStream^ outputStream = randomAccessStream->GetOutputStreamAt(0);
+    DataWriter^ writer = ref new DataWriter(outputStream);
+    writer->WriteBytes(bytes);
+
+    create_task(writer->StoreAsync()).then([writer](unsigned int)
+    {
+        create_task(writer->FlushAsync());
+    });
+
+    return randomAccessStream;
 }
 ```
 
 ## <a name="replace-the-default-map"></a>기본 지도 바꾸기
-
 
 기본 지도를 타사 또는 사용자 지정 타일로 완전히 바꾸려면
 

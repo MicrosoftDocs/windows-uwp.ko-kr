@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: acd14b63bb877dca2f801423f9d0de73ec994acf
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 3ba33a1e79a2447c5dac546ce0f1caeaf16929a3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691972"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788386"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
 
@@ -26,7 +26,7 @@ ms.locfileid: "1691972"
 자체 카메라 UI를 제공하려고 하거나 시나리오가 캡처 작업에 대해 좀 더 강력한 하위 수준의 제어를 요구하는 경우 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체를 사용하고 자체 캡처 환경을 구현해야 합니다. 자세한 내용은 [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)를 참조하세요.
 
 > [!NOTE]
-> CameraCaptureUI를 사용 중인 경우 앱 매니페스트 파일에 **웹캠** 또는 **마이크** 기능을 지정해서는 안 됩니다. 그러면 디바이스의 카메라 개인 정보 설정에 앱이 표시되지만 사용자가 앱에 대한 카메라 액세스를 거부하더라도 CameraCaptureUI의 미디어 캡처가 차단되지 않습니다. Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. CameraCaptureUI 사용 시 웹캠 또는 마이크 기능을 지정하면 스토어에 제출된 앱이 WACK(Windows 응용 프로그램 인증 키트) 인증에 실패할 수 있습니다.
+> 앱만 CameraCaptureUI를 사용 하는 경우 응용 프로그램 매니페스트 파일에 **웹캠** 또는 **마이크** 기능을 지정 하지 않아야 합니다. 그러면 디바이스의 카메라 개인 정보 설정에 앱이 표시되지만 사용자가 앱에 대한 카메라 액세스를 거부하더라도 CameraCaptureUI의 미디어 캡처가 차단되지 않습니다. Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. 앱에는 Windows 응용 프로그램 인증 (영문) 키트 (영문) 인증을 유일한 사진 캡처 메커니즘으로 CameraCaptureUI를 사용 하는 경우 마이크 또는 웹캠 기능을 지정 하는 경우 저장소에 제출 하는 경우 실패할 수 있습니다.
 > MediaCapture를 사용하여 오디오, 사진 또는 비디오를 프로그래밍 방식으로 캡처하는 경우 앱 매니페스트 파일에 웹캠 또는 마이크 기능을 지정해야 합니다.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>CameraCaptureUI로 사진 캡처

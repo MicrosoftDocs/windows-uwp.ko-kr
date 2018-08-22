@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: windows 10, uwp, 앱 인증 (영문)
 ms.localizationpriority: medium
-ms.openlocfilehash: f5c28b17147ac285cefb0b93e36ac6f00b115f3a
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "927758"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2802044"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
