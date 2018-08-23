@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 이동, 착신 전환, 값 범주, 이동 의미 체계, 완벽 한 전달, lvalue, rvalue, glvalue, prvalue, xvalue
 ms.localizationpriority: medium
 ms.openlocfilehash: cbccaf78b45d85d93619977d149431c4eec9e10a
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2796950"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2814675"
 ---
 # <a name="value-categories-and-references-to-them"></a>값 범주 및 자신에 대 한 참조
 이 항목에서는 c + +에 존재 하는 값 (및 값에 대 한 참조)의 다양 한 종류에 설명 합니다. 여러분가 듣지 *lvalue* 및 *rvalue*하지만이 항목에 게 제공 하는 용어에 쿼리하고 간주 하지 않을 수도 있습니다. 하 고 다른 종류의 값을 너무 않습니다.

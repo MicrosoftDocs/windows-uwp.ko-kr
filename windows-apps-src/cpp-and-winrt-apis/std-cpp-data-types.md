@@ -10,14 +10,14 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
 ms.openlocfilehash: 729a3c30f84e20a89912b728db1efecc3e54ad9e
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2791578"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2815195"
 ---
 # <a name="standard-c-data-types-and-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>표준 C++ 데이터 형식 및 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-C++/WinRT에서는 일부 C++ 표준 라이브러리 데이터 형식이 포함된 표준 C++ 데이터 형식을 사용해 Windows 런타임 API를 호출할 수 있습니다. Api (영문)를 표준 문자열을 전달할 수 있습니다 (참조 [문자열 처리 C + + / WinRT](strings.md)), 목록 및 표준 컨테이너 의미가 동일한 컬렉션 것으로 예상 되는 Api를 이니셜라이저의 전달할 수 있습니다.
+C++/WinRT에서는 일부 C++ 표준 라이브러리 데이터 형식이 포함된 표준 C++ 데이터 형식을 사용해 Windows 런타임 API를 호출할 수 있습니다. 표준 문자열을 Api로 전달할 수 있습니다 (참조 [문자열 처리 C + + /cli WinRT](strings.md)), 목록 및 표준 컨테이너 Api는 의미가 동일한 컬렉션에 이니셜라이저를 전달할 수 있습니다.
 
 ## <a name="standard-initializer-lists"></a>표준 이니셜라이저 목록
 이니셜라이저 목록(**std::initializer_list**)은 C++ 표준 라이브러리 구문을 말합니다. 이니셜라이저 목록은 일부 Windows 런타임 생성자와 메서드를 호출할 때 사용할 수 있습니다. 예를 들어, 목록 하나로 [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes)를 호출할 수 있습니다.
@@ -92,7 +92,7 @@ std::array<byte, 3> theArray{ 99, 98, 97 };
 dataWriter.WriteBytes(theArray); // theArray is converted to an array_view before being passed to WriteBytes.
 ```
 
-C++/WinRT는 **std::vector**를 Windows 런타임 컬렉션 매개 변수로 바인딩합니다. 따라서 **std::vector&lt;winrt::hstring&gt;** 을 전달할 수 있으며, 이후 **winrt::hstring**의 Windows 런타임 컬렉션으로 적절하게 변환됩니다. 수신자가 비동기 염두에 추가 정보를 방법이 있습니다. 해당 사례의 구현 세부 정보로 인해 벡터의 이동 이나 복사본을 제공 해야 하므로 rvalue를 제공 하려면 필요 합니다. 아래 코드 예제에서는 이동 벡터의 소유권 비동기 수신자가 허용 하는 매개 변수 유형의 개체 (다음 우리는 액세스 하지 않도록 주의 하 고 `vecH` 이동 후에 다시). Rvalue 하는 방법에 대 한 상세 [값 범주 및 자신에 대 한 참조를](cpp-value-categories.md)참조 하십시오.
+C++/WinRT는 **std::vector**를 Windows 런타임 컬렉션 매개 변수로 바인딩합니다. 따라서 **std::vector&lt;winrt::hstring&gt;** 을 전달할 수 있으며, 이후 **winrt::hstring**의 Windows 런타임 컬렉션으로 적절하게 변환됩니다. 호출자가 비동기 경우 염두에 추가 정보는. 케이스의 구현 세부 사항을 때문에 벡터의 이동 이나 복사본을 제공 해야 하므로, rvalue를 제공 해야 합니다. 다음 코드 예제에서는 답변 드리기 벡터의 소유권 비동기 호출 수신자에 의해 허용 되는 매개 변수 형식의 개체 (액세스 하지 않도록 주의 하 고 `vecH` 이동한 다음 다시). Rvalue에 대해 자세히 알고 싶으면 [범주 값 및 참조를](cpp-value-categories.md)참조 하십시오.
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vector<winrt::hstring> vecH)
@@ -101,7 +101,7 @@ IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vecto
 }
 ```
 
-하지만 Windows 런타임 컬렉션이 필요한 경우에는 **std::vector&lt;std::wstring&gt;** 을 전달할 수 없습니다. 이는 **std::wstring**의 Windows 런타임 컬렉션으로 적절하게 변환된 경우에는 C++ 언어가 컬렉션의 형식 매개 변수를 강제 변환하지 못하기 때문입니다. 다음 코드 예제에서는 컴파일되지 따라서 (등에 솔루션을 전달 하 고는 **std:: vector&lt;winrt::hstring&gt; ** 위에 표시 된 것과 같이 대신).
+하지만 Windows 런타임 컬렉션이 필요한 경우에는 **std::vector&lt;std::wstring&gt;** 을 전달할 수 없습니다. 이는 **std::wstring**의 Windows 런타임 컬렉션으로 적절하게 변환된 경우에는 C++ 언어가 컬렉션의 형식 매개 변수를 강제 변환하지 못하기 때문입니다. 다음 코드 예제에서는 컴파일되지 않습니다 따라서 (해결책은 통과 하 고 있는 **std:: vector&lt;winrt::hstring&gt; ** 대신 위와 같이).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vector<std::wstring> const& vecW)
@@ -113,7 +113,7 @@ IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vect
 ## <a name="raw-arrays-and-pointer-ranges"></a>원시 배열 및 포인터 범위
 앞으로 동등한 형식이 C++ 표준 라이브러리에 존재할 수 있다는 점을 감안하면 원할 때나 필요할 때 **array_view**를 사용해 직접 작업할 수 있습니다.
 
-**array_view** 원시 배열에서 및 범위에서 변환 생성자는 **T&ast; ** (요소 형식에 대 한 포인터).
+**array_view** 변환 생성자는 원시 배열 및 범위는 **T&ast; ** (요소 형식에 대 한 포인터)입니다.
 
 ```cppwinrt
 using namespace winrt;
@@ -131,8 +131,8 @@ dataWriter.WriteBytes(fromRange); // the array_view is passed to WriteBytes.
 
 더 많은 예제와 정보를 보려면 [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) API 참조 항목을 참조하세요.
 
-## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt; ** 및 표준 반복 구문
-[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) 형식의 컬렉션을 반환 하는 Windows 런타임 API의 예는 [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (예상에 C + + /으로 WinRT **winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). 표준 반복 구문으로이 이와 같은 사용할 범위 기반 `for`합니다.
+## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt; ** 표준 반복 구문
+[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) Windows 런타임 API 형식의 컬렉션을 반환 하는 예제입니다 [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (프로젝트에 C + + /cli WinRT로 **winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). 표준 반복 구문을 사용 하 여이 이와 같은 사용 범위 기반 `for`.
 
 ```cppwinrt
 // main.cpp
@@ -152,8 +152,8 @@ void PrintFeed(SyndicationFeed const& syndicationFeed)
 }
 ```
 
-## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>비동기 Windows 런타임 Api와 c + + 덜고
-비동기 Windows 런타임 Api를 호출할 때 [패턴 PPL (병렬 라이브러리)를](/cpp/parallel/concrt/parallel-patterns-library-ppl) 사용 하 여 계속할 수 있습니다. 그러나 대부분의 경우 c + + 덜고 비동기 개체와 상호작용 하기 위한는 효율적이 고 보다 쉽게 코딩 된 방법을 제공 합니다. 자세한 정보, 및 코드 예제에 대 한 참조 [동시성 및 비동기 작업을 C + + / WinRT](concurrency.md)합니다.
+## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>비동기 Windows 런타임 Api를 사용 하 여 c + + 덜고
+비동기 Windows 런타임 Api를 호출할 때 [라이브러리 PPL (병렬 패턴)를](/cpp/parallel/concrt/parallel-patterns-library-ppl) 사용 하 여 계속할 수 있습니다. 그러나 대부분의 경우 c + + 덜고 비동기 개체와 상호 작용 하기 위한는 효율적이 고 더 쉽게 코딩 방법을 제공 합니다. 자세한 정보 및 코드 예제를 보려면 [동시성 및 비동기 작업을 사용 하 여 C + + /cli WinRT](concurrency.md).
 
 ## <a name="important-apis"></a>중요 API
 * [IVector&lt;T&gt;](/uwp/api/windows.foundation.collections.ivector_t_)

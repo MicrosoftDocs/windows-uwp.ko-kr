@@ -11,23 +11,23 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cf1e647931b6e7680fb65ddcf200bf2a74be716a
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2795835"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2815025"
 ---
 # <a name="app-submissions"></a>앱 제출
 
 
 [이름을 예약하여 앱을 만들면](create-your-app-by-reserving-a-name.md) 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 **제출**을 만듭니다.
 
-앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 다시 하 고 준비가에서 작업할 수 있도록를 업데이트 하면 사용자가 전송한 항목에 저장 됩니다.
+앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 등록 업데이트 하면 다시 작업을 할 수 있도록 저장 됩니다.
 
 > [!NOTE]
-> [Windows 개발자 센터](https://partner.microsoft.com/dashboard) 에 액세스 하 고 Microsoft 저장소에 앱을 전송 하기 위해 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
+> [Windows 개발자 센터](https://partner.microsoft.com/dashboard) 에 액세스 하 고 Microsoft 저장소에 앱을 제출 하기 위해 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
 
-앱이 게시된 후에는 대시보드에서 또 다른 제출을 만들어서 업데이트된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시된 앱에 대한 새 제출을 만들려면 앱 개요 페이지에 표시된 최근 제출 옆의 **업데이트**를 클릭합니다. 수도 [저장소에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) 그렇게 (및 다음 사용할 수 있도록 나중에 다시 선택 하는 경우) 해야하는 경우 있습니다.
+앱이 게시된 후에는 대시보드에서 또 다른 제출을 만들어서 업데이트된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시된 앱에 대한 새 제출을 만들려면 앱 개요 페이지에 표시된 최근 제출 옆의 **업데이트**를 클릭합니다. 수도 있습니다 [저장소에서 응용 프로그램을 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) (넣은 후 사용할 수 있도록 나중에 다시 선택 하는 경우) 하는 경우.
 
 > [!NOTE]
 > 설명서의 이 섹션에서는 개발자 센터 대시보드에서 앱 제출을 만드는 방법을 설명합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
@@ -36,7 +36,7 @@ ms.locfileid: "2795835"
 
 앱 제출을 만들 때 제공할 수 있는 세부 정보 및 추가 정보 링크는 다음과 같습니다.
 
-제공하거나 지정해야 하는 항목은 다음과 같습니다. 일부 영역은 옵션이거나 원하는 대로 변경할 수 있는 기본값이 제공되어 있습니다. 여기에 나열 된 순서 대로 이러한 섹션에 사용할 필요가 없습니다.
+제공하거나 지정해야 하는 항목은 다음과 같습니다. 일부 영역은 옵션이거나 원하는 대로 변경할 수 있는 기본값이 제공되어 있습니다. 여기에 나열 된 순서 대로이 섹션에 사용할 필요가 없습니다.
 
 ### <a name="pricing-and-availability-page"></a>가격 책정 및 가용성 페이지
 | 필드 이름                    | 참고                                       | 자세한 정보                                                             |
@@ -113,7 +113,7 @@ ms.locfileid: "2795835"
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **게시 고정 옵션**     | 기본값: 인증을 통과하는 즉시(또는 "일정" 섹션에서 선택한 날짜에 따라) 이 제출을 게시      | [게시 고정 옵션](manage-submission-options.md#publishing-hold-options)    
 | **인증에 대한 참고 사항**     | 권장 사항          | [인증에 대한 참고 사항](notes-for-certification.md)             |
-| **제한된 접근 권한 값**     | 제품 모든 [제한 된 기능]를 선언 하는 경우 필요한 (.. /packaging/app-capability-declarations.md#restricted-capabilities    | [제한된 접근 권한 값](manage-submission-options.md#publishing-hold-options)       
+| **제한된 접근 권한 값**     | 제품 [제한 된 기능은] 선언 하는 데 필요한 (... /packaging/app-capability-declarations.md#restricted-capabilities    | [제한된 접근 권한 값](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

@@ -4,18 +4,18 @@ Description: The Microsoft Store offers Mobile Operator Billing as a payment met
 title: 통신사 청구
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
-ms.date: 06/08/2018
+ms.date: 08/23/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bfb2fbbea42aaf1ed3c0ffc42f71dc38b2a1ede
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.openlocfilehash: c8d0e3093a6a44f748ca78ff3fad977f2cc94d77
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2788118"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2810479"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -51,6 +51,7 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 스페인           | Orange                           |
 | 스웨덴          | Telenor, 3                       |
 | 스위스     | Swisscom, Sunrise                |
+| 대만          | FarEasTone                       |
 | 터키          | Turkcell                         |
 | 아랍에미리트 | Etisalat                    |
 | 미국   | Sprint, Verizon                  |

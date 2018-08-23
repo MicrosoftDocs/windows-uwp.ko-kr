@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: c9aaca0194f57c244bca0d6cb8ccf08e5e4eafda
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.openlocfilehash: 165800f76e78bc9de15e5294a81672d3968b241e
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2788718"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2810608"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT에서는 모든 표준과 호환되는 C++17 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. Windows SDK는 C++/WinRT를 포함하며, 버전 10.0.17134.0(Windows 10, 버전 1803)에서 도입되었습니다.
@@ -29,7 +29,7 @@ C++ 프로그래밍 언어는 기업을 *비롯해* 높은 정확성, 품질 및
 
 언어적 관점에서 보면 C++는 항상 가벼우면서 다양한 형식을 지원하는 추상화를 작성하고 사용하는 데 초점을 맞춰왔습니다. 하지만 원시 포인터와 원시 루프, 그리고 C++98의 까다로운 메모리 할당 및 해제 이후로 언어가 급격하게 바뀌었습니다. 최신 C++(C++11 이후)는 명확한 아이디어의 표현, 간편성, 가독성, 그리고 대폭 낮춘 버그 발생 가능성까지 모두 갖추고 있습니다.
 
-C++를 사용하여 Windows 런타임 API를 작성하고 활용할 때는 C++/WinRT가 있습니다. 이는 Microsoft에서 권장하는 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live) 및 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)의 대안입니다.
+C++를 사용하여 Windows 런타임 API를 작성하고 활용할 때는 C++/WinRT가 있습니다. 이 Microsoft의 권장된 대체는 [C + + / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 언어 프로젝션 및 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live).
 
 C++/WinRT를 사용할 때는 표준 C++ 데이터 형식, 알고리즘 및 키워드를 사용합니다. 프로젝션에 사용자 지정 데이터 형식이 있지만 대부분 경우 표준 형식과 서로 변환이 가능하기 때문에 사용자 지정 데이터 형식을 알아둘 필요는 없습니다. 또한 사용하는 데 익숙한 표준 C++ 언어 기능을 비롯해 이미 가지고 있는 소스 코드도 계속해서 사용할 수 있습니다. C++/WinRT에서는 Win32에서 UWP에 이르는 모든 C++ 응용 프로그램의 Windows 런타임 API를 매우 쉽게 호출할 수 있습니다.
 

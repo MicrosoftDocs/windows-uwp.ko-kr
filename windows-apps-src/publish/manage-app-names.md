@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 응용 프로그램 이름, 응용 프로그램 이름, 업데이트 응용 프로그램 이름, 게임 이름, 제품 이름 변경
 ms.localizationpriority: medium
 ms.openlocfilehash: f0d2c6f72e2f69f0b768af55f9bddeb9bb008027
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2794544"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2816365"
 ---
 # <a name="manage-app-names"></a>앱 이름 관리
 
