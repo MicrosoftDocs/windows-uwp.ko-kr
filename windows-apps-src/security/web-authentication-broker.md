@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 245fb2cfb3a62dc739abc7cfb2522da6495429ed
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2814502"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2840496"
 ---
 # <a name="web-authentication-broker"></a>웹 인증 브로커
 
@@ -159,12 +159,15 @@ catch (Exception ex)
 
 앱에서 Fiddler 웹 디버거를 사용할 수 있습니다.
 
-1.  AuthHost는 개인 네트워크 기능을 제공하기 위해 고유한 앱 컨테이너에서 실행되므로 레지스트리 키를 설정해야 합니다. Windows 레지스트리 편집기 버전 5.00
+1.  자체 app 컨테이너에서 실행 되는 AuthHost 이후 개인 네트워크 기능을 제공 하려면 설정 해야 레지스트리 키: Windows 레지스트리 편집기 버전 5.00
 
     **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
-                         Data type  
-                         DWORD
+    이 레지스트리 키가 없는 경우에 관리자 권한으로 명령 프롬프트에서 만들 수 있습니다.
+
+    ```cmd 
+    REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f
+    ```
 
 2.  아웃바운드 트래픽을 생성하는 AuthHost에 대한 규칙을 추가합니다.
     ```syntax
