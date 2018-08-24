@@ -10,15 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 98908855acbc341c14464881aeb058a331e7b2a3
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691212"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2831610"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
-
 
 Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하여 실제 디바이스 조작을 시뮬레이트하고 앱의 기능을 테스트합니다. 이 에뮬레이터는 Windows 10을 실행하는 모바일 디바이스를 에뮬레이트하는 데스크톱 응용 프로그램입니다. 이 응용 프로그램은 실제 디바이스 없이 Windows 앱을 디버그 및 테스트할 수 있는 가상화된 환경을 제공합니다. 또한 응용 프로그램 프로토타입을 위한 격리된 환경을 제공합니다.
 
@@ -30,9 +29,9 @@ Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하�
 
 컴퓨터는 다음 요구 사항을 만족해야 합니다.
 
-BIOS
+CPU (이러한 설정을 사용 가능한 경우 사용 가능 BIOS에서)
 
--   하드웨어 지원 가상화
+-   하드웨어 기반 가상화 ([호환성 검사](https://www.microsoft.com/download/details.aspx?id=592)).
 -   SLAT(Second Level Address Translation)
 -   하드웨어 기반 DEP(데이터 실행 방지)
 
@@ -50,23 +49,28 @@ BIOS 요구 사항을 확인하려면 [Windows Phone 8용 에뮬레이터에 Hyp
 
 RAM 및 운영 체제 요구 사항을 확인하려면 제어판에서 **시스템 및 보안**을 선택한 다음 **시스템**을 선택합니다.
 
-Windows 10 Mobile용 Microsoft 에뮬레이터에는 Visual Studio 2015가 필요합니다. 이전 버전의 Visual Studio와는 호환되지 않습니다.
+10 Windows Mobile 용 Microsoft 에뮬레이터 2015 이상, Visual Studio 필요 Visual Studio의 이전 버전과 호환 되는 이전 버전과 않습니다.
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## <a name="installing-and-uninstalling"></a>설치 및 제거
+## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터를 실행 합니다.
 
--   **설치**.
+### <a name="installing"></a>설치
+Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
 
-    Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
+또한 [Microsoft 에뮬레이터 설정](https://go.microsoft.com/fwlink/p/?LinkID=615095)을 사용하여 Windows 10 Mobile용 Microsoft 에뮬레이터를 설치할 수 있습니다.
 
-    또한 [Microsoft 에뮬레이터 설정](https://go.microsoft.com/fwlink/p/?LinkID=615095)을 사용하여 Windows 10 Mobile용 Microsoft 에뮬레이터를 설치할 수 있습니다.
+### <a name="uninstalling"></a>제거
 
--   **제거**.
+Visual Studio 설치/복구를 사용하여 Windows 10 Mobile용 Microsoft 에뮬레이터를 제거할 수 있습니다. 또는 **제어판**에서 **프로그램 및 기능**을 사용하여 에뮬레이터를 제거할 수 있습니다.
 
-    Visual Studio 설치/복구를 사용하여 Windows 10 Mobile용 Microsoft 에뮬레이터를 제거할 수 있습니다. 또는 **제어판**에서 **프로그램 및 기능**을 사용하여 에뮬레이터를 제거할 수 있습니다.
+Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이터에서 사용하도록 생성된 Hyper-V 가상 이더넷 어댑터는 자동으로 제거되지 않습니다. 이 가상 어댑터는 **제어판**의 **네트워크 연결**에서 수동으로 제거할 수 있습니다.
 
-    Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이터에서 사용하도록 생성된 Hyper-V 가상 이더넷 어댑터는 자동으로 제거되지 않습니다. 이 가상 어댑터는 **제어판**의 **네트워크 연결**에서 수동으로 제거할 수 있습니다.
+### <a name="running"></a>Running
+
+에뮬레이터의 응용 프로그램을 실행 하려면 Visual Studio에서 **실행** 하는 드롭다운 메뉴에서 에뮬레이션 된 장치를 선택 합니다.
+
+![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
 
 ## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터의 새로운 기능
 
@@ -82,7 +86,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 �
 
 -   **화면 해상도, 화면 크기 및 메모리**. 다양한 화면 해상도, 실제 크기 및 메모리 제약을 시뮬레이트하기 위해 다양한 에뮬레이터 이미지에서 앱을 테스트하여 광범위한 앱 시장에 접근합니다.
 
-    ![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
+![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
 
 -   **화면 구성**. 에뮬레이터를 세로에서 가로 모드로 변경합니다. 에뮬레이터가 데스크톱 화면에 맞도록 확대/축소 설정을 변경합니다.
 

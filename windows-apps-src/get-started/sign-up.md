@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 등록, 개발자 계정
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ed54f1df2ace18d06f9273fb9e26459907f8542
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2823065"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2834048"
 ---
 # <a name="create-a-developer-account"></a>개발자 계정 만들기
 

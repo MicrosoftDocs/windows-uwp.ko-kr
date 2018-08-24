@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a4bba1efb52dc3b25b12c3891d9472f44729c85
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 53aac2375d60df3cd9493f315b20431961378fe8
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818501"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2831125"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 
@@ -167,14 +167,13 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 
 ## <a name="key-apis"></a>주요 API
 
-* [UserActivity 네임스페이스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* [UserActivities 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 
 ## <a name="related-topics"></a>관련 항목
 
-* [적응형 카드](https://docs.microsoft.com/en-us/adaptive-cards/)
+* [사용자 활동 (프로젝트 로마 문서)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [적응형 카드](https://docs.microsoft.com/adaptive-cards/)
 * [적응형 카드 비주얼라이저, 샘플](http://adaptivecards.io/)
 * [URI 활성화 처리](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 * [Microsoft Graph, 활동 피드 및 적응형 카드를 사용하여 모든 플랫폼에서 고객과 소통](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph/)
-* [Github의 프로젝트 로마](https://github.com/microsoft/project-rome)
-* [Windows 개발자 센터의 프로젝트 로마](https://aka.ms/projectrome)

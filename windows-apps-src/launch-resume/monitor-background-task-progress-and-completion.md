@@ -8,18 +8,18 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 배경 작업
+keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: ef57c6293b37f91653b5f825881b1446e38a824b
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2815215"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2835890"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 모니터링
 
@@ -38,7 +38,7 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>완료된 백그라운드 작업을 처리하는 이벤트 처리기를 만듭니다.
 
 ### <a name="step-1"></a>1단계
-완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) 개체를 사용 하는 [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) 개체에 특정 비용을 수행 해야 합니다.
+완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) 개체와 [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) 개체를 사용 하는 특정 배출량을 수행 해야 합니다.
 
 **OnCompleted** 백그라운드 작업 이벤트 처리기 메서드에 대 한 다음 공간을 사용 합니다.
 

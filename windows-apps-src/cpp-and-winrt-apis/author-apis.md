@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: d2f9b336d9a95efe28668991d66ab0a9e48e96e7
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2815875"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2835930"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 작성
 이번 항목에서는 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체를 직/간접적으로 사용하여 C++/WinRT API를 작성하는 방법에 대해서 설명합니다. 이번 문서의 맥락에 따라 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어로 사용됩니다. 이번 항목에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법에 대해서 설명합니다.
