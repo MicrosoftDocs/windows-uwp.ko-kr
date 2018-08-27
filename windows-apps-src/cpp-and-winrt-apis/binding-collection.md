@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 9337c0625c68970d9e68df74fa13228369e8bf41
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2834132"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2865952"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML 항목 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 컬렉션 바인딩
 > [!NOTE]
@@ -28,9 +28,7 @@ XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* �
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
 ## <a name="what-does-observable-mean-for-a-collection"></a>컬렉션을 얘기할 때 *관찰 가능하다는 것*은 무슨 뜻입니까?
-컬렉션을 나타내는 런타임 클래스에서 이벤트 추가 또는 삭제 시 [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) 이벤트가 발생하도록 선택하는 경우 이 런타임 클래스는 관찰 가능한 컬렉션이 됩니다.
-
-XAML 항목 컨트롤은 업데이트된 컬렉션을 가져와 현재 요소를 표시하도록 스스로 업데이트함으로써 이러한 이벤트에 바인딩하여 처리할 수 있습니다.
+컬렉션을 나타내는 런타임 클래스에서 이벤트 추가 또는 삭제 시 [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) 이벤트가 발생하도록 선택하는 경우 이 런타임 클래스는 관찰 가능한 컬렉션이 됩니다. XAML 항목 컨트롤은 업데이트된 컬렉션을 가져와 현재 요소를 표시하도록 스스로 업데이트함으로써 이러한 이벤트에 바인딩하여 처리할 수 있습니다.
 
 > [!NOTE]
 > C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
@@ -39,7 +37,7 @@ XAML 항목 컨트롤은 업데이트된 컬렉션을 가져와 현재 요소를
 관찰 가능한 벡터 템플릿을 [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_)의 유용한 범용 구현체로 사용하는 것은 바람직합니다. 아래는 이름이 **single_threaded_observable_vector\<T\>** 인 클래스를 나열한 것입니다.
 
 > [!NOTE]
-> 이전에 설치한 [Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), 또는 나중에 다음을 수행할 수 있습니다 방금 직접 하는 경우 아래 나열 하는 코드 대신 **winrt::single_threaded_observable_vector\ < T\ >** 공장 함수를 사용 합니다. 모르는 경우 이미 해당 버전의 SDK에서, 다음 것 쉽게 하는 경우 **winrt** 함수에 코드 목록 버전을 사용을 통해 전환할 수입니다. 아래에 나열 된 형식과 [**winrt::make**]() 을 호출 하는 대신 대신 호출 하는 **winrt::single_threaded_observable_vector\ < T\ >** 함수 기억 하십시오.
+> 이전에 설치한 [Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), 또는 나중에 다음 있습니다 수 방금 직접 사용 하 여 **winrt::single_threaded_observable_vector\ < T\ >** 공장 함수 아래 나열 하는 코드는 대신 (보여줍니다 정확 하 게 코드 나중에 이 항목의). 모르는 경우 이미 해당 버전의 SDK에서, 다음 것 쉽게 하는 경우 **winrt** 함수에 코드 목록 버전을 사용을 통해 전환할 수입니다.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -298,13 +296,16 @@ m_changed(*this, make<args>(CollectionChange::ItemInserted, Size() - 1));
 ```idl
 // BookstoreViewModel.idl
 ...
-    runtimeclass BookstoreViewModel
-    {
-        BookSku BookSku{ get; };
-        Windows.Foundation.Collections.IVector<IInspectable> BookSkus{ get; };
-    }
+runtimeclass BookstoreViewModel
+{
+    BookSku BookSku{ get; };
+    Windows.Foundation.Collections.IVector<IInspectable> BookSkus{ get; };
+}
 ...
 ```
+
+> [!IMPORTANT]
+> 위의 MIDL 3.0 목록에 **BookSkus** 속성의 형식 인지 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)의 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) note 합니다. 이 항목의 다음 섹션에서 **BookSkus**에 [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) 의 항목 소스를 바인딩 표시 됩니다. 목록 상자 항목 컨트롤을 이며 [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 올바르게 설정 하려면 **IVector** **IInspectable**또는 [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)등의 상호 운용성 형식의 형식의 값으로 설정 해야 합니다.
 
 저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`의 접근자 스텁을 `Generated Files` 폴더에 복사하여 구현합니다.
 
@@ -313,35 +314,57 @@ m_changed(*this, make<args>(CollectionChange::ItemInserted, Size() - 1));
 ...
 #include "single_threaded_observable_vector.h"
 ...
-    struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
-    {
-        BookstoreViewModel();
-        Bookstore::BookSku BookSku();
-        Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookSkus();
+struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
+{
+    BookstoreViewModel();
 
-    private:
-        Bookstore::BookSku m_bookSku{ nullptr };
-        Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> m_bookSkus;
-    };
+    Bookstore::BookSku BookSku();
+
+    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookSkus();
+
+private:
+    Bookstore::BookSku m_bookSku{ nullptr };
+    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> m_bookSkus;
+};
 ...
 ```
 
 ```cppwinrt
 // BookstoreViewModel.cpp
 ...
-    BookstoreViewModel::BookstoreViewModel()
-    {
-        m_bookSku = make<Bookstore::implementation::BookSku>(L"Atticus");
-        m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
-        m_bookSkus.Append(m_bookSku);
-    }
+BookstoreViewModel::BookstoreViewModel()
+{
+    m_bookSku = make<Bookstore::implementation::BookSku>(L"Atticus");
+    m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
+    m_bookSkus.Append(m_bookSku);
+}
 
-    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookstoreViewModel::BookSkus()
-    {
-        return m_bookSkus;
-    }
+Bookstore::BookSku BookstoreViewModel::BookSku()
+{
+    return m_bookSku;
+}
+
+Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookstoreViewModel::BookSkus()
+{
+    return m_bookSkus;
+}
 ...
 ```
+
+## <a name="if-you-have-a-windows-10-sdk-preview-build"></a>Windows 10 SDK 미리 보기 빌드 있는 경우
+[Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 다음 줄을 코드 또는
+
+```cppwinrt
+m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
+```
+
+대체 합니다.
+
+```cppwinrt
+m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
+```
+
+[**Winrt::make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make)를 호출 하는 대신 **winrt::single_threaded_observable_vector\ < T\ >** 공장 함수를 호출 하 여 적절 한 컬렉션 개체를 만듭니다.
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>ListBox를 **BookSkus** 속성에 바인딩
 `MainPage.xaml`을 엽니다. 여기에는 메인 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 다음 태그를 **Button**과 동일한 **StackPanel**에 추가합니다.
@@ -361,11 +384,11 @@ m_changed(*this, make<args>(CollectionChange::ItemInserted, Size() - 1));
 ```cppwinrt
 // MainPage.cpp
 ...
-    void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
-    {
-        MainViewModel().BookSku().Title(L"To Kill a Mockingbird");
-        MainViewModel().BookSkus().Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
-    }
+void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
+{
+    MainViewModel().BookSku().Title(L"To Kill a Mockingbird");
+    MainViewModel().BookSkus().Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
+}
 ...
 ```
 

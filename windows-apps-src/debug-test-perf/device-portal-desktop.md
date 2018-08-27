@@ -8,14 +8,14 @@ ms.date: 03/15/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 장치 포털
+keywords: 10, uwp, windows 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 146cce82275047c112d70cfb3d022eab723f49e6
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2836575"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2867292"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 

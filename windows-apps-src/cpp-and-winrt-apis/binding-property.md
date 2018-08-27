@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 6343832801926254c64fcefc269ce7fda9ed6dfc
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.openlocfilehash: 31913ae162bfe541d04f304db87b4dff962a8af4
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2831455"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2862870"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이번 항목에서는 C++/WinRT에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
@@ -100,7 +100,7 @@ namespace winrt::Bookstore::implementation
     {
     }
 
-    hstring BookSku::Title()
+    winrt::hstring BookSku::Title()
     {
         return m_title;
     }
@@ -114,7 +114,7 @@ namespace winrt::Bookstore::implementation
         }
     }
 
-    event_token BookSku::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
+    winrt::event_token BookSku::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
     {
         return m_propertyChanged.add(handler);
     }
@@ -146,7 +146,7 @@ namespace Bookstore
 }
 ```
 
-저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 이러한 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 방법,에서 `BookstoreViewModel.h`, 포함 하는 `BookSku.h`, 구현 형식 (**winrt::Bookstore::implementation::BookSku**)를 선언 하는 합니다.
+저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 이러한 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 방법,에서 `BookstoreViewModel.h`, 포함 하는 `BookSku.h`, 구현 형식 (**winrt::Bookstore::implementation::BookSku**)를 선언 하는 합니다. 제거 하 여 기본 생성자를 복원 하는 및 `= delete`합니다.
 
 ```cppwinrt
 // BookstoreViewModel.h

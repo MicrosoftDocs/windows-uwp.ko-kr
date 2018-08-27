@@ -11,11 +11,11 @@ keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로�
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
 ms.openlocfilehash: 58a420d73ba4a0cd51f909fd5d7d417af1cfb38f
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2838128"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2863109"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>원격 디바이스에서 앱 실행
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 저장소 서비스, Microsoft 저장소 분석 API insights (영문)
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2831651"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2867342"
 ---
 # <a name="get-insights-data"></a>인 사이트 데이터 가져오기
 
