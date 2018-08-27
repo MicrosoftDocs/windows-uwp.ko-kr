@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: 사용자, azure ad, 다중 사용자, 여러 사용자가 windows 10, uwp, 계정 사용자 관리
 ms.localizationpriority: medium
 ms.openlocfilehash: bef703958f8f04cd55d887dfa8840d1ed3fbeba5
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2834938"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2856313"
 ---
 # <a name="manage-account-users"></a>계정 사용자 관리
 
