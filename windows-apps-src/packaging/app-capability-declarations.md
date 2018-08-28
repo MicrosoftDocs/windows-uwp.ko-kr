@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c9ff43ac0a3aa4fb0dfdc3353029b60dbf442459
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.openlocfilehash: 30e4bb7b493e6fb839f300f4c446b7510f28fabb
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2865192"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2884339"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -92,7 +92,7 @@ ms.locfileid: "2865192"
 앱 선언 된 제한 된 기능을 하는 경우 Microsoft 저장소에 응용 프로그램을 게시를 승인 하기 위해 [app 전송 프로세스](../publish/app-submissions.md) 동안 정보를 제공 해야 합니다. 앱이를 선언 하는 각 제한 된 기능을 사용 하는 방법에 대해 설명 하 여 전송의 [전송 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서이 정보를 제공 됩니다.
 
 > [!IMPORTANT]
-> 제한 된 기능이 매우 구체적인 시나리오를 위한것입니다. 이 접근 권한 값은 사용이 엄격히 제한되며 추가 Microsoft Store 등록 정책 및 검토가 적용됩니다. 참고 모든 승인의 받이 필요 없이 제한 된 기능을 선언 된 sideload 응용 프로그램을 수행할 수 있습니다. 승인은 이러한 앱을 Microsoft Store에 제출하는 경우에만 필요합니다. 
+> 제한 된 기능이 매우 구체적인 시나리오를 위한것입니다. 이 접근 권한 값은 사용이 엄격히 제한되며 추가 Microsoft Store 등록 정책 및 검토가 적용됩니다. 참고 모든 승인의 받이 필요 없이 제한 된 기능을 선언 된 sideload 응용 프로그램을 수행할 수 있습니다. 승인은 이러한 앱을 Microsoft Store에 제출하는 경우에만 필요합니다.
 
 응용 프로그램에서 실제로 필요 하지 않은 경우 기능을 제한 이러한 선언 확인 해야 합니다. 예를 들어 사용자가 자신의 ID를 확인하는 디지털 인증서와 함께 스마트 카드를 제공하는 2단계 인증을 사용하는 뱅킹과 같이 이러한 접근 권한 값이 필요하고 적합한 경우가 있습니다. 다른 예로는 기본적으로 기업 고객용으로 디자인되고 사용자의 도메인 자격 증명 없이는 액세스할 수 없는 회사 리소스에 액세스해야 하는 앱을 들 수 있습니다.
 
@@ -119,9 +119,9 @@ ms.locfileid: "2865192"
 
 이전에는 접근 권한 값을 사용하기 위해 승인을 받으려면 지원 팀에 문의해야 했습니다. 이제 [제출 프로세스](../publish/app-submissions.md)의 일부로 개발자 센터 대시보드에서 이 정보를 제공할 수 있습니다.
 
-사용자가 전송한 항목에 대 한 패키지를 업로드 하는 경우 모든 제한 된 기능에 선언 되어있습니다 여부 탐지 됩니다. 이러한 경우 [제출 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서 제품이 각 접근 권한 값을 사용하는 방식에 대한 세부 정보를 제공해야 합니다. 제품에서 접근 권한 값을 선언해야 하는 이유를 이해하는 데 도움이 되기 위해 가능한 한 자세한 정보를 제공해야 합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다. 
+사용자가 전송한 항목에 대 한 패키지를 업로드 하는 경우 모든 제한 된 기능에 선언 되어있습니다 여부 탐지 됩니다. 이러한 경우 [제출 옵션](../publish/manage-submission-options.md#restricted-capabilities) 페이지에서 제품이 각 접근 권한 값을 사용하는 방식에 대한 세부 정보를 제공해야 합니다. 제품에서 접근 권한 값을 선언해야 하는 이유를 이해하는 데 도움이 되기 위해 가능한 한 자세한 정보를 제공해야 합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다.
 
-인증 과정에서 Microsoft의 테스터는 귀하가 제공한 정보를 검토하여 제출이 접근 권한 값을 사용할 수 있도록 승인되었는지 여부를 결정합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다. 접근 권한 값의 사용이 승인되면 앱은 나머지 인증 프로세스를 진행합니다. 앱에 대한 업데이트를 제출하는 경우 추가 접근 권한 값을 선언하지 않는 이상 일반적으로 접근 권한 값 승인 프로세스를 반복하지 않아도 됩니다. 
+인증 과정에서 Microsoft의 테스터는 귀하가 제공한 정보를 검토하여 제출이 접근 권한 값을 사용할 수 있도록 승인되었는지 여부를 결정합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다. 접근 권한 값의 사용이 승인되면 앱은 나머지 인증 프로세스를 진행합니다. 앱에 대한 업데이트를 제출하는 경우 추가 접근 권한 값을 선언하지 않는 이상 일반적으로 접근 권한 값 승인 프로세스를 반복하지 않아도 됩니다.
 
 접근 권한 값 사용이 승인되지 않는 경우 제출은 인증에 실패하며 인증 보고서에 피드백이 제공됩니다. 그러면 접근 권한 값을 선언하지 않는 새 제출을 만들고 패키지를 업로드하거나, 또는 해당되는 경우 접근 권한 값과 사용과 관련된 모든 문제를 처리하고 새 제출에서 승인을 요청할 수 있습니다.
 
@@ -134,14 +134,14 @@ ms.locfileid: "2865192"
 
 ### <a name="restricted-capability-list"></a>제한 된 기능 목록
 
-다음 표에서 제한 된 기능을 보여줍니다. 위에 설명된 프로세스를 수행하여 Microsoft Store에 제출한 앱에서 이러한 접근 권한 값에 대한 승인을 요청할 수 있습니다. 
+다음 표에서 제한 된 기능을 보여줍니다. 위에 설명된 프로세스를 수행하여 Microsoft Store에 제출한 앱에서 이러한 접근 권한 값에 대한 승인을 요청할 수 있습니다.
 
 > [!IMPORTANT]
-> 이러한 제한된 접근 권한 값 중 일부는 특정 제한된 경우를 제외하고 Microsoft Store에 제출하는 앱에 대해 거의 승인되지 않습니다. 이러한 접근 권한 값은 아래 표에서 설명되어 있습니다. Microsoft Store를 통해 배포할 계획인 경우 앱에서 이러한 접근 권한 값을 선언하지 않는 것이 좋습니다. 
+> 이러한 제한된 접근 권한 값 중 일부는 특정 제한된 경우를 제외하고 Microsoft Store에 제출하는 앱에 대해 거의 승인되지 않습니다. 이러한 접근 권한 값은 아래 표에서 설명되어 있습니다. Microsoft Store를 통해 배포할 계획인 경우 앱에서 이러한 접근 권한 값을 선언하지 않는 것이 좋습니다.
 
 | 접근 권한 값 시나리오 | 접근 권한 값 사용 |
 |---------------------|------------------|
-| **Enterprise** | Windows 도메인 자격 증명은 사용자가 자신의 자격 증명을 사용하여 원격 리소스에 로그인할 수 있도록 하며, 마치 사용자가 사용자 이름과 암호를 제공한 것처럼 작동합니다. **EnterpriseAuthentication** 기능에는 엔터프라이즈 내에서 서버에 연결 된 비즈니스 라인 응용 프로그램에서 일반적으로 사용 됩니다. <br /><br />인터넷을 통한 일반적인 통신에는 이 접근 권한 값이 필요하지 않습니다.<br /><br />**EnterpriseAuthentication** 기능 일반적인 비즈니스 라인 앱을 지원 하기 위한것입니다. 회사 리소스에 액세스할 필요가 없는 앱에서는 이 접근 권한 값을 선언하지 마세요. [**파일 선택기**](https://msdn.microsoft.com/library/windows/apps/BR207847)는 사용자가 앱에서 사용할 네트워크 공유의 파일을 열 수 있는 강력한 UI 메커니즘을 제공합니다. 앱에 대 한 시나리오 필요 프로그래밍 방식으로 액세스할 **파일 선택기**를 사용 하 여 인식할 수 없는 경우에 **enterpriseAuthentication** 기능을 선언 합니다.<br /><br />**enterpriseAuthentication** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="enterpriseAuthentication"/></Capabilities>```<br /><br />**enterpriseDataPolicy** 접근 권한 값을 통해 앱은 장치에 대한 엔터프라이즈별 정책을 정의하고 사용할 수 있습니다. 다음 클래스의 모든 구성원을 사용하려면 이 접근 권한 값이 필요합니다.<ul><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705151">FileProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn706017">DataProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705170">ProtectionPolicyManager</a></li></ul> |
+| **Enterprise** | Windows 도메인 자격 증명은 사용자가 자신의 자격 증명을 사용하여 원격 리소스에 로그인할 수 있도록 하며, 마치 사용자가 사용자 이름과 암호를 제공한 것처럼 작동합니다. **EnterpriseAuthentication** 기능에는 엔터프라이즈 내에서 서버에 연결 된 비즈니스 라인 응용 프로그램에서 일반적으로 사용 됩니다. <br /><br />인터넷을 통한 일반적인 통신에는 이 접근 권한 값이 필요하지 않습니다.<br /><br />**EnterpriseAuthentication** 기능 일반적인 비즈니스 라인 앱을 지원 하기 위한것입니다. 회사 리소스에 액세스할 필요가 없는 앱에서는 이 접근 권한 값을 선언하지 마세요. [**파일 선택기**](https://msdn.microsoft.com/library/windows/apps/BR207847)는 사용자가 앱에서 사용할 네트워크 공유의 파일을 열 수 있는 강력한 UI 메커니즘을 제공합니다. 앱에 대 한 시나리오 필요 프로그래밍 방식으로 액세스할 **파일 선택기**를 사용 하 여 인식할 수 없는 경우에 **enterpriseAuthentication** 기능을 선언 합니다.<br /><br />**enterpriseAuthentication** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="enterpriseAuthentication"/></Capabilities>```<br /><br />**EnterpriseDataPolicy** 기능은 개별적으로 엔터프라이즈 데이터를 처리 하는 앱을 허용 하 고 앱 Windows 정보 보호 정책을 사용 하 여 관리 되는 경우에 안전 하 게 (예: 모바일 장치 관리 및 모바일 응용 프로그램 관리 시스템).  아래와 같이이 제한 된 기능을 선언 합니다. <br /><br />```<Capabilities><rescap:Capability Name="enterpriseDataPolicy"/></Capabilities>```<br /><br />다음 클래스의 모든 구성원을 사용하려면 이 접근 권한 값이 필요합니다.<ul><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705151">FileProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn706017">DataProtectionManager</a></li><li><a href="https://msdn.microsoft.com/library/windows/apps/Dn705170">ProtectionPolicyManager</a></li></ul> |
 | **공유 사용자 인증서** | **SharedUserCertificates** 기능 앱을 추가 하 고 소프트웨어에 액세스 하 고 스마트 카드에 저장 된 인증서와 같은 공유 사용자에 대 한 하드웨어 기반 인증서를 저장 합니다. 이 접근 권한 값은 주로 스마트 카드로 인증하는 금융 또는 엔터프라이즈 앱에 사용됩니다.<br /><br />**sharedUserCertificates** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="sharedUserCertificates"/></Capabilities>``` |
 |**문서**\* | **DocumentsLibrary** 기능은 OneDrive에 대 한 오프 라인 액세스를 지원 하기 위해 패키지 매니페스트에 선언 된 파일 형식 연결을 필터링 하는 사용자의 문서에 프로그래밍 방식 액세스를 제공 합니다. 예를 들어 DOC 뷰어 앱이 .doc 파일 형식 연결을 선언한 경우 문서에서 .doc 파일을 열 수 있지만 다른 형식의 파일은 열 수 없습니다. <br /><br />**DocumentsLibrary** 기능 선언 된 응용 프로그램 홈 그룹 컴퓨터에 문서에 액세스할 수 없습니다. [파일 선택기](https://msdn.microsoft.com/library/windows/apps/Hh465174)는 사용자가 앱에서 사용할 파일을 열 수 있는 강력한 UI 메커니즘을 제공합니다. 파일 선택을 사용할 수 없는 경우에 **documentsLibrary** 기능을 선언 합니다.<br /><br />응용 프로그램 **documentsLibrary** 기능을 사용 하려면 다음을 수행 해야 합니다.<ul><li>유효한 OneDrive URL 또는 리소스 ID를 사용하여 플랫폼 간에서 오프라인으로 특정 OneDrive 콘텐츠에 액세스할 수 있도록 합니다.</li><li>오프라인에 있는 동안 열려 있는 파일을 사용자의 OneDrive에 자동으로 저장합니다.</li></ul>이러한 두 목적을 위해 **documentsLibrary** 기능을 사용 하는 기능을 사용 하 여 다른 문서 내에서 포함 된 콘텐츠를 열도 필요에 따라 될 수 있습니다. **DocumentsLibrary** 기능의 위의 사용에만 적용 됩니다.<ul><li>앱은 휴대폰 내부 저장소의 문서 라이브러리에 액세스할 수 없습니다. 하지만 다른 앱에서 SD 카드(옵션)에 문서 폴더를 만드는 경우 앱은 해당 폴더를 볼 수 있습니다.</li></ul>**documentsLibrary** 접근 권한 값은 아래 표시된 대로 앱의 패키지 매니페스트에서 선언할 때 **uap** 네임스페이스를 포함해야 합니다.<br /><br />```<Capabilities><uap:Capability Name="documentsLibrary"/></Capabilities>``` |
 | **게임 DVR 설정** | **appCaptureSettings** 제한된 접근 권한 값을 통해 앱은 게임 DVR에 대한 사용자 설정을 제어할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/BR226738) 네임스페이스의 일부 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다.  |
@@ -156,7 +156,7 @@ ms.locfileid: "2865192"
 | **다른 앱 관리** | **packageManagement** 제한된 접근 권한 값을 통해 앱은 다른 앱을 직접 관리할 수 있습니다.<br /><br />**packageQuery** 장치 접근 권한 값을 통해 앱은 다른 앱에 대한 정보를 수집할 수 있습니다.<br /><br />이러한 접근 권한 값은 [**PackageManager**](https://msdn.microsoft.com/library/windows/apps/BR240960) 클래스의 일부 메서드 및 속성에 액세스하는 데 필요합니다. |
 | **화면 프로젝션** | **screenDuplication** 제한된 접근 권한 값을 통해 앱은 다른 장치의 화면에 표시할 수 있습니다.<br /><br />이 접근 권한 값은 DirectX 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **사용자 계정 이름** | **userPrincipalName** 제한된 접근 권한 값을 통해 앱은 사진의 미리 보기 캐시를 수정하고 이 캐시에 액세스할 수 있습니다.<br /><br />이 접근 권한 값은 [**GetUserNameEx**](https://msdn.microsoft.com/library/windows/desktop/ms724435) 함수를 호출하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
-| **Wallet** | The **walletSystem** restricted capability allows apps to have full access to the stored wallet cards.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Wallet.System**](https://msdn.microsoft.com/library/windows/apps/Mt171610) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
+| **전자지갑** | **walletSystem** 제한된 접근 권한 값을 통해 앱은 저장된 전자지갑 카드에 대한 모든 권한을 가질 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Wallet.System**](https://msdn.microsoft.com/library/windows/apps/Mt171610) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **위치 기록** | **locationHistory** 제한된 접근 권한 값을 통해 앱은 장치의 위치 기록에 액세스할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/BR225603) 네임스페이스의 API를 사용하는 데 필요합니다.
 | **앱 닫기 확인** | **confirmAppClose** 제한된 접근 권한 값을 통해 앱은 앱 자체 및 해당 창을 닫고 앱의 닫기를 지연할 수 있습니다.<br /><br />앱에서 이 접근 권한 값에 대해 Windows 10 버전 1703(빌드 10.0.15063) 이상을 요청할 수 있습니다. Windows 10 이전 버전에서 이 기능은 비공개이며 "요청한 기능이 이 응용 프로그램에 대해 인증되지 않습니다."라는 오류 메시지와 함께 앱 설치가 실패합니다. |
 | **통화 기록**\* | **phoneCallHistory** 제한된 접근 권한 값을 통해 앱은 통화 기록을 읽고 기록에서 항목을 삭제할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/Dn642321) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |

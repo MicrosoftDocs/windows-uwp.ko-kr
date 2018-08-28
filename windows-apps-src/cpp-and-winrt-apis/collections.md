@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 54f949c41af885ec379eaa9e5b12764710532b50
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.openlocfilehash: dacfe4135402b85bac68b63c06f99f97001fa5b9
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2867949"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2889330"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>포함 하는 모음 [C + + / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -32,7 +32,7 @@ ms.locfileid: "2867949"
 
 ### <a name="general-purpose-collection-empty"></a>빈 범용 컬렉션
 
-일반적인 용도의 컬렉션을 구현 하는 형식의 새 개체를 검색 하려면 **winrt::single_threaded_vector** 함수 서식 파일을 호출할 수 있습니다. [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_)으로 개체를 반환 하 고 반환 된 개체의 기능 및 속성 호출 하는 통해 인터페이스입니다.
+일반적인 용도의 컬렉션을 구현 하는 형식의 새 개체를 검색 하려면 [**winrt::single_threaded_vector**](/uwp/cpp-ref-for-winrt/single-threaded-vector) 함수 서식 파일을 호출할 수 있습니다. [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_)으로 개체를 반환 하 고 반환 된 개체의 기능 및 속성 호출 하는 통해 인터페이스입니다.
 
 ```cppwinrt
 ...
@@ -58,7 +58,7 @@ int main()
 }
 ```
 
-위의 코드 예제 볼 수 있듯이 컬렉션을 만든 후 있습니다 요소를 추가,을 반복 하 여 일반적으로 처리 개체를 API 로부터 받은 모든 Windows 런타임 컬렉션 개체의 경우와 마찬가지로 합니다. 컬렉션에 대 한 보기를 필요한 경우와 같이 [IVector::GetView](/uwp/api/windows.foundation.collections.ivector-1.getview)호출할 수 있습니다. 위에 표시 된 패턴&mdash;만들기 및 사용 (영문) 컬렉션의&mdash;로 데이터를 전달 하거나 API 외부로 데이터를 가져올 하려는 간단한 시나리오에 적합 합니다.
+위의 코드 예제 볼 수 있듯이 컬렉션을 만든 후 있습니다 요소를 추가,을 반복 하 여 일반적으로 처리 개체를 API 로부터 받은 모든 Windows 런타임 컬렉션 개체의 경우와 마찬가지로 합니다. 컬렉션에 대해 변경 불가능 한 뷰를 해야하는 경우와 같이 [IVector::GetView](/uwp/api/windows.foundation.collections.ivector-1.getview)호출할 수 있습니다. 위에 표시 된 패턴&mdash;만들기 및 사용 (영문) 컬렉션의&mdash;로 데이터를 전달 하거나 API 외부로 데이터를 가져올 하려는 간단한 시나리오에 적합 합니다.
 
 ### <a name="general-purpose-collection-primed-from-data"></a>데이터에서 전기 충전 완료 하는 일반적인 용도의 컬렉션
 
@@ -89,7 +89,7 @@ bookSkus.Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
 
 ### <a name="observable-collection"></a>눈에 띄는 컬렉션
 
-*관찰 가능 개체* 컬렉션을 구현 하는 형식의 새 개체를 검색 하려면 **winrt::single_threaded_observable_vector** 함수 서식 파일 요소 형식을 사용 하 여 호출 합니다. 하지만 눈에 띄는 컬렉션에는 바인딩하는 XAML 항목 컨트롤에 대 한 적절 한 하려면 **IInspectable** 요소 유형으로 사용 합니다.
+*관찰 가능 개체* 컬렉션을 구현 하는 형식의 새 개체를 검색 하려면 [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) 함수 서식 파일 요소 형식을 사용 하 여 호출 합니다. 하지만 눈에 띄는 컬렉션에는 바인딩하는 XAML 항목 컨트롤에 대 한 적절 한 하려면 **IInspectable** 요소 유형으로 사용 합니다.
 
 [**IObservableVector**](/uwp/api/windows.foundation.collections.iobservablevector_t_)으로 개체를 반환 하 고는 통해 사용자 (또는 바인딩되는 컨트롤) 속성을 호출할 반환 된 개체의 함수 인터페이스가 있는 합니다.
 
@@ -99,14 +99,14 @@ auto bookSkus{ winrt::single_threaded_observable_vector<Windows::Foundation::IIn
 
 자세한 내용 및 코드 예제를 실행 하는 것에 대 한 사용자 바인딩 (영문) 하는 방법에 대 한 인터페이스 (UI) 컨트롤 눈에 띄는 컬렉션을 참조 하십시오 [XAML 항목 제어; 바인딩할 C + + / WinRT 컬렉션](binding-collection.md)합니다.
 
-### <a name="associative-container-map"></a>연관 컨테이너 (map)
+### <a name="associative-collection-map"></a>연관 컬렉션 (map)
 
-살펴보았습니다 두 함수의 연관 컨테이너 버전이 있습니다.
+살펴보았습니다 두 함수의 연관 컬렉션 버전이 있습니다.
 
-- **Single_threaded_map** 함수 템플릿을 [**IMap**](/uwp/api/windows.foundation.collections.imap_k_v_)연관 된 컨테이너를 반환합니다. 지도 눈에 띄는 아닙니다.
-- **Single_threaded_observable_map** 함수 서식 파일은 [**IObservableMap**](/uwp/api/windows.foundation.collections.iobservablemap_k_v_)는 눈에 띄는 연관 컨테이너를 반환합니다.
+- [**Winrt::single_threaded_map**](/uwp/cpp-ref-for-winrt/single-threaded-map) 함수 서식 파일 [**IMap**](/uwp/api/windows.foundation.collections.imap_k_v_)으로 비 관찰 연관 컬렉션을 반환 합니다.
+- [**Winrt::single_threaded_observable_map**](/uwp/cpp-ref-for-winrt/single-threaded-observable-map) 함수 템플릿에는 [**IObservableMap**](/uwp/api/windows.foundation.collections.iobservablemap_k_v_)으로 눈에 띄는 연관 컬렉션을 반환 합니다.
 
-필요에 따라 형식 **std:: map** 또는 **std::unordered_map**는 *rvalue* 함수에 전달 하 여 데이터와 이러한 컨테이너 소수 수 있습니다.
+필요에 따라 형식 **std:: map** 또는 **std::unordered_map**는 *rvalue* 함수에 전달 하 여 데이터와 이러한 컬렉션 소수 수 있습니다.
 
 ```cppwinrt
 auto coll1{
@@ -131,8 +131,9 @@ auto coll2{ winrt::single_threaded_map<winrt::hstring, int>(std::move(values)) }
 
 ```cppwinrt
 ...
+using namespace winrt;
 using namespace Windows::Foundation::Collections;
-
+...
 struct MyVectorView :
     implements<MyVectorView, IVectorView<float>, IIterable<float>>
 {
@@ -149,7 +150,7 @@ struct MyVectorView :
 IVectorView<float> view{ winrt::make<MyVectorView>() };
 ```
 
-훨씬 쉽게 **winrt::vector_view_base** 구조체 서식 파일에서 사용자 지정 벡터 보기를 파생 하 고 방금 데이터를 보유 하는 컨테이너를 공개 하려면 **get_container** 함수를 구현 하는 대신 합니다.
+훨씬 쉽게 [**winrt::vector_view_base**](/uwp/cpp-ref-for-winrt/vector-view-base) 구조체 서식 파일에서 사용자 지정 벡터 보기를 파생 하 고 방금 데이터를 보유 하는 컨테이너를 공개 하려면 **get_container** 함수를 구현 하는 대신 합니다.
 
 ```cppwinrt
 struct MyVectorView2 :
@@ -201,17 +202,135 @@ private:
 
 다음은 기본 클래스는 C + + / WinRT 사용자 지정 컬렉션을 구현할 수 있도록 제공 합니다.
 
-- **winrt::vector_view_base**
-- **winrt::vector_base**
-- **winrt::observable_vector_base**
-- **winrt::map_view_base**
-- **winrt::map_base**
-- **winrt::observable_map_base**
+### [<a name="winrtvectorviewbase"></a>winrt::vector_view_base](/uwp/cpp-ref-for-winrt/vector-view-base)
+
+위의 코드 예제를 참조 하십시오.
+
+### [<a name="winrtvectorbase"></a>winrt::vector_base](/uwp/cpp-ref-for-winrt/vector-base)
+
+```cppwinrt
+struct MyVector :
+    implements<MyVector, IVector<float>, IVectorView<float>, IIterable<float>>,
+    winrt::vector_base<MyVector, float>
+{
+    auto& get_container() const noexcept
+    {
+        return m_values;
+    }
+
+    auto& get_container() noexcept
+    {
+        return m_values;
+    }
+
+private:
+    std::vector<float> m_values{ 0.1f, 0.2f, 0.3f };
+};
+```
+
+### [<a name="winrtobservablevectorbase"></a>winrt::observable_vector_base](/uwp/cpp-ref-for-winrt/observable-vector-base)
+
+```cppwinrt
+struct MyObservableVector :
+    implements<MyObservableVector, IObservableVector<float>, IVector<float>, IVectorView<float>, IIterable<float>>,
+    winrt::observable_vector_base<MyObservableVector, float>
+{
+    auto& get_container() const noexcept
+    {
+        return m_values;
+    }
+
+    auto& get_container() noexcept
+    {
+        return m_values;
+    }
+
+private:
+    std::vector<float> m_values{ 0.1f, 0.2f, 0.3f };
+};
+```
+
+### [<a name="winrtmapviewbase"></a>winrt::map_view_base](/uwp/cpp-ref-for-winrt/map-view-base)
+
+```cppwinrt
+struct MyMapView :
+    implements<MyMapView, IMapView<winrt::hstring, int>, IIterable<IKeyValuePair<winrt::hstring, int>>>,
+    winrt::map_view_base<MyMapView, winrt::hstring, int>
+{
+    auto& get_container() const noexcept
+    {
+        return m_values;
+    }
+
+private:
+    std::map<winrt::hstring, int> m_values{
+        { L"AliceBlue", 0xfff0f8ff }, { L"AntiqueWhite", 0xfffaebd7 }
+    };
+};
+```
+
+### [<a name="winrtmapbase"></a>winrt::map_base](/uwp/cpp-ref-for-winrt/map-base)
+
+```cppwinrt
+struct MyMap :
+    implements<MyMap, IMap<winrt::hstring, int>, IMapView<winrt::hstring, int>, IIterable<IKeyValuePair<winrt::hstring, int>>>,
+    winrt::map_base<MyMap, winrt::hstring, int>
+{
+    auto& get_container() const noexcept
+    {
+        return m_values;
+    }
+
+    auto& get_container() noexcept
+    {
+        return m_values;
+    }
+
+private:
+    std::map<winrt::hstring, int> m_values{
+        { L"AliceBlue", 0xfff0f8ff }, { L"AntiqueWhite", 0xfffaebd7 }
+    };
+};
+```
+
+### [<a name="winrtobservablemapbase"></a>winrt::observable_map_base](/uwp/cpp-ref-for-winrt/observable-map-base)
+
+```cppwinrt
+struct MyObservableMap :
+    implements<MyObservableMap, IObservableMap<winrt::hstring, int>, IMap<winrt::hstring, int>, IMapView<winrt::hstring, int>, IIterable<IKeyValuePair<winrt::hstring, int>>>,
+    winrt::observable_map_base<MyObservableMap, winrt::hstring, int>
+{
+    auto& get_container() const noexcept
+    {
+        return m_values;
+    }
+
+    auto& get_container() noexcept
+    {
+        return m_values;
+    }
+
+private:
+    std::map<winrt::hstring, int> m_values{
+        { L"AliceBlue", 0xfff0f8ff }, { L"AntiqueWhite", 0xfffaebd7 }
+    };
+};
+```
 
 ## <a name="important-apis"></a>중요 API
 * [ItemsControl.ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)
 * [IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)
 * [IVector](/uwp/api/windows.foundation.collections.ivector_t_)
+* [winrt::map_base](/uwp/cpp-ref-for-winrt/map-base)
+* [winrt::map_view_base](/uwp/cpp-ref-for-winrt/map-view-base)
+* [winrt::observable_map_base](/uwp/cpp-ref-for-winrt/observable-map-base)
+* [winrt::observable_vector_base](/uwp/cpp-ref-for-winrt/observable-vector-base)
+* [winrt::single_threaded_observable_map](/uwp/cpp-ref-for-winrt/single-threaded-observable-map)
+* [winrt::single_threaded_map](/uwp/cpp-ref-for-winrt/single-threaded-map)
+* [winrt::single_threaded_observable_vector](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector)
+* [winrt::single_threaded_vector](/uwp/cpp-ref-for-winrt/single-threaded-vector)
+* [winrt::vector_base](/uwp/cpp-ref-for-winrt/vector-base)
+* [winrt::vector_view_base](/uwp/cpp-ref-for-winrt/vector-view-base)
 
 ## <a name="related-topics"></a>관련 항목
 * [값 범주 및 자신에 대 한 참조](cpp-value-categories.md)

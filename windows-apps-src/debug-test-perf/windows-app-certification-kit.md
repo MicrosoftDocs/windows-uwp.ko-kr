@@ -2,26 +2,26 @@
 author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Windows 앱 인증 키트
-description: 응용 프로그램을 Microsoft 저장소에 게시 될 확률이 부여 또는 확인 하 고 인증을 위해 제출 하기 전에 로컬로 테스트할 Windows 인증 되 고. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다.
+description: Microsoft 저장소에 게시 되는 최상의 앱을 제공 하거나 유효성을 검사 하 고 인증에 대 한 전송 하기 전에 로컬로 테스트 되는 Windows 인증 합니다. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: 10, uwp, windows 앱 인증
+keywords: windows 10, uwp, 앱 인증 (영문)
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2856881"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2891736"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
 
 
-[Windows 인증 된](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 응용 프로그램을 가져오거나 [Microsoft 저장소에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비를 확인 하 고 테스트할 로컬 먼저 해야. 이 여기서 설치 하 고 응용 프로그램을 안전 하 고 효율적인 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 를 실행 하는 방법을 보여 줍니다.
+[Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 앱 가져오거나 [Microsoft 저장소에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비의 유효성을 검사 하 고 테스트 해야 해당 로컬로 먼저 합니다. 이 항목에서는 설치 하 고 앱은 안전 하 고 효율적인 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 실행 하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -46,7 +46,7 @@ ms.locfileid: "2856881"
 
 3.  테스트할 앱을 입력하거나 선택한 후 **다음**을 클릭합니다.
 
-4.  다음 화면에서 테스트할 앱 유형에 맞게 정렬된 테스트 워크플로가 표시됩니다. 테스트가 목록에서 회색으로 표시되면 테스트가 환경에 적용되지 않습니다. 예를 들어 Windows 7에서 Windows 10 앱을 테스트할 경우 정적 테스트만 워크플로에 적용됩니다. 참고 Microsoft 저장소 워크플로에서이 모든 테스트는 적용 될 수 있습니다. 실행할 테스트를 선택하고 **다음**을 클릭합니다.
+4.  다음 화면에서 테스트할 앱 유형에 맞게 정렬된 테스트 워크플로가 표시됩니다. 테스트가 목록에서 회색으로 표시되면 테스트가 환경에 적용되지 않습니다. 예를 들어 Windows 7에서 Windows 10 앱을 테스트할 경우 정적 테스트만 워크플로에 적용됩니다. 참고 Microsoft Store가이 워크플로에서 모든 테스트를 적용 될 수 있습니다. 실행할 테스트를 선택하고 **다음**을 클릭합니다.
 
     Windows 앱 인증 키트에서 앱 유효성 검사를 시작합니다.
 
@@ -90,9 +90,9 @@ ms.locfileid: "2856881"
 
 Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 성능을 기반으로 합니다.
 
-테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 저전력 컴퓨터는 인텔 아톰 프로세서 기반 컴퓨터에서 화면 해상도가 1366 x 768 (또는 그 이상)와 회전 한 하드 등과 같은 응용 프로그램을 테스트 하는 좋습니다에 응용 프로그램의 성능 [Microsoft 저장소 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)을 충족 하는지 확인 하려면 드라이브 (솔리드 스테이트 하드 드라이브)에 반대.
+테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. Intel Atom 프로세서 기반 컴퓨터를 1366 x 768 (또는 이상)의 화면 해상도 및 회전을 사용 하 여 하드와 같은 절전 컴퓨터에 앱을 테스트 하는 좋습니다 앱의 성능 [Microsoft 저장소 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)을 충족 하는 경우를 확인 하려면 드라이브 (것과 반대로 반도체 하드 드라이브).
 
-저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 버전의 응용 프로그램의 최신 성능 요구 사항을 준수 하는지 확인 하려면 Windows 앱 인증 키트를 사용 하 여 응용 프로그램을 테스트 및 최신 [Microsoft 저장소 정책을](https://msdn.microsoft.com/library/windows/apps/Dn764944) 참조 하십시오.
+저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 [Microsoft 저장소 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944) 을 참조 하며 앱 최신 성능 요구 사항을 준수 하는지 확인 하려면 Windows 앱 인증 키트의 최신 버전으로 응용 프로그램을 테스트 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

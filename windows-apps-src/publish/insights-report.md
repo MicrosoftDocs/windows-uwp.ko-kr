@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 정보, 추세, 비정상 상태, 예외, 데이터 변경 내용
 ms.localizationpriority: medium
 ms.openlocfilehash: be70dccbb7a12b65b9e7bbd07f27ae7ea3a578ff
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2861982"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2887772"
 ---
 # <a name="insights-report"></a>인 사이트 보고서
 
