@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: fcba2cb736f86cebc6d2664e2ec3b557d47c86d7
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2857661"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2881166"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 
@@ -97,6 +97,6 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 를 마우스 �
 > [!NOTE]
 > Visual Studio 2015 사용자: 위의 단계는 Visual Studio 2017에 적용 합니다. Visual Studio 2015를 사용 하는 경우에 트리거 및 테스트 하 여 Visual Studio를 제외 하 고 UpdateTask, 연결 되지 것입니다 동일한 기법을 사용할 수 있습니다. VS 2015에는 다른 절차는 해당 진입점으로는 UpdateTask를 설정 하는 [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) 를 설치 하 고 전경 응용 프로그램에서 직접 실행을 시작 하는 것입니다.
 
-## <a name="see-also"></a>기타 참조
+## <a name="see-also"></a>참고 항목
 
 [Out-of-process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)

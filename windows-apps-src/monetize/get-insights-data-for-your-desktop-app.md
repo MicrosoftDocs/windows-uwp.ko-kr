@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: Microsoft 저장소 분석 API에서에서이 메서드를 사용 하 여 데스크톱 응용 프로그램에 대 한 통찰력 데이터를 가져옵니다.
-title: 데스크톱 응용 프로그램에 대 한 통찰력 데이터 가져오기
+title: 데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 ms.author: mcleans
 ms.date: 07/31/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: windows 10, uwp, 저장소 서비스, Microsoft 저장소 분석 API insights (영문)
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2857758"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2882989"
 ---
-# <a name="get-insights-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대 한 통찰력 데이터 가져오기
+# <a name="get-insights-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 
 [Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)에 추가 하면 데스크톱 응용 프로그램에 대 한 상태 메트릭 데이터와 관련 된 정보를 가져올 Microsoft 저장소 분석 API에서에서이 메서드를 사용 합니다. 이 데이터는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에 사용할 수도 있습니다.
 
