@@ -137,13 +137,7 @@
 ### [파일 액세스 권한](../files/file-access-permissions.md)
 ### [UWP의 파일 속성에 빠르게 액세스](../files/fast-file-properties.md)
 
-## [기계 학습](../machine-learning/index.md)
-### [개요](../machine-learning/overview.md)
-### [시작](../machine-learning/get-started.md)
-### [모델 교육](../machine-learning/train-ai-model.md)
-### [모델 변환](../machine-learning/conversion-samples.md)
-### [모델 통합](../machine-learning/integrate-model.md)
-### [샘플 앱](../machine-learning/samples.md)
+## [기계 학습](https://docs.microsoft.com/windows/ai/)
 
 # 배포
 
@@ -250,6 +244,7 @@
 ####### [추가 기능 취득 가져오기](../monetize/get-in-app-acquisitions.md)
 ####### [구독 추가 기능 취득 가져오기](../monetize/get-subscription-acquisitions.md)
 ####### [채널별 추가 기능 변환 가져오기](../monetize/get-add-on-conversions-by-channel.md)
+###### [앱에 대한 정보 데이터 가져오기](../monetize/get-insights-data-for-your-app.md)
 ###### [앱 등급 가져오기](../monetize/get-app-ratings.md)
 ###### [앱 리뷰 가져오기](../monetize/get-app-reviews.md)
 ###### [오류 보고 데이터 가져오기](../monetize/get-error-reporting-data.md)
@@ -260,6 +255,7 @@
 ###### [광고 캠페인 성과 데이터 가져오기](../monetize/get-ad-campaign-performance-data.md)
 ##### 데스크톱 앱
 ###### [데스크톱 응용 프로그램 설치 가져오기](../monetize/get-desktop-app-installs.md)
+###### [데스크톱 응용 프로그램에 대한 정보 데이터 가져오기](../monetize/get-insights-data-for-your-desktop-app.md)
 ###### [데스크톱 응용 프로그램에 대한 업그레이드 차단 가져오기](../monetize/get-desktop-block-data.md)
 ###### [데스크톱 응용 프로그램에 대한 업그레이드 차단 세부 정보 가져오기](../monetize/get-desktop-block-data-details.md)
 ###### [데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기](../monetize/get-desktop-application-error-reporting-data.md)
@@ -275,16 +271,6 @@
 ####### [Xbox Live 클럽 데이터 가져오기](../monetize/get-xbox-live-club-data.md)
 ####### [Xbox Live 멀티플레이 데이터 가져오기](../monetize/get-xbox-live-multiplayer-data.md)
 ####### [Xbox Live 동시 사용 데이터 가져오기](../monetize/get-xbox-live-concurrent-usage-data.md)
-##### 드라이버 및 하드웨어
-###### [Windows 10 드라이버에 대한 오류 보고 데이터 가져오기](../monetize/get-error-reporting-data-for-windows-10-drivers.md)
-####### [Windows 10 드라이버 오류에 대한 세부 정보 가져오기](../monetize/get-details-for-a-windows-10-driver-error.md)
-####### [Windows 10 드라이버 오류에 대한 CAB 파일 다운로드](../monetize/download-the-cab-file-for-a-windows-10-driver-error.md)
-###### [Windows 7 및 Windows 8.x 드라이버에 대한 오류 보고 데이터 가져오기](../monetize/get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)
-####### [Windows 7 또는 Windows 8.x 드라이버 오류에 대한 세부 정보 가져오기](../monetize/get-details-for-a-windows-7-or-windows-8.x-driver-error.md)
-####### [Windows 7 또는 Windows 8.x 드라이버 오류에 대한 CAB 파일 다운로드](../monetize/download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)
-###### [OEM 하드웨어 오류 보고 데이터 가져오기](../monetize/get-oem-hardware-error-reporting-data.md)
-####### [OEM 하드웨어 오류에 대한 세부 정보 가져오기](../monetize/get-details-for-an-oem-hardware-error.md)
-####### [OEM 하드웨어 오류에 대한 CAB 파일 다운로드](../monetize/download-the-cab-file-for-an-oem-hardware-error.md)
 #### [리뷰에 응답](../monetize/respond-to-reviews-using-windows-store-services.md)
 ##### [리뷰에 대한 응답 정보 가져오기](../monetize/get-response-info-for-app-reviews.md)
 ##### [리뷰에 대한 응답 제출](../monetize/submit-responses-to-app-reviews.md)
@@ -405,12 +391,16 @@
 ### [동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md)
 ### [XAML 컨트롤, C++/WinRT 속성 바인딩](../cpp-and-winrt-apis/binding-property.md)
 ### [XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩](../cpp-and-winrt-apis/binding-collection.md)
+### [C++/WinRT을 사용한 XAML 사용자 지정(템플릿) 컨트롤](../cpp-and-winrt-apis/xaml-cust-ctrl.md)
+### [C++/WinRT를 사용한 DirectX 및 기타 COM API](../cpp-and-winrt-apis/consume-com.md)
 ### [C++/WinRT와 C++/CX 사이의 상호 운용성](../cpp-and-winrt-apis/interop-winrt-cx.md)
 ### [C++/CX에서 C++/WinRT로 이동](../cpp-and-winrt-apis/move-to-winrt-from-cx.md)
 ### [C++/WinRT와 ABI 사이의 상호 운용성](../cpp-and-winrt-apis/interop-winrt-abi.md)
 ### [WRL에서 C++/WinRT로 이동](../cpp-and-winrt-apis/move-to-winrt-from-wrl.md)
 ### [약한 참조](../cpp-and-winrt-apis/weak-references.md)
 ### [Agile 개체](../cpp-and-winrt-apis/agile-objects.md)
+### C++ 언어
+#### [값 범주 및 참조](../cpp-and-winrt-apis/cpp-value-categories.md)
 
 ## [보안](../security/index.md)
 ### [보안 Windows 앱 개발 소개](../security/intro-to-secure-windows-app-development.md)
@@ -724,62 +714,3 @@
 ### [스레드 풀에 작업 항목 제출](../threading-async/submit-a-work-item-to-the-thread-pool.md)
 ### [타이머를 사용하여 작업 항목 제출](../threading-async/use-a-timer-to-submit-a-work-item.md)
 ### [다중 스레드 환경에서 Windows 런타임 개체 사용](../threading-async/using-windows-runtime-objects-in-a-multithreaded-environment.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
