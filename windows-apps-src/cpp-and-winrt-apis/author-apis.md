@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: d2f9b336d9a95efe28668991d66ab0a9e48e96e7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889292"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2912370"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 작성
 이번 항목에서는 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체를 직/간접적으로 사용하여 C++/WinRT API를 작성하는 방법에 대해서 설명합니다. 이번 문서의 맥락에 따라 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어로 사용됩니다. 이번 항목에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법에 대해서 설명합니다.
@@ -252,14 +252,14 @@ namespace MyProject
 }
 ```
 
-**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출할 수 있습니다. **확인** 구현 형식의 기본 인터페이스를 반환합니다.
+**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출할 수 있습니다. 구현 체 형식의 기본 인터페이스를 반환 **확인** 합니다.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
 ```
 
 > [!NOTE]
-> 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **확인** 예상한 형식의 인스턴스를 반환 합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
+> 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **확인** 프로젝션 된 형식 인스턴스를 반환합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
 
 **IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 호출하여 다른 인터페이스에 대한 쿼리를 실행할 수 있습니다. 이때 다른 인터페이스 역시 사용하거나 반환할 수 있습니다.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: cc7119ba2d97bfc6e1fb3f1a519b6d650027b1a3
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887492"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913160"
 ---
 # <a name="copy-to-and-from-byte-arrays"></a>바이트 배열에 및 바이트 배열에서 복사
 

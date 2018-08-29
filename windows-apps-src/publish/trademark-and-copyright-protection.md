@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f99396b117efcf7c3bed3cb64f24b519734cc858
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2893535"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910876"
 ---
 # <a name="trademark-and-copyright-protection"></a>상표 및 저작권 보호
 
@@ -25,7 +25,7 @@ ms.locfileid: "2893535"
 ### <a name="1-how-may-i-report-an-infringement-of-my-intellectual-property-rights-within-a-windows-app"></a>1. Windows 앱 내에서 내 지적 재산권 침해를 보고하려면 어떻게 해야 합니까?
 
 
-다음 [양식](http://go.microsoft.com/fwlink/p/?LinkId=273879)을 사용하여 Windows 앱에서 저작권, 상표 또는 광고 권리 침해 불만을 제출하세요. 여러 앱에서 저작권, 상표 또는 광고 권리 침해 불만이 있는 경우 mktlegal@microsoft.com으로 요청을 제출하세요. Microsoft의 DMCA 정책에 대 한 추가 정보, 필요한 경우를 방문 하십시오: [https://www.microsoft.com/info/cpyrtInfrg.aspx](http://go.microsoft.com/fwlink/p/?LinkId=626976)합니다.
+다음 [양식](http://go.microsoft.com/fwlink/p/?LinkId=273879)을 사용하여 Windows 앱에서 저작권, 상표 또는 광고 권리 침해 불만을 제출하세요. 여러 앱에서 저작권, 상표 또는 광고 권리 침해 불만이 있는 경우 mktlegal@microsoft.com으로 요청을 제출하세요. Microsoft의 DMCA 정책에 대 한 정보를 추가 해야 하는 경우: [https://www.microsoft.com/info/cpyrtInfrg.aspx](http://go.microsoft.com/fwlink/p/?LinkId=626976).
 
 ### <a name="2-i-created-my-app-to-work-with-a-microsoft-productservice-may-i-use-the-microsoft-productservice-name-in-the-name-of-my-app"></a>2. Microsoft 제품/서비스에서 작동하도록 앱을 만들었습니다. 내 앱 이름에 Microsoft 제품/서비스 이름을 사용할 수 있습니까?
 

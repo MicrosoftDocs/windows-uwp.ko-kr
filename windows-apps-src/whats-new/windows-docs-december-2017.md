@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 93ef3de0dc86ab9708f7be99836204c2232dfef4
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2907780"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 643a5abf22bfbeb9e7ace48bc430ab6e0d446ae1
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: d45881ace6be3b0af88f14692837e96ab9b58d18
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914518"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>시각적 계층을 XAML과 함께 사용
 
@@ -43,7 +43,7 @@ XAML UI와 브러시 사용에 대한 자세한 내용은 [**브러시**](/windo
 
 **XamlLight**는 **CompositionLight**로 동적으로 영역을 밝히는 XAML 조명 효과에 대한 기본 클래스를 제공합니다.
 
-XAML UI 요소 조명을 포함한 조명 사용에 대한 자세한 내용은 [**조명을**](lighting.md) 섹션을 참조하세요.
+XAML UI 요소 조명을 포함한 조명 사용에 대한 자세한 내용은 [**조명을**](xaml-lighting.md) 섹션을 참조하세요.
 
 코드 샘플은 [**XamlLight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamllight)에 대한 참조 페이지를 참조하세요.
 

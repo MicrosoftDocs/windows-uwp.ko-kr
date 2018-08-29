@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 위치, 지도, 지리적 위치
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881736"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906520"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>위치 인식 앱에 대한 지침
 
@@ -51,7 +51,7 @@ ms.locfileid: "2881736"
 
     사용자가 설정을 통해 위치 정보에 대한 액세스를 해제할 경우 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 해제합니다. 앱은 위치 API 호출에 대한 **ACCESS\_DENIED** 결과를 받게 됩니다. 앱이 위치 데이터를 저장하거나 캐시할 경우 사용자가 위치 정보에 대한 액세스를 취소하면 캐시된 데이터를 지웁니다. 위치 서비스를 통해 위치 데이터를 사용할 수 없을 때 위치를 수동으로 입력하는 대체 방법을 제공합니다.
 
--   위치 서비스를 다시 사용하도록 설정할 수 있는 UI를 제공합니다. 예, [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 다시 인스턴스화합니다 및 위치 정보를 다시 가져올 하려고 하는 새로고침 단추를 제공 합니다.
+-   위치 서비스를 다시 사용하도록 설정할 수 있는 UI를 제공합니다. 예를 들어 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 인스턴스화하고 위치 정보를 다시 가져오려고 시도 하는 새로 고침 단추를 제공 합니다.
 
     앱에서 위치 서비스를 다시 사용하도록 설정할 수 있는 UI를 제공합니다.
 
@@ -91,7 +91,7 @@ ms.locfileid: "2881736"
         예를 들면 다음과 같습니다.
 
         -   앱이 광고 튜닝, 날씨, 뉴스 등에 대한 위치를 얻고 있는 경우 일반적으로 5000미터 정확성이면 충분합니다.
-        -   앱의 환경에 있는 많은 거래를 체결할 근처에 있는 표시 하는 경우 300 미터의 정확도 결과 제공 하도록 일반적으로 좋습니다.
+        -   지역에서 거래 근처에 있는 앱 표시 하는 경우 300 미터 정확성이 일반적으로 좋은 결과 제공 하도록 합니다.
         -   사용자가 인근 음식점에 대한 추천을 찾고 있는 경우 블록 내에서 위치를 얻으려고 하므로 100미터 정확성이 충분합니다.
         -   사용자가 자신의 위치를 공유하려고 하는 경우 앱은 약 10미터 정확성을 요청해야 합니다.
     -   앱에 특정 정확성 요구 사항이 있는 경우 [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) 속성을 사용하세요. 예를 들어 내비게이션 앱은 사용 가능한 위치 데이터가 앱의 요구 사항을 충족하는지 확인하기 위해 **Geocoordinate.accuracy** 속성을 사용해야 합니다.

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885435"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918353"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML 항목 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 컬렉션 바인딩
 > [!NOTE]
@@ -37,7 +37,7 @@ XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* �
 관찰 가능한 벡터 템플릿을 [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_)의 유용한 범용 구현체로 사용하는 것은 바람직합니다. 아래는 이름이 **single_threaded_observable_vector\<T\>** 인 클래스를 나열한 것입니다.
 
 > [!NOTE]
-> 이전에 설치한 [Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK), 또는 나중에 다음 있습니다 수 방금 직접 사용 하 여 **winrt::single_threaded_observable_vector\ < T\ >** 공장 함수 아래 나열 하는 코드는 대신 (보여줍니다 정확 하 게 코드 나중에 이 항목의). 모르는 경우 이미 해당 버전의 SDK에서, 다음 것 쉽게 하는 경우 **winrt** 함수에 코드 목록 버전을 사용을 통해 전환할 수입니다.
+> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 사용할 수 있습니다 직접 **winrt::single_threaded_observable_vector\ < 하며 >** factory 함수 아래의 코드 목록 대신 (살펴보겠습니다 정확한 코드 나중 이 항목에서). 하지 않는 이미 해당 버전의 SDK 하는 경우 다음 됩니다 쉽게 되 면 코드 목록을 버전 **winrt** 기능을 사용 하 여 전환할.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -305,7 +305,7 @@ runtimeclass BookstoreViewModel
 ```
 
 > [!IMPORTANT]
-> 위의 MIDL 3.0 목록에 **BookSkus** 속성의 형식 인지 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)의 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) note 합니다. 이 항목의 다음 섹션에서 **BookSkus**에 [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) 의 항목 소스를 바인딩 표시 됩니다. 목록 상자 항목 컨트롤을 이며 [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 올바르게 설정 하려면 **IVector** **IInspectable**또는 [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)등의 상호 운용성 형식의 형식의 값으로 설정 해야 합니다.
+> 위의 MIDL 3.0 목록에 **BookSkus** 속성의 형식이 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)의 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) note 합니다. 이 항목의 다음 섹션에서 **BookSkus**에 [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) 항목 소스를 바인딩 합니다. 목록 상자 항목 컨트롤, 이며 [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 올바르게 설정 하려면 **IVector** **IInspectable**또는 [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)등의 상호 운용성 형식의 형식의 값으로 설정 해야 합니다.
 
 저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`의 접근자 스텁을 `Generated Files` 폴더에 복사하여 구현합니다.
 
@@ -351,20 +351,20 @@ Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Boo
 ...
 ```
 
-## <a name="if-you-have-a-windows-10-sdk-preview-build"></a>Windows 10 SDK 미리 보기 빌드 있는 경우
-[Windows 10 SDK 미리 보기 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 다음 줄을 코드 또는
+## <a name="if-you-have-a-windows-10-sdk-preview-build"></a>Windows 10 SDK Preview 빌드는 것이 있는 경우
+[Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 또는 나중에이 코드 줄을 다음 바꾸기
 
 ```cppwinrt
 m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
 ```
 
-대체 합니다.
+이 있습니다.
 
 ```cppwinrt
 m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
 ```
 
-[**Winrt::make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make)를 호출 하는 대신 **winrt::single_threaded_observable_vector\ < T\ >** 공장 함수를 호출 하 여 적절 한 컬렉션 개체를 만듭니다.
+[**Winrt:: make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make)를 호출 하는 대신 **winrt::single_threaded_observable_vector\ < 하며 >** factory 함수를 호출 하 여 적절 한 컬렉션 개체를 만듭니다.
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>ListBox를 **BookSkus** 속성에 바인딩
 `MainPage.xaml`을 엽니다. 여기에는 메인 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 다음 태그를 **Button**과 동일한 **StackPanel**에 추가합니다.

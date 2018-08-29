@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
+keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, "로마" 프로젝트 "로마"
 ms.localizationpriority: medium
 ms.openlocfilehash: 02d04074ece0033da8c3454a95bc35af201903f3
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890308"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916942"
 ---
 # <a name="discover-remote-devices"></a>원격 장치 검색
 앱에서 무선 네트워크, Bluetooth 및 클라우드 연결을 사용하여 검색 장치와 동일한 Microsoft 계정으로 로그온된 Windows 장치를 검색할 수 있습니다. 특별한 소프트웨어가 설치되어 있지 않아도 원격 장치를 검색할 수 있습니다.

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 게임 설정, 표시 모드, 시스템 요구 사항, 하드웨어 요구 사항, 최소 하드웨어, 권장 하드웨어, 개인 정보 취급 방침, 지원 연락처 정보, 앱 웹 사이트, 지원 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: d23fb0cb3fb4668682df1957cbf0c88bcf8649c1
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889342"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913902"
 ---
 # <a name="enter-app-properties"></a>앱 속성 입력
 

@@ -15,17 +15,17 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e8f0fbbfacc3fa4edb602f7505ea1e88f211a81a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889413"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913020"
 ---
 # <a name="pivot"></a>Pivot
 
-[피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤 콘텐츠 섹션의 작은 집합 사이 터치 댔을 수 있습니다.
+[피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤을 사용 하면 콘텐츠 섹션의 작은 집합 간의 터치 살짝 밀기 합니다.
 
-> **중요 한 api (영문)**: [피벗 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **중요 Api**: [Pivot 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>예
 
@@ -34,7 +34,7 @@ ms.locfileid: "2889413"
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>설치 된 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 응용 프로그램을 설치한 경우 여기를 클릭 <a href="xamlcontrolsgallery:/item/Pivot">응용 프로그램을 열고 작업에 피벗 컨트롤을 참조 하십시오</a>.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 하 <a href="xamlcontrolsgallery:/item/Pivot">는 앱을 열고 작동 중인 피벗 컨트롤을 참조 하세요</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
@@ -43,26 +43,26 @@ ms.locfileid: "2889413"
 </tr>
 </table>
 
-[NavigationView](navigationview.md)마찬가지로 피벗 컨트롤을 선택한 항목에 밑줄을 표시 합니다.
+피벗 컨트롤 [NavigationView](navigationview.md)마찬가지로 선택한 항목에 밑줄을 표시 합니다.
 
 ![기본 포커스는 선택된 헤더에 밑줄로 표시됩니다.](images/pivot_focus_selectedHeader.png)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-일반적인 위쪽 탐색 및 탭 패턴을 얻으려면 [NavigationView](navigationview.md), 자동으로 서로 다른 화면 크기에 맞게 조정 하 고 더 많은 사용자 지정을 위한 허용 하는 사용 하는 것이 좋습니다.
+일반적인 상단 탐색 및 탭 패턴을 위해 [NavigationView](navigationview.md)를 자동으로 다양 한 화면 크기에 맞게 조정 되 고 큰 사용자 지정할 수 있습니다를 사용 하는 것이 좋습니다.
 
-그러나 탐색 터치 댔이 필요, 피벗을 사용 하 여 것이 좋습니다.
+그러나 탐색을 위해 터치 살짝 밀기, 피벗을 사용 하 여 것이 좋습니다.
 
-NavigationView 및 피벗 컨트롤 간의 주요 차이점은 기본 오버플로 동작 및 탐색 API입니다.
+NavigationView 및 피벗 컨트롤 간의 주요 차이점에 기본 오버플로 동작을 탐색 API:
 
-- 항목, NavigationView 메뉴 드롭다운을 사용 하는 동안 사용자가 모든 항목을 볼 수 있도록 오버플로 컨베이어 벨트 오버플로 피벗 합니다.
-- 피벗 NavigationView 탐색 동작 보다 효율적으로 제어를 허용 하는 동안 콘텐츠 구역 간의 탐색을 처리 합니다.
+- 피벗 항목 NavigationView의 드롭다운 메뉴를 사용 하는 동안 사용자가 모든 항목을 볼 수 있도록 오버플로 컨베이어 벨트 오버플로.
+- 피벗 NavigationView를 사용 하면 탐색 동작을 보다 잘 제어 하는 동안 콘텐츠 섹션 간 탐색을 처리 합니다.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>피벗 대신 NavigationView를 사용 합니다.
 
-앱의 UI가 피벗 컨트롤을 사용 하는 경우 다음으로 변환할 수 있습니다 피벗 NavigationView 아래 코드를 사용 합니다.
+앱의 UI 피벗 컨트롤을 사용 하는 경우 다음을 변환할 수 있습니다 피벗 NavigationView 아래 코드를 사용 하 여 합니다.
 
-이 XAML 3 섹션 [만들기 피벗 컨트롤에](#create-a-pivot-control)에서는 피벗 예제와 같은 콘텐츠를 NavigationView를 만듭니다.
+이 XAML은 3 개의 만들기 [피벗 컨트롤](#create-a-pivot-control)피벗 예제와 마찬가지로 콘텐츠 섹션이 있는 NavigationView를 만듭니다.
 
 ```xaml
 <NavigationView x:Name="rootNavigationView" Header="Category Title"
@@ -87,7 +87,7 @@ NavigationView 및 피벗 컨트롤 간의 주요 차이점은 기본 오버플�
 </Page>
 ```
 
-NavigationView 탐색 사용자 지정 보다 효율적으로 제어를 제공 하 고 해당 코드 숨김 필요 합니다. 위의 XAML를 보완 하는 다음과 같은 코드 숨김 사용 하십시오.
+NavigationView 탐색 사용자 지정 보다 잘 제어를 제공 하 고 해당 코드 숨김에 필요 합니다. 위의 XAML 함께, 다음 코드 숨김을 사용:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -116,11 +116,11 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-이 코드 콘텐츠 구역 간의 터치 댔을 경험 뺀 피벗 컨트롤의 기본 제공 탐색 경험을 모방 합니다. 그러나 볼 수 있듯이 사용자 지정할 수 있습니다 애니메이션된으로 전환, 탐색 매개 변수 및 스택 기능을 포함 하 여 여러 포인트입니다.
+이 코드는 콘텐츠 섹션 간에 터치 살짝 밀기 경험-피벗 컨트롤의 기본 제공 탐색 경험을 모방합니다. 그러나 알 수 있듯이 사용자 지정할 수 있습니다 애니메이션된 전환, 탐색 매개 변수를 및 스택 기능을 포함 하는 몇 가지 지점이 합니다.
 
 ## <a name="create-a-pivot-control"></a>피벗 컨트롤 만들기
 
-이 코드는 3 섹션의 콘텐츠를 기본 피벗 컨트롤을 만듭니다.
+이 코드는 3 개의 콘텐츠 섹션이 있는 기본 피벗 컨트롤을 만듭니다.
 
 ```xaml
 <Pivot x:Name="rootPivot" Title="Category Title">

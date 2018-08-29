@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-description: 반투명 질감을 만드는 브러시의 형식입니다.
+description: 투명 한 텍스처를 만드는 브러시 유형입니다.
 title: 아크릴 소재
 template: detail.hbs
 ms.author: mijacobs
@@ -15,26 +15,26 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894102"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2907770"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
 ![영웅 이미지](images/header-acrylic.svg)
 
-Acrylic 형식인 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) 반투명 질감을 만듭니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
+아크릴은 투명 한 텍스처를 만드는 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) 유형입니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
 > **중요한 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::
-        연한 테마에서 acrylic ![연한 테마에서 Acrylic](images/Acrylic_LightTheme_Base.png)
+        밝은 테마의 아크릴 ![밝은 테마의 아크릴](images/Acrylic_LightTheme_Base.png)
     :::column-end:::
     :::column:::
-        진한 테마에서 acrylic ![어두운 색 테마의 Acrylic](images/Acrylic_DarkTheme_Base.png)
+        어두운 테마의 아크릴 ![어두운 테마의 아크릴](images/Acrylic_DarkTheme_Base.png)
     :::column-end:::
 :::row-end:::
 
@@ -49,10 +49,10 @@ Acrylic 형식인 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.U
 ## <a name="examples"></a>예
 
 :::row:::
-    ::: 열 범위::: ![일부 이미지](images/XAML-controls-gallery-app-icon.png)
+    ::: column span::: ![일부 이미지](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
     ::: 열 범위 = "2"::: **XAML 컨트롤 갤러리**<br>
-        설치 된 XAML 컨트롤 갤러리 응용 프로그램을 설치한 경우 클릭 <a href="xamlcontrolsgallery:/item/Acrylic">여기</a> 에 응용 프로그램을 열고 작업에서 acrylic를 참조 하십시오.
+        XAML 컨트롤 갤러리 앱이 설치 된 경우 클릭 <a href="xamlcontrolsgallery:/item/Acrylic">여기</a> 에 앱을 열고 중인 아크릴을 확인 합니다.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
@@ -77,7 +77,7 @@ Acrylic 형식인 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.U
 
 [NavigationView](../controls-and-patterns/navigationview.md)는 앱에 탐색을 추가하기 위한 새로운 공통 컨트롤이며 시각적 디자인에 아크릴이 포함되어 있습니다. NavigationView의 창은 기본 콘텐츠와 함께 나란히 창을 여는 경우 배경 아크릴을 표시하며, 창이 오버레이로 열리는 경우 자동으로 인앱 아크릴로 전환됩니다.
 
-앱을 NavigationView를 활용 하 여 수 없는 사용자가 직접 acrylic 추가 (영문)에 계획 하는 경우에 60% 색조 불투명도 상대적으로 반투명 acrylic를 사용 하는 것이 좋습니다.
+앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 상대적으로 반투명 아크릴을 사용 하는 것이 좋습니다.
  - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
  - 창이 주 앱 콘텐츠와 함께 나란히 열리는 경우 [60% 배경 아크릴](#acrylic-theme-resources)이어야 합니다.
 
@@ -106,11 +106,11 @@ Acrylic 형식인 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.U
 ![전체 배경으로 아크릴을 사용한 계산기 유틸리티 앱](images/acrylic_app-pattern_full.png)
 
 > [!Note]
-> GPU 많이 장치 전력 소비 증가 하 고 배터리 수명을 줄일 수 있는 경우 acrylic 월등 렌더링 (영문) Acrylic 효과 선택 하는 경우 자동으로 장치 배터리 보호기 모드를 입력 하 고 사용자가 모든 앱에 대 한 acrylic 효과 사용 하지 않도록 설정할 수 있는 경우 비활성화 합니다.
+> 아크릴 표면 렌더링 GPU 많이 장치 전력 소비를 증가 하 고 배터리 사용 시간을 줄일 수 있는입니다. 아크릴 효과 선택할 경우 자동으로 장치 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 비활성화 합니다.
 
 
 ## <a name="acrylic-blend-types"></a>아크릴 혼합 유형
-Acrylic의 가장 눈에 띄는 특성은 해당 반투명입니다. 소재를 통과하여 보이는 것을 변경하는 두 가지 아크릴 혼합 유형이 있습니다.
+아크릴의 가장 눈에 띄는 특징은 투명입니다. 소재를 통과하여 보이는 것을 변경하는 두 가지 아크릴 혼합 유형이 있습니다.
  - **배경 아크릴**은 현재 활성 앱의 뒤에 있는 바탕 화면 배경 화면 및 다른 창을 표시하여 응용 프로그램 창 사이에 깊이를 추가하고 사용자의 개인 기본 설정을 반영합니다.
  - **인앱 아크릴**은 앱 프레임 내부에 깊이감을 더하여 포커스와 계층을 모두 제공합니다.
 
@@ -124,12 +124,12 @@ Acrylic의 가장 눈에 띄는 특성은 해당 반투명입니다. 소재를 �
 ## <a name="usability-and-adaptability"></a>유용성 및 적응성
 아크릴은 다양한 디바이스 및 컨텍스트에 맞춰 자동으로 모양을 바꿉니다.
 
-고대비 모드에서는 아크릴 대신 사용자가 선택한 익숙한 배경색이 계속 표시됩니다. 또한 배경 acrylic와 응용 프로그램에서 acrylic 단색으로 표시 됩니다.
- - 사용자 설정에 대 한 투명도 해제 하는 경우 > 개인 설정 > 색
- - 배터리 보호기 모드가 활성화 된 경우
+고대비 모드에서는 아크릴 대신 사용자가 선택한 익숙한 배경색이 계속 표시됩니다. 또한 배경 아크릴과 인 앱 아크릴이 모두 단색으로 표시 됩니다.
+ - 사용자가 설정에서 투명도 끄면 때 > 개인 설정 > 색상
+ - 배터리 절약 모드가 활성화 된 경우
  - 앱이 저사양 하드웨어에서 실행되는 경우
 
-또한 배경 acrylic만 대체할 해당 반투명 및 질감을 단색으로:
+또한 배경 아크릴만 대체할는 투명 한 텍스처를 단색:
  - 바탕 화면에서 앱 창이 비활성화되는 경우
  - UWP 앱이 휴대폰, Xbox, HoloLens 또는 태블릿 모드에서 실행되는 경우
 
@@ -163,7 +163,7 @@ Acrylic의 가장 눈에 띄는 특성은 해당 반투명입니다. 소재를 �
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> <b>사용을 권장:</b> 앱 AltMedium 색의 보조 텍스트를 사용 하 여 18px 또는 더 큰 텍스트 크기를 텍스트 뒤에 이러한 더 반투명 70 %acrylic 리소스를 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
+        <td> <b>권장 사용법:</b> 텍스트 크기가 18 픽셀 이상인 AltMedium 컬러 보조 텍스트를 사용 하는 앱을 텍스트 뒤 이러한 더 반투명 70% 아크릴 리소스를 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -209,9 +209,9 @@ Acrylic의 가장 눈에 띄는 특성은 해당 반투명입니다. 소재를 �
 ## <a name="custom-acrylic-brush"></a>사용자 지정 아크릴 브러시
 브랜딩을 표시하거나 페이지의 다른 요소와 시각적으로 균형을 맞추기 위해 앱의 아크릴에 컬러 색조를 추가할 수 있습니다. 회색조 대신 컬러를 표시하려면 다음 속성을 사용하여 사용자 고유의 아크릴 브러시를 정의해야 합니다.
  - **TintColor**: 색/색조 오버레이 계층입니다. RGB 컬러 값과 알파 채널 불투명도를 모두 지정하는 방안을 고려해 보세요.
- - **TintOpacity**: 색조 계층의 불투명도입니다. 다른 색 다른 translucencies에서 뛰어난 나타날 수 있지만 시작 점으로 80%의 불투명도 권장 합니다.
+ - **TintOpacity**: 색조 계층의 불투명도입니다. 좋습니다 80% 불투명도를 시작 점으로 하지만 서로 다른 색상 다른 translucencies에 더 멋지게 보일 수 있습니다.
  - **BackgroundSource**: 배경 아크릴과 인앱 아크릴 중에서 원하는 것을 지정하는 플래그입니다.
- - **FallbackColor**: 단색 배터리 보호기에서 acrylic을 대체 합니다. 배경 아크릴의 경우 앱이 활성 데스크톱 창에 없거나 앱이 휴대폰 및 Xbox에서 실행 중인 경우 대체 색이 아크릴도 대체합니다.
+ - **FallbackColor**: 단색 배터리 절약 모드에서 아크릴을 대체 합니다. 배경 아크릴의 경우 앱이 활성 데스크톱 창에 없거나 앱이 휴대폰 및 Xbox에서 실행 중인 경우 대체 색이 아크릴도 대체합니다.
 
 
 ![밝은 테마 아크릴 견본](images/CustomAcrylic_Swatches_LightTheme.png)
@@ -338,7 +338,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ## <a name="how-we-designed-acrylic"></a>아크릴 설계 방식
 
-아크릴의 고유한 모양과 속성에 도달할 수 있도록 아크릴의 핵심 구성 요소를 세밀하게 조정했습니다. 반투명, 흐림 효과 및 노이즈 시각적 깊이 차원 평면 표면에 추가 하는 시작 합니다. 아크릴 배경에 배치된 UI의 대비와 가독성을 보장하기 위해 제외 혼합 모드 레이어를 추가했습니다. 마지막으로 개인 설정 기회를 제공하기 위해 컬러 색조를 추가했습니다. 이러한 레이어가 합쳐져서 생생하고 편리한 소재가 완성됩니다.
+아크릴의 고유한 모양과 속성에 도달할 수 있도록 아크릴의 핵심 구성 요소를 세밀하게 조정했습니다. 투명, 흐림 및 노이즈 시각적 깊이 입체감을 추가를 시작 합니다. 아크릴 배경에 배치된 UI의 대비와 가독성을 보장하기 위해 제외 혼합 모드 레이어를 추가했습니다. 마지막으로 개인 설정 기회를 제공하기 위해 컬러 색조를 추가했습니다. 이러한 레이어가 합쳐져서 생생하고 편리한 소재가 완성됩니다.
 
 ![아크릴 제작법](images/AcrylicRecipe_Diagram.jpg)
 <br/>아크릴 제작법: 배경, 흐림, 제외 혼합, 색/색조 오버레이, 노이즈

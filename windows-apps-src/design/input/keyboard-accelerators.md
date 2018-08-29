@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913080"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -355,21 +355,21 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 일반적으로 바로 가기 키는 UWP 응용 프로그램의 UI에 직접 설명되어 있지는 않지만, [도구 설명](../controls-and-patterns/tooltips.md)을 통해 사용자에게 보다 잘 표시되도록 할 수 있습니다. 도구 설명은 사용자가 포커스를 이동하거나, 누르고 있거나, 마우스 포인터를 컨트롤 위로 이동하면 자동으로 표시됩니다. 도구 설명을 통해 컨트롤에 연결된 바로 가기 키가 있는지 여부를 확인할 수 있으며, 있는 경우 바로 가기 키 조합이 표시됩니다.
 
-**Windows 10, 버전 1803 (2018 년 4 월 업데이트) 버전과 새 버전**
+**Windows 10, 버전 1803 (2018 년 4 월 업데이트) 이상**
 
-기본적으로 액셀러레이터 키 선언 된 [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) (제외한 모든 컨트롤 제시 하는 해당 키 조합을 도구 설명에.
+기본적으로 키보드 가속기를 선언 하는 경우 모든 [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) (제외는 해당 키 조합이 표시 도구 설명에 합니다.
 
 > [!NOTE] 
-> 컨트롤에 있는 둘 이상의 가속기 정의 첫번째만 표시 됩니다.
+> 컨트롤에 둘 이상의 가속기 정의 하는 경우 첫 번째 표시 됩니다.
 
 ![바로 가기 키 도구 설명](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *도구 설명의 바로 가기 키 조합*
 
-[단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체의 경우에 대 한 키보드 바로 가기는 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem))에 대 한 개체, 액셀러레이터 플라이 아웃 텍스트와 함께 표시 됩니다.
+[단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체에 대 한 키보드 가속기는 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) 개체, 키보드 가속기 플라이 아웃 텍스트와 함께 표시 됩니다.
 
 > [!NOTE]
-> 도구 설명 지정 (Button1 다음 예제에서 참조)이이 동작을 재정의 합니다.
+> 도구 설명 지정 (다음 예에서 Button1 참조)이이 동작을 재정의 합니다.
 
 ```xaml
 <StackPanel x:Name="Container" Grid.Row="0" Background="AliceBlue">
@@ -400,7 +400,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 ![바로 가기 키 도구 설명](images/accelerators/accelerators-button-small.png)
 
-*바로 가기 키 콤보 단추의 기본 도구 설명에 추가*
+*버튼의 기본 도구 설명에 추가 하는 바로 가기 키 조합*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">
@@ -412,7 +412,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 ![바로 가기 키 도구 설명](images/accelerators/accelerators-appbarbutton-small.png)
 
-*바로 가기 키 콤보 AppBarButton의 기본 도구 설명에 추가*
+*AppBarButton의 기본 도구 설명에 추가 하는 바로 가기 키 조합*
 
 ```xaml
 <AppBarButton AccessKey="R" Icon="Refresh" Label="Refresh" IsAccessKeyScope="True">
@@ -438,7 +438,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 ![바로 가기 키 도구 설명](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
-*바로 가기 키 콤보 MenuFlyoutItem의 텍스트를 추가 합니다.*
+*바로 가기 키 조합 MenuFlyoutItem의 텍스트에 추가*
 
 [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode) 속성([자동](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) 또는 [숨김](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode)의 두 값 허용)을 사용하면 표시 동작을 제어할 수 있습니다.    
 
@@ -619,7 +619,7 @@ public class MyListView : ListView
 * [선택키](access-keys.md)
 
 **샘플**
-* [XAML 컨트롤 갤러리 (명시적 XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+* [XAML 컨트롤 갤러리 (일명 XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 
  

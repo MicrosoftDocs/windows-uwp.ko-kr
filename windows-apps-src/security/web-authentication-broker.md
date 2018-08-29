@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887922"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910196"
 ---
 # <a name="web-authentication-broker"></a>웹 인증 브로커
 
@@ -159,11 +159,11 @@ catch (Exception ex)
 
 앱에서 Fiddler 웹 디버거를 사용할 수 있습니다.
 
-1.  자체 app 컨테이너에서 실행 되는 AuthHost 이후 개인 네트워크 기능을 제공 하려면 설정 해야 레지스트리 키: Windows 레지스트리 편집기 버전 5.00
+1.  AuthHost을 자체 앱 컨테이너에서 실행 되므로 개인 네트워크 기능을 제공 하도록 설정 해야 레지스트리 키: Windows 레지스트리 편집기 버전 5.00
 
     **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
-    이 레지스트리 키가 없는 경우에 관리자 권한으로 명령 프롬프트에서 만들 수 있습니다.
+    이 레지스트리 키가 없는 경우 관리자 권한으로 명령 프롬프트에서 만들 수 있습니다.
 
     ```cmd 
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f

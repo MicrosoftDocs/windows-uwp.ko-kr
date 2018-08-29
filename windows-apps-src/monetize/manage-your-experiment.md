@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 073d5ec67bb012cbfe21c279ee97ec3c50b8458f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881916"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910151"
 ---
 # <a name="manage-your-experiment-in-the-dashboard"></a>대시보드에서 실험 관리
 

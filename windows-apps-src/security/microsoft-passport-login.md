@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 284609399f167a7229d0c7bb5858d0f0eda451ce
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2907439"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
 
@@ -33,9 +33,9 @@ ms.locfileid: "2885677"
 ## <a name="get-started"></a>시작
 
 
-이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 사용 하 고 Visual Studio 2015도 해야 (커뮤니티 버전 이상에서 작동할), 또는 Windows 10 컴퓨터에서 Visual Studio의 이후 버전입니다. Visual Studio 2015 필요한 최소 버전 이지만, 최신 개발자 및 보안 업데이트에 대 한 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
+이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. Visual Studio 2015를 사용 해야 합니다 (Community Edition 이상), 또는 Windows 10 컴퓨터에서 Visual Studio의 최신 릴리스 합니다. Visual Studio 2015에 필요한 최소 버전 이지만, 최신 개발자 및 보안 업데이트에 대 한 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
 
--   Visual Studio를 열고 파일을 선택 > 새로 만들기 > 프로젝트입니다.
+-   Visual Studio를 열고 파일 선택 > 새로 만들기 > 프로젝트입니다.
 -   "새 프로젝트" 창이 열립니다. 템플릿 &gt; Visual C#으로 이동합니다.
 -   비어 있는 앱(유니버설 Windows)을 선택하고 응용 프로그램의 이름을 "PassportLogin"으로 지정합니다.
 -   새 응용 프로그램을 빌드 및 실행(F5)하면 화면에 빈 창이 표시됩니다. 응용 프로그램을 닫습니다.

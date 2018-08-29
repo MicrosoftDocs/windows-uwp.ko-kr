@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2893751"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917236"
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -37,9 +37,9 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 3.  **광고 단위 이름** 필드에 광고 단위의 이름을 입력합니다. 보고용으로 광고 단위를 식별할 때 사용할 수 있는 설명 문자열입니다.
 4.  **광고 단위 유형** 드롭다운 목록에서 광고 유형을 선택합니다.
 
-    * 앱에 배너 광고를 표시 하는 경우 **배너**를 선택 합니다.
-    * 중간 비디오 ad 또는 중간 배너 광고 앱을 표시 하는 경우 **중간 비디오** 또는 **중간 배너** (수를 표시 하려는 중간 ad의 형식에 대 한 적절 한 옵션을 선택 해야)을 선택 합니다.
-    * 네이티브 ad 앱을 표시 하는 **네이티브**를 선택 합니다.
+    * 앱에서 배너 광고를 표시 하는 **배너**를 선택 합니다.
+    * 앱에서 동영상 중간 광고 또는 배너 중간 광고를 표시 하는, **동영상 중간 광고** 또는 **배너 중간 광고** (표시 하려는 중간 광고 유형에 대 한 적절 한 옵션을 선택 하세요)를 선택 합니다.
+    * 앱에 기본 광고를 표시 하는 경우 **기본**선택 합니다.
 
 5. **장치 패밀리** 드롭다운 목록에서 광고 단위가 사용될 앱의 대상이 되는 장치 패밀리를 선택합니다. 사용 가능한 옵션은 **UWP(Windows 10)**, **PC/태블릿(Windows 8.1)** 또는 **모바일(Windows Phone 8.x)** 입니다.
 
@@ -61,7 +61,7 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 
 * 앱에서 [배너 광고](../monetize/banner-ads.md)를 표시하는 경우 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체의 [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) 및 [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) 속성에 이러한 값을 할당합니다.
 * 앱에서 [중간 광고](../monetize/interstitial-ads.md)를 표시하는 경우 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체의 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드에 이러한 값을 전달합니다.
-* [네이티브 광고](../monetize/native-ads.md)를 표시 하는 앱을 하는 경우 **NativeAdsManagerV2** 생성자에 이러한 값을 전달 합니다.
+* 앱에서 [기본 광고](../monetize/native-ads.md)를 표시 하는 경우 이러한 값을 **NativeAdsManagerV2** 생성자에 전달 합니다.
   > [!IMPORTANT]
   > 앱별로 하나의 광고 단위만 사용할 수 있습니다. 특정 광고 단위를 하나 이상의 앱에 사용하면, 해당 광고 단위에 광고가 제공되지 않습니다.
 
@@ -71,13 +71,13 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 사용되는 앱에 대해 [COPPA 규정 준수](#coppa)를 편집하려면 광고 단위 이름을 클릭합니다.
 
 > [!NOTE]
-> Ad 단위 지난 6 개월에 대 한 작업이 있으면 **대화 불가능**레이블을 지정 하 고 결국 대시보드에에서 제거 됩니다 했습니다. 필터를 사용하여 **활성** 또는 **비활성** 광고 단위만 표시할 수 있습니다. 잘못 **비활성**으로 표시된 광고 단위가 있는 경우 [고객 지원에 문의](http://aka.ms/storesupport)합니다.
+> 광고 단위에 지난 6 개월 활동이 없는 경우 **비활성**지정 하 고 결국에 대시보드에서 제거 하겠습니다. 필터를 사용하여 **활성** 또는 **비활성** 광고 단위만 표시할 수 있습니다. 잘못 **비활성**으로 표시된 광고 단위가 있는 경우 [고객 지원에 문의](http://aka.ms/storesupport)합니다.
 
 <span id="mediation" />
 
 ## <a name="mediation-settings"></a>조정 설정
 
-때 [새 UWP ad 단위 만들기](#create-ad-unit) 또는 [기존 UWP ad 구성 단위를 편집](#available-ad-units)옵션을 사용이 섹션의 ad 단위에 대 한 [ad 중재](../monetize/ad-mediation-service.md) 를 구성 해야 합니다. 광고 조정을 통해 기타 유료 광고 네트워크의 광고와 Microsoft 앱 프로모션 캠페인 비수익 광고 등 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 홍보 기능을 최대화할 수 있습니다. Microsoft는 사용자가 선택한 광고 네트워크의 배너 광고 요청을 조정합니다. 앱에서 UWP 광고 단위가 배너, 중간 광고 또는 기본 광고에 이미 연결되어 있는 경우에는 광고 조정을 지원하기 위해 앱에서 코드를 변경할 필요가 없습니다.
+경우 [새 UWP 광고 단위를 생성](#create-ad-unit) 하거나 [기존 UWP 광고 단위를 편집](#available-ad-units)옵션을 사용이 섹션의 광고 단위에 대 한 [광고 조정](../monetize/ad-mediation-service.md) 을 구성 합니다. 광고 조정을 통해 기타 유료 광고 네트워크의 광고와 Microsoft 앱 프로모션 캠페인 비수익 광고 등 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 홍보 기능을 최대화할 수 있습니다. Microsoft는 사용자가 선택한 광고 네트워크의 배너 광고 요청을 조정합니다. 앱에서 UWP 광고 단위가 배너, 중간 광고 또는 기본 광고에 이미 연결되어 있는 경우에는 광고 조정을 지원하기 위해 앱에서 코드를 변경할 필요가 없습니다.
 
 > [!NOTE]
 > UWP 광고 단위에 대해 광고 조정을 지원하면 타사 광고 네트워크에서 광고 단위를 가져올 필요가 없습니다. Microsoft의 광고 조정 서비스가 자동으로 필요한 타사 광고 단위를 생성합니다.
@@ -85,13 +85,13 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 앱에서 UWP 광고 단위에 대한 광고 조정 설정을 구성하려면:
 
 1. [광고 단위를 만들거나](#create-ad-unit) [기존 광고 단위를 선택](#available-ad-units)합니다.
-2. **App에서 ads** 페이지에서 설정을 구성 및 **중재 설정** 섹션으로 이동 합니다.
+2. **인 앱 광고** 페이지에서 설정을 구성 및 **조정 설정** 섹션으로 이동 합니다.
 
-    * 기본값으로 **Microsoft가 앱에 가장 좋은 조정 설정을 선택** 확인란이 선택되어 있습니다. 이 옵션을 사용하는 것이 좋습니다. 이 옵션은 기계 학습 알고리즘을 사용, 자동으로 앱이 지원하는 지역/국가에서 광고 수익을 극대화 하는 데 도움이 되는 앱의 광고 조정 설정을 선택합니다. 이 옵션을 사용 하는 경우에 구성에 사용 하려는 ad 네트워크를 선택할 수 있습니다. 구성의 일부로 않으려면 및 알고리즘 앱 선택한 ad 네트워크에서 ads를만 수신 되었는지 확인할 수 있는 ad 네트워크의 선택을 취소 합니다.
-    * 직접 ad 중재 설정을 선택 하려는 경우 **기본 설정 수정을**선택 합니다.
+    * 기본값으로 **Microsoft가 앱에 가장 좋은 조정 설정을 선택** 확인란이 선택되어 있습니다. 이 옵션을 사용하는 것이 좋습니다. 이 옵션은 기계 학습 알고리즘을 사용, 자동으로 앱이 지원하는 지역/국가에서 광고 수익을 극대화 하는 데 도움이 되는 앱의 광고 조정 설정을 선택합니다. 이 옵션을 사용 하는 경우에 구성에 사용 하려는 광고 네트워크를 선택할 수 있습니다. 구성의 일부로 하지 않으려면 앱 선택한 광고 네트워크에서 광고를 수신 하기만 하는 알고리즘은 보장 하는 광고 네트워크의 선택을 취소 합니다.
+    * 고유의 광고 조정 설정을 선택 하려는 경우 **수정 기본 설정**을 선택 합니다.
 
     > [!NOTE]
-    > 이 섹션의 나머지 단계만 **기본 설정 수정을**선택 하는 경우에 적용 됩니다.
+    > 이 섹션의 나머지 단계는만 **수정 기본 설정**을 선택 하는 경우 적용 됩니다.
 
 4. **대상** 드롭다운 목록에서 **기본**을 선택해 광고 조정 설정을 기본값으로 구성할 수 있습니다. 이 기본 설정이 지역/국가에 특정적인 구성을 적용한 지역/국가를 제외한 모든 지역/국가에 적용됩니다.
 6. 다음은 유료 네트워크(광고 컨트롤을 유료 네트워크(노출에 대한 수익을 지급하는)와 다른 광고 네트워크(노출에 대한 수익을 지급하지 않는)의 컨트롤에 표시할 광고의 비율을 지정합니다. **유료 광고 네트워크** 및 **다른 광고 네트워크**의 **가중치** 필드에 0~100의 값을 입력해야 합니다.  
@@ -111,17 +111,17 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 |  광고 네트워크  |  설명  |  지원되는 광고 유형  |
 |--------------|---------------|---------------------|
-| 충성 및 AppNexus |  역할의 파트너를 통해 ads 네트워크, 충성 및 AppNexus 하는 Microsoft에서 관리 하는 ad 네트워크입니다.<p/>**참고**: 충성 및 AppNexus는 항상 순위를 지정한 먼저 **지불 ad 네트워크** 목록에서 배너 광고 단위에 대 한 하 고 이러한 유형의 광고에 대 한 더 낮은 순위를 변경할 수 없습니다. | 배너, 동영상 중간 광고 |
-| AppNexus(직접) | [AppNexus](https://www.appnexus.com)에서 광고를 처리 하기 위해이 옵션을 선택 합니다. | 동영상 중간 광고, 기본  |
+| Oath 및 AppNexus |  네트워크, Oath, AppNexus 파트너를 통해 광고를 제공 하는 Microsoft에서 관리 하는 광고 네트워크입니다.<p/>**참고**: Oath 및 AppNexus는 항상 순위 먼저 **유료 광고 네트워크** 목록에서 배너 광고 단위에 대 한 및 낮은 이런이 유형의 광고에서는 순위를 변경할 수 없습니다. | 배너, 동영상 중간 광고 |
+| AppNexus(직접) | [AppNexus](https://www.appnexus.com)에서 광고를 지원 하려면이 옵션을 선택 합니다. | 동영상 중간 광고, 기본  |
 | Microsoft 앱 설치 광고 | Windows 에코시스템에서 [앱에 대해 홍보 광고 캠페인을 생성](create-an-ad-campaign-for-your-app.md)하는 다른 개발자가 생성한 앱 설치 광고 또는 앱 Re-engagement 광고를 지원하려면 이 옵션을 선택합니다.  |  배너, 배너 중간 광고, 기본  |
-| MSN 콘텐츠 권장 사항 |  MSN 콘텐츠 권장 사항에서 광고를 처리 하기 위해이 옵션을 선택 합니다. |  배너, 배너 중간 광고  |
+| MSN 콘텐츠 권장 사항 |  MSN 콘텐츠 권장 사항에서 광고를 지원 하려면이 옵션을 선택 합니다. |  배너, 배너 중간 광고  |
 | Outbrain |  [Outbrain](https://www.outbrain.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너, 배너 중간 광고  |
 | Revcontent |  [Revcontent](http://www.revcontent.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  기본 배너  |
 | Smaato |  [Smaato](https://www.smaato.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
 | smartclip |  [smartclip](http://www.smartclip.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | SpotX |  [SpotX](https://www.spotx.tv/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  동영상 중간 광고  |
 | Taboola |  [Taboola](https://www.taboola.com/)에서 광고를 지원하려면 이 옵션을 선택합니다. |  배너  |
-| Undertone | [Undertone](https://www.undertone.com/)에서 광고를 처리 하기 위해이 옵션을 선택 합니다. | 중간 배너 |
+| Undertone | [Undertone](https://www.undertone.com/)에서 광고를 지원 하려면이 옵션을 선택 합니다. | 배너 중간 광고 |
 
 
 <span id="other-networks" />

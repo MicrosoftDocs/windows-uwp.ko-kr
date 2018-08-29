@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889402"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913511"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -48,7 +48,7 @@ ms.locfileid: "2889402"
 | 역할                 | 설명              |
 |----------------------|--------------------------|
 | 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 여기에는 개발자 센터의 사용자를 관리하는 권한이 포함되지만 Azure AD 테넌트에서 사용자를 생성하고 삭제하는 기능은 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자에게 전역 관리자 역할이 할당되었지만 조직의 Azure AD에서 관리자 권한을 가지고 있지 않은 경우에는 새 사용자를 만들거나 디렉터리에서 사용자를 삭제할 수 없습니다(사용자의 개발자 센터 역할은 변경할 수 있음). <p> 개발자 센터 계정이 여러 개의 Azure AD 테넌트와 연결된 경우 관리자는 해당 테넌트에 대해 전역 관리자 권한이 있는 계정을 가진 사용자와 동일한 테넌트에 로그인하지 않으면 사용자에 대한 전체 정보(이름, 성, 암호 복구 메일, Azure AD 전역 관리자인지 여부 포함)를 볼 수 없습니다. 그러나 개발자 센터 계정과 연결된 모든 테넌트에서 사용자를 추가 및 제거할 수 있습니다. |
-| 개발자            | 패키지를 업로드하고 앱 및 추가 기능을 제출할 수 있으며 원격 분석 세부 사항에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다. [교차 장치 환경](https://go.microsoft.com/fwlink/?linkid=874042) 을 기능에 액세스할 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
+| 개발자            | 패키지를 업로드하고 앱 및 추가 기능을 제출할 수 있으며 원격 분석 세부 사항에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다. [장치 간 환경](https://go.microsoft.com/fwlink/?linkid=874042) 기능에 액세스할 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
 | 비즈니스 기여자 | [상태](health-report.md) 및 [사용](usage-report.md) 보고서를 볼 수 있습니다. 제품을 만들거나 제출할 수 없고, 계정 설정을 변경하거나 재무 정보를 볼 수 없습니다.   |
 | 재무 기여자  | [지급 보고서](payout-summary.md), 재무 정보 및 구입 보고서를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.    |
 | 마케팅 담당자             | [고객 리뷰에 응답](respond-to-customer-reviews.md)할 수 있고 비재무 [분석 보고서](analytics.md)를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.      |
@@ -119,7 +119,7 @@ ms.locfileid: "2889402"
 <tr><td align="left">    <b>커뮤니티 광고</b>                       </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 만들고 관리하고 볼 수 있습니다.               </td></tr>
 <tr><td align="left">    <b>연락처 정보</b>                        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 편집하고 볼 수 있습니다.            </td></tr>
 <tr><td align="left">    <b>COPPA 준수</b>                    </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
-<tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (세그먼트 및 알려진된 사용자 그룹)를 볼 수 있습니다.      </td><td align="left">  편집, 만들고 볼 수 <a href="create-customer-groups.md">고객 그룹</a> (세그먼트 및 알려진된 사용자 그룹).       </td></tr>
+<tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 볼 수 있습니다.      </td><td align="left">  수 제작, 편집, 하 고 <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 확인 합니다.       </td></tr>
 <tr><td align="left">    <b>제품 그룹 관리</b>&nbsp;*                            </td><td align="left">  제품 그룹 만들기 페이지를 볼 수는 있지만 계정에서 제품 그룹을 실제로 만들 수는 없습니다.    </td><td align="left">  제품 그룹을 만들고 편집할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>새 앱</b>                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 <a href="create-your-app-by-reserving-a-name.md">새 앱을 만들</a> 수 있으며, 제출을 만들고 Microsoft Store에 앱을 제출할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>새 번들</b>&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 계정에서 실제로 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
@@ -170,7 +170,7 @@ ms.locfileid: "2889402"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>구입</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    N/A (설정 부모 제품에 대 한 **추가 기능 합병** 보고서에 포함)        </td><td>    해당 없음                         </td></tr>
+    <tr><td align="left">    <b>구입</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음 (상위 제품에 대 한 설정에 **추가 기능 구입** 보고서 포함)        </td><td>    해당 없음                         </td></tr>
     <tr><td align="left">    <b>사용</b> </td><td>    제품에 대한 <a href="usage-report.md">사용 보고서</a>를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>상태</b> </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>고객 피드백</b>    </td><td>    제품에 대한 <a href="reviews-report.md">리뷰</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음(피드백이나 리뷰에 응답하려면 <b>고객에게 문의</b> 권한을 부여받아야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
@@ -194,7 +194,7 @@ ms.locfileid: "2889402"
     <tbody>
     <tr><td align="left">    <b>홍보 코드</b>     </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문과 사용 정보를 볼 수 있습니다.         </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문을 보고 관리하고 만들 수 있으며, 사용 정보를 볼 수 있습니다.          </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td></tr>
     <tr><td align="left">    <b>대상 제품</b>     </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 볼 수 있습니다.         </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 확인하고 관리하고 만들 수 있습니다.          </td><td>    해당 없음     </td><td>    해당 없음      </td></tr>
-    <tr><td align="left">    <b>고객에게 문의</b>  </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대한 응답</a> 및 <a href="respond-to-customer-reviews.md">고객 리뷰에 대한 응답</a>을 볼 수 있습니다. 제품에 대해 생성된 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림</a>을 볼 수 있습니다.    </td><td>    <b>고객 의견</b> 권한도 부여한으로 <a href="respond-to-customer-feedback.md">고객 의견에 응답할</a> 수 있으며 <a href="respond-to-customer-reviews.md">고객 검토 결과에 응답할</a>수 있습니다. 제품에 대해 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림을 만들고 보낼</a> 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
+    <tr><td align="left">    <b>고객에게 문의</b>  </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대한 응답</a> 및 <a href="respond-to-customer-reviews.md">고객 리뷰에 대한 응답</a>을 볼 수 있습니다. 제품에 대해 생성된 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림</a>을 볼 수 있습니다.    </td><td>    <b>고객</b> 의견 권한도 부여 된 아니라 <a href="respond-to-customer-feedback.md">고객 피드백에 응답</a> 하 고 <a href="respond-to-customer-reviews.md">고객 리뷰에 응답할</a>수 있습니다. 제품에 대해 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림을 만들고 보낼</a> 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
     <tr><td align="left">    <b>실험</b></td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a> 및 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a>을 만들고 관리하고 볼 수 있으며, 실험 데이터를 볼 수 있습니다.     </td><td>    해당 없음  </td><td>    해당 없음                 </td></tr>
     <tr><td align="left">    <b>Microsoft Store 영업 이벤트</b>&nbsp;*</td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td></tr>
     </tbody>

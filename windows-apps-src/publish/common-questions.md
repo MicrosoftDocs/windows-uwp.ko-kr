@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881836"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917171"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>광고 캠페인에 대한 일반적인 질문
 
@@ -41,11 +41,11 @@ ms.locfileid: "2881836"
 
 ### <a name="where-will-my-ad-appear"></a>내 광고는 어디에 나타납니까?
 
-광고는 앱의 연령별 등급 및 OS 버전을 공유하는 앱에 표시됩니다. Microsoft Store에서 앱을 게시 하는 경우 이러한 속성을 설정 합니다. "유니버설" 캠페인의 경우 광고가 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품에도 표시됩니다.
+광고는 앱의 연령별 등급 및 OS 버전을 공유하는 앱에 표시됩니다. Microsoft Store에서 앱을 게시할 때 이러한 속성을 설정 합니다. "유니버설" 캠페인의 경우 광고가 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품에도 표시됩니다.
 
 광고 캠페인은 현재 다음 국가 및 지역에서 지원됩니다.
 
-Algeria, Argentina, Australia, Austria, Bahamas, Bahrain, Barbados, Belgium, Belize, Bolivia, Brazil, Canada, Chile, China, Colombia, Denmark, Dominican Republic, Ecuador, Egypt, El Salvador, Finland, France, Germany, Guatemala, Haiti, Honduras, Hong Kong SAR, India, Indonesia, Iraq, Ireland, Italy, Jamaica, Jordan, Kuwait, Lebanon, Malaysia, Mexico, Morocco, New Zealand, Netherlands, Nicaragua, Norway, Oman, Panama, Paraguay, Peru, Philippines, Puerto Rico, Qatar, Saudi Arabia, Singapore, Spain, South Africa, Sweden, Switzerland, Taiwan, Thailand, Trinidad and Tobago, Tunisia, United Arab Emirates, United Kingdom, United States, Uruguay, Venezuela, Vietnam.
+알제리, 아르헨티나, 오스트레일리아, 오스트리아, 바하마, 바레인, 바베이도스, 벨기에, 벨리즈, 볼리비아, 브라질, 캐나다, 칠레, 중국, 콜롬비아, 덴마크, 도미니카 공화국, 에콰도르, 이집트, 엘살바도르, 핀란드, 프랑스, 독일, 과테말라, 아이티, 온두라스, 홍콩 특별 행정구, 인도, 인도네시아, 이라크, 아일랜드, 이탈리아, 자메이카, 요르단, 쿠웨이트, 레바논, 말레이시아, 멕시코, 모로코, 뉴질랜드, 네덜란드, 니카라과, 노르웨이, 오만, 파나마, 파라과이, 페루, 필리핀, 푸에르토리코, 카타르, 사우디아라비아, 싱가포르, 스페인, 남아프리카 공화국, 스웨덴, 스위스, 대만, 태국, 트리니다드 토바고, 튀니지, 아랍에미리트연합국, 영국, 미국, 우루과이, 베네수엘라, 베트남.
 
 ### <a name="what-languages-are-supported-for-ad-campaigns"></a>광고 캠페인에 어떤 언어가 지원됩니까?
 
@@ -63,7 +63,7 @@ Algeria, Argentina, Australia, Austria, Bahamas, Bahrain, Barbados, Belgium, Bel
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>어떻게 신용 카드를 삭제하거나 신용 카드의 세부 정보를 편집하나요?
 
-이동 <http://commerce.microsoft.com>, Microsoft 계정 자격 증명으로 로그인 하 고 필요한 사항을 변경 합니다.
+이동 하려면 <http://commerce.microsoft.com>Microsoft 계정 자격 증명으로 로그인 하 고, 필요에 따라 변경 합니다.
 
 ### <a name="related-topics"></a>관련 항목
 

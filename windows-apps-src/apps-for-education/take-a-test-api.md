@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917619"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
 
-[테스트를 수행](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 보안 테스트 환경을 제공 하는 방법을 아닌 콘텐츠 교육자 평가에 초점을 맞출 수 있도록 허용 높은 위험 관리 테스트용 잠겨있는 온라인 평가 렌더링 하는 브라우저 기반 UWP 앱은입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
+[시험 응시는](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 위험 테스트를 위해 잠긴 온라인 평가 렌더링 하는 브라우저 기반 UWP 앱 교육 수 있도록 평가에 집중 안전한 테스팅 환경을 제공 하는 방법 대신 콘텐츠. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
 
 앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요. 문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
 
@@ -32,7 +32,7 @@ ms.locfileid: "2894250"
 
 ### <a name="security-namespace"></a>보안 네임스페이스
 
-보안 네임 스페이스를 사용 하면 장치를 잠그려면, 사용자 및 시스템 프로세스의 목록을 확인 하 고, MAC 및 IP 주소를 확보 하 고 캐시 된 웹 리소스의 선택을 취소 수 있습니다.
+보안 네임 스페이스를 사용 하면 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인, MAC 및 IP 주소를 얻 및 캐시 된 웹 리소스를 지울 수 있습니다.
 
 | 메서드 | 설명   |
 |--------|---------------|

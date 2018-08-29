@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 대상 제품, 제품, 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: 727c438bacf51fd2ead03df72421363116c4701b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2880745"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913150"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>대상 제품을 사용하여 참여 및 변환 최대화
 
@@ -28,7 +28,7 @@ ms.locfileid: "2880745"
 대상 제품을 사용하려면 상위 수준에서 세 가지를 수행해야 합니다.
 
 1. **대시보드에서 대상 제품을 만듭니다.** **참여 > 대상 제품** 페이지로 이동해 대상 제품을 만듭니다. 이 프로세스에 대한 자세한 내용은 다음과 같습니다.
-2. **앱 내 대상 제품 경험을 구현합니다.** 앱의 코드 *대상으로 하는 Microsoft 저장소 API를 제공* 을 사용 하 여 특정된 사용자에 대 한 사용 가능한 서비스를 검색 합니다. 또 대상 제품에 대한 앱 내 환경을 만들어야 합니다. 자세한 내용은 [스토어 서비스를 사용하여 대상 제품 관리](../monetize/manage-targeted-offers-using-windows-store-services.md)를 참조하세요.
+2. **앱 내 대상 제품 경험을 구현합니다.** 사용 하 여 *Microsoft Store 대상 제품 API* 앱 코드에서 특정된 사용자에 대 한 사용 가능한 제품을 검색 합니다. 또 대상 제품에 대한 앱 내 환경을 만들어야 합니다. 자세한 내용은 [스토어 서비스를 사용하여 대상 제품 관리](../monetize/manage-targeted-offers-using-windows-store-services.md)를 참조하세요.
 3. **스토어에 앱을 제출합니다.** 대상 제품(들)을 고객이 사용할 수 있도록 앱 내 대상 제품 경험을 구현한 상태에서 앱을 게시해야 합니다.
 
 이 단계를 완료하면, 앱을 사용하는 고객이 대상 제품과 관련된 세그먼트(들)의 구성원 자격 여부에 따라 해당 시점에 사용 가능한 대상 제품을 확인할 수 있습니다. Microsoft는 여러분의 고객들에게 사용 가능한 모든 대상 제품을 제시하기 위해 모든 노력을 다할 것입니다. 그러나 대상 제품 사용에 영향을 주는 문제들이 간헐적으로 발생할 수 있습니다.

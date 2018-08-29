@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2891940"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905446"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
@@ -29,9 +29,9 @@ Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보�
 
 ## <a name="xbox-live"></a>Xbox Live
 
-게임을 게시 하는 경우에이 페이지에서 [Xbox Live 작성자 프로그램](http://xbox.com/developers/creators-program) 을 설정할 수 있습니다. 이 통해 구성 및 테스트 Xbox Live 기능을 시작 하 고 결국 Xbox Live 작성자 프로그램 게임을 게시할 수 있습니다.
+게임을 게시 하는 경우이 페이지에서 [Xbox Live 크리에이터 스 프로그램](http://xbox.com/developers/creators-program) 을 사용할 수 있습니다. 이렇게 하면 구성 및 테스트 Xbox Live 기능을 시작 하 고 결국 Xbox Live 크리에이터 스 프로그램 게임을 게시할 수 있습니다.
 
-자세한 정보는 [Xbox Live 작성자 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 하 고 [새 Xbox Live 작성자 프로그램 제목 만들기 및 테스트 환경에 게시](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md)를 참조 하십시오.
+자세한 내용은 [Xbox Live 크리에이터 스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 하 고 [새 Xbox Live 크리에이터 스 프로그램 타이틀 만들기 및 테스트 환경에 게시](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md)를 참조 하세요.
 
 ## <a name="experimentation"></a>실험
 
@@ -50,15 +50,15 @@ Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
-Microsoft 저장소 컬렉션 API와 Microsoft 저장소 구매 API를 사용 하 여 앱 및 추가 기능에 대 한 소유권 정보에 액세스를 하려면 연결 된를 입력 해야 Azure AD 클라이언트 Id 여기 합니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
+연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하려면 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
 
 자세한 내용은 [서비스에서 제품 권리 유형 관리](../monetize/view-and-grant-products-from-a-service.md)를 참조하세요.
 
-## <a name="administrator-consent"></a>관리자가 사용자의 동의
+## <a name="administrator-consent"></a>관리자 동의
 
-f 제품 Azure AD와 통합 하 고 관리자가 사용자의 동의 필요로 하는 [응용 프로그램 사용 권한 또는 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api를 호출 하는 여기에 Azure AD 클라이언트 ID를 입력 합니다. 그러면 해당 사용자의 테 넌 트의 모든 사용자를 대신 하 여 제품에 대 한 조직 부여 동의 응용 프로그램을 구입 하는 관리자 수 있습니다.
+f 제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api를 호출 하 고 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 관리자를에 게 테 넌 트의 모든 사용자를 대신 하 여 제품의 조직 부여 동의 조직용가 있습니다.
 
-자세한 정보는 [전체 테 넌 트에 대 한 동의 하는 요청](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant)을 참조 하십시오.
+자세한 정보는 [전체 테 넌 트에 대 한 동의 요청](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant)을 참조 하세요.
 
 ## <a name="app-management"></a>앱 관리
 
@@ -89,18 +89,18 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
 
 ## <a name="wnsmpns"></a>WNS/MPNS
 
-**WNS/MPNS** 섹션을 만들고 앱의 고객에 게 알림을 보내도록 하는데 도움이 되는 옵션을 제공 합니다. 
+**WNS/MPNS** 섹션을 만들고 앱의 고객에 게 알림을 보낼 수 있도록 하는 옵션을 제공 합니다. 
 
 > [!TIP]
-> UWP 앱에 대 한 **알림** 옵션을 사용 하 여 대시보드에 하는 것이 좋습니다. 이 기능은 사용 하면 모든 앱의 고객에 게 알림을 보내도록 또는 [고객 세그먼트](create-customer-segments.md)에 정의한 조건을 충족 하는 Windows 10 고객의 대상으로 지정 된 하위 집합을 합니다. 자세한 내용은 [앱의 고객에게 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.
+> UWP 앱에 대 한 대시보드의 **알림** 옵션을 사용 하는 것이 좋습니다. [고객 세그먼트](create-customer-segments.md)에서 정의한 기준을 충족 하는 Windows 10 고객의 대상 일부 또는이 기능은 모든 앱의 고객에 게 알림을 보낼 수 있습니다. 자세한 내용은 [앱의 고객에게 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.
 
-앱의 패키지 유형 및 해당 특정 요구 사항에 따라 다음 옵션 중 하나을 사용할 수 있습니다. 
+앱의 패키지 유형 및 특정 요구 사항에 따라 다음 옵션 중 하나을 사용할 수 있습니다. 
 
 -   **WNS(Windows 푸시 알림 서비스)** 를 통해 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)를 참조하세요.
 
 -   **Microsoft Azure 모바일 앱**를 통해 푸시 알림을 보내고, 앱 사용자를 인증 및 관리하고, 앱 데이터를 클라우드에 저장할 수 있습니다. 자세한 내용은 [모바일 앱 설명서](http://go.microsoft.com/fwlink/p/?LinkId=221116)를 참조하세요.
 
--   **MPNS(Microsoft 푸시 알림 서비스)** 를 Windows Phone의 .xap 패키지와 함께 사용할 수 있습니다. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. MPNS를 사용 하는 경우에 **WNS/MPNS** 페이지에 제공 된 필드에 인증서를 업로드 하려면 필요 합니다. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](http://go.microsoft.com/fwlink/p/?LinkId=528736)을 참조하세요.
+-   **MPNS(Microsoft 푸시 알림 서비스)** 를 Windows Phone의 .xap 패키지와 함께 사용할 수 있습니다. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. MPNS를 사용 하는 경우에 **WNS/MPNS** 페이지에 제공 된 필드에 인증서를 업로드 해야 합니다. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](http://go.microsoft.com/fwlink/p/?LinkId=528736)을 참조하세요.
  
 
  

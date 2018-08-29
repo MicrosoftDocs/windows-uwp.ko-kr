@@ -3,7 +3,7 @@ author: TylerMSFT
 title: 백그라운드에서 무기한 실행
 description: extendedExecutionUnconstrained 기능을 사용하여 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행하세요.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: 백그라운드 작업을 실행, 자원, 제한, 백그라운드 작업을 확장 합니다.
+keywords: 백그라운드 작업을 실행, 리소스, 제한, 백그라운드 작업 확장
 ms.author: twhitney
 ms.date: 10/3/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af0f7670f2b131671ce82708d2b0a826db0fcfb1
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2891765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916669"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 

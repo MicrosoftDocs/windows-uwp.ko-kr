@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: d065fdffe2fcb32a9d574c90f59eb7115597167a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2915447"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>MakePri.exe를 사용하여 수동으로 리소스 컴파일
 
 MakePri.exe는 PRI 파일을 만들고 덤프하는 데 사용할 수 있는 명령줄 도구입니다. Microsoft Visual Studio 내에 MSBuild의 일부로 통합되어 있지만 수동으로 또는 사용자 지정 빌드 시스템으로 패키지를 만드는 데 도움이 될 수 있습니다.
 
 > [!NOTE]
-> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **UWP 관리 하는 앱에 대 한 Windows sdk (영문)** 옵션을 선택 하는 경우 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (도 다른 아키텍처에 대 한 이름이 지정 된 폴더에 따라). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **앱을 관리 하는 UWP 용 Windows SDK** 옵션을 확인할 때 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (다른 아키텍처에 대 한 명명 된 폴더에 있는 대로 뿐만). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
 PRI 파일의 크기 제한은 64킬로바이트입니다.
 

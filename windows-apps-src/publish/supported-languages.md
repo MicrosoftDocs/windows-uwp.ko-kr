@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2892452"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905126"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 
 
-100 개 이상의 언어로 Microsoft 저장소에 앱을 제출할 수 있습니다.
+100 개 이상 언어로 Microsoft Store에 앱을 제출할 수 있습니다.
 
-앱의 언어를 구성 하는 방법에 대 한 자세한 내용은, [세계화 및 지역화](../design/globalizing/globalizing-portal.md) 및 [이해 사용자 프로필 언어 및 언어 매니페스트 app를](../design/globalizing/manage-language-and-region.md)참조 하십시오. 여러 언어를 지원하는 앱을 작성하는 데 도움이 되는 [다국어 앱 도구 키트](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat)도 있습니다.
+앱의 언어를 구성 하는 방법에 대 한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md) 및 [이해 사용자 프로필 언어 및 앱 매니페스트 언어를](../design/globalizing/manage-language-and-region.md)참조 하세요. 여러 언어를 지원하는 앱을 작성하는 데 도움이 되는 [다국어 앱 도구 키트](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat)도 있습니다.
 
 ## <a name="supported-languages"></a>지원되는 언어
 
 
-이들은 Microsoft 저장소에서 지 원하는 언어입니다. 앱이 이러한 언어를 하나 이상 지원해야 하며, 여기에 포함되지 않은 언어 코드를 지정해서는 안 됩니다.
+이 Microsoft 스토어를 지 원하는 언어입니다. 앱이 이러한 언어를 하나 이상 지원해야 하며, 여기에 포함되지 않은 언어 코드를 지정해서는 안 됩니다.
 
 | 언어 이름         | 지원되는 언어 코드                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

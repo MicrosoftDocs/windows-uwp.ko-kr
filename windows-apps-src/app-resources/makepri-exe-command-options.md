@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: c0a3892348baff56bbef8d40dd9aade4e612c50d
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881746"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905936"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
 [MakePri.exe](compile-resources-manually-with-makepri.md)에는 `createconfig`, `dump`, `new`, `resourcepack` 및 `versioned` 명령 집합이 있습니다. 이 항목에서는 이들의 사용에 대한 명령줄 옵션을 자세히 설명합니다.
 
 > [!NOTE]
-> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **UWP 관리 하는 앱에 대 한 Windows sdk (영문)** 옵션을 선택 하는 경우 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (도 다른 아키텍처에 대 한 이름이 지정 된 폴더에 따라). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **앱을 관리 하는 UWP 용 Windows SDK** 옵션을 확인할 때 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (다른 아키텍처에 대 한 명명 된 폴더에 있는 대로 뿐만). 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
 ## <a name="makepri-commands"></a>MakePri 명령
 

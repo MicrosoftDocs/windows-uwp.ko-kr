@@ -2,25 +2,25 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Windows 앱 인증 키트 테스트
-description: Windows 앱 인증 키트 앱 Microsoft 저장소에 게시를 수행할 준비가 되었는지 확인 하는 데 도움이 되는 테스트의 숫자를 포함 합니다.
+description: Windows 앱 인증 키트는 다양을 한 앱을 Microsoft Store에 게시할 준비가 되었는지 확인 하는 데 도움이 되는 테스트가 포함 되어 있습니다.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 앱 인증 (영문)
+keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906070"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
 
-[Windows 앱 인증 키트](windows-app-certification-kit.md) 앱은 Microsoft 저장소에 게시할 수를 확인 하는 데 도움이 되는 테스트의 숫자를 포함 합니다. 테스트 세부 정보를 자신의 조건으로 아래 나열 된 및 실패의 경우 작업을 제시 합니다.
+[Windows 앱 인증 키트](windows-app-certification-kit.md) 는 다양을 한 앱은 Microsoft Store에 게시할 준비가 있는지 확인 하는 데 도움이 되는 테스트가 포함 되어 있습니다. 테스트 하 여 조건을 세부 정보를 사용 하 여 아래 나열 되 고 오류가 발생할 경우 작업을 제안 합니다.
 
 ## <a name="deployment-and-launch-tests"></a>배포 및 시작 테스트
 
@@ -60,7 +60,7 @@ Windows 앱이 OS의 이후 버전에서 실행할 수 있는지 확인합니다
 
 ### <a name="background"></a>배경
 
-운영 체제 버전 정보는 Microsoft 저장소에 대 한 사용 현황을 제한 합니다. 이 정보는 종종 앱에서 앱 OS 버전과 관련된 기능을 사용자에게 제공할 수 있도록 OS 버전을 확인하는 데 잘못 사용되었습니다.
+운영 체제 버전 정보는 Microsoft Store에 대 한 사용을 제한 했습니다. 이 정보는 종종 앱에서 앱 OS 버전과 관련된 기능을 사용자에게 제공할 수 있도록 OS 버전을 확인하는 데 잘못 사용되었습니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -128,7 +128,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 -   **IPC(프로세스 간 통신) 검증**
 
-    이 테스트에서는 UWP 앱 데스크톱 구성 요소를 app 컨테이너의 외부 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.
+    이 테스트는 UWP 앱 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.
 
 ### <a name="corrective-action"></a>수정 작업
 
@@ -248,7 +248,7 @@ AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤
 
 기본 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커를 사용하여 파일을 빌드했고 링커에서 */appcontainer* 플래그를 사용하는지 확인하세요.
 
-관리 되는 실행 파일에는 테스트 실패 하면 UWP 응용 프로그램을 구축 하는 최신 컴파일러 및 링커 예: Microsoft Visual Studio를 사용 해야 합니다.
+관리 되는 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커 Microsoft Visual Studio와 같은 UWP 앱을 빌드하는 데 사용 해야 합니다.
 
 **설명**
 
@@ -308,22 +308,22 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 ### <a name="background"></a>배경
 
-앱은 UWP 앱 (Windows 런타임 또는 지원 되는 Win32 Api) Microsoft 저장소에 대 한 인증 되어야 하는 Api를 사용 해야 합니다. 이 테스트는 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하는 경우도 식별합니다.
+앱 (Windows 런타임 또는 지원 되는 Win32 Api) Microsoft Store 용으로 인증 받으려면 UWP 앱에 대 한 Api를 사용 해야 합니다. 이 테스트는 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하는 경우도 식별합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
--   응용 프로그램 패키지 내의 각 이진 이진 파일의 가져오기 주소 테이블을 확인 하 여 UWP 응용 프로그램 개발을 위한 지원 하지 않는 Win32 API에 의존 관계를 없으면 있는지 확인 합니다.
+-   하지 않는지 확인 앱 패키지 내의 각 이진 파일이 종속성 이진 파일의 가져오기 주소 테이블을 검사 하 여 UWP 앱 개발에 지원 되지 않는 Win32 api입니다.
 -   앱 패키지 내의 각 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하지 않는지 확인합니다.
 
 ### <a name="corrective-actions"></a>수정 작업
 
 앱이 디버그 빌드가 아니라 릴리스 빌드로 컴파일되었는지 확인하세요.
 
-> **참고 사항**  응용 프로그램의 디버그 빌드 앱 [UWP 앱에 대 한 api (영문)를](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)사용 하는 경우에이 테스트를 실패 합니다.
+> **참고**  앱에서 [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)를 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다.
 
-[UWP 앱에 대 한 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)하지 않은 응용 프로그램에서 사용 하는 API를 식별 하는 오류 메시지를 검토 합니다.
+앱이 사용 하는 [UWP 앱 용 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)되지 않은 API를 식별 하기 위해 오류 메시지를 검토 합니다.
 
-> **참고 사항**  디버그 구성에는 기본 제공 된 c + + 응용 프로그램 구성만 UWP 앱에 대 한 Windows SDK에서 api (영문)를 사용 하는 경우에이 테스트에 실패 합니다. 추가 정보에 대 한 [UWP 응용 프로그램에서 Windows Api에 대 한 대안](http://go.microsoft.com/fwlink/p/?LinkID=244022) 참조 하십시오.
+> **참고**  UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 추가 정보용 [UWP 앱의 Windows Api 대안](http://go.microsoft.com/fwlink/p/?LinkID=244022) 을 참조 하세요.
 
 ## <a name="performance-tests"></a>성능 테스트
 
@@ -433,7 +433,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>"resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.</p>
 </td><td>
-<p>MakePRI.exe는 <strong>AutoMerge</strong>라는 옵션을 지원합니다. <strong>AutoMerge</strong>의 기본값은 <strong>off</strong>입니다. 이 옵션을 사용하면 <strong>AutoMerge</strong>에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. 이 Microsoft 저장소를 통해 배포 하려는 앱에 대 한 권장 하지 합니다. Microsoft 저장소를 통해 배포 되는 응용 프로그램의 resources.pri 응용 프로그램의 패키지의 루트에 하 고 앱이 지 원하는 모든 언어 참조를 포함 해야 합니다.</p>
+<p>MakePRI.exe는 <strong>AutoMerge</strong>라는 옵션을 지원합니다. <strong>AutoMerge</strong>의 기본값은 <strong>off</strong>입니다. 이 옵션을 사용하면 <strong>AutoMerge</strong>에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. 이 Microsoft Store를 통해 배포 하려는 앱에 대 한 권장 하지 않습니다. Microsoft Store를 통해 배포 되는 앱의 resources.pri는 앱의 패키지의 루트에 하 고 앱에서 지 원하는 모든 언어 참조를 포함 해야 합니다.</p>
 </td></tr>
 <tr><td>
 <p>{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.</p>
@@ -485,7 +485,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 
 ### <a name="branding-validation"></a>브랜딩 유효성 검사
 
-UWP 앱이 완전 하 고 모든 기능을 갖춘 것으로 예상 됩니다. 템플릿 또는 SDK 샘플의 기본 이미지를 사용하는 앱은 부적절한 사용자 환경을 제공하며 스토어 카탈로그에서 쉽게 식별할 수 없습니다.
+UWP 앱은 제대로 작동 하 않게 됩니다. 템플릿 또는 SDK 샘플의 기본 이미지를 사용하는 앱은 부적절한 사용자 환경을 제공하며 스토어 카탈로그에서 쉽게 식별할 수 없습니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -501,7 +501,7 @@ UWP 앱이 완전 하 고 모든 기능을 갖춘 것으로 예상 됩니다. �
 
 ### <a name="background"></a>배경
 
-Microsoft 저장소에 대 한 인증을 앱 해야 컴파일되지 디버그에 대 한 하 고 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
+Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디버그 하 고 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
@@ -509,7 +509,7 @@ Microsoft 저장소에 대 한 인증을 앱 해야 컴파일되지 디버그에
 
 ### <a name="corrective-actions"></a>수정 작업
 
--   Microsoft 저장소에 전송 하기 전에 릴리스 빌드도 응용 프로그램을 작성 합니다.
+-   Microsoft Store에 제출 하기 전에 릴리스 빌드로 앱을 빌드하십시오.
 -   올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 -   앱이 디버그 버전의 프레임워크에 연결되어 있지 않은지, 릴리스 버전으로 빌드되고 있는지 확인합니다. 이 앱에 .NET 구성 요소가 포함되어 있을 경우 올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 
@@ -537,7 +537,7 @@ Microsoft Direct3D 앱을 테스트하여 이전 그래픽 하드웨어가 있�
 
 ### <a name="background"></a>배경
 
-Microsoft 저장소 Direct3D를 사용 하 여 제대로 렌더링 하거나 기능 수준 9\ 1 그래픽 카드에 적절 하 게 실패 하는 모든 응용 프로그램이 필요 합니다.
+Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수준 9 \-1 그래픽 카드 실패를 Direct3D를 사용 하 여 모든 응용 프로그램에 필요 합니다.
 
 사용자는 앱 설치 후 디바이스의 그래픽 하드웨어를 변경할 수 있으므로 9\-1 이상의 최소 기능 수준을 선택하는 경우 실행 시 현재 하드웨어가 최소 요구 사항을 충족하는지 여부를 앱에서 확인해야 합니다. 최소 요구 사항을 충족하지 않는 경우 앱은 Direct3D 요구 사항이 자세히 설명된 메시지를 사용자에게 표시해야 합니다. 또한 호환되지 않는 디바이스에서 앱을 다운로드하는 경우 앱은 시작 시 이 사항을 감지하고 요구 사항을 자세히 설명하는 메시지를 고객에게 표시해야 합니다.
 
@@ -551,7 +551,7 @@ Microsoft 저장소 Direct3D를 사용 하 여 제대로 렌더링 하거나 기
 
 ### <a name="direct3d-trim-after-suspend"></a>일시 중단 후 Direct3D 자르기
 
-> **참고 사항**  이 테스트는 Windows 8.1 하 고 나중에 개발 된 UWP 앱에만 적용 됩니다.
+> **참고**  이 테스트는 Windows 8.1 이상 개발 하는 UWP 앱에만 적용 됩니다.
 
 ### <a name="background"></a>배경
 

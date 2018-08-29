@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909891"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -58,7 +58,7 @@ ms.locfileid: "2888262"
 
 ### <a name="consistency"></a>일관성
 
-탐색은 사용자 경험과 일관되어야 합니다. [표준 컨트롤](#use-the-right-controls) 에 익숙한 및 아이콘에 대 한 다음 표준 규칙을 사용자가 있는지를 사용 하 여, 위치 및 스타일 좀더 탐색 예측 가능 하 고 직관적인 사용자에 대 한 있습니다.
+탐색은 사용자 경험과 일관되어야 합니다. [표준 컨트롤](#use-the-right-controls) 사용자가 친숙 한 아이콘에 대 한 표준 규칙을 사용 하 여, 아이콘과 위치는 탐색할 수 있도록 예측 가능 하 고 직관적인 사용자에 대 한 합니다.
 
 ![페이지 구성 요소 이미지](images/nav/page-components.svg)
 
@@ -99,7 +99,7 @@ ms.locfileid: "2888262"
 
 1. 사용자에 대해 생각하세요. 앱과 각 페이지에서 일반적으로 통과할 경로를 추적하고, 사용자가 이를 통과하는 이유와 사용자가 가고 싶어하는 장소에 대해 생각하세요.
 
-2. 상세 탐색 계층 구조를 방지 합니다. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
+2. 깊은 탐색 계층을 방지 합니다. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
 
 3. "페이지 왕복"을 피합니다. 페이지 왕복은 관련된 콘텐츠가 있지만 탐색하려면 위 단계로 올라갔다가 다시 내려와야 하는 경우를 말합니다.
 
@@ -179,7 +179,7 @@ ms.locfileid: "2888262"
     :::column:::
         ![탭 및 피벗 이미지](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: [ **위쪽 탐색 모음 및 탭**](../controls-and-patterns/navigationview.md)
+    ::: 열 범위 = "2"::: [ **위쪽 탐색 및 탭**](../controls-and-patterns/navigationview.md)
 
         Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
         

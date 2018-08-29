@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f63b53fca8a97c4f6e61aa38f45a749ca0621b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890732"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906440"
 ---
 # <a name="ad-campaign-report"></a>광고 캠페인 보고서
 
-Windows 개발자 센터 대시보드에서 **Ad 캠페인** 보고서에는 응용 프로그램 프로 모션 [광고 캠페인](create-an-ad-campaign-for-your-app.md) 수행 하는 방법을 확인할 수 있습니다. 다음은 보고서를 보려면 왼쪽된 탐색 메뉴에서 **Attract** 를 확장 하 고 **Ad 캠페인**를 선택 합니다.
+Windows 개발자 센터 대시보드에서 **광고 캠페인** 보고서를 통해 앱 홍보 [광고 캠페인](create-an-ad-campaign-for-your-app.md) 성과 확인할 수 있습니다. 보고서를 보려면 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **광고 캠페인**을 선택 합니다.
 
 ## <a name="definitions"></a>정의
 

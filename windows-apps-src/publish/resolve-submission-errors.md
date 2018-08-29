@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2895411"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916415"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 
@@ -23,13 +23,13 @@ ms.locfileid: "2895411"
 
 ## <a name="uwp-apps"></a>UWP 앱
 
-UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어용으로 생성한 .appxupload 파일이 없는 경우 전처리 동안 오류가 나타날 수 있습니다. 앱의 패키지 파일을 만들 때 [Visual Studio를 사용한 UWP 응용 프로그램 패키지](../packaging/packaging-uwp-apps.md) 의 단계를 수행 하 고만 제출, 하지 appx 또는의.appxbundle [패키지](upload-app-packages.md) 페이지에서.appxupload 파일을 업로드 해야 합니다.
+UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어용으로 생성한 .appxupload 파일이 없는 경우 전처리 동안 오류가 나타날 수 있습니다. 앱의 패키지 파일을 만들 때 [Visual Studio를 사용 하 여 UWP 앱 패키지](../packaging/packaging-uwp-apps.md) 의 단계를 수행 하 고 제출 된 appx 또는.appxbundle가 아니라의 [패키지](upload-app-packages.md) 페이지에서.appxupload 파일만 업로드 해야 합니다.
 
 컴파일 오류가 표시되면 릴리스 모드에서 응용 프로그램을 성공적으로 빌드할 수 있는지 확인합니다. 자세한 내용은 [.NET 네이티브 내부 컴파일러 오류](http://go.microsoft.com/fwlink/p/?LinkID=613098)를 참조하세요.
 
 ## <a name="desktop-application"></a>데스크톱 응용 프로그램
 
-Win32와 UWP 바이너리를 포함 하는 패키지를 제출, 있는지 확인 하려는 경우에 Visual Studio 2017 업데이트 4에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만듭니다. UWP 프로젝트 서식 파일을 사용 하 여 패키지를 만들 수 있습니다는 패키지 저장소 또는 sideload을 다른 Pc에 제출할 수 없습니다. 패키지를 성공적으로 게시, 하는 경우에 사용자의 PC에서 예기치 않은 방법으로 작동할 수 있습니다. 자세한 정보에 대 한 [Visual Studio (데스크톱 브리지)를 사용 하 여 응용 프로그램 패키지]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조 합니다.
+Win32 및 UWP 바이너리를 포함 하는 패키지를 제출 하려는 경우 Visual Studio 2017 업데이트 4에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만들 수 있는지 확인 합니다. UWP 프로젝트 템플릿을 사용 하 여 패키지를 만들 수는 패키지로 스토어 또는 테스트용으로 로드, 다른 Pc를 제출할 수 없습니다. 성공적으로 패키지를 게시 하는 경우에 사용자의 PC에서 예기치 않은 방식으로 작동할 수 있습니다. 자세한 내용은 [Visual Studio (데스크톱 브리지)를 사용 하 여 앱 패키지]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조 하세요.
 
 ## <a name="windows-phone-apps"></a>Windows Phone 앱
 
@@ -53,7 +53,7 @@ Win32와 UWP 바이너리를 포함 하는 패키지를 제출, 있는지 확인
 - 앱에 ID가 이미 있는 경우에도 패키지에 사용하려는 이름을 예약해야 할 수 있습니다. **앱 관리**에서 [앱 이름 관리](manage-app-names.md)를 클릭합니다. 사용할 이름을 입력하고 **앱 이름 예약**을 클릭합니다.
 
 > [!IMPORTANT]
->  사용 하 여 원하는 이름을 사용할 수 없는 경우 다른 app 예약한 것일 수 이미 해당 이름입니다. 앱 해당 이름 아래에서 게시 하는 경우 또는 [지원 서비스에 문의](https://go.microsoft.com/fwlink/p/?LinkId=331509)으로 사용할 수 있는 권한이 생각 하는 경우.  
+>  사용 하려는 이름을 사용할 수 없는 경우 다른 앱 수 있는 이미 해당 이름을 예약 합니다. 앱이 해당 이름을 이미 게시 된 또는 [지원 팀에 문의](https://go.microsoft.com/fwlink/p/?LinkId=331509)사용할 권리가 있다고 생각 합니다.  
 
  
 

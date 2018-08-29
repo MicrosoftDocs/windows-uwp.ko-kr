@@ -10,22 +10,22 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 4aba8f559b7b6f0518a620d5127692d541953255
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2892404"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905946"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>C++/CX에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 이동
 이 항목은 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다.
 
 > [!IMPORTANT]
-> 점진적으로 포트 하려는 경우에 [C + + / CX](/cpp/cppcx/visual-c-language-reference-c-cx) 하는 코드를 C + + / WinRT, 하면 수 있습니다. C + + / CX 및 C + + / WinRT 코드는 XAML 컴파일러 지원 및 Windows 런타임 구성 요소를 제외 하 고 같은 프로젝트에 함께 사용할 수 있습니다. 이러한 예외에 대 한 해야 대상 이나 C + + / CX 또는 C + + / 같은 프로젝트 내에서 WinRT 합니다. 하지만 해당 포트 같이 XAML app 로그 아웃 비율 코드에 Windows 런타임 구성 요소를 사용할 수 있습니다. 이동 하거나 많은 C + + / CX 코드는 구성 요소에 수 하 고 다음 변경 XAML 프로젝트 C + + / WinRT 합니다. C +으로 XAML 프로젝트 else 두려면 + / CX, 만들기 새 C + + / WinRT 구성 요소 하 고 시작 이식 C + + / CX 코드 XAML 프로젝트 로그 아웃 하 고 구성 요소에 합니다. 또한 가지기 C + + / CX 구성 요소 프로젝트와 함께 C + + / 동일한 솔루션 내에서 WinRT 구성 요소 프로젝트 응용 프로그램 프로젝트에서 참조 하는 그 중 두와 다른 곳으로 하나에서 점진적으로 포트입니다.
+> 점진적으로 포트 하려는 경우에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C + + /winrt 할 수 있습니다. C + + CX 및 C + + /winrt 코드는 XAML 컴파일러 지원 및 Windows 런타임 구성 요소를 제외 하 고 동일한 프로젝트에 공존할 수 있습니다. 이러한 예외에 대 한 C + 중 하나를 대상으로 해야 + /CX 또는 C + + 동일한 프로젝트에서 WinRT 합니다. 하지만 포트 것 처럼 XAML 앱 요소 코드 Windows 런타임 구성 요소를 사용할 수 있습니다. 이동 많은 C + + CX 코드는 구성 요소에 하 고 다음 변경 XAML 프로젝트 C + + WinRT 합니다. 하거나 다른 XAML 프로젝트로 C + + /CX 만드는 새로운 C + + WinRT 구성 요소 시작 포팅 C + + /CX 코드 XAML 프로젝트를 구성 합니다. 또한 가지기 C + + CX 구성 요소 프로젝트와 함께 C + + 같은 솔루션에서 WinRT 구성 요소 프로젝트 응용 프로그램 프로젝트에서 둘 다를 참조 하 고 다른 하나에서 점진적으로 포트입니다.
 
 > [!NOTE]
 > [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)와 Windows SDK 모두 루트 네임스페이스인 **Windows**에 유형을 선언합니다. C++/WinRT에 프로젝션된 Windows 유형은 Windows 유형과 동일한 정규화된 이름을 가지지만 C++ **winrt** 네임스페이스에 배치됩니다. 이처럼 서로 다른 네임스페이스를 사용하면 사용자가 원하는 대로 C++/CX에서 C++/WinRT로 포트할 수 있습니다.
 
-이식 C + 프로젝트의 첫번째 단계 위에서 언급 한 예외 염두, + / WinRT는 수동으로 추가 하려면 C + + / WinRT 지원 (참조 [Visual Studio 지원 C + + / WinRT, 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). 이를 수행하려면 `.vcxproj` 파일을 편집하고 `<PropertyGroup Label="Globals">`를 찾고, 해당 속성 그룹 내에서 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 설정합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. C +에 종속성 모든 지원 빌드 메시지 도움말 찾기 (및 포트) 수 있도록 해제를 유지 하는 것이 좋습니다 + / CX, 하거나 다시 설정할 수 지원 (프로젝트 속성, **C/c + +** 에서 \> **일반** \> **받는지 Windows 런타임 확장** \> **예 (/ZW)**), 점진적으로 포트 및 합니다.
+위에서 언급 한 예외 염두에 첫 번째 단계를 C + 프로젝트 포팅 + /winrt는 수동으로 추가 C + + WinRT 지원 (참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). 이를 수행하려면 `.vcxproj` 파일을 편집하고 `<PropertyGroup Label="Globals">`를 찾고, 해당 속성 그룹 내에서 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 설정합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 지원을 끈 채로 유지 찾기 (및 포트) 빌드 메시지 도움말 수 있도록 모든 종속성에 C + 하는 것이 좋습니다 + /CX 하거나 수 지원을 다시 켜고 (프로젝트 속성에서 **C/c + +** \> **일반** \> **Windows 런타임 사용 확장** \> **예 (/ZW)**)를 점진적으로 포트입니다.
 
 프로젝트 속성 **일반** \> **대상 플랫폼 버전**을 10.0.17134.0(Windows 10 버전 1803) 이상으로 설정합니다.
 
@@ -204,7 +204,7 @@ auto token = myButton().Click([&](IInspectable const& sender, RoutedEventArgs co
 
 lambda 함수 대신 대리인을 무료 함수 또는 포인터-회원-함수로 구현할 수 있습니다. 자세한 정보는 [C++/WinRT의 대리자를 사용한 이벤트 처리](handle-events.md)를 참조하세요.
 
-이벤트 및 대리인이 내부적으로 사용되는(이진 전체에서가 아니라) C++/CX 코드 베이스에서 포트하는 경우 [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate)은 C++/WinRT에서 해당 패턴을 복제하는 데 도움이 됩니다. 또한 [매개 변수화 된 대리인, 간단한 신호 및 프로젝트 내에서 콜백을](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project)참조 하십시오.
+이벤트 및 대리인이 내부적으로 사용되는(이진 전체에서가 아니라) C++/CX 코드 베이스에서 포트하는 경우 [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate)은 C++/WinRT에서 해당 패턴을 복제하는 데 도움이 됩니다. [매개 변수화 된 대리자, 간단한 신호 및 프로젝트 내에서 콜백을](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project)참조 하세요.
 
 ## <a name="revoking-a-delegate"></a>대리인 취소
 C++/CX에서`-=` 연산자를 사용하여 이전 이벤트 등록을 취소합니다.
@@ -226,14 +226,14 @@ C++/CX는 **플랫폼** 네임스페이스에서 몇 가지 데이터 형식을 
 
 | C++/CX | C++/WinRT |
 | ---- | ---- |
-| **플랫폼:: Agile\ ^** | [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
+| **플랫폼:: Agile\ ^** | [**winrt:: agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) |
 | **Platform::Exception\^** | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) |
 | **Platform::InvalidArgumentException\^** | [**winrt::hresult_invalid_argument**](/uwp/cpp-ref-for-winrt/error-handling/hresult-invalid-argument) |
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
 | **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
-### <a name="port-platformagile-to-winrtagileref"></a>포트 **플랫폼:: Agile\ ^** **winrt::agile_ref** 을
-**플랫폼:: Agile\ ^** 형식 C + + / CX 모든 스레드에서 액세스할 수 있는 Windows 런타임 클래스를 나타냅니다. C + + / WinRT + [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref)표시 됩니다.
+### <a name="port-platformagile-to-winrtagileref"></a>포트 **플랫폼:: Agile\ ^** **winrt:: agile_ref** 하려면
+**플랫폼:: Agile\ ^** 형식이 C + + CX 모든 스레드에서 액세스할 수 있는 Windows 런타임 클래스를 나타냅니다. C + + WinRT 등가 [**winrt:: agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref)합니다.
 
 C++/CX에서.
 

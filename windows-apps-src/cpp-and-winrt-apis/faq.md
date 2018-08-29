@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
 ms.openlocfilehash: 80c27332c05e285fdad6b8ec8deddd82d24a6e4a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906359"
 ---
 # <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 질문과 대답
 C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다.
@@ -85,11 +85,11 @@ C++/WinRT가 C++17 표준의 기능을 사용하기 때문에 해당 지원을 �
 
 Visual Studio는 C++/WinRT를 지원하고 추천하는 개발 도구입니다. [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
 
-## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>읽기 전용 속성에 대 한 생성 된 구현 함수 없는 이유는 `const` 한정자?
+## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>읽기 전용 속성에 대해 생성 된 구현 함수 없는 이유는 `const` 한정자?
 
-[MIDL 3.0](/uwp/midl-3/)에서 읽기 전용 속성을 선언할 때 짐작할 수 있는 것은 `cppwinrt.exe` 구현 함수를 생성할 수 있는 도구 `const`-(const가 함수 const으로 *이* 포인터를 처리 하는 데 사용) 된 합니다.
+이미 예상 하시 [MIDL 3.0](/uwp/midl-3/)에서 읽기 전용 속성을 선언 하는 경우는 `cppwinrt.exe` 구현 함수 생성 하려면 도구를 `const`-자격을 갖춘 (const 함수 const를 *이* 포인터를 처리 하는 데 사용).
 
-가능한 경우에 const를 사용 하 여 분명 하 게 권장 되지만 `cppwinrt.exe` 도구 자체는 구현에 대 한 함수 스푸핑은 될 수 const, 있고 않았을 하는 이유를 시도 하지 않습니다. 이 예제에서와 같이 const 확인 하는 구현 기능 중 하나를 선택할 수 있습니다.
+가능한 경우 const를 사용 하 여 확실히 권장 하지만 `cppwinrt.exe` 도구 자체는 구현에 대 한 함수 지역과 const 고 하지 수 있는 이유 하려고 하지 않습니다. 이 예제와 같이 const 확인 구현 기능 중 하나를 선택할 수 있습니다.
 
 ```cppwinrt
 struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation::IStringable>
@@ -101,9 +101,9 @@ struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation
 };
 ```
 
-제거할 수 있습니다 `const` **ToString** 에 한정자 해야 하면 구현에서 일부 개체 상태를 변경 하기로 결정 합니다. 하지만 하나만 함수 const 또는 비 const 각 구성원의 확인 하십시오. 즉, 하지 함수 오버 로드를 구현에서 `const`합니다.
+제거할 수 있습니다 `const` 한정자에 **ToString** 해야 결정 구현에서 일부 개체 상태를 변경 해야 합니다. 하지만 각각에 멤버의 두 함수 const 또는 비 const 만듭니다. 즉, 하지 함수 오버 로드는 구현에서 `const`.
 
-다른 다른 프로그램 구현 기능 외에도 배치 const 여기서 들어오기 Windows 런타임 함수 프로젝션에 그림은 합니다. 이 코드를 고려 합니다.
+기타 다른 구현 기능 외 배치 const 경우 기능을 그림은 Windows 런타임 함수 프로젝션입니다. 이 코드를 것이 좋습니다.
 
 ```cppwinrt
 int main()
@@ -113,19 +113,19 @@ int main()
 }
 ```
 
-**ToString** 위의에 대 한 호출을에 대 한 Visual Studio에서 **선언으로 이동** 명령 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + / WinRT은 다음과 같습니다.
+**ToString** 위의에 대 한 호출에 대 한 Visual Studio에서 **선언 이동** 명령을 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + WinRT 다음과 같이 표시 됩니다.
 
 ```
 winrt::hstring ToString() const;
 ```
 
-프로젝션 기능은 쿼리하고 구현을 사용을 선택 하는 방법에 관계 없이 const 합니다. 내부적으로 프로젝션 인터페이스를 호출 하는 응용 프로그램 이진 (ABI)는 COM 인터페이스 포인터를 통해 호출 하는 금액입니다. 예상된 **ToString** 와 상호작용 하는 유일한 상태는 해당 COM 인터페이스 포인터입니다. 하 고 분명 하 게 되므로 함수는 const 해당 포인터를 수정할 필요가 없습니다. 이 제공 된 **IStringable**에 대 한 참조 하면 보증을 통해 호출 하는 **IStringable** 참조 하는 방법에 대 한 아무것도 변경 되지 않습니다 하 고 확인 하는 const와도 **ToString** 를 호출할 수 있습니다.
+프로젝션 기능은 자격을 얻으려면 구현의 선택 하는 방법에 관계 없이 const 합니다. 내부적으로 프로젝션 응용 프로그램 이진 인터페이스 (ABI)는 시간과 COM 인터페이스 포인터를 통해 호출을 호출합니다. 프로젝션 된 **ToString** 상호 작용 하는 유일한 상태는 해당 COM 인터페이스 포인터; 있고 확실히 함수 const 이므로 해당 포인터를 수정할 필요가 없습니다. 아무것도 알지 **IStringable** 참조를 통해 호출 하는 것이 변하지 및 const 있어도 **ToString** 를 호출할 수 있음을 보장 보증 참조는 **IStringable**을이 제공 합니다.
 
-사항을 이해 하 고 이러한 예의 `const` 구현 세부 C + + / WinRT 프로젝션 및 구현 합니다. 편의 위한 코드 방역을 구성합니다. 이러한 것과는 `const` COM와 (멤버 함수)에 대 한 Windows 런타임 ABI에서 합니다.
+이해 하는 이러한 예제 `const` 구현 세부 C + + WinRT 프로젝션 및 구현 합니다. 이러한 구성의 편의 위한 코드 관리 합니다. 이러한 작업을 하는 `const` 에 COM 및 Windows 런타임 ABI (예: 멤버 함수).
 
-## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>C +에 대 한 코드 크기를 줄이면에 대 한 권장 사항이 있습니까 + / WinRT 바이너리?
+## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>C +에 대 한 코드 크기 감소에 대 한 권장 사항이 있는 + WinRT 바이너리?
 
-Windows 런타임 개체를 사용 하는 경우 생성할 필요한 것 보다 더 많은 이진 코드를 발생 시켜 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래에 표시 된 코딩 패턴을 하지 않아야 합니다.
+Windows 런타임 개체를 사용 하 여 작업을 생성 하는 데 필요한 것 보다 더 많은 이진 코드 하 여 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래 표시 된 코딩 패턴 하면 안 됩니다.
 
 ```cppwinrt
 anobject.b().c().d();
@@ -133,7 +133,7 @@ anobject.b().c().e();
 anobject.b().c().f();
 ```
 
-Windows 런타임 환경에서의 컴파일러는의 값을 캐시할 수 `c()` 또는 간접 참조를 통해 호출 되는 각 방법에 대 한 인터페이스 ('. '). 하면가 개입 하지 않으면 더 많은 가상 호출 및 오버 헤드 계산 (영문)을 참조 하는 만들어집니다. 위의 패턴 엄격 하 게 필요한 배의 코드에 대를 쉽게 생성할 수 있습니다. 대신, 수 워크플로와 아래에 표시 된 패턴을 선호 합니다. 매우 적은 코드를 생성 하 고 런타임 성능 또한 크게 향상 시킬 수 있습니다.
+Windows 런타임 환경에서 컴파일러는의 값을 저장할 수 `c()` 또는 간접 참조를 통해 호출 되는 각 메서드에 대 한 인터페이스 ('. '). 사용자 개입 하지 않는 한는 더 많은 가상 호출 및 참조 카운트 오버 헤드가 발생 합니다. 위의 패턴 엄격 하 게 필요한 배의 코드를 쉽게 생성할 수 있습니다. 대신, 수 어디서 나 아래 표시 된 패턴을 선호 합니다. 훨씬 더 적은 코드를 생성 및 런타임 성능이 크게도 향상 시킬 수 있습니다.
 
 ```cppwinrt
 auto a{ anobject.b().c() };
@@ -142,7 +142,7 @@ a.e();
 a.f();
 ```
 
-위에 표시 된 권장된 패턴 적용 하는 것이 아니라 C + + / WinRT 되지만 모든 Windows 런타임 언어 프로젝션 적용 합니다.
+위에 표시 된 권장된 패턴을 적용할 뿐 아니라 C + + WinRT 하지만 모든 Windows 런타임 언어 프로젝션입니다.
 
 > [!NOTE]
 > 이 항목에서 질문에 대한 답변을 찾지 못한 경우 [Stack Overflow에서 `c++-winrt` 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)를 사용하여 도움말을 찾을 수 있습니다.

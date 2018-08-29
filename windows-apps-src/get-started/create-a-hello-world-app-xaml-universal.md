@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918744"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
@@ -48,11 +48,11 @@ ms.locfileid: "2886469"
 
 1.  Visual Studio 2017을 시작합니다.
 
-2.  **파일** 메뉴에서 선택 **새로 만들기 > 프로젝트** *새 프로젝트* 대화 상자를 엽니다.
+2.  선택 **파일** 메뉴에서 **새로 만들기 > 프로젝트** *새 프로젝트* 대화 상자를 엽니다.
 
-3.  왼쪽에 있는 서식 파일 목록에서 선택 **Installed > Visual C# > Windows Universal** UWP 프로젝트 서식 파일의 목록을 보려면 합니다.
+3.  왼쪽에 있는 템플릿 목록에서 선택 **설치 됨 > Visual C# > Windows 유니버설** UWP 프로젝트 템플릿 목록을 봅니다.
 
-    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 **새 프로젝트** 대화 상자에서 *Visual Studio 설치 관리자 열기*를 클릭하여 UWP 지원을 추가할 수 있습니다. 참조 [를 설정 하기](get-set-up.md).)
+    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 **새 프로젝트** 대화 상자에서 *Visual Studio 설치 관리자 열기*를 클릭하여 UWP 지원을 추가할 수 있습니다. 참조 [설정](get-set-up.md)합니다.)
 
     ![설치 과정을 다시 실행하는 방법](images/win10-cs-install.png)
 

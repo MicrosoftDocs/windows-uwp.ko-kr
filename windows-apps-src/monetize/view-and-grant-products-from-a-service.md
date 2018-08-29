@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, 제품 보기, 제품 권한 부여
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a0766830bc2110dffcf5baf886e8ccb98ac6446
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885846"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910119"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -33,34 +33,34 @@ ms.locfileid: "2885846"
 
 다음 단계에서는 Microsoft Store 컬렉션 API 및 구매 API를 사용하는 모든 과정을 설명합니다.
 
-1.  [Azure AD에서 응용 프로그램 구성](#step-1)합니다.
-2.  [Windows 개발자 센터 대시보드에서 앱 Azure AD 응용 프로그램 ID에 연결](#step-2)합니다.
+1.  [Azure AD 응용 프로그램을 구성](#step-1)합니다.
+2.  [Windows 개발자 센터 대시보드에서 앱을 사용 하 여 Azure AD 응용 프로그램 ID와 연결](#step-2)합니다.
 3.  서비스에서 게시자 ID를 나타내는 [Azure AD 액세스 토큰을 만듭니다](#step-3).
-4.  Windows 클라이언트 응용 프로그램에서 서비스에 다시 [Microsoft 저장소 ID 키를 만들려면](#step-4) 이 주요 성공 확인 하 고 현재 사용자의 id를 나타내는입니다.
+4.  클라이언트 Windows 앱에서 [Microsoft Store ID 키를 만들고](#step-4) 이 키 단계가 현재 사용자의 id를 나타내는 다시 서비스 합니다.
 5.  필요한 Azure AD 액세스 토큰 및 Microsoft Store ID 키를 획득한 후 [서비스에서 Microsoft Store 컬렉션 API 또는 구매 API를 호출합니다](#step-5).
 
-이 끝-프로세스에는 다른 작업을 수행 하는 두 소프트웨어 구성 요소가 포함 됩니다.
+이 종단 간 프로세스에는 다른 작업을 수행 하는 두 가지 소프트웨어 구성 요소 포함 됩니다.
 
-* **서비스**입니다. 이것은 비즈니스 환경의의 컨텍스트에서 안전 하 게 실행 되는 응용 프로그램 및 선택 하면 모든 개발 플랫폼을 사용 하 여 구현할 수 있습니다. 사용자 서비스는 API 및 구매 API는 시나리오에 대 한 하 고 나머지 Uri Microsoft 저장소 컬렉션에 대 한 호출에 대 한 필요한 Azure AD 액세스 토큰 만들기 (영문)에 대 한 책임을 집니다.
-* **클라이언트 Windows 앱**입니다. 액세스 하 고 (응용 프로그램에 대 한 추가 기능 포함) 고객 자격 정보를 관리 하려는 응용 프로그램입니다. 이 app은 Microsoft 저장소 컬렉션 API를 호출 하 고 서비스에서 API를 구입 해야 Microsoft 저장소 ID 키 만들기 (영문)에 대 한 책임을 집니다.
+* **서비스**입니다. 비즈니스 환경의 컨텍스트에서 안전 하 게 실행 되는 응용 프로그램 이며 선택 하는 모든 개발 플랫폼을 사용 하 여 구현할 수 있습니다. 서비스는 API 및 구매 API 시나리오 및 Microsoft Store 컬렉션 REST Uri를 호출 하는 데 필요한 Azure AD 액세스 토큰 만들기에 대 한 해야 합니다.
+* **클라이언트 Windows 앱**입니다. 액세스 하 고 (앱에 대 한 추가 기능을 포함)는 고객 소유권 정보를 관리 하려는 앱입니다. 이 앱은 Microsoft Store 컬렉션 API를 호출 하 고 서비스에서 구매 API에 필요한 Microsoft Store ID 키를 만들어야 합니다.
 
 <span id="step-1"/>
 
-## <a name="step-1-configure-an-application-in-azure-ad"></a>1 단계: Azure AD에서 응용 프로그램 구성
+## <a name="step-1-configure-an-application-in-azure-ad"></a>1 단계: Azure ad에서 응용 프로그램 구성
 
-Microsoft 저장소 컬렉션 API를 사용 하 여 또는 API를 구입할 수 있습니다, Azure AD 웹 응용 프로그램 만들기 해야, ID 및 응용 프로그램 ID는 응용 프로그램에 대 한 테 넌 트를 검색 및 키를 생성 합니다. Azure AD 웹 응용 프로그램 Microsoft 저장소 컬렉션 API를 호출 하거나 API를 구입 하려면 원하는 서비스를 나타냅니다. 테 넌 트 ID, 응용 프로그램 ID 및 키를 API를 호출 하는 Azure AD 액세스 토큰을 생성 해야 합니다.
+Microsoft Store 컬렉션 API를 사용 하 여 또는 구매 API, Azure AD 웹 응용 프로그램을 만듭니다 해야, 트 ID 및 응용 프로그램에 대 한 응용 프로그램 ID를 검색 및 키를 생성 합니다. Azure AD 웹 응용 프로그램을 호출 하 여 Microsoft Store 컬렉션 API 또는 구매 API 서비스를 나타냅니다. 테 넌 트 ID, 응용 프로그램 ID 및 키를 API를 호출 해야 하는 Azure AD 액세스 토큰을 생성 해야 합니다.
 
 > [!NOTE]
-> 이 섹션의 작업을 한 번만 수행하면 됩니다. Azure AD 응용 프로그램 매니페스트를 업데이트 한 후 테 넌 트 ID, 응용 프로그램 ID와 클라이언트 비밀 해야 다시 사용할 수 있습니다이 값을 새로 만들 필요가 언제 든 지 Azure AD 액세스 토큰입니다.
+> 이 섹션의 작업을 한 번만 수행하면 됩니다. Azure AD 응용 프로그램 매니페스트를 업데이트 하 고 테 넌 트 ID, 응용 프로그램 ID 및 클라이언트 암호를 다시 사용할 수 있습니다 이러한 값 새로 만들어야 할 때마다 Azure AD 액세스 토큰입니다.
 
-1.  아직 수행 하지 않은 경우 지침에 따라 [Azure Active Directory와 통합 (영문)](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) 응용 프로그램에서을 등록 한 **웹 응용 프로그램 / API** Azure AD를 사용한 응용 프로그램입니다.
+1.  아직 완료 하지 않은 경우 등록 하려면 [Azure Active Directory와 통합 응용 프로그램](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) 의 지침에 따라는 **웹 응용 프로그램 / API** 를 Azure AD 응용 프로그램.
     > [!NOTE]
-    > 응용 프로그램을 등록 하는 경우 선택 해야 **웹 응용 프로그램 / API** 으로 응용 프로그램을 입력 하 여 응용 프로그램에 대 한 ( *클라이언트 비밀*라고도 함) 키를 검색할 수 있습니다. Microsoft Store 컬렉션 API 또는 구매 API를 호출하려면 이후 단계에서 Azure AD의 액세스 토큰을 요청할 때 클라이언트 암호를 제공해야 합니다.
+    > 선택 해야 응용 프로그램을 등록 하면 **웹 응용 프로그램 / API** 응용 프로그램에 대 한 키 ( *클라이언트 암호*라고도 함)를 검색할 수 있도록 응용 프로그램 입력 합니다. Microsoft Store 컬렉션 API 또는 구매 API를 호출하려면 이후 단계에서 Azure AD의 액세스 토큰을 요청할 때 클라이언트 암호를 제공해야 합니다.
 
-2.  [Azure 관리 포털](https://portal.azure.com/) **Azure Active Directory**로 이동 합니다. 디렉터리를 선택한 왼쪽된 탐색 창에서 **응용 프로그램 등록** 을 클릭 한 다음 응용 프로그램을 선택 합니다.
-3.  응용 프로그램의 주 등록 페이지에 연결 됩니다. 이 페이지에서 나중에 사용에 대 한 **응용 프로그램 ID** 값을 복사 합니다.
-4.  나중에 필요할 수 있는 키를 만듭니다 (이 모두 라고 *클라이언트 비밀*). 왼쪽된 창에서 **설정** 하 고 다음 **키**를 클릭 합니다. 이 페이지에서 [키를 생성](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis)하는 단계를 완료 합니다. 나중에 사용할 수에 대 한이 키를 복사 합니다.
-5.  [응용 프로그램 매니페스트](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest)를 여러 필요한 대상 Uri를 추가 합니다. 왼쪽된 창에서 **매니페스트**를 클릭 합니다. 교체, **편집**을 클릭 하 여 `"identifierUris"` 섹션에서 다음 텍스트를 사용 하 고 **저장**을 클릭 합니다.
+2.  [Azure 관리 포털](https://portal.azure.com/)에서 **Azure Active Directory**로 이동 합니다. 디렉터리를 선택 하 고 왼쪽된 탐색 창에서 **앱 등록** 을 클릭 한 다음 응용 프로그램을 선택 합니다.
+3.  응용 프로그램의 주요 등록 페이지로 이동 합니다. 이 페이지에서 나중에 사용할 **응용 프로그램 ID** 값을 복사 합니다.
+4.  나중에 필요할 수 있는 키를 만듭니다 (모든 라고 함 *클라이언트 암호*). 왼쪽된 창에서 **설정** 및 **키**를 클릭 합니다. 이 페이지에서 키를 [만드는](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis)단계를 완료 합니다. 나중에 사용할이 키를 복사 합니다.
+5.  [응용 프로그램 매니페스트](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest)필요한 여러 대상 그룹 Uri를 추가 합니다. 왼쪽된 창에서 **매니페스트**를 클릭 합니다. **편집**을 대체는 `"identifierUris"` 섹션을 다음 텍스트로 및 **저장**을 클릭 합니다.
 
     ```json
     "identifierUris" : [                                
@@ -74,15 +74,15 @@ Microsoft 저장소 컬렉션 API를 사용 하 여 또는 API를 구입할 수 
 
 <span id="step-2"/>
 
-## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-windows-dev-center"></a>2 단계: Azure AD 응용 프로그램 ID Windows 개발자 센터에서 클라이언트 응용 프로그램 연결
+## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-windows-dev-center"></a>2 단계: Azure AD 응용 프로그램 ID를 Windows 개발자 센터에서 클라이언트 앱과 연결
 
-Microsoft 저장소 컬렉션 API를 사용 하거나 소유권 및 응용 프로그램 또는 추가 기능에 대 한 구매를 구성 하는 API를 구입할 수 있습니다, 전에 개발자 센터 대시보드에서 응용 프로그램 (또는 추가 기능을 포함 하는 응용 프로그램)을 가진 전화 Azure AD 응용 프로그램 ID를 연결 해야 합니다.
+Microsoft Store 컬렉션 API를 사용 하 여 또는 구매 API 소유권과 앱 또는 추가 기능 구매를 구성 하려면, 개발자 센터 대시보드에서 앱 (또는 추가 기능을 포함 하는 앱)을 사용 하 여 Azure AD 응용 프로그램 ID를 연결 해야 합니다.
 
 > [!NOTE]
 > 이 작업은 한 번만 수행하면 됩니다.
 
 1.  [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인하고 앱을 선택합니다.
-2.  **서비스** 에 이동 &gt; **제품 컬렉션과 구입** 페이지를 사용할 수 있는 **클라이언트 ID** 필드 중 하나로 Azure AD 응용 프로그램 ID를 입력 합니다.
+2.  **서비스** 를 이동한 다음 &gt; **제품 컬렉션 및 구입** 페이지 하 고 사용 가능한 **클라이언트 ID** 필드 중 하나에 Azure AD 응용 프로그램 ID를 입력 합니다.
 
 <span id="step-3"/>
 
@@ -157,7 +157,7 @@ Microsoft Store 컬렉션 API 또는 구매 API에서 메서드를 호출하려�
 
   * 앱에서 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스의 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용하여 앱에서 바로 구매를 관리하는 경우 [CurrentApp.GetCustomerCollectionsIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomercollectionsidasync) 메서드를 사용합니다.
 
-    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 현재 응용 프로그램의 게시자로 관리 하는 서비스의 컨텍스트에서 익명 사용자 Id를 유지 관리 하는 경우를 전달할 수도 있습니다 사용자 ID (사용자 ID 될 em 새 Microsoft 저장소 ID 키와 현재 사용자를 연결할 *publisherUserId* 매개 변수를 bedded 키에). 그렇지 않은 경우 Microsoft 저장소 ID 키와 사용자 ID를 연결할 필요가 없으면 *publisherUserId* 매개 변수를 임의의 문자열 값을 전달할 수 있습니다.
+    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 사용자 ID (사용자 ID 됩니다 em 새 Microsoft Store ID 키를 사용 하 여 현재 사용자를 연결 하려면 *publisherUserId* 매개 변수를도 전달할 수 현재 앱의 게시자로 관리 하는 서비스의 컨텍스트에서 익명의 사용자 Id를 유지 하는 경우 bedded 키에서). 그렇지 않은 경우 Microsoft Store ID 키를 사용 하 여 사용자 ID를 연결할 필요가 *publisherUserId* 매개 변수를 문자열 값을 전달할 수 있습니다.
 
 3.  앱에서 Microsoft Store ID 키를 성공적으로 만들면 키를 다시 서비스로 전달합니다.
 
@@ -175,15 +175,15 @@ Microsoft Store 컬렉션 API 또는 구매 API에서 메서드를 호출하려�
 
   * 앱에서 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스에 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용하여 앱에서 바로 구매를 관리하는 경우 [CurrentApp.GetCustomerPurchaseIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomerpurchaseidasync) 메서드를 사용합니다.
 
-    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 현재 응용 프로그램의 게시자로 관리 하는 서비스의 컨텍스트에서 익명 사용자 Id를 유지 관리 하는 경우를 전달할 수도 있습니다 사용자 ID (사용자 ID 될 em 새 Microsoft 저장소 ID 키와 현재 사용자를 연결할 *publisherUserId* 매개 변수를 bedded 키에). 그렇지 않은 경우 Microsoft 저장소 ID 키와 사용자 ID를 연결할 필요가 없으면 *publisherUserId* 매개 변수를 임의의 문자열 값을 전달할 수 있습니다.
+    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 사용자 ID (사용자 ID 됩니다 em 새 Microsoft Store ID 키를 사용 하 여 현재 사용자를 연결 하려면 *publisherUserId* 매개 변수를도 전달할 수 현재 앱의 게시자로 관리 하는 서비스의 컨텍스트에서 익명의 사용자 Id를 유지 하는 경우 bedded 키에서). 그렇지 않은 경우 Microsoft Store ID 키를 사용 하 여 사용자 ID를 연결할 필요가 *publisherUserId* 매개 변수를 문자열 값을 전달할 수 있습니다.
 
 3.  앱에서 Microsoft Store ID 키를 성공적으로 만들면 키를 다시 서비스로 전달합니다.
 
 ### <a name="diagram"></a>다이어그램
 
-다음 다이어그램에서는 Microsoft 저장소 ID 키를 만드는 프로세스를 보여줍니다.
+다음 다이어그램은 Microsoft Store ID 키를 만드는 프로세스를 보여 줍니다.
 
-  ![Windows 저장소 ID 키 만들기](images/b2b-1.png)
+  ![Windows 스토어 ID 키 만들기](images/b2b-1.png)
 
 <span id="step-5"/>
 
@@ -204,9 +204,9 @@ Microsoft Store 컬렉션 API 또는 구매 API에서 메서드를 호출하려�
 
 ### <a name="diagram"></a>다이어그램
 
-다음 다이어그램에서는 서비스에서 API 또는 구매 API Microsoft 저장소 컬렉션에 메서드를 호출 하는 프로세스에 설명 합니다.
+다음 다이어그램은 서비스에서 Microsoft Store 컬렉션 API 또는 구매 API에서에서 메서드를 호출 하는 프로세스를 설명 합니다.
 
-  ![모음 또는 puchase API 호출 합니다.](images/b2b-2.png)
+  ![컬렉션 또는으로 API 호출 합니다.](images/b2b-2.png)
 
 ## <a name="claims-in-a-microsoft-store-id-key"></a>Microsoft Store ID 키 클레임
 

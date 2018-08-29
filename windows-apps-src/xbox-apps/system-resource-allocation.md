@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d6ebe8e3344f5276939471d7ac569ae83d48311
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886228"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917751"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 
@@ -59,5 +59,5 @@ Xbox One의 UWP 앱에 대한 시스템 리소스에 대해 자세한 내용은 
 ## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP](index.md)
 - [Xbox Live 크리에이터스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)
-- [DirectX 및 Xbox 1에서 UWP](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
+- [DirectX 및 Xbox One의 UWP](https://blogs.msdn.microsoft.com/chuckw/2017/12/15/directx-and-uwp-on-xbox-one/)
 

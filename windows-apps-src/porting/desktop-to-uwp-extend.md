@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e1d808dd2991aa2ffd1e30967d329b3eced9f99
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914101"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
@@ -140,7 +140,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
 
 ### <a name="add-a-protocol-extension"></a>프로토콜 확장 추가
 
-**솔루션 탐색기**에서 솔루션이 UWP 프로젝트의 **package.appxmanifest** 파일을 열고, 이 확장을 추가합니다.
+**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일 열고이 확장을 추가 합니다.
 
 ```xml
 <Extensions>
@@ -311,9 +311,9 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-uwp-project"></a>UWP 프로젝트에 앱 서비스 확장 추가
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>패키징 프로젝트에 앱 서비스 확장 추가
 
-UWP 프로젝트의 **package.appxmanifest** 파일을 열고 ``<Application>`` 요소에 앱 서비스 확장을 추가합니다.
+패키징 프로젝트의 **package.appxmanifest** 파일을 열고에 앱 서비스 확장 추가 ``<Application>`` 요소입니다.
 
 ```xml
 <Extensions>
@@ -398,7 +398,7 @@ private async void button_Click(object sender, RoutedEventArgs e)
 
 ### <a name="add-a-share-target-extension"></a>공유 대상 확장 추가
 
-**솔루션 탐색기**에서 솔루션이 UWP 프로젝트의 **package.appxmanifest** 파일을 열고 확장을 추가합니다.
+**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고 확장을 추가 합니다.
 
 ```xml
 <Extensions>
@@ -512,7 +512,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>백그라운드 작업 구성
 
-매니페스트 디자이너에서 솔루션의 UWP 프로젝트의 **package.appxmanifest** 파일을 엽니다.
+매니페스트 디자이너에서 솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 엽니다.
 
 **선언** 탭에서 **백그라운드 작업** 선언을 추가합니다.
 

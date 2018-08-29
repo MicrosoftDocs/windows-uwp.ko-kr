@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: b3c3a3f6f831186302fc32b1f510919da40c57cc
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2892500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2908404"
 ---
 # <a name="convert-between-strings-and-binary-data"></a>문자열과 이진 데이터 간 변환
 

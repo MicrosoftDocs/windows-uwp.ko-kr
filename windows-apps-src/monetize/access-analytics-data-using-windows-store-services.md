@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886252"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910569"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -86,7 +86,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 |---------------|--------------------|
 | 취득, 변환, 설치 |  <ul><li>[앱 취득 가져오기](get-app-acquisitions.md)</li><li>[앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md)</li><li>[채널 별 앱 변환 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 취득 가져오기](get-in-app-acquisitions.md)</li><li>[구독 추가 기능 취득 가져오기](get-subscription-acquisitions.md)</li><li>[채널별 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 받기](get-app-installs.md)</li></ul> |
 | 앱 오류 | <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[앱의 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Insights (영문) | <ul><li>[앱에 대한 정보 데이터 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
+| 인 사이트 | <ul><li>[앱에 대한 정보 데이터 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
 | 평점 및 리뷰 | <ul><li>[앱 평점 가져오기](get-app-ratings.md)</li><li>[앱 리뷰 가져오기](get-app-reviews.md)</li></ul> |
 | 앱 내 광고 및 광고 캠페인 | <ul><li>[광고 성과 데이터 가져오기](get-ad-performance-data.md)</li><li>[광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -97,9 +97,9 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 | 시나리오       | 메서드      |
 |---------------|--------------------|
 | 설치 |  <ul><li>[데스크톱 응용 프로그램 설치 가져오기](get-desktop-app-installs.md)</li></ul> |
-| 요소 (영문) |  <ul><li>[데스크톱 응용 프로그램에 대한 업그레이드 차단 가져오기](get-desktop-block-data.md)</li><li>[데스크톱 응용 프로그램에 대한 업그레이드 차단 세부 정보 가져오기](get-desktop-block-data-details.md)</li></ul> |
+| 블록 |  <ul><li>[데스크톱 응용 프로그램에 대한 업그레이드 차단 가져오기](get-desktop-block-data.md)</li><li>[데스크톱 응용 프로그램에 대한 업그레이드 차단 세부 정보 가져오기](get-desktop-block-data-details.md)</li></ul> |
 | 응용 프로그램 오류 |  <ul><li>[데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기](get-desktop-application-error-reporting-data.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Insights (영문) | <ul><li>[데스크톱 응용 프로그램에 대한 정보 데이터 가져오기](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| 인 사이트 | <ul><li>[데스크톱 응용 프로그램에 대한 정보 데이터 가져오기](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Xbox Live 서비스의 메서드
 
@@ -121,7 +121,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ### <a name="methods-for-hardware-and-drivers"></a>하드웨어 및 드라이버의 메서드
 
-[Windows 하드웨어 개발자 센터 프로그램](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) 에 속하는 개발자 계정 추가 하드웨어 및 드라이버에 대 한 분석 데이터를 검색 하기 위한 방법 집합에 액세스할 수 있습니다. 자세한 내용은 [하드웨어 대시보드 API를](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api)참조 하십시오.
+[Windows 하드웨어 개발자 센터 프로그램](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) 에 속하는 개발자 계정에는 추가 하드웨어 및 드라이버에 대 한 분석 데이터를 검색 하기 위한 메서드 집합에 액세스할을 수 있습니다. 자세한 내용은 [하드웨어 대시보드 API를](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api)참조 하세요.
 
 ## <a name="code-example"></a>코드 예제
 

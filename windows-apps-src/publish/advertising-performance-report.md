@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905166"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 
@@ -62,7 +62,7 @@ ms.locfileid: "2881826"
 | 유효 노출률  | 광고가 표시된 앱에서 보낸 광고 요청의 백분율입니다.  |
 | 클릭 수  |  앱에서 광고를 클릭한 횟수입니다. |
 | CTR  |  광고 클릭률(Click-through rate)을 나타내며 광고가 클릭된 횟수를 광고가 노출된 수로 나눕니다. |
-| 가시성 | 앱에서 볼 수 있는 ad 상대 값의 백분율입니다. 이 값을 계산 하는 방법에 대 한 자세한 내용은 [ad 단위 가시성 최적화](../monetize/optimize-ad-unit-viewability.md)를 참조 하십시오. |
+| 가시성 | 앱에서 볼 수 있는 광고 노출의 백분율입니다. 이 값은 계산 하는 방법에 대 한 자세한 내용은 [광고 단위 가시성 최적화](../monetize/optimize-ad-unit-viewability.md)를 참조 하세요. |
 | 획득한 크레딧  | [커뮤니티 광고](https://docs.microsoft.com/windows/uwp/publish/about-community-ads) 캠페인을 실행하는 경우, 이는 앱에서 커뮤니티 광고를 표시해 광고 공간을 홍보해 획득한 크레딧의 수를 나타냅니다.  |
 | 사용한 크레딧  | [커뮤니티 광고](https://docs.microsoft.com/windows/uwp/publish/about-community-ads) 캠페인을 실행하는 경우, 이는 앱에서 광고에 지출한 크레딧 수를 나타냅니다.  |
 

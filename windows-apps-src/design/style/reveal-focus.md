@@ -1,7 +1,7 @@
 ---
 author: cphilippona
-description: 회의 센터는 사용자가 자신에 게 게임 패드 또는 키보드 포커스를 이동할 때 포커스를 받을 수 요소의 테두리에 애니메이션을 적용 하는 조명 효과 표시 합니다.
-title: 포커스를 표시 합니다.
+description: 포커스 표시는 사용자가 게임 패드 또는 키보드 포커스를 이동 하면 포커스 맞출 수 있는 요소의 테두리를 애니메이션화 하는 조명 효과입니다.
+title: 포커스 표시
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 03/1/2018
@@ -14,29 +14,29 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2895624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909726"
 ---
-# <a name="reveal-focus"></a>포커스를 표시 합니다.
+# <a name="reveal-focus"></a>포커스 표시
 
 ![영웅 이미지](images/header-reveal-focus.svg)
 
-회의 센터는 [10 피트 환경](/windows/uwp/design/devices/designing-for-tv), Xbox 하나 및 텔레비전 화면 등의 조명 효과 표시 합니다. 사용자가 게임 패드 또는 키보드 포커스를 이동하면 버튼과 같이 포커스 맞출 수 있는 요소의 테두리를 애니메이션화합니다. 기본적으로 꺼져 있지만 설정하는 방법은 간단합니다. 
+포커스 표시는 [10 피트 환경을](/windows/uwp/design/devices/designing-for-tv)등의 Xbox One 및 텔레비전 화면에 대 한 조명 효과입니다. 사용자가 게임 패드 또는 키보드 포커스를 이동하면 버튼과 같이 포커스 맞출 수 있는 요소의 테두리를 애니메이션화합니다. 기본적으로 꺼져 있지만 설정하는 방법은 간단합니다. 
 
-(대화형 요소를 강조 표시 하는 조명에 영향 강조 표시 효과 [강조 표시 하는 문서](/windows/uwp/design/style/reveal)참조).
+(강조 표시 효과, 대화형 요소를 강조 표시 하는 조명에 영향 [강조 표시 문서](/windows/uwp/design/style/reveal)참조).
 
 
 > **중요한 API**: [Application.FocusVisualKind 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind), [FocusVisualKind enum](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind), [Control.UseSystemFocusVisuals 속성](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
 
 ## <a name="how-it-works"></a>작동 방식
-통화 세로 또는 가로 가장자리 초점된 요소에는 애니메이션된 네온 요소의 테두리를 추가 하 여 표시:
+표시는 요소의 테두리는 애니메이션된 빛을 추가 하 여 포커스가 있는 요소에 포커스 나타난:
 
 ![Visual 표시](images/traveling-focus-fullscreen-light-rf.gif)
 
-여기서 사용자 수 하지 수 전체에 주의 전체 TV 화면 10 피트 시나리오에 특히 유용 합니다. 
+사용자 수 기울이지 못할 수 없는 전체 TV 화면에 완전히 집중 10 피트 시나리오에서 특히 유용 합니다. 
 
 ## <a name="examples"></a>예
 
@@ -45,7 +45,7 @@ ms.locfileid: "2895624"
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>설치 된 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 응용 프로그램을 설치한 경우 여기를 클릭 <a href="xamlcontrolsgallery:/item/RevealFocus">응용 프로그램을 열고 작업에 대 한 표시 포커스를 참조 하십시오</a>.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 하 <a href="xamlcontrolsgallery:/item/RevealFocus">앱을 열고 중인 포커스 표시를 확인</a>합니다.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
@@ -56,7 +56,7 @@ ms.locfileid: "2895624"
 
 ## <a name="how-to-use-it"></a>사용 방법
 
-기본적으로 해제 되어 포커스를 표시 합니다. 이를 사용하도록 설정하려면:
+표시 포커스가 기본적으로 꺼져 있습니다. 이를 사용하도록 설정하려면:
 1. 앱의 생성자에서 [AnalyticsInfo.VersionInfo.DeviceFamily](/uwp/api/windows.system.profile.analyticsversioninfo.DeviceFamily) 속성을 호출하여 현재 장치 제품군이 `Windows.Xbox`인지 확인합니다.
 2. 장치 제품군이 `Windows.Xbox`인 경우 [Application.FocusVisualKind](/uwp/api/windows.ui.xaml.application.FocusVisualKind) 속성을 `FocusVisualKind.Reveal`로 설정합니다. 
 
@@ -67,22 +67,22 @@ ms.locfileid: "2895624"
     }
 ```
 
-**FocusVisualKind** 속성을 설정한 후 시스템 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본값)로 설정 되는 모든 컨트롤에 포커스가 표시 효과 자동으로 적용 합니다. 
+**FocusVisualKind** 속성을 설정 하면 시스템은 표시 포커스 효과 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본값) 설정 된 모든 컨트롤에 자동으로 적용 합니다. 
 
-## <a name="why-isnt-reveal-focus-on-by-default"></a>기본적으로 표시 하는 회의 센터에 있지 이유? 
-볼 수 있듯이 응용 프로그램에서는 Xbox에서 실행 되 고 검색을 표시 하는 포커스를 설정 하려면 비교적 쉽습니다. 그렇다면 왜 시스템에서 자동으로 켜지지 않는 것일까요? 포커스가 표시 포커스 비주얼의 크기를 늘리는, 하기 때문에 UI 레이아웃으로 문제가 발생할 수 있습니다는 합니다. 경우에 따라 앱에 대 한 최적화 하기 위해 표시 포커스 효과 사용자 지정 합니다.
+## <a name="why-isnt-reveal-focus-on-by-default"></a>되지 않는 이유는 포커스 표시에서 기본적으로? 
+알 수 있듯이 앱이 Xbox에서 실행 중임을 감지할 때 포커스 표시를 상당히 쉽습니다. 그렇다면 왜 시스템에서 자동으로 켜지지 않는 것일까요? 포커스 표시는 포커스 화면 효과의 크기를 늘리는, 때문에 UI 레이아웃을 사용 하 여 문제가 발생할 수 있습니다. 경우에 따라 앱에 대 한 최적화 하기 위해 포커스 표시 효과 사용자 지정 합니다.
 
-## <a name="customizing-reveal-focus"></a>Reveal 포커스를 사용자 지정
+## <a name="customizing-reveal-focus"></a>포커스 표시 사용자 지정
 
-각 컨트롤에 포커스가 시각적 속성을 수정 하 여 포커스 표시 효과 사용자 지정할 수: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)및 [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush)합니다. 이러한 속성을 사용하면 포커스 영역의 색과 두께를 사용자 지정할 수 있습니다. (이들은 [높은 가시성 포커스 화면 효과](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals)를 만드는 데 사용하는 속성과 동일합니다.) 
+각 컨트롤에 대 한 포커스 화면 효과 속성만 수정 하 여 포커스 표시 효과 사용자 지정할 수 있습니다: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)및 [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). 이러한 속성을 사용하면 포커스 영역의 색과 두께를 사용자 지정할 수 있습니다. (이들은 [높은 가시성 포커스 화면 효과](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals)를 만드는 데 사용하는 속성과 동일합니다.) 
 
-Customzing를 시작 하기 전에, 해당 알고 있으면 도움이 됩니다 약간 더에 대 한 표시 포커스를 구성 하는 구성 요소에 대 한 합니다.
+Customzing 시작 하기 전에, 유용 포커스 표시를 구성 하는 구성 요소에 대해 좀 더 알아야 합니다.
 
-기본 표시 포커스 시각 효과 세 부분: 기본 테두리, 보조 테두리와 네온 표시 합니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부*에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부*에서 실행됩니다. 포커스가 표시 네온 기본 테두리의 두께에 비례 두께 있으며 *외부* 기본 테두리를 실행 합니다.
+기본 포커스 표시 화면 효과를 세 부분이: 기본 테두리, 보조 테두리, 그리고 표시 빛입니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부*에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부*에서 실행됩니다. 포커스 표시 빛의 두께 기본 테두리의 두께 비례 되며 *외부* 기본 테두리 실행 됩니다.
 
-정적 요소 외에도 표시 포커스 시각적 표시 기능을 있을에서 pulsates 포커스를 이동할 때 포커스가 방향으로 이동 하는 애니메이션된 간단 합니다.
+고정 요소 외에도 포커스 표시 화면 효과 애니메이션된 빛을 움직이는 때 포커스를 이동할 때 포커스 방향으로 이동 하는 기능.
 
-![회의 센터 레이어를 표시 합니다.](images/reveal-breakdown.svg)
+![포커스 표시 계층](images/reveal-breakdown.svg)
 
 ## <a name="customize-the-border-thickness"></a>테두리 두께 사용자 지정
 
@@ -112,7 +112,7 @@ Customzing를 시작 하기 전에, 해당 알고 있으면 도움이 됩니다 
 
 ## <a name="customize-the-color"></a>색상 사용자 지정
 
-시각적 표시 포커스의 색을 변경 하려면 [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 및 [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 속성을 사용 합니다.
+표시 포커스 화면 효과의 색을 변경 하려면 [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 및 [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 속성을 사용 합니다.
 
 | 속성 | 기본 리소스 | 기본 리소스 값 |
 | ---- | ---- | --- | 
@@ -167,12 +167,12 @@ Customzing를 시작 하기 전에, 해당 알고 있으면 도움이 됩니다 
 
 ## <a name="use-your-own-focus-visuals"></a>차제 포커스 화면 효과 사용
 
-표시 포커스를 사용자 지정 하는 다른 방법은 시각적 상태를 사용 하 여 드로잉 하 여 시스템에서 제공한 포커스 시각적 표시의 선택을 취소 하는 합니다. 자세히 알아보려면 [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)을 참조합니다.
+포커스 표시를 사용자 지정 하려면 다른 방법은 시각적 상태를 사용 하 여 그려 시스템 제공 포커스 화면 효과 옵트아웃 하는 것입니다. 자세히 알아보려면 [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)을 참조합니다.
 
 
-## <a name="reveal-focus-and-the-fluent-design-system"></a>회의 센터 및 시스템 Fluent 디자인을 표시 합니다.
+## <a name="reveal-focus-and-the-fluent-design-system"></a>포커스 표시 및 Fluent 디자인 시스템
 
-회의 센터는 빛 앱을 추가 하는 Fluent 디자인 시스템 구성 요소를 표시 합니다. Fluent 디자인 시스템 및 기타 구성 요소에 대한 자세한 내용은 [UWP용 Fluent 디자인 개요](../fluent-design-system/index.md)를 참조하세요.
+포커스 표시는 앱에 조명을 추가 하는 Fluent 디자인 시스템 구성 요소입니다. Fluent 디자인 시스템 및 기타 구성 요소에 대한 자세한 내용은 [UWP용 Fluent 디자인 개요](../fluent-design-system/index.md)를 참조하세요.
 
 ## <a name="related-articles"></a>관련 문서
 

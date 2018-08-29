@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889392"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905989"
 ---
 # <a name="handle-uri-activation"></a>URI 활성화 처리
 
@@ -31,7 +31,7 @@ ms.locfileid: "2889392"
 다음 단계에서는 사용자 지정 URI 스키마 이름인 `alsdk://`를 등록하는 방법 및 사용자가 `alsdk://` URI를 시작할 때 앱을 활성화하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> UWP 응용 프로그램에서 특정 Uri 및 파일 확장명은 기본 제공 앱 및 운영 체제에서 사용 하기 위해 예약 되어있습니다. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 예약되거나 금지되어 UWP 앱에 등록할 수 없는 URI 스키마의 사전순 목록은 [예약된 URI 스키마 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요.
+> UWP 앱에서 특정 Uri 및 파일 확장명은 기본 제공 앱과 운영 체제에서 사용 하기 위해 예약 되어 있습니다. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 예약되거나 금지되어 UWP 앱에 등록할 수 없는 URI 스키마의 사전순 목록은 [예약된 URI 스키마 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요.
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>1단계: 패키지 매니페스트에서 확장점 지정
 
@@ -138,7 +138,7 @@ void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs
 ```
 
 > [!NOTE]
-> 프로토콜 계약을 통해 시작 되 면 해당 뒤로단추 가져와 사용자 다시 응용 프로그램의 이전 콘텐츠 아니라 응용 프로그램을 시작 하는 화면에 있는지 확인 합니다.
+> 프로토콜 계약을 통해 시작 하는 경우 다시 돌아가도록 해야 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작 화면에 있습니다.
 
 다음 코드는 프로그래밍 방식으로 URI를 통해 앱을 시작합니다.
 
@@ -159,10 +159,10 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 악의적인 경우를 비롯하여 어떤 앱이나 웹 사이트도 URI 스키마 이름을 사용할 수 있습니다. 따라서 URI를 통해 가져오는 데이터는 신뢰할 수 없는 원본에서 온 것일 수 있으므로 URI를 통해 받은 매개 변수를 기반으로 영구 작업을 수행하지 않는 것이 좋습니다. 예를 들어 사용자의 계정 페이지로 앱을 실행하는 데 URI 매개 변수를 사용할 수 있지만 사용자의 계정을 직접 수정하는 데는 사용하지 않는 것이 좋습니다.
 
 > [!NOTE]
-> 앱에 대 한 새 URI 구성표 이름을 만드는 경우에 [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550)에 대 한 지침을 수행 해야 합니다. 그러면 이름이 URI 스키마에 대한 표준을 충족하게 됩니다.
+> 앱에 대 한 새 URI 체계 이름을 만들려는 경우 [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550)에 대 한 지침을 수행 해야 합니다. 그러면 이름이 URI 스키마에 대한 표준을 충족하게 됩니다.
 
 > [!NOTE]
-> 프로토콜 계약을 통해 시작 되 면 해당 뒤로단추 가져와 사용자 다시 응용 프로그램의 이전 콘텐츠 아니라 응용 프로그램을 시작 하는 화면에 있는지 확인 합니다.
+> 프로토콜 계약을 통해 시작 하는 경우 다시 돌아가도록 해야 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작 화면에 있습니다.
 
 앱이 새 URI 대상을 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다.
 
@@ -170,7 +170,7 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 
 ## <a name="related-topics"></a>관련 항목
 
-### <a name="complete-sample-app"></a>전체 예제 응용 프로그램
+### <a name="complete-sample-app"></a>전체 샘플 앱
 
 - [연결 시작 예제](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 

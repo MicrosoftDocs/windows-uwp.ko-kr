@@ -15,22 +15,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888902"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2915317"
 ---
 # <a name="reveal-highlight"></a>강조 표시
 
 ![영웅 이미지](images/header-reveal-highlight.svg)
 
-강조 표시는 사용자가 해당 근처 포인터를 이동할 때 명령 모음 등의 대화형 요소를 강조 표시 하는 조명 효과 표시 합니다. 
+강조 표시는 사용자가 포인터를 이동 하는 경우 명령 모음과 같은 대화형 요소를 강조 표시 하는 조명 효과 표시 합니다. 
 
 > **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>작동 방식
-포인터가이 그림 에서처럼 근처에 있을 때 요소의 컨테이너를 표시 하 여 대화형 요소에 대 한 강조 통화 주의 표시 합니다.
+표시는 포인터가이 그림에서와 같이 근처에 있을 때 요소의 컨테이너를 표시 하 여 대화형 요소를 강조 나타난:
 
 ![Visual 표시](images/Nav_Reveal_Animation.gif)
 
@@ -58,7 +58,7 @@ ms.locfileid: "2888902"
 
 ## <a name="how-to-use-it"></a>사용 방법
 
-일부 컨트롤에 대해 자동으로 표시됩니다. 다른 컨트롤에 대 한이 문서의 [다른 컨트롤에 표시할 수 있도록 설정](#enabling-reveal-on-other-controls) 하 고 [사용자 지정 컨트롤에 표시할 수 있도록 설정](#enabling-reveal-on-custom-controls) 섹션에서 설명한 대로 특별 한 스타일을 컨트롤에 할당 하 여 Reveal을 설정할 수 있습니다.
+일부 컨트롤에 대해 자동으로 표시됩니다. 다른 컨트롤을이 문서의 [다른 컨트롤에서 표시를 사용 하도록 설정](#enabling-reveal-on-other-controls) 하 고 [사용자 지정 컨트롤에서 표시를 사용 하도록 설정](#enabling-reveal-on-custom-controls) 섹션에 설명 된 대로 컨트롤을 특별 한 스타일을 지정 하 여 표시를 사용할 수 있습니다.
 
 ## <a name="controls-that-automatically-use-reveal"></a>자동으로 표시를 사용하는 컨트롤
 
@@ -69,7 +69,7 @@ ms.locfileid: "2888902"
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-이러한 그림 여러 다른 컨트롤에 강조 표시를 보여줍니다.
+이 그림은 여러 가지 컨트롤에서 강조 표시을 보여줍니다.
 
 ![표시 예제](images/RevealExamples_Collage.png)
 
@@ -134,8 +134,8 @@ ms.locfileid: "2888902"
 
 
 이러한 효과는 두 가지 브러시로 정의됩니다. 
-* **RevealBorderBrush** 하 여 정의 된 테두리 표시
-* 호버 Reveal은 **RevealBackgroundBrush** 으로 정의 됩니다.
+* **Revealborderbrush** 정의 테두리 표시
+* 가리켜서 표시 **revealbackgroundbrush** 정의 됩니다.
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -259,14 +259,14 @@ ms.locfileid: "2888902"
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>사용자 지정 컨트롤에 표시 효과 미세 조정 
 
-사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 하도록 설정 하면 이러한 팁 효과 최적화 하를 활용할 수 있습니다.
+사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 이러한 팁 효과 최적화 하는 데 도움이 됩니다.
  
 * 근처에 있는 높이나 너비(특히 목록에서)가 맞지 않는 크기의 항목에서: 테두리 접근 동작을 제거하고 테두리가 가리켜서 표시 시에만 표시되도록 합니다.
 * 빈번하게 사용할 수 없는 상태로 전환되는 명령 항목의 경우: 요소 백플레이트의 테두리 접근 브러시뿐만 아니라 상태를 강조하는 테두리 또한 배치합니다.
 * 맞닿을 정도로 근접한 명령 요소의 경우: 두 개의 요소 사이에 여백을 1px 추가합니다. 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
-### <a name="do"></a>다음을 수행 합니다.
+### <a name="do"></a>이 작업을 수행 합니다.
 - 사용자가 여러 조치를 취할 수 있는 요소에 표시 사용(CommandBars, 탐색 메뉴)
 - 기본적으로 시각적 구분 기호가 없는 대화형 요소를 그룹화하는 데 표시를 사용하지 않음(목록, 리본)
 - 대화형 요소의 밀도가 높은 영역에 표시 사용(명령 시나리오)

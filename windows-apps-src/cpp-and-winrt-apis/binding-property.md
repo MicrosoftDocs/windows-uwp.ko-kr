@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: 31913ae162bfe541d04f304db87b4dff962a8af4
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2884189"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910635"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이번 항목에서는 C++/WinRT에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
@@ -49,18 +49,18 @@ namespace Bookstore
 ```
 
 > [!NOTE]
-> 대화 보기 모델 클래스&mdash;사실, 응용 프로그램에서 선언 하는 모든 런타임 클래스&mdash;기본 클래스에서 파생 되지 필요 합니다. 위의 선언 된 **BookSku** 클래스는 하는 예제입니다. 인터페이스를 구현 하지만 모든 기본 클래스에서 파생 하지 않습니다.
+> 뷰 모델 클래스&mdash;사실, 응용 프로그램에서 선언 하는 모든 런타임 클래스&mdash;기본 클래스에서 파생 되지 필요 합니다. 위에서 선언한 **BookSku** 클래스의 예로 나와 있습니다. 인터페이스를 구현 하지만 모든 기본 클래스에서 파생 하지 않습니다.
 >
-> 응용 프로그램에서 선언 하는 모든 런타임 클래스를 기본에서 파생 되 *는* 해당 클래스 이라고는 *작성 가능한* 클래스입니다. 및 작성 가능한 클래스 주위 제약 조건이 있습니다. Microsoft 저장소 및 Visual Studio에서 전송의 유효성을 검사 하는데 [Windows 앱 인증 키트 (영문)](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과 하도록 응용 프로그램에 대 한 (즉 수 성공적으로 수집 된 Microsoft 저장소에 저장 하는 응용 프로그램에 대 한), 구성 가능한 클래스 해야 궁극적으로 Windows 기본 클래스에서 파생 됩니다. 의미를 상속 계층 구조의 사용이 매우 루트 클래스 Windows.* 네임 스페이스에서 발생 하는 형식 이어야 합니다. 런타임 클래스는 기본 클래스에서 파생 필요가 하는 경우&mdash;에서 파생 하 여 보기 모델의 모든 **BindableBase** 클래스를 구현 하는 예에 대 한&mdash;다음 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생 될 수 있습니다.
+> 응용 프로그램에서 선언 하는 모든 런타임 클래스는 ** 해당 기본에서 파생 클래스 라고는 *구성 가능한* 클래스입니다. 졌으 composable 클래스 제약 조건입니다. 제출의 유효성을 검사 하려면 Microsoft Store 및 Visual Studio에서 사용 하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과 하려면 응용 프로그램에 대 한 (및 따라서를 전달한 성공적으로 사용할 Microsoft Store 응용 프로그램에 대 한), composable 클래스 해야 합니다. 궁극적으로 Windows 기본 클래스에서 파생 됩니다. 의미 상속 계층의 루트에 매우 클래스 된 네임 스페이스로 시작 형식 이어야 합니다. 기본 클래스에서 런타임 클래스를 파생 해야 하는 경우&mdash;에서 보기 모델의 모든 **있음** 클래스를 구현 하는 등에 대 한&mdash;다음 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생 시킬 수 있습니다.
 >
-> 보기 모델은 보기의 및 (XAML 태그) 보기에 직접 바인딩된 때문입니다. 데이터 모델의 데이터를는 및 모델 보기 에서만에서 사용 하는 있으며 XAML에 직접 바인딩되지 않습니다. 따라서 런타임 클래스로 하지 않지만 c + + 구조체 또는 클래스 데이터 모델을 선언할 수 있습니다. MIDL에서 선언할 필요가 없습니다와 원하는 모든 상속 계층 구조를 사용 하 여 사용 가능한 야 합니다.
+> 보기 모델은 보기의 추상화 및 보기 (XAML 태그)에 직접 바인딩되어 하므로 합니다. 데이터 모델 데이터의 추상화 이며 보기 모델 에서만에서 사용 있으며 XAML에 직접 연결 되지 않습니다. 따라서 런타임 클래스 아니라 하지만 c + + 구조체 또는 클래스 데이터 모델을 선언할 수 있습니다. 있지만 MIDL를 선언할 필요가 없습니다 하 고 원하는 모든 상속 계층 구조를 사용 하도록 합니다.
 
 파일을 저장하고 프로젝트를 빌드합니다. 빌드 과정에서 `midl.exe` 도구가 실행되어 런타임 클래스를 설명하는 Windows 런타임 메타데이터 파일(`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`)을 생성합니다. 그런 다음 `cppwinrt.exe` 도구가 실행되어 런타임 클래스를 작성하거나 사용하도록 지원하는 소스 코드 파일을 생성합니다. 소스 코드 파일에는 IDL로 선언한 **BookSku** 런타임 클래스의 구현을 시작할 수 있는 스텁이 포함됩니다. 이 스텁이 `\Bookstore\Bookstore\Generated Files\sources\BookSku.h`와 `BookSku.cpp`입니다.
 
 스텁 파일인 `BookSku.h`와 `BookSku.cpp`를 `\Bookstore\Bookstore\Generated Files\sources\`에서 프로젝트 폴더인 `\Bookstore\Bookstore\`로 복사합니다. **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 스텁 파일을 마우스 오른쪽 버튼으로 클릭하고 **프로젝트에 포함**을 클릭합니다.
 
 ## <a name="implement-booksku"></a>**BookSku** 구현
-이제 `\Bookstore\Bookstore\BookSku.h`와 `BookSku.cpp`를 열고 런타임 클래스를 구현합니다. `BookSku.h`에서 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 가져올 생성자, 타이틀 문자열을 저장할 전용 멤버, 그리고 타이틀 변경 시 발생되는 이벤트에 사용할 전용 멤버를 추가합니다. 이러한 변경한 후에 `BookSku.h` 이 다음과 같이 표시 됩니다.
+이제 `\Bookstore\Bookstore\BookSku.h`와 `BookSku.cpp`를 열고 런타임 클래스를 구현합니다. `BookSku.h`에서 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 가져올 생성자, 타이틀 문자열을 저장할 전용 멤버, 그리고 타이틀 변경 시 발생되는 이벤트에 사용할 전용 멤버를 추가합니다. 이러한 변경한 후에 `BookSku.h` 은 다음과 같이 표시 됩니다.
 
 ```cppwinrt
 // BookSku.h
@@ -126,7 +126,7 @@ namespace winrt::Bookstore::implementation
 }
 ```
 
-**제목** 을 (를) 함수에 있는지 여부는 값이 설정 되는 현재 값에서 다른을 확인 합니다. 및 그럴 경우 제목을 업데이트 하 고는 변경 된 속성의 이름과 같은 인수로 [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트를 발생 시킵니다. 이에 따라 사용자 인터페이스(UI)가 다시 쿼리를 실행해야 하는 속성 값을 알 수 있습니다.
+**타이틀** 변경자 함수에서 여부는 값이 설정 되는 현재 값에서 다른를 확인 합니다. 하 고, 만약 그렇다면에서는 타이틀을 업데이트에 변경 된 속성 이름에는 인수와 함께 [**inotifypropertychanged:: Propertychanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트를 발생 시킵니다. 이에 따라 사용자 인터페이스(UI)가 다시 쿼리를 실행해야 하는 속성 값을 알 수 있습니다.
 
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>**BookstoreViewModel** 선언 및 구현
 이제 메인 XAML 페이지가 주요 보기 모델에 바인딩됩니다. 이 보기 모델은 **BookSku** 형식 중 하나를 포함해 여러 속성을 갖게 됩니다. 이번 단계에서는 주요 보기 모엘 런타임 클래스를 선언하고 구현합니다.
@@ -146,7 +146,7 @@ namespace Bookstore
 }
 ```
 
-저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 이러한 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 방법,에서 `BookstoreViewModel.h`, 포함 하는 `BookSku.h`, 구현 형식 (**winrt::Bookstore::implementation::BookSku**)를 선언 하는 합니다. 제거 하 여 기본 생성자를 복원 하는 및 `= delete`합니다.
+저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 해당 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 어떻게에서 `BookstoreViewModel.h`를 포함 시킬 것 `BookSku.h`, 구현 체 형식 (**winrt::Bookstore::implementation::BookSku**)를 선언 합니다. 제거 하 여 기본 생성자를 복원 하는에서는 `= delete`.
 
 ```cppwinrt
 // BookstoreViewModel.h
@@ -208,13 +208,13 @@ namespace Bookstore
 }
 ```
 
-파일을 저장합니다. 지금은, 완료 될 때까지 프로젝트를 만들지 않습니다 하지만 이제 구축 하는 것은 **기본 페이지** 런타임 클래스를 구현 하는 소스 코드 파일이 자동으로 다시 생성 되기 때문에 유용한 것 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`). 따라서 계속 진행 하 고 지금 작성 합니다. 이 단계에서 참조를 얻을 수 있습니다 빌드 오류는 **'MainViewModel': 'winrt::Bookstore::implementation::MainPage'의 구성원이 아닙니다**합니다.
+파일을 저장합니다. 프로젝트는 순간 완료 빌드 없습니다 수 있지만 **MainPage** 런타임 클래스가 구현 되는 소스 코드 파일을 다시 생성 때문에 작업을 수행 하는 것은 이제 빌드 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`). 따라서 중이면 하 고 이제 빌드하십시오. 이 단계에서 표시 되는 수 빌드 오류는 **'MainViewModel': 'winrt::Bookstore::implementation::MainPage'의 구성원이 아닙니다**.
 
-포함을 생략 하면 `BookstoreViewModel.idl` (의 목록을 볼 `MainPage.idl` 위에), 오류를 보면 다음 **필요 합니다. \ < "MainViewModel" 가까이**합니다. 다른 팁은 동일한 네임 스페이스에서 모든 형식 유지 되도록: 코드 목록에 표시 되는 네임 스페이스입니다.
+포함을 생략 하면 `BookstoreViewModel.idl` (의 목록을 볼 `MainPage.idl` 위에), 다음 오류가 표시 됩니다 **예상 \ < "MainViewModel" 근처**. 다른 팁이 동일한 네임 스페이스의 모든 종류를 유지 하도록: 코드 목록에 표시 되는 네임 스페이스입니다.
 
-것으로 예상 하는 오류를 해결 하려면 지금 해야 생성 된 파일에서 **MainViewModel** 속성에 대 한 접근자 스텁을 복사 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`)으로 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`합니다.
+것으로 예상 된 오류를 해결 하려면 이제 해야 생성 된 파일에서 **MainViewModel** 속성 접근자 스텁을 복사 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`)로 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`.
 
-`\Bookstore\Bookstore\MainPage.h`, 포함 `BookstoreViewModel.h`, 구현 형식 (**winrt::Bookstore::implementation::BookstoreViewModel**)를 선언 하는 합니다. 보기 모델을 저장 하는 private 구성원을 추가 합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 프로젝션된 형식인 **Bookstore::BookstoreViewModel**과 관련하여 구현됩니다. 구현 유형이 같은 프로젝트 (컴파일 단위)에 응용 프로그램으로는 생성자 오버 로드를 통해 m_mainViewModel을 생성 하므로 `nullptr_t`합니다. 또한 **MyProperty** 속성을 제거 합니다.
+`\Bookstore\Bookstore\MainPage.h`를 포함 `BookstoreViewModel.h`, 구현 체 형식 (**winrt::Bookstore::implementation::BookstoreViewModel**)를 선언 합니다. 보기 모델을 저장할 전용 멤버를 추가 합니다. 단, 속성 접근자 함수(및 m_mainViewModel 멤버)는 프로젝션된 형식인 **Bookstore::BookstoreViewModel**과 관련하여 구현됩니다. 구현 체 형식이 동일한 프로젝트 (컴파일 단위)에 응용 프로그램으로 반환 하는 생성자 오버 로드를 통해 m_mainViewModel을 생성 하도록 `nullptr_t`. 또한 **MyProperty** 속성을 제거 합니다.
 
 ```cppwinrt
 // MainPage.h
@@ -238,7 +238,7 @@ namespace winrt::Bookstore::implementation
 ...
 ```
 
-`\Bookstore\Bookstore\MainPage.cpp`, m_mainViewModel에 예상된 종류의 새 인스턴스를 할당 하려면 (구현 형식과) [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 를 호출 합니다. 책 타이틀에 대한 초기 값을 할당합니다. MainViewModel 속성 접근자를 구현합니다. 마지막으로 버튼의 이벤트 처리기에서 책 타이틀을 업데이트합니다. 또한 **MyProperty** 속성을 제거 합니다.
+`\Bookstore\Bookstore\MainPage.cpp`를 프로젝션 된 형식의 새로운 인스턴스를 m_mainViewModel에 할당 (구현 체 형식 포함) [**winrt:: make**](/uwp/cpp-ref-for-winrt/make) 를 호출 합니다. 책 타이틀에 대한 초기 값을 할당합니다. MainViewModel 속성 접근자를 구현합니다. 마지막으로 버튼의 이벤트 처리기에서 책 타이틀을 업데이트합니다. 또한 **MyProperty** 속성을 제거 합니다.
 
 ```cppwinrt
 // MainPage.cpp
@@ -269,7 +269,7 @@ namespace winrt::Bookstore::implementation
 ```
 
 ## <a name="bind-the-button-to-the-title-property"></a>버튼을 **Title** 속성에 바인딩
-`MainPage.xaml`을 엽니다. 여기에는 메인 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 아래 목록에 표시 된 것과 같이 버튼에서 이름을 제거 하 고 바인딩 (영문) 식에 리터럴을에서 해당 **콘텐츠** 속성 값을 변경 합니다. 바인딩 식에서 `Mode=OneWay` 속성을 확인하세요(보기 모델에서 UI로 단방향). 이 속성이 없으면 UI가 속성 변경 이벤트에 응답하지 않습니다.
+`MainPage.xaml`을 엽니다. 여기에는 메인 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 아래 목록에 표시 된 것과 같이 버튼에서 이름을 제거 하 고 해당 **콘텐츠** 속성 값을 리터럴에서 바인딩 식 변경. 바인딩 식에서 `Mode=OneWay` 속성을 확인하세요(보기 모델에서 UI로 단방향). 이 속성이 없으면 UI가 속성 변경 이벤트에 응답하지 않습니다.
 
 ```xaml
 <Button Click="ClickHandler" Content="{x:Bind MainViewModel.BookSku.Title, Mode=OneWay}"/>
@@ -277,8 +277,8 @@ namespace winrt::Bookstore::implementation
 
 이제 프로젝트를 빌드하고 실행합니다. 버튼을 클릭하여 **Click** 이벤트 처리기를 실행합니다. 처리기가 책의 타이틀 변경자 함수를 호출합니다. 그러면 변경자가 이벤트를 발생시켜 UI가 **Title** 속성이 변경되었다는 것을 알 수 있습니다. 마지막으로 버튼이 해당 속성 값에 대한 쿼리를 다시 실행하여 **Content** 값을 업데이트합니다.
 
-## <a name="using-the-binding-markup-extension-with-cwinrt"></a>{Binding} 태그 확장을 사용 하 여 C + + / WinRT
-현재 릴리스 버전의 C + + / WinRT [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 하는데 필요한 {Binding} 태그 확장을 사용할 수 있도록 합니다.
+## <a name="using-the-binding-markup-extension-with-cwinrt"></a>{Binding} 태그 확장을 사용 하 여 C + + WinRT
+현재 릴리스된 버전의 C + + /winrt 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 {Binding} 태그 확장을 사용할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)
