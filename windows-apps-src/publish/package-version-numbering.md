@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a16339e0918f8291f7b1cc7a3a6dfef3ccf375d
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881966"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918874"
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
@@ -28,16 +28,16 @@ ms.locfileid: "2881966"
 ## <a name="version-numbering-for-windows-10-packages"></a>Windows 10 패키지에 대한 버전 번호
 
 > [!IMPORTANT]
-> Windows 10 패키지에 대 한 버전 번호의 마지막 (네번째) 섹션 저장소 사용을 위해 예약 이며 (하지만 저장소가이 섹션의 값을 변경 하) 패키지를 만들 때 0으로 남아 있어야 합니다.
+> 10 Windows 패키지에 대 한 버전 번호의 마지막 (네 번째) 섹션 저장소 사용을 위해 예약 이며 (하지만 저장소는이 섹션의 값을 변경) 패키지를 만들 때 0으로 유지 됩니다.
 
 게시된 제출에서 Windows 10 패키지를 선택할 때 Microsoft Store는 항상 고객의 장치에 적용할 수 있는 가장 높은 버전의 패키지를 사용합니다. 따라서 특정 장치 유형의 고객에게 제공되는 패키지에 대한 유연성 및 제어 기능이 향상됩니다. 특히, 이러한 패키지를 순서에 상관없이 제출할 수 있습니다. 이후의 각 제출에서 더 높은 버전의 패키지를 제공하지 않아도 됩니다.
 
 > [!TIP]
-> 앱 패키지 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1가지고, 하는 경우 모든 Windows 10 패키지의 버전 번호 항상 모든 해당 패키지의 버전 번호 보다 더 높은 이어야 합니다. 자세한 내용은 [이전에 게시된 앱에 Windows 10용 패키지 추가](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)를 참조하세요.
+> 응용 프로그램 패키지에 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1가, Windows 10 패키지의 버전 번호를 항상 해당 패키지의 버전 번호 보다 높은 이어야 합니다. 자세한 내용은 [이전에 게시된 앱에 Windows 10용 패키지 추가](https://docs.microsoft.com/en-us/windows/uwp/publish/guidance-for-app-package-management#adding-packages-for-windows-10-to-a-previously-published-app)를 참조하세요.
 
-동일한 버전 번호와 함께 여러 Windows 10 패키지를 제공할 수 있습니다. 그러나 버전 번호를 공유하는 패키지는 아키텍처가 같을 수 없습니다. 스토어에서 각 패키지에 사용하는 전체 ID는 고유해야 하기 때문입니다. 자세한 내용은 [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)를 참조하세요.
+동일한 버전 번호를 사용 하 여 여러 Windows 10 패키지를 제공할 수 있습니다. 그러나 버전 번호를 공유하는 패키지는 아키텍처가 같을 수 없습니다. 스토어에서 각 패키지에 사용하는 전체 ID는 고유해야 하기 때문입니다. 자세한 내용은 [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)를 참조하세요.
 
-동일한 버전 번호를 사용 하는 여러 Windows 10 패키지를 제공 하는 경우 (순서로 x64, x 86, ARM, 중립) 아키텍처 (고객의 장치를 제공 하는 패키지를 결정 하는 저장소) 하는 경우 어떤 것은 더 높은 순위 결정에 사용 됩니다. 동일한 버전 번호를 사용하는 앱 번들의 등급을 매길 때 번들 내 가장 높은 아키텍처 등급이 고려됩니다. x64 패키지를 포함하는 앱 번들은 x86 패키지만 포함하는 앱 번들보다 등급이 높습니다.
+동일한 버전 번호를 사용 하는 여러 Windows 10 패키지를 제공 하는 경우 (고객의 장치에 제공 하는 패키지 저장소에 따라 결정) 하는 경우 어느 것은 더 높은 순위를 결정 하는 순서상 x64, x86, ARM, 중립 아키텍처 사용 됩니다. 동일한 버전 번호를 사용하는 앱 번들의 등급을 매길 때 번들 내 가장 높은 아키텍처 등급이 고려됩니다. x64 패키지를 포함하는 앱 번들은 x86 패키지만 포함하는 앱 번들보다 등급이 높습니다.
 
 이는 시간에 따라 앱을 진화시킬 수 있는 뛰어난 유연성을 제공합니다. 낮은 버전 번호를 사용하는 새 패키지를 업로드하고 제출하여 이전에 지원하지 않던 경제적인 장치에 대한 지원을 추가하거나, 종속성이 엄격한 더 높은 버전의 패키지를 추가하여 하드웨어 또는 OS 기능을 활용하거나, 일부 또는 모든 기존 고객층에 업데이트로 제공되는 더 높은 버전의 패키지를 추가할 수 있습니다.
 
@@ -61,9 +61,9 @@ Windows 10에서는 모든 곳에서 실행되는 코드베이스를 작성할 �
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>버전 번호를 사용하여 새 패키지를 이전에 제공된 패키지로 롤백
 
-복사본을 보관 하는 경우 롤백하려면 앱의 패키지 저장소에는 이전 Windows 10 패키지 버전와 함께 문제를 발견 하는 경우 수 있습니다. 이는 문제를 해결하는 동안 고객의 혼란을 최소화할 수 있는 임시 방편입니다.
+복사본을 보관 하는 경우 롤백할 수 응용 프로그램 패키지 저장소에 Windows 10 패키지 이전에 릴리스를 사용 하 여 문제를 발견 하면 수 있습니다. 이는 문제를 해결하는 동안 고객의 혼란을 최소화할 수 있는 임시 방편입니다.
 
-이 작업을 수행 하려면 새 [전송](app-submissions.md)를 만듭니다. 문제가 있는 패키지를 제거하고 스토어에서 제공할 이전 패키지를 업로드합니다. 롤백하려는 패키지를 이미 받은 고객은 문제가 있는 패키지를 계속 유지하게 됩니다(이전 패키지는 이전 버전 번호를 가지기 때문). 그러나 다른 사람은 스토어에서 앱을 사용할 수 있는 동안 문제가 있는 패키지를 얻지 못하게 됩니다.
+이 위해 새 [전송](app-submissions.md)만들기 문제가 있는 패키지를 제거하고 스토어에서 제공할 이전 패키지를 업로드합니다. 롤백하려는 패키지를 이미 받은 고객은 문제가 있는 패키지를 계속 유지하게 됩니다(이전 패키지는 이전 버전 번호를 가지기 때문). 그러나 다른 사람은 스토어에서 앱을 사용할 수 있는 동안 문제가 있는 패키지를 얻지 못하게 됩니다.
 
 문제가 있는 패키지를 이미 받은 고객에 대한 문제를 해결하려면 가능한 한 빨리 잘못된 패키지보다 버전 번호가 더 높은 새 Windows 10 패키지를 제출하면 됩니다. 제출에 대한 인증 프로세스가 완료되면 모든 고객이 새 패키지(버전 번호가 더 높으므로)로 업데이트됩니다.
 
@@ -77,7 +77,7 @@ Windows 8 및 Windows 8.1을 대상으로 하는 .appx 패키지의 경우 아�
 또한 Windows 8.1 패키지의 버전 번호는 동일한 앱에 대한 모든 Windows 8 패키지의 버전 번호보다 항상 커야 합니다. 즉, 제출하는 모든 Windows 8 패키지의 버전 번호가 동일한 앱에 대해 제출한 모든 Windows 8.1 패키지의 버전 번호보다 작아야 합니다.
 
 > [!NOTE]
-> 앱 Windows 10 패키지도 있으면 Windows 10 패키지의 버전 번호는 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지에 대 한 것 보다 더 높은 이어야 합니다. 자세한 내용은 [이전에 게시된 앱에 Windows 10용 패키지 추가](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)를 참조하세요.
+> 앱 패키지 Windows 10가, Windows 10 패키지의 버전 번호를 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지 중 하나에 대 한 보다 높아야 합니다. 자세한 내용은 [이전에 게시된 앱에 Windows 10용 패키지 추가](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)를 참조하세요.
 
 다음은 Windows 8 및 Windows 8.1에 대한 다양한 버전 번호 업데이트 시나리오에서 발생하는 상황의 몇 가지 예입니다.
 

@@ -7,15 +7,15 @@ ms.date: 11/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 백그라운드 작업
+keywords: windows 10, uwp, 배경 작업
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 5879977662dc2bd609d09e5fe53fc2a2f0b9180f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894805"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918894"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>In-process 백그라운드 작업 만들기 및 등록
 
@@ -72,7 +72,7 @@ In-process 백그라운드 작업의 경우 `TaskEntryPoint.`를 설정하지 �
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>OnBackgroundActivated()에서 백그라운드 작업 코드 배치
 
-[OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 발생 하는 경우 배경 트리거에 응답할 수에 배경 활동 코드를 배치 합니다. **OnBackgroundActivated** [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)와 마찬가지로 처리 될 수 있습니다. 메서드를 **Run** 메서드는 제공 되는 모든 작업을 포함 하는 [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) 매개 변수는 합니다. App.xaml.cs의 예:
+[OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 배경 트리거가 발생할 때 응답 하에 배경 작업 코드를 넣습니다. **OnBackgroundActivated** [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)와 마찬가지로 취급할 수 있습니다. 메서드는 **Run** 메서드를 제공 하는 모든 작업에 포함 된 [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) 매개 변수. App.xaml.cs 등에서:
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -92,7 +92,7 @@ sealed partial class App : Application
 }
 ```
 
-다양 한 **OnBackgroundActivated** 예제에서는 [해당 호스트 app과 동일한 프로세스에서 실행 하려면 응용 프로그램 서비스를 변환](convert-app-service-in-process.md)을 참조 하십시오.
+**OnBackgroundActivated** 예제는 다양 한 [변환 호스트 응용 프로그램은 동일한 프로세스에서 실행 하는 응용 프로그램 서비스를](convert-app-service-in-process.md)참조 하십시오.
 
 ## <a name="handle-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 처리
 

@@ -8,14 +8,14 @@ ms.date: 07/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: 사용자, azure ad, 다중 사용자, 여러 사용자가 windows 10, uwp, 계정 사용자 관리
+keywords: 10, uwp, windows 사용자 계정, 사용자, azure 광고, 다중 사용자, 다중 사용자 관리
 ms.localizationpriority: medium
 ms.openlocfilehash: bef703958f8f04cd55d887dfa8840d1ed3fbeba5
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918954"
 ---
 # <a name="manage-account-users"></a>계정 사용자 관리
 
