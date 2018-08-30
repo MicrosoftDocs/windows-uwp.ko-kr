@@ -1,11 +1,11 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: The toggle switch represents a physical switch that allows users to turn things on or off.
 title: 토글 스위치 컨트롤에 대한 지침
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
@@ -16,20 +16,20 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a62adf816ece7217de6f2f6cb0ccd505f0a5ad56
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: daffbc5ff74adc234ac6c2b414a7e1b85763849d
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816368"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3122585"
 ---
 # <a name="toggle-switches"></a>토글 스위치
 
-[토글 스위치](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)는 전등 스위치처럼 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다. 토글 스위치 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜짐/꺼짐)을 제공합니다. 이러한 옵션은 선택하는 즉시 결과가 제공됩니다.
+토글 스위치는 전등 스위치처럼 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다. 토글 스위치 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜짐/꺼짐)을 제공합니다. 이러한 옵션은 선택하는 즉시 결과가 제공됩니다.
 
-토글 스위치 컨트롤을 [ToggleSwitch 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)를 사용합니다.
+토글 스위치 컨트롤을 [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)를 사용합니다.
 
-> **중요 API**: [ToggleSwitch 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx), [IsOn 속성](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx), [Toggled 이벤트](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)
+> **중요 API**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -101,7 +101,7 @@ stackPanel1.Children.Add(lightToggle);
 
 ### <a name="ison"></a>IsOn
 
-스위치는 켜짐 또는 꺼짐일 수 있습니다. [IsOn](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) 속성을 사용하여 스위치의 상태를 확인합니다. 스위치를 사용하여 다른 이진 속성의 상태를 제어하는 경우 다음과 같이 바인딩을 사용할 수 있습니다.
+스위치는 켜짐 또는 꺼짐일 수 있습니다. [IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison) 속성을 사용하여 스위치의 상태를 확인합니다. 스위치를 사용하여 다른 이진 속성의 상태를 제어하는 경우 다음과 같이 바인딩을 사용할 수 있습니다.
 
 ```xaml
 <StackPanel Orientation="Horizontal">
@@ -112,7 +112,7 @@ stackPanel1.Children.Add(lightToggle);
 
 ### <a name="toggled"></a>Toggled
 
-다른 경우에서는 [Toggled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx) 이벤트를 처리하여 상태 변경에 응답할 수 있습니다.
+다른 경우에서는 [Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled) 이벤트를 처리하여 상태 변경에 응답할 수 있습니다.
 
 이 예제에서는 XAML 및 코드에서 Toggled 이벤트 처리기를 추가하는 방법을 보여 줍니다. Toggled 이벤트를 처리하여 진행률 링을 켜거나 끄고 표시 여부를 변경합니다.
 
@@ -156,7 +156,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### <a name="onoff-labels"></a>켜짐/꺼짐 레이블
 
-기본적으로 토글 스위치에는 자동으로 지역화되는 리터럴 켜짐 및 꺼짐 레이블이 포함됩니다. [OnContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) 및 [OffContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx) 속성을 설정하여 이러한 레이블을 바꿀 수 있습니다.
+기본적으로 토글 스위치에는 자동으로 지역화되는 리터럴 켜짐 및 꺼짐 레이블이 포함됩니다. [OnContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) 및 [OffContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent) 속성을 설정하여 이러한 레이블을 바꿀 수 있습니다.
 
 이 예제에서는 켜짐/꺼짐 레이블을 표시/숨기기 레이블로 바꿉니다.
 
@@ -166,7 +166,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-[OnContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) 및 [OffContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx) 속성을 설정하여 더 복잡한 콘텐츠를 사용할 수도 있습니다.
+[OnContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) 및 [OffContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate) 속성을 설정하여 더 복잡한 콘텐츠를 사용할 수도 있습니다.
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -179,7 +179,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>관련 문서
 
-- [ToggleSwitch 클래스](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)
 - [확인란](checkbox.md)

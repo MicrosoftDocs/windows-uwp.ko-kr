@@ -1,11 +1,11 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: Used to select or deselect action items. Can be used for a single list item or for multiple list items.
 title: 확인란
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4176a786f54e7dbff545fc6cd52ea3ddd343120f
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: a3e6180c23208f02c3f7fb2294eabe2ee080f504
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494130"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3115737"
 ---
 # <a name="check-boxes"></a>확인란
 

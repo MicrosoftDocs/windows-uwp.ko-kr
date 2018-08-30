@@ -11,18 +11,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
-ms.openlocfilehash: 984741de5be585f7d6d726ec4c736e6ebce78830
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905746"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118889"
 ---
 # <a name="map-style-sheet-reference"></a>지도 스타일 시트 참조
 
-Microsoft 매핑 기술을 사용 하 여 지도의 모양을 정의 하는 스타일 시트를 매핑합니다.  지도 스타일 시트 JSON JavaScript Object Notation ()를 사용 하 여 정의 되 고 다양 한 방법을 비롯 하 여 Windows 스토어 응용 프로그램의 [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) 메서드를 통해 사용할 수 있습니다.
+_지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 Microsoft 매핑 기술.  지도 스타일 시트 JSON JavaScript Object Notation ()를 사용 하 여 정의 되 고 다양 한 방법을 비롯 하 여 Windows 스토어 응용 프로그램의 [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) 메서드를 통해 사용할 수 있습니다.
 
-예를 들어, 물 영역을 빨간색으로, 물 레이블을 초록색으로, 육지 영역을 파란색으로 표시하려면 다음 JSON을 사용할 수 있습니다.
+[지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) 응용 프로그램을 사용 하 여 대화형으로 스타일 시트를 만들 수 있습니다.
+
+다음과 같은 JSON 물 영역을 빨간색으로 만드는 데 사용할 수, 물 레이블을 초록색으로, 표시 및 육지 영역을 파란색으로 표시 합니다.
 
 ```json
     {"version":"1.*",
@@ -30,7 +32,8 @@ Microsoft 매핑 기술을 사용 하 여 지도의 모양을 정의 하는 스�
         "elements":{"water":{"fillColor":"#FF0000","labelColor":"#00FF00"}}
     }
 ```
-JSON을 사용하여 지도에서 모든 레이블과 포인트를 제거할 수도 있습니다.
+
+지도에서 모든 레이블과 포인트를 제거 하려면이 JSON은 사용할 수 있습니다.
 
 ```json
 

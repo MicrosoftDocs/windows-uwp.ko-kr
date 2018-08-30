@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 4aba8f559b7b6f0518a620d5127692d541953255
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 63f730e5256cb88c04549cc64e36003885e02fb6
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905946"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3113303"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>C++/CX에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 이동
 이 항목은 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다.
@@ -67,7 +67,7 @@ if (userList != nullptr)
     ...
 ```
 
-해당 C++/WinRT 코드로 변환할 때 C++/WinRT 프로젝션된 형식이 포인터가 아닌 값이기 때문에 기본적으로 hat을 제거하고 화살표 연산자(-&gt;)를 점 연산자(.)로 변경합니다.
+해당 C +로 포팅할 때 + /winrt 코드 기본적으로 hat을 제거 하 고 화살표 연산자를 변경 (-&gt;)를 점 연산자 (.) 때문에 C + + /winrt 프로젝션 된 형식은 값 및 포인터가 아닌.
 
 ```cppwinrt
 IVectorView<User> userList = User::Users();
@@ -181,6 +181,43 @@ struct Sample
 private:
     Buffer m_gamerPicBuffer{ nullptr };
 };
+```
+
+## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>기본 런타임 클래스에서 파생 된 한으로 변환
+것이 한 참조를-기반 파생 형식 개체 참조를 알고 있는 일반적입니다. C + + /CX를 사용 하면 `dynamic_cast` 에 *캐스트* 자료를 참조는 참조-파생 클래스에 있습니다. `dynamic_cast` [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)실제로 숨겨진된 호출 됩니다. 다음은 일반적인 예제는&mdash;종속성 속성 변경 이벤트를 처리 하 고 종속성 속성을 소유 하는 실제 형식으로 다시 **DependencyObject** 에서 캐스팅 하 고 싶은 합니다.
+
+```cpp
+void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
+{
+    BgLabelControl^ theControl{ dynamic_cast<BgLabelControl^>(d) };
+
+    if (theControl != nullptr)
+    {
+        // succeeded ...
+    }
+}
+```
+
+해당 C + + /winrt 코드를 대체는 `dynamic_cast` 는 캡슐화 **QueryInterface** [**IUnknown::_try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) 함수를 호출 하 여 합니다. 필요한 인터페이스 (요청 하 고 형식의 기본 인터페이스)에 대 한 쿼리를 반환 하지는 예외를 throw 하는 [**IUnknown::_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)대신 호출 하는 옵션이 있습니다. 다음은 C + + WinRT 코드 예제입니다.
+
+```cppwinrt
+void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
+{
+    if (BgLabelControlApp::BgLabelControl theControl{ d.try_as<BgLabelControlApp::BgLabelControl>() })
+    {
+        // succeeded ...
+    }
+
+    try
+    {
+        BgLabelControlApp::BgLabelControl theControl{ d.as<BgLabelControlApp::BgLabelControl>() };
+        // succeeded ...
+    }
+    catch (winrt::hresult_no_interface const&)
+    {
+        // failed ...
+    }
+}
 ```
 
 ## <a name="event-handling-with-a-delegate"></a>대리인으로 이벤트 처리

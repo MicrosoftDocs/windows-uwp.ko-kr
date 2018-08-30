@@ -3,18 +3,18 @@ author: TerryWarwick
 title: 바코드 스캐너
 description: 이 문서에는 UWP 앱에 사용할 수 있는 바코드 스캐너 기능과 그 사용 방법을 보여 주는 방법 문서의 링크가 나와 있습니다.
 ms.author: jken
-ms.date: 05/1/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: c6021b00b9ec993aa6c09df93b8845dcc789678c
-ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
-ms.translationtype: HT
+ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1874391"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3129097"
 ---
 # <a name="barcode-scanner"></a>바코드 스캐너
 
@@ -24,8 +24,10 @@ ms.locfileid: "1874391"
 
 |항목 |설명 |
 |------|------------|
-| [시작](pos-barcodescanner-get-started.md)  |  |
+| [바코드 스캐너 구성](../devices-sensors/pos-barcodescanner-configure.md)  | 의도 한 응용 프로그램에 대 한 바코드 스캐너를 구성 하는 방법을 알아봅니다. |
+| [소프트웨어 트리거 사용](../devices-sensors/pos-barcodescanner-software-trigger.md) | 소프트웨어에서의 스캔 작업을 제어 하는 방법을 알아봅니다. |
 | [기호 처리](pos-barcodescanner-symbologies.md) | 바코드 스캐너가 지원하는 바코드 유형과 응용 프로그램의 바코드 스캐너에서 인식하는 바코드 유형의 컨트롤을 결정하는 방법을 알아보세요. |
+| [가져와서 바코드 데이터 이해](pos-barcodescanner-scan-data.md) | 스캔 바코드 데이터를 해석 하는 방법에 알아봅니다. |
 | [카메라 바코드 스캐너](pos-camerabarcode.md) | 유니버설 Windows 플랫폼 응용 프로그램에서 표준 카메라 렌즈를 통해 바코드를 읽어보세요. Windows 10 2018년 4월 업데이트(빌드 17134 이상)가 필요합니다. |
 |
  

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: dacfe4135402b85bac68b63c06f99f97001fa5b9
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 5495649a6b7fad633e24e244aa3f6efbcc05e441
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2907707"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118073"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>컬렉션으로 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -58,7 +58,7 @@ int main()
 }
 ```
 
-위의 코드 예제에서 알 수 있듯이 컬렉션을 만든 후 요소를 추가, 반복을 API에서 수신 하는 모든 Windows 런타임 컬렉션 개체와 마찬가지로 일반적으로 개체를 처리 합니다. 컬렉션 변경 불가능 한 뷰를 해야 하는 경우와 같이 [IVector::GetView](/uwp/api/windows.foundation.collections.ivector-1.getview)호출할 수 있습니다. 위에 표시 된 패턴&mdash;를 만들고 사용 하는 컬렉션의&mdash;API에서 데이터를 가져오거나, 데이터를 전달 하려는 간단한 시나리오에 적합 합니다.
+위의 코드 예제에서 알 수 있듯이 컬렉션을 만든 후 요소를 추가, 반복을 API에서 수신 하는 모든 Windows 런타임 컬렉션 개체와 마찬가지로 일반적으로 개체를 처리 합니다. 컬렉션 변경 불가능 한 뷰를 해야 하는 경우와 같이 [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview)호출할 수 있습니다. 위에 표시 된 패턴&mdash;를 만들고 사용 하는 컬렉션의&mdash;API에서 데이터를 가져오거나, 데이터를 전달 하려는 간단한 시나리오에 적합 합니다.
 
 ### <a name="general-purpose-collection-primed-from-data"></a>데이터에서 전기 충전 완료 하는 범용 컬렉션
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: a208e106421cb3126fd0c5002ebb271c1a923037
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: ba03d430031ad2bdad6959e2c59500dc6f2d2666
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675160"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3114620"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D, Streetside 뷰로 지도 표시
 
@@ -225,6 +225,8 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 ![어두운 스타일 지도](images/style-dark.png)
 
 JSON을 사용하여 사용자 지정 스타일을 정의한 다음, 이 JSON을 사용하여 [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) 개체를 만들 수 있습니다.
+
+대화형으로 [지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) 응용 프로그램을 사용 하 여 JSON 스타일 시트를 만들 수 있습니다.
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"

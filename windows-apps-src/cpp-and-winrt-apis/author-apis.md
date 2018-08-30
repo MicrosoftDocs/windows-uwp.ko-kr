@@ -9,14 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: d2f9b336d9a95efe28668991d66ab0a9e48e96e7
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: a2e475cc39118824dcdfe777b8729fe2b7da1a1b
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2912370"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3112721"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 작성
+
+> [!NOTE]
+> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
+
 이번 항목에서는 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체를 직/간접적으로 사용하여 C++/WinRT API를 작성하는 방법에 대해서 설명합니다. 이번 문서의 맥락에 따라 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어로 사용됩니다. 이번 항목에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법에 대해서 설명합니다.
 
 - Windows 런타임 클래스(이하 런타임 클래스)를 *작성하지 않습니다*. 단지 앱에서 로컬 사용을 위해 Windows 런타임 인터페이스를 1개 이상 구현하려고 합니다. 이 경우에는 **winrt::implements**에서 직접 파생시켜 함수를 구현합니다.
@@ -261,7 +265,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **확인** 프로젝션 된 형식 인스턴스를 반환합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
 
-**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 호출하여 다른 인터페이스에 대한 쿼리를 실행할 수 있습니다. 이때 다른 인터페이스 역시 사용하거나 반환할 수 있습니다.
+**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 다른 프로젝션 된 형식이 나도 중 하나를 사용 하거나 반환할 수 있는 인터페이스 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [**IUnknown::_try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))에 쿼리를 호출할 수 있습니다.
 
 ```cppwinrt
 istringable.ToString();
@@ -281,7 +285,12 @@ iclosable.Close();
 
 **MyType** 클래스는 구현체이기 때문에 프로젝션에 포함되지 않습니다. 하지만 이런 식으로 가상 함수를 호출하는 오버헤드 없이 구현체 메서드를 직접 호출할 수 있습니다. 위의 예제에서는 **MyType::ToString**이 **IStringable**에서 프로젝션된 메서드와 동일한 서명을 사용하지만 응용 프로그램 이진 인터페이스(ABI)를 거치지 않고 비가상 메서드를 직접 호출합니다. **com_ptr**은 포인터를 **MyType** 구조체에 고정시키기 때문에 사용자가 `myimpl` 변수 및 화살표 연산자를 통해 **MyType**의 다른 내부 세부 정보에 액세스할 수 있습니다.
 
-인터페이스 개체가 있고, 이 개체가 구현체의 인터페이스라는 사실도 알고 있는 경우에는 [**from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 함수 템플릿을 사용해 구현체로 돌아갈 수 있습니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다. 예제는 다음과 같습니다.
+인터페이스 개체가 있고, 이 개체가 구현체의 인터페이스라는 사실도 알고 있는 경우에는 [**from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 함수 템플릿을 사용해 구현체로 돌아갈 수 있습니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
+
+> [!NOTE]
+> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 이상을 호출 하면 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi)대신 합니다.
+
+예를 들면 다음과 같습니다. [구현 **BgLabelControl** 사용자 지정 컨트롤 클래스에](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)에서는 또 다른 예로 없습니다.
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)
@@ -309,7 +318,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-구현체 형식 인스턴스가 있을 때 이 인스턴스를 해당하는, 프로젝션된 형식이 필요한 함수에게 전달해야 한다면 그렇게 할 수 있습니다. 구현체 형식에는 이것을 가능하게 하는 변환 연산자가 존재하기 때문입니다(단, 구현체 형식이 `cppwinrt.exe` 도구에서 생성된 경우에 한합니다).
+구현체 형식 인스턴스가 있을 때 이 인스턴스를 해당하는, 프로젝션된 형식이 필요한 함수에게 전달해야 한다면 그렇게 할 수 있습니다. 구현 체 형식에는 변환 연산자가 존재 (에서 생성 된 구현 체 형식에는 `cppwinrt.exe` 도구)는이 가능 하 게 합니다.
 
 ## <a name="deriving-from-a-type-that-has-a-non-trivial-constructor"></a>특수 생성자를 가지고 있는 형식에서 파생
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_)는 특수 생성자의 예입니다. 기본 생성자가 없기 때문에 **ToggleButtonAutomationPeer**를 생성하려면 *소유자*를 전달해야 합니다. 결과적으로 **ToggleButtonAutomationPeer**에서 파생시키는 경우에는 *소유자*를 가져와 기본 클래스로 전달하는 생성자를 입력해야 합니다. 실제로 표시되는 모습은 다음과 같습니다.
@@ -373,6 +382,7 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
 * [winrt::com_ptr::copy_from](/uwp/cpp-ref-for-winrt/com-ptr#comptrcopyfrom-function)
 * [winrt::from_abi 함수 템플릿](/uwp/cpp-ref-for-winrt/from-abi)
+* [winrt::get_self 함수 템플릿](/uwp/cpp-ref-for-winrt/get-self)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
 * [winrt::make_self 함수 템플릿](/uwp/cpp-ref-for-winrt/make-self)

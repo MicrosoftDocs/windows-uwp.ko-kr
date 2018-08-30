@@ -1,9 +1,9 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: Learn how to use page transitions in your UWP apps.
 title: UWP 앱의 페이지 전환
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 04/08/2018
 ms.topic: article
 ms.prod: windows
@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
-ms.openlocfilehash: cba05cd9106d64f443e87b1e8373b2501d0ce451
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 0afc2c55ab0d0bdd2bee0206f986b2724d331eaf
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842240"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3116341"
 ---
 # <a name="page-transitions"></a>페이지 전환
 
 페이지 전환은 앱 페이지 사이에서 사용자를 탐색하면서 페이지 사이의 관계로 피드백을 제공합니다. 페이지 전환은 사용자가 탐색 계층의 최상단에 있는지, 형제 페이지 사이를 이동하고 있는지, 혹은 페이지 계층 속으로 더욱 깊숙이 탐색하고 있는지 이해하는 데 효과적입니다.
 
-앱 페이지 사이를 탐색할 때는 두 가지 다른 애니메이션(*페이지 새로 고침*과 *드릴*)이 제공되고, [**NavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.navigationtransitioninfo)의 하위 클래스로 표시됩니다.
+앱 페이지 사이를 탐색할 때는 두 가지 다른 애니메이션(*페이지 새로 고침*과 *드릴*)이 제공되고, [**NavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo)의 하위 클래스로 표시됩니다.
 
 ## <a name="page-refresh"></a>페이지 새로 고침
 
@@ -32,7 +32,7 @@ ms.locfileid: "1842240"
 
 ![페이지 새로 고침 애니메이션](images/page-refresh.gif)
 
-페이지 새로 고침 애니메이션은 [**EntranceNavigationTransitionInfoClass**](/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo)로 표시됩니다.
+페이지 새로 고침 애니메이션은 [**EntranceNavigationTransitionInfoClass**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo)로 표시됩니다.
 
 ```csharp
 // Explicitly play the page refresh animation
@@ -50,7 +50,7 @@ myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
 
 ![드릴 애니메이션](images/drill.gif)
 
-드릴 애니메이션은 [**DrillInNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) 클래스로 표시됩니다.
+드릴 애니메이션은 [**DrillInNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) 클래스로 표시됩니다.
 
 ```csharp
 // Play the drill in animation
@@ -59,7 +59,7 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="suppress"></a>숨기기
 
-탐색 도중 애니메이션을 재생하지 않으려면 다른 **NavigationTransitionInfo** 하위 유형 대신에 [**SuppressNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo)를 사용하세요.
+탐색 도중 애니메이션을 재생하지 않으려면 다른 **NavigationTransitionInfo** 하위 유형 대신에 [**SuppressNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo)를 사용하세요.
 
 ```csharp
 // Suppress the default animation

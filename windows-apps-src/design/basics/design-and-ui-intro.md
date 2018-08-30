@@ -1,21 +1,21 @@
 ---
-author: serenaz
-Description: An overview of the universal design features that are included in every UWP app to help you build apps that scale beautifully across a range of devices.
+author: mijacobs
+Description: The universal design features included in every UWP app help you build apps that scale beautifully across a range of devices.
 title: UWP(유니버설 Windows 플랫폼) 앱 디자인 소개(Windows 앱)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-ms.author: sezhen
+ms.author: mijacobs
 ms.date: 05/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e6f5d17a9fbdc044c3e1c0fcd152e6bafe2705a7
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877275"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3126750"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -48,9 +48,10 @@ ms.locfileid: "1877275"
 
 ### <a name="multiples-of-four"></a>4의 배수씩 확장
 
-:::row::: :::column span::: 시스템은 앱 UI 크기를 확장할 때 4의 배수씩 확장합니다.
+:::row:::
+    ::: column span::: 크기, 여백 및 UI 요소의 위치에 항상 **4의 배수인 epx** UWP 앱에 있어야 합니다.
 
-        As a result, the sizes, margins, and positions of **UI elements should always be in multiples of 4 epx**. This results in the best rendering by aligning with whole pixels. It also ensures that UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
+        UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
     :::column-end:::
     :::column:::
         ![grid](images/4epx.svg)
@@ -63,10 +64,18 @@ UWP 앱은 모든 장치에 자동으로 조정되므로 모든 장치에 대한
 
 ### <a name="windows-frames-and-pages"></a>창, 프레임 및 페이지
 
-:::row::: :::column::: UWP 앱이 모든 Windows 10 장치에서 시작되면 이는 [페이지](/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 이동할 수 있는 [프레임](/uwp/api/Windows.UI.Xaml.Controls.Frame)이 있는 [창](/uwp/api/Windows.UI.Xaml.Controls.Window)에서 시작됩니다.
-:::column-end::: :::column::: ![프레임](images/frame.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        UWP 앱을 Windows 10 장치에서 시작 되 면 [프레임](/uwp/api/Windows.UI.Xaml.Controls.Frame)을 [페이지](/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 이동할 수 있는 [창](/uwp/api/Windows.UI.Xaml.Controls.Window) 에서 실행 합니다.
+    :::column-end:::
+    :::column:::
+        ![프레임](images/frame.svg)
+    :::column-end:::
+:::row-end:::
 
-:::row::: :::column::: 앱의 UI를 페이지 컬렉션으로 간주할 수 있습니다. 각 페이지에 표시할 항목과 페이지 간 관계를 결정하는 것은 여러분의 몫입니다.
+:::row:::
+    :::column:::
+        앱의 UI 페이지의 컬렉션으로 생각할 수 있습니다. 각 페이지에 표시할 항목과 페이지 간 관계를 결정하는 것은 여러분의 몫입니다.
 
         To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
     :::column-end:::
@@ -107,7 +116,9 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작�
 
 ## <a name="shell"></a>셸
 
-:::row::: :::column::: UWP 앱은 Windows [Shell](../shell/tiles-and-notifications/creating-tiles.md)에서 타일 및 알림이 있는 더 광범위한 Windows 환경과 상호 작용합니다.
+:::row:::
+    :::column:::
+        UWP 앱은 Windows [셸](../shell/tiles-and-notifications/creating-tiles.md)을에서 타일 및 알림이 있는 더 광범위 한 Windows 환경과 상호 작용 합니다.
 
         Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
 
@@ -120,8 +131,14 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작�
 
 ## <a name="inputs"></a>입력
 
-:::row::: :::column::: UWP 앱은 스마트 상호 작용을 사용합니다. 즉, 클릭이 실제 마우스 클릭인지, 스타일러스인지, 또는 손가락으로 탭한 것인지를 알거나 정의하지 않고 클릭 조작을 디자인할 수 있습니다. 하지만 여기에 더해 [특정 입력 모드에](../input/input-primer.md) 대해 앱을 디자인할 수 있습니다.
-:::column-end::: :::column::: ![입력](images/inputs.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        UWP 앱은 스마트 조작을 사용합니다. 즉, 클릭이 실제 마우스 클릭인지, 스타일러스인지, 또는 손가락으로 탭한 것인지를 알거나 정의하지 않고 클릭 조작을 디자인할 수 있습니다. 하지만 여기에 더해 [특정 입력 모드에](../input/input-primer.md) 대해 앱을 디자인할 수 있습니다.
+    :::column-end:::
+    :::column:::
+        ![입력](images/inputs.svg)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="devices"></a>장치
 
