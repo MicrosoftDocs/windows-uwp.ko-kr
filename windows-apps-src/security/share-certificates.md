@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 863658438ce53f2c74faddb845a7d17c6ec3130c
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3390649"
+ms.locfileid: "3408029"
 ---
 # <a name="share-certificates-between-apps"></a>앱 간에 공유 인증서
 

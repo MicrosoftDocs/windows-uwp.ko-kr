@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c03d99781114c4fefff04cc25930748ec16182f
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3385125"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3402443"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
 

@@ -15,11 +15,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 714a1af932dfb8d5b0aab5c84437f92d5c2bd90e
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3383966"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3400359"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 사용자 지정, 목록, 설명, 이전
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f30a825cc7aec1b6f7dbf5cff0ea1c17c43ffd7
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3376209"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3402265"
 ---
 # <a name="create-platform-specific-store-listings"></a>플랫폼별 Store 목록 만들기
 

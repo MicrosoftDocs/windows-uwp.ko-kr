@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 추가 기능 판매, 추가 기능 구입, iap 판매, 앱 내 제품, iaps, 추가 기능
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3381926"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3402362"
 ---
 # <a name="add-on-acquisitions-report"></a>추가 기능 구입 보고서
 

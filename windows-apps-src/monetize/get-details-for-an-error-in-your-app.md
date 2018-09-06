@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: b3c9994d2738dbcd283ac7458fdde6979d43ee2f
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3377725"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3398655"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>앱에서 오류에 대한 세부 정보 가져오기
 

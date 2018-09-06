@@ -3,18 +3,18 @@ author: mcleanbyron
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 데스크톱 응용 프로그램의 집계 오류 보고 데이터를 가져옵니다.
 title: 데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
 ms.author: mcleans
-ms.date: 06/05/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: 71c566ff375f36108d724f3c550570b3332f4c6b
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.openlocfilehash: 66594fd6f59281011fccab21ad5618827db322dd
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3382359"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3402046"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
 
@@ -104,7 +104,7 @@ Authorization: Bearer <your access token>
 | market          | string  | 디바이스 시장의 ISO 3166 국가 코드입니다.   |
 | deviceType      | string  | 오류가 발생한 디바이스 유형을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>PC</strong></li><li><strong>서버</strong></li><li><strong>태블릿</strong></li><li><strong>알 수 없음</strong></li></ul>    |
 | applicationVersion     | 문자열  |   오류가 발생한 응용 프로그램 실행 파일의 버전입니다.    |
-| eventCount      | integer | 지정된 집계 수준 중에 이 오류를 발생시킨 이벤트의 수입니다.      |
+| eventCount      | 숫자 | 지정된 집계 수준 중에 이 오류를 발생시킨 이벤트의 수입니다.      |
 
 
 ### <a name="response-example"></a>응답 예제

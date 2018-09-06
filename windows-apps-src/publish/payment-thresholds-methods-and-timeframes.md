@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a7428b9278e4fc3264f652030f0409cab056d31
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3405085"
+ms.locfileid: "3412716"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 

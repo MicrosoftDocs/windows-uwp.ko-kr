@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3371519"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3399517"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
@@ -370,7 +370,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>Taiwan *</td>
+    <td>대만*</td>
     <td>타지키스탄</td>
   </tr>
   <tr>

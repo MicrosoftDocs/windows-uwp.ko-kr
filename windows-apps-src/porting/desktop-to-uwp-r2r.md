@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, 컴파일러 네이티브 이미지
 ms.localizationpriority: medium
 ms.openlocfilehash: d98b576fb51a8f9507802796ab359d0d00d21998
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3385005"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3402767"
 ---
 # <a name="optimize-your-net-desktop-apps-with-native-images"></a>기본 이미지를 사용 하 여.NET 데스크톱 앱을 최적화
 

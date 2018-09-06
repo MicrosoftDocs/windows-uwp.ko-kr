@@ -4,18 +4,18 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 오류 보고 데이터를 가져옵니다.
 title: 앱에 대한 오류 보고 데이터 가져오기
 ms.author: mcleans
-ms.date: 06/05/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c03ea17e111f86ad390dafe5360db9d10864edc
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.openlocfilehash: 15dd4d5febe0b57e164f0aadeeb8d7b816dcdd66
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3381849"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3399251"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>앱에 대한 오류 보고 데이터 가져오기
 
@@ -106,8 +106,8 @@ Authorization: Bearer <your access token>
 | deviceType      | 문자열  | 오류가 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li>**PC**</li><li>**Phone**</li><li>**콘솔**</li><li>**IoT**</li><li>**홀로그램**</li><li>**알 수 없음**</li></ul>    |
 | packageName     | 문자열  | 이 오류와 연결된 앱 패키지의 고유 이름입니다.      |
 | packageVersion  | 문자열  | 이 오류와 연결된 앱 패키지의 버전입니다.   |
-| deviceCount     | integer | 지정된 집계 수준 중에 이 오류에 해당하는 고유 장치 수입니다.  |
-| eventCount      | integer | 지정된 집계 수준 중에 이 오류를 발생시킨 이벤트의 수입니다.      |
+| deviceCount     | 숫자 | 지정된 집계 수준 중에 이 오류에 해당하는 고유 장치 수입니다.  |
+| eventCount      | 숫자 | 지정된 집계 수준 중에 이 오류를 발생시킨 이벤트의 수입니다.      |
 
 
 ### <a name="response-example"></a>응답 예제

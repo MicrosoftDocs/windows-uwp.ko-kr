@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3376299"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3402012"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 

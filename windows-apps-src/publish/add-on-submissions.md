@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품, iap 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d05722578ed945fbf75040f96360bb569c6d06
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3390119"
+ms.locfileid: "3411652"
 ---
 # <a name="add-on-submissions"></a>추가 기능 제출
 

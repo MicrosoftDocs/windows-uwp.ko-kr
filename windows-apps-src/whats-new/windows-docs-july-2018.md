@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3396666"
+ms.locfileid: "3408409"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018 년 7 월 Windows 개발자 문서의의 새로운 기능
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eaf9ee9bb6d9c949e34d9095edc7054a3a57a4dc
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3381959"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3403063"
 ---
 # <a name="vat-info"></a>VAT 정보
 

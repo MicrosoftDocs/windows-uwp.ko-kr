@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3398405"
+ms.locfileid: "3413676"
 ---
 # <a name="payout-summary"></a>지급 요약
 

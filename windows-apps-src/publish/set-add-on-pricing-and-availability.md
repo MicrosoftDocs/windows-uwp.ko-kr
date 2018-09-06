@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 추가 기능, iap, 가격
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3405125"
+ms.locfileid: "3408500"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>추가 기능 가격 책정 및 가용성 설정
 
