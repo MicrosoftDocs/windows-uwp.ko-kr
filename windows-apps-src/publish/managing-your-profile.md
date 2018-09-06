@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 개발자 센터, 계정 설정, 프로필, 계정 프로필, 개발자 계정, 개발자 계정 설정
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3228325"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3371168"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>계정 설정 및 프로필 정보 관리
 

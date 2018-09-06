@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
 ms.openlocfilehash: 3193525316d085e56244d6f03da99e3e07c6539f
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3236488"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3385255"
 ---
 # <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a>이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결
 

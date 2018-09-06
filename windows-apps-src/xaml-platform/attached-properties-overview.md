@@ -15,11 +15,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 7f92b12ab9c8962fe98d8eed22b21e7d10330c99
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3227975"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3373363"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -40,7 +40,7 @@ XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연
 ```
 
 > [!NOTE]
-> 사용 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 예제에서는 연결 된 속성으로 없이 사용 이유를 자세히 설명 합니다. **Canvas.Left**의 용도와 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에서 해당 레이아웃 자식을 처리하는 방법에 대해 자세히 알아보려면 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 참조 항목이나 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/library/windows/apps/mt228350)를 참조하세요.
+> 예제에서는 연결 된 속성으로 완벽 하 게 사용 이유를 설명 하지 않고 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 에서는 단지. **Canvas.Left**의 용도와 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에서 해당 레이아웃 자식을 처리하는 방법에 대해 자세히 알아보려면 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 참조 항목이나 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/library/windows/apps/mt228350)를 참조하세요.
 
 ## <a name="why-use-attached-properties"></a>연결된 속성을 사용하는 이유
 
@@ -76,7 +76,7 @@ Windows 런타임의 연결된 속성은 종속성 속성으로 구현되므로 
 
 ### <a name="using-the-xaml-accessor-pattern"></a>XAML 접근자 패턴 사용
 
-XAML 프로세서는 XAML이 개체 트리로 구문 분석될 때 연결된 속성 값을 설정할 수 있어야 합니다. 연결된 된 속성의 소유자 형식은 형태로 명명 된 전용된 접근자 메서드를 구현 해야 **Get * * * PropertyName* 및 **설정 * * * PropertyName*합니다. 이러한 전용 접근자 메서드는 코드에서 연결된 속성을 가져오거나 설정하는 방법이기도 합니다. 코드 관점에서 연결된 속성은 속성 접근자 대신 메서드 접근자가 있는 보조 필드와 유사하며, 이 보조 필드는 특정하게 정의될 필요 없이 어떠한 개체에서도 존재할 수 있습니다.
+XAML 프로세서는 XAML이 개체 트리로 구문 분석될 때 연결된 속성 값을 설정할 수 있어야 합니다. 연결된 된 속성의 소유자 형식 이라는 형태로 전용된 접근자 메서드를 구현 해야 합니다 **Get * * * PropertyName* 와 **설정 * * * PropertyName*. 이러한 전용 접근자 메서드는 코드에서 연결된 속성을 가져오거나 설정하는 방법이기도 합니다. 코드 관점에서 연결된 속성은 속성 접근자 대신 메서드 접근자가 있는 보조 필드와 유사하며, 이 보조 필드는 특정하게 정의될 필요 없이 어떠한 개체에서도 존재할 수 있습니다.
 
 다음 예에서는 XAML 접근자 API를 통해 코드에서 연결된 속성을 설정하는 방법을 보여 줍니다. 이 예에서 `myCheckBox`는 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 클래스의 인스턴스입니다. 마지막 행은 실제로 값을 설정하는 코드이고 그전의 여러 행에서는 인스턴스와 인스턴스의 부모-자식 관계를 설정합니다. 주석으로 처리되지 않은 마지막 행은 속성 시스템을 사용하는 경우 구문입니다. 주석으로 처리된 마지막 행은 XAML 접근자 패턴을 사용하는 경우 구문입니다.
 
@@ -127,9 +127,9 @@ myCheckBox.SetValue(Canvas::TopProperty(), winrt::box_value(75));
 - 연결된 속성을 애니메이션에 대한 대상 경로의 일부로 지정하려면 연결된 속성 이름을 괄호("()") 예를 들어 "(Canvas.Left)"처럼 연결된 속성 이름을 닫습니다. 자세한 내용은 [속성 경로 구문](property-path-syntax.md)을 참조하세요.
 
 > [!WARNING]
-> Windows 런타임 XAML 구현의 기존 제한 점은 사용자 지정 연결 된 속성을 애니메이션할 수입니다.
+> Windows 런타임 XAML 구현에 대 한 기존의 제한 사용자 지정 연결 된 속성에 애니메이션 효과 주기 수입니다.
 
-- 연결된 속성을 리소스 파일에서 **x:Uid**로의 리소스 참조를 위한 대상 속성으로 지정하려면 코드 스타일로 정규화된 **using:** 선언을 대괄호("\[\]") 안에 주입한 특수 구문을 사용하여 의도적인 범위 분할을 만듭니다. 예를 들어 요소가 존재 한다고 가정 `<TextBlock x:Uid="Title" />`에 해당 인스턴스에서 **Canvas.Top** 값을 대상으로 하는 리소스 파일에서 리소스 키는 "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top"입니다. 리소스 파일 및 XAML에 대한 자세한 내용은 [빠른 시작: UI 리소스 변환](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329)을 참조하세요.
+- 연결된 속성을 리소스 파일에서 **x:Uid**로의 리소스 참조를 위한 대상 속성으로 지정하려면 코드 스타일로 정규화된 **using:** 선언을 대괄호("\[\]") 안에 주입한 특수 구문을 사용하여 의도적인 범위 분할을 만듭니다. 예를 들어, 요소가 존재 한다고 가정 `<TextBlock x:Uid="Title" />`, 해당 인스턴스에서 **Canvas.Top** 값을 대상으로 하는 리소스 파일에서 리소스 키가 "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". 리소스 파일 및 XAML에 대한 자세한 내용은 [빠른 시작: UI 리소스 변환](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
