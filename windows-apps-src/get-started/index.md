@@ -9,13 +9,13 @@ ms.prod: windows
 ms.topic: article
 keywords: 시작, Windows 10, UWP, xaml, c#
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 9e2cd95cfc74273f4c9f6c949a5a618542b99acf
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8d7ad7835e56b874c37b9376eb00278fea055dd1
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815748"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3398485"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작 
  
@@ -75,7 +75,7 @@ ms.locfileid: "1815748"
                         <h3>코딩 시작</h3>
                         <p>숙련된 개발자든 처음 앱을 빌드 중이든 관계 없이 Windows 10 플랫폼 및 문서에서 실습을 할 수 있습니다.</p>
                         <ul>
-                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Windows용 앱 만들기</a></li>
+                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">코딩 시작</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ ms.locfileid: "1815748"
                     <br>
                     <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui">UI 기본 사항</a></p>
                     <p><a href="//docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding">데이터 바인딩</a></p>
-                    <p><a href="//docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-basics-style">사용자 정의 스타일</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-style">사용자 정의 스타일</a></p>
                 </div>
             </div>
         </div>
@@ -219,7 +219,7 @@ ms.locfileid: "1815748"
                 <div class="card">
                     <div class="cardText">
                         <h3>개발자 도구</h3>
-                        <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">UWP 커뮤니티 도구 키트</a></p>
+                        <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows 커뮤니티 도구 키트</a></p>
                         <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines">가상 컴퓨터</a></p>
                         <p><a href="//docs.microsoft.com/windows/wsl/about">Windows의 Ubuntu 기반 Bash</a></p>
                         </div>
