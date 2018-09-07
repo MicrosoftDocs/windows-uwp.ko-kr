@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿, 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: 25e17888c3292cbaf7b84c8a4bdd7c411530b558
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 4354f3371807a7000160976b6f8af5b87e1ad3f8
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422198"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3664860"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>XAML 사용자 지정 (템플릿 기반) 컨트롤을 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -27,7 +27,7 @@ ms.locfileid: "3422198"
 유니버설 Windows 플랫폼 (UWP)의 가장 강력한 기능 중 하나를 XAML [**컨트롤**](/uwp/api/windows.ui.xaml.controls.control) 형식에 따라 사용자 지정 컨트롤을 만드는 사용자 인터페이스 (UI) 스택을 제공 하는 유연성입니다. XAML UI 프레임 워크는 [사용자 지정 종속성 속성](/windows/uwp/xaml-platform/custom-dependency-properties) 및 연결 된 속성 및 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 쉽게 기능이 풍부 하 고 사용자 지정 가능한 컨트롤을 만들 수 있는 등의 기능을 제공 합니다. 이 항목에서는 C +를 사용 하 여 사용자 지정 (템플릿의) 컨트롤을 만드는 단계를 안내 + WinRT 합니다.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>빈 앱 (BgLabelControlApp) 만들기
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. 만들기는 **Visual c + + Blank App (C + + WinRT)** 프로젝트를 만들어서 *BgLabelControlApp*이름을 지정 합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual c + +** 만들기 > **Windows 유니버설** > **빈 앱 (C + + WinRT)** 프로젝트를 만들어서 *BgLabelControlApp*이름을 합니다.
 
 사용자 지정 (템플릿 기반) 컨트롤을 나타내는 새 클래스를 작성 하겠습니다. 또한 동일한 컴파일 단위 내에서 클래스를 작성하고 사용할 계획입니다. 하지만 런타임 클래스가 될 것은 결국이 클래스 XAML 태그에서 인스턴스화할 수 있습니다. 그 밖에도 런타임 클래스를 작성하고 사용하는 데 모두 C++/WinRT를 사용합니다.
 

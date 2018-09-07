@@ -11,11 +11,11 @@ keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: 1144443f943f134991d050dea1457f252eaaf36d
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3418247"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3665373"
 ---
 # <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환
 

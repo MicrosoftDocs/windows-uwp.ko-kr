@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 사용자 지정, 앱, 홍보, 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 13ee8d7482a2ce0716d4e133af329cd0ea42c184
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3410665"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3665008"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: 백그라운드 작업 트리거 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ccd171f53795ef71830ffb022d0468facb3ac4f
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3420946"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3663034"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>앱 내에서 백그라운드 작업 트리거
 
