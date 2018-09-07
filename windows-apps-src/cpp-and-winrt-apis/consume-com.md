@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: 이 항목에서는 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여를 + /winrt COM 클래스와 인터페이스를 사용 합니다.
-title: C++/WinRT를 사용한 DirectX 및 기타 COM API
+title: 사용 COM 구성 요소 C + + WinRT
 ms.author: stwhi
 ms.date: 07/23/2018
 ms.topic: article
@@ -9,14 +9,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, COM 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: b87eb90ed5ecf731cc851e81e81ad016956e5fea
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: eba4922240983f76a1f83770e2797063ba30b8b7
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422534"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3662309"
 ---
-# <a name="consume-directx-and-other-com-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>DirectX 및 다른 COM Api를 사용 하 여 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+# <a name="consume-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>사용 하 여 COM 구성 요소를 통한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
 C + 기능을 사용할 수 있는 + WinRT 라이브러리는 DirectX api 고성능 2d 및 3d 그래픽 등 COM 구성 요소를 사용 합니다. C + + /winrt는 성능 저하 없이 DirectX를 사용 하는 가장 간단한 방법은 합니다. 이 항목에서는 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여를 + /winrt COM 클래스와 인터페이스를 사용 합니다. 동일한 C + 내에서 COM 및 Windows 런타임 프로그래밍 혼합 물론 가능 + WinRT 프로젝트입니다.
 

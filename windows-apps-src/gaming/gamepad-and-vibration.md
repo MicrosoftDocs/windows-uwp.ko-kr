@@ -4,18 +4,18 @@ title: 게임 패드 및 진동
 description: Windows.Gaming.Input 게임 패드 API를 사용하여 진동 및 임펄스 명령을 검색하고 읽고 게임 패드로 전송하세요.
 ms.assetid: BB03BB8E-255F-4AE8-AC43-1E519CA860FE
 ms.author: wdg-dev-content
-ms.date: 8/23/2018
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 게임, 게임 패드, 진동
 ms.localizationpriority: medium
-ms.openlocfilehash: f44d5f4dee8293ed40d22a301f2a3d2a9611e15d
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3421705"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3666024"
 ---
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 
@@ -120,6 +120,30 @@ for (auto gamepad : Gamepad::Gamepads)
 }
 ```
 
+```cs
+private readonly object myLock = new object();
+private List<Gamepad> myGamepads = new List<Gamepad>();
+private Gamepad mainGamepad;
+
+private void GetGamepads()
+{
+    lock (myLock)
+    {
+        foreach (var gamepad in Gamepad.Gamepads)
+        {
+            // Check if the gamepad is already in myGamepads; if it isn't, add it.
+            bool gamepadInList = myGamepads.Contains(gamepad);
+
+            if (!gamepadInList)
+            {
+                // This code assumes that you're interested in all gamepads.
+                myGamepads.Add(gamepad);
+            }
+        }
+    }   
+}
+```
+
 ### <a name="adding-and-removing-gamepads"></a>게임 패드 추가 및 제거
 
 게임 패드가 추가 되거나 제거 면 [GamepadAdded][] 및 [GamepadRemoved][] 이벤트가 발생 합니다. 이러한 이벤트의 처리기를 등록하면 현재 연결된 게임 패드를 추적할 수 있습니다.
@@ -142,6 +166,23 @@ Gamepad::GamepadAdded += ref new EventHandler<Gamepad^>(Platform::Object^, Gamep
 }
 ```
 
+```cs
+Gamepad.GamepadAdded += (object sender, Gamepad e) =>
+{
+    // Check if the just-added gamepad is already in myGamepads; if it isn't, add
+    // it.
+    lock (myLock)
+    {
+        bool gamepadInList = myGamepads.Contains(e);
+
+        if (!gamepadInList)
+        {
+            myGamepads.Add(e);
+        }
+    }
+};
+```
+
 다음 예제에서는 제거 된 게임 패드의 추적을 중지 합니다. 제거할 때 추적 하는 게임 패드를 어떻게 처리 해야도 이 코드만 한 게임 패드에서 입력을 추적 하 고 간단 하 게 설정 하는 예를 들어 `nullptr` 제거 됩니다. 모든 프레임에 게임 패드 상태인 경우 및는 게임 패드 컨트롤러는 연결 및 분리 하는 경우의 입력을 수집는 하면 업데이트를 확인 해야 합니다.
 
 ```cpp
@@ -160,6 +201,26 @@ Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gam
         myGamepads->RemoveAt(indexRemoved);
     }
 }
+```
+
+```cs
+Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
+{
+    lock (myLock)
+    {
+        int indexRemoved = myGamepads.IndexOf(e);
+
+        if (indexRemoved > -1)
+        {
+            if (mainGamepad == myGamepads[indexRemoved])
+            {
+                mainGamepad = null;
+            }
+
+            myGamepads.RemoveAt(indexRemoved);
+        }
+    }
+};
 ```
 
 자세한 내용은 [게임용 입력을](input-practices-for-games.md) 참조 하세요.
@@ -186,6 +247,12 @@ auto gamepad = myGamepads[0];
 GamepadReading reading = gamepad->GetCurrentReading();
 ```
 
+```cs
+Gamepad gamepad = myGamepads[0];
+
+GamepadReading reading = gamepad.GetCurrentReading();
+```
+
 게임 패드 상태 외에도 각 판독값에는 상태가 검색된 시기를 정확히 나타내는 타임스탬프가 포함되어 있습니다. 타임스탬프는 이전 판독값의 타이밍 또는 게임 시뮬레이션의 타이밍을 이해하는 데 유용합니다.
 
 ### <a name="reading-the-thumbsticks"></a>섬스틱(thumbstick) 읽기
@@ -199,6 +266,13 @@ float leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 an
 float leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
 float rightStickX = reading.RightThumbstickX; // returns a value between -1.0 and +1.0
 float rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
+```
+
+```cs
+double leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
+double leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
+double rightStickX = reading.RightThumbstickX; // returns a value between -1.0 and +1.0
+double rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
 섬스틱(thumbstick) 값을 읽을 때 섬스틱이 중앙 위치에 서 있으면 중립 판독값 0.0이 안정적으로 생성되지 않지만 섬스틱이 이동하여 중앙 위치로 돌아갈 때마다 0.0에 가까운 다른 값이 생성된다는 사실을 알 수 있습니다. 이러한 변동을 완화하기 위해 무시되는 이상적 중앙 위치 근처의 값 범위인 _데드존_을 작게 구현할 수 있습니다. 데드존을 구현하는 한 가지 방법은 섬스틱(thumbstick)이 중앙에서 얼마나 이동했는지 확인하고 선택한 거리보다 더 가까운 판독값을 무시하는 것입니다. 대략 거리를 계산할 수 있습니다&mdash;것 이므로 정확 하지 엄지 스틱 판독값은 기본적으로 평면이 아닌 하지 값&mdash;는 피타고라스의 원리를 사용 하 여 합니다. 그러면 방사형 데드존이 생성됩니다.
@@ -224,6 +298,25 @@ if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
 }
 ```
 
+```cs
+double leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
+double leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
+
+// choose a deadzone -- readings inside this radius are ignored.
+const double deadzoneRadius = 0.1;
+const double deadzoneSquared = deadzoneRadius * deadzoneRadius;
+
+// Pythagorean theorem -- for a right triangle, hypotenuse^2 = (opposite side)^2 + (adjacent side)^2
+double oppositeSquared = leftStickY * leftStickY;
+double adjacentSquared = leftStickX * leftStickX;
+
+// accept and process input if true; otherwise, reject and ignore it.
+if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
+{
+    // input accepted, process it
+}
+```
+
 각 섬스틱(thumbstick)은 안쪽으로 눌릴 경우 버튼 역할도 합니다. 이러한 입력을 읽는 방법에 대한 자세한 내용은 [버튼 읽기](#reading-the-buttons)를 참조하세요.
 
 ### <a name="reading-the-triggers"></a>트리거 읽기
@@ -233,6 +326,11 @@ if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
 ```cpp
 float leftTrigger  = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
 float rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.0
+```
+
+```cs
+double leftTrigger = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
+double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.0
 ```
 
 ### <a name="reading-the-buttons"></a>버튼 읽기
@@ -253,12 +351,26 @@ if (GamepadButtons::A == (reading.Buttons & GamepadButtons::A))
 }
 ```
 
+```cs
+if (GamepadButtons.A == (reading.Buttons & GamepadButtons.A))
+{
+    // button A is pressed
+}
+```
+
 다음 예제에서는 A 버튼이 놓였는지 확인합니다.
 
 ```cpp
 if (GamepadButtons::None == (reading.Buttons & GamepadButtons::A))
 {
-    // button A is pressed
+    // button A is released
+}
+```
+
+```cs
+if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
+{
+    // button A is released
 }
 ```
 
@@ -295,6 +407,19 @@ GamepadVibration vibration;
 gamepad.Vibration = vibration;
 ```
 
+```cs
+// get the first gamepad
+Gamepad gamepad = Gamepad.Gamepads[0];
+
+// create an instance of GamepadVibration
+GamepadVibration vibration = new GamepadVibration();
+
+// ... set vibration levels on vibration struct here
+
+// copy the GamepadVibration struct to the gamepad
+gamepad.Vibration = vibration;
+```
+
 ### <a name="using-the-vibration-motors"></a>진동 모터 사용
 
 왼쪽 및 오른쪽 진동 모터는 0.0(진동 없음) 및 1.0(가장 강한 진동) 사이의 부동 소수점 값을 사용합니다. 왼쪽 모터의 강도는 [GamepadVibration][] 구조의 `LeftMotor` 속성으로 설정되고, 오른쪽 모터의 강도는 `RightMotor` 속성으로 설정됩니다.
@@ -306,6 +431,13 @@ GamepadVibration vibration;
 vibration.LeftMotor = 0.80;  // sets the intensity of the left motor to 80%
 vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 gamepad.Vibration = vibration;
+```
+
+```cs
+GamepadVibration vibration = new GamepadVibration();
+vibration.LeftMotor = 0.80;  // sets the intensity of the left motor to 80%
+vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
+mainGamepad.Vibration = vibration;
 ```
 
 이러한 두 모터는 동일하지 않으므로 이러한 속성을 동일한 값으로 설정하면 한 모터에 다른 모터와 동일한 진동이 재현되지 않습니다. 모든 값의 왼쪽된 모터는 오른쪽 모터 보다 더 낮은 주파수의 더 강력한 진동의 진동을&mdash;같은 값에 대 한&mdash;는 더 높은 주파수의 더 미세한 진동을 재현 합니다. 최대값에서도 왼쪽 모터는 오른쪽 모터의 고주파를 생성할 수 없으며, 오른쪽 모터도 왼쪽 모터의 강력한 힘을 재현할 수 없습니다. 하지만 모터는 게임 패드 본체로 견고하게 연결되어 있기 때문에 플레이어는 모터가 다른 특성을 가지고 다른 강도로 진동할 수 있더라도 진동이 완전히 독립적이라고 느끼지 못합니다. 이러한 정렬은 모터가 동일한 경우보다 더 광범위하고, 더 풍부한 촉감을 재현할 수 있습니다.
@@ -321,6 +453,13 @@ GamepadVibration vibration;
 vibration.LeftTrigger = 0.75;  // sets the intensity of the left trigger to 75%
 vibration.RightTrigger = 0.50; // sets the intensity of the right trigger to 50%
 gamepad.Vibration = vibration;
+```
+
+```cs
+GamepadVibration vibration = new GamepadVibration();
+vibration.LeftTrigger = 0.75;  // sets the intensity of the left trigger to 75%
+vibration.RightTrigger = 0.50; // sets the intensity of the right trigger to 50%
+mainGamepad.Vibration = vibration;
 ```
 
 트리거 내 두 진동 모터는 다른 모터와 달리 동일하므로 동일한 값에서 동일한 진동을 재현합니다. 하지만 이러한 모터는 견고하게 연결되어 있지 않으므로 플레이어는 진동을 독립적으로 느낍니다. 이러한 정렬은 완전히 독립적인 촉감을 두 트리거에 동시에 전달할 수 있으며 게임 패드 본체의 모터보다 더 구체적인 정보를 전달할 수 있습니다.

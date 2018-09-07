@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b52bf8e33bbf111dd02c695d8c3baf77e1338ac
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 1b0aa1a53ce69369c442cef7f3b5912631593242
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3413596"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3660655"
 ---
 # <a name="author-events-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 이벤트 작성
 
@@ -28,7 +28,7 @@ ms.locfileid: "3413596"
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Windows 런타임 구성 요소(BankAccountWRC) 만들기
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual C++ Windows 런타임 Component (C++/WinRT)** 프로젝트를 만든 다음 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual c + +** 만들기 > **Windows 유니버설** > **Windows 런타임 구성 요소 (C + + WinRT)** 프로젝트를 만들어서 이름을 *BankAccountWRC* ("은행 계좌 Windows 런타임 구성 요소").
 
 새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 해당 파일의 이름을 `BankAccount.idl` (이름 바꾸기는 `.idl` 파일에는 자동으로 종속 바꿉니다 `.h` 및 `.cpp` 파일 너무). 내용을 `BankAccount.idl` 아래 목록과 함께 합니다.
 
@@ -101,7 +101,7 @@ namespace winrt::BankAccountWRC::implementation
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>주요 앱(BankAccountCoreApp)을 만들어 Windows 런타임 구성 요소 테스트
 
-이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). **Visual C++ Core App (C++/WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*이라고 지정합니다.
+이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). **Visual c + +** 만들기 > **Windows 유니버설** > **Core App (C + + WinRT)** 프로젝트를 만들어서 *BankAccountCoreApp*이름을 합니다.
 
 참조를 추가 하 고 이동 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (또는 두 프로젝트가 동일한 솔루션의 경우 프로젝트-프로젝트 참조를 추가). **추가**와 **확인**을 차례대로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 오류가 표시 한 이벤트에는 페이로드 파일인 `readme.txt` 하지 존재, Windows 런타임 구성 요소 프로젝트에서 해당 파일을 제외, 후 BankAccountCoreApp 리 빌드합니다.
 

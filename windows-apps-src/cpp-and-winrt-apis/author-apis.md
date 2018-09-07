@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: ef8e9cab3ce3bcdb390b527efc5ec65c5f92dd9f
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 9829144a23d96f9bb53332b12181b67ba6a58565
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3420451"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3658842"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 작성
 
@@ -37,7 +37,7 @@ ms.locfileid: "3420451"
 > [!NOTE]
 > C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
 
-Visual Studio에서 **Visual C++ Core App (C++/WinRT)** 프로젝트 템플릿은 **CoreApplication** 패턴을 나타냅니다. 이 패턴은 [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) 구현체를 [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run)으로 전달하는 것부터 시작됩니다.
+Visual Studio, **Visual c + +** 에서 > **Windows 유니버설** > **Core App (C + + WinRT)** 프로젝트 템플릿을 **CoreApplication** 패턴을 보여 줍니다. 이 패턴은 [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) 구현체를 [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run)으로 전달하는 것부터 시작됩니다.
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;

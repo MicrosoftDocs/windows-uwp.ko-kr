@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 5495649a6b7fad633e24e244aa3f6efbcc05e441
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: dc52274c80f3689d2cb10b98bda38788e3400b4e
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3421101"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3661578"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>컬렉션으로 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -58,7 +58,7 @@ int main()
 }
 ```
 
-위의 코드 예제에서 알 수 있듯이 컬렉션을 만든 후 요소를 추가, 반복을 API에서 수신 하는 모든 Windows 런타임 컬렉션 개체와 마찬가지로 일반적으로 개체를 처리 합니다. 컬렉션 변경 불가능 한 뷰를 해야 하는 경우와 같이 [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview)호출할 수 있습니다. 위에 표시 된 패턴&mdash;를 만들고 사용 하는 컬렉션의&mdash;API에서 데이터를 가져오거나, 데이터를 전달 하려는 간단한 시나리오에 적합 합니다.
+위의 코드 예제에서 알 수 있듯이 컬렉션을 만든 후 요소를 추가, 반복을 API에서 수신 하는 모든 Windows 런타임 컬렉션 개체와 마찬가지로 일반적으로 개체를 처리 합니다. 컬렉션 변경 불가능 한 뷰를 해야 하는 경우와 같이 [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview)호출할 수 있습니다. 위에 표시 된 패턴&mdash;를 만들고 사용 하는 컬렉션의&mdash;API에서 데이터를 가져오거나, 데이터를 전달 하려는 간단한 시나리오에 적합 합니다. **IVector**또는는 **IVectorView**전달할 수, [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_) 는 예상 되는 곳입니다.
 
 ### <a name="general-purpose-collection-primed-from-data"></a>데이터에서 전기 충전 완료 하는 범용 컬렉션
 
@@ -85,7 +85,14 @@ auto bookSkus{ winrt::single_threaded_vector<Windows::Foundation::IInspectable>(
 bookSkus.Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
 ```
 
-XAML 항목 컨트롤; *수 있습니다.* 위의 컬렉션 바인딩할 수 하지만 컬렉션 관찰 되지 않습니다.
+Windows 런타임 컬렉션에서 데이터를 만들고 보기에 아무것도 복사 하지 않고 모든 API로 전달 준비 수 있습니다.
+
+```cppwinrt
+std::vector<float> values{ 0.1f, 0.2f, 0.3f };
+IVectorView<float> view{ winrt::single_threaded_vector(std::move(values)).GetView() };
+```
+
+위 예제에서 *수* 만듭니다 컬렉션에 바인딩할 수 XAML 항목 컨트롤; 하지만 컬렉션 관찰 되지 않습니다.
 
 ### <a name="observable-collection"></a>관찰 가능한 컬렉션
 
