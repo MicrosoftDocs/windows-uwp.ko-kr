@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
-ms.openlocfilehash: 428e1e963c89b7f9061d6b579b3bd5368a3a0ad1
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3659045"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3825230"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>사용 하 여 COM 구성 요소를 작성 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -22,8 +22,6 @@ C + + WinRT Windows 런타임 클래스를 작성 하는 데 도움이 처럼 �
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
-//
-
 #include "pch.h"
 
 using namespace winrt;
@@ -47,6 +45,8 @@ int main()
 }
 ```
 
+참고 [소비 COM 구성 요소 C + + WinRT](consume-com.md).
+
 ## <a name="a-more-realistic-and-interesting-example"></a>더 현실적인 하 고 흥미로운 예제
 
 이 항목의 나머지 부분에서는 C + 최소한의 콘솔 응용 프로그램 프로젝트를 만드는 방법을 안내 + /winrt 기본 클래스 및 coclass 팩터리를 구현 합니다. 예제에서는 응용 프로그램을 콜백 단추를 사용 하 여 알림 메시지를 제공 하는 방법을 보여 주며 coclass ( **INotificationActivationCallback** COM 인터페이스를 구현)는 응용 프로그램을 시작 하 고 호출 될 때 다시 사용자 알림에 해당 단추를 클릭합니다.
@@ -60,8 +60,6 @@ int main()
 열기 `main.cpp`를 사용 하 여-지시문 프로젝트 템플릿을 생성 하는 제거 합니다. 해당 위치에서 (라이브러리, 머리글 및 필요한 형식 이름의 구할 수)는 다음 코드를 붙여 넣습니다.
 
 ```cppwinrt
-#pragma comment(lib, "onecore")
-#pragma comment(lib, "propsys")
 #pragma comment(lib, "shell32")
 
 #include <iomanip>
@@ -80,7 +78,7 @@ using namespace Windows::UI::Notifications;
 
 ## <a name="implement-the-coclass-and-class-factory"></a>Coclass 및 클래스 팩터리 구현
 
-C + + /winrt에 구현 coclass 및 클래스 팩터리 [**winrt:: implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체에서 직접 파생 시켜 합니다. 세 가지를 사용 하 여-지시문 위에 표시 된 직후 (하기 전에 `main`), 알림 활성 자 COM 구성 요소를 구현 하는이 코드를 붙여 넣습니다.
+C + + /winrt에 구현 coclass 및 클래스 팩터리 [**winrt:: implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체에서 파생 시켜 합니다. 세 가지를 사용 하 여-지시문 위에 표시 된 직후 (하기 전에 `main`), 알림 COM 알림 활성 자 구성 요소를 구현 하는이 코드를 붙여 넣습니다.
 
 ```cppwinrt
 static constexpr GUID callback_guid // BAF2FA85-E121-4CC9-A942-CE335B6F917F
@@ -93,15 +91,22 @@ std::wstring const this_app_name{ L"ToastAndCallback" };
 struct callback : winrt::implements<callback, INotificationActivationCallback>
 {
     HRESULT __stdcall Activate(
-        [[maybe_unused]] LPCWSTR app,
-        [[maybe_unused]] LPCWSTR args,
+        LPCWSTR app,
+        LPCWSTR args,
         [[maybe_unused]] NOTIFICATION_USER_INPUT_DATA const* data,
         [[maybe_unused]] ULONG count) noexcept final
     {
-        std::wcout << this_app_name << L" has been called back from a notification." << std::endl;
-        std::wcout << L"Value of the 'app' parameter is '" << app << L"'." << std::endl;
-        std::wcout << L"Value of the 'args' parameter is '" << args << L"'." << std::endl;
-        return S_OK;
+        try
+        {
+            std::wcout << this_app_name << L" has been called back from a notification." << std::endl;
+            std::wcout << L"Value of the 'app' parameter is '" << app << L"'." << std::endl;
+            std::wcout << L"Value of the 'args' parameter is '" << args << L"'." << std::endl;
+            return S_OK;
+        }
+        catch (...)
+        {
+            return winrt::to_hresult();
+        }
     }
 };
 
@@ -137,9 +142,9 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 
 ## <a name="best-practices-for-implementing-com-methods"></a>COM 메서드를 구현 하기 위한 모범 사례
 
-오류 처리 및 리소스 관리에 대 한 기술 손에서 직접 이동할 수 있습니다. 것 보다 편리 하 고 오류 코드 보다는 예외를 사용 하기에 적합 합니다. 리소스 구입을 사용 하는 경우와 초기화 (RAII) 방법은 다음 방지할 수 있습니다: 오류 코드, 명시적으로 확인 한 리소스를 명시적으로 해제 합니다. 이렇게 하면 필요한 경우 보다 더 난해해 있다면 코드 및 다양 한 위치를 숨기려면 버그 제공 합니다. 대신, RAII를 사용 하 고 예외를 catch 합니다. 이렇게 하면 리소스 할당은 예외 로부터 안전 하 고 코드 간단 하 게 합니다.
+오류 처리 및 리소스 관리에 대 한 기술 손에서 직접 이동할 수 있습니다. 것 보다 편리 하 고 오류 코드 보다는 예외를 사용 하기에 적합 합니다. 및 리소스 취득-는-초기화 (RAII) 방법을 사용 하면 다음 방지할 수 있습니다 오류 코드에 대 한 명시적으로 확인 하 고 리소스를 명시적으로 해제 합니다. 이러한 명시적 검사 필요한 경우 보다 더 난해해 있다면 코드를 확인 하 고 다양 한 위치를 숨기려면 버그 제공. 대신 RAII를 사용 하 고 예외를 throw/catch 합니다. 이렇게 하면 리소스 할당은 예외 로부터 안전 하 고 코드 간단 하 게 합니다.
 
-그러나 이스케이프 COM 메서드 구현에 대 한 예외를 허용할 돼 있습니다. 사용 하 여를 확인 하는 `noexcept` COM 메서드에서 지정자 합니다. 것이 메서드에 끝나기 전에 처리 하는 하기만 하면 메서드의 호출 그래프의 아무 곳 이나 예외가 예외에 대 한 확인 합니다.
+그러나 이스케이프 COM 메서드 구현에 대 한 예외를 허용할 돼 있습니다. 사용 하 여를 확인 하는 `noexcept` COM 메서드에서 지정자 합니다. 것이 메서드에 끝나기 전에 처리 하는 하기만 하면 메서드의 호출 그래프의 아무 곳 이나 예외가 예외에 대 한 확인 합니다. 사용 하는 경우 `noexcept`, 하지만 다음 메서드를 이스케이프 하는 예외를 허용 하 고 응용 프로그램을 종료 됩니다.
 
 ## <a name="add-helper-types-and-functions"></a>도우미 형식과 함수를 추가 합니다.
 
@@ -376,3 +381,13 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 ## <a name="how-to-test-the-example-application"></a>예제에서는 응용 프로그램을 테스트 하는 방법
 
 응용 프로그램을 빌드하고 등록, 및 기타 설정 코드 실행이를 관리자 권한으로 한 번 이상 실행 합니다. 관리자 권한으로 실행 중인 다음 ' T 키를 눌러 여부 ' 알림 표시 되도록 합니다. Pop 위쪽 또는 알림 센터와 응용 프로그램에서 실행 알림, 인스턴스화된 coclass 및 **INotificationActivationCallback에서 직접 **ToastAndCallback를 다시 호출** 단추를 클릭 수 있습니다. :: 활성화** 메서드를 실행 합니다.
+
+## <a name="important-apis"></a>중요 API
+* [IInspectable 인터페이스](https://msdn.microsoft.com/library/br205821)
+* [IUnknown 인터페이스](https://msdn.microsoft.com/library/windows/desktop/ms680509)
+* [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
+
+## <a name="related-topics"></a>관련 항목
+* [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [사용 COM 구성 요소 C + + WinRT](consume-com.md)
+* [로컬 알림 메시지 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

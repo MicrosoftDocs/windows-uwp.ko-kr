@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: af9c14043fdfcc10828f87e8c954430f8f587412
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: b641591e7be23226edc354e02513d723fbe8afba
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912901"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3822557"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-the-abi"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 ABI 사이의 상호 운용성
 이번 항목에서는 SDK 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
@@ -234,13 +234,13 @@ int main()
 ```
 
 ## <a name="important-apis"></a>중요 API
-* [AddRef](https://msdn.microsoft.com/library/windows/desktop/ms691379)
-* [QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [winrt::attach_abi](/uwp/cpp-ref-for-winrt/attach-abi)
+* [AddRef 함수](https://msdn.microsoft.com/library/windows/desktop/ms691379)
+* [QueryInterface 함수](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [winrt:: attach_abi 함수](/uwp/cpp-ref-for-winrt/attach-abi)
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [winrt::copy_from_abi](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [winrt::copy_to_abi](/uwp/cpp-ref-for-winrt/copy-to-abi)
-* [winrt::detach_abi](/uwp/cpp-ref-for-winrt/detach-abi)
-* [winrt::get_abi](/uwp/cpp-ref-for-winrt/get-abi)
+* [면 함수](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [winrt::copy_to_abi 함수](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [winrt:: detach_abi 함수](/uwp/cpp-ref-for-winrt/detach-abi)
+* [winrt::get_abi 함수](/uwp/cpp-ref-for-winrt/get-abi)
 * [winrt::Windows::Foundation::IUnknown::as 멤버 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 * [winrt::Windows::Foundation::IUnknown::try_as 멤버 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)

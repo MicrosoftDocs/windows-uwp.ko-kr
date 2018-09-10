@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: ebb71b91af7e1490099898084f42ce04e698ef20
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 1e1bd5f23f40c5d0238f8089c91ee69c6a52313f
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3658796"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3820977"
 ---
 # <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 시작
 C++/WinRT 사용 속도를 높이기 위해 이 항목은 단순한 코드 예제를 안내합니다.
@@ -120,10 +120,10 @@ std::wcout << titleAsHstring.c_str() << std::endl;
 HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt::hresult-error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 등의 HRESULT 오류를 예외로 전환하기 때문에 자연스러운 최신 프로그래밍 스타일을 유지합니다. 오류 처리와 코드 샘플에 대한 자세한 내용은 [C++/WinRT를 통한 오류 처리](error-handling.md)를 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
-* [SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
-* [SyndicationFeed.Items](/uwp/api/windows.web.syndication.syndicationfeed.items)
+* [Syndicationclient:: Retrievefeedasync 메서드](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
+* [SyndicationFeed.Items 속성](/uwp/api/windows.web.syndication.syndicationfeed.items)
 * [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt::hresult-error](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
+* [winrt::hresult 오류 구조체](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)

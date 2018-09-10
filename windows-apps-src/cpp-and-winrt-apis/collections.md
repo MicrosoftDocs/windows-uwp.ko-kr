@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: dc52274c80f3689d2cb10b98bda38788e3400b4e
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 1ef6fbfab45197c868296186363c168a6c443247
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3661578"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3822627"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>컬렉션으로 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -325,19 +325,19 @@ private:
 ```
 
 ## <a name="important-apis"></a>중요 API
-* [ItemsControl.ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)
-* [IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)
-* [IVector](/uwp/api/windows.foundation.collections.ivector_t_)
-* [winrt::map_base](/uwp/cpp-ref-for-winrt/map-base)
-* [winrt::map_view_base](/uwp/cpp-ref-for-winrt/map-view-base)
-* [winrt::observable_map_base](/uwp/cpp-ref-for-winrt/observable-map-base)
-* [winrt::observable_vector_base](/uwp/cpp-ref-for-winrt/observable-vector-base)
-* [winrt::single_threaded_observable_map](/uwp/cpp-ref-for-winrt/single-threaded-observable-map)
-* [winrt::single_threaded_map](/uwp/cpp-ref-for-winrt/single-threaded-map)
-* [winrt::single_threaded_observable_vector](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector)
-* [winrt::single_threaded_vector](/uwp/cpp-ref-for-winrt/single-threaded-vector)
-* [winrt::vector_base](/uwp/cpp-ref-for-winrt/vector-base)
-* [winrt::vector_view_base](/uwp/cpp-ref-for-winrt/vector-view-base)
+* [ItemsControl.ItemsSource 속성](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)
+* [IObservableVector 인터페이스](/uwp/api/windows.foundation.collections.iobservablevector_t_)
+* [IVector 인터페이스](/uwp/api/windows.foundation.collections.ivector_t_)
+* [winrt::map_base 구조체 템플릿](/uwp/cpp-ref-for-winrt/map-base)
+* [winrt::map_view_base 구조체 템플릿](/uwp/cpp-ref-for-winrt/map-view-base)
+* [winrt::observable_map_base 구조체 템플릿](/uwp/cpp-ref-for-winrt/observable-map-base)
+* [winrt::observable_vector_base 구조체 템플릿](/uwp/cpp-ref-for-winrt/observable-vector-base)
+* [winrt::single_threaded_observable_map 함수 템플릿](/uwp/cpp-ref-for-winrt/single-threaded-observable-map)
+* [winrt::single_threaded_map 함수 템플릿](/uwp/cpp-ref-for-winrt/single-threaded-map)
+* [winrt::single_threaded_observable_vector 함수 템플릿](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector)
+* [winrt::single_threaded_vector 함수 템플릿](/uwp/cpp-ref-for-winrt/single-threaded-vector)
+* [winrt::vector_base 구조체 템플릿](/uwp/cpp-ref-for-winrt/vector-base)
+* [winrt::vector_view_base 구조체 템플릿](/uwp/cpp-ref-for-winrt/vector-view-base)
 
 ## <a name="related-topics"></a>관련 항목
 * [값 범주 및 참조](cpp-value-categories.md)

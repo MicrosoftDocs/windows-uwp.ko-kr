@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
-ms.openlocfilehash: 729a3c30f84e20a89912b728db1efecc3e54ad9e
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 0b004b5dfbeaa1d123398db780582382857eec25
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3663970"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3823627"
 ---
 # <a name="standard-c-data-types-and-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>표준 C++ 데이터 형식 및 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT에서는 일부 C++ 표준 라이브러리 데이터 형식이 포함된 표준 C++ 데이터 형식을 사용해 Windows 런타임 API를 호출할 수 있습니다. Api로 표준 문자열을 전달할 수 있습니다 (참조 [문자열 처리 C + + WinRT](strings.md)), 목록 및 표준 컨테이너 의미가 같은 컬렉션 것으로 예상 되는 api 이니셜라이저를 전달할 수 있습니다.
@@ -156,7 +156,7 @@ void PrintFeed(SyndicationFeed const& syndicationFeed)
 비동기 Windows 런타임 Api를 호출할 때 [병렬 패턴 라이브러리 (PPL)를](/cpp/parallel/concrt/parallel-patterns-library-ppl) 사용 하 여 계속 수 있습니다. 그러나 대부분의 경우 c + + 코 루틴이 비동기 개체와 상호 작용 하기 위한 효율적이 고 더 쉽게 코딩 된 방법을 제공 합니다. 자세한 내용은 및 코드 예제를 참조 하세요. [동시성 및 비동기 작업을 사용 하 여 C + + WinRT](concurrency.md).
 
 ## <a name="important-apis"></a>중요 API
-* [IVector&lt;T&gt;](/uwp/api/windows.foundation.collections.ivector_t_)
+* [IVector&lt;T&gt; 인터페이스](/uwp/api/windows.foundation.collections.ivector_t_)
 * [winrt::array_view 구조체 템플릿](/uwp/cpp-ref-for-winrt/array-view)
 
 ## <a name="related-topics"></a>관련 항목
