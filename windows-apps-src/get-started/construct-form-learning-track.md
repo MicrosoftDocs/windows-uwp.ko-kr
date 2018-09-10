@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3658862"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3820967"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 

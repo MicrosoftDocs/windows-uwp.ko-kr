@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a2f9caf8519aa76ef9487e5318a238a6e1d53fe2
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3661194"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821597"
 ---
 # <a name="custom-automation-peers"></a>사용자 지정 자동화 피어  
 

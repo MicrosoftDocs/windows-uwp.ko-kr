@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿, 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: 4354f3371807a7000160976b6f8af5b87e1ad3f8
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: fd1843afc58bc758db1c6e575f3733bdc4f47b4e
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3664860"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821037"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>XAML 사용자 지정 (템플릿 기반) 컨트롤을 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -192,10 +192,10 @@ struct BgLabelControl : BgLabelControlT<BgLabelControl>
 *재정의 가능* 함수 자체 다르게에서 제공 다른 언어 프로젝션 됩니다. C#에서는 예를 들어 재정의할 수 있는 함수 일반적으로 표시 보호 된 가상 함수로. C + + 가상도 보호 되는 WinRT, 하지만 여전히 재정의 하과 위에 표시 된 대로 사용자 지정 구현을 제공 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
-* [컨트롤](/uwp/api/windows.ui.xaml.controls.control)
-* [DependencyProperty](/uwp/api/windows.ui.xaml.dependencyproperty)
-* [FrameworkElement](/uwp/api/windows.ui.xaml.frameworkelement)
-* [UIElement](/uwp/api/windows.ui.xaml.uielement)
+* [컨트롤 클래스](/uwp/api/windows.ui.xaml.controls.control)
+* [DependencyProperty 클래스](/uwp/api/windows.ui.xaml.dependencyproperty)
+* [FrameworkElement 클래스](/uwp/api/windows.ui.xaml.frameworkelement)
+* [UIElement 클래스](/uwp/api/windows.ui.xaml.uielement)
 
 ## <a name="related-topics"></a>관련 항목
 * [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)
