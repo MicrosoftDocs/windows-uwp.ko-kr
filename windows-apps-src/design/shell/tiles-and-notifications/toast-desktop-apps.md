@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Discover the different options desktop Win32 apps have for sending toast notifications
 title: 데스크톱 앱에서 알림 메시지
 label: Toast notifications from desktop apps
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, win32, 데스크톱, 알림, 데스크톱 브리지, 알림을 보내는 옵션, com 서버, com 활성자, com, 가짜 com, com 없음, com 없이, 알림 보내기
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ffd6cfaeeaa8cc5f2b166a7749c565c252fbd26
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: 9f54519fd0ddc975c1e57c2aebde583ef971850d
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917793"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3846767"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>데스크톱 앱에서 알림 메시지
 

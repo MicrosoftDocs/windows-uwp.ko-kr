@@ -10,14 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e070acdfcc6dded12ae48cc34fe46f099da6401
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.openlocfilehash: 9cf12bc5c875e4ce3be2d627c87e15770e4cc214
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3821067"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3846617"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
+
+> [!NOTE]
+> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
 
 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다. 또한 항목의 렌더링을 제어하고 선택 항목을 기반으로 세부 정보 보기를 구현하고, 표시할 데이터를 변환하는 방법을 보여 줍니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
 
@@ -144,9 +147,9 @@ private:
 Quickstart::Recording RecordingViewModel::DefaultRecording()
 {
     Windows::Globalization::Calendar releaseDateTime;
+    releaseDateTime.Year(1761);
     releaseDateTime.Month(1);
     releaseDateTime.Day(1);
-    releaseDateTime.Year(1761);
     m_defaultRecording = winrt::make<Recording>(L"Wolfgang Amadeus Mozart", L"Andante in C for Piano", releaseDateTime);
     return m_defaultRecording;
 }
@@ -203,9 +206,9 @@ namespace Quickstart
         RecordingViewModel()
         {
             Windows::Globalization::Calendar^ releaseDateTime = ref new Windows::Globalization::Calendar();
+            releaseDateTime->Year = 1761;
             releaseDateTime->Month = 1;
             releaseDateTime->Day = 1;
-            releaseDateTime->Year = 1761;
             this->defaultRecording = ref new Recording{ L"Wolfgang Amadeus Mozart", L"Andante in C for Piano", releaseDateTime };
         }
         property Recording^ DefaultRecording
@@ -312,7 +315,7 @@ namespace Quickstart
 
 비즈니스 개체 컬렉션에 바인딩하는 것이 일반적인 시나리오입니다. C# 및 Visual Basic에서 일반 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) 클래스는 [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) 및 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 인터페이스를 구현하므로 데이터 바인딩에 유용한 컬렉션 옵션이 됩니다. 이러한 인터페이스는 항목이 추가 또는 변경되거나 목록 자체의 속성이 변경될 경우 바인딩에 대한 변경 알림을 제공합니다. 또한 바인딩된 컨트롤을 컬렉션에 있는 개체의 속성 변경 사항으로 업데이트하려면 비즈니스 개체에서 **INotifyPropertyChanged**를 구현해야 합니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
 
-사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음에서 관찰 가능한 컬렉션에 대 한 바인딩 읽을 수 있는 [XAML 항목 컨트롤, 바인딩 C + + /winrt 컬렉션](/windows/uwp/cpp-and-winrt-apis/binding-collection)합니다.
+사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에 자세한에서 관찰 가능한 컬렉션 바인딩에 대 한 내용은 다음 [XAML 항목 컨트롤, 바인딩 C + + /winrt 컬렉션](/windows/uwp/cpp-and-winrt-apis/binding-collection)합니다. 하는 경우 해당 항목 읽기 먼저 다음 의도 C + + WinRT 코드 목록 아래 표시 된 명확 하 게 됩니다.
 
 다음 예제에서는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 `Recording` 개체의 컬렉션에 바인딩합니다. 먼저 컬렉션을 뷰 모델에 추가합니다. 다음과 같은 새 멤버를 **RecordingViewModel** 클래스에 추가하면 됩니다.
 
@@ -320,9 +323,9 @@ namespace Quickstart
 public class RecordingViewModel
 {
     ...
-        private ObservableCollection<Recording> recordings = new ObservableCollection<Recording>();
+    private ObservableCollection<Recording> recordings = new ObservableCollection<Recording>();
     public ObservableCollection<Recording> Recordings{ get{ return this.recordings; } }
-        public RecordingViewModel()
+    public RecordingViewModel()
     {
         this.recordings.Add(new Recording(){ ArtistName = "Johann Sebastian Bach",
             CompositionName = "Mass in B minor", ReleaseDateTime = new DateTime(1748, 7, 8) });
@@ -332,6 +335,49 @@ public class RecordingViewModel
             CompositionName = "Serse", ReleaseDateTime = new DateTime(1737, 12, 3) });
     }
 }
+```
+
+```cppwinrt
+// RecordingViewModel.idl
+// Add this property:
+...
+Windows.Foundation.Collections.IVector<IInspectable> Recordings{ get; };
+...
+
+// RecordingViewModel.h
+// Change the constructor declaration, and add this property and this field:
+...
+    RecordingViewModel();
+    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Recordings();
+
+private:
+    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> m_recordings;
+...
+
+// RecordingViewModel.cpp
+// Implement like this:
+...
+RecordingViewModel::RecordingViewModel()
+{
+    std::vector<Windows::Foundation::IInspectable> recordings;
+
+    Windows::Globalization::Calendar releaseDateTime;
+    releaseDateTime.Month(7); releaseDateTime.Day(8); releaseDateTime.Year(1748);
+    recordings.push_back(winrt::make<Recording>(L"Johann Sebastian Bach", L"Mass in B minor", releaseDateTime));
+
+    releaseDateTime = Windows::Globalization::Calendar{};
+    releaseDateTime.Month(11); releaseDateTime.Day(2); releaseDateTime.Year(1805);
+    recordings.push_back(winrt::make<Recording>(L"Ludwig van Beethoven", L"Third Symphony", releaseDateTime));
+
+    releaseDateTime = Windows::Globalization::Calendar{};
+    releaseDateTime.Month(3); releaseDateTime.Day(12); releaseDateTime.Year(1737);
+    recordings.push_back(winrt::make<Recording>(L"George Frideric Handel", L"Serse", releaseDateTime));
+
+    m_recordings = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>(std::move(recordings));
+}
+
+Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> RecordingViewModel::Recordings() { return m_recordings; }
+...
 ```
 
 ```cpp
@@ -345,21 +391,21 @@ public:
     {
         ...
         releaseDateTime = ref new Windows::Globalization::Calendar();
+        releaseDateTime->Year = 1748;
         releaseDateTime->Month = 7;
         releaseDateTime->Day = 8;
-        releaseDateTime->Year = 1748;
         Recording^ recording = ref new Recording{ L"Johann Sebastian Bach", L"Mass in B minor", releaseDateTime };
         this->Recordings->Append(recording);
         releaseDateTime = ref new Windows::Globalization::Calendar();
+        releaseDateTime->Year = 1805;
         releaseDateTime->Month = 2;
         releaseDateTime->Day = 11;
-        releaseDateTime->Year = 1805;
         recording = ref new Recording{ L"Ludwig van Beethoven", L"Third Symphony", releaseDateTime };
         this->Recordings->Append(recording);
         releaseDateTime = ref new Windows::Globalization::Calendar();
+        releaseDateTime->Year = 1737;
         releaseDateTime->Month = 12;
         releaseDateTime->Day = 3;
-        releaseDateTime->Year = 1737;
         recording = ref new Recording{ L"George Frideric Handel", L"Serse", releaseDateTime };
         this->Recordings->Append(recording);
     }
@@ -393,7 +439,7 @@ public:
 
 ![목록 보기 바인딩](images/xaml-databinding1.png)
 
-이를 해결하기 위해 **OneLineSummary** 값을 반환하도록 [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx)을 재정의하거나 데이터 템플릿을 제공할 수 있습니다. 데이터 템플릿 옵션이 더 일반적이며 보다 유연합니다. 콘텐츠 컨트롤의 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) 속성 또는 항목 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) 속성을 사용하여 데이터 템플릿을 지정합니다. 결과에 대한 그림과 함께 **Recording**에 대한 데이터 템플릿을 디자인할 수 있는 두 가지 방법은 다음과 같습니다.
+이 해결 하려면 **OneLineSummary**값을 반환 하도록 [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) 재정의 하거나 하 하거나 데이터 템플릿을 제공할 수 있습니다. 데이터 템플릿 옵션이 더 일반적인 솔루션과 더 유연한 한 됩니다. 콘텐츠 컨트롤의 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) 속성 또는 항목 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) 속성을 사용하여 데이터 템플릿을 지정합니다. 결과에 대한 그림과 함께 **Recording**에 대한 데이터 템플릿을 디자인할 수 있는 두 가지 방법은 다음과 같습니다.
 
 ```xml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -433,17 +479,31 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 항목에서 **Recording** 개체의 모든 세부 정보를 표시할 수 있습니다. 그러나 이러한 정보는 많은 공간을 차지합니다. 따라서 대신 항목을 식별하는 데 충분한 데이터만 표시한 다음, 사용자가 선택한 경우 세부 정보 보기라는 UI의 별도 부분에 선택한 항목의 모든 세부 정보를 표시할 수 있습니다. 이 정렬을 마스터/세부 정보 보기 또는 목록/세부 정보 보기라고도 합니다.
 
-두 가지 방법이 있습니다. 세부 정보 보기를 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 속성에 바인딩할 수 있습니다. 또는 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)를 사용할 수 있습니다. **ListView**와 세부 정보 보기를 모두 **CollectionViewSource**에 바인딩합니다(현재 선택된 항목을 처리함). 두 기술 모두 아래에 나와 있으며, 둘 다 그림과 동일한 결과를 제공합니다.
+두 가지 방법이 있습니다. 세부 정보 보기를 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 속성에 바인딩할 수 있습니다. 또는 경우 (수 있으므로 주며 주의 현재 선택 된 항목을 수행) **CollectionViewSource** **ListView** 와 세부 정보 보기 바인딩 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)를 사용할 수 있습니다. 두 기술 모두 아래 나와 하 고 모두 (그림에 표시 됨) 동일한 결과 제공 합니다.
 
 > [!NOTE]
 > 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 필요합니다.
 
+> [!IMPORTANT]
+> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다 (아래에 설명 된) [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우에 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용할 수 있도록 할지 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
 
-사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 구현 해야 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스 하려면 {Binding} 태그 확장을 사용할 수 없습니다.
-
-Visual C++ 구성 요소 확장(C++/CX)을 사용하는 경우 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용할 것이므로 **Recording** 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가해야 합니다.
+경우 사용 하는 C + + /winrt 또는 Visual c + + 구성 요소 확장 (C + + CX) 그런 다음에서는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용할 때문에 해야 **녹음/녹화** 클래스 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가 합니다.
 
 먼저, 다음은 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 기술입니다.
+
+```csharp
+// No code changes necessary for C#.
+```
+
+```cppwinrt
+// Recording.idl
+// Add this attribute:
+...
+[Windows.UI.Xaml.Data.Bindable]
+runtimeclass Recording : Windows.UI.Xaml.DependencyObject
+...
+```
+
 ```cpp
 [Windows::UI::Xaml::Data::Bindable]
 public ref class Recording sealed
@@ -493,11 +553,8 @@ public ref class Recording sealed
 
 ```xml
 ...
-
 <ListView ItemsSource="{Binding Source={StaticResource RecordingsCollection}}">
-
 ...
-
 <StackPanel DataContext="{Binding Source={StaticResource RecordingsCollection}}" ...>
 ...
 ```
@@ -548,11 +605,9 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
     <local:StringFormatter x:Key="StringFormatterValueConverter"/>
 </Page.Resources>
 ...
-
 <TextBlock Text="{Binding ReleaseDateTime,
     Converter={StaticResource StringFormatterValueConverter},
     ConverterParameter=Released: \{0:d\}}"/>
-
 ...
 ```
 
@@ -561,7 +616,7 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 ![사용자 지정 형식으로 날짜 표시](images/xaml-databinding5.png)
 
 > [!NOTE]
-> Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> Windows 10, 버전 1607부터 XAML 프레임 워크는 기본 제공 부울-표시 변환기를 제공 합니다. 변환기가 매핑됩니다 **true** **Visibility.Visible** 열거형 값과 **false** **Visibility.Collapsed** 변환기를 만들지 않고 Visibility 속성을 부울 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 버전을 대상으로 하는 방법에 대 한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
-- [데이터 바인딩](index.md)
+* [데이터 바인딩](index.md)

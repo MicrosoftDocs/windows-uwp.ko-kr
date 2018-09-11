@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3824057"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3851123"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018 년 5 월 Windows 개발자 문서의의 새로운 기능
 

@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use Universal Dismiss on your toast notifications.
 title: 유니버설 해제
 label: Universal Dismiss
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 알림, 클라우드의 알림 센터, 유니버셜 해제, 알림, 크로스 디바이스, 한 번 해제 모든 경우에 해제
 ms.localizationpriority: medium
-ms.openlocfilehash: ef7d0c55c902f179f0375a63735c7cc3a6a9f96d
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: 90ad60949504d4478341ff9455fe0f7da90d78a9
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523315"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3847247"
 ---
 # <a name="universal-dismiss"></a>유니버설 해제
 

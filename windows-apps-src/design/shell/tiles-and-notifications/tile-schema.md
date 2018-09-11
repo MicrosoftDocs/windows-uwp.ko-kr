@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: The following article describes all of the properties and elements within tile content.
 title: 타일 콘텐츠 스키마
 ms.assetid: 7CBC3BD5-D9C3-4781-8BD0-1F28039E1FA8
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 타일, 타일 알림, 타일 콘텐츠, 스키마, 타일 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 3211871526015c83e18237a561ed846ccbfb494d
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d2baa2e2d7b8d68505159eb480ea3be78750f507
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656418"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3845857"
 ---
 # <a name="tile-content-schema"></a>타일 콘텐츠 스키마
 

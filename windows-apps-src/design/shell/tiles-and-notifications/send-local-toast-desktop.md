@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how Win32 C# apps can send local toast notifications and handle the user clicking the toast.
 title: '데스크톱 C # 앱에서 로컬 알림 메시지 보내기'
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C#, C 샤프
 ms.localizationpriority: medium
-ms.openlocfilehash: 44457221d7b108563e7df030125a909da6609cbe
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983459"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3847147"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C # 앱에서 로컬 알림 메시지 보내기
 
@@ -70,7 +70,7 @@ Win32 앱용 Windows 10 SDK를 활성화하지 않았다면 먼저 활성화 해
 
 ## <a name="step-4-implement-the-activator"></a>4단계: 활성자 구현
 
-알림 활성화를 위해 처리기를 구현해야하므로 사용자가 알림을 클릭할 때 앱에서 작업을 수행할 수 있습니다. 이때 알림을 알림 센터에서 지속해야 합니다(앱을 종료하고 나서 며칠 후 알림을 클릭할 수 있기 때문). 이 클래스는 프로젝트의 어느 위치에나 배치할 수 있습니다.
+사용자가 알림을 클릭할 때 앱 작업을 수행할 수 있도록 알림 활성화에 대 한 처리기를 구현 해야 합니다. 이때 알림을 알림 센터에서 지속해야 합니다(앱을 종료하고 나서 며칠 후 알림을 클릭할 수 있기 때문). 이 클래스는 프로젝트의 어느 위치에나 배치할 수 있습니다.
 
 **NotificationActivator** 클래스를 확장한 다음 아래에 나열된 세 가지 특성을 추가하고 많은 온라인 GUID 생성기 중 하나를 사용하여 고유한 GUID CLSID를 만듭니다. 이 CLSID(클래스 식별자)는 알림 센터가 COM에 활성화해야 하는 COM에 대한 클래스를 인식하는 방법입니다.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
 ms.openlocfilehash: 37263794ffed6660f71c5e16195e992588c16d4a
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3824617"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3845257"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
