@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 50fde5d3683960ab384d823ace70f910fc1045d8
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
+ms.openlocfilehash: 136abd5e3312b7a387ccc3b7c993d4e70d8ef0d4
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935741"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3823587"
 ---
 # <a name="consume-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 사용
 이번 항목에서는 Windows에 포함되든, 혹은 외부 구성 요소 공급업체나 사용자 자신 중 어디에서 구현되든 상관없이 C++/WinRT API를 사용하는 방법에 대해서 설명합니다.
@@ -221,7 +221,7 @@ using namespace winrt::Windows::Globalization::NumberFormatting;
 CurrencyFormatter currency{ L"USD" };
 ```
 
-But there may be times that you'll want to create the activation factory yourself, and then create objects from it at your convenience. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
+하지만 정품 인증 공장을 직접 만들고자 하는 경우 귀하의 편의에 따라 여기에서 개체를 만듭니다. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Globalization::NumberFormatting;
@@ -245,12 +245,12 @@ BankAccountWRC::BankAccount account = factory.ActivateInstance<BankAccountWRC::B
 ```
 
 ## <a name="important-apis"></a>중요 API
-* [QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
-* [RoActivateInstance](https://msdn.microsoft.com/library/br224646)
-* [Windows::Foundation::Uri](/uwp/api/windows.foundation.uri)
+* [QueryInterface 인터페이스](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [RoActivateInstance 함수](https://msdn.microsoft.com/library/br224646)
+* [Windows::Foundation::Uri 클래스](/uwp/api/windows.foundation.uri)
 * [winrt::get_activation_factory 함수 템플릿](/uwp/cpp-ref-for-winrt/get-activation-factory)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
-* [winrt::Windows::Foundation::IUnknown](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
+* [winrt::Windows::Foundation::IUnknown 구조체](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT의 이벤트 작성](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
