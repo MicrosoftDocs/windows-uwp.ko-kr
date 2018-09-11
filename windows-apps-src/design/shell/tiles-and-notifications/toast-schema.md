@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: The following article describes all of the properties and elements within toast content.
 title: 알림 콘텐츠 스키마
 ms.assetid: 7CBC3BD5-D9C3-4781-8BD0-1F28039E1FA8
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e51f9e837b64e019c4b6dc1d87e5bf99f5bcf5bb
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: ad1700d58ab3568aa3aefa46b5950d0a8bf3c320
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1522952"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850197"
 ---
 # <a name="toast-content-schema"></a>알림 콘텐츠 스키마
 

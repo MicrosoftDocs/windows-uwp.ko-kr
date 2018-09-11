@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use Notification Listener to access all of the user's notifications.
 title: 알림 수신기
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 00774817574c209826050a084bba77084d404ace
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674620"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850587"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 
@@ -281,19 +281,17 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>추가/해제된 알림의 포그라운드 이벤트
 
 > [!IMPORTANT] 
-> 알려진 문제: 포그라운드 이벤트가 작동하지 않습니다(그리고 당장 수정할 계획이 없습니다). 
+> 알려진 문제: 포그라운드 이벤트 최신 버전의 Windows에서 CPU 루프 하면 및 이전에 그 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를에서는이 해결 됩니다.
 
-전경 이벤트가 필요한 시나리오가 있으면 알려 주시기 바랍니다. 그러나 알림 이벤트 발생 시 앱이 백그라운드에서 절전 모드를 해제해야 할 가능성이 높기 때문에 대부분의 시나리오는 백그라운드 작업을 실제로 사용해야 합니다. 예를 들어 착용식 액세서리 앱은 거의 포그라운드에 있지 않으며, 백그라운드에서 새 알림에 대해 알아야 합니다.
-
-또한 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 덕분에 포그라운드 앱에서 백그라운드 작업 트리거를 사용하기 쉽습니다. 따라서 포그라운드 이벤트를 수신해야 하는 경우 단일 프로세스 모델과 함께 백그라운드 트리거를 사용하면 됩니다.
+포그라운드 이벤트를 사용 하지 않고 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림의 받을 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
 
 ```csharp
-// Subscribe to foreground event
+// Subscribe to foreground event (DON'T USE THIS)
 listener.NotificationChanged += Listener_NotificationChanged;
  
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // NOTE: This event DOES NOT WORK. Use the background task instead.
+    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how Win32 C++ WRL apps can send local toast notifications and handle the user clicking the toast.
 title: 데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 label: Send a local toast notification from desktop C++ WRL apps
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 00d6d67bccf9eb91e1d90aa547d9e857cfa83c19
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: a6134e65a27563f96c03880dea026bed11f46641
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917732"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850367"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 

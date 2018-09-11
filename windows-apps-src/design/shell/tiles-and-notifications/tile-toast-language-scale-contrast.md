@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b0992a8d86b17648b748bb792fdf250f29801d0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 87aafe36d05298a8fa157426e39c530190f98908
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673220"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849447"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>언어, 배율, 고대비에 대한 타일 및 알림 메시지
 
-타일 및 알림은 표시 언어, [디스플레이 배율 인수](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 문자열 및 이미지를 로드할 수 있습니다. 리소스 파일 이름에 한정자를 사용하는 방법에 대한 배경 지식은 [언어, 규모 및 기타 한정자에 맞게 리소스 조정](../../../app-resources/tailor-resources-lang-scale-contrast.md) 및 [자산 크기 테이블](app-assets.md#asset-size-tables)을 참조하세요.
+타일 및 알림은 표시 언어, [디스플레이 배율 인수](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 문자열 및 이미지를 로드할 수 있습니다. 리소스 파일 이름에 한정자를 사용 하는 방법에 대 한 배경, [언어, 규모 및 기타 한정자에 대 한 리소스에 맞게 조정](../../../app-resources/tailor-resources-lang-scale-contrast.md) 및 [앱 아이콘 및 로고를](/windows/uwp/design/style/app-icons-and-logos)참조 하세요.
 
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../../globalizing/globalizing-portal.md)를 참조하세요.
 

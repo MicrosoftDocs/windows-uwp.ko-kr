@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
 title: 알림 시각화 도우미
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d8fde35a8a288bf28c6c5fad1b2ab7d80519285
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: af8b2489346e1ef81c5cae304802814b79b8b950
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1522912"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850157"
 ---
 # <a name="notifications-visualizer"></a>알림 시각화 도우미
 

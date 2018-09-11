@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use custom timestamps on your toast notifications.
 title: 알림에 대한 사용자 지정 타임스탬프
 label: Custom timestamps on toasts
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 알림, 사용자 지정 타임스탬프, 타임스탬프, 알림, 알림 센터
 ms.localizationpriority: medium
-ms.openlocfilehash: c6c9e37a16b0ca10993b61b33c4d295ebd9e09d7
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: 7ef01feaf422674977dc4549d4cc68a2ca0052c7
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523331"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3851283"
 ---
 # <a name="custom-timestamps-on-toasts"></a>알림에 대한 사용자 지정 타임스탬프
 

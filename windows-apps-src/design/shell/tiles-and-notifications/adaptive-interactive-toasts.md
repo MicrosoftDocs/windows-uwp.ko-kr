@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Adaptive and interactive toast notifications let you create flexible pop-up notifications with more content, optional inline images, and optional user interaction.
 title: 알림 내용
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 알림 메시지, 대화형 알림, 적응형 알림, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: ef2eeb3fc9319cabd9457a1e0d0301acce86f17a
-ms.sourcegitcommit: b0b2fa760f4699b79b02e69061d85d529d90ef0a
-ms.translationtype: HT
+ms.openlocfilehash: de999528d07e6bd7d243e53708e9afc465004af7
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
-ms.locfileid: "1533748"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3851413"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 

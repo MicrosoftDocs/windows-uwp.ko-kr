@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, 고객 그룹, 세그먼트, 플라이트 그룹, 알
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
 ms.openlocfilehash: 88101d9f8cc7ca40d37f88202667f36ecf5d8a3f
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3825833"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3848597"
 ---
 # <a name="create-customer-groups"></a>고객 그룹 만들기
 

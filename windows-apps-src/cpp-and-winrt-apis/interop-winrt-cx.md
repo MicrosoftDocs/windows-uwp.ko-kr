@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: d265189c338d95a8c8f206fd196e99d5b0a1e068
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3823647"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850257"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 C++/CX 사이의 상호 운용성
 이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. 두 언어 프로젝션을 사용 하는 코드 사이의 상호 운용성 사용 하거나 C +에서 코드를 단계적으로 이동으로 함수를 사용할 수 + /CX C + + WinRT (참조 [이동할 C + +에서 C + + CX](move-to-winrt-from-cx.md)).

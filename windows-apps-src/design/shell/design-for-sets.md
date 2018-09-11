@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 43e727100872421ac519a7c00363e6f6eeaf832c
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877135"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849877"
 ---
 # <a name="designing-for-sets"></a>Sets용 설계
 
@@ -119,7 +119,7 @@ titleBar.BackgroundColor = Windows.UI.Colors.Green;
 
 Set에서 앱 아이콘이 최상의 모습인지 확인하려면 앱에 대한 판이 없는 대체 아이콘을 제공해야 합니다. (앱의 탭에 사용되는 앱 아이콘은 작업 표시줄에서 사용되는 것과 동일한 아이콘입니다.) 대체 아이콘의 목적은 배경색에 비교해 모습을 확인하는 것입니다. 사용 가능한 경우 대체 아이콘이 사용됩니다.
 
-앱 매니페스트에서 일반 아이콘뿐 아니라 판이 없는 대체 양식 아이콘을 지정합니다. 자세한 내용은 [타일 및 아이콘 자산 지침](./tiles-and-notifications/app-assets.md)을 참조하세요. 지정할 아이콘은 문서의 [자산 유형](./tiles-and-notifications/app-assets.md#asset-types) 섹션에 "판이 없는 대상 크기 목록 자산"으로 설명되어 있습니다.
+앱 매니페스트에서 일반 아이콘뿐 아니라 판이 없는 대체 양식 아이콘을 지정합니다. 자세한 내용은 [앱 아이콘 및 로고를](/windows/uwp/design/style/app-icons-and-logos)참조 하세요. 지정할 아이콘은 문서의 [앱 아이콘 자산에 대 한](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) 섹션에서 "판이 없는 대상 크기 목록 자산"으로 설명 됩니다.
 
 앱 매니페스트에 대체 아이콘을 지정하지 않으면 시스템은 탭 색을 사용하여 타일 아이콘에 다시 판을 배치하고 이를 사용합니다.
 
