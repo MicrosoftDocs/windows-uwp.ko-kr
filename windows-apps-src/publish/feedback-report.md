@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845447"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933526"
 ---
 # <a name="feedback-report"></a>피드백 보고서
 
@@ -58,14 +58,14 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 - **인기 앱**: 최근 활동이 있는 피드백으로 시작하여 최근 7일 이내에 다른 고객이 찬성한 피드백을 표시합니다.
 - **최근**: 최근에 남겨진 피드백으로 시작하여 모든 피드백을 표시합니다.
 
-각 메모 옆에 피드백이 남겨진 날짜와 피드백 유형이 표시됩니다. 고객의 지역/국가, 피드백을 남길 해당 장치와 **Windows 참가자** 유형의 피드백을 제출 하는 고객이 Windows 참가자의 구성원 인 경우 때 사용한 디바이스에 설치 된 특정 패키지도 표시 됩니다. 프로그램입니다.
+각 메모 옆에 피드백이 남겨진 날짜와 피드백 유형이 표시됩니다. 고객의 지역/국가 남길 때 피드백, 디바이스 및 **Windows 참가자** 해당 유형의 피드백을 제출 하는 고객이 Windows 참가자의 구성원 인 경우 사용 중인 장치에 설치 된 특정 패키지도 표시 됩니다. 프로그램입니다.
 
 [피드백에 응답](respond-to-customer-feedback.md)하기 위한 옵션도 여기에 표시됩니다.
 
 
 ## <a name="translating-feedback"></a>피드백 번역
 
-기본적으로 원하는 언어로 작성 되지 않은 피드백은 번역 합니다. 필요하면 페이지 필터 근처 오른쪽 위에서 **번역 피드백** 확인란을 선택 취소하여 피드백 번역을 사용하지 않을 수 있습니다.
+기본적으로 원하는 언어로 작성 되지 않은 피드백은 번역. 필요하면 페이지 필터 근처 오른쪽 위에서 **번역 피드백** 확인란을 선택 취소하여 피드백 번역을 사용하지 않을 수 있습니다.
 
 피드백은 자동 번역 시스템에 의해 번역되므로 번역 결과가 항상 정확하지는 않을 수 있습니다. 원본 텍스트를 번역과 비교하거나 다른 의미로 번역하고 싶은 경우를 대비해서 원본 텍스트가 제공됩니다.
 

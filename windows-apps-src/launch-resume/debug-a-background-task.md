@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 백그라운드 작업
+keywords: windows 10, uwp, 배경 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848767"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930627"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
@@ -34,7 +34,7 @@ Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 �
 
 -   C# 및 C++에서 주 프로젝트가 백그라운드 작업 프로젝트를 참조하는지 확인합니다. 이 참조가 제대로 유지되지 않으면 백그라운드 작업이 앱 패키지에 포함되지 않습니다.
 -   C# 및 C++에서 백그라운드 작업 프로젝트의 **출력 유형**이 "Windows 런타임 구성 요소"인지 확인합니다.
--   백그라운드 클래스 패키지 매니페스트의 진입점 특성에서 선언 해야 합니다.
+-   패키지 매니페스트에 항목이 지점 특성에 백그라운드 클래스를 선언 합니다.
 
 ## <a name="trigger-background-tasks-manually-to-debug-background-task-code"></a>백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그
 
@@ -82,8 +82,8 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
     이 절차를 수행할 때 이벤트 로그에 백그라운드 작업의 잘못된 진입점이나 트리거가 표시되면 앱에서 백그라운드 작업을 올바르게 등록할 수 없습니다. 이 작업에 대한 도움말은 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
 
     1.  시작 화면으로 이동하고 eventvwr.exe를 검색하여 이벤트 뷰어를 엽니다.
-    2.  **응용 프로그램 및 서비스 로그로** 이동한 다음 - &gt; **Microsoft**  - &gt; **Windows**  - &gt; 이벤트 뷰어에서 **BackgroundTaskInfrastructure** 합니다.
-    3.  작업 창에서 **보기** 를 선택 합니다. - &gt; **분석 및 디버그 로그 표시** 진단 로깅을 사용 하도록 설정 합니다.
+    2.  **응용 프로그램 및 서비스 로그** 이동 - &gt; **Microsoft**  - &gt; **Windows**  - &gt; **BackgroundTaskInfrastructure** 이벤트 뷰어에 있습니다.
+    3.  작업 창에서 **보기** 를 선택 합니다. - &gt; **분석 및 디버그 로그 표시** 하려면 진단 로깅을 사용 합니다.
     4.  **진단 로그**를 선택하고 **로그 사용**을 클릭합니다.
     5.  이제 앱을 사용하여 다시 백그라운드 작업을 등록하고 활성화합니다.
     6.  진단 로그에서 자세한 오류 정보를 봅니다. 여기에는 백그라운드 작업에 대해 등록된 진입점이 포함됩니다.
@@ -105,7 +105,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 -   백그라운드 작업에서 잠금 화면에 액세스해야 하는 경우 백그라운드 작업을 디버그하기 전에 앱을 잠금 화면에 배치해야 합니다. 잠금 화면 지원 앱에 대한 매니페스트 옵션을 지정하는 방법은 [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)을 참조하세요.
 -   백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
-VS를 사용 하 여 백그라운드 작업 디버그에 대 한 자세한 내용은 참조 [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+VS를 사용 하 여 백그라운드 작업을 디버깅에 대 한 추가 정보를 참조 하십시오. [을 실행 시키는 방법 일시 중단, 다시 시작 및 배경 UWP 응용 프로그램의 이벤트를](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -114,8 +114,8 @@ VS를 사용 하 여 백그라운드 작업 디버그에 대 한 자세한 내�
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱의 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
-* [Visual Studio 코드 분석을 사용 하 여 UWP 앱의 코드 품질 분석](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
+* [실행 시키는 방법 일시 중단, 다시 시작 및 배경 UWP 응용 프로그램의 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
+* [UWP 응용 프로그램 Visual Studio 코드 분석을 사용 하 여 코드 품질 분석](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
  
 

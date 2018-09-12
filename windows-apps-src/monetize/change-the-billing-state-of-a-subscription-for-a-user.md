@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848517"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933868"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>사용자의 구독 청구 상태 변경
 
@@ -57,7 +57,7 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 
 | 이름         | 유형  | 설명   |  필수  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | 문자열 | 변경하려는 구독의 ID입니다. 이 ID를 가져오려면 [사용자의 구독을 가져오고](get-subscriptions-for-a-user.md) 메서드를 호출, 변경 하려는 구독 추가 기능을 나타내는 응답 본문 항목을 확인 하 고 항목에 대 한 **id** 필드의 값을 사용 합니다.     | 예      |
+| recurrenceId | 문자열 | 변경하려는 구독의 ID입니다. 이 ID를 가져오려면 [사용자의 구독을 가져오고](get-subscriptions-for-a-user.md) 메서드를 호출, 변경 하려는 구독 추가 기능을 나타내는 응답 본문 항목을 식별 하 고 항목에 대 한 **id** 필드의 값을 사용 합니다.     | 예      |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -120,7 +120,7 @@ Host: https://purchase.mp.microsoft.com
 | autoRenew | 부울 |  현재 구독 기간이 종료되면 구독을 자동으로 갱신할 것인지 여부를 나타냅니다.   |
 | beneficiary | 문자열 |  이 구독과 연결된 권한의 수취인 ID입니다.   |
 | expirationTime | 문자열 | 구독이 만료되는 날짜 및 시간이며, ISO 8601 형식입니다. 이 필드는 구독이 특정 상태일 때만 사용할 수 있습니다. 만료 시간은 일반적으로 현재 상태가 만료되는 시간을 나타냅니다. 예를 들어 활성 구독의 경우 만료 날짜는 다음 자동 갱신이 이루어지는 시간을 나타냅니다.    |
-| expirationTimeWithGrace | string | 날짜 및 유예 기간을 포함 하 여 ISO 8601 형식으로 구독이 만료 되는 시간입니다. 이 값 때 사용자가 액세스할 수 없게 됩니다 구독에 구독에 자동으로 갱신 하는 데 실패 한 것을 나타냅니다.    |
+| expirationTimeWithGrace | string | 날짜 및 시간을 ISO 8601 형식에서 유예 기간을 포함 하 여 구독 만료 됩니다. 이 값 때 사용자가 액세스할 수 없게 됩니다 구독에 구독에 자동으로 갱신 하는 데 실패 한 것을 나타냅니다.    |
 | id | 문자열 |  구독의 ID입니다. 이 값을 사용하여 [change the billing state of a subscription for a user](change-the-billing-state-of-a-subscription-for-a-user.md) 메서드를 호출할 때 수정할 구독을 나타냅니다.    |
 | isTrial | 부울 |  구독이 평가판인지 여부를 나타냅니다.     |
 | lastModified | 문자열 |  구독이 마지막으로 수정된 날짜 및 시간이며, ISO 8601 형식입니다.      |

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f0168f0a1baef5e68bccdf0a33c3ac7eb7683a7
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850377"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933896"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -152,11 +152,11 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. 흐름 디자인 시
 - [.NET 네이티브 - UWP(유니버설 Windows 플랫폼) 개발자를 위한 의미](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
 - Windows 10 사용자를 위한 최신 환경을 기존 데스크톱 앱에 추가하고 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하여 이를 Microsoft Store에 배포하는 방법을 알아보세요.
 
-## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Windows 런타임 api는 유니버설 Windows 플랫폼의 관계
-유니버설 Windows 플랫폼 (UWP) 앱을 빌드할 경우 많은 거리 및 용어 "유니버설 Windows 플랫폼 (UWP)" 및 "Windows 런타임 (WinRT)" 또는 더 동일한 것으로 처리에서 편의 가져올 수 있습니다. 하지만 ** 기술에 대해 모양과 결정 방금 차이 해당 아이디어 사이의 수 있습니다. 궁금 하는 경우 다음이 마지막 섹션 적합 합니다.
+## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Windows 런타임 Api에 유니버설 Windows 플랫폼의 관계
+유니버설 Windows 플랫폼 (UWP) 앱을 빌드할 경우 많은 거리 및 용어 "유니버설 Windows 플랫폼 (UWP)" 및 "Windows 런타임 (WinRT)" 또는 더 동의어로 취급 밖의 편의 얻을 수 있습니다. 하지만 ** 기술의 내부적 모양과 결정 방금 차이 아이디어 간에 수 있습니다. 궁금 하는 경우 다음이 마지막 섹션 적합 합니다.
 
-Windows 런타임 및 WinRT Api는 Windows Api의 발전 된 형태입니다. 원래 Windows 평면을 C-스타일 Win32 Api를 통해 프로그래밍 되었습니다. COM Api ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) 되는 주요 예제)에 추가 되었습니다. Windows Forms, WPF,.NET 및 관리 되는 언어에 고유한 방식으로 Windows 앱 및 API 기술의 자신의 맛 작성할 가져 왔습니다. Windows 런타임 이면 내부적으로 COM.의 다음 단계 실제 응용 프로그램 이진 인터페이스 (ABI) 계층에서 COM에 표시 됩니다. 하지만 Windows 런타임에서 서로 다른 프로그래밍 언어의 좋은 범위에서 호출할 수 되도록 설계 되었습니다. 및 해당 언어의 각 더욱 자연스럽 게 되는 방식으로 호출할 수 있습니다. 이 위해 Windows 런타임에 대 한 액세스를 통해 언어 프로젝션 일명 릴리스마다 제공 됩니다. Windows 런타임 언어 프로젝션에 C#, Visual Basic로, 표준 c + +로, 및 JavaScript에 있습니다. 또한 적절 하 게 패키징 한 번 ( [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)참조) 멋진 다양 한 응용 프로그램 모델 중 하나에 기본 제공 앱에서 WinRT Api를 호출할 수: Win32,.NET, WinForms 및 WPF 합니다.
+Windows 런타임 및 WinRT Api는 Windows Api의 발전 된 형태입니다. 원래 Windows 평면을 C-스타일 Win32 Api를 통해 프로그래밍 되었습니다. COM Api ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) 을 띄는 예제 중인)에 추가 되었습니다. Windows Forms, WPF,.NET 및 관리 되는 언어 자신만을의 Windows 앱 및 API 기술의 자신의 맛 작성 가져 왔습니다. Windows 런타임 이면 내부적으로 COM.의 다음 단계 실제 응용 프로그램 이진 인터페이스 (ABI) 계층에서 COM에 표시 됩니다. 하지만 Windows 런타임 여러 다른 프로그래밍 언어로 멋진 범위에서 호출 되도록 설계 되었습니다. 및 해당 언어의 각 더욱 자연스럽 게 되는 방식으로 호출할 수 있습니다. 이 위해 Windows 런타임에 대 한 액세스를 통해 언어 프로젝션 일명 사용할 활성화 됩니다. Windows 런타임 언어 프로젝션에 C#, Visual Basic로, 표준 c + +, JavaScript, 등에 있습니다. 또한 적절 하 게 패키지 한 번 ( [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)참조)을 멋진 다양 한 응용 프로그램 모델 중 하나에 내장 된 앱에서 WinRT Api를 호출할 수 있는: Win32,.NET, WinForms 및 WPF 합니다.
 
-및 물론, UWP 앱에서 WinRT Api를 호출할 수 있습니다. UWP는 Windows 런타임 기반 응용 프로그램 모델입니다. 기술적으로 UWP 응용 프로그램 모델을 기반으로 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)하지만 프로그래밍 언어 선택에 따라 해당 세부 정보,에서 숨겨져 있을 수 있습니다. 값 제안의 관점에서이 항목에 설명 된 대로 UWP 있지 않다가 선택 하면 Microsoft Store에 게시 하 고 수 있는 멋진 다양 한 장치 폼 팩터 중 하나에서 실행 하는 단일 바이너리를 작성 합니다. UWP 앱의 장치에 도달 조건부로 호출 또는 앱이 호출을 제한 하는 UWP Api의 하위 집합에 따라 달라 집니다.
+및 물론 UWP 앱에서 WinRT Api를 호출할 수 있습니다. UWP를 기반으로 Windows 런타임 응용 프로그램 모델입니다. 기술적으로 UWP 응용 프로그램 모델을 기반으로 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)하지만 프로그래밍 언어 선택에 따라 해당 세부 정보, 숨겨져 있을 수 있습니다. 값 제안의 관점에서이 항목에 설명 된 대로 UWP 있지 않다가 선택 하면 Microsoft Store에 게시 하 고 수 있는 뛰어난 다양 한 장치 폼 팩터 중 하나에서 실행 하는 단일 바이너리를 작성 합니다. UWP 앱의 장치 범위를 호출 하는 응용 프로그램을 제한 하는 조건부로 호출 또는 UWP Api의 하위 집합에 따라 다릅니다.
 
-분포도이 섹션에서는 기본적인 Windows 런타임 Api 및 메커니즘 및 유니버설 Windows 플랫폼의 비즈니스 가치 기술 간의 차이점을 설명 하는 성공적 이었습니다.
+다행히이 섹션에서는 기본적인 Windows 런타임 Api 및 메커니즘 및 유니버설 Windows 플랫폼의 비즈니스 가치 기술 간의 차이점을 설명 하는 완료 했습니다.

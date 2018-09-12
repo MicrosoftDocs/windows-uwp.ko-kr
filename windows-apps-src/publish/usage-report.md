@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 사용, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847657"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930733"
 ---
 # <a name="usage-report"></a>사용 보고서
 
@@ -50,10 +50,10 @@ Windows 개발자 센터 대시보드의 **사용** 보고서에서는 Windows 1
 - **기간**: 총 참여 시간(사용자가 앱을 적극적으로 사용하고 있는 시간)을 보여줍니다.
 - **보유**: 선택한 기간 동안의 **DAU/MAU**(일일 활성 사용자/월별 활성 사용자)의 총 수를 보여줍니다.
 
-**30d** 기간을 선택 하면 **사용자가**, **디바이스**또는 **기간** 탭 볼 때 원 마커를 볼 수 있습니다. 이러한 크게 증가 있거나 지정 된 값에 대해 알아야 할 생각을 감소 합니다. 원이 표시 되는 날짜 크게 증가 또는 감소 하는 이전 주에 비해 감지 하는 주의 끝을 나타냅니다. 변경 된 내용에 대 한 자세한 정보를 보려면 원 가리키면 됩니다.  
+**D 30** 시간 간격을 선택 하면 **사용자**, **장치**또는 **기간** 탭을 볼 때 원형 표식 나타날 수 있습니다. 이 크게 증가 나타내거나 감소에 주어진된 값을 알아야 하는 것이 좋습니다. 원이 표시 되는 날짜가 크게 증가 또는 그 이전 주에 비해 감소 하는데는 주말. 변경 내용에 대 한 자세한 내용을 보려면, 원 올려 놓습니다.  
 
 > [!TIP]
-> [인 사이트 보고서](insights-report.md)는 지난 30 일 동안 중요 한 변경 내용에 관련 된 자세한 정보를 볼 수 있습니다.
+> [분석 보고서](insights-report.md)에 지난 30 일 동안 중요 한 변화에 관련 된 더 많은 통찰력을 볼 수 있습니다.
 
 
 ## <a name="user-sessions"></a>사용자 세션

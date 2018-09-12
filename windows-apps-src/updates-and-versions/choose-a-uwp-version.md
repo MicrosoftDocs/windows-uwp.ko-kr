@@ -11,11 +11,11 @@ keywords: Windows 10, UWP, 버전, 빌드, 버전, Windows, 선택, 업데이트
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848707"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934006"
 ---
 # <a name="choose-a-uwp-version"></a>UWP 버전 선택
 
@@ -35,7 +35,7 @@ ms.locfileid: "3848707"
 | 빌드 10586(11월 업데이트, 버전 1511) | Windows 10의 이 버전은 2015년 11월에 출시되었습니다. 주요 기능으로 Microsoft Edge의 비디오 통신을 위한 ORTC(개체 실시간 통신) API와 앱에서 Windows Hello 얼굴 인증을 사용할 수 있도록 해주는 공급자 API가 있습니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-build-10586.md) |
 | 빌드 10240(Windows 10, 버전 1507) | 이 버전은 2015년 7월에 발표된 Windows10 초기 릴리스 버전입니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-build-10240.md) |
 
-새 개발자와 항상 일반 사용자에 대 한 코드를 작성 하는 개발자 (17134) Windows의 최신 빌드를 사용 하는 것이 좋습니다. 엔터프라이즈 앱을 작성하는 개발자는 이전 **최소 버전**을 지원하는 것을 고려해야 합니다.
+새 개발자와 항상 가용 코드를 작성 하는 개발자 (17134) Windows의 최신 빌드를 사용 하는 것이 좋습니다. 엔터프라이즈 앱을 작성하는 개발자는 이전 **최소 버전**을 지원하는 것을 고려해야 합니다.
 
 ## <a name="whats-different-in-each-uwp-version"></a>각 UWP 버전의 차이점은 무엇인가요?
 
@@ -45,11 +45,11 @@ UWP의 새 API 및 변경된 API는 Windows 10의 모든 후속 버전에서 사
 
 ## <a name="net-api-availability-in-uwp-versions"></a>UWP 버전의.NET API 가용성
 
-UWP **대상 버전** 또는 프로젝트의 **최소 버전** 상관 없이 사용할 수 있는.NET Api의 제한 된 하위 집합을 지원 합니다. [이 페이지는 사용 가능한 형식에 자세한 정보를 제공](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx)합니다.
+UWP **대상 버전** 또는 프로젝트의 **최소 버전** 관계 없이 사용할 수 있는.NET Api의 제한 된 하위 집합을 지원 합니다. [이 페이지에서는 사용 가능한 형식에 대 한 자세한 정보를 제공](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx)합니다.
 
-재사용 가능한 플랫폼 간 라이브러리를 만들려는 경우.NET Standard는 UWP에서 지원 됩니다. [.NET Standard 설명서](https://docs.microsoft.com/dotnet/standard/net-standard) 에.NET Standard가 지원 UWP 버전에서 정보를 제공 합니다.
+재사용 가능한 플랫폼 간 라이브러리를 만들려는 경우.NET Standard는 UWP에서 지원 됩니다. [.NET Standard 설명서](https://docs.microsoft.com/dotnet/standard/net-standard) 는.NET Standard는 지원 UWP 버전에서 정보를 제공 합니다.
 
-[데스크톱 앱을 개발 하는 대신.NET Framework 버전 및](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) 참조 종속성.NET framework 가용성에 대 한 자세한 내용은 합니다.
+[데스크톱 앱을 개발 하는 경우 대신.NET Framework 버전 및](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) 참조 종속성에 대 한 자세한 내용은.NET framework 가용성 합니다.
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>앱에 사용할 버전 선택
 

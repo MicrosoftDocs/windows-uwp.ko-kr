@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849297"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932480"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
 
-Microsoft Store의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 설정 하 고 필요한 세금 양식을 입력 해야 합니다.
+Microsoft 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 설정 하 고 필요한 세금 양식을 입력 해야 합니다.
 
-앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에 마음이 바뀌어 앱 (또는 추가 기능)을 판매 하려는 결정 하는 경우에 지급 계좌를 설정 하 고 해당 시간에 세금 양식을 입력 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
+앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에 마음이 하지 않으려면 앱 (또는 추가 기능)을 판매 하는 경우 지급액 계좌를 설정 하 고 해당 시간에 세금 양식을 입력 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
 
 > [!NOTE]
 > [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서는 개발자가 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급 계좌를 설정하는 옵션이 제공되지 않습니다.
 
-[개발자 계정 설정](opening-a-developer-account.md)후 Microsoft Store에서 앱 (또는 추가 기능)을 판매 하기 전에 수행 해야 하는 두 가지 가지 있습니다.
+[개발자 계정을 설정 했](opening-a-developer-account.md)을 설정한 후 Microsoft Store에서 앱 (또는 추가 기능)을 판매 하기 전에 수행 해야 하는 두 가지 가지 있습니다.
 
 -   [지급 계좌 설정](#payout-account)
 -   [세금 양식 작성](#tax-forms)
@@ -125,7 +125,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 ## <a name="tax-forms"></a>세금 양식
 
-[개발자 계정을](opening-a-developer-account.md) 등록 하 고 [지급 계좌](#payout-account)설정 후 다음 단계를 완료 하 여 Microsoft Store에 대 한 *세금 프로필* 을 만들 수 있습니다.
+[개발자 계정에 등록](opening-a-developer-account.md) 한 후 [지급 계좌](#payout-account)설정, 다음 단계를 완료 하 여 Microsoft Store에 대 한 *세금 프로필* 을 만들 수 있습니다.
 
 -   거주 국가 및 국적을 지정합니다.
 -   적절한 세금 양식을 작성합니다.
@@ -133,7 +133,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 대시보드에서 온라인으로 세금 양식을 완성하고 제출할 수 있습니다. 대부분의 경우 양식을 인쇄해서 우편으로 보낼 필요는 없습니다.
 
 > [!IMPORTANT]
-> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 것이 좋습니다 국가 또는 지역 가장 하도록 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 해야 합니다.
+> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 국가 또는 지역에 가장 적합 하도록 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 하 여 좋습니다.
 
  
 **세금 프로필을 완성하려면**
@@ -158,7 +158,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 ### <a name="tax-treaty-benefits"></a>조세조약 혜택
 
-미국 이외 지역에 거주하는 경우 조세조약 혜택을 활용할 수 있습니다. 이러한 혜택 국가 마다 다양 하며 Microsoft Store 줄이도록 세금의 양을 줄이는 허용할 수 있습니다. W-8BEN 양식의 Part II를 완성하면 조세조약 혜택을 클레임할 수 있습니다. 이러한 혜택을 받을 수 있는지 확인하려면 거주 국가나 지역의 관련 기관에 문의하는 것이 좋습니다.
+미국 이외 지역에 거주하는 경우 조세조약 혜택을 활용할 수 있습니다. 이러한 혜택 국가 마다 다르며 Microsoft Store 줄이도록 세금의 양을 줄이는을 허용할 수 있습니다. W-8BEN 양식의 Part II를 완성하면 조세조약 혜택을 클레임할 수 있습니다. 이러한 혜택을 받을 수 있는지 확인하려면 거주 국가나 지역의 관련 기관에 문의하는 것이 좋습니다.
 
  
 

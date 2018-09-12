@@ -7,15 +7,15 @@ ms.date: 12/6/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 보안
+keywords: 10, uwp, windows 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: 2de5c969610aa6b4fa1a3af01af565d35854b5f2
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845677"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930809"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -179,7 +179,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 * OneDrive 범위의 경우 [OneDrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조하세요. 
 
 > [!TIP]
-> 필요에 따라 앱 (기본 전자 메일 주소를 사용 하 여 사용자 필드를 채우는)에 게 로그인 힌트 또는 로그인 환경에 관련 된 기타 특수 속성을 사용 하는 경우 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 됩니다. 이렇게 하면 시스템 캐시에 계정 불일치를 방지 하는 웹 계정을 캐싱의 경우 속성을 무시 합니다.
+> 필요에 따라 응용 프로그램 (기본 전자 메일 주소를 사용 하 여 사용자 필드를 채우는)로 로그인 힌트 또는 로그인 경험에 관련 된 다른 특수 한 속성을 사용 하는 경우 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 됩니다. 이렇게 하면 시스템 캐시에 계정 불일치를 방지 하는 웹 계정을 캐시 속성을 무시 합니다.
 
 엔터프라이즈 앱을 개발하는 경우 AAD(Azure Active Directory) 인스턴스에 연결하고 일반 MSA 서비스 대신 Microsoft Graph API를 사용하려고 할 것입니다. 이 시나리오에서는 다음 코드를 대신 사용합니다. 
 

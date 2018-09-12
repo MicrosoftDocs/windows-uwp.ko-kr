@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848567"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934568"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
 
-[시험 응시는](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 위험 테스트를 위해 잠긴 온라인 평가 렌더링 하는 브라우저 기반 UWP 앱 교육 수 있도록 평가에 집중 안전한 테스팅 환경을 제공 하는 방법 대신 콘텐츠. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
+[시험 응시](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) 평가에 초점을 교육자 안전한 테스트 환경을 제공 하는 방법 대신 콘텐츠 허용 위험 테스트를 위해 잠긴 온라인 평가 렌더링 하는 브라우저 기반 UWP 앱입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
 
 앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요. 문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
 

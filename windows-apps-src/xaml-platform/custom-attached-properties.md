@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ce26242f1f5093afcbfb652a7d1736897975cb3a
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848917"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934876"
 ---
 # <a name="custom-attached-properties"></a>사용자 지정 연결된 속성
 
@@ -35,7 +35,7 @@ ms.locfileid: "3848917"
 정의 클래스가 아닌 클래스에 사용할 수 있는 속성 설정 메커니즘이 있어야 하는 이유가 있는 경우 연결된 속성을 만들 수 있습니다. 이러한 경우에 대한 가장 일반적인 시나리오는 레이아웃 및 서비스 지원입니다. 기존 레이아웃 속성에 대한 예로는 [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/hh759773) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772)이 있습니다. 레이아웃 시나리오에서는 레이아웃 제어 요소의 자식 요소로 존재하는 요소가 해당 부모 요소에 대한 레이아웃 요구 사항을 개별적으로 표시하고 각각 해당 부모가 연결된 속성으로 정의하는 속성 값을 설정할 수 있습니다. Windows 런타임 API의 서비스 지원 시나리오 예로는 [**ScrollViewer.IsZoomChainingEnabled**](https://msdn.microsoft.com/library/windows/apps/br209561) 같은 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)의 연결된 속성 집합이 있습니다.
 
 > [!WARNING]
-> Windows 런타임 XAML 구현의 기존 제한 점은 사용자 지정 연결 된 속성을 애니메이션할 수입니다.
+> Windows 런타임 XAML 구현의 기존 제한 점은 사용자 지정 연결 된 속성을 애니메이션할 수 없다는 됩니다.
 
 ## <a name="registering-a-custom-attached-property"></a>사용자 지정 연결된 속성 등록
 
@@ -43,10 +43,10 @@ ms.locfileid: "3848917"
 
 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public** **static** **readonly** 속성을 선언하여 연결된 속성을 종속성 속성으로 정의합니다. 이 속성은 [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 메서드의 반환 값을 사용하여 정의합니다. 속성 이름은 **RegisterAttached** *name* 매개 변수로 지정하는 연결된 속성 이름과 일치해야 하며 문자열 "Property"가 끝에 추가됩니다. 표시하는 속성과 관련하여 종속성 속성 식별자를 명명하기 위해 설정된 규칙입니다.
 
-사용자 지정 연결된 속성 정의가 사용자 지정 종속성 속성과 가장 다른 부분은 접근자 또는 래퍼 정의 방식입니다. [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명 된 래퍼 기술을 사용 하는 대신도 제공 해야 정적 **가져오기 * * * PropertyName* 및 **설정 * * * PropertyName* 메서드도 접근자로 연결 된 속성입니다. 비XAML 시나리오에서는 다른 호출자도 접근자를 사용하여 값을 설정할 수 있으나 접근자는 주로 XAML 파서에서 사용합니다.
+사용자 지정 연결된 속성 정의가 사용자 지정 종속성 속성과 가장 다른 부분은 접근자 또는 래퍼 정의 방식입니다. [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명 된 래퍼 기술을 사용 하는 대신도 제공 해야 정적 **가져오기 * * * PropertyName* 및 **설정 * * * PropertyName* 메서드도 접근자로 연결 된 속성에 대 한 합니다. 비XAML 시나리오에서는 다른 호출자도 접근자를 사용하여 값을 설정할 수 있으나 접근자는 주로 XAML 파서에서 사용합니다.
 
 > [!IMPORTANT]
-> 접근자를 올바르게 정의 하지 않는 XAML 프로세서가 연결 된 속성에 액세스할 수 없습니다 하 고 사용 하려는 사람은 아 XAML 구문 분석 오류가 발생 합니다. 디자인 및 코딩 도구도 참조된 어셈블리에서 사용자 지정 종속성 속성이 발견되는 경우 "\*Property" 규칙에 따라 식별자를 명명하는 경우가 많습니다.
+> 접근자를 올바르게 정의 하지 않는 경우 XAML 프로세서가 연결 된 속성에 액세스할 수 없습니다 및 사용 하려는 사람은 아 XAML 파서 오류가 발생 합니다. 디자인 및 코딩 도구도 참조된 어셈블리에서 사용자 지정 종속성 속성이 발견되는 경우 "\*Property" 규칙에 따라 식별자를 명명하는 경우가 많습니다.
 
 ## <a name="accessors"></a>접근자
 
@@ -71,13 +71,13 @@ Visual Basic의 경우 다음과 같습니다.
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *value* 개체 및 해당 *valueType*의 형식도 구현에서 더 구체적일 수 있습니다. 이 메서드의 값은 태그에서 연결된 속성을 발견하는 경우 XAML 프로세서에서 제공하는 입력입니다. 특성 값(최종적으로는 문자열임)으로 적절한 형식을 만들 수 있으려면 사용하는 형식에 대한 형식 변환 또는 기존 태그 확장 지원이 있어야 합니다. 기본 **Object** 형식을 사용할 수 있으나 형식 안전성을 강화하려는 경우가 많습니다. 이 경우 접근자에 형식 적용을 넣으세요.
 
 > [!NOTE]
-> 속성 요소 구문을 통해 용도 연결된 된 속성을 정의할 수 이기도 합니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
+> 속성 요소 구문을 통해 사용 되는 연결된 된 속성을 정의 하는 것도 가능 합니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
 
 ## <a name="code-example"></a>코드 예제
 
 다음 예에서는 종속성 속성 등록([**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 메서드 사용)을 보여 주며 사용자 지정 연결된 속성의 경우 **Get** 및 **Set** 접근자도 보여 줍니다. 이 예에서 연결된 속성 이름은 `IsMovable`입니다. 따라서 접근자는 `GetIsMovable` 및 `SetIsMovable`로 명명되어야 합니다. 연결된 속성의 소유자는 고유 UI가 없는 `GameService`라는 서비스 클래스이며, 이 클래스는 **GameService.IsMovable** 연결된 속성이 사용되는 경우 연결된 속성 서비스를 제공하는 것만을 목적으로 합니다.
 
-연결 된 속성 정의 하는 C + + /CX는 약간 더 복잡 합니다. 헤더 및 코드 파일 사이에서 팩터링하는 방법을 결정해야 합니다. 또한 [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명된 이유로 인해 **get** 접근자만 있는 속성으로 식별자를 노출해야 합니다. C + +이 속성-필드 관계를 정의 해야 CX 명시적으로.NET **readonly** 키워 켜고 암시적 의존 하는 대신 간단한 속성의 백업 합니다. 또한, 앱이 처음 시작되고 연결된 속성이 필요한 XAML 페이지가 로드되기 전에 도우미 함수 내에서 연결된 속성을 등록해야 합니다. 이 함수는 한 번만 실행됩니다. 일부 및 전체 종속성 속성이나 연결된 속성에 대해 속성 등록 도우미 함수를 호출하는 일반적인 위치는 app.xaml 파일의 코드 안에 있는 **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) 생성자입니다.
+연결 된 속성 정의 하는 C + + /CX는 약간 더 복잡 합니다. 헤더 및 코드 파일 사이에서 팩터링하는 방법을 결정해야 합니다. 또한 [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명된 이유로 인해 **get** 접근자만 있는 속성으로 식별자를 노출해야 합니다. C + +이 속성-필드 관계를 정의 해야 CX 명시적으로.NET **readonly** 키워 및 암시적 의존 하는 대신 간단한 속성의 백업 합니다. 또한, 앱이 처음 시작되고 연결된 속성이 필요한 XAML 페이지가 로드되기 전에 도우미 함수 내에서 연결된 속성을 등록해야 합니다. 이 함수는 한 번만 실행됩니다. 일부 및 전체 종속성 속성이나 연결된 속성에 대해 속성 등록 도우미 함수를 호출하는 일반적인 위치는 app.xaml 파일의 코드 안에 있는 **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) 생성자입니다.
 
 ```csharp
 public class GameService : DependencyObject
@@ -234,7 +234,7 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 ```
 
 > [!NOTE]
-> C + +로 XAML UI를 작성 하는 경우 해당 형식을 XAML 페이지는 언제 든 지 연결 된 속성을 정의 하는 사용자 지정 형식에 대 한 헤더 포함 해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
+> C + +로 XAML UI를 작성 하는 경우 해당 형식을 XAML 페이지에서는 언제 든 지 연결된 된 속성을 정의 하는 사용자 지정 형식에 대 한 헤더 포함 해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
 
 ## <a name="value-type-of-a-custom-attached-property"></a>사용자 지정 연결된 속성의 값 형식
 
@@ -253,7 +253,7 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 
 실용적인 패널이 되도록 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에는 프레임워크 수준의 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 및 [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) 메서드를 재정의하는 동작이 있습니다. **Canvas**는 실제로 여기서 자식의 연결된 속성 값을 확인합니다. **Measure** 및 **Arrange** 패턴 둘 다에 모든 콘텐츠를 반복하는 루프가 있으며, 패널에는 패널의 자식으로 간주되어야 하는 항목을 명시적으로 지정하는 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성이 있습니다. 따라서 **Canvas** 레이아웃 동작은 이러한 자식을 반복하고 각 자식에서 정적 [**Canvas.GetLeft**](https://msdn.microsoft.com/library/windows/apps/br209269) 및 [**Canvas.GetTop**](https://msdn.microsoft.com/library/windows/apps/br209270) 호출을 수행하여 연결된 속성에 기본값이 아닌 값이 있는지 확인합니다(기본값은 0임). 그런 다음 이 값은 각 자식이 제공하고 **Arrange**를 통해 커밋한 특정 값에 따라 사용 가능한 **Canvas** 레이아웃 공간에서 각 자식을 절대 위치에 배치하는 데 사용됩니다.
 
-코드 의사를 찾습니다.
+코드는이 의사 코드 처럼 표시 됩니다.
 
 ```syntax
 protected override Size ArrangeOverride(Size finalSize)
