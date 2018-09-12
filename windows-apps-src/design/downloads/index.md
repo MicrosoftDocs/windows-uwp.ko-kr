@@ -11,16 +11,16 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 259b171ea490272241fcef1170e2413cb40d7330
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845327"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935468"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  
 
-디자인 및 Fluent 디자인/UWP 앱에 대 한 UI 관련 다운로드 합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
+디자인 및 UI 관련 다운로드가 Fluent 디자인/UWP 앱에 대 한 합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
 
 
 ## <a name="design-toolkits"></a>디자인 도구 키트
@@ -30,17 +30,17 @@ ms.locfileid: "3845327"
 :::row:::
     :::column:::
         ![영웅 이미지](images/adobe-xd.png) <b>Adobe XD 도구 키트</b><br>
-        2018 년 6 월 v1806<br>
+        v1806, 2018 년 6 월<br>
         <a href="https://aka.ms/adobexdtoolkit">다운로드</a>
     :::column-end:::
     :::column:::
         ![영웅 이미지](images/adobe-illustrator.png) <b>Adobe Illustrator 도구 키트</b><br>
-        2018 년 6 월 v1806<br>
+        v1806, 2018 년 6 월<br>
         <a href="https://aka.ms/adobeillustratortoolkit">다운로드</a>
     :::column-end:::
     :::column:::
         ![영웅 이미지](images/sketch.png) <b>스케치</b><br>
-        2018 년 3 월 v1803<br>
+        v1803, 2018 년 3 월<br>
         <a href="https://aka.ms/sketchtoolkit">다운로드</a>
     :::column-end:::
 :::row-end:::
@@ -53,7 +53,7 @@ ms.locfileid: "3845327"
     :::column-end:::
     :::column:::
         ![영웅 이미지](images/framer.png) <b>Framer 도구 키트</b><br>
-        2018 년 6 월 v1806<br>
+        v1806, 2018 년 6 월<br>
         <a href="https://aka.ms/framertoolkit">다운로드</a>
     :::column-end:::
     :::column:::

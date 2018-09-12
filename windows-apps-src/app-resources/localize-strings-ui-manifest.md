@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848267"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935412"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -92,7 +92,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md) 프로젝트 내에서 동일할 코드를 사용할 수 있습니다. 런타임 시 라이브러리를 호스팅하는 앱의 리소스가 로드됩니다. 앱에는 뛰어난 지역화 수준이 있을 가능성이 높으므로 라이브러리를 호스팅하는 앱에서 리소스를 로드하는 것이 좋습니다. 라이브러리는 리소스를 제공한 다음 호스팅 앱에 이러한 리소스를 입력으로 교체하는 옵션을 제공해야 합니다.
 
-리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점선 슬래시 ("/")를 사용 하 여 리소스 이름에 문자입니다. 속성 식별자는 예를 들어 점은; 포함 따라서이 substition 코드에서 중 하나를 로드 하기 위해 수행 해야 합니다.
+리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점으로 슬래시 ("/")를 사용 하 여 리소스 이름에서 문자입니다. 속성 식별자 예 포함 되는 점입니다. 따라서이 substition 코드에서 그 중 하나를 로드 하기 위해 수행 해야 합니다.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
@@ -175,7 +175,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 "AppDisplayName" 리소스를 `Resources.resw`에서 `ManifestResources.resw`로 이동하고자 하는 경우 앱 패키지 매니페스트에서 `ms-resource:AppDisplayName`을 `ms-resource:/ManifestResources/AppDisplayName`으로 변경합니다.
 
-리소스 파일 이름을 분할 하는 경우 (포함 된 "." 문자)를 참조 하는 경우 이름에 점이 둡니다. 리소스 이름에 대 한 것 처럼 슬래시 ("/") 문자로 점을 대체 **하지 않습니다** .
+리소스 파일 이름을 분할 하는 경우 (포함 된 "." 문자)를 참조 하는 경우 이름에 점이 둡니다. 점 리소스 이름에 대 한 것 처럼 슬래시 ("/") 문자로 대체 **하지 않습니다** .
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
@@ -281,7 +281,7 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>다른 패키지에서 문자열 로드
-앱 패키지에 대 한 리소스를 관리 하 고 액세스 하는 패키지를 통해 현재 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위 [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에 다양한 구성 요소는 자체 ResourceMap 하위 트리를 가지며 [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)를 통해 액세스할 수 있습니다.
+앱 패키지에 대 한 리소스를 관리 하 고 패키지를 통해 액세스 현재 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위 [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에 다양한 구성 요소는 자체 ResourceMap 하위 트리를 가지며 [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)를 통해 액세스할 수 있습니다.
 
 프레임워크 패키지는 절대 리소스 식별자 URI로 자체 리소스에 액세스할 수 있습니다. [URI 스키마](uri-schemes.md)도 참조하세요.
 

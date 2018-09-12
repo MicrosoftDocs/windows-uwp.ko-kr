@@ -1,6 +1,6 @@
 ---
 author: Jwmsft
-description: ItemsSource에 바인딩하여 계층적 데이터 원본에 확장 가능한 트리 보기를 생성 하거나 만들고 TreeViewNode 개체를 직접 관리할 수 있습니다.
+description: ItemsSource 계층적 데이터 원본에 바인딩하여 확장 가능한 트리 보기를 생성 하거나 만들고 TreeViewNode 개체를 직접 관리할 수 있습니다.
 title: 트리 뷰
 label: Tree view
 template: detail.hbs
@@ -14,11 +14,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 20de58d13c4ace6b71ec952dc88cd59d1ab6114f
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845790"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935662"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -31,10 +31,10 @@ TreeView API는 다음과 같은 기능을 지원합니다.
 
 - N 수준의 중첩
 - 단일 또는 다중 노드 중에서 선택
-- (미리 보기) ItemsSource 속성 TreeView 및 TreeViewItem에 데이터 바인딩
-- (미리 보기) TreeView 항목 템플릿의 루트로 TreeViewItem
+- (미리 보기) TreeView 및 TreeViewItem에 ItemsSource 속성을 데이터 바인딩
+- (미리 보기) TreeViewItem 루트 TreeView 항목 템플릿
 - (미리 보기) 임의의 유형의 콘텐츠를 TreeViewItem에
-- (미리 보기) 끌어서 놓기 트리 보기
+- (미리 보기) 끌어서 놓기 트리 보기 간에
 
 | **Windows UI 라이브러리 가져오기** |
 | - |
@@ -57,7 +57,7 @@ TreeView API는 다음과 같은 기능을 지원합니다.
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 하 <a href="xamlcontrolsgallery:/item/TreeView">앱을 열고 중인 TreeView를 참조 하세요</a>.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 <a href="xamlcontrolsgallery:/item/TreeView">앱을 열고 중인 TreeView를 참조 하세요</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
@@ -78,14 +78,14 @@ TreeView API는 다음과 같은 기능을 지원합니다.
 
 ## <a name="create-a-tree-view"></a>트리 보기 만들기
 
-[ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) 에 바인딩하여 계층적 데이터 원본에 트리 보기를 생성 하거나 만들고 TreeViewNode 개체를 직접 관리할 수 있습니다.
+[ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) 계층적 데이터 원본에 바인딩하여 트리 보기를 생성 하거나 만들고 TreeViewNode 개체를 직접 관리할 수 있습니다.
 
 트리 보기를 만들려면 [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) 컨트롤과 [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode) 개체의 계층을 사용합니다. TreeView 컨트롤의 [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) 컬렉션에 하나 이상의 루트 노드를 추가 하 여 노드 계층을 만듭니다. 이제 각 TreeViewNode에서 자식 노드 컬렉션에 더 많은 노드를 추가할 수 있습니다. 트리 보기 노드를 필요한 깊이 만큼 중첩시킬 수 있습니다.
 
 Windows Insider Preview부터 바인딩할 수 있습니다 계층적 데이터 소스 트리 보기 콘텐츠를 제공 하기 위해 [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) 속성 ListView의 ItemsSource와 마찬가지로 합니다. 마찬가지로, 항목을 렌더링 하는 DataTemplate을 제공 하기 위해 [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (및 선택적 [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate))를 사용 합니다.
 
 > [!IMPORTANT]
-> ItemsSource에는 TreeView 컨트롤에 콘텐츠를 배치 하는 것에 대 한 TreeView.RootNodes 하는 대체 메커니즘입니다. ItemsSource 및 RootNodes 동시에 설정할 수 없습니다. ItemsSource를 사용 하 여 노드를 만들고 TreeView.RootNodes 속성에서 액세스할 수 있습니다.
+> ItemsSource에는 TreeView 컨트롤에 콘텐츠를 배치 TreeView.RootNodes 하는 대체 메커니즘입니다. ItemsSource 및 RootNodes 모두 동시에 설정할 수 없습니다. ItemsSource를 사용 하 여 노드를 만들고 TreeView.RootNodes 속성에서 액세스할 수 있습니다.
 
 다음은 XAML에 선언된 간단한 트리 보기의 예입니다. 사용자는 일반적으로 코드에 노드를 추가하지만, 여기서는 XAML 계층을 보여주고자 합니다. 왜냐하면 노드의 계층이 생성되는 방법을 시각화하는 데 도움이 될 수 있기 때문입니다.
 
@@ -103,11 +103,11 @@ Windows Insider Preview부터 바인딩할 수 있습니다 계층적 데이터 
 </TreeView>
 ```
 
-대부분의 경우 일반적으로 루트 TreeView 컨트롤 XAML에서 선언 코드 또는 데이터 바인딩을 사용 하 여 TreeViewNode 개체를 추가 하지만 트리 보기 데이터 원본에서 데이터를 표시 합니다.
+대부분의 경우 일반적으로 루트 TreeView 컨트롤을 XAML에서 선언 코드 또는 데이터 바인딩을 사용 하 여에 TreeViewNode 개체를 추가 하지만 트리 보기 데이터 원본에서 데이터를 표시 합니다.
 
-### <a name="bind-to-a-hierarchical-data-source"></a>계층적 데이터 원본에 바인딩
+### <a name="bind-to-a-hierarchical-data-source"></a>계층적 데이터 원본에 바인딩합니다
 
-데이터 바인딩을 사용 하 트리 보기를 만들려면 계층적 컬렉션 TreeView.ItemsSource 속성을 설정 합니다. 다음의 ItemTemplate에서 자식 항목 컬렉션 속성으로 설정 TreeViewItem.ItemsSource 합니다.
+데이터 바인딩을 사용 하 여 트리 보기를 만들려면 계층적 컬렉션 TreeView.ItemsSource 속성을 설정 합니다. 다음은 ItemTemplate에서 자식 항목 컬렉션 속성을 설정 합니다 TreeViewItem.ItemsSource 합니다.
 
 ```xaml
 <TreeView ItemsSource="{x:Bind DataSource}">
@@ -120,7 +120,7 @@ Windows Insider Preview부터 바인딩할 수 있습니다 계층적 데이터 
 </TreeView>
 ```
 
-_데이터 바인딩을 사용 하 트리 보기_ 에 대 한 전체 코드는 예제 섹션을 참조 하세요.
+_데이터 바인딩을 사용 하는 트리 보기_ 에 대 한 전체 코드 예제 섹션을 참조 하세요.
 
 #### <a name="items-and-item-containers"></a>항목 및 항목 컨테이너
 
@@ -129,12 +129,12 @@ _데이터 바인딩을 사용 하 트리 보기_ 에 대 한 전체 코드는 �
 | **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
 | - | - |
 | [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | 지정된 된 TreeViewItem 컨테이너에 대 한 데이터 항목을 가져옵니다. |
-| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | 지정 된 데이터 항목에 대 한 TreeViewItem 컨테이너를 가져옵니다. |
+| [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | 지정된 된 데이터 항목에 대 한 TreeViewItem 컨테이너를 가져옵니다. |
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
 | [TreeView.NodeFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.nodefromcontainer) | 지정된 된 TreeViewItem 컨테이너에 대 한 TreeViewNode를 가져옵니다. |
-| [TreeView.ContainerFromNode](/uwp/api/windows.ui.xaml.controls.treeview.containerfromnode) | 지정 된 TreeViewNode TreeViewItem 컨테이너를 가져옵니다. |
+| [TreeView.ContainerFromNode](/uwp/api/windows.ui.xaml.controls.treeview.containerfromnode) | 지정 된 TreeViewNode에 대 한 TreeViewItem 컨테이너를 가져옵니다. |
 
 ### <a name="manage-tree-view-nodes"></a>트리 보기 노드를 관리 합니다.
 
@@ -209,11 +209,11 @@ Dim pictureNode As New TreeViewNode With {.Content = picturesFolder}
 
 ### <a name="item-container-style"></a>항목 컨테이너 스타일
 
-ItemsSource 또는 RootNodes, 실제 요소 – 각 노드를 표시 하는 데 사용 여부를 "컨테이너" 라는 – [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) 개체입니다. TreeView의를 사용 하 여 컨테이너의 스타일 ItemContainerStyleSelector 또는 ItemContainerStyle 속성입니다.
+ItemsSource 또는 RootNodes, 각 노드에 – 표시 하는 데 실제 요소를 사용 하는지 여부를 "컨테이너" 라는 – [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) 개체입니다. TreeView의를 사용 하 여 컨테이너를 얻을 수 ItemContainerStyle 또는 ItemContainerStyleSelector 속성입니다.
 
 ### <a name="item-template-selectors"></a>항목 템플릿 선택기
 
-항목의 형식에 따라 트리 보기 항목에 대 한 다른 DataTemplate을 설정할 수 있습니다. 예를 들어 파일 탐색기 앱 폴더 및 파일에 대 한 다른에 대 한 하나의 데이터 템플릿의 사용할 수 있습니다.
+항목의 형식에 따라 트리 보기 항목에 대 한 다른 DataTemplate을 설정할 수 있습니다. 예를 들어 파일 탐색기 앱에서는 폴더 및 파일에 대 한 다른에 대 한 하나의 데이터 템플릿을 사용할 수 있습니다.
 
 ![서로 다른 데이터 템플릿을 사용 하 여 파일 및 폴더](images/treeview-icons.png)
 
@@ -384,7 +384,7 @@ TreeView 컨트롤은 단일 선택 및 다중 선택을 모두 지원합니다.
 
 선택 기능이 활성화되면 각 트리 보기 노드 옆에 확인란이 표시되고 선택된 항목이 강조 표시됩니다. 사용자는 확인란을 사용하여 항목을 선택 또는 선택 취소할 수 있습니다. 해당 항목을 클릭해도 여전히 항목이 호출됩니다.
 
-하거나 부모 노드를 선택 해제 하는 선택 또는 선택 취소할 해당 노드 아래에 있는 모든 자식입니다. 일부 경우 하지만 아닌의 부모 노드에 자식 선택 됩니다으로 부모 노드에 대 한 확인란으로 표시 됩니다으로 확정 되지 않음 (블랙 박스 채워진).
+디스테이징 부모 노드를 선택 하거나 선택는 선택 하거나 해당 노드 아래에 있는 모든 자식 항목을 선택 취소 합니다. 일부 경우 하지만의 전체가 아닌 부모 노드에 자식 선택 됩니다으로 부모 노드에 대 한 확인란 표시 됩니다으로 확정 되지 않음 (블랙 박스 채워진).
 
 ![트리 보기의 다중 선택](images/treeview-selection.png)
 
@@ -512,9 +512,9 @@ Private Sub SelectAllButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-### <a name="tree-view-using-data-binding"></a>데이터 바인딩을 사용 하 트리 보기
+### <a name="tree-view-using-data-binding"></a>데이터 바인딩을 사용 하는 트리 보기
 
-이 예제에서는 이전 예제와 동일한 트리 보기를 만드는 방법을 보여 줍니다. 그러나 XAML에서 데이터 계층 구조를 만드는 대신 데이터 코드에서 생성 되며 트리 보기의 ItemsSource 속성에 바인딩됩니다. (이전 예제에 표시 된 단추 이벤트 처리기에이 예제도 적용 합니다.)
+이 예제에서는 이전 예제와 동일한 트리 보기를 만드는 방법을 보여 줍니다. 그러나 XAML에서 데이터 계층 구조를 만드는 대신 데이터 코드에서 생성 되 고 트리 보기의 ItemsSource 속성에 바인딩됩니다. (이전 예제에 표시 된 단추 이벤트 처리기에이 예제에서는 적용 됩니다.)
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="100">
