@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to send a local toast notification and handle the user clicking the toast.
 title: 로컬 알림 메시지 보내기
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f76bc94c80a5191cf7bad86b43230f0d03e81b1
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
+ms.openlocfilehash: 3004b7041838656890b3a967e858dddc64c29ee5
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917712"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3846877"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
