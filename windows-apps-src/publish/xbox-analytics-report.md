@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, xbox 분석, xbox live 분석, xbox 통계
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e69c41ec2ae6dface93b9f3148e699e448faa18
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849257"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935260"
 ---
 # <a name="xbox-analytics-report"></a>Xbox 분석 보고서
 
 Windows 개발자 센터 대시보드의 **Xbox 분석** 보고서에는 고객이 게임에서 Xbox 기능을 사용하는 방식에 대한 통계가 표시됩니다. 또한 클라이언트 오류를 해결하는 데 도움이 되는 서비스 상태 정보를 제공합니다.
 
 > [!IMPORTANT]
-> Xbox용 게임이나 Xbox Live 서비스를 사용하는 게임을 게시하는 경우에만 이 보고서가 표시됩니다. 이렇게 하려면 [개념 승인 프로세스](../gaming/concept-approval.md)를 통해 [Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) 파트너가 게시 된 게임 및 통해 제출한 게임을 포함 하는 이동 해야는 [ ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id). [Xbox Live 크리에이터 스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 을 통해 게시 된 게임 현재이 보고서에 표시 되지 않습니다.
+> Xbox용 게임이나 Xbox Live 서비스를 사용하는 게임을 게시하는 경우에만 이 보고서가 표시됩니다. 이렇게 하려면 [개념 승인 프로세스](../gaming/concept-approval.md)를 통해 [Microsoft](../xbox-live/developer-program-overview.md#microsoft-partners) 파트너가 게시 된 게임을 통해 제출한 게임을 포함 하는 이동 해야 합니다 [ ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)합니다. [Xbox Live 크리에이터 스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 을 통해 게시 된 게임 현재이 보고서에 표시 되지 않습니다.
 
 **분석**을 확장하고 **Xbox 분석**을 선택하여 게임의 왼쪽 탐색 메뉴에서 **Xbox 분석** 보고서를 확인할 수 있습니다.  대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다.
 

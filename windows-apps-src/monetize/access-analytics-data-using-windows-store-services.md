@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848417"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935488"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -84,7 +84,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
-| 취득, 변환, 설치 및 사용 |  <ul><li>[앱 취득 가져오기](get-app-acquisitions.md)</li><li>[앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md)</li><li>[채널 별 앱 변환 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 취득 가져오기](get-in-app-acquisitions.md)</li><li>[구독 추가 기능 취득 가져오기](get-subscription-acquisitions.md)</li><li>[채널별 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 받기](get-app-installs.md)</li><li>[일일 앱 사용을 가져오기](get-app-usage-daily.md)</li><li>[월별 앱 사용을 가져오기](get-app-usage-monthly.md)</li></ul> |
+| 취득, 변환, 설치 및 사용 |  <ul><li>[앱 취득 가져오기](get-app-acquisitions.md)</li><li>[앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md)</li><li>[채널 별 앱 변환 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 취득 가져오기](get-in-app-acquisitions.md)</li><li>[구독 추가 기능 취득 가져오기](get-subscription-acquisitions.md)</li><li>[채널별 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 받기](get-app-installs.md)</li><li>[일일 앱 사용 현황 가져오기](get-app-usage-daily.md)</li><li>[월별 앱 사용 현황 가져오기](get-app-usage-monthly.md)</li></ul> |
 | 앱 오류 | <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[앱의 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
 | 인 사이트 | <ul><li>[앱에 대한 정보 데이터 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
 | 평점 및 리뷰 | <ul><li>[앱 평점 가져오기](get-app-ratings.md)</li><li>[앱 리뷰 가져오기](get-app-reviews.md)</li></ul> |
