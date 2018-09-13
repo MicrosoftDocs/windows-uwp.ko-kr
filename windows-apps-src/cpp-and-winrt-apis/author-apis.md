@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 051c24e0acc645150f4ca7ff74480f7de3ce456b
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928423"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964817"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 작성
 
@@ -256,7 +256,7 @@ namespace MyProject
 }
 ```
 
-**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출할 수 있습니다. 구현 체 형식의 기본 인터페이스를 반환 **확인** 합니다.
+**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출할 수 있습니다. **확인** 구현 체 형식의 기본 인터페이스를 반환합니다.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
@@ -265,7 +265,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **확인** 프로젝션 된 형식 인스턴스를 반환합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
 
-**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 다른 프로젝션 된 형식이 나도 중 하나를 사용 하거나 반환할 수 있는 인터페이스 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))에 쿼리를 호출할 수 있습니다.
+**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 다른 프로젝션 된 형식이 나도 사용 하거나 반환 하는 인터페이스에 대 한 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))에 쿼리를 호출할 수 있습니다.
 
 ```cppwinrt
 istringable.ToString();
@@ -288,9 +288,9 @@ iclosable.Close();
 인터페이스 개체가 있고, 이 개체가 구현체의 인터페이스라는 사실도 알고 있는 경우에는 [**from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 함수 템플릿을 사용해 구현체로 돌아갈 수 있습니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
 
 > [!NOTE]
-> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 이상을 호출 하면 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi)대신 합니다.
+> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 호출할 수 있습니다 [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi)대신 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 합니다.
 
-예를 들면 다음과 같습니다. [구현 **BgLabelControl** 사용자 지정 컨트롤 클래스에](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)에서는 또 다른 예로 없습니다.
+예를 들면 다음과 같습니다. [구현 **BgLabelControl** 사용자 지정 컨트롤 클래스에](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)에서는 또 다른 예입니다.
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)
@@ -318,7 +318,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-구현체 형식 인스턴스가 있을 때 이 인스턴스를 해당하는, 프로젝션된 형식이 필요한 함수에게 전달해야 한다면 그렇게 할 수 있습니다. 구현 체 형식에는 변환 연산자가 존재 (에서 생성 된 구현 체 형식에는 `cppwinrt.exe` 도구)는이 가능 하 게 합니다.
+구현체 형식 인스턴스가 있을 때 이 인스턴스를 해당하는, 프로젝션된 형식이 필요한 함수에게 전달해야 한다면 그렇게 할 수 있습니다. 구현 체 형식에는 변환 연산자가 존재 (에 의해 생성 된 구현 체 형식에는 `cppwinrt.exe` 도구)는이 가능 하 게 합니다.
 
 ## <a name="deriving-from-a-type-that-has-a-non-trivial-constructor"></a>특수 생성자를 가지고 있는 형식에서 파생
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_)는 특수 생성자의 예입니다. 기본 생성자가 없기 때문에 **ToggleButtonAutomationPeer**를 생성하려면 *소유자*를 전달해야 합니다. 결과적으로 **ToggleButtonAutomationPeer**에서 파생시키는 경우에는 *소유자*를 가져와 기본 클래스로 전달하는 생성자를 입력해야 합니다. 실제로 표시되는 모습은 다음과 같습니다.
