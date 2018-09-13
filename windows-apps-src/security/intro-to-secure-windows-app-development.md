@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: 10, uwp, windows 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e48d0b21d588ef7b4913e16b75f9d21c5d5209f
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930743"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3960475"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>보안 Windows 앱 개발 소개
 

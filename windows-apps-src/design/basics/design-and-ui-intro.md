@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936380"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962057"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -49,7 +49,7 @@ ms.locfileid: "3936380"
 ### <a name="multiples-of-four"></a>4의 배수씩 확장
 
 :::row:::
-    ::: column span::: 크기, 여백 및 UI 요소의 위치에 항상 **4의 배수인 epx** UWP 앱에 있어야 합니다.
+    ::: 열 범위::: 크기, 여백 및 UI 요소의 위치에 항상 **4의 배수인 epx** UWP 앱에 있어야 합니다.
 
         UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
     :::column-end:::
@@ -66,7 +66,7 @@ UWP 앱은 모든 장치에 자동으로 조정되므로 모든 장치에 대한
 
 :::row:::
     :::column:::
-        UWP 앱을 Windows 10 장치에서 시작 되 면 [프레임](/uwp/api/Windows.UI.Xaml.Controls.Frame)을 [페이지](/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 이동할 수 있는 [창](/uwp/api/Windows.UI.Xaml.Controls.Window) 에서 실행 합니다.
+        UWP 앱을 Windows 10 장치에서 시작 되 면 [프레임](/uwp/api/Windows.UI.Xaml.Controls.Frame), [페이지](/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 이동할 수 있는 [창](/uwp/api/Windows.UI.Xaml.Controls.Window) 에서 실행 합니다.
     :::column-end:::
     :::column:::
         ![프레임](images/frame.svg)

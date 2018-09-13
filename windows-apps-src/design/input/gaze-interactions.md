@@ -14,12 +14,12 @@ pm-contact: Jake Cohen
 dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c7af1decbac405246f4250cf45c2f03bfafb899
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: 3d716bf25c4df41af32084190522e3c5fcd4885b
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895089"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3960527"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>UWP 앱의 응시 상호 작용 및 눈 추적
 
@@ -230,7 +230,6 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
                 // Stop listening for device events on navigation from eye-tracking page.
                 StopGazeDeviceWatcher();
             }
-            ...
         }
     }
     ```
@@ -570,7 +569,7 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
     {
         // Ensure the gaze timer restarts on new progress bar location.
         timerGaze.Stop();
-        timersStarted = false;
+        timerStarted = false;
 
         // Get the bounding rectangle of the app window.
         Rect appBounds = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds;

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
 ms.openlocfilehash: 598d0e7b4a374c18ece48f52947cec64a0f79dab
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3935650"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3959227"
 ---
 # <a name="consume-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>COM 구성 요소를 통한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -85,7 +85,7 @@ DWriteCreateFactory(
 ## <a name="re-seat-a-winrtcomptr"></a>**Winrt:: com_ptr** 재연결
 
 > [!IMPORTANT]
-> [**Winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 이미 장착 되어 있는 경우 (내부 원시 포인터에 이미 대상) 재연결 다른 개체를 가리키도록 하려면 먼저 할당 해야 합니다 `nullptr` 에&mdash;아래 코드 예제에서와 같이. 그렇지 않으면 다음 이미 장착 **com_ptr** 그립니다 문제 ( [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) 또는 [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)호출) 하는 경우 주의 하 여 내부 포인터는 null이 아닌.
+> [**Winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 이미 장착 되어 있는 경우 (내부 원시 포인터 이미 대상)를 다른 개체를 가리키도록 재연결 하려면 먼저 할당 해야 합니다 `nullptr` 를&mdash;아래의 코드 예제에 표시 된 대로 합니다. 그렇지 않으면 다음 이미 장착 **com_ptr** 문제에 그릴 주의가 ( [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) 또는 [**put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)호출) 하는 경우 해당 내부 포인터가 null이 아닌지 가정 하 여 합니다.
 
 ```cppwinrt
 winrt::com_ptr<ID2D1SolidColorBrush> brush;

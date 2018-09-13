@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, azure ad, azure 테넌트, aad 테넌트, azure ad 테넌트, 테넌트 관리, 테넌트
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929531"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957285"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>개발자 센터 계정에 Azure Active Directory 연결
 
@@ -35,7 +35,7 @@ Windows 개발자 센터는 다중 사용자 계정 액세스 및 관리를 위�
 
 조직에서 이미 Azure AD를 사용하는 경우 개발자 센터 계정에 연결하려면 다음 단계를 따릅니다.
 
-1.  [Windows 개발자 센터 대시보드](https://partner.microsoft.com/dashboard)(근처 대시보드의 오른쪽 위 모서리) 기어 아이콘을 선택 하 고 **계정 설정**를 선택 합니다. **설정** 메뉴에서 **테 넌 트**를 선택 합니다.
+1.  [Windows 개발자 센터 대시보드](https://partner.microsoft.com/dashboard)(근처 대시보드의 오른쪽 위 모서리) 기어 아이콘을 선택 하 고 **계정 설정**을 선택 합니다. **설정** 메뉴의 **테 넌 트**를 선택 합니다.
 2.  **Azure AD와 개발자 센터 계정 연결**을 선택합니다.
 3.  연결하려는 테넌트에 대한 Azure AD 자격 증명을 입력합니다.
 4.  Azure AD 테넌트에 대한 조직 및 도메인 이름을 검토합니다. 연결을 완료하려면 **확인**을 선택합니다.
@@ -49,7 +49,7 @@ Windows 개발자 센터는 다중 사용자 계정 액세스 및 관리를 위�
 
 개발자 센터 계정과 연결할 새 Azure AD를 설정해야 하는 경우 다음 단계를 따릅니다.
 
-1.  [Windows 개발자 센터 대시보드](https://partner.microsoft.com/dashboard)(근처 대시보드의 오른쪽 위 모서리) 기어 아이콘을 선택 하 고 **계정 설정**를 선택 합니다. **설정** 메뉴에서 **테 넌 트**를 선택 합니다.
+1.  [Windows 개발자 센터 대시보드](https://partner.microsoft.com/dashboard)(근처 대시보드의 오른쪽 위 모서리) 기어 아이콘을 선택 하 고 **계정 설정**을 선택 합니다. **설정** 메뉴의 **테 넌 트**를 선택 합니다.
 2.  **새 Azure AD 만들기**를 선택합니다.
 3.  새 Azure AD에 대한 디렉터리 정보를 입력합니다.
     - **도메인 이름**: Azure AD 도메인에 사용할 고유한 이름으로 ".onmicrosoft.com"과 함께 사용합니다. 예를 들어 "example"을 입력한 경우 Azure AD 도메인은 "example.onmicrosoft.com"이 됩니다.

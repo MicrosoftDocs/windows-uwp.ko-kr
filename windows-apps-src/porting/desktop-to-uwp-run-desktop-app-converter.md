@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: 8748b68bf4efbcc79d0bba475db32f3a2d7cc933
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3928471"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962021"
 ---
 # <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>데스크톱 앱 변화기를 사용해 앱을 패키지로 만들기(데스크톱 브리지)
 
@@ -271,7 +271,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 |-InstallerArguments &lt;String&gt; |선택 사항 |강제로 설치 관리자를 무인/자동으로 실행할 수 있도록 하기 위한 쉼표로 구분된 인수 목록 또는 인수 문자열입니다. 설치 관리자가 msi인 경우 이 매개 변수는 선택적입니다. 설치 관리자에서 로그를 가져오려면 여기에 설치 관리자에 대한 로깅 인수를 제공하고, 변환기가 적절한 경로로 대체하는 토큰에 해당하는 &lt;log_folder&gt; 경로를 사용합니다. <br><br>**참고**: 무인/자동 플래그와 로그 인수는 설치 관리자 기술마다 다릅니다. <br><br>이 매개 변수의 사용 예제는 -InstallerArguments "/silent /log &lt;log_folder&gt;\install.log"를, 로그 파일을 생성하지 않는 또 다른 예제는 ```-InstallerArguments "/quiet", "/norestart"```를 참조하세요. 변환기가 로그를 캡처한 후 최종 로그 폴더에 추가하게 하려면 토큰 경로 &lt;log_folder&gt;로 모든 로그를 보내야 합니다.|
 |-InstallerValidExitCodes &lt;Int32&gt; |선택 사항 |설치 관리자가 성공적으로 실행되었음을 나타내는 쉼표로 구분된 종료 코드 목록(예: 0, 1234, 5678).  기본적으로 msi가 아닌 경우는 0이고 msi인 경우는 0, 1641, 3010입니다.|
 |-MakeAppx [&lt;SwitchParameter&gt;]  |선택 사항 |스위치(있는 경우)는 출력에 대해 MakeAppx를 호출하도록 이 스크립트에 지시합니다. |
-|-MakeMSIX [&lt;SwitchParameter&gt;]  |선택 사항 |스위치가 있을 경우이 스크립트를 MSIX 패키지로 출력 패키지를 통해 합니다. |
+|-MakeMSIX [&lt;SwitchParameter&gt;]  |선택 사항 |스위치가 있을 경우에이 스크립트 MSIX 패키지로 출력 패키지를 통해 합니다. |
 |<a id="identity-params" /><strong>패키지 ID 매개 변수</strong>||
 |-PackageName &lt;String&gt; |필수 |유니버설 Windows 앱 패키지의 이름. 개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다. |
 |-Publisher &lt;String&gt; |필수 |유니버설 Windows 앱 패키지의 게시자 |

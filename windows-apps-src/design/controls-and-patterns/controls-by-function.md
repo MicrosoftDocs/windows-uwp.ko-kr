@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936420"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958215"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -30,7 +30,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 하 <a href="xamlcontrolsgallery:/item/NavigationView">는 앱을 열고 중인 NavigationView를 확인</a> </p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 <a href="xamlcontrolsgallery:/item/NavigationView">앱을 열고 중인 NavigationView를 참조 하세요.</a> </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
@@ -555,7 +555,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 ### <a name="navigationview"></a>NavigationView
 
-조정할 수 있도록 컨테이너 및 왼쪽된 탐색 창, 상단 탐색 및 탭 패턴을 구현 하는 유연한 탐색 모델입니다.
+적응형 컨테이너 및 왼쪽된 탐색 창, 상단 탐색 및 탭 패턴을 구현 하는 유연한 탐색 모델입니다.
 
 참조: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 

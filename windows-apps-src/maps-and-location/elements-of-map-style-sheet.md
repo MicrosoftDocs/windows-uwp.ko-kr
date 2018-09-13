@@ -12,19 +12,19 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
 ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3933034"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957961"
 ---
 # <a name="map-style-sheet-reference"></a>지도 스타일 시트 참조
 
-_지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 Microsoft 매핑 기술.  지도 스타일 시트 JSON JavaScript Object Notation ()를 사용 하 여 정의 되 고 다양 한 방법을 비롯 하 여 Windows 스토어 응용 프로그램의 [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) 메서드를 통해 사용할 수 있습니다.
+Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 합니다.  지도 스타일 시트 JSON JavaScript Object Notation ()를 사용 하 여 정의 되 고 다양 한 방법을 비롯 하 여 Windows 스토어 응용 프로그램의 [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) 메서드를 통해 사용할 수 있습니다.
 
 [지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) 응용 프로그램을 사용 하 여 대화형으로 스타일 시트를 만들 수 있습니다.
 
-다음과 같은 JSON 물 영역을 빨간색으로 만드는 데 사용할 수, 물 레이블을 초록색으로, 표시 및 육지 영역을 파란색으로 표시 합니다.
+다음 JSON 물 영역을 빨간색으로 만드는 데 사용할 수, 물 레이블을 초록색으로, 표시 및 육지 영역을 파란색으로 표시 합니다.
 
 ```json
     {"version":"1.*",
@@ -54,7 +54,7 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 <a id="entries" />
 
 ## <a name="entries"></a>항목
-이 표는 ">" 문자를 사용하여 입력 계층의 수준을 나타냅니다.  또한 어떤 버전의 Windows 각 항목을 지원 하 고 무시는 보여 줍니다.
+이 표는 ">" 문자를 사용하여 입력 계층의 수준을 나타냅니다.  또한 어떤 버전의 Windows 각 항목을 지원 하 고이 무시 하는 보여 줍니다.
 
 | 빌드 | Windows 릴리스 이름 |
 |-------|----------------------|
@@ -68,19 +68,19 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 | 설정                     | [설정](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   | 전체 스타일 시트에 적용되는 설정입니다. |
 | mapElement                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 지도 항목의 상위 항목입니다. |
 | > baseMapElement             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 사용자가 아닌 모든 항목의 상위 항목입니다. |
-| >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 설명 하는 육지 영역을 사용 합니다.  이러한 구조 항목의 아래에 실제 건물와 혼동를 안 됩니다. |
+| >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 설명 하는 육지 영역을 사용 합니다.  이러한 구조 항목의 아래에 실제 건물와 혼동 해서는 안됩니다 해야 합니다. |
 | >>> airport                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 공항 포괄 하는 영역입니다. |
 | >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 비즈니스 또는 흥미로운 포인트가 집중된 영역입니다. |
 | >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 묘지 포괄 하는 영역입니다. |
 | >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 대륙 영역의 레이블입니다. |
 | >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 학교 및 교육 다른 기능을 포괄 하는 영역입니다. |
-| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 토착 개인적 포괄 하는 영역을 예약 합니다. |
+| >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 토착 개인적 예약을 포괄 하는 영역입니다. |
 | >>> industrial               | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 산업 목적에 사용 되는 영역입니다. |
 | >>> island                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 섬 영역의 레이블입니다. |
 | >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 의료 목적을 위해 사용 되는 영역 (예: 병원 캠퍼스). |
-| >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 군사 사용 하거나 호스팅하 군사 기지 영역입니다. |
-| >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 관련된 항해 목적에 사용 되는 영역입니다. |
-| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주변 영역의 레이블입니다. |
+| >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 군사 사용 하거나 포괄할 군사 기지 영역입니다. |
+| >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 관련 항해 목적에 사용 되는 영역입니다. |
+| >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주변 영역 레이블입니다. |
 | >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 비행기 활주로로 사용 되는 영역입니다. |
 | >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 해변과 같은 모래 영역입니다. |
 | >>> shoppingCenter           | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 몰 또는 기타 쇼핑 센터에 대한 땅 영역입니다. |
@@ -94,20 +94,20 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 | >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 특성을 포괄 하는 영역을 예약 합니다. |
 | >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 포인트 기능 일종의 아이콘을 사용 하 여 그려집니다. |
 | >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | 숫자 레이블을 주소입니다. |
-| >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 자연 스러운 기능을 나타내는 아이콘입니다. |
+| >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 자연 스러운 기능을 나타내는 아이콘. |
 | >>>> peak                    | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 산 봉우리를 나타내는 아이콘입니다. |
 | >>>>> volcanicPeak           | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 화산 봉우리를 나타내는 아이콘입니다. |
 | >>>> waterPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 폭포와 같은 물 기능 위치를 나타내는 아이콘입니다. |
-| >>> pointOfInterest          | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 관심 있는 모든 위치를 나타내는 아이콘입니다. |
-| >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 비즈니스 locaiton를 나타내는 아이콘입니다. |
-| >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 박물관, zoos 등과 같은 여행자 명소를 나타내는 아이콘입니다. |
-| >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 커뮤니티 범용의 위치를 나타내는 아이콘입니다. |
+| >>> pointOfInterest          | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 관심 있는 모든 위치를 나타내는 아이콘. |
+| >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 비즈니스 locaiton를 나타내는 아이콘. |
+| >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 박물관, zoos 등과 같은 여행자 명소를 나타내는 아이콘. |
+| >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 커뮤니티에 일반적으로 사용의 위치를 나타내는 아이콘입니다. |
 | >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 학교 및 기타 교육을 나타내는 아이콘 위치와 관련이 있습니다. |
-| >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 극장, 시네마 및 등과 같은 엔터테인먼트 장소를 나타내는 아이콘입니다. |
+| >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 극장, 시네마 및 등과 같은 엔터테인먼트 장소를 나타내는 아이콘. |
 | >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 주차, 은행, 사례를 살펴보자면 등과 같은 필수 서비스를 나타내는 아이콘. |
 | >>>>> foodPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 음식점, 카페 등을 나타내는 아이콘입니다. |
 | >>>>> lodgingPoint           | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 호텔 및 기타 숙박 회사를 나타내는 아이콘입니다. |
-| >>>>> realEstatePoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 부동산 비즈니스를 나타내는 아이콘입니다. |
+| >>>>> realEstatePoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 부동산 비즈니스를 나타내는 아이콘. |
 | >>>>> shoppingPoint          | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 호텔 및 기타 숙박 회사를 나타내는 아이콘입니다. |
 | >>> populatedPlace           | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 밀도가 높은 곳의 크기를 나타내는 아이콘(예: 도시 또는 타운). |
 | >>>> capital                 | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 밀도가 높은 장소의 수도를 나타내는 아이콘. |
@@ -129,7 +129,7 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 | >>> road                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 도로를 표시하는 줄. |
 | >>>> controlledAccessHighway | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 큰, 제어 된 액세스 회피를 나타내는 줄. |
 | >>>>> highSpeedRamp          | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 일반적으로 연결 하는 고속 경사로 나타내는 줄 회피 액세스를 제어 합니다. |
-| >>>> highway                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 회피를 나타내는 줄. |
+| >>>> highway                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 고속도 나타내는 줄. |
 | >>>> majorRoad               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주요도 나타내는 줄. |
 | >>>> arterialRoad            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Arterial도 나타내는 줄. |
 | >>>> street                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 거리를 나타내는 줄. |
@@ -143,7 +143,7 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 | >> water                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 물처럼 보이는 모든 것. 바다 및 물결이 포함됩니다. |
 | >>> river                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 강, 물결 또는 기타 수로.  선 또는 다각형일 수 있으며 강이 아닌 수공간에 연결될 수 있습니다. |
 | > routeMapElement            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 라우팅 관련된 항목 |
-| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 선 경로 관련 항목입니다. |
+| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 라우트 관련 항목입니다. |
 | >>> drivingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 운전 경로 나타내는 줄. |
 | >>> scenicRoute              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 멋진 운전 경로 나타내는 줄. |
 | >>> walkingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 walking 경로 나타냅니다. |
@@ -181,13 +181,13 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 | landColor                    | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 육지에 아무 것도 그리기 전의 육지의 ARGB 색 값. |
 | logosVisible                 | 부울    |  ✔   |  ✔   |  ✔   |  ✔   | **조직** 속성을 가진 항목이 적절한 로고를 그리거나 일반 아이콘을 사용해야 하는지를 나타내는 플래그. |
 | officialColorVisible         | 부울    |  ✔   |  ✔   |  ✔   |  ✔   | 공식 색 속성(예: 중국의 교통 라인)을 가진 항목이 해당 색을 그려야 하는지 여부를 나타내는 플래그. 예를 들어 흑백 지도의 경우 이 값을 해제합니다. |
-| rasterRegionsVisible         | 부울    |  ✔   |  ✔   |  ✔   |  ✔   | 벡터 (일본 및 한국) 보다 더 나은 표현이 있을 래스터 지역 그릴 것인지 여부를 나타내는 플래그입니다. |
+| rasterRegionsVisible         | 부울    |  ✔   |  ✔   |  ✔   |  ✔   | 벡터 (일본 및 한국) 보다 더 나은 표현이 있는 래스터 지역 그릴 것인지 여부를 나타내는 플래그입니다. |
 | shadedReliefVisible          | 부울    |  ✔   |  ✔   |  ✔   |  ✔   | 지도에 점진 음영을 그릴지 여부를 나타내는 플래그. |
 | shadedReliefDarkColor        | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 음영기복의 어두운 면의 색상.  알파 채널은 최대 알파 값을 나타냅니다. |
 | shadedReliefLightColor       | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 음영기복의 밝은 면의 색상.  알파 채널은 최대 알파 값을 나타냅니다. |
 | shadowColor                  | 색상   |      |      |      |  ✔️   | 그림자를 사용 하는 아이콘 뒤 그림자의 색입니다. |
 | spaceColor                   | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 지도 주위의 영역에 대한 ARGB 색 값. |
-| useDefaultImageColors        | 부울    |  ✔   |  ✔   |  ✔   |  ✔   | SVG의 원래 색 이미지에서에서 색상에 대 한 색상표 항목을 조회 하는 대신 사용 해야 하는지 여부를 나타내는 플래그입니다. |
+| useDefaultImageColors        | 부울    |  ✔   |  ✔   |  ✔   |  ✔   | SVG에서 원래 색 이미지에서에서 색상에 대 한 색상표 항목을 조회 하는 대신 사용 해야 하는지 여부를 나타내는 플래그입니다. |
 
 <a id="mapelement" />
 
@@ -221,7 +221,7 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 | borderOutlineColor           | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 두 번째 또는 채워진 테두리 선의 색. |
 | borderStrokeColor            | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 테두리의 기본 선 색상. |
 | borderVisible                | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  |
-| borderWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   | 테두리 스트로크는 크기를 조정 하는 금액입니다. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
+| borderWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   | 양 테두리의 스트로크 됩니다. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 
 <a id="pointstyle" />
 
@@ -231,7 +231,7 @@ _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 하는 M
 
 | 속성                     | 형식    | 1506 | 1629 | 1713 | Next | 설명 |
 |------------------------------|---------|------|------|------|------|-------------|
-| 셰이프 배경             | 부동   |      |      |      |  ✔️   | -모양이 존재 하는 대체 아이콘의 배경으로 사용 하 여 셰이프입니다. |
+| 셰이프 배경             | 부동   |      |      |      |  ✔️   | -가 있는 모양이 대체 아이콘의 배경으로 사용 하 여 셰이프입니다. |
 | stemAnchorRadiusScale        | 부동   |      |      |  ✔   |  ✔   | 아이콘 스템의 앵커 지점을 확장할 양.  예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 | stemColor                    | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 3D 모드에서 해당 아이콘의 하단에서 나오는 줄기의 색. |
 | stemHeightScale              | 부동   |      |      |  ✔   |  ✔   | 아이콘 스템의 길이를 확장할 양.  예를 들어 기본값에 *1*, 길이의 두 배 값에 *2*를 사용합니다. |

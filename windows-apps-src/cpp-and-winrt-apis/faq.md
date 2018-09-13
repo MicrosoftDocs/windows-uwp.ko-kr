@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
 ms.openlocfilehash: 9316a29a50970bdaa288a4744f3aab7d873cbe4e
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3933220"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3962907"
 ---
 # <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 질문과 대답
 C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다.
@@ -22,9 +22,9 @@ C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가
 > [!NOTE]
 > 표시된 오류 메시지에 대한 질문이 있는 경우 [C++/WinRT 문제 해결](troubleshooting.md) 항목도 참조하세요.
 
-## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트 컴파일되지 하는 이유 Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 17134 버전
+## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트 컴파일되지 이유 Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 17134 버전
 
-Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0(windows (Windows 10, 버전 1803) 한 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류와 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 및 기타 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** **프로젝트 속성에 표시 됩니다 C/C++** > **언어** >  **관련 된 추가 옵션****명령줄** 다음 삭제).
+Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0(windows (Windows 10, 버전 1803) 한 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류가 있는 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 및 기타 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 프로젝트 속성 집합 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** > **언어** >  **추가 옵션****명령줄** 다음 삭제).
 
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsixhttpsakamscppwinrtvsix"></a>[C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)의 요구 사항은 무엇입니까?
 [VSIX](https://aka.ms/cppwinrt/vsix)는 최소 Windows SDK 대상 버전인 10.0.17134.0(Windows 10, 버전 1803)이 적용됩니다. Visual Studio 2017(버전 15.6 이상. 15.7 이상 권장) 또한 필요합니다. `.vcxproj` 파일에서 `<PropertyGroup Label="Globals">`이 `<CppWinRTEnabled>true</CppWinRTEnabled>`로 설정되어 있는지 확인하여 VSIX를 사용하는 프로젝트를 식별할 수 있습니다. 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
@@ -91,9 +91,9 @@ Visual Studio는 C++/WinRT를 지원하고 추천하는 개발 도구입니다. 
 
 ## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>읽기 전용 속성에 대해 생성 된 구현 함수 없는 이유는 `const` 한정자?
 
-이미 예상 하시 [MIDL 3.0](/uwp/midl-3/)에서 읽기 전용 속성을 선언 하는 경우는 `cppwinrt.exe` 구현 함수 생성 하려면 도구를 `const`-자격을 갖춘 (const 함수 const를 *이* 포인터를 처리 하는 데 사용).
+이미 예상 하시 [MIDL 3.0](/uwp/midl-3/)에서 읽기 전용 속성을 선언 하면 합니다 `cppwinrt.exe` 구현 함수를 생성할 수 있는 도구 `const`-자격을 갖춘 (const 함수 const를 *이* 포인터를 처리 하는 데 사용).
 
-가능한 경우 const를 사용 하 여 확실히 권장 하지만 `cppwinrt.exe` 도구 자체는 구현에 대 한 함수 지역과 const 고 하지 수 있는 이유 하려고 하지 않습니다. 이 예제와 같이 const 확인 구현 기능 중 하나를 선택할 수 있습니다.
+가능한 경우 상수를 사용 하 여 확실히 권장 하지만 `cppwinrt.exe` 도구 자체는 구현에 대 한 함수 지역과 const 고 않았을 하는 이유 하려고 하지 않습니다. 이 예제와 같이 const 구현 기능 확인을 선택할 수 있습니다.
 
 ```cppwinrt
 struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation::IStringable>
@@ -105,9 +105,9 @@ struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation
 };
 ```
 
-제거할 수 있습니다 `const` 한정자에 **ToString** 해야 결정 구현에서 일부 개체 상태를 변경 해야 합니다. 하지만 각각에 멤버의 두 함수 const 또는 비 const 만듭니다. 즉, 하지 함수 오버 로드는 구현에서 `const`.
+제거할 수 있습니다 `const` **ToString** 에서 한정자 해야 결정 구현에서 일부 개체 상태를 변경 해야 합니다. 하지만 각각에 멤버의.pgd const 또는 비 const 함수를 만듭니다. 즉, 하지 오버 로드를 구현 하는 함수에서 `const`.
 
-기타 다른 구현 기능 외 배치 const 경우 기능을 그림은 Windows 런타임 함수 프로젝션입니다. 이 코드를 것이 좋습니다.
+다른 다른 구현 기능 외에도 배치 const 위치 기능을 Windows 런타임 함수 프로젝션의 그림이 합니다. 이 코드를 살펴보겠습니다.
 
 ```cppwinrt
 int main()
@@ -117,19 +117,19 @@ int main()
 }
 ```
 
-**ToString** 위의에 대 한 호출에 대 한 Visual Studio에서 **선언 이동** 명령을 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + WinRT 다음과 같이 표시 됩니다.
+**ToString** 위의에 대 한 호출을 Visual Studio에서 **선언 이동** 명령을 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + WinRT 다음과 같이 표시 됩니다.
 
 ```
 winrt::hstring ToString() const;
 ```
 
-프로젝션 기능은 자격을 얻으려면 구현의 선택 하는 방법에 관계 없이 const 합니다. 내부적으로 프로젝션 응용 프로그램 이진 인터페이스 (ABI)는 시간과 COM 인터페이스 포인터를 통해 호출을 호출합니다. 프로젝션 된 **ToString** 상호 작용 하는 유일한 상태는 해당 COM 인터페이스 포인터; 있고 확실히 함수 const 이므로 해당 포인터를 수정할 필요가 없습니다. 아무것도 알지 **IStringable** 참조를 통해 호출 하는 것이 변하지 및 const 있어도 **ToString** 를 호출할 수 있음을 보장 보증 참조는 **IStringable**을이 제공 합니다.
+프로젝션 기능은 자격을 얻으려면 구현의 선택 하는 방법에 관계 없이 const 합니다. 내부적으로 프로젝션 응용 프로그램 이진 인터페이스 (ABI)는 시간과 COM 인터페이스 포인터를 통해 호출을 호출합니다. 프로젝션 된 **ToString** 상호 작용 하는 유일한 상태는 해당 COM 인터페이스 포인터; 있고 확실히 함수 const 이므로 해당 포인터를 수정할 필요가 없습니다. 이렇게 하면 **IStringable**프로그램 대 한 참조를 통해 호출할 **IStringable** 참조에 아무 것도 변경 되지 않습니다 하 고 const 있어도 **ToString** 을 호출할 수 있음을 보장 보증 있습니다.
 
-이해 하는 이러한 예제 `const` 구현 세부 C + + WinRT 프로젝션 및 구현 합니다. 이러한 구성의 편의 위한 코드 관리 합니다. 이러한 작업을 하는 `const` 에 COM 및 Windows 런타임 ABI (예: 멤버 함수).
+이해 하는 이러한 예제 `const` 구현 세부 C + + WinRT 프로젝션 및 구현 합니다. 이러한 구성의 편의 위한 코드 관리 합니다. 없는 것으로 `const` COM 및 Windows 런타임 ABI (멤버 함수)에 대 한 대.
 
-## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>C +에 대 한 코드 크기 감소에 대 한 권장 사항이 있는 + WinRT 바이너리?
+## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>C +에 대 한 코드 크기 감소에 대 한 권장 사항이 있습니까 + WinRT 바이너리?
 
-Windows 런타임 개체를 사용 하 여 작업을 생성 하는 데 필요한 것 보다 더 많은 이진 코드 하 여 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래 표시 된 코딩 패턴 하면 안 됩니다.
+Windows 런타임 개체 작업을 생성 하는 데 필요한 것 보다 더 많은 이진 코드 짐 으로써 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래 표시 된 코딩 패턴 하면 안 됩니다.
 
 ```cppwinrt
 anobject.b().c().d();
@@ -137,7 +137,7 @@ anobject.b().c().e();
 anobject.b().c().f();
 ```
 
-Windows 런타임 환경에서 컴파일러는의 값을 저장할 수 `c()` 또는 간접 참조를 통해 호출 되는 각 메서드에 대 한 인터페이스 ('. '). 사용자 개입 하지 않는 한는 더 많은 가상 호출 및 참조 카운트 오버 헤드가 발생 합니다. 위의 패턴 엄격 하 게 필요한 배의 코드를 쉽게 생성할 수 있습니다. 대신, 수 어디서 나 아래 표시 된 패턴을 선호 합니다. 훨씬 더 적은 코드를 생성 및 런타임 성능이 크게도 향상 시킬 수 있습니다.
+Windows 런타임 환경에서 컴파일러는의 값을 캐시할 수 `c()` 또는 전화를 간접 참조를 통해 호출 되는 각 메서드에 대 한 인터페이스 ('. '). 사용자가 개입 하지 않는 한는 더 많은 가상 호출 및 참조 카운트 오버 헤드가 발생 합니다. 위의 패턴 엄격 하 게 필요한 배의 코드를 쉽게 생성할 수 있습니다. 대신, 수 어디서 나 아래 표시 된 패턴을 선호 합니다. 훨씬 적은 코드를 생성 및 런타임 성능이 크게도 향상 시킬 수 있습니다.
 
 ```cppwinrt
 auto a{ anobject.b().c() };

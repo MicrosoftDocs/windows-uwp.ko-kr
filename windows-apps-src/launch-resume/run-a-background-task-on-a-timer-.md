@@ -11,19 +11,19 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 25e3c76ae09ed6835f89f0d98c308f11c7a99624
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930347"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958191"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>타이머에 따라 백그라운드 작업 실행
 
-[**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) 일회성 백그라운드 작업을 예약 하거나 정기적 백그라운드 작업 실행을 사용 하는 방법을 알아봅니다.
+[**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) 를 사용 하 여 일회성 백그라운드 작업을 예약 하거나 정기적 백그라운드 작업을 실행 하는 방법을 알아봅니다.
 
 이 항목에서 트리거된 백그라운드 작업을 설명 하는 시간을 구현 하는 방법의 예제를 보려면 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundActivation) **Scenario4** 참조 하세요.
 
-이 항목에서는 정기적으로 또는 특정 시간에 실행 해야 하는 백그라운드 작업이 있다고 가정 합니다. 백그라운드 작업이 없는 경우 [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs)회 샘플 백그라운드 작업이입니다. 또는 [in-process 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [out of process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 중 하나를 만드는 단계를 따릅니다.
+이 항목에서는 정기적으로 또는 특정 시간에 실행 해야 하는 백그라운드 작업이 있다고 가정 합니다. 백그라운드 작업을 아직 없는 경우 [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs)회 샘플 백그라운드 작업이입니다. 또는 [in-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [out of process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 중 하나를 만드는 단계를 따릅니다.
 
 ## <a name="create-a-time-trigger"></a>시간 트리거 만들기
 
@@ -36,9 +36,9 @@ ms.locfileid: "3930347"
 - *FreshnessTime*이 15분으로 설정되고 *OneShot*이 false이면 작업이 등록된 시간부터 15분에서 30분 사이에 시작하여 15분마다 실행되도록 예약됩니다. n분으로 설정되고 *OneShot*이 false이면 작업이 등록 후 n+15분 사이에 시작하여 n분마다 실행되도록 예약됩니다.
 
 > [!NOTE]
-> *FreshnessTime* 15 분 미만으로 설정 된 경우 백그라운드 작업을 등록 하려고 하면 예외가 throw 됩니다.
+> *FreshnessTime* 15 분 미만으로 설정 되 면 백그라운드 작업을 등록 하려고 하면 예외가 throw 됩니다.
  
-예를 들어이 트리거를 사용 하면 백그라운드 작업이 시간에 한 번 실행 되도록 합니다.
+예를 들어이 트리거를 사용 하면 백그라운드 작업을 한 시간에 한 번 실행 합니다.
 
 ```cs
 TimeTrigger hourlyTrigger = new TimeTrigger(60, false);
@@ -54,7 +54,7 @@ TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
 
 ## <a name="optional-add-a-condition"></a>(옵션) 조건 추가
 
-작업을 실행 하는 경우 제어 하는 백그라운드 작업 조건을 만들 수 있습니다. 조건이 조건이 충족 되는 백그라운드 작업 합니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조 하세요.
+작업을 실행 하는 경우 제어 하는 백그라운드 작업 조건을 만들 수 있습니다. 조건이 조건이 충족 될 때까지 실행 되는 백그라운드 작업 합니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조 하세요.
 
 이 예제에서는 트리거되면 사용자가 활성 상태일 때만 작업이 실행되도록 조건을 **UserPresent**로 설정합니다. 가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
@@ -71,7 +71,7 @@ Windows::ApplicationModel::Background::SystemCondition userCondition{
 SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent);
 ```
 
-자세한 내용은 조건 및 백그라운드 트리거 유형에 대 한 [지원 백그라운드 작업을 사용 하 여 앱을](support-your-app-with-background-tasks.md)참조 하세요.
+자세한 내용은 조건 및 백그라운드 트리거 유형에 대 한 [백그라운드 작업을 사용 하 여 앱 지원](support-your-app-with-background-tasks.md)을 참조 하세요.
 
 ##  <a name="call-requestaccessasync"></a>RequestAccessAsync() 호출
 
@@ -88,10 +88,10 @@ if (requestStatus != BackgroundAccessStatus.AlwaysAllowed)
 
 ## <a name="register-the-background-task"></a>백그라운드 작업 등록
 
-백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 자세한 내용은 백그라운드 작업 등록에 아래 샘플 코드에서는 **RegisterBackgroundTask()** 메서드 정의를 [백그라운드 작업 등록](register-a-background-task.md)을 참조 하세요.
+백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록 및 샘플 코드는 아래에 있는 **RegisterBackgroundTask()** 메서드의 정의를 보려면 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조 하세요.
 
 > [!IMPORTANT]
-> 앱과 동일한 프로세스에서 실행 되는 백그라운드 작업을 설정 하지 않으면 `entryPoint`. 앱에서 별도 프로세스에서 실행 되는 백그라운드 작업을 설정 `entryPoint` 네임 스페이스, '.', 백그라운드 작업 구현을 포함 하는 클래스의 이름 및 합니다.
+> 앱과 동일한 프로세스에서 실행 되는 백그라운드 작업을 설정 하지 않으면 `entryPoint`. 앱에서 별도 프로세스에서 실행 되는 백그라운드 작업을 설정 `entryPoint` 네임 스페이스, '.', 및 백그라운드 작업 구현을 포함 하는 클래스의 이름입니다.
 
 ```cs
 string entryPoint = "Tasks.ExampleBackgroundTaskClass";
@@ -121,16 +121,16 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 
 [BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다. [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) 방법으로 사용자에 대 한 자세한 정보에 대 한 백그라운드 작업에 대 한 설정을 제어할 수를 참조 하세요.
 
-- 메모리: 핵심 운영 체제 실행 되도록 백그라운드 작업을 사용할 수 있음을 보장은 앱의 메모리와 에너지 사용을 조정 합니다. [메모리 관리 Api](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) 를 사용 하 여 백그라운드 작업을 사용 하 여 메모리를 참조 하세요. 백그라운드 작업 사용 하 여 더 많은 메모리를 다른 앱이 포그라운드에서 실행 상태로 유지 하려면 운영 체제에 대 한 더 어려워집니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
-- CPU 시간: 백그라운드 작업 트리거 유형에 따라 가져오는 벽 시계 사용 시간으로 제한 됩니다.
+- 메모리: 운영 체제 실행 되도록 백그라운드 작업을 사용할 수 있음을 보장 하는 키가 앱의 메모리와 에너지 사용을 조정 합니다. [메모리 관리 Api](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) 를 사용 하 여 백그라운드 작업을 사용 하는 메모리 양을 확인 합니다. 백그라운드 작업 사용 하 여 더 많은 메모리, 다른 앱이 포그라운드에서 실행 상태로 유지 하려면 운영 체제에 대 한 더 어려워집니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
+- CPU 시간: 백그라운드 작업은 트리거 유형에 따라 가져오는 벽 시계 시간으로 제한 됩니다.
 
 백그라운드 작업에 적용되는 리소스 제약 조건은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-Windows 10부터 더 이상 필요는 백그라운드 작업을 활용 하기 위해 잠금 화면에 앱을 추가 사용자에 대 한.
+Windows 10부터 더 이상 필요는 사용자가 앱을 잠금 화면에 백그라운드 작업을 활용 하기 위해 추가.
 
-백그라운드 작업을 먼저 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 를 호출한 경우 **TimeTrigger** 를 사용 하 여 실행 됩니다.
+백그라운드 작업을 먼저 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 호출한 경우 **TimeTrigger** 를 사용 하 여 실행 됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 

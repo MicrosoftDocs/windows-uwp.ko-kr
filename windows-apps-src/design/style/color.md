@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929795"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3959901"
 ---
 # <a name="color"></a>색상
 
@@ -108,7 +108,7 @@ UWP 앱은 밝거나 어두운 응용 프로그램 테마를 사용할 수 있�
 
 :::row:::
     :::column:::
-        사용자 지정 컨트롤용 템플릿을 만들 때 하드 코드 색 값 보다는 테마 브러시를 사용 합니다. 이런 방식으로 앱은 모든 테마에 쉽게 적응할 수 있습니다.
+        사용자 지정 컨트롤에 대 한 템플릿을 만들 때 하드 코드 색 값 보다는 테마 브러시를 사용 합니다. 이런 방식으로 앱은 모든 테마에 쉽게 적응할 수 있습니다.
 
         For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
     :::column-end:::

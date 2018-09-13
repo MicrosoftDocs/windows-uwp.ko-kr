@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929283"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958783"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -58,7 +58,7 @@ ms.locfileid: "3929283"
 
 ### <a name="consistency"></a>일관성
 
-탐색은 사용자 경험과 일관되어야 합니다. [표준 컨트롤](#use-the-right-controls) 사용자가 친숙 한 아이콘에 대 한 표준 규칙을 사용 하 여, 아이콘과 위치는 탐색할 수 있도록 예측 가능 하 고 직관적인 사용자에 대 한 합니다.
+탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일 됩니다 탐색할 수 있도록 예측 가능 하 고 직관적인 사용자에 대 한 합니다.
 
 ![페이지 구성 요소 이미지](images/nav/page-components.svg)
 
@@ -170,7 +170,7 @@ ms.locfileid: "3929283"
     :::column:::
         ![프레임 이미지](images/nav/thumbnail-frame.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: [ **프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+    ::: 열 범위 = "2"::: **프레임** [](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
         With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
 :::row-end:::
@@ -179,7 +179,7 @@ ms.locfileid: "3929283"
     :::column:::
         ![탭 및 피벗 이미지](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: [ **위쪽 탐색 및 탭**](../controls-and-patterns/navigationview.md)
+    ::: 열 범위 = "2"::: **상단 탐색 및 탭** [](../controls-and-patterns/navigationview.md)
 
         Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
         
@@ -228,7 +228,7 @@ ms.locfileid: "3929283"
     :::column:::
         ![하이퍼링크 및 단추 이미지](images/nav/thumbnail-hyperlinks-buttons.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: [ **하이퍼링크**](../controls-and-patterns/hyperlinks.md)
+    ::: 열 범위 = "2"::: **하이퍼링크** [](../controls-and-patterns/hyperlinks.md)
 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::

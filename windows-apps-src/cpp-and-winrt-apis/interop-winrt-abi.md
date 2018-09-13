@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
 ms.openlocfilehash: b641591e7be23226edc354e02513d723fbe8afba
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3933024"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957043"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-the-abi"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 ABI 사이의 상호 운용성
 이번 항목에서는 SDK 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
@@ -238,8 +238,8 @@ int main()
 * [QueryInterface 함수](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [winrt:: attach_abi 함수](/uwp/cpp-ref-for-winrt/attach-abi)
 * [winrt::com_ptr 구조체 템플릿](/uwp/cpp-ref-for-winrt/com-ptr)
-* [면 함수](/uwp/cpp-ref-for-winrt/copy-from-abi)
-* [winrt::copy_to_abi 함수](/uwp/cpp-ref-for-winrt/copy-to-abi)
+* [copy_from_abi 함수](/uwp/cpp-ref-for-winrt/copy-from-abi)
+* [copy_to_abi 함수](/uwp/cpp-ref-for-winrt/copy-to-abi)
 * [winrt:: detach_abi 함수](/uwp/cpp-ref-for-winrt/detach-abi)
 * [winrt::get_abi 함수](/uwp/cpp-ref-for-winrt/get-abi)
 * [winrt::Windows::Foundation::IUnknown::as 멤버 함수](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)

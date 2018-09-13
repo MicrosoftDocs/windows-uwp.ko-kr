@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
 ms.openlocfilehash: 220c5c7395ed9388b02b74e0cbed5b913971bbba
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3932846"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964687"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -22,7 +22,7 @@ ms.locfileid: "3932846"
 
 C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT에서는 모든 표준과 호환되는 C++17 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. Windows SDK는 C++/WinRT를 포함하며, 버전 10.0.17134.0(Windows 10, 버전 1803)에서 도입되었습니다.
 
-C + + /winrt는 Microsoft의 권장된 대체는 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 언어 프로젝션 및 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). 전체 목록은 [항목에 대해 C + + WinRT](index.md#topics-about-cwinrt) 와 상호 운용에서 C + 이식 하는 방법에 대 한 정보를 포함 + CX 및 WRL 합니다.
+C + + /winrt는 Microsoft의 권장된 대체 합니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 언어 프로젝션 및 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). 전체 목록은 [항목에 대해 C + + WinRT](index.md#topics-about-cwinrt) 상호 운용 및에서 포팅, C + 모두에 대 한 정보를 포함 + CX 및 WRL 합니다.
 
 > [!IMPORTANT]
 > C++/WinRT에서 가장 중요하여 반드시 알고 있어야 할 두 가지 정보는 섹션 [C++/WinRT에 대한 SDK 지원](#sdk-support-for-cwinrt)과 섹션 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](#visual-studio-support-for-cwinrt-and-the-vsix)에 설명되어 있습니다.
@@ -41,9 +41,9 @@ C++/WinRT로 COM 스타일 프로그래밍을 이용하지 않고도 자체 표�
 ## <a name="visual-studio-support-for-cwinrt-and-the-vsix"></a>C++/WinRT에 대한 Visual Studio 지원 및 VSIX
 Visual Studio의 C++/WinRT 프로젝트 템플릿과 C++/WinRT MSBuild 속성 및 대상의 경우에는 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)을 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)에서 다운로드하여 설치하세요.
 
-Visual Studio 2017(버전 15.6 이상, 15.7 이상 권장) 및 Windows SDK 버전 10.0.17134.0(Windows 10 버전 1803)이 필요합니다. 설치 이미 하지 않은 경우에 Visual Studio 설치 관리자 내에서 **c + + 유니버설 Windows 플랫폼 도구** 옵션을 설치 해야 합니다. Windows **설정**에서 > **업데이트 \ 및 보안** > **개발자를 위한** **앱 테스트용 로드** 옵션 보다는 **개발자 모드** 옵션을 선택 합니다.
+Visual Studio 2017(버전 15.6 이상, 15.7 이상 권장) 및 Windows SDK 버전 10.0.17134.0(Windows 10 버전 1803)이 필요합니다. 설치 이미 하지 않은 경우에 Visual Studio 설치 관리자 내에서 **c + + 유니버설 Windows 플랫폼 도구** 옵션을 설치 해야 합니다. Windows **설정**에서 > **업데이트 \ & 보안** > **개발자를 위한** **앱 테스트용 로드** 옵션 보다는 **개발자 모드** 옵션을 선택 합니다.
 
-하면 다음 수 및 빌드, 만들거나 열, C + + /winrt Visual Studio에서 프로젝트와 배포 합니다. 또는 추가 하 여 기존 프로젝트를 변환할 수는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 해당 `.vcxproj` 파일.
+있습니다 다음 수 및 빌드, 만들거나 열, C + + WinRT Visual Studio에서 프로젝트를 배포 합니다. 또는 추가 하 여 기존 프로젝트를 변환할 수는 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 해당 `.vcxproj` 파일.
 
 ```xml
 <Project ...>
@@ -54,7 +54,7 @@ Visual Studio 2017(버전 15.6 이상, 15.7 이상 권장) 및 Windows SDK 버�
 
 속성 추가를 마쳤으면 이제 `cppwinrt.exe` 도구 호출을 포함해 프로젝트에 대한 C++/WinRT MSBuild 지원을 가져옵니다.
 
-때문에 C + + WinRT는 c++17 표준의 기능을 사용, 필요한 프로젝트 속성 **C/c + +** > **언어** > **c + + 언어 표준** > **ISO c++17 표준 (/ (/std:c++17 + + 17)** 입니다. 또한 **적합성 모드: 예(/permissive-)** 를 설정하여 코드가 표준을 더욱 따르도록 할 수도 있습니다.
+때문에 C + + WinRT는 c++17 표준의 기능을 사용, 필요한 프로젝트 속성 **C/c + +** > **언어** > **c + + 언어 표준** > **ISO c++17 표준 (/ (/std:c++17 + + 17)**. 또한 **적합성 모드: 예(/permissive-)** 를 설정하여 코드가 표준을 더욱 따르도록 할 수도 있습니다.
 
 알고 있어야 할 또 다른 프로젝트 속성은 **C/C++** > **일반** > **경고를 오류로 처리**입니다. 이 속성은 필요에 따라 **예(/WX)** 또는 **아니오(/WX-)** 로 설정하세요. 간혹 `cppwinrt.exe` 도구에서 생성된 소스 파일이 구현체가 추가될 때까지 경고를 생성하는 경우가 있습니다.
 

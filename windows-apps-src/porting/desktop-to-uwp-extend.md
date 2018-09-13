@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929771"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3956835"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
@@ -140,7 +140,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
 
 ### <a name="add-a-protocol-extension"></a>프로토콜 확장 추가
 
-**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일 열고이 확장을 추가 합니다.
+**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고이 확장을 추가 합니다.
 
 ```xml
 <Extensions>
@@ -313,7 +313,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 ### <a name="add-an-app-service-extension-to-the-packaging-project"></a>패키징 프로젝트에 앱 서비스 확장 추가
 
-패키징 프로젝트의 **package.appxmanifest** 파일을 열고에 앱 서비스 확장 추가 ``<Application>`` 요소입니다.
+패키징 프로젝트의 **package.appxmanifest** 파일을 열고 앱 서비스 확장을 추가 합니다 ``<Application>`` 요소입니다.
 
 ```xml
 <Extensions>
