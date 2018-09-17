@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c128bedd1c889f4c2dcf0565c7c10575eb75013
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958803"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3984294"
 ---
 # <a name="getting-paid"></a>지급 받기
 다음은 앱과 추가 기능 및 광고 수익에 대한 지급을 받는 데 필요한 중요한 정보입니다.

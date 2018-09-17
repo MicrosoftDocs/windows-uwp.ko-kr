@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83f2ab8a27810635b569d44961ff532ce3240e28
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3957547"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3987188"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "3957547"
 [앱 패키지를 업로드](upload-app-packages.md) 할 때 [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) 값은 앱용으로 예약한 이름과 일치해야 합니다. Microsoft Visual Studio를 사용하여 앱 패키지를 만들 경우 이 특성은 자동으로 채워집니다.
 
 > [!IMPORTANT]
-> 앱에 대 한 추가 이름을 예약할 수 있습니다 및 먼저 대시보드에서 앱을 만들 때 예약한 목록 대신에 게시 된 앱 버전 중 하나를 사용 하도록 선택할 수 있습니다. 그러나 여기에 입력 성 앱 [id 세부 정보](view-app-identity-details.md), 같은 **패키지 패밀리 이름 (PFN)** 중 일부에 주의 합니다. 이러한 값 일부 사용자에 게 표시 될 수 있습니다 하 고 여야 예약한 이름을 사용 하이 여가에 대 한 적절 한 인지 확인 하므로 변경 합니다.
+> 응용 프로그램에 대 한 추가 이름을 예약할 수 있습니다 및 먼저 대시보드에서 앱을 만들 때 예약한 목록 대신에 게시 된 앱 버전 중 하나를 사용 하도록 선택할 수 있습니다. 그러나 여기에 입력 성 앱 [id 세부 정보](view-app-identity-details.md), 같은 **패키지 패밀리 이름 (PFN)** 중 일부에 주의 합니다. 이러한 값 일부 사용자에 게 표시 될 수 있습니다 하 고 여야 예약한 이름을 사용 하이 여가에 대 한 적절 한 인지 확인 하므로 변경 합니다.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>새 이름을 예약하여 앱 만들기

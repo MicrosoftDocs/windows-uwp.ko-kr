@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958215"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3986242"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -30,7 +30,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 여기를 클릭 <a href="xamlcontrolsgallery:/item/NavigationView">앱을 열고 중인 NavigationView를 참조 하세요.</a> </p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하는 경우 여기를 클릭 <a href="xamlcontrolsgallery:/item/NavigationView">응용 프로그램을</a> 열고 실행 중인 NavigationView를 참조 하십시오. </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML 컨트롤 갤러리 앱 다운로드(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">소스 코드 다운로드(GitHub)</a></li>
@@ -270,7 +270,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 참조: [Flyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-디자인 및 방법: [플라이 아웃](dialogs-and-flyouts/flyouts.md) 
+디자인 및 사용 방법: [플라이 아웃](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>메뉴 플라이아웃
 사용자 현재 수행 중인 작업과 관련된 명령 또는 옵션 목록을 일시적으로 표시합니다.
@@ -290,7 +290,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 참조: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx), [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
 
-디자인 및 방법: [메뉴 및 상황에 맞는 메뉴](menus.md) 
+디자인 및 사용 방법: [메뉴 및 상황에 맞는 메뉴](menus.md) 
 
 샘플 코드: [XAML 상황에 맞는 메뉴 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620021)
 
@@ -299,7 +299,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 참조: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-디자인 및 방법: [대화 상자](dialogs-and-flyouts/dialogs.md) 
+디자인 및 사용 방법: [대화 상자](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>도구 설명
 요소에 대한 정보를 표시하는 팝업 창입니다. 
@@ -555,11 +555,11 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 ### <a name="navigationview"></a>NavigationView
 
-적응형 컨테이너 및 왼쪽된 탐색 창, 상단 탐색 및 탭 패턴을 구현 하는 유연한 탐색 모델입니다.
+융통성 있는 컨테이너 및 왼쪽된 탐색 창, 위쪽 탐색 및 탭 패턴을 구현 하는 유연한 탐색 모델
 
 참조: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-디자인 및 방법: [NavigationView 컨트롤 가이드](navigationview.md)
+디자인 및 사용 방법: [NavigationView 컨트롤 가이드](navigationview.md)
 
 ### <a name="splitview"></a>분할 보기
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e634b18fffc4f601f6512d6ceeed51efbe9c1886
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3960769"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981740"
 ---
 # <a name="using-lights-in-windows-ui"></a>Windows UI에 광원을 사용 하 여
 
@@ -78,7 +78,7 @@ CompositionLight 하 여 조명을 콘텐츠를 결정할 때 고려해 야 할 
 **주변 광원** | 장면에 비 주변 광원을 추가 모든 기존 빛 꺼집니다.  비 주변 광원의 대상으로 지정 되지 항목은 검게 표시 됩니다.  자연 스러운 방법으로 조명에 의해 대상이 아닌 주변 시각 효과 비추는 주변광 다른 조명와 함께에서 사용 합니다.
 **조명 수** | UI를 대상으로 모든 두 컴퍼지션 비 주변 조명을 조합에서 사용할 수 있습니다. 주변 광원; 제한 되지 않습니다. 발견 점과 원거리 광원 됩니다.
 **수명** | CompositionLight 수명 조건 발생할 수 있습니다 (예: 가비지 수집기는 사용 하기 전에 조명 개체를 재활용 될 수 있습니다).  응용 프로그램 수명을 관리 하는 데 멤버로 조명을 추가 하 여 광원에 대 한 참조를 유지 하는 것이 좋습니다.
-**변환** | 광원을 제대로 그릴 수 있도록 시각적 구조에 [원근 변형을](/design/layout/3-d-perspective-effects.md) 같은 효과 사용 하는 UI 위에 노드에서 배치 되어야 합니다.
+**변형** | 광원을 제대로 그릴 수 있도록 시각적 구조에 [원근 변형을](/design/layout/3-d-perspective-effects.md) 같은 효과 사용 하는 UI 위에 노드에서 배치 되어야 합니다.
 **대상 및 좌표 공간** | CoordinateSpace는 시각적 공간은 모든 조명 속성을 설정 해야 합니다. CompositionLight.Targets는 CoordinateSpace 트리 내에 있어야 합니다.
 
 ## <a name="lighting-properties"></a>조명 속성

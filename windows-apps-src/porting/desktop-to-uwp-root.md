@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ded8fb8a9d391ec48b46b0795b901dc403e1f30
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3962927"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3985910"
 ---
 # <a name="desktop-bridge"></a>데스크톱 브리지
 
@@ -74,7 +74,7 @@ Desktop App Converter는 앱의 패키지된 버전이 사용할 가상 파일 �
 
 :heavy_check_mark: 공용 COM 서버를 등록합니다.
 
-: heavy_check_mark: 앱을 실행 하는 데 사용할 수 있는 인증서를 생성 합니다.
+: heavy_check_mark: 응용 프로그램을 실행 하는 데 사용할 수 있는 인증서를 생성 합니다.
 
 :heavy_check_mark: 데스크톱 브리지 및 Microsoft Store 요구 사항에 대해 앱의 유효성을 검사합니다.
 

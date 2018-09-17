@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3959441"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3988926"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
@@ -29,7 +29,7 @@ Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보�
 
 ## <a name="xbox-live"></a>Xbox Live
 
-게임을 게시 하는 경우이 페이지에서 [Xbox Live 크리에이터 스 프로그램](http://xbox.com/developers/creators-program) 을 사용할 수 있습니다. 이렇게 하면 테스트 및 구성을 Xbox Live 기능을 시작 하 고 결국 Xbox Live 크리에이터 스 프로그램 게임을 게시할 수 있습니다.
+게임을 게시 하는 경우이 페이지에서 [Xbox Live 크리에이터 스 프로그램](http://xbox.com/developers/creators-program) 을 사용할 수 있습니다. 테스트 및 구성을 Xbox Live 기능을 시작 하 고 결국 Xbox Live 크리에이터 스 프로그램 게임을 게시할 수 있습니다.
 
 자세한 내용은 [Xbox Live 크리에이터 스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 하 고 [새 Xbox Live 크리에이터 스 프로그램 타이틀 만들기 및 테스트 환경에서 게시](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md)를 참조 하세요.
 
@@ -50,13 +50,13 @@ Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
-연결 된 입력 해야 앱 및 추가 기능에 대 한 소유권 정보에 액세스 하려면 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
+연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하려면 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
 
 자세한 내용은 [서비스에서 제품 권리 유형 관리](../monetize/view-and-grant-products-from-a-service.md)를 참조하세요.
 
 ## <a name="administrator-consent"></a>관리자 동의
 
-f 제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api 호출에 Azure AD 클라이언트 ID를 입력 합니다. 관리자를 해당 조직 부여 동의 테 넌 트의 모든 사용자를 대신해 제품에 대 한 앱을 구입할 수 있습니다.
+f 제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api 호출에 Azure AD 클라이언트 ID를 입력 합니다. 관리자를에 게 테 넌 트의 모든 사용자를 대신 하 여 제품의 조직 부여 동의 대 한 앱을 구입할 수 있습니다.
 
 자세한 정보는 [전체 테 넌 트에 대 한 동의 요청](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant)을 참조 하세요.
 
@@ -89,7 +89,7 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
 
 ## <a name="wnsmpns"></a>WNS/MPNS
 
-**WNS/MPNS** 섹션을 만들고 앱의 고객에 게 알림을 보낼 수 있도록 옵션을 제공 합니다. 
+**WNS/MPNS** 섹션을 만들고 앱의 고객에 게 알림을 보낼 수 있도록 하는 옵션을 제공 합니다. 
 
 > [!TIP]
 > UWP 앱에 대 한 대시보드의 **알림** 옵션을 사용 하는 것이 좋습니다. [고객 세그먼트](create-customer-segments.md)에서 정의한 기준을 충족 하는 Windows 10 고객의 대상 일부 또는이 기능은 모든 앱의 고객에 게 알림을 보낼 수 있습니다. 자세한 내용은 [앱의 고객에게 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.

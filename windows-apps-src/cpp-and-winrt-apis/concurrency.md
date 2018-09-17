@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
 ms.openlocfilehash: 85071fb28cb87c991e2f5ba7f64b681c6850c819
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961717"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3988544"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 동시성 및 비동기 작업
 > [!NOTE]
@@ -69,7 +69,7 @@ int main()
 C++/WinRT는 C++ 코루틴을 프로그래밍 모델에 통합하여 결과를 협조적으로 기다릴 수 있는 자연스러운 방법을 제공합니다. 사용자는 코루틴을 작성하여 고유의 Windows 런타임 비동기 작업을 생성할 수 있습니다. 아래 코드 예제에서는 **ProcessFeedAsync**가 코루틴입니다.
 
 > [!NOTE]
-> **Get** 함수가 존재 C + + /winrt 프로젝션 모든 C + 내에서 함수를 호출할 수 있도록 **winrt::Windows::Foundation::IAsyncAction**입력 + WinRT 프로젝트입니다. **가져오기** 는 실제 Windows 런타임 형식 **IAsyncAction**의 응용 프로그램 이진 인터페이스 (ABI) 표면 포함 되지 않으므로 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 인터페이스의 구성원으로 나열 된 함수를 찾지 않습니다.
+> **Get** 함수가 존재 C + + /winrt 프로젝션 모든 C + 내에서 함수를 호출할 수 있도록 **winrt::Windows::Foundation::IAsyncAction**입력 + WinRT 프로젝트. 실제 Windows 런타임 형식 **IAsyncAction**응용 프로그램 이진 인터페이스 (ABI) 표면의 일부가 아니기 **가져오기** 때문에 나열 됩니다 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 인터페이스의 멤버 함수를 찾지 않습니다.
 
 ```cppwinrt
 // main.cpp

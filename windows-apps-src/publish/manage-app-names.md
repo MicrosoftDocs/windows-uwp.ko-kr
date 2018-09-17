@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 이름 변경 앱 이름, 업데이트 응용 프로그램 이름, 게임, 제품 이름
 ms.localizationpriority: medium
 ms.openlocfilehash: f0d2c6f72e2f69f0b768af55f9bddeb9bb008027
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3964697"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3986874"
 ---
 # <a name="manage-app-names"></a>앱 이름 관리
 
@@ -24,9 +24,9 @@ ms.locfileid: "3964697"
 
 ## <a name="reserve-additional-names-for-your-app"></a>앱 이름을 추가로 예약
 
-같은 앱에 사용할 여러 앱 이름을 예약할 수 있습니다. 이 기능은 특히 앱을 여러 언어로 제공 중이고 언어에 따라 다른 이름을 사용하려는 경우 유용합니다. 또한 아래 설명 된 대로 앱의 이름을 변경 하기 위해 새 이름을 예약할 수 있습니다.
+같은 앱에 사용할 여러 앱 이름을 예약할 수 있습니다. 이 기능은 특히 앱을 여러 언어로 제공 중이고 언어에 따라 다른 이름을 사용하려는 경우 유용합니다. 또한 아래에 설명 된 대로 앱의 이름을 변경 하기 위해 새 이름을 예약할 수 있습니다.
 
-새 앱 이름을 예약 하려면 **더 많은 이름 예약** **앱 이름 관리** 페이지의 섹션에서 텍스트 상자를 찾습니다. 예약할 이름을 입력하고 **가용성 확인**을 클릭합니다. 이름을 사용할 수 있으면 **제품 이름 예약**을 클릭합니다. 원하는 경우 다음이 단계를 반복 하 여 여러 앱 이름을 예약할 수 있습니다.
+새 앱 이름을 예약, **앱 이름 관리** 페이지의 **더 많은 이름 예약** 섹션에서 텍스트 상자를 찾습니다. 예약할 이름을 입력하고 **가용성 확인**을 클릭합니다. 이름을 사용할 수 있으면 **제품 이름 예약**을 클릭합니다. 원하는 경우 다음이 단계를 반복 하 여 여러 앱 이름을 예약할 수 있습니다.
 
 > [!NOTE]
 > 앱 이름 예약에 대한 자세한 내용과 특정 이름을 사용할 수 없는 이유는 [이름을 예약하여 앱 만들기](create-your-app-by-reserving-a-name.md)를 참조하세요.

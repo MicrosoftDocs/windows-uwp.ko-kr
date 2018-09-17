@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3960151"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3987556"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
@@ -86,7 +86,7 @@ ms.locfileid: "3960151"
             * **내 앱을 무료로 표시**. 선택한 모든 시장에서 앱이 무료인 경우 이 확인란을 선택할 수 있는 옵션도 있습니다.
             * **동작 호출**. 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 광고의 동작 호출 단추를 **열기**, **재생**, **읽기**, **듣기** 또는 **쇼핑**으로 설정할 수 있습니다.  
 
-    * **사용자 지정**. 자신의 광고 디자인을 사용하려면 이 옵션을 선택합니다. 참고 이전 고객층을 선택한 경우 사용자 지정 창작 광고 사용 해야 합니다. 사용 가능한 각 광고 크기에 대해 다른 파일을 업로드할 수 있습니다. 파일은 다음 요구 사항 및 지침을 충족해야 합니다.
+    * **사용자 지정**. 자신의 광고 디자인을 사용하려면 이 옵션을 선택합니다. 참고 고객층을 선택한 경우 사용자 지정 창작 광고 사용 해야 합니다. 사용 가능한 각 광고 크기에 대해 다른 파일을 업로드할 수 있습니다. 파일은 다음 요구 사항 및 지침을 충족해야 합니다.
         * 각 파일은 .png 또는.jpg로 40KB 이하여야 합니다.
         * 광고 디자인은 [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595)에 지정된 요구 사항을 충족해야 합니다.
         * 광고 디자인의 콘텐츠는 홍보하는 앱과 관련이 있어야 합니다. 앱과 관련되지 않은 광고 디자인은 다른 앱에서 광고로 배포되지 않습니다.

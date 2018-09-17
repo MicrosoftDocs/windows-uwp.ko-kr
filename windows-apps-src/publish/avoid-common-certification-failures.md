@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 283856ad163d2e67078c61559f6f8ec667e92b87
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3960485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3987452"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
@@ -23,7 +23,7 @@ ms.locfileid: "3960485"
 이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요.
 
 > [!NOTE]
-> 모든 나열 된 요구 사항을 충족 하도록 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies) 검토 해야 합니다.
+> 나열 된 요구 사항을 모두 충족 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies) 검토 해야 합니다.
 
 -   완료된 앱만 제출합니다. 앱 설명을 사용하여 제공 예정인 기능을 언급할 수 있지만 앱에 불완전한 조항, 생성 중인 웹 페이지 링크 또는 앱이 불완전하다는 인상을 고객에게 주는 다른 사항이 앱에 포함되지 않도록 하세요.
 
