@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 89c021bb2c094aafc9b534acef9b009817669461
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3959919"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3989842"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 이벤트 발생
 > [!NOTE]
@@ -233,11 +233,11 @@ IToast 인터페이스에는 알림 유형을 설명하기 위해 검색할 수 
 
 ## <a name="to-program-the-javascript-app"></a>JavaScript 앱의 프로그래밍
 
-이제 단추를 방금 알림 메시지를 정의한 클래스를 사용 하도록 할 수 JavaScript 앱에 추가 수 있습니다. 이 작업을 수행 하 방금 만든 ToasterComponent 프로젝트에 참조를 추가 해야 했습니다. 솔루션 탐색기에서 toasterapplication으로 지정 프로젝트에 대 한 바로 가기 메뉴를 열고, 선택 **추가 &gt; 참조**, **새 참조 추가** 단추를 선택 합니다. 참조 추가 대화 상자의 왼쪽된 창에서 솔루션의 구성 요소 프로젝트를 선택 하 고 가운데 창에서 ToasterComponent을 선택 합니다. **확인** 단추를 선택합니다.
+이제 단추 알림 확인을 방금 정의한 클래스를 사용 하 여 JavaScript 앱에 추가 수 있습니다. 이 전에 방금 만든 ToasterComponent 프로젝트에 참조를 추가 해야 합니다. 솔루션 탐색기에서 toasterapplication으로 지정 프로젝트에 대 한 바로 가기 메뉴를 열고, 선택 **추가 &gt; 참조**, **새 참조 추가** 단추를 선택 합니다. 참조 추가 대화 상자의 왼쪽된 창에서 솔루션의 구성 요소 프로젝트를 선택 하 고 가운데 창에서 ToasterComponent를 선택 합니다. **확인** 단추를 선택합니다.
 
 솔루션 탐색기에서 toasterapplication으로 지정 프로젝트에 대 한 바로 가기 메뉴를 열고 하 고 **시작 프로젝트로 설정**를 선택 합니다.
 
-Default.js 파일의 끝 구성 요소를 호출 하 고 그에 따른 다시 호출 하는 함수를 포함 하는 네임 스페이스를 추가 합니다. 네임 스페이스를 알림 및 알림 완료 이벤트를 처리할 함수를 갖습니다. MakeToast 구현 Toaster 개체를 만듭니다, 그리고 이벤트 처리기를 등록 하 고 알림을 만듭니다. 지금 까지는 이벤트 처리기 그다지, 다음과 같이 합니다.
+Default.js 파일의 끝 구성 요소를 호출 하 고 의해 콜백 함수를 포함 하는 네임 스페이스를 추가 합니다. 네임 스페이스를 알림 및 알림 완료 이벤트를 처리할 함수를 갖습니다. MakeToast 구현 Toaster 개체를 만듭니다, 그리고 이벤트 처리기를 등록 하 고 알림을 만듭니다. 지금 까지는 이벤트 처리기 그다지, 다음과 같이 합니다.
 
 ```javascript
     WinJS.Namespace.define("ToasterApplication"), {
@@ -261,7 +261,7 @@ Default.js 파일의 끝 구성 요소를 호출 하 고 그에 따른 다시 �
     });
 ```
 
-단추에 makeToast 함수 듣지 해야 합니다. Default.html 단추 및 일부 공간 알림 메시지의 결과 출력을 포함 하도록 업데이트 합니다.
+단추에 makeToast 함수 듣지 해야 합니다. Default.html 단추 및 공간 알림 메시지의 결과 출력을 포함 하도록 업데이트 합니다.
 
 ```html
     <body>
@@ -273,7 +273,7 @@ Default.js 파일의 끝 구성 요소를 호출 하 고 그에 따른 다시 �
     </body>
 ```
 
-TypedEventHandler를 사용 하는 실현할 수 없는 경우 알림 단추를 클릭 하 고 로컬 컴퓨터에서 앱을 실행 하려면 수 이제 합니다. 하지만, 앱에서 아무 작업도 합니다. 그 이유를 확인 하려면는 ToastCompletedEvent 발생 하는 관리 코드를 디버그 해 보겠습니다. 프로젝트를 중지 하 고 메뉴 모음에서 선택 **디버그 &gt; Toaster 응용 프로그램 속성**합니다. **관리 전용** **디버거 형식** 을 변경 합니다. 메뉴 모음에서 선택 다시 **디버그 &gt; 예외**을 **공용 언어 런타임 예외**를 선택 합니다.
+TypedEventHandler를 사용 하는 실현할 수 없는 경우 알림 단추를 클릭 하 고 로컬 컴퓨터에서 앱을 실행 하려면 수 이제 합니다. 하지만, 앱에서 아무 작업도. 그 이유를 확인 하려면는 ToastCompletedEvent 발생 하는 관리 코드를 디버그 해 보겠습니다. 프로젝트를 중지 한 다음 메뉴 모음에서 선택 **디버그 &gt; Toaster 응용 프로그램 속성**합니다. **디버거 형식** 을 변경 **만 관리**합니다. 메뉴 모음에서 선택 다시 **디버그 &gt; 예외**을 **공용 언어 런타임 예외**를 선택 합니다.
 
 이제 앱을 실행 하 고 만들기 알림 단추를 클릭 합니다. 디버거 잘못 된 캐스팅 예외를 catch합니다. 해당 메시지 로부터 명확 하지는 않지만 해당 인터페이스에 대 한 프록시 없으므로이 예외가 발생 합니다.
 
@@ -287,7 +287,7 @@ TypedEventHandler를 사용 하는 실현할 수 없는 경우 알림 단추를 
 
 ![guid 생성기 도구](./images/guidgeneratortool.png)
 
-인터페이스 정의 돌아가서 다음 다음 예와 같이 IToaster 인터페이스 하기 바로 전에 새 GUID를 붙여넣습니다. (이 예제에서 GUID를 사용 하지 마세요. 모든 고유한 인터페이스 있어야는 고유한 GUID입니다.)
+인터페이스 정의 돌아가서 다음 다음 예와 같이 IToaster 인터페이스 직전 새 GUID를 붙여넣습니다. (이 예제에서 GUID를 사용 하지 마세요. 모든 고유한 인터페이스 있어야는 고유한 GUID입니다.)
 
 ```cpp
 [Guid("FC198F74-A808-4E2A-9255-264746965B9F")]
@@ -341,7 +341,7 @@ MIDL ToasterComponent.h, ToasterComponent_i.c, ToasterComponent_p.c, 및 dlldata
 
 ## <a name="to-compile-the-proxy-and-stub-code-into-a-dll"></a>프록시를 컴파일하고 DLL로 코드 스텁
 
-필수 파일 했으므로 DLL은 c + + 파일을 생성 하도록 컴파일할 수 있습니다. 가능한 한 쉽게이 확인 하려면 빌드 프록시 지원 하기 위해 새 프로젝트를 추가 합니다. Toasterapplication으로 지정 솔루션에 대 한 바로 가기 메뉴를 열고 다음 선택 **추가 > 새 프로젝트**합니다. **새 프로젝트** 대화 상자의 왼쪽된 창에서 **Visual c + + &gt; Windows &gt; 유니버설 Windows**, 가운데 창에서 **DLL (UWP 앱)을**선택 합니다. (C + + Windows 런타임 구성 요소 프로젝트를 아닌지 확인 합니다.) 프록시 프로젝트 이름을 하 고 **확인** 단추를 선택 합니다. 이러한 파일은 C# 클래스에서 변경 된 경우 사후 빌드 이벤트에 의해 업데이트 됩니다.
+필수 파일 했으므로 DLL은 c + + 파일을 생성 하도록 컴파일할 수 있습니다. 가능한 한 쉽게 만들기, 프록시 빌드를 지 원하는를 새 프로젝트를 추가 합니다. Toasterapplication으로 지정 솔루션에 대 한 바로 가기 메뉴를 열고 다음 선택 **추가 > 새 프로젝트**합니다. **새 프로젝트** 대화 상자의 왼쪽된 창에서 **Visual c + + &gt; Windows &gt; 유니버설 Windows**, 가운데 창에서 **DLL (UWP 앱)을**선택 합니다. (C + + Windows 런타임 구성 요소 프로젝트 아닌지 확인 합니다.) 프록시 프로젝트 이름을 하 고 **확인** 단추를 선택 합니다. 이러한 파일은 C# 클래스에서 변경 된 경우 사후 빌드 이벤트에 의해 업데이트 됩니다.
 
 기본적으로 프록시 프로젝트 헤더.h 파일 및 c + +.cpp 파일을 생성합니다. DLL MIDL에서 생성 된 파일에서 빌드되면 때문에.h 및.cpp 파일은 필요 하지 않습니다. 솔루션 탐색기에서 해당 바로 가기 메뉴를 열고 **제거**를 선택한 다음 삭제를 확인 합니다.
 
@@ -355,7 +355,7 @@ EXPORTS
     DllGetClassObject       PRIVATE
 ```
 
-프로젝트를 빌드할 경우 실패 합니다. 이 프로젝트를 올바르게 컴파일하려면 프로젝트는 컴파일하고 연결 하는 방법을 변경 해야 합니다. 솔루션 탐색기에서 프록시 프로젝트에 대 한 바로 가기 메뉴를 열고 **속성**을 선택 합니다. 속성 페이지를 다음과 같이 변경 합니다.
+프로젝트를 빌드할 실패 합니다. 이 프로젝트를 올바르게 컴파일하려면 프로젝트는 컴파일하고 연결 하는 방법을 변경 해야 합니다. 솔루션 탐색기에서 프록시 프로젝트에 대 한 바로 가기 메뉴를 열고 **속성**을 선택 합니다. 속성 페이지를 다음과 같이 변경 합니다.
 
 왼쪽된 창에서 선택 **C/c + + > 전처리기**, 오른쪽 창에서 다음 선택 **전처리기 정의**아래쪽 화살표 단추를 선택 하 고 **편집**을 선택 합니다. 이러한 정의 상자에 추가 합니다.
 
@@ -372,7 +372,7 @@ WIN32;_WINDOWS
 rpcrt4.lib;runtimeobject.lib
 ```
 
-이러한 라이브러리 목록 행에 직접 붙여 넣을지 않습니다. **편집** 상자를 사용 하 여 Visual Studio에서 MSBuild 올바른 추가 종속성을 유지 하 고 있는지 확인 합니다.
+이러한 라이브러리 목록 행에 직접 붙여 넣을 작업을 수행 합니다. **편집** 상자를 사용 하 여 Visual Studio에서 MSBuild 올바른 추가 종속성을 유지 하 고 있는지 확인 합니다.
 
 이러한 변경 내용을 했으면 **속성 페이지** 대화 상자에서 **확인** 단추를 선택 합니다.
 
@@ -385,7 +385,7 @@ rpcrt4.lib;runtimeobject.lib
 
 ## <a name="to-register-the-proxy-and-stub"></a>프록시 및 스텁을 등록
 
-Toasterapplication으로 지정 프로젝트의 package.appxmanifest에 대 한 바로 가기 메뉴를 열고 하 고 **연결**선택 합니다. 대화 상자에서 **XML 텍스트 편집기** 를 선택 하 고 **확인** 단추를 선택 합니다. Windows.activatableClass.proxyStub 확장 등록을 하는 Guid는 프록시에 기반을 제공 하는 일부 XML에 붙여 하겠습니다. .Appxmanifest 파일에서 사용 하 여 Guid를 찾으려면 ToasterComponent_i.c를 엽니다. 다음 예에서 것과 유사한 항목을 찾습니다. 또한 IToast, IToaster에 대 한 정의 인식 하 고 세 번째 인터페이스가-두 매개 변수가 있는 형식화 된 이벤트 처리기를: Toaster 및 알림 메시지. 이 Toaster 클래스에 정의 된 이벤트와 일치 합니다. IToast 및 IToaster Guid C# 파일의 인터페이스에 정의 된 Guid와 일치 하는지 확인 합니다. 형식화 된 이벤트 처리기 인터페이스 자동 생성 된 이기 때문에이 인터페이스의 GUID 자동 생성 된 이기도 합니다.
+Toasterapplication으로 지정 프로젝트의 package.appxmanifest에 대 한 바로 가기 메뉴를 열고 하 고 **연결**합니다. 대화 상자에서 **XML 텍스트 편집기** 를 선택 하 고 **확인** 단추를 선택 합니다. Windows.activatableClass.proxyStub 확장 등록을 하는 Guid는 프록시에 기반을 제공 하는 일부 XML에 붙여 하겠습니다. .Appxmanifest 파일에서 사용 하 여 Guid를 찾으려면 ToasterComponent_i.c를 엽니다. 다음 예에서 것과 유사한 항목을 찾습니다. 또한 IToast, IToaster에 대 한 정의 인식 하 고 세 번째 인터페이스가-두 매개 변수가 있는 형식화 된 이벤트 처리기: Toaster 및 알림 메시지. 이 Toaster 클래스에 정의 된 이벤트와 일치 합니다. IToast 및 IToaster Guid C# 파일의 인터페이스에 정의 된 Guid와 일치 하는지 확인 합니다. 형식화 된 이벤트 처리기 인터페이스는 자동으로 생성 이기 때문에이 인터페이스의 GUID 자동 생성 된 이기도 합니다.
 
 ```cpp
 MIDL_DEFINE_GUID(IID, IID___FITypedEventHandler_2_ToasterComponent__CToaster_ToasterComponent__CToast,0x1ecafeff,0x1ee1,0x504a,0x9a,0xf5,0xa6,0x8c,0x6f,0xb2,0xb4,0x7d);
@@ -395,7 +395,7 @@ MIDL_DEFINE_GUID(IID, IID___x_ToasterComponent_CIToast,0xF8D30778,0x9EAF,0x409C,
 MIDL_DEFINE_GUID(IID, IID___x_ToasterComponent_CIToaster,0xE976784C,0xAADE,0x4EA4,0xA4,0xC0,0xB0,0xC2,0xFD,0x13,0x07,0xC3);
 ```
 
-이제 우리 Guid, 추가 노드와 이름 확장의 package.appxmanifest에 붙여 넣고 복사한 다음 다시 포맷 합니다. 매니페스트 항목에는 다음 예제와 유사-하지만 다시 고유한 Guid를 사용 해야 합니다. XML의 클래스 Id GUID ITypedEventHandler2 동일 인지 확인 합니다. 이 GUID ToasterComponent_i.c에 나열 된 첫 번째 때문입니다. 여기서 Guid 대/소문자를 구분 하지 않습니다. IToast 및 IToaster Guid를 수동으로 다시 포맷, 대신 인터페이스 정의로 다시 돌아가 올바른 형식이 GuidAttribute 값을 가져올 수 있습니다. C + +에서는 주석에 형식이 잘못 GUID가 있습니다. 어떤 경우에 클래스 Id와 이벤트 처리기에 사용 되는 GUID 수동으로 다시 포맷 해야 합니다.
+이제 우리 Guid, 추가 노드와 이름 확장의 package.appxmanifest에 붙여 넣고 복사한 다음 다시 포맷 합니다. 매니페스트 항목에는 다음 예제와 유사-하지만 다시 고유한 Guid를 사용 해야 합니다. XML의 클래스 Id GUID ITypedEventHandler2 동일 인지 확인 합니다. 이 GUID ToasterComponent_i.c에 나열 된 첫 번째 때문입니다. 여기서 Guid 대/소문자를 구분 하지 않습니다. IToast 및 IToaster Guid를 수동으로 다시 포맷, 대신 인터페이스 정의로 이동 하 고 올바른 형식이 GuidAttribute 값을 가져올 수 있습니다. C + +에서는 주석에 형식이 잘못 GUID가 있습니다. 어떤 경우에 클래스 Id와 이벤트 처리기에 사용 되는 GUID 수동으로 다시 포맷 해야 합니다.
 
 ```cpp
       <Extensions> <!--Use your own GUIDs!!!-->
@@ -410,19 +410,19 @@ MIDL_DEFINE_GUID(IID, IID___x_ToasterComponent_CIToaster,0xE976784C,0xAADE,0x4EA
       </Extensions>
 ```
 
-예를 들어 리소스 노드의 피어 패키지 노드의 직계 자식으로 확장 XML 노드를 붙여 넣습니다.
+예를 들어 리소스 노드의 피어 및 패키지 노드의 직계 자식으로 확장 XML 노드를 붙여넣습니다.
 
 이 이동 하기 전에 중요 있는지 확인 합니다.
 
 -   ProxyStub 클래스 Id ToasterComponent\_i.c 파일에서 첫 번째 GUID로 설정 됩니다. 클래스 Id에 대 한이 파일에 정의 된 첫 번째 GUID를 사용 합니다. (이 일 수 ITypedEventHandler2에 대 한 GUID와 동일 합니다.)
--   경로는 프록시 이진 패키지 상대 경로가입니다. (이 연습에서는 proxies.dll은 ToasterApplication.winmd와 동일한 폴더에 있습니다.)
+-   경로는 프록시 이진 패키지 상대 경로가입니다. (이 연습에서는 proxies.dll는 ToasterApplication.winmd와 동일한 폴더에 임)
 -   Guid는 올바른 형식입니다. (이 오류가 발생 하기 쉽습니다.)
 -   매니페스트에 인터페이스 Id ToasterComponent\_i.c 파일에 Iid와 일치 합니다.
--   인터페이스 이름이 매니페스트의 고유있지 않습니다. 이러한 시스템에서 사용 하지 않으므로 값을 선택할 수 있습니다. 사용자가 정의한 인터페이스를 명확 하 게 일치 하는 인터페이스 이름을 선택 하는 것이 좋습니다. 생성 된 인터페이스에 대 한 이름을 생성 된 인터페이스 중 수행 해야 합니다. ToasterComponent\_i.c 파일 인터페이스 이름을 생성 하는 데 사용할 수 있습니다.
+-   인터페이스 이름이 매니페스트의 고유있지 않습니다. 이러한 시스템에서 사용 하지 않으므로 값을 선택할 수 있습니다. 정의 된 인터페이스를 명확 하 게 일치 하는 인터페이스 이름을 선택 하는 것이 좋습니다. 생성 된 인터페이스에 대 한 이름을 생성 된 인터페이스 중 수행 해야 합니다. ToasterComponent\_i.c 파일 인터페이스 이름을 생성 하는 데 사용할 수 있습니다.
 
-이제 솔루션을 실행 하려고 하면 오류가 발생 하는 proxies.dll 페이로드의 일부가 아닙니다. Toasterapplication으로 지정 하는 프로젝트에 **참조** 폴더에 대 한 바로 가기 메뉴를 열고 **참조 추가**선택 합니다. 프록시 프로젝트 옆의 확인란을 선택 합니다. 또한 ToasterComponent 옆의 확인란을 선택도 선택 되어 있는지 확인 합니다. **확인** 단추를 선택합니다.
+이제 솔루션을 실행 하려고 하면 오류가 발생 하는 proxies.dll 페이로드의 일부가 아닙니다. Toasterapplication으로 지정 하는 프로젝트에 **참조** 폴더에 대 한 바로 가기 메뉴를 열고 **참조 추가**선택 합니다. 프록시 프로젝트 옆에 있는 확인란을 선택 합니다. 또한 ToasterComponent 옆에 있는 확인란도 선택 되어 있는지 확인 합니다. **확인** 단추를 선택합니다.
 
-이제 프로젝트 만들어야 합니다. 프로젝트를 실행 하 고 알림 메시지를 만들 수 있는지 확인 합니다.
+프로젝트 만들어야 합니다. 프로젝트를 실행 하 고 알림 메시지를 만들 수 있는지 확인 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

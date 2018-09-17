@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3963455"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3990014"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
@@ -35,7 +35,7 @@ ms.locfileid: "3963455"
 선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 사용할 수 있습니다.
 
 >[!NOTE]
->[**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) 를 사용 하 여 UI 스레드에 액세스 하 여 작업 항목의 진행률을 표시 합니다.
+>[**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) 을 사용 하 여 UI 스레드에 액세스 하 고 작업 항목의 진행률을 표시 합니다.
 
 다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
 

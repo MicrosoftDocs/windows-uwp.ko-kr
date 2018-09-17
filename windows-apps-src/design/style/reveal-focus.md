@@ -14,11 +14,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961739"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3989954"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
@@ -36,7 +36,7 @@ ms.locfileid: "3961739"
 
 ![Visual 표시](images/traveling-focus-fullscreen-light-rf.gif)
 
-여기서 사용자 기울이지 못할 수 전체 TV 화면에 완전히 집중 10 피트 시나리오에서 특히 유용 합니다. 
+사용자 수 기울이지 못할 수 없는 전체 TV 화면에 완전히 집중 10 피트 시나리오에서 특히 유용 합니다. 
 
 ## <a name="examples"></a>예
 
@@ -67,7 +67,7 @@ ms.locfileid: "3961739"
     }
 ```
 
-**FocusVisualKind** 속성을 설정 하면 시스템은 자동으로 포커스 표시 효과 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본 값)으로 설정 되는 모든 컨트롤에 적용 합니다. 
+**FocusVisualKind** 속성을 설정 하면 시스템 해당 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본 값)로 설정 하는 모든 컨트롤에 포커스 표시 효과 자동으로 적용 합니다. 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>기본적으로 포커스 표시에 없는 이유는? 
 알 수 있듯이 앱이 Xbox에서 실행 중임을 감지할 때 포커스 표시를 켜는 상당히 쉽습니다. 그렇다면 왜 시스템에서 자동으로 켜지지 않는 것일까요? 포커스 표시는 포커스 화면 효과의 크기를 늘리기, 때문에 UI 레이아웃 문제는 발생할 수 있습니다. 경우에 따라 앱에 대 한 최적화 하기 위해 포커스 표시 효과 사용자 지정 합니다.

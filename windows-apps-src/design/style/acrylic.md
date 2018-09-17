@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958455"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3989984"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -77,7 +77,7 @@ ms.locfileid: "3958455"
 
 [NavigationView](../controls-and-patterns/navigationview.md)는 앱에 탐색을 추가하기 위한 새로운 공통 컨트롤이며 시각적 디자인에 아크릴이 포함되어 있습니다. NavigationView의 창은 기본 콘텐츠와 함께 나란히 창을 여는 경우 배경 아크릴을 표시하며, 창이 오버레이로 열리는 경우 자동으로 인앱 아크릴로 전환됩니다.
 
-앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 상대적으로 반투명 아크릴을 사용 하는 것이 좋습니다.
+앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 비교적 투명 한 아크릴을 사용 하는 것이 좋습니다.
  - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
  - 창이 주 앱 콘텐츠와 함께 나란히 열리는 경우 [60% 배경 아크릴](#acrylic-theme-resources)이어야 합니다.
 
@@ -106,7 +106,7 @@ ms.locfileid: "3958455"
 ![전체 배경으로 아크릴을 사용한 계산기 유틸리티 앱](images/acrylic_app-pattern_full.png)
 
 > [!Note]
-> 아크릴 표면 렌더링 GPU 많이 배터리 사용 시간을 단축 하 고 장치 전력 소비를 높일 수 있는입니다. 아크릴 효과 장치가 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 있습니다 비활성화 자동으로 선택 합니다.
+> 아크릴 표면 렌더링 GPU 많이 배터리 사용 시간을 단축 하 고 장치 전력 소비를 높일 수 있는입니다. 아크릴 효과 장치 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 있습니다 비활성화 자동으로 선택 합니다.
 
 
 ## <a name="acrylic-blend-types"></a>아크릴 혼합 유형

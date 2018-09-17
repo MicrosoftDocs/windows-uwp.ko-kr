@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3963279"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3990178"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
@@ -32,10 +32,10 @@ ms.locfileid: "3963279"
 
 앱에 대한 [패키지 플라이트](package-flights.md)를 만든 경우 패키지 플라이트 중 하나에서 패키지를 복사하는 옵션이 포함된 드롭다운이 표시됩니다. 끌어오려는 패키지가 있는 패키지 플라이트를 선택합니다. 그런 다음 해당 패키지를 일부 또는 전부 선택하여 이 제출에 포함할 수 있습니다.
 
-유효성을 검사 하는 동안 패키지를 사용 하 여 오류를 감지 하는 경우 잘못 된 것을 알 수 있도록 메시지를 표시 하겠습니다. 해야 하는 패키지를 제거, 문제를 해결 한 후 다시 업로드 해야 합니다. 문제를 일으킬 수 있지만 제출을 계속하지 못하게 차단하지는 않는 정보를 알리는 경고가 표시될 수도 있습니다.
+유효성을 검사 하는 동안 패키지를 사용 하 여 오류를 감지 하는 경우 잘못 된 것을 알 수 있도록 메시지를 표시 했습니다. 해야 하는 패키지를 제거, 문제를 해결 한 후 다시 업로드 해야 합니다. 문제를 일으킬 수 있지만 제출을 계속하지 못하게 차단하지는 않는 정보를 알리는 경고가 표시될 수도 있습니다.
 
 
-## <a name="device-family-availability"></a>디바이스 패밀리 가용성
+## <a name="device-family-availability"></a>장치 패밀리 가용성
 
 패키지가 성공적으로 업로드되면 **장치 패밀리 가용성** 섹션에 특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지를 등급순으로 나타내는 표가 표시됩니다. 이 섹션에서는 특정 Windows 10 장치 패밀리의 고객에게 제출을 제공할 것인지도 선택할 수 있습니다.
 

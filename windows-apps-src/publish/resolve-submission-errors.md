@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3964363"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3990218"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 
@@ -23,13 +23,13 @@ ms.locfileid: "3964363"
 
 ## <a name="uwp-apps"></a>UWP 앱
 
-UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어용으로 생성한 .appxupload 파일이 없는 경우 전처리 동안 오류가 나타날 수 있습니다. 앱의 패키지 파일을 만들 때 [Visual Studio를 사용 하 여 UWP 앱 패키지](../packaging/packaging-uwp-apps.md) 의 단계를 수행 하 고만 제출, appx 또는.appxbundle가 아닌의 [패키지](upload-app-packages.md) 페이지에서.appxupload 파일을 업로드 해야 합니다.
+UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어용으로 생성한 .appxupload 파일이 없는 경우 전처리 동안 오류가 나타날 수 있습니다. 앱의 패키지 파일을 만들 때 [Visual Studio를 사용 하 여 UWP 앱 패키지](../packaging/packaging-uwp-apps.md) 의 단계를 수행 하 고만 제출, appx 또는.appxbundle가 아닌 [패키지](upload-app-packages.md) 페이지에서.appxupload 파일을 업로드 해야 합니다.
 
 컴파일 오류가 표시되면 릴리스 모드에서 응용 프로그램을 성공적으로 빌드할 수 있는지 확인합니다. 자세한 내용은 [.NET 네이티브 내부 컴파일러 오류](http://go.microsoft.com/fwlink/p/?LinkID=613098)를 참조하세요.
 
 ## <a name="desktop-application"></a>데스크톱 응용 프로그램
 
-Win32 및 UWP 모두 이진 파일을 포함 하는 패키지를 제출 하려는 경우 Visual Studio 2017 업데이트 4에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만들 수 있는지 확인 합니다. UWP 프로젝트 템플릿을 사용 하 여 패키지를 만들 수는 패키지를 스토어 또는 테스트용으로 로드, 다른 Pc 제출 수 없습니다. 패키지를 성공적으로 게시, 경우에 사용자의 PC에서 예기치 않은 방식으로 작동할 수 있습니다. 자세한 내용은 [Visual Studio (데스크톱 브리지)를 사용 하 여 앱 패키지]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조 하세요.
+Win32 및 UWP 모두 이진 파일을 포함 하는 패키지를 제출 하려는 경우 Visual Studio 2017 업데이트 4에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만들 수 있는지 확인 합니다. UWP 프로젝트 템플릿을 사용 하 여 패키지를 만들 수 하는 패키지를 스토어 또는 테스트용으로 로드, 다른 Pc를 제출할 수 없습니다. 성공적으로 패키지를 게시 하는 경우에 사용자의 PC에서 예기치 않은 방식으로 작동할 수 있습니다. 자세한 내용은 [Visual Studio (데스크톱 브리지)를 사용 하 여 앱 패키지]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조 하세요.
 
 ## <a name="windows-phone-apps"></a>Windows Phone 앱
 
