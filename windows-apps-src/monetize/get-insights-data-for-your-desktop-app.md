@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 사이트
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3990296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015268"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 
-[Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)을 추가 하는 데스크톱 응용 프로그램에 대 한 메트릭을 상태 데이터와 관련 된 정보를 가져오려면 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다. 이 데이터는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에서 사용할 수도 있습니다.
+[Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)을 추가 하는 데스크톱 응용 프로그램에 대 한 상태 메트릭 데이터와 관련 된 정보를 가져오려면 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다. 이 데이터는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에서 사용할 수도 있습니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -68,7 +68,7 @@ Authorization: Bearer <your access token>
 
 | 값      | 유형   | 설명                  |
 |------------|--------|-------------------------------------------------------|
-| 값      | array  | 앱에 대 한 인 사이트 데이터를 포함 된 개체의 배열입니다. 각 개체의 데이터에 대 한 자세한 내용은 아래 [통찰력 값](#insight-values) 섹션을 참조 하세요.                                                                                                                      |
+| 값      | array  | 앱에 대 한 인 사이트 데이터를 포함 하는 개체의 배열입니다. 각 개체의 데이터에 대 한 자세한 내용은 아래 [통찰력 값](#insight-values) 섹션을 참조 하세요.                                                                                                                      |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                 |
 
 
@@ -79,8 +79,8 @@ Authorization: Bearer <your access token>
 | 값               | 유형   | 설명                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | 제품 ID를 검색 한 인 사이트 데이터 데스크톱 응용 프로그램입니다.     |
-| insightDate                | string | 특정 메트릭의 변경을 식별 하는 날짜입니다. 이 날짜 크게 증가 감지 하는 주의 끝을 나타내는 또는 그 전에 주에 비해 메트릭이 감소 합니다. |
-| 데이터 형식     | string | 이 정보는 일반 분석 영역을 지정 하는 문자열입니다. 현재이 메서드는 **상태**만 지원합니다.    |
+| insightDate                | string | 특정 메트릭 변경을 식별 하는 날짜입니다. 이 날짜는 크게 증가 감지 하는 요일 끝을 나타내는 또는 그 전에 주에 비해 메트릭이 감소 합니다. |
+| 데이터 형식     | string | 이 정보는 일반 분석 영역을 지정 하는 문자열입니다. 현재이 메서드는 **상태**만 지원 합니다.    |
 | insightDetail          | array | 하나 이상의 [InsightDetail 값](#insightdetail-values) 현재 통찰력에 대 한 세부 정보를 나타내는 합니다.    |
 
 
@@ -88,14 +88,14 @@ Authorization: Bearer <your access token>
 
 | 값               | 유형   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | 현재 통찰력 또는 현재 차원에 설명 하는 메트릭을 나타내는 문자열입니다. 현재이 메서드는 **적중 횟수**값만 지원합니다.  |
-| SubDimensions         | array |  통찰력에 대 한 단일 메트릭을 설명 하는 하나 이상의 개체입니다.   |
-| PercentChange            | string |  메트릭은 전체 고객 기반에서 변경 된 백분율입니다.  |
-| DimensionName           | string |  현재 차원에 설명 된 메트릭의 이름입니다. **EventType**, **시장**, **DeviceType**및 **PackageVersion**을 예로 들 수 있습니다.   |
-| DimensionValue              | string | 현재 차원에 설명 되어 있는 메트릭의 값입니다. 예를 들어 **DimensionName** **EventType**인 경우에 **크래시** 또는 **중단** **DimensionValue** 수 있습니다.   |
+| FactName           | string | 현재 통찰력 또는 현재 차원에 설명 하는 메트릭을 나타내는 문자열입니다. 현재이 메서드는 **적중 횟수**값만 지원 합니다.  |
+| SubDimensions         | array |  단일 메트릭은 통찰력을 설명 하는 하나 이상의 개체입니다.   |
+| PercentChange            | string |  전체 고객 기반에 걸쳐 변경 된 메트릭을 백분율입니다.  |
+| DimensionName           | string |  현재 차원에 설명 된 메트릭의 이름입니다. **EventType**, **지역/국가**, **DeviceType**및 **PackageVersion**을 예로 들 수 있습니다.   |
+| DimensionValue              | string | 현재 차원에 설명 된 메트릭의 값입니다. 예를 들어 **DimensionName** **EventType**인 경우에 **크래시** 또는 **중단** **DimensionValue** 수 있습니다.   |
 | FactValue     | string | 통찰력은 감지 된 날짜에 메트릭의 절대 값입니다.  |
 | 방향 | string |  방향 변경 내용 (**양수** 또는 **음수**)입니다.   |
-| Date              | 문자열 |  현재 통찰력 또는 현재 차원 관련 된 변경 내용을 확인 하는 날짜입니다.   |
+| Date              | 문자열 |  현재 통찰력 또는 현재 차원 관련 된 변경 내용을 식별 하는 날짜입니다.   |
 
 ### <a name="response-example"></a>응답 예제
 

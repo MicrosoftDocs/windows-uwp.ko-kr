@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015853"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>2018 년 9 월 Windows 개발자 문서의의 새로운 기능
 
@@ -42,13 +42,13 @@ Windows UI 라이브러리에 대 한 자세한 내용은 참조 [NuGet 패키�
 
 ## <a name="developer-guidance"></a>개발자 지침
 
-### <a name="how-blur-effects-work"></a>어떻게 효과 작업 흐림 효과
+### <a name="how-blur-effects-work"></a>효과 작업을 어떻게 흐림
 
-우리의 작성자 esteemed Mike Jacobs 중 하나는 일련의 중간의 문서에서는 사진 앱 및 게임 디자인 비전에서 흐림 효과 대 한 시작 했습니다. 이 흔한 시각 효과 대 한 자세히 알고 싶은 경우 [비전 및 사진에 첫 번째 문서](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) 를 확인 하 고 [앤티앨리어싱을 그래픽에서 두 번째.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+우리의 작성자는 esteemed Mike Jacobs 중 하나는 일련의 중간의 문서에서는 사진 앱 및 게임 디자인 비전에서 흐림 효과 대 한 시작 했습니다. 이 흔한 시각 효과 대 한 자세히 알고 싶은 경우 [비전 및 사진에 첫 번째 문서](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) 를 확인 하 고 [앤티앨리어싱을 그래픽에서 두 번째.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![중인 흐림](images/blur-example.jpg)
 
-### <a name="contributing-guidance"></a>지침에 기여
+### <a name="contributing-guidance"></a>영향을 주는 지침
 
 UWP 설명서에 대 한 [영향을 주는 지침](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) 업데이트 했습니다. 이 새로운 지침 우리의 문서에 기여를 외부에 대 한 기대와 워크플로 설명합니다.
 
@@ -56,7 +56,7 @@ UWP 설명서에 대 한 [영향을 주는 지침](https://github.com/MicrosoftD
 
 ### <a name="one-dev-question"></a>개발자 질문
 
-개발자 질문 하나 동영상 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 다룹니다. 다음은 최신 질문을 검토 했습니다!
+개발자 질문 하나 동영상 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 설명합니다. 최신 질문을 검토 하는 다음과 같습니다.
 
 Aaron Gustafson:
 

@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3982184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019537"
 ---
 # <a name="reveal-highlight"></a>강조
 
@@ -134,8 +134,8 @@ ms.locfileid: "3982184"
 
 
 이러한 효과는 두 가지 브러시로 정의됩니다. 
-* **RevealBorderBrush** 에 의해 정의 테두리 표시
-* 가리켜서 표시 **RevealBackgroundBrush** 에 의해 정의 됩니다.
+* 테두리 표시 **RevealBorderBrush** 에 의해 정의
+* 가리켜서 표시 **RevealBackgroundBrush** 에 의해 정의
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -259,14 +259,14 @@ ms.locfileid: "3982184"
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>사용자 지정 컨트롤에 표시 효과 미세 조정 
 
-사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용할 때의 효과 최적화할 이러한 팁 수 있습니다.
+사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 하는 경우 효과 최적화 이러한 팁 수 있습니다.
  
 * 근처에 있는 높이나 너비(특히 목록에서)가 맞지 않는 크기의 항목에서: 테두리 접근 동작을 제거하고 테두리가 가리켜서 표시 시에만 표시되도록 합니다.
 * 빈번하게 사용할 수 없는 상태로 전환되는 명령 항목의 경우: 요소 백플레이트의 테두리 접근 브러시뿐만 아니라 상태를 강조하는 테두리 또한 배치합니다.
 * 맞닿을 정도로 근접한 명령 요소의 경우: 두 개의 요소 사이에 여백을 1px 추가합니다. 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
-### <a name="do"></a>수행 합니다.
+### <a name="do"></a>이 작업을 수행 합니다.
 - 사용자가 여러 조치를 취할 수 있는 요소에 표시 사용(CommandBars, 탐색 메뉴)
 - 기본적으로 시각적 구분 기호가 없는 대화형 요소를 그룹화하는 데 표시를 사용하지 않음(목록, 리본)
 - 대화형 요소의 밀도가 높은 영역에 표시 사용(명령 시나리오)

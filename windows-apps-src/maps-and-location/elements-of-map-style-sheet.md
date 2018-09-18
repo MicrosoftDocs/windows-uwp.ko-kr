@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
 ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019299"
 ---
 # <a name="map-style-sheet-reference"></a>지도 스타일 시트 참조
 
@@ -54,7 +54,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 <a id="entries" />
 
 ## <a name="entries"></a>항목
-이 표는 ">" 문자를 사용하여 입력 계층의 수준을 나타냅니다.  또한 어떤 버전의 Windows 각 항목을 지원 하 고이 무시 하는 보여 줍니다.
+이 표는 ">" 문자를 사용하여 입력 계층의 수준을 나타냅니다.  또한 어떤 버전의 Windows 각 항목을 지원 하며,이 무시 하는 보여 줍니다.
 
 | 빌드 | Windows 릴리스 이름 |
 |-------|----------------------|
@@ -73,7 +73,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 비즈니스 또는 흥미로운 포인트가 집중된 영역입니다. |
 | >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 묘지 포괄 하는 영역입니다. |
 | >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 대륙 영역의 레이블입니다. |
-| >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 학교 및 교육 다른 기능을 포괄 하는 영역입니다. |
+| >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 학교 및 교육 다른 기능을 포함 하는 영역입니다. |
 | >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 토착 개인적 예약을 포괄 하는 영역입니다. |
 | >>> industrial               | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 산업 목적에 사용 되는 영역입니다. |
 | >>> island                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 섬 영역의 레이블입니다. |
@@ -101,7 +101,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | >>> pointOfInterest          | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 관심 있는 모든 위치를 나타내는 아이콘. |
 | >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 비즈니스 locaiton를 나타내는 아이콘. |
 | >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 박물관, zoos 등과 같은 여행자 명소를 나타내는 아이콘. |
-| >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 커뮤니티에 일반적으로 사용의 위치를 나타내는 아이콘입니다. |
+| >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 커뮤니티 일반적으로 사용의 위치를 나타내는 아이콘입니다. |
 | >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 학교 및 기타 교육을 나타내는 아이콘 위치와 관련이 있습니다. |
 | >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 극장, 시네마 및 등과 같은 엔터테인먼트 장소를 나타내는 아이콘. |
 | >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 주차, 은행, 사례를 살펴보자면 등과 같은 필수 서비스를 나타내는 아이콘. |
@@ -143,7 +143,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | >> water                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 물처럼 보이는 모든 것. 바다 및 물결이 포함됩니다. |
 | >>> river                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 강, 물결 또는 기타 수로.  선 또는 다각형일 수 있으며 강이 아닌 수공간에 연결될 수 있습니다. |
 | > routeMapElement            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 라우팅 관련된 항목 |
-| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 라우트 관련 항목입니다. |
+| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 선 라우트 관련 항목입니다. |
 | >>> drivingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 운전 경로 나타내는 줄. |
 | >>> scenicRoute              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 멋진 운전 경로 나타내는 줄. |
 | >>> walkingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 walking 경로 나타냅니다. |
@@ -221,7 +221,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | borderOutlineColor           | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 두 번째 또는 채워진 테두리 선의 색. |
 | borderStrokeColor            | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 테두리의 기본 선 색상. |
 | borderVisible                | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  |
-| borderWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   | 양 테두리의 스트로크 됩니다. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
+| borderWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   | 테두리의 스트로크는 크기를 조정 하는 금액입니다. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 
 <a id="pointstyle" />
 

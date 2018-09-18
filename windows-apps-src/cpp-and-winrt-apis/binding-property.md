@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: bdf4d3ff17dcdf51dba2e37929228560e2e58fb5
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015305"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이번 항목에서는 C++/WinRT에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법에 대해서 설명합니다.
@@ -51,9 +51,9 @@ namespace Bookstore
 > [!NOTE]
 > 보기 모델 클래스&mdash;사실, 응용 프로그램에서 선언 하는 모든 런타임 클래스&mdash;기본 클래스에서 파생 되지 필요 합니다. 위에서 선언한 **BookSku** 클래스의 예로 나와 있습니다. 인터페이스를 구현 하지만 모든 기본 클래스에서 파생 하지 않습니다.
 >
-> 응용 프로그램에서 선언 하는 모든 런타임 클래스는 ** 해당 기본에서 파생 클래스 이라고는 *구성 가능한* 클래스입니다. 한 composable 클래스 주변 제약 조건이 있습니다. 제출의 유효성을 검사 하려면 Microsoft Store 및 Visual Studio에서 사용 하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과 하려면 응용 프로그램에 대 한 (및 따라서 응용 프로그램을 Microsoft Store에 성공적으로 수집 되려면), composable 클래스 해야 합니다. 궁극적으로 Windows 기본 클래스에서 파생 됩니다. 상속 계층의 루트에 매우 클래스는 네임 스페이스로 시작 형식이 되어야 하는 의미 합니다. 기본 클래스에서 런타임 클래스를 파생 해야 하는 경우&mdash;에서 파생 시키는 보기 모델의 모든 **BindableBase** 클래스를 구현 하는 등&mdash;다음 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생 시킬 수 있습니다.
+> 기본에서 응용 프로그램에서 선언 하는 모든 런타임 클래스를 파생 하 *는* 클래스 이라고는 *구성 가능한* 클래스입니다. 한 구성 가능한 클래스 주변 제약 조건이 있습니다. 제출의 유효성을 검사 하려면 Microsoft Store 및 Visual Studio에서 사용 하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과 하려면 응용 프로그램에 대 한 (및 따라서 응용 프로그램을 Microsoft Store에 성공적으로 수집 되려면), composable 클래스 해야 합니다. 궁극적으로 Windows 기본 클래스에서 파생 됩니다. 상속 계층의 루트에 매우 클래스는 네임 스페이스로 시작 형식이 되어야 하는 의미 합니다. 기본 클래스에서 런타임 클래스를 파생 해야 하는 경우&mdash;에서 파생 시키는 보기 모델의 모든 **BindableBase** 클래스를 구현 하는 등&mdash;다음 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생 시킬 수 있습니다.
 >
-> 보기 모델은 보기의 추상화 및 보기 (XAML 태그)에 직접 바인딩되어 하므로 합니다. 데이터 모델 데이터의 추상화 이며 보기 모델 에서만에서 사용 있으며 XAML에 직접 연결 되지 않습니다. 따라서 런타임 클래스 아니라 하지만 c + + 구조체 또는 클래스 데이터 모델을 선언할 수 있습니다. 있지만 MIDL, 선언할 필요가 없습니다 하 고 원하는 모든 상속 계층을 사용 하도록 합니다.
+> 보기 모델은 보기의 추상화 및 보기 (XAML 태그)에 직접 바운딩된 하므로 합니다. 데이터 모델의 데이터를 추상화 이며 보기 모델 에서만에서 사용 있으며 XAML에 직접 연결 되지 않습니다. 따라서 런타임 클래스 아니라 하지만 c + + 구조체 또는 클래스 데이터 모델을 선언할 수 있습니다. 있지만 MIDL, 선언할 필요가 없습니다 하 고 원하는 모든 상속 계층을 사용 하도록 합니다.
 
 파일을 저장하고 프로젝트를 빌드합니다. 빌드 과정에서 `midl.exe` 도구가 실행되어 런타임 클래스를 설명하는 Windows 런타임 메타데이터 파일(`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`)을 생성합니다. 그런 다음 `cppwinrt.exe` 도구가 실행되어 런타임 클래스를 작성하거나 사용하도록 지원하는 소스 코드 파일을 생성합니다. 소스 코드 파일에는 IDL로 선언한 **BookSku** 런타임 클래스의 구현을 시작할 수 있는 스텁이 포함됩니다. 이 스텁이 `\Bookstore\Bookstore\Generated Files\sources\BookSku.h`와 `BookSku.cpp`입니다.
 
@@ -146,7 +146,7 @@ namespace Bookstore
 }
 ```
 
-저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 해당 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 방법에서 `BookstoreViewModel.h`을 포함 시킬 것 `BookSku.h`, 구현 체 형식 (**winrt::Bookstore::implementation::BookSku**)를 선언 합니다. 및 제거 하 여 기본 생성자를 복원 하에서는 `= delete`.
+저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`를 `Generated Files` 폴더에서 프로젝트 폴더로 복사한 후 프로젝트에 추가합니다. 해당 파일을 열고 아래와 같이 런타임 클래스를 구현 합니다. 참고 어떻게에서 `BookstoreViewModel.h`을 포함 시킬 것 `BookSku.h`, 구현 체 형식 (**winrt::Bookstore::implementation::BookSku**)를 선언 합니다. 제거 하 여 기본 생성자를 복원 하에서는 `= delete`.
 
 ```cppwinrt
 // BookstoreViewModel.h
@@ -192,7 +192,7 @@ namespace winrt::Bookstore::implementation
 > `m_bookSku` 형식은 프로젝션된 형식(**winrt::Bookstore::BookSku**)이며, **make**와 함께 사용하는 테플릿 매개 변수는 구현체 형식(**winrt::Bookstore::implementation::BookSku**)입니다. 그렇다 하더라도 **make**는 프로젝션된 형식 인스턴스를 반환합니다.
 
 ## <a name="add-a-property-of-type-bookstoreviewmodel-to-mainpage"></a>**BookstoreViewModel** 형식의 속성을 **MainPage**에 추가
-`MainPage.idl`을 열고 메인 UI 페이지를 나타내는 런타임 클래스를 선언합니다. 가져오기 문을 추가하여 `BookstoreViewModel.idl`을 가져온 후 **BookstoreViewModel** 형식의 읽기 전용 속성(MainViewModel)을 추가합니다. 또한 **MyProperty** 속성을 제거 합니다. 또한 합니다 `import` 지시문 아래 목록에 있습니다.
+`MainPage.idl`을 열고 메인 UI 페이지를 나타내는 런타임 클래스를 선언합니다. 가져오기 문을 추가하여 `BookstoreViewModel.idl`을 가져온 후 **BookstoreViewModel** 형식의 읽기 전용 속성(MainViewModel)을 추가합니다. 또한 **MyProperty** 속성을 제거 합니다. 또한 합니다 `import` 지시문 아래 목록에서.
 
 ```idl
 // MainPage.idl
@@ -208,7 +208,7 @@ namespace Bookstore
 }
 ```
 
-파일을 저장합니다. 프로젝트는 순간 완료 될 때까지 빌드 없습니다 수 있지만 **MainPage** 런타임 클래스를 구현 하는 소스 코드 파일을 다시 생성 하기 때문에 작업을 수행 하는 것은 이제 빌드 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`). 이제 빌드 해 보시기 합니다. 이 단계에서 표시 되는 수 빌드 오류가 **'MainViewModel': 'winrt::Bookstore::implementation::MainPage'의 구성원이 아닙니다**합니다.
+파일을 저장합니다. 프로젝트는 순간 완료 될 때까지 빌드 없습니다 수 있지만 **MainPage** 런타임 클래스를 구현 하는 소스 코드 파일을 다시 생성 하기 때문에 작업을 수행 하는 것은 이제 빌드 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`). 이제 빌드 해 보시기 합니다. 이 단계에서 표시 되는 수 빌드 오류가 **'MainViewModel': 'winrt::Bookstore::implementation::MainPage'의 구성원이**합니다.
 
 include를 생략 하면 `BookstoreViewModel.idl` (의 목록이 표시 `MainPage.idl` 위에), 다음 오류가 표시 됩니다 **예상 \ < "MainViewModel" 근처**합니다. 동일한 네임 스페이스의 모든 종류를 유지 하 고 있는지 확인 하 여: 코드 목록에 표시 되는 네임 스페이스입니다.
 
@@ -238,7 +238,7 @@ namespace winrt::Bookstore::implementation
 ...
 ```
 
-`\Bookstore\Bookstore\MainPage.cpp`, 프로젝션 된 형식의 새로운 인스턴스를 m_mainViewModel에 할당 하려면 [**winrt:: make**](/uwp/cpp-ref-for-winrt/make) (구현 체 형식)으로 호출 합니다. 책 타이틀에 대한 초기 값을 할당합니다. MainViewModel 속성 접근자를 구현합니다. 마지막으로 버튼의 이벤트 처리기에서 책 타이틀을 업데이트합니다. 또한 **MyProperty** 속성을 제거 합니다.
+`\Bookstore\Bookstore\MainPage.cpp`, 프로젝션 된 형식의 새로운 인스턴스를 m_mainViewModel에 할당을 [**winrt:: make**](/uwp/cpp-ref-for-winrt/make) (구현 체 형식)으로 호출 합니다. 책 타이틀에 대한 초기 값을 할당합니다. MainViewModel 속성 접근자를 구현합니다. 마지막으로 버튼의 이벤트 처리기에서 책 타이틀을 업데이트합니다. 또한 **MyProperty** 속성을 제거 합니다.
 
 ```cppwinrt
 // MainPage.cpp
@@ -269,7 +269,7 @@ namespace winrt::Bookstore::implementation
 ```
 
 ## <a name="bind-the-button-to-the-title-property"></a>버튼을 **Title** 속성에 바인딩
-`MainPage.xaml`을 엽니다. 여기에는 메인 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 아래 목록에 표시 된 것과 같이 버튼에서 이름을 삭제 하 고을 리터럴에서 바인딩 식으로 해당 **콘텐츠** 속성 값을 변경 합니다. 바인딩 식에서 `Mode=OneWay` 속성을 확인하세요(보기 모델에서 UI로 단방향). 이 속성이 없으면 UI가 속성 변경 이벤트에 응답하지 않습니다.
+`MainPage.xaml`을 엽니다. 여기에는 메인 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 아래 목록에 표시 된 것과 같이 버튼에서 이름을 삭제 하 고 해당 **콘텐츠** 속성 값을 리터럴에서 바인딩 식 변경 합니다. 바인딩 식에서 `Mode=OneWay` 속성을 확인하세요(보기 모델에서 UI로 단방향). 이 속성이 없으면 UI가 속성 변경 이벤트에 응답하지 않습니다.
 
 ```xaml
 <Button Click="ClickHandler" Content="{x:Bind MainViewModel.BookSku.Title, Mode=OneWay}"/>

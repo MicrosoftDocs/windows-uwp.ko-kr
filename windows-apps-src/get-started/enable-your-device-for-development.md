@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984598"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4015183"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -150,7 +150,7 @@ Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 �
 [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼을 참조하여 이러한 문제에 대한 해결 방법 등을 찾을 수 있습니다. 
 
 > [!NOTE]
-> 개발자 모드가 제대로 설치 하지 않는 경우 새 피드백 요청 합니다. **피드백 허브** 앱에 **추가 새 피드백**선택 하 고 **개발자 플랫폼** 범주와 **개발자 모드** 하위 범주를 선택 합니다. 피드백 제출 Microsoft 발생 한 문제를 해결 하는 데 도움이 됩니다.
+> 개발자 모드가 제대로 설치 하지 않는 경우 새 피드백 요청 합니다. **피드백 허브** 앱에 **추가 새 피드백**선택 하 고 **개발자 플랫폼** 범주 및 **개발자 모드** 하위 범주를 선택 합니다. 피드백 제출 Microsoft 발생 한 문제를 해결 하는 데 도움이 됩니다.
 
 ### <a name="failed-to-locate-the-package"></a>패키지 찾기 실패
 

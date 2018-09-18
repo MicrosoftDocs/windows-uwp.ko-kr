@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3990278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4016115"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -92,7 +92,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md) 프로젝트 내에서 동일할 코드를 사용할 수 있습니다. 런타임 시 라이브러리를 호스팅하는 앱의 리소스가 로드됩니다. 앱에는 뛰어난 지역화 수준이 있을 가능성이 높으므로 라이브러리를 호스팅하는 앱에서 리소스를 로드하는 것이 좋습니다. 라이브러리는 리소스를 제공한 다음 호스팅 앱에 이러한 리소스를 입력으로 교체하는 옵션을 제공해야 합니다.
 
-리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점으로 슬래시 ("/")를 사용 하 여 리소스 이름에서 문자입니다. 속성 식별자 예 포함 되는 점입니다. 따라서이 substition 코드에서 그 중 하나를 로드 하기 위해 수행 해야 합니다.
+리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점으로 슬래시 ("/") 문자를 리소스 이름입니다. 속성 식별자 예 포함 되는 점입니다. 따라서이 substition 코드에서 그 중 하나를 로드 하기 위해 수행 해야 합니다.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
@@ -175,7 +175,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 "AppDisplayName" 리소스를 `Resources.resw`에서 `ManifestResources.resw`로 이동하고자 하는 경우 앱 패키지 매니페스트에서 `ms-resource:AppDisplayName`을 `ms-resource:/ManifestResources/AppDisplayName`으로 변경합니다.
 
-리소스 파일 이름을 분할 하는 경우 (포함 된 "." 문자)를 참조 하는 경우 이름에 점이 둡니다. 점 리소스 이름에 대 한 것 처럼 슬래시 ("/") 문자로 대체 **하지 않습니다** .
+리소스 파일 이름을 분할 하는 경우 (포함 된 "." 문자)를 참조 하는 경우 이름에 점이 둡니다. 리소스 이름에 대 한 것 처럼 슬래시 ("/") 문자로 점을 대체 **하지 않습니다** .
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
@@ -274,7 +274,7 @@ Windows 런타임 라이브러리 (유니버설 Windows), 기본 네임 스페�
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-클래스 라이브러리 (유니버설 Windows)에 대해 수행할 필요가 없습니다. 잘 모르겠으면, [MakePri.exe](makepri-exe-command-options.md) 구성 요소 또는 라이브러리의 PRI 파일을 덤프를 사용할 수 있습니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
+클래스 라이브러리 (유니버설 Windows)에 대해 수행할 필요가 없습니다. 확실 하지에서 [MakePri.exe](makepri-exe-command-options.md) 구성 요소 또는 라이브러리의 PRI 파일을 덤프를 사용할 수 있습니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...

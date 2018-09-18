@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f8f86a6988e68e3ff8d2dfef32512633b3761fd
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3984000"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4016105"
 ---
 # <a name="intro-to-controls-and-patterns"></a>컨트롤 및 패턴 소개
 
@@ -25,7 +25,7 @@ UWP 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가�
 
 > **중요 API**: [Windows.UI.Xaml.Controls 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-*패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어, [마스터/세부 정보](master-details.md) 패턴은 앱 탐색에 대 한 [SplitView](split-view.md) 컨트롤을 사용할 수 있는 방법입니다. 마찬가지로, 탭 패턴을 구현 하는 [NavigationView](navigationview.md) 컨트롤의 템플릿을 사용자 지정할 수 있습니다.
+*패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어, [마스터/세부 정보](master-details.md) 패턴은 앱 탐색을 위해 [SplitView](split-view.md) 컨트롤을 사용할 수 있는 방법입니다. 마찬가지로, 탭 패턴을 구현 하는 [NavigationView](navigationview.md) 컨트롤의 템플릿을 사용자 지정할 수 있습니다.
 
 대부분의 경우 컨트롤은 있는 그대로 사용할 수 있습니다. 하지만 XAML 컨트롤은 구조 및 모양과 기능을 분리하기 때문에 다양한 수준의 수정을 통해 요구에 맞게 수정할 수 있습니다. [스타일](../style/index.md) 섹션에서 [XAML 스타일](xaml-styles.md) 및 [컨트롤 템플릿](control-templates.md)을 사용하여 컨트롤을 수정하는 방법을 배울 수 있습니다.
 
