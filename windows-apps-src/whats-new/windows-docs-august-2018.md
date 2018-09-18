@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4022523"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018 년 8 월 Windows 개발자 문서의의 새로운 기능
 
@@ -36,7 +36,7 @@ Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=
 
 * NavigationView는 이제 앱에 더 작은 다양 한 탐색 옵션 및 앱의 콘텐츠에 대 한 더 많은 공간을 필요로 하는 경우 [위쪽 탐색](../design/controls-and-patterns/navigationview.md)지원 합니다.
 
-* TreeView를 지원 하도록 향상 되었습니다 [데이터 바인딩, 항목 템플릿을, 끌어서 놓기.](../design/controls-and-patterns/tree-view.md)
+* TreeView를 지원 하도록 향상 되었습니다 [데이터 바인딩을 항목 템플릿을, 끌어서 놓기.](../design/controls-and-patterns/tree-view.md)
 
 ### <a name="package-support-framework"></a>지원 프레임 워크 패키지
 
@@ -48,7 +48,7 @@ Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=
 
 ### <a name="web-api-extensions"></a>웹 API 확장
 
-Mozilla 개발자 네트워크 설명서 브라우저 간 웹 개발을 위한 [레거시 Microsoft API 확장](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) 목록 추가 되었습니다. 이러한 API 확장 Internet Explorer 또는 Microsoft Edge를 고유 하 고 호환성 및 broswer 지원 MDN 웹 문서에 대 한 기존 정보를 보충 합니다. 레거시 Microsoft [확장 CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) 및 [JavaScript 확장](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) 도 사용할 수 있으며, 풍부한 웹 API 정보 MDN에서 노출에 직접 찾을 수 [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Mozilla Developer Network 설명서 브라우저 간 웹 개발을 위한 [레거시 Microsoft API 확장](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) 목록 추가 되었습니다. 이러한 API 확장 Internet Explorer 또는 Microsoft Edge에 고유한 및 호환성 및 broswer 지원 MDN 웹 문서에 대 한 기존 정보를 보충 합니다. 레거시 Microsoft [확장 CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) 및 [JavaScript 확장](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) 도 사용할 수 있으며, 풍부한 웹 MDN 정보 API에 직접 표시를 찾을 수 [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
 ### <a name="cwinrt-code-examples"></a>C + + /winrt 코드 예제
 
@@ -56,7 +56,7 @@ Mozilla 개발자 네트워크 설명서 브라우저 간 웹 개발을 위한 [
 
 ### <a name="project-rome"></a>프로젝트 로마
 
-[프로젝트 로마 문서](https://docs.microsoft.com/windows/project-rome/) 사이트 기능 중심 접근 방식으로 재구성 되었습니다 했습니다. 이 해야 쉽게 개발자가 여러 플랫폼에서 기능을 구현 하 고, 원하는 내용을 찾을 수 있습니다.
+[프로젝트 "로마" 문서](https://docs.microsoft.com/windows/project-rome/) 사이트 기능 중심 접근 방식으로 재구성 되었습니다 했습니다. 이 쉽게, 원하는 내용을 찾을 여러 플랫폼 기능을 구현 하는 개발자에 게 있습니다.
 
 ## <a name="videos"></a>비디오
 
@@ -66,7 +66,7 @@ Unity에 Xbox Live 플러그 인 타이틀에 Xbox Live 서명, 통계, 친구 �
 
 ### <a name="one-dev-question"></a>개발자 질문
 
-개발자 질문 하나 동영상 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 다룹니다. 다음은 최신 질문을 검토 했습니다!
+개발자 질문 하나 동영상 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 설명합니다. 최신 질문을 검토 하는 다음과 같습니다.
 
 Raymond Chen:
 
@@ -74,4 +74,4 @@ Raymond Chen:
 
 Larry Osterman:
 
-* [Windows에서 Burgermaster 개체 스토리 란?](https://youtu.be/0TDSbyAIvX0)
+* [Windows에서 Burgermaster 개체 뒤 스토리 란?](https://youtu.be/0TDSbyAIvX0)

@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
 ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4016029"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>COM 구성 요소를 작성 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
-C + + WinRT Windows 런타임 클래스를 작성 하는 데 도움이 처럼 클래식 구성 요소 개체 모델 (COM) 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 에 붙여넣을 경우 테스트할 수 있는 매우 간단한 그림은 다음과 같습니다은 `main.cpp` 새 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트입니다.
+C + + WinRT 하면 Windows 런타임 클래스를 작성 하는 것 처럼 클래식 구성 요소 개체 모델 (COM) 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 에 붙여넣을 경우 테스트할 수 있는 매우 간단한 그림은 다음과 같습니다은 `main.cpp` 새 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트.
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
@@ -49,15 +49,15 @@ int main()
 
 ## <a name="a-more-realistic-and-interesting-example"></a>더 현실적인 하 고 흥미로운 예제
 
-이 항목의 나머지 부분에서는 C + 최소한의 콘솔 응용 프로그램 프로젝트를 만드는 방법을 안내 + WinRT 기본 coclass 및 클래스 팩터리를 구현 합니다. 예제에서는 응용 프로그램에서는 콜백 단추를 사용 하 여 알림 메시지를 제공 하는 방법을 보여 주며 coclass ( **INotificationActivationCallback** COM 인터페이스를 구현 하는)는 응용 프로그램을 시작 하 라는 때 사용자 알림에 해당 단추를 클릭합니다.
+이 항목의 나머지 부분에서는 C + 최소한의 콘솔 응용 프로그램 프로젝트를 만드는 방법을 안내 + 기본 coclass 및 클래스 팩터리를 구현 하는 WinRT 합니다. 예제에서는 응용 프로그램에서는 콜백 단추를 사용 하 여 알림 메시지를 제공 하는 방법을 보여 주며 coclass ( **INotificationActivationCallback** COM 인터페이스를 구현 하는)는 응용 프로그램을 시작 하 라는 때 사용자 알림에 해당 단추를 클릭합니다.
 
-[로컬 알림 메시지 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)에서 알림 알림 기능 영역에 대 한 추가적인 배경 정보를 확인할 수 있습니다. None 설명서의이 섹션의 코드 예제에 사용 하 여 C + + /winrt 하지만 하므로 좋습니다이 항목에 표시 된 코드를 원하는 합니다.
+[로컬 알림 메시지 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)에서 알림 메시지 알림 기능 영역에 대 한 추가적인 배경 정보를 확인할 수 있습니다. None 설명서의이 섹션의 코드 예제에 사용 하 여 C + + /winrt 하지만 하므로 좋습니다이 항목에 표시 된 코드를 원하는 합니다.
 
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Windows 콘솔 응용 프로그램 프로젝트 (ToastAndCallback) 만들기
 
 먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual c + +** 만들기 > **Windows 데스크톱** > **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트를 만들어서 *ToastAndCallback*이름을 지정 합니다.
 
-열기 `main.cpp`를 사용 하 여-지시문 프로젝트 템플릿을 생성 하는 제거 합니다. 그 대신에서 (라이브러리, 머리글 및 필요한 형식 이름을 제공)는 다음 코드를 붙여 넣습니다.
+열기 `main.cpp`, 및 제거를 사용 하 여-지시문 프로젝트 템플릿을 생성 합니다. 그 대신에서 (라이브러리 머리글과 필요 하다는 형식 이름을 구할)는 다음 코드를 붙여 넣습니다.
 
 ```cppwinrt
 #pragma comment(lib, "shell32")
@@ -78,7 +78,7 @@ using namespace Windows::UI::Notifications;
 
 ## <a name="implement-the-coclass-and-class-factory"></a>Coclass 및 클래스 팩터리 구현
 
-C + + /winrt에 구현 coclass 및 클래스 팩터리 [**winrt:: implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체에서 파생 하 여 합니다. 세 가지를 사용 하 여-지시문 위에 표시 된 직후 (하기 전에 `main`), 알림 COM 알림 활성 자 구성 요소를 구현 하는이 코드를 붙여 넣습니다.
+C + + /winrt에 구현 coclass 및 클래스 팩터리 [**winrt:: implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체에서 파생 시켜 합니다. 세 가지를 사용 하 여-지시문 위에 표시 된 직후 (하기 전에 `main`), 알림 COM 알림 활성 자 구성 요소를 구현 하는이 코드를 붙여 넣습니다.
 
 ```cppwinrt
 static constexpr GUID callback_guid // BAF2FA85-E121-4CC9-A942-CE335B6F917F
@@ -136,19 +136,19 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 
 위의 coclass의 구현에 설명 된 동일한 패턴을 따르는 [작성자 Api C + + WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). 이 기술은 Windows 런타임 인터페이스 (모든 인터페이스 궁극적으로 [**IInspectable**](https://msdn.microsoft.com/library/br205821)에서 파생 되는)에 대 한 하지만 COM 인터페이스 (궁극적으로 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)에서 파생 되는 모든 인터페이스)를 구현도 사용할 수 있는 확인 합니다.
 
-위의 코드에서 coclass에서 알림 메시지에서 콜백 단추를 클릭할 때 호출 되는 함수는 **INotificationActivationCallback::Activate** 메서드를 구현 합니다. 하지만 그 함수를 호출할 수, coclass의 인스턴스를 만들 수 있어야 하 고 **IClassFactory::CreateInstance** 함수는 작업입니다.
+위의 코드에서 coclass에서 알림 메시지에서 콜백 단추를 클릭할 때 호출 되는 함수는 **INotificationActivationCallback::Activate** 메서드를 구현 합니다. 하지만 그 함수를 호출할 수 coclass의 인스턴스를 만들 수 있어야 하 고 **IClassFactory::CreateInstance** 함수는 작업입니다.
 
-구현 하는 coclass 알림에 대 한 *COM 활성 자* 라고 하며 해당 클래스 id (CLSID)의 형태로 합니다 `callback_guid` 위에 표시 하는 식별자 ( **GUID**형식)입니다. 사용 하겠습니다 식별자에 나중에 시작 메뉴 바로 가기와 Windows 레지스트리 항목의 형식에서입니다. COM 활성 자 CLSID 및 경로 (즉, 여기서를 구축 하 고 실행 파일에 대 한 경로) 연결된 된 COM 서버를 사용할 경우 알림 기울기 해당 콜백 단추를 클릭할 때의 인스턴스를 만드는 클래스 무엇을 알고 메커니즘 (여부는 알림을 클릭할 알림 센터에서 여부).
+구현 하는 coclass 알림에 대 한 *COM 활성 자* 라고 하며 해당 클래스 id (CLSID)의 형태로 합니다 `callback_guid` 위에 표시 하는 식별자 ( **GUID**형식)입니다. 사용할 식별자에 나중에 시작 메뉴 바로 가기와 Windows 레지스트리 항목의 숫자 형태로 합니다. COM 활성 자 CLSID 및 경로 (즉, 여기서를 구축 하 고 실행 파일에 대 한 경로) 연결된 된 COM 서버를 사용할 경우 알림 기울기 콜백 단추를 클릭할 때의 인스턴스를 만드는 클래스 무엇을 알고 메커니즘 (여부는 알림을 클릭할 알림 센터에서 여부).
 
 ## <a name="best-practices-for-implementing-com-methods"></a>COM 메서드를 구현 하기 위한 모범 사례
 
-오류 처리 및 리소스 관리에 대 한 기술 손에서 직접 이동할 수 있습니다. 것 보다 편리 하 고 오류 코드 보다는 예외를 사용 하기에 적합 합니다. 및 리소스 취득-는-초기화 (RAII) 방법을 사용 하면 다음 방지할 수 있습니다 오류 코드에 대 한 명시적으로 확인 하 고 리소스를 명시적으로 해제 합니다. 이러한 명시적 검사 필요한 경우 보다 더 난해해 코드를 확인 하 고 다양 한 장소를 숨기려면 버그 제공. 대신, RAII, 사용 및 예외를 throw/catch 합니다. 이렇게 하면 리소스 할당은 예외 로부터 안전 하 고 코드는 간단 합니다.
+오류 처리 및 리소스 관리에 대 한 기술 손에서 직접 이동할 수 있습니다. 것 보다 편리 하 고 오류 코드 보다는 예외를 사용 하기에 적합 합니다. 및 리소스 취득-는-초기화 (RAII) 방법을 사용 하면 다음 않아도 명시적으로 오류 코드를 확인 하 고 리소스를 명시적으로 해제 합니다. 이러한 명시적 검사 필요한 경우 보다 더 난해해 코드 하 고 다양 한 위치를 숨기려면 버그를 제공 합니다. 대신, RAII, 사용 및 예외를 throw/catch 합니다. 이렇게 하면 리소스 할당은 예외 로부터 안전 하 고 코드는 간단 합니다.
 
-그러나 이스케이프 COM 메서드 구현에 대 한 예외를 허용할 돼 있습니다. 사용 하 여 확인할 수 있습니다는 `noexcept` COM 메서드에서 지정자입니다. 메서드에 끝나기 전에 처리 하는 있기만 것의 메서드를 호출 그래프에서 아무 곳 이나 예외가 예외에 대 한 확인 합니다. 사용 하는 경우 `noexcept`, 다음 메서드를 이스케이프 하는 예외를 허용 하지만 다음 응용 프로그램을 종료 합니다.
+그러나 이스케이프 COM 메서드 구현에 대 한 예외를 허용할 돼 있습니다. 사용 하 여를 확인 하는 합니다 `noexcept` COM 메서드에서 지정자 합니다. 메서드에 끝나기 전에 처리 하는 있기만 것 메서드를 호출 그래프의 아무 곳 이나 예외가 예외에 대 한 확인 합니다. 사용 하는 경우 `noexcept`, 하지만 다음 메서드를 이스케이프 하 예외를 허용 하 고 응용 프로그램을 종료 합니다.
 
 ## <a name="add-helper-types-and-functions"></a>도우미 형식과 함수를 추가 합니다.
 
-이 단계에서는 코드의 나머지 부분에는 몇 가지 도우미 형식 및 함수를 사용 추가 하겠습니다. 따라서 하기 전에 `main`, 다음 코드를 추가 합니다.
+이 단계에서의 나머지 코드는 몇 가지 도우미 형식 및 함수 사용 추가 하겠습니다. 따라서 하기 전에 `main`, 다음 코드를 추가 합니다.
 
 ```cppwinrt
 struct prop_variant : PROPVARIANT
@@ -380,7 +380,7 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 
 ## <a name="how-to-test-the-example-application"></a>예제에서는 응용 프로그램을 테스트 하는 방법
 
-응용 프로그램을 빌드하고 등록, 및 기타 설정, 코드를 실행 하려면 관리자 권한으로 한 번 이상 실행 합니다. 관리자 권한으로 실행 중인 다음 ' T 키를 눌러 여부 ' 알림 표시 되도록 합니다. Pop 위쪽 또는 알림 센터와 응용 프로그램에서 실행 될 알림, 인스턴스화된 coclass 및 INotificationActivationCallback **에서 직접 **ToastAndCallback 다시 호출** 단추를 클릭 수 있습니다. :: 활성화** 메서드가 실행 됩니다.
+응용 프로그램을 빌드하고 등록, 및 기타 설정, 코드를 실행 하려면 관리자 권한으로 한 번 이상 실행 합니다. 관리자 권한으로 실행 중인 다음 ' T 키를 눌러 여부 ' 알림 표시 되도록 합니다. Pop 위쪽 또는 알림 센터와 응용 프로그램에서 실행 알림, 인스턴스화된 coclass 및 INotificationActivationCallback **에서 직접 **ToastAndCallback를 호출할** 단추를 클릭 수 있습니다. :: 활성화** 메서드가 실행 됩니다.
 
 ## <a name="important-apis"></a>중요 API
 * [IInspectable 인터페이스](https://msdn.microsoft.com/library/br205821)

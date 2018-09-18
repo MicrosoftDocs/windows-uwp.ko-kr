@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ce26242f1f5093afcbfb652a7d1736897975cb3a
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019579"
 ---
 # <a name="custom-attached-properties"></a>사용자 지정 연결된 속성
 
@@ -71,7 +71,7 @@ Visual Basic의 경우 다음과 같습니다.
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *value* 개체 및 해당 *valueType*의 형식도 구현에서 더 구체적일 수 있습니다. 이 메서드의 값은 태그에서 연결된 속성을 발견하는 경우 XAML 프로세서에서 제공하는 입력입니다. 특성 값(최종적으로는 문자열임)으로 적절한 형식을 만들 수 있으려면 사용하는 형식에 대한 형식 변환 또는 기존 태그 확장 지원이 있어야 합니다. 기본 **Object** 형식을 사용할 수 있으나 형식 안전성을 강화하려는 경우가 많습니다. 이 경우 접근자에 형식 적용을 넣으세요.
 
 > [!NOTE]
-> 속성 요소 구문을 통해 사용 되는 연결된 된 속성을 정의 하는 것도 가능 합니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
+> 속성 요소 구문을 통해 용도 연결된 된 속성을 정의 하는 것도 가능 합니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
 
 ## <a name="code-example"></a>코드 예제
 
@@ -234,7 +234,7 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 ```
 
 > [!NOTE]
-> C + +로 XAML UI를 작성 하는 경우 해당 형식을 XAML 페이지에서는 언제 든 지 연결된 된 속성을 정의 하는 사용자 지정 형식에 대 한 헤더 포함 해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
+> C + +로 XAML UI를 작성 하는 경우 해당 형식을 XAML 페이지에서는 언제 든 지 연결 된 속성을 정의 하는 사용자 지정 형식에 대 한 헤더 포함 해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
 
 ## <a name="value-type-of-a-custom-attached-property"></a>사용자 지정 연결된 속성의 값 형식
 

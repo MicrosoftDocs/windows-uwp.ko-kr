@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 2c78f5f43d93002b90902a7f9e5a943c7239946c
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983504"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4020601"
 ---
 # <a name="handle-a-cancelled-background-task"></a>취소된 백그라운드 작업 처리
 
@@ -139,7 +139,7 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 작업 중인 동안 플래그 변수를 확인하도록 백그라운드 작업 클래스 코드를 수정합니다. **\_CancelRequested** 인덱싱이 true이 고, 중지 작업으로 설정 됩니다.
 
-[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666) 백그라운드 작업이 취소 될 경우 추기 적 타이머 콜백을 중지 하는 검사가 포함 되어 있습니다.
+[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666) 에 백그라운드 작업이 취소 될 경우 추기 적 타이머 콜백을 중지 하는 검사가 포함 되어 있습니다.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -181,9 +181,9 @@ else
 ```
 
 > [!NOTE]
-> 위에 표시 된 코드 샘플 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797)사용 합니다. 백그라운드 작업 진행률을 기록 하는 데 사용 되 고 [**진행률**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성입니다. [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
+> 위에 표시 된 코드 샘플 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797)를 사용 합니다. 백그라운드 작업 진행률을 기록 하는 데 사용 되는 [**진행률**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성입니다. [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
 
-작업이 완료 또는 취소 되었는지 여부를 기록 작업을 중지 한 후 되도록 **Run** 메서드를 수정 합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 Out-of-process 백그라운드 작업에 적용됩니다. In-process 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
+작업이 완료 또는 취소 되었는지 여부를 기록 작업을 중지 한 후 **Run** 메서드를 수정 합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 Out-of-process 백그라운드 작업에 적용됩니다. In-process 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
 
 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666) 에서는 LocalSettings에 상태를 기록 합니다.
 
@@ -261,11 +261,11 @@ else
 
 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드하여 메서드 컨텍스트에서 이러한 코드 예제를 확인할 수 있습니다.
 
-샘플 코드를 돕기 위해 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서 **Run** 메서드 (및 타이머 콜백)의 일부만 보여 줍니다.
+설명을 위해 샘플 코드를 사용 하는 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서 **Run** 메서드 (및 타이머 콜백)의 일부만 보여줍니다.
 
 ## <a name="run-method-example"></a>Run 메서드 예
 
-[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666) 은 아래 표시 된 컨텍스트에 대 한를 **Run** 메서드 및 타이머 콜백 코드를 완료 합니다.
+[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666) 은 아래 표시 된 컨텍스트에 대해를 **Run** 메서드 및 타이머 콜백 코드를 완료 합니다.
 
 ```csharp
 // The Run method is the entry point of a background task.

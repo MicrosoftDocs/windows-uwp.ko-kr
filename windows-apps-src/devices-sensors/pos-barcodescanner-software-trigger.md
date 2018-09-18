@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: ddd8ec979cb6d5a72b48b9b8b6a60adb73c35657
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4021805"
 ---
 # <a name="use-a-software-trigger"></a>소프트웨어 트리거 사용
 
@@ -33,7 +33,7 @@ ms.locfileid: "3981612"
 > [!Important]
 > [IsSoftwareTriggerSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannercapabilities.issoftwaretriggersupported#Windows_Devices_PointOfService_BarcodeScannerCapabilities_IsSoftwareTriggerSupported)라는 속성을 먼저 확인하여 바코드 스캐너에서 소프트웨어 트리거 사용이 지원되는지 확인합니다.
 
-다음 예제에서는 하나의 바코드 스캔 되 면 스캔을 중지 하는 소프트웨어 트리거를 사용 하 여 검사를 시작 하는 방법을 보여 줍니다.
+다음 예제에서는 오직 하나의 바코드 스캔 되 면 스캔을 중지 하는 소프트웨어 트리거를 사용 하 여 검사를 시작 하는 방법을 보여 줍니다.
 
 ```cs
 private void SoftwareTrigger(BarcodeScanner barcodeScanner, ClaimedBarcodeScanner claimedBarcodeScanner) 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4022981"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 
@@ -48,7 +48,7 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 
 ## <a name="what-goes-in-a-form"></a>양식에 무엇이 들어가나요?
 
-다양한 [XAML 컨트롤](../design/controls-and-patterns/controls-and-events-intro.md)로 양식을 작성해야 합니다. 이러한 컨트롤에 익숙할 수도 있지만 언제든지 필요한 경우 세부 정보를 읽을 수 있습니다. 특히, 사용자가 텍스트를 입력하거나 값 목록에서 선택할 수 있는 컨트롤이 필요할 수 있습니다. 이 기본 목록을 추가할 수 있는 옵션 – 읽을,에 대 한 모든 충분히 어떤 모습 및 작동 방식을 이해 필요가 없습니다.
+다양한 [XAML 컨트롤](../design/controls-and-patterns/controls-and-events-intro.md)로 양식을 작성해야 합니다. 이러한 컨트롤에 익숙할 수도 있지만 언제든지 필요한 경우 세부 정보를 읽을 수 있습니다. 특히, 사용자가 텍스트를 입력하거나 값 목록에서 선택할 수 있는 컨트롤이 필요할 수 있습니다. 이 기본 목록을 추가할 수 있는 옵션-읽을, 모든 충분히 어떤 모습 및 작동 방식을 이해 필요가 없습니다.
 
 * [TextBox](../design/controls-and-patterns/text-box.md) 를 앱에 사용자 입력된 텍스트를 수 있습니다.
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md)는 사용자가 두 가지 옵션 중에서 선택할 수 있도록 합니다.

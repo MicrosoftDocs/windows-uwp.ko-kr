@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4020531"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML 항목 컨트롤, [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 컬렉션 바인딩
 > [!NOTE]
@@ -37,7 +37,7 @@ XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* �
 관찰 가능한 벡터 템플릿을 [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_)의 유용한 범용 구현체로 사용하는 것은 바람직합니다. 아래는 이름이 **single_threaded_observable_vector\<T\>** 인 클래스를 나열한 것입니다.
 
 > [!NOTE]
-> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 사용할 수 있습니다 직접 **winrt::single_threaded_observable_vector\ < T\ >** factory 함수 아래의 코드 목록 대신 (하겠습니다 정확한 코드 나중 이 항목에서). 하지 않는 이미 해당 버전의 SDK 경우 다음 것 쉽게 되 면 코드 목록을 버전 **winrt** 기능을 사용 하 여 전환할입니다.
+> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 사용할 수 있습니다 직접 **winrt::single_threaded_observable_vector\ < T\ >** factory 함수 아래의 코드 목록 대신 (하겠습니다 정확한 코드 나중 이 항목에서). 하지 않는 이미 해당 버전의 SDK 하는 경우 다음 것 쉽게 전환할 때 코드 목록을 버전 **winrt** 기능을 사용 하 여에서입니다.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -358,7 +358,7 @@ Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Boo
 m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
 ```
 
-이 있습니다.
+이 방법을 사용 합니다.
 
 ```cppwinrt
 m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();

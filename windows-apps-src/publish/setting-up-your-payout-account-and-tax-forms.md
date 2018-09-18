@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4018301"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
@@ -133,7 +133,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 대시보드에서 온라인으로 세금 양식을 완성하고 제출할 수 있습니다. 대부분의 경우 양식을 인쇄해서 우편으로 보낼 필요는 없습니다.
 
 > [!IMPORTANT]
-> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 국가 또는 지역에 가장 적합 하도록 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 하 여 좋습니다.
+> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 국가 또는 지역에 가장 잘 하도록 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 하 여 좋습니다.
 
  
 **세금 프로필을 완성하려면**
@@ -158,7 +158,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 ### <a name="tax-treaty-benefits"></a>조세조약 혜택
 
-미국 이외 지역에 거주하는 경우 조세조약 혜택을 활용할 수 있습니다. 이러한 혜택 국가 마다 다르며 Microsoft Store 줄이도록 세금의 양을 줄이는을 허용할 수 있습니다. W-8BEN 양식의 Part II를 완성하면 조세조약 혜택을 클레임할 수 있습니다. 이러한 혜택을 받을 수 있는지 확인하려면 거주 국가나 지역의 관련 기관에 문의하는 것이 좋습니다.
+미국 이외 지역에 거주하는 경우 조세조약 혜택을 활용할 수 있습니다. 이러한 혜택에는 국가 마다 다를 및 Microsoft Store 줄이도록 세금의 양을 줄이는을 허용할 수 있습니다. W-8BEN 양식의 Part II를 완성하면 조세조약 혜택을 클레임할 수 있습니다. 이러한 혜택을 받을 수 있는지 확인하려면 거주 국가나 지역의 관련 기관에 문의하는 것이 좋습니다.
 
  
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 베타 테스트, 제한 배포, 베타, 베타들, 테스트, 테스터
 ms.localizationpriority: medium
 ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4017921"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>베타 테스트 및 대상이 지정된 배포
 
@@ -35,7 +35,7 @@ Windows 개발자 센터 대시보드에서는 일반에게 제공하기 전에 
 
 다른 사람이 이용하기 전에 테스터가 앱을 사용하도록 하고 다른 사람은 목록을 볼 수 없도록 하고 싶은 경우에는 [가시성](choose-visibility-options.md) 아래 **개인 대상**옵션을 사용합니다(제출서의 **가격 책정 및 가용성** 페이지에서). 직접 링크에 입력이 가능한 경우라도 다른 사람이 앱의 Store 목록을 보지 못하도록 철저하게 차단하는 동시에 테스터에게 앱을 배포할 수 있는 유일한 방법입니다. 
 
-**개인 대상** 옵션과 수만 사용할 수 공중 대상에 앱 이미 게시 하지 않은 경우. 이 옵션을 사용 하 여 모든 OS 버전을 대상으로 하는 앱과 하지만, 테스터가 Windows 10, 버전 1607 이상 (Xbox One 포함)을 실행 해야 하 고 제공 하는 메일 주소와 연결 된 Microsoft 계정으로 로그인 해야 합니다.
+**개인 대상** 옵션과 수만 사용할 수 공중 대상에 앱 이미 게시 하지 않은 경우. 이 옵션을 사용 하 여 모든 OS 버전을 대상으로 하는 앱과 하지만, 테스터가 Windows 10 버전 1607 이상 (Xbox One 포함)을 실행 해야 하 고 제공 하는 메일 주소와 연결 된 Microsoft 계정으로 로그인 해야 합니다.
 
 자세한 내용은 [개인 대상](choose-visibility-options.md#audience)을 참조하세요.
 
@@ -53,7 +53,7 @@ Windows 개발자 센터 대시보드에서는 일반에게 제공하기 전에 
 
 ## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Store에서 앱 숨기기 및 홍보 코드 사용
 
-이 옵션은 누구도 스토어에서 앱을 검색 하지 못하도록 동시 테스터 특정 그룹 으로만 앱 배포 하도록 제한 하는 또 다른 방법은 (또는 홍보 코드 사용 하지 않고 획득). 그러나 개인 대상 옵션과 달리, 직접 링크가 있는 경우에는 누구라도 앱 목록을 볼 수 있습니다. 제출에 있어 기밀성이 중요한 경우에는 대신에 개인 대상에 게시하는 것이 좋습니다.
+이 옵션은 누구도 스토어에서 앱을 검색 하지 못하도록 동시 테스터 특정 그룹 으로만 앱 배포 하도록 제한 하는 또 다른 방법은 (또는 홍보 코드 없이 획득). 그러나 개인 대상 옵션과 달리, 직접 링크가 있는 경우에는 누구라도 앱 목록을 볼 수 있습니다. 제출에 있어 기밀성이 중요한 경우에는 대신에 개인 대상에 게시하는 것이 좋습니다.
 
 앱 숨기기 및 홍보 코드 이용 기능은 모든 OS 버전을 대상으로 하는 앱에서 사용이 가능하지만, Windows 10을 실행 중인 경우에만 테스터가 앱을 다운로드할 수 있습니다.
 

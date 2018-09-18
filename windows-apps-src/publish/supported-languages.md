@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3982652"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4018279"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 
@@ -27,7 +27,7 @@ ms.locfileid: "3982652"
 ## <a name="supported-languages"></a>지원되는 언어
 
 
-이들은 Microsoft 스토어에서 지원 되는 언어입니다. 앱이 이러한 언어를 하나 이상 지원해야 하며, 여기에 포함되지 않은 언어 코드를 지정해서는 안 됩니다.
+이 Microsoft 스토어를 지 원하는 언어입니다. 앱이 이러한 언어를 하나 이상 지원해야 하며, 여기에 포함되지 않은 언어 코드를 지정해서는 안 됩니다.
 
 | 언어 이름         | 지원되는 언어 코드                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

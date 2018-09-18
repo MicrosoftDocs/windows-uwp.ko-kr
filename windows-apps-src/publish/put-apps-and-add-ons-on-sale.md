@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3986796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4018469"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>앱 및 추가 기능 판매
 
 Microsoft Store에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다. 낮은 가격대 또는 백분율을 기반으로 하는 할인 가격에 제품을 제공할 수 있습니다.
 
 > [!NOTE]
-> 판매 가격 구독 추가 기능에 대해 지원 되지 않습니다.
+> 구독 추가 기능에 대 한 할인 판매 가격 정책은 지원 되지 않습니다.
 
 제출에서 **가격 책정 및 가용성** 페이지의 **할인 가격 책정** 섹션을 사용하여 일시적으로 앱이나 추가 기능의 가격을 인하할 경우, 스토어 목록을 보고 있는 고객은 가격 취소선을 통해 가격이 인하된 것을 확인할 수 있습니다(스토어에 변경을 표시하지 않고 가격을 인하 또는 인상할 수 있는 [예약된 가격 변경](set-and-schedule-app-pricing.md#schedule-price-changes)과 달리). 
 

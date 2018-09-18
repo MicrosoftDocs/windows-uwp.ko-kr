@@ -3,18 +3,18 @@ author: jwmsft
 title: 버전 적응 앱
 description: 이전 버전과 호환성을 유지하면서 새로운 API를 활용하는 방법을 알아봅니다.
 ms.author: jimwalk
-ms.date: 10/10/2017
+ms.date: 09/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d43cd9d03977e34b57d78e1f22bd7e8b340ff4ab
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: f2485eab4b192fe4a65c68d957de1ec9192f8c20
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1701039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4019649"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 앱: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 
@@ -48,19 +48,23 @@ Visual Studio 2015, 업데이트 2 이상에서 새 프로젝트를 만들 때 �
 
 Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상 버전을 변경하려면 프로젝트 -&gt; 속성 -&gt; 응용 프로그램 탭 -&gt; 대상 지정으로 이동합니다.
 
-![Visual Studio에서 대상 SDK 변경](images/vs-target-sdk-2.png) 
+![Visual Studio에서 대상 SDK 변경](images/vs-target-sdk-2.png)
 
-참조를 위해, 다음 표는 각 SDK에 대한 빌드 번호를 보여 줍니다. Windows 10 업데이트에 대한 자세한 내용은 TechNet의 [Windows 10 릴리스 정보](https://technet.microsoft.com/windows/release-info)를 참조하세요.
+참조를 위해, 다음 표는 각 SDK에 대한 빌드 번호를 보여 줍니다.
 
-이름 | 버전 | OS/SDK 빌드 | 참고
----- | ---- | ---- | ----
-RTM | 1507 | 10240 | 중요 [지원](https://support.microsoft.com/help/4015562/windows-10-version-1507-will-no-longer-receive-security-updates) 정보를 참조하세요.
-11월 업데이트 | 1511 | 10586 | 중요 [지원](https://support.microsoft.com/help/4035050/windows-10-version-1511-will-no-longer-receive-security-updates) 정보를 참조하세요.
-1주년 업데이트 | 1607 | 14393 |
-크리에이터스 업데이트 | 1703 | 15063 |
-Fall Creators Update | 1709 | 16299 |
+| 이름 | 버전 | OS/SDK 빌드 |
+| ---- | ---- | ---- |
+| RTM | 1507 | 10240 |
+| 11월 업데이트 | 1511 | 10586 |
+| 1주년 업데이트 | 1607 | 14393 |
+| 크리에이터스 업데이트 | 1703 | 15063 |
+| Fall Creators Update | 1709 | 16299 |
+| 2018년 4월 업데이트 | 1803 | 17134 |
+| 2018 년 10 월 업데이트 | 1809 | _Insider Preview_ |
 
 출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/Home/BuildWithWindows) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
+
+ Windows 10 업데이트에 대 한 자세한 내용은 [Windows 10 릴리스 정보를](https://technet.microsoft.com/windows/release-info)참조 하세요. Windows 10에 대 한 중요 정보에 대 한 지원 수명 주기 [Windows 수명 주기 정보 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)를 참조 하십시오.
 
 ## <a name="perform-api-checks"></a>API 검사 수행
 

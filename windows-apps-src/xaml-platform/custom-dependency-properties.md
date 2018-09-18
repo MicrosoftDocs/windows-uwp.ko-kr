@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4018833"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -81,7 +81,7 @@ Microsoft .NET 언어(C# 및 Microsoft Visual Basic)의 경우 클래스 본문 
 > [!NOTE]
 > 종속성 속성 등록 식별자의 일부로 속성 정의 일반적인 구현 이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
 
-C + + CX, 헤더 및 코드 파일 사이 구현을 분할 하는 방법에 대 한 옵션 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
+C + + /CX 헤더 및 코드 파일 사이 구현을 분할 하는 방법에 대 한 옵션 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
 
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
@@ -170,7 +170,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> C + + 코드 CX, 개인 필드는 이유와 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 표면을 공개 읽기 전용 속성은 종속성 속성을 사용 하는 다른 호출자가 속성 시스템 유틸리티를 필요로 하는 Api를 사용할 수도 수 있도록 하는 이유는 가 공개 식별자입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
+> C + + 코드 CX, 개인 필드 이유와 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 표면을 공개 읽기 전용 속성은 종속성 속성을 사용 하는 다른 호출자가 속성 시스템 유틸리티를 필요로 하는 Api를 사용할 수도 수 있도록 하는 이유는 가 공개 식별자입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
 
 ## <a name="dependency-property-name-conventions"></a>종속성 속성 이름 규칙
 

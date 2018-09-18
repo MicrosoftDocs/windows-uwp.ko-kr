@@ -15,11 +15,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 7f92b12ab9c8962fe98d8eed22b21e7d10330c99
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3985828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4022463"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -40,7 +40,7 @@ XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연
 ```
 
 > [!NOTE]
-> 사용 이유를 자세히 설명 하지 않고 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 예제에서는 연결 된 속성으로 사용 하면 하겠습니다. **Canvas.Left**의 용도와 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에서 해당 레이아웃 자식을 처리하는 방법에 대해 자세히 알아보려면 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 참조 항목이나 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/library/windows/apps/mt228350)를 참조하세요.
+> 예제에서는 연결 된 속성으로 사용 하는 이유를 자세히 설명 하지 않고 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 사용 방금 하겠습니다. **Canvas.Left**의 용도와 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에서 해당 레이아웃 자식을 처리하는 방법에 대해 자세히 알아보려면 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 참조 항목이나 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/library/windows/apps/mt228350)를 참조하세요.
 
 ## <a name="why-use-attached-properties"></a>연결된 속성을 사용하는 이유
 
