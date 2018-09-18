@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3983470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4024179"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>고객 모집 및 앱 홍보
 
-Microsoft Store에 앱이 있으면 최대한 많은 고객에 게 가져올 수 차례입니다. 광고 캠페인, 홍보 코드, 할인 가격 등 제품 홍보와 고객 기반 확장에 도움이 되는 다양한 기능을 제공하고 있습니다.
+Microsoft Store에 앱이 있으면 최대한 많은 고객에 게 다운로드 하는 시간입니다. 광고 캠페인, 홍보 코드, 할인 가격 등 제품 홍보와 고객 기반 확장에 도움이 되는 다양한 기능을 제공하고 있습니다.
 
 -   [홍보 코드 생성](generate-promotional-codes.md)
 -   [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
