@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: 8748b68bf4efbcc79d0bba475db32f3a2d7cc933
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4019669"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4060603"
 ---
 # <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>데스크톱 앱 변화기를 사용해 앱을 패키지로 만들기(데스크톱 브리지)
 

@@ -11,11 +11,11 @@ keywords: windows 10, uwp, 보안
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
 ms.openlocfilehash: ac2e29d5219809058edee2d7a92c2e2475d9752e
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4022575"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4059987"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Windows Hello 도우미(IoT) 장치에서 Windows 잠금 해제
 

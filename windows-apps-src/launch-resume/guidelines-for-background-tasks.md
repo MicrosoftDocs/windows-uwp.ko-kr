@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 7adfecbe216dce25d0f80eb3ef1f528196299db4
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4017071"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4058407"
 ---
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 

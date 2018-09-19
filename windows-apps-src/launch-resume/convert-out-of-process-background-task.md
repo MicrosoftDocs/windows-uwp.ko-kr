@@ -1,25 +1,25 @@
 ---
 author: TylerMSFT
-title: Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환
-description: Out-of-process 백그라운드 작업을 포그라운드 앱 프로세스 내에서 실행되는 In-process 백그라운드 작업으로 변환합니다.
+title: In-process 백그라운드 작업을 out of process 백그라운드 작업을 포팅
+description: 포그라운드 앱 프로세스 내에서 실행 되는 in-process 백그라운드 작업에는 out of process 백그라운드 작업을 포팅 합니다.
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1144443f943f134991d050dea1457f252eaaf36d
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4020273"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055783"
 ---
-# <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a>Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환
+# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>In-process 백그라운드 작업을 out of process 백그라운드 작업을 포팅
 
-Out-of-process 백그라운드 작업을 In-process 작업으로 변환하는 가장 간단한 방법은 응용 프로그램 내에서 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와 [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)에서 시작하는 것입니다.
+Out of process (OOP) 백그라운드 작업 프로세스 활동에 포트 하는 가장 간단한 방법은 응용 프로그램 내에서 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와서에서 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)시작 하는 합니다. 여기에서 설명 하는 기술을 OOP 백그라운드 작업에서을 in-process 백그라운드 작업; shim를 만드는 방법에 대 않습니다. 정보를 다시 작성 하거나 포팅 프로세스에서 버전 OOP 버전일 합니다.
 
 앱에 여러 백그라운드 작업이 있는 경우 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation)에서 `BackgroundActivatedEventArgs.TaskInstance.Task.Name`을 사용하여 시작되는 작업을 식별하는 방법을 보여 줍니다.
 

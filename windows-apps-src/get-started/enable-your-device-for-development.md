@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4015183"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4058277"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 

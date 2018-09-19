@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4024389"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4057857"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 146cce82275047c112d70cfb3d022eab723f49e6
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4020863"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4054407"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 

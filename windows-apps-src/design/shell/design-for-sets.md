@@ -12,11 +12,11 @@ keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4019737"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055869"
 ---
 # <a name="designing-for-sets"></a>Sets용 설계
 

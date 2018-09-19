@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: b33c1d33fe88a09de36e8f80a3034b915d338861
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4015055"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055065"
 ---
 # <a name="configure-a-barcode-scanner"></a>바코드 스캐너 구성
 

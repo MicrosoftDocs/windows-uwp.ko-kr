@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: c6412f28e60ed0401fb96098fd38128a37491c8d
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4016339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4056333"
 ---
 # <a name="credential-locker"></a>자격 증명 보관
 

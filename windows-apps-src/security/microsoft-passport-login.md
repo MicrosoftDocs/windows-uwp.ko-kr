@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 284609399f167a7229d0c7bb5858d0f0eda451ce
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4015225"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4056009"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
 

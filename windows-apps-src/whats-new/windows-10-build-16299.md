@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ffe7de94e4a8564b4971fda0b64f6648d9b6088b
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4017187"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4055197"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>개발자용 Windows 10 빌드 16299의 새로운 기능
 

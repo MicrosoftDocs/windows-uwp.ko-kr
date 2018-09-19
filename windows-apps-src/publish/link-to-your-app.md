@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 링크, windows 스토어 프로토콜, 앱 연결, 앱 링크
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4023971"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4057165"
 ---
 # <a name="link-to-your-app"></a>앱에 대한 링크
 

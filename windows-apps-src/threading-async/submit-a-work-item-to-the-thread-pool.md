@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4020905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4058245"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 

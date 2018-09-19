@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4021027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4054941"
 ---
 # <a name="handle-uri-activation"></a>URI 활성화 처리
 

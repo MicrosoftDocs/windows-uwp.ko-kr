@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
 ms.openlocfilehash: 220c5c7395ed9388b02b74e0cbed5b913971bbba
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4018247"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4058209"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;

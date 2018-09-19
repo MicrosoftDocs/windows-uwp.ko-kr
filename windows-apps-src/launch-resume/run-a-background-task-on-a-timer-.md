@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 25e3c76ae09ed6835f89f0d98c308f11c7a99624
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4018311"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4059317"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>타이머에 따라 백그라운드 작업 실행
 
