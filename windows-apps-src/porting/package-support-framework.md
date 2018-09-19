@@ -10,34 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 46d5705233af9e8254b9ac89a2d6e9891e90701f
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: 7e5119696498156d36ec63b16b1d76c00b03f4df
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4021523"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4060965"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>패키지 지원 프레임 워크를 사용 하 여 MSIX 패키지 런타임 수정 적용
 
 프레임 워크 패키지 지원 MSIX 컨테이너에서 실행 될 수 있도록 소스 코드에 액세스할 수 없는 경우 수정 기존 win32 응용 프로그램에 적용 하는 데 도움이 되는 오픈 소스 키트입니다. 패키지 지원 프레임 워크를 사용 하면 응용 프로그램의 최신 런타임 환경 모범 사례를 따릅니다.
 
-패키지 지원 프레임 워크를 만들려면 Microsoft Research (MSR) 하 여 개발 하는 오픈 소스 프레임 워크 이며 API 리디렉션 및 연결을 사용 하면 [자유롭게](https://www.microsoft.com/en-us/research/project/detours) 기술을 사용 합니다.
-
-이 프레임 워크 경량, 오픈 소스 이며 사용할 수 문제를 해결 응용 프로그램을 신속 하 게. 또한, 세계의 커뮤니티에 문의 하 고 다른 사용자의 투자를 기반으로 빌드 기회를 제공 합니다.
-
-## <a name="a-quick-look-inside-of-the-package-support-framework"></a>패키지 지원 프레임 워크 내에서 빠르게 확인
-
-패키지 지원 프레임 워크는 실행 파일, DLL, 런타임 관리자 및 런타임 수정 집합이 포함 되어 있습니다.
-
-![지원 프레임 워크 패키지](images/desktop-to-uwp/package-support-framework.png)
-
-작동 방식은 다음과 같습니다. 응용 프로그램에 적용 하려는 fix(s)를 지정 하는 구성 파일을 만들어야 합니다. 그런 다음 패키지 shim 시작 관리자 실행 파일을 수정 합니다.
-
-사용자가 응용 프로그램을 시작 shim 시작 관리자는 실행 되는 첫 번째 실행 프로그램. 구성 파일을 읽고 런타임 fix(s) 및 런타임 manager DLL 응용 프로그램 프로세스에 삽입 합니다.
-
-![패키지 지원 프레임 워크 DLL 삽입](images/desktop-to-uwp/package-support-framework-2.png)
-
-응용 프로그램이 MSIX 컨테이너 내부에서 실행 되기 위해 필요할 때 런타임 관리자 수정 적용 됩니다.
+자세한 내용은 [지원 프레임 워크 패키지를](https://docs.microsoft.com/windows/msix/package-support-framework-overview)참조 하세요.
 
 이 가이드 응용 프로그램 호환성 문제를 식별 하는 데 도움이 됩니다 하 고 해결 하는 해결을 적용 하 고 런타임 확장 합니다.
 
