@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 84e12d6c3e25a18902aaa55011949dd5b5ff97ca
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4055829"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4084702"
 ---
 # <a name="shadows-in-windows-ui"></a>Windows UI의 그림자
 

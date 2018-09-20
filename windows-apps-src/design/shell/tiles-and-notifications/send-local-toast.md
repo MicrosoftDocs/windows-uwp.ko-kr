@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
 ms.openlocfilehash: 3004b7041838656890b3a967e858dddc64c29ee5
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4059171"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4090579"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
@@ -228,7 +228,7 @@ var toast = new ToastNotification(toastContent.GetXml());
 
 Windows 10에서 사용자가 알림 메시지를 해제하거나 무시한 후 모든 알림 메시지가 알림 센터로 이동하므로 사용자가 팝업이 사라진 후 알림을 볼 수 있습니다.
 
-However, if the message in your notification is only relevant for a period of time, you should set an expiration time on the toast notification so the users do not see stale information from your app. 예를 들어 프로모션이 12시간 동안만 유효하면 만료 시간을 12시간으로 설정합니다. 아래 코드에서 만료 시간을 2일로 설정합니다.
+그러나 알림의 메시지가 일정 기간과만 관계가 있는 경우 사용자가 앱에서 오래된 정보를 보지 않도록 알림 메시지에 만료 시간을 설정해야 합니다. 예를 들어 프로모션이 12시간 동안만 유효하면 만료 시간을 12시간으로 설정합니다. 아래 코드에서 만료 시간을 2일로 설정합니다.
 
 > [!NOTE]
 > 로컬 알림 메시지의 기본 및 최대 만료 시간은 3일입니다.

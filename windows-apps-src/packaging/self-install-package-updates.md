@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 39b3ba05b06b6d484804999a935accc7223b5c60
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4054349"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4084674"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 

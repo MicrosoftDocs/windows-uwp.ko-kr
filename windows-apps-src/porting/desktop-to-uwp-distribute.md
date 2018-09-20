@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: fe36fec72645558c539dd8270fd15d35d92b66b5
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4060183"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4086925"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>패키지 데스크톱 앱(데스크톱 브리지) 배포
 

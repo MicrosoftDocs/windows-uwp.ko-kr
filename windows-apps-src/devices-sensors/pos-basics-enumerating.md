@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e42ebb2eba7b6465be271e6095100c03798826f
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4054119"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4084736"
 ---
 # <a name="enumerating-point-of-service-devices"></a>서비스 지점 장치 열거
 이 섹션에서는 시스템에서 사용할 수 있는 장치를 쿼리하는 데 사용되는 [장치 선택기를 정의](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector)하고 이 선택기를 사용하여 다음 메서드 중 하나를 사용하는 서비스 지점 장치를 열거하는 메서드를 배웁니다.

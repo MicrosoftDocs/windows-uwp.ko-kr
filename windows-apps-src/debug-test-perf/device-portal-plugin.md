@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bf511a910a266877d54a014f087c1748ff25838
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4060813"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4087270"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Device Portal에 대한 사용자 지정 플러그 인 작성
 

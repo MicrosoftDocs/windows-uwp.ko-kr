@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b0b6315b1177138c3ede7834e2dbc792ee106dd
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4059231"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4088824"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
