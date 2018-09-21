@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 4129c50a2273c8ac425f6ea972898aa09fe0fcf3
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.openlocfilehash: cccc58c0b9dd5f922c87d3e6860bb2f2045ea767
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4085730"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4115307"
 ---
 # <a name="troubleshooting-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-issues"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 문제 해결
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "4085730"
 | C++ 컴파일러가 오류 메시지인 "*attempting to reference a deleted function*"을 생성합니다. | 이 오류는 **make**를 호출하면서 템플릿 매개 변수로 전달할 구현체 유형에 `= delete` 기본 생성자가 있을 때 발생할 수 있습니다. 이때는 구현체 유형의 헤더 파일을 편집하여 `= delete`를 `= default`로 변경하세요. 또한 런타임 클래스 IDL에 생성자를 추가해도 좋습니다. |
 | [**INotifyPropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged)를 실행하였지만 XAML 바인딩이 업데이트되지 않습니다(또한 UI가 [**PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)를 구독하지 않습니다). | XAML 태그의 바인딩 표현식에서 `Mode=OneWay`(또는 TwoWay)로 설정해야 합니다. [XAML 컨트롤, a C++/WinRT 속성 바인딩](binding-property.md)을 참조하세요. |
 | XAML 항목 컨트롤을 관찰 가능한 컬렉션에 바인딩하고 있는 도중 런타임에서 "The parameter is incorrect" 메시지와 함께 예외가 발생하였습니다. | 이때는 IDL 및 구현체에서 관찰 가능한 컬렉션을 모두 **Windows.Foundation.Collections.IVector<IInspectable>** 유형으로 선언하세요. 단, **Windows.Foundation.Collections.IObservableVector<T>** 를 구현하는 개체는 반환해야 합니다. 여기에서 T는 요소 유형을 말합니다. [XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩](binding-collection.md)을 참조하세요.  |
-| C++ 컴파일러가 "*'MyImplementationType_base&lt;MyImplementationType&gt;': no appropriate default constructor available*"이라는 오류 메시지를 생성합니다.|이 오류는 특수(non-trivial) 생성자를 가지고 있는 유형에서 파생되었을 때 발생할 수 있습니다. 이때는 파생된 유형의 생성자가 기본 유형의 생성자에게 필요한 매개 변수와 함께 전달되어야 합니다. 유효 예제는 [특수 생성자를 가지고 있는 유형에서 파생](author-apis.md#deriving-from-a-type-that-has-a-non-trivial-constructor)을 참조하세요.|
+| C++ 컴파일러가 "*'MyImplementationType_base&lt;MyImplementationType&gt;': no appropriate default constructor available*"이라는 오류 메시지를 생성합니다.|이 오류는 특수(non-trivial) 생성자를 가지고 있는 유형에서 파생되었을 때 발생할 수 있습니다. 이때는 파생된 유형의 생성자가 기본 유형의 생성자에게 필요한 매개 변수와 함께 전달되어야 합니다. 유효 예제는 [특수 생성자를 가지고 있는 유형에서 파생](author-apis.md#deriving-from-a-type-that-has-a-non-default-constructor)을 참조하세요.|
 | C++ 컴파일러가 "*cannot convert from 'const std::vector&lt;std::wstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*"이라는 오류 메시지를 생성합니다.|이 오류는 std::wstring에서 std::vector를 컬렉션이 필요한 Windows 런타임 API에게 전달할 때 발생할 수 있습니다. 자세한 내용은 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 참조하세요.|
 | C++ 컴파일러가 "*cannot convert from 'const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*"이라는 오류 메시지를 생성합니다.|이 오류는 winrt::hstring에서 std::vector를 컬렉션이 필요한 비동기식 Windows 런타임 API로 전달하면서 벡터를 비동기 수신자로 복사하거나 이동시키지 않았을 때 발생할 수 있습니다. 자세한 내용은 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 참조하세요.|
 | 프로젝트를 열 때 Visual Studio에서 "*The application for the project is not installed*"라는 오류 메시지를 생성합니다.|아직 **C++ 개발용 Windows 유니버설 도구**를 설치하지 않았다면 Visual Studio의 **새 프로젝트** 대화 상자에서 설치해야 합니다. 그래도 문제가 해결되지 않으면 프로젝트가 C++/WinRT Visual Studio Extension(VSIX)에 따라 달라질 수 있습니다([C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix) 참조).|

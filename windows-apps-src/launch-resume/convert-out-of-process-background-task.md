@@ -1,25 +1,25 @@
 ---
 author: TylerMSFT
-title: In-process 백그라운드 작업을 out of process 백그라운드 작업을 포팅
-description: 포그라운드 앱 프로세스 내에서 실행 되는 in-process 백그라운드 작업에는 out of process 백그라운드 작업을 포팅 합니다.
+title: 포트 처리 중인 백그라운드 작업에서 작업 중이 아닌 백그라운드 작업
+description: 포트는 작업 중이 아닌 백그라운드 작업을 전경 응용 프로그램 프로세스 내에서 실행 되는 프로그램에서 백그라운드 작업을 확인 하십시오.
 ms.author: twhitney
 ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스
+keywords: windows 10, uwp, 백그라운드 작업, 응용 프로그램 서비스
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4083988"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4114419"
 ---
-# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>In-process 백그라운드 작업을 out of process 백그라운드 작업을 포팅
+# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>포트 처리 중인 백그라운드 작업에서 작업 중이 아닌 백그라운드 작업
 
-Out of process (OOP) 백그라운드 작업 프로세스 활동에 포트 하는 가장 간단한 방법은 응용 프로그램 내에서 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와서에서 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)시작 하는 합니다. 여기에서 설명 하는 기술을 OOP 백그라운드 작업에서을 in-process 백그라운드 작업; shim를 만드는 방법에 대 않습니다. 정보를 다시 작성 하거나 포팅 프로세스에서 버전 OOP 버전일 합니다.
+독립 프로세스 (OOP) 백그라운드 작업 프로세스 활동에 이식 하는 가장 간단한 방법은 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드 내 응용 프로그램을 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)에서 시작 하는 것입니다. 여기에서 설명 하는 기술을 처리 중인 백그라운드 작업; OOP 백그라운드 작업에서 shim을 만드는 방법에 대해 않습니다. 그에 대 한 다시 작성 (또는 이식) 프로세스 버전으로는 OOP 버전.
 
 앱에 여러 백그라운드 작업이 있는 경우 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation)에서 `BackgroundActivatedEventArgs.TaskInstance.Task.Name`을 사용하여 시작되는 작업을 식별하는 방법을 보여 줍니다.
 

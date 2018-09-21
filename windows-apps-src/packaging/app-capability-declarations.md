@@ -4,18 +4,18 @@ ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: 앱 접근 권한 값 선언
 description: '사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 패키지 매니페스트에서 접근 권한 값을 선언해야 합니다.'
 ms.author: misatran
-ms.date: 7/17/2018
+ms.date: 09/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30e4bb7b493e6fb839f300f4c446b7510f28fabb
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.openlocfilehash: 17f40055f22d8d065ac85d207f3ea17a58a14519
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089172"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4110865"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -25,13 +25,12 @@ ms.locfileid: "4089172"
 
 일부 접근 권한 값은 앱에 *중요한 리소스*에 대한 액세스 권한을 제공합니다. 이러한 리소스는 사용자의 개인 데이터에 액세스하거나 사용자의 비용이 들 수 있으므로 중요한 것으로 간주됩니다. 설정 앱에서 관리되는 개인 정보 설정을 통해 사용자는 중요한 리소스에 대한 액세스를 동적으로 제어할 수 있습니다. 따라서 앱에서는 중요한 리소스를 항상 사용 가능한 것으로 가정하지 않는 것이 중요합니다. 중요한 리소스에 액세스하는 방법에 대한 자세한 내용은 [개인정보 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/Hh768223)을 참조하세요. 앱에 *중요한 리소스*에 대한 액세스 권한을 제공하는 접근 권한 값은 접근 권한 값 시나리오 옆에 별표(\*)로 주석 처리됩니다.
 
-접근 권한 값의 세 가지 종류가 아래에 설명되어 있습니다.
+여러 유형의 기능이 있습니다.
 
--   대부분의 공통적인 앱 시나리오에 적용되는 범용 접근 권한 값입니다.
-
--   앱이 주변 장치 및 내부 장치에 액세스할 수 있게 하는 장치 접근 권한 값입니다.
-
--   Microsoft Store 제출에 대한 승인을 받아야 하거나 일반적으로 Microsoft와 특정 파트너에게만 제공되는 제한된 접근 권한 값입니다.
+- [범용 접근 권한 값](#general-use-capabilities)을 대부분의 공통적인 앱 시나리오에 적용 합니다.
+- [장치 기능](#device-capabilities), 앱이 주변 장치 및 내부 장치에 액세스할 수 있게 합니다.
+- [제한 된 접근 권한 값](#restricted-capabilities)을 Microsoft Store 제출에 대 한 승인을 일반적으로 Microsoft와 특정 파트너를 사용할 수 있습니다.
+- [사용자 지정 기능](#custom-capabilities)입니다.
 
 ## <a name="general-use-capabilities"></a>범용 접근 권한 값
 
@@ -96,23 +95,19 @@ ms.locfileid: "4089172"
 
 수 앱이 정말로 필요로 하지 않는 한 기능을 제한 이러한 선언 하지 마세요. 예를 들어 사용자가 자신의 ID를 확인하는 디지털 인증서와 함께 스마트 카드를 제공하는 2단계 인증을 사용하는 뱅킹과 같이 이러한 접근 권한 값이 필요하고 적합한 경우가 있습니다. 다른 예로는 기본적으로 기업 고객용으로 디자인되고 사용자의 도메인 자격 증명 없이는 액세스할 수 없는 회사 리소스에 액세스해야 하는 앱을 들 수 있습니다.
 
-모든 제한된 접근 권한 값은 앱의 패키지 매니페스트에서 선언할 때 **rescap** 네임스페이스를 포함해야 합니다. 예를 들어 여기에 **appCaptureSettings** 접근 권한 값을 선언하는 방법이 나와 있습니다.
+제한 된 접근 권한 값을 선언 하려면 [앱 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/BR211474) 소스 파일을 수정 (`Package.appxmanifest`). **Xmlns: rescap** XML 네임 스페이스 선언을 추가 하 고에 제한 된 접근 권한 값을 선언 하면 **rescap** 접두사를 사용 합니다. 예를 들어 여기에 **appCaptureSettings** 접근 권한 값을 선언하는 방법이 나와 있습니다.
 
 ```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    ...
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    IgnorableNamespaces="... rescap">
+...
 <Capabilities>
     <rescap:Capability Name="appCaptureSettings"/>
 </Capabilities>
-```
-
-아래 나와 있는 것처럼 Package.appxmanifest 파일의 맨 위에 **xmlns:rescap** 네임스페이스 선언도 추가해야 합니다.
-
-```xml
-<Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-    IgnorableNamespaces="uap mp wincap rescap">
+</Package>
 ```
 
 ### <a name="restricted-capability-approval-process"></a>제한된 접근 권한 값 승인 프로세스
@@ -123,7 +118,7 @@ ms.locfileid: "4089172"
 
 인증 과정에서 Microsoft의 테스터는 귀하가 제공한 정보를 검토하여 제출이 접근 권한 값을 사용할 수 있도록 승인되었는지 여부를 결정합니다. 제출이 인증 프로세스를 완료하려면 추가 시간이 소요될 수 있습니다. 접근 권한 값의 사용이 승인되면 앱은 나머지 인증 프로세스를 진행합니다. 앱에 대한 업데이트를 제출하는 경우 추가 접근 권한 값을 선언하지 않는 이상 일반적으로 접근 권한 값 승인 프로세스를 반복하지 않아도 됩니다.
 
-접근 권한 값 사용이 승인되지 않는 경우 제출은 인증에 실패하며 인증 보고서에 피드백이 제공됩니다. 그러면 접근 권한 값을 선언하지 않는 새 제출을 만들고 패키지를 업로드하거나, 또는 해당되는 경우 접근 권한 값과 사용과 관련된 모든 문제를 처리하고 새 제출에서 승인을 요청할 수 있습니다.
+접근 권한 값의 사용이 승인 되지 않는, 제출은 인증에 실패 하 고 인증 보고서에 피드백이 제공 됩니다. 그러면 접근 권한 값을 선언하지 않는 새 제출을 만들고 패키지를 업로드하거나, 또는 해당되는 경우 접근 권한 값과 사용과 관련된 모든 문제를 처리하고 새 제출에서 승인을 요청할 수 있습니다.
 
 > [!NOTE]
 > 제출이 개발자 센터에서 개발 샌드박스를 사용하는 경우(예를 들어, Xbox Live와 통합하는 모든 게임에 대해 이러한 경우) **제출 옵션** 페이지에서 정보를 제공하는 것이 아니라 미리 승인을 요청해야 합니다. 이를 수행하려면 [Windows 개발자 지원 페이지](https://developer.microsoft.com/windows/support)를 방문하세요. 개발자 지원 항목 **대시보드 문제**, 문제 유형 **앱 제출**및 하위 범주 **다른**를 선택 합니다. 다음 접근 권한 값 사용 하는 방법 및 제품에 대 한이 이유를 설명 합니다. 필요한 모든 정보를 제공하지 않으면 요청이 거부됩니다. 자세한 정보를 제공해야 할 수도 있습니다. 이 프로세스는 일반적으로 영업일 기준으로 5일 이상 걸리므로 사전에 요청을 제출하십시오.
@@ -156,7 +151,7 @@ ms.locfileid: "4089172"
 | **다른 앱 관리** | **packageManagement** 제한된 접근 권한 값을 통해 앱은 다른 앱을 직접 관리할 수 있습니다.<br /><br />**packageQuery** 장치 접근 권한 값을 통해 앱은 다른 앱에 대한 정보를 수집할 수 있습니다.<br /><br />이러한 접근 권한 값은 [**PackageManager**](https://msdn.microsoft.com/library/windows/apps/BR240960) 클래스의 일부 메서드 및 속성에 액세스하는 데 필요합니다. |
 | **화면 프로젝션** | **screenDuplication** 제한된 접근 권한 값을 통해 앱은 다른 장치의 화면에 표시할 수 있습니다.<br /><br />이 접근 권한 값은 DirectX 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **사용자 계정 이름** | **userPrincipalName** 제한된 접근 권한 값을 통해 앱은 사진의 미리 보기 캐시를 수정하고 이 캐시에 액세스할 수 있습니다.<br /><br />이 접근 권한 값은 [**GetUserNameEx**](https://msdn.microsoft.com/library/windows/desktop/ms724435) 함수를 호출하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
-| **Wallet** | The **walletSystem** restricted capability allows apps to have full access to the stored wallet cards.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Wallet.System**](https://msdn.microsoft.com/library/windows/apps/Mt171610) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
+| **전자지갑** | **walletSystem** 제한된 접근 권한 값을 통해 앱은 저장된 전자지갑 카드에 대한 모든 권한을 가질 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Wallet.System**](https://msdn.microsoft.com/library/windows/apps/Mt171610) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **위치 기록** | **locationHistory** 제한된 접근 권한 값을 통해 앱은 장치의 위치 기록에 액세스할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/BR225603) 네임스페이스의 API를 사용하는 데 필요합니다.
 | **앱 닫기 확인** | **confirmAppClose** 제한된 접근 권한 값을 통해 앱은 앱 자체 및 해당 창을 닫고 앱의 닫기를 지연할 수 있습니다.<br /><br />앱에서 이 접근 권한 값에 대해 Windows 10 버전 1703(빌드 10.0.15063) 이상을 요청할 수 있습니다. Windows 10 이전 버전에서 이 기능은 비공개이며 "요청한 기능이 이 응용 프로그램에 대해 인증되지 않습니다."라는 오류 메시지와 함께 앱 설치가 실패합니다. |
 | **통화 기록**\* | **phoneCallHistory** 제한된 접근 권한 값을 통해 앱은 통화 기록을 읽고 기록에서 항목을 삭제할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/Dn642321) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
@@ -219,8 +214,25 @@ ms.locfileid: "4089172"
 | **Windows 팀 장치 자격 증명** | **TeamEditionDeviceCredentials** 제한 된 접근 권한 값을 Windows 10 버전 1703 이상을 실행 하는 Surface Hub 디바이스에서 디바이스 계정 자격 증명을 요청 하는 Api에 액세스할 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **Windows 팀 응용 프로그램 보기** | **TeamEditionView** 제한 된 접근 권한 값을 Windows 10 버전 1703 이상을 실행 하는 Surface Hub 디바이스에는 응용 프로그램 보기 호스팅에 대 한 Api에 액세스할 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 
+## <a name="custom-capabilities"></a>사용자 지정 기능
 
+위의 [제한 된 접근 권한 값](#restricted-capabilities) 섹션에서는 사용자 지정 기능을 사용 하 여 승인을 요청 하는 데 사용할 수 있는 동일한 접근 권한 값 승인 프로세스를 설명 합니다. [포함 된 SIM](/uwp/api/windows.networking.networkoperators.esim) Api 사용자 지정 기능을 필요로 하는 Api의 예입니다. 개발자 모드에서 응용 프로그램을 로컬로 실행 하려는 경우 사용자 지정 기능을 필요로 하지 있습니다. 하지만 외부 개발자 모드에서 실행 하거나 Microsoft Store에 앱을 게시 하도록 해야 합니다.
 
+Windows 기술 계정 관리자 (TAM)가 경우 TAM 액세스를 요청을 사용 하 여 작업할 수 있습니다. 자세한 내용은 [Microsoft TAM 연락처](/windows-hardware/drivers/mobilebroadband/testing-your-desktop-cosa-apn-database-submission#contact-your-microsoft-tam)에서 찾을 수 있습니다.
+
+사용자 지정 기능을 선언 하려면 [앱 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/BR211474) 소스 파일을 수정 합니다 (`Package.appxmanifest`). **Xmlns:uap4** XML 네임 스페이스 선언을 추가 하 고 사용자 지정 기능을 선언 하면 **uap4** 접두사를 사용 합니다. 예를 들면 다음과 같습니다.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    ...
+    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4">
+...
+<Capabilities>
+    <uap4:CustomCapability Name="CompanyName.customCapabilityName_PublisherID"/>
+</Capabilities>
+</Package>
+```
 
 ## <a name="related-topics"></a>관련 항목
 
