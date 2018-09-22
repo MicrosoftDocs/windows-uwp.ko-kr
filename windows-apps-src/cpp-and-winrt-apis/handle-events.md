@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
 ms.openlocfilehash: 7af66c3f0586f2fb99a2a742f6da0144ed69d253
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4115443"
+ms.locfileid: "4130118"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 대리자를 사용한 이벤트 처리
 이번 항목에서는 C++/WinRT를 사용해 이벤트 처리 대리자를 등록하거나 취소하는 방법에 대해서 설명합니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
@@ -122,7 +122,7 @@ private:
 
 위의 예와 같이 강력한 참조 대신 버튼에 약한 참조를 저장할 수 있습니다([C++/WinRT의 약한 참조](weak-references.md) 참조).
 
-또한 대리자를 등록 하면 **winrt::auto_revoke** (즉, 값 형식 [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t))는 이벤트 revoker (유형 [**winrt::event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker))의 요청을 지정할 수 있습니다. 이벤트 revoker를 이벤트 소스 (이벤트를 발생 시키는 개체)에 대 한 약한 참조를 보유 합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 소스가 여전히 존재하는지 확인합니다. 존재하는 경우 대리인을 취소합니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
+또는 대리자를 등록할 때 (유형 [**winrt:: event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker))의 이벤트 취소 자를 요청 **auto_revoke** (즉, 형식 [**winrt:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)값)를 지정할 수 있습니다. 이벤트 취소 자를 수에 대 한 이벤트 소스 (이벤트를 발생 시키는 개체)에 대 한 약한 참조를 보유 합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 소스가 여전히 존재하는지 확인합니다. 존재하는 경우 대리인을 취소합니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -264,7 +264,7 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 람다 캡처 절에서는 *this*에 대한 약한 참조를 나타내는 임시 변수가 생성됩니다. 람다 함수의 본문에서는 *this*에 대한 강한 참조를 얻을 수 있다면 **OnCompositionScaleChanged** 함수가 호출됩니다. 이러한 방식으로 **OnCompositionScaleChanged** 내부에서는 *this*를 안전하게 사용할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
-* [winrt::auto_revoke_t 마커 구조체](/uwp/cpp-ref-for-winrt/auto-revoke-t)
+* [winrt:: auto_revoke_t 마커 구조체](/uwp/cpp-ref-for-winrt/auto-revoke-t)
 * [winrt::implements::get_weak 함수](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function)
 * [winrt::implements::get_strong 함수](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function)
 
