@@ -10,12 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cf12bc5c875e4ce3be2d627c87e15770e4cc214
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+dev_langs:
+- csharp
+- cppwinrt
+- cpp
+ms.openlocfilehash: ff104bfb5114cd51eb04d75af3c096f47a7d286d
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4122514"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4153626"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 
@@ -36,7 +40,7 @@ ms.locfileid: "4122514"
 
 모든 바인딩은 바인딩 대상과 바인딩 소스로 구성됩니다. 일반적으로 대상은 컨트롤 또는 기타 UI 요소의 속성이고, 소스는 클래스 인스턴스(데이터 모델 또는 뷰 모델)의 속성입니다. 이 예제에서는 컨트롤을 단일 항목에 바인딩하는 방법을 보여 줍니다. 대상은 **TextBlock**의 **Text** 속성입니다. 소스는 오디오 녹음을 나타내는 **Recording**이라는 단순 클래스의 인스턴스를 나타냅니다. 먼저 클래스를 살펴보겠습니다.
 
-C#를 사용 하는 경우 다음 새 클래스를 프로젝트에 추가 하 고 이름을 `Recording.cs`.
+C# 또는 C +를 사용 하는 경우 + /CX에서 새 클래스를 프로젝트에 추가 하 고 **녹음/녹화**클래스 이름을 지정 합니다.
 
 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음 라는 C +에 표시 된 대로 프로젝트에 새 **Midl 파일 (.idl)** 항목을 추가 + WinRT 코드 예제에서는 목록 아래 합니다. 새 파일의 내용을 목록에 표시 된 [MIDL 3.0](/uwp/midl-3/intro) 코드로 대체, 생성 하는 프로젝트 빌드 `Recording.h` 및 `.cpp` 및 `RecordingViewModel.h` 및 `.cpp`, 목록에 일치 하도록 생성 된 파일에 코드를 추가 합니다. 생성 된 파일에 대 한 자세한 정보 및 프로젝트에 복사 하는 방법에 대 한 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](/windows/uwp/cpp-and-winrt-apis/binding-property)합니다.
 
@@ -157,6 +161,7 @@ Quickstart::Recording RecordingViewModel::DefaultRecording()
 ```
 
 ```cpp
+// Recording.h
 #include <sstream>
 namespace Quickstart
 {
@@ -217,6 +222,10 @@ namespace Quickstart
         }
     };
 }
+
+// Recording.cpp
+#include "pch.h"
+#include "Recording.h"
 ```
 
 그런 다음 태그 페이지를 나타내는 클래스에서 바인딩 소스 클래스를 노출합니다. **RecordingViewModel** 형식의 속성을 **MainPage**에 바인딩하면 됩니다.
@@ -273,6 +282,10 @@ Quickstart::RecordingViewModel MainPage::ViewModel()
 ```
 
 ```cpp
+// MainPage.h
+...
+#include "Recording.h"
+
 namespace Quickstart
 {
     public ref class MainPage sealed
@@ -280,16 +293,21 @@ namespace Quickstart
     private:
         RecordingViewModel ^ viewModel;
     public:
-        MainPage()
-        {
-            InitializeComponent();
-            this->viewModel = ref new RecordingViewModel();
-        }
+        MainPage();
+
         property RecordingViewModel^ ViewModel
         {
             RecordingViewModel^ get() { return this->viewModel; };
         }
     };
+}
+
+// MainPage.cpp
+...
+MainPage::MainPage()
+{
+    InitializeComponent();
+    this->viewModel = ref new RecordingViewModel();
 }
 ```
 
@@ -381,6 +399,8 @@ Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Rec
 ```
 
 ```cpp
+// Recording.h
+...
 public ref class RecordingViewModel sealed
 {
 private:
@@ -561,11 +581,14 @@ public ref class Recording sealed
 
 다음은 각 경우의 동일한 결과입니다.
 
+> [!NOTE]
+> C + +를 사용 하는 UI 아래 그림과 같이 정확 하 게 표시 되지 않습니다: **ReleaseDateTime** 속성의 렌더링은 다릅니다. 에 대 한 자세한 내용은 다음 섹션을 참조 하세요.
+
 ![목록 보기 바인딩](images/xaml-databinding4.png)
 
 ## <a name="formatting-or-converting-data-values-for-display"></a>표시할 데이터 값 필터링 또는 변환
 
-위 렌더링에는 사소한 문제가 하나 있습니다. **ReleaseDateTime** 속성이 날짜가 아니라 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx)이므로 필요한 것보다 더 정밀하게 표시됩니다. 한 가지 해결 방법은 `this.ReleaseDateTime.ToString("d")`을 반환하는 **Recording** 클래스에 문자열 속성을 추가하는 것입니다. 이 속성의 이름을 **ReleaseDate**로 지정하면 날짜 및 시간이 아니라 날짜가 반환되고, **ReleaseDateAsString**으로 지정하면 문자열이 반환됩니다.
+위 렌더링에 문제가 있습니다. **ReleaseDateTime** 속성 날짜를 (c + +를 사용 하는 것은 [**일정**](/uwp/api/windows.globalization.calendar)) 하는 경우에 [**DateTime**](/uwp/api/windows.foundation.datetime) 을 합니다. 따라서 C#에서는 표시 됩니다 필요한 것 보다 더 정밀 합니다. 및 c + +에서 렌더링 되는 형식 이름으로 합니다. 해당 하는 반환 하는 **녹음/녹화** 클래스에 문자열 속성을 추가 하는 한 가지 방법은 `this.ReleaseDateTime.ToString("d")`. **ReleaseDate** 속성은 반환 하지는 날짜 및 시간 및 날짜를 나타냅니다. **ReleaseDateAsString**으로 지정하면 문자열이 반환됩니다.
 
 보다 유연한 해결 방법은 값 변환기라는 것을 사용하는 것입니다. 다음은 사용자 고유의 값 변환기를 작성하는 방법에 대한 예제입니다. 이 코드를 Recording.cs 소스 코드 파일에 추가합니다.
 
@@ -598,7 +621,94 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 }
 ```
 
-이제 **StringFormatter**의 인스턴스를 페이지 리소스로 추가하고 바인딩에서 사용할 수 있습니다. 형식 지정 유연성을 극대화하기 위해 태그에서 변환기로 형식 문자열을 전달합니다.
+```cppwinrt
+// StringFormatter.idl
+namespace Quickstart
+{
+    runtimeclass StringFormatter : Windows.UI.Xaml.Data.IValueConverter
+    {
+        StringFormatter();
+    }
+}
+
+// StringFormatter.h
+#pragma once
+
+#include "StringFormatter.g.h"
+#include <sstream>
+
+namespace winrt::Quickstart::implementation
+{
+    struct StringFormatter : StringFormatterT<StringFormatter>
+    {
+        StringFormatter() = default;
+
+        Windows::Foundation::IInspectable Convert(Windows::Foundation::IInspectable const& value, Windows::UI::Xaml::Interop::TypeName const& targetType, Windows::Foundation::IInspectable const& parameter, hstring const& language);
+        Windows::Foundation::IInspectable ConvertBack(Windows::Foundation::IInspectable const& value, Windows::UI::Xaml::Interop::TypeName const& targetType, Windows::Foundation::IInspectable const& parameter, hstring const& language);
+    };
+}
+
+namespace winrt::Quickstart::factory_implementation
+{
+    struct StringFormatter : StringFormatterT<StringFormatter, implementation::StringFormatter>
+    {
+    };
+}
+
+// StringFormatter.cpp
+#include "pch.h"
+#include "StringFormatter.h"
+
+namespace winrt::Quickstart::implementation
+{
+    Windows::Foundation::IInspectable StringFormatter::Convert(Windows::Foundation::IInspectable const& value, Windows::UI::Xaml::Interop::TypeName const& /* targetType */, Windows::Foundation::IInspectable const& /* parameter */, hstring const& /* language */)
+    {
+        // Retrieve the value as a Calendar.
+        Windows::Globalization::Calendar valueAsCalendar{ value.as<Windows::Globalization::Calendar>() };
+
+        std::wstringstream wstringstream;
+        wstringstream << L"Released: ";
+        wstringstream << valueAsCalendar.MonthAsNumericString().c_str();
+        wstringstream << L"/" << valueAsCalendar.DayAsString().c_str();
+        wstringstream << L"/" << valueAsCalendar.YearAsString().c_str();
+        return winrt::box_value(hstring{ wstringstream.str().c_str() });
+    }
+
+    Windows::Foundation::IInspectable StringFormatter::ConvertBack(Windows::Foundation::IInspectable const& /* value */, Windows::UI::Xaml::Interop::TypeName const& /* targetType */, Windows::Foundation::IInspectable const& /* parameter */, hstring const& /* language */)
+    {
+        throw hresult_not_implemented();
+    }
+}
+```
+
+```cpp
+...
+public ref class StringFormatter sealed : Windows::UI::Xaml::Data::IValueConverter
+{
+public:
+    virtual Platform::Object^ Convert(Platform::Object^ value, TypeName targetType, Platform::Object^ parameter, Platform::String^ language)
+    {
+        // Retrieve the value as a Calendar.
+        Windows::Globalization::Calendar^ valueAsCalendar = dynamic_cast<Windows::Globalization::Calendar^>(value);
+
+        std::wstringstream wstringstream;
+        wstringstream << L"Released: ";
+        wstringstream << valueAsCalendar->MonthAsNumericString()->Data();
+        wstringstream << L"/" << valueAsCalendar->DayAsString()->Data();
+        wstringstream << L"/" << valueAsCalendar->YearAsString()->Data();
+        return ref new Platform::String(wstringstream.str().c_str());
+    }
+
+    // No need to implement converting back on a one-way binding
+    virtual Platform::Object^ ConvertBack(Platform::Object^ value, TypeName targetType, Platform::Object^ parameter, Platform::String^ language)
+    {
+        throw ref new Platform::NotImplementedException();
+    }
+};
+...
+```
+
+이제 **StringFormatter**의 인스턴스를 페이지 리소스로 추가하고 바인딩에서 사용할 수 있습니다.
 
 ```xml
 <Page.Resources>
@@ -610,6 +720,8 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
     ConverterParameter=Released: \{0:d\}}"/>
 ...
 ```
+
+위에서 알 수 있듯이 유연성 서식을 사용 하 여 태그 변환기 매개 변수를 통해 변환기로 형식 문자열을 전달 합니다. 이 항목에서는 C# 값 변환기에에서 표시 된 코드 예제에서 사용 하 여 해당 매개 변수입니다. 하지만 쉽게 변환기 매개 변수로 스타일 c + + 형식 문자열을 전달 하 고 값 변환기 **wprintf** 등 **swprintf**서식 함수를 사용 하 여 사용할 수 있습니다.
 
 다음은 결과입니다.
 
