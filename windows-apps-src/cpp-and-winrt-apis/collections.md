@@ -3,18 +3,18 @@ author: stevewhims
 description: C + + WinRT 기능 및 다양 한 구현 및/또는 컬렉션을 전달 하려는 경우 시간과 노력을 저장 하는 기본 클래스를 제공 합니다.
 title: 컬렉션을 사용 하 여 C + + WinRT
 ms.author: stwhi
-ms.date: 08/24/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ef6fbfab45197c868296186363c168a6c443247
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: c7ac3635a96b8dd3d757f25da1b826ea318c1ad4
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4126348"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155396"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>컬렉션 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -32,6 +32,8 @@ ms.locfileid: "4126348"
 
 ### <a name="general-purpose-collection-empty"></a>빈 범용 컬렉션
 
+이 섹션에서는 처음 비어 있는 컬렉션을 만들 하려는 시나리오를 다룹니다. 만든 *후* 채웁니다.
+
 범용 컬렉션을 구현 하는 형식의 새 개체를 검색 하려면 [**winrt::single_threaded_vector**](/uwp/cpp-ref-for-winrt/single-threaded-vector) 함수 템플릿을 호출할 수 있습니다. [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_)으로 개체가 반환 됩니다 하 고 반환 된 개체의 함수 및 속성 호출를 통해 인터페이스입니다.
 
 ```cppwinrt
@@ -42,7 +44,7 @@ using namespace winrt;
 ...
 int main()
 {
-    init_apartment();
+    winrt::init_apartment();
 
     Windows::Foundation::Collections::IVector<int> coll{ winrt::single_threaded_vector<int>() };
     coll.Append(1);
@@ -60,9 +62,13 @@ int main()
 
 위의 코드 예제에서 살펴본 대로 컬렉션을 만든 후 요소를 추가, 반복을 API에서 수신 하는 모든 Windows 런타임 컬렉션 개체와 마찬가지로 일반적으로 개체를 처리 합니다. 컬렉션 변경 불가능 한 뷰를 해야 하는 경우와 같이 [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview)호출할 수 있습니다. 위에 표시 된 패턴&mdash;만들기 및 사용 하는 컬렉션의&mdash;API에서 데이터를 가져오거나 데이터를 전달 하려는 간단한 시나리오에 적합 합니다. **IVector**또는 **IVectorView**를 전달할 수, [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_) 는 예상 되는 곳입니다.
 
+위의 코드 예제에서는 **init_apartment** 호출 초기화 COM; 기본적으로 다중 스레드 아파트에서.
+
 ### <a name="general-purpose-collection-primed-from-data"></a>데이터에서 전기 충전 완료 하는 범용 컬렉션
 
-위의 코드 예제에서 볼 수 있는 **추가** 에 대 한 호출의 오버 헤드를 방지할 수 있습니다. 원본 데이터를 이미 있을 수 또는 Windows 런타임 컬렉션 개체를 작성 하기 전에 미리 채울 수도 있습니다. 작업을 수행 하는 방법은 다음과 같습니다.
+이 섹션에서는 컬렉션을 만들고 동시 채우려면 하려는 시나리오를 다룹니다.
+
+이전 코드 예에서 **추가** 에 대 한 호출의 오버 헤드를 피할 수 있습니다. 원본 데이터를 이미 있을 수 또는 Windows 런타임 컬렉션 개체를 만들기 전에 원본 데이터를 채우는 것이 좋습니다. 작업을 수행 하는 방법은 다음과 같습니다.
 
 ```cppwinrt
 auto coll1{ winrt::single_threaded_vector<int>({ 1,2,3 }) };

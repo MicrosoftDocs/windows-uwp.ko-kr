@@ -4,23 +4,26 @@ title: 다중 인스턴스 유니버설 Windows 앱 만들기
 description: 이 항목에서는 다중 인스턴스를 지원하는 UWP 앱을 작성하는 방법을 설명합니다.
 keywords: 다중 인스턴스 uwp
 ms.author: twhitney
-ms.date: 09/19/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9302ed0375739153eb95ac2b54c1ed396b14daee
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4126998"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4156098"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>다중 인스턴스 유니버설 Windows 앱 만들기
 
 이 항목에서는 다중 인스턴스 유니버설 Windows 플랫폼(UWP) 앱을 만드는 방법을 설명합니다.
 
 Windows 10, 버전 1803 (10.0; 빌드 17134) 이후, UWP 앱에 여러 인스턴스를 지원 하도록에서 선택할 수 있습니다. 다중 인스턴스 UWP 앱의 인스턴스를 실행 중이며 후속 정품 인증을 요청하는 경우 플랫폼은 기존 인스턴스를 활성화하지 않습니다. 대신 다른 프로세스에서 실행 중인 인스턴스를 새로 만듭니다.
+
+> [!IMPORTANT]
+> 다중 인스턴스는 JavaScript 응용 프로그램에 대 한 지원 하지만 다중 인스턴스 리디렉션 되었습니다. 다중 인스턴스 리디렉션은 JavaScript 응용 프로그램에 대해 지원 되지 않으므로, [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) 클래스 이러한 응용 프로그램에 대 한 유용 하지 않습니다.
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>다중 인스턴스 동작 옵트인
 
@@ -59,7 +62,7 @@ Windows 10, 버전 1803 (10.0; 빌드 17134) 이후, UWP 앱에 여러 인스턴
 
 **다중 인스턴스 리디렉션 UWP 앱** 템플릿은 위에 표시된 대로 package.appxmanifest 파일에 `SupportsMultipleInstances`를 추가하고 `Main()` 함수가 포함된 프로젝트에 **Program.cs**(또는 C++ 버전의 템플릿을 사용하는 경우 **Program.cpp**)를 추가합니다. 활성화를 리디렉션하는 논리가 `Main` 함수로 들어 갑니다. **Program.cs** 템플릿은 다음과 같습니다.
 
-[AppInstance.RecommendedInstance](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 선호 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸 기본 설정에서 제공 하는 경우 다음 리디렉션할 수 있습니다 수 활성화를 해당 인스턴스로 또는 선택 하는 경우 무시할 수 있습니다.
+[**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 선호 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸 기본 설정에서 제공 하는 경우 다음 리디렉션할 수 있습니다 수 활성화를 해당 인스턴스로 또는 선택 하는 경우 무시할 수 있습니다.
 
 ``` csharp
 public static class Program
@@ -109,7 +112,7 @@ public static class Program
 }
 ```
 
-`Main()` 이 템플릿은 실행되는 첫 번째 항목입니다. 이는 [OnLaunched()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) 및 [OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_) 이전에 실행됩니다. 이를 사용하면 앱에서 다른 초기화 코드가 실행되기 전에 해당 인스턴스 또는 다른 인스턴스를 활성화할지 여부를 결정할 수 있습니다.
+`Main()` 이 템플릿은 실행되는 첫 번째 항목입니다. [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) 와 [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_)하기 전에 실행 됩니다. 이를 사용하면 앱에서 다른 초기화 코드가 실행되기 전에 해당 인스턴스 또는 다른 인스턴스를 활성화할지 여부를 결정할 수 있습니다.
 
 위의 코드는 응용 프로그램의 기존 인스턴스가 활성화되는지 또는 새 인스턴스가 활성화되는지 여부를 결정합니다. 키를 사용하여 활성화하려는 기존 인스턴스가 있는지 여부를 판별합니다. 예를 들어 [파일 활성화 처리](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation)를 위해 앱을 시작할 수 있는 경우 이 파일 이름을 키로 사용할 수 있습니다. 그런 다음 앱의 인스턴스가 해당 키로 이미 등록되어 있는지 확인하고 새 인스턴스를 여는 대신 활성화할 수 있습니다. 다음은 코드의 개념입니다. `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
@@ -129,7 +132,7 @@ public static class Program
 - 경합 조건과 경합 문제가 발생하지 않도록 하려면 다중 인스턴스 앱이 여러 인스턴스 간에 공유할 수 있는 설정, 앱 로컬 저장소 및 기타 리소스(예: 사용자 파일, 데이터 저장소 등)에 대한 액세스를 파티션/동기화하는 단계를 수행해야 합니다. 뮤텍스, 세마포어, 이벤트 등의 표준 동기화 메커니즘을 사용할 수 있습니다.
 - 앱의 Package.appxmanifest 파일에 `SupportsMultipleInstances`가 있는 경우 확장에서 `SupportsMultipleInstances`를 선언할 필요가 없습니다. 
 - 백그라운드 작업 또는 앱 서비스를 제외한 다른 확장에 `SupportsMultipleInstances`를 추가하고 확장을 호스트하는 앱이 Package.appxmanifest 파일에서 `SupportsMultipleInstances`를 선언하지 않는 경우 스키마 오류가 발생합니다.
-- 앱은 매니페스트의 [ResourceGroup](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) 선언을 사용하여 여러 백그라운드 작업을 동일한 호스트로 그룹화할 수 있습니다. 이는 각 활성화가 별도의 호스트로 들어가는 다중 인스턴스와 충돌합니다. 따라서 앱은 매니페스트에서 `SupportsMultipleInstances`와 `ResourceGroup`을 둘 다 선언할 수 없습니다.
+- 앱은 매니페스트의 [**ResourceGroup**](https://docs.microsoft.com/windows/uwp/launch-resume/declare-background-tasks-in-the-application-manifest) 선언을 여러 백그라운드 작업을 동일한 호스트로 그룹화를 사용할 수 있습니다. 이는 각 활성화가 별도의 호스트로 들어가는 다중 인스턴스와 충돌합니다. 따라서 앱은 매니페스트에서 `SupportsMultipleInstances`와 `ResourceGroup`을 둘 다 선언할 수 없습니다.
 
 ## <a name="sample"></a>샘플
 

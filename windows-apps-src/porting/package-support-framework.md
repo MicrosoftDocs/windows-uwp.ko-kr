@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e5119696498156d36ec63b16b1d76c00b03f4df
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: d4b4cae2e135f7a66cd68192faabeffdb309a909
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4128388"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155938"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>패키지 지원 프레임 워크를 사용 하 여 MSIX 패키지 런타임 수정 적용
 
@@ -57,19 +57,19 @@ ms.locfileid: "4128388"
 
 ![ProcMon 로그 파일](images/desktop-to-uwp/procmon_logfile.png)
 
-이 문제를 해당 패키지 경로를.log 파일을 작성 하는 응용 프로그램 실패 했습니다. 이 것이 좋습니다 파일 리디렉션 shim 도움이 될 수 있습니다.
+이 문제를 해당 패키지 경로를.log 파일을 작성 하는 응용 프로그램 실패 했습니다. 이 것이 좋습니다 파일 리디렉션 수정을 도움이 될 수 있습니다.
 
 <a id="find" />
 
 ## <a name="find-a-runtime-fix"></a>런타임 수정 사항 찾기
 
-PSF 파일 리디렉션 shim 같은 지금 바로 사용할 수 있는 런타임 수정 사항이 포함 되어 있습니다.
+PSF 파일 리디렉션 수정 같은 지금 바로 사용할 수 있는 런타임 수정 사항이 포함 되어 있습니다.
 
-### <a name="file-redirection-shim"></a>리디렉션 Shim 파일
+### <a name="file-redirection-fixup"></a>파일 리디렉션 수정
 
-MSIX 컨테이너에서 실행 되는 응용 프로그램에서 액세스할 수 없는 디렉터리의 데이터를 읽거나 쓰기 시도 리디렉션할 수 있으며 [리디렉션 Shim 파일을](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) 사용할 수 있습니다.
+MSIX 컨테이너에서 실행 되는 응용 프로그램에서 액세스할 수 없는 디렉터리의 데이터를 읽거나 쓰기 시도 리디렉션할 수 있으며 [파일 리디렉션 수정 하기 위해](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) 사용할 수 있습니다.
 
-예를 들어, 응용 프로그램을 응용 프로그램 실행 파일과 동일한 디렉터리에 있는 로그 파일에 쓰는 경우 [파일 리디렉션 Shim](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) 를 사용 하 여 로컬 앱 데이터 저장소 등의 다른 위치에 해당 로그 파일을 만들 수 있습니다.
+예를 들어, 응용 프로그램을 응용 프로그램 실행 파일과 동일한 디렉터리에 있는 로그 파일에 쓰는 경우 [파일 리디렉션 수정을](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) 사용 하 여 로컬 앱 데이터 저장소 등의 다른 위치에 해당 로그 파일을 만들 수 있습니다.
 
 ### <a name="runtime-fixes-from-the-community"></a>커뮤니티에서 런타임 수정
 
@@ -90,10 +90,10 @@ Windows sdk에서 및 다음 단계를 수행 하 여 몇 가지 간단한 도�
 
 ### <a name="create-the-package-layout-folder"></a>패키지 레이아웃 폴더 만들기
 
-.Appx 파일을 이미 있는 경우 패키지에 대 한 준비 영역으로 지원할 수 있는 레이아웃 폴더에 해당 콘텐츠 압축을 푸는 수 있습니다.  이를 수행할 수는 **x64 VS 2017 용 네이티브 도구 명령 프롬프트**, 또는 실행 검색 경로에 SDK bin 경로 사용 하 여 수동으로 합니다.
+.Msix (또는.appx) 파일을 이미 있는 경우 패키지에 대 한 준비 영역으로 지원할 수 있는 레이아웃 폴더에 해당 콘텐츠 압축을 푸는 수 있습니다.  이를 수행할 수는 **x64 VS 2017 용 네이티브 도구 명령 프롬프트**, 또는 실행 검색 경로에 SDK bin 경로 사용 하 여 수동으로 합니다.
 
 ```
-makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.appx /d PackageContents
+makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
 
 ```
 
@@ -101,7 +101,7 @@ makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.appx /d PackageContent
 
 ![패키지 레이아웃](images/desktop-to-uwp/package_contents.png)
 
-.Appx 파일을 시작 하 여 없다면부터 패키지 폴더 및 파일을 만들 수 있습니다.
+.Msix (또는.appx) 파일을 시작 하 여 없다면부터 패키지 폴더 및 파일을 만들 수 있습니다.
 
 ### <a name="get-the-package-support-framework-files"></a>지원 프레임 워크 패키지 파일을 가져오려면
 
@@ -125,9 +125,9 @@ nuget install Microsoft.PackageSupportFramework
 
 | 응용 프로그램 실행 파일은 x64 | 응용 프로그램 실행 파일은 x86 |
 |-------------------------------|-----------|
-| [ShimLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |  [ShimLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |
-| [ShimRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) | [ShimRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) |
-| [ShimRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) | [ShimRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) |
+| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |
+| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) |
+| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) |
 
 패키지 콘텐츠 다음과 같이 표시 이제 해야 합니다.
 
@@ -135,14 +135,14 @@ nuget install Microsoft.PackageSupportFramework
 
 ### <a name="modify-the-package-manifest"></a>패키지 매니페스트 수정
 
-텍스트 편집기에서 패키지 매니페스트를 열고 다음을 설정 합니다 `Executable` 의 특성은 `Application` shim 시작 관리자 실행 파일의 이름 지정할 요소를 합니다.  대상 응용 프로그램의 아키텍처를 알고 있는 경우 적절 한 버전 ShimLauncher32.exe 또는 ShimLauncher64.exe를 선택 합니다.  그렇지 않으면 ShimLauncher32.exe 모든 경우에 적합 합니다.  예를 들면 다음과 같습니다.
+텍스트 편집기에서 패키지 매니페스트를 열고 다음을 설정 합니다 `Executable` 의 특성은 `Application` PSF 시작 관리자 실행 파일의 이름 지정할 요소를 합니다.  대상 응용 프로그램의 아키텍처를 알고 있는 경우 적절 한 버전 PSFLauncher32.exe 또는 PSFLauncher64.exe를 선택 합니다.  그렇지 않으면 PSFLauncher32.exe 모든 경우에 적합 합니다.  예를 들면 다음과 같습니다.
 
 ```xml
 <Package ...>
   ...
   <Applications>
     <Application Id="PSFSample"
-                 Executable="ShimLauncher32.exe"
+                 Executable="PSFLauncher32.exe"
                  EntryPoint="Windows.FullTrustApplication">
       ...
     </Application>
@@ -152,7 +152,7 @@ nuget install Microsoft.PackageSupportFramework
 
 ### <a name="create-a-configuration-file"></a>구성 파일 만들기
 
-파일 이름을 만들기 ``config.json``, 해당 파일을 패키지의 루트 폴더에 저장 합니다. 방금 교체 하는 실행 파일을 가리키도록 config.json 파일의 선언 된 응용 프로그램 ID를 수정 합니다. 프로세스 모니터를 사용 하 여에서 얻은 정보를 사용 하 여 수도 작업 디렉터리를 설정 뿐 아니라 수 파일 리디렉션 shim를 사용 하 여 패키지 상대 "PSFSampleApp" 디렉터리 아래에 있는.log 파일을 읽기/쓰기를 리디렉션하.
+파일 이름을 만들기 ``config.json``, 해당 파일을 패키지의 루트 폴더에 저장 합니다. 방금 교체 하는 실행 파일을 가리키도록 config.json 파일의 선언 된 응용 프로그램 ID를 수정 합니다. 프로세스 모니터를 사용 하 여에서 얻은 정보를 사용 하 여도 작업 디렉터리를 설정 외에 아니라 수 파일 리디렉션 수정을 사용 하 여 패키지 상대 "PSFSampleApp" 디렉터리 아래에 있는.log 파일을 읽기/쓰기를 리디렉션하 합니다.
 
 ```json
 {
@@ -166,9 +166,9 @@ nuget install Microsoft.PackageSupportFramework
     "processes": [
         {
             "executable": "PSFSample",
-            "shims": [
+            "fixups": [
                 {
-                    "dll": "FileRedirectionShim.dll",
+                    "dll": "FileRedirectionFixup.dll",
                     "config": {
                         "redirectedPaths": {
                             "packageRelative": [
@@ -195,10 +195,10 @@ nuget install Microsoft.PackageSupportFramework
 | 응용 프로그램 | 실행 | 시작 하려는 실행 파일의 패키지 상대 경로입니다. 대부분의 경우 수정 하기 전에이 값 패키지 매니페스트 파일에서 가져올 수 있습니다. 값은 `Executable` 의 특성 합니다 `Application` 요소입니다. |
 | 응용 프로그램 | workingDirectory | (선택 사항) 시작 하는 응용 프로그램의 작업 디렉터리를 사용 하 여 패키지 상대 경로입니다. 이 값을 설정 하지 않으면, 운영 체제를 사용 합니다 `System32` 응용 프로그램의 작업 디렉터리로 디렉터리입니다. |
 | 프로세스 | 실행 | 대부분에서의 이름이 됩니다 합니다 `executable` 제거 경로 및 파일 확장명을 가진 위에 구성 합니다. |
-| shim | dll | 로드 shim.appx 패키지 상대 경로입니다. |
-| shim | 구성 | (선택 사항) Shim 메일 그룹의 동작을 제어 합니다. 이 값의 정확한 형식으로 원하는 각 shim이 "blob" 해석할 수 shim 하 여 shim 별로 달라 집니다. |
+| 수정 | dll | .Msix/.appx 로드를 수정 하기 위해 패키지 상대 경로입니다. |
+| 수정 | 구성 | (선택 사항) 수정 메일 그룹의 동작을 제어 합니다. 이 값의 정확한 형식으로 원하는 각 수정이 "blob" 해석할 수 수정 하 여 수정 별로 달라 집니다. |
 
-`applications`, `processes`, 및 `shims` 키가 배열입니다. 즉,는 둘 이상의 응용 프로그램, 프로세스 및 shim DLL 지정 하려면 config.json 파일을 사용할 수 있습니다.
+`applications`, `processes`, 및 `fixups` 키가 배열입니다. 즉,는 둘 이상의 응용 프로그램, 프로세스 및 수정을 DLL 지정 하려면 config.json 파일을 사용할 수 있습니다.
 
 
 ### <a name="package-and-test-the-app"></a>패키지 및 앱 테스트
@@ -206,13 +206,13 @@ nuget install Microsoft.PackageSupportFramework
 그런 다음 패키지를 만듭니다.
 
 ```
-makeappx pack /d PackageContents /p PSFSamplePackageFixup.appx
+makeappx pack /d PackageContents /p PSFSamplePackageFixup.msix
 ```
 
 그런 다음 서명 합니다.
 
 ```
-signtool sign /a /v /fd sha256 /f ExportedSigningCertificate.pfx PSFSamplePackageFixup.appx
+signtool sign /a /v /fd sha256 /f ExportedSigningCertificate.pfx PSFSamplePackageFixup.msix
 ```
 
 자세한 내용은 참조 [패키지 서명 인증서를 만드는](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/how-to-create-a-package-signing-certificate) 방법과 [signtool을 사용 하 여 패키지에 서명 하는 방법](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
@@ -223,18 +223,18 @@ PowerShell을 사용 하 여 패키지를 설치 합니다.
 > 먼저 패키지를 제거 해야 합니다.
 
 ```
-powershell Add-AppxPackage .\PSFSamplePackageFixup.appx
+powershell Add-MSIXPackage .\PSFSamplePackageFixup.msix
 ```
 
 응용 프로그램을 실행 하 고 런타임 수정 적용 된 동작을 확인 합니다.  진단 및 필요에 따라 패키징 단계를 반복 합니다.
 
-### <a name="use-the-trace-shim"></a>추적 Shim 사용
+### <a name="use-the-trace-fixup"></a>추적 수정을 사용합니다
 
-패키지 된 응용 프로그램 호환성 문제를 진단 하는 대체 기술을 추적 Shim를 사용 하는 것입니다. 이 DLL의 PSF에 포함 된 하 고 앱의 동작을 유사한 프로세스 모니터의 진단 상세 보기를 제공 합니다.  응용 프로그램 호환성 문제를 표시 하도록 특별히 설계 되었습니다.  추적 Shim 사용를 추가 하 DLL 패키지에 다음 조각에 config.json를 추가 하 고 다음 패키지 응용 프로그램을 설치 합니다.
+패키지 된 응용 프로그램 호환성 문제를 진단 하는 대체 기술을 수정 추적 하기 위해 사용 됩니다. 이 DLL의 PSF에 포함 된 하 고 앱의 동작을 유사한 프로세스 모니터의 진단 상세 보기를 제공 합니다.  응용 프로그램 호환성 문제를 표시 하도록 특별히 설계 되었습니다.  추적 수정을 사용 하 여를 추가 하 DLL 패키지에 다음 조각에 config.json를 추가 하 고 다음 패키지 응용 프로그램을 설치 합니다.
 
 ```json
 {
-    "dll": "TraceShim.dll",
+    "dll": "TraceFixup.dll",
     "config": {
         "traceLevels": {
             "filesystem": "allFailures"
@@ -243,9 +243,9 @@ powershell Add-AppxPackage .\PSFSamplePackageFixup.appx
 }
 ```
 
-기본적으로 추적 Shim "예상" 것으로 간주 될 수 있는 오류를 필터링 합니다.  예를 들어, 응용 프로그램 무조건적으로 확인 하는 경우 이미 있는 결과 무시 하 고 않고 파일을 삭제 하려고 할 수 있습니다. 이것은 파일 시스템 기능에서 모든 오류를 수신 하도록 선택 하는 위의 예제에서는 되므로 일부 예기치 않은 오류 필터링 가져올 수 있는 맬웨어 결과 있습니다. 그 전에 Config.txt 파일에서 읽는 시도 실패 하는 메시지 "파일이 없습니다"에서 끝나지 때문에이 야기 합니다. 이 자주 관찰 되 고 하지 일반적으로 예상 된 것으로 간주 되는 실패 합니다. 실제로 예기치 않은 오류를 필터링 하 고 다음 대체 모든 오류 문제 여전히 식별할 수 없는 경우 시작 가능성이 가장 됩니다.
+기본적으로 수정 추적 하기 위해 "예상" 것으로 간주 될 수 있는 오류를 필터링 합니다.  예를 들어, 응용 프로그램 무조건적으로 확인 하는 경우 이미 있는 결과 무시 하 고 않고 파일을 삭제 하려고 할 수 있습니다. 이것은 파일 시스템 기능에서 모든 오류를 수신 하도록 선택 하는 위의 예제에서는 되므로 일부 예기치 않은 오류 필터링 가져올 수 있는 맬웨어 결과 있습니다. 그 전에 Config.txt 파일에서 읽는 시도 실패 하는 메시지 "파일이 없습니다"에서 끝나지 때문에이 야기 합니다. 이 자주 관찰 되 고 하지 일반적으로 예상 된 것으로 간주 되는 실패 합니다. 실제로 예기치 않은 오류를 필터링 하 고 다음 대체 모든 오류 문제 여전히 식별할 수 없는 경우 시작 가능성이 가장 됩니다.
 
-기본적으로 연결 된 디버거 추적 Shim에서 출력 전송 가져옵니다. 이 예제에서는 디버거를 첨부할 생각 하 고 출력을 보려면 SysInternals에서 [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview) 프로그램을 대신 사용 됩니다. 앱을 실행 한 후 알 수 있습니다 동일한 오류 이전과 하는 것 가리킵니다 우리 동일한 런타임 수정 합니다.
+기본적으로 수정 추적 하기 위해 출력 디버거에 연결 된 전송 가져옵니다. 이 예제에서는 디버거를 첨부할 생각 하 고 출력을 보려면 SysInternals에서 [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview) 프로그램을 대신 사용 됩니다. 앱을 실행 한 후 알 수 있습니다 동일한 오류 이전과 하는 것 가리킵니다 우리 동일한 런타임 수정 합니다.
 
 ![TraceShim 파일을 찾을 수 없습니다.](images/desktop-to-uwp/traceshim_filenotfound.png)
 
@@ -258,7 +258,7 @@ Visual Studio를 사용 하 여 런타임 수정 디버그, 런타임 수정 확
 > [!div class="checklist"]
 > * 패키징 프로젝트를 추가 합니다.
 > * 런타임 수정에 대 한 프로젝트 추가
-> * 실행 Shim 시작 관리자를 시작 하는 프로젝트 추가
+> * 실행 PSF 시작 관리자를 시작 하는 프로젝트 추가
 > * 패키징 프로젝트를 구성 합니다.
 
 확인을 완료 하는 경우 솔루션은 다음과 같이 합니다.
@@ -271,7 +271,7 @@ Visual Studio를 사용 하 여 런타임 수정 디버그, 런타임 수정 확
 |-------|-----------|
 | DesktopApplicationPackage | 이 프로젝트는 [Windows 응용 프로그램 패키징 프로젝트](desktop-to-uwp-packaging-dot-net.md) 를 기반으로 하며 출력은 MSIX 패키지 합니다. |
 | Runtimefix | 런타임 수정 역할을 할 하나 이상의 대체 함수를 포함 하는 c + + Dynamic-Linked 라이브러리 프로젝트입니다. |
-| ShimLauncher | C + + 빈 프로젝트입니다. 이 프로젝트는 패키지 지원 프레임 워크의 런타임 배포 파일을 수집 하는 위치입니다. 실행 파일을 출력 합니다. 해당 실행 파일은 먼저 솔루션을 시작할 때 실행 됩니다. |
+| PSFLauncher | C + + 빈 프로젝트입니다. 이 프로젝트는 패키지 지원 프레임 워크의 런타임 배포 파일을 수집 하는 위치입니다. 실행 파일을 출력 합니다. 해당 실행 파일은 먼저 솔루션을 시작할 때 실행 됩니다. |
 | WinFormsDesktopApplication | 이 프로젝트는 데스크톱 응용 프로그램의 소스 코드를 포함합니다. |
 
 이러한 유형의 프로젝트 모두 포함 하는 전체 샘플을 보면 [PSFSample](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/samples/PSFSample/)를 참조 하세요.
@@ -333,7 +333,7 @@ C + + **동적 연결 라이브러리 (DLL)** 프로젝트를 솔루션에 추�
 
 새로운 수정 만들려는 경우 추가 하지 마십시오 아무 것도이 프로젝트에 아직. 이 가이드의 뒷부분에서이 프로젝트에 올바른 파일을 추가 도와 드립니다. 지금은 솔루션 설정을 계속 진행 됩니다.
 
-### <a name="add-a-project-that-starts-the-shim-launcher-executable"></a>실행 Shim 시작 관리자를 시작 하는 프로젝트 추가
+### <a name="add-a-project-that-starts-the-psf-launcher-executable"></a>실행 PSF 시작 관리자를 시작 하는 프로젝트 추가
 
 C + + **프로젝트 빈** 프로젝트를 솔루션에 추가 합니다.
 
@@ -341,9 +341,9 @@ C + + **프로젝트 빈** 프로젝트를 솔루션에 추가 합니다.
 
 이전 섹션에 설명 된 동일한 지침을 사용 하 여이 프로젝트에 **PSF** Nuget 패키지를 추가 합니다.
 
-**열기 **일반** 설정 페이지 및 프로젝트에 대 한 속성 페이지의 대상 이름** 속성을 설정 ``ShimLauncher32`` 또는 ``ShimLauncher64`` 응용 프로그램의 아키텍처에 따라 합니다.
+**열기 **일반** 설정 페이지 및 프로젝트에 대 한 속성 페이지의 대상 이름** 속성을 설정 ``PSFLauncher32`` 또는 ``PSFLauncher64`` 응용 프로그램의 아키텍처에 따라 합니다.
 
-![shim 시작 관리자 참조](images/desktop-to-uwp/shim-exe-reference.png)
+![PSF 시작 관리자 참조](images/desktop-to-uwp/shim-exe-reference.png)
 
 런타임 수정 프로젝트에 대 한 프로젝트를 솔루션에 추가 합니다.
 
@@ -352,7 +352,7 @@ C + + **프로젝트 빈** 프로젝트를 솔루션에 추가 합니다.
 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 창에서 이러한 값을 적용 합니다.
 
 | 속성 | 값 |
-|-------|-----------|-------|
+|-------|-----------|
 | 로컬 복사 | True |
 | 로컬 위성 어셈블리를 복사 합니다. | True |
 | 참조 어셈블리 출력 | True |
@@ -365,14 +365,14 @@ C + + **프로젝트 빈** 프로젝트를 솔루션에 추가 합니다.
 
 ![프로젝트 참조 추가](images/desktop-to-uwp/add-reference-packaging-project.png)
 
-Shim 시작 관리자 프로젝트 및 데스크톱 응용 프로그램 프로젝트를 선택 하 고 **확인** 단추를 선택 합니다.
+PSF 시작 관리자 프로젝트 및 데스크톱 응용 프로그램 프로젝트를 선택 하 고 **확인** 단추를 선택 합니다.
 
 ![데스크톱 프로젝트](images/desktop-to-uwp/package-project-references.png)
 
 >[!NOTE]
-> 응용 프로그램에 소스 코드 없으면 shim 시작 관리자 프로젝트를 선택 하기만 합니다. 구성 파일을 만들 때 실행 파일을 참조 하는 방법을 살펴보겠습니다.
+> 응용 프로그램에 소스 코드 없으면 PSF 시작 관리자 프로젝트를 선택 하기만 합니다. 구성 파일을 만들 때 실행 파일을 참조 하는 방법을 살펴보겠습니다.
 
-**응용 프로그램** 노드에서 shim 시작 관리자 응용 프로그램을 마우스 오른쪽 단추로 클릭 하 고 **진입점으로 설정**를 선택 합니다.
+**응용 프로그램** 노드에서 PSF 시작 관리자 응용 프로그램을 마우스 오른쪽 단추로 클릭 하 고 **진입점으로 설정**를 선택 합니다.
 
 ![진입점 설정](images/desktop-to-uwp/set-startup-project.png)
 
@@ -390,7 +390,7 @@ Shim 시작 관리자 프로젝트 및 데스크톱 응용 프로그램 프로�
     "processes": [
         {
             "executable": "",
-            "shims": [
+            "fixups": [
                 {
                     "dll": "",
                     "config": {
@@ -409,8 +409,8 @@ Shim 시작 관리자 프로젝트 및 데스크톱 응용 프로그램 프로�
 | 응용 프로그램 | 실행 | 시작 하려는 실행 파일의 패키지 상대 경로입니다. 대부분의 경우 수정 하기 전에이 값 패키지 매니페스트 파일에서 가져올 수 있습니다. 값은 `Executable` 의 특성 합니다 `Application` 요소입니다. |
 | 응용 프로그램 | workingDirectory | (선택 사항) 시작 하는 응용 프로그램의 작업 디렉터리를 사용 하 여 패키지 상대 경로입니다. 이 값을 설정 하지 않으면, 운영 체제를 사용 합니다 `System32` 응용 프로그램의 작업 디렉터리로 디렉터리입니다. |
 | 프로세스 | 실행 | 대부분에서의 이름이 됩니다 합니다 `executable` 제거 경로 및 파일 확장명을 가진 위에 구성 합니다. |
-| shim | dll | 로드 DLL shim 패키지 상대 경로입니다. |
-| shim | 구성 | (선택 사항) Shim 메일 그룹의 동작을 제어 합니다. 이 값의 정확한 형식으로 원하는 각 shim이 "blob" 해석할 수 shim 하 여 shim 별로 달라 집니다. |
+| 수정 | dll | 로드 DLL 수정 패키지 상대 경로입니다. |
+| 수정 | 구성 | (선택 사항) 수정 하기 위해 DLL의 동작을 제어 합니다. 이 값의 정확한 형식으로 원하는 각 수정이 "blob" 해석할 수 수정 하 여 수정 별로 달라 집니다. |
 
 확인을 완료 하는 경우에 ``config.json`` 파일은 다음과 같이 보입니다.
 
@@ -426,7 +426,7 @@ Shim 시작 관리자 프로젝트 및 데스크톱 응용 프로그램 프로�
   "processes": [
     {
       "executable": ".*App.*",
-      "shims": [ { "dll": "RuntimeFix.dll" } ]
+      "fixups": [ { "dll": "RuntimeFix.dll" } ]
     }
   ]
 }
@@ -434,11 +434,11 @@ Shim 시작 관리자 프로젝트 및 데스크톱 응용 프로그램 프로�
 ```
 
 >[!NOTE]
-> `applications`, `processes`, 및 `shims` 키가 배열입니다. 즉,는 둘 이상의 응용 프로그램, 프로세스 및 shim DLL 지정 하려면 config.json 파일을 사용할 수 있습니다.
+> `applications`, `processes`, 및 `fixups` 키가 배열입니다. 즉,는 둘 이상의 응용 프로그램, 프로세스 및 수정을 DLL 지정 하려면 config.json 파일을 사용할 수 있습니다.
 
 ### <a name="debug-a-runtime-fix"></a>런타임 수정 디버그
 
-Visual Studio에서 f5 키를 눌러 디버거를 시작 합니다.  먼저 시작 되는 대상 데스크톱 응용 프로그램을 시작 하는 shim 시작 관리자 응용 프로그램입니다.  대상 데스크톱 응용 프로그램을 디버깅 하려면 수동으로 **디버그**선택 하 여 데스크톱 응용 프로그램 프로세스에 연결 해야 합니다->**프로세스에 연결**하 고 다음 응용 프로그램 프로세스를 선택 합니다. .NET 네이티브 런타임 수정 DLL 사용 하 여 응용 프로그램의 디버깅을 허용 하려면 관리 코드와 네이티브 코드 형식 (혼합된 모드 디버깅)를 선택 합니다.  
+Visual Studio에서 f5 키를 눌러 디버거를 시작 합니다.  먼저 시작 되는 대상 데스크톱 응용 프로그램을 시작 하는 PSF 시작 관리자 응용 프로그램입니다.  대상 데스크톱 응용 프로그램을 디버깅 하려면 수동으로 **디버그**선택 하 여 데스크톱 응용 프로그램 프로세스에 연결 해야 합니다->**프로세스에 연결**하 고 다음 응용 프로그램 프로세스를 선택 합니다. .NET 네이티브 런타임 수정 DLL 사용 하 여 응용 프로그램의 디버깅을 허용 하려면 관리 코드와 네이티브 코드 형식 (혼합된 모드 디버깅)를 선택 합니다.  
 
 설정한, 되 면 데스크톱 응용 프로그램 코드와 런타임 수정 프로젝트 옆에 있는 코드의 줄에 중단점을 설정할 수 있습니다. 응용 프로그램에 소스 코드가 없는, 런타임 수정 프로젝트 줄의 코드로 옆에 중단점을 설정할 수 있습니다.
 
@@ -455,20 +455,20 @@ Visual Studio에서 f5 키를 눌러 디버거를 시작 합니다.  먼저 시�
 
 Visual Studio에서 만든이 가이드 앞부분의 런타임 수정 프로젝트를 엽니다.
 
-선언 합니다 ``SHIM_DEFINE_EXPORTS`` 매크로 대 한 include 문을 추가 합니다 `shim_framework.h` 각각의 맨 합니다. 런타임 수정 기능을 추가 하려는 CPP 파일입니다.
+선언 합니다 ``FIXUP_DEFINE_EXPORTS`` 매크로 대 한 include 문을 추가 합니다 `fixup_framework.h` 각각의 맨 합니다. 런타임 수정 기능을 추가 하려는 CPP 파일입니다.
 
 ```c++
-#define SHIM_DEFINE_EXPORTS
-#include <shim_framework.h>
+#define FIXUP_DEFINE_EXPORTS
+#include <fixup_framework.h>
 ```
 >[!IMPORTANT]
->있는지 확인 합니다 `SHIM_DEFINE_EXPORTS` 매크로 포함 문을 앞에 나타납니다.
+>있는지 확인 합니다 `FIXUP_DEFINE_EXPORTS` 매크로 포함 문을 앞에 나타납니다.
 
 동일한 서명을 함수를 사용 하는 함수를 만듭니다 사용자가 수정 하려는 동작 합니다. 다음은 대체 하는 함수 예제는 `MessageBoxW` 함수 합니다.
 
 ```c++
 auto MessageBoxWImpl = &::MessageBoxW;
-int WINAPI MessageBoxWShim(
+int WINAPI MessageBoxWFixup(
     _In_opt_ HWND hwnd,
     _In_opt_ LPCWSTR,
     _In_opt_ LPCWSTR caption,
@@ -477,10 +477,10 @@ int WINAPI MessageBoxWShim(
     return MessageBoxWImpl(hwnd, L"SUCCESS: This worked", caption, type);
 }
 
-DECLARE_SHIM(MessageBoxWImpl, MessageBoxWShim);
+DECLARE_FIXUP(MessageBoxWImpl, MessageBoxWFixup);
 ```
 
-호출 `DECLARE_SHIM` 지도 `MessageBoxW` 함수에 새 대체 함수를 합니다. 응용 프로그램 호출 하려고 할 때의 `MessageBoxW` 함수를 호출 대체 함수 대신 합니다.
+호출 `DECLARE_FIXUP` 지도 `MessageBoxW` 함수에 새 대체 함수를 합니다. 응용 프로그램 호출 하려고 할 때의 `MessageBoxW` 함수를 호출 대체 함수 대신 합니다.
 
 #### <a name="protect-against-recursive-calls-to-functions-in-runtime-fixes"></a>런타임 수정 함수를 재귀적 호출에 대 한 보호
 
@@ -492,10 +492,10 @@ DECLARE_SHIM(MessageBoxWImpl, MessageBoxWShim);
 
 ### <a name="configuration-data"></a>구성 데이터
 
-런타임 수정 구성 데이터를 추가 하려는 경우 추가할 것을 고려 하는 ``config.json``. 사용할 수 이런 식으로는 `ShimQueryCurrentDllConfig` 를 쉽게 해당 데이터를 구문 분석 합니다. 이 예제에서는 해당 구성 파일에서 문자열 및 부울 값을 구문 분석합니다.
+런타임 수정 구성 데이터를 추가 하려는 경우 추가할 것을 고려 하는 ``config.json``. 사용할 수 이런 식으로는 `FixupQueryCurrentDllConfig` 를 쉽게 해당 데이터를 구문 분석 합니다. 이 예제에서는 해당 구성 파일에서 문자열 및 부울 값을 구문 분석합니다.
 
 ```c++
-if (auto configRoot = ::ShimQueryCurrentDllConfig())
+if (auto configRoot = ::FixupQueryCurrentDllConfig())
 {
     auto& config = configRoot->as_object();
 
@@ -515,13 +515,13 @@ if (auto configRoot = ::ShimQueryCurrentDllConfig())
 
 Visual Studio를 사용 하면 가장 간단한 개발 및 디버깅, 몇 가지 제한 사항이 있습니다.
 
-첫째, F5 디버깅.appx 패키지를 설치 하는 것이 아니라 패키지 레이아웃 폴더 경로에서 느슨한 파일을 배포 하 여 응용 프로그램을 실행 합니다.  일반적으로 레이아웃 폴더가 설치 패키지 폴더와 동일한 보안 제한을가지고 있지 않습니다. 따라서 런타임 수정 적용 하기 전에 패키지 경로 액세스 거부 오류를 재현 불가능할 수도 있습니다 것입니다.
+첫째,는.msix에서 설치 하는 것이 아니라 패키지 레이아웃 폴더 경로에서 느슨한 파일을 배포 하 여 응용 프로그램을 실행 F5 디버깅 /.appx 패키지입니다.  일반적으로 레이아웃 폴더가 설치 패키지 폴더와 동일한 보안 제한을가지고 있지 않습니다. 따라서 런타임 수정 적용 하기 전에 패키지 경로 액세스 거부 오류를 재현 불가능할 수도 있습니다 것입니다.
 
-이 문제를 해결 하려면 F5 느슨한 파일 배포 보다는.appx 패키지 배포를 사용 합니다.  .Appx 패키지 파일을 만들려면 위에서 설명한 대로 Windows SDK에서 [MakeAppx](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) 유틸리티를 사용 합니다. 또는에서 Visual Studio 내에서 응용 프로그램 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **저장소**선택->**앱 패키지 만들기**.
+이 문제를 해결 하기 위해.msix 사용 하 여.appx 패키지 배포 보다 F5 느슨한 파일 배포 / 합니다.  .msix 만들려면.appx 패키지 파일을 / 위에서 설명한 대로 Windows SDK에서 [MakeMSIX](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) 유틸리티를 사용 합니다. 또는에서 Visual Studio 내에서 응용 프로그램 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **저장소**선택->**앱 패키지 만들기**.
 
 Visual Studio를 사용 하 여 다른 문제 디버거를 통해 시작 된 모든 자식 프로세스에 연결 하는 것에 대 한 기본 지원을 없는입니다.   이렇게 하면 시작 된 후 Visual Studio에서 수동으로 연결 되어 있어야 합니다 대상 응용 프로그램의 시작 경로 논리를 디버그 하기가 어렵습니다.
 
-이 문제를 해결 하기 위해 하위 프로세스를 지 원하는 디버거를 사용 하 여 연결 합니다.  참고 아닌지 일반적으로 대상 응용 프로그램에 적시에 (JIT) 디버거를 첨부할 수 있습니다.  대부분의 JIT 기술 관련 ImageFileExecutionOptions 레지스트리 키를 통해 대상 앱 대신 디버거를 시작 하는 때문입니다.  ShimLauncher.exe 데 대상 앱 ShimRuntime.dll 삽입할 detouring 메커니즘을 막습니다.  WinDbg, [Windows 용 디버깅 도구](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/index)포함 되어 있으며 [Windows SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)가져온 지원 하위 프로세스를 연결 합니다.  또한 지원 직접 [시작 하 고 UWP 앱을 디버깅](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-a-uwp-app-using-windbg#span-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanlaunching-and-debugging-a-uwp-app)합니다.
+이 문제를 해결 하기 위해 하위 프로세스를 지 원하는 디버거를 사용 하 여 연결 합니다.  참고 아닌지 일반적으로 대상 응용 프로그램에 적시에 (JIT) 디버거를 첨부할 수 있습니다.  대부분의 JIT 기술 관련 ImageFileExecutionOptions 레지스트리 키를 통해 대상 앱 대신 디버거를 시작 하는 때문입니다.  PSFLauncher.exe 데 대상 앱 FixupRuntime.dll 삽입할 detouring 메커니즘을 막습니다.  WinDbg, [Windows 용 디버깅 도구](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/index)포함 되어 있으며 [Windows SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)가져온 지원 하위 프로세스를 연결 합니다.  또한 지원 직접 [시작 하 고 UWP 앱을 디버깅](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-a-uwp-app-using-windbg#span-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanlaunching-and-debugging-a-uwp-app)합니다.
 
 대상 응용 프로그램 시작 하위 프로세스를 디버깅 하려면 시작 ``WinDbg``.
 
@@ -555,3 +555,4 @@ bp ...
 **질문에 대한 답변 찾기**
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+
