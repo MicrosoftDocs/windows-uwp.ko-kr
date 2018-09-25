@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17f40055f22d8d065ac85d207f3ea17a58a14519
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148328"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4180548"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -151,7 +151,7 @@ ms.locfileid: "4148328"
 | **다른 앱 관리** | **packageManagement** 제한된 접근 권한 값을 통해 앱은 다른 앱을 직접 관리할 수 있습니다.<br /><br />**packageQuery** 장치 접근 권한 값을 통해 앱은 다른 앱에 대한 정보를 수집할 수 있습니다.<br /><br />이러한 접근 권한 값은 [**PackageManager**](https://msdn.microsoft.com/library/windows/apps/BR240960) 클래스의 일부 메서드 및 속성에 액세스하는 데 필요합니다. |
 | **화면 프로젝션** | **screenDuplication** 제한된 접근 권한 값을 통해 앱은 다른 장치의 화면에 표시할 수 있습니다.<br /><br />이 접근 권한 값은 DirectX 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **사용자 계정 이름** | **userPrincipalName** 제한된 접근 권한 값을 통해 앱은 사진의 미리 보기 캐시를 수정하고 이 캐시에 액세스할 수 있습니다.<br /><br />이 접근 권한 값은 [**GetUserNameEx**](https://msdn.microsoft.com/library/windows/desktop/ms724435) 함수를 호출하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
-| **Wallet** | The **walletSystem** restricted capability allows apps to have full access to the stored wallet cards.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Wallet.System**](https://msdn.microsoft.com/library/windows/apps/Mt171610) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
+| **전자지갑** | **walletSystem** 제한된 접근 권한 값을 통해 앱은 저장된 전자지갑 카드에 대한 모든 권한을 가질 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Wallet.System**](https://msdn.microsoft.com/library/windows/apps/Mt171610) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **위치 기록** | **locationHistory** 제한된 접근 권한 값을 통해 앱은 장치의 위치 기록에 액세스할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/BR225603) 네임스페이스의 API를 사용하는 데 필요합니다.
 | **앱 닫기 확인** | **confirmAppClose** 제한된 접근 권한 값을 통해 앱은 앱 자체 및 해당 창을 닫고 앱의 닫기를 지연할 수 있습니다.<br /><br />앱에서 이 접근 권한 값에 대해 Windows 10 버전 1703(빌드 10.0.15063) 이상을 요청할 수 있습니다. Windows 10 이전 버전에서 이 기능은 비공개이며 "요청한 기능이 이 응용 프로그램에 대해 인증되지 않습니다."라는 오류 메시지와 함께 앱 설치가 실패합니다. |
 | **통화 기록**\* | **phoneCallHistory** 제한된 접근 권한 값을 통해 앱은 통화 기록을 읽고 기록에서 항목을 삭제할 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/Dn642321) 네임스페이스의 API를 사용하는 데 필요합니다. <br /><br />Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
