@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 90d1c5a8c5fc65cf591211d6f26cfce099597aad
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: d1df8d475ec27ff3de7e3d6599e53ec3035cffc6
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689089"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4213193"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Xbox One 개발자 모드 비활성화
 
@@ -78,7 +78,7 @@ ms.locfileid: "1689089"
 
 어떤 이유로든 콘솔에 액세스할 수 없는 경우 Windows 개발자 센터를 사용하여 콘솔에서 개발자 모드를 비활성화할 수도 있습니다.
 
-1. 개발자 센터에서 [Xbox One 본체 관리](https://developer.microsoft.com/xboxdevices) 페이지로 이동합니다. 개발자 센터 계정으로 로그인하라는 메시지가 표시될 수 있습니다.
+1. 개발자 센터에서 [Xbox One 본체 관리](https://partner.microsoft.com/xboxdevices) 페이지로 이동합니다. 개발자 센터 계정으로 로그인하라는 메시지가 표시될 수 있습니다.
 
 2. 콘솔 목록에서 일련 번호, 콘솔 ID 또는 디바이스 ID와 일치하는 비활성화하려는 콘솔을 찾습니다.  
 

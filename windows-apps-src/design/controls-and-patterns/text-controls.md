@@ -15,24 +15,21 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d68d0a5e6f2a22bc0012b3245ba050df271f7f92
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: fc18db25e6404e5236038badd8169ef7bcfc4817
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817411"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4210995"
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
-
- 
 
 텍스트 컨트롤은 텍스트 입력란, 암호 상자, 자동 제안 상자 및 텍스트 블록으로 구성됩니다. XAML 프레임워크는 텍스트를 렌더링, 입력 및 편집하는 여러 개의 컨트롤과 텍스트 서식을 지정하는 속성 집합을 제공합니다.
 
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
-- 텍스트 입력 및 편집에 대한 컨트롤은 [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) 및 [RichEditBox](rich-edit-box.md)입니다.
+- 텍스트 입력 및 편집 컨트롤은: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md)및 [PasswordBox](password-box.md)합니다.
 
-> **중요 API**: [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [RichEditBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
-
+> **중요 Api**: [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [RichTextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [TextBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [RichEditBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [AutoSuggestBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox 클래스](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -124,28 +121,13 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 ## <a name="pen-input"></a>펜 입력
 
-> 펜 입력 기능을 현재 Windows Insider Preview에서만 사용할 수 있습니다. 특징 이름, 용어 및 기능은 변경될 수 있습니다.
-
 **적용 대상:** TextBox, RichEditBox, AutoSuggestBox
 
 Windows 10 버전 1803부터는 XAML 텍스트 입력 상자에 [Windows Ink](../input/pen-and-stylus-interactions.md)를 사용한 펜 입력 지원이 포함되어 있습니다. 사용자가 Windows 펜을 사용해 텍스트 입력 상자를 터치하면 사용자가 별도의 입력 창을 열지 않고도 펜으로 직접 쓸 수 있도록 텍스트 상자가 변환됩니다.
 
 ![펜으로 터치할 때 텍스트 상자가 확장](images/pen-input-expand.gif)
 
-사용자가 텍스트 상자의 아무 곳에서나 쓰기를 하면 텍스트가 인식되고 후보 창에 인식 결과가 표시됩니다. 사용자는 결과를 터치하여 선택하거나 쓰기를 계속하여 제안된 후보 창을 수락할 수 있습니다. 리터럴(글자별) 인식 결과가 후보 창에 포함되어 있기 때문에 인식이 사전의 단어로 제한되지 않습니다. 사용자가 쓰기를 하면 자연스럽게 필기하는 느낌을 유지할 수 있도록 수락된 텍스트 입력이 스크립트 글꼴로 변환됩니다.
-
-![펜 입력이 포함된 텍스트 상자](images/pen-input-1.png)
-
-사용자는 표준 제스처 및 이러한 작업을 사용하여 텍스트를 편집할 수 있습니다.
-
-- _취소선_ 또는 _지우기_ - 단어나 단어의 일부를 삭제하기 위해 관통선 그리기
-- _조인_ - 단어 간 공백 삭제를 위해 호 그리기
-- _삽입_ - 공백 삽입을 위해 캐럿 기호 그리기
-- _덮어쓰기_ - 교체를 위해 기존 텍스트 덮어쓰기
-
-![펜 입력 덮어쓰기](images/pen-input-2.png)
-
-앱이 Windows 10 버전 1803 이상을 대상으로 실행 중이면 기본적으로 포함된 텍스트 입력이 활성화됩니다. 텍스트당 상자를 옵트하여 해당 기능을 비활성화하고 텍스트 입력 패널로 돌아갈 수 있습니다. 포함된 텍스트 입력을 비활성화하려면 텍스트 컨트롤의 **IsHandwritingViewEnabled** 속성을 **false**로 설정합니다.
+자세한 내용은 [필기 보기를 사용 하 여 텍스트 입력](text-handwriting-view.md)을 참조 하세요.
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>텍스트 컨트롤에 맞는 키보드를 선택합니다.
 
