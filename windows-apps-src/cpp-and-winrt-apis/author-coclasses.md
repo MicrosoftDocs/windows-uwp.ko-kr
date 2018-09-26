@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
-ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.openlocfilehash: 227ffcd72150e37a513649e69bc7a6709581d65c
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4176516"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4205329"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>COM 구성 요소를 작성 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -381,6 +381,127 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 ## <a name="how-to-test-the-example-application"></a>예제에서는 응용 프로그램을 테스트 하는 방법
 
 응용 프로그램을 빌드하고 등록, 및 기타 설정, 코드를 실행 하려면 관리자 권한으로 한 번 이상 실행 합니다. 관리자 권한으로 실행 중인 다음 ' T 키를 눌러 여부 ' 알림 표시 되도록 합니다. Pop 위쪽 또는 알림 센터와 응용 프로그램에서 실행 알림, 인스턴스화된 coclass 및 INotificationActivationCallback **에서 직접 **ToastAndCallback를 호출할** 단추를 클릭 수 있습니다. :: 활성화** 메서드가 실행 됩니다.
+
+## <a name="in-process-com-server"></a>In-process COM 서버
+
+위의 *ToastAndCallback* 예제 앱 COM 서버를 로컬 (또는 out of process)으로 작동합니다. 이벤트 처리기를 등록 사용 하는 [LocalServer32](/windows/desktop/com/localserver32) Windows 레지스트리 키에 의해 표시 됩니다. 로컬 COM 서버를 호스팅하는 실행 가능 이진 내에서 해당 coclass(es) (한 `.exe`).
+
+또는 (및 틀림 없이 가능성이), 동적 연결 라이브러리 내부에 coclass(es) 호스트 하도록 선택할 수 있습니다 (한 `.dll`). DLL의 숫자 형태로 COM 서버는 프로세스에 COM 서버 라고 하며 [InprocServer32](/windows/desktop/com/inprocserver32) Windows 레지스트리 키를 사용 하 여 등록 하 여 표시 됩니다.
+
+### <a name="create-a-dynamic-link-library-dll-project"></a>동적 연결 라이브러리 (DLL) 프로젝트 만들기
+
+Microsoft Visual Studio에서 새 프로젝트를 만들어서는 프로세스에 COM 서버를 만드는 작업을 시작할 수 있습니다. **Visual c + +** 만들기 > **Windows 데스크톱** > **동적 연결 라이브러리 (DLL)** 프로젝트.
+
+### <a name="set-project-properties"></a>프로젝트 속성 설정
+
+프로젝트 속성 **일반**로 이동 \> **Windows SDK 버전**선택 **모든 구성** 및 **모든 플랫폼**입니다. *10.0.17134.0 (Windows 10, 버전 1803)* 이상 **Windows SDK 버전** 을 설정 합니다.
+
+C +에 대 한 Visual Studio 지원을 추가 하 + 프로젝트에는 WinRT 편집에 `.vcxproj` 파일을 찾고 `<PropertyGroup Label="Globals">` 해당 속성 그룹 내에서 속성을 설정 및 `<CppWinRTEnabled>true</CppWinRTEnabled>`합니다.
+
+때문에 C + + WinRT는 c++17 표준의 기능을 사용, **C/c + +** 프로젝트 속성을 설정 > **언어** > **c + + 언어 표준** *ISO c++17 표준 (/ (/std:c++17 + + 17)* 합니다.
+
+### <a name="the-precompiled-header"></a>미리 컴파일된 헤더
+
+이름 바꾸기에 `stdafx.h` 및 `stdafx.cpp` 를 `pch.h` 및 `pch.cpp`각각 합니다. **C/c + +** 프로젝트 속성을 설정 > **미리 컴파일된 헤더** >  *pch.h***미리 컴파일된 헤더 파일** 입니다.
+
+모든 replace `#include "stdafx.h"` 와 `#include "pch.h"`.
+
+`pch.h`을 포함 `winrt/base.h`.
+
+```cppwinrt
+// pch.h
+...
+#include <winrt/base.h>
+```
+
+사용자는 영향을 받지 않도록 확인 [새 프로젝트 컴파일되지 않습니다 왜?](/windows/uwp/cpp-and-winrt-apis/faq)합니다.
+
+### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>Coclass을 클래스 공장-프로세서 서버 내보내기를 구현합니다
+
+열기 `dllmain.cpp`, 아래 표시 된 코드를 추가 합니다.
+
+C + 구현 하는 DLL 이미 있는 경우 + WinRT Windows 런타임 클래스, 아래 표시 된 **DllCanUnloadNow** 함수를 이미 해야 합니다. 해당 DLL에 coclass 추가 하려는 경우 **DllGetClassObject** 함수를 추가할 수 있습니다.
+
+경우 호환을 유지 하고자 하는 기존 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드가 없는 다음 표시 된 코드에서 WRL 부분을 제거할 수 있습니다.
+
+```cppwinrt
+// dllmain.cpp
+
+struct MyCoclass : winrt::implements<MyCoclass, IPersist>
+{
+    HRESULT STDMETHODCALLTYPE GetClassID(CLSID* id) noexcept override
+    {
+        *id = IID_IPersist; // Doesn't matter what we return, for this example.
+        return S_OK;
+    }
+};
+
+struct __declspec(uuid("85d6672d-0606-4389-a50a-356ce7bded09"))
+    MyCoclassFactory : winrt::implements<MyCoclassFactory, IClassFactory>
+{
+    HRESULT STDMETHODCALLTYPE CreateInstance(IUnknown *pUnkOuter, REFIID riid, void **ppvObject) noexcept override
+    {
+        try
+        {
+            *ppvObject = winrt::make<MyCoclass>().get();
+            return S_OK;
+        }
+        catch (...)
+        {
+            return winrt::to_hresult();
+        }
+    }
+
+    HRESULT STDMETHODCALLTYPE LockServer(BOOL fLock) noexcept override
+    {
+        // ...
+        return S_OK;
+    }
+
+    // ...
+};
+
+HRESULT __stdcall DllCanUnloadNow()
+{
+#ifdef _WRL_MODULE_H_
+    if (!::Microsoft::WRL::Module<::Microsoft::WRL::InProc>::GetModule().Terminate())
+    {
+        return S_FALSE;
+    }
+#endif
+
+    if (winrt::get_module_lock())
+    {
+        return S_FALSE;
+    }
+
+    winrt::clear_factory_cache();
+    return S_OK;
+}
+
+HRESULT __stdcall DllGetClassObject(GUID const& clsid, GUID const& iid, void** result)
+{
+    try
+    {
+        *result = nullptr;
+
+        if (clsid == __uuidof(MyCoclassFactory))
+        {
+            return winrt::make<MyCoclassFactory>()->QueryInterface(iid, result);
+        }
+
+#ifdef _WRL_MODULE_H_
+        return ::Microsoft::WRL::Module<::Microsoft::WRL::InProc>::GetModule().GetClassObject(clsid, iid, result);
+#else
+        return winrt::hresult_class_not_available().to_abi();
+#endif
+    }
+    catch (...)
+    {
+        return winrt::to_hresult();
+    }
+}
+```
 
 ## <a name="important-apis"></a>중요 API
 * [IInspectable 인터페이스](https://msdn.microsoft.com/library/br205821)

@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: a6442857f8d7914ab423c0981ae97598084f0068
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 730c345fe1746bf3284f9c0ce2c9bbeaa7ab0501
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862845"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4206683"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 
@@ -42,7 +42,7 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
     ![활성화 5단계](images/activation-step-5.png)  
     
-5.  [developer.microsoft.com/xboxactivate](https://developer.microsoft.com/xboxactivate)로 이동합니다.
+5.  [Partner.microsoft.com/xboxactivate](https://partner.microsoft.com/xboxactivate)으로 이동 합니다.
 
 6.  개발자 센터 계정을 사용하여 개발자 센터에 로그인합니다.
 
