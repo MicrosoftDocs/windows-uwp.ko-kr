@@ -9,15 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 935b76e668153c9519bc6516da0c2872c2428f2e
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 44a41e42477de9d29f1d0443324fa83590c37caf
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4258756"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4309739"
 ---
-# <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-wrl"></a>WRL에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 이동
-이 항목은 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다.
+# <a name="move-to-cwinrt-from-wrl"></a>WRL에서 C++/WinRT로 이동
+이 항목에서는 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드에 해당 하는 포트 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 C++/WinRT로 포트하는 첫 번째 단계는 수동으로 C++/WinRT 지원을 프로젝트에 추가하는 것입니다([C++/WinRT 및 VSIX에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix) 참조). 이를 수행하려면 `.vcxproj` 파일을 편집하고 `<PropertyGroup Label="Globals">`를 찾고, 해당 속성 그룹 내에서 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 설정합니다. 해당 변경의 효과 중 하나에 대 한 해당 지원은 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트에서 꺼집니다. 프로젝트에서 C++/CX를 사용 중인 경우 지원을 끈 채로 유지하고 C++/CX 코드를 C++/WinRT에도 업데이트할 수 있습니다([C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) 참조). 또는 지원을 다시 켜고(프로젝트 속성에서 **C/C** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)**) 먼저 WRL 코드 포트에 집중할 수 있습니다. C + + CX 및 C + + /winrt 코드는 XAML 컴파일러 지원 및 Windows 런타임 구성 요소를 제외 하 고 동일한 프로젝트에 공존할 수 있습니다 (참조 [이동 C + +에서 C + + CX](move-to-winrt-from-cx.md)).
 

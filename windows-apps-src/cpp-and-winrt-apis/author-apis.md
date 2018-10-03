@@ -3,25 +3,22 @@ author: stevewhims
 description: 이번 항목에서는 **winrt::implements** 기본 구조체를 직/간접적으로 사용하여 C++/WinRT API를 작성하는 방법에 대해서 설명합니다.
 title: C++/WinRT를 통한 API 작성
 ms.author: stwhi
-ms.date: 05/07/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: d613cb87297cdc810e4d8e16dfeb36d4804678d1
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4261162"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4309273"
 ---
-# <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 작성
+# <a name="author-apis-with-cwinrt"></a>C++/WinRT를 통한 API 작성
 
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
-
-이번 항목에서는 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체를 직/간접적으로 사용하여 C++/WinRT API를 작성하는 방법에 대해서 설명합니다. 이번 문서의 맥락에 따라 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어로 사용됩니다. 이번 항목에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법에 대해서 설명합니다.
+이 항목에는 작성 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) [**winrt:: implements**](/uwp/cpp-ref-for-winrt/implements) 를 사용 하 여 Api 기본 구조체를 직 / 간접적으로 합니다. 이번 문서의 맥락에 따라 *작성*이라는 표현은 *생성* 또는 *구현*과 동의어로 사용됩니다. 이번 항목에서는 다음 시나리오의 순서대로 C++/WinRT 형식으로 API를 구현하는 방법에 대해서 설명합니다.
 
 - Windows 런타임 클래스(이하 런타임 클래스)를 *작성하지 않습니다*. 단지 앱에서 로컬 사용을 위해 Windows 런타임 인터페이스를 1개 이상 구현하려고 합니다. 이 경우에는 **winrt::implements**에서 직접 파생시켜 함수를 구현합니다.
 - 런타임 클래스를 *작성합니다*. 앱에서 사용할 구성 요소를 작성할 수도 있습니다. 혹은 XAML 사용자 인터페이스(UI)에서 사용할 형식을 작성할 수도 있습니다. 이 경우에는 동일한 컴파일 단위 내에서 런타임 클래스를 구현하고 사용하게 됩니다. 어쨌든 두 경우 모두 도구를 사용해 **winrt::implements**에서 파생되는 클래스를 생성할 수 있습니다.
@@ -285,17 +282,17 @@ iclosable.Close();
 
 **MyType** 클래스는 구현체이기 때문에 프로젝션에 포함되지 않습니다. 하지만 이런 식으로 가상 함수를 호출하는 오버헤드 없이 구현체 메서드를 직접 호출할 수 있습니다. 위의 예제에서는 **MyType::ToString**이 **IStringable**에서 프로젝션된 메서드와 동일한 서명을 사용하지만 응용 프로그램 이진 인터페이스(ABI)를 거치지 않고 비가상 메서드를 직접 호출합니다. **com_ptr**은 포인터를 **MyType** 구조체에 고정시키기 때문에 사용자가 `myimpl` 변수 및 화살표 연산자를 통해 **MyType**의 다른 내부 세부 정보에 액세스할 수 있습니다.
 
-인터페이스 개체가 있고, 이 개체가 구현체의 인터페이스라는 사실도 알고 있는 경우에는 [**from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 함수 템플릿을 사용해 구현체로 돌아갈 수 있습니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
+인터페이스 개체가 있고 알고 인터페이스 구현에는 경우, 다음 돌아갈 수 있습니다 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 함수 템플릿을 사용 하 여 구현 합니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
 
 > [!NOTE]
-> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 호출할 수 있습니다 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi)대신 합니다.
+> Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치 하지 않은 경우를 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)대신 [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 호출 해야 다음 나중에.
 
 예를 들면 다음과 같습니다. [구현 **BgLabelControl** 사용자 지정 컨트롤 클래스에](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)에서는 또 다른 예입니다.
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)
 {
-    MyType* myimpl = winrt::from_abi<MyType>(from);
+    MyType* myimpl = winrt::get_self<MyType>(from);
     myimpl->ToString();
     myimpl->Close();
 }
@@ -305,7 +302,7 @@ void ImplFromIClosable(IClosable const& from)
 
 ```cppwinrt
 winrt::com_ptr<MyType> impl;
-impl.copy_from(winrt::from_abi<MyType>(from));
+impl.copy_from(winrt::get_self<MyType>(from));
 // com_ptr::copy_from ensures that AddRef is called.
 ```
 

@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: daffbc5ff74adc234ac6c2b414a7e1b85763849d
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265010"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4319359"
 ---
 # <a name="toggle-switches"></a>토글 스위치
 

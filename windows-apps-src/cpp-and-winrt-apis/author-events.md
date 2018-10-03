@@ -9,19 +9,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b0aa1a53ce69369c442cef7f3b5912631593242
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 82239436acfe82bf99cd1e665cca14592bbcef74
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4266782"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312869"
 ---
-# <a name="author-events-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 이벤트 작성
+# <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
 이번 항목에서는 차변 발생 시 이벤트가 발생하는 은행 계좌 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 은행 계좌 런타임 클래스를 사용하면서 함수를 호출하여 잔액을 조정하거나, 발생하는 이벤트를 처리하는 주요 앱에 대해서도 설명합니다.
 
 > [!NOTE]
-> C++/WinRT Visual Studio Extension(VSIX)(프로젝트 템플릿 지원과 C++/WinRT MSBuild 속성 및 대상 제공)의 설치 및 사용에 대한 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
+> 설치 및 사용에 대 한 정보는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (제공 프로젝트 템플릿 지원을 뿐 아니라 C + + /winrt MSBuild 속성 및 대상) 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.

@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: c39301c37c83f57a67dca35c3628bd9f3eda2583
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4262134"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4309439"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>패키지 데스크톱 앱을 사용할 수 있는 UWP Api
 
@@ -39,7 +39,7 @@ ms.locfileid: "4262134"
 <tr><td>스마트 카드</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>PlayReady</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>VPN</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>Wallet</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
+<tr><td>전자지갑</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
 <tr><td>XAML UI</td><td>Win32 앱 프로세스에 XAML UI를 추가할 수 없습니다.</td></tr>
 </table>
 

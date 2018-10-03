@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b0f67562699e437be83cd6a7251efdb93f9e034
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: c354d9ed4bae4cd8b484fcc3281dc5ac753dab1e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4268933"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312889"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>빌드 17763 개발자를 위한 Windows 10의 새로운 란
 
@@ -69,7 +69,7 @@ Wake on 터치 | [Wake on 터치](https://docs.microsoft.com/windows/iot-core/le
 
 ## <a name="web-development"></a>웹 개발
 
-기능 | 설명:--| :---EdgeHTML 18 | Windows 10 2018 년이 [EdgeHTML 18](https://aka.ms/devguide_edgehtml_18), Microsoft Edge 브라우저와 UWP 앱에 대 한 JavaScript 엔진에 대 한 최신 업데이트와 함께 배송 된 업데이트 합니다. 웹 인증 API, 새로운 WebView 컨트롤 기능 및 현대화 및 확장 된 지원을 제공 하는 EdgeHTML 18! 도구가 있는 EdgeHTML 18 Edge 개발자 도구 및 Edge 개발자 도구 프로토콜에 새로운 WebDriver 기능 및 자동 업데이트 및 향상 된 기능 제공합니다. 모든 세부 정보에 대 한 [EdgeHTML 18에 새로 란](https://aka.ms/devguide_edgehtml_18) 무엇이 고 [최신 Windows 10에서 개발자 도구 업데이트 (EdgeHTML 18)](https://docs.microsoft.com/microsoft-edge/devtools-guide/whats-new) 확인 합니다.
+기능 | 설명:--| :---EdgeHTML 18 | Windows 10 년 10 월 2018 [EdgeHTML 18](https://docs.microsoft.com/microsoft-edge/dev-guide), Microsoft Edge 브라우저와 UWP 앱에 대 한 JavaScript 엔진에 대 한 최신 업데이트와 함께 배송 된 업데이트합니다. 웹 인증 API, 새로운 WebView 컨트롤 기능 및 현대화 및 확장 된 지원을 제공 하는 EdgeHTML 18! 도구가 있는 EdgeHTML 18 Edge 개발자 도구 및 Edge 개발자 도구 프로토콜에 새로운 WebDriver 기능 및 자동 업데이트 및 향상 된 기능 제공합니다. 모든 세부 정보에 대 한 [EdgeHTML 18에 새로 란](https://docs.microsoft.com/microsoft-edge/dev-guide) 무엇이 고 [최신 Windows 10에서 개발자 도구 업데이트 (EdgeHTML 18)](https://docs.microsoft.com/microsoft-edge/devtools-guide/whats-new) 확인 합니다.
 점진적 웹 앱 | Pwa Windows 개발? 다음 가이드를 살펴보세요. </br> * [간단한 웹 앱을 PWA로 빌드](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started) </br> * [Windows 런타임에서 PWA 향상](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/windows-features) </br> * [PWA Microsoft Store에 게시](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store) 웹 API 확장 | Mozilla 개발자 네트워크 설명서 브라우저 간 웹 개발을 위한 [레거시 Microsoft API 확장](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) 목록 추가 되었습니다. 이러한 API 확장 Internet Explorer 또는 Microsoft Edge를 고유 하 고 호환성 및 broswer 지원 MDN 웹 문서에 대 한 기존 정보를 보충 합니다. 레거시 Microsoft [확장 CSS](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) 및 [JavaScript 확장](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) 도 사용할 수 있으며, 풍부한 웹 MDN 정보 API에 직접 표시를 찾을 수 [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 WebVR | 우리 [WebVR 개발자 가이드](https://docs.microsoft.com/microsoft-edge/webvr/), 홈 페이지의 전체 디자인 등 재구성 목차의 주요 업데이트를 했습니다. 또한 여러 새 항목을 포함 하 여 쓴: </br> * [WebVR 란 무엇 인가요?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr) WebVR 란, 이유를 사용할지 및 개발을 시작 하는 방법에 설명 합니다. </br> * [점진적 웹 앱에 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): WebVR 점진적 웹 앱 (PWA)를 추가 하는 방법을 알아봅니다. </br> * [WebView에 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Windows 10 응용 프로그램에서 WebView 컨트롤에 WebVR 추가 하는 방법을 알아봅니다. </br> * [WebVR 데모](https://docs.microsoft.com/microsoft-edge/webvr/demos): Microsoft Edge 및 Windows Mixed Reality 몰입 형 헤드셋을 사용 하 여 몇 가지 WebVR 데모를 확인 합니다.
 

@@ -17,11 +17,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 20b6f54f39be116ad77cb5a179ff8c3d188eb8c4
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264302"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4311987"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: fcba2cb736f86cebc6d2664e2ec3b557d47c86d7
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4263148"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4311343"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 

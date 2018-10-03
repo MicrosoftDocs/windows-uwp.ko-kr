@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 7168ee705114523a324194b89f8450e768cfab22
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265064"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4315981"
 ---
-# [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT에서는 모든 표준과 호환되는 C++17 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. Windows SDK는 C++/WinRT를 포함하며, 버전 10.0.17134.0(Windows 10, 버전 1803)에서 도입되었습니다.
+# <a name="cwinrt"></a>C++/WinRT
+
+[C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 는 Windows 런타임 (WinRT) Api에 대 한 완전 한 표준 최신 C + + 17 언어 프로젝션은 헤더 파일 기반 라이브러리로 구현 및 최고 수준의 액세스를 사용 하 여 오늘날 Windows API를 제공 하도록 설계 되었습니다. C++/WinRT에서는 모든 표준과 호환되는 C++17 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. Windows SDK는 C++/WinRT를 포함하며, 버전 10.0.17134.0(Windows 10, 버전 1803)에서 도입되었습니다.
 
 C++/WinRT는 아름답고 빠른 Windows용 코드로 작성하려는 모든 개발자에게 적합합니다. 그 이유는 다음과 같습니다.
 
@@ -41,7 +42,8 @@ C++/WinRT는 Windows 런타임에서 사용되는 다른 언어 옵션보다 더
 | - | - |
 | [C++/WinRT 소개](intro-to-using-cpp-with-winrt.md) | C++/WinRT 소개&mdash;Windows 런타임 API용 표준 C++ 언어 프로젝션 |
 | [C++/WinRT 시작](get-started.md) | C++/WinRT 사용 속도를 높이기 위해 이 항목은 단순한 코드 예제를 안내합니다. |
-| [질문과 대답](faq.md) | C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다. |
+| [새로운 C + + WinRT](news.md) | 뉴스와 변경 C + + WinRT 합니다. |
+| [FAQ](faq.md) | C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다. |
 | [문제 해결](troubleshooting.md) | 이번 항목에서 증상 문제 및 해결 방법을 나타낸 표는 새로운 코드를 자르거나 기존 앱을 이식할지 결정하는 데 도움이 될 수 있습니다. |
 | [사진 편집기 C++/WinRT 샘플 응용 프로그램](photo-editor-sample.md) | 사진 편집기는 C++/WinRT 언어 프로젝션을 사용한 개발을 보여 주는 UWP 샘플 응용 프로그램입니다. 샘플 응용 프로그램을 사용하여 **사진** 라이브러리에서 사진을 검색한 다음 다양한 사진 효과를 사용하여 선택한 이미지를 편집합니다. | 
 | [문자열 처리](strings.md) | C++/WinRT에서는 표준 C++ 전각 문자열 형식을 사용하여 Windows 런타임 API를 호출하거나, 혹은 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 형식을 사용할 수 있습니다. |
@@ -63,7 +65,7 @@ C++/WinRT는 Windows 런타임에서 사용되는 다른 언어 옵션보다 더
 | [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) | 이 항목은 C++/CX 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다. |
 | [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md) | 이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. |
 | [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md) | 이 항목은 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다. |
-| [약한 참조](weak-references.md) | C++/WinRT 약한 참조 지원은 개체가 [**IWeakReferenceSource**](https://msdn.microsoft.com/library/br224609)에 대해 쿼리를 실행하는 경우에만 비용이 발생한다는 점에서 대가성입니다. |
+| [강력 하 고 약한 참조를 C + + WinRT](weak-references.md) | Windows 런타임에서 참조 계산 시스템입니다. 및 시스템 것이 중요 한 의미를 및, 간의 차이점에 대해 알고 강력한 및 약한 참조 합니다. |
 | [Agile 개체](agile-objects.md) | Agile 개체란 어떤 스레드에서든지 액세스할 수 있는 개체를 말합니다. C++/WinRT 형식은 기본적으로 Agile이지만 옵트아웃으로 선택하지 않을 수도 있습니다. |
 
 ### <a name="topics-about-the-c-language"></a>C + + 언어에 대 한 항목

@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C#, C 샤프
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264128"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4310022"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C # 앱에서 로컬 알림 메시지 보내기
 

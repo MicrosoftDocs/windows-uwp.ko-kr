@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: ae573fe87e6821555509467336e9a425fb082811
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4258414"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4318117"
 ---
 # <a name="3d-printing-from-your-app"></a>앱에서 3D 인쇄
 

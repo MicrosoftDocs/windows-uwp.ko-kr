@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bd1dffe4da7b3725ef7716fe9cf28bdf8eaf34f
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4260985"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4314073"
 ---
 # <a name="working-with-symbologies"></a>기호 처리
 [바코드 기호](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies)는 특정한 바코드 형식으로 데이터를 매핑한 것입니다. 일반적인 기호로 UPC, Code 128, QR 코드 및에 포함 됩니다.  유니버설 Windows 플랫폼 바코드 스캐너 Api는 응용 프로그램이 스캐너를 수동으로 구성 하지 않고도 스캐너가 이러한 기호 처리 하는 방법을 제어할 수 있음 

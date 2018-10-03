@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af0f7670f2b131671ce82708d2b0a826db0fcfb1
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4266092"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4309879"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 

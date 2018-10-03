@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f801e9093676ec9fbf55c4ec4af7c5c444ed3ead
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4267940"
+ms.locfileid: "4313961"
 ---
 # <a name="launch-an-app-with-a-uri"></a>URI를 사용하여 앱 실행
 

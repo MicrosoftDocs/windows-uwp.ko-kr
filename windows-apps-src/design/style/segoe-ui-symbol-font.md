@@ -13,12 +13,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3480288035d98ab3f68da33f9121e7daaf86180f
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 49ac0b2094b17120af8a0c85505cd03af389f1f4
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264388"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4333799"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -58,6 +58,12 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 ```xaml
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
+
+고정 리소스를 사용할 수도 있습니다 `SymbolThemeFontFamily` **Segoe MDL2 자산**글꼴 이름으로 지정 하는 대신에 액세스 하려면:
+```xaml
+<FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
+```
+
 
 ## <a name="how-do-i-get-this-font"></a>글꼴을 가져오는 방법
 * Windows 10:에서 수행 해야 아무 것, 글꼴 Windows와 함께 제공 합니다.

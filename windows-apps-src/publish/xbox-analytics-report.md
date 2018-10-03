@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, xbox 분석, xbox live 분석, xbox 통계
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e69c41ec2ae6dface93b9f3148e699e448faa18
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4268064"
+ms.locfileid: "4316563"
 ---
 # <a name="xbox-analytics-report"></a>Xbox 분석 보고서
 

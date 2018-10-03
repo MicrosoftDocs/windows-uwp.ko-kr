@@ -16,11 +16,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4261972"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4315893"
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
 

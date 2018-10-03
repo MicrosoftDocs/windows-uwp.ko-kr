@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: ac7affb044c6b60a249b154cc62379c7517161b0
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 68a631153c104f14f22839077c4c62d34626ed2a
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4267118"
+ms.locfileid: "4318065"
 ---
-# <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>C++/CX에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 이동
-이 항목은 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다.
+# <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
+
+이 항목에 포트 하는 방법을 보여 줍니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 에 해당 하는 코드 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!IMPORTANT]
 > 점진적으로 포트 하려는 경우에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C + + /winrt를 할 수 있습니다. C + + CX 및 C + + /winrt 코드는 XAML 컴파일러 지원 및 Windows 런타임 구성 요소를 제외 하 고 동일한 프로젝트에 공존할 수 있습니다. 이러한 예외에 대 한 C + 중 하나를 대상으로 해야 + /CX 또는 C + + 동일한 프로젝트 내에서 WinRT 합니다. 하지만 포팅할 것 처럼 XAML 앱 요소 코드에 Windows 런타임 구성 요소를 사용할 수 있습니다. 이동 하거나 많은 C + + CX 코드는 구성 요소에 하 고 다음 변경 XAML 프로젝트 C + + WinRT 합니다. 또는 다른 XAML 프로젝트 C + + /CX 만드는 새로운 C + + WinRT 구성 요소 시작 포팅 C + + /CX 코드 XAML 프로젝트를 구성 합니다. 또한 가지기 C + + CX 구성 요소 프로젝트와 함께 C + + 같은 솔루션에서 WinRT 구성 요소 프로젝트 둘 다 응용 프로그램 프로젝트에서 참조 하 고 다른 하나에서 점진적으로 포트입니다.

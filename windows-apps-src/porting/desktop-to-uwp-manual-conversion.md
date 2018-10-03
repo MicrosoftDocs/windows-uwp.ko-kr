@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4268111"
+ms.locfileid: "4310131"
 ---
 # <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 283856ad163d2e67078c61559f6f8ec667e92b87
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4262164"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4316955"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 

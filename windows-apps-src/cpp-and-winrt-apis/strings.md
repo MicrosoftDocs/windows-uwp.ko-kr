@@ -3,25 +3,26 @@ author: stevewhims
 description: C++/WinRT에서는 표준 C++ 전각 문자열 형식을 사용하여 Windows 런타임 API를 호출하거나, 혹은 winrt::hstring 형식을 사용할 수 있습니다.
 title: C++/WinRT의 문자열 처리
 ms.author: stwhi
-ms.date: 05/21/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문자열
 ms.localizationpriority: medium
-ms.openlocfilehash: 332edcf17f2b6bbf595def67c9df7043f21828c7
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 865267a6897a551613479a099d10dd6d5a91c315
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265982"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4315607"
 ---
-# <a name="string-handling-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 문자열 처리
-C++/WinRT에서는 **std::wstring** 같은 C++ 표준 라이브러리 전각 문자열 형식을 사용해 Windows 런타임 API를 호출할 수 있습니다(참고: **std::string** 같은 반각 문자열 형식은 사용할 수 없음). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 *작성하는* 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다.
+# <a name="string-handling-in-cwinrt"></a>C++/WinRT의 문자열 처리
+
+와 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), **std:: wstring** 같은 c + + 표준 라이브러리 전각 문자열 형식을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다 (참고: **std::string**같은 좁은 문자열 형식이 된 아님). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 *작성하는* 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다.
 
 C++에는 문자열 형식이 많습니다. 또한 C++ 표준 라이브러리의 **std::basic_string** 외에도 변형된 형식이 여러 라이브러리에 존재합니다. C++17에는 다양한 문자열 변환 유틸리티를 비롯해 **std::basic_string_view**도 있기 때문에 모든 문자열 형식의 차이를 좁힐 수 있습니다.  [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)은 **std::basic_string_view**가 설계된 목적인 상호 운용성을 제공하기 위해 **std::wstring_view**와의 상호 운용성을 제공합니다.
 
-## <a name="using-stdwstring-and-optionally-winrthstringuwpcpp-ref-for-winrthstring-with-uriuwpapiwindowsfoundationuri"></a>**std::wstring**(옵션으로 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring))에 [**Uri**](/uwp/api/windows.foundation.uri) 사용
+## <a name="using-stdwstring-and-optionally-winrthstring-with-uri"></a>**std::wstring**(옵션으로 **winrt::hstring**)에 **Uri** 사용
 [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri)는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)에서 생성됩니다.
 
 ```cppwinrt

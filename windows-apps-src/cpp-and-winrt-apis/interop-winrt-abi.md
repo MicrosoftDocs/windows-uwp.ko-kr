@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: b641591e7be23226edc354e02513d723fbe8afba
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 098d182b9cc4cc51bda0a7959702e53accf2699f
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4266632"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4318387"
 ---
-# <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-the-abi"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)와 ABI 사이의 상호 운용성
-이번 항목에서는 SDK 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
+# <a name="interop-between-cwinrt-and-the-abi"></a>C++/WinRT와 ABI 사이의 상호 운용성
+
+이 항목에서는 SDK 응용 프로그램 이진 인터페이스 (ABI) 간에 변환 하는 방법을 설명 하 고 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체. 여기에서 설명하는 방법은 Windows 런타임을 통한 두 가지 프로그래밍 방법을 사용하는 코드 사이의 상호 운용성에 사용하거나, 혹은 코드를 ABI에서 C++/WinRT로 점차 마이그레이션하는 데 사용할 수도 있습니다.
 
 ## <a name="what-is-the-windows-runtime-abi-and-what-are-abi-types"></a>Windows 런타임 ABI란 무엇이며, ABI 형식이란 무엇인가요?
 Windows 런타임 클래스(런타임 클래스)는 추상화입니다. 이 추상화는 여러 프로그래밍 언어가 개체와 상호 작용할 수 있게 하는 이진 인터페이스(응용 프로그램 바이너리 인터페이스, ABI)를 정의합니다. 프로그래밍 언어에 관계없이 Windows 런타임 개체와의 클라이언트 코드 상호 작용은 개체의 ABI에 대한 호출로 번역되는 클라이언트 언어 구문으로 최저 수준에서 수행됩니다.

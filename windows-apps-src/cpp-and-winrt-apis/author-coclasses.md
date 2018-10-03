@@ -9,39 +9,61 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e273d593d7b2e24cc82063ce25b66771b8221e1
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 2886d2b42d4c192a3f6924a41a4c4dd1483db471
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4267182"
+ms.locfileid: "4313833"
 ---
-# <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>COM 구성 요소를 작성 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+# <a name="author-com-components-with-cwinrt"></a>작성 COM 구성 요소 C + + WinRT
 
-C + + WinRT Windows 런타임 클래스를 작성 하는 데 도움이 처럼 클래식 구성 요소 개체 모델 (COM) 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 에 붙여넣을 경우 테스트할 수 있는 매우 간단한 그림은 다음과 같습니다 합니다 `main.cpp` 새 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트.
+[C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 하면 Windows 런타임 클래스를 작성 하는 것 처럼 클래식 구성 요소 개체 모델 (COM) 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 코드를 붙여 넣는 경우 테스트할 수 있는 간단한 그림은 다음과 같습니다 합니다 `pch.h` 및 `main.cpp` 의 새 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트.
 
 ```cppwinrt
+// pch.h
+#pragma once
+#include <unknwn.h>
+#include <winrt/Windows.Foundation.h>
+
 // main.cpp : Defines the entry point for the console application.
 #include "pch.h"
 
+struct __declspec(uuid("ddc36e02-18ac-47c4-ae17-d420eece2281")) IMyComInterface : ::IUnknown
+{
+    virtual HRESULT __stdcall Call() = 0;
+};
+
 using namespace winrt;
+using namespace Windows::Foundation;
 
 int main()
 {
-    init_apartment();
+    winrt::init_apartment();
 
-    struct MyCoclass : winrt::implements<MyCoclass, IPersist>
+    struct MyCoclass : winrt::implements<MyCoclass, IPersist, IStringable, IMyComInterface>
     {
-        HRESULT STDMETHODCALLTYPE GetClassID(CLSID* id) noexcept override
+        HRESULT __stdcall Call() noexcept override
+        {
+            return S_OK;
+        }
+
+        HRESULT __stdcall GetClassID(CLSID* id) noexcept override
         {
             *id = IID_IPersist; // Doesn't matter what we return, for this example.
             return S_OK;
+        }
+
+        winrt::hstring ToString()
+        {
+            return L"MyCoclass as a string";
         }
     };
 
     auto mycoclass_instance{ winrt::make<MyCoclass>() };
     CLSID id{};
     winrt::check_hresult(mycoclass_instance->GetClassID(&id));
+    winrt::check_hresult(mycoclass_instance.as<IMyComInterface>()->Call());
 }
 ```
 
@@ -56,6 +78,15 @@ int main()
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Windows 콘솔 응용 프로그램 프로젝트 (ToastAndCallback) 만들기
 
 먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual c + +** 만들기 > **Windows 데스크톱** > **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트를 만들어서 *ToastAndCallback*이름을 지정 합니다.
+
+열기 `pch.h`를 추가 `#include <unknwn.h>` 하기 전에 포함 된 C + + /winrt 헤더.
+
+```cppwinrt
+// pch.h
+#pragma once
+#include <unknwn.h>
+#include <winrt/Windows.Foundation.h>
+```
 
 열기 `main.cpp`, 및 제거를 사용 하 여-지시문 프로젝트 템플릿을 생성 하 합니다. 그 대신에서 (라이브러리, 머리글 및 필요한 형식 이름을 제공)는 다음 코드를 붙여 넣습니다.
 
@@ -134,7 +165,7 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-위의 coclass의 구현에 설명 된 동일한 패턴을 따르는 [작성자 Api C + + WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). 따라서 Windows 런타임 인터페이스 뿐 아니라 COM 인터페이스를 구현 하려면 같은 기술을 사용할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스는 인터페이스를 통해 해당 기능을 노출합니다. 모든 COM 인터페이스는 궁극적으로 [**IUnknown 인터페이스**](https://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스에서 파생 됩니다. Windows 런타임은 COM 기반&mdash;중 하나를 구별 하는 Windows 런타임 인터페이스는 궁극적으로 [**IInspectable 인터페이스**](https://msdn.microsoft.com/library/windows/desktop/br205821) 에서 파생 (및 **IInspectable** **IUnknown**에서 파생).
+위의 coclass의 구현에 설명 된 동일한 패턴을 따르는 [작성자 Api C + + WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). 따라서 Windows 런타임 인터페이스 뿐 아니라 COM 인터페이스를 구현 하려면 같은 기술을 사용할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스는 인터페이스를 통해 해당 기능을 노출합니다. 모든 COM 인터페이스는 궁극적으로 [**IUnknown 인터페이스**](https://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스에서 파생 됩니다. Windows 런타임은 COM 기반&mdash;중 하나를 구별 하는 Windows 런타임 인터페이스는 궁극적으로 [**IInspectable 인터페이스**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) 에서 파생 (및 **IInspectable** **IUnknown**에서 파생).
 
 위의 코드에서 coclass에서 알림 메시지에서 콜백 단추를 클릭할 때 호출 되는 함수는 **INotificationActivationCallback::Activate** 메서드를 구현 합니다. 하지만 그 함수를 호출 하기 전에 coclass의 인스턴스를 만들 수 있어야 하 고 **IClassFactory::CreateInstance** 함수는 작업입니다.
 
@@ -324,7 +355,7 @@ void LaunchedFromNotification(HANDLE, INPUT_RECORD &, DWORD &);
 
 int wmain(int argc, wchar_t * argv[], wchar_t * /* envp */[])
 {
-    init_apartment();
+    winrt::init_apartment();
 
     register_callback();
 
@@ -503,8 +534,23 @@ HRESULT __stdcall DllGetClassObject(GUID const& clsid, GUID const& iid, void** r
 }
 ```
 
+### <a name="support-for-weak-references"></a>약한 참조에 대 한 지원
+
+참고 [약한 참조 C + + WinRT](weak-references.md#weak-references-in-cwinrt).
+
+C + + 형식 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (또는 **IInspectable**에서 파생 되는 모든 인터페이스)를 구현 하는 경우 WinRT (특히 [**winrt:: implements**](/uwp/cpp-ref-for-winrt/implements) 기본 구조체 템플릿인)를 [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource) 을 구현 합니다.
+
+Windows 런타임 형식에 대 한 **IWeakReferenceSource** 및 [**IWeakReference**](/windows/desktop/api/weakreference/nn-weakreference-iweakreference) 되도록 설계 되기 때문입니다. 따라서 켤 수 있습니다 약한 참조 지원은 coclass에 대 한 구현에 **winrt::Windows::Foundation::IInspectable** (또는 **IInspectable**에서 파생 되는 인터페이스)를 추가 하기만 합니다.
+
+```cppwinrt
+struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows::Foundation::IInspectable>
+{
+    //  ...
+};
+```
+
 ## <a name="important-apis"></a>중요 API
-* [IInspectable 인터페이스](https://msdn.microsoft.com/library/br205821)
+* [IInspectable 인터페이스](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
 * [IUnknown 인터페이스](https://msdn.microsoft.com/library/windows/desktop/ms680509)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 

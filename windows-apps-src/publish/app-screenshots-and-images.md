@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4263910"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312899"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 

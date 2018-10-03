@@ -3,26 +3,23 @@ author: stevewhims
 description: 이 항목에서는 C +를 사용 하 여 간단한 사용자 지정 컨트롤을 만드는 과정을 단계별로 안내 + WinRT 합니다. 고유한 기능이 풍부 하 고, 사용자 지정 UI 컨트롤을 만드는 정보를 여기에서 빌드할 수 있습니다.
 title: C++/WinRT을 사용한 XAML 사용자 지정(템플릿) 컨트롤
 ms.author: stwhi
-ms.date: 08/01/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿, 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: fd1843afc58bc758db1c6e575f3733bdc4f47b4e
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 539876113ce2aba563cfa65b13571cbf3998cc2d
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265832"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4313877"
 ---
-# <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>사용한 XAML 사용자 지정 (템플릿) 컨트롤 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
+# <a name="xaml-custom-templated-controls-with-cwinrt"></a>C++/WinRT을 사용한 XAML 사용자 지정(템플릿) 컨트롤
 
 > [!IMPORTANT]
-> C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
+> 필수 개념과 용어를 사용 하 고 사용 하 여 런타임 클래스를 작성 하는 방법에 대 한 이해를 지 원하는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 참조 하세요 [통한 Api 사용 하 여 C + + WinRT](consume-apis.md) 및 [작성자 Api C + + WinRT](author-apis.md)합니다.
 
 유니버설 Windows 플랫폼 (UWP)의 가장 강력한 기능 중 하나를 XAML [**컨트롤**](/uwp/api/windows.ui.xaml.controls.control) 형식에 따라 사용자 지정 컨트롤을 만드는 사용자 인터페이스 (UI) 스택을 제공 하는 유연성입니다. XAML UI 프레임 워크는 [사용자 지정 종속성 속성](/windows/uwp/xaml-platform/custom-dependency-properties) 및 연결 된 속성 및 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 쉽게 기능이 풍부 하 고 사용자 지정 가능한 컨트롤을 만들 수 있는 등의 기능을 제공 합니다. 이 항목에서는 C +를 사용 하 여 사용자 지정 (템플릿) 컨트롤을 만드는 단계를 안내 + WinRT 합니다.
 
@@ -106,7 +103,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
     {
         // Call members of the projected type via theControl.
 
-        BgLabelControlApp::implementation::BgLabelControl* ptr{ winrt::from_abi<BgLabelControlApp::implementation::BgLabelControl>(theControl) };
+        BgLabelControlApp::implementation::BgLabelControl* ptr{ winrt::get_self<BgLabelControlApp::implementation::BgLabelControl>(theControl) };
         // Call members of the implementation type via ptr.
     }
 }
@@ -116,7 +113,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 이 연습에서는 **OnLabelChanged**사용 하지 않을 것입니다. 하지만 속성 변경 콜백이 있는 종속성 속성을 등록 하는 방법을 볼 수는 있습니다. **OnLabelChanged** 의 구현에는 기본 프로젝션 된 형식 (기본 프로젝션 된 형식이 **DependencyObject**이 경우)에서 파생 된 프로젝션 된 형식을 가져오는 방법을 보여 줍니다. 및 다음 프로젝션 된 형식을 구현 하는 형식에 대 한 포인터를 가져오는 방법을 보여 줍니다. 두 번째 작업이 프로젝션 된 형식 (즉, 런타임 클래스를 구현 하는 프로젝트)를 구현 하는 프로젝트에서 가능한 당연히 됩니다.
 
 > [!NOTE]
-> 나중에 호출할 수 있습니다 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi)대신 위에서 종속성 속성 변경된 이벤트 처리기에서 또는 [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우.
+> Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치 하지 않은 경우를 [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)대신 위에서 종속성 속성 변경된 이벤트 처리기에서 호출 해야 다음 나중에.
 
 ## <a name="design-the-default-style-for-bglabelcontrol"></a>**BgLabelControl** 에 대 한 기본 스타일을 디자인 합니다.
 

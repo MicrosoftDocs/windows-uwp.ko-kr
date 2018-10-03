@@ -12,12 +12,12 @@ keywords: windows 10, uwp
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e947b00c3a070a8d95a21e38c56bda07cd45d3c4
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 04263122c1a96aadc5e4d0ad8f804730d3a2a20f
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/03/2018
-ms.locfileid: "4268168"
+ms.locfileid: "4312431"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
@@ -162,9 +162,9 @@ Visual Studio **매니페스트 디자이너**호출 앱 아이콘을 관리 하
 
 **모든 시각적 자산**, **시각적 자산** 탭에서 첫 번째 메뉴 항목은 정확히 어떤 이름이 제안: 단추 누르기를 사용 하 여 앱에 필요한 모든 시각적 자산을 생성 합니다.
 
-![Visaul Studio에서 모든 시각적 자산을 생성 합니다.](images/app-icons/all-visual-assets.png)
+![Visual Studio에서 모든 시각적 자산을 생성 합니다.](images/app-icons/all-visual-assets.png)
 
-하기만 하면 Visaul Studio가 작은 타일, 중간 크기 타일, 큰 타일, 와이드 타일, 큰 타일, 앱 아이콘, 시작 화면을 생성 하 고 모든 배율 인수에 대 한 로고 자산 패키지 및 이미지를 단일 공급 장치가 있습니다.
+단일 이미지를 제공 하기만 하면 및 Visual Studio에서 작은 타일, 중간 크기 타일, 큰 타일, 와이드 타일, 큰 타일, 앱 아이콘, 시작 화면을 생성 하 고 모든 배율 인수에 대 한 로고 자산 패키지 됩니다.
 
 한 번에 모든 자산을 생성 합니다.
 1. **원본** 필드 옆 **...** 를 클릭 하 고 사용 하려는 이미지를 선택 합니다. 비트맵 이미지를 사용 하는 경우 예리한 결과 얻을 수 있도록 400 픽셀 400 이상 인지 확인 합니다. 벡터 기반 이미지에 가장 적합 합니다. Visual Studio를 사용 하면 AI (Adobe Illustrator) 및 PDF 파일을 사용할 수 있습니다. 

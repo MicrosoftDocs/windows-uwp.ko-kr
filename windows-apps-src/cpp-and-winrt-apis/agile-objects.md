@@ -9,15 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체, agility, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: a9d65fad2b093b64166a6a1b5be033e23bdd905b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9af1fb0a9d23727924ae3c165bc8977fb9cc7774
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818481"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4318017"
 ---
-# <a name="agile-objects-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 Agile 개체
-대부분 경우 표준 C++ 개체 같은 Windows 런타임 클래스 개체 인스턴스는 모든 스레드에서 액세스할 수 있습니다. 이러한 클래스가 *Agile*입니다. Windows와 함께 제공되는 소수의 Windows 런타임 클래스는 Agile이 아닙니다. 하지만 이러한 클래스를 사용할 때는 스레딩 모델과 마샬링 동작을 고려해야 합니다. 여기에서 마샬링이란 스레드 또는 프로세스 경계에서 데이터를 전달하는 것을 말합니다. 모든 Windows 런타임 개체가 Agile이도록 설정하면 기본적으로 사용자 고유의 C++/WinRT 형식도 Agile이기 때문에 매우 바람직합니다.
+# <a name="agile-objects-in-cwinrt"></a>C++/WinRT의 Agile 개체
+대부분 경우 표준 C++ 개체 같은 Windows 런타임 클래스 개체 인스턴스는 모든 스레드에서 액세스할 수 있습니다. 이러한 클래스가 *Agile*입니다. Windows와 함께 제공되는 소수의 Windows 런타임 클래스는 Agile이 아닙니다. 하지만 이러한 클래스를 사용할 때는 스레딩 모델과 마샬링 동작을 고려해야 합니다. 여기에서 마샬링이란 스레드 또는 프로세스 경계에서 데이터를 전달하는 것을 말합니다. 모든 Windows 런타임 개체가 agile, 좋은 기본 하므로 자체 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 유형은 기본적으로 agile입니다.
 
 하지만 옵트아웃으로 Agile을 선택하지 않을 수도 있습니다. 예를 들어, 단일 스레드 아파트처럼 경우에 따라 형식 개체가 상주해야 하는 이유가 존재하기 때문입니다. 이는 일반적으로 다시 표시 요구 사항과 관련이 있습니다. 하지만 점차 사용자 인터페이스(UI) API 조차도 Agile 개체를 제공하고 있습니다. 일반적으로 Agility는 가장 간단하면서 성능이 뛰어난 옵션입니다. 또한 활성화 팩터리를 구현할 때 해당하는 런타임 클래스가 Agile하지 않더라도 Agile을 설정해야 합니다.
 

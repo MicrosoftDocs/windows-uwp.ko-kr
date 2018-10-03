@@ -9,36 +9,22 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: eb4b7b78bf3ef0a561d102804a245c59b6519796
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 4f1d2bdfe5ce88ed4e3f5f3e618fb7034f4eb0bb
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264358"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4313887"
 ---
-# <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 질문과 대답
-C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다.
+# <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
+작성 하 고 사용 하 여 Windows 런타임 Api를 사용 될 수 있는 질문에 대답 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!NOTE]
 > 표시된 오류 메시지에 대한 질문이 있는 경우 [C++/WinRT 문제 해결](troubleshooting.md) 항목도 참조하세요.
 
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>어떻게 대상을 수행 내 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트?
 
-일반적으로 사용 가능한 최신 버전 Windows SDK의 10.0.17763.0 (Windows 10, 버전 1809)입니다. 프로젝트 최소 컴파일러 및 링커 문제 발생 가능성이 있는 대상 변경 하는 방법은 가장 손이 많이 이기도 합니다. 해당 메서드 (선택한 Windows SDK 버전을 대상으로) 하는 새 프로젝트를 만들고 다음 파일을 복사 새 프로젝트에서 기존의 포함 됩니다. 기존의의 섹션 됩니다 `.vcxproj` 및 `.vcxproj.filters` 수 있는 파일 복사 넘는 Visual Studio에서 파일을 추가 하면 됩니다.
-
-그러나는 Visual Studio에서 프로젝트를 대상을 다른 두 가지가 있습니다.
-
-- 프로젝트 속성 **일반**로 이동 \> **Windows SDK 버전**선택 **모든 구성** 및 **모든 플랫폼**입니다. 대상 버전을 **Windows SDK 버전** 을 설정 합니다.
-- **솔루션 탐색기**프로젝트 노드를 마우스 오른쪽 단추로 클릭 **대상을 프로젝트**를 클릭를 대상으로 하려는 버전 선택한 후 **확인**을 클릭 합니다.
-
-이러한 두 가지 방법 중 하나를 사용 하 여 후 모든 컴파일러 또는 링커 오류가 발생할 경우 솔루션을 정리를 시도할 수 있습니다 (**빌드** > **솔루션 정리** 모든 임시 폴더 및 파일을 수동으로 삭제 및/또는) 다시 작성 하기 전에 합니다.
-
-C + + 컴파일러를 생성 하는 경우 "*C2039 오류: 'IUnknown':의 구성원이 아닙니다 ' \'global 네임 스페이스 '*"을 추가한 다음 `#include <unknwn.h>` 의 맨 위에 `pch.h` 파일.
-
-추가 해야 `#include <hstring.h>` 그러고 합니다.
-
-C + + 링커를 생성 하는 경우 "*오류 LNK2019: 외부 기호가 _WINRT_CanUnloadNow@0 함수에서 참조 _VSDesignerCanUnloadNow@0 *"를 추가 하 여 해결할 수 있습니다 `#define _VSDESIGNER_DONT_LOAD_AS_DLL` 를 `pch.h` 파일.
-
+참조 [방법을 대상을 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트 컴파일되지 하는 이유 Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 17134 버전
 
@@ -84,7 +70,7 @@ C:\ExperimentWithLLVMClang>type main.cpp
 #pragma comment(lib, "windowsapp")
 #pragma comment(lib, "ole32")
 
-#include "winrt/Windows.Foundation.h"
+#include <winrt/Windows.Foundation.h>
 #include <stdio.h>
 #include <iostream>
 
@@ -167,4 +153,4 @@ a.f();
 위에 표시 된 권장된 패턴 적용할 뿐 아니라 C + + WinRT 하지만 모든 Windows 런타임 언어 프로젝션입니다.
 
 > [!NOTE]
-> 이 항목에서 질문에 대한 답변을 찾지 못한 경우 [Stack Overflow에서 `c++-winrt` 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)를 사용하여 도움말을 찾을 수 있습니다.
+> 이 항목에는 질문에 응답 하지 않은 경우, [Visual Studio c + + 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)방문 하 여 또는 사용 하 여 도움말을 찾을 수 합니다 [ `c++-winrt` Stack Overflow에서 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)합니다.

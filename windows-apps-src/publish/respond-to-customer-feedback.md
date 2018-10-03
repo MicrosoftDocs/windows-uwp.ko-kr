@@ -11,11 +11,11 @@ keywords: Windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c9819890dffcf70f56f6c0b09d9a1a24a8818db
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4258318"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4315341"
 ---
 # <a name="respond-to-customer-feedback"></a>고객 피드백에 응답
 

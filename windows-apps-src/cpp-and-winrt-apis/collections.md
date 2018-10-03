@@ -3,30 +3,29 @@ author: stevewhims
 description: C + + WinRT 기능 및 다양 한 구현 및/또는 컬렉션을 전달 하려는 경우 시간과 노력을 저장 하는 기본 클래스를 제공 합니다.
 title: 컬렉션을 사용 하 여 C + + WinRT
 ms.author: stwhi
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ac3635a96b8dd3d757f25da1b826ea318c1ad4
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: e6a0cf8c2798adc59ffcf84381d6bbf64f2ce80e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265368"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312317"
 ---
-# <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>컬렉션 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+# <a name="collections-with-cwinrt"></a>컬렉션을 사용 하 여 C + + WinRT
 
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
-
-내부적으로 Windows 런타임 컬렉션에는 많은 복잡 한 이동 부분이 있습니다. 하지만 컬렉션 개체는 Windows 런타임 함수를 전달 하거나 고유한 컬렉션 속성 및 컬렉션 형식과 구현 해야 경우 함수와 기본 클래스에서 C + + 하도록 지 원하는 WinRT 합니다. 이러한 기능 손이, 아웃 복잡성을 가져와 시간과 노력에 많은 오버 헤드를 저장 합니다.
-
-> [!IMPORTANT]
-> 이 항목에 설명 된 기능은 이상 [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우에 사용할 수 있습니다.
+내부적으로 Windows 런타임 컬렉션에는 많은 복잡 한 이동 부분이 있습니다. 기본 클래스 및 함수는 컬렉션 개체는 Windows 런타임 함수를 전달 하거나 고유한 컬렉션 속성 및 컬렉션 형식과 구현 해야 경우 하지만 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 하도록 지 원하는 합니다. 이러한 기능 손이, 아웃 복잡성을 가져와 시간과 노력에 많은 오버 헤드를 저장 합니다.
 
 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) 요소의 모든 임의 액세스 수집에 의해 구현 된 Windows 런타임 인터페이스입니다. **IVector** 직접 구현 하는 것을 [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_), [**IVectorView**](/uwp/api/windows.foundation.collections.ivectorview_t_)및 [**IIterator**](/uwp/api/windows.foundation.collections.iiterator_t_)구현 해야 합니다. *필요한* 사용자 지정 컬렉션을 입력 하는 경우에 많은 작업입니다. 하지만 데이터 **std:: vector** (또는 **std:: map**또는 **std::unordered_map**)에 있고 Windows 런타임 API로 전달 하는 모든 작업을 수행 하려는 경우 다음 하려는 가능 하면 해당 수준의 작업을 수행 하지 않는. 때문에 ** 가능한 방지 및 C + + WinRT 효율적이 고 적은 노력으로 컬렉션을 만들 수 있습니다.
+
+참고 [XAML 항목 컨트롤, 바인딩 C + + /winrt 컬렉션](binding-collection.md).
+
+> [!NOTE]
+> Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치 하지 않은 또는 나중에 다음 없습니다에 액세스할 수 있는 함수 및이 항목에서 설명 하는 기본 클래스. 대신, 대신 사용할 수 있는 관찰 가능한 벡터 템플릿의 목록에 대 한 [이전 버전의 Windows SDK 있는지](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) 를 확인 합니다.
 
 ## <a name="helper-functions-for-collections"></a>컬렉션에 대 한 도우미 함수
 

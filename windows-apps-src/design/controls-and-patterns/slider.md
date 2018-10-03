@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a284625bdfa76fd1fe41948f01e64e1bea3d2644
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4260538"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4309283"
 ---
 # <a name="sliders"></a>슬라이더
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0473ee984461bf46be4ebf866a564f0d51e0cfc5
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4263660"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4311119"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>브러시를 사용하여 배경, 전경 및 윤곽선 그리기
 

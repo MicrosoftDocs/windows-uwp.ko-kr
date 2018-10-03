@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4263900"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4310279"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>사용자의 구독 청구 상태 변경
 
