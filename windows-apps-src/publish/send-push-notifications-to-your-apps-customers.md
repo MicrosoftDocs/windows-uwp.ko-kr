@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, 대상 알림, 푸시 알림, 알림, 타일
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266844"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>앱의 고객에게 알림 보내기
 
@@ -136,7 +136,7 @@ Windows 개발자 센터에서는 알림을 모든 앱 고객에게 또는 [고�
 
 1.  Windows 개발자 센터 대시보드에서 **참여** 섹션을 확장하고 **알림**을 선택합니다.
 2.  **알림** 페이지 **분석** 탭을 클릭 합니다. 이 탭에는 다음 데이터가 표시 됩니다.
-    * 그래프 알림 및 알림 센터 알림에 대 한 다양 한 사용자 작업 상태 보기
+    * 그래프 보기의 알림 및 알림 센터 알림에 대 한 다양 한 사용자 작업 상태.
     * 알림 센터 알림 및 작업에 대 한 속도---클릭의 세계 지도 보기
 3. 페이지 위쪽에서 데이터가 표시되는 기간을 선택할 수 있습니다. 기본 설정은 30D (30일)이지만, 3개월, 6개월 또는 12개월 동안 데이터를 표시하거나 사용자가 지정한 데이터 범위에서 데이터를 표시하도록 선택할 수 있습니다. 모든 앱 및 지역/국가에서 데이터를 필터링 하려면 **필터** 확장할 수 있습니다.
 

@@ -14,12 +14,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208663"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267138"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -250,6 +250,10 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 }
 ```
 
+## <a name="override-default-keyboard-behavior"></a>기본 키보드 동작을 재정의
+
+경우에 따라 백스페이스 키 또는 Enter 키와 같은 특정 키의 기본 동작을 재정의 해야 할 수 있습니다. 예를 들면 
+
 ## <a name="disable-a-keyboard-accelerator"></a>키보드 가속기 비활성화 
 
 컨트롤이 비활성화된 경우 연결된 가속기도 비활성화됩니다. 다음 예제에서는 ListView의 IsEnabled 속성이 false로 설정되어 있기 때문에 연결된 Control+A 가속기를 호출할 수 없습니다.
@@ -369,7 +373,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 [단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체의 경우 키보드 가속기는 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) 개체, 키보드 가속기 플라이 아웃 텍스트와 함께 표시 됩니다.
 
 > [!NOTE]
-> 도구 설명을 지정 (다음 예에서 Button1 참조)이이 동작을 재정의 합니다.
+> 도구 설명 지정 (다음 예에서 Button1 참조)이이 동작을 재정의 합니다.
 
 ```xaml
 <StackPanel x:Name="Container" Grid.Row="0" Background="AliceBlue">
@@ -400,7 +404,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 ![바로 가기 키 도구 설명](images/accelerators/accelerators-button-small.png)
 
-*버튼의 기본 도구 설명에 추가 하는 바로 가기 키 조합*
+*바로 가기 키 조합 버튼의 기본 도구 설명에 추가*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">

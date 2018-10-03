@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Enhance your desktop app for Windows 10 users by using Universal Windows Platform (UWP) APIs.
+Description: Enhance your desktop application for Windows 10 users by using Universal Windows Platform (UWP) APIs.
 Search.Product: eADQiWindows 10XVcnh
 title: Windows 10용 데스크톱 응용 프로그램 개선
 ms.author: normesta
@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aafe2d09fc27a2693ccf2c4c9d8f189aa0164a3c
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976511"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267768"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
@@ -78,11 +78,11 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 :white_check_mark: **먼저 추가하고 싶은 환경을 결정합니다.**
 
-선택할 수 있는 환경이 많습니다. 예를 들어, 수익 창출 API를 사용하여 구매 주문 흐름을 능률화할 수 있습니다. 또는 다른 사용자가 추가한 새 사진 같이 공유하면 흥미로운 것이 있을 때 앱으로 관심을 돌릴 수 있습니다.
+선택할 수 있는 환경이 많습니다. 예를 들어 있는 다른 사용자가 게시 하는 새 사진 같이 공유 하면 흥미로운 것 수익 창출 Api, 또는 응용 프로그램에 직접 주의 사용 하 여 구매 주문 흐름을 단순화할 수 있습니다.
 
 ![알림](images/desktop-to-uwp/toast.png)
 
-사용자가 메시지를 무시 또는 해제하는 경우에도, 알림 센터에서 다시 메시지를 확인한 후 메시지를 클릭하여 앱을 열 수 있습니다. 이는 앱 참여를 증가시키고, 운영 체제에 앱이 더 깊이 통합된 것처럼 보이는 추가 효과가 있습니다. 잠시 후에 해당 환경을 위한 코드를 제시하겠습니다.
+사용자가 메시지를 무시 또는 해제하는 경우에도, 알림 센터에서 다시 메시지를 확인한 후 메시지를 클릭하여 앱을 열 수 있습니다. 응용 프로그램 참여를 증가 하 고 더 깊이 통합 된 운영 체제를 표시 하는 응용 프로그램을 만드는 추가 효과가 있습니다. 잠시 후에 해당 환경을 위한 코드를 제시하겠습니다.
 
 아이디어를 얻으려면 [개발자 센터](https://developer.microsoft.com/windows)를 방문합니다.
 
@@ -173,7 +173,7 @@ void UWP::ShowToast()
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Windows XP, Windows Vista, Windows 7/8 설치 기반 지원
 
-새 지점을 만들어 별도 코드 기반을 유지하지 않고도 Windows 10용 앱을 현대화할 수 있습니다.
+새 지점을 만들어 별도 코드 기반을 유지 하 고 필요 없이 Windows 10 용 응용 프로그램을 현대화 할 수 있습니다.
 
 Windows 10 사용자를 위해 별도 바이너리를 빌드하고 싶다면 조건부 컴파일을 사용합니다. 모든 Windows 사용자에게 배포할 바이너리들을 빌드하고 싶다면 런타임 검사를 사용하세요.
 
@@ -224,7 +224,7 @@ void UWP::ShowToast()
 
 ### <a name="runtime-checks"></a>런타임 검사
 
-실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 앱은 사용자가 앱을 Windows 10에서 패키지 앱으로 실행시키는 경우에만 UWP API를 호출합니다.
+실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램 패키지 된 응용 프로그램으로 Windows 10에서 실행 하는 응용 프로그램이 UWP Api는 사용자가 있는 경우에 호출 합니다.
 
 가장 쉽게 런타임 검사를 코드에 추가하는 방법은 Nuget 패키지: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/)를 설치하고, ``IsRunningAsUWP()``모든 UWP 코드 해제 메서드를 사용하는 것입니다. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
 
@@ -237,7 +237,7 @@ void UWP::ShowToast()
 * [Hello World 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
 * [보조 타일](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
 * [Microsoft Store API 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
-* [UWP UpdateTask를 구현하는 WinForms 앱](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
+* [UWP UpdateTask를 구현 하는 WinForms 응용 프로그램](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [데스크톱 앱-UWP 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 

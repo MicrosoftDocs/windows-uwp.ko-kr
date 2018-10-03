@@ -11,14 +11,14 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
-ms.openlocfilehash: 8562059fb8a786882a91404f513f2b0c8cdbacd6
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
+ms.openlocfilehash: c39301c37c83f57a67dca35c3628bd9f3eda2583
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691452"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262134"
 ---
-# <a name="uwp-apis-available-to-a-packaged-desktop-app-desktop-bridge"></a>패키지 데스크톱 앱에서 사용할 수 있는 UWP API(데스크톱 브리지)
+# <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>패키지 데스크톱 앱을 사용할 수 있는 UWP Api
 
 패키지 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서는 패키지로 만든 앱이 사용할 수 있는 클래스를 나열합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "1691452"
 <tr><td>스마트 카드</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>PlayReady</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>VPN</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>Wallet</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
+<tr><td>전자지갑</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
 <tr><td>XAML UI</td><td>Win32 앱 프로세스에 XAML UI를 추가할 수 없습니다.</td></tr>
 </table>
 

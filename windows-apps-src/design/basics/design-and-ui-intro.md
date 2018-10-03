@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 602a0af685e812f5c65f94d07297cac9fc411923
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206945"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268002"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -49,7 +49,8 @@ UWP는 쉽게 읽고 모든 장치와 화면 크기에서 상호 작용할 수 �
 ### <a name="multiples-of-four"></a>4의 배수씩 확장
 
 :::row:::
-    ::: 열 범위::: 크기, 여백 및 UI 요소의 위치에 항상 **4의 배수인 epx** UWP 앱에 있어야 합니다.
+    :::column span:::
+        The sizes, margins, and positions of UI elements should always be in **multiples of 4 epx** in your UWP apps.
 
         UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
     :::column-end:::
@@ -66,16 +67,16 @@ UWP 앱은 모든 장치에 자동으로 조정되므로 모든 장치에 대한
 
 :::row:::
     :::column:::
-        UWP 앱을 Windows 10 장치에서 시작 되 면 [프레임](/uwp/api/Windows.UI.Xaml.Controls.Frame), [페이지](/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 이동할 수 있는 [창](/uwp/api/Windows.UI.Xaml.Controls.Window) 에서 실행 합니다.
+        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/Windows.UI.Xaml.Controls.Window) with a [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame), which can navigate between [Page](/uwp/api/Windows.UI.Xaml.Controls.Page) instances.
     :::column-end:::
     :::column:::
-        ![프레임](images/frame.svg)
+        ![Frame](images/frame.svg)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        앱의 UI 페이지의 컬렉션으로 생각할 수 있습니다. 각 페이지에 표시할 항목과 페이지 간 관계를 결정하는 것은 여러분의 몫입니다.
+        You can think of your app's UI as a collection of pages. It's up to you to decide what should go on each page, and the relationships between pages.
 
         To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
     :::column-end:::
@@ -118,7 +119,7 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작�
 
 :::row:::
     :::column:::
-        UWP 앱은 Windows [셸](../shell/tiles-and-notifications/creating-tiles.md)을에서 타일 및 알림이 있는 더 광범위 한 Windows 환경과 상호 작용 합니다.
+        Your UWP app will interact with the broader Windows experience with tiles and notifications in the Windows [Shell](../shell/tiles-and-notifications/creating-tiles.md).
 
         Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
 
@@ -133,10 +134,10 @@ UWP의 디자인 플랫폼은 모든 Windows 기반 장치에서 제대로 작�
 
 :::row:::
     :::column:::
-        UWP 앱은 스마트 조작을 사용합니다. 즉, 클릭이 실제 마우스 클릭인지, 스타일러스인지, 또는 손가락으로 탭한 것인지를 알거나 정의하지 않고 클릭 조작을 디자인할 수 있습니다. 하지만 여기에 더해 [특정 입력 모드에](../input/input-primer.md) 대해 앱을 디자인할 수 있습니다.
+        UWP apps rely on smart interactions. You can design around a click interaction without having to know or define whether the click comes from a mouse, a stylus, or a tap of a finger. However, you can also design your apps for [specific input modes](../input/input-primer.md).
     :::column-end:::
     :::column:::
-        ![입력](images/inputs.svg)
+        ![inputs](images/inputs.svg)
     :::column-end:::
 :::row-end:::
 

@@ -3,19 +3,19 @@ author: laurenhughes
 title: SignTool을 사용하여 앱 패키지에 서명
 description: SignTool을 사용하여 인증서로 앱 패키지에 수동으로 서명합니다.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
-ms.openlocfilehash: b0aab34b187e06ba2b87a1537d6e30df09b35d7e
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: c238855f4f018e8e3142509842221c6b9d97fae3
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663013"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267854"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>SignTool을 사용하여 앱 패키지에 서명
 
@@ -79,16 +79,25 @@ SignTool sign [options] <filename(s)>
 ```
 SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msix
+```
 `/a` 옵션을 지정하면 **SignTool**이 자동으로 최선의 인증서를 선택할 수 있습니다.
 
 인증서가 .pfx 파일이 아닌 경우 다음 구문을 사용합니다.
 ```
 SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.msix
+```
 
 또는, 이 구문을 사용하여 &lt;인증서 이름&gt; 대신 원하는 인증서의 SHA1 해시를 지정할 수도 있습니다.
 ```
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
+```
+```
+SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
 일부 인증서는 비밀 번호를 사용하지 않습니다. 인증서에 비밀 번호가 없는 경우 샘플 명령에서 "/p &lt;Your Password&gt;"를 생략합니다.

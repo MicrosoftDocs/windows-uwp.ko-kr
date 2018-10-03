@@ -11,28 +11,28 @@ ms.technology: uwp
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207337"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268190"
 ---
 # <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
 
 Windows Device Portal을 사용하면 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있습니다. 또한 Windows 디바이스의 실시간 성능 보기 및 문제 해결 방법을 안내 하는 고급 진단 도구를 제공 합니다.
 
-Windows 장치 포털은 PC의 웹 브라우저에서 연결할 수 있는 장치에서 웹 서버입니다. 디바이스의 웹 브라우저에 있는 경우 연결할 수도 있습니다 로컬로 해당 장치에서 브라우저를 사용 합니다.
+Windows Device Portal은 pc의 웹 브라우저에서에 연결할 수 있는 장치에서 웹 서버입니다. 디바이스의 웹 브라우저에 있는 경우 연결할 수도 있습니다 로컬로 해당 장치에서 브라우저를 사용 합니다.
 
-Windows Device Portal은 각 디바이스 패밀리에서 사용할 수 있지만 기능 및 설정은 각 디바이스의 요구 사항에 따라 다릅니다. 이 문서는 디바이스 포털에 대한 일반적인 설명과 각 디바이스 패밀리에 대해 구체적인 정보가 있는 문서의 링크를 제공합니다.
+Windows Device Portal은 각 장치 패밀리에서 사용할 수 있지만 기능 및 설정은 각 디바이스의 요구 사항에 따라 다릅니다. 이 문서는 디바이스 포털에 대한 일반적인 설명과 각 디바이스 패밀리에 대해 구체적인 정보가 있는 문서의 링크를 제공합니다.
 
-Windows Device Portal의 기능 데이터에 액세스 하 고 디바이스를 프로그래밍 방식으로 제어를 직접 사용할 수 있는 [REST Api](device-portal-api-core.md) 를 사용 하 여 구현 됩니다.
+Windows Device Portal의 기능 데이터에 액세스 하 고 디바이스를 프로그래밍 방식으로 제어에 직접 사용할 수 있는 [REST Api](device-portal-api-core.md) 를 사용 하 여 구현 됩니다.
 
 ## <a name="setup"></a>설치
 
 각 디바이스에는 디바이스 포털에 연결하기 위한 특정 지침이 있지만 각 디바이스 모두 다음과 같은 일반적인 단계가 필요합니다.
 1. (설정 앱의 구성) 장치에서 개발자 모드 및 디바이스 포털을 사용 합니다.
 2. 로컬 네트워크를 통해 또는 USB를 사용 하 여 장치와 PC를 연결 합니다.
-3. 브라우저에서 디바이스 포털 페이지로 이동합니다. 이 표는 포트와 각 장치 제품군에 사용 되는 프로토콜을 보여 줍니다.
+3. 브라우저에서 디바이스 포털 페이지로 이동합니다. 이 표에서 포트와 각 장치 제품군에 사용 되는 프로토콜을 보여줍니다.
 
 디바이스 패밀리 | 기본 설정 여부 | HTTP | HTTPS | USB
 --------------|----------------|------|-------|----
@@ -72,7 +72,7 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 ![장치 포털 앱 관리자 페이지](images/device-portal/wdp-apps.png)
 
 - **설치 된 앱**: 드롭다운 메뉴를 사용 하 여 제거 하거나 장치에 설치 된 앱을 시작 합니다. **추가**클릭 하 여 새 앱을 설치 합니다. 로컬에서 패키지 된 앱을 배포 하는 UX 설치를 시작, 네트워크 또는 웹을 호스트 하 고 네트워크 공유에서 느슨한 파일 등록 합니다.
-- **실행 중인 앱**: 현재 실행 중인 및 필요에 따라을 종료 하는 앱에 대 한 정보를 가져옵니다.
+- **실행 중인 앱**: 현재 실행 중인 및 필요에 따라 지연을 닫습니다는 앱에 대 한 정보를 가져옵니다.
 
 #### <a name="install-an-app"></a>앱 설치
 
@@ -81,8 +81,8 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 2.  장치 포털의 앱 관리자 섹션에서 **추가** 클릭 하 고 **로컬 저장소에서 앱 패키지 설치**를 선택 합니다.
 3.  **찾아보기** 를 클릭 하 고 앱 패키지를 찾습니다.
 3.  **찾아보기** 를 클릭 하 고 인증서 (_.cer_) 파일 (필요 없음 모든 장치에서).
-4.  선택적를 설치 하려면 해당 상자 또는 프레임 워크 패키지 앱 설치와 함께 확인 합니다. 두 개 이상 있는 경우 개별적으로 각각 추가합니다.     
-5.  **다음** 설치를 시작 하려면 다음 단계와 **설치** 이동 하려면 클릭 합니다. 
+4.  해당 상자 하려는 경우 설치 옵션 또는 프레임 워크 패키지 앱 설치와 함께 확인 합니다. 두 개 이상 있는 경우 개별적으로 각각 추가합니다.     
+5.  **다음** 설치를 시작 하는 다음 단계 **설치할** 이동 하려면 클릭 합니다. 
 
 #### <a name="uninstall-an-app"></a>앱 제거
 1.  앱이 실행되고 있지 않은지 확인합니다. 
@@ -97,9 +97,9 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 
 ### <a name="file-explorer"></a>파일 탐색기
 
-이 페이지 보기 및 테스트용으로 로드 된 앱에 저장 된 파일을 조작할 수 있습니다. [앱 파일 탐색기를 사용 하 여](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) 블로그 파일 탐색기 및 그 사용 방법에 대 한 자세한 내용은 게시물을 참조 하세요. 
+이 페이지 보기 및 테스트용으로 로드 된 앱에서 저장 한 파일을 조작할 수 있습니다. [앱 파일 탐색기를 사용 하 여](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) 블로그 게시물 파일 탐색기 및 그 사용 방법에 대 한 자세한 정보를 참조 하세요. 
 
-![디바이스 포털 파일 탐색기 페이지](images/device-portal/mob-device-portal-AppFileExplorer.png)
+![장치 포털 파일 탐색기 페이지](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
 ### <a name="performance"></a>성능
 
@@ -113,13 +113,13 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 - **GPU**: %의 총 사용 가능한 GPU 엔진 사용률
 
 
-![디바이스 포털 성능 페이지](images/device-portal/mob-device-portal-perf.png)
+![장치 포털 성능 페이지](images/device-portal/mob-device-portal-perf.png)
 
 ### <a name="event-tracing-for-windows-etw-logging"></a>이벤트 추적에 대 한 ETW (Windows) 로깅
 
 ETW 로깅 페이지 디바이스에서 실시간 ETW 용 이벤트 추적 Windows () 정보를 관리합니다.
 
-![디바이스 포털 ETW 로깅 페이지](images/device-portal/mob-device-portal-etw.png)
+![장치 포털 ETW 로깅 페이지](images/device-portal/mob-device-portal-etw.png)
 
 **공급자 숨기기**를 선택하여 이벤트 목록만 표시합니다.
 - **등록 된 공급자**: 이벤트 공급자와 추적 수준을 선택 합니다. 추적 수준은 다음이 값 중 하나:
@@ -135,13 +135,13 @@ ETW 로깅 페이지 디바이스에서 실시간 ETW 용 이벤트 추적 Windo
 - **공급자 기록**: 현재 세션 중 활성화 된 ETW 공급자를 표시 합니다. 비활성화된 공급자를 활성화하려면 **사용**을 클릭 또는 탭합니다. 기록을 지우려면 **지우기**를 클릭 또는 탭합니다.
 - **필터 / 이벤트**: **이벤트** 섹션 표 형식으로 선택 된 공급자의 ETW 이벤트가 나열 되어 있습니다. 표는 실시간으로 업데이트 됩니다. **필터** 메뉴를 사용 하 여 이벤트 표시 될 사용자 지정 필터를 설정 합니다. 테이블에서 모든 ETW 이벤트를 삭제 하려면 **지우기** 단추를 클릭 합니다. 이렇게 해도 공급자는 비활성화되지 않습니다. 로컬 CSV 파일을 현재 수집 된 ETW 이벤트를 내보냅니다 **파일에 저장** 을 클릭할 수 있습니다.
 
-ETW 로깅을 사용에 대 한 자세한 내용은 [디버그 로그를 보는 데 사용 하 여 Device Portal](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) 블로그 게시물을 참조 하세요. 
+ETW 로깅을 사용에 대 한 자세한 내용은 [디버그 로그 보기를 사용 하 여 Device Portal](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) 블로그 게시물을 참조 하세요. 
 
 ### <a name="performance-tracing"></a>성능 추적
 
 성능 추적 페이지 하면 보기에 대 한 호스트 장치에서 [Windows Performance Recorder (WPR)](https://msdn.microsoft.com/library/hh448205.aspx) 추적 합니다.
 
-![디바이스 포털 성능 추적 페이지](images/device-portal/mob-device-portal-perf-tracing.png)
+![장치 포털 성능 추적 페이지](images/device-portal/mob-device-portal-perf-tracing.png)
 
 - **사용 가능한 프로필**: 드롭다운 목록에서 WPR 프로필을 선택하고, 추적을 시작하려면 **시작**을 클릭 또는 탭합니다.
 - **사용자 지정 프로필**: PC에서 WPR 프로필을 선택하려면 **찾아보기**를 클릭 또는 탭합니다. 추적을 시작하려면 **업로드 및 시작**을 클릭 또는 탭합니다.
@@ -152,17 +152,17 @@ ETW 로깅을 사용에 대 한 자세한 내용은 [디버그 로그를 보는 
 
 ### <a name="device-manager"></a>장치 관리자
 
-장치 관리자 페이지는 장치에 연결 된 모든 주변 장치를 열거 합니다. 각각의 속성을 설정 아이콘을 클릭할 수 있습니다.
+장치 관리자 페이지 장치에 연결 된 모든 주변 장치를 열거 합니다. 각각의 속성을 설정 아이콘을 클릭할 수 있습니다.
 
 ![장치 포털 장치 관리자 페이지](images/device-portal/mob-device-portal-devices.png)
 
 ### <a name="networking"></a>네트워킹
 
 네트워킹 페이지 디바이스에서 네트워크 연결을 관리 합니다. USB 통해 디바이스 포털에 연결 하지 않는 한 이러한 설정을 변경 연결이 끊어질 수 장치 포털에서.
-- **사용 가능한 네트워크**: 장치에 사용할 수 있는 WiFi 네트워크를 보여 줍니다. 네트워크에서 클릭 또는 탭하면 여기에 연결되며 필요한 경우 암호를 제공합니다. Device Portal 아직 엔터프라이즈 인증을 지원 하지 않습니다. 또한 **프로필** 드롭다운을 사용 하 여 장치에 알려진 WiFi 프로필 중 하나에 연결 하려고 합니다.
+- **사용 가능한 네트워크**: 장치에 사용할 수 있는 WiFi 네트워크를 보여 줍니다. 네트워크에서 클릭 또는 탭하면 여기에 연결되며 필요한 경우 암호를 제공합니다. 장치 포털 아직 엔터프라이즈 인증을 지원 하지 않습니다. 또한 **프로필** 드롭다운을 사용 하 여 알려진 장치에 WiFi 프로필 중 하나에 연결 하려고 합니다.
 - **IP 구성**: 디바이스의 네트워크 포트 각 호스트에 대 한 주소 정보를 보여 줍니다.
 
-![디바이스 포털 네트워킹 페이지](images/device-portal/mob-device-portal-network.png)
+![장치 포털 네트워킹 페이지](images/device-portal/mob-device-portal-network.png)
 
 ## <a name="service-features-and-notes"></a>서비스 기능 및 참고 사항
 

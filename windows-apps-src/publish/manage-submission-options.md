@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 게시 고정, 게시 날짜, 게시를 위해 제출 전송, 제한된 접근 권한 값 승인
 ms.localizationpriority: medium
 ms.openlocfilehash: 147f34c40cc5d2b612dcdd92edc0c76340cf58f7
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212727"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267062"
 ---
 # <a name="manage-submission-options"></a>제출 옵션 관리
 
@@ -35,7 +35,7 @@ ms.locfileid: "4212727"
 
 ### <a name="publish-your-submission-manually"></a>수동으로 제출 게시
 
-아직 릴리스 날짜를 설정하고 싶지 않고 게시 프로세스 시작을 수동으로 결정할 때까지 제출을 미게시 상태로 유지하고 싶은 경우에는 **지금 게시를 선택할 때까지 이 제출의 게시 금지**를 선택할 수 있습니다. 이 옵션을 선택하면 제출이 게시되어야 함을 표시하기 전에는 게시되지 않습니다. 에 제출 단계 인증 이후 **게시 이제** 인증 상태 페이지에서 선택 하거나, 아래 설명 된 대로 동일한 방식으로 특정 날짜를 선택 하 여 게시할 수 있습니다.
+아직 릴리스 날짜를 설정하고 싶지 않고 게시 프로세스 시작을 수동으로 결정할 때까지 제출을 미게시 상태로 유지하고 싶은 경우에는 **지금 게시를 선택할 때까지 이 제출의 게시 금지**를 선택할 수 있습니다. 이 옵션을 선택하면 제출이 게시되어야 함을 표시하기 전에는 게시되지 않습니다. 에 제출 단계 인증 후 인증 상태 페이지에서 **지금 게시** 를 선택 하거나 아래 설명 된 대로 동일한 방식으로 특정 날짜를 선택 하 여 게시할 수 있습니다.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>특정 날짜에 제출 게시 시작

@@ -2,7 +2,7 @@
 author: normesta
 Description: Shows how to manually package a Windows desktop application (like Win32, WPF, and Windows Forms) for Windows 10.
 Search.Product: eADQiWindows 10XVcnh
-title: 앱을 수동으로 패키징(데스크톱 브리지)
+title: 응용 프로그램을 수동으로 패키징 (데스크톱 브리지)
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -11,29 +11,29 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a9c413b8f0b79f9e6a331145d086e3e563bd989
-ms.sourcegitcommit: 6382f751f09e2f4aa8406c1ceeb25b5189e23da3
+ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "2410840"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268111"
 ---
-# <a name="package-an-app-manually-desktop-bridge"></a>앱을 수동으로 패키징(데스크톱 브리지)
+# <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 
-이 항목에서는 Visual Studio 또는 Desktop App Converter(DAC) 같은 도구를 사용하지 않고 앱을 패키징하는 방법을 보여 줍니다.
+이 항목에서는 Visual Studio 또는 Desktop App Converter (DAC) 같은 도구를 사용 하지 않고 응용 프로그램을 패키징하는 방법을 보여 줍니다.
 
 앱을 수동으로 패키징하려면 패키지 매니페스트 파일을 만들고 명령줄 도구를 실행하여 Windows 앱 패키지를 생성합니다.
 
-xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시스템 변경에 대해 잘 알고 프로세스를 보다 세부적으로 제어하고 싶은 경우에는 수동 패키징을 고려하십시오.
+프로세스를 더 세부적으로 제어 하 고 xcopy 명령을 사용 하 여 응용 프로그램을 설치 하거나 앱의 설치 관리자가 시스템에 익숙한 경우 수동 패키징을 고려 하십시오.
 
 설치 관리자가 시스템을 어떻게 변경했는지 확실히 모르는 경우나 패키지 매니페스트를 생성하기 위해 자동화된 도구를 사용한 경우에는 [이러한](desktop-to-uwp-root.md#convert) 옵션을 고려하십시오.
 
 >[!IMPORTANT]
->데스크톱 브리지는 Windows 10 버전, 1607에 도입되었으며 Windows 10 1주년 업데이트(10.0, 빌드 14393) 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다.
+>데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10, 버전 1607에에서 도입 그렇지 및 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트 에서만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
+이 가이드를 검토 하 여 응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
 
 ## <a name="create-a-package-manifest"></a>패키지 매니페스트 만들기
 
@@ -87,11 +87,11 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Microsoft Store에서 앱 이름을 예약한 경우에는 Windows 개발자 센터 대시보드를 사용하여 이름과 게시자를 알 수 있습니다. 다른 시스템에 앱을 사이드로드할 계획이라면 선택한 게시자 이름이 앱 로그인에 사용하는 인증서의 이름과 일치되는 경우에 한해 고유한 이름을 제공할 수 있습니다.
+> Windows 스토어에서 응용 프로그램 이름, 예약한 경우 Windows 개발자 센터 대시보드를 사용 하 여 이름과 게시자를 얻을 수 있습니다. 다른 시스템 응용 프로그램을 사이드 로드 계획이, 선택 인증서의 이름과 일치 하는 게시자 이름이 앱 로그인에 사용으로 이러한 고유한 이름을 제공할 수 있습니다.
 
 ### <a name="properties"></a>특성
 
-[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **DisplayName**은 Microsoft Store에 업로드된 앱에 대해 Microsoft Store에서 예약한 앱의 이름입니다.
+[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **DisplayName** 스토어에 업로드 된 앱에 대 한 저장소에 예약 하는 응용 프로그램의 이름입니다.
 
 ```XML
 <Properties>
@@ -112,7 +112,7 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 ```
 ### <a name="dependencies"></a>종속성
 
-데스크톱 브리지를 사용하여 패키지한 데스크톱 앱의 경우 언제든지 ``Name`` 특성을 ``Windows.Desktop``으로 설정합니다.
+항상 설정에 대 한 패키지를 만드는 데스크톱 앱의 ``Name`` 특성을 ``Windows.Desktop``.
 
 ```XML
 <Dependencies>
@@ -121,7 +121,7 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 ```
 
 ### <a name="capabilities"></a>접근 권한 값
-데스크톱 브리지를 사용하여 패키지한 데스크톱 앱의 경우 ``runFullTrust`` 접근 권한 값을 추가해야 합니다.
+추가 해야 하는 것에 대 한 패키지를 생성 하는 데스크톱 앱의 ``runFullTrust`` 접근 권한 값입니다.
 
 ```XML
 <Capabilities>
@@ -134,7 +134,7 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 
 ### <a name="application-element"></a>응용 프로그램 요소
 
-데스크톱 브리지를 사용하여 패키지한 데스크톱 앱의 경우 응용 프로그램 요소의 ``EntryPoint`` 특성은 항상 ``Windows.FullTrustApplication``입니다.
+패키지를 생성 하는 데스크톱 앱의 ``EntryPoint`` 응용 프로그램 요소의 특성은 항상 ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -177,7 +177,7 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>PRI(Package Resource Index) 파일 생성
 
-위 섹션에서 설명한대로 대상 기반 자산을 만들거나 패키지를 만든 후 앱의 시각적 자산을 수정하는 경우 새 PRI 파일을 생성해야 합니다.
+패키지를 만든 후 수정 응용 프로그램의 시각적 자산, 위 섹션에 설명 된 대로 대상 기반 자산을 만들 경우 새 PRI 파일을 생성 해야 합니다.
 
 1.  **VS 2017용 개발자 명령 프롬프트**를 엽니다.
 
@@ -187,7 +187,7 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 
 5.  ``makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml`` 명령을 사용하여 resources.pri 파일을 만듭니다.
 
-    예를 들어 앱에 대한 명령은 ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``과 같을 수 있습니다.
+    예를 들어, 응용 프로그램에 대 한 명령은 다음과 같습니다: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
 
 6.  다음 단계의 지침에 따라 Windows 앱 패키지를 패키징합니다.
 
@@ -201,14 +201,14 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 
 ## <a name="run-the-packaged-app"></a>패키지로 만든 앱 실행
 
-인증서를 얻어서 로그인할 필요 없이 앱을 실행하여 로컬 테스트를 수행할 수 있습니다. 이 PowerShell cmdlet을 실행하면 됩니다.
+인증서를 얻어서 로그인 할 필요 없이 로컬 테스트 응용 프로그램을 실행할 수 있습니다. 이 PowerShell cmdlet을 실행하면 됩니다.
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
 앱의 .exe 또는 .dll 파일을 업데이트하려면 패키지의 기존 파일을 새 파일로 바꾸고, AppxManifest.xml에서 버전 번호를 늘린 다음, 위의 명령을 다시 실행합니다.
 
 > [!NOTE]
-> 패키징된 앱은 항상 대화형 사용자로서 실행이 되며, 패키지 앱이 설치될 모든 드라이브는 NTFS 형식으로 포맷해야 합니다.
+> 패키지 된 응용 프로그램 항상 대화형 사용자로 실행 되 고에 패키지 된 응용 프로그램을 설치 하는 모든 드라이브는 NTFS 형식으로 포맷 되어야 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -222,8 +222,8 @@ xcopy 명령을 사용하여 앱을 설치하거나 앱 설치 관리자의 시�
 
 **단계별로 코드 실행 / 문제를 찾아서 해결**
 
-[패키지 데스크톱 앱 실행, 디버그, 테스트(데스크톱 브리지)](desktop-to-uwp-debug.md)를 참조하세요.
+[실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트](desktop-to-uwp-debug.md) 를 참조 하세요.
 
-**앱에 로그인한 다음, 이를 배포합니다.**
+**응용 프로그램에 서명 하 고 배포**
 
-[패키지 데스크톱 앱 배포(데스크톱 브리지)](desktop-to-uwp-distribute.md)를 참조하세요.
+[패키지로 만든된 데스크톱 응용 프로그램 배포](desktop-to-uwp-distribute.md) 를 참조 하세요.

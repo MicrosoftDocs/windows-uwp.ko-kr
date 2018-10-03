@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b0aa1a53ce69369c442cef7f3b5912631593242
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266782"
 ---
 # <a name="author-events-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 이벤트 작성
 
@@ -30,7 +30,7 @@ ms.locfileid: "4209679"
 
 먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Visual c + +** 만들기 > **Windows 유니버설** > **Windows 런타임 구성 요소 (C + + WinRT)** 프로젝트를 만들어서 이름을 *BankAccountWRC* ("은행 계좌 Windows 런타임 구성 요소")에 대 한 합니다.
 
-새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 해당 파일의 이름을 `BankAccount.idl` (이름 바꾸기는 `.idl` 파일에는 자동으로 종속 바꿉니다 `.h` 및 `.cpp` 파일, 너무). 내용을 `BankAccount.idl` 아래 목록과 함께 합니다.
+새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 해당 파일의 이름을 `BankAccount.idl` (이름을 변경 합니다 `.idl` 파일에는 자동으로 종속 바꿉니다 `.h` 및 `.cpp` 파일, 너무). 내용을 `BankAccount.idl` 아래 목록과 함께 합니다.
 
 ```idl
 // BankAccountWRC.idl
@@ -45,9 +45,9 @@ namespace BankAccountWRC
 }
 ```
 
-파일을 저장합니다. 프로젝트는 순간 완료 될 때까지 빌드 없습니다 수 있지만 **BankAccount** 런타임 클래스를 구현 하는 소스 코드 파일을 생성 하기 때문에 작업을 수행 하는 것은 이제 구축 합니다. 해 보시기 이제 빌드 (이 단계에서 표시 되는 수 빌드 오류가 발생을 사용 하 여 작업을 수행 해야 합니다. `Class.h` 및 `Class.g.h` 찾을 수 없음). 빌드 과정은 `midl.exe` 구성 요소의 Windows 런타임 메타 데이터 파일을 만들려면 도구가 실행 되어 (은 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). 그런 다음 `cppwinrt.exe` 도구가 실행되어(`-component` 옵션과 함께) 구성 요소를 작성하도록 지원하는 소스 코드 파일을 생성합니다. 이러한 파일 **BankAccount** 런타임 클래스 IDL에서 선언 된 구현을 시작할 수 있는 스텁이 포함 됩니다. 이 스텁이 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h`와 `BankAccount.cpp`입니다.
+파일을 저장합니다. 프로젝트는 순간 완료 빌드지 않습니다 수 있지만 **BankAccount** 런타임 클래스를 구현 하는 소스 코드 파일을 생성 하기 때문에 작업을 수행 하는 것은 이제 구축 합니다. 고 이제 빌드 (이 단계에서 표시 되는 수 빌드 오류가 발생을 사용 하 여 작업을 수행 해야 합니다. `Class.h` 및 `Class.g.h` 찾을 수 없음). 빌드 과정은 `midl.exe` 구성 요소의 Windows 런타임 메타 데이터 파일을 만드는 도구를 실행 하는 (인 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`). 그런 다음 `cppwinrt.exe` 도구가 실행되어(`-component` 옵션과 함께) 구성 요소를 작성하도록 지원하는 소스 코드 파일을 생성합니다. 이러한 파일에 구현에 idl로 선언 된 **BankAccount** 런타임 클래스를 시작할 수 있는 스텁이 포함 됩니다. 이 스텁이 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h`와 `BankAccount.cpp`입니다.
 
-파일 탐색기에서 스텁 파일을 복사 `BankAccount.h` 및 `BankAccount.cpp` 폴더에서 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` 는 프로젝트 파일이 포함 된 폴더로 `\BankAccountWRC\BankAccountWRC\`, 및 대상에 파일을 대체 합니다. 이제 `BankAccount.h`와 `BankAccount.cpp`를 열고 런타임 클래스를 구현합니다. `BankAccount.h`에서 전용 멤버 2개를 BankAccount 구현체(팩터리 구현체 *아님*)에 추가합니다.
+파일 탐색기에서 스텁 파일을 복사 `BankAccount.h` 및 `BankAccount.cpp` 폴더에서 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` 은 프로젝트 파일이 있는 폴더로 `\BankAccountWRC\BankAccountWRC\`, 대상에 파일을 바꿉니다. 이제 `BankAccount.h`와 `BankAccount.cpp`를 열고 런타임 클래스를 구현합니다. `BankAccount.h`에서 전용 멤버 2개를 BankAccount 구현체(팩터리 구현체 *아님*)에 추가합니다.
 
 ```cppwinrt
 // BankAccount.h
@@ -97,13 +97,13 @@ namespace winrt::BankAccountWRC::implementation
 
 잔액이 마이너스가 될 경우 **AdjustBalance** 함수의 구현체에서 **AccountIsInDebit** 이벤트가 발생하는 시나리오는 위에서 확인할 수 있습니다.
 
-경고 메시지로 인해에서 경우 빌드를 해결 하거나 **C/c + +** 프로젝트 속성을 설정 > **일반** > **경고를 오류로 처리** **아니요 (/ WX-)**, 프로젝트를 다시 빌드합니다.
+경고 메시지로 인해에서 경우 빌딩를 해결 하거나 **C/c + +** 프로젝트 속성을 설정 > **일반** > **경고를 오류로 처리** **아니요 (/ WX-)** 를 프로젝트를 다시 빌드합니다.
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>주요 앱(BankAccountCoreApp)을 만들어 Windows 런타임 구성 요소 테스트
 
 이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). **Visual c + +** 만들기 > **Windows 유니버설** > **Core App (C + + WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*합니다.
 
-참조를 추가 하 고 이동 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (또는 두 프로젝트가 동일한 솔루션의 경우 프로젝트-프로젝트 참조를 추가). **추가**와 **확인**을 차례대로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 오류가 표시 한 이벤트에는 페이로드 파일인 `readme.txt` 하지 존재, Windows 런타임 구성 요소 프로젝트에서 해당 파일을 제외, 후 BankAccountCoreApp 리 빌드합니다.
+참조를 추가 하 고 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd` (또는 두 프로젝트가 동일한 솔루션의 경우 프로젝트-프로젝트 참조를 추가). **추가**와 **확인**을 차례대로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 표시 오류가 발생 한 이벤트에는 페이로드 파일인 `readme.txt` 하지 존재, Windows 런타임 구성 요소 프로젝트에서 해당 파일을 제외, 후 BankAccountCoreApp 리 빌드합니다.
 
 빌드 과정에서 `cppwinrt.exe` 도구가 실행되면서 참조된 `.winmd` 파일을 소스 코드 파일로 처리합니다. 이 소스 코드 파일에는 구성 요소를 사용할 때 지원할 목적으로 프로젝션된 형식이 포함되어 있습니다. 구성 요소의 런타임 클래스에 맞게 프로젝션된 형식의 헤더(`BankAccountWRC.h`)가 `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\` 폴더로 생성됩니다.
 
@@ -146,15 +146,15 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 };
 ```
 
-이제 창을 클릭할 때마다 은행 계좌의 잔고에서 1이 감액됩니다. 이벤트가 예상한 대로 발생 하는지을 보여 주기 위해 **AccountIsInDebit** 이벤트를 처리 하는 람다 식 중단점을 삽입 하 고 앱을 실행 창 내부를 클릭 합니다.
+이제 창을 클릭할 때마다 은행 계좌의 잔고에서 1이 감액됩니다. 이벤트가 예상한 대로 발생 하는지을 보여 주기 위해 **AccountIsInDebit** 이벤트를 처리 하는 람다 식 중단점을 삽입, 앱을 실행 하 고 창 내부를 클릭 합니다.
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>매개 변수가 있는 대리자와는 ABI에서 간단한 신호
 
-응용 프로그램 이진 인터페이스 (ABI)에서 이벤트에 액세스할 수 있어야 합니다&mdash;예: 구성 요소와 그 소비 응용 프로그램을 사용 하 여&mdash;이벤트는 Windows 런타임 대리자 형식을 사용 해야 합니다. 위의 예제에는 [**Windows::Foundation::EventHandler\ < T\ >**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식을 사용합니다. [**< TSender, TResult\ > TypedEventHandler\**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식의 또 다른 예입니다.
+응용 프로그램 이진 인터페이스 (ABI)에서 이벤트에 액세스할 수 있어야 합니다&mdash;: 구성 요소와 그 소비 응용 프로그램을 사용 하 여 이러한&mdash;이벤트는 Windows 런타임 대리자 형식을 사용 해야 합니다. 위 예제 [**Windows::Foundation::EventHandler\ < T\ >**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식을 사용합니다. [**< TSender, TResult\ > TypedEventHandler\**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식의 또 다른 예입니다.
 
-이러한 두 대리자 형식에 대 한 형식 매개 변수 형식 매개 변수가 Windows 런타임 형식 이어야 너무 하므로, ABI 통과 해야 합니다. 등의 숫자 및 문자열 기본 형식 뿐만 아니라 첫 번째 및 제 3 자 런타임 클래스를 포함 합니다. 컴파일러에 도움이 되는 "*WinRT 형식 이어야 합니다.*" 오류 제약 조건의 잊을 경우.
+이러한 두 대리자 형식에 대 한 형식 매개 변수 형식 매개 변수가 Windows 런타임 형식 이어야 너무 하므로, ABI를 통과 해야 합니다. 등의 숫자 및 문자열 기본 형식 뿐만 아니라 첫 번째 및 제 3 자 런타임 클래스를 포함 합니다. 컴파일러에 도움이 되는 "*WinRT 형식 이어야 합니다.*" 오류 제약 조건의 잊을 경우.
 
-모든 매개 변수 또는 이벤트 인수를 전달 해야 하지 고유의 간단한 Windows 런타임 대리자 형식을 정의할 수 있습니다. 아래 예제에서는 간단한 **BankAccount** 런타임 클래스의 버전을 보여 줍니다. **SignalDelegate** 이라는 대리자 형식을 선언 하 고를 사용 하는 이벤트 매개 변수를 사용 하는 대신 신호 유형을 이벤트를 발생 시킵니다.
+모든 매개 변수 또는 이벤트 인수를 전달 해야 하지 고유의 간단한 Windows 런타임 대리자 형식을 정의할 수 있습니다. 아래 예제에서는 간단한 **BankAccount** 런타임 클래스의 버전을 보여 줍니다. **SignalDelegate** 이라는 대리자 형식을 선언 하 고를 사용 하는 이벤트 매개 변수를 사용 하는 대신 신호 유형 이벤트를 발생 합니다.
 
 ```idl
 // BankAccountWRC.idl
@@ -248,7 +248,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 ## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>매개 변수가 있는 대리자, 간단한 신호 및 프로젝트 내에서 콜백을
 
-이벤트 내부적 으로만 사용 되는 경우 내에서 C + + [**winrt::event**](/uwp/cpp-ref-for-winrt/event) 구조체 템플릿을 계속 사용할 수 있지만 C + 매개 변수화 합니다 (전체에서 아니라 바이너리) 프로젝트 WinRT + /winrt의 비 Windows 런타임 [**winrt:: delegate&lt;... T&gt; **](/uwp/cpp-ref-for-winrt/delegate) 구조체 템플릿은 효율적이 고 참조 계산 대리자입니다. 임의 개수의 매개 변수를 지원 하 고 Windows 런타임 형식에 국한 되지는 않습니다.
+이벤트 내부적 으로만 사용 되는 경우 내에서 C + + WinRT [**winrt::event**](/uwp/cpp-ref-for-winrt/event) 구조체 템플릿을 계속 사용할 수 있지만 C + 매개 변수화 합니다 (전체에서 아니라 바이너리) 프로젝트 + /winrt의 비 Windows 런타임 [**winrt:: delegate&lt;... T&gt; **](/uwp/cpp-ref-for-winrt/delegate) 구조체 템플릿은 효율적이 고 참조 계산 대리자입니다. 임의 개수의 매개 변수를 지원 하 고 Windows 런타임 형식에 국한 되지 않습니다.
 
 아래 예제에서는 먼저 (기본적으로 간단한 신호는) 매개 변수를 사용 하지 않는 서명과 문자열을 사용 하는 다음 하나의 대리자를 표시 합니다.
 
@@ -264,7 +264,7 @@ log.add([](std::wstring const& message) { Persist(message); });
 log(L"Hello, World!");
 ```
 
-추가 하는 방법을 이벤트에 원하는 만큼의 구독 대리자를 확인 합니다. 그러나 이벤트와 관련 된 몇 가지 오버 헤드가 있습니다. 필요한 모든만 단일 구독 대리자를 사용 하 여 간단한 콜백 이면 [**winrt:: delegate를 사용할 수 있습니다&lt;. T&gt; **](/uwp/cpp-ref-for-winrt/delegate) 자체적으로 합니다.
+추가 하는 방법을 이벤트에 원하는 만큼의 구독 대리자를 확인 합니다. 그러나 이벤트와 관련 된 몇 가지 오버 헤드가 있습니다. 필요한 모든만 단일 구독 대리자를 사용 하 여 간단한 콜백 이면 [**winrt:: delegate를 사용할 수 있습니다&lt;... T&gt; **](/uwp/cpp-ref-for-winrt/delegate) 자체적으로 합니다.
 
 ```cppwinrt
 winrt::delegate<> signalCallback;
@@ -280,9 +280,9 @@ C +에서 포트 하는 경우 + /CX 코드 베이스 이벤트 및 대리인이
 
 ## <a name="design-guidelines"></a>디자인 지침
 
-이벤트 및 대리자 하지 함수 매개 변수로 전달 하는 것이 좋습니다. **추가** 기능의 [**winrt::event**](/uwp/cpp-ref-for-winrt/event) 한 예외 되므로 경우 대리자를 통과 해야 합니다. 이 지침에 대 한 이유 대리자 (측면에서 지원 여부 하나의 클라이언트 등록 또는 다중) 여러 Windows 런타임 언어에서 다른 폼 걸릴 수 있으므로 때문입니다. 이벤트에는 여러 구독자 모델을 사용 하 여 훨씬 더 예측할 수이 고 일관 된 옵션을 구성합니다.
+이벤트 및 대리자 하지 함수 매개 변수로 전달 하는 것이 좋습니다. [**Winrt::event**](/uwp/cpp-ref-for-winrt/event) 의 **추가** 기능 한 예외 되므로 경우 대리자를 통과 해야 합니다. 이 지침에 대 한 이유 대리자 (측면에서 지원 여부 하나의 클라이언트 등록 또는 다중) 여러 Windows 런타임 언어에서 다른 폼 걸릴 수 있으므로 때문입니다. 이벤트에는 여러 구독자 모델을 사용 하 여 훨씬 더 예측할 수이 고 일관 된 옵션을 구성합니다.
 
-두 개의 매개 변수가 이벤트 처리기 대리자에 대 한 서명으로 구성 되어야: *보낸 사람* (**IInspectable**) 및 *인수* (일부 이벤트 인수 형식을 [**RoutedEventArgs**](/uwp/api/windows.ui.xaml.routedeventargs)예를 들어).
+두 개의 매개 변수가 이벤트 처리기 대리자에 대 한 서명으로 구성 되어야: *보낸 사람* (**IInspectable**) 및 *args* (일부 이벤트 인수 형식을 [**RoutedEventArgs**](/uwp/api/windows.ui.xaml.routedeventargs)예를 들어).
 
 참고 하는 내부 API를 디자인 하는 경우 다음이 지침 적용할 필요 하지 않습니다. 하지만 내부 Api 되는 경우가 종종 공개 시간이 지남에 따라 합니다.
 

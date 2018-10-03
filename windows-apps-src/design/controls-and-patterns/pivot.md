@@ -15,15 +15,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211485"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267754"
 ---
 # <a name="pivot"></a>피벗
 
-[피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤 콘텐츠 섹션의 작은 집합 간의 터치 살짝 수 있습니다.
+[피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤 콘텐츠 섹션의 작은 집합 간의 터치 살짝 밀기 수 있습니다.
 
 > **중요 Api**: [Pivot 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
@@ -43,15 +43,15 @@ ms.locfileid: "4211485"
 </tr>
 </table>
 
-피벗 컨트롤 [NavigationView](navigationview.md)마찬가지로 선택한 항목에 밑줄을 표시 합니다.
+피벗 컨트롤 [NavigationView](navigationview.md)를 처럼 선택한 항목에 밑줄을 표시 합니다.
 
 ![기본 포커스는 선택된 헤더에 밑줄로 표시됩니다.](images/pivot_focus_selectedHeader.png)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-일반적인 상단 탐색 및 탭 패턴을 달성 하기 위해 [NavigationView](navigationview.md)를 자동으로 다양 한 화면 크기를 조정할 수 있도록 하는 사용자 지정에 대 한를 사용 하는 것이 좋습니다.
+일반적인 상단 탐색 및 탭 패턴을 달성 하기 위해 [NavigationView](navigationview.md)를 자동으로 다양 한 화면 크기를 조정할 수 있도록 하는 큰 사용자 지정을 사용 하는 것이 좋습니다.
 
-그러나 탐색을 위해 터치 살짝 밀기, 피벗을 사용 하 여 것이 좋습니다.
+그러나 탐색을 위해 터치 살짝 밀기, 경우 피벗을 사용 하는 것이 좋습니다.
 
 NavigationView 및 피벗 컨트롤 간의 주요 차이점 기본 오버플로 동작 및 탐색 API는:
 
@@ -87,7 +87,7 @@ NavigationView 및 피벗 컨트롤 간의 주요 차이점 기본 오버플로 
 </Page>
 ```
 
-NavigationView는 사용자 지정 탐색을 좀 더 잘 제어할 및 해당 코드 숨김에 필요 합니다. 위의 XAML 권의 다음 코드 숨김을 사용:
+NavigationView 탐색 사용자 지정 보다 잘 제어를 제공 하 고 해당 코드 숨김에 필요 합니다. 위의 XAML 권의 다음 코드 숨김을 사용:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-이 코드는 콘텐츠 섹션 간에 터치 살짝 경험-피벗 컨트롤의 기본 제공 탐색 환경을 모방합니다. 그러나 알 수 있듯이 사용자 지정할 수 있습니다 애니메이션된 전환, 탐색 매개 변수 및 스택 기능을 포함 하는 몇 가지 지점이 합니다.
+이 코드는 콘텐츠 섹션 간에 터치 살짝 밀기 경험-피벗 컨트롤의 기본 제공 탐색 경험을 모방합니다. 그러나 알 수 있듯이 사용자 지정할 수 있습니다 애니메이션된 전환, 탐색 매개 변수 및 스택 기능을 포함 하는 몇 가지 지점이 합니다.
 
 ## <a name="create-a-pivot-control"></a>피벗 컨트롤 만들기
 

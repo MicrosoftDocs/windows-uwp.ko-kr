@@ -3,18 +3,18 @@ author: jnHs
 Description: After your packages have been successfully uploaded, you'll see a table that indicates which packages will be offered to specific Windows 10 device families (and earlier OS versions, if applicable), in ranked order.
 title: 장치 패밀리 가용성
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 패키지, 업로드, 장치 패밀리 가용성
 ms.localizationpriority: medium
-ms.openlocfilehash: 0485ef2f884d8957f6d3d1d7544415dd676bf95b
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: e86b56c09f907e45655a0ef9b94fad30a4959b59
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266802"
 ---
 # <a name="device-family-availability"></a>장치 패밀리 가용성
 
@@ -55,11 +55,9 @@ Windows 10 IoT Core에 대한 UWP 앱을 제출하는 경우, 패키지를 업�
 제출에 **Windows 8/8.1** 및 **Windows Phone 8.x 이하**에서 실행할 수 있는 패키지가 포함되어 있는 경우 해당 패키지는 표에 표시된 대로 고객이 사용할 수 있게 됩니다. 이 OS 버전에는 확인란이 없습니다. 이러한 고객에게 앱을 제공하지 않으려면 제출에서 해당 패키지를 제거합니다.
 
 > [!IMPORTANT]
-> 특정 Windows 10 장치 패밀리에서 제출을 다운로드하는 것을 완전히 방지하려면 Microsoft Visual Studio가 appx 매니페스트에 기본적으로 포함하고 있는 Windows.Universal 값(유니버설 장치 패밀리의 경우)을 그대로 두지 말고 지원하려는 장치 패밀리(즉, Windows.Mobile 또는 Windows.Desktop)만을 대상으로 하도록 appx 매니페스트의 [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) 요소를 업데이트합니다.
+> 특정 Windows 10 장치 패밀리에서 제출을 완전히 방지 하려면 지원 하려는 장치 패밀리를 대상으로 매니페스트의 [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) 요소를 업데이트 합니다 (즉, Windows.Mobile 또는 Windows.Desktop) 대신 그대로 두지 말고는 Windows.Universal 값 (유니버설 장치 패밀리의 경우) 하는 보다 Microsoft Visual Studio가 기본적으로 매니페스트에 포함 합니다.
 
-**장치 패밀리 가용성** 섹션에서 선택한 내용은 새 구입에만 적용되는 점을 기억하세요. 앱을 이미 소유하고 있는 사용자는 이를 계속 사용할 수 있으며, 여기에서 해당 장치 패밀리를 제거한 경우에도 제출한 업데이트를 받게 됩니다. 이는 Windows 10으로 업그레이드하기 전에 앱을 다운로드한 고객에게도 적용됩니다.
-
-예를 들어 Windows Phone 8.1 패키지로 앱을 게시하고 나중에 유니버설 장치 패밀리를 대상으로 하는 동일한 앱에 Windows 10(UWP) 패키지를 추가한 경우 Windows Phone 8.1 패키지를 가진 Windows 10 Mobile 고객은 **Windows 10 Mobile** 상자의 선택을 취소한 경우에도 이 Windows 10(UWP) 패키지에 대한 업데이트를 받게 됩니다(이는 새 다운로드가 아니라 업데이트이기 때문). 그러나 유니버설 또는 모바일 장치 패밀리를 대상으로 하는 Windows 10(UWP) 패키지를 제공하지 않은 경우 Windows 10 Mobile 고객은 계속 Windows Phone 8.1 패키지를 사용하게 됩니다.
+**장치 패밀리 가용성** 섹션에서 선택한 내용은 새 구입에만 적용되는 점을 기억하세요. 앱을 이미 소유하고 있는 사용자는 이를 계속 사용할 수 있으며, 여기에서 해당 장치 패밀리를 제거한 경우에도 제출한 업데이트를 받게 됩니다. 이는 Windows 10으로 업그레이드하기 전에 앱을 다운로드한 고객에게도 적용됩니다. 예를 들어 Windows Phone 8.1 패키지로 앱을 게시하고 나중에 유니버설 장치 패밀리를 대상으로 하는 동일한 앱에 Windows 10(UWP) 패키지를 추가한 경우 Windows Phone 8.1 패키지를 가진 Windows 10 Mobile 고객은 **Windows 10 Mobile** 상자의 선택을 취소한 경우에도 이 Windows 10(UWP) 패키지에 대한 업데이트를 받게 됩니다(이는 새 다운로드가 아니라 업데이트이기 때문). 그러나 유니버설 또는 모바일 장치 패밀리를 대상으로 하는 Windows 10(UWP) 패키지를 제공하지 않은 경우 Windows 10 Mobile 고객은 계속 Windows Phone 8.1 패키지를 사용하게 됩니다.
 
 장치 패밀리에 대한 자세한 내용은 [**장치 패밀리 개요**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)를 참조하세요.
 

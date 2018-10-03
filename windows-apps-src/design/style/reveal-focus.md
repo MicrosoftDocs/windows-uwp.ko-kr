@@ -1,6 +1,6 @@
 ---
 author: cphilippona
-description: 포커스 표시는 사용자가 게임 패드 또는 키보드 포커스를 이동 하면 포커스 맞출 수 있는 요소의 테두리를 애니메이션화 하는 조명 효과입니다.
+description: 포커스 표시는 사용자가 게임 패드 또는 키보드 포커스를 이동 하면 있는 요소의 테두리를 애니메이션화 하는 조명 효과입니다.
 title: 포커스 표시
 template: detail.hbs
 ms.author: mijacobs
@@ -14,11 +14,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206241"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268158"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
@@ -67,7 +67,7 @@ ms.locfileid: "4206241"
     }
 ```
 
-**FocusVisualKind** 속성을 설정 하면 시스템 해당 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본 값)로 설정 하는 모든 컨트롤에 포커스 표시 효과 자동으로 적용 합니다. 
+**FocusVisualKind** 속성을 설정 하면 시스템 포커스 표시 효과 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본 값)로 설정 하는 모든 컨트롤에 자동으로 적용 합니다. 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>기본적으로 포커스 표시에 없는 이유는? 
 알 수 있듯이 앱이 Xbox에서 실행 중임을 감지할 때 포커스 표시를 켜는 상당히 쉽습니다. 그렇다면 왜 시스템에서 자동으로 켜지지 않는 것일까요? 포커스 표시는 포커스 화면 효과의 크기를 늘리기, 때문에 UI 레이아웃 문제는 발생할 수 있습니다. 경우에 따라 앱에 대 한 최적화 하기 위해 포커스 표시 효과 사용자 지정 합니다.
@@ -167,7 +167,7 @@ Customzing 시작 하기 전에, 유용 포커스 표시를 구성 하는 구성
 
 ## <a name="use-your-own-focus-visuals"></a>차제 포커스 화면 효과 사용
 
-포커스 표시를 사용자 지정 하려면 다른 방법은 시각적 상태를 사용 하 여 고유한 그려 시스템 제공 포커스 화면 효과 옵트아웃 하는 것입니다. 자세히 알아보려면 [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)을 참조합니다.
+포커스 표시를 사용자 지정 하려면 다른 방법은 시각적 상태를 사용 하 여 그려 시스템 제공 포커스 화면 효과 옵트아웃 하는 것입니다. 자세히 알아보려면 [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)을 참조합니다.
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>포커스 표시 및 Fluent 디자인 시스템

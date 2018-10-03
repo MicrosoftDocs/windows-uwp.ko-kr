@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: ecbba774dd4d22dcfbe3ac33e943bb68b6c727f8
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 31c27430c850f861c8b97863521202a6dcab80f7
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818479"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268090"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>자산 패키지 및 패키지 접기를 사용하여 개발 
 
@@ -29,14 +29,14 @@ ms.locfileid: "1818479"
 
 패키지 접기가 개발 프로세스에 어떤 영향도 미치지 않는 방법을 이해하기 위해 먼저 자산 패키지 또는 리소스 패키지를 사용하여 앱을 여러 개의 패키지로 분할 때 발생하는 일을 알아보겠습니다. 
 
-대략적으로 앱의 파일을 아키텍처 패키지가 아닌 다른 패키지로 분할하면 코드가 실행되는 위치를 기준으로 해당 파일에 직접 액세스할 수 없습니다. 이러한 패키지가 모두 아키텍처 패키지가 설치된 다른 디렉터리에 설치되기 때문입니다. 예를 들어, 게임을 제작하는 중이고 프랑스어와 및 독일어로 게임을 현지화했으며 x86와 x64 컴퓨터 모두에 대해 제작 중이라면 게임의 앱 번들 내에 이러한 .appx 패키지 파일이 있어야 합니다.
+대략적으로 앱의 파일을 아키텍처 패키지가 아닌 다른 패키지로 분할하면 코드가 실행되는 위치를 기준으로 해당 파일에 직접 액세스할 수 없습니다. 이러한 패키지가 모두 아키텍처 패키지가 설치된 다른 디렉터리에 설치되기 때문입니다. 예를 들어 언어로 지역화 하는 게임 및 게임을 만들고 있다면 프랑스어 및 독일어 용으로 빌드된 x86 및 x64 컴퓨터를 다음 게임의 앱 번들 내에 이러한 앱 패키지 파일이 있어야 합니다.
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx
 -   MyGame_1.0_language-fr.appx
 -   MyGame_1.0_language-de.appx
 
-게임이 사용자의 컴퓨터에 설치되면 각 .appx 파일은 **WindowsApps** 디렉터리에 자체 폴더를 갖게 됩니다. 따라서 64비트 Windows를 실행 중인 프랑스어 사용자의 경우 게임의 모습은 다음과 같습니다.
+게임 사용자의 컴퓨터에 설치 되 면 각 앱 패키지 파일 **WindowsApps** 디렉터리에 자체 폴더를 갖게 됩니다. 따라서 64비트 Windows를 실행 중인 프랑스어 사용자의 경우 게임의 모습은 다음과 같습니다.
 
 ```example
 C:\Program Files\WindowsApps\
@@ -47,9 +47,9 @@ C:\Program Files\WindowsApps\
 `-- …(other apps)
 ```
 
-사용자에게 적합하지 않은 .appx 패키지 파일은 설치되지 않습니다(x86 및 독일어 패키지). 
+Note 사용자에 게 적용 되지 않는 파일 됩니다 앱 패키지는 (x86 및 독일어 패키지)를 설치 합니다. 
 
-이 사용자의 경우 게임의 주요 실행 파일은 **MyGame_1.0_x64** 폴더에 위치하고 여기에서 실행될 것이며, 일반적으로 이 폴더의 파일에만 액세스할 수 있습니다. **MyGame_1.0_language-fr** 폴더의 파일에 액세스하려면 MRT API 또는 PackageManager API를 사용해야 합니다. MRT APIs는 자동으로 설치된 언어 중에서 가장 적절한 파일을 선택할 수 있으며 [Windows.ApplicationModel.Resources.Core]https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core)에서 MRT API에 대해 자세히 알아볼 수 있습니다. 또는 [PackageManager 클래스](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager)를 사용하여 프랑스어 언어 패키지가 설치된 위치를 찾을 수 있습니다. 앱 패키지가 설치된 위치는 변경될 수 있으며 사용자에 따라 다를 수 있으므로 이 위치를 넘겨 짐작해서는 안 됩니다. 
+이 사용자의 경우 게임의 주요 실행 파일은 **MyGame_1.0_x64** 폴더에 위치하고 여기에서 실행될 것이며, 일반적으로 이 폴더의 파일에만 액세스할 수 있습니다. **MyGame_1.0_language-fr** 폴더의 파일에 액세스하려면 MRT API 또는 PackageManager API를 사용해야 합니다. MRT Api는 자동으로 설치 된 언어에서 가장 적절 한 파일을 선택할 수, [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core)에서 MRT Api에 대 한 자세한 내용을 찾을 수 있습니다. 또는 [PackageManager 클래스](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager)를 사용하여 프랑스어 언어 패키지가 설치된 위치를 찾을 수 있습니다. 앱 패키지가 설치된 위치는 변경될 수 있으며 사용자에 따라 다를 수 있으므로 이 위치를 넘겨 짐작해서는 안 됩니다. 
 
 ## <a name="asset-package-folding"></a>자산 패키지 접기
 

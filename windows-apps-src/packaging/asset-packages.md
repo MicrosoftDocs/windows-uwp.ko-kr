@@ -3,18 +3,18 @@ author: laurenhughes
 title: 자산 패키지 소개
 description: 자산 패키지는 아키텍처 패키지 전체에서 중복된 파일에 대한 필요성을 효율적으로 제거하는 응용 프로그램의 일반적인 파일에 대한 중앙 집중식 위치 역할을 수행할 패키지의 유형입니다.
 ms.author: lahugh
-ms.date: 04/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: bfb006e0575d025d9d823981e32b6d0749de0996
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 8aafac1c1217ce082cd9d6176c530967f32e4cdd
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818478"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267992"
 ---
 # <a name="introduction-to-asset-packages"></a>자산 패키지 소개
 
@@ -30,7 +30,7 @@ ms.locfileid: "1818478"
 ### <a name="how-do-asset-packages-affect-publishing"></a>자산 패키지가 게시에 어떤 영향을 미치나요?
 자산 패키지의 가장 큰 이점은 패키지 앱의 크기 축소입니다. 작은 앱 패키지를 사용하면 Microsoft Store가 파일을 덜 처리할 수 있기 때문에 앱의 게시 프로세스 속도가 빨라집니다. 그러나 이 외에도 자산 패키지의 중요한 혜택이 있습니다.
 
-자산 패키지를 만들 때 패키지를 실행하도록 할지 여부를 지정할 수 있습니다. 자산 패키지는 아키텍처와 독립적인 파일만 포함해야 하므로 일반적으로 .dll 또는 .exe 파일을 포함할 수 없으며, 따라서 자산 패키지의 경우 일반적으로 실행할 필요가 없습니다. 이러한 차이점의 중요성은 게시 프로세스 동안 모든 실행 패키지를 검사하여 맬웨어가 포함되어 있지 않은지 확인해야 하며 큰 패키지의 경우 이 검사 프로세스는 더 오래 걸립니다. 하지만 패키지가 실행할 수 없도록 지정된 경우 앱의 설치는 이 패키지에 포함된 파일을 실행할 수 없는지 확인합니다. 이를 통해 전체 패키지 검사에 대한 필요성을 제거하고 앱을 게시하는 동안(또한 업데이트 시) 맬웨어 검사 시간을 크게 줄입니다. 따라서 자산 패키지를 사용하는 앱에 대한 게시가 더 빨라집니다. 이 게시의 이점을 얻으려면 Microsoft Store가 각 .appx 패키지 파일을 동시에 처리할 수 있도록 하는 [플랫 번들 앱 패키지](flat-bundles.md) 또한 사용해야 합니다. 
+자산 패키지를 만들 때 패키지를 실행하도록 할지 여부를 지정할 수 있습니다. 자산 패키지는 아키텍처와 독립적인 파일만 포함해야 하므로 일반적으로 .dll 또는 .exe 파일을 포함할 수 없으며, 따라서 자산 패키지의 경우 일반적으로 실행할 필요가 없습니다. 이러한 차이점의 중요성은 게시 프로세스 동안 모든 실행 패키지를 검사하여 맬웨어가 포함되어 있지 않은지 확인해야 하며 큰 패키지의 경우 이 검사 프로세스는 더 오래 걸립니다. 하지만 패키지가 실행할 수 없도록 지정된 경우 앱의 설치는 이 패키지에 포함된 파일을 실행할 수 없는지 확인합니다. 이를 통해 전체 패키지 검사에 대한 필요성을 제거하고 앱을 게시하는 동안(또한 업데이트 시) 맬웨어 검사 시간을 크게 줄입니다. 따라서 자산 패키지를 사용하는 앱에 대한 게시가 더 빨라집니다. Note이 게시의 이점을 얻으려면이 통해 각.appx 또는.msix 패키지 파일을 병렬로 처리할 스토어 해당 [플랫 번들 앱 패키지](flat-bundles.md) 를 사용 해야 합니다. 
 
 
 ### <a name="should-i-use-asset-packages"></a>자산 패키지를 사용해야 하나요?
@@ -54,6 +54,11 @@ ms.locfileid: "1818478"
 
 ```syntax 
 MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.appx
+
+...
+
+MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.msix
+
 ```
 여기에서 AppxManifest에서 참조되는 모든 파일(로고 파일)은 자산 패키지로 이동할 수 없습니다. 이러한 파일은 아키텍처 패키지에서 중복되어야 합니다. 자산 패키지는 resources.pri도 포함하지 않아야 합니다. MRT는 자산 패키지 파일에 액세스하는 데 사용할 수 없습니다. 자산 패키지 파일에 액세스하는 방법 및 자산 패키지를 사용하려면 NTFS 드라이브에 앱을 설치해야 하는 이유에 대해 자세히 알아보려면 [자산 패키지 및 패키지 접기를 사용하여 개발](Package-Folding.md)을 참조하세요.
 

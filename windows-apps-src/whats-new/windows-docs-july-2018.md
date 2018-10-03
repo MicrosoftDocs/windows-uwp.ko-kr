@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-title: 2018 년 7 월 Windows 문서의 새로운-UWP 앱 개발
+title: 2018 년 7 월 Windows 문서의 새로운 내용-UWP 앱 개발
 description: 새로운 기능, 동영상, 샘플 및 개발자 지침 2018 년 7 월에 대 한 Windows 10 개발자 설명서에 추가한 합니다.
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10 7 월
 ms.author: quradic
@@ -10,13 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266704"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018 년 7 월 Windows 개발자 문서의의 새로운 기능
+# <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018 년 7 월 Windows 개발자 문서의 새로운
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음과 같은 기능 개요, 개발자 지침, 동영상 및 샘플 내용이 7 월에 사용할 수 있습니다.
 
@@ -24,9 +24,9 @@ Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=
 
 ## <a name="features"></a>기능
 
-### <a name="progressive-web-apps-on-windows"></a>Windows의 점진적 웹 앱
+### <a name="progressive-web-apps-on-windows"></a>Windows에서 점진적 웹 앱
 
-[점진적 웹 앱 (Pwa)은](https://developer.microsoft.com/windows/pwa) 간단 하 게 지원 플랫폼 및 homescreen에서 시작 설치, 오프 라인 지원 및 푸시 등의 브라우저 엔진에서 네이티브 앱과 유사한 기능을 사용 하 여 [점진적으로 향상](https://wikipedia.org/wiki/Progressive_enhancement) 된 웹 앱 알림입니다. Microsoft Edge (EdgeHTML) 엔진을 사용 하 여 Windows 10 Pwa 즐길 실행의 추가 장점 [UWP 앱으로 브라우저 창을 코드와 개별적으로.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+[점진적 웹 앱 (Pwa)은](https://developer.microsoft.com/windows/pwa) 간단 하 게 지원 플랫폼 및 homescreen에서 시작 설치, 오프 라인 지원 및 푸시 등의 브라우저 엔진에서 네이티브 앱과 유사한 기능을 사용 하 여 [점진적으로 향상](https://wikipedia.org/wiki/Progressive_enhancement) 된 웹 앱 알림입니다. Microsoft Edge (EdgeHTML) 엔진을 사용 하 여 Windows 10에서 Pwa 즐길 실행의 추가 장점 [UWP 앱으로 브라우저 창을 코드와 개별적으로.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 
 ![중인 Pwa의 이미지](images/progressive-web-apps.jpg)
 
@@ -38,17 +38,17 @@ PWA 가이드를 살펴보세요.
 
 ### <a name="notepad"></a>메모장
 
-Windows 10 참가자 미리 보기 빌드 17713, [다양 한 새로운 기능을 사용 하 여 메모장이 업데이트](http://aka.ms/ant-man)에서 사용할 수 있습니다. 확대/축소, 찾기/바꾸기, 랩어라운드 및 Unix/Linux (LF) 및 Mac (CR) 줄의 끝에 대 한 지원을 [Windows 참가자](https://insider.windows.com/)에 게 제공 됩니다. 
+Windows 10 참가자 미리 보기 빌드 17713, [다양 한 새로운 기능으로 업데이트 되었습니다 메모장에서](http://aka.ms/ant-man)에서 사용할 수 있습니다. 확대/축소, 찾기/바꾸기, 랩어라운드 및 Unix/Linux (LF) 및 Mac (CR) 줄의 끝에 대 한 지원을 [Windows 참가자](https://insider.windows.com/)에 게 제공 됩니다. 
 
 ## <a name="developer-guidance"></a>개발자 지침
 
 ### <a name="design-landing-page"></a>디자인 방문 페이지
 
-확인 된 [업데이트 방문 페이지 디자인](https://developer.microsoft.com/windows/apps/design) UWP 디자인 영역과 흐름 디자인에 대 한 최신 추가 기능에 대 한 정보에 요약 개요 하세요.
+확인 된 [업데이트 방문 페이지 디자인](https://developer.microsoft.com/windows/apps/design) UWP 디자인 영역 및 Fluent 디자인을 최신 추가 기능에 대 한 정보에 요약 개요 하세요.
 
 ### <a name="design-toolkits"></a>디자인 도구 키트
 
-Adobe XD 및 Adobe Illustrator 도구 키트는 새 기능으로 업데이트 되었습니다. 이러한 디자인 도구 키트는 UWP 앱 디자인을 위한 레이아웃 템플릿을 제공 합니다. [여기서 체크 합니다.](../design/downloads/index.md)
+Adobe XD 및 Adobe Illustrator 도구 키트 새 기능으로 업데이트 되었습니다. 이러한 디자인 도구 키트는 UWP 앱 디자인을 위한 레이아웃 템플릿을 제공 합니다. [여기서 체크 합니다.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
@@ -56,7 +56,7 @@ Adobe XD 및 Adobe Illustrator 도구 키트는 새 기능으로 업데이트 �
 )에 추가 했습니다.
 
 * [WebVR 란 무엇 인가요?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
-) WebVR 란, 이유를 사용할지 및 개발을 시작 하는 방법을 설명 합니다.
+) WebVR 란, 이유를 사용할지 및 개발을 시작 하는 방법에 설명 합니다.
 
 * [점진적 웹 앱에 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): WebVR 점진적 웹 앱 (PWA)를 추가 하는 방법을 알아봅니다.
 
@@ -80,15 +80,15 @@ Adobe XD 및 Adobe Illustrator 도구 키트는 새 기능으로 업데이트 �
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>프로젝트 퍼스 낼 리 티 채팅을 사용 하 여 사용자 물어보세요 향상
 
-프로젝트 퍼스 낼 리 티 채팅 채팅 bot를 사용자 지정 가능한 가상 사용자를 추가할 수 있습니다. Microsoft 물어보세요 프레임 워크 SDK를 통합 하 여 고객을 상호 작용 하는 더 대화식 방법에 대 한 작은 작용 기능을 추가할 수 있습니다. [대화형 데모를 사용해](http://aka.ms/PersonalityChat) 실제 경험에 대 한 다음을 구현 하는 방법을 알아보려면 [비디오를 시청 하세요](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) .
+프로젝트 퍼스 낼 리 티 채팅 채팅 bot를 사용자 지정 가능한 가상 사용자를 추가할 수 있습니다. Microsoft 물어보세요 프레임 워크 SDK를 통합 하 여 고객을 상호 작용 하는 더 대화식 방법에 대 한 작은, 기능을 추가할 수 있습니다. [대화형 데모를 사용해](http://aka.ms/PersonalityChat) 실제 경험에 대 한 다음을 구현 하는 방법을 [비디오를 시청 하세요](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) .
 
 ### <a name="one-dev-question"></a>개발자 질문
 
-개발자 질문 하나 동영상 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 설명합니다. 최신 질문을 검토 하는 다음과 같습니다.
+개발자 질문 동영상 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 다룹니다. 최신 질문을 검토 하는 다음과 같습니다.
 
 Raymond Chen:
 
-* [Microsoft는 왜 적용 했습니까?](https://www.youtube.com/watch?v=oL8ymamkEMU&feature=youtu.be)
+* [Microsoft에는 왜 적용 했습니까?](https://www.youtube.com/watch?v=oL8ymamkEMU&feature=youtu.be)
 
 Larry Osterman:
 

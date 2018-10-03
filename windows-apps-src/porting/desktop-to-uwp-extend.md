@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204739"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4258394"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
@@ -24,7 +24,7 @@ ms.locfileid: "4204739"
 많은 경우 데스크톱 응용 프로그램에서 직접 UWP API를 호출할 수 있기 때문에 이 가이드를 검토하기 전에 [Windows 10 향상](desktop-to-uwp-enhance.md)을 참조하세요.
 
 >[!NOTE]
->이 가이드는 데스크톱 브리지를 사용하여 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들었다고 가정합니다. 아직 완료하지 않았다면 [데스크톱 브리지](desktop-to-uwp-root.md)를 참조하세요.
+>이 가이드는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만든 한 가정 합니다. 이 아직 완료 하지 않았다면, [데스크톱 응용 프로그램 패키지를](desktop-to-uwp-root.md)참조 하세요.
 
 준비가 되었으면 시작하겠습니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "4204739"
 
 ![새 프로젝트 시작](images/desktop-to-uwp/extend-start-project.png)
 
-솔루션에 패키징 프로젝트가 없는 경우 [Visual Studio를 사용하여 앱 패키징](desktop-to-uwp-packaging-dot-net.md)을 참조하세요.
+솔루션에 패키징 프로젝트 없으면 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)를 참조 하세요.
 
 ### <a name="add-a-uwp-project"></a>UWP 프로젝트 추가
 
@@ -83,6 +83,9 @@ UWP 프로젝트와 런타임 구성 요소를 사용하여 할 수 있는 몇 �
 이 이미지는 지도 컨트롤이 포함된 XAML 기반 최신 UI를 여는 Windows Forms 응용 프로그램을 보여 줍니다.
 
 ![적응형 디자인](images/desktop-to-uwp/extend-xaml-ui.png)
+
+>[!NOTE]
+>이 예제에서는 솔루션에 UWP 프로젝트를 추가 하 여 XAML UI를 보여 줍니다. 데스크톱 응용 프로그램에서 XAML Ui 표시 안정적인 지원 되는 접근 방식입니다. 이 방법을 사용 하는 대신 XAML 섬을 사용 하 여 데스크톱 응용 프로그램에 직접 UWP XAML 컨트롤을 추가 하는 것입니다. XAML 제도 개발자 미리 보기도 현재 사용할 수 있습니다. 하지만 직접 사용해 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 할 수 있도록 하 고 Windows 릴리스 안정화 나중에 계속 됩니다. XAML 제도 대 한 자세한 내용은 참조 [데스크톱 응용 프로그램의 UWP 컨트롤](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
@@ -245,7 +248,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ## <a name="provide-services-to-other-apps"></a>다른 앱에 서비스 제공
 
-다른 앱이 사용할 수 있는 서비스를 추가합니다. 예를 들어, 다른 앱에 앱 이면의 데이터베이스에 제어된 액세스를 제공하는 서비스를 추가할 수 있습니다. 백그라운드 작업을 구현, 앱은 데스크톱 앱이 실행되지 않는 경우에도 서비스에 도달할 수 있습니다.
+다른 앱이 사용할 수 있는 서비스를 추가합니다. 예를 들어, 다른 앱에 앱 이면의 데이터베이스에 제어된 액세스를 제공하는 서비스를 추가할 수 있습니다. 백그라운드 작업을 구현 하 여 데스크톱 응용 프로그램 실행 하지 않는 경우에 앱 서비스에 도달할 수 있습니다.
 
 이에 대한 샘플입니다.
 
@@ -330,7 +333,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 ### <a name="test-the-app-service"></a>앱 서비스 테스트
 
-다른 앱에서 호출하여 서비스를 테스트합니다. 이 코드는 Windows 양식 또는 다른 UWP 앱 등의 데스크톱 응용 프로그램일 수 있습니다.
+다른 앱에서 호출하여 서비스를 테스트합니다. 이 코드는 Windows forms 응용 프로그램 또는 다른 UWP 앱 등의 데스크톱 응용 프로그램이 될 수 있습니다.
 
 > [!NOTE]
 > 이 코드는 ``AppServiceConnection`` 클래스의 ``PackageFamilyName`` 속성을 올바르게 설정하는 경우에만 작동합니다. UWP 프로젝트의 컨텍스트에서 ``Windows.ApplicationModel.Package.Current.Id.FamilyName``을 호출하여 이 이름을 얻을 수 있습니다. [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)을 참조하세요.
@@ -376,7 +379,7 @@ private async void button_Click(object sender, RoutedEventArgs e)
 
 데스크톱 응용 프로그램을 공유 대상으로 만들면 사용자가 공유를 지원하는 다른 앱의 사진 등 데이터를 쉽게 공유할 수 있습니다.
 
-예를 들어, 사용자가 여러분의 앱을 선택해 Microsoft Edge, 사진 앱의 사진을 공유할 수 있습니다. 다음은 이 기능을 가지고 있는 WPF 샘플 앱입니다.
+예를 들어 사용자가 Microsoft Edge, 사진 앱에서에서 사진을 공유 하는 응용 프로그램을 선택할 수 있습니다. 해당 기능이 있는 WPF 샘플 응용 프로그램 다음과 같습니다.
 
 ![공유 대상](images/desktop-to-uwp/share-target.png)
 
@@ -447,7 +450,7 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 
 앱이 일시 중단된 경우에도 코드를 실행하는 백그라운드 작업을 추가합니다. 백그라운드 작업은 사용자의 상호 작용이 필요하지 않은 작은 작업에 적합합니다. 예를 들어, 메일을 다운로드하거나, 들어오는 채팅 메시지에 대한 알림을 표시하거나, 시스템 조건의 변경에 대응하는 작업입니다.
 
-백그라운드 작업을 등록하는 WPF 샘플 앱은 다음과 같습니다.
+백그라운드 작업을 등록 하는 WPF 샘플 응용 프로그램 다음과 같습니다.
 
 ![백그라운드 작업](images/desktop-to-uwp/sample-background-task.png)
 
