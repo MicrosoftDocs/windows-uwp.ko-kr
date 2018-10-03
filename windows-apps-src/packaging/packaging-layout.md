@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ed24cb1ed0c4b4c15e6c96cf029c8f3841d8aac
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 3f8cbb3989b58b726336b4bd757902bd9ea3f8c0
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262460"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>패키징 레이아웃으로 패키지 만들기  
 
@@ -55,7 +55,7 @@ ms.locfileid: "1818494"
 이 예를 살펴 작동 방식을 파악해 보겠습니다.
 
 ### <a name="packagefamily"></a>PackageFamily
-이 패키징 레이아웃은 x64 아키텍처 패키지와 "미디어" 자산 패키지로 평평한 단일 .appxbundle 파일을 만듭니다. 
+이 패키징 레이아웃에서 x64를 사용 하 여 단일 플랫 앱 번들 파일을 만듭니다 아키텍처 패키지와 "미디어" 자산 패키지로 합니다. 
 
 **PackageFamily** 요소는 앱 번들을 정의하는 데 사용됩니다. 번들에 대한 **AppxManifest**를 제공하기 위해 **ManifestPath** 특성을 사용해야 하며 **AppxManifest**는 번들의 아키텍처 패키지에 대한 **AppxManifest**애 해당해야 합니다. **ID** 특성도 제공해야 합니다. 이는 패키지를 생성하는 동안 MakeAppx.exe에 사용되기 때문에 원하는 경우 이 패키지만 만들 수 있으며 결과 패키지의 파일 이름이 됩니다. **FlatBundle** 특성은 만들려는 유형의 번들을 설명하는 데 사용되면 플랫 번들의 경우 **true**(여기에서 자세한 내용을 알아볼 수 있음), 클래식 번들의 경우 **false**입니다. **ResourceManager** 특성은 이 번들 내 리소스 패키지가 파일에 액세스하기 위해 MRT를 사용할지 여부를 지정하는 데 사용됩니다. 기본적으로 **true**지만 Windows 10 버전을 1803에서는 아직 준비가 되지 않았으므로 이 특성은 **false**로 설정해야 합니다.
 
@@ -147,7 +147,7 @@ ms.locfileid: "1818494"
 
 선택적 패키지 각각에는 고유한 패키지 패밀리 이름이 있으며 **PackageFamily** 요소로 정의해야 합니다. **선택적** 특성은 **true**로 지정해야 합니다. **RelatedSet** 특성은 선택적 패키지가 관련 집합 내에 있는지 여부, 즉 선택적 패키지가 주 패키지 내에서 업데이트되어야 하는지 여부를 지정하는 데 사용됩니다(기본적으로 true입니다).
 
-**PrebuiltPackage** 요소는 빌드할 .appxbundle 파일에서 포함되거나 참조될 패키징 레이아웃에 정의되어 있지 않은 패키지를 추가하기 위해 사용됩니다. 이 경우 다른 DLC 선택적 패키지가 여기에 포함되어 주 .appxbundle 파일이 이를 참조하고 관련 집합의 일부로 가질 수 있습니다.
+**PrebuiltPackage** 요소를 사용 하면 포함 되거나 빌드되는 앱 번들 파일에서 참조 될 패키징 레이아웃에 정의 되지 않은 패키지를 추가 합니다. 이 경우 다른 DLC 선택적 패키지가 여기에 포함 되어 주 앱 번들 파일을 참조 하 고 관련된 집합의 일부로 가질 수 있도록 합니다.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>패키징 레이아웃과 MakeAppx.exe로 앱 패키지 빌드
@@ -163,7 +163,7 @@ MakeAppx.exe build /f PackagingLayout.xml /op OutputPackages\
 MakeAppx.exe build /f PackagingLayout.xml /id "x64" /ip PreviousVersion\ /op OutputPackages\ /iv
 ```
 
-`/id` 플래그를 사용하여 레이아웃의 **ID** 특성에 해당하는 패키징 레이아웃에서 빌드할 패키지를 선택할 수 있습니다. 이 경우 `/ip`는 패키지의 이전 버전의 위치를 나타내는 데 사용됩니다. .appxbundle 파일이 여전히 이전 버전의 **미디어** 패키지를 참조해야 하기 때문에 이전 버전을 제공해야 합니다. `/iv` 플래그는 빌드되는 패키지의 버전을 자동으로 증분하는 데 사용됩니다(**AppxManifest**에서 버전을 변경하는 대신). 또한 `/pv` 및 `/bv` 스위치는 직접 패키지 버전(만들 모든 패키지에 대한)과 번들 버전(만들 모든 번들에 대한)을 제공하는 데 사용할 수 있습니다.
+`/id` 플래그를 사용하여 레이아웃의 **ID** 특성에 해당하는 패키징 레이아웃에서 빌드할 패키지를 선택할 수 있습니다. 이 경우 `/ip`는 패키지의 이전 버전의 위치를 나타내는 데 사용됩니다. 앱 번들 파일 여전히 **미디어** 패키지의 이전 버전을 참조 해야 하기 때문에 이전 버전을 제공 해야 합니다. `/iv` 플래그는 빌드되는 패키지의 버전을 자동으로 증분하는 데 사용됩니다(**AppxManifest**에서 버전을 변경하는 대신). 또한 `/pv` 및 `/bv` 스위치는 직접 패키지 버전(만들 모든 패키지에 대한)과 번들 버전(만들 모든 번들에 대한)을 제공하는 데 사용할 수 있습니다.
 고급 패키징 레이아웃 예를 사용하여 **테마** 선택적 번들 및 이를 참조하는 **Themes.main**만 빌드하려는 경우 이 명령을 사용해야 합니다.
 
 ``` example 

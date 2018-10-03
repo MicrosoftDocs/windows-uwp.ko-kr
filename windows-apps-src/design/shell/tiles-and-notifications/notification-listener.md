@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212541"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264138"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 
@@ -281,9 +281,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>추가/해제된 알림의 포그라운드 이벤트
 
 > [!IMPORTANT] 
-> 알려진 문제: 포그라운드 이벤트가 CPU 루프에서 최신 버전의 Windows 하면 및 이전에 그 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를 것이 해결 됩니다.
+> 알려진 문제: 포그라운드 이벤트가 하면 CPU 루프에 최신 버전의 Windows 및 이전에 하기 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를에서는이 해결 됩니다.
 
-포그라운드 이벤트를 사용 하는 대신 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림을 받도록 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
+포그라운드 이벤트를 사용 하는 대신 백그라운드 작업을 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림의 받을 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)

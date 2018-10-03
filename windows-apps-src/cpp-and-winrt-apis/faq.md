@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 9316a29a50970bdaa288a4744f3aab7d873cbe4e
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: eb4b7b78bf3ef0a561d102804a245c59b6519796
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206921"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264358"
 ---
 # <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 질문과 대답
 C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다.
@@ -22,9 +22,27 @@ C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가
 > [!NOTE]
 > 표시된 오류 메시지에 대한 질문이 있는 경우 [C++/WinRT 문제 해결](troubleshooting.md) 항목도 참조하세요.
 
-## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트 컴파일되지 이유 Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 17134 버전
+## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>어떻게 대상을 수행 내 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트?
 
-Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0(windows (Windows 10, 버전 1803) 한 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류가 있는 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 및 기타 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 프로젝트 속성 집합 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** > **언어** >  **추가 옵션****명령줄** 다음 삭제).
+일반적으로 사용 가능한 최신 버전 Windows SDK의 10.0.17763.0 (Windows 10, 버전 1809)입니다. 프로젝트 최소 컴파일러 및 링커 문제 발생 가능성이 있는 대상 변경 하는 방법은 가장 손이 많이 이기도 합니다. 해당 메서드 (선택한 Windows SDK 버전을 대상으로) 하는 새 프로젝트를 만들고 다음 파일을 복사 새 프로젝트에서 기존의 포함 됩니다. 기존의의 섹션 됩니다 `.vcxproj` 및 `.vcxproj.filters` 수 있는 파일 복사 넘는 Visual Studio에서 파일을 추가 하면 됩니다.
+
+그러나는 Visual Studio에서 프로젝트를 대상을 다른 두 가지가 있습니다.
+
+- 프로젝트 속성 **일반**로 이동 \> **Windows SDK 버전**선택 **모든 구성** 및 **모든 플랫폼**입니다. 대상 버전을 **Windows SDK 버전** 을 설정 합니다.
+- **솔루션 탐색기**프로젝트 노드를 마우스 오른쪽 단추로 클릭 **대상을 프로젝트**를 클릭를 대상으로 하려는 버전 선택한 후 **확인**을 클릭 합니다.
+
+이러한 두 가지 방법 중 하나를 사용 하 여 후 모든 컴파일러 또는 링커 오류가 발생할 경우 솔루션을 정리를 시도할 수 있습니다 (**빌드** > **솔루션 정리** 모든 임시 폴더 및 파일을 수동으로 삭제 및/또는) 다시 작성 하기 전에 합니다.
+
+C + + 컴파일러를 생성 하는 경우 "*C2039 오류: 'IUnknown':의 구성원이 아닙니다 ' \'global 네임 스페이스 '*"을 추가한 다음 `#include <unknwn.h>` 의 맨 위에 `pch.h` 파일.
+
+추가 해야 `#include <hstring.h>` 그러고 합니다.
+
+C + + 링커를 생성 하는 경우 "*오류 LNK2019: 외부 기호가 _WINRT_CanUnloadNow@0 함수에서 참조 _VSDesignerCanUnloadNow@0 *"를 추가 하 여 해결할 수 있습니다 `#define _VSDESIGNER_DONT_LOAD_AS_DLL` 를 `pch.h` 파일.
+
+
+## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트 컴파일되지 하는 이유 Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 17134 버전
+
+Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0(windows (Windows 10, 버전 1803) 다음 새로 생성 된 C + + WinRT 프로젝트를 컴파일하는 오류와 실패할 수 "C3861*오류: 'from_abi': 식별자 하지 발견*", *base.h*시작 하는 다른 오류. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 C/C++** > **언어** >  **추가 옵션****명령줄** 다음 삭제).
 
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsixhttpsakamscppwinrtvsix"></a>[C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)의 요구 사항은 무엇입니까?
 [VSIX](https://aka.ms/cppwinrt/vsix)는 최소 Windows SDK 대상 버전인 10.0.17134.0(Windows 10, 버전 1803)이 적용됩니다. Visual Studio 2017(버전 15.6 이상. 15.7 이상 권장) 또한 필요합니다. `.vcxproj` 파일에서 `<PropertyGroup Label="Globals">`이 `<CppWinRTEnabled>true</CppWinRTEnabled>`로 설정되어 있는지 확인하여 VSIX를 사용하는 프로젝트를 식별할 수 있습니다. 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
@@ -89,11 +107,11 @@ C++/WinRT가 C++17 표준의 기능을 사용하기 때문에 해당 지원을 �
 
 Visual Studio는 C++/WinRT를 지원하고 추천하는 개발 도구입니다. [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
 
-## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>읽기 전용 속성에 대해 생성 된 구현을 함수 없는 이유는 `const` 한정자?
+## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>읽기 전용 속성에 대해 생성 된 구현 함수 없는 이유는 `const` 한정자?
 
-이미 예상 하시 [MIDL 3.0](/uwp/midl-3/)에서 읽기 전용 속성을 선언 하면 합니다 `cppwinrt.exe` 구현 함수를 생성할 수 있는 도구 `const`-자격을 갖춘 (const 함수 const를 *이* 포인터를 처리 하는 데 사용).
+이미 예상 하시 [MIDL](/uwp/midl-3/)3.0에서 읽기 전용 속성을 선언 하면 합니다 `cppwinrt.exe` 구현 함수를 생성할 수 있는 도구 `const`-자격을 갖춘 (const 함수 const를 *이* 포인터를 처리 하는 데 사용).
 
-가능한 경우 상수를 사용 하 여 확실히 권장 하지만 `cppwinrt.exe` 도구 자체 어떤 구현에 대 한 기능 지역과 수 const 및 않았을 하는 이유를 시도 하지 않습니다. 이 예제와 같이 const 구현 기능 확인을 선택할 수 있습니다.
+가능한 경우 const를 사용 하 여 확실히 권장 하지만 `cppwinrt.exe` 도구 자체는 구현에 대 한 함수 지역과 const 고 하지 수 있는 이유 하려고 하지 않습니다. 이 예제와 같이 const 구현 기능 확인을 선택할 수 있습니다.
 
 ```cppwinrt
 struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation::IStringable>
@@ -105,9 +123,9 @@ struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation
 };
 ```
 
-제거할 수 있습니다 `const` **ToString** 에서 한정자 해야 결정 구현에서 일부 개체 상태를 변경 해야 합니다. 하지만 각각에 멤버의 두 함수 const 또는 비 const 만듭니다. 즉, 하지 오버 로드를 구현 하는 함수에서 `const`.
+제거할 수 있습니다 `const` **ToString** 한정자 사용 해야 할 결정 구현에서 일부 개체 상태를 변경 해야 합니다. 하지만 각각에 멤버의 두 함수 const 또는 비 const 만듭니다. 즉, 하지 오버 로드를 구현 하는 함수에서 `const`.
 
-다른 다른 구현 기능 외에도 배치 const 위치에 그림이 Windows 런타임 함수 프로젝션을 합니다. 이 코드를 것이 좋습니다.
+다른 다른 구현 함수를 외 배치 const 위치에 그림은 Windows 런타임 함수 프로젝션을 합니다. 이 코드를 것이 좋습니다.
 
 ```cppwinrt
 int main()
@@ -117,7 +135,7 @@ int main()
 }
 ```
 
-**ToString** 위의 호출, Visual Studio에서 **선언 이동** 명령을 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + WinRT 다음과 같이 표시 됩니다.
+**ToString** 위의 호출, Visual Studio에서 **선언 이동** 명령 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + WinRT 다음과 같이 표시 됩니다.
 
 ```
 winrt::hstring ToString() const;
@@ -125,11 +143,11 @@ winrt::hstring ToString() const;
 
 프로젝션 기능은 자격을 얻으려면 구현의 선택 하는 방법에 관계 없이 const 합니다. 내부적으로 프로젝션 응용 프로그램 이진 인터페이스 (ABI)는 시간과 COM 인터페이스 포인터를 통해 호출을 호출합니다. 프로젝션 된 **ToString** 상호 작용 하는 유일한 상태는 해당 COM 인터페이스 포인터; 있고 확실히 함수 const 이므로 해당 포인터를 수정할 필요가 없습니다. 이렇게 하면은 **IStringable**에 대 한 참조를 통해 호출할 **IStringable** 참조에 대 한 변경 되지 않습니다 하 고 const 있어도 **ToString** 을 호출할 수 있음을 보장 보증 있습니다.
 
-이해 하는 이러한 예제 `const` 구현 세부 C + + WinRT 프로젝션 및 구현 합니다. 이러한 구성의 편의 위한 코드 관리 합니다. 문제는 `const` 에 COM (멤버 함수)에 대 한 Windows 런타임 ABI 합니다.
+이해 하는 이러한 예제 `const` 구현 세부 C + + WinRT 프로젝션 및 구현 합니다. 사용자에 대 한 코드 관리를 구성 합니다. 문제는 `const` 에 COM (멤버 함수)에 대 한 Windows 런타임 ABI 합니다.
 
 ## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>C +에 대 한 코드 크기 감소에 대 한 권장 사항이 있습니까 + WinRT 바이너리?
 
-Windows 런타임 개체를 사용 하 여 생성 하는 데 필요한 것 보다 더 많은 이진 코드 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래 표시 된 코딩 패턴 하면 안 됩니다.
+Windows 런타임 개체 작업을 생성 하는 데 필요한 것 보다 더 많은 이진 코드 하 여 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래 표시 된 코딩 패턴 하면 안 됩니다.
 
 ```cppwinrt
 anobject.b().c().d();
@@ -137,7 +155,7 @@ anobject.b().c().e();
 anobject.b().c().f();
 ```
 
-Windows 런타임 환경에서 컴파일러는의 값을 캐시할 수 `c()` 또는 전화를 간접 참조를 통해 호출 되는 각 메서드에 대 한 인터페이스 ('. '). 사용자가 개입 하지 않는 한는 더 많은 가상 호출 및 참조 카운트 오버 헤드가 발생 합니다. 위의 패턴 엄격 하 게 필요한 배의 코드를 쉽게 생성할 수 있습니다. 대신, 수 어디서 나 아래 표시 된 패턴을 선호 합니다. 훨씬 적은 코드를 생성 및 런타임 성능이 크게도 향상 시킬 수 있습니다.
+Windows 런타임 환경에서 컴파일러는의 값을 캐시할 수 `c()` 또는 전화를 간접 참조를 통해 호출 되는 각 메서드에 대 한 인터페이스 ('. '). 사용자가 개입 하지 않는 한는 더 많은 가상 호출 및 참조 카운트 오버 헤드가 발생 합니다. 위의 패턴 엄격 하 게 필요한 배의 코드를 쉽게 생성할 수 있습니다. 대신, 수 어디서 나 아래 표시 된 패턴을 선호 합니다. 훨씬 더 적은 코드를 생성 및 런타임 성능이 크게도 향상 시킬 수 있습니다.
 
 ```cppwinrt
 auto a{ anobject.b().c() };
@@ -146,7 +164,7 @@ a.e();
 a.f();
 ```
 
-위에 표시 된 권장된 패턴을 적용할 뿐만 아니라 C + + WinRT 하지만 모든 Windows 런타임 언어 프로젝션입니다.
+위에 표시 된 권장된 패턴 적용할 뿐 아니라 C + + WinRT 하지만 모든 Windows 런타임 언어 프로젝션입니다.
 
 > [!NOTE]
 > 이 항목에서 질문에 대한 답변을 찾지 못한 경우 [Stack Overflow에서 `c++-winrt` 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)를 사용하여 도움말을 찾을 수 있습니다.

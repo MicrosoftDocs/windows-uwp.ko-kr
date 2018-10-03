@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 링크, windows 스토어 프로토콜, 앱 연결, 앱 링크
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206773"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262080"
 ---
 # <a name="link-to-your-app"></a>앱에 대한 링크
 
@@ -41,7 +41,7 @@ Microsoft Store에 앱이 고객에 게 알려주는 사용자 지정 배지를 
 
 ## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Microsoft Store에서 앱에 직접 연결
 
-Microsoft Store를 시작 하 고 사용 하 여 브라우저를 열지 않고도 앱의 목록 페이지로 직접 이동 하는 링크를 만들 수는 **ms-windows-스토어:** URI 스키마 합니다.
+Microsoft Store를 시작 하 고 사용 하 여 브라우저를 열지 않고도 앱의 목록 페이지로 직접 이동 하는 링크를 만들 수는 **ms-windows-저장소:** URI 스키마 합니다.
 
 이러한 링크는 사용자가 Windows 장치에 있으며 스토어의 목록 페이지에 직접 도달하고자 하는 경우에 유용합니다. 예를 들어, 브라우저에서 사용자 에이전트 문자열을 확인하여 사용자의 운영 체제가 스토어를 지원한다는 것을 확인한 후나 UWP 앱을 통해 이미 통신을 하고 있을 때 이 링크를 사용하고 싶을 수 있습니다.
 

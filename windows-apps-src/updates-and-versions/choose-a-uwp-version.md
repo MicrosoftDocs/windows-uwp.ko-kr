@@ -3,19 +3,19 @@ author: QuinnRadich
 title: UWP 버전 선택
 description: Microsoft Visual Studio에서 UWP 앱을 작성하는 경우 대상 버전을 선택할 수 있습니다. 다른 UWP 버전 간 차이점과 새 프로젝트 및 기존 프로젝트에서 선택을 구성하는 방법을 알아봅니다.
 ms.author: quradic
-ms.date: 4/10/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, 버전, 빌드, 버전, Windows, 선택, 업데이트, 업데이트
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
-ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208969"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266288"
 ---
 # <a name="choose-a-uwp-version"></a>UWP 버전 선택
 
@@ -28,14 +28,15 @@ ms.locfileid: "4208969"
 
 | 버전 | 설명 |
 | --- | --- |
-| 빌드 17134(버전 1803) | 2018년 4월에 출시된 최신 버전의 Windows 10입니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows 기계 학습:** Windows 기계 학습은 미리 숙련된 기계 학습 모델을 Windows 10 장치에서 평가하는 앱을 빌드할 수 있습니다. 플랫폼에 대한 자세한 내용은 [Windows 기계 학습](https://docs.microsoft.com/windows/ai/)을 참조하세요. </br> \* **흐름 디자인:** 트리 보기, 당겨서 새로 고침 및 탐색 보기와 같은 새로운 기능이 Windows 10에 추가되었습니다. [흐름 디자인 개요](../design/fluent-design-system/index.md)에서 최신 정보를 참조하세요. </br> \* **콘솔 UWP 앱:** 이제 DOS 또는 PowerShell 콘솔 창 등의 콘솔 창에서 실행되는 C++ /WinRT 또는 /CX UWP 콘솔 앱을 작성할 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-17134.md)에 있는 세부 정보 페이지를 방문하세요.
+| 빌드 17763 (1809 버전) | 2018 년 10 월에에서 출시 되는 Windows 10의 최신 버전입니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows Machine Learning:** Windows 컴퓨터 학습에 이제 공식적으로 시작, 최첨단 기계 학습 모델에 대 한 빠른 평가 지원 등의 기능을 제공 합니다. 플랫폼에 대한 자세한 내용은 [Windows 기계 학습](https://docs.microsoft.com/windows/ai/)을 참조하세요. </br> \* **흐름 디자인:** 메뉴 모음, 명령 모음 플라이 아웃 및 XAML 속성 애니메이션 등의 새로운 기능 Windows 10에 추가 되었습니다. [흐름 디자인 개요](../design/fluent-design-system/index.md)에서 최신 정보를 참조하세요. </br> 이러한 사항과 Windows의이 릴리스에 추가 된 다른 많은 기능에 대 한 내용은 방문 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 더 세부 정보 페이지에서 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-17763.md)
+| 빌드 17134(버전 1803) | 이 버전의 Windows 10 2018 년 4 월에에서 출시 되었습니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **흐름 디자인:** 트리 보기, 당겨서 새로 고침 및 탐색 보기와 같은 새로운 기능이 Windows 10에 추가되었습니다. [흐름 디자인 개요](../design/fluent-design-system/index.md)에서 최신 정보를 참조하세요. </br> \* **콘솔 UWP 앱:** 이제 DOS 또는 PowerShell 콘솔 창 등의 콘솔 창에서 실행되는 C++ /WinRT 또는 /CX UWP 콘솔 앱을 작성할 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-17134.md)에 있는 세부 정보 페이지를 방문하세요.
 | 빌드 16299(Fall Creators Update, 버전 1709) | 이 Windows 10 버전은 2017년 10월에 출시되었습니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **.NET 표준 2.0:** .NET API 수를 크게 늘리고 즐겨 찾는 NuGet 패키지 및 타사 라이브러리를 .NET 표준에 통합할 수 있습니다. [여기](https://docs.microsoft.com/dotnet/standard/net-standard)에서 세부 정보를 확인하고 설명서를 살펴보세요. 이러한 새로운 API에 액세스하려면 **최소 버전**을 빌드 16299으로 설정해야 합니다. </br> \* **흐름 디자인:** 조명, 깊이, 관점 및 동작을 사용하여 앱을 향상시키고 사용자가 중요한 UI 요소에 초점을 맞출 수 있도록 도와줍니다. </br> \* **조건부 XAML:** 런타임 시 API의 존재 여부에 따라 속성을 손쉽게 설정하고 개체를 인스턴스화하여 장치 및 버전에서 앱이 원활하게 실행될 수 있도록 합니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-16299.md)에 있는 세부 정보 페이지를 방문하세요.
 | 빌드 15063(크리에이터 업데이트, 버전 1703) | 이 Windows 10 버전은 2017년 3월에 출시되었습니다. **이 Windows 버전을 대상으로 지정하려면 _반드시_ Visual Studio 2017을 사용해야 합니다**. 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다.  </br> \* **잉크 분석:** 이제 Windows Ink는 잉크 스트로크를 쓰기 또는 그리기 스트로크로 분류하고 텍스트, 모양 및 기본 레이아웃 구조를 인식할 수 있습니다. </br> \* **Windows.Ui.Composition API:** 앱에서 간단하게 애니메이션을 결합하고 적용할 수 있습니다. </br> \* **라이브 편집:** 앱이 실행 중인 XAML을 편집하고 변경 내용이 적용되는 것을 실시간으로 볼 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-15063.md)에 있는 세부 정보 페이지를 방문하세요.  |
 | 빌드 14393(1주년 업데이트, 버전 1607) | 이 Windows 10 버전은 2016년 7월에 출시되었습니다. 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows Ink:** 새 InkCanvas 및 InkToolbar 컨트롤입니다. </br> \* **Cortana API:** 새 Cortana 작업을 사용하여 Cortana 지원과 앱의 특정 기능을 통합합니다. </br> \* **Windows Hello:** 이제 Microsoft Edge에서 Windows Hello를 지원하여 웹 개발자가 생체 인식 인증에 액세스할 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-14393.md)에 있는 세부 정보 페이지를 방문하세요.  |
 | 빌드 10586(11월 업데이트, 버전 1511) | Windows 10의 이 버전은 2015년 11월에 출시되었습니다. 주요 기능으로 Microsoft Edge의 비디오 통신을 위한 ORTC(개체 실시간 통신) API와 앱에서 Windows Hello 얼굴 인증을 사용할 수 있도록 해주는 공급자 API가 있습니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-build-10586.md) |
 | 빌드 10240(Windows 10, 버전 1507) | 이 버전은 2015년 7월에 발표된 Windows10 초기 릴리스 버전입니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-build-10240.md) |
 
-새 개발자와 항상 가용 코드를 작성 하는 개발자 (17134) Windows의 최신 빌드를 사용 하는 것이 좋습니다. 엔터프라이즈 앱을 작성하는 개발자는 이전 **최소 버전**을 지원하는 것을 고려해야 합니다.
+새 개발자와 항상 가용 코드를 작성 하는 개발자 (17763) Windows의 최신 빌드를 사용 하는 것이 좋습니다. 엔터프라이즈 앱을 작성하는 개발자는 이전 **최소 버전**을 지원하는 것을 고려해야 합니다.
 
 ## <a name="whats-different-in-each-uwp-version"></a>각 UWP 버전의 차이점은 무엇인가요?
 
@@ -47,9 +48,9 @@ UWP의 새 API 및 변경된 API는 Windows 10의 모든 후속 버전에서 사
 
 UWP **대상 버전** 또는 프로젝트의 **최소 버전** 관계 없이 사용할 수 있는.NET Api의 제한 된 하위 집합을 지원 합니다. [이 페이지는 사용 가능한 형식에 대 한 자세한 정보를 제공](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx)합니다.
 
-재사용 가능한 플랫폼 간 라이브러리를 만들려는 경우.NET Standard는 UWP에서 지원 됩니다. [.NET Standard 설명서](https://docs.microsoft.com/dotnet/standard/net-standard) 는.NET Standard는 지원 UWP 버전에서 정보를 제공 합니다.
+재사용 가능한 플랫폼 간 라이브러리를 만들려는 경우.NET Standard는 UWP에서 지원 됩니다. [.NET 표준 설명서](https://docs.microsoft.com/dotnet/standard/net-standard) 는.NET Standard는 지원 UWP 버전에서 정보를 제공 합니다.
 
-데스크톱 앱을 개발 하는 경우 대신 [.NET Framework 버전 및 종속성](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) 대 한 내용은.NET framework 가용성에 대 한 자세한 정보
+[데스크톱 앱을 개발 하는 경우 대신.NET Framework 버전 및](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) 참조 종속성에 대 한 자세한 내용은.NET framework 가용성 합니다.
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>앱에 사용할 버전 선택
 

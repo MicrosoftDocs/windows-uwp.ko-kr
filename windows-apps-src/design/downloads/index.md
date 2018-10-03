@@ -10,17 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
-ms.openlocfilehash: 259b171ea490272241fcef1170e2413cb40d7330
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 88a07db357125d3f9cb35a5e133e9b0add350069
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259982"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  
 
-디자인 및 UI 관련 다운로드가 Fluent 디자인/UWP 앱에 대 한 합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
+디자인 및 Fluent 디자인/UWP 앱에 대 한 UI 관련 다운로드 합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
 
 
 ## <a name="design-toolkits"></a>디자인 도구 키트
@@ -29,32 +29,37 @@ ms.locfileid: "4210453"
 
 :::row:::
     :::column:::
-        ![영웅 이미지](images/adobe-xd.png) <b>Adobe XD 도구 키트</b><br>
-        v1806, 2018 년 6 월<br>
-        <a href="https://aka.ms/adobexdtoolkit">다운로드</a>
+        ![hero image](images/adobe-xd.png)
+        <b>Adobe XD toolkit</b><br>
+        v1806, June 2018<br>
+        <a href="https://aka.ms/adobexdtoolkit">Download</a>
     :::column-end:::
     :::column:::
-        ![영웅 이미지](images/adobe-illustrator.png) <b>Adobe Illustrator 도구 키트</b><br>
-        v1806, 2018 년 6 월<br>
-        <a href="https://aka.ms/adobeillustratortoolkit">다운로드</a>
+        ![hero image](images/adobe-illustrator.png)
+        <b>Adobe Illustrator toolkit</b><br>
+        v1806, June 2018<br>
+        <a href="https://aka.ms/adobeillustratortoolkit">Download</a>
     :::column-end:::
     :::column:::
-        ![영웅 이미지](images/sketch.png) <b>스케치</b><br>
-        v1803, 2018 년 3 월<br>
-        <a href="https://aka.ms/sketchtoolkit">다운로드</a>
+        ![hero image](images/sketch.png)
+        <b>Sketch</b><br>
+        v1803, March 2018<br>
+        <a href="https://aka.ms/sketchtoolkit">Download</a>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![영웅 이미지](images/adobe-photoshop.png) <b>Adobe Photoshop 도구 키트</b><br>
-        v1705, 월 2017<br>
-        <a href="https://aka.ms/adobephotoshoptoolkit">다운로드</a>
+        ![hero image](images/adobe-photoshop.png)
+        <b>Adobe Photoshop toolkit</b><br>
+        v1705, May 2017<br>
+        <a href="https://aka.ms/adobephotoshoptoolkit">Download</a>
     :::column-end:::
     :::column:::
-        ![영웅 이미지](images/framer.png) <b>Framer 도구 키트</b><br>
-        v1806, 2018 년 6 월<br>
-        <a href="https://aka.ms/framertoolkit">다운로드</a>
+        ![hero image](images/framer.png)
+        <b>Framer toolkit</b><br>
+        v1806, June 2018<br>
+        <a href="https://aka.ms/framertoolkit">Download</a>
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -64,14 +69,16 @@ ms.locfileid: "4210453"
 
 :::row:::
     :::column:::
-        ![WinUI 라이브러리 미리 보기](images/WinUI-library.png) <b>Windows UI 라이브러리</b><br>
-        컨트롤 및 UWP 앱에 대 한 다른 UI 요소입니다.<br/>
-        <a href="/uwp/toolkits/winui/getting-started">설치 지침</a><br/>
+        ![WinUI library thumbnail](images/WinUI-library.png)
+        <b>Windows UI Library</b><br>
+        Controls and other UI elements for UWP apps.<br/>
+        <a href="/uwp/toolkits/winui/getting-started">Installation instructions</a><br/>
     :::column-end:::
     :::column:::
-        ![Windows 커뮤니티 미리 보기](images/Windows-community-toolkit.png) <b>Windows 커뮤니티 도구 키트</b><br>
-        도우미 함수, 사용자 지정 컨트롤 및 앱 서비스를 제공 합니다.<br />
-        <a href="/windows/uwpcommunitytoolkit/getting-started">설치 지침</a>
+        ![Windows community thumbnail](images/Windows-community-toolkit.png)
+        <b>Windows Community Toolkit</b><br>
+        Helper functions, custom controls, and app services.<br />
+        <a href="/windows/uwpcommunitytoolkit/getting-started">Installation instructions</a>
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -88,16 +95,22 @@ ms.locfileid: "4210453"
     :::column:::
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
-    ::: 열 범위 = "2"::: **Adobe Photoshop 용 타일 및 아이콘 생성기** 이 Adobe Photoshop 용 작업이 집합 단 7 파일에서 68 권장된 타일 및 아이콘 자산을 생성 합니다. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">타일 및 아이콘 생성기 다운로드</a></p>
+    :::column span="2":::
+      **Adobe Photoshop 용 타일 및 아이콘 생성기** 이 Adobe Photoshop 용 작업이 집합 단 7 파일에서 68 권장된 타일 및 아이콘 자산을 생성 합니다. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">타일 및 아이콘 생성기 다운로드</a></p>
     :::column-end:::
 :::row-end:::
 
     
 ## <a name="samples"></a>샘플
 
+![VanArsdel 이미지](images/VanArsdel_Screenshot.png)
+**VanArsdel**<br>
+승 합 차 Arsdel 적용 종단 간 UWP 샘플 앱 차세대 Microsoft Fluent 디자인 시스템을 보여 주기 위해 고안 되었습니다. 향상 된 밀도 및 새 컨트롤의 광범위 한 사용 ux 프레임 워크 및 컴퍼지션의 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 는. 관리 (이 경우 램프)에서 IoT 장치를 구매 하 고는 풍부한, 생산성 환경을 구축 하는 방법을 보여 줍니다.<br>
+<a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">VanArsdel 샘플 다운로드</a> <br><a href="https://github.com/microsoft/vanarsdel">GitHub에서 VanArsdel 샘플 확인</a>
+
 ![캐스트 이미지 빌드](images/buildcast.png)
 **BuildCast**<br>
-BuildCast는 유니버설 Windows 플랫폼의 다른 기능과 뿐만 아니라 Fluent 디자인 시스템을 소개 하기 위해 제작 된 종단 간 샘플입니다. 이 샘플에서는 Channel 9 및 일부 Windows 기술 매니아 피드에서 가장 인기 있는 샘플을 비롯한 비디오 팟캐스트를 검색하고 다운로드하고 재생할 수 있습니다. 또한 잉크 메모, 책갈피 및 원격 재생을 제공합니다. 이 샘플은 <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Fluent 디자인으로 멋진 앱 만들기</a> 동안 2017 빌드 회의에서 처음 제공되었습니다. <br>
+BuildCast는 Fluent 디자인 시스템을 UWP 소개 하기 위해 제작 된 종단 간 샘플입니다. 이 샘플에서는 Channel 9 및 일부 Windows 기술 매니아 피드에서 가장 인기 있는 샘플을 비롯한 비디오 팟캐스트를 검색하고 다운로드하고 재생할 수 있습니다. 또한 잉크 메모, 책갈피 및 원격 재생을 제공합니다. 이 샘플은 <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Fluent 디자인으로 멋진 앱 만들기</a> 동안 2017 빌드 회의에서 처음 제공되었습니다. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">BuildCast 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/BuildCast">GitHub에서 BuildCast 샘플 확인</a>
 
 ![스케줄러 점심](images/lunchscheduler.png)

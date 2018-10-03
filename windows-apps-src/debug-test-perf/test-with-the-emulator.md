@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259772"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -53,7 +53,7 @@ Windows 10 Mobile 용 Microsoft 에뮬레이터는 Visual Studio 2015 이상 필
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터를 실행 합니다.
+## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 하 고 에뮬레이터를 실행 합니다.
 
 ### <a name="installing"></a>설치
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.

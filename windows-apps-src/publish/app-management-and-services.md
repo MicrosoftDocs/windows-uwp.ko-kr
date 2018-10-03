@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211609"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260072"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
@@ -31,7 +31,7 @@ Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보�
 
 게임을 게시 하는 경우이 페이지에서 [Xbox Live 크리에이터 스 프로그램](http://xbox.com/developers/creators-program) 을 사용할 수 있습니다. 테스트 및 구성을 Xbox Live 기능을 시작 하 고 결국 Xbox Live 크리에이터 스 프로그램 게임을 게시할 수 있습니다.
 
-자세한 내용은 [Xbox Live 크리에이터 스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 하 고 [새 Xbox Live 크리에이터 스 프로그램 타이틀 만들기 및 테스트 환경에서 게시](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md)를 참조 하세요.
+자세한 내용은 [Xbox Live 크리에이터 스 프로그램 시작](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) 하 고 [새 Xbox Live 크리에이터 스 프로그램 타이틀 만들기 및 테스트 환경에 게시](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md)를 참조 하세요.
 
 ## <a name="experimentation"></a>실험
 
@@ -50,7 +50,7 @@ Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
-연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하려면 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
+연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하는 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
 
 자세한 내용은 [서비스에서 제품 권리 유형 관리](../monetize/view-and-grant-products-from-a-service.md)를 참조하세요.
 

@@ -15,17 +15,17 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c75169f118e2c8ef575fa251a7badc8cfe44247
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205651"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261660"
 ---
 # <a name="navigation-view-preview-version"></a>탐색 보기 (미리 보기 버전)
 
-> **이 미리 보기 버전**: 새 버전의 개발 중인 NavigationView 컨트롤에 설명 합니다. 사용 하 여 이제 하려면 [최신 Windows 참가자 빌드 및 SDK](https://insider.windows.com/for-developers/) 나 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **이 미리 보기 버전**: 새 버전의 개발 중인 NavigationView 컨트롤에 설명 합니다. 사용할 이제는 [최신 Windows 참가자 빌드 및 SDK](https://insider.windows.com/for-developers/) 또는 필요 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-NavigationView 컨트롤 앱에 최상위 탐색을 제공 합니다. 적응 하는 다양 한 화면 크기에서 지 원하는 여러 탐색 스타일.
+NavigationView 컨트롤 앱에 최상위 탐색을 제공합니다. 적응 하는 다양 한 화면 크기에서 지 원하는 여러 탐색 스타일.
 
 > **Windows UI 라이브러리 Api**: [Microsoft.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/microsoft.ui.xaml.controls.navigationview)
 
@@ -52,19 +52,20 @@ NavigationView를 지원합니다.
 NavigationView는 잘 작동 하는 적응형 탐색 컨트롤입니다.
 
 - 앱 전체에서 일관 된 탐색 환경을 제공 합니다.
-- 작은 창에서 화면 공간을 유지 합니다.
+- 작은 창에 화면 공간을 유지 합니다.
 - 많은 탐색 범주에 대 한 액세스를 구성 합니다.
 
-다른 탐색 컨트롤을 [탐색 디자인 기본 사항](../basics/navigation-basics.md)을 참조 하세요.
+다른 탐색 컨트롤을 [탐색 디자인 기본 사항](../basics/navigation-basics.md)참조 하세요.
 
 탐색을 위해 NavigationView에서 지원되지 않는 보다 복잡한 동작이 필요할 경우에는 [마스터/세부 정보](master-details.md) 패턴을 대신 고려할 수 있습니다.
 
 :::row:::
     :::column:::
-        ![일부 이미지](images/XAML-controls-gallery-app-icon.png)
+        ![Some image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
-    ::: 열 범위 = "2"::: **XAML 컨트롤 갤러리**<br>
-        XAML 컨트롤 갤러리 앱이 설치 된 경우 클릭 <a href="xamlcontrolsgallery:/item/NavigationView">여기</a> 앱을 열고 중인 NavigationView를 참조 하세요.
+    :::column span="2":::
+        **XAML Controls Gallery**<br>
+        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/NavigationView">here</a> to open the app and see NavigationView in action.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
@@ -77,53 +78,53 @@ NavigationView를 통해 다양 한 디스플레이 모드를 설정할 수는 `
 
 :::row:::
     :::column:::
-    ### Left
-    Displays an expanded left positioned pane.
+    ### <a name="left"></a>왼쪽
+    확장된 왼쪽된 위치 창에 표시 됩니다.
     :::column-end:::
     :::column span="2":::
-    ![left nav pane expanded](images/displaymode-left.png)
+    ![확장 된 왼쪽된 탐색 창](images/displaymode-left.png)
     :::column-end:::
 :::row-end:::
 
 왼쪽된 탐색 권장 경우:
 
 - 동일 하 게 중요 한 최상위 수준 탐색 범주의 중간에서 높은 쪽 (5-10) 해야합니다.
-- 원하는 다른 앱 콘텐츠에 대 한 더 적은 공간으로 매우 중요 탐색 범주입니다.
+- 원하는 다른 콘텐츠를 앱에 대 한 더 적은 공간으로 매우 중요 탐색 범주.
 
 :::row:::
     :::column:::
-    ### Top
-    Displays a top positioned pane.
+    ### <a name="top"></a>Top
+    맨 위에 표시 창 위치가 지정 합니다.
     :::column-end:::
     :::column span="2":::
-    ![top navigation](images/displaymode-top.png)
+    ![상단 탐색](images/displaymode-top.png)
     :::column-end:::
 :::row-end:::
 
 상단 탐색 권장 경우:
 
-- 5 하거나 덜 중요 한 동일 하 게 최상위 수준 탐색 범주 같은 추가 최상위 수준 탐색 범주 드롭다운 목록에서 결국에 모두 오버플로 메뉴는로 간주 된다는 덜 중요 한 합니다.
-- 화면의 탐색 옵션을 모두 표시 해야 합니다.
+- 5 하거나 덜 중요 한 동일 하 게 최상위 수준 탐색 범주는 추가 최상위 수준 탐색 범주 드롭다운 목록에서 결국에 모두 오버플로 메뉴 것으로 간주 됩니다 덜 중요 합니다.
+- 화면에서 모든 탐색 옵션을 표시 해야 합니다.
 - 원하는 앱 콘텐츠에 대 한 더 많은 공간.
 - 아이콘을 앱의 탐색 범주 설명 명확 하 게 수 없습니다.
 
 :::row:::
     :::column:::
-    ### LeftCompact
-    Displays a thin sliver with icons on the left.
+    ### <a name="leftcompact"></a>LeftCompact
+    아이콘이 있는 좁은 조각 왼쪽에 표시 됩니다.
     :::column-end:::
     :::column span="2":::
-    ![nav pane compact](images/displaymode-leftcompact.png)
+    ![컴팩트 탐색 창](images/displaymode-leftcompact.png)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-    ### LeftMinimal
-    Displays only the menu button.
+    ### <a name="leftminimal"></a>LeftMinimal
+    메뉴 단추만을 표시 됩니다.
     :::column-end:::
     :::column span="2":::
-    ![nav pane minimal](images/displaymode-leftminimal.png)
+    ![최소한의 탐색 창](images/displaymode-leftminimal.png)
     :::column-end:::
 :::row-end:::
 
@@ -174,15 +175,15 @@ NavigationView를 통해 다양 한 디스플레이 모드를 설정할 수는 `
 
 NavigationView 창 포함 될 수도 있습니다.
 
-1. 특정 페이지로 이동 하기 위한 [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem)형식의 탐색 항목
-2. 구분 기호 [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator)숫자 형태로 탐색 항목 그룹화 합니다. 공백으로 구분 기호를 렌더링 하는 0으로 [Opacity](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) 속성을 설정 합니다.
+1. 특정 페이지를 탐색 하는 것에 대 한 [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem)형식의 탐색 항목
+2. 구분 기호 [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator)숫자 형태로 탐색 항목 그룹화 합니다. 공간으로 구분 기호를 렌더링 하는 0으로 [Opacity](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) 속성을 설정 합니다.
 3. 헤더 [NavigationViewItemHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemheader)형태로 항목 그룹에 레이블을 지정 합니다.
 4. 앱 수준 검색을 허용할 선택적 [AutoSuggestBox](auto-suggest-box.md) 입니다.
 5. [앱 설정](../app-settings/app-settings-and-data.md)에 대한 선택적 진입점 설정 항목을 숨기려면 [IsSettingsVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) 속성을 사용 합니다.
 
 왼쪽된 창에 포함 되어 있습니다.
 
-6. 창 열기 / 닫기 전환 하려면 메뉴 단추입니다. 큰 앱 창에서 창이 열리면 [IsPaneToggleButtonVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsPaneToggleButtonVisible) 속성을 사용하여 이 단추를 숨기도록 선택할 수 있습니다.
+6. 메뉴 단추 창 열기 및 닫기 전환 합니다. 큰 앱 창에서 창이 열리면 [IsPaneToggleButtonVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsPaneToggleButtonVisible) 속성을 사용하여 이 단추를 숨기도록 선택할 수 있습니다.
 
 ### <a name="pane-footer"></a>창 폴더
 
@@ -201,7 +202,7 @@ NavigationView 창 포함 될 수도 있습니다.
 
 ### <a name="pane-header"></a>창 헤더
 
-자유 형식 콘텐츠 창의 헤더에서 [PaneHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneHeader) 속성에 추가 하는 경우
+자유 형식 창의 헤더 [PaneHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneHeader) 속성에 추가 하는 경우에 콘텐츠
 
 :::row:::
     :::column:::
@@ -237,7 +238,7 @@ NavigationView 창 포함 될 수도 있습니다.
 
 ![머리글 영역은 navview 일반 이미지](images/nav-header.png)
 
-머리글 영역은 왼쪽된 창 위치에서 탐색 단추와 세로 방향으로 정렬 되며와 창에서 최상위 창 위치 아래에 있습니다. 높이가 52 픽셀로 고정된가 px 합니다. 선택한 탐색 범주의 페이지 제목을 유지하는 것이 목적입니다. 머리글이 페이지 위쪽에 고정되고 콘텐츠 영역에 대한 스크롤 자르기 지점 역할을 합니다.
+머리글 영역은 왼쪽된 창 위치가 탐색 단추와 세로 방향으로 정렬 되며와 창 위쪽 창 위치가 아래에 있습니다. 높이가 52 픽셀로 고정된가 px 합니다. 선택한 탐색 범주의 페이지 제목을 유지하는 것이 목적입니다. 머리글이 페이지 위쪽에 고정되고 콘텐츠 영역에 대한 스크롤 자르기 지점 역할을 합니다.
 
 NavigationView 디스플레이 최소 모드일 때 머리글이 표시 되어야 합니다. 더 큰 창 너비에 사용되는 다른 모드에서 머리글을 숨기도록 선택할 수 있습니다. 이렇게 하려면 [AlwaysShowHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) 속성을 **false**로 설정합니다.
 
@@ -280,7 +281,7 @@ NavigationView의 기본 적응형 동작 작은 창 너비에 큰 창 너비에
 
 ### <a name="compact"></a>컴팩트
 
-세 번째 일반적인 적응 패턴 큰 창 너비와 중간 크기 및 작은 창 너비 모두에 아이콘 전용 왼쪽된 탐색 창에는 확장 된 왼쪽된 창을 사용 하는 것입니다. 이 항목의 좋은 예 메일 앱입니다.
+세 번째 일반적인 적응 패턴 큰 창 너비와 중간 크기 및 작은 창 너비 모두에 아이콘 전용 왼쪽된 탐색 창에는 확장 된 왼쪽된 창을 사용 하는 것입니다. 이 항목의 좋은 예는 메일 앱.
 
 ![gif leftnav 적응형 동작 3](images/adaptive-behavior-compact.png)
 
@@ -307,8 +308,8 @@ NavigationView의 기본 적응형 동작 작은 창 너비에 큰 창 너비에
 
 큰 창 크기와 작은에서 왼쪽된 탐색에서 상단 탐색을 사용 하는 것이 좋습니다 창 크기는 경우:
 
-- 이 설정 앱에서 하나의 범주는 화면에 맞지 않는, 바람직한 수 있도록 왼쪽된 탐색을 축소 하 함께 표시할 중요 최상위 수준 탐색 범주 동일 하 게 집합이 있습니다.
-- 작은 창 크기에 최대한 많은 콘텐츠 공간으로 유지 하고자 합니다.
+- 이 설정 앱에서 하나의 범주는 화면에 맞지 않는, 바람직한 수 있도록 왼쪽된 탐색을 축소 하 함께 표시 될 중요 최상위 수준 탐색 범주 동일 하 게 집합이 있습니다.
+- 작은 창 크기에 최대한 많은 콘텐츠 공간으로 유지 하려는 합니다.
 
 다음 예제를 참조하세요.
 
@@ -443,7 +444,7 @@ public class NavViewDataTemplateSelector : DataTemplateSelector
 
 ### <a name="tabs"></a>탭
 
-탭 모델 선택 및 포커스 연결 됩니다. 에 전환이 포커스 선택을 이동은 정상적으로 동작 합니다. 에 아래 예에서는 오른쪽 화살표 지정 선택 표시기 디스플레이에서으로 이동 돋보기 합니다. 사용으로 [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) 속성을 설정 하 여이 얻을 수 있습니다.
+탭 모델 선택 및 포커스 연결 됩니다. 에 전환이 포커스 선택을 이동은 정상적으로 동작 합니다. 에 아래 예에서는 오른쪽 화살표 지정 이동 선택 표시기 디스플레이에서 돋보기를 합니다. 사용으로 [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) 속성을 설정 하 여이 얻을 수 있습니다.
 
 ![최상위 텍스트 전용 navview의 스크린샷](images/nav-tabs.png)
 
@@ -460,9 +461,9 @@ public class NavViewDataTemplateSelector : DataTemplateSelector
 
 ```
 
-탭 선택을 변경 하는 경우 콘텐츠를 교체할 False로 설정 FrameNavigationOptions.IsNavigationStackEnabled 사용 하 여 프레임의 [NavigateWithOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.NavigateToType) 메서드를 사용할 수 있으며 NavigateOptions.TransitionInfoOverride는 적절 한 왼쪽-오른쪽으로 설정 애니메이션입니다. 예를 들어, [코드 예제에서](#code-example) 는 아래를 참조 하세요.
+탭 선택을 변경 하는 경우 콘텐츠를 교체할 False로 FrameNavigationOptions.IsNavigationStackEnabled 설정 된 프레임의 [NavigateWithOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.NavigateToType) 메서드를 사용할 수 있으며 NavigateOptions.TransitionInfoOverride는 적절 한 왼쪽-오른쪽으로 설정 애니메이션입니다. 예를 들어, [코드 예제에서](#code-example) 는 아래를 참조 하세요.
 
-기본 스타일을 변경 하려는 경우 NavigationView의 [MenuItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemcontainerstyle) 속성을 재정의할 수 있습니다. 또한 다른 데이터 템플릿을 지정 하려면 [MenuItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemtemplate) 속성을 설정할 수 있습니다.
+기본 스타일을 변경 하려는 경우 NavigationView의 [MenuItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemcontainerstyle) 속성을 재정의할 수 있습니다. 또한 다른 데이터 템플릿을 지정 [MenuItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemtemplate) 속성을 설정할 수 있습니다.
 
 ## <a name="backwards-navigation"></a>뒤로 탐색
 
@@ -491,7 +492,7 @@ NavigationView에는 다음과 같은 속성에서 사용할 수 있는 뒤로 �
 > NavigationView는 앱의 루트 컨테이너 역할을 합니다. 이 컨트롤은 앱 창의 전체 너비와 높이에 맞게 확장되도록 설계되었습니다.
 [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) 및 [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) 속성을 사용하여 탐색 보기에서 디스플레이 모드가 변경되는 너비를 재정의할 수 있습니다.
 
-다음은 종단 간 예로 상단 탐색 창에서 큰 창 크기와 작은 창 크기의 왼쪽된 탐색 창 NavigationView 통합할 수 있습니다.
+다음은 종단 간 예로 왼쪽된 탐색 창에 작은 창 크기 및 큰 창 크기에 상단 탐색 창 모두 NavigationView 통합할 수 있습니다.
 
 이 샘플에서는 자주 새 탐색 범주를 선택 하는 최종 사용자가 기대 하므로 했습니다.
 
@@ -501,7 +502,7 @@ NavigationView에는 다음과 같은 속성에서 사용할 수 있는 뒤로 �
 
 또한 뒤로 NavigationView의 뒤로 단추를 사용 하 여 탐색을 구현 하는 방법을 보여 줍니다.
 
-샘플 내용에 대 한 기록을 다음과 같습니다.
+샘플 내용의 기록을 다음과 같습니다.
 
 ![NavigationView 종단 간 샘플](images/nav-code-example.gif)
 
@@ -725,7 +726,7 @@ NavigationView의 주요 영역 배경을 변경하려면, `Background` 속성�
 
 ## <a name="scroll-content-under-top-pane"></a>상단 창에서 스크롤 콘텐츠
 
-원활한 모양을 + 느낌, 앱은 ScrollViewer를 사용 하는 페이지 이며 탐색 창 맨 위에 배치 하는 경우 권장 상단 탐색 창 아래 콘텐츠 스크롤 필요 합니다.
+원활한 모양을 + 느낌, 앱은 ScrollViewer를 사용 하는 페이지 이며 탐색 창 맨 위에 배치 하는 경우 권장 상단 탐색 창 아래의 콘텐츠 스크롤 필요 합니다.
 
 이를 true로 관련 ScrollViewer에서 [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) 속성을 설정 하 여 얻을 수 있습니다.
 

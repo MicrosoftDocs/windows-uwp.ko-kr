@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ddcac274fb970de5c9afd1a536035bd21124547
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: e94eb0e819796dda456899bb877057e4532f5ce9
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265154"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>앱 설치 관리자 파일 관련 설치 문제 해결
 
@@ -74,9 +74,9 @@ HTTP 끝점에서 설치할 때 모든 파일이 올바른 MIME 형식으로 액
 
 앱 설치 관리자 앱이 앱을 설치할 수 없는 경우 다음 단계는 설치 문제를 식별하는 데 도움이 됩니다.
 
-### <a name="verify-appxappxbundle-file-installation"></a>.appx/.appxbundle 파일 설치 확인
+### <a name="verify-app-package-file-installation"></a>앱 패키지 파일 설치 확인
 
-- 로컬 폴더에 `.appx`/`.appxbundle` 파일을 다운로드하고 [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) PowerShell 명령을 사용하여 이를 설치합니다.
+- 로컬 폴더에 앱 패키지 파일을 다운로드 하 고 [Add-appxpackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) PowerShell 명령을 사용 하 여이 설치 합니다.
 
 - 로컬 폴더에 `.appinstaller` 파일을 다운로드하고 `Add-AppxPackage -Appinstaller` PowerShell 명령을 사용하여 이를 설치합니다.
 

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: xBind 태그 확장은 Binding 대신 사용됩니다. xBind에는 Binding의 일부 기능이 없지만 Binding보다 적은 메모리로 빠르게 실행되며 향상된 디버깅을 지원합니다.
+description: XBind 태그 확장에 바인딩 고성능 대안입니다. xBind--Windows 10에 대 한 새 실행 짧은 시간에 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 됩니다.
 title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 340f8e72c5015fad341810ef335dea73f77fc82f
-ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
-ms.translationtype: HT
+ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
-ms.locfileid: "1672890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261490"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
 **참고** 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
-Windows 10의 새로운 기능인 **{x:Bind}** 태그 확장은 **{Binding}** 대신 사용됩니다. **{x:Bind}** 에는 **{Binding}** 의 일부 기능이 없지만 **{Binding}** 보다 적은 메모리로 빠르게 실행되며 향상된 디버깅을 지원합니다.
+Windows 10의 새로운 기능인 **{x:Bind}** 태그 확장은 **{Binding}** 대신 사용됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅을 지원 보다 적은 메모리로 및 짧은 시간에 실행 됩니다.
 
 XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에서 값을 가져오는 코드로 변환되고 태그에 지정된 속성에서 이를 설정합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 새로 고치도록 바인딩 개체를 구성할 수 있습니다(`Mode="OneWay"`). 또한 필요한 경우 고유한 값 변경을 소스 속성에 다시 적용하도록 구성할 수도 있습니다(`Mode="TwoWay"`).
 
@@ -46,6 +46,8 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 <object property="{x:Bind bindingProperties}" .../>
 -or-
 <object property="{x:Bind propertyPath, bindingProperties}" .../>
+-or-
+<object property="{x:Bind pathToFunction.functionName(functionParameter1, functionParameter2, ...), bindingProperties}" .../>
 ```
 
 | 용어 | 설명 |
@@ -55,6 +57,25 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 | _propName_=_value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | _propName_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
 | _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-you-can-set)을 참조하세요. |
+
+## <a name="examples"></a>예제
+
+```XAML
+<Page x:Class="QuizGame.View.HostView" ... >
+    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
+</Page>
+```
+
+이 예제 XAML에서는 **ListView.ItemTemplate** 속성에서 **{x:Bind}** 를 사용합니다. **x:DataType** 값의 선언에 유의하세요.
+
+```XAML
+  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
+    <StackPanel Orientation="Vertical" Height="50">
+      <TextBlock Text="{x:Bind Title}"/>
+      <TextBlock Text="{x:Bind Description}"/>
+    </StackPanel>
+  </DataTemplate>
+```
 
 ## <a name="property-path"></a>속성 경로
 
@@ -68,7 +89,8 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 
 C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 전용 필드 및 속성에 바인딩할 수 없습니다. 바인딩하려면 공용 속성이 있어야 합니다. 관련 메타데이터를 가져올 수 있도록 바인딩 노출 영역을 CX 클래스/인터페이스로 노출해야 합니다. **\[Bindable\]** 특성은 필요하지 않습니다.
 
-**x:Bind**를 사용하면 **ElementName=xxx**를 바인딩 식의 일부로 사용할 필요가 없습니다. **x:Bind**를 사용하면 요소의 이름을 바인딩 경로의 첫 부분으로 사용할 수 있습니다. 명명된 요소는 루트 바인딩 소스를 나타내는 페이지 또는 사용자 컨트롤 내의 필드가 되기 때문입니다.
+**x:Bind**를 사용하면 **ElementName=xxx**를 바인딩 식의 일부로 사용할 필요가 없습니다. 대신 사용할 수 있습니다 요소의 이름을 경로의 첫 번째 일부로 바인딩에 대 한 명명 된 요소는 루트 바인딩 소스를 나타내는 페이지 또는 사용자 컨트롤 내의 필드가 되기 때문입니다. 
+
 
 ### <a name="collections"></a>컬렉션
 
@@ -93,78 +115,7 @@ _참고: C# 스타일 캐스트 구문은 연결된 속성 구문보다 더 유�
 
 ## <a name="functions-in-binding-paths"></a>바인딩 경로의 함수
 
-Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 그러면 다음과 같은 이점이 있습니다.
-
-- 간단한 값 변환 방법
-- 둘 이상의 매개 변수를 사용하는 바인딩 방식
-
-> [!NOTE]
-> **{x:Bind}** 와 함께 함수를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 함수를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
-
-다음 예제에서는 항목의 배경과 전경이 색 매개 변수에 따라 변환을 수행하는 함수에 바인딩됩니다.
-
-```xaml
-<DataTemplate x:DataType="local:ColorEntry">
-    <Grid Background="{x:Bind local:ColorEntry.Brushify(Color)}" Width="240">
-        <TextBlock Text="{x:Bind ColorName}" Foreground="{x:Bind TextColor(Color)}" Margin="10,5" />
-    </Grid>
-</DataTemplate>
-```
-
-```csharp
-class ColorEntry
-{
-    public string ColorName { get; set; }
-    public Color Color { get; set; }
-
-    public static SolidColorBrush Brushify(Color c)
-    {
-        return new SolidColorBrush(c);
-    }
-
-    public SolidColorBrush TextColor(Color c)
-    {
-        return new SolidColorBrush(((c.R * 0.299 + c.G * 0.587 + c.B * 0.114) > 150) ? Colors.Black : Colors.White);
-    }
-}
-
-```
-
-### <a name="function-syntax"></a>함수 구문
-
-``` Syntax
-Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Order.ShipAddr.Zip, 'Contoso'), Mode=OneTime}"
-             |      Path to function         |    Path argument   |       Path argument       | Const arg |  Bind Props
-```
-
-### <a name="path-to-the-function"></a>함수 경로
-
-함수 경로는 다른 속성 경로처럼 지정되며 점(.), 인덱서 또는 함수를 찾을 캐스트를 포함할 수 있습니다.
-
-정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어 페이지 맨 위에서 **xmlns:sys="using:System"** 을 지정한 경우 **&lt;CalendarDatePicker Date="\{x:Bind sys:DateTime.Parse(TextBlock1.Text)\}" /&gt;** 가 DateTime.Parse 함수에 매핑됩니다.
-
-모드가 OneWay/TwoWay인 경우 함수 경로에 수행된 변경 검색이 포함되고 이러한 개체가 변경된 경우 바인딩이 다시 평가됩니다.
-
-바인딩할 함수는 다음을 수행해야 합니다.
-
-- 코드 및 메타데이터에 액세스할 수 있어야 합니다. 그러므로 internal/private은 C#에서 작업하지만 C++/CX에는 public WinRT 메서드가 필요합니다.
-- 오버로드는 형식이 아닌 인수 개수를 기반으로 하며 해당 개수의 인수를 사용하는 첫 번째 오버로드와 일치시키려고 합니다.
-- 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
-- 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
-
-### <a name="function-arguments"></a>함수 인수
-
-함수 인수를 여러 개 지정할 경우 쉼표(,)를 사용하여 구분합니다.
-
-- 바인딩 경로 – 해당 개체에 직접 바인딩할 때와 동일한 구문입니다.
-  - 모드가 OneWay/TwoWay인 경우 변경 검색이 수행되고 개체가 변경될 때 바인딩이 다시 평가됩니다.
-- 따옴표로 묶인 상수 문자열 – 문자열로 지정하려면 따옴표가 필요합니다. 문자열에서 따옴표를 이스케이프할 때는 캐럿(^)을 사용합니다.
-- 상수 - 예를 들어 123.456입니다.
-- 부울 – "x:True" 또는 "x:False"로 지정합니다.
-
-### <a name="two-way-function-bindings"></a>양방향 함수 바인딩
-
-양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이 작업은 **BindBack** 바인딩 속성을 사용하여 수행할 수 있습니다(예: **Text="\{x:Bind a.MyFunc(b), BindBack=a.MyFunc2\}"**). 이 함수는 모델로 다시 푸시해야 하는 값을 인수로 사용합니다.
+Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것은 태그에서 몇 가지 시나리오를 활성화 하는 데이터 바인딩에 대 한 강력한 기능입니다. 자세한 내용 [은 함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
 
 ## <a name="event-binding"></a>이벤트 바인딩
 
@@ -226,21 +177,3 @@ Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Orde
 
 **{x:Bind}** 는 태그 확장일 뿐이므로 이러한 바인딩을 프로그래밍 방식으로 만들거나 조작할 방법이 없습니다. 태그 확장에 대한 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
 
-## <a name="examples"></a>예제
-
-```XML
-<Page x:Class="QuizGame.View.HostView" ... >
-    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
-</Page>
-```
-
-이 예제 XAML에서는 **ListView.ItemTemplate** 속성에서 **{x:Bind}** 를 사용합니다. **x:DataType** 값의 선언에 유의하세요.
-
-```XML
-  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
-    <StackPanel Orientation="Vertical" Height="50">
-      <TextBlock Text="{x:Bind Title}"/>
-      <TextBlock Text="{x:Bind Description}"/>
-    </StackPanel>
-  </DataTemplate>
-```

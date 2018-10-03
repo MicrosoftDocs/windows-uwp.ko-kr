@@ -3,19 +3,19 @@ author: laurenhughes
 title: MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 description: MakeAppx.exe는 앱 패키지와 번들을 만들고, 암호화 및 암호 해독하고, 파일을 추출합니다.
 ms.author: lahugh
-ms.date: 03/07/2017
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 패키징
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
-ms.openlocfilehash: 94972915e5fc80a477d8d647212ab3b91e0aa384
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: dbde8f2f11276ded6ad0994a1cd52f7f12de229e
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817794"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264328"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 
@@ -25,10 +25,12 @@ ms.locfileid: "1817794"
 > [!IMPORTANT] 
 > Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만드는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
 
-**MakeAppx.exe**는 .appxupload 파일을 만들지 않습니다. .appxupload 파일은 Visual Studio 패키징 프로세스의 일부로 생성되며 .appx 및 .appxsym이라는 다른 두 개의 파일을 포함합니다. .appxsym 파일은 Windows 개발자 센터에서 [분석 충돌](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/)에 사용되는 앱의 공용 기호를 포함하는 압축 .pdb 파일입니다. 일반적인 .appx 파일도 제출할 수 있지만 충돌 분석이나 디버깅 정보를 사용할 수 없습니다. Microsoft Store에 패키지를 제출하는 방법에 대한 자세한 내용은 [앱 패키지 업로드](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages)를 참조하세요. 
+**MakeAppx.exe**는 .appxupload 파일을 만들지 않습니다. .Appxupload 파일은 Visual Studio 패키징 프로세스의 일부로 생성 하 고 다른 두 개의 파일이 포함:.msix 또는.appx 및.appxsym 이라는 합니다. .appxsym 파일은 Windows 개발자 센터에서 [분석 충돌](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/)에 사용되는 앱의 공용 기호를 포함하는 압축 .pdb 파일입니다. 일반적인 .appx 파일도 제출할 수 있지만 충돌 분석이나 디버깅 정보를 사용할 수 없습니다. Microsoft Store에 패키지를 제출하는 방법에 대한 자세한 내용은 [앱 패키지 업로드](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages)를 참조하세요. 
+
+ 최신 버전의 Windows 10에서이 도구에 대 한 업데이트.appx 패키지 사용 영향을 주지 않습니다. 이 도구를 사용 하 여.appx 패키지를 사용 하 여 계속 하거나 아래 설명 된 대로.msix 패키지에 대 한 도구를 지 원하는 사용 합니다.
 
 .appxupload 파일을 수동으로 만들려면
-- .appx 및 .appxsym을 폴더에 넣습니다.
+- .msix 및.appxsym은 폴더에 배치
 - 폴더를 압축합니다.
 - 압축 폴더 확장명을 .zip에서 .appxupload로 변경합니다.
 
@@ -58,7 +60,6 @@ MakeAppx <command> [options]
 | unbundle      | 지정한 출력 경로 아래의 하위 디렉터리(번들 전체 이름에 따라 이름이 지정됨)에 모든 패키지의 압축을 풉니다. |
 | encrypt       | 입력 패키지/번들에서 암호화된 앱 패키지 또는 번들을 지정한 출력 패키지/번들에 만듭니다. |
 | decrypt       | 입력 앱 패키지/번들에서 암호 해독된 앱 패키지 또는 번들을 지정한 출력 패키지/번들에 만듭니다. |
-| 빌드         |  |
 
 
 모든 명령에 적용되는 옵션 목록은 다음과 같습니다.
@@ -81,14 +82,14 @@ MakeAppx <command> [options]
 
 | **인수**                          | **설명**                       |
 |---------------------------------------|---------------------------------------|
-| &lt;출력 패키지 이름&gt;           | 생성되는 패키지 이름입니다. 파일 이름에 .appx가 추가된 것입니다. |
-| &lt;암호화된 출력 패키지 이름&gt; | 생성되는 암호화된 패키지 이름입니다. 파일 이름에 .eappx가 추가된 것입니다. |
-| &lt;입력 패키지 이름&gt;            | 패키지 이름입니다. 파일 이름에 .appx가 추가된 것입니다. |
-| &lt;암호화된 입력 패키지 이름&gt;  | 암호화된 패키지 이름입니다. 파일 이름에 .eappx가 추가된 것입니다. |
-| &lt;출력 번들 이름&gt;            | 생성되는 번들 이름입니다. 파일 이름에 .appxbundle이 추가된 것입니다. |
-| &lt;암호화된 출력 번들 이름&gt;  | 생성되는 암호화된 번들 이름입니다. 파일 이름에 .eappxbundle이 추가된 것입니다. |
-| &lt;입력 번들 이름&gt;             | 번들 이름입니다. 파일 이름에 .appxbundle이 추가된 것입니다. |
-| &lt;암호화된 입력 번들 이름&gt;   | 암호화된 번들 이름입니다. 파일 이름에 .eappxbundle이 추가된 것입니다. |
+| &lt;출력 패키지 이름&gt;           | 생성되는 패키지 이름입니다. 추가 된.msix 또는.appx 파일 이름입니다. |
+| &lt;암호화된 출력 패키지 이름&gt; | 생성되는 암호화된 패키지 이름입니다. 추가 된.emsix 또는.eappx 파일 이름입니다. |
+| &lt;입력 패키지 이름&gt;            | 패키지 이름입니다. 추가 된.msix 또는.appx 파일 이름입니다. |
+| &lt;암호화된 입력 패키지 이름&gt;  | 암호화된 패키지 이름입니다. 추가 된.emsix 또는.eappx 파일 이름입니다. |
+| &lt;출력 번들 이름&gt;            | 생성되는 번들 이름입니다. 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
+| &lt;암호화된 출력 번들 이름&gt;  | 생성되는 암호화된 번들 이름입니다. 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
+| &lt;입력 번들 이름&gt;             | 번들 이름입니다. 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
+| &lt;암호화된 입력 번들 이름&gt;   | 암호화된 번들 이름입니다. 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
 | &lt;콘텐츠 디렉터리&gt;             | 앱 패키지 또는 번들 콘텐츠 경로입니다. |
 | &lt;매핑 파일&gt;                  | 패키지 원본 및 대상을 지정하는 파일 이름입니다. |
 | &lt;출력 디렉터리&gt;              | 출력 패키지 및 번들의 디렉터리 경로입니다. |
@@ -98,7 +99,7 @@ MakeAppx <command> [options]
 
 ### <a name="create-an-app-package"></a>앱 패키지 만들기
 
-앱 패키지는 .appx 패키지 파일에 패키징된 앱 파일의 전체 집합입니다. **pack** 명령을 사용하여 앱 패키지를 만들려면 패키지 위치에 대한 매핑 파일이나 콘텐츠 디렉터리를 제공해야 합니다. 패키지를 만드는 동안 암호화할 수도 있습니다. 패키지를 암호화하려는 경우 /ep를 사용하고 키 파일(/kf) 또는 전역 테스트 키(/kt)를 사용 중인지 지정해야 합니다. 암호화된 패키지를 만드는 방법에 대한 자세한 내용은 [패키지나 번들 암호화 또는 암호 해독](#encrypt-or-decrypt-a-package-or-bundle)을 참조하세요.
+앱 패키지는.msix 또는.appx 패키지 파일에 패키징된 앱 파일의 전체 집합입니다. **pack** 명령을 사용하여 앱 패키지를 만들려면 패키지 위치에 대한 매핑 파일이나 콘텐츠 디렉터리를 제공해야 합니다. 패키지를 만드는 동안 암호화할 수도 있습니다. 패키지를 암호화하려는 경우 /ep를 사용하고 키 파일(/kf) 또는 전역 테스트 키(/kt)를 사용 중인지 지정해야 합니다. 암호화된 패키지를 만드는 방법에 대한 자세한 내용은 [패키지나 번들 암호화 또는 암호 해독](#encrypt-or-decrypt-a-package-or-bundle)을 참조하세요.
 
 **pack** 명령과 관련된 옵션은 다음과 같습니다.
 
@@ -125,12 +126,12 @@ MakeAppx pack [options] /d <content directory> /ep <encrypted output package nam
 다음은 **pack** 명령의 명령줄 예제를 보여 줍니다.
 
 ``` examples
-MakeAppx pack /v /h SHA256 /d "C:\My Files" /p MyPackage.appx
-MakeAppx pack /v /o /f MyMapping.txt /p MyPackage.appx
-MakeAppx pack /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p AppPackage.appx
-MakeAppx pack /r /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p ResourcePackage.appx
-MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.eappx /kf MyKeyFile.txt
-MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.eappx /kt
+MakeAppx pack /v /h SHA256 /d "C:\My Files" /p MyPackage.msix
+MakeAppx pack /v /o /f MyMapping.txt /p MyPackage.msix
+MakeAppx pack /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p AppPackage.msix
+MakeAppx pack /r /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p ResourcePackage.msix
+MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.emsix /kf MyKeyFile.txt
+MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.emsix /kt
 ```
 
 ### <a name="create-an-app-bundle"></a>앱 번들 만들기
@@ -157,10 +158,10 @@ MakeAppx bundle [options] /f <mapping file> /ep <encrypted output bundle name> /
 다음 블록에는 **bundle** 명령의 예가 포함되어 있습니다.
 
 ``` examples
-MakeAppx bundle /v /d "C:\My Files" /p MyBundle.appxbundle
-MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /p MyBundle.appxbundle
-MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.eappxbundle /kf MyKeyFile.txt
-MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.eappxbundle /kt
+MakeAppx bundle /v /d "C:\My Files" /p MyBundle.msixbundle
+MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /p MyBundle.msixbundle
+MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.emsixbundle /kf MyKeyFile.txt
+MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.emsixbundle /kt
 ```
 
 ### <a name="extract-files-from-a-package-or-bundle"></a>패키지나 번들에서 파일 추출
@@ -189,13 +190,13 @@ MakeAppx unbundle [options] /ep <encrypted input bundle name> /d <output directo
 다음 블록에는 **unpack** 및 **unbundle** 명령의 예가 포함되어 있습니다.
 
 ``` examples
-MakeAppx unpack /v /p MyPackage.appx /d "C:\My Files"
-MakeAppx unpack /v /ep MyPackage.eappx /d "C:\My Files" /kf MyKeyFile.txt
-MakeAppx unpack /v /ep MyPackage.eappx /d "C:\My Files" /kt
+MakeAppx unpack /v /p MyPackage.msix /d "C:\My Files"
+MakeAppx unpack /v /ep MyPackage.emsix /d "C:\My Files" /kf MyKeyFile.txt
+MakeAppx unpack /v /ep MyPackage.emsix /d "C:\My Files" /kt
 
-MakeAppx unbundle /v /p MyBundle.appxbundle /d "C:\My Files"
-MakeAppx unbundle /v /ep MyBundle.eappxbundle /d "C:\My Files" /kf MyKeyFile.txt
-MakeAppx unbundle /v /ep MyBundle.eappxbundle /d "C:\My Files" /kt
+MakeAppx unbundle /v /p MyBundle.msixbundle /d "C:\My Files"
+MakeAppx unbundle /v /ep MyBundle.emsixbundle /d "C:\My Files" /kf MyKeyFile.txt
+MakeAppx unbundle /v /ep MyBundle.emsixbundle /d "C:\My Files" /kt
 ```
 
 ### <a name="encrypt-or-decrypt-a-package-or-bundle"></a>패키지나 번들 암호화 또는 암호 해독
@@ -223,28 +224,12 @@ MakeAppx decrypt [options] /ep <package name> /p <output package name> /kt
 다음 블록에는 **encrypt** 및 **decrypt** 명령의 예가 포함되어 있습니다.
 
 ``` examples
-MakeAppx.exe encrypt /p MyPackage.appx /ep MyEncryptedPackage.eappx /kt
-MakeAppx.exe encrypt /p MyPackage.appx /ep MyEncryptedPackage.eappx /kf MyKeyFile.txt
+MakeAppx.exe encrypt /p MyPackage.msix /ep MyEncryptedPackage.emsix /kt
+MakeAppx.exe encrypt /p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile.txt
 
-MakeAppx.exe decrypt /p MyPackage.appx /ep MyEncryptedPackage.eappx /kt
-MakeAppx.exe decrypt p MyPackage.appx /ep MyEncryptedPackage.eappx /kf MyKeyFile.txt
+MakeAppx.exe decrypt /p MyPackage.msix /ep MyEncryptedPackage.emsix /kt
+MakeAppx.exe decrypt p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile.txt
 ```
-
-### <a name="build-an-app-package"></a>앱 패키지 빌드 
-
-**MakeAppx.exe**는 앱 패키지 레이아웃 파일에 따라 앱을 빌드할 수 있습니다. 패키지 레이아웃 파일 만드는 방법 및 **MakeAppx.exe**를 사용하여 이를 빌드하는 방법을 알아보려면 [패키징 레이아웃으로 패키지 만들기](packaging-layout.md)를 참조하세요.  
-
-**build** 명령과 관련된 옵션은 다음과 같습니다.
-
-| **옵션**    | **설명**                       |
-|---------------|---------------------------------------|
-| /bc           | 빌드할 패키지 패밀리의 하위 패키지를 지정합니다.  |
-| /id           | 패키지 **ID** 특성에 따라 빌드할 패키지를 선택하는 데 사용합니다. |
-| /ip           | 앱 패키지의 이전 버전의 위치를 표시합니다. |
-| /iv           | 자동으로 빌드되는 패키지 버전을 증분합니다. |
-| /f            | 패키징 레이아웃 파일을 지정합니다. |
-| /nbp          | 앱 패키지를 빌드하지 말아야 함을 나타냅니다. |
-| /op           | 출력 패키지 대상. |
 
 ## <a name="key-files"></a>키 파일
 

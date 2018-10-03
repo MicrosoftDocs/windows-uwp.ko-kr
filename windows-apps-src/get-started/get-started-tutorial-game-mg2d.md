@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265972"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -688,7 +688,7 @@ if (gameOver)
 ![게임 종료](images/monogame-tutorial-4.png)
 
 ## <a name="publish-to-the-microsoft-store"></a>Microsoft Store에 게시
-이 게임은 UWP 앱을 구축 이므로이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
+이 게임을 UWP 앱으로 구축, 이므로이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
 
 Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.
 
@@ -696,4 +696,4 @@ Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/regist
 
 앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.
+자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.

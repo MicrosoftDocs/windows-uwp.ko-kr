@@ -4,30 +4,30 @@ Description: View details related to the unique identity assigned to your app by
 title: 앱 ID 세부 정보 보기
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ms.author: wdg-dev-content
-ms.date: 12/21/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf2c10fd8fa581e29fe20c5bdcb2683c5246af1d
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 4b04033fb53a90015427feb820c91d0f4a1de7d5
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259832"
 ---
 # <a name="view-app-identity-details"></a>앱 ID 세부 정보 보기
 
 
-Windows 개발자 센터 대시보드에서 앱을 사용 하 여 Microsoft Store에 할당 된 고유 id와 관련 된 세부 정보를 볼 수 있습니다. 또한 앱의 스토어 목록 링크를 가져올 수 있습니다.
+**앱 id** 페이지에서 Microsoft 스토어에서 앱에 할당 된 고유 id와 관련 된 세부 정보를 볼 수 있습니다. 또한이 페이지에 나열 하는 앱의 스토어에 대 한 링크가 얻을 수 있습니다.
 
 이 정보를 찾으려면 앱 중 하나로 이동하여 왼쪽 탐색 메뉴에서 **앱 관리**를 확장합니다. 그리고 **앱 ID**를 선택하여 이들 세부 정보를 확인합니다.
 
 
 ## <a name="values-to-include-in-your-app-package-manifest"></a>앱 패키지 매니페스트에 포함시킬 값
 
-다음 값을 .appx 매니페스트에 포함시켜야 합니다. [Microsoft Visual Studio를 사용하여 패키지를 빌드](../packaging/packaging-uwp-apps.md)하고 개발자 계정에 연결된 동일한 Microsoft 계정으로 로그인을 하면 이들 세부 정보가 자동으로 포함됩니다. 패키지를 수동으로 빌드할 경우에는 이들 항목을 반드시 추가해야 합니다.
+다음 값은 패키지 매니페스트에 포함 되어야 합니다. [Microsoft Visual Studio를 사용하여 패키지를 빌드](../packaging/packaging-uwp-apps.md)하고 개발자 계정에 연결된 동일한 Microsoft 계정으로 로그인을 하면 이들 세부 정보가 자동으로 포함됩니다. 패키지를 수동으로 빌드할 경우에는 이들 항목을 반드시 추가해야 합니다.
 
 -   **패키지/ID/이름**
 -   **패키지/ID/게시자**

@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: ca59855456abe366ec681404b3bf6253bc182f79
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258692"
 ---
 # <a name="color"></a>색상
 
@@ -29,23 +29,23 @@ UWP 앱에서 색은 주로 테마 컬러와 테마로 결정됩니다. 이 문�
 
 :::row:::
     :::column:::
-        **의미에 따라 색을 사용 합니다.**
-중요한 요소를 강조할 때 색을 간간히 사용하면 유연하고 직관적인 사용자 인터페이스를 구현할 수 있습니다.
+        **Use color meaningfully.**
+        When color is used sparingly to highlight important elements, it can help create a user interface that is fluid and intuitive.
     :::column-end:::
     :::column:::
-        **색을 사용 하 여 대화형 작업을 나타냅니다.**
-대화형 응용 프로그램 요소를 나타내는 한 가지 색을 선택하는 것이 좋습니다. 예를 들어 많은 웹 페이지는 하이퍼링크를 나타낼 때 파란색 텍스트를 사용합니다.
+        **Use color to indicate interactivity.**
+        It's a good idea to choose one color to indicate elements of your application that are interactive. For example, many web pages use blue text to denote a hyperlink.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        **색은 개인입니다.**
-Windows에서 사용자는 테마 컬러와 밝거나 어두운 테마를 선택하여 사용 중인 전체 환경에 이것을 반영할 수 있습니다. 사용자의 테마 컬러와 테마를 응용 프로그램에 통합하는 방법을 선택하여 사용 중인 환경을 개인화할 수 있습니다.
+        **Color is personal.**
+        In Windows, users can choose an accent color and a light or dark theme, which are reflected throughout their experience. You can choose how to incorporate the user's accent color and theme into your application, personalizing their experience.
     :::column-end:::
     :::column:::
-        **색은 곧 문화입니다.**
-사용하는 색상이 다른 문화권의 사람들에게는 어떻게 해석되는지를 고려해야 합니다. 예를 들어 일부 문화권에서는 파란색이 미덕 및 보호와 관련이 있는 반면, 다른 문화에서는 애도를 나타내기도 합니다.
+        **Color is cultural.**
+        Consider how the colors you use will be interpreted by people from different cultures. For example, in some cultures the color blue is associated with virtue and protection, while in others it represents mourning.
     :::column-end:::
 :::row-end:::
 
@@ -108,7 +108,7 @@ UWP 앱은 밝거나 어두운 응용 프로그램 테마를 사용할 수 있�
 
 :::row:::
     :::column:::
-        사용자 지정 컨트롤에 대 한 템플릿을 만들 때 하드 코드 색 값 보다는 테마 브러시를 사용 합니다. 이런 방식으로 앱은 모든 테마에 쉽게 적응할 수 있습니다.
+        When creating templates for custom controls, use theme brushes rather than hard code color values. This way, your app can easily adapt to any theme.
 
         For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
     :::column-end:::
@@ -147,10 +147,12 @@ UWP 앱은 밝거나 어두운 응용 프로그램 테마를 사용할 수 있�
 
 :::row:::
     :::column:::
-        ![사용자가 선택한 테마 헤더](images/color/user-accent.svg) ![사용자가 선택한 테마 컬러](images/color/user-selected-accent.svg)
+        ![user-selected accent header](images/color/user-accent.svg)
+        ![user-selected accent color](images/color/user-selected-accent.svg)
     :::column-end:::
     :::column:::
-        ![사용자 지정 테마 헤더](images/color/custom-accent.svg) ![사용자 지정 브랜드 테마 컬러](images/color/brand-color.svg)
+        ![custom accent header](images/color/custom-accent.svg)
+        ![custom brand accent color](images/color/brand-color.svg)
     :::column-end:::
 :::row-end:::
 
@@ -254,13 +256,160 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 
 브러시를 사용하는 방법에 대한 자세한 내용은 [XAML 브러시](brushes.md)를 참조하세요.
 
+## <a name="scoping-system-colors"></a>시스템 색 범위 지정
+
+앱에서 자체 색을 정의 하는 것 외에도 **ColorSchemeResources** 태그를 사용 하 여 앱 전체에서 원하는 지역 우리의 systematized 색상을 또한 범위 수 있습니다. 이 API 뿐만 아니라 색을 지정 하 고 테마 많은 컨트롤 그룹을 한 번에 몇 가지 속성, 뿐만 아니라 제공 하면 다른 많은 시스템 혜택을 설정 하 여 사용자 지정 색을 수동으로 정의 게 일반적으로 수 있습니다.
+
+- **ColorSchemeResources** 를 사용 하 여 설정 된 모든 색 고대비 영향을 주지 않습니다.
+  * 앱을 의미 추가 디자인 이나 개발자 비용 없이도 더 많은 사용자가 액세스할 수 있습니다.
+- 쉽게 색을 설정할 수 밝거나 어두운 널리 퍼져 두 테마에서 API에 대 한 속성을 설정 하 여
+- **ColorSchemeResources** 에 설정 된 색 연속도 해당 시스템 색을 사용 하는 유사한 컨트롤이 모든 변경 되는
+  * 이렇게 하면 해야 함을 일관 된 색 스토리를 앱 전체에서 브랜드의 모양을 유지 하면서
+- 다시 템플릿을 만들 필요 없이 모든 시각적 상태, 애니메이션 및 불투명도 변형 효과
+
+### <a name="how-to-use-colorschemeresources"></a>ColorSchemeResources를 사용 하는 방법
+
+ColorSchemeResources는 시스템 리소스 되는 범위 위치를 알려 주는 API입니다. ColorSchemeResources는 [X:key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), 있는 세 가지 옵션 중 하나를 수행 해야 합니다.
+- Default
+  * [밝게](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 및 [어둡게](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) 둘 다 테마 색 변경 내용을 표시 됩니다.
+- Light
+  * 색 변경을 [밝은 테마](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 에 표시 됩니다. 
+- 어둡게
+  * 색 변경을 [어두운 테마](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) 에 표시 됩니다.
+
+X:key 설정 하면 시스템 또는 앱 테마 색 적절 하 게 변경 두 테마에서 다른 사용자 지정 모양을 원하는 해야 합니다.
+
+### <a name="how-to-apply-scoped-colors"></a>범위가 지정 된 색을 적용 하는 방법
+
+범위는 **ColorSchemeResources** API xaml에서을 통해 리소스를 사용 하면 모든 시스템 색 또는 [테마 리소스](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) 라이브러리에 있고 페이지 또는 컨테이너의 범위 내에서를 재정의 하는 브러시를 수행할 수 있습니다.
+
+예를 들어, 두 시스템 색- **SystemBaseLowColor** 및 **SystemBaseMediumLowColor** 내부 한 그리드를 정의 하 고 다음 페이지에 두 개의 단추를 배치 하는 경우: 해당 그리드 내 1과 하나의 외부:
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Grid.Resources>
+        <ColorSchemeResources x:Key="Default" 
+        SystemBaseLowColor="LightGreen" 
+        SystemBaseMediumLowColor="DarkCyan"/>
+    </Grid.Resources>
+
+    <Buton Content="Button_A"/>
+</Grid>
+<Buton Content="Button_B"/>
+```
+
+적용 된 새로운 색과 **Button_A** 얻게 되 고 **Button_B** 은 우리의 시스템 기본 단추를 처럼 보이는 상태로 유지:
+
+![범위가 지정 된 시스템 색 단추](images/color/scopedcolors_cyan_button.png)
+
+그러나 모든 시스템 색 우리의 다른 컨트롤까지 너무 계단식 이후 **SystemBaseLowColor** 및 **SystemBaseMediumLowColor** 설정 이상의 단추 적용 됩니다. 이 경우 제어 **ToggleButton**, **라디오 단추** 및 **슬라이더** 는 또한 영향을 받을 이러한 시스템 색 변경 처럼 해당 컨트롤에 저장 되어야 exampl 그리드 범위 위에 합니다.
+시스템 색 변경에 *하는 단일 컨트롤에만* 범위를 지정 하려는 경우 **ColorSchemeResources** 해당 컨트롤의 리소스 내에서 정의 하 여이 수행할 수 있습니다.
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Button Content="Button_A">
+        <Button.Resources>
+            <ColorSchemeResources x:Key="Default" 
+                SystemBaseLowColor="LightGreen" 
+                SystemBaseMediumLowColor="DarkCyan"/>
+        </Button.Resources>
+    </Button>
+</Grid>
+<Button Content="Button_B"/>
+```
+기본적으로, 앞으로 정확히 동일한 기능 했지만 이제 눈금 목록에 추가 하는 다른 모든 컨트롤 색 변경을 반영 되지 않습니다. 이러한 시스템 색 **Button_A** 로 범위가 때문입니다.
+
+### <a name="nesting-scoped-resources"></a>범위가 지정 된 중첩 리소스
+
+시스템 색 중첩 수도 및 **ColorSchemeResources** 앱 레이아웃의 태그 내에 중첩 된 요소의 리소스에 배치 하 여 수행 됩니다.
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Grid.Resources>
+        <ColorSchemeResources x:Key="Default"
+            SystemBaseLowColor="LightGreen"
+            SystemBaseMediumLowColor="DarkCyan"/>
+    </Grid.Resources>
+
+    <Button Content="Button_A"/>
+    <Grid x:Name="Grid_B">
+        <Grid.Resources>
+            <ColorSchemeResources x:Key="Default"
+                SystemBaseLowColor="Goldenrod"
+                SystemBaseMediumLowColor="DarkGoldenrod"/>
+        </Grid.Resources>
+
+        <Button Content="Nested Button"/>
+    </Grid>
+</Grid>
+```
+
+이 예제에서는 **Button_A** 상속 하는 색 **Grid_A**의 리소스에서 정의 하 고 **중첩 된 단추** 는 **Grid_B**의 리소스에서 색을 상속 합니다. 에 정의 된 마지막 항목이 없는 경우이 기본 색을 적용 하 고 더 나아가이 따라서 **Grid_B** 내 다른 컨트롤에 배치 하는 확인 하거나 확인 하거나 **Grid_A**의 리소스를 적용 하기 전에 먼저 **Grid_B**의 리소스를 적용 합니다 페이지 또는 앱 수준입니다.
+
+이 임의 개수의 리소스가 색상 정의 하는 중첩 된 요소에 대해 작동 합니다.
+
+### <a name="scoping-with-a-resourcedictionary"></a>ResourceDictionary를 사용 하 여 범위 지정
+
+컨테이너 또는 페이지의 리소스에 제한 되지 하 고 병합 될 수 있는 모든 범위에서 일반적으로 사전 병합는 방식으로 ResourceDictionary도 이러한 시스템 색을 정의할 수 있습니다.
+
+#### <a name="mycustomthemexaml"></a>MyCustomTheme.xaml
+
+먼저, ResourceDictionary 만듭니다. 다음은 ThemeDictionaries 내 **ColorSchemeResources** 배치 하 고 원하는 시스템 색을 재정의:
+
+```xaml
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestApp">
+
+    <ResourceDictionary.ThemeDictionaries>
+
+        <ColorSchemeResources x:Key="Default"
+            SystemBaseLowColor="LightGreen"
+            SystemBaseMediumLowColor="DarkCyan"/>
+        
+    </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>
+```
+
+#### <a name="mainpagexaml"></a>MainPage.xaml
+
+레이아웃에 포함 된 페이지에서 원하는 범위에서 해당 사전 단순히 병합 합니다.
+
+```xaml
+<Grid x:Name="Grid_A">
+    <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="MyCustomTheme.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+    </Grid.Resources>
+             
+    <Button Content="Button_A"/>
+</Grid>
+```
+
+이제 모든 리소스, 테마, 및 색상을 사용자 지정 단일 **MyCustomTheme** 리소스 사전에 배치 되어 레이아웃 태그의 추가 혼란에 걱정할 필요 없이 필요한 경우 범위.
+
+### <a name="other-ways-to-define-color-resources"></a>색 리소스를 정의 하는 다른 방법
+
+ColorSchemeResources에 배치할 시스템 색 및 줄에 있는 것이 아니라 한 래퍼에 직접 정의 대 한 수도 있습니다.
+
+``` xaml
+<ColorSchemeResources x:Key="Dark">
+    <Color x:Key="SystemBaseLowColor">Goldenrod</Color>
+</ColorSchemeResources>
+```
+
 ## <a name="usability"></a>사용 편의성
 
 :::row:::
     :::column:::
-        ![대비 그림](images/color/illo-contrast.svg)
+        ![contrast illustration](images/color/illo-contrast.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: **대비**
+    :::column span="2":::
+        **Contrast**
 
         Make sure that elements and images have sufficient contrast to differentiate between them, regardless of the accent color or theme.
 
@@ -270,9 +419,10 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 
 :::row:::
     :::column:::
-        ![대비 그림](images/color/illo-lighting.svg)
+        ![contrast illustration](images/color/illo-lighting.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: **조명**
+    :::column span="2":::
+        **Lighting**
 
         Be aware that variation in ambient lighting can affect the useability of your app. For example, a page with a black background might unreadable outside due to screen glare, while a page with a white background might be painful to look at in a dark room.
     :::column-end:::
@@ -280,9 +430,10 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 
 :::row:::
     :::column:::
-        ![대비 그림](images/color/illo-colorblindness.svg)
+        ![contrast illustration](images/color/illo-colorblindness.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: **색맹**
+    :::column span="2":::
+        **Colorblindness**
 
         Be aware of how colorblindness could affect the useability of your application. For example, a user with red-green colorblindness will have difficulty distinguishing red and green elements from each other. About **8 percent of men** and **0.5 percent of women** are red-green colorblind, so avoid using these color combinations as the sole differentiator between application elements.
     :::column-end:::

@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261478"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
 
-Microsoft 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 설정 하 고 필요한 세금 양식을 입력 해야 합니다.
+Microsoft Store의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 설정 하 고 필요한 세금 양식을 입력 해야 합니다.
 
 앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에 마음이 하지 않으려면 앱 (또는 추가 기능)을 판매 하는 경우 지급액 계좌를 설정 하 고 해당 시간에 세금 양식을 입력 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
 
@@ -133,7 +133,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 대시보드에서 온라인으로 세금 양식을 완성하고 제출할 수 있습니다. 대부분의 경우 양식을 인쇄해서 우편으로 보낼 필요는 없습니다.
 
 > [!IMPORTANT]
-> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 국가 또는 지역에 가장 잘 하도록 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 하 여 좋습니다.
+> 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 국가 또는 지역에 가장 잘 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 하 여 좋습니다.
 
  
 **세금 프로필을 완성하려면**

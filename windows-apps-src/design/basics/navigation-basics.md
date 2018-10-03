@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209943"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263870"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -30,7 +30,7 @@ ms.locfileid: "4209943"
 
 :::row:::
     :::column:::
-        ![탐색 예제 1](images/nav/nav-1.svg)
+        ![navigation example 1](images/nav/nav-1.svg)
 
         Require users to go through a series of pages in order.
     :::column-end:::
@@ -58,7 +58,7 @@ ms.locfileid: "4209943"
 
 ### <a name="consistency"></a>일관성
 
-탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일 됩니다 탐색 예측 가능 하 고 직관적인 사용자를 위해로 합니다.
+탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일은 탐색 예측 가능 하 고 직관적인 사용자를 위해로 합니다.
 
 ![페이지 구성 요소 이미지](images/nav/page-components.svg)
 
@@ -70,7 +70,7 @@ ms.locfileid: "4209943"
 
 :::row:::
     :::column:::
-        ![권장 사항 예](images/nav/do.svg)
+        ![do example](images/nav/do.svg)
 
         ![navview good](images/nav/navview-good.svg)
 
@@ -99,7 +99,7 @@ ms.locfileid: "4209943"
 
 1. 사용자에 대해 생각하세요. 앱과 각 페이지에서 일반적으로 통과할 경로를 추적하고, 사용자가 이를 통과하는 이유와 사용자가 가고 싶어하는 장소에 대해 생각하세요.
 
-2. 깊은 탐색 계층을 방지 합니다. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
+2. 깊은 탐색 계층 하지 마세요. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
 
 3. "페이지 왕복"을 피합니다. 페이지 왕복은 관련된 콘텐츠가 있지만 탐색하려면 위 단계로 올라갔다가 다시 내려와야 하는 경우를 말합니다.
 
@@ -109,28 +109,28 @@ ms.locfileid: "4209943"
 
 :::row:::
     :::column:::
-        ![플랫 구조로 정렬된 페이지](images/nav/flat-lateral-structure.svg)
+        ![Pages arranged in a flat structure](images/nav/flat-lateral-structure.svg)
     :::column-end:::
-    ::: 열 범위 = "2":::
+    :::column span="2":::
         ### Flat/lateral
 
         In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
 
         We recommend using a flat structure when:
 
-        - The pages can be viewed in any order.
-        - The pages are clearly distinct from each other and don't have an obvious parent/child relationship.
-        - There are less than 8 pages in the group. <br>
-        (When there are more pages, it might be difficult for users to understand how the pages are unique or to understand their current location within the group. If you don't think that's an issue for your app, go ahead and make the pages peers. Otherwise, consider using a hierarchical structure to break the pages into two or more smaller groups.)
+        - 순서에 관계없이 페이지를 볼 수 있습니다.
+        - 페이지끼리 명확히 구분이 가며 명확한 부모/자식 관계가 없습니다.
+        - 그룹은 페이지 수가 8 미만입니다. <br>
+        (그룹의 7페이지 이상이 있는 경우 페이지가 고유한 페이지인지를 이해하거나 그룹 내에서의 현재 위치를 파악하기 어려울 수 있습니다. 이러한 것이 앱에 문제가 되지 않는다면 계속 진행하고 페이지를 피어로 만듭니다. 그러지 않은 경우 계층 구조를 사용하여 페이지를 둘 이상의 더 작은 그룹으로 구분하는 것이 좋습니다.)
 
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![계층으로 정렬된 페이지](images/nav/hierarchical-structure.svg)
+        ![Pages arranged in a hierarchy](images/nav/hierarchical-structure.svg)
     :::column-end:::
-    ::: 열 범위 = "2":::
+    :::column span="2":::
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
@@ -139,26 +139,26 @@ ms.locfileid: "4209943"
 
         We recommend a hierarchical structure when:
         
-        - Pages should be traversed in a specific order.
-        - There is a clear parent-child relationship between pages.
-        - There are more than 7 pages in the group.
+        - 페이지를 특정한 순서로 통과할 수 있어야 합니다.
+        - 페이지 사이에는 확실한 부모 자식 관계가 있습니다.
+        - 그룹에 8페이지 이상이 포함되어 있습니다.
         
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![하이브리드 구조를 사용하는 앱](images/nav/combining-structures.svg)
+        ![an app with a hybrid structure](images/nav/combining-structures.svg)
     :::column-end:::
-    ::: 열 범위 = "2":::
+    :::column span="2":::
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
 
         If your navigation structure has multiple levels, we recommend that peer-to-peer navigation elements only link to the peers within their current subtree. Consider the adjacent illustration, which shows a navigation structure that has two levels:
 
-        - At level 1, the peer-to-peer navigation element should provide access to pages A, B, C, and D.
-        - At level 2, the peer-to-peer navigation elements for the A2 pages should only link to the other A2 pages. They should not link to level 2 pages in the C subtree.
+        - 수준 1의 경우 피어 투 피어 탐색 요소는 A, B, C 및 D 페이지에 대한 액세스를 제공해야 합니다.
+        - 수준 2에서 A2 페이지에 대한 피어 투 피어 탐색 요소는 다른 A2 페이지에만 연결되어야 하며 C 하위 트리의 수준 2 페이지에는 연결되지 않아야 합니다.
     :::column-end:::
 :::row-end:::
 
@@ -168,67 +168,72 @@ ms.locfileid: "4209943"
 
 :::row:::
     :::column:::
-        ![프레임 이미지](images/nav/thumbnail-frame.svg)
+        ![Frame image](images/nav/thumbnail-frame.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: **프레임** [](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+    :::column span="2":::
+        [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
         With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![탭 및 피벗 이미지](images/nav/thumbnail-tabs-pivot.svg)
+        ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: **상단 탐색 및 탭** [](../controls-and-patterns/navigationview.md)
+    :::column span="2":::
+        [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)
 
         Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
         
         Use top navigation when:
 
-        - You want to show all navigation options on the screen.
-        - You desire more space for your app's content.
-        - Icons cannot clearly describe your navigation categories.
+        - 화면의 탐색 옵션을 모두 표시 하려고 합니다.
+        - 원하는 앱의 콘텐츠에 대 한 더 많은 공간.
+        - 아이콘 탐색 범주를 명확 하 게 설명 수 없습니다.
         
-        Use tabs when:
+        사용 하 여 탭 하는 경우:
 
-        - You want to preserve navigation history and page state.
-        - You expect users to switch between tabs frequently.
+        - 탐색 기록 및 페이지 상태를 유지 하려고 합니다.
+        - 사용자가 탭 자주 전환할 것으로 예상 합니다.
 
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![navview 이미지](images/nav/thumbnail-navview.svg)
+        ![navview image](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: [ **왼쪽된 탐색**](../controls-and-patterns/navigationview.md)
+    :::column span="2":::
+        [**Left navigation**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         
-        - The pages exist at the top level.
-        - There are many navigation items (more than 5)
-        - You don't expect users to switch between pages frequently.
+        - 페이지가 최상위 수준에 있습니다.
+        - 탐색 항목이 많습니다 (5 개)
+        - 사용자가 페이지 간을 자주 전환할 것으로 예상되지 않습니다.
         
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![마스터 세부 정보 이미지](images/nav/thumbnail-master-detail.svg)
+        ![Master details image](images/nav/thumbnail-master-detail.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: [ **마스터/세부 정보**](../controls-and-patterns/master-details.md)
+    :::column span="2":::
+        [**Master/details**](../controls-and-patterns/master-details.md)
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
         
-        - You expect users to switch between child items frequently.
-        - You want to enable the user to perform high-level operations, such as deleting or sorting, on individual items or groups of items, and also want to enable the user to view or update the details for each item.
+        - 사용자가 자식 항목 간을 자주 전환할 것으로 예상됩니다.
+        - 개별 항목 또는 항목 그룹에 대해 삭제 또는 정렬과 같은 상위 수준 작업을 수행할 수 있도록 하거나 각 항목에 대한 세부 정보를 보거나 업데이트할 수 있도록 하려고 합니다.
 
-        Master/details is well suited for email inboxes, contact lists, and data entry.
+        마스터/세부 요소는 전자 메일 받은 편지함, 연락처 목록 및 데이터 항목에 적합합니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![하이퍼링크 및 단추 이미지](images/nav/thumbnail-hyperlinks-buttons.svg)
+        ![Hyperlinks and buttons image](images/nav/thumbnail-hyperlinks-buttons.svg)
     :::column-end:::
-    ::: 열 범위 = "2"::: **하이퍼링크** [](../controls-and-patterns/hyperlinks.md)
+    :::column span="2":::
+        [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)
 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::

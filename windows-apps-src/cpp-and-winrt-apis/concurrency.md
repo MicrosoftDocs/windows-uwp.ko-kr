@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
 ms.openlocfilehash: fab1e83f212675b2c0bb28e0b1ae449f271edec7
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266310"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 동시성 및 비동기 작업
 > [!NOTE]
@@ -69,7 +69,7 @@ int main()
 C++/WinRT는 C++ 코루틴을 프로그래밍 모델에 통합하여 결과를 협조적으로 기다릴 수 있는 자연스러운 방법을 제공합니다. 사용자는 코루틴을 작성하여 고유의 Windows 런타임 비동기 작업을 생성할 수 있습니다. 아래 코드 예제에서는 **ProcessFeedAsync**가 코루틴입니다.
 
 > [!NOTE]
-> **Get** 함수가 존재 C + + /winrt 프로젝션 모든 C + 내에서 함수를 호출할 수 있도록 **winrt::Windows::Foundation::IAsyncAction**입력 + WinRT 프로젝트. 실제 Windows 런타임 형식 **IAsyncAction**응용 프로그램 이진 인터페이스 (ABI) 표면의 일부가 아니기 **가져오기** 때문에 나열 됩니다 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 인터페이스의 멤버 함수를 찾지 않습니다.
+> **Get** 함수가 존재 C + + /winrt 프로젝션 모든 C + 내에서 함수를 호출할 수 있도록 **winrt::Windows::Foundation::IAsyncAction**입력 + WinRT 프로젝트. 실제 Windows 런타임 형식 **IAsyncAction**응용 프로그램 이진 인터페이스 (ABI) 표면에 속하지 않는 **가져오기** 때문에 나열 됩니다 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 인터페이스의 멤버 함수를 찾지 않습니다.
 
 ```cppwinrt
 // main.cpp
@@ -322,7 +322,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 
 ## <a name="reporting-progress"></a>진행률 보고
 
-사용자 코 루틴이 [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)또는 [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)중 하나를 반환 하는 경우 다음 **winrt::get_progress_token** 함수에 의해 반환 되는 개체를 검색을 사용 하 여 진행률으로 다시 진행률 보고를 처리기입니다. 코드 예제는 다음과 같습니다.
+사용자 코 루틴이 [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)또는 [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)중 하나를 반환 하는 경우 다음 **winrt::get_progress_token** 함수에서 반환 된 개체를 검색 하 수 진행률을 보고는 진행률을 다시 사용 처리기입니다. 코드 예제는 다음과 같습니다.
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
@@ -380,7 +380,7 @@ int main()
 ```
 
 > [!NOTE]
-> 비동기 작업 또는 작업에 대 한 둘 이상의 *완료 처리기* 의 구현 올바르지 않습니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다 있는 경우 두 번째 실패 합니다. 어느 다음 두 종류의 완료 처리기 중 하나는 적절 한; 두 동일한 비동기 개체에 대 한 합니다.
+> 비동기 작업 또는 작업에 대 한 개 이상의 *완료 처리기* 의 구현 올바르지 않습니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다 있는 경우 두 번째 실패 합니다. 어느 다음 두 종류의 완료 처리기 중 하나는 적절 한; 두 동일한 비동기 개체에 대 한 합니다.
 
 ```cppwinrt
 auto async_op_with_progress{ CalcPiTo5DPs() };

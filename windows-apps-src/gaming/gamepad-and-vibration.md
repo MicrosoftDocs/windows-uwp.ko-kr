@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 게임, 게임 패드, 진동
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206613"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266278"
 ---
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 
@@ -33,7 +33,7 @@ ms.locfileid: "4206613"
 
 Xbox 무선 컨트롤러 및 Xbox 무선 컨트롤러 S와 같은 게임 패드는 범용 게임 입력 장치입니다. 게임 패드는 Xbox One의 표준 입력 장치로, 키보드와 마우스를 선호하지 않는 Windows 게이머가 사용하는 경우가 많습니다. 게임 패드는 Windows 10 및 Xbox UWP 앱에서 [Windows.Gaming.Input][] 네임스페이스로 지원됩니다.
 
-방향 패드 (또는 D 패드); Xbox One 게임 패드는 설치 되어 있습니다. **A**, **B**, **X**, **Y**, **보기**및 **메뉴** 단추 왼쪽 및 오른쪽 섬, 범퍼 및 트리거 총 4 개의 진동 모터가 하 고 있습니다. 두 섬스틱(thumbstick)은 X 및 Y 축에서 이중 아날로그 판독값을 제공하며, 안쪽으로 눌리면 버튼 역할도 합니다. 각 트리거는 얼마나 것은 값을 가져오는 다시 나타내는 아날로그 판독값을 제공 합니다.
+Xbox One 게임 패드는 장착 되어는 방향 패드 (또는 D 패드); **A**, **B**, **X**, **Y**, **보기**및 **메뉴** 단추 왼쪽 및 오른쪽 섬, 범퍼 및 트리거 총 4 개의 진동 모터가 하 고 있습니다. 두 섬스틱(thumbstick)은 X 및 Y 축에서 이중 아날로그 판독값을 제공하며, 안쪽으로 눌리면 버튼 역할도 합니다. 각 트리거는 얼마나 것 끌어오는 다시 나타내는 아날로그 판독값을 제공 합니다.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
@@ -183,7 +183,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-다음 예제에서는 제거 된 게임 패드의 추적을 중지 합니다. 제거할 때 추적 하는 게임 패드 어떻게 처리 해야 이 코드만 하나의 게임 패드에서 입력을 추적 하 고 간단 하 게 설정 하는 예를 들어 `nullptr` 제거 됩니다. 모든 프레임에 게임 패드 비활성 상태일 경우 및 업데이트는 게임 패드 컨트롤러에 연결 되 고 연결이 끊어진 경우의 입력을 수집 중인 수를 확인 해야 합니다.
+다음 예제에서는 제거 된 게임 패드의 추적을 중지 합니다. 제거할 때 추적 하는 게임 패드 어떻게 처리 해야 이 코드만 한 게임 패드에서 입력을 추적 하 고 간단 하 게 설정 하는 예를 들어 `nullptr` 제거 됩니다. 모든 프레임에 게임 패드 비활성 상태일 경우 및는 게임 패드 컨트롤러에 연결 되 고 연결이 끊어진 경우의 입력을 수집 하 하면 업데이트를 확인 해야 합니다.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -257,7 +257,7 @@ GamepadReading reading = gamepad.GetCurrentReading();
 
 ### <a name="reading-the-thumbsticks"></a>섬스틱(thumbstick) 읽기
 
-각 섬스틱(thumbstick)은 X 축과 Y 축에 -1.0과 +1.0 사이의 아날로그 판독값을 제공합니다. X 축에서 -1.0 값은 맨 왼쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 오른쪽 위치에 해당합니다. Y 축에서 -1.0 값은 맨 아래쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 위쪽 위치에 해당합니다. 양 축 값은 약 0.0 스틱이 중앙 위치에 있지만 다릅니다 정밀 값은 후속 판독값;까지 이러한 변동을 완화 하기 위한 전략이이 섹션의 뒷부분에서 설명 됩니다.
+각 섬스틱(thumbstick)은 X 축과 Y 축에 -1.0과 +1.0 사이의 아날로그 판독값을 제공합니다. X 축에서 -1.0 값은 맨 왼쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 오른쪽 위치에 해당합니다. Y 축에서 -1.0 값은 맨 아래쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 위쪽 위치에 해당합니다. 양 축 값은 약 0.0 때 스틱이 중앙 위치에 이지만 다릅니다 정확한 값도; 후속 판독값 마다 이러한 변동을 완화 하기 위한 전략이이 섹션의 뒷부분에 설명 되어 있습니다.
 
 왼쪽 섬스틱(thumbstick)의 X 축 값은 [GamepadReading][] 구조의 `LeftThumbstickX` 속성에서 읽어들이고, Y 축 값은 `LeftThumbstickY` 속성에서 읽어들입니다. 오른쪽 섬스틱(thumbstick)의 X 축 값은 `RightThumbstickX` 속성에서 읽어들이고, Y 축 값은 `RightThumbstickY` 속성에서 읽어들입니다.
 
@@ -335,7 +335,7 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>버튼 읽기
 
-각 게임 패드 단추&mdash;4 방향 D-패드, 왼쪽 및 오른쪽 범퍼, 왼쪽 및 오른쪽 섬 누르기, **A**, **B**, **X**, **Y**, **보기**및 **메뉴**&mdash;디지털 읽기를 제공 합니다. 누름 (아래) 또는 놓음 (위)에 있는지 여부를 나타냅니다. 버튼 판독값은 효율을 위해 개별 부울 값으로 표현 되지 않는 대신, 모두 압축 [GamepadButtons][] 열거로 표현 되는 단일 비트 필드로 합니다.
+각 게임 패드 버튼&mdash;4 방향 D-패드, 왼쪽 및 오른쪽 범퍼, 왼쪽 및 오른쪽 섬 스틱 누르기, **A**, **B**, **X**, **Y**, **보기**및 **메뉴**&mdash;디지털 읽기를 제공 합니다. 누름 (아래) 또는 놓음 (위)가 있는지 여부를 나타냅니다. 버튼 판독값은 효율을 위해 개별 부울 값으로 표현 되지 않는 대신, 모두 압축 [GamepadButtons][] 열거로 표현 되는 단일 비트 필드로 합니다.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
@@ -390,7 +390,7 @@ Xbox One 게임 패드에는 총 4개의 독립적 진동 모터가 탑재되어
 
 게임 패드 진동은 [Gamepad][] 클래스의 [Vibration][] 속성을 통해 제어됩니다. `Vibration` 부동 소수점 값 4개로 이루어진 [GamepadVibration][] 구조의 인스턴스입니다. 각 값은 모터 중 하나의 강도를 나타냅니다.
 
-하지만의 멤버는 `Gamepad.Vibration` 속성을 직접 수정할 수 있는, 별도 초기화 하는 것이 좋습니다. `GamepadVibration` 값을 및에 복사 하는 인스턴스는 `Gamepad.Vibration` 실제 모터 강도 한 번에 변경 하는 속성.
+하지만의 구성원은 `Gamepad.Vibration` 속성을 직접 수정할 수, 별도 초기화 하는 것이 좋습니다. `GamepadVibration` 값을 및에 복사 하는 인스턴스는 `Gamepad.Vibration` 실제 모터 강도 모두 한 번에 변경 하는 속성.
 
 다음 예제에서는 모터 강도를 모두 한 번에 변경하는 방법을 보여 줍니다.
 

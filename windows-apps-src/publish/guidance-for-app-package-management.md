@@ -4,18 +4,18 @@ Description: Learn how your app's packages are made available to your customers,
 title: 앱 패키지 관리 지침
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b0b6315b1177138c3ede7834e2dbc792ee106dd
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: a43f3b4c5684d93ea6986c4d1f1e4dae46c1a959
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266198"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
@@ -99,7 +99,7 @@ ms.locfileid: "4205143"
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>이전에 지원되던 디바이스 패밀리용 패키지 제거
 
-경우 대해 특정 [디바이스 패밀리](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 앱 이전에 지원 메시지가 표시 됩니다 **패키지** 페이지에서 변경 내용을 저장 하기 전에 의도 인지 확인 하려면 패키지를 모두 제거 합니다.
+경우 대해 특정 [디바이스 패밀리](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 앱 이전에 지원 메시지가 표시 됩니다 **패키지** 페이지에서 변경 내용을 저장 하기 전에 의도 인지 확인 하는 모든 패키지를 제거 합니다.
 
 모든 앱에서 이전에 지원 되는 디바이스 패밀리에서 실행 될 수 있는 패키지를 제거 하는 제출을 게시 하면 새로운 고객이 해당 디바이스 패밀리에서 앱을 구입할 수 없습니다. 항상 나중에 또 다른 업데이트를 게시하여 해당 디바이스 패밀리용 패키지를 다시 제공할 수 있습니다.
 
@@ -110,30 +110,11 @@ ms.locfileid: "4205143"
 
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>이전에 게시된 앱에 Windows 10용 패키지 추가
 
-스토어에 Windows 8.x 및/또는 Windows Phone 8.x를 대상으로 하는 앱이 있는 경우 [패키지](upload-app-packages.md) 단계 중 Windows 10용 앱을 업데이트하려면 새 제출을 만들고 UWP .appxupload 패키지를 업로드합니다. 앱 인증 프로세스를 거치면 고객에 게 이미 앱 및 Windows 10은 이제는 스토어에서 UWP 패키지를 업데이트로 받이 됩니다. Windows 10의 고객도 UWP 패키지를 새로 구매할 수 있습니다.
+Windows에 대 한 패키지가 포함 된 저장소에는 앱이 있는 경우 8.x 및/또는 Windows Phone 8.x 하려면 Windows 10 용 앱을 업데이트 하 고 새 제출을 만들고 UWP.msixupload 또는.appxupload 패키지를 업로드 [패키지](upload-app-packages.md) 단계 중에 추가 합니다. 앱 인증 프로세스를 거치면 UWP 패키지를 Windows 10에서 고객이 새 구입에 사용할 수 있는 됩니다.
 
 > [!NOTE]
 > Windows 10의 고객이 UWP 패키지를 구입한 후에는 이전 OS 버전용 패키지를 사용하여 해당 고객을 롤백할 수 없습니다. 
 
-Windows 10 패키지의 버전 번호는 포함할(또는 이전에 게시한 해당 OS 버전용 패키지) 모든 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지의 버전 번호보다 높아야 합니다. 자세한 내용은 [패키지 버전 번호](package-version-numbering.md)를 참조하세요.
+Note Windows 10 패키지의 버전 번호를 사용한 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지 보다 높아야 합니다. 자세한 내용은 [패키지 버전 번호](package-version-numbering.md)를 참조하세요.
 
 Store의 UWP 앱 패키징에 대한 자세한 내용은 [앱 패키징](../packaging/index.md)을 참조하세요.
-
-> [!IMPORTANT]
-> 범용 디바이스 패밀리를 대상으로 하는 패키지를 제공한 경우 이전 운영 체제(Windows Phone 8, Windows 8.1 등)에 앱이 이미 있는 모든 고객은 Windows 10으로 업그레이드하면 Windows 10 패키지로 업데이트됩니다.
-> 
-> 이 발생 이후 제출의 [디바이스 패밀리 가용성](device-family-availability.md) 단계에서 특정 디바이스 패밀리를 제외한 경우에는 섹션은 새 가져오기에만 적용 합니다. 일부 고객이 유니버설 Windows 10 패키지를 가져오지 못하도록 하려면 지원할 특정 장치 패밀리를 포함하도록 appx 매니페스트의 [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) 요소를 업데이트해야 합니다.
-> 
-> 예를 들어 새 UWP 앱을 다운로드할 Windows 10 데스크톱 장치를 업그레이드 하는 Windows 8 및 Windows 8.1 고객 하지만 Windows Phone 고객에 게는 이제 이전에 패키지를 유지 하도록 Windows 10 Mobile 장치에서 만든 availabl 원하는 e (Windows Phone 8 또는 Windows Phone 8.1 대상). 이렇게 하려면 해야 합니다 (데스크톱 디바이스 패밀리)에 대 한 **Windows.Desktop** 을 포함 하도록 appx 매니페스트의 [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) 업데이트 하는 **Windows.Universal** 값 (유니버설 디바이스 패밀리)으로 두지 Microsoft Visual Studio에 기본적으로 매니페스트에 포함 됩니다. 유니버설 또는 모바일 디바이스 패밀리를 대상으로 하는 UWP 패키지를 제출하지 마세요(**Windows.Universal** 또는 **Windows.Universal**). Windows 10 Mobile 고객이 UWP 패키지를 가져오지 못합니다.
-
-
-## <a name="maintaining-package-compatibility-for-windows-phone-81"></a>Windows Phone 8.1용 패키지 호환성 유지 관리
-
-이전에 Windows Phone 8.1용으로 게시된 앱을 업데이트할 때 패키지 형식에 대한 특정 요구 사항이 적용됩니다.
-
--   앱에서 Windows Phone 8.1 패키지를 게시한 후에는 이후의 모든 업데이트에도 Windows Phone 8.1 패키지를 포함해야 합니다.
--   앱에서 Windows Phone 8.1 XAP를 게시한 후에는 후속 업데이트에 Windows Phone 8.1 XAP, Windows Phone 8.1 appx 또는 Windows Phone 8.1 appxbundle이 있어야 합니다.
--   앱에서 Windows Phone 8.1 XAP를 게시한 경우 후속 업데이트에 Windows Phone 8.1 .appx 또는 Windows Phone 8.1 .appxbundle이 있어야 합니다. 즉, Windows Phone 8.1 XAP는 허용되지 않습니다. 이는 Windows Phone 8.1.appx를 포함하는.appxupload에도 적용됩니다.
--   앱에서 Windows Phone 8.1 .appxbundle을 게시한 후에는 후속 업데이트에 Windows Phone 8.1 .appxbundle이 있어야 합니다. 즉, Windows Phone 8.1 XAP 또는 Windows Phone 8.1 .appx는 허용되지 않습니다. 이는 Windows Phone 8.1.appxbundle을 포함하는.appxupload에도 적용됩니다.
-
-이러한 규칙을 따르지 않으면 패키지 업로드 오류가 발생하여 제출을 완료하지 못할 수 있습니다.

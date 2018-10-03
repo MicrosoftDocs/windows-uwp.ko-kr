@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: d613cb87297cdc810e4d8e16dfeb36d4804678d1
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261162"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통한 API 작성
 
@@ -265,7 +265,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **확인** 프로젝션 된 형식 인스턴스를 반환합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
 
-**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 다른 프로젝션 된 형식이 나도 사용 하거나 반환 하는 인터페이스 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))에 쿼리를 호출할 수 있습니다.
+**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 다른 프로젝션 된 형식 또는 인터페이스는 또한 사용 하거나 반환할 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))에 쿼리를 호출할 수 있습니다.
 
 ```cppwinrt
 istringable.ToString();
@@ -288,7 +288,7 @@ iclosable.Close();
 인터페이스 개체가 있고, 이 개체가 구현체의 인터페이스라는 사실도 알고 있는 경우에는 [**from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 함수 템플릿을 사용해 구현체로 돌아갈 수 있습니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
 
 > [!NOTE]
-> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 호출할 수 있습니다 [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi)대신 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 합니다.
+> [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우 나중에 호출할 수 있습니다 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi)대신 합니다.
 
 예를 들면 다음과 같습니다. [구현 **BgLabelControl** 사용자 지정 컨트롤 클래스에](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)에서는 또 다른 예입니다.
 

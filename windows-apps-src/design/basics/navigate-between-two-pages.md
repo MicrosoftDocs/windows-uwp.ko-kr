@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 02b2c0d24c3f963025774c87c0c0a1c588c8a249
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264074"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 

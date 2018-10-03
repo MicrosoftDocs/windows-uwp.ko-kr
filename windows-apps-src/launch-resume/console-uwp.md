@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4c1b1df8ad29635f38ae5b373685d3504a4eb60
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208505"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262794"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>유니버설 Windows 플랫폼 콘솔 앱 만들기
 

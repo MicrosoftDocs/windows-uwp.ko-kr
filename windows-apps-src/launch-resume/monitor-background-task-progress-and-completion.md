@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ef57c6293b37f91653b5f825881b1446e38a824b
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205005"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263444"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 모니터링
 

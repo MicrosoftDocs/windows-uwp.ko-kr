@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261102"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 

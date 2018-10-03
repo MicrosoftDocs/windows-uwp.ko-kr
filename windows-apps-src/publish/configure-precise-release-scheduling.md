@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 일정, 발매 날짜, 날짜, 실행
 ms.localizationpriority: medium
 ms.openlocfilehash: 84466f907bad7e38506e1bf81b89eb631675093c
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259598"
 ---
 # <a name="configure-precise-release-scheduling"></a>정확한 릴리스 일정 구성
 

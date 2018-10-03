@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, 제품 보기, 제품 권한 부여
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a0766830bc2110dffcf5baf886e8ccb98ac6446
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261416"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -39,10 +39,10 @@ ms.locfileid: "4209835"
 4.  클라이언트 Windows 앱에서 사용자의 서비스로 다시 [Microsoft Store ID 키를 만들고](#step-4) 이 키 통과 현재 사용자의 id를 나타내는 합니다.
 5.  필요한 Azure AD 액세스 토큰 및 Microsoft Store ID 키를 획득한 후 [서비스에서 Microsoft Store 컬렉션 API 또는 구매 API를 호출합니다](#step-5).
 
-이 종단 간 프로세스에서는 서로 다른 작업을 수행 하는 두 가지 소프트웨어 구성 요소:
+이 종단 간 프로세스 서로 다른 작업을 수행 하는 두 가지 소프트웨어 구성 요소를 포함 됩니다.
 
-* **서비스**입니다. 비즈니스 환경의 컨텍스트에서 안전 하 게 실행 되는 응용 프로그램 이며 선택한 모든 개발 플랫폼을 사용 하 여 구현할 수 있습니다. 서비스는 Azure AD 액세스 토큰을 만드는 필요한 시나리오에 대 한 Microsoft Store 컬렉션 REST Uri를 호출 하는 것에 대 한 API 및 구매 API에 대 한 해야 합니다.
-* **클라이언트 Windows 앱**입니다. 액세스 하 고 (앱의 추가 포함) 고객 자격 정보를 관리 하려는 앱입니다. 이 앱은 Microsoft Store 컬렉션 API를 호출 하 고 구매 API 서비스에서 필요한 Microsoft Store ID 키를 만들어야 합니다.
+* **서비스**입니다. 이 비즈니스 환경의 컨텍스트에서 안전 하 게 실행 되는 응용 프로그램 및 선택한 모든 개발 플랫폼을 사용 하 여 구현할 수 있습니다. 서비스는 Azure AD 액세스 토큰을 만드는 필요한 시나리오에 대 한 Microsoft Store 컬렉션 REST Uri를 호출 하는 것에 대 한 API 및 구매 API에 대 한 해야 합니다.
+* **클라이언트 Windows 앱**입니다. 액세스 하 고 (앱에 대 한 추가 기능을 포함) 고객 자격 정보를 관리 하려는 앱입니다. 이 앱은 Microsoft Store 컬렉션 API를 호출 하 고 구매 API 서비스에서 필요한 Microsoft Store ID 키를 만들어야 합니다.
 
 <span id="step-1"/>
 
@@ -55,11 +55,11 @@ ms.locfileid: "4209835"
 
 1.  아직 수행 하지 않은 경우 등록 하려면 [Azure Active Directory와 통합 응용 프로그램](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) 의 지침에 따라 한 **웹 응용 프로그램 / API** Azure AD 응용 프로그램.
     > [!NOTE]
-    > 응용 프로그램을 등록 하는 경우 선택 해야 **웹 응용 프로그램 / API** 응용 프로그램 입력 응용 프로그램에 대 한 키 ( *클라이언트 암호*라고도 함)를 검색할 수 있도록 합니다. Microsoft Store 컬렉션 API 또는 구매 API를 호출하려면 이후 단계에서 Azure AD의 액세스 토큰을 요청할 때 클라이언트 암호를 제공해야 합니다.
+    > 응용 프로그램을 등록 하면 선택 해야 **웹 응용 프로그램 / API** 응용 프로그램 입력 응용 프로그램에 대 한 키 ( *클라이언트 암호*라고도 함)를 검색할 수 있도록 합니다. Microsoft Store 컬렉션 API 또는 구매 API를 호출하려면 이후 단계에서 Azure AD의 액세스 토큰을 요청할 때 클라이언트 암호를 제공해야 합니다.
 
 2.  [Azure 관리 포털](https://portal.azure.com/)에서 **Azure Active Directory**로 이동 합니다. 디렉터리를 선택 하 고 왼쪽된 탐색 창에서 **앱 등록** 을 클릭 한 다음 응용 프로그램을 선택 합니다.
-3.  응용 프로그램의 주 등록 페이지로 이동 합니다. 이 페이지에서 나중에 사용할 **응용 프로그램 ID** 값을 복사 합니다.
-4.  나중에 필요할 수 있는 키를 만듭니다 (이라는이 기능은 모든 *클라이언트 암호*). 왼쪽된 창에서 **설정** 및 **키**를 클릭 합니다. 이 페이지에서 키를 [만드는](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis)단계를 완료 합니다. 나중에 사용할이 키를 복사 합니다.
+3.  응용 프로그램의 주요 등록 페이지로 이동 합니다. 이 페이지에서 나중에 사용할 **응용 프로그램 ID** 값을 복사 합니다.
+4.  나중에 필요할 수 있는 키를 만듭니다 (이라는이 기능은 모든 *클라이언트 암호*). 왼쪽된 창에서 **설정** 및 **키**를 클릭 합니다. 이 페이지에서 키를 [만드는](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis)단계를 완료 합니다. 나중에 사용할이이 키를 복사 합니다.
 5.  [응용 프로그램 매니페스트](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest)를 몇 가지 필수 대상 그룹 Uri를 추가 합니다. 왼쪽된 창에서 **매니페스트**를 클릭 합니다. **편집**을 대체 합니다 `"identifierUris"` 섹션을 다음 텍스트로 및 **저장**을 클릭 합니다.
 
     ```json
@@ -157,7 +157,7 @@ Microsoft Store 컬렉션 API 또는 구매 API에서 메서드를 호출하려�
 
   * 앱에서 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스의 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용하여 앱에서 바로 구매를 관리하는 경우 [CurrentApp.GetCustomerCollectionsIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomercollectionsidasync) 메서드를 사용합니다.
 
-    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 사용자 ID (사용자 ID 됩니다 em 새 Microsoft Store ID 키를 사용 하 여 현재 사용자를 연결 하는 데 *publisherUserId* 매개 변수에 전달할 수에 현재 앱의 게시자로 관리 하는 서비스의 컨텍스트에서 익명 사용자 Id를 유지 하는 경우 bedded 키에서). 그렇지 않은 경우 Microsoft Store ID 키를 사용 하 여 사용자 ID를 연결할 필요가 없습니다 *publisherUserId* 매개 변수에 문자열 값을 전달할 수 있습니다.
+    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 사용자 ID (사용자 ID 됩니다 em 새 Microsoft Store ID 키를 사용 하 여 현재 사용자를 연결 하는 데 *publisherUserId* 매개 변수를도 전달할 수에 현재 앱의 게시자로 관리 하는 서비스의 컨텍스트에서 익명 사용자 Id를 유지 하는 경우 bedded 키에서). 그렇지 않은 경우 Microsoft Store ID 키를 사용 하 여 사용자 ID를 연결할 필요가 없습니다 *publisherUserId* 매개 변수에 문자열 값을 전달할 수 있습니다.
 
 3.  앱에서 Microsoft Store ID 키를 성공적으로 만들면 키를 다시 서비스로 전달합니다.
 
@@ -175,7 +175,7 @@ Microsoft Store 컬렉션 API 또는 구매 API에서 메서드를 호출하려�
 
   * 앱에서 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스에 [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용하여 앱에서 바로 구매를 관리하는 경우 [CurrentApp.GetCustomerPurchaseIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomerpurchaseidasync) 메서드를 사용합니다.
 
-    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 사용자 ID (사용자 ID 됩니다 em 새 Microsoft Store ID 키를 사용 하 여 현재 사용자를 연결 하는 데 *publisherUserId* 매개 변수에 전달할 수에 현재 앱의 게시자로 관리 하는 서비스의 컨텍스트에서 익명 사용자 Id를 유지 하는 경우 bedded 키에서). 그렇지 않은 경우 Microsoft Store ID 키를 사용 하 여 사용자 ID를 연결할 필요가 없습니다 *publisherUserId* 매개 변수에 문자열 값을 전달할 수 있습니다.
+    메서드의 *serviceTicket* 매개 변수에 Azure AD 액세스 토큰을 전달합니다. 사용자 ID (사용자 ID 됩니다 em 새 Microsoft Store ID 키를 사용 하 여 현재 사용자를 연결 하는 데 *publisherUserId* 매개 변수를도 전달할 수에 현재 앱의 게시자로 관리 하는 서비스의 컨텍스트에서 익명 사용자 Id를 유지 하는 경우 bedded 키에서). 그렇지 않은 경우 Microsoft Store ID 키를 사용 하 여 사용자 ID를 연결할 필요가 없습니다 *publisherUserId* 매개 변수에 문자열 값을 전달할 수 있습니다.
 
 3.  앱에서 Microsoft Store ID 키를 성공적으로 만들면 키를 다시 서비스로 전달합니다.
 
@@ -204,7 +204,7 @@ Microsoft Store 컬렉션 API 또는 구매 API에서 메서드를 호출하려�
 
 ### <a name="diagram"></a>다이어그램
 
-다음 다이어그램은 서비스에서 Microsoft Store 컬렉션 API 또는 구매 API에서에서 메서드를 호출 하는 프로세스를 설명 합니다.
+다음 다이어그램에서는 서비스에서 Microsoft Store 컬렉션 API 또는 구매 API에서에서 메서드를 호출 하는 프로세스를 설명 합니다.
 
   ![컬렉션 또는으로 API 호출 합니다.](images/b2b-2.png)
 

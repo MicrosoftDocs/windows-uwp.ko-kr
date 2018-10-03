@@ -5,7 +5,7 @@ title: 방향 및 무게- UWP 앱의 애니메이션
 label: Directionality and gravity
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 05/19/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,17 +14,14 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: a5216e81bc556a2e761e88b071e988bf6e4f457e
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: b61abf00d5ab8820457742f16feb9b496b7d7d1c
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265812"
 ---
 # <a name="directionality-and-gravity"></a>방향 및 무게
-
-> [!IMPORTANT]
-> 이 문서에서는 아직 출시되지 않아 상업적으로 출시하기 전에 크게 수정될 수 있는 기능에 대해 설명합니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.
 
 방향 신호는 환경 전반에서 사용자의 멘탈 모델 여정을 구체화하는 데 도움이 됩니다. 모든 동작의 방향이 공간의 연속성 및 공간에서 개체의 무결성을 모두 지원하는지 여부는 중요합니다.
 
@@ -32,7 +29,9 @@ ms.locfileid: "1843892"
 
 ## <a name="direction-of-movement"></a>동작 방향
 
-:::row::: :::column::: 동작 방향이 물리적 움직임에 해당합니다. 자연에서처럼 개체는 세계 축 X, Y, Z의 어디든지 이동할 수 있습니다. 다음은 화면에서 개체의 동작에 대한 생각입니다.
+:::row:::
+    :::column:::
+        Direction of movement corresponds to physical motion. Just like in nature, objects can move in any world axis - X,Y,Z. This is how we think of the movement of objects on the screen.
 
         When you move objects, avoid unnatural collisions. Keep in mind where objects come from and go to, and alway support higher level constructs that may be used in the scene, such as scroll direction or layout hierarchy.
     :::column-end:::
@@ -63,28 +62,39 @@ ms.locfileid: "1843892"
 
 고려할 이동 방향은 4가지가 있습니다.
 
-:::row::: :::column::: **앞-안**
+:::row:::
+    :::column:::
+        **Forward-In**
 
         Celebrate content entering the scene in a manner that does not collide with outgoing content. Content decelerates into the scene.
     :::column-end:::
     :::column:::
         ![direction forward in](images/forwardIN.gif)
     :::column-end:::
-:::row-end::: :::row::: :::column::: **앞-밖**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Forward-Out**
 
         Content exits quickly. Objects accelerate off screen.
     :::column-end:::
     :::column:::
         ![direction forward out](images/forwardOUT.gif)
     :::column-end:::
-:::row-end::: :::row::: :::column::: **뒤-안**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Backward-In**
 
         Same as Forward-In, but reversed.
     :::column-end:::
     :::column:::
         ![direction backward in](images/backwardIN.gif)
     :::column-end:::
-:::row-end::: :::row::: :::column::: **뒤-밖**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Backward-Out**
 
         Same as Forward-Out, but reversed.
     :::column-end:::

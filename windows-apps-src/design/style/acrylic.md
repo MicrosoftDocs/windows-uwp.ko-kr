@@ -14,12 +14,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 3bf91725a62c8d03c37448ddf69b072461288f11
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258486"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -31,10 +31,12 @@ ms.locfileid: "4205719"
 
 :::row:::
     :::column:::
-        밝은 테마의 아크릴 ![밝은 테마의 아크릴](images/Acrylic_LightTheme_Base.png)
+        Acrylic in light theme
+        ![Acrylic in light theme](images/Acrylic_LightTheme_Base.png)
     :::column-end:::
     :::column:::
-        어두운 테마의 아크릴 ![어두운 테마의 아크릴](images/Acrylic_DarkTheme_Base.png)
+        Acrylic in dark theme
+        ![Acrylic in dark theme](images/Acrylic_DarkTheme_Base.png)
     :::column-end:::
 :::row-end:::
 
@@ -49,68 +51,20 @@ ms.locfileid: "4205719"
 ## <a name="examples"></a>예
 
 :::row:::
-    ::: 열 범위::: ![일부 이미지](images/XAML-controls-gallery-app-icon.png)
+    :::column span:::
+        ![Some image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
-    ::: 열 범위 = "2"::: **XAML 컨트롤 갤러리**<br>
-        XAML 컨트롤 갤러리 앱이 설치 된 경우 클릭 <a href="xamlcontrolsgallery:/item/Acrylic">여기</a> 에 앱을 열고 중인 아크릴을 참조 하세요.
+    :::column span="2":::
+        **XAML Controls Gallery**<br>
+        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/Acrylic">here</a> to open the app and see acrylic in action.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
     :::column-end:::
 :::row-end:::
 
-## <a name="when-to-use-acrylic"></a>아크릴을 사용하는 경우
-
-앱 내 탐색이나 명령 요소 같은 지원 UI는 아크릴 표면에 배치하는 것이 좋습니다. 이 소재는 임시 UI를 트리거한 콘텐츠와의 시각적 관계를 유지하는 데 도움이 되므로 대화나 플라이아웃 같은 임시 UI 요소에도 도움이 됩니다. 아크릴은 배경 소재로 사용되어 시각적 개별 창을 표시하도록 설계되었으므로 세밀하게 표시되는 전경 요소에는 아크릴을 적용하지 마세요.
-
-기본 앱 콘텐츠 뒤의 표면에는 단색의 불투명 배경을 사용해야 합니다.
-
-창의 제목 표시줄을 포함하여 하나 이상의 앱 가장자리로 아크릴을 확장하여 시각적 흐름을 개선하는 방법을 고려해 보세요. 서로 인접한 여러 종류의 혼합 아크릴을 겹쳐서 스트라이핑 효과를 예방하세요. 아크릴은 디자인의 시각적 조화를 위한 도구지만 잘못 사용할 경우 시각적 혼란을 일으킬 수 있습니다.
-
-다음 사용 패턴을 고려하여 앱에 아크릴을 통합하는 가장 좋은 방법을 결정합니다.
-
-### <a name="vertical-acrylic-pane"></a>세로 아크릴 창
-
-세로 탐색을 사용하는 앱의 경우 탐색 요소가 포함된 보조 창에 아크릴을 적용하는 것이 좋습니다.
-
-![단일 세로 아크릴 창을 사용하는 앱 패턴](images/acrylic_app-pattern_vertical.png)
-
-[NavigationView](../controls-and-patterns/navigationview.md)는 앱에 탐색을 추가하기 위한 새로운 공통 컨트롤이며 시각적 디자인에 아크릴이 포함되어 있습니다. NavigationView의 창은 기본 콘텐츠와 함께 나란히 창을 여는 경우 배경 아크릴을 표시하며, 창이 오버레이로 열리는 경우 자동으로 인앱 아크릴로 전환됩니다.
-
-앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 비교적 투명 한 아크릴을 사용 하는 것이 좋습니다.
- - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
- - 창이 주 앱 콘텐츠와 함께 나란히 열리는 경우 [60% 배경 아크릴](#acrylic-theme-resources)이어야 합니다.
-
-### <a name="multiple-acrylic-panes"></a>여러 아크릴 창
-
-서로 다른 창 세 개가 있는 앱의 경우 기본이 아닌 콘텐츠에 아크릴을 추가하는 것이 좋습니다.
- - 기본 콘텐츠와 가까이에 있는 두 번째 창에는 [80% 배경 아크릴](#acrylic-theme-resources)을 사용합니다.
- - 기본 콘텐츠에서 멀리 떨어진 세 번째 창에는 [60% 배경 아크릴](#acrylic-theme-resources)을 사용합니다.
-
-![두 개의 세로 아크릴 창을 사용하는 앱 패턴](images/acrylic_app-pattern_double-vertical.png)
-
-### <a name="horizontal-acrylic-pane"></a>가로 아크릴 창
-
-앱 위에 가로 탐색, 명령 또는 다른 강력한 가로 요소를 사용하는 앱의 경우 이 시각적 요소에 [70% 아크릴](#acrylic-theme-resources)을 적용하는 것이 좋습니다.
-
-![가로 아크릴 창을 사용하는 앱 패턴](images/acrylic_app-pattern_horizontal.png)
-
-확대/축소 가능한 연속 콘텐츠를 강조하는 캔버스 앱은 사용자가 이 콘텐츠에 연결할 수 있도록 위쪽 표시줄에 인앱 아크릴을 사용해야 합니다. 캔버스 앱의 예로는 지도, 그리기 및 드로잉을 들 수 있습니다.
-
-연속 캔버스가 없는 앱의 경우 배경 아크릴을 사용하여 사용자를 전체 데스크톱 환경에 연결하는 것이 좋습니다.
-
-### <a name="acrylic-in-utility-apps"></a>유틸리티 앱의 아크릴
-
-위젯 또는 간단한 앱은 앱 창 내에 아크릴 가장자리를 그림으로써 유틸리티 앱으로서의 사용을 늘릴 수 있습니다. 일반적으로 이 범주에 속하는 앱은 사용자의 참여 시간이 짧으며, 사용자의 전체 바탕 화면을 차지하지 않습니다. 예로는 계산기와 알림 센터가 있습니다.
-
-![전체 배경으로 아크릴을 사용한 계산기 유틸리티 앱](images/acrylic_app-pattern_full.png)
-
-> [!Note]
-> 아크릴 표면 렌더링 GPU 많이 배터리 사용 시간을 단축 하 고 장치 전력 소비를 높일 수 있는입니다. 아크릴 효과 장치 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 있습니다 비활성화 자동으로 선택 합니다.
-
-
 ## <a name="acrylic-blend-types"></a>아크릴 혼합 유형
-아크릴의 가장 눈에 띄는 특징은 해당 투명 합니다. 소재를 통과하여 보이는 것을 변경하는 두 가지 아크릴 혼합 유형이 있습니다.
+아크릴의 가장 눈에 띄는 특징은 투명도입니다. 소재를 통과하여 보이는 것을 변경하는 두 가지 아크릴 혼합 유형이 있습니다.
  - **배경 아크릴**은 현재 활성 앱의 뒤에 있는 바탕 화면 배경 화면 및 다른 창을 표시하여 응용 프로그램 창 사이에 깊이를 추가하고 사용자의 개인 기본 설정을 반영합니다.
  - **인앱 아크릴**은 앱 프레임 내부에 깊이감을 더하여 포커스와 계층을 모두 제공합니다.
 
@@ -118,18 +72,51 @@ ms.locfileid: "4205719"
 
  ![인앱 아크릴](images/AppAcrylic_DarkTheme.png)
 
- 신중하게 아크릴 표면을 레이어로 쌓아 올립니다. 배경 아크릴은 그 이름에서 알 수 있듯이 z-순서에서 사용자와 가까우면 안 됩니다. 여러 겹의 배경 아크릴은 예상치 못한 착시 현상을 유발하는 경향이 있으므로 역시 피해야 합니다. 아크릴을 레이어로 쌓아 올리기로 선택하는 경우 레이어가 시각적으로 뷰어와 좀 더 가까워지도록 인앱 아크릴을 사용하고 아크릴의 색조를 밝게 하는 방법을 고려해 보세요.
+ 아크릴 표면을 레이어로 쌓아 올립니다 계층: 여러 겹의 배경 아크릴은 방해가 만들 수 있습니다.
 
+## <a name="when-to-use-acrylic"></a>아크릴을 사용하는 경우
+
+* NavigationView 이나 인라인 명령 요소 같은 UI를 지원 하기 위한 인 앱 아크릴을 사용 합니다. 
+* 상황에 맞는 메뉴, 플라이 아웃, 빛 dimsissable UI 등의 임시 UI 요소에 대 한 배경 아크릴을 사용 합니다.<br />아크릴을 사용 하 여 임시 시나리오에서 임시 UI를 트리거한 콘텐츠와 시각적 관계를 유지 하는 데 도움이 됩니다.
+
+인 앱 아크릴을 탐색 표면에 사용 하는 경우에 앱의 흐름을 개선 하기 위해 아크릴 창 아래에 콘텐츠를 확장 하는 것이 좋습니다. NavigationView를 사용 하는 이렇게 하면 자동으로 합니다. 그러나 스트라이핑 효과를 여러 가지 아크릴을 가장자리에 배치 하지 마십시오 두 흐린된 표면 사이의 원치 않는 경계선을 만들 수이. 아크릴, 디자인의 시각적 조화 도구 이지만 잘못 사용할 경우 시각적 노이즈가 발생할 수 있습니다.
+
+앱에 아크릴을 통합 하는 가장 좋은 방법을 결정 하려면 다음 사용 패턴을 고려 하세요.
+
+### <a name="horizontal-navigation-or-commanding"></a>가로 탐색 또는 명령
+
+앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 비교적 투명 한 아크릴을 사용 하는 것이 좋습니다.
+ - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
+ - 창이 주 앱 콘텐츠와 함께 나란히 열리는 경우 [60% 배경 아크릴](#acrylic-theme-resources)이어야 합니다.
+
+![앱에서 가로 명령 사용 하 여 지도 앱](images/Maps_In_App_Acrylic_1.png)
+
+또한 콘텐츠 확장 또는 스크롤 아크릴에서 맨 위에 있는 것 해 앱 몰입 형 하 고 원활한 환경을 합니다.
+
+### <a name="vertical-panes"></a>서로 다른 창
+
+세로 창이 나 앱의 콘텐츠 오프 섹션에 도움이 되는 표면에 대 한 불투명 배경 아크릴 대신 사용 하는 것이 좋습니다. 서로 다른 창에는 콘텐츠 위에 열면, 같은 NavigationView의 **Collapsed** 또는 **최소** 모드 좋습니다 인 앱 아크릴을 사용 하 여 사용자가 열이 창은 페이지의 컨텍스트를 유지 하기 위해.
+
+### <a name="transient-surfaces"></a>임시 표면
+
+모달이 팝업 메뉴 플라이 아웃을 사용 하 여 앱에 대 한 빠른 해제 창 또는 배경 아크릴을 사용 하는 것이 좋습니다.
+
+![정보는 플라이 아웃을 사용 하 여 메일 앱 패턴](images/Mail_TransientContextMenu.png)
+
+대부분의 컨트롤은 기본적으로 아크릴을 사용 합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 및 빛 dimiss 팝업을 사용 하 여 비슷한 컨트롤 모두 사용 합니다 임시 아크릴 때 호출 됩니다.
+
+> [!Note]
+> 아크릴 표면 렌더링 GPU 많이 배터리 사용 시간을 단축 하 고 장치 전력 소비를 높일 수 있는입니다. 아크릴 효과 장치의 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 있습니다 비활성화 자동으로 선택 합니다.
 
 ## <a name="usability-and-adaptability"></a>유용성 및 적응성
 아크릴은 다양한 디바이스 및 컨텍스트에 맞춰 자동으로 모양을 바꿉니다.
 
 고대비 모드에서는 아크릴 대신 사용자가 선택한 익숙한 배경색이 계속 표시됩니다. 또한 배경 아크릴과 인 앱 아크릴이 모두 단색으로 표시 됩니다.
- - 사용자가 설정에서 투명도 해제할 때 > 개인 설정 > 색상
+ - 사용자가 설정에서 투명도 해제 되는 경우 > 개인 설정 > 색상
  - 배터리 절약 모드가 활성화 된 경우
  - 앱이 저사양 하드웨어에서 실행되는 경우
 
-또한 배경 아크릴만 대체할 해당 투명 한 텍스처를 단색:
+또한 배경 아크릴만 대체할는 투명 한 텍스처를 단색:
  - 바탕 화면에서 앱 창이 비활성화되는 경우
  - UWP 앱이 휴대폰, Xbox, HoloLens 또는 태블릿 모드에서 실행되는 경우
 
@@ -163,7 +150,7 @@ ms.locfileid: "4205719"
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> <b>권장 사용법:</b> 앱에서는 AltMedium 컬러 보조 텍스트, 텍스트 크기가 18 픽셀 이상인 경우 텍스트 뒤에 이러한 더 반투명 70% 아크릴 리소스를 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
+        <td> <b>권장 사용법:</b> 앱에서 텍스트 크기가 18 픽셀 이상인 AltMedium 컬러 보조 텍스트를 사용, 텍스트 뒤에 이러한 더 반투명 70% 아크릴 리소스를 배치할 수 있습니다. 앱의 상단 가로 탐색 및 명령 영역에 이러한 리소스를 사용하는 것이 좋습니다.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -212,7 +199,6 @@ ms.locfileid: "4205719"
  - **TintOpacity**: 색조 계층의 불투명도입니다. 좋습니다 80% 불투명도를 시작 점으로 하지만 서로 다른 색상에 다른 translucencies 더 멋지게 보일 수 있습니다.
  - **BackgroundSource**: 배경 아크릴과 인앱 아크릴 중에서 원하는 것을 지정하는 플래그입니다.
  - **FallbackColor**: 단색 배터리 절약 모드에서 아크릴을 대체 합니다. 배경 아크릴의 경우 앱이 활성 데스크톱 창에 없거나 앱이 휴대폰 및 Xbox에서 실행 중인 경우 대체 색이 아크릴도 대체합니다.
-
 
 ![밝은 테마 아크릴 견본](images/CustomAcrylic_Swatches_LightTheme.png)
 
@@ -332,13 +318,14 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 * 탐색 창처럼 기본이 아닌 앱 표면의 배경 소재로 아크릴을 사용하세요.
 * 앱 주변과 살짝 혼합하여 원활한 환경을 제공할 수 있도록 아크릴을 앱 가장자리 중 하나 이상으로 확장하세요.
+* 앱의 백그라운드 큰 화면에서 데스크톱 arylic 넣지 마세요-이 임시 표면에 주로 사용 되는 아크릴의 멘 탈 모델을 중단 합니다.
 * 경계선에 시각적 긴장감이 발생하지 않도록 인앱 아크릴과 배경 아크릴을 바로 인접하게 배치하지 마세요.
 * 색조와 불투명도가 동일한 여러 아크릴 창을 나란히 배치하면 원치 않는 시각적 경계선이 생기므로 이렇게 배치하지 마세요.
 * 아크릴 표면 위에 테마 컬러 텍스트를 배치하지 마세요.
 
 ## <a name="how-we-designed-acrylic"></a>아크릴 설계 방식
 
-아크릴의 고유한 모양과 속성에 도달할 수 있도록 아크릴의 핵심 구성 요소를 세밀하게 조정했습니다. 투명, 흐림 및 노이즈 평평한 표면에 시각적 깊이 입체감을 추가 하려면 시작 했습니다. 아크릴 배경에 배치된 UI의 대비와 가독성을 보장하기 위해 제외 혼합 모드 레이어를 추가했습니다. 마지막으로 개인 설정 기회를 제공하기 위해 컬러 색조를 추가했습니다. 이러한 레이어가 합쳐져서 생생하고 편리한 소재가 완성됩니다.
+아크릴의 고유한 모양과 속성에 도달할 수 있도록 아크릴의 핵심 구성 요소를 세밀하게 조정했습니다. 투명, 흐림 및 노이즈 시각적 깊이 입체감을 추가를 시작 했습니다. 아크릴 배경에 배치된 UI의 대비와 가독성을 보장하기 위해 제외 혼합 모드 레이어를 추가했습니다. 마지막으로 개인 설정 기회를 제공하기 위해 컬러 색조를 추가했습니다. 이러한 레이어가 합쳐져서 생생하고 편리한 소재가 완성됩니다.
 
 ![아크릴 제작법](images/AcrylicRecipe_Diagram.jpg)
 <br/>아크릴 제작법: 배경, 흐림, 제외 혼합, 색/색조 오버레이, 노이즈

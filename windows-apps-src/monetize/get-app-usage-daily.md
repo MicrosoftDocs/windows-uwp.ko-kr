@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 사용
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263350"
 ---
 # <a name="get-daily-app-usage"></a>일일 앱 사용 현황 가져오기
 
-Microsoft Store 분석 API에서이 메서드를 사용 하 여 (지난 90 일만)는 지정 된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램 (Xbox 멀티 플레이 포함 하지 않음) 집계 사용 현황 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [사용 보고서](../publish/usage-report.md) 에서 사용할 수 있습니다.
+Microsoft Store 분석 API에서이 메서드를 사용 하 여 (지난 90 일만) 지정 된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램에 대 한 (Xbox 멀티 플레이 포함 하지 않음) 집계 사용 현황 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [사용 보고서](../publish/usage-report.md) 에서 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -89,17 +89,17 @@ Authorization: Bearer <your access token>
 | date                      | string  | 사용 현황 데이터에 대 한 날짜 범위에 대 한 첫 번째 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다.        |
 | applicationId             | string  | 사용 현황 데이터를 검색할 앱의 스토어 ID입니다.          |
 | applicationName           | string  | 앱의 표시 이름                                              |
-| deviceType                | string  | 다음 문자열 중 하나 나타내는 사용량 발생 한 디바이스 유형입니다.<ul><li>**PC**</li><li>**Phone**</li><li>**콘솔**</li><li>**태블릿**</li><li>**IoT**</li><li>**서버**</li><li>**홀로그램**</li><li>**Unknown**</li></ul>                                                                                                         |
-| packageVersion            | string  | 사용량 발생 한 패키지의 버전입니다.                          |
+| deviceType                | string  | 다음 문자열 중 하나 나타내는 사용 하는 발생 한 디바이스 유형입니다.<ul><li>**PC**</li><li>**Phone**</li><li>**콘솔**</li><li>**태블릿**</li><li>**IoT**</li><li>**서버**</li><li>**홀로그램**</li><li>**Unknown**</li></ul>                                                                                                         |
+| packageVersion            | string  | 사용량 발생 하는 패키지의 버전입니다.                          |
 | market                    | string  | 고객이 앱을 사용한 시장의 ISO 3166 국가 코드입니다. |
-| subscriptionName          | 문자열  | Xbox Game Pass를 통해 사용 했는지를 나타냅니다.                            |
+| subscriptionName          | 문자열  | Xbox Game Pass 통해 사용 했는지를 나타냅니다.                            |
 | dailySessionCount         | long    | 해당 날짜에 사용자 세션 수입니다.                                  |
 | engagementDurationMinutes | double  | 사용자가 적극적으로 측정 하 여 고유한 기간의 시간, 앱이 시작할 때 앱 (프로세스 시작)를 사용 하 여 있고 때 (프로세스 종료) 또는 일정 기간의 비활성 상태 후 종료 있는 분입니다.             |
-| dailyActiveUsers          | long    | 해당 날짜 앱을 사용 하는 고객의 수입니다.                           |
+| dailyActiveUsers          | long    | 해당 날짜는 앱을 사용 하 여 고객의 수입니다.                           |
 | dailyActiveDevices        | long    | 모든 사용자가 앱과 함께 작용 하는 데 사용한 일일 장치의 수입니다.  |
 | dailyNewUsers             | long    | 처음으로 해당 날짜에 앱을 사용 하는 고객의 수입니다.    |
 | monthlyActiveUsers        | long    | 해당 월의 앱을 사용 하 여 고객의 수입니다.                         |
-| monthlyActiveDevices      | long    | 고유한 기간의 시간, 앱이 시작할 때 (프로세스 시작)에 대 한 앱을 실행 하 고 (프로세스 종료) 하는 경우 종료 장치의 또는 일정 기간의 비활성 상태 후 수입니다.                                      |
+| monthlyActiveDevices      | long    | 고유한 기간의 시간, 앱이 시작할 때 (프로세스 시작)에 대 한 앱을 실행 하 고 (프로세스 종료) 때 종료 장치의 또는 일정 기간의 비활성 상태 후 수입니다.                                      |
 | monthlyNewUsers           | long    | 처음으로 해당 월에 대 한 앱을 사용한 고객의 수입니다.  |
 
 

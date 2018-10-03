@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 알림, 사용자 지정 타임스탬프, 타임스탬프, 알림, 알림 센터
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ef01feaf422674977dc4549d4cc68a2ca0052c7
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258210"
 ---
 # <a name="custom-timestamps-on-toasts"></a>알림에 대한 사용자 지정 타임스탬프
 

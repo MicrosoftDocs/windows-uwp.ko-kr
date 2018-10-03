@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3480288035d98ab3f68da33f9121e7daaf86180f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264388"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -60,8 +60,8 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 ```
 
 ## <a name="how-do-i-get-this-font"></a>글꼴을 가져오는 방법
-* Windows 10: 수행 해야 아무 것, 글꼴 Windows와 함께 제공 합니다.
-* Mac에서 다운로드 하 고 글꼴을 설치 해야 합니다: <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴</a>
+* Windows 10:에서 수행 해야 아무 것, 글꼴 Windows와 함께 제공 합니다.
+* 다운로드 하 고 글꼴을 설치 해야, Mac에서: <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴</a>
 
 ## <a name="icon-list"></a>아이콘 목록
 **Segoe MDL2 자산** 글꼴에는 여기에 표시할 수 있는 아이콘보다 더 많은 아이콘이 포함되어 있다는 점에 유의하세요. 대다수 아이콘은 특수 용도로 제작되었고 보통 다른 곳에서는 사용되지 않습니다.
@@ -4740,7 +4740,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/F540.png" width="32" height="32" alt="Safe" /></td>
   <td>F540</td>
-  <td>안전 하 게 보호</td>
+  <td>안전</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F552.png" width="32" height="32" alt="LaptopSecure" /></td>
   <td>F552</td>

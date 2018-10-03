@@ -1,8 +1,8 @@
 ---
 author: normesta
-Description: Share code between a desktop app and a UWP app
+Description: Share code between a desktop application and a UWP app
 Search.Product: eADQiWindows 10XVcnh
-title: 데스크톱 앱과 UWP 앱 간의 코드 공유
+title: 데스크톱 응용 프로그램 및 UWP 앱 간의 코드 공유
 ms.author: normesta
 ms.date: 10/03/2017
 ms.topic: article
@@ -10,14 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0931440977c33642a3154cfa1b0adca42032df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: ca5b722ea97202d57f05613bec88ae6bee1db5f2
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018629"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260112"
 ---
-# <a name="share-code-between-a-desktop-app-and-a-uwp-app"></a>데스크톱 앱과 UWP 앱 간의 코드 공유
+# <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>데스크톱 응용 프로그램 및 UWP 앱 간의 코드 공유
 
 코드를 .NET Standard 라이브러리로 옮기고 모든 Windows 10 장치에 연결할 수 있는 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다. 데스크톱 응용 프로그램을 UWP 앱으로 변환할 수 있는 도구는 없지만, 수많은 기존 코드를 재사용할 수 있으며 이를 통해 빌드 비용을 낮출 수 있습니다. 이 가이드에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "2018629"
 
 ### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>예: 데이터 액세스 코드를 .NET Standard 2.0 라이브러리로 마이그레이션
 
-Northwind 샘플 데이터베이스에서 고객을 표시하는 매우 기본적인 Windows Forms 앱이 있다고 가정해 보겠습니다.
+Northwind 샘플 데이터베이스에서 고객을 표시 하는 매우 기본적인 Windows Forms 응용 프로그램 있다고 가정해 보겠습니다.
 
 ![Windows Forms 앱](images/desktop-to-uwp/win-forms-app.png)
 

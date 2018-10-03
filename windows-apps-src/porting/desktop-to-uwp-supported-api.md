@@ -13,7 +13,7 @@ ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: 8562059fb8a786882a91404f513f2b0c8cdbacd6
 ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/28/2018
 ms.locfileid: "1691452"
@@ -39,7 +39,7 @@ ms.locfileid: "1691452"
 <tr><td>스마트 카드</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>PlayReady</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>VPN</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>전자지갑</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
+<tr><td>Wallet</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
 <tr><td>XAML UI</td><td>Win32 앱 프로세스에 XAML UI를 추가할 수 없습니다.</td></tr>
 </table>
 

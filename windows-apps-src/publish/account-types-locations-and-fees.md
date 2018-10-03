@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265390"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
@@ -41,7 +41,7 @@ ms.locfileid: "4207237"
 
 ## <a name="account-verification"></a>계정 확인
 
-등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 검증 되기 되지만 [앱 이름을 예약할](create-your-app-by-reserving-a-name.md) 수를 기다리는 동안 회사 계정에서 앱을 제출할 수 없는 계속 빌드 및 앱을 테스트 하 고 제출을 준비 합니다.
+등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 검증 되기 되지만 [앱 이름을 예약할](create-your-app-by-reserving-a-name.md) 수를 기다리는 동안 회사 계정에서 앱을 제출할 수 없는 계속 빌드 및 앱을 테스트 하 고 제출 준비를 합니다.
 
 **계정 설정** 페이지에서 확인 상태를 점검할 수 있습니다. 
 

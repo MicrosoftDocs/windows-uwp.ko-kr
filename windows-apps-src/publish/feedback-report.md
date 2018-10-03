@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204961"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260744"
 ---
 # <a name="feedback-report"></a>피드백 보고서
 
@@ -31,7 +31,7 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 피드백 보고서는 피드백을 남겼을 때 각 고객이 장치에 설치한 특정 패키지를 보여준다는 점에서 [패키지 플라이팅](package-flights.md)을 사용할 때 피드백이 도움이 될 수 있습니다.
 
 > [!TIP]
-> 에 대 한 빠른 리뷰, 평점 및 앱의 모든 사용자에 게 피드백 지난 30 일 동안에서 왼쪽된 탐색 메뉴에서 **참여** 를 확장 하 고 선택 **리뷰 및 피드백.** 
+> 지난 30 일 동안에서 리뷰, 평점 및 앱의 모든 사용자 피드백에 빠르게 확인, 왼쪽된 탐색 메뉴에서 **참여** 를 확장 하 고 선택 **리뷰 및 피드백.** 
 
 
 ## <a name="apply-filters"></a>필터 적용
@@ -58,7 +58,7 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 - **인기 앱**: 최근 활동이 있는 피드백으로 시작하여 최근 7일 이내에 다른 고객이 찬성한 피드백을 표시합니다.
 - **최근**: 최근에 남겨진 피드백으로 시작하여 모든 피드백을 표시합니다.
 
-각 메모 옆에 피드백이 남겨진 날짜와 피드백 유형이 표시됩니다. 고객의 지역/국가 남길 때 피드백, 디바이스 및 **Windows 참가자** 해당 유형의 피드백을 제출 하는 고객이 Windows 참가자의 구성원 인 경우 사용 중인 장치에 설치 된 특정 패키지도 표시 됩니다. 프로그램입니다.
+각 메모 옆에 피드백이 남겨진 날짜와 피드백 유형이 표시됩니다. 고객의 지역/국가 남길 때 피드백, 디바이스 및 **Windows 참가자** 해당 유형의 피드백을 제출 하는 고객이 Windows 참가자의 구성원 인 경우 사용 하는 장치에 설치 된 특정 패키지도 표시 됩니다. 프로그램입니다.
 
 [피드백에 응답](respond-to-customer-feedback.md)하기 위한 옵션도 여기에 표시됩니다.
 

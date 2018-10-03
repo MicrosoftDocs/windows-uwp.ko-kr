@@ -3,19 +3,19 @@ author: laurenhughes
 title: UWP 앱에 대한 자동화된 빌드 설정
 description: 자동화된 빌드를 구성하여 사이드로드/Microsoft Store 패키지를 생성하는 방법
 ms.author: lahugh
-ms.date: 03/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 4354254e01333db17f1151c182267c0330a799ba
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261686"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -81,7 +81,7 @@ VSTS에서 첫 번째 빌드 정의를 만들려면 빌드 탭으로 이동한 �
 
 #### <a name="configure-the-build-solution-build-task"></a>솔루션 빌드에 대한 빌드 작업 구성
 
-이 작업은 작업 폴더에 있는 솔루션을 이진 파일로 컴파일하여 출력 AppX 파일을 생성합니다. 이 작업에서는 MSbuild 인수가 사용됩니다.  이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요. 
+이 작업은 이진 파일을 작업 폴더에 있는 출력 앱 패키지 파일을 생성 된 솔루션을 컴파일합니다. 이 작업에서는 MSbuild 인수가 사용됩니다.  이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요. 
 
 |**MSBuild 인수**|**값**|**설명**|
 |--------------------|---------|---------------|
@@ -111,7 +111,7 @@ $() 구문을 사용하여 정의된 매개 변수는 해당 빌드 정의에 �
 
 ![아티팩트](images/building-screen6.png)
 
-`UapAppxPackageBuildMode` 속성을 `StoreUpload`로 설정했기 때문에, 아티팩트 폴더에는 Microsoft Store 제출이 권장되는 패키지(.appxupload)가 포함되어 있습니다. 또한 Microsoft Store에 일반 앱 패키지(.appx)나 앱 번들(.appxbundle)도 제출할 수 있습니다. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
+`UapAppxPackageBuildMode` 속성을 `StoreUpload`로 설정했기 때문에, 아티팩트 폴더에는 Microsoft Store 제출이 권장되는 패키지(.appxupload)가 포함되어 있습니다. Note는 또한에 제출할 수 있습니다 (.appx/.msix) 일반 앱 패키지 또는 앱 번들 (.appxbundle/.msixbundle) 저장소. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
 
 
 >[!NOTE]
@@ -216,7 +216,7 @@ MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "A
 그런 다음 빌드 단계에서 `AppxBundle` msbuild 인수를 제거합니다.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>사이드로드를 위한 연속 배포 빌드 설정
-이 빌드 형식이 완료되면 사용자는 빌드 결과 페이지의 아티팩트 섹션에서 .appxbundle 파일을 다운로드할 수 있습니다. 좀 더 완벽한 배포를 만들어 앱을 베타 테스트하려는 경우라면 HockeyApp 서비스를 사용할 수 있습니다. 이 서비스는 베타 테스트, 사용자 분석 및 크래시 진단에 대한 고급 기능을 제공합니다.
+이 빌드 형식이 완료 되 면 사용자는 빌드 결과 페이지의 아티팩트 섹션에서 앱 번들 파일을 다운로드할 수 있습니다. 좀 더 완벽한 배포를 만들어 앱을 베타 테스트하려는 경우라면 HockeyApp 서비스를 사용할 수 있습니다. 이 서비스는 베타 테스트, 사용자 분석 및 크래시 진단에 대한 고급 기능을 제공합니다.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>빌드에 버전 번호 적용
 
@@ -256,9 +256,9 @@ CI_MyUWPApp_1.1.2501.0
 
 다음으로 [HockeyApp을 VSTS(Visual Studio Team Services) 또는 TFS(Team Foundation Server)와 함께 사용하는 방법](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs) 가이드를 사용하여 HockeyApp 연결을 구성합니다. Microsoft 계정, 소셜 미디어 계정 또는 메일 주소만 사용해도 HockeyApp 계정을 설정할 수 있습니다. 무료 요금제에서는 앱 2개, 소유자 한 명, 데이터 무제한을 제공합니다.
 
-그런 다음 HockeyApp 앱을 수동으로 만들거나, 기존 appx 패키지 파일을 업로드하여 만들 수 있습니다. 자세한 내용은 [새 앱을 만드는 방법](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app)을 참조하세요.  
+그런 다음, 수동으로 만들거나, 기존 앱 패키지 파일을 업로드 하 여 HockeyApp 앱을 만들 수 있습니다. 자세한 내용은 [새 앱을 만드는 방법](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app)을 참조하세요.  
 
-기존 appx 패키지 파일을 사용하려면 빌드 단계를 추가하고 빌드 단계의 이진 파일 경로 매개 변수를 설정합니다. 
+기존 앱 패키지 파일을 사용 하려면 빌드 단계를 추가 하 고 빌드 단계의 이진 파일 경로 매개 변수를 설정 합니다. 
 
 ![hockey 앱 구성](images/building-screen15.png) 
 
@@ -268,7 +268,7 @@ CI_MyUWPApp_1.1.2501.0
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-HockeyApp 작업을 사용하면 기호 파일에 대한 경로를 지정할 수 있지만 번들을 사용하여 기호(appxsym 파일)를 포함하는 것이 좋습니다.
+HockeyApp 작업을 사용 하면 기호 파일의 경로를 지정할 수, 이지만 번들과 기호를 포함 하는 것이 좋습니다.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Microsoft Store에 패키지를 제출하는 연속 배포 빌드 설정 
 
@@ -286,7 +286,7 @@ Microsoft Store 연결 마법사는 Microsoft Store 연결 정보를 포함하�
 /p:UapAppxPackageBuildMode=StoreUpload 
 ```
 
-이렇게 하면 Microsoft Store에 전송할 수 있는 .appxupload 파일이 생성됩니다.
+이렇게 하면 스토어에 전송할 수 있는 업로드 파일을 생성 됩니다.
 
 
 #### <a name="configure-automatic-store-submission"></a>자동 Microsoft Store 제출 구성
@@ -295,7 +295,7 @@ Microsoft Store API와 통합하는 Microsoft Store용 Visual Studio Team Servic
 
 Azure AD(Active Directory)를 사용하여 개발자 센터 계정에 연결한 다음 AD에 요청을 인증할 수 있는 앱을 만들어야 합니다. 작업을 수행하는 확장 페이지의 지침에 따라 수행할 수 있습니다. 
 
-확장을 구성한 후에 빌드 작업을 추가하고 앱 ID와 .appxupload 파일의 위치를 사용하여 구성할 수 있습니다.
+확장을 구성한 후에 빌드 작업을 추가 하 고 응용 프로그램 ID와 업로드 파일의 위치를 사용 하 여 구성할 수 있습니다.
 
 ![개발자 센터 구성](images/building-screen17.png) 
 
@@ -316,17 +316,17 @@ AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 
 Microsoft Store에 게시하지 않고 앱을 배포하려는 경우 장치에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 장치에 앱을 직접 사이드로드할 수 있습니다. 
 
-앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대해 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가한 다음 appx 파일을 설치하거나 업데이트합니다.
+앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대 한 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가 하 고 됩니다 다음 설치 하거나 앱 패키지 파일을 업데이트 합니다.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Windows10 1주년 업데이트를 사용하여 앱을 사이드로드
-Windows10 1주년 업데이트에서 appxbundle 파일을 두 번 클릭하고 대화 상자에서 설치 단추를 선택하여 앱을 설치할 수 있습니다. 
+Windows 10 1 주년 업데이트에서 앱 패키지 파일을 두 번 클릭 하 고 대화 상자에서 설치 단추를 선택 하 여 앱을 설치할 수 있습니다. 
 
 ![rs1에서 사이드로드](images/building-screen18.png) 
 
 >[!NOTE]
 > 이 메서드는 인증서 또는 관련된 종속성을 설치하지 않습니다.
 
-VSTS 또는 HockeyApp 등 웹 사이트에서 appx 패키지를 배포하려는 경우 브라우저에서 신뢰할 수 있는 사이트 목록에 해당 사이트를 추가해야 합니다. 그렇지 않으면 파일이 잠금 상태로 표시됩니다. 
+VSTS 또는 HockeyApp 등 웹 사이트에서 Windows 앱 패키지를 배포 하려는 경우 해당 사이트의 브라우저에서 신뢰할 수 있는 사이트 목록에 추가 해야 합니다. 그렇지 않으면 파일이 잠금 상태로 표시됩니다. 
 
 <span id="certificates-best-practices"/>
 

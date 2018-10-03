@@ -7,18 +7,18 @@ label: Command design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 05/04/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09f775ad0ba596379b6d3ddf158285849520111f
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 104788b98377b55564fcc204ecc161521d071c6b
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842570"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262654"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 
@@ -40,53 +40,98 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 
 적합한 요소를 사용해 명령을 사용할 수 있도록 만들면 앱을 직관적으로 쉽게 사용할 수 있습니다. 그렇지 않으면 앱이 어렵고 혼동스러울 수 있습니다. UWP(유니버설 Windows 플랫폼)는 앱에 사용할 수 있는 큰 명령 요소 집합을 제공합니다. 가장 일반적인 컨트롤 몇 가지와 이러한 컨트롤을 통해 가능한 상호 작용에 대한 요약 목록은 다음과 같습니다.
 
-:::row::: :::column::: ![버튼 이미지](images/commanding/thumbnail-button.svg) :::column-end::: :::column span="2"::: <b>버튼</b>
+:::row:::
+    :::column:::
+        ![button image](images/commanding/thumbnail-button.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Buttons</b>
 
         <a href="../controls-and-patterns/buttons.md" style="text-decoration:none">Buttons</a> trigger an immediate action. Examples include sending an email, submitting form data, or confirming an action in a dialog.
 :::row-end:::
 
-:::row::: :::column::: ![목록 이미지](images/commanding/thumbnail-list.svg) :::column-end::: :::column span="2"::: <b>목록</b>
+:::row:::
+    :::column:::
+        ![list image](images/commanding/thumbnail-list.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Lists</b>
 
         <a href="../controls-and-patterns/lists.md" style="text-decoration:none">Lists</a> present items in a interactive list or a grid. Usually used for many options or display items. Examples include drop-down list, list box, list view and grid view.
 :::row-end:::
 
-:::row::: :::column::: ![선택 컨트롤 이미지](images/commanding/thumbnail-selection.svg) :::column-end::: :::column span="2"::: <b>선택 컨트롤</b>
+:::row:::
+    :::column:::
+        ![selection control image](images/commanding/thumbnail-selection.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Selection controls</b>
 
         Lets users choose from a few options, such as when completing a survey or configuring app settings. Examples include <a href="../controls-and-patterns/checkbox.md">check box</a>, <a href="../controls-and-patterns/radio-button.md">radio button</a>, and <a href="../controls-and-patterns/toggles.md">toggle switch</a>.
 :::row-end:::
 
-:::row::: :::column::: ![일정 이미지](images/commanding/thumbnail-calendar.svg) :::column-end::: :::column span="2"::: <b>일정, 날짜 및 시간 선택기</b>
+:::row:::
+    :::column:::
+        ![Calendar  image](images/commanding/thumbnail-calendar.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Calendar, date and time pickers</b>
 
         <a href="../controls-and-patterns/date-and-time.md">Calendar, date and time pickers</a> enable users to view and modify date and time info, such as when creating an event or setting an alarm. Examples include calendar date picker, calendar view, date picker, time picker.
 :::row-end:::
 
-:::row::: :::column::: ![자동 완성 텍스트 입력 이미지](images/commanding/thumbnail-autosuggest.svg) :::column-end::: :::column span="2"::: <b>자동 완성 텍스트 입력</b>
+:::row:::
+    :::column:::
+        ![Predictive text entry image](images/commanding/thumbnail-autosuggest.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Predictive text entry</b>
 
         Provides suggestions as users type, such as when entering data or performing queries. Examples include <a href="../controls-and-patterns/auto-suggest-box.md">auto-suggest box</a>.<br>
 :::row-end:::
 
 전체 목록은 [컨트롤 및 UI 요소](../controls-and-patterns/index.md)를 참조하세요.
 
-##  <a name="place-commands-on-the-right-surface"></a>올바른 화면에 명령 배치
-앱 캔버스(앱의 콘텐츠 영역) 또는 명령 모음, 메뉴, 대화 상자 및 플라이아웃과 같은 명령 컨테이너 역할을 할 수 있는 특수 명령 요소를 비롯하여 앱의 다양한 화면에 명령 요소를 배치할 수 있습니다.
+## <a name="place-commands-on-the-right-surface"></a>올바른 화면에 명령 배치
 
-가능한 경우 사용자가 콘텐츠에 실행되는 명령을 사용하기보다, 콘텐츠를 직접 조작할 수 있도록 해야 합니다. 예를 들어, 사용자가 위쪽 및 아래쪽 명령 단추를 사용하기 보다 목록을 끌어서 놓아 목록을 다시 정렬할 수 있도록 합니다.
+앱 캔버스 또는 명령 모음, 명령 모음 플라이 아웃, 메뉴 모음 및 대화 상자와 같은 특수 명령 컨테이너를 포함 하 여 앱에서의 다양 한 화면에 명령 요소를 배치할 수 있습니다.
+
+Note, 가능 하면 해야 하도록 설정 하는 사용자가 콘텐츠에 실행 되는 명령을 사용 하 여 보다는 콘텐츠를 직접 조작 합니다. 예를 들어, 사용자가 위쪽 및 아래쪽 명령 단추를 사용하기 보다 목록을 끌어서 놓아 목록을 다시 정렬할 수 있도록 합니다.
 
 그렇지 않고 사용자가 콘텐츠를 직접 조작할 수 없는 경우 앱의 명령 화면 중 하나에 명령 요소들을 배치합니다. 가장 일반적인 명령 표면 중 일부 목록은 다음과 같습니다.
 
-:::row::: :::column::: ![앱 캔버스 이미지](images/commanding/thumbnail-canvas.svg) :::column-end::: :::column span="2"::: <b>앱 캔버스(콘텐츠 영역)</b>
+:::row:::
+    :::column:::
+        ![app canvas image](images/commanding/thumbnail-canvas.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>App canvas (content area)</b>
 
         If a command is constantly needed for users to complete core scenarios, put it on the canvas. Because you can put commands near (or on) the objects they affect, putting commands on the canvas makes them easy and obvious to use. However, choose the commands you put on the canvas carefully. Too many commands on the app canvas take up valuable screen space and can overwhelm the user. If the command won't be frequently used, consider putting it in another command surface.
 :::row-end:::
 
-:::행::: :::열::: ![명령 모음 이미지](images/commanding/thumbnail-commandbar.svg):::마지막 열::: :::열 범위 ="2"::: <b>대비</b>
+:::row:::
+    :::column:::
+        ![commandbar image](images/commanding/thumbnail-commandbar.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Command bars and menu bars</b>
 
-        <a href="../controls-and-patterns/app-bars.md">Command bars</a> help organize commands and make them easy to access. Command bars can be placed at the top of the screen, at the bottom of the screen, or at both the top and bottom of the screen.
+        <a href="../controls-and-patterns/app-bars.md">Command bars</a> help organize commands and make them easy to access. Command bars can be placed at the top of the screen, at the bottom of the screen, or at both the top and bottom of the screen (a <a href="../controls-and-patterns/menus.md#create-a-menu-bar">MenuBar</a> can also be used when the functionality in your app is too complex for a command bar).
 :::row-end:::
 
-:::row::: :::column::: ![상황에 맞는 메뉴 이미지](images/commanding/thumbnail-contextmenu.svg) :::column-end::: :::column span="2"::: <b>메뉴 및 상황에 맞는 메뉴</b>
+:::row:::
+    :::column:::
+        ![context menu image](images/commanding/thumbnail-contextmenu.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Menus and context menus</b>
 
-        Sometimes it is more efficient to group multiple commands into a command menu to save space. <a href="../controls-and-patterns/menus.md">Menus and context menus</a> display a list of commands or options when the user requests them. Context menus can provide shortcuts to commonly-used actions and provide access to secondary commands that are only relevant in certain contexts, such as clipboard or custom commands. Context menus are usually prompted by a user right-clicking.
+        <p>Menus and context menus save space by organizing commands and hiding them until the user needs them. Users typically access a menu or context menu by clicking a button or right-clicking a control.</p> 
+
+        <p>The <a href="../controls-and-patterns/command-bar-flyout.md">command bar flyout </a> is a type of contextual menu that combines the benefits of a command bar and a context menu into a single control. It can provide shortcuts to commonly-used actions and provide access to secondary commands that are only relevant in certain contexts, such as clipboard or custom commands.</p>
+
+        <p>UWP also provides a set of traditional menus and context menus; for more info, see the <a href="../controls-and-patterns/menus.md">menus and context menus overview</a>.</p>
 :::row-end:::
 
 ## <a name="provide-feedback-for-interactions"></a>조작(방식)에 대한 피드백 제공
@@ -95,19 +140,34 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 
 앱에서 피드백을 제공하는 방법 몇 가지를 소개합니다.
 
-:::행::: :::열::: ![명령 모음 콘텐츠 영역 이미지](images/commanding/thumbnail-commandbar2.svg):::마지막 열::: :::열 범위 ="2"::: <b>명령 모음</b>
+:::row:::
+    :::column:::
+        ![commandbar content area image](images/commanding/thumbnail-commandbar2.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Command bar</b>
 
         The content area of the <a href="../controls-and-patterns/app-bars.md">command bar</a> is an intuitive place to communicate status to users if they'd like to see feedback.
 :::row-end:::
 
-:::row::: :::column::: ![플라이아웃 이미지](images/commanding/thumbnail-flyout.svg) :::column-end::: :::column span="2"::: <b>플라이아웃</b>
+:::row:::
+    :::column:::
+        ![Flyout image](images/commanding/thumbnail-flyout.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs.md">Flyouts</a> are lightweight contextual popups that can be dismissed by tapping or clicking somewhere outside the flyout.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">플라이 아웃</a> 은 플라이 아웃 바깥쪽 아무 곳 이나 클릭 또는 탭 하 여 해제할 수 있는 경량의 상황에 맞는 팝업입니다.
 :::row-end:::
 
-:::row::: :::column::: ![대화 이미지](images/commanding/thumbnail-dialog.svg) :::column-end::: :::column span="2"::: <b>대화 컨트롤</b>
+:::row:::
+    :::column:::
+        ![Dialog image](images/commanding/thumbnail-dialog.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Dialog controls</b>
 
-        <a href="../controls-and-patterns/dialogs.md">Dialog controls</a> are modal UI overlays that provide contextual app information. In most cases, dialogs block interactions with the app window until being explicitly dismissed, and often request some kind of action from the user. Dialogs can be disruptive and should only be used in certain situations. For more info, see the [When to confirm or undo actions](#when-to-confirm-or-undo-actions) section.
+        <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Dialog controls</a> are modal UI overlays that provide contextual app information. In most cases, dialogs block interactions with the app window until being explicitly dismissed, and often request some kind of action from the user. Dialogs can be disruptive and should only be used in certain situations. For more info, see the [When to confirm or undo actions](#when-to-confirm-or-undo-actions) section.
     :::column-end:::
 :::row-end:::
 
@@ -118,7 +178,9 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 
 사용자 인터페이스가 얼마나 잘 디자인되었는지, 사용자가 얼마나 신중한지와 관계없이 어느 시점에서는 모든 사용자가 수행하려고 하지 않았던 작업을 수행하게 됩니다. 앱은 사용자에게 작업을 확인하도록 요구하거나 최근 작업을 실행 취소하는 방법을 제공하여 이러한 상황에서 도움을 줄 수 있습니다.
 
-:::row::: :::column::: ![권장 이미지](images/do.svg)
+:::row:::
+    :::column:::
+        ![do image](images/do.svg)
 
         For actions that can't be undone and have major consequences, we recommend using a confirmation dialog. Examples of such actions include:
         -   Overwriting a file

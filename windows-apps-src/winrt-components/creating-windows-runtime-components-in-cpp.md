@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: C++로 Windows 런타임 구성 요소 만들기
-description: 이 항목에서는 C +를 사용 하는 방법을 보여 줍니다. + C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소는 Windows 런타임 구성 요소를 만드는 CX 합니다.
+description: 이 항목에서는 사용 C + + C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소는 Windows 런타임 구성 요소를 만드는 CX 합니다.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.author: misatran
 ms.date: 05/14/2018
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211431"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258566"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>C++/CX로 Windows 런타임 구성 요소 만들기
 > [!NOTE]
 > 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C +를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법은 + WinRT, 참조 [작성 이벤트 C + + WinRT](../cpp-and-winrt-apis/author-events.md).
 
-이 항목에서는 C +를 사용 하는 방법을 보여 줍니다. + C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소는 Windows 런타임 구성 요소를 만드는 CX 합니다.
+이 항목에서는 사용 C + + C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소는 Windows 런타임 구성 요소를 만드는 CX 합니다.
 
 Windows 런타임 구성 요소를 구축 하기 위한 몇 가지 이유가 있습니다.
 - 복잡하거나 많은 계산이 필요한 작업에서 C++의 성능 이점을 얻을 수 있습니다.
@@ -29,7 +29,7 @@ Windows 런타임 구성 요소를 구축 하기 위한 몇 가지 이유가 있
 
 JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 디바이스에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발자 키트 만들기](https://msdn.microsoft.com/library/hh768146.aspx)를 참조하세요.
 
-일반적으로 코딩할 때 C + + CX 구성 요소는 일반 c + + 라이브러리 및 기본 제공 형식을 제외 하 고 경계 사용 추상 이진 인터페이스 (ABI) 코드에서 데이터를 전달 하는 다른.winmd 패키지에는 위치입니다. Windows 런타임 형식 및 특수 구문을 사용 하 여, 해당 C + + CX 해당 형식을 만들고 조작 하기 위한 지원 합니다. 또한에서 C + + 코드 CX, JavaScript, Visual Basic, c + + 또는 C#에서 구성 요소에서 발생 하 고 처리할 수 있는 이벤트를 구현 하는 대리자 및 이벤트와 같은 종류를 사용 합니다. 자세한 내용은 C + + CX 구문 참조 [Visual c + + 언어 참조 (C + + CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+일반적으로 코딩할 때 C + + CX 구성 요소를 사용 하 여 일반 c + + 라이브러리 및 기본 제공 형식을 제외 하 고 추상 이진 인터페이스 (ABI) 경계에서 다른.winmd 패키지의 코드에서 데이터를 전달 하는 위치입니다. Windows 런타임 형식 및 특수 구문을 사용 하 여, 해당 C + + CX 해당 형식을 만들고 조작 하기 위한 지원 합니다. 또한에서 C + + 코드 CX, JavaScript, Visual Basic, c + + 또는 C#에서 구성 요소에서 발생 하 고 처리할 수 있는 이벤트를 구현 하는 대리자 및 이벤트와 같은 종류를 사용 합니다. C +에 대 한 자세한 내용은 + /CX 구문 참조 [Visual c + + 언어 참조 (C + + CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>대/소문자 표기 및 명명 규칙
 
@@ -85,7 +85,7 @@ Windows 런타임 구성 요소에는 여러 활성화 가능한 공용 클래�
 
 활성화 가능한 클래스는 **public ref class sealed**로 선언해야 합니다. **ref class** 키워드가 컴파일러에게 Windows 런타임 호환 형식으로 클래스를 만들도록 지시하면 봉인된 키워드는 클래스가 상속될 수 없다고 지정합니다. Windows 런타임은 현재 유니버설 상속 모델을 지원하지 않고, 제한된 상속 모델이 사용자 지정 XAML 컨트롤의 생성을 지원합니다. 자세한 내용은 [Ref 클래스 및 구조(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699870.aspx)를 참조하세요.
 
-C + + /CX에서 모든 숫자 기본 형식은 기본 네임 스페이스에서 정의 됩니다. [플랫폼](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) 네임 스페이스에 포함 된 C + + Windows 런타임에 관련 된 CX 클래스 시스템을 입력 합니다. 여기에는 [Platform::String](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) 클래스 및 [Platform::Object](https://msdn.microsoft.com/library/windows/apps/xaml/hh748265.aspx) 클래스가 포함됩니다. [Platform::Collections::Map](https://msdn.microsoft.com/library/windows/apps/xaml/hh441508.aspx) 클래스 및 [Platform::Collections::Vector](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) 클래스와 같은 구체적인 컬렉션 형식은 [Platform::Collections](https://msdn.microsoft.com/library/windows/apps/xaml/hh710418.aspx) 네임스페이스에서 정의됩니다. 이러한 형식이 구현하는 공용 인터페이스는 [Windows::Foundation::Collections 네임스페이스(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh441496.aspx)에서 정의됩니다. 이러한 인터페이스 형식이 JavaScript, C# 및 Visual Basic에서 사용하는 형식입니다. 자세한 내용은 [형식 시스템(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx)을 참조하세요.
+C + + /CX에서 모든 숫자 기본 형식은 기본 네임 스페이스에서 정의 됩니다. [플랫폼](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) 네임 스페이스를 포함 C + + Windows 런타임에 관련 된 CX 클래스 시스템을 입력 합니다. 여기에는 [Platform::String](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx) 클래스 및 [Platform::Object](https://msdn.microsoft.com/library/windows/apps/xaml/hh748265.aspx) 클래스가 포함됩니다. [Platform::Collections::Map](https://msdn.microsoft.com/library/windows/apps/xaml/hh441508.aspx) 클래스 및 [Platform::Collections::Vector](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx) 클래스와 같은 구체적인 컬렉션 형식은 [Platform::Collections](https://msdn.microsoft.com/library/windows/apps/xaml/hh710418.aspx) 네임스페이스에서 정의됩니다. 이러한 형식이 구현하는 공용 인터페이스는 [Windows::Foundation::Collections 네임스페이스(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh441496.aspx)에서 정의됩니다. 이러한 인터페이스 형식이 JavaScript, C# 및 Visual Basic에서 사용하는 형식입니다. 자세한 내용은 [형식 시스템(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx)을 참조하세요.
 
 ## <a name="method-that-returns-a-value-of-built-in-type"></a>기본 제공 형식의 값을 반환하는 메서드
 ```cpp
@@ -176,7 +176,7 @@ private void GetAndSetPlayerData()
 ```
 
 ## <a name="overloaded-methods"></a>오버로드된 메서드
-C + + 공용 참조 클래스 CX 오버 로드 된 메서드를 포함할 수 있지만 JavaScript는 오버 로드 된 메서드를 구분할 수 있는 기능이 제한적입니다. 예를 들어 다음 서명 간의 차이는 구분할 수 있습니다.
+C + + 공용 참조 클래스 CX 오버 로드 된 메서드를 포함 될 수 있지만 JavaScript는 오버 로드 된 메서드를 구분할 수 있는 기능이 제한적입니다. 예를 들어 다음 서명 간의 차이는 구분할 수 있습니다.
 
 ```cpp
 public ref class NumberClass sealed
@@ -225,7 +225,7 @@ public:
 };
 ```
 
-C + DateTime 값을 전달 하면 + /CX JavaScript에 JavaScript Date 개체로 수락 하 고 기본적으로 긴 형식 날짜 문자열로 표시 됩니다.
+C + DateTime 값을 전달 하면 + /CX JavaScript, JavaScript Date 개체로 수락 하 고 기본적으로 긴 형식 날짜 문자열로 표시 됩니다.
 
 ```javascript
 function SetAndGetDate() {
@@ -242,7 +242,7 @@ function SetAndGetDate() {
 }
 ```
 
-.NET 언어는 C +는 System.DateTime을 전달 하는 경우 + CX 구성 요소는 수락는 Windows::Foundation::DateTime 합니다. 구성 요소가 Windows::Foundation::DateTime을 .NET Framework 메서드로 전달하면 Framework 메서드는 이 값을 DateTimeOffset으로 수락합니다.
+.NET 언어는 C +는 System.DateTime을 전달 하는 경우 + CX 구성 요소는 메서드도 수락는 Windows::Foundation::DateTime 합니다. 구성 요소가 Windows::Foundation::DateTime을 .NET Framework 메서드로 전달하면 Framework 메서드는 이 값을 DateTimeOffset으로 수락합니다.
 
 ```csharp
 private void DateTimeExample()
@@ -546,7 +546,7 @@ C# 및 Visual Basic 둘 다 열거에 대해 언어를 지원합니다. 이러�
 ## <a name="asynchronous-methods"></a>비동기 메서드
 다른 Windows 런타임 개체에서 제공하는 비동기 메서드를 사용하려면 [작업 클래스(동시성 런타임)](https://msdn.microsoft.com/library/hh750113.aspx)를 사용합니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)](https://msdn.microsoft.com/library/dd492427.aspx)를 참조하세요.
 
-C + 비동기 메서드를 구현 하려면 + /CX에서 ppltasks.h에 정의 된 [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) 함수를 사용 합니다. 자세한 내용은 참조 [비동기 작업 만들기 C + + /cx로 UWP 앱 용](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). 예를 들어 참조 [연습: 기본 Windows 런타임 구성 요소를 만들고 C + + CX JavaScript 또는 C#에서 호출](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)합니다. .NET 언어 사용 C + +.NET Framework에서 정의 된 모든 비동기 메서드를 처럼 CX 비동기 메서드.
+C + 비동기 메서드를 구현 하려면 + /CX ppltasks.h에 정의 된 [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) 함수를 사용 합니다. 자세한 내용은 참조 [비동기 작업 만들기 C + + /cx로 UWP 앱 용](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). 예를 들어 참조 [연습: 기본 Windows 런타임 구성 요소를 만들고 C + + CX JavaScript 또는 C#에서 호출](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)합니다. .NET 언어 사용 C + +.NET Framework에서 정의 된 모든 비동기 메서드를 처럼 CX 비동기 메서드.
 
 ## <a name="exceptions"></a>예외
 Windows 런타임에서 정의된 모든 예외 형식을 throw할 수 있습니다. 일부 Windows 런타임 예외 형식에서는 사용자 지정 형식을 파생시킬 수 없습니다. 그러나 COMException을 throw하고 예외를 catch하는 코드에서 액세스할 수 있는 사용자 지정 HRESULT를 제공할 수 있습니다. COMException에서 사용자 지정 메시지를 지정할 수 있는 방법이 없습니다.

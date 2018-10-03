@@ -11,14 +11,14 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: 8748b68bf4efbcc79d0bba475db32f3a2d7cc933
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: bde2e58934e24df7db2cb77fb793106aa65e3834
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260870"
 ---
-# <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>데스크톱 앱 변화기를 사용해 앱을 패키지로 만들기(데스크톱 브리지)
+# <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Desktop App Converter를 사용 하 여 데스크톱 응용 프로그램 패키지
 
 [Desktop App Converter 다운로드](https://aka.ms/converter)
 
@@ -26,14 +26,14 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 
 ![DAC 아이콘](images/desktop-to-uwp/dac.png)
 
-'변환기'가 이 도구의 이름으로 표시되지만, 실제 앱을 변환하지 않습니다. 앱은 그대로 유지됩니다. 그러나 이 도구는 패키지 ID와 방대한 WinRT API를 호출하는 기능을 포함하여 Windows 앱 패키지를 생성합니다.
+'변환기'가 이 도구의 이름으로 표시되지만, 실제 앱을 변환하지 않습니다. 응용 프로그램 변경 되지 않습니다. 그러나 이 도구는 패키지 ID와 방대한 WinRT API를 호출하는 기능을 포함하여 Windows 앱 패키지를 생성합니다.
 
 개발 시스템에서 Add-AppxPackage PowerShell cmdlet를 사용하여 해당 패키지를 설치할 수 있습니다.
 
 변환기는 변환기 다운로드의 일부로 제공된 새로운 기본 이미지를 사용하여 격리된 Windows 환경에서 데스크톱 설치 관리자를 실행합니다. 또한 데스크톱 설치 관리자가 수행한 모든 레지스트리 및 파일 시스템 I/O를 캡처하고 출력의 일부로 패키징합니다.
 
 >[!IMPORTANT]
->데스크톱 브리지는 Windows 10 버전, 1607에 도입되었으며 Windows 10 1주년 업데이트(10.0, 빌드 14393) 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다.
+>데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10, 버전 1607에에서 도입 그렇지 및 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트 에서만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
 
 > [!NOTE]
 > Microsoft Virtual Academy가 게시한 짧은 동영상에서 <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">이 시리즈</a>를 확인하세요. 이러한 동영상은 Desktop App Converter를 사용하는 몇 가지 일반적인 방법들을 보여 줍니다.
@@ -54,7 +54,7 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 
 :heavy_check_mark: 앱을 테스트할 수 있도록 패키지를 자동으로 로그인합니다.
 
-:heavy_check_mark: 데스크톱 브리지 및 Microsoft Store 요구 사항에 대해 앱의 유효성을 검사합니다.
+: heavy_check_mark: 패키지 된 앱 및 Microsoft Store 요구 사항에 대해 응용 프로그램의 유효성을 검사 합니다.
 
 옵션의 전체 목록은 이 가이드의 [매개 변수](#command-reference) 섹션을 참조하세요.
 
@@ -62,7 +62,7 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
+이 가이드를 검토 하 여 응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
 
 ## <a name="make-sure-that-your-system-can-run-the-converter"></a>시스템이 변환기를 실행할 수 있는지 확인
 
@@ -86,7 +86,7 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 
 ## <a name="set-a-few-things-up-apps-with-installers-only"></a>몇 가지 설정 수행(설치 관리자가 있는 앱만 해당)
 
-앱에 설치 관리자가 없는 경우에는 다음 섹션으로 건너 뛸 수 있습니다.
+건너뛰어도 미리 다음 섹션으로 응용 프로그램 설치 관리자가 없는 경우.
 
 1. 운영 체제의 버전 번호를 확인합니다.
 
@@ -121,7 +121,7 @@ Desktop App Converter(DAC)를 사용해 UWP(유니버설 Windows 플랫폼)에 �
 
 앱을 패키지로 만들려면 Desktop App Converter를 시작할 때 열었던 콘솔 창에서 ``DesktopAppConverter.exe``명령을 실행합니다.  
 
-매개 변수를 사용하여 앱의 패키지 이름, 게시자 및 버전 번호를 지정합니다.
+매개 변수를 사용 하 여 응용 프로그램의 패키지 이름, 게시자 및 버전 번호를 지정 합니다.
 
 > [!NOTE]
 > Microsoft Store에서 앱 이름을 예약한 경우에는 Windows 개발자 센터 대시보드를 사용하여 이름과 게시자를 알 수 있습니다. 다른 시스템에 앱을 사이드로드할 계획이라면 선택한 게시자 이름이 앱 로그인에 사용하는 인증서의 이름과 일치되는 경우에 한해 고유한 이름을 제공할 수 있습니다.
@@ -144,14 +144,14 @@ DesktopAppConverter.exe
 
 앱을 패키지로 만들 수 있는 몇 가지 일반적인 방법은 다음과 같습니다.
 
-* [설치 관리자(.msi) 파일이 있는 앱을 패키징](#installer-conversion)
-* [설정 실행 파일이 있는 앱을 패키징](#setup-conversion)
-* [설치 관리자가 없는 앱을 패키징](#no-installer-conversion)
+* [설치 관리자 (.msi) 파일이 있는 응용 프로그램 패키지](#installer-conversion)
+* [설정 실행 파일이 있는 응용 프로그램 패키지](#setup-conversion)
+* [설치 관리자가 없는 응용 프로그램 패키지](#no-installer-conversion)
 * [앱 패키징, 앱 서명, Microsoft Store 제출 준비](#optional-parameters)
 
 <a id="installer-conversion" />
 
-#### <a name="package-an-app-that-has-an-installer-msi-file"></a>설치 관리자(.msi) 파일이 있는 앱을 패키징
+#### <a name="package-an-application-that-has-an-installer-msi-file"></a>설치 관리자 (.msi) 파일이 있는 응용 프로그램 패키지
 
 ``Installer`` 매개 변수를 사용해 설치 관리자 파일을 가리킵니다.
 
@@ -170,7 +170,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.msi -Destination C:\O
 
 <a id="setup-conversion" />
 
-#### <a name="package-an-app-that-has-a-setup-executable-file"></a>설정 실행 파일이 있는 앱을 패키징
+#### <a name="package-an-application-that-has-a-setup-executable-file"></a>설정 실행 파일이 있는 응용 프로그램 패키지
 
 ``Installer`` 매개 변수를 사용해 설치 실행 파일을 가리킵니다.
 
@@ -180,7 +180,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 >[!IMPORTANT]
 >개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다.
 
-``InstallerArguments`` 매개 변수는 선택적 매개 변수입니다. 그러나 Desktop App Converter를 무인 모드에서 실행하기 위해서는 설치 관리자가 필요하기 때문에 자동 실행을 위해 앱에서 자동 플래그가 필요한 경우에는 이를 사용해야 할 수도 있습니다. ``/S`` 플래그는 매우 일반적인 자동 플래그이지만, 설치 파일을 만드는 데 사용한 설치 관리자 기술에 따라 사용하는 플래그가 달라질 수 있습니다.
+``InstallerArguments`` 매개 변수는 선택적 매개 변수입니다. 그러나 Desktop App Converter를 무인된 모드에서 실행 되도록 설치 관리자가 필요 하므로 응용 프로그램에 자동으로 실행할 수 있는 자동 플래그가 필요한 경우 사용 해야 할 수 있습니다. ``/S`` 플래그는 매우 일반적인 자동 플래그이지만, 설치 파일을 만드는 데 사용한 설치 관리자 기술에 따라 사용하는 플래그가 달라질 수 있습니다.
 
 **비디오**
 
@@ -188,9 +188,9 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 
 <a id="no-installer-conversion" />
 
-#### <a name="package-an-app-that-doesnt-have-an-installer"></a>설치 관리자가 없는 앱을 패키징
+#### <a name="package-an-application-that-doesnt-have-an-installer"></a>설치 관리자가 없는 응용 프로그램 패키지
 
-이 예에서는 앱 파일의 루트 폴더를 가리키기 위해 ``Installer`` 매개 변수를 사용합니다.
+이 예제에서 사용 하 여는 ``Installer`` 매개 변수를 응용 프로그램 파일의 루트 폴더를 가리킵니다.
 
 앱 실행 파일을 가리키려면 `AppExecutable` 매개 변수를 사용합니다.
 
@@ -209,7 +209,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyApp\ -AppExecutable MyApp.exe 
 
 #### <a name="package-an-app-sign-the-app-and-run-validation-checks-on-the-package"></a>앱 패키징, 앱 서명, 패키지에서 유효성 검사 실행
 
-이 예는 로컬 테스트를 위해 앱에 로그인한 다음, 데스크톱 브리지 및 Microsoft Store 요구 사항에 대한 앱의 유효성을 검사할 수 있는 방법을 보여준다는 점을 제외하고 첫 번째 경우와 비슷합니다.
+이 예는 로컬 테스트를 위해 응용 프로그램 서명 하 고 다음 응용 프로그램 패키지 된 앱 및 Microsoft Store 요구 사항에 대해 유효성을 검사할 수 방법을 보여준다 첫 번째 비슷합니다.
 
 ```cmd
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1 -MakeAppx -Sign -Verbose -Verify
@@ -217,9 +217,9 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 >[!IMPORTANT]
 >개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다.
 
-``Sign`` 매개 변수는 인증서를 생성하고 이를 통해 앱에 로그인합니다. 앱을 실행하려면 생성된 인증서를 설치해야 합니다. 자세한 내용은 이 가이드의 [패키지 앱 실행](#run-app) 섹션을 참조하세요.
+``Sign`` 매개 변수는 인증서를 생성 한 다음 된 응용 프로그램에 서명 합니다. 앱을 실행하려면 생성된 인증서를 설치해야 합니다. 자세한 내용은 이 가이드의 [패키지 앱 실행](#run-app) 섹션을 참조하세요.
 
-``Verify``매개 변수를 사용하여 앱의 유효성을 검사할 수 있습니다.
+사용 하 여 응용 프로그램 확인할 수 있습니다 합니다 ``Verify`` 매개 변수입니다.
 
 ### <a name="a-quick-look-at-optional-parameters"></a>선택적 매개 변수를 빠르게 확인
 
@@ -267,11 +267,11 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 |<a id="conversion-params" /> <strong>변환 매개 변수</strong>|||
 |-AppInstallPath &lt;String&gt;  |선택 사항 |응용 프로그램이 설치된 경우 설치 파일에 대한 응용 프로그램 루트 폴더의 전체 경로입니다(예: "C:\Program Files (x86)\MyApp").|
 |-Destination &lt;String&gt; |필수 |원하는 변환기 appx 출력 대상으로, DesktopAppConverter는 이 위치가 없으면 만들 수 있습니다.|
-|-Installer &lt;String&gt; |필수 |응용 프로그램의 설치 관리자 경로로, 무인/자동으로 실행할 수 있어야 합니다. 설치 관리자 없이 변환할 경우 이는 앱 파일의 루트 디렉터리에 대한 경로입니다. |
+|-Installer &lt;String&gt; |필수 |응용 프로그램의 설치 관리자 경로로, 무인/자동으로 실행할 수 있어야 합니다. 설치 관리자 없이 변환할 경우 응용 프로그램 파일의 루트 디렉터리에 대 한 경로입니다. |
 |-InstallerArguments &lt;String&gt; |선택 사항 |강제로 설치 관리자를 무인/자동으로 실행할 수 있도록 하기 위한 쉼표로 구분된 인수 목록 또는 인수 문자열입니다. 설치 관리자가 msi인 경우 이 매개 변수는 선택적입니다. 설치 관리자에서 로그를 가져오려면 여기에 설치 관리자에 대한 로깅 인수를 제공하고, 변환기가 적절한 경로로 대체하는 토큰에 해당하는 &lt;log_folder&gt; 경로를 사용합니다. <br><br>**참고**: 무인/자동 플래그와 로그 인수는 설치 관리자 기술마다 다릅니다. <br><br>이 매개 변수의 사용 예제는 -InstallerArguments "/silent /log &lt;log_folder&gt;\install.log"를, 로그 파일을 생성하지 않는 또 다른 예제는 ```-InstallerArguments "/quiet", "/norestart"```를 참조하세요. 변환기가 로그를 캡처한 후 최종 로그 폴더에 추가하게 하려면 토큰 경로 &lt;log_folder&gt;로 모든 로그를 보내야 합니다.|
 |-InstallerValidExitCodes &lt;Int32&gt; |선택 사항 |설치 관리자가 성공적으로 실행되었음을 나타내는 쉼표로 구분된 종료 코드 목록(예: 0, 1234, 5678).  기본적으로 msi가 아닌 경우는 0이고 msi인 경우는 0, 1641, 3010입니다.|
 |-MakeAppx [&lt;SwitchParameter&gt;]  |선택 사항 |스위치(있는 경우)는 출력에 대해 MakeAppx를 호출하도록 이 스크립트에 지시합니다. |
-|-MakeMSIX [&lt;SwitchParameter&gt;]  |선택 사항 |있는 경우에이 스크립트 MSIX 패키지로 출력 패키지를 통해 하는 스위치입니다. |
+|-MakeMSIX [&lt;SwitchParameter&gt;]  |선택 사항 |있는 경우 출력 MSIX 패키지로 패키징하이 스크립트를 통해 하는 스위치입니다. |
 |<a id="identity-params" /><strong>패키지 ID 매개 변수</strong>||
 |-PackageName &lt;String&gt; |필수 |유니버설 Windows 앱 패키지의 이름. 개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다. |
 |-Publisher &lt;String&gt; |필수 |유니버설 Windows 앱 패키지의 게시자 |
@@ -296,7 +296,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 |-LogFile &lt;String&gt;  |선택 사항 |로그 파일을 지정합니다. 생략하면 로그 파일의 임시 위치가 생성됩니다. |
 | -[&lt;SwitchParameter&gt;] 로그인 |선택 사항 |테스트용으로 생성된 인증서를 사용해 출력 Windows 앱 패키지를 로그인하라고 이 스크립트에 명령합니다. 이 스위치는 ```-MakeAppx``` 스위치와 함께 있어야 합니다. |
 |&lt;일반 매개 변수&gt; |필수 |이 cmdlet은 *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable*, *OutVariable* 등의 일반 매개 변수를 지원합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요. |
-| - [&lt;SwitchParameter&gt;] 확인 |선택 사항 |스위치가 있을 경우, DAC를 통해 앱 패키지가 데스크톱 브리지 및 Microsoft Store의 요구 사항에 맞는지 확인합니다. 결과는 "VerifyReport.xml"이라는 유효성 검사 보고서로 출력되며, 브라우저에서 가장 잘 보입니다. 이 스위치는 `-MakeAppx` 스위치와 함께 있어야 합니다. |
+| - [&lt;SwitchParameter&gt;] 확인 |선택 사항 |스위치가 있을 경우, 패키지 된 앱 및 Microsoft Store 요구 사항에 대 한 앱 패키지의 유효성을 DAC를 통해 합니다. 결과는 "VerifyReport.xml"이라는 유효성 검사 보고서로 출력되며, 브라우저에서 가장 잘 보입니다. 이 스위치는 `-MakeAppx` 스위치와 함께 있어야 합니다. |
 |-PublishComRegistrations| 선택 사항| 설치 관리자가 변경한 모든 공개 COM 등록을 검사하고 매니페스트에 유효한 것을 게시합니다. 이러한 등록을 다른 응용 프로그램에 대해 사용할 수 있도록 하고 싶은 경우에만 이 플래그를 사용합니다. 이러한 등록을 응용 프로그램에서만 사용할 경우에는 이 플래그를 사용할 필요가 없습니다. <br><br>앱 패키징 이후에 COM 등록이 예상대로 작동하도록 하는 방법은 [이 문서](https://blogs.windows.com/buildingapps/2017/04/13/com-server-ole-document-support-desktop-bridge/#lDg5gSFxJ2TDlpC6.97)를 참조하세요.
 
 <a id="run-app" />
@@ -305,9 +305,9 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 
 앱을 실행하는 방법은 두 가지입니다.
 
-PowerShell 명령 프롬프트를 열어서 ```Add-AppxPackage –Register AppxManifest.xml``` 명령을 입력하는 것이 그 하나입니다. 로그인이 필요하지 않다는 점에서 앱을 실행하는 가장 쉬운 방법일 것입니다.
+PowerShell 명령 프롬프트를 열어서 ```Add-AppxPackage –Register AppxManifest.xml``` 명령을 입력하는 것이 그 하나입니다. 서명할 필요가 없기 때문에 응용 프로그램을 실행 하는 가장 쉬운 방법은 때문일 수 있습니다.
 
-또 다른 방법은 인증서를 사용해 앱에 로그인하는 것입니다. ```sign```매개 변수를 사용하는 경우에는 Desktop App Converter가 사용자를 위한 인증서를 생성하고 이를 이용해 앱에 로그인을 합니다. 해당 파일의 이름은 **auto-generated.cer**이며, 패키징된 앱의 루트 폴더에서 찾을 수 있습니다.
+다른 방법은 인증서를 사용 하 여 응용 프로그램에 서명 하는 것입니다. 사용 하는 경우는 ```sign``` 매개 변수, Desktop App Converter을 하나 생성 되며 다음 된 응용 프로그램에 서명 합니다. 해당 파일의 이름은 **auto-generated.cer**이며, 패키징된 앱의 루트 폴더에서 찾을 수 있습니다.
 
 몇 가지 단계에 따라 생성된 인증서를 설치하고 앱을 실행합니다.
 
@@ -334,9 +334,9 @@ PowerShell 명령 프롬프트를 열어서 ```Add-AppxPackage –Register AppxM
 
 ## <a name="modify-the-packaged-app"></a>패키지 앱을 수정
 
-패키지로 만든 앱을 변경하여 버그를 해결하거나, 시각적 자산을 추가하거나, 라이브 타일 같은 최신 기능을 통해 앱을 개선할 수 있습니다.
+될 가능성이 하면 패키지 된 응용 프로그램 버그를 해결 하 고, 시각적 자산을 추가 또는 라이브 타일 같은 최신 기능을 사용 하 여 응용 프로그램 향상 변경할 수 있습니다.
 
-변경을 한 후에는 변환기를 다시 실행할 필요가 없습니다. 대부분의 경우 MakeAppx 도구와 DAC가 앱에 대해 생성한 appxmanifest.xml 파일을 사용해 앱을 쉽게 다시 패키징할 수 있습니다. [Windows 앱 패키지 생성](desktop-to-uwp-manual-conversion.md#make-appx)을 참조하세요.
+변경을 한 후에는 변환기를 다시 실행할 필요가 없습니다. 대부분의 경우, MakeAppx 도구를 사용 하 여 응용 프로그램을 패키징할 수 및 앱에 대 한 DAC appxmanifest.xml 파일을 생성 합니다. [Windows 앱 패키지 생성](desktop-to-uwp-manual-conversion.md#make-appx)을 참조하세요.
 
 * 앱의 시각적 자산을 수정하는 경우, 새 패키지 리소스 인덱스 파일을 생성한 다음 MakeAppx 도구를 실행하여 새 패키지를 생성합니다. [PRI(Package Resource Index) 파일 생성](desktop-to-uwp-manual-conversion.md#make-pri)을 참조하세요.
 
@@ -351,7 +351,7 @@ PowerShell 명령 프롬프트를 열어서 ```Add-AppxPackage –Register AppxM
 |---|---|
 |<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Video-Modifying-and-Repackaging-Output-from-Desktop-App-Converter-OwpAJ3WhD_6706218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Modify-Output-from-Desktop-App-Converter-gEnsa3WhD_8606218965" width="426" height="472" allowFullScreen frameBorder="0"></iframe>|
 
-다음 두 섹션에는 패키지로 만든 앱에 대해 고려해 볼 수 있는 몇 가지 "수정" 옵션이 나와 있습니다.
+다음 두 섹션에는 몇 가지 고려할 수 있는 패키지 된 응용 프로그램에 선택적 수정은 설명 합니다.
 
 ### <a name="delete-unnecessary-files-and-registry-keys"></a>불필요한 파일 및 레지스트리 키 삭제
 
@@ -400,10 +400,10 @@ Desktop App Converter는 유니코드를 지원하지 않으므로 중국어 문
 
 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.
 
-**앱 실행 / 문제 찾기 및 해결**
+**응용 프로그램을 실행 / 문제 찾기 및 해결**
 
-[패키지 데스크톱 앱 실행, 디버그, 테스트(데스크톱 브리지)](desktop-to-uwp-debug.md)를 참조하세요.
+[실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트](desktop-to-uwp-debug.md) 를 참조 하세요.
 
 **앱 배포**
 
-[패키지 데스크톱 앱 배포(데스크톱 브리지)](desktop-to-uwp-distribute.md)를 참조하세요.
+[패키지로 만든된 데스크톱 응용 프로그램 배포](desktop-to-uwp-distribute.md) 를 참조 하세요.

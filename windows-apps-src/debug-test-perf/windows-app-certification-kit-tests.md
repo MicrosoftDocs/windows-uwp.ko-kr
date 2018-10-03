@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258712"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
@@ -319,7 +319,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 앱이 디버그 빌드가 아니라 릴리스 빌드로 컴파일되었는지 확인하세요.
 
-> **참고**  앱은 [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)를 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다.
+> **참고**  [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다.
 
 [UWP 앱 용 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)되지 않은 앱은 API를 식별 하기 위해 오류 메시지를 검토 합니다.
 

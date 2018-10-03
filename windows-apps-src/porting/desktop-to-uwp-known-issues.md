@@ -4,23 +4,23 @@ Description: This article contains known issues with the Desktop Bridge.
 Search.Product: eADQiWindows 10XVcnh
 title: 알려진 문제(데스크톱 브리지)
 ms.author: normesta
-ms.date: 05/18/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 76ff4fb4b7933c54e5137507e7996eefa7b46d5a
-ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
-ms.translationtype: HT
+ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "1905384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263880"
 ---
-# <a name="known-issues-desktop-bridge"></a>알려진 문제(데스크톱 브리지)
+# <a name="known-issues-with-packaged-desktop-applications"></a>패키지 데스크톱 응용 프로그램의 알려진된 문제
 
-이 문서에는 데스크톱 브리지의 알려진 문제가 포함되어 있습니다.
+이 문서에서는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 때 발생할 수 있는 알려진된 문제를 포함 합니다.
 
 <a id="app-converter" />
 
@@ -38,7 +38,7 @@ ms.locfileid: "1905384"
 
 이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 `Netsh int ipv4 reset` 명령을 실행한 다음, 컴퓨터를 다시 시작합니다.
 
-### <a name="your-net-app-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>.NET 앱은 "AnyCPU" 빌드 옵션으로 컴파일이 되고 설치에 실패합니다.
+### <a name="your-net-application-is-compiled-with-the-anycpu-build-option-and-fails-to-install"></a>.NET 응용 프로그램 "AnyCPU" 빌드 옵션을 사용 하 여 컴파일된 및 설치에 실패
 
 주 실행 파일 또는 종속성이 **Program Files** 또는 **Windows\System32** 아래에 배치된 경우 이 오류가 발생할 수 있습니다.
 
@@ -54,9 +54,9 @@ ms.locfileid: "1905384"
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>XML에서 오류 발견 '실행 파일' 특성이 유효 - 데이터 형식으로 볼 때 'MyApp.EXE' 값은 잘못된 것입니다.
 
-애플리케이션의 실행 파일에 대문자 **.EXE** 확장명이 있는 경우 이런 오류가 발생할 수 있습니다. 하지만 이 확장명의 대/소문자는 앱의 실행 여부에 영향을 미치지는 않지만, DAC에서 이 오류가 발생하는 원인이 될 수 있습니다.
+애플리케이션의 실행 파일에 대문자 **.EXE** 확장명이 있는 경우 이런 오류가 발생할 수 있습니다. 하지만이 확장명의 대/소문자 표기 응용 프로그램의 실행 여부에 영향을 DAC에서이 오류가 발생할 수 있습니다.
 
-이 문제를 해결하려면 패키징 시 **-AppExecutable** 플래그를 지정하고 주 실행 파일의 확장명으로 소문자 ".exe"를 사용해 보십시오(예: MYAPP.exe).    또는 앱의 모든 실행 파일에서 소문자를 소문자로 바꿀 수 있습니다(예: .EXE를 .exe로 변경).
+이 문제를 해결하려면 패키징 시 **-AppExecutable** 플래그를 지정하고 주 실행 파일의 확장명으로 소문자 ".exe"를 사용해 보십시오(예: MYAPP.exe).    또는 모든 실행 파일에서 소문자를 소문자로 응용 프로그램에서 변경할 수 있습니다 (예:에서. EXE를.exe로)입니다.
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>손상되거나 잘못된 형식의 Authenticode 서명
 
@@ -95,7 +95,7 @@ Microsoft Store에서 특정 앱을 설치하거나 실행한 후 컴퓨터가 *
 
 업데이트해도 문제가 해결되지 않거나 PC를 복구하는 방법을 잘 모를 경우 [Microsoft 지원](https://support.microsoft.com/contactus/)에 문의하세요.
 
-개발자인 경우에는 이 업데이트를 포함하지 않는 Windows 버전에서 패키지된 응용 프로그램 설치를 방지할 수 있습니다. 이렇게 하면 업데이트를 설치하지 않은 사용자는 앱을 사용할 수 없게 됩니다. 이 업데이트를 설치한 사용자에게 앱의 가용성을 제한하려면 AppxManifest.xml 파일을 다음과 같이 수정합니다.
+개발자인 경우에는 이 업데이트를 포함하지 않는 Windows 버전에서 패키지된 응용 프로그램 설치를 방지할 수 있습니다. 이때 응용 프로그램이이 작업을 수행 하 여 업데이트를 아직 설치 하지 않은 사용자에 게 사용할 수 없습니다. 이 업데이트를 설치한 사용자에 게 응용 프로그램의 가용성을 제한 하려면 AppxManifest.xml 파일을 다음과 같이 수정 합니다.
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -129,6 +129,41 @@ PFX 파일의 명령줄에서 **certutil**을 실행하고 출력에서 *Subject
 certutil -dump <cert_file.pfx>
 ```
 
+<a id="bad-pe-cert" />
+
+### <a name="bad-pe-certificate-0x800700c1"></a>잘못 된 PE 인증서 (0x800700C1)
+
+이 패키지 손상 된 인증서가 있는 이진 파일을 포함 하는 경우 발생할 수 있습니다. 다음은 일부의 이유는 이유이 발생할 수 있습니다.
+
+* 인증서의 시작 화면 이미지의 끝에 되지 않습니다.  
+
+* 인증서의 크기는 양수 하지 않습니다.
+
+* 후 인증서 시작 되지 합니다 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조입니다.
+
+* 인증서 포인터 WIN_CERTIFICATE 구조에 대 한 제대로 정렬 되지 않습니다.
+
+잘못 된 PE 인증서를 포함 하는 파일을 찾으려면 **명령 프롬프트**를 열고 라는 환경 변수를 설정 `APPXSIP_LOG` 을 1의 값입니다.
+
+```
+set APPXSIP_LOG=1
+```
+
+그런 다음 **명령 프롬프트**응용 프로그램을 다시 서명 합니다. 예를 들면 다음과 같습니다.
+
+```
+signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
+```
+
+잘못 된 PE 인증서를 포함 하는 파일에 대 한 정보는 **콘솔 창**에 표시 됩니다. 예를 들면 다음과 같습니다.
+
+```
+...
+
+ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.exe
+
+...   
+```
 ## <a name="next-steps"></a>다음 단계
 
 **질문에 대한 답변 찾기**

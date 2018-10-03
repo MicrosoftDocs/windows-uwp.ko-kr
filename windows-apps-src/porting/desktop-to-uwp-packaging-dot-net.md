@@ -1,8 +1,8 @@
 ---
 author: normesta
-Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop app for the Desktop Bridge.
+Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Visual Studio를 사용한 앱 패키징(데스크톱 브리지)
+title: Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
@@ -11,25 +11,25 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 75f7ff53aeffced746e78d8b27243469dc547097
-ms.sourcegitcommit: 6382f751f09e2f4aa8406c1ceeb25b5189e23da3
+ms.openlocfilehash: 2c9b7a30a50c26d2dbdaf6df04e85549addaf181
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "2410710"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259812"
 ---
-# <a name="package-an-app-by-using-visual-studio-desktop-bridge"></a>Visual Studio를 사용한 앱 패키징(데스크톱 브리지)
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지
 
 Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습니다. 그런 다음 이 패키지를 Microsoft Store에 게시하거나, 하나 이상의 PC에서 사이드로드할 수 있습니다.
 
 최신 버전의 Visual Studio는 앱을 패키징하는 데 필수적이었던 수동 단계를 모두 제거하는 패키징 프로젝트의 새 버전을 제공합니다. 패키징 프로젝트를 추가하고 데스크톱 프로젝트를 참조한 다음 F5 키를 눌러 앱을 디버깅하면 됩니다. 수동 조정이 필요하지 않습니다. 이 새로운 간소화된 환경은 이전 버전의 Visual Studio에서 사용할 수 있는 환경에 대해 상당히 향상되었습니다.
 
 >[!IMPORTANT]
->데스크톱 브리지는 Windows 10 버전, 1607에 도입되었으며 Windows 10 1주년 업데이트(10.0, 빌드 14393) 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다.
+>데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10, 버전 1607에에서 도입 그렇지 및 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트 에서만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-응용 프로그램에 대한 패키지를 만들기 전에 [앱 패키징을 위한 준비(데스크톱 브리지)](desktop-to-uwp-prepare.md) 가이드를 검토하세요.
+이 가이드를 검토 하 여 응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
 
 <a id="new-packaging-project"/>
 
@@ -83,18 +83,18 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.
 
-**앱 실행, 디버그 또는 테스트**
+**실행, 디버그 또는 데스크톱 응용 프로그램을 테스트 합니다.**
 
-[패키징 데스크톱 앱 실행, 디버그, 테스트(데스크톱 브리지)](desktop-to-uwp-debug.md)를 참조하세요.
+[실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트](desktop-to-uwp-debug.md) 를 참조 하세요.
 
-**UWP API를 추가해 데스크톱 앱 향상**
+**UWP Api를 추가 하 여 데스크톱 응용 프로그램 향상**
 
 [Windows 10용 데스크톱 응용 프로그램 개선](desktop-to-uwp-enhance.md) 참조
 
-**UWP 프로젝트 및 Windows 런타임 구성 요소를 추가하여 데스크톱 앱 확장**
+**UWP 프로젝트와 Windows 런타임 구성 요소를 추가 하 여 데스크톱 응용 프로그램 확장**
 
 [최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장](desktop-to-uwp-extend.md) 참조.
 
 **앱 배포**
 
-[패키지 데스크톱 앱 배포(데스크톱 브리지)](desktop-to-uwp-distribute.md)를 참조하세요.
+[패키지로 만든된 데스크톱 응용 프로그램 배포](desktop-to-uwp-distribute.md) 를 참조 하세요.

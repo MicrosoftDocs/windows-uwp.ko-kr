@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업을 앱 서비스에 연결 된 장치, 원격 시스템
 ms.localizationpriority: medium
 ms.openlocfilehash: d4aa5a4f379e0791e9da7db4ecd2a27c09cf0a3a
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262038"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 
@@ -102,7 +102,7 @@ ms.locfileid: "4209759"
 | [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
 | [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)       | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다. |
 | [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)           | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다. |
-| [In-process 백그라운드 작업을 out of process 백그라운드 작업을 포팅](convert-out-of-process-background-task.md) | 포트는 out of process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스에서 실행 되는 in-process 백그라운드 작업 하는 방법을 알아봅니다.|
+| [포트는 out of process 백그라운드 작업을 in-process 백그라운드 작업](convert-out-of-process-background-task.md) | 포트는 out of process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스에서 실행 되는 in-process 백그라운드 작업 하는 방법을 알아봅니다.|
 | [백그라운드 작업 디버그](debug-a-background-task.md)                                                       | Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다. |
 | [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md) | 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다. |
 | [백그라운드 작업 등록 그룹화](group-background-tasks.md)                                             | 그룹으로 백그라운드 작업 등록 격리 |

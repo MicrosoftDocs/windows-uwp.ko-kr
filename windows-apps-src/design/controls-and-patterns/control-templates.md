@@ -15,12 +15,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c69f516ab3bd412453883d6384237c8ee5446a09
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259752"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -60,6 +60,9 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 다음 XAML은 컨트롤의 콘텐츠가 선택 상자 아래에 있도록 지정하는 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209391)용 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209316)을 만듭니다. 루트 요소는 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)입니다. 이 예에서는 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)를 지정하여 사용자가 **CheckBox**를 선택했음을 나타내는 **X**를 만들고 확정되지 않은 상태를 나타내는 [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)를 만듭니다. [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)가 **Path**와 **Ellipse** 양쪽 모두에서 0으로 설정되어 있으므로 기본적으로 어느 쪽에도 나타나지 않습니다.
 
 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)은 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결하는 특별 바인딩입니다. TemplateBinding은 XAML의 ControlTemplate 정의 내에서만 사용할 수 있습니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
+
+> [!NOTE]
+> Windows 10으로 다음 주요 업데이트부터 [**X:bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그 확장을 사용할 수 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)장소에서 사용 합니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">

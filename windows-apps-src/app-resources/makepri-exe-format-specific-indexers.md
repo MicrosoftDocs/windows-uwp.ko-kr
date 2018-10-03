@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ec6b2a31f4f577de30dac1c96a411c6aee6e9dc
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204951"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261142"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>MakePri.exe 형식별 인덱서
 
 이 항목에서는 리소스 인덱스를 생성하기 위해 [MakePri.exe](compile-resources-manually-with-makepri.md) 도구에 의해 사용되는 형식별 인덱서에 대해 설명합니다.
 
 > [!NOTE]
-> MakePri.exe에는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **Windows SDK UWP 앱의 관리** 옵션을 확인할 때 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **앱을 관리 하는 UWP 용 Windows SDK** 옵션을 확인 하는 때 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 명명 된 폴더를 처럼 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
 MakePri.exe는 일반적으로 `new`, `versioned`, 또는 `resourcepack` 명령과 함께 사용됩니다. [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)을 참조하세요. 이러한 경우 원본 파일을 인덱싱하여 리소스 인덱스를 생성합니다. MakePri.exe는 다른 소스 리소스 파일 또는 리소스 컨테이너를 읽기 위해 다양한 개별 인덱서를 사용합니다. 가장 단순한 인덱서는 폴더 인덱서이며 `.jpg`또는 `.png` 이미지 등의 폴더의 콘텐츠를 인덱싱합니다.
 

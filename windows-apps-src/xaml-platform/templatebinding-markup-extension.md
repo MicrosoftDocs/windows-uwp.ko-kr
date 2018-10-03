@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ca551ff53a0a91b5bc60263b6e282b95c32bf976
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259802"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결합니다. **TemplateBinding**은 XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) 정의 내에서만 사용할 수 있습니다.
 
@@ -57,6 +58,24 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 **TemplateBinding**은 태그 확장입니다. 태그 확장은 특정 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 구현되며, 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML의 모든 태그 확장은 특성 구문에 "{" 및 "}" 문자를 사용하며, 여기서 특성 구문은 XAML 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용하는 규칙입니다.
 
 **참고**  Windows 런타임 XAML 프로세서 구현에는 **TemplateBinding**을 위한 지원 클래스 표현이 없습니다. **TemplateBinding**은 XAML 태그에서만 사용됩니다. 코드에서 이 동작을 재현하는 간단한 방법은 없습니다.
+
+### <a name="xbind-in-controltemplate"></a>ControlTemplate에서 X:bind
+
+Windows 10으로 다음 주요 업데이트부터 **X:bind** 태그 확장을 사용할 수 **TemplateBinding** [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 사용 되는 곳입니다. 
+
+[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) 속성 (옵션 아님) 필요할 수 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우에 있습니다.
+
+**X: Bind** 지원 이제로 사용할 수 두 [함수 바인딩](../data-binding/function-bindings.md) [을 ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) 에서 원활 하 게으로 양방향 바인딩을
+
+다음 예제에서는 TextBlock.Text Button.Content.ToString()를 계산합니다. ControlTemplate에서 TargetType 데이터 소스 역할을 하 고 부모 TemplateBinding와 동일한 결과 수행 합니다.
+
+```xaml
+<ControlTemplate TargetType="Button">
+    <Grid>
+        <TextBlock Text="{x:Bind Content}" />
+    </Grid>
+</ControlTemplate>
+```
 
 ## <a name="related-topics"></a>관련 항목
 

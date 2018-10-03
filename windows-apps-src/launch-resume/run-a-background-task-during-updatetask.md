@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, 업데이트, 백그라운드 작업, updatetask, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: fcba2cb736f86cebc6d2664e2ec3b557d47c86d7
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206965"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263148"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>UWP 앱 업데이트 시 백그라운드 작업을 실행합니다.
 
 유니버설 Windows 플랫폼 (UWP) 스토어 앱 업데이트 후 실행 되는 백그라운드 작업을 작성 하는 방법을 알아봅니다.
 
-업데이트 작업 백그라운드 작업은 사용자 장치에 설치 하는 앱에 대 한 업데이트를 설치한 후 운영 체제에 의해 호출 됩니다. 이 앱을 업데이트 데이터베이스 스키마 및 등 사용자가 업데이트 된 앱을 실행 하기 전에 새 푸시 알림 채널, 초기화 등의 초기화 작업을 수행할 수 있습니다.
+업데이트 작업 백그라운드 작업은 사용자가 장치에 설치 하는 앱에 대 한 업데이트를 설치 후 운영 체제에 의해 호출 됩니다. 이 앱을 업데이트 데이터베이스 스키마 및 등 사용자가 업데이트 된 앱을 시작 하기 전에 새 푸시 알림 채널, 초기화 등의 초기화 작업을 수행할 수 있습니다.
 
 이 경우 앱 실행 해야 하므로 한 번 이상 합니다 **활성화 되는 백그라운드 작업을 등록 하기 위해 업데이트 되기 전에 [ServicingComplete](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 트리거를 사용 하 여 백그라운드 작업을 시작에서 업데이트 작업의 차이점 ServicingComplete** 트리거 합니다.  업데이트 작업 등록 되지 않은 및 앱을 실행, 하지만 업그레이드 하는 해당 업데이트 작업이 트리거될 계속 수 있으므로 합니다.
 
@@ -30,10 +30,10 @@ ms.locfileid: "4206965"
 
 - Windows 런타임 구성 요소 프로젝트를 솔루션에 추가 합니다.
 - 앱에서 구성 요소에 대 한 참조를 만듭니다.
-- 구성 요소에 공용, 봉인 클래스를 만들고 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현 합니다.
-- [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드를 구현 하는 경우 업데이트 작업이 실행 될 때 호출 되는 필수 진입점 백그라운드 작업에서 비동기 호출 하려는 [out of process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) **실행** 메서드에서 deferral을 사용 하는 방법을 설명 합니다.
+- 구성 요소에 공용, 봉인 클래스 만들기 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현 합니다.
+- [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드를 구현 하는 경우 업데이트 작업이 실행 될 때 호출 되는 필수 진입점 백그라운드 작업에서 비동기 호출 하려는 경우 [out of process 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) **실행** 메서드에서 deferral을 사용 하는 방법을 설명 합니다.
 
-업데이트 작업을 사용 하 여이 백그라운드 작업 ( **out of process 백그라운드 작업 만들기 및 등록** 항목의 "백그라운드 작업이 실행 되도록 등록" 섹션)를 등록할 필요가 없습니다. 작업을 등록 하 여 앱 코드를 추가할 필요가 없습니다 및 앱을 업데이트 하 게 백그라운드 작업을 등록 하기 전에 한 번 이상 실행 필요가 때문에 업데이트 작업을 사용 하는 주된 이유입니다.
+업데이트 작업을 사용 하 여이 백그라운드 작업 ( **out of process 백그라운드 작업 만들기 및 등록** 항목의 "백그라운드 작업이 실행 되도록 등록" 섹션)를 등록할 필요가 없습니다. 작업을 등록 하 여 앱 코드를 추가할 필요가 없습니다 및 앱을 업데이트 하는 백그라운드 작업을 등록 하기 전에 한 번 이상 실행 필요가 때문에 업데이트 작업을 사용 하는 주된 이유입니다.
 
 다음 샘플 코드 C#에서 업데이트 작업 백그라운드 작업 클래스는 기본 시작 지점을 보여 줍니다. 백그라운드 작업 클래스 자체와 백그라운드 작업 프로젝트의 다른 모든 클래스가- **public** 및 **sealed**되도록 해야 합니다. 백그라운드 작업 클래스 **IBackgroundTask** 에서 파생 하 고 아래 표시 된 서명이 포함 된 공개 **run ()** 메서드가 있어야 해야:
 
@@ -74,7 +74,7 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 를 마우스 �
 
 위의 XML에서의 `EntryPoint` 특성이 업데이트 작업 클래스의 namespace.class 이름으로 설정 합니다. 이름은 대/소문자 구분 합니다.
 
-## <a name="step-3-debugtest-your-update-task"></a>3 단계: 디버그/업데이트 작업 테스트
+## <a name="step-3-debugtest-your-update-task"></a>3 단계: 디버그/테스트 업데이트 작업
 
 업데이트를 위해 되도록 시스템에 앱 배포 확인 합니다.
 
@@ -82,7 +82,7 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 를 마우스 �
 
 ![설정 중단점](images/run-func-breakpoint.png)
 
-다음으로 솔루션 탐색기에서 앱의 프로젝트 (백그라운드 작업 프로젝트가 아닌)를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 차례로 클릭 합니다. 응용 프로그램 속성 창의 왼쪽에 **디버그** 를 클릭 한 다음 **실행 하지 않지만 시작 되 면 내 코드 디버그**선택:
+그런 다음 솔루션 탐색기에서 앱의 프로젝트 (하지 백그라운드 작업 프로젝트)를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 합니다. 응용 프로그램 속성 창의 왼쪽에 **디버그** 를 클릭 한 다음 **실행 하지 않지만 시작 되 면 내 코드 디버그**선택:
 
 ![디버그 설정 지정](images/do-not-launch-but-debug.png)
 
@@ -90,12 +90,12 @@ Visual Studio 솔루션 탐색기에서 **Package.appxmanifest** 를 마우스 �
 
 ![버전 업데이트](images/bump-version.png)
 
-이제 Visual Studio 2017에서 F5 키를 누를 때 앱 업데이트 되 고 시스템에서 백그라운드에서 UpdateTask 구성 요소를 정품 인증 됩니다. 디버거는 백그라운드 프로세스를 자동으로 연결 됩니다. 중단점이 적중 가져오기지 것입니다 및 업데이트 코드 논리를 단계별로 실행할 수 있습니다.
+이제 Visual Studio 2017에서 F5 키를 누를 때 앱 업데이트 되 고 시스템에서 백그라운드 UpdateTask 구성 요소를 정품 인증 됩니다. 디버거를 백그라운드 프로세스를 자동으로 연결 됩니다. 중단점이 적중 가져오기지 것입니다 및 업데이트 코드 논리를 단계별로 실행할 수 있습니다.
 
 백그라운드 작업이 완료 되 면 동일한 디버그 세션 내에서 Windows 시작 메뉴에서 포그라운드 앱을 시작할 수 있습니다. 디버거는 자동으로 다시 연결 포그라운드 프로세스이 이번 하 고, 앱의 논리를 단계별로 실행할 수 있습니다.
 
 > [!NOTE]
-> Visual Studio 2015 사용자: Visual Studio 2017에 위의 단계를 적용 합니다. Visual Studio 2015를 사용 하는 경우 트리거를 테스트 하 여 Visual Studio를 제외 하 고 UpdateTask를 연결 되지 것입니다 동일한 기술을 사용할 수 있습니다. VS 2015에는 다른 절차는 UpdateTask의 진입점으로 설정 하는 [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) 를 설치 하 고 포그라운드 앱에서 직접 실행을 시작 하는 것입니다.
+> Visual Studio 2015 사용자: Visual Studio 2017에 위의 단계를 적용 합니다. Visual Studio 2015를 사용 하는 경우에 트리거 및 테스트를 Visual Studio를 제외 하 고 UpdateTask를 연결 하지는 동일한 기술을 사용할 수 있습니다. VS 2015에는 다른 절차는 UpdateTask의 진입점으로 설정 하는 [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) 를 설치 하 고 포그라운드 앱에서 직접 실행을 시작 하는 것입니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: a599fdef47bb681ef4909fe5bba2a01a1687ba66
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265380"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Out-of-process 백그라운드 작업 만들기 및 등록
 
@@ -144,9 +144,9 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 }
 ```
 
-4.  백그라운드 작업에서 비동기 코드를 실행할 경우 백그라운드 작업은 deferral을 사용해야 합니다. 지연을 사용 하지 않으면, 백그라운드 작업 프로세스가 수를 종료할 예기치 않게 실행 되어 모든 비동기 작업이 완료 되기 전에 **Run** 메서드가 반환 하는 경우.
+4.  백그라운드 작업에서 비동기 코드를 실행할 경우 백그라운드 작업은 deferral을 사용해야 합니다. 지연을 사용 하지 않으면, 백그라운드 작업 프로세스가 수를 종료할 예기치 않게 모든 비동기 작업이 실행이 완료 되기 전에 **Run** 메서드가 반환 하는 경우.
 
-비동기 메서드를 호출 하기 전에 **실행** 메서드에서 deferral을 요청 합니다. 비동기 메서드에서 액세스할 수 있도록 지연 클래스 데이터 멤버에 저장 합니다. 비동기 코드가 완료된 후에 deferral 완료를 선언합니다.
+비동기 메서드를 호출 하기 전에 **Run** 메서드는 deferral을 요청 합니다. 비동기 메서드에서 액세스할 수 있도록 지연 클래스 데이터 멤버에 저장 합니다. 비동기 코드가 완료된 후에 deferral 완료를 선언합니다.
 
 다음 샘플 코드는 deferral, 저장 및 비동기 코드가 완료 되 면 해제 합니다.
 
@@ -211,13 +211,13 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 다음 단계는 앱 클래스 중 하나(예제: MainPage.xaml.cs)에서만 완료합니다.
 
 > [!NOTE]
-> 전용으로 백그라운드 작업 등록 함수를 만들 수도 있습니다&mdash; [백그라운드 작업 등록](register-a-background-task.md)을 참조 하세요. 이 경우 다음 세 단계를 사용 하는 대신 단순히 트리거를 생성을 작업 이름, 작업 진입점 및 조건 (선택 사항)와 함께 등록 함수를 제공 합니다.
+> 전용으로 백그라운드 작업 등록 함수를 만들 수도 있습니다&mdash; [백그라운드 작업 등록](register-a-background-task.md)을 참조 하세요. 이 경우 다음 세 단계를 사용 하는 대신 단순히 트리거를 생성 하 수 작업 이름, 작업 진입점 및 조건 (선택 사항)와 함께 등록 함수를 제공 합니다.
 
 ## <a name="register-the-background-task-to-run"></a>실행할 백그라운드 작업 등록
 
 1.  백그라운드 작업 [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 속성을 반복 하 여 이미 등록 되어 있는지 확인 합니다. 이 단계는 중요합니다. 앱이 기존 백그라운드 작업 등록을 확인하지 않는 경우 작업을 여러 번 등록하기 쉬우므로 성능에 문제가 발생하거나 작업이 완료되기 전에 작업의 가용 CPU 시간을 모두 사용할 수 있습니다.
 
-다음 예제에서는 **AllTasks** 속성을 반복 하 고 플래그 변수 작업이 이미 등록 하는 경우 true로 설정 합니다.
+다음 예제에서는 **AllTasks** 속성을 반복 하 고 작업이 이미 등록 하는 경우 true 플래그 변수를 설정 합니다.
 
 ```csharp
 var taskRegistered = false;
@@ -415,9 +415,9 @@ task.Completed({ this, &MainPage::OnCompleted });
 task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &MainPage::OnCompleted);
 ```
 
-## <a name="declare-in-the-app-manifest-that-your-app-uses-background-tasks"></a>앱이 백그라운드 작업을 사용 한다고 앱 매니페스트에서 선언
+## <a name="declare-in-the-app-manifest-that-your-app-uses-background-tasks"></a>앱이 백그라운드 작업을 사용 앱 매니페스트에서 선언
 
-백그라운드 작업을 실행하려면 먼저 앱 매니페스트에서 각 백그라운드 작업을 선언해야 합니다. 앱 매니페스트에 나열 되지 않은 트리거를 사용 하 여 백그라운드 작업을 등록 하려고 시도 하면 "런타임 클래스가 등록 되지 않았습니다." 오류와 백그라운드 작업 등록이 실패 합니다.
+백그라운드 작업을 실행하려면 먼저 앱 매니페스트에서 각 백그라운드 작업을 선언해야 합니다. 앱 매니페스트에 나열 되지 않은 트리거를 사용 하 여 백그라운드 작업을 등록 하려고 시도 하면 백그라운드 작업의 등록 "런타임 클래스가 등록 되지 않았습니다." 오류로 실패 합니다.
 
 1.  Package.appxmanifest라는 파일을 열어 패키지 매니페스트 디자이너를 엽니다.
 2.  **선언** 탭을 엽니다.

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 패키징
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8a9c7f504584f64bb561a01170c965aa9d3983
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: fcd6d937c7261b5cfa8af954eb5d2ec2869d8afd
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260508"
 ---
 # <a name="manual-app-packaging"></a>수동 앱 패키징
 
@@ -46,5 +46,5 @@ ms.locfileid: "1815828"
 |-------|-------------|
 | [자산 패키지 소개](asset-packages.md) | 자산 패키지는 아키텍처 패키지 전체에서 중복된 파일에 대한 필요성을 효율적으로 제거하는 응용 프로그램의 일반적인 파일에 대한 중앙 집중식 위치 역할을 수행할 패키지의 유형입니다. |
 | [자산 패키지 및 패키지 접기를 사용하여 개발](package-folding.md) | 자산 패키지 및 패키지 접기를 사용하여 앱을 효율적으로 구성하는 방법을 알아보세요. |
-| [플랫 번들 앱 패키지](flat-bundles.md) | 플랫 번들을 만들어 앱 패키지에 대한 참조가 있는 앱의 .appx 패키지 파일을 번들로 만드는 방법을 설명합니다. |
+| [플랫 번들 앱 패키지](flat-bundles.md) | 앱의 패키지 파일에 대 한 플랫 번들을 만드는 방법을 설명 합니다. |
 | [패키징 레이아웃으로 패키지 만들기](packaging-layout.md) | 패키징 레이아웃은 앱 패키징 구조를 설명하는 단일 문서입니다. 앱(기본 및 선택)의 번들, 번들의 패키지, 패키지의 파일을 지정합니다. |

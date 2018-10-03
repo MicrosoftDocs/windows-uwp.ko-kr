@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 대상 그룹, 고객, 플라이트 그룹, 사용자 그룹, 알려진 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: e15b5a4a2f76cbfc33db593c3110ac6f2d054b5b
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260152"
 ---
 # <a name="create-known-user-groups"></a>알려진 사용자 그룹 만들기
 
