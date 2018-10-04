@@ -39,6 +39,7 @@
 ## [단추](controls-and-patterns/buttons.md)
 ## [확인란](controls-and-patterns/checkbox.md)
 ## [색 선택](controls-and-patterns/color-picker.md)
+## [명령 모음 플라이 아웃](controls-and-patterns/command-bar-flyout.md)
 ## [연락처 카드](controls-and-patterns/contact-card.md)
 ## [날짜 및 시간](controls-and-patterns/date-and-time.md)
 ### [달력 날짜 선택](controls-and-patterns/calendar-date-picker.md)
@@ -56,6 +57,7 @@
 ## [이미지 및 이미지 브러시](controls-and-patterns/images-imagebrushes.md)
 ## [잉크 입력 컨트롤](controls-and-patterns/inking-controls.md)
 ## [목록](controls-and-patterns/lists.md)
+### [콤보 상자](controls-and-patterns/combo-box.md)
 ### [목록 보기 및 그리드 보기](controls-and-patterns/listview-and-gridview.md)
 ### [항목 컨테이너 및 템플릿](controls-and-patterns/item-containers-templates.md)
 ### [목록 보기의 항목 템플릿](controls-and-patterns/item-templates-listview.md)
@@ -100,6 +102,7 @@
 ## [입력 체계](style/typography.md)
 ## 아이콘
 ### [개요](style/icons.md)
+### [앱 아이콘 및 로고](style/app-icons-and-logos.md)
 ### [Segoe MDL2 아이콘](style/segoe-ui-symbol-font.md)
 ## [아크릴](style/acrylic.md)
 ## [강조 표시](style/reveal.md)
@@ -126,7 +129,6 @@
 
 # 셸
 ## [타일](shell/tiles-and-notifications/creating-tiles.md)
-### [타일 및 아이콘 자산 지침](shell/tiles-and-notifications/app-assets.md)
 ### [보조 타일](shell/tiles-and-notifications/secondary-tiles.md)
 #### [지침](shell/tiles-and-notifications/secondary-tiles-guidance.md)
 #### [보조 타일 고정](shell/tiles-and-notifications/secondary-tiles-pinning.md)
