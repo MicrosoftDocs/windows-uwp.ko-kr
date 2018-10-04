@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dc10f18d7c1c38ac21ad6889943b8c6009f5af1
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4340662"
+ms.locfileid: "4354636"
 ---
 # <a name="get-usersxuidxuidgroupsmonikerbroadcasting-"></a>GET (/users/xuid({xuid})/groups/{moniker}/broadcasting )
 지정 된 URI에 표시 되는 XUID 관련 그룹 모니커 브로드캐스트 사용자의 현재 상태 레코드를 검색 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

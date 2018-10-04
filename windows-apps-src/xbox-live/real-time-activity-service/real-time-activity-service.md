@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 실시간으로 활동 서비스.
 ms.localizationpriority: medium
 ms.openlocfilehash: 1969a36a363f86ba6eced1c27d2206de1160c7bc
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4339858"
+ms.locfileid: "4351861"
 ---
 # <a name="real-time-activity-service"></a>실시간 활동 서비스
 

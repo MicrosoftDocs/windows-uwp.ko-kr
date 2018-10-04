@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 통계, 도전 과제, 순위표, 디자인
 ms.localizationpriority: medium
 ms.openlocfilehash: 112beacc2009f495da64475a0740560b7271b43d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4339763"
+ms.locfileid: "4356958"
 ---
 # <a name="designing-xbox-live-experiences"></a>Xbox Live 경험을 디자인합니다.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: a90a880d1f18ff692c388993e0df6da81fa7966e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4340793"
+ms.locfileid: "4351036"
 ---
 # <a name="use-connected-storage-to-delete-data"></a>연결 된 저장소를 사용 하 여 데이터를 삭제 합니다.
 

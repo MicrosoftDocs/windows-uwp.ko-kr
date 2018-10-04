@@ -14,17 +14,14 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: ff104bfb5114cd51eb04d75af3c096f47a7d286d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: c088aa6a2a8b1922eb93ec758dcda8c9a5ec8965
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318075"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357665"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
-
-> [!NOTE]
-> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
 
 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다. 또한 항목의 렌더링을 제어하고 선택 항목을 기반으로 세부 정보 보기를 구현하고, 표시할 데이터를 변환하는 방법을 보여 줍니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
 
@@ -505,7 +502,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 > 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 필요합니다.
 
 > [!IMPORTANT]
-> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), (아래에서 설명) [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 [Windows 10 SDK Preview 빌드 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)설치한 경우에 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
+> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성 (아래에서 설명)는 Windows SDK 버전 (Windows 10, 버전 1809) 10.0.17763.0 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
 
 C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 다음 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장 사용할 것을 때문에 해야 **녹음/녹화** 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가 합니다.
 

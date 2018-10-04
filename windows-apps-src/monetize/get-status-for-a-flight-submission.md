@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 상태
 ms.localizationpriority: medium
 ms.openlocfilehash: 9dbc15b2418c79aa3dee922a61c70364835afe87
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319309"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359991"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>패키지 플라이트 제출 상태 가져오기
 

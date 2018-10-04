@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313793"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358382"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>C++/CX로 Windows 런타임 구성 요소 만들기
 > [!NOTE]

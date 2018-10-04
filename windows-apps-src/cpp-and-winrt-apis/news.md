@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 뉴스, 어떤의 새
 ms.localizationpriority: medium
-ms.openlocfilehash: 3cc28092020639d108ec35898ad1d6bddcd055f5
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: bc6be28e112dfdd14b3585bd88ba066fbeae382d
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317470"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357775"
 ---
 # <a name="whats-new-in-cwinrt"></a>새로운 C + + WinRT
 
@@ -45,6 +45,12 @@ ms.locfileid: "4317470"
 - 코드 생성 향상: 코드 크기를 줄일 수 있는 다양 한 개선 인라인을 개선 하 고 공장 캐싱 최적화 합니다.
 - 불필요 한 재귀를 제거 됩니다. 때 명령줄 참조 아니라 특정 폴더에 `.winmd`, `cppwinrt.exe` 도구를 재귀적으로 더 이상 검색 `.winmd` 파일. `cppwinrt.exe` 도구가 이제 처리 중복 더 지능적으로 사용자 오류 력이 이며에 잘못 된 형식의 `.winmd` 파일.
 - 스마트 포인터를 강화 합니다. 이전에 실패를 취소 될 때 이벤트 revokers 이동-할당 된 새 값입니다. 이 도움이 스마트 포인터 클래스 자체 할당; 미치지 안정적으로 처리 하는 위치는 문제를 다루지 않습니다. [**winrt:: com_ptr 구조체 템플릿**](/uwp/cpp-ref-for-winrt/com-ptr)루트가 지정 됩니다. **winrt:: com_ptr** 를 수정한 하 고 처리 하는 고정 된 이벤트 revokers 이동 의미 체계 올바르게 할당 시은 취소할 수 있도록 합니다.
+
+> [!NOTE]
+> 1.0.181002.2 버전을 사용 하 여 (이상)의 합니다 [C + + WinRT Visual Studio Extension (VSIX)](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix) 설치를 만드는 새로운 C + + WinRT 프로젝트 해당 프로젝트에 대 한 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 자동으로 설치 합니다. Microsoft.Windows.CppWinRT NuGet 패키지를 제공 향상 된 C + + 프로젝트 휴대용 개발 컴퓨터 사이의 (NuGet 패키지 및 VSIX 하지이 설치 된) 빌드 에이전트 만들기 WinRT 프로젝트 빌드 지원 합니다.
+>
+> 기존 프로젝트에 대 한&mdash;1.0.181002.2 버전을 설치한 후 (이상)의 VSIX&mdash;Visual Studio에서 프로젝트를 열고, **프로젝트**를 클릭 하는 것이 좋습니다 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다.
+
 
 ## <a name="isolation-from-windows-sdk-header-files"></a>Windows SDK 헤더 파일에서 격리
 

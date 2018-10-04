@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox에 로그인 한, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c5b1d346bf7e2673b4bca0d1d04075c03fdd6e5
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 00f09889971cab58917fd898506b635cc66dcaf2
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4339868"
+ms.locfileid: "4354992"
 ---
 # <a name="troubleshooting-xbox-live-sign-in"></a>Xbox Live 로그인 문제 해결
 
@@ -102,7 +102,7 @@ Windows 10에서 이전 계정 제거 해야 할 수, 시작 메뉴에서 설정
 
 ### <a name="0x87dd0005-unexpected-or-unknown-title"></a>0x87DD0005 예기치 않은 또는 알 수 없는 제목
 
-응용 프로그램 ID와 XDP 바인딩 개발자 센터에 다시 확인 합니다. [새로운 또는 기존 Visual Studio의 uwp Xbox Live 지원 추가](../../images/troubleshooting/dev_center_binding.png) 지침을 볼 수 있습니다.
+응용 프로그램 ID와 XDP 바인딩 개발자 센터에 다시 확인 합니다. [새로운 또는 기존 Visual Studio의 uwp Xbox Live 지원 추가](https://docs.microsoft.com/windows-hardware/drivers/devapps/step-1--create-a-uwp-device-app#span-idassociateyourappwiththewindowsstorespanspan-idassociateyourappwiththewindowsstorespanspan-idassociateyourappwiththewindowsstorespanassociate-your-app-with-the-microsoft-store) 지침을 볼 수 있습니다.
 
 ### <a name="0x87dd000e-title-not-authorized"></a>0x87DD000E 제목 권한이 없음
 

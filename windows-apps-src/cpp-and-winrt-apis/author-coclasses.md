@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: C + + WinRT 하는 데 유용한 클래식 COM 구성 요소를 작성 것 처럼 Windows 런타임 클래스를 작성 하는 데 도움이 됩니다.
-title: 작성 COM 구성 요소 C + + WinRT
+title: C++/WinRT으로 COM 구성 요소 작성
 ms.author: stwhi
 ms.date: 09/06/2018
 ms.topic: article
@@ -9,14 +9,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
-ms.openlocfilehash: 2886d2b42d4c192a3f6924a41a4c4dd1483db471
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 94f59833f4c657445b7135b1158974d8a553813f
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313833"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358421"
 ---
-# <a name="author-com-components-with-cwinrt"></a>작성 COM 구성 요소 C + + WinRT
+# <a name="author-com-components-with-cwinrt"></a>C++/WinRT으로 COM 구성 요소 작성
 
 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 하면 Windows 런타임 클래스를 작성 하는 것 처럼 클래식 구성 요소 개체 모델 (COM) 구성 요소 (또는 coclass)를 작성 하는 데 도움이 됩니다. 코드를 붙여 넣는 경우 테스트할 수 있는 간단한 그림은 다음과 같습니다 합니다 `pch.h` 및 `main.cpp` 의 새 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트.
 
@@ -415,9 +415,9 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 
 ## <a name="in-process-com-server"></a>프로세스에서 COM 서버
 
-위의 *ToastAndCallback* 예제 앱 COM 서버를 로컬 (또는 out of process)으로 작동합니다. 이벤트 처리기를 등록 사용 하는 [LocalServer32](/windows/desktop/com/localserver32) Windows 레지스트리 키에 의해 표시 됩니다. 로컬 COM 서버를 호스팅하는 실행 가능 이진 내에서 해당 coclass(es) (한 `.exe`).
+위의 *ToastAndCallback* 예제 앱 COM 서버를 로컬 (또는 out of process)으로 작동합니다. 해당 coclass CLSID를 등록 하는 [LocalServer32](/windows/desktop/com/localserver32) Windows 레지스트리 키에 의해 표시 됩니다. 로컬 COM 서버를 호스팅하는 실행 가능 이진 내에서 해당 coclass(es) (한 `.exe`).
 
-또는 (및 틀림 없이 가능성이), 동적 연결 라이브러리 내부에 coclass(es) 호스트 하도록 선택할 수 있습니다 (한 `.dll`). DLL의 숫자 형태로 COM 서버는 프로세스에 COM 서버 라고 하며 [InprocServer32](/windows/desktop/com/inprocserver32) Windows 레지스트리 키를 사용 하 여 등록 하 여 표시 됩니다.
+또는 (및 틀림 없이 가능성이), 동적 연결 라이브러리 내부에 coclass(es) 호스트 하도록 선택할 수 있습니다 (한 `.dll`). DLL의 숫자 형태로 COM 서버는 프로세스에 COM 서버 라고 하며 Clsid [InprocServer32](/windows/desktop/com/inprocserver32) Windows 레지스트리 키를 사용 하 여 등록 되 고 표시 됩니다.
 
 ### <a name="create-a-dynamic-link-library-dll-project"></a>동적 연결 라이브러리 (DLL) 프로젝트 만들기
 
@@ -556,5 +556,5 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [소비 COM 구성 요소 C + + WinRT](consume-com.md)
+* [C++/WinRT로 작성된 COM 구성 요소 사용](consume-com.md)
 * [로컬 알림 메시지 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

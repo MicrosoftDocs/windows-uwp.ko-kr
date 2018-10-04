@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트
 ms.localizationpriority: medium
 ms.openlocfilehash: 5084b0badf29bdf5e4adc3b45ee1961d6a4e7097
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4339833"
+ms.locfileid: "4353438"
 ---
 # <a name="whats-new-for-the-xbox-live-apis---april-2017"></a>새로운 기능에 대 한 Xbox Live Api-2017 년 4 월
 

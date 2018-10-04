@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 944b2c9f0e5758444295ef9ec189d84728a3845d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4340270"
+ms.locfileid: "4354142"
 ---
 # <a name="usersxuidxuidinbox"></a>/users/xuid({xuid})/inbox
 Xbox LIVE 서비스에 대 한 사용자에 대 한 액세스 받은 편지함 메시징 제공 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.

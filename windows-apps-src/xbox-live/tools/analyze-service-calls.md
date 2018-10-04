@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 서비스 호출, 테스트, 추적 분석기
 ms.localizationpriority: medium
 ms.openlocfilehash: 196505a9ed3fb62ef609415c292e98850588102f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4339873"
+ms.locfileid: "4350286"
 ---
 # <a name="xbox-live-trace-analyzer"></a>Xbox Live 추적 분석기
 

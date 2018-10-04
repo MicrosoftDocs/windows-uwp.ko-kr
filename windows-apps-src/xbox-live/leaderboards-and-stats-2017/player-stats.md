@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 플레이어 통계, 순위표
 ms.localizationpriority: medium
 ms.openlocfilehash: 89f3f2662bbff2fdacb77c44078de922b6a37b24
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/04/2018
-ms.locfileid: "4339808"
+ms.locfileid: "4354980"
 ---
 # <a name="player-stats"></a>플레이어 통계
 
