@@ -9,19 +9,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 박싱, 스칼라, 값
 ms.localizationpriority: medium
-ms.openlocfilehash: 9548776fe1be06c9b622870c4d3331b04a943789
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 7496725d84339de5e318ee6c00aebefb204af751
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935791"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4320260"
 ---
-# <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용해 스칼라 값을 IInspectable로 박싱(boxing) 및 언박싱(unboxing) 
-[**IInspectable 인터페이스**](https://msdn.microsoft.com/library/windows/desktop/br205821)는 Windows 런타임(WinRT)에서 모든 런타임 클래스의 루트 인터페이스입니다. 이는 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)이 모든 COM 인터페이스 및 클래스의 루트에 위치하고, **System.Object**가 모든 [공용 형식 시스템](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system) 클래스의 루트에 위치하는 것과 유사합니다.
+# <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>C++/WinRT를 사용해 스칼라 값을 IInspectable로 박싱(boxing) 및 언박싱(unboxing)
+ 
+[**IInspectable 인터페이스**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)는 Windows 런타임(WinRT)에서 모든 런타임 클래스의 루트 인터페이스입니다. 이는 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)이 모든 COM 인터페이스 및 클래스의 루트에 위치하고, **System.Object**가 모든 [공용 형식 시스템](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system) 클래스의 루트에 위치하는 것과 유사합니다.
 
 다시 말해서 **IInspectable**이 필요한 함수에게는 모든 런타임 클래스 인스터스를 전달할 수 있습니다. 하지만 숫자나 텍스트 같은 스칼라 값은 이러한 함수로 직접 전달할 수 없습니다. 대신 스칼라 값을 참조 클래스 개체 안에 래핑해야 합니다. 이러한 래핑 프로세스를 두고 값을 *박싱(boxing)* 한다고 합니다.
 
-C++/WinRT는 [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value) 함수를 제공합니다. 이 함수는 스칼라 값을 가져와 **IInspectable**에 박싱되는 값을 반환합니다. **IInspectable**을 다시 스칼라 값으로 언박싱하기 위해서 [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) 및 [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or) 함수가 존재합니다.
+[C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 는 스칼라 값을 **IInspectable**로 박싱 되는 값을 반환 하는 [**winrt:: box_value**](/uwp/cpp-ref-for-winrt/box-value) 함수를 제공 합니다. **IInspectable**을 다시 스칼라 값으로 언박싱하기 위해서 [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) 및 [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or) 함수가 존재합니다.
 
 ## <a name="examples-of-boxing-a-value"></a>값을 박싱하는 예제
 [**LaunchActivatedEventArgs::Arguments**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.Arguments) 접근자 함수는 스칼라 값으로 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 반환합니다. 이 **hstring** 값은 아래와 같이 박싱을 통해 **IInspectable**이 필요한 함수에게 전달할 수 있습니다.
@@ -66,7 +67,7 @@ WINRT_ASSERT(piPropertyValue.Type() == winrt::Windows::Foundation::PropertyType:
 ```
 
 ## <a name="important-apis"></a>중요 API
-* [IInspectable 인터페이스](https://msdn.microsoft.com/library/windows/desktop/br205821)
+* [IInspectable 인터페이스](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
 * [winrt::box_value 함수 템플릿](/uwp/cpp-ref-for-winrt/box-value)
 * [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
 * [winrt::unbox_value 함수 템플릿](/uwp/cpp-ref-for-winrt/unbox-value)
