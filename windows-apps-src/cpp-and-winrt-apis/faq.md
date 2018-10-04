@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f1d2bdfe5ce88ed4e3f5f3e618fb7034f4eb0bb
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: e00f387c3dd78353158d93d3b4749345936396f5
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313887"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352198"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
 작성 하 고 사용 하 여 Windows 런타임 Api를 사용 될 수 있는 질문에 대답 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -47,11 +47,13 @@ Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으�
 ## <a name="why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error"></a>링커에서 "LNK2019: Unresolved external symbol" 오류를 표시하는 이유가 무엇인가요?
 확인되지 않은 기호가 **winrt** 네임스페이스의 C++/WinRT 프로젝션에 대한 Windows 네임스페이스 헤더의 API인 경우 포함한 API는 전방 선언되지만 그 정의는 아직 포함하지 않은 헤더에 있습니다. API 네임스페이스에 따라 명명한 헤더를 추가하고 다시 빌드하세요. 자세한 정보는 [C++/WinRT 프로젝션 헤더](consume-apis.md#cwinrt-projection-headers)를 참조하세요.
 
-확인되지 않은 기호가 [RoInitialize](https://msdn.microsoft.com/library/br224650)와 같은 Windows 런타임 무료 함수인 경우 프로젝트에 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리를 명시적으로 포함해야 합니다. C++/WinRT 프로젝션은 이러한 무료(비 구성원) 함수 및 진입점에 따라 달라집니다. 응용 프로그램에 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix) 프로젝트 템플릿 중 하나를 사용하는 경우 `WindowsApp.lib`가 자동으로 연결됩니다. 그렇지 않은 경우 프로젝트 연결 설정을 사용하거나 소스 코드에서 포함할 수 있습니다.
+기호가 [RoInitialize](https://msdn.microsoft.com/library/br224650)같은 Windows 런타임 무료 함수인 경우 프로젝트에서 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리를 명시적으로 연결 해야 합니다. C++/WinRT 프로젝션은 이러한 무료(비 구성원) 함수 및 진입점에 따라 달라집니다. 응용 프로그램에 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix) 프로젝트 템플릿 중 하나를 사용하는 경우 `WindowsApp.lib`가 자동으로 연결됩니다. 그렇지 않은 경우 프로젝트 연결 설정을 사용하거나 소스 코드에서 포함할 수 있습니다.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")
 ```
+
+**WindowsApp.lib**에 연결 하 여 수는 링커 오류를 해결 하는 않는 것이 좋습니다. 하지만 제출 (따라서 것 성공적으로 되도록 응용 프로그램에 대 한 가능한 된다는 의미의 유효성을 검사 하려면 Microsoft Store 및 Visual Studio에서 사용 하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과 하려면 응용 프로그램 필요가 없는 경우 Microsoft Store 수집), 다음 대신 대체 된 동적 연결 라이브러리를 연결할 수 있습니다. 예를 들어 링커 오류가 **CoIncrementMTAUsage** (또는 **WINRT_CoIncrementMTAUsage**)를 참조 하는 경우 다음 해결할 수 있습니다 하는 경우 (예를 들어 버전 **WindowsApp.lib** 에 표시 되지 않으면 반드시 필요한 Ole32.lib를 연결 하 여 함수 내보내기).
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>내가 [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable)을 구현해야 합니까? 만약 그렇다면 어떻게 구현합니까?
 소멸자에서 리소스 공간을 확보하는 런타임 클래스가 있다고 가정할 때, 이 런타임 클래스가 구현하는 컴파일 단위 외부에서 사용하도록 설계된 경우에는(여기에서 런타임 클래스는 Windows 런타임 클라이언트 앱에서 일반 용도로 사용하는 Windows 런타임 구성 요소임) 결정적 완료(deterministic finalization)가 부족한 언어를 기준으로 런타임 클래스의 사용을 지원할 수 있도록 **IClosable**을 구현하는 것이 바람직합니다. 소멸자가 호출되든, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.Close)가 호출되든, 혹은 둘 다 호출되든 상관없이 리소스 공간이 확보되는지 확인하세요. **IClosable::Close**는 임의 횟수로 호출될 수 있습니다.

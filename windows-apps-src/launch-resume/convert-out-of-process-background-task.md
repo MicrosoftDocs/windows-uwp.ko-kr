@@ -1,6 +1,6 @@
 ---
 author: TylerMSFT
-title: 포트는 out of process 백그라운드 작업을 in-process 백그라운드 작업
+title: out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
 description: 포그라운드 앱 프로세스 내에서 실행 되는 in-process 백그라운드 작업을 out of process 백그라운드 작업 만들기를 포팅 합니다.
 ms.author: twhitney
 ms.date: 09/19/2018
@@ -11,13 +11,13 @@ keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311231"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350897"
 ---
-# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>포트는 out of process 백그라운드 작업을 in-process 백그라운드 작업
+# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
 
 Out of process (OOP) 백그라운드 작업 프로세스 활동에 포트 하는 가장 간단한 방법은 응용 프로그램 내에서 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와서 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)에서 시작 하는 합니다. 여기에서 설명 하는 기술을 OOP 백그라운드 작업에서을 in-process 백그라운드 작업; shim를 만드는 방법에 대 않습니다. 해당 정보를 다시 작성 (또는 포팅) OOP 버전일 프로세스의 버전입니다.
 

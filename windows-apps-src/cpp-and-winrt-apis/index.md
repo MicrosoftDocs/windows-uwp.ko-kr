@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
 ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315981"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352437"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -54,13 +54,13 @@ C++/WinRT는 Windows 런타임에서 사용되는 다른 언어 옵션보다 더
 | [C++/WinRT를 통한 오류 처리](error-handling.md) | 이 항목은 C++/WinRT로 프로그래밍하는 경우 오류를 처리하기 위한 전략을 소개합니다. |
 | [대리자를 사용한 이벤트 처리](handle-events.md) | 이 항목에서는 C++/WinRT를 사용해 이벤트 처리 대리자를 등록하거나 취소하는 방법에 대해서 설명합니다. |
 | [이벤트 작성](author-events.md) | 이 항목에서는 이벤트가 발생하는 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 구성 요소를 사용하여 이벤트를 처리하는 앱에 대해서도 설명합니다. |
-| [컬렉션을 사용 하 여 C + + WinRT](collections.md) | C + + WinRT 기능 및 다양 한 구현 및/또는 컬렉션을 전달 하려는 경우 시간과 노력을 저장 하는 기본 클래스를 제공 합니다. |
+| [C++/WinRT로 작성된 컬렉션](collections.md) | C + + WinRT 기능 및 다양 한 구현 및/또는 컬렉션을 전달 하려는 경우 시간과 노력을 저장 하는 기본 클래스를 제공 합니다. |
 | [동시성 및 비동기 작업](concurrency.md) | 이 항목에서는 C++/WinRT를 통해 Windows 런타임 비동기 개체를 생성하고 사용하는 방법에 대해서 설명합니다. |
 | [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md) | XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 항목에서는 관찰 가능한 속성을 구현하여 사용하는 방법과 XAML 컨트롤에 바인딩하는 방법에 대해서 설명합니다. |
 | [XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩](binding-collection.md) | XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* 컬렉션으로 알려져 있습니다. 이 항목에서는 관찰 가능한 컬렉션을 구현하여 사용하는 방법과 XAML 항목에 바인딩하는 방법에 대해서 설명합니다. |
 | [C++/WinRT을 사용한 XAML 사용자 지정(템플릿) 컨트롤](xaml-cust-ctrl.md) | 이 항목에서는 C +를 사용 하 여 간단한 사용자 지정 컨트롤을 만드는 과정을 단계별로 안내 + WinRT 합니다. 고유한 기능이 풍부 하 고, 사용자 지정 UI 컨트롤을 만드는 정보를 여기에서 빌드할 수 있습니다. |
-| [소비 COM 구성 요소 C + + WinRT](consume-com.md) | 이 항목에서는 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여를 + WinRT COM 클래스와 인터페이스를 사용 하도록 합니다. |
-| [작성 COM 구성 요소 C + + WinRT](author-coclasses.md) | C + + WinRT 하는 데 유용한 클래식 COM 구성 요소를 작성 것 처럼 Windows 런타임 클래스를 작성 하는 데 도움이 됩니다. |
+| [C++/WinRT로 작성된 COM 구성 요소 사용](consume-com.md) | 이 항목에서는 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여를 + WinRT COM 클래스와 인터페이스를 사용 하도록 합니다. |
+| [C++/WinRT으로 COM 구성 요소 작성](author-coclasses.md) | C + + WinRT 하는 데 유용한 클래식 COM 구성 요소를 작성 것 처럼 Windows 런타임 클래스를 작성 하는 데 도움이 됩니다. |
 | [C++/WinRT와 C++/CX 사이의 상호 운용성](interop-winrt-cx.md) | 이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. |
 | [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) | 이 항목은 C++/CX 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다. |
 | [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md) | 이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. |

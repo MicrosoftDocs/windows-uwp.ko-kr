@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e1563f85df6d437ce313c99df52ea319ef94a30
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 7848a0b00e2f6a2bbaa84c413dc26f1ea7238e8e
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318745"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350574"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -40,6 +40,11 @@ C++/WinRT로 COM 스타일 프로그래밍을 이용하지 않고도 자체 표�
 
 ## <a name="visual-studio-support-for-cwinrt-and-the-vsix"></a>C++/WinRT에 대한 Visual Studio 지원 및 VSIX
 Visual Studio의 C++/WinRT 프로젝트 템플릿과 C++/WinRT MSBuild 속성 및 대상의 경우에는 [C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)을 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)에서 다운로드하여 설치하세요.
+
+> [!NOTE]
+> 1.0.181002.2 버전을 사용 하 여 (이상)의 설치 하는 VSIX 만드는 새로운 C + + 프로젝트 WinRT 해당 프로젝트에 대 한 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 를 자동으로 설치 합니다. Microsoft.Windows.CppWinRT NuGet 패키지를 제공 향상 된 C + + 프로젝트 휴대용 개발 컴퓨터 사이의 (NuGet 패키지 및 VSIX 하지이 설치 된) 빌드 에이전트 만들기 WinRT 프로젝트 빌드 지원 합니다.
+>
+> 기존 프로젝트에 대 한&mdash;1.0.181002.2 버전을 설치한 후 (이상)의 VSIX&mdash;Visual Studio에서 프로젝트를 열고, **프로젝트**를 클릭 하는 것이 좋습니다 \> **NuGet 패키지 관리...**  \>  **찾아보기**입력 또는 **Microsoft.Windows.CppWinRT** 검색 상자에 붙여 넣을, 검색 결과에서 항목을 선택 하 고 다음 해당 프로젝트에 대 한 패키지를 설치 하려면 **설치** 를 클릭 합니다.
 
 Visual Studio 2017 해야 합니다 (최소 필요 이지만 버전 15.6 이상, 15.7 이상 권장), 및 Windows SDK 버전 10.0.17134.0(windows (Windows 10, 버전 1803). 설치 이미 하지 않은 경우 Visual Studio 설치 관리자 내에서 **c + + 유니버설 Windows 플랫폼 도구** 옵션을 설치 해야 합니다. Windows **설정**에서 > **업데이트 \ & 보안** > **개발자를 위한** **앱 테스트용 로드** 옵션 보다는 **개발자 모드** 옵션을 선택 합니다.
 

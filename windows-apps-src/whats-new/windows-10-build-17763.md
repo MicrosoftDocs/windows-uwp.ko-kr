@@ -4,17 +4,17 @@ title: 개발자, 도구 및 기능을 위한 Windows 10의 새로운 기능
 description: Windows 10 빌드 17763 및 새로운 개발자 도구는 도구, 기능 및 유니버설 Windows 플랫폼을 기반으로 하는 환경을 제공 합니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 신규, Windows 10, 최신, 개발자, 17763
 ms.author: quradic
-ms.date: 10/02/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c354d9ed4bae4cd8b484fcc3281dc5ac753dab1e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 29fe3dc2958a9dfbd679eb62d012292b44bcf40d
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312889"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354888"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>빌드 17763 개발자를 위한 Windows 10의 새로운 란
 
@@ -44,7 +44,7 @@ Windows UI 라이브러리 | [Windows UI 라이브러리](https://aka.ms/winui-d
 특징 | 설명
  :------ | :------
 바코드 스캐너 | [바코드 스캐너](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-barcodescanner) 설명서를 재구성 되어 더 많은 세부 정보 및 코드 조각을 사용 하 여 향상. 새 항목을 추가 했습니다 [접수 바코드 데이터를 이해 하 고](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-barcodescanner-scan-data)는 바코드 스캐너에서 데이터를 사용 하는 방법에 설명 합니다.
-C++/WinRT | [C + + WinRT](https://aka.ms/cppwinrt) 이 릴리스에 대 한 새로운 기능을 포함 합니다. 예를 들어, 새로운 기능 및 하도록 사용자 지정 [컬렉션 속성 및 컬렉션 형식과](/windows/uwp/cpp-and-winrt-apis/collections)구현에서 지 원하는 기본 클래스 됩니다. </br> 사용할 수 있습니다 또한 [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) 태그 확장을 사용 하 여 C + + WinRT 런타임 클래스. 자세한 내용 및 코드 예제를 [데이터 바인딩 개요](/windows/uwp/data-binding/data-binding-quickstart)를 참조 하세요. </br> 다른 새로운 C + + WinRT 내용: [XAML 사용자 지정 (템플릿) 컨트롤](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl); [' 저자 ' COM 구성 요소](/windows/uwp/cpp-and-winrt-apis/author-coclasses)입니다. [값 범주 및 참조](/windows/uwp/cpp-and-winrt-apis/cpp-value-categories)및 합니다.
+C++/WinRT | [C + + WinRT](https://aka.ms/cppwinrt) 많은 새로운 기능, 변경 및이 릴리스에 대 한 수정 사항이 포함 되어 있습니다. 새로운 기능 및 하도록 사용자 지정 [컬렉션 속성 및 컬렉션 형식과](/windows/uwp/cpp-and-winrt-apis/collections); 구현에서 지 원하는 기본 클래스 [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) XAML 태그 확장을 사용 하 여 C + 이제 있습니다 + WinRT 런타임 클래스 (코드 예제, [데이터 바인딩 개요](/windows/uwp/data-binding/data-binding-quickstart)참조). 신규 및이 릴리스에서 변경 된 모든 항목의 전체 설명, 참조 [새로운 C + + WinRT](../cpp-and-winrt-apis/news.md).</br></br>다른 새로운 C + + WinRT 내용: [XAML 사용자 지정 컨트롤](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl); [' 저자 ' COM 구성 요소](/windows/uwp/cpp-and-winrt-apis/author-coclasses)입니다. [값 범주](/windows/uwp/cpp-and-winrt-apis/cpp-value-categories)입니다. [강력한 및 약한 참조](../cpp-and-winrt-apis/weak-references.md)하 고 있습니다.
 C + + WinRT 코드 예제 | 추가한 250 C + + WinRT 코드 목록 항목에서 설명서, 함께 기존 C + + CX 코드 예제입니다.
 지침에 기여 | UWP 설명서에 대 한 [관련 지침](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) 을 업데이트 했습니다. 이 새로운 지침 워크플로 및 우리의 문서에 기여를 외부에 대 한 설명합니다.
 DirectX 그래픽 Infastructure (DXGI) | 새 Windows 10에서 표시 하는 경우 모범 사례에 대 한 문서 제공 하 고 누락 된 DXGI Api에 대 한 설명서에 추가 되었습니다. </br> * [최상의 성능을 위해 DXGI 대칭 이동 모델을 사용 하 여](https://docs.microsoft.com/windows/desktop/direct3ddxgi/for-best-performance--use-dxgi-flip-model): 성능 및 최신 버전의 Windows에서 프레젠테이션 스택에서 효율성을 극대화 하는 방법에 대 한 지침을 제공 합니다. </br> * [IDXGIOutput6::CheckHardwareCompositionSupport 메서드](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-idxgioutput6-checkhardwarecompositionsupport): 하드웨어 늘이기 지원 되는 응용 프로그램에 알립니다. </br> * [DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS 열거형](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_hardware_composition_support_flags): 지원 되는 수준을 하드웨어 컴퍼지션의에 대해 설명 합니다.

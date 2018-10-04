@@ -4,22 +4,20 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: 데이터 바인딩 심층 분석
 description: 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다.
 ms.author: markl
-ms.date: 02/08/2017
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72c7037e9e99ad69ff13c65fb2195bc6e3f8110f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 559bbbc3421151a9055b89c94bc1293a950ccb5b
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318467"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351454"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
-
-
 
 **중요 API**
 
@@ -31,16 +29,15 @@ ms.locfileid: "4318467"
 > [!Note]
 > 이 항목에서는 데이터 바인딩 기능에 대해 자세히 설명합니다. 간단하고 실용적인 소개는 [데이터 바인딩 개요](data-binding-quickstart.md)를 참조하세요.
 
-
 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다. 데이터 바인딩은 데이터 문제를 UI 문제와 분리하여 개념 모델을 간소화하고 앱의 가독성, 테스트 용이성 및 유지 관리성을 향상시킬 수 있도록 해줍니다.
 
-이러한 데이터 바인딩을 사용하여 UI가 처음 표시될 때 데이터 원본 값의 변경에 반응하지 않고 해당 값을 표시하기만 하도록 할 수 있습니다. 일회성 바인딩이라는 이 기능은 런타임에 해당 값이 변경되지 않는 데이터에 적합합니다. 또한 값을 "관찰"하여 변경될 경우 UI를 업데이트할 수 있습니다. 단방향 바인딩이라는 이 기능은 읽기 전용 데이터에 적합합니다. 마지막으로 사용자가 UI에서 값을 변경한 경우 해당 값이 데이터 원본에 자동으로 다시 적용되도록 관찰하고 업데이트할 수 있습니다. 양방향 바인딩이라는 이 기능은 읽기-쓰기 데이터에 적합합니다. 예를 들면 다음과 같습니다.
+이러한 데이터 바인딩을 사용하여 UI가 처음 표시될 때 데이터 원본 값의 변경에 반응하지 않고 해당 값을 표시하기만 하도록 할 수 있습니다. 이것이 바인딩 이라는 모드 *일회성*, 및 런타임 동안 변경 되지 않는 값에 적합 합니다. 또는 변경 될 때 UI를 업데이트 하 고 "관찰" 값을 선택할 수 있습니다. 이 더 라고 *단방향*, 읽기 전용 데이터에 적합 합니다. 마지막으로 사용자가 UI에서 값을 변경한 경우 해당 값이 데이터 원본에 자동으로 다시 적용되도록 관찰하고 업데이트할 수 있습니다. 이 모드 라고 *양방향*, 읽기-쓰기 데이터에 적합 합니다. 예를 들면 다음과 같습니다.
 
--   일회성 바인딩을 사용하여 현재 사용자의 사진을 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)에 바인딩할 수 있습니다.
--   단방향 바인딩을 사용하여 신문 섹션별로 그룹화된 실시간 뉴스 기사 모음에 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 바인딩할 수 있습니다.
--   양방향 바인딩을 사용하여 양식에 있는 고객의 이름에 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)를 바인딩할 수 있습니다.
+-   현재 사용자의 사진에 [**이미지**](https://msdn.microsoft.com/library/windows/apps/BR242752) 를 바인딩할 일회성 모드를 사용할 수 있습니다.
+-   단방향 모드를 사용 하 여 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 신문 섹션 별로 그룹화 된 실시간 뉴스 기사 모음에 바인딩할 수 있습니다.
+-   [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 양식에서 고객의 이름에 바인딩할 양방향 모드를 사용할 수 있습니다.
 
-바인딩에는 두 종류가 있으며, 일반적으로 둘 다 UI 태그에 있습니다. [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783) 또는 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하도록 선택할 수 있습니다. 동일한 앱에서 이 둘을 혼합하여 사용할 수도 있으며, 동일한 UI 요소에도 마찬가지입니다. {x:Bind}는 Windows 10의 새로운 기능으로, 향상된 성능을 제공합니다. 이 항목에 설명된 모든 세부 정보는 명시적으로 설명하지 않더라도 두 종류의 바인딩 모두에 적용됩니다.
+모드에 관계 없이 두 종류의 바인딩 및 둘 다 일반적으로 선언 UI 태그에서입니다. [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783) 또는 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하도록 선택할 수 있습니다. 동일한 앱에서 이 둘을 혼합하여 사용할 수도 있으며, 동일한 UI 요소에도 마찬가지입니다. {x:Bind}는 Windows 10의 새로운 기능으로, 향상된 성능을 제공합니다. 이 항목에 설명된 모든 세부 정보는 명시적으로 설명하지 않더라도 두 종류의 바인딩 모두에 적용됩니다.
 
 **{x:Bind}를 보여 주는 샘플 앱**
 

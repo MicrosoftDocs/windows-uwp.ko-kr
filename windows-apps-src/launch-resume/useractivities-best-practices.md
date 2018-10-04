@@ -1,6 +1,6 @@
 ---
 author: PatrickFarley
-title: 사용자 활동에 대 한 유용한 정보
+title: 사용자 활동 모범 사례
 description: 이 가이드를 만들고 업데이트 사용자 활동에 대 한 권장 되는 방법을 설명 합니다.
 keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의 마지막 종료 지점부터 시작, cortana 내 마지막 종료 지점부터 시작, 프로젝트 로마
 ms.author: pafarley
@@ -10,13 +10,13 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b11151df981a4b5ce233458581d21e405be9844c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310449"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351791"
 ---
-# <a name="user-activities-best-practices"></a>사용자 활동에 대 한 유용한 정보
+# <a name="user-activities-best-practices"></a>사용자 활동 모범 사례
 
 이 가이드를 만들고 업데이트 사용자 활동에 대 한 권장 되는 방법을 설명 합니다. Windows에서 사용자 활동 기능 개요, [장치에서 계속 사용자 활동](https://docs.microsoft.com/windows/uwp/launch-resume/useractivities)을 참조 하세요. 또는 다른 개발 플랫폼에서 활동의 구현에 대 한 프로젝트 로마의 [사용자 활동 섹션](https://docs.microsoft.com/windows/project-rome/user-activities/) 을 참조 하세요.
 

@@ -11,11 +11,11 @@ keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로�
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: d3efb7e094ce1464028dadaa14c6f0bfb3f3b214
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315743"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355618"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>연결된 앱 및 장치(프로젝트 로마)
 
@@ -40,4 +40,4 @@ Bluetooth 및 무선을 통해 근접해서 또는 클라우드를 통해 원격
 | [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 장치에서 앱을 조작하는 방법을 알아봅니다. |
 | [원격 세션을 통해 장치 연결](remote-sessions.md) | 원격 세션에서 여러 장치를 연결하여 공유되는 환경을 만듭니다. |
 | [장치 간 사용자 활동 계속 수행](useractivities.md)| 사용자가 던 작업, 앱에서 여러 장치에서 다시 시작 하는 데 도움이 됩니다.|
-| [사용자 활동에 대 한 유용한 정보](useractivities-best-practices.md)| 만들고 사용자 활동을 업데이트 하는 권장된 방법에 알아봅니다.|
+| [사용자 활동 모범 사례](useractivities-best-practices.md)| 만들고 사용자 활동을 업데이트 하는 권장된 방법에 알아봅니다.|

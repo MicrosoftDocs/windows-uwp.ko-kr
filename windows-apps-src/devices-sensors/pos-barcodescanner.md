@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309955"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354797"
 ---
 # <a name="barcode-scanner"></a>바코드 스캐너
 
@@ -27,7 +27,7 @@ ms.locfileid: "4309955"
 | [바코드 스캐너 구성](../devices-sensors/pos-barcodescanner-configure.md)  | 의도 한 응용 프로그램에 대 한 바코드 스캐너를 구성 하는 방법을 알아봅니다. |
 | [소프트웨어 트리거 사용](../devices-sensors/pos-barcodescanner-software-trigger.md) | 소프트웨어에서의 스캔 작업을 제어 하는 방법을 알아봅니다. |
 | [기호 처리](pos-barcodescanner-symbologies.md) | 바코드 스캐너가 지원하는 바코드 유형과 응용 프로그램의 바코드 스캐너에서 인식하는 바코드 유형의 컨트롤을 결정하는 방법을 알아보세요. |
-| [구하여 바코드 데이터 이해](pos-barcodescanner-scan-data.md) | 스캔 바코드 데이터를 해석 하는 방법에 알아봅니다. |
+| [바코드 데이터 받기 및 인식하기](pos-barcodescanner-scan-data.md) | 스캔 바코드 데이터를 해석 하는 방법에 알아봅니다. |
 | [카메라 바코드 스캐너](pos-camerabarcode.md) | 유니버설 Windows 플랫폼 응용 프로그램에서 표준 카메라 렌즈를 통해 바코드를 읽어보세요. Windows 10 2018년 4월 업데이트(빌드 17134 이상)가 필요합니다. |
 |
  

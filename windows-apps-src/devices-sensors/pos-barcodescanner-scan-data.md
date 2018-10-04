@@ -1,6 +1,6 @@
 ---
 author: eliotcowley
-title: 구하여 바코드 데이터 이해
+title: 바코드 데이터 받기 및 인식하기
 description: 스캔 바코드 데이터를 해석 하는 방법에 알아봅니다.
 ms.author: elcowle
 ms.date: 08/29/2018
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0992ea54092063ba53f23871599905e58f1b456e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318617"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352463"
 ---
-# <a name="obtain-and-understand-barcode-data"></a>구하여 바코드 데이터 이해
+# <a name="obtain-and-understand-barcode-data"></a>바코드 데이터 받기 및 인식하기
 
 바코드 스캐너를 설정한 후 스캔 데이터 이해 하는 방법을 물론 필요 합니다. 바코드를 스캔할 [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) 이벤트가 발생 합니다. [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) 이 이벤트를 등록 해야 합니다. **DataReceived** 이벤트 바코드 데이터에 액세스 하는 데 사용할 수 있는 [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) 개체를 전달 합니다.
 

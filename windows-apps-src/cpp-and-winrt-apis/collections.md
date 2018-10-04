@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: C + + WinRT 기능 및 다양 한 구현 및/또는 컬렉션을 전달 하려는 경우 시간과 노력을 저장 하는 기본 클래스를 제공 합니다.
-title: 컬렉션을 사용 하 여 C + + WinRT
+title: C++/WinRT로 작성된 컬렉션
 ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
 ms.openlocfilehash: e6a0cf8c2798adc59ffcf84381d6bbf64f2ce80e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312317"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361122"
 ---
-# <a name="collections-with-cwinrt"></a>컬렉션을 사용 하 여 C + + WinRT
+# <a name="collections-with-cwinrt"></a>C++/WinRT로 작성된 컬렉션
 
 내부적으로 Windows 런타임 컬렉션에는 많은 복잡 한 이동 부분이 있습니다. 기본 클래스 및 함수는 컬렉션 개체는 Windows 런타임 함수를 전달 하거나 고유한 컬렉션 속성 및 컬렉션 형식과 구현 해야 경우 하지만 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 하도록 지 원하는 합니다. 이러한 기능 손이, 아웃 복잡성을 가져와 시간과 노력에 많은 오버 헤드를 저장 합니다.
 
