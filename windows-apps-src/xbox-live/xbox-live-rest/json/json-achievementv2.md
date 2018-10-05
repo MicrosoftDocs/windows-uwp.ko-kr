@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e82306119e428dd9279e26d1497d44b371b9587e
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4356384"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4394302"
 ---
 # <a name="achievement-json"></a>Achievement(JSON)
 도전 과제 개체 (버전 2)입니다.

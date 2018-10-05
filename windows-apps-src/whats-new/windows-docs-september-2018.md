@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4358513"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4383596"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>2018 년 9 월 Windows 개발자 문서의 새로운
 
