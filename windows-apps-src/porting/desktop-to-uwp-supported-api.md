@@ -39,7 +39,7 @@ ms.locfileid: "4361248"
 <tr><td>스마트 카드</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>PlayReady</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>VPN</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
-<tr><td>전자지갑</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
+<tr><td>Wallet</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
 <tr><td>XAML UI</td><td>Win32 앱 프로세스에 XAML UI를 추가할 수 없습니다.</td></tr>
 </table>
 
