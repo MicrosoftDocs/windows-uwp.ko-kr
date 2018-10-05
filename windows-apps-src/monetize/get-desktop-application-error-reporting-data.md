@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: 66594fd6f59281011fccab21ad5618827db322dd
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4358205"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4391478"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
 

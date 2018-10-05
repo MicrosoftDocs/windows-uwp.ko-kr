@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a3b7f63e7a991420ee594cf45acf2f9952bcf74
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4360063"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4386435"
 ---
 # <a name="permissioncheckbatchrequest-json"></a>PermissionCheckBatchRequest(JSON)
 PermissionCheckBatchRequest 개체의 컬렉션입니다. 
@@ -30,7 +30,7 @@ PermissionCheckBatchRequest 개체에는 다음 사양을 있습니다.
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | 사용자| 사용자의 배열| 필수. 대상에 대해 사용 권한을 확인의 배열입니다. 이 배열의 각 항목은 Xbox 사용자 ID (XUID) 또는 간 네트워크 시나리오에 대 한 익명 네트워크 외부 사용자 ("anonymousUser": "allUsers"). | 
-| Permissions| [PermissionId 열거형](../enums/privacy-enum-permissionid.md) 의 배열| 필수. 각 사용자에 대해 확인할 수 있는 권한을 부여 합니다.| 
+| 사용 권한| [PermissionId 열거형](../enums/privacy-enum-permissionid.md) 의 배열| 필수. 각 사용자에 대해 확인할 수 있는 권한을 부여 합니다.| 
   
 <a id="ID4E3B"></a>
 

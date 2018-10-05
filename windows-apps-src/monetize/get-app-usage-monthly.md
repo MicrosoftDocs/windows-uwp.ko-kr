@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 사용
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351389"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4389849"
 ---
 # <a name="get-monthly-app-usage"></a>월별 앱 사용 현황 가져오기
 

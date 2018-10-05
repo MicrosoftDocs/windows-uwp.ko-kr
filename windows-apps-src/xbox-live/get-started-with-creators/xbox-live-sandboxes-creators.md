@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b9175eda1d73a7678ac9fd304dc60ef228a57c7f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4353447"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4386944"
 ---
 # <a name="xbox-live-sandboxes-introduction"></a>Xbox Live 샌드박스 소개
 

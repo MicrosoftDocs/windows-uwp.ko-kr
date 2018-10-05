@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e022a2d2cdc9eb73877cafaa05d7b55c7e79c744
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4358841"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4384367"
 ---
 # <a name="introduction-to-social-manager"></a>소셜 관리자를 소개
 

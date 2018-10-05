@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f58c2d0f68e1f65820104928e45a09ccfdb259cb
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4350252"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4386652"
 ---
 # <a name="permissionid-enumeration"></a>PermissionId 열거형
 PermissionId 열거형에 자세히 설명합니다.
@@ -30,7 +30,7 @@ PermissionId 열거형에 자세히 설명합니다.
 <a id="ID4EIB"></a>
 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 이들은 호출자는 특정 작업을 수행할 수 있는지 여부를 확인 하는 데 사용할 수 있는 값입니다. 위의 설정 달리 이러한 캡슐화 정책 서비스에 의해 정의 하 고 대부분의 경우, 정책을 값을 가진 사용자가 정의 된 하나 이상의 설정을 기반으로 빌드 하지만, 사용자가 직접 변경할 수 없습니다. 이 일반적으로 복합 검사 위에 정의 된 여러 설정에 대해입니다. 예: <b>ViewProfile</b> 권한 대상의 <b>ShareProfile</b> 개인 정보 설정 및 요청자의 <b>AllowProfileViewing</b> 권한 확인을 수행합니다.
 

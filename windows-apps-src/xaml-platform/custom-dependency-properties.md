@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4360724"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4393691"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 

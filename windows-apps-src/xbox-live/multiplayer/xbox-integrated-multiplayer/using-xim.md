@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, 하나는 xbox, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ec5824bc878937ee891f9ff6e038de1c35b0c81
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4358599"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4386776"
 ---
 # <a name="using-xim-c"></a>XIM (c + +)를 사용 하 여
 

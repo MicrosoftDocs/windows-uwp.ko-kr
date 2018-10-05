@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f73133dc1bd78d3d7f714ac12b9069def093086
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4357731"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4386294"
 ---
 # <a name="using-xbox-live"></a>Xbox Live를 사용 하 여
 
@@ -23,7 +23,7 @@ ms.locfileid: "4357731"
 
 ## <a name="in-this-section"></a>이 섹션 내용
 
-[인증](auth/authentication.md)
+[Authentication](auth/authentication.md)
 
 [Xbox Live를 호출 하기 위한 모범 사례](best-practices/best-practices-for-calling-xbox-live.md)
 

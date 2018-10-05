@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f0168f0a1baef5e68bccdf0a33c3ac7eb7683a7
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4353260"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4394394"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 

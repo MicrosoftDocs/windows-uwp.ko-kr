@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351827"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4389697"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 

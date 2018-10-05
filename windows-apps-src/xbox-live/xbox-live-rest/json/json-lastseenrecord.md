@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: de0ffd7c9c6c42f2a0ebf633ebcbba8a89a1b8b8
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4353637"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4385554"
 ---
 # <a name="lastseenrecord-json"></a>LastSeenRecord(JSON)
 시스템 사용자, 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 마지막 본 되는 시기에 대 한 정보입니다. 

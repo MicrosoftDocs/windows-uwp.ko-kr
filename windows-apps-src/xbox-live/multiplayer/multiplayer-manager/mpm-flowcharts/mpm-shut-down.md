@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: e437cd488c1a16020f4b315f418cb57c97e2b1b4
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4350512"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4384755"
 ---
 # <a name="flowchart---shut-down-after-a-multiplayer-game-is-complete"></a>순서도-멀티 플레이어 게임을 완료 된 후 종료
 

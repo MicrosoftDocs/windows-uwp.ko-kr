@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 표시 여부, 개인 대상, 사용 가능, 검색 가능
 ms.localizationpriority: medium
 ms.openlocfilehash: 07986353be41fcc9ef9dd9406fb0b30c4aa3d7f2
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4352234"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4392619"
 ---
 # <a name="choose-visibility-options"></a>표시 여부 옵션 선택
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2fa886078d429719eb50aa8567bfe238768ba2e3
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351577"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4382740"
 ---
 # <a name="usersxuidxuidscidsscidstats"></a>/users/xuid({xuid})/scids/{scid}/stats
 지정된 된 사용자를 대신 하 여 사용자 통계 이름의 쉼표로 구분 된 목록에 의해 범위가 서비스 구성에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.

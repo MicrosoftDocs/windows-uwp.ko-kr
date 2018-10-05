@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a93e134dba9ce66b8b6b547308f926112f6a577f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4350200"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4382902"
 ---
 # <a name="titlestitleidsessionhosts"></a>/titles/{titleId}/sessionhosts
 지정 된 제목 id에 할당 하는 Xbox Live 계산 sessionhost을 요청 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

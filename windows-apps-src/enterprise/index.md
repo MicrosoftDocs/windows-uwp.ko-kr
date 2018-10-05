@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351187"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388042"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -120,7 +120,7 @@ MSIX는을 안정적으로 되도록 패키징 형식.msi,.appx, App-v 및 Click
 
 <a id="distribution" />
 
-## <a name="security"></a>보안
+## <a name="security"></a>Security
 
 Windows 10에서는 앱 개발자가 사용자의 ID, 회사 네트워크의 보안 및 디바이스에 저장된 비즈니스 데이터를 보호할 수 있도록 보안 기능 집합을 제공합니다. Windows 10의 새로운 기능인 Microsoft Passport는 PIN 또는 Windows Hello를 사용하여 액세스할 수 있으며 엔터프라이즈급 보안을 제공하고 지문, 얼굴 및 홍채 기반 인식 기능을 지원하는 2단계 암호 대안으로, 배포가 용이합니다.
 
@@ -128,7 +128,7 @@ Windows 10에서는 앱 개발자가 사용자의 ID, 회사 네트워크의 보
 |-------|-------------|
 | [보안 Windows 앱 개발 소개](https://msdn.microsoft.com/library/windows/apps/mt622741) | 이 기초 문서에서는 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 단계의 다양한 Windows 보안 기능에 대해 설명합니다. 또한 이러한 단계를 앱에 통합하는 방법을 설명합니다. 다양 한 항목에 설명 하 고 목적은 주로 앱 설계자 빠르고 쉽게 유니버설 Windows 플랫폼 앱을 만들 수 있게 하는 Windows 기능을 이해 하도록 지원 합니다. |
 | [인증 및 사용자 ID](https://msdn.microsoft.com/library/windows/apps/mt270184) | UWP 앱에는 이 문서에 요약된 여러 가지 사용자 인증 옵션이 있습니다. 엔터프라이즈에는 새로운 Microsoft Passport 기능을 사용하는 것이 좋습니다. Microsoft Passport가 기존 자격 증명을 확인 하 여 강력한 2 단계 인증 (2FA)를 사용 하 여 암호를 대체 하 고 디바이스 별 자격 증명을 만들어 생체 인식 또는 PIN 기반 사용자 제스처로 보호 되는 모두 편리 하 고 높은 안전한 환경을 위해서는 합니다. |
-| [암호화](https://msdn.microsoft.com/library/windows/apps/mt270191) | 암호화 섹션에서는 UWP 앱이 사용할 수 있는 암호화 기능을 간략하게 설명합니다. 중요한 비즈니스 데이터를 쉽게 암호화하는 방법에 대한 기초 연습에서, 암호화 키 조작, MAC, 해시 및 서명 작업 등의 고급 과정에 이르기까지 다양한 문서가 제공됩니다. |
+| [Cryptography](https://msdn.microsoft.com/library/windows/apps/mt270191) | 암호화 섹션에서는 UWP 앱이 사용할 수 있는 암호화 기능을 간략하게 설명합니다. 중요한 비즈니스 데이터를 쉽게 암호화하는 방법에 대한 기초 연습에서, 암호화 키 조작, MAC, 해시 및 서명 작업 등의 고급 과정에 이르기까지 다양한 문서가 제공됩니다. |
 | [WIP(Windows Information Protection)](wip-hub.md) | WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다. |
 
 ## <a name="data-binding-and-databases"></a>데이터 바인딩 및 데이터베이스
@@ -180,7 +180,7 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 | 항목 | 설명 |
 |-------|-------------|
 | [엔터프라이즈에 LOB 앱 배포](https://msdn.microsoft.com/library/windows/apps/mt608995) | 기간 업무 앱을 공개적으로 앱을 광범위 하 게 사용할 수 있도록 하지 않고 비즈니스용 Microsoft 스토어를 통해 대량 구매에 대 한 엔터프라이즈에 직접 게시할 수 있습니다. |
-| [앱 테스트용 로드](https://technet.microsoft.com/library/mt269549) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
+| [앱 사이드로드](https://technet.microsoft.com/library/mt269549) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
 | [Microsoft Store에 앱을 게시 합니다.](https://dev.windows.com/publish) | 통합 된 Microsoft Store에 게시 하 고 모든 Windows 장치용 앱을 관리할 수 있습니다. 시장별 가격 책정, 배포 및 가시성 제어, 기타 옵션을 사용하여 앱의 가용성을 사용자 지정하세요. |
 
 ## <a name="enterprise-uwp-samples"></a>엔터프라이즈 UWP 샘플

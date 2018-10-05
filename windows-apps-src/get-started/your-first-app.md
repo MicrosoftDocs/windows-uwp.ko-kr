@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: e8e2272ab761e1fa0bc9514f226a73a66a10662b
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4355276"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388535"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 

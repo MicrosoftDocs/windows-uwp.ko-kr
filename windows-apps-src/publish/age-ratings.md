@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 연령별 등급, 게임 등급, iarc, 등급, 설문지, 등급 위원회, 콘텐츠 등급
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4356851"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4391140"
 ---
 # <a name="age-ratings"></a>연령별 등급
 

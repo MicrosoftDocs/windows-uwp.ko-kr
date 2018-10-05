@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
 ms.openlocfilehash: ba03d430031ad2bdad6959e2c59500dc6f2d2666
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4352854"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4394354"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D, Streetside 뷰로 지도 표시
 

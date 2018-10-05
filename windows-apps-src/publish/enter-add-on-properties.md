@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4358040"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4393741"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 

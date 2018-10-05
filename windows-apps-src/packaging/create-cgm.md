@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 콘텐츠 그룹 맵, 스트리밍 설치, uwp 앱 스트리밍 설치, 소스 콘텐츠 그룹 맵
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ce32958d5a99dc9f3f772d6272450a4f2b0f81b
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351953"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4393972"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>소스 콘텐츠 그룹 맵 생성 및 변환
 

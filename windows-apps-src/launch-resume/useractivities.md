@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 53aac2375d60df3cd9493f315b20431961378fe8
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4356738"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4389211"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 

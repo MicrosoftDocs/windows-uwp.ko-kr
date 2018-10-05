@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a4cf60fea70722e66eb44d52542be248e9ad01c
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4358085"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4389631"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 

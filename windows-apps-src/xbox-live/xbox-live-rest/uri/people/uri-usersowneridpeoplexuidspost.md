@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 27fbc0e209439fca01cf1e7d8c7c3bf98c4b9053
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351153"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4382883"
 ---
 # <a name="post-usersowneridpeoplexuids"></a>POST (/users/{ownerId}/people/xuids)
 컬렉션을 호출자의 사용자 로부터 XUID 사람을 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.

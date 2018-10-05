@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 멀티 플레이 2015 세션, mpsd
 ms.localizationpriority: medium
 ms.openlocfilehash: a6a9e88582b0d9c411cf4cd32aaf94beb0c5d0d0
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4359664"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4383847"
 ---
 # <a name="mpsd-session-details"></a>MPSD 세션 세부 정보
 
@@ -203,7 +203,7 @@ MPSD 세션에서 해당 세션에는 MPSD 적용 해야 하는 동작을 구성
 
 세션 기능 **MultiplayerSessionCapabilities 클래스**에 의해 표시 됩니다. 된 세션에서 지원할 수 있는 여부를 나타내는 부울 값:
 
--   연결
+-   Connectivity
 -   게임 플레이
 -   큰 크기
 -   활성 구성원에 필요한 연결

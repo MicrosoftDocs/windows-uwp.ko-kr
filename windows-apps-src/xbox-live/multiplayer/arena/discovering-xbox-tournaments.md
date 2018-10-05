@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
 ms.openlocfilehash: 3417304a1033084ef7543b602b80901a38a5b0b1
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4360612"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4385216"
 ---
 # <a name="discovering-xbox-tournaments"></a>Xbox 토너먼트 검색
 

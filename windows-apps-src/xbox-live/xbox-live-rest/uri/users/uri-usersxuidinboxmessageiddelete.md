@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e98608f8329407ccb728abb9490eeb341e72aec5
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4353841"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4385557"
 ---
 # <a name="delete-usersxuidxuidinboxmessageid"></a>DELETE (/users/xuid({xuid})/inbox/{messageId})
 사용자의 받은 편지함에서 사용자 메시지를 삭제합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.

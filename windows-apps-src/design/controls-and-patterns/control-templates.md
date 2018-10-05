@@ -16,11 +16,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4359185"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4394255"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 

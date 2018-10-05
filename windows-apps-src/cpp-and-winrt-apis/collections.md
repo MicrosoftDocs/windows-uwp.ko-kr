@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
 ms.openlocfilehash: e6a0cf8c2798adc59ffcf84381d6bbf64f2ce80e
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4361122"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4392530"
 ---
 # <a name="collections-with-cwinrt"></a>C++/WinRT로 작성된 컬렉션
 

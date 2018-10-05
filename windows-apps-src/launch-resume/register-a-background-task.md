@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bd0361886181d3c5a3395112c728db3bf57d58f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4361298"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4387992"
 ---
 # <a name="register-a-background-task"></a>백그라운드 작업 등록
 
