@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e4df0894cc2c8ab214e129193a37b68f408194f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4352717"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4393484"
 ---
 # <a name="xbox-arena"></a>Xbox 아레나
 
@@ -70,7 +70,7 @@ Xbox 아레나 만들고 온라인 토너먼트 경쟁 게임의 재미를 광�
 
 Xbox 아레나 역할 (한 토너먼트 설정)   | 타이틀의 역할 (게임 플레이)
 --- | ---
-<ul><li>등록 및 체크 인</li><li>알림</li><li>시드 및 괄호</li><li>팀 형성</li></ul> |     <ul><li>참가자 아레나 UI에서 전환</li><li>멀티 플레이 로비 UI에서에서 일치 하는 특정 토너먼트 식별</li><li>프로 모션 및/또는 게임에서 토너먼트 검색</li></ul>
+<ul><li>등록 및 체크 인</li><li>Notifications</li><li>시드 및 괄호</li><li>팀 형성</li></ul> |     <ul><li>참가자 아레나 UI에서 전환</li><li>멀티 플레이 로비 UI에서에서 일치 하는 특정 토너먼트 식별</li><li>프로 모션 및/또는 게임에서 토너먼트 검색</li></ul>
 
 ## <a name="engineering-guidance"></a>엔지니어링 지침
 
