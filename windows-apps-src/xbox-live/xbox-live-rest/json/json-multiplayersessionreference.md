@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7dfa27115e1c7ebc9be657ff4fb3f6946406dd8b
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385428"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4416998"
 ---
 # <a name="multiplayersessionreference-json"></a>MultiplayerSessionReference(JSON)
 **MultiplayerSessionReference**나타내는 JSON 개체입니다. 
