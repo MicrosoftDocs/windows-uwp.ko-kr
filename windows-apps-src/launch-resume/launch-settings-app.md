@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 03ec6cf478097a6cd00af85d52112555650db35f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 22727f8d09b3d68970301677cdf632a0981c616a
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817148"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468752"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -70,12 +70,13 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-|회사 또는 학교 계정에 액세스 | ms-settings:workplace |
-|메일 및 앱 계정  | ms-settings:emailandaccounts |
-|가족 및 다른 사용자 | ms-settings:otherusers |
-|로그인 옵션 | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
-|설정 동기화 | ms-settings:sync |
-|사용자 정보 | ms-settings:yourinfo |
+| 회사 또는 학교 계정에 액세스 | ms-settings:workplace |
+| 메일 및 앱 계정  | ms-settings:emailandaccounts |
+| 가족 및 다른 사용자 | ms-settings:otherusers |
+| 로그인 옵션 | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
+| 설정 동기화 | ms-settings:sync |
+| Windows Hello 설정 | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
+| 사용자 정보 | ms-settings:yourinfo |
 
 ## <a name="apps"></a>앱
 
@@ -86,16 +87,21 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 웹 사이트용 앱 | ms-settings:appsforwebsites |
 | 기본 앱 | ms-settings:defaultapps |
 | 선택적 기능 관리 | ms-settings:optionalfeatures |
+| 오프라인 지도 | ms-settings:maps |
 | 시작 앱 | ms-settings:startupapps |
+| 비디오 재생 | ms-settings:videoplayback |
 
 ## <a name="cortana"></a>Cortana
 
 |설정 페이지| URI |
 |-------------|-----|
-| Cortana 사용 권한 및 기록 | ms-settings:cortana-permissions |
+| 사용 권한 및 기록 | ms-settings:cortana-permissions |
 | 추가 정보 | ms-settings:cortana-moredetails |
-| 알림 | ms-settings:cortana-notifications |
+| 내 디바이스에서 Cortana | ms-settings:cortana-notifications |
 | Cortana에게 말하기 | ms-settings:cortana-language |
+
+> [!NOTE] 
+> 이 설정 섹션에서 데스크톱 PC 영역 Cortana가 사용 하지 않도록 하거나 Cortana를 현재 사용할 수 없는 위치에 설정 된 경우 검색을 호출 됩니다. Cortana 관련 페이지 (Cortana 내 장치 간) 및 Cortana에 대화가 경우 나열 되지 않습니다. 
 
 ## <a name="devices"></a>장치
 
@@ -158,7 +164,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 설정 홈페이지 | ms-settings: |
 
 
-## <a name="network-wireless--internet"></a>네트워크, 무선 및 인터넷
+## <a name="network--internet"></a>네트워크 및 인터넷
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -189,9 +195,14 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 탐색 모음 | ms-settings:personalization-navbar |
 | 개인 설정(범주) | ms-settings:personalization |
 | 시작 화면 | ms-settings:personalization-start |
-| 소리 | ms-settings:sounds |
 | 작업 표시줄 | ms-settings:taskbar |
 | 테마 | ms-settings:themes |
+
+## <a name="phone"></a>Phone
+
+|설정 페이지| URI |
+|-------------|-----|
+| 사용자 전화 | ms-settings:mobile-devices  |
 
 ## <a name="privacy"></a>개인 정보
 
@@ -257,7 +268,6 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 메시지 | ms-settings:messaging |
 | 멀티태스킹 | ms-settings:multitasking |
 | 야간 설정 | ms-settings:nightlight |
-| 오프라인 지도 | ms-settings:maps |
 | 휴대폰 | ms-settings:phone-defaultapps |
 | 이 PC에 표시 | ms-settings:project |
 | 공유 환경 | ms-settings:crossdevice |
@@ -267,9 +277,9 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 원격 데스크톱 | ms-settings:remotedesktop |
 | 휴대폰 | ms-settings:phone |
 | 전원 및 절전 | ms-settings:powersleep |
+| 소리 | ms-settings:sounds |
 | 저장소 | ms-settings:storagesense |
 | 저장소 센스 | ms-settings:storagepolicies |
-| 비디오 재생 | ms-settings:videoplayback |
 
 ## <a name="time-and-language"></a>시간 및 언어
 
@@ -290,21 +300,15 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 백업 | ms-settings:backup |
 | 배달 최적화 | ms-settings:delivery-optimization |
 | 내 장치 찾기 | ms-settings:findmydevice |
+| 개발자용 | ms-settings:developers |
 | 복구 | ms-settings:recovery |
 | 문제 해결 | ms-settings:troubleshoot |
-| Windows Defender | ms-settings:windowsdefender |
-| Windows Hello 설정 | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
+| Windows 보안 | ms-settings:windowsdefender |
 | Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시) |
 | Windows 업데이트 | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows 업데이트-고급 옵션 | ms-settings:windowsupdate-options |
 | Windows 업데이트-다시 시작 옵션 | ms-settings:windowsupdate-restartoptions |
 | Windows 업데이트-업데이트 기록 보기 | ms-settings:windowsupdate-history |
-
-## <a name="developers"></a>개발자
-
-|설정 페이지| URI |
-|-------------|-----|
-| 개발자용 | ms-settings:developers |
 
 ## <a name="user--accounts"></a>사용자 계정
 

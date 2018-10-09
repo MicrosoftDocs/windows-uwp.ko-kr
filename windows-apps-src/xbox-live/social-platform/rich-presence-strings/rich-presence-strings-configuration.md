@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 상태, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 7accd2585b7d1822b99abf03e74a660cbf983cf9
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4415289"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4463212"
 ---
 # <a name="rich-presence-configuration"></a>다양 한 상태 구성
 
@@ -47,7 +47,7 @@ ms.locfileid: "4415289"
 다양 한 상태 문자열에 숫자 통계 값을 사용할 수 있습니다. 예를 들어 슈팅, 아마도 하려는 플레이어는 지금까지 않았다는 얼마나 많은 파괴 표시 하는 다양 한 상태 문자열. 구성 매개 변수 "중단 카운트" 통계 대체 되어야 함을 표시 하기만 하면 됩니다. "중단 카운트" 통계 데이터 플랫폼을 통해 일반 스키마 이벤트 시스템을 통해 만든 및 통계 구성을 통해 정의 되어야 합니다. 그런 다음 문자열을 다른 사용자가 읽을 때 서비스는 이동한 다음 문자열을 항상 최신 상태로 유지할 수 있도록 "중단 카운트" 통계에 대해 가장 최신 값을 검색 합니다.
 
 
-## <a name="state"></a>상태
+## <a name="state"></a>시
 
 다양 한 상태 문자열에 실제 상태 값을 나타내는 통계를 사용 하 여 선택할 수 있습니다. 예를 들어 레이싱 게임에서는 플레이어가 현재 제어, 어떤 자동차 표시 하는 다양 한 상태 문자열을 어떤 지도 또는 트랙에 플레이어는 레이싱 사용할 수 있습니다. 상태 정보를 구성 하는 방법은 두 가지 단계가 있습니다.
 

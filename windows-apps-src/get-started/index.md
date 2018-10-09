@@ -11,11 +11,11 @@ keywords: 시작, Windows 10, UWP, xaml, c#
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d7ad7835e56b874c37b9376eb00278fea055dd1
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4419134"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4469598"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작 
  

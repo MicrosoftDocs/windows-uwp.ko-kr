@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cdfc2beabb640764f85a5ee9f1b24e390b2f87a
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: dff7b641cad99407ce22e7a4d4b58c10e0ae94d1
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664073"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470003"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -45,6 +45,7 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 |[ms-store:](#store-app-uri-scheme)  | 스토어 앱 |
 |[ms-tonepicker:](#tone-picker-uri-scheme) | 톤 선택기 |
 |[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | 근처 전화 번호 앱 |
+|[msnweather:](#weather-app-uri-scheme) | 날씨 앱 |
 
 <br>
 예를 들어 다음 URI는 기본 브라우저를 열고 Bing 웹 사이트를 표시합니다.
@@ -240,3 +241,11 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 `ms-windows-store://home/`
 
 자세한 내용은 [UWP 앱 실행](launch-store-app.md)을 참조하세요.
+
+### <a name="weather-app-uri-scheme"></a>날씨 앱 URI 스키마
+
+사용 합니다 **msnweather:** URI 스키마를 날씨 앱을 시작 합니다.
+
+| URI 스키마 | 결과 |
+|------------|---------|
+| msnweather://forecast?la= \[latitude\] & lo = \ [longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에서 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 나타냅니다.<br> `longitude` 경도 위치를 나타냅니다.<br> |

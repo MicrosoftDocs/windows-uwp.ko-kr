@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f13edfbe5858a5fc3c4f24d22b31eb25f8386e25
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4420681"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4469187"
 ---
 # <a name="requirement-json"></a>Requirement(JSON)
 도전 과제 및 충족 하는 방향으로 얼마나 사용자가 잠금 해제 조건입니다. 

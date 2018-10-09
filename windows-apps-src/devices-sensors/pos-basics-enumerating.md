@@ -3,18 +3,18 @@ author: TerryWarwick
 title: PointOfService 장치 열거
 description: PointOfService 디바이스를 열거하는 메서드를 알아봅니다.
 ms.author: jken
-ms.date: 08/30/2018
+ms.date: 10/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e42ebb2eba7b6465be271e6095100c03798826f
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.openlocfilehash: 8796b2ea025a00015881d39449f2dd99d57121f8
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4445621"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468712"
 ---
 # <a name="enumerating-point-of-service-devices"></a>서비스 지점 장치 열거
 이 섹션에서는 시스템에서 사용할 수 있는 장치를 쿼리하는 데 사용되는 [장치 선택기를 정의](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector)하고 이 선택기를 사용하여 다음 메서드 중 하나를 사용하는 서비스 지점 장치를 열거하는 메서드를 배웁니다.
@@ -60,9 +60,6 @@ string selector = POSPrinter.GetDeviceSelector(PosConnectionTypes.Local);
 > 추가 고급 선택기 문자열은 [장치 선택기 빌드](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector)를 참조하세요.
 
 ## <a name="method-1-use-a-device-picker"></a>방법 1: 장치 선택기를 사용 합니다.
-
-> [!NOTE]
-> 이 메서드는 최신 [Windows SDK 참가자 미리 보기](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)에 필요합니다.
 
 [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) 클래스를 사용 하면 사용자가 선택 하에 대 한 장치 목록을 포함 하는 선택기 플라이 아웃을 표시할 수 있습니다. 선택기를 표시 하는 장치 유형을 선택 하려면 [필터](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) 속성을 사용할 수 있습니다. 이 속성 [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter)형식입니다. 장치 유형 [중 하나](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) 또는 [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) 속성을 사용 하 여 필터를 추가할 수 있습니다.
 
