@@ -1,10 +1,10 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: 데이터 바인딩 개요
 description: 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다.
-ms.author: markl
-ms.date: 07/06/2018
+ms.author: stwhi
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -13,13 +13,13 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-- cpp
-ms.openlocfilehash: c088aa6a2a8b1922eb93ec758dcda8c9a5ec8965
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+- cppcx
+ms.openlocfilehash: 8375cc54e75df71b28cfd3f550f47914b4b65519
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389869"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426951"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 
@@ -76,7 +76,7 @@ namespace Quickstart
 // Recording.idl
 namespace Quickstart
 {
-    runtimeclass Recording : Windows.UI.Xaml.DependencyObject
+    runtimeclass Recording
     {
         Recording(String artistName, String compositionName, Windows.Globalization.Calendar releaseDateTime);
         String ArtistName{ get; };
@@ -91,7 +91,7 @@ import "Recording.idl";
 
 namespace Quickstart
 {
-    runtimeclass RecordingViewModel : Windows.UI.Xaml.DependencyObject
+    runtimeclass RecordingViewModel
     {
         RecordingViewModel();
         Quickstart.Recording DefaultRecording{ get; };
@@ -157,7 +157,7 @@ Quickstart::Recording RecordingViewModel::DefaultRecording()
 ...
 ```
 
-```cpp
+```cppcx
 // Recording.h
 #include <sstream>
 namespace Quickstart
@@ -278,7 +278,7 @@ Quickstart::RecordingViewModel MainPage::ViewModel()
 ...
 ```
 
-```cpp
+```cppcx
 // MainPage.h
 ...
 #include "Recording.h"
@@ -395,7 +395,7 @@ Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Rec
 ...
 ```
 
-```cpp
+```cppcx
 // Recording.h
 ...
 public ref class RecordingViewModel sealed
@@ -501,10 +501,10 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 > [!NOTE]
 > 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 필요합니다.
 
-> [!IMPORTANT]
-> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성 (아래에서 설명)는 Windows SDK 버전 (Windows 10, 버전 1809) 10.0.17763.0 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
+C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스에 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
 
-C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 다음 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장 사용할 것을 때문에 해야 **녹음/녹화** 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가 합니다.
+> [!IMPORTANT]
+> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 (Windows 10, 버전 1809) 10.0.17763.0 설치한 경우 사용할 수 있는 다음 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
 
 먼저, 다음은 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 기술입니다.
 
@@ -517,11 +517,11 @@ C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + +
 // Add this attribute:
 ...
 [Windows.UI.Xaml.Data.Bindable]
-runtimeclass Recording : Windows.UI.Xaml.DependencyObject
+runtimeclass Recording
 ...
 ```
 
-```cpp
+```cppcx
 [Windows::UI::Xaml::Data::Bindable]
 public ref class Recording sealed
 {
@@ -678,7 +678,7 @@ namespace winrt::Quickstart::implementation
 }
 ```
 
-```cpp
+```cppcx
 ...
 public ref class StringFormatter sealed : Windows::UI::Xaml::Data::IValueConverter
 {

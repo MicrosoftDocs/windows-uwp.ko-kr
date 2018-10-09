@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 5563966c6f877bf02b5e58751173e6c425b25bfa
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4388593"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4427341"
 ---
 # <a name="add-xbox-live-to-a-new-or-existing-xdk-project"></a>새로운 또는 기존 XDK 프로젝트에 Xbox Live 추가
 

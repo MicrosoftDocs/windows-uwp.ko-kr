@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, directx, 앱 개체
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbe68516e3ad8b2643faf68900e3305f18e8bbf
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4391717"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4425680"
 ---
 # <a name="the-app-object-and-directx"></a>앱 개체 및 DirectX
 

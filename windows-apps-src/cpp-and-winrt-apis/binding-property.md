@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: f2b9d342e775b2834c6b3e7eb02a8b2e3d71728d
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 2caec1c245514f7c1596d2a40749e974998fadcd
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4383223"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4445601"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는 관찰 가능한 속성을 구현 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), XAML 컨트롤을 바인딩하는 방법.
@@ -178,7 +178,7 @@ namespace winrt::Bookstore::implementation
 {
     BookstoreViewModel::BookstoreViewModel()
     {
-        m_bookSku = make<Bookstore::implementation::BookSku>(L"Atticus");
+        m_bookSku = winrt::make<Bookstore::implementation::BookSku>(L"Atticus");
     }
 
     Bookstore::BookSku BookstoreViewModel::BookSku()
@@ -189,7 +189,7 @@ namespace winrt::Bookstore::implementation
 ```
 
 > [!NOTE]
-> `m_bookSku` 형식은 프로젝션된 형식(**winrt::Bookstore::BookSku**)이며, **make**와 함께 사용하는 테플릿 매개 변수는 구현체 형식(**winrt::Bookstore::implementation::BookSku**)입니다. 그렇다 하더라도 **make**는 프로젝션된 형식 인스턴스를 반환합니다.
+> 유형 `m_bookSku` 는 프로젝션 된 형식 (**winrt::Bookstore::BookSku**) 및 [**winrt:: make**](/uwp/cpp-ref-for-winrt/make) 와 함께 사용할 수 있는 템플릿 매개 변수는 구현 체 형식 (**winrt::Bookstore::implementation::BookSku**). 그렇다 하더라도 **make**는 프로젝션된 형식 인스턴스를 반환합니다.
 
 ## <a name="add-a-property-of-type-bookstoreviewmodel-to-mainpage"></a>**BookstoreViewModel** 형식의 속성을 **MainPage**에 추가
 `MainPage.idl`을 열고 메인 UI 페이지를 나타내는 런타임 클래스를 선언합니다. 가져오기 문을 추가하여 `BookstoreViewModel.idl`을 가져온 후 **BookstoreViewModel** 형식의 읽기 전용 속성(MainViewModel)을 추가합니다. 또한 **MyProperty** 속성을 제거 합니다. 또한 합니다 `import` 지시문 아래 목록에 있습니다.
@@ -252,7 +252,7 @@ namespace winrt::Bookstore::implementation
 {
     MainPage::MainPage()
     {
-        m_mainViewModel = make<Bookstore::implementation::BookstoreViewModel>();
+        m_mainViewModel = winrt::make<Bookstore::implementation::BookstoreViewModel>();
         InitializeComponent();
     }
 

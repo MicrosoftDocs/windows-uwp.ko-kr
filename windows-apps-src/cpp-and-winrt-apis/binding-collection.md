@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: bdae6ca018670109120c85945d78806158b6c1b7
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 22594c1cfc503b28163d9fca1f46a6861a4f59ad
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4391663"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4445588"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩
 
@@ -46,20 +46,18 @@ XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* �
 runtimeclass BookstoreViewModel
 {
     BookSku BookSku{ get; };
-    Windows.Foundation.Collections.IVector<IInspectable> BookSkus{ get; };
+    Windows.Foundation.Collections.IObservableVector<IInspectable> BookSkus{ get; };
 }
 ...
 ```
 
 > [!IMPORTANT]
-> 위의 MIDL 3.0 목록에 **BookSkus** 속성의 형식이 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)의 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) note 합니다. 이 항목의 다음 섹션에서 **BookSkus**에 [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) 항목 소스를 바인딩 합니다. 목록 상자 항목 컨트롤, 이며 [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 올바르게 설정 하려면 **IVector** **IInspectable**또는 [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)등의 상호 운용성 형식의 형식의 값으로 설정 해야 합니다.
+> 위의 MIDL 3.0 목록에 **BookSkus** 속성의 형식이 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)의 [**IObservableVector**](/uwp/api/windows.foundation.collections.ivector_t_) note 합니다. 이 항목의 다음 섹션에서 **BookSkus**에 [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) 항목 소스를 바인딩 합니다. 목록 상자 항목 컨트롤, 이며 [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 올바르게 설정 하려면 **IObservableVector** 형식의 값에 (또는 **IVector**) 설정 **IInspectable**또는 상호 운용성 형식과 같은 [** IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
 
 저장 후 빌드합니다. `BookstoreViewModel.h`와 `BookstoreViewModel.cpp`의 접근자 스텁을 `Generated Files` 폴더에 복사하여 구현합니다.
 
 ```cppwinrt
 // BookstoreViewModel.h
-...
-#include "single_threaded_observable_vector.h"
 ...
 struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
 {
@@ -67,11 +65,11 @@ struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
 
     Bookstore::BookSku BookSku();
 
-    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookSkus();
+    Windows::Foundation::Collections::IObservableVector<Windows::Foundation::IInspectable> BookSkus();
 
 private:
     Bookstore::BookSku m_bookSku{ nullptr };
-    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> m_bookSkus;
+    Windows::Foundation::Collections::IObservableVector<Windows::Foundation::IInspectable> m_bookSkus;
 };
 ...
 ```
@@ -81,7 +79,7 @@ private:
 ...
 BookstoreViewModel::BookstoreViewModel()
 {
-    m_bookSku = make<Bookstore::implementation::BookSku>(L"Atticus");
+    m_bookSku = winrt::make<Bookstore::implementation::BookSku>(L"Atticus");
     m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
     m_bookSkus.Append(m_bookSku);
 }
@@ -91,7 +89,7 @@ Bookstore::BookSku BookstoreViewModel::BookSku()
     return m_bookSku;
 }
 
-Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookstoreViewModel::BookSkus()
+Windows::Foundation::Collections::IObservableVector<Windows::Foundation::IInspectable> BookstoreViewModel::BookSkus()
 {
     return m_bookSkus;
 }
@@ -119,7 +117,7 @@ Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Boo
 void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 {
     MainViewModel().BookSku().Title(L"To Kill a Mockingbird");
-    MainViewModel().BookSkus().Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
+    MainViewModel().BookSkus().Append(winrt::make<Bookstore::implementation::BookSku>(L"Moby Dick"));
 }
 ...
 ```

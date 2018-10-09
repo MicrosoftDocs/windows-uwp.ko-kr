@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스, pos, 자기 띠 판독기 가리킨
 ms.localizationpriority: medium
 ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4391458"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4427279"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>구하여 자기 띠 데이터 이해
 

@@ -10,16 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fdc9073da5db0607f57b52ce9d9f3be1c0f2959
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 2c69edc018ae01beba50b93b7dd9f4125544a001
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394404"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429066"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Windows Hello 로그인 서비스 만들기
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 관한 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 이제 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존 사용자 이름 및 암호 인증 시스템의 대안으로 Windows Hello를 사용하는 방법을 안내해드리는 전체 과정의 제2부를 시작하겠습니다. 이 문서에서는 1부 [Windows Hello 로그인 앱](microsoft-passport-login.md)의 마지막 내용을 이어 받아, 기능을 확장하여 Windows Hello를 기존 응용 프로그램에 통합하는 방법을 알려드립니다.
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dd75899bfe94ab7a9dc0a23df0ea40c0431d809
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387972"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4427421"
 ---
 # <a name="usersmeresetreputation"></a>/users/me/resetreputation
 적용 팀을 현재 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.

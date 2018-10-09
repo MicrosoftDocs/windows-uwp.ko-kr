@@ -10,19 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 284609399f167a7229d0c7bb5858d0f0eda451ce
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 106ea458502a95c53ecbf02d9118f3c31ff43978
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389447"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429076"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
-
-
-
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 이 문서는 기존 사용자 이름 및 암호 인증 시스템의 대안으로 Windows Hello를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 안내하는 전체 연습의 제1부입니다. 앱은 사용자 이름으로 로그인하고 각 계정에 Hello 키를 만듭니다. 이 계정들은 Windows Hello 구성의 Windows 설정에 설정된 PIN의 보호를 받습니다.
 

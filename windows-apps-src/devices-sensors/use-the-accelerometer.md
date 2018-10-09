@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30de119b7c3a00730b698eb9d4938280669219a7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2848b9a7326bdac084120ec9b75f067718f14853
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958708"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4428884"
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 
@@ -28,8 +28,6 @@ ms.locfileid: "958708"
 **샘플**
 
 -   더 완전한 구현은 [가속도계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer)을 참조하세요.
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 가속도계를 사용하여 사용자의 동작에 응답하는 방법을 알아봅니다.
 
