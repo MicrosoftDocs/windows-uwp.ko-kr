@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 25d9262ac16eab3d1c2f35960445321fa3872c30
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4393551"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4430566"
 ---
 # <a name="player-json"></a>Player(JSON)
 게임 세션에는 플레이어에 대 한 데이터를 포함합니다. 

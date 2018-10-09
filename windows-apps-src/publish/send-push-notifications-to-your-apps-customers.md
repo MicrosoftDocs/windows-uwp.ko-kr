@@ -11,11 +11,11 @@ keywords: Windows 10, uwp, 대상 알림, 푸시 알림, 알림, 타일
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4391960"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429022"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>앱의 고객에게 알림 보내기
 

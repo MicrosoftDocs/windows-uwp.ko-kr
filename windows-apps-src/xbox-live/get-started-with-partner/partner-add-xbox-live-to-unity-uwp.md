@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 Unity
 ms.localizationpriority: medium
 ms.openlocfilehash: d3e79228aa99ef635115199a8e04d140b065990d
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4383175"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429014"
 ---
 # <a name="add-xbox-live-support-to-unity-for-uwp-with-net-scripting-backend-for-idxbox-and-managed-partners"></a>에 대 한.NET 스크립팅 백 엔드를 사용 하 여 UWP 용 Unity에 Xbox Live 지원 추가 ID@Xbox 관리 파트너 및
 

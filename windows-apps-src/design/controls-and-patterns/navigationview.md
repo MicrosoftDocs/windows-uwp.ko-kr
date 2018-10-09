@@ -15,11 +15,11 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c75169f118e2c8ef575fa251a7badc8cfe44247
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389565"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429761"
 ---
 # <a name="navigation-view-preview-version"></a>탐색 보기 (미리 보기 버전)
 

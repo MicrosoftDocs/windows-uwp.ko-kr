@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 301d646b421e77044f613244ccab987f1cb40dc6
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4393583"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4430385"
 ---
 # <a name="compile-the-xbox-developer-kit-xdk-xbox-live-api-source"></a>Xbox 개발자 키트 (XDK) Xbox Live API 소스 컴파일
 

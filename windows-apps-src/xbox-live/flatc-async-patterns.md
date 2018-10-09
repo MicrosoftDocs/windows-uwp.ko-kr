@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 개발자 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: 50d747128dcd85a16c5250997e9431b279203ae0
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4391734"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4430537"
 ---
 # <a name="calling-pattern-for-xsapi-flat-c-layer-async-calls"></a>XSAPI에 대 한 호출 패턴 평면 C 계층 비동기 호출
 
