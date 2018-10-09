@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a3e6180c23208f02c3f7fb2294eabe2ee080f504
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4430350"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4461085"
 ---
 # <a name="check-boxes"></a>확인란
 

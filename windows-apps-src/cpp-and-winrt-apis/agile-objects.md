@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체, agility, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 9af1fb0a9d23727924ae3c165bc8977fb9cc7774
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4423411"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4461308"
 ---
 # <a name="agile-objects-in-cwinrt"></a>C++/WinRT의 Agile 개체
 대부분 경우 표준 C++ 개체 같은 Windows 런타임 클래스 개체 인스턴스는 모든 스레드에서 액세스할 수 있습니다. 이러한 클래스가 *Agile*입니다. Windows와 함께 제공되는 소수의 Windows 런타임 클래스는 Agile이 아닙니다. 하지만 이러한 클래스를 사용할 때는 스레딩 모델과 마샬링 동작을 고려해야 합니다. 여기에서 마샬링이란 스레드 또는 프로세스 경계에서 데이터를 전달하는 것을 말합니다. 모든 Windows 런타임 개체가 agile, 좋은 기본 하므로 자체 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 유형은 기본적으로 agile입니다.

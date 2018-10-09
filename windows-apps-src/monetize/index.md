@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp, 수익 창출, 참여, 홍보, 스토어 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4426096"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4460767"
 ---
 # <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 스토어 서비스
 

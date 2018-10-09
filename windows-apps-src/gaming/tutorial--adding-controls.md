@@ -12,7 +12,7 @@ keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 84230759f03cb60b5b776d3407ac0f96e090d495
 ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/22/2018
 ms.locfileid: "1675300"
