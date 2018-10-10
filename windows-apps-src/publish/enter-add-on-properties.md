@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468692"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499594"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -44,7 +44,7 @@ ms.locfileid: "4468692"
 
 ## <a name="subscription-period"></a>구독 기간
 
-제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **월별**, 하지만 **3 개월**, **6 개월**, **연간**또는 **24 개월**선택할 수도 있습니다.
+제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **월별**, 하지만 **3 개월**, **6 개월**, **연간**또는 **24 개월**을 선택할 수도 있습니다.
 
 > [!IMPORTANT]
 > 추가 기능을 게시한 후에는 선택한 **구독 기간**을 변경할 수 없습니다.

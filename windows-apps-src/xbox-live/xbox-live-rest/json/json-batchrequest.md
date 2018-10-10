@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6271cdf3d94f194adee5087136c1d87ad9f214b5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462325"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501268"
 ---
 # <a name="batchrequest-json"></a>BatchRequest(JSON)
-사용자, 장치 및 제목 등의 현재 상태 정보를 필터링 하는 속성의 배열입니다.
+사용자, 장치 및 제목 등의 현재 상태 정보를 필터링 할 속성의 배열입니다.
 <a id="ID4EN"></a>
 
 
@@ -30,15 +30,15 @@ BatchRequest 개체에는 다음 사양을 있습니다.
 | 멤버| 유형| 설명|
 | --- | --- | --- |
 | 사용자| 문자열의 배열| 사용자의 현재 상태 1100 XUIDs 한 번에 최대 자세한 XUIDs 목록입니다.|
-| deviceTypes| 문자열의 배열| 목록에 대해 알아야 할 사용자에서 사용 하는 장치 유형입니다. 배열 비어 기본적으로 모든 장치 종류 (즉, none 필터링 됩니다).|
-| 제목| 32 비트 부호 없는 정수의 배열| 장치 목록 형식을 사용자를 알아야 합니다. 모든 가능한 타이틀 기본값으로 배열을 비워 (즉, none 필터링 됩니다).|
+| deviceTypes| 문자열의 배열| 목록에 대해 알아야 할 사용자가 사용 되는 장치 유형입니다. 배열은 비어 기본적으로 모든 장치 종류 (즉, none 필터링 됩니다).|
+| 제목| 32 비트 부호 없는 정수의 배열| 장치 목록 형식을 사용자에 대해 알아야 합니다. 모든 가능한 타이틀 기본값으로 배열을 비워 (즉, none 필터링 됩니다).|
 | level| 문자열| 가능한 값: <ul><li>사용자-get 사용자 노드</li><li>장치-get 사용자 및 장치 노드</li><li>제목-기본 제목 수준 정보 가져오기</li><li>다양 한 상태 정보, 미디어 정보 또는 둘 다 모두-가져오기</li></ul>기본값은 "제목".| 
-| onlineOnly| 부울 값| 이 속성이 true 이면 일괄 작업을 오프 라인 사용자 (숨겨진된 스타일 포함)에 대 한 레코드 필터링 합니다. 제공 되지 않은 경우 온라인 및 오프 라인 사용자가 반환 됩니다.|
+| onlineOnly| 부울 값| 이 속성이 true 이면 일괄 처리 작업을 오프 라인 사용자 (숨겨진된 스타일 포함)에 대 한 레코드 필터링 합니다. 제공 되지 않은 온라인 및 오프 라인 사용자가 반환 됩니다.|
 
 <a id="ID4EAD"></a>
 
 
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
 
 
 ```json

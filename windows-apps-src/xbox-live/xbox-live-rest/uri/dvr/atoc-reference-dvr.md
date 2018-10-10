@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c9be3254d9264c1d06dd0a327c36b473a457a35
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467673"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501310"
 ---
 # <a name="game-dvr-uris"></a>게임 DVR URI
  
@@ -24,7 +24,7 @@ ms.locfileid: "4467673"
  
 만 콘솔 게임 클립을 기록할 수 있지만 액세스할 수 있는 모든 장치 클립을 표시할 수 있습니다.
  
-해당 URI의 기능에 따라 이러한 Uri에 대 한 도메인 다음과 같습니다.
+해당 URI 함수에 따라 이러한 Uri에 대 한 도메인 다음과 같습니다.
  
    *  gameclipsmetadata.xboxlive.com 
    *  gameclipstransfer.xboxlive.com 
@@ -44,11 +44,11 @@ ms.locfileid: "4467673"
 
 [/users/me/scids/{scid}/clips](uri-usersmescidclips.md)
 
-&nbsp;&nbsp;액세스는 초기 요청을 업로드 합니다.
+&nbsp;&nbsp;초기 액세스 요청을 업로드 합니다.
 
 [/users/me/scids/{scid}/clips/{gameClipId}](uri-usersmescidclipsgameclipid.md)
 
-&nbsp;&nbsp;게임 클립 데이터 액세스 및 메타 데이터를 제공 합니다.
+&nbsp;&nbsp;게임 클립 데이터 액세스 및 메타 데이터입니다.
 
 [/users/{ownerId}/clips](uri-usersowneridclips.md)
 

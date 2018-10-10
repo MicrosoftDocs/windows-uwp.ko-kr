@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462352"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501587"
 ---
 # <a name="app-submissions"></a>앱 제출
 
@@ -98,7 +98,7 @@ ms.locfileid: "4462352"
 | **Microsoft Store 로고**               | 권장 사항(일부 OS 버전에서는 필수 사항) | [Microsoft Store 로고](app-screenshots-and-images.md#store-logos)             |
 | **추가 아트 자산**     | 권장 사항(특히 일부 OS 버전의 경우)         | [추가 아트 자산](app-screenshots-and-images.md#additional-art-assets) |
 | **예고편**                  | 선택 사항                                    | [예고편](app-screenshots-and-images.md#trailers)                | 
-| **보조 필드**  | 선택 사항                                    | [추가 정보](create-app-store-listings.md#supplemental-fields) 
+| **추가 필드**  | 선택 사항                                    | [추가 정보](create-app-store-listings.md#supplemental-fields) 
 | **검색어**              | 선택 사항                                    | [검색어](create-app-store-listings.md#search-terms)         |
 | **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
 | **추가 사용 조건**  | 선택 사항                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |

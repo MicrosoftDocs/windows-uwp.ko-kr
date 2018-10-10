@@ -11,32 +11,32 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 53126e185b9d94c911abab8999e3ca1da8691c7c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4460626"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498343"
 ---
 # <a name="configure-your-xbox-development-console"></a>Xbox 개발 콘솔 구성
 
-개발 콘솔 구성 하려면:
-- 사용자의 Id 가져오기
+개발 콘솔을 구성 하려면
+- 사용자 id
 - 개발 키트에 샌드박스를 설정 합니다.
 - 개발 계정으로 로그인
 
-## <a name="get-your-ids"></a>사용자의 Id 가져오기
-샌드박스 및 Xbox Live 서비스를 사용 하려면 개발 키트 및 타이틀을 구성 하는 몇 가지 Id를 가져오는 해야 합니다. 이러한 동일한 프로세스를 사용 하 여 수행할 수 있습니다.
+## <a name="get-your-ids"></a>사용자 id
+샌드박스 및 Xbox Live 서비스를 사용 하려면 개발 키트 및 타이틀을 구성 하는 여러 개의 Id를 해야 합니다. 이러한 동일한 프로세스를 사용 하 여 수행할 수 있습니다.
 
-사용자 Id를 가져오려면 [Xbox Live 서비스 구성](../xbox-live-service-configuration.md) 따라
+[Xbox Live 서비스 구성](../xbox-live-service-configuration.md) id에 따라
 
 ## <a name="set-your-sandbox-on-your-development-kits"></a>개발 키트에 샌드박스를 설정 합니다.
-샌드박스 id. 설정 하지 않고 개발 키트를 부팅할 수 없습니다. 이렇게 하려면 "Xbox One 관리자" XDK, 하 여 PC에 설치 되어 있는 사용 하거나 XDK 명령 창을 열고 다음과 같이 구성 (xbconfig.exe) 명령을 사용 하 여 수 있습니다.
+샌드박스 id. 설정 하지 않고 개발 키트를 부팅할 수 없습니다. 이렇게 하려면 "Xbox One 관리자는"는 XDK 하 여 PC에 설치 되어 있는 사용 하거나 XDK 명령 창을 열고 하 고 다음과 같이 구성 (xbconfig.exe) 명령을 사용할 수 있습니다.
 
-사용자 현재 샌드박스를 확인 합니다. 명령 프롬프트에서 xbconfig sandboxid를 입력 합니다.
+현재 샌드박스를 확인 합니다. 명령 프롬프트에서 xbconfig sandboxid를 입력 합니다.
 
-예상과 인 경우 샌드박스 id를 변경 합니다. 입력 xbconfig sandboxid =<your sandbox id> 명령 프롬프트.
+들지 인 경우 샌드박스 id를 변경 합니다. Xbconfig sandboxid 입력 =<your sandbox id> 명령 프롬프트.
 
-명령 프롬프트에서 재부팅 (xbreboot.exe)를 사용 하 여 콘솔을 다시 부팅 합니다.
+명령 프롬프트에서 재부팅이 (xbreboot.exe)를 사용 하 여 콘솔을 다시 부팅 합니다.
 
 샌드박스에 올바르게 다시 설정 되었는지 확인 합니다. 명령 프롬프트에서 xbconfig sandboxid를 입력 합니다.
 

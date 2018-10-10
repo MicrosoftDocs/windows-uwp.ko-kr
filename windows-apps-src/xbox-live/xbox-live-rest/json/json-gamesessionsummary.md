@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 610f771641352447f9d38fc4217231ba3230e6fb
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465300"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502152"
 ---
 # <a name="gamesessionsummary-json"></a>GameSessionSummary(JSON)
-게임 세션에 대 한 요약 데이터를 표시 하는 JSON 개체입니다. 
+게임 세션에 대 한 요약 데이터를 나타내는 JSON 개체입니다. 
 <a id="ID4EN"></a>
 
   
@@ -30,16 +30,16 @@ GameSessionSummary JSON 개체에는 다음 사양을 있습니다.
 | --- | --- | --- | 
 | creationTime| DateTime| 날짜 및 세션이 생성 된 시간을 utc 형식에서입니다. | 
 | customData| 8 비트 부호 없는 정수로의 배열| 게임 관련 세션 데이터의 1024 바이트 수입니다. 이 값은 서버에 불투명 합니다. | 
-| displayName| string| 표시 이름 게임입니다 세션 최대 128 자 길이의 합니다. 이 값은 서버에 불투명 합니다. | 
-| hasEnded| 부울 값| 세션 종료 되 면 true이 고 false 그렇지 않은 경우. 읽기 전용으로 게임 세션 true 기호를 추가 데이터를 세션에 전송 되지 않도록 방지이 필드를 설정 합니다. | 
+| displayName| string| 디스플레이 이상과 세션 최대 128 자 길이의 합니다. 이 값은 서버에 불투명 합니다. | 
+| hasEnded| 부울 값| 세션 종료 되 면 true이 고 false 그렇지 않은 경우. 추가 데이터를 세션에 전송 되지 않도록 방지 true 눈금 읽기 전용으로 게임 세션에이 필드를 설정 합니다. | 
 | sessionId| 문자열 세션 id입니다. | 
-| titleId| 32 비트 부호 없는 정수| 게임 세션을 만드는 제목의 ID입니다.| 
+| titleId| 32 비트 부호 없는 정수| 게임 세션을 만드는 제목 ID입니다.| 
 | 변형| 32 비트 부호 있는 정수| 게임 변형 합니다. 이 값은 서버에 불투명 합니다.| 
   
 <a id="ID4EID"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

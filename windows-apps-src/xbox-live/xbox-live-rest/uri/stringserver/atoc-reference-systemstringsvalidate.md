@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 47b487a4708e42ee66f293bfa020ba51cfad82a9
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462399"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499182"
 ---
 # <a name="system-strings-validatation-uris"></a>시스템 문자열 유효성 검사 URI
  
 이 섹션에서는 *시스템 문자열 유효성 검사*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
-영구 문자열 데이터를 업로드 하기 전에 준수 또는 사용 약관 위반 하지 확인을 확인 해야 합니다. 이 REST 리소스 문자열의 배열 하며 각각에 대해, 허용 되는지 여부 및 잘못 된 용어를 포함 하는 문자열을 나타내는 결과 코드를 반환 합니다.
+영구 문자열 데이터를 업로드 하기 전에 준수 또는 사용 약관 위반 하지 되도록 확인 해야 합니다. 이 REST 리소스 문자열의 배열 하며 각 줄을 허용 되는지 여부는 초기화 하 고 있는 용어를 포함 하는 문자열에 대 한 결과 코드를 반환 합니다.
  
 이러한 Uri에 대 한 도메인 클라이언트 strings.xboxlive.com입니다.
  

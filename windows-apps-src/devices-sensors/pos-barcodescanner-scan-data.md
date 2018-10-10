@@ -10,19 +10,19 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 0992ea54092063ba53f23871599905e58f1b456e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467892"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501328"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>바코드 데이터 받기 및 인식하기
 
-바코드 스캐너를 설정한 후 스캔 데이터 이해 하는 방법을 물론 필요 합니다. 바코드를 스캔할 [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) 이벤트가 발생 합니다. [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) 이 이벤트를 등록 해야 합니다. **DataReceived** 이벤트 바코드 데이터에 액세스 하는 데 사용할 수 있는 [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) 개체를 전달 합니다.
+바코드 스캐너를 설정한 후 스캔 데이터를 이해 하는 방법을 물론 필요 합니다. 바코드를 스캔할 때 [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) 이벤트가 발생 합니다. [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) 이 이벤트를 등록 해야 합니다. **DataReceived** 이벤트 바코드 데이터에 액세스 하는 데 사용할 수 있는 [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) 개체를 전달 합니다.
 
 ## <a name="subscribe-to-the-datareceived-event"></a>DataReceived 이벤트에 등록
 
-**ClaimedBarcodeScanner**가 있으면 **DataReceived** 이벤트를 구독할 했습니다.
+**ClaimedBarcodeScanner**있으면 **DataReceived** 이벤트를 구독 하는:
 
 ```cs
 claimedBarcodeScanner.DataReceived += ClaimedBarcodeScanner_DataReceived;
@@ -39,13 +39,13 @@ private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner send
 
 ## <a name="get-the-data"></a>데이터 가져오기
 
-**BarcodeScannerReport**가 있으면 액세스할 수 있으며 바코드 데이터를 구문 분석할 수 있습니다. **BarcodeScannerReport** 에 세 가지 속성이 있습니다.
+**BarcodeScannerReport**있으면 액세스할 수 있으며 바코드 데이터를 구문 분석할 수 있습니다. **BarcodeScannerReport** 에 세 가지 속성이 있습니다.
 
-* [ScanData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): 전체, 원시 바코드 데이터.
+* [ScanData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): 전체, 원시 바코드 데이터입니다.
 * [ScanDataLabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): 헤더, 체크섬 및 기타 정보를 포함 하지 않는 디코딩된 바코드 레이블.
-* [ScanDataType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): 디코딩된 바코드 레이블 형식. 가능한 값은 [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) 클래스에서 정의 됩니다.
+* [ScanDataType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): 디코딩된 바코드 레이블 형식입니다. 가능한 값은 [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) 클래스에서 정의 됩니다.
 
-**ScanDataLabel** 또는 **ScanDataType**액세스 하려는 경우에 **true**를 먼저 [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) 를 설정 해야 합니다.
+**ScanDataLabel** 또는 **ScanDataType**에 액세스 하려면 먼저 **true**로 [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) 설정 해야 합니다.
 
 ```cs
 claimedBarcodeScanner.IsDecodeDataEnabled = true;
@@ -64,7 +64,7 @@ private string GetSymbology(BarcodeScannerDataReceivedEventArgs args)
 
 ### <a name="get-the-scan-data-label"></a>검사 데이터 레이블 가져오기
 
-디코딩된 바코드 라벨을 가져오려면 주의 해야 할 몇 가지 있습니다. 기호를 문자열로 변환 될 수 및 다음 인코딩된 u t F-8 문자열을 **ScanDataLabel** 에서 살펴봅니다 버퍼를 변환 하는 경우 먼저 확인 해야 하므로 인코딩된 텍스트를 포함 하는 특정 데이터 형식.
+디코딩된 바코드 라벨을 가져오려면에 유의 해야 할 몇 가지 있습니다. 기호를 문자열로 변환 될 수 및 다음 인코딩된 u t F-8 문자열로 **ScanDataLabel** 에서 얻은 버퍼를 변환 하는 경우 먼저 확인 해야 하므로 인코딩된 텍스트를 포함 하는 특정 데이터 형식.
 
 ```cs
 private string GetDataLabel(BarcodeScannerDataReceivedEventArgs args)
@@ -123,17 +123,17 @@ private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
 }
 ```
 
-이러한 데이터 형식으로 스캐너에서 제공 하는 대로 일반적으로 됩니다. 그러나 응용 프로그램에 대 한 유용한 정보가 포함 되지 않은 스캐너 고유의 수 있으므로 메시지 헤더 및 예고편 정보 제거 됩니다.
+이러한 데이터 형식으로 스캐너에서 제공 하는 대로 일반적으로 됩니다. 그러나 응용 프로그램에 대 한 유용한 정보가 포함 되지 않은 스캐너 고유의 수 있으므로 메시지 머리글과 예고편 정보 제거 됩니다.
 
-일반적인 헤더 정보는 접두사 문자 (예: STX 문자). 일반적인 예고편 정보 스캐너에서 생성 한 하는 경우 (예: ETX 또는 CR 문자)는 문자 및 블록 검사 문자입니다.
+일반적인 헤더 정보 (예: STX 문자) 접두사 문자입니다. 일반적인 예고편 정보 스캐너에서 생성 한 경우 (예: ETX 또는 CR 문자)는 문자 및 블록 검사 문자는 합니다.
 
-스캐너에서 반환 되 면이 속성 기호 문자를 포함 해야 합니다 (예를 들어 **A** 에 대 한 UPC A). 레이블의에 남아 있는 경우 확인 숫자 포함 되어야 하 고 스캐너에서 반환 합니다. (참고 기호 문자와 확인 숫자 수 또는 없을 수, 스캐너 구성에 따라 합니다. 스캐너를 반환 하 있는 하지만 생성 하거나 않습니다 없는 경우이 계산 합니다.)
+스캐너에서 반환 되 면이 속성 기호 문자를 포함 해야 합니다 (예를 들어 **A** 에 대 한 UPC A). 레이블의에 있는 경우 확인 숫자 포함 되어야 하 고 스캐너에서 반환 합니다. (참고는 기호 문자 및 확인 숫자 수 그렇지 않을 수 있는 스캐너 구성에 따라 합니다. 스캐너를 반환 하 있는 하지만 생성 하거나 않습니다 없는 경우 계산 합니다.)
 
-일부 상품 추가 바코드를 사용 하 여 표시할 수 있습니다. 이 바코드 일반적으로 기본 바코드의 오른쪽에 배치 하는 및 정보의 추가 2 또는 5 개의 문자로 구성 합니다. 스캐너 상품을 읽는 경우 주 및 보조 바코드를 포함 하는 추가 문자는 주 문자를 추가 및 결과 하나의 레이블로 응용 프로그램에 제공 되는 합니다. (참고 스캐너 구성을 사용 하거나 추가 코드의 판독을 지원할 수 있습니다.)
+일부 상품 추가 바코드를 사용 하 여 표시할 수 있습니다. 이 바코드 일반적으로 기본 바코드의 오른쪽에 배치 하는 및 정보의 추가 2 개 5 개의 문자로 구성 합니다. 스캐너 상품을 읽는 경우 주 및 보조 바코드를 포함 하는 추가 문자 주 문자를 추가 및 결과 하나의 레이블로 응용 프로그램에 제공 되는 합니다. (참고 스캐너 구성을 사용 하거나 추가 코드의 판독을 지원할 수 있습니다.)
 
-*Multisymbol 레이블* 또는 *계층형된 레이블*을 라고도 하는 여러 레이블이 있는 일부 상품을 표시할 수 있습니다. 이러한 바코드는 세로로 정렬 되는 것이 일반적으로 하며 같거나 서로 다른 기호의 수 있습니다. 스캐너 여러 레이블이 포함 된 상품을 읽고, 바코드 각 레이블로 별도 응용 프로그램에 전달 됩니다. 이 현재 이러한 바코드 형식의 표준화 부족 하기 때문에 필요 합니다. 하나가 개별 바코드 데이터에 따라 모든 변형 확인할 수 없습니다. 따라서 응용 프로그램이 때 여러 레이블 바코드 읽은 반환 된 데이터에 따라 결정 해야 합니다. (참고 스캐너 수도 여러 레이블의 읽기를 지원 하지 않을 수 있습니다.)
+*Multisymbol 레이블* 또는 *계층형된 레이블*을 라고도 하는 여러 레이블이 있는 일부 상품을 표시할 수 있습니다. 이러한 바코드는 세로로 정렬 되는 것이 일반적으로 하며 같거나 서로 다른 기호의 수 있습니다. 스캐너의 여러 레이블이 포함 된 상품을 하는 경우 각 바코드 별도 레이블로 응용 프로그램에 전달 됩니다. 이 현재 이러한 바코드 형식의 표준화 부족 하기 때문에 필요 합니다. 개별 바코드 데이터에 따라 모든 변형 알 수 없는 합니다. 따라서 응용 프로그램이 때 여러 레이블 바코드 읽은 반환 된 데이터에 따라 결정 해야 합니다. (참고 스캐너 수도 여러 레이블의 읽기를 지원 하지 않을 수 있습니다.)
 
-이 값은 **DataReceived** 이벤트 응용 프로그램에 발생 하기 전에 설정 됩니다.
+이 값은 **DataReceived** 이벤트 응용 프로그램에 발생 하기 전에 설정 합니다.
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]
 

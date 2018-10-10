@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 47dda291a9a86ccbee69e1e51ca71be373f5dc1d
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469459"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4497794"
 ---
 # <a name="handleshandleid"></a>/handles/{handleId}
-세션 핸들 식별자에서 지정 하 고 삭제 작업을 지원 합니다. 
+식별자에서 지정 하는 세션 핸들을 삭제 하 고 작업을 지원 합니다. 
 
 > [!NOTE] 
 > 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상와 함께 사용 합니다.  

@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 155b8f67b5cd6080554afb889c7c27c921c998f8
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467932"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498213"
 ---
 # <a name="about-house-ads"></a>하우스 광고 정보
 
 
 특정 앱을 홍보하는 광고를 다른 앱에 무료로 만들 수 있습니다. 이런 광고를 *하우스 광고*라고 합니다.
 
-하우스 광고는 [Microsoft의 광고를 표시](../monetize/display-ads-in-your-app.md)하도록 구성 된 고유한 앱에만 표시 됩니다.
+하우스 광고는 [Microsoft의 광고를 표시](../monetize/display-ads-in-your-app.md)하도록 구성 된 앱에만 표시 됩니다.
 
 하우스 광고를 설정하려면 [광고 캠페인을 만들](create-an-ad-campaign-for-your-app.md) 때 **하우스 캠페인(무료)** 을 **캠페인 종류**로 선택합니다. 광고는 다음 조건을 충족하는 앱에 자동으로 나타날 수 있습니다.
 

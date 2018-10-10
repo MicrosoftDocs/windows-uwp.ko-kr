@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463659"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503662"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
@@ -78,11 +78,11 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 :white_check_mark: **먼저 추가하고 싶은 환경을 결정합니다.**
 
-선택할 수 있는 환경이 많습니다. 예를 들어 있는 다른 사용자가 게시 하는 새 사진 같이 공유 하면 흥미로운 것 수익 창출 Api, 또는 응용 프로그램에 직접 주의 사용 하 여 구매 주문 흐름을 단순화할 수 있습니다.
+선택할 수 있는 환경이 많습니다. 예를 들어, 수익 창출 Api 또는 응용 프로그램에 관심 있는 흥미로운 다른 사용자가 게시 하는 새 사진 같이 공유를 사용 하 여 구매 주문 흐름을 단순화할 수 있습니다.
 
 ![알림](images/desktop-to-uwp/toast.png)
 
-사용자가 메시지를 무시 또는 해제하는 경우에도, 알림 센터에서 다시 메시지를 확인한 후 메시지를 클릭하여 앱을 열 수 있습니다. 응용 프로그램 참여를 증가 하 고 더 깊이 통합 된 운영 체제를 표시 하는 응용 프로그램을 만드는 추가 효과가 있습니다. 잠시 후에 해당 환경을 위한 코드를 제시하겠습니다.
+사용자가 메시지를 무시 또는 해제하는 경우에도, 알림 센터에서 다시 메시지를 확인한 후 메시지를 클릭하여 앱을 열 수 있습니다. 응용 프로그램 참여를 증가 하 고 운영 체제를 사용 하 여 깊이 통합 보이는 응용 프로그램 만들기의 추가 효과가 있습니다. 잠시 후에 해당 환경을 위한 코드를 제시하겠습니다.
 
 아이디어를 얻으려면 [개발자 센터](https://developer.microsoft.com/windows)를 방문합니다.
 
@@ -224,7 +224,7 @@ void UWP::ShowToast()
 
 ### <a name="runtime-checks"></a>런타임 검사
 
-실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램 패키지 된 응용 프로그램으로 Windows 10에서 실행 하는 응용 프로그램이 UWP Api는 사용자가 있는 경우에 호출 합니다.
+실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램 패키지 된 응용 프로그램과 Windows 10에서 실행 하는 응용 프로그램 사용자가 하는 경우에 UWP Api를 호출 합니다.
 
 가장 쉽게 런타임 검사를 코드에 추가하는 방법은 Nuget 패키지: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/)를 설치하고, ``IsRunningAsUWP()``모든 UWP 코드 해제 메서드를 사용하는 것입니다. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
 

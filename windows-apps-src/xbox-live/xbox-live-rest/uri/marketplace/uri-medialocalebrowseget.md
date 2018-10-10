@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b747ea8e576ecbd3723282ffa3a59113b8187428
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466717"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4497726"
 ---
 # <a name="get-mediamarketplaceidbrowse"></a>GET (media/{marketplaceId}/browse)
-단일 미디어 그룹 내에서 항목을 검색할 수 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+단일 미디어 그룹 내에서 항목을 찾을 수 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EFB)
@@ -31,9 +31,9 @@ ms.locfileid: "4466717"
  
 ## <a name="remarks"></a>설명
  
-비 순차적으로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신이 검색에서 반환 된 데이터 페이지에 액세스할 수 있습니다. 이 API는 쿼리 구체화를 수락합니다. 
+무작위로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신이 검색에서 반환 된 데이터 페이지에 액세스할 수 있습니다. 이 API는 쿼리 구체화를 수락합니다. 
  
- 이제 **SandboxId** 클레임에는 XToken에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다. 
+ 이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다. 
   
 <a id="ID4EFB"></a>
 
@@ -49,7 +49,7 @@ ms.locfileid: "4466717"
  
 ## <a name="query-string-parameters"></a>쿼리 문자열 매개 변수
  
-이 API는 다음 쿼리 매개 변수: combinedContentRating, desiredMediaItemTypes, 필드, maxItems, preferredProvider, q, queryRefiners, skipItems, firstPartyOnly, freeOnly, hasTrailer, latestOnly subscriptionLevel, 및 topRatedOnly .
+이 API는 다음 쿼리 매개 변수: combinedContentRating desiredMediaItemTypes, 필드, maxItems, preferredProvider, 구성, queryRefiners, skipItems, firstPartyOnly, freeOnly, hasTrailer, latestOnly subscriptionLevel, 및 topRatedOnly .
  
 이러한 매개 변수에 대 한 자세한 내용은 [EDS 매개 변수](../../additional/edsparameters.md) 를 참조 하세요.
   
@@ -63,7 +63,7 @@ ms.locfileid: "4466717"
  
 ### <a name="sample-response"></a>예제 응답
  
-아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/browse?orderBy=releaseDate&desiredMediaItemTypes=DGame&fields=all`.
+아래 JSON 코드 호출에 대 한 응답에는 `/media/en-us/browse?orderBy=releaseDate&desiredMediaItemTypes=DGame&fields=all`.
  
 
 ```cpp

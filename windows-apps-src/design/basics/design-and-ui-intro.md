@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 602a0af685e812f5c65f94d07297cac9fc411923
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472337"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500286"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -29,7 +29,7 @@ ms.locfileid: "4472337"
 
 ## <a name="effective-pixels-and-scaling"></a>유효 픽셀 및 크기 조정
 
-UWP 앱은 TV에서 태블릿 또는 PC에서 모든 [Windows 10 장치](../devices/index.md)에서 실행 합니다. 그렇다면 어떻게 다양 한 장치 및 화면 크기에서 멋지게 UI를 디자인할?
+UWP 앱은 TV에서 태블릿 또는 PC에서 모든 [Windows 10 장치](../devices/index.md)에서 실행 합니다. 다양 한 장치 및 화면 크기에서 멋지게는 UI를 디자인 하는 어떻게 수 있나요?
 
 ![다양한 디바이스에서 동일한 앱](images/universal-image-1.jpg)
 

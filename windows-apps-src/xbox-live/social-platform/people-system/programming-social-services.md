@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 소셜 관리자, 예제
 ms.localizationpriority: medium
 ms.openlocfilehash: e20550e812cbd5d67c57381cde9c7910b20000e5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464610"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498364"
 ---
 # <a name="programming-social-services"></a>소셜 서비스 프로그래밍
 
 > [!NOTE]
-> 이 문서에서는 고급 API 사용 방법을 보여 줍니다.  시작 점으로 하십시오 살펴보세요 개발을 크게 간소화 [소셜 관리자 API를 소개](../intro-to-social-manager.md) 합니다.  찾을 경우 지원 되지 않는 시나리오는 소셜 관리자 알 댐을 알려 주시기 바랍니다.
+> 이 문서에서는 고급 API 사용 방법을 보여 줍니다.  시작 점으로 하세요 살펴보세요 개발을 크게 간소화 [소셜 관리자 API를 소개](../intro-to-social-manager.md) 합니다.  찾을 경우 지원 되지 않는 시나리오 소셜 관리자에서 알고 있는 댐을 알려 주시기 바랍니다.
 
-다음 코드 예제에서는 Xbox live 소셜 관계를 검색 하는 방법을 보여 줍니다. 시스템에 있는 모든 사용자의 목록을 생성 하 고 첫 번째를 검색 합니다. 그런 다음, 해당 사용자의 소셜 관계를 모두 검색합니다. 마지막으로, 이러한 관계의 각 공용 속성을 표시 합니다.
+다음 코드 예제에서는 Xbox live 소셜 관계를 검색 하는 방법을 보여 줍니다. 시스템에 있는 모든 사용자의 목록을 생성 하 고 첫 번째를 검색 합니다. 그런 다음 해당 사용자의 소셜 관계를 모두 검색합니다. 마지막으로, 이러한 관계의 각 공용 속성이 표시 됩니다.
 
 ```cpp
 XboxLiveContext^ xboxLiveContext = NULL;

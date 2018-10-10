@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0eb34d64daa9b1349c4f956a59ccf5d8efa5b565
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462344"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4497887"
 ---
 # <a name="activityrecord-json"></a>ActivityRecord(JSON)
-하나 이상의 사용자의 풍부한 존재 여부에 대 한 서식이 지정 된 및 지역화 된 문자열입니다. 
+하나 이상의 사용자의 다양 한 상태에 대 한 서식이 지정 된 및 지역화 된 문자열입니다. 
 <a id="ID4EN"></a>
 
  
@@ -30,12 +30,12 @@ ActivityRecord 개체에는 다음 사양을 있습니다.
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | richPresence| string| 포맷 하 고 지역화 된 다양 한 상태 문자열입니다.| 
-| 미디어| MediaRecord| 어떤 사용자가 시청 하거나를 수신 합니다.| 
+| 미디어| MediaRecord| 어떤 사용자가 시청 하거나 듣기 합니다.| 
   
 <a id="ID4ETB"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

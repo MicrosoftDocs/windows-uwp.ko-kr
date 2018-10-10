@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 73ba0cd060b3432de1cbb641a8991283974da192
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468525"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501137"
 ---
 # <a name="get-usersowneridsummary"></a>GET (/users/{ownerId}/summary)
 호출자의 관점에서 소유자에 대 한 요약 데이터를 가져옵니다.
@@ -79,12 +79,12 @@ ms.locfileid: "4468525"
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 되는 표준 HTTP 상태 코드의 전체 목록을 [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 200| 확인| 세션을 검색 했습니다.|
-| 400| 잘못 된 요청| 사용자 Id가 잘못 된 형식의 합니다.|
+| 400| 잘못 된 요청| 사용자 Id 잘못 되었습니다.|
 | 403| 금지| 권한 부여 헤더에서 XUID 클레임을 분석할 수 없습니다.|
 
 <a id="ID4EZG"></a>
@@ -95,7 +95,7 @@ ms.locfileid: "4468525"
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Content-Length| string| 응답에 전송 되는 바이트 수입니다. 예제 값: 232 합니다.|
-| Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 이 <b>응용 프로그램/j</b>이어야 합니다.|
+| Content-Type| 문자열| 응답 본문의 MIME 형식입니다. <b>응용 프로그램/j</b>이어야 합니다.|
 
 <a id="ID4EGAAC"></a>
 

@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f8137980bddbf494c989f4f8a39c2f6edaf3d30a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472868"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500077"
 ---
 # <a name="titlestitleidsessionssessionidallocationstatus"></a>/titles/{titleId}/sessions/{sessionId}/allocationStatus
-지정 된 제목 id와 세션 id가에 대 한 티켓 요청 상태를 가져옵니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+지정 된 제목 id와 세션 id에 대 한 티켓 요청 상태를 가져옵니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EU)
   * [호스트 이름](#ID4EPB)
@@ -32,7 +32,7 @@ ms.locfileid: "4472868"
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleId| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
+| titleId| 요청을 실행 해야 하는 타이틀의 ID입니다.| 
 | sessionId| 조회 세션의 ID입니다.| 
   
 <a id="ID4EPB"></a>
@@ -49,5 +49,5 @@ gameserverms.xboxlive.com
   
 [GET](uri-titlestitleidsessionssessionidallocationstatus-get.md)
  
-&nbsp;&nbsp;세션의 Id로 식별 sessionhost 할당 상태를 반환 합니다.
+&nbsp;&nbsp;해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다.
    

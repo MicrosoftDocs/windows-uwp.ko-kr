@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b259ae20bd07c6869bc6646fc44a70f994a261b7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461136"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502961"
 ---
 # <a name="eds-reverse-lookup-for-video"></a>비디오에 대한 EDS 역방향 조회
  
@@ -27,7 +27,7 @@ ms.locfileid: "4461136"
  
 ## <a name="reverse-lookup-steps"></a>역방향 조회 단계
  
-모든 비디오 미디어 유형 (**MediaItemType.Movie**, **MediaItemType.TVSeries**, **MediaItemType.TVEpisode**, **MediaItemType.TVSeason**및 **엔터테인먼트 검색 서비스 (EDS) 역방향 조회 지원 됩니다. MediaItemType.TVShow**), **MediaItemType.Unknown**뿐만 아니라 합니다.
+엔터테인먼트 검색 서비스 (EDS) 역방향 조회 (**MediaItemType.Movie**, **MediaItemType.TVSeries**, **MediaItemType.TVEpisode**, **MediaItemType.TVSeason**및 **모든 비디오 미디어 형식에 대 한 지원 됩니다. MediaItemType.TVShow**), **MediaItemType.Unknown**뿐만 아니라 합니다.
  
 역방향 조회에 전달 되는 4 개의 매개 변수가 필요 합니다. 
    * `idType=ScopedMediaId`
@@ -36,7 +36,7 @@ ms.locfileid: "4461136"
    * `ScopeId=` 공급자 제목 ID
  
  
-일반적으로 역방향 조회 2 단계에 필요합니다. 
+일반적으로 역방향 조회 2 단계가 필요합니다. 
    * 사용할 수 없는 경우 (예: 세부 정보 호출)에서 공급자 미디어 id를 검색 합니다. 
 
 ```cpp
@@ -53,7 +53,7 @@ GET /media/en-us/details?ids=047d19ca-3a7d-462c-bdbb-163543125583&idType=ScopedM
  
   
  
-EDS에서 **ProviderMediaId** 필드를 검색 하지 않았기 EDS 올바르게 전달 될 URL 인코딩 필드 이어야 합니다.
+EDS에서 **ProviderMediaId** 필드를 검색 하지 않았기 EDS에 올바르게 전달할 URL 인코딩 필드 이어야 합니다.
   
 <a id="ID4EOC"></a>
 

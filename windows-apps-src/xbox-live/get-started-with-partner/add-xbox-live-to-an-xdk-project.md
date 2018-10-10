@@ -8,14 +8,14 @@ ms.date: 04/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 5563966c6f877bf02b5e58751173e6c425b25bfa
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463071"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502553"
 ---
 # <a name="add-xbox-live-to-a-new-or-existing-xdk-project"></a>새로운 또는 기존 XDK 프로젝트에 Xbox Live 추가
 
@@ -23,27 +23,27 @@ ms.locfileid: "4463071"
 
 프로세스는.
 
-- Xbox One 개발 환경 구성 설정
-- 사용자의 Id 가져오기
+- Xbox One 개발 환경 설정
+- 사용자 id
 - 개발 콘솔 구성
-- TitleID 및 서비스 안내 하려면 이진 파일에 추가
+- TitleID 및 서비스 안내 하려면 이진 파일을 추가
 
 
-## <a name="setup-up-your-xbox-one-development-environment"></a>Xbox One 개발 환경 구성 설정
-먼저 XDK 설명서에서 "Xbox One 개발 환경 설정을" 섹션에 따라 콘솔 설정
+## <a name="setup-up-your-xbox-one-development-environment"></a>Xbox One 개발 환경 설정
+먼저 XDK 설명서의 "Xbox One 개발 환경 설정을" 섹션에 따라 콘솔 설정
 
-## <a name="get-your-ids"></a>사용자의 Id 가져오기
+## <a name="get-your-ids"></a>사용자 id
 
-Xbox Live 서비스를 사용 하려면 개발 키트 및 타이틀을 구성 하는 몇 가지 Id를 가져오는 해야 합니다. 이러한 동일한 프로세스를 사용 하 여 수행할 수 있습니다.
+Xbox Live 서비스를 사용 하려면 개발 키트 및 타이틀을 구성 하는 여러 개의 Id를 해야 합니다. 이러한 동일한 프로세스를 사용 하 여 수행할 수 있습니다.
 
-[Xbox Live 서비스 구성](../xbox-live-service-configuration.md) 하는 프로세스를 수행 하 여 사용자 Id를 가져오는 됩니다.
+[Xbox Live 서비스 구성](../xbox-live-service-configuration.md) 프로세스를 수행 하 여 사용자 Id를 가져오는 됩니다.
 
 ## <a name="configure-your-development-console"></a>개발 콘솔 구성
 
-사용자 Id가 있으면 개발 콘솔을 설치 하려면 [개발 콘솔 구성](configure-your-development-console.md) 가이드를 따릅니다.
+사용자 Id가 개발 콘솔을 설치 하려면 [개발 콘솔 구성](configure-your-development-console.md) 가이드를 따릅니다.
 
-## <a name="add-the-titleid-and-scid-to-your-binary"></a>TitleID 및 서비스 안내 하려면 이진 파일에 추가
-플랫폼 수준에서 각 개발 키트에 대 한 샌드박스를 구성 하는 동안 TitleID 및 서비스 안내 특정 이진에 바인딩됩니다. TitleID 및 서비스 안내 하려면 이진 파일을 추가 하려면 해당 이진 파일에 대 한 Package.appxmanifest에서 새 노드를 추가 하 여 수정 합니다 <Extensions> 노드 아래와 같이:
+## <a name="add-the-titleid-and-scid-to-your-binary"></a>TitleID 및 서비스 안내 하려면 이진 파일을 추가
+플랫폼 수준에서 각 개발 키트에 대 한 샌드박스를 구성 하는 동안 TitleID 및 서비스 안내 특정 이진 파일에 바인딩됩니다. TitleID 및 서비스 안내 하려면 이진 파일을 추가 하려면 해당 이진 파일에 대 한 Package.appxmanifest에서 새 노드를 추가 하 여 수정 합니다 <Extensions> 노드 아래와 같이 합니다.
 
 ```
 <Applications>
@@ -63,6 +63,6 @@ AppxManifest.xml 파일에 대 한 자세한 내용은 Xbox One 개발에 대 �
 
 응용 프로그램 매니페스트 스키마에 대 한 설명은 응용 프로그램 매니페스트 스키마 참조 하세요.
 
-**RequireXboxLive 플래그** Windows.Networking.Connectivity 연결 수준 하지 않는 한 플래그가 제목을 true로 설정 되어 RequireXboxLive 시작 되지 않는 XboxLiveAccess로 반환 하 고 제목 인증 Xbox live를 지웁니다. 그러면 제목 콘텐츠 최신 업데이트를 수행 했습니다. 제목을 실행 되는 동안 연결이 끊기면, 제목 일시 중단 됩니다.
+**RequireXboxLive 플래그** Windows.Networking.Connectivity 연결 수준 하지 않는 한 플래그가 제목 true로 설정 되어 RequireXboxLive 시작 되지 않는 XboxLiveAccess로 반환 하 고 제목 인증 Xbox live를 지웁니다. 그러면 제목 콘텐츠 최신 업데이트를 수행 했습니다. 제목을 실행 되는 동안 연결이 끊기면, 제목 일시 중단 됩니다.
 
 유일한 "인터넷 필수" 제목 true 및 타이틀이 방식으로 표시 되지는지 않습니다 들이 제목에 대 한 필수 서비스는 실행 RequireXboxLive 표시 해야 합니다.

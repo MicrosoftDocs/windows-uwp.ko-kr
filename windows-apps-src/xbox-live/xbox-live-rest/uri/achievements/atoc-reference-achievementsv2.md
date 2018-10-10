@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 891d1d03ab5b7b60dd25c58d9f2f40083bde6e7c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471551"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500232"
 ---
 # <a name="achievements-uris"></a>도전 과제 URI
 
@@ -31,7 +31,7 @@ ms.locfileid: "4471551"
 
 [/users/xuid({xuid})/achievements](uri-achievementsusersxuidachievementsv2.md)
 
-&nbsp;&nbsp;도전 과제 사용자에 대 한 액세스를 제공합니다.
+&nbsp;&nbsp;사용자 도전 과제에 대 한 액세스를 제공합니다.
 
 [/users/xuid({xuid})/achievements/{scid}/{achievementid}](uri-usersxuidachievementsscidachievementid.md)
 

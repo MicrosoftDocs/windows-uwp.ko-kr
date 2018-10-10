@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 047f7287578f52591c48ee059e72efb559b41c87
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464252"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502210"
 ---
 # <a name="gameclip-json"></a>GameClip(JSON)
  
@@ -34,9 +34,9 @@ GameClip 개체에는 다음 사양을 있습니다.
 | <b>dateRecorded</b>| DateTime| 날짜 및 UTC (ISO 8601 형식)에서 녹음/녹화 시작 된 시간입니다.| 
 | <b>lastModified</b>| DateTime| 마지막으로 수정한 시간 게임 클립 또는 UTC (ISO 8601 형식)에 메타 데이터입니다.| 
 | <b>userCaption</b>| string| 사용자가 입력 한 지역화 되지 않은 문자열 게임 클립에 대해입니다.| 
-| <b>type</b>| GameClipTypes| 클립의 유형입니다. 여러 값 및 그렇다면 쉼표로 구분 됩니다.| 
-| <b>원본</b>| GameClipSource| 어떻게 클립 였던 수 있습니다.| 
-| <b>visibility</b>| GameClipVisibility| 시스템에서 게시 되 면 게임 클립의 표시 여부입니다.| 
+| <b>type</b>| GameClipTypes| 클립의 형식입니다. 여러 값 하 고 만약 그렇다면 쉼표로 구분 됩니다.| 
+| <b>소스</b>| GameClipSource| 어떻게 클립 였던 수 있습니다.| 
+| <b>visibility</b>| GameClipVisibility| 시스템에 게시 되 면 게임 클립의 표시 여부입니다.| 
 | <b>durationInSeconds</b>| 32 비트 부호 없는 정수| 몇 초만에 게임 클립의 기간입니다.| 
 | <b>서비스 안내</b>| string| 게임 클립 연결 된 서비스 안내 합니다.| 
 | <b>rating</b>| 배정밀도 부동 소수점 숫자| 0.0에서 5.0 범위에 대 한 게임 클립와 관련 된 평점입니다.| 
@@ -46,13 +46,13 @@ GameClip 개체에는 다음 사양을 있습니다.
 | <b>titleData</b>| string| 콘솔 관련 속성 모음입니다.| 
 | <b>미리 보기</b>| GameClipThumbnail의 배열| GameClipThumbnail 개체의 배열입니다.| 
 | <b>gameClipUris</b>| GameClipUri의 배열| GameClipUri 개체의 배열입니다.| 
-| <b>xuid</b>| string| 게임 클립을 문자열로 마샬링할 소유자의 XUID 합니다.| 
-| <b>clipName</b>| string| 클립의 이름, 제목 관리 시스템에서 조회 하는 대로 요청의 입력된 로캘에 따라의 지역화 된 버전입니다.| 
+| <b>xuid</b>| string| 문자열로 마샬링할 게임 클립의 소유자 XUID 합니다.| 
+| <b>clipName</b>| string| 클립의 이름, 제목 관리 시스템에서 찾은 대로 요청의 입력된 로캘에 따라의 지역화 된 버전입니다.| 
   
 <a id="ID4ERH"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

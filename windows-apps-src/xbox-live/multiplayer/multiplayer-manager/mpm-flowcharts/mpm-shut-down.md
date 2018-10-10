@@ -1,5 +1,5 @@
 ---
-title: 순서도-멀티 플레이 게임 종료
+title: 순서도-멀티 플레이어 게임 종료
 author: KevinAsgari
 description: Xbox Live 멀티 플레이어 관리자 순서도-멀티 플레이어 게임을 완료 된 후 종료 합니다.
 ms.assetid: f80eb3ca-faf5-459e-8f55-acb9aedec542
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: e437cd488c1a16020f4b315f418cb57c97e2b1b4
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470462"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498311"
 ---
 # <a name="flowchart---shut-down-after-a-multiplayer-game-is-complete"></a>순서도-멀티 플레이어 게임을 완료 된 후 종료
 

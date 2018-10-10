@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472826"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502862"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -29,7 +29,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 �
 ## <a name="types-of-app-packages"></a>앱 패키지의 유형
 
 - **앱 패키지 (.appx 또는.msix)**  
-    디바이스에서 사이드로드할 수 있는 형식의 앱을 포함하는 파일. Visual Studio에서 만든 단일 앱 패키지 파일 이며 **하지** 개발자 센터에 제출 하기 위한 것 테스트용으로 로드 및 테스트 용도로 사용 해야 합니다. 개발자 센터에 앱을 제출하려는 경우 앱 패키지 업로드 파일을 사용합니다.  
+    디바이스에서 사이드로드할 수 있는 형식의 앱을 포함하는 파일. Visual Studio에서 만든 단일 앱 패키지 파일 되며 **하지** 개발자 센터에 제출 하기 위한 테스트용으로 로드 및 테스트 용도로 사용 해야 합니다. 개발자 센터에 앱을 제출하려는 경우 앱 패키지 업로드 파일을 사용합니다.  
 
 - **앱 번들 (.appxbundle 또는.msixbundle)**  
     앱 번들은 각각 특정 장치 아키텍처를 지원하기 위해 구축된 여러 앱 패키지를 포함할 수 있는 패키지 유형입니다. 예를 들어 앱 번들은 x86, x64, 및 ARM 구성에 대해 세 개의 개별 앱 패키지를 포함할 수 있습니다. 앱 번들은 앱이 가장 광범위한 장치에서 사용할 수 있도록 허용하기 때문에 가능한 경우 생성되어야 합니다.  
@@ -80,7 +80,7 @@ Microsoft Store를 통해 앱을 배포하는 경우 Visual Studio는 Microsoft 
 
 ## <a name="create-an-app-package-upload-file"></a>앱 패키지 업로드 파일을 만들기
 
-Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix), 앱 번들 (.appxbundle 또는.msixbundle), 또는 업로드 패키지 (.appxupload) 및 [패키지 된 앱을 개발자 센터 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)만들어야 합니다. 개발자 센터에 앱 패키지 또는 앱 번들만 제출할 수 있지만 업로드 패키지를 제출하는 것이 좋습니다.
+Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix), 앱 번들 (.appxbundle 또는.msixbundle), 또는 업로드 패키지 (.appxupload) 및 [개발자 센터에 패키지 된 앱 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)만들어야 합니다. 개발자 센터에 앱 패키지 또는 앱 번들만 제출할 수 있지만 업로드 패키지를 제출하는 것이 좋습니다.
 
 >[!NOTE]
 > 앱 패키지 업로드 파일(.appxupload)은 Visual Studio를 사용하여 만들 수 있는 개발자 센터에 대한 **유일한** 유효한 앱 패키지 유형입니다. 다른 유효한 [앱 패키지는 Visual Studio를 사용하지 않고 수동으로 만들 수 있습니다](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
@@ -145,7 +145,7 @@ Windows 10 1주년 업데이트에 도입된 앱 패키지는 앱 패지 파일�
 > 앱 설치 관리자는 장치가 앱을 신뢰하는 것으로 간주합니다. 개발자나 기업용 앱을 사이드로드하는 경우, 장치의 신뢰할 수 있는 사람 또는 신뢰할 수 있는 판매자 인증 기관 Microsoft Store에 서명 인증서를 설치해야 합니다. 방법을 모를 경우 [테스트 인증서 설치](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates)를 참조하세요.
 
 ### <a name="sideload-your-app-on-previous-versions-of-windows"></a>이전 버전 Windows에 앱 사이드로드
-UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하지 않습니다. 일반적으로 Microsoft Store에서 UWP 앱을 다운로드하고, 장치에 앱을 설치합니다. Microsoft Store에 게시하지 않고도 앱을 설치할 수 있습니다(사이드로드). 이렇게 하면 설치 및 앱 패키지를 사용 하 여 테스트 앱 파일을 생성 합니다. Microsoft Store에서 판매하지 않을 앱(예: LOB(기간 업무) 앱)이 있는 경우에는 회사 내의 다른 사용자가 사용할 수 있도록 이 앱을 사이드로드할 수 있습니다.
+UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하지 않습니다. 일반적으로 Microsoft Store에서 UWP 앱을 다운로드하고, 장치에 앱을 설치합니다. Microsoft Store에 게시하지 않고도 앱을 설치할 수 있습니다(사이드로드). 이렇게 하면 설치 하 고 앱 패키지를 사용 하 여 테스트 앱 파일을 생성 합니다. Microsoft Store에서 판매하지 않을 앱(예: LOB(기간 업무) 앱)이 있는 경우에는 회사 내의 다른 사용자가 사용할 수 있도록 이 앱을 사이드로드할 수 있습니다.
 
 다음 목록은 사이드로드을 로드하는 데 요구되는 사항입니다.
 

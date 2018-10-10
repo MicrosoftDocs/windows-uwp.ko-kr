@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 가격 책정, 앱 가격 책정, 앱 가격, 앱 판매, 가격 변경, 가격 사용자 지정, 가격, 비용, 기본 가격 재정의, 자유 형식 가격, 자유 형식
 ms.localizationpriority: medium
 ms.openlocfilehash: ca37d0b360679a878cff3aeabd96f82016c36fde
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465668"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500309"
 ---
 # <a name="set-and-schedule-app-pricing"></a>앱 가격 설정 및 예약
 
 [가격 책정 및 가용성](set-app-pricing-and-availability.md) 페이지의 **가격 책정** 섹션에서 앱의 기본 가격을 선택할 수 있습니다. 또 [가격 변경 예약](#schedule-price-changes)으로 앱 가격이 변경되는 날짜와 시간을 지정할 수 있습니다. 또한 새 기준 가격을 선택하거나 시장의 현지 통화로 자유 형식 가격을 입력하여 [특정 시장에 대한 기본 가격을 재정의](#override-base-price-for-specific-markets)할 수 있는 옵션이 있습니다.
 
 > [!NOTE]
-> 이 항목은 앱을 가리키지만, 추가 기능 제출을 위한 가격 선택은 동일한 프로세스를 사용합니다. Note는 [구독 추가 기능](../monetize/enable-subscription-add-ons-for-your-app.md)대 한 기본 가격 선택 하는 적이 향상 될 수 없습니다 (여부를 변경 하 여 기본 가격 또는 가격 변경 예약 하 여), 있지만 저하 될 수 있습니다.
+> 이 항목은 앱을 가리키지만, 추가 기능 제출을 위한 가격 선택은 동일한 프로세스를 사용합니다. Note는 [구독 추가 기능](../monetize/enable-subscription-add-ons-for-your-app.md)대 한 선택 하는 기본 가격으로 향상 될 수 없습니다 (여부를 변경 하 여 기본 가격 또는 가격 변경 예약 하 여), 있지만 저하 될 수 있습니다.
 
 ## <a name="base-price"></a>기본 가격
 

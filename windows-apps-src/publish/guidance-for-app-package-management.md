@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a43f3b4c5684d93ea6986c4d1f1e4dae46c1a959
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469649"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498183"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
@@ -99,9 +99,9 @@ ms.locfileid: "4469649"
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>이전에 지원되던 디바이스 패밀리용 패키지 제거
 
-경우 대해 특정 [디바이스 패밀리](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 앱 이전에 지원 메시지가 표시 됩니다 **패키지** 페이지에서 변경 내용을 저장 하기 전에 의도 인지 확인 하는 모든 패키지를 제거 합니다.
+경우 대해 특정 [디바이스 패밀리](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 앱 이전에 지원, 묻는 **패키지** 페이지에서 변경 내용을 저장 하기 전에 의도 한 내용 인지 확인 하는 모든 패키지를 제거 합니다.
 
-모든 앱에서 이전에 지원 되는 디바이스 패밀리에서 실행 될 수 있는 패키지를 제거 하는 제출을 게시 하면 새로운 고객이 해당 디바이스 패밀리에서 앱을 구입할 수 없습니다. 항상 나중에 또 다른 업데이트를 게시하여 해당 디바이스 패밀리용 패키지를 다시 제공할 수 있습니다.
+모든 앱이 이전에 지원 되는 디바이스 패밀리에서 실행 될 수 있는 패키지를 제거 하는 제출을 게시 하는 경우 새 고객에 게 해당 디바이스 패밀리에서 앱을 구입할 수 없습니다. 항상 나중에 또 다른 업데이트를 게시하여 해당 디바이스 패밀리용 패키지를 다시 제공할 수 있습니다.
 
 특정 디바이스 패밀리를 지원하는 모든 패키지를 제거하더라도 이미 해당 장치 유형에 앱을 설치한 기존 고객은 계속 해당 앱을 사용할 수 있으며 나중에 제공되는 업데이트를 다운로드하게 되니 주의하세요.
 
@@ -110,7 +110,7 @@ ms.locfileid: "4469649"
 
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>이전에 게시된 앱에 Windows 10용 패키지 추가
 
-Windows에 대 한 패키지가 포함 된 저장소에는 앱이 있는 경우 8.x 및/또는 Windows Phone 8.x 하려면 Windows 10 용 앱을 업데이트 하 고 새 제출을 만들고 UWP.msixupload 또는.appxupload 패키지를 업로드 [패키지](upload-app-packages.md) 단계 중에 추가 합니다. 앱 인증 프로세스를 거치면 UWP 패키지를 Windows 10에서 고객이 새 구입에 사용할 수 있는 됩니다.
+Windows에 대 한 패키지가 포함 된 저장소에는 앱이 있는 경우 8.x 및/또는 Windows Phone 8.x 및 Windows 10 용 앱을 업데이트 하 고 새 제출을 만들고 [패키지](upload-app-packages.md) 단계 UWP.msixupload 또는.appxupload 패키지를 추가 하려고 합니다. 앱 인증 프로세스를 통과 한 후 UWP 패키지로 Windows 10에서 고객이 새 구입에 사용할 수 있는 됩니다.
 
 > [!NOTE]
 > Windows 10의 고객이 UWP 패키지를 구입한 후에는 이전 OS 버전용 패키지를 사용하여 해당 고객을 롤백할 수 없습니다. 

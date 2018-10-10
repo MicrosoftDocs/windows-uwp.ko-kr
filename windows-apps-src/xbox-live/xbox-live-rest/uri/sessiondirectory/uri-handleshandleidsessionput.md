@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 89572da87f4975aeeaa1ae7506a34f2b9cb4e72a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463686"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502394"
 ---
 # <a name="put-handleshandle-idsession"></a>PUT (/handles/{handle-id}/session)
-만들거나 핸들 역참조 하 여 세션을 업데이트 합니다.
+만들거나 핸들을 해제 하 여 세션을 업데이트 합니다.
 
 > [!IMPORTANT]
-> 이 메서드는 2015 멀티 플레이어에서 사용 하 고 나중 및 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
+> 이 방법은 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 및 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4ECB)
@@ -35,9 +35,9 @@ ms.locfileid: "4463686"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드 멀티 플레이어 서비스에 제공 된 세션 핸들 ID를 사용 하 여 새 드라이버나 업데이트 된 세션 작성 결과 서버에서 반환 된 새로운 또는 업데이트 된 세션을 나타내는 개체입니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.WriteSessionByHandleAsync**하 여 줄 바꿈할 수 있습니다.
+이 HTTP/REST 메서드에 멀티 플레이어 서비스에 제공 된 세션 핸들 ID를 사용 하 여 새 드라이버나 업데이트 된 세션 쓰기 결과 서버에서 반환 된 새롭거나 업데이트 된 세션을 나타내는 개체입니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.WriteSessionByHandleAsync**하 여 줄 바꿈할 수 있습니다.
 
-이 메서드의 호출자에서 플레이어의 **MultiplayerActivityDetails** 개체 핸들 ID를 가져옵니다. 또는 호출자는 사용자 게임 초대를 수락한 후에 ID를 프로토콜 활성화를 가져옵니다.
+이 메서드의 호출자 플레이어의 **MultiplayerActivityDetails** 개체에서 처리 ID를 가져옵니다. 또는 호출자는 사용자 게임 초대를 수락한 후에 ID를 프로토콜 활성화를 가져옵니다.
 
 <a id="ID4ECB"></a>
 

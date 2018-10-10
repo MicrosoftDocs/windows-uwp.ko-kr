@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c795dbd2b6193798b472e51526bdd9e2f6b4622
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467962"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501146"
 ---
 # <a name="get-usersxuidxuidscidsscidstatsincludevaluemetadata"></a>GET (/users/xuid({xuid})/scids/{scid}/stats?include=valuemetadata)
-사용자 지정 된 서비스 구성에 대 한 통계 값을와 관련 된 메타 데이터를 포함 하 여 지정 된 통계 목록을 가져옵니다.
+사용자 지정 된 서비스 구성에 대 한 통계 값을와 관련 된 메타 데이터를 포함 하 여 지정 된 통계의 목록을 가져옵니다.
 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
 
   * [설명](#ID4EV)
@@ -37,7 +37,7 @@ ms.locfileid: "4467962"
 
 ## <a name="remarks"></a>설명
 
-? 포함 = valuemetadata 쿼리 매개 변수는 응답 모델 및 경합 트랙에 시간을 달성 하는 데 사용 되는 자동차의 색 등의 사용자 통계 값와 관련 된 메타 데이터를 포함 하도록 합니다.
+? 포함 = valuemetadata 쿼리 매개 변수는 응답 모델 및 경합 트랙에 한 번 달성 하는 데 사용 되는 자동차의 색 등의 사용자 통계 값와 관련 된 메타 데이터를 포함 하도록 합니다.
 
 응답에 값 메타 데이터를 포함 하도록 요청 호출 3 X Xbl-계약 버전 헤더 값도 설정 해야 합니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "4467962"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| xuid| GUID| Xbox 사용자 ID (XUID) 서비스 구성에 액세스 하려면 대신 사용자의 합니다.|
+| xuid| GUID| Xbox 사용자 ID (XUID) 서비스 구성에 액세스 하려면 대신 사용자입니다.|
 | 서비스 안내| GUID| 액세스 되는 리소스를 포함 하는 서비스 구성의 식별자입니다.|
 
 <a id="ID4ELB"></a>
@@ -58,17 +58,17 @@ ms.locfileid: "4467962"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- | --- |
-| statNames| string| 쉼표로 구분 사용자 통계 이름 목록. 예를 들어 다음 URI는 URI에 지정 된 사용자 id를 대신 하 여 4 개의 통계를 요청 하는 서비스 알립니다. {:: nomakrdown}<br/><br/>`https://userstats.xboxlive.com/users/xuid({xuid})/scids/{scid}/stats/wins,kills,kdratio,headshots?include=valuemetadata`| 
-| 포함 = valuemetadata| string| 응답 uset 통계 값와 관련 된 모든 값 메타 데이터를 포함 하는 것을 나타냅니다.|
+| statNames| string| 쉼표로 구분 된 목록 사용자 통계 이름입니다. 예를 들어 다음 URI는 4 개의 통계 URI에 지정 된 사용자 id를 대신 하 여 요청 된 서비스 알립니다. {:: nomakrdown}<br/><br/>`https://userstats.xboxlive.com/users/xuid({xuid})/scids/{scid}/stats/wins,kills,kdratio,headshots?include=valuemetadata`| 
+| 포함 = valuemetadata| string| 응답 uset 시작 값과 관련 된 모든 값 메타 데이터를 포함 하는 것을 나타냅니다.|
 
 <a id="ID4EWC"></a>
 
 
 ## <a name="authorization"></a>권한 부여
 
-권한 부여 논리 콘텐츠 격리 및 액세스 제어 시나리오에 대해 구현 있습니다.
+콘텐츠 격리 및 액세스 제어 시나리오에 대 한 구현 된 권한 부여 논리가 있습니다.
 
-   * 순위표와 사용자 통계 호출자가 요청을 사용 하 여 유효한 XSTS 토큰 제출 된 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 데이터 플랫폼에서 지원 되는 클라이언트로 제한 됩니다.
+   * 순위표 및 사용자 통계 호출자 제출 요청을 사용 하 여 유효한 XSTS 토큰에 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 데이터 플랫폼에서 지 원하는 클라이언트에 제한 됩니다.
    * 제목 개발자 열기 또는 XDP 또는 개발자 센터를 사용 하 여 제한 된 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐만 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
 
 검사에 대 한 의사 코드는 다음과 같습니다.
@@ -92,8 +92,8 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > ".|
-| Xbl 계약 버전 X| string| 사용 하는 API의 버전을 나타냅니다. 응답에 메타 데이터 값을 포함 하기 위해이 값을 "3" 설정 해야 합니다.|
+| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.|
+| Xbl 계약 버전 X| string| 사용 하는 API의 버전을 나타냅니다. 이 값은 응답에서 값 메타 데이터를 포함 하려면 "3"으로 설정 되어야 합니다.|
 
 <a id="ID4EDF"></a>
 
@@ -116,7 +116,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 되는 표준 HTTP 상태 코드의 전체 목록을 [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

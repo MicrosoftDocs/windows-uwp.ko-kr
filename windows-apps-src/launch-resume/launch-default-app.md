@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dff7b641cad99407ce22e7a4d4b58c10e0ae94d1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470003"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502599"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -244,8 +244,8 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="weather-app-uri-scheme"></a>날씨 앱 URI 스키마
 
-사용 합니다 **msnweather:** URI 스키마를 날씨 앱을 시작 합니다.
+사용 합니다 **msnweather:** URI 스키마를 날씨 응용 프로그램을 실행 합니다.
 
 | URI 스키마 | 결과 |
 |------------|---------|
-| msnweather://forecast?la= \[latitude\] & lo = \ [longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에서 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 나타냅니다.<br> `longitude` 경도 위치를 나타냅니다.<br> |
+| msnweather://forecast?la= \[latitude\] 및 lo = \ [longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에서 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 나타냅니다.<br> `longitude` 경도 위치를 나타냅니다.<br> |

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465897"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499408"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
@@ -24,7 +24,7 @@ ms.locfileid: "4465897"
 많은 경우 데스크톱 응용 프로그램에서 직접 UWP API를 호출할 수 있기 때문에 이 가이드를 검토하기 전에 [Windows 10 향상](desktop-to-uwp-enhance.md)을 참조하세요.
 
 >[!NOTE]
->이 가이드는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만든 한 가정 합니다. 이 아직 완료 하지 않았다면, [데스크톱 응용 프로그램 패키지를](desktop-to-uwp-root.md)참조 하세요.
+>이 가이드는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 가정 합니다. 이 아직 완료 하지 않았다면, [데스크톱 응용 프로그램 패키지를](desktop-to-uwp-root.md)참조 하세요.
 
 준비가 되었으면 시작하겠습니다.
 
@@ -85,7 +85,7 @@ UWP 프로젝트와 런타임 구성 요소를 사용하여 할 수 있는 몇 �
 ![적응형 디자인](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->이 예제에서는 솔루션에 UWP 프로젝트를 추가 하 여 XAML UI를 보여 줍니다. 데스크톱 응용 프로그램에서 XAML Ui 표시 안정적인 지원 되는 접근 방식입니다. 이 방법을 사용 하는 대신 XAML 섬을 사용 하 여 데스크톱 응용 프로그램에 직접 UWP XAML 컨트롤을 추가 하는 것입니다. XAML 제도 개발자 미리 보기도 현재 사용할 수 있습니다. 하지만 직접 사용해 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 할 수 있도록 하 고 Windows 릴리스 안정화 나중에 계속 됩니다. XAML 제도 대 한 자세한 내용은 참조 [데스크톱 응용 프로그램의 UWP 컨트롤](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>이 예제에서는 솔루션에 UWP 프로젝트를 추가 하 여 XAML UI를 보여 줍니다. 데스크톱 응용 프로그램에서 XAML Ui 표시 안정적인 지원 되는 방법입니다. 이 방법을 사용 하는 대신 XAML 섬을 사용 하 여 데스크톱 응용 프로그램에 직접 UWP XAML 컨트롤을 추가 하는 것입니다. XAML 제도 개발자 미리 현재 사용할 수 있습니다. 하지만 직접 사용해 프로토타입 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서 현재 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 할 수 있도록 안정화 나중에 Windows 릴리스를 계속 합니다. XAML 제도 대 한 자세한 내용은 참조 [데스크톱 응용 프로그램의 UWP 컨트롤](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
@@ -333,7 +333,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 ### <a name="test-the-app-service"></a>앱 서비스 테스트
 
-다른 앱에서 호출하여 서비스를 테스트합니다. 이 코드는 Windows forms 응용 프로그램 또는 다른 UWP 앱 등의 데스크톱 응용 프로그램이 될 수 있습니다.
+다른 앱에서 호출하여 서비스를 테스트합니다. 이 코드는 Windows forms 응용 프로그램 또는 다른 UWP 앱 등의 데스크톱 응용 프로그램 일 수 있습니다.
 
 > [!NOTE]
 > 이 코드는 ``AppServiceConnection`` 클래스의 ``PackageFamilyName`` 속성을 올바르게 설정하는 경우에만 작동합니다. UWP 프로젝트의 컨텍스트에서 ``Windows.ApplicationModel.Package.Current.Id.FamilyName``을 호출하여 이 이름을 얻을 수 있습니다. [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)을 참조하세요.

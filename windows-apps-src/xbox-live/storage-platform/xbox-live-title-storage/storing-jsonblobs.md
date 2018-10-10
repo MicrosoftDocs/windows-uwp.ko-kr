@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: e98abcb9ab8738291efc40d5148b021ea95110fa
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469214"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500425"
 ---
 # <a name="storing-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에 JSON blob 저장
 
@@ -32,7 +32,7 @@ ms.locfileid: "4469214"
 
 -   사용자는 업데이트를 세션에 있어야 합니다.
 
--   STSTokenString 편의 위해 자리 표시자 및 인증 요청으로 반환 하는 토큰으로 대체 되어야 합니다.
+-   STSTokenString 편의 위해 자리 표시자 이며 인증 요청으로 반환 하는 토큰으로 대체 되어야 합니다.
 
 2.  JSON 개체를 보냅니다.
 

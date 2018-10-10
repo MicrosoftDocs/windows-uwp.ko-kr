@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e82306119e428dd9279e26d1497d44b371b9587e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469979"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502832"
 ---
 # <a name="achievement-json"></a>Achievement(JSON)
 도전 과제 개체 (버전 2)입니다.
@@ -30,10 +30,10 @@ ms.locfileid: "4469979"
 | 멤버| 유형| 설명|
 | --- | --- | --- |
 | id| string| 리소스 식별자입니다.|
-| serviceConfigId| string| 이 리소스에 대 한 서비스를 안내 합니다. 이 도전 과제와 관련 된 제목을 식별 합니다. |
-| name| 문자열| 지역화 된 도전 과제의 이름입니다.|
+| serviceConfigId| string| 이 리소스에 대 한 서비스 안내 합니다. 이 성과 관련 된 제목을 식별 합니다. |
+| name| 문자열| 지역화 된 도전 과제 이름입니다.|
 | titleAssociations| [TitleAssociation](json-titleassociation.md) 의 배열| TitleAssociation의 배열입니다.|
-| progressState| **ProgressState** 열거형| 진행 상태. <ul><li>잘못 된 (0): 도전 과제 진행 알 수 없는 상태가 됩니다.</li><li>(1)는 파트너가 달성: 도전 과제를 잠금 해제 되었습니다.</li><li>진행 중 (2): 도전 과제 잠겨 하지만 사용자가 변경한 진행률을 잠금을 해제 합니다.</li><li>(3) notStarted: 도전 과제 잠겨 하 고 사용자가 잠금을 해제 하는 진행률 변경한 되지 않습니다.</li></ul> | 
+| progressState| **ProgressState** 열거형| 진행 상태. <ul><li>잘못 된 (0): 도전 과제 진행 알 수 없는 상태가 됩니다.</li><li>(1)는 파트너가 달성: 도전 과제를 잠금 해제 되었습니다.</li><li>진행 중 (2): 도전 과제 잠겨 하지만 사용자가 진행률을 잠금을 해제 합니다.</li><li>(3) notStarted: 도전 과제 잠겨 하 고 사용자가 잠금 해제 것에 대 한 모든 진행률 이루어지지 합니다.</li></ul> | 
 | 진행| [진행](json-progression.md)| 도전 과제 내에서 사용자의 진행 합니다.|
 | mediaAssets| [MediaAsset](json-mediaasset.md) 의 배열| 이미지 Id 같은 도전 과제와 관련 된 미디어 자산입니다. |
 | 플랫폼| string| 도전 과제 플랫폼에서 발생 했습니다.|
@@ -41,9 +41,9 @@ ms.locfileid: "4469979"
 | description| string| 설명 도전 과제를 잠금 해제 하는 경우입니다.|
 | lockedDescription| string| 도전 과제를 잠금 되기 전에 설명입니다.|
 | productId| 문자열| ProductId 도전 과제와 함께 출시 되었습니다.|
-| achievementType| **AchievementType** 열거형| 도전 과제 (같지 레거시 도전 과제에 이전 유형)의 유형: <ul><li>잘못 된 (0): 알 수 없는 및 지원 되지 않는 도전 과제 유형.</li><li>영구 (1): 성과 없는 종료 날짜는 언제 든 지 잠금을 해제할 수 있습니다.</li><li>질문 (2): 특정 시간 창을 하는 동안이 잠금을 해제할 수 있는 성과 합니다.</li></ul> |
+| achievementType| **AchievementType** 열거형| 유형 도전 과제 (같지 레거시 도전 과제에 이전 형식)입니다. <ul><li>잘못 된 (0): 알 수 없는 및 지원 되지 않는 도전 과제 유형입니다.</li><li>영구 (1): 성과 없는 종료 날짜는 언제 든 지 잠금을 해제할 수 있습니다.</li><li>질문 (2): 특정 시간 창을 하는 동안이 잠금을 해제할 수 있는 성과 합니다.</li></ul> |
 | participationType| **ParticipationType** 열거형| 도전 과제에 대 한 참여 유형입니다. 유효한 값은 개인 또는 그룹.|
-| 시간| 시간| 기간을 하는 동안 도전 과제 되지 않을 잠금이 해제 합니다. 문제에 대해서만 지원 합니다.|
+| 시간| 시간| 기간을 하는 동안 도전 과제 수 잠금이 해제 되어야 합니다. 문제에 대해서만 지원 합니다.|
 | 보상| [보상](json-reward.md) 의 배열| 보상 잠금을 해제할 때의 컬렉션입니다.|
 | estimatedTime| TimeSpan| 예상된 시간을 획득 하기 위해 도전 과제가 걸립니다.|
 | deeplink| string| 제목에 deeplink 합니다.|
@@ -52,7 +52,7 @@ ms.locfileid: "4469979"
 <a id="ID4EIAAC"></a>
 
 
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
 
 
 ```json

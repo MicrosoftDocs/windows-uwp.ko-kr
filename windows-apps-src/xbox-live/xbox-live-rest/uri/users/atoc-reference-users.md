@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e9b51bd6bbaa707f72a83036cfd5a5c43be6dc50
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464650"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498284"
 ---
 # <a name="users-uris"></a>사용자 URI
  
@@ -31,7 +31,7 @@ ms.locfileid: "4464650"
 
 [/users/xuid({xuid})/inbox](uri-usersxuidinbox.md)
 
-&nbsp;&nbsp;Xbox LIVE 서비스에 대 한 사용자에 대 한 액세스 받은 편지함 메시징 제공 합니다. 
+&nbsp;&nbsp;사용자에 대 한 액세스 메시징 받은 편지함 Xbox LIVE 서비스를 제공 합니다. 
 
 [/users/xuid({xuid})/outbox](uri-usersxuidoutbox.md)
 

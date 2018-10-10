@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be1312b5dcc716d29bf15a8e16a2647ada68d49
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464483"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500931"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -72,7 +72,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. 응용 프로그램 (예: **MainPage.xaml.cs**)의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 이렇게 하면 자동으로 하는 경우, 실행할 수 있습니다 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록 하지만:
+UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. (예: **MainPage.xaml.cs**) 응용 프로그램의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 이렇게 하면 자동으로 하는 경우, 실행할 수 있습니다 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록 하지만:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -170,7 +170,7 @@ _framePool.FrameArrived += (s, a) =>
 다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예로 나와 있습니다. 이 샘플에는 단추 프런트 엔드에 클릭 하면 **Button_ClickAsync** 메서드를 호출 합니다.
 
 > [!NOTE]
-> 이 코드 조각에서는 [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링을 위한 라이브러리를 사용 합니다. 프로젝트에 대해 설정 하는 방법에 대 한 내용은 해당 설명서를 참조 하세요.
+> 이 코드 조각에서는 [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링 하기 위한 라이브러리를 사용 합니다. 프로젝트에 대해 설정 하는 방법에 대 한 정보는 설명서를 참조 하십시오.
 
 ```cs
 using Microsoft.Graphics.Canvas;

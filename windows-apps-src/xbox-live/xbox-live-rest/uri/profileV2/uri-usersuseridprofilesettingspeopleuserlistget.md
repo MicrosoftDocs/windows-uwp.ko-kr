@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d57a6620115d5f009c054210a50548c3da7e47d5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464239"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500116"
 ---
 # <a name="get-usersuseridprofilesettingspeopleuserlist"></a>GET (/users/{userId}/profile/settings/people/{userList})
-사용자 프로필을 가져오거나 사람들이 모니커와 사용자를 지원 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
+사용자 프로필을 가져오거나 사용자 모니커를 사용 하 여 사용자를 지원 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EKB)
@@ -32,7 +32,7 @@ ms.locfileid: "4464239"
  
 ## <a name="remarks"></a>설명
  
-**userList** 및 **userIds** 상호 배타적인 매개 변수가 있습니다. 하나 또는 둘 다를 지정 하는 경우 다시 **BadRequest** 를 볼 수 있습니다. **userList** 은 여러 명명 된 목록을 요청에 유용한 시나리오에서 future 검사에 대 한 배열입니다. **userIds** XUIDs에 대해 10 진수 문자열의 구성 된-JSON 직렬화 64 비트 부호 없는 정수로에 잘못 되었습니다. 마지막으로, 일반 읽을 이름 보다는 64 비트 부호 없는 정수로 또는 **XONLINE_PROFILE_ASDF**같은 모호한 상수를 사용 하 여 설정, Xbox One에서 설정은 라는 됩니다.
+**userList** 및 **userIds** 상호 배타적인 매개 변수가 있습니다. 하나 또는 둘 다를 지정 하면 **BadRequest** 을 다시 가져오게 됩니다. **userList** 은 여러 명명 된 목록을 요청에 유용한 시나리오에서 future 검사에 대 한 배열입니다. **userIds** XUIDs에 대 한 10 진수 문자열의 구성 됩니다-JSON 64 비트 부호 없는 정수를 직렬화 하는 작업에 잘못 되었습니다. 마지막으로, 일반 사람이 읽을 수 있는 이름 보다는 64 비트 부호 없는 정수로 또는 **XONLINE_PROFILE_ASDF**같은 모호한 상수를 사용 하 여 설정에서 Xbox One 설정 라는 됩니다.
   
 <a id="ID4EKB"></a>
 
@@ -41,7 +41,7 @@ ms.locfileid: "4464239"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| userId| string| 'Xuid(12345)', 'gt(myGamertag)' 또는 'm e' 수 있습니다.| 
+| 사용자 Id| string| 'Xuid(12345)', 'gt(myGamertag)' 또는 'm e' 될 수 있습니다.| 
 | userList| string| 명명 된 목록에 대 한 설정을 가져올 수입니다. 현재 사용자가 지원 되는 유일한 목록입니다.| 
   
 <a id="ID4EVB"></a>

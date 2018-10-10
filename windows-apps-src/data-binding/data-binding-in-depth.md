@@ -14,11 +14,11 @@ dev_langs:
 - csharp
 - cppwinrt
 ms.openlocfilehash: 906fb2d0d5d466f4fd691afd35ed96198929225c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461491"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503328"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
@@ -34,11 +34,11 @@ ms.locfileid: "4461491"
 
 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다. 데이터 바인딩은 데이터 문제를 UI 문제와 분리하여 개념 모델을 간소화하고 앱의 가독성, 테스트 용이성 및 유지 관리성을 향상시킬 수 있도록 해줍니다.
 
-이러한 데이터 바인딩을 사용하여 UI가 처음 표시될 때 데이터 원본 값의 변경에 반응하지 않고 해당 값을 표시하기만 하도록 할 수 있습니다. 이것이 바인딩 이라는 모드 *일회성*, 및 런타임 동안 변경 되지 않는 값에 적합 합니다. 또는 변경 될 때 UI를 업데이트 하 고 "관찰" 값을 선택할 수 있습니다. 이 더 라고 *단방향*, 읽기 전용 데이터에 적합 합니다. 마지막으로 사용자가 UI에서 값을 변경한 경우 해당 값이 데이터 원본에 자동으로 다시 적용되도록 관찰하고 업데이트할 수 있습니다. 이 모드 라고 *양방향*, 읽기-쓰기 데이터에 적합 합니다. 예를 들면 다음과 같습니다.
+이러한 데이터 바인딩을 사용하여 UI가 처음 표시될 때 데이터 원본 값의 변경에 반응하지 않고 해당 값을 표시하기만 하도록 할 수 있습니다. 이것이 바인딩 이라는 모드 *일회성*, 런타임에 변경 되지 않는 값에 적합 합니다. 또는 "관찰" 값을 변경 될 때 UI를 업데이트를 선택할 수 있습니다. 이 더 라고 *단방향*, 읽기 전용 데이터에 적합 합니다. 마지막으로 사용자가 UI에서 값을 변경한 경우 해당 값이 데이터 원본에 자동으로 다시 적용되도록 관찰하고 업데이트할 수 있습니다. 이 모드는 무엇 일까요 *양방향*, 읽기-쓰기 데이터에 적합 합니다. 예를 들면 다음과 같습니다.
 
--   현재 사용자의 사진에 [**이미지**](https://msdn.microsoft.com/library/windows/apps/BR242752) 를 바인딩할 일회성 모드를 사용할 수 있습니다.
+-   일회성 모드를 사용 하 여 현재 사용자의 사진에 [**이미지**](https://msdn.microsoft.com/library/windows/apps/BR242752) 를 바인딩할 수 있습니다.
 -   단방향 모드를 사용 하 여 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 신문 섹션 별로 그룹화 된 실시간 뉴스 기사 모음에 바인딩할 수 있습니다.
--   [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 양식에서 고객의 이름에 바인딩할 양방향 모드를 사용할 수 있습니다.
+-   양방향 모드를 사용 하 여 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 양식에서 고객의 이름에 바인딩할 수 있습니다.
 
 모드에 관계 없이 두 종류의 바인딩 및 둘 다 일반적으로 선언 UI 태그에서입니다. [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783) 또는 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하도록 선택할 수 있습니다. 동일한 앱에서 이 둘을 혼합하여 사용할 수도 있으며, 동일한 UI 요소에도 마찬가지입니다. {x:Bind}는 Windows 10의 새로운 기능으로, 향상된 성능을 제공합니다. 이 항목에 설명된 모든 세부 정보는 명시적으로 설명하지 않더라도 두 종류의 바인딩 모두에 적용됩니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "4461491"
 
 다음은 바인딩 소스로 사용할 수 있는 클래스의 매우 기본적인 구현입니다.
 
-사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 다음 C +에 표시 된 대로 명명 된 프로젝트에 새 **Midl 파일 (.idl)** 항목을 추가 + WinRT 코드 예제에서는 목록 아래 합니다. 새 파일의 내용을 목록에 표시 된 [MIDL 3.0](/uwp/midl-3/intro) 코드로 대체, 생성 하는 프로젝트 빌드 `HostViewModel.h` 및 `.cpp`를 목록에 일치 하도록 생성 된 파일에 코드를 추가 합니다. 생성 된 파일에 대 한 자세한 정보 및 프로젝트에 복사 하는 방법에 대 한 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](/windows/uwp/cpp-and-winrt-apis/binding-property).
+사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 다음 C +에 표시 된 대로 명명 된 프로젝트에 새 **Midl 파일 (.idl)** 항목을 추가 + WinRT 코드 예제에서는 목록 아래 합니다. 새 파일의 내용을 목록에 표시 된 [MIDL 3.0](/uwp/midl-3/intro) 코드로 대체를 생성 하는 프로젝트 빌드 `HostViewModel.h` 및 `.cpp`를 목록에 맞게 생성 된 파일에 코드를 추가 합니다. 생성 된 파일에 대 한 자세한 정보 및 프로젝트에 복사 하는 방법에 대 한 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](/windows/uwp/cpp-and-winrt-apis/binding-property)합니다.
 
 ```csharp
 public class HostViewModel
@@ -201,7 +201,7 @@ void HostViewModel::PropertyChanged(winrt::event_token const& token) noexcept
 
 이제 **NextButtonText** 속성을 관찰할 수 있습니다. 이 속성에 대한 단방향 또는 양방향 바인딩을 작성할 경우(방법은 나중에 설명) 결과 바인딩 개체는 **PropertyChanged** 이벤트를 구독합니다. 이 이벤트가 발생하면 바인딩 개체의 처리기에 변경된 속성 이름이 포함된 인수가 수신됩니다. 이를 통해 바인딩 개체는 다시 읽어야 하는 속성 값을 인식할 수 있습니다.
 
-구현 하지 않아도 되도록 사용 중인 경우 C# 수를 여러 번 위에 표시 된 패턴 찾을 수 있는 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플에서 ("Common" 폴더)에 **BindableBase** 기본 클래스에서 파생 됩니다. 관련 예제는 다음과 같습니다.
+가 구현 하지 않도록 사용 중인 경우 C# 수를 여러 번 표시 된 패턴 찾을 수 있는 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플에서 ("Common" 폴더)에 **BindableBase** 기본 클래스에서 파생 됩니다. 관련 예제는 다음과 같습니다.
 
 ```csharp
 public class HostViewModel : BindableBase
@@ -226,11 +226,11 @@ public class HostViewModel : BindableBase
 ```
 
 > [!NOTE]
-> C + + /winrt 기본 클래스에서 파생 되는 응용 프로그램에서 선언 하는 모든 런타임 클래스도 알려져는 *composable* 클래스. 한 composable 클래스 주변 제약 조건이 있습니다. 제출의 유효성을 검사 하려면 Microsoft Store 및 Visual Studio에서 사용 하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과 하려면 응용 프로그램에 대 한 (및 따라서 응용 프로그램을 Microsoft Store에 성공적으로 수집 되려면), composable 클래스 해야 합니다. 궁극적으로 Windows 기본 클래스에서 파생 됩니다. 상속 계층의 루트에 매우 클래스는 네임 스페이스로 시작 형식이 되어야 하는 의미 합니다. 기본 클래스에서 런타임 클래스를 파생 해야 하는 경우&mdash;에서 파생 보기 모델의 모든 **BindableBase** 클래스를 구현 하는 등&mdash;다음 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생 시킬 수 있습니다.
+> C + + /winrt 기본 클래스에서 파생 되는 응용 프로그램에서 선언 하는 모든 런타임 클래스는 이라고는 *구성 가능한* 클래스입니다. 한 구성 가능한 클래스 주위 제약 조건이 있습니다. 제출의 유효성을 검사 하려면 Visual Studio에서 및 Microsoft Store에서 사용 되는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과 하려면 응용 프로그램에 대 한 (및 따라서 Microsoft Store에 성공적으로 수집 되려면 응용 프로그램에 대 한), composable 클래스 해야 합니다. 궁극적으로 Windows 기본 클래스에서 파생 됩니다. 매우 루트 클래스 상속 계층의 네임 스페이스로 시작 하는 형식 이어야 하는 의미 합니다. 기본 클래스에서 런타임 클래스를 파생 해야 하는 경우&mdash;에서 보기 모델의 모든 **BindableBase** 클래스를 구현 하는 등&mdash;다음 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생 시킬 수 있습니다.
 
 [**String.Empty**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.empty.aspx) 또는 **null** 인수를 사용하여 **PropertyChanged** 이벤트를 발생시킨 경우 이는 개체에 대한 모든 비인덱서 속성을 다시 읽어야 함을 나타냅니다. 특정 인덱서의 경우 "Item\[*indexer*\]"(여기서 *indexer*는 인덱스 값) 인수, 모든 인덱서의 경우 "Item\[\]" 값을 사용하여 개체에 대한 인덱서 속성이 변경되었음을 나타내는 이벤트를 발생시킬 수 있습니다.
 
-바인딩 소스를 해당 속성에 데이터가 포함된 단일 개체 또는 개체 컬렉션으로 처리할 수 있습니다. C# 및 Visual Basic 코드에서는 런타임에 변경 되지 않는 컬렉션을 표시 하기 [**List (Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx) 구현 하는 개체에 일회성으로 바인딩할을 수 있습니다. 관찰 가능한 컬렉션(컬렉션에서 항목이 추가 및 제거된 경우 관찰)의 경우에는 대신 [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)에 단방향으로 바인딩합니다. C++ 코드에서는 관찰 가능한 컬렉션과 관찰 가능하지 않은 컬렉션 모두에 대해 [**Vector&lt;T&gt;**](https://msdn.microsoft.com/library/dn858385.aspx)에 바인딩할 수 있습니다. 사용자 컬렉션 클래스에 바인딩하려면 다음 표의 지침을 따르세요.
+바인딩 소스를 해당 속성에 데이터가 포함된 단일 개체 또는 개체 컬렉션으로 처리할 수 있습니다. C# 및 Visual Basic 코드에서는 런타임에 변경 되지 않는 컬렉션을 표시 하려면 [**List (Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx) 구현 하는 개체에 일회성으로 바인딩할을 수 있습니다. 관찰 가능한 컬렉션(컬렉션에서 항목이 추가 및 제거된 경우 관찰)의 경우에는 대신 [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)에 단방향으로 바인딩합니다. C++ 코드에서는 관찰 가능한 컬렉션과 관찰 가능하지 않은 컬렉션 모두에 대해 [**Vector&lt;T&gt;**](https://msdn.microsoft.com/library/dn858385.aspx)에 바인딩할 수 있습니다. 사용자 컬렉션 클래스에 바인딩하려면 다음 표의 지침을 따르세요.
 
 |시나리오|C# 및 VB(CLR)|C++/WinRT|C++/CX|
 |-|-|-|-|
@@ -256,10 +256,10 @@ public class HostViewModel : BindableBase
 <Button Content="{Binding ...}" ... />
 ```
 
-C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX)를 사용 하 여 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하 여 원하는 모든 런타임 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가 해야 합니다.
+경우 사용 하는 C + + /winrt 또는 Visual c + + 구성 요소 확장 (C + + CX), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성으로 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려는 모든 런타임 클래스에 추가 해야 합니다.
 
 > [!IMPORTANT]
-> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 (Windows 10, 버전 1809) 10.0.17763.0 설치한 경우 사용할 수 있는 다음 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
+> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용할 수 있도록 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
 
 ### <a name="binding-object-declared-using-xbind"></a>{x:Bind}를 사용하여 선언된 바인딩 개체
 
@@ -330,11 +330,11 @@ DataBindingInDepth::HostViewModel MainPage::ViewModel()
 </Page>
 ```
 
-**Path**에 대해 지정한 값에 유의하세요. 이 값은 페이지 자체의 컨텍스트에서 해석 하 고 **MainPage** 페이지에 방금 추가한 **ViewModel** 속성을 참조 하 여 경로 시작이 경우. 이 속성은 **HostViewModel** 인스턴스를 반환하므로 해당 개체에 점을 찍어 **HostViewModel.NextButtonText** 속성에 액세스할 수 있습니다. 또한 **Mode**를 지정하여 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 기본값 일회성을 재정의합니다.
+**Path**에 대해 지정한 값에 유의하세요. 이 값은 페이지 자체의 컨텍스트에서 해석 되며 및 **MainPage** 페이지에 방금 추가한 **ViewModel** 속성을 참조 하 여 경로 시작이 경우. 이 속성은 **HostViewModel** 인스턴스를 반환하므로 해당 개체에 점을 찍어 **HostViewModel.NextButtonText** 속성에 액세스할 수 있습니다. 또한 **Mode**를 지정하여 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 기본값 일회성을 재정의합니다.
 
 [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) 속성은 중첩된 속성, 연결된 속성, 정수 및 문자열 인덱서 등에 바인딩하는 데 필요한 다양한 구문 옵션을 지원합니다. 자세한 내용은 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)을 참조하세요. 문자열 인덱서에 바인딩하면 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)을(를) 구현할 필요 없이 동적 속성에 바인딩하는 효과가 있습니다. 다른 설정은 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)을 참조하세요.
 
-**HostViewModel.NextButtonText** 속성이 실제로 관찰 가능한 세부적으로, 단추 **클릭** 이벤트 처리기를 추가 하 고 **HostViewModel.NextButtonText**의 값을 업데이트 합니다. 빌드, 실행 및 업데이트 단추의 **콘텐츠** 의 값을 보려면 단추를 클릭 합니다.
+**HostViewModel.NextButtonText** 속성은 실제로 관찰 가능한 세부적으로, 단추 **Click** 이벤트 처리기를 추가 하 고 **HostViewModel.NextButtonText**의 값을 업데이트 합니다. 빌드, 실행 및 업데이트 단추의 **콘텐츠** 의 값을 보려면 단추를 클릭 합니다.
 
 ```csharp
 // MainPage.xaml.cs
@@ -374,14 +374,14 @@ Title이라는 문자열 속성을 구현하는 SampleDataGroup이라는 형식�
 
 **데이터가 비동기적으로 로드되는 경우**
 
-**{x:Bind}** 를 지원하는 코드는 컴파일 시간에 페이지의 partial 클래스에서 생성됩니다. 이러한 파일은 `obj` 폴더(C#의 경우 이름이 `<view name>.g.cs`와 같음)에서 찾을 수 있습니다. 생성된 코드에는 페이지의 [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) 이벤트에 대한 처리기가 포함되며, 해당 처리기는 페이지의 바인딩을 나타내는 생성된 클래스의 **Initialize** 메서드를 호출합니다. 그러면 **Initialize**는 차례로 **Update**를 호출하여 바인딩 소스와 바인딩 대상 간에 데이터를 이동하기 시작합니다. **Loading**은 페이지 또는 사용자 정의 컨트롤의 첫 번째 측정 단계 바로 전에 발생합니다. 따라서 데이터가 비동기적으로 로드되는 경우 **Initialize**가 호출될 때까지 데이터가 준비되지 않을 수 있습니다. 그러므로 데이터를 로드한 후 `this.Bindings.Update();`을 호출하여 일회성 바인딩이 강제로 초기화되도록 할 수 있습니다. 만 일회성 바인딩이 비동기적으로 로드 된 데이터에 대 한 필요한 하기가 훨씬 비용이 저렴 단방향 바인딩을 포함 하 고 변경 내용을 수신 대기 하는 것 보다이 방식으로 초기화 합니다. 데이터가 세분화된 변경을 거치지 않고 특정 작업의 일부로 업데이트될 가능성이 큰 경우 바인딩을 일회성으로 만들고 언제든지 **Update**를 호출하여 강제로 수동 업데이트를 수행할 수 있습니다.
+**{x:Bind}** 를 지원하는 코드는 컴파일 시간에 페이지의 partial 클래스에서 생성됩니다. 이러한 파일은 `obj` 폴더(C#의 경우 이름이 `<view name>.g.cs`와 같음)에서 찾을 수 있습니다. 생성된 코드에는 페이지의 [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) 이벤트에 대한 처리기가 포함되며, 해당 처리기는 페이지의 바인딩을 나타내는 생성된 클래스의 **Initialize** 메서드를 호출합니다. 그러면 **Initialize**는 차례로 **Update**를 호출하여 바인딩 소스와 바인딩 대상 간에 데이터를 이동하기 시작합니다. **Loading**은 페이지 또는 사용자 정의 컨트롤의 첫 번째 측정 단계 바로 전에 발생합니다. 따라서 데이터가 비동기적으로 로드되는 경우 **Initialize**가 호출될 때까지 데이터가 준비되지 않을 수 있습니다. 그러므로 데이터를 로드한 후 `this.Bindings.Update();`을 호출하여 일회성 바인딩이 강제로 초기화되도록 할 수 있습니다. 비동기적으로 로드 된 데이터에 대 한 일회성 바인딩이 필요한 경우 하기가 훨씬 저렴 단방향 바인딩을 포함 하 고 변경 내용을 수신 대기 하는 것 보다이 방식으로 초기화 합니다. 데이터가 세분화된 변경을 거치지 않고 특정 작업의 일부로 업데이트될 가능성이 큰 경우 바인딩을 일회성으로 만들고 언제든지 **Update**를 호출하여 강제로 수동 업데이트를 수행할 수 있습니다.
 
 > [!NOTE]
-> **{x: Bind}** JSON 개체 또는 덕 타이핑의 사전 구조를 탐색 같이 런타임에 바인딩된 시나리오에 적합 합니다. "오리 입력" 속성 이름에 대 한 어휘 일치를 기반으로 한 약한 형식의 (는, "안내, 않을, 오리 처럼 걷고, 헤 엄 하는 경우 다음 그것은 오리"). 입력 오리 **Age** 속성에 대 한 바인딩을 사용할 경우 동일 하 게 만족 **사람** 또는 **음료** 개체 (가정 하 고 해당 유형이 적 **Age** 속성). 이러한 시나리오에 대 한 **{Binding}** 태그 확장을 사용 합니다.
+> **{x: Bind}** JSON 개체도 덕 타이핑의 사전 구조를 탐색 같이 런타임에 바인딩된 시나리오에 적합 합니다. "오리 입력" 속성 이름에 대 한 어휘 일치를 기반으로 한 약한 형식의 (는, "를 따라 이동, 않을, 오리 처럼 걷고, 헤 엄 하는 경우 다음 그것은 오리"). 입력 오리 **Age** 속성에 대 한 바인딩을 사용할 경우 동일 하 게 만족 **사람** 또는 **음료** 개체 (있는 경우 해당 형식을 **Age** 속성에). 이러한 시나리오에 대 한 **{Binding}** 태그 확장을 사용 합니다.
 
 ### <a name="binding-object-declared-using-binding"></a>{Binding}을 사용하여 선언된 바인딩 개체
 
-C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스에 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
+사용 C + + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스를 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
 
 ```cppwinrt
 // HostViewModel.idl
@@ -392,7 +392,7 @@ runtimeclass HostViewModel : Windows.UI.Xaml.Data.INotifyPropertyChanged
 ```
 
 > [!IMPORTANT]
-> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 (Windows 10, 버전 1809) 10.0.17763.0 설치한 경우 사용할 수 있는 다음 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
+> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용할 수 있도록 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)은 기본적으로 태그 페이지의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)에 바인딩하는 것으로 가정합니다. 따라서 페이지의 **DataContext**를 바인딩 소스 클래스(이 예제의 경우 **HostViewModel** 형식)의 인스턴스로 설정합니다. 아래 예제에서는 바인딩 개체를 선언하는 태그를 보여 줍니다. 위의 "바인딩 대상" 섹션에서 사용한 것과 동일한 **Button.Content** 바인딩 대상을 사용하고 **HostViewModel.NextButtonText** 속성에 바인딩합니다.
 
@@ -440,7 +440,7 @@ UI 요소에 대한 [**DataContext**](https://msdn.microsoft.com/library/windows
 ```
 
 > [!NOTE]
-> 기본적으로 변경 [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) 를 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 포커스를 잃을 때 양방향 바인딩 소스로 전송 됩니다. 변경 내용이 모든 사용자 키 입력 후 전송되도록 하려면 태그의 바인딩에서 **UpdateSourceTrigger**를 **PropertyChanged**로 설정합니다. **UpdateSourceTrigger**를 **Explicit**로 설정하여 변경 내용이 소스로 전송되는 경우를 완전히 제어할 수도 있습니다. 그런 다음 텍스트 상자(일반적으로 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683))에서 이벤트를 처리하고, 대상에서 [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression)을 호출하여 [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) 개체를 가져온 다음 마지막으로 [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx)를 호출하여 데이터 원본을 프로그래밍 방식으로 업데이트합니다.
+> 기본적으로 [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) 변경 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 포커스를 잃을 때 양방향 바인딩 소스로 전송 됩니다. 변경 내용이 모든 사용자 키 입력 후 전송되도록 하려면 태그의 바인딩에서 **UpdateSourceTrigger**를 **PropertyChanged**로 설정합니다. **UpdateSourceTrigger**를 **Explicit**로 설정하여 변경 내용이 소스로 전송되는 경우를 완전히 제어할 수도 있습니다. 그런 다음 텍스트 상자(일반적으로 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683))에서 이벤트를 처리하고, 대상에서 [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression)을 호출하여 [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) 개체를 가져온 다음 마지막으로 [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx)를 호출하여 데이터 원본을 프로그래밍 방식으로 업데이트합니다.
 
 [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) 속성은 중첩된 속성, 연결된 속성, 정수 및 문자열 인덱서 등에 바인딩하는 데 필요한 다양한 구문 옵션을 지원합니다. 자세한 내용은 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)을 참조하세요. 문자열 인덱서에 바인딩하면 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)을(를) 구현할 필요 없이 동적 속성에 바인딩하는 효과가 있습니다. [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) 속성은 요소 간 바인딩에 유용합니다. [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) 속성은 다양하게 사용되며, 그중 하나로 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391) 내에서 템플릿 바인딩을 대신하여 더 유용하게 사용됩니다. 다른 설정은 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782) 및 [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) 클래스를 참조하세요.
 
@@ -643,12 +643,12 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ## <a name="binding-to-data-grouped-by-a-key"></a>키별로 그룹화된 데이터에 바인딩
 
-(책, 예를 들어 **BookSku** 클래스로 표현) 항목의 단순 컬렉션을 수행 하 고 그룹화 된 데이터는 호출 공용 속성 ( **BookSku.AuthorName** 속성, 예를 들어) 키로 사용 하 여 항목을 그룹화 합니다. 데이터를 그룹화한 경우 해당 데이터는 더 이상 단순 컬렉션이 아닙니다. 그룹화 된 데이터는 각 그룹 개체에 있는 그룹 개체의 컬렉션
+(책, 예를 들어 **BookSku** 클래스로 표현) 항목의 단순 컬렉션을 수행 하 고 그룹화 된 데이터는 호출 키 ( **BookSku.AuthorName** 속성, 예:)로 공용 속성을 사용 하 여 항목을 그룹화 합니다. 데이터를 그룹화한 경우 해당 데이터는 더 이상 단순 컬렉션이 아닙니다. 그룹화 된 데이터는 각 그룹 개체에 있는 그룹 개체의 컬렉션
 
-- 키 및
+- 키와
 - 속성이 해당 키와 일치 하는 항목의 컬렉션입니다.
 
-각 그룹에 있는 저자 이름 그룹 컬렉션이에서 결과 저자 이름별 책을 그룹화 책 예제를 다시 수행 하려면
+각 그룹에 있는 저자 이름 그룹 컬렉션이에서 결과 저자 이름별으로 책을 그룹화 책 예제를 다시 수행 하려면
 
 - 저자 이름인 키 및
 - **AuthorName** 속성이 그룹의 키와 일치 **BookSku**의 컬렉션입니다.
@@ -803,8 +803,8 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | FallbackValue | `{x:Bind Name, FallbackValue='empty'}` | `{Binding Name, FallbackValue='empty'}` | 바인딩에 대한 경로의 일부(리프 제외)가 null일 때 사용됩니다. | 
 | ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | {x:Bind}를 사용하면 필드에 바인딩됩니다. 경로의 루트가 기본적으로 Page에서 지정되므로 해당 필드를 통해 모든 명명된 요소에 액세스할 수 있습니다. | 
 | RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | {x:Bind}를 사용하는 경우 요소의 이름을 지정하고 경로에서 해당 이름을 사용합니다. | 
-| RelativeSource: TemplatedParent | 필요 하지 않은 | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | ControlTemplate에서 TargetType {x: Bind}를 사용 하 여 부모 템플릿 바인딩을 나타냅니다. {Binding}에 대 한 대부분의 일반 템플릿 바인딩은 컨트롤 템플릿에서 사용할 수 있습니다. 하지만 변환기 또는 양방향 바인딩을 사용해야 하는 경우 TemplatedParent를 사용합니다.&lt; | 
-| 원본 | 필요 하지 않은 | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | {X: Bind}에 대 한 직접 명명 된 요소를 사용 하려면 속성 또는 정적 경로 사용 합니다. | 
+| RelativeSource: TemplatedParent | 필요 하지 | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | {X: Bind}로 ControlTemplate에서 TargetType 부모 템플릿 바인딩을 나타냅니다. {Binding}에 대 한 대부분의 사용에 대 한 일반 템플릿 바인딩은 컨트롤 템플릿에서 사용할 수 있습니다. 하지만 변환기 또는 양방향 바인딩을 사용해야 하는 경우 TemplatedParent를 사용합니다.&lt; | 
+| 원본 | 필요 하지 | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | {X: Bind}에 대 한 직접 명명 된 요소를 사용 하려면 속성 또는 정적 경로 사용 합니다. | 
 | 모드 | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | 모드는 OneTime, OneWay 또는 TwoWay일 수 있습니다. {x:Bind} defaults to OneTime; {Binding} defaults to OneWay. | 
 | UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger가 Default, LostFocus, 또는 PropertyChanged가 될 수 있습니다. {x:Bind}는 UpdateSourceTrigger=Explicit를 지원하지 않습니다. {x:Bind}에서는 LostFocus 동작을 사용하는 TextBox.Text를 제외한 모든 경우에 PropertyChanged 동작을 사용합니다. | 
 

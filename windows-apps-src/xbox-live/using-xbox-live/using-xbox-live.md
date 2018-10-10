@@ -1,7 +1,7 @@
 ---
 title: Xbox Live를 사용 하 여
 author: KevinAsgari
-description: Xbox Live가 지원 타이틀을 개발 하는 방법에 대 한 링크 목록을 제공 합니다.
+description: Xbox Live가 지원 타이틀 개발 하는 방법에 대 한 링크 목록을 제공 합니다.
 ms.assetid: 9f3c7071-778f-4f9c-8a7f-94087785016e
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f73133dc1bd78d3d7f714ac12b9069def093086
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472216"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4497773"
 ---
 # <a name="using-xbox-live"></a>Xbox Live를 사용 하 여
 

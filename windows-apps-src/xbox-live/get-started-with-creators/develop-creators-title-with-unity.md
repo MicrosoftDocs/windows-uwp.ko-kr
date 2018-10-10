@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: 28f9da245d3fae23241058d7a83fe8c397a415d2
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470981"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498287"
 ---
 # <a name="get-started-developing-an-xbox-live-creators-program-title-with-the-unity-game-engine"></a>Unity 게임 엔진을 사용하여 Xbox Live 크리에이터스 프로그램 타이틀 개발 시작
 
-이 섹션에서는 Unity 게임 엔진을 사용 하 여 개발 하는 게임에 Xbox Live를 통합 하는 방법을 설명 합니다. [Xbox Live 크리에이터 스 프로그램](../developer-program-overview.md#xbox-live-creators-program) 타이틀에 사용할 Xbox Live Unity 플러그를 위한 것입니다. Unity 프로젝트에 Xbox Live를 통합 하려면 다음이 문서를 진행 합니다.
+이 섹션에는 Unity 게임 엔진을 사용 하 여 개발 하는 게임에 Xbox Live를 통합 하는 방법을 설명 합니다. [Xbox Live 크리에이터 스 프로그램](../developer-program-overview.md#xbox-live-creators-program) 타이틀에 사용할 Xbox Live Unity 플러그를 위한 것입니다. Unity 프로젝트에 Xbox Live를 통합 하는 다음이 문서를 진행 합니다.
 
 ## <a name="knowledge"></a>기술
 

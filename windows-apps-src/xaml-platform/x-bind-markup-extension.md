@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: XBind 태그 확장에 바인딩 고성능 대안입니다. xBind--Windows 10에 대 한 새 실행 짧은 시간에 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 됩니다.
+description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind--Windows 10에 대 한 새로운 실행 시간 및 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 합니다.
 title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468103"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498444"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
 **참고** 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
-Windows 10의 새로운 기능인 **{x:Bind}** 태그 확장은 **{Binding}** 대신 사용됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅을 지원 보다 적은 메모리로 및 짧은 시간에 실행 됩니다.
+Windows 10의 새로운 기능인 **{x:Bind}** 태그 확장은 **{Binding}** 대신 사용됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅을 지원 보다 적은 메모리로 하 고 짧은 시간에 실행 됩니다.
 
 XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에서 값을 가져오는 코드로 변환되고 태그에 지정된 속성에서 이를 설정합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 새로 고치도록 바인딩 개체를 구성할 수 있습니다(`Mode="OneWay"`). 또한 필요한 경우 고유한 값 변경을 소스 속성에 다시 적용하도록 구성할 수도 있습니다(`Mode="TwoWay"`).
 
@@ -89,7 +89,7 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 
 C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 전용 필드 및 속성에 바인딩할 수 없습니다. 바인딩하려면 공용 속성이 있어야 합니다. 관련 메타데이터를 가져올 수 있도록 바인딩 노출 영역을 CX 클래스/인터페이스로 노출해야 합니다. **\[Bindable\]** 특성은 필요하지 않습니다.
 
-**x:Bind**를 사용하면 **ElementName=xxx**를 바인딩 식의 일부로 사용할 필요가 없습니다. 대신 사용할 수 있습니다 요소의 이름을 경로의 첫 번째 일부로 바인딩에 대 한 명명 된 요소는 루트 바인딩 소스를 나타내는 페이지 또는 사용자 컨트롤 내의 필드가 되기 때문입니다. 
+**x:Bind**를 사용하면 **ElementName=xxx**를 바인딩 식의 일부로 사용할 필요가 없습니다. 대신 사용할 수 있습니다 요소의 이름을 경로의 첫 번째 부분으로 바인딩에 대 한 명명 된 요소는 루트 바인딩 소스를 나타내는 페이지 또는 사용자 컨트롤 내의 필드가 되기 때문입니다. 
 
 
 ### <a name="collections"></a>컬렉션
@@ -115,7 +115,7 @@ _참고: C# 스타일 캐스트 구문은 연결된 속성 구문보다 더 유�
 
 ## <a name="functions-in-binding-paths"></a>바인딩 경로의 함수
 
-Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것은 태그에서 몇 가지 시나리오를 활성화 하는 데이터 바인딩에 대 한 강력한 기능입니다. 자세한 내용 [은 함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
+Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것은 태그에서 몇 가지 시나리오를 사용 하는 데이터 바인딩에 대 한 강력한 기능입니다. 자세한 내용 [은 함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
 
 ## <a name="event-binding"></a>이벤트 바인딩
 

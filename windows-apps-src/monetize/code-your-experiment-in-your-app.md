@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: b0931d712ca99b429e2aaa7dec4b855f41ce55ef
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463939"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502515"
 ---
 # <a name="code-your-app-for-experimentation"></a>실험용 앱 코딩
 
@@ -42,7 +42,7 @@ ms.locfileid: "4463939"
 4. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 선택하고 **확인**을 클릭합니다.
 
 > [!NOTE]
-> 이 문서의 코드 예제 코드 파일 **System.Threading.Tasks** 및 **Microsoft.Services.Store.Engagement** 네임 스페이스에 대 한 **using** 문을 있다고 가정 합니다.
+> 이 문서의 코드 예제에서는 코드 파일 **System.Threading.Tasks** 및 **Microsoft.Services.Store.Engagement** 네임 스페이스에 대 한 **using** 문을 있다고 가정 합니다.
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>변형 데이터를 가져와 실험에 대한 보기 이벤트 기록
 

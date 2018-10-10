@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 527a62af7ca31a401da47eb10e59c1593f62e433
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463372"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502127"
 ---
 # <a name="using-xbox-live-apis-built-into-the-xdk"></a>Xbox Live Api를 사용 하 여 XDK에 기본 제공
 
@@ -23,7 +23,7 @@ ms.locfileid: "4463372"
 1. "새 참조 추가"를 선택 합니다.
 1. "Durango 클릭. <build number>" 왼쪽된 창에서 "확장" 및
 1. 중간에 중 하나를 선택 합니다.
-- XSAPI WinRT API를 사용 하려는 경우 "Xbox 서비스 API"을 선택 합니다.
+- WinRT XSAPI API를 사용 하려는 경우 "Xbox 서비스 API"을 선택 합니다.
 - C + + XSAPI API를 사용 하려는 경우 "Xbox 서비스 API Cpp"을 선택 합니다.
 1. 확인을 클릭 합니다.
 

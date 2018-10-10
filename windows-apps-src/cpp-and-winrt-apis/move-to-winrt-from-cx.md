@@ -10,23 +10,23 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 68a631153c104f14f22839077c4c62d34626ed2a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461131"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501361"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
-이 항목에 포트 하는 방법을 보여 줍니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 에 해당 하는 코드 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+이 항목에서는 포트 하는 방법을 보여 줍니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 에 해당 하는 코드 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!IMPORTANT]
-> 점진적으로 포트 하려는 경우에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C + + /winrt를 할 수 있습니다. C + + CX 및 C + + /winrt 코드는 XAML 컴파일러 지원 및 Windows 런타임 구성 요소를 제외 하 고 동일한 프로젝트에 공존할 수 있습니다. 이러한 예외에 대 한 C + 중 하나를 대상으로 해야 + /CX 또는 C + + 동일한 프로젝트 내에서 WinRT 합니다. 하지만 포팅할 것 처럼 XAML 앱 요소 코드에 Windows 런타임 구성 요소를 사용할 수 있습니다. 이동 하거나 많은 C + + CX 코드는 구성 요소에 하 고 다음 변경 XAML 프로젝트 C + + WinRT 합니다. 또는 다른 XAML 프로젝트 C + + /CX 만드는 새로운 C + + WinRT 구성 요소 시작 포팅 C + + /CX 코드 XAML 프로젝트를 구성 합니다. 또한 가지기 C + + CX 구성 요소 프로젝트와 함께 C + + 같은 솔루션에서 WinRT 구성 요소 프로젝트 둘 다 응용 프로그램 프로젝트에서 참조 하 고 다른 하나에서 점진적으로 포트입니다.
+> 점진적으로 포트 하려는 경우에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C + + /winrt를 할 수 있습니다. C + + CX 및 C + + /winrt 코드는 XAML 컴파일러 지원 및 Windows 런타임 구성 요소를 제외 하 고 동일한 프로젝트에 공존할 수 있습니다. 이러한 예외에 대 한 C + 중 하나를 대상으로 해야 + /CX 또는 C + + 같은 프로젝트 내에서 WinRT 합니다. 하지만 포트 것 처럼 XAML 앱 요소 코드에 Windows 런타임 구성 요소를 사용할 수 있습니다. 이동 많은 C + + CX 코드는 구성 요소에 하 고 다음 변경 XAML 프로젝트 C + + WinRT 합니다. 또는 다른 XAML 프로젝트 C + + /CX에서 만드는 새로운 C + + WinRT 구성 요소 시작 포팅 C + + /CX 코드 XAML 프로젝트를 구성 합니다. 또한 가지기 C + + CX 구성 요소 프로젝트와 함께 C + + 같은 솔루션에서 WinRT 구성 요소 프로젝트 응용 프로그램 프로젝트에서 둘 다를 참조 하 고 다른 하나에서 점진적으로 포트입니다.
 
 > [!NOTE]
 > [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)와 Windows SDK 모두 루트 네임스페이스인 **Windows**에 유형을 선언합니다. C++/WinRT에 프로젝션된 Windows 유형은 Windows 유형과 동일한 정규화된 이름을 가지지만 C++ **winrt** 네임스페이스에 배치됩니다. 이처럼 서로 다른 네임스페이스를 사용하면 사용자가 원하는 대로 C++/CX에서 C++/WinRT로 포트할 수 있습니다.
 
-위에서 언급 한 예외 염두, 첫 번째 단계에서 C + 프로젝트 포팅 + /winrt는 수동으로 추가 C + + WinRT 지원 (참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). 이를 수행하려면 `.vcxproj` 파일을 편집하고 `<PropertyGroup Label="Globals">`를 찾고, 해당 속성 그룹 내에서 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 설정합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 지원을 끈 채로 유지 찾기 (및 포트) 빌드 메시지 도움말 수 있도록 모든 종속성에 C + 하는 것이 좋습니다 + /CX 하거나 수 지원을 다시 켜고 (프로젝트 속성에서 **C/c + +** \> **일반** \> Windows 런타임 사용** 확장** \> **예 (/ZW)**), 점진적으로 포트입니다.
+위에서 언급 한 예외 염두에 첫 번째 단계에서 포팅 프로젝트를 C + + /winrt는 수동으로 추가 C + + WinRT 지원 (참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). 이를 수행하려면 `.vcxproj` 파일을 편집하고 `<PropertyGroup Label="Globals">`를 찾고, 해당 속성 그룹 내에서 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 설정합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 지원을 끈 채로 유지 찾기 (및 포트) 빌드 메시지 도움말 수 있도록 모든 종속성에 C + 하는 것이 좋습니다 + /CX 하거나 수 지원을 다시 켜고 (프로젝트 속성에서 **C/c + +** \> **일반** \> Windows 런타임 사용** 확장** \> **예 (/ZW)**)를 점진적으로 포트입니다.
 
 프로젝트 속성 **일반** \> **대상 플랫폼 버전**을 10.0.17134.0(Windows 10 버전 1803) 이상으로 설정합니다.
 
@@ -68,7 +68,7 @@ if (userList != nullptr)
     ...
 ```
 
-해당 C +로 포팅할 때 + /winrt 코드 기본적으로 hat을 제거 하 고 화살표 연산자를 변경 (-&gt;)를 점 연산자 (.) 때문에 C + + /winrt 프로젝션 된 형식은 값 및 포인터가 아닌 합니다.
+이식 해당 C + + /winrt 코드 기본적으로 hat을 제거 하 고 화살표 연산자를 변경 (-&gt;)를 점 연산자 (.) 때문에 C + + /winrt 프로젝션 된 형식은 값 및 포인터가 아닌.
 
 ```cppwinrt
 IVectorView<User> userList = User::Users();
@@ -184,8 +184,8 @@ private:
 };
 ```
 
-## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>기본 런타임 클래스에서 파생 된 것으로 변환
-에 참조를-기본 파생 형식 개체 참조를 알고 있는 일반적입니다. C + + /CX를 사용 하면 `dynamic_cast` 를 *캐스팅* 자료를 참조는 참조-파생 클래스에 합니다. `dynamic_cast` [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)실제로 숨겨진된 호출 됩니다. 다음은 일반적인 예제는&mdash;종속성 속성 변경 이벤트를 처리 하 고 종속성 속성을 소유 하는 실제 형식으로 다시 **DependencyObject** 에서 캐스팅 하 고 싶은 합니다.
+## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>기본 런타임 클래스에서 파생 된 버전을 변환
+하는 참조를-기반 파생 형식 개체 참조를 알고 있는 괜찮습니다. C + + /CX를 사용 하면 `dynamic_cast` 에 *캐스트* 자료를 참조는 참조-파생 클래스에 있습니다. `dynamic_cast` [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)실제로 숨겨진된 호출 됩니다. 다음은 일반적인 예제는&mdash;종속성 속성 변경 이벤트를 처리 하 고 종속성 속성을 소유 하는 실제 형식으로 다시 **DependencyObject** 에서 캐스팅 하 고 싶은 합니다.
 
 ```cpp
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
@@ -199,7 +199,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Wind
 }
 ```
 
-해당 C + + /winrt 코드를 대체 합니다 `dynamic_cast` [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) 함수를 호출 하 여 사용 중인 **QueryInterface**캡슐화 합니다. 필요한 인터페이스 (요청 하 고 형식의 기본 인터페이스)에 대 한 쿼리를 반환 하지는 예외를 throw 하는 대신, [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)호출 하는 옵션 수도 있습니다. 다음은 C + + WinRT 코드 예제입니다.
+해당 C + + /winrt 코드를 대체 합니다 `dynamic_cast` [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) 함수를 호출 하 여 사용 중인 **QueryInterface**캡슐화 합니다. 필요한 인터페이스 (요청 하 고 형식의 기본 인터페이스)에 대 한 쿼리를 반환 하지는 예외를 throw 하는 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)대신 호출 하는 옵션이 있습니다. 다음은 C + + WinRT 코드 예제입니다.
 
 ```cppwinrt
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
@@ -242,7 +242,7 @@ auto token = myButton().Click([&](IInspectable const& sender, RoutedEventArgs co
 
 lambda 함수 대신 대리인을 무료 함수 또는 포인터-회원-함수로 구현할 수 있습니다. 자세한 정보는 [C++/WinRT의 대리자를 사용한 이벤트 처리](handle-events.md)를 참조하세요.
 
-이벤트 및 대리인이 내부적으로 사용되는(이진 전체에서가 아니라) C++/CX 코드 베이스에서 포트하는 경우 [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate)은 C++/WinRT에서 해당 패턴을 복제하는 데 도움이 됩니다. [매개 변수화 된 대리자, 간단한 신호 및 프로젝트 내에서 콜백을](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project)참조 하세요.
+이벤트 및 대리인이 내부적으로 사용되는(이진 전체에서가 아니라) C++/CX 코드 베이스에서 포트하는 경우 [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate)은 C++/WinRT에서 해당 패턴을 복제하는 데 도움이 됩니다. 또한 [매개 변수화 된 대리자, 간단한 신호 및 프로젝트 내에서 콜백을](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project)참조 하십시오.
 
 ## <a name="revoking-a-delegate"></a>대리인 취소
 C++/CX에서`-=` 연산자를 사용하여 이전 이벤트 등록을 취소합니다.
@@ -271,7 +271,7 @@ C++/CX는 **플랫폼** 네임스페이스에서 몇 가지 데이터 형식을 
 | **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
 ### <a name="port-platformagile-to-winrtagileref"></a>포트 **플랫폼:: Agile\ ^** **winrt:: agile_ref** 를
-**플랫폼:: Agile\ ^** 유형 C + + CX 모든 스레드에서 액세스할 수 있는 Windows 런타임 클래스를 나타냅니다. C + + WinRT 등가 [**winrt:: agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref)합니다.
+**플랫폼:: Agile\ ^** 형식 C + + CX 모든 스레드에서 액세스할 수 있는 Windows 런타임 클래스를 나타냅니다. C + + WinRT 등가 [**winrt:: agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref)합니다.
 
 C++/CX에서.
 
