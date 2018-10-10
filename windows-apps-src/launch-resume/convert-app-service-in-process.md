@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 서비스
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
-ms.openlocfilehash: a77ea3cefcc423e710ab0afebb3fa064e61507ec
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.openlocfilehash: d259df2a65046acb1c34dd2958ab4513bc31f43b
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4425415"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471369"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
 
@@ -47,6 +47,8 @@ Out-of-process 모델 앱 서비스를 In-process 모델로 전환하려면 두 
 두 번째 변경은 별도 백그라운드 작업 프로젝트의 서비스 논리를 **OnBackgroundActivated()** 에서 호출할 수 있는 메서드로 이동하는 것입니다.
 
 이제 응용 프로그램에서 앱 서비스를 직접 실행할 수 있습니다. 예 App.xaml.cs에서:
+
+[!NOTE] 아래 코드는 다른 예제 1 (out of process 서비스)에 제공 된 것입니다. 아래 코드 목적 으로만 제공 됩니다 (프로세스에서 서비스) 예제 2의 일환으로 못한 경우에 사용 하지 않아야 합니다.  문서의 전환 예제에서 계속 1 (out of process 서비스) 예제 2 (프로세스에서 서비스)에 제공 하는 대신 아래 설명을 코드 예 1에 대 한 코드를 사용 하 여 계속 합니다.
 
 ``` cs
 using Windows.ApplicationModel.AppService;

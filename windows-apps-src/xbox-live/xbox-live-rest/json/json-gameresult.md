@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 24f5af1639f5348fe20c36c56c1301f723d832f7
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4414851"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470299"
 ---
 # <a name="gameresult-json"></a>GameResult(JSON)
 게임 세션의 결과 설명 하는 데이터를 나타내는 하는 JSON 개체입니다. 

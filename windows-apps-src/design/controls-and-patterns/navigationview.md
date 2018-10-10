@@ -14,12 +14,12 @@ design-contact: kimsea
 dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c75169f118e2c8ef575fa251a7badc8cfe44247
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.openlocfilehash: 99982e54bd9eebd6d6c34fa08c9f1c480b626a15
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4429761"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471090"
 ---
 # <a name="navigation-view-preview-version"></a>탐색 보기 (미리 보기 버전)
 
@@ -416,23 +416,23 @@ items.Add(new Item() {
 });
 
 public class NavViewDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate NavItemTemplate { get; set; }
+
+    public DataTemplate NavItemTopTemplate { get; set; }    
+
+    public NavigationViewPaneDisplayMode NavPaneDisplayMode { get; set; }
+
+    protected override DataTemplate SelectTemplateCore(object item)
     {
-        public DataTemplate NavItemTemplate { get; set; }
+        Item currItem = item as Item;
+        if (NavPaneDisplayMode == NavigationViewPanePosition.Top)
+            return NavItemTopTemplate;
+        else 
+            return NavItemTemplate;
+    }   
 
-        public DataTemplate NavItemTopTemplate { get; set; }    
-
-     public NavigationViewPaneDisplayMode NavPaneDisplayMode { get; set; }
-
-        protected override DataTemplate SelectTemplateCore(object item)
-        {
-            Item currItem = item as Item;
-            if (NavPaneDisplayMode == NavigationViewPanePosition.Top)
-                return NavItemTopTemplate;
-            else 
-                return NavItemTemplate;
-        }   
-
-    }
+}
 
 ```
 
@@ -595,6 +595,8 @@ NavigationView에는 다음과 같은 속성에서 사용할 수 있는 뒤로 �
 > [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 사용 하는 경우 도구 키트에 대 한 참조를 추가 해야 합니다. `using MUXC = Microsoft.UI.Xaml.Controls;`.
 
 ```csharp
+private Type currentPage;
+
 // List of ValueTuple holding the Navigation Tag and the relative Navigation Page 
 private readonly IList<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
 {
@@ -638,6 +640,8 @@ private void NavView_Loaded(object sender, RoutedEventArgs e)
 
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
 {
+    if (args.InvokedItem == null)
+        return;
 
     if (args.IsSettingsInvoked)
         ContentFrame.Navigate(typeof(SettingsPage));
@@ -656,13 +660,14 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 private void NavView_Navigate(string navItemTag)
 {
     var item = _pages.First(p => p.Tag.Equals(navItemTag));
+    if (currentPage == item.Page)
+          return;
     ContentFrame.Navigate(item.Page);
+
+    currentPage = item.Page;
 }
 
-private void NavView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
-{
-    On_BackRequested();
-}
+private void NavView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args) => On_BackRequested();
 
 private void BackInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
 {
@@ -726,7 +731,7 @@ NavigationView의 주요 영역 배경을 변경하려면, `Background` 속성�
 
 ## <a name="scroll-content-under-top-pane"></a>상단 창에서 스크롤 콘텐츠
 
-원활한 모양을 + 느낌, 앱은 ScrollViewer를 사용 하는 페이지 이며 탐색 창 맨 위에 배치 하는 경우 권장 상단 탐색 창 아래의 콘텐츠 스크롤 필요 합니다.
+원활한 모양을 + 느낌, 앱은 ScrollViewer를 사용 하는 페이지 이며 탐색 창 맨 위에 배치 하는 경우 권장 상단 탐색 창 아래의 콘텐츠 스크롤 필요 합니다. 이 앱에는 고정 헤더 종류의 동작을 제공합니다.
 
 이를 true로 관련 ScrollViewer에서 [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) 속성을 설정 하 여 얻을 수 있습니다.
 

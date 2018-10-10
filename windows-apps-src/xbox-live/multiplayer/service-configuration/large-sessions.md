@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어, 큰 세션, 최근 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: cead1a3ca1d56185ef97fe3f3271484bfbc58f18
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4415152"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470966"
 ---
 # <a name="large-sessions"></a>큰 세션
 

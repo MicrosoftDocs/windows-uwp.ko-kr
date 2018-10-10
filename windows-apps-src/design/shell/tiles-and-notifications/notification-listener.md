@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4423727"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471189"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 

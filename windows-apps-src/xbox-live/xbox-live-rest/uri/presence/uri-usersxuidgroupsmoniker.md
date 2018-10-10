@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 356afd69483968a3edd836eb9e031bc8fcfafd4c
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4418952"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471445"
 ---
 # <a name="usersxuidxuidgroupsmoniker"></a>/users/xuid({xuid})/groups/{moniker}
 PresenceRecord 그룹에 대 한 액세스합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어 세션 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: be861f34293eea7b8cf9fbfb91620be29652fbff
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4422896"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4472061"
 ---
 # <a name="multiplayer-session-templates"></a>멀티 플레이 세션 템플릿
 
