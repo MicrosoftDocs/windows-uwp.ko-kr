@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f2485eab4b192fe4a65c68d957de1ec9192f8c20
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461056"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504182"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 앱: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 
@@ -60,7 +60,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 | 크리에이터스 업데이트 | 1703 | 15063 |
 | Fall Creators Update | 1709 | 16299 |
 | 2018년 4월 업데이트 | 1803 | 17134 |
-| 2018 년 10 월 업데이트 | 1809 | _Insider Preview_ |
+| 2018 년 10 월 업데이트 | 1809 | _참가자 미리 보기_ |
 
 출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/Home/BuildWithWindows) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
 

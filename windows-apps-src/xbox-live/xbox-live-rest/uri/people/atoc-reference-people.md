@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 03a96c69415a8ad13bdafaa821df66a919296f61
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464332"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509563"
 ---
 # <a name="people-uris"></a>피플 URI
  
@@ -33,15 +33,15 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 된 게임에만이 서비
 
 [/users/{ownerId}/people](uri-usersowneridpeople.md)
 
-&nbsp;&nbsp;호출자의 사람들이 컬렉션에 액세스 합니다.
+&nbsp;&nbsp;호출자의 사용자 컬렉션에 액세스 합니다.
 
 [/users/{ownerId}/people/{targetid}](uri-usersowneridpeopletargetid.md)
 
-&nbsp;&nbsp;호출자의 사람들이 컬렉션에서 대상 ID로 사람에 액세스 합니다.
+&nbsp;&nbsp;호출자의 사용자 컬렉션에서 대상 ID로 사람에 액세스 합니다.
 
 [/users/{ownerId}/people/xuids](uri-usersowneridpeoplexuids.md)
 
-&nbsp;&nbsp;XUID 하 여 사람들이 호출자의 사람들이 컬렉션에서 액세스 합니다.
+&nbsp;&nbsp;XUID 하 여 호출자의 사용자 컬렉션에서 사용자를 액세스 합니다.
 
 [/users/{ownerId}/summary](uri-usersowneridsummary.md)
 

@@ -1,6 +1,6 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: 간단한 UWP 게임에 대 한 Microsoft Store, C# 및 MonoGame로 작성
+description: 간단한 UWP C# 및 MonoGame로 작성 된 Microsoft Store에 대 한 게임
 author: muhsinking
 ms.author: mukin
 ms.date: 03/06/2017
@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462664"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504107"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -688,7 +688,7 @@ if (gameOver)
 ![게임 종료](images/monogame-tutorial-4.png)
 
 ## <a name="publish-to-the-microsoft-store"></a>Microsoft Store에 게시
-이 게임을 UWP 앱으로 구축, 이므로이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
+이 게임은 UWP 앱을 구축 이므로이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
 
 Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.
 

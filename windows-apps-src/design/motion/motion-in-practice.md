@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463998"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504243"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -98,7 +98,7 @@ ms.locfileid: "4463998"
 - [테두리](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)
   - **Background**
 
-각 속성을 변경 암시적으로 애니메이션 효과 줄 수 있는 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 각각에 대해 사용할 전환 종류와 _전환_ 속성을 보여줍니다.
+변경 내용을 암시적으로 애니메이션 효과 줄 수 있는 각 속성을 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 각 시나리오에 대해 사용할 전환 종류와 _전환_ 속성을 보여줍니다.
 
 | 애니메이션 효과 준된 속성 | 전환 속성 | 암시적 전환 유형 |
 | -- | -- | -- |
@@ -110,7 +110,7 @@ ms.locfileid: "4463998"
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-이 예제에서는 불투명도 속성 및 전환 컨트롤을 사용 하는 페이드 인 / 페이드 아웃 비활성화 된 경우 단추를 사용 하 여 하는 방법을 보여 줍니다.
+이 예제에서는 불투명도 속성 및 전환 컨트롤을 사용 하는 페이드 인 / 페이드 아웃 비활성화 된 경우 단추를 사용 하는 방법을 보여 줍니다.
 
 ```xaml
 <Button x:Name="SubmitButton"

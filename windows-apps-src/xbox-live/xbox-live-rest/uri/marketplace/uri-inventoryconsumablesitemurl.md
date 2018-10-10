@@ -3,7 +3,7 @@ title: /users/me/consumables/{itemID}
 assetID: 45724827-5e35-326f-3f17-f49e606d9e08
 permalink: en-us/docs/xboxlive/rest/uri-inventoryconsumablesitemurl.html
 author: KevinAsgari
-description: Xbox 사용자에 대해 소모 성 항목에 대 한 rESTful 끝점입니다.
+description: RESTful 끝점 사용자에 대 한 Xbox 소모 성 항목입니다.
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ed278542fa538a1297069b0f7d67d413e180f30
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461965"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504264"
 ---
 # <a name="usersmeconsumablesitemid"></a>/users/me/consumables/{itemID}
 특정 소모 성 인벤토리 항목에 대 한 세부 정보의 전체 집합 액세스 합니다.
@@ -31,7 +31,7 @@ ms.locfileid: "4461965"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| itemID| string| 각 사용자에 게 단일 인벤토리 항목에 대 한 고유 ID|
+| itemID| string| 각 사용자에 단일 인벤토리 항목에 대 한 고유 ID|
 
 <a id="ID4ERB"></a>
 

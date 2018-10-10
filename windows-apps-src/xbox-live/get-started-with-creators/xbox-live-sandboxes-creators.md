@@ -11,27 +11,27 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b9175eda1d73a7678ac9fd304dc60ef228a57c7f
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464306"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504174"
 ---
 # <a name="xbox-live-sandboxes-introduction"></a>Xbox Live 샌드박스 소개
 
-[Xbox Live 서비스 구성](xbox-live-service-configuration-creators.md) 문서 [Windows 개발자 센터](http://dev.windows.com)에 제목에 대 한 정보를 구성 해야 설명 했습니다. 이 정보는 통계, 순위표, 지역화, 등과 같은 작업이 포함 됩니다. 필요한 Xbox Live 서비스 구성 변경 게시 개발자 센터에서 개발 샌드박스에 변경 내용을 Xbox Live의 나머지 부분에서 획득 하 고 타이틀에 액세스할 수 있습니다.
+[Xbox Live 서비스 구성](xbox-live-service-configuration-creators.md) 문서의 [Windows 개발자 센터](http://dev.windows.com)에서 타이틀에 대 한 정보를 구성 해야 설명 된 것입니다. 이 정보는 통계, 순위표, 지역화, 등에 등이 포함 됩니다. 필요한 Xbox Live 서비스 구성 변경 게시 개발자 센터에서 개발 샌드박스를 변경 Xbox Live의 나머지 부분에서 획득 하 고 타이틀에 액세스할 수 있습니다.
 
 개발 샌드박스를 사용 하면 격리 된 환경에서 타이틀에 대 한 변경 내용에 작업할 수 있습니다. 샌드박스 여러 가지 이점을 제공합니다.
 
 1. 프로덕션 환경에서 유지 되는 버전 영향을 주지 않고 타이틀에 대 한 업데이트에 대 한 변경 내용에 반복할 수 있습니다.
 2. 보안상의 이유로 일부 도구에서 개발 샌드박스 에서만 작동합니다.
-3. 다른 게시자에 어떤 작업 중인 샌드박스에 대 한 액세스를 부여 하지 않고 볼 수 없습니다.
+3. 어떤 작업 중인 샌드박스에 대 한 액세스를 부여 하지 않고 다른 게시자 볼 수 없습니다.
 
-기본적으로 Windows 10 Pc 및 Xbox One 본체 소매 샌드박스에서 됩니다. Xbox Live 서비스 구성의 해당 버전에 액세스할 수 개발 샌드박스 사용자 PC 및/또는 Xbox One 전환 해야 합니다. 것 소매점에서 무언가 테스트 하거나 휴식 재생 즐겨찾기 Xbox Live 게임을 하는 경우 장치를 다시 정품 샌드박스 변경 해야 하는 것이 중요 합니다.
+기본적으로 Windows 10 Pc 및 Xbox One 본체 소매 샌드박스에 속합니다. 사용자 PC 및/또는 Xbox One 개발 샌드박스 Xbox Live 서비스 구성의 해당 버전에 액세스할 수로 전환 해야 합니다. 것이를 취하도록 재생 즐겨 찾는 Xbox Live 게임 또는 소매점에서 무언가 테스트 하는 경우 장치를 다시 정품 샌드박스 변경 해야 하는 것이 중요 합니다.
 
 ## <a name="finding-out-about-your-sandbox"></a>샌드박스에 대해 알아보기
 
-타이틀 만들기 샌드박스를 만들어집니다. **Windows 개발자 센터** 에서 제품을 열고 **서비스**를 탐색 하 여 샌드박스 ID를 찾을 수 > **Xbox Live**. 페이지 맨 위에 있는 **샌드박스 ID** 를 나열 됩니다.
+타이틀 만들기 샌드박스에 만들어집니다. **Windows 개발자 센터** 에서 제품을 열고 **서비스**를 탐색 하 여 샌드박스 ID를 찾을 수 > **Xbox Live**. 페이지 맨 위에 있는 **샌드박스 ID** 를 나열 됩니다.
 
 ![](../images/getting_started/devcenter_sandbox_id.png)
 
@@ -48,8 +48,8 @@ Unity에서 개발 샌드박스 아웃 하기 전에 수행 해야 하는 다음
 #### <a name="switch-sandboxes"></a>샌드박스를 전환 합니다.
 기본 제공에 Xbox Live 구성과 창 사용 하면 개발 및 소매 샌드박스 간에 쉽게 전환 합니다. 시작 하려면 **Xbox Live**로 이동 > 메뉴에서**구성** 합니다. **개발자 모드 구성** 섹션에 있는 현재 샌드박스를 볼 수 있습니다.
 
-1. **개발자 모드** **활성화**라는 경우 다음는 현재 연결 된 게임 개발 샌드박스입니다. 아웃 전환 하려면 **정품 모드로 다시 전환** 단추를 클릭 수 있습니다.
-2. **개발자 모드** **비활성화**라는 경우 다음는 현재 소매 샌드박스입니다. 스위치를 **개발자 모드로 전환 하려면** 단추를 클릭 수 있습니다.
+1. **개발자 모드** **활성화**으로 표시 하는 경우 다음는 현재 연결 된 게임 개발 샌드박스입니다. 전환 하려면 **정품 모드로 다시 전환** 단추를 클릭 수 있습니다.
+2. **개발자 모드** **비활성화**으로 표시 하는 경우 다음는 현재 소매 샌드박스입니다. 전환할 수 **개발자 모드로 전환 하려면** 단추를 클릭할 수 있습니다.
 
 ![XBL 사용](../images/unity/unity-xbl-dev-mode.PNG)
 
@@ -62,7 +62,7 @@ Windows 장치 포털 (WPD)에 샌드박스를 전환 하기 전에 다음 요�
 
 #### <a name="switch-sandboxes"></a>샌드박스를 전환 합니다.
 
-1. [Windows 바탕 화면에서 디바이스 포털 설정](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-desktop) 문서에 설명 된 대로 웹 브라우저에서 연결 하 여 **Windows 개발자 포털** 을 엽니다.
+1. [Windows 바탕 화면에서 디바이스 포털 설정](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-desktop) 문서에 설명 된 대로 웹 브라우저에 연결 하 여 **Windows 개발자 포털** 을 엽니다.
 2. **Xbox Live**를 클릭 합니다.
 3. 텍스트 필드에서 개발 샌드박스를 입력 하 고 **변경**을 클릭 합니다.
 
@@ -73,14 +73,14 @@ Windows 장치 포털 (WPD)에 샌드박스를 전환 하기 전에 다음 요�
 ### <a name="command-line"></a>명령줄
 
 #### <a name="prerequisites"></a>필수 구성 요소
-명령줄을 통해 개발 샌드박스 아웃 하기 전에 수행 해야 하는 다음 전환할 수 있습니다.
+하기 전에 수행 해야 하는 다음 명령줄을 통해 개발 샌드박스 내부 및 외부로 전환할 수 있습니다.
 
-1. Xbox Live 도구에 있는 패키지를 다운로드 [https://aka.ms/xboxliveuwptools](https://aka.ms/xboxliveuwptools) 의 압축을 풉니다.
+1. Xbox Live 도구 패키지를 다운로드 [https://aka.ms/xboxliveuwptools](https://aka.ms/xboxliveuwptools) 의 압축을 풉니다.
 
 #### <a name="switch-sandboxes"></a>샌드박스를 전환 합니다.
 1. **관리자**모드로 SwitchSandbox.cmd 배치 파일을 실행 합니다.
 
-관리자 모드에 샌드박스를 전환 하려면이 호출을 실행 합니다. 첫 번째 인수는 샌드박스를입니다. 예를 들어 MJJSQH.58 샌드박스도 전환 하려는 경우이 명령을 사용 합니다.
+관리자 모드 전환에 샌드박스를이 호출을 실행 합니다. 첫 번째 인수는 샌드박스를입니다. 예를 들어 MJJSQH.58 샌드박스도 전환 하려는 경우이 명령을 사용 합니다.
 
 ```cmd
 SwitchSandbox.cmd MJJSQH.58

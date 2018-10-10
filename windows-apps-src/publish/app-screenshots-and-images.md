@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464911"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509422"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 
@@ -87,9 +87,9 @@ Windows Phone 8.1 이전 버전에서 적절한 표시를 위해서는 이 이�
 
 ### <a name="display-only-uploaded-logo-images-in-the-store"></a>디스플레이 스토어의 로고 이미지를 업로드
 
-저장소 (Xbox 포함), Windows 10의 고객에 게 목록을 표시할 때 앱 패키지의 로고 이미지를 사용 하는 것을 방지 하며 대신 업로드 한 이미지만 사용 하 여 스토어에는 옵션이 있습니다. 이렇게 하면 Windows 10(Xbox 포함) 고객을 위한 Store에서 다양한 디스플레이에 앱이 표시되는 모양을 훨씬 세밀하게 제어할 수 있습니다. (제품 이전 OS 버전을 지 원하는 경우 해당 고객에 게 표시 될 수 이미지, 패키지에서이 옵션을 사용 하는 경우에.)
+저장소 (Xbox 포함), Windows 10의 고객에 게 목록을 표시할 때 앱의 패키지의 로고 이미지를 사용 하는 것을 방지 하며 대신 업로드 한 이미지만 사용 하 여 스토어에는 옵션이 있습니다. 이렇게 하면 Windows 10(Xbox 포함) 고객을 위한 Store에서 다양한 디스플레이에 앱이 표시되는 모양을 훨씬 세밀하게 제어할 수 있습니다. (제품 이전 OS 버전을 지 원하는 경우 해당 고객에 게 표시 될 수 이미지, 패키지에서이 옵션을 사용 하는 경우에.)
 
-Windows 10 및 Xbox에서 고객 (고객을 위한 Xbox를 포함 하 여 Windows 10)을 업로드 한 이미지만 사용 하지 패키지의 모든 이미지를 사용, 이라는 **확인란 스토어가 표시 하려면 패키지 이미지 대신 로고 이미지를 업로드 **.
+Windows 10 및 Xbox에서 고객 (고객을 위한 Xbox를 포함 하 여 Windows 10)을 업로드 한 이미지만 사용 하지 패키지의 모든 이미지를 사용, **이라는 확인란 스토어가 표시 하려면 패키지에서 이미지 대신 로고 이미지를 업로드 **.
 
 이 확인란을 선택 하면 **이미지를 표시 하는 저장소** 라는 섹션이 새로 나타납니다. 여기에서는 **1:1 앱 타일 아이콘 (300 x 300 픽셀)** 크기 (상자,이 섹션으로 이동 해당 이미지를 제공 하기 위해 필드를 선택 하면) 등 이미지 3 개를 업로드할 수 있습니다. 이 옵션을 사용하는 경우 300 x 300 픽셀, 150 x 150 픽셀, 71 x 71 픽셀 등 3가지 이미지 크기를 제공하는 것이 좋습니다. 그러나 반드시 제공해야 하는 이미지 크기는 300x300입니다.
 

@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ab3214ca9b2cb2ff8ace11706ceda22885598e1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468179"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509598"
 ---
 # <a name="get-handleshandleidsession"></a>GET (/handles/{handleId}/session)
 지정 된 핸들 식별자에 대 한 세션 개체를 가져옵니다.
 
 > [!IMPORTANT]
-> 이 메서드는 2015 멀티 플레이어에서 사용 하 고 나중 및 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
+> 이 방법은 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 및 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4EDB)
@@ -35,9 +35,9 @@ ms.locfileid: "4468179"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드 (핸들) 세션에 제공 된 서비스 측 포인터를 사용 하 여 서버에서 세션 개체를 검색 합니다. 세션 개체의 모든 특성을 사용 하 여이 반환이 됩니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetCurrentSessionByHandleAsync**하 여 줄 바꿈할 수 있습니다.
+이 HTTP/REST 메서드 (핸들) 세션에 제공 된 서비스에 있는 포인터를 사용 하 여 서버에서 세션 개체를 검색 합니다. 세션 개체의 모든 속성을 사용 하 여이 반환이 됩니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetCurrentSessionByHandleAsync**하 여 줄 바꿈할 수 있습니다.
 
-이 메서드의 호출자에서 플레이어의 **MultiplayerActivityDetails** 개체 핸들 ID를 가져옵니다. 또는 호출자는 사용자 게임 초대를 수락한 후에 ID를 프로토콜 활성화를 가져옵니다.
+이 메서드의 호출자 플레이어의 **MultiplayerActivityDetails** 개체에서 처리 ID를 가져옵니다. 또는 호출자는 사용자 게임 초대를 수락한 후에 ID를 프로토콜 활성화를 가져옵니다.
 
 <a id="ID4EDB"></a>
 
@@ -64,7 +64,7 @@ ms.locfileid: "4468179"
 
 
 ## <a name="response-body"></a>응답 본문
-[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에서 응답 구조를 참조 하세요.  
+[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에 대 한 응답 구조를 참조 하세요.  
 <a id="ID4EIC"></a>
 
 

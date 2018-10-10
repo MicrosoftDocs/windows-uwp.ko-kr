@@ -10,11 +10,11 @@ ms.prod: Microsoft Edge, Azure, Visual Studio Code
 ms.technology: web
 ms.localizationpriority: medium
 ms.openlocfilehash: 42f11cbdd749a44c4ba0d8bc1a0397a4f2882257
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461550"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502875"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 생성
 
@@ -298,7 +298,7 @@ Azure 문서는 다음 내용을 설명합니다.
 
  - [Azure DocumentDB 문서](https://docs.microsoft.com/en-us/azure/documentdb/index)
 
-## <a name="part-ii-build-a-single-page-web-application"></a>2 부: 단일 페이지 웹 응용 프로그램을 빌드
+## <a name="part-ii-build-a-single-page-web-application"></a>2 부: 단일 페이지 웹 응용 프로그램 제작
 
 이제 1부에서 [REST API 백 엔드](#part-i-build-a-rest-api-backend)를 구축(또는 [다운로드](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend))했으므로, [노드](https://nodejs.org/en/), [Express](http://expressjs.com/) 및 [부트스크랩](http://getbootstrap.com/)으로 단일 페이지 기억력 게임 프런트 엔드를 만들 준비가 되었습니다.
 
