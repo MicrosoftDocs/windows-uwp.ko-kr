@@ -12,18 +12,18 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ae8c61d8afae6788f2f99e4e2beff262c011fc60
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463319"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504638"
 ---
 # <a name="eds-tables"></a>EDS 테이블
 
   * [미디어 항목 맵에 미디어 그룹](#ID4EQ)
   * [유효한 클라이언트 유형 목록](#ID4EFD)
   * [올바른 장치 유형 목록](#ID4EPE)
-  * [목록 입력기](#ID4ERF)
+  * [입력된 방법 목록](#ID4ERF)
 
 <a id="ID4EQ"></a>
 
@@ -33,12 +33,12 @@ ms.locfileid: "4463319"
 | 미디어 그룹| 미디어 항목 유형| 
 | --- | --- |
 | 게임| Xbox360Game, XboxGameTrial, Xbox360GameContent, Xbox360GameDemo, XboxTheme, XboxOriginalGame, XboxGamerTile, XboxArcadeGame, XboxGameConsumable, XboxGameVideo, XboxGameTrailer, XboxBundle, XboxXnaCommunityGame, XboxMarketplace, AvatarItem, MobileGame, XboxMobilePDLC, XboxMobileConsumable, WebGame, MetroGame, MetroGameContent, MetroGameConsumable, DGame, DGameDemo, DConsumable, DDurable|
-| AppType| XboxApp, DApp|
+| AppType| DApp XboxApp|
 | MovieType| 영화|
-| TVType| TVEpisode, TVSeries, TVSeason TVShow (일회용 TV 프로그램)|
+| TVType| TVSeries, TVEpisode TVSeason TVShow (일회성 TV 프로그램)|
 | MusicType| 앨범 트랙 MusicVideo|
 | MusicArtistType| MusicArtist|
-| WebVideoType| WebVideo, WebVideoCollection|
+| WebVideoType| WebVideoCollection WebVideo|
 | EnhancedContentType| GameLayer, GameActivity, AppActivity, VideoLayer, VideoActivity, DActivity, DNativeApp|
 | 구독 유형| 구독|
 
@@ -87,7 +87,7 @@ ms.locfileid: "4463319"
 <a id="ID4ERF"></a>
 
 
-## <a name="input-method-list"></a>목록 입력기
+## <a name="input-method-list"></a>입력된 방법 목록
 
    * 조정자
    * ControllerAutoSuggest

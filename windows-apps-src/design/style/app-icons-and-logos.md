@@ -13,15 +13,15 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 04263122c1a96aadc5e4d0ad8f804730d3a2a20f
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471239"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505222"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
-모든 앱을 나타내는 아이콘/로고에 하 고 Windows 셸과에서 여러 위치에서 해당 아이콘이 표시 됩니다. 
+모든 앱을 나타내는 아이콘/로고 있으며 Windows 셸과에서 여러 위치에서 해당 아이콘이 표시 됩니다. 
 
 :::row:::
     :::column:::
@@ -30,20 +30,20 @@ ms.locfileid: "4471239"
         * 작업 표시줄 및 작업 관리자
         * 앱의 타일
         * 앱의 시작 화면
-        * Microsoft Store에서
+        * Microsoft 스토어에서
     :::column-end:::
     :::column:::
         ![windows 10 start and tiles](images/assetguidance01.jpg)
     :::column-end:::
 :::row-end:::
 
-이 문서에서는 앱 아이콘 만들기의 기본 사항을 설명 해야 하 고, 어떻게 수동으로, 관리 하 Visual Studio를 사용 하는 방법.
+이 문서에서는 앱 아이콘 만들기의 기본 사항이 필요할 경우 Visual Studio, 관리 하 고 어떻게 수동으로 관리를 사용 하는 방법입니다.
  
-(이 문서는 앱 자체를 나타내는; 일반 아이콘 지침에 대 한 [아이콘](icons.md) 문서를 참조 하는 아이콘에 특별히 임)
+(이 문서는 앱 자체를 나타내는, 일반 아이콘 지침에 대 한 [아이콘](icons.md) 문서를 참조 하는 아이콘에 특별히 임)
 
 ## <a name="icon-types-locations-and-scale-factors"></a>아이콘 유형, 위치 및 배율 인수
 
-기본적으로 Visual Studio는 자산 하위 아이콘 자산을 저장합니다. 다양 한 유형의 나타나는, 아이콘 및 라고 무엇 목록이 다음과 같습니다. 
+기본적으로 Visual Studio는 자산 하위 디렉터리에서 아이콘 자산을 저장합니다. 다음은 나타나는, 아이콘 및 라고 어떻게 여러 종류의 목록입니다. 
 
 | 아이콘 이름 | 에 표시 됩니다. | 자산 파일 이름 |
 | ---      | ---        | --- |
@@ -56,11 +56,11 @@ ms.locfileid: "4471239"
 | 배지 로고 | 앱의 타일 | BadgeLogo.png  |
 | 패키지 로고/스토어 로고 | 앱 설치 관리자, 개발자 센터, 스토어에서 "리뷰 를" 옵션을 스토어에서 "앱을 보고" 옵션 | StoreLogo.png  |
 
-\ * [디스플레이 스토어에서 이미지를 업로드](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)를 선택 하지 않는 한 사용. 
+\ * [디스플레이 에서만 스토어에서 이미지를](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)업로드 선택 하지 않는 한 사용. 
 
 이러한 아이콘이 모든 화면에 대해 선명 되도록 다양 한 디스플레이 배율 인수에 대 한 동일한 아이콘의 여러 버전을 만들 수 있습니다. 
 
-배율 인수는 텍스트와 같은 UI 요소의 크기를 결정합니다. 400%에서 100% 요인 범위를 조정 합니다. 더 큰 값이 더 큰 UI 요소를 쉽게 높은 DPI 디스플레이에서 볼 수 있도록 만듭니다. 
+배율 인수는 텍스트와 같은 UI 요소의 크기를 결정합니다. 400%에서 100% 요소 범위를 조정 합니다. 값이 클수록 더 큰 UI 요소를 쉽게 높은 DPI 디스플레이에서 볼 수 있도록 만듭니다. 
 
 :::row:::
     :::column:::
@@ -74,19 +74,19 @@ ms.locfileid: "4471239"
 :::row-end:::  
 
 
-앱 아이콘 자산은 비트맵 비트맵 원활 하 게 조정 되므로 각 배율 인수에 대 한 각 아이콘 자산 버전을 제공 하는 것이 좋습니다: 100%, 125%, 150%, 200% 및 400%입니다. 아이콘의 많은입니다! Fortunatly, Visual Studio는 간편 하 게 생성 하 고 이러한 아이콘을 업데이트 하는 도구를 제공 합니다. 
+앱 아이콘 자산은 비트맵 비트맵 원활 하 게 조정 되므로 각 배율 인수에 대 한 각 아이콘 자산 버전을 제공 하는 것이 좋습니다: 100%, 125%, 150%, 200% 및 400%입니다. 아이콘의이! Visual Studio Fortunatly 간편 하 게 생성 하 고이 아이콘을 업데이트 하는 도구를 제공 합니다. 
 
 ## <a name="microsoft-store-listing-image"></a>Microsoft Store 목록 이미지
 
 "지정 하는 방법 이미지 내 앱 목록에 대 한 Microsoft Store에서"?
 
-기본적으로 사용 하 여 패키지에서 이미지의 일부가, 스토어에서 다른 [제출 프로세스 중에 제공 하는 이미지](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)) (함께이 페이지의 맨 표에 설명 된 대로 합니다. 그러나 스토어 (Xbox 포함), Windows 10의 고객에 게 목록을 표시할 때 앱 패키지의 로고 이미지를 사용 하는 것을 방지 하 고 대신 업로드 한 이미지만 사용 스토어가 있습니다. 이렇게 하면 앱의 모양 보다 잘 제어 Store 전반에서 다양 한 디스플레이에 있습니다. (참고 하 제품 이전 OS 버전을 지 원하는 경우 해당 고객 여전히 볼 수도 이미지, 패키지에서이 옵션을 사용 하는 경우에.) **스토어 로고** 섹션 제출 프로세스의 **스토어 목록** 단계에서이 수행할 수 있습니다.
+기본적으로 사용 하 여 패키지에서 이미지의 일부가 스토어에서 다른 [제출 프로세스 중에 제공 된 이미지](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)) (함께이 페이지의 맨 표에 설명 된 대로 합니다. 그러나 스토어 (Xbox 포함), Windows 10의 고객에 게 목록을 표시할 때 앱의 패키지의 로고 이미지를 사용 하는 것을 방지 하 고 대신 업로드 한 이미지만 사용 스토어가 있습니다. 이 스토어에서 다양 한 디스플레이에 앱의 모양 보다 잘 제어를 제공 합니다. (단 제품 이전 OS 버전을 지 원하는 경우 해당 고객 수 여전히 이미지, 패키지에서이 옵션을 사용 하는 경우에.) **스토어 로고** 섹션 제출 프로세스의 **스토어 목록** 단계에서이 수행할 수 있습니다.
 
 ![앱 제출 프로세스 동안 스토어 로고를 지정합니다.](images/app-icons/storelogodisplay.png)
 
-이 확인란을 선택 하면 **이미지를 표시 하는 저장소** 라는 섹션이 새로 나타납니다. 여기에서 스토어 앱의 패키지의 로고 이미지를 대신 사용 하는 3 가지 이미지 크기를 업로드할 수 있습니다: 300 x 300 픽셀, 150 x 150 71 x 71 픽셀 픽셀입니다. 300 x 300 크기에만 필요 하지만 3 크기를 제공 하는 것이 좋습니다.
+이 확인란을 선택 하면 **이미지를 표시 하는 저장소** 라는 섹션이 새로 나타납니다. 여기에서 스토어 앱의 패키지의 로고 이미지 대신 사용 하는 3 가지 이미지 크기를 업로드할 수 있습니다: 300 x 300, 150 x 150, 71 x 71 픽셀입니다. 300 x 300 크기에만 필요 하지만 3 크기를 제공 하는 것이 좋습니다.
 
-자세한 내용은 [디스플레이 스토어의 로고 이미지를 업로드](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)를 참조 하세요.
+자세한 내용은 [디스플레이 저장소의 로고 이미지를 업로드](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)를 참조 하세요.
 
 <!-- ### Fallback images for the Store
 
@@ -106,12 +106,12 @@ For more information, see [App screenshots, images, and trailers in the Microsof
 
 ## <a name="managing-app-icons-with-the-visual-studio-manifest-designer"></a>Visual Studio 매니페스트 디자이너를 사용 하 여 앱 아이콘 관리
 
-Visual Studio **매니페스트 디자이너**호출 앱 아이콘을 관리 하기 위한 매우 유용한 도구를 제공 합니다. 
+Visual Studio **매니페스트 디자이너**호출 앱 아이콘을 관리 하기 위한 유용한 도구를 제공 합니다. 
 
-> Visual Studio 2017, 아직 없는 경우는 사용 가능한 무료 버전, (Visual Studio 2017 Community Edition)을 포함 하 여 여러 버전 및 다른 버전 무료 평가판을 제공 합니다. 여기서 다운로드할 수 있습니다.[https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
+> Visual Studio 2017 없는 경우는 사용할 수 있는 무료 버전 (Visual Studio 2017 Community Edition)을 포함 하 여 여러 버전 및 다른 버전 무료 평가판을 제공 합니다. 여기서 다운로드할 수 있습니다.[https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
 
 
-시작 하려면 매니페스트 디자이너:
+매니페스트 디자이너를 시작 합니다.
 <!-- 1. Use Visual Studio to open a UWP project.
 2. In the **Solution Explorer**, double-click the package.appmanifest file. 
 
@@ -135,7 +135,7 @@ Visual Studio **매니페스트 디자이너**호출 앱 아이콘을 관리 하
 :::row-end:::
 :::row:::
     :::column:::
-        2. **솔루션 탐색기**에서 Package.appmxanifest 파일을 두 번 클릭 합니다.
+        2. **솔루션 탐색기**Package.appmxanifest 파일을 두 번 클릭 합니다.
     :::column-end:::
     :::column:::
         ![The Visual Studio 2017 Manifest Designer](images/icons/vs-solution-explorer.png)
@@ -160,46 +160,46 @@ Visual Studio **매니페스트 디자이너**호출 앱 아이콘을 관리 하
 
 ## <a name="generating-all-assets-at-once"></a>한 번에 모든 자산을 생성
 
-**모든 시각적 자산**, **시각적 자산** 탭에서 첫 번째 메뉴 항목은 정확히 어떤 이름이 제안: 단추 누르기를 사용 하 여 앱에 필요한 모든 시각적 자산을 생성 합니다.
+**모든 시각적 자산**, **시각적 자산** 탭의 첫 번째 메뉴 항목은 정확히 어떤 이름이 제안: 단추 누르기를 사용 하 여 앱에 필요한 모든 시각적 자산을 생성 합니다.
 
 ![Visual Studio에서 모든 시각적 자산을 생성 합니다.](images/app-icons/all-visual-assets.png)
 
 단일 이미지를 제공 하기만 하면 및 Visual Studio에서 작은 타일, 중간 크기 타일, 큰 타일, 와이드 타일, 큰 타일, 앱 아이콘, 시작 화면을 생성 하 고 모든 배율 인수에 대 한 로고 자산 패키지 됩니다.
 
 한 번에 모든 자산을 생성 합니다.
-1. **원본** 필드 옆 **...** 를 클릭 하 고 사용 하려는 이미지를 선택 합니다. 비트맵 이미지를 사용 하는 경우 예리한 결과 얻을 수 있도록 400 픽셀 400 이상 인지 확인 합니다. 벡터 기반 이미지에 가장 적합 합니다. Visual Studio를 사용 하면 AI (Adobe Illustrator) 및 PDF 파일을 사용할 수 있습니다. 
+1. **원본** 필드 옆 **...** 를 클릭 하 고 사용 하려는 이미지를 선택 합니다. 비트맵 이미지를 사용 하는 경우 선명 하 게 결과 얻을 수 있도록 400 픽셀 400 이상 인지 확인 합니다. 벡터 기반 이미지에 가장 적합 합니다. Visual Studio를 사용 하면 AI (Adobe Illustrator) 및 PDF 파일을 사용할 수 있습니다. 
 2. (선택 사항). **디스플레이 설정** 섹션에서 이러한 옵션을 구성 합니다.
 
     a.  **짧은 이름**: 앱에 대 한 짧은 이름을 지정 합니다.
 
     b.  **표시 이름**: 짧은 이름 중간, 넓 음 또는 큰 타일에 표시할 것인지 여부를 나타냅니다. 
 
-    c. **백그라운드 타일**: 16 진수 값 또는 타일 배경색에 대 한 색 이름을 지정 합니다. 예를 들면 `#464646`입니다. 기본값은 `transparent`입니다.
+    c. **배경 타일**: 16 진수 값 또는 타일 배경색에 대 한 색 이름을 지정 합니다. 예를 들면 `#464646`입니다. 기본값은 `transparent`입니다.
 
-    d. **Spash 화면 배경**: spash 화면 배경 16 진수 값 또는 색 이름을 지정 합니다. 
+    d. **Spash 화면 배경**: spash 화면 배경 16 진수 값 이나 색 이름을 지정 합니다. 
 
 3. **생성**을 클릭 합니다. 
 
-Visual Studio에서는 이미지 파일을 생성 하 고 프로젝트에 추가 합니다. 자산을 변경 하려는 경우 단순히 프로세스를 반복 합니다. 
+Visual Studio에서는 이미지 파일을 생성 하 고 프로젝트에 추가 합니다. 자산을 변경 하려는 경우 프로세스를 반복 하면 됩니다. 
 
-아이콘 크기 조정 된 자산이 파일 명명 규칙을 따릅니다.
+크기 조정 된 아이콘 자산이 파일 명명 규칙을 따릅니다.
 
-*배율 인수*.png *파일 이름*-scale-
+*파일 이름*-scale-*배율 인수*.png
 
 예를 들면
 
 Square150x150Logo-scale-100.png, Square150x150Logo-scale-200.png, Square150x150Logo-scale-400.png
 
-Visual Studio가 기본적으로 배지 로고를 생성 하지 않는 것을 확인 하세요. 배지 로고는 고유 하며 아마도 다른 앱 아이콘 일치 하지 않아야 하기 때문입니다. 자세한 내용은 [배지 알림은 UWP 앱 문서](/windows/uwp/design/shell/tiles-and-notifications/badges)를 참조 하세요. 
+Visual Studio 기본적으로 배지 로고를 생성 하지 않는 것입니다. 배지 로고는를 가장 다른 앱 아이콘 일치 하지 않아야 하기 때문입니다. 자세한 내용은 [배지 알림은 UWP 앱 문서](/windows/uwp/design/shell/tiles-and-notifications/badges)를 참조 하세요. 
 
 
-## <a name="more-about-app-icon-assets"></a>앱 아이콘 자산에 대 한 자세한
-Visual Studio에서 프로젝트에 필요한 모든 앱 아이콘 자산을 생성 하지만 다른 응용 프로그램 자산와에서 다른는 방법을 이해 하기 쉽게 사용자 지정 하려는 경우. 
+## <a name="more-about-app-icon-assets"></a>앱 아이콘 자산에 대 한 자세한 내용
+Visual Studio에서 프로젝트에 필요한 모든 앱 아이콘 자산을 생성 하지만 다른 응용 프로그램 자산 다는 방법을 이해 하는 사용자 지정 하려는 경우. 
 
-많은 장소에 표시 되는 앱 아이콘 자산: Windows 작업 표시줄, 작업 보기, ALT + TAB 및 시작 타일의 오른쪽 아래 모서리입니다. 몇 가지 추가 크기 조정 및 기타 자산 없는 옵션 plating에 너무 많은 장소에서 앱 아이콘 자산 나타나므로: 자산 "대상 크기" 및 "판이 없는" 자산입니다. 
+다양 한 위치에에서 표시 되는 앱 아이콘 자산: Windows 작업 표시줄, 작업 보기, ALT + TAB 및 시작 타일의 오른쪽 아래 모서리입니다. 몇 가지 추가 크기 조정 및 기타 자산 없는 옵션 plating에 너무 많은 장소에서 앱 아이콘 자산 나타나므로: 자산 "대상 크기" 및 "판이 없는" 자산입니다. 
 
 ### <a name="target-size-app-icon-assets"></a>대상 크기 앱 아이콘 자산
-표준 배율 인수 크기 ("400.png Square44x44Logo.scale") 뿐 아니라 "대상 크기" 자산을 만드는 것이 좋습니다. 대상 400 등의 특정 배율 인수를 사용 하지 않고 16 픽셀 등의 특정 크기 때문에 이러한 자산 대상 크기 호출 합니다. 대상 크기 자산은 배율 플라토 시스템을 사용 하지 않는 표면의:
+표준 배율 인수 크기 ("400.png Square44x44Logo.scale") 뿐 아니라 "대상 크기" 자산을 만드는 것이 좋습니다. 400 등의 특정 배율 인수 보다는 16 픽셀 등의 특정 크기를 대상으로 하기 때문에 이러한 자산 대상 크기 호출 합니다. 대상 크기 자산은 배율 플라토 시스템을 사용 하지 않는 표면의:
 
 * 점프 목록 시작(데스크톱)
 * 타일의 하단 모서리 시작(데스크톱)
@@ -226,7 +226,7 @@ Visual Studio에서 프로젝트에 필요한 모든 앱 아이콘 자산을 생
 | 80x80      | Square44x44Logo.targetsize-80.png  |
 | 96x96      | Square44x44Logo.targetsize-96.png  |
 
-\ * 최소한 것이 좋습니다 이러한 크기를 제공 합니다. 
+\ * 최소한이 크기를 제공 권장 합니다. 
 
 이러한 자산에 안쪽 여백을 추가하지 않아도 됩니다. 필요한 경우 Windows에서 자동으로 안쪽 여백을 추가합니다. 이러한 자산에서는 16픽셀의 최소 공간을 고려해야 합니다. 
 
@@ -235,7 +235,7 @@ Visual Studio에서 프로젝트에 필요한 모든 앱 아이콘 자산을 생
 ![Windows 작업 표시줄의 자산](images/assetguidance21.png)
 
 ### <a name="unplated-assets"></a>판이 없는 자산
-기본적으로 Windows는 기본적으로 색이 있는 뒷판는 대상 기반 자산을 사용합니다. 원하는 경우 대상 기반의 판이 없는 자산을 제공할 수 있습니다. "판이 없는" 의미 자산 투명 배경에서 표시 됩니다. 이러한 자산은 다양 한 배경색을 통해 표시 되는 점을 염두에 두십시오. 
+기본적으로 Windows는 기본적으로 색이 있는 뒷판 대상 기반 자산을 사용합니다. 원하는 경우 대상 기반의 판이 없는 자산을 제공할 수 있습니다. "판이 없는" 의미 자산 투명 배경에서 표시 됩니다. 이러한 자산은 다양 한 배경색을 통해 표시 되는 점을 염두에 두십시오. 
 
 ![판이 없는 자산 및 판이 있는 자산](images/assetguidance22.png)
 
@@ -248,24 +248,24 @@ Visual Studio에서 프로젝트에 필요한 모든 앱 아이콘 자산을 생
 
 ### <a name="target-and-unplated-sizing"></a>대상 및 판이 없는 크기 조정
 
-다음은 100% 배율로 대상 기반 자산에 대 한 권장 크기입니다.
+다음은 100% 배율로 대상 기반 자산에 대 한 크기 권장 사항입니다.
 
 ![100% 배율의 대상 기반 자산 크기 조정](images/assetguidance23.png)
 
 
-## <a name="more-about-splash-screen-assets"></a>시작 화면 자산에 대 한 자세한
+## <a name="more-about-splash-screen-assets"></a>시작 화면 자산에 대 한 자세한 내용
 시작 화면에 대 한 자세한 내용은 [UWP 시작 화면 문서](/windows/uwp/launch-resume/splash-screens)를 참조 하세요.
 
-## <a name="more-about-badge-logo-assets"></a>배지 로고 자산에 대 한 자세한
+## <a name="more-about-badge-logo-assets"></a>배지 로고 자산에 대 한 자세한 내용
 
-이유는 기본적으로 배지 로고를 생성 하지 않는 것 이유가 있는 자산 생성기를 사용 하 여 필요한 모든 자산을 생성 하는 경우: 다른 응용 프로그램 자산와에서 매우 다릅니다. 배지 로고는 앱의 타일 및 알림에 표시 되는 상태 이미지입니다. 
+왜 그렇지 기본적으로 배지 로고를 생성 하지 않는 이유는 자산 생성기를 사용 하 여 필요한 모든 자산을 생성 하는 경우: 다른 응용 프로그램 자산와에서 매우 다릅니다. 배지 로고는 앱의 타일 및 알림에 표시 되는 상태 이미지. 
 
 자세한 내용은 [배지 알림은 UWP 앱 문서](/windows/uwp/design/shell/tiles-and-notifications/badges)를 참조 하세요.
 
 
 ## <a name="customizing-asset-padding"></a>사용자 지정 자산 안쪽 여백
 
-기본적으로 Visual Studio 자산 생성기 권장된 안쪽 여백 어떤 이미지에 적용 됩니다. 이미지 안쪽 여백에 이미 포함 또는 타일의 끝까지 블리드 이미지를 원하는 경우 **안쪽 여백 권장 적용** 확인란 선택을 취소 하 여이 기능을 끌 수 있습니다. 
+기본적으로 Visual Studio 자산 생성기 권장된 안쪽 여백 어떤 이미지에 적용 됩니다. 이미지 여백에 이미 포함 하거나 타일의 끝까지 블리드 이미지, **안쪽 여백 권장 적용** 확인란 선택을 취소 하 여이 기능을 끌 수 있습니다. 
 
 ### <a name="tile-padding-recommendations"></a>타일 여백 권장 사항
 자신의 안쪽 여백 제공 하려는 경우 타일에 대 한 권장 사항이 다음과 같습니다. 

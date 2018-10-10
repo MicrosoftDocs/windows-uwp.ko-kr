@@ -1,7 +1,7 @@
 ---
 title: Xbox Live 프리 팹에 컨트롤러 지원 추가
 author: KevinAsgari
-description: Xbox에 Live 프리 팹을는 Xbox Live Unity 플러그 인을 사용 하 여에 컨트롤러 지원 추가
+description: Xbox에 Live 프리 팹을를 Xbox Live Unity 플러그 인을 사용 하 여 컨트롤러 지원 추가
 ms.assetid: ''
 ms.author: heba
 ms.date: 07/14/2017
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, unity, 컨트롤러 지원
 ms.localizationpriority: medium
 ms.openlocfilehash: 29b9dcc18d3930300354d2fdcef78d68314f6514
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464142"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505125"
 ---
 # <a name="add-controller-support-to-xbox-live-prefabs"></a>Xbox Live 프리 팹에 컨트롤러 지원 추가
 
@@ -24,16 +24,16 @@ ms.locfileid: "4464142"
 
 Xbox Live Unity 플러그 인 프리 팹의 모든 관리자에서 지정 컨트롤러 입력을 지원합니다.
 
-예를 들어 있다고 가정해 보겠습니다 라고 하는 게임 개체 `UserProfile1` 기반으로 합니다 `UserProfile` prefab 합니다. 플레이어 1이 게임 개체에 연결 하 고 사용 하 여 로그인 하려는 경우는 `A` 자신의 Xbox 컨트롤러에서 단추를 간단 하 게 작성 `joystick 1 button 0` 에 `Input Controller Button` 필드에 관리자.
+예를 들어 있다고 가정해 보겠습니다 라고 하는 게임 개체 `UserProfile1` 기반으로 합니다 `UserProfile` prefab 합니다. 플레이어 1이 게임 개체에 연결 하 고 사용 하 여 로그인 하도록 하려는 경우는 `A` Xbox 컨트롤러에서 단추를 간단 하 게 `joystick 1 button 0` 에 `Input Controller Button` 필드에 관리자.
 
   ![사용자 프로필 프리 팹의 컨트롤러 지원](../images/unity/controller-support-example.png)
 
 ## <a name="all-prefab-controller-input-fields"></a>모든 Prefab 컨트롤러 입력된 필드
 ### <a name="userprofile-prefab"></a>사용자 프로필 프리 팹
-- **컨트롤러 단추 입력:** 추가 하 고 Xbox Live는 사용자가 로그인 합니다.
+- **컨트롤러 단추 입력:** 추가 하 고 Xbox Live 사용자가 로그인 합니다.
 
 ### <a name="social-prefab"></a>소셜 프리 팹
-- **필터 컨트롤러 단추:** '모두' 친구 또는 '온라인' 친구를 표시 하려면 필터를 전환 합니다.
+- **필터 컨트롤러 단추:** 필터 '모두' 친구 또는 '온라인' 친구를 전환 합니다.
 
 ### <a name="leaderboard-prefab"></a>순위표 프리 팹
 - **첫 번째 컨트롤러 단추:** 순위표 항목의 첫 번째 페이지에 플레이어를 이동합니다.
@@ -52,4 +52,4 @@ Xbox Live Unity 플러그 인 프리 팹의 모든 관리자에서 지정 컨트
 
 ## <a name="xbox-controller-button-mappings"></a>Xbox 컨트롤러 단추 매핑
 
-Unity에서 Xbox 컨트롤러 버튼 매핑을에 대 한이 [Unity 컨트롤러 Wiki 페이지](http://wiki.unity3d.com/index.php?title=Xbox360Controller)를 확인 합니다.
+Unity에서 Xbox 컨트롤러 단추 매핑에 대 한이 [Unity 컨트롤러 Wiki 페이지](http://wiki.unity3d.com/index.php?title=Xbox360Controller)를 확인 합니다.

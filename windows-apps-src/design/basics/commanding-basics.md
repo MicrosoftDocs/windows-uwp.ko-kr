@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 104788b98377b55564fcc204ecc161521d071c6b
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470039"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505196"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 
@@ -94,9 +94,9 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 
 ## <a name="place-commands-on-the-right-surface"></a>올바른 화면에 명령 배치
 
-앱 캔버스 또는 명령 모음, 명령 모음 플라이 아웃, 메뉴 모음 및 대화 상자와 같은 특수 명령 컨테이너를 포함 하 여 앱에서의 다양 한 화면에 명령 요소를 배치할 수 있습니다.
+앱 캔버스 또는 명령 모음, 명령 모음 플라이 아웃, 메뉴 모음 및 대화 상자와 같은 명령 컨테이너를 포함 하 여 앱에서의 다양 한 화면에 명령 요소를 배치할 수 있습니다.
 
-Note, 가능 하면 해야 하도록 설정 하는 사용자가 콘텐츠에 실행 되는 명령을 사용 하 여 보다는 콘텐츠를 직접 조작 합니다. 예를 들어, 사용자가 위쪽 및 아래쪽 명령 단추를 사용하기 보다 목록을 끌어서 놓아 목록을 다시 정렬할 수 있도록 합니다.
+Note, 가능 하다 면 해야 하도록 설정 하는 사용자가 콘텐츠에 실행 되는 명령을 사용 하 여 보다는 콘텐츠를 직접 조작 합니다. 예를 들어, 사용자가 위쪽 및 아래쪽 명령 단추를 사용하기 보다 목록을 끌어서 놓아 목록을 다시 정렬할 수 있도록 합니다.
 
 그렇지 않고 사용자가 콘텐츠를 직접 조작할 수 없는 경우 앱의 명령 화면 중 하나에 명령 요소들을 배치합니다. 가장 일반적인 명령 표면 중 일부 목록은 다음과 같습니다.
 

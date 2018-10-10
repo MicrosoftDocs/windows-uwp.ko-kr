@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-description: 이 항목에서는 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여를 + WinRT COM 클래스와 인터페이스를 사용 하도록 합니다.
+description: 이 항목에서는 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여 + WinRT COM 클래스와 인터페이스를 사용 하도록 합니다.
 title: C++/WinRT로 작성된 COM 구성 요소 사용
 ms.author: stwhi
 ms.date: 07/23/2018
@@ -10,29 +10,29 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
 ms.openlocfilehash: 8af5a8149faab3bece62e4da5d41138aaede16e7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471209"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504902"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT로 작성된 COM 구성 요소 사용
 
-기능을 사용할 수는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 라이브러리는 DirectX api는 고성능 2d 및 3d 그래픽 등의 COM 구성 요소를 사용 하도록 합니다. C + + /winrt는 성능 저하 없이 DirectX를 사용 하는 가장 간단한 방법은 합니다. 이 항목에서는 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여를 + WinRT COM 클래스와 인터페이스를 사용 하도록 합니다. 수, 물론, 혼합 하 여 COM 및 Windows 런타임 프로그래밍 내에서 동일한 C + + WinRT 프로젝트.
+기능을 사용 합니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 라이브러리는 DirectX api 고성능 2d 및 3d 그래픽 등의 COM 구성 요소를 사용 하도록 합니다. C + + /winrt는 성능 저하 없이 DirectX를 사용 하는 가장 간단한 방법은 합니다. 이 항목에서는 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여 + WinRT COM 클래스와 인터페이스를 사용 하도록 합니다. 동일한 C + 내에서 COM 및 Windows 런타임 프로그래밍 혼합 물론 수, + WinRT 프로젝트입니다.
 
-이 항목의 끝 최소한의 Direct2D 응용 프로그램의 전체 소스 코드 샘플을 찾을 수 있습니다. 해당 코드에서 발췌 있다가 C +를 사용 하 여 COM 구성 요소를 사용 하는 방법을 설명 하는 데 사용 이동을 + C +의 다양 한 기능을 사용 하 여 WinRT + WinRT 라이브러리.
+이 항목의 끝에는 최소한의 Direct2D 응용 프로그램의 전체 소스 코드 목록을 확인할 수 있습니다. 해당 코드에서 발췌 있다가 C +를 사용 하 여 COM 구성 요소를 사용 하는 방법을 설명 하기 위해 사용 하 여 이동을 + C + 다양 한 기능을 사용 하 여 WinRT + WinRT 라이브러리입니다.
 
 ## <a name="com-smart-pointers-winrtcomptruwpcpp-ref-for-winrtcom-ptr"></a>COM 스마트 포인터 ([**winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
 
-COM을 사용 하 여 프로그래밍 하는 경우 (된의 COM의 발전 된 형태는 Windows 런타임 Api에 대 한 백그라운드 작업 true도) 개체를 사용 하 여는 것이 아니라 인터페이스와 함께 직접 작동 합니다. COM 클래스에서 함수를 호출 하도록 예를 들어 활성화 클래스를 캡처하거나 인터페이스를 가져오고 해당 인터페이스에서 함수를 호출 합니다. 개체의 상태에 액세스 하려면 하지 해당 데이터 멤버 액세스 직접; 대신, 인터페이스에서 접근자 및 변경자 함수를 호출합니다.
+COM을 사용 하 여 프로그래밍 인터페이스를 사용 하 여 직접 아닌 개체 (에 true COM의 발전 된 형태는 Windows 런타임 Api에 대 한 백그라운드 작업)를 사용 하 여 작동 합니다. COM 클래스에서 함수를 호출 하도록 예를 들어 활성화 클래스를 캡처하거나 인터페이스를 가져오고 해당 인터페이스에서 함수를 호출 합니다. 개체의 상태에 액세스 하려면 하지 해당 데이터 멤버 액세스 직접; 대신, 인터페이스에서 접근자 및 변경자 함수를 호출합니다.
 
-더 구체적으로 인터페이스 *포인터*와 상호 작용 이야기할 합니다. C + COM 스마트 포인터 형식의 존재 여부를 장점에서는를 위해서는 + WinRT&mdash; [**winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 유형.
+더 구체적으로 인터페이스 *포인터*를 조작 하는 방법에 대 한 보인다면 했습니다. C + COM 스마트 포인터 형식의 존재 여부를 장점 하는를 위해서는 + WinRT&mdash; [**winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 유형입니다.
 
 ```cppwinrt
 winrt::com_ptr<ID2D1Factory1> factory;
 ```
 
-위의 코드는 초기화 되지 않은 스마트 포인터 [**ID2D1Factory1**](https://msdn.microsoft.com/library/Hh404596) COM 인터페이스를 선언 하는 방법을 보여 줍니다. 스마트 포인터를 초기화 하지 않으므로 모든 실제 개체 (이 되지 가리키는 인터페이스 전혀)에 속한 **ID2D1Factory1** 인터페이스를 아직 가리키는. 이렇게; 가능성이 되었으나 과 COM 참조를 가리키는 인터페이스의 소유 하는 개체의 수명을 관리 하 고 해당 인터페이스 함수를 호출 하는 중간 되도록 횟수를 통해 기능 작업도 (스마트 포인터 되 고).
+위의 코드는 초기화 되지 않은 스마트 포인터 [**ID2D1Factory1**](https://msdn.microsoft.com/library/Hh404596) COM 인터페이스를 선언 하는 방법을 보여 줍니다. 스마트 포인터를 초기화 하지 않으므로 모든 실제 개체 (이 없는 가리키는 인터페이스 전혀)에 속한 **ID2D1Factory1** 인터페이스를 아직 가리키는. 이렇게; 가능성이 되었으나 과 COM 참조를 가리키는 인터페이스의 소유 하는 개체의 수명을 관리 하 고 해당 인터페이스 함수를 호출 하는 중간 이어야 횟수를 통해 기능 작업도 (스마트 포인터 되 고).
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-void"></a>**Void** 로 인터페이스 포인터를 반환 하는 COM 함수
 
@@ -47,11 +47,11 @@ D2D1CreateFactory(
 );
 ```
 
-위의 코드의 마지막 매개 변수를 통해가 **ID2D1Factory1** 인터페이스 포인터를 반환 하는 [**D2D1CreateFactory**](/windows/desktop/api/d2d1/nf-d2d1-d2d1createfactory) 함수를 호출 **void\ * \ *** 유형. 많은 COM 함수 반환 하는 **void\ * \ *** 합니다. 이러한 기능에 대해 표시 된 대로 [**put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function) 를 사용 합니다.
+위의 코드의 마지막 매개 변수를 통해은 **ID2D1Factory1** 인터페이스 포인터를 반환 하는 [**D2D1CreateFactory**](/windows/desktop/api/d2d1/nf-d2d1-d2d1createfactory) 함수를 호출 **void\ * \ *** 형식입니다. 많은 COM 함수 반환 하는 **void\ * \ *** 합니다. 이러한 기능에 대해 표시 된 대로 [**put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function) 를 사용 합니다.
 
 ## <a name="com-functions-that-return-a-specific-interface-pointer"></a>특정 인터페이스 포인터를 반환 하는 COM 함수
 
-[**D3D11CreateDevice**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수는 antepenultimate 매개 변수를 통해 [**ID3D11Device**](https://msdn.microsoft.com/library/Hh404596) 인터페이스 포인터를 반환 **ID3D11Device\ * \ *** 유형. [**Com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function)와 같은 특정 인터페이스 포인터를 반환 하는 함수를 사용 합니다.
+[**D3D11CreateDevice**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수는 antepenultimate 매개 변수를 통해 [**ID3D11Device**](https://msdn.microsoft.com/library/Hh404596) 인터페이스 포인터를 반환 **ID3D11Device\ * \ *** 형식입니다. 와 같은 특정 인터페이스 포인터를 반환 하는 함수를 위해 [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function)를 사용 합니다.
 
 ```cppwinrt
 winrt::com_ptr<ID3D11Device> device;
@@ -61,7 +61,7 @@ D3D11CreateDevice(
     ...);
 ```
 
-이전 섹션의 코드 예제에서는 원시 **D2D1CreateFactory** 함수를 호출 하는 방법을 보여 줍니다. 하지만 **D2D1CreateFactory**를 호출 하면이 항목에 대 한 코드 예제에서는 원시 API를 래핑하는 도우미 함수 템플릿을 사용 하 고 코드 예제에서는 [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function)실제로 사용 되는 하므로 실제로 합니다.
+이전 섹션의 코드 예제에서는 원시 **D2D1CreateFactory** 함수를 호출 하는 방법을 보여 줍니다. 하지만이 항목에 대 한 코드 예제에서는 **D2D1CreateFactory**를 호출 하면 원시 API를 래핑하는 도우미 함수 템플릿을 사용 하 고 코드 예제에서는 [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function)실제로 사용 되는 하므로 실제로.
 
 ```cppwinrt
 winrt::com_ptr<ID2D1Factory1> factory;
@@ -73,7 +73,7 @@ D2D1CreateFactory(
 
 ## <a name="com-functions-that-return-an-interface-pointer-as-iunknown"></a>**IUnknown** 으로 인터페이스 포인터를 반환 하는 COM 함수
 
-[**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수는 마지막 매개 변수를 통해 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) 유형인 있는 DirectWrite 공장 인터페이스 포인터를 반환 합니다. 이러한 기능을 위해 사용 하 여 [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function), 하지만 재해석 하려면 캐스팅 하는 **IUnknown**.
+[**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory) 함수는 마지막 매개 변수를 통해 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) 유형인는 DirectWrite 공장 인터페이스 포인터를 반환 합니다. 이러한 기능을 위해 사용 하 여 [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function)하지만 재해석 하려면 캐스팅 하는 **IUnknown**.
 
 ```cppwinrt
 DWriteCreateFactory(
@@ -85,7 +85,7 @@ DWriteCreateFactory(
 ## <a name="re-seat-a-winrtcomptr"></a>**Winrt:: com_ptr** 재연결
 
 > [!IMPORTANT]
-> [**Winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 이미 장착 되어 있는 경우 (내부 원시 포인터에 이미 대상)를 다른 개체를 가리키도록 재연결 하려면 먼저 할당 해야 합니다 `nullptr` 를&mdash;아래의 코드 예제에 표시 된 대로 합니다. 그렇지 않으면 다음 이미 장착 **com_ptr** 문제에 그릴 주의가 ( [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) 또는 [**put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)호출) 하는 경우 해당 내부 포인터가 null이 아닌지 가정 하 여 합니다.
+> [**Winrt:: com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 이미 장착 되어 있는 경우 (내부 원시 포인터 이미 대상) 다른 개체를 가리키도록 재연결 하려면 먼저 할당 해야 합니다 `nullptr` 를&mdash;아래의 코드 예제에 표시 된 대로 합니다. 그렇지 않으면 다음 이미 장착 **com_ptr** 문제에 그릴 주의가 ( [**com_ptr:: put**](/uwp/cpp-ref-for-winrt/com-ptr#comptrput-function) 또는 [**put_void**](/uwp/cpp-ref-for-winrt/com-ptr#comptrputvoid-function)호출) 하는 경우 해당 내부 포인터가 null이 아닌지 가정 하 여 합니다.
 
 ```cppwinrt
 winrt::com_ptr<ID2D1SolidColorBrush> brush;
@@ -101,7 +101,7 @@ target->CreateSolidColorBrush(
 
 ## <a name="handle-hresult-error-codes"></a>HRESULT 오류 코드를 처리 합니다.
 
-COM 함수에서 반환 된 HRESULT의 값을 확인 하 고 예외를 throw 하는 오류 코드를 나타내는 [**winrt:: check_hresult을**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)호출 합니다.
+COM 함수에서 반환 된 HRESULT 값을 확인 하 고 오류 코드를 나타내는 예외를 throw [**winrt:: check_hresult을**](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)호출 합니다.
 
 ```cppwinrt
 winrt::check_hresult(D2D1CreateFactory(
@@ -128,7 +128,7 @@ winrt::check_hresult(D2D1CreateFactory(
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>**IUnknown** 인터페이스 포인터를 사용 하는 COM 함수
 
-사용자 **com_ptr** **IUnknown** 인터페이스 포인터를 사용 하는 함수에 전달 하는 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#getunknown-function) 무료 함수를 호출할 수 있습니다.
+에 **com_ptr** **IUnknown** 인터페이스 포인터를 사용 하는 함수에 전달 하는 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#getunknown-function) 무료 함수를 호출할 수 있습니다.
 
 ```cppwinrt
 winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
@@ -139,7 +139,7 @@ winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>전달 하 고 반환 하는 COM 스마트 포인터
 
-**Winrt:: com_ptr** 의 숫자 형태로 COM 스마트 포인터를 수행 하는 함수 또는 참조 상수 참조로 작업을 수행 해야 합니다.
+**Winrt:: com_ptr** 의 형태로 COM 스마트 포인터를 수행 하는 함수 또는 참조 상수 참조로 작업을 수행 해야 합니다.
 
 ```cppwinrt
 ... GetDxgiFactory(winrt::com_ptr<ID3D11Device> const& device) ...
@@ -166,7 +166,7 @@ void ExampleFunction(winrt::com_ptr<ID3D11Device> const& device)
 }
 ```
 
-또는 [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#comptrtryas-function)를 검사할 수 있는 값을 반환 하는 사용 하 여 `nullptr` 쿼리의 성공 했는지 여부를 확인 합니다.
+또는 [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#comptrtryas-function)를 검사할 수 있는 값을 반환 하는 사용 하 여 `nullptr` 쿼리 성공 했는지 여부를 확인 합니다.
 
 ## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>최소한의 Direct2D 응용 프로그램의 전체 소스 코드 목록
 
@@ -482,7 +482,7 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="working-with-com-types-such-as-bstr-and-variant"></a>COM 형식 BSTR 변형 등의 작업
 
-보다시피, C + + WinRT 구현 하 고 COM 인터페이스를 호출 하는 것에 대 한 지원을 제공 합니다. 변형 BSTR 등 COM 형식을 사용 하는 원시 형태로 (적절 한 Api)와 함께 사용할 옵션 항상입니다. 또는 [활성 ATL (템플릿 라이브러리)](/cpp/atl/active-template-library-atl-concepts)등의 프레임 워크 또는 Visual c + + 컴파일러의 [COM 지원](/cpp/cpp/compiler-com-support)또는 고유한 래퍼도에서 제공 하는 래퍼를 사용할 수 있습니다.
+보다시피, C + + WinRT 구현과 COM 인터페이스를 호출에 대 한 지원을 제공 합니다. BSTR 등 변형 COM 형식을 사용 하는 원시 형태로 (적절 한 Api)와 함께 사용할 옵션 항상입니다. 또는 [활성 템플릿 라이브러리 (ATL)](/cpp/atl/active-template-library-atl-concepts)등의 프레임 워크 또는 Visual c + + 컴파일러 [COM 지원](/cpp/cpp/compiler-com-support)또는 고유한 래퍼도에서 제공 하는 래퍼를 사용할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::check_hresult 함수](/uwp/cpp-ref-for-winrt/error-handling/check-hresult)

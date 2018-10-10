@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 160a4ab0ff5bdc40ea46ff6d8fb9fd8e47f560e3
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461752"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504720"
 ---
 # <a name="hardware-drm"></a>하드웨어 DRM
 
@@ -83,7 +83,7 @@ localSettings.values["SoftwareOverride"] = 1;
 mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-하드웨어 DRM 사용 중인 소프트웨어 DRM이 C:\\Users\\ 보면 확인할 가장 좋은 방법은&lt;사용자 이름&gt;\\AppData\\Local\\Packages\\&lt;응용 프로그램 이름&gt;\\LocalCache\\PlayReady\\\*
+하드웨어 DRM에에서는 소프트웨어 DRM이 C:\\Users\\에 대해 확인할 가장 좋은 방법은&lt;사용자 이름&gt;\\AppData\\Local\\Packages\\&lt;응용 프로그램 이름&gt;\\LocalCache\\PlayReady\\\*
 
 -   mspr.hds 파일이 있으면 소프트웨어 DRM이 적용되는 것입니다.
 -   또 다른 \*.hds 파일이 있으면 하드웨어 DRM이 적용되는 것입니다.

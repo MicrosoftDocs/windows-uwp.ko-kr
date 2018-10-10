@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a4780c92fc16adb697783ecee50d36523ff92998
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462309"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504327"
 ---
 # <a name="usersxuidxuidhistorytitles"></a>/users/xuid({xuid})/history/titles
  
-이 유니버설 URI (Resource Identifier)는 사용자의 관련 도전 과제 타이틀 기록에 액세스할 수 있습니다.
+이 유니버설 리소스 식별자 (URI)는 사용자의 관련 도전 과제 타이틀 기록에 액세스할 수 있습니다.
  
 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
  

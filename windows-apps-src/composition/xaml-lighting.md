@@ -15,11 +15,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 672efaa0899fa8b63b5ec0fda09a20f4f0ab7d67
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466321"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505315"
 ---
 # <a name="xaml-lighting"></a>XAML 조명
 
@@ -29,7 +29,7 @@ ms.locfileid: "4466321"
 
 ## <a name="applying-lights-to-xaml-uielements"></a>XAML UIElements에 조명 적용
 
-[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) 개체는 [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight)에 적용하여 동적으로 XAML UIElements를 조명하는 데 사용됩니다. XamlLight는 UIElements 또는 uielements 트리에 적용 되는 XAML 브러시를 대상으로 하는 것에 대 한 메서드를 제공 하 고 현재 있는지 여부에 따라 리소스 사용 CompositionLight의 수명을 관리 합니다.
+[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) 개체는 [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight)에 적용하여 동적으로 XAML UIElements를 조명하는 데 사용됩니다. XamlLight는 UIElements 또는 uielements 트리에 적용 하 고 XAML 브러시에 대 한 메서드를 제공 하 고 현재 있는지 여부에 따라 리소스 사용 CompositionLight의 수명을 관리 합니다.
 
 - **브러시**를 XamlLight로 대상으로 지정하면 해당 브러시를 사용하는 모든 UIElements의 일부가 조명에 의해 켜집니다.
 - XamlLight로 **UIElement**를 대상으로 지정하는 경우 전체 UIElement 및 하위 UIElements가 모두 조명에 의해 켜집니다.
@@ -461,10 +461,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-이 빛이 모든 XAML UIElement 또는 브러시 하 게 빛을 적용할 수 있습니다. 이 예제에서는 서로 다른 잠재적 사용법을 보여 줍니다.
+이 빛이 하기 위해 모든 XAML UIElement 또는 브러시를 적용할 수 있습니다. 이 예제에서는 다른 잠재적 사용법을 보여 줍니다.
 
 > [!Important]
-> 에 대 한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 아래의 태그에서. 연결 된 속성은 코드 숨김에 이미 설정 됩니다.
+> 에 대 한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 아래의 태그입니다. 연결 된 속성은 코드 숨김에 이미 설정 됩니다.
 
 ```xaml
 <StackPanel Width="100">

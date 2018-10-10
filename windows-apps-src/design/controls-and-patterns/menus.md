@@ -17,15 +17,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 20b6f54f39be116ad77cb5a179ff8c3d188eb8c4
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472390"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504617"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
-메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 명령 또는 옵션 목록을 표시합니다. 단일, 인라인 메뉴를 표시 하려면 메뉴 플라이 아웃을 사용 합니다. 앱 창의 위쪽에 일반적으로 가로 행에서 메뉴 집합을 표시 하려면 메뉴 모음을 사용 합니다. 각 메뉴 메뉴 항목 및 하위 메뉴 있을 수 있습니다.
+메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 명령 또는 옵션 목록을 표시합니다. 메뉴 플라이 아웃을 사용 하 여 단일, 인라인 메뉴를 표시 합니다. 메뉴 모음을 사용 하 여 앱 창의 위쪽에 일반적으로 가로 행에 일련의 메뉴를 표시 합니다. 각 메뉴 메뉴 항목 및 하위 메뉴 있을 수 있습니다.
 
 ![일반적인 상황에 맞는 메뉴 예](images/contextmenu_rs2_icons.png)
 
@@ -41,17 +41,17 @@ ms.locfileid: "4472390"
 
 메뉴 및 상황에 맞는 메뉴는 명령을 구성하고 사용자가 요청할 때까지 이를 숨겨 공간을 절약합니다. 특정 명령이 자주 사용되고 사용 가능한 공간이 있다면 사용자가 메뉴를 사용하지 않고도 이용할 수 있도록 메뉴 대신 해당 요소에 직접 배치할 수 있습니다.
 
-메뉴 및 상황에 맞는 메뉴는 명령을 구성 알림 또는 확인 요청을 등의 임의 콘텐츠를 표시 하는 [대화 상자 또는 플라이 아웃을](dialogs.md)사용 합니다.
+메뉴 및 상황에 맞는 메뉴는 명령을 구성 알림 또는 확인 요청 등의 임의 콘텐츠를 표시 하는 [대화 상자 또는 플라이 아웃을](dialogs.md)사용 합니다.
 
 ### <a name="menubar-vs-menuflyout"></a>메뉴 모음 및 MenuFlyout
 
-캔버스에서 UI 요소에 연결 된 플라이 아웃에 메뉴를 표시 하려면 메뉴 항목을 호스트 하려면 MenuFlyout 컨트롤을 사용 합니다. 일반 메뉴 또는 상황에 맞는 메뉴 메뉴 플라이 아웃을 호출할 수 있습니다. 메뉴 플라이 아웃 단일 최상위 메뉴 (및 선택적 하위 메뉴)를 호스트합니다.
+캔버스에서 UI 요소에 연결 된 플라이 아웃에 메뉴를 표시 하려면 호스트 메뉴 항목을 MenuFlyout 컨트롤을 사용 합니다. 일반적인 메뉴 또는 상황에 맞는 메뉴로 메뉴 플라이 아웃을 호출할 수 있습니다. 메뉴 플라이 아웃 단일 최상위 메뉴 (및 선택적 하위 메뉴)를 호스트 합니다.
 
 가로 행에 일련의 여러 최상위 수준에 맞는 메뉴를 표시 하려면 메뉴 모음을 사용 합니다. 일반적으로 앱 창의 맨 위에 있는 메뉴 모음을 배치 합니다.
 
-### <a name="menubar-vs-commandbar"></a>CommandBar 및 메뉴 모음
+### <a name="menubar-vs-commandbar"></a>메뉴 모음 및 CommandBar
 
-메뉴 모음과 CommandBar 둘 다 사용자에 게 명령을 노출 하는 데 사용할 수 있는 표면을 나타냅니다. 메뉴 모음에는 더 많은 조직 또는 허용 되는 CommandBar 보다 그룹화 할 수 있는 앱에 대 한 명령 집합을 노출 하는 빠르고 간단한 방법을 제공 합니다.
+메뉴 모음과 CommandBar 모두 사용자에 게 명령을 노출 하는 데 사용할 수 있는 표면을 나타냅니다. 메뉴 모음에 더 많은 조직 또는 허용 되는 CommandBar 보다 그룹화 할 수 있는 앱에 대 한 명령 집합을 표시 하는 빠르고 간단한 방법을 제공 합니다.
 
 메뉴 모음 CommandBar와 함께에서 사용할 수도 있습니다. 자주 사용 되는 명령을 강조 표시 하는 명령 및 CommandBar의 대부분을 제공 하는 메뉴 모음을 사용 합니다.
 
@@ -73,14 +73,14 @@ ms.locfileid: "4472390"
 
 ## <a name="menus-vs-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
-메뉴 및 상황에 맞는 메뉴는 모양과 포함할 수 있는 항목 및 유사 합니다. 실제로 동일한 컨트롤인 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)만들기 위해 사용할 수 있습니다. 차이점은 사용자 액세스를 사용 하는 방법입니다.
+메뉴 및 상황에 맞는 메뉴는 모양과 포함할 수 있는 항목 및 유사 합니다. 실제로 동일한 컨트롤인 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)을 만들기 위해 사용할 수 있습니다. 사용자가 액세스할 수 있도록 어떻게 차이가 있습니다.
 
 메뉴 또는 상황에 맞는 메뉴는 언제 사용해야 하나요?
 
 - 호스트 요소가 단추이거나 또는 주 역할이 추가 명령을 제공하는 일부 다른 명령 요소인 경우 메뉴를 사용합니다.
 - 호스트 요소가 주요 목적과 형식이 다른 일부 요소를 사용하는 경우(예: 텍스트 또는 이미지 표시) 상황에 맞는 메뉴를 사용합니다.
 
-예를 들어, 필터링 및 정렬 목록에 대 한 옵션을 제공 하기 위해 단추에 메뉴를 사용 합니다. 이 시나리오에서 단추 컨트롤의 주요 목적은 메뉴에 대한 액세스를 제공하는 것입니다.
+예를 들어 단추에 메뉴를 사용 하 여 필터링 및 정렬 목록에 대 한 옵션을 제공 합니다. 이 시나리오에서 단추 컨트롤의 주요 목적은 메뉴에 대한 액세스를 제공하는 것입니다.
 
 ![메일 메뉴의 예](images/Mail_Menu.png)
 
@@ -129,7 +129,7 @@ ms.locfileid: "4472390"
 ````
 
 > [!TIP]
-> MenuFlyoutItem의 아이콘 크기는 16x16px입니다. SymbolIcon, FontIcon 또는 PathIcon을 사용 하면 아이콘이 화질 손실 없이 배율이 올바른 크기로 자동으로 조정 됩니다. BitmapIcon을 사용할 경우 자산이 16x16px인지 확인하세요.  
+> MenuFlyoutItem의 아이콘 크기는 16x16px입니다. SymbolIcon, FontIcon 또는 PathIcon을 사용 하는 경우 아이콘 화질 손실 없이 배율이 올바른 크기로 자동으로 조정 됩니다. BitmapIcon을 사용할 경우 자산이 16x16px인지 확인하세요.  
 
 ## <a name="create-a-menu-flyout-or-a-context-menu"></a>메뉴 플라이 아웃 이나 상황에 맞는 메뉴 만들기
 
@@ -219,14 +219,14 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-menu-bar"></a>메뉴 모음 만들기
 
-> **미리 보기**: 메뉴 모음에 [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)필요 합니다.
+> **미리 보기**: 메뉴 모음에는 [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)필요 합니다.
 
-동일한 요소를 사용 하 여 에서처럼 메뉴 플라이 아웃 메뉴 모음에서 메뉴를 만들 수 있습니다. 그러나 MenuFlyoutItem 개체를 MenuFlyout에 그룹화 하는 대신 그룹화 있습니다 MenuBarItem 요소에서. 각 MenuBarItem 최상위 수준 메뉴의 메뉴 모음에 추가 됩니다.
+동일한 요소를 사용 하 여 같이 메뉴 플라이 아웃 메뉴 모음에서 메뉴를 만들 수 있습니다. 그러나 MenuFlyoutItem 개체를 MenuFlyout에 그룹화 하는 대신 그룹화 있습니다 MenuBarItem 요소에서. 각 MenuBarItem 최상위 메뉴의 메뉴 모음에 추가 됩니다.
 
 ![메뉴 모음의 예](images/menu-bar-submenu.png)
 
 > [!NOTE]
-> 이 예제에서는 UI 구조를 만드는 방법에 대해서만 표시 하지만 구현의 명령 중 하나는 표시 되지 않습니다.
+> 이 예제에서는 UI 구조를 만드는 방법에 대해서만 표시 하지만 구현 명령 중 하나는 표시 되지 않습니다.
 
 ```xaml
 <MenuBar>

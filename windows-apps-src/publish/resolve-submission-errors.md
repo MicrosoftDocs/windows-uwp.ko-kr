@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aa30af537874f3c3f4845706de6f6788c7b08fb
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463903"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506152"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 
@@ -29,9 +29,9 @@ UWP 앱을 제출 하는 경우 패키지 파일에 스토어에 대 한 Visual 
 
 ## <a name="desktop-application"></a>데스크톱 응용 프로그램
 
-Win32와 UWP 바이너리를 포함 하는 패키지를 제출 하려는 경우 Visual Studio 2017 업데이트 4에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만들 수 있는지 확인 합니다. UWP 프로젝트 템플릿을 사용 하 여 패키지를 만들 수는 패키지를 스토어 또는 테스트용으로 로드, 다른 Pc 제출 수 없습니다. 성공적으로 패키지를 게시 하는 경우에 사용자의 PC에서 예기치 않은 방식으로 작동할 수 있습니다. 자세한 내용은 [Visual Studio (데스크톱 브리지)를 사용 하 여 앱 패키지]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조 하세요.
+Win32 및 UWP 바이너리를 포함 하는 패키지를 제출 하려는 경우 Visual Studio 2017 업데이트 4에서 사용할 수 있는 Windows 패키징 프로젝트를 사용 하 여 해당 패키지를 만들 수 있는지 확인 합니다. UWP 프로젝트 템플릿을 사용 하 여 패키지를 만들 수는 패키지를 스토어 또는 테스트용으로 로드, 다른 Pc를 제출할 수 없습니다. 성공적으로 패키지를 게시 하는 경우에 사용자의 PC에서 예기치 않은 방식으로 작동할 수 있습니다. 자세한 내용은 [Visual Studio (데스크톱 브리지)를 사용 하 여 앱 패키지]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조 하세요.
 
-## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x 이전 버전
+## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x이 하
 
 전처리 중에Windows Phone 패키지의 문제가 감지되면 **오류 2001**이 표시될 수 있습니다. 대부분의 경우 오류를 수정하고 앱 패키지를 다시 작성해야 합니다. 이 작업이 끝나면 **스토어에 제출**을 다시 클릭하기 전에 제출의 [패키지](upload-app-packages.md) 페이지에서 이전 패키지를 새 패키지로 바꿉니다.
 
@@ -53,7 +53,7 @@ Win32와 UWP 바이너리를 포함 하는 패키지를 제출 하려는 경우 
 - 앱에 ID가 이미 있는 경우에도 패키지에 사용하려는 이름을 예약해야 할 수 있습니다. **앱 관리**에서 [앱 이름 관리](manage-app-names.md)를 클릭합니다. 사용할 이름을 입력하고 **앱 이름 예약**을 클릭합니다.
 
 > [!IMPORTANT]
->  사용 하려는 이름을 사용할 수 없는 경우 다른 앱 수에 해당 이름을 이미 예약 합니다. 앱에서 해당 이름을 이미 게시 또는 [지원 팀에 문의](https://go.microsoft.com/fwlink/p/?LinkId=331509)하 고 사용할 수 있는 권한이 있다고 생각 하는 경우.  
+>  사용 하려는 이름을 사용할 수 없는 경우 다른 앱 수에 해당 이름을 이미 예약 합니다. [지원 팀에 문의](https://go.microsoft.com/fwlink/p/?LinkId=331509)으로 사용할 수 있는 권한이 생각 하는 경우 또는 앱이 이미 해당 이름으로 게시 됩니다.  
 
  
 

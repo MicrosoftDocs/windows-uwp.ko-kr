@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c7101dd5cb5e481c1ccfb03e6f33f759196bbd1d
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469226"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504741"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---june-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 6 월
 
@@ -27,7 +27,7 @@ ms.locfileid: "4469226"
 Xbox Live SDK는 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [버전 14.0.23107.0]를 지원합니다.
 
 ## <a name="contextual-search"></a>상황에 맞는 검색
-다음과 같은 새로운 클래스에 추가 된 합니다 `contextual_search` 게임 클립을 검색 하는 API:
+다음과 같은 새로운 클래스에 추가 된는 `contextual_search` 게임 클립을 검색 하는 API:
 
 * `contextual_search_game_clip`
 * `contextual_search_game_clip_stat`
@@ -38,15 +38,15 @@ Xbox Live SDK는 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [
 자세한 내용은 참조 설명서를 참조 하세요.
 
 ## <a name="networking"></a>네트워킹
-Xbox Live SDK는 이제 새 포함 어설션는 감지 단일 제목 인스턴스에서 사용자 당 5 개 이상의 websocket이 생성 됩니다.
+Xbox Live SDK는 이제 새 포함 어설션는 감지 단일 품목이 인스턴스에서 사용자 당 5 개 이상의 websocket이 생성 됩니다.
 
 이 비활성화할 수를 호출 하 여 어설션 `disable_asserts_for_maximum_number_of_websockets_activated()`.
 
-> **참고:** 소셜 관리자 및 멀티 플레이어 관리자 제목에 이러한 기능을 사용 하는 경우 단일 결합 된 websocket을 사용 합니다.
+> **참고:** 소셜 관리자 및 멀티 플레이어 관리자 타이틀에서 이러한 기능을 사용 하는 경우 단일 결합 된 websocket을 사용 합니다.
 
 ## <a name="tools"></a>도구
-* 이제 Xbox Live 복원 력 플러그 인에 대 한 Fiddler는 Xbox Live SDK에 포함 됩니다.  
+* Xbox Live 복원 력 플러그 인에 대 한 Fiddler Xbox Live SDK에 포함 됩니다.  
 추가 기능을 통해 개발자는 선택적으로 Xbox Live에 대 한 호출을 차단 하도록 Fiddler입니다.
-이 플러그 인을 사용 하 여, 개발자는 복원 력 부분 서비스 중단 게임 제목에 걸쳐 테스트할 수 있습니다.
-도구에 Xbox Live 서비스 끝점 기본 제공 하 고 다른 오류 형식의 테스트할 수 있습니다.
+이 플러그인을 사용 하 여 개발자는 복원 력 게임 제목에 부분 서비스 중단에서 테스트할 수 있습니다.
+도구를 여러 형식의 Xbox Live 서비스 끝점 기본 제공 하 고 다른 오류에 대 한 테스트를 포함 합니다.
 모든 Xbox One 및 UWP 타이틀이 지원 됩니다.

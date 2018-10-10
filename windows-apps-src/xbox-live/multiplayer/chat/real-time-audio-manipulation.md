@@ -10,37 +10,37 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신, 버퍼 조작, 오디오 조작
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d5f9863bf4a023520486567de1f5feb1907b177
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462470"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504920"
 ---
 # <a name="real-time-audio-manipulation"></a>실시간 오디오 조작
 
-게임 채팅 2 개발자 검사 하 고 플레이어의 채팅 오디오 데이터를 조작할 채팅 오디오 파이프라인에 스스로 삽입 하는 옵션을 제공 합니다. 흥미로운 게임에서 플레이어의 음성 오디오 효과 적용 하는 데 유용할 수 있습니다. 게임 채팅 2의 오디오 조작 파이프라인은 오디오 데이터를 폴링할 수 있는 오디오 스트림 개체를 통해 상호 작용 합니다. 콜백을 사용 하 여, 아니라이 모델 검사 하거나 조작 개발자를 오디오 처리 스레드가 있으며 가장 편리한에 있습니다.
+게임 채팅 2 개발자 자체 검사 하 고 플레이어의 채팅 오디오 데이터를 조작할 채팅 오디오 파이프라인에 삽입 하는 옵션을 제공 합니다. 흥미로운 게임에서 플레이어의 음성 오디오 효과 적용 하는 데 유용할 수 있습니다. 게임 채팅 2의 오디오 조작 파이프라인은 오디오 데이터를 폴링할 수 있는 오디오 스트림 개체를 통해 상호 작용 합니다. 콜백을 사용 하는 것이 모델 검사 하거나 조작 개발자를 오디오 처리 스레드는 해당 가장 편리한에 있습니다.
 
-실시간 오디오 조작을 사용 하 여 간단한 연습 아래 추천은 다음 항목을 포함 하:
+실시간 오디오 조작을 사용 하 여 간단한 연습 다음 항목을 포함, 아래 추천 합니다.
 
 1. [오디오 조작 파이프라인 초기화](#initializing-the-audio-manipulation-pipeline)
-2. [오디오 스트림 상태 변경 처리](#processing-audio-stream-state-changes)
+2. [오디오 스트림 상태 변경 내용 처리](#processing-audio-stream-state-changes)
 3. [채팅 오디오를 인코딩할 미리 조작](#manipulating-pre-encode-chat-audio-data)
 4. [채팅 오디오 디코드 사후 조작](#manipulating-post-decode-chat-audio-data)
 5. [채팅 사용자 수명](#chat-user-lifetimes)
 
 ## <a name="initializing-the-audio-manipulation-pipeline"></a>오디오 조작 파이프라인 초기화
 
-기본적으로 게임 채팅 2 실시간 오디오 조작을 사용 하지 않습니다. 실시간 오디오 조작 하도록 앱을 지정 해야 원하는 하는 양식을 오디오 조작의에서 활성화 `chat_manager::initialize()` audioManipulationMode 매개 변수를 설정 하 여 합니다.
+기본적으로 게임 채팅 2 실시간 오디오 조작을 사용 하지 않습니다. 실시간 오디오 조작 하도록 앱 지정 해야 원하는 하는 양식을 오디오 조작에 사용 `chat_manager::initialize()` audioManipulationMode 매개 변수를 설정 합니다.
 
 현재 다음 오디오 조작 형식 지원 됩니다.
 
 * `game_chat_audio_manipulation_mode_flags::none` -오디오 조작을 사용 하지 않도록 설정 합니다. 기본 구성입니다. 이 모드에서 채팅 오디오를 계속 전송 됩니다.
-* `game_chat_audio_manipulation_mode_flags::pre_encode_stream_manipulation` -사용 하면 오디오 조작을 미리 인코딩합니다. 이 모드에서는 인코드 전에 조작 오디오 파이프라인을 통해 로컬 사용자가 생성 된 모든 채팅 오디오를 공급 됩니다. 앱만 채팅 오디오 데이터를 검사 하 고 조작 하지 인 경우에 것은 앱의 책임입니다 인코딩된 고 전송할 수 있도록 게임 채팅 2로 다시 변경 되지 않은 오디오 버퍼를 제출 하려면 여전히 합니다.
-* `game_chat_audio_manipulation_mode_flags::post_decode_stream_manipulation` -활성화 후 오디오 조작을 디코딩합니다. 이 모드는 현재 개발을 사용할 수 없습니다.
+* `game_chat_audio_manipulation_mode_flags::pre_encode_stream_manipulation` -사용 하면 오디오 조작을 미리 인코딩합니다. 이 모드에서는 인코드 전에 조작 오디오 파이프라인을 통해 로컬 사용자가 생성 된 모든 채팅 오디오를 제공 됩니다. 앱만 채팅 오디오 데이터를 검사 하 고 조작 하지 인 경우에 것은 앱의 책임 인코딩된 고 전송할 수 있도록 게임 채팅 2로 다시 변경 되지 않는 오디오 버퍼를 제출 하려면 여전히 합니다.
+* `game_chat_audio_manipulation_mode_flags::post_decode_stream_manipulation` -활성화 후 오디오 조작을 디코딩합니다. 이 모드 개발 중인를 사용해 서는 안 됩니다.
 
-## <a name="processing-audio-stream-state-changes"></a>오디오 스트림 상태 변경 처리
+## <a name="processing-audio-stream-state-changes"></a>오디오 스트림 상태 변경 내용 처리
 
-게임 채팅 2를 통해 오디오 스트림의 상태에 대 한 업데이트를 제공 합니다. `game_chat_stream_state_change` 구조입니다. 이러한 업데이트에 대 한 스트림 업데이트 되었습니다 및 업데이트 된 어떻게 정보를 저장 합니다. 이러한 업데이트에 대 한 호출을 통해 폴링할 수는 `chat_manager::start_processing_stream_state_changes()` 및 `chat_manager::finish_processing_stream_state_changes()` 메서드 쌍. 이 메서드 쌍을 최신, 대기 중인 오디오 스트림의 모든 상태 업데이트 제공 배열로 `game_chat_stream_state_change` 포인터를 구성 합니다. 앱의 배열을 반복 하 고 각 업데이트를 적절 하 게 처리 해야 합니다. 한 번 사용 가능한 모든 `game_chat_stream_state_change` 업데이트 처리 되어, 해당 배열을 통해 Game Chat 2에 다시 전달 되어야 `chat_manager::finish_processing_stream_state_changes()`. 예를 들면 다음과 같습니다.
+게임 채팅 2를 통해 오디오 스트림의 상태에 대 한 업데이트를 제공 합니다. `game_chat_stream_state_change` 구조입니다. 이러한 업데이트에 대 한 스트림이 업데이트 및 업데이트 된 방법을 정보를 저장 합니다. 이러한 업데이트에 대 한 호출을 통해 폴링할 수는 `chat_manager::start_processing_stream_state_changes()` 및 `chat_manager::finish_processing_stream_state_changes()` 메서드 쌍. 이 메서드 쌍을 최신, 대기 중인 오디오 스트림의 모든 상태 업데이트 제공 배열로 `game_chat_stream_state_change` 포인터를 구성 합니다. 앱은 배열을 반복 하 고 각 업데이트를 적절 하 게 처리 해야 합니다. 한 번 사용 가능한 모든 `game_chat_stream_state_change` 업데이트 처리 되어, 해당 배열 게임 채팅 2 ~에 다시 전달 되어야 `chat_manager::finish_processing_stream_state_changes()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t streamStateChangeCount;
@@ -74,11 +74,11 @@ chat_manager::singleton_instance().finish_processing_stream_state_changes(stream
 게임 채팅 2 미리 채팅을 통해 로컬 사용자에 대 한 오디오 데이터를 인코딩하는 데 대 한 액세스를 제공 합니다 `pre_encode_audio_stream` 클래스.
 
 ### <a name="stream-lifetime"></a>스트림 수명
-새 `pre_encode_audio_stream` 인스턴스는 사용 하 여 앱을 통해 전달 됩니다는 `game_chat_stream_state_change` 구조와의 `state_change_type` 필드는 설정 `game_chat_stream_state_change_type::pre_encode_audio_stream_created`. 이 스트림 상태 변경을 Game Chat 2에 반환 되 면 오디오 스트림을에 사용할 수 있게 됩니다 미리 오디오 조작 인코드 합니다.
+새 `pre_encode_audio_stream` 인스턴스를 사용 하 여 앱을 통해 전달 됩니다는 `game_chat_stream_state_change` 구조체를의 `state_change_type` 필드 설정 `game_chat_stream_state_change_type::pre_encode_audio_stream_created`. 이 스트림 상태 변경을 게임 채팅 2로 반환 되 면 오디오 스트림을에 사용할 수 있게 됩니다 미리 오디오 조작 인코드 합니다.
 
-기존 때 `pre_encode_audio_stream` 됩니다 오디오 조작에 사용 하 여 사용할 수 없는 앱 알려주지 통해는 `game_chat_stream_state_change` 구조체를의 `state_change_type` 필드는 설정 `game_chat_stream_state_change_type::pre_encode_audio_stream_closed`. 앱의 시작이 오디오 스트림와 관련 된 리소스를 정리 하는 기회입니다. 오디오 스트림에 대 한 없게이 스트림 상태 변경, Game Chat 2에 반환 되 면 오디오 조작 미리 인코드 합니다.
+기존 때 `pre_encode_audio_stream` 되 면 오디오 조작에 사용 하 여 사용할 수 없는 앱 알려주지 통해는 `game_chat_stream_state_change` 있는 구조 `state_change_type` 필드 설정 `game_chat_stream_state_change_type::pre_encode_audio_stream_closed`. 이 오디오 스트림와 관련 된 리소스를 정리 하려면 앱의 기회입니다. 오디오 스트림에 대 한 없게이 스트림 상태 변경을 게임 채팅 2로 반환 되 면 오디오 조작 미리 인코드 합니다.
 
-닫힌 경우 `pre_encode_audio_stream` 의 리소스를 모두 반환, 스트림 소멸 되 고 앱을 통해 알려주지는 `game_chat_stream_state_change` 구조체를의 `state_change_type` 필드는 설정 `game_chat_stream_state_change_type::pre_encode_audio_stream_destroyed`. 참조 또는이 스트림에 대 한 포인터를 정리 해야 합니다. 이 스트림 상태 변경, Game Chat 2에 반환 되 면 오디오 스트림 메모리 무효화 됩니다.
+닫힌 경우 `pre_encode_audio_stream` 모든의 리소스, 스트림 지워집니다 및 반환 응용 프로그램을 통해 알려주지는 `game_chat_stream_state_change` 구조체를의 `state_change_type` 필드 설정 `game_chat_stream_state_change_type::pre_encode_audio_stream_destroyed`. 참조 또는이 스트림에 대 한 포인터를 정리 해야 합니다. 일단이 스트림 상태 변경을 게임 채팅 2로 반환 되 면 오디오 스트림을 메모리 무효화 됩니다.
 
 ### <a name="stream-users"></a>스트림 사용자
 스트림과와 관련 된 사용자 목록을 사용 하 여 검사할 수 있습니다 `pre_encode_audio_stream::get_users()`.
@@ -90,20 +90,20 @@ chat_manager::singleton_instance().finish_processing_stream_state_changes(stream
 
 * 모노 형식을 사용 해야 합니다.
 * 32 비트 부동 소수점 PCM, 32 비트 정수 PCM, 또는 16 비트 정수 PCM 형식을 형식 이어야 합니다.
-* 형식의 샘플 속도 플랫폼을 기반으로 하는 필수 조건을 따라야 합니다. Xbox One 연대 8 kHz, 12 kHz, 16 kHz 및 24 kHz 샘플 속도 지원합니다. Xbox One 및 PC에 대 한 UWP 8 kHz, 12 kHz, kHz 16, 24 kHz, 32 kHz, 44.1 kHz 및 샘플 속도 48khz를 지원합니다.
+* 형식의 샘플 속도 플랫폼을 기반으로 하는 필수 조건을 수행 해야 합니다. Xbox One 종말 8 kHz, 12 kHz, 16 kHz 및 24 kHz 샘플 속도 지원합니다. Xbox One 및 PC에 대 한 UWP 8 kHz, 12 kHz, kHz 16, 24 kHz, 32 kHz, 44.1 kHz 및 샘플 속도 48khz를 지원합니다.
 
 ### <a name="retrieving-and-submitting-audio"></a>검색 하 고 오디오를 전송 합니다.
-앱이 쿼리할 수 있는 사전 처리를 사용 하 여 사용할 수 있는 버퍼의 수에 대 한 오디오 스트림을 인코딩하 `pre_encode_audio_stream::get_available_buffer_count()`. 앱이 버퍼의 최소 수 없을 때까지 오디오 처리를 지연 하려는 경우이 정보를 사용할 수 있습니다. 각 버퍼만 10은 대기 미리 오디오 스트림 인코딩 및 오디오 지연 하므로 앱 드레이닝는 것이 좋습니다. 대기 시간 오디오 파이프라인을 소개 합니다의 4 개 이상의 버퍼를 큐 전에 오디오 스트림을 미리 인코드 합니다.
+앱이 쿼리할 수 있는 사전 처리를 사용 하 여 사용할 수 있는 버퍼의 수에 대 한 오디오 스트림을 인코딩하 `pre_encode_audio_stream::get_available_buffer_count()`. 앱이 버퍼의 최소 수 없을 때까지 오디오 처리를 지연 하려는 경우이 정보를 사용할 수 있습니다. 각 부분에 10 개의 버퍼는 대기 미리 오디오 스트림 인코딩 및 오디오 지연 하므로 앱 방전 것이 좋습니다. 대기 시간 오디오 파이프라인을 소개 합니다의 4 개 이상의 버퍼를 큐 전에 오디오 스트림을 미리 인코드 합니다.
 
-앱에서 오디오 버퍼를 검색할 수를 미리 사용 하 여 오디오 스트림 인코딩 `pre_encode_audio_stream::get_next_buffer()`. 새 오디오 버퍼 마다 40ms 한 번 평균 사용할 수 있습니다. 이 메서드에서 반환 된 버퍼를 해제 해야 합니다 `pre_encode_audio_stream::return_buffer()` 작업이 완료 되 면 사용 합니다. 최대 10 대기 또는 unreturned 버퍼에 대 한 지정된 된 시간에 존재할 수는 미리 오디오 스트림에 인코드 합니다. 이 제한에 도달 하면 새 버퍼 플레이어의 오디오 소스에서 캡처한 뛰어난 버퍼의 일부 반환 될 때까지 삭제 됩니다.
+앱에서 오디오 버퍼를 검색할 수는 미리 사용 하 여 오디오 스트림 인코딩 `pre_encode_audio_stream::get_next_buffer()`. 새 오디오 버퍼 모든 40ms 한 번 평균 사용할 수 있습니다. 이 메서드에서 반환 된 버퍼를 해제 해야 합니다 `pre_encode_audio_stream::return_buffer()` 완료 했으면 사용 합니다. 최대 10 대기 또는 unreturned 버퍼에 대 한 지정된 된 시간에 존재할 수를 미리 오디오 스트림 인코딩 합니다. 이 제한에 도달 뛰어난 버퍼 중 일부는 반환 될 때까지 플레이어의 오디오 소스에서 캡처한 새 버퍼 삭제 됩니다.
 
-앱 인코드 및 전송을 사용 하 여 게임 채팅 2로 다시 검사 및 무중단 버퍼를 제출할 수 있습니다 `pre_encode_audio_stream::submit_buffer()`. 게임 채팅 2 버퍼에 전송 되므로 바로 내부 아웃 오디오 조작 지원 `pre_encode_audio_stream::submit_buffer()` 반드시 동일한 버퍼에서 검색 되도록 `pre_encode_audio_stream::get_next_buffer()`. 제출 된 이러한 버퍼에 대 한 개인 정보 보호/권한이이 스트림과 연결 된 사용자에 따라 적용 됩니다. 모든 40ms이 스트림에서 오디오의 다음 40ms 인코딩된을 전송 합니다. 오디오 hiccups를 방지 하려면 상수 속도로이 스트림에 지속적으로 들립니다 오디오 버퍼를 제출 해야 합니다.
+앱 인코드 및 전송을 사용 하 여 게임 채팅 2로 다시 검사 및 무중단 버퍼를 제출할 수 있습니다 `pre_encode_audio_stream::submit_buffer()`. 게임 채팅 2 지원 바로 및 위치를-오디오 조작이 버퍼에 제출 하므로 `pre_encode_audio_stream::submit_buffer()` 반드시 동일한 버퍼에서 검색 되도록 `pre_encode_audio_stream::get_next_buffer()`. 제출 된 이러한 버퍼에 대 한 개인 정보 보호/권한이이 스트림과 연결 된 사용자에 따라 적용 됩니다. 모든 40ms이 스트림의 오디오의 다음 40ms 인코딩된을 전송 합니다. 오디오 hiccups를 방지 하려면 상수 속도로이 스트림에 지속적으로 들립니다 오디오 버퍼를 제출 해야 합니다.
 
 ### <a name="stream-contexts"></a>스트림 컨텍스트
 앱 사용자 지정 포인터 크기의 컨텍스트 값을 관리할 수에 사용 하 여 오디오 스트림을 미리 인코드 `pre_encode_audio_stream::set_custom_stream_context()` 및 `pre_encode_audio_stream::custom_stream_context()`. 이러한 사용자 지정 스트림 컨텍스트 간 게임 채팅 2의 오디오 스트림 및 보조 데이터를 만드는 데 도움이 됩니다.: 메타 데이터, 게임 상태를 스트림 합니다.
 
 ### <a name="example"></a>예
-다음은 사용 하는 방법에 대 한 간소화 된 종단 간 샘플 미리 오디오 처리 한 프레임에서 오디오 스트림을 인코딩하:
+다음은 사용 하는 방법에 대 한 간단한 종단 간 샘플 미리 오디오 처리 한 프레임에서 오디오 스트림을 인코딩하:
 
 ```cpp
 uint32_t streamStateChangeCount;
@@ -211,17 +211,17 @@ Sleep(audioProcessingPeriodInMilliseconds);
 
 ## <a name="manipulating-post-decode-chat-audio-data"></a>채팅 오디오 데이터를 디코딩할 사후 조작
 
-게임 채팅 2 사후 채팅 오디오 데이터를 통해 디코드에 액세스할 수는 `post_decode_audio_source_stream` 및 `post_decode_audio_sink_stream` 사용자가 수 조작할 오디오 원격 사용자를 고유 하 게 채팅 오디오의 각 로컬 수신기에 대 한 클래스입니다.
+게임 채팅 2 사후 채팅을 통해 오디오 데이터를 디코드에 액세스할 수는 `post_decode_audio_source_stream` 및 `post_decode_audio_sink_stream` 사용자가 수 조작할 오디오 원격 사용자를 고유 하 게 채팅 오디오의 각 로컬 수신기에 대 한 클래스입니다.
 
 ### <a name="sources-and-sinks"></a>원본 및 싱크가
-Pre-encode 파이프라인 달리 모델 처리 후 오디오 데이터를 디코드에 대 한 분할 두 클래스에서: `post_decode_audio_source_stream` 및 `post_decode_audio_sink_stream`. 원격 사용자 로부터 디코딩된 오디오에서 검색할 수 있습니다 `post_decode_audio_source_stream` 개체를 조작 하 고 전송 `post_decode_audio_sink_stream` 개체를 렌더링 합니다. 게임 채팅 2의 간의 통합 오디오 처리 파이프라인 및 유용한 오디오 미들웨어 사후 디코드 사용할 수 있게 합니다.
+Pre-encode 파이프라인 달리 모델 처리 후 오디오 데이터를 디코드에 대 한 나누어져 두 클래스: `post_decode_audio_source_stream` 및 `post_decode_audio_sink_stream`. 원격 사용자의 디코딩된 오디오에서 검색할 수 있습니다 `post_decode_audio_source_stream` 개체를 조작 하 고 전송 `post_decode_audio_sink_stream` 개체를 렌더링 합니다. 게임 채팅 2의 간의 통합 오디오 처리 파이프라인을 가져오고 유용한 오디오 미들웨어 사후 디코드 사용할 수 있게 합니다.
 
 ### <a name="stream-lifetime"></a>스트림 수명
-새 `post_decode_audio_source_stream` 또는 `post_decode_audio_sink_stream` 인스턴스는 사용 하 여 앱을 통해 전달 됩니다는 `game_chat_stream_state_change` 있는 구조 `state_change_type` 필드는 설정 `game_chat_stream_state_change_type::post_decode_audio_source_stream_created` 또는 `game_chat_stream_state_change_type::post_decode_audio_sink_stream_created`각각 합니다. 오디오 스트림을 대 한 예정이 스트림 상태 변경, Game Chat 2에 반환 되 면 사후 오디오 조작 디코드 합니다.
+새 `post_decode_audio_source_stream` 또는 `post_decode_audio_sink_stream` 인스턴스를 사용 하 여 앱을 통해 전달 됩니다는 `game_chat_stream_state_change` 구조체의를 `state_change_type` 필드 설정 `game_chat_stream_state_change_type::post_decode_audio_source_stream_created` 또는 `game_chat_stream_state_change_type::post_decode_audio_sink_stream_created`각각 합니다. 이 스트림 상태 변경을 게임 채팅 2로 반환 되 면 오디오 스트림을에 사용할 수 있게 됩니다 후 오디오 조작 디코드 합니다.
 
-기존 때 `post_decode_audio_source_stream` 또는 `post_decode_audio_sink_stream` 해질 오디오 조작에 사용 하 여 사용할 수 없는 앱 알려주지 통해는 `game_chat_stream_state_change` 있는 구조 `state_change_type` 필드는 설정 `game_chat_stream_state_change_type::post_decode_audio_source_stream_closed` 또는 `game_chat_stream_state_change_type::post_decode_audio_sink_stream`각각 합니다. 앱의 시작이 오디오 스트림와 관련 된 리소스를 정리 하는 기회입니다. 오디오 스트림에 대 한 없게이 스트림 상태 변경, Game Chat 2에 반환 되 면 사후 오디오 조작 디코드 합니다. 원본 스트림에 대 한 더 많은 버퍼가 없는 조작에 대 한 대기을 의미 합니다. 싱크가 스트림에 대 한 버퍼 더 이상 렌더링 되는 제출을 의미 합니다.
+기존 때 `post_decode_audio_source_stream` 또는 `post_decode_audio_sink_stream` 되 면 오디오 조작에 사용 하 여 사용할 수 없는 앱 알려주지 통해는 `game_chat_stream_state_change` 있는 구조 `state_change_type` 필드 설정 `game_chat_stream_state_change_type::post_decode_audio_source_stream_closed` 또는 `game_chat_stream_state_change_type::post_decode_audio_sink_stream`각각 합니다. 이 오디오 스트림와 관련 된 리소스를 정리 하려면 앱의 기회입니다. 오디오 스트림에 대 한 없게이 스트림 상태 변경을 게임 채팅 2로 반환 되 면 사후 오디오 조작 디코드 합니다. 원본 스트림에 대 한 더 많은 버퍼가 없는 조작에 대 한 대기을 의미 합니다. 싱크가 스트림에 대 한 버퍼 더 이상 렌더링 되는 제출을 의미 합니다.
 
-닫힌 경우 `post_decode_audio_source_stream` 또는 `post_decode_audio_sink_stream` 의 리소스를 모두 반환, 스트림 소멸 되 고 앱을 통해 알려주지는 `game_chat_stream_state_change` 있는 구조 `state_change_type` 필드는 설정 `game_chat_stream_state_change_type::post_decode_audio_source_stream_destroyed` 또는 `game_chat_stream_state_change_type::post_decode_audio_sink_stream_destroyed`각각 합니다. 참조 또는이 스트림에 대 한 포인터를 정리 해야 합니다. 이 스트림 상태 변경, Game Chat 2에 반환 되 면 오디오 스트림 메모리 무효화 됩니다.
+닫힌 경우 `post_decode_audio_source_stream` 또는 `post_decode_audio_sink_stream` 모든의 리소스, 스트림 지워집니다 및 반환 응용 프로그램을 통해 알려주지는 `game_chat_stream_state_change` 구조체의를 `state_change_type` 필드 설정 `game_chat_stream_state_change_type::post_decode_audio_source_stream_destroyed` 또는 `game_chat_stream_state_change_type::post_decode_audio_sink_stream_destroyed`각각 합니다. 참조 또는이 스트림에 대 한 포인터를 정리 해야 합니다. 일단이 스트림 상태 변경을 게임 채팅 2로 반환 되 면 오디오 스트림을 메모리 무효화 됩니다.
 
 ### <a name="stream-users"></a>스트림 사용자
 Post-decode 소스 스트림과 연결 된 원격 사용자 목록을 사용 하 여 검사할 수 있습니다 `post_decode_audio_source_stream::get_users()`. Post-decode 싱크가 스트림과 연결 된 로컬 사용자 목록을 사용 하 여 검사할 수 있습니다 `post_decode_audio_sink_stream::get_users()`.
@@ -236,24 +236,24 @@ Post-decode 소스 스트림과 연결 된 원격 사용자 목록을 사용 하
 * 형식의 샘플 속도 초당 1000 및 200000 샘플 사이 여야 합니다.
 
 ### <a name="retrieving-and-submitting-audio"></a>검색 하 고 오디오를 전송 합니다.
-앱이 쿼리할 수 사후 처리를 사용 하 여 사용할 수 있는 버퍼의 수에 대 한 원본 오디오 스트림을 디코드 `post_decode_audio_source_stream::get_available_buffer_count()`. 앱이 버퍼의 최소 수 없을 때까지 오디오 처리를 지연 하려는 경우이 정보를 사용할 수 있습니다. 각 버퍼만 10은 대기 사후 소스 오디오 스트림을 디코드 및 오디오 지연 하므로 앱 드레이닝는 것이 좋습니다. 대기 시간 오디오 파이프라인을 소개 합니다의 4 개 이상의 버퍼를 큐 전에 오디오 스트림을 사후 디코드 합니다.
+앱이 쿼리할 수 있는 사후 처리를 사용 하 여 사용할 수 있는 버퍼의 수에 대 한 원본 오디오 스트림을 디코드 `post_decode_audio_source_stream::get_available_buffer_count()`. 앱이 버퍼의 최소 수 없을 때까지 오디오 처리를 지연 하려는 경우이 정보를 사용할 수 있습니다. 각 부분에 10 개의 버퍼는 대기 후 오디오 소스 스트림 디코딩하고 하므로 앱 방전 것이 좋습니다. 오디오 지연 대기 시간 오디오 파이프라인에 적용할가 4 개 이상의 버퍼를 큐 전에 오디오 스트림을 사후 디코드 합니다.
 
-앱에서 오디오 버퍼를 검색할 수를 사용 하 여 오디오 원본 스트림 사후 디코드 `post_decode_audio_source_stream::get_next_buffer()`. 새 오디오 버퍼 마다 40ms 한 번 평균 사용할 수 있습니다. 이 메서드에서 반환 된 버퍼를 해제 해야 합니다 `post_decode_audio_source_stream::return_buffer()` 작업이 완료 되 면 사용 합니다. 최대 10 대기 또는 unreturned 버퍼에 대 한 지정된 된 시간에 존재할 수는 사후 소스 오디오 스트림을 디코드 합니다. 이 제한에 도달 하면 원격 플레이어에서 새 디코딩된 버퍼 뛰어난 버퍼의 일부 반환 될 때까지 삭제 됩니다.
+앱에서 오디오 버퍼를 검색할 수는 사후 스트림을 사용 하 여 오디오 원본 디코드 `post_decode_audio_source_stream::get_next_buffer()`. 새 오디오 버퍼 모든 40ms 한 번 평균 사용할 수 있습니다. 이 메서드에서 반환 된 버퍼를 해제 해야 합니다 `post_decode_audio_source_stream::return_buffer()` 완료 했으면 사용 합니다. 최대 10 대기 또는 unreturned 버퍼에 대 한 지정된 된 시간에 존재할 수는 사후 소스 오디오 스트림을 디코드 합니다. 이 제한에 도달 원격 플레이어에서 새 디코딩된 버퍼 뛰어난 버퍼 중 일부는 반환 될 때까지 삭제 됩니다.
 
-앱을 통해 게임 채팅 2로 다시 검사 및 무중단 버퍼는 사후 싱크가 오디오 스트림을 렌더링에 사용 하 여 디코드 제출할 수 `post_decode_audio_sink_stream::submit_mixed_buffer()`. 게임 채팅 2 버퍼에 전송 되므로 바로 내부 아웃 오디오 조작 지원 `post_decode_audio_sink_stream::submit_mixed_buffer()` 반드시 동일한 버퍼에서 검색 되도록 `post_decode_audio_source_stream::get_next_buffer()`. 모든 40ms이 스트림에서 오디오의 다음 40ms 렌더링 됩니다. 오디오 hiccups를 방지 하려면 상수 속도로이 스트림에 지속적으로 들립니다 오디오 버퍼를 제출 해야 합니다.
+게임 채팅 2 ~를 다시 검사 및 무중단 버퍼는 사후 싱크가 오디오 스트림을 렌더링에 사용 하 여 디코드 앱을 제출할 수 `post_decode_audio_sink_stream::submit_mixed_buffer()`. 게임 채팅 2 지원 바로 및 위치를-오디오 조작이 버퍼에 제출 하므로 `post_decode_audio_sink_stream::submit_mixed_buffer()` 반드시 동일한 버퍼에서 검색 되도록 `post_decode_audio_source_stream::get_next_buffer()`. 모든 40ms 다음 40ms이 스트림의 오디오 렌더링 됩니다. 오디오 hiccups를 방지 하려면 상수 속도로이 스트림에 지속적으로 들립니다 오디오 버퍼를 제출 해야 합니다.
 
-### <a name="privacy-and-mixing"></a>개인 정보 및 믹싱
-버퍼에서 검색을 혼합 앱의 책임은 post-decode 파이프라인의 소스 싱크가 모델 인해 `post_decode_audio_source_stream` 개체 및 혼합된 버퍼를 전송 `post_decode_audio_sink_stream` 렌더링을 위한 개체입니다. 즉, 것 적절 한 개인 정보 및 권한 적용을 사용 하 여 혼합을 수행 하는 앱의 책임입니다. 게임 채팅 2 제공 `post_decode_audio_sink_stream::can_receive_audio_from_source_stream()` 간단 하 고 효율적이 정보를 쿼리할 수 있도록 합니다.
+### <a name="privacy-and-mixing"></a>개인 정보 및 혼합
+것은 앱의 책임에서 검색 된 버퍼를 혼합 post-decode 파이프라인 원본 싱크가 모델 때문에 `post_decode_audio_source_stream` 개체 및 혼합된 버퍼를 제출 `post_decode_audio_sink_stream` 렌더링을 위한 개체입니다. 즉, 앱의 적절 한 개인 정보 및 권한 적용을 사용 하 여 혼합을 수행 해야 하는 것입니다. 게임 채팅 2는 `post_decode_audio_sink_stream::can_receive_audio_from_source_stream()` 간단 하 고 효율적이 정보를 쿼리할 수 있도록 합니다.
 
 ### <a name="chat-indicators"></a>채팅 표시기
 
-오디오 사후 디코드 조작 채팅 표시기 상태 각 사용자에 대 한 영향을 주지 것입니다. 예를 들어, 원격 사용자 음이 소거 오디오 앱으로 제공 됩니다 하지만 해당 원격 사용자에 대 한 채팅 표시기는 여전히 음소거을 나타냅니다. 원격 사용자 자문해 오디오를 제공 하지만 해당 사용자의 오디오를 포함 하는 오디오 믹스 제공 여부에 관계 없이 말하기 채팅 표시기를 나타냅니다. UI 및 채팅 표시기에 대 한 자세한 내용은 [사용 하 여 게임 채팅 2](using-game-chat-2.md#ui)를 참조 하세요. 추가 앱 관련 제한 사항이 있는 사용자는 오디오 조합에 표시 되는 결정을 사용 하는 경우 것은 게임 채팅 2 제공한 채팅 표시기를 읽고 해당 동일한 제한이 때는 앱의 책임입니다.
+오디오를 디코드 사후 조작 채팅 표시기 상태 각 사용자에 대 한 영향을 주지 것입니다. 예를 들어, 원격 사용자 음이 소거 오디오 앱으로 제공 됩니다 하지만 해당 원격 사용자에 대 한 채팅 표시기는 여전히 음소거을 나타냅니다. 원격 사용자 자문해 오디오 제공 하지만 해당 사용자의 오디오를 포함 하는 오디오 믹스 제공 여부와 관계 없이 말하기 채팅 표시기를 나타냅니다. UI와 채팅 표시기에 대 한 자세한 내용은 [사용 하 여 게임 채팅 2](using-game-chat-2.md#ui)를 참조 하세요. 추가 앱 별 제한 오디오 믹스에 있는 사용자의 확인 하기 위해 사용 하는 경우 것은 게임 채팅 2 제공한 채팅 표시기를 읽고 해당 동일한 제한이 때는 앱의 책임입니다.
 
 ### <a name="stream-contexts"></a>스트림 컨텍스트
-앱 사용자 지정 포인터 크기의 컨텍스트 값을 관리할 수에 사용 하 여 오디오 스트림을 사후 디코드 합니다 `set_custom_stream_context()` 및 `custom_stream_context()` 메서드. 이러한 사용자 지정 스트림 컨텍스트 간 게임 채팅 2의 오디오 스트림 및 보조 데이터를 만드는 데 도움이 됩니다.: 메타 데이터, 게임 상태를 스트림 합니다.
+앱 사용자 지정 포인터 크기의 컨텍스트 값을 관리할 수에 사용 하 여 오디오 스트림을 사후 디코드는 `set_custom_stream_context()` 및 `custom_stream_context()` 메서드. 이러한 사용자 지정 스트림 컨텍스트 간 게임 채팅 2의 오디오 스트림 및 보조 데이터를 만드는 데 도움이 됩니다.: 메타 데이터, 게임 상태를 스트림 합니다.
 
 ### <a name="example"></a>예
-다음은 사용 하는 방법에 대 한 간소화 된 종단 간 샘플 사후 오디오 처리 한 프레임에서 오디오 스트림을 디코드:
+다음은 사용 하는 방법에 대 한 종단 간 샘플 간소화 된 후 오디오 처리 한 프레임에서 오디오 스트림을 디코드:
 
 ```cpp
 uint32_t streamStateChangeCount;
@@ -384,7 +384,7 @@ Sleep(audioProcessingPeriodInMilliseconds);
 
 ## <a name="chat-user-lifetimes"></a>채팅 사용자 수명
 
-실시간 오디오 조작에 사용 하도록 설정 하면 채팅 사용자의 수명을 영향을 미칩니다. 하는 경우 `chat_manager::remove_user(chatUserX)` 호출 되는 chat_user chatUserX 참조 하는 모든 오디오 스트림을 소멸 한 때까지 chatUserX 가리키는 개체 유효한 유지 됩니다. 다음 시나리오를 고려해 야 합니다.
+실시간 오디오 조작 사용 채팅 사용자의 수명을 영향을 미칩니다. 하는 경우 `chat_manager::remove_user(chatUserX)` 호출 되는 chat_user chatUserX 참조 하는 모든 오디오 스트림을 소멸 한 때까지 chatUserX 가리키는 개체 유효한 유지 됩니다. 다음 시나리오를 고려해 야 합니다.
 
 ```cpp
 // At somepoint a chat user, chatUserX, leaves the game session.

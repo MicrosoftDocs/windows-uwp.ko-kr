@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.openlocfilehash: a2923834fd968114a4ed607de214763fb2575697
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462462"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504996"
 ---
 # <a name="page-transitions"></a>페이지 전환
 
@@ -59,9 +59,9 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>가로 슬라이드
 
-가로 슬라이드 형제 페이지 나란히 표시를 사용 합니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤은 상단 탐색에 대 한이 애니메이션을 자동으로 사용 하지만 고유한 가로 탐색 경험을 빌드하는 경우 가로 SlideNavigationTransitionInfo 슬라이드를 구현할 수 있습니다.
+가로 슬라이드를 사용 하 여 서로 형제 페이지를 표시 합니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤은 상단 탐색에 대 한이 애니메이션을 자동으로 사용 하지만 가로 탐색 환경을 작성 하는 경우 SlideNavigationTransitionInfo와 가로 슬라이드를 구현할 수 있습니다.
 
-듯한은 사용자 서로 옆에 있는 페이지 간에 탐색 하는입니다. 
+듯한은 사용자 서로 옆에 있는 페이지 간 탐색입니다. 
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage

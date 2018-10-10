@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, 선택적 패키지, 관련된 집합, 패키지 확장, visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: 4864bdaa1f32b980c5c8b159ca71bb6a56da4ec5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461810"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504571"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>선택적 패키지 및 관련 집합 제작
-선택적 패키지에는 주 패키지에 통합할 수 있는 콘텐츠가 포함되어 있습니다. 이러한 크기 제한에 대 한 대규모 앱 분할 다운로드 가능한 콘텐츠 (DLC)에 유용 하거나 추가 콘텐츠를 전달 하는 것에 대 한 원래 앱에서 분리 합니다.
+선택적 패키지에는 주 패키지에 통합할 수 있는 콘텐츠가 포함되어 있습니다. 이러한 크기 제한에 대 한 많은 앱을 분할 다운로드 가능한 콘텐츠 (DLC)에 대 한 유용한 하거나 추가 콘텐츠를 전달 하는 것에 대 한 원래 앱에서 분리 합니다.
 
-관련된 집합은 선택적 패키지의 확장-주 및 선택적 패키지 간에 버전 엄격한 집합을 적용할 수 있도록 합니다. 또한 선택적 패키지에서 네이티브 코드 (c + +)를 로드할 할 수 있습니다. 
+관련된 집합은 선택적 패키지의 확장에 주 및 선택적 패키지 간에 버전 엄격한 세트를 적용 하는 수 있습니다. 또한 선택적 패키지에서 네이티브 코드 (c + +)를 로드할 할 수 있습니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -34,36 +34,36 @@ ms.locfileid: "4461810"
 > Microsoft Store에 선택적 패키지 및 관련된 집합을 사용 하는 앱을 제출 하려면 권한이 필요 합니다. Microsoft Store에 제출되지 않은 경우에는 선택적 패키지 및 관련 집합을 개발자 센터 권한 없이 기간 업무(LOB)나 엔터프라이즈 앱에서 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
 
 ### <a name="code-sample"></a>코드 샘플
-이 문서를 읽고 동안 어떻게 선택적 패키지에 대 한 실무 이해에 대 한 GitHub의 [코드 샘플 선택적 패키지와](https://github.com/AppInstaller/OptionalPackageSample) 함께 수행 하 고 Visual Studio 내에서 설정 작업 관련 좋습니다.
+이 문서를 읽고 동안 실습 지식이 어떻게 선택적 패키지에 대 한 [선택적 패키지 코드 샘플](https://github.com/AppInstaller/OptionalPackageSample) GitHub에 따라 Visual Studio 내에서 작업 집합 관련 하는 것이 좋습니다.
 
 ## <a name="optional-packages"></a>선택적 패키지
 Visual Studio에서 선택적 패키지를 만들려면 해야 합니다.
 1. 앱의 **대상 플랫폼 최소 버전** 설정 되어 있는지 확인: 10.0.15063.0 합니다.
-2. **주 패키지** 프로젝트에서 열고 합니다 `Package.appxmanifest` 파일. "패키징" 탭으로 이동한 다음 기록해 **패키지 패밀리 이름**"을 _" 문자 하기 전에 모든 항목은 합니다.
-3. **선택적 패키지** 프로젝트를 마우스 오른쪽 단추로 클릭 합니다 `Package.appxmanifest` 을 선택 하 고 **다른 프로그램으로 열기 > XML (텍스트) 편집기**합니다.
-4. 찾아 합니다 `<Dependencies>` 파일에서 요소입니다. 다음을 추가 합니다.
+2. **주 패키지** 프로젝트에서 열고는 `Package.appxmanifest` 파일입니다. "패키징" 탭을 찾아 기록해 **패키지 패밀리 이름**에 "_" 문자 하기 전에 모든 항목은 합니다.
+3. **선택적 패키지** 프로젝트를 마우스 오른쪽 단추로 클릭 합니다 `Package.appxmanifest` 을 선택 하 고 **다른 프로그램으로 열기 > XML (텍스트) 편집기**.
+4. 찾아는 `<Dependencies>` 파일에서 요소입니다. 다음을 추가 합니다.
 
 ```XML
 <uap3:MainPackageDependency Name="[MainPackageDependency]"/>
 ```
 
-바꾸기 `[MainPackageDependency]` 2 단계에서에서 **패키지 패밀리 이름** 입니다. 이 **선택적 패키지가** **주 패키지**에 종속 된다는 것을 지정 합니다.
+대체 `[MainPackageDependency]` 2 단계에서에서 **패키지 패밀리 이름** 입니다. 이 **선택적 패키지** 에서 **주 패키지**에 종속 지정 합니다.
 
--4 단계 1에서 설정 패키지 종속성에 있으면 계속 개발 평소와 같이. 주 패키지에 선택적 패키지에서 코드를 로드 하려는 경우에 관련된 집합을 작성 해야 합니다. 자세한 내용은 [관련 설정](#related_sets) 섹션을 참조 하세요.
+-4 단계 1에서 설정 패키지 종속성에 있으면 계속 개발 평소와 같이. 선택적 패키지에서 주 패키지 코드 로드 하려는 경우에 관련된 집합을 작성 해야 합니다. 자세한 내용은 [관련 설정](#related_sets) 섹션을 참조 하세요.
 
-Visual Studio는 다시 선택적 패키지를 배포할 때마다 주 패키지를 배포 하도록 구성할 수 있습니다. Visual Studio에서 빌드 종속성을 설정 하려면 다음을 수행 해야 합니다.
+Visual Studio는 선택적 패키지를 배포할 때마다 주 패키지를 다시 배포 하도록 구성할 수 있습니다. Visual Studio에서 빌드 종속성을 설정 하려면 다음을 수행 해야 합니다.
 
 - 선택적 패키지 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **종속성 빌드 > 프로젝트 종속성...**
 - 주 패키지 프로젝트를 확인 하 고 "확인"를 선택 합니다. 
 
-이제 F5, 선택적 패키지 프로젝트를 빌드할 때마다 Visual Studio가 프로젝트를 빌드합니다 주 패키지 먼저 합니다. 이렇게 하면 기본 프로젝트 및 프로젝트 선택적 동기화 됩니다.
+이제 f5 키를 입력 또는 선택적 패키지 프로젝트를 빌드할 때마다 Visual Studio는 프로젝트를 빌드합니다 주 패키지 우선 합니다. 이렇게 하면 기본 프로젝트 및 선택적 프로젝트 동기화 됩니다.
 
 ## 관련된 집합<a name="related_sets"></a>
 
-주 패키지에 선택적 패키지에서 코드를 로드 하려는 경우에 관련된 집합을 작성 해야 합니다. 관련된 집합을 작성 하려면 주 패키지와 선택적 패키지 긴밀 하 게 결합 해야 합니다. 관련된 집합에 대 한 메타 데이터의 주 패키지.msixbundle 또는.appxbundle 파일에 지정 됩니다. Visual Studio를 사용 하면 파일의 올바른 메타 데이터를 얻을 수 있습니다. 관련된 집합에 대 한 앱의 솔루션을 구성 하려면 다음 단계를 사용 합니다.
+선택적 패키지에서 주 패키지 코드 로드 하려는 경우에 관련된 집합을 작성 해야 합니다. 관련된 집합을 작성 하려면 주 패키지와 선택적 패키지 해야 긴밀 하 게 결합 합니다. 관련된 집합에 대 한 메타 데이터는 주 패키지의.msixbundle 또는.appxbundle 파일에 지정 됩니다. Visual Studio를 사용 하면 파일의 올바른 메타 데이터를 얻을 수 있습니다. 관련된 집합에 대 한 앱의 솔루션을 구성 하려면 다음 단계를 사용 합니다.
 
 1. 주 패키지 프로젝트를 마우스 오른쪽 단추로 클릭 **추가 > 새 항목...**
-2. 창에서 ".txt"에 대 한 설치 된 템플릿을 검색 하 고 새 텍스트 파일을 추가 합니다.
+2. 창에서 ".txt"에 대 한 설치 된 템플릿 검색 하 고 새 텍스트 파일을 추가 합니다.
 > [!IMPORTANT]
 > 새 텍스트 파일 이름: `Bundle.Mapping.txt`.
 3. 에 `Bundle.Mapping.txt` 파일을 외부 패키지 또는 선택적 패키지 프로젝트에 대 한 상대 경로 지정 합니다. 샘플 `Bundle.Mapping.txt` 파일은 다음과 같이 보입니다.
@@ -77,9 +77,9 @@ Visual Studio는 다시 선택적 패키지를 배포할 때마다 주 패키지
 "..\ActivatableOptionalPackage1\x86\Release\ActivatableOptionalPackage3_1.1.1.0\ ActivatableOptionalPackage3_1.1.1.0.appx"
 ```
 
-솔루션은이 방식으로 구성 Visual Studio는 번들 매니페스트를 주 패키지에 대 한 모든 관련된 집합에 대 한 필수 메타 데이터를 사용 하 여 만듭니다. 
+솔루션에 이런 방식이으로 구성 되 면 Visual Studio는 모든 관련된 집합에 대 한 필수 메타 데이터를 사용 하 여 주 패키지에 대 한 번들 매니페스트를 만듭니다. 
 
-선택적 패키지를 처럼 참고는 `Bundle.Mapping.txt` Windows 10, 버전 1703에서 관련된 집합에 대 한 파일 에서만 작동 합니다. 또한 앱의 대상 플랫폼 최소 버전 10.0.15063.0를 설정 해야 합니다.
+참고 사람이 선택적 패키지는 `Bundle.Mapping.txt` 관련된 집합에 대 한 파일 Windows 10, 버전 1703에만 작동 합니다. 또한 앱의 대상 플랫폼 최소 버전 10.0.15063.0를 설정 해야 합니다.
 
 ## 알려진 문제<a name="known_issues"></a>
 
