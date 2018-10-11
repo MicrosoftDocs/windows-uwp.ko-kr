@@ -1,21 +1,21 @@
 ---
-author: mithom
+author: eliotcowley
 title: UI 탐색 컨트롤러
 description: Windows.Gaming.Input UI 탐색 컨트롤러 API를 사용하여 UI 탐색을 위한 여러 가지 입력 장치를 검색하고 읽어보세요.
 ms.assetid: 5A14926D-8C2E-4DE8-AAFB-BEEB9BFE91A5
-ms.author: wdg-dev-content
+ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 게임, ui, 탐색
 ms.localizationpriority: medium
-ms.openlocfilehash: cae9d515ba5925ce81c90dfe5eb3785491128010
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 4f95094ebf31c4b80ee8858ad849da33ff16434a
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656138"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4535087"
 ---
 # <a name="ui-navigation-controller"></a>UI 탐색 컨트롤러
 
@@ -215,7 +215,7 @@ if (OptionalUINavigationButtons::Context1 == (reading.OptionalButtons & Optional
 
 ## <a name="run-the-ui-navigation-controller-sample"></a>UI 탐색 컨트롤러 샘플 실행
 
-[InputInterfacingUWP 샘플 _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP)에서는 여러 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
+[InputInterfacingUWP 샘플 _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/InputInterfacingUWP)에서는 여러 입력 장치가 UI 탐색 컨트롤러로 동작하는 방법을 보여 줍니다.
 
 ## <a name="see-also"></a>참고 항목
 [Windows.Gaming.Input.Gamepad][]

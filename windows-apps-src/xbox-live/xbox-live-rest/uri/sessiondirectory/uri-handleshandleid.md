@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 47dda291a9a86ccbee69e1e51ca71be373f5dc1d
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4497794"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4534017"
 ---
 # <a name="handleshandleid"></a>/handles/{handleId}
 식별자에서 지정 하는 세션 핸들을 삭제 하 고 작업을 지원 합니다. 

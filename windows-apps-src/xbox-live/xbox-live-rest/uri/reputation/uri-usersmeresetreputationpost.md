@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a8bfe8a76b83c78886c48f7e15de274fe89a52a
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4508585"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4534020"
 ---
 # <a name="post-usersmeresetreputation"></a>POST (/users/me/resetreputation)
 계정 하이재킹 (예) 한 후 현재 사용자의 평판 점수 일부 임의의 값을 설정 하려면 적용 팀을 수 있습니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.

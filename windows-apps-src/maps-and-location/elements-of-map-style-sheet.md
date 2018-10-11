@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
 ms.openlocfilehash: f0a657ada755b77abe8ffef6a38bfa1f9ece8fcd
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4504915"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4533432"
 ---
 # <a name="map-style-sheet-reference"></a>지도 스타일 시트 참조
 

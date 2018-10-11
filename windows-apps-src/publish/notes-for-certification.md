@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 UWP, 테스터에 대한 노트
 ms.localizationpriority: medium
 ms.openlocfilehash: 741925a3ac49273bd7ba826dfbadd2e18724f307
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4497995"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4534155"
 ---
 # <a name="notes-for-certification"></a>인증에 대한 참고 사항
 

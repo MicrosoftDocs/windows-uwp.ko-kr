@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 정보, 추세, 예외, 변칙, 데이터 변경
 ms.localizationpriority: medium
 ms.openlocfilehash: be70dccbb7a12b65b9e7bbd07f27ae7ea3a578ff
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4507561"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4532439"
 ---
 # <a name="insights-report"></a>인사이트 보고서
 

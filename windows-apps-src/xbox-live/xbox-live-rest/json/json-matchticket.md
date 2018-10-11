@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9201f6244db108d548ebb9e484380b7d0eb38e3a
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4504225"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4532946"
 ---
 # <a name="matchticket-json"></a>MatchTicket(JSON)
 멀티 플레이 세션 디렉터리 (MPSD)를 통해 다른 플레이어를 찾는 데 플레이어가 일치 티켓을 나타내는 JSON 개체입니다. 

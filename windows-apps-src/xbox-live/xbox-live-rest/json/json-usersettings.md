@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 20ac62403a8248011928089ea81cdf6418259db1
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4504725"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4531618"
 ---
 # <a name="usersettings-json"></a>UserSettings(JSON)
 현재 인증 된 사용자에 대 한 설정을 반환합니다. 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 상황에 맞는 검색, 브로드캐스트, 게임 클립
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c79af0f8543b6a7b5cd1c42926850364dd6a63d
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4507010"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4533753"
 ---
 # <a name="contextual-search"></a>상황에 맞는 검색
 

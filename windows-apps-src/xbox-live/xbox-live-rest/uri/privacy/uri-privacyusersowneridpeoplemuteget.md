@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: af9f52e04a163e0839017e1d051653d968df816d
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4509166"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4528754"
 ---
 # <a name="get-usersowneridpeoplemute"></a>GET (/users/{ownerId}/people/mute)
 사용자에 대 한 음소거 목록을 가져옵니다.

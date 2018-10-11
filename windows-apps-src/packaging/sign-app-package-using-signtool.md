@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: c238855f4f018e8e3142509842221c6b9d97fae3
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4509375"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4532036"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>SignTool을 사용하여 앱 패키지에 서명
 

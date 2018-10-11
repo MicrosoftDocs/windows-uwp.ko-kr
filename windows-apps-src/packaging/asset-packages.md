@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 8aafac1c1217ce082cd9d6176c530967f32e4cdd
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4500559"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4529185"
 ---
 # <a name="introduction-to-asset-packages"></a>자산 패키지 소개
 

@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4501469"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4534608"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트
 

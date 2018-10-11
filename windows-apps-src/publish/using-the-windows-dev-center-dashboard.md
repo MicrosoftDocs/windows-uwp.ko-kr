@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 대시보드, 개발자 센터, 개발 센터
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4508426"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4531748"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Windows 개발자 센터 대시보드 사용
 

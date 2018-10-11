@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: cff96c0b8daf9f3ef32815437b510a5b94641527
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4509391"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4530018"
 ---
 # <a name="print-from-your-app"></a>앱에서 인쇄하기
 

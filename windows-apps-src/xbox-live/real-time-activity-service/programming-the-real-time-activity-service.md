@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 실시간으로 활동
 ms.localizationpriority: medium
 ms.openlocfilehash: 561e5e3dfbd2d65ce43a1ecbd77f668617b89386
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4509396"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4535164"
 ---
 # <a name="programming-the-real-time-activity-service-using-c-apis"></a>C + + Api를 사용 하 여 실시간 활동 서비스 프로그래밍
 
