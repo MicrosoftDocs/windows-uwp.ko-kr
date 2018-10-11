@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468821"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506373"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -79,7 +79,7 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 Microsoft .NET 언어(C# 및 Microsoft Visual Basic)의 경우 클래스 본문 내에서(클래스 내부이나 멤버 정의 외부임) [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)를 호출합니다. 식별자는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 메서드 호출에서 반환 값으로 제공됩니다. [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출은 일반적으로 정적 생성자로 수행되거나, 클래스의 일부인 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public static readonly** 속성 초기화의 일부로 수행됩니다. 이 속성은 종속성 속성의 식별자를 노출합니다. 다음은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출의 예입니다.
 
 > [!NOTE]
-> 종속성 속성 등록 식별자의 일부로 속성 정의 일반적인 구현 이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
+> 등록 하는 식별자의 일부로 속성 정의 것이 일반적인 구현 이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
 
 C + + /CX 헤더 및 코드 파일 사이 구현을 분할 하는 방법에 대 한 옵션 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
 
@@ -170,14 +170,14 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> C + + 코드 CX, 개인 필드 이유와 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 표면을 공개 읽기 전용 속성은 종속성 속성을 사용 하는 다른 호출자가 속성 시스템 유틸리티를 필요로 하는 Api를 사용할 수도 수 있도록 하는 이유는 가 공개 식별자입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
+> C + + 코드 CX, 개인 필드 및 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 표면을 공개 읽기 전용 속성은 종속성 속성을 사용 하는 다른 호출자가 속성 시스템 유틸리티를 필요로 하는 Api를 사용할 수도 수 있도록 하는 이유는 가 공개 식별자입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
 
 ## <a name="dependency-property-name-conventions"></a>종속성 속성 이름 규칙
 
 종속성 속성에 대한 명명 규칙이 있습니다. 예외 상황을 제외하고는 항상 이 규칙을 따릅니다. 종속성 속성에는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)의 첫 번째 매개 변수로 제공되는 고유 기본 이름(앞의 예에서는 "Label")이 있습니다. 이름은 각 등록 형식 내에서 고유해야 하며 이러한 고유성 요구 사항은 모든 상속되는 멤버에도 적용됩니다. 기본 형식을 통해 상속되는 종속성 속성은 이미 등록 형식의 일부로 간주됩니다. 상속되는 속성의 이름은 다시 등록될 수 없습니다.
 
 > [!WARNING]
-> 하지만 여기 문자열 식별자가 될 수를 제공 하는 이름은 선택한 언어의 프로그래밍에서 유효한, 일반적으로 xaml에서 에서도 종속성 속성을 설정할 수 하고자 합니다. XAML에서 설정하도록 하려면 선택하는 속성 이름이 유효한 XAML 이름이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
+> 다음 문자열 식별자가 될 수를 제공 하는 이름은 선택한 언어의 프로그래밍에서 유효한, 하지만 일반적으로 xaml에서 에서도 종속성 속성을 설정할 수 하고자 합니다. XAML에서 설정하도록 하려면 선택하는 속성 이름이 유효한 XAML 이름이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
 
 식별자 속성을 만드는 경우 등록한 속성 이름을 "Property" 접미사와 연결합니다(예: "LabelProperty"). 이 속성은 종속성 속성 식별자이며 고유 속성 래퍼에서 수행하는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 및 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 호출의 입력으로 사용됩니다. 속성 시스템 및 [**{x:Bind}**](x-bind-markup-extension.md) 등의 다른 XAML 프로세서에서도 사용됩니다.
 
@@ -186,7 +186,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 속성 래퍼는 **get** 구현에서 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)를, **set** 구현에서 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출합니다.
 
 > [!WARNING]
-> 예외적인, 래퍼 구현 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 작업만 수행 해야 합니다. 그렇지 않으면 속성이 XAML을 통해 설정되는 경우와 코드를 통해 설정되는 경우에 동작이 달라집니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시하고 **SetValue**를 통해 백업 저장소에 통신합니다.
+> 예외 상황에서 래퍼 구현 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 작업을 수행 해야 합니다. 그렇지 않으면 속성이 XAML을 통해 설정되는 경우와 코드를 통해 설정되는 경우에 동작이 달라집니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시하고 **SetValue**를 통해 백업 저장소에 통신합니다.
 
 ```csharp
 public String Label
@@ -316,7 +316,7 @@ Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
 ```
 
 > [!NOTE]
-> [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371)기본값을 사용 하 여 등록 하지 마세요. 등록하는 경우 속성 소비자를 혼란스럽게 하고 속성 시스템 내에 의도하지 않은 결과를 발생시킵니다.
+> [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371)의 기본값을 사용 하 여 등록 하지 마세요. 등록하는 경우 속성 소비자를 혼란스럽게 하고 속성 시스템 내에 의도하지 않은 결과를 발생시킵니다.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 

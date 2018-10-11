@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: db832032a40b40d4b3a774a56487f7065d9cd8ff
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463330"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505304"
 ---
 # <a name="post-batch"></a>POST (/batch)
 여러 제목에서 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 GET 방법으로 작동 하는 메서드를 게시 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
@@ -42,21 +42,21 @@ ms.locfileid: "4463330"
  
 ## <a name="remarks"></a>설명
  
-호출자의 사용자, 서비스 구성 Id (SCIDs) 및 통계 검색할 SCIDs 당 통계 이름 목록을 배열 메시지 본문을 제공 합니다.
+호출자의 사용자, 서비스 구성 Id (SCIDs) 및 통계를 검색 하는 SCIDs 당 통계 이름 목록을 배열 메시지 본문을 제공 합니다.
  
-하는 경우가 더 간단 하며 단일 통계를 검토 하는 데 유용 하기 전에 [GET](uri-usersxuidscidsscidstatsget.md) 메서드를 읽고이 더 복잡 한 배치 모드 페이지.
+하는 경우가 더 간단 하며 단일 통계를 검토 하는 데 유용 [GET](uri-usersxuidscidsscidstatsget.md) 메서드를 하기 전에 읽고이 더 복잡 한 배치 모드 페이지.
   
 <a id="ID4EUB"></a>
 
  
 ## <a name="authorization"></a>권한 부여
  
-권한 부여 논리 콘텐츠 격리 및 액세스 제어 시나리오에 대해 구현 있습니다.
+콘텐츠 격리 및 액세스 제어 시나리오에 대 한 구현 된 권한 부여 논리가 있습니다.
  
-   * 순위표와 사용자 통계 호출자가 요청을 사용 하 여 유효한 XSTS 토큰 제출 된 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 클라이언트에서 지 원하는 분명히 제한 합니다.
+   * 순위표 및 사용자 통계 호출자 제출 요청을 사용 하 여 유효한 XSTS 토큰에 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 클라이언트에서 지 원하는 분명히 제한 합니다.
    * 제목 개발자 열기 또는 XDP 또는 개발자 센터를 사용 하 여 제한 된 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐만 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
   
-다음 예제는 검사에 대 한 의사 코드:
+다음 예제에서는 검사에 대 한 의사 코드입니다.
  
 
 ```cpp
@@ -77,7 +77,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | 
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > ".| 
+| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.| 
   
 <a id="ID4E3D"></a>
 
@@ -98,7 +98,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 ### <a name="sample-request"></a>샘플 요청
  
-POST 본문은 다음 두 가지 다른 사용자에 대 한 두 개의 서로 다른 SCIDs에서 4 개의 통계를 요청 되는 서비스를 알립니다.
+다음 게시 본문은 두 개의 서로 다른 사용자에 대 한 두 개의 다른 SCIDs에서 4 개의 통계 요청 되는 서비스에 알립니다.
  
 
 ```cpp
@@ -133,7 +133,7 @@ POST 본문은 다음 두 가지 다른 사용자에 대 한 두 개의 서로 �
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 되는 표준 HTTP 상태 코드의 전체 목록을 [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 

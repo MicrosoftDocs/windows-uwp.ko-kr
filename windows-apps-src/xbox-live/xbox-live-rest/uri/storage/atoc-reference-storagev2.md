@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a188c3406ad0ca3bfca78d6b45c548c72bf791e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472316"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506125"
 ---
 # <a name="title-storage-uris"></a>타이틀 저장소 URI
  
@@ -33,7 +33,7 @@ ms.locfileid: "4472316"
 
 [/global/scids/{scid}](uri-globalscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/global/scids/{scid}/data/{path}](uri-globalscidssciddatapath.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "4472316"
 
 [/global/scids/{scid}/data/{pathAndFileName},{type}](uri-globalscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;파일을 다운로드 합니다.
+&nbsp;&nbsp;파일을 다운로드합니다.
 
 [/json/users/batch/scids/{scid}/data/{pathAndFileName},json](uri-jsonusersbatchscidssciddatapathandfilenametype.md)
 
@@ -49,7 +49,7 @@ ms.locfileid: "4472316"
 
 [/json/users/xuid({xuid})/scids/{scid}](uri-jsonusersxuidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/json/users/xuid({xuid})/scids/{scid}/data/{path}](uri-jsonusersxuidscidssciddatapath.md)
 
@@ -61,7 +61,7 @@ ms.locfileid: "4472316"
 
 [/sessions/{sessionId}/scids/{scid}](uri-sessionssessionidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/sessions/{sessionId}/scids/{scid}/data/{path}](uri-sessionssessionidscidssciddatapath.md)
 
@@ -69,7 +69,7 @@ ms.locfileid: "4472316"
 
 [/sessions/{sessionId}/scids/{scid}/data/{pathAndFileName},{type}](uri-sessionssessionidscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;파일을 다운로드 합니다.
+&nbsp;&nbsp;파일을 다운로드합니다.
 
 [/trustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}](uri-trustedplatformusersbatchscidssciddatapathandfilenametype.md)
 
@@ -77,7 +77,7 @@ ms.locfileid: "4472316"
 
 [/trustedplatform/users/xuid({xuid})/scids/{scid}](uri-trustedplatformusersxuidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path}](uri-trustedplatformusersxuidscidssciddatapath.md)
 
@@ -93,7 +93,7 @@ ms.locfileid: "4472316"
 
 [/untrustedplatform/users/xuid({xuid})/scids/{scid}](uri-untrustedplatformusersxuidscidsscid.md)
 
-&nbsp;&nbsp;이 저장소 유형에 대 한 할당량 정보를 검색합니다.
+&nbsp;&nbsp;이 저장소 형식에 대 한 할당량 정보를 검색합니다.
 
 [/untrustedplatform/users/xuid({xuid})/scids/{scid}/data/{path}](uri-untrustedplatformusersxuidscidssciddatapath.md)
 

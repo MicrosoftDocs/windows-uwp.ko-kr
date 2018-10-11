@@ -1,7 +1,7 @@
 ---
 title: Xbox Live NuGet 패키지는 XDK 사용
 author: KevinAsgari
-description: XDK 타이틀을 개발 하는 Xbox Live API NuGet 패키지를 사용 하는 방법을 알아봅니다.
+description: Xbox Live API NuGet 패키지를 사용 하 여 XDK 타이틀을 개발 하는 방법을 알아봅니다.
 ms.assetid: 2c5ae514-393d-48bb-afd8-a897d35f7938
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 NuGet
 ms.localizationpriority: medium
 ms.openlocfilehash: b8b12201c0511339c4dd38824e17f7586e03708e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469232"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507403"
 ---
 # <a name="use-the-xbox-live-api-nuget-package-to-develop-xdk-titles"></a>Xbox Live API NuGet 패키지를 사용 하 여 XDK 타이틀 개발
 
@@ -24,7 +24,7 @@ ms.locfileid: "4469232"
     - 메뉴 선택 도구 모음에서 확장 및 업데이트-> 합니다.
     - 설치 된 탭에서 확인 `NuGet Package Manager`
 ![](../images/nuget/nuget_uwp_install_1.png)
-2.  현재 버전 업데이트 하려면:
+2.  현재 버전을 업데이트 합니다.
     - 메뉴 선택 도구 모음에서 확장 및 업데이트-> 합니다.
     - 업데이트에서 Visual Studio 갤러리 탭->, 선택 `Update`
 ![](../images/nuget/nuget_uwp_install_2.png)
@@ -35,8 +35,8 @@ ms.locfileid: "4469232"
 <br/>
 ![](../images/nuget/nuget_xbox_install_4.png)
 1.  검색 `Xbox Live` 적절 한 패키지를 선택 하 고 클릭 `Install`.
-  - Xbox 서비스 API는 c + + 및 WinRT 및 UWP 및 XDK, 모두에 대 한 특성에 제공 됩니다.  
-  - 중에서 선택 `Microsoft.Xbox.Live.SDK.*.UWP` 및 `Microsoft.Xbox.Live.SDK.*.XboxOneXDK`.  `XboxOneXDK` ID@Xbox 및 Xbox One XDK를 사용 하는 관리 되는 개발자.  `UWP` PC, Xbox One 또는 Windows Phone 실행할 수 있는 UWP 게임을 위한 것입니다.  자세한 내용은에 Xbox One에서 UWP를 실행 하는 방법에 대 한[https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started)
+  - Xbox 서비스 API는 c + + 및 WinRT 및 UWP 및 XDK, 종류에 제공 됩니다.  
+  - 중에서 선택 `Microsoft.Xbox.Live.SDK.*.UWP` 및 `Microsoft.Xbox.Live.SDK.*.XboxOneXDK`.  `XboxOneXDK` ID@Xbox 및 Xbox One XDK를 사용 하는 관리 되는 개발자.  `UWP` PC, Xbox One 또는 Windows Phone 실행할 수 있는 UWP 게임을 위한 것입니다.  자세한 내용은에서 Xbox One에서 UWP를 실행 하는 방법에 대 한[https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started](https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/getting-started)
   - 중에서 선택 `Microsoft.Xbox.Live.SDK.Cpp.*` 및 `Microsoft.Xbox.Live.SDK.WinRT.*`. `Cpp` Xbox Live Api를 사용 하 여 c + + 게임 엔진입니다.  `WinRT` c + +, C# 또는 Xbox Live Api를 사용 하 여 Javascript로 작성 된 게임 엔진입니다.  WinRT c + + 엔진을 사용할 때 사용 하 여 C + + CX hat (^)을 사용 합니다.  `Cpp` c + + 게임 엔진에 사용 하도록 권장된 API입니다.    
 ![](../images/nuget/nuget_xbox_install_5.png)
 ![](../images/nuget/nuget_uwp_install_7.png)
@@ -46,6 +46,6 @@ ms.locfileid: "4469232"
 ========== Finished ==========
 ```
 
-### <a name="3--optionally-include-header"></a>3. 선택적 헤더를 포함 합니다.
+### <a name="3--optionally-include-header"></a>3. 필요한 경우 헤더를 포함 합니다.
 * 에 대 한 `Microsoft.Xbox.Live.SDK.Cpp.*` 프로젝트를 기반으로 `#include <xsapi\services.h>` 에서 프로젝트의 소스입니다.
-* 에 대 한 `Microsoft.Xbox.Live.SDK.WinRT.*` 기반 프로젝트의 경우 헤더를 포함할 필요가 없습니다.   
+* 에 대 한 `Microsoft.Xbox.Live.SDK.WinRT.*` 기반 프로젝트의 경우 있는 헤더를 포함할 필요가 없습니다.   

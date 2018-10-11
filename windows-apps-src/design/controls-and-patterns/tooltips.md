@@ -17,11 +17,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a61b8bdcfcfad490528cdceed5e732a6f5f3a89
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467872"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508557"
 ---
 # <a name="tooltips"></a>도구 설명
 
@@ -116,7 +116,7 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 
 기본적으로 ToolTip은 포인터 위 중간에 표시됩니다. 배치는 앱 창에 의해 제한되지 않으므로 ToolTip은 부분적으로 또는 완전히 앱 창의 범위 밖에 표시될 수 있습니다.
 
-광범위 하 게 조정에 대 한 위, 아래, 왼쪽, 또는 포인터의 오른쪽 ToolTip을 그려야 하는지 여부를 지정 하려면 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 또는 **ToolTipService.Placement** 연결 된 속성을 사용 합니다. 포인터와 ToolTip 간 거리를 변경 하려면 [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) 또는 [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) 속성을 설정할 수 있습니다. 두 오프셋된 값 중 하나만 최종 위치-VerticalOffset 경우 배치 위쪽 또는 아래쪽, HorizontalOffset 배치는 왼쪽 또는 오른쪽에 영향을 미칩니다.
+광범위 하 게 조정에 대 한 위, 아래, 왼쪽, 또는 포인터의 오른쪽 ToolTip을 그려야 하는지 여부를 지정 하려면 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 또는 **ToolTipService.Placement** 연결 된 속성을 사용 합니다. 포인터와 ToolTip 간 거리를 변경 하려면 [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) 또는 [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) 속성을 설정할 수 있습니다. 두 개의 오프셋된 값 중 하나만 VerticalOffset 경우 배치 위쪽 또는 아래쪽, HorizontalOffset 배치는 왼쪽 또는 오른쪽 최종 위치에 영향을 미칩니다.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -129,7 +129,7 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 </Image>
 ```
 
-ToolTip이 참조 콘텐츠를 가리는 정확 하 게 새 **PlacementRect** 속성을 사용 하 여 위치를 조정할 수 있습니다. PlacementRect 도구 설명의 위치를 고정 하 고이 영역 밖 ToolTip을 그리는 데 충분 한 화면 공간이 제공 ToolTip은 하지 안 보일, 영역으로도 사용 합니다. 도구 설명의 소유자와의 높이 기준으로 사각형의 원점 및 제외 영역 너비를 지정할 수 있습니다. 위, 아래, 왼쪽, 또는 PlacementRect 오른쪽에 도구 설명을 끌어야 경우 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 정의 합니다. 
+ToolTip이 참조 콘텐츠를 가리는 정확 하 게 새 **PlacementRect** 속성을 사용 하 여 위치를 조정할 수 있습니다. PlacementRect 도구 설명의 위치를 고정 하 고이 영역 밖 ToolTip을 그리는 데 충분 한 화면 공간이 제공 도구 설명, 채워집니다 하지는 영역으로도 사용 합니다. 도구 설명의 소유자와의 높이 기준으로 사각형의 원점 및 제외 영역 너비를 지정할 수 있습니다. 위, 아래, 왼쪽, 또는 PlacementRect 오른쪽에 도구 설명을 끌어야 경우 [배치](/uwp/api/windows.ui.xaml.controls.tooltip.placement) 속성 정의 합니다. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->

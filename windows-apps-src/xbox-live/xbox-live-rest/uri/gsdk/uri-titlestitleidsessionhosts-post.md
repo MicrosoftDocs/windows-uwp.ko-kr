@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 147df5a3032aa950b7b301f7990c5456db200d2c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468347"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507840"
 ---
 # <a name="post-titlestitle-idsessionhosts"></a>POST (/titles/{Title Id}/sessionhosts)
 새 클러스터 요청을 만듭니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.
@@ -34,7 +34,7 @@ ms.locfileid: "4468347"
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleId| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
+| titleId| 요청을 실행 해야 하는 타이틀의 ID입니다.| 
   
 <a id="ID5EG"></a>
 
@@ -48,26 +48,26 @@ gameserverms.xboxlive.com
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-요청을 만들 때에 다음 표에 표시 된 헤더 필요 합니다.
+요청을 만들 때 다음 표에 표시 된 헤더는 필요 합니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 전송 되는 데이터의 유형입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
   
 <a id="ID4E5B"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-요청에는 다음 멤버가 포함 된 JSON 개체를 포함 해야 합니다.
+요청에는 다음 멤버가 포함 된 JSON 개체가 있어야 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | 
-| sessionId| 이 호출자가 지정한 식별자입니다. 할당 되 고 반환 되는 세션 호스트에 할당 됩니다. 나중에이 식별자가 특정 sessionhost를 참조할 수 있습니다. 전역 고유 해야 합니다 (예: GUID).| 
-| SandboxId| 세션 호스트를 할당 하 고 싶은 샌드박스입니다.| 
+| sessionId| 이 호출자가 지정한 식별자입니다. 할당 되 고 반환 되는 세션 호스트에 할당 됩니다. 나중에이 식별자는 특정 sessionhost를 참조할 수 있습니다. 전역 고유 해야 합니다 (예: GUID).| 
+| SandboxId| 세션 호스트에 할당 하 고 싶은 샌드박스입니다.| 
 | cloudGameId| 클라우드 게임 식별자입니다.| 
-| 위치| 순서가 지정 된 목록에서 할당 세션 원하는 기본 위치입니다.| 
-| sessionCookie| 이 지정 된 호출자 불투명 문자열입니다. sessionhost와 연결 하 고 게임 코드에서 참조할 수 있습니다. 이 멤버를 사용 하 여 (최대 크기는 4입니다) 서버를 클라이언트에서 적은 양의 정보를 전달 합니다.| 
+| 위치| 순서가 지정 된 목록 세션에서 할당을 원하는 기본 위치입니다.| 
+| sessionCookie| 이 지정 된 호출자 불투명 문자열입니다. sessionhost와 연결 하 고 게임 코드에서 참조할 수 있습니다. 이 멤버를 사용 하 여 (최대 크기는) 서버를 클라이언트에서 적은 양의 정보를 전달 합니다.| 
 | gameModelId| 게임 모드 식별자입니다.| 
  
 <a id="ID4EDD"></a>
@@ -105,11 +105,11 @@ gameserverms.xboxlive.com
  
 ## <a name="response-body"></a>응답 본문
  
-호출에 성공 하면 서비스는 다음 멤버가 포함 된 JSON 개체를 반환 합니다.
+호출 되 면 서비스는 다음 멤버가 포함 된 JSON 개체를 반환 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 호스트 이름| 인스턴스 호스트 이름입니다.| 
+| 호스트 이름| 인스턴스의 호스트 이름입니다.| 
 | portMappings| 포트 매핑을 합니다.| 
 | 지역| 인스턴스 지역에서 호스팅됩니다.| 
 | secureContext| 장치 보안 주소입니다.| 
@@ -151,14 +151,14 @@ gameserverms.xboxlive.com
  
 ## <a name="remarks"></a>설명
  
-다음과 같은 응답 코드를 받는 경우 제목을 다시 호출 서비스에만 해야:
+다음과 같은 응답 코드를 받는 시기 제목을 다시 서비스 호출만 해야 합니다.
  
    * 200-성공-응답을 반환 합니다.
-   * 400-잘못 된 요청 본문 또는 매개 변수가 잘못 되었습니다.
+   * 400-잘못 된 매개 변수 또는 잘못 된 요청 본문 합니다.
    * 401-권한이 없음
-   * 404-제목 id에 할당 된 모든 구독 없습니다.
-   * 409-동일한는 요청 (동일한 sessionId) 대략 동시에,이 응답 가능한 됩니다. 할당 요청 작업이 수행 하 고 세션 호스트에 이미 지정된 sessionId 이미 활성 상태인 경우에서는 해당 sessionhost 자세히 설명 하는 정보를 반환 합니다. 하지만 세션 호스트 없는 경우 활성 아직 충돌을 받게 됩니다.
-   * 500-예기치 않은 서버 오류.
+   * 404-제목 id에 할당 된 구독은 없습니다.
+   * 409-이 응답 가능 대략 동시에 동일한 요청 (동일한 sessionId) 결정 하는 경우. 할당 요청 작업이 수행 하 고 세션 호스트에 이미 지정된 sessionId 이미 활성인에서는 해당 sessionhost 자세히 설명 하는 정보를 반환 합니다. 하지만 세션 호스트 없는 경우 활성 아직 충돌이 발생 합니다.
+   * 500-예기치 않은 서버 오류입니다.
    * 503-sessionhosts StandingBy 없습니다. 이러한 리소스 중 일부는 무료 때 요청을 다시 시도 합니다.
    
 <a id="ID4EFG"></a>

@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: Windows 10 빌드 17763 API 변경 사항
-description: 개발자는 다음 목록을 사용 하 여 Windows 10 빌드 17763에서에서 변경 되었거나 새로운 네임 스페이스를 식별할 수 있습니다.
+description: 개발자 다음 문서를 사용 하 여 Windows 10 빌드 17763에서에서 변경 되었거나 새로운 네임 스페이스를 식별할 수 있습니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, Windows 10, 최신, apis, 17763, 10 월
 ms.author: quradic
 ms.date: 10/02/2018
@@ -10,17 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 178bee54296c355a17a78cb63d17986f51132893
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472816"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507193"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Windows 10의 새로운 Api 17763 빌드
 
-신규 및 업데이트 API 네임 스페이스가 제공 되었습니다 개발자가 Windows 10 빌드 17763에서에서 (년 10 월 2018 라고도 업데이트 또는 버전 1809). 아래는 이 릴리스에서 추가 또는 수정된 네임스페이스에 게시된 설명서의 전체 목록입니다.
+신규 및 업데이트 API 네임 스페이스 내용이 사용할 수 있는 Windows 10 빌드 17763의에서 개발자 들에 (년 10 월 2018 라고도 업데이트 또는 버전 1809). 아래는 이 릴리스에서 추가 또는 수정된 네임스페이스에 게시된 설명서의 전체 목록입니다.
 
-이전의 공개 릴리스에 추가 된 Api에 대 한 내용은 [Windows 10 년 4 월 업데이트의 새로운 Api](windows-10-build-17134-api-diff.md)를 참조 하세요.
+이전의 공개 릴리스에 추가 된 Api에 대 한 정보를 [Windows 10 년 4 월 업데이트의 새로운 Api](windows-10-build-17134-api-diff.md)를 참조 하세요.
 
 ## <a name="windowsai"></a>windows.ai
 
@@ -1858,7 +1858,7 @@ brushtransition <br> brushtransition.brushtransition <br> brushtransition.durati
 
 colorpaletteresources <br> colorpaletteresources.accent <br> colorpaletteresources.althigh <br> colorpaletteresources.altlow <br> colorpaletteresources.altmedium <br> colorpaletteresources.altmediumhigh <br> colorpaletteresources.altmediumlow <br> colorpaletteresources.basehigh <br> colorpaletteresources.baselow <br> colorpaletteresources.basemedium <br> colorpaletteresources.basemediumhigh <br> colorpaletteresources.basemediumlow <br> colorpaletteresources.chromealtlow <br> colorpaletteresources.chromeblackhigh <br> colorpaletteresources.chromeblacklow <br> colorpaletteresources.chromeblackmedium <br> colorpaletteresources.chromeblackmediumlow <br> colorpaletteresources.chromedisabledhigh <br> colorpaletteresources.chromedisabledlow <br> colorpaletteresources.chromegray <br> colorpaletteresources.chromehigh <br> colorpaletteresources.chromelow <br> colorpaletteresources.chromemedium <br> colorpaletteresources.chromemediumlow <br> colorpaletteresources.chromewhite <br> colorpaletteresources.colorpaletteresources <br> colorpaletteresources.errortext <br> colorpaletteresources.listlow <br> colorpaletteresources.listmedium
 
-#### [<a name="datatemplate"></a>datatemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)
+#### [<a name="datatemplate"></a>데이터 템플릿](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)
 
 datatemplate.getelement <br> datatemplate.recycleelement
 

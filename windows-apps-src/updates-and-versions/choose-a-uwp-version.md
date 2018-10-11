@@ -11,11 +11,11 @@ keywords: Windows 10, UWP, 버전, 빌드, 버전, Windows, 선택, 업데이트
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472622"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508147"
 ---
 # <a name="choose-a-uwp-version"></a>UWP 버전 선택
 
@@ -28,7 +28,7 @@ ms.locfileid: "4472622"
 
 | 버전 | 설명 |
 | --- | --- |
-| 빌드 17763 (1809 버전) | 2018 년 10 월에에서 출시 되는 Windows 10의 최신 버전입니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows Machine Learning:** Windows 컴퓨터 학습에 이제 공식적으로 시작, 최첨단 기계 학습 모델에 대 한 빠른 평가 지원 등의 기능을 제공 합니다. 플랫폼에 대한 자세한 내용은 [Windows 기계 학습](https://docs.microsoft.com/windows/ai/)을 참조하세요. </br> \* **흐름 디자인:** 메뉴 모음, 명령 모음 플라이 아웃 및 XAML 속성 애니메이션 등의 새로운 기능 Windows 10에 추가 되었습니다. [흐름 디자인 개요](../design/fluent-design-system/index.md)에서 최신 정보를 참조하세요. </br> 이러한 사항과 Windows의이 릴리스에 추가 된 다른 많은 기능에 대 한 내용은 방문 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 더 세부 정보 페이지에서 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-17763.md)
+| 빌드 17763 (버전 1809) | 2018 년 10 월에에서 출시 된 Windows 10의 최신 버전입니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows Machine Learning:** Windows 컴퓨터 학습가 이제 공식적으로 시작, 최첨단 기계 학습 모델에 대 한 빠른 평가 지원 등의 기능을 제공 합니다. 플랫폼에 대한 자세한 내용은 [Windows 기계 학습](https://docs.microsoft.com/windows/ai/)을 참조하세요. </br> \* **흐름 디자인:** 메뉴 모음, 명령 모음 플라이 아웃 및 XAML 속성 애니메이션 등의 새로운 기능 Windows 10에 추가 되었습니다. [흐름 디자인 개요](../design/fluent-design-system/index.md)에서 최신 정보를 참조하세요. </br> 이러한 사항과 Windows의이 릴리스에 추가 된 다른 많은 기능에 대 한 내용은 방문 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 더 세부 정보 페이지에서 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-17763.md)
 | 빌드 17134(버전 1803) | 이 버전의 Windows 10 2018 년 4 월에에서 출시 되었습니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **흐름 디자인:** 트리 보기, 당겨서 새로 고침 및 탐색 보기와 같은 새로운 기능이 Windows 10에 추가되었습니다. [흐름 디자인 개요](../design/fluent-design-system/index.md)에서 최신 정보를 참조하세요. </br> \* **콘솔 UWP 앱:** 이제 DOS 또는 PowerShell 콘솔 창 등의 콘솔 창에서 실행되는 C++ /WinRT 또는 /CX UWP 콘솔 앱을 작성할 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-17134.md)에 있는 세부 정보 페이지를 방문하세요.
 | 빌드 16299(Fall Creators Update, 버전 1709) | 이 Windows 10 버전은 2017년 10월에 출시되었습니다. **이 Windows 버전을 대상으로 지정하려면 반드시 Visual Studio 2017을 사용_해야 합니다_.** 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **.NET 표준 2.0:** .NET API 수를 크게 늘리고 즐겨 찾는 NuGet 패키지 및 타사 라이브러리를 .NET 표준에 통합할 수 있습니다. [여기](https://docs.microsoft.com/dotnet/standard/net-standard)에서 세부 정보를 확인하고 설명서를 살펴보세요. 이러한 새로운 API에 액세스하려면 **최소 버전**을 빌드 16299으로 설정해야 합니다. </br> \* **흐름 디자인:** 조명, 깊이, 관점 및 동작을 사용하여 앱을 향상시키고 사용자가 중요한 UI 요소에 초점을 맞출 수 있도록 도와줍니다. </br> \* **조건부 XAML:** 런타임 시 API의 존재 여부에 따라 속성을 손쉽게 설정하고 개체를 인스턴스화하여 장치 및 버전에서 앱이 원활하게 실행될 수 있도록 합니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-16299.md)에 있는 세부 정보 페이지를 방문하세요.
 | 빌드 15063(크리에이터 업데이트, 버전 1703) | 이 Windows 10 버전은 2017년 3월에 출시되었습니다. **이 Windows 버전을 대상으로 지정하려면 _반드시_ Visual Studio 2017을 사용해야 합니다**. 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다.  </br> \* **잉크 분석:** 이제 Windows Ink는 잉크 스트로크를 쓰기 또는 그리기 스트로크로 분류하고 텍스트, 모양 및 기본 레이아웃 구조를 인식할 수 있습니다. </br> \* **Windows.Ui.Composition API:** 앱에서 간단하게 애니메이션을 결합하고 적용할 수 있습니다. </br> \* **라이브 편집:** 앱이 실행 중인 XAML을 편집하고 변경 내용이 적용되는 것을 실시간으로 볼 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-build-15063.md)에 있는 세부 정보 페이지를 방문하세요.  |
@@ -46,7 +46,7 @@ UWP의 새 API 및 변경된 API는 Windows 10의 모든 후속 버전에서 사
 
 ## <a name="net-api-availability-in-uwp-versions"></a>UWP 버전의.NET API 가용성
 
-UWP **대상 버전** 또는 프로젝트의 **최소 버전** 관계 없이 사용할 수 있는.NET Api의 제한 된 하위 집합을 지원 합니다. [이 페이지는 사용 가능한 형식에 대 한 자세한 정보를 제공](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx)합니다.
+UWP **대상 버전** 또는 프로젝트의 **최소 버전** 관계 없이 사용할 수 있는.NET Api의 제한 된 하위 집합을 지원 합니다. [이 페이지에서는 사용 가능한 형식에 대 한 자세한 정보를 제공](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx)합니다.
 
 재사용 가능한 플랫폼 간 라이브러리를 만들려는 경우.NET Standard는 UWP에서 지원 됩니다. [.NET 표준 설명서](https://docs.microsoft.com/dotnet/standard/net-standard) 는.NET Standard는 지원 UWP 버전에서 정보를 제공 합니다.
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 430dbce8b3ac2a79709c5f0761124aa7a78cab5e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461191"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505638"
 ---
 # <a name="get-mediamarketplaceidcrossmediagroupsearch"></a>GET (/media/{marketplaceId}/crossMediaGroupSearch)
 여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -33,7 +33,7 @@ ms.locfileid: "4461191"
  
 그룹 간 API에는 클라이언트가 여러 다른 미디어 그룹에서 항목을 검색할 수 있습니다. 이 API에 결과 통해 페이징을 정방향 연속 토큰을 사용에 필요합니다. 이 API는 쿼리 구체화를 수락합니다.
  
-이제 **SandboxId** 클레임에는 XToken에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
+이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
   
 <a id="ID4EEB"></a>
 
@@ -64,7 +64,7 @@ ms.locfileid: "4461191"
  
 ### <a name="sample-response"></a>예제 응답
  
-아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/crossMediaGroupSearch?q=vector&maxItems=25&fields=all`.
+아래 JSON 코드 호출에 대 한 응답에는 `/media/en-us/crossMediaGroupSearch?q=vector&maxItems=25&fields=all`.
  
 
 ```cpp

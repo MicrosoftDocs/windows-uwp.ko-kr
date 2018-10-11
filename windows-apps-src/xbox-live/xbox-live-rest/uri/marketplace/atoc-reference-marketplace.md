@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4be83e2d4301a708a705a8bec0a1d975b6435bc5
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466905"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506725"
 ---
 # <a name="marketplace-uris"></a>마켓플레이스 URI
 
-이 섹션에서는 *marketplace* 서비스, 라고도 엔터테인먼트 검색 서비스 (EDS)에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 라고도 엔터테인먼트 검색 서비스 (EDS) *마켓플레이스* 서비스에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공합니다.
 
 Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 된 게임에만이 서비스를 사용할 수 있습니다.
 
@@ -49,7 +49,7 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 된 게임에만이 서비
 
 [/media/{marketplaceId}/browse](uri-medialocalebrowse.md)
 
-&nbsp;&nbsp;단일 미디어 그룹 내에서 항목을 검색할 수 있습니다.
+&nbsp;&nbsp;단일 미디어 그룹 내에서 항목을 찾을 수 있습니다.
 
 [/media/{marketplaceId}/contentRating](uri-medialocalecontentrating.md)
 
@@ -65,7 +65,7 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 된 게임에만이 서비
 
 [/media/{marketplaceId}/metadata/mediaGroups](uri-medialocalemetadatamediagroups.md)
 
-&nbsp;&nbsp;주어진된 EDS 버전에 대 한 지원 되는 모든 mediaGroups 나열 되어 있습니다.
+&nbsp;&nbsp;지정 된 EDS 버전에 대 한 지원 되는 모든 mediaGroups 나열 되어 있습니다.
 
 [/media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaItemTypes](uri-medialocalemetadatamediagroupsmediaitemtypes.md)
 
@@ -73,7 +73,7 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 된 게임에만이 서비
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields](uri-medialocalemetadatamediaitemtypefields.md)
 
-&nbsp;&nbsp;데이터를 특정된 mediaitemtype 및 EDS의 특정된 버전을 기대할 수 하나 액세스 필드.
+&nbsp;&nbsp;데이터를 특정된 mediaitemtype 보고 EDS의 특정된 버전을 기대할 수 하나 액세스 필드.
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners](uri-medialocalemetadatamediaitemtypequeryrefiners.md)
 
@@ -89,7 +89,7 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 된 게임에만이 서비
 
 [/media/{marketplaceId}/metadata/mediaItemTypes](uri-medialocalemetadatamediaitemtypes.md)
 
-&nbsp;&nbsp;주어진된 EDS 버전에 대 한 지원 되는 모든 mediaItemTypes에 액세스합니다.
+&nbsp;&nbsp;지정 된 EDS 버전에 대 한 지원 되는 모든 mediaItemTypes에 액세스합니다.
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders](uri-medialocalemetadatamediaitemtypesortorders.md)
 

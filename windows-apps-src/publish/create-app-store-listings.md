@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472836"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506311"
 ---
 # <a name="create-app-store-listings"></a>앱 Store 목록 만들기
 
@@ -50,14 +50,14 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 ## <a name="product-name"></a>제품 이름
 
-이 드롭다운 상자는 이름 (앱에 대 한 이름을 여러 개 예약 않은) 하는 경우 스토어 목록에 사용 해야를 지정할 수 있습니다.
+이 드롭다운 상자 (앱에 대 한 이름을 여러 개 예약 않은) 하는 경우 스토어 목록에 있는 이름을 사용 해야를 지정할 수 있습니다.
 
-작업 중인 Store 목록와 동일한 언어로 패키지를 업로드 하는 경우 해당 패키지에 사용한 이름이 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 사용 하 여 새 제출을 만들 때 여기에 다른 예약 된 이름을 선택할 수 있습니다.
+작업 중인 Store 목록와 동일한 언어로 패키지를 업로드 하는 경우 해당 패키지에 사용 되는 이름을 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 사용 하 여 새 제출을 만들 때 다음 다른 예약 된 이름을 선택할 수 있습니다.
 
 언어에 대 한 패키지를 업로드 하지 않은 작업 중인 및 둘 이상의 이름을 예약한, 이름을 가져올 수 있는 해당 언어에 연결된 된 패키지가 없으므로 예약 된 앱 이름 중 하나를 선택 해야 합니다.
 
 > [!NOTE]
-> **제품 이름** 만 선택 하면 작업 중인 스토어 목록 언어에서에 적용 됩니다. 고객이; 앱을 설치 하는 경우 표시 되는 이름 영향을 주지 설치 패키지의 매니페스트에에서 해당 이름을 제공 됩니다. 혼동을 피하기 위해 각 언어 패키지 및 스토어 목록에 동일한 이름을 사용 하는 것이 좋습니다.
+> **제품 이름** 만 선택 하면 작업 중인 Store 언어에서 목록에 적용 됩니다. 그 영향을 주지 않습니다; 앱을 설치 하는 고객이 때 표시 되는 이름 설치 패키지의 매니페스트에에서 해당 이름을 제공 됩니다. 혼동을 피하기 위해 각 언어 패키지 및 스토어 목록에 동일한 이름을 사용 하는 것이 좋습니다.
 
 ## <a name="description"></a>설명
 
@@ -103,7 +103,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 <a id="supplemental-information" />
 
-## <a name="supplemental-fields"></a>보조 필드
+## <a name="supplemental-fields"></a>추가 필드
 
 이 섹션의 필드는 모두 선택 사항입니다. 아래의 정보를 검토하여 이러한 정보를 제공하는 것이 제출에 도움이 되는지 판단하세요. 특히 대부분의 제출에 **간단한 설명**을 제공하는 것이 좋습니다. 다른 필드는 다른 시나리오에서 제품에 최적의 경험을 제공하는 데 도움이 될 수 있습니다.
 
@@ -134,7 +134,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 게임의 경우 Xbox One의 게임 허브의 정보 섹션에도 간단한 설명이 나타날 수 있습니다.
 
-최상의 결과 간단한 설명을 아래의 270 자를 유지 합니다. 필드는 500 자로 제한, 있지만 일부 보기에서 먼저 270 문자만 (짧은 설명의 나머지 부분을 표시할 수 있는 링크)으로 표시 됩니다.
+최상의 결과 대 한 간단한 설명에서 270 문자 유지 합니다. 필드는 500 자로 제한 되지만 일부 보기에서는 먼저 270 문자만 짧은 설명의 나머지 부분을 볼 수 있는 링크) (함께 표시 됩니다.
 
 
 ### <a name="additional-system-requirements"></a>추가 시스템 요구 사항

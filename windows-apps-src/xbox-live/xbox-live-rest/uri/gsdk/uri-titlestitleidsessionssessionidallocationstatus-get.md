@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e351bed37e0761be1f884400f81a3da537967d2
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461194"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507125"
 ---
 # <a name="get-titlestitleidsessionssessionidallocationstatus"></a>GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
-세션의 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
   * [필요한 요청 헤더](#ID4E4)
   * [필수 응답 헤더](#ID4EEB)
@@ -44,14 +44,14 @@ ms.locfileid: "4461194"
  
 ## <a name="response-body"></a>응답 본문
  
-호출에 성공 하면 서비스는 다음 멤버가 포함 된 JSON 개체를 반환 합니다.
+호출 되 면 서비스는 다음 멤버가 포함 된 JSON 개체를 반환 합니다.
  
 | 멤버| 설명| 
 | --- | --- | 
-| description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 하는 문자열을 반환 합니다.| 
-| clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 하는 문자열을 반환 합니다.| 
+| description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
+| clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
 | 호스트 이름| 세션 호스트의 URL입니다.| 
-| status| 대기, 충족, 또는 중단을 나타냅니다.| 
+| status| 대기, 처리, 또는 중단을 나타냅니다.| 
 | sessionHostId| 세션 호스트 id입니다.| 
 | sessionId| (할당 시간)에 제공 된 클라이언트 세션 id입니다.| 
 | secureContext| 장치 보안 주소입니다.| 
@@ -104,11 +104,11 @@ ms.locfileid: "4461194"
  
 ### <a name="remarks"></a>설명
  
-다음과 같은 응답 코드를 받는 경우 제목을 다시 호출 서비스에만 해야:
+다음과 같은 응답 코드를 받는 시기 제목을 다시 서비스 호출만 해야 합니다.
  
    * 200-성공 
    * 400-잘못 된 매개 변수를 포함 하는 요청 
    * 401-권한이 없음 
-   * 404-제목 ID 또는 티켓 ID를 잘못 되었거나 찾을 수 없습니다. 
-   * 500-예기치 않은 서버 오류. 
+   * 404-제목 ID 또는 티켓 ID 잘못 되었거나 찾을 수 없습니다. 
+   * 500-예기치 않은 서버 오류입니다. 
     

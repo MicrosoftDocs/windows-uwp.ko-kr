@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7693d9e60a9fdf58eba8aecdd8618c0a78ecef44
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4460696"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507487"
 ---
 # <a name="usersowneridpeopletargetid"></a>/users/{ownerId}/people/{targetid}
-호출자의 사람들이 컬렉션에서 대상 ID로 사람에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
+호출자의 사용자 컬렉션에서 대상 ID로 사람에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -31,7 +31,7 @@ ms.locfileid: "4460696"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | ownerId| string| 해당 리소스를 액세스 하는 사용자의 식별자입니다. 인증된 된 사용자와 일치 해야 합니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다.| 
-| targetid| string| Xbox 사용자 ID (XUID) 또는 게이머 태그 소유자의 사용자 목록에서 해당 데이터를 검색 하는 사용자의 식별자입니다. 예제 값: xuid(2603643534573581), gt(SomeGamertag) 합니다.| 
+| targetid| string| Xbox 사용자 ID (XUID) 또는 게이머 태그 소유자의 사용자가 목록에서 해당 데이터를 검색 하는 사용자의 식별자입니다. 예제 값: xuid(2603643534573581), gt(SomeGamertag) 합니다.| 
   
 <a id="ID4EQB"></a>
 
@@ -40,7 +40,7 @@ ms.locfileid: "4460696"
 
 [GET](uri-usersowneridpeopletargetidget.md)
 
-&nbsp;&nbsp;호출자의 사람들이 컬렉션에서 대상 ID로 사용자를 가져옵니다.
+&nbsp;&nbsp;호출자의 사용자 컬렉션에서 대상 ID로 사용자를 가져옵니다.
  
 <a id="ID4E1B"></a>
 

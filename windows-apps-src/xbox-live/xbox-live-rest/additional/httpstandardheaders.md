@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 31499f8d6fa41d888afd84bea64f7f9de0585b96
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469618"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507908"
 ---
 # <a name="standard-http-request-and-response-headers"></a>표준 HTTP 요청 및 응답 헤더
  
@@ -25,7 +25,7 @@ ms.locfileid: "4469618"
  
 ## <a name="request-headers"></a>요청 헤더
  
-다음 표에서 Xbox Live 서비스 요청을 만들 때 사용 하 여 표준 HTTP 헤더를 나열 합니다.
+다음 표에서 Xbox Live 서비스 요청을 만들 때 사용 되는 표준 HTTP 헤더를 보여 줍니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | 
@@ -45,7 +45,7 @@ ms.locfileid: "4469618"
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | 
 | Content-Type| 응용 프로그램/xml, 응용 프로그램/j| 반환 되는 콘텐츠 유형을 지정 합니다.| 
-| Content-Length| 정수 값| 반환 되는 데이터의 길이 지정 합니다.| 
+| Content-Length| 정수 값| 반환할 데이터의 길이 지정 합니다.| 
   
 <a id="ID4EEE"></a>
 

@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ff8e5444ec65de3665d593168e430a64f4d250e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464410"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506569"
 ---
 # <a name="universal-resource-identifier-uri-reference"></a>URI(Universal Resource Identifier) 참조
 
-이 섹션에서는 Uniform Resource Identifier (Uri)에 대 한 세부 정보를 제공 하 고 및 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드 Xbox Live 서비스에 사용 합니다.
+이 섹션에서는 Uniform Resource Identifier (Uri)에 대 한 세부 정보를 제공 하 고 및 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드 Xbox Live 서비스와 함께 사용 합니다.
 
 <a id="ID4EAB"></a>
 
@@ -29,7 +29,7 @@ ms.locfileid: "4464410"
 
 [도전 과제 URI](achievements/atoc-reference-achievementsv2.md)
 
-&nbsp;&nbsp;Uri 및 도전 과제에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 도전 과제에 대 한 관련된 HTTP 메서드입니다.
 
 [게임 서버 Universal Resource Identifier (URI) 참조](gsdk/atoc-gsdk-uri-reference.md)
 
@@ -37,7 +37,7 @@ ms.locfileid: "4464410"
 
 [게임 DVR URI](dvr/atoc-reference-dvr.md)
 
-&nbsp;&nbsp;Uri 및 게임 DVR에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 게임 DVR에 대 한 관련된 HTTP 메서드입니다.
 
 [Gamerpic URI](gamerpic/atoc-reference-gamerpic.md)
 
@@ -49,35 +49,35 @@ ms.locfileid: "4464410"
 
 [목록 URI](lists/atoc-reference-lists.md)
 
-&nbsp;&nbsp;Uri 및 핀에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 핀에 대 한 관련된 HTTP 메서드입니다.
 
 [마켓플레이스 URI](marketplace/atoc-reference-marketplace.md)
 
-&nbsp;&nbsp;Uri 및 Xbox marketplace 서비스에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 Xbox 마켓플레이스 서비스에 대 한 관련된 HTTP 메서드입니다.
 
 [매치 메이킹 URI](matchtickets/atoc-reference-matchtickets.md)
 
-&nbsp;&nbsp;Uri 및 매치 메이 킹에 대 한 HTTP/REST 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 연결에 대 한 HTTP/REST 메서드를 연결된 합니다.
 
 [피플 URI](people/atoc-reference-people.md)
 
-&nbsp;&nbsp;Uri와 관련 된 HTTP 메서드 피플 시스템입니다.
+&nbsp;&nbsp;Uri와 관련 된 HTTP 메서드는 사용자가 시스템입니다.
 
 [상태 URI](presence/atoc-reference-presence.md)
 
-&nbsp;&nbsp;Uri 및 현재 상태에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 현재 상태에 대 한 관련된 HTTP 메서드입니다.
 
 [개인 정보 URI](privacy/atoc-reference-privacyv2.md)
 
-&nbsp;&nbsp;Uri 및 개인 정보 보호에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 개인 정보 보호에 대 한 관련된 HTTP 메서드입니다.
 
 [프로필 URI](profileV2/atoc-reference-profiles.md)
 
-&nbsp;&nbsp;Uri 및 프로필에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 프로필에 대 한 관련된 HTTP 메서드입니다.
 
 [평판 URI](reputation/atoc-reference-reputation.md)
 
-&nbsp;&nbsp;Uri 및 신뢰도 서비스에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 신뢰도 서비스에 대 한 관련된 HTTP 메서드입니다.
 
 [세션 디렉터리 URI](sessiondirectory/atoc-reference-sessiondirectory.md)
 
@@ -85,11 +85,11 @@ ms.locfileid: "4464410"
 
 [도전 과제 타이틀 기록 URI](titlehistory/atoc-reference-titlehistoryv2.md)
 
-&nbsp;&nbsp;Uri 및 *제목 기록*에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 *제목 기록*에 대 한 관련된 HTTP 메서드입니다.
 
 [타이틀 저장소 URI](storage/atoc-reference-storagev2.md)
 
-&nbsp;&nbsp;Uri 및 타이틀 저장소에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 타이틀 저장소에 대 한 관련된 HTTP 메서드입니다.
 
 [시스템 문자열 유효성 검사 URI](stringserver/atoc-reference-systemstringsvalidate.md)
 
@@ -97,11 +97,11 @@ ms.locfileid: "4464410"
 
 [사용자 URI](users/atoc-reference-users.md)
 
-&nbsp;&nbsp;Uri 및 사용자에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 사용자 관련된 HTTP 메서드입니다.
 
 [사용자 통계 URI](userstats/atoc-reference-userstats.md)
 
-&nbsp;&nbsp;Uri 및 사용자 통계에 대 한 HTTP 메서드를 연결된 합니다.
+&nbsp;&nbsp;Uri 및 사용자 통계에 대 한 관련된 HTTP 메서드입니다.
 
 <a id="ID4E5C"></a>
 

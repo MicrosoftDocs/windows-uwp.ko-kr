@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b945427118122e3b6d52210efc5e1de84a8c8d68
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469885"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505440"
 ---
 # <a name="get-publicscidsscidclips"></a>GET (/public/scids/{scid}/clips)
-공용 클립을 나열 합니다. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.
+공용 클립 나열 되어 있습니다. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4ECB)
@@ -32,9 +32,9 @@ ms.locfileid: "4469885"
  
 이 API는 공용 목록 클립에 다양 한 방법으로 허용 합니다. 클립 목록 개인 정보 보호 검사 및 요청 XUID에 대 한 콘텐츠 격리 검사에 따라 반환 됩니다.
  
-쿼리 (서비스 안내) 서비스 구성 id 별로 최적화 됩니다. 필터 또는 아래에 나열 된 기본값이 아닌 정렬 순서 추가로 지정 상황에 따라 시간이 오래 걸릴 수를 반환 합니다. 이 동영상의 더 큰 집합에 대 한 더 분명 하 게 합니다. 쿼리 오름차순으로 정렬 지정할 수 없습니다.
+쿼리는 서비스 구성 id (서비스 안내) 별로 최적화 됩니다. 필터 또는 아래에 나열 된 기본값이 아닌 정렬 순서 지정 추가 상황에 따라 시간이 오래 걸릴 수를 반환 합니다. 이 동영상의 더 큰 집합에 대 한 더 분명 하 게 합니다. 쿼리는 오름차순으로 정렬 순서를 지정할 수 없습니다.
  
-특정 컬렉션 ofpublic 클립을 가져오려면 한정자가 필요 합니다. 요청 사용자에 게 요청 된 서비스 안내에 액세스할 수 있어야, 그렇지 않으면 HTTP 403 반환 됩니다.
+한정자는 특정 컬렉션 ofpublic 클립에 해야 합니다. 요청 하는 사용자 요청 된 서비스 안내에 액세스할 수 있어야, 그렇지 않으면 HTTP 403 반환 됩니다.
   
 <a id="ID4ECB"></a>
 
@@ -44,7 +44,7 @@ ms.locfileid: "4469885"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | 서비스 안내| string| 기본 서비스 구성 공개 클립의 식별자입니다.| 
-| titleid| string| 공용 클립의 titleId 합니다. 동일한 URI는 서비스 안내도 지정할 수 없습니다. 기본 서비스 안내를 조회할 수를 지정 하는 경우 사용 됩니다.| 
+| titleid| string| 공용 클립의 titleId 합니다. 서비스는 안내도 동일한 URI에 지정할 수 없습니다. 기본 서비스 안내를 조회할 수를 지정 하는 경우 사용 됩니다.| 
   
 <a id="ID4ENB"></a>
 

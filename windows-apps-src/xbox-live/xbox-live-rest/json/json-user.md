@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7070d829000821cb48d8fcbaa4fde1d6f393b16a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472688"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509187"
 ---
 # <a name="user-json"></a>User(JSON)
-사용자 순위표 데이터를 포함합니다. 
+사용자 순위표 데이터가 들어 있습니다. 
 <a id="ID4EN"></a>
 
  
@@ -37,7 +37,7 @@ ms.locfileid: "4472688"
 <a id="ID4EMC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

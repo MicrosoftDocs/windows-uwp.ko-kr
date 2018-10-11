@@ -11,37 +11,37 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c1b1741beaf1ffa2b034726a41c56339136e6f1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462083"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505597"
 ---
 # <a name="step-by-step-guide-to-integrate-xbox-live-for-managed-partners-and-idxbox-members"></a>단계별 지침 관리 파트너에 대 한 Xbox Live를 통합 하 고 ID@Xbox 멤버
 
 이 섹션에서는 Xbox live를 실행 하는 데 도움이:
 
 ## <a name="1-choose-a-platform"></a>1. 플랫폼을 선택 합니다.
-개발 키트 XDK (Xbox), 유니버설 Windows 플랫폼 (UWP), 또는 크로스 플레이 게임을 만드는 중에 결정 합니다.
+Xbox 개발 키트 (XDK), 유니버설 Windows 플랫폼 (UWP), 또는 크로스 플레이 게임을 만드는 중에 결정 합니다.
 
 - XDK 기반 게임용 Xbox One 콘솔에서 실행
-- UWP 게임을 Windows PC, Windows Phone 또는 Xbox One 등 모든 Windows 플랫폼을 대상으로 수 있습니다.
-  - Xbox One에 대 한 [Xbox One의 UWP](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) 및 특히 [Xbox One의 UWP 앱 및 게임에 대 한 시스템 리소스](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation) 참조
-- 크로스 플레이 게임은 일반적으로 게임 Xbox One 및 XDK와 UWP 경로 사용 하 여 Windows PC를 대상으로 하는입니다.
+- UWP 게임을 Windows PC, Windows Phone 또는 Xbox One 등의 모든 Windows 플랫폼을 대상으로 수 있습니다.
+  - Xbox One 용 [Xbox One의 UWP](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) 및 특히 [Xbox One의 UWP 앱 및 게임에 대 한 시스템 리소스](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation) 참조
+- 크로스 플레이 게임은 일반적으로 Xbox One 및 XDK와 UWP 경로 사용 하 여 Windows PC를 대상으로 하는 게임입니다.
 
 ## <a name="2-ensure-you-have-a-title-created-on-dev-center-or-xdp"></a>2. 개발자 센터 또는 XDP에서 만든 타이틀이 있는지 확인
-모든 Xbox Live 타이틀 하에 로그인 고 Xbox Live 서비스 전화 걸기 전에 개발자 센터 또는 Xbox 개발자 포털 (XDP)에서 정의 되어야 합니다.  [새 타이틀 만들기](create-a-new-title.md) 에서는이 작업을 수행 하는 방법을 보여 줍니다.
+모든 Xbox Live 타이틀 수 로그인 및 Xbox Live 서비스 전화를 걸기 전에 개발자 센터 또는 Xbox 개발자 포털 (XDP)에서 정의 되어야 합니다.  [새 타이틀 만들기](create-a-new-title.md) 에서는이 작업을 수행 하는 방법을 보여 줍니다.
 
 ## <a name="3-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>3. IDE 또는 게임 엔진 설정 적절 한 가이드를 따라
-플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 따라 하 고 진행 하면서 Xbox Live의 기본 사항을 알아볼 수 있습니다.
+플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 수행 하 고 진행 하면서 Xbox Live의 기본 사항을 알아볼 수 있습니다.
 
 * [UWP 게임에 대 한 Visual Studio를 사용 하 여 시작](get-started-with-visual-studio-and-uwp.md) Visual Studio 프로젝트를 개발자 센터의 Xbox Live 구성과 연결 하는 방법을 표시 됩니다.
 
-* [Unity UWP 게임을 사용 하 여 시작](partner-add-xbox-live-to-unity-uwp.md) 하면 새 Xbox Live를 만들려면 Unity 제목을 사용 하는 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 표시 됩니다.
+* [Unity UWP 게임을 사용 하 여 시작](partner-add-xbox-live-to-unity-uwp.md) 하면 새 Xbox Live를 만들려면 Unity 제목, 사용 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 표시 됩니다.
 
 * [XDK 용 Visual Studio를 사용 하 여 시작 기반 게임은](xdk-developers.md) XDK를 사용 하는 Xbox One 제목 하는 경우 Visual Studio 프로젝트 설정 하는 방법을 표시 됩니다.
 
-* [크로스 플레이 게임을 만들기 시작](get-started-with-cross-play-games.md) Windows 10 PC에 대 한 Xbox One 및 기반 UWP 게임에 대 한 게임을 기반으로 하는 XDK 있는 제품을 확인 하는 방법을 설명 합니다.
+* [크로스 플레이 게임을 만들기 시작](get-started-with-cross-play-games.md) Windows 10 PC에 대 한 제품을 기반으로 하는 XDK에 대해 Xbox One 및 기반 UWP 게임에 대 한 게임 하는 방법을 설명 합니다.
 
 ## <a name="4-xbox-live-concepts"></a>4. Xbox Live 개념
 타이틀을 만들었으면 타이틀 개발 경험에 영향을 주는 Xbox Live 개념에 대해 알아 두어야 합니다.
@@ -56,10 +56,10 @@ ms.locfileid: "4462083"
 
 - [Xbox Live 소셜 플랫폼 - 프로필, 친구, 상태](../social-platform/social-platform.md)
 - [Xbox Live 데이터 플랫폼-통계, 순위표, 도전 과제](../data-platform/data-platform.md)
-- [Xbox Live 멀티 플레이 플랫폼-토너먼트 초대, 매치 메이 킹,](../multiplayer/multiplayer-intro.md)
+- [Xbox Live 멀티 플레이 플랫폼-토너먼트 초대, 연결,](../multiplayer/multiplayer-intro.md)
 - [Xbox Live 저장소 플랫폼-연결 된 저장소, 타이틀 저장소](../storage-platform/storage-platform.md)
 - [상황에 맞는 검색](../contextual-search/introduction-to-contextual-search.md)
 
-## <a name="6-release-your-title"></a>6. 타이틀을 릴리스 합니다.
+## <a name="6-release-your-title"></a>6. 타이틀을 해제 합니다.
 
-ID@Xbox이 제목 및 게임 게시자가 출시 타이틀은 Microsoft 파트너 릴리스 전에 인증 프로세스를 통과 해야 합니다.  이러한 제목은 멀티 플레이어, 도전 과제, 다양 한 상태 등의 추가 기능에 액세스할 수 때문입니다.  타이틀을 릴리스할 준비가 되 면 제출 및 릴리스 프로세스에 대 한 자세한 내용은 Microsoft 담당자에 게 문의 합니다.
+ID@Xbox이 제목 및 게임 게시자가 출시 타이틀은 Microsoft 파트너 릴리스 전에 인증 프로세스에 통과 해야 합니다.  이러한 제목은 멀티 플레이어, 도전 과제, 다양 한 상태 등의 추가 기능에 액세스할 수 때문입니다.  타이틀을 릴리스할 준비가 되 면 제출 및 릴리스 프로세스에 대 한 자세한 내용은 Microsoft 담당자에 게 문의 합니다.

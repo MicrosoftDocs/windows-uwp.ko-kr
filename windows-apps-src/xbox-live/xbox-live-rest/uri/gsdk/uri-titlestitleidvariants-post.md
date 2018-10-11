@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 246427b772403ca07adac2a4b1b07ec159142049
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466636"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507763"
 ---
 # <a name="post-titlestitleidvariants"></a>POST (/titles/{titleId}/variants)
 URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -37,7 +37,7 @@ URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검�
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleid| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
+| titleid| 요청을 실행 해야 하는 타이틀의 ID입니다.| 
   
 <a id="ID5EG"></a>
 
@@ -51,15 +51,15 @@ gameserverds.xboxlive.com
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-요청을 만들 때에 다음 표에 표시 된 헤더 필요 합니다.
+요청을 만들 때 다음 표에 표시 된 헤더는 필요 합니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 전송 되는 데이터의 유형입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
 | 호스트| gameserverds.xboxlive.com|  | 
 | Content-Length|  | 요청 개체의 길이입니다.| 
 | xbl 계약 버전 x| 1| API 계약 버전입니다.| 
-| 권한 부여| XBL3.0 x = [해시]; [토큰]| 인증 토큰입니다.| 
+| 권한 부여| XBL3.0 x = [해시]. [토큰]| 인증 토큰입니다.| 
   
 <a id="ID4EED"></a>
 
@@ -77,14 +77,14 @@ gameserverds.xboxlive.com
  
 ## <a name="authorization"></a>권한 부여
 
-요청이 유효한 Xbox Live 권한 부여 헤더를 포함 해야 합니다. 이 리소스에 액세스 하는 호출자에 게 허용 되지 않으면, 서비스 403 응답에 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스 401 권한 없음 응답에 반환 합니다.
+요청이 유효한 Xbox Live 권한 부여 헤더를 포함 해야 합니다. 호출자에 게가이 리소스에 액세스 하는 허용 되지 않으면, 서비스 응답 403 반환 합니다. 헤더에 잘못 되었거나 누락 된 경우, 서비스 401 권한이 없음 응답에 반환 합니다.
  
 <a id="ID4EEE"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-요청에는 다음 멤버가 포함 된 JSON 개체를 포함 해야 합니다.
+요청에는 다음 멤버가 포함 된 JSON 개체가 있어야 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -115,7 +115,7 @@ gameserverds.xboxlive.com
  
 ## <a name="required-response-headers"></a>필수 응답 헤더
  
-응답에는 다음 표에 표시 된 헤더 항상 포함 됩니다.
+응답에는 다음 표에 표시 된 헤더 항상 있습니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -138,7 +138,7 @@ gameserverds.xboxlive.com
  
 ## <a name="response-body"></a>응답 본문
  
-호출에 성공 하면 서비스는 다음 멤버가 포함 된 JSON 개체를 반환 합니다.
+호출 되 면 서비스는 다음 멤버가 포함 된 JSON 개체를 반환 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -150,7 +150,7 @@ gameserverds.xboxlive.com
 | gameVariantSchemaId|  | 
 | variantSchemas| 변형 스키마의 배열입니다.| 
 | variantSchemaId| 스키마의 Id입니다.| 
-| schemaContent| 콘텐츠 스키마| 
+| schemaContent| 스키마 내용| 
 | name| 스키마 이름| 
 | gsiSets| GSI 집합의 배열입니다.| 
 | minRequiredPlayers| 변형에 대 한 플레이어의 최소 수입니다.| 

@@ -12,15 +12,15 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471199"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508508"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>패키지 데스크톱 응용 프로그램의 알려진된 문제
 
-이 문서에서는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 때 발생할 수 있는 알려진된 문제를 포함 합니다.
+이 문서에서는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 때 발생할 수 있는 알려진된 문제가 포함 되어 있습니다.
 
 <a id="app-converter" />
 
@@ -133,17 +133,17 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>잘못 된 PE 인증서 (0x800700C1)
 
-이 패키지 손상 된 인증서가 있는 이진 파일을 포함 하는 경우 발생할 수 있습니다. 다음은 일부의 이유는 이유이 발생할 수 있습니다.
+이 패키지 손상 된 인증서가 있는 이진 파일을 포함 하는 경우 발생할 수 있습니다. 다음은 몇 가지 이유는이 발생할 수 있는 이유입니다.
 
-* 인증서의 시작 화면 이미지의 끝에 되지 않습니다.  
+* 인증서의 시작 화면 이미지의 끝에 아닙니다.  
 
 * 인증서의 크기는 양수 하지 않습니다.
 
-* 후 인증서 시작 되지 합니다 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조입니다.
+* 후 인증서 시작 하지는 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조.
 
-* 인증서 포인터 WIN_CERTIFICATE 구조에 대 한 제대로 정렬 되지 않습니다.
+* 인증서 포인터 제대로 WIN_CERTIFICATE 구조에 대 한 정렬 되지 않습니다.
 
-잘못 된 PE 인증서를 포함 하는 파일을 찾으려면 **명령 프롬프트**를 열고 라는 환경 변수를 설정 `APPXSIP_LOG` 을 1의 값입니다.
+잘못 된 PE 인증서를 포함 하는 파일을 찾으려면 **명령 프롬프트**를 열고 라는 환경 변수를 설정 `APPXSIP_LOG` 1 값입니다.
 
 ```
 set APPXSIP_LOG=1

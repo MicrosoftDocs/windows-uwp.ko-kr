@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462544"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507309"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -268,7 +268,7 @@ CI_MyUWPApp_1.1.2501.0
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-HockeyApp 작업을 사용 하면 기호 파일의 경로를 지정할 수, 이지만 번들과 기호를 포함 하는 것이 좋습니다.
+HockeyApp 작업을 사용 하면 기호 파일의 경로를 지정할 수, 이지만 번들을 사용 하 여 기호를 포함 하는 것이 좋습니다.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Microsoft Store에 패키지를 제출하는 연속 배포 빌드 설정 
 
@@ -316,7 +316,7 @@ AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 
 Microsoft Store에 게시하지 않고 앱을 배포하려는 경우 장치에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 장치에 앱을 직접 사이드로드할 수 있습니다. 
 
-앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대 한 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가 하 고 됩니다 다음 설치 하거나 앱 패키지 파일을 업데이트 합니다.
+앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대 한 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가 하 고는 다음 설치 하거나 앱 패키지 파일을 업데이트 합니다.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Windows10 1주년 업데이트를 사용하여 앱을 사이드로드
 Windows 10 1 주년 업데이트에서 앱 패키지 파일을 두 번 클릭 하 고 대화 상자에서 설치 단추를 선택 하 여 앱을 설치할 수 있습니다. 

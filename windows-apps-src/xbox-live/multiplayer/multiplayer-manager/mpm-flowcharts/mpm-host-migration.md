@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 6394e440981dea5da28b0a5e59334def9a2a57e8
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464692"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506541"
 ---
 # <a name="flowchart---handle-host-migration"></a>순서도-호스트 마이그레이션 처리
 
-다음 순서도 멀티 플레이어 게임의 호스트 끊을 때 호스트 마이그레이션 처리의 흐름을 보여 줍니다.
+다음 순서도 멀티 플레이어 게임의 호스트 연결을 끊을 때 호스트 마이그레이션 처리의 흐름을 보여 줍니다.
 
 ## <a name="handle-host-migration"></a>호스트 마이그레이션 처리
 
