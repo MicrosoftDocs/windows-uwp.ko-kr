@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 776db1cf795ae964621d751d6b4b72d22ba82c2d
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4509345"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4537027"
 ---
 # <a name="mediamarketplaceidbrowse"></a>/media/{marketplaceId}/browse
 단일 미디어 그룹 내에서 항목을 찾을 수 있습니다. 찾아보기 API를 사용 하면 클라이언트에서 단일 미디어 그룹 내에서 항목을 찾습니다. 무작위로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하 여 데이터 페이지에 액세스할 수 있습니다.

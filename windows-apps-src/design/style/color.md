@@ -1,8 +1,8 @@
 ---
-author: QuinnRadich
+author: Jwmsft
 description: UWP 앱에서 테마 컬러 및 테마 사용 방법을 알아보세요.
 title: UWP 앱의 컬러
-ms.author: quradic
+ms.author: jimwalk
 ms.date: 4/7/2018
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: ca59855456abe366ec681404b3bf6253bc182f79
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.openlocfilehash: e5d26d0e2fc8c040af81645477e3b75b0d128738
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4502002"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4536707"
 ---
 # <a name="color"></a>색상
 
