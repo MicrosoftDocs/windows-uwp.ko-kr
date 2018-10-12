@@ -11,11 +11,11 @@ keywords: windows 10, uwp, Microsoft Store Services SDK, 이벤트 기록
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b9cd4d7c527001bb382596c9c805be4ad5e7b08
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4541165"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4566588"
 ---
 # <a name="log-custom-events-for-dev-center"></a>개발자 센터에 대한 사용자 지정 이벤트 로깅
 

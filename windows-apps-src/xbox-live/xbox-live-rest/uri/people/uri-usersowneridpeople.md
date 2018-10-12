@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9778c5519a52291754d08fa8c1f4c4ed163967e1
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4534061"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4563009"
 ---
 # <a name="usersowneridpeople"></a>/users/{ownerId}/people
 호출자의 사용자 컬렉션에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
