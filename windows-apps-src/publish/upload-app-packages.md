@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
 ms.openlocfilehash: d966688110870b669bdd296ec14e145a5d77b74e
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4529195"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4573535"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 

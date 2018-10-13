@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a10b8704de47ef62a283c1b634b4a5212623e5c
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4537770"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4574533"
 ---
 # <a name="get-usersme"></a>GET (/users/me)
 사용자의 XUID 알아야 할 필요 없이 현재 사용자의 [PresenceRecord](../../json/json-presencerecord.md) 를 가져옵니다.

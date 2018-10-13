@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 13b96b0d2f1f674533dd2c070bd1a10884bb7370
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4536679"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4573992"
 ---
 # <a name="get-usersowneridscidsscidclipsgameclipid"></a>GET (/users/{ownerId}/scids/{scid}/clips/{gameClipId})
 찾으면 모든 Id에 알려진 경우 시스템에서 단일 게임 클립을 가져옵니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.

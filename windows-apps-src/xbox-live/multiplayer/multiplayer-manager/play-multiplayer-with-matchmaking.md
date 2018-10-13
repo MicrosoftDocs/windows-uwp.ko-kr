@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어, 멀티 플레이어 관리자 순서도, 스마트
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bc23c73df1bdd8a030165ae623fc59c036104bd
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4539193"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4572398"
 ---
 # <a name="find-a-multiplayer-game-by-using-smartmatch"></a>스마트를 사용 하 여 멀티 플레이어 게임을 찾기
 

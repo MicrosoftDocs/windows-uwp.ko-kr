@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: 28f9da245d3fae23241058d7a83fe8c397a415d2
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4537786"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4569973"
 ---
 # <a name="get-started-developing-an-xbox-live-creators-program-title-with-the-unity-game-engine"></a>Unity 게임 엔진을 사용하여 Xbox Live 크리에이터스 프로그램 타이틀 개발 시작
 

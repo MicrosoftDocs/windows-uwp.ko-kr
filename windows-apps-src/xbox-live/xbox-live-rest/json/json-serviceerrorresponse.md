@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f0eed745b9350bd1bc2f4860cb3db5e5a6b9ad7c
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4534058"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4574662"
 ---
 # <a name="serviceerrorresponse-json"></a>ServiceErrorResponse(JSON)
 서비스 오류가 발생할 때 적절 한 HTTP 오류 코드 반환 됩니다. 필요에 따라 서비스 아래에 정의 된 대로 ServiceErrorResponse 개체를 포함할 수도 있습니다. 프로덕션 환경에서 더 적은 데이터가 포함 될 수 있습니다. 

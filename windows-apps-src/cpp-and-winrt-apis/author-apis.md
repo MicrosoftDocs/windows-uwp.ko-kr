@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4533717"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4575282"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 통한 API 작성
 

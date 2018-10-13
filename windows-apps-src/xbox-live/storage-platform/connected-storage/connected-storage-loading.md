@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장, xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fc67b19619f8b7cf7e873acd956c06f65491c06
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.openlocfilehash: d3252ad2ffb9145088f38f4a8d6c7c5ebc94e9e5
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4528922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4571780"
 ---
 # <a name="use-connected-storage-to-load-data"></a>연결 된 저장소를 사용 하 여 데이터 로드
 
@@ -152,7 +152,7 @@ string[] blobsToRead = new string[] { c_saveBlobName };
 
 // GetAsync allocates a new Dictionary to hold the retrieved data. You can also use ReadAsync
 // to provide your own preallocated Dictionary.
-GameSaveBlobGetResult result = await container.GetAsync(blobsToRead);
+GameSaveBlobGetResult result = await gameSaveContainer.GetAsync(blobsToRead);
 
 int loadedData = 0;
 

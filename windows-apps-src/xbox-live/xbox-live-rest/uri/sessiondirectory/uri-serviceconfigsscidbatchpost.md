@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4f7bc8a4dae55c60e501c2a38e6806b00f4d5075
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4533324"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4572599"
 ---
 # <a name="post-serviceconfigsscidbatch"></a>POST (/serviceconfigs/{scid}/batch)
 서비스 구성에 대 한 여러 Xbox 사용자 Id에서 일괄 처리 쿼리를 만듭니다.

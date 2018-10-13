@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8e4ac4e91c4359ca20822297ccb625d09e3d59
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4537401"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4570276"
 ---
 # <a name="person-json"></a>Person(JSON)
 사용자가 시스템에서 한 사람에 대 한 메타 데이터입니다. 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 85d7390f16d2cc8f61d76f51713c2903a6fd2c9c
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4539445"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4574620"
 ---
 # <a name="gameclipvisibility-enumeration"></a>GameClipVisibility 열거형
 GameClipVisibility 열거형에 자세히 설명합니다. 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eda370db8b68232066052cca3d0abfa6e3876167
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4538270"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4574612"
 ---
 # <a name="data-binding-and-mvvm"></a>데이터 바인딩 및 MVVM
 

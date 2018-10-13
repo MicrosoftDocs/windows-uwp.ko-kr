@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 033a87580680b054f5eefec7c543215e4351ace3
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4528897"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4572094"
 ---
 # <a name="property-json"></a>Property(JSON)
 매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 포함 되어 있습니다.

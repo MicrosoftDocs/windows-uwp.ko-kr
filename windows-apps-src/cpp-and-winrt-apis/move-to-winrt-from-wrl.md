@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, WRL
 ms.localizationpriority: medium
 ms.openlocfilehash: 44a41e42477de9d29f1d0443324fa83590c37caf
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4536271"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4569991"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>WRL에서 C++/WinRT로 이동
 이 항목에 해당 하는 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 포트 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).

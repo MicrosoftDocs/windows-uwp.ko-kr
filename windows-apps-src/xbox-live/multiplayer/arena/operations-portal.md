@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, 작업, 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 84b2deb0a192d7e7b8d8360ec703d4eb5d3a0a23
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4528973"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4572580"
 ---
 # <a name="xbox-arena-operations-portal"></a>Xbox 아레나 작업 포털
 

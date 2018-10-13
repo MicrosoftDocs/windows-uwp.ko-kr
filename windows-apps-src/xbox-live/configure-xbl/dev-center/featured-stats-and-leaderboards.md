@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 추천 통계 및 순위표, 순위표, 통계 2017, Windows 개발자 센터
 ms.openlocfilehash: ed965c4d7e2c15e76494fd197808c7f47db2d584
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4539321"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4574076"
 ---
 # <a name="configuring-featured-stats-and-leaderboards-2017-on-windows-dev-center"></a>Windows 개발자 센터에서 주요 통계 및 순위표 2017 구성
 

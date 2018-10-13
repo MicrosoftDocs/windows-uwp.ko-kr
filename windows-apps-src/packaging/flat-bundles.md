@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, 패키징, 패키지 구성, 플랫 번들
 ms.localizationpriority: medium
 ms.openlocfilehash: 63206619d75bedb92ad6c6d05c3188272c0760de
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4534047"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4573906"
 ---
 # <a name="flat-bundle-app-packages"></a>플랫 번들 앱 패키지 
 

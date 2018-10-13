@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 30a0e3056f8b7be2ed9d033e2da57795aec6946f
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4539034"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4573669"
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a>적응형 타일 템플릿: 스키마 및 지침
 

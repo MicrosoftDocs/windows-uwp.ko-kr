@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d7c2cb3ca95524b49ea6e0cbe14771036a3e6925
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4535844"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4572644"
 ---
 # <a name="multiplayersessionrequest-json"></a>MultiplayerSessionRequest(JSON)
 **MultiplayerSession** 개체에 대 한 작업에 대 한 전달 되는 요청 JSON 개체입니다. 

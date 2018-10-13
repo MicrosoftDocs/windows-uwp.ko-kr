@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ec6b2a31f4f577de30dac1c96a411c6aee6e9dc
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4541245"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4572853"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>MakePri.exe 형식별 인덱서
 

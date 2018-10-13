@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b1cd05f974bf9193e84919a5e679ef996746d7e
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4536866"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4571325"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
@@ -222,7 +222,7 @@ using namespace winrt::Windows::Globalization::NumberFormatting;
 CurrencyFormatter currency{ L"USD" };
 ```
 
-But there may be times that you'll want to create the activation factory yourself, and then create objects from it at your convenience. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
+하지만 정품 인증 공장을 직접 만들고자 하는 경우 귀하의 편의에 따라 여기에서 개체를 만듭니다. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Globalization::NumberFormatting;
