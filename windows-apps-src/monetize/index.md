@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: Windows SDK, Microsoft Advertising SDK, Microsoft Store Services SDK 및 Microsoft Store는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다.
 title: 수익 창출, 참여 및 스토어 서비스
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10 uwp, 수익 창출, 참여, 홍보, 스토어 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: abd6c772ed84934a54c1755b5d55d398e34fbad9
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573734"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610491"
 ---
 # <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 스토어 서비스
 
@@ -36,7 +36,7 @@ Microsoft Store에서 청구되는 수수료 및 앱으로 번 돈을 지급 받
 | [개발자 센터에 대한 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)  | UWP 앱에서 사용자 지정 이벤트를 기록하고 Windows 개발자 센터 대시보드의 [사용 보고서](../publish/usage-report.md)에서 이벤트를 검토합니다. 이 기능을 사용하려면 Microsoft Store Services SDK가 필요합니다. |
 | [평점 및 리뷰 요청](request-ratings-and-reviews.md) |  평점 및 리뷰 UI를 프로그래밍 방식으로 표시하여 앱에 대한 평점이나 리뷰를 남기도록 고객을 독려합니다.  |
 | [Microsoft Store 서비스](using-windows-store-services.md)    |  RESTful API를 사용하여 스토어 제출을 자동화하고 앱 분석 데이터에 액세스하며 기타 스토어 관련 작업을 자동화하는 방법을 알아봅니다.    |
-| [소매 데모 (RDX) 기능을 앱에 추가](retail-demo-experience.md)        |  고객에 게 Pc 및 장치를 판매 바닥 사용해에서 바로 이동할 수 있도록 Windows 앱에 소매 데모 모드를 포함 합니다.  |
+| [소매 데모 (RDX) 기능을 앱에 추가](retail-demo-experience.md)        |  Pc와 판매 바닥의 장치를 사용해 고객에서 바로 이동할 수 있도록 Windows 앱에는 소매 데모 모드를 포함 합니다.  |
 
 ## <a name="related-topics"></a>관련 항목
 
