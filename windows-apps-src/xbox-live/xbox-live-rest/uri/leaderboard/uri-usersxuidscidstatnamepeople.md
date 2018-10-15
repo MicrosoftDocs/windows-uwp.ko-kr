@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 161c7e96faf3ec217aeb188ccb3b5b1e354d217e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564768"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614449"
 ---
 # <a name="usersxuidxuidscidsscidstatsstatnamepeopleallfavorite"></a>/users/xuid({xuid})/scids/{scid}/stats/{statname)/people/{all|favorite}
 소셜 (순위) 순위표에 액세스합니다.
@@ -33,8 +33,8 @@ ms.locfileid: "4564768"
 | --- | --- | --- |
 | xuid| string| 사용자의 식별자입니다.|
 | 서비스 안내| string| 액세스 되는 리소스를 포함 하는 서비스 구성의 식별자입니다.|
-| statname| string| 사용자 통계 리소스 액세스의 고유 식별자입니다.|
-| all\ | favorite| 열거형| 현재 사용자의 알려진된 모든 연락처 또는 해당 사용자가 원하는 사용자 지정 된 연락처에만 (점수) 값 순위는 상태 여부입니다.|
+| statname| string| 액세스 되는 사용자 통계 리소스의 고유 식별자입니다.|
+| all\ | favorite| 열거형| 현재 사용자의 알려진된 모든 연락처 또는 해당 사용자가 즐겨 찾는 사용자 지정 된 연락처에만 (점수) 값의 상태를 순위 것인지 하세요.|
 
 <a id="ID4EOC"></a>
 
@@ -43,7 +43,7 @@ ms.locfileid: "4564768"
 
 [GET (/users/xuid({xuid})/scids/{scid}/stats/{statname)/people/{all\|favorite})](uri-usersxuidscidstatnamepeopleget.md)
 
-&nbsp;&nbsp;소셜 순위표 순위 상태는 현재 사용자의 모든 알려진된 연락처 중 하나에 해당 사용자가 원하는 사용자 지정 된 연락처에만 (점수) 값을 반환 합니다.
+&nbsp;&nbsp;소셜 순위표 순위 상태는 현재 사용자의 모든 알려진된 연락처 중 하나 또는 해당 사용자가 즐겨 찾는 사용자 지정 된 연락처에만 (점수) 값을 반환 합니다.
 
 <a id="ID4EYC"></a>
 

@@ -1,26 +1,26 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: Windows10(UWP)용 XAML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다.
 title: XAML 및 .NET의 AdControl
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, AdControl, 광고 관리, XAML, .net, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ec7cfe180ee5c83bd4c4084bf02834a265de026
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: d7549e2fc73bfd5ca3132146248747037c5fffc2
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689979"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614810"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>XAML 및 .NET의 AdControl
 
 
-이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스를 사용하여 C#를 사용해 구현되는 Windows 10용 UWP(유니버설 Windows 플랫폼) XAML 앱에서 배너 광고를 표시하는 방법을 보여줍니다.
+이 연습에서는 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 클래스를 사용하여 C#를 사용해 구현되는 Windows 10용 UWP(유니버설 Windows 플랫폼) XAML 앱에서 배너 광고를 표시하는 방법을 보여줍니다.
 
 > [!NOTE]
 > Microsoft Advertising SDK는 C ++를 사용하여 구현되는 XAML 앱도 지원합니다. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
@@ -79,7 +79,7 @@ ms.locfileid: "1689979"
     </Page>
     ```
 
-5. **Grid** 태그에 **AdControl**에 대한 코드를 추가합니다. [테스트 광고 단위 값](set-up-ad-units-in-your-app.md#test-ad-units)에 [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) 및 [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) 속성을 할당합니다. 또한 [배너 광고에 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나가 되도록 컨트롤의 **높이** 와 **너비**를 조정합니다.
+5. **Grid** 태그에 **AdControl**에 대한 코드를 추가합니다. [테스트 광고 단위 값](set-up-ad-units-in-your-app.md#test-ad-units)에 [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) 및 [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) 속성을 할당합니다. 또한 [배너 광고에 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나가 되도록 컨트롤의 **높이** 와 **너비**를 조정합니다.
 
     > [!NOTE]
     > 모든 **AdControl**에는 컨트롤할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱을 스토어에 게시하기 전, Windows 개발자 센터에서 [이 테스트 값을 라이브 값으로](#release) 변경하세요.

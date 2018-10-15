@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 136a5563690bba4f8cbea80fb066a887a6a11fa7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569818"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615068"
 ---
 # <a name="systemstringsvalidate"></a>/system/strings/validate
 유효성 검사에 대 한 문자열의 배열에 액세스합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`.
@@ -28,7 +28,7 @@ ms.locfileid: "4569818"
 
 [POST (/system/strings/validate)](uri-systemstringsvalidatepost.md)
 
-&nbsp;&nbsp;유효성 검사에 대 한 문자열의 배열 받아들이고 일련의 같은 크기의 결과 반환 합니다.
+&nbsp;&nbsp;유효성 검사에 대 한 문자열의 배열 받아들이고 같은 크기의 결과 배열을 반환 합니다.
  
 <a id="ID4E6"></a>
 

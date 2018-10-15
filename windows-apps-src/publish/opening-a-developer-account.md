@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b707479d11cc7aef62385b476720bff8477ed401
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565899"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615373"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
@@ -59,15 +59,15 @@ ms.locfileid: "4565899"
 ## <a name="additional-guidelines-for-company-accounts"></a>회사 계정에 대한 추가 지침
 
 > [!IMPORTANT]
-> 여러 사용자가 개발자 센터 계정에 액세스할 수 있도록 Azure Active Directory를 사용 하 여 개별 사용자에 게 (Microsoft 계정에 대 한 공유 액세스 아님)에 역할을 할당 하는 것이 좋습니다. 각 사용자는 개별 Azure AD 자격 증명으로 로그인하여 개발자 센터 계정에 액세스할 수 있습니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
+> 여러 사용자 개발자 센터 계정에 액세스할 수 있도록 Azure Active Directory를 사용 하 여 개별 사용자에 게 (Microsoft 계정에 대 한 공유 액세스 아님)에 역할을 할당 하는 것이 좋습니다. 각 사용자는 개별 Azure AD 자격 증명으로 로그인하여 개발자 센터 계정에 액세스할 수 있습니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
 
-회사 계정을 만들 때 다음이 지침에 둘 이상의 사용자 계정을 개설한 Microsoft 계정으로 로그인 (아닌 개발자 센터 계정에 추가 된 개별 사용자) 하 여 계정에 액세스 해야 하는 경우 도움이 될 수 있습니다.
+회사 계정을 만들 때 다음이 지침에 둘 이상의 사용자 계정을 개설한 Microsoft 계정으로 로그인 (아닌 개발자 센터 계정에 추가 된 개별 사용자)에 서명 하 여 계정에 액세스 해야 하는 경우 도움이 될 수 있습니다.
 
--   MyCompany_DevCenter@outlook.com 등 자신이나 다른 사람에게 속해 있지 않는 이메일 주로 Microsoft 계정을 만듭니다. 회사에 이미 Azure AD를 사용 하는 경우에 특히 회사의 도메인에 전자 메일 주소를 사용 하지 마세요. (회사의 Azure에서 추가 사용자를 추가할 수 위에서 언급 한 대로 광고 나중.)
+-   MyCompany_DevCenter@outlook.com 등 자신이나 다른 사람에게 속해 있지 않는 이메일 주로 Microsoft 계정을 만듭니다. 회사에 이미 Azure AD를 사용 하는 경우에 특히 회사의 도메인에 전자 메일 주소를 사용 하지 마세요. (회사의 Azure에서 추가 사용자를 추가할 수 위에서 언급 했 듯이 AD 나중.)
 -   이 Microsoft 계정에 대한 액세스 권한을 최소한의 사용자로 제한합니다.
--   개발자 계정에 액세스 해야 하는 모든 사람을 포함 하는 회사 전자 메일 배포 그룹을 설정 하 고이 메일 주소를 추가 하는 [Microsoft 계정과 연결 하는 보안 정보 [(https://account.microsoft.com/security). 이렇게 하면이 별칭으로 전송 하는 보안 코드를 받을 목록에 있는 모든 직원이. 설정 하는 경우 메일 그룹은 불가능, 보안 정보를 개인의 전자 메일 주소를 추가할 수 있지만 해당 전자 메일 주소 소유자에 액세스 하 고 메시지가 나타나면 (예: 새 보안 정보가 t에 추가 될 때 보안 코드를 공유할 수 있는 유일한 됩니다. 그 계정 또는 새 장치에서 액세스 하는 경우).
--   Microsoft 계정 보안 정보를 회사 전화 번호를 추가 합니다. 확장 필요 하지 않으며 주요 팀 구성원이 액세스할 수는 번호를 사용 하려고 합니다.
--   일반적으로 개발자가 [신뢰할 수 있는 장치](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 를 사용 하 여 회사의 개발자 계정으로 로그인 합니다. 모든 주요 팀 구성원은 신뢰할 수 있는 장치에 대한 액세스 권한이 있어야 합니다. 그러면 계정에 액세스할 때 보안 코드를 전송할 필요성이 줄어듭니다. 단, 계정마다 주당 생성할 수 있는 코드 수가 제한됩니다.
+-   개발자 계정에 액세스 해야 하는 모든 사람을 포함 하는 회사 전자 메일 배포 그룹을 설정 하 고이 메일 주소를 추가 하는 [Microsoft 계정과 연결 된 보안 정보 [(https://account.microsoft.com/security). 이렇게 하면이 별칭으로 전송 하는 보안 코드를 받을 목록에 있는 모든 직원이. 설정 하는 경우 메일 그룹은 불가능 하지, 개인의 전자 메일 주소를 보안 정보에 추가할 수 있지만 해당 메일 주소의 소유자에 액세스 하 고 메시지가 나타나면 (예: 새 보안 정보 t에 추가 될 때 보안 코드를 공유할 수 있는 유일한 됩니다. 계정 그 또는 새 장치에서 액세스 하는 경우).
+-   회사 전화 번호, Microsoft 계정 보안 정보를 추가 합니다. 확장 필요 하지 않으며 주요 팀 구성원이 액세스할 수 있는 번호를 사용 하려고 합니다.
+-   일반적으로 개발자가 [신뢰할 수 있는 장치](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 를 사용 하 여 회사의 개발자 계정에 로그인 합니다. 모든 주요 팀 구성원은 신뢰할 수 있는 장치에 대한 액세스 권한이 있어야 합니다. 그러면 계정에 액세스할 때 보안 코드를 전송할 필요성이 줄어듭니다. 단, 계정마다 주당 생성할 수 있는 코드 수가 제한됩니다.
 -   신뢰할 수 없는 PC에서의 계정 액세스를 허용해야 하는 경우 그러한 액세스 권한을 최대 5명의 개발자로 제한합니다. 이러한 개발자는 동일한 지역 및 네트워크 위치를 공유하는 컴퓨터에서 계정에 액세스하는 것이 가장 좋습니다.
 -   https://account.microsoft.com/security에서 회사의 보안 정보를 자주 검토하여 모두 최신 정보인지 확인하세요.
 
@@ -76,9 +76,9 @@ ms.locfileid: "4565899"
 
 Microsoft는 개발자가 제공하는 보안 정보를 사용하여 개발자 계정을 여러 형식의 ID에 연결함으로써 Microsoft 계정의 보안 수준을 높입니다. 그러면 Microsoft 계정(및 개발자 계정)에 무단으로 액세스하는 것이 훨씬 더 어려워집니다. 또한 암호가 기억나지 않거나 다른 사용자가 개발자 계정에 액세스하려고 시도할 경우 Microsoft는 개발자에게 연락하여 개발자 계정에 대한 소유권을 확인하거나 적절한 제어 권한을 다시 설정할 수 있습니다.
 
-Microsoft 계정에 대한 메일 주소 및/또는 전화 번호가 2개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토하여 최신으로 유지해야 합니다. https://account.microsoft.com/security로 이동한 후 Microsoft 계정으로 로그인하여 보안 정보를 관리할 수 있습니다. 자세한 정보는 [보안 정보 및 보안 코드를](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) 참조 하세요.
+Microsoft 계정에 대한 메일 주소 및/또는 전화 번호가 2개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토하여 최신으로 유지해야 합니다. https://account.microsoft.com/security로 이동한 후 Microsoft 계정으로 로그인하여 보안 정보를 관리할 수 있습니다. 자세한 정보에 대 한 [보안 정보 및 보안 코드를](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) 참조 하세요.
 
-Microsoft 계정을 사용 하 여 Windows 개발자 센터 대시보드에 로그인 하는 경우 로그인 프로세스를 완료 하기 위해 제공 해야 하는 보안 코드를 전송 하 여 사용자의 id를 확인 하는 시스템 요청할 수 있습니다. *신뢰할 수 있는*자주 사용 하는 Pc를 지정 하는 것이 좋습니다. 신뢰할 수 있는 장치에서 로그인 할 때 일반적으로 없습니다 메시지가 코드에 대 한 특정 상황에서 메시지가 경우도 있지만 또는 긴 시간에 해당 디바이스에 로그인 하지 않은 경우. 자세한 내용은 [Microsoft 계정에 신뢰할 수 있는 장치 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 참조 하세요.
+Microsoft 계정을 사용 하 여 Windows 개발자 센터 대시보드에 로그인 하면 시스템 로그인 프로세스를 완료 하기 위해 제공 해야 하는 보안 코드를 전송 하 여 사용자의 id를 확인 하도록 요청할 수 있습니다. *신뢰할 수 있는*자주 사용 하는 Pc를 지정 하는 것이 좋습니다. 신뢰할 수 있는 장치에서 로그인 할 때 일반적으로 없습니다 메시지가 코드에 대 한 긴 시간에 해당 디바이스에 로그인 하지 않은 경우 또는 있지만 특정 상황에서 가끔 메시지가 나타날 수 있습니다. 자세한 내용은 [Microsoft 계정에 신뢰할 수 있는 장치 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 참조 하세요.
 
 
 ## <a name="closing-your-account"></a>계정 해지

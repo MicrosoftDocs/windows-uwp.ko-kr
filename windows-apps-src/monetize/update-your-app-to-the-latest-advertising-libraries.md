@@ -1,8 +1,8 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: 앱을 업데이트하여 지원되는 최신 Microsoft 광고 라이브러리를 사용하고 앱이 배너 광고를 계속 받도록 하는 방법을 알아봅니다.
 title: 배너 광고용 최신 광고 라이브러리로 앱 업데이트
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이그레이션
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 76581de948a4bb62597443e389122298f69c561d
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 87cd734196e66021555002a43cb41719c88a1cf8
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654812"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612175"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>배너 광고용 최신 광고 라이브러리로 앱 업데이트
 

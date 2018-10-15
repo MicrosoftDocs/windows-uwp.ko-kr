@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: A4C6098B-6CB9-4FAF-B2EA-50B03D027FF1
 description: Microsoft Store 대상 제품 API에서 이 메서드를 사용하여 현재 앱의 컨텍스트에서 현재 사용자에게 제공되는 대상 제품을 가져옵니다.
 title: 대상 제품 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 10/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품 가져오기
 ms.localizationpriority: medium
-ms.openlocfilehash: 188561fb5dc6dda318a0b2aa7f1d91aa04c32548
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 1032831492443460bd63671012a09edfceca2690
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1661893"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612755"
 ---
 # <a name="get-targeted-offers"></a>대상 제품 가져오기
 

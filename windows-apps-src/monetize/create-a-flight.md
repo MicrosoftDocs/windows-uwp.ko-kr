@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 8C1E9E36-13AF-4386-9D0F-F9CB320F02F5
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트를 만듭니다.
 title: 패키지 플라이트 만들기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 만들기
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c53addfb58006ec305d702716a29668440bb90e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 5e6a547c8baf0f8990415e303d6b69ca04986d3b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816698"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612018"
 ---
 # <a name="create-a-package-flight"></a>패키지 플라이트 만들기
 
@@ -51,7 +51,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 패키지 플라이트를 만들려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| applicationId | string | 필수. 패키지 플라이트를 만들려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
 
 
 ### <a name="request-body"></a>요청 본문

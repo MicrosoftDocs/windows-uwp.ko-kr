@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d563fde1f5c7aa430547e16771fa920786cd739
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563149"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612164"
 ---
 # <a name="usersxuidxuidgroupsmonikerbroadcastingcount"></a>/users/xuid({xuid})/groups/{moniker}/broadcasting/count
-액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 수는 URI에 표시 되는 XUID와 관련이 있습니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 수와 관련 된 URI에 표시 되는 XUID 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -31,7 +31,7 @@ ms.locfileid: "4563149"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | xuid| string| Xbox 사용자 ID (XUID)와 관련 된 그룹에 XUIDs 사용자의 합니다.| 
-| 모니커| string| 사용자의 그룹을 정의 하는 문자열입니다. 현재 허용 된 유일한 모니커 대문자 'P' "사람"입니다.| 
+| 모니커| string| 사용자의 그룹을 정의 하는 문자열입니다. 현재 허용 된 유일한 모니커 대문자 'P'를 사용 하 여 "사람" 인 경우| 
   
 <a id="ID4E4B"></a>
 

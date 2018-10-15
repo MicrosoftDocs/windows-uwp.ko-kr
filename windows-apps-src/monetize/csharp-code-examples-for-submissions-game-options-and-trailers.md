@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: 이 섹션의 C# 코드 예제를 사용하여 Microsoft Store 제출 API를 사용해 게임 옵션과 예고편을 제출하는 방법에 대해 자세히 알아봅니다.
 title: C# 샘플 - 앱 게임 옵션과 예고편 제출
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c13b8f0e65d7ca6715acc5ebcee5ca70605a668
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e22081435bea8c73f509719aec1ce31d9157a315
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653132"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614781"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\# 샘플: 앱 게임 옵션과 예고편 제출
 
@@ -51,14 +51,14 @@ ms.locfileid: "1653132"
 
 ## <a name="obtain-an-azure-ad-access-token"></a>Azure AD 액세스 토큰 가져오기
 
-```DevCenterAccessTokenClient```클래스는 ```tenantId```, ```clientId```및 ```clientSecret``` 값을 사용, Microsoft Store 제출 API에 사용할 Azure AD 액세스 토큰을 생성하는 도우미 메서드를 정의합니다.
+```DevCenterAccessTokenClient```클래스는 ```tenantId```, ```clientId```및 ```clientSecret``` 값을 사용하여 Microsoft Store 제출 API에 사용할 Azure AD 액세스 토큰을 생성하는 도우미 메서드를 정의합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/cs/DevCenterAccessTokenClient.cs#DevCenterAccessTokenClient)]
 
 <span id="utilities" />
 
-## <a name="helper-methods-to-invoke-the-submission-api-and-upload-submission-files"></a>제출 API를 호출하고, 제출 파일을 업로드하는 도우미 메서드
+## <a name="helper-methods-to-invoke-the-submission-api-and-upload-submission-files"></a>제출 API를 호출하고, 제출 파일을 업로드 하는 도우미 메서드
 
 ```DevCenterClient```클래스는 Microsoft Store 제출 API의 다양한 메서드를 호출하고, 앱 제출을 위해 패키지, 목록 이미지, 예고편 파일이 포함된 ZIP 파일을 업로드하는 도우미 메서드를 정의합니다.
 

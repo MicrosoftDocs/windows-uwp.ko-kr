@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
 ms.openlocfilehash: 37263794ffed6660f71c5e16195e992588c16d4a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571536"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612689"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
@@ -24,7 +24,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 
 각 홍보 코드에 고유한 교환 가능 URL이 고객이 코드를 교환 하 고 Microsoft Store에서 앱 또는 추가 기능을 설치 하기 위해 클릭할 수 있는 합니다.  사용자가 홍보 코드를 사용하여 설치하기 전에 앱은 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과해야 합니다.
 
-수 일회용 코드를 생성할 (있고 각 고객에 게 배포) 하거나 고객의 지정 된 수로 여러 번 사용할 수 있는 코드를 생성 하도록 선택할 수 있습니다.
+수 일회용 코드를 생성할 (있으며 각 고객에 게 배포), 또는 고객 수를 지정된 하 여 여러 번 사용할 수 있는 코드를 생성 하도록 선택할 수 있습니다.
 
 > [!TIP]
 > [지정 대상 푸시 알림](send-push-notifications-to-your-apps-customers.md)을 사용, 특정 고객 세그먼트에 홍보 코드를 배포할 수 있습니다. 이렇게 하는 경우 여러 고객이 동일한 코드를 사용할 수 있는 홍보 코드를 사용해야 합니다.
@@ -40,12 +40,12 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 -   **3k. 홍보 코드** 섹션을 포함하여 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 정의된 요구 사항을 따라야 합니다.
 
 > [!NOTE]
-> 앱 고객에 게 사용할 수 없는 경우에 홍보 코드를 사용할 수 있습니다 (즉, 선택한 경우에 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** 된 취득 중지 **: 직접 링크가 있는 고객은 제품의 스토어를 확인할 수 목록에 있지만 다운로드 가능, 과거 제품을 소유 또는 홍보 코드가 있고 Windows 10 장치를 사용 하는 경우** 제출의 [검색 기능](choose-visibility-options.md#discoverability) 섹션의 옵션). 이 옵션을 사용 하 여 고객에 게 홍보 코드를 사용 하 여 제품을 취득 하려면 (Xbox 포함) Windows 10 이어야 합니다.
+> 앱이 고객에 게 사용할 수 없는 경우에 홍보 코드를 사용할 수 있습니다 (즉, 선택한 경우에 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** **취득 중지를 사용 하 여: 직접 링크가 있는 고객은 제품의 스토어를 확인할 수 목록에 있지만 다운로드 가능, 과거 제품을 소유 또는 홍보 코드가 있고 Windows 10 장치를 사용 하는 경우** 제출의 [검색 기능](choose-visibility-options.md#discoverability) 섹션의 옵션). 이 옵션을 사용 하 여 고객이 홍보 코드가 있는 제품을 취득 하려면 (Xbox 포함) Windows 10 이어야 합니다.
 
 
 ## <a name="order-promotional-codes"></a>홍보 코드 주문
 
-앱 또는 추가 기능에 대 한 홍보 코드를 주문 합니다.
+앱 또는 추가 기능에 대 한 홍보 코드를 주문.
 
 1.  Windows 개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **모집**을 확장하고 **홍보 코드**를 선택합니다.
 
@@ -92,7 +92,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 
 ## <a name="code-redemption-user-experience"></a>코드 교환 사용자 환경
 
-고객에 게 홍보 코드 (또는 교환할 수 있는 URL)를 배포한 후 제품을 무료로 다운로드 URL을 클릭할 수 있습니다. 교환 가능 URL을 클릭하면 <https://account.microsoft.com/billing/redeem>에서 인증된 **코드 교환** 페이지가 시작됩니다. 이 페이지에는 교환하려는 앱에 대한 설명이 포함되어 있습니다. 고객이 Microsoft 계정으로 로그인하지 않은 경우, 로그인 메시지가 표시됩니다. 고객은 <https://account.microsoft.com/billing/redeem>을 방문하여 직접 코드를 입력할 수 있습니다.
+고객에 게 홍보 코드 (또는 해당 교환 가능 URL)를 배포한 후 제품을 무료로 얻을 수 URL을 클릭할 수 있습니다. 교환 가능 URL을 클릭하면 <https://account.microsoft.com/billing/redeem>에서 인증된 **코드 교환** 페이지가 시작됩니다. 이 페이지에는 교환하려는 앱에 대한 설명이 포함되어 있습니다. 고객이 Microsoft 계정으로 로그인하지 않은 경우, 로그인 메시지가 표시됩니다. 고객은 <https://account.microsoft.com/billing/redeem>을 방문하여 직접 코드를 입력할 수 있습니다.
 
 > [!IMPORTANT]
 > (**사용할 수 있지만, Microsoft Store에서 검색되지 않는 제품으로 설정**한 경우에도)제품 게시 프로세스를 완료한 후, 고객에게 홍보 코드를 배포하는 것이 좋습니다. 게시되지 않은 제품에 홍보 코드를 사용하려 시도할 경우 오류 메시지가 표시됩니다.
@@ -100,7 +100,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 고객이 **교환**을 클릭하면, 앱 개요 페이지에서 Microsoft Store가 열립니다(Windows 10 또는 Windows 8.1 장치). 여기에서 **설치**를 클릭해 무료로 앱을 다운로드해 설치할 수 있습니다. 고객의 컴퓨터나 장치에 Microsoft Store가 설치되어 있지 않은 경우, 링크가 해당 앱의 Microsoft Store 웹 페이지를 엽니다. 코드는 고객의 Microsoft 계정에 적용되기 때문에, 나중에 Windows 장치에서 무료로 앱을 다운로드 할 수 있습니다(동일한 Microsoft 계정과 연결).
 
 > [!NOTE]
-> 경우에 따라 고객도 앱을 성공적으로 교환 홍보 코드를 통해 **구입** 단추를 **설치**하는 대신 표시 될 수 있습니다. 이 경우 **구입**을 클릭하여 무료로 앱을 설치할 수 있습니다.
+> 경우에 따라 고객도 앱을 성공적으로 교환 홍보 코드를 통해 **설치**, 대신 **구입** 단추를 표시 될 수 있습니다. 이 경우 **구입**을 클릭하여 무료로 앱을 설치할 수 있습니다.
 
 
 ## <a name="review-your-promotional-codes"></a>홍보 코드 검토

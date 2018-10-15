@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8203420b0eed584a0d8b4131b419bf667a4b56a0
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571227"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614770"
 ---
 # <a name="additional-reference"></a>추가 참조
 
-이 섹션의 항목에서는 Xbox Live 서비스 및 엔터테인먼트 검색 서비스 (EDS)에 대 한 보충 참조 자료를 제공합니다.
+이 섹션의에서 항목에서는 Xbox Live 서비스 및 엔터테인먼트 검색 서비스 (EDS)에 대 한 보충 참조 자료를 제공합니다.
 
 <a id="ID4EZ"></a>
 
@@ -29,11 +29,11 @@ ms.locfileid: "4571227"
 
 [권한 부여 유형](authorizationtypes.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 인증 형식에 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 권한 부여 형식을 설명 합니다.
 
 [데이터 형식 개요](datatypeoverview.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 식별 관련 데이터 형식에 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 식별 관련 데이터 형식을 설명 합니다.
 
 [보조 EDS API](eds-apis.md)
 
@@ -43,7 +43,7 @@ ms.locfileid: "4571227"
 
 [EDS 공통 헤더](edscommonheaders.md)
 
-&nbsp;&nbsp;많은 EDS Api에 공통 요청 및 응답 헤더에 설명 합니다.
+&nbsp;&nbsp;많은 EDS Api에 공통 요청 및 응답 헤더를 설명합니다.
 
 [EDS 매개 변수](edsparameters.md)
 
@@ -51,7 +51,7 @@ ms.locfileid: "4571227"
 
 [EDS 쿼리 구체화](edsqueryrefiners.md)
 
-&nbsp;&nbsp;많은 EDS Api에 공통 쿼리 구체화에 설명 합니다.
+&nbsp;&nbsp;많은 EDS Api에 공통 쿼리 구체화를 설명합니다.
 
 [비디오에 대한 EDS 역방향 조회](edsreverselookup.md)
 
@@ -67,11 +67,11 @@ ms.locfileid: "4571227"
 
 [표준 HTTP 요청 및 응답 헤더](httpstandardheaders.md)
 
-&nbsp;&nbsp;Xbox Live 서비스 요청을 만들 때 사용 되는 표준 HTTP 헤더에 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스 요청을 만들 때 사용 하 여 표준 HTTP 헤더를 설명 합니다.
 
 [표준 HTTP 상태 코드](httpstatuscodes.md)
 
-&nbsp;&nbsp;서비스에 의해 반환 되는 표준 HTTP 상태 코드에 설명 합니다.
+&nbsp;&nbsp;서비스에서 반환 하는 표준 HTTP 상태 코드를 설명 합니다.
 
 <a id="ID4ECC"></a>
 

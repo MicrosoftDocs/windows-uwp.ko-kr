@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 7b07a6ca-4be1-497c-a901-0a2da3762555
 description: Microsoft Store 프로모션 API에서 이 메서드를 사용하여 프로모션 광고 캠페인을 제작, 편집하고 가져옵니다.
 title: 광고 캠페인 관리
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 125e67e7b56ac4f8d7d15a36ceca3922ea58ac82
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: f707c252e404da3aaf6e82317c80a266f4d91d26
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664233"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611268"
 ---
 # <a name="manage-ad-campaigns"></a>광고 캠페인 관리
 
@@ -152,7 +152,7 @@ Authorization: Bearer <your access token>
 | 필드        | 유형   |  설명      |  읽기 전용  | 기본값  | POST에 필요한지 여부 |  
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  정수   |  광고 캠페인의 ID입니다.     |   예    |      |  아니요     |       
-|  이름   |  문자열   |   광고 캠페인의 이름입니다.    |    아니요   |      |  예     |       
+|  name   |  문자열   |   광고 캠페인의 이름입니다.    |    아니요   |      |  예     |       
 |  configuredStatus   |  문자열   |  개발자가 지정한 광고 캠페인의 상태를 지정하는 다음 값들 중 하나입니다. <ul><li>**활성**</li><li>**비활성**</li></ul>     |  아니요     |  활성    |   예    |       
 |  effectiveStatus   |  문자열   |   시스템 유효성 검사에 따라 광고 캠페인의 유효성 관련 상태를 지정하는 다음 값들 중 하나입니다. <ul><li>**활성**</li><li>**비활성**</li><li>**처리 중**</li></ul>    |    예   |      |   아니요      |       
 |  effectiveStatusReasons   |  배열   |  광고 캠페인의 유효성 관련 상태에 대한 이유를 지정하는 다음 값들 중 한 개 이상입니다. <ul><li>**AdCreativesInactive**</li><li>**BillingFailed**</li><li>**AdLinesInactive**</li><li>**ValidationFailed**</li><li>**Failed**</li></ul>      |  예     |     |    아니요     |       

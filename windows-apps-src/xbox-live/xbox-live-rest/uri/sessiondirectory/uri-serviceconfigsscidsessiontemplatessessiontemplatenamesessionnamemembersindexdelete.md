@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 03adb20f796e7bff59214999febad38434a2a287
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571214"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610985"
 ---
 # <a name="delete-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnamemembersindex"></a>DELETE (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/members/{index})
-세션에서 지정 된 구성원을 제거합니다.
+세션에서 지정된 된 구성원을 제거합니다.
 
 > [!IMPORTANT]
 > 이 URI 메서드에 필요 X Xbl-계약 버전의 헤더 요소: 104/105 또는 나중에 모든 요청.
@@ -37,7 +37,7 @@ ms.locfileid: "4571214"
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스 세션 서식 파일의 이름입니다. 2 부 세션 식별자입니다.|
+| sessionTemplateName| string| 세션 템플릿 현재 인스턴스의 이름입니다. 2 부 세션 식별자입니다.|
 | 세션 이름| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
 
 <a id="ID4E5"></a>
@@ -54,7 +54,7 @@ ms.locfileid: "4571214"
 
 
 ## <a name="response-body"></a>응답 본문
-[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에 대 한 응답 구조를 참조 하세요.  
+[MultiplayerSession (JSON)](../../json/json-multiplayersession.md)에서 응답 구조를 참조 하세요.  
 <a id="ID4EYB"></a>
 
 

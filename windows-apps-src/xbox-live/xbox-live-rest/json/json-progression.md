@@ -12,30 +12,30 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a0e534d92e4bcb77565f59de5252afcbbe3eef5
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571777"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4609765"
 ---
 # <a name="progression-json"></a>Progression(JSON)
-도전 과제를 잠금 해제까지 사용자의 작업 진행 합니다. 
+사용자의 도전 과제를 잠금 해제 방향으로 진행 합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="progression"></a>진행
  
-진행은 개체에는 다음 사양을 있습니다.
+진행은 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| 요구 사항| 배열 요구 사항| 도전 과제를 획득을 위한 요구 사항으로 잠금을 해제는 사용자가 얼마나 진행 합니다.| 
-| timeUnlocked| DateTime| 먼저 도전 과제를 잠금 시간입니다.| 
+| 요구 사항| 배열 요구 사항| 도전 과제를 획득을 위한 요구 사항 및 잠금을 해제 하는 방향으로 사용자가 얼마나 진행 합니다.| 
+| timeUnlocked| DateTime| 도전 과제 먼저 잠금이 해제 되었습니다 시간입니다.| 
   
 <a id="ID4ETB"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

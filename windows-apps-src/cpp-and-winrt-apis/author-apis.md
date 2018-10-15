@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575282"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610967"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 통한 API 작성
 
@@ -260,9 +260,9 @@ IStringable istringable = winrt::make<MyType>();
 ```
 
 > [!NOTE]
-> 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **확인** 프로젝션 된 형식의 인스턴스를 반환합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
+> 하지만 XAML UI에서 형식을 참조하는 경우에는 구현체 형식과 프로젝션된 형식이 모두 동일한 프로젝트에 위치합니다. 이 경우 **확인** 프로젝션 된 형식의 인스턴스를 반환 합니다. 해당 시나리오의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
 
-**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 다른 프로젝션 된 형식이 나도 사용 하거나 반환 하는 인터페이스에 대 한 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))에 쿼리를 호출할 수 있습니다.
+**IStringable** 인터페이스의 멤버를 호출할 때는 `istringable`(위의 코드 예제에서)만 사용할 수 있습니다. 하지만 C++/WinRT 인터페이스(프로젝션된 인터페이스)는 [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)에서 파생됩니다. 따라서 다른 프로젝션 된 형식 또는 인터페이스는 또한 사용 하거나 반환할 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (또는 [**Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function))에 쿼리를 호출할 수 있습니다.
 
 ```cppwinrt
 istringable.ToString();
@@ -282,7 +282,7 @@ iclosable.Close();
 
 **MyType** 클래스는 구현체이기 때문에 프로젝션에 포함되지 않습니다. 하지만 이런 식으로 가상 함수를 호출하는 오버헤드 없이 구현체 메서드를 직접 호출할 수 있습니다. 위의 예제에서는 **MyType::ToString**이 **IStringable**에서 프로젝션된 메서드와 동일한 서명을 사용하지만 응용 프로그램 이진 인터페이스(ABI)를 거치지 않고 비가상 메서드를 직접 호출합니다. **com_ptr**은 포인터를 **MyType** 구조체에 고정시키기 때문에 사용자가 `myimpl` 변수 및 화살표 연산자를 통해 **MyType**의 다른 내부 세부 정보에 액세스할 수 있습니다.
 
-인터페이스 개체가 하 고 인터페이스 구현에 임을 알고 있는 경우, 다음 돌아갈 수 있습니다 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 함수 템플릿을 사용 하 여 구현 됩니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
+인터페이스 개체가 있고 인터페이스 구현에 임을 알고 경우, 다음 있습니다 돌아갈 수 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 함수 템플릿을 사용 하 여 구현 합니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
 
 > [!NOTE]
 > Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치 하지 않은 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)대신 [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 호출에 필요한 다음 나중에 경우.

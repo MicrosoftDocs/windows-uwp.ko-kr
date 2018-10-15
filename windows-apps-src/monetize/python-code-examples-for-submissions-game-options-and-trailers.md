@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: 이 섹션의 Python 코드 예제를 사용하여 Microsoft Store 제출 API를 사용해 게임 옵션과 예고편을 제출하는 방법에 대해 자세히 알아봅니다.
 title: Python 샘플 - 앱의 게임 옵션과 예고편 제출
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, python
 ms.localizationpriority: medium
-ms.openlocfilehash: ea7d28cd495a512573f8d0f7c067cf35f696db3b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d3617e7868f62c5d8e430deb4be295bc552dff18
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653562"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613277"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Python 샘플: 앱의 게임 옵션과 예고편 제출
 

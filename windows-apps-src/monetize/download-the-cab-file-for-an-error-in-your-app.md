@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: ''
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 앱 오류에 대한 CAB 파일을 다운로드합니다.
 title: 앱의 오류에 대한 CAB 파일 다운로드
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드
 ms.localizationpriority: medium
-ms.openlocfilehash: a74a72e1d02a73d2b930179d9d2cb99ea09c7c40
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 671c5c1b187ac48c12988a00d66acb366cae72f1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662063"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612709"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>앱의 오류에 대한 CAB 파일 다운로드
 

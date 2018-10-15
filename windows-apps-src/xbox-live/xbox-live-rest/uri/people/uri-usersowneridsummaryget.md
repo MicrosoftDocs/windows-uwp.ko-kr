@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 73ba0cd060b3432de1cbb641a8991283974da192
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567565"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612868"
 ---
 # <a name="get-usersowneridsummary"></a>GET (/users/{ownerId}/summary)
 호출자의 관점에서 소유자에 대 한 요약 데이터를 가져옵니다.
@@ -55,7 +55,7 @@ ms.locfileid: "4567565"
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 권한 부여| 문자열| 에 대 한 데이터를 권한 부여 합니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x = [해시] [ 토큰]</b>합니다.|
+| 권한 부여| 문자열| 권한 부여 데이터입니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x = [해시] [ 토큰]</b>합니다.|
 
 <a id="ID4EHD"></a>
 
@@ -64,7 +64,7 @@ ms.locfileid: "4567565"
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| xbl 계약 버전 x| string| 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예제 값: 1|
+| x xbl-계약 버전| string| 이 요청 전달 되어야 하는 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예제 값: 1|
 | 수락| string| 허용 되는 콘텐츠-형식입니다. 모든 응답 됩니다 <code>application/json</code>.|
 
 <a id="ID4EXE"></a>
@@ -72,19 +72,19 @@ ms.locfileid: "4567565"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4ECF"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 되는 표준 HTTP 상태 코드의 전체 목록을 [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 200| 확인| 세션을 검색 했습니다.|
-| 400| 잘못 된 요청| 사용자 Id 잘못 되었습니다.|
+| 400| 잘못 된 요청| 사용자 Id가 잘못 된 형식의 합니다.|
 | 403| 금지| 권한 부여 헤더에서 XUID 클레임을 분석할 수 없습니다.|
 
 <a id="ID4EZG"></a>

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: XBind 태그 확장 기능을 태그에서 사용할 수 있습니다.
+description: XBind 태그 확장 함수를 태그에서 사용할 수 있습니다.
 title: X:bind 함수
 ms.author: jimwalk
 ms.date: 04/26/2018
@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575312"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613468"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
 **참고** 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
-Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 그러면 수 있습니다.
+Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이렇게 하면:
 
 - 간단한 값 변환 방법
 - 둘 이상의 매개 변수를 사용하는 바인딩 방식
@@ -66,7 +66,7 @@ class ColorEntry
 
 함수 경로는 다른 속성 경로처럼 지정되며 점(.), 인덱서 또는 함수를 찾을 캐스트를 포함할 수 있습니다.
 
-정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 사용 하 여는 정적 함수를 코드 숨김에서에 대 한 바인딩 구문은 아래 합니다.
+정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 사용 하는 정적 함수를 코드 숨김에서에 대 한 바인딩 구문은 아래.
 
 ```xaml
 <Page 
@@ -88,7 +88,7 @@ public class MyPage : Page
 }
 ```
 
-예를 들어 날짜 서식을, 텍스트, 텍스트 연결 등과 같은 간단한 시나리오를 수행 하기 위해 태그에서 직접 시스템 함수를 사용할 수 있습니다.
+또한 예를 들어 날짜 서식을, 텍스트 서식 지정, 텍스트 연결 등과 같은 간단한 시나리오를 수행 하기 위해 태그에서 직접 시스템 기능을 사용할 수 있습니다.
 ```xaml
 <Page 
      xmlns:sys="using:System"
@@ -108,7 +108,7 @@ public class MyPage : Page
 - 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
 - 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
 
-바인딩 엔진은 Windows 10으로 다음 주요 업데이트부터 속성 변경 알림을 발생 하는 함수 이름에 반응 및 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
+Windows 10의 다음 주요 업데이트부터 바인딩 엔진은 고 대응 하 고 함수 이름으로 발생 하는 속성 변경 알림을 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">
@@ -177,7 +177,7 @@ public class Person:INotifyPropertyChanged
 
 ### <a name="two-way-function-bindings"></a>양방향 함수 바인딩
 
-양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이 작업은 수행 **하지** 바인딩 속성을 사용 하 여 합니다. 에 함수 아래 예에서는 값 모델로 다시 푸시 해야 하는 인수 하나를 수행 해야 합니다.
+양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이렇게 **BindBack** 바인딩 속성을 사용 합니다. 에 함수 아래 예에서는 값 모델로 다시 푸시 해야 하는 인수 하나를 수행 해야 합니다.
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

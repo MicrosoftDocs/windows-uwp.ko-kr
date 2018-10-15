@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ef50154e1620f7f888db9969929d195b32960134
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565545"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624034"
 ---
 # <a name="get-usersowneridpeopleavoid"></a>GET (/users/{ownerId}/people/avoid)
 사용자에 대 한 문제 방지 목록을 가져옵니다.
@@ -34,7 +34,7 @@ ms.locfileid: "4565545"
 
 ## <a name="remarks"></a>설명
 
-대상 지정 하는 경우 되기 차단 목록에 그렇지 않으면 비어 있는 경우 되지 않을 경우 해당 사용자를 반환만 합니다.
+대상 지정 하는 경우 되기 차단 목록에 그렇지 않으면 빈 경우 되지 않을 경우 해당 사용자를 반환만 합니다.
 
 <a id="ID4EZ"></a>
 
@@ -43,7 +43,7 @@ ms.locfileid: "4565545"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
+| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증된 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
 
 <a id="ID4EEB"></a>
 
@@ -52,7 +52,7 @@ ms.locfileid: "4565545"
 
 사용 권한 부여 클레임 | 클레임| 유형| 필수 여부| 예제 값|
 | --- | --- | --- | --- | --- | --- | --- |
-| Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|
+| Xuid| 64 비트 부호 있는 정수| 예| 1234567890|
 
 <a id="ID4EJC"></a>
 
@@ -69,12 +69,12 @@ ms.locfileid: "4565545"
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 되는 표준 HTTP 상태 코드의 전체 목록을 [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 200| 확인| 세션을 검색 했습니다.|
-| 400| 잘못 된 요청| URI에 지정 된 대상 ID 잘못 되었습니다.|
+| 400| 잘못 된 요청| URI에 지정 된 대상 ID 올바르지 않습니다.|
 | 403| 금지| URI에 지정 된 소유자 인증 된 사용자가 아닙니다.|
 | 404| 찾을 수 없음| URI에 지정 된 소유자 존재 하지 않습니다.|
 
@@ -87,7 +87,7 @@ ms.locfileid: "4565545"
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Content-Type| 문자열| 요청 본문의 MIME 형식입니다. 예제 값: <code>application/json</code>. 최대 크기: 없음.|
 | Content-Length| string| 응답에 전송 되는 바이트 수입니다. 예제 값: 34 합니다. 최대 크기: 없음.|
-| 캐시 제어| string| 캐시 동작을 지정 하려면 서버에서 정중 요청 합니다. 예제 값: <code>application/json</code>. 최대 크기: 없음.|
+| 캐시 제어| string| 캐싱 동작을 지정 하는 서버에서 정중 요청 합니다. 예제 값: <code>application/json</code>. 최대 크기: 없음.|
 
 <a id="ID4ESH"></a>
 

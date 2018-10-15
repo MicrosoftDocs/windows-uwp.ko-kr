@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b259ae20bd07c6869bc6646fc44a70f994a261b7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564116"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613665"
 ---
 # <a name="eds-reverse-lookup-for-video"></a>비디오에 대한 EDS 역방향 조회
  
@@ -53,7 +53,7 @@ GET /media/en-us/details?ids=047d19ca-3a7d-462c-bdbb-163543125583&idType=ScopedM
  
   
  
-EDS에서 **ProviderMediaId** 필드를 검색 하지 않았기 EDS에 올바르게 전달할 URL 인코딩 필드 이어야 합니다.
+EDS에서 **ProviderMediaId** 필드를 검색 하지 않았기 EDS에 올바르게 전달할 URL 인코딩 필드 여야 합니다.
   
 <a id="ID4EOC"></a>
 

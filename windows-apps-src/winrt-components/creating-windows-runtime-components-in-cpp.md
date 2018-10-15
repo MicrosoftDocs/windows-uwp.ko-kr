@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: C++로 Windows 런타임 구성 요소 만들기
-description: 이 항목에서는 C +를 사용 하는 방법을 보여 줍니다. + /CX는 C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소는 Windows 런타임 구성 요소를 만듭니다.
+description: 이 항목에서는 C +를 사용 하는 방법을 보여 줍니다. + CX C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 만들 수 있습니다.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ms.author: misatran
 ms.date: 05/14/2018
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573102"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610996"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>C++/CX로 Windows 런타임 구성 요소 만들기
 > [!NOTE]
-> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C +를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법은 + /winrt 참조 [작성 이벤트 C + + WinRT](../cpp-and-winrt-apis/author-events.md).
+> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. C +를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법은 + /winrt에서는 참조 [C +의 이벤트 작성 + WinRT](../cpp-and-winrt-apis/author-events.md).
 
-이 항목에서는 C +를 사용 하는 방법을 보여 줍니다. + /CX는 C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소는 Windows 런타임 구성 요소를 만듭니다.
+이 항목에서는 C +를 사용 하는 방법을 보여 줍니다. + CX C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소인 Windows 런타임 구성 요소를 만들 수 있습니다.
 
 Windows 런타임 구성 요소를 구축 하기 위한 몇 가지 이유가 있습니다.
 - 복잡하거나 많은 계산이 필요한 작업에서 C++의 성능 이점을 얻을 수 있습니다.
@@ -29,7 +29,7 @@ Windows 런타임 구성 요소를 구축 하기 위한 몇 가지 이유가 있
 
 JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 디바이스에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발자 키트 만들기](https://msdn.microsoft.com/library/hh768146.aspx)를 참조하세요.
 
-일반적으로 코딩할 때 C + + CX 구성 요소를 사용 하 여 일반 c + + 라이브러리 및 기본 제공 형식을 제외 하 고 추상 이진 인터페이스 (ABI) 경계에서 다른.winmd 패키지의 코드에서 데이터를 전달 하는 위치입니다. Windows 런타임 형식 및 특수 구문을 사용 하 여, 해당 C + + CX 해당 형식을 만들고 조작 하기 위한 지원 합니다. 또한에서 C + + 코드 CX, JavaScript, Visual Basic, c + + 또는 C#에서 구성 요소에서 발생 하 고 처리할 수 있는 이벤트를 구현 하는 대리자 및 이벤트와 같은 형식을 사용 합니다. C +에 대 한 자세한 내용은 + /CX 구문 참조 [Visual c + + 언어 참조 (C + + CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+일반적으로 코딩할 때 C + + CX 구성 요소는 일반 c + + 라이브러리 및 기본 제공 형식을 제외 하 고 경계 사용 추상 이진 인터페이스 (ABI) 코드에서 데이터를 전달 하는 다른.winmd 패키지에는 위치입니다. Windows 런타임 형식 및 특수 구문을 사용 하 여, 해당 C + + CX 해당 형식을 만들고 조작 하기 위한 지원 합니다. 또한에서 C + + CX 코드, JavaScript, Visual Basic, c + + 또는 C#에서 구성 요소에서 발생 하 고 처리 될 수 있는 이벤트를 구현 하는 대리자 및 이벤트와 같은 형식을 사용 합니다. C +에 대 한 자세한 내용은 + /CX 구문 참조 [Visual c + + 언어 참조 (C + + CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>대/소문자 표기 및 명명 규칙
 
@@ -44,7 +44,7 @@ JavaScript는 대/소문자를 구분합니다. 따라서 이러한 대/소문�
 .NET 언어는 일반 대/소문자 표기 규칙을 따릅니다.
 
 ## <a name="instantiating-the-object"></a>개체 인스턴스화
-Windows 런타임 형식만 ABI 경계를 통해 전달할 수 있습니다. 구성 요소에 공용 메서드의 매개 변수나 반환 형식으로 std::wstring과 같은 형식이 있으면 컴파일러가 오류를 발생시킵니다. Visual c + + 구성 요소 확장 (C + + CX) 제공 형식 int 및 double와 해당 typedef int32, float64 등의 일반적인 스칼라 하 고 포함 합니다. 자세한 내용은 [형식 시스템(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx)을 참조하세요.
+Windows 런타임 형식만 ABI 경계를 통해 전달할 수 있습니다. 구성 요소에 공용 메서드의 매개 변수나 반환 형식으로 std::wstring과 같은 형식이 있으면 컴파일러가 오류를 발생시킵니다. Visual c + + 구성 요소 확장 (C + + CX) 제공 형식 int 및 double 및 해당 typedef int32, float64 같은 일반적인 스칼라 하 고 포함 합니다. 자세한 내용은 [형식 시스템(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx)을 참조하세요.
 
 ```cpp
 // ref class definition in C++
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-ABI에서 사용자 정의 값 구조를 통과 하려면 C +에서 정의한 값 구조와 동일한 멤버가 있는 JavaScript 개체를 정의 + CX 합니다. 그런 다음 해당 개체를 인수로 C + 전달할 수 있습니다 + CX 메서드 하는 개체가 암시적으로 변환 하 여 C + + /CX 형식.
+ABI에서 사용자 정의 값 구조를 통과 하려면 C +에서 정의한 값 구조와 동일한 멤버가 있는 JavaScript 개체를 정의 + CX 합니다. 전달할 수 있습니다 해당 개체를 인수로 C + + CX 메서드 하는 개체가 암시적으로 변환 하 여 C + + /CX 형식.
 
 ```javascript
 // Get and set the value struct
@@ -206,7 +206,7 @@ document.getElementById('P4').innerHTML = num;
 ```
 
 ## <a name="net"></a>.NET
-.NET 언어는 인식 오버 로드는 C + +.NET Framework 클래스와 마찬가지로 CX ref 클래스입니다.
+.NET 언어는 인식 오버 로드는 C + + 모든.NET Framework 클래스와 마찬가지로 CX ref 클래스.
 
 ## <a name="datetime"></a>DateTime
 Windows 런타임에서 [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx) 개체는 단지 1601년 1월 1일 전 또는 후의 100나노초 간격 수를 나타내는 64비트의 부호 있는 정수입니다. Windows:Foundation::DateTime 개체에는 메서드가 없습니다. 대신, 각 언어가 해당 언어에 기본이 되는 방식(JavaScript는 Date 개체이고 .NET Framework는 System.DateTime과 System.DateTimeOffset 형식)으로 DateTime을 프로젝트합니다.
@@ -225,7 +225,7 @@ public:
 };
 ```
 
-C + DateTime 값을 전달 하면 + /CX JavaScript, JavaScript Date 개체로 수락 하 고 기본적으로 긴 형식 날짜 문자열로 표시 됩니다.
+C + DateTime 값을 전달 하면 + /CX JavaScript에 JavaScript Date 개체로 수락 하 고 기본적으로 긴 형식 날짜 문자열로 표시 합니다.
 
 ```javascript
 function SetAndGetDate() {
@@ -242,7 +242,7 @@ function SetAndGetDate() {
 }
 ```
 
-.NET 언어는 C +는 System.DateTime을 전달 하는 경우 + CX 구성 요소는 방법으로 수락는 Windows::Foundation::DateTime 합니다. 구성 요소가 Windows::Foundation::DateTime을 .NET Framework 메서드로 전달하면 Framework 메서드는 이 값을 DateTimeOffset으로 수락합니다.
+.NET 언어는 C +는 System.DateTime을 전달 하는 경우 + CX 구성 요소는 메서드도 수락는 Windows::Foundation::DateTime 합니다. 구성 요소가 Windows::Foundation::DateTime을 .NET Framework 메서드로 전달하면 Framework 메서드는 이 값을 DateTimeOffset으로 수락합니다.
 
 ```csharp
 private void DateTimeExample()
@@ -396,7 +396,7 @@ nativeObject.propertyB = "What is the meaning of the universe?";
 document.getElementById('P9').innerHTML += nativeObject.propertyB;
 ```
 
-.NET 언어 액세스 속성에는 네이티브 C + + /CX 개체를.NET Framework 개체에서와 마찬가지로 합니다.
+.NET 언어 액세스 속성에는 네이티브 C + + /CX 개체는.NET Framework 개체에서와 마찬가지로 합니다.
 
 ```csharp
 private void GetAProperty()
@@ -546,7 +546,7 @@ C# 및 Visual Basic 둘 다 열거에 대해 언어를 지원합니다. 이러�
 ## <a name="asynchronous-methods"></a>비동기 메서드
 다른 Windows 런타임 개체에서 제공하는 비동기 메서드를 사용하려면 [작업 클래스(동시성 런타임)](https://msdn.microsoft.com/library/hh750113.aspx)를 사용합니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)](https://msdn.microsoft.com/library/dd492427.aspx)를 참조하세요.
 
-C + 비동기 메서드를 구현 하려면 + /CX ppltasks.h에 정의 된 [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) 함수를 사용 합니다. 자세한 내용은 참조 [비동기 작업 만들기 C + + /cx로 UWP 앱 용](https://msdn.microsoft.com/library/vstudio/hh750082.aspx)합니다. 예제를 보려면 [연습: C + 기본 Windows 런타임 구성 요소를 만들고 + CX JavaScript 또는 C#에서 호출](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)합니다. .NET 언어 사용 C + + CX 비동기 메서드는.NET Framework에서 정의 된 모든 비동기 메서드를 같은 방법으로 합니다.
+C + 비동기 메서드를 구현 하려면 + /CX에서 ppltasks.h에 정의 된 [create\_async](https://msdn.microsoft.com/library/hh750102.aspx) 함수를 사용 합니다. 자세한 내용은 참조 [비동기 작업 만들기 C + + /cx로 UWP 앱 용](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). 예를 들어 참조 [연습: 기본 Windows 런타임 구성 요소를 만들고 C + + CX JavaScript 또는 C#에서 호출](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)합니다. .NET 언어 소비 C + +.NET Framework에서 정의 된 모든 비동기 메서드를 처럼 CX 비동기 메서드.
 
 ## <a name="exceptions"></a>예외
 Windows 런타임에서 정의된 모든 예외 형식을 throw할 수 있습니다. 일부 Windows 런타임 예외 형식에서는 사용자 지정 형식을 파생시킬 수 없습니다. 그러나 COMException을 throw하고 예외를 catch하는 코드에서 액세스할 수 있는 사용자 지정 HRESULT를 제공할 수 있습니다. COMException에서 사용자 지정 메시지를 지정할 수 있는 방법이 없습니다.

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3853140ce5e7c3f7710f489709945fc70b6703b4
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566869"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611206"
 ---
 # <a name="xuidlist-json"></a>XuidList(JSON)
 작업을 수행 하는 XUIDs의 목록입니다. 
@@ -25,16 +25,16 @@ ms.locfileid: "4566869"
  
 ## <a name="xuidlist"></a>XuidList
  
-XuidList 개체에는 다음 사양을 있습니다.
+XuidList 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| xuids| 문자열의 배열| 작업을 수행 해야 하는 또는 데이터 반환할지 Xbox 사용자 ID (XUID) 값 목록입니다.| 
+| xuids| 문자열의 배열| Xbox 사용자 ID (XUID) 값을 작업을 수행 해야 하거나 데이터를 반환할지 목록입니다.| 
   
 <a id="ID4EMB"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

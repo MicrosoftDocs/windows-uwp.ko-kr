@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: c5246681-82c7-44df-87e1-a84a926e6496
 description: Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인 크리에이티브를 관리합니다.
 title: 크리에이티브 관리
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: f29920bba22be689c79f2264836ebcee6d8dfe5c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 838329101695c21abfb7ac89dd9c83330b7bd26b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664023"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614059"
 ---
 # <a name="manage-creatives"></a>크리에이티브 관리
 
@@ -119,15 +119,15 @@ Authorization: Bearer <your access token>
 
 | 필드        | 유형   |  설명      |  읽기 전용  | 기본값  |  POST에 필요한지 여부 |  
 |--------------|--------|---------------|------|-------------|------------|
-|  ID   |  정수   |  크리에이티브의 ID입니다.     |   예    |      |    아니요   |       
-|  이름   |  문자열   |   크리에이티브의 이름입니다.    |    아니요   |      |  예     |       
+|  id   |  정수   |  크리에이티브의 ID입니다.     |   예    |      |    아니요   |       
+|  name   |  문자열   |   크리에이티브의 이름입니다.    |    아니요   |      |  예     |       
 |  콘텐츠   |  문자열   |  Base64 인코딩 형식의 크리에이티브 이미지 콘텐츠입니다.<br/><br/>**참고**&nbsp;&nbsp;크리에이티브에 허용되는 최대 크기는 40KB입니다. 이보다 큰 크리에이티브 파일을 제출하면 이 API에서 오류를 반환하지는 않지만 캠페인이 성공적으로 생성되지 않습니다.     |  아니요     |      |   예    |       
 |  height   |  integer   |   크리에이티브의 높이입니다.    |    아니요    |      |   예    |       
 |  width   |  integer   |  크리에이티브의 너비입니다.     |  아니요    |     |    예   |       
 |  landingUrl   |  string   |  Kochava, AppsFlyer 또는 Tune과 같은 캠페인 추적 서비스를 사용하여 앱에 대한 설치 분석을 측정하는 경우 POST 메서드를 호출할 때 이 필드에 추적 URL을 할당합니다(지정할 경우 이 값은 유효한 URI여야 합니다). 캠페인 추적 서비스를 사용하지 않는 경우 POST 메서드를 호출할 때 이 값을 생략하세요(이 경우 이 URL이 자동으로 생성됩니다).   |  아니요    |     |   예    |       
 |  format   |  string   |   광고 형식입니다. 현재는 **Banner** 값만 지원합니다.    |   아니요    |  배너   |  아니요     |       
 |  imageAttributes   | [ImageAttributes](#image-attributes)    |   크리에이티브에 속성을 제공합니다.     |   아니요    |      |   예    |       
-|  storeProductId   |  문자열   |   이 광고 캠페인이 연결된 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.    |   아니요    |    |  아니요     |   |  
+|  storeProductId   |  string   |   이 광고 캠페인이 연결된 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 예시 스토어 ID는 9nblggh42cfd입니다.    |   아니요    |    |  아니요     |   |  
 
 
 <span id="image-attributes"/>

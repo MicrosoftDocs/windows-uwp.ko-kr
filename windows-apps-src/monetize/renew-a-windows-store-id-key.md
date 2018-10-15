@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: 이 메서드를 사용하여 Microsoft Store 키를 갱신합니다.
 title: Microsoft Store ID 키 갱신
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, Microsoft Store ID 키, 갱신
 ms.localizationpriority: medium
-ms.openlocfilehash: 430eaaa040e731e429eba15d58f554e41349a959
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 70bda5022e52c0b18a43563a0492bd56d09b88a0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664826"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612447"
 ---
 # <a name="renew-a-microsoft-store-id-key"></a>Microsoft Store ID 키 갱신
 
@@ -56,7 +56,7 @@ ms.locfileid: "1664826"
 | 매개 변수     | 유형   | 설명                       | 필수 |
 |---------------|--------|-----------------------------------|----------|
 | serviceTicket | 문자열 | Azure AD 액세스 토큰입니다.        | 예      |
-| 키           | 문자열 | 만료된 Microsoft Store ID 키입니다. | 아니요       |
+| 키           | 문자열 | 만료된 Microsoft Store ID 키입니다. | 예       |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -78,9 +78,9 @@ Host: collections.mp.microsoft.com
 
 ### <a name="response-body"></a>응답 본문
 
-| 매개 변수 | 유형   | 설명                                                                                                            | 필수 |
-|-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
-| 키       | 문자열 | Microsoft Store 컬렉션 API 또는 구매 API에 나중에 호출할 때 사용할 수 있는 새로 고친 Microsoft Store 키입니다. | 아니요       |
+| 매개 변수 | 유형   | 설명                                                                                                            |
+|-----------|--------|------------------------------------------------------------------------------------------------------------------------|
+| 키       | 문자열 | Microsoft Store 컬렉션 API 또는 구매 API에 나중에 호출할 때 사용할 수 있는 새로 고친 Microsoft Store 키입니다. |
 
 
 ### <a name="response-example"></a>응답 예제
@@ -103,8 +103,8 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 ## <a name="error-codes"></a>오류 코드
 
 
-| 코드 | 오류        | 내부 오류 코드           | 설명                                                                                                                                                                           |
-|------|--------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 코드 | 오류        | 내부 오류 코드           | 설명   |
+|------|--------------|----------------------------|---------------|
 | 401  | 권한 없음 | AuthenticationTokenInvalid | Azure AD 액세스 토큰이 잘못되었습니다. ServiceError의 세부 정보에 토큰이 만료되거나 *appid* 클레임이 누락되는 경우와 같은 자세한 정보가 포함되는 경우도 있습니다. |
 | 401  | 권한 없음 | InconsistentClientId       | Microsoft Store ID 키의 *clientId* 클레임과 Azure AD 액세스 토큰의 *appid* 클레임이 일치하지 않습니다.                                                                     |
 

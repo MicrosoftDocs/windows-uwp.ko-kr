@@ -1,27 +1,28 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
-description: 이 섹션의 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다.
+description: Microsoft Store 제출 API를 사용 하는 방법을 알아보려면이 섹션의 코드 예제를 사용 합니다.
 title: 제출 API에 대한 코드 예제
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, Windows 스토어 제출 API, 코드 예제
-ms.openlocfilehash: c5344667922a7445ad7694f36a542b3ff35c4bdb
-ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
+keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제
+ms.localizationpriority: medium
+ms.openlocfilehash: f728a17d98d53cf1783452ddfd543c1062156200
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2017
-ms.locfileid: "772306"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615501"
 ---
 # <a name="code-examples-for-the-submission-api"></a>제출 API에 대한 코드 예제
 
-이 섹션에서는 여러 다른 프로그래밍 언어로 [Windows 스토어 제출 API](create-and-manage-submissions-using-windows-store-services.md)를 사용하기 위한 코드 예제를 제공합니다.
+이 섹션에서는 [Microsoft Store 제출 API](create-and-manage-submissions-using-windows-store-services.md) 사용 하 여 여러 다른 프로그래밍 언어로 대 한 코드 예제를 제공 합니다.
 
 > [!NOTE]
-> 아래에 나열된 코드 예제 외에도 Windows 스토어 제출 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈이 제공됩니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Windows 스토어 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+> 아래에 나열 된 코드 예제 외에도 Microsoft Store 제출 API 위에 명령줄 인터페이스를 구현 하는 오픈 소스 PowerShell 모듈도 제공 합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Microsoft Store 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 ## <a name="app-submissions-add-on-submissions-and-package-flight-submissions"></a>앱 제출, 추가 기능 제출, 패키지 플라이트 제출
 
@@ -41,4 +42,4 @@ ms.locfileid: "772306"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)

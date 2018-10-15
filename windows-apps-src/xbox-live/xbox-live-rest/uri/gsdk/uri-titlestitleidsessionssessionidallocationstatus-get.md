@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e351bed37e0761be1f884400f81a3da537967d2
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572274"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611501"
 ---
 # <a name="get-titlestitleidsessionssessionidallocationstatus"></a>GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
 해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -51,14 +51,14 @@ ms.locfileid: "4572274"
 | description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
 | clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
 | 호스트 이름| 세션 호스트의 URL입니다.| 
-| status| 대기, 처리, 또는 중단을 나타냅니다.| 
+| status| 대기, 충족, 또는 중단을 나타냅니다.| 
 | sessionHostId| 세션 호스트 id입니다.| 
-| sessionId| (할당 시간)에 제공 된 클라이언트 세션 id입니다.| 
-| secureContext| 장치 보안 주소입니다.| 
+| sessionId| (할당 시) 제공 클라이언트 세션 id입니다.| 
+| secureContext| 보안 장치 주소입니다.| 
 | portMappings| 인스턴스에 대 한 포트 매핑을 합니다.| 
 | 지역| 인스턴스의 위치입니다.| 
 | ticketId| (왼쪽에 대 한 이전 버전과 호환성) 현재 세션 ID입니다.| 
-| gameHostId| (왼쪽에 대 한 이전 버전과 호환성) 현재 sessionHostId 합니다.| 
+| gameHostId| 현재 sessionHostId (왼쪽에 대 한 이전 버전과 호환성) 합니다.| 
  
 <a id="ID4EGD"></a>
 
@@ -104,11 +104,11 @@ ms.locfileid: "4572274"
  
 ### <a name="remarks"></a>설명
  
-다음과 같은 응답 코드를 받는 시기 제목을 다시 서비스 호출만 해야 합니다.
+다음과 같은 응답 코드를 받는 시기 제목을 다시 서비스 호출만 해야:
  
    * 200-성공 
    * 400-잘못 된 매개 변수를 포함 하는 요청 
    * 401-권한이 없음 
-   * 404-제목 ID 또는 티켓 ID 잘못 되었거나 찾을 수 없습니다. 
-   * 500-예기치 않은 서버 오류입니다. 
+   * 404-제목 ID 또는 티켓 ID를 잘못 되었거나 찾을 수 없습니다. 
+   * 500-예기치 않은 서버 오류. 
     

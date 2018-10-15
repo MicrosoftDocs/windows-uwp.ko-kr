@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e7e2b0c5fa02199084127b9c01eb4cac58833383
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566300"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613408"
 ---
 # <a name="qosservers"></a>/qosservers
-URI를 사용 하 여 Xbox Live 계산에 사용 하기 위해 QoS 서버의 목록을 가져올 클라이언트에 의해 호출 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+URI를 사용 하 여 Xbox Live 계산 사용 하기 위해 사용할 수 있는 QoS 서버의 목록을 가져올 수는 클라이언트에 의해 호출 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
   * [호스트 이름](#ID4EZ)
  
@@ -37,5 +37,5 @@ gameserverds.xboxlive.com
 
 [GET](uri-qosservers-get.md)
 
-&nbsp;&nbsp;URI를 사용 하 여 Xbox Live 계산에 사용 하기 위해 QoS 서버의 목록을 가져올 클라이언트에 의해 호출 합니다.
+&nbsp;&nbsp;URI를 사용 하 여 Xbox Live 계산 사용 하기 위해 사용할 수 있는 QoS 서버의 목록을 가져올 수는 클라이언트에 의해 호출 합니다.
  

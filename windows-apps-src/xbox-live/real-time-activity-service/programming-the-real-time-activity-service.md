@@ -1,5 +1,5 @@
 ---
-title: Activity 서비스 프로그래밍
+title: 실시간 활동 서비스 프로그래밍
 author: KevinAsgari
 description: Xbox Live 실시간 활동 서비스 c + + Api를 사용 하 여 프로그래밍 하는 방법을 알아봅니다.
 ms.assetid: 98cdcb1f-41d8-43db-98fc-6647755d3b17
@@ -10,19 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 실시간으로 활동
 ms.localizationpriority: medium
-ms.openlocfilehash: 561e5e3dfbd2d65ce43a1ecbd77f668617b89386
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 57793a01ebd4c97130df6a476b447a99d78c990e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565450"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624043"
 ---
 # <a name="programming-the-real-time-activity-service-using-c-apis"></a>C + + Api를 사용 하 여 실시간 활동 서비스 프로그래밍
 
 이 문서에는 다음 섹션이 포함 되어 있습니다.
 
 * Xbox Live에서 실시간 활동 서비스에 연결
-* Activity 서비스에서 분리
+* 실시간 활동 서비스에서 분리
 * 통계 만들기
 * 실시간 활동에서 통계에 가입
 * 실시간 활동 서비스에서 통계 가입 취소
@@ -30,7 +30,7 @@ ms.locfileid: "4565450"
 
 ## <a name="connecting-to-the-real-time-activity-service-from-xbox-live"></a>Xbox Live에서 실시간 활동 서비스에 연결
 
-응용 프로그램에서 Xbox Live 이벤트 정보를 가져오는 실시간 활동 (RTA) 서비스에 연결 해야 합니다. 이 항목에서는 이러한 연결을 확인 하는 방법을 보여 줍니다.
+응용 프로그램 정보를 가져오는 이벤트 Xbox Live에서 실시간 활동 (RTA) 서비스에 연결 해야 합니다. 이 항목에서는 이러한 연결을 확인 하는 방법을 보여 줍니다.
 
 > [!NOTE]
 > 이 항목에 사용 되는 예제 메서드 호출에서 한 사용자를 나타냅니다. 그러나 타이틀에 연결 하 고 실시간 활동 (RTA) 서비스에서 분리 하는 모든 사용자에 대 한 이러한 호출 해야 합니다.
@@ -52,11 +52,11 @@ void Example_RealTimeActivity_ConnectAsync()
 
 ### <a name="creating-a-statistic"></a>통계 만들기
 
-XDK 개발자 또는 작업 하는 경우 XDP에 통계를 만드는 크로스 플레이 제목에 있습니다.  Windows 10에서 실행 되는 순수 UWP 하는 경우 개발자 센터에서 통계를 만듭니다.
+통계에 만들면 XDP XDK 개발자 또는 작업 하는 경우 크로스 플레이 제목에 있습니다.  Windows 10에서 실행 되는 순수 UWP 하는 경우 개발자 센터에서 통계를 만들어야 합니다.
 
 #### <a name="xdk-developers"></a>XDK 개발자
 
-XDP에는 상태를 만드는 방법에 대 한 자세한 내용은 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/setting_up_service_configuration_10_27_15_a.aspx#events)를 참조 하세요.  사용자 상태를 생성 하 고 이벤트 정의 된 후 응용 프로그램에서 사용 하는 헤더를 생성 하는 [XCETool](https://developer.xboxlive.com/en-us/platform/development/documentation/software/Pages/atoc_xce_jun15.aspx) 실행 해야 합니다.  이 헤더 함수가 통계를 수정 하는 이벤트를 보내는 호출할 수 있습니다.
+XDP에는 상태를 만드는 방법에 대 한 자세한 내용은 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/setting_up_service_configuration_10_27_15_a.aspx#events)를 참조 하세요.  사용자 상태를 생성 한 이벤트 정의 후 응용 프로그램에서 사용 되는 헤더를 생성 하려면 [XCETool](https://developer.xboxlive.com/en-us/platform/development/documentation/software/Pages/atoc_xce_jun15.aspx) 실행 해야 합니다.  이 헤더 함수가 통계를 수정 하는 이벤트를 보내는 호출할 수 있습니다.
 
 #### <a name="uwp-developers"></a>UWP 개발자
 
@@ -118,7 +118,7 @@ void Example_RealTimeActivity_SubscribeToStatisticChangeAsync()
 
 ## <a name="unsubscribing-from-a-statistic-from-the-real-time-activity-service"></a>실시간 활동 서비스에서 통계 가입 취소
 
-통계 변경 될 때 업데이트를 가져오려면 실시간 활동 (RTA) 서비스에서 응용 프로그램 통계에 가입 합니다. 이러한 업데이트 필요 하지 않으며, 구독을 종료할 수 및이 항목의 코드는 작업을 수행 하는 방법을 보여 줍니다.
+통계 변경 될 때 업데이트를 가져오려면 실시간 활동 (RTA) 서비스에서 응용 프로그램 통계에 가입 합니다. 이러한 업데이트 필요 하지 않으며, 구독을 종료할 수 하 고이 항목의 코드는 작업을 수행 하는 방법을 보여 줍니다.
 
 ### <a name="unsubscribing-from-a-real-time-services-statistic"></a>실시간 서비스 통계에서 구독 취소
 
@@ -131,3 +131,8 @@ void Example_RealTimeActivity_UnsubscribeFromStatisticChangeAsync()
         );
 }
 ```
+
+> [!IMPORTANT]
+> 서비스를 사용 하 여 2 시간 후 끊어집니다 실시간 활동, 코드는이 감지 하 여 계속 필요할 경우 실시간 활동 서비스에 대 한 연결을 다시 설정 있어야 합니다. 만료 시 인증 토큰 새로 고침을 확인 하는 주로 수행 됩니다.
+> 
+> 클라이언트를 RTA 멀티 플레이 세션에 대 한 사용 30 초 동안 연결이 끊어지면와 멀티 플레이 세션 Directory(MPSD) RTA 세션을 닫히고 사용자 세션에서 실행을 감지 합니다. 여 연결이 닫힐 때 검색 하 고 다시 연결을 시작 하 고, MPSD 세션을 종료 하기 전에 다시 RTA 클라이언트에 됩니다.

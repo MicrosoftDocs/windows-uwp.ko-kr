@@ -1,6 +1,6 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: 간단한 UWP C# 및 MonoGame로 작성 된 Microsoft Store에 대 한 게임
+description: 간단한 UWP C# 및 MonoGame로 작성, Microsoft Store 용 게임
 author: muhsinking
 ms.author: mukin
 ms.date: 03/06/2017
@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572180"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613936"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -44,7 +44,7 @@ Visual Studio 2017에서 프로젝트를 열고 샘플을 실행 하려면 **F5*
 
 이 작업을 마쳤으면 MonoGame 설정에 대한 다음 섹션으로 넘어가서 단계별 코드 연습을 살펴봅니다.
 
-**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 monogame으로 2d 게임을 개발 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
+**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 MonoGame 2d 게임을 개발의 모든 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
 
 ## <a name="set-up-monogame-project"></a>MonoGame 프로젝트 설정
 1. [MonoGame.net](http://www.monogame.net/)에서 Visual Studio용 **MonoGame 3.6**을 다운로드합니다.
@@ -696,4 +696,4 @@ Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/regist
 
 앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.
+자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.

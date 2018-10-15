@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 데스크톱 응용 프로그램에서 오류에 대한 스택 추적을 가져올 수 있습니다.
 title: 데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: dfe496c771c4e69bc51b562c476469e8fef53c92
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: 60f4ed7251fa934190a96e8c7d6f0edd21520980
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989327"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610158"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
 

@@ -12,32 +12,32 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 24f5af1639f5348fe20c36c56c1301f723d832f7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569523"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611997"
 ---
 # <a name="gameresult-json"></a>GameResult(JSON)
-게임 세션의 결과 설명 하는 데이터를 나타내는 JSON 개체입니다. 
+게임 세션의 결과 설명 하는 데이터를 표시 하는 JSON 개체입니다. 
 <a id="ID4EN"></a>
 
   
  
-GameResult JSON 개체에는 다음 멤버가 있습니다.
+GameResult JSON 개체에는 다음 멤버가 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | blob| 8 비트 부호 없는 정수로의 배열| 사용자 지정 제목 관련 결과 데이터입니다.| 
 | 결과| string| 게임 세션에서 플레이어의 참여의 결과입니다. 유효한 값은 "성공", "손실" 또는 "연결". | 
-| 점수| 64 비트의 부호 있는 정수| 플레이어가 게임 세션에서 수신 하는 점수입니다.| 
-| 시간| 64 비트의 부호 있는 정수| 게임 세션에 대 한 플레이어의 시간입니다.| 
-| xuid| 64 비트 부호 없는 정수| 결과를 적용 하는 플레이어의 Xbox 사용자 ID입니다.| 
+| 점수| 64 비트 부호 있는 정수| 플레이어가 게임 세션에서 수신 하는 점수입니다.| 
+| 시간| 64 비트 부호 있는 정수| 게임 세션에 대 한 플레이어의 시간입니다.| 
+| xuid| 64 비트 부호 없는 정수| 결과 적용할 고객만 플레이어의 Xbox 사용자 ID입니다.| 
   
 <a id="ID4EPC"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 359c6527c341a08eca23aa6dd28acd27ddb19205
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571136"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611368"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
@@ -300,7 +300,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> 여기에 코드는 앱의 초기 창 프레임에 대 한 탐색이 실패할 경우 앱 예외를 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 의 반환 값을 사용 합니다. **Navigate**가 **true**를 반환하면 탐색이 수행됩니다.
+> 여기서 코드는 앱의 초기 창 프레임에 대 한 탐색이 실패할 경우 앱 예외를 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 의 반환 값을 사용 합니다. **Navigate**가 **true**를 반환하면 탐색이 수행됩니다.
 
 이제 앱을 빌드하고 실행합니다. "Click to go to page 2"라는 링크를 클릭합니다. 맨 위의 "Page 2"라는 두 번째 페이지가 로드되어 프레임에 표시됩니다.
 

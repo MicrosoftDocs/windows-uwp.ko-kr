@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a48bf9c30370238adc83376a524e9c61abb4af13
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567250"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611257"
 ---
 # <a name="serviceconfigsscidbatch"></a>/serviceconfigs/{scid}/batch
-서비스 구성 식별자 수준 일괄 쿼리에 대 한 POST 작업을 지원합니다.
+서비스 구성 식별자 수준에서 일괄 처리 쿼리에 대 한 게시물 작업을 지원합니다.
 
 > [!IMPORTANT]
-> 이 방법은 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 및 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
+> 이 메서드는 2015 멀티 플레이어에서 사용 되며 나중 및 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X-Xbl-계약-버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
 
 <a id="ID4ER"></a>
 

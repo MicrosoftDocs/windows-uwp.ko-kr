@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570739"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613978"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store 앱에 대 한 지침을 마케팅
 
@@ -23,7 +23,7 @@ ms.locfileid: "4570739"
 
 ## <a name="store-badges"></a>스토어 배지
 
-Microsoft Store에서 앱의 목록에 더 많은 고객을 가질 수 있도록 하 특별 한 홍보용 배지를 만들었습니다. 이러한 배지는 44개 언어로 제공됩니다. 이러한 이미지를 사용할 경우 따라야 할 특정한 요구 사항이 있다는 사실에 주의하세요. 이러한 요구 사항은 사용 예제 및 지침과 함께 PDF 파일로 제공됩니다.
+Microsoft Store에서 앱의 목록에 더 많은 고객을 가질 수 있도록 하려면 특별 한 홍보용 배지를 만들었습니다. 이러한 배지는 44개 언어로 제공됩니다. 이러한 이미지를 사용할 경우 따라야 할 특정한 요구 사항이 있다는 사실에 주의하세요. 이러한 요구 사항은 사용 예제 및 지침과 함께 PDF 파일로 제공됩니다.
 
 [ ![다운로드 단추](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Microsoft 스토어 배지 지침 (PDF, 영문)**
 
@@ -51,7 +51,7 @@ Microsoft Store에서 앱의 목록에 더 많은 고객을 가질 수 있도록
 
 -   개발자 센터에 등록되어 있는 경우 앱 개발자 계약의 ["Microsoft 마크에 사용권 부여"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) 섹션을 준수해야 합니다.
 
--   Windows 개발자 센터를 사용 하 여 등록 되지 않은 경우 Microsoft Microsoft 스토어 배지 지침에 설명 된 대로 배지를 사용할 수 전 세계, 비독점적, 양도, 무료 라이선스가 부여 합니다. Microsoft는 이 지침을 변경할 수 있으며, 이 경우 Microsoft는 적절한 방법을 통해 규정이 게시된 새 URL로 리디렉션을 제공합니다. Microsoft는 여기에 명시적으로 부여되지 않은 모든 권한을 보유합니다.
+-   Windows 개발자 센터를 사용 하 여 등록 되지 않은 경우 Microsoft Microsoft 스토어 배지 지침에 설명 된 대로 배지를 사용 하 여 전 세계, 비독점적, 양도, 무료 라이선스가 부여 합니다. Microsoft는 이 지침을 변경할 수 있으며, 이 경우 Microsoft는 적절한 방법을 통해 규정이 게시된 새 URL로 리디렉션을 제공합니다. Microsoft는 여기에 명시적으로 부여되지 않은 모든 권한을 보유합니다.
 
 -   [Microsoft 스토어 배지 지침](http://go.microsoft.com/fwlink/p/?LinkId=529769)에 설명 된 로고 사용 사양을 따릅니다.
 

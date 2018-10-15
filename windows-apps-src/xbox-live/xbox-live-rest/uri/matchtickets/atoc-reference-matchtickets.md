@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7bfeb225c67567c392615686743828941c02f6d2
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565113"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614414"
 ---
 # <a name="matchmaking-uris"></a>매치 메이킹 URI
  
@@ -32,14 +32,14 @@ momatch.xboxlive.com
  
 ## <a name="service-version"></a>서비스 버전
  
-이러한 HTTP/나머지 Uri의 호출자에 게 전달 해야 값 103 이상 X-Xbl-계약-버전, 서비스 버전 엔터테인먼트 검색 서비스 (EDS)을 지정 하는 HTTP 헤더에 대 한 합니다. 
+이러한 HTTP/REST Uri의 호출자에 게 전달 해야 값 103 이상 X-Xbl-계약-버전, 서비스 버전의 엔터테인먼트 검색 서비스 (EDS)을 지정 하는 HTTP 헤더에 대 한 합니다. 
   
 <a id="ID4ELB"></a>
 
  
 ## <a name="system-objects-and-properties"></a>시스템 개체 및 속성
  
-현재 매치 메이 킹 서비스의 모든 구성 발생 수동으로 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 또는 [Windows 개발자 센터](https://partner.microsoft.com/dashboard/windows/overview)의 서비스 구성 부분을 사용 합니다. 매치 메이 킹 정보와 MPSD에 정의 된 개체에도 반영 됩니다. 
+현재 매치 메이 킹 서비스의 모든 구성 발생 수동으로 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 또는 [Windows 개발자 센터](https://partner.microsoft.com/dashboard/windows/overview)의 서비스 구성 부분을 사용 합니다. 일부 매치 메이 킹 정보는 MPSD에 정의 된 개체에도 반영 됩니다. 
  
 매치 메이 킹 구성에 사용 되는 주 JSON 개체 [MatchTicket (JSON)](../../json/json-matchticket.md) 및 [HopperStatsResults (JSON)](../../json/json-hopperstatsresults.md)에서 정의 됩니다. 참고 티켓 일치 하는 모든 플레이어 또는 다른 사용자와 일치 하는 플레이어를 포함 하는 멀티 플레이 세션에 대 한 참조를 제공 하는 **ticketSessionRef** 개체를 정의 해야 합니다. 
   

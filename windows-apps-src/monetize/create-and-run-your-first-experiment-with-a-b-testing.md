@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: In this walkthrough, you will create, run, and manage your first experiment with A/B testing.
 title: 첫 번째 실험 만들기 및 실행
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: dfd19034a8bf775e9a317d1ddb4f54223eb4a5ed
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: ac97b8d34ec0f5dbfc42022fc54911f04f09ba3b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "476907"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613880"
 ---
 # <a name="create-and-run-your-first-experiment"></a>첫 번째 실험 만들기 및 실행
 

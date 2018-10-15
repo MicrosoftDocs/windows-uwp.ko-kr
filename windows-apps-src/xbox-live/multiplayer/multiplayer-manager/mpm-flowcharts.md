@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 684850d472d02463501f29b62e771744bf621e72
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568456"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614702"
 ---
 # <a name="multiplayer-manager-flowcharts"></a>멀티 플레이어 관리자 순서도
 
-이 섹션에서는 특정 멀티 플레이어 관리자 시나리오를 구현 하는 코드 흐름을 시각화 하는 데 도움이 되는 순서도 다이어그램을 포함 되어 있습니다.
+이 섹션에 특정 멀티 플레이어 관리자 시나리오를 구현 하는 코드 흐름을 시각화 하는 순서도 다이어그램을 포함 되어 있습니다.
 
 * [친구와 멀티 플레이/협동 게임](mpm-flowcharts/mpm-play-with-friends.md)
 

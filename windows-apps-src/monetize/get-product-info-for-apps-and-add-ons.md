@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 89178FD9-850B-462F-9016-1AD86D1F6F7F
 description: Windows.Services.Store 네임스페이스를 사용하여 현재 앱이나 추가 기능 중 하나에 대한 스토어 관련 제품 정보를 가져오는 방법을 알아봅니다.
 title: 앱 및 추가 기능에 대한 제품 정보 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dd8ab9cb86bfeb645f8d46e313c78c681901508
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 417478df3b82967656d2210b3b532c5341f1fb2e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689289"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612434"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 제품 정보 가져오기
 
@@ -30,7 +30,7 @@ ms.locfileid: "1689289"
 
 이러한 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* Windows 개발자 센터 대시보드에서 [앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 만들었으며, 이 앱은 Store에서 게시되었습니다. 테스트하는 동안 Store에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* Windows 개발자 센터 대시보드에서 [앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 만들었으며, 이 앱은 Store에서 게시되었습니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
 * 앱 추가 기능에 대한 제품 정보를 얻고 싶다면, [개발자 센터 대시보드에서 추가 기능을 생성](../publish/add-on-submissions.md)해야 합니다.
 
 이러한 예제의 코드에서는 다음과 같이 가정합니다.

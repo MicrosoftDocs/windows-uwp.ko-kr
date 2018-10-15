@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 새 추가 기능 제출을 만듭니다.
 title: 추가 기능 제출 만들기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 만들기, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ece9403652d02e7d42f33aa4aaacae5a25bd386
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 39af744d8c8e4b9d26cd9d82a9489396857ffa5b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662343"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610340"
 ---
 # <a name="create-an-add-on-submission"></a>추가 기능 제출 만들기
 
@@ -41,7 +41,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| 게시    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
+| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
 
 
 ### <a name="request-header"></a>요청 헤더
@@ -55,7 +55,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | 문자열 | 필수. 제출을 만들려는 추가 기능의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [추가 기능 만들기](create-an-add-on.md) 또는 [추가 기능 세부 정보 가져오기](get-all-add-ons.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
+| inAppProductId | string | 필수. 제출을 만들려는 추가 기능의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [추가 기능 만들기](create-an-add-on.md) 또는 [추가 기능 세부 정보 가져오기](get-all-add-ons.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
 description: Microsoft Store 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 응답을 제출합니다.
 title: 리뷰에 대한 응답 제출
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 추가 기능 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a757743bec947a5e8b0edf8c7a0d02e7c00942d
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 4ec6661ec0ef65174b6218957450540edceaa5a0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662603"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614830"
 ---
 # <a name="submit-responses-to-reviews"></a>리뷰에 대한 응답 제출
 
@@ -73,7 +73,7 @@ Microsoft Store 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 프
 | ReviewId | 문자열 |  응답하려는 리뷰의 ID(GUID)입니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다.   |  예  |
 | ResponseText | 문자열 | 제출할 응답입니다. 응답은 [이 지침](../publish/respond-to-customer-reviews.md#guidelines-for-responses)을 따라 합니다.   |  예  |
 | SupportEmail | 문자열 | 고객이 직접 문의할 때 사용할 수 있는 앱 지원 이메일 주소입니다. 유효한 메일 주소여야 합니다.     |  예  |
-| IsPublic | 부울 |  값 **true**는 응답이 앱의 스토어 목록에서 고객 리뷰 바로 밑에 표시되고 모든 고객에게 노출됨을 나타냅니다. 값 **false**는 응답이 고객에게 메일을 통해 보내지고 앱의 스토어 목록에서 다른 고객에게 노출되지 않음을 나타냅니다.     |  예  |
+| IsPublic | 부울 |  **True**를 지정 하면 응답이 앱의 스토어 목록에 고객 리뷰 바로 아래에 표시 되 고 모든 고객에 게 표시 됩니다. 메일 응답 수신을 하는 것이 옵트아웃 되지 않은 경우 **false** 및 사용자 지정 하면 응답 메일을 통해 고객에 게 전송 됩니다 및 앱의 스토어 목록에서 다른 고객에 게 표시 되지 않습니다. **False** 및 사용자가 메일 응답을 받지 않도록 선택 함를 지정 하면 오류가 반환 됩니다.   |  예  |
 
 
 ### <a name="request-example"></a>요청 예제

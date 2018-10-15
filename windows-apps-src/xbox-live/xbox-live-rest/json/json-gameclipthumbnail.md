@@ -12,20 +12,20 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 681a269cd861f741e2bbde3554acc1b25104d90d
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563457"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611824"
 ---
 # <a name="gameclipthumbnail-json"></a>GameClipThumbnail(JSON)
-개별 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 수 있으며 디스플레이 대 한 적절 한 하나를 선택 하는 클라이언트에 게 됩니다. 
+개별는 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 있을 수 있으며 적절 한 디스플레이 대 한 선택 클라이언트 그것은 개발자가 있습니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="gameclipthumbnail"></a>GameClipThumbnail
  
-GameClipThumbnail 개체에는 다음 사양을 있습니다.
+GameClipThumbnail 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
@@ -36,7 +36,7 @@ GameClipThumbnail 개체에는 다음 사양을 있습니다.
 <a id="ID4EAC"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 584acb4b74fa74dd91e9f8044b59647d8e5d8787
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570866"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613171"
 ---
 # <a name="usersxuidxuidoutbox"></a>/users/xuid({xuid})/outbox
 사용자에 게 보내기 전용 액세스 메시징 제공 Xbox LIVE 서비스에 대 한 편지함 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
@@ -30,7 +30,7 @@ ms.locfileid: "4570866"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid | 64 비트의 부호 없는 정수 | Xbox 사용자 ID (XUID)를 요청 하는 플레이어의 합니다. | 
+| xuid | 64 비트의 부호 없는 정수 | Xbox 사용자 ID (XUID) 요청 하 고 있는 플레이어의 합니다. | 
   
 <a id="ID4EXB"></a>
 

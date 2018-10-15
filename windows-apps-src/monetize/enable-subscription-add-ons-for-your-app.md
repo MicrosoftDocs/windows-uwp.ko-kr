@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Windows.Services.Store 네임스페이스를 사용하여 구독 추가 기능을 구현하는 방법을 알아봅니다.
 title: 앱에 구독 추가 기능을 사용하도록 설정
 keywords: windows 10, uwp, 구독, 추가 기능, 앱 내 구매, IAP, Windows.Services.Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f0bed75a8201b9875f79419c0a77c8a35918b77e
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3575d4d30515a3c26bf99e1cc37afa3b98f4e7dc
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877155"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612820"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 

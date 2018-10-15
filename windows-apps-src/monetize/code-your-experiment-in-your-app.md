@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: To run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must code the experiment in your app.
 title: 실험용 앱 코딩
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: b0931d712ca99b429e2aaa7dec4b855f41ce55ef
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 21c6eab0e021f703c8103462a8459ea190693a10
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567713"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614069"
 ---
 # <a name="code-your-app-for-experimentation"></a>실험용 앱 코딩
 
@@ -42,7 +42,7 @@ ms.locfileid: "4567713"
 4. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 선택하고 **확인**을 클릭합니다.
 
 > [!NOTE]
-> 이 문서의 코드 예제에서는 코드 파일 **System.Threading.Tasks** 및 **Microsoft.Services.Store.Engagement** 네임 스페이스에 대 한 **using** 문을 있다고 가정 합니다.
+> 이 문서의 코드 예제 코드 파일에 **System.Threading.Tasks** 및 **Microsoft.Services.Store.Engagement** 네임 스페이스에 대 한 **using** 문을 있다고 가정 합니다.
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>변형 데이터를 가져와 실험에 대한 보기 이벤트 기록
 

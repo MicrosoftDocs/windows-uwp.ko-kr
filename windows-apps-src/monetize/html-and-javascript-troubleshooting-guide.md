@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: JavaScript/HTML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 읽어보세요.
 title: HTML 및 JavaScript 문제 해결 가이드
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, HTML, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a2d94b769783bdc28c2218dcb9c07f678ba7bc9
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 5474ac51d57decfe2c4f4d5f1969da5b4436fd14
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654872"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610142"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>HTML 및 JavaScript 문제 해결 가이드
 
@@ -74,7 +74,7 @@ ms.locfileid: "1654872"
     </div>
     ```
 
-5.  요소 위치 지정을 확인합니다. [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)은 볼 수 있는 영역 내에 있어야 합니다.
+5.  요소 위치 지정을 확인합니다. [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)은 볼 수 있는 영역 내에 있어야 합니다.
 
 6.  **visibility** 속성을 확인합니다. 이 속성은 collapsed 또는 hidden으로 설정되면 안 됩니다. 이 속성은 인라인으로(아래 참조) 또는 외부 스타일 시트에 설정할 수 있습니다.
 
@@ -140,7 +140,7 @@ ms.locfileid: "1654872"
 
 11. **AdControl**이 뷰포트에서 숨겨져 있지 않은지 확인합니다. 광고가 제대로 표시되려면 **AdControl**이 표시되어야 합니다.
 
-12. [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) 및 [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx)의 라이브 값은 에뮬레이터에서 테스트하지 말아야 합니다. **AdControl**이 예상대로 작동하는지 확인하려면 **ApplicationId** 및 **AdUnitId**에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)을 모두 사용합니다.
+12. [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) 및 [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid)의 라이브 값은 에뮬레이터에서 테스트하지 말아야 합니다. **AdControl**이 예상대로 작동하는지 확인하려면 **ApplicationId** 및 **AdUnitId**에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)을 모두 사용합니다.
 
 <span id="html-blackboxblinksdisappears"/>
 
@@ -342,9 +342,9 @@ ms.locfileid: "1654872"
 
 ### <a name="ads-not-refreshing"></a>광고가 새로 고쳐지지 않음
 
-1.  **AdControl**의 [IsAutoRefreshEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) 속성이 false로 설정되어 있는지 확인하세요. 기본적으로 이 선택적 속성은 **true**로 설정되어 있습니다. **false**로 설정된 경우 **Refresh** 메서드를 사용하여 다른 광고를 검색해야 합니다.
+1.  **AdControl**의 [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) 속성이 false로 설정되어 있는지 확인하세요. 기본적으로 이 선택적 속성은 **true**로 설정되어 있습니다. **false**로 설정된 경우 **Refresh** 메서드를 사용하여 다른 광고를 검색해야 합니다.
 
-2.  [Refresh](https://msdn.microsoft.com/library/windows/apps/xaml/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **true**로 설정된 경우) **Refresh**를 사용하여 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **false**로 설정된 경우) 장치의 현재 데이터 연결에 따라 최소 30-60초가 경과된 후에만 **Refresh**가 호출됩니다.
+2.  [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **true**로 설정된 경우) **Refresh**를 사용하여 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **false**로 설정된 경우) 장치의 현재 데이터 연결에 따라 최소 30-60초가 경과된 후에만 **Refresh**가 호출됩니다.
 
     이 예제에서는 **AdControl**의 **div**를 만드는 방법을 보여 줍니다.
 

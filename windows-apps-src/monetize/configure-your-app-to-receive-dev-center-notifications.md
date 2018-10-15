@@ -1,8 +1,8 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: Learn how to register your UWP app to receive push notifications that you send from Windows Dev Center.
 title: 대상 푸시 알림을 위한 앱 구성
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, 대상 푸시 알림, 개발자 센터
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
-ms.openlocfilehash: d44d4491d8f5f0a7cde65adbe8241a74e36e1506
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 39ea899f9f0ee08d14ca5f182fdf07649ddd1d2e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574833"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617334"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>앱에서 대상 푸시 알림 구성
 

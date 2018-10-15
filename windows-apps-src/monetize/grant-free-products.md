@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용자에게 무료 앱 또는 추가 기능에 대한 권한을 부여합니다.
 title: 무료 제품에 대한 권한 부여
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 제품 권한 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: c1ecb1f7db755fd21014ebc7edf979e7a25e7c7f
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 432d5976cb018148ba0f53aae6446a046f0a3b2f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1665029"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610599"
 ---
 # <a name="grant-free-products"></a>무료 제품에 대한 권한 부여
 
@@ -39,7 +39,7 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 
 | 메서드 | 요청 URI                                            |
 |--------|--------------------------------------------------------|
-| 게시   | ```https://purchase.mp.microsoft.com/v6.0/purchases/grant``` |
+| POST   | ```https://purchase.mp.microsoft.com/v6.0/purchases/grant``` |
 
 
 ### <a name="request-header"></a>요청 헤더
@@ -54,7 +54,7 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 
 ### <a name="request-body"></a>요청 본문
 
-| 매개 변수      | 형식   | 설명        | 필수 |
+| 매개 변수      | 유형   | 설명        | 필수 |
 |----------------|--------|---------------------|----------|
 | availabilityId | 문자열 | Microsoft Store 카탈로그에서 권한을 부여할 제품의 가용성 ID입니다.         | 예      |
 | b2bKey         | 문자열 | 제품의 권한을 부여하려는 사용자의 ID를 나타내는 [Microsoft Store ID 키](view-and-grant-products-from-a-service.md#step-4)입니다.    | 예      |
@@ -62,9 +62,9 @@ Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용�
 | language       | 문자열 | 사용자의 언어.  | 예      |
 | 출시         | 문자열 | 사용자의 지역/국가입니다.       | 예      |
 | orderId        | GUID   | 주문에 대해 생성된 GUID입니다. 이 값은 사용자에 대해 고유하지만 모든 주문에서 고유할 필요는 없습니다.    | 예      |
-| productId      | 문자열 | Microsoft Store 카탈로그의 [제품](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 Store ID의 예는 9NBLGGH42CFD입니다. | 예      |
+| productId      | 문자열 | Microsoft Store 카탈로그의 [제품](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. 제품에 대한 스토어 ID의 예는 9NBLGGH42CFD입니다. | 예      |
 | quantity       | int    | 구매할 수량입니다. 현재, 1 값만 지원됩니다. 지정되지 않은 경우 기본값은 1입니다.   | 아니요       |
-| skuId          | 문자열 | Microsoft Store 카탈로그의 제품 [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. SKU에 대한 Store ID의 예는 0010입니다.     | 예      |
+| skuId          | 문자열 | Microsoft Store 카탈로그의 제품 [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities)에 대한 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다. SKU에 대한 스토어 ID의 예는 0010입니다.     | 예      |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -91,7 +91,7 @@ Content-Type: application/json
 
 ### <a name="response-body"></a>응답 본문
 
-| 매개 변수                 | 형식                        | 설명             | 필수 |
+| 매개 변수                 | 유형                        | 설명             | 필수 |
 |---------------------------|-----------------------------|-----------------------|----------|
 | clientContext             | ClientContextV6             | 이 주문에 대한 클라이언트 문맥 정보입니다. 이 정보는 Azure AD 토큰의 *clientID* 값에 할당됩니다.    | 예      |
 | createdtime               | datetimeoffset              | 주문한 시간입니다.         | 예      |
@@ -114,14 +114,14 @@ Content-Type: application/json
 
 ClientContext 개체에는 다음 매개 변수가 포함됩니다.
 
-| 매개 변수 | 형식   | 설명                           | 필수 |
+| 매개 변수 | 유형   | 설명                           | 필수 |
 |-----------|--------|---------------------------------------|----------|
 | client    | 문자열 | 주문한 클라이언트의 ID입니다. | 아니요       |
 
 
 OrderLineItemV6 개체에는 다음 매개 변수가 포함됩니다.
 
-| 매개 변수               | 형식           | 설명                                                                                                  | 필수 |
+| 매개 변수               | 유형           | 설명                                                                                                  | 필수 |
 |-------------------------|----------------|--------------------------------------------------------------------------------------------------------------|----------|
 | agent                   | IdentityV6     | 품목을 마지막으로 편집한 에이전트입니다. 이 개체에 대한 자세한 내용은 아래 표를 참조하세요.       | 아니요       |
 | availabilityId          | 문자열         | Microsoft Store 카탈로그에서 구매할 제품의 가용성 ID입니다.                           | 예      |
@@ -152,7 +152,7 @@ OrderLineItemV6 개체에는 다음 매개 변수가 포함됩니다.
 
 IdentityV6 개체에는 다음 매개 변수가 포함됩니다.
 
-| 매개 변수     | 형식   | 설명                                                                        | 필수 |
+| 매개 변수     | 유형   | 설명                                                                        | 필수 |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
 | identityType  | 문자열 | **"pub"** 값을 포함합니다.                                                      | 예      |
 | identityValue | 문자열 | 지정된 Microsoft Store ID 키에 있는 *publisherUserId*의 문자열 값입니다. | 예      |

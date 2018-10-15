@@ -15,22 +15,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574364"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611444"
 ---
 # <a name="reveal-highlight"></a>강조
 
 ![영웅 이미지](images/header-reveal-highlight.svg)
 
-강조 표시는 사용자가 포인터 명령 모음과 같은 대화형 요소를 강조 하는 조명 효과 표시 합니다. 
+강조 표시는 사용자가 포인터 명령 모음과 같은 대화형 요소를 강조 표시 하는 조명 효과 표시 합니다. 
 
 > **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>작동 방식
-표시는 포인터가이 그림에서와 같이 근처에 있을 때 요소의 컨테이너를 표시 하 여 대화형 요소를 강조 나타난:
+강조 표시 나타난 대화형 요소에 포인터가 그림과에서 같이 근처에 있을 때 요소의 컨테이너를 표시 하 여:
 
 ![Visual 표시](images/Nav_Reveal_Animation.gif)
 
@@ -69,7 +69,7 @@ ms.locfileid: "4574364"
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-이 그림은 여러 가지 컨트롤에서 강조 표시을 보여줍니다.
+이 그림은 여러 가지 컨트롤에 강조 표시을 보여줍니다.
 
 ![표시 예제](images/RevealExamples_Collage.png)
 
@@ -134,8 +134,8 @@ ms.locfileid: "4574364"
 
 
 이러한 효과는 두 가지 브러시로 정의됩니다. 
-* **RevealBorderBrush** 에 의해 정의 테두리 표시
-* 가리켜서 표시 **RevealBackgroundBrush** 에 의해 정의
+* **RevealBorderBrush** 정의한 테두리 표시
+* 가리켜서 표시 **RevealBackgroundBrush** 에 의해 정의 됩니다.
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -259,14 +259,14 @@ ms.locfileid: "4574364"
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>사용자 지정 컨트롤에 표시 효과 미세 조정 
 
-사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 하는 경우는 효과 최적화할 이러한 팁 수 있습니다.
+사용자 지정 또는 다시 템플릿 컨트롤 또는 사용자 지정 명령 화면에 표시를 사용 하면 효과가 최적화 이러한 팁 수 있습니다.
  
 * 근처에 있는 높이나 너비(특히 목록에서)가 맞지 않는 크기의 항목에서: 테두리 접근 동작을 제거하고 테두리가 가리켜서 표시 시에만 표시되도록 합니다.
 * 빈번하게 사용할 수 없는 상태로 전환되는 명령 항목의 경우: 요소 백플레이트의 테두리 접근 브러시뿐만 아니라 상태를 강조하는 테두리 또한 배치합니다.
 * 맞닿을 정도로 근접한 명령 요소의 경우: 두 개의 요소 사이에 여백을 1px 추가합니다. 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
-### <a name="do"></a>이 작업을 수행 합니다.
+### <a name="do"></a>수행 합니다.
 - 사용자가 여러 조치를 취할 수 있는 요소에 표시 사용(CommandBars, 탐색 메뉴)
 - 기본적으로 시각적 구분 기호가 없는 대화형 요소를 그룹화하는 데 표시를 사용하지 않음(목록, 리본)
 - 대화형 요소의 밀도가 높은 영역에 표시 사용(명령 시나리오)

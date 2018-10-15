@@ -8,18 +8,18 @@ ms.date: 07/16/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 7 월 한 새로운 기능, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 7 월, 새로운 하나 xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 9583b1f51c9dbd11b803ac0d1c8871d81bc16b84
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565472"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610972"
 ---
 # <a name="whats-new-for-the-xbox-live-apis---july-2017"></a>새로운 기능 Xbox Live Api에 대 한-2017 년 7 월
 
-추가 된 항목에 대 한 [새로운-2017 년 6 월자](1706-whats-new.md) 문서를 참조 하십시오 2017 년 6 월 릴리스에서 합니다.
+추가 된 항목에 대 한 [새로운 기능-2017 년 6 월자](1706-whats-new.md) 문서를 참조 하십시오 2017 년 6 월 릴리스에서 합니다.
 
 또한 모든 Xbox Live Api에 최근 코드 변경 내용을 보려면 [Xbox Live API GitHub 커밋 기록](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인할 수 있습니다.
 
@@ -27,14 +27,14 @@ ms.locfileid: "4565472"
 
 ### <a name="multiplayer-updates"></a>멀티 플레이 업데이트
 
-이제 활동 핸들 및 검색 쿼리는 응답에서 사용자 지정 세션 속성이 포함 됩니다.
+이제 활동 핸들 및 검색 쿼리 응답에는 사용자 지정 세션 속성이 포함 됩니다.
 
 ### <a name="tournaments"></a>토너먼트
 
-새 Api가 토너먼트 지원 하기 위해 추가 되었습니다. 이제 xbox::services::tournaments::tournament_service 클래스를 사용 하 여 타이틀에서 토너먼트 서비스에 액세스 합니다.
-이러한 새 토너먼트 Api는 다음과 같은 시나리오를 사용 합니다.
-* 현재 타이틀에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
+토너먼트 지원 하기 위해 새로운 Api가 추가 되었습니다. 이제 타이틀에서 토너먼트 서비스에 액세스 하는 xbox::services::tournaments::tournament_service 클래스를 사용할 수 있습니다.
+이러한 새 토너먼트 Api는 다음과 같은 시나리오를 사용 하도록 설정:
+* 현재 제목에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
 * 서비스에서는 토너먼트에 대 한 세부 정보를 검색 합니다.
-* 팀은 토너먼트에 대 한 목록을 검색 하려면 서비스를 쿼리 합니다.
+* 토너먼트에 대 한 팀의 목록을 검색 서비스를 쿼리 합니다.
 * 서비스에서는 토너먼트에 대 한 팀에 대 한 세부 정보를 검색 합니다.
-* 실시간으로 활동 (RTA) 구독을 사용 하 여 토너먼트 및 팀에 변경 내용을 추적 합니다.
+* 변경 내용을 추적 토너먼트 및 팀 실시간으로 활동 (RTA) 구독을 사용 하 여 합니다.

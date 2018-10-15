@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ae8c61d8afae6788f2f99e4e2beff262c011fc60
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564870"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611883"
 ---
 # <a name="eds-tables"></a>EDS 테이블
 
@@ -33,12 +33,12 @@ ms.locfileid: "4564870"
 | 미디어 그룹| 미디어 항목 유형| 
 | --- | --- |
 | 게임| Xbox360Game, XboxGameTrial, Xbox360GameContent, Xbox360GameDemo, XboxTheme, XboxOriginalGame, XboxGamerTile, XboxArcadeGame, XboxGameConsumable, XboxGameVideo, XboxGameTrailer, XboxBundle, XboxXnaCommunityGame, XboxMarketplace, AvatarItem, MobileGame, XboxMobilePDLC, XboxMobileConsumable, WebGame, MetroGame, MetroGameContent, MetroGameConsumable, DGame, DGameDemo, DConsumable, DDurable|
-| AppType| DApp XboxApp|
+| AppType| XboxApp, DApp|
 | MovieType| 영화|
-| TVType| TVSeries, TVEpisode TVSeason TVShow (일회성 TV 프로그램)|
+| TVType| TVEpisode, TVSeries, TVSeason TVShow (일회성 TV 프로그램)|
 | MusicType| 앨범 트랙 MusicVideo|
 | MusicArtistType| MusicArtist|
-| WebVideoType| WebVideoCollection WebVideo|
+| WebVideoType| WebVideo, WebVideoCollection|
 | EnhancedContentType| GameLayer, GameActivity, AppActivity, VideoLayer, VideoActivity, DActivity, DNativeApp|
 | 구독 유형| 구독|
 

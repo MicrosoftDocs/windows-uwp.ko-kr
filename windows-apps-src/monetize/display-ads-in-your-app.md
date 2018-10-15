@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: Microsoft Advertising SDK는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다.
 title: Microsoft Advertising SDK를 사용하여 앱에 광고 표시
-ms.author: mcleans
-ms.date: 05/02/2018
+ms.author: mhopkins
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 601f3fe67d6ed44403c65427af75042456bdfddb
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: c0dde67e3f7ab43734ffb0bf2a5826cc54691e17
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843023"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613564"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
-Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. 저희 광고 수익 창출 플랫폼은 다양한 종류의 광고를 제공하고, 많은 인기 광고 네트워크에서 광고 조정을 지원합니다.
+Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. 저희 광고 수익 창출 플랫폼은 다양 한 많은 인기 광고 네트워크를 사용 하 여 앱 및 지원 비율은 조정에 원활 하 게 통합할 수 있는 광고 형식 제공 합니다. 우리의 플랫폼 OpenRTB, 방대한 2.x, MRAID 2 및 3 VPAID 표준을 준수 며 자 및 IAS 호환 됩니다. 
 
 <br/>
 
@@ -121,7 +121,7 @@ Microsoft Advertising SDK 사용에 대한 추가 도움말은 다음 리소스�
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Windows 8.1 및 Windows Phone 8.x 앱
 
-Windows8.1 및 Windows Phone 8.x 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)를 제공합니다. Windows 8.1 및 Windows Phone 8.x 앱에서 이 SDK를 사용해 광고를 표시하는 방법에 대한 자세한 내용은 [이 문서](https://msdn.microsoft.com/library/windows/apps/xaml/dn792120.aspx)를 참조하세요.
+Windows8.1 및 Windows Phone 8.x 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)를 제공합니다. Windows 8.1 및 Windows Phone 8.x 앱에서 이 SDK를 사용해 광고를 표시하는 방법에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10))를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
