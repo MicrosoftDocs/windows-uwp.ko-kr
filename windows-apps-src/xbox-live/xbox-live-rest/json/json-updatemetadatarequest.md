@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 72b4a7b971647304e08fe52e7696be9fcd39e584
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572395"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616327"
 ---
 # <a name="updatemetadatarequest-json"></a>UpdateMetadataRequest(JSON)
 클립에 대 한 업데이트 해야 하는 메타 데이터입니다. 
@@ -25,20 +25,20 @@ ms.locfileid: "4572395"
  
 ## <a name="updatemetadatarequest"></a>UpdateMetadataRequest
  
-UpdateMetadataRequest 개체에는 다음 사양을 있습니다.
+UpdateMetadataRequest 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| userCaption| string| 게임 클립에 대 한 사용자가 입력 한 지역화 되지 않은 문자열을 변경합니다.| 
-| visibility| [GameClipVisibility 열거형](../enums/gvr-enum-gameclipvisibility.md)| 시스템에 게시 될 때 게임 클립의 표시를 변경 합니다.| 
+| userCaption| string| 게임 클립에 대해 사용자가 입력 한 지역화 되지 않은 문자열을 변경합니다.| 
+| visibility| [GameClipVisibility 열거형](../enums/gvr-enum-gameclipvisibility.md)| 시스템에 게시 될 때 게임 클립의 가시성을 변경 합니다.| 
 | titleData| string| 제목 관련 속성 모음입니다. 최대 크기: 10KB입니다.| 
   
 <a id="ID4EBC"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
-클립 사용자 이름 및 표시 여부를 변경 합니다.
+사용자 클립 이름 및 가시성 변경:
  
 
 ```json
@@ -50,7 +50,7 @@ UpdateMetadataRequest 개체에는 다음 사양을 있습니다.
 ```
 
  
-(이 예는 단지, 호출자에 게이 필드의 스키마 이므로)만 제목 속성 변경:
+(이 예는 단지, 호출자가 결정이 필드의 스키마 이므로) 방금 제목 속성 변경:
  
 
 ```json

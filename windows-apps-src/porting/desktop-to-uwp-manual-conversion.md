@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566358"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617702"
 ---
 # <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 
@@ -29,11 +29,11 @@ ms.locfileid: "4566358"
 설치 관리자가 시스템을 어떻게 변경했는지 확실히 모르는 경우나 패키지 매니페스트를 생성하기 위해 자동화된 도구를 사용한 경우에는 [이러한](desktop-to-uwp-root.md#convert) 옵션을 고려하십시오.
 
 >[!IMPORTANT]
->데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10 버전 1607에에서 도입 된 그렇지 않으면 및 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트 에서만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
+>데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10, 버전 1607에서에서 도입 된 그렇지 하며 Windows 10 1 주년 업데이트 (10.0; 대상으로 하는 프로젝트에만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-이 가이드를 검토 하 여 응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
+응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에이 가이드를 검토: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
 
 ## <a name="create-a-package-manifest"></a>패키지 매니페스트 만들기
 
@@ -87,11 +87,11 @@ ms.locfileid: "4566358"
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Windows 스토어에서 응용 프로그램 이름, 예약한 경우 Windows 개발자 센터 대시보드를 사용 하 여 이름과 게시자를 얻을 수 있습니다. 다른 시스템 응용 프로그램을 사이드 로드 계획이, 앱 서명 하기 위해 사용할 인증서의 이름과 일치를 선택 하는 게시자 이름이 아니라에 한 해 고유한 이름을 제공할 수 있습니다.
+> Windows 스토어에서 응용 프로그램 이름, 예약한 경우 Windows 개발자 센터 대시보드를 사용 하 여 이름과 게시자를 얻을 수 있습니다. 테스트용 로드에는 다른 시스템에 응용 프로그램에 하려는 경우에 한 해 고유한 이름을 선택 인증서의 이름과 일치 하는 게시자 이름이 앱 로그인에 사용으로 제공할 수 있습니다.
 
 ### <a name="properties"></a>특성
 
-[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **DisplayName** 에 스토어에 업로드 하는 앱에 대 한 저장소에 예약 하는 응용 프로그램의 이름입니다.
+[특성](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) 요소는 세 개의 필수 자식 요소를 가지고 있습니다. 여기에는 요소에 대한 자리 표시자 텍스트가 포함된 **특성** 요소가 예로 나와 있습니다. **DisplayName** 스토어에 업로드 된 앱에 대해 스토어에서 예약 하는 응용 프로그램의 이름입니다.
 
 ```XML
 <Properties>
@@ -112,7 +112,7 @@ ms.locfileid: "4566358"
 ```
 ### <a name="dependencies"></a>종속성
 
-항상 설정에 대 한 패키지를 만드는 데스크톱 앱에는 ``Name`` 특성을 ``Windows.Desktop``.
+항상 설정에 대 한 패키지를 만드는 데스크톱 앱의 경우는 ``Name`` 특성을 ``Windows.Desktop``.
 
 ```XML
 <Dependencies>
@@ -121,7 +121,7 @@ ms.locfileid: "4566358"
 ```
 
 ### <a name="capabilities"></a>접근 권한 값
-추가 해야 하는 것에 대 한 패키지를 생성 하는 데스크톱 앱의 ``runFullTrust`` 접근 권한 값입니다.
+추가 해야에 대 한 패키지를 생성 하는 데스크톱 앱의 ``runFullTrust`` 접근 권한 값입니다.
 
 ```XML
 <Capabilities>
@@ -134,7 +134,7 @@ ms.locfileid: "4566358"
 
 ### <a name="application-element"></a>응용 프로그램 요소
 
-데스크톱 앱에 대 한 패키지를 만들기에 대 한는 ``EntryPoint`` 응용 프로그램 요소의 특성은 항상 ``Windows.FullTrustApplication``.
+패키지를 생성 하는 데스크톱 앱의 ``EntryPoint`` 응용 프로그램 요소의 특성은 항상 ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -177,7 +177,7 @@ ms.locfileid: "4566358"
 
 ### <a name="generate-a-package-resource-index-pri-file"></a>PRI(Package Resource Index) 파일 생성
 
-패키지를 만든 후 수정 응용 프로그램의 시각적 자산, 위 섹션에 설명 된 대로 대상 기반 자산을 만들 경우 새 PRI 파일을 생성 해야 합니다.
+위의 섹션에 설명 된 대로 대상 기반 자산을 만들 경우 수정 응용 프로그램의 시각적 자산 패키지를 만든 후, 새 PRI 파일을 생성 해야 합니다.
 
 1.  **VS 2017용 개발자 명령 프롬프트**를 엽니다.
 
@@ -201,14 +201,14 @@ ms.locfileid: "4566358"
 
 ## <a name="run-the-packaged-app"></a>패키지로 만든 앱 실행
 
-인증서를 얻어서 로그인 할 필요 없이 로컬 테스트 응용 프로그램을 실행할 수 있습니다. 이 PowerShell cmdlet을 실행하면 됩니다.
+이렇게 하면 응용 프로그램 인증서를 얻어서 로그인 할 필요 없이 로컬 테스트를 실행할 수 있습니다. 이 PowerShell cmdlet을 실행하면 됩니다.
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
 앱의 .exe 또는 .dll 파일을 업데이트하려면 패키지의 기존 파일을 새 파일로 바꾸고, AppxManifest.xml에서 버전 번호를 늘린 다음, 위의 명령을 다시 실행합니다.
 
 > [!NOTE]
-> 패키지 된 응용 프로그램이 항상 대화형 사용자로 실행 되 고에 패키지 된 응용 프로그램을 설치 하는 모든 드라이브는 NTFS 형식으로 포맷 되어야 합니다.
+> 패키지 된 응용 프로그램이 항상 대화형 사용자로 실행 하 고에 패키지 된 응용 프로그램을 설치할 수 있는 모든 드라이브는 NTFS 형식으로 포맷 되어야 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

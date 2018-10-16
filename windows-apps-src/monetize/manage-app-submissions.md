@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: Microsoft Store 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다.
 title: 앱 제출 관리
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: db74614c9455bfeffb9cfa286e84f4de6d97f52d
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: f0edcde4916311a629d248b800320f6e1c596600
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832434"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617923"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
@@ -435,7 +435,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  releaseNotes               |  문자열       |  앱의 [릴리스 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes)입니다.    |
 |  이미지               |   배열      |  앱 목록의 [이미지 및 아이콘](#image-object) 리소스의 배열입니다.  |
 |  recommendedHardware               |   배열      |  앱의 [권장 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.     |
-|  minimumHardware               |     문자열    |  앱의 [최소 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.    |  
+|  minimumHardware               |     string    |  앱의 [최소 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.    |  
 |  title               |     string    |   앱 목록에 대한 제목입니다.   |  
 |  shortDescription               |     문자열    |  게임에서만 사용됩니다. 이 설명은 Xbox One에 있는 Game Hub의 **정보** 섹션에 표시가 되며, 고객이 게임에 대해 자세히 이해하는 데 도움이 됩니다.   |  
 |  shortTitle               |     문자열    |  제품 이름의 짧은 버전입니다. 이러한 짧은 이름은 제품의 정식 제목 대신에 Xbox One이 다양한 위치에 표시될 수 있습니다(설치 동안 도전 과제 등에 표시).    |  
@@ -455,7 +455,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  fileStatus               |   문자열      |  이미지 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
 |  id  |  string  | 이미지 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
 |  description  |  문자열  | 이미지에 대한 설명입니다.  |
-|  imageType  |  문자열  | 이미지의 형식을 나타냅니다. 현재 다음 문자열을 지원하고 있습니다. <p/>[스크린샷 이미지](../publish/app-screenshots-and-images.md#screenshots): <ul><li>스크린샷(데스크톱 스크린샷에 이 값을 사용)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[스토어 로고](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>아이콘(1:1 300 x 300 픽셀 로고에 이 값을 사용)</li></ul><p/>[홍보 이미지](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Xbox 이미지](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[선택할 수 있는 홍보 이미지](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
+|  imageType  |  string  | 이미지의 형식을 나타냅니다. 현재 다음 문자열을 지원하고 있습니다. <p/>[스크린샷 이미지](../publish/app-screenshots-and-images.md#screenshots): <ul><li>스크린샷(데스크톱 스크린샷에 이 값을 사용)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[스토어 로고](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>아이콘(1:1 300 x 300 픽셀 로고에 이 값을 사용)</li></ul><p/>[홍보 이미지](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Xbox 이미지](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[선택할 수 있는 홍보 이미지](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
 <span id="gaming-options-object" />

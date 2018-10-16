@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564592"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617299"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>앱 및 추가 기능 판매
 

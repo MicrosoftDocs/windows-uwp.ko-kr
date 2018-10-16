@@ -12,32 +12,32 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8e4ac4e91c4359ca20822297ccb625d09e3d59
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570276"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616333"
 ---
 # <a name="person-json"></a>Person(JSON)
-사용자가 시스템에서 한 사람에 대 한 메타 데이터입니다. 
+사용자 시스템에서 단일 사용자에 대 한 메타 데이터입니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="person"></a>사람
  
-사용자 개체에는 다음 사양을 있습니다.
+사용자 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | xuid| string| 필수. Xbox 사용자 ID (XUID) 10 진수 형식의 합니다. 예제 값: 2603643534573573 합니다.| 
-| isFavorite| 부울 값| 필수. 이 사용자 인지 자세히에 대 한 사용자가 더 관심이 있는 합니다. 사용자가 자신의 사용자 목록에서 매우 많은 사람을 가질 수, 있으므로 즐겨 찾는 사용자를 환경에 우선 순위를 지정 하 고 즐겨찾기 하지 않은 다른 하기 전에 표시 해야 합니다.| 
-| isFollowingCaller| 부울 값| 선택 사항입니다. 이 사용자가 사용자에 따라 여부 대신 API 호출이 발생 합니다.| 
-| socialNetworks| 문자열의 배열| 선택 사항입니다. 외부 네트워크 내에서 사용자와이 사용자는 관계를 맺어야 합니다.| 
+| isFavorite| 부울 값| 필수. 이 사용자 인지 자세히에 대 한 사용자가 더 관심이 있는 합니다. 사용자가 자신의 사용자 목록에서 매우 많은 수의 사용자를 가질 수, 때문에 즐겨찾기 사용자를 환경에 우선 순위를 지정 하 고 즐겨찾기 하지 않은 다른 하기 전에 표시 해야 합니다.| 
+| isFollowingCaller| 부울 값| 선택 사항입니다. 이 사람 사용자 팔 로우 여부 시킨 API 호출이 발생 합니다.| 
+| socialNetworks| 문자열의 배열| 선택 사항입니다. 외부 네트워크 내에서 사용자 및 해당이 사용자는 관계가 있습니다.| 
   
 <a id="ID4EHC"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

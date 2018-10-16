@@ -8,18 +8,18 @@ ms.date: 04/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: bb2d435bf11cb4c06527090abb4b78f31a339142
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564809"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617342"
 ---
 # <a name="get-started-with-using-visual-studio-for-xdk-based-games"></a>XDK 기반 게임용 Visual Studio를 사용 하 여 시작
 
-이 섹션에서는 Xbox live 기반 XDK 프로젝트 시작
+이 섹션에서는 기반 XDK 프로젝트를 사용 하 여 Xbox live 시작
 
 ## <a name="in-this-section"></a>이 섹션 내용
 

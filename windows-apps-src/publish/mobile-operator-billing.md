@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
 ms.openlocfilehash: da08e63cc42987f1a3876e13a713d670a80cf9ba
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564827"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617260"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -46,7 +46,7 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 네덜란드     | KPN                              |
 | 노르웨이          | Telenor, Telia                   |
 | 폴란드          | Orange, 재생                     |
-| 싱가포르       | M1 Limited StarHub              |
+| 싱가포르       | M1 Limited, StarHub              |
 | 슬로바키아        | Slovak Telekom                   |
 | 스페인           | Orange                           |
 | 스웨덴          | Telenor, 3                       |

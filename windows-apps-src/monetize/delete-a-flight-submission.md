@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 1A69A388-B1CC-4D2C-886B-EA07E6E60252
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출을 삭제합니다.
 title: 패키지 플라이트 제출 삭제
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 삭제, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 4142d5341ccf906073d2fa6c3895135cba8a0d50
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 8618d93b1a6ec465a95956d01648444313cdf142
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817654"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617718"
 ---
 # <a name="delete-a-package-flight-submission"></a>패키지 플라이트 제출 삭제
 
@@ -48,9 +48,9 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 패키지 
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 삭제할 패키지 플라이트 제출이 포함된 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| applicationId | string | 필수. 삭제할 패키지 플라이트 제출이 포함된 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
 | flightId | 문자열 | 필수. 삭제할 제출이 포함된 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 개발자 센터 대시보드에서 만든 플라이트의 경우 이 ID는 대시보드에 있는 플라이트 페이지의 URL에도 사용할 수 있습니다.  |
-| submissionId | 문자열 | 필수. 삭제할 제출의 ID입니다. 이 ID는 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 개발자 센터 대시보드에서 만든 제출의 경우 이 ID는 대시보드에 있는 제출 페이지의 URL에도 사용할 수 있습니다.  |
+| submissionId | string | 필수. 삭제할 제출의 ID입니다. 이 ID는 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 개발자 센터 대시보드에서 만든 제출의 경우 이 ID는 대시보드에 있는 제출 페이지의 URL에도 사용할 수 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: 이 섹션의 Java 코드 예제를 사용하여 Microsoft Store 제출 API를 사용하는 방법에 대해 자세히 알아봅니다.
 title: Java 샘플 - 앱, 추가 기능, 플라이트 제출
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, Java
 ms.localizationpriority: medium
-ms.openlocfilehash: efbf5e075737a1611e1114c82c1df982fe4751c2
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e058e456b16b5415984e6cf8de0a0fdb68159f07
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654452"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616636"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java 샘플: 앱, 추가 기능, 플라이트 제출
 

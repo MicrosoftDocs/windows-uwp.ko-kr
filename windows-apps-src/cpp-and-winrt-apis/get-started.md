@@ -10,14 +10,14 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: b5954aa8236a9abeee6e5c74a200f77fcccf97e3
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575062"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615969"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
-사용 하 여 속도를 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt),이 항목은 단순한 코드 예제를 안내 합니다.
+하는 데 속도 사용 하 여 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt),이 항목은 단순한 코드 예제를 안내 합니다.
 
 ## <a name="a-cwinrt-quick-start"></a>C++/WinRT 빠른 시작
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "4575062"
 새 **Windows 콘솔 응용 프로그램(C++/WinRT)** 프로젝트를 만듭니다.
 
 > [!IMPORTANT]
-> Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0(windows (Windows 10, 버전 1803) 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류와 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 및 기타 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** > **언어** >  **추가 옵션****명령줄** 다음 삭제).
+> Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0(windows (Windows 10, 버전 1803) 한 다음 새로 만든 C + + WinRT 프로젝트 컴파일 오류가 있는 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 및 기타 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 집합 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** > **언어** >  **추가 옵션****명령줄** 삭제).
 
 다음과 같이 `pch.h` 및 `main.cpp`를 편집합니다.
 

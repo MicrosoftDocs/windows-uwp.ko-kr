@@ -1,5 +1,5 @@
 ---
-title: 순서도-호스트 마이그레이션 처리
+title: 순서도-핸들 호스트 마이그레이션
 author: KevinAsgari
 description: Xbox Live 멀티 플레이어 관리자 순서도-호스트 마이그레이션 처리 합니다.
 ms.assetid: fdd59a9b-4c84-4a5d-b4b7-f899c08c615f
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 6394e440981dea5da28b0a5e59334def9a2a57e8
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573259"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616778"
 ---
-# <a name="flowchart---handle-host-migration"></a>순서도-호스트 마이그레이션 처리
+# <a name="flowchart---handle-host-migration"></a>순서도-핸들 호스트 마이그레이션
 
-다음 순서도 멀티 플레이어 게임의 호스트 연결을 끊을 때 호스트 마이그레이션 처리의 흐름을 보여 줍니다.
+다음 순서도 멀티 플레이어 게임의 호스트 끊을 때 호스트 마이그레이션 처리의 흐름을 보여 줍니다.
 
 ## <a name="handle-host-migration"></a>호스트 마이그레이션 처리
 

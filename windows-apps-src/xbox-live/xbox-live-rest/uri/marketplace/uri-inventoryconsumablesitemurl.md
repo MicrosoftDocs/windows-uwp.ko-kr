@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ed278542fa538a1297069b0f7d67d413e180f30
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568769"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615958"
 ---
 # <a name="usersmeconsumablesitemid"></a>/users/me/consumables/{itemID}
 특정 소모 성 인벤토리 항목에 대 한 세부 정보의 전체 집합 액세스 합니다.
@@ -31,7 +31,7 @@ ms.locfileid: "4568769"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| itemID| string| 각 사용자에 단일 인벤토리 항목에 대 한 고유 ID|
+| itemID| string| 각 사용자에 게 단일 인벤토리 항목에 대 한 고유 ID|
 
 <a id="ID4ERB"></a>
 
@@ -40,7 +40,7 @@ ms.locfileid: "4568769"
 
 [POST ({itemID})](uri-inventoryconsumablesitemurlpost.md)
 
-&nbsp;&nbsp;전체 또는 일부 소모 성 인벤토리 항목의 사용 되었는지 나타냅니다 점감 수량을 요청 된 양만큼 소모 성입니다.
+&nbsp;&nbsp;전체 또는 일부 소모 성 인벤토리 항목의 사용 되었는지 나타냅니다 점감 수량을 요청 된 양만큼 소모입니다.
 
 <a id="ID4E4B"></a>
 

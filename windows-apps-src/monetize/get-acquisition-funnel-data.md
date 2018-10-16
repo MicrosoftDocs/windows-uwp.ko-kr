@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 취득 깔때기형 데이터를 가져옵니다.
 title: 앱 취득 깔때기 데이터 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 취득 깔때기
 ms.localizationpriority: medium
-ms.openlocfilehash: 85ffe2219ce7bc1dc47ff92240eeeff1374b5f43
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 362bcc956fa5945f9685aac7d6351b9fda7690de
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663583"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616084"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>앱 취득 깔때기 데이터 가져오기
 
@@ -52,7 +52,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 
 | applicationId | 문자열 | 취득 깔때기 데이터 검색을 원하는 앱의 [스토어 ID](in-app-purchases-and-trials.md#store-ids)입니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | startDate | date | 검색할 취득 깔때기 데이터의 날짜 범위에서 시작 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | endDate | date | 검색할 취득 깔때기 데이터의 날짜 범위에서 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
-| filter | 문자열  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 자세한 내용은 아래의 [필터 필드](#filter-fields) 섹션을 참조하세요. | 아니요   |
+| filter | string  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 자세한 내용은 아래의 [필터 필드](#filter-fields) 섹션을 참조하세요. | 아니요   |
 
  
 ### <a name="filter-fields"></a>필드 필터링
@@ -65,7 +65,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 
 |---------------|-----------------|
 | campaignId | 취득과 연결된 [사용자 지정 앱 프로 모션 캠페인](../publish/create-a-custom-app-promotion-campaign.md)의 ID 문자열입니다. |
 | market | 구입이 발생한 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
-| deviceType | 취득이 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
+| deviceType | 취득이 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>홀로그램</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | ageGroup | 취득을 완료한 사용자 연령 그룹을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>0 – 17</strong></li><li><strong>18 – 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 이상</strong></li><li><strong>모름</strong></li></ul> |
 | 성별 | 취득을 완료한 사용자의 성별을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>남자</strong></li><li><strong>여자</strong></li><li><strong>모름</strong></li></ul> |
 
@@ -133,6 +133,6 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [취득 보고서](../publish/acquisitions-report.md)
+* [구입 보고서](../publish/acquisitions-report.md)
 * [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [앱 취득 가져오기](get-app-acquisitions.md)

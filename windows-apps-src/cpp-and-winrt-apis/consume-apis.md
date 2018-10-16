@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b1cd05f974bf9193e84919a5e679ef996746d7e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571325"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617835"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
-이 항목에서는 사용 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Api의 Windows에 포함 되 든 제 3 자 구성 요소 공급 업체에서 구현한 또는 직접 구현 합니다.
+이 항목에서는 사용 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Api의 Windows에 포함 되 든는 제 3 자 구성 요소 공급 업체에서 구현한 또는 직접 구현 합니다.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>API가 Windows 네임스페이스에 있는 경우
 이는 Windows 런타임 API를 가장 흔하게 사용하는 경우입니다. 메타데이터에서 정의된 Windows 네임스페이스의 모든 형식에 대해, C++/WinRT는 C++ 친화적인 등가(*프로젝션된 형식*이라고 함)를 정의합니다. 프로젝션된 형식은 Windows 형식과 동일한 정규화된 이름을 가지지만 C++ 구문을 사용하여 C++ **winrt** 네임스페이스에 배치됩니다. 예를 들어, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri)는 C++/WinRT에 **winrt::Windows::Foundation::Uri**로 프로젝션됩니다.
@@ -222,7 +222,7 @@ using namespace winrt::Windows::Globalization::NumberFormatting;
 CurrencyFormatter currency{ L"USD" };
 ```
 
-But there may be times that you'll want to create the activation factory yourself, and then create objects from it at your convenience. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
+하지만 정품 인증 공장을 직접 만들고자 하는 경우 귀하의 편의에 따라 여기에서 개체를 만듭니다. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Globalization::NumberFormatting;

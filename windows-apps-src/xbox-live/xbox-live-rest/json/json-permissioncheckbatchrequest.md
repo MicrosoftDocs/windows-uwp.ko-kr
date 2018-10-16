@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a3b7f63e7a991420ee594cf45acf2f9952bcf74
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564375"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615563"
 ---
 # <a name="permissioncheckbatchrequest-json"></a>PermissionCheckBatchRequest(JSON)
 PermissionCheckBatchRequest 개체의 컬렉션입니다. 
@@ -25,17 +25,17 @@ PermissionCheckBatchRequest 개체의 컬렉션입니다.
  
 ## <a name="permissioncheckbatchrequest"></a>PermissionCheckBatchRequest
  
-PermissionCheckBatchRequest 개체에는 다음 사양을 있습니다.
+PermissionCheckBatchRequest 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| 사용자| 사용자의 배열| 필수. 대상에 대 한 사용 권한을 확인의 배열입니다. 이 배열은 각 항목은 Xbox 사용자 ID (XUID) 또는 네트워크를 통한 시나리오에 대 한 익명 네트워크 외부 사용자 ("anonymousUser": "allUsers"). | 
+| 사용자| 사용자의 배열| 필수. 대상에 대해 사용 권한을 확인의 배열입니다. 이 배열에서 각 항목은 Xbox 사용자 ID (XUID) 또는 네트워크를 통한 시나리오에 대 한 익명 네트워크 외부 사용자 ("anonymousUser": "allUsers"). | 
 | 사용 권한| [PermissionId 열거형](../enums/privacy-enum-permissionid.md) 의 배열| 필수. 각 사용자에 대해 확인할 수 있는 권한을 부여 합니다.| 
   
 <a id="ID4E3B"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

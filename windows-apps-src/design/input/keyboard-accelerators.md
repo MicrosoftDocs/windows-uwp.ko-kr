@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575262"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617682"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -361,19 +361,19 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 **Windows 10, 버전 1803 (2018 년 4 월 업데이트) 이상**
 
-기본적으로 키보드 가속기를 선언 하는 경우 모든 [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) (제외는 해당 키 조합이 표시 도구 설명에 있습니다.
+기본적으로 키보드 가속기를 선언 하는 모든 [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) (제외는 해당 키 조합이 표시 도구 설명에 있습니다.
 
 > [!NOTE] 
-> 컨트롤에 둘 이상의 가속기 정의 하는 경우 첫 번째 표시 됩니다.
+> 컨트롤에 둘 이상의 가속기를 정의 하는 경우 첫 번째만 표시 됩니다.
 
 ![바로 가기 키 도구 설명](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *도구 설명의 바로 가기 키 조합*
 
-[단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체에 대 한 키보드 가속기는 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem))에 대 한 개체를 키보드 가속기 플라이 아웃 텍스트와 함께 표시 됩니다.
+[단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체의 경우 키보드 가속기는 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) 개체, 키보드 가속기 플라이 아웃 텍스트와 함께 표시 됩니다.
 
 > [!NOTE]
-> 도구 설명 지정 (다음 예에서 Button1 참조)이이 동작을 재정의 합니다.
+> 도구 설명을 지정 (다음 예에서 Button1 참조)이이 동작을 재정의 합니다.
 
 ```xaml
 <StackPanel x:Name="Container" Grid.Row="0" Background="AliceBlue">
@@ -442,7 +442,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 ![바로 가기 키 도구 설명](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
-*MenuFlyoutItem의 텍스트에 추가 하는 바로 가기 키 조합*
+*바로 가기 키 조합 MenuFlyoutItem의 텍스트에 추가*
 
 [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode) 속성([자동](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) 또는 [숨김](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode)의 두 값 허용)을 사용하면 표시 동작을 제어할 수 있습니다.    
 

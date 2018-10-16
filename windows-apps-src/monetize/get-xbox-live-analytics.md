@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 Xbox Live 분석 데이터를 가져옵니다.
 title: Xbox Live 분석 데이터 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ba81f88b583a2d13785b3efe8d7008bac759a2d
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 68bc3389276acc910272d57e9cc859a7e8ffd6c7
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976571"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615839"
 ---
 # <a name="get-xbox-live-analytics-data"></a>Xbox Live 분석 데이터 가져오기
 

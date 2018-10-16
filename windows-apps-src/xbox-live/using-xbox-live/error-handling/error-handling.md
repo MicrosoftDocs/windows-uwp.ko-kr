@@ -1,7 +1,7 @@
 ---
 title: 오류 처리
 author: KevinAsgari
-description: 호출 하는 Xbox Live 서비스를 만들 때 오류를 처리 하는 방법을 알아봅니다.
+description: Xbox Live 서비스 호출을 만들 때 오류를 처리 하는 방법을 알아봅니다.
 ms.assetid: e433dfbd-488b-44ff-8333-1dcf0329cd60
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 오류, 서비스 호출
 ms.localizationpriority: medium
 ms.openlocfilehash: c322239e65d019695b879e71032eee94dbcadc14
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565726"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615819"
 ---
 # <a name="error-handling"></a>오류 처리
 
@@ -26,10 +26,10 @@ ms.locfileid: "4565726"
 * 요청이 유효 하지 400 HTTP 상태 코드를 반환 합니다.
 * 사용자가 없는 적절 한 권한이 403 HTTP 상태 코드를 반환 합니다.
 * 사용자가 차단 된, 401 HTTP 상태 코드를 반환 합니다.
-IXMLHTTPRequest2 WinRT 서비스 Api가 호출 하는 (예: ERROR_TIMEOUT, RPC_S_CALL_FAILED_DNE) 요청을 보낼 수 없는
-* 위의 목록이 아니며 하지 않습니다. 대부분의 이러한 문제는 서비스 API 계층에서 예외가 발생 됩니다. 타이틀 이러한 예외 캡처하고 적절히 처리 해야 합니다.
+IXMLHTTPRequest2 WinRT 서비스 Api에서 호출 되는 (예: ERROR_TIMEOUT, RPC_S_CALL_FAILED_DNE) 요청을 보낼 수 없는 경우
+* 위의 목록은 전체 목록이 아닙니다. 대부분의 이러한 문제는 서비스 API 계층에서 예외가 발생 됩니다. 타이틀 이러한 예외 캡처하고 적절히 처리 해야 합니다.
 
-여기의 오류 처리에서 Xbox 서비스 API (XSAPI) API에 따라 두 가지 스타일 사용 하는:
+있습니다 오류에서 Xbox 서비스 API (XSAPI) API에 따라 처리의 두 가지 스타일을 사용 하는:
 
 [C + + API 오류 처리](error-handling-cpp.md)를 참조 하세요.
 

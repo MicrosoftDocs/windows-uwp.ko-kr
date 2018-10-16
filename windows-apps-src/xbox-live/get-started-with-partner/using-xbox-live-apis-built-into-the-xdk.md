@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 527a62af7ca31a401da47eb10e59c1593f62e433
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574530"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615932"
 ---
 # <a name="using-xbox-live-apis-built-into-the-xdk"></a>Xbox Live Api를 사용 하 여 XDK에 기본 제공
 
 1. Visual Studio에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 "참조"를 선택 합니다.
-1. "새 참조 추가"를 선택 합니다.
+1. "새 참조 추가" 선택
 1. "Durango 클릭. <build number>" 왼쪽된 창에서 "확장" 및
 1. 중간에 중 하나를 선택 합니다.
 - WinRT XSAPI API를 사용 하려는 경우 "Xbox 서비스 API"을 선택 합니다.
 - C + + XSAPI API를 사용 하려는 경우 "Xbox 서비스 API Cpp"을 선택 합니다.
-1. 확인을 클릭 합니다.
+1. 확인을 클릭
 
-참고: 빌드 시스템에서 속성 파일을 지원 하지 않으면 수동으로 추가 해야 전처리기 정 및 라이브러리에 표시 된 대로
+참고: 빌드 시스템을 지원 하지 않는 경우 속성 파일을 수동으로 추가 해야 전처리기 정 및 라이브러리에 표시 된 대로
 `%XboxOneExtensionSDKLatest%\ExtensionSDKs\Xbox.Services.API.Cpp\8.0\DesignTime\CommonConfiguration\Neutral\Xbox.Services.API.Cpp.props`

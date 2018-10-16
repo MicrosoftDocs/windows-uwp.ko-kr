@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: b556a245-6359-4ddc-a4bd-76f9873ab694
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 대한 스택 추적을 가져올 수 있습니다.
 title: 앱에서 오류에 대한 스택 추적 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 902bf87f1650cc5b9f4aeabd8539da4a774dce75
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: 54c39d157bc2fcab6a67bd273f5d00eedd80be54
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989537"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617230"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>앱에서 오류에 대한 스택 추적 가져오기
 

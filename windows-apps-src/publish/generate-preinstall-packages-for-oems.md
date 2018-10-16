@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 598a73b291d5f8b3c004f1e9adeddf0b92b841ab
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574843"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616662"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>OEM용 사전 설치 패키지 생성
 

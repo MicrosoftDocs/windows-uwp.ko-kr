@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind--Windows 10에 대 한 새로운 실행 시간 및 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 합니다.
+description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind-새 Windows 10-실행 시간 및 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 합니다.
 title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574417"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616113"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
 **참고** 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
-Windows 10의 새로운 기능인 **{x:Bind}** 태그 확장은 **{Binding}** 대신 사용됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅을 지원 보다 적은 메모리로 하 고 짧은 시간에 실행 됩니다.
+Windows 10의 새로운 기능인 **{x:Bind}** 태그 확장은 **{Binding}** 대신 사용됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅 지원 보다 적은 메모리로 및 짧은 시간에 실행 됩니다.
 
 XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에서 값을 가져오는 코드로 변환되고 태그에 지정된 속성에서 이를 설정합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 새로 고치도록 바인딩 개체를 구성할 수 있습니다(`Mode="OneWay"`). 또한 필요한 경우 고유한 값 변경을 소스 속성에 다시 적용하도록 구성할 수도 있습니다(`Mode="TwoWay"`).
 
@@ -115,7 +115,7 @@ _참고: C# 스타일 캐스트 구문은 연결된 속성 구문보다 더 유�
 
 ## <a name="functions-in-binding-paths"></a>바인딩 경로의 함수
 
-Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것은 태그에서 몇 가지 시나리오를 사용 하는 데이터 바인딩에 대 한 강력한 기능입니다. 자세한 내용 [은 함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
+Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것이 태그에서 몇 가지 시나리오를 활성화 하는 데이터 바인딩에 대 한 강력한 기능입니다. 세부 정보에 대 한 [함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
 
 ## <a name="event-binding"></a>이벤트 바인딩
 

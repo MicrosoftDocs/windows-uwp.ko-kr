@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e9c78ca27407a26212e5a778807c0e28ae5fda2f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566805"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616381"
 ---
 # <a name="mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefinersqueryrefinersubqueryrefinervalues"></a>/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryRefiner}/subQueryRefinerValues
 지정 된 쿼리 구체화 값 (예: "subgenres 주어진 장르의")에 대 한 하위 값의 목록에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -39,7 +39,7 @@ ms.locfileid: "4566805"
 
 [GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryRefiner}/subQueryRefinerValues)](uri-medialocalemediaitemtypequeryrefinersubqueryrefinervaluesget.md)
 
-&nbsp;&nbsp;지정 된 쿼리 구체화 값 (예: "subgenres 주어진 장르의")에 대 한 하위 값의 목록을 가져옵니다. 
+&nbsp;&nbsp;지정 된 쿼리 구체화 값 (예: "subgenres 주어진 장르의")에 대 한 하위 값 목록을 가져옵니다. 
  
 <a id="ID4EAC"></a>
 

@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 07c3094b5308bb0062d046440f83b45b842eb820
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567091"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616848"
 ---
 # <a name="xbox-integrated-multiplayer-release-notes"></a>Xbox 통합 멀티 플레이어 릴리스 정보
 
 2016 년 12 월 14 일 업데이트
 
-다음 방법의 Xbox 통합 멀티 플레이어 (XIM)이 릴리스에서 사용할 수 없는:
+다음 메서드는의 Xbox 통합 멀티 플레이어 (XIM)이 릴리스에서 사용할 수 없습니다.
 
 -   `xim_authority::set_authority_reconciled_data()`
 -   `xim_authority::set_authority_reconciliation_data()`

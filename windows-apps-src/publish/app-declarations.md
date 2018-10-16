@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574780"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617095"
 ---
 # <a name="product-declarations"></a>제품 선언
 
-[제출 프로세스](app-submissions.md) 의 [속성](enter-app-properties.md) 페이지의 **제품 선언** 섹션에는 앱이 제대로 표시 되 고 고객과 앱을 사용 하는 방법을 이해 하는 데 도움이 됩니다.의 집을 제공 되도록 합니다.
+[제출 프로세스](app-submissions.md) 의 [속성](enter-app-properties.md) 페이지의 **제품 선언** 섹션에는 앱이 제대로 표시 되 고 올바른 고객 및 앱을 사용 하는 방법을 이해 하는 데 도움이 됩니다. 집합에 제공 되도록 합니다.
 
-다음 섹션에서는 선언 및 각 선언을 앱에 적용할지 여부를 결정할 때 고려해 야 할 사항 중 일부를 설명 합니다. Note는 두 개는 기본적으로 선택 (아래 설명 된 대로.) 제품의 종류에 따라 추가 선언도 볼 수 있습니다. 모든 선언 검토 하 고 제출에 정확 하 게 반영 해야 합니다.
+다음 섹션에서는 선언 및 각 선언을 앱에 적용할지를 결정할 때 고려해 야 할 사항 중 일부를 설명 합니다. Note는 이러한 선언에 두는 기본적으로 선택 (아래 설명 된 대로.) 제품의 범주에 따라 추가 선언도 볼 수 있습니다. 모든 선언 검토 하 고 제출에 정확 하 게 반영 해야 합니다.
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>이 앱 사용자가 구매할 수 있지만 Microsoft Store 상거래 시스템을 사용 하지 않습니다.
 
-거의 모든 제출에 대 한이 상자를 선택 취소 두어야 이후 구매할 수 있는 기회를 제공 하는 앱은 또는 사용 하거나 수 앱 내에서 사용 되는 항목 사용 해야 합니다 Microsoft Store 앱에서 바로 구매 API를 만들고 추가 기능 제출 합니다. 구매 기능을 준수 합니다 [하기만 Microsoft의 상거래 엔진을 사용 하지 않고 앱에서 바로 구매 기능을 제공 하 계속 만들어지고 2015 년 6 월 29 일 이전 제출 하는 앱 당 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions)합니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
+거의 모든 제출에 대 한이 상자를 선택 취소 두어야 이후 구매할 수 있는 기회를 제공 하는 앱은 또는 하거나 될 수 있는 소모 앱 내에서 사용 되는 항목 사용 해야 합니다 Microsoft Store 앱에서 바로 구매 API를 만들고 추가 기능 제출 합니다. [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), 당 만들어지고 2015 년 6 월 29 이전 제출 된 앱 수 계속 되기만 하면 구매 기능을 준수 합니다 [Microsoft의 상거래 엔진을 사용 하지 않고 앱에서 바로 구매 기능을 제공 Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>이 앱은 접근성 준수하도록 테스트되었습니다.
 
@@ -44,20 +44,20 @@ ms.locfileid: "4574780"
 자세한 내용은 [접근성](../design/accessibility/accessibility.md), [접근성 테스트](../design/accessibility/accessibility-testing.md)및 [스토어의 접근성](../design/accessibility/accessibility-in-the-store.md)을 참조 하세요.
 
 > [!IMPORTANT]
-> 앱을 접근성 있음으로 목록 하지 않는 한 특별히 엔지니어링 하 고 해당 용도 대 한 테스트 하지 않는 한. 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
+> 앱을 접근성 있음으로 목록 하지 않는 한 특별히 엔지니어링 하 고 해당 용도 맞게 테스트 하지 않는 한. 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>고객은 이 앱을 설치하여 드라이브 또는 이동식 저장소를 대체할 수 있습니다.
 
-기본적으로 고객 외부 드라이브와 같은 미디어 SD 카드 같은 또는 비시스템 볼륨 드라이브 외부 또는 이동식 저장소에 앱을 설치할 수 있도록이 상자가 선택 됩니다. (Windows Phone 8.1이 이전에 StoreManifest.xml을 통해 표시 합니다.)
+기본적으로 고객 외부 드라이브와 같은 미디어 SD 카드 같은 또는 비시스템 볼륨 드라이브 외부 또는 이동식 저장소에 앱을 설치할 수 있도록이 상자가 선택 됩니다. (Windows Phone 8.1이 된 이전에 StoreManifest.xml을 통해 표시 합니다.)
 
-앱 대체 드라이브 또는 이동식 저장소에 설치 되지 않도록 방지 하 고만 디바이스에서 내부 하드 드라이브에 설치를 허용 하려면이 확인란의 선택을 취소 합니다.
+앱 대체 드라이브 또는 이동식 저장소에 설치 되지 않도록 방지 하 고만 디바이스에서 내부 하드 드라이브에 설치를 허용 하려는 경우이 확인란의 선택을 취소 합니다.
 
-참고 앱만 ** 수 있도록 설치를 제한 하는 옵션은 이동식 저장소 미디어에 설치할 수 있습니다.
+앱만 ** 수 있도록 설치를 제한할 수 있는 옵션이 이동식 저장소 미디어를 설치 합니다.
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있습니다.
 
-고객이 Windows에서 OneDrive에 자동으로 백업하도록 선택하면 앱 데이터를 포함할 수 있도록 이 상자가 기본적으로 선택됩니다. (Windows Phone 8.1이 이전에 StoreManifest.xml을 통해 표시 합니다.)
+고객이 Windows에서 OneDrive에 자동으로 백업하도록 선택하면 앱 데이터를 포함할 수 있도록 이 상자가 기본적으로 선택됩니다. (Windows Phone 8.1이 된 이전에 StoreManifest.xml을 통해 표시 합니다.)
 
 앱 데이터가 자동화된 백업에 포함되지 않게 하려면 이 상자를 선택 취소합니다.
 
