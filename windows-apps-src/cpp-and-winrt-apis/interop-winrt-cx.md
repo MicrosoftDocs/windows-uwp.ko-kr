@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: b60b0d7c201f172261de1546fc250e40b8cd670f
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4618597"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694580"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 사이의 상호 운용성
 이 항목에서는 간에 변환 하는 데 사용할 수 있는 두 가지 도우미 함수 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 및 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체입니다. 두 언어 프로젝션을 사용 하는 코드 사이의 상호 운용성 사용 하거나로 점차 마이그레이션하 코드에서 C + 함수를 사용할 수 + /CX C + + WinRT (참조 [이동 C + +에서 C + + CX](move-to-winrt-from-cx.md)).

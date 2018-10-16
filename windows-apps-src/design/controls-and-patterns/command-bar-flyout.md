@@ -15,12 +15,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ed17299051ae7da32f238eb57876b81597c8effa
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4617953"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680124"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이 아웃
 
@@ -149,7 +149,7 @@ Windows 10 Insider Preview 부터는 텍스트 컨트롤에는 **SelectionFlyout
 
 명령을 상황에 맞는 메뉴를 표시 하려면 일반적으로 UI 요소의 [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) 속성에는 플라이 아웃을 할당 합니다. 이렇게이 하면 요소에서 처리 하는 플라이 아웃을 열 및 더 많은 아무 작업도 수행할 필요가 없습니다.
 
-설정에서 보여 주는 플라이 아웃 직접 (예를 들어, [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) 이벤트)를 처리 하는 경우의 **표준** 확장 모드로 플라이 아웃을 열고 포커스를 플라이 아웃의 [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) 합니다.
+보여 주는 플라이 아웃 직접 (예를 들어, [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) 이벤트)를 처리 하는 경우 플라이 아웃의 [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) **표준** 확장 모드로 플라이 아웃을 열고 포커스를 설정 합니다.
 
 > [!TIP]
 > 플라이 아웃 및 플라이 아웃의 위치를 제어 하는 방법을 보여 주는 때 옵션에 대 한 자세한 내용은 [플라이 아웃](../controls-and-patterns/dialogs-and-flyouts/flyouts.md)을 참조 하세요.

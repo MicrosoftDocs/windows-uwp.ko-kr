@@ -8,12 +8,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: bedd4ce683622935488f9cc210d71f568a167f51
-ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
+ms.localizationpriority: medium
+ms.openlocfilehash: f14f241eb6a1a39b29216fe703c3804b34f8a3bc
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2017
-ms.locfileid: "887953"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680035"
 ---
 # <a name="app-analysis-overview"></a>앱 분석 개요
 
@@ -63,7 +64,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-예제 2 코드 숨김(나쁨) - 트리에 연결하기 전에 BitmapImage의 UriSource 설정
+예제 2 코드 숨김 (나쁨)-트리에 연결 하기 전에 BitmapImage의 UriSource를 설정 합니다.
 
 ```vb
 var bitmapImage = new BitmapImage();

@@ -17,12 +17,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 359c6527c341a08eca23aa6dd28acd27ddb19205
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 7df91069615b77ab54745690accc8f9353ff0163
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4611368"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4679982"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
@@ -320,7 +320,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 
 이 앱은 두 페이지 간에 탐색하지만, 아직 흥미로운 것은 나오지 않았습니다. 앱에 여러 페이지가 있으면 정보를 공유해야 하는 경우가 많습니다. 첫 번째 페이지에서 두 번째 페이지로 정보를 전달해보겠습니다.
 
-Page1.xaml에서, 앞서 추가한 **HyperlinkButton**을 다음 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)로 바꿉니다.
+Page1.xaml에서, **HyperlinkButton** 추가한 다음 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)을 사용 하 여 이전 바꿉니다.
 
 여기서는 텍스트 문자열 입력을 위한 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 레이블 및 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) `name`를 추가합니다.
 

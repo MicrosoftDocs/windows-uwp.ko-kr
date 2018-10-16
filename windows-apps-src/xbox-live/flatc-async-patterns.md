@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox 개발자 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: 50d747128dcd85a16c5250997e9431b279203ae0
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 8d862114f95a3b6f1e9c519f37f2d3eacc32de4d
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4618869"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680656"
 ---
 # <a name="calling-pattern-for-xsapi-flat-c-layer-async-calls"></a>XSAPI에 대 한 호출 패턴 평면 C 계층 비동기 호출
 
@@ -80,7 +80,7 @@ typedef struct AsyncBlock
 * **GetAsyncStatus** 완료 될 때까지 기다릴 true를 호출 합니다.
 * waitEvent **AsyncBlock** 에서 설정 하 고 신호 이벤트를 대기
 
-**하지만 GetAsyncStatus** 및 waitEvent를 사용 하 여 **비동기 작업** 후 완성 되었다고는 AsyncBlock의 **완료 콜백에서** 실행 AsyncBlock의 **완료 콜백에서** 선택 사항입니다.
+**하지만 GetAsyncStatus** 와 waitEvent AsyncBlock의 **완료 콜백에서** AsyncBlock의 **완료 콜백에서** 선택 사항 실행 한 후 **비동기 작업이** 완료 간주 됩니다.
 
 **비동기 작업이** 완료 되 면 결과 얻을 수 있습니다.
 

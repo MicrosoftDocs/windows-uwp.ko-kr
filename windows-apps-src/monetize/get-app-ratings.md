@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 등급
 ms.localizationpriority: medium
-ms.openlocfilehash: d3d09aa395f9c0924951a44f5b0abaf9c99cb32e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 0671015ead96b57515b4b451a06ff3c9cf1a94cb
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620845"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694630"
 ---
 # <a name="get-app-ratings"></a>앱 등급 가져오기
 
@@ -106,20 +106,20 @@ Authorization: Bearer <your access token>
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
 
-| 값           | 유형    | 설명                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 값           | 유형    | 설명       |
+|-----------------|---------|-------------------|
 | date            | 문자열  | 등급 데이터에 대한 날짜 범위의 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
-| applicationId   | 문자열  | 등급 데이터를 검색할 앱의 스토어 ID입니다.                                                                                                                                                                 |
-| applicationName | string  | 앱의 표시 이름                                                                                                                                                                                                         |
-| 출시          | 문자열  | 등급을 제출한 시장의 ISO 3166 국가 코드입니다.                                                                                                                                                              |
-| OSVersion       | 문자열  | 등급을 제출한 OS 버전입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.                                                                                               |
-| deviceType      | 문자열  | 등급을 제출한 디바이스 유형입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.                                                                                           |
-| isRevised       | 부울 | 값 **true**는 등급이 수정되었음을 나타내고, 그렇지 않으면 **false**입니다.                                                                                                                                                       |
-| oneStar         | 숫자  | 별 1개 등급의 수입니다.                                                                                                                                                                                                      |
-| twoStars        | 숫자  | 별 2개 등급의 수입니다.                                                                                                                                                                                                      |
-| threeStars      | 숫자  | 별 3개 등급의 수입니다.                                                                                                                                                                                                    |
-| fourStars       | 숫자  | 별 4개 등급의 수입니다.                                                                                                                                                                                                     |
-| fiveStars       | 숫자  | 별 5개 등급의 수입니다.            |
+| applicationId   | 문자열  | 등급 데이터를 검색할 앱의 스토어 ID입니다.         |
+| applicationName | string  | 앱의 표시 이름    |
+| 출시          | 문자열  | 등급을 제출한 시장의 ISO 3166 국가 코드입니다.        |
+| OSVersion       | 문자열  | 등급을 제출한 OS 버전입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.            |
+| deviceType      | 문자열  | 등급을 제출한 디바이스 유형입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.            |
+| isRevised       | 부울 | 값 **true**는 등급이 수정되었음을 나타내고, 그렇지 않으면 **false**입니다.   |
+| oneStar         | 숫자  | 별 1개 등급의 수입니다.        |
+| twoStars        | 숫자  | 별 2개 등급의 수입니다.    |
+| threeStars      | 숫자  | 별 3개 등급의 수입니다.   |
+| fourStars       | 숫자  | 별 4개 등급의 수입니다.    |
+| fiveStars       | 숫자  | 별 5개 등급의 수입니다.    |
 
 
 ### <a name="response-example"></a>응답 예제
