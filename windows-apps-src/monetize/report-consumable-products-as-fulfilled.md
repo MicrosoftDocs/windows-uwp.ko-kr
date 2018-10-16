@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 지정된 고객에 대해 소모성 제품을 처리됨으로 보고합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다.
 title: 소모성 제품을 처리됨으로 보고
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 처리, 소모성
 ms.localizationpriority: medium
-ms.openlocfilehash: cd3b060961271d834a165a8cc8fa4ca8beba047c
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 2cbacd35a25e8eaf9673d118fcbece835572e289
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690109"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623932"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>소모성 제품을 처리됨으로 보고
 

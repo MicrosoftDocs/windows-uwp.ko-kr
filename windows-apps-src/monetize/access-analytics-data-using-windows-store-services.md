@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Microsoft Store 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다.
 title: 스토어 서비스를 사용하여 분석 데이터에 액세스
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
-ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 4e7b249e5b23c301ba8ec0ad387b9fa38dde2ed0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574315"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624241"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 

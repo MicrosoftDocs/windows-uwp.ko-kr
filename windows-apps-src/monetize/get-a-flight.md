@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트의 데이터를 가져옵니다.
 title: 패키지 플라이트 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 16cf019509f7c6b85008fddde79116ea92c37b9c
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 53d6117355b431fd142b8e2749dacd9a88024297
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816058"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624201"
 ---
 # <a name="get-a-package-flight"></a>패키지 플라이트 가져오기
 
@@ -48,7 +48,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 가져올 패키지 플라이트가 포함된 앱의 스토어 ID입니다. 앱의 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있습니다.  |
+| applicationId | string | 필수. 가져올 패키지 플라이트가 포함된 앱의 스토어 ID입니다. 앱의 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있습니다.  |
 | flightId | 문자열 | 필수. 가져올 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 개발자 센터 대시보드에서 만든 플라이트의 경우 이 ID는 대시보드에 있는 플라이트 페이지의 URL에도 사용할 수 있습니다.  |
 
 

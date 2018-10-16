@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 92cf7ab408b14e74a8f231d6c81e3077a0a40be5
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574675"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623157"
 ---
 # <a name="put-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionname"></a>PUT (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName})
 업데이트, 만들거나 세션에 참가 합니다.
@@ -35,13 +35,13 @@ ms.locfileid: "4574675"
 
 ## <a name="remarks"></a>설명
 
-이 HTTP/REST 메서드에 만듭니다 조인 하거나 동일한 JSON 요청 본문 템플릿의 하위 집합은 전송에 따라 세션을를 업데이트 합니다. 성공 시 서버에서 반환 된 응답 포함 된 **MultiplayerSession** 개체를 반환 합니다. 여기에 특성에 전달 된 **MultiplayerSession** 개체의 특성 으로부터 달라질 수 있습니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.WriteSessionAsync**하 여 줄 바꿈할 수 있습니다.
+이 HTTP/REST 메서드를 조인 만들거나 동일한 JSON 요청 본문 템플릿의 하위 집합은 전송에 따라 세션을 업데이트 합니다. 성공 시 서버에서 반환 된 응답 포함 된 **MultiplayerSession** 개체를 반환 합니다. 특성에 전달 된 **MultiplayerSession** 개체의 속성에서 다를 수 있습니다. 이 메서드는 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.WriteSessionAsync**하 여 줄 바꿈할 수 있습니다.
 
-세션 만들기 및 업데이트 작업 변경 내용이 적용을 나타내는 응용 프로그램/j 본문 PUT을 사용 합니다. 작업은 idempotent, 즉, 동일한 변경의 여러 응용 프로그램 추가 영향을 주지 않습니다.
+세션 만들기 및 업데이트 작업 PUT 적용할 변경 내용을 나타내는 application/json 본문을 사용 합니다. 작업은 idempotent, 즉, 동일한 변경의 여러 응용 프로그램 추가 영향을 주지 않습니다.
 
-JSON 요청 본문 세션 데이터 구조를 미러링합니다. 모든 필드와 하위 필드는 옵션입니다.
+JSON 요청 본문 세션 데이터 구조를 미러링합니다. 모든 필드 및 하위 필드는 옵션입니다.
 
-PUT 메서드 세션 만들기 또는 모드에 대 한 통신 형식은 다음과 같습니다.
+PUT 메서드를 세션 만들기 또는 모드를 가입 와이어 형식은 다음과 같습니다.
 
 > [!NOTE]
 > 이 패턴을 사용 하 여 처리 합니다. 업데이트, 세션의 현재 상태에 관계 없이 적용 됩니다.
@@ -56,7 +56,7 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 
 
-PUT 메서드 세션 업데이트 모드에 대 한 통신 형식은 다음과 같습니다.
+PUT 메서드를 세션 업데이트 모드에 대 한 통신 형식은 다음과 같습니다.
 
 ```cpp
 PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/sessions/00000000-0000-0000-0000-000000000001 HTTP/1.1
@@ -66,7 +66,7 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 
 
-세션 속성을 업데이트할 PUT 메서드에 대 한 통신 형식은 다음과 같습니다. 것 URI 세션에 PUT 연산에 해당 하는 것은 본문 속성으로 아래 개체에만 필요 합니다. 차이점은이 작업 404 오류 코드를 반환 세션 존재 하지 않는 경우 찾을 수 없습니다. 이 작업은 헤더를 지원합니다.
+세션 속성을 업데이트할 PUT 메서드에 대 한 통신 형식은 다음과 같습니다. 같습니다 세션 URI PUT 작업 본문 속성으로 아래 개체에만 필요 합니다. 차이점은이 작업 오류 코드 404 반환 되는 세션 존재 하지 않는 경우 찾을 수 없습니다. 이 작업은 헤더를 지원합니다.
 
 ```cpp
 PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/sessions/00000000-0000-0000-0000-000000000001/properties HTTP/1.1
@@ -86,7 +86,7 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스 세션 서식 파일의 이름입니다. 2 부 세션 식별자입니다.|
+| sessionTemplateName| string| 세션 템플릿 현재 인스턴스의 이름입니다. 2 부 세션 식별자입니다.|
 | 세션 이름| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
 
 <a id="ID4EFC"></a>
@@ -99,15 +99,15 @@ PUT /serviceconfigs/00000000-0000-0000-0000-000000000000/sessiontemplates/quick/
 
 ## <a name="request-body"></a>요청 본문
 
-다음은 샘플 요청 본문을 만들거나 세션에 참가 하기 위한입니다. 요청 본문의 다음 멤버는 옵션입니다. 다른 모든 가능한 구성원 요청에 사용할 수 없습니다.
+다음은 샘플 요청 본문을 만들거나 세션에 참가 하기 위한입니다. 요청 본문의 다음 멤버는 선택적입니다. 다른 모든 가능한 멤버는 요청에 사용할 수 없습니다.
 
 | 멤버| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 상수| 개체| 세션에 대 한 상수를 생성 하기 위해 세션 템플릿을 사용 하 여 병합 된 읽기 전용으로 설정 합니다. |
-| 속성 | 개체 | 세션 속성에 병합 될 변경 합니다.|
-| members.me | 개체| 상수 및 많은 작동 하는 속성 같은 최상위에 상응 합니다. PUT 메서드는 사용자 세션의 구성원에 게 하 고 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정 하는 경우 요청 멤버 세션에서 제거 됩니다. |
-| 멤버 | 개체| 인덱스 0부터 시작 하 여 키 입력 세션에 추가 하는 사용자를 표시 하는 다른 개체입니다. 세션을 이미 멤버를 포함 하는 경우에 항상 요청의 구성원 수를 0으로 시작 합니다. 멤버는 요청에 나타나는 순서 세션에 추가 됩니다. 구성원 속성 속한 받은 사용자만 설정할 수 있습니다. |
-| 서버 | 개체| 업데이트 및 추가 세션을 나타내는 값의 관련된 서버 참가자 설정 됩니다. 서버를 null로 지정 하는 경우 해당 서버 항목 세션에서 제거 됩니다. |
+| 속성 | 개체 | 세션 속성에 병합할 수를 변경 합니다.|
+| members.me | 개체| 상수 및 많은 작동 하는 속성 같은 최상위에 상응 합니다. PUT 메서드는 사용자가 세션의 구성원 차지 하며 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정을 요청 하는 멤버 세션에서 제거 됩니다. |
+| 멤버 | 개체| 인덱스 0부터 시작 하 여 키 입력 세션을 추가 하는 사용자를 나타내는 다른 개체입니다. 세션을 이미 멤버를 포함 하는 경우에 항상 요청에서 멤버의 수를 0으로 시작 합니다. 멤버는 요청에 나타나는 순서로 세션에 추가 됩니다. 구성원 속성 속한 고객만 사용자가만 설정할 수 있습니다. |
+| 서버 | 개체| 업데이트 및 추가 세션을 나타내는 값의 연결 된 서버 참가자 설정 합니다. 서버를 null로 지정 하는 경우 해당 서버 항목 세션에서 제거 됩니다. |
 
 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: f3e294fdf5a9b2d98f09d839fa62499b556de3a5
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563510"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623735"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -61,7 +61,7 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 > 매니페스트의 값은 대/소문자를 구분합니다. 공백과 기타 문장 부호도 일치해야 합니다. 값을 주의해서 입력하고 검토하여 올바른지 확인합니다.
 
 
-앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
+앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle에서 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
 
 > [!TIP]
 > 패키지를 제출하기 전에 반드시 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 실행합니다. 그러면 매니페스트에 인증 또는 제출 오류를 발생시킬 수 있는 문제가 있는지 확인하는 데 도움이 될 수 있습니다.
@@ -88,7 +88,7 @@ UWP 앱의 경우 모든 패키지는 Microsoft Store에서 지원하는 버전�
 
 ## <a name="storemanifest-xml-file"></a>StoreManifest XML 파일
 
-StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파일입니다. 이 구성 파일은 앱을 Microsoft Store 장치 앱으로 선언하거나 패키지를 장치에 적용하려면 필요한 요구 사항을 선언하는 등과 같이 패키지 매니페스트에서 다루지 않는 기능을 사용하도록 설정하기 위한 것입니다. 를 사용 하는 경우 StoreManifest.xml 앱 패키지를 사용 하 여 제출 하 고 앱의 기본 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal)를 참조하세요.
+StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파일입니다. 이 구성 파일은 앱을 Microsoft Store 장치 앱으로 선언하거나 패키지를 장치에 적용하려면 필요한 요구 사항을 선언하는 등과 같이 패키지 매니페스트에서 다루지 않는 기능을 사용하도록 설정하기 위한 것입니다. 를 사용 하는 경우 StoreManifest.xml은 앱 패키지를 사용 하 여와 제출 앱의 기본 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal)를 참조하세요.
 
  
 
