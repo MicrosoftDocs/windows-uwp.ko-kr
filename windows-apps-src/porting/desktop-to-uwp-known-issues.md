@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 731d449d779806fbd4104787b692d3b7d0408036
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4622264"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4688684"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>패키지로 만든된 데스크톱 응용 프로그램을 사용 하 여 알려진된 문제
 
@@ -123,7 +123,7 @@ Windows 앱 패키지 매니페스트의 게시자 항목이 서명한 인증서
 
 **옵션 3: CertUtil**
 
-PFX 파일의 명령줄에서 **certutil**을 실행하고 출력에서 *Subject* 필드를 복사합니다.
+PFX 파일에서 **certutil** 명령줄에서 실행 하 고 출력에서 *제목* 필드를 복사 합니다.
 
 ```cmd
 certutil -dump <cert_file.pfx>

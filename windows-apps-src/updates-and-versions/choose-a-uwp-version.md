@@ -11,11 +11,11 @@ keywords: Windows 10, UWP, 버전, 빌드, 버전, Windows, 선택, 업데이트
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4610696"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4690516"
 ---
 # <a name="choose-a-uwp-version"></a>UWP 버전 선택
 
@@ -48,7 +48,7 @@ UWP의 새 API 및 변경된 API는 Windows 10의 모든 후속 버전에서 사
 
 UWP **대상 버전** 또는 프로젝트의 **최소 버전** 관계 없이 사용할 수 있는.NET Api의 제한 된 하위 집합을 지원 합니다. [이 페이지에서는 사용 가능한 형식에 대 한 자세한 정보를 제공](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx)합니다.
 
-If you wish to create reusable cross-platform libraries, .NET Standard is supported on UWP. [.NET 표준 설명서](https://docs.microsoft.com/dotnet/standard/net-standard) 는.NET Standard는 지원 UWP 버전에서 정보를 제공 합니다.
+재사용 가능한 플랫폼 간 라이브러리를 만들고자 하는 경우.NET Standard는 UWP에서 지원 됩니다. [.NET 표준 설명서](https://docs.microsoft.com/dotnet/standard/net-standard) 는.NET Standard는 지원 UWP 버전에서 정보를 제공 합니다.
 
 [데스크톱 앱을 개발 하는 경우 대신.NET Framework 버전 및](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) 참조 종속성에 대 한 자세한 내용은.NET framework 가용성 합니다.
 

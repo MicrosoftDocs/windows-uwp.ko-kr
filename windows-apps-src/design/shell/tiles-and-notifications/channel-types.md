@@ -9,18 +9,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 88040d6eb1c5d198de0a446348e114b7e59a2dad
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d6607f6464cc938e7edde7ab0317809fabfeee65
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654902"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4688526"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>올바른 푸시 알림 채널 유형 선택
 
 이 문서에서는 앱에 콘텐츠를 전달하는 데 도움이 되는 세 가지 유형의 UWP 푸시 알림 채널(주, 보조 및 대체)에 대해 다룹니다. 
 
-(푸시 알림을 만드는 방법에 대한 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](../tiles-and-notifications/windows-push-notification-services--wns--overview.md)를 참조하세요.) 
+(푸시 알림을 만드는 방법에 대 한 자세한 내용은 [Windows 푸시 알림 서비스 (WNS) 개요](../tiles-and-notifications/windows-push-notification-services--wns--overview.md)참조). 
 
 ## <a name="types-of-push-channels"></a>푸시 채널 유형 
 

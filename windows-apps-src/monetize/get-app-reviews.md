@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 리뷰
 ms.localizationpriority: medium
-ms.openlocfilehash: ce1f9c3a360209bc9ac7b03ac162460a333c7192
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: c14b2ce6dd9fa7058ef3dbcd8e7e7a17a05fe78e
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4613577"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4686217"
 ---
 # <a name="get-app-reviews"></a>앱 리뷰 가져오기
 
@@ -109,43 +109,43 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>응답 본문
 
-| 값      | 유형   | 설명                                                                                                                                                                                                                                                                            |
-|------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 값      | 배열  | 리뷰 데이터를 포함하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [리뷰 값](#review-values) 섹션을 참조하세요.                                                                                                                                      |
+| 값      | 유형   | 설명      |
+|------------|--------|------------------|
+| 값      | 배열  | 리뷰 데이터를 포함하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [리뷰 값](#review-values) 섹션을 참조하세요.       |
 | @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 리뷰 데이터 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
-| TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                    |
+| TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.  |
 
  
 ### <a name="review-values"></a>리뷰 값
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
 
-| 값                  | 유형    | 설명                                                                                                                                                                                                                          |
-|------------------------|---------|---------------------|
-| date                   | 문자열  | 리뷰 데이터에 대한 날짜 범위의 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다.  |
-| applicationId          | 문자열  | 리뷰 데이터를 검색할 앱의 스토어 ID입니다.        |
-| applicationName        | string  | 앱의 표시 이름   |
-| 출시                 | 문자열  | 리뷰를 제출한 시장의 ISO 3166 국가 코드입니다.       |
-| osVersion              | 문자열  | 리뷰를 제출한 OS 버전입니다. 지원되는 문자열 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.         |
-| deviceType             | 문자열  | 리뷰를 제출한 디바이스 유형입니다. 지원되는 문자열 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.      |
-| isRevised              | 부울 | 값 **true**는 수정된 리뷰를 나타내고, 그렇지 않으면 **false**입니다.         |
-| packageVersion         | 문자열  | 검토된 앱 패키지의 버전입니다.   |
-| deviceModel            | 문자열  | 앱이 검토된 디바이스 유형입니다.      |
-| productFamily          | 문자열  | 디바이스 패밀리 이름입니다. 지원되는 문자열 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.  |
-| deviceRAM              | 숫자  | 실제 RAM(MB)입니다.        |
-| deviceScreenResolution | 문자열  | "*너비* x *높이*" 형식의 디바이스 화면 해상도입니다.        |
-| deviceStorageCapacity  | 숫자  | 기본 저장소 디스크의 용량(GB)입니다.   |
-| isTouchEnabled         | 부울 | 값 **true**는 터치를 사용할 수 있음을 나타내고, 그렇지 않으면 **false**입니다.      |
-| reviewerName           | 문자열  | 검토자 이름입니다.      |
-| rating                 | 숫자  | 앱 평점(별 단위)입니다.         |
-| reviewTitle            | 문자열  | 검토의 제목입니다.       |
-| reviewText             | 문자열  | 리뷰의 텍스트 콘텐츠입니다.     |
-| helpfulCount           | 숫자  | 리뷰가 유용하다고 표시된 횟수입니다.     |
-| notHelpfulCount        | 숫자  | 리뷰가 유용하지 않다고 표시된 횟수입니다.               |
-| responseDate           | 문자열  | 응답이 제출된 날짜입니다.                 |
-| responseText           | 문자열  | 응답의 텍스트 콘텐츠입니다.        |
-| id                     | 문자열  | 리뷰의 ID(GUID)입니다. 이 ID를 [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md) 및 [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md) 메서드에서 사용할 수 있습니다.       |
- 
+| 값           | 유형    | 설명       |
+|-----------------|---------|-------------------|
+| date            | 문자열  | 리뷰 데이터에 대한 날짜 범위의 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
+| applicationId   | 문자열  | 리뷰 데이터를 검색할 앱의 스토어 ID입니다.         |
+| applicationName | string  | 앱의 표시 이름    |
+| 출시          | 문자열  | 리뷰를 제출한 시장의 ISO 3166 국가 코드입니다.        |
+| osVersion       | 문자열  | 리뷰를 제출한 OS 버전입니다. 지원되는 문자열 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.            |
+| deviceType      | 문자열  | 리뷰를 제출한 디바이스 유형입니다. 지원되는 문자열 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.            |
+| isRevised       | 부울 | 값 **true**는 수정된 리뷰를 나타내고, 그렇지 않으면 **false**입니다.   |
+| packageVersion  | 문자열  | 검토된 앱 패키지의 버전입니다.        |
+| deviceModel        | 문자열  |앱이 검토된 디바이스 유형입니다.     |
+| productFamily      | 문자열  | 디바이스 패밀리 이름입니다. 지원되는 문자열 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.   |
+| deviceRAM       | 숫자  | 실제 RAM(MB)입니다.    |
+| deviceScreenResolution       | 문자열  | "*너비* x *높이*" 형식의 디바이스 화면 해상도입니다.    |
+| deviceStorageCapacity | 숫자 | 기본 저장소 디스크의 용량(GB)입니다. |
+| isTouchEnabled | 부울 | 값 **true**는 터치를 사용할 수 있음을 나타내고, 그렇지 않으면 **false**입니다. |
+| reviewerName | 문자열 | 검토자 이름입니다. |
+| rating | 숫자 | 앱 평점(별 단위)입니다. |
+| reviewTitle | 문자열 | 검토의 제목입니다. |
+| reviewText | 문자열 | 리뷰의 텍스트 콘텐츠입니다. |
+| helpfulCount | 숫자 | 리뷰가 유용하다고 표시된 횟수입니다. |
+| notHelpfulCount | 숫자 | 리뷰가 유용하지 않다고 표시된 횟수입니다. |
+| responseDate | 문자열 | 응답이 제출된 날짜입니다. |
+| responseText | 문자열 | 응답의 텍스트 콘텐츠입니다. |
+| id | 문자열 | 리뷰의 ID(GUID)입니다. 이 ID를 [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md) 및 [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md) 메서드에서 사용할 수 있습니다. |
+
 
 ### <a name="response-example"></a>응답 예제
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d4b4cae2e135f7a66cd68192faabeffdb309a909
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 1c8e4649fad0e467e0656415e2fd49a9fea05109
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620984"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4689874"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>패키지 지원 프레임 워크를 사용 하 여 MSIX 패키지로 런타임 수정 적용
 
@@ -269,7 +269,7 @@ Visual Studio를 사용 하 여 런타임 수정 디버그, 런타임 수정, �
 
 | Project | 목적 |
 |-------|-----------|
-| DesktopApplicationPackage | 이 프로젝트는 [Windows 응용 프로그램 패키징 프로젝트](desktop-to-uwp-packaging-dot-net.md) 를 기반으로 하며 출력은 MSIX 패키지. |
+| DesktopApplicationPackage | 이 프로젝트는 [Windows 응용 프로그램 패키징 프로젝트](desktop-to-uwp-packaging-dot-net.md) 를 기반으로 하며 MSIX 패키지 출력 합니다. |
 | Runtimefix | 런타임 수정으로 사용 되는 하나 이상의 대체 함수를 포함 하는 c + + Dynamic-Linked 라이브러리 프로젝트입니다. |
 | PSFLauncher | C + + 빈 프로젝트입니다. 이 프로젝트는 패키지 지원 프레임 워크의 런타임 배포 파일을 수집 하는 위치입니다. 실행 파일을 출력 합니다. 해당 실행 파일은 솔루션을 시작할 때 실행 되는 먼저 합니다. |
 | WinFormsDesktopApplication | 이 프로젝트는 데스크톱 응용 프로그램의 소스 코드를 포함 합니다. |

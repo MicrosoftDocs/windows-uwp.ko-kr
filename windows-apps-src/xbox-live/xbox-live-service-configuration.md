@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox 서비스 구성
 ms.localizationpriority: medium
-ms.openlocfilehash: e36e37802855747426184aa9d8cec0e6db77acd7
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: e1d3b21f98528afec5e97cac6f645c7835b6362a
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4621411"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4689955"
 ---
 # <a name="xbox-live-service-configuration"></a>Xbox Live 서비스 구성
 
@@ -114,7 +114,7 @@ Xbox Live 서비스를 사용 하려면 개발 키트 및 타이틀을 구성 �
 
 **XDP**
 
-샌드박스 ID를 받기 XDP에서 타이틀을 구성 하는 경우는 아래와 같이 제품에 대 한 개요 페이지:
+타이틀에서 XDP를 구성 하는 경우 얻게 샌드박스 ID 개요 페이지에서 아래와 같이 제품에 대 한:
 
 ![](images/getting_started/xdp_sandbox_id.png)
 
