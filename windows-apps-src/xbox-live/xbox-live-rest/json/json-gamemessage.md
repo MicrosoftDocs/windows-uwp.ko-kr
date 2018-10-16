@@ -12,32 +12,32 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 089d2a492c8878e79bd60de1226c948e1eee7e0f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574422"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620581"
 ---
 # <a name="gamemessage-json"></a>GameMessage(JSON)
-게임 세션의 메시지 큐 메시지에 대 한 데이터를 정의 하는 JSON 개체입니다. 
+게임 세션의 메시지 큐에서 메시지에 대 한 데이터를 정의 하는 JSON 개체입니다. 
 <a id="ID4EN"></a>
 
   
  
-GameMessage JSON 개체에는 다음 사양을 있습니다.
+GameMessage JSON 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| data| 8 비트 부호 없는 정수로의 배열| 다른 게임 클라이언트에 전송 하는 게임 클라이언트 Base64 인코딩된 데이터입니다. 이 값은 서버에 불투명 합니다. | 
+| data| 8 비트 부호 없는 정수로의 배열| Base64 인코딩된 데이터를 다른 게임 클라이언트에 게임 클라이언트 보내려고 합니다. 이 값은 서버에 불투명입니다. | 
 | senderXuid| 64 비트 부호 없는 정수| 메시지를 보내는 플레이어의 Xbox 사용자 ID입니다. | 
-| 일련 번호| 32 비트 부호 있는 정수| 게임 메시지의 시퀀스 번호입니다. 이 값은 서버에 의해 할당 됩니다. 시퀀스 번호 단조롭게 증가 보장이 있지만 연속 수 있습니다. 시퀀스 번호는 고유한 메시지 큐 내 있지만 메시지 큐 간에 되지 않습니다. | 
-| queueIndex| 32 비트 부호 있는 정수| 메시지에 대 한 세션 메시지 큐의 인덱스입니다. 가능한 값은 0 ~ 3입니다.| 
-| 타임 스탬프| DateTime| 게임 메시지 서버 UTC에서 큐에서 생성 된 시간입니다. | 
+| 일련 번호| 32 비트 부호 있는 정수| 게임 메시지의 시퀀스 번호입니다. 이 값은 서버에 의해 할당 됩니다. 시퀀스 번호 단조롭게 증가 보장이 하지만 연속 수 없습니다. 시퀀스 번호는 고유한 메시지 큐, 내 있지만 메시지 큐 간에 되지 않습니다. | 
+| queueIndex| 32 비트 부호 있는 정수| 메시지에 대 한 세션 메시지 큐의 인덱스입니다. 가능한 값은 0 ~ 3.| 
+| 타임 스탬프| DateTime| 게임 메시지 UTC에서 서버에 의해 큐에서 생성 된 시간입니다. | 
   
 <a id="ID4ERC"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

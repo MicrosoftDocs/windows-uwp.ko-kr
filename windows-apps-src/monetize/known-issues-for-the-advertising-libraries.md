@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: Microsoft Advertising SDK 최신 버전의 알려진 문제에 대해 알아보세요.
 title: 앱 광고의 알려진 문제점 및 문제 해결
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: aaf2db68df9de3f397a0cbc677e18f4ed544cf4b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 1ca7949b3092b03500f25249ce1af3832a9e61ba
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817534"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622145"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
@@ -26,7 +26,7 @@ ms.locfileid: "1817534"
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>XAML의 알 수 없는 AdControl 인터페이스
 
-[AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)의 XAML 태그는 해당 인터페이스가 알 수 없음을 암시하는 파란색 곡선을 잘못 표시할 수 있습니다. 이 문제는 X86을 대상으로 하는 경우에만 발생하며 무시해도 됩니다.
+[AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)의 XAML 태그는 해당 인터페이스가 알 수 없음을 암시하는 파란색 곡선을 잘못 표시할 수 있습니다. 이 문제는 X86을 대상으로 하는 경우에만 발생하며 무시해도 됩니다.
 
 ## <a name="lasterror-from-previous-ad-request"></a>이전 광고 요청의 lastError
 

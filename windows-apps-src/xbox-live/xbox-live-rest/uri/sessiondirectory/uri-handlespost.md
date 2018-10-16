@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4eaddef523fcfa3b794c421acbe6c1aac4785b68
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573615"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618353"
 ---
 # <a name="post-handles"></a>POST (/handles)
 사용자의 현재 활동에 대 한 멀티 플레이 세션을 설정 하 고 필요한 경우 세션 멤버를 초대 합니다.
 
 > [!IMPORTANT]
-> 이 방법은 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 및 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
+> 이 메서드는 2015 멀티 플레이어에서 사용 되며 나중 및 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X-Xbl-계약-버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4EHB)
@@ -35,9 +35,9 @@ ms.locfileid: "4573615"
 
 ## <a name="remarks"></a>설명
 
-현재 활동에 대 한 세션을 설정 하이 HTTP/REST 메서드를 사용할 수 있습니다. 이 경우 메서드 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SetActivityAsync**래핑한 될 수 있습니다. 요청 본문에는 "작업"을 입력 필드를 사용 하 여 JSON 파일에서 **sessionRef** 개체를 사용 하 여 세션 참조를 정의 해야 합니다. 응답 본문이 검색 됩니다. 세션에 대 한 참조에 지정 된 항목의 정의 **Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionReference**를 참조 하세요.
+현재 활동에 대 한 세션을 설정 하려면이 HTTP/REST 메서드를 사용할 수 있습니다. 이 경우 메서드 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SetActivityAsync**래핑한 될 수 있습니다. 요청 본문에서 "작업"을 입력 필드를 사용 하 여 JSON 파일을 **sessionRef** 개체를 사용 하 여 세션 참조를 정의 해야 합니다. 응답 본문 없이 검색 됩니다. 세션에 대 한 참조에 지정 된 항목의 정의 **Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionReference**를 참조 하세요.
 
-세션에 대 한 핸들에 지정 된 사용자를 초대 하 여이 POST 메서드를 사용할 수도 있습니다. 이 경우 메서드 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SendInvitesAsync**래핑한 될 수 있습니다. POST 메서드를이 사용 하려면 세션 참조를 정의 하 여 요청 본문 유형 높습니다 필드 "초대"로 설정 합니다. 응답 본문은 초대 핸들 합니다.
+세션에 대 한 핸들에 지정 된 사용자를 초대 하려면이 POST 메서드를 사용할 수도 있습니다. 이 경우 메서드 **Microsoft.Xbox.Services.Multiplayer.MultiplayerService.SendInvitesAsync**래핑한 될 수 있습니다. POST 메서드를이 사용 하려면 세션 참조를 정의 하 여 요청 본문 유형 비슷하지만 필드 "초대"로 설정 합니다. 응답 본문은 초대 핸들 합니다.
 
 <a id="ID4EHB"></a>
 

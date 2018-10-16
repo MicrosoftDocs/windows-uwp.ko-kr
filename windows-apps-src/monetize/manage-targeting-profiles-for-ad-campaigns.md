@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인 타기팅 프로필을 관리합니다.
 title: 타기팅 프로필 관리
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 692da5c2cc45e64d3feeab6136c1e50c72a7b0b0
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 8fa142f1df672703d2f14dc185481bb248efe07b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664193"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619155"
 ---
 # <a name="manage-targeting-profiles"></a>타기팅 프로필 관리
 
@@ -418,7 +418,7 @@ Authorization: Bearer <your access token>
 |     75      |            BD                  |
 |     76      |            BB                  |
 |     77      |            BY                  |
-|     81      |            BO                  |
+|     81의 모양      |            BO                  |
 |     82      |            BA                  |
 |     83      |            BW                  |
 |     87      |            KH                  |

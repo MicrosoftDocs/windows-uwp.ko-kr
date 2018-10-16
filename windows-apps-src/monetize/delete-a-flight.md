@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: AD80F9B3-CED0-40BD-A199-AB81CDAE466C
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트를 삭제합니다.
 title: 패키지 플라이트 삭제
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 삭제
 ms.localizationpriority: medium
-ms.openlocfilehash: d907d87929a64178b3ebd3d169e30b04f6577eb4
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 436a28cc1be0c106928784086731fe078d789527
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815508"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618361"
 ---
 # <a name="delete-a-package-flight"></a>패키지 플라이트 삭제
 
@@ -49,7 +49,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 삭제할 패키지 플라이트가 포함된 앱의 스토어 ID입니다. 앱의 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있습니다.  |
+| applicationId | string | 필수. 삭제할 패키지 플라이트가 포함된 앱의 스토어 ID입니다. 앱의 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있습니다.  |
 | flightId | 문자열 | 필수. 삭제할 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 개발자 센터 대시보드에서 만든 플라이트의 경우 이 ID는 대시보드에 있는 플라이트 페이지의 URL에도 사용할 수 있습니다.  |
 
 

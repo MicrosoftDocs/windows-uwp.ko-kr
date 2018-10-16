@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b03c55b827b083c050451c12c1fe48834d7ae186
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568503"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620272"
 ---
 # <a name="session-directory-uris"></a>세션 디렉터리 URI
 
@@ -24,7 +24,7 @@ ms.locfileid: "4568503"
 
 
 > [!NOTE] 
-> Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 되는 게임에 대 한 제목만 세션 디렉터리 Uri를 사용할 수 있습니다.  
+> 게임에서 실행 되는 Xbox 360, Windows Phone 장치에서 Xbox.com 제목만 세션 디렉터리 Uri를 사용할 수 있습니다.  
 
 
   * [도메인](#ID4EUB)
@@ -42,14 +42,14 @@ sessiondirectory.xboxlive.com
 
 ## <a name="service-version"></a>서비스 버전
 
-이러한 나머지 Uri의 호출자에 게 전달 해야 값 104/105 이상 X-Xbl-계약-버전, 서비스 버전 엔터테인먼트 검색 서비스 (EDS)을 지정 하는 HTTP 헤더에 대 한 합니다.
+이러한 REST Uri의 호출자에 게 전달 해야 값 104/105 이상 X-Xbl-계약-버전, 서비스 버전의 엔터테인먼트 검색 서비스 (EDS)을 지정 하는 HTTP 헤더에 대 한 합니다.
 
 <a id="ID4EAC"></a>
 
 
 ## <a name="system-objects-and-properties"></a>시스템 개체 및 속성
 
-해당 세션 및 템플릿 구성에 대 한는 MPSD 디렉터리에서 적용 하 고 해석 하는 고정된 스키마를 사용 하 여 준수 세션 JSON 개체의 수를 사용 합니다. 다양 한 세션 디렉터리 Uri에서 지 원하는 메서드를 호출 하는 동안 이러한 개체는 유효성을 검사 하 고 병합, 지원 되는 스키마에 따라 합니다. 멀티 플레이 구성과 관련 된 기본 JSON 개체입니다.
+해당 세션 및 템플릿 구성에 대 한는 MPSD 디렉터리에서 적용 하 고 해석 하는 고정 된 스키마를 사용 하 여 다양 한 준수 세션 JSON 개체를 사용 합니다. 다양 한 세션 디렉터리 Uri에서 지 원하는 메서드를 호출 하는 동안 이러한 개체는 유효성을 검사 하 고 병합, 지원 되는 스키마에 따라 합니다. 멀티 플레이 구성과 관련 된 기본 JSON 개체입니다.
 
    *  [MultiplayerActivityDetails(JSON)](../../json/json-multiplayeractivitydetails.md)
    *  [MultiplayerSession(JSON)](../../json/json-multiplayersession.md)
@@ -70,7 +70,7 @@ sessiondirectory.xboxlive.com
 
 ## <a name="handles"></a>처리
 
-2015 멀티 세션 세션 핸들을 통해 액세스할 수 있습니다. 몇 가지 Uri 처리를 지원 하기 위해 기능을 제공 하기 위해 추가 되었습니다.  
+2015 멀티 플레이어만, 세션 세션 핸들을 통해 액세스할 수 있습니다. 몇 가지 Uri 처리를 지원 하기 위해 기능을 제공 하기 위해 추가 되었습니다.  
 <a id="ID4EFE"></a>
 
 
@@ -78,15 +78,15 @@ sessiondirectory.xboxlive.com
 
 [/handles](uri-handles.md)
 
-&nbsp;&nbsp;Xbox One 대시보드 사용자 환경에 표시 하 고 필요한 경우 세션 멤버를 초대 하 여 사용자의 현재 활동에 대 한 세션을 설정 하는 POST 작업을 지원 합니다.
+&nbsp;&nbsp;Xbox One 대시보드 사용자 환경에서 표시 하 고 필요한 경우 세션 멤버를 초대 하 여 사용자의 현재 활동에 대 한 세션을 설정 하는 POST 작업을 지원 합니다.
 
 [/handles/{handleId}](uri-handleshandleid.md)
 
-&nbsp;&nbsp;식별자에서 지정 하는 세션 핸들을 삭제 하 고 작업을 지원 합니다.
+&nbsp;&nbsp;세션 핸들 식별자에서 지정 하 고 삭제 작업을 지원 합니다.
 
 [/handles/{handleId}/session](uri-handleshandleidsession.md)
 
-&nbsp;&nbsp;GET 및 PUT 작업 세션에 대 한 핸들을 해제를 사용 하 여 지원 합니다.
+&nbsp;&nbsp;GET 및 PUT 작업 세션에 대 한 핸들 해제를 사용 하 여 지원 합니다.
 
 [/handles/query](uri-handlesquery.md)
 
@@ -94,7 +94,7 @@ sessiondirectory.xboxlive.com
 
 [/serviceconfigs/{scid}/batch](uri-serviceconfigsscidbatch.md)
 
-&nbsp;&nbsp;서비스 구성 식별자 수준 일괄 쿼리에 대 한 POST 작업을 지원합니다.
+&nbsp;&nbsp;서비스 구성 식별자 수준에서 일괄 처리 쿼리에 대 한 게시물 작업을 지원합니다.
 
 [/serviceconfigs/{scid}/sessions](uri-serviceconfigsscidsessions.md)
 
@@ -102,7 +102,7 @@ sessiondirectory.xboxlive.com
 
 [/serviceconfigs/{scid}/sessiontemplates](uri-serviceconfigsscidsessiontemplates.md)
 
-&nbsp;&nbsp;MPSD 세션 템플릿 집합을 검색 하는 가져오기 작업을 지원 합니다.
+&nbsp;&nbsp;MPSD 세션 템플릿 집합을 검색할 GET 작업을 지원 합니다.
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}](uri-serviceconfigsscidsessiontemplatessessiontemplatename.md)
 
@@ -110,11 +110,11 @@ sessiondirectory.xboxlive.com
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/batch](uri-serviceconfigscidsessiontemplatessessiontemplatenamebatch.md)
 
-&nbsp;&nbsp;세션 템플릿 수준에서 일괄 처리 쿼리를 만들려면 POST 작업을 지원 합니다.
+&nbsp;&nbsp;세션 템플릿 수준에서 일괄 처리 쿼리를 만들려면 게시 작업을 지원 합니다.
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessions.md)
 
-&nbsp;&nbsp;지정 된 템플릿 이름 사용 하 여 세션 템플릿 집합을 검색 하는 가져오기 작업을 지원 합니다.
+&nbsp;&nbsp;지정 된 템플릿 이름 사용 하 여 세션 템플릿 집합을 검색할 GET 작업을 지원 합니다.
 
 [/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionname.md)
 

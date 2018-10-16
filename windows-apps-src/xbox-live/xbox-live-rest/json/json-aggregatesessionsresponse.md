@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 42bf1a09144bec9cddda1ae2fd9656dc6dc8c51d
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568371"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621263"
 ---
 # <a name="aggregatesessionsresponse-json"></a>AggregateSessionsResponse(JSON)
 사용자의 피트 니스 세션에 대 한 집계 데이터를 포함합니다. 
@@ -25,19 +25,19 @@ ms.locfileid: "4568371"
  
 ## <a name="aggregatesessionsresponse"></a>AggregateSessionsResponse
  
-AggregateSessionsResponse 개체에는 다음 사양을 있습니다.
+AggregateSessionsResponse 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| totalDurationInSeconds| 64 비트의 부호 있는 정수| 집계 기간 (초)에서 세션의 총 기간입니다.| 
-| totalJoules| 64 비트의 부호 있는 정수| 총 에너지 굽거나-줄 단위로-집계 기간 동안 합니다. | 
-| totalSessions| 64 비트의 부호 있는 정수| 집계 기간 동안 세션의 총 수입니다.| 
-| weightedAverageMets| 단 정밀도 부동 소수점 숫자 | 집계 기간 동안 작업 (충족) 값의가 중된 평균 metabolic 해당 합니다. 충족 값은 개인의 미사용 metabolic 속도 기준으로 작업 하는 동안 개인의 metabolic 속도의 비율입니다. Metabolic 속도 resting에 대 한 개인의 두께 관계 없이 1.0이 있고 개인의 resting metabolic 속도 기준으로 충족 값은 다른 가중치의 개인이 수행 중인 작업의 강도 비교 하 사용할 수 있습니다.| 
+| totalDurationInSeconds| 64 비트 부호 있는 정수| 집계 기간 (초)에서 세션의 총 기간입니다.| 
+| totalJoules| 64 비트 부호 있는 정수| 총 에너지 굽거나-줄 단위로-집계 기간 동안 합니다. | 
+| totalSessions| 64 비트 부호 있는 정수| 집계 기간 동안 세션의 총 수입니다.| 
+| weightedAverageMets| 단 정밀도 부동 소수점 숫자 | 집계 기간 동안 작업 (충족) 값의가 중된 평균 활동적인 상태로 되돌리는 metabolic 해당 합니다. 충족 값은 개인의 미사용 활동적인 상태로 되돌리는 metabolic 속도 기준으로 작업 하는 동안 개인의 활동적인 상태로 되돌리는 metabolic 속도의 비율입니다. Resting의 활동적인 상태로 되돌리는 metabolic 속도 개인의 두께 관계 없이 1.0 있어 충족 값은 개인의 resting 활동적인 상태로 되돌리는 metabolic 속도 기준으로 다른 가중치의 개인이 수행 중인 작업의 강도 비교 데 사용할 수 있습니다.| 
   
 <a id="ID4ESC"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

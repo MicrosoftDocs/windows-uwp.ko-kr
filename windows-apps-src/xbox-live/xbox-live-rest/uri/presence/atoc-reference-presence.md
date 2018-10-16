@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f4c2a34d47f894e2ac9aeaf6228c8ebd41348306
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571201"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623057"
 ---
 # <a name="presence-uris"></a>상태 URI
  
@@ -59,11 +59,11 @@ Xbox 360, Windows Phone 장치 또는 Windows를 실행 하는 게임만이 서�
 
 [/users/xuid({xuid})/groups/{moniker}/broadcasting](uri-usersxuidgroupsmonikerbroadcasting.md)
 
-&nbsp;&nbsp;액세스 그룹 모니커에 지정 된 브로드캐스트 사용자의 현재 상태 기록 URI에 표시 되는 XUID와 관련이 있습니다.
+&nbsp;&nbsp;액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 현재 상태 레코드 URI에 표시 되는 XUID와 관련이 있습니다.
 
 [/users/xuid({xuid})/groups/{moniker}/broadcasting/count](uri-usersxuidgroupsmonikerbroadcastingcount.md)
 
-&nbsp;&nbsp;액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 수는 URI에 표시 되는 XUID와 관련이 있습니다.
+&nbsp;&nbsp;액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 수와 관련 된 URI에 표시 되는 XUID 합니다.
  
 <a id="ID4EMC"></a>
 

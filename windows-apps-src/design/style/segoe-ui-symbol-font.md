@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ac0b2094b17120af8a0c85505cd03af389f1f4
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567993"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618938"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -47,7 +47,7 @@ Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 
 또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러링된 양식이 있습니다.
 
 ## <a name="using-the-icons"></a>아이콘 사용
-C# /vb/c + + 및 XAML 앱을 개발 하는 경우 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)와 함께 Segoe MDL2 자산에서 지정 된 문자를 사용할 수 있습니다. 
+C# /vb/c + + 및 XAML 앱을 개발 하는 경우 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)를 사용 하 여 Segoe MDL2 자산에서 지정 된 문자 모양을 사용할 수 있습니다. 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -66,7 +66,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 
 
 ## <a name="how-do-i-get-this-font"></a>글꼴을 가져오는 방법
-* Windows 10:에서 수행 해야 하는 것은 없습니다, 글꼴 Windows와 함께 제공 합니다.
+* Windows 10: 수행 해야 할 것은 없습니다, 글꼴 Windows와 함께 제공 합니다.
 * 다운로드 하 고 글꼴을 설치 해야, Mac에서: <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴</a>
 
 ## <a name="icon-list"></a>아이콘 목록
@@ -4746,7 +4746,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/F540.png" width="32" height="32" alt="Safe" /></td>
   <td>F540</td>
-  <td>안전</td>
+  <td>안전 하 게 보호</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F552.png" width="32" height="32" alt="LaptopSecure" /></td>
   <td>F552</td>

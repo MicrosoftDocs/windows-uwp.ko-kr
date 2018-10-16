@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572493"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620759"
 ---
 # <a name="events-and-routed-events-overview"></a>이벤트 및 라우트된 이벤트 개요
 
@@ -153,7 +153,7 @@ End Sub
 
 **참고** 일반적으로 Visual Studio와 XAML 디자인 화면에서는 **Handles** 키워드 대신 인스턴스 처리 방법을 장려합니다. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
 
-C + + /CX를 사용 하 여 있습니다는 **+=** 구문을 하지만 C# 기본 형식에서 차이가 있습니다.
+C + + /CX를 사용 하 여 있습니다 합니다 **+=** 구문을 하지만 C# 기본 형식에서 차이가 있습니다.
 
 -   대리자 유추가 없으므로 대리자 인스턴스에 대해 **ref new**를 사용해야 합니다.
 -   대리 생성자에 두 매개 변수가 있고 대상 개체가 첫 번째 매개 변수로 필요합니다. 일반적으로 **this**를 지정합니다.

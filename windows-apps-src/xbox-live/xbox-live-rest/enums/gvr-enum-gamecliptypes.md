@@ -12,20 +12,20 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 99ae66a68eb6dede1d82ef3e071246ccacd33199
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567552"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620073"
 ---
 # <a name="gamecliptype-enumeration"></a>GameClipType 열거형
-GameClipTypes 열거형에 자세히 설명합니다. 
+GameClipTypes 열거형에 자세히 설명 합니다. 
 <a id="ID4ET"></a>
 
  
 ## <a name="gamecliptypes"></a>GameClipTypes
  
-여러 값은 가능 하므로 플래그 열거형입니다.
+여러 값은 사용할 수 있도록 플래그 열거형의 경우입니다.
  
 | <b>열거자</b>| <b>설명</b>| 
 | --- | --- | 

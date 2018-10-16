@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: fb6bb856-7a1b-4312-a602-f500646a3119
 description: Microsoft Store 리뷰 API에서 이 메서드를 사용하여 특정 리뷰에 응답할 수 있는지, 지정된 앱에 대한 리뷰에 응답할 수 있는지 판단할 수 있습니다.
 title: 리뷰에 대한 응답 정보 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 응답 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cc3bae99aebaf26074ba4f8b8a38e1a6e0ac428
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1701089"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621114"
 ---
 # <a name="get-response-info-for-reviews"></a>리뷰에 대한 응답 정보 가져오기
 

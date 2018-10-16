@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e8989e05ce4874b3783e9cf130124be3f2129f3
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564475"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622579"
 ---
 # <a name="usersbatchfeedback"></a>/users/batchfeedback
  
-이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10443`.
+이러한 Uri의 도메인 및 포트 번호는 `reputation.xboxlive.com:10443`.
  
 <a id="ID4EW"></a>
 
@@ -36,7 +36,7 @@ ms.locfileid: "4564475"
 
 [POST](uri-reputationusersbatchfeedbackpost.md)
 
-&nbsp;&nbsp;타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스에서 사용 합니다.
+&nbsp;&nbsp;타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스가 사용 합니다.
  
 <a id="ID4EJB"></a>
 

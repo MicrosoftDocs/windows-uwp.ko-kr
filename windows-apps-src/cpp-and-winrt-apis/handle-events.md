@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
 ms.openlocfilehash: c64b4a23e3b63c939d192e828e890a9ceb92e5ab
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575182"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622480"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -53,7 +53,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> 대리자를 등록 하는 경우 위의 코드 예제는 원시 *이* 포인터 (현재 개체를 가리킴)를 전달 합니다. 강한 또는 약한 참조 현재 개체를 설정 하는 방법을 알아보려면 [이벤트 처리 대리자를 사용 하 여 *이* 포인터를 안전 하 게 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)섹션에서 **멤버 함수를 대리인으로 사용 하는 경우** 하위 섹션을 참조 하세요.
+> 대리자를 등록, 위의 코드 예제는 원시 *이* 포인터 (현재 개체를 가리킴)로 전달 합니다. 강한 또는 약한 참조 현재 개체를 설정 하는 방법을 알아보려면 [ *이* 포인터 이벤트 처리 대리자를 사용 하 여 안전 하 게 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)섹션에서 **멤버 함수를 대리인으로 사용 하는 경우** 하위 섹션을 참조 하세요.
 
 **RoutedEventHandler**를 생성하는 다른 방법도 있습니다. 아래는 [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) 문서 항목에서 가져온 구문 블록입니다(페이지의 **언어** 드롭다운에서 *C++/WinRT* 선택). 아래 예제를 보면 다양한 생성자가 있습니다. 하나는 람다 함수를, 다른 하나는 프리 함수를, 그리고 나머지 하나(위에서 사용한 것)는 개체와 포인터-멤버 함수를 갖습니다.
 
@@ -126,7 +126,7 @@ private:
 };
 ```
 
-위의 예와 같이 강력한 참조 대신 버튼에 약한 참조를 저장할 수 있습니다 (참조 [강력 하 고 약한 참조를 C + + WinRT](weak-references.md)).
+위의 예와 같이 강력한 참조 대신 버튼에 대 한 약한 참조를 저장할 수 있습니다 (참조 [강력 하 고 약한 참조를 C + + WinRT](weak-references.md)).
 
 또는 대리자를 등록할 때 (즉, 형식 [**winrt:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)값) **auto_revoke** (유형 [**winrt:: event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker))의 이벤트 취소 자를 요청을 지정할 수 있습니다. 이벤트 취소 자를 수에 대 한 이벤트 소스 (이벤트를 발생 시키는 개체)에 대 한 약한 참조를 보유 합니다. **event_revoker::revoke** 멤버 함수를 호출하여 수동으로 취소할 수 있지만 함수가 범위를 벗어나면 이벤트 취소자는 자동으로 그 함수를 호출합니다. **취소** 함수는 이벤트 소스가 여전히 존재하는지 확인합니다. 존재하는 경우 대리인을 취소합니다. 이번 예제에서는 이벤트 소스를 저장할 필요도 없고, 소멸자도 필요 없습니다.
 
@@ -202,9 +202,9 @@ void ProcessFeedAsync()
 위의 "코루틴" 주석에서도 알 수 있듯이 비동기 작업에서 완료된 이벤트에 대리자를 사용하지 않아도 코루틴을 더욱 자연스럽게 사용할 수 있다는 것을 알 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
 
 > [!NOTE]
-> 비동기 작업 또는 작업에 대 한 개 이상의 *완료 처리기* 의 구현 올바르지 않습니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다 있는 경우 두 번째 실패 합니다.
+> 비동기 작업 또는 작업에 대 한 둘 이상의 *완료 처리기* 의 구현 올바르지 않습니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다 있는 경우 두 번째 실패 합니다.
 
-코 루틴 대신 대리자를 사용 하 여 고정 하는 경우 간단한 구문을 선택할 수 있습니다.
+코 루틴 대신 대리자를 사용 하 여 스틱, 경우 간단한 구문을 선택할 수 있습니다.
 
 ```cppwinrt
 async_op_with_progress.Completed(
@@ -232,7 +232,7 @@ winrt::hstring f(ListView listview)
 
 ## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>이벤트 처리 대리자를 사용 하 여 *이* 포인터를 안전 하 게 액세스
 
-개체의 멤버 함수를 사용 하 여 이벤트를 처리 하거나에서 개체의 멤버 함수 내에 있는 람다 함수 내에서 다음 필요한 경우 이벤트 수신자 (이벤트를 처리 하는 개체)와 이벤트 소스 (개체의 상대적 수명에 대 한 생각 하는 경우 이벤트를 발생). 자세한 내용은 및 코드 예제를 참조 하세요 [강력 하 고 약한 참조를 C + + WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+개체의 멤버 함수를 사용 하 여 이벤트를 처리 하거나에서 개체의 멤버 함수 내에 있는 람다 함수 내에서 다음 필요한 경우 이벤트 수신자 (이벤트를 처리 하는 개체)와 이벤트 소스 (개체의 상대적 수명에 대 한 생각 하는 경우 이벤트를 발생 시키는). 자세한 내용 및 코드 예제를 참조 하세요 [강력 하 고 약한 참조를 C + + WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 ## <a name="important-apis"></a>중요 API
 * [winrt:: auto_revoke_t 마커 구조체](/uwp/cpp-ref-for-winrt/auto-revoke-t)
@@ -242,4 +242,4 @@ winrt::hstring f(ListView listview)
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT의 이벤트 작성](author-events.md)
 * [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)
-* [강력 하 고 약한 참조를 C + + WinRT](weak-references.md)
+* [강력한 및 약한 참조 C + + WinRT](weak-references.md)

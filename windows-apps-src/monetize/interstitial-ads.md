@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: Microsoft Advertising SDK를 사용하여 Windows 10용 UWP 앱에 중간 광고를 포함하는 방법을 알아봅니다.
 title: 중간 광고
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 0915d1be4ea3de89265815d299ed7e60ead528ff
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 547a582064262d18467df4868df17a08e73b279c
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690869"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617318"
 ---
 # <a name="interstitial-ads"></a>중간 광고
 
@@ -72,7 +72,7 @@ ms.locfileid: "1690869"
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
 
-4.  앱의 적절한 위치(예: ```MainPage``` 또는 다른 페이지)에서 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제에서는 `myAppId` 및 `myAdUnitId` 필드를 중간 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
+4.  앱의 적절한 위치(예: ```MainPage``` 또는 다른 페이지)에서 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제에서는 `myAppId` 및 `myAdUnitId` 필드를 중간 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
 
     > [!NOTE]
     > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱을 스토어에 게시하기 전, Windows 개발자 센터에서 [이 테스트 값을 라이브 값으로](#release) 변경하세요.
@@ -83,17 +83,17 @@ ms.locfileid: "1690869"
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
 
-6.  *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Video**를 지정합니다.
+6.  *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Video**를 지정합니다.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
 
-    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Display**를 지정합니다.
+    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType.Display**를 지정합니다.
 
     ```csharp
     myInterstitialAd.RequestAd(AdType.Display, myAppId, myAdUnitId);
     ```
 
-6.  동영상 또는 배너 중간 광고를 게재하려는 코드 지점에서 **InterstitialAd**를 게재할 준비가 되었는지 확인한 다음 [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) 메서드를 사용하여 게재합니다.
+6.  동영상 또는 배너 중간 광고를 게재하려는 코드 지점에서 **InterstitialAd**를 게재할 준비가 되었는지 확인한 다음 [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 사용하여 게재합니다.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
 
@@ -125,7 +125,7 @@ ms.locfileid: "1690869"
     <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
     ```
 
-4.  프로젝트의 .js 파일에서 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 포함하는 여러 필드를 선언합니다. 다음 코드 예제에서는 `applicationId` 및 `adUnitId` 필드를 중간 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
+4.  프로젝트의 .js 파일에서 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 포함하는 여러 필드를 선언합니다. 다음 코드 예제에서는 `applicationId` 및 `adUnitId` 필드를 중간 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
 
     > [!NOTE]
     > 모든 **InterstitialAd**에는 컨트롤 할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 앱을 Microsoft Store에 게시하기 전, Windows 개발자 센터에서 [이 테스트 값을 라이브 값으로](#release) 변경하세요.
@@ -136,11 +136,11 @@ ms.locfileid: "1690869"
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet2)]
 
-5. *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.video**를 지정합니다.
+5. *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.video**를 지정합니다.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet3)]
 
-    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.display**를 지정합니다.
+    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **InterstitialAdType.display**를 지정합니다.
 
     ```js
     if (interstitialAd) {
@@ -148,7 +148,7 @@ ms.locfileid: "1690869"
     }
     ```
 
-6.  광고를 게재하려는 코드 지점에서 **InterstitialAd**를 게재할 준비가 되었는지 확인한 다음 [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) 메서드를 사용하여 게재합니다.
+6.  광고를 게재하려는 코드 지점에서 **InterstitialAd**를 게재할 준비가 되었는지 확인한 다음 [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 사용하여 게재합니다.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet4)]
 
@@ -172,7 +172,7 @@ ms.locfileid: "1690869"
     2.  **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
     3.  **참조 관리자**에서 확인을 클릭합니다.
 
-2.  사용자의 앱에 대한 적절한 헤더 파일(예: DirectXPage.xaml.h)에서 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 개체 및 관련 이벤트 처리기 메서드를 선언합니다.  
+2.  사용자의 앱에 대한 적절한 헤더 파일(예: DirectXPage.xaml.h)에서 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체 및 관련 이벤트 처리기 메서드를 선언합니다.  
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet1)]
 
@@ -191,17 +191,17 @@ ms.locfileid: "1690869"
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet4)]
 
-7. *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Video**를 지정합니다.
+7. *동영상 중간* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 30~60초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Video**를 지정합니다.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet5)]
 
-    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Display**를 지정합니다.
+    *중간 배너* 광고를 표시하려는 경우: 중간 광고가 필요한 시점에서 약 5~8초 전에 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용하여 광고를 미리 가져옵니다. 이렇게 하면 광고가 게재되기 전에 광고를 요청하고 준비할 시간이 충분해집니다. 광고 유형에는 **AdType::Display**를 지정합니다.
 
     ```cpp
     m_interstitialAd->RequestAd(AdType::Display, myAppId, myAdUnitId);
     ```
 
-7.  광고를 게재하려는 코드 지점에서 **InterstitialAd**를 게재할 준비가 되었는지 확인한 다음 [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) 메서드를 사용하여 게재합니다.
+7.  광고를 게재하려는 코드 지점에서 **InterstitialAd**를 게재할 준비가 되었는지 확인한 다음 [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 사용하여 게재합니다.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet6)]
 

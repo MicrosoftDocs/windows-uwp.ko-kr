@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dbfe2cf1e25662f9645649594521bd23193d09d
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563169"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622714"
 ---
 # <a name="user-statistics-uris"></a>사용자 통계 URI
  
@@ -31,7 +31,7 @@ ms.locfileid: "4563169"
 
 [/batch](uri-batch.md)
 
-&nbsp;&nbsp;여러 제목에서 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 액세스합니다.
+&nbsp;&nbsp;여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 액세스합니다.
 
 [/users/xuid({xuid})/scids/{scid}/stats](uri-usersxuidscidsscidstats.md)
 

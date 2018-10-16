@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터에 새롭거나 업데이트된 추가 기능 제출을 커밋합니다.
 title: 추가 기능 제출 커밋
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 커밋, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ff62652598deb065241bd16b027b8956f0736b1
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: b9d20bffe2be163db568af0b16bdfef8cd600271
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816608"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617240"
 ---
 # <a name="commit-an-add-on-submission"></a>추가 기능 제출 커밋
 
@@ -51,8 +51,8 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | 문자열 | 필수. 커밋하려는 제출이 포함된 추가 기능의 스토어 ID입니다. 이 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 만들기](create-an-add-on.md) 요청에 대한 응답 데이터에 포함되어 있습니다. |
-| submissionId | 문자열 | 필수. 커밋하려는 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 개발자 센터 대시보드에서 만든 제출의 경우 이 ID는 대시보드에 있는 제출 페이지의 URL에도 사용할 수 있습니다.  |
+| inAppProductId | string | 필수. 커밋하려는 제출이 포함된 추가 기능의 스토어 ID입니다. 이 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 만들기](create-an-add-on.md) 요청에 대한 응답 데이터에 포함되어 있습니다. |
+| submissionId | string | 필수. 커밋하려는 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 개발자 센터 대시보드에서 만든 제출의 경우 이 ID는 대시보드에 있는 제출 페이지의 URL에도 사용할 수 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문

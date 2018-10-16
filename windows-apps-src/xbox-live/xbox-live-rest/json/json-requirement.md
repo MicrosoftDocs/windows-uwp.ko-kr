@@ -12,25 +12,25 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f13edfbe5858a5fc3c4f24d22b31eb25f8386e25
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573023"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619827"
 ---
 # <a name="requirement-json"></a>Requirement(JSON)
-도전 과제 및 거리에 맞춰 사용자가 잠금 해제 조건입니다. 
+도전 과제 및 충족 하는 방향으로 얼마나 사용자가 잠금 해제 조건입니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="requirement"></a>요구 사항
  
-요구 사항 개체에는 다음 사양을 있습니다.
+요구 사항 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| id| string| 요구 사항의 ID입니다.| 
-| 현재| string| 요구 사항으로 진행의 현재 값입니다.| 
+| id| string| ID 요구 사항입니다.| 
+| 현재| string| 요구 사항까지 작업 진행의 현재 값입니다.| 
 | target| string| 대상 값 요구 사항입니다.| 
 | 작업| string| 작업 유형 요구 사항입니다. 유효한 값은 합계, 최소, 최대입니다.| 
 | ruleParticipationType| string| 참여 형식 요구 사항입니다. 유효한 값은 개인, 그룹입니다.| 

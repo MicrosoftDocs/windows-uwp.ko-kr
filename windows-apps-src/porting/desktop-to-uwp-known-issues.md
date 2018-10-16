@@ -12,13 +12,13 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563606"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622264"
 ---
-# <a name="known-issues-with-packaged-desktop-applications"></a>패키지 데스크톱 응용 프로그램의 알려진된 문제
+# <a name="known-issues-with-packaged-desktop-applications"></a>패키지로 만든된 데스크톱 응용 프로그램을 사용 하 여 알려진된 문제
 
 이 문서에서는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 때 발생할 수 있는 알려진된 문제가 포함 되어 있습니다.
 
@@ -95,7 +95,7 @@ Microsoft Store에서 특정 앱을 설치하거나 실행한 후 컴퓨터가 *
 
 업데이트해도 문제가 해결되지 않거나 PC를 복구하는 방법을 잘 모를 경우 [Microsoft 지원](https://support.microsoft.com/contactus/)에 문의하세요.
 
-개발자인 경우에는 이 업데이트를 포함하지 않는 Windows 버전에서 패키지된 응용 프로그램 설치를 방지할 수 있습니다. 이때 응용 프로그램이이 작업을 수행 하 여 업데이트를 아직 설치 하지 않은 사용자에 게 사용할 수 없습니다. 이 업데이트를 설치한 사용자에 게 응용 프로그램의 가용성을 제한 하려면 AppxManifest.xml 파일을 다음과 같이 수정 합니다.
+개발자인 경우에는 이 업데이트를 포함하지 않는 Windows 버전에서 패키지된 응용 프로그램 설치를 방지할 수 있습니다. 이때 응용 프로그램이이 작업을 수행 하 여 업데이트를 아직 설치 되지 않은 사용자에 게 사용할 수 없습니다. 이 업데이트를 설치한 사용자에 게 응용 프로그램의 가용성을 제한 하려면 AppxManifest.xml 파일을 다음과 같이 수정 합니다.
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -133,23 +133,23 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>잘못 된 PE 인증서 (0x800700C1)
 
-이 패키지 손상 된 인증서가 있는 이진 파일을 포함 하는 경우 발생할 수 있습니다. 다음은 몇 가지 이유는이 발생할 수 있는 이유입니다.
+이 패키지에 포함 되어 손상 된 인증서가 있는 이진 때 발생할 수 있습니다. 다음은 일부의 이유 이유이 발생할 수 있습니다.
 
-* 인증서의 시작 화면 이미지의 끝에 아닙니다.  
+* 인증서의 시작 이미지의 끝에 아닙니다.  
 
-* 인증서의 크기는 양수 하지 않습니다.
+* 인증서의 크기는 양수 것은 아닙니다.
 
-* 후 인증서 시작 하지는 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조.
+* 인증서 시작 후 되지 합니다 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조.
 
 * 인증서 포인터 제대로 WIN_CERTIFICATE 구조에 대 한 정렬 되지 않습니다.
 
-잘못 된 PE 인증서를 포함 하는 파일을 찾으려면 **명령 프롬프트**를 열고 라는 환경 변수를 설정 `APPXSIP_LOG` 1 값입니다.
+잘못 된 PE 인증서를 포함 하는 파일을 찾으려면 **명령 프롬프트**를 열고 라는 환경 변수를 설정 `APPXSIP_LOG` 을 1의 값입니다.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-그런 다음 **명령 프롬프트**응용 프로그램을 다시 서명 합니다. 예를 들면 다음과 같습니다.
+그런 다음 **명령 프롬프트**에서 응용 프로그램을 다시 서명 합니다. 예를 들면 다음과 같습니다.
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx

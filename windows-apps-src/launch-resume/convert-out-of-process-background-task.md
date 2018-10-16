@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
-description: 포그라운드 앱 프로세스 내에서 실행 되는 in-process 백그라운드 작업을 out of process 백그라운드 작업을 포팅 합니다.
+description: Out of process 백그라운드 작업을 포그라운드 앱 프로세스 내에서 실행 되는 in-process 백그라운드 작업에 포팅 합니다.
 ms.author: twhitney
 ms.date: 09/19/2018
 ms.topic: article
@@ -11,15 +11,15 @@ keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568939"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621186"
 ---
 # <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
 
-Out of process (OOP) 백그라운드 작업 프로세스 활동을 포팅하는 가장 간단한 방법은 응용 프로그램 내에서 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와서 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)에서 시작 하는 것입니다. 되 고 여기에 설명 된 기술을 in-process 백그라운드 작업; shim OOP 백그라운드 작업에서 만들기에 대 한 않습니다. 정보를 다시 작성 하거나 포팅 프로세스에서 버전 OOP 버전입니다.
+Out of process (OOP) 백그라운드 작업 in-process 활동에 포트 하는 가장 간단한 방법은 응용 프로그램을 내 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와서 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)에서 시작 하는 것입니다. 여기서 설명 하 고 기술을 OOP 백그라운드 작업에서을 in-process 백그라운드 작업; shim를 만드는 방법에 대 않습니다. 그에 대 한 다시 (또는 포팅) OOP 버전일 프로세스의 버전입니다.
 
 앱에 여러 백그라운드 작업이 있는 경우 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation)에서 `BackgroundActivatedEventArgs.TaskInstance.Task.Name`을 사용하여 시작되는 작업을 식별하는 방법을 보여 줍니다.
 

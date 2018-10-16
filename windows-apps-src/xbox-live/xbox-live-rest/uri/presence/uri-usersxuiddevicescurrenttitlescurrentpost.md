@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ac24fb580696f1524ce7a6cf09dc1e492e9d2378
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570946"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619299"
 ---
 # <a name="post-usersxuidxuiddevicescurrenttitlescurrent"></a>POST (/users/xuid({xuid})/devices/current/titles/current)
 사용자의 현재 상태를 사용 하 여 타이틀을 업데이트 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
@@ -34,9 +34,9 @@ ms.locfileid: "4570946"
  
 ## <a name="remarks"></a>설명
  
-이 URI는 추가 하 고 현재 상태, 다양 한 상태 및 제목에 대 한 미디어 상태 데이터를 업데이트 비 콘솔 플랫폼에서 모든 타이틀에서 사용할 수 있습니다.
+이 URI는 추가 하 고 현재 상태, 풍부한 현재 상태 및 제목에 대 한 미디어 상태 데이터를 업데이트 비 콘솔 플랫폼에서 모든 타이틀에서 사용할 수 있습니다.
  
-이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
+이제 **SandboxId** 는 XToken에서 클레임에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
   
 <a id="ID4EEB"></a>
 
@@ -58,7 +58,7 @@ ms.locfileid: "4570946"
 | titleId| 예| titleId 제목| 403 사용할 수 없음| 
 | deviceId| Windows 및 웹을 제외 하 고 모든 예| 호출자의 deviceId| 403 사용할 수 없음| 
 | deviceType| 웹을 제외 하 고 모든 예| 호출자의 deviceType| 403 사용할 수 없음| 
-| sandboxId| 오는 호출에 대 한 예입니다. | 호출자의 샌드박스| 403 사용할 수 없음| 
+| sandboxId| 호출에서 오는 경우 예 | 호출자의 샌드박스| 403 사용할 수 없음| 
   
 <a id="ID4ENE"></a>
 
@@ -67,8 +67,8 @@ ms.locfileid: "4570946"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.| 
-| xbl 계약 버전 x| string| 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 예제 값: 3, vnext 합니다.| 
+| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > ".| 
+| x xbl-계약 버전| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 예제 값: 3, vnext 합니다.| 
 | Content-Type| 문자열| 예제 값 요청 본문의 mime 형식: 응용 프로그램/j 합니다.| 
 | Content-Length| string| 요청 본문의 길이입니다. 예제 값: 312 합니다.| 
 | 호스트| 문자열| 도메인 이름 서버입니다. 예제 값: presencebeta.xboxlive.com 합니다.| 
@@ -80,14 +80,14 @@ ms.locfileid: "4570946"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion|  | 이 요청은 전송 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1입니다.| 
+| X RequestedServiceVersion|  | 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 기본값: 1.| 
   
 <a id="ID4ERH"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-[TitleRequest](../../json/json-titlerequest.md)요청입니다. 본문에 실제로 있는 속성만 업데이트 됩니다. 모든 속성은 본문의 일부가 아닌 하지만 존재 하는 서버에서 수정 되지 것입니다.
+[TitleRequest](../../json/json-titlerequest.md)요청입니다. 본문에서 실제로 존재 속성만 업데이트 됩니다. 모든 속성은 본문의 일부가 아닌 하지만 존재 하는 서버에서 수정 되지 것입니다.
  
 <a id="ID4EAAAC"></a>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573008"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624281"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
@@ -50,7 +50,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 ## <a name="microsoft-store-consumer-markets"></a>Microsoft 스토어 소비자 지역/국가
 
-다음 지역/국가 중 하나 이상에 앱 또는 추가 기능을 나열하도록 선택할 수 있습니다. 별표가 된 지역/국가 Xbox one, Microsoft 스토어를 지원 **Xbox** **지역/국가 선택** 팝업 창의 이름 옆에 표시 됩니다.
+다음 지역/국가 중 하나 이상에 앱 또는 추가 기능을 나열하도록 선택할 수 있습니다. 별표가 된 지역/국가 Xbox One;에서 Microsoft Store 지원 **Xbox** **지역/국가 선택** 팝업 창의 이름 옆에 표시 됩니다.
 
 
 <table>
@@ -370,7 +370,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>Taiwan *</td>
+    <td>대만*</td>
     <td>타지키스탄</td>
   </tr>
   <tr>
@@ -480,7 +480,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Windows 8.x용 "나머지 국가" 지역/국가
 
-앱에 Windows를 대상으로 하는 패키지가 포함 된 경우는 다양 한 지역/국가 하나의 "나머지 국가" 지역/국가에서 Windows 스토어를 사용 하는 고객에 대 한으로 처리 됩니다 알고 있어야 8.x 8.x, Windows 개발자 센터에서 개별 지역/국가으로 표시 된다 대시보드 (이전의 스토어 대시보드에서 하나의 "나머지 국가" 지역/국가 옵션 모두 다음 지역/이 국가 그룹에 있는 경우).
+앱에 Windows를 대상으로 하는 패키지가 포함 된 경우이 다양 한 지역/국가 국가로 간주 되는 하나의 "나머지 국가" 지역/국가에서 Windows 스토어를 사용 하는 고객에 대 한 주의 해야 할 중요 8.x 8.x는 국가로 표시 된다 하더라도 Windows 개발자 센터에서 개별 지역/국가 대시보드 (이전 스토어 대시보드에서 하나의 "나머지 국가" 지역/국가 옵션 모두 다음 지역/이 국가 그룹에 있는 경우).
 
 앱을 제출할 때 기본 선택을 유지하면 이런 문제에 신경 쓸 필요 없이 여러분의 앱을 가능한 모든 지역/국가에서 사용할 수 있습니다. 그러나 특정 지역/국가를 제외하려는 경우에는 "나머지 국가" 지역/국가를 하나라도 제외하면 Windows 8 또는 Windows 8.1 고객에게 어떠한 "나머지 국가" 지역/국가에서도 앱이 제공되지 않는다는 점에 유의해야 합니다.
 

@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 856b387825734fb7c6973293bc7004a79d05c207
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563177"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621769"
 ---
 # <a name="standard-http-status-codes"></a>표준 HTTP 상태 코드
  
-하이퍼텍스트 전송 프로토콜 (HTTP) 표준 다양 한 클라이언트 요청에 대 한 응답으로 서버에 의해 반환 되는 상태 코드를 설명 합니다. Xbox Live 서비스 메서드 요청 상태를 설명 하기 위해 HTTP 프로토콜 규격 상태 코드를 반환 합니다.
+하이퍼텍스트 전송 프로토콜 (HTTP) 표준 다양 한 클라이언트 요청에 대 한 응답으로 서버에서 반환 하는 상태 코드를 설명 합니다. Xbox Live 서비스 메서드 요청 상태를 설명 하기 위해 HTTP 프로토콜 규격 상태 코드를 반환 합니다.
  
-Xbox Live 서비스 및 해당 일반적인 의미에서 반환 된 상태 코드는 다음과 같습니다.
+Xbox Live 서비스 및 일반적인 그 의미를 반환한 상태 코드의 목록은 다음과 같습니다.
  
 <a id="ID4EAB"></a>
 
@@ -36,25 +36,25 @@ Xbox Live 서비스 및 해당 일반적인 의미에서 반환 된 상태 코�
 | 202| Accepted| 요청이 수락 되었습니다 하지만 아직 완료 되지 않았습니다.| 
 | 204| 콘텐츠| 요청 완료 되 면 있지만 콘텐츠를 반환할 수 없습니다.| 
 | 301| 영구적으로 이동| 서비스는 다른 URI로 이동 합니다.| 
-| 302| 발견| 요청 된 리소스가 다른 uri 일시적으로 합니다.| 
+| 302| 발견| 요청 된 리소스는 다른 uri 일시적으로 상주 합니다.| 
 | 307| 임시 리디렉션| 이 리소스에 대 한 URI 일시적으로 변경 되었습니다.| 
 | 400| 잘못 된 요청| 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
-| 401| 권한 없음| 필요한 사용자 인증을 요청 합니다.| 
+| 401| 권한 없음| 요청은 사용자 인증이 필요합니다.| 
 | 403| 금지| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
 | 404| 찾을 수 없음| 지정된 된 리소스를 찾을 수 없습니다.| 
 | 406| 허용할 수 없음| 리소스 버전은 지원 되지 않습니다.| 
 | 408| 요청 시간 제한| 요청을 완료 하는 데 너무 오래 걸렸습니다.| 
-| 409| 충돌| 리소스의 현재 상태와 충돌 하는 요청이 완료 되지 않았습니다.| 
+| 409| 충돌| 리소스의 현재 상태를 사용 하 여 충돌 하는 요청이 완료 되지 않았습니다.| 
 | 410| 최신 상태가 아닌| 요청 된 리소스는 더 이상 사용할 수 없습니다.| 
-| 412| 전제 조건 실패| 서버 요청 할인 요청자는 사전 조건 중 하나를 충족 하지 않습니다.| 
-| 416| 요청한 범위가 충분 하지 않음| 요청 된 범위를 사용할 수 없는 경우| 
+| 412| 전제 조건 실패| 서버 요청 자가 요청에 배치 하는 사전 중 하나를 충족 하지 않습니다.| 
+| 416| 요청한 범위가 충분 하지 않음| 요청한 범위의 사용할 수 없는 경우| 
 | 500| 내부 서버 오류| 서버에서 요청을 수행할 수 있는 예상치 못한 상황이 발생 했습니다.| 
 | 501| 구현 되지 않음| 서버에서 요청을 수행 하는 데 필요한 기능을 지원 하지 않습니다.| 
-| 503| 사용할 수 없는 서비스| 요청을 제한, 클라이언트 재시도 값 초 (예: 5 초) 한 후 다시 시도 합니다.| 
+| 503| 사용할 수 없는 서비스| 요청을 제한, 초 (예: 5 초) 클라이언트를 다시 시도 값 후 다시 시도 합니다.| 
  
 
 > [!NOTE] 
-> 일부 리소스 및 메서드는 해당 리소스 또는 메서드의 컨텍스트 내에서 특정 상태 코드의 의미에 대 한 특정 정보를 제공합니다. 자세한 내용은 리소스나 사용 하는 방법에 대 한 설명서를 참조 하세요. 
+> 일부 리소스 및 메서드 해당 리소스 또는 메서드의 컨텍스트 내에서 특정 상태 코드의 의미에 대 한 특정 정보를 제공합니다. 자세한 내용은 사용 중인 리소스에 대 한 설명서를 참조 하세요. 
 
   
 <a id="ID4E3BAC"></a>
@@ -73,7 +73,7 @@ Xbox Live 서비스 및 해당 일반적인 의미에서 반환 된 상태 코�
 <a id="ID4EKCAC"></a>
 
  
-##### <a name="reference--universal-resource-identifier-uri-referenceuriatoc-xboxlivews-reference-urismd"></a>참조 [Universal Resource Identifier (URI) 참조](../uri/atoc-xboxlivews-reference-uris.md)
+##### <a name="reference--universal-resource-identifier-uri-referenceuriatoc-xboxlivews-reference-urismd"></a>참조 [유니버설 리소스 식별자 (URI) 참조](../uri/atoc-xboxlivews-reference-uris.md)
 
  [추가 참조](atoc-xboxlivews-reference-additional.md)
 

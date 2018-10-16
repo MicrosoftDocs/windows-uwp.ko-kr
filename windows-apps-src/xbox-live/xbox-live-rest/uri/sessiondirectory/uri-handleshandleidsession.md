@@ -12,22 +12,22 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: eb7ca17500f571ed72cf0bcd6ececbcde17ce717
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4564759"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619283"
 ---
 # <a name="handleshandleidsession"></a>/handles/{handleId}/session
-GET 및 PUT 작업 세션에 대 한 핸들을 해제를 사용 하 여 지원 합니다. 
+GET 및 PUT 작업 세션에 대 한 핸들 해제를 사용 하 여 지원 합니다. 
 
 > [!NOTE] 
-> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상와 함께 사용 합니다.  
+> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
 
  
 
 > [!NOTE] 
-> 이 URI는 현재 Xbox One 콘솔 및 서비스 식별자를 사용 하 여 서버에서 외부에서 액세스할 수만 있습니다.  
+> 이 URI는 현재 Xbox One 콘솔 및 서버는 서비스 식별자를 사용 하 여 외부적으로 액세스할 수만.  
 
  
 <a id="ID4ES"></a>

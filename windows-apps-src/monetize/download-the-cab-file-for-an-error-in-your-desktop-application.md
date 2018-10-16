@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 데스크톱 응용 프로그램의 오류에 대한 CAB 파일을 다운로드합니다.
 title: 데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: f1aa6c770451676cb1326f95b96bb0d808039880
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: b7f4e8d1dabb701df75e06a9ebda7042fd3f16dd
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662723"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618515"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
 
@@ -50,7 +50,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스�
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 형식   |  설명      |  필수  |
+| 매개 변수        | 유형   |  설명      |  필수  |
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | CAB 파일을 다운로드할 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [데스크톱 응용 프로그램의 개발자 센터 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)(예: **상태 보고서**)를 열고 URL에서 제품 ID를 검색합니다. |  예  |
 | cabIdHash | 문자열 | 다운로드하려는 CAB 파일의 고유한 ID 해시입니다. 이 값을 가져오려면 [데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md) 메서드를 사용하여 응용 프로그램에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabIdHash** 값을 사용합니다. |  예  |

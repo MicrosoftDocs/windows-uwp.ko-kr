@@ -16,11 +16,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569877"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618607"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -62,7 +62,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)은 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결하는 특별 바인딩입니다. TemplateBinding은 XAML의 ControlTemplate 정의 내에서만 사용할 수 있습니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
 
 > [!NOTE]
-> Windows 10으로 다음 주요 업데이트부터 [**X:bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그 확장을 사용할 수 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)곳에서 사용 합니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
+> Windows 10의 다음 주요 업데이트부터 [**X:bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그 확장을 사용할 수 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)장소에서 사용 합니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">

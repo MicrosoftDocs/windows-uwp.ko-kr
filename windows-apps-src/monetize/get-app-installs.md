@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: FAD033C7-F887-4217-A385-089F09242827
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 설치 데이터를 가져옵니다.
 title: 앱 설치 받기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 설치
 ms.localizationpriority: medium
-ms.openlocfilehash: fe2e9a012a094a5eeb5bc60510fc8fb115c57fb0
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 7a5a947d58ecec7ca52a355ef44f8a880864df5d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1975975"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618276"
 ---
 # <a name="get-app-installs"></a>앱 설치 받기
 

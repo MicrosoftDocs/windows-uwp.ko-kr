@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: FD381669-F962-465E-940B-AED9C8D19C90
 description: Windows.Services.Store 네임스페이스를 사용하여 소모성 추가 기능으로 작업하는 방법을 알아봅니다.
 title: 소모성 추가 기능 구매 사용
 keywords: Windows 10, uwp, 소모성, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 05/09/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c7c36abe2d1332e5b6c94cbb936ad00769314d07
-ms.sourcegitcommit: dc3389ef2e2c94b324872a086877314d6f963358
-ms.translationtype: HT
+ms.openlocfilehash: 93d9c5df33e1131861c3e5caff625c689b8f330c
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1874421"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619656"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>소모성 추가 기능 구매 사용
 

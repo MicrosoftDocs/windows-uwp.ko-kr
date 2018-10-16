@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566791"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618436"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -119,7 +119,7 @@ ms.locfileid: "4566791"
 <tr><td align="left">    <b>커뮤니티 광고</b>                       </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대한 무료 <a href="about-community-ads.md">커뮤니티 광고</a> 사용을 만들고 관리하고 볼 수 있습니다.               </td></tr>
 <tr><td align="left">    <b>연락처 정보</b>                        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 <a href="managing-your-profile.md">연락처 정보</a>를 편집하고 볼 수 있습니다.            </td></tr>
 <tr><td align="left">    <b>COPPA 준수</b>                    </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).                                            </td><td align="left">  계정의 모든 제품에 대한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 사항을 편집하고 볼 수 있습니다(제품이 13세 이하 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
-<tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 볼 수 있습니다.      </td><td align="left">  수 제작, 편집, 하 고 <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 확인 합니다.       </td></tr>
+<tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹)을 볼 수 있습니다.      </td><td align="left">  수 제작, 편집, 하 고 보기 <a href="create-customer-groups.md">고객 그룹</a> (고객층 및 알려진된 사용자 그룹).       </td></tr>
 <tr><td align="left">    <b>제품 그룹 관리</b>&nbsp;*                            </td><td align="left">  제품 그룹 만들기 페이지를 볼 수는 있지만 계정에서 제품 그룹을 실제로 만들 수는 없습니다.    </td><td align="left">  제품 그룹을 만들고 편집할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>새 앱</b>                            </td><td align="left">  새 앱 만들기 페이지를 볼 수는 있지만 계정에서 새 앱을 실제로 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약하여 계정에서 <a href="create-your-app-by-reserving-a-name.md">새 앱을 만들</a> 수 있으며, 제출을 만들고 Microsoft Store에 앱을 제출할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>새 번들</b>&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 계정에서 실제로 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
@@ -194,7 +194,7 @@ ms.locfileid: "4566791"
     <tbody>
     <tr><td align="left">    <b>홍보 코드</b>     </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문과 사용 정보를 볼 수 있습니다.         </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문을 보고 관리하고 만들 수 있으며, 사용 정보를 볼 수 있습니다.          </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td></tr>
     <tr><td align="left">    <b>대상 제품</b>     </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 볼 수 있습니다.         </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 확인하고 관리하고 만들 수 있습니다.          </td><td>    해당 없음     </td><td>    해당 없음      </td></tr>
-    <tr><td align="left">    <b>고객에게 문의</b>  </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대한 응답</a> 및 <a href="respond-to-customer-reviews.md">고객 리뷰에 대한 응답</a>을 볼 수 있습니다. 제품에 대해 생성된 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림</a>을 볼 수 있습니다.    </td><td>    <b>고객 의견</b> 권한 권한도 부여 된으로 <a href="respond-to-customer-feedback.md">고객 피드백에 응답</a> 하 고 <a href="respond-to-customer-reviews.md">고객 리뷰에 응답</a>을 로드할 수 있습니다. 제품에 대해 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림을 만들고 보낼</a> 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
+    <tr><td align="left">    <b>고객에게 문의</b>  </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대한 응답</a> 및 <a href="respond-to-customer-reviews.md">고객 리뷰에 대한 응답</a>을 볼 수 있습니다. 제품에 대해 생성된 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림</a>을 볼 수 있습니다.    </td><td>    <b>고객 의견</b> 부여 된 뿐만 아니라 <a href="respond-to-customer-feedback.md">고객 피드백에 응답</a> 하 고 <a href="respond-to-customer-reviews.md">고객 리뷰에 응답할</a>수 있습니다. 제품에 대해 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림을 만들고 보낼</a> 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
     <tr><td align="left">    <b>실험</b></td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a> 및 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a>을 만들고 관리하고 볼 수 있으며, 실험 데이터를 볼 수 있습니다.     </td><td>    해당 없음  </td><td>    해당 없음                 </td></tr>
     <tr><td align="left">    <b>Microsoft Store 영업 이벤트</b>&nbsp;*</td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td></tr>
     </tbody>

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569551"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621238"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
@@ -105,7 +105,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 -   백그라운드 작업에서 잠금 화면에 액세스해야 하는 경우 백그라운드 작업을 디버그하기 전에 앱을 잠금 화면에 배치해야 합니다. 잠금 화면 지원 앱에 대한 매니페스트 옵션을 지정하는 방법은 [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)을 참조하세요.
 -   백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
-VS를 사용 하 여 백그라운드 작업 디버그 대 한 자세한 내용은 참조 [를 트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+VS를 사용 하 여 백그라운드 작업 디버그에 대 한 자세한 내용은 참조 [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트 UWP 앱에서](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>관련 항목
 

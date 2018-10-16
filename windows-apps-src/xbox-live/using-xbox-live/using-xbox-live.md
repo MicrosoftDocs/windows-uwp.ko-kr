@@ -1,7 +1,7 @@
 ---
 title: Xbox Live를 사용 하 여
 author: KevinAsgari
-description: Xbox Live가 지원 타이틀 개발 하는 방법에 대 한 링크 목록을 제공 합니다.
+description: Xbox Live가 지원 타이틀을 개발 하는 방법에 대 한 링크 목록을 제공 합니다.
 ms.assetid: 9f3c7071-778f-4f9c-8a7f-94087785016e
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f73133dc1bd78d3d7f714ac12b9069def093086
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4572938"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621427"
 ---
 # <a name="using-xbox-live"></a>Xbox Live를 사용 하 여
 
@@ -31,4 +31,4 @@ ms.locfileid: "4572938"
 
 [Xbox Live 문제 해결](troubleshooting/troubleshooting.md)
 
-[Xbox Live 코드 XDK에서 UWP로 포팅](porting-xbox-live-code-from-xdk-to-uwp.md)
+[XDK에서 UWP로 Xbox Live 코드 포팅](porting-xbox-live-code-from-xdk-to-uwp.md)

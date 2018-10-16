@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569800"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618864"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -29,7 +29,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하�
 
 컴퓨터는 다음 요구 사항을 만족해야 합니다.
 
-CPU (이러한 설정은 사용 가능한 경우 사용할 수는 BIOS에서)
+CPU (이러한 설정은 사용 가능한 경우에 사용할 수 있습니다 BIOS)
 
 -   하드웨어 지원 가상화 ([호환성 확인](https://www.microsoft.com/download/details.aspx?id=592)).
 -   SLAT(Second Level Address Translation)
@@ -49,11 +49,11 @@ BIOS 요구 사항을 확인하려면 [Windows Phone 8용 에뮬레이터에 Hyp
 
 RAM 및 운영 체제 요구 사항을 확인하려면 제어판에서 **시스템 및 보안**을 선택한 다음 **시스템**을 선택합니다.
 
-Windows 10 Mobile 용 Microsoft 에뮬레이터는 Visual Studio 2015 이상 필요 이전 버전의 Visual Studio를 사용 하 여 이전 버전과 호환 되지 않습니다.
+Windows 10 Mobile 용 Microsoft 에뮬레이터는 Visual Studio 2015 이상 필요 이전 버전의 Visual Studio를 사용 하 여 이전 버전과 호환 아닙니다.
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>설치를 제거 하 고 에뮬레이터를 실행 합니다.
+## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터 실행
 
 ### <a name="installing"></a>설치
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
@@ -68,7 +68,7 @@ Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이�
 
 ### <a name="running"></a>Running
 
-에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 하는 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 합니다.
+에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 하기만 하면 됩니다.
 
 ![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
 

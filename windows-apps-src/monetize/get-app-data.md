@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: Microsoft Store 제출 API에서 이러한 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 데이터를 검색합니다.
 title: 앱 데이터 가져오기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 데이터
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c8029ca9481761ac4313b24607567f20b3a301c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 6940c1079c7973bc4fd639345c5d5e3f33b0221f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663313"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618587"
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 

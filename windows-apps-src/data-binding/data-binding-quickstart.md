@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: 8375cc54e75df71b28cfd3f550f47914b4b65519
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571595"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619745"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 
@@ -37,9 +37,9 @@ ms.locfileid: "4571595"
 
 모든 바인딩은 바인딩 대상과 바인딩 소스로 구성됩니다. 일반적으로 대상은 컨트롤 또는 기타 UI 요소의 속성이고, 소스는 클래스 인스턴스(데이터 모델 또는 뷰 모델)의 속성입니다. 이 예제에서는 컨트롤을 단일 항목에 바인딩하는 방법을 보여 줍니다. 대상은 **TextBlock**의 **Text** 속성입니다. 소스는 오디오 녹음을 나타내는 **Recording**이라는 단순 클래스의 인스턴스를 나타냅니다. 먼저 클래스를 살펴보겠습니다.
 
-C# 또는 C +를 사용 하는 경우 + /CX를 프로젝트에 새 클래스를 추가 하 고 **녹음/녹화**클래스 이름을 지정 합니다.
+C# 또는 C +를 사용 하는 경우 + /CX에서 새 클래스를 프로젝트에 추가 하 고 **녹음/녹화**클래스 이름을 지정 합니다.
 
-사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 다음 C +에 표시 된 대로 명명 된 프로젝트에 새 **Midl 파일 (.idl)** 항목을 추가 + WinRT 코드 예제에서는 목록 아래 합니다. 새 파일의 내용을 목록에 표시 된 [MIDL 3.0](/uwp/midl-3/intro) 코드로 대체를 생성 하는 프로젝트 빌드 `Recording.h` 및 `.cpp` 및 `RecordingViewModel.h` 및 `.cpp`, 목록와 일치 하도록 생성 된 파일에 코드를 추가 합니다. 생성 된 파일에 대 한 자세한 정보 및 프로젝트에 복사 하는 방법에 대 한 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](/windows/uwp/cpp-and-winrt-apis/binding-property)합니다.
+사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 다음 C +에 표시 된 대로 명명 된 프로젝트에 새 **Midl 파일 (.idl)** 항목을 추가 + WinRT 코드 예제에서는 목록 아래 합니다. 새 파일의 내용을 목록에 표시 된 [MIDL 3.0](/uwp/midl-3/intro) 코드로 대체, 생성 하는 프로젝트 빌드 `Recording.h` 및 `.cpp` 및 `RecordingViewModel.h` 및 `.cpp`, 목록 일치 하도록 생성 된 파일에 코드를 추가 합니다. 이러한 생성 된 파일에 대 한 자세한 정보 및 프로젝트에 복사 하는 방법에 대 한 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
 ```csharp
 namespace Quickstart
@@ -227,7 +227,7 @@ namespace Quickstart
 
 그런 다음 태그 페이지를 나타내는 클래스에서 바인딩 소스 클래스를 노출합니다. **RecordingViewModel** 형식의 속성을 **MainPage**에 바인딩하면 됩니다.
 
-사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 첫 번째 업데이트 한 다음 `MainPage.idl`. 프로젝트를 다시 생성 `MainPage.h` 및 `.cpp`를 프로젝트에서 생성 된 파일의 변경 내용을 병합 하 고 있습니다.
+사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 첫 번째 업데이트 한 다음 `MainPage.idl`. 프로젝트를 다시 생성 `MainPage.h` 및 `.cpp`, 및 프로젝트에서 생성 된 파일의 변경 내용을 병합 합니다.
 
 ```csharp
 namespace Quickstart
@@ -330,7 +330,7 @@ MainPage::MainPage()
 
 비즈니스 개체 컬렉션에 바인딩하는 것이 일반적인 시나리오입니다. C# 및 Visual Basic에서 일반 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) 클래스는 [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) 및 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 인터페이스를 구현하므로 데이터 바인딩에 유용한 컬렉션 옵션이 됩니다. 이러한 인터페이스는 항목이 추가 또는 변경되거나 목록 자체의 속성이 변경될 경우 바인딩에 대한 변경 알림을 제공합니다. 또한 바인딩된 컨트롤을 컬렉션에 있는 개체의 속성 변경 사항으로 업데이트하려면 비즈니스 개체에서 **INotifyPropertyChanged**를 구현해야 합니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
 
-사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음에서 관찰 가능한 컬렉션 바인딩에 대 한 자세히 알아볼 수 있습니다 [XAML 항목 컨트롤, 바인딩 C + + /winrt 컬렉션](/windows/uwp/cpp-and-winrt-apis/binding-collection)합니다. 하는 경우 해당 항목 읽기 먼저 다음 의도 C + + WinRT 코드 목록 아래 표시 된 명확 하 게 됩니다.
+사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 다음에서 관찰 가능한 컬렉션 바인딩에 대 한 자세히 알아볼 수 있습니다 [XAML 항목 컨트롤, 바인딩 C + + /winrt 컬렉션](/windows/uwp/cpp-and-winrt-apis/binding-collection). 하는 경우 해당 항목 읽기 먼저 다음 의도 C + + WinRT 코드 목록 아래 표시 된 명확 하 게 됩니다.
 
 다음 예제에서는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 `Recording` 개체의 컬렉션에 바인딩합니다. 먼저 컬렉션을 뷰 모델에 추가합니다. 다음과 같은 새 멤버를 **RecordingViewModel** 클래스에 추가하면 됩니다.
 
@@ -456,7 +456,7 @@ public:
 
 ![목록 보기 바인딩](images/xaml-databinding1.png)
 
-이 해결 하려면 **OneLineSummary**값을 반환 [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) 재정의 하거나 하 하거나 데이터 템플릿을 제공할 수 있습니다. 데이터 템플릿 옵션이 더 일반적인 솔루션 환경과 보다 유연한 됩니다. 콘텐츠 컨트롤의 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) 속성 또는 항목 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) 속성을 사용하여 데이터 템플릿을 지정합니다. 결과에 대한 그림과 함께 **Recording**에 대한 데이터 템플릿을 디자인할 수 있는 두 가지 방법은 다음과 같습니다.
+이 해결 하려면 **OneLineSummary**값을 반환 하도록 [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) 무시 하거나 수 또는 데이터 템플릿을 제공할 수 있습니다. 데이터 템플릿 옵션이 더 일반적인 솔루션을 환경과 보다 유연한 됩니다. 콘텐츠 컨트롤의 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) 속성 또는 항목 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) 속성을 사용하여 데이터 템플릿을 지정합니다. 결과에 대한 그림과 함께 **Recording**에 대한 데이터 템플릿을 디자인할 수 있는 두 가지 방법은 다음과 같습니다.
 
 ```xml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -496,15 +496,15 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 항목에서 **Recording** 개체의 모든 세부 정보를 표시할 수 있습니다. 그러나 이러한 정보는 많은 공간을 차지합니다. 따라서 대신 항목을 식별하는 데 충분한 데이터만 표시한 다음, 사용자가 선택한 경우 세부 정보 보기라는 UI의 별도 부분에 선택한 항목의 모든 세부 정보를 표시할 수 있습니다. 이 정렬을 마스터/세부 정보 보기 또는 목록/세부 정보 보기라고도 합니다.
 
-두 가지 방법이 있습니다. 세부 정보 보기를 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 속성에 바인딩할 수 있습니다. 또는 (수 있으므로 주의 현재 선택 된 항목을 수행) **CollectionViewSource** 를 **ListView** 와 세부 정보 보기 바인딩 되는 경우 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)를 사용할 수 있습니다. 두 기술 모두 아래 나와 하 고 (그림에 표시 됨) 동일한 결과 모두 제공 합니다.
+두 가지 방법이 있습니다. 세부 정보 보기를 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 속성에 바인딩할 수 있습니다. 또는 경우 **CollectionViewSource** (현재 선택 된 항목 너무는 주의를 하는 작업을 수행)에 **ListView** 와 세부 정보 보기 바인딩 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)를 사용할 수 있습니다. 두 기술 모두 아래 나와 되며 모두 (그림에 표시 됨)와 결과가 동일 합니다.
 
 > [!NOTE]
 > 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 필요합니다.
 
-사용 C + + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스를 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
+C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩하려는 모든 런타임 클래스에 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
 
 > [!IMPORTANT]
-> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용할 수 있도록 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
+> 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
 
 먼저, 다음은 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 기술입니다.
 
@@ -579,13 +579,13 @@ public ref class Recording sealed
 다음은 각 경우의 동일한 결과입니다.
 
 > [!NOTE]
-> C + +를 사용 하는 UI 아래 그림과 같이 정확 하 게 표시 되지 않습니다: **ReleaseDateTime** 속성의 렌더링은 다릅니다. 에 대 한 자세한 내용은 다음 섹션을 참조 하세요.
+> C + +를 사용 하는 UI 아래 그림과 같이 정확 하 게 표시 되지 않습니다: **ReleaseDateTime** 속성의 렌더링은 다릅니다. 에 대 한 자세한 설명은 다음 섹션을 참조 하세요.
 
 ![목록 보기 바인딩](images/xaml-databinding4.png)
 
 ## <a name="formatting-or-converting-data-values-for-display"></a>표시할 데이터 값 필터링 또는 변환
 
-위 렌더링에 문제가 있습니다. **ReleaseDateTime** 속성 날짜를 (c + +를 사용 하는 것은 [**일정**](/uwp/api/windows.globalization.calendar)) 하는 경우에 [**날짜/시간**](/uwp/api/windows.foundation.datetime) 을 합니다. 따라서 C#에서는 되 고 표시 됩니다 필요한 것 보다 더 정밀 합니다. 및 c + +에서 렌더링 되는 형식 이름으로 합니다. 해당 하는 반환 하는 **녹음/녹화** 클래스에 문자열 속성을 추가 하는 한 가지 방법은 `this.ReleaseDateTime.ToString("d")`. **ReleaseDate** 속성은 반환 하지는 날짜 및 시간 및 날짜를 나타냅니다. **ReleaseDateAsString**으로 지정하면 문자열이 반환됩니다.
+위 렌더링에 문제가 있습니다. **ReleaseDateTime** 속성이 아닌 경우 날짜로 [**DateTime**](/uwp/api/windows.foundation.datetime) (c + +를 사용 하는 것은 [**일정**](/uwp/api/windows.globalization.calendar)) 하는 경우. 따라서 C#에서는 표시 됩니다 필요한 것 보다 더 정밀 합니다. 및 c + +에서 렌더링 되는 형식 이름으로 합니다. 해당 하는 반환 하는 **녹음/녹화** 클래스에 문자열 속성을 추가 하는 한 가지 방법은 `this.ReleaseDateTime.ToString("d")`. **ReleaseDate** 속성은 반환 하지는 날짜 및 시간 및 날짜를 나타냅니다. **ReleaseDateAsString**으로 지정하면 문자열이 반환됩니다.
 
 보다 유연한 해결 방법은 값 변환기라는 것을 사용하는 것입니다. 다음은 사용자 고유의 값 변환기를 작성하는 방법에 대한 예제입니다. 이 코드를 Recording.cs 소스 코드 파일에 추가합니다.
 
@@ -718,14 +718,14 @@ public:
 ...
 ```
 
-위에서 알 수 있듯이 유연성 서식을 사용 하 여 태그 변환기 매개 변수를 통해 변환기로 형식 문자열을 전달 합니다. 에서는이 항목에서는 C# 값 변환기에에서 표시 된 코드 예제에서 사용 하 여 해당 매개 변수입니다. 하지만 쉽게 변환기 매개 변수로 스타일 c + + 형식 문자열을 전달 하 고 **wprintf** 등 **swprintf**서식 함수를 사용 하 여 값 변환기 하 여 사용할 수 있습니다.
+위에서 알 수 있듯이 유연성 서식을 사용 하 여 태그 변환기 매개 변수를 통해 변환기로 형식 문자열을 전달 합니다. 이 항목에서는 C# 값 변환기에에서는 표시 된 코드 예제에서 사용 하 여 그 매개 변수의 합니다. 하지만 쉽게 c + + 스타일 형식 문자열을 변환기 매개 변수로 전달 하 고 **wprintf** 등 **swprintf**서식 함수를 사용 하 여 사용자 값 변환기 하 여 사용할 수 있습니다.
 
 다음은 결과입니다.
 
 ![사용자 지정 형식으로 날짜 표시](images/xaml-databinding5.png)
 
 > [!NOTE]
-> Windows 10, 버전 1607부터 XAML 프레임 워크는 기본 제공 부울-표시 변환기를 제공 합니다. 변환기가 매핑합니다 **true** **Visibility.Visible** 열거형 값과 **false** **Visibility.Collapsed** 변환기를 만들지 않고 Visibility 속성을 부울 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대 한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조 하세요.
+> Windows 10, 버전 1607부터 XAML 프레임 워크는 기본 제공 하는 부울-표시 변환기를 제공 합니다. 변환기가 매핑됩니다 **true** **Visibility.Visible** 열거형 값과 **false** **Visibility.Collapsed** 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대 한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 * [데이터 바인딩](index.md)

@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
 description: Windows10(UWP)용 JavaScript/HTML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다.
 title: HTML 5 및 JavaScript의 AdControl
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, AdControl, 광고 관리, javascript, HTML
 ms.localizationpriority: medium
-ms.openlocfilehash: 84c6b924072c9a55bf0610883252b511f612dff1
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 37f7754e8f88e61df571fe561ae94dc4b71468ed
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690139"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618371"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>HTML 5 및 JavaScript의 AdControl
 
-이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스를 사용하여 Windows 10용 UWP(유니버설 Windows 플랫폼) JavaScript/HTML 앱에서 배너 광고를 표시하는 방법을 보여줍니다.
+이 연습에서는 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 클래스를 사용하여 Windows 10용 UWP(유니버설 Windows 플랫폼) JavaScript/HTML 앱에서 배너 광고를 표시하는 방법을 보여줍니다.
 
 JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
@@ -28,7 +28,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
 > [!NOTE]
-> Windows 10 SDK 10.0.14393 버전이나 이후의 Windows SDK 버전이 설치되어 있는 경우, WinJS 라이브러리 또한 설치해야 합니다. 이전 Windows 10용 Windows SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다. WinJS를 설치하려면 [WinJS 다운로드](http://try.buildwinjs.com/download/GetWinJS/)를 참조하세요.
+> Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 Windows SDK의 이후 버전을 설치한 경우 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10용 Windows SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다. 
 
 ## <a name="integrate-a-banner-ad-into-your-app"></a>앱에 배너 광고를 통합
 

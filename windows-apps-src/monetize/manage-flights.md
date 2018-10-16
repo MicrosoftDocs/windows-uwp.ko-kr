@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 37F2C162-4910-4336-BEED-8536C88DCA65
 description: Microsoft Store 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트를 관리합니다.
 title: 패키지 플라이트 관리
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b5e3c100ece6ec79abad0efbf4797b0102959cb
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 6a761edf50888fb7f3130886a2c7e6e65b7c0a1d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1661873"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621140"
 ---
 # <a name="manage-package-flights"></a>패키지 플라이트 관리
 

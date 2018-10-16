@@ -10,68 +10,68 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어, 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ab0a8fd83e94af9a06582faebc2923eb459996b
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570589"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617818"
 ---
 # <a name="roles"></a>역할
 
-일부 게임 세션에 대 한 특정 구성원 있다고 지원, 된 medic이, 공격 등 특정 게임 플레이 역할을 지정 하는 것이 좋습니다. 또한 wat 특정 게임 플레이 역할 채울 플레이어가 게임 슬롯을 예약할 수 있습니다. 역할 Xbox Live 기능을 사용 하 여 서비스 플레이어는 게임 플레이 역할 할당을 추적 하 고 특정 게임 플레이 역할을 선택할 수 있는 플레이어의 최대 수를 적용할 수 있습니다.
+일부 게임 세션에 대 한 특정 구성원 있다고 지원, 된 medic이, 공격 등과 같은 특정 게임 플레이 역할을 지정 하는 것이 좋습니다. Wat 특정 게임 플레이 역할을 채울 플레이어가 게임 슬롯을 예약할 수도 있습니다. Xbox Live 역할 기능을 사용 하 여 서비스 플레이어는 게임 플레이 역할 할당을 추적 하 고 특정 게임 플레이 역할을 선택할 수 있는 플레이어의 최대 수를 적용할 수 있습니다.
 
-역할의 가장 일반적인 용도 게임 세션에 대 한 게임 특정 역할을 결정 하는 것입니다. 예를 들어 1 및 2 지원 클래스, 1 탱크/어려운 클래스와 5 개 공격 클래스 필요한 게임 모드가 있을 수 있습니다.
+역할의 가장 일반적인 용도 해당 게임 세션에 대 한 게임 특정 역할을 결정 하는 것입니다. 예를 들어 1 및 2 지원 클래스, 적어도 1 탱크/많은 클래스 및 5 개 공격 클래스 간에 필요한 게임 모드를 수도 있습니다.
 
-다른 가능한 시나리오에서는 게임 세션 8 spectators 및 1 announcer 정확히 4 게임 플레이어는 지정 하는 것이 좋습니다.
+다른 가능한 시나리오에서는 게임 세션 최대 8 spectators 및 1 announcer 정확히 4 게임 플레이어에 있을 수 있음을 지정 하는 것이 좋습니다.
 
-세션 검색 등 다른 방법을 통해 나머지 슬롯을 작성 하는 동안 슬롯 친구에 할당할 역할을 사용할 수도 있습니다.
+세션 검색 같은 다른 수단을 통해 나머지 슬롯을 채우는 동안 슬롯 친구에 할당할 역할을 사용할 수도 있습니다.
 
 ## <a name="role-types"></a>역할 유형
 
-역할 유형 역할 정의의 그룹을 나타냅니다. 모든 역할 역할 유형의 일부로 정의 되어야 합니다. 역할 유형은 멀티 플레이 세션 문서에서 정의 됩니다.
+역할 유형은 역할 정의의 그룹을 나타냅니다. 모든 역할 역할 일종의 일부로 정의 되어야 합니다. 역할 유형은 멀티 플레이 세션 문서에서 정의 됩니다.
 
-구성원 수만 역할에서에서 할당 특정된 역할 유형. 예를 들어 "클래스" 역할 유형 치료, 탱크, 및가 포함 되어 다음 구성원만에 할당할 수 역할 중 하나입니다.
+구성원 수만 역할이 할당 되어야 하나의 특정된 역할 유형에 서 합니다. 예를 들어, 포함 된 경우 "클래스" 역할 유형은 치료, 탱크, 및 손상, 다음 구성원만에 할당할 수 이러한 역할 중 하나입니다.
 
-여러 역할 유형을 정의와 구성원 각 역할 형식에서 하나 이상의 역할이 할당 될 수 있습니다. 이전 시나리오에서 구성원 힐 역할 선택 하지만 squad 할당할 수도 있습니다 squad 리더 역할은 별도 역할 형식에 정의 된 경우 해당 역할을 합니다.
+여러 역할 유형을 정의할 수 있으며 구성원 각 역할 유형에 서 하나 이상의 역할이 할당 될 수 있습니다. 이전 시나리오에서 구성원 힐 역할을 선택한 하지만 squad 할당할 수도 있습니다 squad 리더 역할을 별도 역할 형식에 정의 된 경우 리더 역할을 합니다.
 
-> **중요:** Xbox Live SDK 현재 지원 단일 역할 유형 및 멤버 당 단일 역할을 합니다.
+> **중요:** Xbox Live SDK 현재만 지원 단일 역할 유형 및 멤버 당 단일 역할을 합니다.
 
 ## <a name="role-type-properties"></a>역할 유형 속성
 
-역할 유형을 정의 하는 경우 역할 형식에 대 한 다음 정보를 지정 해야 합니다.
+역할 형식을 정의 하는 경우 역할 형식에 대 한 다음 정보를 지정 해야 합니다.
 
-* 역할 유형의 이름입니다. 소문자 및 영숫자, 최대 100 자 이름 이어야 합니다.
-* 역할 유형에 정의 된 역할 관리 소유자 경우.
+* 이름 역할 유형입니다. 소문자 및 영숫자를 넘지 100 자 이름 이어야 합니다.
+* 역할 형식에 정의 된 역할 관리 소유자 경우.
 * 경우 세션의 수명 동안 역할 형식에 정의 된 역할의 속성을 변경할 수 있습니다.
-* 역할 형식에 포함 하는 역할 정의 합니다.
+* 역할 형식에 포함 되는 역할 정의 합니다.
 
-역할 형식이 관리 소유자 인 경우 소유자 세션의 구성원만 구성원에 게 해당 유형의 역할을 할당할 수는 의미 합니다. 역할 유형 관리 하는 소유자가 아닌, 구성원을 자체 역할을 할당할 수 있습니다.
+역할 형식이 관리 소유자 이면 소유자 세션의 구성원만 구성원에 게 해당 유형의 역할을 할당할 수는 의미 합니다. 역할 유형 관리 소유자가 아닌, 구성원 자체를 역할을 할당할 수 있습니다.
 
-역할 유형이 설정 "hasOwners" 기능이 있는 세션을 관리 하는 소유자만 지정할 수 있습니다.
+역할 되지 않은 설정 "hasOwners" 기능이 있는 세션에서 관리할 소유자만 지정할 수 있습니다.
 
 > Xbox Live SDK 현재 소유자 다른 구성원에 게 역할 할당을 지원 하지 않습니다.
 
 ## <a name="role-properties"></a>역할 속성
 
-역할을 정의 하는 경우 각 역할에 대 한 다음 정보를 지정 해야 합니다.
+역할을 정의 하는 경우 각 역할에 대해 다음 정보를 지정 해야 합니다.
 
-* 역할의 이름입니다. 소문자 및 영숫자, 최대 100 자 이름 이어야 합니다.
+* 역할의 이름입니다. 소문자 및 영숫자를 넘지 100 자 이름 이어야 합니다.
 * 역할에 허용 되는 멤버의 최대 수입니다. 0 보다 커야 합니다.
-* 역할을 채워야 하는 멤버의 대상 번호입니다. 대상 0 보다 커야 그리고 역할을 보다 작거나 같아야 멤버의 최대 수 있습니다.
+* 역할을 채워야 하는 멤버의 대상 번호입니다. 대상 0 보다 커야 합니다. 그리고 멤버의 최대 수 보다 작거나 역할을 합니다.
 
 세션 구성원 역할을 할당 하면 해당 정보 멀티 플레이 세션 문서에서 멤버 역할에 기록 됩니다.
 
-서비스는 멤버에 게 역할을 할당할 수 있지만 대상 번호를 적용 하지 않습니다의 최대 수를 적용 합니다.
+서비스 역할을 할당할 수 있지만 대상 번호를 적용 하지 않습니다 하는 멤버의 최대 수를 적용 합니다.
 
 ## <a name="create-roles"></a>역할 만들기
 
 일반적으로 역할 및 역할 유형을 [세션 템플릿](service-configuration/session-templates.md)정의 됩니다. Xbox Live SDK 하지 않는 서비스 지원 역할 및 세션을 만드는 동안 역할 유형 정의 합니다.
 
-### <a name="define-role-types-and-roles-in-a-session-template"></a>세션 템플릿 역할 유형 및 역할을 정의
+### <a name="define-role-types-and-roles-in-a-session-template"></a>세션 템플릿의 역할 유형 및 역할 정의
 
 Xbox Live 구성 하는 동안 세션 템플릿을 만들 때 역할 유형 및 역할을 정의할 수 있습니다.
 
-역할 유형 및 역할 정보는 다음 형식의 세션 템플릿에서 자료 수준은 "roleTypes" 요소로 지정 됩니다.
+역할 유형 및 역할 정보 세션 템플릿에서 다음 형식의 기본 수준 "roleTypes" 요소로 지정 됩니다.
 
 ```json
 "roleTypes": {
@@ -93,27 +93,27 @@ Xbox Live 구성 하는 동안 세션 템플릿을 만들 때 역할 유형 및 
 },
 ```
 
-## <a name="retrieve-role-information-for-a-multiplayer-session"></a>멀티 플레이 세션에 대 한 역할 정보를 검색 합니다.
+## <a name="retrieve-role-information-for-a-multiplayer-session"></a>멀티 플레이 세션에 대 한 역할 정보를 검색
 
-역할에 대 한 정보를 얻을 수 유형, 역할 및 멀티 플레이 검색 핸들 또는 두 멀티 플레이 세션에서 얼마나 많은 구성원이 각 역할에 할당 됩니다.
+역할에 대 한 정보를 얻을 수 유형, 역할 및 멀티 플레이 검색 핸들 나 멀티 플레이 세션 중 하나에서 얼마나 많은 멤버 각 역할에 할당 됩니다.
 
-Xbox Live SDK 역할 유형 및 역할에 대 한 정보는 맵 구조 내 저장 됩니다. C + + Api를 사용 합니다 `unordered_map` 클래스 및 WinRT Api를 사용 하 여는 `IMapView` 클래스.
+Xbox Live SDK에서 역할 유형 및 역할에 대 한 정보는 맵 구조를 내부 저장 됩니다. C + + Api를 사용 합니다 `unordered_map` 클래스 및 WinRT Api를 사용 하는 `IMapView` 클래스.
 
 ### <a name="get-the-role-information-from-a-search-handle"></a>검색 핸들에서 역할 정보 가져오기
 
-에 `multiplayer_search_handle_details` 인덱싱하여 역할 형식 정보를 가져올 수 있는 검색 요청에서 반환 된 개체는 `role_types` 이름에 관심이 있는 역할 유형으로 지도 합니다.
+`multiplayer_search_handle_details` 인덱싱하여 역할 유형 정보를 얻을 수는 검색 요청에서 반환 된 개체는 `role_types` 에 관심이 있는 역할 형식의 이름 사용 하 여 지도 합니다.
 
-이 반환 하는 `multiplayer_role_type` 개체. 인덱싱하여 역할을 가져올 수 있습니다는 `roles` 지도 반환 하는 `multiplayer_role_info` 개체입니다.
+이 반환 하는 `multiplayer_role_type` 개체. 역할을 인덱싱하여 가져올 수 있습니다 합니다 `roles` 지도 반환 하는 `multiplayer_role_info` 개체.
 
 `multiplayer_role_info` 개체의 역할에 대 한 정보가 포함 하 여 `max_members_count`, `member_xbox_user_ids`, `members_count`, 및 `target_count`.
 
 ### <a name="get-the-role-information-from-a-search-handle"></a>검색 핸들에서 역할 정보 가져오기
 
-세션에서 역할 정보를 가져오는 데 필요한 흐름 검색 핸들에서 정보를 가져오는 데 필요한 흐름 유사 하지만 몇 가지 다른 클래스를 사용 합니다.
+세션에서 역할 정보를 얻는 데 흐름 검색 핸들을에서 정보를 얻는 데 흐름에 유사 하지만 일부 다른 클래스를 사용 합니다.
 
-에 `multiplayer_session` 개체를 참조 하 여 역할 유형 정보를 얻을 수는 `session_role_types` 개체는 `multiplayer_session_role_types` 클래스. 이 개체에서 인덱싱할 수는 `role_types` 지도에 관심이 있는 역할 형식의 이름의 합니다.
+에 `multiplayer_session` 개체를 참조 하 여 역할 유형 정보를 얻을 수 있습니다 합니다 `session_role_types` 개체는 `multiplayer_session_role_types` 클래스. 이 개체에서 인덱싱할 수는 `role_types` 이름에 관심이 있는 역할 유형으로 지도 합니다.
 
-이 반환 하는 `multiplayer_role_type` 개체. 인덱싱하여 역할을 가져올 수 있습니다는 `roles` 지도 반환 하는 `multiplayer_role_info` 개체입니다.
+이 반환 하는 `multiplayer_role_type` 개체. 역할을 인덱싱하여 가져올 수 있습니다 합니다 `roles` 지도 반환 하는 `multiplayer_role_info` 개체.
 
 `multiplayer_role_info` 개체의 역할에 대 한 정보가 포함 하 여 `max_members_count`, `member_xbox_user_ids`, `members_count`, 및 `target_count`.
 
@@ -123,6 +123,6 @@ Xbox Live SDK 역할 유형 및 역할에 대 한 정보는 맵 구조 내 저�
 
 ## <a name="assign-a-role-to-a-member"></a>구성원에 게 역할 할당
 
-현재 구성원만 Xbox Live SDK의 역할을 할당할 수 있습니다. 에 `multiplayer_session` 개체를 호출할 수는 `set_current_user_role_info(role_type, role_name)` 현재 구성원에 대 한 역할 유형 및 역할을 지정 하는 방법.
+현재 구성원만 Xbox Live SDK에서 자신의 역할을 할당할 수 있습니다. 에 `multiplayer_session` 개체에서 호출할 수 있습니다 합니다 `set_current_user_role_info(role_type, role_name)` 현재 구성원에 대 한 역할 유형 및 역할을 지정 하는 방법.
 
-역할 서비스 세션을 작성 하려는 경우에 이미 꽉, MPSD 쓰기를 거부 합니다.
+역할 이미 경우 전체 세션 서비스를 작성 하려고 할 때, MPSD 쓰기를 거부 합니다.

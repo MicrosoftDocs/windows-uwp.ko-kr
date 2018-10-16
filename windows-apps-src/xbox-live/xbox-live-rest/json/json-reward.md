@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ddecacdf77305b6c9449bd5e903a5e4c0fa74d7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574298"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618037"
 ---
 # <a name="reward-json"></a>Reward(JSON)
 도전 과제와 관련 된 보상입니다.
@@ -25,20 +25,20 @@ ms.locfileid: "4574298"
 
 ## <a name="reward"></a>보너스
 
-보상 개체에는 다음 사양을 있습니다.
+보상 개체에는 다음과 같이 지정 합니다.
 
 | 멤버| 유형| 설명|
 | --- | --- | --- |
-| name| 문자열| 사용자에 게 이름은 보상입니다.|
+| name| 문자열| 사용자에 게는 보상의 이름입니다.|
 | description| string| 사용자에 게 설명의 보상입니다.|
 | value| string| 보상의 값입니다.|
-| type| RewardType 열거형| 보상 유형: <ul><li>잘못 된 (0): 알 수 없는 및 지원 되지 않는 보상 유형을 구성 합니다.</li><li>게이머 점수 (1):는 보상 포인트 플레이어의 게이머 점수를 추가합니다.</li><li>(2) inApp:는 보상 정의 되 고 제목에 제공 합니다.</li><li>아트 (3):는 보상 디지털 자산입니다.</li></ul> | 
-| valueType| ProgressValueDataType 열거형| 값의 형식입니다. 자세한 내용은 [요구 사항 (JSON)를](json-requirement.md) 참조 하세요.|
+| type| RewardType 열거형| 보상 유형: <ul><li>잘못 된 (0): 알 수 없는 및 지원 되지 않는 보상 유형 구성 되었습니다.</li><li>게이머 점수 (1):는 보상 포인트 플레이어의 게이머 점수를 추가합니다.</li><li>(2) inApp:는 보상 정의 되 고 제목에 제공 합니다.</li><li>아트 (3):는 보상 디지털 자산입니다.</li></ul> | 
+| valueType| ProgressValueDataType 열거형| 유형 값입니다. 자세한 내용은 [요구 사항 (JSON)를](json-requirement.md) 참조 하세요.|
 
 <a id="ID4EBD"></a>
 
 
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
 
 
 ```json

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: faa0325a8540e1e3df9674a4acab2ab33e93dceb
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567040"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619776"
 ---
 # <a name="usersrequestoridpermissionvalidate"></a>/users/{requestorId}/permission/validate
  
@@ -29,7 +29,7 @@ ms.locfileid: "4567040"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| requestorId| string| 필수. 작업을 수행 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code> 및 <code>me</code>. 로그인 한 사용자 이어야 합니다. 예제 값: <code>xuid(0987654321)</code>.| 
+| requestorId| string| 필수. 작업을 수행 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code> 및 <code>me</code>. 사용자 로그인 해야 합니다. 예제 값: <code>xuid(0987654321)</code>.| 
   
 <a id="ID4ETB"></a>
 
@@ -38,11 +38,11 @@ ms.locfileid: "4567040"
 
 [GET (/users/{requestorId}/permission/validate)](uri-privacyusersrequestoridpermissionvalidateget.md)
 
-&nbsp;&nbsp;대상 사용자를 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.
+&nbsp;&nbsp;대상 사용자를 사용 하 여 지정 된 작업을 수행 하려면 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.
 
 [POST (/users/{requestorId}/permission/validate)](uri-privacyusersrequestoridpermissionvalidatepost.md)
 
-&nbsp;&nbsp;사용자가 대상 사용자의 집합을 사용 하 여 지정 된 작업을 수행할 수 있는지 여부에 대 한 예 또는 아니요 답변의 집합을 가져옵니다.
+&nbsp;&nbsp;대상 사용자의 집합을 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 답변의 집합을 가져옵니다.
  
 <a id="ID4EAC"></a>
 

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: dc632a4c-ce48-400b-8e6e-1dddbd13afff
 description: Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인 배달 라인을 관리합니다.
 title: 배달 라인 관리
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: a7dca49ee1ecaeb675127ea19191a028f6f7846f
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 387b5ccf999452780b89aa7edcc9b58bcc35ea8a
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664103"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622738"
 ---
 # <a name="manage-delivery-lines"></a>배달 라인 관리
 
@@ -142,7 +142,7 @@ Authorization: Bearer <your access token>
 | 필드        | 유형   |  설명      |  읽기 전용  | 기본값  | POST/PUT에 필요한지 여부 |   
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  정수   |  배달 라인의 ID입니다.     |   예    |      |  아니요      |    
-|  이름   |  문자열   |   배달 라인의 이름입니다.    |    아니요   |      |  POST     |     
+|  name   |  문자열   |   배달 라인의 이름입니다.    |    아니요   |      |  POST     |     
 |  configuredStatus   |  문자열   |  개발자가 지정한 배달 라인의 상태를 지정하는 다음 값들 중 하나입니다. <ul><li>**활성**</li><li>**비활성**</li></ul>     |  아니요     |      |   POST    |       
 |  effectiveStatus   |  문자열   |   시스템 유효성 검사에 따라 배달 라인의 유효성 관련 상태를 지정하는 다음 값들 중 하나입니다. <ul><li>**활성**</li><li>**비활성**</li><li>**처리 중**</li><li>**실패**</li></ul>    |    예   |      |  아니요      |      
 |  effectiveStatusReasons   |  배열   |  배달 라인의 유효성 관련 상태에 대한 이유를 지정하는 다음 값들 중 한 개 이상입니다. <ul><li>**AdCreativesInactive**</li><li>**ValidationFailed**</li></ul>      |  예     |     |    아니요    |           

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 추가 기능을 만듭니다.
 title: 추가 기능 만들기
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 만들기, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: d463fb1f2e40b8556d9f2c57847dae5420ec3b21
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: a24355ca09380c46d8e648899ca2fe96f9e989c7
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662543"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619095"
 ---
 # <a name="create-an-add-on"></a>추가 기능 만들기
 
@@ -37,7 +37,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| 게시    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
+| POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts``` |
 
 
 ### <a name="request-header"></a>요청 헤더
@@ -51,7 +51,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 
 요청 본문에는 다음 매개 변수가 있습니다.
 
-|  매개 변수  |  형식  |  설명  |  필수  |
+|  매개 변수  |  유형  |  설명  |  필수  |
 |------|------|------|------|
 |  applicationIds  |  배열  |  이 추가 기능이 연결된 앱의 스토어 ID가 포함된 배열입니다. 이 배열에서는 한 개의 항목만 지원됩니다.   |  예  |
 |  productId  |  문자열  |  추가 기능의 제품 ID입니다. 코드에서 추가 기능을 참조하는 데 사용할 수 있는 식별자입니다. 자세한 내용은 [제품 유형 및 제품 ID 설정](https://msdn.microsoft.com/windows/uwp/publish/set-your-iap-product-id)을 참조하세요.  |  예  |

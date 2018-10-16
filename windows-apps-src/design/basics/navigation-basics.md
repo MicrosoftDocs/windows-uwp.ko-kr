@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b388a196e1f5fa6649ac1fb072c80d01bba45e20
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575332"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620792"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -99,7 +99,7 @@ ms.locfileid: "4575332"
 
 1. 사용자에 대해 생각하세요. 앱과 각 페이지에서 일반적으로 통과할 경로를 추적하고, 사용자가 이를 통과하는 이유와 사용자가 가고 싶어하는 장소에 대해 생각하세요.
 
-2. 깊은 탐색 계층을 사용 하지 마세요. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
+2. 깊은 탐색 계층 구조를 사용 하지 마세요. 탐색이 3개 수준을 넘어가면 사용자가 깊은 계층에서 빠져나오기 어려울 수 있습니다.
 
 3. "페이지 왕복"을 피합니다. 페이지 왕복은 관련된 콘텐츠가 있지만 탐색하려면 위 단계로 올라갔다가 다시 내려와야 하는 경우를 말합니다.
 
@@ -188,13 +188,13 @@ ms.locfileid: "4575332"
         Use top navigation when:
 
         - 화면의 탐색 옵션을 모두 표시 하려고 합니다.
-        - 앱의 콘텐츠에 대 한 더 많은 공간이 필요 합니다.
-        - 아이콘 탐색 범주 설명 명확 하 게 수 없습니다.
+        - 원하는 앱의 콘텐츠에 대 한 더 많은 공간.
+        - 아이콘 탐색 범주를 명확히 설명할 수 없습니다.
         
-        사용 하 여 탭 하는 경우:
+        사용 하 여 탭 경우:
 
         - 탐색 기록 및 페이지 상태를 유지 하려고 합니다.
-        - 사용자가 탭 자주 전환할 것으로 예상 합니다.
+        - 사용자가 탭 자주 간을 전환할 것으로 예상 합니다.
 
 :::row-end:::
 
@@ -208,7 +208,7 @@ ms.locfileid: "4575332"
         Displays a vertical list of links to top-level pages. Use when:
         
         - 페이지가 최상위 수준에 있습니다.
-        - 많은 탐색 항목이 (5 개)
+        - 탐색 항목이 많습니다 (5 개)
         - 사용자가 페이지 간을 자주 전환할 것으로 예상되지 않습니다.
         
 :::row-end:::

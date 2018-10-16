@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: 앱에서 AdControl 오류를 검색하는 방법을 알아봅니다.
 title: JavaScript에서 오류 처리 연습
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b6d8e2b9e4d2e61901bd7de304134e5236af672
-ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
-ms.translationtype: HT
+ms.openlocfilehash: 5e25de40c7fd28cb43c308bd0361b400e7bf6909
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "1880934"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619835"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>JavaScript에서 오류 처리 연습
 
-이 연습에서는 JavaScript 앱에서 광고 관련 오류를 검색하는 방법을 보여 줍니다. 이 연습은 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)을 사용하여 배너를 표시하는 것을 안내하지만 일반적인 개념은 중간 광고 및 기본 광고에도 적용됩니다.
+이 연습에서는 JavaScript 앱에서 광고 관련 오류를 검색하는 방법을 보여 줍니다. 이 연습은 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)을 사용하여 배너를 표시하는 것을 안내하지만 일반적인 개념은 중간 광고 및 기본 광고에도 적용됩니다.
 
 이러한 예제에서는 **AdControl**이 포함된 JavaScript 앱이 있다고 가정합니다. 앱에 **AdControl**을 추가하는 방법을 보여 주는 단계별 지침은 [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)을 참조하세요. JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 

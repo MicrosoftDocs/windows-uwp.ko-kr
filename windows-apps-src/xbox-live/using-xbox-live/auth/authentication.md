@@ -1,7 +1,7 @@
 ---
 title: Authentication
 author: KevinAsgari
-description: 타이틀에 Xbox Live 사용자가 로그인 하는 방법을 알아봅니다.
+description: 타이틀에 Xbox Live 사용자는 로그인 하는 방법을 알아봅니다.
 ms.assetid: 7a9dfb3c-1ccc-4948-a218-37101069c91a
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 인증에 로그인
 ms.localizationpriority: medium
 ms.openlocfilehash: 61a4b0ef33d346b8ed4d3e0b8e074ede1edeba23
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574476"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621618"
 ---
 # <a name="authentication"></a>Authentication
 
-이 섹션에서는 Xbox live 인증
+이 섹션에서는 Xbox Live와 인증을 다룹니다.
 
 ## <a name="in-this-section"></a>이 섹션 내용
 

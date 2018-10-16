@@ -15,11 +15,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 672efaa0899fa8b63b5ec0fda09a20f4f0ab7d67
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565039"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623479"
 ---
 # <a name="xaml-lighting"></a>XAML 조명
 
@@ -461,10 +461,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-이 빛이 하기 위해 모든 XAML UIElement 또는 브러시를 적용할 수 있습니다. 이 예제에서는 다른 잠재적 사용법을 보여 줍니다.
+이 빛이 하 게 빛을 XAML UIElement 또는 브러시에 적용할 수 있습니다. 이 예제에서는 다양 한 잠재적인 사용법을 보여 줍니다.
 
 > [!Important]
-> 에 대 한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 아래의 태그입니다. 연결 된 속성은 코드 숨김에 이미 설정 됩니다.
+> 에 대 한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 아래 태그에서. 연결 된 속성은 코드 숨김에서 이미 설정 됩니다.
 
 ```xaml
 <StackPanel Width="100">
@@ -495,7 +495,7 @@ Platform::String^ OrangeSpotLight::GetId()
 
 이 XAML의 결과 다음과 같습니다.
 
-![요소의 예는 xaml 조명에 의해 켜 집니다.](images/orange-spot-light.png)
+![Xaml 조명에 의해 켜 집니다 요소의 예](images/orange-spot-light.png)
 
 > [!Important]
 > 위 예에서 마크업에서 UIElement.Lights 설정은 최소 Windows 10 크리에이터 업데이트 이상에 해당하는 버전의 앱에서만 지원됩니다. 이전 버전을 대상으로 하는 앱의 경우 코드 숨김에서 조명을 만들어야 합니다.

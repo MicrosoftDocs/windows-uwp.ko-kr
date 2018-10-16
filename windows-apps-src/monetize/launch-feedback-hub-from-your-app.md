@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: You can encourage your customers to leave feedback by launching Feedback Hub from your app.
 title: 앱에서 피드백 허브 시작
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 피드백 허브, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: f4a5c6dab627a2022b36a4afee3dc155b345f855
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 6617c3d5901fbb1a1e9a7f271f4c80d4f38e41f6
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689219"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623532"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 
@@ -48,7 +48,7 @@ ms.locfileid: "1689219"
     <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
     ```
 
-7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) 클래스의 정적 [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 메서드를 사용하여 사용자 장치에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다.
+7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) 클래스의 정적 [IsSupported](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 메서드를 사용하여 사용자 장치에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다.
 
     이 속성이 **true**를 반환하는 경우 컨트롤을 표시되도록 설정합니다. 다음 코드는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)에 대해 이 작업을 수행하는 방법을 보여 줍니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "1689219"
       > [!NOTE]
       > 피드백 허브는 현재 Xbox 장치에서 지원되지 않지만 **IsSupported** 속성은 Windows 10 버전 10.0.14271 이상을 실행하는 Xbox 장치에서 현재 **true**를 반환합니다. 이것은 알려진 문제로 Microsoft Store Services SDK의 이후 릴리스에서 수정될 예정입니다.  
 
-8. 사용자가 컨트롤을 클릭할 때 실행되는 이벤트 처리기에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 개체를 가져오고 [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) 메서드를 호출하여 피드백 허브 앱을 시작합니다. 이 메서드에 대한 두 개의 오버로드가 있습니다. 하나는 매개 변수가 없고, 다른 하나는 피드백과 연결하려는 메타데이터를 포함하는 키/값 쌍의 사전을 사용합니다. 다음 예제는 [Button](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click)의 [Click](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 이벤트 처리기에서 피드백 허브를 실행하는 방법을 보여 줍니다.
+8. 사용자가 컨트롤을 클릭할 때 실행되는 이벤트 처리기에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 개체를 가져오고 [LaunchAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync) 메서드를 호출하여 피드백 허브 앱을 시작합니다. 이 메서드에 대한 두 개의 오버로드가 있습니다. 하나는 매개 변수가 없고, 다른 하나는 피드백과 연결하려는 메타데이터를 포함하는 키/값 쌍의 사전을 사용합니다. 다음 예제는 [Button](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click)의 [Click](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 이벤트 처리기에서 피드백 허브를 실행하는 방법을 보여 줍니다.
 
     [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 

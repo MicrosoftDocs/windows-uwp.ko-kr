@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
 title: 소매 데모 (RDX) 기능을 앱에 추가
-description: 소매 판매 층에 앱을 표시 하는 데 도움이 소매 데모 모드에 대 한 앱을 준비 합니다.
+description: 소매 판매 바닥에 앱을 표시 하는 데 도움이 소매 데모 모드에 대 한 앱을 준비 합니다.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.author: joanlee
 ms.date: 10/02/2018
@@ -11,29 +11,29 @@ ms.technology: uwp
 keywords: windows 10, uwp, 소매 데모 앱
 ms.localizationpriority: medium
 ms.openlocfilehash: 152c775c1b69bfd82d8969aed7e638f98646bdd7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563810"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618810"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>소매 데모 (RDX) 기능을 앱에 추가
 
-고객에 게 Pc 및 장치를 판매 바닥 사용해에서 바로 이동할 수 있도록 Windows 앱에 소매 데모 모드를 포함 합니다.
+Pc와 판매 바닥의 장치를 사용해 고객에서 바로 이동할 수 있도록 Windows 앱에는 소매 데모 모드를 포함 합니다.
 
-고객은 소매점에서 Pc 및 디바이스의 데모를 사용해 수를 기대 합니다. 종종 했느냐가의 [소매 데모 환경 (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)를 통해 앱 어렵지 시간입니다.
+고객은 소매점에서 Pc 및 디바이스의 데모를 사용해를 기대 합니다. 종종 했느냐가 [소매 데모 환경 (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)를 통해 앱을 사용 하 여 수행해 시간입니다.
 
-_일반_ 또는 _정품_ 모드에 있는 동안 다양 한 환경을 제공 하기 위해 앱을 설정할 수 있습니다. 예를 들어 설치 프로세스를 사용 하 여 앱을 시작 하는 경우 정품 모드로 건너뛸 것 지난을에서 바로 이동할 수 있도록 샘플 데이터 및 기본 설정 사용 하 여 앱을 미리 채울 수 해야 합니다.
+_일반_ 또는 _정품_ 모드에 있는 동안 다양 한 환경을 제공 하기 위해 앱을 설정할 수 있습니다. 예를 들어, 설치 프로세스를 사용 하 여 앱을 시작 하는 경우 정품 모드에서는 지난 건너뛸을에서 바로 이동할 수 있도록 샘플 데이터 및 기본 설정 사용 하 여 앱을 미리 채울 수 해야 합니다.
 
-고객의 관점에서는 하나의 앱입니다. 두 가지 모드를 구별 하는 고객을 위해 권장 앱 정품 모드에 있는 동안가 표시 되는지 단어 "소매" 눈에 띄게 제목 표시줄 또는 적절 한 위치에서.
+고객의 관점에서 하나의 앱이 있습니다. 두 가지 모드를 구별 하는 고객을 위해 권장 앱 정품 모드에 있는 동안가 표시 되는지 단어 "소매" 눈에 띄게 제목 표시줄 또는 적절 한 위치에서.
 
-앱에 대 한 Microsoft Store 요구 사항 외에도 RDX 인식 앱도와 호환 되어야 RDX 설치, 삭제 및 업데이트 프로세스를 소매점에서 고객이 일관 되 게 긍정적인 경험 있는지 확인 합니다.
+앱에 대 한 Microsoft Store 요구 사항 외에도 RDX 인식 앱도와 호환 되어야 RDX 설치, 삭제 및 업데이트 프로세스는 소매점에서 고객이 일관 되 게 긍정적인 경험 있는지 확인 합니다.
 
 ## <a name="design-principles"></a>디자인 원칙
 
-* **최고를 표시**합니다. 소매 데모 환경을 사용 하 여 뛰어난 앱. 이 처음으로 고객에 게 것일 하므로 가장 조각을 표시 앱!
+* **최고를 표시**합니다. 소매 데모 환경을 뛰어난 앱을 사용 합니다. 이 처음으로 고객에 게 것일 하므로 최상의 조각을 표시 앱!
 
-* **빠른 표시**됩니다. 고객은 참을성이 부족할 수 있습니다. 고객이 앱의 진정한 가치를 더 빨리 경험할수록 더 좋습니다.
+* **빠른 표시**합니다. 고객은 참을성이 부족할 수 있습니다. 고객이 앱의 진정한 가치를 더 빨리 경험할수록 더 좋습니다.
 
 * **스토리를 간단 하 게 유지**합니다. 소매 데모 환경은 앱의 가치를 요약해 합니다.
 
@@ -41,29 +41,29 @@ _일반_ 또는 _정품_ 모드에 있는 동안 다양 한 환경을 제공 하
 
 ## <a name="technical-requirements"></a>기술 요구 사항
 
-인식 RDX 앱은 소매 고객에 게 앱의 최고를 보여 주고 것 이므로, 기술 요구 사항을 충족 하 고 모든 소매 데모 환경 앱에 대 한 Microsoft Store는 개인 정보 보호 규정을 준수 해야 있습니다.
+인식 RDX 앱은 소매 고객에 게 앱의 선보여 것 이므로, 기술 요구 사항을 충족 하 고 모든 소매 데모 환경 앱에 대 한 Microsoft 스토어에는 개인 정보 보호 규정을 준수 해야 있습니다.
 
-이 테스트 프로세스에서 명확성을 제공 하 고 유효성 검사 프로세스를 준비 하는 데는 검사 목록을으로 사용할 수 있습니다. 앱이 소매 데모 장치에서 실행되는 한, 유효성 검사 프로세스에서는 물론 소매 데모 환경 앱의 전체 수명 동안 이러한 요구 사항을 유지 관리해야 합니다.
+이 유효성 검사 프로세스를 준비 하는 데 도움이 하 고 테스트 프로세스에서 명확성을 제공 하는 검사 목록을으로 사용할 수 있습니다. 앱이 소매 데모 장치에서 실행되는 한, 유효성 검사 프로세스에서는 물론 소매 데모 환경 앱의 전체 수명 동안 이러한 요구 사항을 유지 관리해야 합니다.
 
 ### <a name="critical-requirements"></a>중요 한 요구 사항
 
-가능한 한 빨리 중요 한 이러한 요구 사항을 충족 하지 않는 RDX 인식 앱 모든 소매 데모 장치에서 제거 됩니다.
+이러한 중요 한 요구 사항을 충족 하지 않는 RDX 인식 앱 모든 소매 데모 장치에서 최대한 빨리 제거 됩니다.
 
 * **(Pii 개인) 개인 식별이 가능한 정보에 대 한 요청 하지 않도록**합니다. 이때 로그인 정보, Microsoft 계정 정보 또는 연락처 세부 정보입니다.
 
-* **오류가 발생**합니다. 앱이 오류 없이 실행되어야 합니다. 또한 소매 데모 장치를 사용하는 고객에게 오류나 알림이 표시되어서는 안 됩니다. 오류 부정적인 영향을 미친다는 앱 자체, 브랜드, 디바이스의 브랜드, 장치 제조업체 브랜드 및 Microsoft 브랜드 합니다.
+* **오류가 발생**합니다. 앱이 오류 없이 실행되어야 합니다. 또한 소매 데모 장치를 사용하는 고객에게 오류나 알림이 표시되어서는 안 됩니다. 오류 부정적인 영향을 미친다는 앱 자체, 브랜드, 디바이스의 브랜드, 장치 제조업체 브랜드 및 Microsoft의 브랜드 합니다.
 
 * **유료 앱 평가판 모드가 있어야**합니다. 앱 하거나 무료 이거나 [평가판 모드](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)를 포함 해야 합니다. 고객은 소매점에서 사용하는 앱에 대해 비용을 부담하려고 하지 않습니다.
 
 ### <a name="high-priority-requirements"></a>우선 순위가 높은 요구 사항
 
-이러한 우선 순위가 높은 요구 사항을 충족 하지 않는 RDX 인식 앱은 즉시 수정에 대 한 확인 해야 합니다. 즉시 수정할 수 없는 경우 모든 소매 데모 장치에서 이 앱을 제거할 수 있습니다.
+이러한 우선 순위가 높은 요구 사항을 충족 하지 않는 RDX 인식 앱 해결 하기 위해 즉시 확인 해야 합니다. 즉시 수정할 수 없는 경우 모든 소매 데모 장치에서 이 앱을 제거할 수 있습니다.
 
-* **오프 라인 경험 Memorable**합니다. 앱 소매점 장치의 50% 오프 라인으로 오프 라인 경험을 설명 하기 위해 필요 합니다. 이는 오프라인으로 앱을 조작하는 고객도 의미 있고 긍정적인 경험을 하도록 하려는 것입니다.
+* **오프 라인 경험 Memorable**합니다. 해야 하는 디바이스의 50% 정도 소매점 오프 라인으로 오프 라인 경험을 보여 줍니다. 이는 오프라인으로 앱을 조작하는 고객도 의미 있고 긍정적인 경험을 하도록 하려는 것입니다.
 
 * **업데이트 된 콘텐츠 환경**입니다. 앱은 온라인 때 업데이트용 프롬프트가 표시 될 수 없습니다. 업데이트가 필요한 경우 자동으로 수행 되어야 합니다.
 
-* **익명 통신 없음**입니다. 소매 데모 장치를 사용 하는 고객은 익명 사용자 이기 때문에 장치에서 메시지 콘텐츠를 공유할 수 있게 해야 합니다.
+* **익명 통신 없음**입니다. 소매 데모 장치를 사용 하는 고객은 익명 사용자 이기 때문에 장치에서 메시지 콘텐츠를 공유할 수 해야 합니다.
 
 * **정리 프로세스를 사용 하 여 일관 된 환경을 제공**합니다. 소매 데모 장치를 이용하는 모든 고객은 동일한 경험을 해야 합니다. 앱은 사용할 때마다 동일한 기본 상태로 돌아가는 [정리 프로세스](#clean-up-process) 사용 해야 합니다. 참조는 마지막 고객이 남긴 내용을 다음 고객이 싶지는 않을 것입니다. 여기에는 스코어보드, 도전 과제, 잠금 해제 등이 포함됩니다.
 
@@ -73,14 +73,14 @@ _일반_ 또는 _정품_ 모드에 있는 동안 다양 한 환경을 제공 하
 
 이 문제의 해결 방법에 대해 논의하기 위해 Windows Retail Store 팀에서 개발자에게 직접 연락할 수 있습니다.
 
-* **다양 한 장치 성공적으로 실행 하는 기능**입니다. 앱은 저급 사양의 장치를 비롯 한 모든 장치에서 잘 실행 되어야 합니다. 응용 프로그램을 최소 사양을 충족 되지 않은 장치에 설치 하는 경우 앱이에 대 한 사용자에 게 알리는 명확 하 게 해야 합니다. 앱이 항상 고성능으로 실행될 수 있도록 최소 장치 사양을 알려야 합니다.
+* **다양 한 장치 성공적으로 실행 하는 기능**입니다. 앱은 저급 사양의 장치를 비롯 한 모든 장치에서 잘 실행 되어야 합니다. 앱의 최소 사양을 맞지 않는 장치에 설치 된 경우 앱이에 대 한 사용자에 게 알리는 명확 하 게 해야 합니다. 앱이 항상 고성능으로 실행될 수 있도록 최소 장치 사양을 알려야 합니다.
 
-* **소매 스토어 앱 크기 요구 사항을 충족**합니다. 앱은 800MB 미만이어야 합니다. 인식 RDX 앱 크기 요구 사항을 충족 하지 않는 경우 직접 대 한 자세한 내용은 Windows Retail Store 팀에 문의 합니다.
+* **소매 스토어 앱 크기 요구 사항을 충족**합니다. 앱은 800MB 미만이어야 합니다. RDX 인식 앱 크기 요구 사항에 맞지 않는 경우 직접 대 한 자세한 내용은 Windows Retail Store 팀에 문의 합니다.
 
 ## <a name="retailinfo-api-preparing-your-code-for-demo-mode"></a>데모 모드에 대 한 코드를 준비 하는 RetailInfo API:
 
 ### <a name="isdemomodeenabled"></a>IsDemoModeEnabled
-앱을 실행할 코드 경로 지정 하는 Windows 10 SDK에서 [Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) 네임 스페이스의 일부인 [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) 유틸리티 클래스에서 [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) 속성 부울 표시기로 사용 _수직 _모드 또는 _정품_ 모드.
+앱을 실행할 코드 경로 지정 하는 Windows 10 SDK에서 [Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) 네임 스페이스의 일부인 [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) 유틸리티 클래스에서 [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) 속성 부울 표시기로 사용 _법선을 _모드 또는 _정품_ 모드.
 
 ``` csharp
 using Windows.Storage;
@@ -233,7 +233,7 @@ namespace Windows.System.Profile
 
 ## <a name="cleanup-process"></a>정리 프로세스
 
-정리 2 분 구매자 장치와 상호 작용을 중지 한 후 시작 됩니다. 소매 데모를 재생 하 고 Windows 시작 연락처, 사진 및 다른 앱에서 샘플 데이터를 다시 설정 합니다. 장치에 따라 완벽 하 게 다시 정상 모든 설정 하려면 1 ~ 5 분이 걸릴 수 있습니다. 이렇게 하면 모든 고객은 소매점에서 장치를 이용 하 고 디바이스와 상호 작용할 때 동일한 환경에 수 있습니다.
+정리는 구매자 장치와 상호 작용 중지 되 면 2 분 시작 됩니다. 소매 데모를 재생 하 고 Windows 시작 연락처, 사진 및 다른 앱에서 샘플 데이터를 다시 설정 합니다. 장치에 따라이 완벽 하 게 다시 정상 모든 설정 하려면 1 ~ 5 분 사이 걸릴 수 있습니다. 있는지 여부를 확인는 모든 고객은 소매점의 수는 장치를 이용 동일한 환경의 장치와 상호 작용할 때 합니다.
 
 1 단계: 정리
 * 모든 Win32 및 스토어 앱이 닫힙니다.
@@ -247,15 +247,15 @@ namespace Windows.System.Profile
 
 ### <a name="store-data-across-user-sessions"></a>사용자 세션 간에 데이터를 저장 합니다.
 
-사용자 세션 간에 데이터를 저장, 기본 정리 프로세스에서이 폴더의 데이터를 자동으로 삭제 되지 __ApplicationData.Current.TemporaryFolder__ 에 정보를 저장할 수 있습니다. 참고 *LocalState* 를 사용 하 여 저장 된 정보는 정리 프로세스 중 삭제 됩니다.
+사용자 세션 간에 데이터를 저장 하기 위해 기본 정리 프로세스에서이 폴더에 데이터를 자동으로 삭제 되지 __ApplicationData.Current.TemporaryFolder__ 에서 정보를 저장할 수 있습니다. 참고 정보 *LocalState* 를 사용 하 여 저장 된 정리 프로세스 중 삭제 됩니다.
 
 ### <a name="customize-the-cleanup-process"></a>정리 프로세스를 사용자 지정
 
-정리 프로세스를 사용자 지정 하려면 다음을 구현 합니다 `Microsoft-RetailDemo-Cleanup` 앱에 앱 서비스.
+정리 프로세스를 사용자 지정 하려면 구현는 `Microsoft-RetailDemo-Cleanup` 앱 서비스를 앱.
 
-사용자 지정 정리 논리가 필요한 시나리오에 광범위 하 게 설정, 다운로드 및 데이터를 캐시 하는 경우 또는 *LocalState* 데이터의 삭제 포함 됩니다.
+사용자 지정 정리 논리가 필요한 시나리오에는 광범위 한 설치 프로그램을 실행, 다운로드 및 데이터를 캐시 하는 경우 또는 *LocalState* 데이터의 삭제 포함 됩니다.
 
-1 단계: 앱 매니페스트에 _Microsoft RetailDemo 정리_ 서비스를 선언 합니다.
+1 단계: 앱 매니페스트에 _정리 RetailDemo-Microsoft-_ 서비스를 선언 합니다.
 ``` CSharp
   <Applications>
       <Extensions>
@@ -268,7 +268,7 @@ namespace Windows.System.Profile
 
 ```
 
-2 단계: 아래의 샘플 템플릿을 사용 하 여 _AppdataCleanup_ 사례 함수 아래에 있는 사용자 지정 정리 논리를 구현 합니다.
+2 단계: 아래의 샘플 템플릿을 사용 하 여 _AppdataCleanup_ 사례 함수 아래에 사용자 지정 정리 논리를 구현 합니다.
 ``` CSharp
 using System;
 using System.IO;

@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Windows.Services.Store 네임스페이스의 스토어 제품용 확장된 JSON 데이터 스키마에 대해 설명합니다.
 title: 스토어 제품용 데이터 스키마
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, ExtendedJsonData, Microsoft Store 제품, 스키마
 ms.localizationpriority: medium
-ms.openlocfilehash: 053391e78b4356e7e8042ba7864d99f1c95b2aad
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 77faa88524f348736c4c997dcd18ded200e9fd86
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673830"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621610"
 ---
 # <a name="data-schemas-for-store-products"></a>Microsoft Store 제품용 데이터 스키마
 

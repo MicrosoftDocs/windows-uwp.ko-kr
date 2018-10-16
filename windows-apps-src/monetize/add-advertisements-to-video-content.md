@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: AdScheduler 클래스를 사용하여 비디오 콘텐츠에 광고를 표시하는 방법을 알아봅니다.
 title: 비디오 콘텐츠에 광고 표시
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 9142770c6063aba34977c20309bcaeb6ac46450e
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: cc5dd40ca3d9fe6e20f5e79c95b59cef3bea9a34
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690649"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623152"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 
@@ -166,7 +166,7 @@ ms.locfileid: "1690649"
 
 ### <a name="onerroroccurred"></a>onErrorOccurred  
 
-이 이벤트는 **AdScheduler**에 오류가 생성될 때 발생합니다. 오류 코드 값에 대한 자세한 내용은 [ErrorCode](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.errorcode.aspx)를 참조하세요.
+이 이벤트는 **AdScheduler**에 오류가 생성될 때 발생합니다. 오류 코드 값에 대한 자세한 내용은 [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.errorcode)를 참조하세요.
 
 ### <a name="onpodcountdown"></a>onPodCountdown
 

@@ -1,28 +1,28 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Microsoft Advertising SDK를 설치하는 방법을 알아봅니다.
 title: Microsoft Advertising SDK 설치
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 광고, 설치, SDK, 광고 라이브러리
 ms.localizationpriority: medium
-ms.openlocfilehash: 17c12d09fdc7643a2d2ac1c13fa2a4e6c92cad03
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e65b26006cbeb7f7fbd9bf95f83051873e6f1140
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654882"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620197"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK 설치
 
 Windows 10용 UWP 앱에 광고를 표시하려면 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 이 SDK는 Visual Studio 2015 이상 버전의 확장입니다.
 
 > [!NOTE]
-> JavaScript/HTML UWP 앱을 개발하고 Windows10 SDK 버전 10.0.14393(1주년 업데이트) 이상을 설치한 경우 WinJS 라이브러리도 설치해야 합니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다. WinJS를 설치하려면 [WinJS 다운로드](http://try.buildwinjs.com/download/GetWinJS/)를 참조하세요.
+> 개발 하는 경우 JavaScript/HTML UWP 앱을 설치한 Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 나중에 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
 
 <span id="install-msi" />
 
@@ -33,11 +33,11 @@ MSI 설치 관리자를 통해 Microsoft Advertising Services SDK를 설치:
 1.  모든 Visual Studio 인스턴스를 닫습니다.
 
 2. 이전에 Microsoft Advertising SDK, Universal Ad Client SDK, Ad Mediator 확장 또는 Microsoft Store Engagement and Monetization SDK의 이전 버전을 설치한 경우 지금 이러한 SDK 버전을 제거합니다. 또 **명령 프롬프트** 창을 열고 다음 명령을 실행하여 Visual Studio와 함께 설치되었을 수 있으나 컴퓨터에 설치된 프로그램 목록에 나타나지 않을 수 있는 이전 광고 SDK 버전을 모두 정리할 수 있습니다.
-  ```
-  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
-  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
-  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
-  ```
+    ```
+    MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+    MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+    MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+    ```
 
 3.  [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 다운로드하여 설치합니다. 설치하는 데 몇 분 정도 걸릴 수 있습니다. 프로세스가 완료되었는지 확인하고 완료될 때까지 기다립니다.
 
@@ -56,11 +56,11 @@ NuGet을 통해 특정 UWP 프로젝트에서 Microsoft Advertising SDK 설치:
 1.  모든 Visual Studio 인스턴스를 닫습니다.
 
 2.  이전에 Microsoft Advertising SDK, Universal Ad Client SDK, Ad Mediator 확장 또는 Microsoft Store Engagement and Monetization SDK의 이전 버전을 설치한 경우 지금 이러한 SDK 버전을 제거합니다. 또 **명령 프롬프트** 창을 열고 다음 명령을 실행하여 Visual Studio와 함께 설치되었을 수 있으나 컴퓨터에 설치된 프로그램 목록에 나타나지 않을 수 있는 이전 광고 SDK 버전을 모두 정리할 수 있습니다.
-  ```
-  MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
-  MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
-  MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
-  ```
+    ```
+    MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
+    MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
+    MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
+    ```
 
 3.  Visual Studio를 시작하고 Microsoft Advertising SDK 라이브러리를 사용하려는 프로젝트를 엽니다.
     > [!NOTE]
@@ -105,7 +105,7 @@ Microsoft Advertising SDK를 설치한 후에는 다음 지침에 따라 광고 
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK의 프레임워크 패키지 이해
 
-UWP 앱용 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)의 Microsoft.Advertising.dll 라이브러리는 *프레임워크 패키지*로 구성됩니다. 이 라이브러리에는 [Microsoft.Advertising](https://msdn.microsoft.com/library/windows/apps/mt313187.aspx) 및 [Microsoft.Advertising.WinRT.UI](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.aspx) 네임스페이스의 광고 API가 포함되어 있습니다.
+UWP 앱용 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)의 Microsoft.Advertising.dll 라이브러리는 *프레임워크 패키지*로 구성됩니다. 이 라이브러리에는 [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) 및 [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui) 네임스페이스의 광고 API가 포함되어 있습니다.
 
 이 라이브러리는 프레임워크 패키지입니다. 다시 말해서 사용자가 이 라이브러리를 사용하는 앱 버전을 설치하면 수정 및 성능 향상이 포함된 새 버전의 라이브러리가 게시될 때마다 Windows 업데이트를 통해 사용자 디바이스의 라이브러리가 자동으로 업데이트됩니다. 따라서 고객의 디바이스에 항상 사용 가능한 최신 버전의 라이브러리가 설치됩니다.
 

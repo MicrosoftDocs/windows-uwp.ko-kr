@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: 이 섹션의 Java 코드 예제를 사용하여 Microsoft Store 제출 API를 사용해 게임 옵션과 예고편을 제출하는 방법에 대해 자세히 알아봅니다.
 title: 'Java 샘플: - 앱의 게임 옵션과 예고편 제출'
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, java
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b843e0a4a4178eb8ca044afb7f7f7867f2cc5bd
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: f84dfeb202a86c9b1cb1fa29a8c0dae83f3c54de
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653382"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618384"
 ---
 # <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Java 샘플: 앱의 게임 옵션과 예고편 제출
 
