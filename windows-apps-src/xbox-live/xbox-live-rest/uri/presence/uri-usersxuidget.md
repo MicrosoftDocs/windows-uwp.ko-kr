@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 308ecbddb5d62ae98d576f56af4cd3f7363c2c5a
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4615182"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692159"
 ---
 # <a name="get-usersxuidxuid"></a>GET (/users/xuid({xuid}))
 다른 사용자 또는 클라이언트의 존재 여부를 검색 합니다.

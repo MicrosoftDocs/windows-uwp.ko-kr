@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 00a6bbf06f918c0b86bcaed7ae7891b474baefe8
-ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.localizationpriority: medium
+ms.openlocfilehash: a92be54e55e06b4e7ffd61b1526425920ea80f96
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2017
-ms.locfileid: "852877"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694176"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **참고** 샘플 데이터가 얼마나 필요한지 그리고 얼마나 도움이 될지는 바인딩에서 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하는지 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)을 사용하는지에 달려 있습니다. 이 항목에서 설명하는 기술은 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) 사용을 기준으로 하므로 **{Binding}** 에만 적합합니다. 그러나 **{x:Bind}** 를 사용하는 경우에는 바인딩에서 적어도 항목 컨트롤에 대한 값을 비롯해 자리 표시자 값을 디자인 화면에 표시하므로 샘플 데이터가 똑같이 필요하지는 않습니다.
@@ -143,7 +143,7 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-**IsDesignTimeCreatable** 속성은 디자인 도구에서 실제로 클래스의 인스턴스를 만들어야 함을 의미합니다. 즉, 이 클래스는 공용 기본 생성자가 있고 자체적으로 실제 또는 샘플 데이터로 채워집니다. **IsDesignTimeCreatable**을 설정하지 않거나 **False**로 설정하면 샘플 데이터가 디자인 화면에 표시되지 않습니다. 이 경우 디자인 도구는 클래스를 구문 분석하여 바인딩 가능한 속성을 찾고 이러한 속성을 **데이터** 패널과 **데이터 바인딩 만들기** 대화 상자에 표시하기만 합니다.
+**IsDesignTimeCreatable** 속성은 디자인 도구에서 실제로 클래스의 인스턴스를 만들어야 함을 의미합니다. 즉, 이 클래스는 공용 기본 생성자가 있고 자체적으로 실제 또는 샘플 데이터로 채워집니다. **IsDesignTimeCreatable**을 설정하지 않거나 **False**로 설정하면 샘플 데이터가 디자인 화면에 표시되지 않습니다. 디자인 도구는 경우 모든 바인딩 가능한 속성에 대 한 클래스를 구문 분석 하 고 이러한 **데이터** 패널 및 **데이터 바인딩 만들기** 대화 상자를 표시 하는 것입니다.
 
 <a name="sample-data-for-prototyping"></a>프로토타입 생성용 샘플 데이터
 --------------------------------------------------------

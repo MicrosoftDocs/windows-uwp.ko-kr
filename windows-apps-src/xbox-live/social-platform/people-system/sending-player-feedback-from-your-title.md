@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 평판, 플레이어 피드백
 ms.localizationpriority: medium
 ms.openlocfilehash: e5239c04bd6a178133129f43fcd8a71c8e532b01
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4614041"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692100"
 ---
 # <a name="sending-player-feedback-from-your-title"></a>타이틀에서 플레이어 피드백 보내기
 대부분의 Xbox Live 구성원은 훌륭한 하지만 소수의 다른 사람의 게임 환경을 저하는 "잘못 된 사과". 사용자를 통해 사용자의 작은 이러한 비율을 식별 하 고 제출한 피드백 제목 합니다. 이러한 "잘못 된 사과" 수 있도록 제한 멀티 플레이어 경험 수 없는 방해가 있는 좋은 플레이어의 게임에서 인구의 나머지 부분을 보호 하도록 돕. Xbox 사용자 시스템을 정확 하 게 유지 하 게 보고 크게 의존 있으며 타이틀에 Xbox One 직접 참여 수 있습니다 크게 사용자층 신뢰도의 정확도 향상 시키는 데 도움이 됩니다.

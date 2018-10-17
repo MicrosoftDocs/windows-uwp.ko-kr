@@ -11,11 +11,11 @@ keywords: windows 10, uwp, Microsoft Store Services SDK, 대상 푸시 알림, �
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: 39ea899f9f0ee08d14ca5f182fdf07649ddd1d2e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4617334"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694202"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>앱에서 대상 푸시 알림 구성
 

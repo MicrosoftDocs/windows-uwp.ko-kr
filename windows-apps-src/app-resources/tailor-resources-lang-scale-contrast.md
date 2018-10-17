@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 5309b33e0f65a1a06e1a3c0060a84e4c4a88ef9d
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 8f3aa529e1c292bcea816e21222ca2a5e07f4319
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700799"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692318"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -48,7 +48,7 @@ ms.locfileid: "1700799"
 \Assets\Images\contrast-white\<logo.png, and other image files>
 ```
 
-위의 예와 같이 폴더의 이름을 지정하면 앱에서 고대비 설정을 사용하여 적절한 한정자로 지정된 폴더에서 리소스 파일을 로드합니다. 따라서 고대비 검정으로 설정되어 있으면 `\Assets\Images\contrast-black` 폴더의 리소스 파일이 로드됩니다. 없음(컴퓨터가 고대비 모드가 아님)으로 설정되어 있으면 `\Assets\Images\standard` 폴더의 리소스 파일이 로드됩니다.
+위의 예와 같이 폴더의 이름을 지정하면 앱에서 고대비 설정을 사용하여 적절한 한정자로 지정된 폴더에서 리소스 파일을 로드합니다. 따라서 고대비 검정으로 설정되어 있으면 `\Assets\Images\contrast-black` 폴더의 리소스 파일이 로드됩니다. 없음(컴퓨터가 고대비 모드가 아님)으로 설정되어 있으면 `\Assets\Images\contrast-standard` 폴더의 리소스 파일이 로드됩니다.
 
 ## <a name="use-qualifiers-in-file-names"></a>파일 이름에 한정자 사용
 

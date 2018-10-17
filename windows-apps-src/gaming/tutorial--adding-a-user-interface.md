@@ -1,60 +1,87 @@
 ---
-author: mtoepke
+author: abbycar
 title: 사용자 인터페이스 추가
-description: 샘플 게임에서 주 게임 개체 및 기본 렌더링 프레임워크를 구현하는 방법을 살펴보았습니다.
+description: DirectX UWP 게임에는 2D 사용자 인터페이스 오버레이 추가 하는 방법을 알아봅니다.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
-ms.author: mtoepke
-ms.date: 02/08/2017
+ms.author: abigailc
+ms.date: 10/24/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 사용자 인터페이스, directx
-ms.openlocfilehash: cb8cb8eae3328a9010553b7f3e041b8f2dbd8c02
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 3a82958f01530b84276823ea8d025d292bd664ac
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220723"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4691395"
 ---
 # <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+이제 게임에 갖추어져 해당 3D 시각 효과 2D 요소 일부 게임은 플레이어에 게 게임 상태에 대 한 피드백을 제공할 수 있도록 추가에 집중 하는 시간입니다. 이 간단한 메뉴 옵션을 추가 하 여 수행할 수 및 3d 그래픽 위에 주의 표시 구성 요소 파이프라인 출력 합니다.
 
-샘플 게임에서 주 게임 개체 및 기본 렌더링 프레임워크를 구현하는 방법을 살펴보았습니다. 이제 샘플 게임에서 플레이어의 게임 상태에 대한 피드백을 제공하는 방법을 살펴보겠습니다. 여기서는 3D 그래픽 파이프라인 출력의 맨 위에 간단한 메뉴 옵션 및 주의 표시 구성 요소를 추가하는 방법에 대해 알아봅니다.
+>[!Note]
+>이 샘플의 최신 게임 코드를 다운로드하지 않은 경우 [Direct3D 게임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동합니다. 이 샘플은 UWP 기능 샘플의 큰 컬렉션의 일부입니다. 샘플을 다운로드하는 방법에 대한 지침은 [GitHub에서 UWP 샘플 가져오기](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)를 참조하세요.
 
 ## <a name="objective"></a>목표
 
+Direct2D를 사용 하 여 포함 하는 UWP DirectX 게임에 다양 한 사용자 인터페이스 그래픽 및 동작을 추가 합니다.
+- [이동-보기 컨트롤러](tutorial--adding-controls.md) 경계 사각형을 비롯 한 주의 표시
+- 게임 상태에 맞는 메뉴
 
--   기본 사용자 인터페이스 그래픽 및 동작을 UWP(유니버설 Windows 플랫폼) DirectX 게임에 추가합니다.
 
 ## <a name="the-user-interface-overlay"></a>사용자 인터페이스 오버레이
 
 
-DirectX 게임에 텍스트 및 사용자 인터페이스 요소를 표시하는 방법은 많이 있지만 여기서는 한 가지 [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx)(텍스트 요소에 대한 [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) 포함)를 중점적으로 살펴보겠습니다.
+DirectX 게임에 텍스트 및 사용자 인터페이스 요소를 표시 하는 방법은 여러 가지가, 동안 하겠습니다 포커스 [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx)를 사용 합니다. 또한 사용할 것 [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) 텍스트 요소에 대 한 합니다.
 
-먼저 Direct2D가 아닌 경우를 명확히 살펴보겠습니다. Direct2D는 HTML이나 XAML 같은 사용자 인터페이스나 레이아웃을 위해 특별히 디자인된 것이 아닙니다. 또한 목록 상자나 단추 같은 사용자 인터페이스 구성 요소를 제공하지 않으며 div, 테이블, 그리드 같은 레이아웃 구성 요소도 제공하지 않습니다.
 
-Direct2D는 픽셀 기반 기본 그래픽 및 효과를 그리는 데 사용되는 2D 그리기 API입니다. Direct2D를 시작하기만 하면 매우 간단합니다. 복잡한 레이아웃 및 인터페이스 동작에는 시간과 계획이 필요합니다. 시뮬레이션 및 전략 게임처럼 게임을 재생하는 데 복잡한 사용자 인터페이스가 필요한 경우 XAML을 대신 사용해 보세요.
+Direct2D는 픽셀 기반 기본 그래픽 및 효과 그리는 데 사용 되는 2D 그리기 Api 집합입니다. Direct2D를 사용 하 여 시작 될 때 간단 하 게 유지 하는 것이 좋습니다. 복잡한 레이아웃 및 인터페이스 동작에는 시간과 계획이 필요합니다. 시뮬레이션 및 전략 게임 처럼는 복잡 한 사용자 인터페이스가 필요한 경우 대신 XAML을 사용 하는 것이 좋습니다.
 
-UWP DirectX 게임에서 XAML을 사용하여 사용자 인터페이스를 개발하는 방법에 대한 자세한 내용은 [게임 샘플 확장](tutorial-resources.md)을 참조하세요.
+> [!NOTE]
+> UWP DirectX 게임에서 XAML 사용 하 여 사용자 인터페이스를 개발 하는 방법에 대 한 정보를 [게임 샘플 확장](tutorial-resources.md)을 참조 하세요.
 
-이 게임 샘플에는 점수와 게임 내 제어를 위한 주의 표시와 게임 상태 텍스트 및 옵션(일시 중단 정보 및 수준 시작 옵션 등)을 표시하는 데 사용되는 오버레이라는 두 개의 주요 UI 구성 요소가 있습니다.
+Direct2D는 사용자 인터페이스 또는 HTML 및 XAML 같은 레이아웃에 대 한 특별히 설계 되지 않습니다. 목록, 상자나 단추 같은 사용자 인터페이스 구성 요소 제공 하지 않습니다. 또한 div, 테이블, 그리드 같은 레이아웃 구성 요소도 제공 하지 않습니다.
+
+
+이 게임 샘플에 대 한 두 주요 UI 구성 했습니다.
+1. 점수 및 게임에서 컨트롤에 대 한 주의 표시 합니다.
+2. 게임 상태 텍스트 및 일시 중단 정보 등의 옵션을 표시 하는 데 오버레이 및 수준 시작 옵션입니다.
 
 ### <a name="using-direct2d-for-a-heads-up-display"></a>주의 표시에 Direct2D 사용
 
-다음은 게임 화면 효과가 없는 게임 샘플의 게임 내 주의 표시입니다. 이 표시는 단순하고 깔끔하여 플레이어가 3D 세계 탐색 및 타겟 사격에만 집중할 수 있습니다. 뛰어난 인터페이스나 주의 표시는 플레이어가 게임에서 이벤트를 처리하고 대응하는 능력을 방해하면 안 됩니다.
+다음 이미지는 샘플에 대 한 게임 내 주의 표시를 보여 줍니다. 단순 하 고 깔 끔 플레이어가 3D 세계 탐색 및 대상을 슈팅 집중할 수 있습니다. 좋은 인터페이스나 주의 표시는 플레이어가 능력을 처리 하 고 게임에서 이벤트에 반응 복잡 하 게 하지 해야 합니다.
 
-![게임 오버레이의 스크린샷](images/sample3dgame-overlay-nogame.png)
+![게임 오버레이의 스크린샷](images/simple-dx-game-ui-overlay.png)
 
-알 수 있듯이 오버레이는 기본 항목인 십자 모양의 교차하는 선 세그먼트 두 개와 [이동-보기 컨트롤러](tutorial--adding-controls.md)의 사각형 두 개로 구성됩니다. 오른쪽 위에 있는 DirectWrite 텍스트는 현재 성공한 명중 수, 플레이어의 사격 수, 레벨의 남은 시간 및 현재 레벨 번호를 플레이어에게 알려줍니다. 오버레이의 게임 내 주의 표시 상태는 **GameHud** 클래스의 **Render** 메서드로 그리며 다음과 같이 코딩됩니다.
+오버레이 다음과 같은 기본 원형으로 이루어져 있습니다.
+- 플레이어의 오른쪽 위 모서리에 있는 [**DirectWrite**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038) 텍스트 
+    - 성공적인 적중 횟수
+    - 사격 플레이어의 수
+    - 레벨의 남은 시간
+    - 현재 레벨 번호 
+- 교차 십자 표시를 형성 하는 데 사용 하는 선 세그먼트 두
+- [이동-보기 컨트롤러](tutorial--adding-controls.md) 암묵적 경계에 대 한 하단 모서리에 두 개의 사각형입니다. 
+
+
+오버레이의 게임 내 주의 표시 상태 [**GameHud**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.h) 클래스의 [**GameHud::Render**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L234-L358) 메서드에서 그려집니다. 이 메서드 내에서 UI를 나타내는 Direct2D 오버레이 명 중 수, 시간, 나머지 및 수준 번호를 반영 하도록 업데이트 됩니다.
+
+게임 초기화 된 경우 추가 `TotalHits()`, `TotalShots()`, 및 `TimeRemaining()` [**swprintf_s**](https://docs.microsoft.com/cpp/c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l) 에 버퍼 및 인쇄 형식을 지정 합니다. [**DrawText**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd742848) 메서드를 사용 하 여를 그릴 수 있습니다. 수행 동일한 현재 수준 표시기를 그리기 ➀과 같은 완료 되지 않은 수준 표시 하도록 빈 숫자 및 ➊ 채워진된 번호를 특정 수준 완료 되었음을 표시 합니다.
+
+
+다음 코드 조각은 **GameHud::Render** 메서드의 프로세스에 대 한 안내 
+- 사용 하 여 비트맵 만들기 [* * ID2D1RenderTarget::DrawBitmap * *](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371880)
+- [ **D2D1::RectF** 를 사용 하 여 사각형에 단면화 UI 영역 끄기](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368184)
+- **DrawText** 텍스트 요소를 사용 하 여
 
 ```cpp
-void GameHud::Render(
-    _In_ Simple3DGame^ game,
-    _In_ ID2D1DeviceContext* d2dContext,
-    _In_ Windows::Foundation::Rect windowBounds
-    )
+void GameHud::Render(_In_ Simple3DGame^ game)
 {
+    auto d2dContext = m_deviceResources->GetD2DDeviceContext();
+    auto windowBounds = m_deviceResources->GetLogicalSize();
+
     if (m_showTitle)
     {
         d2dContext->DrawBitmap(
@@ -78,6 +105,7 @@ void GameHud::Render(
             );
     }
 
+    // Draw text for number of hits, total shots, and time remaining
     if (game != nullptr)
     {
         // This section is only used after the game state has been initialized.
@@ -91,765 +119,8 @@ void GameHud::Render(
             game->TotalShots(),
             game->TimeRemaining()
             );
-
-        d2dContext->DrawText(
-            wsbuffer,
-            length,
-            m_textFormatBody.Get(),
-            D2D1::RectF(
-                windowBounds.Width - GameConstants::HudRightOffset,
-                GameConstants::HudTopOffset,
-                windowBounds.Width,
-                GameConstants::HudTopOffset + (GameConstants::HudBodyPointSize + GameConstants::Margin) * 3
-                ),
-            m_textBrush.Get()
-            );
-
-        // Using the unicode characters starting at 0x2780 ( ➀ ) for the consecutive levels of the game.
-        // For completed levels, start with 0x278A ( ➊ ) (This is 0x2780 + 10).
-        uint32 levelCharacter[6];
-        for (uint32 i = 0; i < 6; i++)
-        {
-            levelCharacter[i] = 0x2780 + i + ((static_cast<uint32>(game->LevelCompleted()) == i) ? 10 : 0);
-        }
-        length = swprintf_s(
-            wsbuffer,
-            bufferLength,
-            L"%lc %lc %lc %lc %lc %lc",
-            levelCharacter[0],
-            levelCharacter[1],
-            levelCharacter[2],
-            levelCharacter[3],
-            levelCharacter[4],
-            levelCharacter[5]
-            );
-        d2dContext->DrawText(
-            wsbuffer,
-            length,
-            m_textFormatBodySymbol.Get(),
-            D2D1::RectF(
-                windowBounds.Width - GameConstants::HudRightOffset,
-                GameConstants::HudTopOffset + (GameConstants::HudBodyPointSize + GameConstants::Margin) * 3 + GameConstants::Margin,
-                windowBounds.Width,
-                GameConstants::HudTopOffset + (GameConstants::HudBodyPointSize+ GameConstants::Margin) * 4
-                ),
-            m_textBrush.Get()
-            );
-
-        if (game->IsActivePlay())
-        {
-            // Draw a rectangle for the touch input for the move control.
-            d2dContext->DrawRectangle(
-                D2D1::RectF(
-                    0.0f,
-                    windowBounds.Height - GameConstants::TouchRectangleSize,
-                    GameConstants::TouchRectangleSize,
-                    windowBounds.Height
-                    ),
-                m_textBrush.Get()
-                );
-            // Draw a rectangle for the touch input for the fire control.
-            d2dContext->DrawRectangle(
-                D2D1::RectF(
-                    windowBounds.Width - GameConstants::TouchRectangleSize,
-                    windowBounds.Height - GameConstants::TouchRectangleSize,
-                    windowBounds.Width,
-                    windowBounds.Height
-                    ),
-                m_textBrush.Get()
-                );
-
-            // Draw the cross hairs.
-            d2dContext->DrawLine(
-                D2D1::Point2F(windowBounds.Width / 2.0f - GameConstants::CrossHairHalfSize, windowBounds.Height / 2.0f),
-                D2D1::Point2F(windowBounds.Width / 2.0f + GameConstants::CrossHairHalfSize, windowBounds.Height / 2.0f),
-                m_textBrush.Get(),
-                3.0f
-                );
-            d2dContext->DrawLine(
-                D2D1::Point2F(windowBounds.Width / 2.0f, windowBounds.Height / 2.0f - GameConstants::CrossHairHalfSize),
-                D2D1::Point2F(windowBounds.Width / 2.0f, windowBounds.Height / 2.0f + GameConstants::CrossHairHalfSize),
-                m_textBrush.Get(),
-                3.0f
-                );
-        }
-    }
-}
-```
-
-이 코드에서는 오버레이에 대해 설정된 Direct2D 렌더링 대상이 명중 수, 남은 시간 및 수준 번호를 반영하도록 업데이트됩니다. 사각형은 [**DrawRect**](https://msdn.microsoft.com/library/windows/desktop/dd371902)를 호출하여 그리고 십자 모양은 한 쌍의 [**DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895)을 호출하여 그립니다.
-
-> **참고** **GameHud::Render** 호출에서는 주 창 사각형의 크기를 포함하는 [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) 매개 변수를 사용합니다. 여기서는 DIP(디바이스 독립적 픽셀) 측정값에서 창 크기 가져오기 같은 UI 프로그래밍의 필수적인 부분을 보여 줍니다. 이때 DIP는 1인치의 1/96로 정의됩니다. Direct2D에서는 그리기가 수행될 때 실제 픽셀에 맞춰 그리기 단위의 크기를 조정하며 Windows DPI(인치당 도트 수) 설정을 사용하여 이 작업을 수행합니다. 마찬가지로 DirectWrite를 사용하여 텍스트를 그리는 경우에도 글꼴 크기에 대한 포인트가 아닌 DIP를 지정합니다. DIP는 부동 소수점 수로 표현됩니다.
-
- 
-
-### <a name="displaying-game-state-information-with-an-overlay"></a>오버레이에 게임 상태 정보 표시
-
-이 주의 표시 외에도 게임 샘플에는 5가지 게임 상태를 나타내는 오버레이가 있습니다. 이 상태는 모두 플레이어가 읽어야 하는 텍스트가 포함된 큰 검은색 사각형으로 되어 있습니다. 이동-보기 컨트롤러 사각형은 이러한 상태에서 활성화되지 않으므로 그려지지 않습니다. 이러한 오버레이 상태는 다음과 같습니다.
-
--   게임 시작 오버레이입니다. 플레이어가 게임을 시작하면 표시됩니다. 게임 세션에서 최고 점수가 포함되어 있습니다.
-
-    ![simple3dgamedx 시작 화면의 스크린샷](images/simple3dgamestart.png)
-
--   일시 정지 상태.
-
-    ![simple3dgamedx 일시 정지 화면의 스크린샷](images/simple3dgame-overlay-pause.png)
-
--   레벨 시작 상태. 플레이어가 새 레벨을 시작하면 표시됩니다.
-
-    ![simple3dgamedx 레벨 시작 화면의 스크린샷](images/simple3dgame-overlay-newgame.png)
-
--   게임 종료 상태. 플레이어가 레벨에 실패하면 표시됩니다.
-
-    ![simple3dgamedx 게임 종료 화면의 스크린샷](images/simple3dgame-overlay-gameover.png)
-
--   게임 시작 표시 상태. 플레이어가 게임에 승리하면 표시됩니다. 플레이어가 달성한 최종 점수가 포함되어 있습니다.
-
-    ![simple3dgamedx 승리 화면](images/simple3dgame-overlay-gamestats.png)
-
-이러한 5가지 상태에 대해 오버레이를 초기화하고 그리는 방법을 살펴보겠습니다.
-
-### <a name="initializing-and-drawing-the-overlay"></a>오버레이 초기화 및 그리기
-
-5가지 명시적 상태에는 공통된 점이 있습니다. 첫 번째는 모두 화면의 가운데에 있는 검은색 사각형을 배경으로 사용한다는 점이고, 두 번째는 표시된 텍스트가 제목 텍스트 또는 본문 텍스트라는 점, 세 번째는 텍스트에서 맑은 고딕 글꼴을 사용하고 배경 사각형 위에 그려진다는 점입니다. 따라서 필요한 리소스와 해당 리소스를 구현하는 메서드가 매우 유사합니다.
-
-게임 샘플에는 4개의 메서드(**GameInfoOverlay::Initialize**, **GameInfoOverlay::SetDpi**, **GameInfoOverlay::RecreateDirectXResources** 및 **GameInfoOverlay::RecreateDpiDependentResources**)가 있으며 각각 초기화하고, 인치당 도트 수를 설정하고, DirectWrite 리소스(텍스트 요소)를 다시 만들고, 이 오버레이 표시를 생성하는 데 사용됩니다. 다음은 이러한 4개 메서드에 대한 코드입니다.
-
-```cpp
-void GameInfoOverlay::Initialize(
-    _In_ ID2D1Device*         d2dDevice,
-    _In_ ID2D1DeviceContext*  d2dContext,
-    _In_ IDWriteFactory*      dwriteFactory,
-    _In_ float                dpi)
-{
-    m_initialized = true;
-
-    m_dwriteFactory = dwriteFactory;
-    m_dpi = dpi;
-    m_d2dDevice = d2dDevice;
-    m_d2dContext = d2dContext;
-
-    ComPtr<ID2D1Factory> factory;
-    d2dDevice->GetFactory(&factory);
-
-    DX::ThrowIfFailed(
-        factory.As(&m_d2dFactory)
-        );
-
-    RecreateDirectXResources();
-}
-```
-
-```cpp
-void GameInfoOverlay::SetDpi(float dpi)
-{
-    if (m_initialized)
-    {
-        if (dpi != m_dpi)
-        {
-            m_dpi = dpi;
-            RecreateDpiDependentResources();
-        }
-    }
-}
-```
-
-```cpp
-void GameInfoOverlay::RecreateDirectXResources()
-{
-    if (!m_initialized)
-    {
-        return;
-    }
-
-    // Create D2D Resources.
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI",
-            nullptr,
-            DWRITE_FONT_WEIGHT_MEDIUM,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            32,         // font size
-            L"en-us",   // locale
-            &m_textFormatTitle
-            )
-        );
-
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI",
-            nullptr,
-            DWRITE_FONT_WEIGHT_LIGHT,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            24,         // font size
-            L"en-us",   // locale
-            &m_textFormatBody
-            )
-        );
-
-    DX::ThrowIfFailed(
-        m_textFormatTitle->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER)
-        );
-    DX::ThrowIfFailed(
-        m_textFormatTitle->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR)
-        );
-    DX::ThrowIfFailed(
-        m_textFormatBody->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_LEADING)
-        );
-    DX::ThrowIfFailed(
-        m_textFormatBody->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR)
-        );
-
-    DX::ThrowIfFailed(
-        m_d2dContext->CreateSolidColorBrush(
-            D2D1::ColorF(D2D1::ColorF::White),
-            &m_textBrush
-            )
-        );
-    DX::ThrowIfFailed(
-        m_d2dContext->CreateSolidColorBrush(
-            D2D1::ColorF(D2D1::ColorF::Black),
-            &m_backgroundBrush
-            )
-        );
-     DX::ThrowIfFailed(
-        m_d2dContext->CreateSolidColorBrush(
-            D2D1::ColorF(0xdb7100, 1.0f),
-            &m_actionBrush
-            )
-        );
-
-     RecreateDpiDependentResources();
-}
-```
-
-```cpp
-void GameInfoOverlay::RecreateDpiDependentResources()
-{
-    m_levelBitmap = nullptr;
-
-    // Create a D2D bitmap to be used for Game Info Overlay when waiting to
-    // start a level or to display game statistics.
-    D2D1_BITMAP_PROPERTIES1 properties;
-    properties.pixelFormat.format = DXGI_FORMAT_B8G8R8A8_UNORM;
-    properties.pixelFormat.alphaMode = D2D1_ALPHA_MODE_PREMULTIPLIED;
-    properties.dpiX = m_dpi;
-    properties.dpiY = m_dpi;
-    properties.bitmapOptions = D2D1_BITMAP_OPTIONS_TARGET;
-    properties.colorContext = nullptr;
-    DX::ThrowIfFailed(
-        m_d2dContext->CreateBitmap(
-            D2D1::SizeU(
-                static_cast<UINT32>(GameInfoOverlayConstant::Width * m_dpi / 96.0f),
-                static_cast<UINT32>(GameInfoOverlayConstant::Height * m_dpi / 96.0f)
-                ),
-            nullptr,
-            0,
-            &properties,
-            &m_levelBitmap
-            )
-        );
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->Clear(D2D1::ColorF(D2D1::ColorF::Black));
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-
-```
-
-**Initialize** 메서드는 해당 메서드에 전달된 [**ID2D1Device**](https://msdn.microsoft.com/library/windows/desktop/hh404478) 개체에서 팩터리를 가져와 오버레이 개체 자체에서 그릴 수 있는 [**ID2D1DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/hh404479)를 만드는 데 사용하고 **m\_dWriteFactory** 필드를 제공된 [**IDWriteFactory**](https://msdn.microsoft.com/library/windows/desktop/dd368183) 참조로 설정합니다. 컨텍스트에 대한 DPI도 설정합니다. 그런 다음 **RecreateDeviceResources**를 호출하여 오버레이를 어셈블하고 그립니다.
-
-**RecreateDeviceResources**는 DirectWrite 팩터리 개체를 사용하여 오버레이에 표시된 제목 및 본문 텍스트 문자열에 대한 포맷터(브러시)를 만듭니다. 텍스트를 그리는 흰색 브러시, 배경을 그리는 검은색 브러시 및 작업 메시지를 그리는 주황색 브러시를 만듭니다. 그런 다음 **RecreateDpiDependentResources**를 호출하여 텍스트를 그릴 비트맵을 준비합니다([**ID2D1DeviceContext::CreateBitmap**](https://msdn.microsoft.com/library/windows/desktop/hh404480) 호출). 마지막으로 **RecreateDpiDependentResources**는 Direct2D 디바이스 컨텍스트의 렌더링 대상을 비트맵으로 설정하고 지운 다음 비트맵의 각 픽셀을 검은색으로 설정합니다.
-
-이제 오버레이에 몇 가지 텍스트만 표시하면 됩니다.
-
-### <a name="representing-game-state-in-the-overlay"></a>오버레이에 게임 상태 표시
-
-게임 샘플에 있는 5가지 오버레이의 **GameInfoOverlay** 개체에는 각각 해당하는 메서드가 있습니다. 이러한 메서드는 오버레이의 변형을 그려 게임 자체에 대한 명시적 정보를 플레이어에게 전달합니다. 물론 이러한 전달은 제목 문자열과 본문 문자열의 두 문자열로 표현됩니다. 샘플은 **RecreateDeviceResources** 메서드에서 이 정보에 대한 리소스 및 레이아웃을 이미 구성했으므로 오버레이 상태 관련 문자열만 제공하면 됩니다.
-
-이제 **GameInfoOverlay** 클래스 정의에서 샘플은 다음과 같이 오버레이의 특정 영역에 해당하는 세 개의 사각형 영역을 선언했습니다.
-
-```cpp
-static const D2D1_RECT_F titleRectangle = D2D1::RectF(50.0f, 50.0f, GameInfoOverlayConstant::Width - 50.0f, 100.0f);
-static const D2D1_RECT_F bodyRectangle = D2D1::RectF(50.0f, 110.0f, GameInfoOverlayConstant::Width - 50.0f, GameInfoOverlayConstant::Height - 50.0f);
-static const D2D1_RECT_F actionRectangle = D2D1::RectF(50.0f, GameInfoOverlayConstant::Height - 45.0f, GameInfoOverlayConstant::Width - 50.0f, GameInfoOverlayConstant::Height - 5.0f);
-```
-
-이러한 영역은 각각 특정 용도로 사용됩니다.
-
--   **titleRectangle**에는 제목 텍스트가 그려집니다.
--   **bodyRectangle**에는 본문 텍스트가 그려집니다.
--   **actionRectangle**에는 플레이어에 특정 작업을 수행하도록 알리는 텍스트가 그려집니다. 이 영역은 오버레이 비트맵의 왼쪽 아래에 있습니다.
-
-이러한 영역에 주의하면서 상태 관련 메서드 중 하나인 **GameInfoOverlay::SetGameStats**에 대해 살펴보고 오버레이를 그리는 방법을 알아보겠습니다.
-
-```cpp
-void GameInfoOverlay::SetGameStats(int maxLevel, int hitCount, int shotCount)
-{
-    int length;
-    Platform::String^ string;
-
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->FillRectangle(&titleRectangle, m_backgroundBrush.Get());
-    m_d2dContext->FillRectangle(&bodyRectangle, m_backgroundBrush.Get());
-    string = "High Score";
-
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
-        m_textFormatTitle.Get(),
-        titleRectangle,
-        m_textBrush.Get()
-        );
-    length = swprintf_s(
-        wsbuffer,
-        bufferLength,
-        L"Levels Completed %d\nTotal Points %d\nTotal Shots %d",
-        maxLevel,
-        hitCount,
-        shotCount
-        );
-    string = ref new Platform::String(wsbuffer, length);
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
-        m_textFormatBody.Get(),
-        bodyRectangle,
-        m_textBrush.Get()
-        );
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-```
-
-**GameInfoOverlay** 개체가 **Initialize** 및 **RecreateDirectXResources**를 사용하여 초기화하고 구성한 Direct2D 디바이스 컨텍스트를 사용하여 이 메서드는 배경 브러시를 통해 검은색으로 제목 및 본문 사각형을 채웁니다. 이 메서드는 흰색 텍스트 브러시를 사용하여 "High Score" 문자열에 대한 텍스트를 제목 사각형에 그리고 게임 상태 업데이트 정보를 포함하는 문자열을 본문 사각형에 그립니다.
-
-작업 사각형은 다음에 **DirectXApp** 개체의 메서드에서 **GameInfoOverlay::SetAction**을 호출하여 업데이트하며, 이 사각형은 **SetAction**에서 플레이어에게 적합한 메시지(예: "계속하려면 탭하세요.")를 결정하는 데 필요한 게임 상태 정보를 제공합니다.
-
-지정된 상태에 대한 오버레이는 다음과 같이 **DirectXApp**의 **SetGameInfoOverlay** 메서드에서 선택합니다.
-
-```cpp
-void DirectXApp::SetGameInfoOverlay(GameInfoOverlayState state)
-{
-    m_gameInfoOverlayState = state;
-    switch (state)
-    {
-    case GameInfoOverlayState::Loading:
-        m_renderer->InfoOverlay()->SetGameLoading(m_loadingCount);
-        break;
-
-    case GameInfoOverlayState::GameStats:
-        m_renderer->InfoOverlay()->SetGameStats(
-            m_game->HighScore().levelCompleted + 1,
-            m_game->HighScore().totalHits,
-            m_game->HighScore().totalShots
-            );
-        break;
-
-    case GameInfoOverlayState::LevelStart:
-        m_renderer->InfoOverlay()->SetLevelStart(
-            m_game->LevelCompleted() + 1,
-            m_game->CurrentLevel()->Objective(),
-            m_game->CurrentLevel()->TimeLimit(),
-            m_game->BonusTime()
-            );
-        break;
-
-    case GameInfoOverlayState::GameOverCompleted:
-        m_renderer->InfoOverlay()->SetGameOver(
-            true,
-            m_game->LevelCompleted() + 1,
-            m_game->TotalHits(),
-            m_game->TotalShots(),
-            m_game->HighScore().totalHits
-            );
-        break;
-
-    case GameInfoOverlayState::GameOverExpired:
-        m_renderer->InfoOverlay()->SetGameOver(
-            false,
-            m_game->LevelCompleted(),
-            m_game->TotalHits(),
-            m_game->TotalShots(),
-            m_game->HighScore().totalHits
-            );
-        break;
-
-    case GameInfoOverlayState::Pause:
-        m_renderer->InfoOverlay()->SetPause();
-        break;
-    }
-}
-```
-
-이제 게임 샘플에서 게임 상태에 따라 텍스트 정보를 플레이어에게 전달할 수 있습니다.
-
-### <a name="next-steps"></a>다음 단계
-
-다음 항목인 [컨트롤 추가](tutorial--adding-controls.md)에서는 플레이어가 게임 샘플과 상호 작용하는 방법 및 입력을 통해 게임 상태를 변경하는 방법에 대해 살펴봅니다.
-
-### <a name="complete-sample-code-for-this-section"></a>이 섹션에 대한 전체 샘플 코드
-
-GameHud.h
-
-```cpp
-//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
-//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-//// PARTICULAR PURPOSE.
-////
-//// Copyright (c) Microsoft Corporation. All rights reserved
-
-#pragma once
-
-#include "Simple3DGame.h"
-#include "DirectXSample.h"
-
-ref class Simple3DGame;
-
-ref class GameHud
-{
-internal:
-    GameHud(
-        _In_ Platform::String^ titleHeader,
-        _In_ Platform::String^ titleBody
-        );
-
-    void CreateDeviceIndependentResources(
-        _In_ IDWriteFactory* dwriteFactory,
-        _In_ IWICImagingFactory* wicFactory
-        );
-
-    void CreateDeviceResources(_In_ ID2D1DeviceContext* d2dContext);
-    void UpdateForWindowSizeChange(_In_ Windows::Foundation::Rect windowBounds);
-    void Render(
-        _In_ Simple3DGame^ game,
-        _In_ ID2D1DeviceContext* d2dContext,
-        _In_ Windows::Foundation::Rect windowBounds
-        );
-
-private:
-    Microsoft::WRL::ComPtr<IDWriteFactory>              m_dwriteFactory;
-    Microsoft::WRL::ComPtr<IWICImagingFactory>          m_wicFactory;
-
-    Microsoft::WRL::ComPtr<ID2D1SolidColorBrush>        m_textBrush;
-    Microsoft::WRL::ComPtr<IDWriteTextFormat>           m_textFormatBody;
-    Microsoft::WRL::ComPtr<IDWriteTextFormat>           m_textFormatBodySymbol;
-
-    Microsoft::WRL::ComPtr<IDWriteTextFormat>           m_textFormatTitleHeader;
-    Microsoft::WRL::ComPtr<IDWriteTextFormat>           m_textFormatTitleBody;
-    Microsoft::WRL::ComPtr<ID2D1Bitmap>                 m_logoBitmap;
-    Microsoft::WRL::ComPtr<IDWriteTextLayout>           m_titleHeaderLayout;
-    Microsoft::WRL::ComPtr<IDWriteTextLayout>           m_titleBodyLayout;
-
-    bool                                                m_showTitle;
-    Platform::String^                                   m_titleHeader;
-    Platform::String^                                   m_titleBody;
-
-    float                                               m_titleBodyVerticalOffset;
-    D2D1_SIZE_F                                         m_logoSize;
-    D2D1_SIZE_F                                         m_maxTitleSize;
-};
-```
-
-GameHud.cpp
-
-```cpp
-//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
-//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-//// PARTICULAR PURPOSE.
-////
-//// Copyright (c) Microsoft Corporation. All rights reserved
-
-#include "pch.h"
-#include "GameHud.h"
-#include "GameConstants.h"
-
-using namespace Microsoft::WRL;
-using namespace Windows::UI::Core;
-using namespace Windows::ApplicationModel;
-using namespace Windows::Foundation;
-using namespace Windows::Storage;
-using namespace Windows::UI::ViewManagement;
-using namespace Windows::Graphics::Display;
-using namespace D2D1;
-
-//----------------------------------------------------------------------
-
-GameHud::GameHud(
-    _In_ Platform::String^ titleHeader,
-    _In_ Platform::String^ titleBody
-    )
-{
-    m_titleHeader = titleHeader;
-    m_titleBody = titleBody;
-
-    m_showTitle = true;
-    m_titleBodyVerticalOffset = GameConstants::Margin;
-    m_logoSize = D2D1::SizeF(0.0f, 0.0f);
-}
-
-//----------------------------------------------------------------------
-
-void GameHud::CreateDeviceIndependentResources(
-    _In_ IDWriteFactory* dwriteFactory,
-    _In_ IWICImagingFactory* wicFactory
-    )
-{
-    m_dwriteFactory = dwriteFactory;
-    m_wicFactory = wicFactory;
-
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI",
-            nullptr,
-            DWRITE_FONT_WEIGHT_LIGHT,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            GameConstants::HudBodyPointSize,
-            L"en-us",
-            &m_textFormatBody
-            )
-        );
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI Symbol",
-            nullptr,
-            DWRITE_FONT_WEIGHT_LIGHT,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            GameConstants::HudBodyPointSize,
-            L"en-us",
-            &m_textFormatBodySymbol
-            )
-        );
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI Light",
-            nullptr,
-            DWRITE_FONT_WEIGHT_LIGHT,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            GameConstants::HudTitleHeaderPointSize,
-            L"en-us",
-            &m_textFormatTitleHeader
-            )
-        );
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI Light",
-            nullptr,
-            DWRITE_FONT_WEIGHT_LIGHT,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            GameConstants::HudTitleBodyPointSize,
-            L"en-us",
-            &m_textFormatTitleBody
-            )
-        );
-
-    DX::ThrowIfFailed(m_textFormatBody->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_LEADING));
-    DX::ThrowIfFailed(m_textFormatBody->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR));
-    DX::ThrowIfFailed(m_textFormatBodySymbol->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_LEADING));
-    DX::ThrowIfFailed(m_textFormatBodySymbol->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR));
-    DX::ThrowIfFailed(m_textFormatTitleHeader->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_LEADING));
-    DX::ThrowIfFailed(m_textFormatTitleHeader->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR));
-    DX::ThrowIfFailed(m_textFormatTitleBody->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_LEADING));
-    DX::ThrowIfFailed(m_textFormatTitleBody->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR));
-}
-
-//----------------------------------------------------------------------
-
-void GameHud::CreateDeviceResources(_In_ ID2D1DeviceContext* d2dContext)
-{
-    auto location = Package::Current->InstalledLocation;
-    Platform::String^ path = Platform::String::Concat(location->Path, "\\");
-    path = Platform::String::Concat(path, "windows-sdk.png");
-
-    ComPtr<IWICBitmapDecoder> wicBitmapDecoder;
-    DX::ThrowIfFailed(
-        m_wicFactory->CreateDecoderFromFilename(
-            path->Data(),
-            nullptr,
-            GENERIC_READ,
-            WICDecodeMetadataCacheOnDemand,
-            &wicBitmapDecoder
-            )
-        );
-
-    ComPtr<IWICBitmapFrameDecode> wicBitmapFrame;
-    DX::ThrowIfFailed(
-        wicBitmapDecoder->GetFrame(0, &wicBitmapFrame)
-        );
-
-    ComPtr<IWICFormatConverter> wicFormatConverter;
-    DX::ThrowIfFailed(
-        m_wicFactory->CreateFormatConverter(&wicFormatConverter)
-        );
-
-    DX::ThrowIfFailed(
-        wicFormatConverter->Initialize(
-            wicBitmapFrame.Get(),
-            GUID_WICPixelFormat32bppPBGRA,
-            WICBitmapDitherTypeNone,
-            nullptr,
-            0.0,
-            WICBitmapPaletteTypeCustom  // The BGRA format has no palette, so this value is ignored.
-            )
-        );
-
-    double dpiX = 96.0f;
-    double dpiY = 96.0f;
-    DX::ThrowIfFailed(
-        wicFormatConverter->GetResolution(&dpiX, &dpiY)
-        );
-
-    // Create D2D Resources.
-    DX::ThrowIfFailed(
-        d2dContext->CreateBitmapFromWicBitmap(
-            wicFormatConverter.Get(),
-            BitmapProperties(
-                PixelFormat(DXGI_FORMAT_B8G8R8A8_UNORM, D2D1_ALPHA_MODE_PREMULTIPLIED),
-                static_cast<float>(dpiX),
-                static_cast<float>(dpiY)
-                ),
-            &m_logoBitmap
-            )
-        );
-
-    m_logoSize = m_logoBitmap->GetSize();
-
-    DX::ThrowIfFailed(
-        d2dContext->CreateSolidColorBrush(
-            D2D1::ColorF(D2D1::ColorF::White),
-            &m_textBrush
-            )
-        );
-}
-
-//----------------------------------------------------------------------
-
-void GameHud::UpdateForWindowSizeChange(_In_ Windows::Foundation::Rect windowBounds)
-{
-    m_maxTitleSize.width = windowBounds.Width - GameConstants::HudSafeWidth;
-    m_maxTitleSize.height = windowBounds.Height;
-
-    float headerWidth = m_maxTitleSize.width - (m_logoSize.width + 2 * GameConstants::Margin);
-
-    if (headerWidth > 0)
-    {
-        // Only resize the text layout for the Title area when there is enough space.
-        m_showTitle = true;
-
-        DX::ThrowIfFailed(
-            m_dwriteFactory->CreateTextLayout(
-                m_titleHeader->Data(),
-                m_titleHeader->Length(),
-                m_textFormatTitleHeader.Get(),
-                headerWidth,
-                m_maxTitleSize.height,
-                &m_titleHeaderLayout
-                )
-            );
-
-        DWRITE_TEXT_METRICS metrics = {0};
-        DX::ThrowIfFailed(
-            m_titleHeaderLayout->GetMetrics(&metrics)
-            );
-
-        // Compute the vertical size of the laid out header and logo.  This could change
-        // based on the window size and the layout of the text.  In some cases, the text
-        // may wrap.
-        m_titleBodyVerticalOffset = max(m_logoSize.height + GameConstants::Margin * 2, metrics.height + 2 * GameConstants::Margin);
-
-        DX::ThrowIfFailed(
-            m_dwriteFactory->CreateTextLayout(
-                m_titleBody->Data(),
-                m_titleBody->Length(),
-                m_textFormatTitleBody.Get(),
-                m_maxTitleSize.width,
-                m_maxTitleSize.height - m_titleBodyVerticalOffset,
-                &m_titleBodyLayout
-                )
-            );
-    }
-    else
-    {
-        // Not enough horizontal space for the titles, so just turn it off.
-        m_showTitle = false;
-    }
-}
-
-//----------------------------------------------------------------------
-
-void GameHud::Render(
-    _In_ Simple3DGame^ game,
-    _In_ ID2D1DeviceContext* d2dContext,
-    _In_ Windows::Foundation::Rect windowBounds
-    )
-{
-    if (m_showTitle)
-    {
-        d2dContext->DrawBitmap(
-            m_logoBitmap.Get(),
-            D2D1::RectF(
-                GameConstants::Margin,
-                GameConstants::Margin,
-                m_logoSize.width + GameConstants::Margin,
-                m_logoSize.height + GameConstants::Margin
-                )
-            );
-        d2dContext->DrawTextLayout(
-            Point2F(m_logoSize.width + 2.0f * GameConstants::Margin, GameConstants::Margin),
-            m_titleHeaderLayout.Get(),
-            m_textBrush.Get()
-            );
-        d2dContext->DrawTextLayout(
-            Point2F(GameConstants::Margin, m_titleBodyVerticalOffset),
-            m_titleBodyLayout.Get(),
-            m_textBrush.Get()
-            );
-    }
-
-    if (game != nullptr)
-    {
-        // This section is only used after the game state has been initialized.
-        static const int bufferLength = 256;
-        static char16 wsbuffer[bufferLength];
-        int length = swprintf_s(
-            wsbuffer,
-            bufferLength,
-            L"Hits:\t%10d\nShots:\t%10d\nTime:\t%8.1f",
-            game->TotalHits(),
-            game->TotalShots(),
-            game->TimeRemaining()
-            );
-
+        
+        // Draw the upper right portion of the HUD displaying total hits, shots, and time remaining
         d2dContext->DrawText(
             wsbuffer,
             length,
@@ -881,6 +152,7 @@ void GameHud::Render(
             levelCharacter[4],
             levelCharacter[5]
             );
+        // Create a new rectangle and draw the current level info text inside
         d2dContext->DrawText(
             wsbuffer,
             length,
@@ -896,6 +168,19 @@ void GameHud::Render(
 
         if (game->IsActivePlay())
         {
+            // Draw the move and fire rectangles
+            // Draw the crosshairs
+        }
+    }
+}
+```
+
+메서드를 중단 아래쪽에이 부분 [**GameHud::Render**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameHud.cpp#L320-L358) 메서드 그립니다 우리의 이동 및 실행 사각형 [**ID2D1RenderTarget::DrawRectangle**](https://msdn.microsoft.com/library/windows/desktop/dd371902)및 [**ID2D1RenderTarget::DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895)를 두 번 호출을 사용 하 여 십자 기호를 사용 하 여 합니다.
+
+```cpp
+        // Check if game is playing
+        if (game->IsActivePlay())
+        {
             // Draw a rectangle for the touch input for the move control.
             d2dContext->DrawRectangle(
                 D2D1::RectF(
@@ -906,7 +191,7 @@ void GameHud::Render(
                     ),
                 m_textBrush.Get()
                 );
-            // Draw a rectangle for the touch input for the fire control.
+            // Draw a rectangle for the touch input of the fire control.
             d2dContext->DrawRectangle(
                 D2D1::RectF(
                     windowBounds.Width - GameConstants::TouchRectangleSize,
@@ -917,7 +202,7 @@ void GameHud::Render(
                 m_textBrush.Get()
                 );
 
-            // Draw the cross hairs.
+            // Draw two lines to form crosshairs
             d2dContext->DrawLine(
                 D2D1::Point2F(windowBounds.Width / 2.0f - GameConstants::CrossHairHalfSize, windowBounds.Height / 2.0f),
                 D2D1::Point2F(windowBounds.Width / 2.0f + GameConstants::CrossHairHalfSize, windowBounds.Height / 2.0f),
@@ -931,333 +216,160 @@ void GameHud::Render(
                 3.0f
                 );
         }
-    }
-}
 ```
 
-GameInfoOverlay.h
-
+**GameHud::Render** 메서드에서 게임 창의 논리적 크기 저장 하 고 `windowBounds` 변수입니다. 이 사용 하는 [`GetLogicalSize`](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/Common/DeviceResources.h#L41) **DeviceResources** 클래스의 메서드. 
 ```cpp
-//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
-//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-//// PARTICULAR PURPOSE.
-////
-//// Copyright (c) Microsoft Corporation. All rights reserved
-
-#pragma once
-
-namespace GameInfoOverlayConstant
-{
-    static const float Width    = 750.0f;
-    static const float Height   = 380.0f;
-};
-
-enum class GameInfoOverlayCommand
-{
-    None,
-    TapToContinue,
-    PleaseWait,
-    PlayAgain,
-};
-
-ref class GameInfoOverlay
-{
-internal:
-    GameInfoOverlay();
-
-    void Initialize(
-        _In_ ID2D1Device*         d2dDevice,
-        _In_ ID2D1DeviceContext*  d2dContext,
-        _In_ IDWriteFactory*      dwriteFactory,
-        _In_ float                dpi
-        );
-
-    void RecreateDirectXResources();
-    void SetDpi(float dpi);
-
-    void SetGameLoading(uint32 dots);
-    void SetGameStats(int maxLevel, int hitCount, int shotCount);
-    void SetGameOver(bool win, int maxLevel, int hitCount, int shotCount, int highScore);
-    void SetLevelStart(int level, Platform::String^ objective, float timeLimit, float bonusTime);
-    void SetPause();
-    void SetAction(GameInfoOverlayCommand action);
-    void HideGameInfoOverlay() { m_visible = false; };
-    void ShowGameInfoOverlay() { m_visible = true; };
-    bool Visible() { return m_visible; };
-    ID2D1Bitmap1* Bitmap() { return m_levelBitmap.Get(); }
-
-private:
-    void RecreateDpiDependentResources();
-
-    bool                                            m_initialized;
-    float                                           m_dpi;
-    bool                                            m_visible;
-
-    Microsoft::WRL::ComPtr<ID2D1Factory1>           m_d2dFactory;
-    Microsoft::WRL::ComPtr<ID2D1Device>             m_d2dDevice;
-    Microsoft::WRL::ComPtr<ID2D1DeviceContext>      m_d2dContext;
-    Microsoft::WRL::ComPtr<IDWriteFactory>          m_dwriteFactory;
-
-    Microsoft::WRL::ComPtr<ID2D1Bitmap1>            m_levelBitmap;
-    Microsoft::WRL::ComPtr<IDWriteTextFormat>       m_textFormatTitle;
-    Microsoft::WRL::ComPtr<IDWriteTextFormat>       m_textFormatBody;
-    Microsoft::WRL::ComPtr<ID2D1SolidColorBrush>    m_textBrush;
-    Microsoft::WRL::ComPtr<ID2D1SolidColorBrush>    m_backgroundBrush;
-    Microsoft::WRL::ComPtr<ID2D1SolidColorBrush>    m_actionBrush;
-};
+auto windowBounds = m_deviceResources->GetLogicalSize();
 ```
 
-GameInfoOverlay.cpp
+ 게임 창 크기 가져오기 UI 프로그래밍 필수적입니다. 여기서는 DIP는 1/96 인치로 정의 Dip (디바이스 독립적 픽셀) 라는 측정값에서 창 크기 제공 됩니다. Direct2D 조정 실제 픽셀에 맞춰 그리기 단위의 드로잉 발생 하면 Windows 인치당 도트 수 (DPI) 설정 사용 하 여이 작업을 수행 합니다. 마찬가지로 [**DirectWrite**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038)를 사용 하 여 텍스트를 그리는 경우 사용자 지정 글꼴 크기에 대 한 포인트가 아닌 Dip 합니다. DIP는 부동 소수점 수로 표현됩니다.
+
+ 
+
+### <a name="displaying-game-state-info"></a>게임 상태 정보 표시
+
+주의 표시 외에도 게임 샘플에는 6 가지 게임 상태를 나타내는 오버레이가 있습니다. 모든 상태 읽기 플레이어에 대 한 텍스트가 포함 된 큰 검은색 사각형 기본 기능. 이동-보기 컨트롤러 사각형 및 십자 기호는 그리지 되지 않으므로 현재 이러한 상태에서.
+
+오버레이 게임의 상태에 부합 되도록 표시할 텍스트를 전환 하는 [**GameInfoOverlay**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.h) 클래스를 사용 하 여 만들어집니다.
+
+![상태 및 오버레이의 동작](images/simple-dx-game-ui-finaloverlay.png)
+
+오버레이 두 섹션으로 나눌: **상태** 와 **동작**합니다. **상태** 섹션 **제목** 및 **본문** 사각형으로 나눌 추가 됩니다. 만 **작업** 섹션에는 하나의 사각형에 있습니다. 각 사각형에 다른 목적을 가집니다.
+
+-   `titleRectangle` 제목 텍스트를 포함합니다.
+-   `bodyRectangle` 본문 텍스트가 표시 됩니다.
+-   `actionRectangle` 플레이어에 특정 작업을 수행 하도록 하는 텍스트가 표시 됩니다.
+
+게임에 설정할 수 있는 6 가지 상태가 있습니다. 오버레이의 **상태** 부분을 사용 하 여 전달 게임의 상태입니다. **상태** 사각형은 다양 한 다음과 같은 상태를 사용 하 여 해당 메서드를 사용 하 여 업데이트 됩니다.
+
+- 불러오는 중
+- 초기 시작/최고 점수 통계
+- 수준 시작
+- 게임이 일시 중지
+- 게임 종료
+- 게임 성공
+
+
+다음 중 하나로 설정할 작업 텍스트가 [**GameInfoOverlay::SetAction**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L522-L564) 메서드를 사용 하 여 오버레이 **작업** 부분 업데이트 됩니다.
+- "탭... 다시 재생"
+- "로드 수준, 잠시 기다려 주십시오."
+- "계속 하려면 탭"
+- 없음
+
+> [!NOTE]
+> 이러한 메서드를 모두 살펴봅니다 [게임 상태를 나타내는](#representing-game-state) 섹션에 추가 합니다.
+
+게임, **상태** 및 **작업** 섹션에서 진행 되는 기능에 따라 텍스트 필드 조정 됩니다.
+초기화 하 고 이러한 여섯 개의 상태에 대 한 오버레이 그리는 방법에 대해 살펴보겠습니다.
+
+### <a name="initializing-and-drawing-the-overlay"></a>오버레이 초기화 및 그리기
+
+**6 개의 상태는** 몇 가지 공통, 리소스 및 메서드 필요할 매우 유사 합니다.
+    - 모두 검정색 사각형의 화면 중앙에 해당 배경으로 사용합니다.
+    - 표시 된 텍스트는 **제목이** 나 **본문** 텍스트입니다.
+    - 텍스트는 Segoe UI 글꼴을 사용 하 고 뒤로 사각형 위에 그려집니다. 
+
+
+게임 샘플에 오버레이 만들 때 고려해 야 하는 네 가지 메서드가 있습니다.
+ 
+
+#### <a name="gameinfooverlaygameinfooverlay"></a>GameInfoOverlay::GameInfoOverlay
+[**GameInfoOverlay::GameInfoOverlay**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L30-L78) 생성자 오버레이 유지 하는 비트맵 화면에 플레이어에 게 정보를 표시 하는 데 사용할 것입니다. 생성자는 전달 된 오버레이 개체 자체를 그릴 수 있는 [**ID2D1DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/hh404479) 를 만들고 사용 하 여 [**ID2D1Device**](https://msdn.microsoft.com/library/windows/desktop/hh404478) 개체에서 팩터리를 가져옵니다. [IDWriteFactory::CreateTextFormat](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368203) 
+
+
+#### <a name="gameinfooverlaycreatedevicedependentresources"></a>Gameinfooverlay:: Createdevicedependentresources
+[**Gameinfooverlay:: Createdevicedependentresources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) 우리의 방법은 만드는 브러시는 텍스트를 그리는 데 사용 됩니다. 이렇게 하려면 것 만들 수 있는 [**ID2D1DeviceContext2**](https://msdn.microsoft.com/en-us/library/windows/desktop/dn890789) 개체를 가져와서 메시 잉크 및 그라데이션 등의 기능이 더하기 기 하 도형을 그리기 렌더링. 다음은 일련의 색된 브러시 [**ID2D1SolidColorBrush**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd372207) 를 사용 하 여 folling UI 요소를 만듭니다.
+- 사각형 배경에 검은색 브러시
+- 상태 텍스트에 대 한 흰색 브러시
+- 작업 텍스트에 대 한 주황색 브러시
+
+#### <a name="deviceresourcessetdpi"></a>DeviceResources::SetDpi
+[**DeviceResources::SetDpi**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/Common/DeviceResources.cpp#L514-L527) 메서드는 창의 인치당 도트 수를 설정합니다. 이 메서드가 호출 되 고 DPI 변경 되 고 되어야 할 때 재조정할 게임 창 크기를 조정할 때 발생 합니다. DPI를 업데이트 한 후이 메서드는 또한 창 크기를 조정할 때마다 필요한 리소스를 다시 생성 되도록[**deviceresources:: Createwindowsizedependentresources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/Common/DeviceResources.cpp#L214-L487) 호출 합니다.
+
+
+#### <a name="gameinfooverlaycreatewindowssizedependentresources"></a>GameInfoOverlay::CreateWindowsSizeDependentResources
+[**GameInfoOverlay::CreateWindowsSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L108-L225) 메서드는 모든 그리기 이루어지는 곳입니다. 다음은 메서드의 단계 개요입니다.
+- 세 개의 사각형 섹션 **제목**, **본문**및 **작업** 텍스트에 대 한 UI 텍스트 해제 하도록 생성 됩니다.
+    ```cpp 
+    m_titleRectangle = D2D1::RectF(
+        GameInfoOverlayConstant::SideMargin,
+        GameInfoOverlayConstant::TopMargin,
+        overlaySize.width - GameInfoOverlayConstant::SideMargin,
+        GameInfoOverlayConstant::TopMargin + GameInfoOverlayConstant::TitleHeight
+        );
+    m_actionRectangle = D2D1::RectF(
+        GameInfoOverlayConstant::SideMargin,
+        overlaySize.height - (GameInfoOverlayConstant::ActionHeight + GameInfoOverlayConstant::BottomMargin),
+        overlaySize.width - GameInfoOverlayConstant::SideMargin,
+        overlaySize.height - GameInfoOverlayConstant::BottomMargin
+        );
+    m_bodyRectangle = D2D1::RectF(
+        GameInfoOverlayConstant::SideMargin,
+        m_titleRectangle.bottom + GameInfoOverlayConstant::Separator,
+        overlaySize.width - GameInfoOverlayConstant::SideMargin,
+        m_actionRectangle.top - GameInfoOverlayConstant::Separator
+        );
+    ```
+
+- 비트맵 명명 된 만들어집니다 `m_levelBitmap`, 현재 DPI **CreateBitmap**를 사용 하 여를 고려 합니다.
+- `m_levelBitmap` 우리의 2D 렌더링 대상 [**ID2D1DeviceContext::SetTarget**](https://msdn.microsoft.com/en-us/library/windows/desktop/hh404533)를 사용 하 여 설정 됩니다.
+- 만든 모든 픽셀을 사용 하 여 비트맵 지워집니다 [**ID2D1RenderTarget::Clear**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371772)를 사용 하 여 검은색입니다.
+- [**ID2D1RenderTarget::BeginDraw**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd371768) 그리기를 시작 하 라고 합니다. 
+- **DrawText** 에 저장 된 텍스트를 그리는 라고 `m_titleString`, `m_bodyString`, 및 `m_actionString` 해당 **ID2D1SolidColorBrush**를 사용 하 여 적정 사각형에서.
+- 모든 그리기 작업을 중지 하려면 [**ID2D1RenderTarget::EndDraw**](ID2D1RenderTarget::EndDraw) 라고 `m_levelBitmap`.
+- 다른 비트맵을 **CreateBitmap** 라는 사용 하 여 만든 `m_tooSmallBitmap` 디스플레이 구성은 게임에 비해 너무 작은 경우에 표시 대체로 사용 하도록 합니다.
+- 그리기 위한 프로세스를 반복 `m_levelBitmap` 에 대 한 `m_tooSmallBitmap`, 문자열 그리기이 이번 `Paused` 본문에 있습니다.
+
+
+
+
+이제 우리의 6 개의 오버레이 상태 텍스트를 입력 하는 6 개의 메서드는 필요한 모든!
+
+### <a name="representing-game-state"></a>게임 상태 표시
+
+
+각각의 6 개의 오버레이 상태는 게임에 해당 하는 메서드가 **GameInfoOverlay** 개체에 있습니다. 이러한 메서드는 오버레이의 변형을 그려 게임 자체에 대한 명시적 정보를 플레이어에게 전달합니다. 이 통신 **제목** 및 **본문** 문자열로 표현 됩니다. 샘플 리소스 및 레이아웃을 초기화할 때이 정보에 대 한 및 [**gameinfooverlay:: Createdevicedependentresources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L82-L104) 메서드를 사용 하 여 이미 구성 이기 때문에 오버레이 상태 관련 문자열만 제공 해야 합니다.
+
+오버레이의 **상태** 일부 다음 방법 중 하나를 호출 하 여 설정 됩니다.
+
+게임 상태 | 상태 설정 메서드 | 상태 필드
+:----- | :------- | :---------
+불러오는 중 | [GameInfoOverlay::SetGameLoading](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L254-L306) |**제목**</br>리소스 로드 </br>**Body**</br> 점진적으로 인쇄 "." 로드 활동은 아닙니다.
+초기 시작/최고 점수 통계 | [GameInfoOverlay::SetGameStats](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L310-L354) |**제목**</br>최고 점수</br> **Body**</br> 레벨 완료 # </br>총 점수 #</br>총 샷 #
+수준 시작 | [GameInfoOverlay::SetLevelStart](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L413-L471) |**제목**</br>수준 #</br>**Body**</br>수준 목표 설명 합니다.
+게임이 일시 중지 | [GameInfoOverlay::SetPause](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L475-L502) |**제목**</br>게임이 일시 중지</br>**Body**</br>없음
+게임 종료 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**제목**</br>게임 오버</br> **Body**</br> 레벨 완료 # </br>총 점수 #</br>총 샷 #</br>레벨 완료 #</br>높은 성과 값
+게임 성공 | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**제목**</br>승리 했습니다.</br> **Body**</br> 레벨 완료 # </br>총 점수 #</br>총 샷 #</br>레벨 완료 #</br>높은 성과 값
+
+
+
+
+[**GameInfoOverlay::CreateWindowSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L117-L134) 메서드를 사용 하 여 샘플 오버레이의 특정 영역에 해당 하는 세 개의 사각형 영역을 선언 합니다.
+
+
+
+이러한 영역에 주의하면서 상태 관련 메서드 중 하나인 **GameInfoOverlay::SetGameStats**에 대해 살펴보고 오버레이를 그리는 방법을 알아보겠습니다.
 
 ```cpp
-//// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
-//// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-//// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-//// PARTICULAR PURPOSE.
-////
-//// Copyright (c) Microsoft Corporation. All rights reserved
-
-#include "pch.h"
-#include "GameInfoOverlay.h"
-#include "DirectXSample.h"
-
-using namespace Windows::UI::Core;
-using namespace Windows::Foundation;
-using namespace Microsoft::WRL;
-using namespace Windows::UI::ViewManagement;
-using namespace Windows::Graphics::Display;
-using namespace D2D1;
-
-static const D2D1_RECT_F titleRectangle = D2D1::RectF(50.0f, 50.0f, GameInfoOverlayConstant::Width - 50.0f, 100.0f);
-static const D2D1_RECT_F bodyRectangle = D2D1::RectF(50.0f, 110.0f, GameInfoOverlayConstant::Width - 50.0f, GameInfoOverlayConstant::Height - 50.0f);
-static const D2D1_RECT_F actionRectangle = D2D1::RectF(50.0f, GameInfoOverlayConstant::Height - 45.0f, GameInfoOverlayConstant::Width - 50.0f, GameInfoOverlayConstant::Height - 5.0f);
-static const int bufferLength = 1000;
-static char16 wsbuffer[bufferLength];
-
-GameInfoOverlay::GameInfoOverlay():
-    m_initialized(false),
-    m_visible(false)
-{
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::Initialize(
-    _In_ ID2D1Device*         d2dDevice,
-    _In_ ID2D1DeviceContext*  d2dContext,
-    _In_ IDWriteFactory*      dwriteFactory,
-    _In_ float                dpi)
-{
-    m_initialized = true;
-
-    m_dwriteFactory = dwriteFactory;
-    m_dpi = dpi;
-    m_d2dDevice = d2dDevice;
-    m_d2dContext = d2dContext;
-
-    ComPtr<ID2D1Factory> factory;
-    d2dDevice->GetFactory(&factory);
-
-    DX::ThrowIfFailed(
-        factory.As(&m_d2dFactory)
-        );
-
-    RecreateDirectXResources();
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::SetDpi(float dpi)
-{
-    if (m_initialized)
-    {
-        if (dpi != m_dpi)
-        {
-            m_dpi = dpi;
-            RecreateDpiDependentResources();
-        }
-    }
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::RecreateDirectXResources()
-{
-    if (!m_initialized)
-    {
-        return;
-    }
-
-    // Create D2D resources.
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI",
-            nullptr,
-            DWRITE_FONT_WEIGHT_MEDIUM,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            32,         // font size
-            L"en-us",   // locale
-            &m_textFormatTitle
-            )
-        );
-
-    DX::ThrowIfFailed(
-        m_dwriteFactory->CreateTextFormat(
-            L"Segoe UI",
-            nullptr,
-            DWRITE_FONT_WEIGHT_LIGHT,
-            DWRITE_FONT_STYLE_NORMAL,
-            DWRITE_FONT_STRETCH_NORMAL,
-            24,         // font size
-            L"en-us",   // locale
-            &m_textFormatBody
-            )
-        );
-
-    DX::ThrowIfFailed(
-        m_textFormatTitle->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER)
-        );
-    DX::ThrowIfFailed(
-        m_textFormatTitle->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR)
-        );
-    DX::ThrowIfFailed(
-        m_textFormatBody->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_LEADING)
-        );
-    DX::ThrowIfFailed(
-        m_textFormatBody->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_NEAR)
-        );
-
-    DX::ThrowIfFailed(
-        m_d2dContext->CreateSolidColorBrush(
-            D2D1::ColorF(D2D1::ColorF::White),
-            &m_textBrush
-            )
-        );
-    DX::ThrowIfFailed(
-        m_d2dContext->CreateSolidColorBrush(
-            D2D1::ColorF(D2D1::ColorF::Black),
-            &m_backgroundBrush
-            )
-        );
-     DX::ThrowIfFailed(
-        m_d2dContext->CreateSolidColorBrush(
-            D2D1::ColorF(0xdb7100, 1.0f),
-            &m_actionBrush
-            )
-        );
-
-     RecreateDpiDependentResources();
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::RecreateDpiDependentResources()
-{
-    m_levelBitmap = nullptr;
-
-    // Create a D2D bitmap to be used for Game Info Overlay when waiting to
-    // start a level or when displaying game statistics.
-    D2D1_BITMAP_PROPERTIES1 properties;
-    properties.pixelFormat.format = DXGI_FORMAT_B8G8R8A8_UNORM;
-    properties.pixelFormat.alphaMode = D2D1_ALPHA_MODE_PREMULTIPLIED;
-    properties.dpiX = m_dpi;
-    properties.dpiY = m_dpi;
-    properties.bitmapOptions = D2D1_BITMAP_OPTIONS_TARGET;
-    properties.colorContext = nullptr;
-    DX::ThrowIfFailed(
-        m_d2dContext->CreateBitmap(
-            D2D1::SizeU(
-                static_cast<UINT32>(GameInfoOverlayConstant::Width * m_dpi / 96.0f),
-                static_cast<UINT32>(GameInfoOverlayConstant::Height * m_dpi / 96.0f)
-                ),
-            nullptr,
-            0,
-            &properties,
-            &m_levelBitmap
-            )
-        );
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->Clear(D2D1::ColorF(D2D1::ColorF::Black));
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::SetGameLoading(uint32 dots)
-{
-    int length;
-    Platform::String^ string = "Loading Resources";
-
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->FillRectangle(&titleRectangle, m_backgroundBrush.Get());
-    m_d2dContext->FillRectangle(&bodyRectangle, m_backgroundBrush.Get());
-    m_d2dContext->FillRectangle(&actionRectangle, m_backgroundBrush.Get());
-
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
-        m_textFormatTitle.Get(),
-        titleRectangle,
-        m_textBrush.Get()
-        );
-
-    dots = dots % 10;
-    for (length = 0; length < 25; length++)
-    {
-        wsbuffer[length] = L' ';
-    }
-    for (uint32 i = 0; i < dots; i++)
-    {
-        wsbuffer[length++] = 0x25CF;   // This is a Dot character in the font.
-        wsbuffer[length++] = L' ';
-        wsbuffer[length++] = L' ';
-        wsbuffer[length++] = L' ';
-    }
-
-    m_d2dContext->DrawText(
-        wsbuffer,
-        length,
-        m_textFormatBody.Get(),
-        bodyRectangle,
-        m_actionBrush.Get()
-        );
-
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-//----------------------------------------------------------------------
 void GameInfoOverlay::SetGameStats(int maxLevel, int hitCount, int shotCount)
 {
     int length;
-    Platform::String^ string;
 
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->FillRectangle(&titleRectangle, m_backgroundBrush.Get());
-    m_d2dContext->FillRectangle(&bodyRectangle, m_backgroundBrush.Get());
-    string = "High Score";
+    auto d2dContext = m_deviceResources->GetD2DDeviceContext();
 
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
+    d2dContext->SetTarget(m_levelBitmap.Get());
+    d2dContext->BeginDraw();
+    d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
+    d2dContext->FillRectangle(&m_titleRectangle, m_backgroundBrush.Get());
+    d2dContext->FillRectangle(&m_bodyRectangle, m_backgroundBrush.Get());
+    m_titleString = "High Score";
+
+    d2dContext->DrawText(
+        m_titleString->Data(),
+        m_titleString->Length(),
         m_textFormatTitle.Get(),
-        titleRectangle,
+        m_titleRectangle,
         m_textBrush.Get()
         );
     length = swprintf_s(
@@ -1268,209 +380,18 @@ void GameInfoOverlay::SetGameStats(int maxLevel, int hitCount, int shotCount)
         hitCount,
         shotCount
         );
-    string = ref new Platform::String(wsbuffer, length);
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
+    m_bodyString = ref new Platform::String(wsbuffer, length);
+    d2dContext->DrawText(
+        m_bodyString->Data(),
+        m_bodyString->Length(),
         m_textFormatBody.Get(),
-        bodyRectangle,
-        m_textBrush.Get()
-        );
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::SetGameOver(bool win, int maxLevel, int hitCount, int shotCount, int highScore)
-{
-    int length;
-    Platform::String^ string;
-
-
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->FillRectangle(&titleRectangle, m_backgroundBrush.Get());
-    m_d2dContext->FillRectangle(&bodyRectangle, m_backgroundBrush.Get());
-    if (win)
-    {
-        string = "You WON!";
-    }
-    else
-    {
-        string = "Game Over";
-    }
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
-        m_textFormatTitle.Get(),
-        titleRectangle,
-        m_textBrush.Get()
-        );
-    length = swprintf_s(
-        wsbuffer,
-        bufferLength,
-        L"Levels Completed %d\nTotal Points %d\nTotal Shots %d\n\nHigh Score %d\n",
-        maxLevel,
-        hitCount,
-        shotCount,
-        highScore
-        );
-    m_d2dContext->DrawText(
-        wsbuffer,
-        length,
-        m_textFormatBody.Get(),
-        bodyRectangle,
-        m_textBrush.Get()
-        );
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::SetLevelStart(int level, Platform::String^ objective, float timeLimit, float bonusTime)
-{
-    int length;
-    Platform::String^ string;
-
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->FillRectangle(&titleRectangle, m_backgroundBrush.Get());
-    m_d2dContext->FillRectangle(&bodyRectangle, m_backgroundBrush.Get());
-    length = swprintf_s(wsbuffer, bufferLength, L"Level %d", level);
-    m_d2dContext->DrawText(
-        wsbuffer,
-        length,
-        m_textFormatTitle.Get(),
-        titleRectangle,
+        m_bodyRectangle,
         m_textBrush.Get()
         );
 
-    if (bonusTime > 0.0f)
-    {
-        length = swprintf_s(
-            wsbuffer,
-            bufferLength,
-            L"Objective: %s\nTime  Limit: %6.1f sec\nBonus Time: %6.1f sec\n",
-            objective->Data(),
-            timeLimit,
-            bonusTime
-            );
-    }
-    else
-    {
-        length = swprintf_s(
-            wsbuffer,
-            bufferLength,
-            L"Objective: %s\nTime  Limit: %6.1f sec\n",
-            objective->Data(),
-            timeLimit
-            );
-    }
-    string = ref new Platform::String(wsbuffer, length);
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
-        m_textFormatBody.Get(),
-        bodyRectangle,
-        m_textBrush.Get()
-        );
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::SetPause()
-{
-    Platform::String^ string;
-
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->FillRectangle(&titleRectangle, m_backgroundBrush.Get());
-    m_d2dContext->FillRectangle(&bodyRectangle, m_backgroundBrush.Get());
-    string = "Game Paused";
-
-    m_d2dContext->DrawText(
-        string->Data(),
-        string->Length(),
-        m_textFormatTitle.Get(),
-        bodyRectangle,
-        m_textBrush.Get()
-        );
-    HRESULT hr = m_d2dContext->EndDraw();
-    if (hr != D2DERR_RECREATE_TARGET)
-    {
-        // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
-        // D3D device.  All subsequent rendering will be ignored until the device is recreated.
-        // This error will be propagated and the appropriate D3D error will be returned from the
-        // swapchain->Present(...) call.   At that point, the sample will recreate the device
-        // and all associated resources.  As a result, the D2DERR_RECREATE_TARGET doesn't
-        // need to be handled here.
-        DX::ThrowIfFailed(hr);
-    }
-}
-//----------------------------------------------------------------------
-void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
-{
-    Platform::String^ string;
-
-    m_d2dContext->SetTarget(m_levelBitmap.Get());
-    m_d2dContext->BeginDraw();
-    m_d2dContext->SetTransform(D2D1::Matrix3x2F::Identity());
-    m_d2dContext->FillRectangle(&actionRectangle, m_backgroundBrush.Get());
-
-    switch (action)
-    {
-    case GameInfoOverlayCommand::PlayAgain:
-        string = "Tap to play again ...";
-        break;
-    case GameInfoOverlayCommand::PleaseWait:
-        string = "Level loading, please wait ...";
-        break;
-    case GameInfoOverlayCommand::TapToContinue:
-        string = "Tap to continue ...";
-        break;
-    default:
-        string = "";
-        break;
-    }
-    if (action != GameInfoOverlayCommand::None)
-    {
-        m_d2dContext->DrawText(
-            string->Data(),
-            string->Length(),
-            m_textFormatBody.Get(),
-            actionRectangle,
-            m_actionBrush.Get()
-            );
-    }
-    HRESULT hr = m_d2dContext->EndDraw();
+    // We ignore D2DERR_RECREATE_TARGET here. This error indicates that the device
+    // is lost. It will be handled during the next call to Present.
+    HRESULT hr = d2dContext->EndDraw();
     if (hr != D2DERR_RECREATE_TARGET)
     {
         // The D2DERR_RECREATE_TARGET indicates there has been a problem with the underlying
@@ -1484,12 +405,79 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 }
 ```
 
-## <a name="related-topics"></a>관련 항목
+**GameInfoOverlay** 개체를 초기화 하는 Direct2D 디바이스 컨텍스트를 사용 하 여이 메서드는 배경 브러시를 사용 하 여 검은색으로 제목 및 본문 사각형을 채웁니다. 이 메서드는 흰색 텍스트 브러시를 사용하여 "High Score" 문자열에 대한 텍스트를 제목 사각형에 그리고 게임 상태 업데이트 정보를 포함하는 문자열을 본문 사각형에 그립니다.
 
 
-[DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-metro-style-directx-game.md)
+작업 사각형 [**GameInfoOverlay::SetAction**](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L522-L564) **GameInfoOverlay::SetAction** 적합 한 메시지를 결정 하는 데 필요한 게임 상태 정보를 제공 하는 **GameMain** 개체에서 메서드에서 후속 호출 하 여 업데이트 되 고 플레이어, 예: "계속 하려면 탭"입니다.
 
- 
+지정된 된 상태에 대 한 오버레이 같이 [**GameMain::SetGameInfoOverlay**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/GameMain.cpp#L606-L661) 메서드에서 선택 됩니다.
+
+```cpp
+void GameMain::SetGameInfoOverlay(GameInfoOverlayState state)
+{
+    m_gameInfoOverlayState = state;
+    switch (state)
+    {
+    case GameInfoOverlayState::Loading:
+        m_uiControl->SetGameLoading();
+        break;
+
+    case GameInfoOverlayState::GameStats:
+        m_uiControl->SetGameStats(
+            m_game->HighScore().levelCompleted + 1,
+            m_game->HighScore().totalHits,
+            m_game->HighScore().totalShots
+            );
+        break;
+
+    case GameInfoOverlayState::LevelStart:
+        m_uiControl->SetLevelStart(
+            m_game->LevelCompleted() + 1,
+            m_game->CurrentLevel()->Objective(),
+            m_game->CurrentLevel()->TimeLimit(),
+            m_game->BonusTime()
+            );
+        break;
+
+    case GameInfoOverlayState::GameOverCompleted:
+        m_uiControl->SetGameOver(
+            true,
+            m_game->LevelCompleted() + 1,
+            m_game->TotalHits(),
+            m_game->TotalShots(),
+            m_game->HighScore().totalHits
+            );
+        break;
+
+    case GameInfoOverlayState::GameOverExpired:
+        m_uiControl->SetGameOver(
+            false,
+            m_game->LevelCompleted(),
+            m_game->TotalHits(),
+            m_game->TotalShots(),
+            m_game->HighScore().totalHits
+            );
+        break;
+
+    case GameInfoOverlayState::Pause:
+        m_uiControl->SetPause(
+            m_game->LevelCompleted() + 1,
+            m_game->TotalHits(),
+            m_game->TotalShots(),
+            m_game->TimeRemaining()
+            );
+        break;
+    }
+}
+```
+
+이제 게임에서 게임 상태에 따라 플레이어에 게 텍스트 정보를 전달할 수 있고,에서는 게임 전체에 표시 되는 전환 하는 방법.
+
+### <a name="next-steps"></a>다음 단계
+
+다음 항목인 [컨트롤 추가](tutorial--adding-controls.md)에서는 플레이어가 게임 샘플과 상호 작용하는 방법 및 입력을 통해 게임 상태를 변경하는 방법에 대해 살펴봅니다.
+
+
 
  
 

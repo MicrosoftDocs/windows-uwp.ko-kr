@@ -11,11 +11,11 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
 ms.openlocfilehash: d39507af310c34621d7a4951e426bc6596284234
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4623674"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692971"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>앱 제출에 대한 출시 백분율 업데이트
 

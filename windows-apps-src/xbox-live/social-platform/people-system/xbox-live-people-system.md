@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 소셜, 사용자가 시스템, 친구
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ab0add0f379654be1285faac85690794bf48f9e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4623553"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692755"
 ---
 # <a name="xbox-live-people-system"></a>Xbox Live 피플 시스템
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d727171b079bc05851e1c7ab4de6f01587ce460d
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4619325"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4691300"
 ---
 # <a name="get-started-using-visual-studio-for-uwp-games"></a>Visual Studio를 사용 하 여 UWP 게임
 

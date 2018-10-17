@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 933169945c865fc6bc6f7b8b7ba7872fff98d1b8
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4618281"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4693926"
 ---
 # <a name="paginginfo-json"></a>PagingInfo(JSON)
 데이터의 페이지에서 반환 하는 결과 위해 페이징 정보가 포함 되어 있습니다. 

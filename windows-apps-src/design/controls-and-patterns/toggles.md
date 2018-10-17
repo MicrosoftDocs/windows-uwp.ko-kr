@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: daffbc5ff74adc234ac6c2b414a7e1b85763849d
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 796ee4ffaa551c23286110ec7164f511655d6017
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620733"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694012"
 ---
 # <a name="toggle-switches"></a>토글 스위치
 
@@ -71,7 +71,7 @@ ms.locfileid: "4620733"
 - 변경 사항을 적용하려면 추가 단계를 수행해야 하는 경우에는 확인란을 사용합니다. 예를 들어, 사용자가 '전송' 또는 '다음' 단추를 클릭하여 변경 사항을 적용해야 하는 경우에는 확인란을 사용합니다.
 - 사용자가 단일 설정이나 기능과 관련된 여러 항목을 선택할 수 있을 때 확인란을 사용합니다.
 
-## <a name="toggle-switches-in-the-the-windows-ui"></a>Windows UI의 토글 스위치
+## <a name="toggle-switches-in-the-windows-ui"></a>Windows UI의 토글 스위치
 
 다음 이미지는 Windows UI에서 토글 스위치를 사용하는 방법을 보여 줍니다. 다음은 Smart Storage 설정 화면에서 토글 스위치를 사용하는 방법입니다.
 

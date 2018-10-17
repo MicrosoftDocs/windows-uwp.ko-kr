@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석
 ms.localizationpriority: medium
 ms.openlocfilehash: 68bc3389276acc910272d57e9cc859a7e8ffd6c7
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4615839"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694450"
 ---
 # <a name="get-xbox-live-analytics-data"></a>Xbox Live 분석 데이터 가져오기
 
