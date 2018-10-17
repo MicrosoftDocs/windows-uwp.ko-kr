@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, AdControl, 배너 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: fc47c8d40d10eef3e6d92f2d47485d8cf265172d
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4682217"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4751030"
 ---
 # <a name="banner-ads"></a>배너 광고
 
@@ -24,7 +24,7 @@ ms.locfileid: "4682217"
 
 ![addreferences](images/banner-ad.png)
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 |  항목    | 설명 |               
 |----------|-------|

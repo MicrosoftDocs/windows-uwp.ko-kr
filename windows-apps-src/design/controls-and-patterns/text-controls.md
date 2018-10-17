@@ -15,12 +15,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 2cd5f7e7022f246fce3d08286fe77c74503ddc5d
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4691523"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4744878"
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
 
@@ -125,7 +125,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 Windows 10 버전 1803부터는 XAML 텍스트 입력 상자에 [Windows Ink](../input/pen-and-stylus-interactions.md)를 사용한 펜 입력 지원이 포함되어 있습니다. 사용자가 Windows 펜을 사용해 텍스트 입력 상자를 터치하면 사용자가 별도의 입력 창을 열지 않고도 펜으로 직접 쓸 수 있도록 텍스트 상자가 변환됩니다.
 
-![펜으로 터치할 때 텍스트 상자가 확장](images/pen-input-expand.gif)
+![펜으로 터치할 때 텍스트 상자가 확장](images/handwritingview/handwritingview2.gif)
 
 자세한 내용은 [필기 보기를 사용 하 여 텍스트 입력](text-handwriting-view.md)을 참조 하세요.
 
