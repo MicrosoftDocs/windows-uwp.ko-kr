@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 일정, 발매 날짜, 날짜, 실행
 ms.localizationpriority: medium
 ms.openlocfilehash: 84466f907bad7e38506e1bf81b89eb631675093c
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4689736"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4749960"
 ---
 # <a name="configure-precise-release-scheduling"></a>정확한 릴리스 일정 구성
 
@@ -52,7 +52,7 @@ Microsoft Store에서 앱을 더 이상 사용할 수 없게 만드는 날짜도
 - **가능한 한 빨리**: 제품 인증과 게시가 완료된 즉시 릴리스됩니다. 기본값인 옵션입니다.
 - **지정(at)**: 제품을 선택한 날짜와 시간에 릴리스합니다. 두 가지 추가 옵션이 있습니다.
    - **UTC**: 선택한 시간이 UTC(Universal Coordinated Time) 시간이기 때문에 모든 지역/국가에서 동일한 시간에 앱이 릴리스 됩니다.
-   - **로컬**: 선택한 시간을 지역/국가의 시간대에 사용합니다. (Note that for markets that include more than one time zone, only one time zone in that market will be used. 미국에서는 동부 표준 시간대를 사용합니다.)
+   - **로컬**: 선택한 시간을 지역/국가의 시간대에 사용합니다. (시간대가 하나 이상인 지역/국가의 경우, 하나의 시간대만 사용합니다. 미국에서는 동부 표준 시간대를 사용합니다.)
 - **예약하지 않음**: Microsoft Store에서 앱을 사용할 수 없습니다. 이 옵션을 선택하는 경우, 새로 제출하고 다른 옵션 중 하나를 선택해 나중에 Microsoft Store에서 앱을 사용할 수 있도록 설정할 수 있습니다.
 
 

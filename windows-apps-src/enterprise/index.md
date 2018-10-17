@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680516"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745076"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -120,7 +120,7 @@ MSIX 패키징 형식 되도록 고안 되었습니다을 안정적으로.msi,.a
 
 <a id="distribution" />
 
-## <a name="security"></a>Security
+## <a name="security"></a>보안
 
 Windows 10에서는 앱 개발자가 사용자의 ID, 회사 네트워크의 보안 및 디바이스에 저장된 비즈니스 데이터를 보호할 수 있도록 보안 기능 집합을 제공합니다. Windows 10의 새로운 기능인 Microsoft Passport는 PIN 또는 Windows Hello를 사용하여 액세스할 수 있으며 엔터프라이즈급 보안을 제공하고 지문, 얼굴 및 홍채 기반 인식 기능을 지원하는 2단계 암호 대안으로, 배포가 용이합니다.
 
@@ -128,7 +128,7 @@ Windows 10에서는 앱 개발자가 사용자의 ID, 회사 네트워크의 보
 |-------|-------------|
 | [보안 Windows 앱 개발 소개](https://msdn.microsoft.com/library/windows/apps/mt622741) | 이 기초 문서에서는 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 단계의 다양한 Windows 보안 기능에 대해 설명합니다. 또한 이러한 단계를 앱에 통합하는 방법을 설명합니다. 다양 한 항목에 설명 하 고 빠르고 쉽게 유니버설 Windows 플랫폼 앱을 만들 수 있게 하는 Windows 기능을 이해 하는 앱 설계자 서 주로 목적은 합니다. |
 | [인증 및 사용자 ID](https://msdn.microsoft.com/library/windows/apps/mt270184) | UWP 앱에는 이 문서에 요약된 여러 가지 사용자 인증 옵션이 있습니다. 엔터프라이즈에는 새로운 Microsoft Passport 기능을 사용하는 것이 좋습니다. Microsoft Passport가 기존 자격 증명을 확인 하 여 강력한 2 단계 인증 (2FA)를 사용 하 여 암호를 대체 하 고 디바이스 별 자격 증명을 만들어는 생체 인식 또는 PIN 기반 사용자 제스처로 보호 되는 모두 편리 하 고 높은 안전한 환경을 위해서는 합니다. |
-| [Cryptography](https://msdn.microsoft.com/library/windows/apps/mt270191) | 암호화 섹션에서는 UWP 앱이 사용할 수 있는 암호화 기능을 간략하게 설명합니다. 중요한 비즈니스 데이터를 쉽게 암호화하는 방법에 대한 기초 연습에서, 암호화 키 조작, MAC, 해시 및 서명 작업 등의 고급 과정에 이르기까지 다양한 문서가 제공됩니다. |
+| [암호화](https://msdn.microsoft.com/library/windows/apps/mt270191) | 암호화 섹션에서는 UWP 앱이 사용할 수 있는 암호화 기능을 간략하게 설명합니다. 중요한 비즈니스 데이터를 쉽게 암호화하는 방법에 대한 기초 연습에서, 암호화 키 조작, MAC, 해시 및 서명 작업 등의 고급 과정에 이르기까지 다양한 문서가 제공됩니다. |
 | [WIP(Windows Information Protection)](wip-hub.md) | WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다. |
 
 ## <a name="data-binding-and-databases"></a>데이터 바인딩 및 데이터베이스

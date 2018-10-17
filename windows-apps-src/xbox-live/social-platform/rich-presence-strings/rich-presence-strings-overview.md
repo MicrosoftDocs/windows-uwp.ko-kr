@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 존재 여부, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 57ee9c43b4a78fc68f6da29721d38ac11c440624
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4682646"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745443"
 ---
 # <a name="rich-presence"></a>다양한 상태
 
@@ -43,7 +43,7 @@ ms.locfileid: "4682646"
 이러한 이름은 고유 하 게 식별 무기 열거 또는 문자 클래스 열거와 같은 특정 열거형을 사용 됩니다.
 
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [다양 한 상태 구성](rich-presence-strings-configuration.md)  
 타이틀에서 사용 하기 위해 다양 한 상태를 구성 하는 방법입니다.

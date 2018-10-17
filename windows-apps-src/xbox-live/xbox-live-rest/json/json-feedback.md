@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e9ef3bb19155199ae94b18b828fb40eb7a0a2ce6
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4683133"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4744311"
 ---
 # <a name="feedback-json"></a>Feedback(JSON)
 플레이어에 대 한 피드백 정보가 포함 되어 있습니다.
@@ -51,13 +51,13 @@ ms.locfileid: "4683133"
 | --- | --- | --- | --- | --- | --- |
 | CommsAbusiveVoice| 사용자| 사용자가 보고서 부적절 한 음성 통신에서 제목을 내에서 그리고 Xbox 대시보드에서 피드백 보내기. |
 | CommsInappropriateVideo| 사용자, 파트너| 사용자 및 파트너 제목을 내에서 그리고 Xbox 대시보드에서 부적절 한 비디오에서 보고 하는 피드백을 보냅니다. |
-| CommsMuted| Privacy| 사용자가 다른 플레이어 음소거, 개인 정보 보호가이 피드백 평판 서비스에 보냅니다. |
+| CommsMuted| 개인 정보| 사용자가 다른 플레이어 음소거, 개인 정보 보호가이 피드백 평판 서비스에 보냅니다. |
 | CommsPhishing| 사용자| 사용자가 피싱 메시지를 보고 하려면이 피드백을 보냅니다. |
 | CommsPictureMessage| 사용자| 받은 편지함 서비스 그림의 통신에 따라 발신자의 신뢰도 업데이트 하 고 적용 팀에 피드백을 보고 평판 서비스를 호출 합니다. |
 | CommsSpam| 사용자| 사용자가이 피드백 스팸 메시지를 보고 합니다. |
 | CommsTextMessage| 사용자| 받은 편지함 서비스 발신자의 신뢰도 업데이트 하 고 적용 팀에 피드백을 보고 평판 서비스를 호출 합니다. **참고:** 받은 편지함 UI는 사용자가 메시지에 플래그 지정 하도록 허용 하는 단추가 있어야 합니다. |
   | CommsVoiceMessage | 사용자 | 받은 편지함 서비스 음성 메시지의 통신에 따라 발신자의 신뢰도 업데이트 하 고 적용 팀에 피드백을 보고 평판 서비스를 호출 합니다.  |
-  | FairPlayBlock | Privacy | 개인 정보 사용자가 다른 플레이어를 차단할 때 평판 서비스에이 피드백을 보냅니다.  |
+  | FairPlayBlock | 개인 정보 | 개인 정보 사용자가 다른 플레이어를 차단할 때 평판 서비스에이 피드백을 보냅니다.  |
   | FairPlayCheater | 사용자, 파트너 | 사용자는 부정 있는지 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
   | FairPlayConsoleBanRequest | 파트너 | 파트너는 콘솔에서 Xbox Live 사용을 금지 하 권장 사항으로이 피드백을 보냅니다.  |
   | FairPlayIdler | 사용자, 파트너 | 타이틀 경우 사용자가 대표 유휴 의도적으로 반올림, 후 라운드 일반적으로 게임을 결정 하는 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
@@ -65,7 +65,7 @@ ms.locfileid: "4683133"
   | FairPlayKillsTeammates | 사용자, 파트너 | 플레이어 killls 때 자동으로 확인할 수 있는 타이틀 자신의 팀 동료 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
   | FairPlayQuitter | 사용자, 파트너 | 사용자가 게임을 조기에 종료를 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
   | FairPlayTampering | 사용자, 파트너 | 사용자가 디스크에 콘텐츠를 사용 하 여 변조를 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
-  | FairPlayUnblock | Privacy | 개인 정보는 사용자가 다른 플레이어를 차단 하는 경우이 피드백 신뢰도 서비스에 보냅니다.  |
+  | FairPlayUnblock | 개인 정보 | 개인 정보는 사용자가 다른 플레이어를 차단 하는 경우이 피드백 신뢰도 서비스에 보냅니다.  |
   | FairPlayUserBanRequest | 파트너 | 파트너는 Xbox Live에서 사용자가 사용을 금지 하 권장 사항으로이 피드백을 보냅니다.  |
   | InternalAmbassadorScoreUpdated | 없음 | 호출자가 사용에 대 한 하지는 내부 피드백 유형입니다.  |
   | InternalReputationReset | 없음 | 호출자가 사용에 대 한 하지는 내부 피드백 유형입니다.  |
