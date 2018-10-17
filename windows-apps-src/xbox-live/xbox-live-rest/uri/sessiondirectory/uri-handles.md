@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d6833309ce990aee72fd07deab9ecde04eca3b0e
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4681382"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4742984"
 ---
 # <a name="handles"></a>/handles
 Xbox One 대시보드 사용자 환경에서 표시 하 고 필요한 경우 세션 멤버를 초대 하 여 사용자의 현재 활동에 대 한 세션을 설정 하는 POST 작업을 지원 합니다. 

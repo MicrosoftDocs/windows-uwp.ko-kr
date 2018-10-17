@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8203420b0eed584a0d8b4131b419bf667a4b56a0
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690648"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4742337"
 ---
 # <a name="additional-reference"></a>추가 참조
 
@@ -25,7 +25,7 @@ ms.locfileid: "4690648"
 <a id="ID4EZ"></a>
 
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [권한 부여 유형](authorizationtypes.md)
 

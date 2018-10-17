@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ecdf1bb3da9f2cd92e95976e07bbc2fd58a51800
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/17/2018
-ms.locfileid: "4693707"
+ms.locfileid: "4740570"
 ---
 # <a name="xbox-live-storage-platform---connected-storage-title-storage"></a>Xbox Live 저장소 플랫폼-연결 된 저장소, 타이틀 저장소
 
 Xbox Live 클라우드에 전역 제목 데이터 및 플레이어 특정 데이터를 저장 하는 게시자 수 있습니다.
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [연결 된 저장소](connected-storage/connected-storage-overview.md) 자동으로 연결 된 사용자 당 저장소 API를 사용 하 여 저장 된 데이터 PC 및 여러 Xbox One 콘솔에서 사용자가 로밍 및 오프 라인 사용을 위해 제공 됩니다. 이 서비스를 사용 하 여 디바이스 간에 전환 후 타이틀을 다시 시작할 때 원활 하 게 계속 게임 플레이 수 있도록 합니다. 연결 된 저장소 서비스를 사용 하 여 자주 게임에서 인벤토리, 게임 상태 및 현재 위치와 같은 진행 데이터를 저장 해야 합니다. 연결 된 저장소 서비스는 자세한 오류 내결함성 클라우드 저장소 서비스 및는 네트워크 및 전원 실패에 덜 취약 합니다.
 

@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 Description: Command bar flyouts give users inline access to your app's most common tasks.
-title: 명령 모음 플라이 아웃
+title: 명령 모음 플라이아웃
 label: Command bar flyout
 template: detail.hbs
 ms.author: jimwalk
@@ -16,13 +16,13 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680124"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4743242"
 ---
-# <a name="command-bar-flyout"></a>명령 모음 플라이 아웃
+# <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
 명령 모음 플라이 아웃 요소와 관련 된 UI 캔버스에 부동 도구 모음에서 명령을 표시 하 여 일반적인 작업에 쉽게 액세스할 수 있는 사용자를 제공할 수 있습니다.
 

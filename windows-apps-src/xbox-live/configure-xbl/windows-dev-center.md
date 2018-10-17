@@ -10,11 +10,11 @@ ms.technology: uwp
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
 ms.openlocfilehash: a0c30014c3688695847a5734adfa7cbc7498ba4a
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690777"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741725"
 ---
 # <a name="windows-dev-center-service-configuration"></a>Windows 개발자 센터 서비스 구성
 
@@ -30,7 +30,7 @@ Xbox Live 구성에 액세스 하려면 페이지, [Windows 개발자 센터](ht
 
 다음 항목을 Windows 개발자 센터를 사용 하 여 Xbox Live를 구성 하는 방법을 설명 합니다.
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 * [Xbox Live 설정](dev-center/xbox-live-setup.md)
 

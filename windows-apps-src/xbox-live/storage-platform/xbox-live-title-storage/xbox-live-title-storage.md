@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 49f0f88a7e64ce57462b3ee7b07676280d91fb41
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4685429"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4742133"
 ---
 # <a name="xbox-live-title-storage"></a>Xbox Live 타이틀 저장소
 
@@ -261,7 +261,7 @@ URI의 **{경로}** 부분 시간차 요청의 타입 이며 245 자 여야 합�
 
 <a name="ID4EJFAC"></a>
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [Xbox Live 타이틀 저장소에 구성 Blob 읽기](reading-configuration-blobs.md)  
 읽는 방법을 보여 줍니다 구성 blob에서 Xbox Live 타이틀 저장소.

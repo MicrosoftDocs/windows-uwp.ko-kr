@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox One 게임 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: a175096860fe2d2e73259ab9e82cbd5c33b8b889
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 39d932a49e573d55a0ccb9cb69568006feede8a7
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4686595"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741690"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Xbox One 게임 취득 가져오기
 
@@ -93,7 +93,7 @@ Authorization: Bearer <your access token>
 | date                | 문자열 | 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
 | applicationId       | 문자열 | 취득 데이터를 검색할 Xbox One 게임의 제품 ID입니다. |
 | applicationName     | 문자열 | 게임의 표시 이름입니다.       |
-| acquisitionType     | 문자열 | 취득 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>무료</strong></li><li><strong>평가판</strong></li><li><strong>유료</strong></li><li><strong>프로모션 코드</strong></li><li><strong>사전 주문</strong></li><li>**Xbox Game Pass**(또는 2018년 3월 23일 이전에 데이터를 쿼리한 경우에는 **Game Pass**임)</li><li><strong>디스크</strong></li><li><strong>선불 코드</strong></li></ul>    |
+| acquisitionType     | 문자열 | 취득 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>무료</strong></li><li><strong>평가판</strong></li><li><strong>유료</strong></li><li><strong>프로모션 코드</strong></li><li><strong>랩</strong></li><li><strong>구독 Iap</strong></li><li><strong>개인 대상</strong></li><li><strong>사전 순서</strong></li><li><strong>Xbox Game Pass</strong>(또는 2018년 3월 23일 이전에 데이터를 쿼리한 경우에는 <strong>Game Pass</strong>임)</li><li><strong>디스크</strong></li><li><strong>선불 코드</strong></li><li><strong>충전된 사전 순서</strong></li><li><strong>취소 사전 순서</strong></li><li><strong>실패 한 사전 순서</strong></li></ul>    |
 | ageGroup            | 문자열 | 취득한 사용자 연령 그룹을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>13보다 적음</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>55보다 큼</strong></li><li><strong>알 수 없음</strong></li></ul>     |
 | deviceType          | 문자열 | 취득을 완료한 장치 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>서버</strong></li><li><strong>태블릿</strong></li><li><strong>홀로그램</strong></li><li><strong>알 수 없음</strong></li></ul>  |
 | 성별              | 문자열 | 취득한 사용자의 성별을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>알 수 없음</strong></li></ul>     |

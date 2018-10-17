@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스, pos, 자기 띠 판독기 지점
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce34623a0af9de6e0d678052719fb02f2a9672b
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4679486"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4742000"
 ---
 # <a name="magnetic-stripe-reader"></a>자기 띠 판독기
 
@@ -24,8 +24,8 @@ ms.locfileid: "4679486"
 
 아래 항목을 추가 정보를 제공 응용 프로그램에서 자기 띠 판독기를 사용 합니다.
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 | 항목 | 설명 |
 |-------|-------------|
-| [구하여 자기 띠 데이터 이해](../devices-sensors/pos-magnetic-stripe-reader-data.md) | 자기 띠에서 데이터를 해석 하는 방법에 알아봅니다. |
+| [자기 띠 데이터 가져오기 및 이해](../devices-sensors/pos-magnetic-stripe-reader-data.md) | 자기 띠에서 데이터를 해석 하는 방법에 알아봅니다. |
