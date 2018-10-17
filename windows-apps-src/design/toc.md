@@ -24,77 +24,104 @@
 ## 레이아웃 패널
 ### [개요](layout/layout-panels.md)
 ### [자습서: 레이아웃 패널 사용](layout/grid-tutorial.md)
+### [분할 보기](controls-and-patterns/split-view.md)
 ### [사용자 지정 패널](layout/custom-panels-overview.md)
 ### [사용자 지정 패널 예제: BoxPanel](layout/boxpanel-example-custom-panel.md)
 ## 변환
 ### [개요](layout/transforms.md)
 ### [3D 원근감 효과](layout/3-d-perspective-effects.md)
+## [Z-깊이 및 그림자](layout/depth-shadow.md)
 
 # 컨트롤
 ## [개요](controls-and-patterns/index.md)
 ## [컨트롤 및 이벤트 소개](controls-and-patterns/controls-and-events-intro.md)
 ## [기능별 컨트롤 인덱스](controls-and-patterns/controls-by-function.md)
-## [앱 바 및 명령 모음](controls-and-patterns/app-bars.md)
-## [자동 제안 상자](controls-and-patterns/auto-suggest-box.md)
-## [단추](controls-and-patterns/buttons.md)
-## [확인란](controls-and-patterns/checkbox.md)
-## [색 선택](controls-and-patterns/color-picker.md)
-## [명령 모음 플라이 아웃](controls-and-patterns/command-bar-flyout.md)
-## [연락처 카드](controls-and-patterns/contact-card.md)
-## [날짜 및 시간](controls-and-patterns/date-and-time.md)
-### [달력 날짜 선택](controls-and-patterns/calendar-date-picker.md)
-### [달력 보기](controls-and-patterns/calendar-view.md)
-### [날짜 선택기](controls-and-patterns/date-picker.md)
-### [시간 선택기](controls-and-patterns/time-picker.md)
-## 대화 상자 및 플라이아웃
-### [개요](controls-and-patterns/dialogs-and-flyouts/index.md)
-### [대화 상자](controls-and-patterns/dialogs-and-flyouts/dialogs.md)
-### [플라이아웃](controls-and-patterns/dialogs-and-flyouts/flyouts.md)
-## [대칭 이동 뷰](controls-and-patterns/flipview.md)
-## [양식](controls-and-patterns/forms.md)
-## [허브](controls-and-patterns/hub.md)
-## [하이퍼링크](controls-and-patterns/hyperlinks.md)
-## [이미지 및 이미지 브러시](controls-and-patterns/images-imagebrushes.md)
-## [잉크 입력 컨트롤](controls-and-patterns/inking-controls.md)
-## [목록](controls-and-patterns/lists.md)
+
+## 기본 입력
+### [단추](controls-and-patterns/buttons.md)
+### [확인란](controls-and-patterns/checkbox.md)
 ### [콤보 상자](controls-and-patterns/combo-box.md)
+### [하이퍼링크](controls-and-patterns/hyperlinks.md)
+### [라디오 단추](controls-and-patterns/radio-button.md)
+### [평점 컨트롤](controls-and-patterns/rating.md)
+### [슬라이더](controls-and-patterns/slider.md)
+### [토글](controls-and-patterns/toggles.md)
+
+## 컬렉션
+### [개요](controls-and-patterns/lists.md)
+### [대칭 이동 보기](controls-and-patterns/flipview.md)
 ### [목록 보기 및 그리드 보기](controls-and-patterns/listview-and-gridview.md)
-### [항목 컨테이너 및 템플릿](controls-and-patterns/item-containers-templates.md)
-### [목록 보기의 항목 템플릿](controls-and-patterns/item-templates-listview.md)
-### [그리드 보기의 항목 템플릿](controls-and-patterns/item-templates-gridview.md)
+#### [항목 컨테이너 및 템플릿](controls-and-patterns/item-containers-templates.md)
+#### [목록 보기의 항목 템플릿](controls-and-patterns/item-templates-listview.md)
+#### [그리드 보기의 항목 템플릿](controls-and-patterns/item-templates-gridview.md)
 ### [반전된 목록](controls-and-patterns/inverted-lists.md)
 ### [당겨서 새로 고침](controls-and-patterns/pull-to-refresh.md)
 ### [중첩된 UI](controls-and-patterns/nested-ui.md)
 ### [수집 명령](controls-and-patterns/collection-commanding.md)
-## [마스터/세부](controls-and-patterns/master-details.md)
-## [미디어 재생](controls-and-patterns/media-playback.md)
+### [살짝 밀기](controls-and-patterns/swipe.md)
+### [트리 보기 ](controls-and-patterns/tree-view.md)
+
+## 대화 상자 및 플라이아웃
+### [개요](controls-and-patterns/dialogs-and-flyouts/index.md)
+### [대화 상자](controls-and-patterns/dialogs-and-flyouts/dialogs.md)
+### [플라이아웃](controls-and-patterns/dialogs-and-flyouts/flyouts.md)
+
+## [양식](controls-and-patterns/forms.md)
+
+## 미디어, 그래픽 및 모양
+### [이미지 및 이미지 브러시](controls-and-patterns/images-imagebrushes.md)
+### [잉크](controls-and-patterns/inking-controls.md)
+### [미디어 재생](controls-and-patterns/media-playback.md)
 ### [사용자 지정 전송 컨트롤](controls-and-patterns/custom-transport-controls.md)
-## [메뉴 및 상황에 맞는 메뉴](controls-and-patterns/menus.md)
-## [탐색 보기](controls-and-patterns/navigationview.md)
-## [인물 사진](controls-and-patterns/person-picture.md)
-## [피벗](controls-and-patterns/pivot.md)
-## [진행률](controls-and-patterns/progress-controls.md)
-## [라디오 단추](controls-and-patterns/radio-button.md)
-## [평점 컨트롤](controls-and-patterns/rating.md)
-## [컨트롤 스크롤 및 이동](controls-and-patterns/scroll-controls.md)
+### [셰이프](controls-and-patterns/shapes.md)
+### [웹 보기](controls-and-patterns/web-view.md)
+
+## 메뉴 및 도구 모음
+### [앱 바 및 명령 모음](controls-and-patterns/app-bars.md)
+### [명령 모음 플라이아웃](controls-and-patterns/command-bar-flyout.md)
+### [메뉴 및 상황에 맞는 메뉴](controls-and-patterns/menus.md)
+
+## 탐색
+### [허브](controls-and-patterns/hub.md)
+### [마스터/세부 정보](controls-and-patterns/master-details.md)
+### [탐색 보기](controls-and-patterns/navigationview.md)
+### [피벗](controls-and-patterns/pivot.md)
+
+## 피플
+### [연락처 카드](controls-and-patterns/contact-card.md)
+### [인물 사진](controls-and-patterns/person-picture.md)
+
+## 선택기
+### [색 선택](controls-and-patterns/color-picker.md)
+### [날짜 및 시간 컨트롤](controls-and-patterns/date-and-time.md)
+### [달력 날짜 선택](controls-and-patterns/calendar-date-picker.md)
+### [달력 보기](controls-and-patterns/calendar-view.md)
+### [날짜 선택기](controls-and-patterns/date-picker.md)
+### [시간 선택](controls-and-patterns/time-picker.md)
+
+## 스크롤
+### [컨트롤 스크롤 및 이동](controls-and-patterns/scroll-controls.md)
+### [시맨틱 줌](controls-and-patterns/semantic-zoom.md)
+
 ## [검색](controls-and-patterns/search.md)
-## [시맨틱 줌](controls-and-patterns/semantic-zoom.md)
-## [셰이프](controls-and-patterns/shapes.md)
-## [슬라이더](controls-and-patterns/slider.md)
-## [분할 보기](controls-and-patterns/split-view.md)
-## [살짝 밀기](controls-and-patterns/swipe.md)
-## [텍스트](controls-and-patterns/text-controls.md)
-### [콘텐츠 링크](controls-and-patterns/content-links.md)
-### [레이블](controls-and-patterns/labels.md)
-### [비밀번호 상자](controls-and-patterns/password-box.md)
-### [서식 있는 편집 상자](controls-and-patterns/rich-edit-box.md)
-### [서식 있는 텍스트 블록](controls-and-patterns/rich-text-block.md)
+
+## 상태 및 정보
+### [진행률](controls-and-patterns/progress-controls.md)
+### [도구 설명](controls-and-patterns/tooltips.md)
+
+## 텍스트
+### [개요](controls-and-patterns/text-controls.md)
+### [자동 제안 상자](controls-and-patterns/auto-suggest-box.md)
 ### [텍스트 블록](controls-and-patterns/text-block.md)
+### [서식 있는 텍스트 블록](controls-and-patterns/rich-text-block.md)
 ### [텍스트 상자](controls-and-patterns/text-box.md)
-## [토글](controls-and-patterns/toggles.md)
-## [도구 설명](controls-and-patterns/tooltips.md)
-## [트리 뷰 ](controls-and-patterns/tree-view.md)
-## [웹 보기](controls-and-patterns/web-view.md)
+### [서식 있는 편집 상자](controls-and-patterns/rich-edit-box.md)
+### [암호 상자](controls-and-patterns/password-box.md)
+### [레이블](controls-and-patterns/labels.md)
+### [콘텐츠 링크](controls-and-patterns/content-links.md)
+### [필기 보기](controls-and-patterns/text-handwriting-view.md)
+
+
 
 # 스타일
 ## [개요](style/index.md)
@@ -124,6 +151,7 @@
 ## [연결된 애니메이션](motion/connected-animation.md)
 ## [시차](motion/parallax.md)
 ## [XAML의 애니메이션](motion/xaml-animation.md)
+### [속성 애니메이션](motion/xaml-property-animations.md)
 ### [스토리보드 애니메이션](motion/storyboarded-animations.md)
 ### [키 프레임 및 감속/가속 함수 애니메이션](motion/key-frame-and-easing-function-animations.md)
 
@@ -217,6 +245,7 @@
 ## [입력 주입](input/input-injection.md)
 ## [입력 장치 식별](input/identify-input-devices.md)
 ## [사용자 지정 텍스트 입력](input/custom-text-input.md)
+## [텍스트 크기 조정](input/text-scaling.md)
 ## [끌어서 놓기](input/drag-and-drop.md)
 ## [광학 줌 및 크기 조정](input/guidelines-for-optical-zoom.md)
 ## [이동](input/guidelines-for-panning.md)
