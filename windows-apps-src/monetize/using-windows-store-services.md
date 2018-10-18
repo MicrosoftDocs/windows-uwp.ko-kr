@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: d53fa39d0c6359e6f081c62a415cbf1874549b8f
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4692543"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4752935"
 ---
 # <a name="microsoft-store-services"></a>Microsoft Store 서비스
 
 Microsoft Store는 특정 유형의 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록 된 앱에 대 한 데이터를 프로그래밍 방식으로 액세스 하기 위해 REST Api를 통해 호출할 수 있는 여러 서비스를 노출 합니다.
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 
 | 항목            | 설명                 |

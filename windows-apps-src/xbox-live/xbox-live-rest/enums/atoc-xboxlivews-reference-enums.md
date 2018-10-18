@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e5490ec5b940f70180d2830e7caaed9a9926f50
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4687129"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753237"
 ---
 # <a name="enumerations-used-in-javascript-object-notation-json-objects"></a>JSON(JavaScript Object Notation) 개체에 사용된 열거형
  
@@ -25,7 +25,7 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 <a id="ID4EJB"></a>
 
  
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [GameClipSource 열거형](gvr-enum-gameclipsource.md)
 

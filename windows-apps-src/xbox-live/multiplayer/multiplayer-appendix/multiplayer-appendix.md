@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a85df1f0d5e58a89edffe8afe192563eecbfb60b
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4689105"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4754952"
 ---
 # <a name="multiplayer-appendix"></a>멀티 플레이 부록
 
@@ -30,7 +30,7 @@ ms.locfileid: "4689105"
 이전 버전의 멀티 플레이 시스템 2014 멀티 플레이어입니다. 이 버전은 게임 타사과 당사자 통해 게임에 참여 개념을 기반으로 합니다. 이 버전 이제 더 하지만에 대 한 소스 코드는 XDK를 사용 하 여 계속 제공 됩니다. 2014 멀티 플레이 설명서가 더 이상는 XDK 포함 되었습니다. 이 설명서에 필요 하면 2014 릴리스는 XDK 사용 하세요.
 
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [소개](introduction-to-the-multiplayer-system.md)  
 멀티 플레이 시스템을 소개합니다.

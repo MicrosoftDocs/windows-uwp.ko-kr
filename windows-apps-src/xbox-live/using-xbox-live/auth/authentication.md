@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 인증에 로그인
 ms.localizationpriority: medium
 ms.openlocfilehash: 61a4b0ef33d346b8ed4d3e0b8e074ede1edeba23
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680779"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4754860"
 ---
 # <a name="authentication"></a>Authentication
 
 이 섹션에서는 Xbox Live와 인증을 다룹니다.
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [유니버설 Windows 플랫폼 (UWP) 프로젝트에 대 한 인증](authentication-for-UWP-projects.md)
 

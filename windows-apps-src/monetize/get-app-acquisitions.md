@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b712c41f8288502e9e2abd1f05396ef1720390e
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 997f4e088edfced94189c2c0977bcfff60166059
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690072"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753708"
 ---
 # <a name="get-app-acquisitions"></a>앱 집계 정보 가져오기
 
@@ -101,7 +101,7 @@ Authorization: Bearer <your access token>
 | market              | 문자열 | 구입이 발생한 시장의 ISO 3166 국가 코드입니다.  |
 | gender              | 문자열 | 취득한 사용자의 성별을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>알 수 없음</strong></li></ul>    |
 | ageGroup            | 문자열 | 취득한 사용자의 연령 그룹을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>13보다 적음</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>55보다 큼</strong></li><li><strong>알 수 없음</strong></li></ul>  |
-| acquisitionType     | 문자열 | 취득 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>무료</strong></li><li><strong>평가판</strong></li><li><strong>유료</strong></li><li><strong>프로모션 코드</strong></li><li><strong>랩</strong></li></ul>   |
+| acquisitionType     | 문자열 | 취득 유형을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>무료</strong></li><li><strong>평가판</strong></li><li><strong>유료</strong></li><li><strong>프로모션 코드</strong></li><li><strong>랩</strong></li><li><strong>구독 Iap</strong></li><li><strong>개인 대상</strong></li><li><strong>사전 순서</strong></li><li><strong>Xbox Game Pass</strong>(또는 2018년 3월 23일 이전에 데이터를 쿼리한 경우에는 <strong>Game Pass</strong>임)</li><li><strong>디스크</strong></li><li><strong>선불 코드</strong></li></ul>   |
 | acquisitionQuantity | 숫자 | 지정된 집계 수준 중에 발생한 구입 횟수입니다.    |
 
 

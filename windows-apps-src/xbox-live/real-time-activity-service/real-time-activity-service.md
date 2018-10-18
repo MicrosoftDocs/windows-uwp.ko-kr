@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 실시간으로 활동 서비스.
 ms.localizationpriority: medium
 ms.openlocfilehash: 1969a36a363f86ba6eced1c27d2206de1160c7bc
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4681321"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753076"
 ---
 # <a name="real-time-activity-service"></a>실시간 활동 서비스
 
@@ -65,7 +65,7 @@ RTA 고려할 때는 도우미 앱 생각 하는 일반적인 상태일 때 RTA 
 최신 버전 RTA의 개인 정보 및 권한 부여/콘텐츠 격리 포함 됩니다. 개인 정보 및 권한 부여 검사 만족할 경우으로 앱 RTA 사용 가능으로 표시 된 모든 통계 구독할 수 있습니다. (통계 RTA 지원 참조 하는 방법에 대 한 자세한 정보에 대 한 [통계 알림에 대 한 등록](register-for-stat-notifications.md)합니다. RTA 사용 설정할 수 있는 통계 종류에 제한이 없다는-는 것은 개발자에 게 합니다. 그러나 사용자가 앱 세션별 구독할 수 있는 통계 *수* 에 제한이 있습니다. 사용자가 해당 제한에 도달 하면 경우 자신이 다음 구독에서 오류가 받게 됩니다.
 
 
-## <a name="in-this-section"></a>이 섹션 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 [플레이어 통계 변경 알림 등록](register-for-stat-notifications.md)  
 통계 또는 상태 정보에 대 한 실시간 활동 (RTA)를 사용 하는 방법에 설명 합니다.

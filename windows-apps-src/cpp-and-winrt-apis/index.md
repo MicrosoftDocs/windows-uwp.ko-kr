@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
 ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4694600"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4752192"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -43,7 +43,7 @@ C++/WinRT는 Windows 런타임에서 사용되는 다른 언어 옵션보다 더
 | [C++/WinRT 소개](intro-to-using-cpp-with-winrt.md) | C++/WinRT 소개&mdash;Windows 런타임 API용 표준 C++ 언어 프로젝션 |
 | [C++/WinRT 시작](get-started.md) | C++/WinRT 사용 속도를 높이기 위해 이 항목은 단순한 코드 예제를 안내합니다. |
 | [새로운 C + + WinRT](news.md) | 뉴스와 변경 C + + WinRT 합니다. |
-| [FAQ](faq.md) | C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다. |
+| [질문과 대답](faq.md) | C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하면서 가질 수 있는 질문에 대해 답변을 제공합니다. |
 | [문제 해결](troubleshooting.md) | 이번 항목에서 증상 문제 및 해결 방법을 나타낸 표는 새로운 코드를 자르거나 기존 앱을 이식할지 결정하는 데 도움이 될 수 있습니다. |
 | [사진 편집기 C++/WinRT 샘플 응용 프로그램](photo-editor-sample.md) | 사진 편집기는 C++/WinRT 언어 프로젝션을 사용한 개발을 보여 주는 UWP 샘플 응용 프로그램입니다. 샘플 응용 프로그램을 사용하여 **사진** 라이브러리에서 사진을 검색한 다음 다양한 사진 효과를 사용하여 선택한 이미지를 편집합니다. | 
 | [문자열 처리](strings.md) | C++/WinRT에서는 표준 C++ 전각 문자열 형식을 사용하여 Windows 런타임 API를 호출하거나, 혹은 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 형식을 사용할 수 있습니다. |
