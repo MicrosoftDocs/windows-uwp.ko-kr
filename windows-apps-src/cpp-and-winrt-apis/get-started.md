@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: b5954aa8236a9abeee6e5c74a200f77fcccf97e3
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750142"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4966814"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 하는 데 속도 사용 하 여 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt),이 항목은 단순한 코드 예제를 안내 합니다.

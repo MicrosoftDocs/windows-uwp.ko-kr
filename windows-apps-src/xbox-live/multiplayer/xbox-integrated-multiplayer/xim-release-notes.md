@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 07c3094b5308bb0062d046440f83b45b842eb820
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4744844"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "5013082"
 ---
 # <a name="xbox-integrated-multiplayer-release-notes"></a>Xbox 통합 멀티 플레이어 릴리스 정보
 

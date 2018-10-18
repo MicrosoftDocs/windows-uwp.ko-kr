@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c9b7a30a50c26d2dbdaf6df04e85549addaf181
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4755984"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4967565"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지
 

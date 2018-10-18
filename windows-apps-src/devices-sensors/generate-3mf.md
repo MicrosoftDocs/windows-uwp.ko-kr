@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02eb6442b4769e92bec2b41ed9ab0e91a6a98a7f
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4742384"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4967997"
 ---
 # <a name="generate-a-3mf-package"></a>3MF 패키지 생성
 
