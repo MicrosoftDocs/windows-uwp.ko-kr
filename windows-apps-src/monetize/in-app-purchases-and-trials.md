@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: d35e2469fa303a40967cf4c15800786eb2d17aca
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: b116e4794f024ecc5cf44d73e22c09ab8ee33ff4
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750195"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4953171"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱 내 구매 및 평가판
 
@@ -162,7 +162,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 앱에서 앱 내 구매 또는 평가판 기능을 구현하기 위해 **Windows.Services.Store** 네임스페이스의 API를 사용하고 있다면, 테스트 라이선스를 사용하기 위해 앱을 Store에 제출하고, 앱을 개발자 장치에 다운로드해야 합니다. 다음 프로세스로 코드를 테스트합니다.
 
-1. 앱이 아직 게시되지 않고 Store에서 사용할 수 없는 경우 앱이 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는지 확인하고, Windows 개발자 센터 대시보드에 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)하고 인증 프로세스를 전달해야 합니다. 테스트 하는 동안 [앱이 스토어에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다.
+1. 앱이 아직 게시되지 않고 Store에서 사용할 수 없는 경우 앱이 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는지 확인하고, Windows 개발자 센터 대시보드에 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)하고 인증 프로세스를 전달해야 합니다. 테스트 하는 동안 [앱이 스토어에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다. [패키지 플라이트](../publish/package-flights.md)의 적절 한 구성을 note 하세요. 잘못 구성 된 패키지 플라이트 수 할 수 없습니다 다운로드할 수 있습니다.
 
 2. 그런 다음 아래 작업을 완료해야 합니다.
 
