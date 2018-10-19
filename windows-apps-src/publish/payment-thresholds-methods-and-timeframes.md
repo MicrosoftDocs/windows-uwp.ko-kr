@@ -3,19 +3,19 @@ author: jnHs
 Description: The estimated time to transfer payments, applicable payment thresholds, and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type.
 title: 지급 임계값, 방법 및 기간
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a7428b9278e4fc3264f652030f0409cab056d31
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: d8793f36459feb45f327b21941ea86965b905116
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4745599"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4962424"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 
@@ -1048,8 +1048,8 @@ ms.locfileid: "4745599"
   </tr>
   <tr>
     <td>아랍에미리트</td>
-    <td>25USD</td>
-    <td>ACH/SEPA</td>
+    <td>200USD</td>
+    <td>전신 송금</td>
     <td>25USD</td>
     <td>PayPal</td>
   </tr>
@@ -2111,7 +2111,7 @@ ms.locfileid: "4745599"
   <tr>
     <td>아랍에미리트</td>
     <td>50 USD</td>
-    <td>ACH/SEPA</td>
+    <td>전신 송금</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
@@ -3158,8 +3158,8 @@ ms.locfileid: "4745599"
   </tr>
   <tr>
     <td>아랍에미리트</td>
-    <td>25USD</td>
-    <td>ACH/SEPA</td>
+    <td>200USD</td>
+    <td>전신 송금</td>
     <td>25USD</td>
     <td>PayPal</td>
   </tr>
@@ -4121,8 +4121,8 @@ ms.locfileid: "4745599"
   </tr>
   <tr>
     <td>아랍에미리트</td>
-    <td>25USD</td>
-    <td>ACH/SEPA</td>
+    <td>200USD</td>
+    <td>전신 송금</td>
     <td>25USD</td>
     <td>PayPal</td>
   </tr>
