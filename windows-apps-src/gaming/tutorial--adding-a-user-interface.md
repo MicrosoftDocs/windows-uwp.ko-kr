@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 사용자 인터페이스, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a82958f01530b84276823ea8d025d292bd664ac
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4964466"
+ms.locfileid: "5126984"
 ---
 # <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 

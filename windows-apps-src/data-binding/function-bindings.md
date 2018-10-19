@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4950292"
+ms.locfileid: "5129073"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
@@ -108,7 +108,7 @@ public class MyPage : Page
 - 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
 - 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
 
-Windows 10의 다음 주요 업데이트부터 바인딩 엔진은 고 대응 하 고 함수 이름으로 발생 하는 속성 변경 알림을 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
+Windows 10의 다음 주요 업데이트부터 바인딩 엔진은 고 대응 하 고 함수 이름으로 발생 하는 속성 변경 알림을 필요에 따라 바인딩이 다시 평가 합니다. 예: 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">
