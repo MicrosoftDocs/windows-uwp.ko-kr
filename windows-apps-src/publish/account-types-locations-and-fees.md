@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4950935"
+ms.locfileid: "5159847"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
@@ -166,7 +166,7 @@ ms.locfileid: "4950935"
 |  리투아니아 | 14 EUR | 75 EUR | 은행에 EUR로 지급 | 아니요 | 
 |  룩셈부르크 | 14 EUR | 75 EUR | 은행에 EUR로 지급 | 예 | 
 |  마카오 특별 행정구 | 19 USD | 99 USD | 지급액 없음 | 아니요 | 
-|  Macedonia (FYROM) | 19 USD | 99 USD | 은행에 USD로 지급 | 아니요 | 
+|  마케도니아(이전 유고슬라비아 마케도니아 공화국) | 19 USD | 99 USD | 은행에 USD로 지급 | 아니요 | 
 |  마다가스카르 | 19 USD | 99 USD | 은행에 USD로 지급 | 아니요 | 
 |  말라위 | 19 USD | 99 USD | 은행에 MWK로 지급 | 아니요 | 
 |  말레이시아 | 62 MYR | 300 MYR | 은행에 USD로 지급 | 아니요 | 

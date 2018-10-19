@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: be4338c7b7e7b3861c206a6d7d63e9e417e6cd0d
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4953423"
+ms.locfileid: "5157875"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
@@ -41,6 +41,12 @@ ms.locfileid: "4953423"
 ![새 프로젝트 시작](images/desktop-to-uwp/extend-start-project.png)
 
 솔루션에 패키징 프로젝트가 없는 하는 경우 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md)를 참조 하세요.
+
+### <a name="configure-the-desktop-application"></a>데스크톱 응용 프로그램 구성
+
+데스크톱 응용 프로그램에 Windows 런타임 Api를 호출 해야 하는 파일에 대 한 참조가 있는지 확인 합니다.
+
+이렇게 하려면 [먼저 프로젝트를 설치](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project) 섹션의 항목에서는 [Windows 10 용 데스크톱 응용 프로그램 향상](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance#first-set-up-your-project)을 참조 하세요.
 
 ### <a name="add-a-uwp-project"></a>UWP 프로젝트 추가
 
@@ -71,6 +77,12 @@ ms.locfileid: "4953423"
 그런 다음 UWP 프로젝트에서 런타임 구성 요소에 참조를 추가합니다. 솔루션은 다음과 같이 보입니다.
 
 ![런타임 구성 요소 참조](images/desktop-to-uwp/runtime-component-reference.png)
+
+### <a name="build-your-solution"></a>솔루션 빌드
+
+오류 없이 표시 하려면 솔루션을 빌드하십시오. 오류가 발생 하면 **Configuration Manager** 열고 프로젝트를 동일한 플랫폼 대상 확인 합니다.
+
+![구성 관리자](images/desktop-to-uwp/config-manager.png)
 
 UWP 프로젝트와 런타임 구성 요소를 사용하여 할 수 있는 몇 가지 사항에 살펴보겠습니다.
 
@@ -211,7 +223,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-페이지에 전달된 매개 변수를 사용하기 위해 ``OnNavigatedTo`` 메서드를 무시합니다. 이 경우에 이 페이지에 전달된 위도 및 경도를 사용하여 지도에서 위치를 표시합니다.
+코드 숨김 XAML 페이지에서에서 재정의 ``OnNavigatedTo`` 페이지에 전달 된 매개 변수를 사용 하는 방법. 이 경우에 이 페이지에 전달된 위도 및 경도를 사용하여 지도에서 위치를 표시합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -238,156 +250,15 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
  }
 ```
 
-### <a name="similar-samples"></a>비슷한 샘플
-
-[VB6 응용 프로그램에 UWP XAML 사용자 환경 추가](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/VB6withXaml)
-
-[Northwind 샘플: UWA UI 및 Win32 기존 코드에 대한 완전한 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/NorthwindSample)
-
-[Northwind 샘플: SQL Server에 연결된 UWP 앱](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SQLServer)
-
-## <a name="provide-services-to-other-apps"></a>다른 앱에 서비스 제공
-
-다른 앱이 사용할 수 있는 서비스를 추가합니다. 예를 들어, 다른 앱에 앱 이면의 데이터베이스에 제어된 액세스를 제공하는 서비스를 추가할 수 있습니다. 백그라운드 작업을 구현 하 여 데스크톱 응용 프로그램을 실행 하지 않는 경우에 앱 서비스에 도달할 수 있습니다.
-
-이에 대한 샘플입니다.
-
-![적응형 디자인](images/desktop-to-uwp/winforms-app-service.png)
-
-### <a name="have-a-closer-look-at-this-app"></a>이 앱을 자세히 보세요.
-
-:heavy_check_mark: [앱 다운로드](https://www.microsoft.com/en-us/store/p/winforms-appservice/9p7d9b6nk5tn)
-
-:heavy_check_mark: [코드 찾아보기](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinformsAppService)
-
-### <a name="the-design-pattern"></a>디자인 패턴
-
-서비스 제공을 표시하려면 다음 작업을 수행합니다.
-
-:1: [앱 서비스 구현](#appservice)
-
-:2: [앱 서비스 확장 추가](#extension)
-
-:3: [앱 서비스 테스트](#test)
-
-<a id="appservice" />
-
-### <a name="implement-the-app-service"></a>앱 서비스 구현
-
-여기에서 다른 앱의 요청을 검사 및 처리하게 될 것입니다. 이 코드를 솔루션의 Windows 런타임 구성 요소에 추가합니다.
-
-```csharp
-public sealed class AppServiceTask : IBackgroundTask
-{
-    private BackgroundTaskDeferral backgroundTaskDeferral;
- 
-    public void Run(IBackgroundTaskInstance taskInstance)
-    {
-        this.backgroundTaskDeferral = taskInstance.GetDeferral();
-        taskInstance.Canceled += OnTaskCanceled;
-        var details = taskInstance.TriggerDetails as AppServiceTriggerDetails;
-        details.AppServiceConnection.RequestReceived += OnRequestReceived;
-    }
- 
-    private async void OnRequestReceived(AppServiceConnection sender,
-                                         AppServiceRequestReceivedEventArgs args)
-    {
-        var messageDeferral = args.GetDeferral();
-        ValueSet message = args.Request.Message;
-        string id = message["ID"] as string;
-        ValueSet returnData = DataBase.GetData(id);
-        await args.Request.SendResponseAsync(returnData);
-        messageDeferral.Complete();
-    }
- 
- 
-    private void OnTaskCanceled(IBackgroundTaskInstance sender,
-                                BackgroundTaskCancellationReason reason)
-    {
-        if (this.backgroundTaskDeferral != null)
-        {
-            this.backgroundTaskDeferral.Complete();
-        }
-    }
-}
-```
-
-<a id="extension" />
-
-### <a name="add-an-app-service-extension-to-the-packaging-project"></a>패키징 프로젝트에 앱 서비스 확장 추가
-
-패키징 프로젝트의 **package.appxmanifest** 파일을 열고 앱 서비스 확장을 추가 합니다 ``<Application>`` 요소입니다.
-
-```xml
-<Extensions>
-      <uap:Extension
-          Category="windows.appService"
-          EntryPoint="AppServiceComponent.AppServiceTask">
-        <uap:AppService Name="com.microsoft.samples.winforms" />
-      </uap:Extension>
-    </Extensions>    
-```
-앱 서비스에 이름을 지정하고, 진입점 클래스 이름을 지정합니다. 이는 서비스를 구현한 클래스입니다.
-
-<a id="test" />
-
-### <a name="test-the-app-service"></a>앱 서비스 테스트
-
-다른 앱에서 호출하여 서비스를 테스트합니다. 이 코드는 Windows forms 응용 프로그램 또는 다른 UWP 앱 등의 데스크톱 응용 프로그램이 될 수 있습니다.
-
-> [!NOTE]
-> 이 코드는 ``AppServiceConnection`` 클래스의 ``PackageFamilyName`` 속성을 올바르게 설정하는 경우에만 작동합니다. UWP 프로젝트의 컨텍스트에서 ``Windows.ApplicationModel.Package.Current.Id.FamilyName``을 호출하여 이 이름을 얻을 수 있습니다. [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)을 참조하세요.
-
-```csharp
-private async void button_Click(object sender, RoutedEventArgs e)
-{
-    AppServiceConnection dataService = new AppServiceConnection();
-    dataService.AppServiceName = "com.microsoft.samples.winforms";
-    dataService.PackageFamilyName = "Microsoft.SDKSamples.WinformWithAppService";
- 
-    var status = await dataService.OpenAsync();
-    if (status == AppServiceConnectionStatus.Success)
-    {
-        string id = int.Parse(textBox.Text);
-        var message = new ValueSet();
-        message.Add("ID", id);
-        AppServiceResponse response = await dataService.SendMessageAsync(message);
- 
-        if (response.Status == AppServiceResponseStatus.Success)
-        {
-            if (response.Message["Status"] as string == "OK")
-            {
-                DisplayResult(response.Message["Result"]);
-            }
-        }
-    }
-}
-```
-
-앱 서비스에 대한 자세한 내용은 [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)을 참조하세요.
-
-### <a name="similar-samples"></a>비슷한 샘플
-
-[앱 서비스 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/AppServiceBridgeSample)
-
-[C++win32 앱과 앱 서비스 브리지](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/AppServiceBridgeSample_C%2B%2B)
-
-[푸시 알림을 받는 MFC 응용 프로그램](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/MFCwithPush)
-
-
 ## <a name="making-your-desktop-application-a-share-target"></a>데스크톱 응용 프로그램을 공유 대상으로 만들기
 
 데스크톱 응용 프로그램을 공유 대상으로 만들면 사용자가 공유를 지원하는 다른 앱의 사진 등 데이터를 쉽게 공유할 수 있습니다.
 
 예를 들어 사용자가 Microsoft Edge, 사진 앱에서에서 사진 공유에 응용 프로그램을 선택할 수 있습니다. 해당 기능이 있는 WPF 샘플 응용 프로그램 다음과 같습니다.
 
-![공유 대상](images/desktop-to-uwp/share-target.png)
+![공유 대상](images/desktop-to-uwp/share-target.png).
 
-### <a name="have-a-closer-look-at-this-app"></a>이 앱을 자세히 보세요.
-
-:heavy_check_mark: [앱 다운로드](https://www.microsoft.com/en-us/store/p/wpf-app-as-sharetarget/9pjcjljlck37)
-
-:heavy_check_mark: [코드 찾아보기](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WPFasShareTarget)
+전체 샘플을 참조 합니다. [여기서](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget)
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 
@@ -395,20 +266,28 @@ private async void button_Click(object sender, RoutedEventArgs e)
 
 :1: [공유 대상 확장 추가](#share-extension)
 
-:2: [OnNavigatedTo 이벤트 처리기 재정의](#override)
+: 2: [OnShareTargetActivated 이벤트 핸들러 재정의](#override)
+
+: 3: [UWP 프로젝트에 데스크톱 확장 추가](#desktop-extensions)
+
+: 4: [완전 신뢰 프로세스 확장 추가](#full-trust)
+
+: 5: [공유 파일을 가져오는 데스크톱 응용 프로그램 수정](#modify-desktop)
 
 <a id="share-extension" />
 
+다음 단계  
+
 ### <a name="add-a-share-target-extension"></a>공유 대상 확장 추가
 
-**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고 확장을 추가 합니다.
+**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고 공유 대상 확장 추가 합니다.
 
 ```xml
 <Extensions>
       <uap:Extension
           Category="windows.shareTarget"
           Executable="ShareTarget.exe"
-          EntryPoint="ShareTarget.App">
+          EntryPoint="App">
         <uap:ShareTarget>
           <uap:SupportedFileTypes>
             <uap:SupportsAnyFileType />
@@ -419,31 +298,99 @@ private async void button_Click(object sender, RoutedEventArgs e)
 </Extensions>  
 ```
 
-UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다.
+UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름 이라고 가정 `ShareTarget.exe`.
+
+또 앱이 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 보도록 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램을 공유 대상으로 지정 되므로 비트맵 이미지에 대 한 `Bitmap` 지원 되는 파일 형식에 대 한 합니다.
 
 <a id="override" />
 
-### <a name="override-the-onnavigatedto-event-handler"></a>OnNavigatedTo 이벤트 처리기 재정의
+### <a name="override-the-onsharetargetactivated-event-handler"></a>OnShareTargetActivated 이벤트 핸들러 재정의
 
-UWP 프로젝트의 **App** 클래스에서 **OnNavigatedTo** 이벤트 처리기를 재정의합니다.
+UWP 프로젝트의 **앱** 클래스에서 **OnShareTargetActivated** 이벤트 핸들러를 재정의 합니다.
 
 이 이벤트 처리기는 사용자가 파일을 공유하기 위해 앱을 선택할 때 호출됩니다.
 
 ```csharp
-protected override async void OnNavigatedTo(NavigationEventArgs e)
+
+protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
 {
-  this.shareOperation = (ShareOperation)e.Parameter;
-  if (this.shareOperation.Data.Contains(StandardDataFormats.StorageItems))
-  {
-      this.sharedStorageItems =
-        await this.shareOperation.Data.GetStorageItemsAsync();
-       
-      foreach (StorageFile item in this.sharedStorageItems)
-      {
-          ProcessSharedFile(item);
-      }
-  }
+    shareWithDesktopApplication(args.ShareOperation);
 }
+
+private async void shareWithDesktopApplication(ShareOperation shareOperation)
+{
+    if (shareOperation.Data.Contains(StandardDataFormats.StorageItems))
+    {
+        var items = await shareOperation.Data.GetStorageItemsAsync();
+        StorageFile file = items[0] as StorageFile;
+        IRandomAccessStreamWithContentType stream = await file.OpenReadAsync();
+
+        await file.CopyAsync(ApplicationData.Current.LocalFolder);
+            shareOperation.ReportCompleted();
+
+        await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync();
+    }
+}
+```
+이 코드에서는 앱 로컬 저장소 폴더에 사용자가 공유 되는 이미지를 저장 합니다. 나중에 해당 동일한 폴더에서 데스크톱 응용 프로그램 풀 이미지를 수정 합니다. 데스크톱 응용 프로그램은 UWP 앱과 같은 패키지에 포함 되어 있으므로 수행할 수 있습니다.
+
+<a id="desktop-extensions" />
+
+### <a name="add-desktop-extensions-to-the-uwp-project"></a>UWP 프로젝트에 데스크톱 확장 추가
+
+UWP 앱 프로젝트에 **UWP 용 Windows 데스크톱 확장** 확장을 추가 합니다.
+
+![데스크톱 확장](images/desktop-to-uwp/desktop-extensions.png)
+
+<a id="full-trust" />
+
+### <a name="add-the-full-trust-process-extension"></a>완전 신뢰 프로세스 확장 추가
+
+**솔루션 탐색기**솔루션에 패키징 프로젝트의 **package.appxmanifest** 파일을 열고 하 고이 파일을 이전 추가 하면 공유 대상 확장 옆 완전 신뢰 프로세스 확장을 추가 합니다.
+
+```xml
+<Extensions>
+  ...
+      <desktop:Extension Category="windows.fullTrustProcess" Executable="PhotoStoreDemo\PhotoStoreDemo.exe" />
+  ...
+</Extensions>  
+```
+
+이 확장 하면 UWP 응용 프로그램에서 파일 공유를 원하는 데스크톱 응용 프로그램을 시작할 수 있습니다. 예제에서는 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램의 실행 파일을 참조 합니다.
+
+<a id="modify-desktop" />
+
+### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>공유 파일을 가져오는 데스크톱 응용 프로그램을 수정
+
+데스크톱 응용 프로그램을 찾아 공유 파일을 처리를 수정 합니다. 이 예제에서는 UWP 앱 로컬 앱 데이터 폴더에 공유 파일을 저장 합니다. 따라서 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램 풀 사진에 해당 폴더에서 수정 했습니다.
+
+```csharp
+Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+```
+사용자가 이미 사용 중인 데스크톱 응용 프로그램의 인스턴스 열려, 수 또한 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher?view=netframework-4.7.2) 이벤트를 처리 하 고 경로에서 파일 위치를 전달 합니다. 그러면 데스크톱 응용 프로그램의 열려 있는 인스턴스 공유 사진을 표시 됩니다.
+
+```csharp
+...
+
+   FileSystemWatcher watcher = new FileSystemWatcher(Photos.Path);
+
+...
+
+private void Watcher_Created(object sender, FileSystemEventArgs e)
+{
+    // new file got created, adding it to the list
+    Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(() =>
+    {
+        if (File.Exists(e.FullPath))
+        {
+            ImageFile item = new ImageFile(e.FullPath);
+            Photos.Insert(0, item);
+            PhotoListBox.SelectedIndex = 0;
+            CurrentPhoto.Source = (BitmapSource)item.Image;
+        }
+    }));
+}
+
 ```
 
 ## <a name="create-a-background-task"></a>백그라운드 작업 만들기
@@ -456,9 +403,7 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 
 작업은 http 요청을 만들고 요청이 응답을 반환하는 데 걸리는 시간을 측정합니다. 귀하의 작업 훨씬 더 흥미로울 수 있지만 이 샘플은 백그라운드 작업의 기본 메커니즘을 학습하는 데 적합합니다.
 
-### <a name="have-a-closer-look-at-this-app"></a>이 앱을 자세히 보세요.
-
-:heavy_check_mark: [코드 찾아보기](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask)
+전체 샘플을 참조 하세요 [다음과 같습니다](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask).
 
 ### <a name="the-design-pattern"></a>디자인 패턴
 

@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
 ms.openlocfilehash: d8793f36459feb45f327b21941ea86965b905116
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4962424"
+ms.locfileid: "5130605"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 
@@ -634,7 +634,7 @@ ms.locfileid: "4962424"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Macedonia (FYROM)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -1696,7 +1696,7 @@ ms.locfileid: "4962424"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Macedonia (FYROM)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>50 USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -2751,7 +2751,7 @@ ms.locfileid: "4962424"
     <td>PayPal</td>
   </tr>
  <tr>
-    <td>Macedonia (FYROM)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -3756,7 +3756,7 @@ ms.locfileid: "4962424"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>Macedonia (FYROM)</td>
+    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
