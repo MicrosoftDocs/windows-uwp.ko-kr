@@ -304,7 +304,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>파키스탄</td>
     <td>팔라우</td>
-    <td>팔레스타인 자치 정부</td>
+    <td>Palestinian Authority</td>
     <td>파나마</td>
   </tr>
   <tr>
@@ -370,7 +370,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>대만*</td>
+    <td>Taiwan *</td>
     <td>타지키스탄</td>
   </tr>
   <tr>
@@ -664,7 +664,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
   </tr>
   <tr>
     <td>팔라우</td>
-    <td>팔레스타인 자치 정부</td>
+    <td>Palestinian Authority</td>
     <td>파나마</td>
     <td>파푸아뉴기니</td>
   </tr>
