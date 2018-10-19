@@ -10,11 +10,11 @@ ms.technology: uwp, windows forms, wpf
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
 ms.openlocfilehash: 59072374e19da1c5c7e6e6a5e6a7b8c172d74052
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4958994"
+ms.locfileid: "5133047"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>UWP XAML 데스크톱 응용 프로그램에서 호스팅 API를 사용 하 여
 
@@ -51,7 +51,7 @@ Windows 커뮤니티 도구 키트에서 [WindowsXamlHost](https://docs.microsof
   * [여기로 이동](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Wpf.UI.XamlHost)컨트롤의 WPF 버전입니다. WPF 버전 [**System.Windows.Interop.HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost)에서 파생 됩니다.
   * [여기로 이동](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Forms.UI.XamlHost)컨트롤의 Windows Forms 버전입니다. Windows Forms 버전 [**System.Windows.Forms.Control**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control)에서 파생 됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 호스팅 API UWP XAML에 이러한 필수 조건이 있습니다.
 
@@ -202,11 +202,11 @@ UWP XAML 호스팅 API 여러 형식 및 멤버 이러한 작업을 수행할 �
 
 사용자는 부모 UI 요소의 크기를 변경 하는 경우 예상 대로 표시 UWP 컨트롤에 있는지 확인 하려면 모든 필요한 레이아웃 변경을 처리 해야 합니다. 다음은 몇 가지 중요 한 시나리오를 고려해 야 합니다.
 
-1. **Windows.UI.Xaml.UIElement의 [**측정**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 메서드를 호출 하는 부모 UI 요소를 표시 하는 **Windows.UI.Xaml.UIElement** **DesktopWindowXamlSource**에서 호스팅하는 데 필요한 사각형 영역의 크기를 가져오려면 해야 하는 경우 **. 예를 들면 다음과 같습니다.
+1. **Windows.UI.Xaml.UIElement의 [**측정**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 메서드를 호출 하는 부모 UI 요소를 표시 하는 **Windows.UI.Xaml.UIElement** **DesktopWindowXamlSource**에서 호스팅하는 데 필요한 사각형 영역의 크기를 가져오려면 해야 하는 경우 **. 예:
     * WPF 응용 프로그램에서 **DesktopWindowXamlSource**호스팅하는 [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) 의 [**MeasureOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) 메서드에서 이렇게 할 수 있습니다.
     * Windows Forms 응용 프로그램에서 **DesktopWindowXamlSource**를 호스트 하는 [**컨트롤**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) 의 [**GetPreferredSize**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.getpreferredsize) 메서드에서 이렇게 할 수 있습니다.
 
-2. 부모 UI 요소 변경, 크기 [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 메서드 호출의 루트 **Windows.UI.Xaml.UIElement** 는 **DesktopWindowXamlSource**에서 호스팅하는 있습니다. 예를 들면 다음과 같습니다.
+2. 부모 UI 요소 변경, 크기 [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 메서드 호출의 루트 **Windows.UI.Xaml.UIElement** 는 **DesktopWindowXamlSource**에서 호스팅하는 있습니다. 예:
     * WPF 응용 프로그램에서 **DesktopWindowXamlSource**호스팅하는 [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) 개체의 [**ArrangeOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.arrangeoverride) 메서드에서 이렇게 할 수 있습니다.
     * Windows Forms 응용 프로그램에서 수행할 수 있습니다이 [**컨트롤**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) 의 [**SizeChanged**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.sizechanged) 이벤트 처리기에서 해당 호스트 **DesktopWindowXamlSource**.
 

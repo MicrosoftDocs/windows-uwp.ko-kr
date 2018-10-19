@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 사용
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4958520"
+ms.locfileid: "5131156"
 ---
 # <a name="get-daily-app-usage"></a>일일 앱 사용 현황 가져오기
 
 Microsoft Store 분석 API에서이 메서드를 사용 하 여 (지난 90 일만)는 지정 된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램에 대 한 (Xbox 멀티 플레이 포함 하지 않음) 집계 사용 현황 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [사용 보고서](../publish/usage-report.md) 에 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 

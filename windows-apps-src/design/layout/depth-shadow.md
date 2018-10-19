@@ -13,11 +13,11 @@ pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
 ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "4969049"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "5131328"
 ---
 # <a name="z-depth-and-shadow"></a>Z-깊이 및 그림자
 
@@ -65,7 +65,7 @@ Z-깊이, z 축 따라 두 표면 사이의 거리 이며 뷰어에 얼마나 �
 
 ## <a name="what-is-shadow"></a>그림자 란 무엇 인가요?
 
-![그림자](images/elevation-shadow/shadow.svg)
+![shadow](images/elevation-shadow/shadow.svg)
 
 그림자는 권한 상승 생각 하는 방법입니다. 관리자 권한 개체 위에 빛을가 있는 경우 아래 표면에 그림자가 않습니다. 클수록 개체, 더 큰 및 부드러운 그림자가 됩니다. 관리자 권한 개체, 그림자가 필요 하지는 하지만 그림자 권한 상승을 표시 작업을 수행 합니다.
 

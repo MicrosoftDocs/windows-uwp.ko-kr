@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 사이트
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b4390fba26922372a74de76d09844a7243bce73
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "4967081"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "5133126"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 
 [Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)을 추가 하는 데스크톱 응용 프로그램에 대 한 상태 메트릭 데이터와 관련 된 정보를 가져오려면 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다. 이 데이터는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에서 사용할 수도 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
