@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 광고, 광고, 릴리스 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 37a5cafcc5f768e90d4ee3997f92a62a9903fc9a
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4754806"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4961132"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Advertising 라이브러리에 대한 릴리스 정보
 

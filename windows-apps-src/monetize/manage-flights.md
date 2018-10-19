@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a761edf50888fb7f3130886a2c7e6e65b7c0a1d
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4753364"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4957664"
 ---
 # <a name="manage-package-flights"></a>패키지 플라이트 관리
 
