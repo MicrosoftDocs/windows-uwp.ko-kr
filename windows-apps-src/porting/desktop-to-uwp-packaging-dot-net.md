@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c9b7a30a50c26d2dbdaf6df04e85549addaf181
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: 091782d926949b87db9b29c08ec8cf98f485f0df
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "4967565"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5169092"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지
 
@@ -62,7 +62,9 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
    ![진입점 설정](images/desktop-to-uwp/entry-point-set.png)
 
-6. 오류가 표시되지 않도록 패키징 프로젝트를 빌드합니다.
+6. 오류가 표시되지 않도록 패키징 프로젝트를 빌드합니다.  오류가 발생 하면 **Configuration Manager** 열고 프로젝트를 동일한 플랫폼 대상 확인 합니다.
+
+   ![구성 관리자](images/desktop-to-uwp/config-manager.png)
 
 7. [앱 패키지 만들기](../packaging/packaging-uwp-apps.md) 마법사를 사용해 appxupload 파일을 생성합니다.
 

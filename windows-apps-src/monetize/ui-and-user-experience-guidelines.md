@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례
 ms.localizationpriority: medium
 ms.openlocfilehash: c7f5e762593773e529610989741274d9fb5b9be7
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5130827"
+ms.locfileid: "5164676"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
 

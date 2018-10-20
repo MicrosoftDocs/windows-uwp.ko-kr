@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 위치, 이미지, 오버레이
 ms.localizationpriority: medium
 ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "4967071"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "5161635"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>지도에서 바둑판식 이미지 오버레이
 

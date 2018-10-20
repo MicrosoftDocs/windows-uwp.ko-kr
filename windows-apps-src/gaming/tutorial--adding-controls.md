@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 563ca17864f95cfa98313608f5a5c32e64f44a16
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5135024"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5169476"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 

@@ -634,7 +634,7 @@ ms.locfileid: "5130605"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
+    <td>Macedonia (FYROM)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -1696,7 +1696,7 @@ ms.locfileid: "5130605"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
+    <td>Macedonia (FYROM)</td>
     <td>50 USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -2751,7 +2751,7 @@ ms.locfileid: "5130605"
     <td>PayPal</td>
   </tr>
  <tr>
-    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
+    <td>Macedonia (FYROM)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>
@@ -3756,7 +3756,7 @@ ms.locfileid: "5130605"
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아(이전 유고슬라비아 마케도니아 공화국)</td>
+    <td>Macedonia (FYROM)</td>
     <td>200USD</td>
     <td>전신 송금</td>
     <td>해당 없음</td>

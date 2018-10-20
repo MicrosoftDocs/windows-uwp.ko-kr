@@ -3,32 +3,38 @@ author: stevewhims
 description: 이 항목은 C++/CX 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다.
 title: C++/CX에서 C++/WinRT로 이동
 ms.author: stwhi
-ms.date: 07/20/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 68a631153c104f14f22839077c4c62d34626ed2a
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: 29144f110a76227ae6a1bc1e7d7aa9f051babc9d
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4957015"
+ms.locfileid: "5162625"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
-이 항목에서는 포트 하는 방법을 보여 줍니다 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 에 해당 하는 코드 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+이 항목에서는 코드에 포트 하는 방법을 보여 줍니다.는 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 에 해당 하는 프로젝트 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+
+## <a name="porting-strategies"></a>포팅 전략
+
+하려면 점진적으로 포트 C + + /CX 코드를 C + + /winrt 할 수 있습니다. C + + CX 및 C + + /winrt 코드, XAML 컴파일러를 지원 및 Windows 런타임 구성 요소는 예외를 사용 하 여 동일한 프로젝트에 공존할 수 있습니다. 이러한 두 가지 예외가 만들어야 대상 두 C + + /CX 또는 C + + 동일한 프로젝트 내에서 WinRT 합니다.
 
 > [!IMPORTANT]
-> 점진적으로 포트 하려는 경우에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 코드를 C + + /winrt에서는 할 수 있습니다. C + + CX 및 C + + /winrt 코드, XAML 컴파일러 지원 및 Windows 런타임 구성 요소를 제외 하 고 동일한 프로젝트에 공존할 수 있습니다. 이러한 예외에 대 한 C + 중 하나를 대상으로 해야 + /CX 또는 C + + 동일한 프로젝트 내에서 WinRT 합니다. 하지만 포팅할 것 처럼 XAML 앱 요소 코드에는 Windows 런타임 구성 요소를 사용할 수 있습니다. 이동 하거나 많은 C + + CX 코드는 구성 요소에 하 고 다음 변경 XAML 프로젝트 C + + WinRT 합니다. 또는 다른 XAML 프로젝트로 C + + CX, 만드는 새로운 C + + WinRT 구성 요소 시작 포팅 C + + /CX 코드 XAML 프로젝트를 구성 합니다. 또한 가지기 C + + CX 구성 요소 프로젝트와 함께 C + + 같은 솔루션에서 WinRT 구성 요소 프로젝트 응용 프로그램 프로젝트에서 둘 다를 참조 하 고 다른 하나에서 점진적으로 포트입니다.
+> 프로젝트 빌드 XAML 응용 프로그램을 하는 경우 다음 하나의 워크플로 권장 되는 C + 중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들려면 먼저 + /winrt 프로젝트 템플릿과 (참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). 그런 다음에서 C + 소스 코드 및 태그를 통해 복사를 시작 + CX 프로젝트. **프로젝트**를 사용 하 여 새 XAML 페이지를 추가할 수 있습니다 \> **새 항목 추가**  \>  **Visual c + +** > **페이지를 비어 있는 템플릿 (C + + WinRT)**.
+>
+> 또는 인수 코드에서 XAML C + Windows 런타임 구성 요소를 사용할 수 있습니다 + CX 프로젝트 처럼 포팅할 수 있습니다. 이동 하거나 많은 C + + CX 코드는 구성 요소에 하 고 다음 변경 XAML 프로젝트 C + + WinRT 합니다. 또는 다른 XAML 프로젝트로 C + + CX, 만드는 새로운 C + + WinRT 구성 요소 시작 포팅 C + + /CX 코드 XAML 프로젝트를 구성 합니다. 또한 가지기 C + + CX 구성 요소 프로젝트와 함께 C + + 같은 솔루션에서 WinRT 구성 요소 프로젝트 응용 프로그램 프로젝트에서 둘 다를 참조 하 고 다른 하나에서 점진적으로 포트입니다. 참조 [Interop 간에 C + + /winrt와 C + + CX](interop-winrt-cx.md) 는 두 언어 프로젝션을 사용 하 여 동일한 프로젝트에 대 한 자세한 내용은 합니다.
 
 > [!NOTE]
 > [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)와 Windows SDK 모두 루트 네임스페이스인 **Windows**에 유형을 선언합니다. C++/WinRT에 프로젝션된 Windows 유형은 Windows 유형과 동일한 정규화된 이름을 가지지만 C++ **winrt** 네임스페이스에 배치됩니다. 이처럼 서로 다른 네임스페이스를 사용하면 사용자가 원하는 대로 C++/CX에서 C++/WinRT로 포트할 수 있습니다.
 
-위에서 언급 한 예외는 염두, 첫 번째 단계를 C + 프로젝트 포팅 + /winrt는 수동으로 추가 C + + WinRT 지원 (참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). 이를 수행하려면 `.vcxproj` 파일을 편집하고 `<PropertyGroup Label="Globals">`를 찾고, 해당 속성 그룹 내에서 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 설정합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 지원을 끈 채로 유지 찾기 (및 포트) 빌드 메시지 도움말 수 있도록 모든 종속성에 C + 하는 것이 좋습니다 + /CX 또는 있습니다 수 지원을 다시 켜고 (프로젝트 속성에서 **C/c + +** \> **일반** \> **받는지 Windows 런타임 확장** \> **예 (/ZW)**)를 점진적으로 포트입니다.
+위에서 언급 한 예외는 염두, 첫 번째 단계 포팅하는 C + + CX 프로젝트를 C + + /winrt는 수동으로 추가 C + + /winrt 지원을 (참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). 이를 수행하려면 `.vcxproj` 파일을 편집하고 `<PropertyGroup Label="Globals">`를 찾고, 해당 속성 그룹 내에서 `<CppWinRTEnabled>true</CppWinRTEnabled>` 속성을 설정합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 지원을 끈 채로 유지 찾기 (및 포트) 빌드 메시지 도움말 수 있도록 모든 종속성에 C + 하는 것이 좋습니다 + /CX 또는 있습니다 수 지원을 다시 켜고 (프로젝트 속성에서 **C/c + +** \> **일반** \> **받는지 Windows 런타임 확장** \> **예 (/ZW)**)를 점진적으로 포트입니다.
 
-프로젝트 속성 **일반** \> **대상 플랫폼 버전**을 10.0.17134.0(Windows 10 버전 1803) 이상으로 설정합니다.
+**일반**해당 프로젝트 속성을 확인 \> 을 10.0.17134.0(windows (Windows 10, 버전 1803)**대상 플랫폼 버전** 설정 되어 이상.
 
 컴파일된 헤더 파일에(일반적으로 `pch.h`) `winrt/base.h`를 포함합니다.
 
@@ -389,6 +395,7 @@ void LogWrapLine(winrt::hstring const& str);
 * [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)
 * [C++/WinRT를 통한 API 사용](consume-apis.md)
 * [C++/WinRT의 대리자를 사용한 이벤트 처리](handle-events.md)
+* [C++/WinRT와 C++/CX 사이의 상호 운용성](interop-winrt-cx.md)
 * [Microsoft 인터페이스 정의 언어 3.0 참조](/uwp/midl-3)
 * [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md)
 * [C++/WinRT의 문자열 처리](strings.md)

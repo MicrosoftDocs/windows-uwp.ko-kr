@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 설명, 설명, Store 목록, 마케팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 54877e43ced6044e0866f951a653f2b32d040d9d
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5126997"
+ms.locfileid: "5161327"
 ---
 # <a name="write-a-great-app-description"></a>호소력 있는 앱 설명 쓰기
 

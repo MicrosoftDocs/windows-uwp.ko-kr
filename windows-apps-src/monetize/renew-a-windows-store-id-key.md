@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, Microsoft Store ID 키, 갱신
 ms.localizationpriority: medium
 ms.openlocfilehash: 70bda5022e52c0b18a43563a0492bd56d09b88a0
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5130860"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5170032"
 ---
 # <a name="renew-a-microsoft-store-id-key"></a>Microsoft Store ID 키 갱신
 

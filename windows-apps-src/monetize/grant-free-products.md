@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 제품 권한 부여
 ms.localizationpriority: medium
 ms.openlocfilehash: 432d5976cb018148ba0f53aae6446a046f0a3b2f
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5134166"
+ms.locfileid: "5158284"
 ---
 # <a name="grant-free-products"></a>무료 제품에 대한 권한 부여
 

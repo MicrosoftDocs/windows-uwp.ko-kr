@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: e9c5cb8a0f81513038a18522c39f0138bb25ab27
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: b5603063f8038b5617f8a1c2dd7d77d90c702901
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4953037"
+ms.locfileid: "5161294"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -61,10 +61,10 @@ C++/WinRT는 Windows 런타임에서 사용되는 다른 언어 옵션보다 더
 | [C++/WinRT을 사용한 XAML 사용자 지정(템플릿) 컨트롤](xaml-cust-ctrl.md) | 이 항목에서는 C +를 사용 하 여 간단한 사용자 지정 컨트롤을 만드는 과정을 단계별로 안내 + WinRT 합니다. 고유한 기능이 풍부 하 고 사용자 지정 가능한 UI 컨트롤을 만드는 정보를 여기에서 빌드할 수 있습니다. |
 | [C++/WinRT로 작성된 COM 구성 요소 사용](consume-com.md) | 이 항목에서는 전체 Direct2D 코드 예제를 사용 하 여 C +를 사용 하는 방법을 보여를 + WinRT COM 클래스와 인터페이스를 사용 하도록 합니다. |
 | [C++/WinRT으로 COM 구성 요소 작성](author-coclasses.md) | C + + WinRT 하는 데 유용한 클래식 COM 구성 요소를 작성 하면 Windows 런타임 클래스를 작성 하는 것 처럼 합니다. |
-| [C++/WinRT와 C++/CX 사이의 상호 운용성](interop-winrt-cx.md) | 이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. |
 | [C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) | 이 항목은 C++/CX 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다. |
-| [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md) | 이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. |
+| [C++/WinRT와 C++/CX 사이의 상호 운용성](interop-winrt-cx.md) | 이번 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다. |
 | [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md) | 이 항목은 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 C++/WinRT의 해당 코드에 포트하는 방법을 보여 줍니다. |
+| [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md) | 이번 항목에서는 응용 프로그램 이진 인터페이스(ABI)와 C++/WinRT 개체를 서로 변환하는 방법에 대해서 설명합니다. |
 | [강력한 및 약한 참조 C + + WinRT](weak-references.md) | Windows 런타임에서 참조 계산 시스템; 이러한 시스템의 성과 구별 하는 방법에 대 한 알 수 이기도 하 고 강력한 및 약한 참조 합니다. |
 | [Agile 개체](agile-objects.md) | Agile 개체란 어떤 스레드에서든지 액세스할 수 있는 개체를 말합니다. C++/WinRT 형식은 기본적으로 Agile이지만 옵트아웃으로 선택하지 않을 수도 있습니다. |
 

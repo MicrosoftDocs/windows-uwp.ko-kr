@@ -4,18 +4,18 @@ Description: Enhance your desktop application for Windows 10 users by using Univ
 Search.Product: eADQiWindows 10XVcnh
 title: Windows 10용 데스크톱 응용 프로그램 개선
 ms.author: normesta
-ms.date: 08/12/2017
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: ffe3f2a93642911da57d3dd94c09206dc7f5dc94
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4948722"
+ms.locfileid: "5160684"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
@@ -58,10 +58,10 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 **Additional #using Directories** 대화 상자를 열어 이러한 디렉터리를 추가합니다.
 
-* %VSInstallDir%\Common7\IDE\VC\vcpackages
-* C:\Program Files (x86)\Windows Kits\10\UnionMetadata
-* C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\<*latest version*>
-* C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\<*latest version*>
+* $(VSInstallDir) Common7\IDE\VC\vcpackages
+* C:\Program (x86) 파일 <*SDK 버전*> \Windows Kits\10\UnionMetadata\ \Facade
+* C:\Program 파일 (x86) \Windows Kits\10\References\ <*SDK 버전*> \Windows.Foundation.UniversalApiContract\ <*최신 버전*>
+* C:\Program 파일 (x86) \Windows Kits\10\References\ <*SDK 버전*> \Windows.Foundation.FoundationContract\ <*최신 버전*>
 
 **Additional Include Directories** 대화 상자를 열어 이 디렉토리를 추가합니다. C:\Program Files (x86)\Windows Kits\10\Include\<*latest version*>\um
 

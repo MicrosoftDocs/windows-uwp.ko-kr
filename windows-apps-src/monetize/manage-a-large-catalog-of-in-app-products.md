@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 카탈로그, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: fad186ed63557024fb71a6ec3c6997833afb7f4c
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4945863"
+ms.locfileid: "5162208"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>앱에서 바로 구매 제품의 큰 카탈로그 관리
 

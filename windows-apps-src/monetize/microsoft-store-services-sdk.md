@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 070e1e5bcccee27a19f3afb8a1c9d8ae356a9d73
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4960959"
+ms.locfileid: "5164600"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Microsoft Store Services SDK를 사용하여 고객과 소통
 

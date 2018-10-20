@@ -11,11 +11,11 @@ keywords: windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이�
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
 ms.openlocfilehash: 87cd734196e66021555002a43cb41719c88a1cf8
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4965235"
+ms.locfileid: "5164633"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>배너 광고용 최신 광고 라이브러리로 앱 업데이트
 

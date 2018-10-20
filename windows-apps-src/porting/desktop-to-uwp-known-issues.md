@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 731d449d779806fbd4104787b692d3b7d0408036
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4949019"
+ms.locfileid: "5161473"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>패키지로 만든된 데스크톱 응용 프로그램을 사용 하 여 알려진된 문제
 
@@ -149,13 +149,13 @@ certutil -dump <cert_file.pfx>
 set APPXSIP_LOG=1
 ```
 
-그런 다음 **명령 프롬프트**에서 응용 프로그램을 다시 서명 합니다. 예를 들면 다음과 같습니다.
+그런 다음 **명령 프롬프트**에서 응용 프로그램을 다시 서명 합니다. 예:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-잘못 된 PE 인증서를 포함 하는 파일에 대 한 정보는 **콘솔 창**에 표시 됩니다. 예를 들면 다음과 같습니다.
+잘못 된 PE 인증서를 포함 하는 파일에 대 한 정보는 **콘솔 창**에 표시 됩니다. 예:
 
 ```
 ...
