@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5135534"
+ms.locfileid: "5164870"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
@@ -304,7 +304,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>파키스탄</td>
     <td>팔라우</td>
-    <td>Palestinian Authority</td>
+    <td>팔레스타인 자치 정부</td>
     <td>파나마</td>
   </tr>
   <tr>
@@ -370,7 +370,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>Taiwan *</td>
+    <td>대만*</td>
     <td>타지키스탄</td>
   </tr>
   <tr>
@@ -664,7 +664,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
   </tr>
   <tr>
     <td>팔라우</td>
-    <td>Palestinian Authority</td>
+    <td>팔레스타인 자치 정부</td>
     <td>파나마</td>
     <td>파푸아뉴기니</td>
   </tr>
