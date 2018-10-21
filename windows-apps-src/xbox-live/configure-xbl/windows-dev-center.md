@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
-ms.openlocfilehash: a0c30014c3688695847a5734adfa7cbc7498ba4a
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: 8bf9401650b2f769a401a5226853f7f5ef4942d8
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4741725"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5165267"
 ---
 # <a name="windows-dev-center-service-configuration"></a>Windows 개발자 센터 서비스 구성
 
@@ -32,6 +32,8 @@ Xbox Live 구성에 액세스 하려면 페이지, [Windows 개발자 센터](ht
 
 ## <a name="in-this-section"></a>이 섹션의 내용
 
+* [요약](dev-center/summary.md)
+
 * [Xbox Live 설정](dev-center/xbox-live-setup.md)
 
 * [도전 과제 2017](dev-center/achievements-in-udc.md)
@@ -48,9 +50,7 @@ Xbox Live 구성에 액세스 하려면 페이지, [Windows 개발자 센터](ht
 
 * [타이틀 저장소](dev-center/title-storage.md)
 
-* [데이터 공유](dev-center/data-sharing-udc.md)
-
-* [지역화 문자열](dev-center/localized-strings.md)
+* [액세스 정책](dev-center/access-policies-udc.md)
 
 * [Single Sign-On](dev-center/single-sign-on.md)
 

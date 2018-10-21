@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d727171b079bc05851e1c7ab4de6f01587ce460d
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "4969965"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5167768"
 ---
 # <a name="get-started-using-visual-studio-for-uwp-games"></a>Visual Studio를 사용 하 여 UWP 게임
 
@@ -151,7 +151,7 @@ Xbox Live 서비스에 게 서비스 구성 파일을 프로젝트에 추가 해
     }
 ```
 
-예를 들면 다음과 같습니다.
+예:
 
 ```json
     {

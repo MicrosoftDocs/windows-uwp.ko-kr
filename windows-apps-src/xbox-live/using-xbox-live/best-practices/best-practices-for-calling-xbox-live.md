@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 모범 사례, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ce22d1571d5e4f96b384d6da914f1d359d78641
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750680"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5165477"
 ---
 # <a name="best-practices-for-calling-xbox-live"></a>Xbox Live를 호출 하기 위한 모범 사례
 
@@ -141,7 +141,7 @@ Xbox Live 서비스 단일 장치 서비스에서 과도 한 부하를 배치 �
 
 ### <a name="monitor-for-http-status-code-429"></a>HTTP 상태 코드 429 모니터
 
-Fiddler를 사용 하 고는 HTTP 상태 코드 429 반환 되는 경우 볼 수 있습니다. JSON 응답 된 끝점을 제한 하는 방법에 대 한 세부 정보를 포함 됩니다. 예를 들면 다음과 같습니다.
+Fiddler를 사용 하 고는 HTTP 상태 코드 429 반환 되는 경우 볼 수 있습니다. JSON 응답 된 끝점을 제한 하는 방법에 대 한 세부 정보를 포함 됩니다. 예:
 
 ```json
 {

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b9175eda1d73a7678ac9fd304dc60ef228a57c7f
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4741728"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5163884"
 ---
 # <a name="xbox-live-sandboxes-introduction"></a>Xbox Live 샌드박스 소개
 
@@ -40,7 +40,7 @@ Unity, Windows 장치 포털 (WPD)를 사용 하 여 또는 명령줄을 통해 
 
 ### <a name="unity"></a>Unity
 
-#### <a name="prerequisites"></a>필수 구성 요소
+#### <a name="prerequisites"></a>사전 요구 사항
 Unity에서 개발 샌드박스 아웃 하기 전에 수행 해야 하는 다음 전환할 수 있습니다.
 
 1. [구성 Xbox Live Unity에서](configure-xbox-live-in-unity.md)
@@ -55,7 +55,7 @@ Unity에서 개발 샌드박스 아웃 하기 전에 수행 해야 하는 다음
 
 ### <a name="windows-device-portal"></a>Windows Device Portal
 
-#### <a name="prerequisites"></a>필수 구성 요소
+#### <a name="prerequisites"></a>사전 요구 사항
 Windows 장치 포털 (WPD)에 샌드박스를 전환 하기 전에 다음 요구 사항:
 
 1. [Windows 바탕 화면에서 디바이스 포털 설정](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-desktop)
@@ -72,7 +72,7 @@ Windows 장치 포털 (WPD)에 샌드박스를 전환 하기 전에 다음 요�
 
 ### <a name="command-line"></a>명령줄
 
-#### <a name="prerequisites"></a>필수 구성 요소
+#### <a name="prerequisites"></a>사전 요구 사항
 명령줄을 통해 개발 샌드박스 아웃 하기 전에 수행 해야 하는 다음 전환할 수 있습니다.
 
 1. Xbox Live 도구에 있는 패키지를 다운로드 [https://aka.ms/xboxliveuwptools](https://aka.ms/xboxliveuwptools) 의 압축을 풉니다.

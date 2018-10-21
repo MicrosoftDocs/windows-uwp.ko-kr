@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
-ms.openlocfilehash: 108d022909afc9a118cc1f011acf100972576841
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: 80bd83fed60c17f0c575f0b5e3847c902a6c0e62
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4751610"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5167885"
 ---
 # <a name="configure-achievements-2017-on-dev-center"></a>도전 과제 2017 개발자 센터에서 구성
 
@@ -27,7 +27,7 @@ ms.locfileid: "4751610"
 1. **서비스**아래의 타이틀에 대 한 도전 과제 섹션으로 이동 > **Xbox Live** > **도전 과제**합니다.
 2. **새 도전 과제** 단추를 클릭 하 고 양식을 작성 합니다.  완료 되 면 **저장**을 클릭 합니다.
 
-![Microsoft 개발자 센터에서 새 도전 과제를 만들려면 스크린샷](../../images/dev-center/achievements-1.png)
+![Microsoft 개발자 센터에서 새 도전 과제를 만들려면 스크린샷](../../images/dev-center/achievement-table.png)
 
 ## <a name="description"></a>설명
 설명 섹션은에 도전 과제, 이름과 설명을 잠김/잠금 해제 됨 등의 기본 사항을 입력할 수 있습니다. [Microsoft 개발자 센터](https://developer.microsoft.com/dashboard)의 **지역화 된 문자열** 서비스 구성 섹션에 액세스 하 여 도전 과제를 지역화 지원을 추가할 수 있습니다.
@@ -63,7 +63,7 @@ ms.locfileid: "4751610"
 
 새 보상을 만들려면 **추가 보상** 섹션에서 **추가 보상** 단추를 클릭 하 고 양식을 작성 합니다.
 
-![Microsoft 개발자 센터의 성과를 보상 추가의 스크린샷](../../images/dev-center/achievements-4.png)
+![Microsoft 개발자 센터의 성과를 보상 추가의 스크린샷](../../images/dev-center/achievement-reward.png)
 
 ### <a name="reward-details"></a>보상 세부 정보
 새 보상 연결할 보상 세부 정보를 입력 합니다. 완료 되 면 **추가**클릭 합니다.

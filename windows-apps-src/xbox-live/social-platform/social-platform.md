@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bc8856d4ea03adc39edaa2066f0dd3224f293c1
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4748254"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5166056"
 ---
 # <a name="xbox-live-social-platform---for-games-and-gamers"></a>Xbox Live 소셜 플랫폼-게임 및 게이머
 

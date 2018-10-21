@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ada5040c97dcb283146cb528cf2107294b9b88b
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4741138"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5167820"
 ---
 # <a name="get-serviceconfigsscidsessions"></a>GET (/serviceconfigs/{scid}/sessions)
 검색 세션 정보를 지정 합니다.

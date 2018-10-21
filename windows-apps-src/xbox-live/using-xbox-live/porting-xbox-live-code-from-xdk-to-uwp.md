@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 9278ee433852bf3ef1eec2570340ef9cb7d64c92
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750612"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5163907"
 ---
 # <a name="porting-xbox-live-code-from-the-xbox-developer-kit-xdk-to-universal-windows-platform-uwp"></a>Xbox Live 코드 Xbox 개발자 키트 (XDK)에서 유니버설 Windows 플랫폼 (UWP)로 포팅
 
@@ -81,7 +81,7 @@ Xbox 및 UWP 버전 appxmanifest.xml 파일의 가장 일반적인 변경 다음
 
 1. 패키지 Id UWP에서 개발 하는 동안에 중요합니다. Id 이름 및 게시자 모두 *일치 해야* UWP 앱에 대 한 개발자 센터에 정의 된 것입니다.
 
-1. 패키지 종속성 섹션은 필요 합니다. 예를 들면 다음과 같습니다.
+1. 패키지 종속성 섹션은 필요 합니다. 예:
 
 ```xml
   <Dependencies>
@@ -99,7 +99,7 @@ Xbox 및 UWP 버전 appxmanifest.xml 파일의 가장 일반적인 변경 다음
 
 1.  UWP 타이틀에 Xbox Live 초대를 받으려면 "windows.protocol" 확장 범주를 정의 해야 합니다 ( [보내기 및 받기 초대](#_Sending_and_receiving)참조).
 
-1.  내 마이크 장치 기능을 추가 하려는 GameChat API를 사용 하는 경우는 ```<Capabilities>``` 요소입니다. 예를 들면 다음과 같습니다.
+1.  내 마이크 장치 기능을 추가 하려는 GameChat API를 사용 하는 경우는 ```<Capabilities>``` 요소입니다. 예:
 
   ```<DeviceCapability Name="microphone">```
 
@@ -172,7 +172,7 @@ Xbox Live SDK (이진 NuGet 사용 하는 경우) </td>
 
 가장 멀티 플레이 제목을 포함 되어 있는 XSAPI 2.0 XSAPI 1.0의 주요 변경 하나가 **MultiplayerService** **RealTimeActivityService** 에서 여러 메서드 및 이벤트의 이동 합니다.
 
-예를 들면 다음과 같습니다.
+예:
 
 -   **EnableMultiplayerSubscriptions () \ *** 메서드
 
@@ -456,7 +456,7 @@ QoS (서비스 품질) *측정* 단계 및 *결과 처리* 는 원칙적에서 �
 
 **UWP**에 대 한 QoS는 측정, 새 **XboxLiveQualityOfServiceMeasurement()** 개체를 만들고를 호출할 때 **Append()** 은 **메트릭** 및 **DeviceAddresses** 속성에 개체의 **MeasureAsync()** 호출 메서드입니다.
 
-예를 들면 다음과 같습니다.
+예:
 
 ```cpp
 auto qosMeasurement = ref new Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement();
@@ -493,7 +493,7 @@ if (qosMeasurement->DeviceAddresses->Size > 0)
 
 UWP의 다른 API가 타이틀의 서비스 구성에서 구성 된 게임 이벤트를 전송 합니다. Xbox Live SDK **EventsService** 및 속성 모음 모델을 사용합니다.
 
-예를 들면 다음과 같습니다.
+예:
 
 ```cpp
 auto properties = ref new Windows::Foundation::Collections::PropertySet();

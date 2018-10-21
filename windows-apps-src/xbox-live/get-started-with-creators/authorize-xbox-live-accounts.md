@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 계정, 테스트 계정
 ms.localizationpriority: medium
 ms.openlocfilehash: 69c184d4cf3069b26cdce4cab35a225b6913fd2b
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4752960"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5169445"
 ---
 # <a name="authorize-xbox-live-accounts-for-testing-in-your-environment"></a>환경에서 테스트에 대 한 Xbox Live 계정에 권한을 부여합니다
 
 이 항목에서는 게시자 테스트 환경의 사용 하 여 Xbox Live 계정을 설정 하는 프로세스를 통과
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Xbox Live 테스트 계정에 권한을 부여 하려면 다음이 필요 합니다.
 

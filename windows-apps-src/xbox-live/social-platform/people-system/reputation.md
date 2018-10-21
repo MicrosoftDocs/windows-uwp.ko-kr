@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 평판, 소셜 플랫폼
 ms.localizationpriority: medium
 ms.openlocfilehash: cc296892a8d3134dd44ff4bad43603fd164ed5fd
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4745446"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5166840"
 ---
 # <a name="reputation"></a>평판
 
@@ -63,7 +63,7 @@ ms.locfileid: "4745446"
 
 ## <a name="reputation-as-an-indicator-of-behavior"></a>동작의 표시기로 평판
 
-평판 표시기 사용자 시스템에서 동작 하는 방법을 제공 합니다. 예를 들어,이 사용자 인지를 식별 플레이어? 다른 세션 멤버의 피드백 플레이어의 신뢰도 결정합니다. 각 사용자는 Xbox One에서 모든 곳에서 해당 사용자를 사용 하 여 이동 하는 평판 점수를 갖습니다. 친구를 더 잘 작동 하는 플레이어에 피어 압력을 적용할 수 있도록 볼 수 있는 소셜 장소에서 눈에 띄게 노출 됩니다. 예를 들면 다음과 같습니다.
+평판 표시기 사용자 시스템에서 동작 하는 방법을 제공 합니다. 예를 들어,이 사용자 인지를 식별 플레이어? 다른 세션 멤버의 피드백 플레이어의 신뢰도 결정합니다. 각 사용자는 Xbox One에서 모든 곳에서 해당 사용자를 사용 하 여 이동 하는 평판 점수를 갖습니다. 친구를 더 잘 작동 하는 플레이어에 피어 압력을 적용할 수 있도록 볼 수 있는 소셜 장소에서 눈에 띄게 노출 됩니다. 예:
 
 -   각 사용자의 프로필 카드 켜져 있습니다. 시스템에서 모든 사용자가 한 번의 클릭으로 사용자의 프로필 볼 수 있습니다.
 -   멀티 플레이어 게임에 표시 됩니다. 사용자가 함께 재생 하는 경우 온라인으로 그룹에서 최저 평판을 사용 하 여 플레이어의 평판을 그룹의 평판 효과 가져옵니다. 그룹은만 유사한 신뢰도 사용 하 여 다른 사용자와 일치 합니다. 다른 플레이어 평판을 사용 하 여 플레이어 종류의 해당 게임에 및 게임에 참가 것인지 결정 결정.

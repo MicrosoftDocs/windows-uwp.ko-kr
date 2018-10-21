@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, 하나는 xbox, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ec5824bc878937ee891f9ff6e038de1c35b0c81
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4751860"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5167826"
 ---
 # <a name="using-xim-c"></a>XIM (c + +)를 사용 하 여
 
@@ -25,7 +25,7 @@ ms.locfileid: "4751860"
 XIM의 c + + API 사용에 대 한 간략 한 연습입니다. C#을 통해 XIM 액세스 하려는 게임 개발자를 [사용 하 여 XIM (C#)](using-xim-cs.md)보일 것입니다.
 
 - [XIM (c + +)를 사용 하 여](#using-xim-c)
-    - [필수 구성 요소](#prerequisites)
+    - [사전 요구 사항](#prerequisites)
     - [초기화 및 시작](#initialization-and-startup)
     - [비동기 작업 및 상태 변경 내용 처리](#asynchronous-operations-and-processing-state-changes)
     - [XIM 플레이어 개체를 처리합니다.](#handling-xim-player-objects)
@@ -46,7 +46,7 @@ XIM의 c + + API 사용에 대 한 간략 한 연습입니다. C#을 통해 XIM 
     - [플레이어 슬롯 ("백필" 매치 메이 킹)의 자동 백그라운드 채우기](#automatic-background-filling-of-player-slots-backfill-matchmaking)
     - [쿼리 있는 네트워크](#querying-joinable-networks)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 XIM을 사용 하 여 코딩을 시작 하기 전에 가지 두 가지 필수 조건이 있습니다.
 
@@ -106,7 +106,7 @@ XIM의 핵심은 앱의 일반, 자주 사용에 대 한 호출의 `xim::start_p
 1. 기본 구조 캐스트할 더 자세한 유형에 해당 합니다.
 1. 해당 업데이트를 적절 하 게 처리 합니다.
 
-한 번 완료 되 면 모든 합니다 `xim_state_change` 현재 사용할 수 있는 구조를 해당 배열에 전달 되어야 다시 호출 하 여 리소스를 해제 하는 XIM `xim::finish_processing_state_changes()`. 예를 들면 다음과 같습니다.
+한 번 완료 되 면 모든 합니다 `xim_state_change` 현재 사용할 수 있는 구조를 해당 배열에 전달 되어야 다시 호출 하 여 리소스를 해제 하는 XIM `xim::finish_processing_state_changes()`. 예:
 
 ```cpp
 uint32_t stateChangeCount;
@@ -195,7 +195,7 @@ bool isXimActivation;
 isXimActivation = xim::singleton_instance().extract_protocol_activation_information(uriString, &activationInfo);
 ```
 
-XIM 활성화를 되 고 채워진의 'local_xbox_user_id' 필드에 나와 있는 로컬 사용자를 확인 하려는 경우 `xim_protocol_activation_information` 구조는 로그인 하 고에 지정 된 사용자가 `xim::set_intended_local_xbox_user_ids()`. 다음을 호출 하 여 지정 된 XIM 네트워크에 이동을 시작할 수 있습니다 `xim::move_to_network_using_protocol_activated_event_args()` 동일한 URI 문자열을 사용 합니다. 예를 들면 다음과 같습니다.
+XIM 활성화를 되 고 채워진의 'local_xbox_user_id' 필드에 나와 있는 로컬 사용자를 확인 하려는 경우 `xim_protocol_activation_information` 구조는 로그인 하 고에 지정 된 사용자가 `xim::set_intended_local_xbox_user_ids()`. 다음을 호출 하 여 지정 된 XIM 네트워크에 이동을 시작할 수 있습니다 `xim::move_to_network_using_protocol_activated_event_args()` 동일한 URI 문자열을 사용 합니다. 예:
 
 ```cpp
 xim::singleton_instance().move_to_network_using_protocol_activated_event_args(uriString);

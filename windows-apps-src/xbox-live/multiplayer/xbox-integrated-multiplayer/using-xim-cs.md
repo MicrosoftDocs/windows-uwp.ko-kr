@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cb15206469abf96d8c88490c35c86b8c5197e93
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4747613"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5169517"
 ---
 # <a name="using-xim-c"></a>XIM (C#)를 사용 하 여
 
@@ -24,7 +24,7 @@ ms.locfileid: "4747613"
 
 XIM의 C# API 사용에 대 한 간략 한 연습입니다. C + +를 통해 XIM 액세스 하려는 게임 개발자를 [사용 하 여 XIM (c + +)](using-xim.md)보일 것입니다.
 - [XIM (C#)를 사용 하 여](#using-xim-c)
-    - [필수 구성 요소](#prerequisites)
+    - [사전 요구 사항](#prerequisites)
     - [초기화 및 시작](#initialization-and-startup)
     - [비동기 작업 및 상태 변경 내용 처리](#asynchronous-operations-and-processing-state-changes)
     - [기본 IXimPlayer 처리](#basic-iximplayer-handling)
@@ -45,7 +45,7 @@ XIM의 C# API 사용에 대 한 간략 한 연습입니다. C + +를 통해 XIM 
     - [플레이어 슬롯 ("백필" 매치 메이 킹)의 자동 백그라운드 채우기](#automatic-background-filling-of-player-slots-backfill-matchmaking)
     - [쿼리 있는 네트워크](#querying-joinable-networks)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 XIM을 사용 하 여 코딩을 시작 하기 전에 가지 두 가지 필수 조건이 있습니다.
 
@@ -99,7 +99,7 @@ XIM의 핵심은 앱의 일반, 자주 사용에 대 한 호출의 `XboxIntegrat
 1. 캐스트는 `IXimStateChange` 형식 더 자세한 유형에 해당 합니다.
 1. 해당 업데이트를 적절 하 게 처리 합니다.
 
-한 번 완료 되 면 모든 합니다 `IXimStateChange` 현재 사용할 수 있는 개체를 해당 배열에 전달 되어야 다시 호출 하 여 리소스를 해제 하는 XIM `XimStateChangeCollection.Dispose()`. `using` 리소스를 처리 한 후 삭제 하려면 보장이 있도록 문을 것이 좋습니다. 예를 들면 다음과 같습니다.
+한 번 완료 되 면 모든 합니다 `IXimStateChange` 현재 사용할 수 있는 개체를 해당 배열에 전달 되어야 다시 호출 하 여 리소스를 해제 하는 XIM `XimStateChangeCollection.Dispose()`. `using` 리소스를 처리 한 후 삭제 하려면 보장이 있도록 문을 것이 좋습니다. 예:
 
 ```cs
 using (var stateChanges = XboxIntegratedMultiplayer.GetStateChanges())
@@ -185,7 +185,7 @@ if (protocolActivationInformation != null)
 }
 ```
 
-XIM 활성화를 되의 'LocalXboxUserId' 속성에서 식별 된 로컬 사용자가 확인 하려는 경우는 `XimProtocolActivationInformation` 개체는 로그인 하 고에 지정 된 사용자가 `XboxIntegratedMultiplayer.SetIntendedLocalXboxUserIds()`. 다음을 호출 하 여 지정 된 XIM 네트워크에 이동을 시작할 수 있습니다 `XboxIntegratedMultiplayer.MoveToNetworkUsingProtocolActivatedEventArgs()` 동일한 URI 문자열을 사용 합니다. 예를 들면 다음과 같습니다.
+XIM 활성화를 되의 'LocalXboxUserId' 속성에서 식별 된 로컬 사용자가 확인 하려는 경우는 `XimProtocolActivationInformation` 개체는 로그인 하 고에 지정 된 사용자가 `XboxIntegratedMultiplayer.SetIntendedLocalXboxUserIds()`. 다음을 호출 하 여 지정 된 XIM 네트워크에 이동을 시작할 수 있습니다 `XboxIntegratedMultiplayer.MoveToNetworkUsingProtocolActivatedEventArgs()` 동일한 URI 문자열을 사용 합니다. 예:
 
 ```cs
 XboxIntegratedMultiplayer.MoveToNetworkUsingProtocolActivatedEventArgs(uriString);

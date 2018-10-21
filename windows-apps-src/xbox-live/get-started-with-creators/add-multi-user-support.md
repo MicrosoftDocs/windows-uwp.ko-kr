@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, unity, 다중 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: cc59d014bae8553cbbc9a4aca1db954872d28029
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750633"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5170728"
 ---
 # <a name="add-multi-user-support-to-your-unity-game"></a>Unity 게임에 다중 사용자 지원 추가
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "4750633"
 > [!IMPORTANT]
 > 다중 사용자 시나리오 Xbox 콘솔 에서만 지원 됩니다. PC에서이 기능이 작동 하지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 [시작](configure-xbox-live-in-unity.md) 자습서 활성화 하 고 Xbox Live 구성 따랐는지 해야 합니다.
 
 ## <a name="adding-and-signing-in-multiple-xbox-live-users"></a>추가 하 고 여러 Xbox Live 사용자 로그인
