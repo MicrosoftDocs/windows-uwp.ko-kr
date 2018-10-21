@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 개발자 프로그램, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bbfcb38704512b3dbd709eb827768d073ad4c95
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4741151"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5157106"
 ---
 # <a name="developer-program-overview"></a>개발자 프로그램 개요
 
@@ -232,7 +232,7 @@ ID@Xbox타이틀은 저장소와 고객에 게 큰 노출에 대 한 상 하는 
 
 
 <tr class="dev-program-feature-start">
-<td rowspan="2" class="dev-program-feature-name">Storage</td>
+<td rowspan="2" class="dev-program-feature-name">저장소</td>
 
 <td>연결된 저장소</td>
 <td>Xbox One 콘솔 및 Pc 간에 로밍 게임 저장</td>

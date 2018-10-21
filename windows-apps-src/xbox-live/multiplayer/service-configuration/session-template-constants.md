@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어 세션 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: ca85a3370d6fc8a1934432255894679cd92fe973
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4751681"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5162607"
 ---
 # <a name="session-template-constants"></a>세션 템플릿 상수
 
@@ -216,7 +216,7 @@ variant | 변형 할당에 클라우드 컴퓨팅 패키지의 압축을 나타�
 ## <a name="arbitration"></a>중재
 중재 프로세스에 대 한 시간 제한을 지정합니다. 있어야 합니다 `arbitration` 접근 권한 값이 설정 됩니다. 중재 시작 시간은 */servers/arbitration/constants/system/startTime* 요소에서 세션에서 정의 됩니다.
 
-시간 제한 | 설명 | 유효한 값 | default
+timeout | 설명 | 유효한 값 | default
 -- | -- | -- | --
 forfeitTimeout | 중재 시작 시간은 밀리초 시간을 나타냅니다 하는 TBD | 0-n | 60000
 arbitrationTimeout | 밀리초 중재 시작 시간부터 중재 결과 시간이 초과 하는 시간을 나타냅니다. 이 값 보다 작은 `forfeitTimeout` 값 | 0-n | 300000

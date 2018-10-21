@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 크리에이터 스 하나, Unity, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: b23d2964e541ea9102a704caa187041a2ce57891
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750893"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5158082"
 ---
 # <a name="add-player-stats-and-leaderboards-to-your-unity-project"></a>플레이어 통계 및 순위표 Unity 프로젝트에 추가
 
@@ -26,7 +26,7 @@ ms.locfileid: "4750893"
 
 [Xbox Live Unity 플러그 인](https://github.com/Microsoft/xbox-live-unity-plugin)을 사용 하 여 쉽게 추가할 수 있습니다 플레이어 통계 및 순위표 Unity 프로젝트에서. 부호 단계에서와 마찬가지로 선택할 수 있습니다 포함된 프리 팹 사용 하거나 고유한 사용자 지정 게임 개체에 포함 된 스크립트를 첨부 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 1. [구성 Xbox Live Unity에서](configure-xbox-live-in-unity.md)
 2. [Unity에서 Live Xbox에 로그인](unity-prefabs-and-sign-in.md)
 

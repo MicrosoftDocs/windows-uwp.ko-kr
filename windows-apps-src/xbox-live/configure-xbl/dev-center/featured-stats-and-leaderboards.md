@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 추천 통계 및 순위표, 순위표, 통계 2017, Windows 개발자 센터
-ms.openlocfilehash: ed965c4d7e2c15e76494fd197808c7f47db2d584
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: dcd73b7b1ea26cd929750ffed325896dfaf2c593
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4745236"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5157805"
 ---
 # <a name="configuring-featured-stats-and-leaderboards-2017-on-windows-dev-center"></a>Windows 개발자 센터에서 주요 통계 및 순위표 2017 구성
 
@@ -30,7 +30,7 @@ ms.locfileid: "4745236"
 1. **서비스**아래의 타이틀에 대 한 **주요 통계 및 순위표** 섹션으로 이동 > **Xbox Live** > **주요 통계 및 순위표**합니다.
 2. 모달 폼 열립니다 **새** 단추를 클릭 합니다. 입력 되 면 **저장**을 클릭 합니다.
 
-![이미지의 새 기능 갖춘된 상태/순위표 대화 상자](../../images/dev-center/featured-stats-and-leaderboards/featured-stats-and-leaderboards-1.png)
+![이미지의 새 기능 갖춘된 상태/순위표 대화 상자](../../images/dev-center/featured-stats-and-leaderboards/featured-stats.png)
 
 **표시 이름** 필드는 사용자는 GameHub에 표시 됩니다. Xbox Live 서비스 구성의 **Localize 문자열** 에서이 문자열을 지역화할 수 있습니다.
 

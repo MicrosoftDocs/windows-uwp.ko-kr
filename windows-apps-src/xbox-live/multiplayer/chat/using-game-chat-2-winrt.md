@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ca62427a5e8f51143ef9e40faf24272ffbe97d7
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "4966671"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5160093"
 ---
 # <a name="using-game-chat-2-winrt-projections"></a>게임 채팅 2 (2(winrt 프로젝션)를 사용 하 여
 
 게임 채팅 2의 C# API 사용에 대 한 간략 한 연습입니다. C + +를 통해 게임 채팅 2에 액세스 하려는 게임 개발자 [Game Chat 2를 사용 하 여](using-game-chat-2.md)보일 것입니다.
 
-1. [필수 구성 요소](#prereq)
+1. [사전 요구 사항](#prereq)
 2. [초기화](#init)
 3. [사용자 구성](#config)
 4. [데이터 프레임 처리](#data)
@@ -202,7 +202,7 @@ foreach (IGameChat2StateChange stateChange in stateChanges)
 
 ## <a name="text-chat-a-nametext"></a>텍스트 채팅<a name="text">
 
-사용 하 여 텍스트 채팅을 보내려면 `GameChat2ChatUserLocal.SendChatText()`. 예를 들면 다음과 같습니다.
+사용 하 여 텍스트 채팅을 보내려면 `GameChat2ChatUserLocal.SendChatText()`. 예:
 
 ```cs
 localUserA.SendChatText("Hello");
@@ -218,7 +218,7 @@ localUserA.SendChatText("Hello");
 
 ### <a name="text-to-speech"></a>텍스트 음성 변환
 
-사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `GameChat2ChatUserLocal.TextToSpeechConversionPreferenceEnabled` 'true' 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `GameChat2ChatUserLocal.SynthesizeTextToSpeech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예를 들면 다음과 같습니다.
+사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `GameChat2ChatUserLocal.TextToSpeechConversionPreferenceEnabled` 'true' 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `GameChat2ChatUserLocal.SynthesizeTextToSpeech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예:
 
 ```cs
 localUserA.SynthesizeTextToSpeech("Hello");

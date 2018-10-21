@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신
 ms.localizationpriority: medium
 ms.openlocfilehash: 7695fda4502f8359491e5fb822e59bc91a20e0c7
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4740786"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5160187"
 ---
 # <a name="migration-from-game-chat-to-game-chat-2"></a>게임 채팅 2 게임 채팅에서 마이그레이션
 
 이 문서와 게임 채팅 Game Chat 2 게임 채팅에서 게임 채팅 2로 마이그레이션하는 방법의 유사성 자세히 설명 합니다. 따라서 게임 채팅 2로 마이그레이션할 하고자 하는 기존 게임 채팅 구현에서 제목입니다. 게임 채팅 구현, 아직 없는 경우 제안 된 시작점 [Game Chat 2를 사용 하 여](using-game-chat-2.md)됩니다. 이 문서에는 다음 항목을 포함합니다.
 
 1. [앞](#preface)
-2. [필수 구성 요소](#prerequisites)
+2. [사전 요구 사항](#prerequisites)
 3. [초기화](#initialization)
 4. [사용자 구성](#configuring-users)
 5. [데이터 처리](#processing-data)
@@ -52,7 +52,7 @@ ms.locfileid: "4740786"
 
 이 문서에는 게임 채팅 및 Game Chat 2 하는 방법과 게임 채팅 2 c + + API로 게임 채팅에서 마이그레이션 유사점이 자세히 설명 합니다. 게임 채팅 2 WinRT API에 게임 채팅에서 마이그레이션 관심 있는 경우 프리페치 게임 채팅 개념 Game Chat 2에 매핑되는 방식을 이해 하려면이 문서 읽고 다음 [사용 하 여 게임 채팅 2 2(winrt 프로젝션](using-game-chat-2-winrt.md) WinR 특정 패턴에 대 한 참조 화 이 문서의 원래 게임 채팅에 대 한 샘플 코드를 사용 하 여 C + + CX 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 게임 채팅 2를 사용 하 여 코딩을 시작 하기 전에 "마이크" 장치 기능을 선언 하는 앱의 AppXManifest 구성 했지만 해야 합니다. AppXManifest 기능 플랫폼 설명서;의 해당 각 섹션에서 자세히 설명 되어 있습니다. 다음 조각은 패키지/기능 노드 아래에 있어야 하는 "마이크" 장치 접근 권한 값 노드를 보여 줍니다. 그렇지 않으면 채팅 차단 됩니다.
 
@@ -179,7 +179,7 @@ chatManager->ProcessIncomingChatMessage(packetBuffer, remoteIdentifier);
 
 마찬가지로, Game Chat 2 없는 자체 전송 계층입니다. 이 앱에서 제공 되어야 합니다. 앱의 일반, 자주 호출을 통해 나가는 패킷을 처리 되는 `chat_manager::start_processing_data_frames()` 및 `chat_manager::finish_processing_data_frames()` 메서드 쌍. 이러한 메서드는 게임 채팅 2 앱에 보내는 데이터를 제공 하는 방법. 이러한 전용 네트워킹 스레드에서 자주 폴링됩니다 수 있도록 신속 하 게 작동 하도록 설계 되었습니다. 이 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 모든 대기 중인된 데이터를 검색할 수 있는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_data_frames()` 라고, 모든 배열에서 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 적절 한 원격 앱 인스턴스를 데이터를 제공 해야 합니다. 한 번 완료 되 면 모든 합니다 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제할 Game Chat 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예를 들면 다음과 같습니다.
+때 `chat_manager::start_processing_data_frames()` 라고, 모든 배열에서 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 적절 한 원격 앱 인스턴스를 데이터를 제공 해야 합니다. 한 번 완료 되 면 모든 합니다 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제할 Game Chat 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예:
 
 ```cpp
 uint32_t dataFrameCount;
@@ -237,7 +237,7 @@ auto token = chatManager->OnTextMessageReceived +=
 
 앱의 일반, 자주 호출을 통해 받은 텍스트 메시지 등의 앱에 대 한 업데이트를 제공 하는 게임 채팅 2는 `chat_manager::start_processing_state_changes()` 및 `chat_manager::finish_processing_state_changes()` 메서드 쌍. 이러한 UI 렌더링 루프에서 매 프레임 마다 그래픽 호출할 수 있습니다 되도록 신속 하 게 작동 하도록 설계 되었습니다. 이 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 대기 중인된 모든 변경 내용을 검색 하는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 됩니다 `game_chat_state_change` 포인터를 구성 합니다. 앱 배열에 대해 반복, 더욱 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 해야 합니다. 한 번 완료 되 면 모든 `game_chat_state_change` 현재 사용할 수 있는 개체를 해당 배열에 전달 되어야 다시 호출 하 여 리소스를 해제할 Game Chat 2 `chat_manager::finish_processing_state_changes()`. 예를 들면 다음과 같습니다.
+때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 됩니다 `game_chat_state_change` 포인터를 구성 합니다. 앱 배열에 대해 반복, 더욱 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 해야 합니다. 한 번 완료 되 면 모든 `game_chat_state_change` 현재 사용할 수 있는 개체를 해당 배열에 전달 되어야 다시 호출 하 여 리소스를 해제할 Game Chat 2 `chat_manager::finish_processing_state_changes()`. 예:
 
 ```cpp
 uint32_t stateChangeCount;
@@ -308,7 +308,7 @@ chatUser->GenerateTextMessage(L"Hello", true);
 
 ### <a name="text-to-speech---game-chat-2"></a>텍스트 음성 변환-게임 채팅 2
 
-사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` '참' 반환 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예를 들면 다음과 같습니다.
+사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` '참' 반환 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예:
 
 ```cpp
 chat_userA->local()->synthesize_text_to_speech(L"Hello");

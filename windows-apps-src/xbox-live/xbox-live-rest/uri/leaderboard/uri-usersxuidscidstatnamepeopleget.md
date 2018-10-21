@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c62703d43197962e313e364df2cdc3650bd2a792
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4752184"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5159553"
 ---
 # <a name="get-usersxuidxuidscidsscidstatsstatnamepeopleallfavorite"></a>GET (/users/xuid({xuid})/scids/{scid}/stats/{statname)/people/{all|favorite})
 소셜 순위표 순위 상태는 현재 사용자의 모든 알려진된 연락처 중 하나 또는 해당 사용자가 즐겨 찾는 사용자 지정 된 연락처에만 (점수) 값을 반환 합니다.
@@ -66,7 +66,7 @@ GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한
 | skipToRank| 32 비트 부호 없는 정수| 지정 된 순위표 순위부터 결과 페이지를 반환 합니다. 결과의 나머지 부분 순위 순서 대로 정렬 됩니다. 이 쿼리 문자열 "다음 페이지"의 결과 얻으려면 후속 쿼리도 다시 입력 될 수 있는 연속 토큰을 반환할 수 있습니다. |
 | skipToUser| string| 해당 사용자의 순위 또는 점수에 관계 없이 지정 된 게이머 xuid 주변 순위표 결과 페이지를 반환 합니다. 페이지 % 째 순위 지정 된 사용자 통계 순위표 보기에 대 한 중간 또는 미리 정의 된 보기에 대 한 페이지의 마지막 위치에 정렬 됩니다. 이 유형의 쿼리 제공 없는 <b>continuationToken</b> 있습니다. |
 | continuationToken| 문자열| 이전 호출 <b>continuationToken</b>반환 되 면 다음 호출자 전달할 수 다시 "있는 그대로" 토큰 쿼리 문자열을 결과의 다음 페이지를 가져옵니다. |
-| 정렬| string| 여부 낮은 높은 값 순서 ("오름차순")에서 플레이어의 목록 순위를 지정 하거나 높은-낮은 값 순서 ("내림차순"). 이 선택적 매개 변수입니다. 기본값은 내림차순 합니다.|
+| sort| string| 여부 낮은 높은 값 순서 ("오름차순")에서 플레이어의 목록 순위를 지정 하거나 높은-낮은 값 순서 ("내림차순"). 이 선택적 매개 변수입니다. 기본값은 내림차순 합니다.|
 
 <a id="ID4EQD"></a>
 

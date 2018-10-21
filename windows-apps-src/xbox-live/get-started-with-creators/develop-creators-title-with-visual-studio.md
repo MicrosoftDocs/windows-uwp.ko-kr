@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox live 크리에이터 스, visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: 19ee781a7143c0da5b1549776646ab5b133a9667
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4745468"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "5160359"
 ---
 # <a name="get-started-developing-an-xbox-live-creators-program-title-with-visual-studio"></a>Visual Studio를 사용 하 여 Xbox Live 크리에이터 스 프로그램 타이틀 개발 시작
 
@@ -81,7 +81,7 @@ Xbox 서비스 API c + + 및 WinRT 맛 형태로 있고 해당 명명 **로 구�
 
 #### <a name="optionally-include-xsapi-header-in-your-project"></a>필요에 따라 프로젝트에서 XSAPI 헤더를 포함
 
-포함 해야 Microsoft.Xbox.Live.SDK.Cpp.* 기반 프로젝트의 경우 `xsapi\\services.h` Xbox Live 서비스 API (XSAPI) NuGet에 대 한 헤더에서 가져오는 c + + 프로젝트에서 패키지를 합니다. 정의 해야 XSAPI 헤더를 포함 하기 전에 `XBOX_LIVE_CREATORS_SDK`. Xbox Live 크리에이터 스 프로그램 개발자가 사용할 수 있는 api만 API 노출 영역을 제한 됩니다. 예를 들면 다음과 같습니다.
+포함 해야 Microsoft.Xbox.Live.SDK.Cpp.* 기반 프로젝트의 경우 `xsapi\\services.h` Xbox Live 서비스 API (XSAPI) NuGet에 대 한 헤더에서 가져오는 c + + 프로젝트에서 패키지를 합니다. 정의 해야 XSAPI 헤더를 포함 하기 전에 `XBOX_LIVE_CREATORS_SDK`. Xbox Live 크리에이터 스 프로그램 개발자가 사용할 수 있는 api만 API 노출 영역을 제한 됩니다. 예:
 
 ```c++
 #define XBOX_LIVE_CREATORS_SDK
@@ -142,7 +142,7 @@ Xbox Live 서비스에 게 서비스 구성 파일을 프로젝트에 추가 해
     }
 ```
 
-예를 들면 다음과 같습니다.
+예:
 
 ```json
     {
