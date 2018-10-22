@@ -3,24 +3,25 @@ author: stevewhims
 description: 이 항목에서는 C++/WinRT를 통해 Windows 런타임 비동기 개체를 생성하고 사용하는 방법에 대해서 설명합니다.
 title: C++/WinRT로 동시성 및 비동기 작업
 ms.author: stwhi
-ms.date: 10/03/2018
+ms.date: 10/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f29828a800795aba70c17bcab19b56b85d56382
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.openlocfilehash: 0767f8c1ca0fb80ff8c7b033832ffccd61aeabfc
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5160777"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5400369"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 
 이 항목에서는 생성 하 고 사용 하 여 Windows 런타임 비동기 개체를 사용 하는 둘 다 수 방법 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 ## <a name="asynchronous-operations-and-windows-runtime-async-functions"></a>비동기 작업 및 Windows 런타임 "비동기" 함수
+
 완료하는 데 50밀리초 이상 걸릴 가능성이 높은 Windows 런타임 API는 비동기 함수(이름이 "Async"로 끝나는 함수)로 구현됩니다. 비동기 함수의 구현체는 다른 스레드에서 작업을 시작하고 비동기 작업을 나타내는 개체를 즉시 반환합니다. 비동기 작업을 마치면 반환된 개체에 작업의 결과 값이 포함됩니다. **Windows::Foundation** Windows 런타임 네임스페이스에는 4가지 형식의 비동기 작업 개체가 포함됩니다.
 
 - [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction),
@@ -30,9 +31,10 @@ ms.locfileid: "5160777"
 
 각 비동기 작업 형식은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스에서 해당하는 형식으로 프로젝션됩니다. C++/WinRT에는 내부의 await 어댑터 구조체도 포함됩니다. 직접 않지만 구조체 덕분에 사용 하지를 작성할 수 있습니다는 `co_await` 비동기 작업 형식 중 하나를 반환 하는 함수의 결과 협조적 문을 합니다. 또한 이러한 형식을 반환하는 사용자 고유의 코루틴을 작성하는 것도 가능합니다.
 
-비동기 Windows 함수의 예로는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다. 이 비동기 함수는 비동기 작업 개체로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) 형식을 반환합니다. C++/WinRT를 사용해 이러한 API를 호출하는 몇 가지, 즉 차단 및 비차단 방법에 대해서 알아보겠습니다.
+비동기 Windows 함수의 예로는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다. 이 비동기 함수는 비동기 작업 개체로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) 형식을 반환합니다. 몇 가지 방법을 살펴보겠습니다&mdash;첫 번째 차단 하 고 다음 비차단&mdash;사용 하 여 C + + WinRT를 하는 등의 API를 호출 합니다.
 
 ## <a name="block-the-calling-thread"></a>호출 스레드 차단
+
 아래 코드 예제는 **RetrieveFeedAsync**에서 비동기 작업 개체를 수신한 후 해당 개체에 대해 **get**을 호출하여 비동기 작업 결과가 나올 때까지 호출 스레드를 차단합니다.
 
 ```cppwinrt
@@ -50,7 +52,7 @@ void ProcessFeed()
 {
     Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
     SyndicationClient syndicationClient;
-    SyndicationFeed syndicationFeed = syndicationClient.RetrieveFeedAsync(rssFeedUri).get();
+    SyndicationFeed syndicationFeed{ syndicationClient.RetrieveFeedAsync(rssFeedUri).get() };
     // use syndicationFeed.
 }
 
@@ -64,6 +66,7 @@ int main()
 **get**을 호출하면 편리하게 코딩할 수 있으며 어떤 이유로 코루틴을 사용하지 않으려는 콘솔 앱이나 백그라운드 스레드에 적합합니다. 하지만 동시 또는 비동기가 아니므로 UI 스레드에는 적합하지 않습니다(또한 이 중 하나에서 사용하려고 하면 최적화되지 않은 빌드에서 어설션이 발생합니다). 따라서 OS 스레드 정체로 인해 다른 유용한 작업까지 못하는 경우를 방지하려면 다른 기법이 필요합니다.
 
 ## <a name="write-a-coroutine"></a>코루틴 작성
+
 C++/WinRT는 C++ 코루틴을 프로그래밍 모델에 통합하여 결과를 협조적으로 기다릴 수 있는 자연스러운 방법을 제공합니다. 사용자는 코루틴을 작성하여 고유의 Windows 런타임 비동기 작업을 생성할 수 있습니다. 아래 코드 예제에서는 **ProcessFeedAsync**가 코루틴입니다.
 
 > [!NOTE]
@@ -101,7 +104,7 @@ int main()
 {
     winrt::init_apartment();
 
-    auto processOp = ProcessFeedAsync();
+    auto processOp{ ProcessFeedAsync() };
     // do other work while the feed is being printed.
     processOp.get(); // no more work to do; call get() so that we see the printout before the application exits.
 }
@@ -114,6 +117,7 @@ int main()
 대리자를 사용하여 비동기 작업에서 완료되었거나 진행 중인 이벤트를 처리하는 것도 가능합니다. 자세한 내용과 코드 예제는 [비동기 작업을 위한 대리자 형식](handle-events.md#delegate-types-for-asynchronous-actions-and-operations)을 참조하세요.
 
 ## <a name="asychronously-return-a-windows-runtime-type"></a>Windows 런타임 형식의 비동기 반환
+
 다음 예제에서는 **RetrieveFeedAsync** 호출을 래핑합니다. 그러면 특정 URI일 때 [**SyndicationFeed**](/uwp/api/windows.web.syndication.syndicationfeed)를 비동기 방식으로 반환하는 **RetrieveBlogFeedAsync** 함수를 제공합니다.
 
 ```cppwinrt
@@ -147,7 +151,7 @@ int main()
 {
     winrt::init_apartment();
 
-    auto feedOp = RetrieveBlogFeedAsync();
+    auto feedOp{ RetrieveBlogFeedAsync() };
     // do other work.
     PrintFeed(feedOp.get());
 }
@@ -173,6 +177,7 @@ IAsyncOperation<winrt::hstring> ReadAsync()
 ``` 
 
 ## <a name="asychronously-return-a-non-windows-runtime-type"></a>Windows가 아닌 런타임 형식의 비동기 반환
+
 Windows 런타임 *이외의* 형식을 비동기 방식으로 반환하는 경우에는 병렬 패턴 라이브러리(PPL)인 [**concurrency::task**](/cpp/parallel/concrt/reference/task-class)를 반환해야 합니다. **concurrency::task**를 권장하는 이유는 **std::future**보다 성능이 뛰어나고 향후 호환성도 우수하기 때문입니다.
 
 > [!TIP]
@@ -197,7 +202,7 @@ concurrency::task<std::wstring> RetrieveFirstTitleAsync()
     {
         Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
         SyndicationClient syndicationClient;
-        SyndicationFeed syndicationFeed = syndicationClient.RetrieveFeedAsync(rssFeedUri).get();
+        SyndicationFeed syndicationFeed{ syndicationClient.RetrieveFeedAsync(rssFeedUri).get() };
         return std::wstring{ syndicationFeed.Items().GetAt(0).Title().Text() };
     });
 }
@@ -206,13 +211,14 @@ int main()
 {
     winrt::init_apartment();
 
-    auto firstTitleOp = RetrieveFirstTitleAsync();
+    auto firstTitleOp{ RetrieveFirstTitleAsync() };
     // Do other work here.
     std::wcout << firstTitleOp.get() << std::endl;
 }
 ```
 
 ## <a name="parameter-passing"></a>매개 변수-전달
+
 동기화 함수를 위해 기본적으로 `const&` 매개 변수를 사용해야 합니다. 복사본(참조 계산, 즉 연동된 증가 및 감소 수반) 오버헤드를 방지할 수 있습니다.
 
 ```cppwinrt
@@ -251,7 +257,8 @@ IASyncAction DoWorkAsync(Param const value);
 또한 표준 벡터를 비동기 호출 수신자에 전달하는 방법을 다루는 [표준 배열 및 벡터](std-cpp-data-types.md#standard-arrays-and-vectors)를 참조하세요.
 
 ## <a name="offloading-work-onto-the-windows-thread-pool"></a>Windows 스레드 풀에서 오프로딩 작업
-코루틴에서 컴퓨팅 바인딩된 작업을 수행하기 전에 호출자가 차단되지 않게 하기 위해 호출자에 실행을 반환해야 합니다(즉, 일시 중단 지점 도입). 일부 기타 작업을 `co-await`하여 아직 이를 수행하지 않고 있는 경우 **winrt::resume_background** 함수를 `co-await`할 수 있습니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
+
+코루틴에서 컴퓨팅 바인딩된 작업을 수행하기 전에 호출자가 차단되지 않게 하기 위해 호출자에 실행을 반환해야 합니다(즉, 일시 중단 지점 도입). 는 아직 수행 하는 경우 `co-await`-연산 일부 다른 작업을 할 수 있습니다 `co-await` [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수입니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
 
 구현에 사용되는 스레드 풀은 낮은 수준의 [Windows 스레드 풀](https://msdn.microsoft.com/library/windows/desktop/ms686766)이므로 이상적으로 효율적입니다.
 
@@ -271,6 +278,7 @@ IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
 ```
 
 ## <a name="programming-with-thread-affinity-in-mind"></a>스레드 선호도를 염두에 두고 프로그래밍
+
 이 시나리오는 이전 시나리오에 확장됩니다. 스레드 풀에 일부 작업을 오프로드했으면 UI(사용자 인터페이스)에 진행 상태를 표시해야 합니다.
 
 ```cppwinrt
@@ -283,7 +291,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 }
 ```
 
-**TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. **winrt::apartment_context** 개체를 인스턴스화한 다음 `co_await`합니다.
+**TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. 이렇게 하려면 [**winrt:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) 개체를 인스턴스화하고, 백그라운드 작업을 수행 차례로 `co_await` **apartment_context** 호출 컨텍스트에 다시 전환할 수 있습니다.
 
 ```cppwinrt
 IAsyncAction DoWorkAsync(TextBlock textblock)
@@ -301,7 +309,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 
 위의 코루틴이 **TextBlock**을 만든 UI 스레드에서 호출되는 한 이 기술은 작동합니다. 앱에서 이것이 확실한 경우는 많습니다.
 
-수를 다루는 있는 확실 하지 않는 경우 스레드 호출에 대해, UI를 업데이트 하는 보다 일반적인 솔루션 `co-await` **winrt:: resume_foreground** 함수 하 여 특정 전경 스레드로 전환 합니다. 아래의 코드 예제에서 **TextBlock**(해당 [**발송자**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher) 속성에 액세스하여)과 연관된 발송자 개체를 전달하여 전경 스레드를 지정합니다. **winrt::resume_foreground**의 구현이 코루틴에서 이후에 오는 작업을 실행하는 해당 발송자 개체에서 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출합니다.
+수를 다루는 있는 확실 하지 않는 경우 스레드 호출에 대해, UI를 업데이트 하는 보다 일반적인 솔루션 `co-await` [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수 하 여 특정 전경 스레드로 전환 합니다. 아래의 코드 예제에서 **TextBlock**(해당 [**발송자**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher) 속성에 액세스하여)과 연관된 발송자 개체를 전달하여 전경 스레드를 지정합니다. **winrt::resume_foreground**의 구현이 코루틴에서 이후에 오는 작업을 실행하는 해당 발송자 개체에서 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출합니다.
 
 ```cppwinrt
 IAsyncAction DoWorkAsync(TextBlock textblock)
@@ -385,6 +393,7 @@ IAsyncAction MainCoroutineAsync()
 고객을 대신 코 루틴 생성 하는 **IAsyncAction** 의 정보를 사용 하 여 취소 토큰을 검색 **winrt::get_cancellation_token** 대기 합니다. 해당 토큰에서 함수 호출 연산자를 사용 하 여 취소 상태를 쿼리하려고 수 있습니다&mdash;취소에 기본적으로 폴링합니다. 일부 컴퓨팅 바인딩된 작업을 수행 하거나 큰 컬렉션을 반복 하는 경우 적절 한 기술입니다.
 
 ### <a name="register-a-cancellation-callback"></a>취소 콜백을 등록합니다
+
 다른 비동기 개체에는 Windows 런타임 취소 흐름 자동으로 하지 않습니다. 하지만&mdash;Windows sdk 버전 10.0.17763.0 (Windows 10, 버전 1809)&mdash;취소 콜백을 등록할 수 있습니다. 이 선점형 후크 기울기 취소 전파할 수 및 기존 동시성 라이브러리와 통합할 수 있습니다.
 
 이 다음 코드 예제에서는 **NestedCoroutineAsync** 작업을 수행 하지만 없는 특수 취소 논리는 것입니다. **CancellationPropagatorAsync** 은 중첩 된 코 루틴이;에 래퍼 래퍼 pre-emptively 취소를 전달합니다.

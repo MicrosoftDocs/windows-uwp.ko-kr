@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 50eced0042cf9c166a7c0c8f73305dec3c1df12d
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5164507"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5400926"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>앱의 평가판 구현
 
