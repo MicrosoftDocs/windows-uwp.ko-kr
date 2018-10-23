@@ -14,23 +14,23 @@ design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 31e940c87626a05ee6911d3ffda36ab8dfd3fad0
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5163416"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407181"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>UWP 앱에 대한 연결된 애니메이션
 
 연결된 애니메이션을 사용하면 두 가지 보기 간에 전환되는 동작에 애니메이션 효과를 적용하여 역동적이고 매력적인 탐색 환경을 만들 수 있습니다. 이렇게 하면 사용자가 컨텍스트를 유지하는 데 도움이 될 뿐 아니라 보기 간에 연속성이 보장됩니다.
 
-연결된 된 애니메이션에서 요소를 새 보기의 대상 원본 보기의 위치에서 화면을 가로질러 비행, UI 콘텐츠가 바뀌는 동안 두 보기 간에 "계속" 나타납니다. 이 보기 간의 공통 콘텐츠가 강조 하 고 전환의 일부로 아름 답 고 역동적인 효과 만듭니다.
+연결된 된 애니메이션에서 요소가 새 보기의 대상 원본 보기의 위치에서 화면을 가로질러 비행 UI 콘텐츠를 변경 하는 동안 두 보기 간에 "계속"를 표시 합니다. 이 보기 간의 공통 콘텐츠가 강조 하 고 전환의 일부로 아름 답 고 역동적인 효과 만듭니다.
 
 > **중요 Api**: [ConnectedAnimation 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [ConnectedAnimationService 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
 ## <a name="see-it-in-action"></a>실제 장면 보기
 
-이 짧은 동영상 앱 항목 이미지가 "계속 해 서" 다음 페이지의 머리글이 되도록 애니메이션 효과 연결된 된 애니메이션을 사용 합니다. 이 효과는 전환 시 사용자 컨텍스트를 유지하는 데 도움이 됩니다.
+이 짧은 동영상 앱 "계속 해 서" 다음 페이지의 머리글이 되도록 항목 이미지에 애니메이션 효과를 주는 연결된 된 애니메이션을 사용 합니다. 이 효과는 전환 시 사용자 컨텍스트를 유지하는 데 도움이 됩니다.
 
 ![연결된 애니메이션](images/connected-animations/example.gif)
 
@@ -54,25 +54,25 @@ ms.locfileid: "5163416"
 
 연결된 애니메이션은 UI의 콘텐츠를 변경하고 사용자로 하여금 컨텍스트를 유지하게 하려는 모든 환경에 적용할 수 있지만 일반적으로 페이지를 변경할 때 사용됩니다. 원본 보기와 대상 보기 사이에 공유되는 이미지 또는 기타 UI 부분이 있을 때에는 [드릴인 탐색 전환](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.navigationthemetransition.aspx) 대신 연결된 애니메이션을 사용하는 방안을 고려해야 합니다.
 
-## <a name="configure-connected-animation"></a>연결 된 애니메이션 구성
+## <a name="configure-connected-animation"></a>연결 된 애니메이션을 구성 합니다.
 
 > [!IMPORTANT]
-> 이 기능은 하려면 앱의 대상 버전 RS5 됩니다 (Windows SDK 버전 10.0.NNNNN.0 (Windows 10, 버전 YYMM) 이상. 구성 속성 이전 Sdk에서 사용할 수 없는 경우 RS5 보다 낮은 최소 버전을 대상으로 지정할 수 있습니다 (Windows SDK 버전 10.0.NNNNN.0 (Windows 10, 버전 YYMM)를 사용 하 여 적응 코드나 조건부 XAML입니다. 자세한 내용은 [버전 적응 앱](/debug-test-perf/version-adaptive-apps)을 참조 하세요.
+> 이 기능을 사용 하려면 앱의 대상 버전 RS5 하다 (Windows SDK 버전 10.0.NNNNN.0 (Windows 10, 버전 YYMM) 이상. 구성 속성을 이전 Sdk에서 사용할 수 없는 경우 RS5 보다 낮은 최소 버전을 대상으로 지정할 수 있습니다 (사용 하 여 Windows SDK 버전 (Windows 10, 버전 YYMM) 10.0.NNNNN.0 적응 코드나 조건부 XAML입니다. 자세한 내용은 [버전 적응 앱](/debug-test-perf/version-adaptive-apps)을 참조 하세요.
 
-연결 된 애니메이션 추가 구체화 RS5 부터는 Fluent 디자인 애니메이션을 제공 하 여 구성을 맞춤형 앞에 대 한 구체적으로 및 뒤로 탐색 페이지.
+연결 된 애니메이션 추가 구체화 RS5 부터는 Fluent 디자인 애니메이션을 제공 하 여 구성을 맞춤식 앞으로 및 뒤로 탐색 페이지.
 
-애니메이션 구성은 ConnectedAnimation에서 구성 속성을 설정 하 여 지정 합니다. (살펴보겠습니다 예로 다음 섹션에서.)
+ConnectedAnimation에서 구성 속성을 설정 하 여 애니메이션 구성을 지정 합니다. (하겠습니다 예로 다음 섹션에서.)
 
-이 표에 사용 가능한 구성 되어 있습니다. 이러한 애니메이션에 적용 된 동작 원칙에 대 한 자세한 내용은 [방향 및 무게를](index.md)참조 하세요.
+이 표에 사용 가능한 구성 되어 있습니다. 이러한 애니메이션에 적용 된 움직임 원칙에 대 한 자세한 내용은 [방향 및 무게를](index.md)참조 하세요.
 
 | [GravityConnectedAnimationConfiguration]() |
 | - |
-| 기본 구성에서 이며 앞으로 탐색을 위한 것이 좋습니다. |
-사용자가 앱 (A)에서 앞으로 이동, 연결 된 요소를 물리적으로 "페이지" 표시 됩니다. 그렇게 요소 z-공간에서 앞으로 이동할 표시 되며 보류 라인 무게의 효과로 약간 삭제 됩니다. 무게의 효과 해결 하려면 요소 속도 획득 하 고 최종 위치에 가속화 합니다. 결과 "배율 및 dip" 애니메이션입니다. |
+| 기본 구성 되며 앞으로 탐색을 위한 것이 좋습니다. |
+사용자가 앱 (A)에서 앞으로 이동, 연결 된 요소를 물리적으로 "페이지" 표시 됩니다. 그렇게 보류 라인 무게의 효과로 약간 삭제를 요소 z 공간에서 앞으로 이동 나타납니다. 무게의 효과 해결 하려면 요소 속도 획득 하 고 최종 위치에 가속화 합니다. 결과 "배율 및 dip" 애니메이션입니다. |
 
 | [DirectConnectedAnimationConfiguration]() |
 | - |
-| 사용자가 앱 (a B)에서 뒤로 이동, 애니메이션 보다 직접적인입니다. 연결 된 요소를 사용 하 여 직접적 입방 형 3 차원 감속/가속 함수 B에서 선형으로 변환 합니다. 뒤로 시각적 어포던스 사용자가 이전 상태로 돌아갑니다 화면은 가능한 한 빠르게 탐색 흐름의 컨텍스트를 유지 하면서 합니다. |
+| 사용자가 앱 (a B)에서 뒤로 탐색, 애니메이션 직접적입니다. 연결 된 요소를 사용 하 여 직접적 입방 형 3 차원 감속/가속 함수에서 B 선형으로 변환 합니다. 뒤로 시각적 어포던스 반환 사용자를 이전 상태로 화면은 가능한 한 빠르게 탐색 흐름의 컨텍스트를 유지 하면서 합니다. |
 
 | [BasicConnectedAnimationConfiguration]() |
 | - |
@@ -80,7 +80,7 @@ ms.locfileid: "5163416"
 
 ### <a name="connectedanimationservice-configuration"></a>ConnectedAnimationService 구성
 
-[ConnectedAnimationService](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) 클래스에 전체 서비스 대신 개별 애니메이션을 적용할 수 있는 두 가지 속성이 있습니다.
+[ConnectedAnimationService](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) 클래스에 전체 서비스를 사용 하지 않고 개별 애니메이션을 적용할 수 있는 두 가지 속성이 있습니다.
 
 - [DefaultDuration](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.defaultduration)
 - [DefaultEasingFunction](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.defaulteasingfunction)
@@ -97,17 +97,17 @@ ms.locfileid: "5163416"
 
 연결된 애니메이션을 설정하려면 다음 두 단계를 거쳐야 합니다.
 
-1. *준비* 연결된 된 애니메이션에서 원본 요소가 참여는 시스템을 나타내는 원본 페이지의 애니메이션 개체입니다.
-1. *시작* 대상 페이지에 있는 애니메이션 대상 요소에 대 한 참조를 전달 합니다.
+1. *준비* 소스 요소 연결 된 애니메이션 참여할 시스템을 나타내는 원본 페이지의 애니메이션 개체입니다.
+1. 애니메이션을 *시작* 대상 페이지에서 대상 요소에 대 한 참조를 전달 합니다.
 
-원본 페이지를 탐색할 때 [ConnectedAnimationService.GetForCurrentView](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.getforcurrentview) ConnectedAnimationService의 인스턴스를 호출 합니다. 애니메이션을 준비 하려면이 인스턴스에서 [PrepareToAnimate](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.preparetoanimate) 를 호출 하 고 고유 키 및 전환에 사용 하려는 UI 요소에 전달 합니다. 고유 키를 사용 하면 애니메이션 대상 페이지 나중에 검색할 수 있습니다.
+원본 페이지를 탐색할 때 [ConnectedAnimationService.GetForCurrentView](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.getforcurrentview) ConnectedAnimationService의 인스턴스를 호출 합니다. 애니메이션을 준비 하려면이 인스턴스에서 [PrepareToAnimate](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.preparetoanimate) 를 호출 하 고 고유 키 및 전환에 사용 하 여 UI 요소를 전달 합니다. 고유 키를 사용 하면 애니메이션 대상 페이지에서 나중에 검색할 수 있습니다.
 
 ```csharp
 ConnectedAnimationService.GetForCurrentView()
     .PrepareToAnimate("forwardAnimation", SourceImage);
 ```
 
-탐색 발생 하는 경우, 대상 페이지에서 애니메이션을 시작 합니다. 애니메이션을 시작하려면 [ConnectedAnimation.TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart)를 호출합니다. 애니메이션을 만들 때 제공한 고유 키로 [ConnectedAnimationService.GetAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.getanimation)을 호출하여 올바른 애니메이션 인스턴스를 검색할 수 있습니다.
+탐색 발생할 때 대상 페이지에서 애니메이션을 시작 합니다. 애니메이션을 시작하려면 [ConnectedAnimation.TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart)를 호출합니다. 애니메이션을 만들 때 제공한 고유 키로 [ConnectedAnimationService.GetAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.getanimation)을 호출하여 올바른 애니메이션 인스턴스를 검색할 수 있습니다.
 
 ```csharp
 ConnectedAnimation animation =
@@ -124,7 +124,7 @@ if (animation != null)
 
 앞으로 탐색에 대 한 권장된 애니메이션 구성은 [GravityConnectedAnimationConfiguration입니다](). 이것이 기본값, 하므로 다른 구성을 지정 하려는 경우가 아니면 [구성](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.configuration) 속성을 설정할 필요는 없습니다.
 
-원본 페이지에서 애니메이션을 설정 합니다.
+원본 페이지의 애니메이션을 설정 합니다.
 
 ```xaml
 <!-- Page_A.xaml -->
@@ -187,11 +187,11 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ### <a name="back-navigation"></a>뒤로 탐색
 
-동일한 단계를 따를 뒤로 탐색 (Page_A Page_B), 하지만 원본 및 대상 페이지 취소 됩니다.
+뒤로 탐색 (Page_A Page_B), 동일한 단계를 수행 하지만 원본 및 대상 페이지 취소 됩니다.
 
-사용자가 뒤로 이동 하면 이전 상태로 반환 되는 가능한 한 빨리 앱을 기대 합니다. 따라서 권장 구성은 [DirectConnectedAnimationConfiguration입니다](). 이 애니메이션 신속 하 고 더 직접적 이며 감속 감속을 사용 합니다.
+사용자가 뒤로 이동 하면 이전 상태로 반환 되는 가능한 한 빨리 앱을 기대 합니다. 따라서 권장 구성은 [DirectConnectedAnimationConfiguration입니다](). 이 애니메이션 빠르게, 더 직접적 이며 감속/가속 감속을 사용 하 여.
 
-원본 페이지에서 애니메이션을 설정 합니다.
+원본 페이지의 애니메이션을 설정 합니다.
 
 ```csharp
 // Page_B.xaml.cs
@@ -227,11 +227,11 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-시간이 애니메이션 설정 되 고 시작 될 때, 원본 요소는 앱의 다른 UI 위에 고정 나타납니다. 이렇게 하면 다른 전환 애니메이션을 동시에 수행할 수 있습니다. 이러한 이유로 원본 요소의 존재가 방해 요소로 작동할 수 있으므로 두 단계 사이 이상 시간이 250 밀리초를 기다립니다 해서는 안 됩니다. 애니메이션을 준비하고 3초 이내에 시작하지 않으면 시스템에서 애니메이션을 삭제하고 후속 [TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart) 호출이 실패합니다.
+시간이 애니메이션 설정 되 고 시작 될 때 원본 요소는 앱의 다른 UI 위에 고정 나타납니다. 이렇게 하면 다른 전환 애니메이션을 동시에 수행할 수 있습니다. 이러한 이유로 원본 요소의 존재가 방해 요소로 작동할 수 있으므로 두 단계 사이 이상 시간이 250 밀리초를 기다립니다 해서는 안 됩니다. 애니메이션을 준비하고 3초 이내에 시작하지 않으면 시스템에서 애니메이션을 삭제하고 후속 [TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart) 호출이 실패합니다.
 
 ## <a name="connected-animation-in-list-and-grid-experiences"></a>목록 및 그리드 환경의 연결된 애니메이션
 
-목록 또는 그리드 컨트롤에서/로 연결된 애니메이션을 만들고 싶은 경우가 종종 있을 것입니다. 이 프로세스를 간소화 하기 위해 [ListView](/uwp/api/windows.ui.xaml.controls.listview) 및 [GridView](/uwp/api/windows.ui.xaml.controls.gridview), [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync), 두 가지 메서드를 사용할 수 있습니다.
+목록 또는 그리드 컨트롤에서/로 연결된 애니메이션을 만들고 싶은 경우가 종종 있을 것입니다. [ListView](/uwp/api/windows.ui.xaml.controls.listview) 및 [GridView](/uwp/api/windows.ui.xaml.controls.gridview), [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync)이 프로세스를 간소화 하기 위해 두 가지 메서드를 사용할 수 있습니다.
 
 예를 들어 데이터 템플릿에 "PortraitEllipse"라는 이름의 요소가 들어 있는 **ListView**가 있다고 가정해 봅시다.
 
@@ -287,9 +287,9 @@ private void ContactsListView_Loaded(object sender, RoutedEventArgs e)
 
 *조정 된 애니메이션* 은 화면을 넘어갈 때 연결 된 애니메이션 요소와 함께에서 애니메이션을 적용 하는 연결 된 애니메이션 대상이 함께 요소가 표시는 특수 한 종류의 입구 애니메이션. 조정된 애니메이션은 전환에 더 많은 시각 효과를 추가하여 원본 보기와 대상 보기 사이에 공유되는 상황에 대해 사용자의 관심을 더 많이 끌 수 있습니다. 다음 그림에서 항목의 UI는 조정된 애니메이션을 사용하여 애니메이션 효과를 적용합니다.
 
-조정 된 애니메이션을 중력 구성을 사용 하 여, 중력 연결 된 애니메이션 요소와 조정 된 요소를 모두에 적용 됩니다. 조정 된 요소는 "급강하" 연결 된 요소와 함께 해야만 요소 정말로 조정 된 유지 합니다.
+조정 된 애니메이션을 중력 구성에서는 중력 연결 된 애니메이션 요소와 조정 된 요소에 적용 됩니다. 조정 된 요소는 "급강하" 연결 된 요소와 함께 해야만 요소 진정으로 조정 된 유지 합니다.
 
-**TryStart**의 2-매개 변수 오버로드를 사용하여 연결된 애니메이션에 조정된 요소를 추가합니다. 이 예제에서는 "CoverImage" 라는 연결 된 애니메이션 요소와 동시에 입력 하는 "DescriptionRoot" 라는 그리드 레이아웃이의 조정 된 애니메이션을 보여 줍니다.
+**TryStart**의 2-매개 변수 오버로드를 사용하여 연결된 애니메이션에 조정된 요소를 추가합니다. 이 예제에서는 "CoverImage" 라는 연결 된 애니메이션 요소와 함께에서 입력 "DescriptionRoot" 라는 그리드 레이아웃이의 조정 된 애니메이션을 보여 줍니다.
 
 ```xaml
 <!-- DestinationPage.xaml -->
@@ -320,8 +320,8 @@ void OnNavigatedTo(NavigationEventArgs e)
 - 원본 페이지와 대상 페이지 간에 요소가 공유되는 페이지 전환에는 연결된 애니메이션을 사용합니다.
 - 앞으로 탐색을 위해 [GravityConnectedAnimationConfiguration]() 를 사용 합니다.
 - 뒤로 탐색에 대 한 [DirectConnectedAnimationConfiguration]() 를 사용 합니다.
-- 네트워크 요청 또는 다른 장기 실행 비동기 작업을 준비 하 고 연결된 된 애니메이션을 시작 기다리지 대기할 하지 마세요. 필요한 정보를 미리 로드하여 전환을 미리 실행하거나, 대상 보기에 고해상도 이미지가 로드되는 동안 저해상도 자리 표시자 이미지를 사용해야 할 수도 있습니다.
-- 연결 된 애니메이션 기본 탐색을 사용 하 여 동시에 사용 하도록 설계 되지 이후 **ConnectedAnimationService**사용 하는 경우 **프레임** 에서 전환 애니메이션을 방지 하려면 [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) 사용 전환 합니다. 탐색 전환을 사용하는 방법에 대한 자세한 내용은 [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition)을 참조하세요.
+- 네트워크 요청 또는 다른 장기 실행 비동기 작업을 기다리지 준비 하 고 연결된 된 애니메이션을 시작 대기 하지 마십시오. 필요한 정보를 미리 로드하여 전환을 미리 실행하거나, 대상 보기에 고해상도 이미지가 로드되는 동안 저해상도 자리 표시자 이미지를 사용해야 할 수도 있습니다.
+- [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) 를 사용 하 여 연결 된 애니메이션 기본 탐색을 사용 하 여 동시에 사용 하도록 설계 되지 이후 **ConnectedAnimationService**사용 하는 경우 **프레임** 에서 전환 애니메이션을 차단 합니다. 전환 합니다. 탐색 전환을 사용하는 방법에 대한 자세한 내용은 [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition)을 참조하세요.
 
 ## <a name="download-the-code-samples"></a>코드 샘플 다운로드
 

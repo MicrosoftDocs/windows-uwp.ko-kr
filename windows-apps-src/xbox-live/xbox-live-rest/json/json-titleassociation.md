@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c9d42f4285cd20785f5606d3e2ac6094a874acba
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5156495"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5399050"
 ---
 # <a name="titleassociation-json"></a>TitleAssociation(JSON)
 도전 과제와 연결 된 제목입니다. 
@@ -25,7 +25,7 @@ ms.locfileid: "5156495"
  
 ## <a name="titleassociation"></a>TitleAssociation
  
-TitleAssociation 개체에는 다음과 같이 지정 합니다.
+TitleAssociation 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

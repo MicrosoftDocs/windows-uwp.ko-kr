@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: f3e294fdf5a9b2d98f09d839fa62499b556de3a5
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5157362"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407034"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -41,7 +41,7 @@ Visual Studio에서 패키지를 만들 때 개발자 계정과 연결된 동일
 
 ### <a name="app-bundles"></a>앱 번들
 
-UWP 앱에 대 한 Visual Studio (.msixbundle 또는.appxbundle) 사용자가 다운로드 하는 앱의 크기를 줄이기 위해 앱 번들을 생성할 수 있습니다. 언어별 자산, 다양한 이미지 스케일 자산 또는 특정 Microsoft DirectX 버전에 적용되는 리소스를 정의한 경우 이렇게 하면 유용할 수 있습니다.
+UWP 앱 용 Visual Studio (.msixbundle 또는.appxbundle)을 통해 사용자가 다운로드 하는 앱의 크기를 줄이기 위해 앱 번들을 생성할 수 있습니다. 언어별 자산, 다양한 이미지 스케일 자산 또는 특정 Microsoft DirectX 버전에 적용되는 리소스를 정의한 경우 이렇게 하면 유용할 수 있습니다.
 
 > [!NOTE]
 > 하나의 앱 번들에 모든 아키텍처에 대한 패키지가 포함될 수 있습니다.
@@ -73,7 +73,7 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 
 | 앱 패키지 속성 | 요구 사항                                                          |
 |----------------------|----------------------------------------------------------------------|
-| 패키지 크기         | .msixbundle 또는.appxbundle: 번들 당 최대 25GB <br>Windows 10시 25분 대상으로 하는.msix 또는.appx 패키지 패키지당 최대<br>Windows 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 8GB <br> Windows 8을 대상으로 하는 .appx 패키지: 패키지당 최대 2GB <br> Windows Phone 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 4GB <br> .xap 패키지: 패키지당 최대 1GB                                                                           |
+| 패키지 크기         | .msixbundle 또는.appxbundle: 번들 당 최대 25GB <br>Windows 10시 25분을 대상으로 하는.msix 또는.appx 패키지 패키지당 최대<br>Windows 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 8GB <br> Windows 8을 대상으로 하는 .appx 패키지: 패키지당 최대 2GB <br> Windows Phone 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 4GB <br> .xap 패키지: 패키지당 최대 1GB                                                                           |
 | 블록 맵 해시     | SHA2-256 알고리즘                                                   |
 
 
@@ -88,7 +88,7 @@ UWP 앱의 경우 모든 패키지는 Microsoft Store에서 지원하는 버전�
 
 ## <a name="storemanifest-xml-file"></a>StoreManifest XML 파일
 
-StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파일입니다. 이 구성 파일은 앱을 Microsoft Store 장치 앱으로 선언하거나 패키지를 장치에 적용하려면 필요한 요구 사항을 선언하는 등과 같이 패키지 매니페스트에서 다루지 않는 기능을 사용하도록 설정하기 위한 것입니다. 를 사용 하는 경우 StoreManifest.xml은 앱 패키지를 사용 하 여와 제출 앱의 기본 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal)를 참조하세요.
+StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파일입니다. 이 구성 파일은 앱을 Microsoft Store 장치 앱으로 선언하거나 패키지를 장치에 적용하려면 필요한 요구 사항을 선언하는 등과 같이 패키지 매니페스트에서 다루지 않는 기능을 사용하도록 설정하기 위한 것입니다. 를 사용 하는 경우 StoreManifest.xml 앱 패키지를 사용 하 여 제출 하 고 앱의 기본 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal)를 참조하세요.
 
  
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 66d32e448f7db8558ea6ef02714b6112e230e711
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5161711"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5395262"
 ---
 # <a name="post-usersbatchprofilesettings"></a>POST (/users/batch/profile/settings)
 사용자 또는 사용자에 대 한 프로필을 가져옵니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
@@ -32,7 +32,7 @@ ms.locfileid: "5161711"
  
 ## <a name="remarks"></a>설명
  
-정규화 된 이름만 프로필 URL에 사용할 수입니다. 클라이언트에서 다른 모든 프로필 Api 차단 됩니다.
+이 정규화 된 이름만 프로필 URL에 사용할 수 있습니다. 클라이언트에서 다른 모든 프로필 Api 차단 됩니다.
   
 <a id="ID4EFB"></a>
 
@@ -48,7 +48,7 @@ ms.locfileid: "5161711"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | 
-| x xbl-계약 버전| 32 비트 부호 없는 정수| Xbox 360 API에서이 호출을 구분 하기 위해 계약 버전을 2로 설정 해야 합니다.| 
+| xbl 계약 버전 x| 32 비트 부호 없는 정수| Xbox 360 API에서이 호출을 구분 하기 위해 계약 버전 2로 설정 해야 합니다.| 
 | 콘텐츠 형식| string| 값 = <code>application/json</code>| 
   
 <a id="ID4EZC"></a>

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, ExtendedJsonData, Microsoft Store 제품, 스키마
 ms.localizationpriority: medium
 ms.openlocfilehash: 77faa88524f348736c4c997dcd18ded200e9fd86
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5164093"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406645"
 ---
 # <a name="data-schemas-for-store-products"></a>Microsoft Store 제품용 데이터 스키마
 

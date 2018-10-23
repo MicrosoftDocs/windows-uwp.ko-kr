@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167802"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405261"
 ---
 # <a name="feedback-report"></a>피드백 보고서
 
@@ -26,7 +26,7 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 
 고객에게 앱에 대한 피드백을 제공하도록 권유하는 것은 고객이 가장 중요한 문제와 기능을 알게 하는 좋은 방법입니다. 고객이 직접 피드백을 보낼 수 있다는 사실을 알게 되면 스토어에서 해당 피드백을 부정적인 리뷰로 남길 가능성은 적습니다.
 
-[Microsoft Store Services SDK](http://aka.ms/store-em-sdk)의 피드백 API를 사용하여 고객이 [직접 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)하도록 할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 사용하여 해당 피드백을 남길 수 있습니다. 이 인해 있습니다 특별히 요청 하지 않은의 피드백에 대 한 앱 내에서 하는 경우에이 보고서에서 고객 의견을 볼 수 있습니다.
+[Microsoft Store Services SDK](http://aka.ms/store-em-sdk)의 피드백 API를 사용하여 고객이 [직접 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)하도록 할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 사용하여 해당 피드백을 남길 수 있습니다. 이 인해 하면 특별히 요청 하지 않은의 피드백에 대 한 앱 내에서 하는 경우에이 보고서에서 고객 의견을 볼 수 있습니다.
 
 피드백 보고서는 피드백을 남겼을 때 각 고객이 장치에 설치한 특정 패키지를 보여준다는 점에서 [패키지 플라이팅](package-flights.md)을 사용할 때 피드백이 도움이 될 수 있습니다.
 
@@ -65,7 +65,7 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 
 ## <a name="translating-feedback"></a>피드백 번역
 
-기본적으로 원하는 언어로 작성 되지 않은 피드백은 번역 됩니다. 필요하면 페이지 필터 근처 오른쪽 위에서 **번역 피드백** 확인란을 선택 취소하여 피드백 번역을 사용하지 않을 수 있습니다.
+기본적으로 원하는 언어로 작성 되지 않은 피드백은 번역. 필요하면 페이지 필터 근처 오른쪽 위에서 **번역 피드백** 확인란을 선택 취소하여 피드백 번역을 사용하지 않을 수 있습니다.
 
 피드백은 자동 번역 시스템에 의해 번역되므로 번역 결과가 항상 정확하지는 않을 수 있습니다. 원본 텍스트를 번역과 비교하거나 다른 의미로 번역하고 싶은 경우를 대비해서 원본 텍스트가 제공됩니다.
 

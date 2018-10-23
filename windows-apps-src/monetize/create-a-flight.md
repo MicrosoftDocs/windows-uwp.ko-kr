@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 만들기
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e6a547c8baf0f8990415e303d6b69ca04986d3b
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5166650"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407404"
 ---
 # <a name="create-a-package-flight"></a>패키지 플라이트 만들기
 

@@ -1,25 +1,25 @@
 ---
 title: Xdk 다운로드 하는 방법
 author: KevinAsgari
-description: Xdk Xbox 개발자 키트 () 관리 되는 파트너에 대 한 액세스를 얻는 방법에 알아봅니다.
+description: 액세스 관리 파트너로 Xbox 개발자 키트 (XDK)를 다운로드 하는 방법을 알아봅니다.
 ms.assetid: 5e7abfb7-5d68-4e77-a941-13dd081268ac
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 604fcf1e77a1ca4666c14216be5c690362c9048b
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5156492"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396489"
 ---
 # <a name="how-to-get-the-xbox-development-kit-xdk"></a>(XDK (Xbox 개발 키트)를 얻는 방법
 
-(XDK (Xbox 개발 키트) 공개적으로 사용할 수 없는 경우 그룹이 두 개, 관리 파트너 및 ID@Xbox 개발자에 게는 XDK에 액세스할 수 있는 및 설명서 및 미들웨어 도구와 같은 개발 리소스에 연결 합니다. XDK [소프트웨어 다운로드 페이지에서](https://developer.microsoft.com/en-us/games/xbox/partner/resources-softwaredownloads) developer.microsoft.com 사이트에서 다운로드할 수 있습니다.
+(XDK (Xbox 개발 키트) 공개적으로 사용할 수 없는 경우 가지 두 그룹 관리 파트너 및 ID@Xbox 는 XDK에 액세스할 수 있는 및 관련 설명서 및 미들웨어 도구와 같은 리소스를 개발 하는 개발자. XDK는 [소프트웨어 다운로드 페이지에서](https://developer.microsoft.com/en-us/games/xbox/partner/resources-softwaredownloads) developer.microsoft.com 사이트에서 다운로드할 수 있습니다.
 
 사이트에 액세스할 수 없는 경우 다운로드 하거나는 XDK를 사용 하는 일을 할 수 없습니다. 더 되지 않은 경우 액세스 계정 관리자에 게 문의 합니다.
 
@@ -29,7 +29,7 @@ XDK 액세스 할 수 있으려면 [적용 되는 ID@Xbox 개발자](https://www
 ## <a name="software-requirements"></a>소프트웨어 요구 사항
 
 - Windows 운영 체제
-    - 서비스 팩 1, 2533623, 2588507, 및 2769790 Windows 핫픽스를 사용 하 여 Windows 7 64 비트
+    - Windows 7 64 비트 Windows 핫픽스 2533623, 2588507, 및 2769790 서비스 팩 1
     - Windows 8 64 비트
     - 64 비트 Windows 8.1
     - Windows Server 2008 및 Windows Server 2012 빌드 서버에 대 한 지원 됩니다.
@@ -46,7 +46,7 @@ XDK에 대 한 액세스의 사용을 통해 안내 하는 리소스에 대 한 
 - Xbox Live 개발 키트를 사용 하 여 [XDK 문서](https://developer.microsoft.com/en-us/games/xbox/partner/development-documentation)에 대해 알아봅니다.
 - 추가 도움말에 대 한 커뮤니티 지원에 대 한 [개발자 포럼](https://forums.xboxlive.com/index.html) 을 참조 하거나 계정 관리자에 게 문의 수 있습니다.
 
-## <a name="install-the-xdk"></a>XDK 설치
+## <a name="install-the-xdk"></a>XDK는 설치
 
 다운로드 하 고는 XDK 설치를 통합할 수 Xbox Live 프로젝트.  다음 중 하나를 참조 하세요.
 - [XDK는 함께 제공 된 Xbox Live Api 소스 컴파일](compile-the-xdk-xbox-live-api-source.md)

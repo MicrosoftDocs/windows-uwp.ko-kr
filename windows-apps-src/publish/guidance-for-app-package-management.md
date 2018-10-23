@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a43f3b4c5684d93ea6986c4d1f1e4dae46c1a959
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5160338"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407303"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
@@ -77,7 +77,7 @@ ms.locfileid: "5160338"
 |--------------------------------------|----------------------------------------------|
 | Windows 10(유니버설 디바이스 패밀리) | Windows 10(모든 디바이스 패밀리)             |
 
-예제 앱 4에서는 Windows 10을 실행하는 장치에서 앱을 가져올 수 있지만 이전 OS 버전의 고객은 사용할 수 없습니다. UWP 패키지는 유니버설 디바이스 패밀리를 대상으로 하므로 모든 Windows 10 장치 (당 [장치 패밀리 가용성 선택](device-family-availability.md))를 사용할 수 있는 됩니다.
+예제 앱 4에서는 Windows 10을 실행하는 장치에서 앱을 가져올 수 있지만 이전 OS 버전의 고객은 사용할 수 없습니다. UWP 패키지는 유니버설 디바이스 패밀리를 대상으로 하므로 모든 Windows 10 장치 ( [디바이스 패밀리 가용성 선택](device-family-availability.md)) 당 제공 됩니다.
 
 
 ## <a name="removing-an-app-from-the-store"></a>Store에서 앱 제거
@@ -99,9 +99,9 @@ ms.locfileid: "5160338"
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>이전에 지원되던 디바이스 패밀리용 패키지 제거
 
-경우 대해 특정 [디바이스 패밀리](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 앱 이전에 지원 메시지가 표시 됩니다 **패키지** 페이지에서 변경 내용을 저장 하기 전에 의도 한 내용 인지 확인 하려면 패키지를 모두 제거 합니다.
+모든 패키지는 특정 [디바이스 패밀리](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 지원 하 던 앱 이전에, 메시지가 표시 됩니다 **패키지** 페이지에서 변경 내용을 저장 하기 전에 의도 한 내용 인지 확인 제거 하는 경우 합니다.
 
-모든 앱에서 이전에 지원 되는 디바이스 패밀리에서 실행 될 수 있는 패키지를 제거 하는 제출을 게시 하면 새 고객에 게 해당 디바이스 패밀리에서 앱을 구입할 수 없습니다. 항상 나중에 또 다른 업데이트를 게시하여 해당 디바이스 패밀리용 패키지를 다시 제공할 수 있습니다.
+모든 앱이 이전에 지원 되는 디바이스 패밀리에서 실행 될 수 있는 패키지를 제거 하는 제출을 게시 하는 경우 새 고객에 게 해당 디바이스 패밀리에서 앱을 구입할 수 없습니다. 항상 나중에 또 다른 업데이트를 게시하여 해당 디바이스 패밀리용 패키지를 다시 제공할 수 있습니다.
 
 특정 디바이스 패밀리를 지원하는 모든 패키지를 제거하더라도 이미 해당 장치 유형에 앱을 설치한 기존 고객은 계속 해당 앱을 사용할 수 있으며 나중에 제공되는 업데이트를 다운로드하게 되니 주의하세요.
 
@@ -110,11 +110,11 @@ ms.locfileid: "5160338"
 
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>이전에 게시된 앱에 Windows 10용 패키지 추가
 
-Windows에 대 한 패키지가 포함 된 저장소에는 앱이 있는 경우 8.x 및/또는 Windows Phone 8.x 하려면 Windows 10 용 앱을 업데이트 한 새 제출을 만들고 [패키지](upload-app-packages.md) 단계 중에 UWP.msixupload 또는.appxupload 패키지를 추가 합니다. 앱 인증 프로세스를 통과 UWP 패키지를 Windows 10에서 고객이 새 구입에 사용할 수 있는 됩니다.
+Windows에 대 한 패키지가 포함 된 저장소에는 앱이 있는 경우 8.x 및/또는 Windows Phone 8.x를 Windows 10 용 앱을 업데이트 하 고 새 제출을 만들고 [패키지](upload-app-packages.md) 단계 중에 UWP.msixupload 또는.appxupload 패키지를 추가 하려고 합니다. 앱 인증 프로세스를 거치면 UWP 패키지는 Windows 10에서 고객이 새 구입에 사용할 수 있는 됩니다.
 
 > [!NOTE]
 > Windows 10의 고객이 UWP 패키지를 구입한 후에는 이전 OS 버전용 패키지를 사용하여 해당 고객을 롤백할 수 없습니다. 
 
-Note Windows 10 패키지의 버전 번호를 사용한 모든 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지 보다 높아야 합니다. 자세한 내용은 [패키지 버전 번호](package-version-numbering.md)를 참조하세요.
+Note Windows 10 패키지의 버전 번호를 사용한 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지 보다 높아야 합니다. 자세한 내용은 [패키지 버전 번호](package-version-numbering.md)를 참조하세요.
 
 Store의 UWP 앱 패키징에 대한 자세한 내용은 [앱 패키징](../packaging/index.md)을 참조하세요.

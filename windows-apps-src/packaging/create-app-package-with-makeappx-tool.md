@@ -11,11 +11,11 @@ keywords: windows 10, uwp, 패키징
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.openlocfilehash: dbde8f2f11276ded6ad0994a1cd52f7f12de229e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5171142"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406529"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 
@@ -25,12 +25,12 @@ ms.locfileid: "5171142"
 > [!IMPORTANT] 
 > Visual Studio를 사용하여 앱을 개발하는 경우 Visual Studio 마법사를 사용하여 앱 패키지를 만드는 것이 좋습니다. 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)을 참조하세요.
 
-**MakeAppx.exe**는 .appxupload 파일을 만들지 않습니다. .Appxupload 파일은 Visual Studio 패키징 프로세스의 일부로 생성 및 다른 두 개의 파일이 포함:.msix 또는.appx 및.appxsym 이라는 합니다. .appxsym 파일은 Windows 개발자 센터에서 [분석 충돌](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/)에 사용되는 앱의 공용 기호를 포함하는 압축 .pdb 파일입니다. 일반적인 .appx 파일도 제출할 수 있지만 충돌 분석이나 디버깅 정보를 사용할 수 없습니다. Microsoft Store에 패키지를 제출하는 방법에 대한 자세한 내용은 [앱 패키지 업로드](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages)를 참조하세요. 
+**MakeAppx.exe**는 .appxupload 파일을 만들지 않습니다. .Appxupload 파일은 Visual Studio 패키징 프로세스의 일부로 생성 하 고 다른 두 개의 파일이 포함:.msix 또는.appx 및.appxsym 이라는 합니다. .appxsym 파일은 Windows 개발자 센터에서 [분석 충돌](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/)에 사용되는 앱의 공용 기호를 포함하는 압축 .pdb 파일입니다. 일반적인 .appx 파일도 제출할 수 있지만 충돌 분석이나 디버깅 정보를 사용할 수 없습니다. Microsoft Store에 패키지를 제출하는 방법에 대한 자세한 내용은 [앱 패키지 업로드](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages)를 참조하세요. 
 
- Windows 10의 최신 버전에서이 도구에 대 한 업데이트.appx 패키지 사용 영향을 주지 않습니다. 이 도구를 사용 하 여.appx 패키지를 사용 하 여 계속 하거나 아래 설명 된 대로.msix 패키지에 대 한 도구를 지 원하는 사용 수 있습니다.
+ 가장 최신 버전의 Windows 10에서이 도구에 대 한 업데이트.appx 패키지 사용 영향을 주지 않습니다. 이 도구를 사용 하 여.appx 패키지를 사용 하 여 계속 하거나 아래 설명 된 대로.msix 패키지에 대 한 도구를 지 원하는 사용할 수 있습니다.
 
 .appxupload 파일을 수동으로 만들려면
-- 폴더에는.msix 및.appxsym 이라는 배치
+- .msix 및.appxsym은 폴더에 배치
 - 폴더를 압축합니다.
 - 압축 폴더 확장명을 .zip에서 .appxupload로 변경합니다.
 
@@ -82,14 +82,14 @@ MakeAppx <command> [options]
 
 | **인수**                          | **설명**                       |
 |---------------------------------------|---------------------------------------|
-| &lt;출력 패키지 이름&gt;           | 생성되는 패키지 이름입니다. 이 추가 된.msix 또는.appx 파일 이름입니다. |
-| &lt;암호화된 출력 패키지 이름&gt; | 생성되는 암호화된 패키지 이름입니다. 이 추가 된.emsix 또는.eappx 파일 이름입니다. |
-| &lt;입력 패키지 이름&gt;            | 패키지 이름입니다. 이 추가 된.msix 또는.appx 파일 이름입니다. |
-| &lt;암호화된 입력 패키지 이름&gt;  | 암호화된 패키지 이름입니다. 이 추가 된.emsix 또는.eappx 파일 이름입니다. |
-| &lt;출력 번들 이름&gt;            | 생성되는 번들 이름입니다. 이 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
-| &lt;암호화된 출력 번들 이름&gt;  | 생성되는 암호화된 번들 이름입니다. 이 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
-| &lt;입력 번들 이름&gt;             | 번들 이름입니다. 이 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
-| &lt;암호화된 입력 번들 이름&gt;   | 암호화된 번들 이름입니다. 이 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
+| &lt;출력 패키지 이름&gt;           | 생성되는 패키지 이름입니다. 추가 된.msix 또는.appx 파일 이름입니다. |
+| &lt;암호화된 출력 패키지 이름&gt; | 생성되는 암호화된 패키지 이름입니다. 추가 된.emsix 또는.eappx 파일 이름입니다. |
+| &lt;입력 패키지 이름&gt;            | 패키지 이름입니다. 추가 된.msix 또는.appx 파일 이름입니다. |
+| &lt;암호화된 입력 패키지 이름&gt;  | 암호화된 패키지 이름입니다. 추가 된.emsix 또는.eappx 파일 이름입니다. |
+| &lt;출력 번들 이름&gt;            | 생성되는 번들 이름입니다. 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
+| &lt;암호화된 출력 번들 이름&gt;  | 생성되는 암호화된 번들 이름입니다. 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
+| &lt;입력 번들 이름&gt;             | 번들 이름입니다. 추가 된.msixbundle 또는.appxbundle 파일 이름입니다. |
+| &lt;암호화된 입력 번들 이름&gt;   | 암호화된 번들 이름입니다. 추가 된.emsixbundle 또는.eappxbundle 파일 이름입니다. |
 | &lt;콘텐츠 디렉터리&gt;             | 앱 패키지 또는 번들 콘텐츠 경로입니다. |
 | &lt;매핑 파일&gt;                  | 패키지 원본 및 대상을 지정하는 파일 이름입니다. |
 | &lt;출력 디렉터리&gt;              | 출력 패키지 및 번들의 디렉터리 경로입니다. |

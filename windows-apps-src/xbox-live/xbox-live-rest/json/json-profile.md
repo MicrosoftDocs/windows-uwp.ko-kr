@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae5e95befc6611c5905e6efe2bb01a396167626
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5170024"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5397647"
 ---
 # <a name="profile-json"></a>Profile(JSON)
 사용자에 대 한 개인 프로필 설정 합니다. 
@@ -25,7 +25,7 @@ ms.locfileid: "5170024"
  
 ## <a name="profile"></a>프로필
  
-프로필 개체에는 다음과 같이 지정 합니다.
+프로필 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
@@ -35,21 +35,21 @@ ms.locfileid: "5170024"
 | AppDisplayPicRaw| string| 원시 앱 디스플레이 pic URL (아래 참조).| 
 | GameDisplayPicRaw| string| 원시 게임 디스플레이 pic URL (아래 참조).| 
 | AccountTier| string| 사용자에 게 어떤 유형의 계정이 있습니까? 골드, 실버, 또는 FamilyGold?| 
-| TenureLevel| 32 비트 부호 없는 정수| 몇 년 사용자 된 Xbox live?| 
+| TenureLevel| 32 비트 부호 없는 정수| 몇 년 동안 사용자 된 Xbox live?| 
 | 게이머 점수| 32 비트 부호 없는 정수| 사용자의 게이머 점수 합니다.| 
   
 
 
 > [!NOTE] 
-> 사용자의 '실제 그림' 또는 개인 정보 보호에 따라 해당 XboxOne gamerpic 사진 수 있습니다. 이러한 설정은 클라이언트에 표시 하기 위해 사용 해야 하는 사용자의 사진 url을 나타냅니다. 이 이미지 (사용자가 모든 사진을 설정 되지 않은 나타냄) 비어 있을 수 있습니다. 
+> 사용자의 '실제 그림' 또는 개인 정보 보호에 따라 해당 XboxOne gamerpic 사진 수 있습니다. 이러한 설정은 클라이언트에 표시 하기 위해 사용 해야 하는 사용자의 사진 url을 나타냅니다. 이 이미지는 (사용자가 그림을 설정 되지 않은 나타냄) 비어 있을 수 있습니다. 
 
 
  
-원시 URL은 크기 조정이 가능한 URL. 크기를 조정 하거나 추가 하 여 사용 하 여 서식을 지정 하는 다음 중 하나를 지정을 사용할 수 있습니다 `&format={format}&w={width}&h={height}` uri:
+원시 URL은 크기 조정이 가능한 URL. 크기를 조정 하거나 추가 하 여 사용 하 여 서식을 지정 하는 다음 중 하나를 지정 하려면 사용할 수 있습니다 `&format={format}&w={width}&h={height}` uri:
  
 형식: png
  
-크기: 64x64, 208 x 208, 424 x 424
+크기: 64 x 64, 208 x 208, 424 x 424
  
 <a id="ID4E2D"></a>
 

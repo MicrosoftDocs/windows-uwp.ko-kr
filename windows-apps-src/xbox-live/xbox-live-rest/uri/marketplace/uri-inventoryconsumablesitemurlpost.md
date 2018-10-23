@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 910e2e46725c8628d6984983c808bf5fc9937f9f
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5157499"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5397563"
 ---
 # <a name="post-itemid"></a>POST ({itemID})
-전체 또는 일부 소모 성 인벤토리 항목의 사용 되었는지 나타냅니다 점감 수량을 요청 된 양만큼 소모입니다.
+전체 또는 일부 소모 성 인벤토리 항목의 사용 되었는지 나타냅니다 점감 수량을 요청 된 양만큼 소모 성입니다.
 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
 
   * [설명](#ID4EX)
@@ -32,15 +32,15 @@ ms.locfileid: "5157499"
 
 ## <a name="remarks"></a>설명
 
-   * 호출자를 사용 하 라는 메시지가 표시 수량 나머지 제공할 수 있는 항목을 초과 하면 호출이 거부 됩니다.
-   * 호출자를 사용 하 라는 메시지가 표시 수량 양의 정수 0 이어야 합니다. 소비 값이 0 이하인 호출 거부 됩니다.
+   * 호출자를 사용 하도록 요청 수량 나머지 제공할 수 있는 항목을 초과 하면 호출이 거부 됩니다.
+   * 호출자를 사용 하도록 요청 수량 양의 정수 0 이어야 합니다. 소비 값이 0 이하인 호출 거부 됩니다.
    * 호출자는 빈 트랜잭션 ID를 제공 하는 경우 요청이 거부 됩니다.
-   * 사용 가능한 경우 소비를 보고 있는 제목 결정을 수행할 수 있도록 제목 클레임에 기록 됩니다.
-   * 일부 기간에 대 한 동일한 transactionId 사용 하 여 추가 게시물 무시 됩니다.
+   * 사용 가능한 경우 소비를 보고 하는 어떤 제목 결정을 수행할 수 있도록 제목 클레임 기록 됩니다.
+   * 동일한 transactionId 사용 하 여 추가 게시물 몇 시간 동안 무시 됩니다.
 
 
 > [!NOTE]
-> 이 API에 대 한 <b>x xbl-계약 버전 헤더</b> "4"입니다.
+> 이 API에 대 한 <b>xbl 계약 버전 x 헤더</b> "4"입니다.
 
 
 <a id="ID4EQB"></a>
@@ -50,7 +50,7 @@ ms.locfileid: "5157499"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
-| itemID| string| 각 사용자에 게 단일 인벤토리 항목에 대 한 고유 ID|
+| itemID| string| 단일 인벤토리 항목의 각 사용자에 게 고유한 ID|
 
 <a id="ID4E2B"></a>
 
@@ -72,14 +72,14 @@ ms.locfileid: "5157499"
 ```
 
 
-제거 수량 필드 호출자가 소모의 나머지 수량에서 제거 하려는 소모 양을 나타낼 수 있습니다. 거래 ID 필드는 소모 성 콘텐츠 작업을 사용 하 여 동일한 사용량을 두 번 계산의 위험을 제한 하는 동안 다시 시도 하는 수단을 사용 하 여 호출자에 게를 제공 합니다.
+제거 수량 필드에서 소모 성의 나머지 수량 제거 하고자 하는 소모 성 수량을 나타내기 위해 호출자를 허용 합니다. 트랜잭션 ID 필드는 소모 성 콘텐츠 작업을 사용 하 여 동일한 사용량을 두 번 계산의 위험을 제한 하는 동안 다시 시도 하는 수단을 사용 하 여 호출자에 게를 제공 합니다.
 
 <a id="ID4ENC"></a>
 
 
 ## <a name="response-body"></a>응답 본문
 
-인증을 통과 하 고 적절 한 권한 부여 컨텍스트를 할당 하는 것으로 가정 게시물에 대 한 응답이 동일한 transactionId 사용 하 여 영수증의는 acknolodgement POST 요청, 소모 성 항목의 URL 및 항목의 새 서비스에 전달 수량 값입니다.
+인증을 통과 하 고 적절 한 권한 부여 컨텍스트를 할당 게시물에 대 한 응답이 동일한 transactionId 사용 하 여 영수증의는 acknolodgement POST 요청, 소모 성 항목의 URL 및 항목의 새 서비스에 전달 수량 값입니다.
 
 <a id="ID4EVC"></a>
 

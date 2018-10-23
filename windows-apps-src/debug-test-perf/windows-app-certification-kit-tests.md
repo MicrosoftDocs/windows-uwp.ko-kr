@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Windows 앱 인증 키트 테스트
-description: Windows 앱 인증 키트는 다양을 한 앱은 Microsoft 스토어에 게시할 준비가 되었는지 확인 하는 데 도움이 되는 테스트가 포함 되어 있습니다.
+description: Windows 앱 인증 키트는 다양을 한 앱은 Microsoft Store에 게시할 준비가 되었는지 확인 하는 데 도움이 되는 테스트가 포함 되어 있습니다.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167923"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408700"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
 
-[Windows 앱 인증 키트](windows-app-certification-kit.md) 테스트 앱이 Microsoft Store에 게시할 준비가 확인 하는 데 도움이 되는 번호가 포함 됩니다. 테스트 하 여 조건을 세부 정보를 사용 하 여 아래 나열 되 고 오류가 발생할 경우 작업을 제안 합니다.
+[Windows 앱 인증 키트](windows-app-certification-kit.md) 는 다양을 한 앱은 Microsoft Store에 게시할 수 있도록 테스트가 포함 되어 있습니다. 테스트 하 여 조건을 세부 정보를 사용 하 여 아래 나열 된 및 오류가 발생할 경우 작업을 제안 합니다.
 
 ## <a name="deployment-and-launch-tests"></a>배포 및 시작 테스트
 
@@ -128,7 +128,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 -   **IPC(프로세스 간 통신) 검증**
 
-    이 테스트는 UWP 앱 컨테이너 외부에서 앱을 데스크톱 구성 요소와 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.
+    이 테스트는 UWP 앱 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신 하지 않는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414)를 지정하는 앱은 이 테스트에 실패합니다.
 
 ### <a name="corrective-action"></a>수정 작업
 
@@ -248,7 +248,7 @@ AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤
 
 기본 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커를 사용하여 파일을 빌드했고 링커에서 */appcontainer* 플래그를 사용하는지 확인하세요.
 
-관리 되는 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커를 Microsoft Visual Studio와 같은 UWP 앱을 빌드하는 데 사용 해야 합니다.
+관리 되는 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커 Microsoft Visual Studio와 같은 UWP 앱을 빌드하는 데 사용 해야 합니다.
 
 **설명**
 
@@ -319,9 +319,9 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 앱이 디버그 빌드가 아니라 릴리스 빌드로 컴파일되었는지 확인하세요.
 
-> **참고**  [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다.
+> **참고**  앱은 [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)를 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다.
 
-[UWP 앱에 대 한 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)되지 않은 앱은 API를 식별 하기 위해 오류 메시지를 검토 합니다.
+[UWP 앱 용 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)되지 않은 앱은 API를 식별 하기 위해 오류 메시지를 검토 합니다.
 
 > **참고**  UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 자세한 정보에 대 한 [UWP 앱의 Windows Api 대안](http://go.microsoft.com/fwlink/p/?LinkID=244022) 을 참조 하세요.
 
@@ -537,7 +537,7 @@ Microsoft Direct3D 앱을 테스트하여 이전 그래픽 하드웨어가 있�
 
 ### <a name="background"></a>배경
 
-Microsoft Store에는 Direct3D를 사용 하 여 제대로 렌더링 되거나 정상적으로 기능 수준 9 \-1 그래픽 카드 실패 하는 모든 응용 프로그램에 필요 합니다.
+Microsoft Store에서 제대로 렌더링 되거나 정상적으로 기능 수준 9 \-1 그래픽 카드 실패를 Direct3D를 사용 하 여 모든 응용 프로그램에 필요 합니다.
 
 사용자는 앱 설치 후 디바이스의 그래픽 하드웨어를 변경할 수 있으므로 9\-1 이상의 최소 기능 수준을 선택하는 경우 실행 시 현재 하드웨어가 최소 요구 사항을 충족하는지 여부를 앱에서 확인해야 합니다. 최소 요구 사항을 충족하지 않는 경우 앱은 Direct3D 요구 사항이 자세히 설명된 메시지를 사용자에게 표시해야 합니다. 또한 호환되지 않는 디바이스에서 앱을 다운로드하는 경우 앱은 시작 시 이 사항을 감지하고 요구 사항을 자세히 설명하는 메시지를 고객에게 표시해야 합니다.
 

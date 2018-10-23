@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, HTML, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 5474ac51d57decfe2c4f4d5f1969da5b4436fd14
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5166620"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406221"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>HTML 및 JavaScript 문제 해결 가이드
 

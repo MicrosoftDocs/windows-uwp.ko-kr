@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4be83e2d4301a708a705a8bec0a1d975b6435bc5
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5157167"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5398461"
 ---
 # <a name="marketplace-uris"></a>마켓플레이스 URI
 
-이 섹션에서는 *marketplace* 서비스, 라고도 엔터테인먼트 검색 서비스 (EDS)에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 라고도 엔터테인먼트 검색 서비스 (EDS) *marketplace* 서비스용 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
 
-Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 하는 게임만이 서비스를 사용할 수 있습니다.
+Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 서비스를 사용할 수 있습니다.
 
 이러한 Uri에 대 한 도메인은 eds.xboxlive.com 및 inventory.xboxlive.com입니다.
 
@@ -37,11 +37,11 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 하는 게임만이 서비
 
 [/users/me/consumables/{itemID}](uri-inventoryconsumablesitemurl.md)
 
-&nbsp;&nbsp;특정 소모 성 인벤토리 항목에 대 한 세부 정보의 전체 집합 액세스 합니다.
+&nbsp;&nbsp;특정 소모 성 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다.
 
 [/inventory/{itemID}](uri-inventoryitemurl.md)
 
-&nbsp;&nbsp;특정 인벤토리 항목에 대 한 세부 정보의 전체 집합 액세스 합니다.
+&nbsp;&nbsp;특정 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다.
 
 [/media/{marketplaceId}/crossMediaGroupSearch](uri-localecrossmediagroupsearch.md)
 
@@ -73,7 +73,7 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 하는 게임만이 서비
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields](uri-medialocalemetadatamediaitemtypefields.md)
 
-&nbsp;&nbsp;액세스 필드는 지정 된 mediaitemtype 및 EDS의 특정된 버전에 대 한 데이터를 예상할 수 있는 하나.
+&nbsp;&nbsp;데이터 주어진된 mediaitemtype 보고 EDS의 지정 된 버전을 기대할 수 하나 액세스 필드.
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners](uri-medialocalemetadatamediaitemtypequeryrefiners.md)
 
@@ -93,7 +93,7 @@ Xbox 360, Windows Phone 장치 또는 Xbox.com 실행 하는 게임만이 서비
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders](uri-medialocalemetadatamediaitemtypesortorders.md)
 
-&nbsp;&nbsp;사용 가능한 액세스 정렬 순서는 지정 된 mediaitem 형식과 EDS의 특정된 버전에 대 한 합니다.
+&nbsp;&nbsp;사용 가능한 액세스 주문 주어진된 mediaitem 형식과 EDS의 지정 된 버전에 대 한 정렬합니다.
 
 [/media/{marketplaceId}/singleMediaGroupSearch](uri-medialocalesinglemediagroupsearch.md)
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 938a653c591bae1787f5a5cbc5d074f361295d96
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5160497"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396213"
 ---
 # <a name="mediarequest-json"></a>MediaRequest(JSON)
  
@@ -25,12 +25,12 @@ ms.locfileid: "5160497"
  
 ## <a name="mediarequest"></a>MediaRequest
  
-MediaRequest 개체에는 다음과 같이 지정 합니다.
+MediaRequest 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | id| string| Bing 카탈로그 또는 공급자 카탈로그에서 사용 되는 미디어의 식별자입니다.| 
-| idType| string| <b>Id</b>를 해석 하는 방법입니다. 가능한 값 "bing" 및 "공급자" 포함 됩니다.| 
+| idType| string| <b>Id</b>를 해석 하는 방법입니다. 가능한 값에는 "bing" 및 "공급자" 포함 됩니다.| 
   
 <a id="ID4E2B"></a>
 

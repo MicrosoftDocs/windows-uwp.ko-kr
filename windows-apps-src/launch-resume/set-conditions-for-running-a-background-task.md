@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5156875"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408880"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>백그라운드 작업 실행 조건 설정
 
@@ -31,11 +31,11 @@ ms.locfileid: "5156875"
 
 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.
 
-경우에 따라 백그라운드 작업을 완료 하려면 백그라운드 작업에 대 한 충족 하기 위한 특정 조건 필요 합니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)에 지정된 조건을 하나 이상 지정할 수 있습니다. 트리거가 발생 했음을 조건을 확인 됩니다. 백그라운드 작업은 대기 다음, 되지만 모든 필요한 조건이 충족 될 때까지 실행 되지 않습니다.
+경우에 따라 백그라운드 작업에는 특정 한 조건을 충족 성공 하려면 백그라운드 작업에 대 한 필요 합니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)에 지정된 조건을 하나 이상 지정할 수 있습니다. 트리거가 발생 된 후 조건을 확인 됩니다. 백그라운드 작업은 대기 다음 되지만 모든 필요한 조건이 충족 될 때까지 실행 되지 않습니다.
 
 백그라운드 작업에 조건을 설정 하면 작업이 불필요 하 게 실행 하지 못하도록 하 여 배터리 사용 시간과 CPU 저장 합니다. 예를 들어 백그라운드 작업이 타이머에 따라 실행되고 인터넷 연결이 필요한 경우 작업을 등록하기 전에 **InternetAvailable** 조건을 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에 추가합니다. 그러면 타이머가 경과*되고* 인터넷을 사용할 수 있을 때 백그라운드 작업만 실행하여 작업에서 시스템 리소스와 배터리를 불필요하게 사용하는 것을 방지할 수 있습니다.
 
-동일한 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에서 **AddCondition** 을 여러 번 호출 하 여 여러 조건을 결합할 수 이기도 합니다. **UserPresent** 및 **UserNotPresent**와 같은 충돌하는 조건을 추가하지 않도록 주의하세요.
+동일한 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에서 **AddCondition** 을 여러 번 호출 하 여 여러 조건을 결합할도 가능 합니다. **UserPresent** 및 **UserNotPresent**와 같은 충돌하는 조건을 추가하지 않도록 주의하세요.
 
 ## <a name="create-a-systemcondition-object"></a>SystemCondition 개체 만들기
 
@@ -80,7 +80,7 @@ taskBuilder->AddCondition(internetCondition);
 
 ## <a name="register-your-background-task"></a>백그라운드 작업 등록
 
-[**등록**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 사용 하 여 백그라운드 작업을 등록할 수는 이제 하 고 지정 된 조건이 충족 될 때까지 백그라운드 작업이 시작 되지 않습니다.
+[**등록**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 사용 하 여 백그라운드 작업을 등록할 수는 이제 및 백그라운드 작업에는 지정 된 조건이 충족 될 때까지 시작 되지 않습니다.
 
 다음 코드는 작업을 등록하고 결과 BackgroundTaskRegistration 개체를 저장합니다.
 
@@ -111,7 +111,7 @@ BackgroundTaskRegistration ^ task = taskBuilder->Register();
 > [!NOTE]
 > 백그라운드 작업에 충돌 하는 조건을 추가할 필요가 주의 해야 합니다.
 
-다음 조각은 만들기 및 백그라운드 작업을 등록의 컨텍스트에서 여러 조건을 보여 줍니다.
+다음 코드 조각은 만들기 및 등록 된 백그라운드 작업의 컨텍스트에서 여러 조건을 보여 줍니다.
 
 ```csharp
 // Set up the background task.
@@ -182,7 +182,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 필요한 경우에 실행 하지 않는 때만 실행 되도록 백그라운드 작업에 대 한 조건을 선택 합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+> 가 필요 하 고 경우에 실행 하지 않는 경우에 실행 되도록 백그라운드 작업에 대 한 조건을 선택 합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

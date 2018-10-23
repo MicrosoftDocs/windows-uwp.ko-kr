@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: e98abcb9ab8738291efc40d5148b021ea95110fa
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5160115"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396610"
 ---
-# <a name="storing-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에서 JSON blob 저장
+# <a name="storing-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에 JSON blob 저장
 
-1.  *PUT* 메서드를 사용 하 여 타이틀 저장소에 데이터를 보내도록 요청을 보냅니다.
+1.  *PUT* 메서드를 사용 하 여 타이틀 저장소에 데이터를 보냅니다 요청을 보냅니다.
 
         PUT https://titlestorage.xboxlive.com/json/users/xuid(1245111)/scids/{scid}/data/{pathAndFileName},json
         Content-Type: application/octet-stream
@@ -30,9 +30,9 @@ ms.locfileid: "5160115"
 
 
 
--   사용자가 업데이트를 세션에 있어야 합니다.
+-   사용자는 업데이트를 세션에 있어야 합니다.
 
--   STSTokenString는 편의 위해 자리 및 인증 요청으로 반환 하는 토큰으로 대체 되어야 합니다.
+-   STSTokenString 편의 위해 자리 표시자 및 인증 요청으로 반환 하는 토큰으로 대체 되어야 합니다.
 
 2.  JSON 개체를 보냅니다.
 

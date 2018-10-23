@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e6a654897efba1fa66350abaddbacf9791bbbcc
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5163853"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407508"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>사용자의 구독 청구 상태 변경
 
@@ -120,7 +120,7 @@ Host: https://purchase.mp.microsoft.com
 | autoRenew | 부울 |  현재 구독 기간이 종료되면 구독을 자동으로 갱신할 것인지 여부를 나타냅니다.   |
 | beneficiary | 문자열 |  이 구독과 연결된 권한의 수취인 ID입니다.   |
 | expirationTime | 문자열 | 구독이 만료되는 날짜 및 시간이며, ISO 8601 형식입니다. 이 필드는 구독이 특정 상태일 때만 사용할 수 있습니다. 만료 시간은 일반적으로 현재 상태가 만료되는 시간을 나타냅니다. 예를 들어 활성 구독의 경우 만료 날짜는 다음 자동 갱신이 이루어지는 시간을 나타냅니다.    |
-| expirationTimeWithGrace | string | 날짜 및 시간을 ISO 8601 형식에서 유예 기간을 포함 하 여 구독 만료 됩니다. 이 값 때 사용자가 액세스할 수 없게 됩니다 구독에 구독에 자동으로 갱신 하는 데 실패 한 것을 나타냅니다.    |
+| expirationTimeWithGrace | string | 날짜 및 유예 기간을 포함 하 여 ISO 8601 형식에서 구독이 만료 되는 시간입니다. 이 값 때 통해 사용자 구독에 자동으로 갱신 하는 데 실패 한 구독에 대 한 액세스를 손실 됩니다.    |
 | id | 문자열 |  구독의 ID입니다. 이 값을 사용하여 [change the billing state of a subscription for a user](change-the-billing-state-of-a-subscription-for-a-user.md) 메서드를 호출할 때 수정할 구독을 나타냅니다.    |
 | isTrial | 부울 |  구독이 평가판인지 여부를 나타냅니다.     |
 | lastModified | 문자열 |  구독이 마지막으로 수정된 날짜 및 시간이며, ISO 8601 형식입니다.      |

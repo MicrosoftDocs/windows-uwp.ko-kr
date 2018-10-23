@@ -10,18 +10,18 @@ ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, uwp, windows 양식, wpf
 ms.localizationpriority: medium
 ms.openlocfilehash: b9757466502283c673c7b2106b4a7775be412faf
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167933"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405013"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>데스크톱 응용 프로그램의 UWP 컨트롤
 
 > [!NOTE]
 > Api 및이 문서에서 설명 하는 컨트롤은 현재 개발자 미리 보기를 사용할 수 있습니다. 직접 사용해 프로토타입 코드 자체에서 이제 하는 것이 좋습니다, 있지만 사용 하는 이러한 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이러한 Api 및 컨트롤 성숙 안정화 나중에 Windows 릴리스를 계속 합니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.
 
-이제 Windows 10을 사용 하면 모양, 느낌 및 UWP 컨트롤을 통해만 사용할 수 있는 최신 Windows 10 UI 기능을 사용 하 여 기존 데스크톱 응용 프로그램의 기능을 향상 시킬 수 있도록 비 UWP 데스크톱 응용 프로그램에서 UWP 컨트롤을 사용할 수 있습니다. 즉, [Windows Ink](../design/input/pen-and-stylus-interactions.md) 기존 WPF, Windows Forms, 및 c + + Win32 응용 프로그램의 [흐름 디자인 시스템](../design/fluent-design-system/index.md) 을 지 원하는 컨트롤 등 UWP 기능을 사용할 수 있습니다. 이 개발자 시나리오는 *XAML 제도*라고도 합니다.
+이제 Windows 10을 사용 하면 모양, 느낌 및 UWP 컨트롤을 통해만 사용할 수 있는 최신 Windows 10 UI 기능을 사용 하 여 기존 데스크톱 응용 프로그램의 기능을 향상 시킬 수 있도록 비 UWP 데스크톱 응용 프로그램에서 UWP 컨트롤을 사용할 수 있습니다. 즉, [Windows Ink](../design/input/pen-and-stylus-interactions.md) 기존 WPF, Windows Forms 및 c + + Win32 응용 프로그램의 [흐름 디자인 시스템](../design/fluent-design-system/index.md) 을 지 원하는 컨트롤 등의 UWP 기능을 사용할 수 있습니다. 이 개발자 시나리오는 *XAML 제도*라고도 합니다.
 
 WPF, Windows Forms, 및 c + + Win32 응용 프로그램을 사용 하는 프레임 워크 또는 기술을 따라에서 XAML 제도 사용 하 여 여러 가지 방법으로 제공 합니다.
 
@@ -43,7 +43,7 @@ WPF 및 Windows Forms 응용 프로그램에서 [Windows 커뮤니티 도구 키
 
 ## <a name="host-controls"></a>호스트 컨트롤
 
-사용 가능한 래핑된 컨트롤 덮인 것 이외의 시나리오의 경우 WPF 및 Windows Forms 응용 프로그램에서 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/uwpcommunitytoolkit/) [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용할 수도 있습니다. 이 컨트롤 [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)를 포함 하 여 사용자 지정 사용자 컨트롤 뿐만 아니라 Windows SDK에서 제공 하는 모든 UWP 컨트롤에서에서 파생 되는 모든 UWP 컨트롤을 호스트할 수 있습니다. 이 컨트롤은 Windows 10 Insider Preview SDK 빌드 17709 이상 릴리스를 지원합니다.
+사용 가능한 래핑된 컨트롤 덮인 것 이외의 시나리오의 경우 WPF 및 Windows Forms 응용 프로그램에서 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/uwpcommunitytoolkit/) [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용할 수도 있습니다. 이 컨트롤에서 [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), 사용자 지정 사용자 컨트롤 뿐 아니라 Windows SDK에서 제공 하는 모든 UWP 컨트롤을 포함 하 여 파생 된 모든 UWP 컨트롤을 호스트할 수 있습니다. 이 컨트롤은 Windows 10 Insider Preview SDK 빌드 17709 이상 릴리스를 지원합니다.
 
 > [!NOTE]
 > 호스트 컨트롤은 c + + Win32 데스크톱 응용 프로그램에 사용할 수 없습니다. 이러한 유형의 응용 프로그램 [UWP XAML 호스팅 API를](#uwp-xaml-hosting-api)사용 해야 합니다.
@@ -53,7 +53,7 @@ WPF 및 Windows Forms 응용 프로그램에서 [Windows 커뮤니티 도구 키
 C + + Win32 응용 프로그램에 있는 경우 호스트는 연결 된 창 핸들 (HWND)에 있는 응용 프로그램의 UI 요소 내에 [**Windows.UI.Xaml.UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) 에서 파생 되는 모든 UWP 컨트롤에 *UWP XAML 호스팅 API를* 사용할 수 있습니다. 이 API는 Windows 10 Insider Preview SDK 빌드 17709에서에서 도입 되었습니다. 이 API를 사용 하는 방법에 대 한 자세한 내용은 [호스팅 API는 데스크톱 응용 프로그램에서 XAML을 사용 하 여](using-the-xaml-hosting-api.md)참조 하세요.
 
 > [!NOTE]
-> C + + Win32 데스크톱 응용 프로그램 호스트 UWP 컨트롤을 호스팅 API UWP XAML을 사용 해야 합니다. 래핑된 컨트롤과 호스트는 이러한 유형의 응용 프로그램에 대 한 사용할 수 없습니다. WPF 및 Windows Forms 응용 프로그램에 대 한 권장 사용 하는 래핑된 컨트롤 및 호스트 컨트롤 UWP XAML 대신 Windows 커뮤니티 도구 키트에서 호스팅 API. 이러한 컨트롤 호스팅 API 내부적으로 UWP XAML을 사용 하 고 간단한 개발 환경을 제공 합니다. 그러나 선택 하는 경우 WPF 및 Windows Forms 응용 프로그램에서 직접 API를 호스팅하는 UWP XAML을 사용할 수 있습니다.
+> C + + Win32 데스크톱 응용 프로그램 호스트 UWP 컨트롤을 호스팅 API UWP XAML을 사용 해야 합니다. 래핑된 컨트롤과 호스트는 이러한 유형의 응용 프로그램에 대 한 사용할 수 없습니다. WPF 및 Windows Forms 응용 프로그램에 대 한 권장 사용 하는 래핑된 컨트롤 및 호스트 컨트롤 UWP XAML 대신 Windows 커뮤니티 도구 키트에서 호스팅 API. 이러한 컨트롤 호스팅 API 내부적으로 UWP XAML을 사용 하 고 간단한 개발 환경을 제공 합니다. 그러나 선택 하는 경우 WPF 및 Windows Forms 응용 프로그램에서 직접 호스팅 API UWP XAML을 사용할 수 있습니다.
 
 ## <a name="architecture-overview"></a>아키텍처 개요
 

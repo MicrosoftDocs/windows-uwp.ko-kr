@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5168578"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5407191"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램의 백그라운드 작업
 
@@ -33,9 +33,9 @@ ms.locfileid: "5168578"
 
 ## <a name="file-system"></a>파일 시스템
 
-앱 상태를 포함 하기 위해 변경 AppData에 응용 프로그램이 캡처됩니다. 만들기, 삭제 및 업데이트를 포함하여 AppData 폴더(예: *C:\Users\user_name\AppData*)에 대한 사용자의 모든 쓰기가 사용자별/앱별 개인 위치에 기록 중 복사됩니다. 이 착각할 패키지 된 응용 프로그램이 실제로 개인 복사본을 수정 하는 경우 실제 AppData를 편집 합니다. 이 방식으로 쓰기를 리디렉션하면 시스템에서는 앱에서 수정한 모든 파일 내용을 추적할 수 있습니다. 이렇게 하면 응용 프로그램 제거 될 때 해당 파일을 정리 하려는 시스템을 사용자에 대 한 환경이 rot"system"를 줄이고 더 나은 응용 프로그램 제거를 제공 합니다.
+앱 상태를 포함 하기 위해 변경 AppData에 응용 프로그램이 캡처됩니다. 만들기, 삭제 및 업데이트를 포함하여 AppData 폴더(예: *C:\Users\user_name\AppData*)에 대한 사용자의 모든 쓰기가 사용자별/앱별 개인 위치에 기록 중 복사됩니다. 이 착각할 패키지 된 응용 프로그램은 실제로 개인 복사본을 수정 하는 경우 실제 AppData를 편집 합니다. 이 방식으로 쓰기를 리디렉션하면 시스템에서는 앱에서 수정한 모든 파일 내용을 추적할 수 있습니다. 이렇게 하면 응용 프로그램 제거 될 때 해당 파일을 정리 하려는 시스템을 사용자에 대 한 환경이 rot"system"를 줄이고 더 나은 응용 프로그램 제거를 제공 합니다.
 
-AppData 리디렉션 외에도 Windows의 잘 알려진 폴더 (System32, Program Files (x86) 등)는 앱 패키지의 해당 디렉터리와 동적으로 병합 됩니다. 각 패키지에는 루트에 "VFS"라는 이름의 폴더가 포함되어 있습니다. VFS 디렉터리에 있는 파일이나 디렉터리의 읽기 권한은 런타임 시 각각 해당하는 네이티브 권한으로 병합됩니다. 예를 들어, 응용 프로그램이 앱 패키지의 일부로 *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* 포함 될 수 있지만 *C:\Windows\System32\vc10.dll*에 설치 파일에 표시 합니다.  이렇게 하면 패키지가 없는 위치에서도 파일이 있을 수 있다고 예상하는 데스크톱 응용 프로그램과 호환성을 유지합니다.
+AppData 리디렉션 외에도 Windows의 잘 알려진 폴더 (System32, Program Files (x86) 등)는 앱 패키지의 해당 디렉터리와 동적으로 병합 됩니다. 각 패키지에는 루트에 "VFS"라는 이름의 폴더가 포함되어 있습니다. VFS 디렉터리에 있는 파일이나 디렉터리의 읽기 권한은 런타임 시 각각 해당하는 네이티브 권한으로 병합됩니다. 예를 들어, 응용 프로그램의 앱 패키지의 일부로 *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* 포함 될 수 있지만 *C:\Windows\System32\vc10.dll*에 설치 파일에 표시 합니다.  이렇게 하면 패키지가 없는 위치에서도 파일이 있을 수 있다고 예상하는 데스크톱 응용 프로그램과 호환성을 유지합니다.
 
 앱 패키지에서 파일/폴더에 대한 쓰기는 허용되지 않습니다. 패키지에 포함되지 않은 파일과 폴더에 대한 쓰기는 브리지에서 무시되며 사용자에게 권한이 있어야만 허용됩니다.
 
@@ -75,11 +75,11 @@ FOLDERID_System\spool | AppVSystem32Spool | x86, amd64
 
 앱 패키지에는 registry.dat 파일이 포함되어 있어 실제 레지스트리의 *HKLM\Software*와 논리적으로 같은 역할을 합니다. 런타임에 이 가상 레지스트리는 이 하이브의 콘텐츠를 네이티브 시스템 하이브로 병합하여 두 하이브에 대해 단일 보기를 제공합니다. 예를 들어, registry.dat에 단일 키 "Foo"가 포함되어 있으면 런타임에 *HKLM\Software*를 읽으면 모든 네이티브 시스템 키뿐 아니라 “Foo”도 포함되어 표시됩니다.
 
-*HKLM\Software*의 키만 패키지에 포함됩니다. *HKCU* 또는 레지스트리의 다른 부분에 있는 키는 포함되지 않습니다. 패키지에서 키 또는 값에 대한 기록은 허용되지 않습니다. 씁니다 키 또는 값에는 패키지의 일부 사용자에 게 권한이 있어야만 허용 됩니다.
+*HKLM\Software*의 키만 패키지에 포함됩니다. *HKCU* 또는 레지스트리의 다른 부분에 있는 키는 포함되지 않습니다. 패키지에서 키 또는 값에 대한 기록은 허용되지 않습니다. 씁니다 키 또는 값에 패키지의 일부 사용자에 게 권한이 있어야만 허용 됩니다.
 
 HKCU에서 모든 쓰기는 사용자별/앱별 위치에 기록 중 복사됩니다. 일반적으로 설치 제거 프로그램에서는 *HKEY_CURRENT_USER*를 정리할 수 없습니다. 로그아웃된 사용자의 레지스트리 데이터는 마운트되지 않고 사용할 수 없습니다.
 
-모든 쓰기는 패키지 업그레이드 중 유지 하 고 응용 프로그램을 완전히 제거 될 때만 삭제 됩니다.
+모든 쓰기 패키지 업그레이드 중에 유지 되며 응용 프로그램을 완전히 제거 될 때만 삭제 됩니다.
 
 ### <a name="common-operations"></a>일반 작업
 
@@ -94,7 +94,7 @@ HKCU에서 쓰기 | 사용자별/앱별 개인 위치에 기록 중 복사됩니
 
 ## <a name="uninstallation"></a>제거
 
-사용자가 패키지 제거 되 면 모든 파일 및 폴더 *C:\Program Files\WindowsApps\package_name* 아래에 있는 제거 됩니다, 패키징 과정에서 캡처된 레지스트리 또는 AppData로 리디렉션된 쓰기 뿐만 아니라.
+사용자가 패키지 제거 되 면 모든 파일 및 폴더 *C:\Program Files\WindowsApps\package_name* 아래에 있는 제거 됩니다, 패키지를 만드는 동안 캡처된 레지스트리 또는 AppData로 리디렉션된 쓰기 뿐만 아니라.
 
 ## <a name="next-steps"></a>다음 단계
 

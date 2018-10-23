@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a4780c92fc16adb697783ecee50d36523ff92998
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5158364"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5399639"
 ---
 # <a name="usersxuidxuidhistorytitles"></a>/users/xuid({xuid})/history/titles
  
-이 유니버설 리소스 식별자 (URI)는 사용자의 도전 과제 관련 제목 기록에 액세스할 수 있습니다.
+이 유니버설 리소스 식별자 (URI) 사용자의 관련 도전 과제 타이틀 기록에 액세스할 수 있습니다.
  
 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
  
@@ -40,7 +40,7 @@ ms.locfileid: "5158364"
 
 [GET](uri-titlehistoryusersxuidhistorytitlesgetv2.md)
 
-&nbsp;&nbsp;사용자가 잠금 해제 하거나 진행률에서 수행 해당 도전 과제 제목의 목록을 가져옵니다. 이 API는 사용자의 전체 기록 제목 재생 또는 실행을 반환 하지 않습니다.
+&nbsp;&nbsp;타이틀을 사용자가 잠금 해제 하거나 해당 도전 과제에 진행 될의 목록을 가져옵니다. 이 API는 사용자의 전체 기록 재생 또는 실행 타이틀을 반환 하지 않습니다.
  
 <a id="ID4EKC"></a>
 

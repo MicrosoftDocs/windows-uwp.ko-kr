@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e775e5e7033b5ddf53ed4f05c9965731c5d70a3
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5162987"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5398667"
 ---
 # <a name="usersxuidxuidlistspinslistnamecontainsitems"></a>/users/xuid(xuid)/lists/PINS/{listname}/ContainsItems
-전체 목록을 검색 하지 않고 일련의 항목 (지정 된 itemId) 목록에 포함 되어 있는지 여부를 결정 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
+전체 목록을 검색 하지 않고 일련의 항목 (itemId 지정한) 목록에 포함 되어 있는지 여부를 결정 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -31,7 +31,7 @@ ms.locfileid: "5162987"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | XUID| string| 사용자의 XUID 합니다.| 
-| listname| string| 조작 하는 목록의 이름입니다.| 
+| listname| string| 조작 목록의 이름입니다.| 
   
 <a id="ID4E5B"></a>
 
@@ -40,7 +40,7 @@ ms.locfileid: "5162987"
 
 [POST](uri-usersxuidlistspinslistnamecontainsitemspost.md)
 
-&nbsp;&nbsp;목록 전체 목록을 검색 하지 않고 (지정 된 itemId) 항목 집합이 포함 되어 있는지 여부를 결정 합니다.
+&nbsp;&nbsp;전체 목록을 검색 하지 않고 목록에 항목 (itemId 지정한) 집합이 포함 되어 있는지 여부를 결정 합니다.
  
 <a id="ID4EIC"></a>
 

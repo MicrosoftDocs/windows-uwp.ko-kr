@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5169966"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5408422"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -53,7 +53,7 @@ Windows 10 Mobile 용 Microsoft 에뮬레이터는 Visual Studio 2015 이상 필
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터 실행
+## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터를 실행 합니다.
 
 ### <a name="installing"></a>설치
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
@@ -68,7 +68,7 @@ Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이�
 
 ### <a name="running"></a>Running
 
-에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 하기만 하면 됩니다.
+에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 하는 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 합니다.
 
 ![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
 

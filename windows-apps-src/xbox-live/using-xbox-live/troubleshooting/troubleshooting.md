@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c61b5d74fbcd5487b11b71067b0558c67e5590e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5168564"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396990"
 ---
 # <a name="troubleshooting-xbox-live"></a>Xbox Live 문제 해결
 

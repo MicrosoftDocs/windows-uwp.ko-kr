@@ -12,20 +12,20 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f13edfbe5858a5fc3c4f24d22b31eb25f8386e25
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5166757"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5399514"
 ---
 # <a name="requirement-json"></a>Requirement(JSON)
-도전 과제 및 충족 하는 방향으로 얼마나 사용자가 잠금 해제 조건입니다. 
+도전 과제 및 거리에 맞춰 사용자가 잠금 해제 조건입니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="requirement"></a>요구 사항
  
-요구 사항 개체에는 다음과 같이 지정 합니다.
+요구 사항이 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

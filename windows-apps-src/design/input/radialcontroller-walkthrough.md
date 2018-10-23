@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c7dc6436e1a233a6b0a74a787b5c30de47899eff
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5169540"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5409691"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 
@@ -62,7 +62,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 6. Windows 디바이스로 돌아가서 **Bluetooth 또는 기타 디바이스 추가**를 선택합니다.
 7. **디바이스 추가** 대화 상자를 선택하고 **Bluetooth** > **Surface Dial**을 선택합니다. 이제 Surface Dial이 연결되어 **Bluetooth 및 기타 디바이스** 설정 페이지의 **마우스, 키보드 및 펜**의 디바이스 목록에 추가됩니다.
 8. 다이얼을 몇 초 동안 길게 눌러 기본 제공 메뉴가 표시되는지 테스트합니다.
-9. 메뉴 (Dial 해야 진동도) 화면에 표시 되지 않으면 이동 Bluetooth 설정으로 장치를 제거 하 고 장치를 다시 연결을 시도 합니다.
+9. 메뉴 (Dial 해야 진동도) 화면에 표시 되지 않으면 장치를 제거한 장치를 다시 연결 Bluetooth 설정으로 이동 합니다.
 
 > [!NOTE]
 > 휠 디바이스는 **휠** 설정을 통해 구성할 수 있습니다.

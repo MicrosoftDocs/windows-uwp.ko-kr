@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5159495"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5404874"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
@@ -221,7 +221,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 앱이 디버그 빌드가 아닌 릴리스 빌드로 컴파일된 것을 확인하여 수정할 수 있습니다. 
 
 > [!NOTE]
-> [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다. UWP 앱에 대 한 API 허용된 되지 않은 있는 API를 식별 하기 위해 오류 메시지를 검토 합니다. 
+> [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다. 리뷰 API를 식별 하기 위해 오류 메시지를 표시 하는 UWP 앱에 대 한 허용 된 API 아닙니다. 
 
 > [!NOTE]
 > UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 자세한 내용은 [UWP 앱의 Windows Api 대안](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) 을 참조 하세요.

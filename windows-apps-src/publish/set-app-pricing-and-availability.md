@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 가격, 사용 가능, 검색 가능, 무료 평가판, 평가판들, 평가판, 앱들, 출시 날짜
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5168789"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406264"
 ---
 # <a name="set-app-pricing-and-availability"></a>앱 가격 책정 및 가용성 설정
 

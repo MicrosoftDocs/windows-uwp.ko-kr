@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e1ed654e4dc1c0f1233ecdedf5d4af66da868bff
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5164859"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396622"
 ---
 # <a name="paging-parameters"></a>페이징 매개 변수
  
-일부 Xbox Live 서비스 Uri는 JavaScript 개체 Notation (JSON) 개체의 컬렉션을 반환 합니다. URI에 연결 된 쿼리 문자열의 일부로 페이징 매개 변수를 지정 하 여 이러한 컬렉션을 통해 페이징 될 수 있습니다. 페이징 매개 변수의 전체 목록은 다음과 같습니다. 페이징 매개 변수를 사용할 수 있는 모든 Uri는이 페이지의 아래쪽에 연결 됩니다.
+일부 Xbox Live 서비스 Uri JavaScript Object Notation (JSON) 개체의 컬렉션을 반환 합니다. URI에 연결 된 쿼리 문자열의 일부로 페이징 매개 변수를 지정 하 여 이러한 컬렉션을 통해 페이징 될 수 있습니다. 페이징 매개 변수의 전체 목록은 다음과 같습니다. 페이징 매개 변수를 사용할 수 있는 모든 Uri는이 페이지의 아래쪽에 연결 됩니다.
  
 <a id="ID4E2"></a>
 
@@ -30,8 +30,8 @@ ms.locfileid: "5164859"
 | 매개 변수| 필수| 유형| 설명| 
 | --- | --- | --- | --- | 
 | continuationToken| 아니요| string| 지정 된 연속 토큰에서 시작 하는 항목을 반환 합니다. | 
-| maxItems| 아니요| 32 비트 부호 있는 정수| 최대 <b>skipItems</b> <b>continuationToken</b> 항목의 범위를 반환할 수와 결합할 수 있는 컬렉션에서 반환할 항목 수입니다. 서비스 수 기본값을 제공 <b>maxItems</b> 있는 이며 <b>maxItems</b>보다 적은 반환 될 수 결과의 마지막 페이지 아직 반환 되지 않은 경우에 합니다. | 
-| skipItems| 아니요| 32 비트 부호 있는 정수| 항목 수가 지정 된 후 시작 하는 항목을 반환 합니다. 예를 들어 <b>skipItems = "3"</b> 항목을 검색 하는 시작 네 번째 항목으로 검색 합니다. | 
+| maxItems| 아니요| 32 비트 부호 있는 정수| 최대 <b>skipItems</b> <b>continuationToken</b> 항목의 범위를 반환할 수와 결합할 수 있는 컬렉션에서 반환할 항목 수입니다. 서비스 수 기본값을 제공 <b>maxItems</b> 존재 하지 <b>maxItems</b>보다 적은 반환 될 수 있는 경우 결과의 마지막 페이지 아직 반환 되지 않은 경우에 합니다. | 
+| skipItems| 아니요| 32 비트 부호 있는 정수| 지정 된 항목 수가 후 시작 하는 항목을 반환 합니다. 예를 들어 <b>skipItems = "3"</b> 항목을 검색 하는 시작 네 번째 항목으로 검색 합니다. | 
   
 <a id="ID4EDD"></a>
 

@@ -8,14 +8,14 @@ ms.date: 09/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 장치 포털
+keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5165348"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5410721"
 ---
 # <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 
@@ -52,7 +52,7 @@ ms.locfileid: "5165348"
 3. PC의 웹 브라우저에서 `http://127.0.0.1:10080`로 이동합니다.
 
 > [!IMPORTANT]
-> PC 장치를 찾을 수 없는 경우 HoloLens 디바이스의 실제 네트워크 IP 주소를 사용 하 여 시도 하지 않고 `http://127.0.0.1:10080`.
+> HoloLens 디바이스의 실제 네트워크 IP 주소를 사용 하 여 PC에 장치를 찾을 수 없는 경우 시도 하지 않고 `http://127.0.0.1:10080`.
 
 #### <a name="connect-to-an-emulator"></a>에뮬레이터에 연결 
 
