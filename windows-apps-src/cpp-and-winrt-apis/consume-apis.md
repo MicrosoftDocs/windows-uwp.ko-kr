@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: dbd657c966cac2310a1078c889ff31b8147c3a59
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397851"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5439975"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
-이 항목에서는 사용 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Api의 Windows에 포함 되 든는 제 3 자 구성 요소 공급 업체에서 구현한 또는 직접 구현 합니다.
+이 항목에 사용 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Api의 Windows에 포함 되 든는 제 3 자 구성 요소 공급 업체에서 구현한 또는 직접 구현 합니다.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>API가 Windows 네임스페이스에 있는 경우
 이는 Windows 런타임 API를 가장 흔하게 사용하는 경우입니다. 메타데이터에서 정의된 Windows 네임스페이스의 모든 형식에 대해, C++/WinRT는 C++ 친화적인 등가(*프로젝션된 형식*이라고 함)를 정의합니다. 프로젝션된 형식은 Windows 형식과 동일한 정규화된 이름을 가지지만 C++ 구문을 사용하여 C++ **winrt** 네임스페이스에 배치됩니다. 예를 들어, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri)는 C++/WinRT에 **winrt::Windows::Foundation::Uri**로 프로젝션됩니다.
@@ -180,7 +180,7 @@ MainPage::MainPage()
 사용하는 프로젝트에서 구현된 런타임 클래스의 사용에 대한 자세한 내용과 코드, 그리고 연습은 [XAML 컨트롤, C++/WinRT 속성 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>프로젝션된 형식 및 인터페이스의 인스턴스화와 반환
-다음은 프로젝션된 형식과 인터페이스가 사용하는 프로젝트에서 어떻게 보이는지 나타낸 예제입니다. 프로젝션 된 형식 (예: 한이 예제에서), 도구에서 생성 된, 이며 항목이 아니라 직접 만든 것을 기억 하세요.
+다음은 프로젝션된 형식과 인터페이스가 사용하는 프로젝트에서 어떻게 보이는지 나타낸 예제입니다. 프로젝션 된 형식 (예: 한이 예제의),이 도구 생성 및 직접 작성은 하는 것은 해야 합니다.
 
 ```cppwinrt
 struct MyRuntimeClass : MyProject::IMyRuntimeClass, impl::require<MyRuntimeClass,
@@ -222,7 +222,7 @@ using namespace winrt::Windows::Globalization::NumberFormatting;
 CurrencyFormatter currency{ L"USD" };
 ```
 
-But there may be times that you'll want to create the activation factory yourself, and then create objects from it at your convenience. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
+하지만 정품 인증 공장을 직접 만들고자 하는 경우 귀하의 편의에 따라 여기에서 개체를 만듭니다. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Globalization::NumberFormatting;

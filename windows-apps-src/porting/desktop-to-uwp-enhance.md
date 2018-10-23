@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ffe3f2a93642911da57d3dd94c09206dc7f5dc94
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5402055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5430949"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
@@ -60,8 +60,8 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 * $(VSInstallDir) Common7\IDE\VC\vcpackages
 * C:\Program (x86) 파일 <*SDK 버전*> \Windows Kits\10\UnionMetadata\ \Facade
-* C:\Program 파일 (x86) \Windows Kits\10\References\ <*SDK 버전*> \Windows.Foundation.UniversalApiContract\ <*최신 버전*>
-* C:\Program 파일 (x86) \Windows Kits\10\References\ <*SDK 버전*> \Windows.Foundation.FoundationContract\ <*최신 버전*>
+* C:\Program (x86) 파일 <*SDK 버전*> \Windows Kits\10\References\ \Windows.Foundation.UniversalApiContract\ <*최신 버전*>
+* C:\Program (x86) 파일 <*SDK 버전*> \Windows Kits\10\References\ \Windows.Foundation.FoundationContract\ <*최신 버전*>
 
 **Additional Include Directories** 대화 상자를 열어 이 디렉토리를 추가합니다. C:\Program Files (x86)\Windows Kits\10\Include\<*latest version*>\um
 
@@ -78,7 +78,7 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 :white_check_mark: **먼저 추가하고 싶은 환경을 결정합니다.**
 
-선택할 수 있는 환경이 많습니다. 예를 들어, 수익 창출 Api, 또는 응용 프로그램에 관심 하면 다른 사용자가 게시 추가한 새 사진 같이 공유 흥미로운 것이 있을 때 사용 하 여 구매 주문 흐름을 단순화할 수 있습니다.
+선택할 수 있는 환경이 많습니다. 예를 들어, 수익 창출 Api 또는 응용 프로그램에 관심 있는 흥미로운 다른 사용자가 게시 하는 새 사진 같이 공유를 사용 하 여 구매 주문 흐름을 단순화할 수 있습니다.
 
 ![알림](images/desktop-to-uwp/toast.png)
 
@@ -173,7 +173,7 @@ void UWP::ShowToast()
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Windows XP, Windows Vista, Windows 7/8 설치 기반 지원
 
-새 지점을 만들어 별도 코드 기반을 유지 하지 않고도 Windows 10 용 응용 프로그램을 현대화 할 수 있습니다.
+새 지점을 만들어 별도 코드 기반을 유지 하 고 필요 없이 Windows 10 용 응용 프로그램을 현대화 할 수 있습니다.
 
 Windows 10 사용자를 위해 별도 바이너리를 빌드하고 싶다면 조건부 컴파일을 사용합니다. 모든 Windows 사용자에게 배포할 바이너리들을 빌드하고 싶다면 런타임 검사를 사용하세요.
 
@@ -224,7 +224,7 @@ void UWP::ShowToast()
 
 ### <a name="runtime-checks"></a>런타임 검사
 
-실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램 패키지 된 응용 프로그램으로 Windows 10에서 실행 하는 응용 프로그램이 UWP Api는 사용자가 하는 경우에 호출 합니다.
+실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램 패키지 된 응용 프로그램과 Windows 10에서 실행 하는 응용 프로그램이 UWP Api는 사용자가 하는 경우에 호출 합니다.
 
 가장 쉽게 런타임 검사를 코드에 추가하는 방법은 Nuget 패키지: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/)를 설치하고, ``IsRunningAsUWP()``모든 UWP 코드 해제 메서드를 사용하는 것입니다. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 삭제
 ms.localizationpriority: medium
 ms.openlocfilehash: 436a28cc1be0c106928784086731fe078d789527
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405770"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443705"
 ---
 # <a name="delete-a-package-flight"></a>패키지 플라이트 삭제
 

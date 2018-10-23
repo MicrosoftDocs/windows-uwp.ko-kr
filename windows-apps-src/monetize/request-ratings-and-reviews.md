@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 평점, 리뷰
 ms.localizationpriority: medium
 ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397985"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431412"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>앱에 대한 평점 및 리뷰 요청
 
@@ -25,7 +25,7 @@ ms.locfileid: "5397985"
 평점 및 리뷰 데이터를 분석할 준비가 되면 Windows 개발자 센터 대시보드에서 데이터를 볼 수 있거나 Microsoft Store 분석 API를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 > [!IMPORTANT]
-> 앱 내 평점 함수를 추가할 때 모든 리뷰 별 평점 선택한 관계 없이 스토어의 등급 메커니즘으로 사용자를 보내야 합니다. 사용자의 피드백 또는 의견을 수집할 경우 관련이 없는 앱 평점 또는 리뷰 스토어에서 직접 앱 개발자에 게 전송 되는 명확한 이어야 합니다. 개발자 준수 [Fraudulent 또는 악의적인 활동에](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities)관한 자세한 내용은 참조 하세요.
+> 앱 내 평점 함수를 추가할 때 모든 리뷰 별 평점 선택한 상관 없이 저장소의 등급 메커니즘에 사용자를 보내야 합니다. 사용자 로부터 피드백 또는 의견을 수집 하는 경우에 관련이 없는 앱 평점 또는 리뷰를 스토어에서 앱 개발자에 게 직접 전송 되는 명확한 이어야 합니다. 개발자 준수 [Fraudulent 또는 악의적인 활동에](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities)관한 자세한 내용은 참조 하세요.
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>앱에서 평점 및 리뷰 대화 상자 표시
 
