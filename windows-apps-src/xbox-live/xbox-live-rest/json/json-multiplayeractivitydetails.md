@@ -12,33 +12,33 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4de72a24c34af1a5f145c44b2acfa11a7bd07f95
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5167290"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5408915"
 ---
 # <a name="multiplayeractivitydetails-json"></a>MultiplayerActivityDetails(JSON)
 **Microsoft.Xbox.Services.Multiplayer.MultiplayerActivityDetails**나타내는 JSON 개체입니다. 
 
 > [!NOTE] 
-> 이 개체는 2015 멀티 플레이어에서 구현 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
+> 이 개체는 2015 멀티 플레이어에 의해 구현 및 나중 및 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
 
  
 <a id="ID4ES"></a>
 
   
  
-MultiplayerActivityDetails JSON 개체에는 다음과 같이 지정 합니다.
+MultiplayerActivityDetails JSON 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | --- | 
 | SessionReference| MultiplayerSessionReference| 세션에 대 한 개인 식별 정보를 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionReference</b> 개체입니다.| 
-| HandleId| 64 비트 부호 없는 정수| 활동과 해당 핸들 ID입니다.| 
+| HandleId| 64 비트 부호 없는 정수| 해당 활동을 해당 핸들 ID입니다.| 
 | TitleId| 32 비트 부호 없는 정수| 해당 활동에 가입 하기 위해 시작 해야 하는 제목 ID입니다.| 
 | 표시 여부| MultiplayerSessionVisibility| 세션의 표시 상태를 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionVisibility</b> 값입니다.| 
-| JoinRestriction| MultiplayerSessionJoinRestriction| 세션에 대 한 가입 제한 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionJoinRestriction</b> 값입니다. 이 제한 사항은 표시 여부 필드 "열기"로 설정 된 경우 적용 됩니다.| 
-| 닫힘| 부울 값| 세션 일시적으로 닫힌 경우에 참가 한 false 그렇지 않은 경우 true입니다.| 
+| JoinRestriction| MultiplayerSessionJoinRestriction| 조인 제한 세션을 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionJoinRestriction</b> 값입니다. 이 제한 사항은 표시 여부 필드 "열기"로 설정 된 경우 적용 됩니다.| 
+| 닫힘| 부울 값| 세션이 false 및 결합 하 고, 그렇지 않으면 닫히면 일시적으로 true입니다.| 
 | OwnerXboxUserId| 64 비트 부호 없는 정수| 해당 활동을 소유 하는 멤버의 Xbox 사용자 ID입니다.| 
 | MaxMembersCount| 32 비트 부호 없는 정수| 총 슬롯의 수입니다.| 
 | MembersCount| 32 비트 부호 없는 정수| 취소가 슬롯의 수입니다.| 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a2c8ca1cdac0b6a2ad2f981d2a57d926cf4e1f5
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5167650"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5409489"
 ---
 # <a name="leaderboards-uris"></a>순위표 URI
 

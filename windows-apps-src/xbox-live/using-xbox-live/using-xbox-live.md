@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f73133dc1bd78d3d7f714ac12b9069def093086
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5170731"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5400254"
 ---
 # <a name="using-xbox-live"></a>Xbox Live를 사용 하 여
 
@@ -31,4 +31,4 @@ ms.locfileid: "5170731"
 
 [Xbox Live 문제 해결](troubleshooting/troubleshooting.md)
 
-[XDK에서 UWP로 Xbox Live 코드 포팅](porting-xbox-live-code-from-xdk-to-uwp.md)
+[Xbox Live 코드 XDK에서 UWP로 포팅](porting-xbox-live-code-from-xdk-to-uwp.md)

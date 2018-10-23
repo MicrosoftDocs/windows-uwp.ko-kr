@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d183aeab14103ed0d6730571029076d85e7b004a
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5170152"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5402866"
 ---
 # <a name="usersbatchprofilesettings"></a>/users/batch/profile/settings
-사용자 또는 사용자의 프로필에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
+사용자나 사용자의 프로필에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
   
 <a id="ID4EV"></a>
 

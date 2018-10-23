@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 341baca193d9ac8bf3a2599cd9ad77312729a89d
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5159795"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5400338"
 ---
 # <a name="usersxuidxuidlistspinslistnameremoveitems"></a>/users/xuid(xuid)/lists/PINS/{listname}/RemoveItems
 목록에서 항목을 제거합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
@@ -31,7 +31,7 @@ ms.locfileid: "5159795"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | XUID| string| 사용자의 XUID 합니다.| 
-| listname| string| 조작 하는 목록의 이름입니다.| 
+| listname| string| 조작 목록의 이름입니다.| 
   
 <a id="ID4E5B"></a>
 

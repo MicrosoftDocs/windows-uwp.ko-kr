@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d1bf7735fabbc08f723dbaf77a020b205f66584d
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5162304"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5400614"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatename"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}
 세션 템플릿 이름으로 이루어진 집합을 검색할 GET 작업을 지원 합니다. 
@@ -33,7 +33,7 @@ sessiondirectory.xboxlive.com
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | 서비스 안내| GUID| 서비스 구성 식별자 (서비스 안내)입니다. 파트 1 세션의 id.| 
-| sessionTemplateName| string| 세션 템플릿 현재 인스턴스의 이름입니다. 파트 2 세션의 id. | 
+| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션의 id. | 
   
 <a id="ID4EYB"></a>
 

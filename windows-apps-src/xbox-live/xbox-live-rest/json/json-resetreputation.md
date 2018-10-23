@@ -12,20 +12,20 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 494f4a8977a298265c264b050d6a222bd2bdd7d2
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5156440"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5409455"
 ---
 # <a name="resetreputation-json"></a>ResetReputation(JSON)
-사용자의 기존 점수를 변경 해야 하는 새 기본 평판 점수를 포함 되어 있습니다. 
+사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="resetreputation"></a>ResetReputation
  
-ResetReputation 개체에는 다음과 같이 지정 합니다.
+ResetReputation 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

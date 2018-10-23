@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: fbb8a823581f357e42cd13bb1331808584301f5e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5166839"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5407380"
 ---
 # <a name="handlesquery"></a>/handles/query
 세션 핸들에 대 한 쿼리를 만드는 게시 작업을 지원 합니다. 
@@ -34,7 +34,7 @@ sessiondirectory.xboxlive.com
 
  
 ## <a name="remarks"></a>설명
-이 URI 처리에 대 한 쿼리를 지원합니다. 세션 쿼리 문자열 및 일괄 처리 쿼리는 달리 핸들 쿼리 쿼리 프로세서 스타일을 사용 합니다. 최대 100 핸들 지원 됩니다.  
+이 URI 처리에 대 한 쿼리를 지원합니다. 쿼리 문자열 및 일괄 처리 되는 세션 쿼리 핸들 쿼리 쿼리 프로세서 스타일을 사용 합니다. 최대 100 핸들 지원 됩니다.  
 <a id="ID4E2"></a>
 
  

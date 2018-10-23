@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 존재 여부, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: bd39074e67c58e20154083be66211dbefc9f782d
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5163300"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5410024"
 ---
 # <a name="programming-rich-presence"></a>다양 한 상태 프로그래밍
 
-다양 한 상태는 다른 플레이어를 플레이어의 현재 활동을 광고에 대 한 기능을 제공 합니다. 자세한 내용은 참조 [다양 한 상태 문자열: 개요](rich-presence-strings-overview.md).
+다양 한 상태는 다른 플레이어에 플레이어의 현재 동작을 광고에 대 한 기능을 제공 합니다. 자세한 내용은 참조 [다양 한 상태 문자열: 개요](rich-presence-strings-overview.md).
 
 ```cpp
 

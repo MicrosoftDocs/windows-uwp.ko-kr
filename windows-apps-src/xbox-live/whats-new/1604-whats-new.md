@@ -11,37 +11,37 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 51c9aabc844c9971be4afec5023d55905c4261ef
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5162875"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5401763"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---april-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 4 월
 
-1603에 추가 된 항목에 대 한 [새로운 기능-2016 년 3 월](1603-whats-new.md) 문서를 참조 하세요
+1603에 추가 된 항목에 대 한 [새로운-2016 년 3 월](1603-whats-new.md) 문서를 참조 하세요
 
 ## <a name="os-and-tool-support"></a>운영 체제 및 도구 지원
 Xbox Live SDK는 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [버전 14.0.23107.0]를 지원합니다.
 
 ## <a name="tournaments"></a>토너먼트
-- Xbox Live 토너먼트 도구는 이제 SDK와 함께 제공 합니다.  도구 디렉터리를 함께 사용 하는 방법에 대 한 정보에 것을 볼 수 있습니다.
-- 토너먼트 위한 Api를 사용할 수 있습니다.  Xbox::Services::Tournaments 네임 스페이스를 참조 하세요.
+- Xbox Live 토너먼트 도구는 이제 SDK에 포함 합니다.  도구 디렉터리 사용 하는 방법에 대 한 정보와 함께 것을 볼 수 있습니다.
+- 토너먼트에 대 한 Api를 사용할 수 있습니다.  Xbox::Services::Tournaments 네임 스페이스를 참조 하세요.
 - 설명서 프로그래밍 가이드에서 제공 됩니다.
 
 ## <a name="documentation"></a>설명서
 - [로그인 문제 해결 가이드](../using-xbox-live/troubleshooting/troubleshooting-sign-in.md) 로그인 오류 뿐 아니라 단계에서 오류 코드 기반 팔 로우 하 디버그 하려면 몇 가지 일반적인 전략을 나열 합니다.
 - Xbox One 개발자를 위한 [Marketplace](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/xbox-marketplace/marketplace-and-downloadable-content) 문서만 이제에서 찾을 수 있습니다 프로그래밍 가이드입니다.  UWP 개발자는 Windows 개발자 센터 스토어에 대 한 설명서에 대 한 참조를 계속 합니다.
-- 유니버설 Windows 플랫폼에는 Xbox One 제목 가져오기에 관심이 있는 경우를 참조할 수 있는 [UWP 포팅 가이드를 XDK](../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md) 있습니다.
-- 다양 한 Xbox Live 서비스 끝점 및 시나리오 뿐 아니라는 기능에 대 한 정보에 대 한 적용 이러한 방법에 대 한 설명에 대 한 [세분화 속도 제한](../using-xbox-live/best-practices/fine-grained-rate-limiting.md) 문서를 참조 하십시오.
+- 유니버설 Windows 플랫폼에는 Xbox One 제목 가져오기에 관심이 있는 경우를 참조할 수 [XDK UWP 포팅 가이드에](../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md) 있습니다.
+- 다양 한 Xbox Live 서비스 끝점 및 시나리오의 경우 뿐 아니라 제한은 기능에 대 한 정보에 대 한 적용 이러한 방법에 대 한 [세분화 속도 제한](../using-xbox-live/best-practices/fine-grained-rate-limiting.md) 문서를 참조 하십시오.
 
 ## <a name="multiplayer-manager"></a>멀티 플레이어 관리자
-[멀티 플레이어 관리자](../multiplayer/multiplayer-manager.md) 는 더 이상 실험에서.  이 API를 사용 하 여 개발자의 피드백, 일부 Api 서로 더 일관 되 게 합니다.  사용 하십시오 멀티 플레이어 관리자를 시작 점으로 멀티 플레이 개발을 수행할 때 멀티 플레이 2015 API의 복잡 한 문제를 관리 하는 간단한 API를 제공 합니다.
+[멀티 플레이어 관리자](../multiplayer/multiplayer-manager.md) 는 더 이상 실험 에서입니다.  이 API를 사용 하 여 개발자의 피드백, 일부 Api 서로 더 일관 되 게 합니다.  관리자를 사용 하십시오 멀티 플레이어 시작 점으로 멀티 플레이 개발을 수행할 때 멀티 플레이 2015 API의 복잡 한 문제를 관리 하는 단순한 API를 제공 합니다.
 
-에 아래 섹션에 나열 했습니다 주요 변경 수가 적은 뿐 아니라 API는 새로운 기능 중 일부입니다.
+에 아래 섹션에 나열 했습니다 주요 변경 수가 적은 뿐만 아니라 API, 새로운 기능 중 일부입니다.
 
-#### <a name="completed-events"></a>완료 된 이벤트
-모든 Api 이제는 해당``` _competed``` 이벤트 및 모든 이벤트는 성공 또는 실패 관계 없이 발생 합니다. 이전 동작 것만 작업을 수행할 제목에 대 한 오류 발생 시 트리거되는 했습니다. 호출 일괄는 이후는 작업이 완료 되 면 제목 가져옴 여러 의미 하 고 ```_competed``` 이벤트입니다.
+#### <a name="completed-events"></a>완료 이벤트
+모든 Api는 이제 해당가지고``` _competed``` 이벤트 및 모든 이벤트는 성공 또는 실패 여부에 관계 없이 발생 합니다. 이전 동작 것만 작업을 수행할 제목에 대 한 오류 발생 시 트리거되는 했습니다. 호출을 일괄 이후는 작업이 완료 되 면 제목 가져옴 여러 의미 하 고 ```_competed``` 이벤트입니다.
 
 | API | 반환 된 이벤트 |
 |-----|----------------|
@@ -54,7 +54,7 @@ Xbox Live SDK는 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [
 마찬가지입니다 ```game_session()```.
 
 #### <a name="application-defined-context"></a>응용 프로그램 정의 된 컨텍스트
-이제 시작 호출에 멀티 플레이 이벤트를 연결 하기 위해 각 set_ * 메서드에 대 한 선택적 응용 프로그램 정의 컨텍스트에서 전달할 수 있습니다.
+멀티 플레이 시작 호출 이벤트를 연결 하기 위해 각 set_ * 메서드에 대 한 선택적 응용 프로그램 정의 상황에 전달할 수 있습니다.
 예를 들면 다음과 같습니다.
 
 ```cpp
@@ -69,7 +69,7 @@ _XSAPIIMP xbox_live_result<void> set_properties(
 
 #### <a name="breaking-changes"></a>주요 변경 내용
 
-1.  둘 다 초대할 Api (```invite_friends``` & ```invite_users```) 동기 됩니다. 작업이 완료 되 면 invite_sent 이벤트를 반환합니다.
+1.  둘 다 초대 Api (```invite_friends``` & ```invite_users```) 동기 됩니다. 작업이 완료 되 면 invite_sent 이벤트를 반환합니다.
 
 2.  ```write_synchronized_properties_and_commit``` 로 바뀌었습니다 ```set_synchronized_properties```. 작업이 완료 되 면 반환는 ```session_synchronized_property_write_completed``` 이벤트입니다.
 
@@ -116,6 +116,6 @@ arbitration_property_changed
 
   *이름이 변경*
 
-  ```write_synchronized_properties_completed``` 로 이름이 변경 ```session_synchronized_property_write_completed```
+  ```write_synchronized_properties_completed``` 로 변경 ```session_synchronized_property_write_completed```
 
-  ```write_synchronized_host_completed``` 로 이름이 변경 ```synchronized_host_write_completed```
+  ```write_synchronized_host_completed``` 로 변경 ```synchronized_host_write_completed```

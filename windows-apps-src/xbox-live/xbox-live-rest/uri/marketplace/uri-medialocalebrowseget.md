@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b747ea8e576ecbd3723282ffa3a59113b8187428
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5168491"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5401568"
 ---
 # <a name="get-mediamarketplaceidbrowse"></a>GET (media/{marketplaceId}/browse)
 단일 미디어 그룹 내에서 항목을 검색할 수 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -33,7 +33,7 @@ ms.locfileid: "5168491"
  
 이 검색에서 반환 된 데이터의 페이지가 아닌 순차적으로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신 액세스할 수 있습니다. 이 API는 쿼리 구체화를 수락합니다. 
  
- 이제 **SandboxId** 는 XToken에서 클레임에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다. 
+ 이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다. 
   
 <a id="ID4EFB"></a>
 
@@ -49,7 +49,7 @@ ms.locfileid: "5168491"
  
 ## <a name="query-string-parameters"></a>쿼리 문자열 매개 변수
  
-이 API는 다음 쿼리 매개 변수: combinedContentRating, desiredMediaItemTypes, 필드, maxItems, preferredProvider, q, queryRefiners, skipItems, firstPartyOnly, freeOnly, hasTrailer, latestOnly, subscriptionLevel, 및 topRatedOnly .
+이 API는 다음 쿼리 매개 변수: combinedContentRating, desiredMediaItemTypes, 필드, maxItems, preferredProvider, q, queryRefiners, skipItems, firstPartyOnly, freeOnly, hasTrailer, latestOnly subscriptionLevel, 및 topRatedOnly .
  
 이러한 매개 변수에 대 한 자세한 내용은 [EDS 매개 변수](../../additional/edsparameters.md) 를 참조 하세요.
   

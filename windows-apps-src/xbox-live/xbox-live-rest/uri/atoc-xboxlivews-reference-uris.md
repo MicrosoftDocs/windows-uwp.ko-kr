@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ff8e5444ec65de3665d593168e430a64f4d250e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5168488"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5401562"
 ---
 # <a name="universal-resource-identifier-uri-reference"></a>URI(Universal Resource Identifier) 참조
 
-이 섹션에서는 Uniform Resource Identifier (Uri)에 대 한 세부 정보를 제공 하 고 메서드와 하이퍼텍스트 전송 프로토콜 (HTTP) Xbox Live 서비스에 사용 합니다.
+이 섹션에서는 Uniform Resource Identifier (Uri)에 대 한 세부 정보를 제공 하 고 및 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드 Xbox Live 서비스에 사용 합니다.
 
 <a id="ID4EAB"></a>
 
@@ -31,9 +31,9 @@ ms.locfileid: "5168488"
 
 &nbsp;&nbsp;Uri 및 도전 과제에 대 한 관련된 HTTP 메서드입니다.
 
-[게임 서버 유니버설 리소스 식별자 (URI) 참조](gsdk/atoc-gsdk-uri-reference.md)
+[게임 서버 유니버설 리소스 URI (Identifier) 참조](gsdk/atoc-gsdk-uri-reference.md)
 
-&nbsp;&nbsp;Uri는 제목에 대 한 게임 서버 개발 키트 서버 인스턴스를 만들고 클라이언트에서 사용 합니다.
+&nbsp;&nbsp;타이틀에 대 한 게임 서버 개발 키트 서버 인스턴스를 만들고 클라이언트에 의해 사용 되는 Uri입니다.
 
 [게임 DVR URI](dvr/atoc-reference-dvr.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "5168488"
 
 [순위표 URI](leaderboard/atoc-reference-leaderboard.md)
 
-&nbsp;&nbsp;Uri 및 순위표에 대 한 관련된 HTTP 메서드입니다.
+&nbsp;&nbsp;Uri 및 순위표 관련된 HTTP 메서드입니다.
 
 [목록 URI](lists/atoc-reference-lists.md)
 
@@ -53,7 +53,7 @@ ms.locfileid: "5168488"
 
 [마켓플레이스 URI](marketplace/atoc-reference-marketplace.md)
 
-&nbsp;&nbsp;Uri 및 Xbox marketplace 서비스에 대 한 관련된 HTTP 메서드입니다.
+&nbsp;&nbsp;Uri 및 Xbox 마켓플레이스 서비스에 대 한 관련된 HTTP 메서드입니다.
 
 [매치 메이킹 URI](matchtickets/atoc-reference-matchtickets.md)
 
@@ -81,7 +81,7 @@ ms.locfileid: "5168488"
 
 [세션 디렉터리 URI](sessiondirectory/atoc-reference-sessiondirectory.md)
 
-&nbsp;&nbsp;Uri 및 관련 된 HTTP 메서드 멀티 플레이어 세션 디렉터리 (MPSD).
+&nbsp;&nbsp;Uri 및 관련된 HTTP 메서드에 멀티 플레이어 세션 디렉터리 (MPSD).
 
 [도전 과제 타이틀 기록 URI](titlehistory/atoc-reference-titlehistoryv2.md)
 
@@ -93,7 +93,7 @@ ms.locfileid: "5168488"
 
 [시스템 문자열 유효성 검사 URI](stringserver/atoc-reference-systemstringsvalidate.md)
 
-&nbsp;&nbsp;시스템에서 문자열의 동의 확인 하기 위한 리소스입니다.
+&nbsp;&nbsp;에 문자열의 동의 확인 하기 위한 시스템 리소스입니다.
 
 [사용자 URI](users/atoc-reference-users.md)
 

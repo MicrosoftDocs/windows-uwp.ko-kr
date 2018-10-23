@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2fa886078d429719eb50aa8567bfe238768ba2e3
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5159575"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5409677"
 ---
 # <a name="usersxuidxuidscidsscidstats"></a>/users/xuid({xuid})/scids/{scid}/stats
 지정된 된 사용자를 대신 하 여 사용자 통계 이름의 쉼표로 구분 된 목록에 의해 범위가 서비스 구성에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
@@ -30,7 +30,7 @@ ms.locfileid: "5159575"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| GUID| Xbox 사용자 ID (XUID) 서비스 구성에 액세스 하려면 대신 사용자의 합니다.| 
+| xuid| GUID| Xbox 사용자 ID (XUID) 서비스 구성에 액세스 하려면 대신 사용자입니다.| 
 | 서비스 안내| GUID| 액세스 되는 리소스를 포함 하는 서비스 구성의 식별자입니다.| 
   
 <a id="ID4E4B"></a>
@@ -44,7 +44,7 @@ ms.locfileid: "5159575"
 
 [메타 데이터 값을 사용 하 여 가져오기](uri-usersxuidscidsscidstatsgetvaluemetadata.md)
 
-&nbsp;&nbsp;사용자 지정 된 서비스 구성에서에 대 한 통계 값을와 관련 된 메타 데이터를 포함 하 여 지정 된 통계 목록을 가져옵니다.
+&nbsp;&nbsp;사용자 지정 된 서비스 구성에 대 한 통계 값을와 관련 된 메타 데이터를 포함 하 여 지정 된 통계 목록을 가져옵니다.
  
 <a id="ID4EKC"></a>
 

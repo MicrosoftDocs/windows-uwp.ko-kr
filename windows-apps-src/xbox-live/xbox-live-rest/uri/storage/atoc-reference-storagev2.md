@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a188c3406ad0ca3bfca78d6b45c548c72bf791e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5171726"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5402578"
 ---
 # <a name="title-storage-uris"></a>타이틀 저장소 URI
  
@@ -45,7 +45,7 @@ ms.locfileid: "5171726"
 
 [/json/users/batch/scids/{scid}/data/{pathAndFileName},json](uri-jsonusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;동일한 파일 이름으로 여러 사용자에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
 
 [/json/users/xuid({xuid})/scids/{scid}](uri-jsonusersxuidscidsscid.md)
 
@@ -73,7 +73,7 @@ ms.locfileid: "5171726"
 
 [/trustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}](uri-trustedplatformusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;동일한 파일 이름으로 여러 사용자에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
 
 [/trustedplatform/users/xuid({xuid})/scids/{scid}](uri-trustedplatformusersxuidscidsscid.md)
 
@@ -89,7 +89,7 @@ ms.locfileid: "5171726"
 
 [/untrustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}](uri-untrustedplatformusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;동일한 파일 이름으로 여러 사용자에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
 
 [/untrustedplatform/users/xuid({xuid})/scids/{scid}](uri-untrustedplatformusersxuidscidsscid.md)
 

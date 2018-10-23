@@ -1,21 +1,21 @@
 ---
 title: XDK 게임용 Visual Studio를 사용 하 여 시작
 author: KevinAsgari
-description: Visual Studio를 사용 하 여 Xbox 개발자 키트 (XDK)를 개발 하는 방법을 알아보려면 링크 게임을 제공 합니다.
+description: Visual Studio를 사용 하 여 Xbox 개발자 키트 (XDK)를 개발 하는 방법을 링크 게임을 제공 합니다.
 ms.assetid: 3430cf97-0136-4c69-bcec-9cc3edf5fc95
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xdk
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: bb2d435bf11cb4c06527090abb4b78f31a339142
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5156528"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5404717"
 ---
 # <a name="get-started-with-using-visual-studio-for-xdk-based-games"></a>XDK 기반 게임용 Visual Studio를 사용 하 여 시작
 
@@ -33,4 +33,4 @@ ms.locfileid: "5156528"
 
 [Xbox Live API NuGet 패키지를 사용 하 여 XDK 타이틀 개발](use-xbox-live-nuget-with-xdk.md)
 
-[XDK는 함께 제공 되는 Xbox Live 소스 컴파일](compile-the-xdk-xbox-live-api-source.md)
+[XDK와 함께 배송 된 Xbox Live 소스 컴파일](compile-the-xdk-xbox-live-api-source.md)

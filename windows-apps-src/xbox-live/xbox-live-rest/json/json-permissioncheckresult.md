@@ -12,25 +12,25 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 308301b41b407291ffad74337172c5be8f4d2c59
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5162152"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405524"
 ---
 # <a name="permissioncheckresult-json"></a>PermissionCheckResult(JSON)
-단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 검사의 결과입니다. 
+단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 확인의 결과입니다. 
 <a id="ID4EP"></a>
 
  
 ## <a name="permissioncheckresult"></a>PermissionCheckResult
  
-PermissionCheckResult 개체에는 다음과 같이 지정 합니다.
+PermissionCheckResult 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | 이유| string| 선택 사항입니다. 권한을 거부 된 이유를 나타내는 <b>PermissionResultCode</b> 값 <b>IsAllowed</b> false 되었으면 합니다.| 
-| restrictedSetting| string| 선택 사항입니다. <b>이유</b> 멤버에 <b>PermissionResultCode</b> 값 요청자 권한 검사 실패 했음을 나타냅니다, 어떤 권한 실패 나타냅니다.| 
+| restrictedSetting| string| 선택 사항입니다. 요청자에 대 한 권한 검사에 실패 한 <b>이유</b> 멤버 <b>PermissionResultCode</b> 값 나타내면 어떤 권한 실패 나타냅니다.| 
   
 <a id="ID4E6B"></a>
 

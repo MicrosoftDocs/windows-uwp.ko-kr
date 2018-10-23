@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e351bed37e0761be1f884400f81a3da537967d2
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5156710"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5409581"
 ---
 # <a name="get-titlestitleidsessionssessionidallocationstatus"></a>GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
 해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
   * [필요한 요청 헤더](#ID4E4)
-  * [필수 응답 헤더](#ID4EEB)
+  * [필요한 응답 헤더](#ID4EEB)
   * [응답 본문](#ID4ELB)
  
 <a id="ID4E4"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "5156710"
 <a id="ID4EEB"></a>
 
  
-## <a name="required-response-headers"></a>필수 응답 헤더
+## <a name="required-response-headers"></a>필요한 응답 헤더
  
 없음.
   
@@ -48,17 +48,17 @@ ms.locfileid: "5156710"
  
 | 멤버| 설명| 
 | --- | --- | 
-| description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
-| clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
+| description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 하는 문자열을 반환 합니다.| 
+| clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 하는 문자열을 반환 합니다.| 
 | 호스트 이름| 세션 호스트의 URL입니다.| 
-| status| 대기, 충족, 또는 중단을 나타냅니다.| 
+| status| 대기, 충족 또는 중단을 나타냅니다.| 
 | sessionHostId| 세션 호스트 id입니다.| 
 | sessionId| (할당 시) 제공 클라이언트 세션 id입니다.| 
 | secureContext| 보안 장치 주소입니다.| 
 | portMappings| 인스턴스에 대 한 포트 매핑을 합니다.| 
 | 지역| 인스턴스의 위치입니다.| 
 | ticketId| (왼쪽에 대 한 이전 버전과 호환성) 현재 세션 ID입니다.| 
-| gameHostId| 현재 sessionHostId (왼쪽에 대 한 이전 버전과 호환성) 합니다.| 
+| gameHostId| (왼쪽에 대 한 이전 버전과 호환성) 현재 sessionHostId 합니다.| 
  
 <a id="ID4EGD"></a>
 
@@ -104,7 +104,7 @@ ms.locfileid: "5156710"
  
 ### <a name="remarks"></a>설명
  
-다음과 같은 응답 코드를 받는 시기 제목을 다시 서비스 호출만 해야:
+다음과 같은 응답 코드를 받는 경우 제목을 다시 호출 서비스에만 해야:
  
    * 200-성공 
    * 400-잘못 된 매개 변수를 포함 하는 요청 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 44102cb2ee1c996be9d0b42626f11a64ffb5c377
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5158188"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5408401"
 ---
 # <a name="peoplelist-json"></a>PeopleList(JSON)
 [사용자](json-person.md) 개체의 컬렉션입니다. 
@@ -25,12 +25,12 @@ ms.locfileid: "5158188"
  
 ## <a name="peoplelist"></a>PeopleList
  
-PeopleList 개체에는 다음과 같이 지정 합니다.
+PeopleList 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | 피플| [사용자](json-person.md) 의 배열| 사용자 목록을 구성 하는 [사람](json-person.md) 개체입니다.| 
-| totalCount| 32 비트 부호 없는 정수| 설정에서 사용할 수 있는 [사용자](json-person.md) 개체의 총 수입니다. 이 값의 전체 집합을 가장 최근 응답 뿐만 아니라 크기 나타내므로 페이징에 대 한 클라이언트에서 사용할 수 있습니다. 예제 값: 680 합니다.| 
+| totalCount| 32 비트 부호 없는 정수| 설정에서 사용할 수 있는 [사용자](json-person.md) 개체의 총 수입니다. 이 값의 전체 집합 최근 응답 뿐만 아니라 크기를 나타내므로 페이징 클라이언트에서 사용할 수 있습니다. 예제 값: 680 합니다.| 
   
 <a id="ID4EAC"></a>
 

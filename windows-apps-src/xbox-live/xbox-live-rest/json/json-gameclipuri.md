@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d9c5f2e4aa27f86069578211c5c3188b2921449a
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5166754"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5403696"
 ---
 # <a name="gameclipuri-json"></a>GameClipUri(JSON)
  
@@ -25,14 +25,14 @@ ms.locfileid: "5166754"
  
 ## <a name="gameclipuri"></a>GameClipUri
  
-GameClipUri 개체에는 다음과 같이 지정 합니다.
+GameClipUri 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | <b>uri</b>| string| 비디오 자산 위치의 URI입니다.| 
 | <b>파일 크기</b>| 32 비트 부호 없는 정수| 미리 보기 이미지의 총 파일 크기입니다.| 
 | <b>uriType</b>| GameClipUriType| URI의 형식입니다.| 
-| <b>만료</b>| DateTime| 이 응답에 포함 된 URI의 만료 시간입니다. URL이 비어 있거나 재생 하기 전에 만료 된 것으로 간주, 호출자 API를 호출 해야 RefreshUrl 합니다.| 
+| <b>만료</b>| DateTime| 이 응답에 포함 된 URI의 만료 시간입니다. URL이 비어 있거나 재생 하기 전에 만료 된 것으로 간주, 호출자에 게 API를 호출 해야 RefreshUrl 합니다.| 
   
 <a id="ID4EMC"></a>
 

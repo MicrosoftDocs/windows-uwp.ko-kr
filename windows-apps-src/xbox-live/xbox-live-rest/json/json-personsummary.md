@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cb093f624d27f28cace771896cf52146059bc332
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5167614"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5404974"
 ---
 # <a name="personsummary-json"></a>PersonSummary(JSON)
 [Person (JSON)](json-person.md) 개체의 컬렉션입니다. 
@@ -25,17 +25,17 @@ ms.locfileid: "5167614"
  
 ## <a name="personsummary"></a>PersonSummary
  
-PersonSummary 개체에는 다음과 같이 지정 합니다.
+PersonSummary 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| hasCallerMarkedTargetAsFavorite| 부울 값| 호출자가 표시 여부는 대상 즐겨찾기로 합니다. 예제 값: true| 
-| hasCallerMarkedTargetAsKnown| 부울 값| 호출자가 것으로 표시 여부는 대상 알려진 합니다. 예제 값: true| 
-| isCallerFollowingTarget| 부울 값| 여부 호출자 대상 팔 로우 합니다. 예제 값: true| 
+| hasCallerMarkedTargetAsFavorite| 부울 값| 여부 호출자는 즐겨찾기로 대상을 표시 합니다. 예제 값: true| 
+| hasCallerMarkedTargetAsKnown| 부울 값| 호출자가 것으로 표시 여부 대상 알려진 합니다. 예제 값: true| 
+| isCallerFollowingTarget| 부울 값| 여부 호출자에 게 대상 팔 로우 합니다. 예제 값: true| 
 | isTargetFollowingCaller| 부울 값| 여부 대상 호출자 팔 로우 합니다. 예제 값: true| 
 | legacyFriendStatus| string| 호출자가 표시 된 대로 대상의 레거시 친구 상태입니다. "None", "MutuallyAccepted", "OutgoingRequest" 또는 "IncomingRequest" 될 수 있습니다. 예제 값: "MutuallyAccepted"| 
 | recentChangeCount| 32 비트 부호 없는 정수| 선택 사항입니다. 대상의 소셜 그래프의 최근 변경의 수입니다. 이 값은 사용자가 자신의 요약을 보고 하는 경우에 존재 합니다. 예제 값: 5| 
-| targetFollowerCount| > 32 비트 부호 없는 정수| 대상 따르도록 하는 사용자의 수입니다. 예제 값: 1308| 
+| targetFollowerCount| > 32 비트 부호 없는 정수| 대상을 수행 하는 사용자의 수입니다. 예제 값: 1308| 
 | targetFollowingCount| 32 비트 부호 없는 정수| 대상 팔 로우 하는 사용자의 수입니다. 예제 값: 112| 
 | 워터 마크| string| 선택 사항입니다. 대상에 대 한 최근 변경 워터 마크입니다. 이 값은 사용자가 자신의 요약을 보고 하는 경우에 존재 합니다. 예제 값: 5| 
   

@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: bcae059476cd5e55d95cbbbc7c4b479c359e46fe
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5163026"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5407852"
 ---
 # <a name="profiles-uris"></a>프로필 URI
  
 이 섹션에서는 *프로필*에 대 한 Xbox Live 서비스에서 프로필 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
-만 Windows 8에서 실행 되는 게임을 Xbox 360, 또는 Windows Phone 장치 수이 서비스를 사용 합니다.
+만 Windows 8에서 실행 되는 게임을 Xbox 360 또는 Windows Phone 장치 수이 서비스를 사용 합니다.
  
 이러한 Uri에 대 한 도메인 profile.xboxlive.com입니다.
  
@@ -33,11 +33,11 @@ ms.locfileid: "5163026"
 
 [/users/batch/profile/settings](uri-usersbatchprofilesettings.md)
 
-&nbsp;&nbsp;사용자 또는 사용자의 프로필에 액세스 합니다.
+&nbsp;&nbsp;사용자나 사용자의 프로필에 액세스 합니다.
 
 [/users/{userId}/profile/settings/people/{userList}?settings={settings}](uri-usersuseridprofilesettingspeopleuserlist.md)
 
-&nbsp;&nbsp;사용자 또는 사용자 모니커 지원 사용 하 여 사용자의 프로필에 액세스 합니다.
+&nbsp;&nbsp;사용자 프로필에 액세스 하거나 사용자 모니커를 사용 하 여 사용자를 지원 합니다.
  
 <a id="ID4EYB"></a>
 

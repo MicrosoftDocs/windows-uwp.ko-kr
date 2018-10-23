@@ -12,15 +12,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e5490ec5b940f70180d2830e7caaed9a9926f50
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5170700"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5409351"
 ---
 # <a name="enumerations-used-in-javascript-object-notation-json-objects"></a>JSON(JavaScript Object Notation) 개체에 사용된 열거형
  
-Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체를 정의 합니다. 서비스에서 사용 되는 많은 JavaScript 개체 Notation (JSON) 개체에 허용 되는 JavaScript 개체 Notation (JSON) 개체에 표시 되는 필드에 대 한 값으로 지정 하는 열거형 연결 되어 있습니다. 이 섹션에서는 JavaScript 개체 Notation (JSON) 개체에 사용 되는 열거형을 나열 합니다. 
+Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체를 정의 합니다. 서비스에서 사용 되는 많은 JavaScript Object Notation (JSON) 개체에 허용 되는 JavaScript Object Notation (JSON) 개체에 표시 되는 필드에 대 한 값으로 지정 하는 열거형 연결 되어 있습니다. 이 섹션에서는 JavaScript Object Notation (JSON) 개체에 사용 되는 열거형을 나열 합니다. 
  
 <a id="ID4EJB"></a>
 
@@ -29,35 +29,35 @@ Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체
 
 [GameClipSource 열거형](gvr-enum-gameclipsource.md)
 
-&nbsp;&nbsp;GameClipSource 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;GameClipSource 열거형에 자세히 설명합니다. 
 
 [GameClipState 열거형](gvr-enum-gameclipstate.md)
 
-&nbsp;&nbsp;GameClipState 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;GameClipState 열거형에 자세히 설명합니다. 
 
 [GameClipType 열거형](gvr-enum-gamecliptypes.md)
 
-&nbsp;&nbsp;GameClipTypes 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;GameClipTypes 열거형에 자세히 설명합니다. 
 
 [GameClipUriType 열거형](gvr-enum-gameclipuritype.md)
 
-&nbsp;&nbsp;GameClipUriType 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;GameClipUriType 열거형에 자세히 설명합니다. 
 
 [GameClipVisibility 열거형](gvr-enum-gameclipvisibility.md)
 
-&nbsp;&nbsp;GameClipVisibility 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;GameClipVisibility 열거형에 자세히 설명합니다. 
 
 [ThumbnailSource 열거형](gvr-enum-thumbnailsource.md)
 
-&nbsp;&nbsp;ThumbnailSource 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;ThumbnailSource 열거형에 자세히 설명합니다. 
 
 [ThumbnailType 열거형](gvr-enum-thumbnailtype.md)
 
-&nbsp;&nbsp;ThumbnailType 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;ThumbnailType 열거형에 자세히 설명합니다. 
 
 [PermissionId 열거형](privacy-enum-permissionid.md)
 
-&nbsp;&nbsp;PermissionId 열거형에 자세히 설명 합니다. 
+&nbsp;&nbsp;PermissionId 열거형에 자세히 설명합니다. 
  
 <a id="ID4EGC"></a>
 

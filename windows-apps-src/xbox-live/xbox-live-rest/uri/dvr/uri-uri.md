@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b70d027146a5aba0495692e2f2bef1e2a7d2bd52
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5171844"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5409853"
 ---
 # <a name="uri"></a>/{uri}
 게임 클립 데이터에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "5171844"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| <b>uri</b>| string| 사용 하 여 URI입니다. 자세한 내용은 메서드 페이지를 참조 하세요.| 
+| <b>uri</b>| string| URI입니다. 자세한 내용은 메서드 페이지를 참조 하십시오.| 
   
 <a id="ID4ETB"></a>
 

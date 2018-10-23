@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a5ec9878845b7d93cd4db18ff9825d728897a5c0
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5156744"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5404047"
 ---
 # <a name="userclaims-json"></a>UserClaims(JSON)
 현재 인증 된 사용자에 대 한 정보를 반환합니다. 
@@ -25,7 +25,7 @@ ms.locfileid: "5156744"
  
 ## <a name="userclaims"></a>UserClaims
  
-UserClaims 개체에는 다음과 같이 지정 합니다.
+UserClaims 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

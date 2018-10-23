@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: fe1129db6154d842cbadf0e7918d2fe460166ba1
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5160147"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5401699"
 ---
 # <a name="usersxuidxuiddeleteuserdata"></a>/users/xuid({xuid})/deleteuserdata
 테스트 사용자에 대 한 안전도 데이터를 완전히 다시 설정합니다. 만 테스트 합니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`. 이 URI가 항상 10443 포트에서 호출 됩니다.

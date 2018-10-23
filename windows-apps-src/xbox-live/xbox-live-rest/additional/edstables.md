@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ae8c61d8afae6788f2f99e4e2beff262c011fc60
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5166843"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5402587"
 ---
 # <a name="eds-tables"></a>EDS 테이블
 
@@ -35,7 +35,7 @@ ms.locfileid: "5166843"
 | 게임| Xbox360Game, XboxGameTrial, Xbox360GameContent, Xbox360GameDemo, XboxTheme, XboxOriginalGame, XboxGamerTile, XboxArcadeGame, XboxGameConsumable, XboxGameVideo, XboxGameTrailer, XboxBundle, XboxXnaCommunityGame, XboxMarketplace, AvatarItem, MobileGame, XboxMobilePDLC, XboxMobileConsumable, WebGame, MetroGame, MetroGameContent, MetroGameConsumable, DGame, DGameDemo, DConsumable, DDurable|
 | AppType| XboxApp, DApp|
 | MovieType| 영화|
-| TVType| TVEpisode, TVSeries, TVSeason TVShow (일회성 TV 프로그램)|
+| TVType| TVEpisode, TVSeries, TVSeason TVShow (일회용 TV 프로그램)|
 | MusicType| 앨범 트랙 MusicVideo|
 | MusicArtistType| MusicArtist|
 | WebVideoType| WebVideo, WebVideoCollection|

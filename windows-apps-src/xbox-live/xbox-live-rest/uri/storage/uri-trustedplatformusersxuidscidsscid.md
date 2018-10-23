@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b4efd1a4f8cbd31e78bb4f3173e81e1070c41ab0
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5162733"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5400205"
 ---
 # <a name="trustedplatformusersxuidxuidscidsscid"></a>/trustedplatform/users/xuid({xuid})/scids/{scid}
 이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
@@ -30,7 +30,7 @@ ms.locfileid: "5162733"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청 하 게 합니다.| 
+| xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청을 하 게 합니다.| 
 | 서비스 안내| guid| 조회 서비스 구성의 ID입니다.| 
   
 <a id="ID4E3B"></a>

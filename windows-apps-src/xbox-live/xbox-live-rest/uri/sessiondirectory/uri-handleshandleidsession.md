@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: eb7ca17500f571ed72cf0bcd6ececbcde17ce717
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5159955"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5399877"
 ---
 # <a name="handleshandleidsession"></a>/handles/{handleId}/session
-GET 및 PUT 작업 세션에 대 한 핸들 해제를 사용 하 여 지원 합니다. 
+GET 및 PUT 작업 세션에 대 한 핸들을 해제를 사용 하 여 지원 합니다. 
 
 > [!NOTE] 
 > 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
@@ -27,7 +27,7 @@ GET 및 PUT 작업 세션에 대 한 핸들 해제를 사용 하 여 지원 합�
  
 
 > [!NOTE] 
-> 이 URI는 현재 Xbox One 콘솔 및 서버는 서비스 식별자를 사용 하 여 외부적으로 액세스할 수만.  
+> 이 URI는 현재 Xbox One 본체와 서버 서비스 식별자를 사용 하 여 외부에서 액세스할 수만 있습니다.  
 
  
 <a id="ID4ES"></a>
@@ -55,7 +55,7 @@ sessiondirectory.xboxlive.com
 
 [PUT (/handles/{handle-id}/session)](uri-handleshandleidsessionput.md)
 
-&nbsp;&nbsp;만들거나 핸들을 해제 하 여 세션을 업데이트 합니다.
+&nbsp;&nbsp;만들거나 핸들 역참조 하 여 세션을 업데이트 합니다.
  
 <a id="ID4E6B"></a>
 

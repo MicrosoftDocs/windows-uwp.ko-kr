@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e8d56b9d7079e26973595de093b581ef39bd41c0
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5167591"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5402018"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnamemembersindex"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/members/{index}
 지정 된 세션 구성원을 제거 하려면 삭제 작업을 지원 합니다.
@@ -32,9 +32,9 @@ sessiondirectory.xboxlive.com
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 1 부 세션 식별자입니다.|
-| sessionTemplateName| string| 세션 템플릿 현재 인스턴스의 이름입니다. 2 부 세션 식별자입니다.|
-| 세션 이름| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
+| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1 세션 식별자입니다.|
+| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
+| 세션 이름| GUID| 세션의 고유 ID입니다. 파트 3 세션 식별자입니다.|
 
 <a id="ID4EDC"></a>
 
@@ -43,7 +43,7 @@ sessiondirectory.xboxlive.com
 
 [DELETE (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/members/{index})](uri-serviceconfigsscidsessiontemplatessessiontemplatenamesessionnamemembersindexdelete.md)
 
-&nbsp;&nbsp;세션에서 지정된 된 구성원을 제거합니다.
+&nbsp;&nbsp;세션에서 지정 된 구성원을 제거합니다.
 
 <a id="ID4ENC"></a>
 
