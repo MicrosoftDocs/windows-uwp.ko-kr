@@ -1,7 +1,7 @@
 ---
 author: laurenhughes
 title: IIS 서버에서 UWP 앱 설치
-description: 이 자습서에는 IIS 서버를 설정, 웹 앱 수 앱 패키지를 호스트할와 확인 호출 앱 설치 관리자를 효과적으로 사용 하는 방법을 보여 줍니다.
+description: 이 자습서에서는 IIS 서버를 설정, 웹 앱 수 앱 패키지를 호스트할 호출 및 확인 효과적으로 앱 설치 관리자를 사용 하는 방법에 설명 합니다.
 ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 설치 관리자, AppInstaller, 사이드 로드, 관련 설정, 선택적 패키지를 IIS 서버
 ms.localizationpriority: medium
 ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5168932"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5405461"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>IIS 서버에서 UWP 앱 설치
 
@@ -41,7 +41,7 @@ ms.locfileid: "5168932"
 > [!NOTE]
 > 인터넷 정보 서비스에서 모든 확인란을 선택 하지 않아도 됩니다. **인터넷 정보 서비스** 를 선택 하면 선택한 이벤트만 충분 합니다.
 
-ASP.NET 4.5 이상을 설치 해야 합니다. 설치 하기 위해, 찾을 **인터넷 정보 서비스 웹-> 서비스-응용 프로그램 개발 기능 >**. ASP.NET 4.5 보다 크거나은 ASP.NET의 버전을 선택 합니다.
+ASP.NET 4.5 이상을 설치 해야 합니다. 설치 하기 위해, 찾을 **인터넷 정보 서비스 웹-> 서비스-응용 프로그램 개발 기능 >**. ASP.NET 4.5 보다 크거나 ASP.NET의 버전을 선택 합니다.
 
 ![ASP.NET 설치](images/install-asp.png)
 
@@ -69,19 +69,19 @@ ASP.NET 4.5 이상을 설치 해야 합니다. 설치 하기 위해, 찾을 **�
 
 ## <a name="step-5---add-an-app-package-to-a-web-application"></a>5 단계-앱 패키지 웹 응용 프로그램 추가 
 
-웹 응용 프로그램으로 배포 하려는 앱 패키지를 추가 합니다. 앱 패키지를 사용할 수 없는 경우 GitHub에서 제공 된 [starter 프로젝트 패키지](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) 에 포함 된 앱 패키지를 사용할 수 있습니다. 패키지를 서명한 인증서(MySampleApp.cer)는 GitHub의 샘플도 서명합니다. 인증서가 (9 단계) 앱을 설치 하기 전에 장치에 설치 되어 있어야 합니다.
+웹 응용 프로그램을 배포 하려는 앱 패키지를 추가 합니다. 앱 패키지를 사용할 수 없는 경우 GitHub에서 제공 된 [starter 프로젝트 패키지](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) 에 포함 된 앱 패키지를 사용할 수 있습니다. 패키지를 서명한 인증서(MySampleApp.cer)는 GitHub의 샘플도 서명합니다. 인증서가 (9 단계) 앱을 설치 하기 전에 장치에 설치 되어 있어야 합니다.
 
-Starter 프로젝트 웹 응용 프로그램을 호출 웹 앱에 새 폴더 추가 `packages` 앱 패키지를 배포할 수 있는 합니다. Visual Studio에서 폴더를 만들려면 솔루션 탐색기의 루트 마우스 오른쪽 단추로 클릭, **추가**선택 -> **새 폴더** 이름을 `packages`. 앱 패키지 폴더에 추가 하려면 마우스 오른쪽 단추로 클릭 합니다 `packages` 폴더 및 선택 **추가** -> **기존 항목...** 및 앱 찾아보기 패키지 위치 합니다. 
+라는 웹 앱에 추가 된 새 폴더 starter 프로젝트 웹 응용 프로그램에서 `packages` 앱 패키지 배포를 포함 하는 합니다. Visual Studio에서 폴더를 만들려면 솔루션 탐색기의 루트 마우스 오른쪽 단추로 클릭, **추가**선택 -> **새 폴더** 이름을 `packages`. 앱 패키지 폴더에 추가 하려면 마우스 오른쪽 단추로 클릭 합니다 `packages` 폴더 및 선택 **추가** -> **기존 항목...** 및 앱 찾아보기 패키지 위치 합니다. 
 
 ![패키지 추가](images/add-package.png)
 
 ## <a name="step-6---create-a-web-page"></a>6 단계-웹 페이지 만들기
 
-이 샘플 웹 앱 간단한 HTML을 사용합니다. 자유롭게 필요에 맞게 필요에 따라 웹 앱을 빌드할 수 있습니다. 
+이 샘플 웹 응용 프로그램 간단한 HTML을 사용합니다. 필요에 맞게 필요에 따라 웹 앱을 빌드할 수 있습니다. 
 
 솔루션 탐색기의 루트 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **추가**선택 합니다 -> **새 항목**을 **웹** 섹션에서 새 **HTML 페이지** 를 추가 합니다.
 
-HTML 페이지를 만든 후 솔루션 탐색기에서 HTML 페이지에서 마우스 오른쪽 단추로 클릭 하 고 **설정으로 시작 페이지**를 선택 합니다.  
+HTML 페이지를 만든 후 솔루션 탐색기에서 HTML 페이지에서 마우스 오른쪽 단추로 클릭 하 고 **시작 페이지로 설정**를 선택 합니다.  
 
 코드 편집기 창에서 열려는 HTML 파일을 두 번 클릭 합니다. 이 자습서에서는 Windows 10 앱을 설치 하도록 성공적으로 앱 설치 관리자 앱을 호출 하는 웹 페이지에서 필수 요소에만 사용 됩니다. 
 
@@ -123,7 +123,7 @@ HTML 페이지를 만든 후 솔루션 탐색기에서 HTML 페이지에서 마�
 
 네트워크 격리로 인해 앱 설치 관리자와 같은 UWP 앱은 같은 IP 루프백 주소를 사용 하 여 제한 된 http://localhost/. 로컬 IIS 서버를 사용 하면 앱 설치 관리자 루프백 제외 목록에 추가 해야 합니다. 
 
-이렇게 하려면 **관리자** 권한으로 **명령 프롬프트** 열고 다음을 입력: ' ' 명령줄 CheckNetIsolation.exe LoopbackExempt-a-n=microsoft.desktopappinstaller_8wekyb3d8bbwe
+이렇게 하려면 **관리자** 권한으로 **명령 프롬프트** 를 열고 다음을 입력 하: ' ' 명령줄 CheckNetIsolation.exe LoopbackExempt-a-n=microsoft.desktopappinstaller_8wekyb3d8bbwe
 ```
 
 To verify that the app is added to the exempt list, use the following command to display the apps in the loopback exempt list: 

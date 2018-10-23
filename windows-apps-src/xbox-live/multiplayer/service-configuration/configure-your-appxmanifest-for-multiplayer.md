@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 프로토콜 활성화, 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: bc20d183a16bd0f5be418699c8e7eb3b02ba889c
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5168611"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5397885"
 ---
 # <a name="configure-your-appxmanifest-for-multiplayer"></a>멀티 플레이어에 AppXManifest 구성
 
-다음과 같은 경우 Visual Studio 프로젝트의.appxmanifest 파일을 일부 업데이트를 확인 해야 합니다.
+다음 조건이 충족 하는 경우 Visual Studio 프로젝트의.appxmanifest 파일을 일부 업데이트를 확인 해야 합니다.
 - UWP 개발 하는
-- 플레이어가 타이틀을 다른 사용자를 초대 하는 기능을 구현.
+- 타이틀을 다른 사용자를 초대 하 여 플레이어에 대 한 기능을 구현.
 
 이 단계를 수행 하지 않는 경우 타이틀 프로토콜 받는 사람 플레이어 재생 하 라는 초대를 수락 하면 활성화를 가져오지 않습니다.
 
-## <a name="open-your-packageappxmanifest"></a>에 Package.appxmanifest 열기
+## <a name="open-your-packageappxmanifest"></a>에 Package.appxmanifest를 열으십시오
 
 Package.appxmanifest 파일에는 일반적으로 Visual Studio 프로젝트의 솔루션 파일로 동일한 디렉터리에 배치 됩니다.  또는 솔루션 탐색기에서 찾을 수 있습니다.
 
@@ -47,4 +47,4 @@ Package.appxmanifest 파일에는 일반적으로 Visual Studio 프로젝트의 
 
 ![](../../images/multiplayer/multiplayer_appxmanifest_changes.png)
 
-저장 하 고 타이틀을 다시 빌드하십시오.  타이틀을 플레이어를 초대 하는 기능을 구현 하는 멀티 플레이어 관리자를 사용 하는 방법에 자세한 참조 [친구와 멀티 플레이어 재생](../multiplayer-manager/play-multiplayer-with-friends.md)
+저장 하 고 타이틀을 다시 빌드하십시오.  타이틀을 플레이어를 초대 하는 기능을 구현 하는 멀티 플레이어 관리자를 사용 하는 방법을 알아보려면 [친구와 멀티 플레이 게임 플레이](../multiplayer-manager/play-multiplayer-with-friends.md) 참조 하세요

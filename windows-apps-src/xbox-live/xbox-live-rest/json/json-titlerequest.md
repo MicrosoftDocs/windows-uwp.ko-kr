@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 98adbf3f170c679452f4a78a18097b83e93faffa
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5169221"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5395152"
 ---
 # <a name="titlerequest-json"></a>TitleRequest(JSON)
 타이틀에 대 한 정보를 요청 합니다. 
@@ -25,14 +25,14 @@ ms.locfileid: "5169221"
  
 ## <a name="titlerequest"></a>TitleRequest
  
-TitleRequest 개체에는 다음과 같이 지정 합니다.
+TitleRequest 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | id| 32 비트 부호 없는 정수| 제목의 식별자입니다.| 
-| activity| [ActivityRequest](json-activityrequest.md)| 제목에서 정보를 사용할 수 있는 경우 다양 한 상태 및 미디어 정보를 포함 합니다.| 
-| 상태| string| 사용자의 활성화 여부 또는 되지 않습니다. 이 필드는 사용자가 비활성으로 표시 해야 합니다. 기본값은 "활성".| 
-| 배치| string| 배치 모드 제목입니다. 가능한 값 "전체", "fill", ", 사이드 상태가" 또는 "background"를 포함 합니다. 기본값은 "전체".| 
+| activity| [ActivityRequest](json-activityrequest.md)| 제목 정보를 사용할 수 있는 경우 다양 한 상태 및 미디어 정보를 포함 합니다.| 
+| 상태| string| 여부는 사용자가 활성 인지 여부. 이 필드는 사용자가 비활성으로 표시 해야 합니다. 기본값은 "활성".| 
+| 배치| string| 배치 모드 제목입니다. 가능한 값 "전체", "fill", "스냅" 또는 "background" 포함 됩니다. 기본값은 "전체".| 
   
 <a id="ID4EJC"></a>
 

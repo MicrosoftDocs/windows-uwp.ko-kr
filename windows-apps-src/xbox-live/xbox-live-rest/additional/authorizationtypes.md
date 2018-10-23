@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2db953d711bcb423f02aebfd3579cddea717826b
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5171764"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5398637"
 ---
 # <a name="authorization-types"></a>권한 부여 유형
  
@@ -25,7 +25,7 @@ Xbox Live 서비스 요청을 사용 하 여 다양 한 권한 부여 유형 사
 | 유형| 설명| 
 | --- | --- | 
 | 사용자 | 호출자는 권한 있는 Xbox Live 사용자 합니다. | 
-| 제목 | 호출자가 신뢰할 수 있는 플랫폼에서 제목입니다.| 
+| 제목 | 호출자는 신뢰할 수 있는 플랫폼에서 제목입니다.| 
  
 <a id="ID4EGC"></a>
 
@@ -43,6 +43,6 @@ Xbox Live 서비스 요청을 사용 하 여 다양 한 권한 부여 유형 사
 <a id="ID4EUC"></a>
 
  
-##### <a name="reference--universal-resource-identifier-uri-referenceuriatoc-xboxlivews-reference-urismd"></a>참조 [유니버설 리소스 식별자 (URI) 참조](../uri/atoc-xboxlivews-reference-uris.md)
+##### <a name="reference--universal-resource-identifier-uri-referenceuriatoc-xboxlivews-reference-urismd"></a>참조 [유니버설 리소스 URI (Identifier) 참조](../uri/atoc-xboxlivews-reference-uris.md)
 
    

@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167747"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406509"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -85,9 +85,9 @@ ms.locfileid: "5167747"
 
 > **미리 보기**: 암시적 애니메이션은 [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/)필요 합니다.
 
-암시적 애니메이션은 자동으로 매개 변수를 변경 하는 동안 이전 및 새 값 간의 보간에 따라 Fluent 움직임을 달성 하는 간단한 방법입니다.
+암시적 애니메이션은 자동으로 매개 변수를 변경 하는 동안 이전 및 새 값 사이의 보간에 따라 Fluent 움직임을 달성 하는 간단한 방법입니다.
 
-암시적으로 다음 속성이 변경 애니메이션을 적용할 수 있습니다.
+암시적으로 다음 속성 변경에 애니메이션을 적용할 수 있습니다.
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **불투명도**
@@ -98,7 +98,7 @@ ms.locfileid: "5167747"
 - [테두리](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)
   - **Background**
 
-각 속성을 변경 암시적으로 애니메이션 효과 줄 수 있는 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 _전환_ 속성과 전환 형식이 각각에 대 한 사용을 보여 줍니다.
+각 속성을 변경 암시적으로 애니메이션 효과 줄 수 있는 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 각각에 대해 사용할 전환 종류와 _전환_ 속성을 보여줍니다.
 
 | 애니메이션 효과 준된 속성 | 전환 속성 | 암시적 전환 유형 |
 | -- | -- | -- |
@@ -110,7 +110,7 @@ ms.locfileid: "5167747"
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-이 예제에서는 불투명도 속성 및 전환 컨트롤이 활성화 되 면 페이드 인 / 페이드 아웃 비활성화 된 경우 단추를 사용 하 여 하는 방법을 보여 줍니다.
+이 예제에서는 불투명도 속성 및 전환 컨트롤을 사용 하도록 설정 하면 페이드 인 / 페이드 아웃 비활성화 된 경우 단추를 사용 하 여 하는 방법을 보여 줍니다.
 
 ```xaml
 <Button x:Name="SubmitButton"

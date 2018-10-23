@@ -1,20 +1,20 @@
 ---
 author: Xansky
-description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 추가 기능의 집계 취득 데이터를 가져옵니다.
+description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 집계 추가 기능 구입 데이터를 가져옵니다.
 title: Xbox One 추가 기능 획득 가져오기
 ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, Xbox One 추가 기능 취득
+keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, Xbox One 추가 기능 구입
 ms.localizationpriority: medium
 ms.openlocfilehash: 931cd7b351a122c22a59a3a0bc2975c61dc38aaa
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5173500"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5404884"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Xbox One 추가 기능 획득 가져오기
 
@@ -99,7 +99,7 @@ Authorization: Bearer <your access token>
 |---------------------|---------|---------------------|
 | date                | 문자열  | 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
 | addonProductId      | string  | 구입 데이터를 검색할 추가 기능의 *제품 Id* 입니다.                                                                                                                                                                 |
-| addonProductName    | 문자열  | 추가 기능의 표시 이름입니다. 이 값에에서만 나타납니다 응답 데이터 *aggregationLevel* 매개 변수가 **일**에 설정 된 경우 *groupby* 매개 변수에 **addonProductName** 필드를 지정 하지 않는 한 합니다.                                                                                                                                                                                                            |
+| addonProductName    | 문자열  | 추가 기능의 표시 이름입니다. 이 값이 경우에 나타납니다 응답 데이터에서 **하루**에 *aggregationLevel* 매개 변수가 설정 되어 *groupby* 매개 변수에서 **addonProductName** 필드를 지정 하지 않는 한 합니다.                                                                                                                                                                                                            |
 | applicationId       | string  | 추가 기능 구입 데이터를 검색 하려는 앱의 *제품 Id* 입니다.                                                                                                                                                           |
 | applicationName     | 문자열  | 게임의 표시 이름입니다.                                                                                                                                                                                                             |
 | deviceType          | 문자열  | <p>취득을 완료한 장치 유형을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"PC"</li><li>"Phone"</li><li>"콘솔"</li><li>"IoT"</li><li>"서버"</li><li>"태블릿"</li><li>"홀로그램"</li><li>"알 수 없음"</li></ul>                                                                                                  |

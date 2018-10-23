@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e27eada890bd616fb764ebea7bb43890df1eeb0
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5163029"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5395320"
 ---
 # <a name="usersmeinventory"></a>/users/me/inventory
 현재 제공 되는 사용자와 관련 된 인벤토리 집합에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
@@ -28,7 +28,7 @@ ms.locfileid: "5163029"
 
 [GET (/users/me/inventory)](uri-inventoryget.md)
 
-&nbsp;&nbsp;현재 호출자에 게 제공 된 사용자와 관련 된 인벤토리 집합을 제공 합니다.
+&nbsp;&nbsp;현재 호출자에 게 제공 되는 사용자와 관련 된 인벤토리 집합을 제공 합니다.
  
 <a id="ID4E6"></a>
 

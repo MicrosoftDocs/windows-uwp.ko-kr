@@ -12,19 +12,19 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b869f87760498dc6a2224809a42380f1b8f5930b
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "5157867"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396566"
 ---
 # <a name="reputation-uris"></a>평판 URI
  
-이 섹션에서는 **Microsoft.Xbox.Services.Social.ReputationService**에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다. 평판 Uri에 대 한 도메인 reputation.xboxlive.com입니다. 일반적인 URI 표현 될 https://reputation.xboxlive.com/users/xuid(2533274790412952)/feedback. 
+이 섹션에서는 **Microsoft.Xbox.Services.Social.ReputationService**에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다. 평판 Uri에 대 한 도메인 reputation.xboxlive.com입니다. 일반적인 URI 표현 수도 있습니다. https://reputation.xboxlive.com/users/xuid(2533274790412952)/feedback. 
  
-신뢰도 서비스를 사용 하 여 피드백을 [피드백 (JSON)](../../json/json-feedback.md)설명 된 대로 평판 점수를 계산 합니다. 이 점수 ReputationOverall 키 아래에서 사용자에 대 한 통계 영역에 저장 됩니다. 사용자 통계를 검색 하는 방법에 대 한 자세한 내용은 참조 [가져오기 (/users/xuid({xuid})/scids/{scid}/stats)](../userstats/uri-usersxuidscidsscidstatsget.md). 
+신뢰도 서비스를 사용 하 여 피드백을 [피드백 (JSON)](../../json/json-feedback.md)설명 된 대로 평판 점수를 계산 합니다. 이 점수 ReputationOverall 키 아래에 있는 사용자에 대 한 통계 영역에 저장 됩니다. 사용자 통계를 검색 하는 방법에 대 한 자세한 내용은 참조 [가져오기 (/users/xuid({xuid})/scids/{scid}/stats)](../userstats/uri-usersxuidscidsscidstatsget.md). 
  
-모든 플랫폼에서 게임 평판 서비스를 사용할 수 있습니다.
+모든 플랫폼에서 게임 신뢰도 서비스를 사용할 수 있습니다.
  
 <a id="ID4EMB"></a>
 
@@ -41,7 +41,7 @@ ms.locfileid: "5157867"
 
 [/users/me/resetreputation](uri-usersmeresetreputation.md)
 
-&nbsp;&nbsp;적용 팀을에서 현재 사용자의 평판 점수에 액세스할 수 있습니다.
+&nbsp;&nbsp;적용 팀을 현재 사용자의 평판 점수에 액세스할 수 있습니다.
 
 [/users/xuid({xuid})/deleteuserdata](uri-usersxuiddeleteuserdata.md)
 
@@ -49,7 +49,7 @@ ms.locfileid: "5157867"
 
 [/users/xuid({xuid})/resetreputation](uri-usersxuidresetreputation.md)
 
-&nbsp;&nbsp;적용 팀을에 지정 된 사용자의 평판 점수에 액세스할 수 있습니다.
+&nbsp;&nbsp;적용 팀을 지정 된 사용자의 평판 점수에 액세스할 수 있습니다.
  
 <a id="ID4E5B"></a>
 
