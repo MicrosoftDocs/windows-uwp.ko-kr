@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d6132c2ede9f14cd1f4d29195916c8b484abfe9f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435556"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468363"
 ---
 # <a name="create-add-on-store-listings"></a>추가 기능 저장소 목록 만들기
 
@@ -50,9 +50,9 @@ Store 목록을 편집하려면 추가 기능 제출 개요 페이지에서 언�
 
 고객에게 표시될 수 있는 이미지를 제공할 수도 있습니다. 이 아이콘은 정확히 300 x 300픽셀의 .png 파일이어야 합니다.
 
- 
+ 
 
- 
+ 
 
 
 

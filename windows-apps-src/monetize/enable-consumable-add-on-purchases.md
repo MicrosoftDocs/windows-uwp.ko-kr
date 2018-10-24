@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 93d9c5df33e1131861c3e5caff625c689b8f330c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445920"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468888"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>소모성 추가 기능 구매 사용
 

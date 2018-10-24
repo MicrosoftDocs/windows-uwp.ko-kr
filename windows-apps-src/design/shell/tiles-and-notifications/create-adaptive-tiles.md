@@ -1,6 +1,6 @@
 ---
 author: andrewleader
-Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
+Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
 title: 적응형 타일 만들기
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
@@ -13,17 +13,17 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 761d87654ef340f4b539dbefa0950c58f627d310
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444213"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468766"
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
-적응형 타일 템플릿은 다양한 화면 밀도에 맞게 조정되는 단순하고 유연한 태그 언어를 사용하여 고유한 타일 알림 콘텐츠를 디자인할 수 있도록 하는 Windows 10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조하세요.
+적응형 타일 템플릿은 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있도록 Windows10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조하세요.
 
-원할 경우 Windows 10용 알림을 디자인할 때 [Windows 8 타일 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761491)에서 미리 설정된 템플릿을 계속 사용할 수 있습니다.
+(원할 경우 사용할 수 있습니다 여전히 [Windows8 타일 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761491) 에서 미리 설정 된 템플릿을 Windows10 용 알림을 디자인할 때.)
 
 
 ## <a name="getting-started"></a>시작
@@ -75,39 +75,39 @@ ms.locfileid: "5444213"
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        TileMedium = ...
-  
-        TileWide = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText()
-                    {
-                        Text = "Jennifer Parker",
-                        HintStyle = AdaptiveTextStyle.Subtitle
-                    },
-  
-                    new AdaptiveText()
-                    {
-                        Text = "Photos from our trip",
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    },
-  
-                    new AdaptiveText()
-                    {
-                        Text = "Check out these awesome photos I took while in New Zealand!",
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    }
-                }
-            }
-        },
-  
-        TileLarge = ...
-    }
+    Visual = new TileVisual()
+    {
+        TileMedium = ...
+  
+        TileWide = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText()
+                    {
+                        Text = "Jennifer Parker",
+                        HintStyle = AdaptiveTextStyle.Subtitle
+                    },
+  
+                    new AdaptiveText()
+                    {
+                        Text = "Photos from our trip",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    },
+  
+                    new AdaptiveText()
+                    {
+                        Text = "Check out these awesome photos I took while in New Zealand!",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    }
+                }
+            }
+        },
+  
+        TileLarge = ...
+    }
 };
 ```
 
@@ -154,52 +154,52 @@ TileContent content = new TileContent()
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        TileSmall = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Small" }
-                }
-            }
-        },
-  
-        TileMedium = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Medium" }
-                }
-            }
-        },
-  
-        TileWide = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Wide" }
-                }
-            }
-        },
-  
-        TileLarge = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                Children =
-                {
-                    new AdaptiveText() { Text = "Large" }
-                }
-            }
-        }
-    }
+    Visual = new TileVisual()
+    {
+        TileSmall = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Small" }
+                }
+            }
+        },
+  
+        TileMedium = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Medium" }
+                }
+            }
+        },
+  
+        TileWide = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Wide" }
+                }
+            }
+        },
+  
+        TileLarge = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    new AdaptiveText() { Text = "Large" }
+                }
+            }
+        }
+    }
 };
 ```
 
@@ -212,9 +212,9 @@ TileContent content = new TileContent()
 
 알림 페이로드에서 브랜딩 특성을 사용하여 라이브 타일 아래쪽의 브랜딩(표시 이름 및 모서리 로고)을 제어할 수 있습니다. "none," "name"만, "logo"만 또는 "nameAndLogo"를 사용하여 둘 다 표시하도록 선택할 수 있습니다.
 
-**참고**  Windows Mobile에서는 모서리 로고를 지원하지 않으므로 Mobile에서 "logo" 및 "nameAndLogo"는 기본적으로 "name"으로 지정됩니다.
+**참고**Windows Mobile mobile 모서리 로고, 따라서 "logo" 및 "nameAndLogo"는 기본적으로 "name"를 지원 하지 않습니다.
 
- 
+ 
 
 ```xml
 <visual branding="logo">
@@ -225,8 +225,8 @@ TileContent content = new TileContent()
 ```csharp
 new TileVisual()
 {
-    Branding = TileBranding.Logo,
-    ...
+    Branding = TileBranding.Logo,
+    ...
 }
 ```
 
@@ -259,22 +259,22 @@ new TileVisual()
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        Branding = TileBranding.NameAndLogo,
+    Visual = new TileVisual()
+    {
+        Branding = TileBranding.NameAndLogo,
 
-        TileMedium = new TileBinding()
-        {
-            Branding = TileBranding.Logo,
-            ...
-        },
+        TileMedium = new TileBinding()
+        {
+            Branding = TileBranding.Logo,
+            ...
+        },
 
-        // Inherits branding from Visual
-        TileWide = new TileBinding()
-        {
-            ...
-        }
-    }
+        // Inherits branding from Visual
+        TileWide = new TileBinding()
+        {
+            ...
+        }
+    }
 };
 ```
 
@@ -284,9 +284,9 @@ TileContent content = new TileContent()
 
 알림 페이로드에서 브랜딩을 지정하지 않으면 기본 타일의 속성에 따라 브랜딩이 결정됩니다. 기본 타일에 표시 이름이 표시되는 경우 브랜딩의 기본값은 "name"입니다. 그렇지 않고 표시 이름이 표시되지 않는 경우 브랜딩의 기본값은 "none"입니다.
 
-**참고**  이는 기본 브랜딩이 "logo"이던 Windows 8.x에서 변경된 내용입니다.
+**참고**  이는 "logo"이 기본 브랜딩 Windows8.x에서 변경
 
- 
+ 
 
 ## <a name="display-name"></a>표시 이름
 
@@ -315,23 +315,23 @@ TileContent content = new TileContent()
 ```csharp
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        Branding = TileBranding.NameAndLogo,
-        DisplayName = "Wednesday 22",
+    Visual = new TileVisual()
+    {
+        Branding = TileBranding.NameAndLogo,
+        DisplayName = "Wednesday 22",
 
-        TileMedium = new TileBinding()
-        {
-            DisplayName = "Wed. 22",
-            ...
-        },
+        TileMedium = new TileBinding()
+        {
+            DisplayName = "Wed. 22",
+            ...
+        },
 
-        // Inherits DisplayName from Visual
-        TileWide = new TileBinding()
-        {
-            ...
-        }
-    }
+        // Inherits DisplayName from Visual
+        TileWide = new TileBinding()
+        {
+            ...
+        }
+    }
 };
 ```
 
@@ -352,7 +352,7 @@ TileContent content = new TileContent()
 ```csharp
 new AdaptiveText()
 {
-    Text = "This is a line of text"
+    Text = "This is a line of text"
 };
 ```
 
@@ -373,8 +373,8 @@ new AdaptiveText()
 ```csharp
 new AdaptiveText()
 {
-    Text = "This is a line of wrapping text",
-    HintWrap = true
+    Text = "This is a line of wrapping text",
+    HintWrap = true
 };
 ```
 
@@ -395,14 +395,14 @@ new AdaptiveText()
 ```csharp
 new AdaptiveText()
 {
-    Text = "Header content",
-    HintStyle = AdaptiveTextStyle.Base
+    Text = "Header content",
+    HintStyle = AdaptiveTextStyle.Base
 },
 
 new AdaptiveText()
 {
-    Text = "Subheader content",
-    HintStyle = AdaptiveTextStyle.CaptionSubtle
+    Text = "Subheader content",
+    HintStyle = AdaptiveTextStyle.CaptionSubtle
 }
 ```
 
@@ -410,9 +410,9 @@ new AdaptiveText()
 
 ![적응형 타일 텍스트 스타일](images/adaptive-tiles-textstyles.png)
 
-**참고**  hint-style을 지정하지 않으면 스타일의 기본값은 caption입니다.
+**참고**스타일을 기본값은 caption 힌트 스타일 지정 하지 않으면 합니다.
 
- 
+ 
 
 **기본 텍스트 스타일**
 
@@ -427,7 +427,7 @@ new AdaptiveText()
 | 하위 머리글                      | 34epx                    | Light       |
 | 머리글                         | 46epx                    | Light       |
 
- 
+ 
 
 **숫자 텍스트 스타일 변형**
 
@@ -439,7 +439,7 @@ new AdaptiveText()
 | subheaderNumeral |
 | headerNumeral    |
 
- 
+ 
 
 **미묘한 텍스트 스타일 변형**
 
@@ -458,7 +458,7 @@ new AdaptiveText()
 | headerSubtle           |
 | headerNumeralSubtle    |
 
- 
+ 
 
 ## <a name="text-alignment"></a>텍스트 맞춤
 
@@ -473,8 +473,8 @@ new AdaptiveText()
 ```csharp
 new AdaptiveText()
 {
-    Text = "Hello",
-    HintAlign = AdaptiveTextAlign.Center
+    Text = "Hello",
+    HintAlign = AdaptiveTextAlign.Center
 };
 ```
 
@@ -489,9 +489,9 @@ new AdaptiveText()
 
 디바이스 및 화면 전체에서 최상의 환경을 제공하려면 여러 그룹을 제공합니다. 여러 그룹이 있으면 타일이 큰 화면에 맞게 조정될 수 있습니다.
 
-**참고**  그룹의 유효한 하위 요소는 하위 그룹뿐입니다.
+**참고**그룹의 유효한 하위 요소는 하위 그룹은 합니다.
 
- 
+ 
 
 ```xml
 <binding template="TileWide" branding="nameAndLogo">
@@ -518,58 +518,58 @@ new AdaptiveText()
 ```csharp
 TileWide = new TileBinding()
 {
-    Branding = TileBranding.NameAndLogo,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            CreateGroup(
-                from: "Jennifer Parker",
-                subject: "Photos from our trip",
-                body: "Check out these awesome photos I took while in New Zealand!"),
+    Branding = TileBranding.NameAndLogo,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            CreateGroup(
+                from: "Jennifer Parker",
+                subject: "Photos from our trip",
+                body: "Check out these awesome photos I took while in New Zealand!"),
 
-            // For spacing
-            new AdaptiveText(),
+            // For spacing
+            new AdaptiveText(),
 
-            CreateGroup(
-                from: "Steve Bosniak",
-                subject: "Build 2015 Dinner",
-                body: "Want to go out for dinner after Build tonight?")
-        }
-    }
+            CreateGroup(
+                from: "Steve Bosniak",
+                subject: "Build 2015 Dinner",
+                body: "Want to go out for dinner after Build tonight?")
+        }
+    }
 }
 
 ...
 
 private static AdaptiveGroup CreateGroup(string from, string subject, string body)
 {
-    return new AdaptiveGroup()
-    {
-        Children =
-        {
-            new AdaptiveSubgroup()
-            {
-                Children =
-                {
-                    new AdaptiveText()
-                    {
-                        Text = from,
-                        HintStyle = AdaptiveTextStyle.Subtitle
-                    },
-                    new AdaptiveText()
-                    {
-                        Text = subject,
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    },
-                    new AdaptiveText()
-                    {
-                        Text = body,
-                        HintStyle = AdaptiveTextStyle.CaptionSubtle
-                    }
-                }
-            }
-        }
-    };
+    return new AdaptiveGroup()
+    {
+        Children =
+        {
+            new AdaptiveSubgroup()
+            {
+                Children =
+                {
+                    new AdaptiveText()
+                    {
+                        Text = from,
+                        HintStyle = AdaptiveTextStyle.Subtitle
+                    },
+                    new AdaptiveText()
+                    {
+                        Text = subject,
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    },
+                    new AdaptiveText()
+                    {
+                        Text = body,
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    }
+                }
+            }
+        }
+    };
 }
 ```
 
@@ -617,7 +617,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 </tbody>
 </table>
 
- 
+ 
 
 ![하위 그룹, 고른 열](images/adaptive-tiles-subgroups01.png)
 
@@ -648,7 +648,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 </tbody>
 </table>
 
- 
+ 
 
 ![하위 그룹, 열 하나의 크기가 다른 열의 2배](images/adaptive-tiles-subgroups02.png)
 
@@ -679,13 +679,13 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 </tbody>
 </table>
 
- 
+ 
 
 ![하위 그룹, 가중치 합계가 100](images/adaptive-tiles-subgroups03.png)
 
-**참고**  열 사이에는 8픽셀 여백이 자동으로 추가됩니다.
+**참고**열 사이의 8 픽셀 여백이 자동으로 추가 됩니다.
 
- 
+ 
 
 하위 그룹이 두 개 이상인 경우 양의 정수만 사용할 수 있는 **hint-weight**를 지정해야 합니다. 첫 번째 하위 그룹에 대해 hint-weight를 지정하지 않으면 가중치 50이 할당됩니다. hint-weight를 지정하지 않은 다음 하위 그룹에는 100에서 이전 가중치의 합계를 뺀 값과 동일한 가중치 또는 1(결과가 0인 경우)이 할당됩니다. hint-weight를 지정하지 않은 나머지 하위 그룹에는 가중치 1이 할당됩니다.
 
@@ -731,59 +731,59 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 ```csharp
 TileWide = new TileBinding()
 {
-    DisplayName = "Seattle",
-    Branding = TileBranding.Name,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
-                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°"),
-                    CreateSubgroup("Wed", "Sunny.png", "59°", "43°"),
-                    CreateSubgroup("Thu", "Sunny.png", "62°", "42°"),
-                    CreateSubgroup("Fri", "Sunny.png", "71°", "66°")
-                }
-            }
-        }
-    }
+    DisplayName = "Seattle",
+    Branding = TileBranding.Name,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
+                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°"),
+                    CreateSubgroup("Wed", "Sunny.png", "59°", "43°"),
+                    CreateSubgroup("Thu", "Sunny.png", "62°", "42°"),
+                    CreateSubgroup("Fri", "Sunny.png", "71°", "66°")
+                }
+            }
+        }
+    }
 }
 
 ...
 
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        HintWeight = 1,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Weather/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        HintWeight = 1,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -799,7 +799,7 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 > [!NOTE]
 > 참고: 앱의 패키지, 앱의 로컬 저장소 또는 웹에서 이미지를 사용할 수 있습니다. Fall Creators Update에서 일반 연결의 경우 웹 이미지는 최대 3MB이고 데이터 통신 연결의 경우 1MB입니다. Fall Creators Update를 아직 실행하지 않는 디바이스에서 웹 이미지는 200KB 이하여야 합니다.
 
- 
+ 
 
 추가 동작을 지정하지 않으면 이미지는 균일하게 축소 또는 확장되어 사용 가능한 너비를 채웁니다. 이 예제는 두 열과 인라인 이미지를 사용하는 타일을 보여 줍니다. 인라인 이미지는 늘어나서 열 너비를 채웁니다.
 
@@ -825,53 +825,53 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 ```csharp
 TileMedium = new TileBinding()
 {
-    DisplayName = "Seattle",
-    Branding = TileBranding.Name,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
-                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°")
-                }
-            }
-        }
-    }
+    DisplayName = "Seattle",
+    Branding = TileBranding.Name,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
+                    CreateSubgroup("Tue", "Cloudy.png", "57°", "38°")
+                }
+            }
+        }
+    }
 }
 ...
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Weather/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -894,17 +894,17 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 ```csharp
 TileLarge = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveImage()
-            {
-                Source = "Assets/fable.jpg",
-                HintAlign = AdaptiveImageAlign.Center
-            }
-        }
-    }
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveImage()
+            {
+                Source = "Assets/fable.jpg",
+                HintAlign = AdaptiveImageAlign.Center
+            }
+        }
+    }
 }
 ```
 
@@ -938,55 +938,55 @@ TileLarge = new TileBinding()
 ```csharp
 TileMedium = new TileBinding()
 {
-    Branding = TileBranding.None,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "4.jpg", "63°", "42°"),
-                    CreateSubgroup("Tue", "3.jpg", "57°", "38°")
-                }
-            }
-        }
-    }
+    Branding = TileBranding.None,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "4.jpg", "63°", "42°"),
+                    CreateSubgroup("Tue", "3.jpg", "57°", "38°")
+                }
+            }
+        }
+    }
 }
 
 ...
 
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        HintWeight = 1,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Numbers/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        HintWeight = 1,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Numbers/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -1014,45 +1014,45 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 ```csharp
 TileLarge = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        TextStacking = TileTextStacking.Center,
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    new AdaptiveSubgroup() { HintWeight = 1 },
-                    new AdaptiveSubgroup()
-                    {
-                        HintWeight = 2,
-                        Children =
-                        {
-                            new AdaptiveImage()
-                            {
-                                Source = "Assets/Apps/Hipstame/hipster.jpg",
-                                HintCrop = AdaptiveImageCrop.Circle
-                            }
-                        }
-                    },
-                    new AdaptiveSubgroup() { HintWeight = 1 }
-                }
-            },
-            new AdaptiveText()
-            {
-                Text = "Hi,",
-                HintStyle = AdaptiveTextStyle.Title,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = "MasterHip",
-                HintStyle = AdaptiveTextStyle.SubtitleSubtle,
-                HintAlign = AdaptiveTextAlign.Center
-            }
-        }
-    }
+    Content = new TileBindingContentAdaptive()
+    {
+        TextStacking = TileTextStacking.Center,
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    new AdaptiveSubgroup() { HintWeight = 1 },
+                    new AdaptiveSubgroup()
+                    {
+                        HintWeight = 2,
+                        Children =
+                        {
+                            new AdaptiveImage()
+                            {
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
+                            }
+                        }
+                    },
+                    new AdaptiveSubgroup() { HintWeight = 1 }
+                }
+            },
+            new AdaptiveText()
+            {
+                Text = "Hi,",
+                HintStyle = AdaptiveTextStyle.Title,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = "MasterHip",
+                HintStyle = AdaptiveTextStyle.SubtitleSubtle,
+                HintAlign = AdaptiveTextAlign.Center
+            }
+        }
+    }
 }
 ```
 
@@ -1082,59 +1082,59 @@ TileLarge = new TileBinding()
 ```csharp
 TileWide = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        BackgroundImage = new TileBackgroundImage()
-        {
-            Source = "Assets/Mostly Cloudy-Background.jpg"
-        },
+    Content = new TileBindingContentAdaptive()
+    {
+        BackgroundImage = new TileBackgroundImage()
+        {
+            Source = "Assets/Mostly Cloudy-Background.jpg"
+        },
 
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°")
-                    ...
-                }
-            }
-        }
-    }
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°")
+                    ...
+                }
+            }
+        }
+    }
 }
 
 ...
 
 private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new AdaptiveSubgroup()
-    {
-        HintWeight = 1,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = day,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveImage()
-            {
-                Source = "Assets/Weather/" + image,
-                HintRemoveMargin = true
-            },
-            new AdaptiveText()
-            {
-                Text = highTemp,
-                HintAlign = AdaptiveTextAlign.Center
-            },
-            new AdaptiveText()
-            {
-                Text = lowTemp,
-                HintAlign = AdaptiveTextAlign.Center,
-                HintStyle = AdaptiveTextStyle.CaptionSubtle
-            }
-        }
-    };
+    return new AdaptiveSubgroup()
+    {
+        HintWeight = 1,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = day,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveImage()
+            {
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
+            },
+            new AdaptiveText()
+            {
+                Text = highTemp,
+                HintAlign = AdaptiveTextAlign.Center
+            },
+            new AdaptiveText()
+            {
+                Text = lowTemp,
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
+            }
+        }
+    };
 }
 ```
 
@@ -1157,27 +1157,27 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 ```csharp
 TileWide = new TileBinding()
 {
-    Branding = TileBranding.Name,
-    Content = new TileBindingContentAdaptive()
-    {
-        PeekImage = new TilePeekImage()
-        {
-            Source = "Assets/Apps/Hipstame/hipster.jpg"
-        },
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = "New Message"
-            },
-            new AdaptiveText()
-            {
-                Text = "Hey, have you tried Windows 10 yet?",
-                HintStyle = AdaptiveTextStyle.CaptionSubtle,
-                HintWrap = true
-            }
-        }
-    }
+    Branding = TileBranding.Name,
+    Content = new TileBindingContentAdaptive()
+    {
+        PeekImage = new TilePeekImage()
+        {
+            Source = "Assets/Apps/Hipstame/hipster.jpg"
+        },
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = "New Message"
+            },
+            new AdaptiveText()
+            {
+                Text = "Hey, have you tried Windows 10 yet?",
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintWrap = true
+            }
+        }
+    }
 }
 ```
 
@@ -1230,16 +1230,16 @@ new TilePeekImage()
 ```csharp
 TileWide = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        BackgroundImage = new TileBackgroundImage()
-        {
-            Source = "Assets/Mostly Cloudy-Background.jpg",
-            HintOverlay = 60
-        },
+    Content = new TileBindingContentAdaptive()
+    {
+        BackgroundImage = new TileBackgroundImage()
+        {
+            Source = "Assets/Mostly Cloudy-Background.jpg",
+            HintOverlay = 60
+        },
 
-        ...
-    }
+        ...
+    }
 }
 ```
 
@@ -1253,23 +1253,23 @@ Windows 10 버전 1511에서는 배경 이미지와 마찬가지로 미리 보�
 
 ```xml
 <binding template="TileMedium">
-  <image hint-overlay="20" src="Assets\Map.jpg" placement="peek"/>
-  ...
+  <image hint-overlay="20" src="Assets\Map.jpg" placement="peek"/>
+  ...
 </binding>
 ```
 
 ```csharp
 TileMedium = new TileBinding()
 {
-    Content = new TileBindingContentAdaptive()
-    {
-        PeekImage = new TilePeekImage()
-        {
-            Source = "Assets/Map.jpg",
-            HintOverlay = 20
-        },
-        ...
-    }
+    Content = new TileBindingContentAdaptive()
+    {
+        PeekImage = new TilePeekImage()
+        {
+            Source = "Assets/Map.jpg",
+            HintOverlay = 20
+        },
+        ...
+    }
 }
 ```
 
@@ -1296,27 +1296,27 @@ TileMedium = new TileBinding()
 ```csharp
 TileMedium = new TileBinding()
 {
-    Branding = TileBranding.Logo,
-    Content = new TileBindingContentAdaptive()
-    {
-        TextStacking = TileTextStacking.Center,
-        Children =
-        {
-            new AdaptiveText()
-            {
-                Text = "Hi,",
-                HintStyle = AdaptiveTextStyle.Base,
-                HintAlign = AdaptiveTextAlign.Center
-            },
+    Branding = TileBranding.Logo,
+    Content = new TileBindingContentAdaptive()
+    {
+        TextStacking = TileTextStacking.Center,
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = "Hi,",
+                HintStyle = AdaptiveTextStyle.Base,
+                HintAlign = AdaptiveTextAlign.Center
+            },
 
-            new AdaptiveText()
-            {
-                Text = "MasterHip",
-                HintStyle = AdaptiveTextStyle.CaptionSubtle,
-                HintAlign = AdaptiveTextAlign.Center
-            }
-        }
-    }
+            new AdaptiveText()
+            {
+                Text = "MasterHip",
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintAlign = AdaptiveTextAlign.Center
+            }
+        }
+    }
 }
 ```
 
@@ -1343,53 +1343,53 @@ TileMedium = new TileBinding()
 ```csharp
 TileWide = new TileBinding()
 {
-    Branding = TileBranding.NameAndLogo,
-    Content = new TileBindingContentAdaptive()
-    {
-        Children =
-        {
-            new AdaptiveGroup()
-            {
-                Children =
-                {
-                    // Image column
-                    new AdaptiveSubgroup()
-                    {
-                        HintWeight = 33,
-                        Children =
-                        {
-                            new AdaptiveImage()
-                            {
-                                Source = "Assets/Apps/Hipstame/hipster.jpg",
-                                HintCrop = AdaptiveImageCrop.Circle
-                            }
-                        }
-                    },
+    Branding = TileBranding.NameAndLogo,
+    Content = new TileBindingContentAdaptive()
+    {
+        Children =
+        {
+            new AdaptiveGroup()
+            {
+                Children =
+                {
+                    // Image column
+                    new AdaptiveSubgroup()
+                    {
+                        HintWeight = 33,
+                        Children =
+                        {
+                            new AdaptiveImage()
+                            {
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
+                            }
+                        }
+                    },
 
-                    // Text column
-                    new AdaptiveSubgroup()
-                    {
-                        // Vertical align its contents
-                        TextStacking = TileTextStacking.Center,
-                        Children =
-                        {
-                            new AdaptiveText()
-                            {
-                                Text = "Hi,",
-                                HintStyle = AdaptiveTextStyle.Subtitle
-                            },
+                    // Text column
+                    new AdaptiveSubgroup()
+                    {
+                        // Vertical align its contents
+                        TextStacking = TileTextStacking.Center,
+                        Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = "Hi,",
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            },
 
-                            new AdaptiveText()
-                            {
-                                Text = "MasterHip",
-                                HintStyle = AdaptiveTextStyle.BodySubtle
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+                            new AdaptiveText()
+                            {
+                                Text = "MasterHip",
+                                HintStyle = AdaptiveTextStyle.BodySubtle
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -1400,9 +1400,9 @@ TileWide = new TileBinding()
 * [UWP 커뮤니티 도구 키트 - 알림](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
 * [GitHub의 Windows 알림](https://github.com/WindowsNotifications)
 
- 
+ 
 
- 
+ 
 
 
 

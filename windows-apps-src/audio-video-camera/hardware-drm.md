@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 160a4ab0ff5bdc40ea46ff6d8fb9fd8e47f560e3
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439877"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5474358"
 ---
 # <a name="hardware-drm"></a>하드웨어 DRM
 
@@ -29,7 +29,7 @@ ms.locfileid: "5439877"
 
 ## <a name="windows-tee-implementation"></a>Windows TEE 구현
 
-이 항목에서는 Windows 10에서 TEE(신뢰할 수 있는 실행 환경)를 구현하는 방법을 간략하게 설명합니다.
+이 항목에서는 Windows10 신뢰할 수 있는 실행 환경 (TEE)를 구현 하는 방법에 대 한 간략 한 개요를 제공 합니다.
 
 Windows TEE 구현의 세부 정보는 이 문서의 범위를 벗어납니다. 그러나 표준 포팅 키트 TEE 포트와 Windows 포트 사이의 차이점을 간략하게 설명하면 도움이 될 수 있습니다. Windows에서는 OEM 프록시 계층을 구현하고 Windows Media Foundation 하위 시스템의 사용자 모드 드라이버로 직렬화된 PRITEE 함수 호출을 전송합니다. 결국 이 호출은 Windows TEE(신뢰할 수 있는 실행 환경) 드라이버 또는 OEM의 그래픽 드라이버로 라우트됩니다. 이러한 방법에 대한 세부 정보는 이 문서의 범위를 벗어납니다. 다음 다이어그램에서는 Windows 포트의 구성 요소 조작을 보여줍니다. Windows PlayReady TEE 구현을 개발하려는 경우 <WMLA@Microsoft.com>에 연락할 수 있습니다.
 

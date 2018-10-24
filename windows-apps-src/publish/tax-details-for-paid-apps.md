@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
 ms.openlocfilehash: 461c9303bbb26e5c4739ca60c03343008377df6c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5444831"
+ms.locfileid: "5474388"
 ---
 # <a name="tax-details-for-paid-apps"></a>유료 앱의 세금 세부 정보
 
@@ -30,7 +30,7 @@ ms.locfileid: "5444831"
 > 
 > 재판매인 국가/지역 및 상황에 대한 납세 책임([아래](#reseller-countriesregions)에 설명된 대로)은 아래 표의 정보에도 불구하고 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)의 별첨 C에 포함됩니다.
 
- 
+ 
 
 | 국가/지역                   | 선택한 가격의 세금 고려 사항                                                                                                             | 지급 관련 정보                    | 납세 책임 |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------|
@@ -226,7 +226,7 @@ ms.locfileid: "5444831"
 | 잠비아                           | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 | 짐바브웨                         | 선택한 가격이 최종 판매 가격이며 적용되는 모든 세금을 포함합니다.                                                                   | 선택한 가격의 70%                 | 개발자          |
 
- 
+ 
 
 ## <a name="mixed-remittance-countriesregions"></a>혼합 송금 국가/지역
 
@@ -238,7 +238,7 @@ ms.locfileid: "5444831"
 | 남아프리카 공화국                       |
 | 베트남                            |
 
- 
+ 
 
 ## <a name="reseller-countriesregions"></a>재판매인 국가/지역
 
@@ -250,11 +250,11 @@ ms.locfileid: "5444831"
 | 중국(Windows Phone 7.x를 실행하는 모바일 통신 장치 및 Windows8.x를 실행하는 개인용 컴퓨터 제외) |
 | 브라질(Windows 10을 실행하는 디바이스를 통해 수행한 구매만 해당)     |
 
- 
+ 
 
 
 
- 
+ 
 
 
 

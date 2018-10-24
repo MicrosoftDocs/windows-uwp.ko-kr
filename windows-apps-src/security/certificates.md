@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 1db3af004831f010a3dd4918898ce5f7cf70bb1a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438122"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468601"
 ---
 # <a name="intro-to-certificates"></a>인증서 소개
 
@@ -26,7 +26,7 @@ ms.locfileid: "5438122"
 
 ### <a name="shared-certificate-stores"></a>공유 인증서 저장소
 
-UWP 앱은 Windows 8에 도입된 새로운 격리형 응용 프로그램 모델을 사용합니다. 이 모델에서는 앱이 앱 컨테이너라는 하위 수준 운영 체제 구성체에서 실행되게 하여 명시적으로 허용된 경우 외에는 앱 외부의 리소스나 파일에 액세스하지 못하게 할 수 있습니다. 다음 섹션에서는 PKI(공개 키 인프라)에 의미를 설명합니다.
+UWP 앱 Windows8에 도입 된 새로운 격리 형 응용 프로그램 모델을 사용 합니다. 이 모델에서는 앱이 앱 컨테이너라는 하위 수준 운영 체제 구성체에서 실행되게 하여 명시적으로 허용된 경우 외에는 앱 외부의 리소스나 파일에 액세스하지 못하게 할 수 있습니다. 다음 섹션에서는 PKI(공개 키 인프라)에 의미를 설명합니다.
 
 ### <a name="certificate-storage-per-app-container"></a>앱 컨테이너별 인증서 저장소
 

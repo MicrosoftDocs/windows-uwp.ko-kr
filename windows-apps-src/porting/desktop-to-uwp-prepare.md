@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
 ms.openlocfilehash: 54c5f061cbb10759785bf0014a163adc8c3e3288
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438221"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468661"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>데스크톱 응용 프로그램 패키징 준비
 

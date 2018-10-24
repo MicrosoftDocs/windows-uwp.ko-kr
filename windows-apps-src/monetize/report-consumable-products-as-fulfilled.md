@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 처리, 소모성
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cbacd35a25e8eaf9673d118fcbece835572e289
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440378"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468405"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>소모성 제품을 처리됨으로 보고
 
@@ -144,7 +144,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 | 401  | 권한 없음 | PartnerAadTicketRequired   | Azure AD 액세스 토큰이 권한 부여 헤더의 서비스에 전달되지 않았습니다.                                                                                                   |
 | 401  | 권한 없음 | InconsistentClientId       | 요청 본문에서 Microsoft Store ID 키의 *clientId* 클레임과 권한 부여 헤더에서 Azure AD 액세스 토큰의 *appid* 클레임이 일치하지 않습니다.                     |
 
-<span/> 
+<span/> 
 
 ## <a name="related-topics"></a>관련 항목
 

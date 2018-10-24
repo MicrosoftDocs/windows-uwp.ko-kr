@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp, 광고, 광고, 광고 단위, 테스트
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7257e6cae518458c5c0bbc525d8013708717e5
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444375"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468504"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>앱에서 광고 단위 설정
 
@@ -87,6 +87,6 @@ Windows 개발자 센터 대시보드에서 라이브 광고 단위를 가져와
 * [기본 광고](native-ads.md)
 
 
- 
+ 
 
- 
+ 

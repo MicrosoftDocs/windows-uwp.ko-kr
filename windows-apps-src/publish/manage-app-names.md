@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 이름 변경 앱 이름, 업데이트 응용 프로그램 이름, 게임, 제품 이름
 ms.localizationpriority: medium
 ms.openlocfilehash: 878b105541691834dbbe35b5210f33045afdc47b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438211"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468631"
 ---
 # <a name="manage-app-names"></a>앱 이름 관리
 
@@ -64,9 +64,9 @@ ms.locfileid: "5438211"
 > [!TIP]
 > 이 대 한 예약 된 이름을 사용 하 여 대시보드에서 각 앱이 나타납니다. 응용 프로그램의 이름을 바꾸려면 위의 단계를 따라 대시보드에서 새 이름을 사용 하 여 표시 되 게 하려는 경우 ( **앱 이름 관리** 페이지에서 **삭제** 를 클릭) 하 여 원래 이름을 삭제 해야 합니다. 
 
- 
+ 
 
- 
+ 
 
 
 

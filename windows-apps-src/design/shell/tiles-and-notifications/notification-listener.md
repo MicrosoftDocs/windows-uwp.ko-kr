@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437467"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468415"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 
@@ -46,12 +46,12 @@ ms.locfileid: "5437467"
 ```csharp
 if (ApiInformation.IsTypePresent("Windows.UI.Notifications.Management.UserNotificationListener"))
 {
-    // Listener supported!
+    // Listener supported!
 }
- 
+ 
 else
 {
-    // Older version of Windows, no Listener
+    // Older version of Windows, no Listener
 }
 ```
 
@@ -63,35 +63,35 @@ else
 ```csharp
 // Get the listener
 UserNotificationListener listener = UserNotificationListener.Current;
- 
+ 
 // And request access to the user's notifications (must be called from UI thread)
 UserNotificationListenerAccessStatus accessStatus = await listener.RequestAccessAsync();
- 
+ 
 switch (accessStatus)
 {
-    // This means the user has granted access.
-    case UserNotificationListenerAccessStatus.Allowed:
- 
-        // Yay! Proceed as normal
-        break;
- 
-    // This means the user has denied access.
-    // Any further calls to RequestAccessAsync will instantly
-    // return Denied. The user must go to the Windows settings
-    // and manually allow access.
-    case UserNotificationListenerAccessStatus.Denied:
- 
-        // Show UI explaining that listener features will not
-        // work until user allows access.
-        break;
- 
-    // This means the user closed the prompt without
-    // selecting either allow or deny. Further calls to
-    // RequestAccessAsync will show the dialog again.
-    case UserNotificationListenerAccessStatus.Unspecified:
- 
-        // Show UI that allows the user to bring up the prompt again
-        break;
+    // This means the user has granted access.
+    case UserNotificationListenerAccessStatus.Allowed:
+ 
+        // Yay! Proceed as normal
+        break;
+ 
+    // This means the user has denied access.
+    // Any further calls to RequestAccessAsync will instantly
+    // return Denied. The user must go to the Windows settings
+    // and manually allow access.
+    case UserNotificationListenerAccessStatus.Denied:
+ 
+        // Show UI explaining that listener features will not
+        // work until user allows access.
+        break;
+ 
+    // This means the user closed the prompt without
+    // selecting either allow or deny. Further calls to
+    // RequestAccessAsync will show the dialog again.
+    case UserNotificationListenerAccessStatus.Unspecified:
+ 
+        // Show UI that allows the user to bring up the prompt again
+        break;
 }
 ```
 
@@ -115,10 +115,10 @@ IReadOnlyList<UserNotification> notifs = await listener.GetNotificationsAsync(No
 ```csharp
 public sealed class UserNotification
 {
-    public AppInfo AppInfo { get; }
-    public DateTimeOffset CreationTime { get; }
-    public uint Id { get; }
-    public Notification Notification { get; }
+    public AppInfo AppInfo { get; }
+    public DateTimeOffset CreationTime { get; }
+    public uint Id { get; }
+    public Notification Notification { get; }
 }
 ```
 
@@ -130,10 +130,10 @@ public sealed class UserNotification
 ```csharp
 // Select the first notification
 UserNotification notif = notifs[0];
- 
+ 
 // Get the app's display name
 string appDisplayName = notif.AppInfo.DisplayInfo.DisplayName;
- 
+ 
 // Get the app's logo
 BitmapImage appLogo = new BitmapImage();
 RandomAccessStreamReference appLogoStream = notif.AppInfo.DisplayInfo.GetLogo(new Size(16, 16));
@@ -147,18 +147,18 @@ await appLogo.SetSourceAsync(await appLogoStream.OpenReadAsync());
 ```csharp
 // Get the toast binding, if present
 NotificationBinding toastBinding = notif.Notification.Visual.GetBinding(KnownNotificationBindings.ToastGeneric);
- 
+ 
 if (toastBinding != null)
 {
-    // And then get the text elements from the toast binding
-    IReadOnlyList<AdaptiveNotificationText> textElements = toastBinding.GetTextElements();
- 
-    // Treat the first text element as the title text
-    string titleText = textElements.FirstOrDefault()?.Text;
- 
-    // We'll treat all subsequent text elements as body text,
-    // joining them together via newlines.
-    string bodyText = string.Join("\n", textElements.Skip(1).Select(t => t.Text));
+    // And then get the text elements from the toast binding
+    IReadOnlyList<AdaptiveNotificationText> textElements = toastBinding.GetTextElements();
+ 
+    // Treat the first text element as the title text
+    string titleText = textElements.FirstOrDefault()?.Text;
+ 
+    // We'll treat all subsequent text elements as body text,
+    // joining them together via newlines.
+    string bodyText = string.Join("\n", textElements.Skip(1).Select(t => t.Text));
 }
 ```
 
@@ -191,23 +191,23 @@ listener.ClearNotifications();
 
 ```csharp
 // TODO: Request/check Listener access via UserNotificationListener.Current.RequestAccessAsync
- 
+ 
 // TODO: Request/check background task access via BackgroundExecutionManager.RequestAccessAsync
- 
+ 
 // If background task isn't registered yet
 if (!BackgroundTaskRegistration.AllTasks.Any(i => i.Value.Name.Equals("UserNotificationChanged")))
 {
-    // Specify the background task
-    var builder = new BackgroundTaskBuilder()
-    {
-        Name = "UserNotificationChanged"
-    };
- 
-    // Set the trigger for Listener, listening to Toast Notifications
-    builder.SetTrigger(new UserNotificationChangedTrigger(NotificationKinds.Toast));
- 
-    // Register the task
-    builder.Register();
+    // Specify the background task
+    var builder = new BackgroundTaskBuilder()
+    {
+        Name = "UserNotificationChanged"
+    };
+ 
+    // Set the trigger for Listener, listening to Toast Notifications
+    builder.SetTrigger(new UserNotificationChangedTrigger(NotificationKinds.Toast));
+ 
+    // Register the task
+    builder.Register();
 }
 ```
 
@@ -216,18 +216,18 @@ if (!BackgroundTaskRegistration.AllTasks.Any(i => i.Value.Name.Equals("UserNotif
 ```csharp
 protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 {
-    var deferral = args.TaskInstance.GetDeferral();
- 
-    switch (args.TaskInstance.Task.Name)
-    {
-        case "UserNotificationChanged":
-            // Call your own method to process the new/removed notifications
-            // The next section of documentation discusses this code
-            await MyWearableHelpers.SyncNotifications();
-            break;
-    }
- 
-    deferral.Complete();
+    var deferral = args.TaskInstance.GetDeferral();
+ 
+    switch (args.TaskInstance.Task.Name)
+    {
+        case "UserNotificationChanged":
+            // Call your own method to process the new/removed notifications
+            // The next section of documentation discusses this code
+            await MyWearableHelpers.SyncNotifications();
+            break;
+    }
+ 
+    deferral.Complete();
 }
 ```
 
@@ -243,37 +243,37 @@ protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs
 ```csharp
 // Get all the current notifications from the platform
 IReadOnlyList<UserNotification> userNotifications = await listener.GetNotificationsAsync(NotificationKinds.Toast);
- 
+ 
 // Obtain the notifications that our wearable currently has displayed
 IList<uint> wearableNotificationIds = GetNotificationsOnWearable();
- 
+ 
 // Copy the currently displayed into a list of notification ID's to be removed
 var toBeRemoved = new List<uint>(wearableNotificationIds);
- 
+ 
 // For each notification in the platform
 foreach (UserNotification userNotification in userNotifications)
 {
-    // If we've already displayed this notification
-    if (wearableNotificationIds.Contains(userNotification.Id))
-    {
-        // We want to KEEP it displayed, so take it out of the list
-        // of notifications to remove.
-        toBeRemoved.Remove(userNotification.Id);
-    }
- 
-    // Othwerise it's a new notification
-    else
-    {
-        // Display it on the Wearable
-        SendNotificationToWearable(userNotification);
-    }
+    // If we've already displayed this notification
+    if (wearableNotificationIds.Contains(userNotification.Id))
+    {
+        // We want to KEEP it displayed, so take it out of the list
+        // of notifications to remove.
+        toBeRemoved.Remove(userNotification.Id);
+    }
+ 
+    // Othwerise it's a new notification
+    else
+    {
+        // Display it on the Wearable
+        SendNotificationToWearable(userNotification);
+    }
 }
- 
+ 
 // Now our toBeRemoved list only contains notification ID's that no longer exist in the platform.
 // So we will remove all those notifications from the wearable.
 foreach (uint id in toBeRemoved)
 {
-    RemoveNotificationFromWearable(id);
+    RemoveNotificationFromWearable(id);
 }
 ```
 
@@ -288,14 +288,14 @@ foreach (uint id in toBeRemoved)
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
 listener.NotificationChanged += Listener_NotificationChanged;
- 
+ 
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
+    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
 }
 ```
 
 
-## <a name="how-to-fix-delays-in-the-background-task"></a>백그라운드 작업에서 지연 문제를 해결하는 방법
+## <a name="howto-fixdelays-in-the-background-task"></a>백그라운드 작업에서 방법 fixdelays
 
-앱을 테스트하다 보면 백그라운드 작업이 지연되고 몇 분 동안 트리거되지 않는 경우를 종종 경험합니다. 이 문제를 해결하려면 사용자에게 시스템 설정 -> 시스템 -> 배터리 -> 앱에 의한 배터리 사용으로 이동하여 목록에서 앱을 찾아 선택하고 "백그라운드에서 항상 허용됨"으로 변경하라는 메시지를 표시하는 것이 좋습니다. 이와 같이 설정하면 알림 수신 후 약 1초 이내에 반드시 백그라운드 작업이 트리거될 것입니다.
+앱을 테스트하다 보면 백그라운드 작업이 지연되고 몇 분 동안 트리거되지 않는 경우를 종종 경험합니다. 이 문제를 해결 하려면 사용자 토고 시스템 설정-> 시스템-> 배터리의 한 배터리 사용 하 여 앱->, 목록에서 앱을 찾을, 선택 하 고, "항상 허용 되는 백그라운드에서"로 변경 합니다.그러면 백그라운드 작업 항상 트리거하도록 내에서 약 1 초의 알림 수신 합니다.
