@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432364"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470295"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
-**참고** 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
+**참고**바인딩 **{x: Bind}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
 Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이 통해:
 

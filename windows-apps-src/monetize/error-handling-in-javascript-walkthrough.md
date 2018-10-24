@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e25de40c7fd28cb43c308bd0361b400e7bf6909
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443224"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470000"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>JavaScript에서 오류 처리 연습
 

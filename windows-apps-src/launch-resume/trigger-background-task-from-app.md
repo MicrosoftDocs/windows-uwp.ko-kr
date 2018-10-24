@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: 백그라운드 작업 트리거 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ccd171f53795ef71830ffb022d0468facb3ac4f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431784"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469863"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>앱 내에서 백그라운드 작업 트리거
 
@@ -145,7 +145,7 @@ var result = await _AppTrigger.RequestAsync();
 
 ## <a name="remarks"></a>설명
 
-Windows 10부터 반드시 더 이상 백그라운드 작업을 활용 하기 위해 잠금 화면에 앱을 추가할 수 없습니다.
+Windows10부터 반드시 더 이상 백그라운드 작업을 활용 하기 위해 잠금 화면에 앱을 추가할 수 없습니다.
 
 백그라운드 작업을 먼저 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 호출한 경우는 **ApplicationTrigger** 를 사용 하 여 실행 됩니다.
 

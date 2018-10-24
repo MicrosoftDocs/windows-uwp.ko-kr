@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433959"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478340"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -44,7 +44,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 �
 3.  [앱 패키지 업로드 파일을 만듭니다](#create-an-app-package-upload-file). Visual Studio 앱 패키지 마법사를 사용하여 앱 패키지를 만든 다음 Windows 앱 인증 키트를 사용하여 인증합니다.
 4.  [앱 패키지 사이드로드](#sideload-your-app-package). 앱을 장치에 사이드로드한 후에 앱이 예상대로 작동하는지 테스트할 수 있습니다.
 
-위의 단계를 완료한 후에는 앱을 배포할 수 있습니다. 내부 사용자 전용이므로 판매하지 않을 LOB(기간 업무) 앱이 있는 경우 Windows 10 장치에 설치하기 위해 이 앱을 사이드로드할 수 있습니다.
+위의 단계를 완료한 후에는 앱을 배포할 수 있습니다. 내부 사용자 전용 이므로 판매 하지 않으려는 업무의 (lob 기간 업무) 앱이 있는 경우 모든 Windows10 장치에 설치 하기 위해이 앱 테스트용으로 로드할 수 있습니다.
 
 ## <a name="before-packaging-your-app"></a>앱을 패키징하기 전에
 
@@ -117,20 +117,20 @@ Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.ms
 
     Windows 앱 인증 키트는 다양한 테스트를 수행하고 결과를 보여 줍니다. 더 자세한 정보는 [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/mt186450)를 참조하세요.
 
-    테스트에 사용할 원격 Windows 10 장치가 있는 경우 해당 장치에서 수동으로 Windows 앱 인증 키트를 설치해야 합니다. 다음 섹션에서 다음 단계를 안내합니다. 작업이 완료되면 **원격 컴퓨터**를 선택하고 **Windows 앱 인증 키트 시작**을 클릭하여 원격 디바이스에 연결하고 유효성 검사를 실행할 수 있습니다.
+    테스트에 사용할 원하는 원격 Windows10 장치가 있는 경우 해당 장치에서 수동으로 Windows 앱 인증 키트를 설치 해야 합니다. 다음 섹션에서 다음 단계를 안내합니다. 작업이 완료되면 **원격 컴퓨터**를 선택하고 **Windows 앱 인증 키트 시작**을 클릭하여 원격 디바이스에 연결하고 유효성 검사를 실행할 수 있습니다.
 
 12. WACK가 완료되고 앱이 인증에 통과하면 개발자 센터에 앱을 제출할 수 있습니다. 올바른 파일을 업로드하는지 확인합니다. 파일의 기본 위치는 `\[AppName]\AppPackages` 솔루션의 루트 폴더에 있으며 이름이 .appxupload 파일 확장명으로 끝납니다. 선택된 모든 패키지 아키텍처에 대해 앱 번들을 선택하면 이름은 `[AppName]_[AppVersion]_x86_x64_arm_bundle.appxupload` 형식이 됩니다.
 
 개발자 센터에 앱 제출에 대한 자세한 내용은 [앱 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 참조하세요.
 
-**원격 Windows 10 디바이스에서 앱 패키지 유효성 검사**
+**원격 Windows10 장치에서 앱 패키지 유효성 검사**
 
-1.  [디바이스를 개발에 사용하도록 설정](https://msdn.microsoft.com/library/windows/apps/Dn706236) 지침에 따라 Windows 10 디바이스를 개발용으로 사용하도록 설정합니다.
-    **중요**  Windows 10용 원격 ARM 장치에서는 앱 패키지의 유효성을 검사할 수 없습니다.
+1.  [개발을 위해 디바이스 사용](https://msdn.microsoft.com/library/windows/apps/Dn706236) 지침에 따라 개발을 위해 Windows10 장치를 사용 합니다.
+    **중요 한**Windows10 용 원격 ARM 장치에서 앱 패키지를 확인할 수 없습니다.
 2.  Visual Studio용 원격 도구를 다운로드하여 설치합니다. 이러한 도구를 사용하여 Windows 앱 인증 키트를 원격으로 실행합니다. 이러한 도구를 다운로드할 위치를 포함하여 자세한 관련 내용은 [원격 컴퓨터에서 UWP 앱 실행](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor)을 참조하세요.
-3.  필요한 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666)를 다운로드한 다음 원격 Windows 10 디바이스에 설치합니다.
+3.  필요한 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 를 다운로드 하 고 원격 Windows10 장치에 설치 합니다.
 4.  마법사 **패키지 만들기 완료** 페이지에서 **원격 컴퓨터** 옵션 단추를 선택하고 **연결 테스트** 버튼 옆에 있는 줄임표 단추를 선택합니다.
-    **참고** **원격 컴퓨터** 옵션 단추는 유효성 검사를 지원하는 솔루션 구성을 하나 이상 선택한 경우에만 사용할 수 있습니다. WACK로 앱을 테스트하는 방법에 대한 자세한 내용은 [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/Mt186449)를 참조하세요.
+    **참고** **원격 컴퓨터** 옵션 단추는 유효성 검사를 지 원하는 솔루션 구성을 하나 이상 선택한 경우에 사용할 수 있습니다. WACK로 앱을 테스트하는 방법에 대한 자세한 내용은 [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/Mt186449)를 참조하세요.
 5.  서브넷 내부에서 디바이스 양식을 지정하거나 서브넷 외부 디바이스의 DNS(도메인 이름 서버) 이름 또는 IP 주소를 제공합니다.
 6.  디바이스에서 Windows 자격 증명을 사용해 로그온하도록 요구하지 않는 경우 **Authentication Mode** 목록에서 **None**을 선택합니다.
 7.  **선택** 버튼을 선택한 다음 **Windows 앱 인증 키트 시작** 버튼을 선택합니다. 해당 디바이스에서 원격 도구가 실행 중인 경우 Visual Studio는 디바이스에 연결한 다음 유효성 검사 테스트를 수행합니다. [Windows 앱 인증 키트 테스트](https://msdn.microsoft.com/library/windows/apps/mt186450)를 참조하세요.
@@ -150,7 +150,7 @@ UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하�
 다음 목록은 사이드로드을 로드하는 데 요구되는 사항입니다.
 
 -   [디바이스를 개발에 사용하도록 설정](https://msdn.microsoft.com/library/windows/apps/Dn706236)해야 합니다.
--   Windows 10 Mobile 장치에 앱을 사이드로드하려면 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용해야 합니다.
+-   Windows10 모바일 장치에서 앱을 테스트용으로 로드할 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용 합니다.
 
 **데스크톱, 노트북 또는 태블릿에 사이드로드**
 
@@ -172,5 +172,5 @@ UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하�
 
     앱 패키지가 설치되면 PowerShell 창에 **앱이 설치되었습니다**라는 메시지가 나타납니다.
 
-    **참고**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭할 위치에서 화면을 터치하고 완전한 원이 나타날 때까지 계속 누르고 있다가 손가락을 뗍니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
+    **팁**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭 완전 한 원이 나타날 때까지 누르고 있다가 손가락을 화면을 터치 합니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
 4.  시작 버튼을 클릭한 다음 앱 이름을 입력해 검색한 후 시작합니다.

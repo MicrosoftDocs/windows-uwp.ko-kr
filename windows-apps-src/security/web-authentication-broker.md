@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443053"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473441"
 ---
 # <a name="web-authentication-broker"></a>웹 인증 브로커
 
@@ -27,7 +27,7 @@ ms.locfileid: "5443053"
 >[!NOTE]
 >완전한 코드 샘플을 사용하려면 [GitHub의 WebAuthenticationBroker 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=620622)를 복제하세요.
 
- 
+ 
 
 ## <a name="register-your-app-with-your-online-provider"></a>온라인 공급자와 앱 등록
 
@@ -91,7 +91,7 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. 이 메서드는 Windows Phone 8.1만을 대상으로 하는 앱용으로 디자인되었으며 Windows 10부터 사용되지 않습니다.
+>[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. 만 Windows Phone 8.1을 대상으로 하는 앱에 대 한 설계 하 고 Windows10로 시작 하는 사용 되지 않습니다.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>SSO(Single Sign-On)로 연결
 

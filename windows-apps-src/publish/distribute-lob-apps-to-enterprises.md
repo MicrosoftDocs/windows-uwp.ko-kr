@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈
 ms.localizationpriority: medium
 ms.openlocfilehash: 9149533a12263e105356a1683257c4d9172eefb5
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433613"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471514"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -23,7 +23,7 @@ ms.locfileid: "5433613"
 LOB 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다.
 
 > [!NOTE]
-> 지금은 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 무료 앱만 독점적으로 엔터프라이즈에 배포할 수 있습니다. LOB로 유료 앱을 제출하는 경우 엔터프라이즈에서 사용할 수 없습니다. 
+> 지금은 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 무료 앱만 독점적으로 엔터프라이즈에 배포할 수 있습니다. LOB로 유료 앱을 제출하는 경우 엔터프라이즈에서 사용할 수 없습니다. 
 
 > [!IMPORTANT]
 > [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. LOB 앱에 대한 모든 제출은 Windows 개발자 센터 대시보드를 사용해야 합니다.
@@ -100,9 +100,9 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 자세한 내용은 [Windows 10에서 LOB 앱을 테스트용으로 로드](http://go.microsoft.com/fwlink/p/?LinkId=623433)를 참조하세요.
 
- 
+ 
 
- 
+ 
 
 
 

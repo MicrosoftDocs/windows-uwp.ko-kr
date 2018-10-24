@@ -1,6 +1,6 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: 이 로드맵은 Windows 10 및 UWP(유니버설 Windows 플랫폼) 앱의 주요 엔터프라이즈 기능을 간략하게 설명합니다.
+description: 이 로드맵은 Windows10 및 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 주요 엔터프라이즈 기능 개요를 제공합니다.
 title: Enterprise
 author: awkoren
 ms.author: alkoren
@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437510"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476615"
 ---
 # <a name="enterprise"></a>Enterprise
 
-이 로드맵은 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 대한 주요 엔터프라이즈 기능을 간략하게 설명합니다.
+이 로드맵은 Windows10Universal Windows 플랫폼 (UWP) 앱에 대 한 주요 엔터프라이즈 기능 개요를 제공합니다.
 
-**참고**  이 문서는 개발자를 대상으로 엔터프라이즈 UWP 앱을 작성 합니다. 일반 UWP 개발에 대한 자세한 내용은 [Windows 10 앱 사용 방법 가이드](https://msdn.microsoft.com/library/windows/apps/mt244352)를 참조하세요. WPF, Windows Forms 또는 Win32 개발에 대한 자세한 내용은 [데스크톱 개발자 센터](https://dev.windows.com/desktop)를 참조하세요. Windows 10 배포 또는 엔터프라이즈 보안 기능 관리 등의 IT 전문가 리소스에 대한 자세한 내용은 [TechNet의 Windows 10](https://msdn.microsoft.com/library/dn986868)을 참조하세요.
+**참고**이 문서는 개발자를 대상으로 엔터프라이즈 UWP 앱을 작성 합니다. 일반 UWP 개발에 대한 자세한 내용은 [Windows 10 앱 사용 방법 가이드](https://msdn.microsoft.com/library/windows/apps/mt244352)를 참조하세요. WPF, Windows Forms 또는 Win32 개발에 대한 자세한 내용은 [데스크톱 개발자 센터](https://dev.windows.com/desktop)를 참조하세요. Windows 10 배포 또는 엔터프라이즈 보안 기능 관리 등의 IT 전문가 리소스에 대한 자세한 내용은 [TechNet의 Windows 10](https://msdn.microsoft.com/library/dn986868)을 참조하세요.
 
 빌드 시 [신속 하 게 구성 LOB 응용 프로그램 UWP 및 Visual Studio를 사용 하 여](https://channel9.msdn.com/Events/Build/2018/BRK3502) 이 프레젠테이션에서 소개 된 사항이 된는 발전 중 일부를 보여 주는이 응용 프로그램의 버전이 있나요
 
@@ -122,7 +122,7 @@ MSIX는을 안정적으로 되도록 패키징 형식.msi,.appx, App-v 및 Click
 
 ## <a name="security"></a>보안
 
-Windows 10에서는 앱 개발자가 사용자의 ID, 회사 네트워크의 보안 및 디바이스에 저장된 비즈니스 데이터를 보호할 수 있도록 보안 기능 집합을 제공합니다. Windows 10의 새로운 기능인 Microsoft Passport는 PIN 또는 Windows Hello를 사용하여 액세스할 수 있으며 엔터프라이즈급 보안을 제공하고 지문, 얼굴 및 홍채 기반 인식 기능을 지원하는 2단계 암호 대안으로, 배포가 용이합니다.
+Windows10은 사용자에 게, 회사 네트워크의 보안 및 장치에 저장 된 비즈니스 데이터의 id를 보호 하기 위해 앱 개발자를 위한 보안 기능 집합을 제공 합니다. 새 Windows10에 대 한이 Microsoft Passport는 PIN을 사용 하 여 액세스할 수 있는 배포를 쉽게 2 단계 암호 대 안으로 또는 Windows Hello, 엔터프라이즈급 보안을 제공 하 고 지문, 얼굴을 지 원하는을 홍 채 기반 인식 합니다.
 
 | 항목 | 설명 |
 |-------|-------------|
@@ -196,10 +196,10 @@ MVVM을 강조 표시 하는 Entity Framework SQL 데이터베이스. 다른 사
 
 ## <a name="patterns-and-practices"></a>패턴 및 사례
 
-대규모 엔터프라이즈급 앱의 코드베이스는 제어하기 어려울 수 있습니다. Prism은 WPF, Windows 10 UWP 및 Xamarin Forms에서 느슨하게 결합되고 유지 관리 및 테스트가 가능한 XAML 응용 프로그램을 빌드하기 위한 프레임워크입니다. Prism은 MVVM, 종속성 주입, 명령, EventAggregator 등을 포함하여 체계적이고 유지 관리가 가능한 XAML 응용 프로그램을 작성하는 데 도움이 되는 디자인 패턴 컬렉션의 구현을 제공합니다.
+대규모 엔터프라이즈급 앱의 코드베이스는 제어하기 어려울 수 있습니다. Prism은 WPF, Windows10 UWP 및 Xamarin Forms에서 느슨하게 결합, 관리 및 테스트가 가능한 XAML 응용 프로그램을 빌드하기 위한 프레임 워크입니다. Prism은 MVVM, 종속성 주입, 명령, EventAggregator 등을 포함하여 체계적이고 유지 관리가 가능한 XAML 응용 프로그램을 작성하는 데 도움이 되는 디자인 패턴 컬렉션의 구현을 제공합니다.
 
 Prism에 대한 자세한 내용은 [GitHub 리포지토리](https://github.com/PrismLibrary/Prism)를 참조하세요.
 
- 
+ 
 
- 
+ 

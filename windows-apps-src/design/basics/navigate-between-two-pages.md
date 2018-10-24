@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 7df91069615b77ab54745690accc8f9353ff0163
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443374"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472674"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
@@ -91,7 +91,7 @@ Page1.xaml에 다음 콘텐츠를 추가합니다.
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로, `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소 뒤에 추가합니다.
+-   루트 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) 전후 자식 요소로 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소는 `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소입니다.
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -128,7 +128,7 @@ Page2.xaml에서 다음 콘텐츠를 추가합니다.
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로, `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소 뒤에 추가합니다.
+-   루트 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) 전후 자식 요소로 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소는 `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소입니다.
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
@@ -309,7 +309,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 앱이 기능을 추가하기 전에, 지금 추가한 페이지에서 앱의 탐색을 지원하는 방법을 살펴보겠습니다.
 
 먼저 App.xaml 코드 숨김 파일의 `App.OnLaunched` 메서드에서 앱에 대해 `rootFrame`라는 [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682)이 생성됩니다. **Frame** 클래스에서는 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568), [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693) 등의 다양한 탐색 메서드와 [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547), [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995) 등의 속성을 지원합니다.
- 
+ 
 이 **Frame**에 콘텐츠를 표시하려면 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 메서드를 사용합니다. 기본값으로 이 메서드는 MainPage.xaml을 로드합니다. 여기 예에서 `Page1`은 **Navigate** 메서드로 전달되며, 메서드는 **프레임**에 `Page1`를 로드합니다. 
 
 `Page1` [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스의 하위 클래스입니다. **Page** 클래스에는 **Frame** 속성이 있는데, 이는 **Page**를 포함하는 **Frame**을 가져오는 읽기 전용 속성입니다. `Page1` **HyperlinkButton**의 **Click** 이벤트 처리기가 `this.Frame.Navigate(typeof(Page2))`를 호출할 때, **Frame**은 Page2.xaml의 콘텐츠를 표시합니다.
@@ -334,7 +334,7 @@ Page1.xaml에서, **HyperlinkButton** 추가한 다음 [**StackPanel**](https://
 </StackPanel>
 ```
 
-Page1.xaml 코드 숨김 파일의 `HyperlinkButton_Click` 이벤트 처리기에서 `name` **TextBox**의 `Text` 속성을 참조하는 매개 변수를 `Navigate` 메서드에 추가합니다.
+`HyperlinkButton_Click` Page1.xaml 코드 숨김 파일의 이벤트 처리기는 매개 변수 참조를 추가 합니다 `Text` 속성의는 `name` **TextBox** 에 `Navigate` 메서드.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

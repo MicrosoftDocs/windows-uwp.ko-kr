@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a1f08dbd70904284179c90fa00d2abd9acf4b97
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430814"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472068"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용하여 광고 캠페인 실행
 
@@ -117,4 +117,4 @@ Microsoft Store 프로모션 API 컨텍스트에서 광고 캠페인은 캠페�
 * [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
 
 
- 
+ 

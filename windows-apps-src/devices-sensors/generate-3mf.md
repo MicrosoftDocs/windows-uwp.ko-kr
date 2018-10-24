@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02eb6442b4769e92bec2b41ed9ab0e91a6a98a7f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443521"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475961"
 ---
 # <a name="generate-a-3mf-package"></a>3MF 패키지 생성
 
@@ -32,7 +32,7 @@ ms.locfileid: "5443521"
 
 3D 제조 형식은 제조(3D 인쇄)를 위한 용도로 XML을 사용하여 3D 모델의 모양과 구조를 설명하는 규칙 집합입니다. 3D 제조 디바이스에 필요한 모든 정보를 제공하려는 목표로 부분 집합(일부는 필수이고 일부는 선택임)과 해당하는 관계를 정의합니다. 3D 제조 형식을 준수하는 데이터 집합은 .3mf 확장명의 파일로 저장할 수 있습니다.
 
-Windows 10에서 **Windows.Graphics.Printing3D** 네임스페이스의 [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) 클래스는 단일 .3mf 파일과 유사하며 다른 클래스를 해당 파일의 특정 XML 요소에 매핑합니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
+Windows10에서 **Windows.Graphics.Printing3D** 네임 스페이스의 [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) 클래스는 단일.3mf 파일과 유사 하며 다른 클래스 파일의 특정 XML 요소에 매핑합니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 
@@ -87,7 +87,7 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
 > [!NOTE]
-> 3D 제조 디바이스에서 어떤 사용 가능한 실제 재료를 3MF에 저장되어 있는 어떤 가상 재료 요소에 매핑할지를 결정합니다. 재료 매핑은 1:1일 필요는 없습니다. 3D 프린터가 하나의 재료만 사용하는 경우 해당 프린터는 다른 재료가 할당된 개체 또는 면에 상관없이 해당 재료의 전체 모델을 인쇄합니다.
+> 3D 제조 디바이스에서 어떤 사용 가능한 실제 재료를 3MF에 저장되어 있는 어떤 가상 재료 요소에 매핑할지를 결정합니다. 재료 매핑은 1:1일 필요는 없습니다. 3D 프린터가 하나의 재료만 사용하는 경우 해당 프린터는 다른 재료가 할당된 개체 또는 면에 상관없이 해당 재료의 전체 모델을 인쇄합니다.
 
 ### <a name="color-materials"></a>색 재료
 
@@ -145,8 +145,8 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
 
 [앱에서 3D 인쇄](https://msdn.microsoft.com/windows/uwp/devices-sensors/3d-print-from-app)  
 [3D 인쇄 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
- 
+ 
 
- 
+ 
 
- 
+ 

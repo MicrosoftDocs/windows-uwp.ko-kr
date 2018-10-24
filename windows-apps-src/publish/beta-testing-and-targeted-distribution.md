@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 베타 테스트, 제한 배포, 베타, 베타들, 테스트, 테스터
 ms.localizationpriority: medium
 ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440389"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473805"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>베타 테스트 및 대상이 지정된 배포
 
@@ -79,4 +79,4 @@ Windows 개발자 센터 대시보드에서는 일반에게 제공하기 전에 
 > [!IMPORTANT]
 > 이 옵션은 새 제출에서 사용할 수 없습니다. Windows Phone 8.1 이전 버전을 대상으로 하는 앱에서 이 옵션을 선택한 경우에는 해당 앱에서 이를 계속 사용할 수 있습니다. 새 제출을 만들어서 테스터 목록(최대 10,000명)을 변경할 수 있습니다. 
 
-이 옵션에서는 지정된 이메일 주소를 가진 사용자가 목록에 대한 직접 링크를 사용하여 앱을 다운로드할 수 있습니다(Windows Phone 8.1 이전 버전만 실행 중인 장치에서). 링크를 가지고 있더라도 다른 고객들은 앱을 다운로드할 수 없으며, 검색 또는 탐색을 통해 Store에서 앱을 찾을 수 없습니다. 테스터가 앱을 다운로드할 수 있으려면 테스터에게 링크([앱 ID 페이지](view-app-identity-details.md)의 **URL**)를 제공해야 하고, 사용자가 제공한 이메일 주소에 연결된 Microsoft 계정으로 테스터가 로그인해야 합니다. [홍보 코드 생성](generate-promotional-codes.md)을 통해 Windows 10 장치의 테스터에게 앱을 제공할 수 있습니다. 여기에 이메일을 입력하지 않은 경우에라도 앱의 홍보 코드 중 하나를 가진 사용자는 누구나 Windows 10 장치에서 앱을 다운로드할 수 있습니다.
+이 옵션에서는 지정된 이메일 주소를 가진 사용자가 목록에 대한 직접 링크를 사용하여 앱을 다운로드할 수 있습니다(Windows Phone 8.1 이전 버전만 실행 중인 장치에서). 링크를 가지고 있더라도 다른 고객들은 앱을 다운로드할 수 없으며, 검색 또는 탐색을 통해 Store에서 앱을 찾을 수 없습니다. 테스터가 앱을 다운로드할 수 있으려면 테스터에게 링크([앱 ID 페이지](view-app-identity-details.md)의 **URL**)를 제공해야 하고, 사용자가 제공한 이메일 주소에 연결된 Microsoft 계정으로 테스터가 로그인해야 합니다. 또한 가능 앱 사용 가능한 Windows10 장치의 테스터에 게 [홍보 코드를 생성](generate-promotional-codes.md)합니다. 앱의 홍보 코드 중 하나를 사용 하 여 모든 사용자가 다운로드할 수 Windows10 장치의 전자 여기 입력 하지 않은 경우에.

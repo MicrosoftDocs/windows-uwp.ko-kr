@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431931"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476924"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
@@ -117,6 +117,6 @@ VS를 사용 하 여 백그라운드 작업 디버그에 대 한 자세한 내�
 * [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱의 이벤트](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
 * [Visual Studio 코드 분석을 사용 하 여 UWP 앱의 코드 품질 분석](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
- 
+ 
 
- 
+ 

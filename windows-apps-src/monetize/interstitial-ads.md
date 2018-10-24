@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 중간 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: 547a582064262d18467df4868df17a08e73b279c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436851"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477713"
 ---
 # <a name="interstitial-ads"></a>중간 광고
 
@@ -163,7 +163,7 @@ ms.locfileid: "5436851"
 ### <a name="c-directx-interop"></a>C++(DirectX Interop)
 
 이 샘플에서는 사용자가 Visual Studio에서 C++ **DirectX 및 XAML 앱(유니버설 Windows)** 프로젝트를 만들었으며 특정 CPU 아키텍처를 대상으로 한다고 가정합니다.
- 
+ 
 1. Visual Studio에서 프로젝트를 엽니다.
 
 3. 프로젝트에 Microsoft Advertising SDK 참조를 추가합니다.

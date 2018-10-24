@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: fadd9c2b6a35a1418a782ab0a6ef419e3f127f42
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442674"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479172"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Windows 10 패키지로 만든된 데스크톱 응용 프로그램 통합
 
@@ -53,7 +53,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
     <DesktopAppMigration>
         <DesktopApp AumId="[your_app_aumid]" />
         <DesktopApp ShortcutPath="[path]" />
-    </DesktopAppMigration>
+    </DesktopAppMigration>
 </Extension>
 
 ```
@@ -81,7 +81,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
             <rescap3:DesktopApp ShortcutPath="%USERPROFILE%\Desktop\[my_app].lnk" />
             <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\[my_app].lnk" />
             <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\[my_app_folder]\[my_app].lnk"/>
-         </rescap3:DesktopAppMigration>
+         </rescap3:DesktopAppMigration>
         </rescap3:Extension>
       </Extensions>
     </Application>
@@ -110,10 +110,10 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 ```XML
 <Extension Category="windows.fileTypeAssociation">
 <FileTypeAssociation Name="[AppID]">
-         <MigrationProgIds>
-            <MigrationProgId>"[ProgID]"</MigrationProgId>
-        </MigrationProgIds>
-    </FileTypeAssociation>
+         <MigrationProgIds>
+            <MigrationProgId>"[ProgID]"</MigrationProgId>
+        </MigrationProgIds>
+    </FileTypeAssociation>
 </Extension>
 ```
 
@@ -137,11 +137,11 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap3:FileTypeAssociation Name="Contoso">
-            <rescap3:MigrationProgIds>
-              <rescap3:MigrationProgId>Foo.Bar.1</rescap3:MigrationProgId>
+            <rescap3:MigrationProgIds>
+              <rescap3:MigrationProgId>Foo.Bar.1</rescap3:MigrationProgId>
               <rescap3:MigrationProgId>Foo.Bar.2</rescap3:MigrationProgId>
-            </rescap3:MigrationProgIds>
-          </uap3:FileTypeAssociation>
+            </rescap3:MigrationProgIds>
+          </uap3:FileTypeAssociation>
         </uap:Extension>
       </Extensions>
     </Application>
@@ -296,7 +296,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
     <FileTypeAssociation Name="[AppID]" UseUrl="true" Parameters="%1">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
-        </SupportedFileTypes> 
+        </SupportedFileTypes> 
     </FileTypeAssociation>
 </Extension>
 ```
@@ -326,7 +326,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
               <uap:SupportedFileTypes>
                 <uap:FileType>.txt</uap:FileType>
                 <uap:FileType>.doc</uap:FileType>
-              </uap:SupportedFileTypes> 
+              </uap:SupportedFileTypes> 
             </uap3:FileTypeAssociation>
           </uap:Extension>
         </Extensions>
@@ -682,13 +682,13 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 ```XML
 <Extension Category="windows.fileTypeAssociation">
     <FileTypeAssociation Name="[AppID]">
-        <SupportedFileTypes>
-            <FileType>"[FileExtension]"</FileType>
-        </SupportedFileTypes>
-        <KindMap>
-            <Kind value="[KindValue]">
-        </KindMap>
-    </FileTypeAssociation>
+        <SupportedFileTypes>
+            <FileType>"[FileExtension]"</FileType>
+        </SupportedFileTypes>
+        <KindMap>
+            <Kind value="[KindValue]">
+        </KindMap>
+    </FileTypeAssociation>
 </Extension>
 ```
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)에서 찾으세요.
@@ -712,16 +712,16 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
            <uap:FileTypeAssociation Name="Contoso">
-             <uap:SupportedFileTypes>
-               <uap:FileType>.m4a</uap:FileType>
-               <uap:FileType>.mta</uap:FileType>
-             </uap:SupportedFileTypes>
-             <rescap:KindMap>
-               <rescap:Kind value="Item">
+             <uap:SupportedFileTypes>
+               <uap:FileType>.m4a</uap:FileType>
+               <uap:FileType>.mta</uap:FileType>
+             </uap:SupportedFileTypes>
+             <rescap:KindMap>
+               <rescap:Kind value="Item">
                <rescap:Kind value="Communications">
                <rescap:Kind value="Task">
-             </rescap:KindMap>
-          </uap:FileTypeAssociation>
+             </rescap:KindMap>
+          </uap:FileTypeAssociation>
       </uap:Extension>
       </Extensions>
     </Application>

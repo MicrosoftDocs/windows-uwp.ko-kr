@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 7adfecbe216dce25d0f80eb3ef1f528196299db4
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440797"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470637"
 ---
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 
@@ -63,7 +63,7 @@ ms.locfileid: "5440797"
 
 **백그라운드 작업 실행 요청:**
 
-> **중요** Windows 10부터 백그라운드 작업을 실행하기 위한 필수 조건으로 앱을 잠금 화면에 배치하지 않아도 됩니다.
+> **중요 한**Windows10부터 앱은 더 이상 필요 하지 진행 백그라운드 작업을 실행 하려면 잠금 화면에 연결 해야 합니다.
 
 UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아도 지원되는 모든 작업 형식을 실행할 수 있습니다. 그러나 모든 형식의 백그라운드 작업을 등록하기 전에 앱이 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다. 사용자가 장치 설정에서 해당 앱에 대해 명시적으로 백그라운드 작업 권한을 거부한 경우에는 이 메서드가 [**BackgroundAccessStatus.DeniedByUser**](https://msdn.microsoft.com/library/windows/apps/hh700439)를 반환합니다. 백그라운드 작업 및 배터리 절약 모드와 관련된 사용자 선택에 대한 자세한 내용은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요. 
 ## <a name="background-task-checklist"></a>백그라운드 작업 검사 목록
@@ -109,6 +109,6 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
- 
+ 
 
- 
+ 

@@ -2,7 +2,7 @@
 author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
-description: Windows 응용 프로그램 배포(WinAppDeployCmd.exe)는 Windows 10 PC에서 Windows 10 디바이스로 UWP(유니버설 Windows 플랫폼) 앱을 배포하는 데 사용할 수 있는 명령줄 도구입니다.
+description: Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 모든 Windows10 장치 Windows10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다.
 ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
@@ -11,26 +11,26 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 229f0e9993abc9c5600c55a1a0eddc2e262f1c4c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433428"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472992"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>WinAppDeployCmd.exe 도구를 사용하여 앱 설치
 
 
-Windows 응용 프로그램 배포(WinAppDeployCmd.exe)는 Windows 10 PC에서 Windows 10 디바이스로 UWP(유니버설 Windows 플랫폼) 앱을 배포하는 데 사용할 수 있는 명령줄 도구입니다. 이 도구를 사용 하 여 Windows 10 장치를 해당 앱에 대 한 Microsoft Visual Studio 또는 솔루션 없이 동일한 서브넷에서 사용 가능 하거나 USB로 연결 되 면 앱 패키지를 배포할 수 있습니다. 또한 원격 PC 또는 Xbox One에 먼저 패키징하지 않고 앱을 배포할 수도 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다.
+Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 모든 Windows10 장치 Windows10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다. 이 도구를 사용 하 여 Windows10 장치를 해당 앱에 대 한 Microsoft Visual Studio 또는 솔루션 없이 동일한 서브넷에서 사용 가능 하거나 USB로 연결 되 면 앱 패키지를 배포할 수 있습니다. 또한 원격 PC 또는 Xbox One에 먼저 패키징하지 않고 앱을 배포할 수도 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다.
 
-Windows 10 SDK를 설치하여 명령 프롬프트나 스크립트 파일에서 WinAppDeployCmd 도구를 실행하기만 하면 됩니다. WinAppDeployCmd.exe로 앱을 설치 하는 경우이를 사용 하 여.appx/.msix 파일 또는 AppxManifest (느슨한 파일)에 대 한 앱을 Windows 10 장치에 테스트용으로 로드 합니다. 이 명령은 앱에 필요한 인증서를 설치하지 않습니다. 앱을 실행하려면 Windows 10 디바이스가 개발자 모드이거나 인증서가 이미 설치되어 있어야 합니다.
+명령 프롬프트나 스크립트 파일에서 WinAppDeployCmd 도구를 실행 하려면 설치 Windows10 SDK 하기만 하면 됩니다. WinAppDeployCmd.exe로 앱을 설치 하는 경우이를 사용 하 여.appx/.msix 파일 또는 AppxManifest (느슨한 파일)에 대 한 앱 Windows10 장치에 테스트용으로 로드 합니다. 이 명령은 앱에 필요한 인증서를 설치하지 않습니다. 앱을 실행 하려면 Windows10 장치 개발자 모드로 실행 될 하거나 이미 있는 해당 인증서를 설치 해야 합니다.
 
 모바일 디바이스에 배포하려면 먼저 패키지를 만들어야 합니다. 자세한 내용은 [여기](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)를 참조하세요.
 
-**WinAppDeployCmd.exe** 도구는 Windows 10 PC의 **C:\\Program Files (x86)\\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe**(SDK 설치 경로에 따라 다름) 위치에 설치되어 있습니다. 
+**WinAppDeployCmd.exe** 도구는 Windows10 PC: **C:\\Program Files (x86) kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (sdk 설치 경로에 따라). 
 > [!NOTE]
 > 버전 15063 이상의 SDK에서 SDK는 특정 버전의 폴더에 나란히 설치되어 있습니다.  14393 및 이하를 포함한 SDK는 부모 폴더에 직접 기록됩니다.
 
-먼저 Windows 10 디바이스를 동일한 서브넷에 연결하거나 USB 연결로 Windows 10 컴퓨터에 직접 연결합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
+먼저, 동일한 서브넷에 Windows10 장치를 연결 하거나 USB 연결을 사용 하 여 Windows10 컴퓨터에 직접 연결 합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
 
 ## <a name="winappdeploycmd-syntax-and-options"></a>WinAppDeployCmd 구문 및 옵션
 
@@ -113,7 +113,7 @@ WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 | &lt;암호&gt;       | 파일 네트워크의 서버에 액세스할 수 있는 자격 증명의 암호입니다. |
 | &lt;remotedeploydir&gt;| 배포 위치에 상대적인 디바이스의 디렉터리                      |
 
- 
+ 
 ## <a name="winappdeploycmdexe-examples"></a>WinAppDeployCmd.exe 예제
 
 다음은 **WinAppDeployCmd.exe**에 대한 구문을 사용하여 명령줄에서 배포하는 방법에 대한 몇 가지 예입니다.
@@ -124,7 +124,7 @@ WinAppDeployCmd deletecreds -credserver <server> -ip <address>
 WinAppDeployCmd devices 3
 ```
 
-PC의 Downloads 디렉터리에 있는 MyApp.appx 패키지의 앱을 A1B2C3 핀과 192.168.0.1 IP 주소를 사용하는 Windows 10 디바이스에 설치하여 디바이스와의 연결을 설정합니다.
+PC의 Downloads 디렉터리 장치와 연결을 A1B2C3 핀을 사용 하 여 192.168.0.1 IP 주소를 사용 하 여 Windows10 장치에 있는 MyApp.appx 패키지의 앱을 설치 합니다.
 
 ``` syntax
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
@@ -136,7 +136,7 @@ WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-지정 된 앱 패키지를 사용 하 여 192.168.0.1 IP 주소를 사용 하 여 Windows 10 장치에 이미 설치 되어 있는 앱을 업데이트 합니다.
+지정 된 앱 패키지를 사용 하 여 192.168.0.1 IP 주소를 사용 하 여 Windows10 장치에 이미 설치 되어 있는 앱을 업데이트 합니다.
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1

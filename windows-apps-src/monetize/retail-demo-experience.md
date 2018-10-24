@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 소매 데모 앱
 ms.localizationpriority: medium
 ms.openlocfilehash: 152c775c1b69bfd82d8969aed7e638f98646bdd7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437437"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472794"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>소매 데모 (RDX) 기능을 앱에 추가
 
@@ -257,14 +257,14 @@ namespace Windows.System.Profile
 
 1 단계: 앱 매니페스트에 _Microsoft RetailDemo 정리_ 서비스를 선언 합니다.
 ``` CSharp
-  <Applications>
-      <Extensions>
-        <uap:Extension Category="windows.appService" EntryPoint="MyCompany.MyApp.RDXCustomCleanupTask">
-          <uap:AppService Name="Microsoft-RetailDemo-Cleanup" />
-        </uap:Extension>
-      </Extensions>
-   </Application>
-  </Applications>
+  <Applications>
+      <Extensions>
+        <uap:Extension Category="windows.appService" EntryPoint="MyCompany.MyApp.RDXCustomCleanupTask">
+          <uap:AppService Name="Microsoft-RetailDemo-Cleanup" />
+        </uap:Extension>
+      </Extensions>
+   </Application>
+  </Applications>
 
 ```
 

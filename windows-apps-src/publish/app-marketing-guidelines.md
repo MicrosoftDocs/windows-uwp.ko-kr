@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432054"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479721"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store 앱에 대 한 지침을 마케팅
 
@@ -41,7 +41,7 @@ Microsoft Store에서 앱의 목록에 더 많은 고객을 가질 수 있도록
 
 앱을 홍보하기 위해 Windows 장치에서 실행할 경우 앱이 어떻게 표시되는지를 보여 주고 싶을 수 있습니다. 휴대폰, 태블릿, 노트북, PC 등 선택할 수 있는 다양한 장치 섀시 이미지가 마련되어 있습니다. 모범 사례 및 기술 사양은 이러한 이미지를 사용 하는 방법에 대 한 [Microsoft 스토어 마케팅 지침](http://go.microsoft.com/fwlink/p/?LinkId=529769)에서 찾을 수 있습니다.
 
-[![다운로드 단추](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Windows 장치 아트**
+[ ![다운로드 단추](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Windows 장치 아트**
 
 ## <a name="license-to-microsoft-marks"></a>Microsoft 마크에 사용권 부여
 
@@ -57,9 +57,9 @@ Microsoft Store에서 앱의 목록에 더 많은 고객을 가질 수 있도록
 
 Microsoft는 Microsoft 마크 및 관련 영업권의 독점 소유자이며 Microsoft 마크 사용 관련 영업권의 독점 수혜자입니다. Microsoft는 언제든지 재량에 따라 이 라이선스를 해지할 수 있습니다.
 
- 
+ 
 
- 
+ 
 
 
 

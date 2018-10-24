@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 인쇄, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c4ada5d58743bf19ed27dfbdd2676f2a267129f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445660"
+ms.locfileid: "5473815"
 ---
 # <a name="printing-and-scanning"></a>인쇄 및 스캔
 
@@ -34,5 +34,5 @@ ms.locfileid: "5445660"
 * [인쇄에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//빌드 2015 동영상: Windows 10에서 인쇄하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)
- 
+ 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 게시, 전처리, 인증, 릴리스, 보류 중, 제출, 게시, 상태, 시간
 ms.localizationpriority: medium
 ms.openlocfilehash: 8372f316786d83d72dff8ef7a0a8fd53e5390743
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442569"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475008"
 ---
 # <a name="the-app-certification-process"></a>앱 인증 프로세스
 
@@ -60,11 +60,11 @@ ms.locfileid: "5442569"
 > [!NOTE]
 > 잠재적 문제를 식별하고 모든 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 준수하는지 확인할 수 있으려면 앱이 게시된 후에 스팟 체킹을 수행합니다. 문제가 발견되면 해당하는 경우 또는 앱이 스토어에서 제거된 경우 문제와 문제 해결 방법에 대한 알림을 받게 됩니다.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

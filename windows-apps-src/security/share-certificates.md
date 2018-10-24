@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 863658438ce53f2c74faddb845a7d17c6ec3130c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443479"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470858"
 ---
 # <a name="share-certificates-between-apps"></a>앱 간에 공유 인증서
 
@@ -78,9 +78,9 @@ ms.locfileid: "5443479"
 
 사용 가능한 클라이언트 인증서가 없으면 사용자가 인증서 저장소에 인증서를 추가 해야 합니다. 사용자가 클라이언트 인증서를 포함하는 PFX 파일을 선택하고 해당 인증서를 클라이언트 인증서 저장소로 가져올 수 있도록 하는 코드를 앱에 포함할 수 있습니다.
 
-**팁**  makecert.exe를 통해 이 빠른 시작에서 사용할 PFX 파일을 만들 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)를 참조하세요.
+**팁**를 통해이 빠른 시작 사용할 PFX 파일을 만드는 makecert.exe를 사용할 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)를 참조하세요.
 
- 
+ 
 
 1.  Visual Studio를 열고 시작 페이지에서 새 프로젝트를 만듭니다. 새 프로젝트의 이름을 "FirstContosoBankApp"으로 지정합니다. **확인**을 클릭하여 새 프로젝트를 만듭니다.
 2.  MainPage.xaml 파일의 기본 **Grid** 요소에 다음 XAML을 추가합니다. 이 XAML에는 가져올 PFX 파일 찾아보기 단추, 암호로 보호된 PFX 파일의 암호를 입력할 입력란, 선택한 PFX 파일 가져오기 단추, 보안 웹 서비스에 로그인 단추 및 현재 작업의 상태를 표시할 텍스트 블록이 포함되어 있습니다.

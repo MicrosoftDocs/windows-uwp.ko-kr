@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 89c021bb2c094aafc9b534acef9b009817669461
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439270"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472335"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 이벤트 발생
 > [!NOTE]
@@ -142,7 +142,7 @@ C# Windows 런타임 구성 요소를 솔루션에 추가합니다. 솔루션 �
 
 솔루션 탐색기에서 솔루션의 바로 가기 메뉴를 열고 **속성**을 선택합니다. **속성 페이지** 대화 상자의 왼쪽 창에서 **구성 속성**을 선택하고 대화 상자 맨 위에서 **구성**을 **디버그**로, **플랫폼**을 x86, x64 또는 ARM으로 설정합니다. **확인** 단추를 선택합니다.
 
-**중요** 플랫폼 = 나중에 솔루션에 추가할 네이티브 코드 Win32 DLL에 유효하지 않으므로 모든 CPU는 작동하지 않습니다.
+**중요 한**플랫폼 = 나중에 솔루션에 추가할 네이티브 코드 Win32 DLL에 대 한 유효한 없기 때문에 모든 CPU는 작동 하지 않습니다.
 
 솔루션 탐색기에서 class1.cs의 이름을 프로젝트 이름과 일치하도록 ToasterComponent.cs로 바꿉니다. Visual Studio에서 파일의 클래스 이름을 새 파일 이름과 일치하도록 자동으로 바꿉니다.
 
@@ -150,7 +150,7 @@ C# Windows 런타임 구성 요소를 솔루션에 추가합니다. 솔루션 �
 
 프록시 및 스텁이 필요한 경우 구성 요소에서 인터페이스를 사용하여 공용 멤버를 표시해야 합니다. ToasterComponent.cs에서 toaster에 대한 인터페이스와 toaster가 생성하는 알림에 대한 인터페이스를 정의합니다.
 
-**참고** C#에서는 이 단계를 건너뛸 수 있습니다. 대신, 먼저 클래스를 만든 후 해당 바로 가기 메뉴를 열고 **리팩터링 &gt; 인터페이스 추출**을 선택합니다. 생성된 코드에서 수동으로 인터페이스에 공개 접근성을 제공합니다.
+**참고**C#에서는이 단계를 건너뛸 수 있습니다. 대신, 먼저 클래스를 만든 후 해당 바로 가기 메뉴를 열고 **리팩터링 &gt; 인터페이스 추출**을 선택합니다. 생성된 코드에서 수동으로 인터페이스에 공개 접근성을 제공합니다.
 
 ```csharp
     public interface IToaster
@@ -218,8 +218,8 @@ IToast 인터페이스에는 알림 유형을 설명하기 위해 검색할 수 
 
 앞의 코드에서 알림을 만든 후 스레드 풀 작업 항목을 회전하여 알림을 발생시킵니다. IDE에서 비동기 호출에 awaiIt 키워드를 적용하도록 제안할 수도 있지만 이 경우에는 메서드가 작업 결과에 따라 달라지는 작업을 수행하지 않으므로 필요하지 않습니다.
 
-**참고** 앞의 코드에서 비동기 호출은 ThreadPool.RunAsync만 사용하여 백그라운드 스레드에서 이벤트를 발생시키는 간단한 방법을 보여 줍니다. 다음 예제와 같이 이 특정 메서드를 작성할 수 있으며, .NET 작업 스케줄러에서 자동으로 async/await 호출을 UI 스레드로 다시 마샬링하기 때문에 제대로 작동합니다.
-  
+**참고**앞의 코드에서 비동기 호출은 ThreadPool.RunAsync만 사용 백그라운드 스레드에서 이벤트를 발생 시키는 간단한 방법을 보여 줍니다. 다음 예제와 같이 이 특정 메서드를 작성할 수 있으며, .NET 작업 스케줄러에서 자동으로 async/await 호출을 UI 스레드로 다시 마샬링하기 때문에 제대로 작동합니다.
+  
 ```csharp
     public async void MakeToast(string message)
     {
@@ -330,7 +330,7 @@ winmdidl /outdir:output "$(TargetPath)"
 midl /metadata_dir "%WindowsSdkDir%References\CommonConfiguration\Neutral" /iid "$(ProjectDir)$(TargetName)_i.c" /env win32 /h "$(ProjectDir)$(TargetName).h" /winmd "Output\$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(ProjectDir)dlldata.c" /proxy "$(ProjectDir)$(TargetName)_p.c" "Output\$(TargetName).idl"
 ```
 
-**중요 한**  팔 또는 x64에 대 한 프로젝트 구성, x64 또는 arm32 MIDL /env 매개 변수를 변경 합니다.
+**중요 한**는 ARM 또는 x64 프로젝트 구성, x64 또는 arm32 MIDL /env 매개 변수를 변경 합니다.
 
 IDL 파일.winmd 파일 변경 될 때마다 다시 생성 하려면 **빌드 후 이벤트를 실행** 하려면 변경 **빌드 프로젝트 출력을 업데이트 하는 경우.**
 이 빌드 이벤트 속성 페이지 비슷합니다: ![빌드 이벤트](./images/buildevents.png)

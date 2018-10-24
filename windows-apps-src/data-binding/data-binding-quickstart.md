@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: 8375cc54e75df71b28cfd3f550f47914b4b65519
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441630"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471868"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 
@@ -501,7 +501,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 > [!NOTE]
 > 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 필요합니다.
 
-C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스에 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
+C + 사용 중인 경우 + WinRT 또는 VisualC + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스에 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
 
 > [!IMPORTANT]
 > 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용할 수 있도록 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.

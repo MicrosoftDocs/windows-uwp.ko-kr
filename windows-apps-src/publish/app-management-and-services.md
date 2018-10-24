@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438953"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472453"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
@@ -44,7 +44,7 @@ Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보�
 Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도 서비스 응용 프로그램 ID와 토큰을 앱 코드에 포함해야 합니다. **서비스** 섹션의 **지도** 페이지에서 이 토큰을 가져올 수 있습니다.
 
 > [!NOTE]
-> Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. 자세한 내용은 [맵 인증 키 요청](https://docs.microsoft.com/windows/uwp/maps-and-location/authentication-key)을 참조하세요.
+> Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. 자세한 내용은 [맵 인증 키 요청](https://docs.microsoft.com/windows/uwp/maps-and-location/authentication-key)을 참조하세요.
 
 자세한 내용은 [지도 서비스 사용](use-map-services.md)을 참조하세요.
 
@@ -101,6 +101,6 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
 -   **Microsoft Azure 모바일 앱**를 통해 푸시 알림을 보내고, 앱 사용자를 인증 및 관리하고, 앱 데이터를 클라우드에 저장할 수 있습니다. 자세한 내용은 [모바일 앱 설명서](http://go.microsoft.com/fwlink/p/?LinkId=221116)를 참조하세요.
 
 -   **MPNS(Microsoft 푸시 알림 서비스)** 를 Windows Phone의 .xap 패키지와 함께 사용할 수 있습니다. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. MPNS를 사용 하는 경우에 **WNS/MPNS** 페이지에 제공 된 필드에 인증서를 업로드 해야 합니다. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](http://go.microsoft.com/fwlink/p/?LinkId=528736)을 참조하세요.
- 
+ 
 
- 
+ 

@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: windows 10, uwp, 응답을 응답 검토
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a043a0b721ee6eabdc3520960ae6da253587c33
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433633"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475459"
 ---
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
 
-고객이 해당 피드백을 듣고는 알 수 있도록 앱의 리뷰에 응답할 수 있습니다. 리뷰 응답에서는 고객 의견을 기반으로 추가한 기능이나 수정한 버그에 대해 고객에게 알려 주거나, 앱 개선 방도에 대한 구체적인 의견을 얻을 수 있습니다. 응답은 모든 Windows 10 고객에 게 표시에 대 한 Microsoft Store에 표시 됩니다. 또한 (하지 않은 옵트아웃 하 고 Windows 10 버전 1803 이상을 실행 하는 장치를 사용 하 는) 경우 전자 메일로 응답을 고객에 게 보낼 수 있습니다.
+고객이 해당 피드백을 듣고는 알 수 있도록 앱의 리뷰에 응답할 수 있습니다. 리뷰 응답에서는 고객 의견을 기반으로 추가한 기능이나 수정한 버그에 대해 고객에게 알려 주거나, 앱 개선 방도에 대한 구체적인 의견을 얻을 수 있습니다. 응답은 모든 Windows10 고객에 게 표시에 대 한 Microsoft Store에 표시 됩니다. 또한 (하지 않은 옵트아웃 하 고 Windows 10 버전 1803 이상을 실행 하는 장치를 사용 하 는) 경우 전자 메일로 응답을 고객에 게 보낼 수 있습니다.
 
 앱 리뷰를 보고 응답을 제공하려면 Windows 개발자 센터 대시보드에서 해당 앱을 찾습니다. 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **리뷰**를 클릭하여 [리뷰 보고서](reviews-report.md)를 표시합니다. 응답을 제공 하기 위해 **검토에 응답** 을 선택 합니다.
 

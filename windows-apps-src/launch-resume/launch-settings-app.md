@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22727f8d09b3d68970301677cdf632a0981c616a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 00baa088f0cb01068f1d1d78d101e6cd294c77f7
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433046"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476417"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -127,6 +127,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 오디오 | ms-settings:easeofaccess-audio |
 | 선택 자막 | ms-settings:easeofaccess-closedcaptioning |
+| 색상 필터 | ms-설정: easeofaccess-colorfilter |
 | 디스플레이 | ms-settings:easeofaccess-display |
 | 아이 컨트롤 | ms-settings:easeofaccess-eyecontrol |
 | 글꼴 | ms-settings:fonts |

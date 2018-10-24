@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: be0d383fc271084fe20a958d20f6fa3a340da187
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433076"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475165"
 ---
 # <a name="manage-add-ons"></a>추가 기능 관리
 
@@ -158,7 +158,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 앱의 추가 
 |-----------------|---------|------------------|
 | id            | 문자열  | 제출의 ID입니다.    |
 | resourceLocation   | 문자열  | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.     |
- 
+ 
 <span/>
 
 ## <a name="related-topics"></a>관련 항목

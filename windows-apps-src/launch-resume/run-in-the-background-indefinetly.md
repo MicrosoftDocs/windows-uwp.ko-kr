@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af0f7670f2b131671ce82708d2b0a826db0fcfb1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445196"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475834"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
@@ -27,7 +27,7 @@ ms.locfileid: "5445196"
 
 UWP 앱이 포그라운드에서 실행되지 않을 때 일시 중단된 상태로 이동합니다. 데스크톱에서는 사용자가 앱을 최소화할 때 발생합니다. 앱은 최소화된 상태에서 계속 실행하기 위해 확장된 실행 세션을 사용합니다. Microsoft Store에서 허용하는 확장된 실행 API는 [확장 실행을 사용하여 앱 일시 중단 연기](https://docs.microsoft.com/windows/uwp/launch-resume/run-minimized-with-extended-execution)에 세부적으로 나와 있습니다.
 
-Microsoft Store에 제출하지 않는 앱을 개발하는 경우, 장치의 에너지 상태에 관계없이 앱이 최소화된 상태로 계속 실행될 수 있도록 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 `extendedExecutionUnconstrained` 제한 기능을 사용할 수 있습니다.  
+Microsoft Store에 제출하지 않는 앱을 개발하는 경우, 장치의 에너지 상태에 관계없이 앱이 최소화된 상태로 계속 실행될 수 있도록 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 `extendedExecutionUnconstrained` 제한 기능을 사용할 수 있습니다.  
 
 `extendedExecutionUnconstrained` 기능이 앱의 매니페스트에 제한 기능으로 추가됩니다. 제한 기능에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
 
@@ -35,30 +35,30 @@ _Package.appxmanifest_
 ```xml
 <Package ...>
 ...
-  <Capabilities>  
-    <rescap:Capability Name="extendedExecutionUnconstrained"/>  
-  </Capabilities>  
+  <Capabilities>  
+    <rescap:Capability Name="extendedExecutionUnconstrained"/>  
+  </Capabilities>  
 </Package>
 ```
 
 `extendedExecutionUnconstrained` 기능을 사용하면 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 [ExtendedExecutionForegroundReason](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason)은 [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) 및 [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) 대신 사용됩니다. 세션을 만들고, 구성원을 설정하고, 확장을 비동기적으로 요청하기 위한 동일한 패턴이 여전히 적용됩니다. 
 
 ```cs
-var newSession = new ExtendedExecutionForegroundSession();  
-newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;  
-newSession.Description = "Long Running Processing";  
-newSession.Revoked += SessionRevoked;  
-ExtendedExecutionResult result = await newSession.RequestExtensionAsync();  
-switch (result)  
-{  
-    case ExtendedExecutionResult.Allowed:  
-        DoLongRunningWork();  
-        break;  
+var newSession = new ExtendedExecutionForegroundSession();  
+newSession.Reason = ExtendedExecutionForegroundReason.Unconstrained;  
+newSession.Description = "Long Running Processing";  
+newSession.Revoked += SessionRevoked;  
+ExtendedExecutionResult result = await newSession.RequestExtensionAsync();  
+switch (result)  
+{  
+    case ExtendedExecutionResult.Allowed:  
+        DoLongRunningWork();  
+        break;  
 
-    default:  
-    case ExtendedExecutionResult.Denied:  
-        DoShortRunningWork();  
-        break;  
+    default:  
+    case ExtendedExecutionResult.Denied:  
+        DoShortRunningWork();  
+        break;  
 }
 ```
 
@@ -73,9 +73,9 @@ switch (result) 
 _Package.appxmanifest_
 ```xml
 <Package ...>
-   <Capabilities>  
-       <rescap:Capability Name="extendedBackgroundTaskTime"/>  
-   </Capabilities>  
+   <Capabilities>  
+       <rescap:Capability Name="extendedBackgroundTaskTime"/>  
+   </Capabilities>  
 </Package>
 ```
 

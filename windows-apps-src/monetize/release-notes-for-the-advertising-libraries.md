@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 광고, 광고, 릴리스 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 37a5cafcc5f768e90d4ee3997f92a62a9903fc9a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435629"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480562"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Advertising 라이브러리에 대한 릴리스 정보
 
 
 
 
-이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리는 Windows 10, Windows 8.1, Windows Phone 8.1 및 Windows Phone 8용 XAML 및 JavaScript/HTML 앱을 지원합니다.
+이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리 Windows10, Windows8.1, Windows Phone 8.1 및 WindowsPhone8에 대 한 XAML 및 JavaScript/HTML 앱을 지원합니다.
 
 ## <a name="installation"></a>설치
 
@@ -50,6 +50,6 @@ Microsoft Advertising 라이브러리(**AdControl** 및 **InterstitialAd** 클�
 **AdControl** 클래스에는 더 이상 UWP 앱에 대한 **Latitude** 및 **Longitude** 속성이 없습니다. 대신, 광고 컨트롤에 기본 제공된 코드가 앱을 대신해서 이러한 값을 검색한 후 광고 서버로 보냅니다.
 
 
- 
+ 
 
- 
+ 

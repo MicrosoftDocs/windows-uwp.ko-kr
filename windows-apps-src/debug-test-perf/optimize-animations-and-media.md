@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eebb967a7bf11163dc2e0ba502b40495901b39b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432991"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476453"
 ---
 # <a name="optimize-animations-media-and-images"></a>애니메이션, 미디어 및 이미지 최적화
 
@@ -58,7 +58,7 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 마찬가지로 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 애니메이션도 바람직한 방법이 아닙니다. 성능이 손상될 뿐만 아니라 재생할 동영상 콘텐츠에서 작은 흠이나 기타 아티팩트가 생길 수 있습니다.
 
-> **참고**   **MediaPlayerElement**에 대한 이 문서의 권장 사항은 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)에도 적용됩니다. **MediaPlayerElement**는 Windows 10 버전 1607에서만 사용할 수 있으므로 이전 버전의 Windows용 앱을 만들려는 경우 **MediaElement**를 사용해야 합니다.
+> **참고**  **MediaPlayerElement** 에 대 한이 문서의 권장 사항은 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)에 적용 됩니다. **MediaPlayerElement**는 Windows 10 버전 1607에서만 사용할 수 있으므로 이전 버전의 Windows용 앱을 만들려는 경우 **MediaElement**를 사용해야 합니다.
 
 ### <a name="use-infinite-animations-sparingly"></a>꼭 필요한 경우에만 무한 애니메이션 사용
 
@@ -70,7 +70,7 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) 네임스페이스에는 다른 Windows 애니메이션과 모양과 느낌이 일치하는 고성능의, 자연스러운 애니메이션 라이브러리가 포함되어 있습니다. 관련 클래스에는 해당 이름에 "테마"가 있으며 [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/Mt187350)에 설명되어 있습니다. 이 라이브러리는 앱의 첫 화면을 애니메이션하거나 상태 및 콘텐츠 전환을 만드는 것과 같은 여러 일반적인 애니메이션 시나리오를 지원합니다. UWP UI에서 성능과 일관성을 높이기 위해 가능하면 이 애니메이션 라이브러리를 사용하는 것이 좋습니다.
 
-> **참고**   애니메이션 라이브러리에서 가능한 모든 속성을 애니메이션할 수는 없습니다. 애니메이션 라이브러리가 적용되지 않는 XAML 시나리오의 경우 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt187354)을 참조하세요.
+> **참고**  애니메이션 라이브러리에서 가능한 모든 속성을 애니메이션할 수 없습니다. 애니메이션 라이브러리가 적용되지 않는 XAML 시나리오의 경우 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt187354)을 참조하세요.
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>CompositeTransform3D 속성을 독립적으로 애니메이션

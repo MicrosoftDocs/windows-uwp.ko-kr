@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp, windows forms, wpf
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 59072374e19da1c5c7e6e6a5e6a7b8c172d74052
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 5803646c3b613a5a57992a9791215138cf996966
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435476"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5474027"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사용 하 여
 
@@ -89,7 +89,7 @@ UWP XAML 호스팅 API를 사용 하 여 호스트 응용 프로그램에서 UWP
 
     * **DesktopWindowXamlSource** 개체를 인스턴스화할 때이 프레임 워크를 초기화 됩니다 응용 프로그램을 만드는 경우 **DesktopWindowXamlSource** 개체 **Windows.UI.Xaml.UIElement** 개체를 만들기 전에 . 이 시나리오에서는 프레임 워크를 초기화 하려면 자신만의 코드를 추가할 필요가 없습니다.
 
-    * 그러나 응용 프로그램을 호스팅할 **DesktopWindowXamlSource** 개체를 만들기 전에 **Windows.UI.Xaml.UIElement** 개체를 만들고, 응용 프로그램 호출 해야 합니다 [**정적 WindowsXamlManager.InitializeForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) **Windows.UI.Xaml.UIElement** 개체가 인스턴스화됩니다 전에 UWP XAML 프레임 워크를 명시적으로 초기화 하는 방법. 응용 프로그램은 일반적으로이 메서드를 호출 해야이 **DesktopWindowXamlSource** 를 호스트 하는 부모 UI 요소를 인스턴스화할 때.
+    * 그러나 응용 프로그램을 호스팅할 **DesktopWindowXamlSource** 개체를 만들기 전에 **Windows.UI.Xaml.UIElement** 개체를 만들고, 응용 프로그램 호출 해야 합니다 [**정적 WindowsXamlManager.InitializeForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) **Windows.UI.Xaml.UIElement** 개체가 인스턴스화됩니다 전에 UWP XAML 프레임 워크를 명시적으로 초기화 하는 방법. 일반적으로 응용 프로그램 **DesktopWindowXamlSource** 를 호스트 하는 부모 UI 요소를 인스턴스화할 때이 메서드를 호출 해야 합니다.
 
     ```cppwinrt
     Windows::UI::Xaml::Hosting::WindowsXamlManager windowsXamlManager =

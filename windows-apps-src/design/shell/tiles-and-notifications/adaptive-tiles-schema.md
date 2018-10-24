@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 30a0e3056f8b7be2ed9d033e2da57795aec6946f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435041"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472287"
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a>적응형 타일 템플릿: 스키마 및 지침
 
@@ -146,9 +146,9 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 
 
 * [적응형 타일 만들기](create-adaptive-tiles.md)
- 
+ 
 
- 
+ 
 
 
 

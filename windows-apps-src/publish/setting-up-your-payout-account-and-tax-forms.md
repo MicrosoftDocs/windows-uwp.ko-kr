@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432482"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478442"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
@@ -33,8 +33,8 @@ Microsoft 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌
 -   [세금 양식 작성](#tax-forms)
 
 > [!NOTE]
-> 앱으로 번 돈을 지급 받는 방법과 시기에 대한 자세한 내용은 [지급 받기](getting-paid-apps.md)를 참조하세요.
- 
+> 앱으로 번 돈을 지급 받는 방법과 시기에 대한 자세한 내용은 [지급 받기](getting-paid-apps.md)를 참조하세요.
+ 
 
 ## <a name="payout-account"></a>지급 계좌
 
@@ -43,7 +43,7 @@ Microsoft 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌
 > [!NOTE]
 > 몇몇 시장에서는 PayPal을 지급 계좌에 사용할 수 있습니다. 특정 지역/국가에서 PayPal이 지원되는지 확인하려면 [계정 유형, 위치 및 수수료](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)를 참조하고, 자세한 내용은 [PayPal 정보](#paypal-info)를 읽어보세요.
 
- 
+ 
 **지급 계좌를 설정하려면**
 
 1.  Windows 개발자 센터 대시보드의 오른쪽 맨 위 구석의 아이콘을 선택하여 **계정 설정**으로 이동합니다.
@@ -63,7 +63,7 @@ Microsoft 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌
 
 > [!IMPORTANT]
 > 지급 계좌를 변경하면 다음 지급 주기로 지급이 지연될 수 있습니다. 처음 지급액 계좌를 설정할 때 그랬던 것처럼 Microsoft에서 계좌 변경을 확인해야 하기 때문입니다. 하지만 계좌가 검증된 후 전체 금액이 지급됩니다. 현재 지급 주기의 모든 지급 대상액이 다음 주기에 추가됩니다. 자세한 내용은 [지급 받기](getting-paid-apps.md)를 참조하세요.
- 
+ 
 
 ### <a name="paypal-info"></a>PayPal 정보
 
@@ -135,7 +135,7 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 > [!IMPORTANT]
 > 국가 및 지역에 따라 세금 요건이 다릅니다. 세금으로 납부해야 하는 정확한 액수는 앱을 판매하는 국가 및 지역에 따라 다릅니다. Microsoft에서 판매세와 이용세를 대신 납부하는 국가에 대해서는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 다른 국가에서는 등록된 위치에 따라 현지 세무 당국에 직접 앱 판매세와 이용세를 납부해야 할 수도 있습니다. 또한 지급되는 앱 판매 수익에 대해 소득세가 과세될 수 있습니다. 국가 또는 지역에 가장 잘 하도록 도와주는 Microsoft 스토어 개발자 활동에 대 한 정확한 세금 정보를 확인 하는 것에 대 한 관련 기관에 문의 하 여 좋습니다.
 
- 
+ 
 **세금 프로필을 완성하려면**
 
 1.  Windows 개발자 센터 대시보드의 맨 위 오른쪽 구석의 **계정 설정**을 클릭합니다.
@@ -160,9 +160,9 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 미국 이외 지역에 거주하는 경우 조세조약 혜택을 활용할 수 있습니다. 이러한 혜택에는 국가 마다 다를 및 Microsoft Store 줄이도록 세금의 양을 줄이는을 허용할 수 있습니다. W-8BEN 양식의 Part II를 완성하면 조세조약 혜택을 클레임할 수 있습니다. 이러한 혜택을 받을 수 있는지 확인하려면 거주 국가나 지역의 관련 기관에 문의하는 것이 좋습니다.
 
- 
+ 
 
- 
+ 
 
 
 

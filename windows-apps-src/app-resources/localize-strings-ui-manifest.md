@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436210"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475709"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -32,12 +32,12 @@ ms.locfileid: "5436210"
 1. 앱의 기본 언어를 설정합니다.
     1. Visual Studio에서 솔루션을 연 상태로 `Package.appxmanifest`를 엽니다.
     2. 응용 프로그램 탭에서 기본 언어가 제대로 설정되어 있는지 확인합니다(예: "en" 또는 "en-US"). 나머지 단계에서는 기본 언어를 "en-US"로 설정했다고 가정합니다.
-    <br>**참고** 최소한 이 기본 언어에 대해 지역화된 문자열 리소스를 제공해야 합니다. 이러한 리소스는 사용자의 기본 설정 언어 또는 표시 언어 설정에 대해 더 나은 일치를 찾을 수 없는 경우 로드됩니다.
+    <br>**참고**최소한이 기본 언어에 대해 지역화 된 문자열 리소스를 제공 해야 합니다. 이러한 리소스는 사용자의 기본 설정 언어 또는 표시 언어 설정에 대해 더 나은 일치를 찾을 수 없는 경우 로드됩니다.
 2. 기본 언어에 대한 리소스 파일(.resw)을 만듭니다.
     1. 프로젝트 노드에서 새 폴더를 만들고 이름을 "Strings"로 지정합니다.
     2. `Strings` 아래에 새 하위 폴더를 만들고 이름을 "en-US"로 지정합니다.
     3. `en-US`아래에서 새 리소스 파일(.resw)을 만들고 이름이 "Resources.resw"인지 확인합니다.
-    <br>**참고** 포팅하려는 .NET 리소스 파일(.resx)이 있는 경우 [XAML 및 UI 포팅](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)을 참조하세요.
+    <br>**참고**이식 하려는.NET 리소스 파일 (.resx)를 사용 하는 경우 [XAML 및 UI 포팅](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)참조 하세요.
 3.  `Resources.resw`를 열고 이러한 문자열 리소스를 추가합니다.
 
     `Strings/en-US/Resources.resw`
@@ -63,7 +63,7 @@ XAML 요소에 문자열 리소스 식별자를 할당할 해당 식별자에 �
 
 리소스 파일에서 **너비**를 설정하는 대신 콘텐츠에 동적으로 크기를 맞추는 컨트롤을 허용하도록 할 수 있습니다.
 
-**참고** [연결된 속성](../xaml-platform/attached-properties-overview.md)의 경우 .resw 파일의 이름 열에 특수 구문이 필요합니다. 예를 들어 "Greeting" 식별자에 대한 [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) 연결된 속성에 대한 값을 설정하려면 이름 열에서 이를 입력합니다.
+**참고** [연결 된 속성](../xaml-platform/attached-properties-overview.md)을.resw 파일의 이름 열에 특수 구문이 필요 합니다. 예를 들어 "Greeting" 식별자에 대한 [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) 연결된 속성에 대한 값을 설정하려면 이름 열에서 이를 입력합니다.
 
 ```xml
 Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
@@ -120,7 +120,7 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 ## <a name="localize-the-string-resources"></a>문자열 리소스 지역화
 1. 다른 언어에 대한 리소스 파일(.resw)의 복사본을 만듭니다.
     1. "Strings" 아래에서 새 하위 폴더를 만들고 독일어(독일)에 대해 이름을 "de-DE"로 지정합니다.
-   <br>**참고** 폴더 이름에 모든 [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)를 사용할 수 있습니다. 언어 한정자 및 일반 언어 태그 목록에 대한 자세한 내용은 [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)을 참조하세요.
+   <br>**참고**폴더 이름에 대 한 모든 [bcp-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)를 사용할 수 있습니다. 언어 한정자 및 일반 언어 태그 목록에 대한 자세한 내용은 [언어, 규모 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)을 참조하세요.
    2. `Strings/de-DE` 폴더의 `Strings/en-US/Resources.resw`의 복사본을 만듭니다.
 2. 문자열을 번역합니다.
     1. `Strings/de-DE/Resources.resw`를 열고 값 열에서 값을 번역합니다. 설명을 번역할 필요가 없습니다.
@@ -281,7 +281,7 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>다른 패키지에서 문자열 로드
-앱 패키지에 대 한 리소스를 관리 하 고 패키지를 통해 액세스 현재 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위 [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에 다양한 구성 요소는 자체 ResourceMap 하위 트리를 가지며 [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)를 통해 액세스할 수 있습니다.
+앱 패키지에 대 한 리소스를 관리 하 고 패키지를 통해 액세스 현재[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에서 다양 한 구성 요소는 해당 ownResourceMapsubtrees [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)통해 액세스할 수 있을 수 있습니다.
 
 프레임워크 패키지는 절대 리소스 식별자 URI로 자체 리소스에 액세스할 수 있습니다. [URI 스키마](uri-schemes.md)도 참조하세요.
 

@@ -14,11 +14,11 @@ dev_langs:
 - csharp
 - cppwinrt
 ms.openlocfilehash: 906fb2d0d5d466f4fd691afd35ed96198929225c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444257"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469669"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
@@ -40,7 +40,7 @@ ms.locfileid: "5444257"
 -   단방향 모드를 사용 하 여 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 신문 섹션 별로 그룹화 된 실시간 뉴스 기사 모음에 바인딩할 수 있습니다.
 -   [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 형태로 고객의 이름에 바인딩할 양방향 모드를 사용할 수 있습니다.
 
-모드에 관계 없이 두 종류의 바인딩 및 둘 다 일반적으로 선언 UI 태그에서입니다. [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783) 또는 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하도록 선택할 수 있습니다. 동일한 앱에서 이 둘을 혼합하여 사용할 수도 있으며, 동일한 UI 요소에도 마찬가지입니다. {x:Bind}는 Windows 10의 새로운 기능으로, 향상된 성능을 제공합니다. 이 항목에 설명된 모든 세부 정보는 명시적으로 설명하지 않더라도 두 종류의 바인딩 모두에 적용됩니다.
+모드에 관계 없이 두 종류의 바인딩 및 둘 다 일반적으로 선언 UI 태그에서입니다. [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783) 또는 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하도록 선택할 수 있습니다. 동일한 앱에서 이 둘을 혼합하여 사용할 수도 있으며, 동일한 UI 요소에도 마찬가지입니다. {x: Bind} Windows10에 대 한 새로운 기능이 며 더 나은 성능을 제공 합니다. 이 항목에 설명된 모든 세부 정보는 명시적으로 설명하지 않더라도 두 종류의 바인딩 모두에 적용됩니다.
 
 **{x:Bind}를 보여 주는 샘플 앱**
 
@@ -256,7 +256,7 @@ public class HostViewModel : BindableBase
 <Button Content="{Binding ...}" ... />
 ```
 
-C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX)를 사용 하 여 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하 여 원하는 모든 런타임 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가 해야 합니다.
+C + 사용 중인 경우 + WinRT 또는 VisualC + + 구성 요소 확장 (C + + CX)를 사용 하 여 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하 여 원하는 모든 런타임 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가 해야 합니다.
 
 > [!IMPORTANT]
 > 사용 중인 경우 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성은 Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치한 경우 사용할 수 있는 이상. 해당 특성이 없는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용할 수 있도록 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현 해야 합니다.
@@ -381,7 +381,7 @@ Title이라는 문자열 속성을 구현하는 SampleDataGroup이라는 형식�
 
 ### <a name="binding-object-declared-using-binding"></a>{Binding}을 사용하여 선언된 바인딩 개체
 
-C + 사용 중인 경우 + WinRT 또는 Visual c + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스에 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
+C + 사용 중인 경우 + WinRT 또는 VisualC + + 구성 요소 확장 (C + + CX) 한 다음, [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장을 사용 하려면 해야 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성에 바인딩할 모든 런타임 클래스에 추가 합니다. [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용 하려면 해당 특성을 필요는 없습니다.
 
 ```cppwinrt
 // HostViewModel.idl
@@ -746,7 +746,7 @@ public IOrderedEnumerable<IGrouping<string, BookSku>> Genres
 
 ## <a name="creating-bindings-in-code"></a>코드에서 바인딩 만들기
 
-**참고**  이 섹션은 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)에만 적용됩니다. 코드에서 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 바인딩을 만들 수 없기 때문입니다. 그러나 모든 종속성 속성에 대한 변경 알림을 등록할 수 있는 [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx)을 사용해서도 {x:Bind}를 사용할 때와 동일한 이점을 얻을 수 있습니다.
+**참고**이 섹션에만 적용 됩니다 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), 코드에서 [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 바인딩을 만들 수 없기 때문입니다. 그러나 모든 종속성 속성에 대한 변경 알림을 등록할 수 있는 [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx)을 사용해서도 {x:Bind}를 사용할 때와 동일한 이점을 얻을 수 있습니다.
 
 XAML 대신 절차 코드를 사용하여 UI 요소를 데이터에 연결할 수도 있습니다. 이렇게 하려면 새로운 [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) 개체를 만들고, 적절한 속성을 설정하고, [**FrameworkElement.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257.aspx) 또는 [**BindingOperations.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244376.aspx)을 호출합니다. 런타임에 바인딩 속성 값을 선택하거나 여러 컨트롤 간에 단일 바인딩을 공유하려는 경우 프로그래밍 방식으로 바인딩을 만드는 것이 유용합니다. 그러나 **SetBinding**을 호출한 후에는 바인딩 속성 값을 변경할 수 없습니다.
 

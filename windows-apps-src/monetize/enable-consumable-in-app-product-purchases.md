@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9dc64adb6cf3dafd30dfbe218403510fe1b80803
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441293"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476080"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>앱에서 바로 구매 소모성 제품 사용
 
@@ -83,6 +83,6 @@ ms.locfileid: "5441293"
 * [앱에서 바로 제품 구매 사용](enable-in-app-product-purchases.md)
 * [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/br225197)
- 
+ 
 
- 
+ 

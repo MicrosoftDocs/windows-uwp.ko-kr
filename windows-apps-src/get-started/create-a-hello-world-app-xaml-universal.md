@@ -2,7 +2,7 @@
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "\"Hello, world\" 앱(XAML)을 만드는 방법 알아보기"
-description: C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만들어 보세요.
+description: C#을 사용 하 여 응용 프로그램 언어 XAML (Extensible Markup)를 사용 하 여 Windows10에서 유니버설 Windows 플랫폼 (UWP)를 대상으로 하는 간단한 Hello, world 앱을 만듭니다.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434858"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479162"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
-이 자습서는 XAML과 C#을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)에 대한 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows10 장치에서 실행되는 앱을 빌드할 수 있습니다.
+이 자습서에서는 간단한을 만들려면 XAML과 C#을 사용 하는 방법을 "Hello, world" 앱 Windows10에서 유니버설 Windows 플랫폼 (UWP) 용입니다. Microsoft Visual Studio의 단일 프로젝트를 사용 하 여 Windows10 장치에서 실행 하는 앱을 빌드할 수 있습니다.
 
 여기에 배울 내용은 다음과 같습니다.
 
@@ -235,7 +235,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 ## <a name="summary"></a>요약
 
-축하합니다. Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
+축 하 합니다, Windows10 및 UWP 용 첫 번째 앱을 만들었습니다!
 
 XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보려면 [표 자습서](../design/layout/grid-tutorial.md)를 살펴보거나 [다음 단계](learn-more.md)로 바로 이동하세요.
 

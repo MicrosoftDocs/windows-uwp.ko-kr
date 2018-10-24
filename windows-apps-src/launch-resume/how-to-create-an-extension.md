@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445580"
+ms.locfileid: "5473897"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 
@@ -411,7 +411,7 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 
 앱 확장은 오픈 에코시스템에 참여합니다. 앱이 앱 확장을 호스팅할 수 있는 경우, 확장에서 정보를 전달/수신하는 방법을 준수하는 한 누구든지 호스트에 대한 확장을 작성할 수 있습니다. 이는 게시자가 앱과 함께 사용할 수 있는 선택적 패키지를 만들 수 있는 대상을 결정하는 폐쇄형 에코시스템에 참여하는 선택적 패키지와 다릅니다.
 
-앱 확장은 독립적 패키지이며 독립 실행형 앱이 될 수 있습니다. 다른 앱에 대한 배포 종속성을 가질 수 없습니다. 선택적 패키지에는 기본 패키지가 필요하며 기본 패키지가 없으면 실행할 수 없습니다.
+앱 확장은 독립적 패키지이며 독립 실행형 앱이 될 수 있습니다. 다른 앱에 대한 배포 종속성을 가질 수 없습니다.선택적 패키지에는 기본 패키지가 필요하며 기본 패키지가 없으면 실행할 수 없습니다.
 
 게임에 대한 확장 팩은 선택적 패키지의 좋은 후보가 될 수 있습니다. 이는 게임에 밀접하게 연결되어 있기 때문에 게임과 독립적으로 실행할 수 없으며 에코시스템의 개발자가 확장 팩을 만들지 못하게 해야 할 수 있습니다.
 

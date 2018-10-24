@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
 ms.openlocfilehash: da08e63cc42987f1a3876e13a713d670a80cf9ba
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432647"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471855"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -23,7 +23,7 @@ ms.locfileid: "5432647"
 Microsoft Store는 Windows 10을 실행하는 디바이스, Windows 10 Mobile을 실행하는 휴대폰 및 Xbox One 본체에 대한 결제 방법으로 휴대폰 통신사 청구를 제공합니다. 고객의 통신사가 이러한 기능을 제공할 경우 고객은 통신사 청구를 지불 방법으로 추가하고 이를 사용하여 모바일 계정으로 Microsoft Store에서 구매할 수 있습니다.
 
 > [!TIP]
->  고객의 통신사가 통신사 청구를 제공하지만 고객이 장치에서 이러한 옵션을 찾을 수 없는 경우 이러한 [단계](http://go.microsoft.com/fwlink/p/?LinkId=523993)를 참조하세요.
+>  고객의 통신사가 통신사 청구를 제공하지만 고객이 장치에서 이러한 옵션을 찾을 수 없는 경우 이러한 [단계](http://go.microsoft.com/fwlink/p/?LinkId=523993)를 참조하세요.
 
 Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법의 이용 범위를 확장하고 있습니다. 아래 목록에 없는 통신사를 추천하려면 해당 통신사로 연락하여 이 결제 방법을 추가하도록 요청하세요.
 
@@ -57,16 +57,16 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 미국   | Sprint, Verizon                  |
 | 영국  | O2, 3 UK, EE                     |
 
- 
+ 
 
 
 
- 
+ 
 
 
- 
+ 
 
- 
+ 
 
 
 

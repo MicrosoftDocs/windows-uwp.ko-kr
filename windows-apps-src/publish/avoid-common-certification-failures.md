@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 283856ad163d2e67078c61559f6f8ec667e92b87
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435586"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475070"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
@@ -46,9 +46,9 @@ ms.locfileid: "5435586"
 -   앱이 [**Windows.ApplicationModel.Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) 네임스페이스의 상거래 API를 사용하는 경우 앱을 테스트하고 일반적인 예외가 처리되는지 확인합니다. 또한 앱이 테스트용으로만 사용되는 [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 클래스가 아니라 [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용하는지 확인합니다. 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 Windows.ApplicationModel.Store 네임스페이스 대신 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 멤버를 사용하는 것이 좋습니다.
 
 
- 
+ 
 
- 
+ 
 
 
 

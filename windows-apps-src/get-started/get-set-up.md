@@ -2,7 +2,7 @@
 author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: 설정 방법
-description: 생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
+description: 생각보다 쉽게 설정할 수 있습니다. 다음이 지침에 따라 및 Windows10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들기 시작 합니다.
 ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 378544282981c62d7a57f9abc3f666e8964b7117
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445620"
+ms.locfileid: "5474762"
 ---
 # <a name="get-set-up"></a>설정 방법
 
 ![Visual Studio 사용 준비](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-생각보다 쉽게 시작할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
+생각보다 쉽게 시작할 수 있습니다. 다음이 지침에 따라 및 Windows10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들기 시작 합니다.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Visual Studio 다운로드 또는 업데이트
 
-Microsoft Visual Studio 2017은 앱을 디자인, 코딩, 테스트 및 디버그하는 데 도움이 됩니다.
+Microsoft Visual Studio2017 사용 하면 디자인, 코딩, 테스트 및 앱을 디버그 합니다.
 
-Microsoft Visual Studio Community 2015가 없는 경우 무료 Microsoft Visual Studio Community 2017을 설치할 수 있습니다. 이 다운로드에는 앱 테스트를 위한 디바이스 시뮬레이터가 포함되어 있습니다.
+시각적 Studio2017 없는 경우에 무료 Microsoft Visual Studio Community2017를 설치할 수 있습니다. 이 다운로드에는 앱 테스트를 위한 디바이스 시뮬레이터가 포함되어 있습니다.
 
 -   [Windows 10 개발자 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 

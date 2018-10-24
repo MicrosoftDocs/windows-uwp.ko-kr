@@ -17,11 +17,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 78448081b81e7e28c4b97fcfdd7aa71ae32aeb0c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445401"
+ms.locfileid: "5473838"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -116,7 +116,7 @@ void MyProject::MainPage::Grid_KeyUp(
 > [!NOTE]
 > Alt 키는 **VirtualKey.Menu** 값으로 표시됩니다.
 
- 
+ 
 
 ### <a name="shortcut-keys-example"></a>바로 가기 키 예제
 
@@ -283,7 +283,7 @@ End Sub
 >
 > **AutomationProperties.AcceleratorKey** 또는 **AutomationProperties.AccessKey**를 설정해도 그 자체로는 작업이 수행되지 않습니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 또는 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트에 대한 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) 서식으로 표시해야 합니다.
 
- 
+ 
 
 ## <a name="keyboard-routed-events"></a>키보드 라우트된 이벤트
 
@@ -405,6 +405,6 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 * [입력: 터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?LinkID=251417)
- 
+ 
 
- 
+ 

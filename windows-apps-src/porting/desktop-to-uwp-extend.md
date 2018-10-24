@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: be4338c7b7e7b3861c206a6d7d63e9e417e6cd0d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 3a516fea67239a737c1f8a05ef17fbc1d9203030
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438884"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476821"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 
 일부 Windows 10 환경(예, 터치 구현 UI 페이지)은 최신 앱 컨테이너 내부에서 실행해야 합니다. 이러한 환경을 추가하려는 경우, UWP 프로젝트 및 Windows 런타임 구성 요소로 데스크톱 응용 프로그램을 확장합니다.
 
-많은 경우 데스크톱 응용 프로그램에서 직접 UWP API를 호출할 수 있기 때문에 이 가이드를 검토하기 전에 [Windows 10 향상](desktop-to-uwp-enhance.md)을 참조하세요.
+대부분의 경우에서 데스크톱 응용 프로그램에서 직접 Windows 런타임 Api를 호출, 되므로이 가이드를 검토 하기 전에 [Windows 10 향상](desktop-to-uwp-enhance.md)볼 수 있습니다.
 
 >[!NOTE]
 >이 가이드는 데스크톱 응용 프로그램용 Windows 앱 패키지를 생성 한 가정 합니다. 이 아직 완료 하지 않았다면, [데스크톱 응용 프로그램 패키지를](desktop-to-uwp-root.md)참조 하세요.
@@ -162,7 +162,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
   <uap:Extension Category="windows.protocol" Executable="MapUI.exe" EntryPoint="MapUI.App">
     <uap:Protocol Name="xamluidemo" />
   </uap:Extension>
-</Extensions>    
+</Extensions>    
 ```
 
 프로토콜 이름을 지정하고, UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다.
@@ -284,18 +284,18 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ```xml
 <Extensions>
-      <uap:Extension
-          Category="windows.shareTarget"
-          Executable="ShareTarget.exe"
-          EntryPoint="App">
-        <uap:ShareTarget>
-          <uap:SupportedFileTypes>
-            <uap:SupportsAnyFileType />
-          </uap:SupportedFileTypes>
-          <uap:DataFormat>Bitmap</uap:DataFormat>
-        </uap:ShareTarget>
-      </uap:Extension>
-</Extensions>  
+      <uap:Extension
+          Category="windows.shareTarget"
+          Executable="ShareTarget.exe"
+          EntryPoint="App">
+        <uap:ShareTarget>
+          <uap:SupportedFileTypes>
+            <uap:SupportsAnyFileType />
+          </uap:SupportedFileTypes>
+          <uap:DataFormat>Bitmap</uap:DataFormat>
+        </uap:ShareTarget>
+      </uap:Extension>
+</Extensions>  
 ```
 
 UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름을 제공합니다. 이 태그는 UWP 앱에 대 한 실행 파일의 이름 이라고 가정 `ShareTarget.exe`.
@@ -353,7 +353,7 @@ UWP 앱 프로젝트에 **UWP 용 Windows 데스크톱 확장** 확장을 추가
   ...
       <desktop:Extension Category="windows.fullTrustProcess" Executable="PhotoStoreDemo\PhotoStoreDemo.exe" />
   ...
-</Extensions>  
+</Extensions>  
 ```
 
 이 확장 파일 공유를 원하는 데스크톱 응용 프로그램을 시작 하려면 UWP 앱으로 활성화 됩니다. 예제에서는 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 응용 프로그램의 실행 파일을 참조 합니다.

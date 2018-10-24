@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 79873d014c5ee735a509328d4a123f839831325b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440129"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476057"
 ---
 # <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
 
@@ -38,7 +38,7 @@ ms.locfileid: "5440129"
     홈 그룹 콘텐츠에 액세스하려면 사용자의 컴퓨터에 홈 그룹이 설정되어 있고 앱에는 **picturesLibrary**, **musicLibrary** 또는 **videosLibrary** 접근 권한 값 중 하나 이상이 있어야 합니다. 앱에서 홈 그룹 폴더에 액세스하면 앱의 매니페스트에 선언된 접근 권한 값에 해당하는 라이브러리만 표시됩니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
     > [!NOTE]
-    >  홈 그룹의 문서 라이브러리에 있는 콘텐츠는 앱의 매니페스트에 선언된 기능과 상관없이 그리고 사용자의 공유 설정과 상관없이 앱에서 보이지 않습니다.     
+    >  홈 그룹의 문서 라이브러리에 있는 콘텐츠는 앱의 매니페스트에 선언된 기능과 상관없이 그리고 사용자의 공유 설정과 상관없이 앱에서 보이지 않습니다.     
 
 -   **파일 선택기 사용 방법 이해**
 

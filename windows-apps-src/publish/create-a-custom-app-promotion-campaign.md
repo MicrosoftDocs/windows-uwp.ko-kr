@@ -11,20 +11,20 @@ ms.technology: uwp
 keywords: windows 10, uwp, 사용자 지정, 앱, 홍보, 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 13ee8d7482a2ce0716d4e133af329cd0ea42c184
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435268"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478786"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 
 Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-for-your-app.md)을 만든 후 다른 채널을 사용하여 앱을 홍보할 수도 있습니다. 예를 들어 타사 앱 마케팅 공급자를 사용하여 앱을 홍보하거나 소셜 미디어 사이트에 앱의 링크를 게시할 수 있습니다. 이러한 활동을 *사용자 지정 캠페인*이라고 합니다.
 
-앱에서 사용자 지정 캠페인을 실행하는 경우, 각 URL에 서로 다른 *캠페인 ID*를 포함하여 각 사용자 지정 캠페인에 대해 다른 URL을 만들어 각 캠페인의 상대적인 성과를 추적할 수 있습니다. Windows 10을 실행하는 고객이 캠페인 ID가 포함된 URL을 클릭하면 Microsoft에서 이 클릭을 해당 사용자 지정 캠페인과 연결하고 이 데이터를 제공합니다.
+앱에서 사용자 지정 캠페인을 실행하는 경우, 각 URL에 서로 다른 *캠페인 ID*를 포함하여 각 사용자 지정 캠페인에 대해 다른 URL을 만들어 각 캠페인의 상대적인 성과를 추적할 수 있습니다. Windows10를 실행 하는 고객이 캠페인 ID가 포함 된 URL을 클릭 하면, Microsoft 클릭 해당 사용자 지정 캠페인에 연결 하 고 사용자가이 데이터를 사용할 수 있도록 합니다.
 
 > [!IMPORTANT]
-> Windows 10 고객에 대해서만 이 데이터가 추적됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
+> 이 데이터 Windows10에서 고객을 위한만 추적 됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
 
 사용자 지정 캠페인과 연결되는 데이터는 앱의 Store 목록에 대한 *페이지 보기*와 *변환* 두 가지 기본 유형이 있습니다. 변환은 고객이 사용자 지정 캠페인 ID가 포함된 URL에서 앱의 스토어 목록 페이지를 클릭한 결과로 이루어진 앱 구입입니다. 변환에 대한 자세한 내용은 이 항목의 [앱 구입이 변환으로 인정되는 방법 이해](#understanding-how-acquisitions-qualify-as-conversions)를 참조하세요.
 

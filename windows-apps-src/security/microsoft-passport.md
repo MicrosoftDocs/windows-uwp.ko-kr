@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: b81bf3c55b493d8e36f186ec56b68367c6245cc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434062"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478190"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -451,7 +451,7 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 | TPM                 | 신뢰할 수 있는 플랫폼 모듈을 사용하면 개인 키가 TPM 외부에서 노출되거나 사용되지 않는(즉, 키 마이그레이션 불가능) 방식으로 암호화 공개/개인 키 쌍을 만들 수 있습니다.                                                                                                                                                                                                                                                                                                               |
 | TPM 키 증명 | 키가 TPM에 바인딩되었음을 암호화 방식으로 증명하는 프로토콜입니다. 이 유형의 증명을 사용하여 특정 컴퓨터의 TPM에서 특정 암호화 작업이 발생했음을 보증할 수 있습니다.                                                                                                                                                                                                                                                                                                                       |
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 

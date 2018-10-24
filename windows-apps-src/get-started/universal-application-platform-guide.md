@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f0168f0a1baef5e68bccdf0a33c3ac7eb7683a7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432410"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473926"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -39,9 +39,9 @@ UWP 앱은 마이크, 위치, 웹캠, USB 장치, 파일 및 등에 대한 액�
 
 ## <a name="a-common-api-surface-across-all-devices"></a>모든 디바이스에서의 공통 API 표면
 
-Windows 10에는 Windows 10을 실행하는 모든 디바이스에 공통 앱 플랫폼을 제공하는 UWP(유니버설 Windows 플랫폼)가 도입되었습니다. UWP 핵심 API는 모든 Windows 장치에서 같습니다. 앱이 핵심 API만 사용하는 경우에는 데스크톱 PC, Xbox 또는 혼합 현실 헤드셋 중 무엇을 대상으로 하든 Windows 10 장치에서 실행됩니다.
+Windows10는 유니버설 Windows 플랫폼 (UWP) Windows10를 실행 하는 모든 장치에 공통 앱 플랫폼을 제공 하는 소개 합니다. UWP 핵심 API는 모든 Windows 장치에서 같습니다. 앱이 핵심 Api만 사용 하는 경우 데스크톱 PC, Xbox, 혼합 현실 헤드셋을 대상으로 하 고 등 했는지 여부에 관계 없이 모든 Windows10 장치에서 실행 됩니다.
 
-C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 API는 모든 Windows10 디바이스에서 구현됩니다.
+C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 Api는 모든 Windows10 장치에서 구현 됩니다.
 
 ## <a name="extension-sdks-expose-the-unique-capabilities-of-specific-device-types"></a>확장 SDK는 특정 디바이스 유형의 고유한 기능을 노출
 
@@ -70,7 +70,7 @@ Windows에서는 다음과 같은 기능으로 UI를 여러 장치에 맞게 조
 
 ## <a name="theres-one-store-for-all-devices"></a>모든 디바이스를 위한 하나의 저장소가 있습니다.
 
-통합 앱 스토어에서는 PC, 태블릿, Xbox, HoloLens, Surface Hub, 사물 인터넷(IoT) 같은 Windows 10 디바이스에서 앱을 사용할 수 있습니다. 앱을 스토어에 제출하고 모든 유형의 디바이스에서, 또는 선택한 디바이스에서 이를 사용하도록 할 수 있습니다. 한 곳에서 모든 Windows 장치용 앱을 제출하고 관리합니다. UWP 기능으로 현대화하고 Microsoft Store에서 판매하고 싶은 C++ 데스크톱 앱이 있나요? 그것도 가능합니다.
+통합된 앱 스토어에서는에서 앱을 사용할 수 있는 PC, 태블릿, Xbox, HoloLens, Surface Hub 및 사물 인터넷 (IoT) 디바이스와 같은 Windows10 장치. 앱을 스토어에 제출하고 모든 유형의 디바이스에서, 또는 선택한 디바이스에서 이를 사용하도록 할 수 있습니다. 한 곳에서 모든 Windows 장치용 앱을 제출하고 관리합니다. UWP 기능으로 현대화하고 Microsoft Store에서 판매하고 싶은 C++ 데스크톱 앱이 있나요? 그것도 가능합니다.
 
 사용자에 대한 이해를 높이고 앱을 개선하는 데 중요한 도구인 상세 원격 분석용 [Application Insights](http://azure.microsoft.com/services/application-insights/)에 UWP 앱이 통합됩니다.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 설명, 설명, Store 목록, 마케팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 54877e43ced6044e0866f951a653f2b32d040d9d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442229"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472247"
 ---
 # <a name="write-a-great-app-description"></a>호소력 있는 앱 설명 쓰기
 
@@ -30,7 +30,7 @@ ms.locfileid: "5442229"
 -   **목록 및 간단한 단락을 사용합니다.** 잠재 고객은 앱을 잠시 살펴만 볼 수 있습니다. 해당하는 경우 짧은 단락과 목록을 사용하여 콘텐츠를 나누면 검사가 더 쉬워집니다.
 
     > [!NOTE]
-    > [앱 기능](create-app-store-listings.md#app-features) 목록을 추가하는 것도 앱 기능을 빠르게 표시하는 데 도움이 됩니다. 이 목록은 앱 설명 바로 아래에 나타납니다.
+    > [앱 기능](create-app-store-listings.md#app-features) 목록을 추가하는 것도 앱 기능을 빠르게 표시하는 데 도움이 됩니다. 이 목록은 앱 설명 바로 아래에 나타납니다.
 
 -   **건조한 언어는 사용하지 마세요.** 친근한 언어로 설명을 작성합니다. 앱 기능을 명확하게 설명하는 용어를 사용하되 지겨운 어조가 되지 않도록 하세요. 일상적이고 친근한 어조는 대부분의 앱에 효과적입니다.
 -   **적합한 길이를 사용합니다.** 좋은 설명은 빠르게 읽힐 뿐 아니라 읽는 사람의 흥미를 유발하고 앱 기능을 설명하는 정보를 포함합니다. 복잡한 앱은 설명하는 데 더 많은 문장이 필요하지만 단순한 앱은 몇 문장만 사용하면 됩니다. 대부분의 경우 적합한 길이는 200 단어에서 3000 단어 사이입니다.
@@ -41,9 +41,9 @@ ms.locfileid: "5442229"
 -   **HTML 태그를 사용하지 마세요.** HTML 또는 기타 코드가 렌더링되지 않습니다. 설명을 일반 텍스트로만 나타내야 합니다.
 -   **스토어에서 유사한 앱에 대한 설명을 검토하여 아이디어를 얻습니다.** 다른 개발자가 앱을 어떻게 설명하는지 살펴보세요. 앱의 차이점으로 강조할 수 있는 사항을 파악하는 데도 도움이 됩니다.
 
- 
+ 
 
- 
+ 
 
 
 

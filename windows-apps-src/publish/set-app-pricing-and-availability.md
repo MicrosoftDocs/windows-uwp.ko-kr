@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 가격, 사용 가능, 검색 가능, 무료 평가판, 평가판들, 평가판, 앱들, 출시 날짜
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433735"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478465"
 ---
 # <a name="set-app-pricing-and-availability"></a>앱 가격 책정 및 가용성 설정
 
@@ -61,7 +61,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 **시간 제한**을 선택해 고객이 특정 기간 동안 앱을 무료로 사용할 수 있도록 지정할 수 있습니다. **1 일**, **7 일**, **15 일**, 또는 **30 일** 중에 선택할 수 있습니다. [평가판의 기능을 제한하거나 없애는](../monetize/in-app-purchases-and-trials.md) 코드를 추가해 기능을 제한할 수 있습니다. 또는 평가 기간에 고객이 모든 기능에 액세스할 수 있도록 구성할 수 있습니다. 
 > [!NOTE]
-> 시간 제한 평가판은 Windows 10 빌드 10.0.10586 이전, Windows Phone 8.1 이전 버전을 사용하는 고객에게는 표시되지 않습니다.
+> 시간 제한 평가판은 Windows 10 빌드 10.0.10586 이전, Windows Phone 8.1 이전 버전을 사용하는 고객에게는 표시되지 않습니다.
 
 ### <a name="unlimited"></a>제한 없음
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c03d99781114c4fefff04cc25930748ec16182f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434504"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470401"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
 
@@ -153,7 +153,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 ### <a name="fromtoby-are-nullable"></a>nullable인 From/To/By
 
-앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. Visual C++ 구성 요소 확장(C++/CX)에는 **Nullable** 형식이 없으므로 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864)를 대신 사용합니다.
+앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. VisualC + + 구성 요소 확장 (C + + CX) **Nullable** 형식 대신 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) 사용 되므로 필요는 없습니다.
 
 ### <a name="other-properties-of-an-animation"></a>애니메이션의 다른 속성
 
@@ -314,7 +314,7 @@ myStoryBoard.Begin()
 > [!TIP]
 > 앱 코드에서 애니메이션을 시작하는 앱 시나리오를 코딩할 때마다 애니메이션이나 전환이 UI 시나리오에 대한 애니메이션 라이브러리에 이미 있는지 여부를 다시 검토해야 할 수 있습니다. 라이브러리 애니메이션은 모든 Windows 런타임 앱에서 보다 일관된 UI 환경을 제공하며 사용하기도 더 쉽습니다.
 
- 
+ 
 
 ### <a name="animations-for-visual-states"></a>시각적 상태에 대한 애니메이션
 
@@ -341,9 +341,9 @@ XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법
 * [컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/Mt210948)
 * [**스토리보드**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
- 
+ 
 
- 
+ 
 
 
 

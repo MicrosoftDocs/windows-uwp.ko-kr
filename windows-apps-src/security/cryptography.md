@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: aa01cc3d70db7a94667e944d1a1739e911f94b0c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439152"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469772"
 ---
 # <a name="cryptography"></a>암호화
 
@@ -46,7 +46,7 @@ ms.locfileid: "5439152"
 | 키 저장소 공급자        | 키 자료를 저장하기 위한 컨테이너입니다. 현재 키는 소프트웨어, 스마트 카드 또는 TPM(신뢰할 수 있는 플랫폼 모듈)에 저장할 수 있습니다.                                                                   |
 | X.509 인증서           | 주로 인증 기관이 발급하는 디지털 문서로, 개인, 시스템 또는 엔터티의 ID를 다른 관련 당사자에게 검증하는 데 사용됩니다.                                            |
 
- 
+ 
 ## <a name="namespaces"></a>네임스페이스
 
 앱에서 사용할 수 있는 네임스페이스는 다음과 같습니다.
@@ -152,4 +152,4 @@ SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 
 | [암호화에 대한 내보내기 제한](export-restrictions-on-cryptography.md) | 이 정보를 사용하여 앱이 Microsoft Store에 나열될 수 없는 방식으로 암호화를 사용하는지 확인할 수 있습니다.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [일반적인 암호화 작업](common-cryptography-tasks.md)                     | 이러한 문서에서는 난수 만들기, 버퍼 비교, 문자열과 이진 데이터 간 변환, 바이트 배열에서 복사 및 데이터 인코딩 및 디코딩 등의 일반적인 UWP 암호화 작업에 대한 예제 코드를 제공합니다.                                                                                                                                                                                                                                                                                    |
 
- 
+ 

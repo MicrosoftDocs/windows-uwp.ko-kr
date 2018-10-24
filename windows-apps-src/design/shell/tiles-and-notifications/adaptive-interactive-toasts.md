@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 알림 메시지, 대화형 알림, 적응형 알림, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
 ms.openlocfilehash: de999528d07e6bd7d243e53708e9afc465004af7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435925"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479132"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -26,7 +26,7 @@ ms.locfileid: "5435925"
 > **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Windows 8.1 및 Windows Phone 8.1의 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761494)를 참조하세요.
+> Windows8.1 및 Windows Phone 8.1의 레거시 템플릿을 보려면, [레거시 알림 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761494)를 참조 하세요.
 
 
 ## <a name="getting-started"></a>시작
@@ -56,33 +56,33 @@ ms.locfileid: "5435925"
 ```csharp
 ToastContent content = new ToastContent()
 {
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric() { ... }
-    },
- 
-    Actions = new ToastActionsCustom() { ... },
- 
-    Audio = new ToastAudio() { ... }
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric() { ... }
+    },
+ 
+    Actions = new ToastActionsCustom() { ... },
+ 
+    Audio = new ToastAudio() { ... }
 };
 ```
 
 ```xml
 <toast launch="app-defined-string">
 
-  <visual>
-    <binding template="ToastGeneric">
-      ...
-    </binding>
-  </visual>
+  <visual>
+    <binding template="ToastGeneric">
+      ...
+    </binding>
+  </visual>
 
-  <actions>
-    ...
-  </actions>
+  <actions>
+    ...
+  </actions>
 
-  <audio src="ms-winsoundevent:Notification.Reminder"/>
+  <audio src="ms-winsoundevent:Notification.Reminder"/>
 
 </toast>
 ```
@@ -286,14 +286,14 @@ new ToastBindingGeneric()
 ```csharp
 ToastContent toastContent = new ToastContent()
 {
-    DisplayTimestamp = new DateTime(2017, 04, 15, 19, 45, 00, DateTimeKind.Utc),
-    ...
+    DisplayTimestamp = new DateTime(2017, 04, 15, 19, 45, 00, DateTimeKind.Utc),
+    ...
 };
 ```
 
 ```xml
 <toast displayTimestamp="2017-04-15T19:45:00Z">
-  ...
+  ...
 </toast>
 ```
 
@@ -759,40 +759,40 @@ ToastContent content = new ToastContent()
             }
         },
 
-        Buttons =
-        {
-            new ToastButtonSnooze()
-            {
-                SelectionBoxId = "snoozeTime"
-            },
- 
-            new ToastButtonDismiss()
-        }
+        Buttons =
+        {
+            new ToastButtonSnooze()
+            {
+                SelectionBoxId = "snoozeTime"
+            },
+ 
+            new ToastButtonDismiss()
+        }
     }
 };
 ```
 
 ```xml
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
-   
-  ...
- 
-  <actions>
-     
-    <input id="snoozeTime" type="selection" defaultInput="15">
-      <selection id="1" content="1 minute"/>
-      <selection id="15" content="15 minutes"/>
-      <selection id="60" content="1 hour"/>
-      <selection id="240" content="4 hours"/>
-      <selection id="1440" content="1 day"/>
-    </input>
- 
-    <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content="" />
- 
-    <action activationType="system" arguments="dismiss" content=""/>
-     
-  </actions>
-   
+   
+  ...
+ 
+  <actions>
+     
+    <input id="snoozeTime" type="selection" defaultInput="15">
+      <selection id="1" content="1 minute"/>
+      <selection id="15" content="15 minutes"/>
+      <selection id="60" content="1 hour"/>
+      <selection id="240" content="4 hours"/>
+      <selection id="1440" content="1 day"/>
+    </input>
+ 
+    <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content="" />
+ 
+    <action activationType="system" arguments="dismiss" content=""/>
+     
+  </actions>
+   
 </toast>
 ```
 
@@ -880,7 +880,7 @@ ToastContent content = new ToastContent()
 
 ## <a name="handling-activation"></a>활성화 처리
 알림 활성화를 처리하는 방법(사용자가 알림 또는 알림의 단추 클릭)은 [Send local toast(로컬 알림 보내기)](send-local-toast.md)를 참조하세요.
- 
+ 
 ## <a name="related-topics"></a>관련 항목
 
 * [로컬 알림 보내기 및 활성화 처리](send-local-toast.md)

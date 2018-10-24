@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437686"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475318"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
 
@@ -57,7 +57,7 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 
 **TemplateBinding**은 태그 확장입니다. 태그 확장은 특정 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 구현되며, 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML의 모든 태그 확장은 특성 구문에 "{" 및 "}" 문자를 사용하며, 여기서 특성 구문은 XAML 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용하는 규칙입니다.
 
-**참고**  Windows 런타임 XAML 프로세서 구현에는 **TemplateBinding**을 위한 지원 클래스 표현이 없습니다. **TemplateBinding**은 XAML 태그에서만 사용됩니다. 코드에서 이 동작을 재현하는 간단한 방법은 없습니다.
+**참고**Windows 런타임 XAML 프로세서 구현에는 **TemplateBinding**에 대 한 지원 클래스 표현이 없습니다. **TemplateBinding**은 XAML 태그에서만 사용됩니다. 코드에서 이 동작을 재현하는 간단한 방법은 없습니다.
 
 ### <a name="xbind-in-controltemplate"></a>ControlTemplate에서 X:bind
 
@@ -84,5 +84,5 @@ Windows 10으로 다음 주요 업데이트부터 **X:bind** 태그 확장을 �
 * [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
 * [XAML 개요](xaml-overview.md)
 * [종속성 속성 개요](dependency-properties-overview.md)
- 
+ 
 

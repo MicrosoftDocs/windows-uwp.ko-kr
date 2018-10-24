@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, directx, 앱 개체
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbe68516e3ad8b2643faf68900e3305f18e8bbf
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444299"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475057"
 ---
 # <a name="the-app-object-and-directx"></a>앱 개체 및 DirectX
 
@@ -36,9 +36,9 @@ DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI �
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **참고**   UWP 앱을 개발하는 경우가 아니면 JavaScript 또는 XAML 특정 네임스페이스에 제공된 유형 대신 이러한 라이브러리 및 네임스페이스에 제공된 사용자 인터페이스 구성 요소를 사용하세요.
+> **참고**  UWP 앱을 개발 하지 않는 경우 JavaScript 또는 XAML 특정 라이브러리 및 네임이 스페이스에 제공 된 유형 대신 네임 스페이스에 제공 된 사용자 인터페이스 구성 요소를 사용 합니다.
 
- 
+ 
 
 ## <a name="the-windows-runtime-app-object"></a>Windows 런타임 앱 개체
 
@@ -114,7 +114,7 @@ UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 �
 | [**CoreProcessEventsOption.ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)        | 새 이벤트를 대기하고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 응용 프로그램이 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스의 [**Close**](https://msdn.microsoft.com/library/windows/apps/br208260) 메서드를 호출할 때까지 이 동작을 계속합니다. |
 | [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | 큐에서 현재 사용 가능한 모든 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 즉시 반환합니다.                                                                                                                                          |
 
- 
+ 
 
 그래픽 업데이트를 중단시킬 수 있는 차단 동작을 방지하려면 DirectX를 사용하는 UWP가 [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217) 옵션을 사용해야 합니다.
 
@@ -155,9 +155,9 @@ UWP DirectX 앱에 대한 앱 개체가 활성화되면 UI 보기에 사용될 A
 
 전체적으로 UWP 앱을 디자인하는 경우 직접 MTA 스레드를 만들어 관리하는 대신 앱의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 및 [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)에 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)를 사용하여 모든 UI 스레드를 처리하세요. **CoreDispatcher**로 처리할 수 없는 별도의 스레드가 필요한 경우 비동기 패턴을 사용하고 앞에서 설명한 지침에 따라 다시 표시 문제를 방지하세요.
 
- 
+ 
 
- 
+ 
 
 
 

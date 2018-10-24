@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f99396b117efcf7c3bed3cb64f24b519734cc858
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441201"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471572"
 ---
 # <a name="trademark-and-copyright-protection"></a>상표 및 저작권 보호
 
@@ -67,9 +67,9 @@ ms.locfileid: "5441201"
 
 Microsoft에서 보내는 알림을 잘 읽고 지침을 따르세요. Microsoft 알림에는 문제 해결을 위해 어떤 작업을 했으며, 신고자의 의견에 동의하지 않으며, 앱을 스토어에 다시 전송하고 싶다고 알리기 위해 수행할 수 있는 특정 단계가 포함될 수 있습니다.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: 4f3ebd2877dd786161c76d89e17a2667c07e65b3
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441548"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478776"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>XAML과 C# 문제 해결 가이드
 
@@ -261,6 +261,6 @@ ms.locfileid: "5441548"
 
 3.  **AdControl**은 정상적으로 동작하고 있습니다. 동일한 광고가 차례대로 두 번 이상 나타나면서 광고는 새로 고쳐지지 않는 경우가 있습니다.
 
- 
+ 
 
- 
+ 

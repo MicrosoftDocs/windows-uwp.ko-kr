@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: 05542a42e362f024e92547d9eb496b936b85236c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434072"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472411"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>C++/WinRT 문제 해결
 
@@ -45,7 +45,7 @@ ms.locfileid: "5434072"
 | Windows 앱 인증 키트 테스트에서 런타임 클래스 중 하나가 "*does not derive from a Windows base class. All composable classes must ultimately derive from a type in the Windows namespace*"라는 오류 메시지가 생성됩니다.|기본 클래스에서 파생 되는 런타임 클래스 (선언 하는 응용 프로그램에서) 라고는 *구성 가능한* 클래스입니다. 구성 가능한 클래스의 최종 기본 클래스 네임 스페이스로 시작; 형식 이어야 합니다. 예를 들어 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)합니다. 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](binding-property.md) 더 자세한 합니다.|
 | C++ 컴파일러가 EventHandler 또는 TypedEventHandler 대리자 전문화에서 "*must be WinRT type*"이라는 오류 메시지를 생성합니다.|**winrt::delegate&lt;...T&gt;** 를 대신 사용하세요. [C++/WinRT의 작성자 이벤트](author-events.md)를 참조하세요.|
 | C++ 컴파일러가 Windows 런타임 비동기 작업 전문화에서 "*must be WinRT type*"이라는 오류 메시지를 생성합니다.|병렬 패턴 라이브러리(PPL) [**작업**](https://msdn.microsoft.com/library/hh750113)을 대신 반환하세요. [동시성 및 비동기 작업](concurrency.md)을 참조하세요.|
-| C++ 컴파일러가 "*error C2220: warning treated as error - no 'object' file generated*"라는 오류 메시지를 생성합니다.|경고를 수정하거나, 혹은 **C/C++** > **일반** > **경고를 오류로 처리**를 **아니오(/WX-)** 로 설정하세요.|
+| C++ 컴파일러가 "*error C2220: warning treated as error - no 'object' file generated*"라는 오류 메시지를 생성합니다.|경고를 수정 하거나 설정 **C/c + +**>**일반**>**경고를 오류로 처리** **아니요 (/ WX-)**.|
 | 개체 삭제 후 C++/WinRT 개체의 이벤트 처리기가 호출되어 앱이 충돌을 일으킵니다.|[이벤트 처리 대리자를 사용 하 여 *이* 포인터를 안전 하 게 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)를 참조 하십시오.|
 | C++ 컴파일러가 "*error C2338: This is only for weak ref support*"라는 오류 메시지를 생성합니다.|현재 **winrt::no_weak_ref** 마커 구조체를 템플릿 인수로 기본 클래스에게 전달한 유형에 대해 약한 참조를 요청하고 있습니다. [약한 참조 지원의 옵트아웃](weak-references.md#opting-out-of-weak-reference-support)을 참조 하세요.|
 | C + + 링커 생성 "*오류 LNK2019: Unresolved 외부 기호*"|참조 [이유는 링커 링커에서 "LNK2019: 외부 기호가" 오류?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)합니다.|

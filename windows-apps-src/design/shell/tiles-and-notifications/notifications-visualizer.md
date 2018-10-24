@@ -1,6 +1,6 @@
 ---
 author: andrewleader
-Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
+Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
 title: 알림 시각화 도우미
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -12,18 +12,18 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af8b2489346e1ef81c5cae304802814b79b8b950
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432531"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5474001"
 ---
 # <a name="notifications-visualizer"></a>알림 시각화 도우미
 
  
 
 
-알림 시각화 도우미는 [Microsoft Store의](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) UWP(유니버설 Windows 플랫폼) 앱으로, 개발자가 Windows 10용 적응형 Live Tile 및 대화형 알림 메시지를 디자인하는 데 도움을 줍니다.
+알림 시각화 도우미는 새 유니버설 Windows 플랫폼 (UWP) 앱을 [스토어에서](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) 개발자가 도움이 되는 적응형 Live Tile 및 대화형 알림 Windows10에 대 한 디자인 합니다.
 
 
 ## <a name="overview"></a>개요
@@ -34,13 +34,13 @@ ms.locfileid: "5432531"
 
 ![알림 시각화 도우미 앱 편집기 스크린샷(코드 및 타일 포함)](images/notif-visualizer-001.png)
 
- 
+ 
 
 알림 시각화 도우미를 사용하면 자체 앱을 편집 및 배포하지 않고도 적응형 타일 및 알림 페이로드를 만들어 테스트할 수 있습니다. 원하는 시각적 결과가 포함된 페이로드를 만들었다면 이를 앱에 통합할 수 있습니다. [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)와 [로컬 알림 보내기](send-local-toast.md)를 참조하여 자세히 알아보세요.
 
-**참고**   알림 시각화 도우미의 Windows 시작 메뉴 및 알림 메시지 시뮬레이션은 항상 완전히 정확하지는 않으며 일부 고급 페이로드 속성을 지원하지 않습니다. 원하는 타일 또는 알림이 있으면 실제 시작 메뉴에 타일을 고정하거나 알림을 표시하여 테스트하면서 의도한 대로 나타나는지 확인합니다.
+**참고**  알림 시각화 도우미의 Windows 시작 메뉴 및 알림 메시지 알림 시뮬레이션은 항상 완전히 정확 하 고 일부 고급 페이로드 속성을 지원 하지 않습니다. 원하는 타일 또는 알림이 있으면 실제 시작 메뉴에 타일을 고정하거나 알림을 표시하여 테스트하면서 의도한 대로 나타나는지 확인합니다.
 
- 
+ 
 
 ## <a name="features"></a>기능
 
@@ -54,7 +54,7 @@ ms.locfileid: "5432531"
 
 ![알림 시각화 도우미 편집기 스크린샷(타일 포함)](images/notif-visualizer-004.png)
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 

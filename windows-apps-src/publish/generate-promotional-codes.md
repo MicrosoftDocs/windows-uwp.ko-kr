@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
 ms.openlocfilehash: 37263794ffed6660f71c5e16195e992588c16d4a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440529"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472466"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
 
-Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 홍보 코드를 사용하면 사용자에게 앱이나 추가 기능 또는 Windows 10에서의 [베타 테스트](beta-testing-and-targeted-distribution.md)에 대한 무료 액세스를 제공하여 고객 서비스 시나리오를 해결할 수도 있습니다. 
+Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 앱 또는 추가 기능 또는 Windows10를 사용 하 여 [베타 테스트](beta-testing-and-targeted-distribution.md) 를 사용자에 게 대 한 무료 액세스를 제공 하 여 고객 서비스 시나리오를 해결할에 홍보 코드를 사용할 수 있습니다. 
 
 각 홍보 코드에 고유한 교환 가능 URL이 고객이 코드를 교환 하 고 Microsoft Store에서 앱 또는 추가 기능을 설치 하기 위해 클릭할 수 있는 합니다.  사용자가 홍보 코드를 사용하여 설치하기 전에 앱은 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과해야 합니다.
 
@@ -115,4 +115,4 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 
 이 테이블에서 주문을 [다운로드](#download-and-distribute-promotional-codes)할 수도 있습니다.
 
- 
+ 

@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C#, C 샤프
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433914"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472512"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C # 앱에서 로컬 알림 메시지 보내기
 
@@ -209,21 +209,21 @@ DesktopNotificationManagerCompat.RegisterActivator<MyNotificationActivator>();
 // Construct the visuals of the toast (using Notifications library)
 ToastContent toastContent = new ToastContent()
 {
-    // Arguments when the user taps body of toast
-    Launch = "action=viewConversation&conversationId=5",
+    // Arguments when the user taps body of toast
+    Launch = "action=viewConversation&conversationId=5",
 
     Visual = new ToastVisual()
     {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Hello world!"
-                }
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Hello world!"
+                }
             }
-        }
+        }
     }
 };
 

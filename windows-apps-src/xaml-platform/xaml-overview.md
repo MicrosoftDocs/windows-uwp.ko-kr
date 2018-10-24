@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: d28f6bca5a0d849661f158e25767f27586ace101
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433818"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470503"
 ---
 # <a name="xaml-overview"></a>XAML 개요
 
@@ -74,9 +74,9 @@ XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페
 |------|-------------|
 | [x:Key](x-key-attribute.md) | XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 각 리소스에 대해 고유한 사용자 정의 키를 설정합니다. 키의 토큰 문자열은 **StaticResource** 태그 확장에 대한 인수이며, 나중에 이 키를 사용하여 앱 XAML의 다른 위치에서 달리 사용된 XAML의 XAML 리소스를 검색합니다. |
 | [x:Class](x-class-attribute.md) | XAML 페이지에 대한 코드 숨김을 제공하는 클래스의 코드 네임스페이스 및 코드 클래스 이름을 지정합니다. 이 이름은 앱을 빌드할 때 빌드 작업에 의해 만들어지거나 조인되는 클래스를 지정합니다. 이 빌드 작업은 XAML 태그 컴파일러를 지원하고 앱이 컴파일될 때 태그와 코드 숨김을 결합합니다. XAML 페이지에 대해 코드 숨김을 지원하려면 이런 클래스가 있어야 합니다. 기본 Windows 런타임 활성화 모델의 [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/br209051)입니다. |
-| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735)은 프레임워크 내의 비슷한 속성이지만, 모든 요소가 이를 지원하지는 않습니다. 해당 요소 형식에서 **FrameworkElement.Name**이 지원되지 않는 경우 요소 식별을 위해 **x:Name**을 사용합니다. |
+| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) 프레임 워크에서 비슷한 속성 이지만 모든 요소가를 지원 합니다. 해당 요소 형식에서 **FrameworkElement.Name**이 지원되지 않는 경우 요소 식별을 위해 **x:Name**을 사용합니다. |
 | [x:Uid](x-uid-directive.md) | 해당 속성 값 중 일부에 대해 지역화된 리소스를 사용해야 하는 요소를 식별합니다. **x:Uid**를 사용하는 방법에 대한 자세한 내용은 [빠른 시작: UI 리소스 변환](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329)을 참조하세요. |
-| [XAML 기본 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) 스토리보드 시각적 상태에서 사용할 **true** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML 해당 값의 경우 **x:Boolean** 내부 형식을 다음과 같이 개체 요소로 사용합니다. <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
+| [XAML 기본 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) 스토리보드 시각적 상태에서 사용할 **true** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML 해당 값의 경우 **x:Boolean** 내부 형식을 다음과 같이 개체 요소로 사용합니다. <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
 
 XAML 언어 XAML 네임스페이스의 다른 프로그래밍 구조도 있지만 잘 사용되지 않습니다.
 
@@ -92,7 +92,7 @@ Windows 런타임 핵심 라이브러리와 메타데이터 이외의 다른 라
 
 예를 들어 `myTypes` 접두사를 `myCompany.myTypes` 네임스페이스에 매핑하는 특성 구문은 `    xmlns:myTypes="using:myCompany.myTypes"`이며 대표적인 요소의 사용 예는 다음과 같습니다. `<myTypes:CustomButton/>`
 
-Visual C++ 구성 요소 확장(C++/CX)에 대한 특수 고려 사항을 포함하여 사용자 지정 유형에 대해 XAML 네임스페이스를 매핑하는 데 대한 자세한 내용은 [XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)을 참조하세요.
+사용자 지정 형식에 대 한 매핑 XAML 네임 스페이스에 대 한 자세한 내용은 VisualC + + 구성 요소 확장에 대 한 특수 고려 사항을 포함 하 여 (C + + CX), [XAML 네임 스페이스 및 네임 스페이스 매핑을](xaml-namespaces-and-namespace-mapping.md)참조 하세요.
 
 ## <a name="other-xaml-namespaces"></a>다른 XAML 네임스페이스
 
@@ -202,7 +202,7 @@ namespace App1
 
 프로젝트 내에서 XAML은 .xaml 파일로 기록되며, 원하는 언어(C#, Visual Basic, C++/CX)를 사용하여 코드 숨김 파일을 작성할 수 있습니다. 프로젝트에 대한 빌드 작업 중에 XAML 파일을 태그로 컴파일할 때 XAML 페이지 루트 요소의 [x:Class](x-class-attribute.md) 특성으로 네임스페이스와 클래스를 지정하여 각 XAML 페이지에 대한 XAML 코드 숨김 파일 위치를 식별합니다. XAML에서 이러한 메커니즘을 사용하는 방법과 프로그래밍 및 응용 프로그램 모델과의 관계에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](events-and-routed-events-overview.md)를 참조하세요.
 
-**참고** C++/CX의 경우 두 개의 코드 숨김 파일이 있습니다. 하나는 헤더(.xaml.h)이고 다른 하나는 구현(.xaml.cpp)입니다. 구현은 헤더를 참조하고, 엄밀히 말하자면 헤더는 코드 숨김 연결의 진입점을 나타냅니다.
+**참고**C + /CX의 경우 개의 두 개의 코드 숨김 파일, 하나는 헤더 (. xaml.h) 이며 다른 구현 (. xaml.cpp). 구현은 헤더를 참조하고, 엄밀히 말하자면 헤더는 코드 숨김 연결의 진입점을 나타냅니다.
 
 ## <a name="resource-dictionaries"></a>리소스 사전
 
@@ -256,6 +256,6 @@ XAML은 흔히 Visual Studio와 같은 IDE 및 해당 XAML 디자인 화면 중 
 
 앱이 실제로 실행되고 나면, 디자인 타임에 XAML 구문 분석 오류가 검색되지 않은 채로 지나간 경우 이러한 오류는 CLR(공용 언어 런타임)에 의해 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)으로 보고됩니다. 런타임 **XamlParseException**에 대해 수행할 수 있는 작업에 대한 자세한 내용은 [C# 또는 Visual Basic으로 작성된 Windows 런타임 앱의 예외 처리](https://msdn.microsoft.com/library/windows/apps/dn532194)를 참조하세요.
 
-**참고** 코드에 C++/CX를 사용하는 앱의 경우 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)이 발생하지 않습니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
+**참고**앱을 사용 하 여 C + + /CX 코드를 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)얻지 합니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
 
 Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 시작](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)을 참조하세요.

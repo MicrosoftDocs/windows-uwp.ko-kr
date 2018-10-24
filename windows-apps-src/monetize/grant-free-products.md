@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 제품 권한 부여
 ms.localizationpriority: medium
 ms.openlocfilehash: 432d5976cb018148ba0f53aae6446a046f0a3b2f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441766"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5474889"
 ---
 # <a name="grant-free-products"></a>무료 제품에 대한 권한 부여
 
@@ -229,7 +229,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | 권한 없음 | InconsistentClientId       | 요청 본문에서 Microsoft Store ID 키의 *clientId* 클레임과 권한 부여 헤더에서 Azure AD 액세스 토큰의 *appid* 클레임이 일치하지 않습니다.       |
 | 400  | 불량 요청   | InvalidParameter           | 요청 본문에 대한 정보 및 어떤 필드에 잘못된 값이 있는지에 대한 정보가 세부 사항에 포함됩니다.           |
 
-<span/> 
+<span/> 
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, azure ad 응용 프로그램, aad, 사용자, 그룹, 여러 사용자, 다중 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438465"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473936"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>개발자 센터 계정에 사용자, 그룹, Azure AD 응용 프로그램 추가
 
@@ -23,7 +23,7 @@ ms.locfileid: "5438465"
 사용자가 계정에 추가되고 나면 [계정 세부 정보 편집](#edit), [역할 및 사용 권한](set-custom-permissions-for-account-users.md), 변경 또는 [사용자 제거](#remove)가 가능합니다.
 
 > [!IMPORTANT]
-> 계정에 사용자를 추가하려면 먼저 [개발자 센터 계정을 조직의 Azure Active Directory 테넌트와 연결](associate-azure-ad-with-dev-center.md)해야 합니다. 
+> 계정에 사용자를 추가하려면 먼저 [개발자 센터 계정을 조직의 Azure Active Directory 테넌트와 연결](associate-azure-ad-with-dev-center.md)해야 합니다. 
 
 사용자를 추가할 때는 [역할 또는 사용자 지정 권한 집합](set-custom-permissions-for-account-users.md)을 할당하여 개발자 센터 계정에 대한 액세스를 지정해야 합니다. 
 
@@ -108,7 +108,7 @@ ms.locfileid: "5438465"
 3.  임시 암호를 비롯하여 사용자에 대한 로그인 정보를 표시하는 확인 페이지가 나타납니다.
 
     > [!IMPORTANT]
-    >  이 페이지를 나간 후에는 임시 암호에 액세스할 수 없으므로 이 정보를 인쇄하거나 복사하고 사용자에게 제공해야 합니다.
+    >  이 페이지를 나간 후에는 임시 암호에 액세스할 수 없으므로 이 정보를 인쇄하거나 복사하고 사용자에게 제공해야 합니다.
 
 <span id="groups" />
 
@@ -189,12 +189,12 @@ Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸
 
 1.  ( **계정 설정**)에 따라 **사용자가** 페이지에서 Azure AD 응용 프로그램의 이름을 선택 합니다.
     > [!TIP]
-    > Azure AD 응용 프로그램의 이름을 클릭하면 Azure AD 응용 프로그램에 대한 모든 활성 키가 키를 만든 날짜 및 키 만료 시기와 함께 표시됩니다. 더 이상 필요하지 않은 키를 제거하려면 **제거**를 클릭합니다.
+    > Azure AD 응용 프로그램의 이름을 클릭하면 Azure AD 응용 프로그램에 대한 모든 활성 키가 키를 만든 날짜 및 키 만료 시기와 함께 표시됩니다. 더 이상 필요하지 않은 키를 제거하려면 **제거**를 클릭합니다.
 
 2.  새 키를 추가 하려면 **새 키 추가**선택 합니다.
 3.  **클라이언트 ID** 및 **키** 값을 보여 주는 화면이 표시됩니다.
     > [!IMPORTANT]
-    > 이 페이지를 나간 후에는 정보를 액세스할 수 없으므로 이 정보를 인쇄하거나 복사해야 합니다.
+    > 이 페이지를 나간 후에는 정보를 액세스할 수 없으므로 이 정보를 인쇄하거나 복사해야 합니다.
 
 4.  많은 수의 키를 만들려면 **다른 키 추가**선택 합니다.
 
@@ -232,5 +232,5 @@ Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸
 > [!IMPORTANT]
 > 사용자, 그룹 또는 Azure AD 응용 프로그램 제거는 개발자 센터 계정에 더 이상 액세스 권한이 없음을 의미합니다. 사용자, 그룹 또는 Azure AD 응용 프로그램을 조직의 디렉터리에서 삭제하지 **않습니다**.
 
- 
+ 
 

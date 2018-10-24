@@ -15,20 +15,23 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 9650a60dd7e653ee7021603328a3cf6de0c13926
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445481"
+ms.locfileid: "5469719"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
 명령 모음 플라이 아웃 UI 캔버스에 요소와 관련 된 부동 도구 모음에서 명령을 표시 하 여 일반적인 작업에 쉽게 액세스할 수 있는 사용자를 제공할 수 있습니다.
 
-![확장 된 텍스트 명령 모음 플라이 아웃](images/command-bar-flyout-text-full.png)
+![확장 된 텍스트 명령 모음 플라이 아웃](images/command-bar-flyout-header.png)
 
-> 관련된 정보 [플라이 아웃](../controls-and-patterns/dialogs-and-flyouts/flyouts.md) [메뉴 및 상황에 맞는 메뉴](menus.md), 및 [명령 모음](app-bars.md)을 참조 하세요.
+> CommandBarFlyout 필요한 Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
+
+> - **플랫폼 Api**: [CommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator)
+>- **Windows UI 라이브러리 Api**: [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 
 [CommandBar](app-bars.md)같은 CommandBarFlyout 속성이 **PrimaryCommands** 와 **SecondaryCommands** 는 명령을 추가 하는 데 사용할 수 있습니다. 명령 컬렉션 또는 둘 다에 배치할 수 있습니다. 기본 및 보조 명령을 표시 되는 시기와 방법을 디스플레이 모드에 따라 달라 집니다.
 
@@ -36,14 +39,6 @@ ms.locfileid: "5445481"
 
 - 축소 된 모드에서 기본 명령만 표시 됩니다. 기본 및 보조 명령 모음 플라이 아웃에 있으면 명령, 줄임표로 표현 되는 "자세히" 단추, \ [• • •] 표시 됩니다. 이 확장 모드로 전환 하 여 보조 명령에 액세스할 수가 있습니다.
 - 확장 된 모드에서 기본 및 보조 명령이 표시 됩니다. (컨트롤 보조 항목에 대해서만 있으면에 나타나는 MenuFlyout 컨트롤 유사 합니다.)
-
-| **Windows UI 라이브러리 가져오기** |
-| - |
-| 이 컨트롤은 Windows UI 라이브러리 새 컨트롤 및 UWP 앱에 대 한 UI 기능을 포함 하는 NuGet 패키지의 일부로 포함 합니다. 설치 지침을 비롯 한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조 하세요. |
-
-| **플랫폼 Api** | **Windows UI 라이브러리 Api** |
-| - | - |
-| [CommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator) | [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) |
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -56,6 +51,8 @@ TextCommandBarFlyout TextBox, TextBlock, RichEditBox, RichTextBlock, 및 Passwor
 ### <a name="commandbarflyout-vs-menuflyout"></a>CommandBarFlyout vs MenuFlyout
 
 명령을 상황에 맞는 메뉴를 표시 하려면 CommandBarFlyout MenuFlyout을 사용할 수 있습니다. MenuFlyout 보다 더 많은 기능을 제공 하기 때문에 CommandBarFlyout을 좋습니다. 동작을 가져오거나 MenuFlyout을의 모양 및 전체 명령 모음 플라이 아웃을 사용 하 여 기본 및 보조 명령으로 CommandBarFlyout만 보조 명령으로 사용할 수 있습니다.
+
+> 관련된 정보 [플라이 아웃](../controls-and-patterns/dialogs-and-flyouts/flyouts.md) [메뉴 및 상황에 맞는 메뉴](menus.md), 및 [명령 모음](app-bars.md)을 참조 하세요.
 
 ## <a name="examples"></a>예
 
@@ -85,20 +82,15 @@ CommandBarFlyout 방식으로 또는 둘의 혼합도 사용할 수 있습니다
 
 ## <a name="create-a-command-bar-flyout"></a>명령 모음 플라이 아웃 만들기
 
-> **미리 보기**: [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 나 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)CommandBarFlyout 필요 합니다.
-
 이 예제에서는 명령 모음 플라이 아웃을 만들고 사전 및 사후 방식으로 사용 하는 방법을 보여 줍니다. 이미지는 터치 할 때 축소 된 모드에서 플라이 아웃이 표시 됩니다. 상황에 맞는 메뉴로 표시 되 면 플라이 아웃이 확장 모드로 표시 됩니다. 두 경우 모두 사용자가 확장 하거나를 연 후 플라이 아웃을 축소할 수 있습니다.
 
-:::row:::
-    :::column:::
-        A collapsed command bar flyout<br/>
-        ![Example of a collapsed command bar flyout](images/command-bar-flyout-img-collapsed.png)
-    :::column-end:::
-    :::column:::
-        An expanded command bar flyout<br/>
-        ![Example of an expanded command bar flyout](images/command-bar-flyout-img-expanded.png)
-    :::column-end:::
-:::row-end:::
+![축소 된 명령 모음 플라이 아웃의 예](images/command-bar-flyout-img-collapsed.png)
+
+> _축소 된 명령 모음 플라이 아웃_
+
+![확장 된 명령 모음 플라이 아웃의 예](images/command-bar-flyout-img-expanded.png)
+
+> _확장 된 명령 모음 플라이 아웃_
 
 ```xaml
 <Grid>
@@ -108,13 +100,13 @@ CommandBarFlyout 방식으로 또는 둘의 혼합도 사용할 수 있습니다
             <AppBarButton Icon="Copy" ToolTipService.ToolTip="Copy"/>
             <AppBarButton Icon="Share" ToolTipService.ToolTip="Share"/>
             <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Label="Rotate" Icon="Rotate"/>
+                <AppBarButton Label="Select all"/>
                 <AppBarButton Label="Delete" Icon="Delete"/>
             </CommandBarFlyout.SecondaryCommands>
         </CommandBarFlyout>
     </Grid.Resources>
 
-    <Image Source="Assets/licorice.png" Width="300"
+    <Image Source="Assets/image1.png" Width="300"
            Tapped="Image_Tapped" FlyoutBase.AttachedFlyout="{x:Bind ImageCommandsFlyout}"
            ContextFlyout="{x:Bind ImageCommandsFlyout}"/>
 </Grid>
@@ -178,79 +170,118 @@ PrimaryCommands와 SecondaryCommands [AppBarButton](https://msdn.microsoft.com/l
 
 명령 모음 플라이 아웃에는 AppBarElementContainer에 래핑하여 다른 컨트롤을 추가할 수 있습니다. 이렇게 하면 [DropDownButton]() 또는 [분할 단추]()같은 컨트롤을 추가 하거나 더 복잡 한 UI를 만들기 위해 [StackPanel]() 같은 컨테이너를 추가할 수 있습니다.
 
-> [!NOTE]
-> 명령 모음 플라이 아웃의 기본 또는 보조 명령 모음에 추가 하기 위해 요소 [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) 인터페이스를 구현 해야 합니다. AppBarElementContainer 자체 인터페이스를 구현 하지 않을 경우에 명령 모음에는 요소를 추가할 수 있도록이 인터페이스를 구현 하는 래퍼를입니다.
+명령 모음 플라이 아웃의 기본 또는 보조 명령 모음에 추가 하기 위해 요소 [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) 인터페이스를 구현 해야 합니다. AppBarElementContainer 자체 인터페이스를 구현 하지 않을 경우에 명령 모음에는 요소를 추가할 수 있도록이 인터페이스를 구현 하는 래퍼를입니다.
 
 여기서는 AppBarElementContainer 명령 모음 플라이 아웃에 추가 요소를 추가 하는 데 사용 됩니다. 분할 단추는 색 중에서 선택할 수 있도록 기본 명령에 추가 됩니다. StackPanel 확대/축소 컨트롤에 대 한 더 복잡 한 레이아웃을 허용 하도록 보조 명령에 추가 됩니다.
+
+> [!TIP]
+> 기본적으로 앱 캔버스에 대 한 디자인 요소 보이지 않을 수도 있습니다 올바른 명령 모음에 있습니다. AppBarElementContainer를 사용 하 여 요소를 추가 하면 다른 명령 모음 요소와 일치 하는 요소를 확인 하기 위해 취해야 할 몇 가지 단계가 있습니다.
+>
+> - [경량 스타일](/design/controls-and-patterns/xaml-styles#lightweight-styling) 요소의 배경과 테두리 앱 바 단추와 일치 하도록 기본 브러시를 재정의 합니다.
+> - 요소의 위치와 크기를 조정 합니다.
+> - 16px의 높이와 너비 Viewbox에 아이콘을 래핑하십시오.
 
 > [!NOTE]
 > 이 예제에 표시 되는 명령을 구현 하지 않습니다만 명령 모음 플라이 아웃 UI를 보여줍니다. 명령을 구현에 대 한 자세한 내용은 [단추](buttons.md) 및 [명령 디자인 기본 사항](../basics/commanding-basics.md)을 참조 하세요.
 
-:::row:::
-    :::column:::
-        A collapsed command bar flyout with an open SplitButton<br/>
-        ![A command bar flyout with a split button](images/command-bar-flyout-split-button.png)
-    :::column-end:::
-    :::column:::
-        An expanded command bar flyout with custom zoom UI in the menu<br/>
-        ![A command bar flyout with complex UI](images/command-bar-flyout-complex-ui.png)
-    :::column-end:::
-:::row-end:::
+![분할 단추를 사용 하 여 명령 모음 플라이 아웃](images/command-bar-flyout-split-button.png)
+
+> _열려 있는 분할 단추를 사용 하 여 축소 된 명령 모음 플라이 아웃_
+
+![복잡 한 UI 사용 하 여 명령 모음 플라이 아웃](images/command-bar-flyout-custom-ui.png)
+
+> _확장 된 명령 모음 플라이 아웃 메뉴에 사용자 지정 줌 UI 사용 하 여_
+
 
 ```xaml
 <CommandBarFlyout>
     <AppBarButton Icon="Cut" ToolTipService.ToolTip="Cut"/>
     <AppBarButton Icon="Copy" ToolTipService.ToolTip="Copy"/>
     <AppBarButton Icon="Paste" ToolTipService.ToolTip="Paste"/>
-    <!-- Color controls -->
+    <!-- Alignment controls -->
     <AppBarElementContainer>
-        <SplitButton Height="Auto" Margin="0,4,0,0"
-                     ToolTipService.ToolTip="Colors"
-                     Background="{ThemeResource AppBarItemBackgroundThemeBrush}">
+        <SplitButton ToolTipService.ToolTip="Alignment">
+            <SplitButton.Resources>
+                <!-- Override default brushes to make the SplitButton 
+                     match other command bar elements. -->
+                <Style TargetType="SplitButton">
+                    <Setter Property="Height" Value="38"/>
+                </Style>
+                <SolidColorBrush x:Key="SplitButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="SplitButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrush" Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrushChecked"
+                                 Color="Transparent"/>
+            </SplitButton.Resources>
             <SplitButton.Content>
-                <Rectangle Width="20" Height="20">
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="Red"/>
-                    </Rectangle.Fill>
-                </Rectangle>
+                <Viewbox Width="16" Height="16" Margin="0,2,0,0">
+                    <SymbolIcon Symbol="AlignLeft"/>
+                </Viewbox>
             </SplitButton.Content>
             <SplitButton.Flyout>
                 <MenuFlyout>
-                    <MenuFlyoutItem Text="Red"/>
-                    <MenuFlyoutItem Text="Yellow"/>
-                    <MenuFlyoutItem Text="Green"/>
-                    <MenuFlyoutItem Text="Blue"/>
+                    <MenuFlyoutItem Icon="AlignLeft" Text="Align left"/>
+                    <MenuFlyoutItem Icon="AlignCenter" Text="Center"/>
+                    <MenuFlyoutItem Icon="AlignRight" Text="Align right"/>
                 </MenuFlyout>
             </SplitButton.Flyout>
         </SplitButton>
     </AppBarElementContainer>
-    <!-- end Color controls -->
+    <!-- end Alignment controls -->
     <CommandBarFlyout.SecondaryCommands>
         <!-- Zoom controls -->
         <AppBarElementContainer>
             <AppBarElementContainer.Resources>
-                <Style TargetType="Button">
-                    <Setter Property="Background"
-                            Value="{ThemeResource AppBarItemBackgroundThemeBrush}"/>
-                </Style>
+                <!-- Override default brushes to make the Buttons 
+                     match other command bar elements. -->
+                <SolidColorBrush x:Key="ButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+                <SolidColorBrush x:Key="ButtonBorderBrush"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushChecked"
+                                 Color="Transparent"/>
                 <Style TargetType="TextBlock">
                     <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
+                <Style TargetType="Button">
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="Width" Value="40"/>
+                </Style>
             </AppBarElementContainer.Resources>
-            <Grid Margin="12,0">
+            <Grid Margin="12,-4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="86"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="76"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Zoom"/>
-                <StackPanel Orientation="Horizontal" Grid.Column="1">
-                    <Button>
-                        <SymbolIcon Symbol="Remove"/>
+                <Viewbox Width="16" Height="16" Margin="0,2,0,0">
+                    <SymbolIcon Symbol="Zoom"/>
+                </Viewbox>
+                <TextBlock Text="Zoom" Margin="10,0,0,0" Grid.Column="1"/>
+                <StackPanel Orientation="Horizontal" Grid.Column="2">
+                    <Button ToolTipService.ToolTip="Zoom out">
+                        <Viewbox Width="16" Height="16">
+                            <SymbolIcon Symbol="ZoomOut"/>
+                        </Viewbox>
                     </Button>
                     <TextBlock Text="50%" Width="40"
                                HorizontalTextAlignment="Center"/>
-                    <Button>
-                        <SymbolIcon Symbol="Add"/>
+                    <Button ToolTipService.ToolTip="Zoom in">
+                        <Viewbox Width="16" Height="16">
+                            <SymbolIcon Symbol="ZoomIn"/>
+                        </Viewbox>
                     </Button>
                 </StackPanel>
             </Grid>
@@ -259,7 +290,7 @@ PrimaryCommands와 SecondaryCommands [AppBarButton](https://msdn.microsoft.com/l
         <AppBarSeparator/>
         <AppBarButton Label="Undo" Icon="Undo"/>
         <AppBarButton Label="Redo" Icon="Redo"/>
-        <AppBarButton Label="Select all"/>
+        <AppBarButton Label="Select all" Icon="SelectAll"/>
     </CommandBarFlyout.SecondaryCommands>
 </CommandBarFlyout>
 ```
@@ -270,58 +301,87 @@ PrimaryCommands와 SecondaryCommands [AppBarButton](https://msdn.microsoft.com/l
 
 ![만 보조 명령으로 명령 모음 플라이 아웃](images/command-bar-flyout-context-menu.png)
 
+> _상황에 맞는 메뉴로 명령 모음 플라이 아웃_
+
 ```xaml
 <Grid>
     <Grid.Resources>
         <!-- A command bar flyout with only secondary commands. -->
         <CommandBarFlyout x:Name="ContextMenu">
             <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Label="Pin" Icon="Pin"/>
-                <AppBarButton Label="Unpin" Icon="UnPin"/>
                 <AppBarButton Label="Copy" Icon="Copy"/>
+                <AppBarButton Label="Save" Icon="Save"/>
+                <AppBarButton Label="Print" Icon="Print"/>
                 <AppBarSeparator />
                 <AppBarButton Label="Properties"/>
             </CommandBarFlyout.SecondaryCommands>
         </CommandBarFlyout>
     </Grid.Resources>
 
-    <Image Source="Assets/licorice.png" Width="300"
+    <Image Source="Assets/image1.png" Width="300"
            ContextFlyout="{x:Bind ContextMenu}"/>
 </Grid>
 ```
 
 표준 메뉴를 만들려면는 DropDownButton를 사용 하 여는 CommandBarFlyout를 사용할 수 있습니다.
 
-![명령 모음 플라이 아웃으로 드롭다운 메뉴 단추](images/command-bar-flyout-button-menu.png)
+![명령 모음 플라이 아웃으로 드롭다운 메뉴 단추](images/command-bar-flyout-dropdown.png)
+
+> _명령 모음 플라이 아웃 메뉴 단추 드롭다운_
 
 ```xaml
-<DropDownButton Content="Mail">
-    <DropDownButton.Flyout>
-        <CommandBarFlyout Placement="BottomEdgeAlignedLeft">
-            <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Icon="MailForward" Label="Forward"/>
-                <AppBarButton Icon="MailReply" Label="Reply"/>
-                <AppBarButton Icon="MailReplyAll" Label="Reply all"/>
-            </CommandBarFlyout.SecondaryCommands>
-        </CommandBarFlyout>
-    </DropDownButton.Flyout>
-</DropDownButton>
+<CommandBarFlyout>
+    <AppBarButton Icon="Placeholder"/>
+    <AppBarElementContainer>
+        <DropDownButton Content="Mail">
+            <DropDownButton.Resources>
+                <!-- Override default brushes to make the DropDownButton 
+                     match other command bar elements. -->
+                <Style TargetType="DropDownButton">
+                    <Setter Property="Height" Value="38"/>
+                </Style>
+                <SolidColorBrush x:Key="ButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+
+                <SolidColorBrush x:Key="ButtonBorderBrush"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushChecked"
+                                 Color="Transparent"/>
+            </DropDownButton.Resources>
+            <DropDownButton.Flyout>
+                <CommandBarFlyout Placement="BottomEdgeAlignedLeft">
+                    <CommandBarFlyout.SecondaryCommands>
+                        <AppBarButton Icon="MailReply" Label="Reply"/>
+                        <AppBarButton Icon="MailReplyAll" Label="Reply all"/>
+                        <AppBarButton Icon="MailForward" Label="Forward"/>
+                    </CommandBarFlyout.SecondaryCommands>
+                </CommandBarFlyout>
+            </DropDownButton.Flyout>
+        </DropDownButton>
+    </AppBarElementContainer>
+    <AppBarButton Icon="Placeholder"/>
+    <AppBarButton Icon="Placeholder"/>
+</CommandBarFlyout>
 ```
 
 ## <a name="command-bar-flyouts-for-text-controls"></a>텍스트 컨트롤에 대 한 명령 모음 플라이 아웃
 
 [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) 텍스트 편집에 대 한 명령을 포함 하는 특수 명령 모음 플라이 아웃입니다. 각 텍스트 컨트롤과 텍스트를 선택한 경우 또는 상황에 맞는 메뉴로 (마우스 오른쪽 단추)는 TextCommandBarFlyout 자동으로 표시 됩니다. 텍스트 명령 모음 플라이 아웃 관련 명령을 표시 하도록 선택한 텍스트에 적응 합니다.
 
-:::row:::
-    :::column:::
-        A text command bar flyout on text selection<br/>
-        ![A collapsed text command bar flyout](images/command-bar-flyout-text-selection.png)
-    :::column-end:::
-    :::column:::
-        An expanded text command bar flyout<br/>
-        ![An expanded text command bar flyout](images/command-bar-flyout-text-full.png)
-    :::column-end:::
-:::row-end:::
+![축소 된 텍스트 명령 모음 플라이 아웃](images/command-bar-flyout-text-selection.png)
+
+> _텍스트 선택에 텍스트 명령 모음 플라이 아웃_
+
+![확장 된 텍스트 명령 모음 플라이 아웃](images/command-bar-flyout-text-full.png)
+
+> _확장 된 텍스트 명령 모음 플라이 아웃_
+
 
 ### <a name="available-commands"></a>사용 가능한 명령
 

@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445910"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477369"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
-**참고** 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
+**참고**바인딩 **{x: Bind}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
-Windows 10의 새로운 기능인 **{x:Bind}** 태그 확장은 **{Binding}** 대신 사용됩니다. **{x: Bind}** **{Binding}** 되며 향상 된 디버깅을 지원 보다 적은 메모리로 및 짧은 시간에 실행 됩니다.
+**{X: Bind}** 태그 확장-Windows10에 대 한 새- **{Binding}** 하지 않아도 됩니다. **{x: Bind}** **{Binding}** 되며 향상 된 디버깅을 지원 보다 적은 메모리로 및 짧은 시간에 실행 됩니다.
 
 XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에서 값을 가져오는 코드로 변환되고 태그에 지정된 속성에서 이를 설정합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 새로 고치도록 바인딩 개체를 구성할 수 있습니다(`Mode="OneWay"`). 또한 필요한 경우 고유한 값 변경을 소스 속성에 다시 적용하도록 구성할 수도 있습니다(`Mode="TwoWay"`).
 
@@ -151,7 +151,7 @@ Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리�
 
 > [!NOTE]
 > **{Binding}** 에서 **{x:Bind}** 로 태그를 변환하는 경우 **모드** 속성에 대한 기본값의 차이에 주의하세요.
- 
+ 
 > [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute)를 사용하여 태그 트리의 특정 세그먼트에서 x:Bind의 기본 모드를 변경할 수 있습니다. 선택된 모드는 바인딩의 일부로 모드를 명시적으로 지정하지 않은 해당 요소와 하위 요소의 모든 x:Bind 식에 적용됩니다. OneWay를 사용하면 변경 검색을 연결 및 처리하기 위해 생성해야 할 코드가 더 많아지기 때문에 OneTime은 OneWay보다 성능이 우수합니다.
 
 ## <a name="remarks"></a>설명
@@ -171,7 +171,7 @@ Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리�
 > [!NOTE]
 > Windows10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 이는 함수 바인딩이 아닌 속성 바인딩의 기능입니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-**팁** [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) 또는 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)의 경우처럼 값에 단일 중괄호를 지정해야 하는 경우 중괄호 앞에 백슬래시를 넣습니다. `\{`. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
+**팁**  값에 단일 중괄호를 지정 해야 하는 경우 [**경로**](https://msdn.microsoft.com/library/windows/apps/br209830) 또는 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)같이 앞에 백슬래시: `\{`. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 

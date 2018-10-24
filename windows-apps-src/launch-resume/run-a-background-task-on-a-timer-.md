@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 25e3c76ae09ed6835f89f0d98c308f11c7a99624
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433512"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469261"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>타이머에 따라 백그라운드 작업 실행
 
@@ -37,7 +37,7 @@ ms.locfileid: "5433512"
 
 > [!NOTE]
 > *FreshnessTime* 15 분 미만으로 설정 되 면 백그라운드 작업을 등록 하려고 하면 예외가 throw 됩니다.
- 
+ 
 예를 들어이 트리거를 사용 하면 백그라운드 작업을 한 시간에 한 번 실행 합니다.
 
 ```cs
@@ -128,7 +128,7 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 
 ## <a name="remarks"></a>설명
 
-Windows 10부터 반드시 더 이상 백그라운드 작업을 활용 하기 위해 잠금 화면에 앱을 추가할 수 없습니다.
+Windows10부터 반드시 더 이상 백그라운드 작업을 활용 하기 위해 잠금 화면에 앱을 추가할 수 없습니다.
 
 백그라운드 작업을 먼저 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 호출한 경우 **TimeTrigger** 를 사용 하 여 실행 됩니다.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 24f41ac858e73041e5afb4db596ce52b7d9bf4d8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436772"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471898"
 ---
 # <a name="cryptographic-keys"></a>암호화 키
 
@@ -79,4 +79,4 @@ CBC와 같은 일부 모드에서는 첫 번째 암호 텍스트 블록에 IV(In
 | [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | 카운터 모드 HMAC(해시 기반 메시지 인증 코드) 키 파생 함수에서 사용할 KeyDerivationParameters 개체를 만듭니다. |
 | [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | SP800-56A 키 파생 함수에서 사용할 KeyDerivationParameters 개체를 만듭니다.                                                 |
 
- 
+ 

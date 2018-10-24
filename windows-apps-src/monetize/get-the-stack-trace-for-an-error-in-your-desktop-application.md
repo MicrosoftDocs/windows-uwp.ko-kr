@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: 60f4ed7251fa934190a96e8c7d6f0edd21520980
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440139"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472166"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
 
@@ -46,7 +46,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스�
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
- 
+ 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
@@ -55,7 +55,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스�
 | applicationId | 문자열 | 스택 추적을 가져올 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [데스크톱 응용 프로그램의 개발자 센터 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)(예: **상태 보고서**)를 열고 URL에서 제품 ID를 검색합니다. |  예  |
 | cabIdHash | 문자열 | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID 해시입니다. 이 값을 가져오려면 [데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md) 메서드를 사용하여 응용 프로그램에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabIdHash** 값을 사용합니다. |  예  |
 
- 
+ 
 ### <a name="request-example"></a>요청 예제
 
 다음 예제에서는 이 메서드를 사용하여 스택 추적을 가져오는 방법을 보여 줍니다. *applicationId* 및 *cabIdHash* 매개변수를 데스크톱 응용 프로그램에 대한 적절한 값으로 바꿉니다.

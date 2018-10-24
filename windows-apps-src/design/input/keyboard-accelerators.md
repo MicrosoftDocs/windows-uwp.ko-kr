@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435990"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468796"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -39,7 +39,7 @@ ms.locfileid: "5435990"
 > [!NOTE]
 > UWP 플랫폼 컨트롤에는 키보드 가속기가 기본으로 제공됩니다. 예를 들어 ListView는 목록의 모든 항목을 선택하기 위해 Ctrl+A를 지원하고 RichEditBox는 텍스트 상자에 Tab을 삽입하기 위해 Ctrl+Tab을 지원합니다. 이러한 기본 제공 키보드 가속기는 **컨트롤 가속기**라고 하며 포커스가 요소 또는 자식 요소 중 하나에 있는 경우에만 실행됩니다. 여기에 설명된 키보드 가속기 API를 사용하여 정의한 가속기를 **앱 가속기**라고 합니다.
 
-키보드 가속기는 모든 작업에 사용할 수 있는 것은 아니지만 종종 메뉴에 표시되는 명령과 연결됩니다(메뉴 항목 콘텐츠로 지정해야 함). 가속기는 동일한 메뉴 항목이 없는 작업과 연결할 수도 있습니다. 그러나 사용자가 응용 프로그램의 메뉴를 사용하여 사용 가능한 명령 집합을 검색하고 알아보므로 가능한 쉽게 바로 가기 검색을 시도해야 합니다(레이블 또는 설정된 패턴을 사용하면 도움이 될 수 있음).
+키보드 가속기는 모든 작업에 사용할 수 있는 것은 아니지만 종종 메뉴에 표시되는 명령과 연결됩니다(메뉴 항목 콘텐츠로 지정해야 함).가속기는 동일한 메뉴 항목이 없는 작업과 연결할 수도 있습니다. 그러나 사용자가 응용 프로그램의 메뉴를 사용하여 사용 가능한 명령 집합을 검색하고 알아보므로 가능한 쉽게 바로 가기 검색을 시도해야 합니다(레이블 또는 설정된 패턴을 사용하면 도움이 될 수 있음).
 
 ![메뉴 항목 레이블에 설명된 바로 가기 키](images/accelerators/accelerators_menuitemlabel.png)  
 *메뉴 항목 레이블에 설명된 바로 가기 키*
@@ -48,11 +48,11 @@ ms.locfileid: "5435990"
 
 적합한 경우 UI 어디서나 키보드 가속기를 지정하고 모든 사용자 지정 컨트롤에서 가속기를 지원하는 것이 좋습니다.
 
-- 키를 한 번에 하나만 누를 수 있거나 마우스 사용에 어려움이 있는 사용자를 포함하여 거동 장애가 있는 사용자를 위해 키보드 가속기로 앱의 접근성을 향상합니다.**
+- 키보드 가속기로 앱 한 번에 하나의 키를 누를 수 있거나 마우스 * 사용에 어려움이 있는 사용자를 포함 하 여 거동 장애가 있는 더 많은 accessiblefor 사용자
 
   잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 요소입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다. 이러한 사용자에게는 포괄적인 명령 범위가 매우 중요합니다.
 
-- 키보드로 조작하는 것을 선호하는 고급 사용자를 위해 키보드 가속기로 앱의 사용 편의성을 향상합니다.
+- 키보드 가속기로 앱의 키보드를 통해 상호 작용 하는 것을 선호 하는 자세한 usablefor 고급 사용자.
 
   숙련된 사용자는 키보드 기반 명령을 더 빠르게 입력할 수 있고 키보드에서 손을 떼지 않아도 되기 때문에 키보드를 선호하는 경향이 강합니다. 이러한 사용자에게는 효율성과 일관성이 매우 중요합니다. 포괄성은 가장 자주 사용하는 명령에만 중요합니다.
 
@@ -206,7 +206,7 @@ UIA [컨트롤 패턴]은 공통적인 컨트롤 기능을 공개합니다. 예�
 ``` xaml 
 <Button Content="Save" Click="OnSave">
   <Button.KeyboardAccelerators>
-    <KeyboardAccelerator Key="S" Modifiers="Control" />
+    <KeyboardAccelerator Key="S" Modifiers="Control" />
   </Button.KeyboardAccelerators>
 </Button>
 ```
@@ -215,7 +215,7 @@ UIA [컨트롤 패턴]은 공통적인 컨트롤 기능을 공개합니다. 예�
 1.  Invoke(Button)
 2.  Toggle(Checkbox)
 3.  Selection(ListView)
-4.  Expand/Collapse(ComboBox) 
+4.  Expand/Collapse(ComboBox) 
 
 일치하는 항목이 없으면 가속기가 유효하지 않으며 디버그 메시지가 제공됩니다("이 구성 요소에 대한 자동화 패턴을 찾을 수 없습니다. Invoked 이벤트에서 원하는 모든 동작을 구현하세요. 이벤트 처리기에서 Handled를 true로 설정하면 이 메시지가 표시되지 않습니다.")
 
@@ -230,10 +230,10 @@ UIA [컨트롤 패턴]은 공통적인 컨트롤 기능을 공개합니다. 예�
 ``` xaml
 <ListView x:Name="MyListView">
   <ListView.KeyboardAccelerators>
-    <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
-    <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
+    <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
+    <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
   </ListView.KeyboardAccelerators>
-</ListView>   
+</ListView>   
 ```
 
 ``` csharp
@@ -261,7 +261,7 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 ``` xaml
 <ListView >
   <ListView.KeyboardAccelerators>
-    <KeyboardAccelerator Key="A" 
+    <KeyboardAccelerator Key="A" 
       Modifiers="Control"
       Invoked="CustomListViewSelecAllInvoked" />
   </ListView.KeyboardAccelerators>
@@ -269,10 +269,10 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
   <TextBox>
     <TextBox.KeyboardAccelerators>
       <KeyboardAccelerator 
-        Key="A" 
-        Modifiers="Control" 
-        Invoked="CustomTextSelecAllInvoked" 
-        IsEnabled="False" />
+        Key="A" 
+        Modifiers="Control" 
+        Invoked="CustomTextSelecAllInvoked" 
+        IsEnabled="False" />
     </TextBox.KeyboardAccelerators>
   </TextBox>
 
@@ -292,18 +292,18 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
   <ListView.KeyboardAccelerators>
 
     <KeyboardAccelerator 
-      Key="A" 
-      Modifiers="Control,Shift" 
-      Invoked="CustomSelectAllInvoked" />
+      Key="A" 
+      Modifiers="Control,Shift" 
+      Invoked="CustomSelectAllInvoked" />
       
     <KeyboardAccelerator 
-      Key="F5" 
-      Modifiers="None" 
-      Invoked="RefreshInvoked" />
+      Key="F5" 
+      Modifiers="None" 
+      Invoked="RefreshInvoked" />
 
   </ListView.KeyboardAccelerators>
 
-</ListView>   
+</ListView>   
 ```
 
 > [!NOTE] 
@@ -342,14 +342,14 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 | **다른 작업** | |
 | ------------- | ----------------------------------- |
-| 즐겨찾기 추가 | Ctrl + D | 
-| 새로 고침 | F5 또는 Ctrl + R | 
-| 확대 | Ctrl + + | 
-| 축소 | Ctrl + - | 
-| 기본 보기로 확대/축소 | Ctrl + 0 | 
-| 저장 | Ctrl + S | 
-| 닫기 | Ctrl + W | 
-| 인쇄 | Ctrl + P | 
+| 즐겨찾기 추가 | Ctrl + D | 
+| 새로 고침 | F5 또는 Ctrl + R | 
+| 확대 | Ctrl + + | 
+| 축소 | Ctrl + - | 
+| 기본 보기로 확대/축소 | Ctrl + 0 | 
+| 저장 | Ctrl + S | 
+| 닫기 | Ctrl + W | 
+| 인쇄 | Ctrl + P | 
 
 일부 조합은 Windows의 지역화된 버전에 유효하지 않습니다. 예를 들어, 스페인어 버전의 Windows에서는 '굵게'에 대해 Ctrl+N이 Ctrl+B 대신 사용됩니다. 앱이 지역화되어 있는 경우 지역화된 바로 가기 키를 제공하는 것이 좋습니다.
 
@@ -626,5 +626,5 @@ public class MyListView : ListView
 * [XAML 컨트롤 갤러리 (일명 XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 
- 
+ 
 

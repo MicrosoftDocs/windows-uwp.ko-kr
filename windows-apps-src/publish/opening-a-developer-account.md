@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b707479d11cc7aef62385b476720bff8477ed401
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444713"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478311"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
@@ -36,7 +36,7 @@ ms.locfileid: "5444713"
 5.  사용하고자 하는 **게시자 표시 이름**(50자 이하)을 입력합니다. 고객이 이 이름을 검색할 때 보고 이 이름으로 앱을 알게 되므로 신중하게 이름을 선택합니다. 회사 계정의 경우, 조직의 등록된 회사 이름이 거래 이름을 사용해야 합니다. 다른 사용자가 이미 선택한 이름을 입력하거나 다른 사용자에게 해당 이름을 사용할 권한이 있는 것처럼 보이는 경우 해당 이름을 사용하는 것이 허용되지 않습니다. 
 
    > [!NOTE]
-   > 여기에 입력하는 이름을 사용할 권한이 있는지 확인하세요. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 여러분이 상표 또는 기타 법적 권한을 보유하고 있는 판매자 표시 이름을 다른 사람이 사용하는 경우 [Microsoft에 문의](http://go.microsoft.com/fwlink/p/?LinkId=233777)하세요.    
+   > 여기에 입력하는 이름을 사용할 권한이 있는지 확인하세요. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)을 참조하세요. 여러분이 상표 또는 기타 법적 권한을 보유하고 있는 판매자 표시 이름을 다른 사람이 사용하는 경우 [Microsoft에 문의](http://go.microsoft.com/fwlink/p/?LinkId=233777)하세요.    
 
 6.  개발자 계정에 사용할 연락처 정보를 입력합니다.
 

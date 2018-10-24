@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: 54c39d157bc2fcab6a67bd273f5d00eedd80be54
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430864"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470434"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>앱에서 오류에 대한 스택 추적 가져오기
 
@@ -56,7 +56,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 
 | applicationId | 문자열 | 스택 추적을 가져오려는 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 확인할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | cabId | 문자열 | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID입니다. 이 ID를 가져오려면 [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 사용하여 앱에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabId** 값을 사용합니다. |  예  |
 
- 
+ 
 ### <a name="request-example"></a>요청 예제
 
 다음 예제에서는 이 메서드를 사용하여 스택 추적을 가져오는 방법을 보여 줍니다. *applicationId* 값을 앱의 스토어 ID로 바꿉니다.

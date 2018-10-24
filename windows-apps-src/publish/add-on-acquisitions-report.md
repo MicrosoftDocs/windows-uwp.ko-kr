@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 추가 기능 판매, 추가 기능 구입, iap 판매, 앱 내 제품, iaps, 추가 기능
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440950"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477408"
 ---
 # <a name="add-on-acquisitions-report"></a>추가 기능 구입 보고서
 
 
-Windows 개발자 센터 대시보드에서 **추가 기능 구입** 보고서를 확인할 수 있습니다 얼마나 많은 추가 기능 수와 통계와 함께 인구 통계 및 플랫폼 세부 정보 및 Windows 10 (Xbox 포함) 고객을 위한 변환 정보를 보여 줍니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다.
+Windows 개발자 센터 대시보드에서 **추가 기능 구입** 보고서를 확인할 수 있습니다 얼마나 많은 추가 기능 수와 통계와 함께 인구 통계 및 플랫폼 세부 정보 및 (Xbox 포함) 고객 Windows10 위한 변환 정보를 보여 줍니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다.
 
 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
@@ -90,6 +90,6 @@ Windows 개발자 센터 대시보드에서 **추가 기능 구입** 보고서�
 
 
 
- 
+ 
 
- 
+ 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 대시보드, 개발자 센터, 개발 센터
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440519"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479241"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Windows 개발자 센터 대시보드 사용
 
@@ -42,9 +42,9 @@ Windows 개발자 센터 참여를 통해 [여러 사용자를 추가](manage-ac
 피드백은 최상의 기능과 경험을 구축하는 데 도움이 됩니다. 대시보드에서 작업할 때는 링크를 사용 하십시오 **피드백** 대시보드의 오른쪽 위 모서리에서 공유할 생각과 제안 합니다.
 
 
- 
+ 
 
- 
+ 
 
 
 

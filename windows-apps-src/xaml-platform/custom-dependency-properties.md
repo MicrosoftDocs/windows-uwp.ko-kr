@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441535"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469042"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -70,7 +70,7 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 - (옵션) [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) 같은 특성을 래퍼에 지정합니다.
 
 > [!NOTE]
-> 사용자 지정 연결 된 속성을 정의 하는 경우 일반적으로 래퍼를 생략 합니다. 대신 XAML 프로세서가 사용할 수 있는 다른 스타일의 접근자를 작성합니다. [사용자 지정 연결된 속성](custom-attached-properties.md)을 참조하세요. 
+> 사용자 지정 연결 된 속성을 정의 하는 경우 일반적으로 래퍼를 생략 합니다. 대신 XAML 프로세서가 사용할 수 있는 다른 스타일의 접근자를 작성합니다. [사용자 지정 연결된 속성](custom-attached-properties.md)을 참조하세요. 
 
 ## <a name="registering-the-property"></a>속성 등록
 
@@ -476,7 +476,7 @@ Windows 런타임은 사용자 지정 종속성 속성을 읽기 전용으로 �
 
 ### <a name="registering-the-dependency-properties-for-ccx-apps"></a>C++/CX 앱의 종속성 속성 등록
 
-C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. Visual C++ 구성 요소 확장(C++/CX)은 루트 범위의 정적 이니셜라이저 코드를 **DllMain**에 직접 배치하는 반면, C# 컴파일러는 클래스에 정적 이니셜라이저를 할당하여 **DllMain** 로드 잠금 문제를 방지합니다. 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325)(`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
+C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. (VisualC + + 구성 요소 확장 (C + + CX) 정적 이니셜라이저 코드를 삽입 하는 루트 범위에서 직접 **DllMain**C# 컴파일러는 클래스에 정적 이니셜라이저를 할당 하 고 따라서 **DllMain** 로드 잠금 문제를 방지 하는 반면.). 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325)(`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -484,4 +484,4 @@ C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵�
 - [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)
- 
+ 

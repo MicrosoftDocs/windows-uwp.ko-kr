@@ -1,6 +1,6 @@
 ---
 title: 보안 Windows 앱 개발 소개
-description: 이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 UWP(유니버설 Windows 플랫폼) 앱 만들기를 가속화하는 다양한 Windows 10 플랫폼 기능을 더 잘 이해할 수 있습니다.
+description: 이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 가속화 하는 다양 한 Windows10 플랫폼 기능을 더 잘 이해 합니다.
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: msatranjr
 ms.author: misatran
@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e48d0b21d588ef7b4913e16b75f9d21c5d5209f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440365"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470421"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>보안 Windows 앱 개발 소개
 
 
 
 
-이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 UWP(유니버설 Windows 플랫폼) 앱 만들기를 가속화하는 다양한 Windows 10 플랫폼 기능을 더 잘 이해할 수 있습니다. 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 등 다음 각 단계에서 사용할 수 있는 Windows 보안 기능을 사용하는 방법을 자세히 설명합니다. 각 항목에 대한 자세한 내용은 각 장에 포함된 추가 리소스를 검토하여 찾을 수 있습니다.
+이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 가속화 하는 다양 한 Windows10 플랫폼 기능을 더 잘 이해 합니다. 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 등 다음 각 단계에서 사용할 수 있는 Windows 보안 기능을 사용하는 방법을 자세히 설명합니다. 각 항목에 대한 자세한 내용은 각 장에 포함된 추가 리소스를 검토하여 찾을 수 있습니다.
 
 ## <a name="1-introduction"></a>1 소개
 
@@ -290,7 +290,7 @@ Azure API 관리는 서비스(제한이라는 프로시저)에 API 호출 수를
 
 일반적으로 Windows에는 앱에 대한 정의가 없습니다. 가장 흔히 실행 파일(.exe)이라고 하지만 설치, 상태 저장, 실행 길이, 버전 관리, OS 통합 및 앱 간 통신은 정의에 들어가지 않습니다. 유니버설 Windows 플랫폼 모델에서는 설치, 런타임 환경, 리소스 관리, 업데이트, 데이터 모델 및 설치 제거를 다루는 앱 모델을 정의합니다.
 
-Windows 10 앱은 기본적으로 권한이 제한되어 있으므로 컨테이너에서 실행됩니다(사용자가 추가 권한을 요청하여 허가를 받을 수 있음). 예를 들어, 앱에서 시스템 파일에 액세스하려는 경우 [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) 네임스페이스의 파일 선택기를 사용하여 사용자에게 파일을 선택하도록 할 수 있습니다(파일에 직접 액세스는 불가). 다른 예로, 앱에서 사용자의 위치 데이터에 액세스하려면 위치 디바이스 정보 값 요구를 선언하여 다운로드 시에 이 앱이 사용자에게 사용자 위치 액세스를 요청할 수 있도록 해야 합니다. 그에 앞서 앱이 처음으로 사용자의 위치에 액세스하려는 경우에는 데이터 액세스 권한을 요청하는 추가 동의 확인 프롬프트가 나타납니다.
+Windows10 앱 (추가 권한을 요청 하 고 수 사용자가 부여) 기본적으로 권한이 제한 되어 있는 컨테이너에서 실행 됩니다. 예를 들어, 앱에서 시스템 파일에 액세스하려는 경우 [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) 네임스페이스의 파일 선택기를 사용하여 사용자에게 파일을 선택하도록 할 수 있습니다(파일에 직접 액세스는 불가). 다른 예로, 앱에서 사용자의 위치 데이터에 액세스하려면 위치 디바이스 정보 값 요구를 선언하여 다운로드 시에 이 앱이 사용자에게 사용자 위치 액세스를 요청할 수 있도록 해야 합니다. 그에 앞서 앱이 처음으로 사용자의 위치에 액세스하려는 경우에는 데이터 액세스 권한을 요청하는 추가 동의 확인 프롬프트가 나타납니다.
 
 이 앱 모델은 앱에 대한 "감옥" 역할을 합니다. 다시 말하면 접근할 수는 없지만 외부에서 다가가지 못할 "성"은 아니라는 것입니다(물론 관리자 권한을 가진 응용 프로그램은 액세스 가능). 조직/IT가 어떤 (Win32) 앱의 실행을 허용할지 지정할 수 있게 하는 Windows 10의 Device Guard는 이 액세스를 추가로 제한하는 데 도움이 될 수 있습니다.
 

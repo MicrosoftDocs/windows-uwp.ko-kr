@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문자열
 ms.localizationpriority: medium
 ms.openlocfilehash: 865267a6897a551613479a099d10dd6d5a91c315
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438142"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468950"
 ---
 # <a name="string-handling-in-cwinrt"></a>C++/WinRT의 문자열 처리
 
@@ -168,10 +168,10 @@ Windows 런타임은 **wchar_t** 문자와 관련하여 구현되지만 Windows 
 ...
 void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
 {
-    float2 const point = args.CurrentPoint().Position();
-    std::wstringstream wstringstream;
-    wstringstream << L"Pointer pressed at (" << point.x << L"," << point.y << L")" << std::endl;
-    ::OutputDebugString(wstringstream.str().c_str());
+    float2 const point = args.CurrentPoint().Position();
+    std::wstringstream wstringstream;
+    wstringstream << L"Pointer pressed at (" << point.x << L"," << point.y << L")" << std::endl;
+    ::OutputDebugString(wstringstream.str().c_str());
 }
 ```
 

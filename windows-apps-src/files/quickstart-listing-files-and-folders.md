@@ -16,11 +16,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 312e351a39bf291e1fcd21921230a73ed10cfd17
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435506"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477468"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>파일 및 폴더 열거 및 쿼리
 
@@ -29,7 +29,7 @@ ms.locfileid: "5435506"
 유니버설 Windows 플랫폼 앱의 데이터를 저장하는 방법에 대한 내용은 [ApplicationData](/uwp/api/windows.storage.applicationdata) 클래스를 참조하세요.
 
 > [!NOTE]
-> [폴더 열거 샘플](http://go.microsoft.com/fwlink/p/?linkid=619993)도 참조하세요.
+> [폴더 열거 샘플](http://go.microsoft.com/fwlink/p/?linkid=619993)도 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -44,7 +44,7 @@ ms.locfileid: "5435506"
 ## <a name="enumerate-files-and-folders-in-a-location"></a>위치에 있는 파일 및 폴더 열거
 
 > [!NOTE]
-> **picturesLibrary** 기능을 선언해야 합니다.
+> **picturesLibrary** 기능을 선언해야 합니다.
 
 이 예제에서는 먼저 메서드를 사용 [**StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) 를 (하위 폴더)에 없는 [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) 의 루트 폴더의 모든 파일을 가져오고 각 파일의 이름을 나열 합니다. 다음으로 [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) 메서드를 사용 하 여를 **PicturesLibrary** 에서 모든 하위 폴더를 가져오고 각 하위 폴더의 이름을 나열 합니다.
 

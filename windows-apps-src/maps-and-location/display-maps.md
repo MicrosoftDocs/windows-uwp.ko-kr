@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
 ms.openlocfilehash: ba03d430031ad2bdad6959e2c59500dc6f2d2666
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434465"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476562"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D, Streetside 뷰로 지도 표시
 
@@ -153,7 +153,7 @@ pageGrid.Children.Add(MapControl2);
 > [!NOTE]
 > 문자열을 [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675)로 변환할 수 없으므로 데이터 바인딩을 사용하지 않을 경우 XAML 태그에서 [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) 속성 값을 지정할 수 없습니다. 이 제한 사항은 [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264) 연결된 속성에도 적용됩니다.
 
- 
+ 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
 {
@@ -327,9 +327,9 @@ Streetside 뷰를 표시하려면
 
 이 예제에서는 이전 이미지와 유사한 Streetside 뷰를 표시하는 방법을 보여 줍니다.
 
-**참고**  지도 컨트롤이 지나치게 작으면 개요 지도가 표시되지 않습니다.
+**참고**지도 컨트롤이 지나치게 작으면 개요 지도가 표시 되지 것입니다.
 
- 
+ 
 
 ```csharp
 private async void showStreetsideView()

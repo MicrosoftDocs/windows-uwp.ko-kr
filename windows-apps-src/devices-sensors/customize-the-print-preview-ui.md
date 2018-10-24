@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: fe4086cc87699083304594eb4ccc8e7bb137b19f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432074"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470568"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
@@ -29,9 +29,9 @@ ms.locfileid: "5432074"
 
 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다. 인쇄에 대한 자세한 내용은 [앱에서 인쇄](print-from-your-app.md)를 참조하세요.
 
-**팁**  이 항목의 예제는 대부분 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
+**팁**는이 항목의 예제는 대부분 인쇄 샘플에 기반 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
 
- 
+ 
 
 ## <a name="customize-print-options"></a>인쇄 옵션 사용자 지정
 
@@ -52,9 +52,9 @@ ms.locfileid: "5432074"
 
 단, 이 메서드를 사용하여 수정한 사항은 인쇄 미리 보기 UI에만 적용됩니다. 사용자는 인쇄 미리 보기 UI에서 **기타 설정**을 탭하여 프린터에서 지원하는 모든 옵션에 항상 액세스할 수 있습니다.
 
-**참고**  앱에서는 표시될 인쇄 옵션을 어떤 것이든 지정할 수 있지만 선택한 프린터에서 지원하는 옵션만 인쇄 미리 보기 UI에 표시됩니다. 선택한 프린터가 지원하지 않는 옵션은 인쇄 UI에 표시되지 않습니다.
+**참고**은 선택한 프린터에서 지 원하는 옵션만 인쇄 미리 보기 UI에에서 표시 됩니다 앱 표시 될 인쇄 옵션에서는 지정할 수 있지만 합니다. 선택한 프린터가 지원하지 않는 옵션은 인쇄 UI에 표시되지 않습니다.
 
- 
+ 
 
 ### <a name="define-the-options-to-display"></a>표시할 옵션 정의
 
@@ -100,7 +100,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**중요**  [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()을 호출하면 인쇄 미리 보기 UI에서 **기타 설정** 링크를 비롯한 모든 인쇄 옵션이 제거됩니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
+**중요 한**인쇄 미리 보기 **기타 설정** 링크를 포함 하 여 UI에서에서 모든 인쇄 옵션이 제거 [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()를 호출 합니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
 
 ### <a name="specify-default-options"></a>기본 옵션 지정
 

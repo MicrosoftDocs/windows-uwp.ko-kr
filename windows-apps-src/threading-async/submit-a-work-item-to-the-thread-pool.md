@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435301"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478151"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
@@ -354,11 +354,11 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-Windows 8.1용으로 작성된 [ThreadPool 작업 항목 샘플 만들기](http://go.microsoft.com/fwlink/p/?LinkID=328569)의 이 빠른 시작에서 코드를 다운로드하고 win\_unap Windows 10 앱에서 소스 코드를 다시 사용하여 자세히 알아볼 수 있습니다.
+에 [항목 샘플 작업 만들기는 ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) Windows8.1, 용으로 작성 된이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap Windows10 앱에서 소스 코드를 다시 사용 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
 * [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)
 * [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
- 
+ 

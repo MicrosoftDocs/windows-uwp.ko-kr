@@ -16,11 +16,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433502"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478079"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -112,7 +112,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 | **false**           | `Unchecked`        | 비어 있음                  |
 | **null**            | `Indeterminate`    | 원을 포함합니다.      |
 
- 
+ 
 
 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) 개체를 사용하여 특정 상태일 때 나타나는 컨트롤의 모양을 지정합니다. **VisualState**에는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br208817)에 있는 요소의 모양을 변경하는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br243053) 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br209391)가 있습니다. 컨트롤이 [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031) 속성이 지정한 상태가 되면 **Setter** 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)의 속성 변경 내용이 적용됩니다. 컨트롤이 상태에서 나가면 변경 내용이 제거됩니다. **VisualState** 개체를 [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 개체에 추가합니다. **VisualStateGroup** 개체를 **ControlTemplate**의 루트 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/hh738505)에 설정한 [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/br208706) 연결된 속성에 추가합니다.
 
@@ -188,7 +188,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 | `Checked`에서 `Indeterminate`로   | `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br208817)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br209007) 값이 적용되므로 `IndeterminateGlyph`의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)는 1입니다. `Checked` **VisualState**의 **Setter** 값이 제거되므로 `CheckGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078)는 0입니다. | 원이 표시됩니다.                            |
 | `Indeterminate`에서 `Unchecked`로 | `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br208817)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br209007) 값이 제거되므로 `IndeterminateGlyph`의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)는 0입니다.                                                                                                                                           | 아무것도 표시되지 않습니다.                             |
 
- 
+ 
 컨트롤의 시각적 상태를 만드는 방법 및 특히 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) 클래스 및 애니메이션 형식을 사용하는 방법에 대한 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808)을 참조하세요.
 
 ## <a name="use-tools-to-work-with-themes-easily"></a>테마 작업을 쉽게 할 수 있는 도구 사용
@@ -211,11 +211,11 @@ XAML 컨트롤의 스타일과 템플릿을 문서화하는 항목은 앞에서 
 
 XAML 예제의 일부 속성에서 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하는 리소스 참조를 봤을 것입니다. 이 기술은 단일 컨트롤 템플릿이 현재 활성화된 테마에 따라 값이 달라질 수 있는 리소스를 사용할 수 있도록 합니다. 테마의 주요 목적은 사용자가 시스템 전체에 어둡거나 밝거나 고대비 테마를 적용할 것인지 선택할 수 있게 하는 것이므로 이 기술은 특히 브러시와 색에 중요합니다. XAML 리소스 시스템을 사용하는 앱은 앱 UI의 테마 선택 항목이 사용자 시스템의 테마 선택을 반영하도록 해당 테마에 적합한 리소스 집합을 사용할 수 있습니다.
 
- ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+ # # 샘플 코드를 다운로드 합니다.
 * [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [사용자 지정 텍스트 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
 
- 
+ 
 
 
 

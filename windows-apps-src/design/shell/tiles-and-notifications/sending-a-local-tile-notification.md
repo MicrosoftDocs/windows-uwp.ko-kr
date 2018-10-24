@@ -12,23 +12,23 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e91d4bd481188f4d29af68af2c4572b26d446ae
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432614"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478523"
 ---
 # <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
  
 
-Windows 10의 기본 앱 타일은 앱 매니페스트에서 정의되는 반면, 보조 타일은 프로그래밍 방식으로 앱 코드에서 생성 및 정의됩니다. 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다. 로컬 알림은 웹 서버에서 푸시되거나 끌어온 알림이 아니라 앱 코드에서 전송된 알림입니다.
+Windows10의 기본 앱 타일은 보조 타일은 프로그래밍 방식으로 만들고 앱 코드에 정의 되어 있는 동안 앱 매니페스트에 정의 됩니다. 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다. 로컬 알림은 웹 서버에서 푸시되거나 끌어온 알림이 아니라 앱 코드에서 전송된 알림입니다.
 
 ![기본 타일 및 알림 타일](images/sending-local-tile-01.png)
 
 > [!NOTE] 
 >[적응형 타일 만들기](create-adaptive-tiles.md) 및 [타일 템플릿 스키마](../tiles-and-notifications/tile-schema.md)에 대해 자세히 알아봅니다.
 
- 
+ 
 
 ## <a name="install-the-nuget-package"></a>NuGet 패키지 설치
 
@@ -50,7 +50,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>알림 콘텐츠 만들기
 
 
-Windows 10에서 타일 페이로드는 알림에 대한 사용자 지정 시각적 레이아웃을 만들 수 있는 적응형 타일 템플릿을 사용하여 정의됩니다. 적응형 타일로 수행할 수 있는 작업에 대한 자세한 내용은 [적응형 타일 만들기](create-adaptive-tiles.md)를 참조하세요.
+Windows10, 타일 페이로드 알림에 대 한 사용자 지정 시각적 레이아웃을 만들 수 있도록 하는 적응형 타일 템플릿을 사용 하 여 정의 됩니다. 적응형 타일로 수행할 수 있는 작업에 대한 자세한 내용은 [적응형 타일 만들기](create-adaptive-tiles.md)를 참조하세요.
 
 이 코드 예제에서는 중간 크기 및 와이드 타일에 대한 적응형 타일 콘텐츠를 만듭니다.
 
@@ -297,9 +297,9 @@ var notification = new TileNotification(doc);
 * [**Windows.UI.Notifications 네임스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
 * [알림 큐 사용 방법(XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
 * [알림 전달](choosing-a-notification-delivery-method.md)
- 
+ 
 
- 
+ 
 
 
 

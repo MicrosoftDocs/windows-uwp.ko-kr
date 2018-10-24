@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430729"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469314"
 ---
 # <a name="product-declarations"></a>제품 선언
 
@@ -44,7 +44,7 @@ ms.locfileid: "5430729"
 자세한 내용은 [접근성](../design/accessibility/accessibility.md), [접근성 테스트](../design/accessibility/accessibility-testing.md)및 [스토어의 접근성](../design/accessibility/accessibility-in-the-store.md)을 참조 하세요.
 
 > [!IMPORTANT]
-> 앱을 접근성 있음으로 목록 하지 않는 한 특별히 엔지니어링 하 고 해당 용도 맞게 테스트 하지 않는 한. 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
+> 앱을 접근성 있음으로 목록 하지 않는 한 특별히 엔지니어링 하 고 해당 용도 맞게 테스트 하지 않는 한. 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>고객은 이 앱을 설치하여 드라이브 또는 이동식 저장소를 대체할 수 있습니다.
 
@@ -68,11 +68,11 @@ ms.locfileid: "5430729"
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c128bedd1c889f4c2dcf0565c7c10575eb75013
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438197"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478704"
 ---
 # <a name="getting-paid"></a>지급 받기
 다음은 앱과 추가 기능 및 광고 수익에 대한 지급을 받는 데 필요한 중요한 정보입니다.
@@ -70,9 +70,9 @@ Windows 개발자 센터 대시보드의 **지급 요약**에서 결제 정보�
 > **지급 보류 상태**를 선택하면 Windows 개발자 센터(Microsoft Store, 광고, Azure Marketplace 등)를 통해 지급되는 **모든**  수입원에 적용됩니다. 각 수입원에 대해 다른 보류 상태를 선택할 수 없습니다.
 
 
- 
+ 
 
- 
+ 
 
 
 
