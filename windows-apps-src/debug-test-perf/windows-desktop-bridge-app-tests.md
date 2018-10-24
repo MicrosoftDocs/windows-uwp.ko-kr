@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404874"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443588"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
-[데스크톱 브리지 앱](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) 은 Windows 데스크톱 응용 프로그램은 [데스크톱 브리지](https://developer.microsoft.com/en-us/windows/bridges/desktop)를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
+[데스크톱 브리지 앱](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) 은 Windows 데스크톱 응용 프로그램 [데스크톱 브리지](https://developer.microsoft.com/en-us/windows/bridges/desktop)를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
 
 ## <a name="required-versus-optional-tests"></a>필수 테스트와 선택 테스트
-Windows 데스크톱 브리지 앱에 대 한 선택적 테스트 하는 알림이 며 앱을 Microsoft 스토어 등록 하는 동안 평가에 사용 되지 않습니다. 조사 하는 것이 좋습니다 이러한 테스트 결과를 더 나은 품질의 앱을 생성 합니다. 스토어 온보딩에 대한 전반적인 성공/실패는 이러한 선택적 테스트가 아닌 필수 테스트에 의해 결정됩니다.
+Windows 데스크톱 브리지 앱에 대 한 선택적 테스트 하는 알림이 며 Microsoft 스토어 등록 하는 동안 앱을 평가 하는 사용 되지 않습니다. 조사 하는 것이 좋습니다 이러한 테스트 결과를 더 나은 품질의 앱을 생성 합니다. 스토어 온보딩에 대한 전반적인 성공/실패는 이러한 선택적 테스트가 아닌 필수 테스트에 의해 결정됩니다.
 
 ## <a name="current-optional-tests"></a>현재 선택적 테스트
 
@@ -221,7 +221,7 @@ Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디
 앱이 디버그 빌드가 아닌 릴리스 빌드로 컴파일된 것을 확인하여 수정할 수 있습니다. 
 
 > [!NOTE]
-> [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다. 리뷰 API를 식별 하기 위해 오류 메시지를 표시 하는 UWP 앱에 대 한 허용 된 API 아닙니다. 
+> 앱은 [UWP 앱 용 Api](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)를 사용 하는 경우에 앱의 디버그 빌드가이 테스트에 실패 합니다. 리뷰 API를 식별 하기 위해 오류 메시지를 표시 하는 UWP 앱에 대 한 허용 된 API 아닙니다. 
 
 > [!NOTE]
 > UWP 앱 용 Windows SDK의 Api만 사용 하는 경우에 디버그 구성에서 빌드된 c + + 앱이이 테스트에 실패 합니다. 자세한 내용은 [UWP 앱의 Windows Api 대안](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) 을 참조 하세요.

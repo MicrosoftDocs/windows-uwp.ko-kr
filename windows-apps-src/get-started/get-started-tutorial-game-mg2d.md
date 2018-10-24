@@ -1,6 +1,6 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: 간단한 UWP C# 및 MonoGame로 작성, Microsoft Store 용 게임
+description: 간단한 UWP C# 및 MonoGame로 작성 된 Microsoft Store 용 게임
 author: muhsinking
 ms.author: mukin
 ms.date: 03/06/2017
@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5396407"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5440777"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -30,7 +30,7 @@ MonoGame은 경량의 게임 개발 프레임워크입니다. 이 자습서에�
 
 ## <a name="prerequisites"></a>필수 구성 요소
 +   Windows 10 및 Microsoft Visual Studio 2017.  [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ .NET 데스크톱 개발 프레임 워크입니다. 아직 없는 경우 설치를 다시 Visual Studio 설치 관리자를 실행 하 고 Visual Studio 2017의 설치를 수정 하 여 얻을 수 있습니다.
++ .NET 데스크톱 개발 프레임 워크입니다. 아직 없는 경우 설치를 다시 Visual Studio 설치 관리자를 실행 하 고 Visual Studio 2017 설치를 수정 하 여 얻을 수 있습니다.
 +   C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. [C#을 시작하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   클래스, 메서드, 변수 등 기본적인 컴퓨터 공학 개념에 대한 지식.
 
@@ -44,7 +44,7 @@ Visual Studio 2017에서 프로젝트를 열고 샘플을 실행 하려면 **F5*
 
 이 작업을 마쳤으면 MonoGame 설정에 대한 다음 섹션으로 넘어가서 단계별 코드 연습을 살펴봅니다.
 
-**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 MonoGame 2d 게임을 개발의 모든 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
+**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 monogame으로 2d 게임을 개발 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
 
 ## <a name="set-up-monogame-project"></a>MonoGame 프로젝트 설정
 1. [MonoGame.net](http://www.monogame.net/)에서 Visual Studio용 **MonoGame 3.6**을 다운로드합니다.
@@ -696,4 +696,4 @@ Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/regist
 
 앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.
+자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.

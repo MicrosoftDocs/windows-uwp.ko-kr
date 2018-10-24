@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 424ca52020bd5b9aeab745030dd6eef4cd4430b6
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862422"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445580"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 
@@ -126,11 +126,11 @@ _MathExtension 프로젝트의 Package.appxmanifest:_
 
 |특성|설명|필수|
 |---------|-----------|:------:|
-|**이름**|확장 계약 이름입니다. 호스트에서 선언된 **이름**과 일치하면 해당 호스트는 이 확장을 찾을 수 있습니다.|:heavy_check_mark:|
-|**ID**| 이 확장을 고유하게 식별합니다. 동일한 확장 계약 이름을 사용하는 여러 개의 확장이 있을 수 있으므로(여러 확장을 지원하는 페인트 앱을 상상할 수 있음) ID를 사용하여 구분할 수 있습니다. 앱 확장 호스트는 ID를 사용하여 확장 유형에 대한 정보를 추측할 수 있습니다. 예를 들어 데스크톱용으로 설계된 확장과 차별화 요소인 ID를 사용하여 모바일용으로 설계된 확장 중 하나를 사용할 수 있습니다. 아래에서 설명하는 **속성** 요소를 사용할 수도 있습니다.|:heavy_check_mark:|
+|**이름**|확장 계약 이름입니다. 호스트에서 선언된 **이름**과 일치하면 해당 호스트는 이 확장을 찾을 수 있습니다.| :heavy_check_mark: |
+|**ID**| 이 확장을 고유하게 식별합니다. 동일한 확장 계약 이름을 사용하는 여러 개의 확장이 있을 수 있으므로(여러 확장을 지원하는 페인트 앱을 상상할 수 있음) ID를 사용하여 구분할 수 있습니다. 앱 확장 호스트는 ID를 사용하여 확장 유형에 대한 정보를 추측할 수 있습니다. 예를 들어 데스크톱용으로 설계된 확장과 차별화 요소인 ID를 사용하여 모바일용으로 설계된 확장 중 하나를 사용할 수 있습니다. 아래에서 설명하는 **속성** 요소를 사용할 수도 있습니다.| :heavy_check_mark: |
 |**DisplayName**| 호스트 앱에서 사용자에 대한 확장을 식별하는 데 사용할 수 있습니다. 쿼리 가능하며, 지역화를 위해 [새로운 리소스 관리 시스템](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games)(`ms-resource:TokenName`)을 사용할 수 있습니다. 지역화된 콘텐츠는 호스트 앱이 아니라 앱 확장 패키지에서 로드됩니다. | |
 |**설명** | 호스트 앱에서 사용자에 대한 확장을 설명하는 데 사용할 수 있습니다. 쿼리 가능하며, 지역화를 위해 [새로운 리소스 관리 시스템](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games)(`ms-resource:TokenName`)을 사용할 수 있습니다. 지역화된 콘텐츠는 호스트 앱이 아니라 앱 확장 패키지에서 로드됩니다. | |
-|**PublicFolder**|확장 호스트와 콘텐츠를 공유할 수 있는 패키지 루트에 상대적인 폴더의 이름입니다. 일반적으로 이름은 "공개"이지만 확장의 폴더와 일치하는 이름을 사용할 수 있습니다.|:heavy_check_mark:|
+|**PublicFolder**|확장 호스트와 콘텐츠를 공유할 수 있는 패키지 루트에 상대적인 폴더의 이름입니다. 일반적으로 이름은 "공개"이지만 확장의 폴더와 일치하는 이름을 사용할 수 있습니다.| :heavy_check_mark: |
 
 `<uap3:Properties>` 호스트가 런타임 시 읽을 수 있는 사용자 지정 메타데이터가 포함되어 있는 선택적 요소입니다. 코드 샘플에서 확장은 앱 서비스로 구현되므로 호스트는 해당 앱 서비스의 이름을 가져와서 호출할 수 있어야 합니다. 앱 서비스의 이름은 미리 정의한 <Service> 요소에 정의되어 있습니다(원하는 대로 부를 수 있음). 코드 샘플의 호스트는 런타임 시 이 속성을 검색하여 앱 서비스의 이름을 확인합니다.
 

@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 052a83f47dc2d5b692c811850e41381c4745815c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5410429"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5433935"
 ---
 # <a name="usersxuidxuidlistspinslistname"></a>/users/xuid(xuid)/lists/PINS/{listname}
-목록에서 항목을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
+목록의 항목을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -31,7 +31,7 @@ ms.locfileid: "5410429"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | xuid| string| Xbox 사용자 ID (XUID)입니다.| 
-| listtype| string| 유형 (사용 하는 방법 및 작동 방식을) 목록입니다. 항상 이러한 "핀" 관련 메서드.| 
+| listtype| string| 유형 (사용 하는 방법 및 작동 방식을) 목록입니다. 항상 이러한 "고정" 관련 메서드.| 
 | listname| string| 목록 이름 (의 지정 된 listtype 어떤 목록). 항상 "XBLPins"에 대 한 Pin 항목입니다.| 
   
 <a id="ID4EGC"></a>
@@ -45,7 +45,7 @@ ms.locfileid: "5410429"
 
 [GET](uri-usersxuidlistspinslistnameget.md)
 
-&nbsp;&nbsp;목록의 콘텐츠를 반환합니다.
+&nbsp;&nbsp;목록의 내용을 반환합니다.
 
 [POST](uri-usersxuidlistspinslistnamepost.md)
 

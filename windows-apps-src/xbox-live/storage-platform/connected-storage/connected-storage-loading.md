@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: d3252ad2ffb9145088f38f4a8d6c7c5ebc94e9e5
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398599"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5430439"
 ---
 # <a name="use-connected-storage-to-load-data"></a>연결 된 저장소를 사용 하 여 데이터를 로드 합니다.
 

@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9dc64adb6cf3dafd30dfbe218403510fe1b80803
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400821"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5441293"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>앱에서 바로 구매 소모성 제품 사용
 

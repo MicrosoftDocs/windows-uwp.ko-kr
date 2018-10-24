@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.localizationpriority: medium
 keywords: Xbox live, Xbox, 게임, uwp, windows 10, Xbox one, Windows 개발자 센터, Xbox Live 설정
 ms.openlocfilehash: ba4ab2b6cad1968c3d223f99e80ed024e085e8e4
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5405669"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5431979"
 ---
 # <a name="configure-xbox-live-setup-on-windows-dev-center"></a>Windows 개발자 센터에서 Xbox Live 설정 구성
 

@@ -12,21 +12,21 @@ keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5397425"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443178"
 ---
-# <a name="run-debug-and-test-a-packaged-desktop-application"></a>실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트
+# <a name="run-debug-and-test-a-packaged-desktop-application"></a>실행, 디버그 및 패키지 된 데스크톱 응용 프로그램을 테스트 합니다.
 
-패키지 된 응용 프로그램을 실행 하 고 로그인 할 필요 없이 어떻게 되는지 확인 합니다. 그런 다음, 중단점을 설정하고 코드를 단계별로 실행합니다. 프로덕션 환경에서 응용 프로그램을 테스트할 준비가 응용 프로그램에 서명 하 고 설치 합니다. 이 항목에서는 이러한 작업을 수행하는 방법을 보여 줍니다.
+패키지 된 응용 프로그램을 실행 하 고 로그인 할 필요 없이 어떻게 되는지 확인 합니다. 그런 다음, 중단점을 설정하고 코드를 단계별로 실행합니다. 프로덕션 환경에서 응용 프로그램을 테스트할 준비가 되 면 응용 프로그램에 서명 하 고 설치 합니다. 이 항목에서는 이러한 작업을 수행하는 방법을 보여 줍니다.
 
 <a id="run-app" />
 
 ## <a name="run-your-application"></a>응용 프로그램 실행
 
-이렇게 하면 응용 프로그램 인증서를 얻어서 로그인 할 필요 없이 로컬 테스트를 실행할 수 있습니다. 어떤 도구에 따라 달라 집니다 응용 프로그램을 실행 하는 방법을 패키지를 만드는 데 사용 합니다.
+인증서를 얻어서 로그인 할 필요 없이 로컬 테스트 응용 프로그램을 실행할 수 있습니다. 도구를 의존 응용 프로그램을 실행 하는 방법을 패키지를 만드는 데 사용 됩니다.
 
 ### <a name="you-created-the-package-by-using-visual-studio"></a>Visual Studio를 사용하여 패키지를 만든 경우
 
@@ -44,17 +44,17 @@ Add-AppxPackage –Register AppxManifest.xml
 ![시작 메뉴에 패키지 된 응용 프로그램](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> 패키지 된 응용 프로그램이 항상 대화형 사용자로 실행 하 고에 패키지 된 응용 프로그램을 설치할 수 있는 모든 드라이브는 NTFS 형식으로 포맷 되어야 합니다.
+> 패키지 된 응용 프로그램이 항상 대화형 사용자로 실행 되 고에 패키지 된 응용 프로그램을 설치 하는 모든 드라이브는 NTFS 형식으로 포맷 되어야 합니다.
 
 ## <a name="debug-your-app"></a>앱 디버그
 
-어떤 도구에 따라 달라 집니다 응용 프로그램을 디버그 하는 방법은 패키지를 만드는 데 사용 합니다.
+도구를 의존 하는 응용 프로그램을 디버그 하는 방법은 패키지를 만드는 데 사용 됩니다.
 
 Visual Studio 2017 15.4 릴리스에서 사용할 수 있는 [새 패키징 프로젝트](desktop-to-uwp-packaging-dot-net.md#new-packaging-project)를 사용하여 패키지를 만든 경우 패키징 프로젝트를 시작 프로젝트로 설정한 후 F5 키를 눌러 앱을 디버그합니다.
 
 기타 도구를 사용하여 패키지를 만든 경우 다음 단계를 따르세요.
 
-1. 로컬 컴퓨터에 설치할 수 있도록 패키지 된 응용 프로그램이 한 번 이상 시작 하는지 확인 합니다.
+1. 로컬 컴퓨터에 설치할 수 있도록 한 번 이상 패키지 된 응용 프로그램을 시작 하 고 있는지 확인 합니다.
 
    위의 [앱 실행](#run-app) 섹션을 참조하세요.
 
@@ -68,25 +68,25 @@ Visual Studio 2017 15.4 릴리스에서 사용할 수 있는 [새 패키징 프�
 
 #### <a name="modify-your-application-in-between-debug-sessions"></a>디버그 세션 간에 응용 프로그램을 수정합니다
 
-버그를 해결 하려면 응용 프로그램을 변경한 경우 MakeAppx 도구를 사용 하 여 다시 패키징 합니다. [MakeAppx 도구 실행](desktop-to-uwp-manual-conversion.md#make-appx)을 참조하세요.
+이렇게 하면 응용 프로그램 버그 수정 변경한 경우 MakeAppx 도구를 사용 하 여 다시 작성 합니다. [MakeAppx 도구 실행](desktop-to-uwp-manual-conversion.md#make-appx)을 참조하세요.
 
 ### <a name="debug-the-entire-application-lifecycle"></a>응용 프로그램 전체 수명 주기 디버깅
 
-경우에 따라 시작 되기 전에 응용 프로그램을 디버그 하는 기능을 포함 하 여 디버깅 프로세스를 세부적으로 제어할을 좋습니다.
+경우에 따라 시작 되기 전에 응용 프로그램을 디버깅 하는 기능을 포함 하 여 디버깅 프로세스를 보다 세부적으로 제어할을 수도 있습니다.
 
-[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) 를 사용 하 여 일시 중단, 다시 시작 및 종료를 포함 하 여 응용 프로그램 수명 주기를 완전히 제어할 수 있습니다.
+[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) 를 사용 하 여 일시 중단, 다시 시작 및 종료를 비롯 한 응용 프로그램 수명 주기를 완전히 제어할 수 있습니다.
 
 [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx)는 Windows SDK에 포함되어 있습니다.
 
 ## <a name="test-your-app"></a>앱 테스트
 
-응용 프로그램을 테스트 현실적인 설정 배포에 대해 대비 함, 응용 프로그램에 서명 하 고 다음 설치 하는 것이 좋습니다.
+배포를 준비 하는 대로 현실적인 설정에서 응용 프로그램을 테스트, 응용 프로그램에 서명 하 고 다음 설치 하는 것이 좋습니다.
 
-### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Visual Studio를 사용 하 여 패키징 하는 응용 프로그램 테스트
+### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Visual Studio를 사용 하 여 패키지 된 응용 프로그램을 테스트 합니다.
 
-Visual Studio는 테스트 인증서를 사용 하 여 응용 프로그램에 서명 합니다. **앱 패키지 만들기** 마법사가 생성하는 출력 폴더에서 해당 인증서를 찾을 수 있습니다. 인증서 파일의 *.cer* 확장명 및 **신뢰할 수 있는 루트 인증 기관** 저장소에서 응용 프로그램을 테스트 하려는 PC에 해당 인증서를 설치 해야 합니다. [패키지 사이드로드](../packaging/packaging-uwp-apps.md#sideload-your-app-package)를 참조하세요.
+Visual Studio 테스트 인증서를 사용 하 여 응용 프로그램에 서명 합니다. **앱 패키지 만들기** 마법사가 생성하는 출력 폴더에서 해당 인증서를 찾을 수 있습니다. 인증서 파일의 *.cer* 확장명 및 **신뢰할 수 있는 루트 인증 기관** 저장소에서 응용 프로그램을 테스트 하려는 PC에 해당 인증서를 설치 해야 합니다. [패키지 사이드로드](../packaging/packaging-uwp-apps.md#sideload-your-app-package)를 참조하세요.
 
-### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Desktop App Converter (DAC)를 사용 하 여 패키징 하는 응용 프로그램 테스트
+### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Desktop App Converter (DAC)를 사용 하 여 패키지 된 응용 프로그램을 테스트 합니다.
 
 Desktop App Converter를 사용 하 여 응용 프로그램을 패키징 한 경우 사용할 수는 ``sign`` 매개 변수를 자동으로 생성 된 인증서를 사용 하 여 응용 프로그램에 서명 합니다. 해당 인증서를 설치한 다음 앱을 설치해야 합니다. [패키징된 앱 실행](desktop-to-uwp-run-desktop-app-converter.md#run-app)을 참조하세요.   
 

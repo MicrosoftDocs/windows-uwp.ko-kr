@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 연결 된 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: 936b0333e826d3f9047a6905e7374e1ce9ec47ca
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399539"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5441237"
 ---
 # <a name="connected-storage-best-practices"></a>연결된 저장소 모범 사례
 

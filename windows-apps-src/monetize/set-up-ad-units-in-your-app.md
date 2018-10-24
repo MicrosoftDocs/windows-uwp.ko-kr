@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp, 광고, 광고, 광고 단위, 테스트
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7257e6cae518458c5c0bbc525d8013708717e5
-ms.sourcegitcommit: 20abf751a7d2f483826e54809f2417c90d0aecb0
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/23/2018
-ms.locfileid: "5429613"
+ms.locfileid: "5444375"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>앱에서 광고 단위 설정
 

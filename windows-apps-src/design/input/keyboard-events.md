@@ -17,11 +17,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 78448081b81e7e28c4b97fcfdd7aa71ae32aeb0c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403797"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445401"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -329,7 +329,7 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 
 특정 컨트롤에 대한 키 이벤트를 재정의하여(예: [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) 키보드와 게임 패드와 같이 다양한 입력 장치에 대해 일관된 포커스 탐색 기능을 제공할 수 있습니다.
 
-다음 예제에서는에서는 화살표 키를 누를 때 콘텐츠의 및 컨트롤 하위 클래스와 GridView에 포커스를 이동 하려고 KeyDown 동작을 재정의 합니다.
+다음 예제에서에서는 화살표 키를 누를 때 콘텐츠를 하위 클래스 컨트롤 및 GridView에 포커스를 이동 하려고 KeyDown 동작을 재정의 합니다.
 
 ```csharp
 public class CustomGridView : GridView

@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
 ms.openlocfilehash: 8a19c6e116cb6c2f3cd8e2f2d8541516ebf89de9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5408108"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5433308"
 ---
 # <a name="configure-access-policies-on-dev-center"></a>개발자 센터에 대 한 액세스 정책을 구성합니다
 

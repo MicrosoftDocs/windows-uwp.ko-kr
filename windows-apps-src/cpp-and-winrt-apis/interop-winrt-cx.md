@@ -10,17 +10,17 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: a21255299207bf6de06661e63936e6715c1f41c9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5396111"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445511"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 사이의 상호 운용성
 
-점진적으로의 코드를 포팅 전략에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 에 대해서는 설명 [이동 C + +에서 C + + CX](move-to-winrt-from-cx.md).
+점진적으로의 코드를 포팅 전략에 [C + + CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트를 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 에서 설명한 [이동 C + +에서 C + + CX](move-to-winrt-from-cx.md)합니다.
 
-이 항목에서는 C + 간에 변환 하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다. + CX 및 C + + /winrt 개체는 같은 프로젝트 내 합니다. 두 언어 프로젝션을 사용 하는 코드 사이의 상호 운용성 사용 하거나 C +에서 코드를 포팅 대로 함수를 사용할 수 + /CX C + + WinRT 합니다.
+이 항목에서는 C + 간에 변환 하는 데 사용할 수 있는 두 가지 도우미 함수 + CX 및 C + + /winrt 개체는 같은 프로젝트 내 합니다. 두 언어 프로젝션을 사용 하는 코드 사이의 상호 운용성 하는 데 사용할 수 또는 C +에서 코드를 포트 하는 대로 함수를 사용할 수 + /CX C + + WinRT 합니다.
 
 ## <a name="fromcx-and-tocx-functions"></a>from_cx 함수와 to_cx 함수
 아래 도우미 함수는 C++/CX 개체를 상응하는 C++/WinRT 개체로 변환합니다. 이 함수는 C++/CX 개체를 기본 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스 포인터로 캐스팅합니다. 그런 다음 해당 포인터에 대한 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출하여 C++/WinRT 개체의 기본 인터페이스에 대해 쿼리를 실행합니다. **QueryInterface**는 C++/CX safe_cast 확장에 상응하는 Windows 런타임 응용 프로그램 이진 인터페이스(ABI)입니다. 그러면 [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) 함수가 C++/WinRT 개체의 기본 **IUnknown** 인터페이스 포인터 주소를 다른 값으로 설정할 수 있도록 가져옵니다.
@@ -51,12 +51,12 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 ## <a name="example-project-showing-the-two-helper-functions-in-use"></a>사용 중인 두 가지 도우미 함수를 보여 주는 예제 프로젝트
 
-간단한 방식으로 점진적으로 C + 코드를 포팅하는 시나리오를 재현 하려면 + CX 프로젝트를 C + + /winrt는 C + 중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들어서 시작할 수 있습니다 + /winrt 프로젝트 템플릿과 (C + [Visual Studio 지원 참조 + WinRT 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).
+간단한 방식으로 점진적으로 C + 코드를 이식 하는 시나리오를 재현 하는 + CX 프로젝트를 C + + /winrt에서는 C + 중 하나를 사용 하 여 Visual Studio에서 새 프로젝트를 만들어서 시작할 수 있습니다 + /winrt 프로젝트 템플릿과 (C + [Visual Studio 지원 참조 + WinRT 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).
 
-이 예제에서는 프로젝트는 C + 간의 잠재적인 네임 스페이스 충돌을 처리 하려면 코드의 다른 제도 대 한 네임 스페이스 별칭을 사용 하는 방법을 보여 + WinRT 프로젝션 및 C + + /CX 프로젝션 합니다.
+이 예제 프로젝트 C + 간의 잠재적인 네임 스페이스 충돌을 다루기 위해 다른 제도 코드에 대 한 네임 스페이스 별칭을 사용 하는 방법을 보여 + WinRT 프로젝션 및 C + + /CX 프로젝션입니다.
 
 - **Visual c + +** 만들기 \> **Windows 유니버설** > **Core App (C + + WinRT)** 프로젝트.
-- 프로젝트 속성에서 **C/c + +** \> **일반** \> **Windows 런타임 확장** \> **예 (/ZW)**. 이 설정 프로젝트 지원 C + + CX 합니다.
+- 프로젝트 속성에서 **C/c + +** \> **일반** \> **Windows 런타임 확장** \> **예 (/ZW)**. 이 설정 프로젝트 지원과 C + + CX 합니다.
 - 내용을 `App.cpp` 아래 코드 목록을 사용 합니다.
 
 ```cppwinrt

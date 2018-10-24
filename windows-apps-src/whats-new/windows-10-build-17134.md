@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5402704"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445780"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자를 위한 Windows 10 빌드 17134의 새로운 기능
 
@@ -73,7 +73,7 @@ PlayReady | Microsoft PlayReady는 무단 사용으로부터 디지털 콘텐츠
 시스템 트리거 | [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger)를 사용하여 OS가 필요한 시스템 트리거를 제공하지 않는 경우 사용자가 시스템 트리거를 지정할 수 있습니다. 이러한 경우는 하드웨어 드라이버 및 UWP 앱이 둘 다 타사 제품인 경우, 하드웨어 드라이버가 앱이 처리하는 사용자 지정 이벤트를 발생하게 해야 할 때입니다. 예를 들어, 오디오 잭이 연결되어 있을 때 사용자에게 알려야 하는 오디오 카드가 있습니다.
 사용자 작업 | 새 [UserActivity 설명서](../launch-resume/useractivities.md)는 여러 장치에서 사용자가 앱에서 수행하고 있었던 작업을 재개하도록 돕는 방법에 대해 설명합니다.</br>**UserActivitySessionHistoryItem** 클래스에 사용자의 최근 활동을 검색하는 새로운 메서드가 있습니다. 자세한 내용은 [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) 및 해당 오버 로드를 참조하세요.
 Windows Mixed Reality API | 확장 중인 Windows Mixed Reality 플랫폼을 지원하기 위해 신규 API가 [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) 및 [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial) 네임스페이스에 추가되었습니다.
-Windows Mixed Reality 문서 | Windows Mixed Reality 개발자 지침이 [docs.microsoft.com에서 호스팅됩니다.](https://docs.microsoft.com/windows/mixed-reality/) 마찬가지로 이러한 UWP 문서에서 이제 GitHub 문제가 포함 된 피드백 하거나 사용자의 기여 끌어오기 요청을 통해 제출 합니다.
+Windows Mixed Reality 문서 | Windows Mixed Reality 개발자 지침이 [docs.microsoft.com에서 호스팅됩니다.](https://docs.microsoft.com/windows/mixed-reality/) 마찬가지로 이러한 UWP 문서에서 이제 GitHub 문제가 포함 된 피드백 하거나 끌어오기 요청을 통해 자신의 기여를 제출할 합니다.
 
 ## <a name="publish--monetize-windows-apps"></a>Windows 앱 게시 및 수익 창출
 

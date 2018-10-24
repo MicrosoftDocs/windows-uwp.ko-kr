@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 광고, 설치, SDK, 광고 라이브러리
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b26006cbeb7f7fbd9bf95f83051873e6f1140
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398130"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5444703"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK 설치
 
 Windows 10용 UWP 앱에 광고를 표시하려면 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 이 SDK는 Visual Studio 2015 이상 버전의 확장입니다.
 
 > [!NOTE]
-> 개발 하는 경우 JavaScript/HTML UWP 앱을 설치한 Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 나중에 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
+> 개발 하는 경우 JavaScript/HTML UWP 앱을 설치한 Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 나중에, [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
 
 <span id="install-msi" />
 

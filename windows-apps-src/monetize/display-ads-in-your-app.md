@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: c0dde67e3f7ab43734ffb0bf2a5826cc54691e17
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5395776"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445700"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
-Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. 저희 광고 수익 창출 플랫폼은 다양 한 많은 인기 광고 네트워크를 사용 하 여 앱 및 지원 비율은 조정에 원활 하 게 통합할 수 있는 광고 형식 제공 합니다. 우리의 플랫폼 OpenRTB, 방대한 2.x, MRAID 2 및 3 VPAID 표준을 준수 며 자 및 IAS 호환 됩니다. 
+Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. 우리의 광고 수익 창출 플랫폼은 다양 한 많은 인기 광고 네트워크를 사용 하 여 앱 및 지원 비율은 조정에 원활 하 게 통합할 수 있는 광고 형식 제공 합니다. 우리의 플랫폼 OpenRTB, 방대한 2.x, MRAID 2 및 3 VPAID 표준을 준수 이며 자 및 IAS 호환 됩니다. 
 
 <br/>
 

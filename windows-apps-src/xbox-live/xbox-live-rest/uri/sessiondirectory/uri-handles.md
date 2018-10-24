@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d6833309ce990aee72fd07deab9ecde04eca3b0e
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5410435"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5443536"
 ---
 # <a name="handles"></a>/handles
-Xbox One 대시보드 사용자 환경에서 표시 하 고 필요한 경우 세션 멤버를 초대 하 여 사용자의 현재 활동에 대 한 세션을 설정 하는 POST 작업을 지원 합니다. 
+Xbox One 대시보드 사용자 경험을 표시 하 고 필요한 경우 세션 멤버를 초대 하 여 사용자의 현재 활동에 대 한 세션을 설정 하는 POST 작업을 지원 합니다. 
 
 > [!NOTE] 
 > 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
