@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 27002fed78356c9a93289d1ccabbada04ea5ed30
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5410061"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5434029"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
@@ -36,7 +36,7 @@ ms.locfileid: "5410061"
 
 RFCOMM API에는 서비스 식별자 개념이 사용됩니다. 서비스 식별자는 128비트 GUID지만 일반적으로는 16비트 또는 32비트 정수로도 지정됩니다. RFCOMM API는 128비트 GUID는 물론 32비트 정수로도 지정 및 사용할 수 있도록 하는 서비스 식별자용 래퍼를 제공하지만, 16비트 정수는 제공하지 않습니다. 언어가 32비트 정수까지 자동으로 확대되고 식별자가 여전히 올바르게 생성될 수 있으므로 이는 API에 문제가 되지 않습니다.
 
-앱은 백그라운드 작업으로 다단계 장치 작업을 수행할 수 있으므로 앱이 백그라운드로 이동되고 일시 중단된 경우에도 실행을 완료할 수 있습니다. This allows for reliable device servicing such as changes to persistent settings or firmware, and content synchronization, without requiring the user to sit and watch a progress bar. 장치 서비스에는 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315)를 사용하고 콘텐츠 동기화에는 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337)를 사용합니다. 이러한 백그라운드 작업은 앱이 백그라운드에서 실행될 수 있는 시간을 제한하며, 무기한 작업이나 무기한 동기화를 허용하지 않습니다.
+앱은 백그라운드 작업으로 다단계 장치 작업을 수행할 수 있으므로 앱이 백그라운드로 이동되고 일시 중단된 경우에도 실행을 완료할 수 있습니다. 따라서 사용자가 앉아서 진행률 표시기를 지켜보지 않더라도 콘텐츠 동기화와 지속적인 설정 또는 펌웨어 변경 등 신뢰할 수 있는 장치 서비스가 가능합니다. 장치 서비스에는 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297315)를 사용하고 콘텐츠 동기화에는 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn297337)를 사용합니다. 이러한 백그라운드 작업은 앱이 백그라운드에서 실행될 수 있는 시간을 제한하며, 무기한 작업이나 무기한 동기화를 허용하지 않습니다.
 
 RFCOMM 작업에 대해 자세히 설명하는 전체 코드 샘플은 GitHub의 [**Bluetooth Rfcomm 채팅 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat)(영문)을 참조하세요.  
 

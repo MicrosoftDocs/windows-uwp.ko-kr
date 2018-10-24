@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5410781"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433959"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 

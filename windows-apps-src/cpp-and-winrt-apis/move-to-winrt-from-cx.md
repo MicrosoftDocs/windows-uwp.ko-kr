@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 29144f110a76227ae6a1bc1e7d7aa9f051babc9d
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5407417"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431644"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 

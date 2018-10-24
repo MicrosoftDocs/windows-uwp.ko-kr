@@ -1,7 +1,7 @@
 ---
 author: TerryWarwick
 title: 바코드 스캐너 구성
-description: 원하는 응용 프로그램에 대 한 바코드 스캐너를 구성 하는 방법을 알아봅니다.
+description: 의도 한 응용 프로그램에 대 한 바코드 스캐너를 구성 하는 방법을 알아봅니다.
 ms.author: jken
 ms.date: 08/29/2018
 ms.topic: article
@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: b33c1d33fe88a09de36e8f80a3034b915d338861
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404406"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431692"
 ---
 # <a name="configure-a-barcode-scanner"></a>바코드 스캐너 구성
 
@@ -23,9 +23,9 @@ ms.locfileid: "5404406"
 바코드 스캐너가 Windows에 키보드로 나타나도록 해주는 **키보드 웨지** 모드에서 다양한 바코드 스캐너를 구성할 수 있습니다.  따라서 메모장 같이 바코드 스캐너를 인식하지 못하는 응용 프로그램에 대해서도 바코드를 스캔할 수 있습니다.  이 모드에서 바코드를 스캔할 때 키보드를 사용하여 데이터를 입력하는 것처럼 바코드 스캐너에서 디코딩된 데이터가 삽입 지점에 삽입됩니다.  UWP 응용 프로그램에서 바코드 스캐너를 더 많이 제어하고 싶은 경우에는 키보드가 아닌 웨지 모드로 이를 구성해야 합니다.
 
 ## <a name="usb-barcode-scanner"></a>USB 바코드 스캐너
-USB에 연결된 바코드 스캐너는 Windows에 포함된 바코드 스캐너 드라이버에서 작동하도록 **HID POS 스캐너** 모드로 구성해야 합니다. 이 드라이버는 [USB HID](http://www.usb.org/developers/hidpage/)에 게시 하는 **HID Point of Sale 사용 표** 사양 구현 합니다.  바코드 스캐너 설명서를 참조하거나 바코드 스캐너 제조업체에게 **HID POS 스캐너** 모드를 활성화하기 위한 지침을 문의하세요.  **HID POS 스캐너**로 구성이 된 바코드 스캐너는 **POS 바코드 스캐너** 노드 아래의 장치 관리자에 **POS HID 바코드 스캐너**로 표시됩니다.
+USB에 연결된 바코드 스캐너는 Windows에 포함된 바코드 스캐너 드라이버에서 작동하도록 **HID POS 스캐너** 모드로 구성해야 합니다. 이 드라이버는 [USB HID](http://www.usb.org/developers/hidpage/)에 게시 **HID Point of Sale 사용 표** 사양의 구현 합니다.  바코드 스캐너 설명서를 참조하거나 바코드 스캐너 제조업체에게 **HID POS 스캐너** 모드를 활성화하기 위한 지침을 문의하세요.  **HID POS 스캐너**로 구성이 된 바코드 스캐너는 **POS 바코드 스캐너** 노드 아래의 장치 관리자에 **POS HID 바코드 스캐너**로 표시됩니다.
 
-바코드 스캐너 제조업체는 **HID POS 스캐너** 이외의 모드를 사용하여 UWP 바코드 스캐너 API를 지원하는 공급업체별 드라이버도 가지고 있을 수 있습니다.  UWP 바코드 스캐너 Api와 호환 되는 제조업체 제공 드라이버를 이미 설치한 경우 **POS 바코드 스캐너** 장치 관리자에서 아래에 나열 된 공급 업체별 장치를 볼 수 있습니다.
+바코드 스캐너 제조업체는 **HID POS 스캐너** 이외의 모드를 사용하여 UWP 바코드 스캐너 API를 지원하는 공급업체별 드라이버도 가지고 있을 수 있습니다.  UWP 바코드 스캐너 Api와 호환 되는 제조업체에서 제공한 드라이버를 이미 설치한 경우에 장치 관리자에서 **POS 바코드 스캐너** 아래에 나열 된 공급 업체별 장치를 볼 수 있습니다.
 
 ## <a name="bluetooth-barcode-scanner"></a>Bluetooth 바코드 스캐너
 Bluetooth에 연결된 바코드 스캐너는 UWP 바코드 스캐너 API에서 작동할 수 있도록 **직렬 포트 프로토콜 - 간단한 직렬 인터페이스(SPP-SSI)** 모드로 구성해야 합니다.o work with the UWP Barcode Scanner APIs.  바코드 스매너 설명서를 참조하거나 바코드 스캐너 제조업체에게 **SPP-SSI 모드**를 활성화하기 위한 지침을 문의하세요.

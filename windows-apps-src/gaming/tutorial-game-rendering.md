@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bf880e498d9f3d44778493b33c480cd0d3c01ce
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5407937"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5437884"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임워크 II: 게임 렌더링
 

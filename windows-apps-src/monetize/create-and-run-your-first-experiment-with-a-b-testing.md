@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: ac97b8d34ec0f5dbfc42022fc54911f04f09ba3b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5401095"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438353"
 ---
 # <a name="create-and-run-your-first-experiment"></a>첫 번째 실험 만들기 및 실행
 

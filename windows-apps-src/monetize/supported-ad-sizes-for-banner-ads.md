@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 광고, 광고, 크기, 배너
 ms.localizationpriority: medium
 ms.openlocfilehash: a438f6df66b064004ad9664ce46280475dad83c6
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399965"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5440602"
 ---
 # <a name="supported-banner-ad-sizes"></a>지원되는 배너 광고 크기
 
@@ -30,7 +30,7 @@ ms.locfileid: "5399965"
 * 728x90
 
 > [!NOTE]
-> 최상의 환경을 위해 다음 크기를 사용 하 여 Windows 10 Mobile 장치에서 권장: 300 x 50, 320 x 50, 및 640 x 100 합니다.
+> 최상의 환경을 위해 다음 크기를 사용 하 여 Windows 10 Mobile 장치에서 권장: 300 x 50, 320 x 50 및 640 x 100입니다.
 
 다음 표에서 각 배너 광고 크기를 보여 주는 예제를 제공 합니다.
 

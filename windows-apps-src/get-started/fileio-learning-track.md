@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: 시작, uwp, windows 10, 학습 트랙, 파일, 파일 io, 파일, 파일 읽기, 파일 쓰기, 파일 만들기, 텍스트 쓰기, 텍스트 읽기
 ms.localizationpriority: medium
 ms.openlocfilehash: ae89b5c0e072eceec155009c07b3b3a7cf563a20
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399559"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432044"
 ---
 # <a name="work-with-files"></a>파일 작업
 
@@ -64,7 +64,7 @@ await Windows.Storage.FileIO.AppendLinesAsync(file, listOfStrings); // each entr
 
 ## <a name="read-text-from-a-file"></a>파일에서 텍스트 읽기
 
-파일 쓰기와 마찬가지로 파일 읽기는 파일이 있는 위치를 지정하는 것으로 시작합니다. 위 예제와 같은 위치를 사용하겠습니다. 그런 다음 해당 콘텐츠를 읽을 수 **FileIO** 클래스를 사용 하겠습니다.
+파일 쓰기와 마찬가지로 파일 읽기는 파일이 있는 위치를 지정하는 것으로 시작합니다. 위 예제와 같은 위치를 사용하겠습니다. 그런 다음 해당 콘텐츠를 읽을 **FileIO** 클래스를 사용 됩니다.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;

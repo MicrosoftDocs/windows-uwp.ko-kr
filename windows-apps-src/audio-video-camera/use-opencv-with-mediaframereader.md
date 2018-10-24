@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403315"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432456"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 
@@ -32,7 +32,7 @@ ms.locfileid: "5403315"
 
 이 문서 외에, 여기에서 설명하는 시나리오의 종단 간 작업 샘플 전체를 확인하고 다운로드하려면, Windows 유니버설 샘플 GitHub 리포의 [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)을 참조하세요.
 
-시작 하려면 개발 신속 하 게 포함할 수 OpenCV 라이브러리를 UWP 앱 프로젝트에서 NuGet 패키지를 사용 하 여 있지만 하므로 OpenCV 다운로드 하는 것이 좋습니다. 스토어에 앱을 제출할 때 이러한 패키지 앱 certficication 프로세스를 전달 하지 않을 수 있습니다. 라이브러리는 소스 코드 및 앱을 제출 하기 전에 사용자가 직접 바이너리를 빌드합니다. OpenCV에 관한 최신 소식은 [http://opencv.org](http://opencv.org)에서 확인할 수 있습니다.
+개발을 빠르게 시작 하려면을 포함할 수 OpenCV 라이브러리를 UWP 앱 프로젝트에서 NuGet 패키지를 사용 하 여 있지만 하므로 OpenCV를 다운로드 하는 것이 좋습니다. 스토어에 앱을 제출할 때 이러한 패키지 앱 certficication 프로세스를 통과 하지 않을 수 있습니다. 라이브러리는 소스 코드 및 앱을 제출 하기 전에 사용자가 직접 바이너리를 빌드합니다. OpenCV에 관한 최신 소식은 [http://opencv.org](http://opencv.org)에서 확인할 수 있습니다.
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>OpenCVHelper 네이티브 Windows 런타임 구성 요소 구현

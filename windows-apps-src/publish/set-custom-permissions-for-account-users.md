@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398345"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5434432"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -170,7 +170,7 @@ ms.locfileid: "5398345"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>구입</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음 (상위 제품에 대 한 설정에 **추가 기능 구입** 보고서 포함)        </td><td>    해당 없음                         </td></tr>
+    <tr><td align="left">    <b>구입</b>     </td><td>    제품에 대한 <a href="acquisitions-report.md">구입</a> 및 <a href="add-on-acquisitions-report.md">추가 기능 구입</a> 보고서를 볼 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음 (상위 제품에 대 한 설정을 **추가 기능 구입** 보고서를 포함 하는 데 사용)        </td><td>    해당 없음                         </td></tr>
     <tr><td align="left">    <b>사용</b> </td><td>    제품에 대한 <a href="usage-report.md">사용 보고서</a>를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>상태</b> </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>고객 피드백</b>    </td><td>    제품에 대한 <a href="reviews-report.md">리뷰</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음(피드백이나 리뷰에 응답하려면 <b>고객에게 문의</b> 권한을 부여받아야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>

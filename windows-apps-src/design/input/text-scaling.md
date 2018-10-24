@@ -12,11 +12,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 885ccc89fcbd4315eeed40c3546ef485c515294e
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5407453"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5440983"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 

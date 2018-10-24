@@ -10,17 +10,17 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4c1b1df8ad29635f38ae5b373685d3504a4eb60
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400916"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5440119"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>유니버설 Windows 플랫폼 콘솔 앱 만들기
 
 이 항목을 만드는 방법을 설명는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 또는 C + + /CX 유니버설 Windows 플랫폼 (UWP) 콘솔 앱.
 
-Windows 10, 버전 1803부터 작성할 수도 C + + /winrt 또는 C + + /CX UWP 콘솔 앱 DOS 또는 PowerShell 콘솔 창 등의 콘솔 창에서 실행 하는 합니다. 콘솔 앱 콘솔 창을 사용 하 여 입력 및 출력을 및 **printf** 등 **getchar** [유니버설 C 런타임](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) 함수를 사용할 수 있습니다. UWP 콘솔 앱을 Microsoft Store에 게시할 수 있습니다. UWP 콘솔 앱에는 앱 목록의 항목과 시작 메뉴에 고정할 수 있는 기본 타일이 있습니다. 명령줄에서 일반적으로 시작 됩니다 하지만 시작 메뉴에서 UWP 콘솔 앱을 실행할 수 있습니다.
+Windows 10, 버전 1803부터 다음을 작성할 수 있습니다 C + + /winrt 또는 C + + /CX UWP 콘솔 앱 DOS 또는 PowerShell 콘솔 창 등의 콘솔 창에서 실행 합니다. 콘솔 앱 콘솔 창을 사용 하 여 입력 및 출력 및 **printf** **getchar**등의 [유니버설 C 런타임](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) 기능을 사용할 수 있습니다. UWP 콘솔 앱을 Microsoft Store에 게시할 수 있습니다. UWP 콘솔 앱에는 앱 목록의 항목과 시작 메뉴에 고정할 수 있는 기본 타일이 있습니다. 명령줄에서 일반적으로 시작 됩니다 하지만 시작 메뉴에서 UWP 콘솔 앱을 실행할 수 있습니다.
 
 작업에서 하나를 보려면 UWP 콘솔 앱 만들기에 대 한 비디오 다음과 같습니다.
 
@@ -28,7 +28,7 @@ Windows 10, 버전 1803부터 작성할 수도 C + + /winrt 또는 C + + /CX UWP
 
 ## <a name="use-a-uwp-console-app-template"></a>UWP 콘솔 앱 템플릿 사용 
 
-UWP 콘솔 앱을 만들려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal)에 있는 **콘솔 앱(유니버설) 프로젝트 템플릿**을 설치하세요. 설치 된 템플릿은 **새 프로젝트**에서 사용할 수 있는 다음 > **설치 됨** > **기타 언어** > **Visual c + +** > **Windows 유니버설** **콘솔 앱 C로 + /winrt (유니버설 Windows) **및 **콘솔 앱 C + + /CX (유니버설 Windows)**.
+UWP 콘솔 앱을 만들려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal)에 있는 **콘솔 앱(유니버설) 프로젝트 템플릿**을 설치하세요. 설치 된 템플릿은 **새 프로젝트**에서 사용할 수 있는 다음 > **설치 됨** > **기타 언어** > **Visual c + +** > **Windows 유니버설** 으로 **콘솔 앱 C + /winrt (유니버설 Windows) **및 **콘솔 앱 C + + /CX (유니버설 Windows)**.
 
 ## <a name="add-your-code-to-main"></a>main()에 코드 추가
 

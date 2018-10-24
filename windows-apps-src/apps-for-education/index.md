@@ -7,18 +7,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, education
+keywords: windows 10, uwp, 교육
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
 ms.openlocfilehash: da03a3c478ca45cc2d2b518988738e510a6c5ea9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398939"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5437000"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>교육용 유니버설 Windows 앱 개발
-![시험 응시 앱 스크린샷](images/take-a-test-screen-small.png)
+![응시 시험 앱 스크린샷](images/take-a-test-screen-small.png)
 
 다음 리소스는 유니버설 Windows 교육용 앱을 작성하는 데 도움이 됩니다.
 

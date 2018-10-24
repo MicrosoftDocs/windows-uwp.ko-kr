@@ -12,19 +12,19 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
 ms.openlocfilehash: f0a657ada755b77abe8ffef6a38bfa1f9ece8fcd
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5396397"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5433591"
 ---
 # <a name="map-style-sheet-reference"></a>지도 스타일 시트 참조
 
-Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 합니다.  지도 스타일 시트 JSON JavaScript Object Notation ()를 사용 하 여 정의 되 고 다양 한 방법으로 포함 하 여 Windows 스토어 응용 프로그램의 [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) 에서 [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) 메서드를 통해 사용할 수 있습니다.
+지도의 모양을 정의 _지도 스타일 시트_ 를 사용 하는 Microsoft 매핑 기술.  지도 스타일 시트 JavaScript Object Notation (JSON)를 사용 하 여 정의 되 고 다양 한 방법을 비롯 하 여 Windows 스토어 응용 프로그램의 [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) 메서드를 통해 사용할 수 있습니다.
 
-대화형으로 [지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) 응용 프로그램을 사용 하 여 스타일 시트를 만들 수 있습니다.
+[지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) 응용 프로그램을 사용 하 여 대화형으로 스타일 시트를 만들 수 있습니다.
 
-다음 JSON 물 영역을 빨간색으로 만드는 데 사용할 수, 물 레이블을 초록색으로, 표시 및 육지 영역을 파란색으로 표시 합니다.
+다음과 같은 JSON 물 영역을 빨간색으로 만드는 데 사용할 수 있습니다, 물 레이블을 초록색으로, 표시 및 육지 영역을 파란색으로 표시 합니다.
 
 ```json
     {"version":"1.*",
@@ -54,7 +54,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 <a id="entries" />
 
 ## <a name="entries"></a>항목
-이 표는 ">" 문자를 사용하여 입력 계층의 수준을 나타냅니다.  또한 어떤 버전의 Windows 각 항목을 지원 하 고이 무시 하는 표시 됩니다.
+이 표는 ">" 문자를 사용하여 입력 계층의 수준을 나타냅니다.  또한 어떤 버전의 Windows 각 항목을 지원 하며이 무시 하는 표시 됩니다.
 
 | 버전 | Windows 릴리스 이름 |
 |---------|----------------------|
@@ -74,13 +74,13 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 비즈니스 또는 흥미로운 포인트가 집중된 영역입니다. |
 | >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 묘지 포괄 하는 영역입니다. |
 | >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 대륙 영역의 레이블입니다. |
-| >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 학교 및 교육 다른 기능을 포괄 하는 영역입니다. |
+| >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 학교 및 교육 다른 기능을 포함 하는 영역입니다. |
 | >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 토착 개인적 예약을 포괄 하는 영역입니다. |
 | >>> industrial               | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 산업 목적에 사용 되는 영역입니다. |
 | >>> island                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 섬 영역의 레이블입니다. |
 | >>> medical                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 의료 목적을 위해 사용 되는 영역 (예: 병원 캠퍼스). |
 | >>> military                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 군사 사용 하 여 적거나 포괄할 군사 기지 영역입니다. |
-| >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 관련된 항해 목적에 사용 되는 영역입니다. |
+| >>> nautical                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 관련 항해 목적에 사용 되는 영역입니다. |
 | >>> neighborhood             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 주변 영역 레이블입니다. |
 | >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 비행기 활주로로 사용 되는 영역입니다. |
 | >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 해변과 같은 모래 영역입니다. |
@@ -102,7 +102,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | >>> pointOfInterest          | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 관심 있는 모든 위치를 나타내는 아이콘. |
 | >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 비즈니스 locaiton를 나타내는 아이콘. |
 | >>>>> attractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 박물관, zoos 등과 같은 여행자 명소를 나타내는 아이콘. |
-| >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 커뮤니티 일반적으로 사용의 위치를 나타내는 아이콘입니다. |
+| >>>>> communityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 커뮤니티 일반적으로 사용의 위치를 나타내는 아이콘. |
 | >>>>> educationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 학교 및 기타 교육을 나타내는 아이콘 위치와 관련이 있습니다. |
 | >>>>> entertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 극장, 시네마 및 등과 같은 엔터테인먼트 장소를 나타내는 아이콘. |
 | >>>>> essentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | 주차, 은행, 사례를 살펴보자면 등과 같은 필수 서비스를 나타내는 아이콘. |
@@ -124,7 +124,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | >> structure                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 및 기타 건물 같은 구조. |
 | >>> building                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 합니다. |
 | >>>> educationBuilding       | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 교육용 사용 합니다. |
-| >>>> medicalBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 병원 같은 의료 목적으로 사용 합니다. |
+| >>>> medicalBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 같은 병원 의료 목적으로 사용 합니다. |
 | >>>> transitBuilding         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 건물 공항 등의 전송 중에 사용 합니다. |
 | >> transportation            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 교통망의 일부인 줄(예: 도로, 기차, 및 여객선). |
 | >>> road                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 도로를 표시하는 줄. |
@@ -144,7 +144,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | >> water                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 물처럼 보이는 모든 것. 바다 및 물결이 포함됩니다. |
 | >>> river                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 강, 물결 또는 기타 수로.  선 또는 다각형일 수 있으며 강이 아닌 수공간에 연결될 수 있습니다. |
 | > routeMapElement            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 모든 라우팅 관련된 항목 |
-| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 라우트 관련 항목입니다. |
+| >> routeLine                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 선 라우트 관련 항목입니다. |
 | >>> drivingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 운전 경로 나타내는 줄. |
 | >>> scenicRoute              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | 멋진 운전 경로 나타내는 줄. |
 | >>> walkingRoute             | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | 줄 walking 경로 나타냅니다. |
@@ -222,7 +222,7 @@ Microsoft 매핑 기술 _지도 스타일 시트_ 를 사용 하 여 지도의 �
 | borderOutlineColor           | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 두 번째 또는 채워진 테두리 선의 색. |
 | borderStrokeColor            | 색상   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 테두리의 기본 선 색상. |
 | borderVisible                | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  |
-| borderWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   | 양 테두리의 스트로크 됩니다. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
+| borderWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   | 테두리의 스트로크는 크기를 조정 하는 금액입니다. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 
 <a id="pointstyle" />
 

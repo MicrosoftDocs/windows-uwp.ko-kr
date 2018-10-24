@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dff7b641cad99407ce22e7a4d4b58c10e0ae94d1
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5411041"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5435596"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -244,7 +244,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="weather-app-uri-scheme"></a>날씨 앱 URI 스키마
 
-사용 합니다 **msnweather:** URI 스키마를 날씨 응용 프로그램을 실행 합니다.
+사용 합니다 **msnweather:** URI 스키마를 날씨 앱을 시작 합니다.
 
 | URI 스키마 | 결과 |
 |------------|---------|

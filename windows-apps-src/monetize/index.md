@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 uwp, 수익 창출, 참여, 홍보, 스토어 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: abd6c772ed84934a54c1755b5d55d398e34fbad9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399774"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431879"
 ---
 # <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 스토어 서비스
 
@@ -36,7 +36,7 @@ Microsoft Store에서 청구되는 수수료 및 앱으로 번 돈을 지급 받
 | [개발자 센터에 대한 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)  | UWP 앱에서 사용자 지정 이벤트를 기록하고 Windows 개발자 센터 대시보드의 [사용 보고서](../publish/usage-report.md)에서 이벤트를 검토합니다. 이 기능을 사용하려면 Microsoft Store Services SDK가 필요합니다. |
 | [평점 및 리뷰 요청](request-ratings-and-reviews.md) |  평점 및 리뷰 UI를 프로그래밍 방식으로 표시하여 앱에 대한 평점이나 리뷰를 남기도록 고객을 독려합니다.  |
 | [Microsoft Store 서비스](using-windows-store-services.md)    |  RESTful API를 사용하여 스토어 제출을 자동화하고 앱 분석 데이터에 액세스하며 기타 스토어 관련 작업을 자동화하는 방법을 알아봅니다.    |
-| [소매 데모 (RDX) 기능을 앱에 추가](retail-demo-experience.md)        |  Pc와 판매 바닥의 장치를 사용해 고객에서 바로 이동할 수 있도록 Windows 앱에는 소매 데모 모드를 포함 합니다.  |
+| [소매 데모 (RDX) 기능을 앱에 추가](retail-demo-experience.md)        |  고객에 게 Pc 및 장치를 판매 바닥을 사용해에서 바로 이동할 수 있도록 Windows 앱에 소매 데모 모드를 포함 합니다.  |
 
 ## <a name="related-topics"></a>관련 항목
 

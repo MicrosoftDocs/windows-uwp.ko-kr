@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출, 삭제
 ms.localizationpriority: medium
 ms.openlocfilehash: c10a8df52c9de2b5a6b2eaf3533dbc3825bf4d8e
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5409835"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438629"
 ---
 # <a name="delete-an-app-submission"></a>앱 제출 삭제
 

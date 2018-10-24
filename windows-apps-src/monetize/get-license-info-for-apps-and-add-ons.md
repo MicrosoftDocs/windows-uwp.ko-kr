@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 라이선스, 앱, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 83889dce2959a3d373081808864a6b7913fb142b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405172"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5434128"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 라이선스 정보 가져오기
 

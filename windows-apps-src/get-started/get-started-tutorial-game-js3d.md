@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: fa3722c5b011d16ca793b3541efe124b7c255dfd
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405317"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432387"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
 
@@ -32,7 +32,7 @@ ms.locfileid: "5405317"
 </iframe>
 
 > [!NOTE] 
-> 이 전체 게임의 경우 JavaScript 및 타사 라이브러리를 사용 하 여 Microsoft Store에 게시 하는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
+> 이 전체 게임의 경우 JavaScript 및 타사 라이브러리를 사용 하 여 Microsoft Store에 게시할 수 있는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -644,7 +644,7 @@ function animatePlayer(delta) {
 
 축하합니다! 주변을 이동하고 둘러볼 수 있는 플레이어 제어 카메라를 만들었습니다. 여전히 벽을 바로 통과하기는 하지만 나중에 해결해도 됩니다. 다음으로 공룡을 추가하겠습니다.
 
-<iframe height='300' scrolling='no' title='이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>이동</a> 하 여 Microsoft Edge 문서를 참조 하세요 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) <a href='https://codepen.io'>CodePen</a>에 있습니다.
+<iframe height='300' scrolling='no' title='이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>사이 이동</a> 하 여 Microsoft Edge 문서를 참조 하세요 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) <a href='https://codepen.io'>CodePen</a>에 있습니다.
 </iframe>
 
 > [!NOTE]
@@ -848,7 +848,7 @@ function animatePlayer(delta) {
 
 플레이어 충돌 감지를 구현했으니 벽을 뚫고 지나갈 수 있는지 직접 테스트해 보세요!
 
-<iframe height='300' scrolling='no' title='플레이어가-충돌 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='Player-collision 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 

@@ -12,11 +12,11 @@ keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 091782d926949b87db9b29c08ec8cf98f485f0df
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5399245"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5435074"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지
 
@@ -25,11 +25,11 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 최신 버전의 Visual Studio는 앱을 패키징하는 데 필수적이었던 수동 단계를 모두 제거하는 패키징 프로젝트의 새 버전을 제공합니다. 패키징 프로젝트를 추가하고 데스크톱 프로젝트를 참조한 다음 F5 키를 눌러 앱을 디버깅하면 됩니다. 수동 조정이 필요하지 않습니다. 이 새로운 간소화된 환경은 이전 버전의 Visual Studio에서 사용할 수 있는 환경에 대해 상당히 향상되었습니다.
 
 >[!IMPORTANT]
->데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10, 버전 1607에서에서 도입 된 그렇지 하며 Windows 10 1 주년 업데이트 (10.0; 대상으로 하는 프로젝트에만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
+>데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10 버전 1607에에서 도입 그렇지 및 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트 에서만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
 
 ## <a name="first-prepare-your-application"></a>첫 번째, 응용 프로그램 준비
 
-응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에이 가이드를 검토: [데스크톱 응용 프로그램 패키지를 준비](desktop-to-uwp-prepare.md)합니다.
+이 가이드를 검토 하 여 응용 프로그램에 대 한 패키지 만들기를 시작 하기 전에: [데스크톱 응용 프로그램을 패키징하는 준비](desktop-to-uwp-prepare.md)합니다.
 
 <a id="new-packaging-project"/>
 
@@ -62,7 +62,7 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
    ![진입점 설정](images/desktop-to-uwp/entry-point-set.png)
 
-6. 오류가 표시되지 않도록 패키징 프로젝트를 빌드합니다.  오류가 발생 하면 **Configuration Manager** 열고 프로젝트를 동일한 플랫폼 대상 확인 합니다.
+6. 오류가 표시되지 않도록 패키징 프로젝트를 빌드합니다.  오류가 발생 하면 **Configuration Manager** 열고 프로젝트를 동일한 플랫폼을 대상 확인 합니다.
 
    ![구성 관리자](images/desktop-to-uwp/config-manager.png)
 
@@ -85,7 +85,7 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.
 
-**실행, 디버그 또는 데스크톱 응용 프로그램 테스트**
+**실행, 디버그 또는 데스크톱 응용 프로그램을 테스트 합니다.**
 
 [실행, 디버그 및 패키지 된 데스크톱 응용 프로그램 테스트](desktop-to-uwp-debug.md) 를 참조 하세요.
 

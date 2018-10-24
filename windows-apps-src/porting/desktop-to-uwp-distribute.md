@@ -2,7 +2,7 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Windows 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
+title: Windows 스토어 또는 테스트용으로 로드를 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -12,15 +12,15 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5403767"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5436716"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램 배포
 
-Windows 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
+Windows 스토어 또는 테스트용으로 로드를 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
 
 > [!NOTE]
 > 패키지 된 응용 프로그램에 사용자를 전환할 수 있는 방법에 대 한 계획 있으십니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [패키지된 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
@@ -36,13 +36,13 @@ Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 �
 스토어에 제출 하기 전에 응용 프로그램에 서명 하지 않아도 됩니다.
 
 >[!IMPORTANT]
-> 응용 프로그램이 Windows 10 S를 실행 하는 장치에서 올바르게 작동 하는지, Microsoft Store에 응용 프로그램을 게시 하려는 경우 스토어의 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
+> Microsoft Store에 응용 프로그램을 게시 하려는 경우 응용 프로그램은 Windows 10 S를 실행 하는 장치에서 정상적으로 작동 하 고 있는지 확인 스토어의 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
 
 <a id="side-load" />
 
-## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Microsoft Store에 배치 하지 않고 응용 프로그램 배포
+## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Microsoft 스토어에 배치 하지 않고 응용 프로그램을 배포 합니다.
 
-스토어를 사용 하지 않고 응용 프로그램을 배포는, 경우 하나 이상의 장치에 앱을 수동으로 배포할 수 있습니다.
+스토어를 사용 하지 않고 응용 프로그램을 배포는, 하는 경우 하나 이상의 장치에 앱을 수동으로 배포할 수 있습니다.
 
 배포 경험에 대한 강력한 제어를 원하거나 Microsoft Store 인증 프로세스에 참여하고 싶지 않은 경우에 적합한 방법입니다.
 
@@ -50,14 +50,14 @@ Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 �
 
 [인증서를 만들거나](../packaging/create-certificate-package-signing.md) [Verisign](https://www.verisign.com/) 같은 인기 공급자로부터 구입할 수 있습니다.
 
-Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 응용 프로그램에 장치에서 이러한 응용 프로그램을 배포할 수 저장소 제출 프로세스를 진행 해야 하므로 Microsoft Store에서 서명입니다.
+Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 해당 장치에서 응용 프로그램을 배포 하기 전에 스토어 제출 프로세스를 통과 해야 합니다. Microsoft Store에서 서명 해야 응용 프로그램의 합니다.
 
 인증서를 만드는 경우에는 앱을 실행하는 각 장치의 **신뢰할 수 있는 루트** 또는 **신뢰할 수 있는 사용자** 인증서 저장소에 이를 설치해야 합니다. 인기 공급자로부터 인증서를 구입하는 경우에는 다른 시스템에 앱 이외에 어떤 것도 설치할 필요가 없습니다.  
 
 > [!IMPORTANT]
 > 인증서의 게시자 이름이 앱 게시자 이름과 일치하는지 확인합니다.
 
-인증서를 사용 하 여 응용 프로그램에 서명 하려면 [SignTool을 사용 하 여 서명 된 응용 프로그램 패키지를](../packaging/sign-app-package-using-signtool.md)참조 하세요.
+인증서를 사용 하 여 응용 프로그램에 서명 하려면 [서명 응용 프로그램 패키지 SignTool을 사용 하 여](../packaging/sign-app-package-using-signtool.md)참조 하세요.
 
 테스트용으로 로드 다른 장치에 응용 프로그램이 [Windows 10에서 테스트용으로 로드 LOB 앱을](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)참조 하세요.
 
@@ -127,7 +127,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>데스크톱 버전의 앱 제거
 
-하지 먼저 사용 권한을 요청 하지 않고 사용자가 데스크톱 응용 프로그램을 제거 하는 것이 좋습니다. 해당 사용 권한을 요청하는 대화 상자를 표시합니다. 사용자가 데스크톱 버전의 앱을 제거하지 않을 수 있습니다. 이렇게 되 면 데스크톱 응용 프로그램의 사용을 차단 하거나 두 앱-나란히 사용을 지원 하는지 여부를 결정 해야 합니다.
+먼저 사용 권한을 요청 하지 않고 사용자가 데스크톱 응용 프로그램을 제거 하는 하지는 것이 좋습니다. 해당 사용 권한을 요청하는 대화 상자를 표시합니다. 사용자가 데스크톱 버전의 앱을 제거하지 않을 수 있습니다. 이 경우 데스크톱 응용 프로그램의 사용을 차단 하거나 두 앱-나란히 사용을 지원 하는지 여부를 결정 해야 합니다.
 
 여기에 .NET 기반의 패키지된 앱에서 이를 수행할 수 있는 방법이 예로 나와 있습니다.
 

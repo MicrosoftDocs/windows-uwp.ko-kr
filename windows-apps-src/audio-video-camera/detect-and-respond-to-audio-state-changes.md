@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c60fcd705acf2d0d1e3162e80bc1d85095aa0fb4
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398909"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431501"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>오디오 상태 변경 사항 검색 및 대응
 Windows 10, 버전 1803부터는 시스템이 앱이 사용 중인 오디오 스트림의 오디오 레벨을 낮추거나 음을 소거하면 앱이 이를 검색할 수 있습니다. 캡처 및 렌더 스트림, 특정 오디오 디바이스 및 오디오 범주, 또는 미디어 재생을 위해 앱이 사용하고 있는 [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) 개체에 대한 알림을 받을 수 있습니다. 예를 들어 시스템은 알람이 울리는 동안 오디오 재생 수준을 낮추거나 '더킹(duck)'할 수 있습니다. 앱이 앱 매니페스트에서 *backgroundMediaPlayback* 기능을 선언하지 않은 경우 앱이 백그라운드로 전환할 때 앱의 음이 소거됩니다. 
@@ -26,7 +26,7 @@ Windows 10, 버전 1803부터는 시스템이 앱이 사용 중인 오디오 스
 
 [!code-cs[SoundLevelDeviceIdCategory](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSoundLevelDeviceIdCategory)]
 
-**SoundLevelChanged** 이벤트 처리기에서을 스트림에 대 한 새로운 오디오 레벨 결정 처리기에 전달 된 **AudioStateMonitor** 발신자의 [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) 속성을 확인 합니다. 이 예제에서 앱은 사운드 레벨 음이 소거되면 오디오 캡처를 중지하고 오디오 레벨이 전체 볼륨으로 돌아가면 캡처를 다시 시작합니다.
+**SoundLevelChanged** 이벤트 처리기에 **AudioStateMonitor** 보낸 사람의 처리기에 전달 된 스트림에 대 한 새로운 오디오 레벨 확인 하려면 [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) 속성을 확인 합니다. 이 예제에서 앱은 사운드 레벨 음이 소거되면 오디오 캡처를 중지하고 오디오 레벨이 전체 볼륨으로 돌아가면 캡처를 다시 시작합니다.
 
 [!code-cs[GameChatSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetGameChatSoundLevelChanged)]
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 설치
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a5a947d58ecec7ca52a355ef44f8a880864df5d
-ms.sourcegitcommit: 20abf751a7d2f483826e54809f2417c90d0aecb0
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/23/2018
-ms.locfileid: "5429643"
+ms.locfileid: "5436746"
 ---
 # <a name="get-app-installs"></a>앱 설치 받기
 

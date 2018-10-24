@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱
 ms.localizationpriority: medium
 ms.openlocfilehash: ce52e2d3b844052103f1055674869c19850ef59f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5407976"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5436867"
 ---
 # <a name="get-an-app"></a>앱 가져오기
 

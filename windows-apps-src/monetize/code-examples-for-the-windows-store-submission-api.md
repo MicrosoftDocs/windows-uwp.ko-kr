@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제
 ms.localizationpriority: medium
 ms.openlocfilehash: f728a17d98d53cf1783452ddfd543c1062156200
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404594"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5437570"
 ---
 # <a name="code-examples-for-the-submission-api"></a>제출 API에 대한 코드 예제
 

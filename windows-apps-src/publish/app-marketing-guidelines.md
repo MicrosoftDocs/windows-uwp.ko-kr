@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398992"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432054"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store 앱에 대 한 지침을 마케팅
 
@@ -47,7 +47,7 @@ Microsoft Store에서 앱의 목록에 더 많은 고객을 가질 수 있도록
 
 *Microsoft 마크* [배지 생성기](http://go.microsoft.com/fwlink/p/?LinkID=534236) 페이지에 설명 된 *Microsoft 배지* 를 의미 합니다. 이러한 배지를 사용하려면 다음과 같이 해야 합니다.
 
--   Microsoft Store에서 앱 또는 기타 콘텐츠를 사용할 수 있거나 [Microsoft 계열사 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=624463)의 일부 여야 합니다.
+-   Microsoft 스토어의 앱 또는 기타 콘텐츠를 사용할 수 있거나 [Microsoft 계열사 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=624463)의 일부 여야 합니다.
 
 -   개발자 센터에 등록되어 있는 경우 앱 개발자 계약의 ["Microsoft 마크에 사용권 부여"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) 섹션을 준수해야 합니다.
 

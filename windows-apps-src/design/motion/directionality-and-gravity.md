@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: b61abf00d5ab8820457742f16feb9b496b7d7d1c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5395485"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5435662"
 ---
 # <a name="directionality-and-gravity"></a>방향 및 무게
 

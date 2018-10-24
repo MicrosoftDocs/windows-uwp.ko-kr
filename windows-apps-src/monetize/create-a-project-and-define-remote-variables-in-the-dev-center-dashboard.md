@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 920b411d44d2ae0c64cca7c018e2ccc8755b1163
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5401866"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5444845"
 ---
 # <a name="create-an-experiment-project-in-the-dashboard"></a>대시보드에서 실험 프로젝트 만들기
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 응답 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5395796"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5437841"
 ---
 # <a name="get-response-info-for-reviews"></a>리뷰에 대한 응답 정보 가져오기
 

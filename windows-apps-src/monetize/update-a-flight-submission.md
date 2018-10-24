@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 업데이트
 ms.localizationpriority: medium
 ms.openlocfilehash: 467dae77a7815dba03ce558c7e29e3eea0036d09
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5410172"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5441035"
 ---
 # <a name="update-a-package-flight-submission"></a>패키지 플라이트 제출 업데이트
 

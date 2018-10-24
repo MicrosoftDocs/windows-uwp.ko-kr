@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5407191"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5441591"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램의 백그라운드 작업
 
