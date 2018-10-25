@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 응답 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437841"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483279"
 ---
 # <a name="get-response-info-for-reviews"></a>리뷰에 대한 응답 정보 가져오기
 
@@ -74,7 +74,7 @@ Authorization: Bearer <your access token>
 | CanRespond      | 부울  | **true** 값은 지정된 리뷰에 응답할 수 있거나 지정된 앱에 대한 리뷰에 응답할 권한이 있음을 나타냅니다. 그렇지 않으면 이 값은 **false**입니다.       |
 | DefaultSupportEmail  | 문자열 |  앱의 스토어 목록에 지정된 앱의 [지원 이메일 주소](../publish/enter-app-properties.md#support-contact-info)입니다. 지원 이메일 주소를 지정하지 않으면 이 필드는 비어 있습니다.    |
 
- 
+ 
 ### <a name="response-example"></a>응답 예제
 
 다음 예제에서는 이 요청에 대한 예제 JSON 응답 본문을 보여 줍니다.

@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 모범 사례, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ce22d1571d5e4f96b384d6da914f1d359d78641
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5441255"
+ms.locfileid: "5481686"
 ---
 # <a name="best-practices-for-calling-xbox-live"></a>Xbox Live를 호출 하기 위한 모범 사례
 
 두 가지 기본 방법으로에서 Xbox Live 서비스를 호출할 수 있습니다: 또는 Xbox 서비스 API (XSAPI)를 사용 하 여 REST 끝점을 직접 호출 합니다. 이 방법을 Xbox Live 호출에 관계 없이 호출 패턴에 적절 한 및 다시 시도 논리에 중요 합니다.
 
 적절 한 다시 시도 논리를 작성 하는 방법을 알아보려면 두 가지 유형의 REST 끝점 **idempotent** 및 **비 idempotent**에 대해 알아야 할 필요 합니다. 살펴봅니다 이러한 각 아래
- 
+ 
 ## <a name="non-idempotent-endpoints"></a>비 idempotent 끝점
 
 부작용 시 HTTP 메서드 호출은 **비 idempotent**간주 반복 합니다. 즉, 클라이언트 끝점을 호출 하 고 네트워크 시간 초과가 발생, 아닌지 안전 리소스 업데이트 하지만 네트워크에 성공 호출자에 게 알릴 수 없습니다. 때문에 메서드를 다시 시도 합니다. 다시 시도 하는 대신 오류 발생 시 클라이언트가 먼저 쿼리해야 호출 성공 했는지 확인 합니다. 호출에 성공 하는 경우에 다음 그 다시 시도해 야 합니다.
@@ -48,7 +48,7 @@ Xbox 서비스 API의 일부 Api 내부적으로 비 idempotent 끝점 호출 �
 * reputation\_service::submit\_batch\_reputation\_feedback()
 <br>
 * reputation\_service::submit\_reputation\_feedback()
- 
+ 
 
 ## <a name="idempotent-methods"></a>Idempotent 메서드
 
@@ -83,7 +83,7 @@ Idempotent 호출에 대 한 이러한 조건은 자동으로 다시 시도해 �
 ## <a name="error-handling"></a>오류 처리
 
 이러한 실패 한 응답을 제대로 처리 되어 있는지 확인 해야 제목 개발자는 **항상** 사용 하 여 적절 한 오류 처리 서비스 호출 시 **마다** 합니다.
- 
+ 
 Xbox live와 같은 오류 코드를 반환 하는 요청 이어질 수 있는 많은 실제 조건 가지
 
 1.  네트워크를 사용할 수 있습니다. 예를 들어 장치 분실 Wi Fi 4g 잃어버리거나 네트워크 다운 합니다.
@@ -101,7 +101,7 @@ XSAPI에 오류 처리 패턴의 두 가지 유형이 있습니다. C +에서 Wi
 
 ## <a name="best-calling-patterns"></a>최상의 호출 패턴
 
-### <a name="use-batching-requests"></a>일괄 처리 요청을 사용 합니다.
+### <a name="usebatching-requests"></a>Usebatching 요청
 
 일부 끝점 일괄 처리 또는 단일 호출으로 요청 집합의 집계를 지원 합니다. 예를 들어, 프로필 Xbox Live 서비스를 사용 하 여 단일 사용자의 프로필 또는 사용자 프로필 집합에 대해 요청할 수 있습니다. 따라서 사용자 집합에 대 한 사용자 프로필을 해야 하는 경우 하기란 매우 비효율적 각 사용자 프로필에 대 한 번에 끝점이 나 하나 API를 호출 합니다. 각 호출이 많은 인증 오버 헤드를 추가합니다. 따라서 그 대신 끝점에서 동시에 모든 사용자 프로필을 처리 하 고 단일 응답을 반환할 수 있도록 API에 한 번에 대 한 정보를 원하는 모든 사용자를 전달 합니다.
 
@@ -118,7 +118,7 @@ RTA 서비스 집합으로 가입 클라이언트에서 사용할 수 있는 Api
 * user\_statistics\_service::subscribe\_to\_statistic\_change
 <br>
 * social\_service::subscribe\_to\_social\_relationship\_change<br>
- 
+ 
 
 ## <a name="use-xbox-live-client-side-managers"></a>Xbox Live 클라이언트 쪽 관리자를 사용 합니다.
 
@@ -162,7 +162,7 @@ XSAPI를 사용 하는 경우 Api은 http\_status\_429\_too\_many\_requests 오�
 
 > xboxLiveContext-&gt;settings()-&gt;disable\_asserts\_for\_xbox\_live\_throttling\_in\_dev\_sandboxes (xbox\_live\_context\_throttle\_setting::this\_code\_needs\_to\_be\_changed\_to\_avoid\_throttling);
 
-그러나이 API 타이틀 조정에서 차단 되지 것입니다. 타이틀 스로틀 계속 됩니다. 이 정책은 간단 하 게는 디버그 빌드를 사용 하는 동안 개발자 샌드박스에서 어설션 합니다. 
+그러나이 API 타이틀 조정에서 차단 되지 것입니다. 타이틀 스로틀 계속 됩니다. 이 정책은 간단 하 게는 디버그 빌드를 사용 하는 동안 개발자 샌드박스에서 어설션 합니다. 
 
 ### <a name="xbox-live-trace-analyzer-tool"></a>Xbox Live 추적 분석기 도구
 

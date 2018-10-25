@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
-ms.openlocfilehash: e829883ec33b5e221d0947b6f39cf6ac091a0b4a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 21ce284af550a8a8d930af0ba9a6fca512f97f04
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432112"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482717"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  
@@ -106,6 +106,11 @@ ms.locfileid: "5432112"
 
     
 ## <a name="samples"></a>샘플
+
+![Fluent XAML 테마 편집기 이미지](images/XamlThemeEditor_screenshot.png)
+**XAML 테마 편집기 흐름**<br>
+Fluent XAML 테마 편집기는 Fluent 디자인 시스템의 유연성을 설명 하는 데 도움이 되는 도구 뿐만 아니라 유니버설 Windows 플랫폼 응용 프로그램에서 사용 하는 ResourceDictionary 프레임 워크에 대 한 XAML 태그를 생성 하 여 앱 개발 프로세스를 지원 합니다. (데 드는)입니다.
+<a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">도구 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">GitHub의 도구 확인</a>
 
 ![VanArsdel 이미지](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>

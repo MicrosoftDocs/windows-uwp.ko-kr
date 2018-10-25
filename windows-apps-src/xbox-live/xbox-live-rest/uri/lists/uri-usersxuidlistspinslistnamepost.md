@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 77789014fcd242aad70e7302b01907bc10b8bbab
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5433797"
+ms.locfileid: "5483147"
 ---
 # <a name="post-usersxuidxuidlistspinslistname"></a>POST (/users/xuid(xuid)/lists/PINS/{listname})
 쿼리 문자열 매개 변수 **insertIndex**에 따라 인덱스 목록에 항목을 삽입 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.

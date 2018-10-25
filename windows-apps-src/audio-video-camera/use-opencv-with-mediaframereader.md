@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432456"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481317"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 
@@ -74,9 +74,9 @@ ms.locfileid: "5432456"
 * [OpenCV로 소프트웨어 비트맵 처리](process-software-bitmaps-with-opencv.md)
 * [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)
 * [카메라 프레임 + OpenCV 샘플](https://go.microsoft.com/fwlink/?linkid=854003)
- 
+ 
 
- 
+ 
 
 
 

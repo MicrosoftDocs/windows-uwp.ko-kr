@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
 ms.openlocfilehash: d966688110870b669bdd296ec14e145a5d77b74e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431570"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483289"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
@@ -28,7 +28,7 @@ ms.locfileid: "5431570"
 패키지를 업로드하려면 패키지를 업로드 필드로 끌거나 파일을 클릭하여 찾아봅니다. **패키지** 페이지.msix,.msixupload,.msixbundle,.appx,.appxupload,.appxbundle, 및/또는.xap 파일을 업로드할 수 있습니다.
 
 > [!IMPORTANT]
-> Windows 10 용.msixupload 또는.appxupload 파일에 다음 대신.msix,.appx,.msixbundle, 또는.appxbundle를 업로드 하는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
+> Windows10,.msixupload 또는.appxupload 파일에 다음 대신.msix,.appx,.msixbundle, 또는.appxbundle 업로드는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
 
 앱에 대한 [패키지 플라이트](package-flights.md)를 만든 경우 패키지 플라이트 중 하나에서 패키지를 복사하는 옵션이 포함된 드롭다운이 표시됩니다. 끌어오려는 패키지가 있는 패키지 플라이트를 선택합니다. 그런 다음 해당 패키지를 일부 또는 전부 선택하여 이 제출에 포함할 수 있습니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "5431570"
 
 자세한 내용은 [앱에 대한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조하세요.
 
- 
+ 
 
 
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 089d2a492c8878e79bd60de1226c948e1eee7e0f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5442421"
+ms.locfileid: "5478642"
 ---
 # <a name="gamemessage-json"></a>GameMessage(JSON)
 게임 세션의 메시지 큐 메시지에 대 한 데이터를 정의 하는 JSON 개체입니다. 

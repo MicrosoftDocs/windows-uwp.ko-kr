@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 링크, windows 스토어 프로토콜, 앱 연결, 앱 링크
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445670"
+ms.locfileid: "5482552"
 ---
 # <a name="link-to-your-app"></a>앱에 대한 링크
 
@@ -51,9 +51,9 @@ Microsoft Store를 시작 하 고 사용 하 여 브라우저를 열지 않고�
 
 Microsoft Store 프로토콜을 사용 하는 방법에 대 한 자세한 내용은 [Microsoft 앱 실행](../launch-resume/launch-store-app.md)을 참조 하세요.
 
- 
+ 
 
- 
+ 
 
 
 

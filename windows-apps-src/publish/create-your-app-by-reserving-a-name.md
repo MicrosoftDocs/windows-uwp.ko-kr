@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 784accda4299891fa86501236d35c0828e80cf8d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430906"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483853"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 
@@ -68,9 +68,9 @@ Windows 개발자 센터 대시보드에 있는 각 앱에 대한 **앱 관리**
 
 자세한 내용은 [앱 이름 관리](manage-app-names.md)를 참조하세요.
 
- 
+ 
 
- 
+ 
 
 
 

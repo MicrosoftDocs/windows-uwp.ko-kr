@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 평점, 리뷰
 ms.localizationpriority: medium
 ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431412"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483693"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>앱에 대한 평점 및 리뷰 요청
 
@@ -65,8 +65,8 @@ public async Task<bool> ShowRatingReviewDialog()
 다음 예제에서는 고객이 평점이나 리뷰를 제출한 후의 이 요청에 대한 반환 값에 대해 설명합니다.
 
 ```json
-{ 
-  "status": "success", 
+{ 
+  "status": "success", 
   "data": {
     "updated": false
   },
@@ -77,8 +77,8 @@ public async Task<bool> ShowRatingReviewDialog()
 다음 예제에서는 고객이 평점이나 리뷰를 제출하지 않도록 선택한 후의 이 요청에 대한 반환 값에 대해 설명합니다.
 
 ```json
-{ 
-  "status": "aborted", 
+{ 
+  "status": "aborted", 
   "errorDetails": "Navigation was unsuccessful"
 }
 ```

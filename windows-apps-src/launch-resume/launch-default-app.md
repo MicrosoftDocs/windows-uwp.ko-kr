@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dff7b641cad99407ce22e7a4d4b58c10e0ae94d1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435596"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480211"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -123,7 +123,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)를 호출하는 원본 앱은 URI가 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 URI를 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 URI가 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
 
-**참고**  Windows는 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
+**참고**Windows 같은 여러 가지 요소 예를 들어 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 앱 화면, 화면 방향 등에 수를 고려 합니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
 
 ```cs
 // Set the desired remaining view.

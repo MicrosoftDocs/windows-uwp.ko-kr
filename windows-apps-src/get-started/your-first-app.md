@@ -2,7 +2,7 @@
 author: QuinnRadich
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: 첫 번째 앱 만들기
-description: 좋아하는 프로그래밍 언어를 사용하여 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
+description: 즐겨 쓰는 프로그래밍 언어를 사용 하 여 Windows10 유니버설 Windows 플랫폼 (UWP) 앱을 만듭니다.
 ms.author: quradic
 ms.date: 1/25/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: e8e2272ab761e1fa0bc9514f226a73a66a10662b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445830"
+ms.locfileid: "5483142"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
@@ -42,9 +42,9 @@ ms.locfileid: "5445830"
 * [C# 및 MonoGame으로 작성된 간단한 Microsoft Store용 2D UWP 게임](get-started-tutorial-game-mg2d.md)
 
 
-## <a name="visual-c-component-extensions-ccx-and-xaml"></a>Visual C++ 구성 요소 확장(C++/CX) 및 XAML
+## <a name="visualc-component-extensions-ccx-and-xaml"></a>VisualC + + 구성 요소 확장 (C + + CX) 및 XAML
 
-C++ 프로그래밍 전문 지식을 활용하여 Visual C++ 구성 요소 확장(C++/CX) 및 XAML로 앱을 빌드합니다.
+C + + 프로그래밍 전문 지식을 VisualC + + 구성 요소 확장을 사용 하 여 앱을 빌드하는 데 활용 (C + + CX) XAML을 사용 합니다.
 
 * [XAML과 C++/CX를 사용하여 "Hello, world" 앱 만들기](create-a-basic-windows-10-app-in-cpp.md)
 

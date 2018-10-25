@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10 UWP, 테스터에 대한 노트
 ms.localizationpriority: medium
 ms.openlocfilehash: 741925a3ac49273bd7ba826dfbadd2e18724f307
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441991"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482245"
 ---
 # <a name="notes-for-certification"></a>인증에 대한 참고 사항
 
@@ -44,9 +44,9 @@ ms.locfileid: "5441991"
 -   **항상 간결하고 지침을 간단하게 유지하세요.** 실제로 내용을 자세히 설명해야 하는 경우에는 추가 정보가 있는 페이지에 URL을 포함시킬 수 있습니다. 그러나 앱 고객은 이러한 노트를 볼 수 없다는 점에 유의하세요. 앱 테스트를 위해 복잡한 지침을 제공해야 할 경우에는 고객 및 테스터가 사용법을 알 수 있도록 앱을 더 간단하게 만들어야 할지 여부를 고려해 보세요.
 -   **서비스 및 외부 구성 요소는 온라인 상태로 사용할 수 있어야 합니다.** 작동을 위해 앱을 서버에 연결해야 하는 경우 서비스가 온라인 상태로 사용할 수 있어야 합니다. 로그인 정보 같이 테스터에게 필요한 모든 정보를 포함합니다. 앱이 테스트 중 필요한 서비스에 연결할 수 없으면 인증되지 않을 수 있습니다.
 
- 
+ 
 
- 
+ 
 
 
 

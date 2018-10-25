@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: d53fa39d0c6359e6f081c62a415cbf1874549b8f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439393"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483230"
 ---
 # <a name="microsoft-store-services"></a>Microsoft Store 서비스
 

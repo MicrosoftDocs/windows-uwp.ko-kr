@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c7dc6436e1a233a6b0a74a787b5c30de47899eff
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443505"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481142"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 
@@ -46,7 +46,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 
 * Windows 10 크리에이터 업데이트 이상을 실행하는 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2017(10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
-* [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* [Windows10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 휠 디바이스(지금은 [Surface Dial](https://aka.ms/purchasesurfacedial)만)
 * Visual Studio를 사용하는 UWP(유니버설 Windows 플랫폼) 앱 개발을 처음 하는 경우, 이 자습서를 시작하기 전에 이러한 항목을 살펴보십시오.  
     * [설정하기](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)

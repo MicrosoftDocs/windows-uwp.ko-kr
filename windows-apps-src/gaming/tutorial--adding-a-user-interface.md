@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 사용자 인터페이스, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a82958f01530b84276823ea8d025d292bd664ac
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442799"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483543"
 ---
 # <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 
@@ -225,7 +225,7 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
 
  게임 창 크기 가져오기 UI 프로그래밍 필수적입니다. 창 크기 DIP 인치의 1/96로 정의 되어 있는 Dip (디바이스 독립적 픽셀) 라는 측정에 지정 됩니다. Direct2D 조정 실제 픽셀에 맞춰 그리기 단위의 드로잉 발생할 때 Windows에 대 한 인치당 도트 수 (DPI) 설정 사용 하 여이 작업을 수행 합니다. 마찬가지로 [**DirectWrite**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd368038)를 사용 하 여 텍스트를 그리는 경우 사용자 지정 글꼴 크기에 대 한 포인트가 아닌 Dip 합니다. DIP는 부동 소수점 수로 표현됩니다.
 
- 
+ 
 
 ### <a name="displaying-game-state-info"></a>게임 상태 정보 표시
 
@@ -479,7 +479,7 @@ void GameMain::SetGameInfoOverlay(GameInfoOverlayState state)
 
 
 
- 
+ 
 
 
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445730"
+ms.locfileid: "5482315"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>고객 모집 및 앱 홍보
 
@@ -28,6 +28,6 @@ Microsoft Store에 앱이 있으면 최대한 많은 고객에 게 가져올 수
 -   [앱에 대한 링크](link-to-your-app.md)
 -   [앱을 홍보하기 쉽게 만들기](make-your-app-easier-to-promote.md)
 
- 
+ 
 
- 
+ 

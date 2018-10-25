@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a5a56b524dbf88d96a34f769f7a25bed7bca8a1d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5432082"
+ms.locfileid: "5481989"
 ---
 # <a name="mediaasset-json"></a>MediaAsset(JSON)
 도전 과제 또는 해당 보상와 관련 된 미디어 자산입니다.

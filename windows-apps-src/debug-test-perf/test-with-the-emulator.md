@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431606"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483833"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -181,7 +181,7 @@ NFC 탭은 다음의 세 가지 모드를 지원합니다.
 -   오른쪽 상단 섹션에서는 로그를 나열합니다. 한 쌍의 디바이스를 함께 탭(또는 POS 터미널에 탭)할 때 탭 이벤트가 기록되며 디바이스가 언탭될 때 언탭 이벤트가 기록됩니다. 또한 이 섹션은 연결이 끊어지기 전에 또는 타임스탬프와 함께 에뮬레이터 UI에서 수행한 다른 작업 전에 앱에서 응답한 경우를 기록합니다. 로그는 모드 전환 간에 지속되며, **로그** 화면 위의 **지우기** 단추를 눌러 언제든지 로그를 지울 수 있습니다.
 -   화면의 아래쪽은 메시지 로그이며, 선택한 모드에 따라 현재 선택한 연결을 통해 주고받은 모든 메시지 기록을 보여 줍니다.
 
-> **중요**  태퍼 도구를 처음 시작하면 Windows 방화벽 프롬프트가 표시됩니다. 3가지 확인란을 모두 선택하고 방화벽을 통한 도구를 허용해야 합니다. 그러지 않으면 도구가 자동으로 작동하지 않습니다.
+> **중요 한**태 퍼 도구를 처음 시작 하면 가져옴 Windows 방화벽 프롬프트가 표시 됩니다. 3가지 확인란을 모두 선택하고 방화벽을 통한 도구를 허용해야 합니다. 그러지 않으면 도구가 자동으로 작동하지 않습니다.
 
 빠른 시작 설치 관리자를 시작한 후 위의 지침에 따라 방화벽 프롬프트에서 3가지 확인란을 모두 선택했는지 확인합니다. 또한 Microsoft 에뮬레이터와 동일한 실제 호스트 컴퓨터에서 태퍼 도구를 설치하고 사용해야 합니다.
 
@@ -369,7 +369,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 | 속도 제한 | 경로의 속도 제한 | 해당 없음   | 게시된 제한 속도로 경로를 횡단합니다. |
 | 보행     | 5km/h                   | 1.39 m           | 5km/h의 자연스러운 보행 속도로 경로를 횡단합니다. |
 | 자전거      | 25 km/h                  | 6.94 m           | 25km/h의 자연스러운 자전거 속도로 경로를 횡단합니다. |
-| 빠름        |                          |                  |게시된 제한 속도보다 빠르게 경로를 횡단합니다. | 
+| 빠름        |                          |                  |게시된 제한 속도보다 빠르게 경로를 횡단합니다. | 
 
 **경로 모드**
 
@@ -456,7 +456,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
         -   동기화 작업이 진행 중인 동안 **동기화 취소**를 클릭하면 카드가 나오고 동기화 작업의 결과는 불완전합니다.
     -   **SD 카드 꺼내기** 버튼이 다시 **SD 카드 삽입**으로 변경됩니다.
 
-> **참고**  휴대폰에서 사용하는 SD 카드는 FAT32 파일 시스템으로 포맷되므로 32GB가 최대 크기입니다.
+> **참고**이후 SD 카드는 휴대폰에서 사용 되는 FAT32 파일 시스템으로 포맷 된, 32GB가 최대 크기입니다.
 
 시뮬레이트된 SD 카드에서 읽고 쓰는 속도는 실제 속도에 맞게 조절됩니다. SD 카드에 액세스하는 것은 컴퓨터의 하드 드라이브에 액세스하는 것보다 느립니다.
 
@@ -625,17 +625,17 @@ Windows Phone 에뮬레이터의 프레임 속도 카운터를 사용하여 실�
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>오류 메시지: "가상 이더넷 스위치를 제거하는 동안 오류가 발생했습니다."
 
-새 Windows 10 플라이트로 업데이트한 후를 포함하여 에뮬레이터와 관련된 가상 네트워크 스위치가 사용자 인터페이스를 통해 삭제할 수 없는 상태로 전환되는 경우가 있습니다.
+새 Windows10 플라이트로 업데이트 한 후를 포함 하 여 특정 상황에서 에뮬레이터와 관련 된 가상 네트워크 스위치가 사용자 인터페이스를 통해 삭제할 수 없는 상태로 가져올 수 있습니다.
 
 이 상황에서 복구하려면 관리자 명령 프롬프트에서 "netcfg -d"를 실행합니다. `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. 명령 실행이 완료되면 컴퓨터를 다시 부팅하여 복구 프로세스를 완료합니다.
 
-**참고**  이 명령은 에뮬레이터와 관련된 장치뿐만 아니라 모든 네트워킹 장치를 삭제합니다. 컴퓨터가 다시 시작되면 모든 하드웨어 네트워킹 디바이스가 자동으로 검색됩니다.
- 
+**참고**이 명령은 에뮬레이터와 관련 된 뿐만 아니라 모든 네트워킹 장치를 삭제 합니다. 컴퓨터가 다시 시작되면 모든 하드웨어 네트워킹 디바이스가 자동으로 검색됩니다.
+ 
 ### <a name="unable-to-launch-the-emulators"></a>에뮬레이터를 시작할 수 없음
 
 Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특정 네트워크 스위치를 삭제하는 도구인 XDECleanup.exe를 포함하며, 에뮬레이터(XDE) 이진 파일과 함께 제공됩니다. 잘못된 상태로 전환될 경우 이 도구를 사용하여 에뮬레이터 VM을 정리해야 합니다. 관리자 명령 프롬프트에서 도구를 실행합니다.`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **참고**  XDECleanup.exe는 모든 에뮬레이터 특정 Hyper-V VM을 삭제하며, 모든 VM 검사점 또는 저장된 상태도 삭제합니다.
+> **참고**XDECleanup.exe 삭제 모든 에뮬레이터 특정 Hyper-v Vm 및 것도 삭제 하는 모든 VM 검사점 또는 저장 된 상태도 합니다.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>모바일용 Windows 10 이미지 제거
 
@@ -666,5 +666,5 @@ Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문�
 
 * [에뮬레이터에서 Windows Phone 앱 실행](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Windows 및 Windows Phone SDK 아카이브](https://dev.windows.com/downloads/sdk-archive)
- 
+ 
 
