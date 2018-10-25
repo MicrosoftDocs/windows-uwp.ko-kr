@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 0767f8c1ca0fb80ff8c7b033832ffccd61aeabfc
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 96a1a5d4636bc96d774071514b77ad8bde4df6be
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5521118"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 
@@ -258,7 +258,9 @@ IASyncAction DoWorkAsync(Param const value);
 
 ## <a name="offloading-work-onto-the-windows-thread-pool"></a>Windows 스레드 풀에서 오프로딩 작업
 
-코루틴에서 컴퓨팅 바인딩된 작업을 수행하기 전에 호출자가 차단되지 않게 하기 위해 호출자에 실행을 반환해야 합니다(즉, 일시 중단 지점 도입). 는 아직 수행 하는 경우 `co-await`-연산 일부 기타 작업을 할 수 있습니다 `co-await` [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수입니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
+코 루틴은 다른와 같은 함수 호출자 함수 돌아갑니다 실행 될 때까지 차단 됩니다. 반환할 코 루틴에 대 한 첫 번째 기회는 첫 번째 `co_await`, `co_return`, 또는 `co_yield`합니다.
+
+이 수행 하기 전에 호출자에 실행을 반환 해야 하는 코 루틴에서 컴퓨팅 바인딩된 작업, (즉, 일시 중단 지점 도입) 호출자가 차단 되지 않도록 합니다. 는 아직 수행 하는 경우 `co-await`-연산 일부 기타 작업을 할 수 있습니다 `co-await` [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수입니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
 
 구현에 사용되는 스레드 풀은 낮은 수준의 [Windows 스레드 풀](https://msdn.microsoft.com/library/windows/desktop/ms686766)이므로 이상적으로 효율적입니다.
 
@@ -282,7 +284,7 @@ IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
 이 시나리오는 이전 시나리오에 확장됩니다. 스레드 풀에 일부 작업을 오프로드했으면 UI(사용자 인터페이스)에 진행 상태를 표시해야 합니다.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock textblock)
+IAsyncAction DoWorkAsync(TextBlock const& textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -294,7 +296,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 **TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. 이렇게 하려면 [**winrt:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) 개체를 인스턴스화하고, 백그라운드 작업을 수행 차례로 `co_await` 호출 컨텍스트에 다시 전환 하려면 **apartment_context** 합니다.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock textblock)
+IAsyncAction DoWorkAsync(TextBlock const& textblock)
 {
     winrt::apartment_context ui_thread; // Capture calling context.
 
@@ -312,7 +314,8 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 수 있는 확실 하지 않는 경우 스레드 호출에 대해 하는 경우를 다루는 UI를 업데이트 하는 보다 일반적인 솔루션 `co-await` [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수 하 여 특정 전경 스레드로 전환 합니다. 아래의 코드 예제에서 **TextBlock**(해당 [**발송자**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher) 속성에 액세스하여)과 연관된 발송자 개체를 전달하여 전경 스레드를 지정합니다. **winrt::resume_foreground**의 구현이 코루틴에서 이후에 오는 작업을 실행하는 해당 발송자 개체에서 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출합니다.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock textblock)
+#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+IAsyncAction DoWorkAsync(TextBlock const& textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -322,6 +325,140 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
     textblock.Text(L"Done!"); // Guaranteed to work.
 }
 ```
+
+## <a name="execution-contexts-resuming-and-switching-in-a-coroutine"></a>실행 컨텍스트, 다시 시작 및 코 루틴에서 전환
+
+광범위 하 게 말해서 코 루틴에서 일시 중단 지점, 후 실행의 원래 스레드 수 사라지고 재개 모든 스레드에서 발생할 수 있습니다 (즉, 모든 스레드 수 메서드를 호출 **완료 된** 비동기 작업에 대 한).
+
+그러나 있습니다 `co-await` 4 개의 Windows 런타임 비동기 작업 형식 (**IAsyncXxx**) 한 후 C + + WinRT 시점에 호출 컨텍스트를 캡처합니다 있습니다 `co-await`합니다. 며 연속 작업을 다시 시작할 때 해당 컨텍스트에 남아 있는 수 있게 합니다. C + + WinRT 호출 컨텍스트에서 이미 고 있는지 확인 하 고, 그렇지 않은 경우 전환 하 여이 수행 합니다. 전에 단일 스레드 아파트 (STA) 스레드는 경우 `co-await`를 가져오려면 동일한 계정에 이어야 합니다 전에 다중 스레드 아파트 (MTA) 스레드는 경우 `co-await`, 나중에 하나 이어야 합니다.
+
+```cppwinrt
+IAsyncAction ProcessFeedAsync()
+{
+    Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
+    SyndicationClient syndicationClient;
+
+    // The thread context at this point is captured...
+    SyndicationFeed syndicationFeed{ co_await syndicationClient.RetrieveFeedAsync(rssFeedUri) };
+    // ...and is restored at this point.
+}
+```
+
+이 동작에 의존할 수 있는 이유 때문에 C + + WinRT 이러한 코드 조각을 (대기 어댑터) c + + 코 루틴 언어 지원에 해당 Windows 런타임 비동기 작업 형식에 맞게 코드를 제공 합니다. 나머지 awaitable 형식 C + + WinRT는 단순히 스레드 풀 래퍼 및/또는 도우미입니다. 따라서 스레드 풀에 완료 합니다.
+
+```cppwinrt
+using namespace std::chrono;
+IAsyncOperation<int> return_123_after_5s()
+{
+    // No matter what the thread context is at this point...
+    co_await 5s;
+    // ...we're on the thread pool at this point.
+    co_return 123;
+}
+```
+
+경우 하면 `co_await` 다른 형식을&mdash;내 에서도 C + + /winrt 코 루틴 구현 체&mdash;다른 라이브러리의 어댑터를 제공 하 고 해당 어댑터를 재개 및 컨텍스트에 측면에서 수행할 작업을 이해 해야 합니다.
+
+최소한으로 컨텍스트 전환에 유지 하려면이 항목에서 이미 살펴본 기법 중 일부를 사용할 수 있습니다. 몇 가지를 수행 하는 일러스트레이션 살펴보겠습니다. 이 다음 의사 코드 예제에서는 이미지를 로드 하는 Windows 런타임 API를 호출 하 고 해당 이미지를 처리 하도록 백그라운드 스레드에 상단의 다음 UI에서 이미지를 표시 하려면 UI 스레드를 반환 하는 이벤트 처리기의 개요를 보여 줍니다.
+
+```cppwinrt
+#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+{
+    // We begin in the UI context.
+
+    // Call StorageFile::OpenAsync to load an image file.
+
+    // The call to OpenAsync occurred on a background thread, but C++/WinRT has restored us to the UI thread by this point.
+
+    co_await winrt::resume_background();
+
+    // We're now on a background thread.
+
+    // Process the image.
+
+    co_await winrt::resume_foreground(this->Dispatcher());
+
+    // We're back on MainPage's UI thread.
+
+    // Display the image in the UI.
+}
+```
+
+이 시나리오에 대 한 약간의 **StorageFile::OpenAsync**호출 주위 ineffiency 있습니다. 배경 필요한 컨텍스트 스위치는 스레드 (있도록 처리기 호출자에 실행을 반환할 수 있습니다)에서 재시작 이후는 C + + WinRT UI 스레드 컨텍스트를 복원 합니다. 하지만 경우 필요한 경우가 아니라면 UI를 업데이트 하려고 합니다. 될 때까지 UI 스레드를 켜야 합니다. 호출 *하기 전에* **winrt:: resume_background**우리의 호출 것으로 인 한 부담이 더 불필요 한 상황에 맞는 백 앞과 스위치 더 많은 Windows 런타임 Api입니다. 솔루션 그 전에 *모든* Windows 런타임 Api를 호출 되지 않습니다. **Winrt:: resume_background**후 모든 이동 합니다.
+
+```cppwinrt
+#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+{
+    // We begin in the UI context.
+
+    co_await winrt::resume_background();
+
+    // We're now on a background thread.
+
+    // Call StorageFile::OpenAsync to load an image file.
+
+    // Process the image.
+
+    co_await winrt::resume_foreground(this->Dispatcher());
+
+    // We're back on MainPage's UI thread.
+
+    // Display the image in the UI.
+}
+```
+
+직접 쓸 수를 더 고급 특정 작업을 수행 하려는 경우 어댑터를 기다립니다. 예를 들어, 원하는 경우는 `co_await` 에서 비동기 작업이 완료 된 동일한 스레드에서 다시 시작 (따라서 스위치가 없는 상황에 맞는)를 작성 하 여 시작할 수는 다음 await 어댑터 아래 표시 된 것과 비슷한.
+
+> [!NOTE]
+> 아래 코드 예제에서는 교육 목적 으로만; 제공 시작할 수는 이해 어떻게 작동 하는 어댑터를 기다립니다. 개발 하 고 고유한 테스트 하는 것이 좋습니다 고유한 코드 베이스에서이 기술을 사용 하려는 경우 await 어댑터 struct(s) 합니다. 예를 들어 **complete_on_any**, **complete_on_current**및 **complete_on(dispatcher)** 작성할 수 있습니다. 템플릿 매개 변수로 **IAsyncXxx** 형식을 사용 하는 템플릿을 만들어 고려해 야 합니다.
+
+```cppwinrt
+struct no_switch
+{
+    no_switch(Windows::Foundation::IAsyncAction const& async) : m_async(async)
+    {
+    }
+
+    bool await_ready() const
+    {
+        return m_async.Status() == Windows::Foundation::AsyncStatus::Completed;
+    }
+
+    void await_suspend(std::experimental::coroutine_handle<> handle) const
+    {
+        m_async.Completed([handle](Windows::Foundation::IAsyncAction const& /* asyncInfo */, Windows::Foundation::AsyncStatus const& /* asyncStatus */)
+        {
+            handle();
+        });
+    }
+
+    auto await_resume() const
+    {
+        return m_async.GetResults();
+    }
+
+private:
+    Windows::Foundation::IAsyncAction const& m_async;
+};
+```
+
+**No_switch** 를 사용 하는 방법을 이해 하려면 await 어댑터, c + + 컴파일러를 발견 한 경우 소식을 먼저 필요는 `co_await` **await_ready**, **await_suspend**및 **await_resume**식 함수를 찾고 호출 합니다. C + + WinRT 라이브러리는 기본적으로 다음과 같은 적절 한 동작을 얻을 수 있도록 이러한 기능을 제공 합니다.
+
+```cppwinrt
+IAsyncAction async{ ProcessFeedAsync() };
+co_await async;
+```
+
+사용 하 여 **no_switch** await 어댑터, 단지 변경 하는 유형을 `co_await` 식에서 **IAsyncXxx** **no_switch**, 다음과 같은입니다.
+
+```cppwinrt
+IAsyncAction async{ ProcessFeedAsync() };
+co_await static_cast<no_switch>(async);
+```
+
+그런 다음 **IAsyncXxx**일치 하는 세 개의 **await_xxx** 함수를 찾고 대신 c + + 컴파일러 **no_switch**일치 하는 기능에 대해 찾습니다.
 
 ## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>비동기 작업을 취소 콜백을 취소
 

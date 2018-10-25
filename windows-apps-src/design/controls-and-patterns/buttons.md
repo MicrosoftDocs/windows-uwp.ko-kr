@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b3afb0cba92e5f3c08de19c926bd5fb949185379
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469947"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5517414"
 ---
 # <a name="buttons"></a>단추
 
@@ -36,9 +36,9 @@ XAML 프레임 워크는 여러 가지 특수 단추 컨트롤 뿐만 아니라 
 [단추](/uwp/api/windows.ui.xaml.controls.button) | 즉각적인 작업을 시작합니다. Click 이벤트 또는 명령 바인딩을 사용할 수 있습니다.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 누르고 있는 동안에 지속적으로 Click 이벤트를 발생 시키는 단추입니다.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 단추는 탐색에 사용 되는 하이퍼링크 처럼 스타일이 지정 합니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (미리 보기) 연결된 된 플라이 아웃이 열려면 펼침 단추를 사용 하 여 단추입니다.
-[분할 단추](/uwp/api/windows.ui.xaml.controls.splitbutton) | (미리 보기) 두 면 있는 단추입니다. 한쪽 작업을 시작 하 고 다른 쪽 메뉴가 열립니다.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | (미리 보기) 두 가지 측면을 사용 하 여 토글 단추입니다. 한쪽 켜기/끄기 전환 하 고 다른 쪽 메뉴가 열립니다.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | 연결된 된 플라이 아웃이 열려면 펼침 단추를 사용 하 여 단추입니다.
+[분할 단추](/uwp/api/windows.ui.xaml.controls.splitbutton) | 두 면 있는 단추입니다. 한쪽 작업을 시작 하 고 다른 쪽 메뉴가 열립니다.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | 두 가지 측면을 사용 하 여 토글 단추입니다. 한쪽 켜기/끄기 전환 하 고 다른 쪽 메뉴가 열립니다.
 
 | **Windows UI 라이브러리 가져오기** |
 | - |
@@ -210,7 +210,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>드롭다운 단추 만들기
 
-> **미리 보기**: [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 나 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)DropDownButton 필요 합니다.
+> DropDownButton 필요한 Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
 
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) 더 많은 옵션을 포함 하는 연결 된 플라이 아웃 있다는 점에서 시각적 표시기로 펼침 단추를 표시 하는 단추입니다. 플라이 아웃;를 사용 하 여 표준 단추도 동일한 동작을 포함 모양만 차이가 있습니다.
 
@@ -269,7 +269,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-split-button"></a>분할 단추 만들기
 
-> **미리 보기**: 분할 단추는 [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)필요 합니다.
+> 분할 단추 필요한 Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
 
 [분할 단추](/uwp/api/windows.ui.xaml.controls.splitbutton) 에 개별적으로 호출할 수 있는 두 부분이 있습니다. 일부 표준 단추 처럼 동작 하 고 즉각적인 작업을 호출 합니다. 다른 부분에는 사용자가 선택할 수 있는 추가 옵션이 포함 된 플라이 아웃을 호출 합니다.
 
@@ -376,7 +376,7 @@ public sealed partial class MainPage : Page
 
 ## <a name="create-a-toggle-split-button"></a>분할 토글 단추 만들기
 
-> **미리 보기**: [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 나 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)ToggleSplitButton 필요 합니다.
+> ToggleSplitButton 필요한 Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
 
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 에 개별적으로 호출할 수 있는 두 부분이 있습니다. 일부 켜거나 끌 수 있는 토글 단추 처럼 동작 합니다. 다른 부분에는 사용자가 선택할 수 있는 추가 옵션이 포함 된 플라이 아웃을 호출 합니다.
 

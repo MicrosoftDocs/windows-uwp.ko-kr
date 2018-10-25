@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26705e9481a96d54eff70d04c004bf62fe049091
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 56ce3520248a0fca25230d7ee2a822d827d842a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572212"
 ---
 # <a name="triangle-interpolation"></a>삼각형 보간
 
@@ -30,7 +28,7 @@ ms.locfileid: "1044872"
 | 평면         | 포그 인수만 평면 음영 모드에 보간됩니다. 그 외의 보간된 값의 경우 삼각형의 첫 번째 꼭짓점 색이 전체 표면에 적용됩니다. |
 | 고우러드      | 선형 보간은 세 개의 꼭짓점 간에 모두 수행됩니다.                                                                                                               |
 
- 
+ 
 
 확산 색과 반사 색은 색 모델에 따라 다르게 처리됩니다. RGB 색 모델에서는 시스템이 보간에 빨강색, 녹색 및 파란색 색상 구성 요소를 사용합니다.
 
@@ -41,9 +39,9 @@ ms.locfileid: "1044872"
 
 [좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

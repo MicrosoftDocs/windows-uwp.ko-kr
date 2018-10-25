@@ -14,12 +14,12 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 64cc534391aae694b80b5750d74ccf98bd5cdc6b
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5482998"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5515701"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -83,7 +83,8 @@ ms.locfileid: "5482998"
 
 ## <a name="implicit-animations"></a>암시적 애니메이션
 
-> **미리 보기**: 암시적 애니메이션은 [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/)필요 합니다.
+> 암시적 애니메이션 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))이 필요 이상.
+
 
 암시적 애니메이션은 자동으로 매개 변수를 변경 하는 동안 이전 및 새 값 사이의 보간에 따라 Fluent 움직임을 달성 하는 간단한 방법입니다.
 

@@ -8,14 +8,14 @@ ms.date: 12/18/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: 10, uwp, windows 앱 인증
+keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5471776"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5514573"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
@@ -50,13 +50,13 @@ Windows 데스크톱 브리지 앱에 대 한 선택적 테스트 하는 알림�
 이 테스트는 appx가 디버그 빌드가 아닌지 확인합니다.
  
 **배경**  
-Microsoft 저장소에 대 한 인증을 응용 프로그램 합니다 디버그을 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
+Microsoft Store 용으로 인증 받으려면, 앱 컴파일되지 않아야 디버그 및 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
  
 **테스트 정보**  
 앱을 테스트하여 디버그 빌드가 아니고 디버그 프레임워크에 링크되지 않았는지 확인합니다.
  
 **수정 작업**  
-* Microsoft 저장소에 제출 하기 전에 릴리스 빌드 응용 프로그램을 빌드하십시오.
+* Microsoft Store에 제출 하기 전에 릴리스 빌드로 앱을 빌드하십시오.
 * 올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 * 앱이 디버그 버전의 프레임워크에 연결되어 있지 않은지, 릴리스 버전으로 빌드되고 있는지 확인합니다. 이 앱에 .NET 구성 요소가 포함되어 있을 경우 올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 

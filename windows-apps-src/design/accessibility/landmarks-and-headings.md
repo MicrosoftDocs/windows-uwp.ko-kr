@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mhopkins
 ms.date: 01/24/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 534f97dfd4fc3a605cfd4c20b6c7fcabd0490f87
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 250ed555e6fcf7dc40d31d89a40fa7a96295aacf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542420"
 ---
 # <a name="landmarks-and-headings"></a>랜드마크 및 머리글
 

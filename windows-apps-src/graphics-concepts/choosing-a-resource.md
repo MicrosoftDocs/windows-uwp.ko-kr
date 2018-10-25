@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e616f5a04e50b400c4bd7a700981396570a6c1d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8ddac5d69ce0c562129255832adfc49380946510
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044662"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572382"
 ---
 # <a name="choosing-a-resource"></a>리소스 선택
 
@@ -40,7 +38,7 @@ ms.locfileid: "1044662"
 | 출력 병합기   | 출력    | 렌더링 대상 뷰     | 버퍼, Texture1D, Texture2D, Texture3D |
 | 출력 병합기   | 출력    | 깊이/스텐실 뷰     | Texture1D, Texture2D                    |
 
- 
+ 
 
 ## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>각 리소스가 사용되는 방법 식별
 
@@ -56,7 +54,7 @@ ms.locfileid: "1044662"
 | 준비        | GPU                                  | 해당 없음                 |
 | 변경 불가능      | CPU(리소스 작성 시간) | 해당 없음                 |
 
- 
+ 
 
 CPU에서 자주 업데이트하지 않을 것으로 예상(프레임당 1번 미만)되는 리소스에는 기본 사용법이 필요합니다. 성능 저하를 피하기 위해 CPU가 기본 사용법의 리소스에 직접 쓰기 않는 것이 가장 좋습니다.
 
@@ -75,7 +73,7 @@ CPU에서 상대적으로 자주 업데이트(프레임당 1번 이상)하는 �
 | 텍스처로 렌더링                     | 기본              |
 | GPU 데이터의 CPU 액세스                | 준비              |
 
- 
+ 
 
 어떤 사용법을 선택할지 확실하지 않을 경우 가장 일반적인 경우인 기본 사용법으로 시작합니다. 셰이더 상수 버퍼는 항상 기본 사용법을 사용해야 하는 한 리소스 유형입니다.
 
@@ -95,9 +93,9 @@ CPU에서 상대적으로 자주 업데이트(프레임당 1번 이상)하는 �
 
 [리소스](resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,19 +6,17 @@ description: 'ESC/POS 명령 언어를 사용하여 서비스 지점 프린터�
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: f482f9f44a5f4acb9c5213745da3b8edd3613b62
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+ms.localizationpriority: medium
+ms.openlocfilehash: 3ecc1a61b7db339c7c0c46168255d32bfbc241a1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2017
-ms.locfileid: "696098"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572542"
 ---
 # <a name="epson-escpos-with-formatting"></a>서식 지정을 사용하는 Epson ESC/POS
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 

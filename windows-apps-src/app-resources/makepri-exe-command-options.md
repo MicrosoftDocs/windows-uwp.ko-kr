@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 04/10/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: c0a3892348baff56bbef8d40dd9aade4e612c50d
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: c6c71cf98d9720cc5bfea219f565529b3308c49c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468776"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542430"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
@@ -417,6 +415,19 @@ MakePri는 인덱서 메타데이터 파일에 리소스 팩 관련 정보를 �
 ```
 
 **FILEPATH**는 입력 PRI 파일이나 PRI 스키마 파일의 위치를 지정하는 토큰입니다.
+
+## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) 옵션
+
+인덱스 옵션을 사용 하 여 (/ io)와 `new`, `resourcepack`, 및 `versioned` 리소스 인덱서의 동작을 보다 세밀된 하 게 제어를 제공 하는 옵션을 지정 합니다. 인덱스 옵션은 기본적으로 비활성화 됩니다.
+
+```
+/IndexOptions(io) <OPTIONS>
+```
+
+**옵션** 은 입력 한 다음 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
+
+- HiddenFiles(hf) + /. (+) 인덱싱하거나 (-)를 무시 숨김 파일 및 폴더.
+- LinkedFiles(lf) + /. (+) 인덱싱하거나 (-)를 무시 파일 및 폴더를 연결 합니다.
 
 ## <a name="47mappingfilemf-option"></a>/MappingFile(mf) 옵션
 

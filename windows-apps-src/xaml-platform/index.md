@@ -6,21 +6,19 @@ title: XAML 플랫폼
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 381103fed2d2caca64bf918951fc4fd31623a3a3
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: fe9bad5afabca3ef0b9c782446e581aea61fe4dc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542523"
 ---
 # <a name="xaml-platform"></a>XAML 플랫폼
 
 
-이 섹션에는 프로그래밍 언어로 C#, Microsoft Visual Basic 또는 Visual C++ 구성 요소 확장(C++/CX)를 사용하고 UI 정의에 XAML을 사용하는 경우 작성하는 앱에 일반적으로 적용 가능한 프로그래밍 개념에 대해 설명하는 항목이 포함되어 있습니다. 여기에는 속성과 이벤트 사용과 같은 기본적인 프로그래밍 개념 및 이 개념이 UWP(유니버설 Windows 플랫폼) 앱 프로그래밍에 적용되는 방식이 포함됩니다. UWP(유니버설 Windows 플랫폼)는 종속성 속성 시스템을 추가하여 속성의 C#, Visual Basic 또는 C++/CX 개념 및 해당 값을 확장합니다. 또한 이 섹션의 항목에서는 UWP에서 사용되는 XAML 언어를 문서화하고 기본 시나리오뿐만 아니라 XAML을 사용하여 UWP 앱의 UI를 정의하는 방법을 설명하는 고급 항목도 다룹니다.
+이 섹션에는 C#, Microsoft Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 작성 하는 모든 앱에 일반적으로 적용할 수 있는 프로그래밍 개념을 설명 하는 항목이 포함 됩니다 (C + + CX) 프로그래밍 언어와 XAML UI에 대 한 정의 합니다. 여기에는 속성과 이벤트 사용과 같은 기본적인 프로그래밍 개념 및 이 개념이 UWP(유니버설 Windows 플랫폼) 앱 프로그래밍에 적용되는 방식이 포함됩니다. UWP(유니버설 Windows 플랫폼)는 종속성 속성 시스템을 추가하여 속성의 C#, Visual Basic 또는 C++/CX 개념 및 해당 값을 확장합니다. 또한 이 섹션의 항목에서는 UWP에서 사용되는 XAML 언어를 문서화하고 기본 시나리오뿐만 아니라 XAML을 사용하여 UWP 앱의 UI를 정의하는 방법을 설명하는 고급 항목도 다룹니다.
 
 | 항목 | 설명 |
 |-------|-------------|

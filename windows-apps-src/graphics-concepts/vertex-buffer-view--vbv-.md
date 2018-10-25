@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: da0b8e8841e7c9df88ea22ba637d7236090e7ee5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 7956c7a03256da04e98a5b8f9a33951d7e0216d3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044282"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572432"
 ---
 # <a name="vertex-buffer-view-vbv-and-index-buffer-view-ibv"></a>VBV(꼭짓점 버퍼 보기) 및 IBV(인덱스 버퍼 보기)
 
@@ -41,9 +39,9 @@ CUSTOMVERTEX의 정의는 꼭짓점 버퍼를 만들 때 그래픽 드라이버�
 
 [보기](views.md)
 
- 
+ 
 
- 
+ 
 
 
 

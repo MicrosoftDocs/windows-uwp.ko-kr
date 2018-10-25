@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 73a2a619c32e7d6a7f2fff768c9cec5b7986c3c1
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: eef41642d371f3a8be451c2687eee007608c3b2e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542297"
 ---
 # <a name="textures-with-alpha-channels"></a>알파 채널을 사용하는 텍스처
 
@@ -30,7 +28,7 @@ ms.locfileid: "1044712"
 | 3:0          | 투명도 블록                |
 | 7:4          | 앞에서 설명한 64비트 블록 |
 
- 
+ 
 
 ## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>명시적 텍스처 인코딩
 
@@ -41,9 +39,9 @@ ms.locfileid: "1044712"
 
 ![64비트 투명도 블록 다이어그램](images/colors4.png)
 
-**참고**   Direct3D의 압축 방법에서는 최상위 비트 4개를 사용합니다.
+**참고**  Direct3D의 압축 방법에서는 최상위 비트 4 개를 사용 합니다.
 
- 
+ 
 
 다음은 각 16비트 워드마다 알파 정보가 메모리에 배치되는 방식을 나타낸 표입니다.
 
@@ -56,7 +54,7 @@ ms.locfileid: "1044712"
 | 11:8          | \[0\]\[2\] |
 | 15:12(MSB\*) | \[0\]\[3\] |
 
- 
+ 
 
 \*최하위 비트, 최상위 비트(MSB)
 
@@ -69,7 +67,7 @@ ms.locfileid: "1044712"
 | 11:8        | \[1\]\[2\] |
 | 15:12(MSB) | \[1\]\[3\] |
 
- 
+ 
 
 워드 2에 대한 레이아웃:
 
@@ -80,7 +78,7 @@ ms.locfileid: "1044712"
 | 11:8        | \[2\]\[2\] |
 | 15:12(MSB) | \[2\]\[3\] |
 
- 
+ 
 
 워드 3에 대한 레이아웃:
 
@@ -91,7 +89,7 @@ ms.locfileid: "1044712"
 | 11:8        | \[3\]\[2\] |
 | 15:12(MSB) | \[3\]\[3\] |
 
- 
+ 
 
 텍셀의 투명 여부를 알기 위해 BC1에서 사용되는 색상 비교는 이 형식에서 사용되지 않습니다. 따라서 색상 비교 없이 색상 데이터가 항상 4색상 모드인 것처럼 처리됩니다.
 
@@ -139,7 +137,7 @@ else {
 | 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB) |
 | 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSB)                    |
 
- 
+ 
 
 텍셀의 투명 여부를 알기 위해 BC1에서 사용되는 색상 비교는 이 형식에서 사용되지 않습니다. 따라서 색상 비교 없이 색상 데이터가 항상 4색상 모드인 것처럼 처리됩니다.
 
@@ -148,9 +146,9 @@ else {
 
 [압축된 텍스처 리소스](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

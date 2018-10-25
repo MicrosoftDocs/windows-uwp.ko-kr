@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c08f879ec783c8065fe539dbefd3698c44bb608
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: b2f8c52835801f6cabccad3419bef9ef510522dc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572682"
 ---
 # <a name="span-iddirect3dconceptswindowedvsfull-screenmodespanwindowed-vs-full-screen-mode"></a><span id="direct3dconcepts.windowed_vs__full-screen_mode"></span>창 모드와 전체 화면 모드 비교
 
@@ -32,9 +30,9 @@ Direct3D 응용 프로그램은 창 모드 또는 전체 화면 모드로 실행
 
 [장치](devices.md)
 
- 
+ 
 
- 
+ 
 
 
 

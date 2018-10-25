@@ -6,19 +6,17 @@ description: UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 �
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, C#, Visual Basic, 비동기
-ms.openlocfilehash: ad5d3432595761470a679bac690fe14711f9fdba
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 2d9bd5265d72a7a478de8c094cd900072e46a143
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542224"
 ---
-# <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>C# 또는 Visual Basic에서 비동기 API 호출
+# <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>C# 또는 Visual Basic에서 비동기식 API 호출
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다. 이 항목에서는 C# 또는 Microsoft Visual Basic에서 UWP의 비동기 메서드를 사용하는 방법을 설명합니다.
@@ -37,7 +35,8 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 다음 예제에서는 비동기 메서드인 [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)를 호출하고 결과를 기다려 블로그에서 블로그 게시물 목록을 가져옵니다.
 
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)] [!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
+[!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
+[!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 이 예제에는 눈여겨볼 두 가지 중요한 사항이 있습니다. 먼저 `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` 줄에서는 비동기 메서드 [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)를 호출할 때 **await** 연산자를 사용합니다. **await** 연산자는 컴파일러에게 비동기 메서드를 호출한다는 것을 알려 컴파일러가 개발자 대신 일부 추가 작업을 수행하도록 합니다. 다음으로 이벤트 처리기 선언에 키워드 **async**가 포함됩니다. **await** 연산자를 사용하는 메서드의 메서드 선언에 이 키워드를 포함해야 합니다.
 
@@ -71,7 +70,7 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 | [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)                                                                   | **void**                                          |
 | [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120)(**IAsyncOperation&lt;UInt32&gt;** 를 구현하는 사용자 지정 결과 클래스) | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
- 
+ 
 
 [**UWP 앱용 .NET**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx)에 정의된 비동기 메서드의 반환 형식은 [**Task**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.aspx) 또는 [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/dd321424.aspx)입니다. **Task**를 반환하는 메서드는 [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)을 반환하는 UWP의 비동기 메서드와 비슷합니다. 각각의 경우 비동기 메서드의 결과는 **void**입니다. 반환 형식 **Task&lt;TResult&gt;** 는 작업을 실행할 때 비동기 메서드의 결과가 `TResult` 형식 매개 변수와 동일한 형식이라는 점에서 [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)와 비슷합니다. **UWP 앱용 .NET** 및 작업 사용 방법에 대한 자세한 내용은 [Windows 런타임 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)를 참조하세요.
 
@@ -82,7 +81,7 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 
 비동기 메서드가 다른 비동기 메서드를 호출할 경우 예외가 발생한 모든 비동기 메서드는 외부 메서드로 전파됩니다. 이는 가장 바깥쪽 메서드에 **try/catch** 블록을 넣어 중첩된 비동기 메서드에 대한 오류를 catch할 수 있음을 의미합니다. 즉, 동기 메서드에 대한 예외를 catch하는 방법과 유사합니다. 그러나 **catch** 블록에는 **await**를 사용할 수 없습니다.
 
-**팁**  Microsoft Visual Studio 2005의 C#부터는 **catch** 블록에서 **await**를 사용할 수 있습니다.
+**팁**를 시작으로 Microsoft Visual Studio2005의 C#에서 사용할 수 있는 **await** **catch** 블록입니다.
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 

@@ -4,18 +4,18 @@ Description: You can submit apps to the Microsoft Store in over 100 languages.
 title: 지원되는 언어
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 10/25/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 5095aafd0b78b6b8cadc0e3852e2079507800c75
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5519102"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 
@@ -27,7 +27,9 @@ ms.locfileid: "5483346"
 ## <a name="supported-languages"></a>지원되는 언어
 
 
-이들은 Microsoft 스토어를 지 원하는 언어입니다. 앱이 이러한 언어를 하나 이상 지원해야 하며, 여기에 포함되지 않은 언어 코드를 지정해서는 안 됩니다.
+이들은 Microsoft 스토어를 지 원하는 언어입니다. 앱이 이러한 언어 중 하나 이상이 지원 해야 합니다. 
+
+여기에 포함 되지 않은 언어 코드 스토어에서 지원 되지 않습니다. 아래에 나열 되지 않은 언어 코드를 대상으로 하는 패키지를 포함 하지 않는 것이 좋습니다. 이러한 패키지는 고객에 게 배포 되지 않습니다 및 인증에 지연 또는 오류가 발생할 수 있습니다.
 
 | 언어 이름         | 지원되는 언어 코드                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

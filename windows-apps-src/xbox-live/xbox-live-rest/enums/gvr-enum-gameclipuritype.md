@@ -7,16 +7,14 @@ description: " GameClipUriType 열거형"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 0308f24d0eb0ddef040cb37ceae4736f7ee2d81a
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 167a5d639325bdb358ee13776ac411d44445e01d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5471735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572194"
 ---
 # <a name="gameclipuritype-enumeration"></a>GameClipUriType 열거형
 GameClipUriType 열거형에 자세히 설명합니다. 

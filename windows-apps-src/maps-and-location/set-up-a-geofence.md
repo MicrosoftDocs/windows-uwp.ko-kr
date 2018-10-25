@@ -6,16 +6,14 @@ ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 지도, 위치, 지오펜스, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 02baf078d127f516d57e947145ec639df5ba891b
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
-ms.translationtype: HT
+ms.openlocfilehash: 8e9fa71b3d6ae002aa37e14e23b55793876156c8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
-ms.locfileid: "1594781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542277"
 ---
 # <a name="set-up-a-geofence"></a>지오펜스 설정
 
@@ -479,7 +477,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 앱이 위치에 액세스하려면 먼저 디바이스에서 **위치**를 사용하도록 설정해야 합니다. **설정** 앱에서 다음 **위치 개인정보 설정**이 켜져 있는지 확인합니다.
 
--   **이 장치의 위치...** 가 **켜짐** 상태임(Windows 10 Mobile에는 해당되지 않음)
+-   **이 장치에 대 한 위치** 가 켜 **집니다** (Windows10 Mobile에는 해당 되지 않음)
 -   위치 서비스 설정 **위치**가 **켜짐** 상태임
 -   **사용자의 위치를 사용할 수 있는 앱 선택**에서 앱이 **on** 상태임
 

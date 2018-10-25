@@ -8,18 +8,16 @@ keywords: 키보드, 바로 가기, 바로 가기 키, 키보드 바로 가기 �
 ms.author: kbridge
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: dcbb27a87b48a124fe4463578bc32d908f399ccb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468796"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572692"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 

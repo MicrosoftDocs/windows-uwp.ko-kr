@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 03769964bfe3eff13314e62b8594edd5509b26fb
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1817f501962ccae4cfaf9c0ce075724abd5e7672
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572712"
 ---
 # <a name="buffer-tiling"></a>버퍼 타일링
 
@@ -30,9 +28,9 @@ ms.locfileid: "1044252"
 
 [스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

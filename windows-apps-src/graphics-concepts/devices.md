@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2676c59251a4aadb0f97a1180238ec076bf45229
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d1c35af3dd1f8826fbd61268c5c47cef9d77146a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542440"
 ---
 # <a name="devices"></a>디바이스
 
@@ -80,16 +78,16 @@ Direct3D 9와 함께 제공된 소프트웨어와 참조 디바이스의 동작�
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)
 
- 
+ 
 
- 
+ 
 
 
 
