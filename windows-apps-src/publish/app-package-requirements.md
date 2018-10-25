@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: f3e294fdf5a9b2d98f09d839fa62499b556de3a5
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440087"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481527"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -30,7 +30,7 @@ Microsoft Store에 제출할 앱 패키지를 준비하려면 다음 지침을 �
 Microsoft Visual Studio를 개발 환경으로 사용 중인 경우 빠르고 쉽게 앱 패키지를 만들 수 있는 도구가 기본 제공됩니다. 자세한 내용은 [앱 패키징](../packaging/index.md)을 참조하세요.
 
 > [!NOTE]
-> 모든 파일 이름에는 ANSI를 사용해야 합니다. 
+> 모든 파일 이름에는 ANSI를 사용해야 합니다. 
 
 Visual Studio에서 패키지를 만들 때 개발자 계정과 연결된 동일한 계정을 사용하여 로그인해야 합니다. 패키지 매니페스트의 일부분은 계정과 관련된 고유한 정보입니다. 이 정보는 자동으로 검색 및 추가됩니다. 매니페스트에 정보를 추가하지 않으면 패키지 업로드 오류가 발생할 수 있습니다. 
 
@@ -44,7 +44,7 @@ Visual Studio에서 패키지를 만들 때 개발자 계정과 연결된 동일
 UWP 앱 용 Visual Studio (.msixbundle 또는.appxbundle)을 통해 사용자가 다운로드 하는 앱의 크기를 줄이기 위해 앱 번들을 생성할 수 있습니다. 언어별 자산, 다양한 이미지 스케일 자산 또는 특정 Microsoft DirectX 버전에 적용되는 리소스를 정의한 경우 이렇게 하면 유용할 수 있습니다.
 
 > [!NOTE]
-> 하나의 앱 번들에 모든 아키텍처에 대한 패키지가 포함될 수 있습니다.
+> 하나의 앱 번들에 모든 아키텍처에 대한 패키지가 포함될 수 있습니다.
 
 앱 번들을 제공할 경우 사용자는 가능한 모든 리소스가 아닌 관련 파일만 다운로드할 수 있습니다. 앱 번들에 대한 자세한 내용은 [앱 패키징](../packaging/index.md) 및 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.
 
@@ -58,13 +58,13 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 매니페스트에 계정 및 앱에 대한 몇 가지 관련 정보가 포함되어야 합니다. 대시보드에서 앱 개요 페이지의 **앱 관리** 섹션에 있는 [앱 ID 세부 정보 보기](view-app-identity-details.md)를 확인하여 이 정보를 찾을 수 있습니다.
 
 > [!NOTE]
-> 매니페스트의 값은 대/소문자를 구분합니다. 공백과 기타 문장 부호도 일치해야 합니다. 값을 주의해서 입력하고 검토하여 올바른지 확인합니다.
+> 매니페스트의 값은 대/소문자를 구분합니다. 공백과 기타 문장 부호도 일치해야 합니다. 값을 주의해서 입력하고 검토하여 올바른지 확인합니다.
 
 
 앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle에서 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
 
 > [!TIP]
-> 패키지를 제출하기 전에 반드시 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 실행합니다. 그러면 매니페스트에 인증 또는 제출 오류를 발생시킬 수 있는 문제가 있는지 확인하는 데 도움이 될 수 있습니다.
+> 패키지를 제출하기 전에 반드시 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 실행합니다. 그러면 매니페스트에 인증 또는 제출 오류를 발생시킬 수 있는 문제가 있는지 확인하는 데 도움이 될 수 있습니다.
 
 
 ## <a name="package-format-requirements"></a>패키지 형식 요구 사항
@@ -90,9 +90,9 @@ UWP 앱의 경우 모든 패키지는 Microsoft Store에서 지원하는 버전�
 
 StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파일입니다. 이 구성 파일은 앱을 Microsoft Store 장치 앱으로 선언하거나 패키지를 장치에 적용하려면 필요한 요구 사항을 선언하는 등과 같이 패키지 매니페스트에서 다루지 않는 기능을 사용하도록 설정하기 위한 것입니다. 를 사용 하는 경우 StoreManifest.xml 앱 패키지를 사용 하 여 제출 하 고 앱의 기본 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal)를 참조하세요.
 
- 
+ 
 
- 
+ 
 
 
 

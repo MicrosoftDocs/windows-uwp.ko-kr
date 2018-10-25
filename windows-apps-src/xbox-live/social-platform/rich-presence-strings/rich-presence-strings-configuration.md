@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 존재 여부, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 7accd2585b7d1822b99abf03e74a660cbf983cf9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5439256"
+ms.locfileid: "5479768"
 ---
 # <a name="rich-presence-configuration"></a>다양 한 상태 구성
 
@@ -148,7 +148,7 @@ totalKicked | default | 시작 {0} 버킷으로! | BucketsKicked
  |  | en-US | 멀티 플레이 |
  |  | en-GB | 멀티 플레이 |
  |  | de | Spielt Mehrspieler |
- |  | 등입니다. | 
+ |  | 등입니다. | 
 
 얼마나 많은 문자열을 생성할 수에 제한이 없지만 타이틀에 대 한 문자열을 하나 이상 있어야 합니다.
 

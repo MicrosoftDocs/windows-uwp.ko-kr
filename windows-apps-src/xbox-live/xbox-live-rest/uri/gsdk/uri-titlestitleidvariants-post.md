@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 246427b772403ca07adac2a4b1b07ec159142049
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5432079"
+ms.locfileid: "5476157"
 ---
 # <a name="post-titlestitleidvariants"></a>POST (/titles/{titleId}/variants)
 URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -56,8 +56,8 @@ gameserverds.xboxlive.com
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
 | 콘텐츠 유형| application/json| 전송 되는 데이터 형식입니다.| 
-| 호스트| gameserverds.xboxlive.com|  | 
-| Content-Length|  | 요청 개체의 길이입니다.| 
+| 호스트| gameserverds.xboxlive.com|  | 
+| Content-Length|  | 요청 개체의 길이입니다.| 
 | xbl 계약 버전 x| 1| API 계약 버전입니다.| 
 | 권한 부여| XBL3.0 x = [해시]. [토큰]| 인증 토큰입니다.| 
   
@@ -70,7 +70,7 @@ gameserverds.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X XblCorrelationId|  | 요청 본문의 mime 형식입니다.| 
+| X XblCorrelationId|  | 요청 본문의 mime 형식입니다.| 
   
 <a id="ID4E3D"></a>
 
@@ -90,8 +90,8 @@ gameserverds.xboxlive.com
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | locale| 반환 변형의의 로컬 합니다.| 
 | maxVariants| 반환할 변형의의 최대 수입니다.| 
-| publisherOnly|  | 
-| 제한|  | 
+| publisherOnly|  | 
+| 제한|  | 
  
 <a id="ID4EDF"></a>
 
@@ -120,7 +120,7 @@ gameserverds.xboxlive.com
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 콘텐츠 유형| application/json| 응답 본문에는 데이터 형식입니다.| 
-| Content-Length|  | 응답 본문의 길이입니다.| 
+| Content-Length|  | 응답 본문의 길이입니다.| 
   
 <a id="ID4EMG"></a>
 
@@ -131,7 +131,7 @@ gameserverds.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X XblCorrelationId|  | 응답 본문의 mime 형식입니다.| 
+| X XblCorrelationId|  | 응답 본문의 mime 형식입니다.| 
   
 <a id="ID4EEH"></a>
 
@@ -145,9 +145,9 @@ gameserverds.xboxlive.com
 | 변형| 변형의의 배열입니다.| 
 | variantId| Variant의 Id입니다.| 
 | name| Variant의 이름입니다.| 
-| isPublisher|  | 
-| 순위|  | 
-| gameVariantSchemaId|  | 
+| isPublisher|  | 
+| 순위|  | 
+| gameVariantSchemaId|  | 
 | variantSchemas| 변형 스키마의 배열입니다.| 
 | variantSchemaId| 스키마의 Id입니다.| 
 | schemaContent| 스키마 내용| 
@@ -157,7 +157,7 @@ gameserverds.xboxlive.com
 | maxAllowedPlayers| 변형에 대 한 플레이어의 최대 수입니다.| 
 | gsiSetId| GSI 집합의 Id입니다.| 
 | gsiSetName| GSI 집합의 이름입니다.| 
-| selectionOrder|  | 
+| selectionOrder|  | 
 | variantSchemaId| 집합은 GSI에서 사용 되는 varaint 스키마의 id입니다.| 
  
 <a id="ID4EYBAC"></a>

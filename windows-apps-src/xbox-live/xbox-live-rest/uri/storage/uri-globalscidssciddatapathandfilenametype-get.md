@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 03da8b482dcfb8a4972fee69c0e3995d792cb87a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5431381"
+ms.locfileid: "5469072"
 ---
 # <a name="get-globalscidssciddatapathandfilenametype"></a>GET (/global/scids/{scid}/data/{pathAndFileName},{type})
-파일을 다운로드합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
+파일을 다운로드합니다. 이러한 Uri의 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EX)
   * [권한 부여](#ID4ECB)
@@ -27,7 +27,7 @@ ms.locfileid: "5431381"
   * [필요한 요청 헤더](#ID4EZC)
   * [선택적 요청 헤더](#ID4ECE)
   * [요청 본문](#ID4EMF)
-  * [HTTP 상태 코드](#ID4EZF)
+  * [HTTP 상태 코드입니다.](#ID4EZF)
   * [응답 헤더](#ID4EMDAC)
   * [응답 본문](#ID4EPEAC)
  
@@ -87,16 +87,16 @@ Blob 형식에 따라 다릅니다. 이진 blob 쿼리 매개 변수를 지원 �
  
 ## <a name="request-body"></a>요청 본문 
  
-개체가이 요청 본문에 전송 됩니다.
+이 요청의 본문 개체가 전달 됩니다.
   
 <a id="ID4EZF"></a>
 
  
-## <a name="http-status-codes"></a>HTTP 상태 코드 
+## <a name="http-status-codes"></a>HTTP 상태 코드입니다. 
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에는이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 하는 표준 HTTP 상태 코드의 전체 목록은, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하십시오.
  
-| Code| 이유 구문| 설명| 
+| Code| 원인 문구| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인 | 요청이 성공 했습니다.| 
 | 201| 생성 | 엔터티를 만들었습니다.| 

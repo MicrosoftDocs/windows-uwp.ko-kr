@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 961351e79ca04988c78c8e0be723435b39e5bae8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5430610"
+ms.locfileid: "5481486"
 ---
 # <a name="get-scidsscidleaderboardsleaderboardname"></a>GET (/scids/{scid}/leaderboards/{leaderboardname})
  
@@ -115,7 +115,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| If-None-Match| 문자열입니다. 엔터티 태그를 사용 하는 경우 캐싱을 지원 하 고 클라이언트 예제 값: <b>"686897696a7c876b7e"</b>|  | 
+| If-None-Match| 문자열입니다. 엔터티 태그를 사용 하는 경우 캐싱을 지원 하 고 클라이언트 예제 값: <b>"686897696a7c876b7e"</b>|  | 
   
 <a id="ID4E1G"></a>
 

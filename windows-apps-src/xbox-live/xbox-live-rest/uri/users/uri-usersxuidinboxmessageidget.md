@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e94396f86b235aafce2e8a65f93eedbdc96f46b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5434350"
+ms.locfileid: "5473588"
 ---
 # <a name="get-usersxuidxuidinboxmessageid"></a>GET (/users/xuid({xuid})/inbox/{messageId})
 서비스에서 읽은 상태로 표시 하는 특정 사용자 메시지에 대 한 자세한 메시지 텍스트를 검색 합니다.
@@ -35,7 +35,7 @@ ms.locfileid: "5434350"
 
 ## <a name="remarks"></a>설명
 
-The get operation can only be performed on the User, System, and FriendRequest message types.
+사용자, 시스템 및 FriendRequest 메시지 유형에 대만 get 작업을 수행할 수 있습니다.
 
 이 URI에는 새로 고침 Xbox.com에 필요합니다. 현재 Xbox 360 사용자가 로그 아웃 될 때까지 및에서 다시 읽기/읽지 않은 상태를 업데이트 되지 않습니다.
 
@@ -98,21 +98,21 @@ The get operation can only be performed on the User, System, and FriendRequest m
 
 | 속성| 형식| 최대 길이| 설명|
 | --- | --- | --- | --- |
-| 머리글| 헤더|  | JSON 개체입니다.|
+| 머리글| 헤더|  | JSON 개체입니다.|
 | messageText| string| 256| U T F-8|
 
 #### <a name="header"></a>헤더
 
 | 속성| 형식| 최대 길이| 설명|
 | --- | --- | --- | --- |
-| 전송| DateTime|  | 날짜 및 메시지를 보낸 시간입니다. (서비스에서 제공).|
-| 만료| DateTime|  | 날짜 및 메시지 만료 시간입니다. (모든 메시지 있는 최대 수명, 나중에 따라 결정 됩니다.)|
+| 전송| DateTime|  | 날짜 및 메시지를 보낸 시간입니다. (서비스에서 제공).|
+| 만료| DateTime|  | 날짜 및 메시지 만료 시간입니다. (모든 메시지 있는 최대 수명, 나중에 따라 결정 됩니다.)|
 | 메시지 종류| string| 13| 메시지 유형: 사용자, 시스템 FriendRequest 합니다.|
-| senderXuid| ulong|  | 발신자의 XUID 합니다.|
+| senderXuid| ulong|  | 발신자의 XUID 합니다.|
 | 보낸 사람| string| 15| 발신자의 게이머 태그입니다.|
-| hasAudio| 부울|  | 메시지에 오디오 (음성) 첨부 파일이 있는지 여부.|
-| hasPhoto| 부울|  | 메시지에 사진 첨부 파일이 있는지 여부.|
-| hasText| 부울|  | 메시지 텍스트를 포함 하는지 여부입니다.|
+| hasAudio| 부울|  | 메시지에 오디오 (음성) 첨부 파일이 있는지 여부.|
+| hasPhoto| 부울|  | 메시지에 사진 첨부 파일이 있는지 여부.|
+| hasText| 부울|  | 메시지 텍스트를 포함 하는지 여부입니다.|
 
 #### <a name="sample-response"></a>예제 응답
 

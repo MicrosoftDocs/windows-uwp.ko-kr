@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 42bf1a09144bec9cddda1ae2fd9656dc6dc8c51d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5444558"
+ms.locfileid: "5469810"
 ---
 # <a name="aggregatesessionsresponse-json"></a>AggregateSessionsResponse(JSON)
 사용자의 적합성에 대 한 세션에 대 한 집계 데이터를 포함합니다. 
@@ -27,7 +27,7 @@ ms.locfileid: "5444558"
  
 AggregateSessionsResponse 개체에는 다음 사양을 있습니다.
  
-| 멤버| 유형| 설명| 
+| 구성원| 유형| 설명| 
 | --- | --- | --- | 
 | totalDurationInSeconds| 64 비트의 부호 있는 정수| 집계 기간 (초)에서 세션의 총 기간입니다.| 
 | totalJoules| 64 비트의 부호 있는 정수| 총 소비 되는 에너지를 줄 단위로-집계 기간 동안 합니다. | 
@@ -37,7 +37,7 @@ AggregateSessionsResponse 개체에는 다음 사양을 있습니다.
 <a id="ID4ESC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

@@ -4,18 +4,18 @@ Description: The Usage report in the Windows Dev Center dashboard lets you see h
 title: 사용 보고서
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
-ms.date: 06/01/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, 사용, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
-ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: c5ef2136eaf17fc902dcfc7840ff6dbdac56ef0d
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439126"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480189"
 ---
 # <a name="usage-report"></a>사용 보고서
 
@@ -48,6 +48,7 @@ Windows 개발자 센터 대시보드의 **사용** 보고서에서는 Windows 1
 - **사용자**: 선택한 기간 동안 총 **사용자 세션** 수를 보여줍니다. 각 사용자 세션은 고유한 기간의 시간을 나타내며 앱이 시작할 때(프로세스 시작) 시작되며 종료되거나(프로세스 종료) 일정 비활성 기간 이후 종료됩니다. 이 때문에 단일 고객은 같은 날 또는 주에 걸쳐 여러 사용자 세션을 가질 수 있습니다. **활성 사용자**(해당 일 또는 주에 앱을 사용하고 있는 모든 고객) 및 **새 사용자**(해당 일 또는 주에 처음으로 앱을 사용한 고객)의 총 수도 표시됩니다. 페이지에 필터를 적용한 경우에는 이 차트에 **새 사용자**가 표시되지 않습니다.
 - **장치**: 모든 사용자가 앱과 상호 작용하는 데 사용한 일일 장치의 수를 표시 합니다.
 - **기간**: 총 참여 시간(사용자가 앱을 적극적으로 사용하고 있는 시간)을 보여줍니다.
+- **참여**: 평균 참여 분 (모든 사용자 세션의 평균 기간) 사용자 당를 보여줍니다. 
 - **보유**: 선택한 기간 동안의 **DAU/MAU**(일일 활성 사용자/월별 활성 사용자)의 총 수를 보여줍니다.
 
 **30d** 기간을 선택 하면 **사용자**, **장치**또는 **기간** 탭 볼 때 원 마커를 볼 수 있습니다. 이러한 크게 증가 있거나 지정 된 값에 대해 알아야 할 생각을 감소 합니다. 원이 표시 되는 날짜 크게 증가 또는 감소 하는 이전 주에 비해 감지 하는 주의 끝을 나타냅니다. 변경 된 내용에 대 한 자세한 정보를 보려면 원 가리키면 됩니다.  
@@ -90,4 +91,4 @@ Windows 개발자 센터 대시보드의 **사용** 보고서에서는 Windows 1
 
 
 
- 
+ 

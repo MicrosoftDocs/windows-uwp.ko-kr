@@ -12,17 +12,17 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 63f5d2967219a909a82e0e638fb9c852670e9749
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5441308"
+ms.locfileid: "5469000"
 ---
 # <a name="get-scidsscidleaderboardsleaderboardnameincludevaluemetadata"></a>GET (/scids/{scid}/leaderboards/{leaderboardname}?include=valuemetadata)
  
 순위표 값와 관련 된 메타 데이터와 함께 미리 정의 된 전역 순위표를 가져옵니다.
  
-이러한 Uri에 대 한 도메인은 `leaderboards.xboxlive.com`.
+이러한 Uri의 도메인은 `leaderboards.xboxlive.com`.
  
   * [설명](#ID4EY)
   * [URI 매개 변수](#ID4EHB)
@@ -31,7 +31,7 @@ ms.locfileid: "5441308"
   * [리소스의 개인 정보 설정의 효과](#ID4EQE)
   * [필요한 요청 헤더](#ID4EZE)
   * [선택적 요청 헤더](#ID4EOG)
-  * [HTTP 상태 코드](#ID4EOH)
+  * [HTTP 상태 코드입니다.](#ID4EOH)
   * [응답 헤더](#ID4EFDAC)
   * [응답 본문](#ID4ECFAC)
  
@@ -46,7 +46,7 @@ ms.locfileid: "5441308"
  
 순위표 Api 모두 읽기 전용 이며 따라서 GET 동사만 지원 합니다. 순위 되 고 정렬 된 "페이지" 데이터 플랫폼을 통해 작성 된 개별 사용자 통계에서 파생 되는 인덱싱된 플레이어 통계을 반영 합니다. 전체 순위표 인덱스 상당히 크며 수 및 호출자 전체에서 하나 묻지 않습니다, 그리고 따라서이 URI에 어떤 종류의 보기에 대해 해당 순위표 보려는 정확 하 게 호출자를 사용할 수 있는 몇 가지 쿼리 문자열 인수를 지원 합니다.
  
-GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한 결과 재현 됩니다이 모든 리소스를 수정 하지 않습니다.
+한 번 또는 여러 번 실행 하는 경우 동일한 결과 얻을 것이 GET 작업 리소스 수정 되지 않습니다.
   
 <a id="ID4EHB"></a>
 
@@ -109,9 +109,9 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 권한 부여| 문자열입니다. HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: XBL3.0 <b>x =&lt;userhash >;&lt; 토큰 ></b>| 
+| 권한 부여| 문자열입니다. HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: <b>XBL3.0 x =&lt;userhash >;&lt; 토큰 ></b>| 
 | Xbl 계약 버전 X| 문자열입니다. 사용 하는 API의 버전을 나타냅니다. 이 값은 응답의 값 메타 데이터를 포함 하기 위해 "3"으로 설정 되어야 합니다.| 
-| X RequestedServiceVersion| 문자열입니다. 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 기본값: 1입니다.| 
+| X RequestedServiceVersion| 문자열입니다. 빌드 이름/번호는 Xbox LIVE 서비스를이 요청 하시기 바랍니다. 요청 헤더, 등 인증 토큰에서 클레임의 유효성을 확인 한 후 해당 서비스에만 라우팅되는. 기본값: 1.| 
 | 수락| 문자열입니다. 허용 되는 콘텐츠-형식입니다. 예제 값: <b>응용 프로그램/j</b>| 
   
 <a id="ID4EOG"></a>
@@ -121,16 +121,16 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| If-None-Match| 문자열입니다. 엔터티 태그를 사용 하는 경우 캐싱을 지원 하 고 클라이언트 예제 값: <b>"686897696a7c876b7e"</b>|  | 
+| If-None-Match| 문자열입니다. 엔터티 태그를 사용 하는 경우 캐싱을 지원 하 고 클라이언트 예제 값: <b>"686897696a7c876b7e"</b>|  | 
   
 <a id="ID4EOH"></a>
 
  
-## <a name="http-status-codes"></a>HTTP 상태 코드
+## <a name="http-status-codes"></a>HTTP 상태 코드입니다.
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에는이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 하는 표준 HTTP 상태 코드의 전체 목록은, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하십시오.
  
-| Code| 이유 구문| 설명| 
+| Code| 원인 문구| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| 세션을 검색 했습니다.| 
 | 304| 수정 되지 않음| 리소스 되지 요청 된 마지막으로 수정 합니다.| 
@@ -190,7 +190,7 @@ userList | userList| 섹션| 필수. 항상 반환 됩니다. 요청 된 순위�
 <a id="ID4EGLAC"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답입니다.
  
 다음 요청 URI 전역 순위표에 순위를 건너뛰는 보여 줍니다.
  

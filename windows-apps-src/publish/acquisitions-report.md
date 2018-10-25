@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 구매, 앱 판매, 앱 다운로드, 설치, 깔때기, 획득, 변환, 채널, 앱 페이지 보기
 ms.localizationpriority: medium
 ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439515"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480797"
 ---
 # <a name="acquisitions-report"></a>구입 보고서
 
 
-Windows 개발자 센터 대시보드의 **구입** 보고서를 확인할 수 있습니다 구입 및 설치 앱와 함께 인구 통계 및 플랫폼 세부 정보 및 Windows 10 (Xbox 포함) 고객에 게는 앱의에 도달한 방법에 대 한 정보를 보여 줍니다. 목록입니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다. 
+Windows 개발자 센터 대시보드의 **구입** 보고서 구입 및와 함께 인구 통계 앱 설치를 확인할 수 있습니다 (Xbox 포함) 고객 Windows10에 있는 응용 프로그램에 도달한 방법에 대 한 정보를 표시 및 플랫폼 세부 정보 목록입니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다. 
 
 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
@@ -113,11 +113,11 @@ Windows 개발자 센터 대시보드의 **구입** 보고서를 확인할 수 �
 > [!NOTE]
 > 일부 고객은 이 정보를 공유하지 않도록 선택했습니다. 연령 그룹 또는 성별을 판별할 수 없으면 구입은 **알 수 없음**으로 분류됩니다.
 
- 
+ 
 
 ## <a name="app-page-views-and-conversions-by-channel"></a>채널별 앱 페이지 보기 및 변환
 
-**채널별 앱 페이지 보기 및 변환** 차트를 통해 Windows 10에서 고객이 어떻게 선택한 기간 동안 앱 목록에 방문하게 되었는지를 확인할 수 있습니다.
+**앱 페이지 보기 및 변환 채널별** 차트에는 선택한 기간 동안 앱의 목록에 고객 Windows10에 도착 하는 방법을 볼 수 있습니다.
 
 이 차트에서 *채널*은 고객이 앱의 목록 페이지에 방문한 방법(예: Microsoft Store 탐색 및 검색, 외부 웹 사이트의 링크, 사용자 지정 캠페인 중 하나의 링크 등)을 의미합니다. 다음과 같은 채널 유형이 포함됩니다.
 
@@ -125,7 +125,7 @@ Windows 개발자 센터 대시보드의 **구입** 보고서를 확인할 수 �
 -   **사용자 지정 캠페인:** 고객이 [사용자 지정 캠페인 ID](create-a-custom-app-promotion-campaign.md)를 사용한 링크를 따라갔습니다.
 -   **기타:** 고객이 웹 사이트에서 앱 목록으로 연결되는 외부 링크(사용자 지정 캠페인 ID 없음)를 따라갔거나 검색 엔진에서 앱 목록으로 연결되는 링크를 따라갔습니다.
 
-*페이지 보기*는 고객이 웹 기반 Microsoft Store를 통해서나 Windows 10의 Microsoft Store 앱에서 앱의 Microsoft Store 목록 페이지를 봤음을 의미합니다. 여기에는 Microsoft 계정으로 로그인 하지 않은 사람에 의한 보기도 포함이 됩니다. 일부 고객들은 Microsoft에 이 정보를 제공하기를 거부했습니다.
+*페이지 보기* 는 고객이 웹 기반 스토어를 통해 또는 내에서 앱의 스토어 목록 페이지를 확인 의미 Windows10에서 스토어 앱. 여기에는 Microsoft 계정으로 로그인 하지 않은 사람에 의한 보기도 포함이 됩니다. 일부 고객들은 Microsoft에 이 정보를 제공하기를 거부했습니다.
 
 *변환*은 (Microsoft 계정으로 로그인한) 고객이 앱에 대한 라이선스를 새로 획득했음을 의미합니다(금액 청구 또는 무료 제공 여부와는 관계 없음).
 
@@ -149,6 +149,6 @@ Windows 개발자 센터 대시보드의 **구입** 보고서를 확인할 수 �
 
 
 
- 
+ 
 
- 
+ 

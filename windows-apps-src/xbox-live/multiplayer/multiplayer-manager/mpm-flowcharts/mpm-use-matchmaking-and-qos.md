@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, mpm, 멀티 플레이어, 서비스, qos, 멀티 플레이어 관리자 순서도의 품질
 ms.localizationpriority: medium
 ms.openlocfilehash: 8fad7f1da832a63c93e249f25420ad8e8ab8c2da
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5436014"
+ms.locfileid: "5469587"
 ---
 # <a name="flowchart---use-matchmaking-and-manage-quality-of-service"></a>순서도-매치를 사용 하 고 서비스 품질 관리
 
@@ -23,4 +23,4 @@ ms.locfileid: "5436014"
 
 ## <a name="matchmaking-with-quality-of-service"></a>서비스의 캡처하기가 매치 메이 킹
 
-![스마트 매치 메이 킹](../../../images/multiplayer/mpm-matchmaking-with-qos.png)
+![SmartMatch 매치 메이크](../../../images/multiplayer/mpm-matchmaking-with-qos.png)

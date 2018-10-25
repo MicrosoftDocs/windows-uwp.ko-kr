@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: c331e85ef5a0012dd038b9b565106ad076333c07
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5434675"
+ms.locfileid: "5469278"
 ---
 # <a name="connected-storage"></a>연결된 저장소
 
@@ -168,12 +168,12 @@ Xbox One 각각 고유한 장점과 제약 조건을 사용 하 여 여러 저�
 
 *저장소 컨테이너를 연결*또는 줄여서 *컨테이너* 저장소의 기본 단위입니다. 다음 다이어그램에 표시 된 대로 각 연결 된 저장소 공간에서 여러 컨테이너를 포함할 수 있습니다.
 
-**그림 1.  연결 된 저장소 공간 (제목/컴퓨터 또는 제목/사용자)**
+**그림 1.연결 된 저장소 공간 (제목/컴퓨터 또는 제목/사용자)**
 
 ![](../../images/connected_storage/connected_storage_space_containers.png)
 데이터는 *blob*을 호출 하는 하나 이상의 버퍼로 컨테이너에 저장 됩니다. 다음 다이어그램은 디스크에는 컨테이너 내부 시스템 표현을 보여 줍니다. 각 컨테이너에 대 한 컨테이너에서 각 blob에 대 한 데이터 파일에 대 한 참조를 포함 하는 컨테이너 파일이 있습니다.
 
-**그림 2.  컨테이너의 다이어그램**
+**그림 2.컨테이너의 다이어그램**
 
 ![](../../images/connected_storage/container_storage_blobs.png)
 
@@ -190,7 +190,7 @@ Xbox One 각각 고유한 장점과 제약 조건을 사용 하 여 여러 저�
 
 **SubmitUpdatesAsync** 데이터를 받기 위해 공유 파티션 메모리에서 16MB 제한이 있습니다. 전용된 16MB 버퍼에서 사용 가능한 메모리가 부족 하 여 없기 때문에 **SubmitUpdatesAsync** 호출 시스템에 의해 즉시 서비스가 불가능, 서비스에 대 한 호출이 대기 됩니다. 시스템 지속적으로 16MB 버퍼에서 데이터를 전송 하는 하드 드라이브 및 대기 중인된 업데이트를 공간 16MB 버퍼에서 사용 가능 해지면 요청 순서 서비스 됩니다.
 
-**그림 3.  SubmitUpdatesAsync 동작**
+**그림 3.SubmitUpdatesAsync 동작**
 
 ![](../../images/connected_storage/submitupdatesasync_behavior.png)
 비슷한 방식으로 발생 하는 클라우드로 업로드: 서비스에 각 blob을 업로드 하 고 다른 업로드 된 blob을 참조 하는 컨테이너 파일을 최종 업데이트로 업데이트 작업이 커밋될 때. 클라우드로 업로드, 단일 및 최종 업데이트에이 통합 하면 **SubmitUpdatesAsync** 호출에서 참조 하는 모든 데이터는 전체 하거나 커밋할 또는 컨테이너 남아 변경 되지 않습니다. 이 방식으로 시스템 오프 라인 또는 업로드 작업을 하는 동안 전원이 하는 경우에 사용자가 이동할 수 다른 Xbox One 콘솔에는 클라우드에서 데이터를 다운로드 하 고 모든 컨테이너에 대 한 일관 된 보기를 사용 하 여 재생을 계속 합니다.
@@ -202,7 +202,7 @@ Xbox One 각각 고유한 장점과 제약 조건을 사용 하 여 여러 저�
 
 이 문제를 설명 하기 위해 컨테이너 골드 및 Bob 이라는 문자를 소유한 음식 양의 추적 하는 시나리오를 고려 합니다. 제목 *음식* 및 *골드*라는 두 개의 blob을 저장할 수 있습니다. Bob은 자신의 인벤토리에 100 골드 없는 음식으로 시작합니다.
 
-**그림 4.  예제 시나리오: Bob 금 100으로 시작 합니다.**
+**그림 4.예제 시나리오: Bob 금 100으로 시작 합니다.**
 
 ![](../../images/connected_storage/submitupdatesasync_example_scenario1.png)
 
@@ -210,13 +210,13 @@ Xbox One 각각 고유한 장점과 제약 조건을 사용 하 여 여러 저�
 
 시스템은 업데이트 된 blob와 컨테이너 업데이트 업데이트 버퍼에 대 한 정보를 모두 캡처합니다. 그런 다음 시스템 하드 드라이브에 새 blob의 값을 복사합니다.
 
-**그림 5.  시스템은 업데이트 된 정보를 캡처하고 하드 드라이브에 값을 복사 합니다.**
+**그림 5.시스템은 업데이트 된 정보를 캡처하고 하드 드라이브에 값을 복사 합니다.**
 
 ![](../../images/connected_storage/submitupdatesasync_example_scenario2.png)
 
 마지막으로, 새 blob을 참조 하려면 hdd 컨테이너 파일을 업데이트 됩니다. 결국 시스템 가비지 수집 작업에서 참조 되지 않은 blob을 제거합니다.
 
-**그림 6.  시스템 hdd 컨테이너 파일을 업데이트 하 고 참조 되지 않은 blob을 제거 합니다.**
+**그림 6.시스템 hdd 컨테이너 파일을 업데이트 하 고 참조 되지 않은 blob을 제거 합니다.**
 
 ![](../../images/connected_storage/submitupdatesasync_example_scenario3.png)
 
@@ -231,24 +231,24 @@ Bob 일부 음식 구입 하려는 시나리오를 고려 합니다. 편의 위�
 
 먼저 시스템 디스크를 음식 blob의 새 값에 대 한 데이터를 씁니다.
 
-**그림 7.  시스템 음식 blob의 값이 디스크에 기록 합니다.**
+**그림 7.시스템 음식 blob의 값이 디스크에 기록 합니다.**
 
 ![](../../images/connected_storage/update_method_wrong_way_1.png)
 그런 다음, 새로 쓴된 값을 참조 하는 컨테이너를 업데이트 됩니다. 다음 다이어그램은 에서처럼 뒤,이 단계와 그 다음 전원 분실 된 경우 Bob 결국에 할인을 사용 하 여 자신의 인벤토리에서 공제 해당 골드 필요 없이 25 음식 느꼈습니다.
 
-**그림 8.  시스템 새로 쓴된 값을 참조 하는 컨테이너를 업데이트 합니다.**
+**그림 8.시스템 새로 쓴된 값을 참조 하는 컨테이너를 업데이트 합니다.**
 
 ![](../../images/connected_storage/update_method_wrong_way_2.png)
 
 다음으로, 시스템 디스크를 골드 blob의 새 값에 대 한 데이터를 씁니다. 여전히 골드 Bob\_Inventory 컨테이너에서 참조에 대 한 값은 업데이트 되지 않았으면, 되었고 Bob 그 해야 하는 것 보다 더 많은 골드 월 25 일-우리가 원하는 결과를 한 번 더 가깝게 하지만 합니다.
 
-**그림 9.  시스템은 디스크를 골드 blob의 새 값에 대 한 데이터를 씁니다.**
+**그림 9.시스템은 디스크를 골드 blob의 새 값에 대 한 데이터를 씁니다.**
 
 ![](../../images/connected_storage/update_method_wrong_way_3.png)
 
 시스템 금에 새로 쓴된 blob을 참조 하려면 컨테이너 파일을 업데이트 하는 마지막으로,-의도 한 결과입니다.
 
-**그림 10.  컨테이너 파일 새로 쓴된 골드 blob를 참조 하도록 업데이트 됩니다.**
+**그림 10.컨테이너 파일 새로 쓴된 골드 blob를 참조 하도록 업데이트 됩니다.**
 
 ![](../../images/connected_storage/update_method_wrong_way_4.png)
 
@@ -258,17 +258,17 @@ Bob 일부 음식 구입 하려는 시나리오를 고려 합니다. 편의 위�
 
 먼저 시스템 디스크를 음식 blob의 새 값에 대 한 데이터를 씁니다.
 
-**그림 11.  시스템 음식 blob의 새 값에 대 한 데이터를 씁니다.**
+**그림 11.시스템 음식 blob의 새 값에 대 한 데이터를 씁니다.**
 
 ![](../../images/connected_storage/update_method_right_way_1.png)
 그런 다음 시스템 디스크를 골드 blob의 새 값에 대 한 데이터를 씁니다.
 
-**그림 12.  시스템 골드 blob의 새 값에 대 한 데이터를 씁니다.**
+**그림 12.시스템 골드 blob의 새 값에 대 한 데이터를 씁니다.**
 
 ![](../../images/connected_storage/update_method_right_way_2.png)
 마지막으로, 새 blob을 모두 참조 하는 컨테이너 파일을 업데이트 됩니다.
 
-**그림 13.  컨테이너 파일 모두 새 blob를 참조 하도록 업데이트 됩니다.**
+**그림 13.컨테이너 파일 모두 새 blob를 참조 하도록 업데이트 됩니다.**
 
 ![](../../images/connected_storage/update_method_right_way_3.png)
 이 예제는 매우 간단 하지만 원하는 모든 업데이트를 사용 하 여 단일 **SubmitUpdatesAsync** 호출을 실행 하 여 자동으로 적용 되어야 하는 컨테이너에서 데이터를 모든 수정의 중요성을 보여 줍니다. 골드를 사용 하 여 음식 구매 하는 경우이 작업을 수행 하 여 앱에 올바르게 값 중 하나에 업데이트 하 고 너무 많은 금화 문자를 남길 수 있는 잠재적인 경합 피할 수 있습니다.
@@ -279,7 +279,7 @@ Bob 일부 음식 구입 하려는 시나리오를 고려 합니다. 편의 위�
 
 그림 13 두 512kb blob 업데이트로 2 초 마다 한 **SubmitUpdatesAsync** 작업용 처리 시간에 대 한 예가 나와 1024 k 시스템에 다른 하드 드라이브 작업이 없을 때 업데이트를 blob입니다. 시스템 14 – 18ms 내에서 각 업데이트를 처리 하는 안정적인 상태에서 작동할 수 있습니다.
 
-**그림 14.  두 512kb blob 업데이트로 2 초 마다 한 SubmitUpdatesAsync 작업용 처리 시간 업데이트 및 다른 하드 드라이브 활동이 없는 1024 k blob입니다.**
+**그림 14.두 512kb blob 업데이트로 2 초 마다 한 SubmitUpdatesAsync 작업용 처리 시간 업데이트 및 다른 하드 드라이브 활동이 없는 1024 k blob입니다.**
 
 ![](../../images/connected_storage/submitupdatesasync_proc_time_mixed_size_fixed_interval.png)
 그림 14 세 가지 처리 시간을 보여 줍니다. 다양 한 시간 간격 1024 k blob입니다.
@@ -290,7 +290,7 @@ Bob 일부 음식 구입 하려는 시나리오를 고려 합니다. 편의 위�
 
 효과 하나의 업데이트 0.5 1 초에 간격을 업데이트할 때 크게 증가 합니다. 시스템은 각 업데이트는 1 초 이상 매우 높은 변형만으로 처리할 수 있는 안정 된 상태에 도달 하기 전에 업데이트 당 87ms에이 간격에 따라 7 업데이트 작업을 다시 처리할 수 있습니다.
 
-**그림 15.  세 가지 처리 시간 1024 k 다양 한 시간 간격 blob입니다.**
+**그림 15.세 가지 처리 시간 1024 k 다양 한 시간 간격 blob입니다.**
 
 ![](../../images/connected_storage/submitupdatesasync_proc_time_fixed_size_various_intervals.png)
 이들은 메서드와 예제 일 뿐입니다. 앱 일반적으로 하지 않아야 데이터가 저장이 종종 아직 것도 없습니다 일반적으로 작동 중인 I/O 디스크의 무료 환경에서.
@@ -313,7 +313,7 @@ Bob 일부 음식 구입 하려는 시나리오를 고려 합니다. 편의 위�
 
 다음 다이어그램은 시스템 따르는 앱 연결 된 저장소 공간을 요청할 때 높은 수준의 순서를 설명 합니다. 전체 시퀀스 이상 몇 초를 사용 하는 경우 시스템에서 그린 동기화 UI 표시 됩니다.
 
-**그림 16.  앱 연결 된 저장소 공간을 요청 하는 경우 시스템에서 다음 순서입니다.**
+**그림 16.앱 연결 된 저장소 공간을 요청 하는 경우 시스템에서 다음 순서입니다.**
 
 ![](../../images/connected_storage/app_requests_connected_storage_space.png)
 시스템을 **GetForUserAsync** 요청을 처리 하는 경우 다음 단계를 진행 합니다.

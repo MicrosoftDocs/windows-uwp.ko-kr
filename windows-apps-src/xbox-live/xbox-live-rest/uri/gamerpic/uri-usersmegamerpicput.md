@@ -12,16 +12,16 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c8c8f4297bb671f8e90c233ccf98dc2cf0730ad
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5435191"
+ms.locfileid: "5468164"
 ---
 # <a name="put-usersmegamerpic"></a>PUT (/users/me/gamerpic)
 1080 x 1080 게이머 사진에 업로드합니다. 
   * [요청 본문](#ID4EQ)
-  * [HTTP 상태 코드](#ID4EZ)
+  * [HTTP 상태 코드입니다.](#ID4EZ)
   * [응답 본문](#ID4EXC)
  
 <a id="ID4EQ"></a>
@@ -34,11 +34,11 @@ ms.locfileid: "5435191"
 <a id="ID4EZ"></a>
 
  
-## <a name="http-status-codes"></a>HTTP 상태 코드
+## <a name="http-status-codes"></a>HTTP 상태 코드입니다.
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에는이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 하는 표준 HTTP 상태 코드의 전체 목록은, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하십시오.
  
-| Code| 이유 구문| 설명| 
+| Code| 원인 문구| 설명| 
 | --- | --- | --- | 
 | 200| 확인| 성공적으로 다운로드 합니다.| 
 | 201| 만들었습니다.| 업로드 성공 했습니다.| 

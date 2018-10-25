@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e348254e7e1d7ab233ee1a82e7223a57ebd2781
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5435686"
+ms.locfileid: "5479794"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---september-2015"></a>새로운 기능-2015 년 9 월에 대 한 Xbox Live SDK
 
@@ -43,7 +43,7 @@ Xbox Live SDK는 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [
 
 ## <a name="logging"></a>로깅
 * xbox::services에서 service_call_logging_config:: 실험적
-* 시작 하 고 콘솔에 xbTrace.exe 통해 추적을 중지 하려면 register_for_protocol_activation service_call_logging_config 클래스에서 호출 해야 합니다.  한 번에 게임에 초기화 하는 동안이 호출을 수행 합니다.
+* 시작 하 고 콘솔에 xbTrace.exe 통해 추적을 중지 하려면 register_for_protocol_activation theservice_call_logging_config 클래스에서 호출 해야 합니다.  한 번에 게임에 초기화 하는 동안이 호출을 수행 합니다.
 
 ## <a name="resync-for-rta"></a>RTA에 대 한 재 동기화
 * 재 동기화 RTA 서비스는 사용자에 게 정보를 만료 된 있을 때 발생할 수 있습니다.

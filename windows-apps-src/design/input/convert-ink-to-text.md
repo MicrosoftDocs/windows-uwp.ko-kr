@@ -13,11 +13,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: de14d35b7a39776f43feeefc94ebe77af0c97373
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442628"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481372"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
@@ -477,8 +477,7 @@ Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되�
 
 앱이 설치된 필기 인식 엔진 집합을 쿼리하고 그 중 하나를 사용할 수도 있고, 사용자가 기본 언어를 선택할 수도 있습니다.
 
-**참고**  
-사용자는 **설정 -&gt; 시간 및 언어**로 이동하여 설치된 언어 목록을 볼 수 있습니다. 설치된 언어는 **언어** 아래에 나열됩니다.
+**참고**  으로 이동 하 여 사용자가 설치 된 언어 목록을 볼 수 **설정-&gt; 시간 및 언어**. 설치된 언어는 **언어** 아래에 나열됩니다.
 
 새 언어 팩을 설치하고 해당 언어에 대해 필기 인식을 사용하도록 설정하려면 다음과 같이 하세요.
 
@@ -488,7 +487,7 @@ Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되�
 4.  언어를 클릭하고 **옵션**을 선택합니다.
 5.  **언어 옵션** 페이지에서 **필기 인식 엔진**을 다운로드합니다. 여기서 전체 언어 팩, 음성 인식 엔진 및 키보드 레이아웃을 다운로드할 수도 있습니다.
 
- 
+ 
 
 여기서는 필기 인식 엔진을 사용하여 선택한 인식기를 기반으로 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)의 스트로크 집합을 해석하는 방법을 보여 줍니다.
 
@@ -873,4 +872,4 @@ string str = "Recognition result\n";
 * [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
 
 
- 
+ 

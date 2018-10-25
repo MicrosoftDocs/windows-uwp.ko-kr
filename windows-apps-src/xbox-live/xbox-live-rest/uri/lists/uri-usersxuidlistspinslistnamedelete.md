@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0749229af844c7b71496351000cadece7544bfc6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5439767"
+ms.locfileid: "5469144"
 ---
 # <a name="delete-usersxuidxuidlistspinslistname"></a>DELETE (/users/xuid(xuid)/lists/PINS/{listname})
-목록에서 항목을 제거합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
+목록에서 항목을 제거합니다. 이러한 Uri의 도메인은 `eplists.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EIB)
@@ -27,7 +27,7 @@ ms.locfileid: "5439767"
   * [권한 부여](#ID4ETC)
   * [필요한 요청 헤더](#ID4EAD)
   * [요청 본문](#ID4EWE)
-  * [HTTP 상태 코드](#ID4EBF)
+  * [HTTP 상태 코드입니다.](#ID4EBF)
   * [응답 본문](#ID4E6BAC)
  
 <a id="ID4EV"></a>
@@ -90,16 +90,16 @@ ms.locfileid: "5439767"
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청 본문에 전송 됩니다.
+이 요청의 본문 개체가 전달 됩니다.
   
 <a id="ID4EBF"></a>
 
  
-## <a name="http-status-codes"></a>HTTP 상태 코드
+## <a name="http-status-codes"></a>HTTP 상태 코드입니다.
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에는이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 하는 표준 HTTP 상태 코드의 전체 목록은, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하십시오.
  
-| Code| 이유 구문| 설명| 
+| Code| 원인 문구| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| 요청이 성공적으로 완료 합니다. 응답 본문 (GET)에 대 한 요청 된 리소스를 포함 해야 합니다. POST 및 PUT 요청 (예: 목록 버전, 개수) 최신 목록을 메타 데이터를 받게 됩니다.| 
 | 201| 생성| 새 목록 작성 되었습니다. 목록에 초기 삽입 반환 됩니다. 응답 목록에 최신 메타 데이터를 포함 하 고 위치 헤더 목록에 대 한 URI를 포함 합니다.| 
@@ -121,7 +121,7 @@ ms.locfileid: "5439767"
 <a id="ID4EFCAC"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답입니다.
  
 
 ```cpp

@@ -12,14 +12,14 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 430dbce8b3ac2a79709c5f0761124aa7a78cab5e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445264"
+ms.locfileid: "5469269"
 ---
 # <a name="get-mediamarketplaceidcrossmediagroupsearch"></a>GET (/media/{marketplaceId}/crossMediaGroupSearch)
-여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri의 도메인은 `eds.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EEB)
@@ -62,7 +62,7 @@ ms.locfileid: "5445264"
 <a id="ID4EZC"></a>
 
  
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답입니다.
  
 아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/crossMediaGroupSearch?q=vector&maxItems=25&fields=all`.
  

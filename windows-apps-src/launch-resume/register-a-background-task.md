@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bd0361886181d3c5a3395112c728db3bf57d58f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443149"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481828"
 ---
 # <a name="register-a-background-task"></a>백그라운드 작업 등록
 
@@ -32,7 +32,7 @@ ms.locfileid: "5443149"
 
 이 항목에서는 백그라운드 작업을 등록하는 유틸리티 함수를 안내합니다. 이 유틸리티 함수는 작업을 여러 번 등록하기 전에 기존 등록을 확인하여 여러 번 등록과 관련된 문제를 방지하며 백그라운드 작업에 시스템 조건을 적용할 수 있습니다. 이 연습에는 이 유틸리티의 전체 작업 예제가 포함됩니다.
 
-**참고**  
+**참고**  
 
 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "5443149"
 
 기존 등록을 확인하려면 [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 속성을 쿼리하고 결과를 반복합니다. 각 인스턴스의 이름을 확인합니다. 이 이름이 등록하려는 작업의 이름과 일치하는 경우 루프를 종료하고 플래그 변수를 설정하여 코드에서 다음 단계에는 다른 경로를 선택할 수 있게 합니다.
 
-> **참고**  앱에 고유한 백그라운드 작업 이름을 사용하세요. 각 백그라운드 작업의 이름이 고유해야 합니다.
+> **참고**앱에 고유한 백그라운드 작업 이름을 사용 합니다. 각 백그라운드 작업의 이름이 고유해야 합니다.
 
 다음 코드에서는 마지막 단계에서 만든 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)를 사용하여 백그라운드 작업을 등록합니다.
 
@@ -151,7 +151,7 @@ ms.locfileid: "5443149"
 
 그런 다음 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 사용하여 작업을 등록합니다. 이 코드에서는 조건 매개 변수가 null인지 확인하고 그렇지 않으면 등록 개체에 조건을 추가해야 합니다. [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224786) 메서드에서 반환된 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224772)을 반환합니다.
 
-> **참고**  백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+> **참고**백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사 됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 > **참고** 앱과 동일한 프로세스에서 실행되는 백그라운드 작업을 등록하는 경우 `taskEntryPoint` 매개 변수에 대해 `String.Empty` 또는 `null`을 전송합니다.
 
 다음 예제에서는 기존 작업을 반환하거나 백그라운드 작업(선택적 시스템 조건(있는 경우) 포함)을 등록하는 코드를 추가합니다.

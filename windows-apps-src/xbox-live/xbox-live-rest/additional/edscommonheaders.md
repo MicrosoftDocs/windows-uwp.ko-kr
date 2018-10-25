@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2452be9eacd5efe0b28229a14579e838e9b62d0e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5438967"
+ms.locfileid: "5471179"
 ---
 # <a name="eds-common-headers"></a>EDS 공통 헤더
 
@@ -34,9 +34,9 @@ ms.locfileid: "5438967"
 | <b>xbl 부모 ig x</b>| 인상 guid| 예| 로그에서 및 기타 서비스 호출에서 요청을 추적 하는 데 사용 합니다.|
 | <b>xbl 장치 유형 x</b>| 장치 유형| 예| 장치 클라이언트를 나타내는입니다.|
 | <b>수락</b>| 유형을 적용합니다| 예| XML 또는 JSON 합니다.|
-| <b>권한 부여</b>| 인증 헤더| 예|  |
+| <b>권한 부여</b>| 인증 헤더| 예|  |
 | <b>x-xbl 자동 제안-시드-텍스트</b>| 자동 제안 시드 텍스트| 아니요| BI에 대 한 사용 및 관련성|
-| <b>xbl 검색 용어 x</b>| 검색어| 아니요|  |
+| <b>xbl 검색 용어 x</b>| 검색어| 아니요|  |
 | <b>xbl 입력 방법이 x</b>| 사용자가 사용 되는 입력된 방법| 아니요| 음성, 컨트롤러, Kinect 합니다.|
 | <b>x-xbl-kinect 사용</b>| Kinect 사용 하도록 설정| 아니요| 예/아니요.|
 | <b>x-xbl-음성-세션-id</b>| 음성 세션 ID입니다.| 아니요| 여부 음성을 사용 하 여 세션을 시작 했습니다.|

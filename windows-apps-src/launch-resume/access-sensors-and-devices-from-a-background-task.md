@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 99f853da53302d4080bfa9462da0ec524e8d2064
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436161"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480843"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>백그라운드 작업에서 센서 및 장치에 액세스
 
@@ -33,7 +33,7 @@ ms.locfileid: "5436161"
 
 앱이 사용자에게 더 이상 보이지 않을 때 Windows는 메모리 및 CPU 리소스를 회수하기 위해 앱을 일시 중단하거나 종료합니다. 그러면 다른 앱이 포그라운드로 실행될 수 있으므로 배터리 소모가 줄어듭니다. 이 경우 백그라운드 작업을 사용하지 않고는 지속적인 데이터 이벤트가 손실됩니다. Windows는 백그라운드 작업 트리거인 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 제공하므로, 앱이 일시 중단된 경우에도 앱이 장치와 센서에서 백그라운드로 안전하게 장기 실행 동기화와 모니터링 작업을 수행할 수 있습니다. 앱 수명 주기에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](index.md)을 참조하세요. 백그라운드 작업에 대한 자세한 내용은 [백그라운드 작업을 통해 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
-**참고**  유니버설 Windows 앱에서 백그라운드로 장치를 동기화하려면 사용자가 앱의 백그라운드 동기화를 승인해야 합니다. 또한 장치가 PC에 연결되거나 쌍을 이루고 활성 I/O가 있어야 하며, 최대 10분 동안 백그라운드 작업을 실행할 수 있습니다. 정책 적용에 대한 자세한 내용은 이 항목의 뒷부분에서 설명합니다.
+**참고**유니버설 Windows 앱에서 백그라운드로 장치 동기화 사용자가 앱의 백그라운드 동기화를 승인 하려면 해야 합니다. 또한 장치가 PC에 연결되거나 쌍을 이루고 활성 I/O가 있어야 하며, 최대 10분 동안 백그라운드 작업을 실행할 수 있습니다. 정책 적용에 대한 자세한 내용은 이 항목의 뒷부분에서 설명합니다.
 
 ### <a name="limitation-critical-device-operations"></a>제한 사항: 중요한 장치 작업
 
@@ -85,13 +85,9 @@ ms.locfileid: "5436161"
 8.  Windows는 시스템 조건 및 작업 런타임을 모니터링하고, 필요한 경우 필수 조건이 더 이상 충족되지 않으면 작업을 취소합니다.
 9.  백그라운드 작업이 진행 중 또는 완료를 보고하면 앱은 등록된 작업의 진행 중 및 완료 이벤트를 통해 이러한 이벤트를 받게 됩니다.
 
-**중요**  
-[**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용할 때 다음과 같은 중요한 점을 고려해야 합니다.
+**중요 한**  [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용 하는 경우 같은 중요 한 점을 고려해 야 합니다.
 
--   
-  [
-    **DeviceUseTrigger**
-  ](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 프로그래밍 방식으로 트리거하는 기능은 Windows8.1 및 Windows Phone 8.1에서 처음 소개되었습니다.
+-   프로그래밍 방식으로 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 를 사용 하는 백그라운드 작업을 실행 하는 기능 Windows8.1 및 Windows Phone 8.1에서 처음 도입 되었습니다.
 
 -   PC에서 주변 장치를 업데이트할 때 사용자 동의를 확인하기 위해 Windows에서 특정 정책을 적용합니다.
 
@@ -99,8 +95,8 @@ ms.locfileid: "5436161"
 
 -   최대 백그라운드 시간(벽시계 시간)을 포함하여 특정 정책 요구 사항이 더 이상 충족되지 않을 경우 Windows에서 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 취소할 수 있습니다. 백그라운드 작업을 사용하여 주변 장치를 조작하는 경우 이러한 정책 요구 사항을 고려 하는 것이 중요합니다.
 
-**팁**  백그라운드 작업의 작동 방식을 확인하려면 샘플을 다운로드하세요. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](http://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](http://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
- 
+**팁**에 백그라운드 작업의 작동 방식을 확인 하려면 샘플을 다운로드 합니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](http://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](http://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
+ 
 ## <a name="frequency-and-foreground-restrictions"></a>빈도 및 포그라운드 제한
 
 앱이 작업을 시작할 수 있는 빈도에는 제한이 없지만 앱은 한 번에 하나의 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 백그라운드 작업만 실행할 수 있으며(다른 형식의 백그라운드 작업에는 영향을 미치지 않음), 앱이 포그라운드에 있을 때만 백그라운드 작업을 시작할 수 있습니다. 앱이 포그라운드에 없는 경우 **DeviceUseTrigger**로 백그라운드 작업을 시작할 수 없습니다. 첫 번째 백그라운드 작업이 완료되기 전에는 앱이 두 번째 **DeviceUseTrigger** 백그라운드 작업을 시작할 수 없습니다.

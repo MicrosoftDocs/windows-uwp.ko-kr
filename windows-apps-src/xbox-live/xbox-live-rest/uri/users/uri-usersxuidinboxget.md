@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d27ed6fa81bfd8618f19938c97a56361c16c009
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445085"
+ms.locfileid: "5473456"
 ---
 # <a name="get-usersxuidxuidinbox"></a>GET (/users/xuid({xuid})/inbox)
 서비스에서 지정된 된 수의 사용자 메시지 요약을 검색합니다.
@@ -58,7 +58,7 @@ ms.locfileid: "5445085"
 | 속성| 형식| 최대 길이| 설명|
 | --- | --- | --- | --- | --- | --- | --- |
 | maxItems| int| 100| 반환 되는 메시지의 최대 수입니다.|
-| continuationToken| 문자열|  | 이전 열거형 호출;에 반환 하는 문자열 열거형을 계속 하는 데 사용 합니다.|
+| continuationToken| 문자열|  | 이전 열거형 호출;에 반환 하는 문자열 열거형을 계속 하는 데 사용 합니다.|
 | skipItems| int| 100| 다양 한 메시지를 건너뜁니다. continuationToken 있으면 무시 됩니다.|
 
 <a id="ID4EGE"></a>
@@ -102,13 +102,13 @@ ms.locfileid: "5445085"
 | 속성| 형식| 최대 길이| 설명|
 | --- | --- | --- | --- |
 | 결과| 메시지]| 100| 사용자가 메시지의 배열|
-| pagingInfo| PagingInfo|  | 현재 결과 집합에 대 한 정보를 페이징|
+| pagingInfo| PagingInfo|  | 현재 결과 집합에 대 한 정보를 페이징|
 
 #### <a name="message"></a>Message
 
 | 속성| 형식| 최대 길이| 설명|
 | --- | --- | --- | --- |
-| 머리글| 헤더|  | 사용자가 메시지 헤더|
+| 머리글| 헤더|  | 사용자가 메시지 헤더|
 | messageSummary| string| 20| U T F-8 일반적으로 처음 20 문자 메시지의|
 
 #### <a name="header"></a>헤더
@@ -116,22 +116,22 @@ ms.locfileid: "5445085"
 | 속성| 형식| 최대 길이| 설명|
 | --- | --- | --- | --- |
 | id| string| 50| 메시지 세부 정보를 검색 하거나 메시지 삭제에 사용 되는 메시지 식별자입니다.|
-| isRead| 부울|  | 사용자가 메시지 정보 읽었을 나타내는 플래그입니다.|
-| 전송| DateTime|  | UTC 날짜 및 메시지를 보낸 시간입니다. (서비스에서 제공).|
-| 만료| DateTime|  | UTC 날짜 및 시간 메시지에 만료 됩니다. (모든 메시지 있는 최대 수명, 나중에 따라 결정 됩니다.)|
+| isRead| 부울|  | 사용자가 메시지 정보 읽었을 나타내는 플래그입니다.|
+| 전송| DateTime|  | UTC 날짜 및 메시지를 보낸 시간입니다. (서비스에서 제공).|
+| 만료| DateTime|  | UTC 날짜 및 시간 메시지에 만료 됩니다. (모든 메시지 있는 최대 수명, 나중에 따라 결정 됩니다.)|
 | 메시지 종류| string| 50| 메시지 유형: 사용자, 시스템, FriendRequest, 비디오, QuickChat, VideoChat, PartyChat, 제목, GameInvite 합니다.|
-| senderXuid| ulong|  | 발신자의 XUID 합니다.|
+| senderXuid| ulong|  | 발신자의 XUID 합니다.|
 | 보낸 사람| string| 15| 발신자의 게이머 태그입니다.|
-| hasAudio| 부울|  | 메시지에 오디오 (음성) 첨부 파일이 있는지 여부.|
-| hasPhoto| 부울|  | 메시지에 사진 첨부 파일이 있는지 여부.|
-| hasText| 부울|  | 메시지 텍스트를 포함 하는지 여부입니다.|
+| hasAudio| 부울|  | 메시지에 오디오 (음성) 첨부 파일이 있는지 여부.|
+| hasPhoto| 부울|  | 메시지에 사진 첨부 파일이 있는지 여부.|
+| hasText| 부울|  | 메시지 텍스트를 포함 하는지 여부입니다.|
 
 #### <a name="paging-info"></a>페이징 정보
 
 | 속성| 형식| 최대 길이| 설명|
 | --- | --- | --- | --- |
 | continuationToken| 문자열| 100| 필요에 따라 서버에 의해 반환 됩니다. 열거형을 계속 하려면 이후 호출을 허용 합니다.|
-| totalItems| int|  | 받은 편지함 메시지의 총 수입니다.|
+| totalItems| int|  | 받은 편지함 메시지의 총 수입니다.|
 
 #### <a name="sample-response"></a>예제 응답
 

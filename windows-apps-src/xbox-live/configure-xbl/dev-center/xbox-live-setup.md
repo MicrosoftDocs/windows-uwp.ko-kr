@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.localizationpriority: medium
 keywords: Xbox live, Xbox, 게임, uwp, windows 10, Xbox one, Windows 개발자 센터, Xbox Live 설정
 ms.openlocfilehash: ba4ab2b6cad1968c3d223f99e80ed024e085e8e4
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5431979"
+ms.locfileid: "5470057"
 ---
 # <a name="configure-xbox-live-setup-on-windows-dev-center"></a>Windows 개발자 센터에서 Xbox Live 설정 구성
 
@@ -37,10 +37,10 @@ ms.locfileid: "5431979"
 ![개발자 센터에서 사용자의 기본 로케일 선택 드롭다운 선택의 이미지](../../images/dev-center/xbox-live-setup/xbox-live-setup-2.png)
 
 ## <a name="product-type"></a>제품 유형
-드롭다운 메뉴 제품 유형을 변경할 수 있습니다. **게임**유형 기본값으로 사용 됩니다. 이러한 선택은 Xbox Live 기능을 사용할 수 있는 영향을 줍니다. 선택할 수는 세 가지 옵션이 있습니다.
-1. 앱 
-2. Game 
-3. 게임 데모 
+드롭다운 메뉴 제품 유형을 변경할 수 있습니다. **게임**유형 기본값으로 사용 됩니다. 선택 하는 옵션을 사용할 수 있는 XboxLivefeatures 영향을 줍니다. 선택할 수는 세 가지 옵션이 있습니다.
+1. 앱 
+2. Game 
+3. 게임 데모 
 
 ![개발자 센터에서 제품 유형을 선택 드롭다운 선택의 이미지](../../images/dev-center/xbox-live-setup/xbox-live-setup-3.png)
 

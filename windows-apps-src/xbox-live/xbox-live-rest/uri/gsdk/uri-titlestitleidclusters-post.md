@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 459624ea487c158f3fc92b9c6024b086d49c204e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5441904"
+ms.locfileid: "5477508"
 ---
 # <a name="post-titlestitleidclusters"></a>POST (/titles/{titleId}/clusters)
 Xbox Live 계산 서버 인스턴스를 만드는 클라이언트 수 있는 URI입니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.
@@ -53,10 +53,10 @@ gameserverms.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
-| 사용자 에이전트|  | 사용자 에이전트 요청에 대 한 정보를 제공 합니다.| 
+| 사용자 에이전트|  | 사용자 에이전트 요청에 대 한 정보를 제공 합니다.| 
 | 콘텐츠 유형| application/json| 전송 되는 데이터 형식입니다.| 
-| 호스트| gameserverms.xboxlive.com|  | 
-| Content-Length|  | 요청 개체의 길이입니다.| 
+| 호스트| gameserverms.xboxlive.com|  | 
+| Content-Length|  | 요청 개체의 길이입니다.| 
 | xbl 계약 버전 x| 1| API 계약 버전입니다.| 
 | 권한 부여| XBL3.0 x = [해시]. [토큰]| 인증 토큰입니다.| 
   
@@ -104,12 +104,12 @@ gameserverms.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 캐시 제어|  | 요청/응답 체인을 따라 모든 캐싱 메커니즘이 따라야 하는 지시문입니다.| 
+| 캐시 제어|  | 요청/응답 체인을 따라 모든 캐싱 메커니즘이 따라야 하는 지시문입니다.| 
 | 콘텐츠 유형| application/json| 응답에는 데이터 형식입니다.| 
-| Content-Length|  | 응답 본문의 길이입니다.| 
-| 콘텐츠 유형 옵션 X|  |  | 
-| X XblCorrelationId|  | 응답 본문의 mime 형식입니다.| 
-| Date|  |  | 
+| Content-Length|  | 응답 본문의 길이입니다.| 
+| 콘텐츠 유형 옵션 X|  |  | 
+| X XblCorrelationId|  | 응답 본문의 mime 형식입니다.| 
+| Date|  |  | 
   
 <a id="ID4E5G"></a>
 

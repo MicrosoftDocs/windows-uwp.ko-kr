@@ -8,14 +8,14 @@ ms.date: 08/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp, 백그라운드 작업
+keywords: windows 10, uwp, 배경 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445259"
+ms.locfileid: "5480787"
 ---
 # <a name="support-your-app-with-background-tasks"></a>백그라운드 작업을 사용하여 앱 지원
 
@@ -46,7 +46,7 @@ In-process 백그라운드 작업을 빠르게 시작하려면 [In-process 백�
 Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 > [!TIP]
-> Windows 10부터 더 이상 백그라운드 작업을 등록하기 위해 앱을 잠금 화면에 배치할 필요가 없습니다.
+> Windows10 부터는 더 이상 해야 하기 위해 백그라운드 작업을 등록 잠금 화면에서 앱을 배치 합니다.
 
 ## <a name="background-tasks-for-system-events"></a>시스템 이벤트에 대한 백그라운드 작업
 
@@ -78,7 +78,7 @@ Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-proce
 백그라운드 작업에 **InternetAvailable** 조건을 추가[BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)하여 네트워크 스택이 실행될 때까지 백그라운드 작업의 트리거를 지연시킵니다. 이 조건은 전원을 절약 네트워크를 사용할 수 있을 때까지 백그라운드 작업이 실행 됩니다. 이 조건은 실시간 정품 인증을 제공하지 않습니다.
 
 백그라운드 작업이 네트워크에 연결에 필요한 경우 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 백그라운드 작업을 실행 하는 동안 네트워크 가동 되도록 설정 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업 **IsNetworkRequested**을 설정 하지 않으면 다음 백그라운드 작업이 됩니다 (예: 휴대폰 화면이 꺼져 있습니다.) 연결 된 대기 상태 모드에서 네트워크에 액세스할 수
- 
+ 
 백그라운드 작업 조건에 대 한 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조 하세요.
 
 ## <a name="application-manifest-requirements"></a>응용 프로그램 매니페스트 요구 사항
@@ -95,7 +95,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 | **타이머** | [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 백그라운드 작업을 자주(15분마다) 실행하거나 특정 시간에 실행하도록 설정할 수 있습니다. 자세한 내용은 [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)을 참조하세요. |
 | **푸시 알림** | 백그라운드 작업은 [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)에 응답하여 원시 푸시 알림을 수신합니다. |
 
-**참고**  
+**참고**  
 
 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
 
@@ -114,7 +114,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 | **ControlChannelReset** | 컨트롤 채널이 초기화되면 백그라운드 작업이 트리거됩니다. |
 | **SessionConnected**    | 세션이 연결되면 백그라운드 작업이 트리거됩니다.   |
 
-   
+   
 다음과 같은 시스템 이벤트는 사용자가 앱을 잠금 화면에서 옮겼거나 잠금 화면 밖으로 옮길 때 신호를 트리거합니다.
 
 | 트리거 이름                     | 설명                                  |
@@ -122,7 +122,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 | **LockScreenApplicationAdded**   | 앱 타일이 잠금 화면에 추가되었습니다.     |
 | **LockScreenApplicationRemoved** | 앱 타일이 잠금 화면에서 제거되었습니다. |
 
- 
+ 
 ## <a name="background-task-resource-constraints"></a>백그라운드 작업 리소스 제약 조건
 
 백그라운드 작업은 경량입니다. 백그라운드 실행을 최소로 유지하여 포그라운드 앱 및 배터리 수명을 위한 최적의 사용자 환경을 보장해야 합니다. 이렇게 하려면 백그라운드 작업에 리소스 제약 조건을 적용합니다.
@@ -175,7 +175,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 ## <a name="related-topics"></a>관련 항목
 
-**Windows 10의 멀티태스킹에 대한 개념적 지침**
+**Windows10의 멀티태스킹에 대 한 개념적 지침**
 
 * [실행, 다시 시작 및 멀티태스킹](index.md)
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 242a3bd3a2e6112436ec3f7aa3dad60c05619314
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5432180"
+ms.locfileid: "5467890"
 ---
 # <a name="get-serviceconfigsscidhoppersnamestats"></a>GET (/serviceconfigs/{scid}/hoppers/{name}/stats)
 
@@ -28,7 +28,7 @@ hopper에 대 한 통계를 가져옵니다.
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E5)
   * [권한 부여](#ID4EJB)
-  * [HTTP 상태 코드](#ID4E3C)
+  * [HTTP 상태 코드입니다.](#ID4E3C)
   * [요청 본문](#ID4EFD)
   * [응답 본문](#ID4EQD)
 
@@ -52,7 +52,7 @@ hopper에 대 한 통계를 가져옵니다.
 
 ## <a name="authorization"></a>권한 부여
 
-| 형식| 필수| 설명| 누락 된 경우 응답|
+| 형식| 필수| 설명| 응답이 없는 경우|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | XUID (사용자 ID)| 예| 요청을 만드는 사용자 티켓에서 참조 하는 티켓 세션의 구성원 이어야 합니다. | 403|
 | 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다. | 403|
@@ -61,21 +61,21 @@ hopper에 대 한 통계를 가져옵니다.
 <a id="ID4E3C"></a>
 
 
-## <a name="http-status-codes"></a>HTTP 상태 코드
+## <a name="http-status-codes"></a>HTTP 상태 코드입니다.
 서비스는 MPSD에 적용 되는 HTTP 상태 코드를 반환 합니다.  
 <a id="ID4EFD"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+이 요청의 본문 개체가 전달 됩니다.
 
 <a id="ID4EQD"></a>
 
 
 ## <a name="response-body"></a>응답 본문
 
-| 멤버| 유형| 설명|
+| 구성원| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | hopperName| string| 선택한 hopper의 이름입니다.|
 | waitTime| 32 비트 부호 있는 정수| 평균 시간 hopper (정수로 초)에 대 한 일치 합니다. |
@@ -84,7 +84,7 @@ hopper에 대 한 통계를 가져옵니다.
 <a id="ID4E1D"></a>
 
 
-### <a name="sample-response"></a>예제 응답
+### <a name="sample-response"></a>샘플 응답입니다.
 
 
 ```cpp

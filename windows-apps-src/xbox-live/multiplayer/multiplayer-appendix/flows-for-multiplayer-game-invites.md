@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 멀티 플레이 2015, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 66de8c34857d667b66cdfb091f83106fed777279
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5437846"
+ms.locfileid: "5478368"
 ---
 # <a name="updated-flows-for-multiplayer-game-invites"></a>멀티 플레이 게임 초대를 위한 업데이트 된 흐름
 
-Xbox One 베타 피드백의 결과로 사용자 환경을 흐름 멀티 플레이 게임 초대에 대 한 변경 된 경우 Xbox One 복구 업데이트 24 2013 년 11 월 6에 릴리스된 기준 **사용자 환경 (UX)만** 변경 이며 게임 타이틀의 관점에서 기능 이나 동작에 영향을 주지 않습니다. 제목 개발자는 모든 코드를 변경할 필요가 없습니다.
+Xbox One 베타 피드백의 결과로 사용자 환경을 흐름 멀티 플레이 게임 초대에 대 한 변경 된 경우 Xbox One 복구 업데이트 24 2013 년 11 월 6에 릴리스된 기준**사용자 환경 (UX)만** 변경 이며 게임 타이틀의 관점에서 기능 이나 동작에 영향을 주지 않습니다. 제목 개발자는 모든 코드를 변경할 필요가 없습니다.
 
 ## <a name="summary-of-changes"></a>변경 내용 요약
 
@@ -81,8 +81,8 @@ David 멀티 플레이 로비에서 게임을 시작합니다.
     <p><br>
 알림 센터에서 숙 선택할 수 있습니다. <ul>
     <li>   <b>게임 초대를 수락:</b> 게임을 시작 합니다.
-    <li>   <b>게임 초대 거절:</b> 게임이 실행합니다. 숙은 보유할에서 여전히 이며 후속 게임 초대를 받게 됩니다.         
-    <li>   <b style="background-color: #FFFF00">타사 두고: 게임 실행 수 없습니다. 숙은 보유할에서 제거 됩니다.</b>
+    <li>   <b>게임 초대 거절:</b> 게임이 실행합니다.숙은 보유할에서 여전히 이며 후속 게임 초대를 받게 됩니다.         
+    <li>   <b style="background-color: #FFFF00">타사 두고: 게임 실행 수 없습니다.숙은 보유할에서 제거 됩니다.</b>
     </ul>
     </td>
   </tr>

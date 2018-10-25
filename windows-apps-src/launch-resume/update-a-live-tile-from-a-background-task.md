@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 3042a6f52453fa4a4c50334b605f637f1dec92aa
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443436"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482325"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>백그라운드 작업에서 라이브 타일 업데이트
 
@@ -156,7 +156,7 @@ namespace BackgroundTasks
 6.  **응용 프로그램 UI** 탭을 클릭하거나 탭합니다.
 7.  **잠금 화면 알림**을 **배지 및 타일 텍스트**로 설정합니다.
 8.  **배지 로고** 필드에 24x24 픽셀 아이콘의 경로를 설정합니다.
-    **중요** 이 아이콘은 단색 투명 픽셀만 사용해야 합니다.
+    **중요 한**이 아이콘은 단색 투명 픽셀만 사용 해야 합니다.
 9.  **작은 로고** 필드에 30x30 픽셀 아이콘의 경로를 설정합니다.
 10. **큰 로고** 필드에 310x150 픽셀 아이콘의 경로를 설정합니다.
 
@@ -165,8 +165,8 @@ namespace BackgroundTasks
 
 작업을 등록할 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다.
 
-> **참고** Windows 8.1부터 백그라운드 작업 등록 매개 변수는 등록 시 유효성을 검사합니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
- 
+> **참고**Windows8.1 부터는으로 백그라운드 작업 등록 매개 변수는 등록 시 검증 합니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
+ 
 
 앱의 기본 페이지에 **RegisterBackgroundTask** 메서드를 추가하고 **OnNavigatedTo** 이벤트 처리기에서 호출합니다.
 
@@ -266,6 +266,6 @@ namespace ContosoApp
 * [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)
 * [타일 및 배지에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465403)
 
- 
+ 
 
- 
+ 

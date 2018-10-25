@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 상태, 충돌, 응답하지 않는 이벤트, 앱 상태, 상태 데이터, 스택 추적, cab 파일, 실패, 오류, pdb, 기호
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442292"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482900"
 ---
 # <a name="health-report"></a>상태 보고서
 
@@ -88,6 +88,6 @@ Windows 개발자 센터 대시보드의 **상태** 보고서를 통해 크래�
 - **크래시 즈 프리 세션**: (지난 30 일) 동안 각 날짜에 오류가 발생 하지 않은 고유한 사용자 세션의 비율을 표시 합니다.
 
 
- 
+ 
 
- 
+ 

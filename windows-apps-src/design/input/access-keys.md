@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435516"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481122"
 ---
 # <a name="access-keys"></a>선택키
 
@@ -263,16 +263,16 @@ _자동 키 팁 배치의 예_
 
     a.  키 팁은 선택키를 갖고 있는 요소(소유자)와 **가까이** 있어야 합니다.  
     b.  키 팁은 선택키를 갖고 있는 **활성화된 요소를 포함하면 안 됩니다**.   
-    c.  키 팁을 소유자와 가까운 곳에 배치할 수 없는 경우 소유자와 겹쳐야 합니다. 
+    c.  키 팁을 소유자와 가까운 곳에 배치할 수 없는 경우 소유자와 겹쳐야 합니다. 
 
 2.  **검색 기능**: 사용자가 키 팁을 사용하여 신속하게 컨트롤을 검색할 수 있습니다.
 
-    a.  키 팁은 절대로 다른 키 팁과 **겹치면** 안 됩니다.  
+    a.  키 팁은 절대로 다른 키 팁과 **겹치면** 안 됩니다.  
 
 3.  **쉬운 검사:** 사용자가 키 팁을 간단하게 살펴볼 수 있습니다.
 
     a.  키 팁을 다른 키 팁 및 UI 요소와 일직선으로 **정렬**해야 합니다.
-    b.  키 팁을 최대한 많이 **그룹화**해야 합니다. 
+    b.  키 팁을 최대한 많이 **그룹화**해야 합니다. 
 
 ### <a name="relative-position"></a>상대 위치
 

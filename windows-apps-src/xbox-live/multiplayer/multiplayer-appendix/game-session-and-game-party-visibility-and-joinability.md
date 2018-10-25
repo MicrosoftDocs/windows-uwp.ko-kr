@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f8559ef07f7f88fcc6349c8bea9d9e27bc73f654
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5436055"
+ms.locfileid: "5478574"
 ---
 # <a name="game-session-and-game-party-visibility-and-joinability"></a>게임 세션 및 타사 게임 유형과 파티
 
@@ -41,7 +41,7 @@ ms.locfileid: "5436055"
 ## <a name="game-session-joinability"></a>게임 세션 파티
 
 
-액세스 제어를 두 번째 측면은 파티입니다. 세션 수명 동안 동적으로 설정 하 고 어떤 유형의 사용자는 세션에 참가할 수를 결정 합니다. 파티 세션에 대 한 값은.
+액세스 제어를 두 번째 측면은 파티입니다. 세션 수명 동안 동적으로 설정 하 고 어떤 유형의 사용자는 세션에 참가할 수를 결정 합니다. Joinabilityare 세션에 대 한 값:
 
 -   *없음* (기본값)-사용자 세션에 참가할 수에 제한이 없습니다.
 

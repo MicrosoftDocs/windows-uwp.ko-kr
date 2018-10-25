@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445282"
+ms.locfileid: "5481668"
 ---
 # <a name="payout-summary"></a>지급 요약
 
@@ -72,7 +72,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 | 기록 잔액        | 기록 지급 시스템의 지급 잔액                                                             |
 | 세금 전달              | 한국에서의 판매와 관련된 세금 조정                                                                   |
 
- 
+ 
 
 ## <a name="downloading-payment-transactions"></a>지불 거래 다운로드
 
@@ -112,11 +112,11 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 | 자격 날짜/시간   | 거래 수익을 지급할 수 있는 날짜 및 시간(UTC)입니다. 지급이 만들어지면 자격 날짜/시간이 지급 생성 날짜 이전인 거래 수익이 포함됩니다. (**예약됨** .csv 파일에만 포함됩니다.)                                                                     |
 | 요금                 | 거래 금액 열에서 집계된 모든 요금 세부 정보의 분석 결과가 표시됩니다. (Azure Marketplace에 대해서만 포함되며 **예약됨** .csv 파일에는 포함되지 않습니다.)          |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

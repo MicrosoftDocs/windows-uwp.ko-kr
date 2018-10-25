@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ffe3f2a93642911da57d3dd94c09206dc7f5dc94
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 18c3634912633242fdab41ea4d600ee42da80464
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430949"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480237"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Windows 10용 데스크톱 응용 프로그램 개선
 
-UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 수 있습니다.
+Windows 런타임 Api를 사용 하 여 Windows 10 사용자를 위한 최신 환경을 추가할 수 있습니다.
 
 먼저 프로젝트를 설정합니다. 그리고 Windows 10 환경을 추가합니다. Windows 10 사용자를 위해 별도로 빌드하거나, 실행하는 Windows 버전에 상관 없이 모든 사용자에게 동일한 바이너리를 배포할 수 있습니다.
 
@@ -27,7 +27,7 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 프로젝트에서 몇 가지를 변경해야 UWP API를 사용할 수 있습니다.
 
-### <a name="modify-a-net-project-to-use-uwp-apis"></a>UWP API를 사용하기 위해 .NET 프로젝트를 수정합니다.
+### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Windows 런타임 Api를 사용 하기 위해.NET 프로젝트를 수정 합니다.
 
 **참조 관리자** 대화 상자를 연 후, **찾아보기**와 **모든 파일**을 차례대로 선택합니다.
 
@@ -48,29 +48,11 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 ![copy-local-field](images/desktop-to-uwp/copy-local-field.png)
 
-### <a name="modify-a-c-project-to-use-uwp-apis"></a>UWP API를 사용할 수 있도록 C++를 수정
+### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Windows 런타임 Api를 사용 하 여 c + + 프로젝트를 수정 합니다.
 
-프로젝트의 속성 페이지를 엽니다.
+사용 [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) Windows 런타임 Api를 사용 하도록 합니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
-**C/C++** 설정 그룹의 **일반** 설정에서 **Windows 런타임 확장 사용** 필드를 **예(/ZW)** 로 설정합니다.
-
-   ![Windows 런타임 확장 사용](images/desktop-to-uwp/consume-runtime-extensions.png)
-
-**Additional #using Directories** 대화 상자를 열어 이러한 디렉터리를 추가합니다.
-
-* $(VSInstallDir) Common7\IDE\VC\vcpackages
-* C:\Program (x86) 파일 <*SDK 버전*> \Windows Kits\10\UnionMetadata\ \Facade
-* C:\Program (x86) 파일 <*SDK 버전*> \Windows Kits\10\References\ \Windows.Foundation.UniversalApiContract\ <*최신 버전*>
-* C:\Program (x86) 파일 <*SDK 버전*> \Windows Kits\10\References\ \Windows.Foundation.FoundationContract\ <*최신 버전*>
-
-**Additional Include Directories** 대화 상자를 열어 이 디렉토리를 추가합니다. C:\Program Files (x86)\Windows Kits\10\Include\<*latest version*>\um
-
-![디렉터리를 포함한 추가](images/desktop-to-uwp/additional-include.png)
-
-**C/C++** 설정 그룹의 **코드 생성**에서 **최소 다시 빌드 사용**설정을 **아니요(/GM-)** 로 설정합니다.
-
-![최소 다시 빌드 사용](images/desktop-to-uwp/disable-min-build.png)
-
+C + 프로젝트를 구성 하려면 + WinRT, 참조 [수정 Windows 데스크톱 응용 프로그램 프로젝트를 추가 하는 C + + WinRT 지원](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ## <a name="add-windows-10-experiences"></a>Windows 10 환경 추가
 
@@ -90,7 +72,7 @@ UWP API를 사용, Windows 10 사용자가 만족할 최신 환경을 추가할 
 
 저희는 '강화'와 '확장'이라는 용어를 자주 사용합니다. 각 용어의 의미를 정확히 설명하겠습니다.
 
-저희는 데스크톱 응용 프로그램에서 직접 호출할 수 있는 UWP API를 설명하기 위해 '강화'라는 용어를 사용합니다. Windows 10 환경을 선택했을 때, 생성해야 할 API를 식별하고, 해당 API가 이 [목록](desktop-to-uwp-supported-api.md)에 표시되는지 확인합니다. 이 목록은 데스크톱 응용 프로그램에서 직접 호출할 수 있는 AIP들입니다. API와 연결된 기능을 UWP 프로세스에서만 실행시킬 수 있다면, 이 목록에 API가 표시되지 않습니다. 종종 여기에 UWP 지도 컨트롤이나 Windows Hello 보안 프롬프트 같은 최신 UI를 표시하는 API가 포함됩니다.
+용어 '강화'를 사용해 데스크톱 응용 프로그램에서 직접 호출할 수 있는 Windows 런타임 Api를 설명. Windows 10 환경을 선택했을 때, 생성해야 할 API를 식별하고, 해당 API가 이 [목록](desktop-to-uwp-supported-api.md)에 표시되는지 확인합니다. 이 목록은 데스크톱 응용 프로그램에서 직접 호출할 수 있는 AIP들입니다. API와 연결된 기능을 UWP 프로세스에서만 실행시킬 수 있다면, 이 목록에 API가 표시되지 않습니다. 종종 여기에 UWP 지도 컨트롤이나 Windows Hello 보안 프롬프트 같은 최신 UI를 표시하는 API가 포함됩니다.
 
 이런 환경을 응용 프로그램에 포함시키고 싶다면, UWP 프로젝트를 솔루션에 추가해 응용 프로그램을 확장하면 됩니다. 데스크톱 프로젝트가 여전히 응용 프로그램의 진입점입니다. 그러나 UWP 프로젝트는 여기 [목록](desktop-to-uwp-supported-api.md)에 표시되지 않는 API에 액세스할 수 있도록 도와줍니다. 데스크톱 응용 프로그램은 앱 서비스를 사용하여 UWP 프로세스와 통신할 수 있습니다. 저희는 이를 설정하는 방법에 대한 많은 지침을 갖고 있습니다. UWP 프로젝트가 필요한 환경을 추가하고 싶다면 [UWP로 확장](desktop-to-uwp-extend.md)을 참조하세요.
 
@@ -187,7 +169,7 @@ Windows 10 사용자를 위해 별도 바이너리를 빌드하고 싶다면 조
 
 ![빌드 구성](images/desktop-to-uwp/build-config.png)
 
-해당 빌드 구성에서 UWP API를 호출하는 코드를 식별하는 상수를 만듭니다.  
+해당 빌드 구성는 상수를 만듭니다 Windows 런타임 Api를 호출 하는 코드를 식별 합니다.  
 
 .NET 기반 프로젝트의 상수는 **Conditional Compilation Constant**입니다.
 
@@ -224,9 +206,9 @@ void UWP::ShowToast()
 
 ### <a name="runtime-checks"></a>런타임 검사
 
-실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램 패키지 된 응용 프로그램과 Windows 10에서 실행 하는 응용 프로그램이 UWP Api는 사용자가 하는 경우에 호출 합니다.
+실행 중인 Windows 버전에 관계없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 응용 프로그램에서는 Windows 런타임 Api는 사용자가 실행 하는 경우에 응용 프로그램 패키지 된 응용 프로그램으로 Windows 10
 
-가장 쉽게 런타임 검사를 코드에 추가하는 방법은 Nuget 패키지: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/)를 설치하고, ``IsRunningAsUWP()``모든 UWP 코드 해제 메서드를 사용하는 것입니다. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
+런타임 검사 코드를 추가 하는 가장 쉬운 방법은 Nuget 패키지를 설치 하는 것: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/) 와 사용 하 여는 ``IsRunningAsUWP()`` 게이트 Windows 런타임 Api를 호출 하는 모든 코드 해제 메서드. 자세한 내용은 [Desktop Bridge - Identify the application's context](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)라는 블로그를 참조하세요.
 
 ## <a name="related-video"></a>관련 비디오
 

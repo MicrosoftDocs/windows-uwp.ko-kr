@@ -12,27 +12,27 @@ ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e408509f4cebbc89587237c6e0dc67bc88b1558
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430939"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481336"
 ---
 # <a name="special-tile-templates"></a>특수 타일 템플릿
  
 
-특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. 각 특수 타일 템플릿은 Windows 10용으로 업데이트된 클래식 특수 템플릿인 아이콘 타일 템플릿을 제외하고 Windows 10용으로 특별히 작성되었습니다. 이 문서에서는 세 가지 특수 타일 템플릿인 아이콘, 사진 및 피플에 대해 설명합니다.
+특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. 각 특수 타일 템플릿은 특별히 용으로 빌드된 Windows10, 아이콘 타일 템플릿을 제외 하 고 Windows10에 대 한 업데이트 된 클래식 특수 템플릿인 합니다. 이 문서에서는 세 가지 특수 타일 템플릿인 아이콘, 사진 및 피플에 대해 설명합니다.
 
 ## <a name="iconic-tile-template"></a>아이콘 타일 템플릿
 
 
-아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows 10은 휴대폰과 태블릿/데스크톱 둘 다에서 이 템플릿을 지원합니다.
+아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows10은 휴대폰과 태블릿/데스크톱 둘 다에서 템플릿을 지원 합니다.
 
 ![작은 크기 및 중간 크기 메일 타일](images/iconic-template-mail-2sizes.png)
 
 ### <a name="how-to-create-an-iconic-tile"></a>아이콘 타일을 만드는 방법
 
-다음 단계에서는 Windows 10용 아이콘 타일을 만들기 위해 알아야 할 모든 사항에 대해 설명합니다. 대략적으로 설명하면, 아이콘 이미지 자산이 필요하며, 아이콘 템플릿을 사용하여 타일에 알림을 보내고, 마지막으로 타일에 표시할 번호를 제공하는 배지 알림을 보냅니다.
+다음 단계를 다루지 Windows10 용 아이콘 타일을 만들기 위해 알아야 할 모든 것. 대략적으로 설명하면, 아이콘 이미지 자산이 필요하며, 아이콘 템플릿을 사용하여 타일에 알림을 보내고, 마지막으로 타일에 표시할 번호를 제공하는 배지 알림을 보냅니다.
 
 ![아이콘 타일의 개발자 흐름](images/iconic-template-dev-flow.png)
 
@@ -188,7 +188,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>피플 타일 템플릿
 
 
-Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이드되는 원 안의 이미지 컬렉션을 표시하는 특수 타일 템플릿을 사용합니다. 이 타일 템플릿은 Windows 10 빌드 10572부터 제공되었으며 누구든지 해당 앱에서 사용할 수 있습니다.
+Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이드되는 원 안의 이미지 컬렉션을 표시하는 특수 타일 템플릿을 사용합니다. 이 타일 템플릿은 Windows10 빌드 10572부터 사용할 수 있었던 하 고 모든 사용자가 앱에서 사용할 수입니다.
 
 피플 타일 템플릿은 다음 크기의 타일에서 작동합니다.
 
@@ -196,19 +196,19 @@ Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이�
 
 ![중간 크기 피플 타일](images/people-tile-medium.png)
 
- 
+ 
 
 **와이드 타일**(TileWide)
 
 ![와이드 피플 타일](images/people-tile-wide.png)
 
- 
+ 
 
 **큰 타일(데스크톱에만 해당)** (TileLarge)
 
 ![큰 피플 타일](images/people-tile-large.png)
 
- 
+ 
 
 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용하는 경우 *TileBinding* 콘텐츠에 대한 새 *TileBindingContentPeople* 개체를 만들기만 하면 피플 타일 템플릿을 사용할 수 있습니다. *TileBindingContentPeople* 클래스에는 Images 속성이 있으며, 여기서 이미지를 추가합니다.
 
@@ -281,9 +281,9 @@ TileContent content = new TileContent()
 * [타일, 배지 및 알림](index.md)
 * [적응형 타일 만들기](create-adaptive-tiles.md)
 * [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md)
- 
+ 
 
- 
+ 
 
 
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 13b96b0d2f1f674533dd2c070bd1a10884bb7370
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5440026"
+ms.locfileid: "5474987"
 ---
 # <a name="get-usersowneridscidsscidclipsgameclipid"></a>GET (/users/{ownerId}/scids/{scid}/clips/{gameClipId})
 찾으면 모든 Id에 알려진 경우 시스템에서 단일 게임 클립을 가져옵니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -66,9 +66,9 @@ ms.locfileid: "5440026"
  
 사용 권한 부여 클레임 | 클레임| 유형| 필수 여부| 예제 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|  | 
+| Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|  | 
 | TitleId| 64 비트의 부호 있는 정수| 예| 1234567890| <b>콘텐츠 격리</b> 검사에 사용 됩니다.| 
-| SandboxId| 16 진수 이진 파일| 예|  | 시스템이, 조회에 대 한 올바른 영역 및 <b>콘텐츠 격리</b> 검사에 사용 합니다.| 
+| SandboxId| 16 진수 이진 파일| 예|  | 시스템이, 조회에 대 한 올바른 영역 및 <b>콘텐츠 격리</b> 검사에 사용 합니다.| 
   
 리소스의 개인 정보 설정의 효과 | 사용자를 요청합니다.| 대상 사용자의 개인 정보 설정| 동작| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -105,7 +105,7 @@ ms.locfileid: "5440026"
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | Accept-Encoding| string| Encodings 허용 가능한 압축 합니다. 예제 값: gzip만 줄이기 identity 합니다.| 
 | ETag| string| 캐시 최적화에 사용 됩니다. 예제 값: "686897696a7c876b7e".| 
-| 범위| string|  | 
+| 범위| string|  | 
   
 <a id="ID4ETDAC"></a>
 
@@ -124,8 +124,8 @@ ms.locfileid: "5440026"
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| 세션을 검색 했습니다.| 
-| 301| 영구적으로 이동|  | 
-| 307| 임시 리디렉션|  | 
+| 301| 영구적으로 이동|  | 
+| 307| 임시 리디렉션|  | 
 | 400| 잘못 된 요청| 서비스 잘못 된 요청을 이해할 수 없었습니다. 일반적으로 잘못 된 매개 변수입니다.| 
 | 401| 권한 없음| 필요한 사용자 인증을 요청 합니다.| 
 | 403| 사용할 수 없음| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 

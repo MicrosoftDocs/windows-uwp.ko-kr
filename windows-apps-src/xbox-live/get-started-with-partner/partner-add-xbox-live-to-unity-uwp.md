@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 Unity
 ms.localizationpriority: medium
 ms.openlocfilehash: d3e79228aa99ef635115199a8e04d140b065990d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5431325"
+ms.locfileid: "5480337"
 ---
 # <a name="add-xbox-live-support-to-unity-for-uwp-with-net-scripting-backend-for-idxbox-and-managed-partners"></a>에 대 한.NET 스크립팅 백 엔드를 사용 하 여 UWP 용 Unity에 Xbox Live 지원 추가 ID@Xbox 관리 파트너 및
 
@@ -125,7 +125,7 @@ public class XboxLiveScript : MonoBehaviour
 이 작업은 일반 UWP 앱 처럼 앱을 시작와 Xbox Live 호출 함수에 UWP 앱 컨테이너를 필요로 하는 대로 작동 하도록 허용 합니다.
 
 **10) 다시 Unity에서 항목을 변경 하는 경우**
-  
+  
 Unity에 아무 것도 변경 하는 경우 UWP 프로젝트를 다시 만들어야 합니다.
 
 Note Unity는 Unity 프로젝트이 문제를 방지 하기 위해 업데이트 해야 하므로 Xbox Live 로그인에 실패 하 고, 발생 다시 컴파일할 때 pfx 파일을 대체 됩니다.

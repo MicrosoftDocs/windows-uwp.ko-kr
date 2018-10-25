@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8e4ac4e91c4359ca20822297ccb625d09e3d59
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5436856"
+ms.locfileid: "5468138"
 ---
 # <a name="person-json"></a>Person(JSON)
 사용자가 시스템에서 단일 사용자에 대 한 메타 데이터입니다. 
@@ -27,7 +27,7 @@ ms.locfileid: "5436856"
  
 사용자 개체에는 다음 사양을 있습니다.
  
-| 멤버| 유형| 설명| 
+| 구성원| 유형| 설명| 
 | --- | --- | --- | 
 | xuid| string| 필수. Xbox 사용자 ID (XUID) 10 진수 형식의 합니다. 예제 값: 2603643534573573 합니다.| 
 | isFavorite| 부울 값| 필수. 이 사용자 인지 자세히에 대 한 사용자가 더 관심이 하나. 사용자가 자신의 사용자 목록에서 매우 많은 사람을 사용할 수, 있으므로 즐겨 찾는 사용자를 환경에서 우선 순위를 지정 하 고 전에 즐겨찾기 되지 않은 다른 사용자에 게 표시 해야 합니다.| 
@@ -37,7 +37,7 @@ ms.locfileid: "5436856"
 <a id="ID4EHC"></a>
 
  
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
  
 
 ```json

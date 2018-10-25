@@ -8,14 +8,14 @@ ms.date: 04/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
+keywords: xbox live에서 xbox, 게임, uwp 10 windows, xbox 1, 멀티 매니저, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: d8b56682054a96091480a5b8ff4b493ecebf6ba9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5431546"
+ms.locfileid: "5468141"
 ---
 # <a name="flowchart---play-a-multiplayer-game-by-using-smartmatch-matchmaking"></a>스마트 매치를 사용 하 여 멀티 플레이어 게임을 플레이-순서도
 
@@ -23,6 +23,6 @@ ms.locfileid: "5431546"
 
 이 프로세스에서 [스마트를 사용 하 여 멀티 플레이어 게임](../play-multiplayer-with-matchmaking.md)의 멀티 플레이어 관리자 코드 예제를 볼 수 있습니다.
 
-## <a name="smartmatch-matchmaking"></a>스마트 매치 메이 킹
+## <a name="smartmatch-matchmaking"></a>SmartMatch 매치 메이크
 
-![스마트 매치 메이 킹](../../../images/multiplayer/mpm-smartmatch-matchmaking.png)
+![SmartMatch 매치 메이크](../../../images/multiplayer/mpm-smartmatch-matchmaking.png)

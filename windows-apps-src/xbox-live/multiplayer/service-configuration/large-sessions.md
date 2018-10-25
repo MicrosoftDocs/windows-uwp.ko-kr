@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어, 큰 세션, 최근 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: cead1a3ca1d56185ef97fe3f3271484bfbc58f18
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5443821"
+ms.locfileid: "5471500"
 ---
 # <a name="large-sessions"></a>큰 세션
 
@@ -43,23 +43,23 @@ Xbox Live의 기능 중 하나는 Xbox Live 플레이어가 새로운 사람들�
 
 ```json
 {
-    "constants": {
-        "system": {
-            "version": 1,
-            "maxMembersCount": 2000,
-            "visibility": "open",
-            "capabilities": {
-                "gameplay": true,
-                "large": true
-            },
-            "timeouts": {
-                "inactive": 0,
-                "ready": 180000,
-                "sessionEmpty": 0
-            }
-        },
-        "custom": { }
-    }
+    "constants": {
+        "system": {
+            "version": 1,
+            "maxMembersCount": 2000,
+            "visibility": "open",
+            "capabilities": {
+                "gameplay": true,
+                "large": true
+            },
+            "timeouts": {
+                "inactive": 0,
+                "ready": 180000,
+                "sessionEmpty": 0
+            }
+        },
+        "custom": { }
+    }
 }
 ```
 
@@ -79,17 +79,17 @@ MPSD에서 큰 세션을 검색할 때 구성원 목록은 응답을 사용 하 
 
 #### <a name="1-persistent-groups"></a>1. 영구 그룹
 
-사용자 그룹에 남아 있는 경우 함께 지속적으로 잠재적으로, 들어오고 사람들과 이름 (예를 들어 guid – 일반 세션의 경우와 동일한 명명 규칙) 그룹 지정할 수 있습니다.  각 구성원 그룹에서 이동 하며, 이러한 해야 추가 또는 제거할 문자열의 배열에는 고유한 "그룹" 속성에 그룹 이름:
+사용자 그룹에 남아 있는 경우 함께 지속적으로 잠재적으로, 들어오고 사람들과 이름 (예를 들어 guid – 일반 세션의 경우와 동일한 명명 규칙) 그룹 지정할 수 있습니다.각 구성원 그룹에서 이동 하며, 이러한 해야 추가 또는 제거할 문자열의 배열에는 고유한 "그룹" 속성에 그룹 이름:
 
 ```json
 {
     "members": {
         "me": {
-            "properties": {
-                "system": {
-                    "groups": [ "boffins-posse" ]
-                }
-            }
+            "properties": {
+                "system": {
+                    "groups": [ "boffins-posse" ]
+                }
+            }
         }
     }
 }
@@ -101,18 +101,18 @@ MPSD에서 큰 세션을 검색할 때 구성원 목록은 응답을 사용 하 
 
 ```json
 {
-    "members": {
-        "me": {
-            "properties": {
-                "system": {
-                    "encounters": [ "trade.0c7bbbbf-1e49-40a1-a354-0a9a9e23d26a" ]
-                }
-            }
-        }
-    }
+    "members": {
+        "me": {
+            "properties": {
+                "system": {
+                    "encounters": [ "trade.0c7bbbbf-1e49-40a1-a354-0a9a9e23d26a" ]
+                }
+            }
+        }
+    }
 }
 ```
 
 예를 들어, 한 명의 플레이어 "거래 와" 그룹을 하는 경우 그룹의 구성원 필요가 없습니다 – "그룹" 및 "에서" 모두 동일한 이름을 사용할 수 있습니다 (해당 "그룹"에 그룹 이름을 이전에 추가 되었을 가정), 어떤 작업을 수행 하 고는 발견 했습니다 사용자는 u pload "에서" 목록에 그룹 이름. 최근 플레이어로 이동 하 고 그 반대로 그룹의 모든 구성원을 보려면 개별을 발생 시키는 합니다.
 
-오류가 카운트 그룹의 구성원 30 초 동안 되었음을 나타냅니다. 오류가 일회용 이벤트 고려 하는 경우 시작 하므로 "오류가" 배열은 항상 즉시 처리 하 고 세션에서 지워집니다.  응답에는 표시 되지 됩니다.  ("그룹" 배열 변경 되거나 제거 될 때까지 스틱 또는 멤버가 세션을 둡니다.)
+오류가 카운트 그룹의 구성원 30 초 동안 되었음을 나타냅니다. 오류가 일회용 이벤트 고려 하는 경우 시작 하므로 "오류가" 배열은 항상 즉시 처리 하 고 세션에서 지워집니다.응답에는 표시 되지 됩니다.("그룹" 배열 변경 되거나 제거 될 때까지 스틱 또는 멤버가 세션을 둡니다.)

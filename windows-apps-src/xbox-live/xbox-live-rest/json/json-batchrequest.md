@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6271cdf3d94f194adee5087136c1d87ad9f214b5
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5431633"
+ms.locfileid: "5469574"
 ---
 # <a name="batchrequest-json"></a>BatchRequest(JSON)
 사용자, 장치 및 제목 등의 현재 상태 정보를 필터링 할 속성의 배열입니다.
@@ -27,7 +27,7 @@ ms.locfileid: "5431633"
 
 BatchRequest 개체에는 다음 사양을 있습니다.
 
-| 멤버| 유형| 설명|
+| 구성원| 유형| 설명|
 | --- | --- | --- |
 | 사용자| 문자열의 배열| 목록 XUIDs 사용자 1100 XUIDs 한 번에 최대 자세한 현재 상태입니다.|
 | deviceTypes| 문자열의 배열| 목록에 대해 알아야 할 사용자가 사용 하는 장치 유형입니다. 모든 가능한 장치 유형에 기본값으로 배열을 비워 (즉, none 필터링 됩니다).|
@@ -38,7 +38,7 @@ BatchRequest 개체에는 다음 사양을 있습니다.
 <a id="ID4EAD"></a>
 
 
-## <a name="sample-json-syntax"></a>샘플 JSON 구문
+## <a name="sample-json-syntax"></a>JSON 구문 예제
 
 
 ```json

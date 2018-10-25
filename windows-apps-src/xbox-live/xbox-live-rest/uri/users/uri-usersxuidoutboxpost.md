@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 260d55104a2083270b1f5c2d2892826cc7b3d6ed
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445056"
+ms.locfileid: "5470167"
 ---
 # <a name="post-usersxuidxuidoutbox"></a>POST (/users/xuid({xuid})/outbox)
 받는 사람 목록에 지정 된 메시지를 보냅니다.
@@ -87,7 +87,7 @@ ms.locfileid: "5445056"
 
 | 속성| 형식| 최대 길이| 소비자| 설명|
 | --- | --- | --- | --- | --- |
-| 머리글| 헤더|  | 모두| 사용자가 메시지 헤더|
+| 머리글| 헤더|  | 모두| 사용자가 메시지 헤더|
 | messageText| string| 250| Windows 8을 제외 하 고 모든 플랫폼| 사용자가 메시지 텍스트 (u t F-8)|
 
 #### <a name="header"></a>헤더
@@ -100,7 +100,7 @@ ms.locfileid: "5445056"
 
 | 속성| 형식| 최대 길이| 소비자| 설명|
 | --- | --- | --- | --- | --- |
-| xuid| ulong|  | 모두| 수신자의 XUID 합니다. 게이머는 전송 하는 경우 사용 되지 않습니다.|
+| xuid| ulong|  | 모두| 수신자의 XUID 합니다. 게이머는 전송 하는 경우 사용 되지 않습니다.|
 | 게이머 태그| string| 15| 모두| 받는 사람의 게이머 태그입니다. XUID 전송 되는 경우 사용 되지 않습니다.|
 
 #### <a name="sample-request-body"></a>샘플 요청 본문 
