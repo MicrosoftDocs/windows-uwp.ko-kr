@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47383cd8f89e5da104ac73878b0613c364240459
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: f73a99ea4dc58880f1de517853a05aa0b0d6dd6b
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5512905"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 
@@ -172,7 +172,7 @@ OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합
 -   장치와 관련된 앱 데이터는 로밍하지 않습니다. 로컬 파일 리소스의 경로 이름과 같은 일부 정보는 로컬에만 관련됩니다. 로컬 정보를 로밍하려는 경우 정보가 보조 장치에서 유효하지 않으면 앱을 복구할 수 있는지 확인해야 합니다.
 -   큰 앱 데이터 집합은 로밍하지 않습니다. 앱에서 로밍할 수 있는 앱 데이터의 양에는 제한이 있습니다. [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625) 속성을 사용하여 최대값을 가져옵니다. 앱이 이 제한에 도달하면 앱 데이터 저장소의 크기가 이 제한을 더 이상 초과하지 않을 때까지 데이터가 로밍되지 않습니다. 앱을 디자인할 때는 큰 데이터에 대한 제한을 두어 제한을 초과하지 않도록 하는 방법을 고려해야 합니다. 예를 들어 게임 상태 저장에 각각 10KB가 필요한 경우 앱에서 사용자가 최대 10개의 게임을 저장하도록 허용할 수 있습니다.
 -   즉각적인 동기화를 사용하는 데이터에는 로밍을 사용하지 않습니다. Windows는 즉각적인 동기화를 보증하지 않으므로 사용자가 오프라인 상태이거나 지연 시간이 긴 네트워크에 있을 경우 로밍이 현저하게 지연될 수 있습니다. UI가 즉각적인 동기화를 사용하지 않는지 확인하세요.
--   자주 변경되는 데이터에는 로밍을 사용하지 않습니다. 예를 들어 앱이 노래의 초 단위 위치와 같이 자주 변경되는 정보를 추적하는 경우 이 정보를 로밍 앱 데이터로 저장하지 마세요. 대신 현재 재생 중인 노래와 같이 좋은 사용자 환경을 제공하는 자주 사용되지 않는 표현을 선택합니다.
+-   자주 변경 되는 데이터 로밍을 사용 하지 마십시오. 예를 들어 앱이 노래의 초 단위 위치와 같이 자주 변경되는 정보를 추적하는 경우 이 정보를 로밍 앱 데이터로 저장하지 마세요. 대신 현재 재생 중인 노래와 같이 좋은 사용자 환경을 제공하는 자주 사용되지 않는 표현을 선택합니다.
 
 ### <a name="roaming-pre-requisites"></a>로밍 필수 조건
 
