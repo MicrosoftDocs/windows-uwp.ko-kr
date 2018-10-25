@@ -222,7 +222,7 @@ using namespace winrt::Windows::Globalization::NumberFormatting;
 CurrencyFormatter currency{ L"USD" };
 ```
 
-하지만 정품 인증 공장을 직접 만들고자 하는 경우 귀하의 편의에 따라 여기에서 개체를 만듭니다. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
+But there may be times that you'll want to create the activation factory yourself, and then create objects from it at your convenience. 여기에 [**winrt::get_activation_factory**](/uwp/cpp-ref-for-winrt/get-activation-factory) 함수 템플릿을 사용하는 방법을 보여 주는 몇 가지 예가 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Globalization::NumberFormatting;
