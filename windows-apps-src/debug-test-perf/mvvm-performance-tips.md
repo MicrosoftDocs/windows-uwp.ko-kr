@@ -6,19 +6,17 @@ description: 이 항목에서는 선택한 소프트웨어 디자인 패턴 및 
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: d308fd8b8ded0ac737fc39c4760bc52d8414b3cb
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: b39f68d6f5f00f8e33a080b77614b9ba11627989
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894487"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562413"
 ---
 # <a name="mvvm-and-language-performance-tips"></a>MVVM 및 언어 성능 팁
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 설명합니다.
 

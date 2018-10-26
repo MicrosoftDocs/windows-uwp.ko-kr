@@ -6,16 +6,14 @@ title: 미디어 휴지 만들기, 예약 및 관리
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b8d25047435ece1c55a982e69be45fa0e6efb74
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 0feb7f6771254bf500e4b64fd0e632daad9817e4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843666"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560026"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>미디어 휴지 만들기, 예약 및 관리
 
@@ -88,10 +86,6 @@ ms.locfileid: "1843666"
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## <a name="get-information-about-the-current-media-break"></a>현재 미디어 중단에 대한 정보 가져오기
-이 문서의 앞부분에서 설명한 것처럼 [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) 속성을 사용하여 현재 재생 중인 미디어 중단의 미디어 항목을 확인할 수 있습니다. UI를 업데이트하기 위해 현재 재생 중인 항목을 정기적으로 확인하는 것이 좋습니다. 먼저 [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak) 속성이 null인지 확인해야 합니다. 속성이 null이면 현재 재생 중인 미디어 중단이 없습니다.
-
-[!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
 ## <a name="access-the-current-playback-session"></a>현재 재생 세션 액세스
 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체는 **MediaPlayer** 클래스를 사용하여 현재 재생 중인 미디어 콘텐츠와 관련된 데이터 및 이벤트를 제공합니다. [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager)에는 특히 재생 중인 미디어 중단 콘텐츠와 관련된 데이터 및 이벤트를 가져오기 위해 액세스할 수 있는 **MediaPlaybackSession**도 있습니다. 재생 세션에서 가져올 수 있는 정보에는 현재 재생 상태(재생 중 또는 일시 중지됨), 콘텐츠 내의 현재 재생 위치 등이 포함됩니다. 미디어 중단 콘텐츠의 가로 세로 비율이 기본 콘텐츠와 다른 경우 [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) 및 [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) 속성과 [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged)를 사용하여 비디오 UI를 조정할 수 있습니다. 앱 성능에 대한 중요한 원격 분석을 제공할 수 있는 [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded), [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged) 등의 이벤트를 받을 수도 있습니다.
@@ -107,9 +101,9 @@ ms.locfileid: "1843666"
 * [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
 * [시스템 미디어 전송 컨트롤의 수동 컨트롤](system-media-transport-controls.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ title: 지원되는 코덱
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 50d520437f9be9d2e2bc6fe8243c3d34b17ef2d9
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 57a604b1b3996019bcf6e39bc88c9a59a74cb51c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "303677"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562838"
 ---
 # <a name="supported-codecs"></a>지원되는 코덱
 
@@ -30,7 +28,7 @@ ms.locfileid: "303677"
 > [!NOTE] 
 > AMR-NB 지원이 표시되어 있으며 이 코덱은 서버 SKU에서 지원되지 않습니다.
 
- 
+ 
 
 ### <a name="desktop"></a>데스크톱
 
@@ -341,7 +339,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="mobile"></a>모바일
 
@@ -652,7 +650,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-core-x86"></a>IoT Core(x86)
 
@@ -963,7 +961,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-core-arm"></a>IoT Core(ARM)
 
@@ -1274,7 +1272,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="xbox"></a>XBox
 
@@ -1585,7 +1583,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="video-codec--format-support"></a>비디오 코덱 및 형식 지원
 
@@ -1595,7 +1593,7 @@ ms.locfileid: "303677"
 > H.265 지원이 표시되어 있으면 장치 제품군의 일부 장치에서는 지원되지 않을 수도 있습니다.
 > MPEG-2/MPEG-1 지원이 표시되어 있으면 선택적 Microsoft DVD 유니버설 Windows 앱이 설치되어 있는 경우에만 지원됩니다.
 
- 
+ 
 
 ### <a name="desktop"></a>데스크톱
 
@@ -1814,7 +1812,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="mobile"></a>모바일
 
@@ -2033,7 +2031,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-core-x86"></a>IoT Core(x86)
 
@@ -2252,7 +2250,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="iot-arm"></a>IoT(ARM)
 
@@ -2471,7 +2469,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="xbox"></a>XBox
 
@@ -2690,7 +2688,7 @@ ms.locfileid: "303677"
 </tbody>
 </table>
 
-## <a name="image-codec--format-support"></a>이미지 코덱 및 형식 지원 
+## <a name="image-codec--format-support"></a>이미지 코덱 및 형식 지원 
 
 <table>
 <colgroup>

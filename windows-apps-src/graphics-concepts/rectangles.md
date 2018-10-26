@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c493b6189cfc8c396568ca42faa4162e40501f5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: cb870fa851e51773d95d23ebf9d31f76774924de
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043122"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562188"
 ---
 # <a name="rectangles"></a>사각형
 
@@ -50,9 +48,9 @@ typedef struct tagRECT {
 
 [좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,19 +6,18 @@ ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, egl, dxgi, direct3d
-ms.openlocfilehash: 7d7e4058eccd39911bd84d3967ef07b93b6ee89d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 64f237fd26a2ed7328e2c2264da17d3a5d7ba588
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220782"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561291"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>EGL 코드와 DXGI 및 Direct3D 비교
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -31,9 +30,9 @@ DXGI(DirectX Graphics Interface) 및 여러 Direct3D API는 EGL과 동일한 역
 
 EGL과 마찬가지로, DXGI 및 Direct3D는 그래픽 리소스를 구성하고, 그리는 셰이더에 대한 렌더링 컨텍스트를 가져오고, 결과를 창에 표시할 수 있는 메서드를 제공합니다. 그러나 DXGI 및 Direct3D에는 좀 더 많은 옵션이 있으며 EGL에서 포팅할 경우 올바르게 설정하기 위해 수행해야 할 작업이 더 많습니다.
 
-> **참고** 이 지침은 [Khronos Group의 EGL 1.4용 개방형 사양에 기반을 두고 있으며, 이 사양은 Khronos 기본 플랫폼 그래픽 인터페이스(EGL 버전 1.4 - 2011년 4월 6일)\[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf)에서 살펴볼 수 있습니다. 다른 플랫폼 및 개발 언어 관련 구문 차이는 이 지침에서 다루지 않습니다.
+> **참고**  이 지침은 Khronos Group의 EGL 1.4 용 개방형 사양을 기반: [Khronos 기본 플랫폼 그래픽 인터페이스 (EGL 버전 1.4-2011 년 4 월 6 일) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf)합니다. 다른 플랫폼 및 개발 언어 관련 구문 차이는 이 지침에서 다루지 않습니다.
 
- 
+ 
 
 ## <a name="how-does-dxgi-and-direct3d-compare"></a>DXGI와 Direct3D는 어떻게 비교할까요?
 
@@ -50,7 +49,7 @@ EGL과 마찬가지로, DXGI 및 Direct3D는 다음과 같은 동작에 대한 A
 -   특정 렌더링 대상(예: 텍스처)으로 렌더링
 -   그래픽 리소스로 렌더링한 결과로 창의 디스플레이 화면 업데이트
 
-그래픽 파이프라인을 구성하는 기본 Direct3D 프로세스를 보려면 Microsoft Visual Studio 2015의 DirectX 11 앱(유니버설 Windows) 템플릿을 확인하세요. 이 템플릿의 기본 렌더링 클래스는 Direct3D 11 그래픽 인프라를 설정하고, 해당 기본 리소스를 구성하고, 화면 회전과 같은 UWP(유니버설 Windows 플랫폼) 앱 기능을 지원하기 위한 좋은 기준을 제공합니다.
+그래픽 파이프라인을 구성 하기 위한 기본 Direct3D 프로세스를 보려면 Microsoft Visual Studio2015에서 DirectX 11 앱 (유니버설 Windows) 템플릿을 확인 합니다. 이 템플릿의 기본 렌더링 클래스는 Direct3D 11 그래픽 인프라를 설정하고, 해당 기본 리소스를 구성하고, 화면 회전과 같은 UWP(유니버설 Windows 플랫폼) 앱 기능을 지원하기 위한 좋은 기준을 제공합니다.
 
 EGL에는 Direct3D 11에 비해 매우 적은 수의 API가 포함되어 있으므로, 해당 플랫폼에 한정된 명명 및 전문 용어에 익숙하지 않은 경우 Direct3D 11을 탐색하기가 어려울 수 있습니다. 다음은 이해를 돕기 위한 간단한 개요입니다.
 
@@ -63,7 +62,7 @@ EGL에는 Direct3D 11에 비해 매우 적은 수의 API가 포함되어 있으�
 | **EGLContext**  | Direct3D에서는 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 인터페이스를 사용하여 그래픽 파이프라인을 구성하고 그래픽 파이프라인에 대한 명령을 실행합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **EGLConfig**   | Direct3D 11에서는 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 인터페이스의 메서드를 사용하여 버퍼, 텍스처, 스텐실 및 셰이더와 같은 그래픽 리소스를 만들고 구성합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
- 
+ 
 
 다음은 단순 그래픽 디스플레이와 UWP 앱용 DXGI 및 Direct3D에서 리소스 및 컨텍스트를 설정하기 위한 가장 기본적인 프로세스입니다.
 
@@ -75,9 +74,9 @@ EGL에는 Direct3D 11에 비해 매우 적은 수의 API가 포함되어 있으�
 6.  파이프라인을 실행했으며 백 버퍼에 프레임을 그렸으면 [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 사용하여 이 프레임을 화면에 표시합니다.
 
 이 프로세스를 좀더 자세히 살펴보려면 [DirectX 그래픽 시작](https://msdn.microsoft.com/library/windows/desktop/hh309467)을 참조하세요. 이 항목의 나머지 내용에서는 기본 그래픽 파이프라인 설정 및 관리에 대한 여러 일반적인 단계를 설명합니다.
-> **참고** Windows 데스크톱 앱의 경우 Direct3D 스왑 체인(예: [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083))을 가져오기 위한 API가 다르며, [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 사용하지 않습니다.
+> **참고**  Windows 데스크톱 앱 [**d3d11device:: createdeviceandswapchain**](https://msdn.microsoft.com/library/windows/desktop/ff476083)같은 Direct3D 스왑 체인을 가져오기 위한 Api가 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 사용 하지 않습니다.
 
- 
+ 
 
 ## <a name="obtaining-a-window-for-display"></a>디스플레이를 위한 창 가져오기
 
@@ -164,7 +163,7 @@ void SimpleDirect3DApp::SetWindow(CoreWindow^ window)
   swapChainDesc.SampleDesc.Quality = 0;
   swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
   swapChainDesc.BufferCount = 2; // Use double-buffering to minimize latency.
-  swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All Windows Store apps must use this SwapEffect.
+  swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All UWP apps must use this SwapEffect.
   swapChainDesc.Flags = 0;
 
   // ...
@@ -281,7 +280,7 @@ D3D11CreateDevice(
   creationFlags, // Set set debug and Direct2D compatibility flags.
   featureLevels, // List of feature levels this app can support.
   ARRAYSIZE(featureLevels),
-  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for Windows Store apps.
+  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for UWP apps.
   &device, // Returns the Direct3D device created.
   &m_featureLevel, // Returns feature level of device created.
   &d3dContext // Returns the device immediate context.
@@ -395,7 +394,7 @@ UWP 앱에서 [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows
 | eglDestroySurface                | 해당 없음. UWP 앱의 CoreWindow가 플랫폼에 의해 닫히면 그래픽 리소스가 정리됩니다.                                                                                                                                                                                                                                                                                                                                                                                                 |
 | eglGetCurrentDisplay             | [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 현재 메인 앱 창에 대한 참조를 가져옵니다.                                                                                                                                                                                                                                                                                                                                                         |
 | eglGetCurrentSurface             | 현재 [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582)입니다. 일반적으로 렌더러 개체로 범위가 지정됩니다.                                                                                                                                                                                                                                                                                                                                                         |
-| eglGetError                      | 오류는 DirectX 인터페이스에 있는 대부분의 메서드에 의해 반환되는 HRESULT로 표시됩니다. 메서드가 HRESULT를 반환하지 않으면 [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360)를 호출합니다. 시스템 오류를 HRESULT 값으로 변환하려면 [**HRESULT\_FROM\_WIN32**](https://msdn.microsoft.com/library/windows/desktop/ms680746) 매크로를 사용합니다.                                                                                                                                                                                                  |
+| eglGetError                      | 오류는 DirectX 인터페이스에 있는 대부분의 메서드에 의해 반환되는 HRESULT로 표시됩니다. 메서드가 HRESULT를 반환하지 않으면 [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360)를 호출합니다. 시스템 오류 anHRESULTvalue 변환할[**HRESULT\_FROM\_WIN32**](https://msdn.microsoft.com/library/windows/desktop/ms680746)사용 하 여매크로 합니다.                                                                                                                                                                                                  |
 | eglInitialize                    | [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 현재 메인 앱 창에 대한 참조를 가져옵니다.                                                                                                                                                                                                                                                                                                                                                         |
 | eglMakeCurrent                   | [**ID3D11DeviceContext1::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 사용하여 현재 컨텍스트에서 그리기 위한 렌더링 대상을 설정합니다.                                                                                                                                                                                                                                                                                                                                  |
 | eglQueryContext                  | 해당 없음. 그러나 일부 구성 데이터 및 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) 인스턴스에서 렌더링 대상을 가져올 수 있습니다. (사용 가능한 메서드 목록은 링크를 참조하세요.)                                                                                                                                                                                                                                                                                           |
@@ -410,11 +409,11 @@ UWP 앱에서 [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows
 | eglWaitGL                        | 공유 화면의 경우 IDXGIKeyedMutex를 사용합니다. 일반 GPU 다중 스레딩에 대해서는 [다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ff476891)을 읽어 보세요.                                                                                                                                                                                                                                                                                                                                    |
 | eglWaitNative                    | 공유 화면의 경우 IDXGIKeyedMutex를 사용합니다. 일반 GPU 다중 스레딩에 대해서는 [다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ff476891)을 읽어 보세요.                                                                                                                                                                                                                                                                                                                                    |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

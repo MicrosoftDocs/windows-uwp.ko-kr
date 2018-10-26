@@ -6,16 +6,14 @@ ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c89793dd92a458c47a33aac4f7d4c728088cf1dc
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9d241569afdbbc9df95fa11cd2261e78c077a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674360"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562729"
 ---
 # <a name="relativesource-markup-extension"></a>{RelativeSource} 태그 확장
 
@@ -43,7 +41,7 @@ ms.locfileid: "1674360"
 | 용어 | 설명 |
 |------|-------------|
 | {RelativeSource Self} | <strong>Self</strong>의 [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) 값을 생성합니다. 대상 요소가 이 바인딩의 원본으로 사용되어야 합니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용합니다. |
-| {RelativeSource TemplatedParent} | 이 바인딩의 원본으로 적용되는 [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391)을 생성합니다. 템플릿 수준에서 런타임 정보를 바인딩에 적용하는 데 유용합니다. | 
+| {RelativeSource TemplatedParent} | 이 바인딩의 원본으로 적용되는 [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391)을 생성합니다. 템플릿 수준에서 런타임 정보를 바인딩에 적용하는 데 유용합니다. | 
 
 ## <a name="remarks"></a>설명
 
@@ -64,7 +62,7 @@ ms.locfileid: "1674360"
 
 `RelativeSource={RelativeSource Self}`를 사용하여 개체의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)를 자체로 설정하는 방법도 있습니다.  예를 들어 이 방법은 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스가 고유한 데이터 바인딩을 위해 즉시 사용 가능한 보기 모델을 이미 제공하고 있는 사용자 지정 속성을 사용하여 확장된 일부 SDK 예제에서 확인할 수 있습니다. 예는 다음과 같습니다. `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**참고**  **RelativeSource**의 XAML 사용은 의도한 사용(XAML에서 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831)의 값을 바인딩 식의 일부로 설정함)만 보여 줍니다. 이론적으로, 값이 [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)인 속성을 설정하는 경우 다른 사용이 가능합니다.
+**참고** **RelativeSource** 의 XAML 사용 의도 된 사용만 표시: 바인딩 식의 일부로 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) xaml에서에 대 한 값을 설정 합니다. 이론적으로, 값이 [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)인 속성을 설정하는 경우 다른 사용이 가능합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

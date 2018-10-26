@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 485d16cb9c40769c123719f8f55e81d804f220a3
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393992"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563459"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 템플릿 및 패턴 사용
 
@@ -29,7 +27,7 @@ ms.locfileid: "1393992"
 
 그러나 표시하려는 [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) 개체 구성 요소의 순서 및 형식을 조금 더 제어하려는 경우 생성자의 *formatTemplate* 인수에 형식 패턴을 전달할 수 있습니다. 형식 패턴은 특수 구문을 사용하므로 **DateTime** 개체의 개별 구성 요소인 월 이름만 또는 연도 값만을 가져와 직접 선택한 사용자 지정 형식으로 표시할 수 있습니다. 또한 다른 언어 및 지역에 맞게 패턴을 지역화할 수 있습니다.
 
-**참고**  이는 형식 패턴의 개요일 뿐입니다. 형식 템플릿 및 형식 패턴에 대한 자세한 내용은 [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스의 설명 섹션을 참조하세요.
+**참고**형식 패턴의 개요 일 뿐입니다. 형식 템플릿 및 형식 패턴에 대한 자세한 내용은 [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스의 설명 섹션을 참조하세요.
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>형식 템플릿과 형식 패턴의 차이점
 
@@ -63,7 +61,7 @@ Ja-JP: "{month.integer}月{day.integer}日"
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-위의 포맷터에서는 개별 구성 요소에 대한 문화권별 값을 대괄호 {}로 묶어 반환합니다. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
+위의 포맷터 괄호 안에 개별 구성 요소에 대 한 문화권별 값을 반환 합니다. {}. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
 
 ``` syntax
 En-US: January 1
@@ -117,7 +115,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` 리소스 파일(.resw)에서 지역화할 리소스를 나타내는 리소스 ID입니다. 영어(미국)이 기본 언어인 경우, "{0}"이 날짜를, "{1}"이 시간을 나타낸다는 설명과 함께 "{0} | {1}" 값으로 설정됩니다. 이런 방식으로 번역자는 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어, 일부 언어나 지역에서 시간이 날짜 앞에 오는 것이 더 자연스럽게 느껴지면 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 기호 문자로 바꿀 수 있습니다.
+`CustomDateTimeFormatString` 리소스 파일(.resw)에서 지역화할 리소스를 나타내는 리소스 ID입니다. 값으로 설정 됩니다이 기본 언어인 영어 (미국), "{0} | {1}"나타낸다는 설명과 함께 하 는"{0}"은 날짜 및"{1}"시간입니다. 이런 방식으로 번역자는 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어, 일부 언어나 지역에서 시간이 날짜 앞에 오는 것이 더 자연스럽게 느껴지면 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 기호 문자로 바꿀 수 있습니다.
 
 이 예를 구현하는 또다른 방법은 형식 패턴에 2개의 포맷터를 쿼리하고 함께 연결한 다음 결과 형식 패턴에서 세 번째 포맷터를 구성하는 것입니다.
 

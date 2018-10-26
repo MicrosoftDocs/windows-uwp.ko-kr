@@ -6,18 +6,17 @@ ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 98735ce2d102c1a0b7b054b9d70038fe5f9dc40c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 91732a6c4abc082283dc397fb87ad38d9de452b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220614"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559813"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>예약된 파일 및 URI 체계 이름
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 URI 연결을 사용하여 다른 앱이 특정 URI 체계를 시작할 때 자동으로 앱을 실행할 수 있습니다. 하지만 일부 URI 연결은 사용할 수 없는 예약된 연결입니다. 앱이 예약된 연결에 등록하는 경우 해당 등록은 무시됩니다. 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다.
 
@@ -40,7 +39,7 @@ URI 연결을 사용하여 다른 앱이 특정 URI 체계를 시작할 때 자�
 <tr><td>.htm</td><td>.one</td><td>.url</td><td>.zip</td></tr>
 <tr><td>.html</td><td>.onetoc2</td><td>.vcf</td><td></td></tr>
 <tr><td>.ico</td><td>.p7b</td><td>.wav</td><td></td></tr>
-</table> 
+</table> 
 
 ## <a name="file-types-reserved-for-the-operating-system"></a>운영 체제용으로 예약된 파일 형식
 

@@ -6,19 +6,18 @@ ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 대기 시간, dxgi, 스왑 체인, directx
-ms.openlocfilehash: 9f2babdac40e3baf27bec9b2e214e9350d1f2539
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 51a1dd6d7f1c39d82201d3b9741276a54e4c06a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218932"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563775"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>DXGI 1.3 스왑 체인으로 대기 시간 단축
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 DXGI 1.3을 사용하여 스왑 체인이 새로운 프레임 렌더링을 시작할 적절한 시간을 신호로 보낼 때까지 기다려 효과적인 프레임 지연을 줄입니다. 일반적으로 게임에서는 플레이어 입력을 받은 시간부터 게임이 해당 입력에 응답하여 디스플레이를 업데이트할 때까지 대기 시간이 최대한 적어야 합니다. 이 항목에서는 게임에서 효과적인 프레임 지연을 최소화하는 데 사용할 수 있도록 Direct3D 11.2부터 제공되는 기술에 대해 설명합니다.
 
@@ -38,9 +37,9 @@ DXGI 1.3을 사용하여 스왑 체인이 새로운 프레임 렌더링을 시�
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **참고**   일부 플래그와 달리 이 플래그는 [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)를 사용하여 추가하거나 제거할 수 없습니다. 이 플래그가 스왑 체인을 만들 때와 다르게 설정되면 DXGI에서 오류 코드를 반환합니다.
+> **참고**  일부 플래그와 달리이 플래그를 추가할 수 없습니다 또는 [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)를 사용 하 여 제거 합니다. 이 플래그가 스왑 체인을 만들 때와 다르게 설정되면 DXGI에서 오류 코드를 반환합니다.
 
- 
+ 
 
 ```cpp
 // If the swap chain already exists, resize it.
@@ -159,9 +158,9 @@ Windows의 다중 스레드 프로그래밍에 대한 자세한 내용은 다음
 * [동기화](https://msdn.microsoft.com/library/windows/desktop/ms686353)
 * [이벤트 개체 사용(Windows)](https://msdn.microsoft.com/library/windows/desktop/ms686915)
 
- 
+ 
 
- 
+ 
 
 
 

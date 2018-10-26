@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: abff26c7f2e874d4a5e8e964fe716fcf2f1592cb
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: be88f06cd5893f2f67697a54754826440bdf7d18
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045096"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563868"
 ---
 # <a name="bc6h-format"></a>BC6H 형식
 
@@ -34,15 +32,15 @@ BC6H는 다음과 같은 DXGI\_FORMAT 열거 값으로 지정됩니다.
 -   **DXGI\_FORMAT\_BC6H\_UF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용하지 않습니다.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용합니다.
 
-**참고**   색 채널에 대한 16비트 부동 소수점 형식을 흔히 "반" 부동 소수점 형식이라고 합니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
+**참고**  16 비트 부동 소수점 형식 색 채널에 대 한 "반" 부동 소수점 형식에 키라고도 됩니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16(부호 없는 부동 소수점) | 5개의 지수 비트 + 11개의 가수 비트              |
 | SF16(부호 있는 부동 소수점)   | 1개의 부호 비트 + 5개의 지수 비트 + 10개의 가수 비트 |
 
- 
+ 
 
- 
+ 
 
 [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277)(배열 포함), Texture3D 또는 TextureCube(배열 포함) 텍스처 리소스에 BC6H 형식을 사용할 수 있습니다. 마찬가지로 이 형식은 이러한 리소스와 연결된 모든 MIP 맵 표면에 적용됩니다.
 
@@ -114,7 +112,7 @@ decompress_bc6h(x, y, block)
 | 13   | 63비트           | 0비트    | 60비트(12.8, 12.8, 12.8)       | 5비트(01011) |
 | 14   | 63비트           | 0비트    | 60비트(16.4, 16.4, 16.4)       | 5비트(01111) |
 
- 
+ 
 
 이 표의 각 형식은 모드 비트로 고유하게 식별 가능합니다. 처음 10개의 모드가 두 영역 타일에 사용되며 모드 비트 필드 길이는 2비트 또는 5비트일 수 있습니다. 이러한 블록에는 압축된 색 끝점(72 또는 75비트), 파티션(5비트) 및 파티션 인덱스(46비트)에 대한 필드도 있습니다.
 
@@ -160,7 +158,7 @@ BC6H의 경우 모드에 관계없이 알파 채널이 항상 1.0을 반환합�
 | 수단    | endpt\[1\].A\[2\] |
 | bz    | endpt\[1\].B\[2\] |
 
- 
+ 
 
 Endpt\[i\]. 여기에서 i는 각각 0번째 또는 1번째 끝점 집합을 나타내는 0 또는 1입니다.
 ## <a name="span-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspansign-extension-for-endpoint-values"></a><span id="Sign-extension-for-endpoint-values"></span><span id="sign-extension-for-endpoint-values"></span><span id="SIGN-EXTENSION-FOR-ENDPOINT-VALUES"></span>끝점 값에 대한 부호 확장
@@ -329,9 +327,9 @@ unsigned short finish_unquantize(int comp)
 
 [텍스처 블록 압축](texture-block-compression.md)
 
- 
+ 
 
- 
+ 
 
 
 

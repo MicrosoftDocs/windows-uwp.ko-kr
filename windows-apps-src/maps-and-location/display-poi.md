@@ -6,16 +6,14 @@ ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
 ms.author: normesta
 ms.date: 08/11/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 지도, 위치, 고정핀
 ms.localizationpriority: medium
-ms.openlocfilehash: 7601b923f30365d1d85864637578b2a753df0628
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 13c0ea463cbab97e03c87c4e558bba0eff92300c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691502"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561469"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>지도에 관심 지점 표시
 

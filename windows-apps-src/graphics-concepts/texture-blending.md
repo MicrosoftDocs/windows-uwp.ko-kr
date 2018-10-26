@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1014ed205c5cf0eda2c9b71c8406a98394b1463
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d4121bd402b048ee6102ed3be30b94a66e274273
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652902"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562201"
 ---
 # <a name="texture-blending"></a>텍스처 혼합
 
@@ -34,9 +32,9 @@ Direct3D는 텍스처 스테이지를 사용하여 싱글패스 방식의 다중
 
 위 다이어그램에서도 알 수 있듯이 텍스처 스테이지는 지정 연산자를 사용하여 2개의 인수를 혼합합니다. 공통 연산으로는 인수의 색상 또는 알파 성분을 단순히 곱하거나(modulation) 더하는(addition) 것도 포함되지만 지원되는 연산 수는 24개가 넘습니다. 스테이지 인수는 관련 텍스처, 반복되는 색상 또는 알파(Gouraud 셰이딩 단계에서 반복), 임의 색상 및 알파, 또는 이전 텍스처 스테이지의 결과가 될 수도 있습니다.
 
-**참고**   Direct3D는 색상 혼합과 알파 혼합을 구분합니다. 응용 프로그램은 색상 및 알파에 대한 혼합 연산과 인수를 개별적으로 설정하며, 이러한 설정 결과는 서로 독립적입니다.
+**참고**  Direct3D는 색상 혼합과 알파 혼합을 구분 합니다. 응용 프로그램은 색상 및 알파에 대한 혼합 연산과 인수를 개별적으로 설정하며, 이러한 설정 결과는 서로 독립적입니다.
 
- 
+ 
 
 다중 혼합 스테이지에서 사용되는 인수와 연산의 조합은 간단한 흐름 기반 혼합 언어를 정의합니다. 한 스테이지의 결과가 다른 스테이지로, 그리고 또 다른 스테이지로 흘러가는 방식입니다. 결과가 이렇게 스테이지에서 스테이지로 흐르면서 결국 폴리곤에서 래스터화되는 개념을 텍스트 혼합 전파라고 합니다. 다음 다이어그램은 각 텍스처 스테이지가 텍스처 혼합 전파를 구성하는 방식을 나타낸 것입니다.
 
@@ -74,16 +72,16 @@ Direct3D는 텍스처 스테이지를 사용하여 싱글패스 방식의 다중
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [텍스처](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

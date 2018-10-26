@@ -6,16 +6,14 @@ title: Microsoft Store 서비스
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: d53fa39d0c6359e6f081c62a415cbf1874549b8f
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 6b9a95937dca3ab45c0fd027252719d6b3aa57fb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521246"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561331"
 ---
 # <a name="microsoft-store-services"></a>Microsoft Store 서비스
 

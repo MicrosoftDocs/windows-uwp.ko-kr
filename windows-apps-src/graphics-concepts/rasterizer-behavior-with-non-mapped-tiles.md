@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 218b53872fc8fd99a961dceefd2bfbd091c52511
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: f56e8051c8a66cf579a7c3dbcddc738b3a10bcaf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043672"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562423"
 ---
 # <a name="span-iddirect3dconceptsrasterizerbehaviorwithnon-mappedtilesspanrasterizer-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.rasterizer_behavior_with_non-mapped_tiles"></span>비매핑된 타일을 사용하는 래스터라이저 동작
 
@@ -48,9 +46,9 @@ RTV의 읽기가 누락 타일에서 0을 반환하고 쓰기가 누락됩니다
 
 [스트리밍 리소스에 대한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

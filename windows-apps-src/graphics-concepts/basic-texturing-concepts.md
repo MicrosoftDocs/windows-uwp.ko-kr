@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbcdd17643f64ada02ff1045e57c873f40b2c36
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c48b7b007c1af1eaf6013d5f6e99468713d50745
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044692"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562274"
 ---
 # <a name="basic-texturing-concepts"></a>기본 텍스처 지정 개념
 
@@ -36,9 +34,9 @@ Direct3D 텍스처는 비트맵이기 때문에 Direct3D 원형에 비트맵을 
 
 [텍스처](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -5,16 +5,14 @@ description: 카메라 바코드 스캐너를 사용 하는 방법 학습
 ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 861233de6967a6199bae5d81c1a3938bf8645246
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 12aabff66fc116f510dced78aa56f3df5f84c850
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976035"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559996"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>카메라 바코드 스캐너 시작하기
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>1단계: 앱 매니페스트에 기능 선언 추가
@@ -88,3 +86,14 @@ Windows와 함께 배송된 바코더를 사용하는 카메라 바코드 스캐
 
 > [!TIP]
 > 응용 프로그램에서 카메라 바코드 스캐너에 대한 미리 보기를 호스팅하는 방법은 [미리 보기 호스팅](pos-camerabarcode-hosting-preview.md)을 참조하세요.
+
+## <a name="step-8-initiate-scan"></a>8 단계: 시작 검사 
+[**StartSoftwareTriggerAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.startsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StartSoftwareTriggerAsync)을 호출하여 스캔 프로세스를 시작할 수 있습니다.  
+[**IsDisabledOnDataReceived**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) 값에 따라 스캐너는 오직 하나의 바코드만 스캔한 다음 중지하거나 [**StopSoftwareTriggerAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.stopsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StopSoftwareTriggerAsync)가 호출될 때까지 계속해서 스캔을 할 수 있습니다.
+
+바코드가 디코딩될 때 스캐너 동작을 제어하도록 [**IsDisabledOnDataReceived**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived)를 원하는 값으로 설정합니다.
+
+| 값 | 설명 |
+| ----- | ----------- |
+| True   | 오직 하나의 바코드만 스캔하고 중지 |
+| False  | 중단 없이 지속적으로 바코드 스캔 |

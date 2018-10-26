@@ -6,19 +6,18 @@ ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, directx, 입력 대기 시간
-ms.openlocfilehash: cf83b02a6388f71f94641e7c24e011a540790fa0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a2e92dc10dbcdc3a511c1b1a1271ae759cc03c60
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219108"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564632"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 입력 대기 시간은 게임 환경에 큰 영향을 줄 수 있으며, 최적화하면 게임에 더 세련된 느낌을 줄 수 있습니다. 또한 입력 이벤트를 적절하게 최적화하면 배터리 수명을 향상시킬 수 있습니다. 올바른 CoreDispatcher 입력 이벤트 처리 옵션을 선택하여 게임에서 입력을 가능한 한 매끄럽게 처리하도록 하는 방법을 알아봅니다.
 
@@ -236,7 +235,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-Microsoft Visual Studio 2015의 **DirectX 11 및 XAML 앱(유니버설 Windows)** 템플릿은 유사한 방식으로 게임 루프를 여러 스레드로 분할합니다. [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
+Microsoft Visual Studio2015에서 **DirectX 11 및 XAML 앱 (유니버설 Windows)** 템플릿을 유사한 방식으로 여러 스레드로 게임 루프를 분할 합니다. [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>입력 대기 시간을 줄이는 추가 방법
 
@@ -249,7 +248,7 @@ DirectX 게임은 사용자에게 표시되는 화면 내용을 업데이트하�
 
 ![그림 1 directx의 입력 대기 시간 ](images/input-latency1.png)
 
-Windows 8.1에서 DXGI는 스왑 체인에 대한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** 플래그를 도입했습니다. 이 플래그를 사용하면 앱이 Present 큐를 빈 상태로 유지하기 위해 추론을 구현하지 않고도 이 대기 시간을 쉽게 줄일 수 있습니다. 이 플래그를 사용하여 만든 스왑 체인을 대기 가능 스왑 체인이라고 합니다. 그림 2에서는 대기 가능 스왑 체인을 사용할 경우의 입력 이벤트에 대한 응답과 대략적인 수명 주기를 보여 줍니다.
+Windows8.1, DXGI는 앱을 쉽게 Present 큐를 빈 상태로 유지 하기 위해 추론을 구현 하지 않고도이 대기 시간을 줄일 수 있는 스왑 체인에 대 한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** 플래그를 도입 했습니다. 이 플래그를 사용하여 만든 스왑 체인을 대기 가능 스왑 체인이라고 합니다. 그림 2에서는 대기 가능 스왑 체인을 사용할 경우의 입력 이벤트에 대한 응답과 대략적인 수명 주기를 보여 줍니다.
 
 그림 2
 
@@ -257,9 +256,9 @@ Windows 8.1에서 DXGI는 스왑 체인에 대한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRA
 
 이러한 다이어그램을 통해 게임이 디스플레이의 새로 고침 빈도로 정의된 16.7ms 할당 내에서 각 프레임을 렌더링 및 표시할 수 있는 경우 입력 대기 시간을 전체 프레임 2개만큼 줄일 수 있음을 알 수 있습니다. 퍼즐 샘플은 대기 가능 스왑 체인을 사용하며 다음을 호출하여 Present 큐 제한을 제어합니다.` m_deviceResources->SetMaximumFrameLatency(1);`
 
- 
+ 
 
- 
+ 
 
 
 

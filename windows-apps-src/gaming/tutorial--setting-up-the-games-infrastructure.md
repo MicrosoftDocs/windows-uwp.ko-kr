@@ -6,16 +6,14 @@ ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b1a993f16d2d9403f16c1f4cc15805b0c5f36a9
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488917"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559629"
 ---
 # <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 
@@ -37,7 +35,7 @@ UWP(유니버설 Windows 플랫폼) 개발이 처음인 경우에는 Visual Stud
 
 ### <a name="use-directx-template-to-create-a-project"></a>DirectX 템플릿을 사용하여 프로젝트 생성
 
-Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특정 앱 유형을 대상으로 하는 설정 및 코드 파일 모음입니다. Microsoft Visual Studio 2017에서는 게임 및 그래픽 앱 개발을 상당히 쉽게 수행할 수 있도록 많은 템플릿이 제공됩니다. 템플릿을 사용하지 않을 경우 기본 그래픽 렌더링 및 디스플레이 프레임워크 대부분을 직접 개발해야 하는데, 초보 게임 개발자에게는 매우 힘들 일이 될 수 있습니다.
+Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특정 앱 유형을 대상으로 하는 설정 및 코드 파일 모음입니다. Microsoft Visual Studio2017에서 다양 한 게임 및 그래픽 앱 개발을 상당히 줄일 수 있는 템플릿 찾을 수 있습니다. 템플릿을 사용하지 않을 경우 기본 그래픽 렌더링 및 디스플레이 프레임워크 대부분을 직접 개발해야 하는데, 초보 게임 개발자에게는 매우 힘들 일이 될 수 있습니다.
 
 이 자습서에 사용된 템플릿은  **DirectX 11 앱(유니버설 Windows)** 이라는 템플릿입니다. 
 
@@ -155,7 +153,7 @@ void App::Run()
 | SamplePixelShader.hlsl       | 내용                | 기본 픽셀 셰이더에 대한 HLSL(High Level Shader Language) 코드가 들어 있습니다.                                            |
 | SampleVertexShader.hlsl      | 내용                | 기본 꼭짓점 셰이더에 대한 HLSL(High Level Shader Language) 코드가 들어 있습니다.                                           |
 | ShaderStructures.h           | 내용                | 꼭지점 셰이더에 MVP 매트릭스 및 꼭지점별 데이터를 보내는 데 사용할 수 있는 셰이더 구조가 포함되어 있습니다.  |
-| pch.h/.cpp                   | 기본                   | DirectX 11 API를 포함하여 Direct3D 앱이 사용하는 API에 대한 모든 Windows 시스템 include가 들어 있습니다.| 
+| pch.h/.cpp                   | 기본                   | DirectX 11 API를 포함하여 Direct3D 앱이 사용하는 API에 대한 모든 Windows 시스템 include가 들어 있습니다.| 
 
 ### <a name="next-steps"></a>다음 단계
 
@@ -163,9 +161,9 @@ void App::Run()
 
 다음 섹션은 [게임의 UWP 프레임워크 정의](tutorial--building-the-games-uwp-app-framework.md)입니다. 여기서는 이 게임에서 템플릿이 제공하는 다양한 개념과 구성 요소를 어떻게 사용 및 확장할 수 있는지 살펴보겠습니다.
 
- 
+ 
 
- 
+ 
 
 
 

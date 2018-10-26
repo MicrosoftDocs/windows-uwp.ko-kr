@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: de9b0e5d1e8e461561d228448fc1998ad4ff0fd9
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: c01b96f70bd39c43f321935aa47393ada0400319
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393962"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559925"
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -96,7 +94,7 @@ ms.locfileid: "1393962"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="local-notifications"></a>로컬 알림
 
@@ -171,9 +169,9 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 * [정기 알림 개요](periodic-notification-overview.md)
 * [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 * [GitHub의 UWP(유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
- 
+ 
 
- 
+ 
 
 
 

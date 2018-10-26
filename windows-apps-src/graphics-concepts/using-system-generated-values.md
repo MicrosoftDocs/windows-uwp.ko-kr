@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a99cb28818cd8fc3fd9057b3df72a678c2d1aca
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9f187495568892f5b489f6e109669811f4c45ab1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044892"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561529"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>시스템 생성 값 사용
 
@@ -68,7 +66,7 @@ IA 단계에서는 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--g
 | **VertexID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **InstanceID** | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   |
 
- 
+ 
 
 삼각형 스트립 인스턴스 U에는 다음과 같이 시스템에서 생성한 값과 3개의 삼각형 기본 형식이 있습니다.
 
@@ -77,7 +75,7 @@ IA 단계에서는 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--g
 | **PrimitiveID** | 0   | 1   | 2   |
 | **InstanceID**  | 0   | 0   | 0   |
 
- 
+ 
 
 다음 표는 인스턴스 V에 대해 시스템에서 생성하는 값을 보여줍니다.
 
@@ -86,7 +84,7 @@ IA 단계에서는 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--g
 | **VertexID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **InstanceID** | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
 
- 
+ 
 
 삼각형 스트립 인스턴스 V에는 다음과 같이 시스템에서 생성한 값과 3개의 삼각형 기본 형식이 있습니다.
 
@@ -95,7 +93,7 @@ IA 단계에서는 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--g
 | **PrimitiveID** | 0   | 1   | 2   |
 | **InstanceID**  | 1   | 1   | 1   |
 
- 
+ 
 
 [IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)에서는 ID(꼭짓점, 기본 형식, 인스턴스)를 생성합니다. 그리고 각 인스턴스에는 고유한 인스턴스 ID가 지정됩니다. 데이터는 스트립 잘라내기로 마무리되며, 이를 통해 삼각형 스트립의 각 인스턴스가 분리됩니다.
 
@@ -104,9 +102,9 @@ IA 단계에서는 [GS(기하 도형 셰이더) 단계](geometry-shader-stage--g
 
 [IA(입력 어셈블러) 단계](input-assembler-stage--ia-.md)
 
- 
+ 
 
- 
+ 
 
 
 

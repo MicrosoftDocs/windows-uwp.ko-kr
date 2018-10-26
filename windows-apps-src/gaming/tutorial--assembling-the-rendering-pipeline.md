@@ -6,20 +6,18 @@ ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 450f95e68c85a325e43127df90ffeddbaa850afa
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488867"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560486"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임워크 I: 렌더링 소개
 
-지금까지 UWP(유니버설 Windows 플랫폼) 게임을 구조화하는 방법과 게임의 흐름을 처리하도록 상태 시스템을 정의하는 방법에 대해 살펴보았습니다. 이제, 렌더링 프레임워크를 어셈블하는 방법에 대해 알아볼 차례입니다. 샘플 게임에서 Direct3D 11(DirectX 11로도 알려짐)을 사용하여 게임 장면을 렌더링하는 방법을 살펴보겠습니다.
+지금까지 UWP(유니버설 Windows 플랫폼) 게임을 구조화하는 방법과 게임의 흐름을 처리하도록 상태 시스템을 정의하는 방법에 대해 살펴보았습니다. 이제, 렌더링 프레임워크를 어셈블하는 방법에 대해 알아볼 차례입니다. 샘플 게임 Direct3D11 (일반적으로 DirectX 11 라고 함)를 사용 하 여 게임 장면을 렌더링 하는 방법에 대해 살펴보겠습니다.
 
 >[!Note]
 >이 샘플의 최신 게임 코드를 다운로드하지 않은 경우 [Direct3D 게임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동합니다. 이 샘플은 UWP 기능 샘플의 큰 컬렉션의 일부입니다. 샘플을 다운로드하는 방법에 대한 지침은 [GitHub에서 UWP 샘플 가져오기](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)를 참조하세요.
@@ -620,7 +618,7 @@ __ID3D11Buffer__ 인터페이스에서 모든 버퍼 형식이 캡슐화되므�
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX Graphic Infrastructure(DXGI)는 Windows Vista에 도입된 새로운 하위 시스템으로, Direct3D 10, 10.1, 11 및 11.1에서 요구되는 하위 수준 작업 중 일부를 캡슐화합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 [DirectX Graphics Infrastructure(DXGI): 모범 사례 - 다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)을 참조하세요.
+Microsoft DirectX 그래픽 인프라 (DXGI)는 Direct3D 10 되는 하위 수준 작업 중 일부를 캡슐화 WindowsVista에 도입 된 새로운 하위 시스템 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 [DirectX Graphics Infrastructure(DXGI): 모범 사례 - 다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)을 참조하세요.
 
 ### <a name="feature-level"></a>기능 수준
 
@@ -630,7 +628,7 @@ Microsoft DirectX Graphic Infrastructure(DXGI)는 Windows Vista에 도입된 새
 
 기능 수준을 사용하면 디바이스를 만들 때 요청하고자 하는 기능 수준에 맞게 디바이스를 생성하려고 시도할 있습니다. 디바이스 생성이 진행되면 기능 수준이 지원되는 것이고, 그렇지 않으면 하드웨어에서 기능 수준이 지원되지 않는 것입니다. 더 낮은 기능 수준에서 디바이스를 다시 생성해 보거나 응용 프로그램을 종료하는 방법을 선택할 수 있습니다. 예를 들어 12\_0 기능 수준에는 Direct3D 11.3 또는 Direct3D 12와 셰이더 모델 l 5.1이 필요합니다. 자세한 내용은 [Direct3D 기능 수준: 각 기능 수준에 대한 개요](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview)를 참조하세요.
 
-기능 수준을 사용하면 Direct3D 9, Microsoft Direct3D 10 또는 Direct3D 11에 대한 응용 프로그램을 개발한 다음, 이를 9, 10 또는 11 하드웨어에서 실행할 수 있습니다(몇 가지 예외 상황은 있지만). 자세한 내용은 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx)을 참조하세요.
+기능 수준을 사용 하면 Direct3D9, Microsoft Direct3D10 또는 Direct3D11, 응용 프로그램을 개발 하 고 9, 10 또는 11 하드웨어 (일부 예외)에서 실행할 수 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx)을 참조하세요.
 
 ### <a name="stereo-rendering"></a>스테레오 렌더링
 

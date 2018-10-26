@@ -9,16 +9,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d680ddfb1dd121d2b9763c1d8af646db6de4797
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494040"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563347"
 ---
 # <a name="media-player"></a>미디어 플레이어
 
@@ -101,9 +99,9 @@ XAML에서 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/
 ### <a name="set-the-media-source"></a>미디어 원본 설정
 네트워크의 파일 또는 앱에 포함된 파일을 재생하려면 [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) 속성을 파일의 경로와 함께 [MediaSource](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx)로 설정합니다.
 
-**팁**  인터넷에서 파일을 열려면 앱의 매니페스트(Package.appxmanifest)에서 **Internet (Client)** 기능을 선언해야 합니다. 접근 권한 값 선언에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/library/windows/apps/mt270968)을 참조하세요.
+**팁**인터넷에서 파일을 열려면 앱의 매니페스트 (Package.appxmanifest)에서 **인터넷 (클라이언트)** 기능을 선언 해야 합니다. 접근 권한 값 선언에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/library/windows/apps/mt270968)을 참조하세요.
 
- 
+ 
 
 다음 코드는 XAML로 정의된 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)의 [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 속성을 [TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)에 입력한 파일의 경로로 설정하려고 시도합니다.
 

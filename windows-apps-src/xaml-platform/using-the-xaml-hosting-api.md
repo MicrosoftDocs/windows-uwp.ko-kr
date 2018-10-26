@@ -5,16 +5,14 @@ title: 호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사�
 ms.author: mcleans
 ms.date: 09/21/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp, windows forms, wpf
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 5803646c3b613a5a57992a9791215138cf996966
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474027"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562244"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사용 하 여
 
@@ -61,7 +59,7 @@ Windows 커뮤니티 도구 키트에서 [WindowsXamlHost](https://docs.microsof
 
     * **C + + Win32:** 사용 하도록 프로젝트를 구성 하는 것이 좋습니다 [C + + WinRT](../cpp-and-winrt-apis/index.md). 다운로드 및 설치 합니다 [C + + WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) Visual Studio Marketplace에서 추가한 다음 합니다 ```<CppWinRTEnabled>true</CppWinRTEnabled>``` 속성을 설명 [여기](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)로.vcxproj 파일.
 
-    * **Windows Forms 및 WPF:** [이러한 지침](../porting/desktop-to-uwp-enhance.md#modify-a-net-project-to-use-uwp-apis)을 따릅니다.
+    * **Windows Forms 및 WPF:** [이러한 지침](../porting/desktop-to-uwp-enhance.md)을 따릅니다.
 
 ## <a name="architecture-of-xaml-islands"></a>XAML 제도의 아키텍처
 

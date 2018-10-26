@@ -6,17 +6,15 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: d7c620d5e6a45d48442a2761285f8509db91961d
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 2ebe590f98afef031ab183589fc7dcfc29cd9493
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1863169"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562035"
 ---
 # <a name="title-bar-customization"></a>제목 표시줄 사용자 지정
 

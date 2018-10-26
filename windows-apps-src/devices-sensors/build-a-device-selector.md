@@ -6,16 +6,14 @@ description: 장치 선택기를 빌드하면 장치를 열거할 때 검색하�
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c80f604e9b8dc31eec1fe684f073bceb2337d91f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 036ea8b7d9797112dca9b6594e9bc1e33e923588
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959168"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563149"
 ---
 # <a name="build-a-device-selector"></a>장치 선택기 빌드
 
@@ -40,9 +38,9 @@ ms.locfileid: "959168"
 
 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API는 정식 AQS 구문을 사용하지만 일부 연산자가 지원되지 않습니다. 필터 문자열을 만들 때 사용할 수 있는 속성 목록은 [장치 정보 속성](device-information-properties.md)을 참조하세요.
 
-**주의**  `{GUID} PID` 형식을 사용하여 정의하는 사용자 지정 속성은 AQS 필터 문자열을 생성할 때 사용할 수 없습니다. 이 속성 유형은 잘 알려진 속성 이름에서 파생되기 때문입니다.
+**주의**를 사용 하 여 정의 된 사용자 지정 속성은 `{GUID} PID` 형식 AQS 필터 문자열을 생성할 때 사용할 수 없습니다. 이 속성 유형은 잘 알려진 속성 이름에서 파생되기 때문입니다.
 
- 
+ 
 
 다음 표에는 AQS 연산자와 각 연산자에서 지원하는 매개 변수 형식이 나와 있습니다.
 
@@ -64,9 +62,9 @@ ms.locfileid: "959168"
 | **COP\_APPLICATION\_SPECIFIC** | 지원되지 않음                                                               |
 
 
-> **팁**  **COP\_EQUAL** 또는 **COP\_NOTEQUAL**에 대해 **NULL**을 지정할 수 있습니다. 이는 값을 가지지 않는 속성 또는 값이 존재하지 않는 속성으로 변환됩니다. AQS에서는 빈 대괄호 \[\]를 사용하여 **NULL**을 지정합니다.
+> **팁** **COP\_EQUAL** 또는 **COP\_NOTEQUAL** **NULL** 지정할 수 있습니다. 이는 값을 가지지 않는 속성 또는 값이 존재하지 않는 속성으로 변환됩니다. AQS에서는 빈 대괄호 \[\]를 사용하여 **NULL**을 지정합니다.
 
-> **중요**  **COP\_VALUE\_CONTAINS** 및 **COP\_VALUE\_NOTCONTAINS** 연산자를 사용할 때는 문자열 및 문자열 배열에서 다르게 작동합니다. 문자열의 경우 시스템은 대/소문자를 구분하지 않는 검색을 수행하여 지정된 문자열이 부분 문자열로 디바이스에 포함되어 있는지 확인합니다. 문자열 배열의 경우에는 부분 문자열이 검색되지 않습니다. 문자열 배열에서는 배열을 검색하여 지정된 전체 문자열이 배열에 포함되어 있는지 확인합니다. 문자열 배열을 검색하여 배열의 요소에 부분 문자열이 포함되어 있는지 확인할 수는 없습니다.
+> **중요 한** **COP\_VALUE\_CONTAINS** 및 **COP\_VALUE\_NOTCONTAINS** 연산자를 사용할 경우 다르게 작동 문자열 및 문자열 배열입니다. 문자열의 경우 시스템은 대/소문자를 구분하지 않는 검색을 수행하여 지정된 문자열이 부분 문자열로 디바이스에 포함되어 있는지 확인합니다. 문자열 배열의 경우에는 부분 문자열이 검색되지 않습니다. 문자열 배열에서는 배열을 검색하여 지정된 전체 문자열이 배열에 포함되어 있는지 확인합니다. 문자열 배열을 검색하여 배열의 요소에 부분 문자열이 포함되어 있는지 확인할 수는 없습니다.
 
 결과의 범위를 적절히 지정할 AQS 필터 문자열 하나를 만들 수 없으면 결과를 받은 후 결과를 필터링할 수 있습니다. 그러나 이 방법을 선택하는 경우 초기 AQS 필터 문자열의 결과를 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API에 제공할 때 가능한 많이 제한하는 것이 좋습니다. 이렇게 하면 응용 프로그램의 성능을 개선하는 데 도움이 됩니다.
 
@@ -111,6 +109,6 @@ System.Devices.IpAddress:<>[]
 System.Devices.IpAddress:=[]
 ```
 
- 
+ 
 
- 
+ 

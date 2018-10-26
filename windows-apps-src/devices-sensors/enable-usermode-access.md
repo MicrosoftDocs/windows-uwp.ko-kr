@@ -5,17 +5,15 @@ description: 이 자습서에서는 Windows 10에서 GPIO, I2C, SPI 및 UART에 
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: acpi
 keywords: Windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: b6a8877d2991f953853339ac8fea3efad6d735c6
-ms.sourcegitcommit: 01760b73fa8cdb423a9aa1f63e72e70647d8f6ab
-ms.translationtype: HT
+ms.openlocfilehash: 09957c19414f586a49a1a2cb9186aa027dc1de07
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
-ms.locfileid: "1618428"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560572"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
 
@@ -740,7 +738,7 @@ rhproxy가 시작된 것으로 출력에 나타나면 rhproxy가 제대로 로�
 
 rhproxy가 실행 중이면 사용자 모드에서 액세스가 가능한 디바이스 인터페이스가 생성된 것입니다. 몇 가지 명령줄 도구를 사용하여 디바이스를 열거하고 이들이 존재하는지 확인하게 됩니다.
 
-[https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) 리포지토리를 복제하여 `GpioTestTool`, `I2cTestTool`, `SpiTestTool` 및 `Mincomm` 샘플을 빌드합니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
+복제는 [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) 리포지토리를 빌드는 `GpioTestTool`, `I2cTestTool`, `SpiTestTool`, 및 `Mincomm` 샘플입니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
 ```
 I2cTestTool.exe -list
 SpiTestTool.exe -list
@@ -847,7 +845,7 @@ HLK 관리자에서 "리소스 허브 프록시 장치"를 선택합니다.
 
 ### <a name="appendix-a---raspberry-pi-asl-listing"></a>부록 A - Raspberry Pi ASL 목록
 
-헤더 핀아웃: https://developer.microsoft.com/windows/iot/samples/PinMappingsRPi2
+헤더 핀아웃:https://developer.microsoft.com/windows/iot/samples/PinMappingsRPi2
 
 ```
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
@@ -1009,7 +1007,7 @@ DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
 
 ### <a name="appendix-b---minnowboardmax-asl-listing"></a>부록 B – MinnowBoardMax ASL 목록
 
-헤더 핀아웃: https://developer.microsoft.com/windows/iot/samples/PinMappingsMBM
+헤더 핀아웃:https://developer.microsoft.com/windows/iot/samples/PinMappingsMBM
 
 ```
 DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)

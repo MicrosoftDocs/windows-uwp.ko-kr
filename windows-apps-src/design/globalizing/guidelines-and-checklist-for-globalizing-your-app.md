@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 288b0509a269453e89ff827ddf27eced3ecd4c75
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 177332515db26eca7cef7a7be75c5752a239a8f1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673890"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562982"
 ---
 # <a name="guidelines-for-globalization"></a>세계화 지침
 
@@ -39,7 +37,7 @@ ms.locfileid: "1673890"
 | 텍스트와 글꼴을 올바르게 표시합니다. | 적합한 글꼴, 글꼴 크기 및 텍스트 방향은 시장마다 다릅니다. 자세한 내용은 [**레이아웃 및 글꼴 조정, RTL 지원**](adjust-layout-and-fonts--and-support-rtl.md) 및 [국가별 글꼴](loc-international-fonts.md)을 참조하세요. |
 
 ## <a name="important-apis"></a>중요 API
- 
+ 
 * [세계화](/uwp/api/Windows.Globalization?branch=live)
 * [GeographicRegion.CurrenciesInUse](/uwp/api/windows.globalization.geographicregion.CurrenciesInUse)
 * [Language.CurrentInputMethodLanguageTag](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag)

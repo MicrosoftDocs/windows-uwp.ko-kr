@@ -6,16 +6,14 @@ keywords: UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, �
 ms.author: mijacobs
 ms.date: 3/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ba6710f0517709ae0d94ae5f03b8f448f44e256
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 4dd8717b50460f5353bea67840a337a063f6603a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842370"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560625"
 ---
 # <a name="layout"></a>레이아웃
 
@@ -23,7 +21,8 @@ ms.locfileid: "1842370"
 
 아래 문서는 다양한 화면 크기, 창 크기, 해상도 및 방향에서 멋지게 보이는 유연한 UI를 만드는 데 도움이 됩니다.
 
-:::row::: :::column:::
+:::row:::
+    :::column:::
         ### [Page layout](page-layout.md)
         Walk through a basic page layout structure.
     :::column-end:::
@@ -33,7 +32,8 @@ ms.locfileid: "1842370"
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column:::
+:::row:::
+    :::column:::
         ### [Responsive design techniques](responsive-design.md)
         Learn about responsive design techniques that optimize your app's layout for breakpoints.
     :::column-end:::
@@ -43,7 +43,8 @@ ms.locfileid: "1842370"
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column:::
+:::row:::
+    :::column:::
         ### [Multiple views](show-multiple-views.md)
         Show independent parts of your app in separate windows.
     :::column-end:::
@@ -53,7 +54,8 @@ ms.locfileid: "1842370"
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column:::
+:::row:::
+    :::column:::
         ### [Layout panels](layout-panels.md)
         Learn about each type of layout panel an how to use them to arrange UI elements.
     :::column-end:::

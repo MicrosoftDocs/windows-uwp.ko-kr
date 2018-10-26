@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c70293960947070a0a6b94d7a63fd55f503c8e18
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 70380dd0bd07cfe0c81e8339f8606029663b47d4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045072"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562854"
 ---
 # <a name="bc7-format"></a>BC7 형식
 
@@ -65,7 +63,7 @@ BC7 블록에 여러 끝점 쌍이 포함될 수 있습니다. 끝점 쌍에 해
 | 색 및 알파 결합    | 필수  | 해당 없음           | 해당 없음                | 옵션       | 필수             | 옵션 | 필수           |
 | 색 및 알파 분리 | 필수  | 필수      | 옵션           | 해당 없음            | 필수             | 해당 없음      | 필수           |
 
- 
+ 
 
 BC7은 두 끝점 사이의 근사 선에 색상표를 정의합니다. 모드 값으로 블록당 끝점 쌍 보간 횟수를 결정됩니다. BC7은 텍셀당 하나의 팔레트 인덱스를 저장합니다.
 
@@ -356,9 +354,9 @@ BC7에서 다음 방법 중 하나로 알파 구성 요소를 인코딩할 수 �
 
 [텍스처 블록 압축](texture-block-compression.md)
 
- 
+ 
 
- 
+ 
 
 
 

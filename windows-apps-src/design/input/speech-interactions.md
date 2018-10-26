@@ -9,15 +9,13 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bdbe841e486a5024c594b1458e3beb57e228e1d
-ms.sourcegitcommit: db09dcb08da5995c46c2729896e56be3774ee5ba
-ms.translationtype: HT
+ms.openlocfilehash: 4006cdedffdbc601b498ce64caddfdefcbf4877a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "1554249"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564189"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -222,12 +220,12 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 * [음성 조작](https://msdn.microsoft.com/library/windows/apps/mt185614)
 * [Cortana 조작](https://msdn.microsoft.com/library/windows/apps/mt185598)
 
- **샘플**
+ **샘플**
 
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

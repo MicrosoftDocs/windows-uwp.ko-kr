@@ -6,16 +6,14 @@ ms.assetid: a54273f8-1e91-4d02-8762-6eab2f00f7b0
 ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx, 샘플, 3D
 ms.localizationpriority: medium
-ms.openlocfilehash: a1cc4c35e6e6ecfaec70ef930f4c2fa68bc85406
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: f5929a0256c7f9808079f902a258b3fd094f241c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652802"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561668"
 ---
 # <a name="directx-samples"></a>DirectX 샘플
 

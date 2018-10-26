@@ -6,16 +6,14 @@ ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2939150e1ca15dfc910d92ea669e794026ef8685
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: a94782165027c2194f677dfdbb9f2dec11541080
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674680"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560247"
 ---
 # <a name="property-path-syntax"></a>속성 경로 구문
 
@@ -58,7 +56,7 @@ Windows 런타임에서는 종속성 속성의 대상 값에 바인딩할 수 �
 
 예를 들어 "Teams" 목록(순서가 지정된 목록)이 있는 비즈니스 개체를 예로 들어 보겠습니다. 각 개체에는 "Players"라는 사전이 있으며 각 플레이어는 성별로 키가 지정되어 있습니다. 두 번째 팀의 특정 플레이어에 대한 예제 속성 경로는 "Teams\[1\].Players\[Smith\]"입니다. 목록의 인덱스가 0부터 시작되므로 1을 사용하여 "Teams"의 두 번째 항목을 나타냅니다.
 
-**참고**  C++ 데이터 원본에 대한 인덱싱 지원은 제한됩니다. [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
+**참고**c + + 데이터 원본에 대 한 인덱싱 지원은 제한 됩니다. [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
 ### <a name="attached-properties"></a>연결된 속성
 
@@ -96,7 +94,7 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 일반적인 시나리오는 아니지만 연결된 속성에 애니메이션 유형과 일치하는 속성 값이 있으면 연결된 속성을 애니메이션할 수 있습니다. 연결된 속성을 식별하는 이름에는 점이 이미 포함되어 있으므로 점이 개체-속성 단계로 처리되지 않도록 하려면 연결된 속성 이름을 괄호로 묶어야 합니다. 예를 들어 개체의 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) 연결된 속성을 애니메이션하도록 지정하는 문자열은 속성 경로 "(Grid.Row)"를 사용합니다.
 
-**참고**  이 예제에서 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795)의 값은 **Int32** 속성 유형입니다. 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)를 정의했습니다.
+**참고**이 예제에서는 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) 의 값은 **Int32** 속성 유형입니다. 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)를 정의했습니다.
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>애니메이션 대상 속성 경로의 속성에 대한 규칙
 

@@ -6,16 +6,14 @@ ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 406960820edaf3e8b14e93a6d9dfe9d723a216d6
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 3444c71b4e4c610be0b7d92ac6d761340c5dd5c2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488984"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564149"
 ---
 #  <a name="define-the-uwp-app-framework"></a>UWP 앱 프레임워크 정의
 
@@ -388,7 +386,7 @@ void GameMain::Run()
 
 사용자가 결국 게임 세션을 종료하면 정리가 필요합니다. 이 때 **Uninitialize**가 필요하게 됩니다.
 
-Windows 10에서는 앱 창을 닫아도 앱의 프로세스가 중단되지 않고, 대신에 앱 단일 항목의 상태를 메모리에 기록합니다 시스템에서 이 메모리를 확보해야 할 때 리소스를 특별 정리하는 등 특별한 조치가 필요한 경우에는 이 메서드에 해당 정리를 위한 코드를 포함시킵니다.
+Windows10, 앱 창을 닫아도 앱의 프로세스가 하지만 대신 앱 단일 항목의 상태를 메모리에 기록 합니다. 시스템에서 이 메모리를 확보해야 할 때 리소스를 특별 정리하는 등 특별한 조치가 필요한 경우에는 이 메서드에 해당 정리를 위한 코드를 포함시킵니다.
 
 ### <a name="app-uninitialize"></a>App:: Uninitialize
 

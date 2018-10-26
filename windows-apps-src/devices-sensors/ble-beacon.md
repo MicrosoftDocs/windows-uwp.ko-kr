@@ -5,17 +5,15 @@ description: 이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher AP
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1be2aad5a6a0fe76caefa4710ebf946e418cf151
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 38f850cfb811260758377d5404e01c8e540e7ec2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "300437"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560214"
 ---
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE 광고
 
@@ -47,7 +45,7 @@ ms.locfileid: "300437"
 
 Bluetooth LE 광고를 사용하면 디바이스가 광고라는 특정 페이로드 비콘을 지속적으로 보낼 수 있습니다. 이 특정 광고를 수신 대기하도록 설정된 경우 근처의 모든 Bluetooth LE 지원 디바이스에서 이 광고를 볼 수 있습니다.
 
-> **참고**: 사용자 정보 공개 범위를 여 광고의 수명은 앱의에 맞춰져 있습니다. BluetoothLEAdvertisementPublisher를 만들고 광고에 대한 백그라운드 작업에서 Start를 호출할 수 있습니다. 백그라운드 작업에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](https://msdn.microsoft.com/windows/uwp/launch-resume/index)을 참조하세요.
+> **참고**: 사용자 개인 정보에 대 한 광고 수명은 앱의 연결 됩니다. BluetoothLEAdvertisementPublisher를 만들고 광고에 대한 백그라운드 작업에서 Start를 호출할 수 있습니다. 백그라운드 작업에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](https://msdn.microsoft.com/windows/uwp/launch-resume/index)을 참조하세요.
 
 ### <a name="basic-publishing"></a>기본 게시
 

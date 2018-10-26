@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f8a38eeca0516082a64f5b4d2778f74436bbdb7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2081e8c09a6f6fd75f460af3f339902bcb80bac6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044742"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559757"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>면 및 꼭짓점 법선 벡터
 
@@ -94,9 +92,9 @@ DrawPrimitive 메서드를 사용하여 장면을 렌더링할 경우, 예리한
 
 [좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

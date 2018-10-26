@@ -1,27 +1,25 @@
 ---
 author: QuinnRadich
-Description: Windows 10 build 10240 and updates to developer tools continue to provide the tools, features, and experiences powered by the Universal Windows Platform.
-title: Windows 10 빌드 10240의 새로운 기능 - 2015년 7월
+Description: Windows 10 build 10240 and updates to developer tools continue to provide the tools, features, and experiences powered by the Universal Windows Platform.
+title: Windows10 빌드 10240-2015 년 7 월의에서 새로운 기능
 keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 신규, Windows 10, 1507, 10240
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
-ms.openlocfilehash: c5d3a9cf8a3281e7cd1f7efa460f13f8a17b10bb
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: c38fe989bd854d44bb7dc3c0cba36a4ae145854c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1397142"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564238"
 ---
-# <a name="whats-new-in-windows-10-for-developers-build-10240"></a>개발자용 Windows 10 빌드 10240의 새로운 기능
+# <a name="whats-new-in-windows10-for-developers-build-10240"></a>개발자를 위한 새로운 Windows10, 빌드 10240
 
 Windows10 빌드 10240 및 업데이트된 SDK는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)한 후 [새 유니버설 Windows 앱을 만들](../get-started/create-uwp-apps.md)거나 [Windows에서 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
-Windows 10 빌드 10240(Windows 10 버전 1507이라고도 함)의 새로운 기능을 기능별로 살펴보면 다음과 같습니다.
+Windows10 빌드 10240에에서 있습니다 (Windows 10 버전 1507 라고도 함)에 대 한 새로운 기능 살펴보기 기능으로는 다음과 같습니다.
 
 ## <a name="adaptive-layouts"></a>적응형 레이아웃
 

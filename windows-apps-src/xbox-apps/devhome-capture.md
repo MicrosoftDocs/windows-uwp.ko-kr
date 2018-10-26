@@ -1,30 +1,28 @@
 ---
 author: v-angraf
 ms.assetid: 67934477-337a-5235-b0de-8ac038177267
-title: 미디어 (개발자 홈) 페이지를 캡처
-description: Xbox 하나에 대 한 개발자 홈 응용 프로그램의 미디어 캡처 페이지에 대 한 정보를 제공합니다.
+title: 미디어 캡처 페이지 (개발자 홈)
+description: Xbox one 개발자 홈 앱의 미디어 캡처 페이지에 대 한 정보를 제공합니다.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 21fe8eeb4ce3b5062aca625537061209e74c503f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1866c4f94c5ef681080ae2a5658c6edba11ec44b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015251"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562926"
 ---
-# <a name="media-capture-page-dev-home"></a>미디어 (개발자 홈) 페이지를 캡처
+# <a name="media-capture-page-dev-home"></a>미디어 캡처 페이지 (개발자 홈)
    
   
-개발자 홈의 **미디어 캡처** 페이지는 콘솔에서 현재 실행 되는 제목 비디오를 캡처합니다.   
- ![개발자 홈의 페이지를 캡처](images/devhome_capture.png)   
+개발자 홈의 **미디어 캡처** 페이지 제목 콘솔에서 현재 실행 중인 비디오를 캡처합니다.   
+ ![개발자 홈의 캡처 페이지](images/devhome_capture.png)   
   
-**미디어 캡처** 페이지에는 다음과 같은 창이:   
+**미디어 캡처** 페이지에는 다음 창이:   
  
    *  [비디오 캡처](#ID4EHB)  
 
@@ -36,13 +34,13 @@ ms.locfileid: "1015251"
 ## <a name="video-capture"></a>비디오 캡처  
    
   
-**비디오 캡처** 창 개발자 콘솔에서 비디오 스트림을 기록 하는 도구를 포함 합니다. 콘솔에서 마지막 몇 초의 비디오를 캡처할 수 있습니다.   
+**비디오 캡처** 창에는 개발자 콘솔에서 비디오 스트림을 기록 하는 도구가 포함 되어 있습니다. 콘솔에서 마지막 몇 초의 비디오를 캡처할 수 있습니다.   
   
 <a id="ID4ERB"></a>
 
    
 
-## <a name="see-also"></a>기타 참조  
- [콘솔 (개발자 홈)에 대 한 개발자 홈](dev-home.md)
+## <a name="see-also"></a>참고 항목  
+ [(개발자 홈) 콘솔의 개발자 홈](dev-home.md)
 
   

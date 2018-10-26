@@ -6,15 +6,13 @@ keywords: XAML, UWP, 시작
 ms.author: mukin
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fee97ecefd2d0c0694bd50ef7255488f3fb567f3
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.openlocfilehash: 000aa2d8f3684aa813b85076d9124a87a71b6a8c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1640040"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563304"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -30,7 +28,7 @@ ms.locfileid: "1640040"
 
 ![DetailPage](../basics/images/xaml-basics/detailpage.png)
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 * Visual Studio 2017: [Visual Studio 2017 Community 다운로드(무료)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
 * Windows 10 SDK(10.0.15063.468 이상): [최신 Windows SDK 다운로드(무료)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
@@ -40,11 +38,11 @@ ms.locfileid: "1640040"
 
 이번 자습서에서는 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 
 
-1. [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab)으로 이동합니다. 샘플을 볼 수 있는 GitHub 페이지로 이동하게 됩니다. 
-2. 그런 다음 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 단추를 클릭합니다. 하위 메뉴가 나타납니다.
+1. 이동 [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). 샘플을 볼 수 있는 GitHub 페이지로 이동하게 됩니다. 
+2. 그런 다음 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 버튼을 클릭합니다. 하위 메뉴가 나타납니다.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
-        <figcaption>PhotoLab 샘플의 GitHub 페이지에 있는 <b>복제 또는 다운로드</b> 메뉴</figcaption>
+        <figcaption>Photo lab 샘플의 GitHub 페이지에 있는 <b>복제 또는 다운로드</b> 메뉴</figcaption>
     </figure>
 
     **GitHub가 익숙하지 않은 경우:**

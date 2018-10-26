@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6eea8810fd1fec9df405e4c16272a468d4272210
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 65522195b9729ddd4f2ebeb193f43c905359eda2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044392"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560270"
 ---
 # <a name="introduction-to-rasterization-rules"></a>래스터화 규칙 소개
 
@@ -77,9 +75,9 @@ Direct3D가 사용하는 삼각형 래스터화 규칙에 대한 설명이 모�
 
 [래스터화 규칙](rasterization-rules.md)
 
- 
+ 
 
- 
+ 
 
 
 
