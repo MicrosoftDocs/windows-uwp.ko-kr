@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 0482c9a770d23ccebb094c00de7cab08cd6ab1cb
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 29fd7faec6f78b5f01469e7bfa6c01a8831f07eb
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5547051"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5641153"
 ---
 # <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 
@@ -158,7 +158,7 @@ ms.locfileid: "5547051"
 
 ## <a name="optional-add-target-based-unplated-assets"></a>(선택 사항)대상 기반의 판이 없는 자산을 추가
 
-대상 기반 자산은 아이콘 및 타일을 위한 것으로 Windows 작업 표시줄, 작업 보기, Alt + Tab, 끌기 도우미 및 시작 타일의 오른쪽 아래 모서리에 표시됩니다. 자세한 내용은 [여기](https://docs.microsoft.com/windows/uwp/shell/tiles-and-notifications/app-assets#target-based-assets)를 참조하세요.
+대상 기반 자산은 아이콘 및 타일을 위한 것으로 Windows 작업 표시줄, 작업 보기, Alt + Tab, 끌기 도우미 및 시작 타일의 오른쪽 아래 모서리에 표시됩니다. 자세한 내용은 [여기](https://docs.microsoft.com/windows/uwp/design/style/app-icons-and-logos#unplated-assets)를 참조하세요.
 
 1. 올바른 44x44 이미지를 가져와서 이미지가 들어 있는 폴더(즉, "자산" 폴더)에 복사합니다.
 
