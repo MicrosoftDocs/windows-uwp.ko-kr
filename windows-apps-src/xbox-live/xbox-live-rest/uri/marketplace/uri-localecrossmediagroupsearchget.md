@@ -7,19 +7,17 @@ description: " GET (/media/{marketplaceId}/crossMediaGroupSearch)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 430dbce8b3ac2a79709c5f0761124aa7a78cab5e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 79ee12abf91618ea5afe6a928b27006623e46c2d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469269"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5549317"
 ---
 # <a name="get-mediamarketplaceidcrossmediagroupsearch"></a>GET (/media/{marketplaceId}/crossMediaGroupSearch)
-여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri의 도메인은 `eds.xboxlive.com`.
+여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EEB)
@@ -62,7 +60,7 @@ ms.locfileid: "5469269"
 <a id="ID4EZC"></a>
 
  
-### <a name="sample-response"></a>샘플 응답입니다.
+### <a name="sample-response"></a>예제 응답
  
 아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/crossMediaGroupSearch?q=vector&maxItems=25&fields=all`.
  

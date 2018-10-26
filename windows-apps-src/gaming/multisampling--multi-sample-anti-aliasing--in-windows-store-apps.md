@@ -6,19 +6,18 @@ ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 다중 샘플링, direct3d
-ms.openlocfilehash: 7748bf4c2d1654dad77d5971487330d3530d9e84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 7b967ae1709849bbe5bc944b00d9e30f22052aeb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218986"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572149"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다. 다중 샘플 앤티앨리어싱이라고도 하는 다중 샘플링은 울퉁불퉁한 가장자리를 다듬기 위해 사용되는 그래픽 기법입니다. 작동 방식은, 최종 렌더링 대상에 실제로 있는 것보다 더 많은 픽셀을 그린 후 값을 평준화하여 특정 픽셀에서 "부분적인" 가장자리의 외양을 유지하는 것입니다. Direct3D에서 다중 샘플링이 실제로 작동하는 방식에 대해 자세히 알아보려면 [다중 샘플링 앤티앨리어싱 래스터화 규칙](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample)을 참조하세요.
 
@@ -33,7 +32,7 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 1.  다중 샘플링에 어떤 DXGI 형식을 사용할 수 있는지 알아보려면 [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497)를 호출합니다. 게임에 사용할 수 있는 렌더링 대상 형식을 제공합니다. 렌더링 대상과 해제 대상은 모두 같은 형식을 사용해야 하므로 [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134)과 **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**를 모두 확인합니다.
 
-    **기능 수준 9:** 기능 수준 9 디바이스는 [다중 샘플링된 렌더링 대상 형식에 대한 지원을 보장](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget)하지만, 다중 샘플 해제 대상에 대한 지원은 보장되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
+    **기능 수준 9:** 기능 수준 9 디바이스 [다중 샘플링 된 렌더링 대상 형식에 대 한 지원을 보장](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), 있지만 지원은 다중 샘플 해제 대상에 대 한 지원을 보장 되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
 
     다음 코드는 DXGI\_FORMAT 값에 대해 다중 샘플링 지원 여부를 확인합니다.
 
@@ -85,9 +84,9 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
     }
     ```
 
-    > **참고** 타일식 리소스 버퍼에 대한 다중 샘플 지원을 확인하려면 대신에 [**ID3D11Device2::CheckMultisampleQualityLevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494)을 사용하세요.
+    > **참고**  사용 하 여 [**id3d11device2:: checkmultisamplequalitylevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) 대신에 대 한 다중 샘플 지원을 확인 해야 할 경우 타일 식 리소스 버퍼입니다.
 
-     
+     
 
 3.  원하는 샘플 수로 버퍼 및 렌더링 대상 보기를 만듭니다. 스왑 체인과 동일한 DXGI\_FORMAT, 너비 및 높이를 사용하되, 1보다 큰 샘플 수를 지정하고 다중 샘플링된 텍스처 크기(예: **D3D11\_RTV\_DIMENSION\_TEXTURE2DMS**)를 사용합니다. 필요한 경우 다중 샘플링에 가장 적합한 새로운 설정으로 스왑 체인을 다시 만들 수 있습니다.
 
@@ -206,9 +205,9 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
     hr = m_swapChain->Present(1, 0);
     ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ ms.assetid: d51b2f12-1c56-4261-8692-8f73459dc462
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어 세션 템플릿
 ms.localizationpriority: medium
-ms.openlocfilehash: ca85a3370d6fc8a1934432255894679cd92fe973
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 17c7fa48ee637dbca20b67872113a8d43e04da84
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5480340"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5543514"
 ---
 # <a name="session-template-constants"></a>세션 템플릿 상수
 

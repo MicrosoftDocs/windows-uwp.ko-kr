@@ -10,19 +10,17 @@ keywords: Xbox, TV, 3m 환경, 게임 패드, 리모컨, 입력, 조작
 ms.author: elcowle
 ms.date: 12/5/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c9751ef316dbec7334fc12242d71dd58ae2cb262
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 098bc97de27d58fdc1d582e0db264ef04f0d3e61
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700969"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572352"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -258,19 +256,19 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 ```xml
 <StackPanel>
-    <Button x:Name="MyBtnLeft"
+    <Button x:Name="MyBtnLeft"
             Content="Search" />
-    <Button x:Name="MyBtnRight"
+    <Button x:Name="MyBtnRight"
             Content="Delete"/>
-    <Button x:Name="MyBtnTop"
+    <Button x:Name="MyBtnTop"
             Content="Update" />
-    <Button x:Name="MyBtnDown"
+    <Button x:Name="MyBtnDown"
             Content="Undo" />
-    <Button Content="Home"  
+    <Button Content="Home"  
             XYFocusLeft="{x:Bind MyBtnLeft}"
-            XYFocusRight="{x:Bind MyBtnRight}"
-            XYFocusDown="{x:Bind MyBtnDown}"
-            XYFocusUp="{x:Bind MyBtnTop}" />
+            XYFocusRight="{x:Bind MyBtnRight}"
+            XYFocusDown="{x:Bind MyBtnDown}"
+            XYFocusUp="{x:Bind MyBtnTop}" />
 </StackPanel>
 ```
 
@@ -279,8 +277,8 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 포커스가 컨트롤에서 특정 방향으로 이동하지 않도록 하려면 `XYFocus*` 속성을 사용하여 동일한 컨트롤을 가리킵니다.
 
 ```xml
-<Button Name="HomeButton"  
-        Content="Home"  
+<Button Name="HomeButton"  
+        Content="Home"  
         XYFocusLeft ="{x:Bind HomeButton}" />
 ```
 
@@ -324,7 +322,7 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 `CommandBar`의 항목을 세로로 겹칠 수는 없지만 스크롤 방향과 반대로(예: 세로로 스크롤되는 목록의 왼쪽 또는 오른쪽이나 가로로 스크롤되는 목록의 위쪽 또는 아래쪽) 배치하는 것도 UI 레이아웃에 적합한 경우 고려할 수 있는 또 다른 옵션입니다.
 
-사용자가 항목에 쉽게 액세스할 수 있어야 하는 `CommandBar`이 앱에 있는 경우 이러한 항목을 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 내부에 배치하고 `CommandBar`에서 제거하는 것이 좋습니다. `ContextFlyout` 은(는) [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx)의 속성이며 해당 요소와 관련된 [상황에 맞는 메뉴](../controls-and-patterns/dialogs.md)입니다. PC에서 `ContextFlyout`이 있는 요소를 마우스 오른쪽 단추로 클릭하면 해당 상황에 맞는 메뉴가 팝업됩니다. Xbox One에서는 이러한 요소에 포커스가 있는 동안 **메뉴** 버튼을 누를 때 이 작업이 수행됩니다.
+사용자가 항목에 쉽게 액세스할 수 있어야 하는 `CommandBar`이 앱에 있는 경우 이러한 항목을 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 내부에 배치하고 `CommandBar`에서 제거하는 것이 좋습니다. `ContextFlyout` 은(는) [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx)의 속성이며 해당 요소와 관련된 [상황에 맞는 메뉴](../controls-and-patterns/dialogs-and-flyouts/index.md)입니다. PC에서 `ContextFlyout`이 있는 요소를 마우스 오른쪽 단추로 클릭하면 해당 상황에 맞는 메뉴가 팝업됩니다. Xbox One에서는 이러한 요소에 포커스가 있는 동안 **메뉴** 버튼을 누를 때 이 작업이 수행됩니다.
 
 ### <a name="ui-layout-challenges"></a>UI 레이아웃 문제
 

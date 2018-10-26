@@ -7,35 +7,33 @@ description: " PermissionCheckBatchUserResponse(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 36726153d1364f384358471324452422f67741d2
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: fe1a012dee7f159af65a0d13dda2c8d755b01e43
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483484"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559946"
 ---
 # <a name="permissioncheckbatchuserresponse-json"></a>PermissionCheckBatchUserResponse(JSON)
-일괄 처리의 이유로 단일 대상 사용자에 대 한 사용 권한 값 목록을 확인합니다. 
+단일 대상 사용자에 대 한 권한 값의 목록 일괄 처리 권한의 이유를 확인합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="permissioncheckbatchuserresponse"></a>PermissionCheckBatchUserResponse
  
-PermissionCheckBatchUserResponse 개체에는 다음과 같이 지정 합니다.
+PermissionCheckBatchUserResponse 개체에는 다음 사양을 있습니다.
  
-| 구성원| 유형| 설명| 
+| 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | 사용자| string| 필수. 이 멤버는 요청 하는 사용자가 대상 사용자를 사용 하 여 요청한 작업을 수행할 수 있으면 <b>true</b> 입니다.| 
-| 사용 권한| [PermissionCheckResponse (JSON)](json-permissioncheckresponse.md) 의 배열| 필수. [PermissionCheckResponse (JSON)](json-permissioncheckresponse.md) 요청에서와 동일한 순서로 원래 요청에 요청을 하는 각 권한에 대해.| 
+| 사용 권한| [PermissionCheckResponse (JSON)](json-permissioncheckresponse.md) 의 배열| 필수. [PermissionCheckResponse (JSON)](json-permissioncheckresponse.md) 요청에서와 동일한 순서로 원래 요청에 대 한 요청 된 각 권한에 대 한 합니다.| 
   
 <a id="ID4E4B"></a>
 
  
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
  
 
 ```json

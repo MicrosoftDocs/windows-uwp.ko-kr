@@ -7,16 +7,14 @@ description: " ResetReputation(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 494f4a8977a298265c264b050d6a222bd2bdd7d2
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 1c2462419559ad179b2824b2735a5aad4ee63725
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5471227"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556546"
 ---
 # <a name="resetreputation-json"></a>ResetReputation(JSON)
 사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다. 

@@ -6,16 +6,14 @@ title: 패키지 플라이트 제출 상태 가져오기
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 상태
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d661800371d90f15a5b7e355c2f06b7bd631f6b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: e3db0b4823b4bc6d8ac50e40026b21f288f9e64c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483330"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572096"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>패키지 플라이트 제출 상태 가져오기
 

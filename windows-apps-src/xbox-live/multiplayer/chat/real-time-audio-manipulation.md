@@ -5,16 +5,14 @@ description: 게임 채팅 2 캡처될 채팅 오디오를 처리 하 고 조작
 ms.author: kevinasg
 ms.date: 05/10/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신, 버퍼 조작, 오디오 조작
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d5f9863bf4a023520486567de1f5feb1907b177
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: cd0a88c5d3ae50cb7dd86585507c951cc061503d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469203"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559949"
 ---
 # <a name="real-time-audio-manipulation"></a>실시간 오디오 조작
 

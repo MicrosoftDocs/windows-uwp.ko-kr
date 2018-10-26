@@ -6,16 +6,14 @@ ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c74b05974bcfd9dd8c592d18f6f5fe4ff388f03
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 1fe2460dfc5ab11a9168f1d1d87207d2b9490026
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675350"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572602"
 ---
 # <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 
@@ -91,7 +89,7 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 </UserControl ...>
 ```
 
-**참고** 일부 구조는 개체 요소로 선언할 수 없습니다. 초기화 텍스트가 지원되지 않으며 리소스로 사용할 수 없습니다. XAML에서 속성을 이러한 값으로 설정하려면 특성 구문을 사용해야 합니다. 이러한 형식은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) 및 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)입니다.
+**참고**일부 구조는 개체 요소로 선언할 수 없습니다. 초기화 텍스트가 지원되지 않으며 리소스로 사용할 수 없습니다. XAML에서 속성을 이러한 값으로 설정하려면 특성 구문을 사용해야 합니다. 이러한 형식은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) 및 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)입니다.
 
 ## <a name="setting-properties"></a>속성 설정
 
@@ -242,7 +240,7 @@ XAML 파서에서 읽어야 하는 방법과 유사하게 XAML을 선형 순서�
 
 또 다른 XAML 규칙은 요소의 특성을 임의 순서로 설정할 수 있어야 한다는 것입니다. 예를 들어 `<Rectangle Height="50" Width="100" />`과 `<Rectangle Width="100"  Height="50" />`은 차이가 없습니다. 사용하는 순서는 스타일의 문제일 뿐입니다.
 
-**참고** XML 편집기 이외의 디자인 화면을 사용하는 경우 XAML 디자이너에서 순서 지정 규칙을 승격시키기도 하지만 나중에 XAML을 자유롭게 편집하여 특성 순서를 다시 매기거나 새 특성을 도입할 수 있습니다.
+**참고**XML 편집기 이외의 디자인 화면을 사용 하지만 특성을 다시 정렬 하거나 새 도입할 나중에 해당 XAML을 자유롭게 편집 하는 경우 XAML 디자이너 순서 지정 규칙을 종종 홍보 합니다.
 
 ## <a name="attached-properties"></a>연결된 속성
 
@@ -271,8 +269,8 @@ Windows 런타임 XAML에서는 다음 시나리오를 지원하는 연결된 �
 
 여는 중괄호(\{)는 태그 확장 순서를 여는 것이므로 이스케이프 시퀀스를 사용하여 "\{"로 시작하는 리터럴 문자열 값을 지정합니다. 이스케이프 시퀀스는 "\{\}"입니다. 예를 들어 하나의 여는 중괄호를 문자열 값으로 지정하려면 특성 값을 "\{\}\{"로 지정합니다. 따옴표를 대신 사용하여(예: **""** 로 구분된 특성 값 내의 **'**) "\{" 값을 문자열로 제공할 수도 있습니다.
 
-**참고** "\\}"는 따옴표가 붙은 특성 안에 있는 경우에도 작동합니다.
- 
+**참고**"\\}"는 따옴표가 붙은 특성 하는 경우에 작동 합니다.
+ 
 ## <a name="enumeration-values"></a>열거형 값
 
 Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다. 멤버가 읽기-쓰기 속성인 경우 특성 값을 제공하여 해당 속성을 설정할 수 있습니다. 상수 이름의 비정규화된 이름을 통해 속성 값으로 사용할 열거형 값을 식별합니다. 예를 들어 다음은 XAML에서 [**UIElement.Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)를 설정하는 방법입니다. `<Button Visibility="Visible"/>`. 여기에서 문자열로 "표시"는 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006) 열거형, **Visible**의 명명된 상수에 직접 매핑됩니다.
@@ -280,7 +278,7 @@ Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다
 -   정규화된 형식은 작동하지 않으므로 사용하지 마세요. 예를 들어 다음은 잘못된 XAML입니다. `<Button Visibility="Visibility.Visible"/>`.
 -   상수의 값을 사용하지 마세요. 다시 말해서 열거형이 정의된 방식에 의해 명시적으로 또는 암시적으로 영향을 받는 열거형의 정수 값을 사용하지 마세요. 작동하는 것처럼 보일지도 모르지만, 일시적인 구현 정보에 의존하게 되므로 XAML 또는 코드에서 사용하면 좋지 않습니다. 예를 들어 다음과 같이 사용하지 마세요.`<Button Visibility="1"/>`.
 
-**참고** XAML 및 열거형을 사용하는 API에 대한 참조 항목에서 **구문**의 **속성 값** 섹션에 나타나는 열거형 형식의 링크를 클릭하세요. 그러면 해당 열거형의 명명된 상수를 찾을 수 있는 열거형 페이지로 연결됩니다.
+**참고**열거형을 사용 및 XAML을 사용 하는 Api에 대 한 참조 항목에서 **구문의** **속성 값** 섹션에서 열거형 형식의 링크를 클릭 합니다. 그러면 해당 열거형의 명명된 상수를 찾을 수 있는 열거형 페이지로 연결됩니다.
 
 열거형은 깃발 모양이 될 수 있습니다. 즉, **FlagsAttribute**를 사용하여 특성이 지정됩니다. 플래그 수준의 열거형에 대한 값의 조합을 XAML 특성 값으로 지정해야 할 경우 각 열거형 상수 이름을 쉼표(,)로 구분하고 공백 문자 없이 사용할 수 있습니다. Windows 런타임 XAML 어휘에서는 플래그 수준의 특성이 일반적이지 않지만, [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934)는 XAML에서 플래그 수준의 열거형 값 설정이 지원되는 예입니다.
 
@@ -290,7 +288,7 @@ Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다
 
 ## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>Windows 런타임 참조의 XAML 자리 표시자 규칙
 
-XAML을 사용할 수 있는 Windows 런타임 API에 대한 참조 항목의 **구문** 섹션을 살펴본 경우 구문에 여러 자리 표시자가 포함된 것을 본 적이 있을 것입니다. XAML 구문은 사용 구문이므로 C#, Microsoft Visual Basic 또는 Visual C++ 구성 요소 확장(C++/CX) 구문과 다릅니다. 이 구문은 자체 XAML 파일에서의 최종 사용과 비슷하지만 사용할 수 있는 값에 대해서는 지나치게 지시적이지 않습니다. 따라서 일반적으로 리터럴과 자리 표시자를 혼합하는 문법 형식을 설명하고 **XAML 값** 섹션에 있는 일부 자리 표시자를 정의합니다.
+XAML을 사용할 수 있는 Windows 런타임 API에 대한 참조 항목의 **구문** 섹션을 살펴본 경우 구문에 여러 자리 표시자가 포함된 것을 본 적이 있을 것입니다. XAML 구문은 다른 C#, Microsoft Visual Basic 또는 VisualC + + 구성 요소 확장 (C + + CX) 구문을 XAML 구문은 사용 구문 이므로 합니다. 이 구문은 자체 XAML 파일에서의 최종 사용과 비슷하지만 사용할 수 있는 값에 대해서는 지나치게 지시적이지 않습니다. 따라서 일반적으로 리터럴과 자리 표시자를 혼합하는 문법 형식을 설명하고 **XAML 값** 섹션에 있는 일부 자리 표시자를 정의합니다.
 
 속성에 대한 XAML 구문에 형식 이름/요소 이름이 표시된 경우 표시된 이름은 원래 속성을 정의하는 형식에 대한 이름입니다. 그러나 Windows 런타임 XAML은 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) 기반 클래스의 클래스 상속 모델을 지원합니다. 따라서 문자 그대로 정의 클래스가 아니며 대신 속성/특성을 처음에 정의한 클래스에서 파생되는 클래스에서 종종 특성을 사용할 수 있습니다. 예를 들어 전체 상속을 사용하여 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 파생 클래스에서 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)를 특성으로 설정할 수 있습니다. 예를 들면 `<Button Visibility="Visible" />`와 같습니다. 따라서 XAML 사용 구문에 표시되는 요소 이름을 너무 문자 그대로 받아들이지 마세요. 이 구문은 해당 클래스를 나타내는 요소 및 파생 클래스를 나타내는 요소에 대해 가능할 수 있습니다. 정의 요소로 표시된 형식이 실제 사용에 있을 가능성이 거의 없거나 불가능한 경우 해당 형식 이름은 구문에서 고의로 소문자로 표시합니다. 예를 들어 **UIElement.Visibility**의 구문은 다음과 같이 표시됩니다.
 
@@ -320,5 +318,5 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 * [XAML 개요](xaml-overview.md)
 * [XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping.md)
 * [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)
- 
+ 
 

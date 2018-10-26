@@ -6,16 +6,14 @@ ms.assetid: 6290dd67-1145-4fe2-8ada-c3a29a9ad29a
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox, 오프 라인
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b63c8a555fcad652af217f58ee0a2df26745765
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: a552f275a69fde67f22d25a79b5b8c318c4f8dc3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5476214"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555021"
 ---
 # <a name="best-practices-for-offline"></a>오프라인을 위한 모범사례
 

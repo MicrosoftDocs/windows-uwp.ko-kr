@@ -9,15 +9,13 @@ keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 �
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a0753081af4128cf2cad3eeff9d8c919c42eb596
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: ba685f30eb0cf94314996587073a82440cf6c951
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895142"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572612"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
@@ -37,7 +35,7 @@ UWP(유니버설 Windows 플랫폼) 응용 프로그램에서 터치, 마우스,
 
 > [!NOTE]
 > 앱에 장치 관련 정보가 필요한 경우 해당 정보가 원시 HID 데이터에서도 올라갑니다.
- 
+ 
 
 입력 스택의 각 입력 지점(또는 연락처)은 다양한 포인터 이벤트 처리기에서 제공하는 [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br227968) 매개 변수를 통해 표시되는 [**Pointer**](https://msdn.microsoft.com/library/windows/apps/hh943076) 개체로 표시됩니다. 멀티 펜 또는 멀티 터치 입력의 경우 각 접점이 하나의 고유한 입력 포인터로 간주됩니다.
 
@@ -50,7 +48,7 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 
 > [!NOTE]
 > 포인터 이벤트 처리기 내의 해당 요소에 대해 [**CapturePointer**](https://msdn.microsoft.com/library/windows/apps/br208918)를 호출하여 특정 UI 요소로 포인터 입력을 제한할 수 있습니다. 포인터가 요소로 캡처될 경우 포인터가 개체의 경계 영역 외부로 이동하더라도 해당 개체만 포인터 입력 이벤트를 받습니다. [**IsInContact**](https://msdn.microsoft.com/library/windows/apps/br227976)(마우스 단추 누름, 터치 또는 스타일러스 접촉 중)이 true여야 **CapturePointer**가 성공적으로 수행됩니다.
- 
+ 
 
 <table>
 <colgroup>
@@ -79,10 +77,10 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208965"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>다른 UI 요소가 포인터를 캡처하거나, 포인터가 해제되거나, 다른 포인터가 프로그래밍 방식으로 캡처될 때 발생합니다.</p>
 <div class="alert">
-<strong>참고</strong> 해당하는 포인터 캡처 이벤트가 없습니다.
+<strong>참고</strong>해당 포인터 캡처 이벤트가 없습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -127,7 +125,7 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 <p>마우스 입력이 먼저 감지되면 마우스 입력이 할당된 단일 포인터와 연결됩니다. 마우스 단추(왼쪽, 휠 또는 오른쪽)를 클릭하면 [PointerMoved](https://msdn.microsoft.com/library/windows/apps/br208970) 이벤트를 통해 포인터와 해당 단추 간의 보조 연결이 만들어집니다.</p></td>
 </tr>
 </tbody>
-</table> 
+</table> 
 
 ## <a name="pointer-event-example"></a>포인터 이벤트 예제
 
@@ -247,8 +245,7 @@ public MainPage()
 -   이 처리기는 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 활성 포인터 사전에 포인터를 추가하고, 포인터 상세 정보를 표시합니다.
 
     > [!NOTE]
-    > [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 및 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 이벤트는 항상 쌍으로 발생하지는 않습니다. 앱은 포인터 다운(예: [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) 및 [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965))을 완료할 수도 있는 이벤트를 수신하고 처리해야 합니다.
-         
+    > [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 및 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 이벤트는 항상 쌍으로 발생하지는 않습니다. 앱은 포인터 다운(예: [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) 및 [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965))을 완료할 수도 있는 이벤트를 수신하고 처리해야 합니다.      
 
 ```csharp
 /// <summary>
@@ -330,7 +327,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   이 처리기는 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고 포인터 상세 정보를 업데이트합니다.
 
     > [!Important]
-    > 마우스 입력이 먼저 감지되면 마우스 입력이 할당된 단일 포인터와 연결됩니다. 마우스 단추(왼쪽, 휠 또는 오른쪽)를 클릭하면 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 이벤트를 통해 포인터와 해당 단추 간의 보조 연결이 만들어집니다. [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 이벤트는 해당하는 동일한 마우스 단추를 해제한 경우에만 발생합니다(이 이벤트가 완료될 때까지는 다른 단추를 이 포인터와 연결할 수 없음). 이 독점적인 연결 때문에 다른 마우스 단추 클릭은 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970) 이벤트를 통해 라우트됩니다.     
+    > 마우스 입력이 먼저 감지되면 마우스 입력이 할당된 단일 포인터와 연결됩니다. 마우스 단추(왼쪽, 휠 또는 오른쪽)를 클릭하면 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 이벤트를 통해 포인터와 해당 단추 간의 보조 연결이 만들어집니다. [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 이벤트는 해당하는 동일한 마우스 단추를 해제한 경우에만 발생합니다(이 이벤트가 완료될 때까지는 다른 단추를 이 포인터와 연결할 수 없음). 이 독점적인 연결 때문에 다른 마우스 단추 클릭은 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970) 이벤트를 통해 라우트됩니다.     
 
 ```csharp
 /// <summary>
@@ -536,7 +533,7 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 -   이 처리기는 [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 포인터 배열에서 포인터를 제거하고, 포인터 상세 정보를 업데이트합니다.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)는 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 대신 발생할 수 있습니다. 포인터 캡처는 사용자 조작, 프로그래밍 방식의 다른 포인터 캡처, [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 호출 등 다양한 이유로 잃게 될 수 있습니다.     
+    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)는 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 대신 발생할 수 있습니다. 포인터 캡처는 사용자 조작, 프로그래밍 방식의 다른 포인터 캡처, [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 호출 등 다양한 이유로 잃게 될 수 있습니다.     
 
 ```csharp
 /// <summary>

@@ -6,16 +6,14 @@ ms.assetid: e433dfbd-488b-44ff-8333-1dcf0329cd60
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 오류, 서비스 호출
 ms.localizationpriority: medium
-ms.openlocfilehash: c322239e65d019695b879e71032eee94dbcadc14
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 1728af14afb0840975ad175608da3f0e9b03645d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5478645"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556905"
 ---
 # <a name="error-handling"></a>오류 처리
 

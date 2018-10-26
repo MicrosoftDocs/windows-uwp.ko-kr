@@ -7,16 +7,14 @@ description: " GET (/public/scids/{scid}/clips)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b945427118122e3b6d52210efc5e1de84a8c8d68
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b7249d9822c4e11a1c75529bdb5eb515487c5c53
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481284"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550502"
 ---
 # <a name="get-publicscidsscidclips"></a>GET (/public/scids/{scid}/clips)
 공개 클립 나열 되어 있습니다. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.

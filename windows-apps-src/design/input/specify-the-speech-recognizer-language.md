@@ -9,15 +9,13 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 471f222bb22293ccb3b66f5387d43b74fc53b910
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 7e042a9bbedee3ded0601eda06da8e349c4b788c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653872"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572672"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>음성 인식기 언어 지정
 
@@ -60,9 +58,9 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 설치된 언어는 장치마다 다를 수 있습니다. 특정 제약 조건 때문에 특정 언어에 의존하는 경우 해당 언어가 있는지 확인해야 합니다.
 
-**참고**  새 언어 팩을 설치한 후에는 다시 부팅해야 합니다. 지정된 언어가 지원되지 않거나 설치가 완료되지 않은 경우 오류 코드 SPERR\_NOT\_FOUND(0x8004503a)의 예외가 발생합니다.
+**참고**새 언어 팩을 설치한 후 부팅이 필요 합니다. 지정된 언어가 지원되지 않거나 설치가 완료되지 않은 경우 오류 코드 SPERR\_NOT\_FOUND(0x8004503a)의 예외가 발생합니다.
 
- 
+ 
 
 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 클래스의 다음 두 정적 속성 중 하나를 확인하여 장치에서 지원되는 언어를 확인합니다.
 
@@ -105,9 +103,9 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 **샘플**
 
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

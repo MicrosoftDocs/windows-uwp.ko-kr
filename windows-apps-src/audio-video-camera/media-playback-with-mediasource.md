@@ -6,16 +6,14 @@ title: 미디어 항목, 재생 목록 및 트랙
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 241f3f62f8bf8965f7bc718c2dfe0c7e76866c51
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 73b6a19e2385f1a9b8afa4672df50d17ac16ec97
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832474"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572532"
 ---
 # <a name="media-items-playlists-and-tracks"></a>미디어 항목, 재생 목록 및 트랙
 
@@ -196,7 +194,7 @@ Windows 10 버전 1703부터 **DataCue.Properties** 속성은 **CueEntered** 및
 
 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)를 사용하면 **MediaPlaybackItem** 개체가 표시하는 미디어 항목의 재생 목록을 만들 수 있습니다.
 
-**참고** [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)의 항목이 매끄러운 재생을 사용하여 렌더링됩니다. 시스템은 MP3 또는 AAC로 인코딩된 파일에 제공된 메타데이터를 사용하여 매끄러운 재생에 필요한 지연 또는 패딩 보정을 결정합니다. MP3 또는 AAC로 인코딩된 파일이 이 메타데이터를 제공하지 않는 경우 시스템에서 지연이나 패딩을 스스로 결정합니다. 이러한 인코더는 지연 또는 패딩을 도입하지 않으므로 PCM, FLAC, ALAC 등 무손실 형식에 대해 시스템은 어떠한 조치도 취하지 않습니다.
+**참고** [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) 의 항목이 매끄러운 재생을 사용 하 여 렌더링 됩니다. 시스템은 MP3 또는 AAC로 인코딩된 파일에 제공된 메타데이터를 사용하여 매끄러운 재생에 필요한 지연 또는 패딩 보정을 결정합니다. MP3 또는 AAC로 인코딩된 파일이 이 메타데이터를 제공하지 않는 경우 시스템에서 지연이나 패딩을 스스로 결정합니다. 이러한 인코더는 지연 또는 패딩을 도입하지 않으므로 PCM, FLAC, ALAC 등 무손실 형식에 대해 시스템은 어떠한 조치도 취하지 않습니다.
 
 시작하려면 변수를 선언하여 **MediaPlaybackList**를 저장합니다.
 
