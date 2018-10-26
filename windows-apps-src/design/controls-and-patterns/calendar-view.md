@@ -15,11 +15,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: fba6d8ee56e4d9a3d187721b4b2f1c5daa9b1b1f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5546490"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5596990"
 ---
 # <a name="calendar-view"></a>달력 보기
 

@@ -6,19 +6,18 @@ ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, visual studio, 도구, directx
-ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218957"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5598739"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>게임 프로그래밍용 Visual Studio 도구
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **요약**
 
@@ -48,9 +47,9 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 자세한 내용은 [텍스처 및 이미지 작업](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx)을 참조하세요.
 
-> **참고**  이미지 편집기는 전체 기능의 이미지 편집 앱에 대한 대체용이 아니지만 단순한 여러 가지 보기 및 편집 시나리오에 적합합니다.
+> **참고**이미지 편집기는 전체 기능의 이미지 편집 앱에 대 한 대체용 없습니다 하지만 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
 
- 
+ 
 
 ## <a name="model-editor"></a>모델 편집기
 
@@ -67,9 +66,9 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 자세한 내용은 [3D 모델 작업](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx)을 참조하세요.
 
-> **참고**  모델 편집기는 전체 기능의 모델 편집 앱에 대한 대체용이 아니지만 단순한 여러 가지 보기 및 편집 시나리오에 적합합니다.
+> **참고**모델 편집기는 전체 기능의 모델 편집 앱에 대 한 대체용 없습니다 하지만 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
 
- 
+ 
 
 ## <a name="shader-designer"></a>셰이더 디자이너
 
@@ -119,7 +118,7 @@ float3 LambertLighting(
 
 Visual Studio가 리소스를 사용할 수 있는 형식으로 변환하도록 프로젝트에 사용자 지정 빌드를 추가할 수 있습니다. 그 후 다른 DirectX 앱에서와 마찬가지로 DirectX 리소스를 만들고 채워서 앱에 자산을 로드하고 사용할 수 있습니다.
 
-사용자 지정 빌드를 추가하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **사용자 지정 빌드...** 를 선택합니다. 다음과 같은 유형의 사용자 지정 빌드를 프로젝트에 추가할 수 있습니다.
+사용자 지정 빌드를 추가 하려면 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **사용자 지정 빌드...** 를 선택 합니다. 다음과 같은 유형의 사용자 지정 빌드를 프로젝트에 추가할 수 있습니다.
 
 -   이미지 콘텐츠 파이프라인은 입력으로 이미지 파일을 가져오고 DirectDraw Surface(.dds) 파일을 출력합니다.
 -   메시 콘텐츠 파이프라인은 메시 파일(.fbx)을 가져오고 .cmo 메시 파일을 출력합니다.
@@ -144,13 +143,12 @@ Visual Studio는 그래픽 관련 디버깅 도구를 제공합니다. 이러한
 
 자세한 내용은 [DirectX 그래픽 디버깅](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx)을 참조하세요.
 
-> **참고**  이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 
