@@ -11,16 +11,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 399963b0d0c9ef4d3860daf1b090af28c9cf97d0
-ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
-ms.translationtype: HT
+ms.openlocfilehash: 8b5d2a55610b6cec2f9026a5834b00ad7015a9c6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
-ms.locfileid: "1480629"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555160"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -99,11 +97,13 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 
     <Page.Resources>
         <Style TargetType="Button">
-              <Setter Property="Background" Value="red"/>
+            <Setter Property="Background" Value="Red"/>
         </Style>
-    </Page.Resources> 
+    </Page.Resources>
+    <Grid>
        <!-- This button will have a red background. -->
        <Button Content="Button" Height="100" VerticalAlignment="Center" Width="100"/>
+    </Grid>
 </Page>
 ```
 
@@ -113,9 +113,10 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 
 다른 모든 사전과 마찬가지로 리소스 사전의 멤버에 액세스합니다.
 
-> **주의**&nbsp;&nbsp;코드에서 리소스를 찾을 경우 `Page.Resources` 사전의 리소스만 확인됩니다. [StaticResource 태그 확장](../../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
+> [!WARNING]
+> 코드에 대 한 리소스만에서 리소스 조회를 수행 합니다 `Page.Resources` 사전의 리소스만 확인 됩니다. [StaticResource 태그 확장](../../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
 
- 
+ 
 
 이 예제에서는 페이지 리소스 사전에서 `redButtonStyle` 리소스를 검색하는 방법을 보여 줍니다.
 
@@ -203,29 +204,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)는 컨트롤이 상속하는 기본 클래스이며 [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) 속성이 있습니다. 따라서 모든 **FrameworkElement**에 로컬 리소스 사전을 추가할 수 있습니다.
 
-여기에서는 리소스 사전이 페이지 요소에 추가됩니다.
-
-```XAML
-<Page
-    x:Class="MSDNSample.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
-    <Page.Resources>
-        <x:String x:Key="greeting">Hello world</x:String>
-    </Page.Resources>
-
-    <Border>
-        <Border.Resources>
-            <x:String x:Key="greeting">Hola mundo</x:String>
-        </Border.Resources>
-        <TextBlock Text="{StaticResource greeting}" Foreground="Gray" VerticalAlignment="Center"/>
-    </Border>
-</Page>
-
-```
-
-여기서 [Page](https://msdn.microsoft.com/library/windows/apps/br227503) 및 [Border](https://msdn.microsoft.com/library/windows/apps/br209250)에는 모두 리소스 사전이 있으며 "greeting"이라는 리소스가 있습니다. [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)은 **Border**에 있으므로 해당 리소스를 찾을 때 **Border**의 리소스, **Page**의 리소스, [Application](https://msdn.microsoft.com/library/windows/apps/br242324) 리소스 순으로 검색합니다. **TextBlock** 은 "Hola mundo"입니다.
+여기서 [Page](https://msdn.microsoft.com/library/windows/apps/br227503) 및 [Border](https://msdn.microsoft.com/library/windows/apps/br209250)에는 모두 리소스 사전이 있으며 "greeting"이라는 리소스가 있습니다. 'TextBlock2' 라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) **테두리**안에 이므로 해당 리소스를 찾을 때 **테두리**의 리소스를 **페이지**의 리소스 및 [응용 프로그램](https://msdn.microsoft.com/library/windows/apps/br242324) 리소스. **TextBlock** 은 "Hola mundo"입니다.
 
 코드에서 요소의 리소스에 액세스하려면 해당 요소의 [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) 속성을 사용합니다. XAML이 아니라 코드에서 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)의 리소스에 액세스하면 부모 요소의 사전이 아니라 해당 사전만 검색합니다.
 
@@ -234,16 +213,25 @@ sealed partial class App : Application
     x:Class="MSDNSample.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
     <Page.Resources>
         <x:String x:Key="greeting">Hello world</x:String>
     </Page.Resources>
+    
+    <StackPanel>
+        <!-- Displays "Hello world" -->
+        <TextBlock x:Name="textBlock1" Text="{StaticResource greeting}"/>
 
-    <Border x:Name="border">
-        <Border.Resources>
-            <x:String x:Key="greeting">Hola mundo</x:String>
-        </Border.Resources>
-    </Border>
+        <Border x:Name="border">
+            <Border.Resources>
+                <x:String x:Key="greeting">Hola mundo</x:String>
+            </Border.Resources>
+            <!-- Displays "Hola mundo" -->
+            <TextBlock x:Name="textBlock2" Text="{StaticResource greeting}"/>
+        </Border>
+
+        <!-- Displays "Hola mundo", set in code. -->
+        <TextBlock x:Name="textBlock3"/>
+    </StackPanel>
 </Page>
 
 ```
@@ -254,7 +242,7 @@ sealed partial class App : Application
         public MainPage()
         {
             this.InitializeComponent();
-            string str = (string)border.Resources["greeting"];
+            textBlock3.Text = (string)border.Resources["greeting"];
         }
     }
 ```
@@ -359,7 +347,7 @@ sealed partial class App : Application
 
 </ResourceDictionary>
 
-<!—Dictionary2.xaml -->
+<!-- Dictionary2.xaml -->
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -407,7 +395,7 @@ XAML 리소스 참조에 대한 조회 동작은 실제 사용이 적용되는 �
 
 > **참고**&nbsp;&nbsp;이러한 리소스 조회 동작을 활용하기 위해 그리고 XAML 태그 스타일 규칙으로 인해 일반적으로 페이지의 루트 수준에서 모든 즉시 실행 리소스를 정의합니다.
 
- 
+ 
 
 요청된 리소스를 즉시 실행 리소스에서 찾지 못한 경우 다음 조회 단계는 [Application.Resources](https://msdn.microsoft.com/library/windows/apps/br242338) 속성을 확인하는 것입니다. **Application.Resources**는 앱 탐색 구조의 여러 페이지에서 참조하는 앱 특정 리소스를 지정할 가장 적합한 위치입니다.
 
@@ -463,7 +451,7 @@ XAML 파서가 클래스를 인스턴스화하려면 생성자가 필요하므�
 
 대부분의 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) 시나리오는 XAML에서 배타적으로 처리됩니다. **ResourceDictionary** 컨테이너 및 리소스를 XAML 파일 또는 UI 정의 파일의 XAML 노드 집합으로 선언합니다. 그런 다음, XAML 리소스 참조를 사용하여 XAML의 다른 부분에서 해당 리소스를 요청합니다. 하지만 앱이 실행 중인 동안 실행되는 코드를 사용하여 **ResourceDictionary**의 콘텐츠를 조정하거나 **ResourceDictionary** 콘텐츠를 쿼리하여 리소스가 이미 정의되어 있는지 확인해야 하는 특정 시나리오가 있습니다. 이러한 코드 호출은 **ResourceDictionary** 인스턴스에서 수행되므로 먼저 하나의 항목, 즉 [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740) 가져오기로 개체 트리에 있는 즉시 실행 ResourceDictionary를 검색하거나 `Application.Current.Resources`를 검색해야 합니다.
 
-C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://msdn.microsoft.com/library/windows/apps/br208794))를 사용하여 특정 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/jj603134)의 리소스를 참조할 수 있습니다. **ResourceDictionary**는 문자열 키가 입력된 사전이므로 인덱서는 정수 인덱스가 아닌 문자열 키를 사용합니다. Visual C++ 구성 요소 확장(C++/CX) 코드에서 [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800)을 사용합니다.
+C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://msdn.microsoft.com/library/windows/apps/br208794))를 사용하여 특정 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/jj603134)의 리소스를 참조할 수 있습니다. **ResourceDictionary**는 문자열 키가 입력된 사전이므로 인덱서는 정수 인덱스가 아닌 문자열 키를 사용합니다. VisualC + + 구성 요소 확장에서 (C + + CX) 코드를 [조회](https://msdn.microsoft.com/library/windows/apps/br208800)를 사용 합니다.
 
 코드를 사용하여 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)를 검사 또는 변경하려는 경우, [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) 또는 [Item](https://msdn.microsoft.com/library/windows/apps/jj603134)과 같은 API에 대한 동작은 즉시 실행 리소스에서 앱 리소스로 트래버스되지 않습니다. 이는 XAML 페이지가 로드될 때에만 발생하는 XAML 파서 동작입니다. 런타임 시 키에 대한 범위가 당시 사용 중인 **ResourceDictionary** 인스턴스에 자체 포함됩니다. 그러나 그 범위는 [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801)로 확장되지 않습니다.
 
@@ -484,7 +472,7 @@ C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://msdn.mic
 
 고급 시나리오에서는 이 항목에서 설명하는 XAML 리소스 조회와 다른 동작을 갖는 클래스를 구현할 수 있습니다. 이렇게 하려면 [CustomXamlResourceLoader](https://msdn.microsoft.com/library/windows/apps/br243327) 클래스를 구현한 다음 [StaticResource](https://msdn.microsoft.com/library/windows/apps/mt185580) 또는 [ThemeResource](../../xaml-platform/staticresource-markup-extension.md) 태그 확장을 사용하는 대신 리소스 참조에 [CustomResource](../../xaml-platform/themeresource-markup-extension.md) 태그 확장을 사용하여 해당 동작에 액세스할 수 있습니다. 대부분의 앱에는 이를 요구하는 시나리오가 없습니다. 자세한 내용은 [CustomXamlResourceLoader](https://msdn.microsoft.com/library/windows/apps/br243327)를 참조하세요.
 
- 
+ 
 ## <a name="related-topics"></a>관련 항목
 
 * [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)
@@ -495,9 +483,9 @@ C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](https://msdn.mic
 * [컨트롤 스타일 지정](xaml-styles.md)
 * [x:Key 특성](https://msdn.microsoft.com/library/windows/apps/mt204787)
 
- 
+ 
 
- 
+ 
 
 
 

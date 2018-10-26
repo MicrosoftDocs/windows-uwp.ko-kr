@@ -6,16 +6,14 @@ ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11, 포트
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a0baee79873203f9f52fd1e9acae03c7647240
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e7541a8f54f64197c17acea5f1737e36b0e6f670
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652812"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556867"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
 
@@ -84,9 +82,9 @@ typedef struct
 
 이 구조에는 하나의 인스턴스가 있으며 매우 간단한 꼭짓점 음영 메시 렌더링에 대한 모든 필요한 구성 요소가 포함되어 있습니다.
 
-> **참고**  이 항목의 모든 OpenGL ES 2.0의 코드는 Khronos Group에서 제공하는 Windows API 구현을 기반으로 하며 Windows C 프로그래밍 구문을 사용합니다.
+> **참고**이 항목의 모든 OpenGL ES 2.0 코드는 Khronos Group에서 제공 하는 Windows API 구현을 기반으로 하며 Windows C 프로그래밍 구문을 사용 합니다.
 
- 
+ 
 
 ## <a name="what-you-need-to-know"></a>알아야 할 사항
 
@@ -134,7 +132,7 @@ typedef struct
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>추가 리소스
 
@@ -143,9 +141,9 @@ typedef struct
 -   [UWP용 새 DirectX 11 프로젝트 만들기](user-interface.md)
 -   [Direct3D 11에 OpenGL ES 2.0 개념 및 인프라 매핑](map-concepts-and-infrastructure.md)
 
- 
+ 
 
- 
+ 
 
 
 

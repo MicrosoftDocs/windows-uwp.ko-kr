@@ -8,20 +8,18 @@ template: detail.hbs
 ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: kisai
 design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 874cd149b9c029b406592c8ec81ae05427532257
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 363c60a9aeaaa98d808e015f96e4096cf889a501
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1493770"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555032"
 ---
 # <a name="calendar-date-and-time-controls"></a>달력, 날짜 및 시간 컨트롤
 

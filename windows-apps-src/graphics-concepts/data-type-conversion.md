@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c7f68984274cbdb3adec0a88a0c99f7a7342380
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a6ceb1e779f8622d3e358bc131b21f6ec66ac2f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045116"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556416"
 ---
 # <a name="data-type-conversion"></a>데이터 형식 변환
 
@@ -37,7 +35,7 @@ ms.locfileid: "1045116"
 | FLOAT | Direct3D에 정의된 부동 소수점 값의 모든 표현입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | SRGB  | UNORM과 유사하게, n비트 숫자를 위한 것입니다. 모든 0은 0.0f이며 모든 1은 1.0f를 의미합니다. 그러나 UNORM과 다르게, SRGB를 통한 모든 0에서 모든 1까지의 부호 없는 정수의 순차적 인코딩은 0.0f에서 1.0f 사이의 부동 소수점 숫자 표현의 비선형 수열입니다. 대략적으로 말해, 이 비선형 수열인 SRGB를 순차적 색상으로 표시하면, 관찰자에게 광도 수준이 "평균"인 선형 램프로 표시될 것이며, 즉 "평균"적인 관찰 상태에서 "평균" 디스플레이로 표현됩니다. 완전한 정보는 IEC(국제 전자기술 위원회)의 SRGB 표준인 IEC 61996-2-1을 참조하세요.                |
 
- 
+ 
 
 위 용어는 "형식 이름 한정자"로도 자주 사용되며, 데이터가 메모리에 어떻게 배치되는지, 메모리나 셰이더와 같은 파이프라인에서 전송 경로(필터링 포함 가능)에서 어떤 전송이 수행되는지 설명합니다.
 
@@ -189,7 +187,7 @@ ms.locfileid: "1045116"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>고정 소수점 정수 변환
 
@@ -238,22 +236,22 @@ ms.locfileid: "1045116"
 <td align="left">고정 소수점 정수</td>
 <td align="left">FLOAT</td>
 <td align="left"><p>특정 고정 소수점 표현이 부동 소수점으로 변환되면 총 24비트의 정보를 포함하지 않으며, 23비트를 넘는 소수 부분이 포함되지 않습니다. i.f 형식(i 비트 정수, f 비트 소수점)인 고정 소수점 숫자 fxp를 가정해 보겠습니다. 부동 소수점으로의 변환은 다음 가상 코드와 유사합니다.</p>
-<p>결과 선회 비행 2 = (float) (fxp &gt; &gt; f) + / 정수 추출 /</p>
-((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); 분수를 추출 합니다.</td>
+<p>부동 소수점 결과 = (float) (fxp &gt; &gt; f) + / / 정수 추출</p>
+((float) (fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); 소수점 추출</td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [부록](appendix.md)
 
- 
+ 
 
- 
+ 
 
 
 

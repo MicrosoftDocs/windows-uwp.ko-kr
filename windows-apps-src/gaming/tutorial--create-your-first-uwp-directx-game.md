@@ -7,15 +7,13 @@ keywords: DirectX 게임 샘플, 게임 샘플, UWP(유니버설 Windows 플랫�
 ms.author: joanlee
 ms.date: 12/01/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c043b20cb00873bf115ff2d65306bc727d23a02a
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c589eeb71d93619b92254207ddc5eb1b1494a55
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877225"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553748"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>DirectX로 작성된 간단한 UWP(유니버설 Windows 플랫폼) 게임 만들기
 

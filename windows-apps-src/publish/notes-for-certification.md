@@ -6,16 +6,14 @@ ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
 ms.author: wdg-dev-content
 ms.date: 04/03/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10 UWP, 테스터에 대한 노트
 ms.localizationpriority: medium
-ms.openlocfilehash: 741925a3ac49273bd7ba826dfbadd2e18724f307
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 9348b7ef7c8754b63c284c0479f37dde0b297ad8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5515883"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554571"
 ---
 # <a name="notes-for-certification"></a>인증에 대한 참고 사항
 

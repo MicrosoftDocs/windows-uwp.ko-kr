@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18746ef231f7d2b387866fba82e4f12a44476001
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 65b9f6700ddd11c41193820a5247a90c2382c98b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044622"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558182"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>감쇠 및 스포트라이트 계수
 
@@ -39,7 +37,7 @@ Atten = 1/( att0<sub>i</sub> + att1<sub>i</sub> \* d + att2<sub>i</sub> \* d²)
 | att2<sub>i</sub> | 0.0           | 부동 소수점 | 이차 감쇠 계수                    | 0 ~ 양의 무한대 |
 | d                | 해당 없음           | 부동 소수점 | 꼭짓점 위치에서 조명 위치까지의 거리 | 해당 없음            |
 
- 
+ 
 
 -   Atten = 1, 방향성 광원인 경우
 -   Atten = 0, 조명과 꼭짓점 간의 거리가 조명의 범위를 초과할 경우
@@ -54,7 +52,7 @@ d = | L<sub>dir</sub> |
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
 | L<sub>dir</sub> | 해당 없음           | x, y 및 z 부동 소수점 값을 포함한 3D 벡터 | 꼭짓점 위치에서 조명 위치까지의 방향 벡터 |
 
- 
+ 
 
 d가 조명의 범위보다 클 경우 Direct3D가 더 이상 감쇠 계산을 수행하지 않고 조명의 효과를 꼭짓점에 적용하지 않습니다.
 
@@ -76,7 +74,7 @@ d가 조명의 범위보다 클 경우 Direct3D가 더 이상 감쇠 계산을 �
 | theta<sub>i</sub> | 0.0           | 부동 소수점 | 스포트라이트 i의 본영 각도(라디안 단위)    | \[0, pi)                 |
 | falloff           | 0.0           | 부동 소수점 | 대칭 계수                           | (음의 무한대, 양의 무한대)   |
 
- 
+ 
 
 다음은 항목에 대한 설명입니다.
 
@@ -89,7 +87,7 @@ rho = norm(L<sub>dcs</sub>)<sup>.</sup>norm(L<sub>dir</sub>)
 | L<sub>dcs</sub> | 해당 없음           | x, y 및 z 부동 소수점 값을 포함한 3D 벡터 | 카메라 공간에서 조명 방향의 음수         |
 | L<sub>dir</sub> | 해당 없음           | x, y 및 z 부동 소수점 값을 포함한 3D 벡터 | 꼭짓점 위치에서 조명 위치까지의 방향 벡터 |
 
- 
+ 
 
 조명 감쇠를 계산한 후 꼭짓점에 대한 확산 및 반사 구성 요소를 계산하기 위해 Direct3D는 스포트라이트 효과(적용 가능한 경우), 표면에서 빛이 반사되는 각도 및 현재 재질의 반사율도 고려합니다. [조명 유형](light-types.md)에서 "스포트라이트"를 참조하세요.
 
@@ -98,9 +96,9 @@ rho = norm(L<sub>dcs</sub>)<sup>.</sup>norm(L<sub>dir</sub>)
 
 [조명의 수학](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -4,22 +4,20 @@ title: 사용자 위치 가져오기
 description: 사용자의 위치를 찾고 위치 변경에 대응합니다. 사용자 위치에 대한 액세스는 설정 앱의 개인 정보 설정에서 관리합니다. 또한 이 항목에서는 앱에 사용자 위치 액세스 권한이 있는지 확인하는 방법을 보여 줍니다.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
 ms.author: pafarley
-ms.date: 02/08/2017
+ms.date: 11/28/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 지도, 위치, 위치 기능
-ms.openlocfilehash: f5af2815783568cb234f1196e065f18b145c7e68
-ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
+ms.localizationpriority: medium
+ms.openlocfilehash: 2187bafa9fd2b4fdce049f3ef11d4e6766613de3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2017
-ms.locfileid: "695745"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558063"
 ---
 # <a name="get-the-users-location"></a>사용자 위치 가져오기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 사용자의 위치를 찾고 위치 변경에 대응합니다. 사용자 위치에 대한 액세스는 설정 앱의 개인 정보 설정에서 관리합니다. 또한 이 항목에서는 앱에 사용자 위치 액세스 권한이 있는지 확인하는 방법을 보여 줍니다.
@@ -48,7 +46,7 @@ ms.locfileid: "695745"
 
 ### <a name="step-1-request-access-to-the-users-location"></a>1단계: 사용자의 위치에 대한 액세스 요청
 
-앱에 동의 없음 위치 접근 권한 값(참고 참조)이 없는 경우 위치에 액세스하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용하여 위치에 대한 액세스를 요청해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
+앱에 거친 위치 접근 권한 값 (참고 참조)를 시도 하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용 하 여 위치에 액세스 하 여 사용자의 위치에 대 한 액세스를 요청 해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -60,7 +58,7 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 액세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
 
->참고: 동의 없음 위치 기능을 통해 앱은 사용자의 명시적 권한 없이도 의도적으로 난독 처리된(부정확한) 위치를 가져올 수 있습니다(시스템 수준의 위치 스위치는 계속 **켜짐** 상태여야 함). 앱에서 동의 없음 위치를 활용하는 방법은 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) 클래스의 [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) 메서드를 참조하세요.
+>그러나 참고: 거친 위치 기능에 앱이 사용자의 명시적 권한을 (시스템 수준 위치 스위치 여전히 있어야 **에서**) 하지 않고도 의도적으로 조작 된 (부정확 한) 위치를 가져올 수 있도록 합니다. 앱의 거친 위치를 활용 하는 방법을 알아보려면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) 클래스의 [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) 메서드를 참조 하세요.
 
 ### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>2단계: 사용자의 위치를 가져오고 위치 사용 권한 변경에 대해 등록
 
@@ -265,7 +263,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 앱이 사용자 위치에 액세스하려면 먼저 디바이스에서 **위치**를 사용하도록 설정해야 합니다. **설정** 앱에서 다음 **위치 개인정보 설정** 이 켜져 있는지 확인합니다.
 
--   **이 장치의 위치...** 가 **켜짐** 상태임(Windows 10 Mobile에는 해당되지 않음)
+-   **이 장치에 대 한 위치** 가 켜 **집니다** (Windows10 Mobile에는 해당 되지 않음)
 -   위치 서비스 설정 **위치**가 **켜짐** 상태임
 -   **사용자의 위치를 사용할 수 있는 앱 선택**에서 앱이 **on** 상태임
 

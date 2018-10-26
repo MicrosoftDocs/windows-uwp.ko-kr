@@ -6,18 +6,16 @@ template: detail.hbs
 ms.author: sezhen
 ms.date: 02/12/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
-ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 3a87e7366765b7c8b304e930fed0d3c45900aad9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472756"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555441"
 ---
 # <a name="z-depth-and-shadow"></a>Z-깊이 및 그림자
 

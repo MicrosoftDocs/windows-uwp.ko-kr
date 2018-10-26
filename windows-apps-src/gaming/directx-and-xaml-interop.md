@@ -6,16 +6,14 @@ ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx, xaml 상호 운용성
 ms.localizationpriority: medium
-ms.openlocfilehash: 107501bb06af62035e78ef1ac65291b2bdec5c62
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 7f3a70be3dd31b0a5e4214621ab9fb4efa72cc54
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674990"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555183"
 ---
 # <a name="directx-and-xaml-interop"></a>DirectX 및 XAML 상호 운용성
 
@@ -25,9 +23,9 @@ UWP(유니버설 Windows 플랫폼) 게임 또는 앱에서 XAML(Extensible Appl
 
 앱이 주로 2D 렌더링에 중점을 두는 경우 [Win2D](https://github.com/microsoft/win2d) Windows 런타임 라이브러리를 사용하려고 할 수 있습니다. 이 라이브러리는 Microsoft에서 유지 관리하며, 핵심 Direct2D 기술을 기반으로 합니다. 이 라이브러리는 2D 그래픽을 구현하는 사용 패턴을 크게 간소화하며 이 문서에 설명된 기법 중 일부에 대한 유용한 추상화를 포함하고 있습니다. 자세한 내용은 프로젝트 페이지를 참조하세요. 이 문서에서는 Win2D를 사용*하지* 않도록 선택한 앱 개발자를 위한 지침을 다룹니다.
 
-> **참고** DirectX API는 Windows 런타임 형식으로 정의되지 않으므로, 일반적으로 DirectX와 상호 운용되는 XAML UWP 구성 요소를 개발하는 데 Visual C++ 구성 요소 확장(C++/CX)을 사용합니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
+> **참고**DirectX Api는 일반적으로 VisualC + + 구성 요소 확장을 사용 하므로 Windows 런타임 형식으로 정의 되지 않습니다 (C + + CX) DirectX와 상호 운용 되는 XAML UWP 구성 요소를 개발 하는 합니다. 또한 DirectX 호출을 개별 Windows 런타임 메타데이터 파일에 래핑할 경우 DirectX를 사용하는 C# 및 XAML로 UWP 앱을 만들 수 있습니다.
 
- 
+ 
 
 ## <a name="xaml-and-directx"></a>XAML 및 DirectX
 
@@ -386,7 +384,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 > **참고** 일반적으로 DirectX 앱은 스왑 체인을 표시 창 크기(일반적으로 대부분의 Microsoft Store 게임에서 기본 화면 해상도)와 동일하게 가로 방향으로 만들어야 합니다. 이렇게 해야 앱에서 표시되는 XAML 오버레이가 없을 때 최적의 스왑 체인 구현을 사용합니다. 앱이 세로 모드로 회전되는 경우 앱은 기존 스왑 체인에서 [IDXGISwapChain1::SetRotation](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 호출하고 필요한 경우 콘텐츠에 변형을 적용한 다음 동일한 스왑 체인에서 [SetSwapChain](https://msdn.microsoft.com/library/windows/desktop/dn302144)을 다시 호출해야 합니다. 마찬가지로, **SetSwapChain** 호출을 통해 스왑 체인 크기를 변경할 때마다 앱이 동일한 스왑 체인에 대해 [IDXGISwapChain::ResizeBuffers](https://msdn.microsoft.com/library/windows/desktop/bb174577)를 다시 호출해야 합니다.
 
 
- 
+ 
 
 다음은 코드 숨김으로 [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834) 개체를 만들고 업데이트하는 기본 프로세스입니다.
 
@@ -471,9 +469,9 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 * [ISwapChainPanelNative](https://msdn.microsoft.com/library/windows/desktop/dn302143)
 * [Direct3D 11의 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ff476345)
 
- 
+ 
 
- 
+ 
 
 
 

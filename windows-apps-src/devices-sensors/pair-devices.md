@@ -6,16 +6,14 @@ description: 일부 디바이스는 페어링해야 사용할 수 있습니다. 
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 86cac8248db896f56757dae7678d6e146835884c
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: Auto
+ms.openlocfilehash: 64f4756df37cbfaf041e432b7e4a890123f52d2f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674000"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554973"
 ---
 # <a name="pair-devices"></a>장치 페어링
 
@@ -31,9 +29,9 @@ ms.locfileid: "1674000"
 -   기본 페어링
 -   사용자 지정 페어링
 
-**팁**  일부 장치는 사용하기 위해 페어링하지 않아도 됩니다. 이는 자동 페어링에 대한 섹션에서 설명합니다.
+**팁**일부 장치 사용 하기 위해 페어링하지 않아도 됩니다. 이는 자동 페어링에 대한 섹션에서 설명합니다.
 
- 
+ 
 
 ## <a name="automatic-pairing"></a>자동 페어링
 
@@ -74,6 +72,6 @@ ms.locfileid: "1674000"
 
 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](http://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
 
- 
+ 
 
- 
+ 

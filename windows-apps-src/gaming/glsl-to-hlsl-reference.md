@@ -6,16 +6,14 @@ ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, 셰이더
 ms.localizationpriority: medium
-ms.openlocfilehash: 601cdd696290a1b22d7ed38d968a32db53b78ea1
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 30c925f9ebb07d578147dfba373fdeb3baa364fe
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691412"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557132"
 ---
 # <a name="glsl-to-hlsl-reference"></a>GLSL-HLSL 참조
 
@@ -45,7 +43,7 @@ OpenGL ES 2.0과 Direct3D 11은 유사점이 많습니다. 이 둘의 렌더링 
 | 타사 라이브러리를 통해 높은 수준의 모듈 제공(예: SDL(Simple DirectMedia Layer)) | Windows 앱 개발을 단순화하기 위해 높은 수준의 모듈(예: Direct2D)이 낮은 수준의 모듈을 기반으로 빌드됨             |
 | 확장을 통한 하드웨어 공급업체 차별화                                                         | Microsoft는 일반적인 방식으로 API에 선택적 기능을 추가하므로 특정 하드웨어 공급업체에 구속되지 않음 |
 
- 
+ 
 
 GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 
@@ -69,10 +67,10 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 <td align="left">셰이더 컴파일이 그래픽 API에 통합되어 있음</td>
 <td align="left">HLSL 컴파일러는 Direct3D가 셰이더를 드라이버에 전달하기 전에 중간 이진 표현으로 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509633">셰이더를 컴파일</a>합니다.
 <div class="alert">
-<strong>참고</strong>  이 이진 표현은 하드웨어 독립적입니다. 일반적으로 앱 런타임이 아니라 앱 빌드 시간에 컴파일됩니다.
+<strong>참고</strong>이 이진 표현은 하드웨어 독립적입니다. 일반적으로 앱 런타임이 아니라 앱 빌드 시간에 컴파일됩니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -98,10 +96,10 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 <td align="left">행 중심 행렬(기본값)</td>
 <td align="left">열 중심 행렬(기본값)
 <div class="alert">
-<strong>참고</strong>   한 변수의 레이아웃을 변경하려면 <strong>row_major</strong> 형식 한정자를 사용합니다. 자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">변수 구문</a>을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
+<strong>참고</strong>  <strong>row_major</strong> 형식 한정자를 사용 하 여 한 변수의 레이아웃을 변경 합니다. 자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">변수 구문</a>을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -111,11 +109,11 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 </tbody>
 </table>
 
- 
+ 
 
-> **참고** HLSL에서는 텍스처와 샘플러가 별도의 개체 두 개로 존재합니다. Direct3D 9와 마찬가지로, GLSL에서 텍스처 바인딩은 샘플러 상태의 일부입니다.
+> **참고**HLSL에서는 텍스처와 샘플러가 별도 객체 두 개로 존재 합니다. Direct3D 9와 마찬가지로, GLSL에서 텍스처 바인딩은 샘플러 상태의 일부입니다.
 
- 
+ 
 
 GLSL에서 상당수의 OpenGL 상태는 미리 정의된 전역 변수로 표시됩니다. 예를 들어, GLSL에서는 **gl\_Position** 변수를 사용하여 꼭짓점 위치를 지정하고 **gl\_FragColor** 변수를 사용하여 조각 색을 지정합니다. HLSL에서는 Direct3D 상태를 명시적으로 앱 코드에서 셰이더로 전달합니다. 예를 들어, Direct3D와 HLSL을 사용하는 경우 꼭짓점 셰이더에 대한 입력은 꼭짓점 버퍼의 데이터 형식과 일치해야 하고, 앱 코드의 상수 버퍼 구조는 셰이더 코드의 상수 버퍼([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) 구조와 일치해야 합니다.
 
@@ -162,7 +160,7 @@ GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이
 </tbody>
 </table>
 
- 
+ 
 
 GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전역 변수입니다.
 
@@ -274,7 +272,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="porting-glsl-pre-defined-global-variables-to-hlsl"></a>GLSL 미리 정의된 전역 변수를 HLSL로 포팅
 
@@ -382,7 +380,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 </tbody>
 </table>
 
- 
+ 
 
 의미 체계를 사용하여 꼭짓점 셰이더 입력 및 픽셀 셰이더 입력에 대한 위치, 색 등을 지정합니다. 입력 레이아웃의 의미 체계 값을 꼭짓점 셰이더 입력과 일치시켜야 합니다. 예는 [HLSL로의 GLSL 변수 포팅 예](#examples-of-porting-glsl-variables-to-hlsl)를 참조하세요. HLSL 의미 체계에 대한 자세한 내용은 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647)를 참조하세요.
 
@@ -503,14 +501,14 @@ HLSL 픽셀 셰이더 코드
 // The COLOR semantic must match the semantic in the vertex shader code.
 struct PixelShaderInput
 {
-    float4 pos : SV_Position;
-    float4 color : COLOR; // Color for the pixel
+    float4 pos : SV_Position;
+    float4 color : COLOR; // Color for the pixel
 };
 
-// Set the pixel color value for the renter target. 
+// Set the pixel color value for the renter target. 
 float4 main(PixelShaderInput input) : SV_Target
 {
-    return input.color;
+    return input.color;
 }
 ```
 
@@ -525,7 +523,7 @@ OpenGL 렌더링 코드
 // Bind shaders to the pipeline. 
 // Both vertex shader and fragment shader are in a program.
 glUseProgram(m_shader->getProgram());
- 
+ 
 // Input asssembly 
 // Get the position and color attributes of the vertex.
 
@@ -534,13 +532,13 @@ glEnableVertexAttribArray(m_positionLocation);
 
 m_colorLocation = glGetAttribColor(m_shader->getProgram(), "color");
 glEnableVertexAttribArray(m_colorLocation);
- 
+ 
 // Bind the vertex buffer object to the input assembler.
 glBindBuffer(GL_ARRAY_BUFFER, m_geometryBuffer);
 glVertexAttribPointer(m_positionLocation, 4, GL_FLOAT, GL_FALSE, 0, NULL);
 glBindBuffer(GL_ARRAY_BUFFER, m_colorBuffer);
 glVertexAttribPointer(m_colorLocation, 3, GL_FLOAT, GL_FALSE, 0, NULL);
- 
+ 
 // Draw a triangle with 3 vertices.
 glDrawArray(GL_TRIANGLES, 0, 3);
 ```
@@ -551,7 +549,7 @@ Direct3D 렌더링 코드
 // Bind the vertex shader and pixel shader to the pipeline.
 m_d3dDeviceContext->VSSetShader(vertexShader.Get(),nullptr,0);
 m_d3dDeviceContext->PSSetShader(pixelShader.Get(),nullptr,0);
- 
+ 
 // Declare the inputs that the shaders expect.
 m_d3dDeviceContext->IASetInputLayout(inputLayout.Get());
 m_d3dDeviceContext->IASetVertexBuffers(0, 1, vertexBuffer.GetAddressOf(), &stride, &offset);
@@ -568,9 +566,9 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 * [OpenGL ES 2.0에서 Direct3D 11로 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)
 
- 
+ 
 
- 
+ 
 
 
 

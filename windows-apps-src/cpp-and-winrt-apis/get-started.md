@@ -5,16 +5,14 @@ title: C++/WinRT 시작
 ms.author: stwhi
 ms.date: 10/19/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: b8f8425fa602c844803cc632f523949b8b04d551
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 6cb8e18904f61976103689c8d83475ec248eb38b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483803"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558023"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
@@ -146,7 +144,7 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt
 #include <winrt/base.h>
 ```
 
-## <a name="linking"></a>연결
+### <a name="linking"></a>연결
 
 C + + /winrt 언어 프로젝션에 특정 Windows 런타임 무료 (비 구성원) 함수 및 진입점에 따라 달라이 필요한 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리에 연결 합니다. 이 섹션에서는 링커 만족 하는 방법을 설명 합니다.
 

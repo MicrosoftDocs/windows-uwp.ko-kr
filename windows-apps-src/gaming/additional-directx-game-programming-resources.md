@@ -6,19 +6,18 @@ ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 프로그래밍
-ms.openlocfilehash: 736f5f5864edc9c7a976e8e0f062779ddd1f86c5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: d201caefedca0d810f78d893ea779bd6b814f007
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219067"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559455"
 ---
 # <a name="game-programming-resources"></a>게임 프로그래밍 리소스
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스를 확인하세요.
@@ -32,7 +31,7 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 ## <a name="game-design-guidance"></a>게임 디자인 지침
 
 
--   [Windows 스토어 앱용 UX 지침 인덱스](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [UWP 앱에 대 한 인덱스의 UX 지침](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
 ## <a name="blogs"></a>블로그
 
@@ -48,7 +47,7 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 -   [DirectXTex 텍스처 처리 라이브러리](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   Microsoft Visual Studio [그래픽 진단](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx)
 -   [Win2D](https://github.com/Microsoft/Win2D) - GPU 가속으로 렌더링하는 직접 실행 모드 2D 그래픽에 사용하기 쉬운 Windows 런타임 API입니다.
--   [Windows 스토어용 ANGLE](http://go.microsoft.com/fwlink/p/?linkid=618387) - OpenGL ES API 호출을 DirectX 11 API 호출로 변환하여 Windows에서 OpenGL ES 콘텐츠를 실행합니다.
+-   [Microsoft Store 용 ANGLE](http://go.microsoft.com/fwlink/p/?linkid=618387) -OpenGL ES API 호출을 DirectX 11 API 호출으로 변환 하 여 Windows에서 실행 OpenGL ES 콘텐츠.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>GDC 2015 게임 개발 세션 동영상
 
@@ -81,9 +80,9 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 -   [CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=76627)
 -   [GameDev.net](http://go.microsoft.com/fwlink/p/?LinkID=288870)
 
- 
+ 
 
- 
+ 
 
 
 

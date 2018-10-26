@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 887600366fdf1bf3951091df27d10f54516c2bf0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 3e1a015d5d51ad0c15f20755afcb0d324acd1f36
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674550"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556053"
 ---
 # <a name="raw-notification-overview"></a>원시 알림 개요
 
@@ -28,7 +26,7 @@ ms.locfileid: "1674550"
 > [!IMPORTANT]
 > 원시 알림을 이해하려면 [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)에 설명된 개념을 익히는 것이 가장 좋습니다.
 
- 
+ 
 
 알림 메시지, 타일 및 배지 푸시 알림과 마찬가지로, 원시 알림은 할당된 채널 URI(Uniform Resource Identifier)를 통해 앱의 클라우드 서비스에서 WNS로 푸시됩니다. 그러면 WNS이 채널과 관련된 디바이스 및 사용자 계정에 다시 알림을 전달합니다. 다른 푸시 알림과는 달리, 원시 알림에는 지정된 형식이 없습니다. 페이로드의 콘텐츠는 전적으로 앱에서 정의됩니다.
 
@@ -97,7 +95,7 @@ ms.locfileid: "1674550"
 > [!IMPORTANT]
 > 원시 알림 백그라운드 작업을 사용하기 전에 [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)를 통한 백그라운드 액세스가 앱에 허용되어야 합니다.
 
- 
+ 
 
 백그라운드 작업을 [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)에 등록해야 합니다. 등록하지 않을 경우 원시 알림이 수신될 때 작업이 실행되지 않습니다.
 
@@ -117,7 +115,7 @@ ms.locfileid: "1674550"
 ## <a name="other-resources"></a>기타 리소스
 
 
-Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=241553) 및 Windows 8.1용 [푸시 알림 및 정기 알림 샘플](http://go.microsoft.com/fwlink/p/?LinkId=231476)을 다운로드하고 Windows 10 앱에서 해당 소스 코드를 다시 사용하여 자세히 알아볼 수 있습니다.
+Windows8.1에 대 한 Windows8.1, 및는 [푸시 및 정기 알림 샘플에](http://go.microsoft.com/fwlink/p/?LinkId=231476) 대 한 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=241553) 을 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -126,9 +124,9 @@ Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=2
 * [빠른 시작: 실행 중인 앱에 대한 푸시 알림 가로채기](https://msdn.microsoft.com/library/windows/apps/jj709908)
 * [**RawNotification**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
 * [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
- 
+ 
 
- 
+ 
 
 
 

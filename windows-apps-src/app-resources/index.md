@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/20/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: a024badd16aa019f63cd68ef1cc357c6f241e7c3
-ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
-ms.translationtype: HT
+ms.openlocfilehash: 199f9def3150373fed2b3c7d8e711c1eeda6e721
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "1657896"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558202"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>앱 리소스 및 리소스 관리 시스템
 

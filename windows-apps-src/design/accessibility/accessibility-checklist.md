@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 658b93aa72efbaacaf4e8bb1ec98bd2adb5cfa9a
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: bf9c3c4d803c4e5c2bc369449b83cf711bda6f99
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653792"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559718"
 ---
 # <a name="accessibility-checklist"></a>접근성 검사 목록
 

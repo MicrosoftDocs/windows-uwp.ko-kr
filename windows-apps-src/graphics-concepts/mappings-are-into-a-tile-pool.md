@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 45062f82955b1e353def2eadbeae36d1c9e81ce6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652662"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558861"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>타일 풀에 대한 매핑
 
@@ -35,7 +33,7 @@ ms.locfileid: "1652662"
 
 각 페이지 테이블 항목이 64비트라고 가정합시다.
 
-Direct3D 11에 리소스 제한이 있는 조건에서 단일면에 최악의 페이지 테이블 크기가 할당된 경우, 스트리밍 리소스를 요소당 128비트 형식(예: RGBA 부동)을 사용하여 만든다고 가정하면, 64KB 타일에 4096픽셀만 포함됩니다. 64비트 테이블 항목을 사용하여 완전히 채우는 경우(mipmap은 포함하지 않음), 지원되는 최대 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 크기(16384\*16384\*2048)에는 페이지 테이블에 약 1GB의 저장소가 필요합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
+최악의 페이지 테이블에 대 한 크기 스트리밍 리소스는 생성 비트-요소 당 128 형식 (예를 들어 RGBA float)를 사용 하 여 되므로 64KB 타일 가정해 Direct3D11에서 리소스 제한을 지정 하는 단일 surface 적중만 4096 픽셀을 포함 합니다. 64비트 테이블 항목을 사용하여 완전히 채우는 경우(mipmap은 포함하지 않음), 지원되는 최대 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 크기(16384\*16384\*2048)에는 페이지 테이블에 약 1GB의 저장소가 필요합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
 
 이 경우 약 10.6 테라바이트의 주소 지정 가능 메모리에 액세스할 수 있습니다. 그러나 주소 지정 가능 메모리의 크기에 제한을 두어 테라바이트 범위 정도로 그 공간을 줄일 수 있습니다.
 
@@ -64,7 +62,7 @@ Direct3D 11에 리소스 제한이 있는 조건에서 단일면에 최악의 �
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="tile-pool-creation.md">타일 풀 만들기</a></p></td>
-<td align="left"><p>응용 프로그램은 Direct3D 장치당 하나 이상의 타일 풀을 만들 수 있습니다. 각 타일 풀의 총 크기는 Direct3D 11의 리소스 크기 제한(대략 GPU RAM의 1/4)의 적용을 받습니다.</p></td>
+<td align="left"><p>응용 프로그램은 Direct3D 장치당 하나 이상의 타일 풀을 만들 수 있습니다. 각 타일 풀의 총 크기는 Direct3D11의 리소스 크기 제한, 대략 GPU RAM의 1/4로 제한 합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="tile-pool-resizing.md">타일 풀 크기 조정</a></p></td>
@@ -77,16 +75,16 @@ Direct3D 11에 리소스 제한이 있는 조건에서 단일면에 최악의 �
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [스트리밍 리소스 만들기](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

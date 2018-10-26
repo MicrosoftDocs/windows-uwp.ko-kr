@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 88c8c42dbf466b0e41125fd1b616e5eba950ba8f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: ec3d091d7cc5aca82aeef9a3e7f29a8d363705a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043452"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552473"
 ---
 # <a name="mipmap-packing"></a>Mipmap 압축
 
@@ -38,9 +36,9 @@ mips 중 일부(배열 슬라이스당)는 스트리밍 리소스의 크기, 형
 
 [스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ description: HoloLens용 Windows Device Portal을 사용하여 HoloLens 디바�
 ms.author: pafarley
 ms.date: 09/26/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 017a3061fbb72c45bd46ed4e1f134c022284ecfe
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5517581"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557854"
 ---
 # <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 

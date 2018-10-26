@@ -6,16 +6,14 @@ ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82d01ab6fc70397824b4bd6b267dd5e7cdeac0ee
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 309dd2aedb2195362652da93c13648d07e5ea9f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975805"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559695"
 ---
 # <a name="rssatom-feeds"></a>RSS/Atom 피드
 
@@ -48,7 +46,7 @@ UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 �
 
 네트워크 격리는 네트워크에 액세스하려고 하는 [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) 및 [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609) 네임스페이스의 모든 클래스 요소에 영향을 미칩니다. Windows에서는 적극적으로 네트워크 격리가 적용됩니다. 적절한 네트워크 접근 권한 값을 사용하지 않은 경우 결과적으로 네트워크에 액세스하게 되는 **Windows.Web.Syndication** 또는 **Windows.Web.AtomPub** 네임스페이스의 클래스 요소 호출이 네트워크 격리로 인해 실패할 수 있습니다.
 
-앱의 네트워크 접근 권한 값은 앱을 빌드할 때 앱 매니페스트에 구성됩니다. 네트워크 접근 권한 값은 일반적으로 앱을 개발할 때 Microsoft Visual Studio 2015를 사용하여 추가합니다. 텍스트 편집기를 사용하여 앱 매니페스트 파일에서 수동으로 네트워크 접근 권한 값을 설정할 수도 있습니다.
+앱의 네트워크 접근 권한 값은 앱을 빌드할 때 앱 매니페스트에 구성됩니다. 네트워크 접근 권한 값은 일반적으로 앱을 개발할 때 Microsoft Visual Studio2015를 사용 하 여 추가 됩니다. 텍스트 편집기를 사용하여 앱 매니페스트 파일에서 수동으로 네트워크 접근 권한 값을 설정할 수도 있습니다.
 
 네트워크 격리 및 네트워킹 기능에 대한 자세한 내용은 [네트워킹기본 사항](networking-basics.md) 항목의 "기능" 섹션을 참조하세요.
 

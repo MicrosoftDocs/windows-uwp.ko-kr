@@ -6,19 +6,17 @@ description: 파일 시스템에 효율적으로 액세스하여 디스크 대�
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 00ad06179ed4a77cb3e5144df12d5490f79a5df2
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 1b0b1a45bc967dd69d38f2e85609a5e13ffd61b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894617"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558788"
 ---
 # <a name="optimize-file-access"></a>파일 액세스 최적화
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 
@@ -137,7 +135,7 @@ Windows.Storage 개체(예: `Windows.Storage.ApplicationData.Current.LocalFolder
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>UWP와 .NET 스트림 간의 버퍼링
 
-UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) 또는 [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728))을 .NET 스트림([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이를 지원하려면 Windows 스토어 앱용 .NET API에서 .NET 및 UWP 스트림 유형 간을 변환할 수 있는 확장 메서드를 제공해야 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx)를 참조하세요.
+UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) 또는 [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728))을 .NET 스트림([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이 지원 하려면 UWP 앱 용.NET Api는.NET 및 UWP 스트림 유형 간을 변환할 수 있는 확장 메서드를 제공 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx)를 참조하세요.
 
 UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP 스트림에 대한 어댑터가 만들어집니다. 경우에 따라 UWP 스트림의 메서드 호출과 관련된 런타임 부담이 있을 수 있습니다. 이는 특히 여러 작은 읽기나 쓰기 작업을 빈번히 수행하는 시나리오에서 앱 속도에 영향을 줄 수 있습니다.
 
@@ -200,7 +198,7 @@ UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP �
 
 큰 데이터 집합을 읽거나 쓸 경우에는 [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드에 큰 버퍼 크기를 제공하여 읽기 또는 쓰기 처리량을 늘릴 수 있습니다. 이렇게 하면 스트림 어댑터에 더 큰 내부 버퍼 크기가 제공됩니다. 예를 들어 큰 파일의 스트림을 XML 파서에 전달할 경우 파서는 스트림에서 여러 작은 읽기를 순서대로 수행할 수 있습니다. 버퍼가 크면 기본 UWP 스트림의 호출 수가 줄고 성능이 향상될 수 있습니다.
 
-> **참고**   버퍼 크기를 약 80KB보다 크게 설정할 때는 주의해야 합니다. 이 경우 가비지 수집기 힙에서 조각화가 발생할 수 있습니다([가비지 수집 성능 향상](improve-garbage-collection-performance.md) 참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
+> **참고**  을 설정할 때 버퍼 크기를 약 80KB 보다 크게 가비지 수집기 힙에서 조각화가 발생할 수이 주의 해야 ( [가비지 수집 성능 향상](improve-garbage-collection-performance.md)참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

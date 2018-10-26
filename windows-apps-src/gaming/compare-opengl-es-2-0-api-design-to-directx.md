@@ -6,19 +6,18 @@ ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, opengl, direct3d
-ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 2308c0b931b58209d1233205c355ac09680803dd
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219105"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554768"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>OpenGL ES 2.0에서 Direct3D로의 포팅 계획
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -65,7 +64,7 @@ Direct3D 11은 하드웨어 "기능 수준" 9\_1 (Direct3D 9.1) for 11\_1을 지
 | [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)                  | DirectXMath는 일반적인 선형 대수 및 삼각법 형식, 값 및 함수 처리를 위한 API 및 매크로 집합을 제공합니다. 이러한 형식 및 함수는 Direct3D 및 해당 셰이더 작업에 맞게 디자인되었습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | [DirectX HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509580) | Direct3D 셰이더에서 사용하는 현재 HLSL 구문이며, Direct3D 셰이더 모델 5.0을 구현합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- 
+ 
 
 ## <a name="review-the-windows-runtime-apis-and-template-library"></a>Windows 런타임 API 및 템플릿 라이브러리 검토
 
@@ -108,7 +107,7 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 | [**XMMatrixPerspectiveOffCenterRH**](https://msdn.microsoft.com/library/windows/desktop/ee419983)   | 오른손 원근 투영 행렬의 사용자 지정 버전을 작성합니다.                                                    |
 | [**XMMatrixPerspectiveRH**](https://msdn.microsoft.com/library/windows/desktop/ee419984)                     | 오른손 원근 투영 행렬을 작성합니다.                                                                        |
 
- 
+ 
 
 ## <a name="opengl-es20-to-direct3d-11-porting-frequently-asked-questions"></a>OpenGL ES2.0-Direct3D 11 포팅 질문과 대답
 
@@ -116,9 +115,9 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 -   질문: "일반적으로 OpenGL 코드에서 특정 문자열이나 패턴을 검색하여 Direct3D 문자열이나 패턴으로 바꿀 수 있나요?"
 -   대답: 아니요. OpenGL ES 2.0과 Direct3D 11은 그래픽 파이프라인 모델링 세대가 서로 다릅니다. 개념과 API 간에 몇 가지 표면적인 유사성(예: 렌더링 컨텍스트 및 셰이더 인스턴스화)이 존재하지만 1:1 매핑을 시도하는 대신 파이프라인을 다시 만들 때 최선의 선택을 할 수 있도록 이 지침과 Direct3D 11 참조를 검토해야 합니다. 그러나 GLSL에서 HLSL로 포팅하는 경우 GLSL 변수, 내부 기능 및 함수에 대한 공통 별칭 집합을 만들면 포팅이 더 쉬워질 뿐만 아니라 단 하나의 셰이더 코드 파일 집합만 유지 관리할 수 있습니다.
 
- 
+ 
 
- 
+ 
 
 
 

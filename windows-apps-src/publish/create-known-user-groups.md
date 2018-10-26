@@ -5,16 +5,14 @@ title: 알려진 사용자 그룹 만들기
 ms.author: wdg-dev-content
 ms.date: 03/28/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, 대상 그룹, 고객, 플라이트 그룹, 사용자 그룹, 알려진 사용자
 ms.localizationpriority: medium
-ms.openlocfilehash: e15b5a4a2f76cbfc33db593c3110ac6f2d054b5b
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: eec9c214bcd4ac63406ec7681e66762356a0c1cf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5513717"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551324"
 ---
 # <a name="create-known-user-groups"></a>알려진 사용자 그룹 만들기
 

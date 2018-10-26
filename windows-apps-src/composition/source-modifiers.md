@@ -5,16 +5,14 @@ description: SourceModifiers를 사용하여 사용자 지정 당겨서 새로 �
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d85dbe89fe90723c3475b77c6057def684bd60d
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 997082d2ed7375d99a7be1543901d1dd854be1a0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1394382"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559157"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>SourceModifier로 당겨서 새로 고침
 

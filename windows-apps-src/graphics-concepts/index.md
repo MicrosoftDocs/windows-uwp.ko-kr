@@ -1,27 +1,25 @@
 ---
-title: Direct3D 그래픽 개념
-description: Microsoft Direct3D의 기반이 되는 그래픽 개념을 설명합니다.
+title: Direct3D 그래픽 용어
+description: Microsoft Direct3D가 사용 되는 그래픽 용어를 정의 합니다.
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
 keywords:
-- Direct3D 그래픽 학습 가이드
+- Direct3D 그래픽 용어
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e1fed9eaf3003bc67a86a5282fccbb923019a36
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 0e325494cefeab4cf3ed40939f5b24de5e921b68
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653022"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555579"
 ---
-# <a name="direct3d-graphics-concepts"></a>Direct3D 그래픽 개념
+# <a name="direct3d-graphics-glossary"></a>Direct3D 그래픽 용어
 
 
-Microsoft Direct3D 그래픽 개념을 설명합니다. 이 가이드는 Direct3D 게임 및 앱 개발에 사용되는 일반적인 3D 컴퓨터 그래픽 개념을 설명합니다.
+Microsoft Direct3D 그래픽 용어를 정의 합니다. Direct3D 게임 및 앱 개발에 사용 되는 높은 수준의 일반적인 3D 컴퓨터 그래픽 용어에,이 용어를 정의 합니다.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
@@ -89,8 +87,8 @@ Microsoft Direct3D 그래픽 개념을 설명합니다. 이 가이드는 Direct3
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -5,17 +5,15 @@ title: 앱 제출에 대한 출시 중지
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제출, 중지
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
 ms.localizationpriority: medium
-ms.openlocfilehash: 90ebfa61fa200342e32beb87be6cd27ea11e8f40
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 8367172e2d34a00b413e48f84d8a9eb138320c86
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514757"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554715"
 ---
 # <a name="halt-the-rollout-for-an-app-submission"></a>앱 제출에 대한 출시 중지
 

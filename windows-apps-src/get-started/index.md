@@ -5,17 +5,15 @@ title: UWP(유니버설 Windows 플랫폼) 시작
 author: QuinnRadich
 ms.author: quradic
 ms.date: 03/23/2018
-ms.prod: windows
 ms.topic: article
 keywords: 시작, Windows 10, UWP, xaml, c#
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d7ad7835e56b874c37b9376eb00278fea055dd1
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 0193209c1a603bb253b07b084dd62d29c91009a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512167"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552965"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작 
  

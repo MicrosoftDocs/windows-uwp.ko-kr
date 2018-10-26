@@ -6,18 +6,17 @@ title: 카메라 독립적 플래시
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 7777b1b3f72090667f1e75f3c9e23b6adcd9f2d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 913faf70531509a604cde52bb71886c128edae46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218904"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555559"
 ---
 # <a name="camera-independent-flashlight"></a>카메라 독립적 플래시
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다. 이 문서에서는 램프에 대한 참조를 획득하고 해당 설정을 조정하는 것 외에, 사용하지 않을 때 램프 리소스를 적절히 해제하는 방법과 다른 앱에서 사용되고 있을 때 램프 가용성이 달라지는 경우를 감지하는 방법도 설명합니다.
@@ -79,7 +78,7 @@ ms.locfileid: "218904"
 ## <a name="related-topics"></a>관련 항목
 - [미디어 재생](media-playback.md)
 
- 
+ 
 
 
 

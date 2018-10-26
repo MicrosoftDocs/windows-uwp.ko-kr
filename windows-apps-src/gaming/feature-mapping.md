@@ -6,16 +6,14 @@ ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a001f461f78acf79438bb15b03aac00a05f29a3
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 8dcf1749f1e7db4d514466d6a753d6f8cace5713
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691622"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555523"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 
@@ -240,7 +238,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="surface-format-mapping"></a>화면 형식 매핑
 
@@ -346,20 +344,20 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   셰이더에서 .r swizzle을 사용하여 빨간색을 다른 구성 요소에 복제하여 Direct3D 9 동작을 가져옵니다.
+<strong>참고</strong>  빨간색을 다른 구성 요소 Direct3D 9 동작을 얻으려면 셰이더에서.r swizzle을 사용 합니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   셰이더에서 swizzle .rrrg를 사용하여 빨간색을 복제하고 녹색을 알파 구성 요소로 이동하여 Direct3D 9 동작을 가져옵니다.
+<strong>참고</strong>  셰이더에서 swizzle.rrrg를 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 Direct3D 9 동작을 얻으려면 이동 합니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -402,10 +400,10 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   Direct3D 9에서는 데이터가 255.0f씩 크기가 확대되었지만 이를 셰이더에서 처리할 수 있습니다.
+<strong>참고</strong>  Direct3D 9 데이터, 255.0 f 씩 되었지만이 셰이더에서 처리할 수 있습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -416,10 +414,10 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   Direct3D 9에서는 데이터가 255.0f씩 크기가 확대되었지만 이를 셰이더에서 처리할 수 있습니다.
+<strong>참고</strong>  Direct3D 9 데이터, 255.0 f 씩 되었지만이 셰이더에서 처리할 수 있습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -430,10 +428,10 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM 및 DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>   DXT1과 DXT2는 API/하드웨어 관점에서 동일합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>  DXT1 및 DXT2는 / 하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -444,10 +442,10 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM 및 DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>   DXT3과 DXT4는 API/하드웨어 관점에서 동일합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>  DXT3 및 DXT4는 / 하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -510,10 +508,10 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   셰이더에서 .r swizzle을 사용하여 빨간색을 다른 구성 요소에 복제하여 D3D9 동작을 가져옵니다.
+<strong>참고</strong>  빨간색을 복제 하 여 D3D9 동작을 얻으려면 다른 구성 요소는 셰이더에서.r swizzle을 사용 합니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -584,30 +582,30 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>참고</strong>   셰이더가 UINT 값을 가져오지만, Direct3D 9 스타일의 정수 float가 필요한 경우(0.0f, 1.0f... 255.f) 셰이더에서 UINT를 float32로 변환할 수 있습니다.
+<strong>참고</strong>  UINT 값을 가져오지만 경우 Direct3D 9 스타일의 정수 float가 필요한 (0.0 f, 1.0 f... 255.f) 셰이더에서 float32를 UINT를 변환할 수 있습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>참고</strong>   셰이더가 SINT 값을 가져오지만, Direct3D 9 스타일의 정수 float가 필요한 경우 셰이더에서 SINT를 float32로 변환할 수 있습니다.
+<strong>참고</strong>  SINT 값을 가져오지만 Direct3D 9 스타일의 정수 float가 필요한 경우 셰이더에서 float32로 SINT 변환 방금 수 있습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>참고</strong>   셰이더가 SINT 값을 가져오지만, Direct3D 9 스타일의 정수 float가 필요한 경우 셰이더에서 SINT를 float32로 변환할 수 있습니다.
+<strong>참고</strong>  SINT 값을 가져오지만 Direct3D 9 스타일의 정수 float가 필요한 경우 셰이더에서 float32로 SINT 변환 방금 수 있습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -650,30 +648,30 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>FourCC 'ATI1'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   기능 수준 10.0 이상 필요
+<strong>참고</strong>  기능 수준 10.0 이상 필요
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>FourCC 'ATI2'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   기능 수준 10.0 이상 필요
+<strong>참고</strong>  기능 수준 10.0 이상 필요
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.author: wdg-dev-content
 ms.date: 07/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 분석, 보고서, 대시보드, 앱, 데이터, 메트릭
 ms.localizationpriority: medium
-ms.openlocfilehash: 090ddfdfbed1ae49e87f4dc419765e006913764f
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: e31ae50a1895c5878a2183b7f63ce3080623f7e9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5475981"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552136"
 ---
 # <a name="analyze-app-performance"></a>앱 성능 분석
 

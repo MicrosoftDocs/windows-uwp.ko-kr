@@ -5,17 +5,15 @@ description: 프로그래밍 방식으로 Fiddler 추적을 사용/사용하지 
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: 819f039f04d1e0a7fd035b10e3cbe408645e8f4d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "409943"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558659"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler 설정 API 참조   
 REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하거나 사용하지 않을 수 있습니다.
@@ -24,7 +22,7 @@ REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하�
 
 **요청**
 
-다음 요청을 사용 하 여 장치에서 사용 하는 Fiddler 추적 수 있는지 여부를 확인할 수 있습니다.
+다음 요청을 사용 하 여 디바이스에서 Fiddler 추적을 사용 하는지 확인할 수 있습니다.
 
 메서드      | 요청 URI
 :------     | :-----
@@ -44,7 +42,7 @@ GET | /ext/fiddler
 
 **응답**   
 
-- JSON bool 속성 IsProxyEnabled는 지정자 프록시를 사용 하는지 여부.
+- JSON 부울 속성 IsProxyEnabled 어떤 지정자 프록시 사용 되는지 여부입니다.
 
 **상태 코드**
 

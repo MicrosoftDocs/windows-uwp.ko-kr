@@ -6,23 +6,20 @@ ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, directx, 패키지
-ms.openlocfilehash: db31338d908f4c18eaa6b5090b8cf35ac5305655
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220681"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552493"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 대규모 UWP(유니버설 Windows 플랫폼) 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 쉽게 크기가 늘어날 수 있습니다. 이 항목에서는 고객이 실제로 필요한 리소스만 받을 수 있도록 앱 패키지와 앱 번들을 사용하여 앱을 사용자 지정하는 방법을 알아봅니다.
 
-앱 패키지 모델 외에도 Windows 10에서는 두 가지 유형의 팩을 그룹화하는 앱 번들을 지원합니다.
+앱 패키지 모델 외에도 Windows10 두 가지 유형의 팩을 그룹화 하는 앱 번들을 지원 합니다.
 
 -   앱 팩에는 플랫폼별 실행 파일과 라이브러리가 포함됩니다. 일반적으로 UWP 게임에는 x86, x64 및 ARM CPU 아키텍처에 대해 각각 하나씩, 최대 3개의 앱 팩이 포함될 수 있습니다. 해당 하드웨어 플랫폼과 관련된 모든 코드 및 데이터가 앱 팩에 포함되어야 합니다. 또한 앱 팩에는 기준 수준의 충실도와 성능으로 게임을 실행하기 위한 모든 핵심 자산이 포함되어야 합니다.
 -   리소스 팩에는 게임 자산(텍스처, 메시, 사운드, 텍스트) 등 플랫폼에 종속되지 않는 선택적 또는 확장 데이터가 포함됩니다. UWP 게임에는 HD 자산 또는 텍스처를 위한 리소스 팩, DirectX 기능 수준 11+ 리소스 또는 언어별 자산 및 리소스를 포함하여 리소스 팩이 하나 이상 있을 수 있습니다.
@@ -48,17 +45,17 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
 
 이러한 모든 콘텐츠는 UWP 프로젝트에 포함된 package.appxmanifest와 최종 패키지의 디렉터리 구조에서 정의됩니다. 새 Visual Studio UI 때문에 이 문서의 프로세스를 따를 경우 수동으로 편집할 필요가 없습니다.
 
-> **중요**   이러한 리소스의 로드 및 관리는 **Windows.ApplicationModel.Resources**\* API를 통해 처리됩니다. 이러한 앱 모델 리소스 API를 사용하여 로캘, 배율 인수 또는 DirectX 기능 수준에 맞는 파일을 로드하는 경우 명시적 파일 경로를 사용하여 자산을 로드할 필요가 없습니다. 대신 원하는 자산의 범용 파일 이름만 리소스 API에 제공하고 리소스 관리 시스템이 사용자의 현재 플랫폼 및 로캘 구성에 맞는 변형의 리소스를 가져오도록 합니다. 이러한 구성도 동일한 API를 사용하여 직접 지정할 수 있습니다.
+> **중요 한**  를 로드 하 고 이러한 리소스의 관리 **Windows.ApplicationModel.Resources**통해 처리 됩니다 \ * Api입니다. 이러한 앱 모델 리소스 API를 사용하여 로캘, 배율 인수 또는 DirectX 기능 수준에 맞는 파일을 로드하는 경우 명시적 파일 경로를 사용하여 자산을 로드할 필요가 없습니다. 대신 원하는 자산의 범용 파일 이름만 리소스 API에 제공하고 리소스 관리 시스템이 사용자의 현재 플랫폼 및 로캘 구성에 맞는 변형의 리소스를 가져오도록 합니다. 이러한 구성도 동일한 API를 사용하여 직접 지정할 수 있습니다.
 
- 
+ 
 
 리소스 패키징을 위한 리소스는 다음 두 가지 기본 방법 중 하나로 지정됩니다.
 
 -   자산 파일은 동일한 파일 이름을 사용하며, 리소스 팩 특정 버전이 명명된 특정 디렉터리에 배치됩니다. 디렉터리 이름은 시스템에 의해 예약되어 있습니다. 예를 들면 \\en-us, \\scale-140, \\dxfl-dx11입니다.
 -   자산 파일은 임의 이름의 폴더에 저장되지만 시스템에서 언어나 다른 한정자를 나타내기 위해 예약한 문자열이 끝에 추가된 일반 레이블로 파일 이름이 지정됩니다. 구체적으로, 한정자 문자열이 범용 파일 이름과 밑줄("\_") 뒤에 추가됩니다. 예를 들어 \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds입니다. 이러한 문자열을 결합할 수도 있습니다. 예를 들어 \\assets\\menu\_option1\_scale-140\_lang-en-us.png입니다.
-    > **참고**   디렉터리 이름에 단독으로 사용되기보다 파일 이름에 사용되는 경우, 언어 한정자는 [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324)에서 설명한 것처럼 "lang-<tag>"(예: "lang-en-us")의 형식을 취해야 합니다.
+    > **참고**  디렉터리 이름에 파일 이름에 보다는 단독으로 사용 하는 경우 언어 한정자 취해야 합니다 "lang-<tag>", 예: "-lang" [리소스 언어, 규모 및 기타 한정자에 맞게 조정](../app-resources/tailor-resources-lang-scale-contrast.md)에 설명 된 대로 합니다.
 
-     
+     
 
 리소스 패키징의 구체성을 향상시키기 위해 디렉터리 이름을 결합할 수 있습니다. 그러나 이름이 중복될 수는 없습니다. 예를 들어 \\en-us\\menu\_option1\_lang-en-us.png는 중복됩니다.
 
@@ -68,11 +65,11 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
 
 | 자산 유형                   | 리소스 팩 디렉터리 이름                                                                                                                  | 리소스 팩 파일 이름 접미사                                                                                                    |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| 지역화된 자산             | Windows 10에서 사용 가능한 모든 언어 또는 언어와 로캘 조합입니다. 폴더 이름에는 한정자 접두사 "lang-"이 필요하지 않습니다. | "\_" 뒤에 언어, 로캘 또는 언어-로캘 지정자가 추가됩니다. 예를 들어 "\_en", "\_us" 또는 "\_en-us"입니다. |
+| 지역화된 자산             | 가능한 모든 언어 또는 언어와 로캘 조합 Windows10입니다. 폴더 이름에는 한정자 접두사 "lang-"이 필요하지 않습니다. | "\_" 뒤에 언어, 로캘 또는 언어-로캘 지정자가 추가됩니다. 예를 들어 "\_en", "\_us" 또는 "\_en-us"입니다. |
 | 배율 인수 자산        | scale-100, scale-140, scale-180입니다. 각각 1.0x, 1.4x 및 1.8x UI 배율 인수에 사용됩니다.                                     | "\_" 뒤에 "scale-100", "scale-140" 또는 "scale-180"이 추가됩니다.                                                                    |
 | DirectX 기능 수준 자산 | dxfl-dx9, dxfl-dx10, dxfl-dx11입니다. 각각 DirectX 9, 10 및 11 기능 수준에 사용됩니다.                                     | "\_" 뒤에 "dxfl-dx9", "dxfl-dx10" 또는 "dxfl-dx11"이 추가됩니다.                                                                     |
 
- 
+ 
 
 ## <a name="defining-localized-language-resource-packs"></a>지역화된 언어 리소스 팩 정의
 
@@ -84,29 +81,29 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
 -   지원할 각 언어 및 로캘에 대한 앱 하위 디렉터리(또는 파일 버전)를 만듭니다(예: en-us, jp-jp, zh-cn, fr-fr 등).
 -   개발하는 동안 언어나 로캘별로 다르지 않더라도 모든 자산(지역화된 오디오 파일, 텍스처 및 메뉴 그래픽)의 복사본을 해당 언어 로캘 하위 디렉터리에 저장합니다. 최상의 사용자 환경을 구현하려면 로캘에 맞는 언어 리소스 팩을 사용할 수 있는데 사용자가 다운로드하지 않은 경우 또는 다운로드하여 설치한 후 실수로 삭제한 경우 사용자에게 경고해야 합니다.
 -   각 디렉터리에서 각 자산 또는 문자열 리소스 파일(.resw)의 이름이 같아야 합니다. 예를 들어 파일의 콘텐츠가 서로 다른 언어인 경우 menu\_option1.png와 동일한 이름이 \\en-us 및 \\jp-jp 디렉터리에 둘 다 있어야 합니다. 이 경우 \\en-us\\menu\_option1.png 및 \\jp-jp\\menu\_option1.png로 표시됩니다.
-    > **참고**   선택적으로 파일 이름에 로캘을 추가하여 동일한 디렉터리에 저장할 수 있습니다(예: \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-jp-jp.png).
+    > **참고**  선택적으로 파일 이름에 로캘을 추가 하 고; 동일한 디렉터리에 저장할 수 있습니다 예를 들어 \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-jp-jp.png 합니다.
 
-     
+     
 
 -   [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) 및 [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
--   Microsoft Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...** 를 선택하고 패키지를 만듭니다.
+-   Microsoft Visual Studio2015에서 선택 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>배율 인수 리소스 팩 정의
 
 
-Windows 10에서는 1.0x, 1.4x 및 1.8x의 세 가지 사용자 인터페이스 배율 인수를 제공합니다. 각 디스플레이의 배율 값은 화면 크기, 화면 해상도 및 화면과 사용자 간의 예상 평균 거리 등 다양한 요인에 따라 설치 중에 설정됩니다. 사용자는 가독성을 높이기 위해 배율 인수를 조정할 수도 있습니다. 최상의 환경을 구현하려면 게임이 DPI 인식 및 배율 인수 인식이어야 합니다. 이러한 인식은 부분적으로 세 가지 배율 인수에 대해 각각 중요한 시각적 자산 버전을 만들어야 함을 의미합니다. 포인터 조작과 적중 테스트도 포함됩니다.
+세 가지 사용자 인터페이스 배율 인수를 제공 하는 Windows10: 1.0 x, 1.4 x 및 1.8 x. 각 디스플레이의 배율 값은 화면 크기, 화면 해상도 및 화면과 사용자 간의 예상 평균 거리 등 다양한 요인에 따라 설치 중에 설정됩니다. 사용자는 가독성을 높이기 위해 배율 인수를 조정할 수도 있습니다. 최상의 환경을 구현하려면 게임이 DPI 인식 및 배율 인수 인식이어야 합니다. 이러한 인식은 부분적으로 세 가지 배율 인수에 대해 각각 중요한 시각적 자산 버전을 만들어야 함을 의미합니다. 포인터 조작과 적중 테스트도 포함됩니다.
 
 각 UWP 앱 배율 인수에 대한 리소스 팩을 지원하도록 앱을 구성하는 경우 다음 작업을 해야 합니다.
 
 -   지원할 각 배율 인수(scale-100, scale-140 및 scale-180)에 대한 앱 하위 디렉터리(또는 파일 버전)를 만듭니다.
 -   개발하는 동안 배율 인수별로 다르지 않더라도 배율 인수에 적합한 모든 자산의 복사본을 각 배율 인수 리소스 디렉터리에 저장합니다.
 -   각 디렉터리에서 각 자산의 이름이 같아야 합니다. 예를 들어 파일의 콘텐츠가 서로 다른 경우 menu\_option1.png와 동일한 이름이 \\scale-100 및 \\scale-180 디렉터리에 둘 다 있어야 합니다. 이 경우 \\scale-100\\menu\_option1.png 및 \\scale-140\\menu\_option1.png로 표시됩니다.
-    > **참고**   선택적으로 파일 이름에 배율 인수 접미사를 추가하여 동일한 디렉터리에 저장할 수 있습니다(예: \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.png).
+    > **참고**  마찬가지로 선택적으로 파일 이름에 배율 인수 접미사를 추가 하는; 동일한 디렉터리에 저장 예: \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.png 합니다.
 
-     
+     
 
 -   [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 자산을 로드할 수 있습니다. 특정 배율 변형을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 시스템이 디스플레이 및 사용자 설정에 적합한 배율 자산을 검색합니다.
--   Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...** 를 선택하고 패키지를 만듭니다.
+-   선택 시각적 Studio2015 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
 
 ## <a name="defining-directx-feature-level-resource-packs"></a>DirectX 기능 수준 리소스 팩 정의
 
@@ -123,7 +120,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 | 10                    | BC4, BC5                      |
 | 11                    | BC6H, BC7                     |
 
- 
+ 
 
 또한 각 DirectX 기능 수준은 서로 다른 셰이더 모델 버전을 지원합니다. 기능 수준별로 컴파일된 셰이더 리소스를 만들 수 있으며, DirectX 기능 수준 리소스 팩에 포함할 수 있습니다. 또한 이후 버전의 일부 셰이더 모델은 이전 셰이더 모델 버전에서 사용할 수 없는 일반 맵 등의 자산을 사용할 수 있습니다. 이러한 셰이더 모델별 자산도 DirectX 기능 수준 리소스 팩에 포함해야 합니다.
 
@@ -134,9 +131,9 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 -   지원할 각 DirectX 기능 수준(dxfl-dx9, dxfl-dx10 및 dxfl-dx11)에 대한 앱 하위 디렉터리(또는 파일 버전)를 만듭니다.
 -   개발하는 동안 기능 수준별 자산을 각 기능 수준 리소스 디렉터리에 저장합니다. 로캘 및 배율 인수와 달리, 게임의 각 기능 수준에 대해 다른 렌더링 코드 분기를 사용할 수 있으며, 특정 기능 수준이나 지원되는 모든 기능 수준의 하위 집합에서만 사용되는 텍스처, 컴파일된 셰이더 또는 기타 자산이 있는 경우 해당 자산을 사용하는 기능 수준의 디렉터리에만 자산을 저장합니다. 모든 기능 수준에서 로드되는 자산의 경우 각 기능 수준 리소스 디렉터리에 동일한 이름의 해당 버전이 있어야 합니다. 예를 들어 기능 수준에 독립적인 "coolsign.dds"라는 텍스처의 경우 BC3 압축 버전을 \\dxfl-dx9 디렉터리에 저장하고 BC7 압축 버전을 \\dxfl-dx11 디렉터리에 저장합니다.
 -   여러 기능 수준에서 사용 가능한 경우 각 디렉터리에서 각 자산의 이름이 같아야 합니다. 예를 들어 파일의 콘텐츠가 서로 다른 경우 coolsign.dds와 동일한 이름이 \\dxfl-dx9 및 \\dxfl-dx11 디렉터리에 둘 다 있어야 합니다. 이 경우 \\dxfl-dx9\\coolsign.dds 및 \\dxfl-dx11\\coolsign.dds로 표시됩니다.
-    > **참고**   선택적으로 파일 이름에 기능 수준 접미사를 추가하여 동일한 디렉터리에 저장할 수 있습니다(예: \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.dds).
+    > **참고**  마찬가지로 선택적으로 파일 이름에 기능 수준 접미사를 추가 하는; 동일한 디렉터리에 저장 예: \\textures\\coolsign\_dxfl-dx9.dds, \\textures\\coolsign\_dxfl-dx11.dds 합니다.
 
-     
+     
 
 -   그래픽 리소스를 구성할 때 지원되는 DirectX 기능 수준을 선언합니다.
     ```cpp
@@ -192,9 +189,9 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
         ResourceContext::SetGlobalQualifierValue(L"DXFeatureLevel", dxFeatureLevel);
     ```
 
-    > **참고**  코드에서 이름(또는 기능 수준 디렉터리 아래의 경로)을 기준으로 텍스처를 직접 로드합니다. 기능 수준 디렉터리 이름이나 접미사는 포함하지 마세요. 예를 들면 "dxfl-dx11\\textures\\coolsign.dds" 또는 "textures\\coolsign\_dxfl-dx11.dds"가 아니라 "textures\\coolsign.dds"를 로드합니다.
+    > **참고**코드에서 이름 (또는 기능 수준 디렉터리 아래의 경로)으로 직접 텍스처를 로드 합니다. 기능 수준 디렉터리 이름이나 접미사는 포함하지 마세요. 예를 들면 "dxfl-dx11\\textures\\coolsign.dds" 또는 "textures\\coolsign\_dxfl-dx11.dds"가 아니라 "textures\\coolsign.dds"를 로드합니다.
 
-     
+     
 
 -   이제 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/br206078)를 사용하여 현재 DirectX 기능 수준과 일치하는 파일을 찾습니다. **ResourceManager**는 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/br206089)을 반환하며, [**ResourceMap::GetValue**](https://msdn.microsoft.com/library/windows/apps/br206098)(또는 [**ResourceMap::TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj655438)) 및 제공된 [**ResourceContext**](https://msdn.microsoft.com/library/windows/apps/br206064)로 쿼리합니다. 그러면 [**SetGlobalQualifierValue**](https://msdn.microsoft.com/library/windows/apps/mt622101)를 호출하여 지정된 DirectX 기능 수준과 가장 일치하는 [**ResourceCandidate**](https://msdn.microsoft.com/library/windows/apps/br206051)가 반환됩니다.
     
@@ -215,7 +212,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
     Platform::String^ resourceName = possibleResource->ValueAsString;
     ```
 
--   Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...** 를 선택하고 패키지를 만듭니다.
+-   선택 시각적 Studio2015 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
 -   package.appxmanifest 매니페스트 설정에서 앱 번들을 사용하도록 설정해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목
@@ -225,9 +222,9 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 * [앱 패키징](https://msdn.microsoft.com/library/windows/apps/mt270969)
 * [앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767)
 
- 
+ 
 
- 
+ 
 
 
 

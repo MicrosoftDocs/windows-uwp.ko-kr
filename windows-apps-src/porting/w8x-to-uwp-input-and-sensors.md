@@ -6,16 +6,14 @@ ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fbfba83dc1975b7ecda925d4e221ddaa0d6cc77
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8e15014e39ed6d980cbe80daa0a129ff83a021b9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "219565"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557940"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대해 Windows 런타임 8.x를 UWP로 포팅
 
@@ -36,18 +34,18 @@ ms.locfileid: "219565"
 ## <a name="background-audio"></a>백그라운드 오디오
 
 
-[**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) 속성의 경우 **ForegroundOnlyMedia** 및 **BackgroundCapableMedia**가 Windows 10 앱에서는 사용되지 않습니다. Windows Phone 스토어 앱 모델을 대신 사용합니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요.
+[**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) 속성에 대 한 **ForegroundOnlyMedia** 및 **에서** 는 Windows10 앱에 대 한 사용 되지 않습니다. Windows Phone 스토어 앱 모델을 대신 사용합니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요.
 
 ## <a name="detecting-the-platform-your-app-is-running-on"></a>앱이 실행되고 있는 플랫폼 검색
 
 
-앱 대상에 대해 생각하는 방식이 Windows 10의 등장으로 바뀝니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+Windows10 사용 하 여 앱을 대상으로 변경에 대 한 생각 하는 방법은 합니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
 
 실행되고 있는 운영 체제를 검색하는 유니버설 8.1 앱의 코드가 있다면 논리에 대한 원인에 따라 코드를 변경해야 할 수 있습니다. 앱이 값에 대해 작업하지 않고 통과시킨다면 계속해서 운영 체제 정보를 수집할 수 있습니다.
 
-**참고** 기능이 있는지 검색하기 위해 운영 체제 또는 디바이스 제품군을 사용하는 것은 좋은 방법이 아닙니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](w8x-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
+**참고**  를 사용 하면 운영 체제 또는 디바이스 패밀리 기능이 있는지 검색 하는 것이 좋습니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](w8x-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
 
- 
+ 
 
 앱의 UI를 서로 다른 디바이스에 맞게 구성하는 데 권장되는 여러 기술이 있습니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 유효 픽셀(이전의 보기 픽셀)로 크기를 사용하므로 다른 해상도 및 배율에 맞게 UI를 조정할 수 있습니다(참조 [유효 픽셀, 가시거리 및 배율 인수](w8x-to-uwp-porting-xaml-and-ui.md) 참조). Visual State Manager의 적응 트리거 및 setter를 사용하여 창 크기에 맞게 UI를 조정할 수 있습니다([UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631) 참조).
 
@@ -73,11 +71,11 @@ bool isDeviceFamilyNameKnown = qualifiers.TryGetValue("DeviceFamily", out device
 ## <a name="location"></a>위치
 
 
-해당 앱 패키지 매니페스트에서 위치 기능을 선언하는 앱이 Windows 10에서 실행될 때 시스템에서 최종 사용자에게 동의를 묻는 메시지를 표시합니다. 이는 앱이 Windows Phone 스토어 앱이든지 Windows 10 앱이든지 관계없이 적용됩니다. 따라서 앱에서 고유한 사용자 지정 동의 확인 프롬프트가 표시되거나 켜기-끄기 토글이 제공되면 최종 사용자에게 한 번만 묻도록 제거할 수 있습니다.
+해당 앱 패키지 매니페스트에서 위치 기능을 선언 하는 앱 Windows10에서 실행 되 면 최종 사용자의 동의에 메시지가 나타납니다. 이 앱은 Windows Phone 스토어 앱 또는 Windows10 앱 인지 true입니다. 따라서 앱에서 고유한 사용자 지정 동의 확인 프롬프트가 표시되거나 켜기-끄기 토글이 제공되면 최종 사용자에게 한 번만 묻도록 제거할 수 있습니다.
 
- 
+ 
 
- 
+ 
 
 
 

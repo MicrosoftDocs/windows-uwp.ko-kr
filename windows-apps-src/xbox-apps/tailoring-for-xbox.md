@@ -5,16 +5,14 @@ description: Xbox용으로 응용 프로그램을 최적화하는 방법
 ms.author: wdg-dev-content
 ms.date: 10/12/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1794e4b7ddf97b0b5c41ff29295892e512453a07
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 604e6dc5381a36d4dbda70e3435e5cd6fa44cc04
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "927258"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551897"
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 
@@ -26,7 +24,7 @@ ms.locfileid: "927258"
 
 ### <a name="do-turn-off-mouse-mode"></a>*작업:* 마우스 모드 끄기
 
-Xbox 사용자가 자신의 컨트롤러 선호 합니다. 컨트롤러 입력을 위해 최적화하려면 [마우스 모드를 사용하지 않도록 설정](how-to-disable-mouse-mode.md)하고 방향 탐색([X-Y 포커스](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction)라고도 함)을 사용합니다. 회의 센터 트랩 하 고 액세스할 수 없는 UI에 대 한 주의 하십시오.
+Xbox 사용자는 컨트롤러를 선호 합니다. 컨트롤러 입력을 위해 최적화하려면 [마우스 모드를 사용하지 않도록 설정](how-to-disable-mouse-mode.md)하고 방향 탐색([X-Y 포커스](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction)라고도 함)을 사용합니다. 포커스 트래핑 및 액세스할 수 없는 UI에 주의 합니다.
 
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*작업:* 약 10피트 환경에 적합한 포커스 사각형 그리기
 
@@ -47,7 +45,7 @@ One of the unique features of Xbox One is that users can snap apps such as Corta
 
 ### <a name="consider-use-tv-safe-colors"></a>*고려 사항:* TV에 적합한 색 사용
 
-TV는 컴퓨터 모니터처럼 극단적인 색 농도를 처리하지 못합니다. 사용자에게 이상한 밴드 효과 또는 흐린 이미지가 표시되지 않도록 앱에 고농도 색을 사용하지 마세요. 또한 TV 간에 차이가 있어 *사용 중*인 TV에서 보이는 색과 사용자에게 표시되는 색이 다를 수 있다는 점을 명심해야 합니다. 모든 사람 깔 앱을 확인 하는 방법을 이해 하려면 [색](../design/devices/designing-for-tv.md#colors) 읽기!
+TV는 컴퓨터 모니터처럼 극단적인 색 농도를 처리하지 못합니다. 사용자에게 이상한 밴드 효과 또는 흐린 이미지가 표시되지 않도록 앱에 고농도 색을 사용하지 마세요. 또한 TV 간에 차이가 있어 *사용 중*인 TV에서 보이는 색과 사용자에게 표시되는 색이 다를 수 있다는 점을 명심해야 합니다. 모든 앱을 확인 하는 방법을 이해 하기 위해 [색](../design/devices/designing-for-tv.md#colors) 읽기!
 
 ### <a name="remember-you-can-disable-scaling"></a>*유의 사항:* 배율을 사용하지 않도록 설정할 수 있음
 
@@ -69,10 +67,10 @@ UWP 앱에 적용된 이러한 사례를 간략하게 보려면 이 동영상을
 
 ## <a name="app-dev-on-xbox"></a>Xbox에서 앱 개발
 
-**Xbox에서 앱 개발** 이벤트는 Xbox에서 앱 만들기 (영문)의 새로운 개발자를 위한 유용한 시작 지점입니다.
+**Xbox에서 앱 개발** 이벤트는 Xbox에서 앱을 작성 하는 데 새 개발자를 위한 멋진 출발점입니다.
 
-* [기록 된 세션 비디오 시청](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
-* [블로그 게시물 읽기](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
+* [기록 된 세션](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
+* [블로그 게시물](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
 
 ## <a name="see-also"></a>참고 항목
 

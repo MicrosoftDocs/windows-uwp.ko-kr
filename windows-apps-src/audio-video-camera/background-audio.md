@@ -6,16 +6,14 @@ title: 백그라운드에서 미디어 재생
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8fdc99355ef5a024757cc2e415b1d259965c1ce
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: f2eb12092d27c0033563ebf8cebbe96f949eadf8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690499"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558033"
 ---
 # <a name="play-media-in-the-background"></a>백그라운드에서 미디어 재생
 이 문서에서는 앱이 포그라운드에서 백그라운드로 이동될 때 미디어가 계속 재생되도록 앱을 구성하는 방법을 보여 줍니다. 즉, 사용자가 홈 화면에서 반환된 앱을 최소화했거나 다른 방법으로 앱에서 외부로 이동한 후에도 앱은 오디오를 계속 재생할 수 있습니다. 
@@ -100,9 +98,9 @@ Windows10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 
 * [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)
 * [백그라운드 오디오 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 
- 
+ 
 
- 
+ 
 
 
 

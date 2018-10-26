@@ -5,17 +5,15 @@ title: 지급 임계값, 방법 및 기간
 ms.author: wdg-dev-content
 ms.date: 10/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: d8793f36459feb45f327b21941ea86965b905116
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 0a62d08d540479daf77d532afa1b97ae128d2c1f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514044"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551821"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 

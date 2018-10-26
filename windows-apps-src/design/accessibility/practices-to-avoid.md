@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc7a7592a47556cb9ae65cdc559a301ee9b25997
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 9505dfc666042c22e6f77ed02ffca7c5973d4fba
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652932"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555726"
 ---
 # <a name="accessibility-practices-to-avoid"></a>피해야 할 접근성 사례
 

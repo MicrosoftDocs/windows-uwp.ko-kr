@@ -6,16 +6,14 @@ title: 네트워킹 및 웹 서비스
 ms.author: stwhi
 ms.date: 11/26/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d5cd5c94ceae9a64088ece35679a9cea291ac03
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: e01ac3a0dcab0bc82835b97d70477bf585ab4570
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689669"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553364"
 ---
 # <a name="networking-and-web-services"></a>네트워킹 및 웹 서비스
 

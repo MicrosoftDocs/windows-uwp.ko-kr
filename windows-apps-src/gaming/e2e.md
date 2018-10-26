@@ -6,16 +6,14 @@ ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 ms.author: joanlee
 ms.date: 04/16/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: b351b5072c6bba228d81a65b51656a81bd564daf
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862262"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555065"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -347,7 +345,7 @@ Windows10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는 
         <td><a href="https://blogs.msdn.microsoft.com/appinstaller/">UWP 앱 빌드 및 배포 팀 블로그</a></td>
     </tr>
 </table>
- 
+ 
 
 ## <a name="concept-and-planning"></a>개념 및 계획
 
@@ -370,7 +368,7 @@ UWP 게임 개발을 시작할 때 그래픽, 입력, 오디오, 네트워킹, �
         <td><a href="game-development-platform-guide.md">UWP 앱용 게임 기술</a></td>
     </tr>
 </table>
- 
+ 
 
 이러한 세 가지 GDC 2015 동영상에서는 Windows 10의 게임 개발 및 Windows10 게임 환경의 개요를 제공합니다.
 
@@ -458,7 +456,7 @@ DirectX의 폭넓은 기능과 심층적인 플랫폼 통합은 가장 까다로
         <td><a href="https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA">Microsoft DirectX 12 및 그래픽 교육</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="xaml"></a>XAML
 
@@ -478,7 +476,7 @@ XAML은 애니메이션, 스토리보드, 데이터 바인딩, 확장 가능한 
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt228348">컨트롤, 레이아웃 및 텍스트</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="html-5"></a>HTML 5
 
@@ -498,7 +496,7 @@ HTML(HyperText Markup Language)은 웹 페이지, 앱 및 리치 클라이언트
         <td><a href="http://go.microsoft.com/fwlink/p/?linkid=221374">HTML5</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="combining-presentation-technologies"></a>프레젠테이션 기술 결합
 
@@ -518,7 +516,7 @@ Microsoft DXGI(DirectX Graphic Infrastructure)는 여러 그래픽 기술 간에
         <td><a href="directx-and-xaml-interop.md">DirectX 및 XAML interop</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="c"></a>C++
 
@@ -538,7 +536,7 @@ C++/CX는 속도, 호환성 및 플랫폼 액세스의 강력한 조합을 제�
         <td><a href="https://docs.microsoft.com/cpp/visual-cpp-in-visual-studio">Visual Studio 2017의 Visual C++</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="c"></a>C#
 
@@ -554,7 +552,7 @@ C#("C 샤프"라고 발음)는 혁신적인 최신 언어로, 단순하고 강�
         <td><a href="https://msdn.microsoft.com/library/kx37x362.aspx">C# 언어 참조</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="javascript"></a>JavaScript
 
@@ -592,7 +590,7 @@ Windows JavaScript 앱은 개체 지향 JavaScript 클래스의 메서드 및 �
 
 ### <a name="which-version-of-directx-should-your-game-use"></a>게임에 어떤 버전의 DirectX를 사용해야 하나요?
 
-게임을 위해 DirectX를 선택하는 경우 Microsoft Direct3D 12 또는 Microsoft Direct3D 11 중 어떤 버전을 사용할지 결정해야 합니다.
+DirectX 게임을 선택 하는 경우 어떤 버전을 사용할지 결정 해야 합니다: Microsoft Direct3D12 또는 Microsoft Direct3D11 합니다.
 
 DirectX 12는 이전 버전보다 훨씬 빠르고 효율적입니다. Direct3D 12에서는 풍부한 장면, 더 많은 개체, 더 복잡한 효과를 활용할 수 있고 Windows 10 PC 및 Xbox One에서 최신 GPU 하드웨어를 완벽하게 활용할 수 있습니다. Direct3D 12는 매우 낮은 수준에서 작동하므로 전문가 그래픽 개발 팀이나 숙련된 DirectX 11 개발 팀에게 그래픽 최적화를 최대화하는 데 필요한 모든 제어를 제공할 수 있습니다.
 
@@ -604,11 +602,11 @@ Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU �
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Direct3D 12 또는 Direct3D 11 선택</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">Direct3D 12란?</a></td>
+        <td>Direct3D12 또는 Direct3D11 선택</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899228">Direct3D12 란 무엇 인가요?</a></td>
     </tr>
     <tr>
-        <td>Direct3D 11 개요</td>
+        <td>Direct3D11 개요</td>
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/ff476080">Direct3D 11 그래픽</a></td>
     </tr>
     <tr>
@@ -687,7 +685,7 @@ Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU �
         <td><a href="https://community.playfab.com/index.html">PlayFab 포럼</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="unity"></a>Unity
 
@@ -749,7 +747,7 @@ Unity는 Unity 5.4부터 Direct3D 12 개발을 지원합니다.
         <td><a href="http://go.microsoft.com/fwlink/?LinkId=722359">Visual Studio 2015에서 Unity 사용</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="havok"></a>Havok
 
@@ -773,7 +771,7 @@ Havok의 모듈식 도구 및 기술 모음은 게임 작성자가 새로운 수
         <td><a href="http://support.havok.com">Havok</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="monogame"></a>MonoGame
 
@@ -958,7 +956,7 @@ Windows 10에서는 Windows10 디바이스에서 공통 API 플랫폼을 제공�
         <td><a href="https://msdn.microsoft.com/library/windows/apps/dn894631">UWP 앱 가이드</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="getting-started-with-uwp-development"></a>UWP 개발 시작
 
@@ -1021,7 +1019,7 @@ UWP 프로그래밍에 "완전 초보자"이고 게임에서 XAML 사용을 고�
     </tr>
 </table>
 
-### <a name="windows-desktop-apis-to-uwp"></a>Windows 데스크톱 API-UWP
+### <a name="windows-desktop-apisto-uwp"></a>Windows 데스크톱 APIsto UWP
 
 Windows 데스크톱 게임을 UWP로 이동하는 데 도움이 되는 몇 가지 링크입니다.
 
@@ -1047,7 +1045,7 @@ Windows 데스크톱 게임을 UWP로 이동하는 데 도움이 되는 몇 가�
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt592894.aspx">UWP(유니버설 Windows 플랫폼) 앱의 Windows API에 대한 대안</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="process-lifetime-management"></a>프로세스 수명 관리
 
@@ -1067,7 +1065,7 @@ Windows 데스크톱 게임을 UWP로 이동하는 데 도움이 되는 몇 가�
         <td><a href="https://msdn.microsoft.com/library/hh974425.aspx">Visual Studio에서 UWP 앱에 대한 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="designing-game-ux"></a>게임 UX 디자인
 
@@ -1099,7 +1097,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
         <td><a href="http://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World">Windows Core World용 게임 디자인</a></td>
     </tr>   
 </table>
- 
+ 
 
 #### <a name="color-guideline-and-palette"></a>색 지침 및 색상표
 
@@ -1115,7 +1113,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
         <td><a href="https://assets.windowsphone.com/499cd2be-64ed-4b05-a4f5-cd0c9ad3f6a3/101_BestPractices_Color_InvariantCulture_Default.zip">모범 사례: 색</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="typography"></a>입력 체계
 
@@ -1131,7 +1129,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
         <td><a href="http://go.microsoft.com/fwlink/?LinkId=535007">모범 사례: 입력 체계</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="ui-map"></a>UI 맵
 
@@ -1179,7 +1177,7 @@ XAudio2, XAPO 및 Windows Sonic을 사용하여 게임 내 오디오를 구현�
     </tr>
     <tr>
         <td>Windows Sonic을 게임에 통합하는 방법 알아보기(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox 및 Windows용 공간 오디오 기능 소개</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox andWindows 용 오디오 기능 소개</a></td>
     </tr>
 </table>
 
@@ -1256,7 +1254,7 @@ Direct3D 12의 변경 사항 및 Direct3D 12를 사용하여 프로그래밍을 
         <td><a href="https://msdn.microsoft.com/library/windows/desktop/dn899198.aspx">Direct3D 12의 메모리 관리</a></td>
     </tr>
 </table>
- 
+ 
 
 #### <a name="directx-tool-kit-and-libraries"></a>DirectX 도구 키트 및 라이브러리
 
@@ -1292,7 +1290,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
         <td><a href="http://go.microsoft.com/fwlink/?LinkID=615560">DirectXMath</a></td>
     </tr>
     <tr>
-        <td>DirectXTK에서 Direct3D 12 지원(블로그 게시물)</td>
+        <td>DirectXTK (블로그 게시물)에서 Direct3D12 지원</td>
         <td><a href="https://github.com/Microsoft/DirectXTK/issues/2">DirectX 12에 대한 지원</a></td>
     </tr>
 </table>
@@ -1368,7 +1366,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
         <td><a href="https://blogs.windows.com/buildingapps/2016/02/15/uwp-tile-generator-extension-for-visual-studio/">UWP 타일 생성기 도구 사용에 대한 팁</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="enable-in-app-product-iap-purchases"></a>IAP(앱에서 바로 구매 제품) 구매 사용
 
@@ -1396,7 +1394,7 @@ IAP(앱에서 바로 구매 제품)는 플레이어가 게임 내에서 구입�
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">IAP 구입 보고서</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="debugging-performance-optimization-and-monitoring"></a>디버깅, 성능 최적화 및 모니터링
 
@@ -1462,7 +1460,7 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
     </tr>
     <tr>
         <td>D3D12 개발을 위한 디버깅 및 유효성 검사 도구(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003">PIX 및 GPU 유효성 검사를 통해 D3D12 성능 조정 및 디버깅</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003">D3D12 성능 조정 및 PIX 및 GPUValidation 디버깅</a></td>
     </tr>
     <tr>
         <td>그래픽 및 성능 최적화(동영상)</td>
@@ -1584,7 +1582,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>스트리밍 설치 및 선택적 패키지 사용 방법 알아보기(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">차세대 UWP 앱 배포: 확장 가능하고 스트리밍 가능하고 구성 요소화된 앱 빌드</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">차세대 UWP 앱 배포: 확장, 스트림 밀 componentizedapps 빌드</a></td>
     </tr>
     <tr>
         <td>스트리밍 설치가 가능하도록 콘텐츠 나누기 및 그룹화</td>
@@ -1643,7 +1641,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
         <td><a href="https://msdn.microsoft.com/library/windows/apps/jj657968">일반적인 인증 실패 방지</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="store-manifest-storemanifestxml"></a>스토어 매니페스트(StoreManifest.xml)
 
@@ -1659,7 +1657,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt617335">StoreManifest 스키마(Windows10)</a></td>
     </tr>
 </table>
- 
+ 
 
 ## <a name="game-lifecycle-management"></a>게임 수명 주기 관리
 
@@ -1694,7 +1692,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
         <td><a href="https://dev.windows.com/store-promotion">앱 홍보</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="visual-studio-application-insights"></a>Visual Studio Application Insights
 
@@ -1748,7 +1746,7 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
         <td><a href="https://v.vungle.com/sdk">Vungle용 Windows SDK 다운로드</a></td>
     </tr>
 </table>
- 
+ 
 
 ### <a name="creating-and-managing-content-updates"></a>콘텐츠 업데이트 만들기 및 관리
 
@@ -1915,8 +1913,8 @@ Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

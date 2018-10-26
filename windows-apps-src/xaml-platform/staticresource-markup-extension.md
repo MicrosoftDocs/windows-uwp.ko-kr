@@ -6,18 +6,17 @@ ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 234d90382fb62e6f0be9683dfb7b01d9fa80a185
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 83919cc46694279bc35e046c97acf27c64a196f5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220295"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555222"
 ---
 # <a name="staticresource-markup-extension"></a>{StaticResource} 태그 확장
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이미 정의된 리소스에 대한 참조를 평가하여 모든 XAML 특성에 대한 값을 제공합니다. 리소스는 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에 정의되며 **StaticResource** 사용은 **ResourceDictionary**의 리소스 키를 참조합니다.
 
@@ -41,8 +40,7 @@ ms.locfileid: "220295"
 
 **StaticResource**가 리소스 사전의 항목으로 확인하는 규칙은 이 항목에서 설명하지 않습니다. 이 규칙은 참조 및 리소스가 모두 템플릿에 있는지, 병합된 리소스 사전이 사용되는지 등에 따라 다릅니다. 리소스 정의 방법과 샘플 코드를 포함한 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 적절한 사용 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
 
-**중요**  
-**StaticResource**는 XAML 파일 내에서 구문적으로 더 정의된 리소스에 대한 전방 참조를 만들려고 해서는 안 됩니다. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
+**중요 한**  **StaticResource** 정의 된 리소스에 대 한 전방 참조를 만들려고 해서는 안 XAML 파일 내에서 구문적으로 더 합니다. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
 
 확인할 수 없는 키에 **StaticResource**를 지정하려고 하면 런타임에 XAML 구문 분석 예외가 발생합니다. 디자인 도구에서 경고나 오류를 제공할 수도 있습니다.
 
@@ -79,7 +77,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>**{StaticResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
-XAML 페이지에서 **{StaticResource}** 태그 확장을 사용하는 경우 Microsoft Visual Studio 2013은 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) 및 앱 수준([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
+Microsoft Visual Studio2013 XAML 페이지에서 **{StaticResource}** 태그 확장을 사용 하는 경우 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) 및 앱 수준([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
 
 리소스 키가 **{StaticResource}** 에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 리소스가 정의되어 있는 사전을 표시할 수 있습니다. 테마 리소스의 경우에는 디자인 타임의 generic.xaml에 적용됩니다.
 

@@ -7,19 +7,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 412ba7e36c2bb36562ceee13bb1e204ff402a882
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 9983c62804dad4f0202fc83e3f9b5f23714352d2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843895"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555641"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 
@@ -41,19 +39,38 @@ Fluent의 움직임 타이밍은 사용자가 순간으로 인식하는 최대 �
 
 ### <a name="150ms-exit"></a>**150ms**(나감)
 
-:::row::: :::column::: 기존 장면을 나가거나 종료하는 개체 또는 페이지에 대한 사용.
-원활한 애니메이션을 위해 타이밍이 프레임 속도에 영향을 주지 않는 기존 UI의 매우 빠른 방향에 대한 피드백을 허용합니다.
-:::column-end::: :::column::: ![150ms 동작](images/150msAlt.gif) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Use for objects or pages that are exiting the scene or closing.
+        Allows for very quick directional feedback of exiting UI where timing does not impede upon framerate to achieve a smooth animation.
+    :::column-end:::
+    :::column:::
+        ![150ms motion](images/150msAlt.gif)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="300ms-enter"></a>**300ms**(들어옴)
 
-:::row::: :::column::: 기존 장면으로 들어가거나 이를 여는 개체 또는 페이지에 대한 사용.
-적절한 시간 동안 장면에 들어오는 콘텐츠를 볼 수 있도록 합니다.
-:::column-end::: :::column::: ![300ms 동작](images/300ms.gif) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Use for objects or pages that are entering the scene or opening.
+        Allows a reasonable amount of time to celebrate content as it enters the scene.
+    :::column-end:::
+    :::column:::
+        ![300ms motion](images/300ms.gif)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="500ms-move"></a>**≤500ms**(이동)
 
-:::row::: :::column::: 단일 장면 또는 여러 개의 장면 간에 변환하는 개체를 위한 사용. :::column-end::: :::column::: ![500ms 동작](images/500ms.gif) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Use for objects which are translating across a single scene or multiple scenes. 
+    :::column-end:::
+    :::column:::
+        ![500ms motion](images/500ms.gif)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="easing-in-fluent-motion"></a>Fluent 움직임의 감속
 
@@ -69,7 +86,9 @@ Fluent의 움직임 타이밍은 사용자가 순간으로 인식하는 최대 �
 
 ### <a name="accelerate-exit"></a>**가속**(종료)
 
-:::row::: :::column::: 기존 장면을 종료하는 UI 또는 개체에 대한 사용.
+:::row:::
+    :::column:::
+        Use for UI or objects that are exiting the scene.
 
         Objects become powered and gain momentum until they reach escape velocity.
         The resulting feel is that the object is trying its hardest to get out of the user's way and make room for new content to come in.
@@ -106,7 +125,9 @@ _exitAnimation.Duration = TimeSpan.FromMilliseconds(150);
 
 ### <a name="decelerate-enter"></a>**감속**(들어옴)
 
-:::row::: :::column::: 기존 장면으로 들어가거나 이동 또는 뻗어나가는 UI 또는 개체에 대한 사용.
+:::row:::
+    :::column:::
+        Use for objects or UI entering the scene, either navigating or spawning.
 
         Once on-scene, the object is met with extreme friction, which slows the object to rest.
         The resulting feel is that the object traveled from a long distance away and entered at an extreme velocity, or is quickly returning to a rest state.
@@ -145,8 +166,10 @@ _enterAnimation.Duration = TimeSpan.FromMilliseconds(300);
 
 ### <a name="standard-easing-move"></a>**표준 감속**(이동)
 
-:::row::: :::column::: 시스템 내 애니메이션이 적용된 매개 변수 변경을 완화하기 위한 기준.
-간단한 위치 변경 등 화면의 상태별로 변하는 개체에 대한 표준 감속을 사용합니다. 또한, 증가하는 개체와 같이 화면 내에 모핑하는 개체에 사용합니다.
+:::row:::
+    :::column:::
+        This is the baseline easing for any animated parameter change inside of the system.
+        Use standard easing for objects that change from state to state on-screen, such as a simple position change. Also, use it for objects morphing in-scene, like an object that grows.
 
         The resulting feel is that objects changing state from A to B are overcoming, and taken over by, natural forces.
     :::column-end:::

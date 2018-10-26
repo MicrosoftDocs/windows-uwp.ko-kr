@@ -3,18 +3,16 @@ author: TerryWarwick
 title: 서비스 지점 하드웨어 지원
 description: 이 문서에는 각각의 서비스 지점 장치 클래스에서 하드웨어 지원에 대한 정보가 포함
 ms.author: jken
-ms.date: 05/1/2018
+ms.date: 06/13/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb2468497115c9595f6fd17ab61b30caed507ab
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: df6e2c15260759f164a37b68365e0268633b22d5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832097"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559253"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 
@@ -27,18 +25,76 @@ ms.locfileid: "1832097"
 |
 
 
-### <a name="compatible-barcode-scanners"></a>호환되는 바코드 스캐너
-| 범주 | 연결 | 제조업체/모델 |
-|--------------|-----------|-----------|
-| **1D Handheld 스캐너** | **USB** |Honeywell Voyager 1200g<br/>Honeywell Voyager 1202g<br/>Honeywell Voyager 1202-bf<br/>Honeywell Voyager 145Xg(업그레이드 가능)|
-| **1D Handheld 스캐너** | **Bluetooth** |Socket Mobile CHS 7Ci<br/> Socket Mobile CHS 7Di<br/> Socket Mobile CHS 7Mi<br/> Socket Mobile CHS 7Pi<br/>Socket Mobile DuraScan D700<br/> Socket Mobile DuraScan D730<br/>Socket Mobile SocketScan S800(이전의 CHS 8Ci) <br/>|
-|**2D Handheld 스캐너** | **USB** |Code Reader™ 950<br/>Code Reader™ 1021<br/>Code Reader™ 1421<br/> Honeywell Granit 198Xi<br/>Honeywell Granit 191Xi<br/>Honeywell Xenon 1900g<br/>Honeywell Xenon 1902g<br/>Honeywell Xenon 1902g-bf<br/>Honeywell Xenon 1900h<br/>Honeywell Xenon 1902h<br/>Honeywell Voyager 145Xg(업그레이드 가능)<br/>Honeywell Voyager 1602g<br/>Intermec SG20<br/>Zebra DS2278<br/>Zebra DS8108 ¹<hr><small>¹ 최소 펌웨어 016(2018년 1월 18일 출시)이 필요합니다 [123Scan](http://www.zebra.com/123Scan)을 사용하여 업그레이드 가능</small>|
-|**2D 핸드헬드 스캐너** | **Bluetooth** |Socket Mobile SocketScan S850(이전의 CHS 8Qi)|
-| **프레젠테이션 스캐너** | **USB** |Code Reader™ 5000<br/>Honeywell Genesis 7580g<br/>Honeywell Orbit 7190g|
-| **인카운터 스캐너** | **USB** |Honeywell Stratos 2700|
-| **검색 엔진** | **USB** | Honeywell N5680<br/>Honeywell N3680|
-| **Windows Mobile 장치**| **기본 제공** |Bluebird EF400<br/>Bluebird EF500<br/>Bluebird EF500R<br/>Honeywell CT50<br/>Honeywell D75e<br/>Janam XT2<br/>Panasonic FZ E1<br/>Panasonic FZ-F1<br/>PointMobile PM80<br/>Zebra TC700j|
-| **Windows Mobile 장치**| **사용자 지정** | HP Elite X3(바코드 스캐너 덮개 포함) |
+| 제조업체  | 모델                          | 접근 권한 값 | 연결    | 유형         | 모드                      |
+|---------------|--------------------------------|------------|--------------|--------------|---------------------------|
+| Code          | Reader™ 950                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Code          | Reader™ 1021                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Code          | Reader™ 1421                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Code          | Reader™ 5000                   | 2D         | USB          | 프레젠테이션 | HID POS 스캐너           |
+| Honeywell     | Genesis 7580g                  | 2D         | USB          | 프레젠테이션 | HID POS 스캐너           |
+| Honeywell     | Granit 198Xi                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Granit 191Xi                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | N5680                          | 2D         | 내부     | 구성 요소    | HID POS 스캐너           |
+| Honeywell     | N3680                          | 2D         | 내부     | 구성 요소    | HID POS 스캐너           |
+| Honeywell     | 궤도 7190g                    | 2D         | USB          | 프레젠테이션 | HID POS 스캐너           |
+| Honeywell     | Stratos 2700                   | 2D         | USB          | 카운터   | HID POS 스캐너           |
+| Honeywell     | Voyager 1200g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 1202g                  | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 1202-bf                | 1D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 145Xg                  | 1D/2 D ¹   | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Voyager 1602g                  | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1900g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1902g                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1902g-bf                 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1900h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Honeywell     | Xenon 1902h                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| HP            | 바코드 스캐너 (HR2150) 값 | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Intermec      | SG20                           | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Socket Mobile | CHS 7Ci                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | CHS 7Di                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | CHS 7mi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | CHS 7Pi                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | CHS 8Ci                        | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | DuraScan D700                  | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | DuraScan D730                  | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | DuraScan D740                  | 2D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | SocketScan S700                | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | SocketScan S730                | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | SocketScan S740                | 2D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | SocketScan S800                | 1D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Socket Mobile | SocketScan S850                | 2D         | Bluetooth    | 핸드헬드     | 직렬 포트 프로필 (SPP) |
+| Zebra         | DS2278                         | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| Zebra         | DS8108²                        | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+|
+
+
+Honeywell 통해 2D 바코드를 지원 하기 위해 ¹ Upgradable <br/>
+² 최소 펌웨어 016 (2018.01.18)가 필요 합니다. 업그레이드 가능한 Zebra [123Scan](http://www.zebra.com/123Scan)를 사용 합니다. 
+
+
+<hr>
+
+### <a name="windows-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows 장치
+| 제조업체   | 모델 | 운영 체제 |
+|----------------|-------|------------------|
+| Innowi         | ChecOut M | Windows10   |
+
+### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows Mobile 장치
+| 제조업체   | 모델 | 운영 체제 |
+|----------------|-------|------------------|
+| Bluebird       | EF400 | Windows Mobile   |
+| Bluebird       | EF500 | Windows Mobile   |
+| Bluebird       | EF500R | Windows Mobile   |
+| Honeywell      | CT50   | Windows Mobile   |
+| Honeywell      | D75e | Windows Mobile   |
+| Janam          | XT2      | Windows Mobile   |
+| Panasonic      | FZ E1 | Windows Mobile   |
+| Panasonic      | FZ-F1 |Windows Mobile   |
+| PointMobile    | PM80 | Windows Mobile   |
+| Zebra          | TC700j | Windows Mobile   |
+| HP             | Elite X3 재킷 | Windows Mobile   |
+
+
 
 
 ## <a name="cash-drawer"></a>현금 출납기

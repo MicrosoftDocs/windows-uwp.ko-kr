@@ -6,16 +6,14 @@ title: 적응 스트리밍
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae99a7a92ce933c8536dc30f9807d60a1441a809
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: ef8e3ab4abd9ee9159dc7d5aa757f55e00817a51
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912971"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551569"
 ---
 # <a name="adaptive-streaming"></a>적응 스트리밍
 
@@ -120,10 +118,10 @@ UWP 앱에서 적응 스트리밍 미디어를 재생하려면 DASH 또는 HLS �
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [HLS 태그 지원](hls-tag-support.md) 
-* [DASH 프로필 지원](dash-profile-support.md) 
+* [HLS 태그 지원](hls-tag-support.md) 
+* [DASH 프로필 지원](dash-profile-support.md) 
 * [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
-* [백그라운드에서 미디어 재생](background-audio.md) 
+* [백그라운드에서 미디어 재생](background-audio.md) 
 
 
 

@@ -9,15 +9,13 @@ keywords: 음성 명령, 음성, 음성 인식, 자연어, 받아쓰기, 입력,
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fdc38c39591a63800eb5d985022bb7ee569d7203
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 86ed884c3e9811c65d414dce6c0697e20dbd4711
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653482"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559309"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 
@@ -182,7 +180,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. 문법은 W3C(World Wide Web 컨소시엄) [SISR(Semantic Interpretation for Speech Recognition) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) 사양을 준수해야 합니다.
+이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. 문법은 World Wide Web 컨소시엄 (W3C)[대 한 음성 인식 (sisr SEMANTIC Interpretation) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) 사양 준수 해야 합니다.
 
 여기서는 "yes" 및 "no"의 변형을 수신 대기합니다.
 
@@ -241,9 +239,9 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 **샘플**
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

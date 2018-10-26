@@ -6,16 +6,14 @@ ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
 ms.author: wdg-dev-content
 ms.date: 05/15/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, 설명, 설명, Store 목록, 마케팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 54877e43ced6044e0866f951a653f2b32d040d9d
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 87ad41dc2f78f37485d1b8de3101348363b5ba28
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521646"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553131"
 ---
 # <a name="write-a-great-app-description"></a>호소력 있는 앱 설명 쓰기
 

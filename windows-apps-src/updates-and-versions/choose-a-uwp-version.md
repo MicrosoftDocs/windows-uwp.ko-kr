@@ -5,17 +5,15 @@ description: Microsoft Visual Studio에서 UWP 앱을 작성하는 경우 대상
 ms.author: quradic
 ms.date: 10/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, 버전, 빌드, 버전, Windows, 선택, 업데이트, 업데이트
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
-ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 2e2b241d0369d50e600a5497811ac7d4bbb823bc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5482225"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559487"
 ---
 # <a name="choose-a-uwp-version"></a>UWP 버전 선택
 

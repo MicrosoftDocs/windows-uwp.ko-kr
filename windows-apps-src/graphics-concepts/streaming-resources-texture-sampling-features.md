@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ee5dc703fe52b0ac8b7163a8067e8b8b87ac8103
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0066d38aaa3f5802ff5b1d380d405e60d90cad49
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044832"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558596"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>스트리밍 리소스 텍스처 샘플링 기능
 
@@ -79,9 +77,9 @@ LOD 추적에 대한 최소/최대 필터링 유틸리티는 아마도 깊이 �
 
 [스트리밍 리소스에 대한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

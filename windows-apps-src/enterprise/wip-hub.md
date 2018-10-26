@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다.
+Description: This is a hub topic covering the full developer picture of how Windows Information Protection (WIP) relates to files, buffers, clipboard, networking, background tasks, and data protection under lock.
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -8,15 +8,15 @@ title: WIP(Windows Information Protection)
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
-ms.openlocfilehash: f624d20d33f560f151b40bd1a405711d697fd4cb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dec05e663e6ca7390dc3974b8a3cde2971b50426
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218982"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555867"
 ---
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
@@ -63,7 +63,7 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 인식 앱으
 
 앱을 인식할 준비가 되면 다음 가이드 중 하나를 참조하세요.
 
-**C를 사용하여 빌드하는 UWP(유니버설 Windows 플랫폼) 앱의 경우#**
+**C#을 사용 하 여 빌드하는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한**
 
 [WIP(Windows Information Protection) 개발자 가이드](wip-dev-guide.md).
 
@@ -98,4 +98,4 @@ MDM 정책은 플래그를 요구하지 않지만 MAM 정책은 플래그를 요
 
 
 
- 
+ 

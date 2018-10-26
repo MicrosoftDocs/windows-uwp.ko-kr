@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f2bdcf77a9c150195a7a4c27a064d26c525472a
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1d57c60e8cba9be75e936c55800bac93f8df3e30
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044822"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556617"
 ---
 # <a name="tessellator-ts-stage"></a>TS(분할기) 단계
 
@@ -72,7 +70,7 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
     | Integer              | TessFactor range: \[1..64\] |
     | Pow2                 | TessFactor range: \[1..64\] |
 
-     
+     
 
 공간 분할은 두 개의 프로그래밍 가능 셰이더 단계 [헐 셰이더](hull-shader-stage--hs-.md) 및 [도메인 셰이더](domain-shader-stage--ds-.md)로 구현됩니다. 이러한 셰이더 단계는 셰이더 모델 5에서 정의되는 HLSL 코드로 프로그래밍되어 있습니다. 셰이더 대상은 hs\_5\_0 및 ds\_5\_0입니다. 제목이 셰이더를 만든 후 하드웨어용 코드가 컴파일된 셰이더에서 추출되어 셰이더가 파이프라인에 바인딩될 때 런타임으로 전달됩니다.
 
@@ -97,9 +95,9 @@ TS(분할기) 단계는 2개 작업 단계로 작동합니다.
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

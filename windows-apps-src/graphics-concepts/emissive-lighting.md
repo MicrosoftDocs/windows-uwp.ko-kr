@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2717a482e0ea1ad80f0f13dc09bb6789863ef7e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9ce2082479261cd96fb1c5bafd5f2df06bf6f239
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044272"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558689"
 ---
 # <a name="emissive-lighting"></a>발광 조명
 
@@ -33,7 +31,7 @@ ms.locfileid: "1044272"
 |-----------|---------------|----------------------------------------------------------------------|-----------------|
 | Cₑ        | (0,0,0,0)     | 빨간색, 녹색, 파란색 및 알파 투명도(모두 부동 소수점 값) | 발광 색입니다. |
 
- 
+ 
 
 Cₑ에 대한 값은 색 1 또는 색 2입니다. 꼭짓점 색을 입력하지 않으면 물체 발광 색이 사용됩니다.
 
@@ -57,9 +55,9 @@ Cₑ에 대한 값은 색 1 또는 색 2입니다. 꼭짓점 색을 입력하지
 
 [조명의 수학](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

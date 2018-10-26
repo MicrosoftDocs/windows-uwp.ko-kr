@@ -4,22 +4,20 @@ Description: The Microsoft Store enforces certain rules related to version numbe
 title: 패키지 버전 번호
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/25/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cf93cf06b273605b91c31da5b6a6b8cef8dae39
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 045e44d3ba243b4c4fbf68ba37e91c06eb022d27
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470411"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558775"
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
-제공하는 각 패키지에는 버전 번호가 있어야 합니다(app 매니페스트 내 **Package/Identity** 요소의 **Version** 속성 값으로 제공됨). Microsoft Store에서는 버전 번호와 관련된 특정 규칙을 적용하며, 이는 OS 버전마다 약간 다르게 작동합니다.
+제공하는 각 패키지에는 버전 번호가 있어야 합니다(app 매니페스트 내 [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **Version** 속성 값으로 제공됨). Microsoft Store에서는 버전 번호와 관련된 특정 규칙을 적용하며, 이는 OS 버전마다 약간 다르게 작동합니다.
 
 > [!NOTE]
 > 이 항목에서는 "패키지"를 참조 하지만.msix/.appx와.msixbundle/.appxbundle 파일에 대 한 버전 번호는 동일한 규칙이 적용 설명이 없는 한.
@@ -28,7 +26,7 @@ ms.locfileid: "5470411"
 ## <a name="version-numbering-for-windows10-packages"></a>버전 번호 Windows10 패키지
 
 > [!IMPORTANT]
-> Windows 10 (UWP) 패키지에 대 한 버전 번호의 마지막 (네 번째) 섹션 스토어 사용을 위해 예약 되며 (하지만 스토어가이 섹션의 값을 변경할 수 있습니다) 패키지를 빌드할 때 0 이어야 합니다.
+> Windows 10 (UWP) 패키지에 대 한 버전 번호의 마지막 (네 번째) 섹션 스토어 사용을 위해 예약 되며 (하지만 스토어가이 섹션의 값을 변경할 수 있습니다) 패키지를 빌드할 때 0 이어야 합니다. 다른 섹션은 0과 65535 (0이 될 수 없는 첫 번째 섹션)를 제외한 사이의 정수로 설정 되어야 합니다.
 
 게시 된 제출에서 UWP 패키지를 선택할 때 Microsoft Store는 항상 고객의 Windows 10 장치에 적용할 수 있는 가장 높은 버전의 패키지를 사용 합니다. 따라서 특정 장치 유형의 고객에게 제공되는 패키지에 대한 유연성 및 제어 기능이 향상됩니다. 특히, 이러한 패키지를 순서에 상관없이 제출할 수 있습니다. 이후의 각 제출에서 더 높은 버전의 패키지를 제공하지 않아도 됩니다.
 

@@ -6,16 +6,14 @@ ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 ms.author: joanlee
 ms.date: 03/27/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a0ffc3779f604b68c699e30068e07f3461f568d
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 5d15d3e6b6beb773a8d606db7a5d8a17544270be
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700829"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552185"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
@@ -203,7 +201,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 ## <a name="learning-resources"></a>학습 리소스
 
 * //빌드 2016: [CodeLabs &mdash; Microsoft Azure App Service 및 Microsoft SQL Azure 백 엔드를 사용하여 Unity에 게임 점수 저장](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* //빌드 2017: [Microsoft Azure를 사용하여 세계적 수준의 게임 경험 제공: Halo, Hitman 및 Walking Dead 같은 타이틀을 통해 얻은 교훈(동영상)](https://channel9.msdn.com/Events/Build/2017/P4062)
+* 빌드 2017: [세계적 수준의 게임 경험 제공 Microsoft Azure를 사용 하 여: Halo, Hitman 및 WalkingDead (비디오)와 같은 타이틀을 통해 얻은 교훈](https://channel9.msdn.com/Events/Build/2017/P4062)
 * GitHub에서 Azure를 사용하여 일반적인 게임 워크로드를 지원하도록 설계된 재사용 가능한 구성 요소, 프로젝트, 서비스 및 모범 사례: [Azure의 게임 구성 요소](https://github.com/MicrosoftDX/nether)
 * [Azure의 게임 서비스(동영상)](https://channel9.msdn.com/Series/Gaming-Services-on-Azure)
 
@@ -232,6 +230,6 @@ Microsoft는 꾸준한 혁신을 통해 새로운 기능을 추가하고 있습�
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
 
- 
+ 
 
- 
+ 

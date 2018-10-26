@@ -6,20 +6,22 @@ title: 레거시 백그라운드 미디어 재생
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 68695125c2056adca8186120db7875cb3a68baf8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 319343a06eeb49fc4ec0ca2fcd340f655654f718
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219057"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554639"
 ---
 # <a name="legacy-background-media-playback"></a>레거시 백그라운드 미디어 재생
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 UWP 앱에 백그라운드 오디오 지원을 추가하기 위한 레거시 두 프로세스 모델을 설명합니다. Windows 10 버전 1607부터 백그라운드 오디오에 대해 더 간단하게 구현할 수 있는 단일 프로세스 모델이 도입되었습니다. 백그라운드 오디오에 대한 현재 권장 사항은 [백그라운드에서 미디어 재생](background-audio.md)을 참조하세요. 이 문서는 레거시 두 프로세스 모델을 사용하여 이미 개발된 앱에 대한 지원을 제공하도록 작성되었습니다.
+
+> [!NOTE]
+> Windows, 버전 1703부터 **BackgroundMediaPlayer** 는 사용 되지 않으며 Windows의 이후 버전에서 사용할 수 없습니다.
 
 ## <a name="background-audio-architecture"></a>백그라운드 오디오 아키텍처
 
@@ -121,9 +123,9 @@ ms.locfileid: "219057"
 | **공유 수명**    | 사용  | 사용 안 함 | 사용 안 함 |
 
 
- 
+ 
 
- 
+ 
 
 
 

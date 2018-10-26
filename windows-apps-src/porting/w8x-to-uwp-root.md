@@ -1,39 +1,38 @@
 ---
-author: mcleblanc
-description: Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다.
-title: Windows 런타임 8.x에서 UWP로 이동&quot;
+author: stevewhims
+description: 유니버설 8.1 앱 및 \#8212;whether 있는 경우를 대상으로 Windows8.1, Windows Phone 8.1 또는 둘 다 \#8212;then은 소스 코드 및 기술이 원활 하 게 포팅 Windows10 나와 있습니다.
+title: Windows 런타임 8.x에서 UWP로 이동'
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 37da1d6385bf18fcf44f6425b843715e1a462379
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: eebd0467696b78458835425f7feac903ba435f42
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220330"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556063"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x에서 UWP로 이동
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다. Windows 10을 사용하면 모든 종류의 디바이스에 설치할 수 있는 단일 앱 패키지인 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다. Windows 10, UWP 앱, 이 포팅 가이드에서 언급할 적응 코드 및 적응 UI 개념에 대한 추가적인 배경 정보에 대해서는 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+유니버설 8.1 앱이 있는 경우-Windows8.1, Windows Phone 8.1 또는 둘 다 대상으로 하는지 여부 등는 소스 코드 및 기술이 원활 하 게 포팅 Windows10 찾을 수 있습니다. Windows10를 사용 하 여 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. 추가적인 배경 정보에 Windows10, UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 적응 UI 개념 [UWP 앱 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631)를 참조 합니다.
 
-포팅하는 동안 Windows 10은 이전 플랫폼과 대부분의 API, XAML 태그, UI 프레임워크 및 도구를 공유하므로 이러한 모든 항목이 이미 익숙하다는 것을 알게 됩니다. 이전과 마찬가지로 C++, C# 및 Visual Basic 중에서 XAML UI 프레임워크와 함께 사용할 프로그래밍 언어를 선택할 수 있습니다. 처음에 현재 앱을 사용해서 수행할 작업을 정확히 계획할 때는 앱 및 프로젝트 종류를 고려해야 합니다. 이 내용은 다음 섹션에서 설명합니다.
+포팅하는 동안 알려드립니다 Windows10 이전 플랫폼 뿐 아니라 XAML 태그, UI 프레임 워크 및 도구를 사용 하 여 대부분의 Api 공유 하 고 있다는 사실을 확인할 모든 항목이 이미 익숙하다는 합니다. 이전과 마찬가지로 C++, C# 및 Visual Basic 중에서 XAML UI 프레임워크와 함께 사용할 프로그래밍 언어를 선택할 수 있습니다. 처음에 현재 앱을 사용해서 수행할 작업을 정확히 계획할 때는 앱 및 프로젝트 종류를 고려해야 합니다. 이 내용은 다음 섹션에서 설명합니다.
 
 ## <a name="if-you-have-a-universal-81-app"></a>유니버설 8.1 앱이 있는 경우
 
 유니버설 8.1 앱은 8.1 유니버설 앱 프로젝트에서 빌드합니다. 프로젝트의 이름을 AppName\_81이라고 하겠습니다. 여기에는 다음과 같은 하위 프로젝트가 포함되어 있습니다.
 
--   AppName\_81.Windows. Windows 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
+-   AppName\_81.Windows. Windows8.1 용 앱 패키지를 빌드하는 프로젝트입니다.
 -   AppName\_81.WindowsPhone. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
 -   AppName\_81.Shared. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
-8.1 유니버설 Windows 앱은 해당 Windows 8.1 및 Windows Phone 8.1 형식으로 동일한 코드 및 태그를 사용하여 동일한 기능을 제공합니다. 범용 디바이스 패밀리를 대상으로 하고 광범위한 디바이스에 설치할 수 있는 단일 Windows 10 앱으로 포팅하기에 적합한 앱. 공유 프로젝트의 콘텐츠를 기본적으로 포팅하게 되며, 다른 두 프로젝트에는 콘텐츠가 거의 없거나 전혀 없으므로 포팅할 필요가 없습니다.
+8.1 유니버설 Windows 앱에서 동일한 기능을 제공 하는 종종-동일한 코드 및 태그를 사용 하 여-Windows8.1 및 Windows Phone 8.1 형식. 앱 유니버설 디바이스 패밀리를 대상으로 하는 번째이자 광범위 한 디바이스에 설치할 수 있는 단일 Windows10 앱에 적합 됩니다. 공유 프로젝트의 콘텐츠를 기본적으로 포팅하게 되며, 다른 두 프로젝트에는 콘텐츠가 거의 없거나 전혀 없으므로 포팅할 필요가 없습니다.
 
-경우에 따라 Windows 8.1 및/또는 Windows Phone 8.1 양식 앱에는 고유한 기능이 포함되어 있습니다. 또는 동일한 기능을 포함하지만 다른 기법이나 기술을 사용하여 이러한 기능을 구현하기도 합니다. 유니버설 디바이스 패밀리를 대상으로 하는 단일 앱으로 포팅하도록 선택할 수 있는 앱(앱 자체를 다른 장치에 맞게 조정하려는 경우) 또는 둘 이상의 앱으로 포팅하도록 선택할 수 있는 앱(예: 데스크톱 디바이스 패밀리 대상 앱 및 모바일 디바이스 패밀리 대상 앱). 유니버설 8.1 앱의 특성에 따라 어떤 옵션이 가장 적합한지 결정합니다.
+다른 경우는 Windows8.1 및/또는 Windows Phone 8.1 양식 앱에는 고유한 기능이 포함 되어 있습니다. 또는 동일한 기능을 포함하지만 다른 기법이나 기술을 사용하여 이러한 기능을 구현하기도 합니다. 유니버설 디바이스 패밀리를 대상으로 하는 단일 앱으로 포팅하도록 선택할 수 있는 앱(앱 자체를 다른 장치에 맞게 조정하려는 경우) 또는 둘 이상의 앱으로 포팅하도록 선택할 수 있는 앱(예: 데스크톱 디바이스 패밀리 대상 앱 및 모바일 디바이스 패밀리 대상 앱). 유니버설 8.1 앱의 특성에 따라 어떤 옵션이 가장 적합한지 결정합니다.
 
 1.  유니버설 디바이스 패밀리를 대상으로 하는 앱에 공유 프로젝트의 콘텐츠를 포팅합니다. 해당되는 경우 Windows 및 WindowsPhone 프로젝트의 다른 콘텐츠를 복구하여 앱에서 조건 없이 사용하거나 앱이 실행될 수 있는 장치에서 조건부로 사용합니다(후자의 경우를 *적응* 방식이라고 함).
 2.  범용 디바이스 패밀리를 대상으로 하는 앱에 WindowsPhone 프로젝트의 콘텐츠를 포팅합니다. 해당되는 경우 무조건 또는 적응 방식으로 Windows 프로젝트의 다른 콘텐츠를 복구합니다.

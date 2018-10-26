@@ -7,18 +7,16 @@ keywords: 연락처, 연락처 선택, 단일 연락처 선택, 여러 연락처
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-ms.openlocfilehash: 861d3d7a68596cbec289050391775d665ac6979d
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: a721e618864155e4eec66d222e8eeafa2e0ca038
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665097"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557044"
 ---
 # <a name="select-contacts"></a>연락처 선택
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.

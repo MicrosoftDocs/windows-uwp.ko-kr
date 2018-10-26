@@ -12,15 +12,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 75aa946f3a0f1259adf1207e9568ca6da783883e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0e817dcc92741ca2e738784f387cfe49399a108c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044752"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552809"
 ---
 # <a name="texture-addressing-modes"></a>텍스처 주소 지정 모드
 
@@ -43,7 +41,7 @@ Direct3D는 응용 프로그램에서 텍스처 래핑이 가능합니다. [텍�
 | 클램프                   | 텍스처 좌표를 \[0.0, 1.0\] 범위로 고정합니다. 클램프 모드에서는 텍스처를 한 번 적용한 다음 가장 자리 픽셀의 색상을 설정합니다. |
 | 테두리 색            | 0.0~1.0(0.0과 1.0 포함)의 범위를 벗어나는 모든 텍스처 좌표에 임의의 *테두리 색*을 사용합니다.                         |
 
- 
+ 
 
 ## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>랩 텍스처 주소 모드
 
@@ -101,9 +99,9 @@ Direct3D는 응용 프로그램에서 텍스처 래핑이 가능합니다. [텍�
 
 [텍스처](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

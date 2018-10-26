@@ -6,16 +6,14 @@ title: 오디오 그래프
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 26b9f49c8f21c7c60fb99fd8eaf24156a8aed3d9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: cdd1548a4d120027afd06a178cc338c88cb5cc4b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832504"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558274"
 ---
 # <a name="audio-graphs"></a>오디오 그래프
 
@@ -47,7 +45,7 @@ Windows 런타임 오디오 그래프 API:
 -   XAudio2보다 훨씬 더 쉽게 사용할 수 있습니다.
 -   C++에 대해 지원될 뿐 아니라 C#에서도 사용할 수 있습니다.
 -   압축된 파일 형식을 포함하여 오디오 파일을 직접 사용할 수 있습니다. XAudio2는 오디오 버퍼에만 작동하며 파일 I/O 기능을 제공하지 않습니다.
--   Windows 10의 짧은 대기 시간 오디오 파이프라인을 사용할 수 있습니다.
+-   Windows10에 짧은 대기 시간 오디오 파이프라인을 사용할 수 있습니다.
 -   기본 끝점 매개 변수를 사용할 때 자동 끝점 자동 전환을 지원합니다. 예를 들어 사용자가 디바이스의 스피커에서 헤드셋으로 전환하면 오디오는 새 입력으로 자동 리디렉션됩니다.
 
 ## <a name="audiograph-class"></a>AudioGraph 클래스
@@ -270,9 +268,9 @@ Windows 10 버전 1607부터 **AudioGraph**는 입력 또는 서브믹스 노드
 
 ## <a name="see-also"></a>참고 항목
 - [미디어 재생](media-playback.md)
- 
+ 
 
- 
+ 
 
 
 

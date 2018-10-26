@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf14efc4c4ec29c98ebebff91493623d55267db5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d7456cd773196520e066062c664f5e3073941dfe
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044612"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559395"
 ---
 # <a name="primitive-topologies"></a>기본 토폴로지
 
@@ -68,7 +66,7 @@ Direct3D는 여러 개의 기본 토폴로지를 지원하는데, 이 토폴로�
 | ![권선 방향 기호](images/d3d10-primitive-topologies-winding-direction.png) | 권선 방향 | 기본 요소 조합 시 꼭짓점 순서. 시계 방향 또는 반시계 방향일 수 있습니다. |
 | ![선행 꼭짓점 기호](images/d3d10-primitive-topologies-leading-vertex.png)       | 선행 꼭짓점    | 상수별 데이터를 포함하는 기본 요소의 첫 번째 비인접 꼭짓점.       |
 
- 
+ 
 
 ## <a name="span-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspangenerating-multiple-strips"></a><span id="Generating_Multiple_Strips"></span><span id="generating_multiple_strips"></span><span id="GENERATING_MULTIPLE_STRIPS"></span>여러 스트립 생성
 
@@ -86,9 +84,9 @@ Direct3D는 여러 개의 기본 토폴로지를 지원하는데, 이 토폴로�
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

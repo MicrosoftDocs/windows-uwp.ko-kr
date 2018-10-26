@@ -6,23 +6,21 @@ description: 사용자는 앱이 응답성을 유지하고 자연스러운 느�
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 40833b98483dc0197c651e2ab4bea259742c2858
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 3dfc4e5d3d2741cf36a1a9aae8c0c22feed5305e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894527"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557231"
 ---
 # <a name="performance"></a>성능
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기에 측정하고 프로젝트의 수명 주기 동안 목표를 달성할 수 있는지 확인합니다. 이 섹션에서는 성능 워크플로를 구성하고, 애니메이션 결함 및 프레임 속도 문제를 해결하고, 시작 시간과 페이지 탐색 시간 및 메모리 사용량을 조정하는 방법을 설명합니다.
 
-지금까지 살펴본 중요한 성능 향상 단계는 Windows 10을 대상으로 앱을 이식하는 것입니다. 여러 XAML 최적화(예: [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783))는 Windows 10 앱에서만 사용할 수 있습니다. [Windows 10으로 앱 이식](https://msdn.microsoft.com/library/windows/apps/Mt238321) 및 //build/ 세션 [유니버설 Windows 플랫폼으로 전환](http://channel9.msdn.com/Events/Build/2015/3-741)을 참조하세요.
+않았으면 지금 단계는 앞에서 설명한 것 상당한 성능 향상을 대상으로 Windows10 앱을 이식 것입니다. 여러 XAML 최적화 (예를 들어 [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783))은 Windows10 앱에서 사용할 수만 있습니다. [Windows10 포인팅 앱](https://msdn.microsoft.com/library/windows/apps/Mt238321) 및 [유니버설 Windows 플랫폼으로 전환](http://channel9.msdn.com/Events/Build/2015/3-741)//build/ 세션을 참조 하세요.
 
 | 항목 | 설명 |
 |-------|-------------|

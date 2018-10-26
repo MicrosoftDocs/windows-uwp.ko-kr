@@ -6,19 +6,17 @@ description: 레이아웃은 CPU 사용과 메모리 오버헤드 모두에서 �
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 40afd15da7e225ea82814ab2fa680a3c95e00488
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: b0dcb3e49bb35902a17f829c0222c570265be8b5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894747"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553863"
 ---
 # <a name="optimize-your-xaml-layout"></a>XAML 레이아웃 최적화
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -28,7 +26,7 @@ ms.locfileid: "894747"
 
 ## <a name="reduce-layout-structure"></a>레이아웃 구조 줄이기
 
-UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가장 크게 개선할 수 있습니다. 패널은 시각적 트리로 존재하지만, [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 또는 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)과 같은 *픽셀 생성 요소*가 아닌 구조적 요소입니다. 일반적으로 비픽셀 생성 요소 수를 줄여 트리를 단순화하면 성능을 상당히 개선할 수 있습니다.
+UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가장 크게 개선할 수 있습니다. 패널은 시각적 트리로 존재하지만, [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 또는 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)과 같은 *픽셀 생성 요소*가 아닌 구조적 요소입니다. 일반적으로 비픽셀 생성 요소 수를 줄여 트리를 단순화하면 성능을 상당히 개선할 수 있습니다.
 
 여러 UI가 중첩 패널로 구현되므로 결과적으로 패널 및 요소의 깊고 복잡한 트리가 생성됩니다. 패널을 중첩하면 편리하지만 많은 경우에 다소 복잡한 하나의 패널에 동일한 UI를 구현할 수 있습니다. 하나의 패널을 사용하면 성능이 더 개선됩니다.
 
@@ -138,7 +136,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 레이아웃에서 요소가 서로 겹칠 수 있어야 하는 것이 일반적인 UI 요구 사항입니다. 요소를 겹쳐서 배치하는 데 일반적으로 안쪽 여백, 여백, 맞춤 및 변형이 사용됩니다. XAML [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 컨트롤은 겹치는 요소에 대한 레이아웃 성능을 향상하는 데 최적화되어 있습니다.
 
-**중요**  기능 향상 효과를 보려면 단일 셀 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 사용하세요. [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
+**중요 한**향상을 보려면 단일 셀 [**그리드**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 사용 합니다. [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
 
 ### <a name="examples"></a>예제
 

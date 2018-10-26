@@ -6,22 +6,19 @@ description: UI 가상화, 요소 감소, 항목에 대한 점진적 업데이�
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cff6e2785434eb4fdb922d8b89b55aca242655f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 25eeea58e1e03eedfca3aaafda1cee13cac1f3c4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816908"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553648"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>ListView 및 GridView UI 최적화
 
 
-**참고**  
-자세한 내용은 //build/ 세션 [사용자가 GridView 및 ListView에서 많은 데이터를 조작할 때의 획기적인 성능 향상](https://channel9.msdn.com/events/build/2013/3-158)을 참조하세요.
+**참고**  에 대 한 자세한 내용은 //build/ 세션 [큰 GridView 및 ListView에서 데이터의 양을 사용자가 상호 작용할 때 성능 향상](https://channel9.msdn.com/events/build/2013/3-158)을 참조 하세요.
 
 UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)의 성능과 시작 시간을 개선합니다. 데이터 가상화 기술은 [ListView 및 GridView 데이터 가상화](listview-and-gridview-data-optimization.md)를 참조하세요.
 
@@ -325,5 +322,5 @@ private void ListView_ChoosingItemContainer
 
 다른 항목 템플릿을 사용하는 균등하지 않은 항목 배포가 있는 경우 이동 중 새 항목 템플릿이 만들어져야 하며 그렇게 되면 가상화에서 제공되는 많은 이점을 사용할 수 없습니다. 게다가 항목 템플릿 선택기는 특정 컨테이너를 현재 데이터 항목에 재사용할 수 있는 여부를 평가할 때 다섯 가지의 가능한 후보만 고려합니다. 따라서 앱에서 사용하기 전에 데이터가 항목 템플릿 선택기에서 사용하기에 적절한지 여부를 주의 깊게 고려해야 합니다. 컬렉션이 대부분 같은 유형인 경우에는 선택기가 거의 또는 항상 같은 유형을 반환합니다. 이러한 동질성에 대한 드문 예외에 치러야 할 대가를 인식하고 [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)(또는 두 개의 항목 컨트롤)를 사용하는 것이 바람직한지 고려합니다.
 
- 
+ 
 

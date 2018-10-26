@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f456d6d3fc1b1300e80c39b01eaed1b654159cd
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 9eb129609b2fa8564b04d128c3cb06251b044360
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652882"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556722"
 ---
 # <a name="transforms"></a>변환
 
@@ -57,16 +55,16 @@ Direct3D 파트는 고정 함수 기하 도형 파이프라인을 통해 기하 
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [좌표계 및 기하 도형](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

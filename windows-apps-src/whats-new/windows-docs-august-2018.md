@@ -6,15 +6,13 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10 �
 ms.author: quradic
 ms.date: 08/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 76de6c5c1e8925dd8b166a8d99c39116bf66141d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5522148"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554953"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018 년 8 월 Windows 개발자 문서의 새로운
 

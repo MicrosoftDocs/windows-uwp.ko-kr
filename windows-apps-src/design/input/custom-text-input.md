@@ -9,15 +9,13 @@ keywords: 키보드, 텍스트, 코어 텍스트, 사용자 지정 텍스트, �
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 734d18d7320ecc3157fbc9896db28989e0791e8d
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 14a2811f59b8de33db51b255aee8892abf553198
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655565"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555415"
 ---
 # <a name="custom-text-input"></a>사용자 지정 텍스트 입력
 
@@ -63,7 +61,7 @@ ms.locfileid: "1655565"
 | **StartCaretPosition** | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | 범위의 시작 위치는 첫 번째 문자 바로 앞의 ACP입니다. |
 | **EndCaretPosition**   | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | 범위의 끝 위치는 마지막 문자 바로 뒤의 ACP입니다.     |
 
- 
+ 
 
 예를 들어 앞에서 표시된 텍스트 범위에서 범위 [0, 5]는 단어 "Hello"를 지정합니다. **StartCaretPosition**은 항상 **EndCaretPosition**보다 작거나 같아야 합니다. 범위 [5, 0]은 잘못되었습니다.
 
@@ -158,9 +156,8 @@ ms.locfileid: "1655565"
 ## <a name="related-articles"></a>관련 문서
 
 **샘플**
-* [사용자 지정 편집 컨트롤 샘플](https://go.microsoft.com/fwlink/?linkid=831024)
- 
-**보관 샘플**
+* [사용자 지정 편집 컨트롤 샘플](https://go.microsoft.com/fwlink/?linkid=831024) 
+ **보관 샘플**
 * [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?LinkID=251417)
 
 

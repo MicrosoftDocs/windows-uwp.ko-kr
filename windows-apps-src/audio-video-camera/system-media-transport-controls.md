@@ -6,18 +6,17 @@ title: 시스템 미디어 전송 컨트롤의 수동 컨트롤
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 1c0b24bce21ed145d61f6b5d05392a6fc3cc30aa
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: b0ece9a25a2fd2892553d66847c39637e7faae70
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219121"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554064"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤의 수동 컨트롤
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows10 버전 1607부터 미디어를 재생하는 데 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하는 UWP 앱이 기본적으로 SMTC(시스템 미디어 전송 컨트롤)와 자동으로 통합됩니다. 대부분의 시나리오에서 이러한 방식으로 SMTC와 상호 작용하는 것이 좋습니다. **MediaPlayer**와 SMTC의 기본 통합을 사용자 지정하는 방법은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요.
 
@@ -93,7 +92,7 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 | [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/mt218756)     | [**PlaybackRateChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218757)     |
 | [**ShuffleEnabled**](https://msdn.microsoft.com/library/windows/apps/mt218758) | [**ShuffleEnabledChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218759) |
 
- 
+ 
 이 컨트롤 중 하나를 사용하여 사용자 조작을 처리하려면 먼저 관련 이벤트에 대한 처리기를 등록합니다.
 
 [!code-cs[RegisterPlaybackChangedHandler](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterPlaybackChangedHandler)]
@@ -114,10 +113,10 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md) 
+* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md) 
 * [시스템 미디어 전송 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
- 
+ 
 
 
 

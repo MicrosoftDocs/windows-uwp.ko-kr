@@ -6,19 +6,17 @@ title: 미디어 재생
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 888131d37a86793d67ce71376b158bd7de734331
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: dbcd2a4f9cec02882c62c7d6493746931b7919a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2017
-ms.locfileid: "837024"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557553"
 ---
 # <a name="media-playback"></a>미디어 재생
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 오디오 및 비디오를 재생하는 유니버설 Windows 앱을 만드는 방법에 대한 정보를 제공합니다. 
 
@@ -46,7 +44,7 @@ ms.locfileid: "837024"
 * [적응 스트리밍 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming)
 * [백그라운드 오디오 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 * [시스템 미디어 전송 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)                                                                                               
- 
+ 
 
 
 

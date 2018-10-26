@@ -9,15 +9,13 @@ keywords: Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 665a83743e2c4b5096b76b481c0e46274daf9c1f
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: 3d04ea3506fc909b115ba9aab397ded9e4464479
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707334"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555654"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>UWP 앱의 펜 조작 및 Windows Ink
 
@@ -34,14 +32,14 @@ UWP(유니버설 Windows 플랫폼) 앱을 펜 입력에 최적화하여 사용�
 | 비디오 |   |
 | --- | --- |
 | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
-| *UWP 앱에서 잉크 사용* | *Windows Pen 및 Windows Ink를 사용하여 보다 매력적인 엔터프라이즈 앱 빌드* |
+| *UWP 앱에서 잉크 사용* | *Windows 펜 및 잉크를 사용 하 여 매력적인 enterpriseapps 빌드* |
 
 펜 장치와 더불어 Windows Ink 플랫폼을 사용하면 자연스럽게 디지털 필기 메모, 드로잉, 주석을 만들 수 있습니다. 플랫폼에서는 디지타이저 입력을 잉크 데이터로 캡처, 잉크 데이터 생성, 잉크 데이터 관리, 출력 장치에서 잉크 데이터를 스트로크로 렌더링 및 잉크를 필기 인식을 통해 텍스트로 변환 등을 지원합니다.
 
 앱은 사용자가 필기를 하거나 그릴 때 펜의 기본 위치 및 움직임을 캡처하는 것 외에, 스트로크에 작용하는 다양한 압력 크기를 추적하고 수집할 수 있습니다. 이 정보와 펜 팁 모양, 크기 및 회전에 대한 설정, 잉크 색 및 용도(일반 잉크, 지우기, 강조 표시 및 선택)를 사용하여 펜, 연필 또는 브러시를 사용하여 종이에 쓰거나 그리는 것과 매우 비슷한 사용자 환경을 제공할 수 있습니다.
 
 > [!NOTE]
-> 앱은 터치 디지타이저 및 마우스 장치를 비롯한 기타 포인터 기반 장치의 잉크 입력을 지원합니다. 
+> 앱은 터치 디지타이저 및 마우스 장치를 비롯한 기타 포인터 기반 장치의 잉크 입력을 지원합니다. 
 
 잉크 플랫폼은 매우 유연합니다. 사용자의 요구 수준에 따라 다양한 수준의 기능을 지원하도록 디자인되어 있습니다.
 
@@ -51,9 +49,9 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 기본적으로 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 받아 표시하는 XAML UI 플랫폼 컨트롤입니다.<br/>InkCanvas를 사용하는 방법은 [Windows Ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [Windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조하세요. |
+| [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 기본적으로 수신 하 고는 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 표시 XAMLUI 플랫폼 컨트롤입니다.<br/>InkCanvas를 사용하는 방법은 [Windows Ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [Windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조하세요. |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 **InkCanvas**에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다.<br/>InkPresenter를 사용하는 방법은 [Windows Ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [Windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조하세요. |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | XAML UI 플랫폼 컨트롤에는 연결된 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 잉크 관련 기능을 활성화하는 사용자 지정 및 확장 가능한 단추 모음이 포함됩니다.<br/>InkToolbar를 사용하는 방법은 [UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가](ink-toolbar.md)를 참조하세요. |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | 사용자 지정 및 확장이 가능한 관련된 된 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 잉크 관련 기능을 활성화 하는 단추 컬렉션이 포함 된 XAMLUI 플랫폼 컨트롤입니다.<br/>InkToolbar를 사용하는 방법은 [UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가](ink-toolbar.md)를 참조하세요. |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 장치 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. 이렇게 하면 수동 입력 환경을 완전히 사용자 지정할 수 있습니다.<br/>자세한 내용은 [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)을 참조하세요. |
 
 ## <a name="basic-inking-with-inkcanvas"></a>InkCanvas를 사용하는 기본 수동 입력
@@ -104,7 +102,7 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) 개체는 각 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤을 사용하여 인스턴스화됩니다.
 
 > [!NOTE]
-> [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 직접 인스턴스화될 수 없습니다. 대신, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn899081)의 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn858535) 속성을 통해 액세스됩니다. 
+> [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 직접 인스턴스화될 수 없습니다. 대신, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn899081)의 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn858535) 속성을 통해 액세스됩니다. 
 
 해당 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤의 모든 기본 잉크 입력 동작을 제공할 뿐만 아니라, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 추가 스트로크 사용자 지정 및 세분화된 펜 입력 관리(표준 및 수정된)를 위한 포괄적인 API 집합을 제공합니다. 여기에는 스트로크 속성, 지원되는 입력 장치 유형, 입력을 개체에서 처리하는지 아니면 앱으로 보내서 처리하는지 여부가 포함됩니다.
 
@@ -204,7 +202,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 | ![기본 검은색 잉크 스트로크를 사용하는 InkCanvas](images/ink-basic-custom-1-small.png) | ![사용자가 선택한 빨간색 잉크 스트로크를 사용하는 InkCanvas](images/ink-basic-custom-2-small.png) |
 | --- | --- |
-| 기본 검은색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 사용자가 선택한 빨간색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 
+| 기본 검은색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 사용자가 선택한 빨간색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 
 
 잉크 입력 및 지우기 이상의 기능(예: 스트로크 선택)을 제공하려면 앱은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)에서 앱에서 처리하기 위해 처리되지 않은 상태로 통과시킬 특정 입력을 식별해야 합니다.
 

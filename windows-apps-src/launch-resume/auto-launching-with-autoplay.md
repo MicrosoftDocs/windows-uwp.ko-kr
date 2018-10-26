@@ -6,22 +6,20 @@ ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2271c8029a733e1ab05c19b2110352fee5b04fc2
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 98c537ef3b2a5d002644cc554eae72b89a1799b0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663953"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558871"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
 
 **자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
 
-> **참고**  장치 제조업체이며 해당 [Microsoft Store 장치 앱](http://go.microsoft.com/fwlink/p/?LinkID=301381)을 장치의 **자동 실행** 처리기로 연결하려는 경우 장치 메타데이터에서 앱을 식별할 수 있습니다. 자세한 내용은 [Microsoft Store 장치 앱의 자동 실행](http://go.microsoft.com/fwlink/p/?LinkId=306684)을 참조하세요.
+> **참고**장치 제조업체 이며 [Microsoft Store 장치 앱](http://go.microsoft.com/fwlink/p/?LinkID=301381) 을 장치에 대 한 **자동 실행** 처리기로 연결 하려는 경우 장치 메타 데이터에서 앱을 식별할 수 있습니다. 자세한 내용은 [Microsoft Store 장치 앱의 자동 실행](http://go.microsoft.com/fwlink/p/?LinkId=306684)을 참조하세요.
 
 ## <a name="register-for-autoplay-content"></a>자동 실행 콘텐츠 등록
 
@@ -36,7 +34,7 @@ ms.locfileid: "1663953"
 | 음악 공유  | PlayMusicFilesOnArrival |
 | 동영상 공유 | PlayVideoFilesOnArrival |
 
- 
+ 
 파일이 근접 연결을 사용하여 공유되는 경우 **FileActivatedEventArgs** 개체의 **Files** 속성에 모든 공유 파일이 있는 루트 폴더에 대한 참조가 포함됩니다.
 
 ### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>1단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
@@ -110,7 +108,7 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **참고**  `DisplayImages` 및 `CopyImages` 메서드는 다음 단계에서 추가됩니다.
+> **참고**는 `DisplayImages` 및 `CopyImages` 메서드는 다음 단계에서 추가 됩니다.
 
 ### <a name="step-4-add-code-to-display-images"></a>4단계: 이미지 표시 코드 추가
 
@@ -222,7 +220,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 카메라 메모리 카드나 카메라의 다른 저장 장치를 PC에 삽입합니다. 그런 다음 자동 실행 옵션 목록에서 package.appxmanifest 파일에 지정한 콘텐츠 이벤트 옵션 중 하나를 선택합니다. 이 샘플 코드에서는 카메라 메모리 카드의 DCIM 폴더에 있는 사진을 표시하거나 복사하기만 합니다. 카메라 메모리 카드에서 사진을 AVCHD 또는 PRIVATE\\ACHD 폴더에 저장하는 경우 그에 따라 코드를 업데이트해야 합니다.
-    **참고**  카메라 메모리 카드가 없는 경우 루트에 **DCIM**이라는 폴더가 있고 DCIM 폴더에 이미지가 포함된 하위 폴더가 있는 경우 플래시 드라이브를 사용할 수 있습니다.
+    **참고**카메라 메모리 카드를 설정 하지 않은 경우 루트에 **DCIM** 폴더 있고 DCIM 폴더에 하위 폴더가 있는 경우 이미지를 포함 된 경우 플래시 드라이브를 사용할 수 있습니다.
 
 ## <a name="register-for-an-autoplay-device"></a>장치 자동 실행을 위해 등록
 
@@ -231,9 +229,9 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱은 **WPD\\ImageSourceAutoPlay** 이벤트에 대한 처리기로 등록됩니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://msdn.microsoft.com/library/windows/hardware/ff597729)를 참조하세요.
 
-**중요**  [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) API는 [데스크톱 장치 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 앱은 PC와 같은 데스크톱 장치 패밀리의 Windows 10 장치에서만 이러한 API를 사용할 수 있습니다.
+**중요 한** [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) Api는 [데스크톱 장치 제품군](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 앱은 Pc와 같은 데스크톱 디바이스 패밀리의 Windows10 장치 에서만 이러한 Api를 사용할 수 있습니다.
 
- 
+ 
 
 ### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>1단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
 
@@ -340,7 +338,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> **참고**  `ShowImages` 메서드는 다음 단계에서 추가됩니다.
+> **참고**는 `ShowImages` 메서드는 다음 단계에서 추가 됩니다.
 
 ### <a name="step-5-add-code-to-display-device-information"></a>5단계: 장치 정보 표시 코드 추가
 
@@ -368,7 +366,7 @@ internal async void ShowImages(Windows.Storage.StorageFolder folder)
 }
 ```
 
-> **참고**  `GetImageList` 및 `GetThumbnail` 메서드는 다음 단계에서 추가됩니다.
+> **참고**는 `GetImageList` 및 `GetThumbnail` 메서드는 다음 단계에서 추가 됩니다.
 
 ### <a name="step-6-add-code-to-display-images"></a>6단계: 이미지 표시 코드 추가
 
@@ -411,7 +409,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 컴퓨터에 카메라를 연결합니다. 그런 다음 옵션의 자동 실행 목록에서 앱을 선택합니다.
-    **참고**  일부 카메라에서는 **WPD\\ImageSource** 자동 실행 장치 이벤트에 대해 알리지 않습니다.
+    **참고** **WPD\\ImageSource** 자동 실행 장치 이벤트에 대 한 일부 카메라에서는 알립니다.
 
 ## <a name="configure-removable-storage"></a>이동식 저장소 구성
 
@@ -436,8 +434,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 2.  Package.appxmanifest 파일을 열고 **접근 권한 값** 탭을 엽니다. **이동식 저장소** 접근 권한 값을 선택합니다. 그러면 앱이 이동식 저장 장치의 파일 및 폴더에 액세스할 수 있습니다.
 3.  매니페스트 파일에서 **선언** 탭을 선택합니다. **사용 가능한 선언** 드롭다운 목록에서 **자동 실행 콘텐츠**를 선택한 다음 **추가**를 클릭합니다. **지원되는 선언** 목록에 추가된 새 **자동 실행 콘텐츠** 항목을 선택합니다.
 
-    **참고**  또는 사용자 지정 자동 실행 이벤트에 대해 **자동 실행 장치** 선언을 추가하도록 선택할 수도 있습니다.
-    
+    **참고**또는 수도 있습니다 사용자 지정 자동 실행 이벤트에 대 한 **자동 실행 장치** 선언을 추가 합니다.  
 4.  **콘텐츠 자동 실행** 이벤트 선언에 대한 **시작 작업** 섹션에서 첫 번째 시작 작업에 대해 아래 표의 값을 입력합니다.
 5.  **사용 가능한 선언** 드롭다운 목록에서 **파일 형식 연결**을 선택하고 **추가**를 클릭합니다. 새 **파일 형식 연결** 선언에서 **표시 이름** 필드를 **Show .ms Files**로 설정하고 **이름** 필드를 **ms\_association**로 설정합니다. **지원되는 파일 형식** 섹션에서 **새로 추가**를 클릭합니다. **파일 형식** 필드를 **.ms**로 설정합니다. 콘텐츠 이벤트의 경우 자동 실행에서 앱에 명시적으로 연결되지 않은 파일 형식을 필터링합니다.
 6.  매니페스트 파일을 저장하고 닫습니다.
@@ -480,9 +477,9 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **참고**  `DisplayFiles` 메서드는 다음 단계에서 추가됩니다.
+> **참고**는 `DisplayFiles` 메서드는 다음 단계에서 추가 됩니다.
 
- 
+ 
 
 ### <a name="step-5-add-code-to-display-folders"></a>5단계: 폴더 표시 코드 추가
 
@@ -558,6 +555,6 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
   </Applications>
 ```
 
- 
+ 
 
- 
+ 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cea4368ce995ce50726499b6c1c6875f83b72e7b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: ce3b1ebfc2f18a06ff4fa960c91749f61f5011d9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652332"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556487"
 ---
 # <a name="coordinate-systems-and-geometry"></a>좌표계 및 기하 도형
 
@@ -73,16 +71,16 @@ Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 도형 원칙
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

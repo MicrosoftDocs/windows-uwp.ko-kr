@@ -6,16 +6,14 @@ title: 앱 제출 삭제
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출, 삭제
 ms.localizationpriority: medium
-ms.openlocfilehash: c10a8df52c9de2b5a6b2eaf3533dbc3825bf4d8e
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 4f23bebd196cb28088bf68e673a17a4c0aebf5a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5513526"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558142"
 ---
 # <a name="delete-an-app-submission"></a>앱 제출 삭제
 

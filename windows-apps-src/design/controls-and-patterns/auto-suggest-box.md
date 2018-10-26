@@ -9,19 +9,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e9d6780d2b435ff8a18bdb716cd3500a753286f0
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: efb6c8a9324419ea099041f34c341152351575f6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1493720"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558914"
 ---
 # <a name="auto-suggest-box"></a>자동 제안 상자
 

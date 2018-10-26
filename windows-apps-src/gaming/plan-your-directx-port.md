@@ -6,19 +6,18 @@ ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, directx, 포트
-ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218928"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559540"
 ---
 # <a name="plan-your-directx-port"></a>DirectX 포트 계획
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **요약**
 
@@ -38,9 +37,9 @@ Direct3D 9에서 Direct3D 11로 업그레이드하면 검색 및 바꾸기 변�
 
 고유한 도우미 라이브러리 또는 커뮤니티 도구로 D3DX 및 DXUT 도우미 라이브러리를 교체해야 합니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
 
-> **참고**   [DirectX Tool Kit](http://go.microsoft.com/fwlink/p/?LinkID=248929) 또는 [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926)를 사용하여 이전에 D3DX 및 DXUT에서 제공한 일부 기능을 교체할 수 있습니다.
+> **참고**  이전의 D3DX 및 DXUT에서 제공한 일부 기능을 대체 [DirectX 도구 키트](http://go.microsoft.com/fwlink/p/?LinkID=248929) 또는 [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) 를 사용할 수 있습니다.
 
- 
+ 
 
 어셈블리 언어로 작성된 셰이더는 셰이더 모델 4 수준 9\_1 또는 9\_3 기능을 사용하는 HLSL로 업그레이드해야 하고 효과 라이브러리에 대해 작성된 셰이더는 최신 버전의 HLSL 구문으로 업데이트해야 합니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
 
@@ -64,9 +63,9 @@ Microsoft 템플릿 및 코드 샘플은 아직 익숙하지 않을 수 있는 �
 -   관리되는 참조([**^ 연산자**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)) 및 [**관리되는 클래스**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx)(ref 클래스)는 Windows 런타임의 기본적인 부분입니다. 예를 들어 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)(연습의 추가 정보)와 같은 Windows 런타임 구성 요소와 함께 인터페이스에 대한 관리되는 ref 클래스를 사용해야 합니다.
 -   Direct3D 11 COM 인터페이스 작업 시 [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) 템플릿 종류 사용하여 COM 포인터를 보다 쉽게 사용할 수 있게 합니다.
 
- 
+ 
 
- 
+ 
 
 
 

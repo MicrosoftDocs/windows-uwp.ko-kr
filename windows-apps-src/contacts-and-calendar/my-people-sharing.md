@@ -5,16 +5,14 @@ author: muhsinking
 ms.author: mukin
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 00cea51c673f64725c6ada4f1cfb403e2949ed12
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 7084c4dde7bdf2d59842a04fe9fd52bc029c264a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958566"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554011"
 ---
 # <a name="my-people-sharing"></a>내 피플 공유
 
@@ -107,7 +105,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-“appId”는 패키지 패밀리 이름이며, 그 뒤에 ‘!’ 그리고 활성화 가능한 클래스 ID가 붙습니다. 패키지 제품군 이름을 찾으려면 **Package.appxmanifest** 기본 편집기를 사용 하 여 열고 "패키징" 탭에서를 확인 합니다. 여기에서 "App"는 공유 대상 보기에 해당 하는 활성화할 수 있는 클래스입니다.
+“appId”는 패키지 패밀리 이름이며, 그 뒤에 ‘!’ 그리고 활성화 가능한 클래스 ID가 붙습니다. 패키지 패밀리 이름을 확인 하 고 **Package.appxmanifest** 기본 편집기를 사용 하 여 열고 "패키징" 탭에서 찾아봅니다. 여기서 "앱"은 공유 대상 보기에 해당 하는 활성화 가능한 클래스입니다.
 
 ## <a name="running-as-a-my-people-share-target"></a>내 피플 공유 대상으로 실행
 

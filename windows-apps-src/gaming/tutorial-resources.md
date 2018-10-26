@@ -6,15 +6,13 @@ keywords: DirectX, XAML
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32696b739b430ecab25b5138f9aba9eb0ab40204
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: cb837965746eb1c2c7deab613eec239a83cac294
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673730"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558994"
 ---
 # <a name="extend-the-game-sample"></a>게임 샘플 확장
 
@@ -27,7 +25,7 @@ ms.locfileid: "1673730"
 ## <a name="using-xaml-for-the-overlay"></a>오버레이에서 XAML 사용
 
 
-이 문서에서 자세히 다루지는 않았지만, 오버레이에서 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) 대신 XAML을 사용하는 것도 하나의 방법입니다. XAML은 사용자 인터페이스 요소를 작성하는 데 있어 Direct2D 보다 장점이 많습니다. 가장 중요한 장점은 훨씬 편리하게 DirectX 게임에서 Windows 10의 모양과 느낌을 낼 수 있다는 것입니다. UWP 앱을 정의하는 대부분의 공통 요소, 스타일 및 동작이 XAML 모델로 긴밀하게 통합되어 게임 개발자가 훨씬 더 적은 작업으로 구현할 수 있습니다. 고유한 게임 디자인에 복잡한 사용자 인터페이스가 있는 경우 Direct2D 대신 XAML 사용을 고려해 보세요.
+이 문서에서 자세히 다루지는 않았지만, 오버레이에서 [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) 대신 XAML을 사용하는 것도 하나의 방법입니다. XAML은 사용자 인터페이스 요소를 작성하는 데 있어 Direct2D 보다 장점이 많습니다. 가장 중요 한 장점은 Windows10 모양과 느낌을 DirectX 게임에 보다 편리 하 게 통합할 수 있다는 점입니다. UWP 앱을 정의하는 대부분의 공통 요소, 스타일 및 동작이 XAML 모델로 긴밀하게 통합되어 게임 개발자가 훨씬 더 적은 작업으로 구현할 수 있습니다. 고유한 게임 디자인에 복잡한 사용자 인터페이스가 있는 경우 Direct2D 대신 XAML 사용을 고려해 보세요.
 
 XAML에서는 Direct2D와 비슷한 모양의 게임 인터페이스를 훨씬 손쉽게 만들 수 있습니다.
 

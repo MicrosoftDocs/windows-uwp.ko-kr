@@ -6,16 +6,14 @@ description: 메모리에서 개체를 생성하기 위해 XAML 태그를 구문
 ms.author: jimwalk
 ms.date: 08/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e6e664e7d549ecc2fc3db28609c99ca477b3d58
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: Auto
+ms.openlocfilehash: 884825f2e9639f620d8db4e6110791fddf2d7e77
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674090"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557626"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 

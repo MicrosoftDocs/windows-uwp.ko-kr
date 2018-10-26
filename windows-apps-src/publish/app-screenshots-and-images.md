@@ -6,16 +6,14 @@ ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 ms.author: wdg-dev-content
 ms.date: 8/20/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 81c8c5df94d6dc1ba4dc0820942c07e8768a50ae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5473340"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557616"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 

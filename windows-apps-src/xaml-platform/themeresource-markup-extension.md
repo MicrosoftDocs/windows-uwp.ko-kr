@@ -6,16 +6,14 @@ ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb2b292688d05e9886851016f2d3526a1926e418
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675100"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557662"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 
@@ -71,7 +69,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 **ThemeResource** 사용은 일련의 종속 값에서 확인할 수 있습니다. 예를 들어 키가 지정된 리소스이기도 한 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)에서 사용되는 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 값이 **ThemeResource** 참조를 사용할 수 있습니다. 하지만 키가 지정된 **SolidColorBrush** 리소스를 사용하는 UI 속성도 **ThemeResource** 참조를 사용하므로, 특히 각 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 유형 속성이 테마 변경 시 동적 값 변경을 사용합니다.
 
-**참고**  Windows 8.1 XAML에서는 테마 전환 시 `{ThemeResource}` 및 런타임 리소스 평가가 지원되지만, Windows 8을 대상으로 하는 앱에 대해서는 XAML로 지원되지 않습니다.
+**참고** `{ThemeResource}` 및 런타임 리소스 평가가 테마 전환 시 Windows8.1 XAML로 지원 이지만 Windows8를 대상으로 하는 앱에 대 한 XAML에서 지원 되지 않습니다.
 
 ### <a name="system-resources"></a>시스템 리소스
 
@@ -140,13 +138,13 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 여기서 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 값은 시스템 리소스에 대한 다른 **ThemeResource** 참조입니다. 시스템 리소스를 참조하는 경우 테마 변경에 따라 시스템 리소스를 변경하려면 **ThemeResource**를 사용하여 참조해야 합니다.
 
-## <a name="windows-8-behavior"></a>Windows 8 동작
+## <a name="windows8-behavior"></a>Windows8 동작
 
-Windows 8은 **ThemeResource** 태그 확장을 지원하지 않지만 Windows 8.1부터는 이 태그 확장을 사용할 수 있습니다. 또한 Windows 8에서는 Windows 런타임 앱에 대한 테마 관련 리소스를 동적으로 전환할 수 없습니다. XAML 템플릿 및 스타일에 대한 테마 변경을 반영하려면 앱을 다시 시작해야 합니다. 이는 좋은 사용자 환경이 아니므로, **ThemeResource**가 사용된 스타일을 사용할 수 있고 사용자 명령 시 테마를 동적으로 전환할 수 있도록 Windows 8.1을 대상으로 앱을 다시 컴파일하는 것이 좋습니다. Windows 8용으로 컴파일되었지만 Windows 8.1에서 실행하는 앱은 Windows 8 동작을 계속 사용합니다.
+Windows8 **ThemeResource** 태그 확장을 지원 하지 않지만, Windows8.1부터 사용할 수 있습니다. 또한 Windows8은 Windows 런타임 앱에 대 한 테마 관련 리소스를 동적으로 전환을 지원 하지 않았습니다. XAML 템플릿 및 스타일에 대한 테마 변경을 반영하려면 앱을 다시 시작해야 합니다. 이 아니므로 좋은 사용자 환경을 **ThemeResource** 사용법으로 스타일을 사용할 수 있으며 사용자가 수행 하는 경우에 동적으로 테마를 전환할 수 있도록 앱은 다시 컴파일 및 대상 Windows8.1 하는 것이 좋습니다. 앱 Windows8 동작을 사용 하 여 계속 Windows8 하지만 Windows8.1에서 실행 되는 용으로 컴파일입니다.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>**{ThemeResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
-XAML 페이지에서 **{ThemeResource}** 태그 확장을 사용하는 경우 Microsoft Visual Studio 2013은 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{ThemeResource"를 입력하기 시작하면 즉시 [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)의 리소스 키가 표시됩니다.
+Microsoft Visual Studio2013 XAML 페이지에서 **{ThemeResource}** 태그 확장을 사용 하는 경우 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{ThemeResource"를 입력하기 시작하면 즉시 [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)의 리소스 키가 표시됩니다.
 
 리소스 키가 **{ThemeResource}** 에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 테마 리소스가 정의되어 있는 디자인 타임용 generic.xaml을 표시할 수 있습니다. 테마 리소스는 테마당 한 번 이상 정의되기 때문에 **정의로 이동**은 파일에서 발견되는 첫 번째 정의(**Default**에 대한 정의)로 안내합니다. 다른 정의를 원하는 경우에는 파일 내에서 키 이름을 검색하고 다른 테마의 정의를 찾으면 됩니다.
 
@@ -156,5 +154,5 @@ XAML 페이지에서 **{ThemeResource}** 태그 확장을 사용하는 경우 Mi
 * [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [x:Key 특성](x-key-attribute.md)
- 
+ 
 

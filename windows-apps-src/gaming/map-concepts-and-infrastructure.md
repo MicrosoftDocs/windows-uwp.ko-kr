@@ -6,16 +6,14 @@ ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: a00a24d2c270e1c4f3aa3b8b716a6637d5da4af1
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652212"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555242"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Direct3D 11에 OpenGL ES 2.0 매핑
 
@@ -54,16 +52,16 @@ ms.locfileid: "1652212"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="notes-on-specific-opengl-es-20-providers"></a>특정 OpenGL ES 2.0 공급자에 대한 참고 사항
 
 
 이러한 항목에서는 플랫폼 독립적 C와 Khronos OpenGL ES 2.0 사양을 사용합니다. iOS와 Android는 동일한 사양을 사용하며, 이러한 플랫폼용으로 개발된 OpenGL ES 2.0 코드는 앞으로 살펴볼 코드 조각과 매우 유사합니다(일반적으로 개체 지향 API로 표시되기는 함). 또한 각 플랫폼의 내부 기능 및 언어 차이 때문에 사소한 차이점은 있을 수 있으며, 특히 메서드 매개 변수 형식 또는 일반적인 언어 구문에서 사소한 차이점이 있을 수 있습니다. 예를 들어 iOS에서는 Objective-C를 사용합니다. Android에 C++를 사용할 수 있는 기능이 있기는 하지만, 일부 개발자는 순수 Java 구현에 의존해 왔을 수 있습니다. 이러한 사실을 염두에 둔다면, OpenGL ES API의 전반적인 개념, 구조 및 사용이 다르지 않으므로 이러한 항목이 여전히 도움이 될 것입니다.
 
- 
+ 
 
- 
+ 
 
 
 

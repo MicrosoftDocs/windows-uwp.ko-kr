@@ -6,16 +6,14 @@ ms.assetid: 5A14926D-8C2E-4DE8-AAFB-BEEB9BFE91A5
 ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, ui, 탐색
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f95094ebf31c4b80ee8858ad849da33ff16434a
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: a0ec2790f6dddf93959a8c826602c0ac622a7d23
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5517462"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556442"
 ---
 # <a name="ui-navigation-controller"></a>UI 탐색 컨트롤러
 

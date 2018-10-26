@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 22a648d9366a3abcedd9fd75328cf0f504a9f84c
-ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
-ms.translationtype: HT
+ms.openlocfilehash: 7555f4a61f7798fa32d137928cde8c042a7fcdfc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "1992079"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553708"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>시나리오 1: 문자열 리소스와 자산 파일에서 PRI 파일 생성
 이 시나리오에서는 [패키지 리소스 인덱싱(PRI) API](https://msdn.microsoft.com/library/windows/desktop/mt845690)를 사용하여 사용자 지정 빌드 시스템을 나타내는 새로운 앱을 만듭니다. 이 사용자 지정 빌드 시스템의 용도는 대상 UWP 앱용 PRI 파일을 만드는 것입니다. 따라서, 이 연습의 일부로, 대상 UWP 앱의 리소스를 나타내는 몇 가지 샘플 리소스 파일(문자열 및 다른 종류의 리소스가 들어 있음)을 만들겠습니다.

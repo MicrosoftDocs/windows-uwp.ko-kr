@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bed0364efc2e32d8130aa50743dcdf03efcda34
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: e842a6720725552885f83e1b019eebb5c33ba407
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043842"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559183"
 ---
 # <a name="compute-shader-cs-stage"></a>CS 단계
 
@@ -34,9 +32,9 @@ CS 단계는 일반적인 용도의 고속 계산을 제공하고 GPU(그래픽 
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

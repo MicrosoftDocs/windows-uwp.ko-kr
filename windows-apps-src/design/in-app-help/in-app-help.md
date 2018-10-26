@@ -7,17 +7,15 @@ template: detail.hbs
 ms.author: quradic
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
 ms.localizationpriority: medium
-ms.openlocfilehash: 55c7f5d4ba7a8c66a7555bfad4bb6b79afec07a0
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
+ms.openlocfilehash: 089b71464234abe21d7dc8613d46ef6778f0f5a6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547318"
 ---
 # <a name="in-app-help-pages"></a>앱 내 도움말 페이지
 
@@ -49,7 +47,7 @@ ms.locfileid: "1393232"
 팝업은 상황에 맞는 도움말에 효과적이며, 사용자가 시도하는 특정 작업과 관련된 지침 및 조언을 표시합니다.
 
 -   **한 가지 문제에 집중:** 팝업에서는 도움말 페이지보다 공간이 훨씬 더 제한됩니다. 도움말 팝업이 효과적이려면 단일 작업을 가리켜야 합니다.
--   **가시성이 중요함:** 도움말 팝업은 한 위치에서만 볼 수 있으므로 방해 없이 사용자에게 명확하게 표시되도록 합니다. If the user misses it, they might move away from the popup in search of a help page.
+-   **가시성이 중요함:** 도움말 팝업은 한 위치에서만 볼 수 있으므로 방해 없이 사용자에게 명확하게 표시되도록 합니다. 사용자가 보지 못할 경우 도움말 페이지를 검색하기 위해 팝업을 벗어날 수도 있습니다.
 -   **너무 많은 리소스 사용 금지:** 도움말이 지연되거나 느리게 로드되면 안 됩니다. 팝업에 동영상 또는 오디오 파일이나 고해상도 이미지를 사용하면 사용자에게 도움이 아니라 불편을 줄 가능성이 더 큽니다.
 
 #### <a name="descriptions"></a>설명

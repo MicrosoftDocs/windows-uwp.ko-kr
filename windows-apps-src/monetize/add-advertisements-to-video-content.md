@@ -6,16 +6,14 @@ title: 비디오 콘텐츠에 광고 표시
 ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: cc5dd40ca3d9fe6e20f5e79c95b59cef3bea9a34
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 158817aa0abea1ddb1247188ec69389a7682e899
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5478409"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556240"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 

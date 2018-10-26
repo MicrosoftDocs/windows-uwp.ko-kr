@@ -6,16 +6,14 @@ author: msatranjr
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cc0b8fb9d1388db0e79e5f029ae69bfae1e4c69
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: 52e8479febb2134365bab6c68486d9e284366535
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1706968"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552985"
 ---
 # <a name="app-to-app-communication"></a>앱 간 통신
 

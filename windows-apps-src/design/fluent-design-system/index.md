@@ -1,118 +1,205 @@
 ---
 description: 흐름 디자인은 무엇이고, 어떻게 앱에 통합하는지 알아봅니다.
-title: UWP 앱의 흐름 디자인 시스템
+title: Windows 용 fluent 디자인 시스템
 author: mijacobs
 keywords: uwp 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스, 흐름 디자인 시스템
 ms.author: mijacobs
 ms.date: 3/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: 5b57dc2ddae4c6e260df663097db5649866b96aa
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 2ab8e8c18a0b1db0991bf470f194f8774f2357b4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1638791"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554031"
 ---
-# <a name="the-fluent-design-system-for-uwp-apps"></a>UWP 앱의 흐름 디자인 시스템
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 앱 작성자
+
+![Fluent 디자인 헤더](images/fluentdesign-app-header.jpg)
 
 ## <a name="introduction"></a>소개
 
-<img src="images/fluentdesign-app-header.jpg" alt=" " />
+Fluent 디자인 시스템에는 적응형 공감 다우 며 멋진 사용자 인터페이스는 시스템 이기도 합니다.
 
-사용자 인터페이스는 지금도 진화하고 있습니다. 2D에서 3D 및 그 이상으로, 그리고 키보드와 마우스에서 응시, 펜 및 터치로 새로운 차원과 인터페이스가 추가되면서 확장을 거듭하고 있습니다.  
-
-흐름 디자인 시스템은 혁신적인 UWP 기능이 결집된 구현체로서 모든 유형의 Windows 기반 장치에서 높은 성능을 발휘할 수 있는 앱을 개발하기 위한 모범 사례가 여기에 통합되어 있습니다.
-
-또한 누구나 아름다움을 공감할 수 있는 적응형 사용자 인터페이스를 개발하는 시스템이기도 합니다. 
+## <a name="principles"></a>원칙
 
 **적응형: 각 장치마다 Fluent 환경을 자연스럽게 느낄 수 있다는 것을 말합니다.**
 
-이러한 Fluent 환경이 각 장치의 환경에 적용됩니다. Fluent 환경은 태블릿, 데스크톱 PC 및 Xbox에서 편안한 느낌을 제공할 뿐만 아니라 혼합 현실 헤드셋에서 놀라운 성능을 발휘합니다. PC 모니터 같은 하드웨어를 추가하면 Fluent 환경이 추가된 하드웨어를 이용합니다. 
+이러한 Fluent 환경이 각 장치의 환경에 적용됩니다. Fluent 환경은 태블릿, 데스크톱 PC 및 Xbox에서 편안한 느낌-도 작동 제대로 혼합 현실 헤드셋에서. PC 모니터 같은 하드웨어를 추가하면 Fluent 환경이 추가된 하드웨어를 이용합니다.
 
 **공감: Fluent 환경은 직관적이고 강력합니다.**
 
-Fluent 환경은 동작이나 의도에 반응하여 필요한 것을 이해하고 예상합니다. 지구 반대편에 있는 사람이든, 혹은 지금 바로 옆에 있는 사람이든 상관없이 모든 사람과 아이디어를 하나로 결합합니다. 
+Fluent 환경은 동작이나 의도에 반응하여 필요한 것을 이해하고 예상합니다. 지구 반대편에 있는 사람이든, 혹은 지금 바로 옆에 있는 사람이든 상관없이 모든 사람과 아이디어를 하나로 결합합니다.
 
-공감대의 표현은 적절한 시점에 올바른 일을 하는 것입니다. 
+**아름다움: Fluent 환경은 매력적이고 몰입도가 높습니다.**
 
-Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 사용자가 예상하는 대로 동작합니다. 또한 광범위한 실제 권한이 있는 사용자라면 누구나 액세스가 가능할 뿐만 아니라 세계화 기능까지 결합되어 전 세계 누구나 사용할 수 있습니다. 
+Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활용합니다. 조명, 그림자, 동작, 깊이, 질감 등을 사용하여 직관적이고 본능적으로 느낄 수 있도록 정보를 구성합니다.
 
-**아름다움: Fluent 환경은 매력적이고 몰입도가 높습니다.** 
 
-Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활용합니다. 조명, 그림자, 동작, 깊이, 질감 등을 사용하여 직관적이고 본능적으로 느낄 수 있도록 정보를 구성합니다. 
+## <a name="applying-fluent-design-to-your-app-with-uwp"></a>UWP 사용 하 여 앱에 흐름 디자인을 적용
 
-흐름 디자인은 현란한 효과에 관한 것이 아닙니다. 사람의 뇌가 정보를 효율적으로 처리할 수 있도록 프로그래밍되는 것처럼 경험을 에뮬레이션하기 때문에 실제로 사용자 경험을 강화할 수 있는 효과가 있습니다. 
+![흐름 디자인 로고](images/fluentdesign_header.png)
 
-## <a name="applying-fluent-design-to-your-app"></a>흐름 디자인을 앱에 적용
+디자인 지침에는 앱에 Fluent 디자인 원칙을 적용 하는 방법을 설명 합니다. 어떤 유형의 앱? 모든 플랫폼에 적용할 수 다양 한 지침을 하는 동안 UWP (유니버설 Windows 플랫폼) 흐름 디자인을 지원 하기 위해 만들었습니다.
 
-흐름 디자인은 UWP에 기본적으로 적용됩니다. 이러한 기능 중에서 유효 픽셀이나 범용 입력 시스템 같은 일부 기능은 자동입니다. 이 기능을 활용하기 위해 추가 코드를 작성할 필요가 없습니다. 아크릴 같은 다른 기능은 선택 사항입니다. 즉 추가할 코드를 직접 작성하여 앱에 추가하면 됩니다. 
+흐름 디자인은 UWP에 기본적으로 적용됩니다. 이러한 기능 중에서 유효 픽셀이나 범용 입력 시스템 같은 일부 기능은 자동입니다. 이 기능을 활용하기 위해 추가 코드를 작성할 필요가 없습니다. 아크릴 같은 다른 기능은 선택 사항입니다. 즉 추가할 코드를 직접 작성하여 앱에 추가하면 됩니다.
 
-> 모든 UWP 앱에 자동으로 포함되는 기본 기능에 대한 자세한 내용은 [UWP 앱 디자인 문서 소개](../basics/design-and-ui-intro.md)를 참조하세요. UWP 개발이 완전히 처음이라면 [UWP 페이지 시작하기](https://developer.microsoft.com/windows/apps/getstarted)를 먼저 살펴보는 것도 좋습니다. 
+> 기존 WPF 또는 흐름 디자인 기능이 있는 Windows 응용 프로그램의 모양과 느낌, 기능을 향상시킬 수 있도록 데스크톱에 UWP 컨트롤을 포함했습니다. 자세한 내용은 [WPF 및 Windows Forms 응용 프로그램의 호스트 UWP 컨트롤](/windows/uwp/xaml-platform/xaml-host-controls)을 참조 하세요.
 
-흐름 디자인을 앱에 통합하는 데 도움이 되는 새로운 기능에 대해 자세히 알아보려면 계속 읽으세요.
+<!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
+
+디자인 지침 뿐만 아니라 Fluent 디자인 기사도 보여 줍니다 발생할 디자인 하는 코드를 작성 하는 방법. UWP XAML 사용자 인터페이스를 만드는 더 쉽게 태그 기반 언어를 사용 합니다. 예를 들면 다음과 같습니다.
+
+```xaml
+<Grid BorderBrush="Blue" BorderThickness="4">
+    <TextBox Text="Design with XAML" Margin="20" Padding="24,16"/>
+</Grid>
+```
+
+![](images/xaml-example.png)
+
+
+> UWP 개발을 처음 접하는 경우 확인 하는 [UWP 페이지 시작](https://developer.microsoft.com/windows/apps/getstarted)하세요.
 
 ## <a name="find-a-natural-fit"></a>자연스러운 경험 찾기
 
-다양한 장치에서 앱이 자연스럽게 보이도록 하려면 어떻게 해야 할까요? 처음부터 특정 장치를 염두에 두고 설계한 것처럼 느끼게 하면 됩니다. 화면 크기에 따라 조정되어 낭비하는 공간이 없고(혼잡하지도 않은) UI 레이아웃에서는 마치 특정 장치를 위해 설계된 것처럼 자연스러운 경험을 느낄 수 있습니다. 
+다양한 장치에서 앱이 자연스럽게 보이도록 하려면 어떻게 해야 할까요? 처음부터 특정 장치를 염두에 두고 설계한 것처럼 느끼게 하면 됩니다. 화면 크기에 따라 조정되어 낭비하는 공간이 없고(혼잡하지도 않은) UI 레이아웃에서는 마치 특정 장치를 위해 설계된 것처럼 자연스러운 경험을 느낄 수 있습니다.
 
-*  **적합한 중단점에 따른 디자인**
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-size-classes.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Design for the right breakpoints**
 
-    개별 화면 크기에 맞춰 설계하지 않고 몇 가지 주요 너비("중단점")를 중심으로 설계할 경우 디자인 및 코드가 크게 간소화될 뿐만 아니라 중소형 화면에서도 앱이 멋지게 보이도록 할 수 있습니다.
+        Instead of designing for every individual screen size, focusing on a few key widths (also called "breakpoints") can greatly simplify your designs and code while still making your app look great on small to large screens.
 
-    [화면 크기 및 중단점에 대한 알아보기](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+        [Learn about screen sizes and breakpoints](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+    :::column-end:::
+:::row-end:::
 
-*  **반응형 레이아웃 만들기**
+:::row:::
+    :::column:::
+        ![fpo image](images/rspd-resize.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Create a responsive layout**
 
-    앱이 자연스러운 느낌을 주도록 하려면 외관상 너무 혼잡하지 않은 범위 내에서 사용 가능한 공간을 채워야 합니다. UWP는 그리드, 스택, 흐름 형태로 콘텐츠가 배열되는 패널을 제공하기 때문에 각 패널 안에 이러한 형태를 배열할 수 있습니다.
+        For an app to feel natural, it should adapt its layout to different screen sizes and devices. You can use automatic sizing, layout panels, visual states, and even separate UI definitions in XAML to create a responsive UI.
 
-    [UWP의 레이아웃 패널 알아보기](/windows/uwp/design/layout/layout-panels)
+        [Learn about responsive design](/windows/uwp/design/layout/responsive-design)
+    :::column-end:::
+:::row-end:::
 
-* **광범위한 장치에 따른 디자인**
+:::row:::
+    :::column:::
+        ![fpo image](images/devices.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Design for a spectrum of devices**
 
-    UWP 앱은 광범위한 Windows 기반 장치에서 실행됩니다. 어떤 장치가 사용 가능한지, 개발 이유가 무엇인지, 그리고 사용자와 앱 간 상호 작용 방법이 무엇인지 이해하는 데 유용합니다.
+        UWP apps can run on a wide variety of Windows-powered devices. It's helpful to understand which devices are available, what they're made for, and how users interact with them.
 
-    [UWP 장치에 대해 알아보기](/windows/uwp/design/devices/)
+        [Learn about UWP devices](/windows/uwp/design/devices/)
+:::row-end:::
 
-* **적절한 입력 장치에 최적화**
+:::row:::
+    :::column:::
+        ![fpo image](images/keyboard-shortcuts.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Optimize for the right input**
 
-    UWP 앱은 일반 마우스, 키보드, 펜, 터치 조작을 자동으로 지원하여 사용자가 따로 해야 할 것이 없습니다. 하지만 펜이나 Surface Dial 같은 특정 입력 장치에 최적화된 지원 방식을 통해 앱을 개선할 수 있습니다.
+        UWP apps automatically support common mouse, keyboard, pen, and touch interactions&mdash;there's nothing extra you have to do. But you can enhance your app with optimized support for specific inputs, like pen and the Surface Dial.
 
-    [입력 장치 및 조작에 대해 알아보기](/windows/uwp/design/input/input-primer)
+        [Learn about inputs and interactions](/windows/uwp/design/input/input-primer)
+:::row-end:::
 
+## <a name="make-it-intuitive"></a>직관적인 확인
 
-## <a name="make-it-intuitive-and-powerful"></a>직관적이고 강력한 경험
+직관적인 경험은 사용자가 기대 하는 방식으로 동작 하는 경우. 구성된 컨트롤 및 패턴을 사용하는 동시에 접근성과 세계화를 지원하는 플랫폼 기능을 이용할 때 비로소 사용자 생산성을 손쉽게 높일 수 있는 환경이 구현됩니다.
 
-직관적인 경험은 사용자가 기대하는 방식으로 작동할 때 이루어집니다. 구성된 컨트롤 및 패턴을 사용하는 동시에 접근성과 세계화를 지원하는 플랫폼 기능을 이용할 때 비로소 사용자 생산성을 손쉽게 높일 수 있는 환경이 구현됩니다. 
+공감대의 표현은 적절한 시점에 올바른 일을 하는 것입니다.
 
-* **적합한 작업 컨트롤 사용**
+Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하기 때문에 사용자가 예상하는 대로 동작합니다. 또한 광범위한 실제 권한이 있는 사용자라면 누구나 액세스가 가능할 뿐만 아니라 세계화 기능까지 결합되어 전 세계 누구나 사용할 수 있습니다.
 
-    컨트롤은 사용자 인터페이스의 빌딩 블록입니다. 따라서 적합한 컨트롤을 사용할 경우 사용자가 기대하는 대로 작동하는 사용자 인터페이스를 만들 수 있습니다.  UWP는 간단한 버튼부터 강력한 데이터 제어 기능에 이르기까지 45가지가 넘는 컨트롤을 제공합니다. 
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-navview.png)
+    :::column-end:::
+    :::column span="2":::
+        **Provide the right navigation**
 
-    [UWP 컨트롤에 대해 알아보기](/windows/uwp/design/controls-and-patterns/)
+        Create an effortless experience by using the right app structure and navigation components.
 
-* **포용성** 
+        [Learn about navigation](/windows/uwp/design/basics/navigation-basics/)
+:::row-end:::
 
-    올바르게 디자인된 앱은 장애인들에게도 접근성을 보장합니다. 일부 코딩만 추가하면 자신의 앱을 전 세계 사용자와 서로 공유할 수 있습니다.
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-commanding.png)
+    :::column-end:::
+    :::column span="2":::
+        **Be interactive**
 
-    [유용성에 대해 알아보기](/windows/uwp/design/usability/)
+        Buttons, command bars, keyboard shortcuts, and context menus enable users to interact with your app; they're the tools that change a static experience into something dynamic.
 
+        [Learn about commanding](/windows/uwp/design/basics/commanding-basics/)
+:::row-end:::
 
-## <a name="be-engaging-and-immersive"></a>매력적이고 몰입도 높은 환경 
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-controls-2.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Use the right control for the job**
 
-조명이나 동작 같은 물리적 요소를 통합하여 더욱 매력적인 앱을 만들어 보세요. 
+        Controls are the building blocks of the user interface; using the right control helps you create a user interface that behaves the way users expect it to.  UWP provides more than 45 controls,ranging from simple buttons to powerful data controls.
+
+        [Learn about UWP controls](/windows/uwp/design/controls-and-patterns/)
+:::row-end:::
+
+:::row:::
+    :::column:::
+        ![inclusive image](images/thumbnail-inclusive.png)
+    :::column-end:::
+    :::column span="2":::
+        **Be inclusive**
+        A well-design app is accessible to people with disabilities. With some extra coding, you can share your app with people around the world.
+
+        [Learn about Usability](/windows/uwp/design/usability/)
+:::row-end:::
+
+## <a name="be-engaging-and-immersive"></a>매력적이고 몰입도 높은 환경
+
+흐름 디자인은 현란한 효과에 관한 것이 아닙니다. 사람의 뇌가 정보를 효율적으로 처리할 수 있도록 프로그래밍되는 것처럼 경험을 에뮬레이션하기 때문에 실제로 사용자 경험을 강화할 수 있는 효과가 있습니다.
 
 ## <a name="use-light"></a>조명 사용
 
 조명은 이목을 집중시키는 방법 중 하나입니다. 또한 분위기와 공간감을 형성하고 정보를 강조하는 실용적인 도구입니다.
-        
-조명을 UWP 앱에 추가:
-        
-* [강조 표시](../style/reveal.md)는 조명을 사용하여 요소를 돋보이게 합니다. 조명은 사용자가 상호 작용할 수 있는 대화형 요소를 비추고, 숨겨진 테두리를 표시합니다. 목록 보기나 그리드 보기 같은 일부 컨트롤에서는 표시가 자동으로 활성화됩니다. 다른 컨트롤에서는 사전 설정된 강조 표시 스타일을 적용하여 활성화할 수 있습니다. 
 
-* [포커스 표시](../style/reveal-focus.md)는 조명을 사용하여 현재 포커스가 맞춰진 요소에 대한 주의를 불러일으킵니다.  
+조명을 UWP 앱에 추가:
+
+:::row:::
+    :::column:::
+        ![fpo image](../style/images/Nav_Reveal_Animation.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Reveal highlight**
+
+        [Reveal highlight](../style/reveal.md) uses light to make interactive elements stand out. Light illuminates the elements the user can interact with, revealing hidden borders. Reveal is automatically enabled on some controls, such as list view and grid view. You can enable it on other controls by applying our predefined Reveal highlight styles.
+:::row-end:::
+
+:::row:::
+    :::column:::
+        ![fpo image](../style/images/traveling-focus-fullscreen-light-rf.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Reveal focus**
+
+        [Reveal focus](../style/reveal-focus.md) uses light to call attention to the element that currently has input focus.
+:::row-end:::
 
 ## <a name="create-a-sense-of-depth"></a>깊이감 추가하기
 
@@ -120,9 +207,15 @@ Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활
 
 깊이를 UWP 앱에 추가:
 
-* [아크릴](../style/acrylic.md)은 반투명한 재질로, 사용자가 콘텐츠 계층을 확인하고 UI 요소의 계층 구조를 설정할 수 있습니다.
+:::row:::
+    :::column:::
+        ![fpo image](../motion/images/_parallax_v2.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Parallax**
 
-* [시차](../motion/parallax.md)는 전경의 항목이 배경의 항목보다 빠르게 이동하는 것처럼 보이도록 하여 깊이감을 형성합니다.
+        [Parallax](../motion/parallax.md) creates the illusion of depth by making items in the foreground appear to move more quickly than items in the background.
+:::row-end:::
 
 ## <a name="incorporate-motion"></a>동작 통합
 
@@ -130,23 +223,46 @@ Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활
 
 동작을 UWP 앱에 추가:
 
-* [연결된 애니메이션](../motion/connected-animation.md)은 장면이 매끄럽게 전환되도록 하여, 사용자가 맥락을 이해하는 데 도움을 줍니다. 
+:::row:::
+    :::column:::
+        ![continuity gif](images/continuityXbox.gif)
+    :::column-end:::
+    :::column span="2":::
+        **Connected animations**
+
+        [Connected animations](../motion/connected-animation.md) help the user maintain context by creating a seamless transition between scenes.
+:::row-end:::
 
 ## <a name="build-it-with-the-right-material"></a>올바른 재료를 사용하는 디자인
 
 현실 세계에서 우리를 둘러싼 사물은 감각적이고 생기가 있습니다. 구부러지고, 늘어나고, 튀어 오르고, 부서지고, 미끄러집니다. 이러한 사물의 속성을 디지털 환경에 구현하여, 사람들이 디자인에 손을 뻗어 만지고 싶어하도록 만듭니다.
 
-재료를 UWP 앱에 추가: 
-        
-* [아크릴](../style/acrylic.md)은 반투명한 재질로, 사용자가 콘텐츠 계층을 확인하고 UI 요소의 계층 구조를 설정할 수 있습니다. 
+재료를 UWP 앱에 추가:
+
+:::row:::
+    :::column:::
+        ![fpo image](../style/images/acrylic_lighttheme_base.png)
+    :::column-end:::
+    :::column span="2":::
+        **Acrylic**
+
+        [Acrylic](../style/acrylic.md) is a translucent material that lets the user see layers of content, establishing a hierarchy of UI elements.
+:::row-end:::
 
 ## <a name="design-toolkits-and-code-samples"></a>디자인 도구 키트 및 코드 샘플
 
 흐름 디자인을 사용해 나만의 앱을 만들어보고 싶으세요? Adobe XD, Adobe Illustrator, Adobe Photoshop, Framer, Sketch 등의 도구 키트가 디자인을 바로 시작할 수 있도록 지원할 뿐만 아니라 코드 샘플은 빠른 코딩에 매우 유용합니다.
 
-* 자세한 내용은 [디자인 도구 키트 및 샘플 페이지](/windows/uwp/design/downloads/)를 참조하세요.
+:::row:::
+    :::column:::
+        ![fpo image](images/thumbnail-toolkits.jpg)
+    :::column-end:::
+    :::column span="2":::
+        **Design toolkits and samples page**
 
-<img src="images/fluentdesign_header.png" alt=" " />
+        Check out our [Design toolkits and samples page](/windows/uwp/design/downloads/)
+:::row-end:::
+
 
 
 

@@ -6,16 +6,14 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32beeae8d2398457311a14fa53afe330acdc75f2
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 32f55b0a387221b792e37072f129edddf285195b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700849"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552692"
 ---
 # <a name="transform-overview"></a>변환 개요
 
@@ -32,7 +30,7 @@ ms.locfileid: "1700849"
 | 프로젝션 공간으로 프로젝션 변환    | 다음 단계는 보기 공간에서 프로젝션 공간으로 변환하는 [프로젝션 변환](projection-transform.md)입니다. 파이프라인의 이 부분에서는 장면에 거리감을 주기 위해 일반적으로 뷰어와의 거리에 따라 개체의 크기가 조정됩니다. 다시 말해서 가까이에 있는 개체는 멀리 있는 개체보다 크게 보이게 만듭니다. 편의를 위해 이 문서에서는 프로젝션 변환 이후에 꼭짓점이 존재하는 공간을 *프로젝션 공간*이라고 부르겠습니다. 일부 그래픽 서적에서는 프로젝션 공간을 *관점후 동종 공간*이라고 부르기도 합니다. 모든 프로젝션 변환에서 장면의 개체 크기가 조정되는 것은 아닙니다. 이와 같은 프로젝션을 *아핀* 또는 *직교 프로젝션*이라고 합니다. |
 | 화면 공간에서 클리핑                      | 파이프라인의 마지막 부분에서는 장면에 보이지 않는 꼭짓점이 제거됩니다. 따라서 래스터라이저는 표시되지 않는 항목의 색 및 음영을 계산하는 데 시간을 사용하지 않습니다. 이 프로세스를 *클리핑*이라고 합니다. 클리핑 후에 나머지 꼭짓점은 뷰포트 매개 변수에 따라 크기가 조정되며 화면 좌표로 변환됩니다. 장면이 래스터화되면 장면에 표시된 결과인 꼭짓점은 *장면 공간*에 존재하게 됩니다.                                                                                                                                                                                                                                                    |
 
- 
+ 
 
 변환은 개체 기하 도형을 하나의 좌표에서 다른 좌표로 변환하는 데 사용됩니다. Direct3D는 매트릭스를 사용하여 3D 변환을 수행합니다. 매트릭스는 3D 변환을 만듭니다. 매트릭스를 결합하여 여러 변환이 포함된 단일 매트릭스를 만들 수 있습니다.
 
@@ -163,9 +161,9 @@ D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
 
 [변환](transforms.md)
 
- 
+ 
 
- 
+ 
 
 
 

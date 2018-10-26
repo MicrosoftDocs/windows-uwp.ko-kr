@@ -6,19 +6,18 @@ ms.assetid: 35a9e388-b25e-2aac-0534-577b15dae364
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx, direct3d 9, direct3d 11, 변경 사항
-ms.openlocfilehash: e46bb663a5497cb17f396b410fbdcb5d0295e5fe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 969d8f2620adbc289c1f4c89242e0282901357c2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219114"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554478"
 ---
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Direct3D 9부터 Direct3D 11의 주요 변경 사항
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **요약**
 
@@ -108,13 +107,13 @@ Direct3D는 하드웨어 지원을 결정할 수 있는, 기능 수준이라는 
 
 Direct3D 9에서는 SetVertexShaderConstant 및 SetPixelShaderConstant를 통해 공유 배열을 사용하여 셰이더의 상수를 관리했습니다. Direct3D 11에서는 꼭짓점 버퍼 또는 인덱스 버퍼와 같은 리소스인 상수 버퍼를 사용합니다. 상수 버퍼는 효율적으로 업데이트되도록 디자인되었습니다. 모든 셰이더 상수를 단일 전역 배열로 구성하는 대신 상수를 논리적 그룹으로 구성한 후 하나 이상의 상수 버퍼를 통해 관리합니다. Direct3D 9 게임을 Direct3D 11로 포팅할 경우 상수 버퍼를 적절히 업데이트할 수 있도록 구성해야 합니다. 예를 들어, 매 프레임마다 업데이트되지 않는 셰이더 상수를 별도의 상수 버퍼로 그룹화하면 더 동적인 셰이더 상수와 함께 해당 데이터를 계속해서 그래픽 어댑터에 업로드할 필요가 없습니다.
 
-> **참고** 대부분의 Direct3D 9 응용 프로그램은 셰이더를 광범위하게 사용했지만 경우에 따라 레거시 고정 함수 동작을 함께 사용하기도 했습니다. Direct3D 11은 프로그램 가능 음영 모델만 사용합니다. Direct3D 9의 레거시 고정 함수 기능은 더 이상 사용되지 않습니다.
+> **참고**  대부분의 Direct3D 9 응용 프로그램 셰이더를 광범위 하 게 사용 했지만 경우에 따라 레거시 고정 함수 동작 사용 하기도 합니다. Direct3D 11은 프로그램 가능 음영 모델만 사용합니다. Direct3D 9의 레거시 고정 함수 기능은 더 이상 사용되지 않습니다.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

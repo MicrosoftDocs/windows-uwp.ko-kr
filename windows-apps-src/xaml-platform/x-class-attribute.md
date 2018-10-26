@@ -6,18 +6,17 @@ ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d3105e8ac345e1eb6f0d974f8ea29e741dae9f58
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 6746969b1b717183894d6b941be41c9aca452960
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220285"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552869"
 ---
 # <a name="xclass-attribute"></a>x:Class 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 조인합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
 
@@ -35,7 +34,7 @@ XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래�
 | 용어 | 설명 |
 |------|-------------|
 | 네임스페이스 | 옵션. _classname_에서 지정한 partial 클래스가 포함된 네임스페이스를 지정합니다. _namespace_를 지정한 경우 점(.)은 _namespace_와 _classname_을 분리합니다. _namespace_를 생략한 경우 _classname_은 네임스페이스가 없는 것으로 간주됩니다. |
-| 클래스이름 | 필수. 로드된 XAML 및 해당 XAML의 코드 숨김을 연결하는 partial 클래스의 이름을 지정합니다. | 
+| 클래스이름 | 필수. 로드된 XAML 및 해당 XAML의 코드 숨김을 연결하는 partial 클래스의 이름을 지정합니다. | 
 
 ## <a name="remarks"></a>설명
 

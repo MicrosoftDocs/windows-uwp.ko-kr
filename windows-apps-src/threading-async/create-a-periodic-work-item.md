@@ -6,19 +6,17 @@ description: 주기적으로 반복되는 작업 항목을 만드는 방법을 �
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 정기 작업 항목, 스레딩, 타이머
-ms.openlocfilehash: 59dd19692143b155c33f8fdd7f3197f724ebb0ac
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 4afa137b01738c42f8e15c95ef09ec921d1e44ae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665277"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558884"
 ---
 # <a name="create-a-periodic-work-item"></a>정기 작업 항목 만들기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 ** 중요 API **
 
@@ -33,9 +31,9 @@ ms.locfileid: "665277"
 
 [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx)는 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587) 개체를 반환합니다. 타이머를 취소해야 하는 경우를 위해 이 개체를 저장합니다.
 
-> **참고**  간격 값으로 0(또는 1밀리초보다 작은 값)을 지정하지 마세요. 지정하면 주기적 타이머가 대신 일회성 타이머로 동작합니다.
+> **참고**값으로 0 지정 하지 마세요 (또는 1 밀리초 보다 작은 값) 간격입니다. 지정하면 주기적 타이머가 대신 일회성 타이머로 동작합니다.
 
-> **참고** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI에 액세스하고 작업 항목의 진행률을 표시할 수 있습니다.
+> **참고** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) UI에 액세스 하 고 작업 항목의 진행률을 표시 하는 데 사용할 수 있습니다.
 
 다음 예제에서는 60초마다 실행되는 작업 항목을 만듭니다.
 
@@ -209,4 +207,4 @@ ms.locfileid: "665277"
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
 * [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)
 * [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
- 
+ 

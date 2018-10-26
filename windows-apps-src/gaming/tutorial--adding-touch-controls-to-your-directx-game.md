@@ -6,27 +6,26 @@ ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 터치, 컨트롤, directx, 입력
-ms.openlocfilehash: 44d5071ee0cd695351c77630d699a1a060f477d6
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 53c4a91f3ef20c11783796c3ca362f74b3f39adb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219103"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553015"
 ---
 # <a name="touch-controls-for-games"></a>게임용 터치 컨트롤
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 DirectX를 사용하는 UWP(유니버설 Windows 플랫폼) C++ 게임에 기본 터치 컨트롤을 추가하는 방법을 알아봅니다. 터치 기반 컨트롤을 추가하여 Direct3D 환경에서 고정 평면 카메라를 이동하는 방법을 보여줍니다. 이러한 Direct3D 환경에서는 손가락이나 스타일러스로 끌면 카메라 관점이 이동합니다.
 
 이러한 컨트롤은 플레이어가 끌어 3D 환경(예: 맵 또는 플레이필드)을 스크롤하거나 해당 환경에서 이동하도록 하는 게임에서 통합할 수 있습니다. 예를 들어 전략 게임이나 퍼즐 게임에서는 플레이어가 왼쪽이나 오른쪽으로 이동하여 화면보다 더 큰 게임 환경을 볼 수 있도록 하는 데 이러한 컨트롤을 사용할 수 있습니다.
 
-> **참고** 이 코드는 마우스 기반 이동 컨트롤에서도 작동합니다. 포인터 관련 이벤트는 Windows 런타임 API에서 추상화되어 터치 기반이나 마우스 기반 포인터 이벤트를 처리할 수 있습니다.
+> **참고**이 코드는 마우스 기반 이동 컨트롤 에서도 작동 합니다. 포인터 관련 이벤트는 Windows 런타임 API에서 추상화되어 터치 기반이나 마우스 기반 포인터 이벤트를 처리할 수 있습니다.
 
- 
+ 
 
 ## <a name="objectives"></a>목표
 
@@ -344,14 +343,12 @@ void CameraPanController::Update( CoreWindow ^window )
 
 축하합니다! 게임에서 간단한 카메라 이동 터치 컨트롤 집합을 구현했습니다.
 
-> **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

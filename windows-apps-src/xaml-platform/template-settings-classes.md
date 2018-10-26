@@ -6,18 +6,17 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: ff1b373e2038824c6349961b3b878f5570babceb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220353"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552460"
 ---
 # <a name="template-settings-classes"></a>Template settings 클래스
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -57,7 +56,7 @@ ms.locfileid: "220353"
     Fill="{TemplateBinding Foreground}"/>
 ```
 
-[**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 템플릿의 전체 XAML은 수백 줄에 달하므로 여기서는 일부를 발췌했습니다. 이 XAML은 확정되지 않은 진행률에 대한 회전 애니메이션을 나타내는 6개의 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) 컨트롤 중 하나인 컨트롤 파트를 정의합니다. 개발자는 원을 싫어할 수도 있으므로 다른 그래픽을 과 같은 다른 그래픽 기본 요소 또는 다른 기본 모양을 사용하여 애니케이션의 진행률을 나타낼 수 있습니다. 예를 들어 사각형으로 정렬된 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) 요소 집합을 사용하는 **ProgressRing**을 구성할 수 있습니다. 그럴 경우 새 템플릿의 각 **Rectangle** 구성 요소는 다음과 같이 표시될 수 있습니다.
+[**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 템플릿의 전체 XAML은 수백 줄에 달하므로 여기서는 일부를 발췌했습니다. 이 XAML은 확정되지 않은 진행률에 대한 회전 애니메이션을 나타내는 6개의 [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) 컨트롤 중 하나인 컨트롤 파트를 정의합니다. 개발자는 원을 싫어할 수도 있으므로 다른 그래픽을 과 같은 다른 그래픽 기본 요소 또는 다른 기본 모양을 사용하여 애니케이션의 진행률을 나타낼 수 있습니다. 예를 들어 사각형으로 정렬된 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 요소 집합을 사용하는 **ProgressRing**을 구성할 수 있습니다. 그럴 경우 새 템플릿의 각 **Rectangle** 구성 요소는 다음과 같이 표시될 수 있습니다.
 
 ```xml
 <Rectangle
@@ -98,8 +97,7 @@ ms.locfileid: "220353"
 
 이 템플릿에는 많은 XAML이 있으므로 일부만 발췌했습니다. 또한 각각 동일한 [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752) 속성을 사용하는 여러 상태 및 테마 애니메이션 중 하나에 불과합니다. [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)의 경우 바인딩을 통해 **ComboBoxTemplateSettings** 값을 사용하여 공유 값을 기반으로 해당 위치에서 템플릿의 관련 애니메이션을 중지 및 시작하므로 부드럽게 전환됩니다.
 
-**참고**  
-**TemplateSettings** 값을 컨트롤 템플릿의 일부로 사용하는 경우 값 형식에 일치하는 속성을 설정해야 합니다. 그렇지 않으면 바인딩의 대상 형식이 **TemplateSettings** 값의 다른 소스 형식으로부터 변환될 수 있도록 바인딩에 대한 값 변환기를 만들어야 합니다. 자세한 내용은 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)를 참조하세요.
+**참고**  **TemplateSettings** 값을 사용 하 여 컨트롤 템플릿의 일부로 수행을 값의 형식과 일치 하는 속성을 설정 하 고 있는지 확인 합니다. 그렇지 않으면 바인딩의 대상 형식이 **TemplateSettings** 값의 다른 소스 형식으로부터 변환될 수 있도록 바인딩에 대한 값 변환기를 만들어야 합니다. 자세한 내용은 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

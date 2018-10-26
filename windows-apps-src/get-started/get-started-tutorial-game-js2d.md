@@ -1,21 +1,19 @@
 ---
 title: JavaScript로 UWP 게임 만들기
-description: 게임 JavaScript 및 CreateJS 작성 된 Microsoft 저장소에 대 한 간단한 UWP
+description: 간단한 UWP JavaScript 및 createjs로 작성 된 Microsoft Store에 대 한 게임
 author: GrantMeStrength
 ms.author: jken
 ms.date: 02/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 87625c05ea13dcb8af2c06dfba7b35308200b5eb
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 60060bb3ec7a644d29523483d0d31c0497c543d1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1018613"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558526"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -28,13 +26,13 @@ ms.locfileid: "1018613"
 ## <a name="introduction"></a>소개
 
 
-Microsoft 저장소 의미에 응용 프로그램을 게시 하면 수 있는 공유 (또는 판매 하기도!) 매우 많은 사용자 다양 한 장치에서 사용 합니다.  
+Microsoft Store에 앱을 게시 공유 (하거나 판매할!) 수백만 명의 사람들과 각종 디바이스.  
 
-Microsoft 저장소에 앱을 게시 하기 위해 UWP (범용 Windows 플랫폼) 응용 프로그램으로 작성 되어야 합니다. 한편 UWP는 매우 유연하며 다양한 언어와 프레임워크를 지원합니다. 이를 입증하듯, 이 샘플은 JavaScript로 작성된 간단한 게임으로 여러 CreateJS 라이브러리를 사용하며, 스프라이트를 그리고 게임 루프를 만들고 키보드와 마우스를 지원하고 다양한 화면 크기에 맞게 조정하는 방법을 보여줍니다.
+Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 앱으로 작성 해야 합니다. 한편 UWP는 매우 유연하며 다양한 언어와 프레임워크를 지원합니다. 이를 입증하듯, 이 샘플은 JavaScript로 작성된 간단한 게임으로 여러 CreateJS 라이브러리를 사용하며, 스프라이트를 그리고 게임 루프를 만들고 키보드와 마우스를 지원하고 다양한 화면 크기에 맞게 조정하는 방법을 보여줍니다.
 
 이 프로젝트는 Visual Studio를 사용하여 JavaScript로 빌드되었습니다. 몇 가지 사소한 변경 작업을 수행하면 웹 사이트에 호스트하거나 다른 플랫폼에 맞게 조정할 수도 있습니다. 
 
-**참고:** 이 값이 완료 (또는 좋은!) 게임; JavaScript 및 제 3 자 라이브러리를 사용 하 여 앱을 Microsoft 저장소에 게시할 수 있도록 설명 하기 위해 설계 되었습니다.
+**참고:** 이 완전 한 (또는 뛰어난) 게임이 아니며, JavaScript 및 제 3 자 라이브러리를 사용 하 여 Microsoft Store에 게시할 수 있는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -73,7 +71,7 @@ Microsoft 저장소에 앱을 게시 하기 위해 UWP (범용 Windows 플랫폼
 
 ## <a name="walkthough"></a>연습
 
-F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 하며 이것은 부분적으로 많은 코드는 현재 주석 처리 된 "하지 많은"입니다. 지금까지 모두 볼 수 이며 공룡, 스페이스바 헛된 짓이 야 기도 합니다. 
+F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 및으로 많은 코드는 현재 주석 "별로 없습니다", 됩니다. 지금까지 공룡 그리고 스페이스바를 눌러야 글자만 무성의 모두 표시 됩니다. 
 
 ### <a name="1-setting-the-stage"></a>1 스테이지 설정
 
@@ -92,7 +90,7 @@ EaselJS는 *스테이지*라고 하는 새로운 개체를 제공합니다. 스�
 
 ### <a name="2-loading-the-bitmaps"></a>2. 비트맵 로드
 
-EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사용되는 파란색 사각형 같은 간단한 셰이프, 잠시 후 우리가 추가할 구름 같은 비트맵, 텍스트 개체 그리고 스프라이트를 만들 수 있습니다. 스프라이트 (SpriteSheet)를 사용 하 여 [http://createjs.com/docs/easeljs/classes/SpriteSheet.html]: 여러 이미지를 포함 하는 단일 비트맵 합니다. 예를 들어 이 SpriteSheet를 사용하여 공룡 애니메이션의 여러 프레임을 저장합니다.
+EaselJS는 여러 종류의 그래픽 개체를 제공합니다. 하늘에 사용되는 파란색 사각형 같은 간단한 셰이프, 잠시 후 우리가 추가할 구름 같은 비트맵, 텍스트 개체 그리고 스프라이트를 만들 수 있습니다. 스프라이트 사용 (SpriteSheet) [http://createjs.com/docs/easeljs/classes/SpriteSheet.html]: 여러 이미지가 들어 있는 단일 비트맵인 합니다. 예를 들어 이 SpriteSheet를 사용하여 공룡 애니메이션의 여러 프레임을 저장합니다.
 
 ![Walking Dino 스프라이트 시트](images/JS2D_4.png)
 
@@ -170,7 +168,7 @@ F5 키를 눌러 앱을 다시 실행하면 구름이 표시된 것을 볼 수 �
 
 <p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen"><a href="http://codepen.io">CodePen</a>에서 Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animating clouds</a> by Microsoft Edge Docs(<a href="http://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>)를 참조하세요.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
- 
+ 
 이 작업을 수행하는 코드는 EaselJS이며 CreateJS 라이브러리에서 제공하는 **main.js** 파일에 이미 있습니다. 다음과 같이 표시됩니다.
 
 ```
@@ -259,9 +257,9 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 
 이제 앱을 다시 실행하면 창 크기를 조절할 수 있으며 보다 나아진 결과를 얻을 수 있습니다.
 
-## <a name="publishing-to-the-microsoft-store"></a>Microsoft 저장소에 게시
+## <a name="publishing-to-the-microsoft-store"></a>Microsoft Store에 게시
 
-(처음에 기능이 향상 되어 가정!) Microsoft 저장소에 게시할 수는 UWP app가 이제 
+(먼저 개선 가정!) Microsoft Store에 게시할 수는 UWP 앱을 만들었으니 이제 
 
 몇 가지 단계를 처리해야 합니다.
 
@@ -269,7 +267,7 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 2. 앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 3. 앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하십시오.
+자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.
 
 ## <a name="suggestions-for-other-features"></a>다른 기능에 대한 제안.
 

@@ -6,19 +6,18 @@ ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 버퍼, 유니폼, 꼭짓점 특성
-ms.openlocfilehash: d25495b282dce38c3dcad0ec996c185e64165b13
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219107"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558238"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -41,7 +40,7 @@ OpenGL ES 2.0 데이터는 네 가지 방법으로 셰이더 프로그램 간에
 | 프레임 버퍼 개체(FBO) | 렌더링 대상. [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) 및 [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)를 참조하세요.                                       |
 | 백 버퍼               | "백 버퍼" 화면이 있는 스왑 체인. 연결된 [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)과 함께 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)을 참조하세요.                       |
 
- 
+ 
 
 ## <a name="port-buffers"></a>포트 버퍼
 
@@ -298,9 +297,9 @@ struct VertexShaderInput
 };
 ```
 
- 
+ 
 
- 
+ 
 
 
 

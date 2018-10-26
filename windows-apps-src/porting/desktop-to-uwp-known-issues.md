@@ -6,17 +6,15 @@ title: 알려진 문제(데스크톱 브리지)
 ms.author: normesta
 ms.date: 06/20/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
-ms.openlocfilehash: 731d449d779806fbd4104787b692d3b7d0408036
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 61803e3a4a18dee260b78468c7970a875d8aff73
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518292"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557520"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>패키지로 만든된 데스크톱 응용 프로그램의 알려진된 문제
 

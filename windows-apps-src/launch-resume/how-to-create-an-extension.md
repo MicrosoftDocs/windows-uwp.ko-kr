@@ -6,15 +6,13 @@ keywords: 앱 확장, 앱 서비스, 백그라운드
 ms.author: twhitney
 ms.date: 10/05/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: a1722c22c717ec1a349f6e7d48c1e151209eab2c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512822"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557735"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 

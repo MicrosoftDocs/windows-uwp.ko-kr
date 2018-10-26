@@ -6,18 +6,17 @@ title: 미디어 컴퍼지션 및 편집
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 66d14ae9335edcc5535d0dcc37cca2273874f61d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: f32d63bf03a469d8282262c358153140587d9033
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220600"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557354"
 ---
 # <a name="media-compositions-and-editing"></a>미디어 컴퍼지션 및 편집
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) 네임스페이스의 API를 사용하여 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발하는 방법에 대해 설명합니다. 이 프레임워크의 기능에는 여러 비디오 클립을 프로그래밍 방식으로 함께 추가하는 기능과 비디오 및 이미지 오버레이 추가, 백그라운드 오디오 추가, 오디오 효과와 비디오 효과 적용 등의 기능이 포함됩니다. 생성된 미디어 컴퍼지션은 재생 또는 공유를 위한 플랫 미디어 파일로 렌더링할 수 있습니다. 그러나 컴퍼지션을 디스크로 직렬화하거나 디스크에서 역직렬화함으로써 사용자가 이전에 만든 컴퍼지션을 로드하고 수정할 수 있게 할 수도 있습니다. 이 모든 기능은 낮은 수준의 [Microsoft 미디어 파운데이션](https://msdn.microsoft.com/library/windows/desktop/ms694197) API와 비교해 볼 때 이러한 작업을 수행하는 데 필요한 코드의 양과 복잡성이 상당히 줄어드는 편리한 Windows 런타임 인터페이스에서 제공됩니다.
@@ -152,9 +151,9 @@ ms.locfileid: "220600"
 
 -   컴퍼지션의 미디어 파일이 앱에서 액세스할 수 있는 위치에 없으며 앱에 대한 [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) 클래스의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 속성에 없는 경우 컴퍼지션을 로드할 때 오류가 발생합니다.
 
- 
+ 
 
- 
+ 
 
 
 
