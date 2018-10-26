@@ -6,16 +6,14 @@ ms.assetid: a9b029ea-4cc1-485a-8253-e1c74184f35e
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, mpsd, 멀티 플레이 세션 디렉터리입니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: d69867e2ba5d56eb47007732ae7197c9991be4c4
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 05e42fcce988f7b3ac880082cd1300b6f4b9294f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5527107"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561614"
 ---
 # <a name="multiplayer-session-directory-mpsd"></a>멀티 플레이 세션 디렉터리(MPSD)
 

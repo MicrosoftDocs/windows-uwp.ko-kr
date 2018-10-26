@@ -7,16 +7,14 @@ description: " GET (/users/{userId}/profile/settings/people/{userList})"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d57a6620115d5f009c054210a50548c3da7e47d5
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 85e4c27017b1060965b0e2eaa29e93ca6557cb37
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5471190"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566943"
 ---
 # <a name="get-usersuseridprofilesettingspeopleuserlist"></a>GET (/users/{userId}/profile/settings/people/{userList})
 사용자 프로필을 가져오거나 사용자 모니커를 사용 하 여 사용자를 지원 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.

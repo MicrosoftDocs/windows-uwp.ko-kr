@@ -7,16 +7,14 @@ description: " /media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fi
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f5bdcb8b854a8b71f232c8a1cc73cd12bc587015
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b080df9aee7a4c373a3a0e1bbe1759db1c0050c7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481872"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569471"
 ---
 # <a name="mediamarketplaceidmetadatamediaitemtypesmediaitemtypefields"></a>/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields
 데이터 주어진된 mediaitemtype 보고 EDS의 지정 된 버전을 기대할 수 하나 액세스 필드. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

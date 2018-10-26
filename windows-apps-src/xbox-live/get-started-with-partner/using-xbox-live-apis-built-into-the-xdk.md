@@ -6,16 +6,14 @@ ms.assetid: 539caca3-58bc-49d9-8432-ca8e57755be2
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 527a62af7ca31a401da47eb10e59c1593f62e433
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: e127dd2adb53e8fdf5fb0469ce9deae5759eb899
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5467984"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564985"
 ---
 # <a name="using-xbox-live-apis-built-into-the-xdk"></a>Xbox Live Api를 사용 하 여 XDK에 기본 제공
 

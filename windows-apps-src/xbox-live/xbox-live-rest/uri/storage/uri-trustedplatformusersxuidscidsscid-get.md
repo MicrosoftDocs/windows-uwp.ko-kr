@@ -7,19 +7,17 @@ description: " GET (/trustedplatform/users/xuid({xuid})/scids/{scid})"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: bec8c58fcccf5630d69bee28313e004f43d2d5ba
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: fb29661e95bdea54a0aabbf536d5065d6a1baea9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469266"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569603"
 ---
 # <a name="get-trustedplatformusersxuidxuidscidsscid"></a>GET (/trustedplatform/users/xuid({xuid})/scids/{scid})
-이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri의 도메인은 `titlestorage.xboxlive.com`.
+이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EX)
   * [권한 부여](#ID4ECB)
@@ -35,7 +33,7 @@ ms.locfileid: "5469266"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 부호 없는 64 비트 정수| Xbox 사용자 ID (XUID) 선수의 요청을 하 게 합니다.| 
+| xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청을 하 게 합니다.| 
 | 서비스 안내| guid| 조회 서비스 구성의 ID입니다.| 
   
 <a id="ID4ECB"></a>

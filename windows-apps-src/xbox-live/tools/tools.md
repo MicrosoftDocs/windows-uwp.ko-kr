@@ -6,16 +6,14 @@ ms.assetid: 380a29bf-41a7-4817-9c57-f48f2b824b52
 ms.author: kevinasg
 ms.date: 6/13/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 도구, 플레이어 초기화, live 추적 분석기, LTA, xbox live 계정 도구
 ms.localizationpriority: medium
-ms.openlocfilehash: 98b21eda55c6122104c9ec79cda10708e362f3a4
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 69c1a22c1984ae78a096b7a279225c0e658285e6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5482884"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570157"
 ---
 # <a name="development-tools-for-xbox-live"></a>Xbox live 개발 도구
 

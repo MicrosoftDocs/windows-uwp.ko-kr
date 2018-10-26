@@ -6,16 +6,14 @@ ms.assetid: 1166308a-4079-41b4-8550-ce04b82b4f72
 ms.author: kevinasg
 ms.date: 5/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 개발자 프로그램, 크리에이터 스
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bbfcb38704512b3dbd709eb827768d073ad4c95
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 9fb9c9aa4267e7485b8e1583ff011b6d1cd6070e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468170"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570183"
 ---
 # <a name="developer-program-overview"></a>개발자 프로그램 개요
 

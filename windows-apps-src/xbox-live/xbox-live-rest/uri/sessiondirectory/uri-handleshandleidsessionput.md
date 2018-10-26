@@ -7,16 +7,14 @@ description: " PUT (/handles/{handle-id}/session)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 89572da87f4975aeeaa1ae7506a34f2b9cb4e72a
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 45ad0ef031924c0f101ba46b25192265c554ea17
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469628"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571582"
 ---
 # <a name="put-handleshandle-idsession"></a>PUT (/handles/{handle-id}/session)
 만들거나 핸들 역참조 하 여 세션을 업데이트 합니다.
@@ -26,7 +24,7 @@ ms.locfileid: "5469628"
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4ECB)
-  * [HTTP 상태 코드입니다.](#ID4ENB)
+  * [HTTP 상태 코드](#ID4ENB)
   * [요청 본문](#ID4EUB)
   * [응답 본문](#ID4E6B)
 
@@ -51,14 +49,14 @@ ms.locfileid: "5469628"
 <a id="ID4ENB"></a>
 
 
-## <a name="http-status-codes"></a>HTTP 상태 코드입니다.
+## <a name="http-status-codes"></a>HTTP 상태 코드
 서비스는 MPSD에 적용 되는 HTTP 상태 코드를 반환 합니다.  
 <a id="ID4EUB"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-이 요청의 본문 개체가 전달 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4E6B"></a>
 

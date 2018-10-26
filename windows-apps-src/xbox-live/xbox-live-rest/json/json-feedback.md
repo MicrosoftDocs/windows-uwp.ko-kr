@@ -7,16 +7,14 @@ description: " Feedback(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: e9ef3bb19155199ae94b18b828fb40eb7a0a2ce6
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 8eae84d7e8e5071555dbc54697804ddf6662be49
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468120"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564803"
 ---
 # <a name="feedback-json"></a>Feedback(JSON)
 플레이어에 대 한 피드백 정보를 포함합니다.

@@ -6,16 +6,14 @@ ms.assetid: f80eb3ca-faf5-459e-8f55-acb9aedec542
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: xbox live에서 xbox, 게임, uwp 10 windows, xbox 1, 멀티 매니저, 순서도
+keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
-ms.openlocfilehash: e437cd488c1a16020f4b315f418cb57c97e2b1b4
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 2fab527d1198914d707f8c3b4545cb882974bd3d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469833"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569557"
 ---
 # <a name="flowchart---shut-down-after-a-multiplayer-game-is-complete"></a>순서도-멀티 플레이어 게임을 완료 된 후 종료
 
@@ -23,4 +21,4 @@ ms.locfileid: "5469833"
 
 ## <a name="shut-down-a-multiplayer-session"></a>멀티 플레이 세션 종료
 
-![SmartMatch 매치 메이크](../../../images/multiplayer/mpm-shut-down.png)
+![스마트 매치 메이 킹](../../../images/multiplayer/mpm-shut-down.png)

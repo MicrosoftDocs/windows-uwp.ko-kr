@@ -5,16 +5,14 @@ description: 역할을 사용 하 여 Xbox Live 멀티 플레이어에서 플레
 ms.author: kevinasg
 ms.date: 06/29/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어, 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ab0a8fd83e94af9a06582faebc2923eb459996b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 7a61230d3ef857698fbe54fa528808d6166b2a3b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481239"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568519"
 ---
 # <a name="roles"></a>역할
 

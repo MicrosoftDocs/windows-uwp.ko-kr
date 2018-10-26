@@ -6,16 +6,14 @@ ms.assetid: f8966184-5db7-4cab-93ca-9a0250a6077d
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 평판, 소셜 플랫폼
 ms.localizationpriority: medium
-ms.openlocfilehash: cc296892a8d3134dd44ff4bad43603fd164ed5fd
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 5b3ff2d546dc142331406f198848e9d7a7077b3d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468880"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571972"
 ---
 # <a name="reputation"></a>평판
 

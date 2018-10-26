@@ -5,16 +5,14 @@ description: Windows 개발자 센터에서 타이틀 저장소를 구성 하는
 ms.author: aablackm
 ms.date: 04/24/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 타이틀 저장소, Windows 개발자 센터
-ms.openlocfilehash: 7a258db9c4615de81ba32be4b636e007d3b9471c
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: c756dabe437f535a09418417e30a22565d22acdf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481875"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568825"
 ---
 # <a name="configure-storage-for-you-title-on-windows-dev-center"></a>Windows 개발자 센터에서 하면 제목에 대 한 저장소를 구성 합니다.
 

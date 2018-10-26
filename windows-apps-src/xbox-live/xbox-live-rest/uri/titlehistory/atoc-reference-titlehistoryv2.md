@@ -7,16 +7,14 @@ description: " 도전 과제 타이틀 기록 URI"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 82d6dc051911ea04b685ffaeb21f821241bec77d
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: fe5faf4da7aff175741065e146ab87206a6f8751
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470060"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564780"
 ---
 # <a name="achievement-title-history-uris"></a>도전 과제 타이틀 기록 URI
  

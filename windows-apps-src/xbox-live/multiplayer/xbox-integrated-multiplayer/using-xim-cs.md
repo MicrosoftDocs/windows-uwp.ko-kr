@@ -5,16 +5,14 @@ description: C#을 사용 하 여 Xbox 통합 멀티 플레이어 (XIM)를 사�
 ms.author: kevinasg
 ms.date: 04/24/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cb15206469abf96d8c88490c35c86b8c5197e93
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 71a588a633f2c12a6adf4c062940c4e2bee7fe18
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468251"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568582"
 ---
 # <a name="using-xim-c"></a>XIM (C#)를 사용 하 여
 

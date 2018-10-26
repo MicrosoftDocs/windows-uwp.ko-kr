@@ -6,16 +6,14 @@ ms.assetid: ba0c1ecb-e928-4e86-9162-8cb456b697ff
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어, 연결, 스마트
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fe8ad244b9b7a650af4fc77c4adbb1805023ecf
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: f5a26e0a111d9df5e13127b9ece79678b9399ddc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468623"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566591"
 ---
 # <a name="smartmatch-matchmaking"></a>스마트 매치 매치 메이킹
 

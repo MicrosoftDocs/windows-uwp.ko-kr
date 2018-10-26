@@ -7,16 +7,14 @@ description: " VerifyStringResult(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f774f603d89e29f5233fb0866303bab4577ca3d2
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b60eb65c5b69addae0509d74095d63b7a367bd97
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469297"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567824"
 ---
 # <a name="verifystringresult-json"></a>VerifyStringResult(JSON)
 [/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 된 각 문자열에 해당 되는 결과 코드.
@@ -27,7 +25,7 @@ ms.locfileid: "5469297"
 
 VerifyStringResult 개체에는 다음 사양을 있습니다.
 
-| 구성원| 유형| 설명|
+| 멤버| 유형| 설명|
 | --- | --- | --- |
 | resultCode| 32 비트 부호 없는 정수| 필수. HResult 코드에 해당 하 문자열을 전송 합니다.|
 | offendingString| string| 필수. 거부 하는 문자열을 발생 하는 문자열 값입니다.|
@@ -35,7 +33,7 @@ VerifyStringResult 개체에는 다음 사양을 있습니다.
 <a id="ID4EXB"></a>
 
 
-## <a name="sample-json-syntax"></a>JSON 구문 예제
+## <a name="sample-json-syntax"></a>샘플 JSON 구문
 
 
 ```json

@@ -7,16 +7,14 @@ description: " GameResult(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 24f5af1639f5348fe20c36c56c1301f723d832f7
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 874a58e13e9c385a8783f6385fbe4e245ebbfd75
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5477511"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568394"
 ---
 # <a name="gameresult-json"></a>GameResult(JSON)
 게임 세션의 결과 설명 하는 데이터를 나타내는 JSON 개체입니다. 

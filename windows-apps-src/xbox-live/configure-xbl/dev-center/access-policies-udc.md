@@ -6,16 +6,14 @@ ms.assetid: ''
 ms.author: kevinasg
 ms.date: 02/21/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
-ms.openlocfilehash: 8a19c6e116cb6c2f3cd8e2f2d8541516ebf89de9
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 3975d3252c1891d8d36303b038cce8df93c89d08
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472925"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562639"
 ---
 # <a name="configure-access-policies-on-dev-center"></a>개발자 센터에 대 한 액세스 정책을 구성합니다
 

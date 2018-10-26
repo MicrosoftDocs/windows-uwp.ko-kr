@@ -6,16 +6,14 @@ ms.assetid: 6cb2cb10-811a-4b20-9b9b-a3fc59a033c2
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 서비스 구성, 상황에 맞는 검색, 브로드캐스트 게임 클립
 ms.localizationpriority: medium
-ms.openlocfilehash: 79197dc7db3f15aba5fc9d494a5e8408878f0dba
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 7e1b63693ac3d6d1cb68a15a2c32bf730cf54dec
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5473089"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567732"
 ---
 # <a name="configuring-contextual-search"></a>상황에 맞는 검색 구성
 

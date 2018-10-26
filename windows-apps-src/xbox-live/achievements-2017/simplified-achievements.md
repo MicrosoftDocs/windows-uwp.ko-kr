@@ -6,16 +6,14 @@ ms.assetid: d424db04-328d-470c-81d3-5d4b82cb792f
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 04d2fab9aa836d36a0dba202b2292c311b6d4979
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 287770b04d58a1109a2bf64513b1ce12a647dbf1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481457"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565097"
 ---
 # <a name="achievements-2017"></a>도전 과제 2017
 

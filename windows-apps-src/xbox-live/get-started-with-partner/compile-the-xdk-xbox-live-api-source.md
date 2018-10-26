@@ -6,16 +6,14 @@ ms.assetid: 78425e82-c132-4f6b-9db3-2536862f1ce5
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 301d646b421e77044f613244ccab987f1cb40dc6
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 2b30453946536a5bebce7577fec04e0346c8ac97
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472298"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569412"
 ---
 # <a name="compile-the-xbox-developer-kit-xdk-xbox-live-api-source"></a>Xbox 개발자 키트 (XDK) Xbox Live API 소스 컴파일
 
