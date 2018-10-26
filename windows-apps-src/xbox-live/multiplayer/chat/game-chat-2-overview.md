@@ -5,16 +5,14 @@ description: 게임에 Xbox Live 게임 채팅 2, 게임 채팅의 업데이트 
 ms.author: tomco
 ms.date: 10/20/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅, 게임 채팅 2, 음성 통신
 ms.localizationpriority: medium
-ms.openlocfilehash: 252cd33b0504a586852381a6c5ace3f5700890f7
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 211769593fb2801aee31cfcd8b20869fab27314e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474138"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5546482"
 ---
 # <a name="game-chat-2-overview"></a>게임 채팅 2 개요
 

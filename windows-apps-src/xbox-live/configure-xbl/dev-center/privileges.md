@@ -5,16 +5,14 @@ description: Windows 개발자 센터에서 권한을 구성 하는 방법을 �
 ms.author: aablackm
 ms.date: 04/09/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 권한으로 Windows 개발자 센터
-ms.openlocfilehash: f9ca72d54a539ab7fac684646019e2923572c297
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: be502aadbd5900838f143132171838cdf235c01c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472908"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5546690"
 ---
 # <a name="configure-privileges-on-windows-dev-center"></a>Windows 개발자 센터에서 권한 구성
 

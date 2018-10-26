@@ -7,16 +7,14 @@ description: " TitleRecord(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e7fb10a0f81e24215ebc24d2545f1197d4520bc
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: c26910005c54cf9038f09045cd30f4463527306e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5476317"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5546356"
 ---
 # <a name="titlerecord-json"></a>TitleRecord(JSON)
 이름 및 마지막으로 수정한 타임 스탬프를 포함 하 여 타이틀에 대 한 정보를 제공 합니다. 

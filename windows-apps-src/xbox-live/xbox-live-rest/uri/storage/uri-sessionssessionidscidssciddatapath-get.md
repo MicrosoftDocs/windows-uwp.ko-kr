@@ -7,26 +7,24 @@ description: " GET (/sessions/{sessionId}/scids/{scid}/data/{path})"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c3c9a436af3e25f1af20baab5f7fca4c7ed109b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: a9c2d018384f7bd9f390c1321b75bb0ad6f16cf7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468107"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5545683"
 ---
 # <a name="get-sessionssessionidscidssciddatapath"></a>GET (/sessions/{sessionId}/scids/{scid}/data/{path})
-지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri의 도메인은 `titlestorage.xboxlive.com`.
+지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EX)
   * [선택적 쿼리 문자열 매개 변수](#ID4ECB)
   * [권한 부여](#ID4EWC)
   * [필요한 요청 헤더](#ID4EDD)
   * [요청 본문](#ID4EME)
-  * [HTTP 상태 코드입니다.](#ID4EZE)
+  * [HTTP 상태 코드](#ID4EZE)
   * [응답 본문](#ID4EUBAC)
  
 <a id="ID4EX"></a>
@@ -73,16 +71,16 @@ ms.locfileid: "5468107"
  
 ## <a name="request-body"></a>요청 본문 
  
-이 요청의 본문 개체가 전달 됩니다.
+개체가이 요청 본문에 전송 됩니다.
   
 <a id="ID4EZE"></a>
 
  
-## <a name="http-status-codes"></a>HTTP 상태 코드입니다.
+## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에는이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 하는 표준 HTTP 상태 코드의 전체 목록은, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하십시오.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
-| Code| 원인 문구| 설명| 
+| Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| 요청이 성공 했습니다.| 
 | 201| 생성| 엔터티를 만들었습니다.| 
@@ -105,7 +103,7 @@ ms.locfileid: "5468107"
 <a id="ID4ECCAC"></a>
 
  
-### <a name="sample-response"></a>샘플 응답입니다.
+### <a name="sample-response"></a>예제 응답
  
 
 ```cpp

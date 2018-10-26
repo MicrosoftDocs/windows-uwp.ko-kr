@@ -6,16 +6,14 @@ ms.assetid: 0ad21a75-0524-45a8-8d8a-0dec0f7d6d6f
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 풍부한 상태, 정책
 ms.localizationpriority: medium
-ms.openlocfilehash: 02c5a39dadd50326b7008d73ff6f47e1b4faeb7b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: ae44a0b5619023848437c95bcfcd8025375189df
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5475121"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5545973"
 ---
 # <a name="rich-presence-policies-and-limitations"></a>다양 한 상태 정책 및 제한 사항
 

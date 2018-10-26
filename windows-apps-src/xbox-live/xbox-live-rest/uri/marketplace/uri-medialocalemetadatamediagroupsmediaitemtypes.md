@@ -7,19 +7,17 @@ description: " /media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaIte
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a5f7e0808f6d9392ea738440779e477b7c999b1
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: fe2d147fdc873f84eee37ec78a086b154d4eec7c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469250"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5546032"
 ---
 # <a name="mediamarketplaceidmetadatamediagroupsmediagroupmediaitemtypes"></a>/media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaItemTypes
-EDS의 지정 된 버전에 대 한 미디어 그룹당 사용 가능한 mediaItemTypes에 액세스합니다. 이러한 Uri의 도메인은 `eds.xboxlive.com`.
+EDS의 지정 된 버전에 대 한 미디어 그룹당 사용 가능한 mediaItemTypes에 액세스합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  

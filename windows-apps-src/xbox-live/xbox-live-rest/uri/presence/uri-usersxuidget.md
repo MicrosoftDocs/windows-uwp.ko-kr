@@ -7,16 +7,14 @@ description: " GET (/users/xuid({xuid}))"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 308ecbddb5d62ae98d576f56af4cd3f7363c2c5a
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 5183d5e65961a01f23bf41a93aa7e326d8d4d180
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5475790"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554272"
 ---
 # <a name="get-usersxuidxuid"></a>GET (/users/xuid({xuid}))
 다른 사용자 또는 클라이언트의 존재 여부를 검색 합니다.

@@ -7,16 +7,14 @@ description: " Player(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 25d9262ac16eab3d1c2f35960445321fa3872c30
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 90d0aa970fce8256a28be169b0afe49892d21d07
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5479294"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5549974"
 ---
 # <a name="player-json"></a>Player(JSON)
 게임 세션에는 플레이어에 대 한 데이터를 포함합니다. 

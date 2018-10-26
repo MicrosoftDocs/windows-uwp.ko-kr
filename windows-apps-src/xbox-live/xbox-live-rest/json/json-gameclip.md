@@ -7,16 +7,14 @@ description: " GameClip(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 047f7287578f52591c48ee059e72efb559b41c87
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: c648e6c9ec85eb73c4019f14db6c117cda920b87
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5476884"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5543899"
 ---
 # <a name="gameclip-json"></a>GameClip(JSON)
  

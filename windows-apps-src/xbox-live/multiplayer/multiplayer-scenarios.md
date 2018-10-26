@@ -6,16 +6,14 @@ ms.assetid: 470914df-cbb5-4580-b33a-edb353873e32
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d104a92a7245e008c3ac579a49220db42713675c
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 40afd412fcf5dd3330a9319f7f979b4d264be5aa
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469235"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5545785"
 ---
 # <a name="multiplayer-scenarios"></a>멀티 플레이어 시나리오
 다양 한 유형의 멀티 플레이어 시나리오를 가지 하 고 올바른 시나리오를 선택 하면 플레이어 참여 늘리기 수 차례로 사용 하면 게임에 대 한 기본 플레이어 최대한 오래에 대 한 게임의 현재 수명을 연장 합니다.

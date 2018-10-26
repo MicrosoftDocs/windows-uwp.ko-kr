@@ -7,16 +7,14 @@ description: " /users/xuid({xuid})/outbox"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 584acb4b74fa74dd91e9f8044b59647d8e5d8787
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 804abf3882763d7333772dfc671a82b550fa9302
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5467968"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5543540"
 ---
 # <a name="usersxuidxuidoutbox"></a>/users/xuid({xuid})/outbox
 제공 된 사용자에 게 보내기 전용 액세스 메시징 Xbox LIVE 서비스에 대 한 편지함 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.

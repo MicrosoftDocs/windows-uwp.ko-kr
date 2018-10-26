@@ -7,16 +7,14 @@ description: " GET (/users/me/inventory)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 270f36d354ee4561d12f78644436ad51e286768c
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 793f2688a6f8f32ec8ff8018ed2967ed7ea58280
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5477556"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556688"
 ---
 # <a name="get-usersmeinventory"></a>GET (/users/me/inventory)
 현재 호출자에 게 제공 되는 사용자와 관련 된 인벤토리 집합을 제공 합니다.

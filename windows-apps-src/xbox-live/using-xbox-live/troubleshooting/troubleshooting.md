@@ -6,16 +6,14 @@ ms.assetid: 5e96199b-9177-4789-9c80-79f6b83a2db4
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c61b5d74fbcd5487b11b71067b0558c67e5590e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: ba30743f6b3e13d5aa3e62b9c385cf7281341b38
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481898"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5542025"
 ---
 # <a name="troubleshooting-xbox-live"></a>Xbox Live 문제 해결
 

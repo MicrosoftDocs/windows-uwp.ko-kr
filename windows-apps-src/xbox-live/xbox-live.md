@@ -5,16 +5,14 @@ description: Xbox Live 서비스를 사용 하 여 게임을 Xbox Live 게임 �
 ms.author: kevinasg
 ms.date: 05/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, xbox, xbox live
 ms.localizationpriority: medium
-ms.openlocfilehash: a3916e3b6c362605b3587bacd6c54f1cc69c1da7
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 2ad2ce09d5a1100c64f9d12c604340456999fe70
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472216"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5543724"
 ---
 # <a name="xbox-live"></a>Xbox Live
 

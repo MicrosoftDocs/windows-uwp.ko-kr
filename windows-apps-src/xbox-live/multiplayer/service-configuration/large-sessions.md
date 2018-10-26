@@ -5,16 +5,14 @@ description: Xbox Live 멀티 플레이 플랫폼을 사용 하 여 큰 세션�
 ms.author: kevinasg
 ms.date: 07/11/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어, 큰 세션, 최근 플레이어
 ms.localizationpriority: medium
-ms.openlocfilehash: cead1a3ca1d56185ef97fe3f3271484bfbc58f18
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 52b65f0e6c4ee8642b49ff71533961f50761be98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5471500"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5547580"
 ---
 # <a name="large-sessions"></a>큰 세션
 

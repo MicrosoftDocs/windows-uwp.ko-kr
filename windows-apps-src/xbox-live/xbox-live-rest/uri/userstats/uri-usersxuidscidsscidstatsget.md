@@ -7,20 +7,18 @@ description: " GET (/users/xuid({xuid})/scids/{scid}/stats)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ed96418141aec049a9577924597a07da4313b7e2
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: bca091bf25d7900b78890b3dd13616342536797c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469003"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555328"
 ---
 # <a name="get-usersxuidxuidscidsscidstats"></a>GET (/users/xuid({xuid})/scids/{scid}/stats)
 지정된 된 사용자를 대신 하 여 사용자 통계 이름의 쉼표로 구분 된 목록에 의해 범위가 서비스 구성을 가져옵니다.
-이러한 Uri의 도메인은 `userstats.xboxlive.com`.
+이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
 
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EEB)
@@ -29,7 +27,7 @@ ms.locfileid: "5469003"
   * [필요한 요청 헤더](#ID4EPD)
   * [선택적 요청 헤더](#ID4EYE)
   * [요청 본문](#ID4E3F)
-  * [HTTP 상태 코드입니다.](#ID4EHG)
+  * [HTTP 상태 코드](#ID4EHG)
   * [응답 본문](#ID4E5BAC)
 
 <a id="ID4EV"></a>
@@ -98,23 +96,23 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1.|
+| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1입니다.|
 
 <a id="ID4E3F"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-이 요청의 본문 개체가 전달 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4EHG"></a>
 
 
-## <a name="http-status-codes"></a>HTTP 상태 코드입니다.
+## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에는이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 하는 표준 HTTP 상태 코드의 전체 목록은, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하십시오.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
-| Code| 원인 문구| 설명|
+| Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 200| 확인| 세션을 검색 했습니다.|
 | 304| 수정 되지 않음| 리소스 되지 요청 된 마지막으로 수정 합니다.|
@@ -133,7 +131,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
 <a id="ID4EECAC"></a>
 
 
-### <a name="sample-response"></a>샘플 응답입니다.
+### <a name="sample-response"></a>예제 응답
 
 
 ```cpp

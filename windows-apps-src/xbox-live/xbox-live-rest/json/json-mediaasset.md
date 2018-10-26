@@ -7,16 +7,14 @@ description: " MediaAsset(JSON)"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a5a56b524dbf88d96a34f769f7a25bed7bca8a1d
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 832e6aa44a320c6d3d1c5a339a839c7b6074a8d0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481989"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5548983"
 ---
 # <a name="mediaasset-json"></a>MediaAsset(JSON)
 도전 과제 또는 해당 보상와 관련 된 미디어 자산입니다.

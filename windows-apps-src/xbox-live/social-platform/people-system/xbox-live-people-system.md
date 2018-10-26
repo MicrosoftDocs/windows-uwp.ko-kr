@@ -6,16 +6,14 @@ ms.assetid: f1881a52-8e65-4364-9937-d2b8b8476cbf
 ms.author: aablackm
 ms.date: 03/19/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 소셜, 사용자가 시스템, 친구
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ab0add0f379654be1285faac85690794bf48f9e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 10b7baaef13d7358aa8f4161d21b2fe63d917565
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5477857"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5547896"
 ---
 # <a name="xbox-live-people-system"></a>Xbox Live 피플 시스템
 

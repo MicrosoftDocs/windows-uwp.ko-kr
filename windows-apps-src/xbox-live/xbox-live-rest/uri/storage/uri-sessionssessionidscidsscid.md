@@ -7,19 +7,17 @@ description: " /sessions/{sessionId}/scids/{scid}"
 ms.author: kevinasg
 ms.date: 20-12-2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b90272b9674e3c16ad48e66a835220575684714
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: adacabd7a1491266abae63da0e4fd709129382a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469294"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5541876"
 ---
 # <a name="sessionssessionidscidsscid"></a>/sessions/{sessionId}/scids/{scid}
-이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri의 도메인은 `titlestorage.xboxlive.com`.
+이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -36,7 +34,7 @@ ms.locfileid: "5469294"
 <a id="ID4E3B"></a>
 
  
-## <a name="valid-methods"></a>올바른 방법
+## <a name="valid-methods"></a>유효한 메서드
 
 [GET](uri-sessionssessionidscidsscid-get.md)
 
