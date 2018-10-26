@@ -4,23 +4,21 @@ layout: LandingPage
 Description: See how to publish your Windows apps to the Microsoft Store.
 title: Windows 앱 게시
 ms.author: wdg-dev-content
-ms.date: 01/08/2018
+ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게시, 판매, 배포, Microsoft Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
-ms.localizationpriority: high
-ms.openlocfilehash: 37cfce48a60f95109dfff99b45750fa8fbe1f220
-ms.sourcegitcommit: 4e39a2bdb5b895ed09b64957dc1a86ccf1f8e1af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 98e47934f936b6995ab37623b610869219254b85
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "1718667"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566124"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  
-Windows 개발자 센터 대시보드를 사용하여 Microsoft Store에 앱 및 게임을 게시할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
+Microsoft Store에 앱 및 게임을 게시 하려면 [Windows 개발자 센터 대시보드에서](https://partner.microsoft.com/dashboard) 사용할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -123,8 +121,8 @@ Windows 개발자 센터 대시보드를 사용하여 Microsoft Store에 앱 및
                 </div>
                 <div class="cardText">
                     <h3>앱 홍보</h3>   
-                    <p><a href="generate-promotional-codes.md">홍보 코드 생성</a></p>
                     <p><a href="create-an-ad-campaign-for-your-app.md">광고 캠페인 만들기</a></p>
+                    <p><a href="generate-promotional-codes.md">홍보 코드 생성</a></p>
                     <p><a href="put-apps-and-add-ons-on-sale.md">할인 판매 제공</a></p>
                 </div>
             </div>

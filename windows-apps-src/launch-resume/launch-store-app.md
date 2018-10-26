@@ -1,29 +1,27 @@
 ---
 author: TylerMSFT
 title: Microsoft Store 앱 실행
-description: 이 항목에서는 ms-windows-store URI 스키마에 대해 설명합니다. 앱이 URI 체계를 사용 하 여 저장소의 특정 페이지에 Microsoft 저장소 응용 프로그램을 실행 수 있습니다.
+description: 이 항목에서는 ms-windows-store URI 스키마에 대해 설명합니다. 앱은 스토어의 특정 페이지를 Microsoft Store 앱을 시작 하려면이 URI 체계를 사용할 수 있습니다.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b97e4da92a7cd4066ca555189f052e3e82006fe
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975655"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571944"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Microsoft Store 앱 열기
 
 
 
-이 항목에서는 **ms-windows-store:** URI 스키마를 설명합니다. 앱이 URI 체계를 사용 하 여 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용 하 여 저장소의 특정 페이지에 Microsoft 저장소 응용 프로그램을 실행 수 있습니다.
+이 항목에서는 **ms-windows-store:** URI 스키마를 설명합니다. 앱은 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용 하 여 스토어의 특정 페이지를 Microsoft Store 앱을 시작 하려면이 URI 체계를 사용할 수 있습니다.
 
-이 예제에서는 게임 페이지로 저장소를 여는 방법을 보여줍니다.
+이 예제에서는 스토어에 게임 페이지를 여는 방법을 보여 줍니다.
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
@@ -139,6 +137,6 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 </table>
 
- 
+ 
 
- 
+ 

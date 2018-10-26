@@ -6,15 +6,13 @@ keywords: UWP, Windows 10, 텍스트, 쓰기, 음성, 톤, 디자인, UI, UX
 ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a2feb7f21f9a307632b08714ff617a4ce3aa649
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 8022b3bb5ca312be259c554f46dc9f432ea3caeb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843293"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571488"
 ---
 # <a name="writing-style"></a>쓰기 스타일
 
@@ -42,25 +40,46 @@ ms.locfileid: "1843293"
 
 사용자가 텍스트를 한눈에 읽고 이해할 수 있어야 합니다. 불필요한 수식어로 도입부를 채우지 마세요. 요점을 가장 눈에 띄게 하고, 항상 핵심 아이디어를 먼저 제시한 후 덧붙이세요.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) **필터**를 선택하여 이미지에 효과를 추가합니다.
-:::column-end::: :::column::: ![금지 사항](images/dont.svg) 이미지에 시각 효과나 기능 변경을 추가하려면 **필터**를 선택하세요.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        Select **filters** to add effects to your image.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        If you want to add visual effects or alterations to your image, select **filters.**
+    :::column-end:::
+:::row-end:::
 
 ## <a name="emphasize-action"></a>동작을 강조
 
 앱은 동작으로 정의됩니다. 사용자는 앱을 사용할 때 동작을 취하고 앱은 동작을 통해 사용자에게 응답합니다. 앱 전체에 *능동형* 텍스트를 사용하세요. 사람들과 기능은 동작을 수동적으로 받아들이는 것이 아니라, 동작을 수행하는 주체여야 합니다.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) 앱을 다시 시작하여 변경 사항을 확인하세요.
-:::column-end::: :::column::: ![금지 사항](images/dont.svg) 앱이 다시 시작되면 변경 사항이 적용됩니다.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        Restart the app to see your changes.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        The changes will be applied when the app is restarted.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="short-and-sweet"></a>짧고 친근하게
 
 사용자는 텍스트를 훑어보고, 상당한 분량을 통째로 건너뛰기도 합니다. 꼭 필요한 정보와 설명을 생략할 필요는 없지만, 필요 이상으로 장황하게 늘어놓지 마세요. 경우에 따라 짧은 문장이나 단문을 나열해야 할 수 있습니다. 또 어떤 경우, 긴 문장에 사용할 단어와 구조를 까다롭게 골라야 한다는 뜻이기도 합니다.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) 이미지를 업로드할 수 없습니다. 이 문제가 다시 발생하면 앱을 다시 시작해보세요. 하지만 걱정 마세요. 앱을 다시 시작해도 이미지는 대기 상태로 유지됩니다.
-:::column-end::: :::column::: ![금지 사항](images/dont.svg) 오류가 발생하여 이미지를 업로드할 수 없습니다. 다시 시도하시고, 이 문제가 다시 발생할 경우, 앱을 다시 시작해야 할 수 있습니다. 하지만 걱정 마세요. 로컬로 작업 내용을 저장했으며 앱을 다시 시작해도 이미지는 대기 상태로 유지됩니다.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        We couldn't upload the picture. If this happens again, try restarting the app. But don't worry — your picture will be waiting when you come back.
+    :::column-end:::
+    :::column:::
+        ![Don't](images/dont.svg)
+        An error occured, and we weren't able to upload the picture. Please try again, and if you encounter this problem again, you may need to restart the app. But don't worry — we've saved your work locally, and it'll be waiting for you when you come back.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="style-conventions"></a>스타일 규칙
 
@@ -73,8 +92,14 @@ ms.locfileid: "1843293"
 * '우리'는 여러분 자신의 관점을 말합니다. 친근하면서도 사용자가 환경의 일부인 것 같은 생각이 들게 해줍니다.
 * 여러분이 앱을 만들었더라도 '나' 또는 '저'와 같은 단어를 사용하지 말고 앱의 관점으로 말합니다.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) 해당 위치에 파일을 저장할 수 없습니다.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        We couldn't save your file to that location.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="abbreviations"></a>약어
 
@@ -84,8 +109,14 @@ ms.locfileid: "1843293"
 * 너무 유사한 약어를 여러 개 사용하지 마세요.
 * 앱을 지역화하거나 사용자들이 영어를 두 번째 언어로 사용하는 경우에도 약어를 사용하지 마십시오.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) 유니버설 Windows 플랫폼(UWP) 디자인 지침은 세련되고 아름다운 앱을 디자인 및 빌드하기 위한 리소스입니다. 모든 UWP 앱에 포함된 디자인 기능을 사용하여 다양한 디바이스에서 크기를 조정할 수 있는 UI(사용자 인터페이스)를 빌드할 수 있습니다.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        The Universal Windows Platform (UWP) design guidance is a resource to help you design and build beautiful, polished apps. With the design features that are included in every UWP app, you can build user interfaces (UI) that scale across a range of devices.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="contractions"></a>축약
 
@@ -93,8 +124,14 @@ ms.locfileid: "1843293"
 * 텍스트에 자연스럽게 어울리는 축약을 사용합니다.
 * 공간을 절약하거나 좀 더 전문적으로 보이기 위해 부자연스러운 축약을 사용하지 마세요.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) 이미지가 마음에 들면 **저장**을 선택하여 갤러리에 추가하세요. 갤러리에서 친구들과 공유할 수 있습니다.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        When you're happy with your image, select **save** to add it to your gallery. From there, you'll be able to share it with friends.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="periods"></a>마침표
 
@@ -102,12 +139,18 @@ ms.locfileid: "1843293"
 * 도구 설명, 오류 메시지, 대화 상자에서 전체 문장을 끝낼 때에는 마침표를 사용합니다.
 * 단추, 라디오 단추, 레이블 또는 확인란의 텍스트 끝에 마침표를 사용하지 마세요.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) <b>연결되지 않았습니다.</b>
-* 네트워크 케이블이 연결되어 있는지 확인하세요.
-* 비행기 모드로 설정되어 있는지 확인하세요.
-* 무선 스위치가 켜져 있는지 확인합니다.
-* 라우터를 다시 시작합니다.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>You’re not connected.</b>
+        * Check that your network cables are plugged in.
+        * Make sure you're not in airplane mode.
+        * See if your wireless switch is turned on.
+        * Restart your router.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ### <a name="capitalization"></a>대문자 표시
 
@@ -115,11 +158,17 @@ ms.locfileid: "1843293"
 * 적절한 명사를 대문자로 씁니다.
 * 앱에서 모든 텍스트 문자열은 대문자로 시작하고, 모든 문장, 라벨, 제목은 대문자로 시작합니다.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) <b>어떤 문제가 있으신가요?</b>
-* 암호를 잊었습니다.
-* 암호가 틀렸습니다.
-* 다른 사람이 내 계정을 사용하고 있을 수도 있습니다.
-:::column-end::: :::column::: :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>Which part is giving you trouble?</b>
+        * I forgot your password.
+        * It won't accept password.
+        * Someone else might be using my account.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="error-messages"></a>오류 메시지
 
@@ -133,16 +182,24 @@ ms.locfileid: "1843293"
 
 * **간결하고 명확** 관련 없는 정보는 제공하지 않습니다.
 
-:::row::: :::column::: ![권장 사항](images/do.svg) <b>연결되지 않았습니다.</b>
-* 네트워크 케이블이 연결되어 있는지 확인하세요.
-* 비행기 모드로 설정되어 있는지 확인하세요.
-* 무선 스위치가 켜져 있는지 확인합니다.
-* 라우터를 다시 시작합니다.
-:::column-end::: :::column::: :::column-end::: :::row-end::: 
+:::row:::
+    :::column:::
+        ![Do](images/do.svg)
+        <b>You’re not connected.</b>
+        * Check that your network cables are plugged in.
+        * Make sure you're not in airplane mode.
+        * See if your wireless switch is turned on.
+        * Restart your router.
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end::: 
 
 ## <a name="dialogs"></a>대화 상자
 
-:::row::: :::column::: 오류 메시지를 작성할 때 적용되는 대다수 조언이 앱의 대화 상자 텍스트를 작성할 때에도 적용됩니다. 대화 상자는 사용자가 예상하는 부분이지만 그렇더라도 앱의 정상적인 흐름을 방해하므로 사용자가 하던 작업으로 잘 돌아갈 수 있도록 유용하고 간결해야 합니다.
+:::row:::
+    :::column:::
+        Many of the same advice for writing error messages also applies when creating the text for any dialogs in your app. While dialogs are expected by the user, they still interrupt the normal flow of the app, and need to be helpful and concise so the user can get back to what they were doing.
 
         But most important is the "call and response" between the title of a dialog and its buttons. Make sure that your buttons are clear answers to the question posed by the title, and that their format is consistent across your app.
     :::column-end:::
@@ -157,9 +214,17 @@ ms.locfileid: "1843293"
 
 ## <a name="buttons"></a>단추
 
-:::row::: :::column::: 단추의 텍스트는 사용자가 한눈에 읽을 수 있을 만큼 간결해야 하며 단추의 기능을 즉시 명확하게 알 수 있을 만큼 충분히 명료해야 합니다. 단추에 표시되는 가장 긴 텍스트는 짧은 두 단어로 이루어져야 하며, 대다수는 이보다 더 짧아야 합니다.
-단추 텍스트를 작성할 때에는 모든 단추가 작동을 나타낸다는 점을 명심해야 합니다. 단추 텍스트에서 *능동형*을 사용하고 반응보다는 작동을 나타내는 단어를 사용합니다.
-:::column-end::: :::column::: ![권장 사항](images/do.svg) * 지금 설치 * 공유 :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Text on buttons needs to be concise enough that users can read it all at a glance and clear enough that the button's function is immediately obvious. The longest the text on a button should ever be is a couple short words, and many should be shorter than that.
+        When writing the text for buttons, remember that every button represents an action. Be sure to use the *active voice* in button text, to use words that represent actions rather than reactions.
+    :::column-end:::
+    :::column:::
+        ![Do](images/do.svg)
+        * Install now
+        * Share
+    :::column-end:::
+:::row-end:::
 
 ## <a name="spoken-experiences"></a>음성 환경
 

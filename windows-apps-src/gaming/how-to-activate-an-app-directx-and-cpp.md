@@ -6,19 +6,18 @@ ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx, 활성화
-ms.openlocfilehash: 4d3585e28ca4a3665a881df4f16a3cc3f82fcc52
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: b7f700ab97566ad9ec03d0595c55721dd9a9be98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218889"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572063"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>앱 활성화 방법(DirectX 및 C++)
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 UWP(유니버설 Windows 플랫폼) DirectX 앱에 대한 활성화 환경을 정의하는 방법을 보여 줍니다.
 
@@ -91,9 +90,9 @@ void App::Run()
 * [앱 일시 중단 방법(DirectX 및 C++)](how-to-suspend-an-app-directx-and-cpp.md)
 * [앱 다시 시작 방법(DirectX 및 C++)](how-to-resume-an-app-directx-and-cpp.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ description: 주변 광원 센서를 사용하여 광원 변화를 탐지하는 
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfb0fe768651e76d18c9c88a2dd36032be21977d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: e6f7f838e5640f873593ac2e08c6a9b30f5258e5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958728"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568422"
 ---
 # <a name="use-the-light-sensor"></a>광원 센서 사용
 
@@ -35,7 +33,7 @@ ms.locfileid: "958728"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트에 대해 알고 있어야 합니다.
+응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트 잘 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 주변 광원 센서를 지원해야 합니다.
 

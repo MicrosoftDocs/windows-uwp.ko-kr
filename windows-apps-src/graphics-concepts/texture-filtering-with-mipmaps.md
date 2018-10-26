@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: af0c9c7013b663bceb5c3747ff5d5250f62c54c7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d32d5a77fe9bc840ea676c7156c1b59e498d07e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044572"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571642"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Mipmap을 사용하는 텍스처 필터링
 
@@ -51,9 +49,9 @@ Mipmap을 사용하려면 응용 프로그램이 Mipmap 세트를 생성해야 �
 
 Mipmap 텍스처는 렌더링 시간을 줄일 목적으로 3D 장면에 사용됩니다. 또한 장면의 현실감을 높이기도 합니다. 단, 종종 많은 양의 메모리가 필요합니다.
 
-**참고** Mipmap 사슬에서 각 표면의 크기는 선행 표면의 크기보다 50% 작습니다. 예를 들어 최상위 Mipmap의 크기가 256x128이라면, 두 번째 Mipmap의 크기가 128x64이고, 세 번째가 64x32인 식으로 이어져 1x1까지 계속 됩니다. 수준에서 다수의 Mipmap 수준을 요청할 수는 없습니다. 사슬의 Mipmap 너비 또는 높이가 1보다 작아질 수도 있기 때문입니다. 쉽게 말해서 최상위 Mipmap 표면의 크기가 4x2라면 수준에서 허용되는 최대 값은 3입니다. 최상위 크기가 4x2이면, 두 번째는 2x1이고, 세 번째는 1x1이 됩니다. 수준에서 값을 3보다 크게 설정하면 두 번째 Mipmap의 높이가 분수 값이 되어 사용할 수 없습니다.
+**참고**  체인에서 이전 표면의 절반은 mipmap 사슬에서 각 표면 차원이 합니다. 예를 들어 최상위 Mipmap의 크기가 256x128이라면, 두 번째 Mipmap의 크기가 128x64이고, 세 번째가 64x32인 식으로 이어져 1x1까지 계속 됩니다. 수준에서 다수의 Mipmap 수준을 요청할 수는 없습니다. 사슬의 Mipmap 너비 또는 높이가 1보다 작아질 수도 있기 때문입니다. 쉽게 말해서 최상위 Mipmap 표면의 크기가 4x2라면 수준에서 허용되는 최대 값은 3입니다. 최상위 크기가 4x2이면, 두 번째는 2x1이고, 세 번째는 1x1이 됩니다. 수준에서 값을 3보다 크게 설정하면 두 번째 Mipmap의 높이가 분수 값이 되어 사용할 수 없습니다.
 
- 
+ 
 
 Direct3D는 Mipmap 텍스처 필터링을 자동 실행할 수 있습니다. 응용 프로그램은 Mipmap 사슬을 수동으로 횡단하여 사슬의 각 표면에 비트맵 데이터를 로드할 수 있습니다. 종종 사슬을 횡단하는 이유는 단 하나입니다. 텍스처 생성 시 Mipmap을 자동으로 생성하게 하면 Mipmap이 비디오 메모리에 상주하여 하드웨어 필터링을 이용하기 때문입니다.
 
@@ -62,9 +60,9 @@ Direct3D는 Mipmap 텍스처 필터링을 자동 실행할 수 있습니다. 응
 
 [텍스처 필터링](texture-filtering.md)
 
- 
+ 
 
- 
+ 
 
 
 

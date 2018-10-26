@@ -6,19 +6,18 @@ ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 그림자 맵, directx
-ms.openlocfilehash: e4cffcf1e9655d5bc5dacbfc17cb64b5671d7551
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a9c53578fc67c13aafa1c8e39ad1d2910981081d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219074"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568797"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>다양한 하드웨어에서 그림자 맵 지원
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 더 빠른 디바이스에서 충실도가 더 높은 그림자를 렌더링하고 덜 강력한 디바이스에서 보다 빠른 그림자를 렌더링합니다. [연습의 4부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
@@ -175,9 +174,9 @@ Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 �
 </FxCompile>
 ```
 
- 
+ 
 
- 
+ 
 
 
 

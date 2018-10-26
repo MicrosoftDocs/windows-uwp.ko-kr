@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cd6f279505a960be0b9e1e2e5918a769ff56930
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e48045e27e8ee7796f5dda2afb691a9f6e5371b2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655062"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565341"
 ---
 # <a name="control-patterns-and-interfaces"></a>컨트롤 패턴 및 인터페이스  
 
@@ -63,7 +61,7 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | 크기 조정, 이동 및 회전할 수 있는 컨트롤에 사용됩니다. 대체로 Transform 컨트롤 패턴과 디자이너, 양식, 그래픽 편집기 및 그리기 응용 프로그램에서 사용됩니다. |
 | **값** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | 클라이언트가 값 범위를 지원하지 않는 컨트롤의 값을 가져오거나 설정할 수 있게 합니다. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | 가상화되었으며 UI 자동화 요소로 액세스할 수 있도록 해야 하는 컨테이너 내부 항목을 표시합니다. |
-| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | 기본 개념인 창 관련 정보를 Microsoft Windows 운영 체제에 표시합니다. 창인 컨트롤의 예로 자식 창과 대화 상자가 있습니다. |
+| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | MicrosoftWindows 운영 체제 개념인 창 관련 정보를 노출합니다. 창인 컨트롤의 예로 자식 창과 대화 상자가 있습니다. |
 
 > [!NOTE]
 > 기존 XAML 컨트롤에서 이러한 패턴이 모두 구현되지는 않았을 수 있습니다. 일부 패턴에는 일반적인 UI 자동화 프레임워크 패턴 정의에서 패리티를 지원하고 사용자 지정 구현을 통해 해당 패턴을 지원해야 하는 자동화 피어 시나리오를 지원할 용도로만 인터페이스가 있습니다.

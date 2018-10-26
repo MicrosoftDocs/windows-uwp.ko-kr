@@ -5,16 +5,14 @@ description: 앱 UI에서 입력 기반 애니메이션을 사용하는 방법�
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 79fae5c890757ebe5daf27734a059bbbe4f693ee
-ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
-ms.translationtype: HT
+ms.openlocfilehash: 04eabb4c70143a08f5b850e6444f7f3d21a9dd4a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
-ms.locfileid: "1480599"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566915"
 ---
 # <a name="input-driven-animations"></a>입력 기반 애니메이션
 

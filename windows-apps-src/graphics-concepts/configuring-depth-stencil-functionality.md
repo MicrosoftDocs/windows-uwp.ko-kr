@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 181b958009a5537f7adccb1b784dacde06fe21d4
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 3c15ff6aa43540b61b410525e6bb20a0de3da821
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044772"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570793"
 ---
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>깊이 스텐실 기능 구성
 
@@ -87,7 +85,7 @@ Direct3D 응용 프로그램은 데칼링을 사용하여 특정 원형 이미�
 
 첫 번째 렌더는 전면 다각형을 그린 다음 스텐실 버퍼 값을 점증시킵니다. 두 번째 렌더는 섀도 볼륨의 후면 다각형을 그린 다음 스텐실 버퍼 값을 점감시킵니다.
 
-일반적으로 모든 증가 및 감소 값 취소 서로 합니다. 그러나 장면 이미 일부 픽셀 그림자 볼륨 렌더링 되는 대로 z 버퍼 테스트 실패를 일으키는 일반 기 하 도형 렌더링 합니다. 스텐실 버퍼에 남은 값이 그림자의 픽셀에 해당합니다. 이 나머지 스텐실 버퍼 내용은 마스크로 사용되어 전부를 포함하는 큰 검은색 사각형을 장면에 알파 혼합합니다. 스텐실 버퍼가 마스크로 작용하므로 결과는 그림자 안의 픽셀이 어두워지는 것입니다.
+일반적으로 모든 증가 및 감소 값 서로 위배 됩니다. 하지만 장면은 이미 정상 기 하 도형 일부 픽셀이 섀도 볼륨이 렌더링 될 z 버퍼 테스트에서 실패 원인을 사용 하 여 렌더링 합니다. 스텐실 버퍼에 남은 값이 그림자의 픽셀에 해당합니다. 이 나머지 스텐실 버퍼 내용은 마스크로 사용되어 전부를 포함하는 큰 검은색 사각형을 장면에 알파 혼합합니다. 스텐실 버퍼가 마스크로 작용하므로 결과는 그림자 안의 픽셀이 어두워지는 것입니다.
 
 즉, 그림자 기하 도형을 광원당 두 번 그립니다. 그러므로 GPU의 꼭짓점 처리량에 부담을 줍니다. 양면 스텐실 기능은 이 상황을 완화하기 위해 고안되었습니다. 이 접근 방법에는 전면 삼각형과 후면 삼각형에 대해 각각 하나씩, 두 개의 스텐실 상태 집합(이름은 아래에서 설명)이 있습니다. 이러한 방식으로 섀도 볼륨당, 조명당 단일 패스만 그려집니다.
 

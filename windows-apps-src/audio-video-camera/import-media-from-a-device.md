@@ -6,16 +6,14 @@ title: 미디어 가져오기
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d456c2030180c73aba39a1e9a613bb68254384bd
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 36f8956e2ca167d98bb8e6ecf35ce3d131d7b032
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692208"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564920"
 ---
 # <a name="import-media-from-a-device"></a>디바이스에서 미디어 가져오기
 

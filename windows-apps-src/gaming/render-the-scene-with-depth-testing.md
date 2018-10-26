@@ -6,19 +6,18 @@ ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 렌더링, 장면, 깊이 테스트, direct3d, 그림자
-ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dc776a60e771cc8d5961e8c7b9c67eb99fabea3a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218851"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569025"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>깊이 테스트로 장면 렌더링
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다. [연습의 3부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
@@ -161,9 +160,9 @@ return float4(input.color * ambient, 1.f);
 
 이 연습의 다음 부분에서 [다양한 하드웨어의 그림자 맵 지원](target-a-range-of-hardware.md) 방법에 대해 알아보세요.
 
- 
+ 
 
- 
+ 
 
 
 

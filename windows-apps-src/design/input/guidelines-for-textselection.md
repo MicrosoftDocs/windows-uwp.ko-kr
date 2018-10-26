@@ -9,15 +9,13 @@ keywords: 키보드, 텍스트, 입력, 사용자 조작
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e28d90cdac94f4eafa153de161a338b9d4c7bf5e
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: c0bc236fd3e9e37a759f83e3f24bfcad4817f068
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653892"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564371"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 
@@ -51,20 +49,20 @@ ms.locfileid: "1653892"
 
 **고려 사항 및 권장 지침**
 
-Windows의 언어 프레임워크를 통해 표시된 기본 제공 컨트롤을 사용하여 선택 및 조작 동작을 비롯한 전체 플랫폼 사용자 조작 환경을 제공하는 앱을 빌드합니다. 기본 제공 컨트롤의 조작 기능은 대부분의 UWP 앱에서 충분히 작동합니다.
+선택 및 조작 동작을 비롯 한 전체 플랫폼 사용자 조작 환경을 제공 하는 Windowsto 빌드 앱의 언어 프레임 워크를 통해 노출 하는 기본 제공 컨트롤을 사용 합니다. 기본 제공 컨트롤의 조작 기능은 대부분의 UWP 앱에서 충분히 작동합니다.
 
 표준 UWP 텍스트 컨트롤을 사용할 경우에는 이 항목에 설명된 선택 동작 및 시각 효과를 사용자 지정할 수 없습니다.
 
 **텍스트 선택**
 
-텍스트 선택을 지원하는 사용자 지정 UI가 앱에 필요한 경우 여기에 설명된 Windows 선택 동작을 따르는 것이 좋습니다.
+앱에서 텍스트 선택을 지 원하는 사용자 지정 UI에 필요한 경우에 여기에 설명 된 Windowsselection 동작을 따르는 것이 좋습니다.
 
 **편집 가능 및 편집 불가능 콘텐츠**
 
 
-터치를 사용할 경우 선택 조작은 주로 삽입 커서를 설정하거나 단어를 선택하기 위한 탭하기, 선택 영역을 수정하기 위한 밀기 등의 제스처를 통해 수행됩니다. 다른 Windows 터치 조작과 마찬가지로 시간이 제한된 조작은 정보 UI를 표시하는 길게 누르기 제스처로 제한됩니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
+터치를 사용할 경우 선택 조작은 주로 삽입 커서를 설정하거나 단어를 선택하기 위한 탭하기, 선택 영역을 수정하기 위한 밀기 등의 제스처를 통해 수행됩니다. 다른 Windowstouch 상호 작용에서와 마찬가지로 시간이 제한 된 조작은 누르기 제한 되며 정보 UI를 표시 하는 제스처를 보유 합니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
 
-Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 가능 및 편집 불가능 상태를 인식하고 그에 따라 선택 UI, 피드백 및 기능을 조정합니다.
+두 Windowsrecognizes 가능한 선택 조작에 편집 가능 및 편집 불가능 상태 및 선택 UI, 피드백 및 기능을 적절 하 게 조정 합니다.
 
 **편집 가능 콘텐츠**
 
@@ -82,9 +80,9 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 ![선택 영역 내부 또는 위치 조정 막대를 탭하여(또는 길게 눌러) 상황에 맞는 메뉴를 호출합니다.](images/textselection-show-context.png)
 
-**참고**  철자가 틀린 단어의 경우에는 이러한 조작이 다소 다르게 진행됩니다. 철자가 틀린 것으로 표시된 단어를 탭하면 전체 단어가 강조 표시되고 제안되는 맞춤법 상황에 맞는 메뉴가 호출됩니다.
+**참고**철자가 틀린된 단어의 경우 이러한 조작이 다소 합니다. 철자가 틀린 것으로 표시된 단어를 탭하면 전체 단어가 강조 표시되고 제안되는 맞춤법 상황에 맞는 메뉴가 호출됩니다.
 
- 
+ 
 
 **편집 불가능 콘텐츠**
 
@@ -130,9 +128,9 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 * [입력: Windows 8 제스처 샘플](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [입력: 조작 및 제스처(C++) 샘플](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [DirectX 터치 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

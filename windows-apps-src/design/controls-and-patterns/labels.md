@@ -8,19 +8,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d688e7700218036b8823bc0d70de9234fe74715
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: c17b2a539a01572bed984b86f72f5439896fac87
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1392562"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571606"
 ---
 # <a name="labels"></a>레이블
 
@@ -57,9 +55,9 @@ XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 
 * [RichEditBox.Header 속성](https://msdn.microsoft.com/library/windows/apps/dn252726)
 * [TextBlock 클래스](https://msdn.microsoft.com/library/windows/apps/br209652)
 
- 
+ 
 
- 
+ 
 
 
 

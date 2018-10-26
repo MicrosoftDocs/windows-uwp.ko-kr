@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d78c6e070dd5d29a8e615f70f67507830e5f3938
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a796897aa786283499c25b0f405e302feeb5f938
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653092"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565066"
 ---
 # <a name="creating-streaming-resources"></a>스트리밍 리소스 만들기
 
@@ -48,7 +46,7 @@ ms.locfileid: "1653092"
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="mappings-are-into-a-tile-pool.md">타일 풀에 대한 매핑</a></p></td>
-<td align="left"><p>리소스를 스트리밍 리소스로 만들 때 리소스를 구성하는 타일은 타일 풀의 위치를 가리키는 것에서 시작합니다. 타일 풀은 메모리 풀로서 응용 프로그램에 보이지 않는 장면 뒤에서 하나 이상의 할당으로 지원됩니다.</p></td>
+<td align="left"><p>리소스를 스트리밍 리소스로 만들면 리소스를 구성하는 타일이 타일 풀 내 위치를 가리키는 데서부터 생성됩니다. 타일 풀은 메모리 풀로서 응용 프로그램에 보이지 않는 장면 뒤에서 하나 이상의 할당으로 지원됩니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="streaming-resource-creation-parameters.md">스트리밍 리소스 생성 매개 변수</a></p></td>
@@ -60,7 +58,7 @@ ms.locfileid: "1653092"
 </tr>
 <tr class="even">
 <td align="left"><p><a href="streaming-resource-cross-process-and-device-sharing.md">스트리밍 리소스 프로세스 간 및 장치 공유</a></p></td>
-<td align="left"><p>기존 리소스와 마찬가지로 타일 풀을 다른 프로세스와 공유할 수 있습니다. 타일 풀을 참조하는 스트리밍 리소스는 여러 장치와 프로세스에서 공유할 수 없습니다.</p></td>
+<td align="left"><p>타일 풀은 일반적인 리소스와 마찬가지로 다른 프로세스와 공유할 수 있습니다. 타일 풀을 참조하는 스트리밍 리소스는 여러 장치와 프로세스에서 공유할 수 없습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="operations-available-on-streaming-resources.md">스트리밍 리소스에서 사용할 수 있는 작업</a></p></td>
@@ -77,16 +75,16 @@ ms.locfileid: "1653092"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [스트리밍 리소스](streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

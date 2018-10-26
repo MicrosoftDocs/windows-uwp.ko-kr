@@ -6,17 +6,15 @@ title: Android 및 iOS 개발자용 Windows 앱 개념 매핑
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ddf2066273439f14b63b0594a146927dec23ef6
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 821a28109c511bb2bd96bf5cbccb190cbe928abc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691462"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569542"
 ---
 #<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 

@@ -6,16 +6,14 @@ ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, directx, 리소스 로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983556"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565331"
 ---
 # <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 
@@ -73,7 +71,7 @@ ms.locfileid: "1983556"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="instructions"></a>지침
 
@@ -216,7 +214,7 @@ void ResourceLoading::CreateDeviceResources()
 -   그 뒤 후속 (numVertices \* sizeof(**BasicVertex**)) 비트에는 꼭짓점 데이터가 들어 있습니다.
 -   데이터의 마지막 (numIndices \* 16) 비트에는 unit16 값의 시퀀스로 나타낸 인덱스 데이터가 들어 있습니다.
 
-핵심은 로드한 메시 데이터의 비트 수준 레이아웃을 알아야 하며, endian과 일관성을 유지해야 한다는 것입니다. 모든 Windows 8 플랫폼은 little-endian입니다.
+핵심은 로드한 메시 데이터의 비트 수준 레이아웃을 알아야 하며, endian과 일관성을 유지해야 한다는 것입니다. 모든 Windows8 플랫폼은 little-endian입니다.
 
 예제에서는 **LoadMeshAsync** 메서드에서 CreateMesh 메서드를 호출하여 이 비트 수준 해석을 수행합니다.
 
@@ -707,9 +705,9 @@ task<void> BasicLoader::LoadShaderAsync(
 * [BasicReaderWriter의 전체 코드](complete-code-for-basicreaderwriter.md)
 * [DDSTextureLoader의 전체 코드](complete-code-for-ddstextureloader.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4525cf151d53790a44995bd8a8dd77a88332cdd0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d02bfb8b8bd112a969895d4f2bd5d324fce9d6b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673450"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567645"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  
@@ -29,9 +27,9 @@ ms.locfileid: "1673450"
 
 정기 알림을 사용하면 최소한의 클라우드 서비스와 클라이언트 투자로 앱에서 라이브 타일 업데이트를 받을 수 있습니다. 정기 알림은 동일한 콘텐츠를 다양한 대상에게 배포하는 데 좋은 전달 방법입니다.
 
-**참고**  Windows 8.1용 [푸시 및 정기 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=231476)을 다운로드하고 Windows 10 앱에서 해당 소스 코드를 다시 사용하여 자세히 알아볼 수 있습니다.
+**참고**  Windows8.1에는 [푸시 및 정기 알림 샘플을](http://go.microsoft.com/fwlink/p/?linkid=231476) 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
 
- 
+ 
 
 ## <a name="how-it-works"></a>작동 방식
 
@@ -110,4 +108,4 @@ Windows가 타일에 대해 다운로드할 각 알림의 고유한 URI를 제�
 * [정기적 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761461)
 * [배지에 대해 정기 알림을 설정하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
 * [타일에 대해 정기 알림을 설정하는 방법](https://msdn.microsoft.com/library/windows/apps/hh761476)
- 
+ 

@@ -5,20 +5,18 @@ description: KeyFrame Animation 클래스를 사용하여 시간이 지남에 �
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: c2b349938b22ca1097299bd4c80b75cff2629f07
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: bf6d3f16c7b240ca370c01a787fef09862f35863
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673750"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568820"
 ---
 # <a name="time-based-animations"></a>시간 기반 애니메이션
 
-구성 요소가 도입되거나 전체 사용자 경험이 변경되면 최종 사용자는 시간을 두고 적응하거나 즉시 이를 받아들입니다. Windows 플랫폼에서 전자가 후자보다 선호되는데, 사용자 경험이 급작스럽게 변경되면 최종 사용자들이 적응할 시간이 없어 혼란을 느끼고 당황하기 때문입니다. 그러면 최종 사용자들은 사용 환경이 불안하고 부자연스럽다고 인식합니다.
+구성 요소가 도입되거나 전체 사용자 경험이 변경되면 최종 사용자는 시간을 두고 적응하거나 즉시 이를 받아들입니다. Windows 플랫폼에서 전자가 기본 후자 보다-사용자 경험이 급작스럽게 변경 되 혼동을 줄 고 느끼고 수 없기 때문에 최종 사용자에 게 불편 합니다. 그러면 최종 사용자들은 사용 환경이 불안하고 부자연스럽다고 인식합니다.
 
 대신, 시간을 두고 UI를 변경하여 최종 사용자에게 안내를 제공하거나 경험 변경 내용을 알릴 수 있습니다. Windows 플랫폼에서는 KeyFrameAnimations라고도 하는 시간 기반 애니메이션을 사용하여 이 작업을 수행합니다. KeyFrameAnimations를 사용하면 시간을 두고 UI를 변경하고, 시작 방법 및 시작 시간, 종료 상태에 도달하는 방법을 비롯하여 애니메이션의 각 요소를 제어할 수 있습니다. 예를 들어 300밀리초 동안 새로운 위치에 애니메이션으로 개체를 표현하면 즉시 "이동"되도록 하는 것보다 즐거운 경험이 됩니다. 즉시 변경하는 대신 애니메이션을 사용하면 결과적으로 더 즐겁고 매력적인 경험을 창출할 수 있습니다.
 
@@ -86,17 +84,17 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
 그런 다음 오프셋 속성에 애니메이션을 적용하려고 하므로 Vector3KeyFrameAnimation(오프셋은 Vector3 유형)을 만들어야 합니다. 또한 KeyFrameAnimation에 해당하는 KeyFrames를 정의합니다.
 
 ```csharp
-    Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
-    animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
+    Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
+    animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
 ```
 
 그런 다음 KeyFrameAnimation의 속성을 정의하여, 두 위치(현재 위치와 <200,0,0>) 사이에서 애니메이션을 10회 반복하는 동작과 함께 재생 시간을 설명합니다.
 
 ```csharp
-    animation.Duration = TimeSpan.FromSeconds(2);
-    animation.Direction = Windows.UI.Composition.AnimationDirection.Alternate;
-    // Run animation for 10 times
-    animation.IterationCount = 10;
+    animation.Duration = TimeSpan.FromSeconds(2);
+    animation.Direction = Windows.UI.Composition.AnimationDirection.Alternate;
+    // Run animation for 10 times
+    animation.IterationCount = 10;
 ```
 
 마지막으로, 애니메이션을 실행하려면 CompositionObject의 속성을 기반으로 시작해야 합니다.
@@ -109,13 +107,13 @@ redVisual.StartAnimation("Offset.X", animation);
 
 ```csharp
 private void AnimateSquare(Compositor compositor, SpriteVisual redSquare)
-{ 
-    Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
-    animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
-    animation.Duration = TimeSpan.FromSeconds(2);
-    animation.Direction = Windows.UI.Composition.AnimationDirection.Alternate;
-    // Run animation for 10 times
-    animation.IterationCount = 10;
-    visual.StartAnimation("Offset.X", animation);
-} 
+{ 
+    Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
+    animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
+    animation.Duration = TimeSpan.FromSeconds(2);
+    animation.Direction = Windows.UI.Composition.AnimationDirection.Alternate;
+    // Run animation for 10 times
+    animation.IterationCount = 10;
+    visual.StartAnimation("Offset.X", animation);
+} 
 ```

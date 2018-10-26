@@ -6,16 +6,14 @@ ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx, 섀도 볼륨, 깊이 버퍼, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 369fd133ffba2947b06a3fc9391979c17973ea52
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 269f8423795d7c2515ce555cf8e65f14a8c63431
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653702"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565755"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
 
@@ -54,12 +52,12 @@ ms.locfileid: "1653702"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Direct3D 9 데스크톱 포팅에 그림자 매핑 적용
 
 
-Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가되었습니다. 이제 섀도 볼륨이 포함된 렌더링 코드를 DirectX 11로 마이그레이션할 수 있으므로 Direct3D 11 렌더러가 하위 수준인 기능 수준 9 디바이스와 호환됩니다. 이 연습에서는 깊이 테스트를 사용하여 Direct3D 11 앱이나 게임에서 기존의 섀도 볼륨을 구현할 수 있는 방법을 보여 줍니다. 코드에는 다음 프로세스가 포함됩니다.
+Windows8에서는 기능 수준 9 \_1 및 9 \_3 d 깊이 비교 기능이 있습니다. 이제 섀도 볼륨이 포함된 렌더링 코드를 DirectX 11로 마이그레이션할 수 있으므로 Direct3D 11 렌더러가 하위 수준인 기능 수준 9 디바이스와 호환됩니다. 이 연습에서는 깊이 테스트를 사용하여 Direct3D 11 앱이나 게임에서 기존의 섀도 볼륨을 구현할 수 있는 방법을 보여 줍니다. 코드에는 다음 프로세스가 포함됩니다.
 
 1.  섀도 매핑을 위한 Direct3D 장치 리소스 만들기
 2.  깊이 맵을 만드는 렌더링 단계 추가
@@ -72,7 +70,7 @@ Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가�
 ## <a name="prerequisites"></a>필수 조건
 
 
-[UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 아직 템플릿은 필요하지 않지만 이 연습을 위한 코드 샘플을 작성하려면 Microsoft Visual Studio 2015가 필요합니다.
+[UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요 하지 않지만이 연습에 대 한 코드 샘플을 작성 하려면 Microsoft Visual Studio2015가 필요 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -87,9 +85,9 @@ Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가�
 * [그림자 깊이 맵을 향상시키기 위한 일반적인 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)
 * [중첩된 그림자 맵](https://msdn.microsoft.com/library/windows/desktop/ee416307)
 
- 
+ 
 
- 
+ 
 
 
 

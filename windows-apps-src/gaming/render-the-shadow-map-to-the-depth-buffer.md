@@ -6,19 +6,18 @@ ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 렌더링, 그림자 지도, 깊이 버퍼, direct3d
-ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a73754fef6d87505751460ec134d853c6bca0530
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218850"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570478"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>그림자 맵을 깊이 버퍼로 렌더링
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 광원의 관점에서 렌더링하여 그림자 볼륨을 나타내는 2차원 깊이 맵을 만듭니다. 깊이 맵은 그림자에서 렌더링되는 공간을 마스킹합니다. [연습의 2부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
@@ -153,9 +152,9 @@ PixelShaderInput main(VertexShaderInput input)
 
 이 연습의 다음 부분에서 [깊이 테스트를 통해 렌더링](render-the-scene-with-depth-testing.md)하여 그림자를 추가하는 방법을 알아보세요.
 
- 
+ 
 
- 
+ 
 
 
 

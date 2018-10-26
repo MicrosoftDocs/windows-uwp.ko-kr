@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aa775262fa6c3da499693ac41fbf5fb0348c7de9
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a8523f4895c541ffb3b92ee00d5b62c57343ae00
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653602"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571382"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>HLSL 스트리밍 리소스 노출
 
@@ -112,16 +110,16 @@ HLSL 컴파일러가 클램프를 0.0f으로, 피드백이 사용되지 않는 �
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [스트리밍 리소스에 대한 파이프라인 액세스](pipeline-access-to-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

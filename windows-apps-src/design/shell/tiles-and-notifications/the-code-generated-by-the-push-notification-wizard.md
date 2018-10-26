@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 43c90d3d32876bdfd6b91f597ad94eba33907e90
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 6b39211c4b21a68fc0e563f73805805dcf1f4641
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675200"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570369"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
  
@@ -211,9 +209,9 @@ function sendNotifications(request) {
 
 SendNotifications 함수는 단일 알림을 알림 메시지로 보냅니다. 다른 형식의 푸시 알림을 사용할 수도 있습니다.
 
-**팁**  스크립트를 편집하는 동안 도움말을 보는 방법에 대한 자세한 내용은 [서버 쪽 JavaScript에 IntelliSense 사용](http://go.microsoft.com/fwlink/p/?LinkId=309275)을 참조하세요.
+**팁**스크립트를 편집 하는 동안 도움말을 가져오는 방법에 대 한 자세한 내용은 [서버 쪽 JavaScript에 IntelliSense 사용](http://go.microsoft.com/fwlink/p/?LinkId=309275)을 참조 하세요.
 
- 
+ 
 
 ## <a name="push-notification-types"></a>푸시 알림 형식
 
@@ -237,9 +235,9 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
 
 모바일 서비스에서 예약된 작업을 실행하여 푸시 알림을 보낼 수도 있습니다. [모바일 서비스에서 되풀이 작업 예약](http://go.microsoft.com/fwlink/p/?linkid=301694)을 참조하세요.
 
-**경고**  한 번 푸시 알림 마법사를 실행한 후에는 다른 모바일 서비스에 대한 등록 코드를 추가하기 위해 마법사를 다시 실행하지 마세요. 프로젝트당 마법사를 두 번 이상 실행하면 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync) 메서드에 대한 호출이 겹치게 되어 런타임 예외를 발생하는 코드가 생성됩니다. 두 개 이상의 모바일 서비스에 대해 푸시 알림을 등록하려면 마법사를 한 번 실행한 다음 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출이 동시에 실행되지 않도록 등록 코드를 다시 작성합니다. 예를 들어 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출을 포함하여 push.register.\*의 마법사 생성 코드를 OnLaunched 이벤트 외부로 이동하면 이 작업을 완료할 수 있지만 이 작업의 특징은 앱의 아키텍처에 따라 다릅니다.
+**경고**푸시 알림 마법사를 한 번 실행 한 후 다시 실행 하지 마세요 마법사는 다른 모바일 서비스에 대 한 등록 코드를 추가 합니다. 프로젝트당 마법사를 두 번 이상 실행하면 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync) 메서드에 대한 호출이 겹치게 되어 런타임 예외를 발생하는 코드가 생성됩니다. 두 개 이상의 모바일 서비스에 대해 푸시 알림을 등록하려면 마법사를 한 번 실행한 다음 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출이 동시에 실행되지 않도록 등록 코드를 다시 작성합니다. 예를 들어 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출을 포함하여 push.register.\*의 마법사 생성 코드를 OnLaunched 이벤트 외부로 이동하면 이 작업을 완료할 수 있지만 이 작업의 특징은 앱의 아키텍처에 따라 다릅니다.
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -249,9 +247,9 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
 * [Microsoft Azure Mobile Services에 연결(JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
 * [Microsoft Azure Mobile Services에 연결(C#/C++/VB )](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
 * [빠른 시작: 모바일 서비스에 대한 푸시 알림 추가(JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
- 
+ 
 
- 
+ 
 
 
 

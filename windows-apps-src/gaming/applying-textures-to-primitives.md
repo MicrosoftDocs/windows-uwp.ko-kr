@@ -6,19 +6,18 @@ ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 텍스처, directx
-ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 252613bbea7f4cdb720758d3435cf0920dd93efa
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219122"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567334"
 ---
 # <a name="apply-textures-to-primitives"></a>기본 요소에 텍스처 적용
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 여기에서는 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서 만든 큐브를 사용해 원시 텍스처 데이터를 로드하고 3D 원형에 적용합니다. 또한 광원과의 거리 및 각도에 따라 큐브 표면이 더 밝거나 더 어두워지는 간단한 닷(dot) 제품 조명 모델을 소개합니다.
 
@@ -523,9 +522,9 @@ private:
 
 원시 텍스처 데이터를 로드하여 3D 원형에 적용했습니다.
 
- 
+ 
 
- 
+ 
 
 
 

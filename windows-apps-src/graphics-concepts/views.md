@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d294418338056e0ff5fb2eca936673eb8e11f76
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 77ac16c55bb4292ea7c5362d007ff9569812954f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652832"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566134"
 ---
 # <a name="views"></a>보기
 
@@ -73,16 +71,16 @@ ms.locfileid: "1652832"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

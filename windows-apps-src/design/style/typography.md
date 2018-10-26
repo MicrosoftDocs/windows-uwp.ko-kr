@@ -5,16 +5,14 @@ title: UWP 앱의 입력 체계
 ms.author: mijacobs
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 505167775b61908be7f47068dbf3221c293f6112
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 62f5aa7d1089b38131c742c588ae741e88197533
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843373"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565013"
 ---
 # <a name="typography"></a>입력 체계
 
@@ -30,9 +28,16 @@ ms.locfileid: "1843373"
 
 영어 이외의 언어를 표시하거나 앱의 다른 글꼴을 선택하려면 UWP 앱의 권장 글꼴에서 [언어](#Languages) 및 [글꼴](#Fonts)을 참조하세요.
 
-:::row::: :::column::: ![허용](images/do.svg) UI 글꼴 하나를 선택합니다.
-:::column-end::: :::column::: ![금지](images/dont.svg) 여러 글꼴을 혼합하지 않습니다.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Pick one font for your UI.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Don't mix multiple fonts.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="size-and-scaling"></a>크기 및 배율
 
@@ -42,14 +47,27 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 크기 조정 시스템의 작동 방식 때문에 실제 픽셀이 아닌 유효 픽셀로 디자인하고 있으므로 화면 크기나 해상도가 다른 경우에도 글꼴 크기를 변경할 필요가 없습니다.
 
-:::row::: :::column::: ![허용](images/do.svg) UWP[유형 램프](#type-ramp) 크기 조정을 따릅니다.
-:::column-end::: :::column::: ![금지](images/dont.svg) 12픽셀보다 작은 글꼴 크기를 사용합니다.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Follow the UWP [type ramp](#type-ramp) sizing.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Use a font size smaller than 12 px.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="hierarchy"></a>계층
 
-:::row::: :::column::: 사용자는 페이지를 검색할 때 시각적 계층 구조에 의존합니다. 헤더는 콘텐츠를 요약하고 본문 텍스트는 자세한 내용을 제공합니다. 앱에서 선명한 시각적 계층 구조를 만들려면 UWP 유형 램프를 따릅니다.
-:::column-end::: :::column::: ![텍스트 차단 스타일](images/type/type-hierarchy.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Users rely on visual hierarchy when scanning a page: headers summarize content, and body text provides more detail. To create a clear visual hierarchy in your app, follow the UWP type ramp.
+    :::column-end:::
+    :::column:::
+        ![text block styles](images/type/type-hierarchy.svg)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="type-ramp"></a>유형 램프
 
@@ -59,8 +77,14 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 
 ### <a name="using-the-type-ramp"></a>유형 램프 사용
 
-:::row::: :::column::: XAML로 유형 램프 수준에 액세스할 수 있습니다[정적 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). 스타일은 `*TextBlockStyle`명명 규칙을 따릅니다.
-:::column-end::: :::column::: ![텍스트 차단 스타일](images/type/text-block-type-ramp.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        You can access levels of the type ramp as XAML [static resources](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). The styles follow the `*TextBlockStyle` naming convention.
+    :::column-end:::
+    :::column:::
+        ![text block styles](images/type/text-block-type-ramp.svg)
+    :::column-end:::
+:::row-end:::
 
 ```XAML
 <TextBlock Text="Header" Style="{StaticResource HeaderTextBlockStyle}"/>
@@ -72,7 +96,10 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
-:::row::: :::column::: ![허용](images/do.svg) 대부분의 텍스트에서 '본문'을 사용합니다.
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Use "Body" for most text.
 
         Use "Base" for titles when space is constrained.
     :::column-end:::
@@ -96,9 +123,16 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 
 ## <a name="character-count"></a>문자 수
 
-:::row::: :::column::: ![허용](images/do.svg) 읽기 쉽도록 한 줄당 50~60자를 유지합니다.
-:::column-end::: :::column::: ![금지](images/dont.svg) 한 줄에 20자 미만 또는 60자 이상을 읽는 것은 어렵습니다.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Keep to 50–60 letters per line for ease of reading.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Less than 20 characters or more than 60 characters per line is difficult to read.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="clipping-and-ellipses"></a>클리핑 및 줄임표
 
@@ -110,9 +144,16 @@ UWP 유형 램프는 페이지에서 유형 스타일 간의 중요한 관계를
 <TextBlock TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
 ```
 
-:::row::::::column::: ![허용](images/do.svg) 여러 줄을 사용할 수 있는 경우 텍스트를 클리핑하고 래핑합니다.
-:::column-end::: :::column::: ![금지](images/dont.svg) 줄임표를 사용하여 시각적으로 깔끔하게 보이도록 합니다.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Clip text, and wrap if multiple lines are enabled.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Use ellipses to avoid visual clutter.
+    :::column-end:::
+:::row-end:::
 
 **참고**: 잘 정의되지 않은(예: 차별화된 배경색 없음) 컨테이너의 경우나 추가 텍스트를 확인해야 하는 링크가 있는 경우 줄임표를 사용합니다.
 

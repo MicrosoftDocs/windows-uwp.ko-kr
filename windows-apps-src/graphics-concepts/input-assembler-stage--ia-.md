@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2127fb58d3af6015316bb714685159f572d013a
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: def755f868c7ea30679f19877cec84b20faa44f5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652852"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564735"
 ---
 # <a name="input-assembler-ia-stage"></a>IA(입력 어셈블러) 단계
 
@@ -70,16 +68,16 @@ IA 단계는 데이터를 원형으로 조합하고, 시스템 생성 값을 연
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

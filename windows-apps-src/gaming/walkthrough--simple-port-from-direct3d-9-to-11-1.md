@@ -6,16 +6,14 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 97cb8341497ad72ab6b4b4f50a7cfbd7bdb4afb7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653102"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569139"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 
@@ -50,7 +48,7 @@ ms.locfileid: "1653102"
 </tbody>
 </table>
 
- 
+ 
 
 이 항목에서는 동일한 기본 그래픽 작업(회전하는 꼭짓점 음영 큐브 표시)을 수행하는 두 가지 코드 경로를 살펴봅니다. 두 경우 모두 코드에 다음 프로세스가 포함됩니다.
 
@@ -72,7 +70,7 @@ ms.locfileid: "1653102"
 ## <a name="prerequisites"></a>필수 조건
 
 
-[UWP DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 아직 템플릿은 필요하지 않지만 이 연습을 위한 코드 샘플을 로드하려면 Microsoft Visual Studio 2015가 필요합니다.
+[UWP DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요 하지 않지만이 연습에 대 한 코드 샘플을 로드 하려면 Microsoft Visual Studio2015가 필요 합니다.
 
 이 연습에 나온 DirectX 11 및 UWP 프로그래밍 개념을 더 잘 이해하려면 [포팅 개념 및 고려 사항](porting-considerations.md)을 참조하세요.
 

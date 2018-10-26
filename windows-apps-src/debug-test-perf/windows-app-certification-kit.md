@@ -6,16 +6,14 @@ description: 앱은 Microsoft Store에 게시 될 가능성을 제공 하거나 
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: f228cb4783c33bc0ea2acecba79893939cadd91e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5515717"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569058"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 

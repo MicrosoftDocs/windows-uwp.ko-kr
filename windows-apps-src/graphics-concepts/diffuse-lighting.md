@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 84036edd2071d9545b3a492ea5cf0b397d9e722e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 5846edda167823b7ae161d332fbde450ccf20d72
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044432"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572169"
 ---
 # <a name="diffuse-lighting"></a>확산 조명
 
@@ -41,7 +39,7 @@ ms.locfileid: "1044432"
 | Atten           | 해당 없음           | FLOAT         | 조명 감쇠. [감쇠 및 스포트라이트 계수](attenuation-and-spotlight-factor.md)를 참조하세요. |
 | Spot            | 해당 없음           | FLOAT         | 스포트라이트 계수. [감쇠 및 스포트라이트 계수](attenuation-and-spotlight-factor.md)를 참조하세요.  |
 
- 
+ 
 
 감쇠(Atten)나 스포트라이트 특성(Spot)을 계산하려면 [감쇠 및 스포트라이트 계수](attenuation-and-spotlight-factor.md)를 참조하세요.
 
@@ -73,9 +71,9 @@ ms.locfileid: "1044432"
 
 [조명의 수학](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

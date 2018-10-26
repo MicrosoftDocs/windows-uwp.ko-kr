@@ -6,16 +6,14 @@ ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
 ms.author: wdg-dev-content
 ms.date: 05/10/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, 베타 테스트, 제한 배포, 베타, 베타들, 테스트, 테스터
 ms.localizationpriority: medium
-ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: e57490e2ad9c3991baf40b6c4d15d35def59f94f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512604"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569998"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>베타 테스트 및 대상이 지정된 배포
 

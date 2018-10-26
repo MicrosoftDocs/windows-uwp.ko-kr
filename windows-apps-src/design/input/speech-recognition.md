@@ -9,15 +9,13 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e8abeb4cb690f39a5d9145c3975edbb5a5252765
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 7ce8146cc952d22eb0aa365be707cbd2cef7aabf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654522"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567793"
 ---
 # <a name="speech-recognition"></a>음성 인식
 
@@ -53,7 +51,7 @@ ms.locfileid: "1654522"
 
     받아쓰기 문법과 같은 웹 검색 문법에는 사용자가 말할 수 있는 매우 많은 단어 및 구가 포함되어 있습니다. 그러나 웹 검색 문법은 사람들이 일반적으로 웹을 검색할 때 사용하는 용어를 인식하도록 최적화되어 있습니다.
 
-    **참고**  미리 정의된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있으며 장치가 아니라 온라인상에 있으므로 장치에 설치된 사용자 지정 문법만큼 성능이 빠르지 않을 수 있습니다.     
+    **참고**고 온라인 미리 정의 된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있기 때문에 (디바이스)에 없는 성능 하지 않을 디바이스에 설치 된 사용자 지정 문법에서와 마찬가지로 빠릅니다.     
 
     이러한 미리 정의된 문법은 최대 10초의 음성 입력을 인식하는 데 사용할 수 있으며 특별한 작성 작업이 필요하지 않습니다. 그러나 네트워크에 연결되어 있어야 합니다.
 
@@ -104,10 +102,10 @@ ms.locfileid: "1654522"
 
     VCD(음성 명령 정의) XML 파일을 사용하여 사용자가 앱을 활성화할 때 동작을 시작하기 위해 말할 수 있는 명령을 정의합니다. 자세한 내용은 [Cortana에서 음성 명령으로 포그라운드 앱 시작](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana)을 참조하세요.
 
-**참고**  사용할 제약 조건 유형은 만들려는 인식 환경의 복잡성에 따라 다릅니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
+**참고**사용할 제약 조건 유형은 만들려는 인식 환경의 복잡성에 따라 다릅니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
 제약 조건을 시작하려면 [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md)을 참조하세요.
 
- 
+ 
 
 미리 정의된 유니버설 Windows 앱 받아쓰기 문법은 언어의 단어와 짧은 구를 대부분 인식합니다. 사용자 지정 제약 조건 없이 음성 인식기 개체를 인스턴스화할 때 기본적으로 활성화됩니다.
 
@@ -201,9 +199,9 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 * [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **샘플**
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

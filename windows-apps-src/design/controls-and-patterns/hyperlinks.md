@@ -8,20 +8,18 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: kisai
 design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f8fb40b9e249b67c5006a1fd89b06c74aedd8c0
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e6679f789f2530a34a2bf527556c144e7a8e03c3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816888"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566021"
 ---
 # <a name="hyperlinks"></a>하이퍼링크
 

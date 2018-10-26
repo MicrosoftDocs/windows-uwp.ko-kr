@@ -5,16 +5,14 @@ title: C++/WinRT 소개
 ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 7848a0b00e2f6a2bbaa84c413dc26f1ea7238e8e
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 8b88eac972cd65b771827d7e3125476265cf671e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474246"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568462"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -90,7 +88,7 @@ IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스,
 빌드된 Windows 런타임 구성 요소 이진 파일과 이진 파일의 `.winmd`를 UWP 앱에 번들로 추가합니다.
 
 ## <a name="custom-types-in-the-cwinrt-projection"></a>C++/WinRT 프로젝션의 사용자 지정 형식
-C++/WinRT 프로그래밍에서 일부 C++ 표준 라이브러리 데이터 형식을 포함한 표준 C++ 언어 기능과 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 사용할 수 있습니다. 그 밖에도 프로젝션에서 일부 사용자 지정 데이터 형식에 대해서도 알아둘 필요가 있으며, 실제로 사용자 지정 데이터 형식을 사용할 수도 있습니다. 예를 들어 [C++/WinRT 시작](get-started.md)의 빠른 시작 코드 예제에서 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 사용합니다.
+C + + /winrt 프로그래밍에서는 표준 c + + 언어 기능을 사용할 수 및 [표준 c + + 데이터 형식 및 C + + WinRT](std-cpp-data-types.md)&mdash;일부 c + + 표준 라이브러리 데이터 형식이 포함 됩니다. 그 밖에도 프로젝션에서 일부 사용자 지정 데이터 형식에 대해서도 알아둘 필요가 있으며, 실제로 사용자 지정 데이터 형식을 사용할 수도 있습니다. 예를 들어 [C++/WinRT 시작](get-started.md)의 빠른 시작 코드 예제에서 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 사용합니다.
 
 [**winrt::com_array**](/uwp/cpp-ref-for-winrt/com-array)는 임의 시점에서 사용할 가능성이 높은 또 하나의 형식입니다. 하지만 [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) 같은 형식은 직접 사용할 가능성이 비교적 낮습니다. 혹은 사용하지 않도록 선택할 수도 있는데, 이때는 C++ 표준 라이브러리에 해당하는 형식이 표시되더라도 어떤 코드도 변경할 필요 없습니다.
 

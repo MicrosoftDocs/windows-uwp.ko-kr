@@ -5,17 +5,15 @@ title: 사용자 지정 오디오 효과
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: 576277ab4bf3d2ea3bfe679da4039da194aabb70
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: a9c62dac489be07a08acc4ad17ecb79bcc54f57a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843263"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565111"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 
@@ -85,7 +83,7 @@ ms.locfileid: "1843263"
 > 2.  **빌드** 탭을 선택합니다.
 > 3.  **안전하지 않은 코드 허용** 확인란을 선택합니다.
 
- 
+ 
 
 이제 효과에 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 오디오 프레임에서 [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.AudioBuffer) 개체를 가져옵니다. 쓰기 작업을 위해 출력 프레임이 열려 있고 읽기 작업을 위해 입력 프레임이 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
 
@@ -154,7 +152,7 @@ TimeIndependent[**TimeIndependent**](https://msdn.microsoft.com/library/windows/
 * [Win2D 설명서](http://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [미디어 재생](media-playback.md)
 
- 
+ 
 
 
 

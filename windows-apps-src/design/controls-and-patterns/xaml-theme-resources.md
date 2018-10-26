@@ -11,16 +11,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36f7e92f1652b4c67ef63ca3cf3b536126e3c995
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: e576814617204749a37963ac5f2724f290520349
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832711"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567655"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -96,29 +94,58 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
 | SystemListLowColor              | ListLow                | \#19000000 | \#19FFFFFF |
 | SystemListMediumColor           | ListMedium             | \#33000000 | \#33FFFFFF |
 
-:::행::: :::열:::
+:::row:::
+    :::column:::
         #### Light theme
     :::column-end:::
     :::column:::
         #### Dark theme
     :::column-end:::
-:::행 끝:::
+:::row-end:::
 
 #### <a name="base"></a>기본
 
-:::행::: :::열::: ![기본 밝은 테마](images/themes/light-base.png) :::열 끝::: :::열::: ![기본 어두운 테마](images/themes/dark-base.png) :::열 끝::: :::행 끝:::
+:::row:::
+    :::column:::
+        ![The base light theme](images/themes/light-base.png)
+    :::column-end:::
+    :::column:::
+        ![The base dark theme](images/themes/dark-base.png)
+    :::column-end:::
+:::row-end:::
 
 #### <a name="alt"></a>대체
 
-:::행::: :::열::: ![대체 밝은 테마](images/themes/light-alt.png) :::열 끝::: :::열::: ![대체 어두운 테마](images/themes/dark-alt.png) :::열 끝::: :::행 끝:::
+:::row:::
+    :::column:::
+        ![The alt light theme](images/themes/light-alt.png)
+    :::column-end:::
+    :::column:::
+        ![The alt dark theme](images/themes/dark-alt.png)
+    :::column-end:::
+:::row-end:::
 
-#### <a name="list"></a>목록
+#### <a name="list"></a>List
 
-:::행::: :::열::: ![목록 밝은 테마](images/themes/light-list.png) :::열 끝::: :::열::: ![목록 어두운 테마](images/themes/dark-list.png) :::열 끝::: :::행 끝:::
+:::row:::
+    :::column:::
+        ![The list light theme](images/themes/light-list.png)
+    :::column-end:::
+    :::column:::
+        ![The list dark theme](images/themes/dark-list.png)
+    :::column-end:::
+:::row-end:::
 
 #### <a name="chrome"></a>크롬
 
-:::행::: :::열::: ![크롬 밝은 테마](images/themes/light-chrome.png) :::열 끝::: :::열::: ![크롬 어두운 테마](images/themes/dark-chrome.png) :::열 끝::: :::행 끝:::
+:::row:::
+    :::column:::
+        ![The chrome light theme](images/themes/light-chrome.png)
+    :::column-end:::
+    :::column:::
+        ![The chrome dark theme](images/themes/dark-chrome.png)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="windows-system-high-contrast-colors"></a>Windows 시스템 고대비 색
 
@@ -350,7 +377,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 </Style>
 ```
 
-**참고**: [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일에는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)이 가진 텍스트 램프 스타일 중 일부가 없습니다. 이는 주로 **RichTextBlock**에 대한 블록 기반 문서 개체 모델을 사용하면 개별 텍스트 요소에 대한 속성을 더 쉽게 설정할 수 있기 때문입니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
+**참고**: [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일 기능이 **RichTextBlock** 에 대 한 블록 기반 문서 개체 모델을 사용 하면 더 쉽게 개별 텍스트에서 특성을 설정할 수 있기 때문에 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 을 수행 하는 모든 텍스트 램프 스타일 없는 요소입니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
 
 ## <a name="miscellaneous-named-styles"></a>기타 명명된 스타일
 

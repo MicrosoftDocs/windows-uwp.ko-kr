@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d4a5e5a9fa656737ae86451a38a00edbe99c92
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 9bbb723cc039d6ecca8a5ebcd30ef03559076934
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652452"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570833"
 ---
 # <a name="light-mapping-with-textures"></a>텍스처를 사용한 조명 매핑
 
 
-조명 맵은 3D 장면에서 조명에 대한 정보를 포함하는 텍스처 또는 텍스처 그룹입니다. 조명 맵은 원형에 빛과 그림자 영역을 매핑합니다. 멀티패스와 여러 텍스처 혼합을 사용하면 응용 프로그램에서 음영 기술보다 사실적인 모양으로 장면을 렌더링할 수 있습니다.
+조명 맵은 3D 장면에서 조명 정보가 저장되는 텍스처 또는 텍스처 그룹으로서 조명 맵은 원형에 빛과 그림자 영역을 매핑합니다. 멀티패스와 여러 텍스처 혼합을 사용하면 응용 프로그램에서 음영 기술보다 사실적인 모양으로 장면을 렌더링할 수 있습니다.
 
 응용 프로그램에서 3D 장면을 사실적으로 렌더링하려면 광원이 장면 형태에 가져다 주는 효과를 고려해야 합니다. 그런 면에서 기본 및 고우러드 음영 등의 기술은 유용한 도구이지만 충분하지 않을 수 있습니다. Direct3D는 멀티패스와 여러 텍스처 혼합을 지원합니다. 이러한 기능을 통해 응용 프로그램에서 음영 기술 하나만으로 렌더링한 장면보다 사실적인 형태로 장면을 렌더링할 수 있습니다. 하나 이상의 조명 맵을 적용하면 응용 프로그램이 빛과 그림 영역을 원형에 매핑할 수 있습니다.
 
@@ -69,16 +67,16 @@ ms.locfileid: "1652452"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [텍스처](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

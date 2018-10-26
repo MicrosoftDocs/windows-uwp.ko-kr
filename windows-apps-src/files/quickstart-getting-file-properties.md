@@ -6,16 +6,14 @@ description: StorageFile 개체로 표시되는 파일의 최상위, 기본 및 
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3edb012f04026251d151da99f34accb9e1848c3
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 8fc44300376efb5b56f390457e516f35a3ec4202
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662733"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565463"
 ---
 # <a name="get-file-properties"></a>파일 속성 가져오기
 
@@ -32,7 +30,7 @@ ms.locfileid: "1662733"
 > [!NOTE]
 > [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)도 참조하세요.
 
- 
+ 
 
 
 ## <a name="prerequisites"></a>필수 조건
@@ -49,9 +47,9 @@ ms.locfileid: "1662733"
 
 많은 최상위 파일 속성은 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스의 구성원으로 액세스할 수 있습니다. 이러한 속성에는 파일 특성, 콘텐츠 형식, 만든 날짜, 표시 이름, 파일 형식 등이 포함됩니다.
 
-**참고**  **picturesLibrary** 기능을 선언해야 합니다.
+**참고**을 **picturesLibrary** 접근 권한 값을 선언 해야 합니다.
 
- 
+ 
 
 다음 예제에서는 사진 라이브러리의 모든 파일을 열거하고 각 파일의 몇 가지 최상위 속성에 액세스합니다.
 
@@ -142,6 +140,6 @@ foreach (Windows.Storage.StorageFile file in files)
 }
 ```
 
- 
+ 
 
- 
+ 

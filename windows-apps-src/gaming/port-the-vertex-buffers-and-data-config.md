@@ -6,19 +6,18 @@ ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 포트, 꼭짓점 버퍼, 데이터, direct3d
-ms.openlocfilehash: 85e8a47da525c0f5de7e957a0048e245e374dedc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: b32747a4e11d258f71d4e55e41b7f54bb5e99246
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219087"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568442"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>꼭짓점 버퍼 및 데이터 포팅
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -314,9 +313,9 @@ Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때�
 * [꼭짓점 버퍼 및 데이터 포팅](port-the-vertex-buffers-and-data-config.md)
 * [GLSL 포팅](port-the-glsl.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: 공용 컨트롤 시작
 title: 공용 컨트롤 시작
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 4df9785b0d8ccea0561a780fa2b807201332cda8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: bbb07da7fa28aed6e45c97d128f9bd04ca986fe7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219646"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572033"
 ---
 # <a name="getting-started-common-controls"></a>시작: 공용 컨트롤
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 ## <a name="common-controls-list"></a>공용 컨트롤 목록
 
@@ -25,7 +24,7 @@ ms.locfileid: "219646"
 
 UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모양과 기능을 변경할 수 있습니다. 예를 들어 프로젝트에서 [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681) 컨트롤을 사용하는 경우 데스크톱 컴퓨터와 휴대폰에서 서로 다르게 보이고 동작하도록 자체적으로 최적화할 수 있습니다. 아무 작업도 수행할 필요가 없습니다. 컨트롤이 런타임에 자동으로 조정됩니다.
 
-| iOS 컨트롤(클래스/프로토콜) | 해당 Windows 스토어 앱 컨트롤 |
+| iOS 컨트롤(클래스/프로토콜) | 해당 하는 UWP 컨트롤 |
 |------------------------------|--------------------------------------|
 | 활동 표시기(**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> [빠른 시작: 진행률 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) 참조 |
 | 광고 배너 보기(**ADBannerView**) 및 광고 배너 보기 대리자(**ADBannerViewDelegate**) | [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> [앱에서 광고 표시](../monetize/display-ads-in-your-app.md) 참조 |
@@ -33,7 +32,7 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 | 날짜 선택기(UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | 이미지 보기(UIImageView) | [이미지](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> [Image 및 ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) 참조 |
 | 레이블(UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> [빠른 시작: 텍스트 표시](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) 참조 |
-| 지도 보기(MKMapView) 및 지도 보기 대리자(MKMapViewDelegate) | [Windows 스토어 앱용 Bing 지도](http://go.microsoft.com/fwlink/p/?LinkId=263496)(영문) 참조 |
+| 지도 보기(MKMapView) 및 지도 보기 대리자(MKMapViewDelegate) | [UWP 앱 용 Bing 지도](http://go.microsoft.com/fwlink/p/?LinkId=263496) 참조 하세요. |
 | 탐색 컨트롤러(UINavigationController) 및 탐색 컨트롤러 대리자(UINavigationControllerDelegate) | [프레임](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> [탐색](https://msdn.microsoft.com/library/windows/apps/mt187344) 참조 |
 | 페이지 컨트롤(UIPageControl) | [Page](https://msdn.microsoft.com/library/windows/apps/br227503) <br/> [탐색](https://msdn.microsoft.com/library/windows/apps/mt187344) 참조 |
 | 선택기 보기(UIPickerView) 및 선택기 보기 대리자(UIPickerViewDelegate) | [ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348) <br/> [콤보 상자 및 목록 상자 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616)도 참조 |
@@ -54,7 +53,7 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 
 기타 컨트롤에 대해서는 [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/mt185406)을 참조하세요.
 
-**참고** JavaScript 및 HTML을 사용하는 Windows 스토어 앱용 컨트롤 목록은 [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/hh465453)을 참조하세요.
+**참고**JavaScript 및 HTML을 사용 하 여 UWP 앱 용 컨트롤 목록은 [컨트롤 목록을](https://msdn.microsoft.com/library/windows/apps/hh465453)참조 하세요.
 
 ### <a name="next-step"></a>다음 단계
 

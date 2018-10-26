@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06161919c0f0eb041d54a351c08674160e894072
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a2f9bc985b69b71bedfd8d198f2a313f073b81a7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652192"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569764"
 ---
 # <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>스트리밍 리소스 프로세스 및 장치 간 공유
 
@@ -47,16 +45,16 @@ ms.locfileid: "1652192"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [스트리밍 리소스 만들기](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

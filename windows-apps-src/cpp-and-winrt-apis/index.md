@@ -5,16 +5,14 @@ title: C++/WinRT
 ms.author: stwhi
 ms.date: 05/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: b5603063f8038b5617f8a1c2dd7d77d90c702901
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 9f711ebc8d0d2e8dda87355a7894c9d311c6bbc2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5480652"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568452"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 

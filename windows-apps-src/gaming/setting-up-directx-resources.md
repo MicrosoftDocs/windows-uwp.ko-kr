@@ -6,19 +6,18 @@ ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, directx 리소스, 이미지
-ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 24fd038bdd447491da43e5d5803445d00147ba2d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219088"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567708"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a>DirectX 리소스 설정 및 이미지 표시
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 여기에서는 Direct3D 디바이스, 스왑 체인 및 렌더링 대상 보기를 만드는 방법과 렌더링된 이미지를 디스플레이에 표시하는 방법에 대해 설명합니다.
 
@@ -233,7 +232,7 @@ Direct3D 11.1 디바이스를 쿼리하여 기본 DXGI 디바이스를 얻습니
 이전에 최대 프레임 지연을 1로 설정했으므로, Windows에서는 일반적으로 렌더링 루프의 속도를 화면 새로 고침 빈도(보통 60Hz)로 늦춥니다. Windows에서는 앱이 [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)를 호출하면 앱을 절전 모드로 전환하여 렌더링 루프의 속도를 늦춥니다. Windows에서는 화면을 새로 고칠 때까지 앱을 절전 모드로 전환합니다.
 
 ```cpp
-        // Enter the render loop.  Note that Windows Store apps should never exit.
+        // Enter the render loop.  Note that UWP apps should never exit.
         while (true)
         {
             // Process events incoming to the window.
@@ -288,9 +287,9 @@ Direct3D 디바이스, 스왑 체인 및 렌더링 대상 보기를 만들었고
 
 [셰이더 및 그리기 원형 만들기](creating-shaders-and-drawing-primitives.md)
 
- 
+ 
 
- 
+ 
 
 
 

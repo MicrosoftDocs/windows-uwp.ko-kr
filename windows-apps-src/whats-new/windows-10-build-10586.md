@@ -6,16 +6,14 @@ keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
-ms.openlocfilehash: 01dc7b2ef7d55153373bf86e9e24e8703c83d869
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 99abbc0e06f84fea87c4bbc96cb912424f9a2272
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1397338"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569262"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a>개발자용 Windows 10 빌드 10586의 새로운 기능
 

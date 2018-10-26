@@ -6,16 +6,14 @@ ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
 ms.author: elcowle
 ms.date: 09/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 샘플, directx, 구조
 ms.localizationpriority: medium
-ms.openlocfilehash: c26b547d5cc94f3277d0c898804e65d75e6d17e2
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 1272200bf128443c82807aec9df5559f207819e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700879"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569119"
 ---
 # <a name="marble-maze-application-structure"></a>Marble Maze 응용 프로그램 구조
 
@@ -27,7 +25,7 @@ DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스
 > [!NOTE]
 > 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
 
- 
+ 
 ## 
 이 문서에서 게임 코드를 구성하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.
 
@@ -65,7 +63,7 @@ Marble Maze의 일부 구성 요소를 거의 또는 전혀 수정하지 않고 
 | StepTimer.h               | 쉽게 총 시간과 경과 시간을 구할 수 있는 방법을 제공하는 **StepTimer** 클래스를 정의합니다.
 | UserInterface.h, UserInterface.cpp         | 메뉴 시스템, 최고 점수 테이블 등의 사용자 인터페이스와 관련된 기능을 정의합니다.                                                                        |
 
- 
+ 
 
 ##  <a name="design-time-versus-run-time-resource-formats"></a>디자인 타임 및 런타임 리소스 형식
 
@@ -114,7 +112,7 @@ UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 
 > [!NOTE]
 > 준비된 경우 주 메뉴를 표시하고 나머지 자산이 백그라운드에서 계속 로드되도록 허용할 수도 있습니다. 모든 리소스가 로드되기 전에 사용자가 메뉴에서 옵션을 선택하는 경우 진행률 표시줄 등을 표시하여 장면 리소스가 계속 로드되고 있음을 나타낼 수 있습니다.
 
- 
+ 
 
 게임에 비교적 적은 게임 자산이 포함된 경우 두 가지 이유 때문에 게임 자산을 비동기적으로 로드하는 것이 좋습니다. 이유 중 하나는 모든 리소스가 모든 장치와 모든 구성에서 신속하게 로드된다는 보장이 없기 때문입니다. 또한 비동기 로드를 초기에 통합하면 기능을 추가할 때 코드가 쉽게 확장됩니다.
 
@@ -134,7 +132,7 @@ UWP 앱용 비동기 프로그래밍에 대한 자세한 내용은 [C++의 비�
 > [!TIP]
 > Windows 런타임 C++ 라이브러리(DLL)에 포함된 게임 코드를 작성하는 경우, [C++로 UWP 앱용 비동기 작업 만들기](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)를 참조하여 앱 및 다른 라이브러리에서 사용할 수 있는 비동기 작업을 만드는 방법을 알아볼지 여부를 고려합니다.
 
- 
+ 
 
 ## <a name="the-game-loop"></a>게임 루프
 
@@ -431,9 +429,9 @@ void MarbleMazeMain::LoadState()
 * [Marble Maze 샘플 기본 사항](marble-maze-sample-fundamentals.md)
 * [C++ 및 DirectX로 UWP 게임 Marble Maze 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
- 
+ 
 
- 
+ 
 
 
 

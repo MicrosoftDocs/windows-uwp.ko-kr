@@ -6,19 +6,18 @@ ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 일시 중지, directx
-ms.openlocfilehash: 028350f3e4bf6bda5a72663c009e8117c9311b3e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218925"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569654"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>앱 일시 중단 방법(DirectX 및 C++)
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 시스템이 UWP(유니버설 Windows 플랫폼) DirectX 앱을 일시 중단할 때 중요한 시스템 상태 및 앱 데이터를 저장하는 방법을 보여 줍니다.
 
@@ -100,7 +99,7 @@ void App::Run()
 ## <a name="call-trim"></a>Trim() 호출
 
 
-Windows 8.1부터 모든 DirectX Windows 스토어 앱은 일시 중단 시 [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346)을 호출해야 합니다. 이 호출은 앱에 할당된 모든 임시 버퍼를 해제하도록 그래픽 드라이버에 알리는데, 그러면 일시 중단된 상태인 동안 메모리 리소스를 회수하기 위해 앱이 종료되는 가능성이 줄어듭니다. 이것은 Windows 8.1에 대한 인증 요구 사항입니다.
+Windows8.1부터 모든 DirectX UWP 앱 호출 해야 [**idxgidevice3:: Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) 일시 중단 시 합니다. 이 호출은 앱에 할당된 모든 임시 버퍼를 해제하도록 그래픽 드라이버에 알리는데, 그러면 일시 중단된 상태인 동안 메모리 리소스를 회수하기 위해 앱이 종료되는 가능성이 줄어듭니다. Windows8.1에 대 한 인증 요구 사항입니다.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -151,9 +150,9 @@ void DX::DeviceResources::Trim()
 * [앱 다시 시작 방법(DirectX 및 C++)](how-to-resume-an-app-directx-and-cpp.md)
 * [앱 활성화 방법(DirectX 및 C++)](how-to-activate-an-app-directx-and-cpp.md)
 
- 
+ 
 
- 
+ 
 
 
 

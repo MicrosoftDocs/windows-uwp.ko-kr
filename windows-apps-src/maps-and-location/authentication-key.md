@@ -6,20 +6,18 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
-ms.openlocfilehash: 7b964c19933db460b8f6b0cc7791165ad86adb6c
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: c42255ec42432d0674533492e141c4a48f3bb9ff
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665597"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571028"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 [유니버설 Windows 앱](https://msdn.microsoft.com/library/windows/apps/dn894631)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
@@ -35,7 +33,7 @@ ms.locfileid: "665597"
 
 새 키를 만들려면
 
-1.  브라우저에서 Bing 지도 개발자 센터([https://www.bingmapsportal.com](https://www.bingmapsportal.com/))로 이동합니다.
+1.  브라우저에서 Bing 지도 개발자 센터 이동 ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
 
 2.  로그인하라는 메시지가 표시되면 Microsoft 계정을 입력하고 **로그인**을 클릭합니다.
 

@@ -6,16 +6,14 @@ description: Windows.Devices.Power 네임스페이스에서 API를 사용하여 
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c191a9f2da29f0ad10d0ba61507873b4fd652ddc
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c745b99104495b4d0b3c60202c378285dbfdd7b6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959078"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565354"
 ---
 # <a name="get-battery-information"></a>배터리 정보 가져오기
 
@@ -32,7 +30,7 @@ ms.locfileid: "959078"
 
 일부 장치에는 둘 이상의 배터리가 있으며, 각 배터리가 장치의 전체 에너지 용량에 기여하는 정도가 명확하지 않을 수 있습니다. 이때는 [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011) 클래스가 필요합니다. *배터리 집계*는 장치에 연결된 모든 배터리 컨트롤러를 나타내며 전체 단일 [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체를 제공할 수 있습니다.
 
-**참고** [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004) 클래스는 실제로 배터리 컨트롤러에 해당합니다. 장치에 따라 컨트롤러가 실제 배터리에 연결되거나 장치 엔클로저에 연결될 수 있습니다. 따라서 배터리가 없는 경우에도 배터리 개체를 만들 수 있습니다. 다른 경우에는 배터리 개체가 **null**일 수 있습니다.
+**참고** [**배터리**](https://msdn.microsoft.com/library/windows/apps/Dn895004) 클래스는 실제로 배터리 컨트롤러에 해당 합니다. 장치에 따라 컨트롤러가 실제 배터리에 연결되거나 장치 엔클로저에 연결될 수 있습니다. 따라서 배터리가 없는 경우에도 배터리 개체를 만들 수 있습니다. 다른 경우에는 배터리 개체가 **null**일 수 있습니다.
 
 배터리 집계 개체를 만든 후에는 [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport)를 호출하여 해당 [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)를 가져옵니다.
 
@@ -340,7 +338,7 @@ namespace App1
 
 마지막으로 이 기본 배터리 앱을 실행하려면 **디버그** 메뉴에서 **디버깅 시작**을 클릭하여 솔루션을 테스트합니다.
 
-**팁** [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체에서 숫자 값을 받으려면 **로컬 컴퓨터** 또는 외부 **디바이스**(예: Windows Phone)에서 앱을 디버그합니다. 장치 에뮬레이터에서 디버그하는 경우 **BatteryReport** 개체는 용량 및 속도 속성에 **null**을 반환합니다.
+**팁** [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체에서 숫자 값을 받으려면 **로컬 컴퓨터** 또는 외부 **장치** (예: Windows Phone)에서 앱을 디버그 합니다. 장치 에뮬레이터에서 디버그하는 경우 **BatteryReport** 개체는 용량 및 속도 속성에 **null**을 반환합니다.
 
- 
+ 
 

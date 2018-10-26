@@ -1,35 +1,33 @@
 ---
 author: stevewhims
-description: 이 항목에서는 Windows Phone Silverlight API를 해당 UWP(유니버설 Windows 플랫폼) API에 포괄적으로 매핑합니다.
-title: Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매핑
+description: 이 항목에서는 이와 동일한 유니버설 Windows 플랫폼 (UWP)에 대 한 포괄적인 매핑을 WindowsPhone Silverlight api를 제공 합니다.
+title: WindowsPhone Silverlight를 UWP 네임 스페이스 및 클래스 매핑
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f7bd31b8157af00817738cb1d224c827acb6ca6
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 54118b41fc1f3036dddba9a0cfb8ecd860c1e233
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935813"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566164"
 ---
-# <a name="windows-phone-silverlight-to-uwp-api-mappings"></a>Windows Phone Silverlight를 UWP API로 매핑
+# <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight를 UWP API로 매핑
 
 
-이 항목에서는 Windows Phone Silverlight API를 해당 UWP(유니버설 Windows 플랫폼) API에 포괄적으로 매핑합니다. 일반적으로는 기능이 일대일로 매핑되지는 않지만 각 플랫폼의 네임스페이스 또는 클래스에 비슷한 기능이 있을 수 있습니다.
+이 항목에서는 이와 동일한 유니버설 Windows 플랫폼 (UWP)에 대 한 포괄적인 매핑을 WindowsPhone Silverlight api를 제공 합니다. 일반적으로는 기능이 일대일로 매핑되지는 않지만 각 플랫폼의 네임스페이스 또는 클래스에 비슷한 기능이 있을 수 있습니다.
 
-매핑 테이블은 UWP 프로젝트에서 작업하는 중에 Windows Phone Silverlight 프로젝트의 소스 코드를 다시 사용하려는 경우에 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
+매핑 테이블 UWP 프로젝트에서 작업 하 고 다시 WindowsPhone Silverlight 프로젝트의에서 소스 코드를 사용 하는 경우에 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
 
-**테이블 사용 방법: ** 먼저 사용 중인 클래스의 이름을 검색합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡한 모든 경우에 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
+**테이블을 사용 하는 방법:** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡한 모든 경우에 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
 
-**참고** Windows 10은 .NET Framework에 대해 Windows Phone 스토어 앱보다 훨씬 더 많이 지원합니다. 예를 들어 Windows 10에는 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets뿐만 아니라 여러 System.ServiceModel.\* 네임스페이스도 있습니다.
-또한 Windows 10 앱에서는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환하는 미리 컴파일 기술인 .NET 네이티브의 이점을 활용할 수 있습니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
+**참고**Windows10 보다 훨씬 더.NET framework Windows Phone 스토어 앱을 많이 지원 합니다. 예를 들어 Windows10 여러 System.ServiceModel.\* 네임 스페이스 뿐만 아니라 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets에 있습니다.
+또한 Windows10 앱의 이점을 활용할 수에서.NET 네이티브는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술입니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
 
-| Windows Phone Silverlight | Windows 런타임 |
+| WindowsPhone Silverlight | Windows 런타임 |
 | ------------------------- | --------------- |
 | 광고 | |
 | **Microsoft.Advertising.Mobile.UI.AdControl** 클래스 | [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) 클래스 |

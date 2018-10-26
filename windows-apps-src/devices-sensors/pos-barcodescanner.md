@@ -5,16 +5,14 @@ description: 이 문서에는 UWP 앱에 사용할 수 있는 바코드 스캐�
 ms.author: jken
 ms.date: 08/29/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 57d5c174b4519cb60b339a907fe41fb07af5f3ed
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5515779"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564870"
 ---
 # <a name="barcode-scanner"></a>바코드 스캐너
 

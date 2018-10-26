@@ -6,16 +6,14 @@ title: 게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, 게임, 캡처, 오디오, 비디오, 메타데이터
 ms.localizationpriority: medium
-ms.openlocfilehash: 04d619853dbe57c52fbb04b3babb37b40466c14f
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 6c1641cb4c50b86d7f678bf18fa85ad0215b4b15
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692674"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565079"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처
 이 문서는 앱 등에서 게임 플레이 이벤트가 동기화되는 동적 환경을 만들 수 있도록 게임 비디오, 오디오, 스크린샷을 캡처하는 방법과 시스템이 캡처된 미디어 및 브로드캐스트 미디어에 포함할 메타데이터를 전송하는 방법에 대해 설명합니다. 
@@ -167,9 +165,9 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 ## <a name="related-topics"></a>관련 항목
 
 * [게임](index.md)
- 
+ 
 
- 
+ 
 
 
 

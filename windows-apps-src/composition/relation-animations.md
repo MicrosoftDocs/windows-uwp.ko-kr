@@ -5,16 +5,14 @@ description: 다른 개체 속성을 기반으로 동작을 만듭니다.
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: ceca1705938df29bd4fbb857fbc78649fec57a94
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: cde3868d1a554396bfda7c13ea0c71bd037416bc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393552"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567513"
 ---
 # <a name="relation-based-animations"></a>관계 기반 애니메이션
 

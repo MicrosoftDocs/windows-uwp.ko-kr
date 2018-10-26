@@ -5,16 +5,14 @@ description: 실험적 API에 대한 이
 ms.author: twhitney
 ms.date: 11/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 실험적, api
 ms.localizationpriority: medium
-ms.openlocfilehash: 497bc513f140fcec098e33672862854aafb28800
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: fe5fa437c5a1e564be07b7277de0f190d6eab862
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1397176"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571164"
 ---
 # <a name="experimental-apis"></a>실험적 API
 

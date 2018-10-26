@@ -5,17 +5,15 @@ description: 이 항목에서는 ms-tonepicker URI 스키마에 대해 설명하
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 ms.localizationpriority: medium
-ms.openlocfilehash: 98747ece2160ef25c89dd921e8309d31b6459971
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 61967f0aa81c49cb4e81b11bedac84c318be1840
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663663"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569826"
 ---
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장
 

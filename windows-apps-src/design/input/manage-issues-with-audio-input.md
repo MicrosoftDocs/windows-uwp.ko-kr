@@ -9,15 +9,13 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9528bd19fb1afb72311e57dd90c8f6f9eb0b9620
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 094acdbcb5c5b3bf45bad757344be5187ae37cbc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653122"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570571"
 ---
 # <a name="manage-issues-with-audio-input"></a>오디오 입력 관련 문제 관리
 
@@ -113,9 +111,9 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 **샘플**
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

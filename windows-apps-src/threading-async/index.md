@@ -6,16 +6,14 @@ description: 스레드 및 비동기 프로그래밍을 사용하면 앱이 병�
 ms.author: twhitney
 ms.date: 05/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 비동기, 스레드, 스레딩
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bdbc9e73d2ffe25ac848a1ed1b88a649214b9f5
-ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
-ms.translationtype: HT
+ms.openlocfilehash: f01142695b676ebadea2f227cf5f8beb65ba6f9c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1893495"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570402"
 ---
 # <a name="threading-and-async-programming"></a>스레딩 및 비동기 프로그래밍
 스레드 및 비동기 프로그래밍을 사용하면 앱이 병렬 스레드에서 비동기식으로 작업할 수 있습니다.
@@ -34,7 +32,7 @@ ms.locfileid: "1893495"
 
 | 항목                                                                                                          | 설명                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| [비동기 프로그래밍(UWP 앱)](asynchronous-programming-universal-windows-platform-apps.md)              | 이 항목에서는 UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic .NET, Visual C++ 구성 요소 확장(C++/CX) 및 JavaScript에서의 표현에 대해 설명합니다. |
+| [비동기 프로그래밍(UWP 앱)](asynchronous-programming-universal-windows-platform-apps.md)              | 유니버설 Windows 플랫폼 (UWP)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic.NET VisualC + + 구성 요소 확장에서의 표현에 설명 (C + + CX), 및 JavaScript 합니다. |
 | [C++/CX의 비동기 프로그래밍(UWP 앱)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| 이 문서에서는 ppltasks.h의 <code>concurrency</code> 네임스페이스에 정의된 <code>task</code> 클래스를 사용하여 C++/CX의 비동기 메서드를 이용하는 권장 방법을 설명합니다. |
 | [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)                         | 이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다. |
 | [C# 또는 Visual Basic에서 비동기식 API 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다. 이 항목에서는 C# 또는 Microsoft Visual Basic에서 UWP의 비동기 메서드를 사용하는 방법을 설명합니다. |

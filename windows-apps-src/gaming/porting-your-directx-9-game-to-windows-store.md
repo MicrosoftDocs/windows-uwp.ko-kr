@@ -6,19 +6,18 @@ ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, directx 9, directx 11, 포팅
-ms.openlocfilehash: 9ea27288fd239b2af4b63985a3c8e0ad4055b0b9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 05549b0f3696067689f7e8fbd05dfb0f8f1bb528
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218995"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567957"
 ---
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>DirectX 9에서 UWP(유니버설 Windows 플랫폼)로 포팅
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에는 UWP(유니버설 Windows 플랫폼)으로 DirectX 9 게임 포팅에 대한 문서, 개요 및 연습이 포함되어 있습니다.
 
@@ -36,9 +35,9 @@ ms.locfileid: "218995"
 -   Direct3D 9 및 Direct3D 11 그래픽 프레임워크를 직접 비교할 수 있는 [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습 문서를 확인하세요. 이 연습에는 앱 창과 뷰포트 설정을 위한 코드도 있습니다.
 -   DirectX 9에서 포팅에 대한 일반적인 질문과 대답은 [DirectX 11 포팅 FAQ](directx-porting-faq.md)를 참조하세요.
 
- 
+ 
 
- 
+ 
 
 
 

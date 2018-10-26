@@ -6,16 +6,14 @@ ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: baf230559ebeb285d5faa3e2de8e38b355638070
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488847"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569423"
 ---
 # <a name="port-the-game-loop"></a>게임 루프 포팅
 
@@ -37,9 +35,9 @@ Direct3D 9 뷰포트를 사용하여 바탕 화면 창을 설정하려면 데스
 
 UWP 환경에는 훨씬 간단한 시스템이 있습니다. 기존의 창을 설정하는 대신 DirectX를 사용하는 Microsoft Store 게임은 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현합니다. DirectX 앱과 게임이 앱 컨테이너 내 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 직접 실행되도록 하기 위해 이 인터페이스가 존재합니다.
 
-> **참고**   Windows는 원본 응용 프로그램 개체 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)와 같은 리소스에 관리되는 포인터를 제공합니다. [**개체 연산자에 대한 핸들(^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx을 참조하세요.
+> **참고**  Windows는 원본 응용 프로그램 개체 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)등의 리소스에 관리 되는 포인터를 제공 합니다. [**개체 연산자 (^)에 대 한 핸들**] 확인https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
- 
+ 
 
 "기본" 클래스는 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)에서 상속하고 5개 **IFrameworkView** 메서드([**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 및 [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523))를 구현해야 합니다. (기본적으로) 게임에 있는 위치인 **IFrameworkView**를 만들 뿐만 아니라, **IFrameworkView**의 인스턴스를 만드는 팩터리 클래스를 구현해야 합니다. 게임에는 여전히 **main()** 이라는 메서드가 있지만, 기본 클래스가 수행할 수 있는 모든 것은 팩터리를 사용하여 **IFrameworkView** 인스턴스를 만드는 것입니다.
 
@@ -141,9 +139,9 @@ DirectX UWP 템플릿에는 UWP 게임에 사용할 수 있는 강력한 Direct3
 -   [게임용 오디오](working-with-audio-in-your-directx-game.md)
 -   [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md)
 
- 
+ 
 
- 
+ 
 
 
 

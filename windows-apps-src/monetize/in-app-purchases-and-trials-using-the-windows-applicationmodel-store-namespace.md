@@ -6,16 +6,14 @@ title: Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에�
 ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: bb2c242ea4b7e3881751874c096165279854aa5e
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 330631afed95c3b0082de69d9369a62aad5a66d5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521623"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571498"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 

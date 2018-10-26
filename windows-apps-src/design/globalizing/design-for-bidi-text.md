@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 세계화, 지역화, 현지화, 오른쪽에서 왼쪽, 왼쪽에서 오른쪽,
 ms.localizationpriority: medium
-ms.openlocfilehash: b082efa3a156020125e99a5ab5b6d97a026def58
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 24e4c5dfce4aa3e773ab8c334ca732ac5ed53030
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395432"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571508"
 ---
 # <a name="design-your-app-for-bidirectional-text"></a>양방향 텍스트를 위한 앱 디자인
 

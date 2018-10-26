@@ -7,15 +7,13 @@ keywords: windows 10, uwp, 추가 기능, 앱에서 바로 구매, IAP, Windows.
 ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bf04632c4c99f2d58e3cd936e678af168750ff0
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 6c5a5536ef1853a726421bdc75269f0cb5c1a84b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5482929"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571662"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>앱에서 바로 앱 및 추가 기능 구매 사용
 

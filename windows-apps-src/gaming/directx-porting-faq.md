@@ -6,19 +6,18 @@ ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, directx 11
-ms.openlocfilehash: 7dda21925e31785e0ce7c3dfc72ba173b8686743
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219046"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567205"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX 11 포팅 FAQ
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 UWP(유니버설 Windows 플랫폼)로 게임을 포팅하는 방법에 대한 질문과 대답입니다.
@@ -47,10 +46,10 @@ Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하�
 
 [DirectXTK(DirectX 도구 키트)](http://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11에 사용할 수 있는 도우미 클래스를 제공합니다.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-windows-store"></a>데스크톱 및 Windows 스토어의 코드 경로를 유지 관리하는 방법은 무엇인가요?
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>데스크톱 및 Microsoft Store에 대 한 코드 경로 유지 관리 하는 인가요?
 
 
-Chuck Walbourn의 문서 시리즈 [Dual-use Coding Techniques for Games(게임용 이중 용도 코딩 기술)](http://go.microsoft.com/fwlink/p/?LinkID=286210)에서는 데스크톱과 Windows 스토어 코드 경로 간의 코드 공유에 대한 지침을 제공합니다.
+Chuck Walbourn의 문서 시리즈 [게임용 이중 용도 코딩 기술](http://go.microsoft.com/fwlink/p/?LinkID=286210) 이라는 데스크톱 및 Microsoft 스토어 코드 경로 간의 코드 공유에 대 한 지침을 제공 합니다.
 
 ##  <a name="how-do-i-load-image-resources-in-my-directx-uwp-app"></a>DirectX UWP 앱에 이미지 리소스를 로드하는 방법은 무엇인가요?
 
@@ -124,7 +123,7 @@ Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하�
 ## <a name="how-do-i-debug-my-shaders"></a>셰이더를 디버그하는 방법은 무엇인가요?
 
 
-Microsoft Visual Studio 2015에는 DirectX 그래픽용 진단 도구가 포함되어 있습니다. [DirectX 그래픽 디버그](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx)를 참조하세요.
+Microsoft Visual Studio2015 DirectX 그래픽용 진단 도구가 포함 됩니다. [DirectX 그래픽 디버그](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx)를 참조하세요.
 
 ##  <a name="what-is-the-direct3d-11-equivalent-for-x-function"></a>*x* 함수에 해당하는 Direct3D 11의 함수는 무엇인가요?
 
@@ -136,9 +135,9 @@ DirectX 11 API에 DirectX 9 기능 매핑에 제공되어 있는 [함수 매핑]
 
 DirectX 11 API에 DirectX 9 기능 매핑에 제공되어 있는 [화면 형식 매핑](feature-mapping.md#surface-format-mapping)을 참조하세요.
 
- 
+ 
 
- 
+ 
 
 
 

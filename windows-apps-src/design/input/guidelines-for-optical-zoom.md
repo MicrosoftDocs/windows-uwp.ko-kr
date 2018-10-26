@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b49afdd4a9fe1db28c8195bdf166d6a74e153020
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: f1643638eaf7eb625defe1f25b44cae20faf0a5c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653802"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568269"
 ---
 # <a name="optical-zoom-and-resizing"></a>광학 줌 및 크기 조정
 
@@ -41,10 +39,9 @@ ms.locfileid: "1653802"
 
 ![손가락을 모아서 개체를 축소하고 벌려서 확대](images/objectresize.png)
 
-**참고**  
-광학 줌을 [시맨틱 줌](../controls-and-patterns/semantic-zoom.md)과 혼동하지 않아야 합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
+**참고**  광학 줌 [시맨틱 줌](../controls-and-patterns/semantic-zoom.md)과 혼동 하지 않아야 합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
 
- 
+ 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -70,10 +67,9 @@ ms.locfileid: "1653802"
     -   크기 조정이 가능한 항목이 크기 조정이 가능한 캔버스나 아트 보드에 표시될 수 있는 그리기 응용 프로그램
     -   맵과 같은 포함 개체가 있는 웹 페이지
 
-    **참고**  
-    모든 터치 지점이 크기 조정이 가능한 개체 안에 있는 경우가 아니면 항상 콘텐츠 영역의 크기가 조정됩니다.
+    **참고**  콘텐츠 영역의 모든 터치 지점이 크기 조정이 가능한 개체 안에 있는 경우가 아니면 항상에서 조정 합니다.
 
-     
+     
 
 ## <a name="related-articles"></a>관련 문서
 
@@ -93,9 +89,9 @@ ms.locfileid: "1653802"
 * [입력: Windows 8 제스처 샘플](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [입력: 조작 및 제스처(C++) 샘플](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [DirectX 터치 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a37246ff409b0a18992af32172bd4f6a8e535da7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 4dd0ff85198107263fba458bd97c0323a7049d20
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044902"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565622"
 ---
 # <a name="compressed-texture-formats"></a>압축된 텍스처 형식
 
@@ -36,9 +34,9 @@ BCn 형식에 대한 피치는 블록이 아닌 바이트 단위로 측정됩니
 
 [압축된 텍스처 리소스](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

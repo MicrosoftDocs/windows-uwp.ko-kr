@@ -8,24 +8,22 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e2750de79dbdb01081aa099ff955fcef2999dcbf
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 6f690e08d211692b05f0a80722aa4a3e3a06b39f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652500"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569199"
 ---
 # <a name="lighting"></a>조명
 
 
 조명은 장면에서 물체를 비추는 데 사용됩니다. 각 개체 꼭짓점의 색상은 현재 텍스처 맵, 꼭짓점 색상, 광원을 기반으로 합니다.
 
-**참고**   이 섹션은 고정 함수 파이프라인에만 적용됩니다. 프로그램 가능 셰이더는 모든 조명 작업을 명시적으로 수행합니다.
+**참고**  이 섹션은 고정 함수 파이프라인에만 적용 됩니다. 프로그램 가능 셰이더는 모든 조명 작업을 명시적으로 수행합니다.
 
- 
+ 
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
@@ -61,16 +59,16 @@ ms.locfileid: "1652500"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

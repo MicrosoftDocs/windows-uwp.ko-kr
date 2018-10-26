@@ -6,16 +6,14 @@ ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, 포트, 셰이더, direct3d, opengl
 ms.localizationpriority: medium
-ms.openlocfilehash: 09e8d6441ffc65095ac69d7388a2735821487539
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "219059"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567225"
 ---
 # <a name="port-the-shader-objects"></a>셰이더 개체 포팅
 
@@ -29,9 +27,9 @@ ms.locfileid: "219059"
 
 OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다.
 
-> **참고**   Direct3D 프로젝트를 새로 작성했나요? 그렇지 않은 경우 지침에 따라 [UWP(유니버설 Windows 플랫폼)용 새 DirectX 11 프로젝트를 만듭니다](user-interface.md). 이 연습에서는 화면에 그리기 위한 DXGI 및 Direct3D 리소스를 만들었다고 가정합니다. 이 리소스는 템플릿으로 제공됩니다.
+> **참고**  Direct3D 프로젝트를 새로 했나요? 그렇지 않은 경우 지침에 따라 [UWP(유니버설 Windows 플랫폼)용 새 DirectX 11 프로젝트를 만듭니다](user-interface.md). 이 연습에서는 화면에 그리기 위한 DXGI 및 Direct3D 리소스를 만들었다고 가정합니다. 이 리소스는 템플릿으로 제공됩니다.
 
- 
+ 
 
 OpenGL ES 2.0과 매우 유사한 Direct3D의 컴파일된 셰이더는 그리기 컨텍스트에 연결되어야 합니다. 그러나 Direct3D에는 셰이더 프로그램 개체의 개념 자체가 없습니다. 대신 셰이더를 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 직접 할당해야 합니다. 이 단계는 셰이더 개체 만들기 및 바인딩에 대한 OpenGL ES 2.0 프로세스를 따르고 Direct3D에서 해당 API 동작을 제공합니다.
 
@@ -82,9 +80,9 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 Direct3D에서 셰이더는 런타임 중에 컴파일되지 않습니다. 셰이더는 나머지 프로그램을 컴파일할 때 항상 CSO 파일로 컴파일됩니다. Microsoft Visual Studio에서 앱을 컴파일하면 HLSL 파일은 앱이 로드해야 하는 CSO(.cso) 파일로 컴파일됩니다. 이러한 앱을 패키지로 만들 때 앱과 함께 CSO 파일을 포함해야 합니다!
 
-> **참고**   다음 예제에서는 **auto** 키워드와 람다 구문을 사용하여 비동기적으로 셰이더 로드 및 컴파일을 수행합니다. ReadDataAsync()는 바이트 데이터 배열(fileData)로 CSO 파일에서 읽는 템플릿에 구현된 메서드입니다.
+> **참고**  다음 예제에서는 셰이더 로드 및 컴파일을 비동기적으로 **auto** 키워드와 람다 구문을 사용 하 여 수행 합니다. ReadDataAsync()는 바이트 데이터 배열(fileData)로 CSO 파일에서 읽는 템플릿에 구현된 메서드입니다.
 
- 
+ 
 
 Direct3D 11: 셰이더 컴파일
 
@@ -320,9 +318,9 @@ m_d3dContext->UpdateSubresource(
 
 [화면에 그리기](draw-to-the-screen.md)
 
- 
+ 
 
- 
+ 
 
 
 

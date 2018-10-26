@@ -6,16 +6,14 @@ title: 앱 제출 가져오기
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 9838798778a2d66b2a52fcfe02defce0c9167d2d
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: be32fd53799b0d225e7d112eddb82c1659d9f759
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5480096"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566224"
 ---
 # <a name="get-an-app-submission"></a>앱 제출 가져오기
 

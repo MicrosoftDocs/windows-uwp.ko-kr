@@ -7,15 +7,13 @@ ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ms.author: wdg-dev-content
 ms.date: 10/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 784accda4299891fa86501236d35c0828e80cf8d
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: b8666d478b59bfb5975150903cf08fc2a43e938c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5517382"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570336"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 

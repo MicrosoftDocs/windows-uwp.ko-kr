@@ -6,19 +6,17 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 03/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 03e590f140cfa86fed0b3beccce9b39ce284c076
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5479610"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569305"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 

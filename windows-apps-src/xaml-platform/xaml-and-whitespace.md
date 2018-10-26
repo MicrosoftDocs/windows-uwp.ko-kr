@@ -6,31 +6,30 @@ ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 88d4b155acb38a3ab11cc180d112fb3434af87a0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 560f820ec2ecc7f28145ec29c31a60c1e4573d7e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220162"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565430"
 ---
 # <a name="xaml-and-whitespace"></a>XAML 및 공백
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 XAML에서 사용되는 공백 처리 규칙에 대해 알아봅니다.
 
 ## <a name="whitespace-processing"></a>공백 처리
 
-XML에서와 마찬가지로 XAML의 공백 문자는 공백, 줄 바꿈 및 탭입니다. 이러한 값은 각각 유니코드 값 0020, 000A 및 0009에 해당합니다. XAML 프로세서가 XAML 파일의 요소 사이에서 내부 텍스트를 발견하면 기본적으로 공백이 다음과 같이 정규화됩니다.
+XML에서와 XAML의 공백 문자는 공백, 줄 바꿈 및 탭 합니다. 해당 유니코드 값 0020, 000A 및 0009 각각. XAML 프로세서가 XAML 파일의 요소 사이에서 내부 텍스트를 발견하면 기본적으로 공백이 다음과 같이 정규화됩니다.
 
 -   동아시아 문자 사이의 줄 바꿈 문자가 제거됩니다.
 -   모든 공백 문자(공백, 줄 바꿈, 탭)가 공백으로 변환됩니다.
 -   연속되는 모든 공백이 삭제되고 단일 공백으로 바뀝니다.
 -   시작 태그 바로 다음에 오는 공백이 삭제됩니다.
 -   끝 태그 바로 앞에 오는 공백이 삭제됩니다.
--   *동아시아 문자*는 U+20000 - U+2FFFD 및 U+30000 - U+3FFFD 범위의 유니코드 문자 집합으로 정의됩니다. 이 하위 집합을 *한중일 한자*라고도 합니다. 자세한 내용은 http://www.unicode.org(영문)를 참조하세요.
+-   *동아시아 문자*는 U+20000 - U+2FFFD 및 U+30000 - U+3FFFD 범위의 유니코드 문자 집합으로 정의됩니다. 이 하위 집합을 *한중일 한자*라고도 합니다. 자세한 내용은 http://www.unicode.org을 참조하세요.
 
 여기서 "기본"이란 의미는 **xml:space** 특성의 기본값이 나타내는 상태에 해당합니다.
 

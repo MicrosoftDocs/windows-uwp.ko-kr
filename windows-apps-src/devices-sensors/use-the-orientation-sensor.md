@@ -6,16 +6,14 @@ description: 방향 센서를 사용하여 디바이스 방향을 확인하는 �
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a9270ba675b0797344d3370aec433de90d80d5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 49199a91f6713b3f18928eaafb6875a49deaf451
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958888"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570677"
 ---
 # <a name="use-the-orientation-sensor"></a>방향 센서 사용
 
@@ -48,7 +46,7 @@ ms.locfileid: "958888"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트에 대해 알고 있어야 합니다.
+응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트 잘 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 방향 센서를 지원해야 합니다.
 

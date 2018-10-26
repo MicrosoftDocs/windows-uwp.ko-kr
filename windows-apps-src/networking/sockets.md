@@ -6,16 +6,14 @@ ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 ms.author: stwhi
 ms.date: 06/03/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 31d05f57c674b7b882cf3494e8fb29611963f83c
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 9e0e73f4224b1577a5219d239f8c11bf5ecc0b73
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983484"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565674"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 지속 시간이 긴 연결이든 설정된 연결이 필요하지 않든 클라이언트와 서버 간 또는 피어 투 피어 응용 프로그램에 대한 UDP 및 TCP 소켓 클래스를 제공합니다.
@@ -1206,7 +1204,7 @@ private async void BatchedSendsCSharpOnly(Windows.Networking.Sockets.StreamSocke
 }
 ```
 
-이 다음 예는 C#뿐 아니라 모든 UWP 언어에 대한 적절합니다. 이는 전송을 일괄 처리하는 [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) 및 [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream)의 동작에 의존합니다. Windows 10 기준으로 이 기술은 출력 스트림의 모든 작업이 완료된 후에만 반환되는 해당 출력 스트림에 [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync)를 호출합니다.
+이 다음 예는 C#뿐 아니라 모든 UWP 언어에 대한 적절합니다. 이는 전송을 일괄 처리하는 [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) 및 [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream)의 동작에 의존합니다. 기술을은 Windows10, 부터는 출력 스트림의 모든 작업이 완료 된 후에 반환 보장 하는 해당 출력 스트림에 [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) 를 호출 합니다.
 
 ```csharp
 // An implementation of batched sends suitable for any UWP language.
@@ -1280,7 +1278,7 @@ private:
 
 -   비동기 쓰기가 완료될 때까지 작성 중인 **IBuffer** 인스턴스의 내용을 수정할 수 없습니다.
 -   **FlushAsync** 패턴은 **StreamSocket.OutputStream** 및 **DatagramSocket.OutputStream**에서만 작동합니다.
--   **FlushAsync** 패턴은 Windows 10 이상에서만 작동합니다.
+-   **FlushAsync** 패턴 Windows10 이상에 작동 합니다.
 -   그 밖의 경우에는 [**FlushAsync**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___) 패턴 대신 **Task.WaitAll**을 사용합니다.
 
 ## <a name="port-sharing-for-datagramsocket"></a>DatagramSocket에 대한 포트 공유

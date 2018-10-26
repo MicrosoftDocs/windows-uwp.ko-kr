@@ -6,19 +6,18 @@ ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, direct3d 11, 초기화, 포팅, direct3d 9
-ms.openlocfilehash: d4c4c905ad7d7452251ad13d95cbdc53b137c6c8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f6aa5bca3ecc242e90b42081a0111358afdfa9b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218946"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571924"
 ---
 # <a name="initialize-direct3d-11"></a>Direct3D 11 초기화
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **요약**
 
@@ -76,9 +75,9 @@ Direct3D 11에서 디바이스 컨텍스트 및 그래픽 인프라는 장치 �
 
 Direct3D 11 디바이스 및 컨텍스트를 만든 후 COM 포인터 기능을 활용하여 최신 버전의 인터페이스를 가져옵니다. 이 인터페이스는 추가 기능을 포함하며 항상 권장됩니다.
 
-> **참고**   D3D\_FEATURE\_LEVEL\_9\_1(셰이더 모델 2.0에 해당)은 Windows 스토어 게임을 지원하는 데 필요한 최소 수준입니다. 9\_1을 지원하지 않으면 게임의 ARM 패키지가 인증에 실패합니다. 게임에 셰이더 모델 3 기능에 대한 렌더링 경로도 포함되어 있는 경우 배열에 D3D\_FEATURE\_LEVEL\_9\_3을 포함해야 합니다.
+> **참고**  D3D\_FEATURE\_LEVEL\_9\_1 (셰이더 모델 2.0에 해당)은 Microsoft Store 게임을 지 원하는 데 필요한 최소 수준입니다. 9\_1을 지원하지 않으면 게임의 ARM 패키지가 인증에 실패합니다. 게임에 셰이더 모델 3 기능에 대한 렌더링 경로도 포함되어 있는 경우 배열에 D3D\_FEATURE\_LEVEL\_9\_3을 포함해야 합니다.
 
- 
+ 
 
 Direct3D 11
 
@@ -109,7 +108,7 @@ D3D11CreateDevice(
     creationFlags,
     featureLevels,
     ARRAYSIZE(featureLevels),
-    D3D11_SDK_VERSION, // Windows Store apps must set this to D3D11_SDK_VERSION.
+    D3D11_SDK_VERSION, // UWP apps must set this to D3D11_SDK_VERSION.
     &device, // Returns the Direct3D device created.
     nullptr,
     &context // Returns the device immediate context.
@@ -128,9 +127,9 @@ Direct3D 11에는 DXGI(DirectX 그래픽 인프라)를 호출하는 장치 API�
 
 Direct3D 장치는 DXGI에 대한 COM 인터페이스를 구현합니다. 먼저 해당 인터페이스를 가져오고 이 인터테이스를 사용하여 장치를 호스트하는 DXGI 어댑터를 요청합니다. 그런 다음 DXGI 어댑터를 사용하여 DXGI 팩터리를 만듭니다.
 
-> **참고**   COM 인터페이스이므로 첫 번째 응답은 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 사용하기 위한 것일 수 있습니다. 대신 [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) 포인터 스마트를 사용해야 합니다. 그런 다음 [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx) 메서드를 호출하고 올바른 인터페이스 유형의 빈 COM 포인터를 제공합니다.
+> **참고**  COM 인터페이스 되어 첫 번째 응답 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 사용할 수 있습니다. 대신 [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) 포인터 스마트를 사용해야 합니다. 그런 다음 [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx) 메서드를 호출하고 올바른 인터페이스 유형의 빈 COM 포인터를 제공합니다.
 
- 
+ 
 
 **Direct3D 11**
 
@@ -152,9 +151,9 @@ dxgiAdapter->GetParent(
 
 이제 DXGI 팩터리가 있으므로 이 팩터리를 사용하여 스왑 체인을 만들 수 있습니다. 스왑 체인 매개 변수를 정의하도록 하겠습니다. 화면 형식을 지정해야 합니다. Direct2D와 호환되므로 [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059)을 선택하겠습니다. 이 예제에서 사용되지 않기 때문에 디스플레이 배율, 다중 샘플링 및 스테레오 렌더링을 끄겠습니다. CoreWindow에서 직접 실행 중이기 때문에 너비와 높이가 0으로 설정된 상태로 두고 전체 화면 값을 자동으로 가져올 수 있습니다.
 
-> **참고**   항상 *SDKVersion* 매개 변수를 UWP 앱에 대한 D3D11\_SDK\_VERSION으로 설정합니다.
+> **참고**  항상 UWP 앱에 대 한 d3d11\_sdk\_version으로 설정 하려면 *SDKVersion* 매개 변수를 설정 합니다.
 
- 
+ 
 
 **Direct3D 11**
 
@@ -172,9 +171,9 @@ swapChain.As(&m_swapChain);
 
 화면이 실제로 표시할 수 있는 것보다 자주 렌더링하지 않도록 하기 위해 프레임 대기 시간을 1로 설정하고 [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077)을 사용합니다. 이는 전원을 절약하며 스토어 인증 요구 사항입니다. 이 연습의 2부에서는 화면에 표시하는 것에 대한 자세한 내용은 알아봅니다.
 
-> **참고**   다중 스레딩(예: [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) 작업 항목)을 사용하여 렌더링 스레드가 차단된 동안 다른 작업을 계속할 수 있습니다.
+> **참고**  할 수 있습니다 다중 스레딩을 사용 (예를 들어 [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) 작업 항목)를 렌더링 스레드가 차단 된 동안 다른 작업을 계속 합니다.
 
- 
+ 
 
 **Direct3D 11**
 
@@ -227,9 +226,9 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 이제 장치 핸들과 전체 화면 렌더링 대상이 있으므로 기하 도형을 로드하고 그릴 수 있습니다. 계속해서 [2부: 렌더링](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)을 진행하세요.
 
- 
+ 
 
- 
+ 
 
 
 

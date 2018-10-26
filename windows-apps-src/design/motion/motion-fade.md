@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 211e0b6dc2c6e2872ca20d4711ef6d41d4974e5c
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d2a9745e35f19066b094b2be187620858166dbd5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652462"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566361"
 ---
 # <a name="fade-animations"></a>페이드 애니메이션
 
@@ -44,9 +42,9 @@ ms.locfileid: "1652462"
 * [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)
 * [**FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
 
- 
+ 
 
- 
+ 
 
 
 

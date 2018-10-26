@@ -6,16 +6,14 @@ keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
-ms.openlocfilehash: a75776b330d79eca2737a5d615770501887944a7
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: a350ff9cd5a2a3ec22637eabbcfc55b693cdd283
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523162"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571803"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>개발자용 Windows 10 빌드 14393의 새로운 기능
 

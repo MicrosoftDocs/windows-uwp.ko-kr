@@ -6,16 +6,14 @@ description: 경사계를 사용하여 피치, 롤 및 요를 확인하는 방�
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e7b6446306d85af036bf49d05c14db79eaf388
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: dd335d56fb2a01ed1b9255f974bcaacd47f623f5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958678"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571078"
 ---
 # <a name="use-the-inclinometer"></a>경사계 사용
 
@@ -35,7 +33,7 @@ ms.locfileid: "958678"
 
  ## <a name="prerequisites"></a>사전 요구 사항
 
-XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트에 대해 알고 있어야 합니다.
+응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트 잘 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 경사계를 지원해야 합니다.
 

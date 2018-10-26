@@ -9,22 +9,20 @@ keywords: 터치 패드, PTP, 터치, 포인터, 입력, 사용자 조작
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 54911cbab3124da30b416f328675353349883175
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 1c77e7a220618273e0fb8fb75cf3de2247534f5b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1394372"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565033"
 ---
 # <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
 
 사용자가 터치 패드를 통해 조작할 수 있는 앱을 디자인하세요. 터치 패드는 간접 멀티 터치 입력을 마우스와 같은 포인팅 장치의 정밀도 입력과 결합합니다. 이러한 결합을 통해 터치 패드는 터치 최적화된 UI와 생산성 앱의 작은 대상에 모두 적합합니다.
 
- 
+ 
 
 ![터치 패드](images/input-patterns/input-touchpad.jpg)
 
@@ -118,7 +116,7 @@ ms.locfileid: "1394372"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="hardware"></a>하드웨어
 
@@ -168,7 +166,7 @@ ms.locfileid: "1394372"
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+ 
 
 
 

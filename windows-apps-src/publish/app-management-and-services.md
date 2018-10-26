@@ -6,16 +6,14 @@ ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.author: wdg-dev-content
 ms.date: 07/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: f1bb8202613385a9ffc3e48ec95873d3270c10a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512998"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565811"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 

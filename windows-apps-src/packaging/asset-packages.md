@@ -5,16 +5,14 @@ description: 자산 패키지는 아키텍처 패키지 전체에서 중복된 �
 ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aafac1c1217ce082cd9d6176c530967f32e4cdd
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 98980e67d24eb96aa55af7fefe10b5e4c2cdfa67
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516090"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564900"
 ---
 # <a name="introduction-to-asset-packages"></a>자산 패키지 소개
 

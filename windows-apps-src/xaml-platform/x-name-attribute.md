@@ -6,18 +6,17 @@ ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 9fa472869ed3b81a9f688652a487b1b93986b777
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 43b4b7e6ba9e251a5907154125eff08e8d92a713
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220174"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571990"
 ---
 # <a name="xname-attribute"></a>x:Name 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 코드 숨김 또는 일반 코드에서 인스턴스화된 개체에 액세스하기 위해 개체 요소를 고유하게 식별합니다. 백업 프로그래밍 모델에 적용하는 경우 **x:Name**은 생성자에서 반환한 개체 참조를 보유하는 변수와 같은 것으로 간주됩니다.
 
@@ -60,7 +59,7 @@ CombiningCharacter::= none
 
 **x:Name**은 XAML 속성 요소 구문 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 사용하는 코드에서 설정할 수 없습니다. **x:Name**은 요소의 XAML 특성 구문을 사용하여 설정해야만 합니다.
 
-**참고** 특히 C++/CX 앱의 경우 **x:Name** 참조의 지원 필드는 XAML 파일 또는 페이지의 루트 요소에 대해 만들어지지 않습니다. C++ 코드 숨김에서 루트 개체를 참조해야 하는 경우 다른 API나 트리 통과를 사용합니다. 예를 들어 알려진 명명된 자식 요소에 대해 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출한 다음 [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)를 호출할 수 있습니다.
+**참고**용으로 특별히 C + + /CX 앱 **X:name** 참조에 대 한 지원 필드는 XAML 파일 또는 페이지의 루트 요소에 대해 만들어지지 않습니다. C++ 코드 숨김에서 루트 개체를 참조해야 하는 경우 다른 API나 트리 통과를 사용합니다. 예를 들어 알려진 명명된 자식 요소에 대해 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출한 다음 [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)를 호출할 수 있습니다.
 
 ### <a name="xname-and-other-name-properties"></a>x:Name 및 기타 Name 속성
 
@@ -68,7 +67,7 @@ UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습�
 
 **Name**을 요소의 설정 가능한 속성으로 사용할 수 있는 경우 XAML에서 **Name** 및 **x:Name**을 서로 바꿔서 사용할 수 있지만, 동일한 요소에 두 특성을 모두 지정하면 오류가 발생합니다. **Name** 속성이 있지만 읽기 전용인 경우도 있습니다(예: [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031)). 이 경우 XAML에서 항상 **x:Name**을 사용하여 해당 요소의 이름을 지정하며 읽기 전용 **Name**은 덜 일반적인 일부 코드 시나리오에 사용됩니다.
 
-**참고** 일반적으로 [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735)은 원래 **x:Name**으로 설정된 값을 변경하기 위한 방법으로 사용해서는 안 됩니다. 단, 이 일반 규칙에 대한 예외 시나리오도 있습니다. XAML 이름 범위의 생성 및 정의는 XAML 프로세서 작업입니다. 런타임에 **FrameworkElement.Name**을 수정하면 XAML 이름 범위/전용 필드의 이름 지정이 일치하지 않게 되므로 코드 숨김에서 추적하기 어렵습니다.
+**참고** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) 은 일반적으로 일반 규칙에 대 한 예외 시나리오도 있지만 원래 **X:name**설정 된 값을 변경 하는 방법으로 사용 해야 합니다. XAML 이름 범위의 생성 및 정의는 XAML 프로세서 작업입니다. 런타임에 **FrameworkElement.Name**을 수정하면 XAML 이름 범위/전용 필드의 이름 지정이 일치하지 않게 되므로 코드 숨김에서 추적하기 어렵습니다.
 
 ### <a name="xname-and-xkey"></a>x:Name 및 x:Key
 

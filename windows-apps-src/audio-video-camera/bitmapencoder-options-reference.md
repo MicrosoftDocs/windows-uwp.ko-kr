@@ -6,18 +6,17 @@ title: BitmapEncoder 옵션 참조
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: adfd360c22fd6737d9e95e6e3153f4e2767a4c99
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 13f19ce909703b6748ab00aec1026e30d5c70a64
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218802"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570581"
 ---
 # <a name="bitmapencoder-options-reference"></a>BitmapEncoder 옵션 참조
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다. 인코딩 옵션은 문자열인 이름과 특정 데이터 형식([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871))의 값으로 정의됩니다. 이미지 작업 방법은 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요.
 
@@ -35,14 +34,14 @@ ms.locfileid: "218802"
 | SuppressApp0            | boolean      | App0 메타데이터 블록이 생성되지 않게 할지 여부입니다.                                        | JPEG          |
 | EnableV5Header32bppBGRA | boolean      | 알파를 지원하는 버전 5 BMP로 인코드할지 여부입니다.                                         | BMP           |
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 
 * [비트맵 이미지 만들기, 편집 및 저장](imaging.md)
 * [지원되는 코덱](supported-codecs.md)
 
- 
+ 
 
 
 

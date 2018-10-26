@@ -5,16 +5,14 @@ title: C++/WinRT의 대리자를 사용한 이벤트 처리
 ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 96655c14f9c21f804ef5ebfdfe73cee0b04edfe3
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 9ca257de29be8e732e05c343a4b782b1676627bf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518497"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568639"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 

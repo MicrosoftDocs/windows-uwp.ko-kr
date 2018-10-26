@@ -6,15 +6,13 @@ keywords: XAML, UWP, 시작
 ms.author: mijacobs
 ms.date: 08/31/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 45510b8129a69641fdb64c13939ccb9b4376a654
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 11f279de206a84e61144789ba43a268f2b896fee
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674950"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570191"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
@@ -64,8 +62,7 @@ UWP(유니버설 Windows 플랫폼)는 앱의 모양을 사용자 지정하는 �
 
     [Windows.XAML.Ui.Shapes 네임스페이스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Shapes)는 선택할 수 있는 7 가지 모양을 제공합니다. 타원, 직사각형 및 유니콘처럼 어떤 형태로든 만들 수 있는 '패스'라고 불리는 항목이 있습니다. 
     
-    <!-- TODO reduce size -->
-    ![유니콘](../basics/images/xaml-basics/unicorn.png)
+    <!-- TODO reduce size --> ![유니콘](../basics/images/xaml-basics/unicorn.png)
     
     > **확인 항목:** [셰이프 그리기](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) 문서에서는 XAML 도형에 대해 알아야 할 모든 정보를 제공합니다. 
     

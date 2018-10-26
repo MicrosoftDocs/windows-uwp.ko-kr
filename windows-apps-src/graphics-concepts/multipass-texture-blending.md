@@ -8,24 +8,22 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36af11829728e07c00b3306d5a997764db130c9f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c55f371e97daba5f81945812f8179eb708bbadd6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043092"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567185"
 ---
 # <a name="multipass-texture-blending"></a>멀티패스 텍스처 혼합
 
 
 Direct3D 응용 프로그램은 다중 렌더링 패스를 통해 여러 가지 텍스처를 기본 객체에 적용함으로써 다양한 특수 효과를 낼 수 있습니다. 여기서 사용하는 공통 용어는 *멀티패스 텍스처 혼합*입니다. 일반적인 의미의 멀티패스 텍스처 혼합이란 몇 가지 다른 텍스처에서 여러 색상을 적용하여 복잡한 조명 및 음영 모델의 효과를 에뮬레이션하는 것을 말합니다. *조명 매핑*도 여기에 속합니다. [텍스처와 조명 매핑](light-mapping-with-textures.md)을 참조하세요.
 
-**참고** 일부 디바이스는 단일 패스에서 원형에 여러 개의 텍스처를 적용할 수 있습니다. [텍스처 혼합](texture-blending.md)을 참조하세요.
+**참고**  일부 디바이스는 단일 패스에서에서 원형에 여러 개의 텍스처를 적용할 수 있습니다. [텍스처 혼합](texture-blending.md)을 참조하세요.
 
- 
+ 
 
 사용자의 하드웨어에서 다중 텍스처 혼합을 지원하지 않는 경우, 응용 프로그램은 멀티패스 텍스처 혼합을 사용하여 동일한 시각 효과를 얻을 수 있습니다. 그러나 응용 프로그램은 다중 텍스처 혼합을 사용할 때는 가능한 프레임 속도를 유지할 수 없습니다.
 
@@ -43,9 +41,9 @@ C/C++ 응용 프로그램에서 멀티패스 텍스처 혼합을 수행하려면
 
 [텍스처 혼합](texture-blending.md)
 
- 
+ 
 
- 
+ 
 
 
 

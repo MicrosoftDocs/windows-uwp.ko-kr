@@ -6,16 +6,14 @@ ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 ms.author: stwhi
 ms.date: 06/01/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e68d674ecb3ab29170036d1dff6c69ab3ba759c
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 50ac9fcf984fa6c4ebad7e480ebfc2d002256e26
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018559"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569694"
 ---
 # <a name="networking-basics"></a>네트워킹 기본 사항
 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.
@@ -40,7 +38,7 @@ ms.locfileid: "2018559"
 | **sharedUserCertificates** | 이 접근 권한 값은 앱이 소프트웨어 및 하드웨어 인증서(예: 스마트 카드 인증서)에 액세스할 수 있게 합니다. 런타임에 이 접근 권한 값을 호출하면 사용자는 카드를 삽입하거나 인증서를 선택하는 것과 같은 조치를 수행해야 합니다. <br/> 이 접근 권한 값을 사용할 경우 앱에서 식별하는 데 소프트웨어 및 하드웨어 인증서 또는 스마트 카드를 사용합니다. 회사, 은행 또는 정부 기관에서 식별의 용도로 이 접근 권한 값을 사용할 수 있습니다. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>앱이 포그라운드에 없는 경우의 통신
-[백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103) 섹션에서는 앱이 포그라운드에 없을 때 작업을 위해 백그라운드 작업을 사용하는 방법에 대한 일반적인 정보를 제공합니다. 더 구체적으로 말하자면, 코드가 현재 포그라운드 앱용이 아니고 데이터가 네트워크를 통해 수신된 경우 알림을 받을 수 있도록 특별한 조치를 취해야 합니다. Windows 8에서는 이러한 목적으로 컨트롤 채널 트리거를 사용했으며, 이는 Windows 10에서도 계속 지원됩니다. 컨트롤 채널 트리거를 사용하는 방법에 대한 전체 정보는 [**here**](https://msdn.microsoft.com/library/windows/apps/hh701032)에서 확인할 수 있습니다. Windows 10의 새로운 기술에서는 푸시 사용 스트림 소켓과 같은 일부 시나리오에서 오버헤드를 감소시키는 향상된 기능(소켓 브로커와 소켓 작업 트리거)을 제공합니다.
+[백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103) 섹션에서는 앱이 포그라운드에 없을 때 작업을 위해 백그라운드 작업을 사용하는 방법에 대한 일반적인 정보를 제공합니다. 더 구체적으로 말하자면, 코드가 현재 포그라운드 앱용이 아니고 데이터가 네트워크를 통해 수신된 경우 알림을 받을 수 있도록 특별한 조치를 취해야 합니다. Windows8,에서는 이러한 목적 컨트롤 채널 트리거를 사용 하 고 Windows10에서 계속 지원 됩니다. 컨트롤 채널 트리거를 사용하는 방법에 대한 전체 정보는 [**here**](https://msdn.microsoft.com/library/windows/apps/hh701032)에서 확인할 수 있습니다. Windows10의 새로운 기술에서는 푸시 사용 스트림 소켓과 같은 일부 시나리오의 경우 낮은 오버 헤드를 사용 하 여 더 나은 기능을 제공: 소켓 브로커와 소켓 작업 트리거 합니다.
 
 앱에서 [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)를 사용하는 경우 시스템에서 제공된 소켓 브로커로 열린 소켓의 소유권을 전송하고 포그라운드에서 벗어나거나 종료할 수도 있습니다. 전송된 소켓에 대한 연결이 설정되거나, 해당 소켓에 트래픽이 도착하면 앱 또는 지정된 백그라운드 작업이 활성화됩니다. 앱이 실행되지 않는 경우 앱이 시작됩니다. 그런 다음 소켓 브로커가 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하여 새 트래픽이 도착했음을 앱에 알립니다. 앱은 소켓 브로커에서 소켓을 회수하고 해당 소켓에서 트래픽을 처리합니다. 따라서 앱은 네트워크 트래픽을 적극적으로 처리하지 않을 때 보다 적은 시스템 리소스를 사용합니다.
 
@@ -468,7 +466,7 @@ using Windows::Storage::Streams;
 네트워크를 통해 연결할 때 인증 자격 증명을 제공하는 방법입니다.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
-[**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
+[**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows10, [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체 (이 설정 해야 TLS 핸드셰이크를 시작 하기 전에)에서 클라이언트 인증서를 제공할 수 있습니다. 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
 
 다음은 이를 구현하는 방법을 보여 주는 코드 조각입니다.
 

@@ -6,15 +6,13 @@ keywords: 새로운 기능, 새로운 기능, 업데이트, Windows 10, 최신, 
 ms.author: quradic
 ms.date: 4/10/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42078d36fbd97101488bfa58e3a8fe383b15d91c
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 40a5621dbd5729d31e2b288b912b10c638ca4f36
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818505"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569963"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a>Windows 10 빌드 17134의 새로운 API
 

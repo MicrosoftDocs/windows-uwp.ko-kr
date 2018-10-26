@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: '시작: 다음에 할 일'
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: 이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다.
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 2ca600085c14c43d9d9d37e80efbae30bae650ef
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f8a6165df7bf839154ede4db3fda8a5e1662880
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219742"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568761"
 ---
 # <a name="getting-started-what-next"></a>시작: 다음에 할 일
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -32,7 +31,7 @@ ms.locfileid: "219742"
 
 개발자 포럼, 블로그, 개발자 캠프 및 워크샵, 로컬 Microsoft 이벤트 및 계약을 통해 지원을 받고 상호 연결하는 방법은 [커뮤니티 리소스](https://developer.microsoft.com/en-us/windows/support)를 참조하세요.
 
-Windows 10은 개발자에게 새로운 앱 빌드 기회를 제공합니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
+생각 Windows10 수에 대 한 새로운 앱 빌드 기회 열립니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

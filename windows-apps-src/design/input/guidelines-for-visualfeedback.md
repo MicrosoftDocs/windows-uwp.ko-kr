@@ -9,15 +9,13 @@ keywords: 시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4653e07d6d81f884ee6519206e75350aa47945f8
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: baf23062595d5d81fc59a2d757dcbada685c0f97
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917588"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565988"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
@@ -133,6 +131,6 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 * [입력: Windows 8 제스처 샘플](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [입력: 조작 및 제스처(C++) 샘플](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [DirectX 터치 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 

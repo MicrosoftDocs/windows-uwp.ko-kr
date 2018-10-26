@@ -6,16 +6,14 @@ description: Windows 런타임 애니메이션 라이브러리의 애니메이�
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 23af2883e0e1bc4fe8aa67bb72a8690082369ab4
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d7c3c4a9e46ce38298d7dcdd50477c4de0e9960c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656278"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570064"
 ---
 # <a name="animations-in-xaml"></a>XAML의 애니메이션
 
@@ -138,7 +136,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 | 모든 UI 컨테이너의 콘텐츠 | [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.contentthemetransition.contentthemetransition) |
 | 컨트롤 대상 또는 다른 어떤 애니메이션도 적용되지 않는 경우 | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
 
- 
+ 
 
 ## <a name="transition-animation-examples"></a>전환 애니메이션 예
 
@@ -307,7 +305,7 @@ UI 요소를 추가하거나, 제거하거나, UI 요소의 순서를 다시 매
 | [**ReorderThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210409) | 목록 보기 컨트롤 항목의 순서가 바뀔 때 애니메이션 전환 동작을 제공합니다. 일반적으로 이는 끌어서 놓기 동작의 결과로 일어납니다. 여러 컨트롤과 테마가 애니메이션에 다양한 특성을 부여할 수 있습니다. |
 | [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) | 컨트롤의 위치가 바뀔 때 애니메이션 전환 동작을 제공합니다. |
 
- 
+ 
 
 ## <a name="theme-animation-examples"></a>테마 애니메이션 예
 
@@ -353,9 +351,9 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 
 전환 애니메이션과 달리, 테마 애니메이션에는 자동으로 실행되는 기본 제공 트리거(전환)가 없습니다. XAML에서 정의할 때 테마 애니메이션을 포함하려면 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)를 사용해야 합니다. 애니메이션의 기본 동작을 변경할 수도 있습니다. 예를 들어 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243207)에서 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR210302) 시간 값을 늘려 페이드 아웃의 속도를 늦출 수 있습니다.
 
-**참고**  기본 애니메이션 기술을 보여 주기 위해 앱 코드를 사용해 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 메서드를 호출하여 애니메이션을 시작합니다. [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) 및 [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **Storyboard** 메서드를 사용하여 **Storyboard** 애니메이션이 실행되는 방법을 제어할 수 있습니다. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함하는 방법은 아닙니다. 대신 컨트롤 또는 요소에 적용된 XAML 스타일 및 템플릿에 라이브러리 애니메이션을 통합합니다. 템플릿 및 시각적 상태에 대해 알아보는 과정은 약간 더 복잡합니다. 그러나 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용하는 방법을 설명합니다.
+**참고**기본 애니메이션 기술을 보여 주기 위해,에서는 앱 코드를 사용해 [**스토리 보드**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 메서드를 호출 하 여 애니메이션을 시작 합니다. [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) 및 [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) **Storyboard** 메서드를 사용하여 **Storyboard** 애니메이션이 실행되는 방법을 제어할 수 있습니다. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함하는 방법은 아닙니다. 대신 컨트롤 또는 요소에 적용된 XAML 스타일 및 템플릿에 라이브러리 애니메이션을 통합합니다. 템플릿 및 시각적 상태에 대해 알아보는 과정은 약간 더 복잡합니다. 그러나 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용하는 방법을 설명합니다.
 
- 
+ 
 
 UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이션 효과를 낼 수 있습니다. 이러한 API의 이름에는 모두 "ThemeAnimation"이 포함되어 있습니다.
 
@@ -376,7 +374,7 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 | [**DrillInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drillinthemeanimation) | 사용자가 논리적 계층 구조에서 앞으로 이동할 때(예: 마스터 페이지에서 세부 정보 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
 | [**DrillOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drilloutthemeanimation.aspx) | 사용자가 논리적 계층 구조에서 뒤로 이동할 때(예: 세부 정보 페이지에서 마스터 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
 
- 
+ 
 
 ## <a name="create-your-own-animations"></a>직접 애니메이션 만들기
 
@@ -386,9 +384,9 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 
 사용자 지정 스토리보드 애니메이션을 정의할 XAML에서 가장 큰 앱 UI 정의 영역은 XAML에서 컨트롤에 대한 시각적 상태를 정의하는 경우입니다. 이 작업은 새 컨트롤 클래스를 만들고 있거나 컨트롤 템플릿에 시각적 상태가 있는 기존 컨트롤의 템플릿을 다시 만들고 있기 때문에 수행합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)을 참조하세요.
 
- 
+ 
 
- 
+ 
 
 
 

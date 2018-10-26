@@ -6,16 +6,14 @@ description: StorageFile.IsAvailable 속성을 사용하여 Microsoft OneDrive �
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c5de157d320b401fdc0e542eb0f1bdc241e2f21
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 87eb93fbc100d143ab9fe75d34bb9c4d2caaf01d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "459760"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569714"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Microsoft OneDrive 파일의 가용성 확인
 
@@ -51,7 +49,7 @@ ms.locfileid: "459760"
 | 온라인만으로 표시된 OneDrive 파일       | True   | 사용자 설정 기반 | False   |
 | 네트워크 파일                              | True   | 사용자 설정 기반 | False   |
 
- 
+ 
 
 다음 단계에서는 파일이 현재 사용 가능한지를 확인하는 방법을 설명합니다.
 

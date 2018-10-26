@@ -6,16 +6,14 @@ ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10 uwp, 게임, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: 26510cac6e4d42ee5eb36a7ae09c9c1518b47089
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "300177"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571187"
 ---
 # <a name="input-for-games"></a>게임용 입력 시스템
 
@@ -45,17 +43,17 @@ UWP 게임에서 아케이드 스틱을 이용하는 방법에 대해 자세한 
 
 UWP 게임에서 레이싱 휠을 사용하는 방법에 대해 자세한 내용은 [레이싱 휠과 힘 피드백](racing-wheel-and-force-feedback.md)을 참조하세요.
 
-### <a name="flight-sticks"></a>항공편 개가
+### <a name="flight-sticks"></a>플라이트 스틱
 
-항공편 개가 평면 또는 선의 환경에 있는 항공편 개가의 느낌을 재생 하는 게임 입력된 장치입니다. 신속하고 정확한 플라이트 제어를 위한 완벽한 입력 디바이스입니다.
+플라이트 스틱은 평면 또는 우주선의 조종석에서 찾을 수 있는 플라이트 스틱의 느낌을 재현 하는 게임 입력된 장치입니다. 신속하고 정확한 플라이트 제어를 위한 완벽한 입력 디바이스입니다.
 
-항공편 메모리가 UWP 게임에서을 사용 하는 방법에 대 한 자세한 내용은 [항공편 연결](flight-stick.md)을 참조 하십시오.
+UWP 게임에서 플라이트 스틱을 사용 하는 방법에 대 한 자세한 내용은 [플라이트 스틱](flight-stick.md)를 참조 하세요.
 
 ### <a name="raw-game-controllers"></a>원시 게임 컨트롤러
 
 원시 게임 컨트롤러는 다양한 유형의 일반적인 게임 컨트롤러에서 발견된 입력으로 나타나는 게임 컨트롤러의 일반적인 표현입니다. 이러한 입력은 이름 없는 단추, 스위치 및 축의 단순한 배열로 표시됩니다. 원시 게임 컨트롤러를 사용하여 고객이 사용자는 컨트롤러 유형에 관계 없이 사용자 지정 입력 매핑을 만들도록 허용할 수 있습니다.
 
-UWP 게임에서 원시 게임 컨트롤러를 사용 하는 방법에 대 한 자세한 내용은 [원시 게임 컨트롤러](raw-game-controller.md)를 참조 하십시오.
+UWP 게임에서 원시 게임 컨트롤러를 사용 하는 방법에 대 한 자세한 내용은 [원시 게임 컨트롤러](raw-game-controller.md)를 참조 하세요.
 
 ### <a name="ui-navigation-controllers"></a>UI 탐색 컨트롤러
 

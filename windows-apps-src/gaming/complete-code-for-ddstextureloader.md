@@ -6,16 +6,14 @@ ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, ddstextureloader
 ms.localizationpriority: medium
-ms.openlocfilehash: a06e3624ba7caed8f51a5ff9fe0c5b6100d0f77c
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 8ba0de548cb1c4222783ae4245e1aacba4ab09e2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983303"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565863"
 ---
 # <a name="complete-code-for-ddstextureloader"></a>DDSTextureLoader의 전체 코드
 
@@ -1224,9 +1222,9 @@ void CreateDDSTextureFromMemory(
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

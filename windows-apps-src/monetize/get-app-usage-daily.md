@@ -6,16 +6,14 @@ title: 일일 앱 사용 현황 가져오기
 ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 사용
 ms.localizationpriority: medium
-ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 5d533f0e28161e17c3a842f6c3c4c6b6ef4a196d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514267"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566094"
 ---
 # <a name="get-daily-app-usage"></a>일일 앱 사용 현황 가져오기
 

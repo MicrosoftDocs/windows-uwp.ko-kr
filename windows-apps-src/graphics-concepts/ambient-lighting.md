@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08b44ae8348e7b9d1d8dff0b98e5f1c553ec79b2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044132"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565226"
 ---
 # <a name="ambient-lighting"></a>주변 조명
 
@@ -40,7 +38,7 @@ ms.locfileid: "1044132"
 | sum               | 해당 없음           | 해당 없음           | 주변 조명의 합                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | i번째 조명의 조명 주변 색                                                                              |
 
- 
+ 
 
 Cₐ의 값은 다음 중 하나입니다.
 
@@ -48,9 +46,9 @@ Cₐ의 값은 다음 중 하나입니다.
 -   vertex color2(AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2이고 꼭짓점 선언에 두 번째 꼭짓점 색을 제공할 경우)
 -   재질 주변 색
 
-**참고**   AMBIENTMATERIALSOURCE 옵션을 사용하고 꼭짓점 색을 제공하지 않을 경우 재질 주변 색이 사용됩니다.
+**참고**  AMBIENTMATERIALSOURCE 옵션을 사용 하 고 꼭 짓 점 색을 제공 하지 않을 경우 재질 주변 색이 사용 됩니다.
 
- 
+ 
 
 재질 주변 색을 사용하려면 아래 예제 코드처럼 SetMaterial을 사용합니다.
 
@@ -89,9 +87,9 @@ Ambient.a = 0.0f;
 
 [조명의 수학](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

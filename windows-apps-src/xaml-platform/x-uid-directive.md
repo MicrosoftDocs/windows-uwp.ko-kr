@@ -6,16 +6,14 @@ ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a32bd0bee8180f2675763f1a131e0b0c60b7594
-ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
-ms.translationtype: HT
+ms.openlocfilehash: 4bec4bd5d35fc2bb3013b37c1386520a769ddeb6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "1992069"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571038"
 ---
 # <a name="xuid-directive"></a>x:Uid 지시어
 
@@ -32,7 +30,7 @@ ms.locfileid: "1992069"
 
 | 용어 | 설명 |
 |------|-------------|
-| stringID | 앱에서 XAML 요소를 고유하게 식별하는 문자열로, 리소스 파일에서 리소스 경로의 일부가 됩니다. 설명을 참조하세요.| 
+| stringID | 앱에서 XAML 요소를 고유하게 식별하는 문자열로, 리소스 파일에서 리소스 경로의 일부가 됩니다. 설명을 참조하세요.| 
 
 ## <a name="remarks"></a>설명
 

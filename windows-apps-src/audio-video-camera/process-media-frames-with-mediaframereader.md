@@ -6,16 +6,14 @@ title: MediaFrameReader를 사용하여 미디어 프레임 처리
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e12481d18773a6dc97fa25f05af080086363b54
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 722a411bc6363d3a10b5db0f609b08f5d14b3f8d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832484"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566154"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
@@ -258,9 +256,9 @@ Windows 버전 1709부터 XAML 페이지의 **[MediaPlayerElement](https://docs.
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ec6b2a31f4f577de30dac1c96a411c6aee6e9dc
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 439a69da400caaa9ae509a121f2aa7336853d2ca
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521360"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569335"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>MakePri.exe 형식별 인덱서
 

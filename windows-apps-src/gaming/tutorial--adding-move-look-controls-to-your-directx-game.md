@@ -6,19 +6,18 @@ ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 이동-보기, 컨트롤
-ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 219d014eb03803ace440dc1c1773043a9ecbc99f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220594"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566144"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임용 이동-보기 컨트롤
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 기존 마우스 및 키보드 이동-보기 컨트롤(마우스 보기 컨트롤이라고도 함)을 DirectX 게임에 추가하는 방법을 알아봅니다.
 
@@ -580,14 +579,11 @@ myFirstPersonCamera->SetViewParameters(
 
 축하합니다! 게임에서 터치 스크린 및 키보드/마우스 입력 터치 컨트롤에 대한 기본 이동-보기 컨트롤이 구현되었습니다.
 
-> **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
- 
 
- 
+ 
 
- 
+ 
 
 
 

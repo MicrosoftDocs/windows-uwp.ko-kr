@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30c3ed335360d7b259c045722b65bb08a71b6e0c
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a86aa5a78bc4df9deaeea239356345c33736d942
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044042"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568846"
 ---
 # <a name="stream-output-so-stage"></a>SO(스트림 출력) 단계
 
@@ -47,7 +45,7 @@ SO(스트림 출력) 단계에서는 이전의 활성 단계에서 하나 이상
 
 SO(스트림 출력) 단계에서는 이전 활성 단계(예: GS(기하 도형 셰이더) 단계)의 꼭짓점 데이터를 하나 이상의 메모리 내 버퍼로 연속적으로 출력(또는 스트리밍)합니다. GS(기하 도형 셰이더) 단계가 비활성 상태인 경우 SO(스트림 출력) 단계는 DS(도메인 셰이더) 단계(또는 DS 단계도 비활성 상태일 경우 VS(꼭짓점 셰이더) 단계)의 꼭짓점 데이터를 메모리 내 버퍼로 연속적으로 출력합니다.
 
-삼각형 또는 선 표시줄이 입력 Assembler (i A) 단계에 바인딩되어 있으면 각 표시줄이 아웃 스트리밍되 전에 목록으로 변환 됩니다. 꼭지점은 항상 전체 기본 형식 (예 3 꼭지점 삼각형에 대 한 시간에);으로으로 기록 됩니다. 불완전 한 기본형 아웃 스트리밍되 되지 않습니다. 스트리밍 데이터 수행 하기 전에 인접 데이터를 삭제 하는 인접와 기본 형식입니다.
+삼각형 또는 선 스트립이 IA (입력 어셈블러) 단계에 바인딩된 경우 각 스트립 스트리밍된는 전에 목록으로 변환 됩니다. 꼭 짓 점은 전체 기본 요소 (예를 들어, 3 개의 꼭 짓 점 삼각형에 대 한 번); 작성 항상 아웃 불완전 한 원형은 스트림 출력 되지 않습니다. 기본 형식과 인접 데이터 하기 전에 인접 데이터를 삭제 기 합니다.
 
 스트림 출력 단계는 최대 4개의 버퍼를 동시에 지원합니다.
 
@@ -59,9 +57,9 @@ SO(스트림 출력) 단계에서는 이전 활성 단계(예: GS(기하 도형 
 
 [그래픽 파이프라인](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 
