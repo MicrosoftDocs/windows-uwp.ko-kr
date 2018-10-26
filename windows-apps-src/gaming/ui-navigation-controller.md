@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, ui, 탐색
 ms.localizationpriority: medium
 ms.openlocfilehash: a0ec2790f6dddf93959a8c826602c0ac622a7d23
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5556442"
+ms.locfileid: "5593487"
 ---
 # <a name="ui-navigation-controller"></a>UI 탐색 컨트롤러
 
