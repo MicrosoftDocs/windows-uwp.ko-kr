@@ -15,11 +15,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6756d8c64f33de8d16d6aa455c3fad694a6306d5
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568073"
+ms.locfileid: "5638994"
 ---
 # <a name="calendar-date-picker"></a>달력 날짜 선택
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 파일, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: e2f63e848820361a64a2a96348a8e1cc2419f233
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5560427"
+ms.locfileid: "5654361"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>UWP의 파일 속성에 빠르게 액세스 
 
