@@ -6,16 +6,14 @@ description: 유니버설 Windows 플랫폼(UWP) 앱을 UWP 앱 스트리밍 설
 ms.author: lahugh
 ms.date: 9/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 콘텐츠 그룹 맵, 스트리밍 설치, uwp 앱 스트리밍 설치, 소스 콘텐츠 그룹 맵
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ce32958d5a99dc9f3f772d6272450a4f2b0f81b
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 6a2922d6d3f54d693a9fe9c0982ea06cc5f2caae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5519023"
+ms.locfileid: "5542985"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>소스 콘텐츠 그룹 맵 생성 및 변환
 

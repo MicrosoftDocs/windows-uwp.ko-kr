@@ -6,16 +6,14 @@ ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 연락처, 일정, 약속, 메일 메시지
 ms.localizationpriority: medium
-ms.openlocfilehash: 2224ab78d5f3424904dfc2e211d9890648080574
-ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
-ms.translationtype: HT
+ms.openlocfilehash: c020a871863df6fac3dabc3ffab4bafc57227b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "1905338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549325"
 ---
 # <a name="contacts-my-people-and-calendar"></a>연락처, 내 피플 및 일정
 
@@ -35,7 +33,7 @@ ms.locfileid: "1905338"
 | [내 피플 공유](my-people-sharing.md) | 사용자가 파일 탐색기에서 내 피플 핀으로 파일을 끌어서 고정된 연락처와 콘텐츠를 공유할 수 있는 내 피플 공유에 대한 지원을 추가하는 방법을 보여줍니다. |
 | [내 피플 알림](my-people-notifications.md) | 고정된 연락처에서 보낼 수 있는 새로운 종류의 알림인 내 피플 알림을 만들고 사용하는 방법을 보여 줍니다. |
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 

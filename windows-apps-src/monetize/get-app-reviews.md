@@ -6,16 +6,14 @@ title: 앱 리뷰 가져오기
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 리뷰
 ms.localizationpriority: medium
-ms.openlocfilehash: c14b2ce6dd9fa7058ef3dbcd8e7e7a17a05fe78e
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 61ce463be2ef2d5e3328c132302704f50c336105
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512958"
+ms.locfileid: "5546275"
 ---
 # <a name="get-app-reviews"></a>앱 리뷰 가져오기
 

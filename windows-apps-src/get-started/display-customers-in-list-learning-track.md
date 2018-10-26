@@ -5,16 +5,14 @@ description: 목록에 있는 고객 개체 컬렉션을 표시하기 위해 수
 ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: 시작, uwp, windows 10, 학습 트랙, 데이터 바인딩, 목록
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b929461b0831eb0bd57721ade8f512dc2fdd334
-ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
-ms.translationtype: HT
+ms.openlocfilehash: 4e58231d644616a088eb06f24a2465c240e10c16
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1893898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544892"
 ---
 # <a name="display-customers-in-a-list"></a>목록에서 고객 표시
 

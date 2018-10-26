@@ -6,15 +6,14 @@ description: 컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b0d02dcc4f26ba767c4253f42a20459059829961
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.localizationpriority: medium
+ms.openlocfilehash: 8e43d5697a8fe4536e3574d93bda5836133ec8a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2017
-ms.locfileid: "839445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544739"
 ---
 # <a name="composition-visual"></a>컴퍼지션 시각
 

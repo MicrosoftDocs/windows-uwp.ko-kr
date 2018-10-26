@@ -6,19 +6,18 @@ description: Windows.UI.Composition API는 프레임워크 계층(XAML)과 그�
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: b292be46ccddd4355f3bef13e37da6b6cec452fa
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.localizationpriority: medium
+ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2017
-ms.locfileid: "839485"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545747"
 ---
 # <a name="visual-layer"></a>시각적 계층
 
-시각적 계층은 고성능, 그래픽 유지 모드 API, 효과 및 애니메이션을 제공하며 Windows 장치 전체에서 모든 UI의 기반이 됩니다. 선언 방식으로 UI를 정의하면 시각적 계층은 그래픽 하드웨어 가속을 사용하여 콘텐츠, 효과, 애니메이션이 문제 없이 앱의 UI 스레드와 독립적으로 부드럽게 렌더링되도록 합니다.
+시각적 계층은 고성능, 그래픽 유지 모드 API, 효과 및 애니메이션을 제공하며 Windows 장치 전체에서 모든 UI의 기반이 됩니다.선언 방식으로 UI를 정의하면 시각적 계층은 그래픽 하드웨어 가속을 사용하여 콘텐츠, 효과, 애니메이션이 문제 없이 앱의 UI 스레드와 독립적으로 부드럽게 렌더링되도록 합니다.
 
 눈에 띄는 주요 사항은 다음과 같습니다.
 
@@ -41,7 +40,7 @@ Windows UWP 앱은 이미 UI 프레임 워크 중 하나를 통해 시각적 계
 
 ### <a name="content"></a>콘텐츠
 
-시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 클래스가 있습니다. 시각의 하위 클래스에는 [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)이 포함되어 어린이들이 시각 트리 및 콘텐츠를 포함하고 단색, 사용자 지정 그려진 콘텐츠, 도는 시각 효과로 채울 수 있는 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433)를 시각적으로 만들 수 있습니다. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
+시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 클래스가 있습니다. 하위 클래스 [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) 어린이 트리를 만드는 시각 효과 및 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 포함 된 콘텐츠를 포함 하 고 단색, 사용자 지정 그려진된 콘텐츠 또는 시각적 효과로 채울 수 있습니다. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
 
 자세한 내용은 [컴퍼지션 시각](composition-visual-tree.md) 개요를 참조하세요.
 
@@ -55,7 +54,7 @@ Windows UWP 앱은 이미 UI 프레임 워크 중 하나를 통해 시각적 계
 
 ### <a name="animations"></a>애니메이션
 
-시각적 계층의 애니메이션 시스템으로 시작을 이동하고 효과를 애니메이션화하고 전화, 클립 및 기타 속성을 유발할 수 있습니다.  이는 처음부터 성능을 염두에 두고 설계된 프레임워크 독립적 시스템입니다.  원활함과 확장성을 보장하도록 UI 스레드와 독립적으로 작동됩니다.  시간이 지남에 따라 익숙한 키 프레임 애니메이션을 사용하여 속성을 변경할 수 있으며 사용자 입력 등 다른 속성 간의 수학적 관계를 설정하여 원활하게 개발된 환경을 직접 만들 수 있습니다.
+시각적 계층의 애니메이션 시스템으로 시작을 이동하고 효과를 애니메이션화하고 전화, 클립 및 기타 속성을 유발할 수 있습니다.이는 처음부터 성능을 염두에 두고 설계된 프레임워크 독립적 시스템입니다.원활함과 확장성을 보장하도록 UI 스레드와 독립적으로 작동됩니다.시간이 지남에 따라 익숙한 키 프레임 애니메이션을 사용하여 속성을 변경할 수 있으며 사용자 입력 등 다른 속성 간의 수학적 관계를 설정하여 원활하게 개발된 환경을 직접 만들 수 있습니다.
 
 자세한 내용은 [컴퍼지션 애니메이션](composition-animation.md) 개요를 참조하세요.
 

@@ -6,16 +6,14 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47280437ad902d0679e0ef266bbd7ad9b6b635af
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 6eca73beae6634d1809c0e9e779d80a43b495a65
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544371"
 ---
 # <a name="lighting-overview"></a>조명 개요
 
@@ -79,9 +77,9 @@ Direct3D는 서로 결합되어 최종 색상을 형성하는 네 개 구성 요
 
 [조명과 재료](lights-and-materials.md)
 
- 
+ 
 
- 
+ 
 
 
 

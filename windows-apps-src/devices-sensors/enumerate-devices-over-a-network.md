@@ -6,16 +6,14 @@ description: 로컬로 연결된 디바이스를 검색하는 것 외에 Windows
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fa2e206bdfde0d1399086af2a2424718ceba6ac8
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 00f8d4314d67828fa30007d3b8af4c4e1d06c154
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958908"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547937"
 ---
 # <a name="enumerate-devices-over-a-network"></a>네트워크를 통해 디바이스 열거
 
@@ -51,7 +49,7 @@ ms.locfileid: "958908"
 | Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}** |
 | Bluetooth LE                                 | **{bb7bb05e-5972-42b5-94fc-76eaa7084d49}** |
 
- 
+ 
 
 ## <a name="aqs-examples"></a>AQS 예제
 
@@ -82,6 +80,6 @@ System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
- 
+ 
 
- 
+ 

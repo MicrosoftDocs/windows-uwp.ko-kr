@@ -6,16 +6,14 @@ description: 스토리보드 애니메이션은 시각적 측면의 애니메이
 ms.author: jimwalk
 ms.date: 07/13/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c03d99781114c4fefff04cc25930748ec16182f
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 7e4aa010915ba681869b4ae27ba63e081a31ef78
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5517766"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550325"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
 

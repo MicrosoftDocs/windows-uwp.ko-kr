@@ -6,16 +6,14 @@ ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
 ms.date: 10/05/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 사용, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
-ms.openlocfilehash: c5ef2136eaf17fc902dcfc7840ff6dbdac56ef0d
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 3998e8c5b207d8484a621db16d2e72a136f22c80
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5480189"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546384"
 ---
 # <a name="usage-report"></a>사용 보고서
 

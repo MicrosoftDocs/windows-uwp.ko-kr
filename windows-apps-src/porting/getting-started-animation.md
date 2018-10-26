@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: 애니메이션 시작
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: 이 프로젝트에서는 사각형을 움직이고, 사라지게 한 다음, 다시 표시합니다.
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a45de584c4374afefe0fdca198eb7234351ac42d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4822a436225bea92fdf1e981ad33378996adefe4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219697"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550881"
 ---
 # <a name="getting-started-animation"></a>시작: 애니메이션
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 ## <a name="adding-animations"></a>애니메이션 추가
 
@@ -129,7 +128,7 @@ MainPage.xaml 파일을 열면 **XAML** 보기에 디자이너에서 작업할 �
 
 이 XAML을 수동으로 편집하거나 Blend로 돌아가 작업을 계속할 수 있습니다. Blend를 사용하면 흥미로운 사용자 인터페이스를 재미있게 만들 수 있으며, 그래픽 도구를 사용하여 이를 애니메이션하는 기능으로 개발 시간을 크게 단축할 수 있습니다. 애니메이션에 대한 자세한 내용은 [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)를 참조하세요.
 
-**참고** JavaScript 및 HTML을 사용하는 Windows 스토어 앱용 애니메이션에 대한 자세한 내용은 [UI 애니메이션(HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165)을 참조하세요.
+**참고** <span class="legacy-term">JavaScript 및 HTML을 사용 하 여 UWP 앱</span>용 애니메이션에 대 한 자세한 내용은 [UI 애니메이션 (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165)참조 하세요.
 
 ### <a name="next-step"></a>다음 단계
 

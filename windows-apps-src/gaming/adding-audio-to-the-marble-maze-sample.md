@@ -6,16 +6,14 @@ ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
 ms.author: elcowle
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 오디오, 게임, 샘플
 ms.localizationpriority: medium
-ms.openlocfilehash: 4534675395f415ccd742dff646bc6c498aa7faa6
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 89612e3fbc4ef2ccb855f7709820f9445d0fd77c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546863"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Marble Maze 샘플에 오디오 추가
 
@@ -352,7 +350,7 @@ CoTaskMemFree(waveFormat);
 > [!IMPORTANT]
 > [MFCreateWaveFormatExFromMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms702177) 메서드는 **CoTaskMemAlloc**을 사용하여 [WAVEFORMATEX](https://msdn.microsoft.com/library/windows/hardware/ff538799) 개체를 할당합니다. 따라서 이 개체의 사용이 완료되면 **CoTaskMemFree**를 호출해야 합니다.
 
- 
+ 
 
 **MediaStreamer::Initialize** 메서드는 바이트 단위의 스트림 길이인 **m\_maxStreamLengthInBytes**를 계산하여 완료됩니다. 이 작업을 위해 [IMFSourceReader::GetPresentationAttribute](https://msdn.microsoft.com/library/windows/desktop/dd374662) 메서드를 호출하여 오디오 스트림 기간을 100 나노초 단위로 가져오고, 기간을 구역으로 변환한 다음 평균 데이터 전송 속도(초당 바이트 수)를 곱합니다. Marble Maze는 나중에 이 값을 사용하여 각 게임 플레이 소리가 저장된 버퍼를 할당합니다.
 
@@ -402,7 +400,7 @@ enum SoundEvent
 | MenuChangeEvent   | MenuChange.wav | 사용자가 현재 메뉴 항목을 변경할 때 재생됩니다. |
 | MenuSelectedEvent | MenuSelect.wav | 사용자가 메뉴 항목을 선택할 때 재생됩니다.           |
 
- 
+ 
 
 다음 예제에서는 **Audio::CreateResources** 메서드가 배경 음악에 대한 원본 음성을 만드는 방법을 보여 줍니다. [XAUDIO2\_SEND\_DESCRIPTOR](https://msdn.microsoft.com/library/windows/desktop/ee419244) 구조체는 다른 음성에서 대상 음성을 정의하고 필터를 사용할지 여부를 지정합니다. Marble Maze는 **Audio::SetSoundEffectFilter** 메서드를 호출하여 필터를 통해 구슬이 구를 때 나는 소리를 변경합니다. [XAUDIO2\_VOICE\_SENDS](https://msdn.microsoft.com/library/windows/desktop/ee419246) 구조체는 단일 출력 음성에서 데이터를 수신할 음성 집합을 정의합니다. Marble Maze는 원본 음성의 데이터를 마스터 음성(재생 소리의 변경되지 않는 부분)과 재생음의 반향 부분을 구현하는 서브믹스 음성 2개에 보냅니다.
 

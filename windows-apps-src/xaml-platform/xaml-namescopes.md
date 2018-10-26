@@ -6,16 +6,14 @@ ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd7a7de4c8986bb53acd4fe18c6255086e366ca8
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 8fcbc1566d2b2b5ffc6889a57dd7656a3466d2a9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673610"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548087"
 ---
 # <a name="xaml-namescopes"></a>XAML 이름 범위
 
@@ -34,7 +32,7 @@ XAML 이름 범위의 이름을 사용하는 가장 일반적인 경우는 개�
 
 기술적으로는 XAML 자체가 태그 컴파일러로 처리되는 동시에 코드 숨김을 위해 정의하는 partial 클래스와 XAML이 함께 컴파일됩니다. 태그에 정의된 각 개체 요소와 **Name** 또는 [x:Name 특성](x-name-attribute.md)은 XAML 이름과 일치하는 이름으로 내부 필드를 생성합니다. 이 필드는 처음에는 비어 있습니다. 그런 다음 클래스는 모든 XAML이 로드된 후에만 호출되는 **InitializeComponent** 메서드를 생성합니다. **InitializeComponent** 논리에서, 각 내부 필드는 동일한 이름 문자열에 대한 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) 반환 값으로 채워집니다. 컴파일 후 Windows 런타임 앱 프로젝트의 /obj 하위 폴더에서 각 XAML 페이지에 대해 만들어지는 ".g"(생성된(generated)) 파일을 보면 이 인프라를 직접 확인할 수 있습니다. 또한 필드 및 **InitializeComponent** 메서드를 리플렉션하거나 해당 인터페이스 언어 콘텐츠를 확인하면 결과 어셈블리의 멤버로 이 필드와 메서드를 볼 수 있습니다.
 
-**참고** 특히 Visual C++ 구성 요소 확장(C++/CX) 앱의 경우 **x:Name** 참조의 지원 필드는 XAML 파일의 루트 요소에 대해 만들어지지 않습니다. C++/CX 코드 숨김에서 루트 개체를 참조해야 하는 경우 다른 API나 트리 통과를 사용합니다. 예를 들어 알려진 명명된 자식 요소에 대해 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출한 다음 [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)를 호출할 수 있습니다.
+**참고**VisualC + + 구성 요소 확장에 대 한 구체적으로 (C + + CX) 앱의 경우 **X:name** 참조에 대 한 지원 필드는 XAML 파일의 루트 요소에 대해 만들어지지 않습니다. C++/CX 코드 숨김에서 루트 개체를 참조해야 하는 경우 다른 API나 트리 통과를 사용합니다. 예를 들어 알려진 명명된 자식 요소에 대해 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출한 다음 [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)를 호출할 수 있습니다.
 
 ## <a name="creating-objects-at-run-time-with-xamlreaderload"></a>XamlReader.Load로 런타임에 개체 만들기
 
@@ -89,5 +87,5 @@ XAML 이름 범위는 서로 독립적이므로 템플릿이 적용되는 페이
 * [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)
 * [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)
 * [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)
- 
+ 
 

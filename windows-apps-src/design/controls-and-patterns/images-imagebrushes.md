@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ee3948fc4c7ab83657e8bca127306bb037d491a8
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 7c0fcd158dac77b3b3322167b82131e51f62390f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494140"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544249"
 ---
 # <a name="images-and-image-brushes"></a>이미지 및 이미지 브러시
 
@@ -60,7 +58,7 @@ ms.locfileid: "1494140"
 
 ![Image 요소의 예](images/Image_Licorice.jpg)
 
-다음 예제에서 [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 속성은 표시할 이미지의 위치를 지정합니다. Source를 설정하려면 절대 URL(예: http://contoso.com/myPicture.jpg)을 지정하거나 앱 패키징 구조에 상대적인 URL을 지정할 수 있습니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
+다음 예제에서 [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 속성은 표시할 이미지의 위치를 지정합니다. 절대 URL을 지정 하 여 소스를 설정할 수 있습니다 (예를 들어 http://contoso.com/myPicture.jpg) 앱 패키징 구조에 상대적인 URL을 지정 하 여 합니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
 
 ### <a name="imagebrush"></a>ImageBrush
 

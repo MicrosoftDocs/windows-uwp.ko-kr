@@ -6,16 +6,14 @@ ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, basicloader
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f602b9f3007bc4c58209648820a5062e728a905
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: cde8d7b368fb3ee660bd5696f983070738397b6f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547947"
 ---
 # <a name="complete-code-for-basicloader"></a>BasicLoader의 전체 코드
 
@@ -1109,9 +1107,9 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

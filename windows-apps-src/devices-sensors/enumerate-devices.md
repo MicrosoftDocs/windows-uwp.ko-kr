@@ -6,16 +6,14 @@ description: 열거형 네임스페이스를 사용하면 시스템에 내부에
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cf6e8fe3205d70479a590bf73f7a01cd7ac3848
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: df6082665136442c03273dea4132417b0fd7033c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544169"
 ---
 # <a name="enumerate-devices"></a>디바이스 열거
 
@@ -72,7 +70,7 @@ async void enumerateSnapshot(){
 | **DeviceInformation.Kind**       | [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체로 표시되는 장치 개체의 종류를 나타냅니다. 장치 범주나 장치 유형이 아닙니다. 단일 장치를 다른 종류의 여러 **DeviceInformation** 개체로 나타낼 수 있습니다. 이 속성에 사용할 수 있는 값 및 값 간의 관계가 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx)에 나와 있습니다.                           |
 | **DeviceInformation.Properties** | 이 속성 모음은 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체에 대해 요청된 정보를 포함합니다. 가장 일반적인 속성은 **DeviceInformation** 개체의 속성(예: [**DeviceInformation.Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name))으로 쉽게 참조됩니다. 자세한 내용은 [장치 정보 속성](device-information-properties.md)을 참조하세요.                                                                |
 
- 
+ 
 
 ## <a name="devicepicker-ui"></a>DevicePicker UI
 
@@ -86,9 +84,9 @@ async void enumerateSnapshot(){
 
 [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841)가 표시되어 있는 동안 장치가 추가, 제거 또는 업데이트되면 UI의 내용이 자동으로 업데이트됩니다.
 
-**참고** [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841)를 사용하여 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx)를 지정할 수는 없습니다. 특정 **DeviceInformationKind**의 디바이스를 사용하려면 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446)를 빌드하고 고유한 UI를 제공해야 합니다.
+**참고** [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841)를 사용 하 여 지정할 수 없습니다. 특정 **DeviceInformationKind**의 디바이스를 사용하려면 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446)를 빌드하고 고유한 UI를 제공해야 합니다.
 
- 
+ 
 
 미디어 콘텐츠 캐스팅 및 DIAL도 사용하려는 경우 각각 고유한 선택기를 제공합니다. 고유한 선택기는 각각 [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn972525) 및 [**DialDevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn946783)입니다.
 
@@ -127,9 +125,9 @@ async void enumerateSnapshot(){
 
 백그라운드 작업으로 장치를 감시하는 작업은 위에서 설명한 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) 만들기와 유사합니다. 실제로 이전 섹션에 설명된 대로 먼저 일반 **DeviceWatcher** 개체를 만들어야 합니다. 이 개체를 만들었으면 [**DeviceWatcher.Start**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.start) 대신 [**GetBackgroundTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx)를 호출합니다. **GetBackgroundTrigger**를 호출할 때 받고 싶은 알림의 종류 즉, 추가, 제거 또는 업데이트를 지정해야 합니다. 업데이트 또는 제거를 요청하려면 추가도 요청해야 합니다. 트리거를 등록하면 **DeviceWatcher**가 백그라운드에서 즉시 실행되기 시작합니다. 이때부터 기준에 일치하는 응용 프로그램에 대한 새로운 알림을 받을 때마다 백그라운드 작업이 트리거되고 응용 프로그램을 마지막으로 트리거한 이후의 최신 변경 내용을 제공합니다.
 
-**중요** [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838)는 감시자가 **EnumerationCompleted** 상태에 도달할 때 처음으로 응용 프로그램을 트리거합니다. 따라서 초기 결과가 모두 포함됩니다. 이후 응용 프로그램을 트리거할 때는 마지막 트리거 이후 발생한 추가, 업데이트 및 제거 알림만 포함됩니다. 이와 약간 다르게 포그라운드 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) 개체의 경우 초기 결과가 한번에 하나씩 제공되지 않고 **EnumerationCompleted**에 도달한 후 번들로만 제공됩니다.
+**중요 한** [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) 응용 프로그램을 트리거합니다 처음 감시자 **EnumerationCompleted** 상태에 도달 하면 됩니다. 따라서 초기 결과가 모두 포함됩니다. 이후 응용 프로그램을 트리거할 때는 마지막 트리거 이후 발생한 추가, 업데이트 및 제거 알림만 포함됩니다. 이와 약간 다르게 포그라운드 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) 개체의 경우 초기 결과가 한번에 하나씩 제공되지 않고 **EnumerationCompleted**에 도달한 후 번들로만 제공됩니다.
 
- 
+ 
 
 일부 무선 프로토콜은 포그라운드와 백그라운드에서 검색할 때 다르게 작동하거나 백그라운드 검색을 전혀 지원하지 않을 수 있습니다. 백그라운드 검색과 관련하여 세 가지 가능성이 있습니다. 다음 표에는 이 가능성과 응용 프로그램에 미칠 수 있는 영향이 나와 있습니다. 예를 들어 Bluetooth 및 Wi-Fi Direct는 백그라운드 검색을 지원하지 않으므로, 확장명으로 [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838)를 지원하지 않습니다.
 
@@ -139,7 +137,7 @@ async void enumerateSnapshot(){
 | 백그라운드에서 수동 검색만 가능 | 수동 검색이 수행될 때까지 기다리느라 장치 검색이 더 오래 걸릴 수 있습니다.                                                           |
 | 백그라운드 검색이 지원되지 않음            | [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838)에서 장치를 검색할 수 없고 업데이트가 보고되지 않습니다. |
 
- 
+ 
 
 [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838)에 백그라운드 작업으로 검색을 지원하지 않는 프로토콜이 포함되어 있어도 트리거는 계속 작동합니다. 그러나 해당 프로토콜을 통해 업데이트 또는 결과 가져올 수 없습니다. 다른 프로토콜 또는 장치에 대한 업데이트는 계속 정상적으로 검색됩니다.
 
@@ -160,9 +158,9 @@ async void enumerateSnapshot(){
 모든 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체는 [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id)와 [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)라는 두 가지 정보의 조합으로 고유하게 식별됩니다. 이 두 가지 정보를 유지하면 **DeviceInformation** 개체가 손실된 후 [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx)에 이 정보를 제공하여 개체를 다시 만들 수 있습니다. 이 작업을 수행하는 경우 앱과 통합되는 장치에 대한 사용자 기본 설정을 저장할 수 있습니다.
 
 
- 
+ 
 
- 
+ 
 
 
 

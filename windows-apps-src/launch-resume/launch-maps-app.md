@@ -6,16 +6,14 @@ ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 27b458c7ec5cabdc27ebd90c9eb024df2f35e402
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 6fd7377294e0d460720f6a16e71981ab0924ac9a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664956"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549283"
 ---
 # <a name="launch-the-windows-maps-app"></a>Windows 지도 앱 실행
 
@@ -103,7 +101,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | bingmaps:?cp=40.726966~-74.006076&where=New%20York            | 지정된 중심점 근처의 뉴욕을 검색합니다.                             |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | 지정된 경계 상자(즉, 뉴욕시) 내부의 피자를 검색합니다.      |
 
- 
+ 
 ## <a name="display-multiple-points"></a>여러 지점 표시
 
 
@@ -117,7 +115,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Fake\_Business\_with\_Underscore라는 이름의 고정핀이 포함된 뉴욕을 표시합니다.                                                  |
 | bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&amp;lvl=16&amp;cp=36.114902~-115.176669 | Hotel List라는 이름의 목록과 라스베이거스에 있는 Caesars Palace 및 The Bellagio에 대한 두 개의 고정핀을 표시하고 16 수준으로 확대/축소합니다. |
 
- 
+ 
 
 ## <a name="display-directions-and-traffic"></a>길 찾기 및 교통량 표시
 
@@ -251,10 +249,10 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 </ul>
 <p>Windows 10에서는 위성뷰 및 3D 보기 스타일이 같습니다.</p>
 <div class="alert">
-**참고**  **sty** 매개 변수를 생략하면 sty=r과 동일한 결과가 생성됩니다.
+**참고**sty과 동일한 결과가 생성 **sty** 매개 변수를 생략 하면 = r.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -289,10 +287,10 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>ss=1</p></td>
 <td align="left"><p><code>ss=1</code>이면 거리 수준 이미지가 표시됩니다. <b>ss</b> 매개 변수를 생략하면 <code>ss=0</code>과 동일한 결과가 생성됩니다. <b>cp</b> 매개 변수와 함께 사용하여 거리 수준 보기의 위치를 지정합니다.</p>
 <div class="alert">
-**참고**  일부 지역에서는 거리 수준 이미지를 사용할 수 없습니다.
+**참고**일부 지역에서는 거리 수준 이미지를 사용할 수 없습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -303,10 +301,10 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>trfc=1</p></td>
 <td align="left"><p>지도에 교통 정보가 포함되는지 여부를 지정합니다. trfc 매개 변수를 생략하면 <code>trfc=0</code>과 동일한 결과가 생성됩니다.</p>
 <div class="alert">
-**참고**  교통량 데이터는 일부 지역에서는 사용할 수 없습니다.
+**참고**교통량 데이터는 일부 지역에서는 사용할 수 없습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -332,10 +330,10 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>불완전한 경로를 지정하면 경로 선이 그려지지 않습니다.</p>
 <p>**mode** 매개 변수와 함께 사용하여 교통 모드(운전, 대중교통 또는 도보)를 지정할 수 있습니다. **mode**를 지정하지 않으면 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다.</p>
 <div class="alert">
-**참고**  **pos** 매개 변수 값으로 위치를 지정한 경우 위치에 제목을 사용할 수 있습니다. 위도 및 경도를 표시하는 대신 제목이 표시됩니다.
+**참고** **pos** 매개 변수 값으로 위치를 지정한 경우 위치에 제목을 사용할 수 있습니다. 위도 및 경도를 표시하는 대신 제목이 표시됩니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -377,7 +375,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 </tbody>
 </table>
 
-  
+  
 <span id="ms-drive-to-param-reference"/>
 
 ## <a name="ms-drive-to-parameter-reference"></a>ms-drive-to: 매개 변수 참조
@@ -387,7 +385,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 > **참고**  이 URI 체계에서는 시작점을 지정하지 않습니다. 항상 현재 위치가 시작점으로 간주됩니다. 현재 위치와 다른 시작점을 지정해야 하는 경우 [길 찾기 및 교통량 표시](#display-directions-and-traffic)를 참조하세요.
 
- 
+ 
 
 | 매개 변수 | 정의 | 예제 | 세부 정보 |
 |------------|-----------|---------|---------|
@@ -395,7 +393,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 | **destination.longitude** | 목적지 경도 | 예: destination.longitude=-122.141964733601 | 목적지의 경도입니다. 유효한 경도 값은 -180과 180(포함) 사이입니다. |
 | **destination.name** | 목적지 이름 | 예: destination.name=Redmond, WA | 목적지의 이름입니다. **destination.name** 값을 인코드할 필요가 없습니다. |
 
- 
+ 
 <span id="ms-walk-to-param-reference"/>
 
 ## <a name="ms-walk-to-parameter-reference"></a>ms-walk-to: 매개 변수 참조
@@ -404,7 +402,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 턴바이턴 도보 길 찾기 요청을 실행하는 URI는 인코드할 필요가 없으며 다음과 같은 형식을 사용합니다.
 
 > **참고**  이 URI 체계에서는 시작점을 지정하지 않습니다. 항상 현재 위치가 시작점으로 간주됩니다. 현재 위치와 다른 시작점을 지정해야 하는 경우 [길 찾기 및 교통량 표시](#display-directions-and-traffic)를 참조하세요.
- 
+ 
 
 | 매개 변수 | 정의 | 예제 | 세부 정보 |
 |-----------|------------|---------|----------|
@@ -414,7 +412,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 ## <a name="ms-settings-parameter-reference"></a>ms-settings: 매개 변수 참조
 
-**ms-settings:** URI 체계에 대한 지도 앱 특정 매개 변수의 구문은 아래에 정의되어 있습니다. **maps-downloadmaps**는 **ms-settings:maps-downloadmaps?** 형태로 **ms-settings:** URI와 함께 지정되어 오프라인 지도 설정 페이지를 나타냅니다. 
+**ms-settings:** URI 체계에 대한 지도 앱 특정 매개 변수의 구문은 아래에 정의되어 있습니다. **maps-downloadmaps**는 **ms-settings:maps-downloadmaps?** 형태로 **ms-settings:** URI와 함께 지정되어 오프라인 지도 설정 페이지를 나타냅니다. 
 
 | 매개 변수 | 정의 | 예제 | 세부 정보 |
 |-----------|------------|---------|----------|

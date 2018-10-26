@@ -6,16 +6,14 @@ ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f6b56d9ac156dabc17be3245a77cb6c126317aa9
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c874c690826dfa74b8dcb2312204cd549db3db2b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975765"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551036"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -62,7 +60,7 @@ ms.locfileid: "975765"
 
 ## <a name="send-a-simple-get-request-over-http"></a>HTTP를 통해 간단한 GET 요청 보내기
 
-이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각 가져오기 요청을 보내는 방법을 보여주는 http://www.contoso.com [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스를 사용 하 여 GET 요청에서 응답을 읽을 수 있습니다.
+이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각에 GET 요청을 전송 하는 방법을 보여 줍니다 http://www.contoso.com [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스를 사용 하 여 GET 요청에서 응답을 읽을 수 있습니다.
 
 ```csharp
 //Create an HTTP client object
@@ -108,7 +106,7 @@ catch (Exception ex)
 
 잘못된 URI(Uniform Resource Identifier) 문자열이 [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체에 대한 생성자에 전달되면 예외가 발생합니다.
 
-**.NET:** [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 형식은 C#과 VB에서 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)로 표시됩니다.
+**.NET:** [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 유형 C# 및 VB. [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) 표시 됩니다.
 
 C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) 클래스와 [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) 메서드 중 하나를 통해 URI가 생성되기 전에 사용자로부터 받은 문자열을 테스트하여 이 오류를 방지할 수 있습니다.
 
@@ -116,7 +114,7 @@ C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 �
 
 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
 
-C#, VB.NET에서 .NET Framework 4.5를 사용하는 앱에서 [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+앱에서 사용 하 여 C#, VB.NET, [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) .NET Framework4.5 나타냅니다 오류가 앱 실행 중 예외가 발생 합니다. [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 관리되는 C++을 사용하는 앱에서 [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 

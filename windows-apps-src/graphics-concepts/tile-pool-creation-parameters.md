@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a41e37e9483521877cfd5787f47e989c2d5cdcb2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1e0a29f66d8d153bc7c558acb804c96fe200864e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043642"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542758"
 ---
 # <a name="tile-pool-creation-parameters"></a>타일 풀 생성 매개 변수
 
@@ -37,9 +35,9 @@ ms.locfileid: "1043642"
 
 [스트리밍 리소스 만들기](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

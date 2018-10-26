@@ -6,16 +6,14 @@ title: 사용자의 구독 청구 상태 변경
 ms.author: mhopkins
 ms.date: 08/01/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e6a654897efba1fa66350abaddbacf9791bbbcc
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 8daec4928867c92734fc3f6322836eb923aeda21
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521478"
+ms.locfileid: "5549665"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>사용자의 구독 청구 상태 변경
 

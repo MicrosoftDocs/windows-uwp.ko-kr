@@ -6,19 +6,18 @@ ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, opengl, direct3d, 셰이더 파이프라인
-ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: f8e3671b5d3490cf565db34ec891c203ee1f7c7a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547124"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -54,7 +53,7 @@ Direct3D에서는 셰이더 리소스를 컴파일 및 로드하기 전에 셰�
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | glCreateShader | 컴파일된 셰이더 개체를 로드하여 CSO로 버퍼로 전달한 후 [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) 및 [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)를 호출합니다. |
 
- 
+ 
 
 ## <a name="compiling-a-shader"></a>셰이더 컴파일
 
@@ -66,7 +65,7 @@ Direct3D 셰이더는 UWP(유니버설 Windows 플랫폼) 앱에서 컴파일된
 | glCompileShader                        | 해당 없음. Visual Studio에서 셰이더를 .cso 파일로 컴파일하여 패키지에 포함시킵니다.                                                                                     |
 | 컴파일 상태에 대해 glGetShaderiv 사용 | 해당 없음. 컴파일에 오류가 있는 경우 Visual Studio FXC(FX 컴파일러)에서 컴파일 출력을 참조하세요. 컴파일이 성공적이면 해당 CSO 파일이 만들어집니다. |
 
- 
+ 
 
 ## <a name="loading-a-shader"></a>셰이더 로드
 
@@ -77,7 +76,7 @@ Direct3D 셰이더는 UWP(유니버설 Windows 플랫폼) 앱에서 컴파일된
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ShaderSource  | 컴파일된 셰이더 개체를 로드한 후 [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) 및 [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)를 호출합니다. |
 
- 
+ 
 
 ## <a name="setting-up-the-pipeline"></a>파이프라인 설정
 
@@ -91,7 +90,7 @@ OpenGL ES 2.0에는 실행을 위한 여러 셰이더가 포함되어 있는 "�
 | glUseProgram    | 해당 없음. Direct3D 11은 셰이더 프로그램 개체 추상화를 사용하지 않습니다.                          |
 | glGetProgramiv  | [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)에 대해 만든 참조를 사용합니다. |
 
- 
+ 
 
 정적 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) 메서드를 사용하여 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 및 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/dn280493)의 인스턴스를 만듭니다.
 
@@ -108,7 +107,7 @@ D3D11CreateDevice(
   creationFlags, // Set set debug and Direct2D compatibility flags.
   featureLevels, // List of feature levels this app can support.
   ARRAYSIZE(featureLevels),
-  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for Windows Store apps.
+  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for UWP apps.
   &device, // Returns the Direct3D device created.
   &m_featureLevel, // Returns feature level of device created.
   &m_d3dContext // Returns the device's immediate context.
@@ -136,7 +135,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | glViewport    | [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
 
- 
+ 
 
 ## <a name="configuring-the-vertex-shaders"></a>꼭짓점 셰이더 구성
 
@@ -149,7 +148,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::VSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476489)                       |
 | glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::VSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
 
- 
+ 
 
 ## <a name="configuring-the-pixel-shaders"></a>픽셀 셰이더 구성
 
@@ -162,7 +161,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::PSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476468)                       |
 | glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::PSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
 
- 
+ 
 
 ## <a name="generating-the-final-results"></a>최종 결과 생성
 
@@ -174,7 +173,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 | glDrawElements | [**ID3D11DeviceContext1::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407), [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)(또는 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)에 대한 다른 Draw\* 메서드) |
 | eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)                                                                                                                                                                              |
 
- 
+ 
 
 ## <a name="porting-glsl-to-hlsl"></a>GLSL을 HLSL로 포팅
 
@@ -186,7 +185,7 @@ GLSL과 HLSL은 복합 형식 지원 및 구문(일부 전체 구문)을 제외�
 | Direct3D 11 HLSL          | ~4.30.                                                                                                                                                                                                                    | SM 5.0                |
 | OpenGL ES 2.0용 GLSL ES | 1.40. OpenGL ES 2.0용 GLSL ES의 이전 구현에서는 1.10~1.30을 사용할 수도 있습니다. 이러한 사실을 확인하려면 glGetString(GL\_SHADING\_LANGUAGE\_VERSION) 또는 glGetString(SHADING\_LANGUAGE\_VERSION)으로 원래 코드를 검사합니다. | ~SM 2.0               |
 
- 
+ 
 
 두 셰이더 언어 간 차이점 및 일반적인 구문 매핑에 대한 자세한 내용은 [GLSL-HLSL 참조](glsl-to-hlsl-reference.md)를 읽어 보세요.
 
@@ -209,7 +208,7 @@ Direct3D 11 HLSL 의미 체계는 uniform 또는 특성 이름과 같은 문자�
 | gl\_FragColor       | 셰이더에 제공되는 RGBA 색 데이터의 COLOR(n). 좌표 데이터에 대해 동일하게 처리됩니다. 의미 체계는 단순히 해당 데이터가 색 데이터임을 식별할 수 있도록 도와줄 뿐입니다. |
 | gl\_FragData\[n\]   | 픽셀 셰이더에서 대상 텍스처 또는 다른 픽셀 버퍼로 쓰기 위한 SV\_Target\[n\]입니다.                                                                               |
 
- 
+ 
 
 의미 체계에 대해 코딩하는 메서드는 OpenGL ES 2.0에서 내부 기능을 사용하는 것과 다릅니다. OpenGL에서는 구성이나 선언 없이 직접 많은 내부 기능에 액세스할 수 있습니다. Direct3D에서는 특정 의미 체계를 사용하기 위해 특정 상수 버퍼에서 필드를 선언해야 하거나, 셰이더의 **main()** 메서드에 대한 반환 값으로 필드를 선언합니다.
 
@@ -246,9 +245,9 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
 Direct3D에서 의미 체계를 사용하는 방법에 대한 자세한 내용은 [HLSL 의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647)를 읽어 보세요.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -5,17 +5,15 @@ title: 확장 실행을 사용하여 앱 일시 중단 연기
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 확장 실행, 최소화, ExtendedExecutionSession, 백그라운드 작업, 응용 프로그램 수명 주기, 잠금 화면
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
-ms.openlocfilehash: 302c6125852654d931088de41a20e4b42adb9b52
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 30e05259306a222a3cb18268aeb58a8380f6d4d2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544646"
 ---
 # <a name="postpone-app-suspension-with-extended-execution"></a>확장 실행을 사용하여 앱 일시 중단 연기
 

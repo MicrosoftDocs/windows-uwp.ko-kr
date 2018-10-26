@@ -6,29 +6,28 @@ ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 지도, 위치, 지도 서비스
-ms.openlocfilehash: 9f2c15c8d4bab5a764b8973c4eecb220ed6d8f38
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 17d123b440b6ec7892c84a9a6bca9177799ad0fb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548225"
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
 
-> **팁**  앱에서 지도 및 위치를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드합니다.
+> [!TIP]
+> 앱에서 지도 및 위치를 사용 하는 방법에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979) 에서 다음 샘플을 다운로드 합니다.
 -   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [UWP 지리적 위치 샘플](http://go.microsoft.com/fwlink/p/?linkid=533278)
 
- 
+ 
 
 ## <a name="display-maps"></a>지도 표시
 
@@ -46,7 +45,7 @@ ms.locfileid: "665337"
 
 ## <a name="access-map-services"></a>지도 서비스 액세스
 
-[**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 API를 사용하여 경로, 길 찾기 및 지오코딩 접근 권한 값을 앱에 추가합니다. 또한 사용자가 적절한 페이지에서 설정 앱을 바로 실행하여 오프라인 지도를 관리하도록 도와줄 수 있습니다.
+[**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 API를 사용하여 경로, 길 찾기 및 지오코딩 접근 권한 값을 앱에 추가합니다.
 
 | 항목 | 설명 |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,7 +53,7 @@ ms.locfileid: "665337"
 | [지도에 POI(관심 지점) 표시](display-poi.md) | 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가하는 방법을 알아봅니다. |
 | [경로 및 길 찾기 표시](routes-and-directions.md) | 경로 및 길 찾기를 요청하고 앱에 표시합니다. |
 | [지오코딩 및 리버스 지오코딩 수행](geocoding.md) | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에 있는 [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩). |
-
+| [찾기 및 오프 라인 사용을 위해 맵 패키지를 다운로드 합니다.](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| 이전에 앱 설정 앱에 사용자를 오프 라인 지도 다운로드를 연결 해야 했습니다. 이제 ( [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox)등 기반)는 지정 된 영역에 다운로드 한 패키지를 찾으려면 [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) 네임 스페이스의 클래스를 사용할 수 있습니다. <br> 또한 확인 및 맵 패키지 다운로드 한 상태에 대 한 수신 대기 외에 아니라 수 사용자가 앱을 종료 하지 않고 다운로드를 시작 합니다. <br> 참조 내용과 [유니버설 Windows 플랫폼 (UWP) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)에서이 작업을 수행 하는 방법의 예제를 찾을 수 있습니다.
 
 ## <a name="get-the-users-location"></a>사용자 위치 가져오기
 
@@ -64,8 +63,9 @@ ms.locfileid: "665337"
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [지도 인증 키 요청](authentication-key.md) | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 앱을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 문서에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다. |
 | [위치 인식 앱에 대한 디자인 지침](guidelines-and-checklist-for-detecting-location.md) | 사용자 위치에 액세스해야 하는 앱에 대한 성능 지침입니다. |
-| [사용자 위치 가져오기](get-location.md) | 사용자의 위치에 대한 액세스 권한을 받은 다음 검색합니다. |
-| [지오펜스에 대한 디자인 지침](guidelines-for-geofencing.md) | 지오펜스 기능을 활용하는 앱에 대한 성능 지침입니다. |
+| [사용자 위치 가져오기](get-location.md) | 사용자의 위치에 대한 액세스 권한을 받은 다음 검색합니다. | 
+| [방문 추적 사용에 대한 지침](guidelines-for-visits.md) | 더욱 효과적인 추적을 위한 강력한 방문 추적 기능을 사용하는 방법에 대해 알아보세요. |
+| [지오펜싱에 대한 디자인 지침](guidelines-for-geofencing.md) | 지 오 펜스 기능을 활용 하는 앱에 대 한 성능 지침입니다. |
 | [지오펜스 설정](set-up-a-geofence.md) | 앱에서 지오펜스를 설정하고 포그라운드 및 백그라운드에서 알림을 처리하는 방법을 알아봅니다. |
 
 ## <a name="launch-the-windows-maps-app"></a>Windows 지도 앱 실행

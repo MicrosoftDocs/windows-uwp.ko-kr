@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 06/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 추적형 타일, 라이브 타일, 추적형 타일 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: b6d86d8881e0027a28f0f2a737e5f3fcb46a6ab5
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 8126755dfb6f5f0e117d10daef85a83e8a171f1f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472574"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543128"
 ---
 # <a name="chaseable-tile-notifications"></a>추적형 타일 알림
 

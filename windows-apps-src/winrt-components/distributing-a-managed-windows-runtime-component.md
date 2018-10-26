@@ -6,19 +6,18 @@ ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 6461b6889f110bde8929e1f370f9197caa33e5f3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220209"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549024"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>관리되는 Windows 런타임 구성 요소 배포
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows 런타임 구성 요소를 파일 복사로 배포할 수 있습니다. 그러나 구성 요소가 여러 개의 파일로 구성된 경우 사용자가 설치하는 데 번거로울 수 있습니다. 또한 파일 배치 또는 참조 설정 시 발생하는 오류로 인해 문제가 발생할 수 있습니다. 설치와 사용이 쉽도록 복잡한 구성 요소를 Visual Studio 확장 SDK로 패키지할 수 있습니다. 사용자는 전체 패키지에 대해 하나의 참조만 설정하면 됩니다. MSDN 라이브러리의 [Visual Studio 확장 찾기 및 사용](https://msdn.microsoft.com/library/vstudio/dd293638.aspx)에서 설명한 대로 **확장 및 업데이트** 대화 상자를 사용하여 구성 요소를 쉽게 찾고 설치할 수 있습니다.
 
@@ -42,13 +41,13 @@ For example: Microsoft.Cpp.Build.dll
 
 위의 둘 이상에 해당하는 경우 확장 SDK가 특히 유용합니다.
 
-> **참고** 복잡한 구성 요소의 경우 NuGet 패키지 관리 시스템이 확장 SDK 대신 오픈 소스를 제공합니다. 확장 SDK와 마찬가지로 NuGet을 사용하면 복잡한 구성 요소의 설치를 단순화하는 패키지를 만들 수 있습니다. NuGet 패키지 및 Visual Studio 확장 SDK의 비교를 위해 MSDN 라이브러리에서 [NuGet 및 확장 SDK를 사용하여 참조 추가](https://msdn.microsoft.com/library/jj161096.aspx)를 참조하세요.
+> **참고**복잡 한 구성 요소의 경우 NuGet 패키지 관리 시스템이 확장 Sdk 대신 오픈 소스를 제공 합니다. 확장 SDK와 마찬가지로 NuGet을 사용하면 복잡한 구성 요소의 설치를 단순화하는 패키지를 만들 수 있습니다. NuGet 패키지 및 Visual Studio 확장 SDK의 비교를 위해 MSDN 라이브러리에서 [NuGet 및 확장 SDK를 사용하여 참조 추가](https://msdn.microsoft.com/library/jj161096.aspx)를 참조하세요.
 
 ## <a name="distribution-by-file-copy"></a>파일 복사로 배포
 
 구성 요소가 단일 .winmd 파일 또는 .winmd 파일 및 리소스 인덱스(.pri) 파일로 구성된 경우 단순히 사용자가 .winmd 파일을 복사하도록 할 수 있습니다. 사용자는 프로젝트에서 원하는 곳 어디에든 파일을 둘 수 있고 **기존 항목 추가** 대화 상자를 사용하여 프로젝트에 .winmd 파일을 추가할 수 있으며 참조 관리자 대화 상자를 사용하여 참조를 만들 수 있습니다. .pri 파일 또는 .xml 파일을 포함하는 경우 사용자에게 해당 파일을 .winmd 파일과 함께 두도록 지시합니다.
 
-> **참고** 프로젝트에 리소스가 포함되지 않더라도 Windows 런타임 구성 요소를 빌드할 때 Visual Studio에서 항상 .pri 파일을 생성합니다. 구성 요소에 대한 테스트 앱이 있는 경우 bin\\debug\\AppX 폴더에 있는 앱 패키지의 콘텐츠를 검사하여 .pri 파일이 사용되는지 여부를 확인할 수 있습니다. 구성 요소의 .pri 파일이 여기에 없으면 배포할 필요가 없습니다. 대신 [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) 도구를 사용하여 Windows 런타임 구성 요소 프로젝트에서 리소스 파일을 덤프할 수 있습니다. 예를 들어 Visual Studio 명령 프롬프트 창에서 다음을 입력합니다. makepri dump /if MyComponent.pri /of MyComponent.pri.xml .pri 파일에 대한 자세한 내용은 [리소스 관리 시스템(Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx)에서 확인할 수 있습니다.
+> **참고**Visual Studio 항상.pri 파일을 생성 Windows 런타임 구성 요소를 빌드할 때 프로젝트에 리소스가 포함 되지 않더라도 합니다. 구성 요소에 대한 테스트 앱이 있는 경우 bin\\debug\\AppX 폴더에 있는 앱 패키지의 콘텐츠를 검사하여 .pri 파일이 사용되는지 여부를 확인할 수 있습니다. 구성 요소의 .pri 파일이 여기에 없으면 배포할 필요가 없습니다. 대신 [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) 도구를 사용하여 Windows 런타임 구성 요소 프로젝트에서 리소스 파일을 덤프할 수 있습니다. 예를 들어 Visual Studio 명령 프롬프트 창에서 다음을 입력합니다. makepri dump /if MyComponent.pri /of MyComponent.pri.xml .pri 파일에 대한 자세한 내용은 [리소스 관리 시스템(Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx)에서 확인할 수 있습니다.
 
 ## <a name="distribution-by-extension-sdk"></a>확장 SDK로 배포
 

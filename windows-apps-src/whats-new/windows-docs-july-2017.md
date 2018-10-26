@@ -6,15 +6,13 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10
 ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e439c0b1c20f03c9519d29a24979e5008f3de94e
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546589"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
 
@@ -110,7 +108,7 @@ SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에서 �
 
 ### <a name="scoped-search"></a>범위가 지정된 검색
 
-"UWP" 범위가 docs.microsoft.com의 [UWP 개념](../get-started/universal-application-platform-guide.md) 및 [API 참조](https://docs.microsoft.com/en-us/uwp/api/) 설명서에 추가되었습니다. 이 범위를 비활성화하지 않는 한 해당 영역 내에서 검색을 수행하면 UWP 문서만 반환합니다.
+docs.microsoft.com의 [UWP 개념](../get-started/universal-application-platform-guide.md) 및 [API 참조](https://docs.microsoft.com/en-us/uwp/api/) 문서에 "UWP" 범위가 추가되었습니다. 이 범위를 비활성화하지 않으면 이 영역 내에서 수행한 검색이 UWP 문서만 반환합니다.
 
 ![범위가 지정된 검색](images/scoped-search.png)
 

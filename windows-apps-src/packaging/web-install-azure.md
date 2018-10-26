@@ -5,16 +5,14 @@ description: 이 자습서에서는 Azure 웹 서버를 설정하고, 웹 앱이
 ms.author: cdon
 ms.date: 09/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지, Azure 웹 서버
 ms.localizationpriority: medium
-ms.openlocfilehash: b98ca6316f733210dbdbc5201178b3a89a2b5982
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b7ea002686199b992af45af775f53c96fd108a13
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474726"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546602"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Azure 웹앱에서 UWP 앱 설치
 

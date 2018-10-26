@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b882c70701d2ea2f8abef14a7d3319616696ea4
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 672d7b2ddc913ea3a966fbd0a095367521a27d7c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044732"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550195"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>불투명 및 1비트 알파 텍스처
 
@@ -70,7 +68,7 @@ else
 | 2            | 비트맵 단어\_0 |
 | 3            | 비트맵 단어\_1 |
 
- 
+ 
 
 두 극단에 있는 색인 색\_0 및 색\_1은 다음과 같이 배치됩니다.
 
@@ -80,7 +78,7 @@ else
 | 10:5        | 녹색 구성 요소 |
 | 15:11       | 빨간색 구성 요소   |
 
- 
+ 
 
 \*최하위 비트
 
@@ -97,7 +95,7 @@ else
 | 13:12         | 텍셀\[1\]\[2\] |
 | 15:14 (MSB\*) | 텍셀\[1\]\[3\] |
 
- 
+ 
 
 \*최상위 비트(MSB)
 
@@ -114,7 +112,7 @@ else
 | 13:12       | 텍셀\[3\]\[2\] |
 | 15:14 (MSB) | 텍셀\[3\]\[3\] |
 
- 
+ 
 
 ## <a name="span-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>불투명 색 인코딩의 예
 
@@ -134,9 +132,9 @@ else
 
 이것은 다음과 같이 일련의 색으로 표시됩니다.
 
-**참고** 이미지에서 픽셀 (0, 0)은 왼쪽 상단에 있습니다.
+**참고**  이미지에서 픽셀 (0, 0) 왼쪽 위에 나타납니다.
 
- 
+ 
 
 ![인코딩된 불투명 그라데이션 그림](images/redsquares.png)
 
@@ -169,9 +167,9 @@ else
 
 [압축된 텍스처 리소스](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

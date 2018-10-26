@@ -6,16 +6,14 @@ description: 각 디바이스에는 특정 정보가 필요하거나 디바이�
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8fe51fd98f70e6f920a7421a9932e69bba11377
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959249"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543370"
 ---
 # <a name="device-information-properties"></a>디바이스 정보 속성
 
@@ -38,7 +36,7 @@ ms.locfileid: "959249"
 속성을 요청할 때 사용자에게 친숙한 이름의 공용 속성만 요청할 수 있는 것은 아닙니다. 기본 GUID와 PID(속성 ID)를 지정하면 개별 디바이스나 드라이버에서 제공하는 사용자 지정 속성을 비롯하여 사용 가능한 모든 속성을 요청할 수 있습니다. 사용자 지정 속성을 지정하는 형식은 "`{GUID} PID`"입니다. 예: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`"입니다. 
 
 > [!Note]
-> 장치 드라이버의 장치 속성 키 헤더 파일에서 guid가 속성의 목록을 찾을 수 있습니다.
+> 장치 드라이버의 장치 속성 키 헤더 파일에서 Guid 속성 목록을 찾을 수 있습니다.
 
 일부 속성은 모든 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind) 개체에서 공통적으로 사용되지만 대부분은 특정 종류에 고유합니다. 다음 섹션에는 몇 가지 공통 속성이 개별 **DeviceInformationKind**별로 정렬되어 있습니다. 여러 종류가 서로 어떤 관련성을 가지는지에 대한 자세한 내용은 **DeviceInformationKind**를 참조하세요.
 
@@ -57,7 +55,7 @@ ms.locfileid: "959249"
 | **System.Devices.Icon**               | 문자열  | 아이콘 경로입니다.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | 문자열  | 디바이스 개체의 가장 적합한 표시 이름입니다.                                                                                                                                                                                                                                                                                                                                                              |
 
- 
+ 
 
 ## <a name="device-properties"></a>디바이스 속성
 
@@ -75,7 +73,7 @@ ms.locfileid: "959249"
 | **System.Devices.Present**            | 부울    | 디바이스가 현재 존재하고 사용 가능한지 여부를 나타냅니다.                                                                                                                                                                                                                         |
 | **System.ItemNameDisplay**            | 문자열     | 이 디바이스 개체의 가장 적합한 표시 이름입니다. 이 경우 사용자에게 가장 적합한 이름일 필요는 없습니다. 사용자에게 친숙한 이름이 될 가능성이 높은 후보는 연결된 **DeviceContainer** 또는 **DeviceInterface**의 **System.ItemNameDisplay**를 참조하여 찾을 수 있습니다. |
 
- 
+ 
 
 ## <a name="devicecontainer-properties"></a>DeviceContainer 속성
 
@@ -95,7 +93,7 @@ ms.locfileid: "959249"
 | **System.Devices.Paired**         | 부울    | 자식 **DeviceInformationKind.Device** 개체 중에 현재 시스템과 페어링된 무선 또는 네트워크 디바이스가 있는지 여부를 나타냅니다.             |
 | **System.ItemNameDisplay**        | 문자열     | 이 디바이스의 가장 적합한 표시 이름입니다.                                                                                                                             |
 
- 
+ 
 
 ## <a name="deviceinterfaceclass-properties"></a>DeviceInterfaceClass 속성
 
@@ -103,7 +101,7 @@ ms.locfileid: "959249"
 |----------------------------|--------|----------------------------------------|
 | **System.ItemNameDisplay** | 문자열 | 이 디바이스의 가장 적합한 표시 이름입니다. |
 
- 
+ 
 
 ## <a name="associationendpoint-properties"></a>AssociationEndpoint 속성
 
@@ -124,7 +122,7 @@ ms.locfileid: "959249"
 | **System.Devices.Aep.SignalStrength** | Int32      | 디바이스의 신호 강도입니다. 이 속성은 일부 프로토콜에만 적용됩니다.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | 문자열     | 디바이스의 가장 적합한 표시 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- 
+ 
 
 ## <a name="associationendpointcontainer-properties"></a>AssociationEndpointContainer 속성
 
@@ -146,7 +144,7 @@ ms.locfileid: "959249"
 | **System.Devices.AepContainer.SupportsVideo**       | 부울    | 이 장치가 비디오 캐스팅을 지원하는지 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **System.ItemNameDisplay**                          | 문자열     | 장치의 가장 적합한 표시 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
- 
+ 
 
 ## <a name="associationendpointservice-properties"></a>AssociationEndpointService 속성
 
@@ -160,8 +158,8 @@ ms.locfileid: "959249"
 | **System.Devices.AeoService.ServiceId**         | 문자열  | 이 서비스의 ID입니다. [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 값이기도 합니다. |
 | **System.ItemNameDisplay**                      | 문자열  | 서비스의 가장 적합한 표시 이름입니다.                                                                           |
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -7,15 +7,13 @@ keywords: Uwp 앱 개발 스레딩 비동기 플랫폼 개요 포털 개발 개�
 ms.author: mijacobs
 ms.date: 3/29/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: de821f436b1ca44d3626a1029aa0a288273f8b84
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "2736684"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5550477"
 ---
 <div> 
 <h1>UWP 앱 개발</h1>
@@ -229,7 +227,7 @@ ms.locfileid: "2736684"
                     <div style="display:block" class="cardText">
                         <h3>포팅</h3>
                         <p style="display:block"><a href="/windows/uwp/porting/">개요</a></p>
-                        <p style="display:block"><a href="/windows/uwp/porting/wpsl-to-uwp-root">Windows Phone Silverlight에서 UWP로</a></p>
+                        <p style="display:block"><a href="/windows/uwp/porting/wpsl-to-uwp-root">WindowsPhone Silverlight를 UWP</a></p>
                         <p style="display:block"><a href="/windows/uwp/porting/w8x-to-uwp-root">Windows 런타임 8.x에서 UWP로</a></p>
                         <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-root">데스크톱 브리지</a></p>
                         <p style="display:block"><a href="/windows/uwp/porting/desktop-to-uwp-migrate">데스크톱과 UWP 간의 코드 공유</a></p>

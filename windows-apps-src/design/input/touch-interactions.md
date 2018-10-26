@@ -9,15 +9,13 @@ keywords: 터치, 포인터, 입력, 사용자 조작
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ef67c179e691d14f3636a663a24ebbb862c35f7
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: fbb2b6e5edee47d75d7115a38f95abf5ae71529a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675190"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543483"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -78,14 +76,13 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 
 
-**참고**  
-간접 입력은 25년 이상 미세 조정된 이점을 제공합니다. 가리키기로 트리거되는 도구 설명과 같은 기능은 터치 패드, 마우스, 펜/스타일러스 및 키보드 입력을 비롯한 UI 탐색 문제를 해결하도록 디자인되었습니다. 이러한 UI 기능은 다른 장치의 사용자 환경을 손상시키지 않고 터치 입력에서 제공하는 풍부한 환경에 맞게 다시 디자인되었습니다.
+**참고**  간접 입력 25 년 이상 미세 혜택 했습니다. 가리키기로 트리거되는 도구 설명과 같은 기능은 터치 패드, 마우스, 펜/스타일러스 및 키보드 입력을 비롯한 UI 탐색 문제를 해결하도록 디자인되었습니다. 이러한 UI 기능은 다른 장치의 사용자 환경을 손상시키지 않고 터치 입력에서 제공하는 풍부한 환경에 맞게 다시 디자인되었습니다.
 
- 
+ 
 
 ## <a name="use-touch-feedback"></a>터치 피드백 사용
 
-앱과의 조작 중에 적절한 시각적 피드백이 제공되면 사용자들이 앱 및 Windows 플랫폼에서 조작이 해석되는 방식을 인식하고, 익히고, 적응하는 데 도움이 됩니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
+앱과의 조작 중에 적절 한 시각적 피드백이 사용 하 여 사용자 인식 알아보고 앱과는 Windowsplatform 모두에서 조작이 해석 되는 방식이에 맞게 조정 합니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
 
 위치에 따라 정확도와 정밀도를 요구하는 활동에 터치식 입력을 사용할 경우 시각적 피드백이 중요합니다. 터치식 입력이 감지될 때마다 피드백을 표시하면 사용자가 앱 및 컨트롤이 정의하는 사용자 지정 대상 지정 규칙을 이해하는 데 도움이 됩니다.
 
@@ -156,9 +153,9 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 -   조작 방식은 복합적인 조작을 지원해야 합니다. 예를 들어, 손가락을 끌어서 이동하는 동안 손가락을 모아 확대/축소할 경우
 -   조작은 시간으로 구분되어서는 안 됩니다. 같은 조작은 수행하는 데 걸린 시간과 상관 없이 결과가 같아야 합니다. 시간 기반 활성화는 사용자를 강제로 지연시키며 직접 조작의 몰입성과 시스템 응답 성능의 인식 능력을 모두 저하시킵니다.
 
-    **참고**  학습 및 탐색에 도움이 되도록 특정 시간이 지정된 조작(예: 길게 누르기)을 사용하는 경우는 예외입니다.
+    **참고**학습 및 탐색 (예: 길게 누르기)에 도움이 되도록 특정 시간이 지정 된 상호 작용을 통해는 예외입니다.
 
-     
+     
 
 -   적절한 설명 및 시각 신호는 앞으로의 조작에 큰 영향을 미칩니다.
 
@@ -207,7 +204,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 | 손가락 모으기          | 조작 제스처 | 둘 이상의 손가락으로 화면을 터치하고 모으면서 움직입니다.                         |
 | 늘이기        | 조작 제스처 | 둘 이상의 손가락으로 화면을 터치하고 늘리면서 움직입니다.                           |
 
- 
+ 
 
 <!-- mijacobs: Removing for now. We don't have a real page to link to yet. 
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
@@ -239,7 +236,7 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 | [**PointerWheelChanged**](https://msdn.microsoft.com/library/windows/apps/br208973)   | 마우스 휠의 델타 값이 변경될 때 발생합니다.         |
 | [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) | 모든 포인터 이벤트에 대한 데이터를 제공합니다.                         |
 
- 
+ 
 
 다음 예제에서는 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 및 [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) 이벤트를 사용하여 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체에 대한 탭 조작을 처리하는 방법을 보여 줍니다.
 
@@ -435,15 +432,15 @@ End Sub
 | [**ManipulationVelocities**](https://msdn.microsoft.com/library/windows/apps/br242032)                                              | 조작이 발생하는 속도를 설명합니다.                                                                                         |
 | [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트에 대한 데이터를 제공합니다.                                       |
 
- 
+ 
 
 제스처는 일련의 조작 이벤트로 구성됩니다. 각 제스처는 사용자가 화면을 터치할 때와 같은 [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) 이벤트로 시작됩니다.
 
 다음에는 하나 이상의 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트가 발생합니다. 예를 들어 화면을 터치한 후 손가락을 화면에서 끌면 이벤트가 발생합니다. 마지막으로 조작이 완료되면 [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트가 발생합니다.
 
-**참고**  터치 스크린 모니터가 없는 경우 마우스 및 마우스 휠 인터페이스를 사용하여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
+**참고**터치 스크린 모니터가 없는 경우 마우스 및 마우스 휠 인터페이스를 사용 하 여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
 
- 
+ 
 
 다음 예제에서는 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트를 사용하여 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체에 대한 슬라이드 조작을 처리하고 화면에서 이동하는 방법을 보여 줍니다.
 
@@ -607,9 +604,9 @@ End Sub
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+ 
 
- 
+ 
 
 
 

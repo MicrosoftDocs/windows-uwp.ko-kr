@@ -5,17 +5,15 @@ description: 별도 백그라운드 프로세스에서 실행된 앱 서비스 �
 ms.author: twhitney
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 앱 서비스
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
-ms.openlocfilehash: d259df2a65046acb1c34dd2958ab4513bc31f43b
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 272102f08b145c0681b0e036be4d41bc7c9ad9ff
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518694"
+ms.locfileid: "5560875"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8706b10756eeec5d4b8a872c0d436a157ef74970
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bcfdb8f6258547ff210d80136a6113e04092aad2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044942"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545836"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>부동 소수점 규칙
 
@@ -33,12 +31,10 @@ Direct3D는 여러 부동 소수점 표현을 지원합니다. 모든 부동 소
 이러한 규칙의 일부는 IEEE-754에서 제공하는 유일한 선택 항목입니다.
 
 -   0으로 나누면 +/-INF가 됩니다. NaN이 되는 0/0은 예외입니다.
--   (+/-)0의 로그 값은 -INF입니다.
-     
+-   (+/-)0의 로그 값은 -INF입니다.  
 
     음수 값(-0 제외)의 로그 값은 NaN입니다.
--   음수의 역수 제곱근(rsq) 또는 제곱근(sqrt)은 NaN이 됩니다.
-     
+-   음수의 역수 제곱근(rsq) 또는 제곱근(sqrt)은 NaN이 됩니다.  
 
     예외는 -0입니다. sqrt(-0)은 -0이며 rsq(-0)은 -INF가 됩니다.
 -   INF - INF = NaN
@@ -158,9 +154,9 @@ float11/float10 값(v)은 다음 규칙을 따릅니다.
 
 [텍스처](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
- 
+ 
 
- 
+ 
 
 
 

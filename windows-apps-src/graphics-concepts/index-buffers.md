@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f79b6982ccb6a938f88a289a823dd5da855e57e2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0df56ebeefdbdabe5904547d77e90077549422c2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546298"
 ---
 # <a name="index-buffers"></a>인덱스 버퍼
 
@@ -46,9 +44,9 @@ ms.locfileid: "1044012"
 
 [꼭짓점 및 인덱스 버퍼](vertex-and-index-buffers.md)
 
- 
+ 
 
- 
+ 
 
 
 

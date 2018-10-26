@@ -5,16 +5,14 @@ description: 자산 패키지 및 패키지 접기를 사용하여 앱을 효율
 ms.author: lahugh
 ms.date: 04/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 31c27430c850f861c8b97863521202a6dcab80f7
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: efdf560158e2b57ae9e05ecc31d49c7cf981d8c0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5520779"
+ms.locfileid: "5547199"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>자산 패키지 및 패키지 접기를 사용하여 개발 
 

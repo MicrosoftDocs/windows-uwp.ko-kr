@@ -5,15 +5,14 @@ description: UWP 앱 패키지를 빌드할 때 사용해야 할 프로세스 �
 ms.author: lahugh
 ms.date: 7/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 패키징, 아키텍처, 패키지 구성
-ms.openlocfilehash: 70188734e7fc26f66b68d0c31921071c47e8b7a8
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.localizationpriority: medium
+ms.openlocfilehash: 3e265df32a8c4168cddced905e7b0712e4601264
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2017
-ms.locfileid: "884052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548711"
 ---
 # <a name="app-package-architectures"></a>앱 패키지 아키텍처
 
@@ -27,11 +26,11 @@ ms.locfileid: "884052"
 ## <a name="windows-10-devices-and-architectures"></a>Windows 10 장치와 아키텍처
 
 > [!div class="mx-tableFixed"]
-| UWP 아키텍처 | 데스크톱(x86)      | 데스크톱(x64)      | 데스크톱(ARM)      | 모바일             | HoloLens           | Xbox               | IoT Core(장치에 따라 다름) | 
-|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------------------|
-| x86              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          |
-| x64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          |
-| ARM              | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          |
+| UWP 아키텍처 | 데스크톱(x86)      | 데스크톱(x64)      | 데스크톱(ARM)      | 모바일             | HoloLens           | Xbox               | IoT Core(장치에 따라 다름) | Surface Hub        |
+|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------------------|--------------------|
+| x86              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
+| x64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
+| ARM              | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
  
 
 이러한 아키텍처에 대해 더 자세히 알아보겠습니다. 

@@ -6,19 +6,17 @@ description: 사용자는 앱이 응답성을 유지하고 자연스러운 느�
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: e62e724cceb458ba922143e61058dffa8d16a0b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547885"
 ---
 # <a name="planning-for-performance"></a>성능 계획
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기에 측정하고 프로젝트의 수명 주기 동안 목표를 달성할 수 있는지 확인합니다.
@@ -44,7 +42,7 @@ ms.locfileid: "894787"
 | 계속              | 더 이상 응답 없음      | 500밀리초 | 5초        | 인터넷에서 파일 다운로드                                            |
 | 종속                 | 오래 걸리지만 사용자가 전환할 수 있음    | 500밀리초 | 10초       | 스토어에서 여러 앱 설치                                         |
 
- 
+ 
 
 이제 앱의 성능 시나리오에 조작 클래스를 할당할 수 있습니다. 앱의 지정 시간 참조, 사용자 환경의 일부, 조작 클래스 등을 각 시나리오에 할당할 수 있습니다. 다음은 예제 음식 및 식사 앱에 대한 몇 가지 제안 사항입니다.
 
@@ -175,7 +173,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
     -   앱을 여러 번 실행하여 임의 테스트 변수를 제거하고 일관된 측정을 보장합니다.
 -   절전 사용 여부 테스트 사용자의 디바이스는 개발 컴퓨터보다 전원이 훨씬 적을 수 있습니다. Windows는 모바일 디바이스와 같은 절전 디바이스를 염두에 두고 설계되었습니다. 플랫폼에서 실행되는 앱은 이러한 디바이스에서 제대로 작동해야 합니다. 경험적으로 절전 디바이스는 데스크톱 컴퓨터보다 4배 정도 더 느릴 것으로 예상되므로 이에 따라 목표를 설정하세요.
 -   Microsoft Visual Studio 및 Windows Performance Analyzer와 같은 도구를 함께 사용하여 앱 성능을 측정합니다. Visual Studio는 소스 코드 링크와 같은 앱 중심 분석을 제공하도록 설계되었습니다. Windows Performance Analyzer는 시스템 정보 제공, 터치 조작 이벤트에 대한 정보, 디스크 I/O(입출력) 및 GPU(그래픽 처리 디바이스) 비용에 대한 정보 등 시스템 중심 분석을 제공하도록 설계되었습니다. 두 도구 모두 추적 캡처 및 내보내기를 제공하며 공유된 추적 및 사후 추적을 다시 열 수 있습니다.
--   인증을 위해 스토어에 앱을 제출하려면 먼저 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md)의 "성능 테스트" 섹션 및 [Windows 스토어 앱 테스트 사례](https://msdn.microsoft.com/library/windows/apps/Dn275879)의 "성능 및 안정성" 섹션에 설명된 대로 테스트 계획 및 성능 관련 테스트 사례에 통합해야 합니다.
+-   인증을 위해 스토어에 앱을 제출 하기 전에 통합 해야 테스트 계획에 성능 관련 테스트 사례 및 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md) 의 "성능 테스트" 섹션에 설명 된 대로 "성능 및 [UWP 앱 테스트](https://msdn.microsoft.com/library/windows/apps/Dn275879)사례의 안정성"섹션입니다.
 
 자세한 내용은 다음과 같은 리소스 및 프로파일링 도구를 참조하세요.
 

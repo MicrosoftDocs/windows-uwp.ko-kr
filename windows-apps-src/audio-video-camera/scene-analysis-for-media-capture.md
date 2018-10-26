@@ -6,18 +6,17 @@ title: 카메라 프레임 분석 효과
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 3fc55919942c1edc82f7c2e5da2608b5f1b1445b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: d948dee234ad6c49da847324422737b1bae27e30
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219115"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547661"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>카메라 프레임 분석 효과
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) 및 [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776)를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다.
@@ -120,9 +119,9 @@ ms.locfileid: "219115"
 
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
+ 
 
- 
+ 
 
 
 

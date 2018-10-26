@@ -6,19 +6,18 @@ ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, direct3d, 깊이 버퍼
-ms.openlocfilehash: 87e4248545288f4725e0cf0b104a75f1925ad3a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "218972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549335"
 ---
 # <a name="create-depth-buffer-device-resources"></a>깊이 버퍼 장치 리소스 만들기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 디바이스 리소스를 만드는 방법을 알아봅니다. [연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md)의 1부입니다.
@@ -261,9 +260,9 @@ m_shadowViewport.MaxDepth = 1.f;
 
 이 연습의 다음 부분에서 [깊이 버퍼로 렌더링](render-the-shadow-map-to-the-depth-buffer.md)하여 그림자 맵을 만드는 방법을 알아보세요.
 
- 
+ 
 
- 
+ 
 
 
 

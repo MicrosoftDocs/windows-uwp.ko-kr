@@ -8,17 +8,15 @@ title: 사용자 지정 비디오 효과
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a1f53bb1165561865124a960940fab3f4325061
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 08d861355a235c9217f51ce6f925224a27a562ef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843323"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544759"
 ---
 # <a name="custom-video-effects"></a>사용자 지정 비디오 효과
 
@@ -99,7 +97,7 @@ ms.locfileid: "1843323"
 > [!NOTE] 
 > **SupportedEncodingProperties**에서 [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) 개체의 빈 목록을 반환하는 경우 시스템에서는 기본적으로 ARGB32 인코딩이 사용됩니다.
 
- 
+ 
 
 ### <a name="supportedmemorytypes-property"></a>SupportedMemoryTypes 속성
 
@@ -111,7 +109,7 @@ ms.locfileid: "1843323"
 > [!NOTE]
 > [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822)를 지정하는 경우 시스템은 GPU 또는 시스템 메모리 중에서 파이프라인에 더 효율적인 메모리를 사용합니다. 이 값을 사용할 때는 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) 메서드를 검사하여 메서드에 전달된 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 또는 [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) 중에서 어디에 데이터가 들어 있는지 확인한 후 그에 따라 프레임을 처리합니다.
 
- 
+ 
 
 ### <a name="timeindependent-property"></a>TimeIndependent 속성
 
@@ -154,7 +152,7 @@ ms.locfileid: "1843323"
 > 2.  **빌드** 탭을 선택합니다.
 > 3.  **안전하지 않은 코드 허용** 확인란을 선택합니다.
 
- 
+ 
 
 이제 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 소프트웨어 비트맵에서 [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) 개체를 가져옵니다. 쓰기 작업을 위해 출력 프레임이 열려 있고 읽기 작업을 위해 입력 프레임이 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
 

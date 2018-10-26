@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 048ff2755343e5e6230900ea9acb819e85ba654b
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 965660f51efc914f7ca21a5bf747fe809319eff9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5550185"
 ---
 # <a name="span-iddirect3dconceptsnearest-pointsamplingspannearest-point-sampling"></a><span id="direct3dconcepts.nearest-point_sampling"></span>가장 가까운 점 샘플링
 
@@ -52,9 +50,9 @@ Direct3D 참조 래스터라이저는 각 픽셀 위치의 텍스처 인덱스�
 
 [텍스처 필터링](texture-filtering.md)
 
- 
+ 
 
- 
+ 
 
 
 

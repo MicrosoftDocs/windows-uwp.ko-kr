@@ -5,16 +5,14 @@ author: abbycar
 ms.author: abigailc
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: webvr, edge, 웹 개발, babylon, babylonjs, babylon.js, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 97ef659a178a4c3f40d464fd958e5493454afef7
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 72681c3f91fc2dcbfcc4e4531359d6d668e18b80
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5513259"
+ms.locfileid: "5547186"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>3D Babylon.js 게임에 WebVR 지원 추가
 

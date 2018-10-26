@@ -7,15 +7,13 @@ keywords: 잉크, 잉크 입력, 자습서
 ms.author: kbridge
 ms.date: 01/25/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 68624288ea223d0882ef0b8c33b174f000081411
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 933c3f1c4c2c57cc0a7a92334223f6c6d4bbb010
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983389"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543178"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>자습서: UWP 앱에서 잉크 지원
 
@@ -41,7 +39,7 @@ Windows Ink를 사용하면 상상할 수 있는 거의 모든 펜과 종이 환
 
 * Windows 10 최신 버전을 실행하는 Windows 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2017 및 RS2 SDK](https://developer.microsoft.com/windows/downloads)
-* [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* [Windows10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Visual Studio를 사용하는 UWP(유니버설 Windows 플랫폼) 앱 개발을 처음 하는 경우, 이 자습서를 시작하기 전에 이러한 항목을 살펴보십시오.  
     * [설정하기](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * ["Hello, World" 앱 만들기(XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
@@ -69,9 +67,9 @@ Windows Ink를 사용하면 상상할 수 있는 거의 모든 펜과 종이 환
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | 기본적으로 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 받아 표시하는 XAML UI 플랫폼 컨트롤입니다. |
+| [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | 기본적으로 수신 하 고는 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 표시 XAMLUI 플랫폼 컨트롤입니다. |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다. |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | XAML UI 플랫폼 컨트롤에는 연결된 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 잉크 관련 기능을 활성화하는, 사용자 지정 및 확장 가능한 단추 모음이 포함됩니다. |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | 사용자 지정 및 확장이 가능한 관련된 된 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 잉크 관련 기능을 활성화 하는 단추 컬렉션이 포함 된 XAMLUI 플랫폼 컨트롤입니다. |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263)<br/>여기서는 이 기능을 다루지 않습니다. 자세한 내용은 [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)을 참조하세요. | 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 장치 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. |
 
 ## <a name="step-1-run-the-sample"></a>1단계: 샘플 실행

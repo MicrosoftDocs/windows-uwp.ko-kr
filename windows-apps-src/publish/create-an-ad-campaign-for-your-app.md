@@ -6,16 +6,14 @@ ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 ms.author: wdg-dev-content
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 33c6388902322357d27918b6e4b95555785288bc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5522865"
+ms.locfileid: "5544729"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 

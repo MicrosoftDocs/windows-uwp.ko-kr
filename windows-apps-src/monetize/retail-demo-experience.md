@@ -6,16 +6,14 @@ ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.author: joanlee
 ms.date: 10/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 소매 데모 앱
 ms.localizationpriority: medium
-ms.openlocfilehash: 152c775c1b69bfd82d8969aed7e638f98646bdd7
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: ee0344d521b4c31449a2291517b20a09280818fc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514358"
+ms.locfileid: "5547904"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>소매 데모 (RDX) 기능을 앱에 추가
 

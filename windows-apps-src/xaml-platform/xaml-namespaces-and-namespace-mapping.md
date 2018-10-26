@@ -6,16 +6,14 @@ ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a4303075bb9fc8133ab40a0fb48b3742c1f2637
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a1aebe3d9aac460d444a5dffcd63142300c022b7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546526"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML 네임스페이스 및 네임스페이스 매핑
 
@@ -65,7 +63,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 -   **d:DesignHeight 및 d:DesignWidth 특성:** 경우에 따라 두 특성은 Visual Studio 또는 다른 XAML 디자이너 화면에서 만드는 XAML 파일의 루트에 적용됩니다. 예를 들어 앱 프로젝트에 새 **UserControl**을 추가할 경우 만들어지는 XAML의 [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) 루트에 이 특성이 설정됩니다. 두 특성을 사용하여 XAML 콘텐츠 컴퍼지션을 쉽게 디자인할 수 있으므로 XAML 콘텐츠를 컨트롤 인스턴스나 큰 UI 페이지의 다른 부분에 사용할 경우 발생할 수 있는 레이아웃 제약 조건을 어느 정도 예상할 수 있습니다.
 
-   **참고** Microsoft Silverlight에서 XAML을 마이그레이션하는 경우 전체 UI 페이지를 나타내는 루트 요소에 이러한 특성이 있을 수 있습니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
+   **참고**Microsoft Silverlight에서 XAML을 마이그레이션하는 경우 이러한 특성이 전체 UI 페이지를 나타내는 루트 요소에 있을 합니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
 
 -   **d:DataContext 특성:** 페이지 루트나 컨트롤에 이 특성을 설정하면 특성이 없을 경우 개체에 포함되는 명시적 또는 상속된 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)를 재정의할 수 있습니다.
 -   **d:DesignSource 특성:** [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833)에 대해 디자인 타임 데이터 원본을 지정하고 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835)를 재정의합니다.
@@ -118,5 +116,5 @@ XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이
 * [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [Windows 런타임 앱용 C#, VB 및 C++ 프로젝트 템플릿](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Silverlight 또는 WPF XAML/코드를 Windows 런타임 앱으로 마이그레이션](https://msdn.microsoft.com/library/windows/apps/br229571)
- 
+ 
 

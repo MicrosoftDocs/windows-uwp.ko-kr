@@ -6,19 +6,17 @@ description: 시작 및 활성화 처리 방법을 개선하여 시작 시간이
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: e36103953ad3fb04ee5beef7e263fc326f817c0b
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545250"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 시작 및 활성화 처리 방법을 개선하여 시작 시간이 최적화된 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 

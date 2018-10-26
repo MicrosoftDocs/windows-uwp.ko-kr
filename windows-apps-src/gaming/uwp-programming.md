@@ -6,16 +6,14 @@ ms.assetid: af7a642e-d448-4a7d-8e90-7065b23e24fb
 ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 오디오, 입력, 네트워킹
 ms.localizationpriority: medium
-ms.openlocfilehash: 62bb861c1db24fd9f3d3ccfef19950cfbfb887ee
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 190f8a67dc8dc86bdddc1be2e073da9e5969255b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1651972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549435"
 ---
 # <a name="uwp-programming"></a>UWP 프로그래밍
 
@@ -56,11 +54,11 @@ ms.locfileid: "1651972"
 </tr>
 </tbody>
 </table>
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

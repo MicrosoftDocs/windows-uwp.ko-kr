@@ -6,16 +6,14 @@ ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ms.author: mhopkins
 ms.date: 08/21/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 070e1e5bcccee27a19f3afb8a1c9d8ae356a9d73
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: d53e5ced4468d104d2b60174c7fc4cd6c30cf0c7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518997"
+ms.locfileid: "5544335"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Microsoft Store Services SDK를 사용하여 고객과 소통
 

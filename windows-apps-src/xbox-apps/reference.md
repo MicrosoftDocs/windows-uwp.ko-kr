@@ -5,17 +5,15 @@ description: Xbox One의 UWP에 대한 API 참조입니다.
 ms.author: v-angraf
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.assetid: 5ae8e953-0465-487b-81dd-54a85c904daf
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fc2ff964fdd5a03f2d507bcb38337fd4b370655
-ms.sourcegitcommit: c104b653601d9b81cfc8bb6032ca434cff8fe9b1
-ms.translationtype: HT
+ms.openlocfilehash: 894bc6f657f4a65072056a14171bf86b92cced38
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "1921161"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548575"
 ---
 # <a name="xbox-device-portal-rest-api"></a>Xbox 장치 포털 REST API
 

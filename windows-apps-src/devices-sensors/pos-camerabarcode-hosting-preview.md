@@ -5,16 +5,14 @@ description: 응용 프로그램에서 카메라 바코드 스캐너에 대한 �
 ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e5765a725ad99a1092ad8c56cef674ec6210a2c
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 9684db2495e974c23d81b21e9a4a2e764d390255
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833284"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547618"
 ---
 # <a name="hosting-a-camera-barcode-scanner-preview-in-your-application"></a>응용 프로그램에서 카메라 바코드 스캐너에 대한 미리 보기 호스팅
 ## <a name="step-1-setup-your-camera-preview"></a>1단계: 카메라 미리 보기 설정
@@ -40,14 +38,9 @@ using Windows.Media.Capture;
  private void InitCaptureSettings()
 {
     _captureInitSettings = new MediaCaptureInitializationSettings();
-    _captureInitSettings.VideoDeviceId = ClaimedBarcodeScanner.VideoDeviceId;
+    _captureInitSettings.VideoDeviceId = BarcodeScanner.VideoDeviceId;
     _captureInitSettings.StreamingCaptureMode = StreamingCaptureMode.Video;
     _captureInitSettings.PhotoCaptureSource = PhotoCaptureSource.VideoPreview;
-    
-    if (_deviceList.Count > 0)
-    {
-        _captureInitSettings.VideoDeviceId = _deviceList[0].Id;
-    }
 }
 ```
 ## <a name="step-5-associate-your-mediacapture-object-with-the-camera-barcode-scanner"></a>5단계: MediaCapture 개체를 스캐너 바코드 스캐너에 연결

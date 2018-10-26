@@ -6,18 +6,17 @@ title: 백그라운드에서 미디어 파일 처리
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 8d3166b40120799818598300a049a4148a40d2cc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219113"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548374"
 ---
 # <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다.
@@ -78,7 +77,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 이전 단계에서, **Progress**에서 Progress 개체를 만드는 데 사용한 메서드에서 백그라운드 작업 인스턴스의 진행률을 설정합니다. 그러면 포그라운드 앱에 진행률을 전달합니다(실행 중인 경우).
 
-[!code-cs[진행률](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
+[!code-cs[Progress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
 
 **SendToastNotification** 도우미 메서드에서 텍스트 콘텐츠만 있는 알림 메시지의 템플릿 XML 문서를 가져와 새로운 알림 메시지를 만듭니다. 알림 XML의 텍스트 요소가 설정되고 나면 XML 문서에서 새 [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) 개체가 생성됩니다. 마지막으로 [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659)를 호출하여 사용자에게 알림이 표시됩니다.
 
@@ -127,9 +126,13 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-**MediaProcessingTrigger** 개체의 [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) 메서드를 호출하여 백그라운드 작업을 시작합니다. 이 메서드에서 반환한 [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) 개체를 통해 백그라운드 작업이 성공적으로 시작되었는지 알 수 있으며, 제대로 시작되지 않은 경우에는 백그라운드 작업을 시작하지 못한 이유를 알 수 있습니다.
+일반적인 앱은 앱이 처음 시작 된 경우 **OnNavigatedTo** 이벤트와 같이 이러한 백그라운드 작업을 등록 합니다.
+
+**MediaProcessingTrigger** 개체의 [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) 메서드를 호출하여 백그라운드 작업을 시작합니다. 이 메서드에서 반환한 [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) 개체를 통해 백그라운드 작업이 성공적으로 시작되었는지 알 수 있으며, 제대로 시작되지 않은 경우에는 백그라운드 작업을 시작하지 못한 이유를 알 수 있습니다. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
+
+일반적인 앱에서 UI 컨트롤의 **Click** 이벤트와 같은 사용자 상호 작용에 대 한 응답으로 백그라운드 작업을 시작 됩니다.
 
 백그라운드 작업에서 조작의 진행률을 업데이트할 때 **OnProgress** 이벤트 처리기가 호출됩니다. 이때 진행률 정보로 UI를 업데이트할 수 있습니다.
 
@@ -140,9 +143,9 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 [!code-cs[OnCompleted](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnCompleted)]
 
 
- 
+ 
 
- 
+ 
 
 
 

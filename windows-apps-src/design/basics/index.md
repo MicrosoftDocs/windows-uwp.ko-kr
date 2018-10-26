@@ -6,23 +6,19 @@ keywords: UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, �
 ms.author: mijacobs
 ms.date: 3/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d092a3fe1120dc5763b5c30ed834c1902a1f8752
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 22ab5ad60ed397092e61f2c43cde4eb2e0c86c4f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842380"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550467"
 ---
 # <a name="design-basics-for-uwp-apps"></a>UWP 앱의 디자인 기본 사항
 
 ![영웅 이미지](images/header-design-basics.svg)
 
 유니버설 Windows 플랫폼(UWP) 디자인 지침은 세련되고 아름다운 앱을 디자인 및 빌드하기 위한 리소스입니다. 규범적인 규칙 목록이 아닙니다. 발전하는 흐름 디자인 시스템과 앱 빌드 커뮤니티의 필요 사항에 맞춰 적응할 수 있도록 고안된 살아있는 문서입니다. 
-
-<!-- This introduction provides an overview of the Fluent Design System, UWP app design basics, and the XAML platform, helping you build user interfaces (UI) that scale beautifully across a range of devices. -->
 
 ## <a name="overview"></a>개요
 

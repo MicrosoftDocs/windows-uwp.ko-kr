@@ -4,11 +4,9 @@ Description: Use ListView and GridView controls to display and manipulate sets o
 title: 목록 보기 및 그리드 보기
 label: List view and grid view
 template: detail.hbs
-ms.author: mukin
-ms.date: 05/19/2017
+ms.author: jimwalk
+ms.date: 05/20/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: f8532ba0-5510-4686-9fcf-87fd7c643e7b
 pm-contact: predavid
@@ -16,12 +14,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 126fc595a8c010c32849de627b1c341c81a2ba77
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 1ee00a9af23be945ad27ab4b39eec127ec397894
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546708"
 ---
 # <a name="list-view-and-grid-view"></a>목록 보기 및 그리드 보기
 
@@ -519,7 +517,7 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 ### <a name="drag-and-drop"></a>끌어서 놓기
 
-ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 지원하고 서로 다른 ListView 및 GridView 컨트롤 간의 끌어서 놓기를 지원합니다. 끌어서 놓기 패턴을 구현하는 방법은 [끌어서 놓기](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)를 참조하세요. 
+ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 지원하고 서로 다른 ListView 및 GridView 컨트롤 간의 끌어서 놓기를 지원합니다. 끌어서 놓기 패턴을 구현하는 방법은 [끌어서 놓기](https://msdn.microsoft.com/windows/uwp/design/input/drag-and-drop)를 참조하세요. 
 
 ## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 

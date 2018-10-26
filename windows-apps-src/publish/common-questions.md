@@ -6,16 +6,14 @@ ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 ms.author: wdg-dev-content
 ms.date: 06/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 3c73e51cac3823be7c1abcce223c9d7fecfc58ae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521008"
+ms.locfileid: "5546500"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>광고 캠페인에 대한 일반적인 질문
 

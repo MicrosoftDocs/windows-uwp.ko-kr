@@ -9,19 +9,15 @@ keywords: 음성 명령, 음성, 음성 인식, 자연어, 받아쓰기, 입력,
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f39a724797ea4f35ed3d2ef88cab4e86a1336d3e
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: ea7c0b92c5900e468023dd5b972942a89c2833c3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546099"
 ---
 # <a name="continuous-dictation"></a>연속 받아쓰기
-
-
 
 긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다.
 
@@ -31,16 +27,16 @@ ms.locfileid: "1707304"
 
 더 긴, 연속 음성 인식 세션(예: 세션 받아쓰기 또는 메일)의 경우 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn913913)의 [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn653226) 속성을 사용하여 [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896) 개체를 가져오세요.
 
-
+> [!NOTE]
+> 받아쓰기 언어 지원 앱 실행 중인 [장치](https://docs.microsoft.com/windows/uwp/design/devices/) 에 따라 달라 집니다. Pc 및 노트북에 대 한만 EN-US 인식 되, Xbox, 휴대폰 음성 인식에서 지 원하는 모든 언어를 인식 하는 동안 됩니다. 자세한 내용은 [음성 인식기 언어 지정](specify-the-speech-recognizer-language.md)을 참조 하세요.
 
 ## <a name="set-up"></a>설정
 
-
 연속 받아쓰기 세션을 관리하려면 몇 가지 개체가 앱에 필요합니다.
 
--   [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 개체의 인스턴스
--   받아쓰는 동안 UI를 업데이트하기 위한 UI 디스패처 참조
--   사용자가 말한 누적된 단어를 추적하는 방법
+- [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 개체의 인스턴스
+- 받아쓰는 동안 UI를 업데이트하기 위한 UI 디스패처 참조
+- 사용자가 말한 누적된 단어를 추적하는 방법
 
 여기서는 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 인스턴스를 코드 숨김 클래스의 전용 필드로 선언합니다. 단일 XAML(Extensible Application Markup Language) 페이지 이후에도 연속 받아쓰기를 유지하려는 경우 앱이 다른 곳에 참조를 저장해야 합니다.
 
@@ -69,18 +65,17 @@ private StringBuilder dictatedTextBuilder;
 
 ## <a name="initialization"></a>초기화
 
-
 연속 음성 인식을 초기화하는 동안 다음 작업을 수행해야 합니다.
 
--   연속 인식 이벤트 처리기에서 앱의 UI를 업데이트하는 경우 UI 스레드 디스패처를 가져옵니다.
--   음성 인식기를 초기화합니다.
--   기본 제공 받아쓰기 문법을 컴파일합니다.
-    **참고**   인식할 수 있는 어휘를 정의하려면 음성 인식에 하나 이상의 제약 조건이 필요합니다. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
--   인식 이벤트에 대한 이벤트 수신기를 설정합니다.
+- 연속 인식 이벤트 처리기에서 앱의 UI를 업데이트하는 경우 UI 스레드 디스패처를 가져옵니다.
+- 음성 인식기를 초기화합니다.
+- 기본 제공 받아쓰기 문법을 컴파일합니다.
+    **참고**  음성 인식에 인식할 수 있는 어휘를 정의 하려면 이상의 제약 조건이 필요 합니다. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
+- 인식 이벤트에 대한 이벤트 수신기를 설정합니다.
 
 이 예제에서는 [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) 페이지 이벤트에서 음성 인식을 초기화합니다.
 
-1.  음성 인식기에 의해 발생한 이벤트가 백그라운드 스레드에서 발생하므로 UI 스레드 업데이트를 위해 디스패처에 대한 참조를 만듭니다. [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)는 항상 UI 스레드에서 호출됩니다.
+1. 음성 인식기에 의해 발생한 이벤트가 백그라운드 스레드에서 발생하므로 UI 스레드 업데이트를 위해 디스패처에 대한 참조를 만듭니다. [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)는 항상 UI 스레드에서 호출됩니다.
 ```csharp
 this.dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
 ```
@@ -104,7 +99,6 @@ SpeechRecognitionCompilationResult result =
 
 ## <a name="handle-recognition-events"></a>인식 이벤트 처리
 
-
 [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244) 또는 [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245)를 호출하여 짧은 한 마디 말이나 구를 캡처할 수 있습니다. 
 
 그러나 보다 길고 연속적인 인식 세션을 캡처하기 위해 사용자가 말할 때 백그라운드에서 실행하는 이벤트 수신기를 지정하고 받아쓰기 문자열을 빌드하는 처리기를 정의합니다.
@@ -113,18 +107,19 @@ SpeechRecognitionCompilationResult result =
 
 특히 두 가지 이벤트가 중요합니다.
 
--   [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) - 인식기에서 몇 가지 결과를 생성할 때 발생합니다.
--   [**Completed**](https://msdn.microsoft.com/library/windows/apps/dn913899) - 연속 인식 세션이 종료 될 때 발생합니다.
+- [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) - 인식기에서 몇 가지 결과를 생성할 때 발생합니다.
+- [**Completed**](https://msdn.microsoft.com/library/windows/apps/dn913899) - 연속 인식 세션이 종료 될 때 발생합니다.
 
 [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트는 사용자가 말할 때 발생합니다. 인식기는 지속적으로 사용자의 말을 수신 대기하고 음성 입력의 청크를 전달하는 이벤트를 주기적으로 발생시킵니다. 이벤트 인수의 [**Result**](https://msdn.microsoft.com/library/windows/apps/dn913895) 속성을 사용하여 음성 입력을 검사하고, 이벤트 처리기에서 적절한 작업(예: StringBuilder 개체에 텍스트 추가)을 수행해야 합니다.
 
 [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432)의 인스턴스인 [**Result**](https://msdn.microsoft.com/library/windows/apps/dn913895) 속성은 음성 입력을 허용할 것인지 여부를 확인하는 데 유용합니다. [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432)는 이를 위해 다음과 같은 두 가지 속성을 제공합니다.
--   [**Status**](https://msdn.microsoft.com/library/windows/apps/dn631440)는 인식에 성공했는지 여부를 나타냅니다. 인식은 다양한 이유로 실패할 수 있습니다.
--   [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434)는 인식기에서 올바른 단어를 이해한 상대적인 신뢰도를 나타냅니다.
+
+- [**Status**](https://msdn.microsoft.com/library/windows/apps/dn631440)는 인식에 성공했는지 여부를 나타냅니다. 인식은 다양한 이유로 실패할 수 있습니다.
+- [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434)는 인식기에서 올바른 단어를 이해한 상대적인 신뢰도를 나타냅니다.
 
 연속적인 인식을 지원하기 위한 기본 단계는 다음과 같습니다.  
 
-1.  여기서는 [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/dn913900) 페이지 이벤트에서 [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/br227508) 연속 인식 이벤트에 대한 처리기를 등록합니다.
+1. 여기서는 [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/dn913900) 페이지 이벤트에서 [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/br227508) 연속 인식 이벤트에 대한 처리기를 등록합니다.
 ```csharp
 speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
         ContinuousRecognitionSession_ResultGenerated;
@@ -132,7 +127,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  그런 다음 [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434) 속성을 확인합니다. 신뢰도 값이 [**Medium**](https://msdn.microsoft.com/library/windows/apps/dn631409) 이상인 경우 StringBuilder에 텍스트를 추가합니다. 또한 입력을 수집할 때 UI를 업데이트합니다.
 
-    **참고**  [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트는 UI를 직접 업데이트할 수 없는 백그라운드 스레드에서 발생합니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
+    **참고** [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트가 백그라운드 스레드에서 UI를 직접 업데이트할 수 없습니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -172,7 +167,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  이벤트 처리기는 Status 속성을 확인하여 인식에 성공했는지 여부를 알아봅니다. 또한 사용자가 말하기를 중지하는 경우도 처리합니다. [**TimeoutExceeded**](https://msdn.microsoft.com/library/windows/apps/dn631433)는 사용자가 말하기를 마친 것을 의미하므로, 대개 인식에 성공한 것으로 간주됩니다. 한층 뛰어난 환경을 구현하기 위해 코드에서 이런 경우를 처리해야 합니다.
 
-    **참고**  [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트는 UI를 직접 업데이트할 수 없는 백그라운드 스레드에서 발생합니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
+    **참고** [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트가 백그라운드 스레드에서 UI를 직접 업데이트할 수 없습니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,
@@ -268,7 +263,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 > 다중 스레딩 때문에 [**CancelAsync**](https://msdn.microsoft.com/library/windows/apps/dn913900)가 호출될 때 [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913898) 이벤트가 계속 스택에 남아 있을 수 있습니다. 그런 경우 **ResultGenerated** 이벤트가 계속 발생합니다.  
 > 인식 세션을 취소할 때 전용 필드를 설정한 경우 [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 처리기에서 해당 값을 항상 확인하세요. 예를 들어 세션을 취소할 때 해당 값을 null로 설정한 경우 필드가 처리기에서 초기화된다고 가정하지 마세요.
 
- 
+ 
 
 ## <a name="related-articles"></a>관련 문서
 
@@ -277,9 +272,9 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 
 **샘플**
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

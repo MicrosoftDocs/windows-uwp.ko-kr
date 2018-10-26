@@ -5,16 +5,14 @@ description: 이 자습서에서는 IIS 서버를 설정, 웹 앱 수 앱 패키
 ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 앱 설치 관리자, AppInstaller, 사이드 로드, 관련 IIS 서버 설정, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 2898a3450f75379492bae1ade5c85581cc8e5a4e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516010"
+ms.locfileid: "5544573"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>IIS 서버에서 UWP 앱 설치
 

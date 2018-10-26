@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 522e2b5e9347b0b26bbd448b1d445037a3889f16
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9aab54e23d59b21901e3aa4700581d2d7eeeee8e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044672"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544829"
 ---
 # <a name="tier-1"></a>계층 1
 
@@ -67,9 +65,9 @@ LOD 및 매핑된 상태 피드백을 고정할 수 있는 셰이더 명령어�
 
 [스트리밍 리소스 기능 계층](streaming-resources-features-tiers.md)
 
- 
+ 
 
- 
+ 
 
 
 

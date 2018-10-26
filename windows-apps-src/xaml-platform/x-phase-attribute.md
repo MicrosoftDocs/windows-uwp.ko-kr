@@ -6,18 +6,17 @@ ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: a629fb07bfa2e3f8bb3d070e9fe4994baba4336b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 17ee99553b5713acb1917ccb697abb2387d00da2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549200"
 ---
 # <a name="xphase-attribute"></a>x:Phase 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 [{x:Bind} 태그 확장](x-bind-markup-extension.md)과 함께 **x:Phase**를 사용하여 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 항목을 증분적으로 렌더링하고 이동 환경을 개선할 수 있습니다. **x:Phase**는 [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914) 이벤트를 사용하여 목록 항목의 렌더링을 수동으로 제어할 때와 동일한 효과를 얻을 수 있는 선언적 방법입니다. [ListView 및 GridView 항목의 증분 업데이트](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
 
@@ -33,7 +32,7 @@ ms.locfileid: "220317"
 
 | 용어 | 설명 |
 |------|-------------|
-| PhaseValue | 요소가 처리되는 단계를 나타내는 숫자입니다. 기본값은 0입니다. | 
+| PhaseValue | 요소가 처리되는 단계를 나타내는 숫자입니다. 기본값은 0입니다. | 
 
 ## <a name="remarks"></a>설명
 
@@ -45,23 +44,23 @@ ms.locfileid: "220317"
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
-    <Grid Width="200" Height="80">
-        <Grid.ColumnDefinitions>
-           <ColumnDefinition Width="75" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Image Grid.RowSpan="4" Source="{x:Bind ImageData}" MaxWidth="70" MaxHeight="70" x:Phase="3"/>
-        <TextBlock Text="{x:Bind DisplayName}" Grid.Column="1" FontSize="12"/>
-        <TextBlock Text="{x:Bind prettyDate}"  Grid.Column="1"  Grid.Row="1" FontSize="12" x:Phase="1"/>
-        <TextBlock Text="{x:Bind prettyFileSize}"  Grid.Column="1"  Grid.Row="2" FontSize="12" x:Phase="2"/>
-        <TextBlock Text="{x:Bind prettyImageSize}"  Grid.Column="1"  Grid.Row="3" FontSize="12" x:Phase="2"/>
-    </Grid>
+    <Grid Width="200" Height="80">
+        <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="4" Source="{x:Bind ImageData}" MaxWidth="70" MaxHeight="70" x:Phase="3"/>
+        <TextBlock Text="{x:Bind DisplayName}" Grid.Column="1" FontSize="12"/>
+        <TextBlock Text="{x:Bind prettyDate}"  Grid.Column="1"  Grid.Row="1" FontSize="12" x:Phase="1"/>
+        <TextBlock Text="{x:Bind prettyFileSize}"  Grid.Column="1"  Grid.Row="2" FontSize="12" x:Phase="2"/>
+        <TextBlock Text="{x:Bind prettyImageSize}"  Grid.Column="1"  Grid.Row="3" FontSize="12" x:Phase="2"/>
+    </Grid>
 </DataTemplate>
 ```
 
@@ -82,5 +81,5 @@ ms.locfileid: "220317"
 
 단계는 [{x:Bind}](x-bind-markup-extension.md) 바인딩에만 영향을 주며, [{Binding}](binding-markup-extension.md) 바인딩에는 영향을 주지 않습니다.
 
-단계를 인식하는 컨트롤을 사용하여 항목 템플릿을 렌더링하는 경우에만 단계가 적용됩니다. Windows 10의 경우 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)를 의미합니다. 다른 항목 컨트롤에서 사용되는 데이터 템플릿이나 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) 또는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 섹션과 같은 다른 시나리오에는 단계가 적용되지 않습니다. 이러한 경우에는 모든 UI 요소가 한 번에 데이터 바인딩됩니다.
+단계를 인식하는 컨트롤을 사용하여 항목 템플릿을 렌더링하는 경우에만 단계가 적용됩니다. Windows10, [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)의미입니다. 다른 항목 컨트롤에서 사용되는 데이터 템플릿이나 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) 또는 [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 섹션과 같은 다른 시나리오에는 단계가 적용되지 않습니다. 이러한 경우에는 모든 UI 요소가 한 번에 데이터 바인딩됩니다.
 

@@ -6,23 +6,21 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f90821fdadea0939dbad316ad9be4424b31a926
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
-ms.translationtype: HT
+ms.openlocfilehash: 69d316ad48645d8995e602b270a5615322c8b43f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1573050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549180"
 ---
 # <a name="binding-markup-extension"></a>{Binding} 태그 확장
 
 
-**참고** 성능 및 개발자 생산성에 최적화된 새 바인딩 메커니즘을 Windows 10에 사용할 수 있습니다. [{x:Bind} 태그 확장](x-bind-markup-extension.md)을 참조하세요.
+**참고**새 바인딩 메커니즘은 성능 및 개발자 생산성에 최적화 된 Windows10 사용할 수 있습니다. [{x:Bind} 태그 확장](x-bind-markup-extension.md)을 참조하세요.
 
-**참고**  앱에서 **{Binding}** 과 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
+**참고**바인딩 **{Binding}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
 **{Binding}** 태그 확장은 코드 등 데이터 원본에서 가져온 값에 컨트롤의 속성을 데이터 바인딩하는 데 사용됩니다. **{Binding}** 태그 확장은 XAML 로드 시 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스의 인스턴스로 변환됩니다. 이 바인딩 개체는 데이터 원본의 속성에서 값을 가져와서 컨트롤의 속성으로 푸시합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 업데이트하도록 바인딩 개체를 구성할 수 있습니다. 또한 필요한 경우 제어 값 변경을 원본 속성에 다시 적용하도록 구성할 수도 있습니다. 데이터 바인딩의 대상인 속성은 종속성 속성이어야 합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
@@ -83,7 +81,7 @@ ms.locfileid: "1573050"
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | 바인딩 소스 업데이트의 타이밍을 지정합니다. 지정하지 않을 경우 기본값은 **Default**입니다. |
 
-**참고**  **{x:Bind}** 에서 **{Binding}** 으로 태그를 변환하는 경우 **Mode** 속성에 대한 기본값의 차이에 주의하세요.
+**참고**차이점 **모드** 속성에 대 한 기본 값으로 변환 하는 태그에서 **{x: Bind}** **{Binding}** 다음에 유의 합니다.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 
@@ -92,7 +90,7 @@ ms.locfileid: "1573050"
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) 및 [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828)은 바인딩 소스를 지정하므로 상호 배타적입니다.
 
-**팁**  [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) 또는 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)의 경우처럼 값에 단일 중괄호를 지정해야 하는 경우 중괄호 앞에 백슬래시`\{`을 넣습니다. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
+**팁**값에 단일 중괄호를 지정 해야 하는 경우 [**경로**](https://msdn.microsoft.com/library/windows/apps/br209830) 또는 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)같이 다음 앞에 백슬래시: `\{`. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
 
 ## <a name="examples"></a>예제
 
@@ -129,4 +127,4 @@ ms.locfileid: "1573050"
 
 Microsoft Visual Studio의 Microsoft IntelliSense는 XAML 태그 편집기에서 **{Binding}** 을 작성하는 동안 데이터 컨텍스트의 속성을 표시합니다. "{Binding"을 입력하는 즉시 [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)에 적합한 데이터 컨텍스트 속성이 드롭다운에 표시됩니다. IntelliSense는 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)의 다른 속성에도 도움이 됩니다. 이렇게 하려면 데이터 컨텍스트 또는 디자인 타임 데이터 컨텍스트를 태그 페이지에 설정해야 합니다. **정의로 이동**(F12)도 **{Binding}** 과 함께 작동합니다. 또는 데이터 바인딩 대화 상자를 사용할 수 있습니다.
 
- 
+ 

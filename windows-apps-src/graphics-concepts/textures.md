@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8d48114a6d4bc7386951264a5fc94990bd0b7f5
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 516a15c17546d9f9b5e7cb7f8c0651f1372275ae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653042"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545150"
 ---
 # <a name="textures"></a>텍스처
 
@@ -79,16 +77,16 @@ ms.locfileid: "1653042"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [Direct3D 그래픽 학습 가이드](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

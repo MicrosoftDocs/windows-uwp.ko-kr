@@ -6,18 +6,17 @@ title: 미디어 캐스팅
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
-ms.openlocfilehash: 8ba90e1538962fdb7ef1434698ea52845713c634
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: da0bb4d25166dd62372d5902ff89221d20189c22
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543301"
 ---
 # <a name="media-casting"></a>미디어 캐스팅
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다.
@@ -156,9 +155,9 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 [!code-cs[DisconnectButton](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDisconnectButton)]
 
- 
+ 
 
- 
+ 
 
 
 

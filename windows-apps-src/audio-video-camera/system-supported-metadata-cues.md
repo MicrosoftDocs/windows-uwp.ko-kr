@@ -6,16 +6,14 @@ title: 시스템에서 지원하는 시간이 제한된 메타데이터 신호
 ms.author: drewbat
 ms.date: 04/18/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 메타데이터, 신호, 음성, 챕터
 ms.localizationpriority: medium
-ms.openlocfilehash: 9229e123b5a28cbcf64937cfeb7a57c961e71786
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 1e97c913764db24c68ce7becdba0fc283e1a3b73
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692248"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545263"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>시스템에서 지원하는 시간이 제한된 메타데이터 신호
 이 문서에서는 미디어 파일 또는 스트림에 포함될 수 있는 시간이 지정된 여러 형식의 메타데이터를 활용하는 방법을 설명합니다. UWP 앱은 이러한 메타데이터 신호가 발견될 때마다 재생하는 동안 미디어 파이프라인에 의해 발생하는 이벤트를 등록할 수 있습니다. [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue) 클래스를 사용하여 앱은 자체 사용자 지정 메타데이터 신호를 구현할 수 있지만 이 문서는 다음과 같은 미디어 파이프라인이 자동으로 검색하는 몇 가지 메타데이터 표준에 초점을 맞춥니다.
@@ -189,7 +187,7 @@ emsg 상자 메타데이터 이벤트를 등록하면 **MediaItem**은 [**MediaP
 * [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)
 
 
- 
+ 
 
 
 

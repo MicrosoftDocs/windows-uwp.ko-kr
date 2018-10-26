@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a26679bab35590d61f9188f64df977fbaf78d90
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e808bf0fe1f521a60aa347efd148ede96be95964
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548903"
 ---
 # <a name="compressed-texture-resources"></a>압축된 텍스처 리소스
 
 
-텍스처 맵은 더 선명하게 표시되도록 3차원 셰이프에 그려지는 디지털화된 이미지입니다. 래스터화 중 이러한 셰이프에 텍스처 맵이 매핑되고 프로세스에서 시스템 버스와 메모리를 많이 사용할 수 있습니다. 텍스처에서 사용하는 메모리 양을 줄이기 위해 Direct3D에서 텍스처 표면의 압축을 지원합니다. 일부 Some Direct3D 장치는 기본적으로 압축된 텍스처 표면을 지원합니다. 이러한 장치에서 압축된 표면을 만들고 여기에 데이터를 로드하면 표면을 Direct3D에서 다른 텍스처 표면처럼 사용할 수 있습니다. Direct3D는 3D 개체에 텍스처 매핑 시 압축 풀기를 처리합니다.
+텍스처 맵은 3D 형상으로 그려진 디지털 이미지로서 시각적 디테일을 높여줍니다. 래스터화 중 이러한 셰이프에 텍스처 맵이 매핑되고 프로세스에서 시스템 버스와 메모리를 많이 사용할 수 있습니다. 텍스처에서 사용하는 메모리 양을 줄이기 위해 Direct3D에서 텍스처 표면의 압축을 지원합니다. 일부 Some Direct3D 장치는 기본적으로 압축된 텍스처 표면을 지원합니다. 이러한 장치에서 압축된 표면을 만들고 여기에 데이터를 로드하면 표면을 Direct3D에서 다른 텍스처 표면처럼 사용할 수 있습니다. Direct3D는 3D 개체에 텍스처 매핑 시 압축 풀기를 처리합니다.
 
 ## <a name="span-idstorage-efficiency-and-texture-compressionspanspan-idstorage-efficiency-and-texture-compressionspanspan-idstorage-efficiency-and-texture-compressionspanstorage-efficiency-and-texture-compression"></a><span id="Storage-Efficiency-and-Texture-Compression"></span><span id="storage-efficiency-and-texture-compression"></span><span id="STORAGE-EFFICIENCY-AND-TEXTURE-COMPRESSION"></span>저장소 효율성 및 텍스처 압축
 
@@ -73,16 +71,16 @@ Direct3D는 3D 모델 텍스처링에 사용되는 표면을 압축하는 서비
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [텍스처](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

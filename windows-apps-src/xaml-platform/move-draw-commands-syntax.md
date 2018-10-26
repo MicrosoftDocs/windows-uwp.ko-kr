@@ -6,16 +6,14 @@ ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a66faebf8447253cc158ea8aa2312eb61474bc08
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675260"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550697"
 ---
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 
@@ -83,7 +81,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 대문자 **M**은 *startPoint*가 절대 좌표임을 나타내고, 소문자 **m**은 *startPoint*가 이전 점의 오프셋이거나 이전 점이 없는 경우 (0,0)임을 나타냅니다.
 
-**참고** 이동 명령 다음에 여러 점을 지정할 수 있습니다. 선 명령을 지정한 경우처럼 해당 점으로 선이 그려집니다. 하지만 이는 권장 스타일이 아니므로, 대신 전용 선 명령을 사용하세요.
+**참고**는 이동 명령 뒤의 다중 포인트를 지정할 수 있습니다. 선 명령을 지정한 경우처럼 해당 점으로 선이 그려집니다. 하지만 이는 권장 스타일이 아니므로, 대신 전용 선 명령을 사용하세요.
 
 **그리기 명령**
 
@@ -141,7 +139,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 |------|-------------|
 | *controlPoint1* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 첫 번째 제어점으로, 곡선의 시작 접선을 결정합니다. |
 | *controlPoint2* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선의 두 번째 제어점으로, 곡선의 끝 접선을 결정합니다. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선을 그려 도달하는 점입니다. | 
+| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 곡선을 그려 도달하는 점입니다. | 
 
 **정방형 3차원 곡선 명령**
 
@@ -197,7 +195,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 | *isLargeArcFlag* | 호의 각도가 180도 이상이어야 하는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
 | *sweepDirectionFlag* | 호가 양수 각도 방향으로 그려지는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 호를 그려 도달하는 점입니다.|
- 
+ 
 **닫기 명령**
 
 현재 그림을 끝내고 현재 점을 그림 시작점에 연결하는 선을 만듭니다. 이 명령은 그림의 마지막 세그먼트와 첫 번째 세그먼트 사이에 선 이음(모서리)을 만듭니다.
@@ -231,7 +229,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>이동 및 그리기 명령을 생성하는 디자인 도구
 
-Blend for Microsoft Visual Studio 2015에서 **펜** 도구 및 다른 그리기 도구를 사용하면 일반적으로 이동 및 그리기 명령과 함께 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체가 생성됩니다.
+Blend for Microsoft Visual Studio2015에서에서 **펜** 도구 및 다른 그리기 도구를 사용 하는 이동을 사용 하는 [**경로**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 생성 및 그리기 명령을 일반적으로 합니다.
 
 컨트롤에 대한 Windows 런타임 XAML 기본 템플릿에 정의된 일부 컨트롤 파트에 기존 이동 및 그리기 명령 데이터가 있을 수 있습니다. 예를 들어 일부 컨트롤은 이동 및 그리기 명령으로 정의된 데이터가 포함된 [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)을 사용합니다.
 

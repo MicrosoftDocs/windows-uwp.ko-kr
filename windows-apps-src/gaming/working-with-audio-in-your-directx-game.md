@@ -6,16 +6,14 @@ ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 오디오, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 2770e48720f3024908835aa26579ea1b4b3d3903
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a0b0ae219ea7fd014b39eb8eb7a09049f7c632a2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654492"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551046"
 ---
 # <a name="audio-for-games"></a>게임의 오디오
 
@@ -109,7 +107,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="xaudio2-how-to-resources"></a>XAudio2 "방법" 리소스
 
@@ -196,7 +194,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="media-foundation-resources"></a>Media Foundation 리소스
 
@@ -257,7 +255,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 </tbody>
 </table>
 
- 
+ 
 
 ### <a name="windows-runtime-xaml-media-types"></a>Windows 런타임 XAML 미디어 유형
 
@@ -298,7 +296,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="reference"></a>참조
 
@@ -307,16 +305,16 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 -   [XAudio2 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ee415737)
 -   [Microsoft 미디어 파운데이션 개요](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 
 
 -   [XAudio2 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ee415737)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 292adb2f06022fbb8fc063c49442cd69ccf64534
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 245581e4eb2a8526b242feadb5877590283e24f9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549930"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Texture2D 및 Texture2DArray 하위 리소스 타일링
 
@@ -38,7 +36,7 @@ ms.locfileid: "1044142"
 | BC1,4                       | 512x256                       |
 | BC2,3,5,6,7                 | 256x256                       |
 
- 
+ 
 
 스트리밍 리소스로 지원되지 않는 포맷 비트 개수는 96 bpp 포맷, 비디오 포맷, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM, 그리고 DXGI\_FORMAT\_R8R8\_G8B8\_UNORM입니다.
 
@@ -55,7 +53,7 @@ ms.locfileid: "1044142"
 | 8                           | 4x2                           |
 | 16                          | 4x4                           |
 
- 
+ 
 
 스트리밍 리소스로 지원하기 위해서는 샘플 개수 1개와 4개만 필요(허용)합니다. 2, 8 및 16도 표에 있기는 하지만 스트리밍 리소스는 현재 2, 8 및 16을 지원하지 않습니다.
 
@@ -70,9 +68,9 @@ ms.locfileid: "1044142"
 
 [스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

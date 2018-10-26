@@ -6,19 +6,18 @@ ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 셰이더, 기본 형식, directx
-ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 475a69837796b0b64be27c96f10b42d5b61390c1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219041"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546728"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a>셰이더 및 그리기 기본 요소 만들기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 여기에서는 HLSL 소스 파일을 사용해 셰이더를 컴파일하고 만드는 방법을 설명합니다. 이 셰이더를 사용하면 디스플레이에 원형을 그릴 수 있습니다.
 
@@ -292,9 +291,9 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
 
 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)
 
- 
+ 
 
- 
+ 
 
 
 

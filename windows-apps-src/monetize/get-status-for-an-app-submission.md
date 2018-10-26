@@ -6,16 +6,14 @@ title: 앱 제출의 상태 가져오기
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출, 상태
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d14ce17f4e6dff08351ca0764f3b6a173550426
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 5399a090c664049ef66e2d1933eb1ba2798c8228
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472012"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550368"
 ---
 # <a name="get-the-status-of-an-app-submission"></a>앱 제출의 상태 가져오기
 

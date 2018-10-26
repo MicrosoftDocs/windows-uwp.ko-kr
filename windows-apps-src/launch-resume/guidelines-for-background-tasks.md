@@ -6,16 +6,14 @@ ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 7adfecbe216dce25d0f80eb3ef1f528196299db4
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: fd98a3019efc8f2774fb7a1b52f5dcd27778cd2a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518901"
+ms.locfileid: "5560829"
 ---
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 

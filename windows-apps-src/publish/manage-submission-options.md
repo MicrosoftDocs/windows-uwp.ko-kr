@@ -5,16 +5,14 @@ title: 제출 옵션 관리
 ms.author: wdg-dev-content
 ms.date: 05/09/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, 게시 고정, 게시 날짜, 게시를 위해 제출 전송, 제한된 접근 권한 값 승인
 ms.localizationpriority: medium
-ms.openlocfilehash: 147f34c40cc5d2b612dcdd92edc0c76340cf58f7
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 51b816ece884f1464d0dbf039aef5d80e2ca7341
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548447"
 ---
 # <a name="manage-submission-options"></a>제출 옵션 관리
 

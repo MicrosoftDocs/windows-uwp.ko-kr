@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c9feb6460512a7266dfd5d2979b89084f6487f5
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 3af31535dcdb1cb5eb8beebbbb91312adafe353a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653452"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546955"
 ---
 # <a name="guidelines-for-targeting"></a>타기팅에 대한 지침
 
@@ -104,7 +102,7 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 </tbody>
 </table>
 
- 
+ 
 
 이러한 권장 대상 크기는 특정 시나리오에 따라 조정될 수 있습니다. 이 권장 크기에는 일부 고려해야 할 사항이 포함되어 있습니다.
 
@@ -168,9 +166,9 @@ JavaScript를 사용하는 UWP 앱 개발자에게는 이 기능이 노출되지
 * [입력: Windows 8 제스처 샘플](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [입력: 조작 및 제스처(C++) 샘플](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [DirectX 터치 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

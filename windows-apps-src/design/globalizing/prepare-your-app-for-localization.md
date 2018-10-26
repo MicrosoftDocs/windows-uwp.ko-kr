@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/07/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: c951d8aacef1a327740ca09f19bbc33caa3695df
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395582"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543525"
 ---
 # <a name="make-your-app-localizable"></a>자신의 앱을 현지화 가능하도록 만들 수 있습니다.
 
@@ -54,9 +52,9 @@ ms.locfileid: "1395582"
 
 즉, 모든 컨텍스트에서 활용될 수 있도록 문자열을 작은 단위로 분리합니다. 문자열이 전체 문장이어야 하는 경우도 있습니다.
 
-다음 문자열을 예로 들어봅니다. "The {0} could not be synchronized."
+다음 문자열: "는 {0} 동기화 할 수 없습니다."
 
-{0} 자리에 "약속", "작업", "문서" 등 다양한 단어가 올 수 있습니다. 이 예가 영어에는 적절하지만 독일어의 해당 문장에 대해서는 모든 경우에 적합하지 않습니다. 다음 독일어 문자에서 템플릿 문자열의 일부 단어("Der", "Die", "Das")가 매개 변수가 있는 단어와 일치해야 합니다.
+다양 한 단어가 바꿀 수 {0}"약속", "작업", "문서" 등. 이 예가 영어에는 적절하지만 독일어의 해당 문장에 대해서는 모든 경우에 적합하지 않습니다. 다음 독일어 문자에서 템플릿 문자열의 일부 단어("Der", "Die", "Das")가 매개 변수가 있는 단어와 일치해야 합니다.
 
 | 영어                                    | 독일어                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -64,7 +62,7 @@ ms.locfileid: "1395582"
 | 작업을 동기화할 수 없습니다.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | 문서를 동기화할 수 없습니다.    | Das Dokument konnte nicht synchronisiert werden. |
 
-또 다른 예로 "Remind me in {0} minute(s)"라는 문장을 살펴보겠습니다. 영어에서는 단어 "minute(s)"가 사용되지만 다른 언어에서는 다른 단어를 사용할 수 있습니다. 예를 들어 폴란드어에서는 문맥에 따라 "minuta", "minuty" 또는 "minut"를 사용합니다.
+또 다른 예로, 문장 고려 "미리 알림 {0} minute(s)." 영어에서는 단어 "minute(s)"가 사용되지만 다른 언어에서는 다른 단어를 사용할 수 있습니다. 예를 들어 폴란드어에서는 문맥에 따라 "minuta", "minuty" 또는 "minut"를 사용합니다.
 
 이 문제를 해결하려면 단어 하나가 아닌 문장 전체를 지역화합니다. 이렇게 하려면 추가 작업이 필요하여 유용한 솔루션이 아닌 것처럼 보일 수도 있지만, 다음과 같은 이유로 인해 가장 적합한 솔루션입니다.
 
@@ -100,7 +98,7 @@ ms.locfileid: "1395582"
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. 번역자는 대상 언어의 필요에 맞게 형식 문자열의 형식 항목을 순서를 바꿀 수 있도록 각 매개 변수의 의도를 알고 있어야 합니다(예: "{1} {0}")
+이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. 번역자 형식 문자열의 형식 항목의 순서를 바꿀 수 있도록 각 매개 변수의 의도 알고 있다고 확인 (예를 들어 "{1} {0}")는 대상 언어.
 
 ## <a name="dont-over-localize"></a>과도한 지역화는 금지됩니다.
 

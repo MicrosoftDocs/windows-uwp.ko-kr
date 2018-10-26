@@ -6,16 +6,14 @@ title: MediaPlayer를 사용하여 오디오 및 비디오 재생
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c06a4348ba1f974aaf7151456267ce7585b56a10
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 6b83be1dee4e23fa6974e39fbfb0f9ce26529274
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545452"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 
@@ -271,9 +269,9 @@ Windows 10, 버전 1803부터는 시스템이 현재 사용 중인 **MediaPlayer
 
 
 
- 
+ 
 
- 
+ 
 
 
 

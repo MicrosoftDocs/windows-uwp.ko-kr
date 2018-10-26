@@ -5,16 +5,14 @@ title: 스토어 제품용 데이터 스키마
 ms.author: mhopkins
 ms.date: 09/26/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, ExtendedJsonData, Microsoft Store 제품, 스키마
 ms.localizationpriority: medium
-ms.openlocfilehash: 77faa88524f348736c4c997dcd18ded200e9fd86
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 980fde1a222b5fb7ba2d4524469a9b6673cbabd3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5471753"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546073"
 ---
 # <a name="data-schemas-for-store-products"></a>Microsoft Store 제품용 데이터 스키마
 

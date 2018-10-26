@@ -7,19 +7,17 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dc34d15ed7f623b564101f4731beb72bb4bfbcc
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 14d5120632833e91e82ed7dd717ba04a9abb0efb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546579"
 ---
 # <a name="content-transition-animations"></a>콘텐츠 전환 애니메이션
 
@@ -50,9 +48,9 @@ ms.locfileid: "1652596"
 * [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
 * [**ContentThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/br243104)
 
- 
+ 
 
- 
+ 
 
 
 

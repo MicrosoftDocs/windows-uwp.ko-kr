@@ -6,16 +6,14 @@ ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: 1498c532717a23e1fe6332a47bc2ca8abaca4afb
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 2acbeb0f67985537524a352507910f5e526ae0bd
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544689"
 ---
 # <a name="define-your-experiment-in-the-dashboard"></a>대시보드에서 실험 정의
 

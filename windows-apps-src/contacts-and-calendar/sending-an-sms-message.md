@@ -7,21 +7,19 @@ keywords: 연락처, SMS, 보내기
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-ms.openlocfilehash: e5c3678e6c12a65b6821d2fc2a54e0710f7dcef3
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665357"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545568"
 ---
 # <a name="send-an-sms-message"></a>SMS 메시지 보내기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다.
+
+이 코드를 호출 하려면 패키지 매니페스트에서 **채팅**, **smsSend**및 **chatSystem** 기능을 선언 합니다. [제한 된 접근 권한 값](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) 이지만 앱에서 사용할 수 있습니다. 스토어에 앱을 게시 하려는 경우에 승인을 해야 합니다. [계정 유형, 위치 및 수수료를](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)참조 하세요.
 
 ## <a name="launch-the-compose-sms-dialog"></a>SMS 작성 대화 상자 시작
 
@@ -53,6 +51,15 @@ private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipien
         chatMessage.Recipients.Add(phone.Number);
     }
     await Windows.ApplicationModel.Chat.ChatMessageManager.ShowComposeSmsMessageAsync(chatMessage);
+}
+```
+
+앱을 실행 하는 장치를 SMS 메시지를 보낼 수 있는지 확인 하려면 다음 코드를 사용할 수 있습니다.
+
+```csharp
+if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.ApplicationModel.Chat"))
+{
+   // Call code here.
 }
 ```
 

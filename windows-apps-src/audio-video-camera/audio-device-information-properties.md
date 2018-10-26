@@ -6,16 +6,14 @@ title: 오디오 장치 정보 속성
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c221e3d77419ca02b46e8be227f3b943fe8dc241
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.openlocfilehash: d612a259785c8ba29ab975ba910c4f3e7df61d6f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1639013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545406"
 ---
 # <a name="audio-device-information-properties"></a>오디오 장치 정보 속성
 

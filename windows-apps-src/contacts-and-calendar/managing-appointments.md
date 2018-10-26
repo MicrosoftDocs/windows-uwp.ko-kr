@@ -6,19 +6,17 @@ ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 약속, 일정
-ms.openlocfilehash: d4bc4832dd489508eabbddd486f782ac8b0191a3
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665697"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548923"
 ---
 # <a name="manage-appointments"></a>약속 관리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359) 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다. 여기서는 약속을 만들고, 약속을 일정 앱에 추가하고, 일정 앱에서 약속을 바꾸고, 일정 앱에서 약속을 제거하는 방법을 설명하겠습니다. 또한 일정 앱의 시간 범위를 표시하고 약속 되풀이 개체를 만드는 방법도 설명합니다.
@@ -286,7 +284,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**참고** Windows Phone 스토어 앱의 경우 [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync)는 약속을 추가하기 위해 표시되는 대화 상자를 편집할 수 있다는 점에서 [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync)처럼 작동합니다.
+**참고**Windows Phone 스토어 앱에 대 한 [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 함수 마찬가지로 [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 는 약속을 추가 하기 위해 표시 되는 대화 상자.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>사용자의 일정에서 약속 바꾸기
 
@@ -574,6 +572,6 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 ## <a name="related-topics"></a>관련 항목
 
 * [약속 API 샘플](http://go.microsoft.com/fwlink/p/?linkid=309836)
- 
+ 
 
- 
+ 

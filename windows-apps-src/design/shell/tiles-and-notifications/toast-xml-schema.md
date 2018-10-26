@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b83077f57f484cf26cd2c6d3c0f28b6c8dce3d8
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: bcfc56264ab3063995fd9f2b06bd93e9406cd37e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395792"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543258"
 ---
 # <a name="toast-content-xml-schema"></a>알림 콘텐츠 XML 스키마
 
@@ -31,19 +29,19 @@ ms.locfileid: "1395792"
 
 ```
 <toast launch? duration? activationType? scenario? >
-  <visual lang? baseUri? addImageQuery? >
-    <binding template? lang? baseUri? addImageQuery? >
-      <text lang? hint-maxLines? >content</text>
-      <image src placement? alt? addImageQuery? hint-crop? />
-      <group>
-        <subgroup hint-weight? hint-textStacking? >
-          <text />
-          <image />
-        </subgroup>
-      </group>
-    </binding>
-  </visual>
-  <audio src? loop? silent? />
+  <visual lang? baseUri? addImageQuery? >
+    <binding template? lang? baseUri? addImageQuery? >
+      <text lang? hint-maxLines? >content</text>
+      <image src placement? alt? addImageQuery? hint-crop? />
+      <group>
+        <subgroup hint-weight? hint-textStacking? >
+          <text />
+          <image />
+        </subgroup>
+      </group>
+    </binding>
+  </visual>
+  <audio src? loop? silent? />
 </toast>
 ```
 
@@ -169,15 +167,15 @@ silent?
 
 ```
 <toast>
-  <visual>
-  </visual>
-  <audio />
-  <actions>
-    <input id type title? placeHolderContent? defaultInput? >
-      <selection id content />
-    </input>
-    <action content arguments activationType? imageUri? hint-inputId />
-  </actions>
+  <visual>
+  </visual>
+  <audio />
+  <actions>
+    <input id type title? placeHolderContent? defaultInput? >
+      <selection id content />
+    </input>
+    <action content arguments activationType? imageUri? hint-inputId />
+  </actions>
 </toast>
 ```
 
@@ -263,9 +261,9 @@ hint-inputId
 
 ```
 <toast>
-  <visual>
-  </visual>
-  <actions hint-systemCommands="SnoozeAndDismiss" />
+  <visual>
+  </visual>
+  <actions hint-systemCommands="SnoozeAndDismiss" />
 </toast>
 ```
 
@@ -273,19 +271,19 @@ hint-inputId
 
 ```
 <toast>
-  <visual>
-  </visual>
-  <actions>
-  <input id="snoozeTime" type="selection" defaultInput="10">
-    <selection id="5" content="5 minutes" />
-    <selection id="10" content="10 minutes" />
-    <selection id="20" content="20 minutes" />
-    <selection id="30" content="30 minutes" />
-    <selection id="60" content="1 hour" />
-  </input>
-  <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content=""/>
-  <action activationType="system" arguments="dismiss" content=""/>
-  </actions>
+  <visual>
+  </visual>
+  <actions>
+  <input id="snoozeTime" type="selection" defaultInput="10">
+    <selection id="5" content="5 minutes" />
+    <selection id="10" content="10 minutes" />
+    <selection id="20" content="20 minutes" />
+    <selection id="30" content="30 minutes" />
+    <selection id="60" content="1 hour" />
+  </input>
+  <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content=""/>
+  <action activationType="system" arguments="dismiss" content=""/>
+  </actions>
 </toast>
 ```
 

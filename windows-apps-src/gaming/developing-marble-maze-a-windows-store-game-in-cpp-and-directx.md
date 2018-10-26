@@ -6,16 +6,14 @@ ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
 ms.author: elcowle
 ms.date: 08/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 샘플, directx, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 91b3e37664543b57839387a187d0876f4830222c
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 7a808c36ab319d76f16c653c5812ebe4b269ec59
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488827"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543627"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>C++ 및 DirectX로 UWP 게임 Marble Maze 개발
 
@@ -30,7 +28,7 @@ ms.locfileid: "1488827"
 > [!IMPORTANT]
 > Marble Maze는 UWP 게임을 만드는 모범 사례인 디자인 패턴을 보여 줍니다. 개발 중인 게임의 고유한 요구 사항과 자신의 사례에 맞게 구현 정보를 대부분 조정할 수 있습니다. 요구에 더 적합한 경우 다른 기술이나 라이브러리를 사용해도 됩니다. (그러나 코드가 [Windows 앱 인증 키트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 전달하는지 항상 확인해야 합니다.) 여기에 사용된 구현 방법이 성공적인 게임 개발에 필수적이라고 판단될 경우 이 설명서에서 강조해 두었습니다.
 
- 
+ 
 
 ## <a name="introducing-marble-maze"></a>Marble Maze 소개
 
@@ -46,8 +44,8 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 ## <a name="prerequisites"></a>필수 조건
 
 
--   Windows 10 크리에이터스 업데이트
--   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
+-   Windows10 크리에이터 스 업데이트
+-   [Microsoft Visual Studio2017](https://www.visualstudio.com/downloads/)
 -   C++ 프로그래밍 지식
 -   DirectX 및 DirectX 용어 숙지
 -   COM에 대한 기본 지식
@@ -55,7 +53,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 ## <a name="who-should-read-this"></a>대상 사용자
 
 
-3D 게임 또는 그래픽을 많이 사용하는 Windows 10용 기타 응용 프로그램을 만들려는 경우에 유용합니다. 이 설명서에서 제공하는 원칙과 사례를 사용하여 고유한 UWP 게임을 만들어 보세요. C++ 및 DirectX 프로그래밍에 대한 배경 지식이나 관심이 있으면 이 설명서를 활용하는 데 도움이 됩니다. DirectX 사용 경험이 없는 경우 유사한 3D 그래픽 프로그래밍 환경의 사용 경험이 있어도 도움이 될 수 있습니다.
+3D 게임 또는 Windows10에 대 한 다른 그래픽 집약적인 응용 프로그램을 만들려는 경우이 적합 합니다. 이 설명서에서 제공하는 원칙과 사례를 사용하여 고유한 UWP 게임을 만들어 보세요. C++ 및 DirectX 프로그래밍에 대한 배경 지식이나 관심이 있으면 이 설명서를 활용하는 데 도움이 됩니다. DirectX 사용 경험이 없는 경우 유사한 3D 그래픽 프로그래밍 환경의 사용 경험이 있어도 도움이 될 수 있습니다.
 
 [연습: DirectX를 사용하여 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)에서는 DirectX 및 C++를 사용하여 기본적인 3D 슈팅 게임을 구현하는 다른 샘플에 대해 설명합니다.
 
@@ -101,11 +99,11 @@ Marble Maze는 많은 재사용 가능 구성 요소를 제공하지만 전체 �
 | [Marble Maze 샘플에 입력 및 대화형 작업 추가](adding-input-and-interactivity-to-the-marble-maze-sample.md) | 사용자가 메뉴를 탐색하고 게임판을 조작할 수 있도록 Marble Maze가 가속도계, 터치 및 Xbox One 컨트롤러 입력을 작업하는 방식에 대해 설명합니다. 또한 입력 작업을 할 때 고려할 몇 가지 모범 사례에 대해 설명합니다. |
 | [Marble Maze 샘플에 오디오 추가](adding-audio-to-the-marble-maze-sample.md)                                     | 게임 환경에 음악과 소리 효과를 추가하기 위해 Marble Maze가 오디오를 사용하는 방식에 대해 설명합니다.                                                                                                                                                  |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

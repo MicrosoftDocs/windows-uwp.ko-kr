@@ -5,16 +5,14 @@ description: 이 가이드의 유효성을 검사 하 여 패키징합니다 필
 ms.author: cdon
 ms.date: 6/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 장치 포털, 앱 관리자, 배포, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: a6a96a78cf03ce4994ddee1c929997b12a2d028f
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5515873"
+ms.locfileid: "5548183"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>느슨한 파일 등록을 통해 앱 배포 
 

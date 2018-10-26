@@ -5,18 +5,16 @@ description: 컴퍼지션 애니메이션을 사용 하 여 XAML 요소에 애�
 ms.author: jimwalk
 ms.date: 09/13/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
-ms.openlocfilehash: a03ffc8d5ea78ee6cbdf78feaae7ba1cd1448f37
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 9372ba818805446948a444632e809ec06691c5e5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470722"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549695"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>컴퍼지션 애니메이션을 사용 하 여 애니메이션 효과 주는 XAML 요소
 

@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: ad1ba185e70a34a4e7bfed0609412ac7bbca2d4a
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: fdaa8cd73bb2f1199e7214206ec2b0b52628a906
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653692"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550924"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>UWP 앱의 컨트롤 및 패턴
  
@@ -32,20 +30,19 @@ UWP 앱 개발에서 <i>컨트롤</i>은 콘텐츠를 표시하거나 조작을 
 
 XAML 및 C#으로 컨트롤을 추가하고 스타일을 지정하는 방법에 대한 일반 지침과 코드 예제입니다.
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-   <p><b><a href="controls-and-events-intro.md">컨트롤 추가 및 이벤트 처리</a></b> <br/>
-앱에 컨트롤을 추가하는 세 가지 주요 단계는 앱 UI에 컨트롤 추가, 컨트롤의 속성 설정, 특정 작업을 수행하도록 컨트롤의 이벤트 처리기에 코드 추가입니다.</li>
-</ul> 
-</p>
-  </div>
-  <div class="side-by-side-content-right">
-   <p><b><a href="xaml-styles.md">컨트롤 스타일 지정</a></b> <br/>
+:::row:::
+    :::column:::
+      <p><b><a href="controls-and-events-intro.md">컨트롤 추가 및 이벤트 처리</a></b> <br/>
+앱에 컨트롤을 추가하는 세 가지 주요 단계는 앱 UI에 컨트롤 추가, 컨트롤의 속성 설정, 특정 작업을 수행하도록 컨트롤의 이벤트 처리기에 코드 추가입니다.</p>
+    :::column-end:::
+    :::column:::
+      <p><b><a href="xaml-styles.md">컨트롤 스타일 지정</a></b> <br/>
 XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용자 지정할 수 있습니다. 스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다.</p>
-  </div>
-</div>
-</div>
+    :::column-end:::
+:::row-end:::
+
+## <a name="get-the-windows-ui-library"></a>Windows UI 라이브러리 가져오기
+일부 컨트롤은 Windows UI 라이브러리 에서만 사용할 수 있습니다. 를 가져오려면 [Windows UI 라이브러리 개요 및 설치 지침](/uwp/toolkits/winui/)을 참조 하세요.
 
 ## <a name="alphabetical-index"></a>사전순 인덱스 
 
@@ -67,7 +64,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 <li style="list-style-type: none;"><a href="date-and-time.md">날짜 및 시간 컨트롤</a></li>
 
-<li style="list-style-type: none;"><a href="dialogs.md">대화 상자 및 플라이아웃</a></li>
+<li style="list-style-type: none;"><a href="dialogs-and-flyouts/index.md">대화 상자 및 플라이아웃</a></li>
 
 <li style="list-style-type: none;"><a href="flipview.md">대칭 이동 보기</a></li>
 
@@ -95,6 +92,8 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 <li style="list-style-type: none;"><a href="person-picture.md">인물 사진</a></li>
 
+<li style="list-style-type: none;"><a href="pivot.md">피벗</a></li>
+
 <li style="list-style-type: none;"><a href="progress-controls.md">진행률 컨트롤</a></li>
 
 <li style="list-style-type: none;"><a href="radio-button.md">라디오 단추</a></li>
@@ -112,8 +111,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 <li style="list-style-type: none;"><a href="slider.md">슬라이더</a></li>
 
 <li style="list-style-type: none;"><a href="split-view.md">분할 보기</a></li>
-
-<li style="list-style-type: none;"><a href="tabs-pivot.md">탭 및 피벗</a></li>
 
 <li style="list-style-type: none;"><a href="text-controls.md">텍스트 컨트롤</a></li>
 

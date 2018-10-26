@@ -6,19 +6,18 @@ ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp, 게임, glsl, 포트
-ms.openlocfilehash: 7416a4dafe24f86243a3a9962d01db1dc7b61031
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "219019"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548671"
 ---
 # <a name="port-the-glsl"></a>GLSL 포팅
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -185,9 +184,9 @@ HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 
 
 [화면에 그리기](draw-to-the-screen.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ ms.assetid: 7720ac98-9662-4cf3-89c5-7ff81896364a
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bf880e498d9f3d44778493b33c480cd0d3c01ce
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 134c9005a796f52fb61ba628c0a85c8dbd875442
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481785"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549787"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임워크 II: 게임 렌더링
 

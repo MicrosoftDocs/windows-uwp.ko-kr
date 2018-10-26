@@ -6,16 +6,14 @@ ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
 ms.author: wdg-dev-content
 ms.date: 6/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 플라이팅
 ms.localizationpriority: medium
-ms.openlocfilehash: d5f43173c85bc8a696d7dbc9967e704f79db2b3f
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: c34aa5f060671341900e25095ee8dc1d2d45a657
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5520584"
+ms.locfileid: "5550358"
 ---
 # <a name="package-flights"></a>패키지 플라이트
 

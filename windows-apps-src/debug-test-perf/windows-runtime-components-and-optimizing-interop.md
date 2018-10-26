@@ -6,19 +6,17 @@ description: Interop 성능 문제를 방지하면서 네이티브 형식과 관
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 8562454b976362ebc65884203775b3891216d8b7
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 726dc4aaa34b9b68aa198e236abcef57b78b21f4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548265"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>UWP 구성 요소 및 interop 최적화
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다.
 
@@ -34,12 +32,11 @@ UWP에는 UWP 앱을 만들 수 있는 모든 언어에서 액세스 가능한 �
 
 C# 또는 Visual Basic으로 UWP 앱을 개발할 때 자주 사용하는 두 가지 API 집합은 UWP API와 UWP 앱용 .NET API입니다. 일반적으로 UWP에 정의되는 형식은 "Windows"로 시작하는 네임스페이스에 있고 .NET 형식은 "System"으로 시작하는 네임스페이스에 있습니다. 그러나 예외가 있습니다. UWP 앱용 .NET의 형식을 사용할 때는 상호 운용성이 필요하지 않습니다. UWP를 사용하는 영역에서 성능이 저조할 경우 UWP 앱용 .NET API를 사용하여 성능을 높일 수도 있습니다.
 
-**참고**  
-Windows 10과 함께 제공되는 UWP 구성 요소의 대부분은 C++로 구현됩니다. 따라서 C# 또는 Visual Basic에서 이를 사용할 때 상호 운용성의 경계를 넘습니다. 언제나 그렇듯 코드 변경에 투자하기 전에 UWP 구성 요소의 사용이 앱의 성능에 영향을 주는지 확인하기 위해 앱을 측정해 봐야 합니다.
+**참고**  C# 또는 Visual Basic에서 사용 하면 상호 운용성의 경계를 교차 하므로 Windows10 사용 하 여 제공 되는 UWP 구성 요소의 대부분 c + +에서 구현 됩니다. 언제나 그렇듯 코드 변경에 투자하기 전에 UWP 구성 요소의 사용이 앱의 성능에 영향을 주는지 확인하기 위해 앱을 측정해 봐야 합니다.
 
 이 항목에서 "UWP 구성 요소"는 C#이나 Visual Basic이 아닌 언어로 만든 구성 요소를 의미합니다.
 
- 
+ 
 
 UWP 구성 요소의 속성에 액세스하거나 메서드를 호출할 때마다 상호 운용성의 부담이 발생합니다. 실제로 UWP 구성 요소를 생성할 때 .NET 개체를 생성하는 것보다 더 부담이 큽니다. UWP에서는 앱의 언어에서 구성 요소의 언어로 변환하는 코드를 실행해야 하기 때문입니다. 또한 구성 요소에 데이터를 전달할 경우 관리되는 형식과 관리되지 않는 형식 간에 데이터를 변환해야 합니다.
 
@@ -93,5 +90,5 @@ C++ 또는 JavaScript로 개발되는 앱에서 사용하기 위한 UWP 구성 �
 
 앱의 성능을 높이기 위한 모든 제안은 구성 요소의 성능을 높이는 데에도 적용됩니다. 구성 요소를 측정하여 어떤 API가 높은 트래픽 패턴을 보이는지 확인하고, 그러한 영역에서는 사용자가 적은 수의 호출로 작업을 수행할 수 있는 API를 제공하세요. 앱에서 interop 경계를 자주 넘지 않고 UWP를 사용할 수 있도록 하기 위해 UWP를 설계하는 데 상당한 노력을 기울였습니다.
 
- 
+ 
 

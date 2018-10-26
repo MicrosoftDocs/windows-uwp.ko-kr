@@ -6,19 +6,17 @@ description: 베타 테스트를 수행하면 앱 개발 팀 외부에 있는 �
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 6f5a4e7f2961143f44acb533f045783fb4e4b7c1
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: 7d1e60270b43a8c14067df70ff3e8489f4af2887
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2017
-ms.locfileid: "692909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544749"
 ---
 # <a name="beta-testing"></a>베타 테스트
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 *베타 테스트*를 수행하면 앱 개발 팀 외부에 있는 사용자의 디바이스에서 아직 릴리스되지 않은 앱을 시험해 보고 사용자의 피드백에 따라 앱을 향상시킬 수 있습니다.
@@ -36,7 +34,7 @@ ms.locfileid: "692909"
 -   다양한 장치에서 앱 테스트
 -   베타 테스트가 아니면 찾을 수 없는 성능 문제와 기타 버그 식별
 -   사용자 환경을 개선하는 데 사용할 수 있는 실제 사용 정보 얻기
--   Windows 스토어의 공공 평가에 영향을 주지 않고 피드백 수집
+-   Microsoft 스토어의 공공 평가 영향을 주지 않고 피드백을 받습니다.
 
 ## <a name="when-to-beta-test"></a>베타 테스트 시기
 
@@ -48,9 +46,9 @@ ms.locfileid: "692909"
 
 베타 테스트를 위해 스토어에 앱을 제출하는 방법은 [베타 테스트 및 대상이 지정된 배포](https://msdn.microsoft.com/library/windows/apps/Mt185377)를 참조하세요.
 
- 
+ 
 
- 
+ 
 
 
 

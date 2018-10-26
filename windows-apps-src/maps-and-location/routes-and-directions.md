@@ -6,16 +6,14 @@ ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
 ms.author: normesta
 ms.date: 09/20/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, 경로, 지도, 위치, 길 찾기
 ms.localizationpriority: medium
-ms.openlocfilehash: c837eac53d7063a4b70bac62b64558e3411c70cd
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 69283f6b53f3a8483376e3b8fe77a4491d4b01b1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545084"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
 
@@ -27,7 +25,7 @@ ms.locfileid: "1690329"
 >앱에서 지도 사용에 대한 자세한 내용을 알아보려면 [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 >지도가 앱의 핵심 기능이 아닌 경우 대신 Windows 지도 앱을 실행하는 것이 좋습니다. `bingmaps:`, `ms-drive-to:` 및 `ms-walk-to:` URI 스키마로 Windows 지도 앱을 실행하여 특정 지도 및 턴바이턴 길 찾기를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/library/windows/apps/mt228341)을 참조하세요.
 
- 
+ 
 ## <a name="an-intro-to-maproutefinder-results"></a>MapRouteFinder 결과 소개
 
 
@@ -64,7 +62,7 @@ ms.locfileid: "1690329"
 >[!IMPORTANT]
 >지도 서비스를 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
- 
+ 
 
 ```csharp
 using System;
@@ -147,7 +145,7 @@ You have reached your destination.
 >[!IMPORTANT]
 >지도 서비스 또는 지도 컨트롤을 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
- 
+ 
 
 ```csharp
 using System;
@@ -218,7 +216,7 @@ private async void ShowRouteOnMap()
   BasicGeoposition point2 = new BasicGeoposition() { Latitude = 47.6205, Longitude = -122.3493 };
   BasicGeoposition point3 = new BasicGeoposition() { Latitude = 48.649693, Longitude = -122.144908 };
 
-  // Get Driving Route from point A  to point B thru point C
+  // Get Driving Route from point A  to point B thru point C
   var path = new List<EnhancedWaypoint>();
 
   path.Add(new EnhancedWaypoint(new Geopoint(point1), WaypointKind.Stop));

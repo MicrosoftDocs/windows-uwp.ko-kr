@@ -4,23 +4,18 @@ ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: 음악, 사진 및 비디오 라이브러리의 파일 및 폴더
 description: 음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 06/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8f81f3b6abea2ceb07ab4442d0b5dc24104408
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 1859d758806b4e92758decb40b8a30d02acb254d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549747"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
-
-
-
 
 음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다.
 
@@ -47,7 +42,7 @@ ms.locfileid: "1654442"
 
 > [!NOTE]
 > 적절한 기능을 선언하는 것을 잊지 마세요. 자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
- 
+ 
 
 사용자의 음악, 그림, 비디오 라이브러리의 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) 메서드를 호출합니다. [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) 열거형에서 해당 값을 제공합니다.
 
@@ -147,7 +142,7 @@ private async void getSongs()
     QueryOptions queryOption = new QueryOptions
         (CommonFileQuery.OrderByTitle, new string[] { ".mp3", ".mp4", ".wma" });
 
-    queryOption.FolderDepth = FolderDepth.Deep
+    queryOption.FolderDepth = FolderDepth.Deep;
 
     Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
 
