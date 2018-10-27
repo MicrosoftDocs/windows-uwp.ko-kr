@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
 ms.openlocfilehash: 33c6388902322357d27918b6e4b95555785288bc
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5544729"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5697000"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 

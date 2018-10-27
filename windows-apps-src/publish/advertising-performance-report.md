@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 562348d5077f29af9a0d0776cb421455d45444dc
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5566204"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5695967"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 

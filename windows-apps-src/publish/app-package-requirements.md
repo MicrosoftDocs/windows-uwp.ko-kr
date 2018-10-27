@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 5270215e1f4834a7e7c86ed4b3052ed4f791d57e
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5543842"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696874"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
