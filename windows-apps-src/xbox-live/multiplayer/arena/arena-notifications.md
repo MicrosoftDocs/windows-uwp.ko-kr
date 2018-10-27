@@ -3,16 +3,16 @@ title: 아레나 알림
 author: KevinAsgari
 description: 토너먼트 단계를 진행 하 플레이어에 게 전송 되는 Xbox 아레나 알림을 설명 합니다.
 ms.author: kevinasg
-ms.date: 10-10-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
-ms.openlocfilehash: 086f7bd5e319dc6810517a434c986f0e6cb24eab
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 2637603f129e40f3cdf2f2ca9cff8aa5dfb8a3e1
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557509"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5690240"
 ---
 # <a name="arena-notifications"></a>아레나 알림
 

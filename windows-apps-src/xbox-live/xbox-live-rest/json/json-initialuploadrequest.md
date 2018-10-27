@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-initialuploadrequest.html
 author: KevinAsgari
 description: " InitialUploadRequest(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c8f85c4cd270a66680512cbd6d807ca1d6e183cc
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: b6a0856c23ebaf06eab7ef7fc1688e06cc445b4b
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5560390"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709531"
 ---
 # <a name="initialuploadrequest-json"></a>InitialUploadRequest(JSON)
 POST GameClip 본문 요청을 업로드 합니다. 

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-usersettings.html
 author: KevinAsgari
 description: " UserSettings(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a408ec37e67230d852512b0a542361ae034f47a8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 67b9edcb4ffd4c0da6929de8dfd47652cf7ab375
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5566594"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709050"
 ---
 # <a name="usersettings-json"></a>UserSettings(JSON)
 현재 인증 된 사용자에 대 한 설정을 반환합니다. 

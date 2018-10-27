@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-activityrequest.html
 author: KevinAsgari
 description: " ActivityRequest(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 21cb2684bb3125e0a7fb0447d5f8d4da63608ebf
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 6cb39036ccc75f4caec5a0fa6f961d2462ce5bda
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5543749"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5695929"
 ---
 # <a name="activityrequest-json"></a>ActivityRequest(JSON)
 하나 이상의 사용자의 풍부한 존재 여부에 대 한 정보를 요청 합니다. 

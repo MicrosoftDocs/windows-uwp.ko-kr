@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeopletargetidget.html
 author: KevinAsgari
 description: " GET (/users/{ownerId}/people/{targetid})"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 595c6404357f024979c8279c896fcc940ae9f99d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: b9c821e9d2cecc0b9a6bd02da650d40385a3fd91
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5552684"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687911"
 ---
 # <a name="get-usersowneridpeopletargetid"></a>GET (/users/{ownerId}/people/{targetid})
 호출자의 사람들이 컬렉션에서 대상 ID로 사용자를 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.

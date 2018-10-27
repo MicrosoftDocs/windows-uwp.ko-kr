@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/edsparameters.html
 author: KevinAsgari
 description: " EDS 매개 변수"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: e115f240eb26ea782d67f2c96fd0f702d1844973
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 89e8cd15ec205c9a3a102a94e8a2fae5428ba3ea
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557036"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700482"
 ---
 # <a name="eds-parameters"></a>EDS 매개 변수
 

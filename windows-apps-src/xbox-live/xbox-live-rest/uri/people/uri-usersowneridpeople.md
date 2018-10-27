@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeople.html
 author: KevinAsgari
 description: " /users/{ownerId}/people"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 86d618d19dc81bd2f4f7296aef4b3a8450fa432f
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.openlocfilehash: 5191249e3ee0cdea9ca07f8f3bfbdd15992a3145
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5621578"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5690348"
 ---
 # <a name="usersowneridpeople"></a>/users/{ownerId}/people
 호출자의 사람들이 컬렉션에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.

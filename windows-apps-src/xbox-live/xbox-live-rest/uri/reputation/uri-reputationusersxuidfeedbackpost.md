@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-reputationusersxuidfeedbackpost.html
 author: KevinAsgari
 description: " POST (/users/xuid({xuid})/feedback)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 7df5311a50c2192404fa83d39cbb57e7f5f239f2
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: d6e74674334268ccf65f3055fdc4d53d9f5f3867
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5565152"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5704841"
 ---
 # <a name="post-usersxuidxuidfeedback"></a>POST (/users/xuid({xuid})/feedback)
 셸을 사용 하지 않고 게임에서 피드백 옵션을 추가 하려면 원하는 경우 타이틀에서 사용 합니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.

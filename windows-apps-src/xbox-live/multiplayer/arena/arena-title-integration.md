@@ -4,16 +4,16 @@ author: KevinAsgari
 description: Xbox Live 아레나 플랫폼에 대 한 지원의 제목을 수 구축 하는 방법을 알아봅니다.
 ms.assetid: 470914df-cbb5-4580-b33a-edb353873e32
 ms.author: kevinasg
-ms.date: 09-14-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트 참가
 ms.localizationpriority: medium
-ms.openlocfilehash: 928aaad0ebe6735f55367748ad1d1ae40585ba5a
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: b4171aac6cb7643a79454b7fc40b92a16e7ef75e
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557049"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5694922"
 ---
 # <a name="arena-title-integration-guide"></a>아레나 타이틀 통합 가이드
 

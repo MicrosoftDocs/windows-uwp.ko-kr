@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-lastseenrecord.html
 author: KevinAsgari
 description: " LastSeenRecord(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: fc16e1364346792a39be98dc0232579652b11dd3
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 8d4889ced5f8942c080b3336bda8c0d8d9b25af2
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5541928"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5691657"
 ---
 # <a name="lastseenrecord-json"></a>LastSeenRecord(JSON)
 마지막으로 본 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 사용자를 때 시스템에 대 한 정보입니다. 

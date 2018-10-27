@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-usertitlev2.html
 author: KevinAsgari
 description: " UserTitle(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 44e43fb04cff64b5f1f5c025066decf5cc5cff80
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 1735b7fcedd358c290b289b97417e0ea3a6c090b
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5560252"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687922"
 ---
 # <a name="usertitle-json"></a>UserTitle(JSON)
 사용자가 제목 데이터가 들어 있습니다. 

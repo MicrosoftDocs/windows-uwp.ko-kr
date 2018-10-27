@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-jsonusersbatchscidssciddatapathandfilena
 author: KevinAsgari
 description: " /json/users/batch/scids/{scid}/data/{pathAndFileName},json"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: fc999e1b78581a7af794d5e9bd219d6863932bda
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 91b78ea9e4d1f2de1e8987a57ba87b5db6a0b923
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5569297"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5682780"
 ---
 # <a name="jsonusersbatchscidssciddatapathandfilenamejson"></a>/json/users/batch/scids/{scid}/data/{pathAndFileName},json
 동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

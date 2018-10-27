@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-inventoryconsumablesitemurl.html
 author: KevinAsgari
 description: Xbox 사용자에 대해 소모 성 항목에 대 한 rESTful 끝점입니다.
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 52854a00340ce288db24030158ec39c55f6cb071
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: bbdf869cffae575f53555b31d9ed66647d3d09b2
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5556094"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5683251"
 ---
 # <a name="usersmeconsumablesitemid"></a>/users/me/consumables/{itemID}
 특정 소모 성 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다.

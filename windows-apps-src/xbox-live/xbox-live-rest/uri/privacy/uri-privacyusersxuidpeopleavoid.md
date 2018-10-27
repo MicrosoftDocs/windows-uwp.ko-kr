@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-privacyusersxuidpeopleavoid.html
 author: KevinAsgari
 description: " /users/{ownerId}/people/avoid"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b77aaba437f279cc5dc29265a3adb46ab1f74c12
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 3f4e7523790f527cc8c5816a01dd10ae92112af8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5555718"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696593"
 ---
 # <a name="usersowneridpeopleavoid"></a>/users/{ownerId}/people/avoid
 사용자에 대 한 문제 방지 목록에 액세스

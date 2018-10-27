@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-property.html
 author: KevinAsgari
 description: " Property(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ab15b8a045603a12054ad96f8c980dd29173ed23
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: d37054d03f6ebe8299db78673dc631c9b4b4bc16
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5566988"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709394"
 ---
 # <a name="property-json"></a>Property(JSON)
 매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 포함 됩니다.

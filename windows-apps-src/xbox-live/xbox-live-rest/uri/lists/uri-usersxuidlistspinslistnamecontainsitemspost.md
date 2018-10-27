@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuidlistspinslistnamecontainsitemsp
 author: KevinAsgari
 description: " POST /users/xuid(xuid)/lists/PINS/{listname}/ContainsItems"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b8cc965dd462ce2fa7df9610b97368019386bd8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: f3deb042d03fbc8e15d12359d00a594cc36c1a87
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5554214"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687251"
 ---
 # <a name="post-usersxuidxuidlistspinslistnamecontainsitems"></a>POST /users/xuid(xuid)/lists/PINS/{listname}/ContainsItems
 전체 목록을 검색 하지 않고 목록에 항목 (itemId 지정한) 집합이 포함 되어 있는지 여부를 결정 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.

@@ -3,16 +3,16 @@ title: Xbox 토너먼트 검색
 author: KevinAsgari
 description: 게임의 토너먼트 검색에 대 한 UI를 만드는 방법을 알아봅니다.
 ms.author: kevinasg
-ms.date: 10-10-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
-ms.openlocfilehash: dc460f66ec37d32bfa21d8eaa59066d51beabfac
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 05e8e48ac6995adb36fac998bfbd8cf9fa0dbf7f
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563382"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709808"
 ---
 # <a name="discovering-xbox-tournaments"></a>Xbox 토너먼트 검색
 

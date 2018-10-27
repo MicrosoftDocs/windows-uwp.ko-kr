@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/gvr-enum-gameclipsource.html
 author: KevinAsgari
 description: " GameClipSource 열거형"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 820c09f582e5c51c13af2c262dec23f66a76117f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 470ee6056beaa96ff120ade912680d09908531d6
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5558068"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696704"
 ---
 # <a name="gameclipsource-enumeration"></a>GameClipSource 열거형
 GameClipSource 열거형에 자세히 설명합니다. 

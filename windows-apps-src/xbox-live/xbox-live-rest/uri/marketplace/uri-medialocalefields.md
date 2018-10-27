@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-medialocalefields.html
 author: KevinAsgari
 description: " /media/{marketplaceId}/fields"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5256555ccc81e17b8d0a2cfdfeb26c207e93561f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 495441a15fbb35f201333dc7dd85c45a7c101c8a
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5562102"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5689808"
 ---
 # <a name="mediamarketplaceidfields"></a>/media/{marketplaceId}/fields
 필드 토큰에 액세스합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

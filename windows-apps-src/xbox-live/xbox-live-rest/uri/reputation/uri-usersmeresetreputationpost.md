@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersmeresetreputationpost.html
 author: KevinAsgari
 description: " POST (/users/me/resetreputation)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d8384c86d2f0ffeb4088eac90003b586f3e5e45f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: a08d4b8ecb72bc1db7e9607f0118f0e80e1e2980
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5543746"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5681652"
 ---
 # <a name="post-usersmeresetreputation"></a>POST (/users/me/resetreputation)
 일부 임의의 값에는 계정 하이재킹 (예를 들어) 후 현재 사용자의 평판 점수를 설정 하는 적용 팀을 수 있습니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.

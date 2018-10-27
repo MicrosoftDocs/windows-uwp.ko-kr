@@ -9,11 +9,11 @@ layout: LandingPage
 keywords: windows 10, uwp, 게임, xbox, xbox live, 정책
 ms.localizationpriority: medium
 ms.openlocfilehash: 849d89f0cfd261b1e2dfc3b5eb355e3f1c4f434a
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5547470"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710063"
 ---
 ## <a name="xbox-live-policies"></a>Xbox Live 정책
 

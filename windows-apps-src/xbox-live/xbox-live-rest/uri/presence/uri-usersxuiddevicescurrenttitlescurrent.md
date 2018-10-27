@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuiddevicescurrenttitlescurrent.htm
 author: KevinAsgari
 description: " /users/xuid({xuid})/devices/current/titles/current"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 44174d70cdb568529889e4ce51d0a2b118063d60
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 5c3573a4df36db20b5e318390507ac448aa0141a
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5556524"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5697988"
 ---
 # <a name="usersxuidxuiddevicescurrenttitlescurrent"></a>/users/xuid({xuid})/devices/current/titles/current
 제목이 나 타이틀의 사용자의 존재 여부에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

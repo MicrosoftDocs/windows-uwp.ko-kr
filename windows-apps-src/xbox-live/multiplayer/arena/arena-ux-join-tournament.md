@@ -3,16 +3,16 @@ title: 토너먼트 참가
 author: KevinAsgari
 description: 게임의 토너먼트 참가 하기 위한 UI를 만드는 방법을 알아봅니다.
 ms.author: kevinasg
-ms.date: 10-10-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
-ms.openlocfilehash: 701545085f095bd9c26598ac063780c49ee94c0d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: f3240007d5501941ea3579dab2942d67d4e69809
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5558780"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5703391"
 ---
 # <a name="join-a-tournament-by-using-the-arena-ui"></a>아레나 UI를 사용 하 여는 토너먼트 참가
 

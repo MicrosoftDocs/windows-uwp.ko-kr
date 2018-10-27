@@ -3,16 +3,16 @@ title: 아레나 Api UI 메타 데이터
 author: KevinAsgari
 description: Xbox 아레나 Api UI 메타 데이터의 포괄적인 목록이 포함 되어 있습니다.
 ms.author: kevinasg
-ms.date: 10-10-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
-ms.openlocfilehash: b745af2209e0679e2d47180f9744a7e80036f7aa
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: e2f785836b6d81213ca3e13d9687fd67beae1259
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5566723"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708436"
 ---
 # <a name="arena-apis-a-comprehensive-list-of-ui-metadata"></a>아레나 Api: UI 메타 데이터의 포괄적인 목록
 

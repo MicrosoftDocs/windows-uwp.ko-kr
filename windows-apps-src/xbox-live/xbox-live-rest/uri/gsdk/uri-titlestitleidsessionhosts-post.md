@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-titlestitleidsessionhosts-post.html
 author: KevinAsgari
 description: " POST (/titles/{Title Id}/sessionhosts)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c67123eaedda7b001d82f2c0563309913c06073b
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: dbbc7baf12daea485dec22389846e5e4acec16c1
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5565803"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5694657"
 ---
 # <a name="post-titlestitle-idsessionhosts"></a>POST (/titles/{Title Id}/sessionhosts)
 새 클러스터 요청을 만듭니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.

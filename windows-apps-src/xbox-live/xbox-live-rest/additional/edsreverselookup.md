@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/edsreverselookup.html
 author: KevinAsgari
 description: " 비디오에 대한 EDS 역방향 조회"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e752633d4cbed247796721be96b78327392e582
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: e46bfb70ad377723694bfedb1dde0448564a97a8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561951"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5707402"
 ---
 # <a name="eds-reverse-lookup-for-video"></a>비디오에 대한 EDS 역방향 조회
  

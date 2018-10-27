@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-globalscidssciddatapath.html
 author: KevinAsgari
 description: " /global/scids/{scid}/data/{path}"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 92615300a23f3d1e5013abd6d03b92270d0ae12c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 70ad4c3238dca10150293af60aedb14a4d1ca756
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5556360"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5694101"
 ---
 # <a name="globalscidssciddatapath"></a>/global/scids/{scid}/data/{path}
 지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

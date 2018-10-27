@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuidachievementsscidachievementid.h
 author: KevinAsgari
 description: " /users/xuid({xuid})/achievements/{scid}/{achievementid}"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f02968cc4f1aee9d162720a83c763c52d2fbe84a
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 9766222ea3a1c8671eadd42458b1c5aceaf0f587
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5558651"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5689393"
 ---
 # <a name="usersxuidxuidachievementsscidachievementid"></a>/users/xuid({xuid})/achievements/{scid}/{achievementid}
 구성 된 메타 데이터 및 사용자 고유의 데이터 도전 과제에 대 한 세부 정보를 반환 합니다. 

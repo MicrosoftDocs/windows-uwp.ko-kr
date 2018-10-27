@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-privacyusersrequestoridpermissionvalidat
 author: KevinAsgari
 description: " GET (/users/{requestorId}/permission/validate)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 81ff5f7b1d5d31ec993deacb4a90495b26b13428
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 5e0ec0b8b4de64a5580ffdd83407602ee410da9c
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5549990"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687601"
 ---
 # <a name="get-usersrequestoridpermissionvalidate"></a>GET (/users/{requestorId}/permission/validate)
 대상 사용자를 사용 하 여 지정 된 작업을 수행 하려면 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.

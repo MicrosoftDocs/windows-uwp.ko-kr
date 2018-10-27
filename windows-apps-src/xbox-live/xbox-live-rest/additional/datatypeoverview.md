@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/datatypeoverview.html
 author: KevinAsgari
 description: " 데이터 형식 개요"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 56628e7d23703e50b79ab59ec9df80499081476c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 8129be6220dc6c9ae1d125087fee52ca17d33424
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5566579"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687767"
 ---
 # <a name="data-type-overview"></a>데이터 형식 개요
  

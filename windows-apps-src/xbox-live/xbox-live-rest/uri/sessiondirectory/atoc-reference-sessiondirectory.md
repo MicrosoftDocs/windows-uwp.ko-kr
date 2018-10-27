@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/atoc-reference-sessiondirectory.html
 author: KevinAsgari
 description: " 세션 디렉터리 URI"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ce5aacf8f0c9e6a80fab7def5027eb7ad784c2e6
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 2778014220dc0e75e286e2b6e4af56ea8a2412b2
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5570692"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5691814"
 ---
 # <a name="session-directory-uris"></a>세션 디렉터리 URI
 

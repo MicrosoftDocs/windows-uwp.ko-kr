@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-systemstringsvalidate.html
 author: KevinAsgari
 description: " /system/strings/validate"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: be40226c13badd5d1052b4ead0f08793d761f820
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 37f87dd58d260d414bb5dcfcd551d77c051e5aa6
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5564839"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696495"
 ---
 # <a name="systemstringsvalidate"></a>/system/strings/validate
 유효성 검사에 대 한 문자열의 배열에 액세스합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`.

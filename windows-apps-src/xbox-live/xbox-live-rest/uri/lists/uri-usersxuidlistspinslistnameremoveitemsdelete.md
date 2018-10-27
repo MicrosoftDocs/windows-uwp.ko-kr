@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuidlistspinslistnameremoveitemsdel
 author: KevinAsgari
 description: " DELETE /users/xuid(xuid)/lists/PINS/{listname}/RemoveItems"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 58841997576b343cf07433cdcb2ccd4c5f1a6bd0
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: d400e54ae2ac1651fde1997734c18764b1ea03db
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5571828"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5685126"
 ---
 # <a name="delete-usersxuidxuidlistspinslistnameremoveitems"></a>DELETE /users/xuid(xuid)/lists/PINS/{listname}/RemoveItems
 인덱스로 목록에서 항목을 제거합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.

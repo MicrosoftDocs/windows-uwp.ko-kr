@@ -3,16 +3,16 @@ title: Xbox 아레나
 author: KevinAsgari
 description: Xbox 아레나를 사용 하 여 게임에 대 한 토너먼트를 실행 하는 방법을 알아봅니다.
 ms.author: kevinasg
-ms.date: 09-20-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
-ms.openlocfilehash: 576f358659df590f487d7a42a06f4e997dffabf8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 84944060bac0a14e78cb4a5b28bbc848a71d7602
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5569340"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708400"
 ---
 # <a name="xbox-arena"></a>Xbox 아레나
 

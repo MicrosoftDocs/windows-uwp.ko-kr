@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-handleshandleidsessionput.html
 author: KevinAsgari
 description: " PUT (/handles/{handle-id}/session)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 45ad0ef031924c0f101ba46b25192265c554ea17
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: ca8bd73ce7b71ddbe4a159a4d3e089c5adb9ad87
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5571582"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5683424"
 ---
 # <a name="put-handleshandle-idsession"></a>PUT (/handles/{handle-id}/session)
 만들거나 핸들 역참조 하 여 세션을 업데이트 합니다.

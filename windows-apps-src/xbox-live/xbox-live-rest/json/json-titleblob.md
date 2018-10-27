@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-titleblob.html
 author: KevinAsgari
 description: " TitleBlob(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c11c57d84d5aae34b92c66d2a97ebfc78526fe6
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: a6ed09f078be5c7063d00d35d3bc3749f791d042
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5543645"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5692478"
 ---
 # <a name="titleblob-json"></a>TitleBlob(JSON)
 저장소에서 제목에 대 한 정보를 포함합니다. 

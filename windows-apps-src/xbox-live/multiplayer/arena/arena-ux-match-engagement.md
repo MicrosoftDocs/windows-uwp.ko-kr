@@ -3,16 +3,16 @@ title: 매치 연결
 author: KevinAsgari
 description: 토너먼트 경험을 진행 하는 플레이어의 UX 단계를 설명 합니다.
 ms.author: kevinasg
-ms.date: 10-10-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
-ms.openlocfilehash: e243f4d765912fc15e3676a647b670487fea3e8c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 4746cd0092b1a23b948a3bd9a551624c236cfd5e
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5570196"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5689664"
 ---
 # <a name="match-engagement"></a>매치 연결
 

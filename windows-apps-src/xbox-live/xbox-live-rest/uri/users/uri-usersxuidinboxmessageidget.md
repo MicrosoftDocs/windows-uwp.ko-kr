@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuidinboxmessageidget.html
 author: KevinAsgari
 description: " GET (/users/xuid({xuid})/inbox/{messageId})"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 84aac27702fc4c871bd41a5aa9ab574bcef57e21
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: e3885caae38d1ce69d3ae8e6f7d8de8839cb30ef
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5547844"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5702252"
 ---
 # <a name="get-usersxuidxuidinboxmessageid"></a>GET (/users/xuid({xuid})/inbox/{messageId})
 서비스에서 읽은 상태로 표시 하는 특정 사용자 메시지에 대 한 자세한 메시지 텍스트를 검색 합니다.
@@ -33,7 +33,7 @@ ms.locfileid: "5547844"
 
 ## <a name="remarks"></a>설명
 
-The get operation can only be performed on the User, System, and FriendRequest message types.
+사용자, 시스템 및 FriendRequest 메시지 유형에 대만 get 작업을 수행할 수 있습니다.
 
 이 URI에는 새로 고침 Xbox.com에 필요합니다. 현재 Xbox 360 사용자가 로그 아웃 될 때까지 및에서 다시 읽기/읽지 않은 상태를 업데이트 되지 않습니다.
 

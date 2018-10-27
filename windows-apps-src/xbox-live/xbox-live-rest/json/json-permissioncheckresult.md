@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-permissioncheckresult.html
 author: KevinAsgari
 description: " PermissionCheckResult(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 7077d28beef8ef116bc3294bb8f21715b02d55d7
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 8c78fe5a0707797911ff9015cfa28378201b0939
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5564098"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5701135"
 ---
 # <a name="permissioncheckresult-json"></a>PermissionCheckResult(JSON)
 단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 확인의 결과입니다. 

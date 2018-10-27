@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-paginginfo.html
 author: KevinAsgari
 description: " PagingInfo(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c9479488961de40ef5019d1ebe067f29dffb16dd
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: e86fbe2ee840a33e3e4cb21cb9584381d389394a
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5569409"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5690913"
 ---
 # <a name="paginginfo-json"></a>PagingInfo(JSON)
 데이터 페이지에서 반환 하는 결과 위해 페이징 정보가 들어 있습니다. 

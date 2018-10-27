@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-jsonusersxuidscidssciddatapath-get.html
 author: KevinAsgari
 description: " GET (/json/users/xuid({xuid})/scids/{scid}/data/{path})"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 352056562a59df0e06f05745f73009c597c22afe
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 8acdbc07af0156faf834d185588e7b6e02b2fb53
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5544578"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5694434"
 ---
 # <a name="get-jsonusersxuidxuidscidssciddatapath"></a>GET (/json/users/xuid({xuid})/scids/{scid}/data/{path})
 지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

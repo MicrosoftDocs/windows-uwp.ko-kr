@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-user.html
 author: KevinAsgari
 description: " User(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: e58134a945c37dacd338cdcf80a24160b4b70356
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 255fe2918f10bb3b941cf2023ff358c58e191cbf
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5541844"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687096"
 ---
 # <a name="user-json"></a>User(JSON)
 사용자 순위표 데이터가 들어 있습니다. 

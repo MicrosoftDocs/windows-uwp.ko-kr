@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-titlestitleidsessionhosts.html
 author: KevinAsgari
 description: " /titles/{titleId}/sessionhosts"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 10ceab8cedb8a4047e4e431716a2b58c060e7e99
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 77868d4bce61c80e9f8ebd0744822c9ade27327e
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5551952"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5693167"
 ---
 # <a name="titlestitleidsessionhosts"></a>/titles/{titleId}/sessionhosts
 지정 된 제목 id에 할당 하는 Xbox Live 계산 sessionhost를 요청 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

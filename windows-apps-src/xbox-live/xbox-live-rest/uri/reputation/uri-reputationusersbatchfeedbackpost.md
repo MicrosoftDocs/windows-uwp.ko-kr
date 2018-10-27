@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-reputationusersbatchfeedbackpost.html
 author: KevinAsgari
 description: " POST (/users/batchfeedback)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b94a4f601a4e4f332f5210a74b24a709871ebd6f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 4163e25559ef91ad0309ab6080ee4ed4f54c7c3e
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5555420"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706695"
 ---
 # <a name="post-usersbatchfeedback"></a>POST (/users/batchfeedback)
 타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스가 사용 합니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.

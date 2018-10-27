@@ -3,16 +3,16 @@ title: 아레나 참가자 사용자 시나리오
 author: KevinAsgari
 description: Xbox 아레나 참가자에 대 한 사용자 시나리오를 설명합니다.
 ms.author: kevinasg
-ms.date: 10-10-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
-ms.openlocfilehash: 43666021132b436caebe7f4b379f0e5296ae0976
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: b7b77ed3318f7e12adc5f35053b310034159e720
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563190"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5694431"
 ---
 # <a name="participant-user-scenarios"></a>참가자 사용자 시나리오
 

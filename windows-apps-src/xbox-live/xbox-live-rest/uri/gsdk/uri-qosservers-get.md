@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-qosservers-get.html
 author: KevinAsgari
 description: " GET (/qosservers)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 88ea56c99259b5b6fa0d20939d9f6434f80f9246
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 95a6a912e663773d427a6786a6af7b1fdf26c548
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5547116"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5698484"
 ---
 # <a name="get-qosservers"></a>GET (/qosservers)
 URI를 사용 하 여 Xbox Live 계산에 사용 하기 위해 사용할 수 있는 QoS 서버의 목록을 가져올 수 클라이언트에 의해 호출 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

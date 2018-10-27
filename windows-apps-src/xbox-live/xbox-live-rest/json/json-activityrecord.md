@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-activityrecord.html
 author: KevinAsgari
 description: " ActivityRecord(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c5657a6bef118e82bfe69851520a3db15eb200a7
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: bb78941f2ab9cab4395dbb1ba5eb8fb3b09dee08
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5560778"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5694177"
 ---
 # <a name="activityrecord-json"></a>ActivityRecord(JSON)
 하나 이상의 사용자의 풍부한 존재 여부에 대 한 서식이 지정 된 및 지역화 된 문자열입니다. 

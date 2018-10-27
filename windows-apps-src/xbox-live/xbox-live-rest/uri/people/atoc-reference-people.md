@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/atoc-reference-people.html
 author: KevinAsgari
 description: " 피플 URI"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d217024ddd0ba86cb82ba941ee6ab5d50d22ac4f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: f2108f0384a77de1c4cb9de94f3cc620957ca83a
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5547454"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708274"
 ---
 # <a name="people-uris"></a>피플 URI
  

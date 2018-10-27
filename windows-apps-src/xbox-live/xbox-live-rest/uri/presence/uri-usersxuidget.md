@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuidget.html
 author: KevinAsgari
 description: " GET (/users/xuid({xuid}))"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5183d5e65961a01f23bf41a93aa7e326d8d4d180
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 3d15bd82197a22ddcf6abf836e726774fd1c7943
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5554272"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5707313"
 ---
 # <a name="get-usersxuidxuid"></a>GET (/users/xuid({xuid}))
 다른 사용자 또는 클라이언트의 존재 여부를 검색 합니다.

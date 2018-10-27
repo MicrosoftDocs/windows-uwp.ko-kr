@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-medialocalemetadatamediaitemtypesortorde
 author: KevinAsgari
 description: " GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 26ae3d3ca31aa507dc294ffe2f365ca56681e2f8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 070df5fb2bbab51e07dcd4bfb488778c2d6b64c7
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568255"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700543"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypesortorders"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders)
 지정 된 mediaitem 형식과 EDS의 지정 된 버전에 대해 사용 가능한 정렬 순서를 나열합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

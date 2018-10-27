@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuidgroupsmoniker.html
 author: KevinAsgari
 description: " /users/xuid({xuid})/groups/{moniker}"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c8bff2563a9d206616d438f0a63e9ea5db9144da
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 640635458f50046a8fbc6a9cf539c659950e163e
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5548538"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5698827"
 ---
 # <a name="usersxuidxuidgroupsmoniker"></a>/users/xuid({xuid})/groups/{moniker}
 PresenceRecord 그룹에 액세스합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-titlerequest.html
 author: KevinAsgari
 description: " TitleRequest(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e8b423e9893dd22f10d279bed062116e3f5c9f5
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: ab030f1f8086bc33243b4a764ccafd8747ea6c81
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553487"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5701064"
 ---
 # <a name="titlerequest-json"></a>TitleRequest(JSON)
 타이틀에 대 한 정보를 요청 합니다. 

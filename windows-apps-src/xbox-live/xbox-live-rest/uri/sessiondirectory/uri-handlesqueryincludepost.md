@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-handlesqueryincludepost.html
 author: KevinAsgari
 description: " POST (/handles/query?include=relatedInfo)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f95a1464d60714404f35d090b3925b71df82c17e
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 2caffd029e5b5c79eb411678621643a48f65e1f1
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561987"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700215"
 ---
 # <a name="post-handlesqueryincluderelatedinfo"></a>POST (/handles/query?include=relatedInfo)
 세션 관련된 정보를 포함 하는 세션 핸들에 대 한 쿼리를 만듭니다.

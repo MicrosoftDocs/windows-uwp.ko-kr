@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/gvr-enum-gameclipuritype.html
 author: KevinAsgari
 description: " GameClipUriType 열거형"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 167a5d639325bdb358ee13776ac411d44445e01d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 33d757c2d5fc985e4944f11aaaaccf53fabb0401
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5572194"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5691752"
 ---
 # <a name="gameclipuritype-enumeration"></a>GameClipUriType 열거형
 GameClipUriType 열거형에 자세히 설명합니다. 

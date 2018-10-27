@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/atoc-reference-gamerpic.html
 author: KevinAsgari
 description: " Gamerpic URI"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 3153b4da02062751bb5083d4782fae2f32997390
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.openlocfilehash: 7b45f4556628b64726b96b47b373b3408cf6ddf3
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5666209"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5684276"
 ---
 # <a name="gamerpic-uris"></a>Gamerpic URI
  

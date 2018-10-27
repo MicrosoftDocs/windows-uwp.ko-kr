@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-inventoryitem.html
 author: KevinAsgari
 description: " inventoryItem (JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5570f0ca68e1b3f01f905e1eb95518ecf08392f5
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 2997dd22b64103ed910f32dd2cc1430d3758fdfd
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5565175"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5694282"
 ---
 # <a name="inventoryitem-json"></a>inventoryItem (JSON)
 핵심 인벤토리 항목을 권리를 부여 수 있는 표준 항목을 나타냅니다.

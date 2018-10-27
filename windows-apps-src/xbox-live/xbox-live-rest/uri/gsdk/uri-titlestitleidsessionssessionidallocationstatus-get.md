@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-titlestitleidsessionssessionidallocation
 author: KevinAsgari
 description: " GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 67b50aba65477637689a7a15ea44d02299de1026
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 4da982d9ce3c1f24b00c62a3668253f086b41f55
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5543737"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700264"
 ---
 # <a name="get-titlestitleidsessionssessionidallocationstatus"></a>GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
 해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-hopperstatsresults.html
 author: KevinAsgari
 description: " HopperStatsResults(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d428c08a28769dfd2b62c1730779c3442fed9e86
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: b6f1322d2c22e65c33667ea409b10d9209628d3b
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5542041"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5705748"
 ---
 # <a name="hopperstatsresults-json"></a>HopperStatsResults(JSON)
 hopper에 대 한 통계를 나타내는 JSON 개체입니다. 

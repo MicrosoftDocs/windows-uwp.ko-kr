@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 227cd378a92fcdfec88e1ae0ccd7173986d37abf
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5555541"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5689803"
 ---
 # <a name="multiplayer-session-browse"></a>멀티 플레이 세션 검색
 

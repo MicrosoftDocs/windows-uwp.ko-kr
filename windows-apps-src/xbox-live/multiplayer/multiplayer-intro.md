@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 17a02d525e99338ee5c21ae510a5dc48a0fc75ec
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5567818"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696369"
 ---
 # <a name="xbox-live-multiplayer-platform"></a>Xbox Live 멀티 플레이 플랫폼
 

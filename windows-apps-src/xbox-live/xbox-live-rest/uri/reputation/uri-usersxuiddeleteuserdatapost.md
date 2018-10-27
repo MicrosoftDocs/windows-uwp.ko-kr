@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuiddeleteuserdatapost.html
 author: KevinAsgari
 description: " POST (/users/xuid({xuid})/deleteuserdata)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a58d7e231f5f3820bbf076dd2c454c11606f266
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: eb3fe5b0f51867987510e49477d0c5aa8e6c1c50
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5554740"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708251"
 ---
 # <a name="post-usersxuidxuiddeleteuserdata"></a>POST (/users/xuid({xuid})/deleteuserdata)
 테스트 사용자에 대 한 안전도 데이터를 완전히 다시 설정합니다. 만 테스트 합니다.

@@ -3,16 +3,16 @@ title: Xbox 아레나 작업 포털
 author: KevinAsgari
 description: 작업 포털을 사용 하 여 Xbox 토너먼트를 관리 하는 방법을 알아봅니다.
 ms.author: kevinasg
-ms.date: 06-18-2018
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, 작업, 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 96f253804727d138769f596ffb1fa7c6e7bc8861
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: d22212e4fc3d01ced50b557c4ec4a1e9619ebe61
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553481"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5693827"
 ---
 # <a name="xbox-arena-operations-portal"></a>Xbox 아레나 작업 포털
 

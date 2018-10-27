@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-globalscidsscid-get.html
 author: KevinAsgari
 description: " GET (/global/scids/{scid})"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 42bb3b02afb3f29789e7f2b9d2d93c1efa3c2789
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 1b6bf357ccfd6b835dff0e54eb2d6d34f81ba291
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553506"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5682023"
 ---
 # <a name="get-globalscidsscid"></a>GET (/global/scids/{scid})
 이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

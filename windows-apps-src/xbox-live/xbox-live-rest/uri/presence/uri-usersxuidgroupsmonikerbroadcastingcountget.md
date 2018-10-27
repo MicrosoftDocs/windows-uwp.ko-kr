@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuidgroupsmonikerbroadcastingcountg
 author: KevinAsgari
 description: " GET (/users/xuid({xuid})/groups/{moniker}/broadcasting/count )"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a293d2152824ec20e6e6aeda9c8036ae73d6afee
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: c33977a2cc7a96db07bb48fd0902663b306e71a5
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5551136"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5689873"
 ---
 # <a name="get-usersxuidxuidgroupsmonikerbroadcastingcount-"></a>GET (/users/xuid({xuid})/groups/{moniker}/broadcasting/count )
 지정 된 URI에 표시 되는 XUID와 관련 된 그룹 모니커 브로드캐스트 사용자의 수를 검색 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

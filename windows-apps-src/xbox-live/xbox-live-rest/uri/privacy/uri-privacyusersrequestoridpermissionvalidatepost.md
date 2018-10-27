@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-privacyusersrequestoridpermissionvalidat
 author: KevinAsgari
 description: " POST (/users/{requestorId}/permission/validate)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 08affb27b09137bebf30f1e96502dbc9ee3e1189
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 0848aaa74fcecec599c701d944c54defae1fa011
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5570069"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5707268"
 ---
 # <a name="post-usersrequestoridpermissionvalidate"></a>POST (/users/{requestorId}/permission/validate)
 대상 사용자의 집합을 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 답변 집합을 가져옵니다.

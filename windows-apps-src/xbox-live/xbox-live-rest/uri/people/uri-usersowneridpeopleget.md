@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeopleget.html
 author: KevinAsgari
 description: " GET (/users/{ownerId}/people)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b04d891d31e2966dc7e89976452f322040c543a0
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: a9761e3e9dff2cef330c48674a62b33f63fbd096
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561650"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700218"
 ---
 # <a name="get-usersowneridpeople"></a>GET (/users/{ownerId}/people)
 호출자의 사용자 컬렉션을 가져옵니다.

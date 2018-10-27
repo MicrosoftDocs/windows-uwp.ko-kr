@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-serviceconfigsscidsessiontemplates.html
 author: KevinAsgari
 description: " /serviceconfigs/{scid}/sessiontemplates"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b18486acace669d7a134d0e4a8067e1c71b72bc1
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 4bf424aed0d0edcee7f042f9d4f84a73fd4d653d
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568173"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5695612"
 ---
 # <a name="serviceconfigsscidsessiontemplates"></a>/serviceconfigs/{scid}/sessiontemplates
 MPSD 세션 템플릿 집합을 검색 하는 가져오기 작업을 지원 합니다. 

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-inventory.html
 author: KevinAsgari
 description: " /users/me/inventory"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 23125dc788c547e013c989d58c24618443ccd1d0
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 03368afe54d1f4f56d2ffe9b75a71f076476e623
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5545864"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5699974"
 ---
 # <a name="usersmeinventory"></a>/users/me/inventory
 현재 제공 되는 사용자와 관련 된 인벤토리 집합에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.

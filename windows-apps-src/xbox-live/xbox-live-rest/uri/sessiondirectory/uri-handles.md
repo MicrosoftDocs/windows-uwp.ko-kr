@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-handles.html
 author: KevinAsgari
 description: " /handles"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ef6db806acedbba9479503211c3cac03dedcf29c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 298aaa1ae410badd24aa413cc4ada499b3521c74
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561253"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5698402"
 ---
 # <a name="handles"></a>/handles
 Xbox One 대시보드 사용자 경험을 표시 하 고 필요한 경우 세션 멤버를 초대 하 여 사용자의 현재 활동에 대 한 세션을 설정 하는 POST 작업을 지원 합니다. 

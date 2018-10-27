@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/httpstandardheaders.html
 author: KevinAsgari
 description: " 표준 HTTP 요청 및 응답 헤더"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ce4484f3b801f7315c7741d29b727be57ba31df8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: b1d86a870e32457b903053c7a8c3b1d722c9c559
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563046"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5688180"
 ---
 # <a name="standard-http-request-and-response-headers"></a>표준 HTTP 요청 및 응답 헤더
  

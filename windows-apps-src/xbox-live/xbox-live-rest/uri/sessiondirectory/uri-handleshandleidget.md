@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-handleshandleidget.html
 author: KevinAsgari
 description: " GET (/handles/{handle-id})"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 15d917d66cceb2efa301a8059c3c2b63901e88b9
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 39d39db0fa17c85dfad3dcca7526d13618835135
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5562471"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706761"
 ---
 # <a name="get-handleshandle-id"></a>GET (/handles/{handle-id})
 핸들 id 지정 핸들을 검색 합니다.

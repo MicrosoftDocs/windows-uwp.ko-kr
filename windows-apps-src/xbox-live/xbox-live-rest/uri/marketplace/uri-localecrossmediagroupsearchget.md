@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-localecrossmediagroupsearchget.html
 author: KevinAsgari
 description: " GET (/media/{marketplaceId}/crossMediaGroupSearch)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 79ee12abf91618ea5afe6a928b27006623e46c2d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 16baf465eb534e40854fcda1df7abb8c10ff2fbe
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5549317"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5705157"
 ---
 # <a name="get-mediamarketplaceidcrossmediagroupsearch"></a>GET (/media/{marketplaceId}/crossMediaGroupSearch)
 여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

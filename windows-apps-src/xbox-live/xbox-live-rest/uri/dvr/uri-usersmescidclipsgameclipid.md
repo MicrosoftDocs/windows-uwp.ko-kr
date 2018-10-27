@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersmescidclipsgameclipid.html
 author: KevinAsgari
 description: " /users/me/scids/{scid}/clips/{gameClipId}"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 512e93e2b5cef9e2ce0aac707d9360ecaa8aa0a7
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 36be1a1f30c659bec70fdd67a02bbe5ad7ffad3d
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5567260"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5697969"
 ---
 # <a name="usersmescidsscidclipsgameclipid"></a>/users/me/scids/{scid}/clips/{gameClipId}
 게임 클립 데이터 액세스 및 메타 데이터를 제공 합니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.

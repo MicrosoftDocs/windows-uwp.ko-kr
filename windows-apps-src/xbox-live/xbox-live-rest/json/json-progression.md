@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-progression.html
 author: KevinAsgari
 description: " Progression(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 52985b27fd25399113b8378a1fa68d24a06a0191
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 173c7dd42e0e5fda0d18e270c32a594171ebd7b6
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563069"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5691605"
 ---
 # <a name="progression-json"></a>Progression(JSON)
 도전 과제를 잠금 해제 하는까지 사용자의 작업 진행 합니다. 

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersxuid.html
 author: KevinAsgari
 description: " /users/xuid({xuid})"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 174573d23d7ff44dc5e49e421fe5565cc5ebc76f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: e0cc89d7411f513c23e74caf2c7cd151bcbf7df3
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5559891"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700857"
 ---
 # <a name="usersxuidxuid"></a>/users/xuid({xuid})
 다른 사용자 또는 클라이언트의 존재 여부에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/json-batchrequest.html
 author: KevinAsgari
 description: " BatchRequest(JSON)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 405d5668368747fab8133cb9f2ce02117f637b98
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 29effaaa7fe70a2b3ae19e9e30d8a852d954c9a9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5555247"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5691601"
 ---
 # <a name="batchrequest-json"></a>BatchRequest(JSON)
 사용자, 장치 및 제목 등의 현재 상태 정보를 필터링 할 속성의 배열입니다.

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/gvr-enum-gamecliptypes.html
 author: KevinAsgari
 description: " GameClipType 열거형"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a2e60200de5421eadda3b05d1326e179367728f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 43579570ea86c79146d99e7c6b46570b67d68d2b
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553555"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5704390"
 ---
 # <a name="gamecliptype-enumeration"></a>GameClipType 열거형
 GameClipTypes 열거형에 자세히 설명합니다. 

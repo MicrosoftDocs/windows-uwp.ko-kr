@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/atoc-xboxlivews-reference-json.html
 author: KevinAsgari
 description: " JSON(JavaScript Object Notation) 개체 참조"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 996ee979eefd92c4e1c6ad4e03d39d239cb03637
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 039cc9cf1d7d1d77330ff280d7cff5619971b075
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553970"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696727"
 ---
 # <a name="javascript-object-notation-json-object-reference"></a>JSON(JavaScript Object Notation) 개체 참조
  

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-batchpost.html
 author: KevinAsgari
 description: " POST (/batch)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f4a7f37df841a05f62113df80f4260c4f921f55b
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: cf59d532b303402bc17320621a92ee7a0bc77934
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5556543"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696826"
 ---
 # <a name="post-batch"></a>POST (/batch)
 여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 GET 메서드 같은 기능을 수행 하는 메서드를 게시 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.

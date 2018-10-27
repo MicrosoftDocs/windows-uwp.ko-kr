@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-trustedplatformusersxuidscidssciddatapat
 author: KevinAsgari
 description: " GET (/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path})"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c1a0974001ae7345a411ec838b5d4fef91fad00
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: acd52695c8e691e99188e546c81f1d90d46f35b1
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5566622"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700661"
 ---
 # <a name="get-trustedplatformusersxuidxuidscidssciddatapath"></a>GET (/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path})
 지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

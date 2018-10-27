@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-trustedplatformusersbatchscidssciddatapa
 author: KevinAsgari
 description: " /trustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 2de2fa259f57c57961df4513bcacec8d6e7a5224
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 5be54f3a974bdd514a634723811d99a2a82b5b05
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5545255"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5695294"
 ---
 # <a name="trustedplatformusersbatchscidssciddatapathandfilenametype"></a>/trustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}
 동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

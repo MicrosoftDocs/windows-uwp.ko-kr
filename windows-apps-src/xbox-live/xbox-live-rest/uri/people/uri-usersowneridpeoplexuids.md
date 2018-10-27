@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeoplexuids.html
 author: KevinAsgari
 description: " /users/{ownerId}/people/xuids"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 047427e6a837320435adbd72ff57489dc8a9f97f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: d2b915e185462e65f68fefce009d6081e7cddf37
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5564194"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5693769"
 ---
 # <a name="usersowneridpeoplexuids"></a>/users/{ownerId}/people/xuids
 XUID 하 여 호출자의 사람들이 컬렉션에서 사용자를 액세스 합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.

@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-titlestitleidclusters-post.html
 author: KevinAsgari
 description: " POST (/titles/{titleId}/clusters)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ee4c623161e822442a31da3aa0db3cab07d0dd57
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: c87af8cb76ce452c067edddb55c382d8c604ca25
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5552761"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5686474"
 ---
 # <a name="post-titlestitleidclusters"></a>POST (/titles/{titleId}/clusters)
 Xbox Live 계산 서버 인스턴스를 만드는 클라이언트 수 있는 URI입니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.
