@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/atoc-reference-marketplace.html
 author: KevinAsgari
 description: " 마켓플레이스 URI"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ea8baf23a91c73e2121fb34a8f9d8614c3bea7a3
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 96055bd7a2d4169c15e37b55aa70a94fab128a59
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561441"
+ms.locfileid: "5711072"
 ---
 # <a name="marketplace-uris"></a>마켓플레이스 URI
 

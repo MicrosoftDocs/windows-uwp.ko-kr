@@ -5,16 +5,16 @@ permalink: en-us/docs/xboxlive/rest/uri-medialocalesinglemediagroupsearchget.htm
 author: KevinAsgari
 description: " GET (media/{marketplaceId}/singleMediaGroupSearch)"
 ms.author: kevinasg
-ms.date: 20-12-2017
+ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f4bda7a80dd70db5d6d8b2f812a28ce76e2d4cfd
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 581fec6739c64d9d6cd093d8b8f58b1488b82680
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568300"
+ms.locfileid: "5710993"
 ---
 # <a name="get-mediamarketplaceidsinglemediagroupsearch"></a>GET (media/{marketplaceId}/singleMediaGroupSearch)
 단일 미디어 그룹 내의 항목에 대 한 검색을 허용 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

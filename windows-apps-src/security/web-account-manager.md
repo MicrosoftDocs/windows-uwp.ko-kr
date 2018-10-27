@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: bfec782952ef20dbc496e50d9513febc8dee3248
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5550588"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687672"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
