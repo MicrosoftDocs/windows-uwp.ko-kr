@@ -6,14 +6,13 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.author: libbymc
 ms.date: 05/10/2017
 ms.topic: article
-ms.prod: Microsoft Edge, Azure, Visual Studio Code
 ms.localizationpriority: medium
-ms.openlocfilehash: bdaa710b1c6c776f44a570b03befd477e4e4f1ec
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 140f28949bea6b4f67730bd7f6afaed4bcfb9935
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5542563"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5685803"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 생성
 
