@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, basicreaderwriter
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a5d644a2a141a83316575a235805fa56657bf3a
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5561407"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5701893"
 ---
 # <a name="complete-code-for-basicreaderwriter"></a>BasicReaderWriter의 전체 코드
 

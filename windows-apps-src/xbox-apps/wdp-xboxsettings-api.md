@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f3d0c09b242f8d60b06ee0dc510ad9a756466c5
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5544563"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5703558"
 ---
 # <a name="developer-settings-api-reference"></a>개발자 설정 API 참조   
 이 API를 사용하여 개발에 유용한 Xbox One 설정에 액세스할 수 있습니다.

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e2ff4e2ff079e15c0af41e3232c4b70c582a6a25
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553698"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5701403"
 ---
 # <a name="hazard-tracking-versus-tile-pool-resources"></a>위험 추적 및 타일 풀 리소스
 

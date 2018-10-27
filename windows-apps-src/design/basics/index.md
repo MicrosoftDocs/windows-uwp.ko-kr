@@ -8,11 +8,11 @@ ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 22ab5ad60ed397092e61f2c43cde4eb2e0c86c4f
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5550467"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5702402"
 ---
 # <a name="design-basics-for-uwp-apps"></a>UWP 앱의 디자인 기본 사항
 
@@ -28,7 +28,7 @@ ms.locfileid: "5550467"
 
 [**흐름 디자인 시스템**](../fluent-design-system/index.md)
 
-The Fluent Design System presents our goals and principles for creating adaptive, empathetic, and beautiful user interfaces.
+흐름 디자인 시스템은 아름다우며 공감하는 적응형 사용자 인터페이스를 만들고자 하는 Microsoft의 목표와 원칙을 제공합니다.
 
 ## <a name="basics"></a>기본 사항
 

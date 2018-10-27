@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 884825f2e9639f620d8db4e6110791fddf2d7e77
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557626"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5701466"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 

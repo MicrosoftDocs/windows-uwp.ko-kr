@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7132de481f22f53269cd9bd69a38819c5b71cb55
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5542685"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5698726"
 ---
 # <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 

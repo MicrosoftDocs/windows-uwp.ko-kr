@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 분석, 보고서, 대시보드, 앱, 데이터, 메트릭
 ms.localizationpriority: medium
 ms.openlocfilehash: e31ae50a1895c5878a2183b7f63ce3080623f7e9
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5641376"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5703114"
 ---
 # <a name="analyze-app-performance"></a>앱 성능 분석
 

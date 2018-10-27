@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
 ms.openlocfilehash: d64901c08e2945f34e66055d8e2e7d3a8301f66e
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5639652"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700043"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
 
