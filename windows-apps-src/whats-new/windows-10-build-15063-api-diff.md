@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d1f6739d-eaea-4c5d-b79a-9f7214e42727
 ms.localizationpriority: medium
 ms.openlocfilehash: e82c05acb80cee443db983d4f6d7f911d01748b8
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5594770"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706119"
 ---
 # <a name="new-apis-in-windows-10-build-15063"></a>Windows 10 빌드 15063의 새로운 API
 

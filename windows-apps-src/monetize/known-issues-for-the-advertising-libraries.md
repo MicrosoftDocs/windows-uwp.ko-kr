@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 3adbc12b0e891461a97bb90575141517b280be76
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5547101"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706680"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 

@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b0c91c2e7fa6e3076e53b0d3ae2e8d3713c81c5
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5599113"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710731"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법
 

@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c17c802e77d13e6e980ed5046c19bfc106d5cff
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 451a8041e0a81d43d91692e92046c32d458e0982
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563274"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710616"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -211,6 +211,8 @@ ms.locfileid: "5563274"
 | **권한 상승** | **AllowElevation** 제한 된 접근 권한 값은 기존 데스크톱에 필요한 기능을 시작 하거나 앱의 수명 동안 자동 승격을 유지 하기 위해 Microsoft 파트너와 엔터프라이즈에서 생성 된 앱 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. 엔터프라이즈에서는 비즈니스용 Microsoft 스토어를 통해 자신의 개인 저장소를 통해 배포 된 선 업무 앱에 대 한만 승인 됩니다.  |
 | **Windows 팀 장치 자격 증명** | **TeamEditionDeviceCredentials** 제한 된 접근 권한 값을 Windows 10 버전 1703 이상을 실행 하는 Surface Hub 디바이스에서 디바이스 계정 자격 증명을 요청 하는 Api에 액세스할 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
 | **Windows 팀 응용 프로그램 보기** | **TeamEditionView** 제한 된 접근 권한 값을 Windows 10 버전 1703 이상을 실행 하는 Surface Hub 디바이스에는 응용 프로그램 보기 호스팅에 대 한 Api에 액세스할 수 있습니다.<br/><br/>Microsoft Store에 제출된 앱에서 이 접근 권한 값을 선언하지 않는 것이 좋습니다. 대부분 개발자의 경우 이 접근 권한 값 사용은 승인되지 않습니다. |
+| **카메라 처리 확장** | **CameraProcessingExtension** 제한 된 접근 권한 값을 직접 카메라의 제어 없이 카메라에서 캡처한 이미지를 처리할 수 있습니다.<br /><br />이 접근 권한이 값은 [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) 네임 스페이스의 Api를 호출 해야 합니다.<br /><br />Microsoft Store 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다. |
+| **데이터 사용량 관리*** | **NetworkDataUsageManagement** 제한 된 접근 권한 값을 네트워크 데이터 사용량 정보를 수집할 수 있습니다.<br /><br />이 접근 권한이 값은 [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync)호출 해야 합니다.<br /><br />Microsoft Store 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다. |
 
 ## <a name="custom-capabilities"></a>사용자 지정 기능
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c75687cdc745468deec41a686d0d8b9d2f0ba9c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5571593"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708673"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 

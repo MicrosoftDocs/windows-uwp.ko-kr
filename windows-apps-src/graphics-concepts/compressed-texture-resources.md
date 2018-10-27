@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e808bf0fe1f521a60aa347efd148ede96be95964
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5548903"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5707492"
 ---
 # <a name="compressed-texture-resources"></a>압축된 텍스처 리소스
 

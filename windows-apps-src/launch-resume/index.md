@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업을 앱 서비스에 연결 된 장치, 원격 시스템
 ms.localizationpriority: medium
 ms.openlocfilehash: bb036f0150095e6f02857d227e73b1c7f29b23df
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5642376"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709935"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 

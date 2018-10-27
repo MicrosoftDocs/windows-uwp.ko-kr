@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 97a7ac89585cbcf7a4609aee16978d36be027a24
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5641314"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708942"
 ---
 # <a name="manage-creatives"></a>크리에이티브 관리
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: a9924bf749499318c257001eafffabd902cddaa9
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5593131"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709319"
 ---
 # <a name="get-add-ons-for-an-app"></a>앱에 대한 추가 기능 가져오기
 

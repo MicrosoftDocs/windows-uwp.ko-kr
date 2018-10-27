@@ -15,11 +15,11 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ee00a9af23be945ad27ab4b39eec127ec397894
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5546708"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706409"
 ---
 # <a name="list-view-and-grid-view"></a>목록 보기 및 그리드 보기
 

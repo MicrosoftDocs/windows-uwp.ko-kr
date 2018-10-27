@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7956c7a03256da04e98a5b8f9a33951d7e0216d3
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5638651"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5705359"
 ---
 # <a name="vertex-buffer-view-vbv-and-index-buffer-view-ibv"></a>VBV(꼭짓점 버퍼 보기) 및 IBV(인덱스 버퍼 보기)
 

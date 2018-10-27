@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: 17a93e10f7b440ac7c1926bc64bba4d9be248710
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553929"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710452"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱 내 구매 및 평가판
 

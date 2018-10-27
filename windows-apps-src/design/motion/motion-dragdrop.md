@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d271d0b9c8e7ce73835457789aca3fa2cb5eda97
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5643949"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5707324"
 ---
 # <a name="drag-animations"></a>끌기 애니메이션
 

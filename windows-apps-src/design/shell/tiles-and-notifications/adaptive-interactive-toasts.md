@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림 메시지, 대화형 알림, 적응형 알림, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 791b1dcede799de4ecf8480d994a5c0f1ddb58af
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5642425"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706419"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 

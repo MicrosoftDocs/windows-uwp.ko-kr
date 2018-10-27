@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일, 고정, 고정하기, 빠른 시작, 코드 샘플, 예제, 보조타일
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fcea65a43ec3ca3d7e29056bec129e0f03d4229
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5567460"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710948"
 ---
 # <a name="pin-secondary-tiles"></a>보조 타일 고정
 

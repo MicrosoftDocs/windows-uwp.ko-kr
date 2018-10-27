@@ -15,11 +15,11 @@ dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: c5efe23955d1064eae639bf6e9ddd0a3a83dc315
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5542204"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709213"
 ---
 # <a name="split-view-control"></a>분할 보기 컨트롤
 

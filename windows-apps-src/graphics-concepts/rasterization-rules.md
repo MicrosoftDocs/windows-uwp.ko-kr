@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 72be66c3bf7b0e58092ae3a7e1baf82c9e686f0c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5549150"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706524"
 ---
 # <a name="rasterization-rules"></a>래스터화 규칙
 

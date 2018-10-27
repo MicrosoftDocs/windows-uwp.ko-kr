@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: fca3267a-0c0f-4872-8017-90384fb34215
 ms.localizationpriority: medium
 ms.openlocfilehash: f9851b76b218ed4241ccb617979c127d03f57ee7
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5547803"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5705977"
 ---
 # <a name="bringing-unity-games-to-uwp-on-xbox"></a>Xbox의 UWP에 Unity 게임 가져오기
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 선택적 패키지, 관련된 집합, 패키지 확장, visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a782ba90fbf350d9a18098d342c05c75dca6ceb
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5547927"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706333"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>선택적 패키지 및 관련 집합 제작
 선택적 패키지에는 주 패키지에 통합할 수 있는 콘텐츠가 포함되어 있습니다. 이러한 크기 제한에 대 한 대규모 앱 분할 다운로드 가능한 콘텐츠 (DLC)에 유용 하거나 원래 앱에서 제공 되는 모든 추가 콘텐츠를 구분 합니다.

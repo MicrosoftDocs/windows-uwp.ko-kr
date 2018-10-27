@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1122ae00f9b84980a7793deef08a30a16711b4be
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568020"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710329"
 ---
 # <a name="composition-brushes"></a>컴퍼지션 브러시
 모든 UWP 응용 프로그램에서 화면에 표시 되는 브러시 그려 때문에 표시 됩니다. 브러시를 사용 하 여 간단 하 고 단색 색에서 이미지 또는 복잡 한 효과 체인에 드로잉에 이르기까지 콘텐츠를 사용 하 여 사용자 인터페이스 (UI) 개체를 그릴 수 있습니다. 이 항목에서는 색칠 하기 CompositionBrush의 개념을 소개 합니다.
