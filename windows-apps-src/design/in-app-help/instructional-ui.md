@@ -21,7 +21,7 @@ ms.locfileid: "5689946"
 
 
 
-상황에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 사용할 수 있도록 UI(사용자 인터페이스)를 통해 사용자에게 지침을 제공해야 합니다.
+상황에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. In these cases, you need to present instructions to the user through the user interface (UI), so that they can use those features they might have missed.
 
 ## <a name="when-to-use-instructional-ui"></a>사용 안내 UI를 사용하는 경우
 
