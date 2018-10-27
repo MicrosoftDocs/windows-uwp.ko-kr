@@ -12,11 +12,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 03e590f140cfa86fed0b3beccce9b39ce284c076
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5639685"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5691566"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 

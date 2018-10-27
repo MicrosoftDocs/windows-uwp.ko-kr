@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 응답을 응답 검토
 ms.localizationpriority: medium
 ms.openlocfilehash: f4bad59e298ef65cc7aaf6561b77cc86eeff832e
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5640609"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5690773"
 ---
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
