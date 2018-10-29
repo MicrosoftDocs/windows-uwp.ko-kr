@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.openlocfilehash: e08856006bc3ed6348a6ded69421ef0be9fc69e5
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5684907"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5769169"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>패키지 데스크톱 응용 프로그램 (데스크톱 브리지)
 
