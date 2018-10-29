@@ -8,11 +8,11 @@ ms.date: 2/5/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d6eb9b95ad7c5f7c63bca5b11fbbbf9018b75fcf
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5690889"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5751685"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>2018년 2월 Windows 개발자 문서의 새로운 내용
 

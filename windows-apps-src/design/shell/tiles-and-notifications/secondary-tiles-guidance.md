@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일, 안내, 지침, 모범 사례
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ad3f7fce761e0709c92f02e2cfa0d2fcd507de4
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5686467"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5749922"
 ---
 # <a name="secondary-tile-guidance"></a>보조 타일 지침
 

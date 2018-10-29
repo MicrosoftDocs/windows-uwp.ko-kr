@@ -13,11 +13,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: f641ec3333ed0eda1fdfa5ff82ef236b5ec186ba
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5691185"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5748787"
 ---
 # <a name="combo-box"></a>콤보 상자
 

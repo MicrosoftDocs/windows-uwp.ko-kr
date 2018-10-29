@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 99abbc0e06f84fea87c4bbc96cb912424f9a2272
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5694458"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5750289"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a>개발자용 Windows 10 빌드 10586의 새로운 기능
 
