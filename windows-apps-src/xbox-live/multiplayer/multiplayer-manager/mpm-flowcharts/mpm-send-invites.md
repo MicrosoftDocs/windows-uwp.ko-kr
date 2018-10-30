@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a08ed2620bf3483cdfe4d77d683cc3abec26f7b
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5709433"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5752836"
 ---
 # <a name="flowchart---send-an-invitation-to-another-player"></a>순서도-는 다른 플레이어에 게 초대 보내기
 

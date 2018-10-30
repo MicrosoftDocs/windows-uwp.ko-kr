@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b9c821e9d2cecc0b9a6bd02da650d40385a3fd91
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5687911"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5759046"
 ---
 # <a name="get-usersowneridpeopletargetid"></a>GET (/users/{ownerId}/people/{targetid})
 호출자의 사람들이 컬렉션에서 대상 ID로 사용자를 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.

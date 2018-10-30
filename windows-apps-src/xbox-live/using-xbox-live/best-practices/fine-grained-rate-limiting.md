@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 제한, xbox, 속도 제한
 ms.localizationpriority: medium
 ms.openlocfilehash: b4af61b6fc629e45366a935cc82688afb0e72193
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5703043"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5756644"
 ---
 # <a name="xbox-live-fine-grained-rate-limiting"></a>Xbox Live 세분화 된 속도 제한
 
@@ -107,7 +107,7 @@ Xbox Live 같은 높은 수준의 환경에 관계 없이 합리적인이 재생
 | 스마트 일치                | 10                        | 100                        | 1000                       |
 | 사용자 게시                 | 100                       | 300                        | 3000                       |
 | 통계 쓰기                | 100                       | 300                        | 3000                       |
-| 개인 정보                    | 10                        | 30                         | 300                        |
+| Privacy                    | 10                        | 30                         | 300                        |
 | 클럽                      | 10                        | 30                         | 300                        |
 
 위의 표에 FGRL 선택 된 서비스의 현재 목록을 나타냅니다. 이 목록은 새 서비스로 최종 및 기존 서비스를 추가할 수 있습니다. 서비스의 표에서 추가 하더라도 업데이트 되 고 공지 하 게 합니다. 테이블에 표시 되는 제한도 간주 해서는 안 대로 종료 합니다. 서비스를 변경 하 고 있으므로 발전 알려 필요한 레거시 면제 하 게 조건의 제한을 너무 됩니다.
@@ -128,7 +128,7 @@ Xbox Live 같은 높은 수준의 환경에 관계 없이 합리적인이 재생
 | 스마트 일치 | momatch.xboxlive.com | 일치를 성공적으로 설정 하지 합니다.
 | 사용자 게시 | userposts.xboxlive.com | 사용자가 게시물 나타나지 않습니다.
 | 통계 쓰기 | statswrite.xboxlive.com | 도전 과제 또는 순위표 항목 업데이트 되지 않습니다.
-| 개인 정보 | privacy.xboxlive.com | 개인 정보 보호 오류 모든 호출자에 대 한 액세스 차단된 될 수 있습니다.
+| Privacy | privacy.xboxlive.com | 개인 정보 보호 오류 모든 호출자에 대 한 액세스 차단된 될 수 있습니다.
 | 클럽 | Clubhub.xboxlive.com | 플레이어 자신의 게임의 클럽을 볼 수 있습니다.
 
 **참고:** 최신 API 매핑은 정기적으로 업데이트 하 고 [추적 분석기 API 매핑 Live](https://github.com/Microsoft/xbox-live-trace-analyzer/blob/master/Source/XboxLiveTraceAnalyzer.APIMap.csv)에서 찾을 수 있습니다.

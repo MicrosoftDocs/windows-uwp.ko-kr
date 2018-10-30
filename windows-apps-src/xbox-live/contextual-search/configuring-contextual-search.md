@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 서비스 구성, 상황에 맞는 검색, 브로드캐스트 게임 클립
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e1b63693ac3d6d1cb68a15a2c32bf730cf54dec
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5710539"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5753118"
 ---
 # <a name="configuring-contextual-search"></a>상황에 맞는 검색 구성
 

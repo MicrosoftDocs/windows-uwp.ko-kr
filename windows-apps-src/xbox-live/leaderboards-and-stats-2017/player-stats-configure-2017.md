@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6de9aa9c1e85655a9295370a963a485de5eb474a
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5694856"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5739591"
 ---
 # <a name="configuring-featured-stats-or-leaderboards-on-universal-dev-center-with-data-platform-2017"></a>데이터 플랫폼 2017 사용 하 여 유니버설 개발자 센터에서 주요 통계 또는 순위표 구성
 

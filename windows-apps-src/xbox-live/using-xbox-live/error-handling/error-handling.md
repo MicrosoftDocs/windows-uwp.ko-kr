@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 오류, 서비스 호출
 ms.localizationpriority: medium
 ms.openlocfilehash: 1728af14afb0840975ad175608da3f0e9b03645d
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5705754"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5749637"
 ---
 # <a name="error-handling"></a>오류 처리
 

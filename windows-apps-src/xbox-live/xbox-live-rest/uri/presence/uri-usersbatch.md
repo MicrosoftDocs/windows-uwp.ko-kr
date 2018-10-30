@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a300dff23a76a3554850f4a5fa7dcddc5bc274b1
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5700818"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5742571"
 ---
 # <a name="usersbatch"></a>/users/batch
 사용자의 일괄 처리에 대 한 액세스 존재 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

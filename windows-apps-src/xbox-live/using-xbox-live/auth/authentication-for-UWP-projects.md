@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 인증에 로그인
 ms.localizationpriority: medium
 ms.openlocfilehash: 36373fbc25c7f478bda9bbbf14f996f3997e91d2
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5704062"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5740840"
 ---
 # <a name="authentication-for-uwp-projects"></a>UWP 프로젝트에 대 한 인증
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 70cc7d7796a9f58cc092e85f4ae28b46c0ee17e5
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5703616"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5764582"
 ---
 # <a name="gameclipsserviceerrorresponse-json"></a>GameClipsServiceErrorResponse(JSON)
 /Users/ {ownerId} {서비스 안내} /scids/ /clips/ {gameClipId}에 대 한 응답의 선택적 부분/uri/형식 / {gameClipUriType} API입니다. 

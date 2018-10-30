@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 29effaaa7fe70a2b3ae19e9e30d8a852d954c9a9
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5691601"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5750993"
 ---
 # <a name="batchrequest-json"></a>BatchRequest(JSON)
 사용자, 장치 및 제목 등의 현재 상태 정보를 필터링 할 속성의 배열입니다.

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 80a38dfa2dad97b4383f86328ddbf61d6e4a299f
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5692156"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5746652"
 ---
 # <a name="eds-common-headers"></a>EDS 공통 헤더
 
