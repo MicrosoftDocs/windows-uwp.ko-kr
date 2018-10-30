@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 게시 고정, 게시 날짜, 게시를 위해 제출 전송, 제한된 접근 권한 값 승인
 ms.localizationpriority: medium
 ms.openlocfilehash: 51b816ece884f1464d0dbf039aef5d80e2ca7341
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5684704"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5755963"
 ---
 # <a name="manage-submission-options"></a>제출 옵션 관리
 

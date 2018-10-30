@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, bluetooth, bluetooth LE, 저 에너지, gatt, 간격, 중앙, 주변 장치, 클라이언트, 서버, 감시자, 게시자
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5bef16c76ee14c2abb7a5a41ab02d150a97333
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5695686"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5751844"
 ---
 # <a name="bluetooth-low-energy"></a>Bluetooth 저 에너지
 Bluetooth LE (저 에너지) 검색 및 전원 효율적인 장치 간에 통신 프로토콜을 정의 하는 사양입니다. 디바이스 검색 일반 액세스 프로필 (간격) 프로토콜을 통해 수행 됩니다. 검색 한 후 장치에 통신 일반 특성 (GATT) 프로토콜을 통해 수행 됩니다. 이 항목에서는 UWP 앱에서 Bluetooth LE의 빠른 개요를 제공 합니다. Bluetooth LE 대 한 자세한 내용을 보려면, Bluetooth LE 도입 된 [Bluetooth 핵심 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification) 버전 4.0를 참조 합니다. 

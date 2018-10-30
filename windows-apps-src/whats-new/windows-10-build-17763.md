@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e979428191151f680f51d8d4cf2f37f70b0b369d
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: 1503b6816a1ebd687ddd320c550c4476a4c5a038
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5684244"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5752998"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>빌드 17763 개발자를 위한 Windows 10의 새로운 란
 
@@ -94,7 +94,7 @@ Store 분석 API | 이제 [Microsoft Store 분석 API](../monetize/access-analyt
 
 ### <a name="cwinrt"></a>C++/WinRT
 
-C + + /winrt는 Windows 런타임 api를 작성 하는 새로운 방법입니다. 헤더 파일을 위한 유일한 구현 하 고 최신 앱 기능에 최고 수준의 액세스를 제공 하도록 설계 했습니다. 작동 방식을 다음 [개발자 문서를 읽거나](../cpp-and-winrt-apis/index.md) 자세한 내용을 알아보려면 [비디오를 시청 하세요](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be) .
+C + + /winrt는 Windows 런타임 api를 작성 하는 새로운 방법입니다. 헤더 파일 에서만 구현 하 고 최신 앱 기능에 최고 수준의 액세스를 제공 하도록 설계 했습니다. 작동 방식을 다음 [개발자 문서를 읽거나](../cpp-and-winrt-apis/index.md) 자세한 내용을 알아보려면 [비디오를 시청 하세요](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be) .
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>개발자를 위한 시작: 만들기 및 Windows 10에서 양식을 사용자 지정
 

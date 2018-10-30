@@ -3,16 +3,16 @@ author: stevewhims
 description: 이 항목에서는 C++/WinRT를 통해 Windows 런타임 비동기 개체를 생성하고 사용하는 방법에 대해서 설명합니다.
 title: C++/WinRT로 동시성 및 비동기 작업
 ms.author: stwhi
-ms.date: 10/21/2018
+ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: b1a45ba0bd362c07c27516ef18c11c326d747b1f
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: d7807b71f1c775493e525284e61c093081eb2c2b
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5702227"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5754846"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 
@@ -460,7 +460,57 @@ co_await static_cast<no_switch>(async);
 
 ## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>비동기 작업을 취소 콜백을 취소
 
-비동기 프로그래밍에 대 한 Windows 런타임 기능 인플라이트 비동기 작업을 취소할 수 있도록 합니다. 간단한 예제를 사용 하 여 시작 해 보겠습니다.
+비동기 프로그래밍에 대 한 Windows 런타임 기능 인플라이트 비동기 작업을 취소할 수 있도록 합니다. 다음은 파일의 잠재적으로 큰 컬렉션을 검색 하려면 [**StorageFolder::GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) 호출 하는 예 및 데이터 멤버에 결과 비동기 작업 개체를 저장 합니다. 사용자는 작업을 취소할 수 있습니다.
+
+```cppwinrt
+// MainPage.xaml
+...
+<Button x:Name="workButton" Click="OnWork">Work</Button>
+<Button x:Name="cancelButton" Click="OnCancel">Cancel</Button>
+...
+
+// MainPage.h
+...
+#include <winrt/Windows.Storage.Search.h>
+...
+struct MainPage : MainPageT<MainPage>
+{
+    MainPage()
+    {
+        InitializeComponent();
+    }
+
+    IAsyncAction OnWork(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    {
+        workButton().Content(winrt::box_value(L"Working..."));
+
+        // Enable the Pictures Library capability in the app manifest file.
+        StorageFolder picturesLibrary{ KnownFolders::PicturesLibrary() };
+
+        m_async = picturesLibrary.GetFilesAsync(CommonFileQuery::OrderByDate, 0, 1000);
+
+        IVectorView<StorageFile> filesInFolder{ co_await m_async };
+
+        workButton().Content(box_value(L"Done!"));
+
+        // Process the files in some way.
+    }
+
+    void OnCancel(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    {
+        if (m_async.Status() != AsyncStatus::Completed)
+        {
+            m_async.Cancel();
+            workButton().Content(winrt::box_value(L"Canceled"));
+        }
+    }
+
+private:
+    IAsyncOperation<::IVectorView<StorageFile>> m_async;
+};
+```
+
+취소 구현 측면에 대 한 간단한 예제를 사용 하 여 시작 해 보겠습니다.
 
 ```cppwinrt
 // pch.h
