@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 87e0d2bed4f2da49596a4859916637225bbbfd97
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5685120"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5761055"
 ---
 # <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 구매 사용
 

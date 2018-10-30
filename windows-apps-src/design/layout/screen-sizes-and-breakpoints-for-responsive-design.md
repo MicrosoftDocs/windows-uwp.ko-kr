@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af172b67a3981b61f4f86078710d87f760f9be3b
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5703931"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5764999"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 

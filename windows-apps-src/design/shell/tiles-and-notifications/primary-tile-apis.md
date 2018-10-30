@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, 기본 타일 고정, 기본 타일 api, 타일이 고정되었는지 확인, live tile
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d5c65881552199fce6f90bbf15e4bb2bac950ce
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5707522"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5764037"
 ---
 # <a name="primary-tile-apis"></a>기본 타일 API
  
