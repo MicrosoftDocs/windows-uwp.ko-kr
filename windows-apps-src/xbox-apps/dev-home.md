@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 232770ab4b746663a105982605d1cedcb92adbe3
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5706746"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5764889"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a>(개발자 홈) 콘솔의 개발자 홈
    
@@ -57,7 +57,7 @@ Home 개발자 UI의 나머지 부분에는 다음 페이지를 나뉩니다. �
  
    *  [Home](devhome-home.md)  
    *  [Xbox Live](devhome-live.md)  
-   *  [설정](devhome-settings.md)  
+   *  [Settings](devhome-settings.md)  
    *  [미디어 캡처](devhome-capture.md)  
    *  [네트워킹](devhome-networking.md)  
    *  [성능](devhome-performance.md)  
