@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 39979ed3fa2fcd85cbf1f1b73d7c37b2dce38f20
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5699261"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5760992"
 ---
 # <a name="accessible-text-requirements"></a>접근성 있는 텍스트 요구 사항  
 

@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
 ms.openlocfilehash: cc2168014e714de0b43b6ffffe84126764f0a4a3
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5697819"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5760395"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>개발자를 위한 Xbox One의 UWP 최신 업데이트의 새로운 기능
 

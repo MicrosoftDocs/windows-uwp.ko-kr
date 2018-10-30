@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 컬렉션, 그룹 알림, 알림 그룹화, 그룹, 구성, 알림 센터
 ms.localizationpriority: medium
 ms.openlocfilehash: be7c4ec2e9a47eeeb00663ae94f89e44c6751352
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5697086"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5760579"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>컬렉션으로 알림 메시지 그룹화
 컬렉션을 사용하여 알림 센터에서 앱의 알림을 구성할 수 있습니다. 컬렉션은 사용자가 알림 센터에서 정보를 더 쉽게 찾고 개발자가 알림을 관리하는 데 도움이 됩니다.  아래 API를 사용하여 알림 컬렉션을 만들고, 제거하고 업데이트할 수 있습니다.

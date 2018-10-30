@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b7c20e0e6cf56afa7e2193739401bf49e0403a2
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5683191"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5758313"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는 관찰 가능한 속성을 구현 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), XAML 컨트롤을 바인딩하는 방법.

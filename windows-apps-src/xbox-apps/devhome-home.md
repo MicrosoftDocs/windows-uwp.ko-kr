@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: b95637b38aafeb4111ecb25279dcec448ca3c30f
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5698381"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5763967"
 ---
 # <a name="home-page-dev-home"></a>홈 페이지 (개발자 홈)
    

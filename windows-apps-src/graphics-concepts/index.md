@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e325494cefeab4cf3ed40939f5b24de5e921b68
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5696296"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5762338"
 ---
 # <a name="direct3d-graphics-glossary"></a>Direct3D 그래픽 용어
 
