@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 패키지, 업로드, 장치 패밀리 가용성
 ms.localizationpriority: medium
 ms.openlocfilehash: 543b5c519e7514ccef397c2bb78eadcc5e3692f5
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5815655"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5866323"
 ---
 # <a name="device-family-availability"></a>장치 패밀리 가용성
 

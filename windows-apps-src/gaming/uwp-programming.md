@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 오디오, 입력, 네트워킹
 ms.localizationpriority: medium
 ms.openlocfilehash: 190f8a67dc8dc86bdddc1be2e073da9e5969255b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5834156"
+ms.locfileid: "5867943"
 ---
 # <a name="uwp-programming"></a>UWP 프로그래밍
 

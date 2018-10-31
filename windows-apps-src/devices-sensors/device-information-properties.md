@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5826151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865718"
 ---
 # <a name="device-information-properties"></a>디바이스 정보 속성
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5812821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5863449"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 

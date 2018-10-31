@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림, 데스크톱 브리지, 알림을 보내는 옵션, com 서버, com 활성자, com, 가짜 com, com 없음, com 없이, 알림 보내기
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ee44d990ef29fa8281a14c8ad03b6c6ff16a4cf
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5820693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5868740"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>데스크톱 앱에서 알림 메시지
 

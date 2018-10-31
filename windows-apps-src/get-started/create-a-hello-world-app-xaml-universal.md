@@ -8,12 +8,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
-ms.openlocfilehash: b28d0237deda78291816a52affd1fa7b4768640b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: d6fa9fa708df376edc94d34ea14d8dad4aed10df
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839791"
+ms.locfileid: "5864917"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
@@ -85,7 +85,7 @@ ms.locfileid: "5839791"
 -   App.xaml은 앱 전체에서 사용되는 리소스를 선언하는 파일입니다.
 -   App.xaml.cs는 App.xaml의 코드 숨김 파일입니다. 모든 코드 숨김 페이지와 같이 여기에는 `InitializeComponent` 메서드를 호출하는 생성자가 포함되어 있습니다. `InitializeComponent` 메서드는 작성하지 않습니다. 이 메서드는 Visual Studio에서 생성되며 그 주요 목적은 XAML 파일에 선언된 요소를 초기화하는 것입니다.
 -   App.xaml.cs는 앱의 진입점입니다.
--   App.xaml.cs에는 앱의 활성화와 일시 중단을 처리하는 메서드도 포함되어 있습니다.
+-   App.xaml.cs는 [활성화](../launch-resume/activate-an-app.md) 와 앱의 [일시 중단](../launch-resume/suspend-an-app.md) 처리 하는 방법을도 포함 되어 있습니다.
 
 *MainPage.xaml*
 
@@ -95,12 +95,14 @@ ms.locfileid: "5839791"
 
 *Package.appxmanifest*
 -   이름, 설명, 타일, 시작 페이지 등 앱을 설명하는 매니페스트 파일입니다.
--   앱에 포함된 파일의 목록이 포함되어 있습니다.
+-   종속성, 리소스 및 앱에 포함 된 파일의 목록이 포함 되어 있습니다.
 
 *로고 이미지 집합*
--   Assets/Square150x150Logo.scale-200.png는 시작 메뉴에서 앱을 나타냅니다.
+-   Assets/Square150x150Logo.scale-200.png와 Wide310x150Logo.scale 200.png 시작 메뉴에서 앱을 (보통 또는 전체 크기)를 나타냅니다.
+-   Assets/Square44x44Logo.png 작업 관리자, 작업 표시줄 및 시작 메뉴의 앱 목록에 앱을 나타냅니다.
 -   Assets/StoreLogo.png는 Microsoft Store에 앱을 나타냅니다.
 -   Assets/SplashScreen.scale-200.png는 앱 시작 시 표시되는 시작 화면입니다.
+-   Assets/LockScreenLogo.scale-200.png은 시스템이 잠겨 있을 때 잠금 화면에서 앱을 나타내는 데 사용할 수 있습니다.
 
 ## <a name="step-2-adding-a-button"></a>2단계: 단추 추가
 

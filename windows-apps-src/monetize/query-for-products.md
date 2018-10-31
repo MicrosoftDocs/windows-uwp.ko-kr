@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 제품 보기
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dded9b66fbae4f65b936335eda406d8773420c4
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5821320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865861"
 ---
 # <a name="query-for-products"></a>제품에 대한 쿼리
 

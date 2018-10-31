@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a4eda15a18a441da2e06db17aaf7bea3d1842d1
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5832789"
+ms.locfileid: "5868945"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>데스크톱 응용 프로그램 및 UWP 앱 간의 코드 공유
 

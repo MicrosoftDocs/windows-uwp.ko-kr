@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5813739"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865923"
 ---
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 

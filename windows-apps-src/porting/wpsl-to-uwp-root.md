@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eb2617fc3fbd14d17635435c8bfd6d58817a7a1b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5817716"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865000"
 ---
 #  <a name="move-from-windowsphone-silverlight-to-uwp"></a>WindowsPhone Silverlight에서 UWP로 이동
 

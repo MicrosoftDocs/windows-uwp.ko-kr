@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 60060bb3ec7a644d29523483d0d31c0497c543d1
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 597451826958c355dad9f9380dbdc1264bc87883
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5817636"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865798"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -63,7 +63,7 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 
 이제 게임을 실행할 수 있습니다!
 
-**F5** 키를 눌러 앱을 실행합니다. 창이 하나 열리고 목가적인(한적한 경우) 경치 속에 낯익은 공룡이 서 있는 것을 볼 수 있습니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
+**F5** 키를 눌러 앱을 실행합니다. 창이 열리고 목가적인 (스파스) 경우 landscape 낯익은 공룡이 서 보일 것입니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
 
 ![닌자 고양이를 등에 업고 있는 평범한 공룡](images/JS2D_3.png)
 

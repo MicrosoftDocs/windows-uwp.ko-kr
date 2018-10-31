@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9bbb723cc039d6ecca8a5ebcd30ef03559076934
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5831320"
+ms.locfileid: "5863874"
 ---
 # <a name="light-mapping-with-textures"></a>텍스처를 사용한 조명 매핑
 
