@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: ab186c6139755ca2a8c823093268e6cf21956c90
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5837992"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\# 샘플: 앱 게임 옵션과 예고편 제출
 

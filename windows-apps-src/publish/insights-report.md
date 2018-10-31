@@ -1,23 +1,23 @@
 ---
 author: jnHs
-Description: The Insights report in the Windows Dev Center dashboard
+Description: The Insights report in Partner Center highlights significant changes about your apps.
 title: 인사이트 보고서
 ms.author: wdg-dev-content
-ms.date: 06/01/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 통찰력, 추세, 예외, 변칙, 데이터 변경
 ms.localizationpriority: medium
-ms.openlocfilehash: 082f6e133217061d319301ec3f65ed035a3eef23
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 324666095c26eb8d05732ce7e1ad3217b210d406
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745043"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5838002"
 ---
 # <a name="insights-report"></a>인사이트 보고서
 
 
-Windows 개발자 센터 대시보드의 **인 사이트** 보고서에 구입, 상태, 및/또는 사용 현황 데이터에서 지난 30 일 동안의 감지 하는 중요 한 변경 (증가 또는 감소 특정 메트릭)를 강조 표시 합니다. 이 각 이러한 보고서에 모든 차트의 표시 하지 않고 잠재적으로 중요 한 변경 사항 빠르게 살펴볼을 얻을 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **인 사이트** 보고서에 구입, 상태, 및/또는 사용 현황 데이터에서 지난 30 일 동안의 감지 하는 중요 한 변경 (증가 또는 감소 특정 메트릭)를 강조 표시 합니다. 이 각 이러한 보고서에 모든 차트의 표시 하지 않고 잠재적으로 중요 한 변경 사항 빠르게 살펴볼을 얻을 수 있습니다.
 
 > [!NOTE]
 > 이 보고서의 데이터는 지난 30 일을 설명합니다. 이 보고서에 대 한 다른 기간을 선택할 수 없습니다.
