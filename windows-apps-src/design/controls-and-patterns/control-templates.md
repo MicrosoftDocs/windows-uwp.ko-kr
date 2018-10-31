@@ -13,24 +13,20 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e27bdd3d5c57b9d45f86c25f0bce0ae1c4a5e999
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 1ce72c40d3b97942612fc2979d026c965727512e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760809"
+ms.locfileid: "5822482"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
-
- 
 
 XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각적 구조와 동작을 사용자 지정할 수 있습니다. 컨트롤에는 [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) 및 [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404) 등 다양한 속성이 있으며, 이러한 속성을 설정하여 컨트롤 모양의 다양한 측면을 지정할 수 있습니다. 하지만 이러한 속성을 설정하여 수행할 수 있는 변경은 제한되어 있습니다. [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) 클래스를 사용하는 템플릿을 만들어 추가로 사용자 지정할 수 있습니다. 여기서는 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 컨트롤의 모양을 사용자 지정하기 위해 **ControlTemplate**을 만드는 방법을 보여 줍니다.
 
 > **중요 API**: [**ControlTemplate 클래스**](https://msdn.microsoft.com/library/windows/apps/br209391), [**Control.Template 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
 
-
 ## <a name="custom-control-template-example"></a>사용자 지정 컨트롤 템플릿 예
-
 
 기본적으로 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 컨트롤은 콘텐츠(**CheckBox** 옆의 문자열 또는 개체)를 선택 상자의 오른쪽에 놓습니다. 확인 표시는 사용자가 **CheckBox**를 선택했다는 것을 의미합니다. 이러한 특성은 **CheckBox**의 시각적 동작 및 시각적 구조를 나타냅니다.
 
@@ -52,7 +48,6 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 
 ## <a name="specify-the-visual-structure-of-a-control"></a>컨트롤의 시각적 구조 지정
 
-
 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)을 만들 때 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) 개체를 조합하여 단일 컨트롤을 구축합니다. **ControlTemplate**은 루트 요소로 오직 하나의 **FrameworkElement**만 사용해야 합니다. 루트 요소는 일반적으로 다른 **FrameworkElement** 개체를 포함합니다. 개체의 조합은 컨트롤의 시각적 구조를 구성합니다.
 
 다음 XAML은 컨트롤의 콘텐츠가 선택 상자 아래에 있도록 지정하는 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209391)용 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209316)을 만듭니다. 루트 요소는 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)입니다. 이 예에서는 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)를 지정하여 사용자가 **CheckBox**를 선택했음을 나타내는 **X**를 만들고 확정되지 않은 상태를 나타내는 [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)를 만듭니다. [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)가 **Path**와 **Ellipse** 양쪽 모두에서 0으로 설정되어 있으므로 기본적으로 어느 쪽에도 나타나지 않습니다.
@@ -60,36 +55,36 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)은 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결하는 특별 바인딩입니다. TemplateBinding은 XAML의 ControlTemplate 정의 내에서만 사용할 수 있습니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
 
 > [!NOTE]
-> Windows 10으로 다음 주요 업데이트부터 [**X:bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그 확장을 사용할 수 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)장소에서 사용 합니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
+> Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))부터 [**X:bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그 확장을 사용할 수 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)장소에서 사용 합니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
-    <Border BorderBrush="{TemplateBinding BorderBrush}" 
-            BorderThickness="{TemplateBinding BorderThickness}" 
+    <Border BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
             Background="{TemplateBinding Background}">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
-            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20" 
-                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" 
-                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}" 
+            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20"
+                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}"
                        UseLayoutRounding="False"/>
             <!-- Create an X to indicate that the CheckBox is selected. -->
-            <Path x:Name="CheckGlyph" 
-                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z" 
-                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
-                  FlowDirection="LeftToRight" 
+            <Path x:Name="CheckGlyph"
+                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z"
+                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
+                  FlowDirection="LeftToRight"
                   Height="14" Width="16" Opacity="0" Stretch="Fill"/>
-            <Ellipse x:Name="IndeterminateGlyph" 
-                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
+            <Ellipse x:Name="IndeterminateGlyph"
+                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
                      Height="8" Width="8" Opacity="0" UseLayoutRounding="False" />
-            <ContentPresenter x:Name="ContentPresenter" 
-                              ContentTemplate="{TemplateBinding ContentTemplate}" 
-                              Content="{TemplateBinding Content}" 
-                              Margin="{TemplateBinding Padding}" Grid.Row="1" 
-                              HorizontalAlignment="Center" 
+            <ContentPresenter x:Name="ContentPresenter"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Content="{TemplateBinding Content}"
+                              Margin="{TemplateBinding Padding}" Grid.Row="1"
+                              HorizontalAlignment="Center"
                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
         </Grid>
     </Border>
@@ -97,7 +92,6 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 ```
 
 ## <a name="specify-the-visual-behavior-of-a-control"></a>컨트롤의 시각적 동작 지정
-
 
 시각적 동작은 특정 상태의 컨트롤 모양을 지정합니다. [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 컨트롤에는 `Checked`, `Unchecked`, `Indeterminate`의 3가지 표시 상태가 있습니다. [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/br209798) 속성의 값은 **CheckBox**의 상태를 결정하고 그 상태는 확인란 상자에 나타나는 모양을 결정합니다.
 
@@ -110,7 +104,6 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 | **false**           | `Unchecked`        | 비어 있음                  |
 | **null**            | `Indeterminate`    | 원을 포함합니다.      |
 
- 
 
 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) 개체를 사용하여 특정 상태일 때 나타나는 컨트롤의 모양을 지정합니다. **VisualState**에는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br208817)에 있는 요소의 모양을 변경하는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br243053) 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br209391)가 있습니다. 컨트롤이 [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031) 속성이 지정한 상태가 되면 **Setter** 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)의 속성 변경 내용이 적용됩니다. 컨트롤이 상태에서 나가면 변경 내용이 제거됩니다. **VisualState** 개체를 [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 개체에 추가합니다. **VisualStateGroup** 개체를 **ControlTemplate**의 루트 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/hh738505)에 설정한 [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/br208706) 연결된 속성에 추가합니다.
 
@@ -118,10 +111,10 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
-    <Border BorderBrush="{TemplateBinding BorderBrush}" 
-            BorderThickness="{TemplateBinding BorderThickness}" 
+    <Border BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
             Background="{TemplateBinding Background}">
-            
+
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="CheckStates">
                 <VisualState x:Name="Checked">
@@ -130,7 +123,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
                     </VisualState.Setters>
                     <!-- This Storyboard is equivalent to the Setter. -->
                     <!--<Storyboard>
-                        <DoubleAnimation Duration="0" To="1" 
+                        <DoubleAnimation Duration="0" To="1"
                          Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Opacity"/>
                     </Storyboard>-->
                 </VisualState>
@@ -153,24 +146,24 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
-            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20" 
-                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" 
-                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}" 
+            <Rectangle x:Name="NormalRectangle" Fill="Transparent" Height="20" Width="20"
+                       Stroke="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                       StrokeThickness="{ThemeResource CheckBoxBorderThemeThickness}"
                        UseLayoutRounding="False"/>
             <!-- Create an X to indicate that the CheckBox is selected. -->
-            <Path x:Name="CheckGlyph" 
-                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z" 
-                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
-                  FlowDirection="LeftToRight" 
+            <Path x:Name="CheckGlyph"
+                  Data="M103,240 L111,240 119,248 127,240 135,240 123,252 135,264 127,264 119,257 111,264 103,264 114,252 z"
+                  Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
+                  FlowDirection="LeftToRight"
                   Height="14" Width="16" Opacity="0" Stretch="Fill"/>
-            <Ellipse x:Name="IndeterminateGlyph" 
-                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}" 
+            <Ellipse x:Name="IndeterminateGlyph"
+                     Fill="{ThemeResource CheckBoxForegroundThemeBrush}"
                      Height="8" Width="8" Opacity="0" UseLayoutRounding="False" />
-            <ContentPresenter x:Name="ContentPresenter" 
-                              ContentTemplate="{TemplateBinding ContentTemplate}" 
-                              Content="{TemplateBinding Content}" 
-                              Margin="{TemplateBinding Padding}" Grid.Row="1" 
-                              HorizontalAlignment="Center" 
+            <ContentPresenter x:Name="ContentPresenter"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              Content="{TemplateBinding Content}"
+                              Margin="{TemplateBinding Padding}" Grid.Row="1"
+                              HorizontalAlignment="Center"
                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
         </Grid>
     </Border>
@@ -210,10 +203,6 @@ XAML 컨트롤의 스타일과 템플릿을 문서화하는 항목은 앞에서 
 XAML 예제의 일부 속성에서 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하는 리소스 참조를 봤을 것입니다. 이 기술은 단일 컨트롤 템플릿이 현재 활성화된 테마에 따라 값이 달라질 수 있는 리소스를 사용할 수 있도록 합니다. 테마의 주요 목적은 사용자가 시스템 전체에 어둡거나 밝거나 고대비 테마를 적용할 것인지 선택할 수 있게 하는 것이므로 이 기술은 특히 브러시와 색에 중요합니다. XAML 리소스 시스템을 사용하는 앱은 앱 UI의 테마 선택 항목이 사용자 시스템의 테마 선택을 반영하도록 해당 테마에 적합한 리소스 집합을 사용할 수 있습니다.
 
  # # 샘플 코드를 다운로드 합니다.
-* [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+
+* [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [사용자 지정 텍스트 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
-
- 
-
-
-
