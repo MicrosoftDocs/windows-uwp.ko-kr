@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bcbd1dfceb0dc51addfe9572fba746680745b26
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: db71916c9297296c4d3bb89e05032c5f413f332e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752214"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824875"
 ---
 # <a name="reveal-highlight"></a>강조
 
@@ -115,7 +115,7 @@ ms.locfileid: "5752214"
 
 ## <a name="enabling-reveal-on-custom-controls"></a>사용자 지정 컨트롤에서 표시를 사용하도록 설정
 
-사용자 지정 컨트롤에 표시를 추가할 수 있습니다. 시작하기 전에 표시 효과의 작동 방식에 대해 좀 더 자세히 알아두는 것이 도움이 됩니다. 표시는 **표시 테두리** 및 **가리켜서 표시**의 두 가지 효과로 이루어져 있습니다.
+사용자 지정 컨트롤에 표시를 추가할 수 있습니다. 수행 하기 전에 표시 효과 작동 방식에 대해 좀 더 알아야 하는 것이 좋습니다. 표시는 **표시 테두리** 및 **가리켜서 표시**의 두 가지 효과로 이루어져 있습니다.
 
 - **테두리**는 포인터가 근처에 있을 때 대화형 요소의 테두리를 표시합니다. 이 효과는 주변 개체가 현재 포커스가 설정된 작업과 비슷한 작업을 수행할 수 있음을 보여 줍니다.
 - **가리키기**는 가리킨 항목 또는 포커스가 설정된 항목 주변에 은은한 후광 형상을 적용하며 이를 클릭하면 애니메이션이 재생됩니다. 

@@ -3,16 +3,16 @@ author: jnHs
 Description: Set restrictions on how your app can be discovered and acquired, including whether people can find your app in the Store or see its Store listing at all.
 title: 표시 여부 옵션 선택
 ms.author: wdg-dev-content
-ms.date: 08/10/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 표시 여부, 개인 대상, 사용 가능, 검색 가능
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a83f1ea4547e60547e427cedd5ad5338e450762
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ec6bc85c15ccf9926939c3bc2e208289c8dc4bcc
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757988"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5826605"
 ---
 # <a name="choose-visibility-options"></a>표시 여부 옵션 선택
 
@@ -60,7 +60,7 @@ ms.locfileid: "5757988"
 - 조직 라이선싱 설정에 관계 없이 개인 대상 그룹의 사용자라해도 비즈니스용 Microsoft Store 및/또는 교육용 Microsoft Store를 통해 앱을 사용할 수 없습니다.
 - Store는 개인 대상 그룹에 추가한 Microsoft 계정으로 로그인한 사용자만 앱을 보고 사용할 수 있도록 하고 있지만, 개인 대상 그룹에 속하지 않은 사용자가 정보나 스크린샷을 공유하지 못하도록 막을 수 없습니다. 기밀성이 중요한 경우에는 개인 대상 그룹에 앱에 대한 세부 정보를 다른 사람과 공유하지 않을 것이라고 믿는 사용자만 포함시켜야 합니다.
 - 테스터에게 피드백을 제공하는 방법을 알고 있어야 합니다. 다른 고객들이 피드백을 볼 수 있기 때문에 피드백 허브에 피드백을 남기지 못하도록 하고 싶을 수 있습니다. 이들이 다른 방법으로 이메일을 전송하거나 피드백을 제공하도록 링크를 포함시키는 것이 좋습니다.
-- 개인 대상에서 다른 사람이 작성한 모든 리뷰를 확인할 수 있습니다. 하지만 이들 리뷰는 **공중 대상**으로 제출이 이동한 후에도 앱의 Store 목록에 게시되지 않습니다. 개발자 센터에서 [리뷰 보고서](reviews-report.md)를 검토하여 사적 대상이 작성한 리뷰를 읽을 수 있지만 이 데이터를 다운로드하거나 [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 이러한 리뷰에 프로그래밍 방식으로 액세스할 수 없습니다.
+- 개인 대상에서 다른 사람이 작성한 모든 리뷰를 확인할 수 있습니다. 하지만 이들 리뷰는 **공중 대상**으로 제출이 이동한 후에도 앱의 Store 목록에 게시되지 않습니다. 개인 대상 [리뷰 보고서](reviews-report.md)를 확인 하 여 작성 한 리뷰를 읽을 수 있지만이 데이터를 다운로드 하거나 [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md) 사용 하 여 이러한 리뷰에 프로그래밍 방식으로 액세스할 수 없습니다.
 - **개인 대상**에서 **공중 대상**으로 앱을 이동할 때 Microsoft Store 목록에 표시되는 **릴리스 날짜**는 공중 대상에 처음 앱이 게시된 날짜입니다.
 
 ## <a name="discoverability"></a>검색 기능

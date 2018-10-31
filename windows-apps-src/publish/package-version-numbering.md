@@ -4,16 +4,16 @@ Description: The Microsoft Store enforces certain rules related to version numbe
 title: 패키지 버전 번호
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 ms.author: wdg-dev-content
-ms.date: 10/25/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 045e44d3ba243b4c4fbf68ba37e91c06eb022d27
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 5bd34c285a74c0fbe7e51f1f3fa53cdde33733dd
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741687"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825037"
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
@@ -64,6 +64,9 @@ Windows10를 사용 하면 모든 곳에서 실행 되는 코드 베이스를 �
 
 
 ## <a name="version-numbering-for-windows81-and-earlier-and-windows-phone-81-packages"></a>버전 번호에 대 한 Windows8.1 () 및 Windows Phone 8.1 패키지
+
+> [!IMPORTANT]
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 Windows Phone 8.1을 대상으로 하는 .appx 패키지의 경우 새 제출의 패키지 버전 번호는 항상 마지막 제출(또는 이전 제출)에 포함된 패키지보다 높아야 합니다.
 

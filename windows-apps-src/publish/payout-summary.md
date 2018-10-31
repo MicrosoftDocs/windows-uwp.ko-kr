@@ -4,16 +4,16 @@ Description: The Payout summary shows you details about the money you’ve earne
 title: 지급 요약
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.author: wdg-dev-content
-ms.date: 02/13/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cc0b38c8118a3cfc8b157eacecab91f7ac2b120
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 5f6369247f0e287ec2698213b7f0b7be7e1f21d4
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5751256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5827432"
 ---
 # <a name="payout-summary"></a>지급 요약
 
@@ -29,7 +29,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 >
 > 해당 결제 임계값이 충족되는 경우 결제는 월 단위로 이루어집니다. 일반적으로 해당 월의 15일에 지정된 월에 대한 결제 대금을 보냅니다. 결제는 일반적으로 영업일 3~10일 내에 지급 계좌로 입금됩니다. 자세한 내용은 [지급 임계값, 방법 및 기간](payment-thresholds-methods-and-timeframes.md)을 참조하세요.
 
-사용자 **지급 요약**을 보려면 개발자 센터의 오른쪽 위 모서리에 나타나는 **지급** 아이콘을 클릭한 다음 **지급 요약**합니다.
+**지급 요약**을 보려면 파트너 센터의 오른쪽 위 모서리에 나타나는 **지급** 아이콘을 클릭 한 다음 **지급 요약**을 선택 합니다.
 
 ## <a name="current-proceeds-and-payments"></a>현재 수익 및 지급
 

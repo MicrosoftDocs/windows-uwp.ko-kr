@@ -4,22 +4,22 @@ description: Windows 앱에서 실행되는 앱용 광고 캠페인을 만드는
 title: 사용자 지정 앱 홍보 캠페인 만들기
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
 ms.author: wdg-dev-content
-ms.date: 09/27/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 사용자 지정, 앱, 홍보, 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 0349833c012789b55d33575702390f264335aa2f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747464"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824845"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 
 Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-for-your-app.md)을 만든 후 다른 채널을 사용하여 앱을 홍보할 수도 있습니다. 예를 들어 타사 앱 마케팅 공급자를 사용하여 앱을 홍보하거나 소셜 미디어 사이트에 앱의 링크를 게시할 수 있습니다. 이러한 활동을 *사용자 지정 캠페인*이라고 합니다.
 
-앱에서 사용자 지정 캠페인을 실행하는 경우, 각 URL에 서로 다른 *캠페인 ID*를 포함하여 각 사용자 지정 캠페인에 대해 다른 URL을 만들어 각 캠페인의 상대적인 성과를 추적할 수 있습니다. Windows10를 실행 하는 고객이 캠페인 ID가 포함 된 URL을 클릭 하면, Microsoft 클릭 해당 사용자 지정 캠페인에 연결 하 고 사용자가이 데이터를 사용할 수 있도록 합니다.
+앱에서 사용자 지정 캠페인을 실행하는 경우, 각 URL에 서로 다른 *캠페인 ID*를 포함하여 각 사용자 지정 캠페인에 대해 다른 URL을 만들어 각 캠페인의 상대적인 성과를 추적할 수 있습니다. Windows10를 실행 하는 고객이 캠페인 ID가 포함 된 URL을 클릭 하면, Microsoft 클릭 해당 사용자 지정 캠페인에 연결 하 고이 데이터를 사용할 수 있게 할 [파트너 센터](https://partner.microsoft.com/dashboard)에서.
 
 > [!IMPORTANT]
 > 이 데이터 Windows10에서 고객을 위한만 추적 됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
@@ -28,7 +28,7 @@ Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-f
 
 앱에 대한 사용자 지정 캠페인 성과 데이터는 다음과 같은 방식으로 검색할 수 있습니다.
 
-* 개발자 센터 대시보드의 [구입 보고서](acquisitions-report.md)의 **캠페인 ID별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에 나와 있는 앱 또는 추가 기능에 대한 페이지 보기 및 변환과 관련된 데이터를 볼 수 있습니다.
+* [구입 보고서](acquisitions-report.md)에 페이지 보기 및 앱 또는 추가 기능에 대 한 **캠페인 ID 별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에서 변환에 대 한 데이터를 볼 수 있습니다.
 * 앱이 UWP(유니버설 Windows 플랫폼) 앱인 경우 Windows SDK의 API를 사용하여 변환으로 이어진 사용자 지정 캠페인 ID를 프로그래밍 방식으로 검색할 수 있습니다.
 
 ## <a name="example-custom-campaign-scenario"></a>예제 사용자 지정 캠페인 시나리오
@@ -47,9 +47,9 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>앱 구입이 변환으로 인정되는 방법 이해
 
-사용자 지정 캠페인 *변환*은 고객이 사용자 지정 캠페인을 통해 홍보된 URL을 클릭한 결과로 이루어진 구입입니다. 개발자 센터 대시보드의 [구입 보고서](acquisitions-report.md)의 **캠페인 ID별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에서 변환으로 인정되는 시나리오와 [프로그래밍 방식으로 캠페인 ID 검색](#programmatically)에서 변환으로 인정되는 시나리오는 서로 다릅니다.
+사용자 지정 캠페인 *변환*은 고객이 사용자 지정 캠페인을 통해 홍보된 URL을 클릭한 결과로 이루어진 구입입니다. [에 대 한 변환으로 인정 되는 및 [구입 보고서](acquisitions-report.md) 에 **캠페인 ID 별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에 대 한 변환으로 인정 되는 다른 시나리오는 프로그래밍 방식으로 캠페인 ID를 검색](#programmatically).
 
-### <a name="qualifying-conversions-in-the-dashboard-report"></a>대시보드 보고서에서 변환으로 인정
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>구입 보고서에서 변환으로 인정
 
 아래 시나리오는 [구입 보고서](acquisitions-report.md)의 **캠페인 ID별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에서 변환으로 인정됩니다.
 
@@ -195,4 +195,4 @@ public async Task<string> GetCampaignId()
 
 3.  URL을 여러 번 클릭하고 앱 페이지를 방문할 때마다 UWP 앱 또는 브라우저 페이지를 닫습니다. 앱 페이지 방문 중 **하나** 동안 앱을 구입하여 변환을 생성합니다. URL을 클릭한 총 횟수를 계산합니다.
 
-4. 예상된 페이지 보기 및 변환이 개발자 센터 대시보드의 [구입 보고서](acquisitions-report.md)의 **캠페인 ID별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에 나타나는지 확인하고, 앱이 코드를 테스트하여 위에서 설명한 API를 사용하여 캠페인 ID를 제대로 검색할 수 있는지 확인합니다.
+4. 예상 된 페이지 보기 및 변환 [구입 보고서](acquisitions-report.md) **총 캠페인 변환** 및 **캠페인 ID 별 앱 페이지 보기 및 변환** 차트에 표시 되며 앱의 코드를 테스트 수 있는지 여부를 확인 하는지 여부를 확인 합니다. 성공적으로 위에서 설명한 Api를 사용 하 여 캠페인 ID를 검색 합니다.

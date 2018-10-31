@@ -12,18 +12,18 @@ pm-contact: sewen
 design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 889683d83f1e592e2ce94f3fce63ca0b2c8bbdcb
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: aa235086f2410fb97ea60e35fb03c586824928a2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742013"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825533"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용 하 여 텍스트 입력
 
 ![펜으로 터치할 때 텍스트 상자가 확장](images/handwritingview/handwritingview2.gif)
 
-잉크를 [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox), 다른 컨트롤 (예: [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)) 유사한 텍스트 입력된 경험을 제공 하는 등 UWP 텍스트 컨트롤에서 지원 되는 텍스트 입력에 대 한 기본 제공 필기 보기를 사용자 지정 합니다.
+잉크를 [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)같은 UWP 텍스트 컨트롤에서 지원 되는 텍스트 입력에 대 한 기본 제공 필기 보기를 사용자 지정 하 고 이러한 [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)등에서 파생 된 컨트롤.
 
 ## <a name="overview"></a>개요
 

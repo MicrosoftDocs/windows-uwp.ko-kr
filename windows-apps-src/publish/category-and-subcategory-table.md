@@ -4,16 +4,16 @@ Description: Listing your app in the right category and subcategory helps custom
 title: 범주 및 하위 범주 테이블
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 범주, 하위 범주, 장르, 범주, 장르
 ms.localizationpriority: medium
-ms.openlocfilehash: a4e85542793fff34609817995fb213eb4f3b7d54
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2c3ea799d030b64c5b4cc67f75cbdd664a8b83da
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5750424"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5840818"
 ---
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 
@@ -22,7 +22,7 @@ ms.locfileid: "5750424"
 
 앱을 가장 잘 설명하는 범주를 선택해야 합니다. 원할 경우 하위 범주를 선택합니다(사용 가능한 경우). 사용할 범주 또는 하위 범주가 확실하지 않거나 정확하게 일치하는 범주 또는 하위 범주를 찾을 수 없는 경우, 고객이 개발자의 앱과 같은 앱을 찾으려고 할 때 확인할 가능성이 큰 범주 또는 하위 범주를 선택합니다.
 
-범주를 **게임**으로 선택하는 경우 하위 범주(즉, 게임의 *장르*)를 하나 이상 선택해야 합니다. 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
+**게임** 범주를 선택 하면 하나 이상의 하위 범주 ( *장르* 게임에 대 한 호출)를 선택 해야 합니다. 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
 
 > [!IMPORTANT] 
 > **게임** 범주에 앱을 게시하는 경우, 새로 제출할 때 다른 범주를 선택할 수 없습니다. 계속 **게임** 범주로 게시해야 합니다(단, 새로 제출할 때 장르 선택 항목은 변경할 수 있음). 마찬가지로, 이전에 다른 범주에 게시한 앱을 업데이트할 때 **게임** 범주를 선택할 수 없습니다.
@@ -149,38 +149,6 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
   </tr>
 </tbody>
 </table>
-
-
-<!--
-| Category                    | Subcategory                                       |
-|-----------------------------|---------------------------------------------------|
-| Books + reference           | E-reader <br> Fiction <br> Nonfiction <br> Reference |
-| Business                    | Accounting + finance <br> Collaboration <br> CRM <br> Data + analytics <br> File management <br> Inventory + logistics <br> Legal + HR <br> Project management <br> Remote desktop <br> Sales + marketing <br> Time + expenses |
-| Developer tools             | Database <br> Design tools <br> Development kits <br> Networking <br> Reference + training <br> Servers <br> Utilities <br> Web hosting |
-| Education                   | Books + reference <br> Early learning <br> Instructional tools <br> Language <br> Study aids |
-| Entertainment               | (None)                                            |
-| Food + dining               | (None)                                            |
-| Games                       | Action + adventure <br> Card + board <br> Casino <br> Classics <br> Educational <br> Family + kids <br> Fighting <br> Multi-Player Online Battle Arena <br> Music <br> Other <br> Platformer <br> Puzzle + trivia <br> Racing + flying <br> Role playing <br> Shooter <br> Simulation <br> Sports <br> Strategy <br> Tools <br> Word |
-| Government + politics       | (None)                                            |
-| Health + fitness            | (None)                                            |
-| Kids + family               | Books + reference <br> Entertainment <br> Hobbies + toys <br> Sports + activities <br> Travel |
-| Lifestyle                   | Automotive <br> DIY <br> Home + garden <br> Relationships <br> Special interest <br> Style + fashion |
-| Medical                     | (None)                                            |
-| Multimedia design           | Illustration + graphic design <br> Music production <br> Photo + video production |
-| Music                       | (None)                                            |
-| Navigation + maps           | (None)                                            |
-| News + weather              | News <br> Weather                                 |
-| Personal finance            | Banking + investments <br> Budgeting + taxes      |
-| Personalization             | Ringtones + sounds <br> Themes <br> Wallpaper + lock screens |
-| Photo + video               | (None)                                            |
-| Productivity                | (None)                                            |
-| Security                    | PC protection <br> Personal security              |
-| Shopping                    | (None)                                            |
-| Social                      | (None)                                            |
-| Sports                      | (None)                                            |
-| Travel                      | City guides <br> Hotels                           |
-| Utilities + tools           | Backup + manage <br> File managers                |
--->
 
 > [!NOTE] 
 > Windows 8.x 및 Windows Phone 8.x 이전 버전의 고객들을 위해 Store에서 사용되는 일부 범주 및 하위 범주는 위에 나열된 범주와는 다르게 나타날 수 있습니다. 

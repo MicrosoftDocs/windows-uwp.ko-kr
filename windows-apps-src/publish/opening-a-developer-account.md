@@ -2,22 +2,22 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: 개발자 계정 열기
-description: 이 문서는 Microsoft Store 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 개요로, 계정을 설정하는 프로세스를 이해하는 데 도움을 줍니다.
+description: Microsoft Store 및 다른 Microsoft 프로그램용 파트너 센터에서 Winodws 개발자 계정에 등록 하는 방법의 개요는 다음과 같습니다.
 ms.author: wdg-dev-content
-ms.date: 08/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 935e628bb285adea8e515f6192d7f2654c05022e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: b34bdfae8faf7fee2b2eae373483eb9e4dea1972
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828228"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
-이 문서는 Microsoft Store 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 개요로, 계정을 설정하는 프로세스를 이해하는 데 도움을 줍니다.
+[파트너 센터](https://partner.microsoft.com/dashboard)에서 Windows 개발자 계정에 등록 하는 방법의 개요는 다음과 같습니다.
 
 > [!NOTE]
 > 개발자 계정을 등록할 때 연락처 정보에 입력한 메일 주소를 사용하여 계정과 관련된 메일 내용을 전송합니다. 때때로 해당 프로그램에 대한 알림 메일이 포함될 수 있습니다. [옵트아웃(opt out)](http://go.microsoft.com/fwlink/p/?LinkId=533280)하여 이러한 알림 메일을 받지 않도록 선택할 경우에도 거래용 메일은 계속 전송됩니다(예: 앱이 인증을 통과했거나 결제가 진행 중임을 알리기 위해). 이러한 메일이 계정 운영의 필수적인 부분이고, 계정을 해지하지 않는 한 이러한 거래용 메일을 계속 받게 됩니다.
@@ -57,11 +57,11 @@ ms.locfileid: "5757633"
 ## <a name="additional-guidelines-for-company-accounts"></a>회사 계정에 대한 추가 지침
 
 > [!IMPORTANT]
-> 여러 사용자 개발자 센터 계정에 액세스할 수 있도록 Azure Active Directory를 사용 하 여 개별 사용자에 게 (Microsoft 계정에 대 한 공유 액세스 아님)에 역할을 할당 하는 것이 좋습니다. 각 사용자는 개별 Azure AD 자격 증명으로 로그인하여 개발자 센터 계정에 액세스할 수 있습니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
+> 여러 사용자가 개발자 계정에 액세스할 수 있도록 Azure Active Directory를 사용 하 여 개별 사용자에 게 (Microsoft 계정에 대 한 공유 액세스 아님)에 역할을 할당 하는 것이 좋습니다. 각 사용자는 개별을 사용 하 여 파트너 센터에 로그인 하 여 개발자 계정에 액세스할 수 있는 Azure AD 자격 증명 합니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
 
-회사 계정을 만들 때 다음이 지침에 둘 이상의 사용자 계정을 개설한 Microsoft 계정으로 로그인 (아닌 개발자 센터 계정에 추가 된 개별 사용자)에 서명 하 여 계정에 액세스 해야 하는 경우 도움이 될 수 있습니다.
+여러 사용자가 액세스할 수 있도록 해야 회사 계정을 연 Microsoft 계정으로 로그인 (아닌 계정에 추가 된 개별 사용자), 다음 지침에 서명 하 여 도움이 될 수 있습니다.
 
--   MyCompany_DevCenter@outlook.com 등 자신이나 다른 사람에게 속해 있지 않는 이메일 주로 Microsoft 계정을 만듭니다. 회사에 이미 Azure AD를 사용 하는 경우에 특히 회사의 도메인에 전자 메일 주소를 사용 하지 마세요. (회사의 Azure에서 추가 사용자를 추가할 수 위에서 언급 했 듯이 AD 나중.)
+-   속해 있지 않는 나 다른 사람에 게 같은 전자 메일 주소를 사용 하 여 Microsoft 계정 만들기 MyCompany_PartnerCenter@outlook.com. 회사에 이미 Azure AD를 사용 하는 경우에 특히 회사의 도메인에 전자 메일 주소를 사용 하지 마세요. (회사의 Azure에서 추가 사용자를 추가할 수 위에서 언급 했 듯이 AD 나중.)
 -   이 Microsoft 계정에 대한 액세스 권한을 최소한의 사용자로 제한합니다.
 -   개발자 계정에 액세스 해야 하는 모든 사람을 포함 하는 회사 전자 메일 배포 그룹을 설정 하 고이 메일 주소를 추가 하는 [Microsoft 계정과 연결 하는 보안 정보 [(https://account.microsoft.com/security). 이렇게 하면이 별칭으로 전송 하는 보안 코드를 받을 목록에 있는 모든 직원이. 설정 하는 경우 메일 그룹 불가능, 보안 정보를 개인의 전자 메일 주소를 추가할 수 있지만 해당 메일 주소의 소유자에 액세스 하 고 메시지가 나타나면 (예: 새 보안 정보 t 추가 될 때 보안 코드를 공유할 수 있는 유일한 됩니다. 계정 그 또는 새 장치에서 액세스 하는 경우).
 -   Microsoft 계정 보안 정보를 회사 전화 번호를 추가 합니다. 확장 필요 하지 않으며 주요 팀 구성원이 액세스할 수는 번호를 사용 하려고 합니다.
@@ -76,7 +76,7 @@ Microsoft는 개발자가 제공하는 보안 정보를 사용하여 개발자 �
 
 Microsoft 계정에 대한 메일 주소 및/또는 전화 번호가 2개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토하여 최신으로 유지해야 합니다. https://account.microsoft.com/security로 이동한 후 Microsoft 계정으로 로그인하여 보안 정보를 관리할 수 있습니다. 자세한 정보는 [보안 정보 및 보안 코드를](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) 참조 하세요.
 
-Microsoft 계정을 사용 하 여 Windows 개발자 센터 대시보드에 로그인 하면 시스템 로그인 프로세스를 완료 하기 위해 제공 해야 하는 보안 코드를 전송 하 여 사용자의 id를 확인 하도록 요청할 수 있습니다. *신뢰할 수 있는*자주 사용 하는 Pc를 지정 하는 것이 좋습니다. 신뢰할 수 있는 장치에서 로그인 하는 경우 일반적으로 없습니다 메시지가 코드에 대해 특정 상황에서 메시지가 경우도 있지만 또는 긴 시간에 해당 디바이스에 로그인 하지 않은 경우. 자세한 내용은 [Microsoft 계정에 신뢰할 수 있는 장치 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 참조 하세요.
+로그인 할 때 파트너 센터에 Microsoft 계정을 사용 하 여, 로그인 프로세스를 완료 하기 위해 제공 해야 하는 보안 코드를 전송 하 여 사용자의 id를 확인 하는 시스템 요청할 수 있습니다. *신뢰할 수 있는*자주 사용 하는 Pc를 지정 하는 것이 좋습니다. 신뢰할 수 있는 장치에서 로그인 하는 경우 일반적으로 없습니다 메시지가 코드에 대해 특정 상황에서 메시지가 경우도 있지만 또는 긴 시간에 해당 디바이스에 로그인 하지 않은 경우. 자세한 내용은 [Microsoft 계정에 신뢰할 수 있는 장치 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 참조 하세요.
 
 
 ## <a name="closing-your-account"></a>계정 해지

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
 ms.openlocfilehash: ff02cfc287bc1d88485a713390e233fc7a742a01
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740237"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5826426"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 

@@ -8,12 +8,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
-ms.openlocfilehash: f85f586d58d159e9fb4751933f14f6b74cd94f96
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 9e62e2e2b3da4bc8e26f944ca446d11cf55c2c84
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5827383"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
@@ -43,7 +43,7 @@ ms.locfileid: "5761302"
 
 Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-dev-center-account).
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account).
 
 * [Azure AD 응용 프로그램을 Windows 개발자 센터 계정에 연결](#associate-an-azure-ad-application-with-your-windows-dev-center-account)해야 하며 테넌트 ID, 클라이언트 ID 및 키를 가져와야 합니다. 이러한 값은 Microsoft Store 제출 API에 대한 호출에 사용하는 Azure AD 액세스 토큰을 가져오는 데 필요합니다.
 
@@ -70,7 +70,7 @@ Microsoft Store 제출 API를 사용하려면 먼저 Azure AD 응용 프로그�
 
 1.  개발자 센터에서 [조직의 개발자 센터 계정을 조직의 Azure AD Directory와 연결](../publish/associate-azure-ad-with-dev-center.md)합니다.
 
-2.  그런 다음 개발자 센터의 **계정 설정**의 **사용자** 페이지에서 개발자 센터 계정에 대한 제출에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-dev-center-account)합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 존재하지 않으면 [개발자 센터에서 새 Azure AD 응용 프로그램을 만들](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-dev-center-account) 수 있습니다.  
+2.  그런 다음 개발자 센터의 **계정 설정**의 **사용자** 페이지에서 개발자 센터 계정에 대한 제출에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account)합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 존재하지 않으면 [개발자 센터에서 새 Azure AD 응용 프로그램을 만들](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account) 수 있습니다.  
 
 3.  **사용자** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d69e8d8cca3932045d4b43d727210f84e816f30b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755440"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5826549"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 오디오 프레임 처리
 

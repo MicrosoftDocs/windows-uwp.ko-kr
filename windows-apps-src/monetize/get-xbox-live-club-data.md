@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 클럽
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a37b30634006f0865d0ba1c1c2844a7acf4139
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767539"
+ms.locfileid: "5824189"
 ---
 # <a name="get-xbox-live-club-data"></a>Xbox Live 클럽 데이터 가져오기
 

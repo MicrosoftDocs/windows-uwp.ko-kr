@@ -7,12 +7,12 @@ ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: d7807b71f1c775493e525284e61c093081eb2c2b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d59fec17c1e8cc340f630ba236f7361325046ea2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5754846"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824490"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 
@@ -258,7 +258,7 @@ IASyncAction DoWorkAsync(Param const value);
 
 코 루틴은 다른와 같은 함수 호출자 함수 돌아갑니다 실행 될 때까지 차단 됩니다. 반환할 코 루틴에 대 한 첫 번째 기회는 첫 번째 `co_await`, `co_return`, 또는 `co_yield`합니다.
 
-이 수행 하기 전에 호출자에 실행을 반환 해야 하는 코 루틴에서 컴퓨팅 바인딩된 작업, (즉, 일시 중단 지점 도입) 호출자가 차단 되지 않도록 합니다. 는 아직 수행 하는 경우 `co-await`-연산 일부 기타 작업을 할 수 있습니다 `co-await` [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수입니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
+이 수행 하기 전에 호출자에 실행을 반환 해야 하는 코 루틴에서 컴퓨팅 바인딩된 작업, (즉, 일시 중단 지점 도입) 호출자가 차단 되지 않도록 합니다. 는 아직 수행 하는 경우 `co_await`-연산 일부 기타 작업을 할 수 있습니다 `co_await` [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수입니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
 
 구현에 사용되는 스레드 풀은 낮은 수준의 [Windows 스레드 풀](https://msdn.microsoft.com/library/windows/desktop/ms686766)이므로 이상적으로 효율적입니다.
 
@@ -309,7 +309,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 
 위의 코루틴이 **TextBlock**을 만든 UI 스레드에서 호출되는 한 이 기술은 작동합니다. 앱에서 이것이 확실한 경우는 많습니다.
 
-수 있는 확실 하지 않는 경우 스레드 호출에 대해 하는 경우를 다루는 UI를 업데이트 하는 보다 일반적인 솔루션 `co-await` [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수 하 여 특정 전경 스레드로 전환 합니다. 아래의 코드 예제에서 **TextBlock**(해당 [**발송자**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher) 속성에 액세스하여)과 연관된 발송자 개체를 전달하여 전경 스레드를 지정합니다. **winrt::resume_foreground**의 구현이 코루틴에서 이후에 오는 작업을 실행하는 해당 발송자 개체에서 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출합니다.
+수 있는 확실 하지 않는 경우 스레드 호출에 대해 하는 경우를 다루는 UI를 업데이트 하는 보다 일반적인 솔루션 `co_await` [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수 하 여 특정 전경 스레드로 전환 합니다. 아래의 코드 예제에서 **TextBlock**(해당 [**발송자**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher) 속성에 액세스하여)과 연관된 발송자 개체를 전달하여 전경 스레드를 지정합니다. **winrt::resume_foreground**의 구현이 코루틴에서 이후에 오는 작업을 실행하는 해당 발송자 개체에서 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출합니다.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
@@ -328,7 +328,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 
 광범위 하 게 말해서 코 루틴에서 일시 중단 지점, 후 실행의 원래 스레드 수 사라지고 재개 모든 스레드에서 발생할 수 있습니다 (즉, 모든 스레드 수 메서드를 호출 **완료 된** 비동기 작업에 대 한).
 
-그러나 있습니다 `co-await` 4 개의 Windows 런타임 비동기 작업 형식 (**IAsyncXxx**) 한 후 C + + WinRT 시점에 호출 컨텍스트를 캡처합니다 있습니다 `co-await`합니다. 며 연속 작업을 다시 시작할 때 해당 컨텍스트에 남아 있는 수 있게 합니다. C + + WinRT 호출 컨텍스트에서 이미 고 있는지 확인 하 고, 그렇지 않은 경우 전환 하 여이 수행 합니다. 전에 단일 스레드 아파트 (STA) 스레드는 경우 `co-await`를 가져오려면 동일한 계정에 이어야 합니다 전에 다중 스레드 아파트 (MTA) 스레드는 경우 `co-await`, 나중에 하나 이어야 합니다.
+그러나 있습니다 `co_await` 4 개의 Windows 런타임 비동기 작업 형식 (**IAsyncXxx**) 한 후 C + + WinRT 시점에 호출 컨텍스트를 캡처합니다 있습니다 `co_await`합니다. 며 연속 작업을 다시 시작할 때 해당 컨텍스트에 남아 있는 수 있게 합니다. C + + WinRT 호출 컨텍스트에서 이미 고 있는지 확인 하 고, 그렇지 않은 경우 전환 하 여이 수행 합니다. 전에 단일 스레드 아파트 (STA) 스레드는 경우 `co_await`를 가져오려면 동일한 계정에 이어야 합니다 전에 다중 스레드 아파트 (MTA) 스레드는 경우 `co_await`, 나중에 하나 이어야 합니다.
 
 ```cppwinrt
 IAsyncAction ProcessFeedAsync()

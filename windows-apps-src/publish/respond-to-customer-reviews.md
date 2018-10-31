@@ -4,26 +4,26 @@ Description: You can respond directly to reviews of your app to let customers kn
 title: 고객 리뷰에 응답
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.author: wdg-dev-content
-ms.date: 7/17/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 응답을 응답 검토
 ms.localizationpriority: medium
-ms.openlocfilehash: f4bad59e298ef65cc7aaf6561b77cc86eeff832e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 823ca28618540dbaab1f4e5711ee59d277b0c894
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748376"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824129"
 ---
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
 
 고객이 해당 피드백을 듣고는 알 수 있도록 앱의 리뷰에 응답할 수 있습니다. 리뷰 응답에서는 고객 의견을 기반으로 추가한 기능이나 수정한 버그에 대해 고객에게 알려 주거나, 앱 개선 방도에 대한 구체적인 의견을 얻을 수 있습니다. 응답은 모든 Windows10 고객에 게 표시에 대 한 Microsoft Store에 표시 됩니다. 또한 (하지 않은 옵트아웃 하 고 Windows 10 버전 1803 이상을 실행 하는 장치를 사용 하 는) 경우 전자 메일로 응답을 고객에 게 보낼 수 있습니다.
 
-앱 리뷰를 보고 응답을 제공하려면 Windows 개발자 센터 대시보드에서 해당 앱을 찾습니다. 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **리뷰**를 클릭하여 [리뷰 보고서](reviews-report.md)를 표시합니다. 응답을 제공 하기 위해 **검토에 응답** 을 선택 합니다.
+앱 리뷰를 보고 응답을 제공 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에서 앱을 찾습니다. 왼쪽된 탐색 메뉴에서 **분석** 을 확장 하 고 [리뷰 보고서](reviews-report.md)를 표시 하려면 **리뷰** 차례로 클릭 합니다. 응답을 제공 하기 위해 **검토에 응답** 을 선택 합니다.
 
 > [!TIP]
-> 대시보드를 사용 하 여 리뷰에 응답을 하는 것 외에도 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)을 사용 하 여 또는를 리뷰 [프로그래밍 방식으로](../monetize/submit-responses-to-app-reviews.md)응답할 수 있습니다.
+> 파트너 센터를 사용 하 여 리뷰에 응답을 하는 것 외에도 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)을 사용 하 여 또는를 리뷰 [프로그래밍 방식으로](../monetize/submit-responses-to-app-reviews.md)응답할 수 있습니다.
 
 기본적으로 응답 원래 고객 리뷰 바로 아래 스토어에 게시 됩니다. 이러한 응답은 Windows 10 장치에서 스토어를 보는 모든 고객에 게 표시 됩니다. 리뷰를 남긴 고객은 Windows 10 버전 1803 이상을 실행 하는 장치를 사용 하 여 메일 응답을 받지 거부 하지 않은 경우 메일로 응답의 복사본 해당 고객에 게도 전송 될 됩니다.  고객에 게 전자 메일에 포함 된 응답을 제출 하려면 유효한 메일 주소를 제공 해야 합니다. 그런 다음 직접 문의할 때이 전자 메일 주소를 사용할 수 있습니다.
 

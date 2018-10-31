@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.localizationpriority: medium
 ms.openlocfilehash: 481ec666c327b15088d8e60577c51fa1697918fe
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828598"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a>개발 디렉터리로 폴더 업로드
 

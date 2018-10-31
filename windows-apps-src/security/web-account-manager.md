@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: bfec782952ef20dbc496e50d9513febc8dee3248
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 71a5cddcd5ccb5185cda422c3df16797f5765688
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740406"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825274"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -337,7 +337,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="remove-a-stored-account"></a>저장된 계정 제거
 
-웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이 방법으로 앱에서 효과적으로 "로그아웃"할 수 있습니다. 시작 시 사용자 계정 정보가 더 이상 자동으로 로드되지 않습니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
+웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이렇게이 하면 이러한 수 효과적으로 "로그 아웃" 앱의: 시작 시 사용자 계정 정보가 자동으로 로드 더 이상 됩니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)

@@ -4,16 +4,16 @@ Description: The Pricing and availability page of the app submission process let
 title: 앱 가격 책정 및 가용성 설정
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 05/11/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 가격, 사용 가능, 검색 가능, 무료 평가판, 평가판들, 평가판, 앱들, 출시 날짜
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f394bbe644d679b48c239a305594900ca0f7e46
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: a21cc94dd9b22304c715cc0e6b038ffdac6da02b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828114"
 ---
 # <a name="set-app-pricing-and-availability"></a>앱 가격 책정 및 가용성 설정
 

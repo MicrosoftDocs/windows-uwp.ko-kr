@@ -7,12 +7,12 @@ ms.author: twhitney
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8729ec5219159884ae0e99d8cc6eaa8dbe900d90
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c70d696c1211cfa4f929178f0cf0d9da76ae74c2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752844"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825799"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>다중 인스턴스 유니버설 Windows 앱 만들기
 
@@ -60,7 +60,7 @@ Windows 10, 버전 1803 (10.0; 빌드 17134) UWP 앱이 여러 인스턴스를 �
 
 **다중 인스턴스 리디렉션 UWP 앱** 템플릿은 위에 표시된 대로 package.appxmanifest 파일에 `SupportsMultipleInstances`를 추가하고 `Main()` 함수가 포함된 프로젝트에 **Program.cs**(또는 C++ 버전의 템플릿을 사용하는 경우 **Program.cpp**)를 추가합니다. 활성화를 리디렉션하는 논리가 `Main` 함수로 들어 갑니다. **Program.cs** 템플릿은 다음과 같습니다.
 
-[**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 선호 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸을 기본 설정에서 제공 하는 경우 다음 리디렉션할 수 있습니다 수 활성화를 해당 인스턴스로 또는 선택 하는 경우 무시할 수 있습니다.
+[**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 선호 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸을 기본 설정에서 제공 하는 경우 해당 인스턴스를 활성화 한 다음 리디렉션할 수 있습니다 또는 선택 하는 경우 무시할 수 있습니다.
 
 ``` csharp
 public static class Program

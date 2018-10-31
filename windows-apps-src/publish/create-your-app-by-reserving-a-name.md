@@ -1,35 +1,35 @@
 ---
 author: jnHs
-Description: The first step in creating a new app in your Windows Dev Center dashboard is reserving an app name. See how to reserve app names and find suggestions for choosing a great name for your app.
+Description: The first step in creating a new app in Partner Center is reserving an app name. See how to reserve app names and find suggestions for choosing a great name for your app.
 title: 이름을 예약하여 앱 만들기
 keywords: Windows 10, UWP, 이름 예약, 앱 이름, 앱 이름들, 이름들, 제품 이름, 이름 지정, 예약 이름, 제목, 이름들, 제목들
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b8666d478b59bfb5975150903cf08fc2a43e938c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: a94a07eb80e0b181e49a74beba7690d8a57bfaa6
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5827322"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 
-앱 이름을 예약 하는 [Windows 개발자 센터 대시보드에서](https://partner.microsoft.com/dashboard) 새 앱을 만드는 첫 번째 단계입니다. 각 예약 이름 (앱의 *제목*이라고도 불림)은 Microsoft Store 전반에서 고유해야 합니다.
+앱 이름을 예약 하는 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 새 앱을 만드는 첫 번째 단계입니다. 각 예약 이름 (앱의 *제목*이라고도 불림)은 Microsoft Store 전반에서 고유해야 합니다.
 
 앱 빌드를 아직 시작하지 않은 경우에 앱에 대한 이름을 예약할 수 있습니다. 누구도 이름을 사용할 수 있도록 최대한 빨리 이렇게 것이 좋습니다. 이름의 사용 예약을 유지하려면 3개월 내에 앱을 제출해야 합니다.
 
 [앱 패키지를 업로드](upload-app-packages.md) 할 때 [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) 값은 앱용으로 예약한 이름과 일치해야 합니다. Microsoft Visual Studio를 사용하여 앱 패키지를 만들 경우 이 특성은 자동으로 채워집니다.
 
 > [!IMPORTANT]
-> 응용 프로그램에 대 한 추가 이름을 예약할 수 있습니다 및 먼저 대시보드에서 앱을 만들 때 예약한 목록 대신 앱의 게시 된 버전 중 하나를 사용 하도록 선택할 수 있습니다. 그러나 여기에 입력 성 앱 [id 세부 정보](view-app-identity-details.md), 같은 **패키지 패밀리 이름 (PFN)** 중 일부에 주의 합니다. 이러한 값 일부 사용자에 게 표시 될 수 있습니다 하 고 여야 예약한 이름을 사용 하이 여가에 대 한 적절 한 인지 확인 하므로 변경 합니다.
+> 응용 프로그램에 대 한 추가 이름을 예약할 수 있습니다와 처음 파트너 센터에서 앱을 만들 때 예약한 목록 대신 앱의 게시 된 버전 중 하나를 사용 하도록 선택할 수 있습니다. 그러나 여기에 입력 성 앱 [id 세부 정보](view-app-identity-details.md), 같은 **패키지 패밀리 이름 (PFN)** 중 일부에 주의 합니다. 이러한 값 일부 사용자에 게 표시 될 수 있습니다 하 고 여야 예약한 이름을 사용 하이 여가에 대 한 적절 한 인지 확인 하므로 변경 합니다.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>새 이름을 예약하여 앱 만들기
 
-이름 예약은 대시보드에서 앱을 만드는 첫 번째 단계입니다. 
+이름을 예약 하는 것은 파트너 센터에서 앱을 만드는 첫 번째 단계입니다. 
 
 1.  **개요** 페이지에서 **새 앱 만들기**를 클릭합니다.
 2.  텍스트 상자에 사용할 이름을 입력하고 **가용성 확인**을 선택합니다. 이름을 사용할 수 있으면 녹색 확인 표시가 보입니다. 입력한 이름이 다른 개발자에 의해 이미 예약되었거나 사용 중이면 이름을 사용할 수 없다는 메시지가 표시됩니다.
@@ -58,7 +58,7 @@ ms.locfileid: "5755767"
 
 ## <a name="manage-additional-app-names"></a>추가 앱 이름 관리
 
-Windows 개발자 센터 대시보드에 있는 각 앱에 대한 **앱 관리** 섹션의 **앱 이름 관리** 페이지에서 앱 이름을 추가 및 관리할 수 있습니다.
+추가 하 고 각 파트너 센터에서 앱에 대 한 **앱 관리** 섹션의 **앱 이름 관리** 페이지에서 추가 이름을 관리할 수 있습니다.
 
 경우에 따라 동일한 앱에 사용할 여러 이름을 예약할 수도 있습니다. 예를 들어 앱을 여러 언어로 제공하고 각 언어에 대해 서로 다른 이름을 사용하려는 경우가 여기에 해당합니다. 앱 이름을 완전히 변경하려면 추가 이름을 예약해야 합니다.
 

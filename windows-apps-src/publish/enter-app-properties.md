@@ -4,16 +4,16 @@ Description: The App properties page of the app submission process lets you defi
 title: 앱 속성 입력
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 게임 설정, 표시 모드, 시스템 요구 사항, 하드웨어 요구 사항, 최소 하드웨어, 권장 하드웨어, 개인 정보 취급 방침, 지원 연락처 정보, 앱 웹 사이트, 지원 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b7fffe4c687009f71c9908ca9391278a172209a
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 9356c536946508c4531170cde8982e7b79c6e4f6
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746058"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5823419"
 ---
 # <a name="enter-app-properties"></a>앱 속성 입력
 
@@ -60,7 +60,7 @@ Microsoft Store에서 앱을 분류하는 데 사용해야 하는 범주 및 하
 
 ## <a name="game-settings"></a>게임 설정
 
-제품 범주를 **게임**으로 선택했을 때만 표시되는 범주입니다. 게임이 지원하는 기능을 지정할 수 있습니다. 이 섹션에서 제공하는 정보는 제품 Microsoft Store 목록에 표시됩니다.
+제품 범주를 **게임**으로 선택했을 때만 표시되는 범주입니다. 게임이 지원하는 기능을 지정할 수 있습니다. 이 섹션에 제공 된 정보는 제품의 스토어에 표시를 나열 합니다.
 
 게임이 멀티 플레이어 옵션을 지원하는 경우, 세션의 최소/최대 플레이어 수를 지정해야 합니다. 최소/최대 플레이어의 수는 1,000명 이상 입력할 수 없습니다.
 

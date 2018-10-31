@@ -4,19 +4,18 @@ description: 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에�
 title: TemplateBinding 태그 확장
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 10/29/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 842f1bf1642e79d4bd2651560fdf7208cfb1877d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d4aaca880caf30b46cb1ed26d66700bb12d76404
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5739844"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5823656"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
-
 
 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결합니다. **TemplateBinding**은 XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) 정의 내에서만 사용할 수 있습니다.
 
@@ -59,18 +58,21 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 
 ### <a name="xbind-in-controltemplate"></a>ControlTemplate에서 X:bind
 
-Windows 10으로 다음 주요 업데이트부터 **X:bind** 태그 확장을 사용할 수 **TemplateBinding** [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 사용 되는 곳입니다. 
+> [!NOTE]
+> Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))는 ControlTemplate에서 X:bind를 사용 하려면 이상. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) 속성 (옵션 아님) 필요할 수 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우에 있습니다.
+Windows 10, 버전 1809부터 **X:bind** 태그 확장을 사용할 수 **TemplateBinding** [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 사용 되는 곳입니다. 
 
-**X:bind** 지원을 사용 하 여 이제로 사용할 수 두 [함수 바인딩](../data-binding/function-bindings.md) [을 ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) 에서 원활 하 게으로 양방향 바인딩을
+[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 속성이 필요 (옵션 아님)에 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우.
 
-다음 예제에서는 TextBlock.Text Button.Content.ToString()로 계산 됩니다. ControlTemplate에서 TargetType 데이터 소스 역할을 하 고 부모 TemplateBinding와 동일한 결과 수행 합니다.
+**X:bind** 지원 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)에서 원활 하 게으로 양방향 바인딩을으로 두 [함수 바인딩](../data-binding/function-bindings.md) 을 사용할 수 있습니다.
+
+이 예제에서는 **TextBlock.Text** 속성 **Button.Content.ToString**으로 계산 됩니다. ControlTemplate에서 TargetType 데이터 소스 역할을 하 고 부모 TemplateBinding와 동일한 결과 수행 합니다.
 
 ```xaml
 <ControlTemplate TargetType="Button">
     <Grid>
-        <TextBlock Text="{x:Bind Content}" />
+        <TextBlock Text="{x:Bind Content, Mode=OneWay}"/>
     </Grid>
 </ControlTemplate>
 ```

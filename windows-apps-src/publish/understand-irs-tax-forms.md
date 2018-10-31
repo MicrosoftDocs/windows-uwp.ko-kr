@@ -3,17 +3,17 @@ author: jnHs
 Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
 title: Microsoft에서 발급하는 IRS 세금 양식 이해
 ms.author: wdg-dev-content
-ms.date: 10/25/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 조세, irs, 미국 국세청, 세금, 소득세, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: e16333b061c3f50d4c0d66b0704bf0977570595e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 326de9b3160f492566306b18252bbc3bacf58531
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742153"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5836071"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
@@ -25,8 +25,8 @@ ms.locfileid: "5742153"
 
 | IRS 세금 양식 | 설명 | 사용 가능한 시기 |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄본은 **1월 31일** 당일 또는 이전 날짜로 소인이 찍혀 발송되고, .pdf 사본은 동일한 시기에 개발자 센터(**대시보드 > 계정 설정 > 세금 프로필**)에서 사용할 수 있게 됩니다. |
-|1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄본은 **3월 15일** 당일 또는 이전 날짜로 소인이 찍혀 발송되고, .pdf 사본은 동일한 시기에 개발자 센터(**대시보드 > 계정 설정 > 세금 프로필**)에서 사용할 수 있게 됩니다. |
+|1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄본 또는 **1 월 31**일 이전에 소인이 수는 및.pdf [파트너 센터](https://partner.microsoft.com/dashboard) 에서 사용할 수 있습니다 (에서 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
+|1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄본 또는 **3 월 15**일 이전에 소인이 수는 및.pdf 파트너 센터에서 사용할 수 있습니다 (에서 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
 
 > [!NOTE]
 > IRS 세금 양식에서 사용 하 여 주소 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)에 대 한 주소에서 제공 됩니다. 주소가 변경된 경우 **세금 프로필**에서 주소를 업데이트하세요.
@@ -106,7 +106,7 @@ ms.locfileid: "5742153"
     <td valign="top"><b>W8 양식을 작성할 때 제 지급금에 세금이 원천징수된 이유는 무엇입니까?</b></td>
     <td valign="top">둘 중 하나에 해당할 경우 세금이 원천징수됩니다.<br>
      1. W8의 조세 조약 섹션을 올바르게 작성하지 않은 경우 또는<br>
-     2. 미국과 조세 조약을 맺지 않은 국가에 거주하는 경우<br><br>언제 든 지 W8 양식을 업데이트를 제출 하려면 개발자 센터를 방문 수 있습니다.<br><br><b>참고</b>: 모든 수입 세금 원천 징수가 적용 됩니다.</td>
+     2. 미국과 조세 조약을 맺지 않은 국가에 거주하는 경우<br><br>언제 든 지 W8 양식을 업데이트를 제출 하려면 파트너 센터를 방문 수 있습니다.<br><br><b>참고</b>: 모든 수입 세금 원천 징수가 적용 됩니다.</td>
   </tr>
   <tr>
     <td valign="top"><b>유효한 조약 정보로 W8 양식을 업데이트하여 제출했습니다. 원천징수된 세금을 Microsoft에서 환불해 줄 수 있나요?</b></td>
