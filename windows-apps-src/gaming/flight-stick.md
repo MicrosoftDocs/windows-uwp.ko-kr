@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 플라이트 스틱
 ms.localizationpriority: medium
 ms.openlocfilehash: ebe7695b3f16271f3adedae658c0d62d38d7c078
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749201"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818434"
 ---
 # <a name="flight-stick"></a>플라이트 스틱
 

@@ -4,21 +4,21 @@ layout: LandingPage
 Description: See how to publish your Windows apps to the Microsoft Store.
 title: Windows 앱 게시
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 게시, 판매, 배포, Microsoft Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 98e47934f936b6995ab37623b610869219254b85
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 229e1eab05e392a4091c9eee5bc9af948c678d96
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766826"
+ms.locfileid: "5816394"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  
-Microsoft Store에 앱 및 게임을 게시 하려면 [Windows 개발자 센터 대시보드에서](https://partner.microsoft.com/dashboard) 사용할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하 여 Microsoft Store에 앱 및 게임을 게시할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>

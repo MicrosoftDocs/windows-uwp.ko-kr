@@ -4,16 +4,16 @@ Description: You can cross-promote your app with apps published by other develop
 title: 커뮤니티 광고 정보
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
 ms.author: wdg-dev-content
-ms.date: 10/04/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 20f0f06d0927d61c062a0514d84bef993da6e932
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 745be156d36e1fb15594d839b0b06d87425ae914
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748479"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5819340"
 ---
 # <a name="about-community-ads"></a>커뮤니티 광고 정보
 
@@ -30,19 +30,15 @@ ms.locfileid: "5748479"
 
 ### <a name="opt-in-to-community-ads"></a>커뮤니티 광고에 옵트인(opt in)
 
-**수익 창출** 에 옵트인 해야 앱 중 하나에 대 한 커뮤니티 광고 캠페인을 만들면 전에 &gt; Windows 개발자 센터 대시보드의 **인 앱 광고** 페이지.
+**수익 창출** 에 옵트인 해야 앱 중 하나에 대 한 커뮤니티 광고 캠페인을 만들면 전에 &gt; [파트너 센터](https://partner.microsoft.com/dashboard)에서 **인 앱 광고** 페이지.
 
 UWP 앱에 대 한 커뮤니티 광고에 옵트인 하려면:
 
-1. **인 앱 광고** 페이지에서 **조정 설정** 섹션에서는 앱에서 사용 중인 광고 단위를 선택 합니다.
-2. **Microsoft는 앱에 대 한 가장 좋은 조정 설정을 선택** 옵션을 선택 하는 경우 광고 단위에 대 한 커뮤니티 광고 자동으로 활성화 됩니다. 그렇지 않은 경우 **대상** 드롭다운 목록에서 기준 구성 또는 지역/국가 특정 구성을 선택 하 고 **다른 광고 네트워크** 목록에서 **Microsoft 커뮤니티 광고** 확인란을 선택 합니다.
+1. **조정**설정 아래로 스크롤하여 앱에서 사용 중인 광고 단위를 선택 합니다.
+2. **Microsoft 내 설정을 최적화** 를 선택한 경우 광고 단위에 대 한 커뮤니티 광고 자동으로 활성화 됩니다. 그렇지 않은 경우 **대상** 드롭다운 목록에서 기준 구성 또는 지역/국가 특정 구성을 선택 하 고 **다른 광고 네트워크** 목록에서 **Microsoft 커뮤니티 광고** 확인란을 선택 합니다.
 
     > [!NOTE]
     > 유료 네트워크 및 커뮤니티 광고를 포함 하 여 다른 광고 네트워크에서 표시 하려는 광고의 비율을 지정 하려면 **가중치** 필드를 사용할 수 있습니다.
-
-Windows에 대 한 커뮤니티 광고에 옵트인 하려면 8.x 또는 Windows Phone 8.x 앱
-
-1. **인 앱 광고** 페이지에서 **내 앱에 커뮤니티 광고 표시** 상자를 선택 합니다.
 
 선택을 완료한 후 앱을 다시 게시 필요가 없습니다. 옵트인을 하면 [광고 캠페인을 만들](create-an-ad-campaign-for-your-app.md) 때 캠페인 유형으로 **커뮤니티 광고(무료)** 를 선택할 수 있습니다.
 

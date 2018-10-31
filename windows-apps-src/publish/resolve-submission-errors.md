@@ -4,16 +4,16 @@ Description: If you encounter errors after submitting your app to the Store, you
 title: 제출 오류 해결
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d9d997d2523012588348512311980f9bb4a7160b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0ba47bdf964cab66182aadc6dafb0ae6d34c3ea7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5758444"
+ms.locfileid: "5811980"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 
@@ -31,6 +31,9 @@ Win32와 UWP 바이너리를 포함 하는 패키지를 제출 하려는 경우 
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x이 하
 
+> [!IMPORTANT]
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows Phone 대상으로 하는 패키지를 포함할 수 없습니다 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+
 전처리 중에Windows Phone 패키지의 문제가 감지되면 **오류 2001**이 표시될 수 있습니다. 대부분의 경우 오류를 수정하고 앱 패키지를 다시 작성해야 합니다. 이 작업이 끝나면 **스토어에 제출**을 다시 클릭하기 전에 제출의 [패키지](upload-app-packages.md) 페이지에서 이전 패키지를 새 패키지로 바꿉니다.
 
 이 오류를 유발하는 문제는 다양합니다. 아래 목록을 검토하여 사용 중인 패키지에 해당되는 내용을 확인하세요.
@@ -45,7 +48,7 @@ Win32와 UWP 바이너리를 포함 하는 패키지를 제출 하려는 경우 
 
 ## <a name="nameidentity-errors"></a>이름/ID 오류
 
-**패키지에 있는 이름이 예약된 앱 이름 중 하나가 아닙니다. 앱 이름을 예약하거나 이 언어에 맞는 앱 이름으로 패키지를 업데이트하세요.** 라는 오류가 표시되는 경우 패키지에 잘못된 이름을 입력했기 때문일 수 있습니다. 개발자 센터에서 예약하지 않은 앱 이름을 사용하는 경우에도 이 오류가 발생할 수 있습니다. 일반적으로 다음 단계에 따라 이 오류를 해결할 수 있습니다.
+**패키지에 있는 이름이 예약된 앱 이름 중 하나가 아닙니다. 앱 이름을 예약하거나 이 언어에 맞는 앱 이름으로 패키지를 업데이트하세요.** 라는 오류가 표시되는 경우 패키지에 잘못된 이름을 입력했기 때문일 수 있습니다. 파트너 센터에서 앱 이름을 예약 하지 않은 사용 하는 경우에이 오류가 발생할 수 있습니다. 일반적으로 다음 단계에 따라 이 오류를 해결할 수 있습니다.
 
 - 앱의 [앱 ID](view-app-identity-details.md) 페이지(**앱 관리** 아래)로 이동하여 앱에 할당된 ID가 있는지 확인합니다. 없는 경우 새로 만드는 옵션이 표시됩니다. ID를 만들려면 앱 이름을 예약해야 합니다. 패키지에 사용한 이름이 맞는지 확인합니다.
 - 앱에 ID가 이미 있는 경우에도 패키지에 사용하려는 이름을 예약해야 할 수 있습니다. **앱 관리**에서 [앱 이름 관리](manage-app-names.md)를 클릭합니다. 사용할 이름을 입력하고 **앱 이름 예약**을 클릭합니다.

@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 252b1309f1218a872ea49dcce7048b890a6139b4
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5758209"
+ms.locfileid: "5815678"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Windows 10 패키지로 만든된 데스크톱 응용 프로그램 통합
 

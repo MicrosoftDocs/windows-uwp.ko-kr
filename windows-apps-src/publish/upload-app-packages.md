@@ -8,22 +8,26 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 535706cc0627dc89ce96981ad40faafbf242e80e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f02ca7c43443289ef9d2d0562be25f277068685b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748326"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818048"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
-**패키지** 페이지에서는 제출 중인 앱에 대 한 패키지 파일 (.msix,.msixupload,.msixbundle,.appx,.appxupload,.appxbundle, 및/또는.xap)을 모두 업로드입니다. 이 단계에서 앱의 대상으로 지정한 운영 체제의 패키지를 업로드할 수 있습니다. 고객이 앱을 다운로드하면 스토어에서는 각 고객에게 해당 장치에 가장 적합한 패키지를 자동으로 제공합니다. 패키지를 업로드하면 [특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
+**패키지** 페이지에서는 제출 중인 앱에 대 한 패키지 파일 (.msix,.msixupload,.msixbundle,.appx,.appxupload 및/또는.appxbundle)의 모든 업로드입니다. 이 페이지에 동일한 앱에 대 한 모든 패키지를 업로드할 수 및 고객이 앱을 다운로드 하는 경우 스토어에서는 자동으로 장치에 가장 잘 작동 하는 패키지를 사용 하 여 각 고객을 제공 합니다. 패키지를 업로드하면 [특정 Windows 10 장치 패밀리(및 해당하는 경우 이전 OS 버전)에 제공될 패키지](#device-family-availability)를 등급순으로 나타내는 표가 표시됩니다.
 
-패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. 또한 [특정 고객에 게 제공 되는 버전 번호는 패키지 영향을 줄 수는 방법](package-version-numbering.md) 및 [패키지 배포 여러 운영 체제 하는 방법](guidance-for-app-package-management.md)에 대해 합니다.
+> [!IMPORTANT]
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+
+패키지 내용 및 패키지 구성 방법에 대한 자세한 내용은 [앱 패키지 요구 사항](app-package-requirements.md)을 참조하세요. 또한 [특정 고객에 게 제공 되는 버전 번호는 패키지에 미치는 영향](package-version-numbering.md) 및 [다양 한 시나리오에 대 한 패키지를 관리 하는 방법](guidance-for-app-package-management.md)을 알아보려면 합니다.
+
 
 ## <a name="uploading-packages-to-your-submission"></a>제출에 패키지 업로드
 
-패키지를 업로드하려면 패키지를 업로드 필드로 끌거나 파일을 클릭하여 찾아봅니다. **패키지** 페이지.msix,.msixupload,.msixbundle,.appx,.appxupload,.appxbundle, 및/또는.xap 파일을 업로드할 수 있습니다.
+패키지를 업로드하려면 패키지를 업로드 필드로 끌거나 파일을 클릭하여 찾아봅니다. **패키지** 페이지.msix,.msixupload,.msixbundle,.appx,.appxupload 및/또는.appxbundle 파일을 업로드할 수 있습니다.
 
 > [!IMPORTANT]
 > Windows10,.msixupload 또는.appxupload 파일에 다음 대신.msix,.appx,.msixbundle, 또는.appxbundle 업로드는 것이 좋습니다.  스토어에서의 UWP 앱 패키징에 대한 자세한 내용은 [Visual Studio를 사용하여 UWP 앱 패키징](../packaging/packaging-uwp-apps.md)을 참조하세요.

@@ -3,16 +3,16 @@ author: JnHs
 Description: Learn how to create known user groups to use for package flighting and more.
 title: 알려진 사용자 그룹 만들기
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 대상 그룹, 고객, 플라이트 그룹, 사용자 그룹, 알려진 사용자
 ms.localizationpriority: medium
-ms.openlocfilehash: eec9c214bcd4ac63406ec7681e66762356a0c1cf
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 44f0ea17d1034ae617b4b8c96cf61cc4829a6704
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764696"
+ms.locfileid: "5818744"
 ---
 # <a name="create-known-user-groups"></a>알려진 사용자 그룹 만들기
 
@@ -22,7 +22,7 @@ ms.locfileid: "5764696"
 
 ## <a name="to-create-a-known-user-group"></a>알려진 사용자 그룹을 만들려면
 
-1. Windows 개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **참여**를 확장하고 **고객 그룹**을 선택합니다. 
+1. [파트너 센터](https://partner.microsoft.com/dashboard)왼쪽된 탐색 메뉴에서 **참여** 를 확장 하 고 **고객 그룹**을 선택 합니다. 
 2. **내 고객 그룹** 섹션에서 **새 그룹 만들기**를 선택합니다.
 3. 다음 페이지에서 **그룹 이름** 상자에 그룹 이름을 입력합니다.
 4. **알려진 사용자 그룹** 라디오 단추가 선택되었는지 확인합니다.
@@ -38,7 +38,7 @@ ms.locfileid: "5764696"
 
 ## <a name="to-edit-a-known-user-group"></a>알려진 사용자 그룹을 편집하려면
 
-생성된 이후에는 대시보드에서 알려진 사용자 그룹을 제거하거나 이름을 변경할 수 없지만, 언제라도 구성원을 편집할 수 있습니다.
+파트너 센터에서 알려진된 사용자 그룹을 제거 (하거나 변경할 수는 이름) 후에 언제 라도 구성원을 편집할 수 있지만 생성 됩니다.
 
 알려진 사용자 그룹을 검토 및 편집하려면 왼쪽 탐색 메뉴에서 **참여**를 확장하고 **고객 그룹**을 선택합니다. **내 고객 그룹**에서 편집하려는 그룹의 이름을 선택합니다. 새 플라이트를 만들 때 **기존 그룹 보기 및 관리**를 선택하거나 패키지 플라이트의 개요 페이지에서 그룹 이름을 선택하여 패키지 플라이트 생성 페이지에서 알려진 사용자 그룹을 편집할 수도 있습니다. 
 

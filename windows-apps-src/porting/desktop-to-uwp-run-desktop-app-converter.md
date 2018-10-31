@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c05cbf2ce0b2f6288e6beb9c84df9d2b42bd6f2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755556"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5814342"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Desktop App Converter를 사용 하 여 데스크톱 응용 프로그램 패키지
 

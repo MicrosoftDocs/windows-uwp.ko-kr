@@ -4,21 +4,21 @@ Description: You can generate promotional codes for an app or add-on that you ha
 title: 홍보 코드 생성
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 08/24/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
-ms.openlocfilehash: e3a29b38ebb0e00e2c65b9050868ad1e11cc2ab2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2fe89f65ff4f3278b0ba88ef4c5ca9d22bc67817
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5762652"
+ms.locfileid: "5817965"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
 
-Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 앱 또는 추가 기능 또는 Windows10를 사용 하 여 [베타 테스트](beta-testing-and-targeted-distribution.md) 를 사용자에 게 대 한 무료 액세스를 제공 하 여 고객 서비스 시나리오를 해결할에 홍보 코드를 사용할 수 있습니다. 
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하는 앱 또는 Microsoft Store에 게시 한 추가 기능에 대 한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 앱 또는 추가 기능 또는 Windows10를 사용 하 여 [베타 테스트](beta-testing-and-targeted-distribution.md) 를 사용자에 게 대 한 무료 액세스를 제공 하 여 고객 서비스 시나리오를 해결할에 홍보 코드를 사용할 수 있습니다. 
 
 각 홍보 코드에 고유한 교환 가능 URL이 고객이 코드를 교환 하 고 Microsoft Store에서 앱 또는 추가 기능을 설치 하기 위해 클릭할 수 있는 합니다.  사용자가 홍보 코드를 사용하여 설치하기 전에 앱은 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과해야 합니다.
 
@@ -45,7 +45,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 
 앱 또는 추가 기능에 대 한 홍보 코드를 주문.
 
-1.  Windows 개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **모집**을 확장하고 **홍보 코드**를 선택합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)의 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **홍보 코드**를 선택 합니다.
 
 2.   **홍보 코드** 페이지에서 **코드 주문**을 클릭합니다.
 
@@ -64,7 +64,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 
 접수된 홍보 코드 주문을 다운로드하고 사용자에게 코드를 배포하려면
 
-1.  Windows 개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **모집**을 확장하고 **홍보 코드**를 선택합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)의 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 선택한 **홍보 코드.**
 2.  홍보 코드 주문에 대해 **다운로드** 링크를 클릭하고 생성된 파일을 컴퓨터에 저장합니다. 이 파일에는 탭으로 구분된 값(TSV) 형식으로 홍보 코드 주문에 대한 정보가 포함되어 있습니다.
 3.  선택한 편집기에서 .tsv 파일을 엽니다. 최상의 환경을 위해 Microsoft Excel 같은 표 형식 구조에서 데이터를 표시할 수 있는 응용 프로그램에서 .tsv 파일을 엽니다. 그러나 아무 텍스트 편집기에서나 파일을 열 수 있습니다.
 
@@ -103,7 +103,7 @@ Microsoft Store에 게시한 앱 또는 추가 기능에 대한 홍보 코드를
 
 ## <a name="review-your-promotional-codes"></a>홍보 코드 검토
 
-특정 앱과 추가 기능의 홍보 코드 주문에 대한 상세 요약을 검토하려면, 사용자 앱의 **홍보 코드** 페이지로 이동합니다(개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **유치**를 확장하고 **홍보 코드**를 클릭). 모든 현재 및 비활성 홍보 코드에 대한 다음 정보를 검토할 수 있습니다.
+앱 및 추가 기능에 대 한 홍보 코드 주문에 대 한 자세한 요약을 검토 하려면 **홍보 코드** 페이지로 이동 (파트너 센터의 왼쪽된 탐색 메뉴에서 확장 **모집** 하 고 다음 **홍보 코드**를 선택). 모든 현재 및 비활성 홍보 코드에 대한 다음 정보를 검토할 수 있습니다.
 -   주문 이름
 -   앱 또는 추가 기능
 -   시작 날짜

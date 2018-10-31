@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b96fafe380c08c74c4e411c7d559cc961c6da1ed
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767015"
+ms.locfileid: "5819624"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 앱: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 

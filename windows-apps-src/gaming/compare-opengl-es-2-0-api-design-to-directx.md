@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, opengl, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 2308c0b931b58209d1233205c355ac09680803dd
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748931"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818197"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>OpenGL ES 2.0에서 Direct3D로의 포팅 계획
 

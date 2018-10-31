@@ -3,16 +3,16 @@ author: JnHs
 Description: Target specific segments of your customers with personalized content to increase engagement, retention, and monetization.
 title: 대상 제품을 사용하여 참여 및 변환 최대화
 ms.author: wdg-dev-content
-ms.date: 11/10/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 대상 제품, 제품, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: a808f334692d7775a34bc760bcd799cb87d05b6e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0f6e1f8119522cd0441157131362d860feff3410
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769079"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5815058"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>대상 제품을 사용하여 참여 및 변환 최대화
 
@@ -25,7 +25,7 @@ ms.locfileid: "5769079"
 
 대상 제품을 사용하려면 상위 수준에서 세 가지를 수행해야 합니다.
 
-1. **대시보드에서 대상 제품을 만듭니다.** **참여 > 대상 제품** 페이지로 이동해 대상 제품을 만듭니다. 이 프로세스에 대한 자세한 내용은 다음과 같습니다.
+1. **[파트너 센터](https://partner.microsoft.com/dashboard)에서 대상 제품을 만듭니다.** **참여 > 대상 제품** 페이지로 이동해 대상 제품을 만듭니다. 이 프로세스에 대한 자세한 내용은 다음과 같습니다.
 2. **앱 내 대상 제품 경험을 구현합니다.** 사용 하 여 *Microsoft Store 대상 제품 API* 앱 코드에서 특정된 사용자에 대 한 사용 가능한 제품 검색 합니다. 또 대상 제품에 대한 앱 내 환경을 만들어야 합니다. 자세한 내용은 [스토어 서비스를 사용하여 대상 제품 관리](../monetize/manage-targeted-offers-using-windows-store-services.md)를 참조하세요.
 3. **스토어에 앱을 제출합니다.** 대상 제품(들)을 고객이 사용할 수 있도록 앱 내 대상 제품 경험을 구현한 상태에서 앱을 게시해야 합니다.
 
@@ -34,9 +34,7 @@ ms.locfileid: "5769079"
 
 ## <a name="to-create-and-send-a-targeted-offer"></a>대상 제품 만들기 및 보내기
 
-다음 단계를 적용하여 대시보드에서 대상 제품을 만드세요.
-
-1.  Windows 개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **참여**를 확장하고 **대상 제품**을 선택합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)왼쪽된 탐색 메뉴에서 **참여** 를 확장 한 다음 **대상 제품**을 선택 합니다.
 2.  **대상 제품** 페이지에서 사용 가능한 대상 제품을 확인합니다. 구현하고 싶은 대상 제품에 대해 **새 대상 제품 만들기**를 선택합니다.
 
     > [!NOTE]
@@ -46,7 +44,7 @@ ms.locfileid: "5769079"
 4.  또 다른 대상 제품을 만들려면 2단계와 3단계를 반복합니다. 각 대상 제품에서 서로 다른 추가 기능을 선택하기만 하면 동일한 앱에 동일한 대상 제품을 한 차례 이상 구현할 수 있습니다. 또 동일한 추가 기능에 여러 개의 대상 제품 유형을 연결할 수 있습니다.
 5.  대상 제품 만들기를 마쳤으면 **저장**을 클릭합니다.
 
-대상 제품을 구현하고 나면 대시보드의 **대상 제품** 페이지로 돌아가서 각 대상 제품의 총 변환 수를 확인할 수 있습니다.
+제품을 구현 하 고 후 각 제품에 대 한 총 변환 보려면 파트너 센터에서 **대상 지정을 제공** 하는 페이지를 반환할 수 있습니다.
 
 대상 제품을 사용하지 않기로 결정했다면(또는 더 이상 사용하지 않는 경우), **삭제**를 클릭합니다.
 

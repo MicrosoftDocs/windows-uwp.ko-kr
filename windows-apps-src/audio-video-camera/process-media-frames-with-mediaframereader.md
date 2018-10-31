@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 722a411bc6363d3a10b5db0f609b08f5d14b3f8d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5743397"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5819532"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 

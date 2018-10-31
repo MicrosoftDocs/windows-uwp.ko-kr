@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f25cda10d5fde88bbe2cff75406cc0454780a5b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5758287"
+ms.locfileid: "5812639"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>시각적 계층을 XAML과 함께 사용
 

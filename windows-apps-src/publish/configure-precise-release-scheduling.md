@@ -3,16 +3,16 @@ author: jnHs
 Description: You can set the precise date and time that your app should become available in the Store, giving you greater flexibility and the ability to customize dates for different markets.
 title: 정확한 릴리스 일정 구성
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 일정, 발매 날짜, 날짜, 실행
 ms.localizationpriority: medium
-ms.openlocfilehash: 910f0aea10e763316bedab7b96b21705c537282c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6474fc334922d49489c377a0c29841fc45889e1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749038"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816927"
 ---
 # <a name="configure-precise-release-scheduling"></a>정확한 릴리스 일정 구성
 
@@ -30,7 +30,7 @@ Microsoft Store에서 앱을 더 이상 사용할 수 없게 만드는 날짜도
 > [!IMPORTANT]
 > 일정 섹션에서 지정한 날짜는 Windows 10 고객에게만 적용됩니다.
 >
->앱이 이전 OS 버전을 지원하는 경우, 이후의 릴리스 날짜를 선택했다 하더라도 해당 OS 버전을 이용하는 고객은 인증과 게시 프로세스가 완료된 즉시 앱 목록을 확인할 수 있습니다. 이들 고객에게는 **취득 중지** 날짜가 적용되지 않습니다. ([표시 여부](choose-visibility-options.md#discoverability) 섹션에서 다른 선택으로 업데이트를 제출하건, **앱 개요** 페이지에서 **앱을 사용할 수 없도록 설정**을 선택한 경우를 제외하고)여전히 앱을 취득할 수 있습니다.
+>이전에 게시 된 앱이 이전 OS 버전 선택 하는 **취득 중지** 날짜를 지원 하는 경우, 해당 고객에 게 적용 되지 않습니다. ( [표시 여부](choose-visibility-options.md#discoverability) 섹션에서 새 선택 된 업데이트를 제출 하지 않는 한 또는 **앱 개요** 페이지에서 **사용할 수 없는 앱** 을 선택 하는 경우) 앱을 다운로드 할 수 있습니다.
 
 
 ## <a name="base-schedule"></a>기본 일정
@@ -60,7 +60,7 @@ Microsoft Store에서 앱을 더 이상 사용할 수 없게 만드는 날짜도
 
 **취득 주지**의 기본값은 '사용하지 않음'으로 설정되어 있습니다. 이를 변경하려면 드롭다운에서 **지정(at)** 을 선택해, 위에서 설명한대로 날짜와 시간을 지정하세요. 선택한 날짜와 시간부터 고객이 더 이상 앱을 취득할 수 없습니다.
 
-[표시 여부](choose-visibility-options.md#discoverability) 섹션에서 **앱을 검색할 수 있지만 사용할 수 없도록 설정** 을 선택하고, **취득 중지: 직접 링크가 있는 고객은 제품의 Microsoft Store 목록을 확인할 수 있지만, 과거 제품을 소유했거나, 판촉 코드가 있고, Windows 10 장치를 사용 중인 경우에만 다운로드 가능**을 선택했을 때와 같은 효과가 있습니다. 앱이 새 고객에게 제공되지 않게 하려면 앱 개요 페이지에서 **앱을 사용할 수 없도록 설정**을 클릭합니다. 자세한 내용은 [Microsoft Store에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store)를 참조하세요.
+[표시 여부](choose-visibility-options.md#discoverability) 섹션에서 **이 앱을 검색할 수 있지만 사용할 수 없는 확인** 을 선택 하 고 선택 **취득 중지 하는 대로이 옵션에 동일한 영향을 이해 해야 합니다: 직접 링크가 있는 고객은 제품의 스토어를 확인할 수 목록에 있지만 다운로드 가능, 과거 제품을 소유 또는 홍보 코드가 있고 Windows 10 장치를 사용 하는 경우.** 앱이 새 고객에게 제공되지 않게 하려면 앱 개요 페이지에서 **앱을 사용할 수 없도록 설정**을 클릭합니다. 자세한 내용은 [Microsoft Store에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store)를 참조하세요.
 
 > [!TIP]
 > **취득 중지**날짜를 선택했는데, 나중에 앱을 다시 사용할 수 있도록 만들려면 새로 제출하고, **취득 중지**를 **사용 안함**으로 바꿔야 합니다. 업데이트한 제출이 게시된 후 앱이 다시 사용할 수 있는 상태가 됩니다.

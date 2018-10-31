@@ -8,11 +8,11 @@ ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b89cad4c299f7326d0bb7d9ea4b8c6685f70f26c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763496"
+ms.locfileid: "5815983"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 

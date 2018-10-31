@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 수익 창출
 ms.localizationpriority: medium
 ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761744"
+ms.locfileid: "5817686"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 

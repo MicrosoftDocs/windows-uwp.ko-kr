@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 213c68a7e633d7084934120bf3438709701b5cb3
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 31b3379d66485fcd5ab417ecb2782b06f6e80e67
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5759133"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818490"
 ---
 # <a name="manage-package-flight-submissions"></a>패키지 플라이트 제출 관리
 
@@ -303,7 +303,7 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 | 값           | 유형    | 설명         |
 |-----------------|---------|------|
-|     date            |    문자열     |  보고서가 생성된 날짜 및 시간(ISO 8601 형식)입니다.    |
+|     date            |    string     |  날짜 및 시간 보고서 생성 된 ISO 8601 형식에서입니다.    |
 |     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
 
 

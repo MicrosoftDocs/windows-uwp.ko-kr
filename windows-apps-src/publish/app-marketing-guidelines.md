@@ -4,16 +4,16 @@ Description: Learn how to promote your apps and content in the Microsoft Store. 
 title: Microsoft Store 앱에 대 한 지침을 마케팅
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d065504385a5e7a743bd4936e9240565d3207a36
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 38dfdbc94112caa5e3fff7c1605fecece83b202d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745273"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5821097"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store 앱에 대 한 지침을 마케팅
 
@@ -47,9 +47,9 @@ Microsoft Store에서 앱의 목록에 더 많은 고객을 가질 수 있도록
 
 -   Microsoft 스토어의 앱 또는 기타 콘텐츠를 사용할 수 있거나 [Microsoft 계열사 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=624463)의 일부 여야 합니다.
 
--   개발자 센터에 등록되어 있는 경우 앱 개발자 계약의 ["Microsoft 마크에 사용권 부여"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) 섹션을 준수해야 합니다.
+-   파트너 센터에서 앱 개발자로 등록 한 경우 앱 개발자 계약의 ["Microsoft 마크에 사용권"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) 섹션을 준수 합니다.
 
--   Windows 개발자 센터를 사용 하 여 등록 되지 않은 경우 Microsoft Microsoft 스토어 배지 지침에 설명 된 대로 배지를 사용 하 여 전 세계, 비독점적, 양도, 무료 라이선스가 부여 합니다. Microsoft는 이 지침을 변경할 수 있으며, 이 경우 Microsoft는 적절한 방법을 통해 규정이 게시된 새 URL로 리디렉션을 제공합니다. Microsoft는 여기에 명시적으로 부여되지 않은 모든 권한을 보유합니다.
+-   파트너 센터에서 앱 개발자로 등록 되지 않은 경우 Microsoft Microsoft 스토어 배지 지침에 설명 된 대로 배지를 사용 하 여 전 세계, 비독점적, 양도, 무료 라이선스가 부여 합니다. Microsoft는 이 지침을 변경할 수 있으며, 이 경우 Microsoft는 적절한 방법을 통해 규정이 게시된 새 URL로 리디렉션을 제공합니다. Microsoft는 여기에 명시적으로 부여되지 않은 모든 권한을 보유합니다.
 
 -   [Microsoft 스토어 배지 지침](http://go.microsoft.com/fwlink/p/?LinkId=529769)에 설명 된 로고 사용 사양을 따릅니다.
 

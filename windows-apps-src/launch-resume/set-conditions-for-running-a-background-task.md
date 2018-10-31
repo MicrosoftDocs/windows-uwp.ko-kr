@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: e64f36eb400d683da1cb52a819da5aa245a41ac4
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5751419"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816512"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>백그라운드 작업 실행 조건 설정
 

@@ -4,16 +4,16 @@ Description: Follow these guidelines to prepare your app's packages for submissi
 title: 앱 패키지 요구 사항
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 5270215e1f4834a7e7c86ed4b3052ed4f791d57e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 1c76cb26d91ecd1f72b71f90b9ef464cdf52ba55
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764577"
+ms.locfileid: "5815516"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -74,6 +74,8 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 | 패키지 크기         | .msixbundle 또는.appxbundle: 번들 당 최대 25GB <br>Windows 10시 25분을 대상으로 하는.msix 또는.appx 패키지 패키지당 최대<br>Windows 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 8GB <br> Windows 8을 대상으로 하는 .appx 패키지: 패키지당 최대 2GB <br> Windows Phone 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 4GB <br> .xap 패키지: 패키지당 최대 1GB                                                                           |
 | 블록 맵 해시     | SHA2-256 알고리즘                                                   |
 
+> [!IMPORTANT]
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 ## <a name="supported-versions"></a>지원되는 버전
 

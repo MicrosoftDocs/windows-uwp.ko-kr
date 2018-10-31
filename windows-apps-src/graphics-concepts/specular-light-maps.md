@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bd9db0afa914ef7a56dbd55c938129b86a43743
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755324"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5820587"
 ---
 # <a name="specular-light-maps"></a>반사 조명 맵
 

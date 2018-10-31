@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b139d0b8747931f7cac9885d441122af97f7dad
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5759933"
+ms.locfileid: "5820673"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 

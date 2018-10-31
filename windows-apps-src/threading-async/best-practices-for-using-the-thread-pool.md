@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
 ms.openlocfilehash: ff607e3b39ea9d9a3731cc1f231fe1eb27b0b155
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747682"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5817756"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a>스레드 풀을 사용하기 위한 모범 사례
 

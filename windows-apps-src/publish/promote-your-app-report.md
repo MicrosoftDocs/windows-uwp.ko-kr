@@ -2,22 +2,22 @@
 author: JnHs
 title: 광고 캠페인 보고서
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: Windows 개발자 센터 대시보드의 광고 캠페인 보고서에서 앱 홍보 광고 캠페인의 성과를 확인할 수 있습니다.
+description: 파트너 센터에서 광고 캠페인 보고서에는 앱 홍보 광고 캠페인 성과 확인할 수 있습니다.
 ms.author: wdg-dev-content
-ms.date: 11/21/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e7bb2a4d592ae8201d27e45eb0f05d7fbca76a7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752718"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5819684"
 ---
 # <a name="ad-campaign-report"></a>광고 캠페인 보고서
 
-Windows 개발자 센터 대시보드에서 **광고 캠페인** 보고서에는 앱 홍보 [광고 캠페인](create-an-ad-campaign-for-your-app.md) 의 성과 확인할 수 있습니다. 보고서를 보려면 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **광고 캠페인**을 선택 합니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **광고 캠페인** 보고서에는 앱 홍보 [광고 캠페인](create-an-ad-campaign-for-your-app.md) 의 성과 확인할 수 있습니다. 보고서를 보려면 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **광고 캠페인**을 선택 합니다.
 
 ## <a name="definitions"></a>정의
 
@@ -50,7 +50,7 @@ Windows 개발자 센터 대시보드에서 **광고 캠페인** 보고서에는
 
 ## <a name="install-tracking"></a>설치 추적
 
-개발자 센터를 통해 설치 앱 홍보를 하면 앱 광고에 꼭 필요한 노출이 이루어집니다. 광고 노출은 앱에 가장 관심이 있을 만한 고객에게 표시되며, 이들 고객은 스토어에서 광고를 클릭하고 앱을 설치합니다. 이전에는 광고 캠페인에서 비롯된 설치와 다른 출처에서 비롯된 설치를 구분하기가 어려웠습니다.
+파트너 센터를 통해 설치 광고 캠페인을 실행 필요한 노출이 이루어집니다 앱. 광고 노출은 앱에 가장 관심이 있을 만한 고객에게 표시되며, 이들 고객은 스토어에서 광고를 클릭하고 앱을 설치합니다. 이전에는 광고 캠페인에서 비롯된 설치와 다른 출처에서 비롯된 설치를 구분하기가 어려웠습니다.
 
 이 보고서는 광고 캠페인 실행으로 획득한 설치 수를 보여 줍니다. 이 보고서는 광고 캠페인의 직접적인 결과인 다운로드만 표시하며 다른 소스에서의 다운로드는 포함하지 않습니다.
 
@@ -69,7 +69,7 @@ Windows 개발자 센터 대시보드에서 **광고 캠페인** 보고서에는
 2.  고객이 Microsoft 계정에 로그인한 상태입니다.
 3.  고객이 [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) 요구 사항을 충족합니다. COPPA 요구 사항을 충족하지 않는 고객은 추적할 수 없습니다.
 
-결과적으로, 앱 설치 추적은 광고 캠페인으로 생성된 실제 설치 수보다 적게 보고할 수 있습니다. 총 앱 설치 수(캠페인 및 기타 방법을 통해 설치)는 개발자 센터의 [구입](acquisitions-report.md) 보고서에서 확인할 수 있습니다.
+결과적으로, 앱 설치 추적은 광고 캠페인으로 생성된 실제 설치 수보다 적게 보고할 수 있습니다. 앱에 대 한 설치의 총 수를 확인할 수 (캠페인을 통해 그렇지 않은 경우)에서 파트너 센터에서 [구입](acquisitions-report.md) 보고서 합니다.
 
 
 ## <a name="account-billing-history"></a>계정 청구 내역

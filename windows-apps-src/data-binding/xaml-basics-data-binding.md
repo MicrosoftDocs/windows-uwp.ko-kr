@@ -8,11 +8,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8000d9105481bc177eb2fc64646aec009fd80d36
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757213"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5820068"
 ---
 # <a name="create-data-bindings"></a>데이터 바인딩 만들기
 

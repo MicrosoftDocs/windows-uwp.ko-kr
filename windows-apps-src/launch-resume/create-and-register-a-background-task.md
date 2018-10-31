@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 8d32b4559e91cc898944f3767d4b082935359d49
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755410"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5820703"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Out-of-process 백그라운드 작업 만들기 및 등록
 

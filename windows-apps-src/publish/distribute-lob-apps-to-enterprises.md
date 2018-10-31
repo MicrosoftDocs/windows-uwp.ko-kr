@@ -4,16 +4,16 @@ Description: You can publish line-of-business (LOB) apps directly to enterprises
 title: 엔터프라이즈에 LOB 앱 배포
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ms.author: wdg-dev-content
-ms.date: 03/28/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈
 ms.localizationpriority: medium
-ms.openlocfilehash: c491e5db7b5cea0a1b2a6bb9387f1432d007bed2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d90a3b3b0eb216dbc07bbc331d7d461ed0f825c4
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5758147"
+ms.locfileid: "5816482"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -24,7 +24,7 @@ LOB 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고
 > 지금은 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 무료 앱만 독점적으로 엔터프라이즈에 배포할 수 있습니다. LOB로 유료 앱을 제출하는 경우 엔터프라이즈에서 사용할 수 없습니다. 
 
 > [!IMPORTANT]
-> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. LOB 앱에 대한 모든 제출은 Windows 개발자 센터 대시보드를 사용해야 합니다.
+> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. 파트너 센터를 통해 LOB 앱에 대 한 모든 제출은 게시 해야 합니다.
 
 
 ## <a name="set-up-the-enterprise-association"></a>엔터프라이즈 연결 설정
@@ -94,7 +94,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 비즈니스용 Microsoft 스토어와 교육용 Microsoft 스토어를 통해 엔터프라이즈가 앱을 사용할 수 있도록 하면 앱이 스토어에서 서명되었고 표준 스토어 정책을 준수함을 보장할 수 있습니다.
 
-경우에 따라 회사에서 LOB 앱이 Windows 개발자 센터를 통해 제출되는 것을 원하지 않을 수 있습니다(예: 규제 준수 때문이거나 앱에서 추가 기능이 필요한 경우). 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
+경우에 따라 회사 (예: 규제 준수 때문 이거나 앱 추가 기능이 필요한) 파트너 센터를 통해 제출 되 LOB 앱이 하지 않을. 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
 
 자세한 내용은 [Windows 10에서 LOB 앱을 테스트용으로 로드](http://go.microsoft.com/fwlink/p/?LinkId=623433)를 참조하세요.
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 사용자 지정 오디오, 알림, 오디오, 사운드
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ef27dfed400715256d1d9cfa51f383a9b72c90d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5744558"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5814682"
 ---
 # <a name="custom-audio-on-toasts"></a>알림에 대한 사용자 지정 오디오
 

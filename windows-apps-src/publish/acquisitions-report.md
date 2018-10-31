@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: The Acquisitions report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.
+Description: The Acquisitions report in Partner Center lets you see who has acquired and installed your app, along with demographic and platform details.
 title: 구입 보고서
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 09/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 구매, 앱 판매, 앱 다운로드, 설치, 깔때기, 획득, 변환, 채널, 앱 페이지 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: c2ccb3088d0ef241f950a5f5fcf3f40969bc0531
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: bbd84b32a4e94687ff50f553137a86885094a7d6
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769229"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813310"
 ---
 # <a name="acquisitions-report"></a>구입 보고서
 
 
-Windows 개발자 센터 대시보드의 **구입** 보고서 구입 및와 함께 인구 통계 앱 설치를 확인할 수 있습니다 (Xbox 포함) 고객 Windows10에 있는 응용 프로그램에 도달한 방법에 대 한 정보를 표시 및 플랫폼 세부 정보 목록입니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다. 
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **구입** 보고서 구입 및와 함께 인구 통계 앱 설치를 확인할 수 있습니다 (Xbox 포함) 고객 Windows10에 있는 앱의 목록에 도달한 방법에 대 한 정보를 표시 및 플랫폼 세부 합니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다. 
 
-대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 이 보고서에서 **구입**은 새 고객이 앱에 대한 라이선스를 획득했음을 의미합니다(금액을 청구했거나 무료로 제공했는지와 관계없음). **설치**는 Windows 10 장치에 앱이 설치 중임을 의미합니다.
 

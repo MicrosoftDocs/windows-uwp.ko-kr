@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 인쇄, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 51afa49dac094bdd203e080c682e681f752d15e4
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769029"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5814841"
 ---
 # <a name="printing-and-scanning"></a>인쇄 및 스캔
 

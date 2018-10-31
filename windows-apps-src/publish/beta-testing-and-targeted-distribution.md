@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: The Windows Dev Center dashboard gives you the option to make your app available only to specified people so that you can have testers try it out before you offer it to the public.
+Description: Partner Center gives you several options to let testers try out your app before you offer it to the public.
 title: 베타 테스트 및 대상이 지정된 배포
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
 ms.author: wdg-dev-content
-ms.date: 05/10/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 베타 테스트, 제한 배포, 베타, 베타들, 테스트, 테스터
 ms.localizationpriority: medium
-ms.openlocfilehash: e57490e2ad9c3991baf40b6c4d15d35def59f94f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 49641007f939faf333ea5aca357266225f8484c8
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746746"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813871"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>베타 테스트 및 대상이 지정된 배포
 
 아무리 엄격한 앱 테스트도 다른 사용자가 실제로 앱을 사용하는 현실 세계의 테스트만큼 엄격하지는 않습니다. 테스터는 맞춤법 오류, 명확하지 않은 앱 흐름, 앱 충돌을 초래할 수 있는 오류 등 개발자가 간과한 문제를 찾아낼 수 있습니다. 그런 다음 제출 앱을 공개적으로 릴리스하기 전에 문제를 수정할 기회가 생기므로 보다 다듬어진 최종 제품을 만들 수 있습니다. 
 
-Windows 개발자 센터 대시보드에서는 일반에게 제공하기 전에 테스터를 통해 평가해 볼 수 있도록 지정된 사람만 앱을 사용하도록 앱을 제출하는 몇 가지 옵션을 제공합니다. 
+파트너 센터 테스터에 게 제공 하기 전에 앱을 사용해 수 있도록 몇 가지 옵션이 있습니다.
 
 선택한 방법에 관계 없이 앱을 베타 테스트할 때 주의해야 할 몇 가지 사항이 있습니다.
 
@@ -33,7 +33,7 @@ Windows 개발자 센터 대시보드에서는 일반에게 제공하기 전에 
 
 다른 사람이 이용하기 전에 테스터가 앱을 사용하도록 하고 다른 사람은 목록을 볼 수 없도록 하고 싶은 경우에는 [가시성](choose-visibility-options.md) 아래 **개인 대상**옵션을 사용합니다(제출서의 **가격 책정 및 가용성** 페이지에서). 직접 링크에 입력이 가능한 경우라도 다른 사람이 앱의 Store 목록을 보지 못하도록 철저하게 차단하는 동시에 테스터에게 앱을 배포할 수 있는 유일한 방법입니다. 
 
-**개인 대상** 옵션과 수만 사용할 수 공중 대상에 앱 이미 게시 하지 않은 경우. 이 옵션을 사용 하 여 모든 OS 버전을 대상으로 하는 앱과 하지만, 테스터가 Windows 10 버전 1607 이상 (Xbox One 포함)을 실행 해야 하 고 제공 하는 메일 주소와 연결 된 Microsoft 계정으로 로그인 해야 합니다.
+**개인 대상** 옵션과 공중 대상에 앱 이미 게시 하지 않은 경우에 사용 수 있습니다. 이 옵션을 사용 하 여 모든 OS 버전을 대상으로 하는 앱과 하지만, 테스터가 Windows 10 버전 1607 이상 (Xbox One 포함)을 실행 해야 하 고 제공 하는 메일 주소와 연결 된 Microsoft 계정으로 로그인 해야 합니다.
 
 자세한 내용은 [개인 대상](choose-visibility-options.md#audience)을 참조하세요.
 
@@ -71,6 +71,8 @@ Windows 개발자 센터 대시보드에서는 일반에게 제공하기 전에 
 - 제품이 게시된 후에 이를 한번 사용해 볼 수 있도록 링크([앱 ID 페이지](view-app-identity-details.md)의 **URL**)를 테스터에게 배포합니다.
 - 앱을 공중 대상에게 제공할 준비가 되면 새 제출을 만들고 **가시성** 옵션을 **이 제품을 Store에서 다운로드 및 검색이 가능하게 설정**(변경하려는 다른 모든 사항 포함)으로 변경합니다.
 
+> [!IMPORTANT]
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows Phone 대상으로 하는 패키지를 포함할 수 없습니다 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>지정된 이메일 주소를 사용하여 Windows Phone 고객에게 배포
 

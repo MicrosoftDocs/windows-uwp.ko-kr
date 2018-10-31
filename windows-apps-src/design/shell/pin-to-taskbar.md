@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 작업 표시줄, 작업 표시줄 관리자, 작업 표시줄에 고정, 기본 타일
 ms.localizationpriority: medium
 ms.openlocfilehash: 47fcd1f9d090c49ecbd49e05696b33f789973160
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748095"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5815101"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>작업 표시줄에 앱 고정
 

@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 821a28109c511bb2bd96bf5cbccb190cbe928abc
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f7e211ebfa28421340e716c0176cab80a9511671
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741578"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818457"
 ---
 #<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
@@ -300,7 +300,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>앱 수명 주기.</strong> <br><br>앱 시작, 일시 중단, 다시 시작 및 닫기 시 이벤트 처리는 응용 프로그램 상태를 저장/복원하고 다른 작업을 실행할 수 있는 기회를 제공합니다.</td>
-<td align="left">각 작업에는 자체 <strong>작업 수명 주기</strong>와 <strong>다시 시작</strong> 등의 상태가 있습니다. <strong>onResume</strong> 등의 <strong>수명 주기 콜백</strong>은 <strong>활동 클래스</strong>에서 구현됩니다.</td>
+<td align="left">각 작업에는 자체 <strong>작업 수명 주기</strong>와 <strong>다시 시작</strong> 등의 상태가 있습니다. <strong>OnResume</strong> 등의 <strong>수명 주기 콜백</strong> <strong>활동 클래스</strong>에서 구현 됩니다.</td>
 <td align="left"><strong>응용 프로그램 수명 주기</strong>에는 <strong>일시 중단</strong> 등의 상태가 있습니다. <strong>applicationDidEnterBackground:</strong>와 같은 메서드가 <strong>응용 프로그램 대리자 개체</strong>에서 구현되어 상태 변경 시 코드를 실행합니다.</td>
 <td align="left">응용 프로그램의 <strong>앱 실행 상태</strong>는 NotRunning, Activated, Running, Suspending, Suspended 및 Resuming입니다.<br/><br/>상태가 변경될 때 앱에서 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.aspx">응용 프로그램 클래스</a></strong> 메서드 OnLaunched, OnActivated, Suspending 또는 Resuming을 구현하여 코드를 실행할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt243287.aspx">앱 수명 주기</a></td>
 </tr>

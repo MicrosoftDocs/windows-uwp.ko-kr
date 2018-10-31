@@ -4,19 +4,18 @@ Description: When submitting an add-on, the options on the Properties page help 
 title: 추가 기능 속성 입력
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f616e4da96c1a2c59822d1370b49016dbca1bb7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: fa0559c79b758373347427c0aa88b351c0fbddf0
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745559"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816472"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
-
 
 추가 기능을 제출할 때 **속성** 페이지의 옵션을 통해 고객에게 제공되었을 때 나타나는 추가 기능의 동작을 결정할 수 있습니다.
 
@@ -32,7 +31,7 @@ ms.locfileid: "5745559"
 
 ## <a name="product-lifetime"></a>제품 수명
 
-제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 **계속**으로, 추가 기능이 만료되지 않음을 나타냅니다. 원하는 경우 1~365일 옵션으로 정해진 기간 후에 추가 기능이 만료되도록 **제품 수명**을 설정할 수 있습니다.
+제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 **계속**으로, 추가 기능이 만료되지 않음을 나타냅니다. 원하는 경우, 추가 기능 (1 ~ 365 일 옵션)으로 설정된 된 지속 시간 후 만료 되도록 **제품 수명** 변경할 수 있습니다.
 
 
 ## <a name="quantity"></a>수량
