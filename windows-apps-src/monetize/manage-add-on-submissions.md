@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bf15f71071355ddf61d820fc33949b10d42cdfa
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d8e3ab04c2842fc08fb8b0aa298660bfbd0cfd7f
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833197"
 ---
 # <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
@@ -336,7 +336,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 유형    | 설명               |
 |-----------------|---------|------|
-|     date            |    문자열     |  보고서가 생성된 날짜 및 시간(ISO 8601 형식)입니다.    |
+|     date            |    string     |  날짜 및 시간 보고서 생성 된 ISO 8601 형식에서입니다.    |
 |     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
 
 ## <a name="enums"></a>열거

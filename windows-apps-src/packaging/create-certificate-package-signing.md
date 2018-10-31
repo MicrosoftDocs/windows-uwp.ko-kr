@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: 419fa90dfd21c42d256aeea8848862b8c5eb3628
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831222"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>패키지 서명용 인증서 만들기
 

@@ -4,28 +4,28 @@ Description: The Store listings section of the app submission process is where y
 title: 앱 Store 목록 만들기
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 06/18/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
 ms.localizationpriority: medium
-ms.openlocfilehash: 237642897beb51c9b685068ee714182fa1fe1bb5
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ec1867e747f3458e3a9cffabe9a45535d4c27489
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830003"
 ---
 # <a name="create-app-store-listings"></a>앱 Store 목록 만들기
 
 
 [앱 제출 프로세스](app-submissions.md)의 **Store 목록** 섹션에서는 Microsoft Store의 앱 목록을 확인할 때 고객에게 표시되는 텍스트 및 [이미지](app-screenshots-and-images.md)를 제공합니다.
 
-**Store 목록**의 많은 필드가 옵션이지만 목록이 돋보이도록 다양한 이미지와 가능한 많은 정보를 제공하는 것이 좋습니다. **Store 목록** 단계가 완료된 것으로 간주되는 데 필요한 최소 요구 사항은 텍스트 설명과 하나 이상의 [스크린샷](app-screenshots-and-images.md#screenshots)입니다. 일부 제출에서는 [개인 정보 취급 방침](#privacy-policy) 및 [지원 연락처 정보](#support-contact-info) 필드가 필수입니다. 
+**Store 목록**의 많은 필드가 옵션이지만 목록이 돋보이도록 다양한 이미지와 가능한 많은 정보를 제공하는 것이 좋습니다. **Store 목록** 단계가 완료된 것으로 간주되는 데 필요한 최소 요구 사항은 텍스트 설명과 하나 이상의 [스크린샷](app-screenshots-and-images.md#screenshots)입니다.
 
 > [!TIP]
-> 또한 대시보드에 직접 정보를 제공하고 파일을 업로드하는 것이 아니라 .csv 파일에서 오프라인으로 목록 정보를 입력하고 싶은 경우에 [Store 목록 가져오기 및 내보내기](import-and-export-store-listings.md)를 선택적으로 수행할 수 있습니다. 가져오기 및 내보내기 옵션을 사용할 수 있는 기능은 한 번에 여러 번 업데이트를 수행할 수 있기 때문에 목록이 다양한 언어로 되어 있는 경우에 특히 편리할 수 있습니다. 
+> 하면 필요에 따라 [Store 목록 가져오기 및 내보내기](import-and-export-store-listings.md) .csv 파일을 사용 하는 것이 아니라 제공 정보 및 파트너 센터에서 직접 파일을 업로드에서 오프 라인으로 목록 정보를 입력 하 고 하려는 경우. 가져오기 및 내보내기 옵션을 사용할 수 있는 기능은 한 번에 여러 번 업데이트를 수행할 수 있기 때문에 목록이 다양한 언어로 되어 있는 경우에 특히 편리할 수 있습니다. 
 
-기본적으로 모든 대상 운영 체제에 동일한 Store 목록(언어별)을 사용합니다. 제출이 지원하는 특정 운영 체제에 대한 사용자 지정된 Store 목록을 사용하려는 경우 [플랫폼별 Store 목록 만들기](create-platform-specific-store-listings.md)가 가능합니다. Windows 10 고객에게는 항상 기본 목록이 표시됩니다.
+이전에 게시 된 앱에 Windows에서 지 원하는 경우 8.x 및/또는 Windows Phone 8.x 또는 이전에 해당 고객에 게 표시 하도록 [플랫폼별 스토어 목록을 만들](create-platform-specific-store-listings.md) 수 있습니다. 
 
 ## <a name="store-listing-languages"></a>Microsoft Store 목록 언어
 
@@ -38,19 +38,19 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 **추가 Microsoft Store 목록 언어** 섹션에서 **추가 언어 관리**를 클릭하여 패키지에 포함되지 *않은* 언어를 추가하거나 제거할 수 있습니다. 추가할 언어의 확인란을 선택한 다음 **업데이트**를 클릭합니다. 선택한 언어는 **추가 Microsoft Store 목록 언어** 섹션에 표시됩니다. 이러한 언어 중 하나 이상을 제거하려면 **제거**를 클릭하거나 **추가 언어 관리**를 클릭하고 제거할 언어의 확인란을 선택 취소합니다.
 
-선택을 완료하면 **저장**을 클릭하여 제출 개요 페이지로 돌아갑니다.
+선택을 완료하면 **저장**을 클릭하여 제출 개요 페이지로 돌아갑니다. 
 
 ## <a name="add-and-edit-store-listing-info"></a>추가 하 고 스토어 목록 정보를 편집 합니다.
 
-스토어 목록을 편집 하려면 제출 개요 페이지에서 언어 이름을 선택 합니다.
+스토어 목록을 편집 하려면 제출 개요 페이지에서 언어 이름을 선택 합니다. Store 목록 내보내기 오프 라인으로 작업 하 고 목록 데이터를 모두를 한 번에 가져올를 선택 하지 않는 한 각 언어를 별도로 편집 해야 합니다. 작동 하는 방법에 대 한 자세한 내용은 참조 [가져오기 Store 목록 내보내기 및](import-and-export-store-listings.md).
 
-**Microsoft Store 목록** 페이지의 맨 위에 선택 언어에 대한 기본 Microsoft Store 목록과 관련된 필드가 있습니다. 이러한 필드는 모든 고객에게 표시되지만, 이전 OS 버전(Windows 8.x 이하, Windows Phone 8.x 이하)을 대상으로 하는 패키지가 있고 지정된 OS 버전에서 고객에게 표시될 다른 스크린샷 또는 정보를 포함하도록 플랫폼별 Microsoft Store 목록을 만든 경우는 표시되지 않습니다. 자세한 내용은 [플랫폼별 Microsoft Store 목록 만들기](create-platform-specific-store-listings.md)를 참조하세요.
+다음은 사용 가능한 필드에 대 한 설명입니다.
 
 ## <a name="product-name"></a>제품 이름
 
 이 드롭다운 상자는 이름 (앱에 대 한 이름을 여러 개 예약 않은) 하는 경우 스토어 목록에 사용 해야를 지정할 수 있습니다.
 
-스토어 목록에서 작업할 때와 동일한 언어로 패키지를 업로드 하는 경우 해당 패키지에 사용한 이름이 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 사용 하 여 새 제출을 만들 때 다음 다른 예약 된 이름을 선택할 수 있습니다.
+업로드 한 경우 스토어 목록이와 동일한 언어로 패키지 작업을 진행 중, 해당 패키지에 사용할 이름을 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 업로드 한 후 새 제출을 만들 때 다음 다른 예약 된 이름을 선택할 수 있습니다.
 
 언어에 대 한 패키지를 업로드 하지 않은 작업 중인 및 둘 이상의 이름을 예약한, 이름을 나타내야 해당 언어에 연결된 된 패키지가 없으므로 예약 된 앱 이름 중 하나를 선택 해야 합니다.
 
@@ -67,14 +67,14 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 ## <a name="whats-new-in-this-version"></a>이 버전의 새로운 기능
 
-앱을 처음으로 제출하려는 경우에는 이 필드를 비워둡니다. 기존 앱의 업데이트를 제출할 경우 이 필드를 통해 고객에게 최신 릴리스에서 변경된 내용을 알릴 수 있습니다. 이 필드는 1,500자로 제한됩니다 (전에는 이 필드가 **릴리스 정보**라고 불림).
+앱을 처음으로 제출하려는 경우에는 이 필드를 비워둡니다. 기존 앱에 대 한 업데이트, 최신 릴리스에서 변경 된 내용 고객 수입니다. 이 필드는 1,500자로 제한됩니다 (전에는 이 필드가 **릴리스 정보**라고 불림).
 
-## <a name="app-features"></a>앱 기능
+## <a name="product-features"></a>제품 기능
 
 앱의 주요 기능에 대한 간단한 요약입니다. 기능은 **설명** 외에도 앱 Store 목록의 **기능** 섹션에 글머리 기호 목록으로 고객에게 표시됩니다. 기능당 몇 단어 또는 200자 이하만 사용하여 간단하게 유지합니다. 최대 20개 기능을 포함할 수 있습니다.
 
 > [!NOTE]
-> Store 목록에 글머리 기호로 앱 기능이 표시되므로 별도의 글머리 기호를 추가하지 마세요.
+> 이러한 기능은 나타나므로 고유한 별도 글머리 기호를 추가 하지 마세요 스토어 목록에 글머리 표시 됩니다.
 
 ## <a name="screenshots"></a>스크린샷
 
@@ -93,11 +93,11 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 자세한 내용은 [Microsoft Store 로고](app-screenshots-and-images.md#store-logos)를 참조하세요.
 
 
-## <a name="additional-art-assets"></a>추가 아트 자산
+## <a name="trailers-and-additional-assets"></a>예고편 및 추가 자산
 
-예고편과 홍보 이미지 등 제품에 대한 추가 자산을 제출할 수 있습니다. 모두 선택 사항이지만, 가능한 자산을 많이 업로드 하는 것이 좋습니다. 이런 이미지는 고객의 제품에 대한 이해를 높이고, 더욱 소구력 높은 목록을 만드는 데 도움을 줍니다.
+비디오 예고편과 홍보 이미지 등 제품에 대 한 추가 자산을 제출할 수 있습니다. 모두 선택 사항이지만, 가능한 자산을 많이 업로드 하는 것이 좋습니다. 이런 이미지는 고객의 제품에 대한 이해를 높이고, 더욱 소구력 높은 목록을 만드는 데 도움을 줍니다.
 
-자세한 내용은 [추가 아트 자산](app-screenshots-and-images.md#additional-art-assets)을 참조하세요.
+자세한 내용은 [예고편과 추가 자산을](app-screenshots-and-images.md#trailers-and-additional-assets)참조 하세요.
 
 <a id="supplemental-information" />
 
@@ -149,7 +149,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 ## <a name="additional-information"></a>추가 정보
 
-아래 설명한 항목은 고객들의 제품 발견과 이해에 도움을 줍니다. 여기 입력한 정보는 [플랫폼별 Microsoft Store 목록](create-platform-specific-store-listings.md)을 만든 경우에도 운영 체제와 상관 없이 지정 언어로 Microsoft Store 목록에 표시됩니다. (이 섹션은 이전에 **공유 필드**로 불림).
+아래 설명한 항목은 고객들의 제품 발견과 이해에 도움을 줍니다. (이 섹션은 이전에 **공유 필드**로 불림).
 
 ### <a name="search-terms"></a>검색어
 

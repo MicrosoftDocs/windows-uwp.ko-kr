@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10 uwp, 광고, 광고, 광고 조정
 ms.localizationpriority: medium
 ms.openlocfilehash: f8ebffbd7a2fa209289c99780e0bbbea94afac2e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833384"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft 광고 조정 서비스
 

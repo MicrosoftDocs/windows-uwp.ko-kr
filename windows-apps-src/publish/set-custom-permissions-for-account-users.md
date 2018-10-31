@@ -4,38 +4,38 @@ Description: Set roles or custom permissions for account users.
 title: 계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 07/11/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: 753b71d409fd660687af77410f7f5796aa3c8a5c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748651"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835706"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
-[개발자 센터 계정에 사용자 추가](add-users-groups-and-azure-ad-applications.md)할 때는 계정 내의 액세스 대상을 지정해야 합니다. 이를 위해 전체 계정에 적용되는 [표준 역할](#roles)을 할당하거나 [사용 권한 사용자 지정](#custom)을 통해 적정 수준의 액세스 권한을 제공할 수 있습니다. 사용자 지정 권한 중 일부는 전체 계정에 적용되며, 일부는 한 제품이나 특정 제품들로 제한될 수 있습니다(원할 경우 모든 제품에 권한 부여가 가능).
+때 [파트너 센터 계정에 사용자를 추가](add-users-groups-and-azure-ad-applications.md)해야 계정 내의 액세스 대상을 지정 합니다. 이를 위해 전체 계정에 적용되는 [표준 역할](#roles)을 할당하거나 [사용 권한 사용자 지정](#custom)을 통해 적정 수준의 액세스 권한을 제공할 수 있습니다. 사용자 지정 권한 중 일부는 전체 계정에 적용되며, 일부는 한 제품이나 특정 제품들로 제한될 수 있습니다(원할 경우 모든 제품에 권한 부여가 가능).
 
 > [!NOTE] 
 > 사용자, 그룹, Azure AD 응용 프로그램 등 무엇을 추가하든 동일한 역할 및 권한을 적용할 수 있습니다.
 
 어떤 역할 또는 권한을 적용할지 결정할 때 다음을 명심해야 합니다. 
--   사용자(그룹 및 Azure AD 응용 프로그램 포함)는 할당된 역할과 관련된 권한으로 전체 개발자 센터 계정에 액세스할 수 있습니다. 단, 특정 앱 및/또는 추가 기능에 적용되도록 [사용 권한 사용자 지정](#custom)을 하고 [제품 수준 사용 권한](#product-level-permissions)을 할당한 경우는 제외합니다.
+-   사용자 (그룹 및 Azure AD 응용 프로그램 포함) 하지 않는 한 해당 할당 된 역할와 관련 된 권한으로 전체 파트너 센터 계정에 액세스할 수 있습니다 [사용 권한 사용자 지정](#custom) 및 할당 [제품 수준 사용 권한](#product-level-permissions) 하 여 특정 앱 및/또는 추가 기능만 사용할 수 있습니다.
 -   여러 역할을 선택하거나, 원하는 액세스 권한을 부여하도록 사용자 지정 권한을 사용하여 사용자, 그룹 또는 Azure AD 응용 프로그램이 둘 이상의 역할 기능에 액세스하도록 할 수 있습니다.
 -   특정 역할이 있는 사용자(또는 사용자 지정 권한 집합)는 다른 역할(또는 권한 집합)이 있는 그룹의 일부가 될 수도 있습니다. 이런 경우 사용자는 그룹과 개별 계정 모두와 연결된 기능 모두에 액세스할 수 있습니다.
 
 > [!TIP]
-> 이 항목은 Windows 앱 개발자 프로그램에만 해당합니다. 하드웨어 개발자 프로그램에서 사용자 역할에 대한 정보는 [사용자 역할 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles)를 참조하세요. Windows 데스크톱 응용 프로그램에서 사용자 역할에 대한 정보는 [Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users)을 참조하세요.
+> 이 항목은 [파트너 센터](https://partner.microsoft.com/dashboard)에서 Windows 앱 개발자 프로그램 관련이 있습니다. 하드웨어 개발자 프로그램에서 사용자 역할에 대한 정보는 [사용자 역할 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles)를 참조하세요. Windows 데스크톱 응용 프로그램에서 사용자 역할에 대한 정보는 [Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users)을 참조하세요.
 
 
 <span id="roles" />
 
 ## <a name="assign-roles-to-account-users"></a>계정 사용자에게 역할 할당
 
-기본적으로 사용자, 그룹 또는 Azure AD 응용 프로그램을 개발자 센터 계정에 추가할 때 선택할 수 있는 표준 역할 집합이 표시됩니다. 각 역할에는 계정 내에서 특정 기능을 수행하기 위해 특정 사용 권한 집합이 있습니다. 
+기본적으로 사용자, 그룹 또는 Azure AD 응용 프로그램 파트너 센터 계정에 추가할 때 선택할 수 있는 작업에 대 한 표준 역할 집합이 표시 됩니다. 각 역할에는 계정 내에서 특정 기능을 수행하기 위해 특정 사용 권한 집합이 있습니다. 
 
 **사용 권한 사용자 지정**을 선택하여 [사용자 지정 권한](#custom)을 정의하지 않는 한, 계정에 추가하는 각각의 사용자, 그룹 또는 Azure AD 응용 프로그램에 다음 표준 역할 중 하나 이상을 할당해야 합니다. 
 
@@ -45,7 +45,7 @@ ms.locfileid: "5748651"
 
 | 역할                 | 설명              |
 |----------------------|--------------------------|
-| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 여기에는 개발자 센터의 사용자를 관리하는 권한이 포함되지만 Azure AD 테넌트에서 사용자를 생성하고 삭제하는 기능은 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자에게 전역 관리자 역할이 할당되었지만 조직의 Azure AD에서 관리자 권한을 가지고 있지 않은 경우에는 새 사용자를 만들거나 디렉터리에서 사용자를 삭제할 수 없습니다(사용자의 개발자 센터 역할은 변경할 수 있음). <p> 개발자 센터 계정이 여러 개의 Azure AD 테넌트와 연결된 경우 관리자는 해당 테넌트에 대해 전역 관리자 권한이 있는 계정을 가진 사용자와 동일한 테넌트에 로그인하지 않으면 사용자에 대한 전체 정보(이름, 성, 암호 복구 메일, Azure AD 전역 관리자인지 여부 포함)를 볼 수 없습니다. 그러나 개발자 센터 계정과 연결된 모든 테넌트에서 사용자를 추가 및 제거할 수 있습니다. |
+| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 파트너 센터의 사용자를 관리 하이 포함 되지만를 만들고 Azure AD 테 넌 트에 사용자를 삭제할 수는 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자가 관리자 역할이 할당 되었지만 조직의 전역 관리자 권한은 없는 경우 Azure AD 되지는지 않습니다 새 사용자를 만들거나 (경우에 사용자의 파트너 센터 역할을 변경할 수 있음) 디렉터리에서 사용자를 삭제할 수 없습니다. <p> 파트너 센터 계정을 이면 둘 이상의 Azure AD 테 넌 트와 연결 하는 경우 관리자 수 없는 사용자에 대 한 전체 세부 정보 표시 (이름, 성, 암호 복구 메일을 포함 하 여 Azure AD 전역 관리자 인지 여부 및) 묶인 경우 제외 해당 테 넌 트에 대 한 전역 관리자 권한이 있는 계정 가진 사용자와 동일한 테 넌 트에 로그인 합니다. 그러나 추가 하 고 파트너 센터 계정과 연결 된 모든 테 넌 트에서 사용자를 제거할 수 있습니다. |
 | 개발자            | 패키지를 업로드하고 앱 및 추가 기능을 제출할 수 있으며 원격 분석 세부 사항에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다. [장치 간 환경](https://go.microsoft.com/fwlink/?linkid=874042) 기능에 액세스할 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
 | 비즈니스 기여자 | [상태](health-report.md) 및 [사용](usage-report.md) 보고서를 볼 수 있습니다. 제품을 만들거나 제출할 수 없고, 계정 설정을 변경하거나 재무 정보를 볼 수 없습니다.   |
 | 재무 기여자  | [지급 보고서](payout-summary.md), 재무 정보 및 구입 보고서를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.    |
@@ -173,7 +173,6 @@ ms.locfileid: "5748651"
     <tr><td align="left">    <b>상태</b> </td><td>    제품에 대한 <a href="health-report.md">상태 보고서</a>를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>고객 피드백</b>    </td><td>    제품에 대한 <a href="reviews-report.md">리뷰</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음(피드백이나 리뷰에 응답하려면 <b>고객에게 문의</b> 권한을 부여받아야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
     <tr><td align="left">    <b>Xbox 분석</b> </td><td>    제품에 대 한 [Xbox 분석 보고서](xbox-analytics-report.md) 를 볼 수 있습니다.    </td><td>    해당 없음   </td><td>    해당 없음       </td><td>    해당 없음          </td></tr>
-    <tr><td align="left">    <b>실시간</b>   </td><td>    제품에 대한 실시간 보고서를 볼 수 있습니다. (주: 이 보고서는 <a href="dev-center-insider-program.md">개발자 센터 참가자 프로그램</a>을 통해서만 제공되고 있습니다.)      </td><td>    해당 없음   </td><td>    해당 없음     </td><td>    해당 없음                 </td></tr>
     </tbody>
     </table>
 

@@ -3,21 +3,21 @@ author: JnHs
 Description: Learn how to create customer segments so you can target a subset of your customer base for promotional or engagement purposes.
 title: 고객층 만들기
 ms.author: wdg-dev-content
-ms.date: 07/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 세그먼트, 세그먼트들, 대상 그룹, 고객
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
-ms.openlocfilehash: d6de398dd69bb71f2bc895877ac2d734efbec3ad
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: b53c3c3480a986e77ad44f95831b1be5ce016808
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745313"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828719"
 ---
 # <a name="create-customer-segments"></a>고객층 만들기
 
-프로모션 및 참여를 목적으로 앱 고객의 하위 집합을 대상으로 지정하려는 경우가 있습니다. 선택한 인구 또는 수익 기준을 충족하는 Windows10 고객을 포함하는 *세그먼트*로 알려진 [고객 그룹](create-customer-groups.md) 유형을 Windows 개발자 센터에서 만들어 이 작업을 수행할 수 있습니다.
+프로모션 및 참여를 목적으로 앱 고객의 하위 집합을 대상으로 지정하려는 경우가 있습니다. 일종의 사용자가 선택한 수익 기준 또는 인구 충족 하는 Windows 10 고객을 포함 하는 *세그먼트* 라고 하는 [고객 그룹](create-customer-groups.md) 을 만들어 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 수행할 수 있습니다.
 
 예를 들어 50세 이상의 고객만 포함하거나 Microsoft Store에서 10달러 이상을 소비한 고객을 포함하는 고객층을 만들 수 있습니다. 또한 이러한 조건을 결합하여 50세 이상이면서 스토어에서 10달러 이상을 소비한 모든 고객을 포함하는 고객층을 만들 수도 있습니다. 
 
@@ -35,7 +35,7 @@ ms.locfileid: "5745313"
 
 ## <a name="to-create-a-customer-segment"></a>고객층을 만들려면
 
-1.  Windows 개발자 센터 대시보드의 왼쪽 탐색 메뉴에서 **참여**를 확장하고 **고객 그룹**을 선택합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)왼쪽된 탐색 메뉴에서 **참여** 를 확장 하 고 **고객 그룹**을 선택 합니다.
 2.  **고객 그룹** 페이지에서 다음 중 하나를 수행합니다.
  - **내 고객 그룹** 섹션에서 **새 그룹 만들기**를 선택하여 처음부터 세그먼트를 정의합니다. 다음 페이지에서 **세그먼트** 라디오 단추를 선택합니다.
  - **세그먼트 템플릿** 섹션에서 사전 정의된 세그먼트(있는 그대로 사용하거나 요구에 맞게 수정이 가능) 가운데 하나의 옆에 있는 **복사**를 선택합니다.

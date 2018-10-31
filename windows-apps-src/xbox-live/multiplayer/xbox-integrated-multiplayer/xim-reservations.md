@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox 통합된 멀티 플레이어, xim, 채팅
 ms.localizationpriority: medium
 ms.openlocfilehash: b5e67e75a981a6abc88b877983e544293055e90b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5739630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5824002"
 ---
 # <a name="using-xim-as-a-dedicated-chat-solution-via-out-of-band-reservations"></a>대역 외 예약을 통해 전용 채팅 솔루션으로 XIM 사용
 

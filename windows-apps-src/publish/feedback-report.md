@@ -1,23 +1,23 @@
 ---
 author: jnHs
-Description: The Feedback report in the Windows Dev Center dashboard lets you see the problems, suggestions, and upvotes that your Windows 10 customers have submitted through Feedback Hub.
+Description: The Feedback report in Partner Center lets you see the problems, suggestions, and upvotes that your Windows 10 customers have submitted through Feedback Hub.
 title: 피드백 보고서
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
 ms.author: wdg-dev-content
-ms.date: 11/3/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb8958adaeb78a068ae2baad30b7bc9fa96561a2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ab5e5f3fe533568079869c4fbd62530504544bf7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5744055"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828979"
 ---
 # <a name="feedback-report"></a>피드백 보고서
 
-Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안, 찬성을 볼 수 있습니다. 대시보드에서 이 데이터를 보거나 데이터를 내보내서 오프라인으로 볼 수 있습니다.
+파트너 센터에서 **피드백 보고서** 에 문제, 제안 및 Windows 10 고객이 피드백 허브를 통해 제출한 찬성을 볼 수 있습니다. 파트너 센터에서이 데이터를 보거나 데이터를 오프 라인으로 내보낼 수 있습니다.
 
 > [!NOTE]
 > 이 보고서에서 직접 [피드백에 응답](respond-to-customer-feedback.md)하여 고객의 의견을 경청하고 있음을 고객에게 알릴 수도 있습니다.
@@ -26,7 +26,7 @@ Windows 개발자 센터 대시보드의 **피드백 보고서**에서 Windows 1
 
 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)의 피드백 API를 사용하여 고객이 [직접 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)하도록 할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 사용하여 해당 피드백을 남길 수 있습니다. 이 인해 하면 특별히 요청 하지 않은의 피드백에 대 한 앱 내에서 하는 경우에이 보고서에서 고객 의견을 볼 수 있습니다.
 
-피드백 보고서는 피드백을 남겼을 때 각 고객이 장치에 설치한 특정 패키지를 보여준다는 점에서 [패키지 플라이팅](package-flights.md)을 사용할 때 피드백이 도움이 될 수 있습니다.
+**피드백** 보고서 피드백을 남겼을 때 각 고객이 자신의 장치에 설치한 특정 패키지를 보여준다 [패키지 플 라이팅](package-flights.md)을 사용 하는 경우에 피드백 유용할 수 있습니다.
 
 > [!TIP]
 > 지난 30 일 동안에서 리뷰, 평점 및 앱의 모든 사용자에 게 피드백 빠르게 확인, 왼쪽된 탐색 메뉴에서 **참여** 를 확장 하 고 선택 **리뷰 및 피드백.** 

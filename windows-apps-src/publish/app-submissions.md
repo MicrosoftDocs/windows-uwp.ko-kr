@@ -5,15 +5,15 @@ title: 앱 제출
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: 검사 목록, Windows, UWP, 제출, 제출하다, 게임, 앱, 제출하기
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b3aed7c5fe912155904b3b0da666427e6727d19d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833640"
 ---
 # <a name="app-submissions"></a>앱 제출
 
@@ -23,12 +23,15 @@ ms.locfileid: "5742323"
 앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 다시 하 고 되었고 필요할 때마다 작업을 업데이트 하면 제출에 저장 됩니다.
 
 > [!NOTE]
-> [Windows 개발자 센터](https://partner.microsoft.com/dashboard) 에 액세스 하 고 Microsoft Store에 앱을 제출 하려면 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
+> Microsoft Store에 앱을 제출 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 활성 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
 
-앱이 게시된 후에는 대시보드에서 또 다른 제출을 만들어서 업데이트된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시된 앱에 대한 새 제출을 만들려면 앱 개요 페이지에 표시된 최근 제출 옆의 **업데이트**를 클릭합니다. 할 수도 있습니다 [스토어에서 앱을 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) 이렇게 (및 다음 사용할 수 있도록 나중에 다시 원할 경우) 하는 경우.
+앱이 게시 된 후에 파트너 센터에서 또 다른 제출을 만들어서 업데이트 된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시 된 앱에 대 한 새 제출을 만들려면 해당 **개요** 페이지에 표시 된 최근 제출 옆에 있는 **업데이트** 를 클릭 합니다. 할 수도 있습니다 [스토어에서 앱을 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) 이렇게 (및 다음 사용할 수 있도록 나중에 다시 원할 경우) 하는 경우.
 
 > [!NOTE]
-> 설명서의 이 섹션에서는 개발자 센터 대시보드에서 앱 제출을 만드는 방법을 설명합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
+> 설명서의이 섹션에는 파트너 센터에서 앱 제출을 만드는 방법을 설명 합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
+
+> [!IMPORTANT]
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 ## <a name="app-submission-checklist"></a>앱 제출 검사 목록
 
@@ -91,17 +94,20 @@ ms.locfileid: "5742323"
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **설명**               | 필수                                    | [호소력 있는 앱 설명 작성](write-a-great-app-description.md) |
 | **이 버전의 새로운 기능**   | 선택 사항                                 | [릴리스 정보](create-app-store-listings.md#whats-new-in-this-version)       |
-| **앱 기능**              | 선택 사항                                    | [앱 기능](create-app-store-listings.md#app-features)         |
+| **앱 기능**              | 선택 사항                                    | [제품 기능](create-app-store-listings.md#product-features)         |
 | **스크린샷**               | 필수 사항(최소 하나의 스크린샷, 4개 이상을 권장)          | [스크린샷](app-screenshots-and-images.md#screenshots)          |
 | **Microsoft Store 로고**               | 권장 사항(일부 OS 버전에서는 필수 사항) | [Microsoft Store 로고](app-screenshots-and-images.md#store-logos)             |
-| **추가 아트 자산**     | 권장 사항(특히 일부 OS 버전의 경우)         | [추가 아트 자산](app-screenshots-and-images.md#additional-art-assets) |
 | **예고편**                  | 선택 사항                                    | [예고편](app-screenshots-and-images.md#trailers)                | 
-| **보조 필드**  | 선택 사항                                    | [추가 정보](create-app-store-listings.md#supplemental-fields) 
+| **Windows 10 및 Xbox 이미지(16:9 수퍼 히어로 아트)**     | 권장 사항        | [Windows 10 및 Xbox 이미지 (16:9 수퍼 히어로 아트)
+] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Xbox 이미지**     | Xbox에 게시 하는 경우에 최적의 표시를 위해 필요 합니다.        | [Xbox 이미지
+] (앱-스크린샷을-및-images.md #xbox 이미지) |
+| **보조 필드**  | 선택 사항                                    | [보조 필드](create-app-store-listings.md#supplemental-fields) 
 | **검색어**              | 선택 사항                                    | [검색어](create-app-store-listings.md#search-terms)         |
 | **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
 | **추가 사용 조건**  | 선택 사항                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |
 | **개발자**              | 선택 사항                                    | [개발자](create-app-store-listings.md#developed-by)                   |
-| **플랫폼별 Store 목록** | 옵션                               | [플랫폼별 Store 목록 만들기](create-platform-specific-store-listings.md)  |
+
 
 <span/>
 

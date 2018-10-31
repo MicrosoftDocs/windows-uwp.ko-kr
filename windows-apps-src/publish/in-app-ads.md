@@ -1,26 +1,29 @@
 ---
 author: jnHs
-Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of the Dev Center dashboard to manage your use of ads.
+Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of Partner Center to manage your use of ads.
 title: 인앱 광고
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
-ms.date: 06/28/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a99ad15d9157f13dfba9d55ad02202f62011ad9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ccff2dce0a57e5f3219f306fa029f84162bf4974
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5759211"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835772"
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
-Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고** 페이지에서 다음에 대한 광고 단위를 만들고 관리합니다.
+**수익 창출** 을 사용 하 여 &gt; **인 앱 광고** 페이지를 만들고 광고 단위에 대 한 관리 [파트너 센터](https://partner.microsoft.com/dashboard) :
 
 * [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 사용하는 UWP(유니버설 Windows 플랫폼) 앱.
-* [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)를 사용하는 Windows8.1 및 Windows Phone 8.x 앱.
+* 이전에 게시 한 Windows 8.x 및 사용 하는 Windows Phone 8.x 앱의 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk).
+
+> [!IMPORTANT]
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 이러한 SDK를 앱과 통합하여 광고를 표시하는 방법에 대한 자세한 내용은 [Microsoft Advertising SDK를 사용하여 앱에 광고 표시](../monetize/display-ads-in-your-app.md)를 참조하세요.
 
@@ -30,7 +33,7 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 
 앱에서 [배너](../monetize/banner-ads.md), [중간 광고](../monetize/interstitial-ads.md) 또는 [기본 광고](../monetize/native-ads.md)에 대한 광고 단위를 생성하려면:
 
-1.  대시보드에서 **수익 창출** &gt; **인앱 광고** 페이지로 이동하고 **광고 단위 만들기**를 클릭합니다.
+1.  **수익 창출** 로 이동 &gt; **앱에서 바로 광고** 파트너 센터에서 페이지 및 **광고 단위 만들기를**클릭 합니다.
 2.  **앱 이름** 드롭다운 목록에서 광고 단위가 사용될 앱을 선택합니다.
 3.  **광고 단위 이름** 필드에 광고 단위의 이름을 입력합니다. 보고용으로 광고 단위를 식별할 때 사용할 수 있는 설명 문자열입니다.
 4.  **광고 단위 유형** 드롭다운 목록에서 광고 유형을 선택합니다.
@@ -69,7 +72,7 @@ Windows 개발자 센터 대시보드의 **수익 창출** &gt; **인앱 광고*
 UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 사용되는 앱에 대해 [COPPA 규정 준수](#coppa)를 편집하려면 광고 단위 이름을 클릭합니다.
 
 > [!NOTE]
-> 광고 단위에 지난 6 개월 활동이 없는 경우 **비활성**표시 하 고 결국에 대시보드에서 제거 하겠습니다. 필터를 사용하여 **활성** 또는 **비활성** 광고 단위만 표시할 수 있습니다. 잘못 **비활성**으로 표시된 광고 단위가 있는 경우 [고객 지원에 문의](http://aka.ms/storesupport)합니다.
+> 광고 단위에 지난 6 개월 활동이 없는 경우 **비활성**표시 하 고 결국 파트너 센터에서 제거할지 하겠습니다. 필터를 사용하여 **활성** 또는 **비활성** 광고 단위만 표시할 수 있습니다. 잘못 **비활성**으로 표시된 광고 단위가 있는 경우 [고객 지원에 문의](http://aka.ms/storesupport)합니다.
 
 <span id="mediation" />
 
@@ -85,21 +88,21 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 1. [광고 단위를 만들거나](#create-ad-unit) [기존 광고 단위를 선택](#available-ad-units)합니다.
 2. **인 앱 광고** 페이지에서 설정을 구성 및 **조정 설정** 섹션으로 이동 합니다.
 
-    * 기본값으로 **Microsoft가 앱에 가장 좋은 조정 설정을 선택** 확인란이 선택되어 있습니다. 이 옵션을 사용하는 것이 좋습니다. 이 옵션은 기계 학습 알고리즘을 사용, 자동으로 앱이 지원하는 지역/국가에서 광고 수익을 극대화 하는 데 도움이 되는 앱의 광고 조정 설정을 선택합니다. 이 옵션을 사용 하는 경우에 구성에 사용 하려는 광고 네트워크를 선택할 수 있습니다. 구성의 일부로 하지 않으려는 알고리즘 앱 선택한 광고 네트워크의 광고를 수신만 되는지 보장 하는 광고 네트워크 선택 취소 합니다.
+    * 기본적으로 **Microsoft 내 설정 최적화** 확인란이 선택 되어 있습니다. 이 옵션을 사용하는 것이 좋습니다. 이 옵션은 기계 학습 알고리즘을 사용, 자동으로 앱이 지원하는 지역/국가에서 광고 수익을 극대화 하는 데 도움이 되는 앱의 광고 조정 설정을 선택합니다. 이 옵션을 사용 하는 경우에 구성에 사용 하려는 광고 네트워크를 선택할 수 있습니다. 구성의 일부로 하지 않으려는 알고리즘 앱 선택한 광고 네트워크의 광고를 수신만 되는지 보장 하는 광고 네트워크 선택 취소 합니다.
     * 고유의 광고 조정 설정을 선택 하려는 경우 **수정 기본 설정**을 선택 합니다.
 
     > [!NOTE]
     > 이 섹션의 나머지 단계는만 **수정 기본 설정**을 선택 하는 경우에 적용 됩니다.
 
-4. **대상** 드롭다운 목록에서 **기본**을 선택해 광고 조정 설정을 기본값으로 구성할 수 있습니다. 이 기본 설정이 지역/국가에 특정적인 구성을 적용한 지역/국가를 제외한 모든 지역/국가에 적용됩니다.
-6. 다음은 유료 네트워크(광고 컨트롤을 유료 네트워크(노출에 대한 수익을 지급하는)와 다른 광고 네트워크(노출에 대한 수익을 지급하지 않는)의 컨트롤에 표시할 광고의 비율을 지정합니다. **유료 광고 네트워크** 및 **다른 광고 네트워크**의 **가중치** 필드에 0~100의 값을 입력해야 합니다.  
-7. **유료 광고 네트워크** 섹션에서 사용하고 싶은 각 [유료 네트워크](#paid-networks)의 **활성** 열의 확인란을 선택한 후, **순위** 열 옆 화살표를 사용하여 순위 별로 네트워크를 주문합니다(컨트롤이 각 네트워크를 얼마나 많이 사용할지 지정).
-8. **배너** 또는 **배너 중간** 광고 단위를 선택하면 **다른 광고 네트워크**라는 섹션이 나타납니다. 이 섹션의 네트워크는 광고 노출에 대한 광고 수익을 획득할 수 없습니다. 대신 이러한 네트워크는 앱 홍보 캠페인 등 소스의 광고를 표시합니다.
+3. **대상** 드롭다운 목록에서 **기본**을 선택해 광고 조정 설정을 기본값으로 구성할 수 있습니다. 이 기본 설정이 지역/국가에 특정적인 구성을 적용한 지역/국가를 제외한 모든 지역/국가에 적용됩니다.
+4. 다음은 유료 네트워크(광고 컨트롤을 유료 네트워크(노출에 대한 수익을 지급하는)와 다른 광고 네트워크(노출에 대한 수익을 지급하지 않는)의 컨트롤에 표시할 광고의 비율을 지정합니다. **유료 광고 네트워크** 및 **다른 광고 네트워크**의 **가중치** 필드에 0~100의 값을 입력해야 합니다.  
+5. **유료 광고 네트워크** 섹션에서 사용하고 싶은 각 [유료 네트워크](#paid-networks)의 **활성** 열의 확인란을 선택한 후, **순위** 열 옆 화살표를 사용하여 순위 별로 네트워크를 주문합니다(컨트롤이 각 네트워크를 얼마나 많이 사용할지 지정).
+6. **배너** 또는 **배너 중간** 광고 단위를 선택하면 **다른 광고 네트워크**라는 섹션이 나타납니다. 이 섹션의 네트워크는 광고 노출에 대한 광고 수익을 획득할 수 없습니다. 대신 이러한 네트워크는 앱 홍보 캠페인 등 소스의 광고를 표시합니다.
 
     **기타 광고 네트워크** 섹션에서 사용하고 싶은 각 [기타 네트워크](#other-networks)의 **활성** 열 확인란을 선택한 후, 순위 열 옆 화살표를 사용하여 **순위** 별로 네트워크를 주문합니다(컨트롤이 각 네트워크를 얼마나 많이 사용할지 지정). 현재 다음과 같은 기타 네트워크가 지원되고 있습니다.
 
-9. 기본 조정 구성을 재구성하려는 각 지역/국가의 경우, **대상** 드롭다운 목록에서 지역/국가를 선택한 후 광고 네트워크 선택 및 순위를 업데이트합니다.
-10. **광고 단위 만들기**(새로운 광고 단위를 만드는 경우) 또는 **저장**(기존 광고 단위를 편집하는 경우)을 클릭합니다.
+7. 기본 조정 구성을 재구성하려는 각 지역/국가의 경우, **대상** 드롭다운 목록에서 지역/국가를 선택한 후 광고 네트워크 선택 및 순위를 업데이트합니다.
+8. **광고 단위 만들기**(새로운 광고 단위를 만드는 경우) 또는 **저장**(기존 광고 단위를 편집하는 경우)을 클릭합니다.
 
 <span id="paid-networks" />
 
@@ -149,9 +152,9 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 <span id="coppa" />
 
-## <a name="coppa-compliance"></a>COPPA 규정 준수
+## <a name="coppa-compliance"></a>COPPA 준수
 
-[광고 단위 만들거나](#create-ad-unit) [기존 광고 단위를 선택](#available-ad-units)할 때 광고 단위에 대해 선택된 앱에 앱 인증 과정의 [Store 내](../publish/the-app-certification-process.md#in-the-store) 단계에 도달한 제출이 하나 이상 있는 경우 **COPPA 규정 준수** 섹션이 대시보드 페이지의 맨 아래에 나타납니다.
+앱에는 [스토어에서](../publish/the-app-certification-process.md#in-the-store) 단계 **COPPA 규정 준수** 섹션 광고 단위에 대해 선택한 앱에 도달한 제출이 하나 이상 있는 경우 페이지의 맨 아래에 표시를 [광고 단위를 생성](#create-ad-unit) 하거나 [기존 광고 단위를 선택](#available-ad-units) 인증 프로세스입니다.
 
 “COPPA”(아동에 관한 온라인 개인 정보 보호법)를 위해 귀하의 앱이 13세 미만 아동을 대상으로 하는 경우 이 섹션의 **이 응용 프로그램은 13세 미만 아동을 대상으로 합니다**를 선택해야 합니다. 이 옵션을 선택하면 Microsoft는 앱에 광고를 제공할 때 동작 광고 서비스를 사용하지 않도록 설정하는 단계를 진행합니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f381b7fbd53ee50d4589201edf74ac1f241d40
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760172"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830844"
 ---
 # <a name="bluetooth"></a>Bluetooth
 이 섹션에 유니버설 Windows 플랫폼 (UWP) 앱에 Bluetooth를 통합 하는 방법에 대 한 문서가 포함 되어 있습니다. 앱에서 구현 하도록 선택할 수 있습니다 두 가지 다른 bluetooth 기술이 있습니다.

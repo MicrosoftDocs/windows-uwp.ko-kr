@@ -1,23 +1,23 @@
 ---
 author: jnHs
-Description: The Health report in the Windows Dev Center dashboard lets you get data related to the performance and quality of your app, including crashes and unresponsive events.
+Description: The Health report in Partner Center lets you get data related to the performance and quality of your app, including crashes and unresponsive events.
 title: 상태 보고서
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 ms.author: wdg-dev-content
-ms.date: 06/01/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 상태, 충돌, 응답하지 않는 이벤트, 앱 상태, 상태 데이터, 스택 추적, cab 파일, 실패, 오류, pdb, 기호
 ms.localizationpriority: medium
-ms.openlocfilehash: d1c32468bfa933ea0d9d56150f0b2610eb1668e5
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 06cf6a7050f7598e86582393a92b92d1bdd877d1
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829767"
 ---
 # <a name="health-report"></a>상태 보고서
 
-Windows 개발자 센터 대시보드의 **상태** 보고서를 통해 크래시 및 응답하지 않는 이벤트를 비롯하여 앱의 성능 및 품질 관련 데이터를 얻을 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 해당하는 경우 추가 디버깅을 위해 스택 추적 및/또는 CAB 파일을 볼 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **상태** 보고서에는 성능 및 크래시 및 응답 하지 않는 이벤트를 포함 하 여 앱의 품질 관련 데이터를 얻을 수 있습니다. 파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다. 해당하는 경우 추가 디버깅을 위해 스택 추적 및/또는 CAB 파일을 볼 수 있습니다.
 
 또는 [Microsoft Store 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 이 보고서의 데이터를 검색할 수 있습니다.
 

@@ -28,7 +28,7 @@ ms.locfileid: "5828624"
 
 [**흐름 디자인 시스템**](../fluent-design-system/index.md)
 
-흐름 디자인 시스템은 아름다우며 공감하는 적응형 사용자 인터페이스를 만들고자 하는 Microsoft의 목표와 원칙을 제공합니다.
+The Fluent Design System presents our goals and principles for creating adaptive, empathetic, and beautiful user interfaces.
 
 ## <a name="basics"></a>기본 사항
 

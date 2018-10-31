@@ -4,16 +4,16 @@ Description: Product declarations help make sure your app is displayed appropria
 title: 제품 선언
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.author: wdg-dev-content
-ms.date: 12/05/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1fc444dbd106f4eeb0996903f71701a96a9735
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: de519f37c5eacfa64f23d0f438701d4ae9dbc934
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747831"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831162"
 ---
 # <a name="product-declarations"></a>제품 선언
 
@@ -46,16 +46,14 @@ ms.locfileid: "5747831"
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>고객은 이 앱을 설치하여 드라이브 또는 이동식 저장소를 대체할 수 있습니다.
 
-기본적으로 고객 외부 드라이브와 같은 미디어 SD 카드 같은 또는 비시스템 볼륨 드라이브 외부 또는 이동식 저장소에 앱을 설치할 수 있도록이 상자가 선택 됩니다. (Windows Phone 8.1이 된 이전에 StoreManifest.xml을 통해 표시 합니다.)
+기본적으로 고객 외부 드라이브와 같은 미디어 SD 카드 같은 또는 비시스템 볼륨 드라이브 외부 또는 이동식 저장소에 앱을 설치할 수 있도록이 상자가 선택 됩니다.
 
-앱이 대체 드라이브 또는 이동식 저장소에 설치 되지 않도록 방지 하 고만 디바이스에서 내부 하드 드라이브에 설치를 허용 하려면이 확인란의 선택을 취소 합니다.
-
-참고 앱만 ** 수 있도록 설치를 제한 하는 옵션은 이동식 저장소 미디어에 설치할 수 있습니다.
+앱이 대체 드라이브 또는 이동식 저장소에 설치 되지 않도록 방지 하 고만 디바이스에서 내부 하드 드라이브에 설치를 허용 하려면이 확인란의 선택을 취소 합니다. (참고 앱만 ** 수 있도록 설치를 제한 하는 옵션은 이동식 저장소 미디어에 설치할 수 있습니다.)
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있습니다.
 
-고객이 Windows에서 OneDrive에 자동으로 백업하도록 선택하면 앱 데이터를 포함할 수 있도록 이 상자가 기본적으로 선택됩니다. (Windows Phone 8.1이 된 이전에 StoreManifest.xml을 통해 표시 합니다.)
+고객이 Windows에서 OneDrive에 자동으로 백업하도록 선택하면 앱 데이터를 포함할 수 있도록 이 상자가 기본적으로 선택됩니다.
 
 앱 데이터가 자동화된 백업에 포함되지 않게 하려면 이 상자를 선택 취소합니다.
 

@@ -1,34 +1,34 @@
 ---
 author: JnHs
-Description: You can create an ad campaign using the Dev Center dashboard to help promote your app and grow your app's user base.
+Description: You can create ad campaigns in Partner Center to help promote your app and grow your app's user base.
 title: 앱 광고 캠페인 만들기
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
-ms.openlocfilehash: 33c6388902322357d27918b6e4b95555785288bc
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c6df022cbd474c9e73a84b86b245511d23293b0e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5751529"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833343"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
-개발자 센터 대시보드로 광고 캠페인을 만들어 앱을 홍보하고 앱의 사용자 기반을 성장시킬 수 있습니다. 기본적으로 개발자 센터 대시보드에서 앱에 대한 설정에 따라 광고의 대상 고객이 선택되지만 선택적으로 고유한 대상 그룹을 정의할 수도 있습니다. 광고 템플릿의 기본 설정을 사용하거나 고유한 광고 디자인을 업로드할 수도 있습니다. 광고 캠페인에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md)을 참조하세요.
+앱을 홍보 하 고 사용자 기반을 넓힙니다 [파트너 센터](https://partner.microsoft.com/dashboard) 광고 캠페인을 만들 수 있습니다. 기본적으로 파트너 센터에서 앱에 대 한 설정에 따라 광고의 대상으로 선택 되지만 선택적으로 고유한 대상 그룹을 정의할 수 있습니다. 광고 템플릿의 기본 설정을 사용하거나 고유한 광고 디자인을 업로드할 수도 있습니다. 광고 캠페인에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md)을 참조하세요.
 
 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과한 앱을 위한 광고 캠페인만 만들 수 있습니다.
 
 > [!NOTE]
-> 설명서의 이 섹션에서는 개발자 센터 대시보드에서 광고 캠페인을 만드는 방법을 설명합니다. 또는 [Microsoft Store 홍보 API](../monetize/run-ad-campaigns-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 광고 캠페인을 만들고 관리할 수 있습니다.
+> 설명서의이 섹션에는 파트너 센터에서 광고 캠페인을 만드는 방법을 설명 합니다. 또는 [Microsoft Store 홍보 API](../monetize/run-ad-campaigns-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 광고 캠페인을 만들고 관리할 수 있습니다.
 
 ## <a name="instructions"></a>지침
 
 앱을 홍보하는 광고 캠페인을 만드는 방법은 다음과 같습니다.
 
-1.  대시보드의 왼쪽 탐색 메뉴에서 **모집**을 확장하고 **광고 캠페인**을 선택합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)의 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **광고 캠페인**을 선택 합니다.
 2.  **캠페인 만들기**를 선택합니다(이전에 캠페인을 만든 경우에는 **새 캠페인**을 선택).
 3.  새 페이지의 **목표 유형** 섹션에서 다음 중 하나를 선택합니다.
     * **회원님의 앱에 대한 설치 늘리기**. 광고 캠페인을 통해 앱 설치를 유도하게 하려면 이 옵션을 선택합니다.
@@ -48,7 +48,7 @@ ms.locfileid: "5751529"
 
         광고 캠페인을 만든 달의 월별 예산은 비례 배분 방식으로 지출됩니다. 즉, 보름을 지나 광고 캠페인을 만드는 경우 해당 월의 월별 예산 중 절반이 청구됩니다.
 
-    * **새 결제 방법 추가**를 클릭하여 광고 캠페인에 대한 결제 방법을 설정하고 계정 세부 정보를 입력합니다. 결제 수단을 이미 제공한 경우에는 **다른 결제 방법 선택**을 클릭하여 업데이트를 해야 합니다. 결제 방법의 청구 주소 국가/지역은 개발자 센터 계정에 연결된 국가/지역과 일치해야 합니다.
+    * **새 결제 방법 추가**를 클릭하여 광고 캠페인에 대한 결제 방법을 설정하고 계정 세부 정보를 입력합니다. 결제 수단을 이미 제공한 경우에는 **다른 결제 방법 선택**을 클릭하여 업데이트를 해야 합니다. 결제 방법의 청구 주소 국가/지역에는 개발자 계정에 연결 된 국가/지역 일치 해야 합니다.
 
     * Microsoft 담당자로부터 쿠폰을 받고 광고 캠페인을 받고 결제하려면 **Use a coupon**(쿠폰 사용)을 클릭하고, 쿠폰 코드를 입력한 다음 **적용**을 클릭하여 캠페인에 쿠폰을 적용합니다.
 
@@ -103,10 +103,3 @@ ms.locfileid: "5751529"
 캠페인 수행 방법을 확인하려면 **광고 캠페인** 페이지로 돌아갑니다. **섹션 필터**를 선택하여 보고서에 포함되는 내용의 범위를 **날짜**, **캠페인 목표**, **앱 이름**, **캠페인 유형** 또는 **상태**별로 지정합니다. 캠페인의 **광고 노출 수**, **클릭 수**, **변환** 및 **지출** 정보를 보는 것은 물론 보고서를 사용하여 캠페인을 **일시 중지** 또는 **다시 시작**할 수도 있습니다. 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)를 참조하세요.
 
 캠페인을 편집하려면 목록에서 해당 이름을 선택합니다.
-
-## <a name="related-topics"></a>관련 항목
-
-* [광고 캠페인 관리](managing-your-ad-campaign.md)
-* [하우스 광고 정보](about-house-ads.md)
-* [앱 홍보 보고서](promote-your-app-report.md)
-* [광고 캠페인에 대한 일반적인 질문](common-questions.md)

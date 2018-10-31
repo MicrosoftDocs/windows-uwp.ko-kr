@@ -4,23 +4,23 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: 계정 유형, 위치 및 수수료
 description: 여러 국가 및 지역의 개별 개발자 계정과 회사 개발자 계정을 제공합니다.
 ms.author: wdg-dev-content
-ms.date: 08/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
-ms.openlocfilehash: 619b245ed6037192fe8b846a20d9fe0fe97baa24
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831578"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
-여러 [국가 및 지역](#developer-account-and-app-submission-markets)의 개인 계정과 회사 계정을 제공합니다. 어떤 형식의 계정이든 앱을 Microsoft Store에 게시하고 추가적인 Microsoft 개발자 프로그램에 참가하기 위한 액세스 권한을 제공합니다.
+Windows 제품 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 두 명 프로그램 및 회사 계정 여러 [국가 및 지역](#developer-account-and-app-submission-markets). 어떤 유형의 계정이 액세스할 수 있도록 스토어에 앱을 게시 하 고 추가적인 Microsoft 프로그램에 참여 합니다.
 
 > [!NOTE]
-> 계정을 등록할 때 개발자 계정에 사용할 원하는 Microsoft 계정으로 로그인 해야 합니다. 선택에 따라 나중에 [계정에 사용자를 추가](manage-account-users.md) 할 수 있습니다.
+> 개발자 계정 열기, 개발자 계정에 사용 하려는 Microsoft 계정을 사용 하 여 [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 해야 합니다. 선택에 따라 나중에 [계정에 사용자를 추가](manage-account-users.md) 할 수 있습니다.
 
 [등록 프로세스를 시작](http://go.microsoft.com/fwlink/p/?LinkId=615100)할 때는 개인 계정을 만들지 또는 회사 계정을 만들지 여부를 선택해야 합니다. 두 유형의 계정 모두 앱, 게임, 추가 기능 및 서비스를 제출하는 데 사용할 수 있습니다.
 

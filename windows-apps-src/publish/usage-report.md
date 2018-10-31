@@ -1,24 +1,24 @@
 ---
 author: jnHs
-Description: The Usage report in the Windows Dev Center dashboard lets you see how customers are using your app.
+Description: The Usage report in Partner Center lets you see how customers are using your app.
 title: 사용 보고서
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
-ms.date: 10/05/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 사용, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
-ms.openlocfilehash: 3998e8c5b207d8484a621db16d2e72a136f22c80
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f07f107a5136ee50cd87032fa3911ab65d33b7c1
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831060"
 ---
 # <a name="usage-report"></a>사용 보고서
 
 
-Windows 개발자 센터 대시보드의 **사용** 보고서에서는 Windows 10(Xbox 포함)의 고객이 앱을 사용하는 방식을 확인하고 정의한 사용자 지정 이벤트에 대한 정보를 표시할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **사용** 보고서는 Windows 10 (Xbox 포함) 고객에 게 앱을 사용 하는 방식을 확인할 수 있습니다 하 고 정의한 사용자 지정 이벤트에 대 한 정보를 보여 줍니다. 파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다.
 
 
 ## <a name="apply-filters"></a>필터 적용

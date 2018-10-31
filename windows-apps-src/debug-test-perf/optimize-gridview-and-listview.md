@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 25eeea58e1e03eedfca3aaafda1cee13cac1f3c4
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5834320"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>ListView 및 GridView UI 최적화
 

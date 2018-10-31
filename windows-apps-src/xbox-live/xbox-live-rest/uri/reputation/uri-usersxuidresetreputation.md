@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ba9221b7b213cfd6c92a9a6cfcd5c6dec5c051fb
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5750202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5821404"
 ---
 # <a name="usersxuidxuidresetreputation"></a>/users/xuid({xuid})/resetreputation
 적용 팀을 지정 된 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10433`.

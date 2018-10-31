@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox, 오류 처리
 ms.localizationpriority: medium
 ms.openlocfilehash: d1127811e44eecb03cfc9a9818733a2b2234d2c1
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5744596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5812316"
 ---
 # <a name="winrt-api-error-handling"></a>WinRT API 오류 처리
 

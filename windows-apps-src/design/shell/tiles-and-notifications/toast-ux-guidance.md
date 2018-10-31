@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, 알림, 컬렉션, 그룹, ux, ux 지침, 지침, 동작, 알림, 알림 센터, noninterruptive, 유효 알림, nonintrusive 알림, 실행 가능한, 관리, 구성
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ee3431681f3d9fba5c50759e822d78c09826957
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 3c77719bd45c3169ec02a280099d27e10099a25c
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767924"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828762"
 ---
 # <a name="toast-notification-ux-guidance"></a>알림 알림 UX 지침
 알림은 반드시 최신 수명; 사용자의 생산성을 하 고 모든 업데이트를 사용 하 여 계속 현재 뿐만 아니라 앱 및 웹 사이트, 약속 된 데 도움이 됩니다. 그러나 알림 overbearing에 유용 하 고 사용자 중심 방식으로 설계 되지 않은 경우 주입 식에서 신속 하 게 끌 수 있습니다. 알림은 해제 되 고 로부터 하나의 마우스 오른쪽 단추로 클릭 하 고 것 같지 않은 해제 되 면가 켜 집니다 다시 합니다.  따라서 인지 확인 알림을 사용자의 화면 공간 시간과 정중 하므로이 참여 채널을 열어 둘 수 있습니다.
@@ -42,7 +42,7 @@ ctionable 알림은 사용자 생산성. 그래야 듣는 사람도 작업을 �
 
 **원시 알림을:** [원시 알림을](raw-notification-overview.md) 사용 하 여 유용할 수 있습니다 여러 가지 이유로 사용자에 게 중단을 최소화 하는 동안 기다립니다 살펴봤듯이 특히.  원시 알림 보내기를 절전 앱은 백그라운드에서 알림을 타당 앱의 컨텍스트에서 즉시 제공할 수 있는지 여부를 평가할 수 있도록 합니다. 느껴질 것을 표시할 사용자에 게 즉시 여기에서 [로컬 알림 메시지](send-local-toast.md) 를 표시할 수 있는 경우.  이라면 사용자가 볼 필요가 지금은, 나중에 발생 하는 [예약 된 알림 메시지](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/09/30/quickstart-sending-an-alarm-in-windows-10/) 를 만들 수 있습니다.
 
-**알림 고스트:** 되 고 오른쪽 아래 화면에서 팝업을 건너뛰고 대신 알림을 알림 센터에 직접 보낼 알림도 발생할 수 있습니다. [SupressPopup 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) 을 true로 설정 하 여 수행 됩니다. 2 확인 하지 알림을 알림 센터 외부 팝 주위 일부 대처 있을 수 있지만-3 회 높은 참여를 통해 알림 센터에서 라이브 알림의 알림 팝 합니다.  사용자는 응답성 notificaitons 받을 준비가 되 고 때 이러한 중단 되 면 때문에 사용자에 게 알리는 방법을 간접적 훨씬 더 효과적일 수 있는 알림 센터에서 콘텐츠를 제어할 수 있습니다.
+**알림 고스트:** 되 고 오른쪽 아래 화면에서 팝업을 건너뛰고 대신 알림을 알림 센터에 직접 보낼 알림도 발생할 수 있습니다. [SuppressPopup 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) 을 true로 설정 하 여 수행 됩니다. 2 확인 하지 알림을 알림 센터 외부 팝 주위 일부 대처 있을 수 있지만-3 회 높은 참여를 통해 알림 센터에서 라이브 알림의 알림 팝 합니다.  사용자는 응답성 notificaitons 받을 준비가 되 고 때 이러한 중단 되 면 때문에 사용자에 게 알리는 방법을 간접적 훨씬 더 효과적일 수 있는 알림 센터에서 콘텐츠를 제어할 수 있습니다.
 
 ## <a name="3-clear-out-the-clutter"></a>3. 복잡 한 지우기
 알림 상당히 오랜 시간이 (기본값 3 일)에 대 한 알림 센터에서 유지할 수 있습니다.  여기에 거주 하는 콘텐츠는 최신 상태로 유지 하 고 관련 된 사용자가 알림 센터를 열 때마다 있는지 확인 하는 반드시. 사용자의 화면 공간을 낭비 하 최신 용도로 사용 될 수 있는 슬롯을 차지 합니다.  사용자가 메일 관리 앱을 설치 하 고 10 메일과 함께 이러한 메일 10 알림을 받는 가정해 보겠습니다.  원하는 환경에 따라 사용자가 해당 메일 읽기 나 알림 센터에서 이전 혼란을 제거 하는 방법으로 앱을 연 경우 이러한 알림을 취소를 고려할 수 있습니다.

@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: The Reviews report in the Windows Dev Center dashboard lets you see the reviews (comments) that customers entered when rating your app in the Store.
+Description: The Reviews report in Partner Center lets you see the reviews (comments) that customers entered when rating your app in the Store.
 title: 리뷰 보고서
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
@@ -8,19 +8,19 @@ ms.date: 08/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 검토, 주석, 검토자
 ms.localizationpriority: medium
-ms.openlocfilehash: b3b246ec0127373dba2385f249640c09940105fa
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831449"
 ---
 # <a name="reviews-report"></a>리뷰 보고서
 
 
-Windows 개발자 센터 대시보드의 **리뷰** 보고서에는 스토어에서 앱을 평가할 때 고객이 입력 한 리뷰 (설명)를 볼 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **리뷰** 보고서에는 스토어에서 앱을 평가할 때 고객이 입력 한 리뷰 (설명)를 볼 수 있습니다.
 
-대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API의](../monetize/access-analytics-data-using-windows-store-services.md)에서 [앱 리뷰 가져오기](../monetize/get-app-reviews.md) 메서드를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
+파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API의](../monetize/access-analytics-data-using-windows-store-services.md)에서 [앱 리뷰 가져오기](../monetize/get-app-reviews.md) 메서드를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
 
 고객 리뷰에서를 [이 페이지에서 직접](respond-to-customer-reviews.md)프로그래밍 방식으로 [Microsoft Store 리뷰 API를 통해](../monetize/submit-responses-to-app-reviews.md), 또는 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)을 사용 하 여 응답할 수 있습니다.
 
@@ -114,7 +114,7 @@ Windows 개발자 센터 대시보드의 **리뷰** 보고서에는 스토어에
 
 ## <a name="responding-to-customer-reviews"></a>고객 리뷰에 응답
 
-다양 한 고객 리뷰에 대 한 응답을 보내려면 Microsoft 스토어 개발자 센터 대시보드에서, [Microsoft Store 리뷰 API](../monetize/submit-responses-to-app-reviews.md), 또는 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) 을 사용할 수 있습니다. 자세한 내용은 [고객 리뷰에 응답](respond-to-customer-reviews.md)을 참조하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard), [Microsoft Store 리뷰 API](../monetize/submit-responses-to-app-reviews.md), 또는 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) 를 사용 하 여 다양 한 고객 리뷰에 응답을 보낼 수 있습니다. 자세한 내용은 [고객 리뷰에 응답](respond-to-customer-reviews.md)을 참조하세요.
 
 다음은 표시되는 평점 및 리뷰에 따라 고려할 수 있는 몇 가지 추가 작업입니다.
 

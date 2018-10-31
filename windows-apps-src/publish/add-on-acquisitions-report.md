@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
+Description: The Add-on acquisitions report in Partner Center lets you see how many add-ons you've sold, along with demographic and platform details.
 title: 추가 기능 구입 보고서
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 05/24/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 추가 기능 판매, 추가 기능 구입, iap 판매, 앱 내 제품, iaps, 추가 기능
 ms.localizationpriority: medium
-ms.openlocfilehash: a1b25067104a664cb90ef068749d9e4cd00bcc80
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 63884d9cce24e6b85f3001ac4c6eb1a07141bfd4
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761863"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829800"
 ---
 # <a name="add-on-acquisitions-report"></a>추가 기능 구입 보고서
 
 
-Windows 개발자 센터 대시보드에서 **추가 기능 구입** 보고서를 확인할 수 있습니다 얼마나 많은 추가 기능 수와 통계와 함께 인구 통계 및 플랫폼 세부 정보 및 (Xbox 포함) 고객 Windows10 위한 변환 정보를 보여 줍니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **추가 기능 구입** 보고서를 확인할 수 있습니다 얼마나 많은 추가 기능 수와 통계와 함께 인구 통계 및 플랫폼 세부 정보 및 (Xbox 포함) 고객 Windows10 위한 변환 정보를 보여 줍니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다.
 
-대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 이 보고서에서 추가 기능 구입은 고객이 추가 기능을 구매했거나 무료로 제공되는 경우 비용을 지불하지 않고 추가 기능을 얻게 된 것을 의미합니다. 같은 고객이 같은 소모성 추가 기능을 여러 번 구매한 경우 각 구매는 별도의 추가 기능 구입으로 계산됩니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 98bb74f2c37e91d5b7d9b02a5733b42877769c54
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5758699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828637"
 ---
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x를 UWP로 포팅하는 문제 해결
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c5c7bfcb06eb673b0516cef7882685ebd19ddb97
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836925"
 ---
 # <a name="using-lights-in-windows-ui"></a>Windows UI에 광원을 사용 하 여
 

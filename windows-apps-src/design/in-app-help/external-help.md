@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 56afd553-c520-4a28-b63d-2e1b3c1d3606
 ms.localizationpriority: medium
 ms.openlocfilehash: 88e6fb03ccefca0e6067db58b9343ee76fa72ba3
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740366"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830738"
 ---
 # <a name="external-help-pages"></a>외부 도움말 페이지
 

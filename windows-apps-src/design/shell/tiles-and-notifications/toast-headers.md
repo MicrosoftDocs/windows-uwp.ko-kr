@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 헤더, 알림 헤더, 알림, 그룹 알림, 알림 센터
 ms.localizationpriority: medium
 ms.openlocfilehash: fcc515b811a11be045ce80ed816708d230720a29
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5757683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829031"
 ---
 # <a name="toast-headers"></a>알림 헤더
 

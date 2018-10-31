@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, low light fusion, 비트맵, 이미지 처리
 ms.localizationpriority: medium
 ms.openlocfilehash: aa1fa0ae298bf9f0403a3a565f44010b022ba1f6
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835080"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a>LowLightFusion API로 비트맵 처리
 

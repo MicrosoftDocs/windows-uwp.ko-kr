@@ -7,12 +7,12 @@ ms.date: 05/21/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
-ms.openlocfilehash: 36f6248452d97d10b6004067b6c0a973973443db
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 15432202e61322191e27e89920f7791878177c8b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752646"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5832452"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
@@ -77,7 +77,7 @@ winrt::check_bool(::SetEvent(h.get()));
 [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool)에 전달한 값이 false인 경우 다음 순서의 작업이 발생합니다.
 
 - **winrt::check_bool**은 [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) 함수를 호출합니다.
-- **winrt::throw_last_error**는 [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360)를 호출하여 호출하는 스레드의 마지막 오류 코드 값을 검색한 다음 [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수를 호출합니다.
+- **winrt:: throw_last_error** 호출 스레드의 마지막 오류 코드 값을 검색 하려면 [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) 호출 및 [**winrt:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수를 호출 합니다.
 - **winrt::throw_hresult**는 오류 코드를 나타내는 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 개체(또는 표준 개체)를 사용하여 예외를 throw합니다.
 
 Windows API가 다양한 반환 값 형식을 사용하여 런타임 오류를 보고하기 때문에 **winrt::check_bool** 외에도 값을 확인하고 예외를 throw하기 위해 유용한 몇 가지 다른 도우미 함수가 있습니다.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 95a265644897ce9469914782484796a622dcf971
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5746063"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5818531"
 ---
 # <a name="working-with-connected-storage-buffers"></a>연결 된 저장소 버퍼를 사용 하 여 작업
 

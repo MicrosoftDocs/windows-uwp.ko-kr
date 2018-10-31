@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
 ms.openlocfilehash: 8396fb7685a774568b6cd63acb11f78133584f46
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760405"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829485"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
 앱을 SQL Server 데이터베이스에 직접 연결한 후, [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임스페이스를 사용해 데이터를 저장 및 검색할 수 있습니다.

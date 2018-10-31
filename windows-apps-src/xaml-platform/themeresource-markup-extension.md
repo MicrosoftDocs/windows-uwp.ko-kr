@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835203"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 

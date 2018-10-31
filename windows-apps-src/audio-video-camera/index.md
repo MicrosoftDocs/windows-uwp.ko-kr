@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ed222b9ebefd0035064717f78fb91518d3164d13
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5765588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836815"
 ---
 # <a name="audio-video-and-camera"></a>오디오, 비디오 및 카메라
 

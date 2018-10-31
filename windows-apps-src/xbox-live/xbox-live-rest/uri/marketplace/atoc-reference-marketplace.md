@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 96055bd7a2d4169c15e37b55aa70a94fab128a59
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5752323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5816994"
 ---
 # <a name="marketplace-uris"></a>마켓플레이스 URI
 

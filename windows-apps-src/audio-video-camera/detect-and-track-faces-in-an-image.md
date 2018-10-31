@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: be2cfb94c68ed3431199428c87aef4bf038ccbb9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836715"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>이미지 또는 동영상에서 얼굴 감지
 

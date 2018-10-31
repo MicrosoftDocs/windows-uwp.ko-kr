@@ -4,16 +4,16 @@ Description: Review this list to help avoid issues that frequently prevent apps 
 title: 일반적인 인증 실패 방지
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 17a3c3cd5d7b75408a368c6b5fbc0b4a8bfe2839
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7f37412ac88b001f412a1495f2b4efa029cf4d3a
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5762129"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835253"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
@@ -33,7 +33,7 @@ ms.locfileid: "5762129"
 
 -   앱을 사용하기 위해 사용자가 서비스에 로그인해야 하는 경우 테스트 계정의 사용자 이름 및 암호, 숨겨진 기능 또는 잠긴 기능을 액세스하는 데 필요한 단계 등 앱을 사용하는 데 [필요한 정보를 제공](notes-for-certification.md)합니다.
 
--   앱이 요구하는 경우(예를 들어 앱이 어떤 방식으로든 개인 정보를 액세스하는 경우나 법률에서 요구하는 경우) [개인 정보 취급 방침](create-app-store-listings.md#privacy-policy)을 포함시킵니다. 앱 개인 정보 취급 방침 필요한 지를 확인 하려면 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)를 검토 합니다.
+-   앱이 요구 하는 경우 [개인 정보 취급 방침 URL](enter-app-properties.md#privacy-policy-url) 을 포함 합니다. 예를 들어 하는 경우 앱이 어떤 방식으로든 어떤 방식으로든에서 개인 정보의 액세스 나 법률에서 요구 합니다. 앱 개인 정보 취급 방침 필요한 지를 확인 하려면 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)를 검토 합니다.
 
 -   앱이 수행하는 역할을 앱 설명이 명확하게 나타내는지 확인합니다. 도움이 필요하면 [유용한 앱 설명 작성](write-a-great-app-description.md)에 있는 지침을 참조하세요.
 

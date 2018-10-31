@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
 ms.openlocfilehash: 3228cd80e7a9e8efb5dca1ec3a2d469e40a52c8a
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5744071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5832902"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
 

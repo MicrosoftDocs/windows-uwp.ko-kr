@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3157f7152d7bf4d864d706e04a7ea345e248a431
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5746402"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5820602"
 ---
 # <a name="mediamarketplaceidsinglemediagroupsearch"></a>/media/{marketplaceId}/singleMediaGroupSearch
 단일 미디어 그룹 내의 항목에 대 한 검색을 허용 합니다. 참고가이 검색에서 반환 된 데이터의 페이지가 아닌 순차적으로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신 액세스할 수 있도록 합니다. 이 API는 쿼리 구체화를 수락합니다.

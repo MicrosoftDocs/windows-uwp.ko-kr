@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 706f48e64fb8e7534686b8fd7e9666b98dffd9b7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831667"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>스토어 서비스를 사용하여 대상 제품 관리
 

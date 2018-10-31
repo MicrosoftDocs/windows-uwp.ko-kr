@@ -4,16 +4,16 @@ Description: Get your app noticed! Aside from making your app the best it can be
 title: 앱을 홍보하기 쉽게 만들기
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ms.author: wdg-dev-content
-ms.date: 3/13/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 홍보용, 홍보, 추천, 전시, Microsoft Store
 ms.localizationpriority: medium
-ms.openlocfilehash: ede4cc948b20ee90b9d2e3866e7c342caa1e2be8
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 43970ce024408032f0e2e9891eaae34efa68e014
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830133"
 ---
 # <a name="make-your-app-easier-to-promote"></a>앱을 홍보하기 쉽게 만들기
 
@@ -29,7 +29,7 @@ Microsoft Store는 범주나 테마별로 그룹화하여 다양한 앱을 소�
 
     앱을 추천할 때 Microsoft Store에서는 [앱 스크린샷 및 이미지](app-screenshots-and-images.md)를 다양한 레이아웃으로 사용할 수 있습니다. 앱을 나타내는 첫 번째 스크린샷을 멋지게 디자인하고 첫 번째 스크린샷은 특히 잘 표현되고 눈에 띄어야 합니다. 다양한 스크린샷 집합을 제공하여 지원되는 각 장치 유형에서 앱의 모양을 보여줄 수 있습니다.
 
-    Store에서 앱의 추천 가능성을 극대화하려면 Store 목록의 **Microsoft Store 로고** 및 **추가 아트 자산** 섹션에 적용 가능한 모든 이미지를 제공하세요. **9:16 포스터 아트(720 x 1080 또는 1440 x 2160 픽셀)** 및 **16:9 수퍼 히어로 아트(1920 x 1080 또는 3840 x 2160 픽셀)** 이미지는 특히 Windows 10(Xbox 포함)에 중요합니다. 앱에서 Xbox 및/또는 Holographic 장치 패밀리를 지원하는 경우에는 이러한 디바이스 패밀리에도 적용 가능한 모든 이미지를 제공하는 것이 좋습니다. 자세한 정보와 지침은 [앱 스크린샷, 이미지 및 예고편](app-screenshots-and-images.md)을 참조하세요.
+    Store에서 앱의 추천 가능성을 극대화하려면 Store 목록의 **Microsoft Store 로고** 및 **추가 아트 자산** 섹션에 적용 가능한 모든 이미지를 제공하세요. **9시 16분 포스터 아트 (720 x 1080 또는 1440 x 2160 픽셀)** **16:9 수퍼 히어로 아트 (1920 x 1080 또는 3840 x 2160 픽셀)** 이미지는 특히 중요 합니다. 앱에서 Xbox 및/또는 Holographic 장치 패밀리를 지원하는 경우에는 이러한 디바이스 패밀리에도 적용 가능한 모든 이미지를 제공하는 것이 좋습니다. 자세한 정보와 지침은 [앱 스크린샷, 이미지 및 예고편](app-screenshots-and-images.md)을 참조하세요.
 
 -   **무료 버전과 유료 버전을 각각 하나씩 빌드하지 않고 하나의 앱 버전 빌드**
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 중재자, 멀티 플레이 2015
 ms.localizationpriority: medium
 ms.openlocfilehash: f3d4d203b3203b7a1b58bb42062370b45591c135
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5753349"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5813731"
 ---
 # <a name="migrating-an-arbiter"></a>에 중재자 마이그레이션
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 입력, 마우스, 터치, 컨트롤
 ms.localizationpriority: medium
 ms.openlocfilehash: 8787400cc1d77afb32df51ba943ae72a99c2b470
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5754523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833765"
 ---
 # <a name="game-input-for-directx-games"></a>DirectX 게임의 게임 입력
 

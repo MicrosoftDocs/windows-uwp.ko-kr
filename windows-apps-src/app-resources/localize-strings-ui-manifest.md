@@ -10,12 +10,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: b1e57d5c8ae4d1586de9f16455dc178c5e154fbf
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c9789e21bd4d2a598db292721cabfe58d7c12ebe
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836695"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -259,7 +259,7 @@ private void RefreshUIText()
 ## <a name="loading-strings-from-a-class-library-or-a-windows-runtime-library"></a>클래스 라이브러리 또는 Windows 런타임 라이브러리에서 문자열 로드
 참조 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md)의 문자열 리소스는 일반적으로 빌드 과정에서 포함되는 패키지의 하위 폴더에 추가됩니다. 이러한 문자열의 리소스 식별자는 대개 *LibraryName/ResourcesFileName/ResourceIdentifier*의 형식을 띱니다.
 
-라이브러리는 자체 리소스에 대한 ResourceLoader를 가져올 수 있습니다. 예를 들어 다음 코드는 라이브러리 또는 이를 참조하는 앱이 라이브러리의 문자열 리소스에 대한 ResourceLoader를 가져오는 방법을 보여줍니다.
+라이브러리는 자체 리소스에 대한 ResourceLoader를 가져올 수 있습니다. 예를 들어 다음 코드는 라이브러리 또는 참조 하는 앱이 라이브러리의 문자열 리소스에 대 한 ResourceLoader 가져오는 방법을 보여 줍니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ContosoControl/Resources");

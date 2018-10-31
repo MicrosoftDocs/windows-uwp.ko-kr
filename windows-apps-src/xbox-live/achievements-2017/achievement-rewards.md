@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 도전 과제, 보상
 ms.localizationpriority: medium
-ms.openlocfilehash: f26ca230cc7b9a41a078ac436c4c0c46e88ea70c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6c7d192bfe4b156e3767617ad9243efd1d94bd8e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5818769"
 ---
 # <a name="achievement-rewards"></a>도전 과제 보상
 
@@ -66,7 +66,7 @@ Xbox Live 사용자를 사용 하 여 작성 된 게이머 점수 값의 무결�
 
 1. 제목 시작할 때 또는 앱에서 보상 잠금 해제 된 도전 과제를 확인 하 고 각각에 대 한 보상 코드를 가져오려면 일시 중단의 제목 다시 시작 시 도전 과제 서비스를 쿼리 합니다. 이 없는 것 잠긴 제목 실행 되지 않은 동안 또는 다른 콘솔에서 모든 성과 catch 하는지 항상 수행 되어야 합니다.  
 
-    쿼리할 Microsoft.Xbox.Services.Achievements Namespace에서 RESTful 도전 과제 Uri Uri 또는 Api를 사용할 수 있습니다.
+    쿼리할 Microsoft.Xbox.Services.Achievements Namespace에서 RESTful 도전 과제 Uri 또는 Api를 사용할 수 있습니다.
 
 2. 도전 과제 중 하나는 잠금 때 알림을 받도록 등록 합니다. 대부분의 제목에 가장 적합 하지만 선택 사항입니다. Note 타이틀 제목이 실제로 실행 중일 때 발생 하는 잠금 해제 하는 경우이 알림을 받게만 됩니다. 이전 단계 중요 한 이유는 또 다른 이유입니다.
 

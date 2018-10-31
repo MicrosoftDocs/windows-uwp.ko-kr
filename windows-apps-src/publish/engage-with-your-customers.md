@@ -3,20 +3,20 @@ author: jnHs
 Description: Drive customer engagement and satisfaction by using features like notifications, targeted offers, responding to reviews and feedback, and more.
 title: 고객과의 소통
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1612f4d2f2a68c1367980cf5a064ac8712b9073b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f9f266538c42b83da9135079f51a3f935f459020
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5756023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829162"
 ---
 # <a name="engage-with-your-customers"></a>고객과의 소통
 
-알림, 대상 제품, 리뷰 및 피드백 응답 같은 기능을 사용하여 고객의 참여를 유도하고 만족도를 높일 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하면 드라이브 고객 참여 및 만족도 기능이 있습니다. 알림, 리뷰 및 피드백에 응답 하는 대상된 제품을 사용 하는 방법을 알아봅니다.
 
 -   [고객 그룹 만들기](create-customer-groups.md)
 -   [고객 리뷰에 응답](respond-to-customer-reviews.md)

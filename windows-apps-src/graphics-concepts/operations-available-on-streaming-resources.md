@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1289b01e7ffb780c7e3faa52585eb5f002cf519c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767549"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5834633"
 ---
 # <a name="operations-available-on-streaming-resources"></a>스트리밍 리소스에서 할 수 있는 작업
 

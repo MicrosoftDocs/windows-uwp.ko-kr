@@ -3,17 +3,17 @@ title: 고객 피드백에 응답
 description: 고객이 피드백 허브에 남긴 피드백에 직접 응답할 수 있습니다.
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: d75eb60de1af031bbda4e5bdb37cf1fc17fe6ee0
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 5da9e96bace29dc33874d5b8c3e4ac846eddeb63
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761684"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829215"
 ---
 # <a name="respond-to-customer-feedback"></a>고객 피드백에 응답
 
@@ -24,7 +24,7 @@ ms.locfileid: "5761684"
 
 피드백에 응답을 제공하려면 **피드백 보고서**의 피드백 옆에 나타나는 **피드백에 응답** 링크를 클릭합니다.
 
-Windows 개발자 센터는 앱에 대한 피드백을 제공하는 고객에게 응답하기 위한 세 가지 옵션을 지원합니다. 어떤 옵션을 선택하든 각 응답은 1000자로 제한됩니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 앱에 대 한 피드백을 제공 하는 고객에 게 응답 하기 위한 세 가지 옵션을 지원 합니다. 어떤 옵션을 선택하든 각 응답은 1000자로 제한됩니다.
 
 ## <a name="public-comments-in-feedback-hub"></a>피드백 허브의 공개 메모
 

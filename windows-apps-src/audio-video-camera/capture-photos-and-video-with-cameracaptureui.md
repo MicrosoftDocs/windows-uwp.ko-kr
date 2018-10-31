@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fd9a347904b83db4bb927a36e466153a9e24d8de
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5834610"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
 
