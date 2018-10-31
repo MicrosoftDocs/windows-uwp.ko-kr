@@ -70,7 +70,7 @@ XSAPI 라이브러리 클라이언트와 MPSD 간의 연결을 관리합니다. 
 
 | 참고                                                                                                                                                                                                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| XSAPI의 이전 버전에서는 제목 activity 서비스 사용자 연결을 만들고자 **RealTimeActivityService.ConnectAsync 메서드** 를 호출 했습니다. 2015 멀티 플레이어이 메서드는 아무것도 및 주문형 만들어집니다. |
+| In former versions of XSAPI, titles called the **RealTimeActivityService.ConnectAsync Method** to create user connections to the real-time activity service. 2015 멀티 플레이어이 메서드는 아무것도 및 주문형 만들어집니다. |
 
 ### <a name="subscribing-for-session-changes"></a>세션 변경에 대 한 구독
 
