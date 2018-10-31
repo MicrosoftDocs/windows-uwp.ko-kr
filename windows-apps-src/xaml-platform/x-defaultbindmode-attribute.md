@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2696cb46591757421795b15083ea7fdab54943c5
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5821502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5862292"
 ---
 # <a name="xdefaultbindmode-attribute"></a>x:DefaultBindMode 특성
 

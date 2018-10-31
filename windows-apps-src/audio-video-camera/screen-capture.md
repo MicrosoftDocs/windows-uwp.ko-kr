@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
 ms.openlocfilehash: d28ed1fce79a815155180ab8a3c708e2c8bf8916
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5817177"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5889012"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
