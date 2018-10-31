@@ -3,16 +3,16 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: 앱 가격 설정 및 예약
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 가격 책정, 앱 가격 책정, 앱 가격, 앱 판매, 가격 변경, 가격 사용자 지정, 가격, 비용, 기본 가격 재정의, 자유 형식 가격, 자유 형식
 ms.localizationpriority: medium
-ms.openlocfilehash: 99e11e29c5625d528777046075f01a824f1b0b37
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839338"
 ---
 # <a name="set-and-schedule-app-pricing"></a>앱 가격 설정 및 예약
 
@@ -37,23 +37,18 @@ ms.locfileid: "5740542"
 선택한 기준 가격에는 고객이 지불해야 하는 판매세 또는 부가가치세가 포함될 수 있습니다. 선택한 지역/국가에서 앱의 세금 관련 정보에 대해 자세히 알아보려면 [유료 앱의 세금 세부 정보](tax-details-for-paid-apps.md)를 참조하세요. 또한 [특정 지역/국가의 가격 고려 사항](define-pricing-and-market-selection.md#price-considerations-for-specific-markets)을 검토하세요.
 
 > [!NOTE]
-> [표시 여부](choose-visibility-options.md#discoverability) 섹션의 **Store에서 사용할 수 있지만 검색 되지 않는 제품으로 설정** 아래에서 **취득 중지** 옵션을 선택하면 제출에 대한 가격을 설정할 수 없습니다(앱을 무료로 다운로드하기 위해 홍보 코드를 등록하지 않는 한 누구도 앱 취득이 불가능하기 때문).
+> 하는 경우는 **취득 중지** 옵션을 선택 하면 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** 에서 [표시 여부](choose-visibility-options.md#discoverability) 섹션에서) (취득이 누구도 앱을 다운로드 하 여 제출에 대 한 가격을 설정할 수 없습니다 사용 하지 않는 경우 홍보 코드가 앱을 무료로 얻을 수).
 
 ## <a name="schedule-price-changes"></a>가격 변경 예약
 
 특정 날짜와 시간에 앱의 기본 가격을 변경하기 위해 하나 이상의 가격 변경을 예약할 수 있는 옵션이 있습니다. 
 
 > [!IMPORTANT]
-> 가격 변경은 Windows 10 장치(Xbox 포함)고객에게만 표시됩니다. 앱이 이전 OS 버전을 지원하는 경우 가격 변경이 적용되지 않습니다. 
->
-> - WIndows 8 고객의 경우, 추가 가격 변경을 예약한 경우에도 앱은 항상 **기본 가격**으로 제공됩니다(지역/국가에 특정적인 가격 없음). 
-> - Windows 8.1 및 Windows Phone 8.1 이전 버전을 이용하는 고객의 경우, 지역/국가를 대상으로 추가 가격 변경을 예약한 경우에도 항상 해당 지역/국가의 처음 기준 가격으로 앱이 제공됩니다.
-> 
-> 가격 변경을 예약할 때 유의해야 할 내용입니다. 예를 들어, 처음에 낮은 기준 가격에 앱을 출시한 후 가격을 인상할 날짜를 예약한 경우, 앱을 구입한 이전 OS 버전 고객들은 인상된 가격보다 낮은 최초 가격을 지급합니다.
+> 가격 변경은 Windows 10 장치(Xbox 포함)고객에게만 표시됩니다. 이전에 게시 된 앱이 이전 OS 버전을 지 원하는 경우 가격 변경이 해당 고객에 게 적용 되지 않습니다. WIndows 8 고객의 경우, 추가 가격 변경을 예약한 경우에도 앱은 항상 **기본 가격**으로 제공됩니다(지역/국가에 특정적인 가격 없음). Windows 8.1 및 Windows Phone 8.1 및 이전 버전의 고객에 대 한 앱이 항상 고객의 지역/국가 대 한 첫 번째 가격으로 제공 됩니다.
 
 가격 변경 옵션을 확인하려면 **가격 변경 예약**을 클릭합니다. 사용할 기준 가격을 선택한 다음(또는 단일 시장 기본 가격 재정의를 위해 자유 형식의 가격을 입력한 다음) 날짜, 시간 및 표준 시간대를 선택합니다.
 
-**다시 가격 변경 예약**을 클릭해 원하는 만큼 가격 변경을 예약할 수 있습니다.
+원하는 만큼의 후속 변경 예약 **가격 변경 예약** 다시 클릭 수 있습니다.
 
 > [!NOTE]
 > 예약된 가격 변경은 [할인 가격 책정](put-apps-and-add-ons-on-sale.md)과 다르게 작동합니다. 앱을 할인 판매할 경우, Microsoft Store에서 가격은 취소선으로 표시되며 고객은 선택한 기간 동안 앱을 할인된 가격으로 구매할 수 있습니다. 할인 기간이 종료되면 판매 가격은 더 이상 적용되지 않으며 앱이 기본 가격(또는 해당하는 경우 특정 시장에 지정한 다른 가격)으로 제공됩니다.
@@ -66,7 +61,7 @@ ms.locfileid: "5740542"
 위에서 선택한 옵션이 앱을 제공하는 모든 지역/국가에 적용되는 것이 기본값입니다. 원하는 경우 다른 기준 가격을 선택하거나 특정 지역/국가의 현지 통화로 자유 형식 가격을 입력하여 하나 또는 둘 이상의 시장에 대한 가격을 변경할 수 있습니다.
 
 > [!IMPORTANT]
-> Windows 8 고객은 지역/국가에 다른 가격을 선택한 경우에도 항상 앱의 **기본 가격**만 볼 수 있습니다.
+> 이전에 게시 된 앱이 Windows 8을 지 원하는 경우 해당 지역/국가 대 한 다른 가격을 선택한 경우에 해당 고객의 **기본 가격**을에 앱을 표시 항상 됩니다.
 
 특정 지역/국가의 가격을 변경하려면 **특정 지역/국가에 대해 기준 가격 재지정**을 선택합니다. **지역/국가 선택** 팝업 창이 앱을 사용할 수 있도록 설정한 모든 지역/국가 목록을 표시합니다. (**지역/국가** 섹션에서 제외한 지역/국가는 표시되지 않습니다.) 
 

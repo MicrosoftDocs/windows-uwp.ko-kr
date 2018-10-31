@@ -4,16 +4,16 @@ Description: If your developer account has been granted the appropriate permissi
 title: OEM용 사전 설치 패키지 생성
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8564d3dc7240bb556f3cb90c51165def9e2d4eba
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 02f7c1ad1a396464532a1c63c925bf9e19600f1b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839437"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>OEM용 사전 설치 패키지 생성
 
@@ -22,7 +22,7 @@ ms.locfileid: "5761565"
 
 ## <a name="important-preinstall-policy--limitations"></a>중요 사전 설치 정책 및 제한 사항
 
-최신 스토어 라이선스를 보유하려면 사전 설치 앱을 Windows 개발자 센터를 통해 인증받아야 스토어에 연결하고 앱 업데이트를 받을 수 있습니다.
+사전 설치 앱 스토어에 연결 하 고 앱 업데이트를 받을 수 있도록 최신 스토어 라이선스를 보유 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 통해 인증을 받아야 합니다.
 
 사전 설치되어 있는 앱은 모든 시장에 제공되고 무료를 유지해야 합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "5761565"
 
 사전 설치 권한으로 계정이 사용하도록 설정되면 다음 단계를 완료하세요.
 
-1.  대시보드에서 사전 설치할 앱으로 이동합니다.
+1.  파트너 센터에서 사전 설치할 앱으로 이동 합니다.
 2.  왼쪽 탐색 메뉴에서 **앱 관리**를 확장하고 **현재 패키지**를 선택합니다.
 3.  **OS 사전 설치용 패키지 요청** 섹션에서 **다운로드 가능한 패키지 사용**을 선택합니다.
 4.  확인 대화 상자에서 **활성화**를 선택합니다.
