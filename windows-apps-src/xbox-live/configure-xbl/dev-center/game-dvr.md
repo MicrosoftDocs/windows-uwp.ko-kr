@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox live, Xbox, 게임, uwp, windows 10, Xbox one, 게임 DVR, Windows 개발자 센터
 ms.openlocfilehash: d796429e01e17f9a188090834245826d0ad53e8b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5759289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5834393"
 ---
 # <a name="configuring-game-dvr-on-windows-dev-center"></a>Windows 개발자 센터에서 게임 DVR 구성
 
