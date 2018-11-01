@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows 10, uwp, 데이터, 데이터베이스, 관계형, 표, SQLite
 ms.localizationpriority: medium
 ms.openlocfilehash: beca20d358430ecd82cd1bc57459a6f6af36be77
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877210"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5924560"
 ---
 # <a name="data-access"></a>데이터 액세스
 
-SQLite 데이터베이스를 사용 하 여 사용자의 장치에서 데이터를 저장할 수 있습니다. 또한 서비스 계층의 모든 종류를 사용 하지 않고 앱을 SQL Server 데이터베이스에 직접 연결할 수 있습니다.
+SQLite 데이터베이스를 사용 하 여 사용자의 장치에서 데이터를 저장할 수 있습니다. 또한 모든 종류의 서비스 계층을 사용 하지 않고 앱을 SQL Server 데이터베이스에 직접 연결할 수 있습니다.
 
 | 항목 | 설명|
 |-------|------------|

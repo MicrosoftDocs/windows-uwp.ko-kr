@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 레지스트리, 사용자 지정
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bbd4074c52514b9cb66fd6f2dd189421f61d5ee
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5888932"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5941917"
 ---
 # <a name="registry-data-for-game-controllers"></a>게임 컨트롤러의 레지스트리 데이터
 
@@ -42,7 +42,7 @@ ms.locfileid: "5888932"
         <td>DWORD</td>
         <td>아니요</td>
         <td>
-            <p>이 특정 장치를 사용할 수 없도록 나타냅니다.</p>
+            <p>이 특정 장치를 비활성화 해야 하는 나타냅니다.</p>
             <ul>
                 <li><b>0</b>: 장치가 사용하지 않도록 설정되지 않았습니다.</li>
                 <li><b>1</b>: 장치가 사용하지 않도록 설정되었습니다.</li>

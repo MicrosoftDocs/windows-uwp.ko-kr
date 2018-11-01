@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9bffed44921df05a72025e86917901a65fe7ea82
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5870907"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5922164"
 ---
 # <a name="rotation"></a>회전
 
@@ -46,7 +46,7 @@ ms.locfileid: "5870907"
 
 ![회전에서 지원되는 다양한 손가락 동작을 보여 주는 다이어그램](images/ux-rotate-positions.png)
 
-**참고**  직관적으로, 및 대부분의 경우 회전 지점이 않는 두 개의 터치 포인트 중 하나 (예: 그리기 또는 레이아웃 응용 프로그램)에 접촉 지점과 관련 되지 않은 회전 지점을 지정할 수 있습니다. 다음 이미지는 이러한 방식으로 회전 지점이 제한되지 않을 경우 사용자 환경이 어떻게 저하될 수 있는지를 보여 줍니다.
+**참고**  직관적으로, 및 대부분의 경우, 회전 지점이 않는 두 개의 터치 지점 중 하나가 사용자 (예를 들어, 그리기 또는 레이아웃 응용 프로그램)에서 접촉 지점과 관련 되지 않은 회전 지점을 지정할 수 있습니다. 다음 이미지는 이러한 방식으로 회전 지점이 제한되지 않을 경우 사용자 환경이 어떻게 저하될 수 있는지를 보여 줍니다.
 
 첫 번째 그림은 엄지손가락과 집게손가락의 터치 지점을 보여 줍니다. 집게손가락은 나무를 터치하고 엄지손가락은 통나무를 터치하고 있습니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b0b1a45bc967dd69d38f2e85609a5e13ffd61b8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877732"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5921655"
 ---
 # <a name="optimize-file-access"></a>파일 액세스 최적화
 
@@ -198,7 +198,7 @@ UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP �
 
 큰 데이터 집합을 읽거나 쓸 경우에는 [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드에 큰 버퍼 크기를 제공하여 읽기 또는 쓰기 처리량을 늘릴 수 있습니다. 이렇게 하면 스트림 어댑터에 더 큰 내부 버퍼 크기가 제공됩니다. 예를 들어 큰 파일의 스트림을 XML 파서에 전달할 경우 파서는 스트림에서 여러 작은 읽기를 순서대로 수행할 수 있습니다. 버퍼가 크면 기본 UWP 스트림의 호출 수가 줄고 성능이 향상될 수 있습니다.
 
-> **참고**  을 설정할 때 버퍼 크기를 약 80KB 보다 크게 가비지 수집기 힙에서 조각화가 발생할 수이 주의 해야 ( [가비지 수집 성능 향상](improve-garbage-collection-performance.md)참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
+> **참고**  을 설정할 때 버퍼 크기를 약 80KB 보다 큰 가비지 수집기 힙에서 조각화가 발생할 수이 주의 해야 ( [가비지 수집 성능 향상](improve-garbage-collection-performance.md)참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

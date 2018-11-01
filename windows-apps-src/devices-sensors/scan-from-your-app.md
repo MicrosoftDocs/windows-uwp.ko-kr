@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9128056cbb3b9218d164b243948d9dd16af0786
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5878102"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5924392"
 ---
 # <a name="scan-from-your-app"></a>앱에서 스캔
 
@@ -26,7 +26,7 @@ ms.locfileid: "5878102"
 
 여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.
 
-**중요 한** [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) Api는 데스크톱 [장치 제품군](https://msdn.microsoft.com/library/windows/apps/Dn894631)의 일부입니다. 앱의 Windows10 데스크톱 버전 에서만 이러한 Api를 사용할 수 있습니다.
+**중요 한** [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) Api는 데스크톱 [장치 제품군](https://msdn.microsoft.com/library/windows/apps/Dn894631)의 일부입니다. 앱은 Windows10의 데스크톱 버전 에서만 이러한 Api를 사용할 수 있습니다.
 
 앱에서 스캔하려면 먼저 새 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 선언하고 [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381) 형식을 가져와서 사용 가능한 스캐너를 나열해야 합니다. WIA 드라이버를 사용하여 로컬로 설치된 스캐너만 나열되고 앱에서 사용할 수 있습니다.
 
@@ -100,7 +100,7 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
 
 기본 설정으로 스캔하려는 경우 앱에서는 [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) 네임스페이스에 의존하여 스캐너를 선택하고 해당 소스에서 스캔합니다. 스캔 설정은 변경되지 않습니다. 사용 가능한 스캐너로는 자동 구성, 평판 또는 공급 장치가 있습니다. 이러한 스캔 유형은 공급 디바이스 대신에 평판을 선택하는 등 잘못된 소스에서 스캔하더라도 스캔이 성공적으로 수행될 가능성이 높습니다.
 
-**참고**사용자가 문서 공급 장치를 스캔할, 스캔 평판에서 대신 합니다. 사용자가 빈 공급 디바이스에서 스캔하려고 하면 스캔된 파일이 생성되지 않습니다.
+**참고**사용자에 스캔할 문서 공급 장치에서 스캔을 스캐너가 평판에서 놓으면 스캐너가 스캔 합니다. 사용자가 빈 공급 디바이스에서 스캔하려고 하면 스캔된 파일이 생성되지 않습니다.
  
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default,

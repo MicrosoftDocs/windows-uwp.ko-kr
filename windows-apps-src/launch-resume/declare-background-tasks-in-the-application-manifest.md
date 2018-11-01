@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 343cca5b89dbe5fd7e1309b9487e8939218203d0
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5881706"
+ms.locfileid: "5931147"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
@@ -92,7 +92,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 2.  Task Type 특성 목록을 변경하여 이 백그라운드 작업과 함께 사용된 작업 등록 유형을 나타냅니다. 백그라운드 작업을 여러 트리거 유형과 함께 등록할 경우 유형별로 다른 Task 요소 및 Type 특성을 추가합니다.
 
-    **참고**있는지 각 트리거 유형을 나열을 사용 중인 또는 ( [**등록**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드가 실패 하 고 예외를 throw) 선언 되지 않은 트리거 유형과 함께 백그라운드 작업이 등록 되지 것입니다.
+    **참고**있는지 각 트리거 유형을 나열 사용 중인 또는 ( [**등록**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드가 실패 하 고 예외를 throw) 선언 되지 않은 트리거 유형과 함께 백그라운드 작업이 등록 되지 것입니다.
 
     이 조각 예에서는 시스템 이벤트 트리거 및 푸시 알림 사용을 나타냅니다.
 

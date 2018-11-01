@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: fb48efb2a1792d1c6691dfd38d0a5e36faac6e0b
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887870"
+ms.locfileid: "5919333"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 오류 보고 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 추가한 데스크톱 응용 프로그램의 집계 오류 보고 데이터를 가져옵니다. 이 메서드는 지난 30 일 동안에서 발생 한 오류만 검색할 수 있습니다. 이 정보는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램의 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)를 통해서도 확인할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스크톱 응용 프로그램 프로그램](https://msdn.microsoft.com/library/windows/desktop/mt826504)에 추가한 데스크톱 응용 프로그램의 집계 오류 보고 데이터를 가져옵니다. 이 이렇게 지난 30 일 동안에서 발생 한 오류를 검색할 수 있습니다. 이 정보는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램의 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)를 통해서도 확인할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -47,7 +47,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 [Windows 데스�
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | 오류 보고 데이터를 검색할 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [데스크톱 응용 프로그램의 개발자 센터 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)(예: **상태 보고서**)를 열고 URL에서 제품 ID를 검색합니다. |  예  |
-| startDate | 날짜 | 검색할 오류 보고 데이터의 날짜 범위에 대한 시작 날짜입니다. 형식은 ```mm/dd/yyyy```입니다. 기본값은 현재 날짜입니다.<p/><p/>**참고:**&nbsp;&nbsp;이 메서드는 지난 30 일 동안에서 발생 한 오류만 검색할 수 있습니다.  |  아니요  |
+| startDate | 날짜 | 검색할 오류 보고 데이터의 날짜 범위에 대한 시작 날짜입니다. 형식은 ```mm/dd/yyyy```입니다. 기본값은 현재 날짜입니다.<p/><p/>**참고:**&nbsp;&nbsp;이 이렇게만 지난 30 일 동안에서 발생 한 오류를 검색할 수 있습니다.  |  아니요  |
 | endDate | 날짜 | 검색할 오류 보고 데이터의 날짜 범위에 대한 종료 날짜입니다. 형식은 ```mm/dd/yyyy```입니다. 기본값은 현재 날짜입니다.   |  아니요  |
 | top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
 | skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니요  |

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5879531"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5921635"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
  
@@ -74,7 +74,7 @@ WNS 인증 체계는 [OAuth 2.0](http://go.microsoft.com/fwlink/p/?linkid=226787
 
 WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. 패키지 SID를 "client\_id" 필드에 입력하고 비밀 키를 "client\_secret" 필드에 입력합니다. 구문 정보는 [액세스 토큰 요청](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request) 참조를 확인하세요.
 
-**참고**예, 고유 코드에 성공적으로 사용할 수 없는 잘라내기 / 붙여넣기 코드 뿐입니다.
+**참고**예, 하지 잘라내기 및 붙여넣기 코드 자체 코드에서 성공적으로 사용할 수 있는 것입니다.
 
  
 
@@ -162,7 +162,7 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 ## <a name="push-notifications-and-battery-saver"></a>푸시 알림 및 배터리 절약 모드
 
 
-배터리 절약 모드는 디바이스의 백그라운드 활동을 제한하여 배터리 사용 시간을 연장합니다. Windows10 지정된 된 임계값 아래로 떨어질 때 자동으로 켜 지도록 배터리 절약 모드를 설정할 수 있습니다. 배터리 절약 모드가 작동되면 에너지를 절약하기 위해 푸시 알림 받기가 사용되지 않습니다. 그러나 이 경우에는 몇 가지 예외가 있습니다. ( **설정** 앱에 있는) 다음 Windows10 배터리 절약 모드 설정 하면 배터리 절약 모드가 켜져 있어도 푸시 알림을 받도록 앱을 허용 합니다.
+배터리 절약 모드는 디바이스의 백그라운드 활동을 제한하여 배터리 사용 시간을 연장합니다. Windows10 지정된 된 임계값 아래로 떨어질 때 자동으로 켜 지도록 배터리 절약 모드를 설정할 수 있습니다. 배터리 절약 모드가 작동되면 에너지를 절약하기 위해 푸시 알림 받기가 사용되지 않습니다. 그러나 이 경우에는 몇 가지 예외가 있습니다. ( **설정** 앱에 있음) 다음 Windows10 배터리 절약 모드 설정 하면 배터리 절약 모드가 켜져 있어도 푸시 알림을 받도록 앱을 허용 합니다.
 
 -   **배터리 절약 모드에 있는 동안 앱에서 푸시 알림 허용**: 이 설정을 사용하면 배터리 절약 모드가 켜져 있는 동안 모든 앱에서 푸시 알림을 받을 수 있습니다. 이 설정은 Windows10 데스크톱 버전 (Home, Pro, Enterprise 및 Education)에 적용 되는 참고 합니다.
 -   **항상 허용**: 이 설정을 사용하면 배터리 절약 모드가 켜져 있는 동안 특정 앱이 백그라운드에서 실행할 수 있습니다(푸시 알림 받기 포함). 이 목록은 사용자가 수동으로 유지합니다.

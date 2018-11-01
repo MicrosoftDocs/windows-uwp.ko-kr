@@ -9,23 +9,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 811c2c978d04e7636bb5f52a2ebf7587193c4786
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5884881"
+ms.locfileid: "5918688"
 ---
 # <a name="create-add-on-store-listings"></a>추가 기능 저장소 목록 만들기
 
 [파트너 센터](https://partner.microsoft.com/dashboard)에서 추가 기능을 제출할 때 **스토어 목록** 단계에서 제공 하는 정보가 추가 기능을 구입 하는 옵션을 확인할 때 고객에 게 표시 됩니다. 고객에게 매력적인 방식으로 추가 기능을 정확히 표현하려면 Store 목록을 주의해서 고려해야 합니다. 다른 언어에 대한 사용자 지정된 Store 목록을 제공할 수 있습니다.
 
 > [!TIP]
-> 할 수도 있습니다 [스토어 목록 가져오기 및 내보내기](import-and-export-store-listings.md) 추가 기능에 대 한 파트너 센터에서 직접 이러한 정보를 제공 하는 것이 아니라.csv 파일에서 오프 라인으로 목록 정보를 입력 하 고 싶다면 합니다. 이 기능은 다양한 언어로 목록을 만들 때 특히 편리할 수 있습니다. 그러나 가져오기/내보내기 기능을 사용 하는 것이 아니라 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 직접 항상 사용자 정보를 입력할 수 있습니다.
+> 수도 있습니다 [스토어 목록 가져오기 및 내보내기](import-and-export-store-listings.md) 추가 기능에 대 한 파트너 센터에서 직접 이러한 정보를 제공 하는 것이 아니라.csv 파일에서 오프 라인으로 목록 정보를 입력 하 고 싶은 경우. 이 기능은 다양한 언어로 목록을 만들 때 특히 편리할 수 있습니다. 그러나 가져오기/내보내기 기능을 사용 하는 것이 아니라 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 직접 항상 정보를 입력할 수 있습니다.
 
 
 ## <a name="store-listing-languages"></a>스토어 목록 언어
 
-Store 목록 정보를 입력하기 전에 [언어](supported-languages.md)를 하나 이상 지정해야 합니다. 하나 이상의 언어에 대한 **스토어 목록** 페이지를 완료해야 합니다. 지 원하는 모든 언어에 대 한 스토어 목록에 앱을 만드는 것이 좋습니다.
+Store 목록 정보를 입력하기 전에 [언어](supported-languages.md)를 하나 이상 지정해야 합니다. 하나 이상의 언어에 대한 **스토어 목록** 페이지를 완료해야 합니다. 원하는 모든 언어에 대 한 스토어 목록에 앱을 만드는 것이 좋습니다.
 
 추가 기능 제출의 **Store 목록** 섹션에서 **언어 추가/제거**를 클릭한 후, 다음 페이지에서 **언어 관리**를 클릭합니다. 추가할 언어의 확인란을 선택한 다음 **업데이트**를 클릭합니다. 선택한 언어는 페이지의 **Store 목록 언어** 섹션에 표시됩니다.
 

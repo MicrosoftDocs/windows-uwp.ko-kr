@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f37412ac88b001f412a1495f2b4efa029cf4d3a
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869243"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5918880"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
@@ -21,7 +21,7 @@ ms.locfileid: "5869243"
 이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요.
 
 > [!NOTE]
-> 나열 된 요구 사항을 모두 충족 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies) 검토 해야 합니다.
+> 모든 나열 된 요구 사항을 충족 하도록 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies) 검토 해야 합니다.
 
 -   완료된 앱만 제출합니다. 앱 설명을 사용하여 제공 예정인 기능을 언급할 수 있지만 앱에 불완전한 조항, 생성 중인 웹 페이지 링크 또는 앱이 불완전하다는 인상을 고객에게 주는 다른 사항이 앱에 포함되지 않도록 하세요.
 
@@ -33,7 +33,7 @@ ms.locfileid: "5869243"
 
 -   앱을 사용하기 위해 사용자가 서비스에 로그인해야 하는 경우 테스트 계정의 사용자 이름 및 암호, 숨겨진 기능 또는 잠긴 기능을 액세스하는 데 필요한 단계 등 앱을 사용하는 데 [필요한 정보를 제공](notes-for-certification.md)합니다.
 
--   앱이 요구 하는 경우 [개인 정보 취급 방침 URL](enter-app-properties.md#privacy-policy-url) 을 포함 합니다. 예를 들어 하는 경우 앱이 어떤 방식으로든 어떤 방식으로든에서 개인 정보의 액세스 나 법률에서 요구 합니다. 앱 개인 정보 취급 방침 필요한 지를 확인 하려면 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)를 검토 합니다.
+-   앱이 요구 하는 경우 [개인 정보 취급 방침 URL](enter-app-properties.md#privacy-policy-url) 을 포함 합니다. 예를 들어 하는 경우 앱이 어떤 방식으로든 어떤 방식으로든에서 개인 정보의 액세스 나 법률 필요 합니다. 앱 개인 정보 취급 방침 필요한 지를 확인 하려면 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)를 검토 합니다.
 
 -   앱이 수행하는 역할을 앱 설명이 명확하게 나타내는지 확인합니다. 도움이 필요하면 [유용한 앱 설명 작성](write-a-great-app-description.md)에 있는 지침을 참조하세요.
 

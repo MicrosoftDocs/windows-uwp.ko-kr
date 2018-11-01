@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, 셰이더
 ms.localizationpriority: medium
 ms.openlocfilehash: 30c925f9ebb07d578147dfba373fdeb3baa364fe
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885533"
+ms.locfileid: "5947704"
 ---
 # <a name="glsl-to-hlsl-reference"></a>GLSL-HLSL 참조
 
@@ -96,7 +96,7 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 <td align="left">행 중심 행렬(기본값)</td>
 <td align="left">열 중심 행렬(기본값)
 <div class="alert">
-<strong>참고</strong>  <strong>row_major</strong> 형식 한정자를 사용 하 여 한 변수의 레이아웃을 변경 합니다. 자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">변수 구문</a>을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
+<strong>참고</strong>  <strong>row_major</strong> 유형-한정자를 사용 하 여 한 변수의 레이아웃을 변경 합니다. 자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">변수 구문</a>을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
 </div>
 <div>
  

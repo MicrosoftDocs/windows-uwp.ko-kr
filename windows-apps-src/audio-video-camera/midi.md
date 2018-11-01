@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d1e4afd620b871d4273699aea5c02cc9faec80
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5878515"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5925251"
 ---
 # <a name="midi"></a>MIDI
 
 
 
-이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다. Windows 10을 통해 Bluetooth LE MIDI (클래스 규격 및 가장 독점 드라이버) USB를 통해 MIDI 지원 (Windows 10 Anniversary Edition 이상)를 통해 자유롭게 사용할 수 있는 타사 제품, 이더넷을 통해 MIDI 및 라우트된 MIDI 합니다.
+이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다. Windows 10은 Bluetooth LE 통해 MIDI (클래스 규격 및 가장 독점 드라이버) USB를 통해 MIDI 지원 (Windows 10 Anniversary Edition 이상)를 통해 자유롭게 사용할 수 있는 타사 제품, 이더넷을 통해 MIDI 및 라우트된 MIDI 합니다.
 
 ## <a name="enumerate-midi-devices"></a>MIDI 장치 열거
 

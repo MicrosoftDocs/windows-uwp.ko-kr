@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869982"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5941907"
 ---
 # <a name="make-your-app-localizable"></a>자신의 앱을 현지화 가능하도록 만들 수 있습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "5869982"
 
 즉, 모든 컨텍스트에서 활용될 수 있도록 문자열을 작은 단위로 분리합니다. 문자열이 전체 문장이어야 하는 경우도 있습니다.
 
-다음 문자열: "는 {0} 동기화 할 수 없습니다."
+다음 문자열: "의 {0} 동기화 할 수 없습니다."
 
 다양 한 단어가 바꿀 수 {0}"약속", "작업", "문서" 등. 이 예가 영어에는 적절하지만 독일어의 해당 문장에 대해서는 모든 경우에 적합하지 않습니다. 다음 독일어 문자에서 템플릿 문자열의 일부 단어("Der", "Die", "Das")가 매개 변수가 있는 단어와 일치해야 합니다.
 
@@ -98,7 +98,7 @@ ms.locfileid: "5869982"
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. 번역자 형식 문자열의 형식 항목의 순서를 바꿀 수 있도록 각 매개 변수의 의도 알고 있다고 확인 (예를 들어 "{1} {0}")는 대상 언어.
+이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. 번역자 형식 문자열의 형식 항목의 순서를 바꿀 수 있도록 각 매개 변수의 의도 알고 있다고 확인 (예를 들어 "{1} {0}")는 대상 언어에 대 한 적절 합니다.
 
 ## <a name="dont-over-localize"></a>과도한 지역화는 금지됩니다.
 

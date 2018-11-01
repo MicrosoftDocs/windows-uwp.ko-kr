@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-description: 유니버설 8.1 앱 및 \#8212;whether 있는 경우를 대상으로 Windows8.1, Windows Phone 8.1 또는 둘 다 \#8212;then은 소스 코드 및 기술이 원활 하 게 포팅 Windows10 나와 있습니다.
+description: 유니버설 8.1 앱 및 \#8212;whether 있는 경우를 대상으로 Windows8.1, Windows Phone 8.1 또는 둘 다 \#8212;then은 소스 코드 및 기술이 원활 하 게 포팅 Windows10 찾을 수 있습니다.
 title: Windows 런타임 8.x에서 UWP로 이동'
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.author: stwhi
@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eebd0467696b78458835425f7feac903ba435f42
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5888363"
+ms.locfileid: "5920155"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x에서 UWP로 이동
 
 
-유니버설 8.1 앱이 있는 경우-Windows8.1, Windows Phone 8.1 또는 둘 다 대상으로 하는지 여부 등는 소스 코드 및 기술이 원활 하 게 포팅 Windows10 찾을 수 있습니다. Windows10를 사용 하 여 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. 추가적인 배경 정보에 Windows10, UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 적응 UI 개념 [UWP 앱 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631)를 참조 합니다.
+유니버설 8.1 앱이 있는 경우-Windows8.1, Windows Phone 8.1 또는 둘 다 대상으로 하는지 여부 등는 소스 코드 및 기술이 원활 하 게 포팅 Windows10 찾을 수 있습니다. Windows10를 사용 하 여 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. Windows10에 대 한 자세한 배경, UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 적응 UI 개념 [UWP 앱에 대 한 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631)를 참조 합니다.
 
-포팅하는 동안 알려드립니다 Windows10 이전 플랫폼 뿐 아니라 XAML 태그, UI 프레임 워크 및 도구를 사용 하 여 대부분의 Api 공유 하 고 있다는 사실을 확인할 모든 항목이 이미 익숙하다는 합니다. 이전과 마찬가지로 C++, C# 및 Visual Basic 중에서 XAML UI 프레임워크와 함께 사용할 프로그래밍 언어를 선택할 수 있습니다. 처음에 현재 앱을 사용해서 수행할 작업을 정확히 계획할 때는 앱 및 프로젝트 종류를 고려해야 합니다. 이 내용은 다음 섹션에서 설명합니다.
+포팅하는 동안 알게 Windows10 이전 플랫폼 뿐 아니라 XAML 태그, UI 프레임 워크 및 도구를 사용 하 여 대부분의 Api 공유 하 고 있다는 사실을 확인할 수 있는 모든 항목이 이미 익숙하다는 합니다. 이전과 마찬가지로 C++, C# 및 Visual Basic 중에서 XAML UI 프레임워크와 함께 사용할 프로그래밍 언어를 선택할 수 있습니다. 처음에 현재 앱을 사용해서 수행할 작업을 정확히 계획할 때는 앱 및 프로젝트 종류를 고려해야 합니다. 이 내용은 다음 섹션에서 설명합니다.
 
 ## <a name="if-you-have-a-universal-81-app"></a>유니버설 8.1 앱이 있는 경우
 

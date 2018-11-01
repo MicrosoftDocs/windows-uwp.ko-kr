@@ -14,11 +14,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b5d2a55610b6cec2f9026a5834b00ad7015a9c6
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874960"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5920926"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -114,7 +114,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 다른 모든 사전과 마찬가지로 리소스 사전의 멤버에 액세스합니다.
 
 > [!WARNING]
-> 코드에 대 한 리소스만에서 리소스 조회를 수행 합니다 `Page.Resources` 사전의 리소스만 확인 됩니다. [StaticResource 태그 확장](../../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
+> 리소스 조회 코드에서 리소스에만 수행 하면는 `Page.Resources` 사전의 리소스만 확인 됩니다. [StaticResource 태그 확장](../../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
 
  
 
@@ -204,7 +204,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)는 컨트롤이 상속하는 기본 클래스이며 [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) 속성이 있습니다. 따라서 모든 **FrameworkElement**에 로컬 리소스 사전을 추가할 수 있습니다.
 
-여기서 [Page](https://msdn.microsoft.com/library/windows/apps/br227503) 및 [Border](https://msdn.microsoft.com/library/windows/apps/br209250)에는 모두 리소스 사전이 있으며 "greeting"이라는 리소스가 있습니다. 'TextBlock2' 라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) **테두리**안에 이므로 해당 리소스를 찾을 때 **테두리**의 리소스를 **페이지**의 리소스 및 [응용 프로그램](https://msdn.microsoft.com/library/windows/apps/br242324) 리소스. **TextBlock** 은 "Hola mundo"입니다.
+여기서 [Page](https://msdn.microsoft.com/library/windows/apps/br227503) 및 [Border](https://msdn.microsoft.com/library/windows/apps/br209250)에는 모두 리소스 사전이 있으며 "greeting"이라는 리소스가 있습니다. 'TextBlock2' 라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 의 **테두리**안에 이므로 해당 리소스 조회는 **테두리**의 리소스, 다음 **페이지**의 리소스 및 [응용 프로그램](https://msdn.microsoft.com/library/windows/apps/br242324) 리소스를 먼저 검색 합니다. **TextBlock** 은 "Hola mundo"입니다.
 
 코드에서 요소의 리소스에 액세스하려면 해당 요소의 [Resources](https://msdn.microsoft.com/library/windows/apps/br208740) 속성을 사용합니다. XAML이 아니라 코드에서 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)의 리소스에 액세스하면 부모 요소의 사전이 아니라 해당 사전만 검색합니다.
 

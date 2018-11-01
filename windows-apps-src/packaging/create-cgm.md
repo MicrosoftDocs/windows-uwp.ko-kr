@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 콘텐츠 그룹 맵, 스트리밍 설치, uwp 앱 스트리밍 설치, 소스 콘텐츠 그룹 맵
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a2922d6d3f54d693a9fe9c0982ea06cc5f2caae
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885747"
+ms.locfileid: "5941735"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>소스 콘텐츠 그룹 맵 생성 및 변환
 
@@ -25,7 +25,7 @@ ms.locfileid: "5885747"
 
 UWP 앱 스트리밍 설치가 유용한 시나리오를 간단히 살펴보겠습니다. 
 
-UWP 게임을 만들었는데, 최종 앱의 크기가 100GB를 넘었다고 해봅시다. 하는 편리 하 게 될 수 있는 Microsoft Store에서 다운로드 하는 데 시간이 오래 걸릴 것입니다. UWP 앱 스트리밍 설치를 사용하기로 한 경우에는 앱의 파일이 다운로드되는 순서를 지정할 수 있습니다. 사용자는 먼저 기본적인 파일을 다운로드하도록 스토어에 명령하여 백그라운드에서 필수가 아닌 파일이 다운로드되는 동안 더 빨리 앱과 상호 작용을 할 수 있습니다.
+UWP 게임을 만들었는데, 최종 앱의 크기가 100GB를 넘었다고 해봅시다. 편리 하 게 될 수 있는 Microsoft Store에서 다운로드 하는 데 시간이 오래 걸릴 하더라도입니다. UWP 앱 스트리밍 설치를 사용하기로 한 경우에는 앱의 파일이 다운로드되는 순서를 지정할 수 있습니다. 사용자는 먼저 기본적인 파일을 다운로드하도록 스토어에 명령하여 백그라운드에서 필수가 아닌 파일이 다운로드되는 동안 더 빨리 앱과 상호 작용을 할 수 있습니다.
 
 > [!NOTE]
 > UWP 앱 스트리밍 설치의 사용은 앱의 파일 구성에 따라 크게 좌우됩니다. UWP 앱 스트리밍 설치와 관련된 앱의 콘텐츠 레이아웃을 가능한 먼저 고려하여 앱의 파일을 보다 간단하게 만드는 것이 좋습니다.

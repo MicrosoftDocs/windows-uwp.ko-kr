@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df6e2c15260759f164a37b68365e0268633b22d5
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5862440"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5921838"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 
@@ -69,7 +69,7 @@ ms.locfileid: "5862440"
 
 
 Honeywell 통해 2D 바코드를 지원 하기 위해 ¹ Upgradable <br/>
-² 최소 펌웨어 016 (2018.01.18)가 필요 합니다. 업그레이드 가능한 Zebra [123Scan](http://www.zebra.com/123Scan)를 사용 합니다. 
+² 최소 펌웨어 016 (2018.01.18)가 필요 합니다. 업그레이드할 Zebra [123Scan](http://www.zebra.com/123Scan)사용 합니다. 
 
 
 <hr>
@@ -77,7 +77,7 @@ Honeywell 통해 2D 바코드를 지원 하기 위해 ¹ Upgradable <br/>
 ### <a name="windows-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows 장치
 | 제조업체   | 모델 | 운영 체제 |
 |----------------|-------|------------------|
-| Innowi         | ChecOut M | Windows10   |
+| Innowi         | ChecOut-M | Windows10   |
 
 ### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows Mobile 장치
 | 제조업체   | 모델 | 운영 체제 |

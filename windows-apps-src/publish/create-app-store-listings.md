@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
 ms.localizationpriority: medium
 ms.openlocfilehash: ec1867e747f3458e3a9cffabe9a45535d4c27489
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861058"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5923623"
 ---
 # <a name="create-app-store-listings"></a>앱 Store 목록 만들기
 
@@ -25,7 +25,7 @@ ms.locfileid: "5861058"
 > [!TIP]
 > 하면 필요에 따라 [Store 목록 가져오기 및 내보내기](import-and-export-store-listings.md) .csv 파일을 사용 하는 것이 아니라 제공 정보 및 파트너 센터에서 직접 파일을 업로드에서 오프 라인으로 목록 정보를 입력 하 고 하려는 경우. 가져오기 및 내보내기 옵션을 사용할 수 있는 기능은 한 번에 여러 번 업데이트를 수행할 수 있기 때문에 목록이 다양한 언어로 되어 있는 경우에 특히 편리할 수 있습니다. 
 
-이전에 게시 된 앱에 Windows에서 지 원하는 경우 8.x 및/또는 Windows Phone 8.x 또는 이전에 해당 고객에 게 표시 하도록 [플랫폼별 스토어 목록을 만들](create-platform-specific-store-listings.md) 수 있습니다. 
+이전에 게시 된 앱 지원 Windows 8.x 및/또는 Windows Phone 8.x 또는 이전에 해당 고객에 게 표시 하도록 [플랫폼별 스토어 목록을 만들](create-platform-specific-store-listings.md) 수 있습니다. 
 
 ## <a name="store-listing-languages"></a>Microsoft Store 목록 언어
 
@@ -42,20 +42,20 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 ## <a name="add-and-edit-store-listing-info"></a>추가 하 고 스토어 목록 정보를 편집 합니다.
 
-스토어 목록을 편집 하려면 제출 개요 페이지에서 언어 이름을 선택 합니다. Store 목록 내보내기 오프 라인으로 작업 하 고 목록 데이터를 모두를 한 번에 가져올를 선택 하지 않는 한 각 언어를 별도로 편집 해야 합니다. 작동 하는 방법에 대 한 자세한 내용은 참조 [가져오기 Store 목록 내보내기 및](import-and-export-store-listings.md).
+스토어 목록을 편집 하려면 제출 개요 페이지에서 언어 이름을 선택 합니다. 스토어 목록 내보내기 오프 라인으로 작업 하 고 목록 데이터를 모두 한 번에 가져올를 선택 하지 않는 한 각 언어를 별도로 편집 해야 합니다. 작동 하는 방법에 대 한 자세한 내용은 참조 [가져오기 Store 목록 내보내기 및](import-and-export-store-listings.md).
 
 다음은 사용 가능한 필드에 대 한 설명입니다.
 
 ## <a name="product-name"></a>제품 이름
 
-이 드롭다운 상자는 이름 (앱에 대 한 이름을 여러 개 예약 않은) 하는 경우 스토어 목록에 사용 해야를 지정할 수 있습니다.
+이 드롭다운 상자는 이름 (둘 이상의 앱 이름을 예약 않은) 하는 경우 스토어 목록에 사용 해야를 지정할 수 있습니다.
 
-업로드 한 경우 스토어 목록이와 동일한 언어로 패키지 작업을 진행 중, 해당 패키지에 사용할 이름을 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 업로드 한 후 새 제출을 만들 때 다음 다른 예약 된 이름을 선택할 수 있습니다.
+업로드 한 경우 스토어 목록이와 동일한 언어로 패키지 작업을 진행 중, 해당 패키지에 사용한 이름이 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 업로드 한 후 새 제출을 만들 때 다른 예약 된 이름을 선택할 수 있습니다.
 
-언어에 대 한 패키지를 업로드 하지 않은 작업 중인 및 둘 이상의 이름을 예약한, 이름을 나타내야 해당 언어에 연결된 된 패키지가 없으므로 예약 된 앱 이름 중 하나를 선택 해야 합니다.
+언어에 대 한 패키지를 업로드 하지 않은 경우, 작업 중인 및 둘 이상의 이름을 예약한, 이름을 나타내야 해당 언어에 연결된 된 패키지가 없으므로 예약 된 앱 이름 중 하나를 선택 해야 합니다.
 
 > [!NOTE]
-> 스토어 언어에서 목록에서 작업할 때에 선택 되는 **제품 이름** 적용 됩니다. 고객이; 앱을 설치 하는 경우 표시 되는 이름 영향을 주지 설치 패키지의 매니페스트에에서 해당 이름을 제공 됩니다. 혼동을 피하기 위해 각 언어 패키지 및 스토어 목록에는 동일한 이름의 사용 하는 것이 좋습니다.
+> **제품 이름** 만 선택 하면 작업 중인 스토어 목록 언어에서에 적용 됩니다. 고객이; 앱을 설치 하는 경우 표시 되는 이름 영향을 주지 않습니다. 설치 하는 패키지의 매니페스트에에서 해당 이름을 제공 됩니다. 혼동을 피하기 위해 각 언어 패키지 및 스토어 목록에 동일한 이름을 사용 하는 것이 좋습니다.
 
 ## <a name="description"></a>설명
 
@@ -101,7 +101,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 <a id="supplemental-information" />
 
-## <a name="supplemental-fields"></a>보조 필드
+## <a name="supplemental-fields"></a>추가 필드
 
 이 섹션의 필드는 모두 선택 사항입니다. 아래의 정보를 검토하여 이러한 정보를 제공하는 것이 제출에 도움이 되는지 판단하세요. 특히 대부분의 제출에 **간단한 설명**을 제공하는 것이 좋습니다. 다른 필드는 다른 시나리오에서 제품에 최적의 경험을 제공하는 데 도움이 될 수 있습니다.
 
@@ -132,7 +132,7 @@ Microsoft Store 로고는 앱이 고객에게 더 효과적으로 표시될 수 
 
 게임의 경우 Xbox One의 게임 허브의 정보 섹션에도 간단한 설명이 나타날 수 있습니다.
 
-최상의 결과 위해 아래에서 270 문자 간단한 설명을 유지 합니다. 필드는 500 자로 제한, 하지만 일부 보기에서는 먼저 270 문자만 짧은 설명의 나머지 부분을 볼 수 있는 링크) (함께 표시 됩니다.
+최상의 결과 짧은 설명에서 270 자를 유지 합니다. 필드는 500 자로 제한, 하지만 일부 보기에서는 먼저 270 문자만 짧은 설명의 나머지 부분을 볼 수 링크) (함께 표시 됩니다.
 
 
 ### <a name="additional-system-requirements"></a>추가 시스템 요구 사항

@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 5968a2dad76343a1aa589caadf62ec3cd823aed0
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5888422"
+ms.locfileid: "5931253"
 ---
 # <a name="networking-page-dev-home"></a>네트워킹 페이지 (개발자 홈)
    
@@ -35,7 +35,7 @@ ms.locfileid: "5888422"
 ## <a name="network-simulation"></a>네트워크 시뮬레이션  
    
   
-**네트워크 시뮬레이션** 창 다양 한 대역폭 프로필에 대해 테스트 하는 네트워크 시뮬레이션을 실행 합니다.   
+**네트워크 시뮬레이션** 창이 다양 한 대역폭 프로필에 대해 테스트 하는 네트워크 시뮬레이션을 실행 합니다.   
   
 <a id="ID4EOB"></a>
 

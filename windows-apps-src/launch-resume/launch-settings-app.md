@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b86298ca671282dea201e3088bc60845231fe007
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868133"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5920801"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -99,7 +99,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | Cortana에게 말하기 | ms-settings:cortana-language |
 
 > [!NOTE] 
-> 이 설정 섹션에서 데스크톱 PC 영역 Cortana가 사용 하지 않도록 하거나 Cortana를 현재 사용할 수 없는 위치에 설정 된 경우 검색을 호출 됩니다. Cortana 관련 페이지 (Cortana 내 장치 간) 및 Cortana에 음성 채팅이 경우 나열 되지 않습니다. 
+> 이 설정 섹션에서 데스크톱 PC 영역 Cortana 현재 사용할 수 없는 위치나 Cortana가 사용 하지 않도록 설정 된 경우 검색을 호출 됩니다. Cortana 관련 페이지 (Cortana 내 장치 간) 및 Cortana에 대화 여기에 나열 되지 않습니다. 
 
 ## <a name="devices"></a>장치
 

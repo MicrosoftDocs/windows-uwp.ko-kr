@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 클라우드의 알림 센터, 알림 미러링, 알림, 크로스 디바이스
 ms.localizationpriority: medium
 ms.openlocfilehash: c36b5ffcbb016e5b89fa1c960a7493767192296c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869962"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919665"
 ---
 # <a name="notification-mirroring"></a>알림 미러링
 
@@ -27,7 +27,7 @@ ms.locfileid: "5869962"
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-개발자는 알림 미러링을에서 두 가지 큰 이점을 가져오기: 미러링된 알림을 서비스를 사용 하 여 사용자 참여가 증가 하 고 Microsoft Store 데스크톱 앱을 검색 하는 사용자는 데도 도움이! 사용자는 Windows 10 데스크톱에서 유용한 UWP 앱을 사용할 수 있는지 조차도 알지 못할 수도 있습니다. 사용자가 전화에서 미러링된 알림을 받으면 사용자 수 UWP 데스크톱 앱을 설치할 수 있도록 Microsoft Store로 이동 하 여 알림 메시지를 클릭 합니다.
+개발자가 알림을 미러링에서 두 가지 중요 한 혜택을 얻을: 미러 알림 서비스를 더 많은 사용자 커뮤니케이션 되 고 저장소 Microsoft 데스크톱 응용 프로그램을 검색 하는 사용자는 데도 도움이! 사용자는 Windows 10 데스크톱에서 유용한 UWP 앱을 사용할 수 있는지 조차도 알지 못할 수도 있습니다. 사용자가 전화에서 미러 알림을 받으면 UWP 데스크톱 응용 프로그램을 설치할 수 있는 Microsoft 저장소에 알림 메시지 통지 클릭 수 있습니다.
 
 미러링 기능은 Windows Phone과 Android에서 작동합니다. 알림 미러링을 작동하려면 사용자가 전화와 데스크톱에서 Cortana에 로그인해야 합니다.
 

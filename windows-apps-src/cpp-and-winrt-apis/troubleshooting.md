@@ -8,20 +8,20 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: f1a25b606def215defb8be0e0a38c628349f2440
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863712"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5924352"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>C++/WinRT 문제 해결
 
 > [!NOTE]
-> 설치 및 사용에 대 한 정보는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (제공 프로젝트 템플릿 지원과 뿐 아니라 C + + /winrt MSBuild 속성 및 대상) 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> 설치 및 사용에 대 한 정보는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (있는 제공 프로젝트 템플릿 지원과 C + + /winrt MSBuild 속성 및 대상) 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 이번 항목은 사전적 정보이므로 당장 필요하지 않더라도 알고 있어야 합니다. 아래 증상 문제 및 해결 방법을 나타낸 표는 새로운 코드를 자르거나 기존 앱을 이식할지 결정하는 데 도움이 될 수 있습니다. 앱을 이식하여 프로젝트를 빌드 및 실행하는 단계까지 빠르게 진행하려는 경우에는 문제를 야기하는 일반(중요하지 않은) 코드를 주석 처리하거나 삭제한 후 해당 부채를 나중에 갚을 때 반환하는 방식으로 잠시 진행할 수는 있습니다.
 
-질문과 대답 목록을 [질문과 대답](faq.md)을 참조 하세요.
+질문과 대답 목록을, [질문과 대답](faq.md)을 참조 하세요.
 
 ## <a name="tracking-down-xaml-issues"></a>XAML 문제 추적
 예외 내에서 의미 있는 오류 메시지가 없는 경우에 특히 XAML 구문 분석 예외를 진단하는 것이 어려울 수 있습니다. 초기에 구문 분석 예외를 찾기 위해 첫째 예외를 catch하도록 디버거가 구성되어 있는지 확인하세요. 디버거에서 예외 변수를 검사하여 HRESULT 또는 메시지에 유용한 정보가 있는지 확인할 수 있습니다. XAML 파서로 오류 메시지 출력을 위한 Visual Studio 출력 창을 확인할 수도 있습니다.
@@ -40,18 +40,18 @@ ms.locfileid: "5863712"
 | C++ 컴파일러가 "*cannot convert from 'const std::vector&lt;std::wstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*"이라는 오류 메시지를 생성합니다.|이 오류는 std::wstring에서 std::vector를 컬렉션이 필요한 Windows 런타임 API에게 전달할 때 발생할 수 있습니다. 자세한 내용은 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 참조하세요.|
 | C++ 컴파일러가 "*cannot convert from 'const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;' to 'const winrt::param::async_iterable&lt;winrt::hstring&gt; &'*"이라는 오류 메시지를 생성합니다.|이 오류는 winrt::hstring에서 std::vector를 컬렉션이 필요한 비동기식 Windows 런타임 API로 전달하면서 벡터를 비동기 수신자로 복사하거나 이동시키지 않았을 때 발생할 수 있습니다. 자세한 내용은 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 참조하세요.|
 | 프로젝트를 열 때 Visual Studio에서 "*The application for the project is not installed*"라는 오류 메시지를 생성합니다.|아직 **C++ 개발용 Windows 유니버설 도구**를 설치하지 않았다면 Visual Studio의 **새 프로젝트** 대화 상자에서 설치해야 합니다. 그래도 문제가 해결되지 않으면 프로젝트가 C++/WinRT Visual Studio Extension(VSIX)에 따라 달라질 수 있습니다([C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix) 참조).|
-| Windows 앱 인증 키트 테스트에서 런타임 클래스 중 하나가 "*does not derive from a Windows base class. All composable classes must ultimately derive from a type in the Windows namespace*"라는 오류 메시지가 생성됩니다.|기본 클래스에서 파생 되는 런타임 클래스 (선언 하는 응용 프로그램에서) 라고는 *구성 가능한* 클래스입니다. 구성 가능한 클래스의 최종 기본 클래스 네임 스페이스로 시작; 형식 이어야 합니다. 예를 들어 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)합니다. 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](binding-property.md) 더 자세한 합니다.|
+| Windows 앱 인증 키트 테스트에서 런타임 클래스 중 하나가 "*does not derive from a Windows base class. All composable classes must ultimately derive from a type in the Windows namespace*"라는 오류 메시지가 생성됩니다.|기본 클래스에서 파생 되는 모든 런타임 클래스 (선언 하는 응용 프로그램에서) 라고는 *구성 가능한* 클래스입니다. Composable 클래스의 최종 기본 클래스 네임 스페이스로 시작; 형식 이어야 합니다. 예를 들어 [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)합니다. 참조 [XAML 컨트롤, 바인딩 C + + /winrt 속성](binding-property.md) 자세한 내용은 합니다.|
 | C++ 컴파일러가 EventHandler 또는 TypedEventHandler 대리자 전문화에서 "*must be WinRT type*"이라는 오류 메시지를 생성합니다.|**winrt::delegate&lt;...T&gt;** 를 대신 사용하세요. [C++/WinRT의 작성자 이벤트](author-events.md)를 참조하세요.|
 | C++ 컴파일러가 Windows 런타임 비동기 작업 전문화에서 "*must be WinRT type*"이라는 오류 메시지를 생성합니다.|병렬 패턴 라이브러리(PPL) [**작업**](https://msdn.microsoft.com/library/hh750113)을 대신 반환하세요. [동시성 및 비동기 작업](concurrency.md)을 참조하세요.|
-| C++ 컴파일러가 "*error C2220: warning treated as error - no 'object' file generated*"라는 오류 메시지를 생성합니다.|경고를 수정 하거나 설정 **C/c + +**>**일반**>**경고를 오류로 처리** **아니요 (/ WX-)**.|
-| 개체 삭제 후 C++/WinRT 개체의 이벤트 처리기가 호출되어 앱이 충돌을 일으킵니다.|[이벤트 처리 대리자를 사용 하 여 *이* 포인터를 안전 하 게 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)를 참조 하십시오.|
+| C++ 컴파일러가 "*error C2220: warning treated as error - no 'object' file generated*"라는 오류 메시지를 생성합니다.|경고를 수정 하거나 **C/c + +** 설정>**일반**>**경고를 오류로 처리** **아니요 (/ WX-)**.|
+| 개체 삭제 후 C++/WinRT 개체의 이벤트 처리기가 호출되어 앱이 충돌을 일으킵니다.|[이벤트 처리 대리자를 사용 하 여 *이* 포인터를 안전 하 게 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)를 참조 하세요.|
 | C++ 컴파일러가 "*error C2338: This is only for weak ref support*"라는 오류 메시지를 생성합니다.|현재 **winrt::no_weak_ref** 마커 구조체를 템플릿 인수로 기본 클래스에게 전달한 유형에 대해 약한 참조를 요청하고 있습니다. [약한 참조 지원의 옵트아웃](weak-references.md#opting-out-of-weak-reference-support)을 참조 하세요.|
-| C + + 링커 생성 "*오류 LNK2019: Unresolved 외부 기호*"|참조 [이유는 링커 링커에서 "LNK2019: 외부 기호가" 오류?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)합니다.|
-| LLVM 및 Clang 도구 체인에서 오류 발생 사용한 C + + WinRT 합니다.|C +에 LLVM 및 Clang 도구 체인은 지원 되지 + 다음 방법을 사용 하 여 그 내부적으로 에뮬레이션 하려고 하지만 WinRT에서 설명 하는 것 같은 실험을 시도할 수 [LLVM/Clang C + 컴파일하는 데 사용할 수 있나요 + WinRT?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt)합니다.|
-| C + + 컴파일러는 프로젝션 된 형식에 대 한 "*적절 한 기본 생성자가 사용할 수 없습니다*"를 만듭니다. | 하려고 하는 런타임 클래스 개체를 초기화를 지연 하 또는 사용 하 고 동일한 프로젝트에서 런타임 클래스를 구현할 경우 호출 해야 합니다 `nullptr_t` 생성자입니다. 자세한 정보는 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요. |
-| C + + 컴파일러에서 "*C3861 오류: 'from_abi': 식별자를 찾을 수 없는*", 및 기타 오류 *base.h*에서 발생 합니다. Visual Studio 2017을 사용 하는 경우이 오류가 발생할 수 있습니다 (15.8.0 버전 이상), Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803)를 대상으로 합니다. | 하나는 이후 (자세한 준수)를 대상으로 버전의 Windows SDK 또는 프로젝트 속성 집합 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-**  >  **언어** >  **추가 옵션****명령줄** 다음 삭제). |
-| C + + 컴파일러에서 "*C2039 오류: 'IUnknown':의 구성원이 아닙니다 ' \'global 네임 스페이스 '*"입니다. | 참조 [방법을 대상을 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
-| C + + 링커 생성 "*오류 LNK2019: 외부 기호가 _WINRT_CanUnloadNow@0 함수에서 참조 _VSDesignerCanUnloadNow@0 *" | 참조 [방법을 대상을 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
+| C + + 링커 생성 "*오류 LNK2019: Unresolved 외부 기호*"|참조 [이유는 링커 링커에서 "LNK2019: 외부 기호가" 오류?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error).|
+| LLVM 및 Clang 도구 체인은에서 오류가 발생 사용한 C + + WinRT 합니다.|C + LLVM 및 Clang 도구 체인은 지원 하지 않는 + 어떻게 사용 내부적으로 에뮬레이션 하려는 경우 하지만 WinRT 하면에서 설명 하는 것 같은 실험을 시도할 수 있습니다 [LLVM/Clang C + 컴파일하는 데 사용할 수 있나요 + WinRT?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt).|
+| C + + 컴파일러는 프로젝션 된 형식에 대 한 "*적절 한 기본 생성자가 사용할 수 없습니다*"을 생성합니다. | 하려고 하는 런타임 클래스 개체를 초기화를 지연 하 또는 사용 하 고 동일한 프로젝트에서 런타임 클래스를 구현할 경우 호출 해야 합니다 `nullptr_t` 생성자입니다. 자세한 정보는 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요. |
+| C + + 컴파일러에서 "*C3861 오류: 'from_abi': 식별자를 찾을 수 없는*", 및 기타 오류 *base.h*에서 발생 합니다. Visual Studio 2017을 사용 하는 경우이 오류를 볼 수 있습니다 (15.8.0 버전 이상), Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803)를 대상으로 합니다. | 이후 (자세한 준수)를 대상으로 지정 하거나 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-**  >  **언어** >  **추가 옵션****명령줄** 삭제). |
+| C + + 컴파일러에서 "*C2039 오류: 'IUnknown':의 구성원이 ' \'global 네임 스페이스 '*"입니다. | 참조 [방법을 대상을 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
+| C + + 링커 생성 "*오류 LNK2019: unresolved 외부 기호 _WINRT_CanUnloadNow@0 함수에서 참조 _VSDesignerCanUnloadNow@0 *" | 참조 [방법을 대상을 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
 
 > [!NOTE]
-> 이 항목에는 질문에 응답 하지 않은 경우 [Visual Studio c + + 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)방문 하 여 또는 사용 하 여 도움말을 검색할 수는 [ `c++-winrt` Stack Overflow에서 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)합니다.
+> 이 항목에 질문에 대답 하지 않은 경우, [Visual Studio c + + 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)방문 하 여 또는 사용 하 여 도움말을 찾을 수 합니다 [ `c++-winrt` Stack Overflow에서 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)합니다.

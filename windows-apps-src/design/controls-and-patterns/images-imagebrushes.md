@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c0fcd158dac77b3b3322167b82131e51f62390f
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5888244"
+ms.locfileid: "5923827"
 ---
 # <a name="images-and-image-brushes"></a>이미지 및 이미지 브러시
 
@@ -58,7 +58,7 @@ ms.locfileid: "5888244"
 
 ![Image 요소의 예](images/Image_Licorice.jpg)
 
-다음 예제에서 [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 속성은 표시할 이미지의 위치를 지정합니다. 절대 URL을 지정 하 여 소스를 설정할 수 있습니다 (예를 들어 http://contoso.com/myPicture.jpg) 앱 패키징 구조에 상대적인 URL을 지정 하 여 합니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
+다음 예제에서 [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 속성은 표시할 이미지의 위치를 지정합니다. 절대 URL을 지정 하 여 소스를 설정할 수 있습니다 (예를 들어 http://contoso.com/myPicture.jpg) 앱 패키징 구조에 상대적인 URL을 지정 하거나 합니다. 이 예제에서는 "licorice.jpg" 이미지 파일을 프로젝트의 루트 폴더에 넣고 이 이미지 파일을 내용으로 포함하는 프로젝트 설정을 선언합니다.
 
 ### <a name="imagebrush"></a>ImageBrush
 

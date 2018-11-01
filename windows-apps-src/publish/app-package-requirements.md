@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c76cb26d91ecd1f72b71f90b9ef464cdf52ba55
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874993"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5923942"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -39,7 +39,7 @@ Visual Studio에서 패키지를 만들 때 개발자 계정과 연결된 동일
 
 ### <a name="app-bundles"></a>앱 번들
 
-UWP 앱 용 Visual Studio (.msixbundle 또는.appxbundle)을 통해 사용자가 다운로드 하는 앱의 크기를 줄이기 위해 앱 번들을 생성할 수 있습니다. 언어별 자산, 다양한 이미지 스케일 자산 또는 특정 Microsoft DirectX 버전에 적용되는 리소스를 정의한 경우 이렇게 하면 유용할 수 있습니다.
+UWP 앱에 대 한 Visual Studio (.msixbundle 또는.appxbundle)을 통해 사용자가 다운로드 하는 앱의 크기를 줄이기 위해 앱 번들을 생성할 수 있습니다. 언어별 자산, 다양한 이미지 스케일 자산 또는 특정 Microsoft DirectX 버전에 적용되는 리소스를 정의한 경우 이렇게 하면 유용할 수 있습니다.
 
 > [!NOTE]
 > 하나의 앱 번들에 모든 아키텍처에 대한 패키지가 포함될 수 있습니다.
@@ -59,7 +59,7 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 > 매니페스트의 값은 대/소문자를 구분합니다. 공백과 기타 문장 부호도 일치해야 합니다. 값을 주의해서 입력하고 검토하여 올바른지 확인합니다.
 
 
-앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle에서 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
+앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle, 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
 
 > [!TIP]
 > 패키지를 제출하기 전에 반드시 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 실행합니다. 그러면 매니페스트에 인증 또는 제출 오류를 발생시킬 수 있는 문제가 있는지 확인하는 데 도움이 될 수 있습니다.
@@ -71,7 +71,7 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 
 | 앱 패키지 속성 | 요구 사항                                                          |
 |----------------------|----------------------------------------------------------------------|
-| 패키지 크기         | .msixbundle 또는.appxbundle: 번들 당 최대 25GB <br>Windows 10시 25분을 대상으로 하는.msix 또는.appx 패키지 패키지당 최대<br>Windows 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 8GB <br> Windows 8을 대상으로 하는 .appx 패키지: 패키지당 최대 2GB <br> Windows Phone 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 4GB <br> .xap 패키지: 패키지당 최대 1GB                                                                           |
+| 패키지 크기         | .msixbundle 또는.appxbundle: 번들 당 최대 25GB <br>Windows 10시 25분 대상으로 하는.msix 또는.appx 패키지 패키지당 최대<br>Windows 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 8GB <br> Windows 8을 대상으로 하는 .appx 패키지: 패키지당 최대 2GB <br> Windows Phone 8.1을 대상으로 하는 .appx 패키지: 패키지당 최대 4GB <br> .xap 패키지: 패키지당 최대 1GB                                                                           |
 | 블록 맵 해시     | SHA2-256 알고리즘                                                   |
 
 > [!IMPORTANT]

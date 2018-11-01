@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ea7c0b92c5900e468023dd5b972942a89c2833c3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861825"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5925022"
 ---
 # <a name="continuous-dictation"></a>연속 받아쓰기
 
@@ -28,7 +28,7 @@ ms.locfileid: "5861825"
 더 긴, 연속 음성 인식 세션(예: 세션 받아쓰기 또는 메일)의 경우 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn913913)의 [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn653226) 속성을 사용하여 [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896) 개체를 가져오세요.
 
 > [!NOTE]
-> 받아쓰기 언어 지원 앱 실행 중인 [장치](https://docs.microsoft.com/windows/uwp/design/devices/) 에 따라 달라 집니다. Pc 및 노트북에 대 한만 EN-US 인식 되, Xbox, 휴대폰 음성 인식에서 지 원하는 모든 언어를 인식 하는 동안 됩니다. 자세한 내용은 [음성 인식기 언어 지정](specify-the-speech-recognizer-language.md)을 참조 하세요.
+> 받아쓰기 언어 지원 앱 실행 되 고 있는 [장치](https://docs.microsoft.com/windows/uwp/design/devices/) 에 따라 달라 집니다. Pc 및 노트북에 대 한만 EN-US 인식 되, Xbox, 휴대폰 음성 인식에서 지 원하는 모든 언어를 인식 하는 동안 됩니다. 자세한 내용은 [음성 인식기 언어 지정](specify-the-speech-recognizer-language.md)을 참조 하세요.
 
 ## <a name="set-up"></a>설정
 
@@ -70,7 +70,7 @@ private StringBuilder dictatedTextBuilder;
 - 연속 인식 이벤트 처리기에서 앱의 UI를 업데이트하는 경우 UI 스레드 디스패처를 가져옵니다.
 - 음성 인식기를 초기화합니다.
 - 기본 제공 받아쓰기 문법을 컴파일합니다.
-    **참고**  음성 인식에 인식할 수 있는 어휘를 정의 하려면 이상의 제약 조건이 필요 합니다. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
+    **참고**  음성 인식에 인식할 수 있는 어휘를 정의 하려면 하나 이상의 제약 조건이 필요 합니다. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
 - 인식 이벤트에 대한 이벤트 수신기를 설정합니다.
 
 이 예제에서는 [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) 페이지 이벤트에서 음성 인식을 초기화합니다.

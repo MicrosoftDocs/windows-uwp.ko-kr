@@ -9,35 +9,35 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5875514"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919886"
 ---
 # <a name="app-submissions"></a>앱 제출
 
 
 [이름을 예약하여 앱을 만들면](create-your-app-by-reserving-a-name.md) 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 **제출**을 만듭니다.
 
-앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 다시 하 고 되었고 필요할 때마다 작업을 업데이트 하면 제출에 저장 됩니다.
+앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 등록 업데이트 하면 다시 작업을 할 수 있도록 저장 됩니다.
 
 > [!NOTE]
-> Microsoft Store에 앱을 제출 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 활성 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
+> Microsoft 저장소에 앱을 제출 하기 위해서는 [파트너](https://partner.microsoft.com/dashboard) 센터에서 [개발자 계정](http://go.microsoft.com/fwlink/p/?LinkId=615100) 활성 있어야 합니다.
 
-앱이 게시 된 후에 파트너 센터에서 또 다른 제출을 만들어서 업데이트 된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시 된 앱에 대 한 새 제출을 만들려면 해당 **개요** 페이지에 표시 된 최근 제출 옆에 있는 **업데이트** 를 클릭 합니다. 할 수도 있습니다 [스토어에서 앱을 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) 이렇게 (및 다음 사용할 수 있도록 나중에 다시 원할 경우) 하는 경우.
+응용 프로그램을 게시 한 후 파트너 센터에 다른 제출 서류를 작성 하 여 업데이트 된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 새 제출 서류 게시 된 응용 프로그램을 만들려면 **업데이트** **개요** 페이지에 표시 된 가장 최근의 제출을 클릭 하십시오. 수도 있습니다 [저장소에서 응용 프로그램을 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) (넣은 후 사용할 수 있도록 나중에 다시 선택 하는 경우) 하는 경우.
 
 > [!NOTE]
-> 설명서의이 섹션에는 파트너 센터에서 앱 제출을 만드는 방법을 설명 합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
+> 이 설명서의 파트너 센터에는 응용 프로그램 제출 서류를 작성 하는 방법을 설명 합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
 
 > [!IMPORTANT]
-> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+> 새로 만든 제품부터 2018 년 10 월 31, Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 전화 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하십시오.
 
 ## <a name="app-submission-checklist"></a>앱 제출 검사 목록
 
 앱 제출을 만들 때 제공할 수 있는 세부 정보 및 추가 정보 링크는 다음과 같습니다.
 
-제공하거나 지정해야 하는 항목은 다음과 같습니다. 일부 영역은 옵션이거나 원하는 대로 변경할 수 있는 기본값이 제공되어 있습니다. 여기에 나열 된 순서로 이러한 섹션에 사용할 필요가 없습니다.
+제공하거나 지정해야 하는 항목은 다음과 같습니다. 일부 영역은 옵션이거나 원하는 대로 변경할 수 있는 기본값이 제공되어 있습니다. 여기에 나열 된 순서 대로이 섹션에 사용할 필요가 없습니다.
 
 ### <a name="pricing-and-availability-page"></a>가격 책정 및 가용성 페이지
 | 필드 이름                    | 참고                                       | 자세한 정보                                                             |
@@ -94,15 +94,15 @@ ms.locfileid: "5875514"
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **설명**               | 필수                                    | [호소력 있는 앱 설명 작성](write-a-great-app-description.md) |
 | **이 버전의 새로운 기능**   | 선택 사항                                 | [릴리스 정보](create-app-store-listings.md#whats-new-in-this-version)       |
-| **앱 기능**              | 선택 사항                                    | [제품 기능](create-app-store-listings.md#product-features)         |
+| **앱 기능**              | 선택 사항                                    | [제품 특징](create-app-store-listings.md#product-features)         |
 | **스크린샷**               | 필수 사항(최소 하나의 스크린샷, 4개 이상을 권장)          | [스크린샷](app-screenshots-and-images.md#screenshots)          |
 | **Microsoft Store 로고**               | 권장 사항(일부 OS 버전에서는 필수 사항) | [Microsoft Store 로고](app-screenshots-and-images.md#store-logos)             |
 | **예고편**                  | 선택 사항                                    | [예고편](app-screenshots-and-images.md#trailers)                | 
-| **Windows 10 및 Xbox 이미지(16:9 수퍼 히어로 아트)**     | 권장 사항        | [Windows 10 및 Xbox 이미지 (16:9 수퍼 히어로 아트)
+| **Windows 10 및 Xbox 이미지(16:9 수퍼 히어로 아트)**     | 권장 사항        | [10 Windows와 Xbox 이미지 (아트 슈퍼 영웅 16:9)
 ] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
-| **Xbox 이미지**     | Xbox에 게시 하는 경우에 최적의 표시를 위해 필요 합니다.        | [Xbox 이미지
-] (앱-스크린샷을-및-images.md #xbox 이미지) |
-| **보조 필드**  | 선택 사항                                    | [보조 필드](create-app-store-listings.md#supplemental-fields) 
+| **Xbox 이미지**     | Xbox에 게시 하는 경우 적절 하 게 표시 하는 데 필요한        | [Xbox 이미지
+] (응용 프로그램-스크린샷-및-images.md #xbox 이미지) |
+| **추가 필드**  | 선택 사항                                    | [추가 필드](create-app-store-listings.md#supplemental-fields) 
 | **검색어**              | 선택 사항                                    | [검색어](create-app-store-listings.md#search-terms)         |
 | **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
 | **추가 사용 조건**  | 선택 사항                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |
@@ -117,7 +117,7 @@ ms.locfileid: "5875514"
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **게시 고정 옵션**     | 기본값: 인증을 통과하는 즉시(또는 "일정" 섹션에서 선택한 날짜에 따라) 이 제출을 게시      | [게시 고정 옵션](manage-submission-options.md#publishing-hold-options)    
 | **인증에 대한 참고 사항**     | 권장 사항          | [인증에 대한 참고 사항](notes-for-certification.md)             |
-| **제한된 접근 권한 값**     | 제품 모든 [제한 된 접근 권한 값](../packaging/app-capability-declarations.md#restricted-capabilities) 을 선언 하는 경우 필요 합니다.    | [제한된 접근 권한 값](manage-submission-options.md#publishing-hold-options)       
+| **제한된 접근 권한 값**     | 제품 [제한 된 기능](../packaging/app-capability-declarations.md#restricted-capabilities) 을 선언 하는 데 필요한    | [제한된 접근 권한 값](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

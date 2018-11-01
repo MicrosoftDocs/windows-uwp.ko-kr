@@ -15,11 +15,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 987202969f22a5b1b34efc9089ea7f7f08282d8c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868459"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919111"
 ---
 # <a name="parallax"></a>시차
 
@@ -108,8 +108,8 @@ ParallaxView 컨트롤을 사용하려면 Source 요소를 제공하고, 배경 
 
 VerticalShift 및 HorizontalShift 속성을 사용하여 시차 효과의 수준을 제어할 수 있습니다.
 
-* VerticalShift 속성은 전체 시차 작업 중에 배경이 세로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값 0은 배경이 전혀 이동 하지 않습니다.
-* HorizontalShift 속성은 전체 시차 작업 중에 배경이 가로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값 0은 배경이 전혀 이동 하지 않습니다.
+* VerticalShift 속성은 전체 시차 작업 중에 배경이 세로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값이 0 이면 배경을 전혀 이동 하지 않습니다.
+* HorizontalShift 속성은 전체 시차 작업 중에 배경이 가로 방향으로 얼마나 멀리 이동하는지를 지정합니다. 값이 0 이면 배경을 전혀 이동 하지 않습니다.
 
 값이 클수록 보다 극적인 효과를 만듭니다. 
 

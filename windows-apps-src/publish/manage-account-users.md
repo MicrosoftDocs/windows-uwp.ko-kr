@@ -6,20 +6,20 @@ ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, 계정 사용자, azure ad, 여러 사용자, 여러 사용자 관리
+keywords: windows 10, uwp, 계정 사용자, azure ad, 다중 사용자, 여러 사용자 관리
 ms.localizationpriority: medium
 ms.openlocfilehash: 01517ebd2cc4b86fa1ac440446a5cc59172014b3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882110"
+ms.locfileid: "5947934"
 ---
 # <a name="manage-account-users"></a>계정 사용자 관리
 
-Azure Active Directory를 사용 하 여 추가 하 고 [파트너 센터](https://partner.microsoft.com/dashboard) 계정에 추가 사용자를 관리할 수 있습니다. 각 사용자가 갖는 역할 또는 사용자 지정 권한을 정의할 수 있습니다. 또한 사용자 그룹 또는 Azure AD 응용 프로그램에 역할을 할당할 수 있습니다.
+Azure Active Directory를 사용 하 여 추가 하 고 [파트너 센터](https://partner.microsoft.com/dashboard) 계정에 사용자를 관리할 수 있습니다. 각 사용자가 갖는 역할 또는 사용자 지정 권한을 정의할 수 있습니다. 또한 사용자 그룹 또는 Azure AD 응용 프로그램에 역할을 할당할 수 있습니다.
 
-추가 하 고 계정 사용자를 관리 하려면 먼저 조직의 Azure Active Directory를 파트너 센터 계정에를 연결 해야 합니다. 
+추가 하 고 계정 사용자 관리, 하려면 먼저 조직의 Azure Active Directory를 파트너 센터 계정에를 연결 해야 합니다. 
 
 이 섹션에는 다음을 수행하는 방법이 설명되어 있습니다.
 

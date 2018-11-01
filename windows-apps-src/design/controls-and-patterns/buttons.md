@@ -15,49 +15,49 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 922dccc61954e2022cbe76f2ca5d5b1f9e548733
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5878214"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919465"
 ---
 # <a name="buttons"></a>단추
 
-단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다. 일부 단추 탐색, 반복 된 작업 또는 메뉴를 표시 하는 데 같은 특정 작업 전문화 되어 있습니다.
+단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다. 일부 단추는 탐색, 반복 된 동작 또는 메뉴를 표시 하는 등의 특정 작업에 전문화 되어 있습니다.
 
 ![단추 예](images/controls/button.png)
 
-XAML 프레임 워크는 여러 가지 특수 단추 컨트롤 뿐만 아니라 표준 단추 컨트롤을 제공합니다.
+몇 가지 특수 단추 컨트롤 뿐 아니라 표준 button 컨트롤을 XAML 프레임 워크를 제공합니다.
 
 컨트롤 | 설명
 ------- | -----------
-[단추](/uwp/api/windows.ui.xaml.controls.button) | 즉각적인 작업을 시작합니다. Click 이벤트 또는 명령 바인딩을 사용할 수 있습니다.
-[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 누르고 있는 동안에 지속적으로 Click 이벤트를 발생 시키는 단추입니다.
-[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 단추는 탐색에 사용 되는 하이퍼링크 처럼 스타일이 지정 합니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | 연결된 된 플라이 아웃이 열려면 펼침 단추를 사용 하 여 단추입니다.
-[분할 단추](/uwp/api/windows.ui.xaml.controls.splitbutton) | 두 면 있는 단추입니다. 한쪽 작업을 시작 하 고 다른 쪽 메뉴가 열립니다.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | 두 가지 측면을 사용 하 여 토글 단추입니다. 한쪽 켜기/끄기 전환 하 고 다른 쪽 메뉴가 열립니다.
+[단추](/uwp/api/windows.ui.xaml.controls.button) | 작업을 즉시 시작합니다. Click 이벤트와 명령 바인딩을 사용할 수 있습니다.
+[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 지속적으로 누르고 있는 동안 Click 이벤트를 발생 시키는 단추.
+[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 단추는 같은 하이퍼링크 탐색에 사용 되는 스타일입니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | 갈매기형 첨부 된 플라이 아웃을 열 수 있는 단추.
+[분할 단추](/uwp/api/windows.ui.xaml.controls.splitbutton) | 양쪽에 있는 단추. 한쪽에 작업을 시작 하 고 다른 쪽 메뉴가 열립니다.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | 두 면을 갖는 토글 단추입니다. 한쪽을 설정/해제 전환 하 고 다른 쪽 메뉴가 열립니다.
 
 | **Windows UI 라이브러리 가져오기** |
 | - |
-| DropDownButton, 분할 단추, 및 ToggleSplitButton Windows UI 라이브러리 새 컨트롤 및 UWP 앱에 대 한 UI 기능을 포함 하는 NuGet 패키지의 일부로 포함 되어 있습니다. 설치 지침을 비롯 한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조 하세요. |
+| DropDownButton, 분할 단추, 및 ToggleSplitButton Windows UI 라이브러리 NuGet 새로운 컨트롤 및 UI 기능 UWP 응용 프로그램에 포함 된 패키지의 일부로 포함 됩니다. 설치 방법 등 자세한 정보를 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조 하십시오. |
 
 | **플랫폼 Api** | **Windows UI 라이브러리 Api** |
 | - | - |
-| [Click 이벤트를](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) [명령 속성](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [DropDownButton 클래스](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton)를 [분할 단추 클래스](/uwp/api/microsoft.ui.xaml.controls.splitbutton) [ToggleSplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) |
+| [Click 이벤트를](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) [Command 속성](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [ToggleSplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) 의 [DropDownButton 클래스](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton)를 [클래스 분할 단추](/uwp/api/microsoft.ui.xaml.controls.splitbutton) |
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-**단추** 를 사용 하 여 사용자가 양식 제출과 같은 즉각적인 작업을 시작할 수 있도록 합니다.
+**단추** 를 사용 하 여 폼을 전송 하는 등의 작업을 즉시 시작할 수 있도록.
 
-다른 페이지를 탐색 하는 작업 인 경우 단추를 사용 안 함 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) 을 대신 사용 합니다. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
+다른 페이지를 탐색 하는 작업은 단추를 사용 하지 마십시오 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) 을 대신 사용 하십시오. 추가 정보는 [하이퍼링크](hyperlinks.md)를 참조하세요.
 > 예외: 마법사 탐색인 경우에는 '뒤로' 및 '다음'이라는 레이블이 붙은 단추를 사용합니다. 다른 종류의 뒤로 탐색 또는 상위 수준 탐색 사용 하 여 [뒤로 단추](../basics/navigation-history-and-backwards-navigation.md).
 
-사용자가 반복적으로 작업을 트리거할 하려고 하는 경우 **RepeatButton** 를 사용 합니다. 예를 들어 증가 또는 감소 카운터의 값을 RepeatButton를 사용 합니다.
+**RepeatButton** 을 사용자 동작을 반복적으로 실행 하려는 경우 사용 합니다. 예를 들어 카운터에 값을 늘이거나 RepeatButton을 사용.
 
-단추에 더 많은 옵션을 포함 하는 플라이 아웃 **DropDownButton** 사용 합니다. 기본 펼침 단추를 시각적 플라이 아웃을 포함 하는 단추를 제공 합니다.
+이 단추에는 추가 옵션을 포함 하는 플라이 아웃을 **DropDownButton** 사용 합니다. 기본 갈매기형 수장 단추 플라이 아웃에 시각적 표시를 제공 합니다.
 
-사용자 즉각적인 작업을 시작할을 독립적으로 추가 옵션에서 하지 선택할 수 있게 하려는 경우에 **분할 단추** 를 사용 합니다.
+사용자는 즉시 작업을 시작 하거나 하지 추가 옵션 중에서 독립적으로 하려면 **분할 단추** 를 사용 합니다.
 
 ## <a name="examples"></a>예
 
@@ -206,22 +206,22 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="create-a-drop-down-button"></a>드롭다운 단추 만들기
+## <a name="create-a-drop-down-button"></a>드롭다운 버튼 만들기
 
-> DropDownButton 필요한 Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
+> DropDownButton 10 Windows 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 필요 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) 더 많은 옵션을 포함 하는 연결 된 플라이 아웃 있다는 점에서 시각적 표시기로 펼침 단추를 표시 하는 단추입니다. 플라이 아웃;를 사용 하 여 표준 단추도 동일한 동작을 포함 모양만 차이가 있습니다.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) 는 더 많은 옵션을 포함 하는 연결 된 팝업 창에 갈매기형 시각적 표시기를 표시 하는 단추입니다. 표준 단추 플라이 아웃;와 같은 동작에 모양만 차이가 있습니다.
 
-드롭다운 단추 Click 이벤트를 상속 하지만 일반적으로 사용 하지 않는 것입니다. 플라이 아웃 속성을 사용 하 여 플라이 아웃을 연결 하 고 플라이 아웃 메뉴 옵션을 사용 하는 작업을 호출 하는 대신 합니다. 단추를 클릭할 때 플라이 아웃이 자동으로 열립니다.
+드롭다운 단추 클릭 이벤트를 상속 하면 일반적으로 사용 하지 마십시오. 대신, 플라이 아웃을 첨부 하는 플라이 아웃 메뉴 옵션을 사용 하 여 작업 플라이 아웃 속성을 사용 합니다. 플라이 아웃 단추를 클릭할 때 자동으로 열립니다.
 
 > [!TIP]
-> 플라이 아웃에 대 한 자세한 내용은 [메뉴 및 상황에 맞는 메뉴를](menus.md)참조 하세요.
+> 플라이 아웃에 대 한 자세한 내용은 [메뉴 및 상황에 맞는 메뉴를](menus.md)참조 하십시오.
 
 ### <a name="example---drop-down-button"></a>예-드롭다운 단추
 
-이 예제에서는 RichEditBox에서 단락 맞춤에 대 한 명령이 포함 된 플라이 아웃을 사용 하 여 드롭다운 단추를 만드는 방법을 보여 줍니다. (자세한 내용 및 코드에 대 한 참조 [서식 있는 편집 상자](rich-edit-box.md)).
+단락 맞춤은 RichEditBox에 대 한 명령이 포함 된 플라이 아웃을 사용 하 여 드롭다운 단추를 만드는 방법을 보여 주는이 예제입니다. (자세한 정보 및 코드 참조 [Rich edit 상자](rich-edit-box.md)).
 
-![맞춤 명령 사용 하 여 단추 드롭다운](images/drop-down-button-align.png)
+![맞춤 명령 단추가 드롭다운](images/drop-down-button-align.png)
 
 ```xaml
 <DropDownButton ToolTipService.ToolTip="Alignment">
@@ -267,26 +267,26 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-split-button"></a>분할 단추 만들기
 
-> 분할 단추 필요한 Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
+> 분할 단추 10 Windows 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 필요 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-[분할 단추](/uwp/api/windows.ui.xaml.controls.splitbutton) 에 개별적으로 호출할 수 있는 두 부분이 있습니다. 일부 표준 단추 처럼 동작 하 고 즉각적인 작업을 호출 합니다. 다른 부분에는 사용자가 선택할 수 있는 추가 옵션이 포함 된 플라이 아웃을 호출 합니다.
+[분할 단추](/uwp/api/windows.ui.xaml.controls.splitbutton) 를 개별적으로 호출 될 수 있는 두 부분에 있습니다. 일부 표준 단추 처럼 동작 하 고 즉각적인 조치를 합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션이 포함 된 플라이 아웃을 호출 합니다.
 
 > [!NOTE]
-> 단추; 드롭다운으로 분할 단추 동작 터치로 호출 되 면 버튼의 두 절반 플라이 아웃을 호출합니다. 다른 입력 방법을 사용 하 여 사용자가 버튼의 두 절반 별도로 호출할 수 있습니다.
+> 분할 단추 드롭다운 단추가 작동 터치를 호출 플라이 아웃 단추 양쪽 절반을 호출합니다. 다른 입력 방법을 사용 하 여 사용자가 단추 중 절반 별도로 호출할 수 있습니다.
 
-분할 단추에 대 한 일반적인 동작은입니다.
+분할 단추에 대 한 일반적인 동작이입니다.
 
-- 일부 단추를 클릭할 때 드롭다운 목록에서 현재 선택 된 옵션을 호출할 수 Click 이벤트를 처리 합니다.
-- 드롭다운 열려 있으면 옵션을 모두 변경 드롭다운에 있는 항목의 핸들 호출을 선택 하 고 호출 합니다. 플라이 아웃 항목을 호출 해야 단추 클릭 터치를 사용 하 여 이벤트가 발생 하지 않습니다.
+- 단추 부분을 클릭 하면 드롭다운 목록에서 현재 선택 되어 있는 옵션을 호출 하 여 Click 이벤트를 처리 합니다.
+- 드롭다운이 열려 있으면 핸들 호출 옵션을 모두 변경 드롭다운 항목을 선택한 다음 호출. 플라이 아웃 항목을 호출 하는 단추 Click 이벤트는 터치를 사용 하는 경우 발생 하지 않습니다.
 
 > [!TIP]
-> 드롭다운 목록에서 항목을 내려 해당 호출을 처리 하는 방법은 여러 가지가 있습니다. ListView 또는 GridView를 사용 하는 경우 방법은 SelectionChanged 이벤트를 처리 하는 것입니다. 이렇게 하면 [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) **false**로 설정 합니다. 이렇게 하면 사용자가 키보드를 사용 하 여 각 변경에 항목을 호출 하지 않고 옵션을 탐색 합니다.
+> 항목은에서 내려가 호출을 처리 하는 방법은 여러 가지가 있습니다. ListView 또는 GridView를 사용 하는 경우 한 가지 방법은 SelectionChanged 이벤트를 처리 합니다. 이렇게 하면 [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) 을 **false로**설정 합니다. 사용자가 항목에서 변경 될 때마다 호출 하지 않고 키보드를 사용 하는 옵션을 탐색할 수 있습니다.
 
 ### <a name="example---split-button"></a>예-분할 단추
 
-이 예제에서는 RichEditBox에서 선택한 텍스트의 전경색을 변경 하는 데 사용 되는 분할 단추를 만드는 방법을 보여 줍니다. (자세한 내용 및 코드에 대 한 참조 [서식 있는 편집 상자](rich-edit-box.md)).
+이 예제는 RichEditBox에서 선택한 텍스트의 전경색을 변경 하는 데 사용 되는 분할 단추를 만드는 방법을 보여 줍니다. (자세한 정보 및 코드 참조 [Rich edit 상자](rich-edit-box.md)).
 
-![전경 색을 선택 하기 위한 분할 단추](images/split-button-rtb.png)
+![전경색을 선택 하기 위한 분할 단추](images/split-button-rtb.png)
 
 ```xaml
 <SplitButton ToolTipService.ToolTip="Foreground color"
@@ -372,30 +372,30 @@ public sealed partial class MainPage : Page
 }
 ```
 
-## <a name="create-a-toggle-split-button"></a>분할 토글 단추 만들기
+## <a name="create-a-toggle-split-button"></a>분할 설정/해제 단추 만들기
 
-> ToggleSplitButton 필요한 Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)입니다.
+> ToggleSplitButton 10 Windows 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 필요 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 에 개별적으로 호출할 수 있는 두 부분이 있습니다. 일부 켜거나 끌 수 있는 토글 단추 처럼 동작 합니다. 다른 부분에는 사용자가 선택할 수 있는 추가 옵션이 포함 된 플라이 아웃을 호출 합니다.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 는 개별적으로 호출 될 수 있는 두 부분에 있습니다. 한 부분 또는 해제 될 수 있는 토글 단추 처럼 작동 합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션이 포함 된 플라이 아웃을 호출 합니다.
 
-토글 분할 단추를 활성화 또는 기능에는 사용자가 선택할 수 있는 여러 옵션이 때 기능을 비활성화 하려면 일반적으로 사용 됩니다. 예를 들어 문서 편집기에서 하는 데 사용할 수 켜거나 목록, 드롭다운 목록 스타일을 선택 하는 데 사용 됩니다.
+분할 단추 표시/숨기기 기능에 사용자가 선택할 수 있는 다양 한 옵션 기능을 사용할지를 주로 사용 됩니다. 예를 들어, 문서 편집기에서 것 데 사용할 수 켜거나 목록, 목록 스타일을 선택 하려면 드롭 다운을 사용 합니다.
 
 > [!NOTE]
-> 터치를 사용 하 여 호출 되 면 분할 단추는 드롭다운 단추 처럼 작동 합니다. 다른 입력 방법을 사용 하 여 사용자가 버튼의 두 절반 별도로 호출할 수 있습니다. 터치를 사용할 경우 버튼의 두 절반 플라이 아웃을 호출합니다. 따라서 플라이 아웃 콘텐츠의 켜거나 단추를 전환 하는 옵션을 포함 해야 합니다.
+> 터치를 사용 하 여 호출 되 면 분할 단추 드롭다운 단추가 작동 합니다. 다른 입력 방법을 사용 하 여 사용자가 단추 중 절반 별도로 호출할 수 있습니다. 터치를 사용 하 여 단추의 양쪽 절반 플라이 아웃을 호출합니다. 따라서 옵션을 켜거나 단추 플라이 아웃 내용에서 포함 해야.
 
-### <a name="differences-with-togglebutton"></a>토글 단추를 사용 하 여 차이점
+### <a name="differences-with-togglebutton"></a>토글 단추를 사용 하 여 차이
 
-[ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)달리 ToggleSplitButton에는 확정 되지 않은 상태가 되어 있지 않습니다. 결과적으로, 이러한 차이 염두에 유지 해야 있습니다.
+[토글 단추](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)는 달리 ToggleSplitButton는 확정 되지 않은 상태를 갖지 않습니다. 따라서 있습니다 유념 해야 이러한 차이.
 
-- ToggleSplitButton은 **IsThreeState** 속성 또는 **비활성화** 이벤트는 없습니다.
-- [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) 속성은 방금 **bool**, **nullable bool**되지 않습니다.
-- ToggleSplitButton에만 [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) 이벤트가 있습니다. 별도 **Checked** 및 **Unchecked** 이벤트 필요가 없습니다.
+- ToggleSplitButton는 **IsThreeState** 속성이 나 **비활성화** 이벤트는 없습니다.
+- [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) 속성에는 단지 **bool**, **bool null을 허용**하지 않습니다.
+- ToggleSplitButton에는 [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) 이벤트가 있습니다. **선택한 상태** 및 **선택 하지 않** 은 이벤트를 별도 필요가 없습니다.
 
 ### <a name="example---toggle-split-button"></a>예-분할 토글 단추
 
-다음 예제에서는 방법을 보여 줍니다 단추를 분할 하는 토글 목록 켜거나 서식 지정 하는 데 사용할 수 RichEditBox의 목록 스타일 변경. (자세한 내용 및 코드에 대 한 참조 [서식 있는 편집 상자](rich-edit-box.md)).
+다음 예제에서는 방법을 보여 줍니다 분할 단추 전환 목록 서식 설정 / 해제 하는 데 사용할 수는 RichEditBox에서 목록 스타일을 변경. (자세한 정보 및 코드 참조 [Rich edit 상자](rich-edit-box.md)).
 
-![선택 목록 스타일에 대 한 분할 토글 단추](images/toggle-split-button-open.png)
+![목록 스타일을 선택 하기 위한 분할 토글 단추](images/toggle-split-button-open.png)
 
 ```xaml
 <ToggleSplitButton x:Name="ListButton"

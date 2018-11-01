@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: 419fa90dfd21c42d256aeea8848862b8c5eb3628
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863742"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919075"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>패키지 서명용 인증서 만들기
 
@@ -56,7 +56,7 @@ AppxManifest.xml 파일이 들어 있는 앱 최종 앱 패키지에 서명하�
 New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName <Your Friendly Name> -CertStoreLocation "Cert:\LocalMachine\My"
 ```
 
-이 명령을 실행한 후 "-CertStoreLocation" 매개 변수에서 지정한 대로 로컬 인증서 스토어에 인증서가 추가됩니다. 명령의 결과 인증서의 지문도 생성 합니다.  
+이 명령을 실행한 후 "-CertStoreLocation" 매개 변수에서 지정한 대로 로컬 인증서 스토어에 인증서가 추가됩니다. 인증서의 지문을 명령의 결과 생성 하기도 합니다.  
 
 **참고**  
 다음 명령을 사용하여 PowerShell 창에서 인증서를 볼 수 있습니다.

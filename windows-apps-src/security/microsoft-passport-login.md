@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: caa0063c0aa919e094abedd96b6205e83467e0e5
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5883693"
+ms.locfileid: "5923465"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Windows Hello 로그인 앱 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "5883693"
 ## <a name="get-started"></a>시작
 
 
-이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. Visual Studio 2015를 사용 해야 합니다 (Community Edition 이상), 또는 Windows 10 컴퓨터에서 Visual Studio의 최신 릴리스 합니다. Visual Studio 2015에 필요한 최소 버전 이지만, 최신 개발자 및 보안 업데이트를 위한 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
+이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. Visual Studio 2015를 사용 해야 합니다 (Community Edition 이상), 또는 Windows 10 컴퓨터에서 Visual Studio의 최신 릴리스 합니다. Visual Studio 2015에 필요한 최소 버전 이지만, 최신 개발자 및 보안 업데이트에 대 한 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
 
 -   Visual Studio를 열고 파일 선택 > 새로 만들기 > 프로젝트.
 -   "새 프로젝트" 창이 열립니다. 템플릿 &gt; Visual C#으로 이동합니다.

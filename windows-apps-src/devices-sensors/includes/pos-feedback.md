@@ -8,17 +8,17 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6decdd4325a1c3cf854e340799b9d2f4a3272e6c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5890629"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5949660"
 ---
 ## <a name="support-and-feedback"></a>지원 및 피드백
 
 ### <a name="find-answers-to-your-questions"></a>질문에 대한 답변 찾기
 
-질문이 있으세요? [Stack Overflow](https://aka.ms/pos-stackoverflow) 또는 [MSDN UWP 포럼](https://aka.ms/pos-msdn-uwpforum) 에서 질문 해 주세요
+질문이 있으세요? [스택 오버플로](https://aka.ms/pos-stackoverflow) 또는 [MSDN UWP 포럼](https://aka.ms/pos-msdn-uwpforum) 에서 질문 해 주세요
 
 질문을 찾는 데 도움이:
 - Stack Overflow에서 질문에 [pointofservice](https://aka.ms/pos-stackoverflow) 태그를 추가 합니다. 

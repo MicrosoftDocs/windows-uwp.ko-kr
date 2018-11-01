@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f8a6165df7bf839154ede4db3fda8a5e1662880
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5870289"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5922800"
 ---
 # <a name="getting-started-what-next"></a>시작: 다음에 할 일
 
@@ -31,7 +31,7 @@ ms.locfileid: "5870289"
 
 개발자 포럼, 블로그, 개발자 캠프 및 워크샵, 로컬 Microsoft 이벤트 및 계약을 통해 지원을 받고 상호 연결하는 방법은 [커뮤니티 리소스](https://developer.microsoft.com/en-us/windows/support)를 참조하세요.
 
-생각 Windows10 수에 대 한 새로운 앱 빌드 기회 열립니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
+생각 Windows10에 새로운 앱 빌드 기회 열립니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

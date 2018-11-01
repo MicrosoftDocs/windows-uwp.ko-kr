@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7475910adffd24e4484b539f65633dfb8fc054a8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874691"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5923096"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>사진 및 비디오 캡처를 위한 수동 카메라 컨트롤
 
@@ -267,7 +267,7 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 ## <a name="powerline-frequency"></a>Powerline 주파수
 일부 카메라 디바이스는 현재 환경에서 powerline의 AC 주파수를 아는 데 따른 깜박임 방지 처리를 지원합니다. 일부 디바이스는 powerline 주파수의 자동 결정을 지원하는 반면 다른 디바이스는 주파수를 수동으로 설정해야 합니다. 다음 코드 예제에서는 디바이스에서 powerline 주파수 지원을 결정하는 방법 및 필요에 따라 주파수를 수동으로 설정하는 방법을 보여 줍니다. 
 
-먼저 **VideoDeviceController** 메서드 [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898)를 호출하여 [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency) 형식의 출력 매개 변수를 전달합니다. 이 호출이 실패할 경우 powerline 주파수 컨트롤은 현재 디바이스에서 지원되지 않습니다. 기능이 지원되는 경우 자동 모드 설정을 시도하여 디바이스에서 자동 모드를 사용할 수 있는지 확인할 수 있습니다. [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) 를 호출 하 고 **자동**값을 전달 하 여이 작업을 수행 합니다. 호출에 성공 하면 자동 powerline 주파수를 지원 하는지 의미 합니다. powerline 주파수 컨트롤러는 디바이스에서 지원되고 자동 주파수 감지는 지원되지 않는 경우 **TrySetPowerlineFrequency**를 사용하여 수동으로 주파수를 설정할 수 있습니다. 이 예제에서 **MyCustomFrequencyLookup**은 디바이스의 현재 위치에 대한 올바른 주파수를 결정하기 위해 구현하는 사용자 지정 메서드입니다. 
+먼저 **VideoDeviceController** 메서드 [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898)를 호출하여 [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency) 형식의 출력 매개 변수를 전달합니다. 이 호출이 실패할 경우 powerline 주파수 컨트롤은 현재 디바이스에서 지원되지 않습니다. 기능이 지원되는 경우 자동 모드 설정을 시도하여 디바이스에서 자동 모드를 사용할 수 있는지 확인할 수 있습니다. [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) 호출 및 **자동**값을 전달 하 여이 작업을 수행 합니다. 호출에 성공 하면 자동 powerline 주파수를 지원 하는지 의미 합니다. powerline 주파수 컨트롤러는 디바이스에서 지원되고 자동 주파수 감지는 지원되지 않는 경우 **TrySetPowerlineFrequency**를 사용하여 수동으로 주파수를 설정할 수 있습니다. 이 예제에서 **MyCustomFrequencyLookup**은 디바이스의 현재 위치에 대한 올바른 주파수를 결정하기 위해 구현하는 사용자 지정 메서드입니다. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 
@@ -337,7 +337,7 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 
 **ManipulationDelta** 이벤트에 대한 처리기에서 사용자의 손가락 모으기 제스처의 변화에 따라 확대/축소 배율을 업데이트합니다. [**ManipulationDelta.Scale**](https://msdn.microsoft.com/library/windows/apps/br242016) 값은 손가락 모으기 크기가 약간 증가하면 1.0보다 약간 더 큰 숫자가 되고 손가락 모으기 크기가 약간 감소하면 1.0보다 약간 더 작은 숫자가 되도록 손가락 모으기 제스처의 크기 변경을 나타냅니다. 이 예제에서는 확대/축소 컨트롤의 현재 값에 배율 델타를 곱합니다.
 
-확대/축소 배율을 설정하기 전에 해당 값이 디바이스에서 지원되는 최소값([**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817) 속성으로 지정)보다 작지 않은지 확인해야 합니다. 또한 해당 값은 [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) 값보다 작거나 같아야 합니다. 마지막으로 확대/축소 배율을 [**단계**](https://msdn.microsoft.com/library/windows/apps/dn633818) 속성으로 표시 되는 디바이스에서 지원 하 고 확대/축소 단계 크기의 배수가 인지 확인 해야 합니다. 확대/축소 배율이 이러한 요구를 충족하지 못하면 캡처 디바이스에서 확대/축소 수준을 설정하려고 할 때 예외가 발생됩니다.
+확대/축소 배율을 설정하기 전에 해당 값이 디바이스에서 지원되는 최소값([**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817) 속성으로 지정)보다 작지 않은지 확인해야 합니다. 또한 해당 값은 [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) 값보다 작거나 같아야 합니다. 마지막으로 확대/축소 [**단계**](https://msdn.microsoft.com/library/windows/apps/dn633818) 속성에 의해 표시 된 대로 장치에서 지원 하 고 확대/축소 단계 크기의 배수가 있는지 확인 해야 합니다. 확대/축소 배율이 이러한 요구를 충족하지 못하면 캡처 디바이스에서 확대/축소 수준을 설정하려고 할 때 예외가 발생됩니다.
 
 새 [**ZoomSettings**](https://msdn.microsoft.com/library/windows/apps/dn926722) 개체를 만들어 캡처 디바이스의 확대/축소 수준을 설정합니다. [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn926723) 속성을 [**ZoomTransitionMode.Smooth**](https://msdn.microsoft.com/library/windows/apps/dn926726)로 설정한 다음 [**Value**](https://msdn.microsoft.com/library/windows/apps/dn926724) 속성을 원하는 확대/축소 배율로 설정합니다. 마지막으로 [**ZoomControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn926719)를 호출하여 디바이스에 대해 새 확대/축소 값을 설정합니다. 디바이스는 새 확대/축소 값으로 원활하게 전환됩니다.
 

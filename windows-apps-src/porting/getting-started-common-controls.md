@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: db2b4a74b5b40060779dd82764dcf2ed2799b285
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869995"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919009"
 ---
 # <a name="getting-started-common-controls"></a>시작: 공용 컨트롤
 
@@ -53,7 +53,7 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 
 기타 컨트롤에 대해서는 [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/mt185406)을 참조하세요.
 
-**참고**JavaScript 및 HTML을 사용 하 여 UWP 앱 용 컨트롤 목록은 [컨트롤 목록을](https://msdn.microsoft.com/library/windows/apps/hh465453)참조 하세요.
+**참고**을 JavaScript 및 HTML을 사용 하 여 UWP 앱 용 컨트롤 목록은 [컨트롤 목록을](https://msdn.microsoft.com/library/windows/apps/hh465453)참조 하세요.
 
 ### <a name="next-step"></a>다음 단계
 

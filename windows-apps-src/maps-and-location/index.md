@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 지도, 위치, 지도 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: 17d123b440b6ec7892c84a9a6bca9177799ad0fb
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5876172"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919737"
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 
@@ -23,7 +23,7 @@ ms.locfileid: "5876172"
 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
 
 > [!TIP]
-> 앱에서 지도 및 위치를 사용 하는 방법에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979) 에서 다음 샘플을 다운로드 합니다.
+> 앱에서 지도 및 위치 사용에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979) 에서 다음 샘플을 다운로드 합니다.
 -   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [UWP 지리적 위치 샘플](http://go.microsoft.com/fwlink/p/?linkid=533278)
 
@@ -53,7 +53,7 @@ ms.locfileid: "5876172"
 | [지도에 POI(관심 지점) 표시](display-poi.md) | 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가하는 방법을 알아봅니다. |
 | [경로 및 길 찾기 표시](routes-and-directions.md) | 경로 및 길 찾기를 요청하고 앱에 표시합니다. |
 | [지오코딩 및 리버스 지오코딩 수행](geocoding.md) | [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에 있는 [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩). |
-| [찾기 및 오프 라인 사용을 위해 맵 패키지를 다운로드 합니다.](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| 이전에 앱 설정 앱에 사용자를 오프 라인 지도 다운로드를 연결 해야 했습니다. 이제 ( [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox)등 기반)는 지정 된 영역에 다운로드 한 패키지를 찾으려면 [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) 네임 스페이스의 클래스를 사용할 수 있습니다. <br> 또한 확인 및 맵 패키지 다운로드 한 상태에 대 한 수신 대기 외에 아니라 수 사용자가 앱을 종료 하지 않고 다운로드를 시작 합니다. <br> 참조 내용과 [유니버설 Windows 플랫폼 (UWP) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)에서이 작업을 수행 하는 방법의 예제를 찾을 수 있습니다.
+| [찾기 및 오프 라인 사용을 위해 맵 패키지 다운로드](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| 과거에 앱 사용자 설정 앱을 오프 라인 지도 다운로드를 연결 해야 했습니다. 이제 ( [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox)등에 따라.)는 지정 된 영역에 다운로드 한 패키지를 찾으려면 [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) 네임 스페이스의 클래스를 사용할 수 있습니다. <br> 또한 확인 및 맵 패키지 다운로드 한 상태에 대 한 수신 대기 외에 아니라 수 없이 앱을 다운로드를 시작 합니다. <br> 참조 콘텐츠와 [유니버설 Windows 플랫폼 (UWP) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)에서이 작업을 수행 하는 방법의 예제를 찾을 수 있습니다.
 
 ## <a name="get-the-users-location"></a>사용자 위치 가져오기
 
