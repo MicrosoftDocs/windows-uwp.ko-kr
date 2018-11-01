@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8129be6220dc6c9ae1d125087fee52ca17d33424
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5814793"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882702"
 ---
 # <a name="data-type-overview"></a>데이터 형식 개요
  
