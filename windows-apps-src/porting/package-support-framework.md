@@ -8,12 +8,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bb29a50ef4fc8c5a56e410a59802b217c033cbc
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: f17bb6bbefb2fd3266edac20ca1f23af76eb0a3c
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5827876"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884484"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>MSIX 패키지 패키지 지원 프레임 워크를 사용 하 여 런타임 수정 적용
 
@@ -65,13 +65,13 @@ PSF 파일 리디렉션 수정 같은 지금 바로 사용할 수 있는 런타�
 
 ### <a name="file-redirection-fixup"></a>파일 리디렉션 수정
 
-MSIX 컨테이너에서 실행 되는 응용 프로그램에서 액세스할 수 없는 디렉터리의 데이터를 읽거나 쓸 하려고 리디렉션할 수 있으며 [파일 리디렉션 수정 하기 위해](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) 사용할 수 있습니다.
+MSIX 컨테이너에서 실행 되는 응용 프로그램에서 액세스할 수 없는 디렉터리의 데이터를 읽거나 쓸 하려고 리디렉션할 수 있으며 [파일 리디렉션 수정 하기 위해](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) 사용할 수 있습니다.
 
-예를 들어, 응용 프로그램 실행 파일 응용 프로그램은 동일한 디렉터리에 있는 로그 파일에 쓰는, [파일 리디렉션 수정을](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) 사용 하 여 로컬 앱 데이터 저장소 등의 다른 위치에 해당 로그 파일을 만들 수 있습니다.
+예를 들어, 응용 프로그램 실행 파일 응용 프로그램은 동일한 디렉터리에 있는 로그 파일에 쓰는, [파일 리디렉션 수정을](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) 사용 하 여 로컬 앱 데이터 저장소 등의 다른 위치에 해당 로그 파일을 만들 수 있습니다.
 
 ### <a name="runtime-fixes-from-the-community"></a>커뮤니티에서 런타임 수정
 
-커뮤니티 기여 하려면 [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop) 페이지를 검토 해야 합니다. 다른 개발자가 유사한 문제 해결 및 런타임 수정 공유한 가능 합니다.
+커뮤니티 기여 하려면 [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework) 페이지를 검토 해야 합니다. 다른 개발자가 유사한 문제 해결 및 런타임 수정 공유한 가능 합니다.
 
 ## <a name="apply-a-runtime-fix"></a>런타임 수정 적용
 
@@ -88,7 +88,7 @@ Windows sdk에서 및 다음 단계를 수행 하 여 몇 가지 간단한 도�
 
 ### <a name="create-the-package-layout-folder"></a>패키지 레이아웃 폴더 만들기
 
-.Msix (또는.appx) 파일을 이미 있는 경우 패키지에 대 한 준비 영역으로 지원할 수 있는 레이아웃 폴더에 해당 콘텐츠 압축을 푸는 수 있습니다.  이를 수행할 수는 **x64 VS 2017 용 네이티브 도구 명령 프롬프트**, 또는 실행 검색 경로에 SDK bin 경로 사용 하 여 수동으로 합니다.
+.Msix (또는.appx) 파일을 이미 있는 경우 패키지에 대 한 준비 영역으로 지원할 수 있는 레이아웃 폴더에 해당 콘텐츠 압축을 푸는 수 있습니다. Sdk 설치 경로에 따라 makemsix 도구를 사용 하 여 명령 프롬프트에서 이렇게 하려면,이 찾습니다 makemsix.exe 도구에서 Windows 10 PC는: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makemsix.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makemsix.exe
 
 ```
 makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
@@ -103,11 +103,7 @@ makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContent
 
 ### <a name="get-the-package-support-framework-files"></a>지원 프레임 워크 패키지 파일을 가져오려면
 
-Visual Studio를 사용 하 여 PSF Nuget 패키지를 가져올 수 있습니다. 독립 실행형 Nuget 명령줄 도구를 사용 하 여 얻을 수 있습니다.
-
-#### <a name="get-the-package-by-using-visual-studio"></a>Visual Studio를 사용 하 여 패키지를 가져옵니다.
-
-Visual Studio에서 사용자 솔루션 또는 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 Nuget 패키지 관리 명령 중 하나를 선택 합니다.  **Microsoft.PackageSupportFramework** 또는 **PSF** Nuget.org에서 패키지를 찾을 수를 검색 합니다. 설치 합니다.
+독립 실행형 Nuget 명령줄 도구를 사용 하 여 또는 Visual Studio를 통해 PSF Nuget 패키지를 가져올 수 있습니다.
 
 #### <a name="get-the-package-by-using-the-command-line-tool"></a>명령줄 도구를 사용 하 여 패키지를 가져옵니다.
 
@@ -117,15 +113,20 @@ Visual Studio에서 사용자 솔루션 또는 프로젝트 노드를 마우스 
 nuget install Microsoft.PackageSupportFramework
 ```
 
+#### <a name="get-the-package-by-using-visual-studio"></a>Visual Studio를 사용 하 여 패키지를 가져옵니다.
+
+Visual Studio에서 사용자 솔루션 또는 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 Nuget 패키지 관리 명령 중 하나를 선택 합니다.  **Microsoft.PackageSupportFramework** 또는 **PSF** Nuget.org에서 패키지를 찾을 수를 검색 합니다. 설치 합니다.
+
+
 ### <a name="add-the-package-support-framework-files-to-your-package"></a>패키지에 지원 프레임 워크 패키지 파일 추가
 
 패키지 디렉터리에 필요한 32 비트 및 64 비트 PSF Dll 및 실행 파일을 추가 합니다. 다음 표를 가이드로 따르세요. 또한 필요한 런타임 수정 사항이 포함 합니다. 이 예제에서는 파일 리디렉션 런타임 수정을 해야합니다.
 
 | 응용 프로그램 실행 파일은 x64 | 응용 프로그램 실행 파일은 x86 |
 |-------------------------------|-----------|
-| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |
-| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) |
-| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) |
+| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher/readme.md) |
+| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfRuntime/readme.md) |
+| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/PsfRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/PsfRunDll/readme.md) |
 
 패키지 콘텐츠 다음과 같이 표시 이제 해야 합니다.
 
