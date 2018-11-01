@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e3885caae38d1ce69d3ae8e6f7d8de8839cb30ef
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839933"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882636"
 ---
 # <a name="get-usersxuidxuidinboxmessageid"></a>GET (/users/xuid({xuid})/inbox/{messageId})
 서비스에서 읽은 상태로 표시 하는 특정 사용자 메시지에 대 한 자세한 메시지 텍스트를 검색 합니다.
@@ -33,7 +33,7 @@ ms.locfileid: "5839933"
 
 ## <a name="remarks"></a>설명
 
-The get operation can only be performed on the User, System, and FriendRequest message types.
+사용자, 시스템 및 FriendRequest 메시지 유형에 대만 get 작업을 수행할 수 있습니다.
 
 이 URI에는 새로 고침 Xbox.com에 필요합니다. 현재 Xbox 360 사용자가 로그 아웃 될 때까지 및에서 다시 읽기/읽지 않은 상태를 업데이트 되지 않습니다.
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 71a588a633f2c12a6adf4c062940c4e2bee7fe18
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5812015"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5875061"
 ---
 # <a name="using-xim-c"></a>XIM (C#)를 사용 하 여
 

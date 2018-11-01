@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, c, xsapi
 ms.localizationpriority: medium
 ms.openlocfilehash: b8d48fbaa35ddfb81b8aba77e4129c19e2a55af7
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5834498"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5865575"
 ---
 # <a name="introduction-to-the-xbox-live-c-apis"></a>Xbox Live C Api 소개
 

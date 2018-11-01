@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
 ms.openlocfilehash: b39c4ef33db0792856f06aaf282b7804012984a5
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5817235"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886236"
 ---
 # <a name="configure-achievements-2017-on-dev-center"></a>도전 과제 2017 개발자 센터에서 구성
 

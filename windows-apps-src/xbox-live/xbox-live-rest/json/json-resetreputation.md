@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cf6db0ec47e92023fb43c7599fac3dcc9cdd9f0a
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839490"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5872211"
 ---
 # <a name="resetreputation-json"></a>ResetReputation(JSON)
 사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다. 

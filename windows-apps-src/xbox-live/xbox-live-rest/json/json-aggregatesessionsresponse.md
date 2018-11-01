@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 590acdd89d83fa21a401b5573053ba341f7f05c7
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5811362"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5885425"
 ---
 # <a name="aggregatesessionsresponse-json"></a>AggregateSessionsResponse(JSON)
 사용자의 적합성에 대 한 세션에 대 한 집계 데이터를 포함합니다. 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 소셜 관리자, 사람
 ms.localizationpriority: medium
 ms.openlocfilehash: 711f04f29321736ae8adc887b54ce752963908c5
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5824671"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5872355"
 ---
 # <a name="social-manager-memory-and-performance-overview"></a>소셜 관리자 메모리 및 성능 개요
 

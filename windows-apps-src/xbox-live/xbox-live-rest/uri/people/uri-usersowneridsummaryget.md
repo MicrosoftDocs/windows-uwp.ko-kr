@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 60938acedd58934ec8b758d435776f227e82b91d
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5838709"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884611"
 ---
 # <a name="get-usersowneridsummary"></a>GET (/users/{ownerId}/summary)
 호출자의 관점에서 소유자에 대 한 요약 데이터를 가져옵니다.

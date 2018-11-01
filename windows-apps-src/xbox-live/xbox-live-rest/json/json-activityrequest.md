@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cb39036ccc75f4caec5a0fa6f961d2462ce5bda
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5813777"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5871988"
 ---
 # <a name="activityrequest-json"></a>ActivityRequest(JSON)
 하나 이상의 사용자의 풍부한 존재 여부에 대 한 정보를 요청 합니다. 

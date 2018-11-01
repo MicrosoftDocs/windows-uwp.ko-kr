@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, nuget
 ms.localizationpriority: medium
 ms.openlocfilehash: 29280b55cb2178d05414ff3413cd0a92d2f93916
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5820791"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5863454"
 ---
 # <a name="add-xbox-live-apis-binary-package-to-your-uwp-project"></a>UWP 프로젝트에 Xbox Live Api 이진 패키지 추가
 
