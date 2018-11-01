@@ -14,12 +14,12 @@ doc-status: Published
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 36b81cf07b92760235a18f4474a14b7b55e0a7be
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 73f6d8f9c42a632383d52194c83a4fe68261f9a7
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5828513"
+ms.locfileid: "5869774"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -289,7 +289,7 @@ public class ExplorerItemTemplateSelector : DataTemplateSelector
 
 트리 보기에 다수의 노드를 표시해야 하는 경우도 있고, 얼마나 많은 노드가 필요한지 미리 모르는 경우도 있습니다. TreeView 컨트롤은 가상화가 되지 않으므로 확장 시에는 각 노드를 채우고 축소 시에는 자식 노드를 제거하는 방식으로 리소스를 관리할 수 있습니다.
 
-[확장](/uwp/api/windows.ui.xaml.controls.treeview.expand) 이벤트를 처리하고 [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) 속성을 사용하여 확장 시 노드에 자식 노드를 추가합니다. HasUnrealizedChildren 속성은 노드를 채워야 하는지 여부나 자식 컬렉션이 이미 채워져 있는지 여부를 나타냅니다. TreeViewNode는 이 값을 설정하지 않는다는 것을 기억하고 앱 코드에서 이를 관리하는 것이 중요합니다.
+[확장](/uwp/api/windows.ui.xaml.controls.treeview.expand) 이벤트를 처리하고 [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) 속성을 사용하여 확장 시 노드에 자식 노드를 추가합니다. HasUnrealizedChildren 속성은 노드를 채워야 하는지 여부나 자식 컬렉션이 이미 채워져 있는지 여부를 나타냅니다. 것 TreeViewNode는이 값을 설정 하지 않는, 앱 코드에서 관리 해야 기억해 야 합니다.
 
 이러한 API가 어떻게 사용되는지에 대한 예는 다음과 같습니다. 'FillTreeNode' 구현을 포함한 상황에 대해서는 이 문서 끝에 나와 있는 전체 예제 코드를 참조하세요.
 
