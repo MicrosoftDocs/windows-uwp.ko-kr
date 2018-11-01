@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 플라이팅
 ms.localizationpriority: medium
 ms.openlocfilehash: a873b6f6c0d1a35667b47109f5cc2205e5a02158
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5838914"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886523"
 ---
 # <a name="package-flights"></a>패키지 플라이트
 

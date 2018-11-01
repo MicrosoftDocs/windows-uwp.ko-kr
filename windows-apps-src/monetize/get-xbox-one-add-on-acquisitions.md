@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, Xbox One 추가 기능 구입
 ms.localizationpriority: medium
 ms.openlocfilehash: e703c0c07e981ebf21ad3388ad178eabdd5c068d
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5828953"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5888218"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Xbox One 추가 기능 획득 가져오기
 

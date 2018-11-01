@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 ms.localizationpriority: medium
 ms.openlocfilehash: 58c6ea939e96a2172c9f008d2238d5a84c228afe
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840657"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5888521"
 ---
 # <a name="new-apis-in-windows-10-build-14393"></a>Windows 10 빌드 14393의 새로운 API
 

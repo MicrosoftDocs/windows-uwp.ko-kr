@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
 ms.openlocfilehash: a9c62dac489be07a08acc4ad17ecb79bcc54f57a
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5830619"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5887910"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 

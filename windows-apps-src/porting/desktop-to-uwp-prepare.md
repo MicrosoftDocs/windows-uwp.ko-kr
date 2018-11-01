@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 9abd10a352243e7c7ca7e665b3fb5ee774e0346e
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 3a0b3a9f5ce7c03b8add9cc459bade684b9daf21
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840878"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886688"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>데스크톱 응용 프로그램 패키징 준비
 
@@ -103,7 +103,7 @@ Microsoft Store에서 설치하는 동안 앱이 설치되기 전에 적절한 �
 
 + __응용 프로그램이 작업을 수행 하는 유틸리티를 시작__합니다. PowerShell, Cmd.exe 같은 명령 유틸리티가 시작되지 않도록 방지합니다. 사실, 사용자가 Windows 10 S를 실행 하는 시스템에 응용 프로그램을 설치 하는 경우 다음 응용 프로그램 수 없습니다 전혀 시작 합니다. Microsoft Store에 제출 된 모든 앱은 Windows 10 S와 호환 되어야 하기 때문에 응용 프로그램의 Microsoft Store 제출 막을 수도 있습니다.
 
-유틸리티를 시작하는 것이 운영 체제에서 정보를 얻거나 레지스트리를 액세스하거나 시스템 기능에 액세스할 수 있는 편리한 방법일 때가 많습니다. 한편, UWP API를 사용해 이러한 종류의 작업을 대신 수행할 수 있습니다. 이러한 Api는를 실행 하려면 별도 실행 파일이 필요 하지 않은 응용 프로그램 패키지 외부에 도달 하지 못하도록 뛰어나며 무엇 보다도 때문에 성능이 합니다. 앱의 디자인 일관성 격리, 신뢰 및 하면을 패키징하고 및 응용 프로그램의 Windows 10 S를 실행 하는 시스템에서 예상 대로 동작 응용 프로그램을 함께 제공 되는 보안을 유지
+유틸리티를 시작하는 것이 운영 체제에서 정보를 얻거나 레지스트리를 액세스하거나 시스템 기능에 액세스할 수 있는 편리한 방법일 때가 많습니다. 한편, UWP API를 사용해 이러한 종류의 작업을 대신 수행할 수 있습니다. 이러한 Api는를 실행 하려면 별도 실행 파일이 필요 하지 않은 응용 프로그램 패키지 외부에 도달 하지 못하도록 뛰어나며 무엇 보다도 때문에 성능이 합니다. 앱의 디자인 일관성 격리, 신뢰 및 응용 프로그램을 패키징하고 및 응용 프로그램의 Windows 10 S를 실행 하는 시스템에서 예상 대로 동작을 함께 제공 되는 보안을 유지
 
 + __응용 프로그램 호스트 추가 기능, 플러그 인 또는 확장__합니다.   많은 경우에 COM 스타일의 확장은 확장이 패키지로 만들어지지 않고, 완전 신뢰 상태로 설치되기만 하면 계속해서 작동하게 됩니다. 설치 관리자 레지스트리를 수정 하 고 호스트 응용 프로그램 찾을 것으로 예상 하는 모든 확장 파일을 배치 하는 데 해당 완전 신뢰 접근 권한 값을 사용할 수 때문입니다.
 

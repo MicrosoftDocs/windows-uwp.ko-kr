@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 255fe2918f10bb3b941cf2023ff358c58e191cbf
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5834148"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5860917"
 ---
 # <a name="user-json"></a>User(JSON)
 사용자 순위표 데이터가 들어 있습니다. 

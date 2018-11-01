@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e46bfb70ad377723694bfedb1dde0448564a97a8
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839496"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5859554"
 ---
 # <a name="eds-reverse-lookup-for-video"></a>비디오에 대한 EDS 역방향 조회
  
