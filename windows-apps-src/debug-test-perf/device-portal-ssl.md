@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 525c64ab289d26a4835168f410ac4ba3fc14343a
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5818837"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5872560"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>사용자 지정 SSL 인증서로 Device Portal 프로비전
 Windows 10 크리에이터 스 업데이트 Windows Device Portal HTTPS 통신에 사용 하기 위해 사용자 지정 인증서를 설치 하는 장치 관리자를 추가 합니다. 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 취득
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a19ca3c45e0420f51d6f52661935681315929b1
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5835153"
+ms.locfileid: "5875125"
 ---
 # <a name="get-app-acquisitions"></a>앱 집계 정보 가져오기
 

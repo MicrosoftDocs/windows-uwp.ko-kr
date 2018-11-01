@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 "로마", 백그라운드 작업, 앱 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: 044197ebae111e9300f06783f02de7f0636d4a11
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5823209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5876162"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>원격 앱 서비스와 통신
 

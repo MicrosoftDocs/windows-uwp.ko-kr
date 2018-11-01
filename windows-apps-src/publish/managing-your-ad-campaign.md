@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c53ae429e4cb912ce0ed2480c8cab814cbfaf96
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5835538"
+ms.locfileid: "5876823"
 ---
 # <a name="manage-your-ad-campaign"></a>광고 캠페인 관리
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, python
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fdd7dce766e2d1804c5b0973dcf3e51cbae99c0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5823409"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5875165"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Python 샘플: 앱, 추가 기능, 플라이트 제출
 

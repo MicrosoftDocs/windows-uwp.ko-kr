@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 피드백 허브, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: 16802cd7b181a6381845a4f71efdbdfb2f3eb747
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5827216"
+ms.locfileid: "5876314"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 

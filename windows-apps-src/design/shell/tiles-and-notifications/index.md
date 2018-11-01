@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eaca23a72ff794a85ffd8ac13c3f522cabf32aa7
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5838209"
+ms.locfileid: "5871250"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>UWP 앱에 대한 타일, 배지 및 알림
  

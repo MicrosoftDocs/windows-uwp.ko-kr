@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b078f0573d94e80b590f473f7c9a9b0395115ee
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5838681"
+ms.locfileid: "5876846"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>앱의 평가판 구현
 

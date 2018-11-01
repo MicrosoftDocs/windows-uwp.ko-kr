@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 헤드셋
 ms.localizationpriority: medium
 ms.openlocfilehash: f5097af13d0714f30eefd7771f798036d069cdea
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5834727"
+ms.locfileid: "5876139"
 ---
 # <a name="headset"></a>헤드셋
 

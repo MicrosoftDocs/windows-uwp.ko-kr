@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
 ms.openlocfilehash: 83fa27f982f777d9c023b5af68144eb67ac5d9aa
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5812095"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5874287"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
 작성 하 고 사용 하 여 Windows 런타임 Api를 사용 하는 방법에 대 한 될 수 있는 질문에 대답 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).

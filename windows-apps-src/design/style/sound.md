@@ -15,11 +15,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b3ac54ed60debed0462d31543d05712922068ca0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5835027"
+ms.locfileid: "5875488"
 ---
 # <a name="sound"></a>소리
 

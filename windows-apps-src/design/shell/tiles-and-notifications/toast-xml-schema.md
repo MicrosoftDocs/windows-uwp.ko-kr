@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bcfc56264ab3063995fd9f2b06bd93e9406cd37e
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840928"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5874458"
 ---
 # <a name="toast-content-xml-schema"></a>알림 콘텐츠 XML 스키마
 

@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 91de18af818113d79564ee8dfba7519a0f131246
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5832551"
+ms.locfileid: "5873769"
 ---
 # <a name="handle-a-cancelled-background-task"></a>취소된 백그라운드 작업 처리
 

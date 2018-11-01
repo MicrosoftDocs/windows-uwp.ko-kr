@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b9d76dd20c4537fadf8c0701c200740c31b784
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5819664"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5870624"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 

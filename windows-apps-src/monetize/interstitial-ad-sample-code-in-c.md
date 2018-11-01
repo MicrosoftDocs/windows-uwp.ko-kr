@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 중간, c#, 샘플 코드
 ms.localizationpriority: medium
 ms.openlocfilehash: 94baaa490859baf57e0bd12bc5a3800ed3b2312a
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5814471"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5873970"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>C\#의 중간 광고 샘플 코드 #  
 

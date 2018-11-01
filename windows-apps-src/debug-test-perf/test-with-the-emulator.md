@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b3b4da17c8e616640205e5b8b9892a41bc2ea647
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5812999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5871030"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 

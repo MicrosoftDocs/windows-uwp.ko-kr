@@ -9,12 +9,12 @@ ms.date: 06/21/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42bc7fdb91a8c7642e132d4ac3d93be1f0927df0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: d2f437db1a1792df22fd084cedee31cb6e590d24
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5840012"
+ms.locfileid: "5873192"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
@@ -287,21 +287,6 @@ bool App::On_BackRequested()
 이전에는 UWP 앱이 뒤로 탐색을 지원하기 위해 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용했습니다. 이전 버전과 호환성을 보장 하기 지원 해야 하는 API는 계속 하지만 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)의존 더 이상 권장 합니다. 대신 앱은 인-앱 뒤로 단추를 호출해야 합니다.
 
 앱에서 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용 하 여 계속 되 면 UI는 시스템 렌더링 시스템 뒤로 단추:
-
-- 앱이 **없는 탭**에 뒤로 단추가 제목 표시줄 내부 렌더링 됩니다. 뒤로 단추에 대 한 시각적 환경과 사용자 상호 작용 이전 빌드에서 변경 되지 않습니다.
-
-    ![제목 표시줄 뒤로 단추](images/nav-back-pc.png)
-
-- 앱 **탭**을 경우 새 시스템 뒤로 내에 뒤로 단추가 렌더링 모음입니다.
-
-    ![시스템 그린 뒤로 단추 모음](images/back-nav/tabs.png)
-
-### <a name="system-back-bar"></a>시스템 뒤로 표시줄
-
-> [!NOTE]
-> "시스템 뒤로 표시줄"만 설명, 공식 이름은 되지 않습니다.
-
-시스템 뒤로 표시줄은 탭 밴드와 앱의 콘텐츠 영역 사이 삽입 되는 "밴드"입니다. 밴드는 앱의 가로를 따라 흐르며 왼쪽 가장자리에 뒤로 단추가 표시됩니다. 밴드는 뒤로 단추에 대 한 적절 한 터치 대상 크기 32 픽셀의 세로 높이입니다.
 
 - 앱이 **없는 탭**에 뒤로 단추가 제목 표시줄 내부 렌더링 됩니다. 뒤로 단추에 대 한 시각적 환경과 사용자 상호 작용 이전 빌드에서 변경 되지 않습니다.
 

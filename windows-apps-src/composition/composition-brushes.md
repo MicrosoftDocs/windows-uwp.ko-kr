@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1122ae00f9b84980a7793deef08a30a16711b4be
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 730d5ae9062fe39533cd615facaf5beaa7d02ffd
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5823689"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5876086"
 ---
 # <a name="composition-brushes"></a>컴퍼지션 브러시
 모든 UWP 응용 프로그램에서 화면에 표시 되는 브러시 그려 때문에 표시 됩니다. 브러시를 사용 하 여 간단 하 고 단색 색에서 이미지 또는 복잡 한 효과 체인에 드로잉에 이르기까지 콘텐츠를 사용 하 여 사용자 인터페이스 (UI) 개체를 그릴 수 있습니다. 이 항목에서는 색칠 하기 CompositionBrush의 개념을 소개 합니다.
 
-Note, XAML UWP 앱을 사용 하 여 작업을 할 때 [XAML 브러시](/windows/uwp/design/style/brushes) 또는 [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)UIElement를 그릴 수도 있습니다. 일반적으로 것이 쉽고 시나리오는 XAML 브러시에서 지원 되는 경우 XAML 브러시를 선택 하는 것이 좋습니다. 예를 들어 텍스트 또는 이미지를 사용 하 여 셰이프의 채우기 변경 단추의 색 애니메이션을 적용 합니다. 반면에 애니메이션된 마스크는 애니메이션 효과 준된 그리드 stretch 또는 효과 체인을 사용 하 여 그리기 같은 XAML 브러시와 같은 지원 되지 않는 작업을 수행 하려는 경우 데 사용할 수는 CompositionBrush [를 사용 하 여 UIElement를 그리려면 XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+Note, XAML UWP 앱을 사용 하 여 작업을 할 때 [XAML 브러시](/windows/uwp/design/style/brushes) 또는 [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)UIElement를 그릴 수도 있습니다. 일반적으로 것이 쉽고 시나리오는 XAML 브러시에서 지원 되는 경우 XAML 브러시를 선택 하는 것이 좋습니다. 예를 들어 텍스트 또는 이미지를 사용 하 여 셰이프의 채우기 변경 단추의 색 애니메이션을 적용 합니다. 반면에 애니메이션된 마스크는 애니메이션 효과 준된 그리드 stretch 또는 효과 체인을 사용 하 여 그리기 같은 XAML 브러시에 지원 되지 않는 작업을 수행 하려는 경우 데 사용할 수는 CompositionBrush [를 사용 하 여 UIElement를 그리려면 XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
 시각적 계층을 사용 하는 경우에 CompositionBrush [SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual)의 영역을 그리는 데 사용 되어야 합니다.
 

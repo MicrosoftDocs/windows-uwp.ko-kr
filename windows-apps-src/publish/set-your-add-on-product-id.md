@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 14d0cd40e0a7a170a835b000dc66ec683c2fb59c
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5825221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5869633"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 

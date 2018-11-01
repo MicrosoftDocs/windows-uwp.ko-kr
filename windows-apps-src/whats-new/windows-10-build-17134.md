@@ -8,11 +8,11 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b25df0a8445322ceb422fd6485f7d08c1c49a25
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5813661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5870518"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자를 위한 Windows 10 빌드 17134의 새로운 기능
 

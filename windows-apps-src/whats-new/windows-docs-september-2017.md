@@ -8,11 +8,11 @@ ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 436b610be942b33849b6da31cf5f9353a505a700
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5816810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5871502"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>2017년 9월 Windows 개발자 문서의 새로운 내용
 

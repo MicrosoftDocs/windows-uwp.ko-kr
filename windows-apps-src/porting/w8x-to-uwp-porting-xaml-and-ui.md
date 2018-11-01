@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b5a3425c49a30ddb96fcb7a8a2c8b83fbb6dff3
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5814040"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5870266"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 

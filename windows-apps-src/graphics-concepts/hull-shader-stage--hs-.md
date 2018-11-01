@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d2aed18d476f966e644fa095aa6a5a518ebbe959
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839364"
+ms.locfileid: "5876543"
 ---
 # <a name="hull-shader-hs-stage"></a>HS(헐 셰이더) 단계
 

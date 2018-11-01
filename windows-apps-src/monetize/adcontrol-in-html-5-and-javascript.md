@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 광고 관리, javascript, HTML
 ms.localizationpriority: medium
 ms.openlocfilehash: de3ffa9e82687e31c7f91548be953f224975d09a
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5835746"
+ms.locfileid: "5873888"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>HTML 5 및 JavaScript의 AdControl
 
