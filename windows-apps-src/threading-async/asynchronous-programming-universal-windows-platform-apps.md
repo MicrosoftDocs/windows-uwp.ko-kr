@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 비동기
 ms.localizationpriority: medium
 ms.openlocfilehash: 04d91fc7166812f53e8b2238b1a47c8aeb9c425f
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5833005"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5880268"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 이 항목에서는 유니버설 Windows 플랫폼 (UWP) 및 C#, Microsoft Visual Basic.NET, c + + 및 JavaScript에서의 표현의 비동기 프로그래밍을 설명 합니다.

@@ -15,11 +15,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 87001cb99a7d5cb1a150bceed3f6c9ba187caa94
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5831294"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5883749"
 ---
 # <a name="tooltips"></a>도구 설명
 

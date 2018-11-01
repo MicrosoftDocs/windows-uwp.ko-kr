@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: b9b26f36d7fe2dc553e211ae48f7bd66651c5827
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5830987"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882759"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 스택 추적 가져오기
 

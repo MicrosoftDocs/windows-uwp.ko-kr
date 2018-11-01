@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e042a9bbedee3ded0601eda06da8e349c4b788c
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5836144"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5880803"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>음성 인식기 언어 지정
 

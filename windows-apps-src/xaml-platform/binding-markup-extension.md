@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 69d316ad48645d8995e602b270a5615322c8b43f
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 02c856fd697bef958eb45a0f0f133e06f63a7f51
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5813994"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5878152"
 ---
 # <a name="binding-markup-extension"></a>{Binding} 태그 확장
 
@@ -22,7 +22,7 @@ ms.locfileid: "5813994"
 
 **참고**바인딩 **{Binding}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
-**{Binding}** 태그 확장은 코드 등 데이터 원본에서 가져온 값에 컨트롤의 속성을 데이터 바인딩하는 데 사용됩니다. **{Binding}** 태그 확장은 XAML 로드 시 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스의 인스턴스로 변환됩니다. 이 바인딩 개체는 데이터 원본의 속성에서 값을 가져와서 컨트롤의 속성으로 푸시합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 업데이트하도록 바인딩 개체를 구성할 수 있습니다. 또한 필요한 경우 제어 값 변경을 원본 속성에 다시 적용하도록 구성할 수도 있습니다. 데이터 바인딩의 대상인 속성은 종속성 속성이어야 합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
+**{Binding}** 태그 확장은 코드 등 데이터 원본에서 가져온 값에는 컨트롤에 데이터 바인딩 속성에 사용 됩니다. **{Binding}** 태그 확장은 XAML 로드 시 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스의 인스턴스로 변환됩니다. 이 바인딩 개체는 데이터 원본의 속성에서 값을 가져와서 컨트롤의 속성으로 푸시합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 업데이트하도록 바인딩 개체를 구성할 수 있습니다. 또한 필요한 경우 제어 값 변경을 원본 속성에 다시 적용하도록 구성할 수도 있습니다. 데이터 바인딩의 대상인 속성은 종속성 속성이어야 합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
 **{Binding}** 은 로컬 값과 동일한 종속성 속성 우선 순위를 가지며, 명령적 코드에서 로컬 값을 설정할 경우 태그에 설정된 **{Binding}** 의 효과가 제거됩니다.
 

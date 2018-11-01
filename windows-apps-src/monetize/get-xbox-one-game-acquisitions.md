@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox One 게임 취득
 ms.localizationpriority: medium
 ms.openlocfilehash: 86ca46903e581922cc571a854d9fa110fa261ece
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5832028"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884215"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Xbox One 게임 취득 가져오기
 

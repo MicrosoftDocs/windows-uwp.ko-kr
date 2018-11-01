@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.localizationpriority: medium
 ms.openlocfilehash: cb80e2dbd7ebdfbb05bd642b9875a9cd7cc356f3
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5836705"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882120"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a>느슨한 폴더에 앱 등록  
 

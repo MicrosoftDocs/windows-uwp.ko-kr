@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 실험적, api
 ms.localizationpriority: medium
 ms.openlocfilehash: fe5fa437c5a1e564be07b7277de0f190d6eab862
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5827656"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884782"
 ---
 # <a name="experimental-apis"></a>실험적 API
 

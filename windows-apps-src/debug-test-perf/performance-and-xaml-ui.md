@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dfc4e5d3d2741cf36a1a9aae8c0c22feed5305e
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5827091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5879448"
 ---
 # <a name="performance"></a>성능
 

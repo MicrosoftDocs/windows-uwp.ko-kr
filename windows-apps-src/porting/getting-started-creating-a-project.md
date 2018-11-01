@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b10d615146c8989231c4fe36ad9588716c59c34
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5822521"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882852"
 ---
 # <a name="getting-started-creating-a-project"></a>시작: 프로젝트 만들기
 

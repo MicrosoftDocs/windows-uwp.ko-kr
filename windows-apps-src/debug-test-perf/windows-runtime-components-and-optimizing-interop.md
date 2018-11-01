@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 726dc4aaa34b9b68aa198e236abcef57b78b21f4
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5743354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5879347"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>UWP 구성 요소 및 interop 최적화
 

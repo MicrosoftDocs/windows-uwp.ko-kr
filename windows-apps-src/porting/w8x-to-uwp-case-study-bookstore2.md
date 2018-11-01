@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d37f2507f3e4c96c3462fd075dbe945117dd82
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5879435"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
 

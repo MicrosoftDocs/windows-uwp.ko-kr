@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 64f4756df37cbfaf041e432b7e4a890123f52d2f
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5829625"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5883805"
 ---
 # <a name="pair-devices"></a>장치 페어링
 

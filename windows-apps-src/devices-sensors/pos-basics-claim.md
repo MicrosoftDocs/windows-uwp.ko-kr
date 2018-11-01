@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: df9c4764b8f7d752a132d6759054660f481cce55
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5820938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5880713"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>서비스 지점 장치 클레임 및 모델을 사용 하도록 설정
 

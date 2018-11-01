@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 482092e43acd6999361640e598a44391ac3f11a5
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5815721"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882222"
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 

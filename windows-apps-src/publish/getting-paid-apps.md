@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
 ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5816836"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5883611"
 ---
 # <a name="getting-paid"></a>지급 받기
 앱, 추가 기능 및 광고 수익에 대 한 지급을 수신 하는 방법에 대 한 중요 한 정보는 다음과 같습니다.
