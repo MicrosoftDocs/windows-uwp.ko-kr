@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 입력 대기 시간
 ms.localizationpriority: medium
 ms.openlocfilehash: a2e92dc10dbcdc3a511c1b1a1271ae759cc03c60
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5867649"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5936602"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 
@@ -235,7 +235,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-Microsoft Visual Studio2015에서 **DirectX 11 및 XAML 앱 (유니버설 Windows)** 템플릿을 유사한 방식으로 여러 스레드로 게임 루프를 분할 합니다. [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
+게임 루프 유사한 방식으로 여러 스레드를 분할 하는 Microsoft Visual Studio2015에서 **DirectX 11 및 XAML 앱 (유니버설 Windows)** 템플릿을 합니다. [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>입력 대기 시간을 줄이는 추가 방법
 
@@ -248,7 +248,7 @@ DirectX 게임은 사용자에게 표시되는 화면 내용을 업데이트하�
 
 ![그림 1 directx의 입력 대기 시간 ](images/input-latency1.png)
 
-Windows8.1, DXGI는 앱을 쉽게 Present 큐를 빈 상태로 유지 하기 위해 추론을 구현 하지 않고도이 대기 시간을 줄일 수 있는 스왑 체인에 대 한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** 플래그를 도입 했습니다. 이 플래그를 사용하여 만든 스왑 체인을 대기 가능 스왑 체인이라고 합니다. 그림 2에서는 대기 가능 스왑 체인을 사용할 경우의 입력 이벤트에 대한 응답과 대략적인 수명 주기를 보여 줍니다.
+Windows8.1, DXGI, 앱을 쉽게 Present 큐를 빈 상태로 유지 하기 위해 추론을 구현 하지 않고도이 대기 시간을 줄일 수 있는 스왑 체인에 대 한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** 플래그를 도입 했습니다. 이 플래그를 사용하여 만든 스왑 체인을 대기 가능 스왑 체인이라고 합니다. 그림 2에서는 대기 가능 스왑 체인을 사용할 경우의 입력 이벤트에 대한 응답과 대략적인 수명 주기를 보여 줍니다.
 
 그림 2
 

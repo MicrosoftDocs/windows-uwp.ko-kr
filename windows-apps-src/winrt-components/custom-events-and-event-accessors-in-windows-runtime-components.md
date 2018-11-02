@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868873"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5936312"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
 
@@ -33,7 +33,7 @@ Visual Basic 및 C# 컴파일러를 사용하면 이 프로세스를 간단히 �
 
 NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패턴을 보여 줍니다. 이 예제에서는 이벤트 인수 개체 NumberChangedEventArgs의 생성자가 변경된 숫자 값을 나타내는 단일 정수 매개 변수를 사용합니다.
 
-> **참고**이 Windows 런타임 구성 요소에서 선언 된 일반 이벤트에 대해 컴파일러를 사용할 동일한 패턴입니다.
+> **참고**Windows 런타임 구성 요소에서 선언 된 일반 이벤트에 대해 컴파일러를 사용할 동일한 패턴입니다.
 
  
 > [!div class="tabbedCodeSnippets"]

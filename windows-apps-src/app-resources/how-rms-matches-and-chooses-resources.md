@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885080"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937524"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법
 리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하고 반환할 최적의 후보를 결정합니다. 이 작업은 모든 후보의 순위를 지정할 모든 한정자를 고려하여 수행됩니다.
@@ -22,7 +22,7 @@ ms.locfileid: "5885080"
 
 언어 태그 일치 방법에 대한 자세한 내용은 [리소스 관리 시스템이 언어 태그를 일치하는 방법](how-rms-matches-lang-tags.md)을 참조하세요.
 
-배율 및 고대비 등의 일부 한정자의 경우 항상 최소한의 어느 정도의 일치가 있습니다. 예를 들어, "scale-100"컨텍스트와 일정 부분 일치 "scale-400"의 작은 어느 정도 대 한 정규화 된 후보와 하지 하지만"scale-200"또는 (완벽 한 일치)에 대해"scale-400"에 대 한 정규화 된 후보 합니다.
+배율 및 고대비 등의 일부 한정자의 경우 항상 최소한의 어느 정도의 일치가 있습니다. 예를 들어, "scale-100"컨텍스트와 일정 부분 일치 "scale-400"의 작은 어느 정도 대 한 정규화 된 후보와 하지 하지만"scale-200"또는 (완벽 한 일치)"scale-400"에 대 한 정규화 된 후보 합니다.
 
 하지만 언어 또는 홈 지역과 같은 다른 한정자에 대해 일치 정도뿐만 아니라 비일치 비교가 있을 수 있습니다. 예를 들어, "en-US"로 언어에 대해 정규화된 후보는 "en-GB" 컨텍스트에 대한 부분 일치이지만 "fr"로 정규화된 후보는 전혀 일치하지 않습니다. 마찬가지로 홈 지역에 대해 "155"(서유럽)로 정규화된 후보는 "FR"로 홈 지역이 설정된 사용자에 대한 컨텍스트와 일정 부분 일치하지만 "US"로 정규화된 후보는 전혀 일치하지 않습니다.
 

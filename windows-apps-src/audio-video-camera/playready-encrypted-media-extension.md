@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b73464ea10aa835b82df17605e983ebdfb9cd890
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5878643"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5939595"
 ---
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
@@ -27,7 +27,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 
 이 섹션에서는 목록을 변경 하는 PlayReady eme 암호화 된 미디어 확장 () Windows10에서 PlayReady 콘텐츠 보호를 사용 하도록 설정 합니다.
 
-다음은 새로운 기능과 변경 내용이 PlayReady 암호화 된 미디어 확장 Windows10에 대 한 설명 합니다.
+다음 목록에는 새로운 기능과 변경 내용이 PlayReady 암호화 된 미디어 확장 Windows10에 대 한 설명 합니다.
 
 -   하드웨어 DRM(디지털 권한 관리)이 추가되었습니다.
 
@@ -36,7 +36,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 -   비영구적 라이선스를 미리 취득할 수 있습니다.
 -   한 메시지로 여러 라이선스를 취득할 수 있습니다.
 
-    Windows8.1와 여러 키 id (Keyid)를 사용 하 여 PlayReady 개체를 사용 하거나 [콘텐츠 암호 해독 모델 데이터 (CDMData)를](https://go.microsoft.com/fwlink/p/?LinkID=626819) 사용 하 여 여러 keyid와 함께 수 있습니다.
+    Windows8.1와 여러 키 id (Keyid)를 사용 하 여 PlayReady 개체를 사용 하거나 여러 keyid와 함께 [콘텐츠 암호 해독 모델 데이터 (CDMData)를](https://go.microsoft.com/fwlink/p/?LinkID=626819) 사용 합니다.
 
     > [!NOTE]
     > Windows10, 여러 키 id 아래에서 지원 됩니다 &lt;KeyID&gt; CDMData의 합니다.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 광고 관리, javascript, HTML
 ms.localizationpriority: medium
 ms.openlocfilehash: de3ffa9e82687e31c7f91548be953f224975d09a
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873888"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5936684"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>HTML 5 및 JavaScript의 AdControl
 
@@ -26,7 +26,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
 > [!NOTE]
-> Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 이후 버전의 Windows SDK를 설치한 경우 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10용 Windows SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다. 
+> Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트) 또는 최신 버전의 Windows SDK를 설치한 경우 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10용 Windows SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다. 
 
 ## <a name="integrate-a-banner-ad-into-your-app"></a>앱에 배너 광고를 통합
 

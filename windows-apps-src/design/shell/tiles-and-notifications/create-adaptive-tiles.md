@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f0af7dc153f75826444a517d4958bfeba53b103d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5870379"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5938338"
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
@@ -282,7 +282,7 @@ TileContent content = new TileContent()
 
 알림 페이로드에서 브랜딩을 지정하지 않으면 기본 타일의 속성에 따라 브랜딩이 결정됩니다. 기본 타일에 표시 이름이 표시되는 경우 브랜딩의 기본값은 "name"입니다. 그렇지 않고 표시 이름이 표시되지 않는 경우 브랜딩의 기본값은 "none"입니다.
 
-**참고**  이는 "logo"이 기본 브랜딩 Windows8.x에서 변경
+**참고**  이 Windows8.x는 "logo."가 기본 브랜딩에서 변경
 
  
 

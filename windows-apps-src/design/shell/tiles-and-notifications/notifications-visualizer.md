@@ -10,18 +10,18 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 59a2e93f7c09266b0e33d58bf6a2571e60c7a607
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873139"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5935656"
 ---
 # <a name="notifications-visualizer"></a>알림 시각화 도우미
 
  
 
 
-알림 시각화 도우미는 새 유니버설 Windows 플랫폼 (UWP) 앱을 [스토어에서](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) 개발자가 도움이 되는 적응형 Live Tile 및 대화형 알림 Windows10에 대 한 디자인 합니다.
+알림 시각화 도우미는 새로운 유니버설 Windows 플랫폼 (UWP) 앱을 [스토어에서](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) 개발자가 도움이 되는 적응형 Live Tile 및 대화형 알림 Windows10에 대 한 디자인 합니다.
 
 
 ## <a name="overview"></a>개요

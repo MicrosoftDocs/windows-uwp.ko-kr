@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c874c690826dfa74b8dcb2312204cd549db3db2b
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869047"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5939016"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -60,7 +60,7 @@ ms.locfileid: "5869047"
 
 ## <a name="send-a-simple-get-request-over-http"></a>HTTP를 통해 간단한 GET 요청 보내기
 
-이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각에 GET 요청을 전송 하는 방법을 보여 줍니다 http://www.contoso.com [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스를 사용 하 여 GET 요청에서 응답을 읽을 수 있습니다.
+이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각은 GET 요청으로 전송 하는 방법을 보여 줍니다 http://www.contoso.com [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스와 [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스를 사용 하 여 GET 요청에서 응답을 읽을 수 있습니다.
 
 ```csharp
 //Create an HTTP client object

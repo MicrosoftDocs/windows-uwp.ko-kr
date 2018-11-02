@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출, 업데이트
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bf6ed961f4f84cbc2bbef4a4fe79625dcadc326
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874162"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5943633"
 ---
 # <a name="update-an-app-submission"></a>앱 제출 업데이트
 

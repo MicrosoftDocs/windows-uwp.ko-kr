@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ec3d091d7cc5aca82aeef9a3e7f29a8d363705a3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5860561"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937126"
 ---
 # <a name="mipmap-packing"></a>Mipmap 압축
 

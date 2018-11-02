@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eaca23a72ff794a85ffd8ac13c3f522cabf32aa7
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5871250"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940289"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>UWP 앱에 대한 타일, 배지 및 알림
  
@@ -41,7 +41,7 @@ ms.locfileid: "5871250"
 | [타일 만들기](creating-tiles.md) | 앱의 기본 타일을 사용자 지정하고 다양한 화면 크기에 대한 자산을 제공합니다. |
 | [앱 아이콘 자산](app-assets.md) | Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘 자산은 UWP(유니버설 Windows 플랫폼) 앱에 대한 호출 카드입니다. 다음 지침에서는 시스템에서 앱 아이콘 자산을 표시하는 위치에 대해 자세히 설명하고 가장 완성도 높은 아이콘을 만드는 방법에 대한 자세한 디자인 팁을 제공합니다. |
 | [기본 타일 API](primary-tile-apis.md) | 앱의 기본 타일을 고정하도록 요청하고 기본 타일이 현재 고정되어 있는지 확인합니다. |
-| [타일 콘텐츠](create-adaptive-tiles.md) | 사용 하 여 적응형 타일 알림 콘텐츠를 지정 하는, Windows10의 새로운 기능 디자인할 수 있도록 고유한 타일 알림 콘텐츠를 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 합니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. |
+| [타일 콘텐츠](create-adaptive-tiles.md) | 사용 하 여 적응형 타일 알림 콘텐츠를 지정, Windows10의 새로운 기능 디자인할 수 있도록 고유한 타일 알림 콘텐츠를 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 합니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. |
 | [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md) | 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다. |
 | [특수 타일 템플릿](special-tile-templates-catalog.md) | 특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. |
 | [로컬 타일 알림 보내기](sending-a-local-tile-notification.md) | 로컬 타일 알림을 보내서 라이브 타일에 다양한 동적 콘텐츠를 추가하는 방법을 알아봅니다. |

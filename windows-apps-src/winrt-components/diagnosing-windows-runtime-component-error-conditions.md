@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 833dd0a6447e9d0bb49c21a18d17bd7b0dc3455d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887469"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940029"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Windows 런타임 구성 요소 오류 조건 진단
 
@@ -82,8 +82,8 @@ UWP에서 오버로드된 메서드는 하나의 오버로드가 기본 오버�
 
 | 오류 번호 | 메시지 내용                                                                                                                                                                      |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1059      | 여러 {0}-의 매개 변수 오버 로드 '{1}. {2}' Windows.Foundation.Metadata.DefaultOverloadAttribute로 데코레이팅 합니다.                                                            |
-| WME1085      | {0}-의 매개 변수 오버 로드 {1}. {2} Windows.Foundation.Metadata.DefaultOverloadAttribute로 데코레이팅하여 기본 오버 로드로 지정 된 메서드가 정확히 하나만 있어야 합니다. |
+| WME1059      | 여러 {0}-매개 변수 오버 로드 '{1}. {2}' Windows.Foundation.Metadata.DefaultOverloadAttribute로 데코레이팅 됩니다.                                                            |
+| WME1085      | {0}-매개 변수 오버 로드 {1}. {2} Windows.Foundation.Metadata.DefaultOverloadAttribute로 데코레이팅하여 기본 오버 로드로 지정 된 메서드가 정확히 하나만 있어야 합니다. |
 
  
 
@@ -92,7 +92,7 @@ UWP에서 오버로드된 메서드는 하나의 오버로드가 기본 오버�
 
 유니버설 Windows 플랫폼에서는 Windows 메타데이터(.winmd) 파일의 모든 공용 형식이 .winmd 파일 이름을 공유하는 네임스페이스에 있거나 해당 파일 이름의 하위 네임스페이스에 있어야 합니다. 예를 들어 Visual Studio 프로젝트의 이름이 A.B(즉, Windows 런타임 구성 요소가 A.B.winmd)인 경우 공용 클래스 A.B.Class1 및 A.B.C.Class2는 포함될 수 있지만 A.Class3(WME0006) 또는 D.Class4(WME1044)는 포함될 수 없습니다.
 
-> **참고**구현에서 사용 되는 전용 형식에 하지만 공용 형식에 대 한 이러한 제한 사항이 적용 됩니다.
+> **참고**이러한 제한 하지 구현에서 사용 하는 전용 형식에만 공용 형식에 적용 합니다.
 
  
 
@@ -116,7 +116,7 @@ Windows 런타임 구성 요소의 형식은 네임스페이스와 동일한 이
 | WME1042      | 입력 모듈에는 네임스페이스 내에 있는 공용 형식이 하나 이상 포함되어야 합니다.                                                                                                                                                                                                                                                                   |
 | WME1043      | 입력 모듈에는 네임스페이스 내에 있는 공용 형식이 하나 이상 포함되어야 합니다. 네임스페이스 내에서 발견된 유일한 형식은 전용 형식입니다.                                                                                                                                                                                                               |
 | WME1044      | 공용 형식에 네임 스페이스 ('{1}') 다른 네임 스페이스를 사용 하 여 일반적인 접두사를 공유 하는 ('{0}'). Windows 메타데이터 파일 내의 모든 형식은 파일 이름이 암시하는 네임스페이스의 하위 네임스페이스에 있어야 합니다.                                                                                                                              |
-| WME1067      | Namespace 이름 대/소문자만 달라: '{0}','{1}'.                                                                                                                                                                                                                                                                                                |
+| WME1067      | Namespace 이름 대/소문자만 다른 수 없습니다: '{0}','{1}'.                                                                                                                                                                                                                                                                                                |
 | WME1068      | 형식 '{0}'네임 스페이스와 같은 이름을 가진 없습니다'{1}'.                                                                                                                                                                                                                                                                                                 |
 
  
@@ -193,7 +193,7 @@ UWP에서 멤버 서명의 배열은 하한이 0인 1차원 배열이어야 합�
 
 | 오류 번호 | 메시지 내용                                                                                                                                                     |
 |--------------|--------------------|
-| WME1034      | 메서드 '{0}'형식의 배열이 있습니다'{1}' 0이 아닌 인 서명에 합니다. Windows 런타임 메서드 서명의 배열은 하한이 0이어야 합니다. |
+| WME1034      | 메서드 '{0}'형식의 배열이 있습니다'{1}' 0이 아닌 아래 바인딩 서명에 사용 합니다. Windows 런타임 메서드 서명의 배열은 하한이 0이어야 합니다. |
 | WME1035      | 메서드 '{0}'형식의 다차원 배열이 '{1}' 서명에 합니다. Windows 런타임 메서드 서명의 배열은 1차원이어야 합니다.                  |
 | WME1036      | 메서드 '{0}'형식의 중첩된 배열이 '{1}' 서명에 합니다. Windows 런타임 메서드 서명의 배열은 중첩될 수 없습니다.                                    |
 
@@ -206,10 +206,10 @@ UWP에서 매개 변수는 읽기 전용이거나 쓰기 전용이어야 합니�
 
 | 오류 번호 | 메시지 내용         |
 |--------------|----------------------|
-| WME1101      | 메서드 '{0}'매개 변수가'{1}' 배열이 이며가 모두 {2} 및 {3}. Windows 런타임에서 내용 배열 매개 변수는 읽기 가능이거나 쓰기 가능이어야 합니다. 두 특성 중 하나를 제거 하세요 '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| WME1102      | 메서드 '{0}'가 출력 매개 변수'{1}'가 이지만 배열에는 {2}합니다. Windows 런타임에서 출력 배열 내용이 쓰기 가능합니다. 이 특성을 제거 하세요 '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| WME1103      | 메서드 '{0}'매개 변수가'{1}' System.Runtime.InteropServices.InAttribute 또는 System.Runtime.InteropServices.OutAttribute를가지고 있는 하 고, 배열입니다. Windows 런타임에서 배열 매개 변수 있어야 {2} 또는 {3}. 필요한 경우 이러한 특성을 제거하거나 적절한 Windows 런타임 특성으로 바꾸세요.                                                                                                                                                                                                                                                                                                                                                                                          |
-| WME1104      | 메서드 '{0}'매개 변수가'{1}'는 변수가 배열이 고가지고 있는 {2} 또는 {3}. 비 배열 매개 변수를 사용 하 여 Windows 런타임 지원 하지 않습니다 {2} 또는 {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| WME1101      | 메서드 '{0}'매개 변수가'{1}' 배열, 이며 둘 다를 있는 {2} 및 {3}. Windows 런타임에서 내용 배열 매개 변수는 읽기 가능이거나 쓰기 가능이어야 합니다. 두 특성 중 하나를 제거 하세요 '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| WME1102      | 메서드 '{0}'출력 매개 변수는 '{1}'가 이지만 배열에는 {2}합니다. Windows 런타임에서 출력 배열 내용이 쓰기 가능합니다. 특성을 제거 하세요 '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| WME1103      | 메서드 '{0}'매개 변수가'{1}' 배열, 이며 System.Runtime.InteropServices.InAttribute 또는 System.Runtime.InteropServices.OutAttribute를가지고 있는 합니다. Windows 런타임에서 배열 매개 변수 있어야 {2} 또는 {3}. 필요한 경우 이러한 특성을 제거하거나 적절한 Windows 런타임 특성으로 바꾸세요.                                                                                                                                                                                                                                                                                                                                                                                          |
+| WME1104      | 메서드 '{0}'매개 변수가'{1}' 배열에 상관 없는 하며 있는 중 하나는 {2} 또는 {3}. 비 배열 매개 변수를 사용 하 여 Windows 런타임 지원 하지 않습니다 {2} 또는 {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | WME1105      | 메서드 '{0}'매개 변수가'{1}' System.Runtime.InteropServices.InAttribute 또는 System.Runtime.InteropServices.OutAttribute를 갖는 합니다. Windows 런타임에서는 매개 변수를 System.Runtime.InteropServices.InAttribute 또는 System.Runtime.InteropServices.OutAttribute로 표시할 수 없습니다. System.Runtime.InteropServices.InAttribute를 제거하고 대신 'out' 한정자를 가진 System.Runtime.InteropServices.OutAttribute로 바꾸세요. 메서드 '{0}'매개 변수가'{1}' System.Runtime.InteropServices.InAttribute 또는 System.Runtime.InteropServices.OutAttribute를 갖는 합니다. Windows 런타임에서는 ByRef 매개 변수를 System.Runtime.InteropServices.OutAttribute로 표시할 수만 있고 다른 특성 사용법은 지원되지 않습니다. |
 | WME1106      | 메서드 '{0}'매개 변수가'{1}' 배열입니다. Windows 런타임에서 배열 매개 변수의 내용은 읽기 가능 또는 쓰기 가능이어야 합니다. 적용 하세요 {2} 또는 {3} 에 '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
@@ -238,14 +238,14 @@ UWP에서 반환 값은 출력 매개 변수로 간주되고, 매개 변수 이�
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **참고**반환 값의 이름을 변경 했는데 새 이름이 다른 매개 변수를 사용 하 여, 하는 경우에 WME1091 오류가 발생 합니다.
+> **참고**반환 값의 이름을 변경 했는데 새 이름이 다른 매개 변수를 사용 하 여, 경우에 WME1091 오류가 발생 합니다.
 
 JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변수를 이름으로 액세스할 수 있습니다. 예제를 보려면 [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx) 특성을 참조하세요.
 
 | 오류 번호 | 메시지 내용 |
 |--------------|--------------|
-| WME1091 | 메서드를 ' \{0}' 라는 반환 값 ' \{1}' 매개 변수 이름으로 같습니다. Windows 런타임 메서드의 매개 변수와 반환 값에는 고유한 이름이 있어야 합니다. |
-| WME1092 | 메서드를 ' \{0}' 라는 매개 변수가 ' \{1}' 값 이름을 반환 하는 경우와 동일 합니다. 매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요. |
+| WME1091 | 메서드를 ' \{0}' 라는 반환 값 ' \{1}'는 매개 변수 이름과 동일 합니다. Windows 런타임 메서드의 매개 변수와 반환 값에는 고유한 이름이 있어야 합니다. |
+| WME1092 | 메서드를 ' \{0}' 라는 매개 변수가 ' \{1}' 값 이름을 반환 되는 기본와 동일 합니다. 매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요. |
 
 **참고**기본 이름이 "returnValue" 속성 접근자의 및 다른 모든 방법에 대 한 "value"입니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: d27e4bb0d643b859958f887133a128572ca31225
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5871884"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5939228"
 ---
 # <a name="directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿
 
@@ -26,7 +26,7 @@ DirectX 및 UWP(유니버설 Windows 플랫폼) 템플릿을 사용하여 게임
 
 프로젝트를 만들려면 다음을 수행해야 합니다.
 
--   [Microsoft Visual Studio2015를 다운로드](https://www.visualstudio.com/vs-2015-product-editions)합니다. 시각적 Studio2015에 그래픽 디버깅 도구 등의 프로그래밍에 대 한 도구가 있습니다. DirectX 그래픽 및 게임 기능과 도구에 대한 개요를 보려면 [DirectX 게임 개발을 위한 Visual Studio 도구](set-up-visual-studio-for-game-development.md)를 참조하세요.
+-   [Microsoft Visual Studio2015를 다운로드](https://www.visualstudio.com/vs-2015-product-editions)합니다. 시각적 Studio2015에 그래픽 디버깅 도구 등의 프로그래밍을 위한 도구가 있습니다. DirectX 그래픽 및 게임 기능과 도구에 대한 개요를 보려면 [DirectX 게임 개발을 위한 Visual Studio 도구](set-up-visual-studio-for-game-development.md)를 참조하세요.
 
 ## <a name="choosing-a-template"></a>템플릿 선택
 

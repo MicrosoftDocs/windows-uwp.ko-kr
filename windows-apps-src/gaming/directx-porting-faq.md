@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5866131"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5936773"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX 11 포팅 FAQ
 
@@ -46,7 +46,7 @@ Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하�
 
 [DirectXTK(DirectX 도구 키트)](http://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11에 사용할 수 있는 도우미 클래스를 제공합니다.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>데스크톱 및 Microsoft Store에 대 한 코드 경로 유지 관리 하는 인가요?
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>데스크톱 및 Microsoft Store에 대 한 코드 경로 유지 관리 하는 어떻게 하나요?
 
 
 Chuck Walbourn의 문서 시리즈 [게임용 이중 용도 코딩 기술](http://go.microsoft.com/fwlink/p/?LinkID=286210) 이라는 데스크톱 및 Microsoft 스토어 코드 경로 간의 코드 공유에 대 한 지침을 제공 합니다.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861920"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937918"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
 
@@ -86,7 +86,7 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
      
 
 -   [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) 및 [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
--   Microsoft Visual Studio2015에서 선택 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
+-   Microsoft Visual Studio2015 선택 **프로젝트 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>배율 인수 리소스 팩 정의
 
@@ -103,7 +103,7 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
      
 
 -   [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 자산을 로드할 수 있습니다. 특정 배율 변형을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 시스템이 디스플레이 및 사용자 설정에 적합한 배율 자산을 검색합니다.
--   선택 시각적 Studio2015 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
+-   시각적 Studio2015 선택 **프로젝트 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
 
 ## <a name="defining-directx-feature-level-resource-packs"></a>DirectX 기능 수준 리소스 팩 정의
 
@@ -212,7 +212,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
     Platform::String^ resourceName = possibleResource->ValueAsString;
     ```
 
--   선택 시각적 Studio2015 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
+-   시각적 Studio2015 선택 **프로젝트 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
 -   package.appxmanifest 매니페스트 설정에서 앱 번들을 사용하도록 설정해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목

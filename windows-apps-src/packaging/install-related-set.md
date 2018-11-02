@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 테스트용으로 로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 4caf4333bb3d442779aedac2028b0996cbd17645
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5883621"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5942870"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>앱 설치 관리자 파일을 사용하여 관련 집합 설치
 
@@ -89,7 +89,7 @@ Windows 10 Fall Creators Update를 통해 앱 설치 관리자로 관련 집합�
 ```
 
 ### <a name="step-3-add-the-main-package-information"></a>3단계: 주 패키지 정보 추가 
-주 앱 패키지가.msixbundle 또는.appxbundle 파일을 사용 하 여는 `<MainBundle>` 아래에 표시 합니다. 주 앱 패키지가.appx 또는.msix 파일로 인 경우 사용 합니다 `<MainPackage>` 대신 `<MainBundle>` 코드 조각에서. 
+주 앱 패키지가.appxbundle 또는.msixbundle 파일로 사용 하 여는 `<MainBundle>` 아래에 표시 합니다. 주 앱 패키지가.appx 또는.msix 파일로 인 경우 사용 합니다 `<MainPackage>` 대신 `<MainBundle>` 코드 조각에서. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

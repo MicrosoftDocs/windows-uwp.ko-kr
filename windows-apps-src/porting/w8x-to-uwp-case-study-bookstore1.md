@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cec8171b381a607616e2054784fa888074d3f90e
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5870081"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5936236"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore1
 
 
-이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows10Universal Windows 플랫폼 (UWP) 앱으로 포팅하는 사례 연구를 제공 합니다. 유니버설 8.1 앱은 Windows8.1, 하나의 앱 패키지 및 Windows Phone 8.1 용 앱 패키지 빌드입니다. Windows10를 만들 수 있습니다 단일 앱 패키지는이 사례 연구에서 작업을 어떻게 수행 되는 및 고객이 다양 한 장치에 설치할 수 있습니다. [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows10Universal Windows 플랫폼 (UWP) 앱으로 포팅하는 사례 연구를 제공 합니다. 유니버설 8.1 앱은 Windows8.1, 하나의 앱 패키지 및 Windows Phone 8.1 용 앱 패키지 빌드입니다. Windows10를 만들 수 있습니다 단일 앱 패키지는 고객에 게 다양 한 장치에 설치할 수 및이 사례 연구에서 작업을 어떻게 수행입니다. [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
 
 포팅할 앱은 보기 모델에 바인딩되는 **ListBox**로 구성됩니다. 보기 모델에는 제목, 저자 및 책 표지를 보여주는 책 목록이 있습니다. 책 표지 이미지에는 **빌드 작업**이 **콘텐츠**로 설정되어 있고 **출력 디렉터리로 복사**가 **복사 안 함**으로 설정되어 있습니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "5870081"
 
 [Bookstore1\_81 유니버설 8.1 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532946).
 
-[Windows10 앱을 다운로드 Bookstore1Universal\_10 합니다](http://go.microsoft.com/fwlink/?linkid=532950).
+[Bookstore1Universal\_10 Windows10 앱을 다운로드](http://go.microsoft.com/fwlink/?linkid=532950)합니다.
 
 ## <a name="the-universal-81-app"></a>유니버설 8.1 앱
 
@@ -52,7 +52,7 @@ Bookstore1\_81 솔루션은 8.1 유니버설 앱 프로젝트이며 다음 프�
 -   Bookstore1\_81.WindowsPhone. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
 -   Bookstore1\_81.Shared. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
-이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다. 다음 의사 결정은 간단한:이 앱에는 동일한 기능이 및 대부분의 Windows8.1 및 Windows Phone 8.1 양식에서 동일한 코드를 사용 하지 않습니다. 따라서 (광범위 한 디바이스에 설치할 수 하나) 유니버설 디바이스 패밀리를 대상으로 Windows10을 공유 프로젝트 (및 다른 프로젝트의 필요한 항목)의 내용을 포팅 합니다.
+이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다. 다음 의사 결정은 간단한:이 앱에서 동일한 기능 있으며 대부분의 Windows8.1 및 Windows Phone 8.1 양식에서 동일한 코드를 사용 하지 않습니다. 따라서 (하나는 광범위 한 디바이스에 설치할 수 있는) 유니버설 디바이스 패밀리를 대상으로 Windows10을 공유 프로젝트 (및 다른 프로젝트에서 필요한 항목)의 내용을 포팅 합니다.
 
 Visual Studio에서 새 프로젝트를 만들고 Bookstore1\_81의 파일을 이 프로젝트로 복사한 후 복사한 파일을 새 프로젝트에 포함하는 과정은 매우 빠르게 진행되는 작업입니다. 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore1Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore1\_81에서 Bookstore1Universal\_10으로 복사할 파일입니다.
 
@@ -64,11 +64,11 @@ Visual Studio에서 새 프로젝트를 만들고 Bookstore1\_81의 파일을 �
 
 **Windows 프로젝트에서**
 
--   BookstoreStyles.xaml을 복사합니다. 이 파일에 있는 모든 리소스 키를 Windows10 앱; 해결할 수 있으므로이 가장 좋은 시작 지점으로 사용 됩니다. 해당 하는 WindowsPhone 파일의 일부는 없습니다.
+-   BookstoreStyles.xaml을 복사합니다. 이 파일에 있는 모든 리소스 키를 Windows10 앱; 해결할 수 있으므로이 가장 좋은 시작 지점으로 사용 됩니다. 해당 하는 WindowsPhone 파일의 일부 되지 않습니다.
 
 방금 복사한 소스 코드 및 태그 파일을 편집하고 Bookstore1\_81 네임스페이스에 대한 참조를 Bookstore1Universal\_10으로 변경합니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델과 다른 명령적 코드에서 코드를 변경할 필요가 없습니다. 그렇지만 실행 중인 앱 버전을 더 쉽게 식별하려면 **Bookstore1Universal\_10.BookstoreViewModel.AppName** 속성에 의해 반환된 값을 "BOOKSTORE1\_81"에서 "BOOKSTORE1UNIVERSAL\_10"으로 변경하세요.
 
-이제 앱을 빌드 및 실행할 수 있습니다. 새 UWP 앱의 모양은 Windows10으로 포팅할을 아직 없는 명시적 작업 수행 다음과 같습니다.
+이제 앱을 빌드 및 실행할 수 있습니다. 새 UWP 앱의 모양은 포트 Windows10를 아직 명시적 작업이 수행 다음과 같습니다.
 
 ![초기 소스 코드가 변경된 Windows 10 앱](images/w8x-to-uwp-case-studies/c01-03-desk10-initial-source-code-changes.png)
 

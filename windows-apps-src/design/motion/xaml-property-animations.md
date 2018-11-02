@@ -10,31 +10,31 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.openlocfilehash: 9372ba818805446948a444632e809ec06691c5e5
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861257"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5941161"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>컴퍼지션 애니메이션을 사용 하 여 애니메이션 효과 주는 XAML 요소
 
-이 문서에서는 컴퍼지션 애니메이션의 성능 및 XAML 속성을 설정의 접근성을 사용 하 여 XAML UIElement에 애니메이션을 적용할 수 있는 새로운 속성이 소개 합니다.
+이 문서에서는 컴퍼지션 애니메이션의 성능 및 XAML 속성을 설정의 사용 편의성을 사용 하 여 XAML UIElement에 애니메이션을 적용할 수 있는 새로운 속성이 소개 합니다.
 
 Windows 10, 버전 1809 이전 UWP 앱에서 애니메이션을 빌드하는 데 2 선택 했습니다.
 
-- [스토리 보드 애니메이션](storyboarded-animations.md)의 경우와 같은 XAML 구조를 사용 하 여 또는 _* ThemeTransition_ 및 _* ThemeAnimation_ [Windows.UI.Xaml.Media.Animation](/uwp/api/windows.ui.xaml.media.animation) 네임 스페이스의 클래스입니다.
+- [스토리 보드 애니메이션](storyboarded-animations.md)의 경우와 같은 XAML 구조를 사용 하거나 _* ThemeTransition_ 및 _* ThemeAnimation_ [Windows.UI.Xaml.Media.Animation](/uwp/api/windows.ui.xaml.media.animation) 네임 스페이스의 클래스.
 - [XAML 사용 하 여 시각적 계층을 사용 하 여](../../composition/using-the-visual-layer-with-xaml.md)에 설명 된 대로 컴퍼지션 애니메이션을 사용 합니다.
 
-시각적 계층을 사용 하 여 XAML을 사용 하 여 생성 하는 것 보다 더 나은 성능을 제공 합니다. 하지만 요소의 기본 컴퍼지션 [시각적](/uwp/api/windows.ui.composition.visual) 개체를 가져오려면 [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) 를 사용 하 고 컴퍼지션 애니메이션을 사용 하 여 시각적 애니메이션을 적용 한 다음는 사용 하 여 더 복잡 합니다.
+시각적 계층을 사용 하 여 생성 XAML을 사용 하 여 보다 나은 성능을 제공 합니다. 하지만 요소의 기본 컴퍼지션 [시각적](/uwp/api/windows.ui.composition.visual) 개체를 가져오려면 [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) 를 사용 하 고 컴퍼지션 애니메이션을 사용 하 여 시각적 애니메이션을 적용 한 다음는 사용 하 여 더 복잡 합니다.
 
 Windows 10, 버전 1809부터 기본 컴퍼지션 시각적 가져오려면 필요 없이 컴퍼지션 애니메이션을 사용 하 여 직접 UIElement의 속성을 애니메이션할 수 있습니다.
 
 > [!NOTE]
-> UIElement에서 이러한 속성을 사용 하 여 UWP 프로젝트의 대상 버전 1809 이상 이어야 합니다. 프로젝트 버전을 구성 하는 방법에 대 한 자세한 내용은 [버전 적응 앱](../../debug-test-perf/version-adaptive-apps.md)을 참조 하세요.
+> UIElement에서 이러한 속성을 사용 하 여 UWP 프로젝트 대상 버전 1809 이상 이어야 합니다. 프로젝트 버전을 구성 하는 방법에 대 한 자세한 내용은 [버전 적응 앱](../../debug-test-perf/version-adaptive-apps.md)을 참조 하세요.
 
-## <a name="new-rendering-properties-replace-old-rendering-properties"></a>새로운 렌더링 속성 바꾸기 이전 렌더링 속성
+## <a name="new-rendering-properties-replace-old-rendering-properties"></a>새로운 렌더링 속성 대체 이전 렌더링 속성
 
-이 표에 [CompositionAnimation](/uwp/api/windows.ui.composition.compositionanimation)를 사용 하 여 애니메이션도 수 있는 UIElement의 렌더링을 수정 하는 데 사용할 수 있는 속성을 보여 줍니다.
+이 표에서 [CompositionAnimation](/uwp/api/windows.ui.composition.compositionanimation)를 사용 하 여도 애니메이션할 수 있는 UIElement의 렌더링을 수정 하는 데 사용할 수 있는 속성을 보여 줍니다.
 
 | 속성 | 형식 | 설명 |
 | -- | -- | -- |
@@ -42,15 +42,15 @@ Windows 10, 버전 1809부터 기본 컴퍼지션 시각적 가져오려면 필�
 | [Translation](/uwp/api/windows.ui.xaml.uielement.translation) | Vector3 | 요소의 X/Y/Z 위치를 이동 합니다. |
 | [Transformmatrix 등이 있습니다](/uwp/api/windows.ui.xaml.uielement.transformmatrix) | Matrix4x4 | 요소에 적용할 변환 매트릭스 |
 | [배율](/uwp/api/windows.ui.xaml.uielement.scale) | Vector3 | 배율 요소를 중심으로 중심점 |
-| [회전](/uwp/api/windows.ui.xaml.uielement.rotation) | 부동 | RotationAxis 및 중심점 요소 회전 |
+| [회전](/uwp/api/windows.ui.xaml.uielement.rotation) | 부동 | RotationAxis 및 CenterPoint 요소 회전 |
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | 회전 축 |
 | [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | 배율 및 회전의 중심점 |
 
 항등 속성 값은 다음 순서로 배율, 회전 및 번역 속성과 결합: 항등, 배율, 회전, 변환 합니다.
 
-이러한 속성은 요소의 레이아웃에 영향을 주지, 따라서 이러한 속성을 수정 해도 새 [측정](/uwp/api/windows.ui.xaml.uielement.measure)발생 하지 않습니다/[정렬](/uwp/api/windows.ui.xaml.uielement.arrange) 단계입니다.
+이러한 속성은 요소의 레이아웃에 영향을 주지, 따라서 이러한 속성을 수정 새 [측정](/uwp/api/windows.ui.xaml.uielement.measure)을 발생 하지 않습니다/[정렬](/uwp/api/windows.ui.xaml.uielement.arrange) 단계입니다.
 
-이러한 속성은 동일한 목적 및 동작 컴퍼지션 (제외 하 고 번역 Visual에 없는) [Visual](/uwp/api/windows.ui.composition.visual) 클래스에 비슷한 이름의 속성으로 사용 합니다.
+이러한 속성 컴퍼지션 [시각적](/uwp/api/windows.ui.composition.visual) 클래스 (제외 하 고 번역 Visual에) 같은 명명 된 속성이 동일한 목적 및 동작을 가집니다.
 
 ### <a name="example-setting-the-scale-property"></a>예: 배율 속성 설정
 
@@ -71,14 +71,14 @@ button.Scale = new Vector3(2.0f,2.0f,1.0f);
 > [!NOTE]
 > **Opacity** 속성에는이 섹션에 설명 된 상호 배타적을 적용 하지 않습니다. XAML 또는 컴퍼지션 애니메이션을 사용 하 든 동일한 Opacity 속성을 사용 합니다.
 
-속성은 CompositionAnimation를 사용 하 여 애니메이션을 적용할 수 있는 몇 가지 기존 UIElement 속성에 대 한 대체 하는:
+CompositionAnimation를 사용 하 여 애니메이션을 적용할 수 있는 속성은 여러 기존 UIElement 속성에 대 한 대체:
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
 - [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
 - [프로젝션](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
-설정 (애니메이션)의 새 속성을 하거나 이전 속성을 사용할 수 없습니다. 반대로, 사용자 설정 (또는 애니메이션)의 이전 속성을 하는 경우에 새 속성을 사용할 수 없습니다.
+사용자 설정 (또는 애니메이션)의 새 속성을 이전 속성을 사용할 수 없습니다. 반대로, 사용자 설정 (또는 애니메이션)의 이전 속성을 하는 경우에 새 속성을 사용할 수 없습니다.
 
 ElementCompositionPreview를 사용 하 여를 가져오고 이러한 메서드를 사용 하 여 직접 시각적 개체를 관리 하는 경우에 새 속성 사용할 수 없습니다.
 
@@ -86,13 +86,13 @@ ElementCompositionPreview를 사용 하 여를 가져오고 이러한 메서드�
 - [ElementCompositionPreview.SetIsTranslationEnabled](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setistranslationenabled)
 
 > [!IMPORTANT]
-> 두 속성 집합의 사용을 혼합 하려고 하면 실패 하 고 오류 메시지에 대 한 API 호출 합니다.
+> 혼합 하 여 두 속성 집합의 사용 하려고 하면 API 호출이 실패 하 고 오류 메시지를 생성 합니다.
 
-편의상 권장 하지는 않지만, 취소 하 여 하나의 속성 집합에서 전환 하는 것이 가능 합니다. 속성 DependencyProperty에 의해 지원 받지는 경우 (예를 들어 UIElement.Projection 받으며 UIElement.ProjectionProperty), "사용 하지 않는" 상태로 복원 하는 ClearValue 호출 합니다. (예: 배율 속성), 그렇지 않으면 속성 기본값을 설정 합니다.
+편의상 권장 하지는 않지만, 취소 하 여 속성 집합에서 전환 하는 것이 가능 합니다. 속성 DependencyProperty에 의해 지원 받지는 경우 (예를 들어 UIElement.Projection에 의해 지원 받지는 UIElement.ProjectionProperty), "사용 하지 않는" 상태로 되돌리려면 ClearValue 호출 합니다. (예: 배율 속성), 그렇지 않으면 속성의 기본값을 설정 합니다.
 
 ## <a name="animating-uielement-properties-with-compositionanimation"></a>CompositionAnimation 사용 하 여 애니메이션 효과 주는 UIElement 속성
 
-CompositionAnimation 포함 된 테이블에 나열 된 렌더링 속성에 애니메이션 효과 줄 수 있습니다. [ExpressionAnimation](/uwp/api/windows.ui.composition.expressionanimation)에서 이러한 속성을 참조할 수도 있습니다.
+CompositionAnimation 포함 된 테이블에 나열 된 렌더링 속성에 애니메이션 효과 줄 수 있습니다. 또한는 [ExpressionAnimation](/uwp/api/windows.ui.composition.expressionanimation)으로 이러한 속성을 참조할 수 있습니다.
 
 UIElement 속성에 애니메이션 효과를 마친 UIElement에서 [StartAnimation](/uwp/api/windows.ui.xaml.uielement.startanimation) 및 [StopAnimation](/uwp/api/windows.ui.xaml.uielement.stopanimation) 메서드를 사용 합니다.
 

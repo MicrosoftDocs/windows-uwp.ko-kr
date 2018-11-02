@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c617f3ec6d189f3ee75fcf2fd0ff96d386ec32c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5883881"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937491"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
@@ -71,7 +71,7 @@ HTTP(S)를 사용하여 웹 서비스 또는 웹 서버와 통신하는 경우 [
 
 네트워크를 통해 안정적으로 파일을 전송하려는 경우 [백그라운드 전송 API](background-transfers.md)를 사용합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 앱이 모바일 또는 배터리 전원을 장치에서 실행되는 경우 이러한 접근 권한 값이 필요합니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
 
-Windows10에서 새 백그라운드 전송 기능은 로컬 카탈로그를 업데이트, 다른 앱을 활성화 하거나 다운로드가 완료 되 면 사용자에 게 알릴 수 있도록 파일 전송이 완료 되 면 사후 처리를 실행 하는 기능.
+Windows10에서 새 백그라운드 전송 기능은 로컬 카탈로그를 업데이트, 다른 앱을 활성화 또는 다운로드가 완료 되 면 사용자에 게 알릴 수 있도록 파일 전송이 완료 되 면 사후 처리를 트리거하는 기능.
 
 ### <a name="when-to-use-background-transfers"></a>백그라운드 전송을 사용하는 경우
 
@@ -129,7 +129,7 @@ Windows10에서 새 백그라운드 전송 기능은 로컬 카탈로그를 업�
 
 ### <a name="mobile-operators"></a>통신사
 
-Windows10 광범위 한 개발자에 게 장치 제조업체 및 통신사에만 노출 이전에 일부 Api를 노출 합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
+Windows10 장치 제조업체 및 통신사에만 노출 이전에 일부 Api를 광범위 한 개발자 그룹에 노출 합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="network-operations"></a>네트워크 운영
 

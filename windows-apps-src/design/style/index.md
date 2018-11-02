@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.openlocfilehash: 378841414f97abb313584e6bcd033914440713a6
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5875773"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5939112"
 ---
 # <a name="style-for-uwp-apps"></a>UWP 앱의 스타일
 
@@ -30,7 +30,7 @@ ms.locfileid: "5875773"
     :::column:::
         ![hero image](images/header-typography.svg)
         ### [Typography](typography.md)
-       언어의 시각적인 표현으로써 입력 체계의 주요 작업은 명확하게 하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 다음 지침을 사용자가 콘텐츠를 쉽게 이해 하도록 돕는 입력 체계를 사용 하는 방법에 집중 합니다. 
+       언어의 시각적인 표현으로써 입력 체계의 주요 작업은 명확하게 하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 다음 지침을 사용자가 콘텐츠를 쉽게 이해 하는 데 입력 체계를 사용 하는 방법에 집중 합니다. 
     :::column-end:::
 :::row-end:::
 

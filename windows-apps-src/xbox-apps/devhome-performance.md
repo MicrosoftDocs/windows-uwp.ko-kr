@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 6035463473eb6ddb1a3ec7fa554f9a12b8f764fc
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5876023"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5935606"
 ---
 # <a name="performance-page-dev-home"></a>성능 페이지 (개발자 홈)
    
@@ -44,7 +44,7 @@ ms.locfileid: "5876023"
 ## <a name="cpu-simulation"></a>CPU 시뮬레이션  
    
   
-CPU6에 대 한 작업을 시뮬레이션 하는 **CPU 시뮬레이션** 창 (공유 core).   
+**CPU 시뮬레이션** 창 CPU6에 대 한 작업을 시뮬레이션 (공유 core).   
   
 <a id="ID4EYB"></a>
 

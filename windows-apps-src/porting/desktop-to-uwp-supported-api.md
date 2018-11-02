@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: 086025e46e0e5293e44dda61896fa3fd4ae6115b
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874389"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5942973"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>패키지 데스크톱 앱을 사용할 수 있는 UWP Api
 
@@ -28,7 +28,7 @@ ms.locfileid: "5874389"
 <tr><td>백그라운드 작업</td><td>패키지 앱에서 백그라운드 작업을 등록할 수는 있지만 완전한 UWP 앱만 백그라운드 작업<i>으로</i> 실행할 수 있습니다. 자세한 내용은 <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">GitHub의 백그라운드 작업 샘플</a>을 참조하세요.</td></tr>
 <tr><td>Bluetooth</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>채팅 및 전화 통화</td><td>패키지로 만든 앱은 UWP로 완전히 포팅될 때까지 모바일에서 실행할 수 없습니다.</td></tr>
-<tr><td>계약 활성화</td><td>서비스 계약에 전체 UWP 앱을 활성화할 수 있습니다.</td></tr>
+<tr><td>계약 활성화</td><td>완전 한 UWP 앱만 계약 하 여 활성화할 수 있습니다.</td></tr>
 <tr><td>암호화</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>지리적 위치</td><td>일부 API는 현재 패키지 앱에서 지원되지 않습니다.</td></tr>
 <tr><td>파일 및 폴더 선택기</td><td>패키지로 만든 앱은 파일 시스템에 대한 모든 권한을 가지며 UWP 선택기가 필요하지 않습니다.</td></tr>

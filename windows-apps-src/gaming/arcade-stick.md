@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 아케이드 스틱, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 13bc03559fb32156f5ff8bb29ed96f8a1e4ac84f
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5879838"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5945318"
 ---
 # <a name="arcade-stick"></a>아케이드 스틱
 
@@ -30,15 +30,15 @@ ms.locfileid: "5879838"
 
 아케이드 스틱은 스탠드형 아케이드 머신의 느낌을 재현하고 고정밀 디지털 컨트롤을 제공한다는 점에서 가치 있는 입력 장치입니다. 아케이드 스틱은 격투 및 기타 아케이드 스타일 게임에 적합한 입력 장치이며 디지털 전용 컨트롤과 함께 잘 작동하는 모든 게임에 적합합니다. 아케이드 스틱은 Windows 10 및 Xbox One UWP 앱에서 [Windows.Gaming.Input][] 네임스페이스를 통해 지원됩니다.
 
-Xbox One 아케이드 스틱은 8 방향 디지털 조이스틱, 6 개의 **작업** 단추 (아래 이미지에서 A1 a 6으로 표시) 및 두 가지 **특별 한** 단추 (s 1과 S2로 표시 됨); 장착 되어 아날로그 컨트롤 또는 진동을 지원 하지 않는 디지털 전용 입력된 장치 일입니다. Xbox One 아케이드 스틱에 UI 탐색을 지 원하는 데 사용 되는 **보기** 및 **메뉴** 단추 장착 수도 있지만 게임 플레이 명령을 지원 하기 위해 아니며 조이스틱 버튼으로 즉시 액세스할 수 없습니다.
+Xbox One 아케이드 스틱에 장착 되어는 8 방향 디지털 조이스틱, 6 개의 **작업** 단추 (아래 이미지에서 A1 a 6으로 표현), 및 두 가지 **특별 한** 단추 (s 1과 S2로 표시 됨). 되기 아날로그 컨트롤 또는 진동을 지원 하지 않는 디지털 전용 입력된 장치입니다. Xbox One 아케이드 스틱에 UI 탐색을 지 원하는 데 사용 하는 **보기** 및 **메뉴** 단추도 장착 있지만 게임 플레이 명령을 지원 하기 위해 아니며 조이스틱 버튼으로 즉시 액세스할 수 없습니다.
 
-![아케이드 스틱 4 방향 조이스틱, 6 작업 단추 (A1-a 6) 및 2 특별 한 단추 (s 1과 S2)](images/arcade-stick-1.png)
+![아케이드 스틱 4 방향 조이스틱, 6 개의 단추 (A1-a 6) 및 2 특별 한 단추 (s 1과 S2)](images/arcade-stick-1.png)
 
 ### <a name="ui-navigation"></a>UI 탐색
 
 사용자 인터페이스 탐색에 매우 다양한 입력 장치를 지원해야 하는 부담을 덜어주고 게임과 장치 간에 일관성을 도모하기 위해 대부분의 _물리적_ 입력 장치는 [UI 탐색 컨트롤러](ui-navigation-controller.md)라고 하는 별도의 _논리적_ 입력 장치 역할도 동시에 수행합니다. UI 탐색 컨트롤러는 여러 입력 장치의 UI 탐색 명령에 대한 공통 용어 모음집을 제공합니다.
 
-UI 탐색 컨트롤러로 아케이드 스틱은 탐색 명령의 [필수 집합](ui-navigation-controller.md#required-set) 를 조이스틱 및 **보기**, **메뉴**, **동작 1**및 **2 작업** 단추에 매핑합니다.
+UI 탐색 컨트롤러로 서 아케이드 스틱은 탐색 명령의 [필요한](ui-navigation-controller.md#required-set) 조이스틱 및 **보기**, **메뉴**, **동작 1**및 **동작 2** 버튼 매핑
 
 | 탐색 명령 | 아케이드 스틱 입력  |
 | ------------------:| ------------------- |
@@ -55,7 +55,7 @@ UI 탐색 컨트롤러로 아케이드 스틱은 탐색 명령의 [필수 집합
 
 ## <a name="detect-and-track-arcade-sticks"></a>아케이드 스틱 검색 및 추적
 
-검색 및 추적 아케이드 게임 패드를 제외 하 고와 [게임 패드](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) 클래스 대신 [ArcadeStick][] 클래스와 동일한 방식으로 작동을 스틱 합니다. 자세한 내용은 [게임 패드 및 진동](gamepad-and-vibration.md)을 참조하세요.
+검색 및 추적 아케이드 게임 패드를 제외 하 고와 [게임 패드](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.Gamepad) 클래스 대신 [ArcadeStick][] 클래스와 정확히 동일한 방식으로 작동을 스틱 합니다. 자세한 내용은 [게임 패드 및 진동](gamepad-and-vibration.md)을 참조하세요.
 
 <!-- Arcade sticks are managed by the system, therefore you don't have to create or initialize them. The system provides a list of connected arcades sticks and events to notify you when an arcade stick is added or removed.
 
@@ -146,11 +146,11 @@ ArcadeStickReading reading = arcadestick->GetCurrentReading();
 각 아케이드 스틱 버튼&mdash;4 방향 조이스틱, 6 개의 **작업** 단추 및 두 가지 **특별 한** 단추&mdash;누름 (아래) 또는 놓음 (위)에 있는지 여부를 나타내는 디지털 판독값을 제공 합니다. 버튼 판독값은 효율을 위해 개별 부울 값으로 표현 되지 않는 대신, 모두 압축 [ArcadeStickButtons][] 열거로 표현 되는 단일 비트 필드로 합니다.
 
 > [!NOTE]
-> 아케이드 스틱에 **보기** 및 **메뉴** 단추와 같은 UI 탐색에 사용 되는 추가 버튼이 탑재 되어 있습니다. 이러한 버튼은 `ArcadeStickButtons` 열거에 포함되지 않으며 UI 탐색 장치 역할을 하는 아케이드 스틱에 액세스해야만 읽을 수 있습니다. 자세한 내용은 [UI 탐색 장치](ui-navigation-controller.md)를 참조하세요.
+> 아케이드 스틱은 **보기** 및 **메뉴** 단추와 같은 UI 탐색에 사용 되는 추가 버튼이 탑재 되어 있습니다. 이러한 버튼은 `ArcadeStickButtons` 열거에 포함되지 않으며 UI 탐색 장치 역할을 하는 아케이드 스틱에 액세스해야만 읽을 수 있습니다. 자세한 내용은 [UI 탐색 장치](ui-navigation-controller.md)를 참조하세요.
 
 버튼 값은 [ArcadeStickReading][] 구조의 `Buttons` 속성에서 읽어들입니다. 이러한 속성은 비트 필드이므로 해당 버튼 값을 격리하기 위해 비트 마스킹이 사용됩니다. 해당 비트가 설정된 경우에는 버튼이 눌리고(아래), 그렇지 않은 경우에는 놓입니다(위).
 
-다음 예제에서는 **동작** 1 버튼이 눌 렸 지를 결정 합니다.
+다음 예제에서는 **동작 1** 버튼이 눌 리고 여부를 결정 합니다.
 
 ```cpp
 if (ArcadeStickButtons::Action1 == (reading.Buttons & ArcadeStickButtons::Action1))

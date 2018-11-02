@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일
 ms.localizationpriority: medium
 ms.openlocfilehash: e27786701fa2ae9ac00a7eab57e840ec9a0dc811
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5878607"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940603"
 ---
 # <a name="secondary-tiles"></a>보조 타일
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: fa0559c79b758373347427c0aa88b351c0fbddf0
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5880603"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940362"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -31,7 +31,7 @@ ms.locfileid: "5880603"
 
 ## <a name="product-lifetime"></a>제품 수명
 
-제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 **계속**으로, 추가 기능이 만료되지 않음을 나타냅니다. 원하는 경우, 추가 기능 (1 ~ 365 일 옵션)으로 설정된 된 지속 시간 후 만료 되도록 **제품 수명** 변경할 수 있습니다.
+제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 **계속**으로, 추가 기능이 만료되지 않음을 나타냅니다. 원하는 경우, **제품 수명** 기간 (1 ~ 365 일 옵션)으로 후에 추가 기능이 만료 되도록 변경할 수 있습니다.
 
 
 ## <a name="quantity"></a>수량
@@ -41,7 +41,7 @@ ms.locfileid: "5880603"
 
 ## <a name="subscription-period"></a>구독 기간
 
-제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **월별**, 하지만 **3 개월**, **6 개월**, **연간**또는 **24 개월**을 선택할 수도 있습니다.
+제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **월별**, 하지만 **3 개월**, **6 개월**, **연간**또는 **24 개월**선택할 수도 있습니다.
 
 > [!IMPORTANT]
 > 추가 기능을 게시한 후에는 선택한 **구독 기간**을 변경할 수 없습니다.
@@ -99,7 +99,7 @@ ms.locfileid: "5880603"
 이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Services.Store)의 [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag) 속성을 사용합니다.)
 
 > [!NOTE]
-> **사용자 지정 개발자 데이터** 필드 Windows8 및 Windows8.1을 대상으로 하는 패키지를 사용할 수 없는 경우
+> **사용자 지정 개발자 데이터** 필드가 Windows8 및 Windows8.1을 대상으로 하는 패키지를 사용할 수 없습니다.
 
  
 

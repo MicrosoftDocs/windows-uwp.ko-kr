@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5871300"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5941313"
 ---
 # <a name="visual-layer"></a>시각적 계층
 
@@ -40,7 +40,7 @@ Windows UWP 앱은 이미 UI 프레임 워크 중 하나를 통해 시각적 계
 
 ### <a name="content"></a>콘텐츠
 
-시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 클래스가 있습니다. 하위 클래스 [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) 어린이 트리를 만드는 시각 효과 및 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 포함 된 콘텐츠를 포함 하 고 단색, 사용자 지정 그려진된 콘텐츠 또는 시각적 효과로 채울 수 있습니다. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
+시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 클래스가 있습니다. 시각의 하위 클래스 [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) 어린이 트리를 만드는 시각 효과 및 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 포함 된 콘텐츠를 포함 하 고 단색, 사용자 지정 그려진된 콘텐츠 또는 시각적 효과로 채울 수 있습니다. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
 
 자세한 내용은 [컴퍼지션 시각](composition-visual-tree.md) 개요를 참조하세요.
 

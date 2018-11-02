@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 876500bf57de386ca551a1b51a02df62657f147c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5862226"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5938923"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -119,7 +119,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 ### <a name="methods-for-hardware-and-drivers"></a>하드웨어 및 드라이버의 메서드
 
-[Windows 하드웨어 개발자 센터 프로그램](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) 에 속하는 개발자 계정에는 추가 하드웨어 및 드라이버에 대 한 분석 데이터를 검색 하는 메서드 집합에 액세스할을 수 있습니다. 자세한 내용은 [하드웨어 대시보드 API를](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api)참조 하세요.
+[Windows 하드웨어 개발자 센터 프로그램](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) 에 속하는 개발자 계정에는 추가 하드웨어 및 드라이버에 대 한 분석 데이터를 검색 하기 위한 메서드 집합에 액세스할을 수 있습니다. 자세한 내용은 [하드웨어 대시보드 API를](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api)참조 하세요.
 
 ## <a name="code-example"></a>코드 예제
 

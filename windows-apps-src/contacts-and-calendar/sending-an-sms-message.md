@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5879696"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5936322"
 ---
 # <a name="send-an-sms-message"></a>SMS 메시지 보내기
 

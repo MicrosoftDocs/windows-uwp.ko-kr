@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리
 ms.localizationpriority: medium
 ms.openlocfilehash: 927e0c5438ea11b751fba40cb76210d0bce112d4
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877646"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5943023"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 
@@ -305,7 +305,7 @@ Visual Studio에서 빌드하는 경우 `Ctrl+Shift+B`를 눌러 프로젝트를
  * `/f` 사용할 매핑 파일(이전 단계에서 만든) 설정 
  * `/p` 출력 패키지 이름 설정
  * `/o` 출력 파일이 이미 있을 경우 덮어쓰도록 설정
-0. 패키지를 만들었으면 서명해야 합니다. 서명 인증서를 얻는 가장 쉬운 방법은 Visual Studio에서 빈 유니버설 Windows 프로젝트를 만들고 복사 하 여이 `.pfx` 있지만 파일을 사용 하 여 수동으로 계정을 만들 수는 `MakeCert` 및 `Pvk2Pfx` 유틸리티에 설명 된 대로 [는 **만드는 방법 앱 패키지 서명 인증서를** MSDN의 항목] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. 패키지를 만들었으면 서명해야 합니다. 서명 인증서를 얻는 가장 쉬운 방법은 Visual Studio에서 빈 유니버설 Windows 프로젝트를 만들고 복사 하는 것의 `.pfx` 수 있지만 파일을 사용 하 여 수동으로 만들 수는 `MakeCert` 및 `Pvk2Pfx` 유틸리티에 설명 된 대로 [는 **만드는 방법 앱 패키지 서명 인증서를** MSDN의 항목] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
  * **중요:** 서명 인증서를 수동으로 만들 경우, 소스 프로젝트나 패키지 소스와 다른 디렉터리에 저장하십시오. 그렇지 않으면 개인 키를 포함하여 패키지의 일부로 포함될 수 있습니다.
 0. 패키지에 서명하려면 다음 명령을 사용합니다. `AppxManifest.xml`의 `Identity` 요소에 지정된 `Publisher`는 인증서의 `Subject`와 일치해야 합니다. 이는 사용자에게 표시되는 지역화된 표시 이름인 `<PublisherDisplayName>` 요소가 **아닙니다**. 늘 그렇듯 `contoso_demo...` 파일 이름을 프로젝트에 적절한 이름으로 바꾸고(**매우 중요**) `.pfx` 파일이 현재 디렉터리에 있지 않도록 합니다. 그렇지 않으면 개인 서명 키를 포함하여 패키지의 일부로 생성됩니다.
 

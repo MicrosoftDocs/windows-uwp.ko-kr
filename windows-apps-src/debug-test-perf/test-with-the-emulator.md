@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b3b4da17c8e616640205e5b8b9892a41bc2ea647
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5871030"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5934908"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -51,7 +51,7 @@ Windows 10 Mobile 용 Microsoft 에뮬레이터는 Visual Studio 2015 이상 필
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터를 실행 합니다.
+## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터 실행
 
 ### <a name="installing"></a>설치
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
@@ -66,7 +66,7 @@ Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이�
 
 ### <a name="running"></a>Running
 
-에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 하는 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 합니다.
+에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 하기만 하면 됩니다.
 
 ![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
 
@@ -454,7 +454,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
         -   동기화 작업이 진행 중인 동안 **동기화 취소**를 클릭하면 카드가 나오고 동기화 작업의 결과는 불완전합니다.
     -   **SD 카드 꺼내기** 버튼이 다시 **SD 카드 삽입**으로 변경됩니다.
 
-> **참고**이후 SD 카드는 휴대폰에서 사용 되는 FAT32 파일 시스템으로 포맷 된, 32GB가 최대 크기입니다.
+> **참고**32GB가 최대 크기, 이후 SD 카드는 휴대폰에서 사용 되는 FAT32 파일 시스템으로 포맷 됩니다.
 
 시뮬레이트된 SD 카드에서 읽고 쓰는 속도는 실제 속도에 맞게 조절됩니다. SD 카드에 액세스하는 것은 컴퓨터의 하드 드라이브에 액세스하는 것보다 느립니다.
 
@@ -633,7 +633,7 @@ Windows Phone 에뮬레이터의 프레임 속도 카운터를 사용하여 실�
 
 Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특정 네트워크 스위치를 삭제하는 도구인 XDECleanup.exe를 포함하며, 에뮬레이터(XDE) 이진 파일과 함께 제공됩니다. 잘못된 상태로 전환될 경우 이 도구를 사용하여 에뮬레이터 VM을 정리해야 합니다. 관리자 명령 프롬프트에서 도구를 실행합니다.`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **참고**XDECleanup.exe 삭제 모든 에뮬레이터 특정 Hyper-v Vm 및 것도 삭제 하는 모든 VM 검사점 또는 저장 된 상태도 합니다.
+> **참고**XDECleanup.exe 삭제 모든 에뮬레이터 특정 Hyper-v Vm 하며 모든 VM 검사점 또는 삭제 상태를 저장 합니다.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>모바일용 Windows 10 이미지 제거
 

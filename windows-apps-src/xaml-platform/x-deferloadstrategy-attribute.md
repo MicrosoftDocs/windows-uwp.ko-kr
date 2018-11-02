@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cd958ba5f9025430be2736329c5a909233461039
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5860406"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5944142"
 ---
 # <a name="xdeferloadstrategy-attribute"></a>x:DeferLoadStrategy 특성
 
@@ -34,7 +34,7 @@ ms.locfileid: "5860406"
 
 **x:DeferLoadStrategy** 사용에 대한 제한 사항은 다음과 같습니다.
 
-- [X:name](x-name-attribute.md)을 정의 해야요소에 대 한 경우가 되어야 할 나중에 요소를 찾을 수 있습니다.
+- [X:name](x-name-attribute.md)을 정의 해야요소에 대 한 경우가 해야 나중에 요소를 찾을 수 있습니다.
 - [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 또는 [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)에서 파생된 형식만 지연시킬 수 있습니다.
 - [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)에서 루트 요소를 지연시킬 수 없습니다.
 - [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에서 요소를 지연시킬 수 없습니다.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
 ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5865613"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5938493"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -1177,7 +1177,7 @@ XAudio2, XAPO 및 Windows Sonic을 사용하여 게임 내 오디오를 구현�
     </tr>
     <tr>
         <td>Windows Sonic을 게임에 통합하는 방법 알아보기(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox andWindows 용 오디오 기능 소개</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox andWindows 용 공간 오디오 기능 소개</a></td>
     </tr>
 </table>
 

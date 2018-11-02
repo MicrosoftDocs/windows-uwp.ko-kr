@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 4aaacee011b3732b8d1456935239d7a4a5405a4d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5867041"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5944171"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-좋은 UWP(유니버설 Windows 플랫폼) 게임은 다양한 인터페이스를 지원합니다. 플레이어는 PC는 Xbox 컨트롤러가 연결 된 실제 단추가 없는 태블릿에 Windows10 있을 또는 고성능 마우스 및 게임용 키보드가 있는 최신 데스크톱 게임 리그 합니다. 게임에서 컨트롤은 [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) 클래스에 구현되어 있습니다. 이 클래스는 세 가지 유형의 입력(마우스 및 키보드, 터치, 게임 패드) 모두를 단일 컨트롤러에 집계합니다. 그 결과로 1인칭 슈팅 게임에서 여러 디바이스에서 작동하는 장르 표준 이동 - 보기 컨트롤러를 사용할 수 있게 되었습니다.
+좋은 UWP(유니버설 Windows 플랫폼) 게임은 다양한 인터페이스를 지원합니다. 플레이어는 Xbox 컨트롤러가 연결 된 PC는 실제 단추가 없는 태블릿에 Windows10 있을 또는 고성능 마우스 및 게임 키보드가 있는 최신 데스크톱 게임 리그 합니다. 게임에서 컨트롤은 [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) 클래스에 구현되어 있습니다. 이 클래스는 세 가지 유형의 입력(마우스 및 키보드, 터치, 게임 패드) 모두를 단일 컨트롤러에 집계합니다. 그 결과로 1인칭 슈팅 게임에서 여러 디바이스에서 작동하는 장르 표준 이동 - 보기 컨트롤러를 사용할 수 있게 되었습니다.
 
 > [!NOTE]
 > 컨트롤에 대한 자세한 내용은 [게임용 이동 - 보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) 및 [게임용 터치 컨트롤](tutorial--adding-touch-controls-to-your-directx-game.md)을 참조하세요.

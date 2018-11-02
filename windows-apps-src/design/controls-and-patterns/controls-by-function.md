@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 50d2d5d6dd53ffcb14ed6223e2fd0f85324a8438
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5859670"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940713"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -553,7 +553,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 ### <a name="navigationview"></a>NavigationView
 
-조정할 수 있도록 컨테이너 및 왼쪽된 탐색 창, 상단 탐색 및 탭 패턴을 구현 하는 유연한 탐색 모델입니다.
+적응형 컨테이너 및 왼쪽된 탐색 창, 상단 탐색 및 탭 패턴을 구현 하는 유연한 탐색 모델입니다.
 
 참조: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 

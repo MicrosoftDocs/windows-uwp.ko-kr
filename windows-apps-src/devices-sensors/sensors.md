@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e05c18bd2c8fa2ddd7d6a9bc8e474d02f27a93e
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863963"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5944323"
 ---
 # <a name="sensors"></a>센서
 
@@ -110,7 +110,7 @@ ms.locfileid: "5863963"
 
 장치의 방향에 맞게 보기를 변경하는 앱은 경사계 센서를 사용할 수 있습니다. 장치의 요, 피치 및 롤과 일치하는 비행기를 표시하는 앱도 경사계 값을 사용합니다.
 
-예제 구현을 경사 계 샘플을 참조 하세요. [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+예제 구현을, 경사 계 샘플을 참조 하세요. [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 ## <a name="light-sensor"></a>광원 센서
 

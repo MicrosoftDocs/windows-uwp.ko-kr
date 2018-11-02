@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: 81dabcf92136174b08c6a20fd9a98122fcd2c813
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5883234"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5939258"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>앱에 대한 오류 보고 데이터 가져오기
 

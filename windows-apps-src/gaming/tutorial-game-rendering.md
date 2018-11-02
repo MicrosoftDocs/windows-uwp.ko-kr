@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
 ms.openlocfilehash: 134c9005a796f52fb61ba628c0a85c8dbd875442
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5886011"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5938966"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임워크 II: 게임 렌더링
 
@@ -583,7 +583,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 
 ## <a name="createwindowsizedependentresource-method"></a>CreateWindowSizeDependentResource 메서드
 
-CreateWindowSizeDependentResources 메서드는 창 크기, 방향, 스테레오 활성화 렌더링, 또는 해상도 변경 시마다 호출됩니다. 샘플 게임에서 __ConstantBufferChangeOnResize__투영 행렬을 업데이트합니다.
+CreateWindowSizeDependentResources 메서드는 창 크기, 방향, 스테레오 활성화 렌더링, 또는 해상도 변경 시마다 호출됩니다. 샘플 게임에서 __ConstantBufferChangeOnResize__투영 행렬을 업데이트 됩니다.
 
 창 크기 리소스는 이러한 방식으로 업데이트됩니다. 
 * 앱 프레임워크는 창 상태의 변경을 나타내는 몇 가지 가능한 이벤트 중 하나를 가져옵니다. 

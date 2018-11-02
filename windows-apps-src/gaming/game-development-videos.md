@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 동영상, GDC, build
 ms.localizationpriority: medium
 ms.openlocfilehash: 83865ca17801d51fdd611e6ad0187da98a4bec9e
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5862390"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5943998"
 ---
 # <a name="game-development-videos"></a>게임 개발 동영상
 
@@ -23,20 +23,20 @@ GDC 및 //build 같은 주요 회의의 게임 개발 동영상 목록입니다.
 
 ### <a name="playfab"></a>PlayFab
 
-LiveOps 란 무엇 인가요? 개발자는 라이브 게임을 만드는 이유를 알아보세요: [PlayFab (인터뷰)를 사용 하 여 모든 사용자에 게 게임](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-with-PlayFab) -James Gwertzman, David Holladay
+LiveOps 란 무엇 인가요? 개발자는 라이브 게임을 만드는 이유를 알아보세요: [PlayFab (인터뷰)를 사용 하 여 모든 사용자에 게 게임](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-with-PlayFab) -제임스 Gwertzman, David Holladay
 
 * [게임 개발-는 인디 어떻게 studio 솜 털 같은 작은 요정 간결한 접근 방식을 증가 적중만 8 주 후 게임](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) -솜 털 같은 작은 요정에서 올리버 Löffler
 * [일 1: 모든 곳에서 게임](https://channel9.msdn.com/Shows/Level-Up/Your-game-everywhere-PlayFab) -Brendan Vanous
 * [일 2: PlayFab (프레젠테이션)를 사용 하 여 모든 사용자에 게 게임](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-With-PlayFab-Theater-Presentation) -Brendan Vanous
-* [3 일: 게임을 재생 하는 모든 면](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
+* [3 일: 게임을 재생 하는 방식으로 모든](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
 
 ### <a name="azure-cloud-services"></a>Azure 클라우드 서비스
 
 * [어떻게 The Walking Dead 아니요 남자 육지 게임 빌드된 azure 배율로](https://channel9.msdn.com/Shows/Level-Up/How-The-Walking-Dead-No-Mans-Land-was-built-to-scale-on-Azure-Theater-Presentation) -다음 게임에서 Kalle Hiitola
 * [Azure Cosmos DB: 포괄적인 개요](https://channel9.msdn.com/Shows/Level-Up/Azure-Cosmos-DB-Comprehensive-Overview) -Aleksey Savateyev
-* [컨테이너, 클러스터 및 게임을 위한 클라우드](https://channel9.msdn.com/Shows/Level-Up/Containers-Clusters-and-the-Cloud-for-Gaming-Theater-Presentation-1) -James Trott
+* [컨테이너, 클러스터 및 게임을 위한 클라우드](https://channel9.msdn.com/Shows/Level-Up/Containers-Clusters-and-the-Cloud-for-Gaming-Theater-Presentation-1) -제임스 Trott
 * [Azure에서 렌더링](https://channel9.msdn.com/Shows/Level-Up/Rendering-in-Azure-Theater-Presentation) -John Thuotte
-* [Hyper-v 설치에서 실행 중인](https://channel9.msdn.com/Shows/Level-Up/Running-on-a-Hypervisor-Theater-Presentation) -Andrew Farrier
+* [Hyper-v가 설치에서 실행 중인](https://channel9.msdn.com/Shows/Level-Up/Running-on-a-Hypervisor-Theater-Presentation) -Andrew Farrier
 
 ### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
 
@@ -48,29 +48,29 @@ LiveOps 란 무엇 인가요? 개발자는 라이브 게임을 만드는 이유�
 
 ### <a name="visual-studio-team-services-vsts-and-app-center"></a>Visual Studio Team Services (VSTS) 및 앱 센터
 
-VSTS 란 무엇 인가요? 빌드 프로세스에서 DevOps를 구현 하는 방법은: [Visual Studio Team Services 소개](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) -라면 Lyalin, James Montemagno
+VSTS 란 무엇 인가요? 빌드 프로세스에서 DevOps를 구현 하는 방법은: [Visual Studio Team Services 소개](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) -라면 Lyalin, 제임스 Montemagno
 
-* [계획 및 VSTS의 모든 기능을 사용 하 여 게임 구축: Agile, CI 및 CD 종단 간 데모](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
+* [계획 및 VSTS의 전체 기능을 사용 하 여 게임 구축: Agile, CI 및 CD 종단 간 데모](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
 * [Visual Studio Team Services 및 Unity 팀 클라우드 빌드에서 지 원하는 다음 게임 빌드](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) -라면 Lyalin
 * [지속적으로 테스트, 배포 및 앱 센터를 사용 하 여 게임 모니터링](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) -제임스 흰색
 * [CI/CD 파이프라인 Node.js, Python,.NET, 이동, Ruby, 또는 Java-시간 (분)에서 설치](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) -Abel Wang
-* [Agile VSTS 집합 도구](https://channel9.msdn.com/Shows/Level-Up/Agile-tooling-set-with-VSTS) -Rogan Ferguson, James Montemagno
+* [Agile VSTS 집합 도구](https://channel9.msdn.com/Shows/Level-Up/Agile-tooling-set-with-VSTS) -Rogan Ferguson, 제임스 Montemagno
 
 ### <a name="git"></a>Git
 
-버전 제어 시스템 하시 나요? Git 및 Git 가상 파일 시스템 (GVFS) 소개: [GVFS 소개](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-GVFS) -에드워드 톰슨, James Montemagno
+버전 제어 시스템 하시 나요? Git 및 Git 가상 파일 시스템 (GVFS) 소개: [GVFS 소개](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-GVFS) -에드워드 톰슨, 제임스 Montemagno
 
 * [Git 큰 파일 시스템을 사용 하 여 큰 이진 게임 자산을 사용 하 여 작업](https://channel9.msdn.com/Shows/Level-Up/Working-with-large-binary-game-assets-using-Git-Large-File-system) -에드워드 톰슨
-* [Unity 게임 개발에 사용 하 여 Git](https://channel9.msdn.com/Shows/Level-Up/Git-with-Unity-for-Game-Development) -에드워드 톰슨
+* [Unity 게임 개발을 위한로 Git](https://channel9.msdn.com/Shows/Level-Up/Git-with-Unity-for-Game-Development) -에드워드 톰슨
 
 ### <a name="visual-studio"></a>Visual Studio
 
-* [Unity 및 Visual Studio 시너지](https://channel9.msdn.com/Shows/Level-Up/Unity-and-Visual-Studio-better-together) -Unity에서 Arturo Nunez
+* [Unity 및 Visual Studio, 시너지](https://channel9.msdn.com/Shows/Level-Up/Unity-and-Visual-Studio-better-together) -Unity에서 Arturo Nunez
 
 ### <a name="game-development-experiences"></a>게임 개발 환경
 
-* [Photogrammetry 및 레이저 검색을 Forza Motorsport 7](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) -Travis Gosnell
-* [빌딩 Astroneer: 새로운 차트 및 코스 의지가](https://channel9.msdn.com/Shows/Level-Up/Building-Astroneer-Charting-new-and-challenging-courses) -Brendan Wilson
+* [Photogrammetry 및 Forza Motorsport 7에 검사 레이저](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) -Travis Gosnell
+* [건물 Astroneer: 새 차트 및 과정 의지가](https://channel9.msdn.com/Shows/Level-Up/Building-Astroneer-Charting-new-and-challenging-courses) -Brendan Wilson
 
 ### <a name="microsoft-store"></a>Microsoft Store
 
@@ -80,26 +80,26 @@ VSTS 란 무엇 인가요? 빌드 프로세스에서 DevOps를 구현 하는 방
 ### <a name="mixed-reality"></a>혼합 현실
 
 * [Unity로 Windows MR 앱 빌드](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) -Jaime Rodriguez
-* [The AR 클라우드: MR 미래 장치 이유 모든 부분이](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
+* [The AR 클라우드: MR의 미래 장치 이유 것 모두](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
 
 ## <a name="game-accessibility-conference-2018"></a>게임 접근성 회의 2018
 
-* [찾고 밝은. 2017의 게임 접근성 이동](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) -ian이 볼고그라드 접근성 산업 전문가
-* [The CVAA 내용과 게임 액세스 의미](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -연방 통신 위원회에서 Karen Petlz Strauss
-* [내 게임 시각 가능한 하면 안 됨 내용이 다음 발생 한 것으로...](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -MetalPop 게임에서 Michelle 마틴
-* [지적 접근성 디자인 선택 및 음악 교육용 Autism](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) -Berklee 음악 대학의에서 강 영수 Landay
+* [찾고 밝은. 2017의 게임 접근성 발전](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) -ian이 볼고그라드 접근성 산업 전문가
+* [The CVAA 및 게임 액세스 의미](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -연방 통신 위원회에서 Karen Petlz Strauss
+* [내 게임 시각 액세스할 수 있는 – 하면 안 됨을 수행 하려면 다음 무슨 생각...](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -MetalPop 게임에서 Michelle 마틴
+* [지적 접근성 디자인이 및 음악 교육용 Autism](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) -Berklee 음악 대학의에서 강 영수 Landay
 * [접근성을 Ramping](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Ramping-Up-Accessibility) -EA 스포츠에서 Karen Stevens
-* 최신 게임 접근성 [합니다. 솔루션에 위로 변경](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Playstation에서 최영희 Keeker 및 Sony 월드 와이드 스튜디오에서 Sam Thompson
+* 최신 게임 접근성 [합니다. 솔루션에 위로 변경](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Playstation에서 최영희 Keeker 및 Sony 월드 넓은 스튜디오에서 Sam Thompson
 * [즉각적 없이 기본 비디오 게임 플레이](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) -SightlessKombat, 접근성 디자인할
-* [커뮤니티 공동 작업 개발을 개선 하는 방법](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-How-Community-Collaboration-Improves-Development) -가정용 게임에서 Jason Canam
+* [커뮤니티 공동 작업 개발을 개선 하는 방법](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-How-Community-Collaboration-Improves-Development) -가정 게임에서 Jason Canam
 * [다음 수준 포함 하면 라이브 스트리밍 방법](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) -Mixer에서 Tara Voelker
-* [수행 하려는 모든 청각 게이머는 일부 재미 있는](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) -패널 스피커: Chris Robinson 및 Kristen Piersa 접근성 대표 합니다. Microsoft에서 Michael 안토니
-* [게임 업계에 밀려드는 선호 문자 A](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-A-Fraught-Love-Letter-to-the-Games-Industry) -선별적 Thompson 접근성 디자인할
+* [수행 하려는 모든 청각 게이머는 일부 재미 있는](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) 패널 스피커: Chris Robinson 및 Kristen Piersa 접근성 대표 합니다. Microsoft에서 Michael 안토니
+* [게임 업계 밀려드는 선호 문자 A](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-A-Fraught-Love-Letter-to-the-Games-Industry) -선별적 Thompson 접근성 디자인할
 * [액세스할 수 있는 게임 기록](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Accessible-Gaming-History) -Barrie OneSwitch 특수 효과를 Ellis
 
 ## <a name="build-2017-videos"></a>빌드 2017 동영상
 
-* [HDR 및 고급 색 DirectX의](https://channel9.msdn.com/Events/Build/2017/P4061) -Simon Tao
+* [HDR 및 고급 색 DirectX에](https://channel9.msdn.com/Events/Build/2017/P4061) -Simon Tao
 
 ## <a name="gdc-2017-game-dev-session-videos"></a>GDC 2017 게임 개발 세션 동영상
 

@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: b95637b38aafeb4111ecb25279dcec448ca3c30f
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5875261"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5936463"
 ---
 # <a name="home-page-dev-home"></a>홈 페이지 (개발자 홈)
    
@@ -37,10 +37,10 @@ ms.locfileid: "5875261"
 ## <a name="quick-actions"></a>바로 가기  
    
   
-**바로 가기** 창 자주 수행 하는 작업에 대 한 빠른 액세스를 제공 하는 다음 단추를 포함 합니다.   
+**바로 가기** 창 자주 수행 작업에 대 한 빠른 액세스를 제공 하는 다음 단추를 포함 합니다.   
  
-   *  **Visual Studio 표시 핀:** 컴퓨터에 Visual Studio 설치를 사용 하 여 개발 콘솔 페어링 하는 데 사용할 수 있는 코드를 표시 합니다.   
-   *  **변경 샌드박스:** 콘솔이 있는 샌드박스를 변경할 수 있습니다.   
+   *  **Visual Studio 표시 핀:** 컴퓨터에 Visual Studio 설치를 사용 하 여 개발 콘솔과 사용할 수 있는 코드를 표시 합니다.   
+   *  **변경 샌드박스:** 콘솔에는 샌드박스를 변경할 수 있습니다.   
    *  **다시 시작 콘솔:** 개발 콘솔을 다시 시작합니다.   
    *  **개발자 모드 나가기:** 정품 모드로 콘솔을 반환 하 고 콘솔을 다시 부팅 합니다.   
    *  **시작 홈:** 정품 홈 화면을 실행합니다.   
@@ -70,12 +70,12 @@ ms.locfileid: "5875261"
 ## <a name="test-accounts"></a>테스트 계정  
    
   
-**테스트 계정** 창에서 다음 작업을 수행 하 여 사용할 수 있습니다.   
+**테스트 계정** 창에서 다음 작업을 하는 데 사용할 수 있습니다.   
  
    *  콘솔에 등록 된 사용자의 목록을 봅니다.  
-   *  한 번의 클릭으로 사용자 또는 축소를 서명 합니다.  
+   *  한 번의 클릭으로 사용자 또는 축소에 서명 합니다.  
    *  사용자 및 게스트 계정을 추가 합니다.  
-   *  사용자 및 게스트 계정 세부 정보 보기  
+   *  사용자 및 게스트 계정 세부 정보를 보고 합니다.  
 
   
 <a id="ID4EFE"></a>
@@ -85,7 +85,7 @@ ms.locfileid: "5875261"
 ## <a name="connect-with-your-browser"></a>브라우저를 사용 하 여 연결  
    
   
-IP 주소와 포트 콘솔 웹 브라우저에서 관리 하는 데 사용할 수 있는 **브라우저를 사용 하 여 연결** 창에 표시 됩니다.   
+IP 주소와 포트 콘솔의 웹 브라우저에서 관리 하는 데 사용할 수 있는 **브라우저를 사용 하 여 연결** 창에 표시 됩니다.   
   
 <a id="ID4EPE"></a>
 
