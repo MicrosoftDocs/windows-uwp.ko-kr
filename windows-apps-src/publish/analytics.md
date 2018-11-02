@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp, 분석, 보고서, 대시보드, 앱, 데이터, 메트릭
 ms.localizationpriority: medium
 ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5886635"
+ms.locfileid: "5928732"
 ---
 # <a name="analyze-app-performance"></a>앱 성능 분석
 
 [파트너 센터](https://partner.microsoft.com/dashboard)의 앱에 대 한 자세한 분석을 볼 수 있습니다. 통계와 차트를 통해 연결된 고객 수, 고객들이 앱을 사용하는 방식, 고객들의 앱 평가를 기반으로 앱의 상태를 알 수 있습니다. 앱 상태, 광고 사용 등에 대한 메트릭을 찾을 수도 있습니다.
 
-분석 보고서를 볼 수 파트너 센터 또는 [필요한 보고서를 다운로드](download-analytic-reports.md) 하 여 데이터를 오프 라인으로 분석할 오른쪽 합니다. 사용자에 대 한 여러 가지 방법으로 [파트너 센터 외부 분석 데이터에 액세스할](#outside)수 제공도 합니다.
+분석 보고서를 볼 수 오른쪽 파트너 센터 또는 [필요한 보고서를 다운로드](download-analytic-reports.md) 하 여 데이터를 오프 라인으로 분석 합니다. 사용자에 대 한 여러 가지 방법으로 [파트너 센터 외부 분석 데이터에 액세스할](#outside)수 제공도 합니다.
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>모든 앱에 대한 주요 분석 보기
 
@@ -49,7 +49,7 @@ ms.locfileid: "5886635"
 
 ## <a name="access-analytics-data-outside-of-partner-center"></a>파트너 센터 외부 분석 데이터에 액세스
 
-파트너 센터에서 보고서를 보는 것 외에 다양 한 가지 방법으로 앱 분석을 액세스할 수 있습니다.
+파트너 센터에서 보고서를 보는 것 외에 다양 한 가지 방법으로 앱 분석에 액세스할 수 있습니다.
 
 ### <a name="microsoft-store-analytics-api"></a>Microsoft Store 분석 API
 
@@ -66,7 +66,7 @@ Power BI 사용을 시작하여 분석 데이터에 액세스하려면 다음 �
 * [Power BI용 Windows 개발자 센터 콘텐츠 팩을 사용하여 분석 데이터에 연결하는 방법 알아보기](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Power BI 용 Windows 개발자 센터 콘텐츠 팩에 연결 하려면 파트너 센터 계정과 연결 된 Azure AD 디렉터리에서 자격 증명을 지정 하는 것이 좋습니다. Microsoft 계정 자격 증명을 사용하는 경우에는 Power BI에서 분석 데이터가 자동으로 새로 고쳐지지 않습니다. 데이터를 새로 고치려면 Power BI에 로그인해야 합니다. 조직에서 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD가 있습니다. 그렇지 않은 경우 [무료로 얻을](http://go.microsoft.com/fwlink/p/?LinkId=703757) 수 있습니다. 연결 설정에 대 한 자세한 내용은 [Azure Active Directory 연결 파트너 센터 계정과](associate-azure-ad-with-dev-center.md)참조 하세요.
+> Power BI 용 Windows 개발자 센터 콘텐츠 팩에 연결 하려면 파트너 센터 계정과 연결 된 Azure AD 디렉터리에서 자격 증명을 지정 하는 것이 좋습니다. Microsoft 계정 자격 증명을 사용하는 경우에는 Power BI에서 분석 데이터가 자동으로 새로 고쳐지지 않습니다. 데이터를 새로 고치려면 Power BI에 로그인해야 합니다. 조직에서 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD가 있습니다. 그렇지 않은 경우 [무료로 얻을](http://go.microsoft.com/fwlink/p/?LinkId=703757) 수 있습니다. 연결 설정에 대 한 자세한 내용은 [Azure Active Directory 연결 파트너 센터 계정에](associate-azure-ad-with-dev-center.md)참조 하세요.
 
 ### <a name="dev-center-app"></a>개발자 센터 앱
 

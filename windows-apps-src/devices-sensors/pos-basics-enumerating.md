@@ -8,29 +8,29 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 10804b006cb7ab542c74e363af5134634b7651e3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5867860"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933095"
 ---
 # <a name="enumerating-point-of-service-devices"></a>서비스 지점 장치 열거
 이 섹션에서는 시스템에서 사용할 수 있는 장치를 쿼리하는 데 사용되는 [장치 선택기를 정의](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector)하고 이 선택기를 사용하여 다음 메서드 중 하나를 사용하는 서비스 지점 장치를 열거하는 메서드를 배웁니다.
 
 **방법 1:** [디바이스 선택기를 사용 하 여](#method-1:-use-a-device-picker)
 <br/>
-장치 선택기 UI를 표시 하 고 사용자가 연결 된 장치를 선택 합니다. 이 메서드는 장치를 연결 하 고 제거 때 목록 업데이트를 처리 하 고 더 간단 하 고 다른 방법 보다 안전 하 게 합니다.
+장치 선택기 UI를 표시 하 고 사용자 연결된 된 장치를 선택 합니다. 이 메서드는 장치를 연결 하 고 제거 때 목록 업데이트를 처리 하 고 더 간단 하 고 다른 방법 보다 안전 하 게.
 
 **방법 2:** [첫 번째 사용할 수 있는 장치 가져오기](#Method-1:-get-first-available-device)<br />[GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync) 를 사용 하 여 특정 서비스 지점 디바이스 클래스에서 사용 가능한 첫 번째 장치에 액세스할 수 있습니다.
 
-**메서드 3:** [디바이스의 스냅숏](#Method-2:-Snapshot-of-devices)<br />시간이 지정 된 지점에 시스템에 존재 하는 서비스 지점 디바이스의 스냅숏을 열거 합니다. 고유한 UI를 빌드하거나 사용자에게 UI를 표시하지 않고 장치를 열거하고자 할 때 유용합니다. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 는 결과 보유 전체 열거가 완료 될 때까지 합니다.
+**메서드 3:** [디바이스의 스냅숏](#Method-2:-Snapshot-of-devices)<br />시간이 지정된 된 지점에서 시스템에 존재 하는 서비스 지점 디바이스의 스냅숏을 열거 합니다. 고유한 UI를 빌드하거나 사용자에게 UI를 표시하지 않고 장치를 열거하고자 할 때 유용합니다. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 는 결과 보유 전체 열거가 완료 될 때까지 합니다.
 
-**방법 4:** [열거 및 감시](#Method-3:-Enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 수는 현재 있는 장치를 열거 하 고 장치가 추가 되거나 시스템에서 제거 되 면 알림을 받을 수 있는 더 강력 하 고 유연한 열거형 모델입니다.  스냅샷이 표시되기까지 기다리는 것보다 UI에 표시하기 위해 백그라운드에서 디바이스의 현재 목록을 유지하려는 경우 유용합니다.
+**메서드 4:** [열거 및 감시](#Method-3:-Enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 장치가 추가 되거나 시스템에서 제거 되 면 알림을 받을 수 및 현재 존재 하는 장치를 열거할 수 있는 더 강력 하 고 유연한 열거형 모델입니다.  스냅샷이 표시되기까지 기다리는 것보다 UI에 표시하기 위해 백그라운드에서 디바이스의 현재 목록을 유지하려는 경우 유용합니다.
 
 ## <a name="define-a-device-selector"></a>장치 선택기 정의
 장치 선택기는 디바이스를 열거할 때 검색하는 디바이스를 제한할 수 있습니다.  이렇게 하면 관련성 높은 결과만 가져오고 원하는 장치를 열거 하는 데 걸리는 시간을 줄일 수 있습니다.
 
-해당 형식에 대 한 장치 선택기를 가져오려면 원하는 장치 유형에 대 한 **GetDeviceSelector** 메서드를 사용할 수 있습니다. 예를 들어 [PosPrinter.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.getdeviceselector#Windows_Devices_PointOfService_PosPrinter_GetDeviceSelector) 를 사용 하 여에서는 USB, 네트워크, Bluetooth POS 프린터를 포함 하 여 시스템에 연결 된 모든 [Posprinter](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter) 를 열거 하는 선택기를 사용 하 여 있습니다.
+해당 형식에 대 한 장치 선택기를 가져오려면 찾고 있는 장치 유형에 대 한 **GetDeviceSelector** 메서드를 사용할 수 있습니다. 예를 들어 [PosPrinter.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.getdeviceselector#Windows_Devices_PointOfService_PosPrinter_GetDeviceSelector) 를 사용 하 여에서는 USB, 네트워크, Bluetooth POS 프린터를 포함 하 여 시스템에 연결 된 모든 [Posprinter](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter) 를 열거 하는 선택기를 사용 하 여 있습니다.
 
 ```Csharp
 using Windows.Devices.PointOfService;
@@ -46,7 +46,7 @@ string selector = POSPrinter.GetDeviceSelector();
 * [MagneticStripeReader.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.getdeviceselector)
 * [PosPrinter.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.getdeviceselector)
 
-[PosConnectionTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posconnectiontypes) 값을 매개 변수로 사용 하는 **GetDeviceSelector** 메서드를 사용 하 여 제한할 수 있습니다 선택기를 열거 로컬, 네트워크, 또는 Bluetooth 연결 된 POS 디바이스 쿼리가 완료 하는 데 걸리는 시간이 줄어듭니다.  아래 샘플 로컬로 지 원하는 선택기를 정의 하려면이 메서드를 사용 하는 연결 POS 프린터를 보여 줍니다.
+[PosConnectionTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posconnectiontypes) 값을 매개 변수로 사용 하는 **GetDeviceSelector** 메서드를 사용 하 여 제한할 수 있습니다 사용자 열거 로컬, 네트워크, 선택기 또는 Bluetooth 연결 POS 디바이스 쿼리가 완료 하는 데 걸리는 시간이 줄어듭니다.  아래 샘플 로컬로 지 원하는 선택기를 정의 하려면이 메서드를 사용 하는 연결 POS 프린터를 보여 줍니다.
 
  ```Csharp
 using Windows.Devices.PointOfService;
@@ -59,11 +59,11 @@ string selector = POSPrinter.GetDeviceSelector(PosConnectionTypes.Local);
 
 ## <a name="method-1-use-a-device-picker"></a>방법 1: 장치 선택기를 사용 합니다.
 
-[DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) 클래스를 사용 하면 사용자가 선택 하에 대 한 장치 목록을 포함 하는 선택기 플라이 아웃을 표시할 수 있습니다. 선택기를 표시 하는 장치 유형을 선택 하려면 [필터](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) 속성을 사용할 수 있습니다. 이 속성 [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter)형식입니다. 장치 유형 [중 하나](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) 또는 [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) 속성을 사용 하 여 필터를 추가할 수 있습니다.
+[DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) 클래스를 사용 하면 사용자가 선택할 수에 대 한 장치 목록을 포함 하는 선택기 플라이 아웃을 표시할 수 있습니다. 어떤 종류의 장치 선택기를 표시 하도록 선택할 수 [Filter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) 속성을 사용할 수 있습니다. 이 속성 형식 [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter)입니다. 장치 유형 [중 하나](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) 또는 [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) 속성을 사용 하 여 필터를 추가할 수 있습니다.
 
-디바이스 선택기를 표시할 준비가 되 면 선택기 UI를 표시 되며 선택한 디바이스를 반환 하는 [PickSingleDeviceAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.picksingledeviceasync) 메서드를 호출할 수 있습니다. 플라이 아웃이 표시 되는 위치를 결정 하는 [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) 를 지정 해야 합니다. 이 메서드는 반환 [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) 개체를 사용 하 여는 서비스 지점 Api를 사용 하기 위해서는, 특정 장치 클래스에 대 한 **FromIdAsync** 메서드를 사용 해야 합니다. [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 속성 메서드의 *deviceId* 매개 변수로 전달 하 고 반환 값으로 장치 클래스의 인스턴스를 가져옵니다.
+장치 선택기를 표시할 준비가 되 면 선택기 UI를 표시 되며 선택한 디바이스를 반환 하는 [PickSingleDeviceAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.picksingledeviceasync) 메서드를 호출할 수 있습니다. 플라이 아웃이 표시 되는 위치를 결정 하는 [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) 를 지정 해야 합니다. 이 메서드는 [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) 개체를 사용 하 여는 서비스 지점 Api를 사용 하기 위해서는 돌아올, 원하는 특정 장치 클래스에 대 한 **FromIdAsync** 메서드를 사용 해야 합니다. [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 속성 메서드의 *deviceId* 매개 변수로 전달 하 고 반환 값으로 장치 클래스의 인스턴스를 가져옵니다.
 
-다음 코드 조각은 **DevicePicker**만듭니다, 그리고 했습니다 사용자 선택, 디바이스, 바코드 스캐너 필터를 추가 하 다음 장치 ID에 따라 **BarcodeScanner** 개체를 만듭니다.
+다음 코드 조각은 **DevicePicker**를 만들고, 추가, 바코드 스캐너 필터 사용자 선택을 장치에 있으며 다음 장치 ID에 따라 **BarcodeScanner** 개체를 만듭니다.
 
 ```cs
 private async Task<BarcodeScanner> GetBarcodeScanner()
@@ -79,9 +79,9 @@ private async Task<BarcodeScanner> GetBarcodeScanner()
 
 ## <a name="method-2-get-first-available-device"></a>방법 2: 첫 번째 사용할 수 있는 장치 가져오기
 
-서비스 지점 디바이스를 가져오려면 가장 간단한 방법은를 **GetDefaultAsync** 를 사용 하 여 서비스 지점 디바이스 클래스 내에서 사용 가능한 첫 번째 장치를 가져옵니다. 
+서비스 지점 장치 하는 가장 간단한 방법은 서비스 지점 디바이스 클래스 내에서 사용 가능한 첫 번째 장치를 가져오려면 **GetDefaultAsync** 를 사용 하는 것입니다. 
 
-아래 샘플에서는 [BarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner)에 대 한 [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync#Windows_Devices_PointOfService_BarcodeScanner_GetDefaultAsync) 를 사용 합니다. 코딩 패턴은 모든 서비스 지점 장치 클래스에 대해 비슷합니다.
+아래의 예제에서는 [BarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner)에 대 한 [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync#Windows_Devices_PointOfService_BarcodeScanner_GetDefaultAsync) 사용. 코딩 패턴은 모든 서비스 지점 장치 클래스에 대해 비슷합니다.
 
 ```Csharp
 using Windows.Devices.PointOfService;
@@ -90,9 +90,9 @@ BarcodeScanner barcodeScanner = await BarcodeScanner.GetDefaultAsync();
 ```
 
 > [!CAUTION]
-> **GetDefaultAsync** 는 대로 다른 장치 마다 세션 간에 반환할 수 있습니다 주의 해 서 사용 되어야 합니다. 많은 이벤트가 이 열거에 영향을 주어 다음을 포함하여 첫 번째 사용할 수 있는 장치를 변경할 수 있습니다. 
+> **GetDefaultAsync** 으로 다른 장치 마다 하나의 세션에서 반환할 수 있습니다 주의 해 서 사용 되어야 합니다. 많은 이벤트가 이 열거에 영향을 주어 다음을 포함하여 첫 번째 사용할 수 있는 장치를 변경할 수 있습니다. 
 > - 컴퓨터에 연결된 카메라 변경 
-> - 컴퓨터에 연결 된 장치의 서비스 범위로 변경
+> - 컴퓨터에 연결 된 서비스 장치의 범위로 변경
 > - 네트워크에서 사용할 수 있는 서비스 지점 장치 네트워크 연결의 변경
 > - 컴퓨터의 범위 내 Bluetooth 서비스 지점 장치의 변경 
 > - 서비스 지점 구성 변경 
@@ -124,13 +124,13 @@ foreach (DeviceInformation devInfo in deviceCollection)
 ```
 
 > [!TIP] 
-> [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API로 작업할 때 특정 디바이스에 대한 개체 정보를 얻기 위해 종종 [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation)을 사용해야 합니다. 예를 들어를 복구 하 고 향후 세션에서 사용할 수 및 앱에서 표시 하기 위해 [DeviceInformation.Name](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name) 속성을 사용 하는 경우 동일한 장치를 다시 사용할 [DeviceInformation.ID](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 속성을 사용할 수 있습니다.  사용할 수 있는 추가 속성에 대한 정보는 [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) 참조 페이지를 참조하세요.
+> [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API로 작업할 때 특정 디바이스에 대한 개체 정보를 얻기 위해 종종 [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation)을 사용해야 합니다. 예를 들어를 복구 하 고 향후 세션에서 사용할 수 있는 이며 앱에서 표시 하기 위해 [DeviceInformation.Name](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name) 속성을 사용 하는 경우 동일한 장치를 다시 사용할 [DeviceInformation.ID](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 속성을 사용할 수 있습니다.  사용할 수 있는 추가 속성에 대한 정보는 [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) 참조 페이지를 참조하세요.
 
 ## <a name="method-4-enumerate-and-watch"></a>방법 4: 열거 및 감시
 
-장치를 열거하는 더 강력하고 유연한 방법은 [DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)를 만드는 것입니다.  장치 감시자는 장치를 동적으로 열거합니다. 그러면 초기 열거가 완료된 후 장치가 추가, 제거 또는 변경되는 경우 응용 프로그램에서 알림을 수신합니다.  **DeviceWatcher** 를 통해 네트워크에 연결 된 장치가 온라인 상태가 되는 경우를 감지 하, Bluetooth 디바이스가 범위 내에서 응용 프로그램 내에서 적절 한 조치를 취할 수 있도록 로컬로 연결 된 장치가 연결 되어 있지 않습니다 마치 뿐입니다.
+장치를 열거하는 더 강력하고 유연한 방법은 [DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)를 만드는 것입니다.  장치 감시자는 장치를 동적으로 열거합니다. 그러면 초기 열거가 완료된 후 장치가 추가, 제거 또는 변경되는 경우 응용 프로그램에서 알림을 수신합니다.  **DeviceWatcher** 를 통해 네트워크에 연결 된 장치가 온라인 상태가 될 때를 감지할 수, Bluetooth 디바이스가 범위 내에서 응용 프로그램 내에서 적절 한 조치를 취할 수 있도록 로컬로 연결 된 장치가 연결 되어 있지 않습니다 마치 뿐입니다.
 
-이 샘플 **DeviceWatcher** 를 만들고 위에서 정의한 선택기를 사용 하 여 뿐 아니라 [추가](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added), [제거](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed)및 [업데이트](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) 알림에 대 한 이벤트 처리기를 정의 합니다. 각 알림에 대해 수행하려는 작업의 세부 정보를 입력해야 합니다.
+이 샘플 **DeviceWatcher** 를 만들려면 위에서 정의한 선택기를 사용 하 여 뿐 아니라 [추가](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added), [제거](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed)및 [업데이트](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) 알림에 대 한 이벤트 처리기를 정의 합니다. 각 알림에 대해 수행하려는 작업의 세부 정보를 입력해야 합니다.
 
 ```Csharp
 using Windows.Devices.Enumeration;
@@ -157,7 +157,7 @@ void DeviceWatcher_Updated(DeviceWatcher sender, DeviceInformationUpdate args)
 ```
 
 > [!TIP]
-> [장치 열거 및 감시]( https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices#enumerate-and-watch-devices) **DeviceWatcher**사용에 대 한 자세한 내용을 참조 하세요.
+> **DeviceWatcher**사용에 대 한 자세한 내용은 [장치 열거 및 감시를]( https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices#enumerate-and-watch-devices) 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 * [서비스 지점 시작하기](pos-basics.md)

@@ -13,11 +13,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: fae2a222ae20c64e8e8adb2abfa973d62216239e
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5866526"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5925847"
 ---
 # <a name="xaml-lighting"></a>XAML 조명
 
@@ -27,7 +27,7 @@ ms.locfileid: "5866526"
 
 ## <a name="applying-lights-to-xaml-uielements"></a>XAML UIElements에 조명 적용
 
-[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) 개체는 [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight)에 적용하여 동적으로 XAML UIElements를 조명하는 데 사용됩니다. XamlLight는 UIElements 또는 uielements 트리에 적용 되는 XAML 브러시를 대상으로 하는 것에 대 한 메서드를 제공 하 고 현재 있는지 여부에 따라 리소스 사용 CompositionLight의 수명을 관리 합니다.
+[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) 개체는 [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight)에 적용하여 동적으로 XAML UIElements를 조명하는 데 사용됩니다. XamlLight는 UIElements 또는 XAML 브러시에 uielements 트리에 적용 타기 팅을 위한 메서드를 제공 하 고 현재 있는지 여부에 따라 리소스 사용 CompositionLight의 수명을 관리 합니다.
 
 - **브러시**를 XamlLight로 대상으로 지정하면 해당 브러시를 사용하는 모든 UIElements의 일부가 조명에 의해 켜집니다.
 - XamlLight로 **UIElement**를 대상으로 지정하는 경우 전체 UIElement 및 하위 UIElements가 모두 조명에 의해 켜집니다.
@@ -459,10 +459,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-이 빛이 모든 XAML UIElement 또는 브러시 하 게 빛을 적용할 수 있습니다. 이 예제에서는 다양 한 잠재적인 사용법을 보여 줍니다.
+그런 다음 XAML UIElement 또는 브러시 하 게 빛을이 빛을 적용할 수 있습니다. 이 예제에서는 다른 잠재적 사용법을 보여 줍니다.
 
 > [!Important]
-> 에 대 한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 아래의 태그에서. 연결 된 속성은 코드 숨김에 이미 설정 됩니다.
+> 에 대 한 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 아래의 태그에서. 연결 된 속성은 코드 숨김에서 이미 설정 됩니다.
 
 ```xaml
 <StackPanel Width="100">
@@ -493,7 +493,7 @@ Platform::String^ OrangeSpotLight::GetId()
 
 이 XAML의 결과 다음과 같습니다.
 
-![요소의 예 xaml 조명에 의해 켜 집니다.](images/orange-spot-light.png)
+![Xaml 조명에 의해 켜 집니다 요소의 예](images/orange-spot-light.png)
 
 > [!Important]
 > 위 예에서 마크업에서 UIElement.Lights 설정은 최소 Windows 10 크리에이터 업데이트 이상에 해당하는 버전의 앱에서만 지원됩니다. 이전 버전을 대상으로 하는 앱의 경우 코드 숨김에서 조명을 만들어야 합니다.

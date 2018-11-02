@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b28653fc7746075c57f862b0c885beac6d4934f
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5875743"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5925695"
 ---
 # <a name="spring-animations"></a>스프링 애니메이션
 

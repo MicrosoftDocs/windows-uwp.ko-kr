@@ -11,11 +11,11 @@ ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
 ms.openlocfilehash: e28d557280ab253a09d5697f369c694e490d3c7d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5875537"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5929025"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>UWP 앱의 컨트롤 및 패턴
  
@@ -42,7 +42,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 :::row-end:::
 
 ## <a name="get-the-windows-ui-library"></a>Windows UI 라이브러리 가져오기
-일부 컨트롤은 Windows UI 라이브러리 에서만 사용할 수 있습니다. 를 가져오려면 [Windows UI 라이브러리 개요 및 설치 지침](/uwp/toolkits/winui/)을 참조 하세요.
+일부 컨트롤은 Windows UI 라이브러리 에서만 사용할 수 있습니다. 이 가져오려면 [Windows UI 라이브러리 개요 및 설치 지침](/uwp/toolkits/winui/)을 참조 하세요.
 
 ## <a name="alphabetical-index"></a>사전순 인덱스 
 

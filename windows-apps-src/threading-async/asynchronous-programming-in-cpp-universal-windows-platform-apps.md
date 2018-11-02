@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp, 스레드, 비동기, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 33b110e713608260cd5c19544292e9211904a730
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863147"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930848"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>C++/CX의 비동기 프로그래밍
 > [!NOTE]
 > 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
-이 문서에서는 VisualC + + 구성 요소 확장의 비동기 메서드는 권장된 방법 설명 (C + + CX)를 사용 하 여는 `task` 에 정의 된 클래스는 `concurrency` ppltasks.h에서 네임 스페이스.
+이 문서에서는 VisualC + + 구성 요소 확장의 비동기 메서드는 권장된 방법에 설명 (C + + CX)를 사용 하 여는 `task` 에 정의 된 클래스는 `concurrency` ppltasks.h에서 네임 스페이스입니다.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>UWP(유니버설 Windows 플랫폼) 비동기 형식
 UWP(유니버설 Windows 플랫폼)는 비동기 메서드를 호출하기 위한 잘 정의된 모델의 역할을 하며 그러한 메서드를 사용하는 데 필요한 유형을 제공합니다. UWP 비동기 모델에 익숙하지 않을 경우 이 문서의 나머지 부분을 읽기 전에 [비동기 프로그래밍][AsyncProgramming]을 읽으세요.
@@ -114,7 +114,7 @@ void App::DeleteWithTasks(String^ fileName)
 
 -   두 번째 연속 작업은 값 기반이므로 [**DeleteAsync**][deleteAsync] 호출에 의해 시작된 작업이 예외를 발생시킬 경우 아예 실행되지 않습니다.
 
-**참고**은 작업 체인을 만드는 **작업** 클래스를 사용 하 여 비동기 작업을 작성 하는 방법 중 하나입니다. join 또는 choice 연산자 **&&** 및 **||** 를 사용하여 작업을 구성할 수도 있습니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)][taskParallelism]를 참조하세요.
+**참고**는 작업 체인을 만드는 것 **작업** 클래스를 사용 하 여 비동기 작업을 작성 하는 방법 중 하나입니다. join 또는 choice 연산자 **&&** 및 **||** 를 사용하여 작업을 구성할 수도 있습니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)][taskParallelism]를 참조하세요.
 
 ## <a name="lambda-function-return-types-and-task-return-types"></a>람다 함수 반환 형식 및 작업 반환 형식
 작업 연속 작업에서 람다 함수의 반환 형식은 **task** 개체로 묶여 있습니다. 람다가 **double**을 반환하면 연속 작업의 작업 유형은 **task<double>** 가 됩니다. 그러나 작업 개체는 불필요하게 중첩된 반환 형식을 생성하지 않도록 설계되어 있습니다. 람다가 **IAsyncOperation&lt;SyndicationFeed^&gt;^** 를 반환하는 경우 연속 작업은 **task&lt;task&lt;SyndicationFeed^&gt;&gt;** 또는 **task&lt;IAsyncOperation&lt;SyndicationFeed^&gt;^&gt;^** 가 아닌 **task&lt;SyndicationFeed^&gt;** 를 반환합니다. 이 프로세스는 *비동기 래핑 해제*라고 하며 다음 연속 작업이 호출되기 전에 연속 작업 내부의 비동기 작업이 완료되었는지도 확인합니다.

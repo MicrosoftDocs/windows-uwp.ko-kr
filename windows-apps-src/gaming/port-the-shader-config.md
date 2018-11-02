@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 셰이더, direct3d, opengl
 ms.localizationpriority: medium
 ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5862032"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930822"
 ---
 # <a name="port-the-shader-objects"></a>셰이더 개체 포팅
 
@@ -80,7 +80,7 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 Direct3D에서 셰이더는 런타임 중에 컴파일되지 않습니다. 셰이더는 나머지 프로그램을 컴파일할 때 항상 CSO 파일로 컴파일됩니다. Microsoft Visual Studio에서 앱을 컴파일하면 HLSL 파일은 앱이 로드해야 하는 CSO(.cso) 파일로 컴파일됩니다. 이러한 앱을 패키지로 만들 때 앱과 함께 CSO 파일을 포함해야 합니다!
 
-> **참고**  다음 예제에서는 셰이더 로드 및 컴파일을 비동기적으로 **auto** 키워드와 람다 구문을 사용 하 여 수행 합니다. ReadDataAsync()는 바이트 데이터 배열(fileData)로 CSO 파일에서 읽는 템플릿에 구현된 메서드입니다.
+> **참고**  다음 예제에서는 셰이더 로드 및 컴파일을 비동기적으로 **자동** 키워드와 람다 구문을 사용 하 여 수행 합니다. ReadDataAsync()는 바이트 데이터 배열(fileData)로 CSO 파일에서 읽는 템플릿에 구현된 메서드입니다.
 
  
 

@@ -8,16 +8,16 @@ ms.topic: article
 keywords: Windows 10, uwp, 세그먼트, 세그먼트들, 대상 그룹, 고객
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
-ms.openlocfilehash: b53c3c3480a986e77ad44f95831b1be5ce016808
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.openlocfilehash: 8aa61056a25fca4193cf325c8573813bf1f6a560
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882779"
+ms.locfileid: "5929607"
 ---
 # <a name="create-customer-segments"></a>고객층 만들기
 
-프로모션 및 참여를 목적으로 앱 고객의 하위 집합을 대상으로 지정하려는 경우가 있습니다. 일종의 사용자가 선택한 수익 기준 또는 인구 충족 하는 Windows 10 고객을 포함 하는 *세그먼트* 라고 하는 [고객 그룹](create-customer-groups.md) 을 만들어 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 수행할 수 있습니다.
+프로모션 및 참여를 목적으로 앱 고객의 하위 집합을 대상으로 지정하려는 경우가 있습니다. 일종의 또는 수익 기준을 선택 인구 충족 하는 Windows 10 고객을 포함 하는 *세그먼트* 라고 하는 [고객 그룹](create-customer-groups.md) 을 만들어 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 수행할 수 있습니다.
 
 예를 들어 50세 이상의 고객만 포함하거나 Microsoft Store에서 10달러 이상을 소비한 고객을 포함하는 고객층을 만들 수 있습니다. 또한 이러한 조건을 결합하여 50세 이상이면서 스토어에서 10달러 이상을 소비한 모든 고객을 포함하는 고객층을 만들 수도 있습니다. 
 
@@ -43,7 +43,7 @@ ms.locfileid: "5882779"
 4.  **이 앱의 고객 포함** 목록에서 대상으로 지정할 앱 중 하나를 선택합니다.
 5.  **포함 조건 정의** 섹션에서 세그먼트에 대한 필터 조건을 지정합니다.
 
-    **취득**, **취득 소스**, **용도**, **인구 통계**, **등급**, **변동 예상**, **스토어 구매**, **스토어 구입**, **스토어 지출** 등 다양한 필터 조건에서 선택할 수 있습니다.
+    다양 한 포함 하 여 **구입**, **취득 소스**, **인구 통계**, **등급**, **변동 예측**, **스토어 구매**, **스토어 구입**의 경우, 스토어 **필터 조건에서에서 선택할 수 있습니다. 지출**.
 
     예를 들어 18-24세 앱 고객만 포함된 세그먼트를 만들려는 경우 드롭다운 목록에서 필터 조건을 [**인구 통계**] [**연령 그룹**] [**is**] **[18 to 24]** 로 선택합니다.
 

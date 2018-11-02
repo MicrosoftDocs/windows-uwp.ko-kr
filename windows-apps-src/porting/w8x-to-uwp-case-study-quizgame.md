@@ -9,22 +9,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 69aae85f4e0bb01833114ae5b2cbfab45e9dd84d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861300"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933042"
 ---
-# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows 런타임 8.x에서 UWP 사례 연구: QuizGame 샘플 앱
+# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: QuizGame 샘플 앱
 
 
 
 
-이 항목에서는 작동 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows10Universal Windows 플랫폼 (UWP) 앱으로 포팅하는 사례 연구를 제공 합니다.
+이 항목에서는 작동 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows10Universal Windows 플랫폼 (UWP) 앱을 포팅하는 사례 연구를 제공 합니다.
 
-유니버설 8.1 앱은 동일한 앱의 두 가지 버전 빌드입니다: Windows8.1에 대 한 하나의 앱 패키지 및 Windows Phone 8.1 용 앱 패키지. QuizGame의 WinRT 8.1 버전에서는 유니버설 Windows 앱 프로젝트 정렬을 사용하지만 다른 접근 방식을 취하여 두 플랫폼에 대해 기능상 서로 다른 앱을 빌드합니다. Windows8.1 앱 패키지 호스트 역할을 퀴즈 게임 세션에 대 한 Windows Phone 8.1 앱 패키지는 호스트에 클라이언트의 역할을 재생 되는 동안 합니다. 퀴즈 게임 세션의 두 절반은 피어 투 피어 네트워킹을 통해 통신합니다.
+유니버설 8.1 앱은 동일한 앱의 두 가지 버전 빌드입니다: Windows8.1에 대 한 하나의 앱 패키지 및 Windows Phone 8.1 용 앱 패키지. QuizGame의 WinRT 8.1 버전에서는 유니버설 Windows 앱 프로젝트 정렬을 사용하지만 다른 접근 방식을 취하여 두 플랫폼에 대해 기능상 서로 다른 앱을 빌드합니다. Windows8.1 앱 패키지를 호스트 역할을 퀴즈 게임 세션에 대 한 Windows Phone 8.1 앱 패키지 호스트는 클라이언트의 역할을 재생 되는 동안 합니다. 퀴즈 게임 세션의 두 절반은 피어 투 피어 네트워킹을 통해 통신합니다.
 
-두 절반을 각각 PC와 휴대폰에 맞게 맞춤화하면 합리적입니다. 그러나 선택하는 거의 모든 디바이스에서 호스트와 클라이언트를 둘 다 실행할 수 있다면 훨씬 더 낫지 않을까요? 이 경우 사례 연구, 포팅할 앱에 각각 빌드되 사용자가 다양 한 장치에 설치할 수 있는 단일 앱 패키지로 Windows10 모두 합니다.
+두 절반을 각각 PC와 휴대폰에 맞게 맞춤화하면 합리적입니다. 그러나 선택하는 거의 모든 디바이스에서 호스트와 클라이언트를 둘 다 실행할 수 있다면 훨씬 더 낫지 않을까요? 이 경우 사례 연구, 포팅할 앱에 각각 빌드되는 광범위 한 디바이스에 사용자가 설치할 수 있는 단일 앱 패키지로 Windows10 모두 합니다.
 
 앱에서는 보기 및 보기 모델을 활용하는 패턴을 사용합니다. 이렇게 명확하게 분리한 결과, 앞으로 살펴보게 되겠지만 이 앱의 포팅 프로세스는 매우 간단합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "5861300"
 
 [QuizGame 유니버설 8.1 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532953). 포팅하기 전 앱의 초기 상태입니다. 
 
-[Windows10 앱을 다운로드 QuizGame10 합니다](http://go.microsoft.com/fwlink/?linkid=532954). 포팅한 직후 앱의 상태입니다. 
+[QuizGame10 Windows10 앱을 다운로드](http://go.microsoft.com/fwlink/?linkid=532954)합니다. 포팅한 직후 앱의 상태입니다. 
 
 [GitHub에서 이 샘플의 최신 버전을 참조하세요](https://github.com/Microsoft/Windows-appsample-quizgame).
 
@@ -88,7 +88,7 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다.
 
-이러한 옵션에 따라 quizgame.windows를 QuizGameHost 라는 새 Windows10 프로젝트. 및 quizgame.windowsphone을 QuizGameClient 라는 새 Windows10 프로젝트. 이러한 프로젝트는 유니버설 디바이스 패밀리를 대상으로 하므로 모든 디바이스에서 실행됩니다. 또한 QuizGame.Shared 원본 파일 등을 자체 폴더에 유지하고 해당 공유 파일을 두 개의 새 프로젝트에 연결합니다. 이전과 마찬가지로, 모든 항목을 하나의 솔루션에 유지하고 이름을 QuizGame10으로 지정합니다.
+이러한 옵션에 따라 quizgame.windows를 QuizGameHost 라는 새 Windows10 프로젝트로 합니다. 그리고 quizgame.windowsphone을 QuizGameClient 라는 새 Windows10 프로젝트. 이러한 프로젝트는 유니버설 디바이스 패밀리를 대상으로 하므로 모든 디바이스에서 실행됩니다. 또한 QuizGame.Shared 원본 파일 등을 자체 폴더에 유지하고 해당 공유 파일을 두 개의 새 프로젝트에 연결합니다. 이전과 마찬가지로, 모든 항목을 하나의 솔루션에 유지하고 이름을 QuizGame10으로 지정합니다.
 
 **QuizGame10 솔루션**
 
@@ -96,7 +96,7 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **P2PHelper**
 
--   솔루션에 새 Windows10 클래스 라이브러리 프로젝트를 만들고 (**새 프로젝트** &gt; **Windows 유니버설** &gt; **클래스 라이브러리 (Windows 유니버설)**) 이름을 p2phelper로 지정 합니다.
+-   솔루션에서 새 Windows10 클래스 라이브러리 프로젝트를 만듭니다 (**새 프로젝트** &gt; **Windows 유니버설** &gt; **클래스 라이브러리 (Windows 유니버설)**) 이름을 p2phelper로 지정 합니다.
 -   새 프로젝트에서 Class1.cs를 삭제합니다.
 -   P2PSession.cs, P2PSessionClient.cs 및 P2PSessionHost.cs를 새 프로젝트 폴더에 복사하고 복사된 파일을 새 프로젝트에 포함합니다.
 -   추가로 변경할 필요 없이 프로젝트가 빌드됩니다.
@@ -146,7 +146,7 @@ rootFrame.Navigate(typeof(MainPage), e.Arguments);
 
 ## <a name="adaptive-ui"></a>적응 UI
 
-QuizGameHost Windows10 앱 앱이 넓은 창 (큰 화면이 있는 장치 수만)에서 실행 중일 때 정상적으로 보입니다. 그러나 앱의 창이 좁은 경우(소형 디바이스에서 이렇고 대형 디바이스에서도 이럴 수 있음) UI가 너무 압축되어 읽을 수 없습니다.
+QuizGameHost Windows10 앱 넓은 창 (큰 화면이 있는 장치에서 가능한 뿐)에서 앱이 실행 중일 때 정상적으로 보입니다. 그러나 앱의 창이 좁은 경우(소형 디바이스에서 이렇고 대형 디바이스에서도 이럴 수 있음) UI가 너무 압축되어 읽을 수 없습니다.
 
 [사례 연구: Bookstore2](w8x-to-uwp-case-study-bookstore2.md)(영문)에서 설명한 대로 적응 Visual State Manager 기능을 사용하여 이 문제를 해결할 수 있습니다. 먼저, 기본적으로 UI가 좁은 상태로 배치되도록 시각적 요소에 대한 속성을 설정합니다. 이러한 모든 변경 내용은 \\View\\HostView.xaml에서 발생합니다.
 
@@ -179,7 +179,7 @@ QuizGameHost Windows10 앱 앱이 넓은 창 (큰 화면이 있는 장치 수만
 ## <a name="universal-styling"></a>범용 스타일 지정
 
 
-Windows10, 단추에 하지 동일한 터치 대상 패딩이 해당 템플릿에 있는 표시 알 수 있습니다. 두 가지 사소한 변경으로 이 문제를 해결할 수 있습니다. 먼저, QuizGameHost 및 QuizGameClient 둘 다에서 app.xaml에 이 태그를 추가합니다.
+Windows10에 단추가 없는 동일한 터치 대상 패딩이 해당 템플릿에 알 수 있습니다. 두 가지 사소한 변경으로 이 문제를 해결할 수 있습니다. 먼저, QuizGameHost 및 QuizGameClient 둘 다에서 app.xaml에 이 태그를 추가합니다.
 
 ```xml
 <Style TargetType="Button">
@@ -197,4 +197,4 @@ Windows10, 단추에 하지 동일한 터치 대상 패딩이 해당 템플릿�
 
 ## <a name="conclusion"></a>결론
 
-이 사례 연구에서 포팅한 앱은 여러 프로젝트, 클래스 라이브러리 1개 및 상당한 양의 코드 및 사용자 인터페이스가 관련된 상대적으로 복잡한 앱이었습니다. 그럼에도 불구하고 포팅은 간단했습니다. Windows10 개발자 플랫폼과 Windows8.1 및 Windows Phone 8.1 플랫폼이 쉬웠던 직접적인 원인 중 일부입니다. 또 다른 이유는 원래 앱이 모델, 보기 모델 및 보기를 별도로 유지하도록 설계된 방식 때문입니다.
+이 사례 연구에서 포팅한 앱은 여러 프로젝트, 클래스 라이브러리 1개 및 상당한 양의 코드 및 사용자 인터페이스가 관련된 상대적으로 복잡한 앱이었습니다. 그럼에도 불구하고 포팅은 간단했습니다. 포팅 중 일부는 직접 Windows10 개발자 플랫폼과 Windows8.1 및 Windows Phone 8.1 플랫폼이 쉬웠던 기인 합니다. 또 다른 이유는 원래 앱이 모델, 보기 모델 및 보기를 별도로 유지하도록 설계된 방식 때문입니다.

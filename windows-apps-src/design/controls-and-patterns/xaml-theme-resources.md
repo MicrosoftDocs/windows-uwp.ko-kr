@@ -14,11 +14,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e576814617204749a37963ac5f2724f290520349
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887087"
+ms.locfileid: "5929522"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -377,7 +377,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 </Style>
 ```
 
-**참고**: [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일 기능이 **RichTextBlock** 에 대 한 블록 기반 문서 개체 모델을 사용 하면 더 쉽게 개별 텍스트에서 특성을 설정할 수 있기 때문에 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 을 수행 하는 모든 텍스트 램프 스타일 없는 요소입니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
+**참고**: [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일 기능이 **RichTextBlock** 에 대 한 블록 기반 문서 개체 모델을 사용 하면 더 쉽게 개별 텍스트에 특성을 설정할 수 있기 때문에 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) 을 수행 하는 모든 텍스트 램프 스타일 없는 요소입니다. 또한 XAML 콘텐츠 속성을 사용하여 [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
 
 ## <a name="miscellaneous-named-styles"></a>기타 명명된 스타일
 

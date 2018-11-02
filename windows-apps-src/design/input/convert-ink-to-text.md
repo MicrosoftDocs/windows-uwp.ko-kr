@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 83142b0a3b24e25f8e7a922d800262f505cd8cc2
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868541"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930480"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
@@ -210,7 +210,7 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
         }
     }
 ```
-6. 다음은 인식 캔버스에 TextBlock을 그리는 함수입니다. TextBlock의 글꼴 크기와 위치를 설정 하려면 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에 사용 합니다.
+6. 다음은 인식 캔버스에 TextBlock을 그리는 함수입니다. TextBlock의 글꼴 크기와 위치를 설정 하는 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에 사용 합니다.
 ```csharp
 /// <summary>
 /// Draw ink recognition text string on the recognitionCanvas.
@@ -229,7 +229,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
     recognitionCanvas.Children.Add(text);
 }
 ```
-7. 다음은 인식 캔버스에 줄임표와 다각형을 그리는 함수입니다. 셰이프의 글꼴 크기와 위치를 설정 하려면 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에 사용 합니다.
+7. 다음은 인식 캔버스에 줄임표와 다각형을 그리는 함수입니다. 셰이프의 글꼴 크기와 위치를 설정 하는 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에 사용 합니다.
 ```csharp
     // Draw an ellipse on the recognitionCanvas.
     private void DrawEllipse(InkAnalysisInkDrawing shape)

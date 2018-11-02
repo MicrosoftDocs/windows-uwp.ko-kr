@@ -1,22 +1,22 @@
 ---
 author: QuinnRadich
 title: Windows 10 빌드 17763 API 변경 사항
-description: 개발자 다음 문서를 사용 하 여 Windows 10 빌드 17763에서에서 변경 되었거나 새로운 네임 스페이스를 식별할 수 있습니다.
+description: 개발자는 다음 목록을 사용 하 여 Windows 10 빌드 17763에서에서 변경 되었거나 새로운 네임 스페이스를 식별할 수 있습니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, Windows 10, 최신, apis, 17763, 10 월
 ms.author: quradic
 ms.date: 10/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e51a7fb64dae42307960aa90f85463d11aecadc
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863262"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933251"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Windows 10의 새로운 Api 17763 빌드
 
-신규 및 업데이트 API 네임 스페이스가 제공 되었습니다 개발자가 Windows 10 빌드 17763에서에서 (10 월 2018 라고도 업데이트 또는 버전 1809). 아래는 이 릴리스에서 추가 또는 수정된 네임스페이스에 게시된 설명서의 전체 목록입니다.
+신규 및 업데이트 API 네임 스페이스 내용이 사용할 수 있는 Windows 10 빌드 17763의에서 개발자 들에 (월 2018 라고도 업데이트 또는 버전 1809). 아래는 이 릴리스에서 추가 또는 수정된 네임스페이스에 게시된 설명서의 전체 목록입니다.
 
 이전의 공개 릴리스에 추가 된 Api에 대 한 정보를 [Windows 10 년 4 월 업데이트의 새로운 Api](windows-10-build-17134-api-diff.md)를 참조 하세요.
 

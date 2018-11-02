@@ -9,18 +9,18 @@ ms.topic: article
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
 ms.openlocfilehash: ef7136868fc9c212640c142db2751bd6e9a0b179
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882892"
+ms.locfileid: "5925562"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
 
 Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객에게 다가갑니다. 앱을 제공할 지역/국가를 선택할 수 있습니다. 지역/국가 또는 지역/국가 그룹 별로 [가격 책정 및 가용성](set-app-pricing-and-availability.md)을 다양하게 사용자 지정할 수 있는 옵션도 있습니다.
 
-앱을 전 세계에 적합 한 고객 수 있도록 정보를 [세계화 지침](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) 및 [지역화할 수 있는 앱](../design/globalizing/prepare-your-app-for-localization.md)을 참조 하세요.
+앱을 전 세계에 적합 한 고객 수 있도록 정보를 [지역화할 수 있는 앱](../design/globalizing/prepare-your-app-for-localization.md)및 [세계화 지침](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) 을 참조 하세요.
 
 > [!NOTE]
 > 이 항목은 앱을 가리키지만, 추가 기능 제출을 위한 시장 선택은 동일한 프로세스를 사용합니다.
@@ -36,7 +36,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 새 취득에만 선택 내용이 적용됩니다. 특정 지역/국가에서 앱을 소유하고 있는 사용자의 경우, 지역/국가를 제거해도 계속 사용을 할 수 있습니다. 그러나 제출한 업데이트를 다운로드 할 수 없고, 해당 지역/국가의 새 고객은 누구도 앱을 다운로드 할 수 없습니다.
 
 > [!IMPORTANT]
-> 것 이러한 요구 사항이 여기 나 파트너 센터에 나열 되지 않더라도 지역의 법적 요구를 충족 하도록 해야 합니다.
+> 것 이러한 요구 사항이 여기 나 파트너 센터에 나열 되지 않더라도 지역의 법적 요구 사항을 충족 해야 합니다.
 
 모든 지역/국가를 선택하더라도 현지 법률 및 제한이나 기타 요소로 인해 특정 앱은 일부 국가 및 지역에 나열되지 않을 수 있습니다. 또한 일부 지역/국가에는 연령별 등급과 관련된 특정 요구 사항이 있을 수 있습니다. 앱이 이러한 요구 사항을 충족하지 않을 경우 앱을 해당 지역/국가에 제공할 수 없습니다. 자세한 내용은 [연령별 등급](age-ratings.md)을 참조하세요.
 
@@ -48,7 +48,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 ## <a name="microsoft-store-consumer-markets"></a>Microsoft 스토어 소비자 지역/국가
 
-다음 지역/국가 중 하나 이상에 앱 또는 추가 기능을 나열하도록 선택할 수 있습니다. 별표가 된 지역/국가에서 Xbox One; Microsoft 스토어를 지원 **Xbox** **지역/국가 선택** 팝업 창의 이름 옆에 표시 됩니다.
+다음 지역/국가 중 하나 이상에 앱 또는 추가 기능을 나열하도록 선택할 수 있습니다. 별표가 된 지역/국가에서 Xbox One; Microsoft Store 지원 **지역/국가 선택** 팝업 창의 이름 옆에 있는 **Xbox** 볼 수 있습니다.
 
 
 <table>
@@ -368,7 +368,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>Taiwan *</td>
+    <td>대만*</td>
     <td>타지키스탄</td>
   </tr>
   <tr>
@@ -478,9 +478,9 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Windows 8.x용 "나머지 국가" 지역/국가
 
-이전에 게시 된 앱에 Windows를 대상으로 하는 패키지가 포함 하는 경우이 다양 한 지역/국가 하나의 "나머지 국가" 지역/국가에서 Windows 스토어를 사용 하는 고객에 대 한으로 처리 되는 주의 해야 할 중요 8.x 8.x 개별 지역/국가으로 표시 된다 파트너 센터.
+이전에 게시 된 앱 Windows를 대상으로 하는 패키지를 포함 하는 경우이 다양 한 지역/국가 하나의 "나머지 국가" 지역/국가에서 Windows 스토어를 사용 하는 고객에 대 한으로 처리 되는 주의 해야 할 중요 8.x 8.x는 국가로 표시 된다 하더라도 개별 지역/국가 파트너 센터.
 
-앱을 제출할 때 기본 지역/국가 선택을 유지 하면이에 대해 걱정할 필요가 및 앱은 모든 가능한 지역/국가 사용할 수 있습니다. 그러나 특정 지역/국가 제외 하려는 경우 유의 다음 "나머지 국가" 지역/국가 하나라도 제외 하 고 의미 *있는* Windows8 또는 Windows8.1 고객에 게 "나머지 국가" 지역/국가에서 앱 사용할 수 없습니다.
+앱을 제출할 때 기본 지역/국가 선택 항목을 유지 하면이에 대해 걱정할 필요가 하 고 앱이 모든 가능한 지역/국가에 제공 됩니다. 그러나 특정 지역/국가 제외 하려는 경우에 유의 즉 하나라도 이러한 "나머지 국가" 지역/국가 제외한 *모든* Windows8 또는 Windows8.1 고객에 게 "나머지 국가" 지역/국가에서 앱 사용할 수 없습니다.
 
 Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습니다.
 

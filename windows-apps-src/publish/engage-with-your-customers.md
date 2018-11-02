@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9f266538c42b83da9135079f51a3f935f459020
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5878254"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930838"
 ---
 # <a name="engage-with-your-customers"></a>고객과의 소통
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하면 드라이브 고객 참여 및 만족도 기능이 있습니다. 알림, 리뷰 및 피드백에 응답 하는 대상된 제품을 사용 하는 방법을 알아봅니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하면 드라이브 고객 참여 및 만족도 기능이 있습니다. 알림, 대상된 제품, 리뷰 및 피드백에 응답을 사용 하는 방법을 알아봅니다.
 
 -   [고객 그룹 만들기](create-customer-groups.md)
 -   [고객 리뷰에 응답](respond-to-customer-reviews.md)

@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5888892"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5932821"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 템플릿 및 패턴 사용
 
@@ -61,7 +61,7 @@ Ja-JP: "{month.integer}月{day.integer}日"
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-위의 포맷터 괄호 안에 개별 구성 요소에 대 한 문화권별 값을 반환 합니다. {}. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
+위의 포맷터는 괄호 안에 개별 구성 요소에 대 한 문화권별 값을 반환 합니다. {}. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
 
 ``` syntax
 En-US: January 1
@@ -115,7 +115,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` 리소스 파일(.resw)에서 지역화할 리소스를 나타내는 리소스 ID입니다. 값으로 설정 됩니다이 기본 언어인 영어 (미국), "{0} | {1}"나타낸다는 설명과 함께 하 는"{0}"은 날짜 및"{1}"시간입니다. 이런 방식으로 번역자는 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어, 일부 언어나 지역에서 시간이 날짜 앞에 오는 것이 더 자연스럽게 느껴지면 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 기호 문자로 바꿀 수 있습니다.
+`CustomDateTimeFormatString` 리소스 파일(.resw)에서 지역화할 리소스를 나타내는 리소스 ID입니다. 값으로 설정 됩니다이 기본 언어인 영어 (미국), "{0} | {1}"나타낸다는 설명과 함께"{0}"은 날짜 및"{1}"시간입니다. 이런 방식으로 번역자는 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어, 일부 언어나 지역에서 시간이 날짜 앞에 오는 것이 더 자연스럽게 느껴지면 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 기호 문자로 바꿀 수 있습니다.
 
 이 예를 구현하는 또다른 방법은 형식 패턴에 2개의 포맷터를 쿼리하고 함께 연결한 다음 결과 형식 패턴에서 세 번째 포맷터를 구성하는 것입니다.
 

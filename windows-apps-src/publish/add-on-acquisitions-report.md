@@ -9,16 +9,16 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능 판매, 추가 기능 구입, iap 판매, 앱 내 제품, iaps, 추가 기능
 ms.localizationpriority: medium
 ms.openlocfilehash: 63884d9cce24e6b85f3001ac4c6eb1a07141bfd4
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5886001"
+ms.locfileid: "5932089"
 ---
 # <a name="add-on-acquisitions-report"></a>추가 기능 구입 보고서
 
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **추가 기능 구입** 보고서를 확인할 수 있습니다 얼마나 많은 추가 기능 수와 통계와 함께 인구 통계 및 플랫폼 세부 정보 및 (Xbox 포함) 고객 Windows10 위한 변환 정보를 보여 줍니다. 마지막 시간 또는 2/72 시간 기간에 대 한 근 실시간 취득 데이터도 볼 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **추가 기능 구입** 보고서를 확인할 수 있습니다 얼마나 많은 추가 기능 수와 통계와 함께 인구 통계 및 플랫폼 세부 정보 및 (Xbox 포함) 고객 Windows10 위한 변환 정보를 보여 줍니다. 마지막 시간 또는 2/72 시간 동안 근 실시간 취득 데이터도 볼 수 있습니다.
 
 파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "5886001"
 
 ## <a name="apply-filters"></a>필터 적용
 
-페이지 위쪽에서 데이터가 표시되는 기간을 선택할 수 있습니다. 기본 설정은 **30D**(30일)이지만, 3개월, 6개월 또는 12개월 동안 데이터를 표시하거나 사용자가 지정한 데이터 범위에서 데이터를 표시하도록 선택할 수 있습니다. **1 H** 또는 **72h** 1 시간 또는 2/72 시간; 실시간으로 구입 데이터를 표시 하도록 선택할 수도 있습니다. 이러한 기간 **추가 기능 구입** 차트의 **추가 기능을 매일** 탭 하 고 **지역/국가** 차트의 **구입** 탭에만 적용 됩니다. 
+페이지 위쪽에서 데이터가 표시되는 기간을 선택할 수 있습니다. 기본 설정은 **30D**(30일)이지만, 3개월, 6개월 또는 12개월 동안 데이터를 표시하거나 사용자가 지정한 데이터 범위에서 데이터를 표시하도록 선택할 수 있습니다. **1 H** 또는 **72h** 1 시간 또는 2/72 시간; 거의 실시간으로 구입 데이터를 표시 하도록 선택할 수도 있습니다. 이러한 기간 **추가 기능 구입** 차트의 **추가 기능 매일** 탭 하 고 **지역/국가** 차트의 **구입** 탭에만 적용 됩니다. 
 
 또한 **필터**를 확장하여 특정 추가 기능, 시장 및/또는 장치 유형을 기준으로 이 페이지의 모든 데이터를 필터링할 수 있습니다.
 

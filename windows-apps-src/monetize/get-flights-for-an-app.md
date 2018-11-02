@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
 ms.openlocfilehash: 847e837c67990b5cbdb3a7a28c0c8115e96c8644
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887519"
+ms.locfileid: "5930394"
 ---
 # <a name="get-package-flights-for-an-app"></a>앱의 패키지 플라이트 가져오기
 

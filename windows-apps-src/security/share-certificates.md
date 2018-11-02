@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 044b1b60b80cec1fc40adda6b9b6d44bee34ce7c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5860727"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5927227"
 ---
 # <a name="share-certificates-between-apps"></a>앱 간에 공유 인증서
 
@@ -76,7 +76,7 @@ ms.locfileid: "5860727"
 
 사용 가능한 클라이언트 인증서가 없으면 사용자가 인증서 저장소에 인증서를 추가 해야 합니다. 사용자가 클라이언트 인증서를 포함하는 PFX 파일을 선택하고 해당 인증서를 클라이언트 인증서 저장소로 가져올 수 있도록 하는 코드를 앱에 포함할 수 있습니다.
 
-**팁**를 통해이 빠른 시작 사용할 PFX 파일을 만드는 makecert.exe를 사용할 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)를 참조하세요.
+**팁**makecert.exe를 사용 하 여이 빠른 시작을 사용 하는 PFX 파일을 만들 수 있습니다. makecert.exe 사용에 대한 자세한 내용은 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)를 참조하세요.
 
  
 

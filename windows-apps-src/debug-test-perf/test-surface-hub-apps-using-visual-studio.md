@@ -9,14 +9,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 63214ce47bffc5a0b13f421e5185d06cd810ea34
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868840"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5928659"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Visual Studio를 사용하여 Surface Hub 앱 테스트
-Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터 Surface Hub와 동일한 사용자 인터페이스 사용 하지 않지만 앱의 모양 및 Surface Hub의 화면 크기와 해상도 사용 하 여이 동작을 테스트 하는 데 유용 합니다.
+Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터는 Surface Hub와 동일한 사용자 인터페이스를 사용 하지 않지만 앱의 모양 및 Surface Hub의 화면 크기와 해상도 사용 하 여이 동작을 테스트 하는 데 유용 합니다.
 
 시뮬레이터 도구에 대 한 자세한 내용은 일반적으로 [시뮬레이터에서 실행 하는 UWP 앱](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator)을 참조 하세요.
 
@@ -71,7 +71,7 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
     ![Visual Studio 시뮬레이터 해상도](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > Surface Hub의 환경을 시뮬레이션할 더 잘 [태블릿 모드를 켭니다](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) .
+   > Surface Hub의 경험을 시뮬레이션할 더 나은를 [태블릿 모드를 켭니다](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) .
 
 ## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Visual Studio에서 Surface Hub 디바이스에 앱 배포
 수동으로 Surface Hub에 앱을 배포는 간단한 프로세스입니다.
@@ -106,9 +106,9 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
 2. Surface Hub의 IP 주소를 입력합니다. **유니버설** 인증 모드가 선택되었는지 확인합니다.
 
    > [!TIP] 
-   > 개발자 모드를 사용 하도록 설정한 후에 시작 화면에 Surface Hub의 IP 주소를 확인할 수 있습니다.
+   > 개발자 모드를 사용 하도록 설정한 후 시작 화면에 Surface Hub의 IP 주소를 찾을 수 있습니다.
 
 3. 배포 하 고 Surface Hub에서 앱을 디버그 하는 **디버깅 시작 (F5)** 을 선택 하거나 Ctrl + f 5를 눌러 앱을 배포만 합니다.
 
    > [!TIP]
-   > Surface Hub 시작 화면을 표시 하는 경우 아무 단추나 선택 하 여 해제 합니다.
+   > Surface Hub 시작 화면을 표시 하는 있으면 아무 단추나 선택 하 여 해제 합니다.

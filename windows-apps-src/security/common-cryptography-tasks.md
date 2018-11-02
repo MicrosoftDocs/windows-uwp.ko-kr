@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bca6496498c9d7a9caaf958fdc7e74dc16ccc98
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873428"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5932430"
 ---
 # <a name="common-cryptography-tasks"></a>일반적인 암호화 작업
 

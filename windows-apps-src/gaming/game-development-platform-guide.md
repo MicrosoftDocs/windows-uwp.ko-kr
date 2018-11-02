@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885651"
+ms.locfileid: "5926581"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>UWP 앱용 게임 기술
 
@@ -24,7 +24,7 @@ ms.locfileid: "5885651"
 ##  <a name="benefits-of-windows10-for-game-development"></a>게임 개발을 위한 Windows10의 이점
 
 
-UWP Windows10에서 도입 되면서 Windows10 타이틀이 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 Windows10 클라이언트의 지속적으로 증가 수 있기 때문입니다. 이 두 가지의 조합은 Windows10 타이틀 아주 많은 고객이 Microsoft Store를 통해 연결할 수 있는 것을 의미 합니다.
+Windows10에서 UWP의 도입 되면서, Windows10 제목 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 Windows10 클라이언트의 증가 마이그레이션할 수 있기 때문입니다. 이 두 가지의 조합은 Windows10 제목 아주 많은 고객이 Microsoft Store를 통해 연결할 수 있는 것을 의미 합니다.
 
 또한 Windows10 게임에 특히 유용한 많은 새로운 기능을 제공 합니다.
 
@@ -39,7 +39,7 @@ UWP Windows10에서 도입 되면서 Windows10 타이틀이 모든 Microsoft 플
 ## <a name="development-environment"></a>개발 환경
 
 
-UWP 용 게임을 만들려면 Visual Studio 2015를 설치 하 여 개발 환경을 설정 해야 합니다. 권장 Visual Studio의 최신 버전을 설치 하는 최신 개발 및 보안 업데이트에 대 한 액세스를 제공 합니다. Visual Studio는 UWP 앱을 만들 수 있습니다 하 고 게임 개발을 위한 도구를 제공 합니다.
+UWP 용 게임을 만들려면 Visual Studio 2015를 설치 하 여 개발 환경을 설정 해야 합니다. 권장 Visual Studio의 최신 버전을 설치 하는 최신 개발 및 보안 업데이트에 대 한 액세스를 제공 합니다. Visual Studio에서는 UWP 앱을 만드는 수 있으며 게임 개발용 도구를 제공 합니다.
 
 -   DX 게임 프로그래밍용 Visual Studio 도구 - Visual Studio에서는 이미지, 모델 및 셰이더 리소스를 만들고, 편집하고, 미리 보고, 내보낼 수 있는 도구를 제공합니다. 빌드 시 리소스를 변환하고 DirectX 그래픽 코드를 디버그하는 데 사용할 수 있는 도구도 있습니다. 자세한 내용은 [게임 프로그래밍용 Visual Studio 도구 사용](set-up-visual-studio-for-game-development.md)을 참조하세요.
 -   Visual Studio 그래픽 진단 기능 - 이제 그래픽 진단 도구를 Windows 내에서 옵션 기능으로 사용할 수 있습니다. 진단 도구를 사용하여 그래픽 디버깅 및 그래픽 프레임 분석을 수행하고 GPU 사용을 실시간으로 모니터링할 수 있습니다. 자세한 내용은 [DirectX 런타임 및 Visual Studio 그래픽 진단 기능 사용](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md)을 참조하세요.
@@ -323,7 +323,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
 
 ## <a name="xbox-live-services"></a>Xbox Live 서비스
 
-[Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 개발자를 UWP 게임에 Xbox Live를 통합 하 고 Xbox One 및 Windows10을 게시할 수 있습니다. 최소한의 개발 시간을 투자하여 로그인, 상태, 순위표 등의 Xbox Live 소셜 환경을 타이틀과 통합하세요. Xbox Live 소셜 기능은 5500만이 넘는 활성 사용자에게 인지도를 확산시켜 고객을 조직적으로 유치할 수 있도록 설계되었습니다.
+[Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 모든 개발자를 UWP 게임에 Xbox Live를 통합 하 고 Xbox One 및 Windows10을 게시할 수 있습니다. 최소한의 개발 시간을 투자하여 로그인, 상태, 순위표 등의 Xbox Live 소셜 환경을 타이틀과 통합하세요. Xbox Live 소셜 기능은 5500만이 넘는 활성 사용자에게 인지도를 확산시켜 고객을 조직적으로 유치할 수 있도록 설계되었습니다.
 
 훨씬 다양한 Xbox Live 기능을 사용하고 전용 마케팅 및 개발 지원을 이용하고 메인 Xbox One 스토어에 추천 앱으로 등록되고 싶다면 [ID@Xbox](http://www.xbox.com/developers/id) 프로그램에 지원하세요. Xbox Live 크리에이터스 프로그램 및 ID@Xbox프로그램에 제공되는 기능을 살펴보려면 [기능표](../xbox-live/developer-program-overview.md#feature-table)를 참조하세요.
 

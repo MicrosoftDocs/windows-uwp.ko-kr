@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d32d5a77fe9bc840ea676c7156c1b59e498d07e1
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874776"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933526"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Mipmap을 사용하는 텍스처 필터링
 
@@ -49,7 +49,7 @@ Mipmap을 사용하려면 응용 프로그램이 Mipmap 세트를 생성해야 �
 
 Mipmap 텍스처는 렌더링 시간을 줄일 목적으로 3D 장면에 사용됩니다. 또한 장면의 현실감을 높이기도 합니다. 단, 종종 많은 양의 메모리가 필요합니다.
 
-**참고**  체인에서 이전 표면의 절반은 mipmap 사슬에서 각 표면 차원이 합니다. 예를 들어 최상위 Mipmap의 크기가 256x128이라면, 두 번째 Mipmap의 크기가 128x64이고, 세 번째가 64x32인 식으로 이어져 1x1까지 계속 됩니다. 수준에서 다수의 Mipmap 수준을 요청할 수는 없습니다. 사슬의 Mipmap 너비 또는 높이가 1보다 작아질 수도 있기 때문입니다. 쉽게 말해서 최상위 Mipmap 표면의 크기가 4x2라면 수준에서 허용되는 최대 값은 3입니다. 최상위 크기가 4x2이면, 두 번째는 2x1이고, 세 번째는 1x1이 됩니다. 수준에서 값을 3보다 크게 설정하면 두 번째 Mipmap의 높이가 분수 값이 되어 사용할 수 없습니다.
+**참고**  체인의 표면의 절반은 mipmap 사슬에서 각 표면 차원이 합니다. 예를 들어 최상위 Mipmap의 크기가 256x128이라면, 두 번째 Mipmap의 크기가 128x64이고, 세 번째가 64x32인 식으로 이어져 1x1까지 계속 됩니다. 수준에서 다수의 Mipmap 수준을 요청할 수는 없습니다. 사슬의 Mipmap 너비 또는 높이가 1보다 작아질 수도 있기 때문입니다. 쉽게 말해서 최상위 Mipmap 표면의 크기가 4x2라면 수준에서 허용되는 최대 값은 3입니다. 최상위 크기가 4x2이면, 두 번째는 2x1이고, 세 번째는 1x1이 됩니다. 수준에서 값을 3보다 크게 설정하면 두 번째 Mipmap의 높이가 분수 값이 되어 사용할 수 없습니다.
 
  
 

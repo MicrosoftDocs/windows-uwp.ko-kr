@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 7cb93c410f583884f75f21d9beda03db87c024f9
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5884924"
+ms.locfileid: "5931987"
 ---
 # <a name="handle-app-suspend"></a>앱 일시 중단 처리
 
@@ -144,7 +144,7 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다. 일시 중단 상태 사용 [ **ExtendedExecutionSession** 시간을 확장 하려면](run-minimized-with-extended-execution.md)
 
 > [!NOTE]
-> Windows8.1에서 시스템 응답을 향상 하려면 앱에 제공 됩니다 낮은 우선 순위 액세스 리소스는 일시 중단 시 합니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
+> Windows8.1에서 시스템 응답을 향상 하려면 앱에 제공 됩니다 낮은 우선 순위 액세스 리소스 일시 중단 됩니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
 
 **Visual Studio를 사용하는 디버깅에 대한 참고 사항:** Visual Studio에서는 Windows가 디버거에 연결되어 있는 앱을 일시 중단하지 못하도록 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
 

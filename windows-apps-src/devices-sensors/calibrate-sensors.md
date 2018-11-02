@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5cd4e1b6d807437adbdd7428ae35d26915c48713
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877828"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5932561"
 ---
 # <a name="calibrate-sensors"></a>센서 보정
 

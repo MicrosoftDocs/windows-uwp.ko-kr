@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a7250c41795373b089f7a4c76b603c169b1e4dc3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5866023"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5932516"
 ---
 # <a name="enable-device-capabilities"></a>디바이스 기능 사용
 
@@ -26,7 +26,7 @@ ms.locfileid: "5866023"
 
 Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 매니페스트에 지정해야 합니다. Visual Studio에서 [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx)를 사용하여 대부분의 접근 권한 값을 선언할 수 있으며, [패키지 매니페스트에서 장치 접근 권한 값을 지정하는 방법(수동)](https://msdn.microsoft.com/library/windows/apps/Dn263092)에 설명된 대로 수동으로 해당 접근 권한 값을 추가할 수 있습니다. 이 자습서에서는 매니페스트 디자이너를 사용한다고 가정합니다.
 
-**참고**  일부 프린터, 스캐너 및 센터와 같은 디바이스 유형은 앱 패키지 매니페스트에서 선언할 필요가 없습니다.
+**참고**  장치, 프린터, 스캐너 및 센터와 같은 일부 유형의 앱 패키지 매니페스트에 선언할 필요가 없습니다.
 
 -   Visual Studio 솔루션 탐색기에서 패키지 매니페스트 파일 **Package.appxmanifest**을 두 번 클릭합니다.
 -   **접근 권한 값** 탭을 엽니다.

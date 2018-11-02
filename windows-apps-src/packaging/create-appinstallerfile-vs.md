@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d4740c132f274cb3eeee5776790d077d2cbec47
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5865518"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5925582"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Visual Studio를 사용하여 앱 설치 관리자 파일 만들기
 
@@ -32,7 +32,7 @@ Windows 10 버전 1804, and Visual Studio 2017 업데이트 15.7부터 사이드
 
 ### <a name="create-packages"></a>패키지 만들기
 
-테스트용 로드를 통해 앱을 배포 하려면 앱 패키지 (.appx/.msix) 또는 앱 번들 (.appxbundle/.msixbundle) 만들기 하 고 공유 위치에 게시 해야 합니다.
+테스트용 로드를 통해 앱을 배포 하려면 앱 패키지 (.appx/.msix) 또는 앱 번들 (.appxbundle/.msixbundle) 만들기 및 공유 위치에 게시 해야 있습니다.
 
 이를 위해 다음 단계를 따라 Visual Studio에서 **앱 패키지 만들기** 마법사를 사용합니다.
 

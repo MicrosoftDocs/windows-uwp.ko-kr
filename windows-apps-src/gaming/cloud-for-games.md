@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d15d3e6b6beb773a8d606db7a5d8a17544270be
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887840"
+ms.locfileid: "5926529"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 

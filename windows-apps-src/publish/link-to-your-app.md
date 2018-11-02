@@ -9,16 +9,16 @@ ms.topic: article
 keywords: Windows 10, uwp, 링크, windows 스토어 프로토콜, 앱 연결, 앱 링크
 ms.localizationpriority: medium
 ms.openlocfilehash: d0d0a9fc862734611167e5118392126cb42687f2
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5870990"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930888"
 ---
 # <a name="link-to-your-app"></a>앱에 대한 링크
 
 
-고객이 Microsoft Store에서 앱의 목록에 연결 하 여 앱을 찾을 수 있습니다.
+Microsoft Store에서 앱 목록에 연결 하 여 앱을 검색 하는 고객을 보호할 수 있습니다.
 
 ## <a name="getting-the-link-to-your-apps-store-listing"></a>앱의 스토어 목록에 대한 링크 가져오기
 
@@ -29,9 +29,9 @@ ms.locfileid: "5870990"
 
 ## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Microsoft 스토어 배지를 사용 하 여 앱의 스토어 목록에 연결
 
-Microsoft Store에 앱이 고객에 게 알려주는 사용자 지정 배지를 사용 하 여 앱의 목록에 직접 연결할 수 있습니다.
+고객이 Microsoft Store에 앱을 확인할 수 있도록 사용자 지정 배지를 사용 하 여 앱의 목록에 직접 연결할 수 있습니다.
 
-배지를 만들려면 [Microsoft Store 배지에](http://go.microsoft.com/fwlink/p/?LinkID=534236) 페이지를 방문 하세요. 배지 및 링크를 만들려면 앱의 12문자 **Store ID**가 있어야 합니다. **앱 관리** 섹션의 [앱 ID](view-app-identity-details.md) 페이지에서 앱의 **스토어 ID**를 찾을 수 있습니다.
+배지를 만들려면, [Microsoft 스토어 배지](http://go.microsoft.com/fwlink/p/?LinkID=534236) 페이지를 방문 하세요. 배지 및 링크를 만들려면 앱의 12문자 **Store ID**가 있어야 합니다. **앱 관리** 섹션의 [앱 ID](view-app-identity-details.md) 페이지에서 앱의 **스토어 ID**를 찾을 수 있습니다.
 
 > [!NOTE]
 > 정보 및 Microsoft 스토어 배지 사용에 관련 된 요구 사항에 대 한 [앱 마케팅 지침](app-marketing-guidelines.md) 을 참조 하세요.
@@ -39,7 +39,7 @@ Microsoft Store에 앱이 고객에 게 알려주는 사용자 지정 배지를 
 
 ## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Microsoft Store에서 앱에 직접 연결
 
-Microsoft Store를 시작 하 고 사용 하 여 브라우저를 열지 않고도 앱의 목록 페이지로 직접 이동 하는 링크를 만들 수는 **ms-windows-저장소:** URI 스키마 합니다.
+Microsoft Store를 시작 하 고 사용 하 여 브라우저를 열지 않고도 앱의 목록 페이지로 직접 이동 하는 링크를 만들 수는 **ms-windows-스토어:** URI 스키마 합니다.
 
 이러한 링크는 사용자가 Windows 장치에 있으며 스토어의 목록 페이지에 직접 도달하고자 하는 경우에 유용합니다. 예를 들어, 브라우저에서 사용자 에이전트 문자열을 확인하여 사용자의 운영 체제가 스토어를 지원한다는 것을 확인한 후나 UWP 앱을 통해 이미 통신을 하고 있을 때 이 링크를 사용하고 싶을 수 있습니다.
 

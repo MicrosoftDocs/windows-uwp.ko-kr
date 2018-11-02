@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 984653ad20fc40035528ab7e32b904e64d6ff8c5
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869293"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5927399"
 ---
 # <a name="draw-shapes"></a>셰이프 그리기
 
@@ -104,7 +104,7 @@ layoutRoot.Children.Add(rectangle1);
 
 ![렌더링된 사각형](images/shapes-rectangle.jpg)
 
-**팁**시나리오도 있습니다 UI 정의에 있는 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 사용 하는 대신 [**테두리**](https://msdn.microsoft.com/library/windows/apps/BR209250) 를 더 적절할 수 있습니다. 다른 콘텐츠 주위에 사각형 셰이프를 만들려는 경우 **Border**를 사용하는 것이 더 나을 수 있습니다. 그러면 자식 콘텐츠를 사용할 수 있고 **Rectangle**처럼 높이와 너비에 고정 치수를 사용하는 대신 해당 콘텐츠를 둘러싸도록 크기가 자동으로 지정됩니다. **Border**에는 [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius) 속성을 설정할 경우 모서리를 둥글게 하는 옵션도 있습니다.
+**팁**일부의 시나리오가 있습니다 UI 정의에 있는 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 사용 하는 대신 [**테두리**](https://msdn.microsoft.com/library/windows/apps/BR209250) 를 더 적절할 수 있습니다. 다른 콘텐츠 주위에 사각형 셰이프를 만들려는 경우 **Border**를 사용하는 것이 더 나을 수 있습니다. 그러면 자식 콘텐츠를 사용할 수 있고 **Rectangle**처럼 높이와 너비에 고정 치수를 사용하는 대신 해당 콘텐츠를 둘러싸도록 크기가 자동으로 지정됩니다. **Border**에는 [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius) 속성을 설정할 경우 모서리를 둥글게 하는 옵션도 있습니다.
 
 반면에 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)은 컨트롤 컴퍼지션에 더 적합한 선택일 수 있습니다. **Rectangle** 셰이프는 포커스 가능 컨트롤의 "FocusVisual" 부분을 사용되므로 많은 컨트롤 템플릿에 표시됩니다. 이 직사각형은 컨트롤이 "Focused" 시각적 상태일 때마다 표시되며 다른 상태에서는 숨겨집니다.
 
@@ -143,7 +143,7 @@ layoutRoot.Children.Add(polygon1);
 
 ![렌더링된 다각형](images/shapes-polygon.jpg)
 
-**팁** [**지점**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값은 종종 셰이프의 정점 선언이 아닌 다른 시나리오에 대 한 XAML에서 한 형식으로 사용 됩니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)에 대한 API 참조 항목을 참조하세요.
+**팁**는 [**지점**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값은 종종 셰이프의 정점 선언이 아닌 다른 시나리오에 대 한 XAML에서 한 형식으로 사용 됩니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)에 대한 API 참조 항목을 참조하세요.
 
 ## <a name="line"></a>선
 
@@ -171,7 +171,7 @@ layoutRoot.Children.Add(line1);
 
 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)은 **Polyline**의 마지막 점이 첫 번째 점에 연결되지 않는다는 것을 제외하고, 점 집합에 의해 셰이프의 경계가 정의된다는 점에서 [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon)과 유사합니다.
 
-**참고**  동일한 시작 지점을 명시적으로 가지기 및 [**포인트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 끝점 설정 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)있지만 경우 아마도 수를 사용한 [**다각형**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) 대신 합니다.
+**참고**  는 동일한 시작점을 명시적으로 사용할 수 있습니다 및 [**포인트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 끝점 설정 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)있지만 경우 아마도 수를 사용한 [**다각형**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) 대신 합니다.
 
 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출 커밋
 ms.localizationpriority: medium
 ms.openlocfilehash: 594fb7bdbf1e56243837d2e9e3ebe1aced7eceff
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5888593"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5932109"
 ---
 # <a name="commit-an-app-submission"></a>앱 제출 커밋
 

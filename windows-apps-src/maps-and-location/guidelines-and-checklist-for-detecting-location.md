@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 위치, 지도, 지리적 위치
 ms.localizationpriority: medium
 ms.openlocfilehash: d0101124febc52da379d2e829e86bdbba7583851
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863420"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933354"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>위치 인식 앱에 대한 지침
 
@@ -77,7 +77,7 @@ ms.locfileid: "5863420"
 
         위치 데이터를 제공하는 장치는 서로 다른 앱에서 요청하는 보고서 간격을 추적하고, 최소 요청 간격으로 데이터 보고서를 제공합니다. 그러면 정확성에 대한 요구가 가장 큰 앱이 필요한 데이터를 받을 수 있습니다. 따라서 다른 앱이 업데이트를 더 자주 요청한 경우, 위치 제공자가 앱에서 요청한 것보다 더 높은 빈도로 업데이트를 생성할 수 있습니다.
 
-        **참고**위치 소스가 지정 된 보고서 간격에 대 한 요청을 처리할는 보장 되지 않습니다. 모든 위치 제공자 장치가 보고서 간격을 추적하는 것은 아니지만, 추적하는 장치를 위해 여전히 정보를 제공해야 합니다.
+        **참고**는 지정 된 보고서 간격에 대 한 요청 위치 소스가 됩니다 지킬 것인지는 보장 되지 않습니다. 모든 위치 제공자 장치가 보고서 간격을 추적하는 것은 아니지만, 추적하는 장치를 위해 여전히 정보를 제공해야 합니다.
 
     -   전기를 절약하려면 앱에 매우 정확한 데이터가 필요한지 여부를 위치 플랫폼에 알리기 위해 [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) 속성을 설정해야 합니다. 매우 정확한 데이터를 요구하는 앱이 없으면 GPS 공급자를 켜지 않음으로써 시스템에서 전기를 절약할 수 있습니다.
 
@@ -89,7 +89,7 @@ ms.locfileid: "5863420"
         예를 들면 다음과 같습니다.
 
         -   앱이 광고 튜닝, 날씨, 뉴스 등에 대한 위치를 얻고 있는 경우 일반적으로 5000미터 정확성이면 충분합니다.
-        -   지역에서 거래 근처에 있는 앱 표시 하는 경우 300 미터 정확성이 일반적으로 좋은 결과를 제공 합니다.
+        -   앱의 환경에서 거래 근처에 있는 표시 하는 경우 300 미터 정확성이 일반적으로 좋은 결과 제공 하도록 합니다.
         -   사용자가 인근 음식점에 대한 추천을 찾고 있는 경우 블록 내에서 위치를 얻으려고 하므로 100미터 정확성이 충분합니다.
         -   사용자가 자신의 위치를 공유하려고 하는 경우 앱은 약 10미터 정확성을 요청해야 합니다.
     -   앱에 특정 정확성 요구 사항이 있는 경우 [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) 속성을 사용하세요. 예를 들어 내비게이션 앱은 사용 가능한 위치 데이터가 앱의 요구 사항을 충족하는지 확인하기 위해 **Geocoordinate.accuracy** 속성을 사용해야 합니다.
@@ -103,7 +103,7 @@ ms.locfileid: "5863420"
     -   원시 센서에는 가속도계, 회전계 및 자력계가 포함됩니다.
     -   퓨전 센서에는 방향, 경사계 및 나침반이 포함됩니다. 퓨전 센서는 원시 센서의 조합에서 데이터를 가져옵니다.
 
-    Windows RuntimeAPIs 모든이 센서는 자력 계를 제외 하 고 액세스할 수 있습니다. 퓨전 센서는 원시 센서보다 더 정확하고 안정적이지만 전원을 더 많이 사용합니다. 따라서 용도에 적합한 센서를 사용해야 합니다. 자세한 내용은 [센서](https://msdn.microsoft.com/library/windows/apps/mt187358)를 참조하세요.
+    Windows RuntimeAPIs 이러한 센서는 자력 계를 제외한 모든 액세스할 수 있습니다. 퓨전 센서는 원시 센서보다 더 정확하고 안정적이지만 전원을 더 많이 사용합니다. 따라서 용도에 적합한 센서를 사용해야 합니다. 자세한 내용은 [센서](https://msdn.microsoft.com/library/windows/apps/mt187358)를 참조하세요.
 
 **연결된 대기 상태**
 - PC가 연결된 대기 상태이면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 항상 인스턴스화할 수 있습니다. 그러나 **Geolocator** 개체에서 집계할 센서를 찾을 수 없으므로 [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 호출은 7초 후 시간 초과되고 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트 수신기가 호출되지 않으며 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트 수신기는 **NoData** 상태로 한 번 호출됩니다.

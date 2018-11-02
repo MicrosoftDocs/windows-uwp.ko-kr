@@ -9,23 +9,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 54118b41fc1f3036dddba9a0cfb8ecd860c1e233
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873513"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930060"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight를 UWP API로 매핑
 
 
 이 항목에서는 이와 동일한 유니버설 Windows 플랫폼 (UWP)에 대 한 포괄적인 매핑을 WindowsPhone Silverlight api를 제공 합니다. 일반적으로는 기능이 일대일로 매핑되지는 않지만 각 플랫폼의 네임스페이스 또는 클래스에 비슷한 기능이 있을 수 있습니다.
 
-매핑 테이블 UWP 프로젝트에서 작업 하 고 다시 WindowsPhone Silverlight 프로젝트의에서 소스 코드를 사용 하는 경우에 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
+매핑 테이블 UWP 프로젝트에서 작업 중인 WindowsPhone Silverlight 프로젝트의 소스 코드를 다시 사용 하는 경우에 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
 
-**테이블을 사용 하는 방법:** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡한 모든 경우에 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
+**표를 사용 하는 방법:** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡한 모든 경우에 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
 
-**참고**Windows10 보다 훨씬 더.NET framework Windows Phone 스토어 앱을 많이 지원 합니다. 예를 들어 Windows10 여러 System.ServiceModel.\* 네임 스페이스 뿐만 아니라 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets에 있습니다.
-또한 Windows10 앱의 이점을 활용할 수에서.NET 네이티브는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술입니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
+**참고**Windows10 보다 훨씬 더.NET Framework는 Windows Phone 스토어 앱을 지원 합니다. 예를 들어 Windows10 여러 System.ServiceModel.\* 네임 스페이스 뿐만 아니라 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets에 있습니다.
+또한 Windows10 앱의 이점을 활용할 수에서.NET 네이티브는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술인 합니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
 
 | WindowsPhone Silverlight | Windows 런타임 |
 | ------------------------- | --------------- |

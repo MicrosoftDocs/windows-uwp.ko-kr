@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
 ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5883611"
+ms.locfileid: "5930292"
 ---
 # <a name="getting-paid"></a>지급 받기
 앱, 추가 기능 및 광고 수익에 대 한 지급을 수신 하는 방법에 대 한 중요 한 정보는 다음과 같습니다.
 
 > [!IMPORTANT]
-> Microsoft 스토어의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정 하 고 필요한 세금 양식을 입력](setting-up-your-payout-account-and-tax-forms.md)해야 합니다.
+> Microsoft 스토어의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정](setting-up-your-payout-account-and-tax-forms.md)하 고 필요한 세금 양식을 입력 해야 합니다.
 
 ## <a name="store-fee"></a>Microsoft Store 수수료
 
@@ -48,7 +48,7 @@ Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 �
 
 ## <a name="payout-reporting"></a>지급 보고
 
-결제 정보에 대 한 세부 정보에 액세스할 수 있으며 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에 보고서를 다운로드할 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
+지급 정보에 대 한 세부 정보에 액세스할 수 있으며 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에 보고서를 다운로드할 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
 
 
 ## <a name="payout-timeframe"></a>지급 기간

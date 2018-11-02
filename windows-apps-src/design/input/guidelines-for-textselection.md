@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c0bc236fd3e9e37a759f83e3f24bfcad4817f068
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5864682"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5929249"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 
@@ -49,18 +49,18 @@ ms.locfileid: "5864682"
 
 **고려 사항 및 권장 지침**
 
-선택 및 조작 동작을 비롯 한 전체 플랫폼 사용자 조작 환경을 제공 하는 Windowsto 빌드 앱의 언어 프레임 워크를 통해 노출 하는 기본 제공 컨트롤을 사용 합니다. 기본 제공 컨트롤의 조작 기능은 대부분의 UWP 앱에서 충분히 작동합니다.
+선택 및 조작 동작을 비롯 한 전체 플랫폼 사용자 조작 환경을 제공 하는 Windowsto 빌드 앱의 언어 프레임 워크를 통해 노출 되는 기본 제공 컨트롤을 사용 합니다. 기본 제공 컨트롤의 조작 기능은 대부분의 UWP 앱에서 충분히 작동합니다.
 
 표준 UWP 텍스트 컨트롤을 사용할 경우에는 이 항목에 설명된 선택 동작 및 시각 효과를 사용자 지정할 수 없습니다.
 
 **텍스트 선택**
 
-앱에서 텍스트 선택을 지 원하는 사용자 지정 UI에 필요한 경우에 여기에 설명 된 Windowsselection 동작을 따르는 것이 좋습니다.
+앱에서 텍스트 선택을 지 원하는 사용자 지정 UI에 필요한 경우 여기에 설명 된 Windowsselection 동작을 따르는 것이 좋습니다.
 
 **편집 가능 및 편집 불가능 콘텐츠**
 
 
-터치를 사용할 경우 선택 조작은 주로 삽입 커서를 설정하거나 단어를 선택하기 위한 탭하기, 선택 영역을 수정하기 위한 밀기 등의 제스처를 통해 수행됩니다. 다른 Windowstouch 상호 작용에서와 마찬가지로 시간이 제한 된 조작은 누르기 제한 되며 정보 UI를 표시 하는 제스처를 보유 합니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
+터치를 사용할 경우 선택 조작은 주로 삽입 커서를 설정하거나 단어를 선택하기 위한 탭하기, 선택 영역을 수정하기 위한 밀기 등의 제스처를 통해 수행됩니다. 다른 Windowstouch 상호 작용와 마찬가지로 시간이 제한 된 조작은 누르기 제한 되며 정보 UI를 표시 하는 제스처를 보유 합니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
 
 두 Windowsrecognizes 가능한 선택 조작에 편집 가능 및 편집 불가능 상태 및 선택 UI, 피드백 및 기능을 적절 하 게 조정 합니다.
 

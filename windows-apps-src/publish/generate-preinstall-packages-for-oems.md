@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02f7c1ad1a396464532a1c63c925bf9e19600f1b
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873868"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5925946"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>OEM용 사전 설치 패키지 생성
 
@@ -31,7 +31,7 @@ ms.locfileid: "5873868"
 
 사전 설치 권한으로 계정이 사용하도록 설정되면 다음 단계를 완료하세요.
 
-1.  파트너 센터에서 사전 설치할 앱으로 이동 합니다.
+1.  파트너 센터에서 앱을 사전 설치할로 이동 합니다.
 2.  왼쪽 탐색 메뉴에서 **앱 관리**를 확장하고 **현재 패키지**를 선택합니다.
 3.  **OS 사전 설치용 패키지 요청** 섹션에서 **다운로드 가능한 패키지 사용**을 선택합니다.
 4.  확인 대화 상자에서 **활성화**를 선택합니다.

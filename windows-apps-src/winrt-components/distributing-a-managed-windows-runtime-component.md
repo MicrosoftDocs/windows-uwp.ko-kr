@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6461b6889f110bde8929e1f370f9197caa33e5f3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5880519"
+ms.locfileid: "5933404"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>관리되는 Windows 런타임 구성 요소 배포
 

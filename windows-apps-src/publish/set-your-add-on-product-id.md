@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 14d0cd40e0a7a170a835b000dc66ec683c2fb59c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869633"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933334"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 
@@ -42,7 +42,7 @@ ms.locfileid: "5869633"
 
 소모성 추가 기능에는 다음 두 가지 유형이 있습니다.
 - **개발자 관리 소모성**: 잔액 및 이행이 앱 내에서 관리되어야 합니다. 모든 OS 버전에서 지원됩니다.
-- **Microsoft Store 관리 소모성:** Windows 10 버전 1607 이상을 실행하는 모든 고객 장치의 잔액을 Microsoft에서 추적합니다. 이전 버전의 OS에서는 지원되지 않습니다. 이 옵션을 사용하려면 상위 제품이 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일되어야 합니다. 또한 (수는 있지만, 파트너 센터 제출을 만들어 언제 든 지 작업을 시작할) 상위 제품이 게시 될 때까지 스토어 관리 소모 성 추가 기능을 스토어에을 제출할 수 없는 note 합니다. 제출의 **속성** 단계에서 Microsoft Store 관리 소모성 추가 기능에 대한 수량을 입력해야 합니다.
+- **Microsoft Store 관리 소모성:** Windows 10 버전 1607 이상을 실행하는 모든 고객 장치의 잔액을 Microsoft에서 추적합니다. 이전 버전의 OS에서는 지원되지 않습니다. 이 옵션을 사용하려면 상위 제품이 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일되어야 합니다. 또한 (수는 있지만, 파트너 센터 제출을 만들어 언제 든 지 작업을 시작할) 상위 제품이 게시 될 때까지 스토어 관리 소모 성 추가 기능을 스토어에 제출할 수 없습니다는 note 합니다. 제출의 **속성** 단계에서 Microsoft Store 관리 소모성 추가 기능에 대한 수량을 입력해야 합니다.
 
 ### <a name="subscription"></a>구독
 
@@ -64,7 +64,7 @@ ms.locfileid: "5869633"
 -   게시된 후에는 추가 기능 제품 ID를 변경하거나 삭제할 수 없습니다.
 -   제품 ID는 100자 이내여야 합니다.
 -   제품 ID에는 다음 문자를 사용할 수 없습니다. **&lt; &gt; \* % & : \\ ? + ,**
--   고객에 게 제품 id입니다. 표시 합니다. 나중에 고객에게 표시할 [제목 및 설명](create-add-on-descriptions.md)을 입력할 수 있습니다.
--   이전에 게시 된 앱이 지 원하는 Windows Phone 8.1 또는 이전에 사용 해야 영숫자 문자, 마침표 및/또는 밑줄만 제품 id 다른 종류의 문자를 사용하면 Windows Phone 8.1 이하를 실행하는 고객이 추가 기능을 구매할 수 없습니다.
+-   고객은 제품 id입니다. 표시 합니다. 나중에 고객에게 표시할 [제목 및 설명](create-add-on-descriptions.md)을 입력할 수 있습니다.
+-   이전에 게시 된 앱이 지 원하는 Windows Phone 8.1 또는 이전에 사용 해야 영숫자 문자, 마침표 및/또는 밑줄만 제품 id입니다. 다른 종류의 문자를 사용하면 Windows Phone 8.1 이하를 실행하는 고객이 추가 기능을 구매할 수 없습니다.
 
  

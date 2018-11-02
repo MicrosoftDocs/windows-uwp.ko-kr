@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, geovisit
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a78b2689a10dff50696e5e65cc44f79a6f1ea7d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868790"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5928074"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a>방문 추적 사용에 대한 지침
 

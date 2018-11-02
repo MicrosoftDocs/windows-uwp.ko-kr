@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 사용자 지정, 앱, 홍보, 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877428"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5928223"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 
@@ -22,7 +22,7 @@ Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-f
 앱에서 사용자 지정 캠페인을 실행하는 경우, 각 URL에 서로 다른 *캠페인 ID*를 포함하여 각 사용자 지정 캠페인에 대해 다른 URL을 만들어 각 캠페인의 상대적인 성과를 추적할 수 있습니다. Windows10를 실행 하는 고객이 캠페인 ID가 포함 된 URL을 클릭 하면, Microsoft 클릭 해당 사용자 지정 캠페인에 연결 하 고이 데이터를 사용할 수 있게 할 [파트너 센터](https://partner.microsoft.com/dashboard)에서.
 
 > [!IMPORTANT]
-> 이 데이터 Windows10에서 고객을 위한만 추적 됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
+> 이 데이터는 Windows10에만 고객에 대 한 추적 됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
 
 사용자 지정 캠페인과 연결되는 데이터는 앱의 Store 목록에 대한 *페이지 보기*와 *변환* 두 가지 기본 유형이 있습니다. 변환은 고객이 사용자 지정 캠페인 ID가 포함된 URL에서 앱의 스토어 목록 페이지를 클릭한 결과로 이루어진 앱 구입입니다. 변환에 대한 자세한 내용은 이 항목의 [앱 구입이 변환으로 인정되는 방법 이해](#understanding-how-acquisitions-qualify-as-conversions)를 참조하세요.
 
@@ -195,4 +195,4 @@ public async Task<string> GetCampaignId()
 
 3.  URL을 여러 번 클릭하고 앱 페이지를 방문할 때마다 UWP 앱 또는 브라우저 페이지를 닫습니다. 앱 페이지 방문 중 **하나** 동안 앱을 구입하여 변환을 생성합니다. URL을 클릭한 총 횟수를 계산합니다.
 
-4. 예상 된 페이지 보기 및 변환 [구입 보고서](acquisitions-report.md) **총 캠페인 변환** 및 **캠페인 ID 별 앱 페이지 보기 및 변환** 차트에 표시 되며 앱의 코드를 테스트 수 있는지 여부를 확인 하는지 여부를 확인 합니다. 성공적으로 위에서 설명한 Api를 사용 하 여 캠페인 ID를 검색 합니다.
+4. 예상 된 페이지 보기 및 변환 [구입 보고서](acquisitions-report.md)의 **총 캠페인 변환** 및 **캠페인 ID 별 앱 페이지 보기 및 변환** 차트에 표시 되며 앱의 코드를 테스트 수 있는지 여부를 확인 하는지 여부를 확인 합니다. 성공적으로 위에서 설명한 Api를 사용 하 여 캠페인 ID를 검색 합니다.

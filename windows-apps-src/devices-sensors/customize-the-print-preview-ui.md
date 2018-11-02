@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 71fb45842e8aaa4200e2597ac0736d911ac9bf34
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873980"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933105"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
@@ -98,7 +98,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**중요 한**인쇄 미리 보기 **기타 설정** 링크를 포함 하 여 UI에서에서 모든 인쇄 옵션이 제거 [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()를 호출 합니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
+**중요 한**에서 인쇄 미리 보기 UI에 **기타 설정** 링크를 포함 하 여 모든 인쇄 옵션이 제거 [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()를 호출 합니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
 
 ### <a name="specify-default-options"></a>기본 옵션 지정
 

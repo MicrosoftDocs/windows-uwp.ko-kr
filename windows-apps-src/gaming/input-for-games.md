@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10 uwp, 게임, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5866631"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5933304"
 ---
 # <a name="input-for-games"></a>게임용 입력 시스템
 
@@ -47,7 +47,7 @@ UWP 게임에서 레이싱 휠을 사용하는 방법에 대해 자세한 내용
 
 플라이트 스틱은 평면 또는 우주선의 조종석에서 찾을 수 있는 플라이트 스틱의 느낌을 재현 하는 게임 입력된 장치입니다. 신속하고 정확한 플라이트 제어를 위한 완벽한 입력 디바이스입니다.
 
-UWP 게임에서 플라이트 스틱을 사용 하는 방법에 대 한 자세한 내용은 [플라이트 스틱](flight-stick.md)를 참조 하세요.
+UWP 게임에서 플라이트 스틱을 이용 하는 방법에 대 한 자세한 내용은 [플라이트 스틱](flight-stick.md)를 참조 하세요.
 
 ### <a name="raw-game-controllers"></a>원시 게임 컨트롤러
 

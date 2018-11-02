@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5866897"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5927472"
 ---
 # <a name="media-player"></a>미디어 플레이어
 

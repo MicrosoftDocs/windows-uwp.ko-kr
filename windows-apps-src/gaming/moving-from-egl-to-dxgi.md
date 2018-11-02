@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, egl, dxgi, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 64f237fd26a2ed7328e2c2264da17d3a5d7ba588
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5878722"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930020"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>EGL 코드와 DXGI 및 Direct3D 비교
 
@@ -49,7 +49,7 @@ EGL과 마찬가지로, DXGI 및 Direct3D는 다음과 같은 동작에 대한 A
 -   특정 렌더링 대상(예: 텍스처)으로 렌더링
 -   그래픽 리소스로 렌더링한 결과로 창의 디스플레이 화면 업데이트
 
-그래픽 파이프라인을 구성 하기 위한 기본 Direct3D 프로세스를 보려면 Microsoft Visual Studio2015에서 DirectX 11 앱 (유니버설 Windows) 템플릿을 확인 합니다. 이 템플릿의 기본 렌더링 클래스는 Direct3D 11 그래픽 인프라를 설정하고, 해당 기본 리소스를 구성하고, 화면 회전과 같은 UWP(유니버설 Windows 플랫폼) 앱 기능을 지원하기 위한 좋은 기준을 제공합니다.
+그래픽 파이프라인을 구성 하는 기본 Direct3D 프로세스를 보려면 Microsoft Visual Studio2015에서 DirectX 11 앱 (유니버설 Windows) 템플릿을 확인 합니다. 이 템플릿의 기본 렌더링 클래스는 Direct3D 11 그래픽 인프라를 설정하고, 해당 기본 리소스를 구성하고, 화면 회전과 같은 UWP(유니버설 Windows 플랫폼) 앱 기능을 지원하기 위한 좋은 기준을 제공합니다.
 
 EGL에는 Direct3D 11에 비해 매우 적은 수의 API가 포함되어 있으므로, 해당 플랫폼에 한정된 명명 및 전문 용어에 익숙하지 않은 경우 Direct3D 11을 탐색하기가 어려울 수 있습니다. 다음은 이해를 돕기 위한 간단한 개요입니다.
 

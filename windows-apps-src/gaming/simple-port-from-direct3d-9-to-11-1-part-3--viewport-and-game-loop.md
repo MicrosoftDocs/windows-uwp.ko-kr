@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869368"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5928511"
 ---
 # <a name="port-the-game-loop"></a>게임 루프 포팅
 
@@ -35,7 +35,7 @@ Direct3D 9 뷰포트를 사용하여 바탕 화면 창을 설정하려면 데스
 
 UWP 환경에는 훨씬 간단한 시스템이 있습니다. 기존의 창을 설정하는 대신 DirectX를 사용하는 Microsoft Store 게임은 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현합니다. DirectX 앱과 게임이 앱 컨테이너 내 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 직접 실행되도록 하기 위해 이 인터페이스가 존재합니다.
 
-> **참고**  Windows는 원본 응용 프로그램 개체 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)등의 리소스에 관리 되는 포인터를 제공 합니다. [**개체 연산자 (^)에 대 한 핸들**] 확인https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **참고**  Windows는 원본 응용 프로그램 개체 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)등의 리소스에 관리 되는 포인터를 제공 합니다. [**개체 연산자 (^)에 대 한 핸들**]를 참조 하세요.https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 

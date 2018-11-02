@@ -2,18 +2,18 @@
 author: JnHs
 title: 광고 캠페인 보고서
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: 파트너 센터에서 광고 캠페인 보고서에는 앱 홍보 광고 캠페인 성과 확인할 수 있습니다.
+description: 파트너 센터에서 광고 캠페인 보고서에는 앱 홍보 광고 캠페인의 성과 볼 수 있습니다.
 ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치
 ms.localizationpriority: medium
 ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5867923"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5926681"
 ---
 # <a name="ad-campaign-report"></a>광고 캠페인 보고서
 
@@ -69,7 +69,7 @@ ms.locfileid: "5867923"
 2.  고객이 Microsoft 계정에 로그인한 상태입니다.
 3.  고객이 [COPPA](http://go.microsoft.com/fwlink?LinkId=536558) 요구 사항을 충족합니다. COPPA 요구 사항을 충족하지 않는 고객은 추적할 수 없습니다.
 
-결과적으로, 앱 설치 추적은 광고 캠페인으로 생성된 실제 설치 수보다 적게 보고할 수 있습니다. 앱에 대 한 설치의 총 수를 확인할 수 (캠페인을 통해 그렇지 않은 경우)에서 파트너 센터에서 [구입](acquisitions-report.md) 보고서 합니다.
+결과적으로, 앱 설치 추적은 광고 캠페인으로 생성된 실제 설치 수보다 적게 보고할 수 있습니다. 앱에 대 한 설치의 총 수를 확인할 수 있습니다 (캠페인을 통해 및 기타)에서 파트너 센터에서 [구입](acquisitions-report.md) 보고서 합니다.
 
 
 ## <a name="account-billing-history"></a>계정 청구 내역
