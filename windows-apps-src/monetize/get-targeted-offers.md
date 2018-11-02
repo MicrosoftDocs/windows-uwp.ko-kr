@@ -8,12 +8,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품 가져오기
 ms.localizationpriority: medium
-ms.openlocfilehash: e6a0e9237c7c803a64ec20df0c501773f690f5e9
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 87d59a4b5dabbc76c231e84034d701fccfe36fcf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5931869"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972455"
 ---
 # <a name="get-targeted-offers"></a>대상 제품 가져오기
 
@@ -57,7 +57,7 @@ Authorization: Bearer <Microsoft Account token>
 
 | 필드      | 유형   | 설명         |
 |------------|--------|------------------|
-| offers      | 배열  | 현재 사용자에게 제공되는 대상 제품과 연결된 추가 기능에 대한 제품 ID의 배열입니다. 이러한 제품 ID는 Windows 개발자 센터 대시보드에서 앱의 **대상 제품** 페이지에 지정됩니다.            |
+| offers      | 배열  | 현재 사용자에게 제공되는 대상 제품과 연결된 추가 기능에 대한 제품 ID의 배열입니다. 이러한 제품 Id는 파트너 센터에서 앱의 **대상 제품** 페이지에서 지정 됩니다.            |
 | trackingId  | 문자열 | 코드나 서비스에서 대상 제품을 추적하기 위해 선택적으로 사용할 수 있는 GUID입니다. |
 
 

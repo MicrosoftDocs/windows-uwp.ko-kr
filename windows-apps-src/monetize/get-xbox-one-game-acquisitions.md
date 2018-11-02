@@ -8,18 +8,18 @@ ms.date: 10/18/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox One 게임 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: 86ca46903e581922cc571a854d9fa110fa261ece
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 1bf37fa03209561540d63dd4f63a76878f9d813c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5941033"
+ms.locfileid: "5976594"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Xbox One 게임 취득 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 Xbox 개발자 포털(XDP)을 통해 수집되고 XDP 분석 개발자 센터 대시보드에서 사용 가능한 Xbox One 게임에 대한 JSON 형식의 집계 취득 데이터를 가져옵니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 집계 취득 데이터를 가져오기 위해 JSON 형식에서 Xbox One 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 대시보드에 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 

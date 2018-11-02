@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 패키지 플라이트 정보를 검색합니다.
+description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 플라이트 정보를 검색 합니다.
 title: 앱의 패키지 플라이트 가져오기
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 847e837c67990b5cbdb3a7a28c0c8115e96c8644
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: f67bb76e1d964dd246be16870a7c76591eb1e7d6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930394"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5974274"
 ---
 # <a name="get-package-flights-for-an-app"></a>앱의 패키지 플라이트 가져오기
 
-Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 패키지 플라이트를 나열합니다. 패키지 플라이트에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱을 위한 패키지 플라이트를 나열 합니다. 패키지 플라이트에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -115,7 +115,7 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 404  | 패키지 플라이트가 없습니다. |
-| 409  | 앱이 [현재 Microsoft Store 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다.  |
+| 409  | 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)지 파트너 센터 기능을 사용 합니다.  |
 
 
 ## <a name="related-topics"></a>관련 항목

@@ -4,19 +4,19 @@ description: 연결된 애니메이션을 사용하면 두 가지 보기 간에 
 title: 연결된 애니메이션
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 10/25/2017
+ms.date: 10/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 77050103bb78788a5c1868a41d315edd6832a5fe
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 51cf9dd0d28590d86bf05cc16634e465e260626c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938850"
+ms.locfileid: "5977085"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>UWP 앱에 대한 연결된 애니메이션
 
@@ -55,9 +55,9 @@ ms.locfileid: "5938850"
 ## <a name="configure-connected-animation"></a>연결 된 애니메이션 구성
 
 > [!IMPORTANT]
-> 이 기능을 사용 하려면 앱의 대상 버전 RS5 되도록 (Windows SDK 버전 10.0.NNNNN.0 (Windows 10, 버전 YYMM) 이상. 구성 속성 이전 Sdk에서 사용할 수 없는 경우 RS5 보다 작은 최소 버전을 대상으로 지정할 수 있습니다 (사용 하 여 Windows SDK 버전 (Windows 10, 버전 YYMM) 10.0.NNNNN.0 적응 코드나 조건부 XAML입니다. 자세한 내용은 [버전 적응 앱](/debug-test-perf/version-adaptive-apps)을 참조 하세요.
+> 이 기능을 사용 하려면 앱의 대상 버전 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 것 이상입니다. 구성 속성 이전 Sdk에서 사용할 수 없는 경우 SDK 17763 보다 작은 최소 버전을 대상으로 지정할 수 적응 코드나 조건부 XAML을 사용 합니다. 자세한 내용은 [버전 적응 앱](/debug-test-perf/version-adaptive-apps)을 참조 하세요.
 
-연결 된 애니메이션 추가 구체화 RS5부터 Fluent 디자인 애니메이션을 제공 하 여 구성을 맞춤식 앞으로 및 뒤로 페이지 탐색 합니다.
+Windows 10, 버전 1809부터 연결 된 애니메이션 추가 구체화 Fluent 디자인 애니메이션을 제공 하 여 구성을 맞춤식 앞으로 및 뒤로 페이지 탐색 합니다.
 
 애니메이션 구성은 ConnectedAnimation에서 구성 속성을 설정 하 여 지정 합니다. (살펴보겠습니다이 예제에서는 다음 섹션에서.)
 
@@ -74,7 +74,7 @@ ms.locfileid: "5938850"
 
 | [BasicConnectedAnimationConfiguration]() |
 | - |
-| 이것이 기본값 (및만) RS5 이전 SDK 버전에 사용 되는 애니메이션 (Windows SDK 버전 10.0.NNNNN.0 (Windows 10, 버전 YYMM). |
+| 이것이 기본값 (및만) Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이전 버전에서 사용 되는 애니메이션. |
 
 ### <a name="connectedanimationservice-configuration"></a>ConnectedAnimationService 구성
 

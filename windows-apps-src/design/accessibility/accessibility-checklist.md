@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bf9c3c4d803c4e5c2bc369449b83cf711bda6f99
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924540"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5975659"
 ---
 # <a name="accessibility-checklist"></a>접근성 검사 목록
 

@@ -8,11 +8,11 @@ ms.date: 7/11/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b9c2ff7e809c635eb97e818c91e5d6647a963560
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5931286"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977353"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018 년 7 월 Windows 개발자 문서의 새로운
 

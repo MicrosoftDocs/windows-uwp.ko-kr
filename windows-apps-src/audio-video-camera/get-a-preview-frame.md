@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 211bd4ce660726030f8b90d29c4ea4d8a14564de
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5934458"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5974494"
 ---
 # <a name="get-a-preview-frame"></a>미리 보기 프레임 가져오기
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 65b9f6700ddd11c41193820a5247a90c2382c98b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5935004"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5976995"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>감쇠 및 스포트라이트 계수
 

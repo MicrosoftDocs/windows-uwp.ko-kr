@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 8C1E9E36-13AF-4386-9D0F-F9CB320F02F5
-description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트를 만듭니다.
+description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 플라이트를 만듭니다.
 title: 패키지 플라이트 만들기
 ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 만들기
 ms.localizationpriority: medium
-ms.openlocfilehash: 57ad1847e8989cb6aed20024d1c13d36e154d834
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 1e7fec507497784849bdda76ed0fdd4993181731
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933513"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977563"
 ---
 # <a name="create-a-package-flight"></a>패키지 플라이트 만들기
 
-Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트를 만듭니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 플라이트를 만듭니다.
 
 > [!NOTE]
 > 이 메서드는 제출 없이 패키지 플라이트를 만듭니다. 패키지 플라이트에 대한 제출을 만들려면 [패키지 플라이트 제출 관리](manage-flight-submissions.md)의 메서드를 참조하세요.
@@ -100,7 +100,7 @@ Content-Type: application/json
 
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
+| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
 | FriendlyName           | 문자열  | 요청에 지정된 대로의 패키지 플라이트 이름입니다.   |  
 | groupIds           | 배열  | 요청에 지정된 대로 패키지 플라이트와 연결된 플라이트 그룹의 ID를 포함하는 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
 | rankHigherThan           | 문자열  | 요청에 지정된 대로 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
@@ -113,7 +113,7 @@ Content-Type: application/json
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 400  | 요청이 잘못되었습니다. |
-| 409  | 현재 상태 때문에 패키지 플라이트를 만들 수 없거나 앱이 [현재 Microsoft Store 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다. |   
+| 409  | 현재 상태 때문에 패키지 플라이트를 만들 수 없거나 또는 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목

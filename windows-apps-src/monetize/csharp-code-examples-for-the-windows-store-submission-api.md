@@ -8,12 +8,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 55843f229252b2f68df096442f27544a59ce69cd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 495bf2e58fafd9e321937bd6fdb3be8c8dea68e2
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945242"
+ms.locfileid: "5973615"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\# 샘플: 앱, 추가 기능, 플라이트 제출
 
@@ -38,7 +38,7 @@ ms.locfileid: "5945242"
 다음 예제에서는 Microsoft Store 제출 API를 사용하는 여러 가지 방법을 보여 주기 위해 이 문서의 다른 예제 메서드를 호출하는 명령줄 프로그램을 구현합니다. 이 프로그램을 필요에 따라 조정하려면,
 
 * 관리하려는 앱, 추가 기능, 패키지 플라이트의 ID에 ```ApplicationId```, ```InAppProductId``` 및 ```FlightId``` 속성을 할당합니다.
-* 앱의 클라이언트 ID 및 키에 ```ClientId``` 및 ```ClientSecret``` 속성을 할당하고 ```TokenEndpoint``` URL의 *tenantid* 문자열을 앱의 테넌트 ID로 바꿉니다. 자세한 내용은 [Azure AD 응용 프로그램을 Windows 개발자 센터 계정과 연결하는 방법](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account)을 참조하세요.
+* 앱의 클라이언트 ID 및 키에 ```ClientId``` 및 ```ClientSecret``` 속성을 할당하고 ```TokenEndpoint``` URL의 *tenantid* 문자열을 앱의 테넌트 ID로 바꿉니다. 자세한 내용은 [파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법을](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account) 참조 하세요.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/Program.cs#Main)]
@@ -56,13 +56,13 @@ ms.locfileid: "5945242"
 
 ## <a name="create-an-app-submission"></a>앱 제출 만들기
 
-다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 앱 제출을 업데이트하는 클래스를 구현합니다. 이 클래스의 ```RunAppSubmissionUpdateSample``` 메서드는 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```RunAppSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 앱 제출을 업데이트하는 클래스를 구현합니다. ```RunAppSubmissionUpdateSample``` 클래스의 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 하 고 파트너 센터에 복제 한 제출을 커밋합니다. ```RunAppSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 해당 메서드를 통해 [지정된 앱의 데이터 가져오기](get-an-app.md) 작업을 수행합니다.
 2. 다음으로 [앱의 현재 보류 중인 제출을 삭제](delete-an-app-submission.md)합니다(보류 중인 제출이 있을 경우).
 3. 그런 다음 [앱에 대한 새 제출 만들기](create-an-app-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 새 제출에 대한 세부 정보를 변경하고 제출할 새 패키지를 Azure Blob Storage에 업로드합니다.
-5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-an-app-submission.md)한 다음 [커밋](commit-an-app-submission.md)합니다.
+5. 그런 다음이 [업데이트](update-an-app-submission.md) 한 다음 파트너 센터에 새 제출 [을 커밋합니다](commit-an-app-submission.md) .
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태 확인](get-status-for-an-app-submission.md)을 수행합니다.
 
 > [!div class="tabbedCodeSnippets"]
@@ -77,7 +77,7 @@ ms.locfileid: "5945242"
 1. 먼저 이 메서드는 [새 추가 기능 만들기](create-an-add-on.md) 작업을 수행합니다.
 2. 다음으로 [추가 기능의 새 제출 만들기](create-an-add-on-submission.md) 작업을 수행합니다.
 3. 제출할 아이콘이 포함된 ZIP 보관 파일을 Azure Blob Storage에 업로드합니다.
-4. 다음으로 [Windows 개발자 센터에 새 제출을 커밋](commit-an-add-on-submission.md)합니다.
+4. 그런 다음이 [파트너 센터에 새 제출을 커밋합니다](commit-an-add-on-submission.md).
 5. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태를 확인](get-status-for-an-add-on-submission.md)합니다.
 
 > [!div class="tabbedCodeSnippets"]
@@ -87,12 +87,12 @@ ms.locfileid: "5945242"
 
 ## <a name="update-an-add-on-submission"></a>추가 기능 제출 업데이트
 
-다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 기존의 추가 기능 제출을 업데이트하는 클래스를 구현합니다. 이 클래스의 ```RunInAppProductSubmissionUpdateSample``` 메서드는 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```RunInAppProductSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 기존의 추가 기능 제출을 업데이트하는 클래스를 구현합니다. ```RunInAppProductSubmissionUpdateSample``` 클래스의 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 하 고 파트너 센터에 복제 한 제출을 커밋합니다. ```RunInAppProductSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 해당 메서드를 통해 [지정된 추가 기능의 데이터 가져오기](get-an-add-on.md) 작업을 수행합니다.
 2. 다음으로 [추가 기능의 현재 보류 중인 제출을 삭제](delete-an-add-on-submission.md)합니다(보류 중인 제출이 있을 경우).
-3. 그런 다음 [추가 기능에 대한 새 제출 만들기](create-an-add-on-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
-5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-an-add-on-submission.md)한 다음 [커밋](commit-an-add-on-submission.md)합니다.
+3. 그런 다음 [추가 기능에 대한 새 제출 만들기](create-an-add-on-submission.md)를 진행합니다(새 제출은 마지막으로 게시된 제출의 사본).
+5. 그런 다음이 [업데이트](update-an-add-on-submission.md) 한 다음 파트너 센터에 새 제출 [을 커밋합니다](commit-an-add-on-submission.md) .
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태 확인](get-status-for-an-add-on-submission.md)합니다.
 
 > [!div class="tabbedCodeSnippets"]
@@ -102,13 +102,13 @@ ms.locfileid: "5945242"
 
 ## <a name="create-a-package-flight-submission"></a>패키지 플라이트 제출 만들기
 
-다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 패키지 플라이트 제출을 업데이트하는 클래스를 구현합니다. 이 클래스의 ```RunFlightSubmissionUpdateSample``` 메서드는 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```RunFlightSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 패키지 플라이트 제출을 업데이트하는 클래스를 구현합니다. ```RunFlightSubmissionUpdateSample``` 클래스의 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 하 고 파트너 센터에 복제 한 제출을 커밋합니다. ```RunFlightSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 이 메서드는 [지정된 패키지 플라이트의 데이터 가져오기](get-a-flight.md) 작업을 수행합니다.
 2. 다음으로 [패키지 플라이트의 현재 보류 중인 제출을 삭제](delete-a-flight-submission.md)합니다(보류 중인 제출이 있을 경우).
 3. 그런 다음 [패키지 플라이트에 대한 새 제출 만들기](create-a-flight-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 제출할 새 패키지를 Azure Blob Storage에 업로드합니다.
-5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-a-flight-submission.md)한 다음 [커밋](commit-a-flight-submission.md)합니다.
+5. 그런 다음이 [업데이트](update-a-flight-submission.md) 한 다음 파트너 센터에 새 제출 [을 커밋합니다](commit-a-flight-submission.md) .
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태를 확인](get-status-for-a-flight-submission.md)합니다.
 
 > [!div class="tabbedCodeSnippets"]

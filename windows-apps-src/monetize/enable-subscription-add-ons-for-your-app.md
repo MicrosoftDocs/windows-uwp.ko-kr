@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b89cad4c299f7326d0bb7d9ea4b8c6685f70f26c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933115"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973708"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -35,7 +35,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 
 앱에서 구독 추가 기능 구매를 구현하려면 다음 단계를 따르세요.
 
-1. 개발자 센터 대시보드에서 구독에 대한 [추가 기능 제출을 생성](../publish/add-on-submissions.md)하고, 제출을 게시합니다. 추가 기능 제출 프로세스를 적용할 때 다음 속성에 주의하세요.
+1. 파트너 센터에서 구독에 대 한 [추가 기능 제출 만들기](../publish/add-on-submissions.md) 및 제출 게시 합니다. 추가 기능 제출 프로세스를 적용할 때 다음 속성에 주의하세요.
 
     * [제품 유형](../publish/set-your-add-on-product-id.md#product-type): **구독**을 선택해야 합니다.
 
@@ -70,8 +70,8 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 
 이러한 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* Windows 개발자 센터 대시보드에서 [앱 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 만들었으며, 이 앱은 Store에서 게시되었습니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 가이드](in-app-purchases-and-trials.md#testing)를 참조하세요.
-* 개발자 센터 대시보드에서 [앱에 사용 가능한 구독 추가 기능](../publish/add-on-submissions.md)을 만들었습니다.
+* [앱 제출을 만들지](https://docs.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에서 드라이버와이 앱은 스토어에서 게시 합니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 가이드](in-app-purchases-and-trials.md#testing)를 참조하세요.
+* 파트너 센터에서 [만든 앱에 대 한 구독 추가 기능을](../publish/add-on-submissions.md) 했습니다.
 
 이 예제의 코드는 다음과 같이 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.

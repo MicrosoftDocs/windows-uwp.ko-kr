@@ -8,11 +8,11 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 76de6c5c1e8925dd8b166a8d99c39116bf66141d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932900"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977920"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018 년 8 월 Windows 개발자 문서의 새로운
 

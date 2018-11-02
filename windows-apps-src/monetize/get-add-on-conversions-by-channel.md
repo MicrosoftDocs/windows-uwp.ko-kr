@@ -7,12 +7,12 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 추가 기능 변환, 채널
 ms.localizationpriority: medium
-ms.openlocfilehash: d64af06acb730160f7f9f7f0e9eda96074b3eac7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0cf4e0f2cad0ea497e7d97c9b415ab385703c5c4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940269"
+ms.locfileid: "5974677"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>채널별 추가 기능 변환 가져오기
 
@@ -21,9 +21,9 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 
 * *변환*은 (Microsoft 계정으로 로그인한) 고객이 추가 기능(금액 청구 또는 무료 제공 여부와는 관계 없음)에 대한 라이선스를 새로 획득했음을 의미합니다.
 * *채널*은 고객이 앱의 목록 페이지(예, 상점이나 [사용자 지정 앱 프로 모션 캠페인](../publish/create-a-custom-app-promotion-campaign.md)을 통해)에 도착한 방법입니다.
 
-이 정보는 Windows 개발자 센터 대시보드의 [추가 기능 보고서](../publish/add-on-acquisitions-report.md#add-on-page-views-and-conversions-by-campaign-id)를 통해서도 사용할 수 있습니다.
+이 정보는 파트너 센터에서 [추가 기능 구입 보고서](../publish/add-on-acquisitions-report.md#add-on-page-views-and-conversions-by-campaign-id) 에서 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 

@@ -1,32 +1,32 @@
 ---
 author: Xansky
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
-description: Microsoft Store 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트 제출을 관리합니다.
+description: Microsoft Store 제출 API에서에서 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 플라이트 제출을 관리 합니다.
 title: 패키지 플라이트 제출 관리
 ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 31b3379d66485fcd5ab417ecb2782b06f6e80e67
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 5f2a643aa80a59dd64ec1e7b829c02470aaed8bd
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926960"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973316"
 ---
 # <a name="manage-package-flight-submissions"></a>패키지 플라이트 제출 관리
 
 Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 패키지 플라이트 제출을 관리하는 데 사용할 수 있는 메서드를 제공합니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 > [!IMPORTANT]
-> Microsoft Store 제출 API를 사용하여 패키지 플라이트에 대한 제출을 생성하는 경우 개발자 센터 대시보드 대신 API만 사용하여 제출을 추가 변경해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> Microsoft Store 제출 API를 사용 하 여 패키지 플라이트에 대 한 제출을 생성 하는 경우 추가 변경 된 제출에 파트너 센터 대신 API를 사용 해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-package-flight-submissions" />
 
 ## <a name="methods-for-managing-package-flight-submissions"></a>패키지 플라이트 제출 관리 메서드
 
-패키지 플라이트 제출 가져오기, 만들기, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. 이러한 메서드를 사용하려면 먼저 패키지 플라이트가 개발자 센터 계정에 이미 있어야 합니다. [Windows 개발자 센터 대시보드를 사용](https://msdn.microsoft.com/windows/uwp/publish/package-flights)하거나 [패키지 플라이트 관리](manage-flights.md)에 설명된 Microsoft Store 제출 API 메서드를 사용하여 패키지 플라이트를 만들 수 있습니다.
+패키지 플라이트 제출 가져오기, 만들기, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. 이러한 메서드를 사용 하려면 먼저 파트너 센터에서 패키지 플라이트 이미 있어야 합니다. 패키지를 만들 수 [파트너 센터에서](https://msdn.microsoft.com/windows/uwp/publish/package-flights) 플라이트 또는 Microsoft Store 제출 API 메서드를 사용 하 여 [관리 패키지 플라이트](manage-flights.md)에서 설명 합니다.
 
 <table>
 <colgroup>
@@ -81,7 +81,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 
 패키지 플라이트에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
-1. 아직 수행하지 않은 경우 Windows 개발자 센터 계정으로 Azure AD 응용 프로그램 연결 및 클라이언트 ID와 키 얻기를 비롯하여 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)에 설명된 필수 조건을 완료합니다. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
+1. 아직 수행 하는 경우 필수 구성 요소에 설명 된 완료 [만들기 및 Microsoft Store 서비스를 사용 하 여 제출 관리](create-and-manage-submissions-using-windows-store-services.md)를 파트너 센터 계정과 Azure AD 응용 프로그램 연결 및 클라이언트 ID와 키 얻기를 비롯 하 여 합니다. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Microsoft Store 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
@@ -121,7 +121,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. 다음 메서드를 실행하여 [패키지 플라이트 제출을 커밋](commit-a-flight-submission.md)합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다.
+5. 다음 메서드를 실행하여 [패키지 플라이트 제출을 커밋](commit-a-flight-submission.md)합니다. 이 것을 경고 파트너 센터 제출을 완료 되 고 업데이트 계정에 지금 적용 해야 합니다.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
@@ -135,7 +135,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 
     제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 Windows 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용 하 여 또는 파트너 센터를 방문 하 여 제출 진행 상황을 모니터링할 계속 수 있습니다.
 
 <span/>
 
@@ -157,7 +157,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 ## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>패키지 플라이트 제출의 점진적 패키지 출시 관리
 
-패키지 플라이트 제출에서 업데이트된 패키지를 앱의 Windows10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. Windows 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
+패키지 플라이트 제출에서 업데이트된 패키지를 앱의 Windows10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 사용 하도록 설정 하 고 파트너 센터에서 점진적 패키지 출시를 관리 하는 방법에 대 한 지침을 비롯 한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조 하세요.
 
 Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세스를 따르면 패키지 플라이트 제출에 대해 프로그래밍 방식으로 점진적 패키지 출시를 사용하도록 설정할 수 있습니다.
 
@@ -333,14 +333,14 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 이 리소스의 값은 다음과 같습니다.
 
 > [!NOTE]
-> [update a package flight submission](update-a-flight-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
+> [update a package flight submission](update-a-flight-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 파트너 센터에 의해 채워집니다.
 
 | 값           | 유형    | 설명              |
 |-----------------|---------|------|
 | fileName   |   문자열      |  패키지의 이름입니다.    |  
 | fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 개발자 센터에서 사용됩니다.   |     
-| version    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
+| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 파트너 센터에서 사용 됩니다.   |     
+| 버전    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
 | architecture    |  문자열   |  앱 패키지의 아키텍처(예: ARM)입니다.   |     
 | languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 | capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
@@ -391,7 +391,7 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 | fallbackSubmissionId    |  문자열   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
 
 > [!NOTE]
-> *packageRolloutStatus* 및 *fallbackSubmissionId* 값은 개발자 센터에서 할당하며, 개발자가 설정할 필요가 없습니다. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다.
+> *PackageRolloutStatus* 및 *fallbackSubmissionId* 값은 파트너 센터에서 할당 하며 개발자가 설정할 필요가 없습니다. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다.
 
 <span/>
 

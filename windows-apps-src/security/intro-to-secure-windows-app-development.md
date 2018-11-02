@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: adc74410a5012dbc59cc995e80ee5fa729f0176f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5942637"
+ms.locfileid: "5976073"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>보안 Windows 앱 개발 소개
 

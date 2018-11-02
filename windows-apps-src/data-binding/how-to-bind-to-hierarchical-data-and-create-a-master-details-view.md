@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 60d283f41c495f9612311e4b9b9da3df1a44d498
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5929914"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973927"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터에 바인딩하고 마스터/세부 정보 보기 만들기
 

@@ -8,16 +8,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 75eac585517ce4d4d41b8933a76cf8f4fe20be96
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0befb91175690576b4c0b44fe6e701d4c4efd7df
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941758"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5977774"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a>앱에서 오류에 대한 스택 추적 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 대한 스택 추적을 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 스택 추적만 다운로드할 수 있습니다. 스택 추적은 Windows 개발자 센터 대시보드에서 [상태 보고서](../publish/health-report.md)의 **오류** 섹션을 통해서도 확인할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 대한 스택 추적을 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 스택 추적만 다운로드할 수 있습니다. 스택 추적 파트너 센터에서 [상태 보고서](../publish/health-report.md) 의 **오류** 섹션에서 사용할 수 있습니다.
 
 이 메서드를 사용하려면 먼저 [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 통해 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 ID를 검색해야 합니다.
 
@@ -51,7 +51,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 오류에 
 
 | 매개 변수        | 형식   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | 스택 추적을 가져오려는 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 확인할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
+| applicationId | 문자열 | 스택 추적을 가져오려는 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | cabId | 문자열 | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID입니다. 이 ID를 가져오려면 [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 사용하여 앱에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabId** 값을 사용합니다. |  예  |
 
  

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 34fad804bb36ad1b4ce92a56772c33318e10faa8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932230"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5975836"
 ---
 # <a name="network-communications-in-the-background"></a>백그라운드 네트워크 통신
 네트워크 통신을 포그라운드에 없을 때 계속 해 서 앱 백그라운드 작업 및 이러한 두 옵션 중 하나를 사용할 수 있습니다.
