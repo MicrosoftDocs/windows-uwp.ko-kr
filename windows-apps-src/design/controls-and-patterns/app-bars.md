@@ -15,12 +15,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bbf42acb90d81892fec2788c83c3595f5b6b2f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d3c8aad90e028ece42128e86f5e255be7fd29177
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932949"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972284"
 ---
 # <a name="command-bar"></a>명령 모음
 
@@ -35,7 +35,7 @@ ms.locfileid: "5932949"
 CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx) 및 [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx) 컨트롤과 같은 간단한 명령뿐만 아니라 이미지 또는 텍스트 블록과 같은 복잡한 콘텐츠도 표시할 수 있습니다.
 
 > [!NOTE]
-XAML은 [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) 컨트롤과 [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar) 컨트롤을 모두 제공합니다. AppBar를 사용하는 유니버설 Windows 8 앱을 업그레이드하는 경우 AppBar만 사용해야 하며 변경은 최소화해야 합니다. Windows 10의 새로운 앱의 경우 CommandBar 컨트롤을 대신 사용하는 것이 좋습니다. 이 문서에서는 CommandBar 컨트롤을 사용한다고 가정합니다.
+> XAML은 [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) 컨트롤과 [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar) 컨트롤을 모두 제공합니다. AppBar를 사용하는 유니버설 Windows 8 앱을 업그레이드하는 경우 AppBar만 사용해야 하며 변경은 최소화해야 합니다. Windows 10의 새로운 앱의 경우 CommandBar 컨트롤을 대신 사용하는 것이 좋습니다. 이 문서에서는 CommandBar 컨트롤을 사용한다고 가정합니다.
 
 ## <a name="examples"></a>예
 

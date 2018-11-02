@@ -1,29 +1,29 @@
 ---
 author: Xansky
-Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must create a project and define your remote variables in the Dev Center dashboard.
-title: 대시보드에서 실험 프로젝트 만들기
+Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must create a project and define your remote variables in Partner Center.
+title: 파트너 센터에서 실험 프로젝트 만들기
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
+keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: 2abd7b9dda062cdb5210e74f6f2fde4c86e1470b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 19a59110fa094aeae3d40dca1372fde9889c108e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5928044"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5972304"
 ---
-# <a name="create-an-experiment-project-in-the-dashboard"></a>대시보드에서 실험 프로젝트 만들기
+# <a name="create-an-experiment-project-in-partner-center"></a>파트너 센터에서 실험 프로젝트 만들기
 
-실험을 시작하려면 개발자 센터 대시보드에서 앱에 대한 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms)를 만들고 앱이 액세스할 수 있는 원격 변수를 정의합니다.
+실험 시작 하려면 파트너 센터에서 앱에 대 한 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms) 를 만들고 앱이 액세스할 수 있는 원격 변수를 정의 합니다.
 
 다음 지침에서는 프로젝트를 만들 때 중요한 단계에 대해 설명합니다. 프로젝트를 만들고 실험을 실행하는 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
 ## <a name="instructions"></a>지침
 
-1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인합니다.
+1. [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인합니다.
 2. **앱**에서 실험을 만들 앱을 선택합니다.
 3. 탐색 창에서 **서비스**를 선택한 다음 **실험**을 선택합니다.
 4. **실험** 페이지에서 **프로젝트** 섹션에 있는 **새 프로젝트** 단추를 클릭합니다. 하나 이상의 프로젝트를 이미 만든 경우 **프로젝트** 섹션에 해당 프로젝트가 나열됩니다.
@@ -32,7 +32,7 @@ ms.locfileid: "5928044"
   1. **원격 변수** 섹션이 축소된 경우 섹션 제목에서 **표시**를 클릭합니다.
   2. **변수 추가**를 클릭하여 이 프로젝트의 모든 실험에 사용할 수 있게 하려는 각 변수를 새로 만들고 변수 이름과 변수 기본값을 입력합니다.
   3. 변수 추가를 마쳤으면 **저장**을 클릭합니다.
-3. **SDK 통합** 섹션에서 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱을 코딩](code-your-experiment-in-your-app.md)하는 경우 변형 데이터를 받고 보기 및 변환 이벤트를 개발자 센터에 보고할 수 있도록 코드에서 이 프로젝트 ID를 참조해야 합니다.
+3. **SDK 통합** 섹션에서 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 해야에서 참조할 때이 프로젝트 ID 코드 변형 데이터를 수신 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있도록 합니다.
 
 > [!NOTE]
 > 프로젝트에서 실험이 활성화된 경우에는 원격 변수를 편집, 추가 또는 제거할 수 없습니다. 이 제한 사항은 활성 실험의 컨트롤 그룹에 대해 데이터 무결성을 보호하는 데 도움이 됩니다.
@@ -45,7 +45,7 @@ ms.locfileid: "5928044"
 ## <a name="related-topics"></a>관련 항목
 
 * [실험용 앱 코딩](code-your-experiment-in-your-app.md)
-* [개발자 센터 대시보드에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
-* [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
+* [파트너 센터에서 실험을 정의 합니다.](define-your-experiment-in-the-dev-center-dashboard.md)
+* [파트너 센터에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)

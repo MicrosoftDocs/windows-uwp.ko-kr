@@ -8,12 +8,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 738c643f3c83a4f88f5c52c7337c467366ac8fe5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938095"
+ms.locfileid: "5970672"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
@@ -92,7 +92,7 @@ Microsoft Advertising SDK는 앱에서 사용할 수 있는 여러 유형의 광
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>3단계: 광고 단위 생성 및 조정 구성
 
-앱 테스트를 완료해 Microsoft Store에 제출할 준비를 마쳤으면, Windows 개발자 센터 대시보드의 [인앱 광고](../publish/in-app-ads.md)페이지에 광고 단위를 생성합니다. 그런 다음, 이 광고 단위를 사용하도록 앱 코드를 업데이트하면 앱에 실제 광고가 게재됩니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+앱 테스트를 완료 하 고 스토어에 제출할 준비를 마쳤으면, 파트너 센터의 [앱에서 바로 광고](../publish/in-app-ads.md) 페이지에 광고 단위를 만듭니다. 그런 다음, 이 광고 단위를 사용하도록 앱 코드를 업데이트하면 앱에 실제 광고가 게재됩니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
 기본적으로 앱에는 유료 광고에 대한 Microsoft 네트워크의 광고가 표시됩니다. 광고 수익을 극대화하기 위해 Taboola 및 Smaato 등 추가 유료 광고 네트워크의 광고를 표시하도록 광고 단위에 대한 [광고 조정](ad-mediation-service.md)을 사용할 수 있습니다. Microsoft 앱 홍보 캠페인에 광고를 제공하여 앱 홍보 기능을 향상시킬 수 있습니다.
 
@@ -100,9 +100,9 @@ UWP 앱의 광고 조정을 사용하기 시작하려면, 광고 단위의 [광�
 
 ## <a name="step-4-submit-your-app-and-review-performance"></a>4단계: 앱을 제출하고 성능 검토
 
-광고가 있는 앱 개발을 마친 후, 스토어에서 사용할 수 있도록 개발자 센터 대시보드에 [업데이트한 앱을 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)할 수 있습니다. 광고를 표시하는 앱은 [Microsoft Store 정책 섹션 10.10](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 및 [앱 개발자 계약 별첨 E](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 추가 요구 사항을 충족해야 합니다.
+광고를 사용 하 여 앱 개발을 마친 후 스토어에서 사용할 수 있도록 파트너 센터에서 [업데이트 된 앱을 제출할](https://docs.microsoft.com/windows/uwp/publish/app-submissions) 수 있습니다. 광고를 표시하는 앱은 [Microsoft Store 정책 섹션 10.10](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 및 [앱 개발자 계약 별첨 E](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 추가 요구 사항을 충족해야 합니다.
 
-앱을 게시해 스토어에서 사용할 수 있는 상태가 되고 나면, 대시보드에서 [광고 성능 보고서](../publish/advertising-performance-report.md)를 검토하고, 광고 성능을 최적화하기 위해 조정 설정을 계속 변경할 수 있습니다. 광고 수익은 [지급액 요약](../publish/payout-summary.md)에 포함되어 있습니다.
+앱 스토어에서 게시 되 고 사용할 되 면 파트너 센터에서 [광고 성과 보고서](../publish/advertising-performance-report.md) 를 검토 하 고 계속 광고 성능을 최적화 하기 위해 조정 설정을 변경할 수 있습니다. 광고 수익은 [지급액 요약](../publish/payout-summary.md)에 포함되어 있습니다.
 
 <span id="additional-help" />
 

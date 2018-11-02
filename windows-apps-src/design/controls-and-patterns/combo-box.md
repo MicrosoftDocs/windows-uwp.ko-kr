@@ -12,12 +12,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: f641ec3333ed0eda1fdfa5ff82ef236b5ec186ba
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: cf3a69de36f1292dd6ccabb945a33a893064bd02
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927107"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971896"
 ---
 # <a name="combo-box"></a>콤보 상자
 
@@ -169,15 +169,15 @@ private void ColorComboBox_SelectionChanged(object sender, SelectionChangedEvent
 
 #### <a name="selected-item-behavior-change"></a>선택한 항목 동작 변경 사항
 
-RS5에서 (Windows SDK 버전 10.0.NNNNN.0 (Windows 10, 버전 YYMM) 선택한 항목의 동작 편집 가능한 콤보 상자를 지원 하도록 업데이트 됩니다.
+Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 또는 선택한 항목의 동작 편집 가능한 콤보 상자를 지원 하도록 업데이트는 나중에 있습니다.
 
-이전 RS5, SelectedItem 속성의 값 (및 따라서 SelectedValue 및 SelectedIndex) 콤보 상자의 Items 컬렉션에 있어야 할 필요 했습니다. 설정 이전 예제를 사용 하 여 `colorComboBox.SelectedItem = "Pink"` 결과:
+이전 SDK 17763, SelectedItem 속성의 값 (및 따라서 SelectedValue 및 SelectedIndex) 콤보 상자의 Items 컬렉션에 있어야 할 필요 했습니다. 설정 이전 예제를 사용 하 여 `colorComboBox.SelectedItem = "Pink"` 결과:
 
 - SelectedItem null =
 - SelectedValue null =
 - SelectedIndex-1 =
 
-RS5 이상, SelectedItem 속성의 값 (및 따라서 SelectedValue 및 SelectedIndex) 콤보 상자의 Items 컬렉션에 있이 필요 하지 않습니다. 설정 이전 예제를 사용 하 여 `colorComboBox.SelectedItem = "Pink"` 결과:
+Sdk 17763 이상 SelectedItem 속성의 값 (및 따라서 SelectedValue 및 SelectedIndex) 콤보 상자의 Items 컬렉션에 있이 필요 하지 않습니다. 설정 이전 예제를 사용 하 여 `colorComboBox.SelectedItem = "Pink"` 결과:
 
 - SelectedItem 핑크 =
 - SelectedValue 분홍색 =
@@ -192,7 +192,7 @@ RS5 이상, SelectedItem 속성의 값 (및 따라서 SelectedValue 및 Selected
 ## <a name="make-a-combo-box-editable"></a>콤보 상자를 편집할 수 있게
 
 > [!IMPORTANT]
-> 이 기능은는 [최신 Windows 10 Insider Preview 빌드 및 SDK가](https://insider.windows.com/for-developers/)필요 합니다.
+> 이 기능은 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))가 필요 이상.
 
 콤보 상자는 기본적으로 사용자 수 있도록 미리 정의 된 옵션 목록에서 선택 합니다. 그러나 목록에 유효한 값의 하위 집합만 포함 되어 있고 사용자가 나열 되지 않은 다른 값을 입력할 수 있습니다. 이 지원 하기 위해 가능 콤보 상자 편집 가능 합니다.
 

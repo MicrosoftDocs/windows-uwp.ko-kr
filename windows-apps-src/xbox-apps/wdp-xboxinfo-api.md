@@ -1,27 +1,27 @@
 ---
 author: M-Stahl
-title: 장치 Xbox 포털 정보 API 참조
-description: Xbox 장치 정보에 액세스 하는 방법에 알아봅니다.
+title: 디바이스 포털 Xbox 정보 API 참조
+description: Xbox 장치 정보에 액세스 하는 방법을 알아봅니다.
 ms.author: mstahl
 ms.date: 11/7/2017
 ms.topic: article
-keywords: windows 10, uwp, xbox, 포털 장치
+keywords: windows 10, uwp, xbox 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b0e2bab0ce7d5525e8032809954ff656a74a61c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919896"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971542"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox 정보 API 참조   
-이 API를 사용 하 여 Xbox 한 장치 정보에 액세스할 수 있습니다.
+이 API를 사용 하 여 Xbox One 장치 정보에 액세스할 수 있습니다.
 
-## <a name="get-xbox-one-device-information"></a>하나의 Xbox 장치 정보 가져오기
+## <a name="get-xbox-one-device-information"></a>Xbox One 장치 정보 가져오기
 
 **요청**
 
-Xbox 1 프로그램에 대 한 장치 정보를 얻을 수 있습니다.
+Xbox One에 대 한 장치 정보를 얻을 수 있습니다.
 
 메서드      | 요청 URI
 :------     | :-----
@@ -42,14 +42,14 @@ GET | /ext/xbox/info
 **응답**   
 다음 필드가 있는 JSON 개체입니다.
 
-* OsVersion-운영 체제의 버전 (문자열)입니다.
-* OsEdition-(String)은 운영 체제의 버전 같이 "2017 년 3 월" 또는 "1" QFE 3 월 2017.
-* ConsoleId-(String) 콘솔의 id입니다.
-* DeviceId-(String) 콘솔의 Xbox Live 장치 id입니다.
-* 일련 번호-일련 번호 (문자열) 콘솔의
-* DevMode-(String) 콘솔의 현재 개발자 모드 "없음" 또는 "Retail".
-* ConsoleType-"Xbox" 일 "또는" Xbox 한 S "같은 (String) 콘솔의 형식입니다.
-* DevkitCertificateExpirationTime-콘솔의 개발자 키트 인증서 만료 시간 (초)에는 UTC 시간 (숫자).
+* OsVersion-(문자열) 운영 체제의 버전입니다.
+* OsEdition-(문자열)는 OS 버전과 같은 "2017 년 3 월" 또는 "1" QFE 2017 년 3 월 합니다.
+* ConsoleId-(문자열) 콘솔의 id입니다.
+* DeviceId-(문자열) 콘솔의 Xbox Live 장치 id입니다.
+* SerialNumber-(문자열) 콘솔의 일련번호 합니다.
+* DevMode-(문자열) 콘솔의 현재 개발자와 같은 모드를 "None" 또는 "소매".
+* ConsoleType-(문자열) 콘솔의 유형, 예: "Xbox One" 또는 "Xbox One S".
+* DevkitCertificateExpirationTime-(숫자)는 UTC 시간 (초) 때 콘솔의 개발자 키트 인증서가 만료 됩니다.
 
 **상태 코드**
 
