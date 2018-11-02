@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bc007ee1725ea3048895ccb9e7340bc0f08e8b8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861267"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5934602"
 ---
 # <a name="background-transfers"></a>백그라운드 전송
 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
@@ -30,7 +30,7 @@ ms.locfileid: "5861267"
 > [!NOTE]
 > 앱당 리소스 제한 때문에, 특정 주어진 시간 동안 앱의 전송이 200을 초과할 수 없습니다(DownloadOperations + UploadOperations). 이런 제한 기준을 초과하면 앱의 전송 큐가 복구할 수 없는 상태가 됩니다.
 
-응용 프로그램을 시작할 때 [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) 모든 기존 [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) 및 [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) 개체에서 호출 해야 합니다. 이렇게 하지 않으면 누수 이미 완료 된 전송 하면 결국 렌더링 하는 백그라운드 전송 기능은 사용 사용할 수 없습니다.
+응용 프로그램이 시작 되 면 [**AttachAsync**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation.AttachAsync) 모든 기존 [**DownloadOperation**](/uwp/api/windows.networking.backgroundtransfer.downloadoperation?branch=live) 및 [**UploadOperation**](/uwp/api/windows.networking.backgroundtransfer.uploadperation?branch=live) 개체에서 호출 해야 합니다. 이렇게 하지 않으면 누수 이미 완료 된 전송 하면 결국 렌더링 하는 백그라운드 전송 기능은 사용 사용할 수 없습니다.
 
 ### <a name="performing-authenticated-file-requests-with-background-transfer"></a>백그라운드 전송을 사용하여 인증된 파일 요청 수행
 백그라운드 전송은 기본 서버 및 프록시 자격 증명, 쿠키를 지원하는 방법을 제공하는 것은 물론, 각 전송 작업에 대한 사용자 지정 HTTP 헤더 사용([**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)를 통해)도 지원합니다.
@@ -42,7 +42,7 @@ ms.locfileid: "5861267"
 
 백그라운드 전송 기능은 네트워크 상태 변경을 처리하는 자체 메커니즘을 가지고 있지만, 네트워크에 연결된 앱에 대한 다른 일반적인 연결 고려 사항도 있습니다. 자세한 내용은 [사용 가능한 네트워크 연결 정보 활용](https://msdn.microsoft.com/library/windows/apps/hh452983)을 읽어보세요.
 
-> **참고**모바일 장치에서 실행 되는 앱을 모니터링 하 고 연결, 로밍 상태 유형에 따라 전송 되는 데이터의 양을 제한 하는 데 사용할 수 있는 기능 되며 사용자의 데이터 요금제 합니다. 이 때문에 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 전송이 진행 중으로 표시되는 경우에도 휴대폰에서 백그라운드 전송이 일시 중지될 수도 있습니다.
+> **참고**모바일 장치에서 실행 되는 앱을 모니터링 하 고 연결, 로밍 상태의 유형에 따라 전송 되는 데이터의 양을 제한 하는 데 사용할 수 있는 기능 되며 사용자의 데이터 요금제 합니다. 이 때문에 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 전송이 진행 중으로 표시되는 경우에도 휴대폰에서 백그라운드 전송이 일시 중지될 수도 있습니다.
 
 다음 표에서는 현재 휴대폰 상태에서 각 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) 값에 대해 휴대폰에서 백그라운드 전송이 허용되는 경우를 보여 줍니다. [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) 클래스를 사용하여 현재 휴대폰 상태를 확인할 수 있습니다.
 
@@ -201,7 +201,7 @@ promise = download.startAsync().then(complete, error, progress);
 1.  이제 채워진 목록을 사용하여 보류 중인 작업을 다시 시작할 수 있습니다.
 
 ## <a name="post-processing"></a>사후 처리
-Windows10에서 새로운 기능은 앱 실행 중이지 않을 때에 백그라운드 전송 완료 시 응용 프로그램 코드를 실행할 수 있습니다. 예를 들어 앱을 시작할 때마다 새 동영상을 검색하는 대신 영화 다운로드가 완료된 후 앱에서 사용 가능한 동영상 목록을 업데이트할 수 있습니다. 또는 앱에서 다른 서버나 포트를 다시 사용하여 실패한 파일 전송을 처리할 수 있습니다. 사후 처리는 성공한 전송과 실패한 전송 모두에 대해 호출되므로 이를 사용하여 사용자 지정 오류 처리 및 다시 시도 논리를 구현할 수 있습니다.
+Windows10의 새로운 기능은 앱 실행 중이지 않을 때에 백그라운드 전송 완료 시 응용 프로그램 코드를 실행 하는 기능. 예를 들어 앱을 시작할 때마다 새 동영상을 검색하는 대신 영화 다운로드가 완료된 후 앱에서 사용 가능한 동영상 목록을 업데이트할 수 있습니다. 또는 앱에서 다른 서버나 포트를 다시 사용하여 실패한 파일 전송을 처리할 수 있습니다. 사후 처리는 성공한 전송과 실패한 전송 모두에 대해 호출되므로 이를 사용하여 사용자 지정 오류 처리 및 다시 시도 논리를 구현할 수 있습니다.
 
 사후 처리에서는 기존 백그라운드 작업 인프라를 사용합니다. 전송을 시작하기 전에 백그라운드 작업을 만들고 전송과 연결합니다. 그러면 백그라운드에서 전송이 실행되고, 완료되면 사후 처리를 수행하기 위해 백그라운드 작업이 호출됩니다.
 
@@ -262,7 +262,7 @@ public class BackgroundDownloadProcessingTask : IBackgroundTask
 
 -   연결이 설정되면 2분 이내에 응답을 받지 못한 모든 HTTP 요청 메시지가 중단됩니다.
 
-> **참고**두 시나리오에서 인터넷 연결 한다고 가정 백그라운드 전송을 다시 시도 합니다 요청을 최대 세 번까지 자동으로 합니다. 인터넷 연결이 검색되지 않는 경우 추가 요청은 인터넷에 연결될 때까지 대기합니다.
+> **참고**두 시나리오에서 인터넷 연결이 한다고 가정 백그라운드 전송을 다시 시도 합니다 요청을 최대 세 번까지 자동으로 합니다. 인터넷 연결이 검색되지 않는 경우 추가 요청은 인터넷에 연결될 때까지 대기합니다.
 
 ## <a name="debugging-guidance"></a>디버깅 지침
 Microsoft Visual Studio에서 디버깅 세션을 중지하는 것은 앱을 닫는 것과 같습니다. PUT 업로드가 일시 중지되고 POST 업로드가 종료됩니다. 디버깅 중에도 앱이 지속형 업로드를 열거한 다음 다시 시작하거나 취소해야 합니다. 예를 들어 해당 디버그 세션의 이전 작업에 관심이 없는 경우 앱을 시작할 때 앱에서 열거된 지속형 업로드 작업을 취소하도록 할 수 있습니다.

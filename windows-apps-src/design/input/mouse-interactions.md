@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b79edc5499343498801081dd00554128c3b57eae
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5881856"
+ms.locfileid: "5934994"
 ---
 # <a name="mouse-interactions"></a>마우스 조작
 
@@ -67,7 +67,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 명령 선택</p></td>
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 탐색 모음 (사용 가능한 경우) 및 글로벌 명령이 포함된 앱 바를 표시합니다. 요소를 마우스 오른쪽 단추로 클릭하여 선택하고 선택한 요소에 대한 상황에 맞는 명령이 포함된 앱 바를 표시합니다.</p>
 <div class="alert">
-<strong>참고</strong>선택 또는 앱 바 명령이 적합 한 UI 동작이 아닌 경우 상황에 맞는 메뉴를 표시 하는 마우스 오른쪽 단추로 클릭 합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
+<strong>참고</strong>선택 또는 앱 바 명령이 적합 한 UI 동작이 아닌 경우 상황에 맞는 메뉴를 표시 하려면 마우스 오른쪽 단추로 클릭 합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
 </div>
 <div>
  
@@ -98,7 +98,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트를 사용하여 각 포인터 입력 장치에 대한 코드를 작성하지 않고 기본적인 입력 기능을 구현합니다. 그러나 이 개체의 포인터, 제스처 및 조작 이벤트를 사용하여 이 개체의 각 장치의 특수 기능(예: 마우스 휠 이벤트)을 활용할 수도 있습니다.
 
-**샘플:** 이 기능의 작동 [앱 샘플](http://go.microsoft.com/fwlink/p/?LinkID=264996)을 참조 하세요.
+**샘플:** [앱 샘플](http://go.microsoft.com/fwlink/p/?LinkID=264996)에서 작업에서이 기능을 볼 수 있습니다.
 
 
 - [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
