@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 094476d4e846fb7e4194f67d3de6bd1d9c7316df
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5872368"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5929030"
 ---
 # <a name="usersxuidxuidachievements"></a>/users/xuid({xuid})/achievements
  
@@ -29,7 +29,7 @@ ms.locfileid: "5872368"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 인 (리소스)에 액세스 하는 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 인 (리소스)에 액세스 하 고 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
   
 <a id="ID4EAC"></a>
 

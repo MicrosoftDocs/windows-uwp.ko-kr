@@ -15,15 +15,15 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba4bfcd38acba2bcd7c8399b8b17184edacc15a
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5888577"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5947320"
 ---
 ## <a name="dialog-controls"></a>대화 상자 컨트롤
 
-대화 상자 컨트롤은 상황에 맞는 앱 정보를 제공 하는 모달 UI 오버레이입니다. 명시적으로 닫을 때까지 앱 창의 조작을 차단 있습니다. 종종 사용자의 작업을 요청하기도 합니다.
+대화 상자 컨트롤은 상황에 맞는 앱 정보를 제공 하는 모달 UI 오버레이입니다. 이러한 명시적으로 닫을 때까지 앱 창의 조작을 차단 합니다. 종종 사용자의 작업을 요청하기도 합니다.
 
 ![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
 

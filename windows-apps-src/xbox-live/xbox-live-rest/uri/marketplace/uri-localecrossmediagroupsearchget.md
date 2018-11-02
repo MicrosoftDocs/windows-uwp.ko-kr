@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 16baf465eb534e40854fcda1df7abb8c10ff2fbe
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5878084"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5934571"
 ---
 # <a name="get-mediamarketplaceidcrossmediagroupsearch"></a>GET (/media/{marketplaceId}/crossMediaGroupSearch)
 여러 다른 미디어 그룹에서 항목을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -29,9 +29,9 @@ ms.locfileid: "5878084"
  
 ## <a name="remarks"></a>설명
  
-그룹 간 API는 여러 다른 미디어 그룹에서 항목을 검색 하는 클라이언트를 허용 합니다. 이 API에 결과 통해 페이징을 정방향 연속 토큰을 사용에 필요합니다. 이 API는 쿼리 구체화를 수락합니다.
+그룹 간 API에는 클라이언트가 여러 다른 미디어 그룹에서 항목을 검색할 수 있습니다. 이 API에 결과 통해 페이징을 정방향 연속 토큰을 사용에 필요합니다. 이 API는 쿼리 구체화를 수락합니다.
  
-이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
+이제 **SandboxId** 는 XToken에서 클레임에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS)은 400 잘못 된 요청 오류를 throw 합니다.
   
 <a id="ID4EEB"></a>
 

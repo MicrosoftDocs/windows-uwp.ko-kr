@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
 ms.openlocfilehash: ec865b56254b624655e29df43a42ebedd58e4cf0
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5862300"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940083"
 ---
 # <a name="windows-dev-center-service-configuration"></a>Windows 개발자 센터 서비스 구성
 
@@ -21,7 +21,7 @@ ms.locfileid: "5862300"
 > [!IMPORTANT]
 > 이러한 항목 타이틀에 Xbox Live 크리에이터 스 프로그램에 적용 되지 않습니다.
 
-게임 구성 페이지에 액세스 하기 위해 Xbox Live 전체 액세스에 대 한 활성화 되어야 합니다.
+게임 구성 페이지에 액세스 하기 위해 전체 Xbox Live 액세스에 대 한 활성화 되어야 합니다.
 
 Xbox Live 구성에 액세스 하려면 페이지, [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)타이틀을 선택한 후 이동 **서비스** > **Xbox Live**.
 

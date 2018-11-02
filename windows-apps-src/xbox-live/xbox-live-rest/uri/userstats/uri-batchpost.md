@@ -10,21 +10,21 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cf59d532b303402bc17320621a92ee7a0bc77934
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5879385"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5941123"
 ---
 # <a name="post-batch"></a>POST (/batch)
-여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 GET 메서드 같은 기능을 수행 하는 메서드를 게시 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
+여러 타이틀에서 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 GET 방법으로 작동 하는 메서드를 게시 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
  
 <a id="ID4ET"></a>
 
  
 ## <a name="remarks"></a>설명
  
-제목 개발자 열기 또는 XDP 또는 개발자 센터를 사용 하 여 제한 된 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐만 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
+제목 개발자 열리거나 XDP 또는 개발자 센터를 사용 하 여 제한으로 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐만 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
   
   * [설명](#ID4ET)
   * [설명](#ID4EFB)
@@ -40,7 +40,7 @@ ms.locfileid: "5879385"
  
 ## <a name="remarks"></a>설명
  
-호출자는 사용자, 서비스 구성 Id (SCIDs) 및 통계를 검색 하려는 SCIDs 당 통계 이름 목록은 배열을 사용 하 여 메시지 본문을 제공 합니다.
+호출자의 사용자, 서비스 구성 Id (SCIDs) 및 이러한 통계를 검색 하려는 SCIDs 당 통계 이름 목록은 배열 메시지 본문을 제공 합니다.
  
 하는 경우가 더 간단 하며 단일 통계를 검토 하는 데 유용 [GET](uri-usersxuidscidsscidstatsget.md) 메서드를 하기 전에 읽고이 더 복잡 한 배치 모드 페이지.
   
@@ -49,12 +49,12 @@ ms.locfileid: "5879385"
  
 ## <a name="authorization"></a>권한 부여
  
-권한 부여 논리 콘텐츠 격리 및 액세스 제어 시나리오에 대해 구현 있습니다.
+콘텐츠 격리 및 액세스 제어 시나리오에 구현 된 권한 부여 논리가 있습니다.
  
-   * 순위표와 사용자 통계 호출자가 요청을 사용 하 여 유효한 XSTS 토큰 전송 된 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 클라이언트에서 지 원하는 분명히 제한 합니다.
-   * 제목 개발자 열기 또는 XDP 또는 개발자 센터를 사용 하 여 제한 된 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐만 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
+   * 순위표와 사용자 통계 호출자에 게 요청을 사용 하 여 유효한 XSTS 토큰 제출 된 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 클라이언트에서 지 원하는 분명히 제한 합니다.
+   * 제목 개발자 열리거나 XDP 또는 개발자 센터를 사용 하 여 제한으로 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐만 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
   
-다음 예제는 검사에 대 한 의사 코드:
+다음 예제에서는 검사에 대 한 의사 코드입니다.
  
 
 ```cpp
@@ -84,7 +84,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1입니다.| 
+| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 기본값: 1입니다.| 
   
 <a id="ID4EAF"></a>
 
@@ -96,7 +96,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 ### <a name="sample-request"></a>샘플 요청
  
-다음 게시 본문은 두 개의 다른 사용자에 대 한 두 개의 다른 SCIDs에서 4 개의 통계를 요청 되는 서비스에 알립니다.
+POST 본문은 다음 두 가지 다른 사용자에 대 한 두 개의 다른 SCIDs에서 4 개의 통계 요청 되는 서비스에 알립니다.
  
 
 ```cpp
@@ -131,18 +131,18 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| 세션을 검색 했습니다.| 
-| 304| 수정 되지 않음| 리소스 되지 요청 된 마지막으로 수정 합니다.| 
-| 400| 잘못 된 요청| 서비스 잘못 된 요청을 이해할 수 없었습니다. 일반적으로 잘못 된 매개 변수입니다.| 
-| 401| 권한 없음| 필요한 사용자 인증을 요청 합니다.| 
-| 403| 사용할 수 없음| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
+| 304| 수정 되지 않음| 리소스 되지 요청 마지막으로 수정 합니다.| 
+| 400| 잘못 된 요청| 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
+| 401| 권한 없음| 요청은 사용자 인증이 필요합니다.| 
+| 403| 금지| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
 | 404| 찾을 수 없습니다.| 지정된 된 리소스를 찾을 수 없습니다.| 
-| 406| 허용할 수 없음| 리소스 버전이 지원 되지 않습니다.| 
-| 408| 요청 시간 제한| 리소스 버전이 지원 되지 않습니다. MVC 계층에 의해 거부 되어야 합니다.| 
+| 406| 허용할 수 없음| 리소스 버전은 지원 되지 않습니다.| 
+| 408| 요청 시간 제한| 리소스 버전 지원 되지 않습니다. MVC 계층에 의해 거부 되어야 합니다.| 
   
 <a id="ID4ENBAC"></a>
 

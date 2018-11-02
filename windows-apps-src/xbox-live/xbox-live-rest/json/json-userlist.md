@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: fdbf983413ef68bb3afa0ca6f23fc182a6fece5e
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885845"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5945748"
 ---
 # <a name="userlist-json"></a>UserList(JSON)
 [사용자](json-user.md) 개체의 컬렉션입니다. 
@@ -23,7 +23,7 @@ ms.locfileid: "5885845"
  
 ## <a name="userlist"></a>UserList
  
-UserList 개체에는 다음 사양을 있습니다.
+UserList 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

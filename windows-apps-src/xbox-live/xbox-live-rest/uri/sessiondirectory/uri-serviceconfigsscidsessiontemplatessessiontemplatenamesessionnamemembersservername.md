@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d799db37aef00aaaa7a992b2bda5cb535a12b569
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5866255"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5923789"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnameserversserver-name"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/servers/{server-name}
-세션의 지정 된 서버를 제거 하려면 삭제 작업을 지원 합니다.
+세션의 지정 된 서버를 제거 하는 삭제 작업을 지원 합니다.
 <a id="ID4EO"></a>
 
 
@@ -26,8 +26,8 @@ ms.locfileid: "5866255"
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션 식별자입니다.|
-| 세션 이름| GUID| 세션의 고유 ID입니다. 파트 3 세션 식별자입니다.| 
+| sessionTemplateName| string| 현재 세션 템플릿 인스턴스의의 이름입니다. 2 부 세션 식별자입니다.|
+| 세션| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.| 
 
 <a id="ID4E3B"></a>
 

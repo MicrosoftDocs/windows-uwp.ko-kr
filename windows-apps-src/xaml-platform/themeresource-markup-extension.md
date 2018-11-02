@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885899"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5947366"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 
@@ -69,7 +69,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 **ThemeResource** 사용은 일련의 종속 값에서 확인할 수 있습니다. 예를 들어 키가 지정된 리소스이기도 한 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)에서 사용되는 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 값이 **ThemeResource** 참조를 사용할 수 있습니다. 하지만 키가 지정된 **SolidColorBrush** 리소스를 사용하는 UI 속성도 **ThemeResource** 참조를 사용하므로, 특히 각 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 유형 속성이 테마 변경 시 동적 값 변경을 사용합니다.
 
-**참고** `{ThemeResource}` 및 런타임 리소스 평가가 테마 전환 시 Windows8.1 XAML로 지원 이지만 Windows8를 대상으로 하는 앱에 대 한 XAML에서 지원 되지 않습니다.
+**참고** `{ThemeResource}` 및 런타임 리소스 평가가 테마 전환 시는 Windows8.1 XAML에서 지원 되지만 Windows8를 대상으로 하는 앱에 대 한 XAML에서 지원 되지 않습니다.
 
 ### <a name="system-resources"></a>시스템 리소스
 
@@ -140,7 +140,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 ## <a name="windows8-behavior"></a>Windows8 동작
 
-Windows8 **ThemeResource** 태그 확장을 지원 하지 않지만, Windows8.1부터 사용할 수 있습니다. 또한 Windows8은 Windows 런타임 앱에 대 한 테마 관련 리소스를 동적으로 전환을 지원 하지 않았습니다. XAML 템플릿 및 스타일에 대한 테마 변경을 반영하려면 앱을 다시 시작해야 합니다. 이 아니므로 좋은 사용자 환경을 **ThemeResource** 사용법으로 스타일을 사용할 수 있으며 사용자가 수행 하는 경우에 동적으로 테마를 전환할 수 있도록 앱은 다시 컴파일 및 대상 Windows8.1 하는 것이 좋습니다. 앱 Windows8 동작을 사용 하 여 계속 Windows8 하지만 Windows8.1에서 실행 되는 용으로 컴파일입니다.
+Windows8 **ThemeResource** 태그 확장을 지원 하지 않지만, Windows8.1부터 사용할 수 있습니다. 또한 Windows8은 Windows 런타임 앱에 대 한 테마 관련 리소스를 동적으로 전환을 지원 하지 않았습니다. XAML 템플릿 및 스타일에 대한 테마 변경을 반영하려면 앱을 다시 시작해야 합니다. 이 아니므로 좋은 사용자 환경을 **ThemeResource** 사용법으로 스타일을 사용할 수 있으며 사용자가 수행 하는 경우에 동적으로 테마를 전환할 수 있도록 앱은 다시 컴파일 및 대상 Windows8.1 하는 것이 좋습니다. 앱 Windows8 하지만 Windows8.1에서 실행 중인 Windows8 동작을 사용 하 여 계속 용으로 컴파일입니다.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>**{ThemeResource}** 태그 확장을 위한 디자인 타임 도구 지원
 

@@ -2,7 +2,7 @@
 author: normesta
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Windows 스토어 또는 테스트용으로 로드를 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
+title: Windows 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
@@ -10,15 +10,15 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b16e06c81eeb90e500e40fc9b4d7ab709651091
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5865838"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5946180"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램 배포
 
-Windows 스토어 또는 테스트용으로 로드를 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
+Windows 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
 
 > [!NOTE]
 > 패키지 된 응용 프로그램에 사용자를 전환할 수 있는 방법에 대 한 계획 있으십니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [패키지된 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
@@ -27,14 +27,14 @@ Windows 스토어 또는 테스트용으로 로드를 패키지로 만든된 데
 
 [Microsoft Store](https://www.microsoft.com/store/apps)는 고객이 앱을 다운로드할 수 있는 편리한 방법입니다.
 
-가장 광범위 한 사용자에 도달 하려면 해당 저장소로 응용 프로그램을 게시 합니다. 또한 조직 고객에 게 [비즈니스용 Microsoft 스토어](https://www.microsoft.com/business-store)를 통해 조직에 내부적으로 배포 하려면 응용 프로그램을 취득할 수 있습니다.
+가장 광범위 한 사용자에 도달 하려면 해당 스토어에 응용 프로그램을 게시 합니다. 또한 조직 고객에 게 [비즈니스용 Microsoft 스토어](https://www.microsoft.com/business-store)를 통해 조직에 내부적으로 배포 하려면 응용 프로그램을 취득할 수 있습니다.
 
 Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 이 요구 사항에 대한 자세한 내용은 [제한된 접근 권한 값](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities)을 참조하세요.
 
 스토어에 제출 하기 전에 응용 프로그램에 서명 하지 않아도 됩니다.
 
 >[!IMPORTANT]
-> Microsoft Store에 응용 프로그램을 게시 하려는 경우 응용 프로그램은 Windows 10 S를 실행 하는 장치에서 정상적으로 작동 하 고 있는지 확인 스토어의 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
+> 응용 프로그램이 Windows 10 S를 실행 하는 장치에서 올바르게 작동 하는지, Microsoft Store에 응용 프로그램을 게시 하려는 경우 스토어의 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](desktop-to-uwp-test-windows-s.md)를 참조하세요.
 
 <a id="side-load" />
 
@@ -44,20 +44,20 @@ Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 �
 
 배포 경험에 대한 강력한 제어를 원하거나 Microsoft Store 인증 프로세스에 참여하고 싶지 않은 경우에 적합한 방법입니다.
 
-를 스토어에 배치 하지 않고 다른 장치에 응용 프로그램을 배포 하려면 인증서 얻기, 장치에서 이러한 응용 프로그램 및 다음 해당 인증서를 테스트용으로 로드를 사용 하 여 응용 프로그램에 서명 해야 합니다.
+를 스토어에 배치 하지 않고 다른 장치에 응용 프로그램을 배포 하려면 인증서 얻기, 해당 장치에 응용 프로그램 및 다음 해당 인증서를 테스트용으로 로드를 사용 하 여 응용 프로그램에 서명 해야 합니다.
 
 [인증서를 만들거나](../packaging/create-certificate-package-signing.md) [Verisign](https://www.verisign.com/) 같은 인기 공급자로부터 구입할 수 있습니다.
 
-Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 해당 장치에서 응용 프로그램을 배포 하기 전에 스토어 제출 프로세스를 통과 해야 합니다. Microsoft Store에서 서명 해야 응용 프로그램의 합니다.
+Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 응용 프로그램에 장치에서 이러한 응용 프로그램을 배포할 수 저장소 제출 프로세스를 진행 해야 하므로 Microsoft Store에서 서명입니다.
 
 인증서를 만드는 경우에는 앱을 실행하는 각 장치의 **신뢰할 수 있는 루트** 또는 **신뢰할 수 있는 사용자** 인증서 저장소에 이를 설치해야 합니다. 인기 공급자로부터 인증서를 구입하는 경우에는 다른 시스템에 앱 이외에 어떤 것도 설치할 필요가 없습니다.  
 
 > [!IMPORTANT]
 > 인증서의 게시자 이름이 앱 게시자 이름과 일치하는지 확인합니다.
 
-인증서를 사용 하 여 응용 프로그램에 서명 하려면 [서명 응용 프로그램 패키지 SignTool을 사용 하 여](../packaging/sign-app-package-using-signtool.md)참조 하세요.
+인증서를 사용 하 여 응용 프로그램에 서명 하려면 [서명 된 응용 프로그램 패키지 SignTool을 사용 하 여](../packaging/sign-app-package-using-signtool.md)참조 하세요.
 
-테스트용으로 로드 다른 장치에 응용 프로그램이 [Windows 10에서 테스트용으로 로드 LOB 앱을](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)참조 하세요.
+테스트용으로 로드 다른 장치에 응용 프로그램이 [Windows 10에서 Sideload LOB 앱을](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)참조 하세요.
 
 **비디오**
 
@@ -73,7 +73,7 @@ Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 
 
 * 기존의 시작 타일 및 작업 표시줄 단추가 패키지 앱을 가리키도록 지정합니다.
 * 파일 형식 집합을 사용 하 여 패키지 된 응용 프로그램을 연결 합니다.
-* 기본적으로 특정 형식의 파일을 열고 패키지 된 응용 프로그램을 확인 합니다.
+* 기본적으로 특정 형식의 파일 열기 패키지 된 응용 프로그램을 확인 합니다.
 
 전체 확장 목록과 사용 방법에 대한 지침은 [사용자를 앱으로 전환](desktop-to-uwp-extensions.md#transition-users-to-your-app)을 참조하세요.
 
@@ -125,7 +125,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>데스크톱 버전의 앱 제거
 
-먼저 사용 권한을 요청 하지 않고 사용자가 데스크톱 응용 프로그램을 제거 하는 하지는 것이 좋습니다. 해당 사용 권한을 요청하는 대화 상자를 표시합니다. 사용자가 데스크톱 버전의 앱을 제거하지 않을 수 있습니다. 이 경우 데스크톱 응용 프로그램의 사용을 차단 하거나 두 앱-나란히 사용을 지원 하는지 여부를 결정 해야 합니다.
+하지 먼저 사용 권한을 요청 하지 않고 사용자가 데스크톱 응용 프로그램을 제거 하는 것이 좋습니다. 해당 사용 권한을 요청하는 대화 상자를 표시합니다. 사용자가 데스크톱 버전의 앱을 제거하지 않을 수 있습니다. 이 경우 데스크톱 응용 프로그램의 사용을 차단 하거나 두 앱-나란히 사용을 지원 하는지 여부를 결정 해야 합니다.
 
 여기에 .NET 기반의 패키지된 앱에서 이를 수행할 수 있는 방법이 예로 나와 있습니다.
 

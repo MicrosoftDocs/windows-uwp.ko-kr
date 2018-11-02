@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 95a6a912e663773d427a6786a6af7b1fdf26c548
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5864493"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5932964"
 ---
 # <a name="get-qosservers"></a>GET (/qosservers)
-URI를 사용 하 여 Xbox Live 계산에 사용 하기 위해 사용할 수 있는 QoS 서버의 목록을 가져올 수 클라이언트에 의해 호출 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+URI를 사용 하 여 Xbox Live 계산 사용 하기 위해 사용할 수 있는 QoS 서버의 목록을 가져올 수 클라이언트에 의해 호출 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
   * [필요한 요청 헤더](#ID4EBB)
   * [필요한 응답 헤더](#ID4EUC)
@@ -35,14 +35,14 @@ gameserverds.xboxlive.com
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-요청을 만들 때 다음 표에 표시 된 헤더는 필요 합니다.
+다음 표에 표시 된 헤더는 요청을 만들 때 필요 합니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 전송 되는 데이터 형식입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
 | 호스트| gameserverds.xboxlive.com|  | 
 | Content-Length|  | 요청 개체의 길이입니다.| 
-| xbl 계약 버전 x| 1| API 계약 버전입니다.| 
+| x xbl-계약 버전| 1| API 계약 버전입니다.| 
   
 <a id="ID4EUC"></a>
 
@@ -53,7 +53,7 @@ gameserverds.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 응답 본문에는 데이터 형식입니다.| 
+| 콘텐츠 유형| application/json| 응답 본문에는 데이터의 유형입니다.| 
 | Content-Length|  | 응답 본문의 길이입니다.| 
   
 <a id="ID4EVD"></a>
@@ -65,10 +65,10 @@ gameserverds.xboxlive.com
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| qosservers| 배열 서버 정보입니다.| 
-| serverFqdn| 서버의 정규화 된 도메인 이름입니다.| 
+| qosservers| 서버 정보의 배열입니다.| 
+| serverFqdn| 정규화 된 도메인 이름 서버입니다.| 
 | serverSecureDeviceAddress| 서버 보안 장치 주소입니다.| 
-| targetLocation| 서버의 지리적 위치입니다.| 
+| targetLocation| 지리적 위치 서버입니다.| 
  
 <a id="ID4EUE"></a>
 

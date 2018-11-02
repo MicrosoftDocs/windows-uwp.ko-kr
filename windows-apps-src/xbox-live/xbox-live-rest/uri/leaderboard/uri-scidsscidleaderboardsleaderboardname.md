@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c8cd21fdd3b11aa7307465782bcc10e27488aedb
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887574"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5938566"
 ---
 # <a name="scidsscidleaderboardsleaderboardname"></a>/scids/{scid}/leaderboards/{leaderboardname}
 미리 정의 된 전역 순위표에 액세스합니다. 이러한 Uri에 대 한 도메인은 `leaderboards.xboxlive.com`.
@@ -28,7 +28,7 @@ ms.locfileid: "5887574"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| 서비스 안내| GUID| 액세스 되는 리소스를 포함 하는 서비스 구성의 식별자입니다.| 
+| 서비스 안내| GUID| 액세스 되는 리소스를 포함 하는 서비스 구성의 식별자.| 
 | leaderboardname| string| 액세스 되는 미리 정의 된 순위표 리소스의 고유 식별자입니다.| 
   
 <a id="ID4E3B"></a>
@@ -41,9 +41,9 @@ ms.locfileid: "5887574"
 &nbsp;&nbsp;&nbsp; &nbsp;미리 정의 된 전역 순위표 가져옵니다.
 
 
-[메타 데이터 값을 사용 하 여 가져오기](uri-scidsscidleaderboardsleaderboardnamegetvaluemetadata.md)
+[값 메타 데이터 가져오기](uri-scidsscidleaderboardsleaderboardnamegetvaluemetadata.md)
 
-&nbsp;&nbsp;&nbsp; &nbsp;순위표 값와 관련 된 메타 데이터와 함께 미리 정의 된 전역 순위표 가져옵니다.
+&nbsp;&nbsp;&nbsp; &nbsp;는 미리 정의 된 전역 순위표 순위표 값와 관련 된 메타 데이터와 함께 가져옵니다.
 
  
 <a id="ID4EJC"></a>

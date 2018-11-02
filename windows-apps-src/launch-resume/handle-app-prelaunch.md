@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a13ec942080d7fe517a10b837bea9ae8fae27750
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861959"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5946220"
 ---
 # <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 
@@ -21,7 +21,7 @@ ms.locfileid: "5861959"
 
 ## <a name="introduction"></a>소개
 
-사용 가능한 시스템 리소스를 허용 하는 경우 사전 백그라운드에서 사용자가 가장 자주 사용 하는 앱을 시작 하 여 데스크톱 디바이스 패밀리 디바이스에서 UWP 앱의 시작 성능을 향상 되었습니다. 사전 실행된 앱은 시작된 후 일시 중단 상태가 됩니다. 그런 다음 사용자가 앱을 호출하면 앱이 일시 중단 상태에서 실행 상태로 전환되어 다시 시작합니다. 이는 앱 콜드를 시작하는 것보다 빠릅니다. 사용자 환경은 앱이 쉽고 빠르게 시작되는 것입니다.
+사용 가능한 시스템 리소스를 허용 하는 경우 사전 백그라운드에서 사용자의 가장 자주 사용 되는 앱을 시작 하 여 데스크톱 디바이스 패밀리 디바이스에서 UWP 앱의 시작 성능을 향상 되었습니다. 사전 실행된 앱은 시작된 후 일시 중단 상태가 됩니다. 그런 다음 사용자가 앱을 호출하면 앱이 일시 중단 상태에서 실행 상태로 전환되어 다시 시작합니다. 이는 앱 콜드를 시작하는 것보다 빠릅니다. 사용자 환경은 앱이 쉽고 빠르게 시작되는 것입니다.
 
 Windows 10 이전 버전에서는 앱이 자동으로 사전 실행을 활용하지 않았습니다. Windows10, 버전 1511에서는 모든 유니버설 Windows 플랫폼 (UWP) 앱 사전 실행 되는 것에 대 한 후보를 했습니다. Windows 10 버전 1607에서는 [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)를 호출하여 사전 실행 동작에 옵트인(opt-in)해야 합니다. 이 호출을 배치하기 좋은 위치는 `if (e.PrelaunchActivated == false)` 확인이 수행되는 위치 근처의 `OnLaunched()` 내입니다.
 
@@ -37,7 +37,7 @@ XAML 프로젝트(C#, VB, C++)와 WinJS의 기본 템플릿은 Visual Studio 201
 
 ## <a name="detect-and-handle-prelaunch"></a>사전 실행 감지 및 처리
 
-앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 수신합니다. 이 플래그를 사용 하 여 [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)를 다음과 같이 수정에 표시 된 대로 앱을 명시적으로 시작할 때을 실행만 해야 하는 코드를 실행 합니다.
+앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 수신합니다. 이 플래그를 사용 하 여 [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)를 다음과 같이 수정에 표시 된 대로 사용자가 앱을 명시적으로 시작을 실행만 해야 하는 코드를 실행 합니다.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -112,9 +112,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-참고는 `TryEnablePrelaunch()` 위에 작동 합니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 는 포함이 함수에 대 한 아웃 JIT (컴파일)에 전체 메서드를 컴파일할 하려고 메서드를 호출할 때 하기 때문입니다. 앱이 지원 하지 않는 Windows 10 버전에서 실행 하는 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 예상 되는 앱 플랫폼에서 지를 결정 하는 경우에 라고 하는 메서드를 호출 하 여 `CoreApplication.EnablePrelaunch()`,이 문제를 방지 하는 것입니다.
+참고는 `TryEnablePrelaunch()` 위에 작동 합니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 는 리모컨이 JIT (컴파일)에 전체 메서드 컴파일 하려고 메서드가 호출 되 면이 기능으로 되므로 합니다. 앱이 지원 하지 않는 Windows 10 버전에서 실행 하는 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 팩터링 앱 플랫폼에서 지를 결정 하는 경우에 라고 하는 메서드를 호출 하 여 `CoreApplication.EnablePrelaunch()`,이 문제를 방지 하는 것입니다.
 
-위 예제에서 코드도 앱 옵트아웃 사전 실행의 Windows 10 버전 1511에서 실행 해야 하는 경우 주석 수 있습니다. 자동으로 옵트인 된 모든 UWP 앱 버전 1511에서에서으로 사전 실행 하지 않을 앱에 적합 합니다.
+위 예제에서 코드도 앱 옵트아웃 사전 실행의 Windows 10, 버전 1511에서 실행 해야 하는 경우 주석 수 있습니다. 자동으로 옵트인 된 모든 UWP 앱 버전 1511에서는으로 사전 실행 하지 않을 앱에 적합 합니다.
 
 ## <a name="use-the-visibilitychanged-event"></a>VisibilityChanged 이벤트 사용
 

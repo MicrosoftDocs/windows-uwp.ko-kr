@@ -10,15 +10,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f850cfcb99df079698a685399680bfdb6e32c813
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5873350"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5929442"
 ---
 # <a name="user-statistics-uris"></a>사용자 통계 URI
  
-이 섹션에서는 *사용자 통계*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *사용자 통계*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 이러한 Uri에 대 한 도메인 userstats.xboxlive.com입니다.
  
@@ -29,7 +29,7 @@ ms.locfileid: "5873350"
 
 [/batch](uri-batch.md)
 
-&nbsp;&nbsp;여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 액세스합니다.
+&nbsp;&nbsp;여러 타이틀에서 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 액세스합니다.
 
 [/users/xuid({xuid})/scids/{scid}/stats](uri-usersxuidscidsscidstats.md)
 

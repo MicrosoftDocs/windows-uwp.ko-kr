@@ -9,27 +9,27 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 203a08e2fddfd2c650738a8b37e4a0ae5b52b3d9
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5859105"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5925338"
 ---
 # <a name="multiplayer-manager-flowcharts"></a>멀티 플레이어 관리자 순서도
 
-이 섹션에는 특정 멀티 플레이어 관리자 시나리오를 구현 하는 코드 흐름을 시각화 하는 데 도움이 되는 순서도 다이어그램 포함 되어 있습니다.
+이 섹션에는 특정 멀티 플레이어 관리자 시나리오를 구현 하는 코드 흐름을 시각화 하는 순서도 다이어그램 포함 되어 있습니다.
 
 * [친구와 멀티 플레이/협동 게임](mpm-flowcharts/mpm-play-with-friends.md)
 
 * [스마트 매치를 사용 하 여 멀티 플레이 게임](mpm-flowcharts/mpm-play-with-smartmatch-matchmaking.md)
 
-* [매치를 사용 하 고 서비스 품질 관리](mpm-flowcharts/mpm-use-matchmaking-and-qos.md)
+* [매치 메이 킹 사용 하 고 서비스 품질 관리](mpm-flowcharts/mpm-use-matchmaking-and-qos.md)
 
 * [다른 플레이어에 게 초대 보내기](mpm-flowcharts/mpm-send-invites.md)
 
 * [프로토콜 활성화 처리](mpm-flowcharts/mpm-on-protocol-activation.md)
 
-* [멀티 플레이 게임에서 열린 슬롯 채우기](mpm-flowcharts/mpm-fill-open-slots.md)
+* [열린 멀티 플레이 게임 슬롯 채우기](mpm-flowcharts/mpm-fill-open-slots.md)
 
 * [호스트 마이그레이션 처리](mpm-flowcharts/mpm-host-migration.md)
 

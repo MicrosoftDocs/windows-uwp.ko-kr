@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, rta, stat, 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: ba0d4501840f592d8098470b53df12b553321889
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5859662"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5941060"
 ---
 # <a name="how-to-register-for-stat-change-notifications"></a>통계 변경 알림 등록 하는 방법
 
@@ -21,6 +21,6 @@ ms.locfileid: "5859662"
 
 Microsoft 개발자 대시보드에서 서비스 구성을 구성한 경우 아래 통계 변경 알림 등록할 수 있습니다 **서비스 > Xbox Live > 플레이어 통계 > 상태 변경 알림**.
 
- 서비스 구성 Xbox 개발자 포털 (XDP)에서 구성한, XDP 설명서를 참조 하세요.
+ 서비스 구성을 Xbox 개발자 포털 (XDP)에서 구성한 경우 XDP 설명서를 참조 하세요.
 
- 현재 상태 데이터와 도전 과제 데이터 RTA에 대 한 자동으로 활성화 됩니다.
+ 상태 데이터와 도전 과제 데이터 RTA에 대 한 자동으로 활성화 됩니다.

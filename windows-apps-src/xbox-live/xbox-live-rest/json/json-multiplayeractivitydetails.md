@@ -10,17 +10,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a23b4f984bc7edef77af7e020b62fcc7d8fcbf9f
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5884295"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5932505"
 ---
 # <a name="multiplayeractivitydetails-json"></a>MultiplayerActivityDetails(JSON)
-**Microsoft.Xbox.Services.Multiplayer.MultiplayerActivityDetails**나타내는 JSON 개체입니다. 
+**Microsoft.Xbox.Services.Multiplayer.MultiplayerActivityDetails**나타내는 하는 JSON 개체입니다. 
 
 > [!NOTE] 
-> 이 개체는 2015 멀티 플레이어에 의해 구현 및 나중 및 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
+> 이 개체는 2015 멀티 플레이어에서 구현 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상을 사용 합니다.  
 
  
 <a id="ID4ES"></a>
@@ -35,8 +35,8 @@ MultiplayerActivityDetails JSON 개체에는 다음 사양을 있습니다.
 | HandleId| 64 비트 부호 없는 정수| 해당 활동을 해당 핸들 ID입니다.| 
 | TitleId| 32 비트 부호 없는 정수| 해당 활동에 가입 하기 위해 시작 해야 하는 제목 ID입니다.| 
 | 표시 여부| MultiplayerSessionVisibility| 세션의 표시 상태를 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionVisibility</b> 값입니다.| 
-| JoinRestriction| MultiplayerSessionJoinRestriction| 조인 제한 세션을 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionJoinRestriction</b> 값입니다. 이 제한 사항은 표시 여부 필드 "열기"로 설정 된 경우 적용 됩니다.| 
-| 닫힘| 부울 값| 세션이 false 및 결합 하 고, 그렇지 않으면 닫히면 일시적으로 true입니다.| 
+| JoinRestriction| MultiplayerSessionJoinRestriction| 세션에 대 한 가입 제한 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionJoinRestriction</b> 값입니다. 이 제한 사항은 표시 여부 필드 "열기"로 설정 된 경우 적용 됩니다.| 
+| 닫힘| 부울 값| 닫혀 있는 경우 세션 일시적으로 참가 한 false 그렇지 않은 경우 true입니다.| 
 | OwnerXboxUserId| 64 비트 부호 없는 정수| 해당 활동을 소유 하는 멤버의 Xbox 사용자 ID입니다.| 
 | MaxMembersCount| 32 비트 부호 없는 정수| 총 슬롯의 수입니다.| 
 | MembersCount| 32 비트 부호 없는 정수| 취소가 슬롯의 수입니다.| 

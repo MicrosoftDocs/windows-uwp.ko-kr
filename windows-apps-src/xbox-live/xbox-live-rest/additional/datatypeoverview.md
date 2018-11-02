@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8129be6220dc6c9ae1d125087fee52ca17d33424
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882702"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5939813"
 ---
 # <a name="data-type-overview"></a>데이터 형식 개요
  
@@ -24,11 +24,11 @@ Xbox Live 서비스는 다양 한 id 및 인증 관련 된 데이터 형식 사�
 | --- | --- | 
 | 게이머 태그| 사용자에 대 한 고유 하 고 이해 하기 쉬운 화면 이름입니다.| 
 | 플레이어| 사용자의 XUID 및 플레이어 세션 및 사용자 지정 데이터의 작은 blob에 여전히 참여 여부 세션 (또는 "장착")에서 플레이어의 인덱스를 함께 게이머 태그를 포함 하는 JSON 개체입니다.| 
-| profile| 프로필 URI 주소 및 HTTP 메서드, 일반적으로 사용자의 사용자를 통해 액세스 하지만, 또한 gamercard, 게이머 태그, XUID, 등에 포함 하 여 사용자에 대 한 정보를 제공 합니다.| 
+| profile| 프로필 URI 주소 및 HTTP 메서드, 일반적으로 사용자의 사용자를 통해 액세스 하지만,도 등 gamercard, 게이머 태그, XUID, 사용자에 대 한 정보.| 
 | 설정| UserSettings 개체의 제목 관련 설정 중 하나입니다.| 
-| UserClaims| 사용자의 XUID 및 게이머 태그를 포함 하는 간단한 JSON 개체입니다.| 
-| UserSettings| 제목 관련 설정 또는 현재 인증 된 사용자에 대 한 기본 설정의 컬렉션을 포함 하는 JSON 개체입니다. UserSettings 게임에서 활동과 관련 하 여 임의의 데이터를 포함할 수 있습니다.| 
-| XUID| 사용자의 Xbox 사용자 ID, 고유한 부호 없는 정수입니다. 읽을 수 없습니다.| 
+| UserClaims| 사용자의 XUID 및 게이머를 포함 하는 간단한 JSON 개체입니다.| 
+| UserSettings| 제목 관련 설정 또는 현재 인증 된 사용자에 대 한 기본 설정의 컬렉션을 포함 하는 JSON 개체입니다. UserSettings 가능 게임 작업에 관련 된 임의 데이터를 포함할 수 있습니다.| 
+| XUID| 사용자의 Xbox 사용자 ID, 고유한 부호 없는 정수입니다. 사람이 읽을 수 없습니다.| 
  
 <a id="ID4E6D"></a>
 

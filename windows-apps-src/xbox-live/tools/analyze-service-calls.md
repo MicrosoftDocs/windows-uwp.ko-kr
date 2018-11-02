@@ -1,7 +1,7 @@
 ---
 title: Xbox Live 추적 분석기
 author: KevinAsgari
-description: Xbox Live 추적 분석기를 사용 하 여 타이틀 배분을 서비스 호출을 검토 하는 방법을 알아봅니다.
+description: 타이틀에서 서비스 호출을 검토 하는 Xbox Live 추적 분석기를 사용 하는 방법을 알아봅니다.
 ms.assetid: b4490fae-d554-403d-bbbc-601af38af0ef
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -9,15 +9,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox 서비스 호출, 테스트, 추적 분석기
 ms.localizationpriority: medium
 ms.openlocfilehash: 0eaec6d830dece484d3300ea244f05bf2add5a60
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5867493"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5941664"
 ---
 # <a name="xbox-live-trace-analyzer"></a>Xbox Live 추적 분석기
 
-Xbox Live 서비스 API에는 이제 모든 서비스 호출을 캡처하고 호출 패턴에 위반 분석 하는 오프 제목 개발자가 있습니다. 고급 시나리오에 대 한 xbtrace 명령줄 도구 또는 프로토콜 활성화를 통해 사용할 수 있는 새로운 기능을 사용 하 여 서비스 호출 추적을 활성화할 수 있습니다. 서비스 호출 제목 코드에서 직접 추적을 활성화 에서도 지원 됩니다. Xbox Live 추적 분석기 (XBLTraceAnalyzer.exe) 라는 오프 라인 분석 도구에서 Xbox Live 도구 패키지의 일부로 찾을 수 있습니다 [https://aka.ms/xboxliveuwptools](https://aka.ms/xboxliveuwptools).
+Xbox Live 서비스 API는 이제 제목 개발자를 서비스에 대 한 모든 호출 캡처하고 오프 라인으로 호출 패턴에 위반 후 분석할 수 있습니다. 보다 수준 높은 시나리오에 대 한 프로토콜 활성화를 통해 또는 xbtrace 명령줄 도구에서 사용할 수 있는 새로운 기능을 사용 하 여 서비스 호출 추적을 활성화할 수 있습니다. 서비스 호출 제목 코드에서 직접 추적을 활성화 에서도 지원 됩니다. Xbox Live 추적 분석기 (XBLTraceAnalyzer.exe) 라고 하는 오프 라인 분석 도구를에서 Xbox Live 도구 패키지의 일부로 찾을 수 있습니다 [https://aka.ms/xboxliveuwptools](https://aka.ms/xboxliveuwptools).
 
 
 ## <a name="gather-logs-and-analyze-the-service-calls"></a>로그를 수집 하 고 서비스를 호출 하 여 분석
@@ -25,9 +25,9 @@ Xbox Live 서비스 API에는 이제 모든 서비스 호출을 캡처하고 호
 다음 단계는 서비스 호출의 레코드를 포함 하 고 분석 하는 Xbox Live 추적 분석기를 사용 하 여 로그를 수집 해야 합니다.
 
 1.  Xbox Live 서비스 API 2015 년 7 월에에서 포함 된 또는 Xbox 개발자 키트 (XDK)의 최신 버전의 버전을 사용 하 여 타이틀을 빌드하십시오.
-2.  아래 설명 된 대로 추적을 활성화 하려면 타이틀을 수정 합니다.
+2.  아래 설명 된 대로 추적을 활성화 하려면 제목을 수정 합니다.
 3.  타이틀을 배포 합니다.
-4.  타이틀을 시작 하 고 Xbox Live 서비스 API를 초기화 하기 위해 Xbox Live 서비스를 하나 이상 호출 합니다.
+4.  제목 시작 하 고 Xbox Live 서비스 API를 초기화 하려면 Xbox Live 서비스를 하나 이상 호출 합니다.
 5.  타이틀을 분석 하려면 지점에서 추적을 시작 합니다.
 6.  추적을 중지 합니다.
 7.  개발 PC에서 Xbox Live 추적 분석기 도구를 실행 하 고 출력을 확인 합니다.
@@ -47,12 +47,12 @@ Xbox Live 서비스 API에는 이제 모든 서비스 호출을 캡처하고 호
 
 1.  `Microsoft::Xbox::Services::Experimental` 네임 스페이스를 설정 합니다 `EnableServiceCallTracking` 속성은 `ServiceCallTrackerSettings` 클래스를 true로 합니다.
 2.  호출 `StartServiceCallTracking()` 서비스 호출을 추적을 시작 합니다.
-3.  호출 `StopServiceCallTracking()` 서비스 호출을 추적을 중지 해야 합니다.
-4.  추적을 중지 한 후 결과 추적 파일에서에서 복사 콘솔에서 개발자 임시 드라이브를 PC에 Xbox Live 추적 분석기를 사용 하 여 분석 하기 위해 *파일 복사 (xbcp.exe)* 또는 *Xbox One 주변* 을 사용 하 여 합니다.
+3.  호출 `StopServiceCallTracking()` 서비스 호출을 추적을 중지 합니다.
+4.  추적을 중지 된 후 결과 추적 파일 복사 콘솔에서 개발자 임시 드라이브에서 PC로 다시 Xbox Live 추적 분석기를 사용 하 여 분석 하려면 *파일 복사 (xbcp.exe)* 또는 *Xbox One 주변* 을 사용 하 여.
 
 ### <a name="starting-and-stopping-tracing-by-using-the-xbtrace-command-line-tool"></a>시작 및 중지 추적 xbtrace 명령줄 도구를 사용 하 여
 
-추적을 시작 하는 가장 편리 하 고 간편한 방법은 xboxliveservices 추적 형식을 가진 xbtrace 명령줄 도구를 사용 하는 것입니다. XbTrace를 사용 하면 결과 추적 파일 수를 PC에 복사 됩니다.
+추적을 시작 하는 가장 편리 하 고 간편한 방법은 xboxliveservices 추적 형식과 xbtrace 명령줄 도구를 사용 하는 것입니다. XbTrace를 사용 하면 결과 추적 파일을 PC에 다시 복사 됩니다.
 
 시작 및 중지 xbtrace를 사용 하 여 추적 프로토콜 활성화에 의존 합니다. Xbtrace 시작 하 고 추적을 중지를 사용 하기 전에 호출 하 여 프로토콜 활성화를 초기화 해야 합니다 `RegisterForProtcolActivation` 메서드는 `ServiceCallTrackerSettings` 클래스.
 
@@ -62,22 +62,22 @@ Xbox Live 서비스 API에는 이제 모든 서비스 호출을 캡처하고 호
     xbtrace stop
 
 
-타이틀을 실행 해야 하 고 시작 하 고 xbtrace를 사용 하 여 추적을 중지 하기 전에 프로토콜 활성화를 초기화 해야 기억 하세요. 추적을 중지 한 후 xbtrace 개발 PC에 추적 파일을 복사 하 고 "xbtrace" 및 타임 스탬프 이름이 포함 된 디렉터리에 배치 합니다. \[Etlfile\를 사용 하 여이 디렉터리의 이름을 재정의할 수] xbtrace 하는 옵션입니다.
+반드시 타이틀을 실행 해야 하 고 프로토콜 활성화를 시작할 수 있으며 xbtrace를 사용 하 여 추적을 중지 하기 전에 초기화 되어야 합니다. 추적을 중지 된 후 xbtrace 개발 PC에 추적 파일을 복사 하 고 이름이 "xbtrace" 및 타임 스탬프를 포함 하는 디렉터리에 배치 합니다. 이 디렉터리의 이름을 재정의할 수 있는지 \[etlfile\를 사용 하 여] xbtrace 하는 옵션입니다.
 
-<a name="starting-and-stopping-tracing-by-using-protocol-activation"></a>시작 및 중지 추적 프로토콜 활성화를 사용 하 여
+<a name="starting-and-stopping-tracing-by-using-protocol-activation"></a>시작 및 프로토콜 활성화를 사용 하 여 중지 추적
 ----------------------------------------------------------
 
-"XbApp 시작" 프로토콜 활성화 기능을 사용 하 여 추적을 제어할 수도 있습니다. 시작 및 프로토콜 활성화를 통해 추적을 중지 하 여 제목 titleid를 알고 있어야 합니다. 제목 id 타이틀의 매니페스트 파일에서 찾을 수 있습니다. 추적 "serviceCallTracking" 매개 변수를 포함 하는 Uri를 통해 제어 됩니다. 다음 예제에서는 시작 및 제목 id가 12345678 제목에 대 한 추적을 중지 하는 방법을 보여 줍니다.
+"XbApp 시작" 기능을 프로토콜 활성화를 사용 하 여 추적을 제어할 수도 있습니다. 시작 및 프로토콜 활성화를 통해 추적을 중지 하는 타이틀의 titleid를 알고 있어야 합니다. 타이틀의 매니페스트 파일에서 제목 id를 찾을 수 있습니다. 추적 "serviceCallTracking" 매개 변수를 포함 하는 Uri를 통해 제어 됩니다. 다음 예제에서는 시작 및 제목 id가 12345678 제목에 대 한 추적을 중지 하는 방법을 보여 줍니다.
 
     xbapp launch "ms-xbl-12345678://serviceCallTracking?state=start"
     xbapp launch "ms-xbl-12345678://serviceCallTracking?state=stop"
 
-프로토콜 활성화를 사용 하 여 결과 추적 파일 콘솔에서 개발자 임시 드라이브에 저장 됩니다. Xbcp 또는 Xbox One 환경을 사용 하 여 PC를 다시 파일을 복사 해야 합니다. 파일 복사 되지 않습니다 자동으로 PC를 다시 이므로 xbtrace를 사용 하는 경우.
+프로토콜 활성화를 사용 하면 결과 추적 파일 콘솔에서 개발자 임시 드라이브에 저장 됩니다. Xbcp 또는 Xbox One 환경을 사용 하 여 PC를 다시 파일 복사 해야 합니다. 파일 복사 되지 않습니다 자동으로 PC를 다시 이므로 xbtrace를 사용 하는 경우.
 
-프로토콜 활성화를 사용 하는 세부 정보 표시 등의 추가 추적 매개 변수를 설정할 수 있습니다. 네 가지 수준의 세부 정보는 지원: 자동, 진단, 자세한 및 최소화 합니다. 다음 예제에서는 세부 정보 표시 수준을 설정 하는 방법을 보여 줍니다.
+프로토콜 활성화를 사용 하는 세부 정보 등의 추가 추적 매개 변수를 설정할 수 있습니다. 네 가지 수준의 세부 정보는 지원: 자동, 진단, 자세한 및 최소화 합니다. 다음 예제에서는 세부 정보 표시 수준을 설정 하는 방법을 보여 줍니다.
 
     xbapp launch "ms-xbl-12345678://serviceCallTracking?verbosity=diagnostic"
 
 ## <a name="analyze-the-trace-file"></a>추적 파일 분석
 
-PC를 다시 추적 파일을 복사한 후 Xbox Live 서비스의 타이틀의 사용을 분석 하려면 GNDP에서 Xbox Live 추적 분석기 도구를 사용할 수 있습니다. 도구를 호출 하 고 출력을 해석 하는 방법의 설명에 대 한 게임 개발자 네트워크에서 Xbox Live 추적 분석기 도구와 함께 제공 되는 설명서를 참조 하세요. -의 명령줄 옵션을 사용 하 여 XBLTraceAnalyzer.exe를 실행할 수도 있습니다. 또는-h 명령줄 도움말을 볼 수 있습니다.
+PC를 다시 추적 파일을 복사한 후 Xbox Live 서비스의 타이틀의 사용을 분석 하려면 GNDP에서 Xbox Live 추적 분석기 도구를 사용할 수 있습니다. 도구를 호출 하 고 출력을 해석 하는 방법에 대 한 설명에 대 한 게임 개발자 네트워크에서 Xbox Live 추적 분석기 도구와 함께 제공 되는 설명서를 참조 하세요. -의 명령줄 옵션을 사용 하 여 XBLTraceAnalyzer.exe을 실행할 수도 있습니다. 또는-h 명령줄 도움말을 볼 수 있습니다.

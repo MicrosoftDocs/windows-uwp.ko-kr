@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1974a6a2affeca26bc52cd2fdfabf3364b20bd61
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882748"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5939735"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefinersqueryrefinersubqueryrefinervalues"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryRefiner}/subQueryRefinerValues)
 지정 된 쿼리 구체화 값 (예: "subgenres 주어진 장르의")에 대 한 하위 값 목록을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -27,7 +27,7 @@ ms.locfileid: "5882748"
  
 ## <a name="remarks"></a>설명
  
-쿼리 구체화 값에서 **queryRefinerValue**, URI 획에 전달할 수를 사용할 수 없음 문자로 쿼리 구체화 값을 허용 하도록 수행할 라는 쿼리 문자열 매개 변수로 전달 됩니다.
+쿼리 구체화 값에서 라는 **queryRefinerValue**를 전달할 수 URI 획에서 금지 문자로 쿼리 구체화 값을 허용 하도록 완료 되는 쿼리 문자열 매개 변수로 전달 됩니다.
  
 이 API는 음악에 대 한 에서만 지원 됩니다.
   

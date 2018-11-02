@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 92e52e4ebb58abb3a522f81a5ae4cce6486785f0
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5863889"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5945049"
 ---
 # <a name="richpresencerequest-json"></a>RichPresenceRequest(JSON)
 다양 한 상태 정보를 사용 해야 하는 방법에 대 한 정보를 요청 합니다. 
@@ -23,13 +23,13 @@ ms.locfileid: "5863889"
  
 ## <a name="richpresencerequest"></a>RichPresenceRequest
  
-RichPresenceRequest 개체에는 다음 사양을 있습니다.
+RichPresenceRequest 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| id| string| 사용 하 여 다양 한 상태 문자열의 <b>friendlyName</b> 합니다.| 
-| 서비스 안내| string| 다양 한 상태 문자열 정의 된 알려주는 서비스 안내 합니다.| 
-| 매개 변수| 문자열의 배열| 다양 한 상태 문자열을 완료할 수 있는 <b>friendlyName</b> 문자열의 배열입니다. 열거형 친화적인 이름만 지정 해야 합니다 통계 되지 않습니다. 이 비워 두면 이전 값을 제거 합니다.| 
+| id| string| 사용 하는 다양 한 상태 문자열의 <b>friendlyName</b> 합니다.| 
+| 서비스 안내| string| 다양 한 상태 문자열 정의 되어 있는 알려주는 서비스 안내 합니다.| 
+| 매개 변수| 문자열의 배열| 다양 한 상태 문자열을 완료할 수 있는 <b>friendlyName</b> 문자열의 배열입니다. 열거형 친화적인 이름만 지정 해야 함, 통계 되지 않습니다. 이 비워 두면 이전 값을 제거 합니다.| 
   
 <a id="ID4EDC"></a>
 

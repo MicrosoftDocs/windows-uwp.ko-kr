@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b5a2174c0d413ae528a69250cab6051bfd247546
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5863631"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5936607"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefinersqueryrefinername"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryrefinername})
 지정 된 쿼리 구체화 이름 및 미디어 항목 유형 지정 된 허용 되는 값을 나열합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -30,7 +30,7 @@ ms.locfileid: "5863631"
 | --- | --- | --- | 
 | marketplaceId| string| 필수. 문자열 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>에서 가져온 값입니다.| 
 | mediaitemtype| string| 필수. 값 중 하나로 [GET (/media/ {marketplaceId} / /metadata/mediagroups/ {mediagroup} / mediaItemTypes)](uri-medialocalemetadatamediagroupsmediaitemtypesget.md).| 
-| queryrefinername| string| 필수. 이름 쿼리 구체화의 어떤 값이 필요한에 대 한, 예: "장르" 또는 "10 년"입니다. QueryRefiners를 참조 하세요.| 
+| queryrefinername| string| 필수. 이름 쿼리 구체화의 어떤 값이 필요한에 대 한, "장르" 또는 "10" 등입니다. QueryRefiners를 참조 하세요.| 
   
 <a id="ID4EAB"></a>
 

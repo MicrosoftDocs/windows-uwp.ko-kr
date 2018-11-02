@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 661c324fbe7a80a6ff150da06536879a25c0c0c2
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873119"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5946777"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Windows 10에서 Mac 설정
 
@@ -24,7 +24,7 @@ ms.locfileid: "5873119"
 
 유니버설 Windows 앱 개발을 시작할 준비가 되었지만 편리한 PC가 없나요? 상관없습니다. Mac을 사용할 수 있으니까요! Apple Boot Camp, Oracle VirtualBox, VMware Fusion 및 Parallels Desktop 같은 인기 있는 타사 솔루션을 사용 하 여 Windows10 및 Microsoft Visual Studio Apple 컴퓨터에 설치할 수 있습니다.
 
-**참고**디스크 또는 USB 플래시 드라이브에 Windows10 부팅 가능 이미지가 필요 합니다. MSDN 구독자인 경우 MSDN 구독자 다운로드 센터에서 설치 이미지를 다운로드할 수 있습니다. 구독자가 아닌 경우 [Microsoft Store](http://apps.microsoft.com/windows/app)에서 설치 프로그램을 구입할 수 있습니다. 이미 Windows를 실행하고 있으며 업그레이드하려는 경우에는 [이 위치](http://go.microsoft.com/fwlink/?LinkId=623906)에서 다운로드하는 것이 유용할 수도 있습니다.
+**참고**디스크 또는 USB 플래시 드라이브에 Windows10 부팅 가능 이미지가 필요 합니다. MSDN 구독자인 경우 MSDN 구독자 다운로드 센터에서 설치 이미지를 다운로드할 수 있습니다. 구독자, 하지 않은 경우 [Microsoft Store](http://apps.microsoft.com/windows/app)에서 설치 관리자를 구입할 수 있습니다. 이미 Windows를 실행하고 있으며 업그레이드하려는 경우에는 [이 위치](http://go.microsoft.com/fwlink/?LinkId=623906)에서 다운로드하는 것이 유용할 수도 있습니다.
 
 실행 중인 Windows가 있으면 다음 [Windows10을 위한 개발자 다운로드](https://developer.microsoft.com/en-us/windows/downloads) 에서 Visual Studio의 최신 릴리스 설치 및 앱 작성을 시작할 수 있습니다!
 

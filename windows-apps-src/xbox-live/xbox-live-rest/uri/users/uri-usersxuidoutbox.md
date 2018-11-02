@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a10fbb4b2008a3c953d101111d064c6f06491e10
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5888582"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5928099"
 ---
 # <a name="usersxuidxuidoutbox"></a>/users/xuid({xuid})/outbox
-제공 된 사용자에 게 보내기 전용 액세스 메시징 Xbox LIVE 서비스에 대 한 편지함 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
+사용자에 게 보내기 전용 액세스 메시징 제공 Xbox LIVE 서비스에 대 한 편지함 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -37,7 +37,7 @@ ms.locfileid: "5888582"
 
 [POST (/users/xuid({xuid})/outbox)](uri-usersxuidoutboxpost.md)
 
-&nbsp;&nbsp;받는 사람 목록에 지정 된 메시지를 보냅니다. 
+&nbsp;&nbsp;수신자의 목록에 지정 된 메시지를 보냅니다. 
  
 <a id="ID4EFC"></a>
 

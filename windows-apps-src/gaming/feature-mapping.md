@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dcf1749f1e7db4d514466d6a753d6f8cace5713
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885942"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5946606"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 
@@ -354,7 +354,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  셰이더에서 swizzle.rrrg를 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 Direct3D 9 동작을 얻으려면 이동 합니다.
+<strong>참고</strong>  셰이더에서 swizzle.rrrg를 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 Direct3D 9 동작을 가져옵니다 이동 합니다.
 </div>
 <div>
  
@@ -508,7 +508,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  빨간색을 복제 하 여 D3D9 동작을 얻으려면 다른 구성 요소는 셰이더에서.r swizzle을 사용 합니다.
+<strong>참고</strong>  빨간색을 복제 하 여 D3D9 동작을 얻으려면 다른 구성 요소를 셰이더에서.r swizzle을 사용 합니다.
 </div>
 <div>
  
@@ -582,7 +582,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>참고</strong>  UINT 값을 가져오지만 경우 Direct3D 9 스타일의 정수 float가 필요한 (0.0 f, 1.0 f... 255.f) 셰이더에서 float32를 UINT를 변환할 수 있습니다.
+<strong>참고</strong>  셰이더가 UINT 값을 가져오지만 경우 Direct3D 9 스타일의 정수 float가 필요한 (0.0 f, 1.0 f... 255.f) 셰이더에서 float32를 UINT를 변환할 수 있습니다.
 </div>
 <div>
  

@@ -12,17 +12,17 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: ba0ed6cb2fe2b932dcb3011ff7cf9cf7ce197182
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863367"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5947038"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
 UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 패키지를 만들어야 합니다. Microsoft Store를 통해 앱을 배포하지 않는 경우, 앱 패키지를 장치에 직접 사이드로드하거나 [웹 설치](installing-UWP-apps-web.md)를 통해 배포할 수 있습니다. 이 문서에서는 Visual Studio를 사용하여 UWP 앱 패키지를 구성, 생성, 테스트하는 프로세스에 대해 설명합니다. 기간 업무(LOB) 앱 관리 및 배포에 대한 자세한 내용은 [엔터프라이즈 앱 관리](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management)를 참조하세요.
 
-Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 완전 한 앱 패키지 업로드 파일을 제출할 수 있습니다. 이러한 옵션 중에서 패키지 업로드 파일 제출은 최상의 환경을 제공합니다. 
+Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 전체 앱 패키지 업로드 파일을 제출할 수 있습니다. 이러한 옵션 중에서 패키지 업로드 파일 제출은 최상의 환경을 제공합니다. 
 
 ## <a name="types-of-app-packages"></a>앱 패키지의 유형
 
@@ -42,7 +42,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 �
 3.  [앱 패키지 업로드 파일을 만듭니다](#create-an-app-package-upload-file). Visual Studio 앱 패키지 마법사를 사용하여 앱 패키지를 만든 다음 Windows 앱 인증 키트를 사용하여 인증합니다.
 4.  [앱 패키지 사이드로드](#sideload-your-app-package). 앱을 장치에 사이드로드한 후에 앱이 예상대로 작동하는지 테스트할 수 있습니다.
 
-위의 단계를 완료한 후에는 앱을 배포할 수 있습니다. 내부 사용자 전용 이므로 판매 하지 않으려는 업무의 (lob 기간 업무) 앱이 있는 경우 모든 Windows10 장치에 설치 하기 위해이 앱 테스트용으로 로드할 수 있습니다.
+위의 단계를 완료한 후에는 앱을 배포할 수 있습니다. 내부 사용자 전용 이므로 판매 하지 않으려는 줄 업무 (LOB) 앱을 있으면 경우 모든 Windows10 장치에 설치 하기 위해이 앱 테스트용으로 로드할 수 있습니다.
 
 ## <a name="before-packaging-your-app"></a>앱을 패키징하기 전에
 
@@ -78,7 +78,7 @@ Microsoft Store를 통해 앱을 배포하는 경우 Visual Studio는 Microsoft 
 
 ## <a name="create-an-app-package-upload-file"></a>앱 패키지 업로드 파일을 만들기
 
-Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix), 앱 번들 (.appxbundle 또는.msixbundle), 또는 업로드 패키지 (.appxupload) 및 [개발자 센터에 패키지 된 앱 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)만들어야 합니다. 개발자 센터에 앱 패키지 또는 앱 번들만 제출할 수 있지만 업로드 패키지를 제출하는 것이 좋습니다.
+Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix), 앱 번들 (.appxbundle 또는.msixbundle), 또는 업로드 패키지 (.appxupload) 및 [패키지 된 앱을 개발자 센터 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)만들어야 합니다. 개발자 센터에 앱 패키지 또는 앱 번들만 제출할 수 있지만 업로드 패키지를 제출하는 것이 좋습니다.
 
 >[!NOTE]
 > 앱 패키지 업로드 파일(.appxupload)은 Visual Studio를 사용하여 만들 수 있는 개발자 센터에 대한 **유일한** 유효한 앱 패키지 유형입니다. 다른 유효한 [앱 패키지는 Visual Studio를 사용하지 않고 수동으로 만들 수 있습니다](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
@@ -148,7 +148,7 @@ UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하�
 다음 목록은 사이드로드을 로드하는 데 요구되는 사항입니다.
 
 -   [디바이스를 개발에 사용하도록 설정](https://msdn.microsoft.com/library/windows/apps/Dn706236)해야 합니다.
--   Windows10 모바일 장치에서 앱을 테스트용으로 로드할 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용 합니다.
+-   테스트용으로 로드 하려면 Windows10 모바일 장치에서 앱 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용 합니다.
 
 **데스크톱, 노트북 또는 태블릿에 사이드로드**
 
@@ -170,5 +170,5 @@ UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하�
 
     앱 패키지가 설치되면 PowerShell 창에 **앱이 설치되었습니다**라는 메시지가 나타납니다.
 
-    **팁**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭 완전 한 원이 나타날 때까지 누르고 있다가 손가락을 화면을 터치 합니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
+    **팁**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭, 완전 한 원이 나타날 때까지 계속 누르고 있다가 손가락을 저장할 화면 터치 합니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
 4.  시작 버튼을 클릭한 다음 앱 이름을 입력해 검색한 후 시작합니다.

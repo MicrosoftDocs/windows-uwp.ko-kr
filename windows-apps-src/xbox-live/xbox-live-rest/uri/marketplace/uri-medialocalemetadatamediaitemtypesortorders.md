@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 59b2e59315d9b787f75221391c39cdc6a0faf89b
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5874450"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5929989"
 ---
 # <a name="mediamarketplaceidmetadatamediaitemtypesmediaitemtypesortorders"></a>/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders
-사용 가능한 액세스 주문 주어진된 mediaitem 형식과 EDS의 지정 된 버전에 대 한 정렬합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+사용 가능한 액세스 주문 주어진된 mediaitem 형식과 EDS의 특정된 버전에 대 한 정렬합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -38,7 +38,7 @@ ms.locfileid: "5874450"
 
 [GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders)](uri-medialocalemetadatamediaitemtypesortordersget.md)
 
-&nbsp;&nbsp;지정 된 mediaitem 형식과 EDS의 지정 된 버전에 대해 사용 가능한 정렬 순서를 나열합니다.
+&nbsp;&nbsp;지정 된 mediaitem 형식과 EDS의 특정된 버전에 대 한 사용 가능한 정렬 순서를 나열합니다.
  
 <a id="ID4ELC"></a>
 

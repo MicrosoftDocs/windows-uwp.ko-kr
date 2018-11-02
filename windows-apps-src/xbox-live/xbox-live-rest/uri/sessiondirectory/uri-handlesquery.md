@@ -10,17 +10,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d4ce38768923f9adb2cdb8e2237e9afcb774433b
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5860898"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940192"
 ---
 # <a name="handlesquery"></a>/handles/query
 세션 핸들에 대 한 쿼리를 만드는 게시 작업을 지원 합니다. 
 
 > [!NOTE] 
-> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
+> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상을 사용 합니다.  
 
  
 <a id="ID4EQ"></a>
@@ -32,7 +32,7 @@ sessiondirectory.xboxlive.com
 
  
 ## <a name="remarks"></a>설명
-이 URI 처리에 대 한 쿼리를 지원합니다. 쿼리 문자열 및 일괄 처리 되는 세션 쿼리 핸들 쿼리 쿼리 프로세서 스타일을 사용 합니다. 최대 100 핸들 지원 됩니다.  
+이 URI 처리에 대 한 쿼리를 지원합니다. 세션 쿼리 문자열 및 일괄 처리 쿼리는 달리 핸들 쿼리 쿼리 프로세서 스타일을 사용 합니다. 최대 100 핸들 지원 됩니다.  
 <a id="ID4E2"></a>
 
  
