@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 04083701697bd799ed11e0ae31952256a70b1ac3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5867680"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5919795"
 ---
 # <a name="delete-usersmescidsscidclipsgameclipid"></a>DELETE (/users/me/scids/{scid}/clips/{gameClipId})
 이러한 Uri에 대 한 도메인은 삭제 게임 클립 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -35,10 +35,10 @@ ms.locfileid: "5867680"
  
 ## <a name="remarks"></a>설명
  
-GameClips 서비스에서 사용자의 비디오를 삭제 하기 위한 메커니즘을 제공 합니다. 삭제 시 모든 메타 데이터와 실제 비디오 자산 (생성 및 원래) 시스템에서 제거 됩니다. 영구 작업입니다. 
+GameClips 서비스에서 사용자의 비디오를 삭제 하는 메커니즘을 제공 합니다. 삭제 시 모든 메타 데이터 및 실제 비디오 자산 (생성 및 원래) 시스템에서 제거 됩니다. 영구 작업입니다. 
 
 > [!NOTE] 
-> 지정 된 소유자 ID 성공 하려면 삭제 요청에 대 한 인증 토큰에서 호출자에 게를 일치 해야 합니다. 
+> 지정 된 소유자 ID 성공 하려면 삭제 요청에 대 한 인증 토큰에 호출자에 게를 일치 해야 합니다. 
 
 
   
@@ -57,7 +57,7 @@ GameClips 서비스에서 사용자의 비디오를 삭제 하기 위한 메커�
  
 ## <a name="authorization"></a>권한 부여
  
-Xuid 클레임만이 메서드에 대 한 필요 합니다.
+Xuid 클레임만는이 메서드에 대 한 필요 합니다.
   
 <a id="ID4EYB"></a>
 
@@ -67,7 +67,7 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | 
 | 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: <b>Xauth =&lt;authtoken ></b>| 
-| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 예: 1, vnext 합니다.| 
+| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예: 1, vnext 합니다.| 
 | Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 예: <b>응용 프로그램/j</b>합니다.| 
 | 수락| string| 콘텐츠 형식의 허용 되는 값입니다. 예: <b>응용 프로그램/j</b>합니다.| 
 | 캐시 제어| string| 정중 요청 캐싱 동작을 지정 합니다.| 
@@ -79,7 +79,7 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| Accept-Encoding| string| Encodings 허용 가능한 압축 합니다. 예제 값: gzip만 줄이기 identity 합니다.| 
+| Accept-Encoding| string| Encodings 허용 압축 합니다. 예제 값: gzip만 줄이기, identity 합니다.| 
 | ETag| string| 캐시 최적화에 사용 됩니다. 예제 값: "686897696a7c876b7e".| 
   
 <a id="ID4ENF"></a>
@@ -87,21 +87,21 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
   
 <a id="ID4EYF"></a>
 
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스에 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 204| 확인| 클립 성공적으로 삭제 됩니다.| 
+| 204| 확인| 클립의 성공적으로 삭제 합니다.| 
 | 401| 권한 없음| 요청에 인증 토큰 형식으로 문제가 있습니다.| 
-| 403| 사용할 수 없음| 일부 클레임 누락 된 필요 합니다.| 
-| 404| 찾을 수 없습니다.| URL에 지정 된 클립 없기 때문에 (또는 짧게 지워졌습니다).| 
+| 403| 금지| 일부 클레임 누락 된 필요 합니다.| 
+| 404| 찾을 수 없습니다.| URL에 지정 하 고 클립 없기 때문에 (또는 짧게 삭제).| 
 | 503| 허용할 수 없음| 서비스 또는 일부 다운스트림 종속성 다운 되었습니다. 표준 백오프 동작을 사용 하 여 다시 시도 합니다.| 
   
 <a id="ID4EIAAC"></a>
@@ -111,7 +111,7 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 예: 1, vnext 합니다.| 
+| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예: 1, vnext 합니다.| 
 | Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 예: <b>응용 프로그램/j</b>합니다.| 
 | 캐시 제어| string| 정중 요청 캐싱 동작을 지정 합니다.| 
 | 수락| string| 콘텐츠 형식의 허용 되는 값입니다. 예: <b>응용 프로그램/j</b>합니다.| 
@@ -132,9 +132,9 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
  
 ## <a name="response-body"></a>응답 본문
  
-성공 시 (콘텐츠 없음) 204 HTTP 상태 코드를 사용 하 여 서비스에서 응답 합니다. 하려고 하는 동일한 개체를 삭제 하거나 존재 하지 않는 개체 404 반환 됩니다.
+서비스에서 수 있도록 성공 시 (콘텐츠 없음) 204 HTTP 상태 코드를 사용 하 여 응답 합니다. 하려고 동일한 개체를 삭제 하거나 존재 하지 않는 개체 404 반환 됩니다.
  
-오류가 발생 하면 **ServiceErrorResponse** 개체가 반환 됩니다.
+오류가 발생 하는 경우 **ServiceErrorResponse** 개체가 반환 됩니다.
   
 <a id="ID4EJEAC"></a>
 

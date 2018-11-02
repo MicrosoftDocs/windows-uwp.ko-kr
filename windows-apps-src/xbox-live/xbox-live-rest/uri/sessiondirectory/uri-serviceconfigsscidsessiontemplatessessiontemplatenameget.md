@@ -10,17 +10,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 25a2e4cd0ec13baea6ea14c44b277a8d14e1b3eb
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5859623"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5932872"
 ---
 # <a name="get-serviceconfigsscidsessiontemplatessessiontemplatename"></a>GET (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName})
 세션 템플릿 이름으로 이루어진 집합을 가져옵니다.
 
 > [!IMPORTANT]
-> 이 URI 메서드에 필요 Xbl 계약 버전 X의 헤더 요소: 104/105 또는 나중에 모든 요청.
+> 이 URI 메서드에 필요 X Xbl-계약 버전의 헤더 요소: 104/105 또는 나중에 모든 요청.
 
   * [URI 매개 변수](#ID4ET)
   * [HTTP 상태 코드](#ID4E5)
@@ -35,7 +35,7 @@ ms.locfileid: "5859623"
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 식별자 (서비스 안내)입니다. 파트 1 세션의 id.|
-| sessionTemplateName| string| 현재 인스턴스의 세션 템플릿 이름입니다. 파트 2 세션의 id. |
+| sessionTemplateName| string| 현재 세션 템플릿 인스턴스의의 이름입니다. 파트 2 세션의 id. |
 
 <a id="ID4E5"></a>
 
@@ -47,7 +47,7 @@ ms.locfileid: "5859623"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4EQB"></a>
 

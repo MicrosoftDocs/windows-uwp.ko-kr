@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b7c5140838ccc29c9b60d80c7a1f52e4d6eb90a4
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885032"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5921050"
 ---
 # <a name="usersuseridprofilesettingspeopleuserlistsettingssettings"></a>/users/{userId}/profile/settings/people/{userList}?settings={settings}
-사용자 프로필에 액세스 하거나 사용자 모니커를 사용 하 여 사용자를 지원 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
+사용자 또는 사용자 모니커 지 사용자의 프로필에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -28,7 +28,7 @@ ms.locfileid: "5885032"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| 사용자 Id| string| 'Xuid(12345)', 'gt(myGamertag)' 또는 'm e' 수 있습니다.| 
+| userId| string| 'Xuid(12345)', 'gt(myGamertag)' 또는 '나' 수 있습니다.| 
 | userList| string| 명명 된 목록에 대 한 설정을 가져오려면 사용자입니다. 현재 사용자가 지원 되는 유일한 목록입니다.| 
   
 <a id="ID4E1B"></a>

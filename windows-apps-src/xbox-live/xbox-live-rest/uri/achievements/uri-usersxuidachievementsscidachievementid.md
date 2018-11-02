@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9766222ea3a1c8671eadd42458b1c5aceaf0f587
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5861206"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5923171"
 ---
 # <a name="usersxuidxuidachievementsscidachievementid"></a>/users/xuid({xuid})/achievements/{scid}/{achievementid}
-구성 된 메타 데이터 및 사용자 고유의 데이터 도전 과제에 대 한 세부 정보를 반환 합니다. 
+도전 과제, 구성 된 메타 데이터 및 사용자 관련 데이터에 대 한 세부 정보를 반환 합니다. 
 
 > [!NOTE] 
 > 플랫폼에 대해서만 지원 합니다. 
@@ -34,9 +34,9 @@ ms.locfileid: "5861206"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 해당 리소스를 액세스 하는 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
-| 서비스 안내| GUID| 해당 도전 과제를 액세스 하는 서비스 구성의 고유 식별자입니다.| 
-| achievementid| 32 비트 부호 없는 정수| 액세스 되는 도전 과제의 (지정 된 서비스 안내) 내에서 고유 식별자입니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 해당 리소스에 액세스 하 고 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
+| 서비스 안내| GUID| 해당 도전 과제에 액세스 하는 서비스 구성의 고유 식별자입니다.| 
+| achievementid| 32 비트 부호 없는 정수| 액세스 되는 도전 과제의 (내에서 지정 된 서비스 안내) 고유 식별자입니다.| 
   
 <a id="ID4EMC"></a>
 

@@ -10,17 +10,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cf14449fa3a9137b31a11bdd1b6b73032ed5162
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5874226"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5919983"
 ---
 # <a name="presence-uris"></a>상태 URI
  
-이 섹션에서는 *현재 상태*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *현재 상태*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
-Xbox 360, Windows Phone 디바이스 또는 Windows를 실행 하는 게임만이 서비스를 사용할 수 있습니다.
+Xbox 360, Windows Phone 장치 또는 Windows를 실행 하는 게임만이 서비스를 사용할 수 있습니다.
  
 이러한 Uri에 대 한 도메인 userpresence.xboxlive.com입니다.
  
@@ -41,7 +41,7 @@ Xbox 360, Windows Phone 디바이스 또는 Windows를 실행 하는 게임만�
 
 [/users/me/groups/{moniker}](uri-usersmegroupsmoniker.md)
 
-&nbsp;&nbsp;PresenceRecord 그룹에 액세스합니다.
+&nbsp;&nbsp;그룹에 대 한 PresenceRecord에 액세스합니다.
 
 [/users/xuid({xuid})](uri-usersxuid.md)
 
@@ -53,15 +53,15 @@ Xbox 360, Windows Phone 디바이스 또는 Windows를 실행 하는 게임만�
 
 [/users/xuid({xuid})/groups/{moniker}](uri-usersxuidgroupsmoniker.md)
 
-&nbsp;&nbsp;PresenceRecord 그룹에 액세스합니다.
+&nbsp;&nbsp;그룹에 대 한 PresenceRecord에 액세스합니다.
 
 [/users/xuid({xuid})/groups/{moniker}/broadcasting](uri-usersxuidgroupsmonikerbroadcasting.md)
 
-&nbsp;&nbsp;액세스 그룹 모니커에 지정 된 브로드캐스트 사용자의 존재 기록 URI에 표시 되는 XUID와 관련이 있습니다.
+&nbsp;&nbsp;액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자의 현재 상태 기록 URI에 표시 되는 XUID 관련이 있습니다.
 
 [/users/xuid({xuid})/groups/{moniker}/broadcasting/count](uri-usersxuidgroupsmonikerbroadcastingcount.md)
 
-&nbsp;&nbsp;액세스 그룹 모니커에 지정 된 브로드캐스트 사용자 수가 URI에 표시 되는 XUID와 관련이 있습니다.
+&nbsp;&nbsp;액세스 그룹 모니커 하 여 지정 된 브로드캐스트 사용자 수가 URI에 표시 되는 XUID 관련이 있습니다.
  
 <a id="ID4EMC"></a>
 

@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c8701e87274195e206f779263afc339a089d7f8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5877909"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5926439"
 ---
 # <a name="usersmegroupsmoniker"></a>/users/me/groups/{moniker}
-PresenceRecord 그룹에 액세스합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
+그룹에 대 한 PresenceRecord에 액세스합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -28,7 +28,7 @@ PresenceRecord 그룹에 액세스합니다. 이러한 Uri에 대 한 도메인�
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| 모니커| string| 사용자의 그룹을 정의 하는 문자열입니다. 현재 허용 된 유일한 모니커 대문자 'P' "사람"입니다.| 
+| 모니커| string| 사용자의 그룹을 정의 하는 문자열입니다. 현재만 허용된 모니커 대문자 'P'를 사용 하 여 "사람" 인 경우| 
   
 <a id="ID4ERB"></a>
 

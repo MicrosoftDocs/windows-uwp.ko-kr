@@ -10,20 +10,20 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b9996c8631b44eafcee3d5300c330ed4d89a296
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5865661"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5930520"
 ---
 # <a name="permissioncheckbatchresponse-json"></a>PermissionCheckBatchResponse(JSON)
-다 수의 사용자에 대 한 권한 값의 목록 일괄 처리의 결과 확인합니다. 
+다 수의 사용자에 대 한 권한 값 목록은 일괄 처리의 결과 확인합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="permissioncheckbatchresponse"></a>PermissionCheckBatchResponse
  
-PermissionCheckBatchResponse 개체에는 다음 사양을 있습니다.
+PermissionCheckBatchResponse 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

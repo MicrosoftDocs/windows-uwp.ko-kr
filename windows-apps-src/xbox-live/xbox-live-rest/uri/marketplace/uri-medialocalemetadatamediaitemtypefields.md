@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 086538c2817e39cb80c66f9689327ae84a5feff2
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5859597"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5919470"
 ---
 # <a name="mediamarketplaceidmetadatamediaitemtypesmediaitemtypefields"></a>/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields
-데이터 주어진된 mediaitemtype 보고 EDS의 지정 된 버전을 기대할 수 하나 액세스 필드. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+액세스 필드는 지정 된 mediaitemtype 및 EDS의 특정된 버전에 대 한 데이터를 예상할 수 있는 하나. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -38,7 +38,7 @@ ms.locfileid: "5859597"
 
 [GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields)](uri-medialocalemetadatamediaitemtypefieldsget.md)
 
-&nbsp;&nbsp;데이터 주어진된 mediaitemtype 보고 EDS의 지정 된 버전을 기대할 수 하나 필드가 나와 있습니다.
+&nbsp;&nbsp;데이터를 특정된 mediaitemtype 및 EDS의 특정된 버전을 기대할 수 하나 필드가 나와 있습니다.
  
 <a id="ID4ELC"></a>
 

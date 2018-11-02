@@ -10,29 +10,29 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a6ed09f078be5c7063d00d35d3bc3749f791d042
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5860767"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5927642"
 ---
 # <a name="titleblob-json"></a>TitleBlob(JSON)
-저장소에서 제목에 대 한 정보를 포함합니다. 
+저장소에서 제목에 대 한 정보가 포함 되어 있습니다. 
 <a id="ID4EP"></a>
 
  
 ## <a name="titleblob"></a>TitleBlob
  
-TitleBlob 개체에는 다음 사양을 있습니다.
+TitleBlob 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | clientFileTime| DateTime| [선택 사항] 날짜 및 파일의 마지막 업로드 시간입니다.| 
-| displayName| string| [선택 사항] 사용자에 게 표시 되는 파일 이름입니다.| 
+| displayName| string| [선택 사항] 사용자에 게 표시 되는 파일의 이름입니다.| 
 | etag| string| 태그에서 사용 되는 파일을 다운로드 하 고 요청을 업로드 합니다.| 
 | fileName| string| 파일의 이름입니다.| 
-| size| 64 비트의 부호 있는 정수| 크기 (바이트)에서 파일입니다.| 
-| smartBlobType| string| [선택 사항] 데이터 형식입니다. 가능한 값은: config json 이진 합니다.| 
+| size| 64 비트의 부호 있는 정수| 바이트에서 파일의 크기입니다.| 
+| smartBlobType| string| [선택 사항] 데이터 형식입니다. 가능한 값은: config json, 이진 합니다.| 
   
 <a id="ID4E6C"></a>
 

@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b6f1322d2c22e65c33667ea409b10d9209628d3b
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5873058"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5919551"
 ---
 # <a name="hopperstatsresults-json"></a>HopperStatsResults(JSON)
-hopper에 대 한 통계를 나타내는 JSON 개체입니다. 
+hopper에 대 한 통계를 나타내는 하는 JSON 개체입니다. 
 <a id="ID4EN"></a>
 
   
@@ -27,8 +27,8 @@ HopperStatsResults JSON 개체에는 다음 사양을 있습니다.
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | hopperName| string| 선택한 hopper의 이름입니다.| 
-| waitTime| 32 비트 부호 있는 정수| 평균 시간 hopper (정수로 초)에 대 한 일치 합니다. | 
-| 채우기| 32 비트 부호 있는 정수| 사용자는 hopper 이후의 일치 항목을 기다리는 횟수입니다.| 
+| waitTime| 32 비트의 부호 있는 정수| 평균 hopper (정수로 초) 시간 일치 합니다. | 
+| 채우기| 32 비트의 부호 있는 정수| 사용자는 hopper 이후의 일치 항목을 기다리는 횟수입니다.| 
   
 <a id="ID4EW"></a>
 

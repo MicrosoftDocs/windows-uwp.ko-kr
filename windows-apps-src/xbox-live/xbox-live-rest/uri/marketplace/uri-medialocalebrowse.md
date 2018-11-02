@@ -10,20 +10,20 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f8c877988111eb1ee19ee91bf01d4a6077ce4600
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5874424"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5921371"
 ---
 # <a name="mediamarketplaceidbrowse"></a>/media/{marketplaceId}/browse
 단일 미디어 그룹 내에서 항목을 검색할 수 있습니다. 찾아보기 API를 통해 클라이언트 단일 미디어 그룹 내에서 항목을 찾습니다. 데이터의 페이지가 아닌 순차적으로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신 액세스할 수 있습니다.
  
-이 API를 사용 하면 지정 된 항목의 자식 내에서 검색 합니다. 예를 들어, ID 및 MediaItemType 매개 변수는 Xbox 360 게임에 대 한 전달 하 여 따라서 검색 및 diltering 아바타 항목 등 DLC 게임에 대 한 해당 항목의 자식에 있습니다.
+이 API를 사용 하면 지정 된 항목의 자식 내에서 검색 합니다. 예를 들어 전달 하 여 ID 및 MediaItemType 매개 변수는 Xbox 360 게임에 대 한, 따라서 검색 및 diltering 아바타 항목 등 DLC 게임에 대 한 해당 항목의 자식에 있습니다.
  
 이 API는 쿼리 구체화를 수락합니다.
  
-하위 항목을 검색 하기 위한 몇 가지 시나리오는 다음과 같습니다.
+자식 검색에 대 한 일부 시나리오는 다음과 같습니다.
  
    * 앨범 트랙을
    * 계절 시리즈

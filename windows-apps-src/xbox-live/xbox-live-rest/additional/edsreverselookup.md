@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e46bfb70ad377723694bfedb1dde0448564a97a8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5859554"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5927691"
 ---
 # <a name="eds-reverse-lookup-for-video"></a>비디오에 대한 EDS 역방향 조회
  
@@ -34,7 +34,7 @@ ms.locfileid: "5859554"
    * `ScopeId=` 공급자 제목 ID
  
  
-일반적으로 역방향 조회 2 단계에 필요합니다. 
+일반적으로 역방향 조회 2 단계가 필요합니다. 
    * 사용할 수 없는 경우 (예: 세부 정보 호출)에서 공급자 미디어 id를 검색 합니다. 
 
 ```cpp
@@ -51,7 +51,7 @@ GET /media/en-us/details?ids=047d19ca-3a7d-462c-bdbb-163543125583&idType=ScopedM
  
   
  
-EDS에서 **ProviderMediaId** 필드를 검색 하지 않았기 EDS에 올바르게 전달할 URL로 인코딩된 필드 이어야 합니다.
+EDS에서 **ProviderMediaId** 필드를 검색 하지 않았기 EDS에 올바르게 전달할 URL 인코딩 필드 이어야 합니다.
   
 <a id="ID4EOC"></a>
 

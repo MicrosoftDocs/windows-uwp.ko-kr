@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 67b9edcb4ffd4c0da6929de8dfd47652cf7ab375
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5876644"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5923506"
 ---
 # <a name="usersettings-json"></a>UserSettings(JSON)
 현재 인증 된 사용자에 대 한 설정을 반환합니다. 
@@ -23,14 +23,14 @@ ms.locfileid: "5876644"
  
 ## <a name="usersettings"></a>UserSettings
  
-UserSettings 개체에는 다음 사양을 있습니다.
+UserSettings 개체에는 다음과 같이 지정 합니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | id| 32 비트 부호 없는 정수| 설정의 식별자입니다.| 
 | 원본| 32 비트 부호 없는 정수| 설정의 소스를 나타냅니다. | 
-| titleId| 32 비트 부호 없는 정수| 식별자 설정과 연결 된 제목입니다. | 
-| value| 8 비트 부호 없는 정수의 배열| 설정의 값을 나타냅니다. 설정을 검색 하는 클라이언트에 데이터를 읽을 수 있도록 표시 형식을 이해 해야 합니다. | 
+| titleId| 32 비트 부호 없는 정수| 식별자는 설정과 관련 된 제목입니다. | 
+| value| 8 비트 부호 없는 정수의 배열| 설정의 값을 나타냅니다. 클라이언트 설정을 검색 데이터를 읽을 수 있어야 표시 형식을 이해 해야 합니다. | 
   
 <a id="ID4EJC"></a>
 

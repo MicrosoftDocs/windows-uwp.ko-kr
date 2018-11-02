@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4da982d9ce3c1f24b00c62a3668253f086b41f55
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5886716"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5927297"
 ---
 # <a name="get-titlestitleidsessionssessionidallocationstatus"></a>GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
 해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -46,17 +46,17 @@ ms.locfileid: "5886716"
  
 | 멤버| 설명| 
 | --- | --- | 
-| description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 하는 문자열을 반환 합니다.| 
-| clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 하는 문자열을 반환 합니다.| 
+| description| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
+| clusterId| 빈 (왼쪽에 대 한 이전 버전과 호환성) 문자열을 반환 합니다.| 
 | 호스트 이름| 세션 호스트의 URL입니다.| 
-| status| 대기, 충족 또는 중단을 나타냅니다.| 
+| status| 대기, 충족, 또는 중단을 나타냅니다.| 
 | sessionHostId| 세션 호스트 id입니다.| 
 | sessionId| (할당 시) 제공 클라이언트 세션 id입니다.| 
 | secureContext| 보안 장치 주소입니다.| 
 | portMappings| 인스턴스에 대 한 포트 매핑을 합니다.| 
 | 지역| 인스턴스의 위치입니다.| 
 | ticketId| (왼쪽에 대 한 이전 버전과 호환성) 현재 세션 ID입니다.| 
-| gameHostId| (왼쪽에 대 한 이전 버전과 호환성) 현재 sessionHostId 합니다.| 
+| gameHostId| 현재 sessionHostId (왼쪽에 대 한 이전 버전과 호환성) 합니다.| 
  
 <a id="ID4EGD"></a>
 
@@ -102,7 +102,7 @@ ms.locfileid: "5886716"
  
 ### <a name="remarks"></a>설명
  
-다음과 같은 응답 코드를 받는 경우 제목을 다시 호출 서비스에만 해야:
+다음 응답 코드를 받는 경우 제목을 해야 서비스에 대 한 호출을 다시 시도:
  
    * 200-성공 
    * 400-잘못 된 매개 변수를 포함 하는 요청 

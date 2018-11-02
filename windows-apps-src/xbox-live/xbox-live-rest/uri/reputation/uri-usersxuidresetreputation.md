@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ba9221b7b213cfd6c92a9a6cfcd5c6dec5c051fb
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5862707"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5927326"
 ---
 # <a name="usersxuidxuidresetreputation"></a>/users/xuid({xuid})/resetreputation
-적용 팀을 지정 된 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10433`.
+적용 팀을에 지정 된 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인 및 포트 번호는 `reputation.xboxlive.com:10433`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -28,7 +28,7 @@ ms.locfileid: "5862707"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| string| Xbox 사용자 ID (XUID)의 사용자 지정된 합니다.| 
+| xuid| string| Xbox 사용자 ID (XUID) 사용자 지정 합니다.| 
   
 <a id="ID4EVB"></a>
 
@@ -37,7 +37,7 @@ ms.locfileid: "5862707"
 
 [POST (/users/xuid({xuid})/resetreputation)](uri-usersxuidresetreputationpost.md)
 
-&nbsp;&nbsp;(예를 들어)는 계정 하이재킹 후 일부 임의의 값으로 지정 된 사용자의 평판 점수를 설정 하려면 적용 팀을 수 있습니다.
+&nbsp;&nbsp;(예)는 계정 하이재킹 후 일부 임의의 값에 지정 된 사용자의 평판 점수를 설정 하는 적용 팀을 수 있습니다.
  
 <a id="ID4E6B"></a>
 

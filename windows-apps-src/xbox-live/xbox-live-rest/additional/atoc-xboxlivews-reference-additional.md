@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 106fe8e79752125a8c30670e226aebd689c3d240
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882336"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5922904"
 ---
 # <a name="additional-reference"></a>추가 참조
 
@@ -27,15 +27,15 @@ ms.locfileid: "5882336"
 
 [권한 부여 유형](authorizationtypes.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 권한 부여 형식을 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 인증 형식에 설명 합니다.
 
 [데이터 형식 개요](datatypeoverview.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 식별 관련 데이터 형식을 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 식별 관련 데이터 형식에 설명 합니다.
 
 [보조 EDS API](eds-apis.md)
 
-&nbsp;&nbsp;보조 EDS Api에 설명합니다.
+&nbsp;&nbsp;보조 EDS Api에 설명 합니다.
 
 [EDS 권한 부여](edsauthorization.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "5882336"
 
 [EDS 매개 변수](edsparameters.md)
 
-&nbsp;&nbsp;많은 EDS Api에 공통 매개 변수를 설명합니다.
+&nbsp;&nbsp;많은 EDS Api에 공통 매개 변수를 설명 합니다.
 
 [EDS 쿼리 구체화](edsqueryrefiners.md)
 

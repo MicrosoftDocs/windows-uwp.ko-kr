@@ -1,7 +1,7 @@
 ---
 title: 프로토콜 활성화 처리
 author: KevinAsgari
-description: Xbox Live 멀티 플레이어 관리자를 사용 하 여 프로토콜 활성화를 처리 하는 방법을 알아봅니다.
+description: Xbox Live 멀티 플레이어 관리자 프로토콜 활성화 처리를 사용 하는 방법을 알아봅니다.
 ms.assetid: e514bcb8-4302-4eeb-8c5b-176e23f3929f
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 프로토콜 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 9046686a9db1428935e834e28f02269d710cd8ad
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5888127"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5921946"
 ---
 # <a name="handle-protocol-activation"></a>프로토콜 활성화 처리
 
-프로토콜 활성화 시스템이 자동으로 시작 되 면 게임 다른 작업에 대 한 응답에서 일반적으로 플레이어를 다른 플레이어에서 게임 초대를 수락 하면 됩니다.
+프로토콜 활성화 시스템이 자동으로 시작 되 면 게임 다른 작업에 대 한 응답에서 일반적으로 플레이어가 다른 플레이어에서 게임 초대를 수락 하면 됩니다.
 
-타이틀 프로토콜 활성화를 통해 다음과 같은 방법으로 가져올 수 있습니다.
+타이틀 프로토콜 활성화를 통해 같은 방법으로 가져올 수 있습니다.
 
 * 사용자가 게임 초대를 수락 하는 경우
 * 때 사용자는 플레이어의 gamercard에서 "Game 가입"를 선택 합니다.
@@ -34,11 +34,11 @@ ms.locfileid: "5888127"
 | `multiplayer_lobby_session::set_local_member_connection_address()` | `local_member_connection_address_write_completed ` |
 | `multiplayer_lobby_session::set_local_member_properties()` | `member_property_changed` |
 
-플레이어가 게임 초대를 수락 또는 플레이어의 gamercard 통해 친구의 게임에 가입 하는 경우에 프로토콜 활성화를 사용 하 여 게임 디바이스에서 시작 됩니다. 한 번 게임 시작 멀티 플레이어 관리자 수를 사용 하 여 프로토콜 활성화 이벤트 인수 로비 합니다. 필요에 따라를 통해 로컬 사용자를 추가 하지 않은 경우 `lobby_session()::add_local_user()`를 통해 사용자가 목록에 전달할 수 합니다 `join_lobby()` API. 초대 받은 사용자 추가 되지 않은 경우 또는 다른 사용자 추가 된 사용자 보다 초대 된 경우 `join_lobby()` 실패 하 고 제공는 `invited_xbox_user_id()` 의 일부로 초대 받은 `join_lobby_completed_event_args`합니다.
+플레이어가 게임 초대를 수락 또는 플레이어의 gamercard 통해 친구의 게임에 가입 하는 경우 게임 프로토콜 활성화를 사용 하 여 디바이스에서 시작 됩니다. 한 번 게임 시작, 멀티 플레이어 관리자 수를 사용 하 여 프로토콜 활성화 이벤트 인수 로비 합니다. 필요에 따라를 통해 로컬 사용자를 추가 하지 않은 경우 `lobby_session()::add_local_user()`를 통해 사용자가 목록에 전달할 수 있습니다 합니다 `join_lobby()` API. 초대 받은 사용자 추가 되지 않은 경우 또는 다른 사용자 추가 된 사용자 보다 초대 된 경우 `join_lobby()` 실패 하 고 제공는 `invited_xbox_user_id()` 의 일부로 초대 받은 `join_lobby_completed_event_args`합니다.
 
-로비를 조인한 후 멤버에 대 한 로컬 멤버의 연결 주소 뿐만 아니라 모든 사용자 지정 속성을 설정 하는 것이 좋습니다. 호스트를 통해 설정할 수 있습니다 `set_synchronized_host` 없는 경우.
+가입 후 로비에 멤버에 대 한 사용자 지정 속성 뿐만 아니라 로컬 멤버의 연결 주소를 설정 하는 것이 좋습니다. 호스트를 통해 설정할 수 있습니다 `set_synchronized_host` 존재 하지 않는 경우.
 
-마지막으로, 멀티 플레이어 관리자 게임 이미 진행 중인 하 고 회의실에 초대 받은 경우 가입 게임 세션에 사용자를 자동 됩니다. 제목 통해 알려주지 합니다 `join_game_completed` 이벤트는 적절 한 오류 코드와 메시지를 제공 합니다.
+마지막으로, 멀티 플레이어 관리자는 게임을 이미 진행 중인 되었으며 회의실에 초대 받은 경우 가입 게임 세션에 사용자를 자동 됩니다. 제목 통해 알려주지 합니다 `join_game_completed` 이벤트는 적절 한 오류 코드와 메시지를 제공 합니다.
 
 **예제:**
 
@@ -57,7 +57,7 @@ mpInstance->lobby_session()->set_local_member_connection_address(
 
 오류/성공을 통해 처리 되는 `join_lobby_completed` 이벤트
 
-**멀티 플레이어 관리자가 수행 기능**
+**멀티 플레이어 관리자가 수행 하는 함수**
 
 * RTA 및 멀티 플레이 구독 등록
 * 대기실 세션에 참가

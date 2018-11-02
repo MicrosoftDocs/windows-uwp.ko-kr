@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 755d30796c7e948a2fe97e84986a74a461795f83
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5885347"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5924407"
 ---
 # <a name="usersowneridclips"></a>/users/{ownerId}/clips
 사용자의 클립의 액세스 목록입니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -28,7 +28,7 @@ ms.locfileid: "5885347"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| ownerId| string| 해당 리소스를 액세스 하는 사용자의 사용자 id입니다. 지원 되는 형식: "me" 또는 "xuid(123456789)". 최대 길이: 16입니다.| 
+| ownerId| string| 해당 리소스에 액세스 하 고 사용자의 사용자 id입니다. 지원 되는 형식: "me" 또는 "xuid(123456789)". 최대 길이: 16입니다.| 
   
 <a id="ID4EVB"></a>
 
@@ -37,7 +37,7 @@ ms.locfileid: "5885347"
 
 [GET (/users/{ownerId}/clips)](uri-usersowneridclipsget.md)
 
-&nbsp;&nbsp;사용자의 클립 목록을 검색 합니다.
+&nbsp;&nbsp;사용자의 클립의 목록을 검색 합니다.
  
 <a id="ID4E6B"></a>
 
