@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, Java
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a3280b6b9c0f012f36588d6eb0297b415e07f78
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4a0df9fe873ab7d7330e06a18bb1816df3157d7a
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930739"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970797"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java 샘플: 앱, 추가 기능, 플라이트 제출
 
@@ -70,13 +70,13 @@ ms.locfileid: "5930739"
 
 ## <a name="create-an-app-submission"></a>앱 제출 만들기
 
-다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 앱 제출을 만드는 방법을 보여 줍니다. 이를 위해 ```SubmitNewApplicationSubmission``` 메서드를 사용하여 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음, 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. 특히 ```SubmitNewApplicationSubmission``` 메서드는 다음과 같은 작업을 수행합니다.
+다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 앱 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewApplicationSubmission``` 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 하 고 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewApplicationSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 해당 메서드를 통해 [지정된 앱의 데이터 가져오기](get-an-app.md) 작업을 수행합니다.
 2. 다음으로 [앱의 현재 보류 중인 제출을 삭제](delete-an-app-submission.md)합니다(보류 중인 제출이 있을 경우).
 3. 그런 다음 [앱에 대한 새 제출 만들기](create-an-app-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 새 제출에 대한 세부 정보를 변경하고 제출할 새 패키지를 Azure Blob Storage에 업로드합니다.
-5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-an-app-submission.md)한 다음 [커밋](commit-an-app-submission.md)합니다.
+5. 그런 다음이 [업데이트](update-an-app-submission.md) 한 다음 파트너 센터에 새 제출 [을 커밋합니다](commit-an-app-submission.md) .
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태 확인](get-status-for-an-app-submission.md)을 수행합니다.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L97-L183)]
@@ -85,13 +85,13 @@ ms.locfileid: "5930739"
 
 ## <a name="create-an-add-on-submission"></a>추가 기능 제출 만들기
 
-다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 추가 기능 제출을 만드는 방법을 보여 줍니다. 이를 위해 ```SubmitNewInAppProductSubmission``` 메서드를 사용하여 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음, 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```SubmitNewInAppProductSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 추가 기능 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewInAppProductSubmission``` 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 및 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewInAppProductSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 해당 메서드를 통해 [지정된 추가 기능의 데이터 가져오기](get-an-add-on.md) 작업을 수행합니다.
 2. 다음으로 [추가 기능의 현재 보류 중인 제출을 삭제](delete-an-add-on-submission.md)합니다(보류 중인 제출이 있을 경우).
 3. 그런 다음 [추가 기능에 대한 새 제출 만들기](create-an-add-on-submission.md)를 진행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 제출할 아이콘이 포함된 ZIP 보관 파일을 Azure Blob Storage에 업로드합니다.
-5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-an-add-on-submission.md)한 다음 [커밋](commit-an-add-on-submission.md)합니다.
+5. 그런 다음이 [업데이트](update-an-add-on-submission.md) 한 다음 파트너 센터에 새 제출 [을 커밋합니다](commit-an-add-on-submission.md) .
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태 확인](get-status-for-an-add-on-submission.md)합니다.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L347-L431)]
@@ -100,13 +100,13 @@ ms.locfileid: "5930739"
 
 ## <a name="create-a-package-flight-submission"></a>패키지 플라이트 제출 만들기
 
-다음 예제에서는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 패키지 플라이트 제출을 만드는 방법을 보여 줍니다. 이를 위해 ```SubmitNewFlightSubmission``` 메서드를 사용하여 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음, 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```SubmitNewFlightSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제에서는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 패키지 플라이트 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewFlightSubmission``` 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 및 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewFlightSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 이 메서드는 [지정된 패키지 플라이트의 데이터 가져오기](get-a-flight.md) 작업을 수행합니다.
 2. 다음으로 [패키지 플라이트의 현재 보류 중인 제출을 삭제](delete-a-flight-submission.md)합니다(보류 중인 제출이 있을 경우).
 3. 그런 다음 [패키지 플라이트에 대한 새 제출 만들기](create-a-flight-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 제출할 새 패키지를 Azure Blob Storage에 업로드합니다.
-5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-a-flight-submission.md)한 다음 [커밋](commit-a-flight-submission.md)합니다.
+5. 그런 다음이 [업데이트](update-a-flight-submission.md) 한 다음 PartnerCenter에 새 제출 [을 커밋합니다](commit-a-flight-submission.md) .
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태를 확인](get-status-for-a-flight-submission.md)합니다.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L223-L308)]

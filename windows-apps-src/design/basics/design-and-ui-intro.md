@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 422a6b40c86a84367054a20cabe1a0b0a32cb89d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919767"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970263"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -27,11 +27,11 @@ ms.locfileid: "5919767"
 
 ## <a name="effective-pixels-and-scaling"></a>유효 픽셀 및 크기 조정
 
-UWP 앱 태블릿 PC 또는 TV에서 모든 [Windows 10 장치](../devices/index.md)에서 실행 합니다. 다양 한 장치와 크기 화면에서 괜찮아 보였던 UI를 어떻게 디자인할?
+UWP 앱은 TV에서 태블릿 또는 PC에서 모든 [Windows 10 장치](../devices/index.md)에서 실행 합니다. 그렇다면 어떻게 다양 한 장치 및 화면 크기에서 멋지게 UI를 디자인할?
 
 ![다양한 디바이스에서 동일한 앱](images/universal-image-1.jpg)
 
-UWP 읽기 쉽고 모든 장치 및 화면 크기에서 상호 작용할 수 있도록 UI 요소를 자동으로 조정 하 여 수 있습니다.
+UWP는 쉽게 읽고 모든 장치와 화면 크기에서 상호 작용할 수 있도록 UI 요소를 자동으로 조정 하 여는 데 도움이 됩니다.
 
 디바이스에서 앱이 실행될 때 시스템은 화면에 UI 요소가 표시되는 방식을 정규화하는 알고리즘을 사용합니다. 이 크기 조정 알고리즘은 가시거리 및 화면 밀도(인치당 픽셀)를 고려하여 물리적 크기가 아닌 인식되는 크기를 최적화합니다. 크기 조정 알고리즘에 따르면 3m 떨어져 있는 Surface Hub의 24픽셀 글꼴은 몇 인치 떨어져 있는 5인치 휴대폰의 24픽셀 글꼴과 마찬가지로 읽힙니다.
 

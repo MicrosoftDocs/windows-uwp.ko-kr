@@ -7,12 +7,12 @@ ms.date: 06/15/2018
 ms.topic: article
 keywords: windows 10, uwp, 평점, 리뷰
 ms.localizationpriority: medium
-ms.openlocfilehash: d736fa47251c85491a29b324a3ed59181a5060c8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c00e69ed7d5057db4f835f3d91320806067d86e1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5935097"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981192"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>앱에 대한 평점 및 리뷰 요청
 
@@ -20,7 +20,7 @@ ms.locfileid: "5935097"
 * 앱의 컨텍스트에서 평점 및 리뷰 대화 상자를 직접 표시할 수 있습니다.
 * 프로그래밍 방식으로 Microsoft Store에서 앱의 평점 및 리뷰 페이지를 열 수 있습니다.
 
-평점 및 리뷰 데이터를 분석할 준비가 되면 Windows 개발자 센터 대시보드에서 데이터를 볼 수 있거나 Microsoft Store 분석 API를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+평점 및 리뷰 데이터를 분석할 준비가 되 면 파트너 센터에서 데이터를 볼 또는 Microsoft Store 분석 API를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
 
 > [!IMPORTANT]
 > 앱 내 평점 함수를 추가할 때 모든 리뷰 별 평점 선택한 상관 없이 저장소의 등급 메커니즘에 사용자를 보내야 합니다. 사용자의 피드백 또는 의견을 수집 하는 경우 관련이 없는 앱 평점 또는 리뷰 스토어에서 직접 앱 개발자에 게 전송 되는 명확 해야 합니다. 개발자 준수 [Fraudulent 또는 악의적인 활동에](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities)관한 자세한 내용은 참조 하세요.
@@ -102,7 +102,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 ## <a name="analyze-your-ratings-and-reviews-data"></a>평점 및 리뷰 데이터 분석
 
 고객의 평점 및 리뷰 데이터를 분석하는 데 몇 가지 옵션이 있습니다.
-* Windows 개발자 센터 대시보드에서 [리뷰](../publish/reviews-report.md) 보고서를 사용하여 고객의 평점 및 리뷰를 확인할 수 있습니다. 이 보고서를 다운로드하여 오프라인에서 볼 수도 있습니다.
+* 고객의 평점 및 리뷰를 보려면 파트너 센터에서 [리뷰](../publish/reviews-report.md) 보고서를 사용할 수 있습니다. 이 보고서를 다운로드하여 오프라인에서 볼 수도 있습니다.
 * Microsoft Store 분석 API에서 [앱 평점 가져오기](get-app-ratings.md) 및 [앱 리뷰 가져오기](get-app-reviews.md) 메서드를 사용하여 JSON 형식으로 된 고객의 평점 및 리뷰를 프로그래밍 방식으로 검색할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목

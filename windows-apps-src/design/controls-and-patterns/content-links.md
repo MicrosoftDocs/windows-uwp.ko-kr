@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bbf7bdf1f41b1dff1049674f3b4463bac6ccb80
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3939995aa2f29f4590c8c71a877b69f0cb81d2ec
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5929617"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969179"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 
@@ -164,7 +164,7 @@ Uri 속성은 하이퍼링크의 NavigateUri 속성과 상당 부분 비슷하�
 - LinkContentKind가 "사람"이 아니면 **사람** 앱이 열립니다. 예를 들어, ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
 
 > [!TIP]
-> 본인 앱에서 다른 앱이나 웹 사이트를 여는 방법은 [URI를 사용하여 앱 실행](/windows/uwp/launch-resume/launch-app-with-uri) 아래 항목을 참조하세요.
+> 앱에서 다른 앱과 웹 사이트 열기에 대 한 자세한 내용은 [Uri 사용 하 여 앱을 실행](/windows/uwp/launch-resume/launch-app-with-uri)하는 아래 항목을 참조 하세요.
 
 #### <a name="invoked"></a>호출됨
 

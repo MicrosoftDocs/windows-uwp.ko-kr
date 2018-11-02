@@ -8,11 +8,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 000aa2d8f3684aa813b85076d9124a87a71b6a8c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919247"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970147"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -38,7 +38,7 @@ ms.locfileid: "5919247"
 
 이번 자습서에서는 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 
 
-1. Go to [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). 샘플을 볼 수 있는 GitHub 페이지로 이동하게 됩니다. 
+1. 이동 [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). 샘플을 볼 수 있는 GitHub 페이지로 이동하게 됩니다. 
 2. 그런 다음 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 버튼을 클릭합니다. 하위 메뉴가 나타납니다.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">

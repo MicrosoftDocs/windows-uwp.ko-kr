@@ -1,32 +1,32 @@
 ---
 author: Xansky
-Description: You can log custom events from your UWP app and review those events in the Usage report on the Windows Dev Center dashboard.
-title: 개발자 센터에 대한 사용자 지정 이벤트 로깅
+Description: You can log custom events from your UWP app and review those events in the Usage report in Partner Center.
+title: 파트너 센터에 대 한 사용자 지정 이벤트 로깅
 ms.author: mhopkins
 ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, 이벤트 기록
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c4dcb11b46b50677b87f9feea6db8b87bfb29d4
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 47c1eb02434dc71cb7da949d58ec38cf3b4cf65a
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921469"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970346"
 ---
-# <a name="log-custom-events-for-dev-center"></a>개발자 센터에 대한 사용자 지정 이벤트 로깅
+# <a name="log-custom-events-for-partner-center"></a>파트너 센터에 대 한 사용자 지정 이벤트 로깅
 
-Windows 개발자 센터 대시보드에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)를 사용하면 UWP(유니버설 Windows 플랫폼) 앱에서 정의한 사용자 지정 이벤트에 대한 정보를 얻을 수 있습니다. 사용자 지정 이벤트는 앱의 이벤트 또는 활동을 나타내는 임의의 문자열입니다. 예를 들어, 게임에서 *firstLevelPassed*, *secondLevelPassed* 등과 같이 사용자 지정 이벤트를 정의할 수 있어 사용자가 게임 단계를 통과할 때마다 기록됩니다.
+파트너 센터에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 를 사용 하면 유니버설 Windows 플랫폼 (UWP) 앱에서 정의한 사용자 지정 이벤트에 대 한 정보를 얻을 수 있습니다. 사용자 지정 이벤트는 앱의 이벤트 또는 활동을 나타내는 임의의 문자열입니다. 예를 들어, 게임에서 *firstLevelPassed*, *secondLevelPassed* 등과 같이 사용자 지정 이벤트를 정의할 수 있어 사용자가 게임 단계를 통과할 때마다 기록됩니다.
 
-앱에서 사용자 지정 이벤트를 기록하려면 Microsoft Store Services SDK에서 제공한 [로그](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드에 사용자 지정 이벤트 문자열을 전달합니다. 사용자 지정 이벤트에 대한 총 발생 횟수는 개발자 센터 대시보드에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)의 **사용자 지정 이벤트** 섹션에서 검토할 수 있습니다.
+앱에서 사용자 지정 이벤트를 기록하려면 Microsoft Store Services SDK에서 제공한 [로그](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드에 사용자 지정 이벤트 문자열을 전달합니다. 파트너 센터에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 의 **사용자 지정 이벤트** 섹션에서 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토할 수 있습니다.
 
 > [!NOTE]
-> 개발자 센터에 기록한 사용자 지정 이벤트는 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)와 관련이 없으며 **이벤트 뷰어**에 표시되지 않습니다.
+> 파트너 센터에 로그인 하는 사용자 지정 이벤트 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)와 관련 되지 않으며 **이벤트**뷰어에서 표시 되지 않습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
-대시보드에서 앱에 대한 **사용 보고서**에서 사용자 지정 로깅 이벤트를 검토하려면 먼저 스토어에 앱을 게시해야 합니다.
+파트너 센터에서 앱에 대 한 **사용 보고서** 에서 사용자 지정 로깅 이벤트를 검토 하려면, 먼저 앱 스토어에 게시 해야 합니다.
 
 ## <a name="how-to-log-custom-events"></a>사용자 지정 이벤트를 기록하는 방법
 

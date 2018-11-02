@@ -8,12 +8,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, 제품 보기, 제품 권한 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: 41e1437e8b55474d3fcc0c34919e23d14a86ea89
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 21be5f50a78dd1bd1ef7c549add04a3b7c494dd1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940930"
+ms.locfileid: "5991619"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -32,7 +32,7 @@ ms.locfileid: "5940930"
 다음 단계에서는 Microsoft Store 컬렉션 API 및 구매 API를 사용하는 모든 과정을 설명합니다.
 
 1.  [Azure ad에서 응용 프로그램 구성](#step-1)합니다.
-2.  [Windows 개발자 센터 대시보드에서 앱을 사용 하 여 Azure AD 응용 프로그램 ID와 연결](#step-2)합니다.
+2.  [파트너 센터에서 앱을 사용 하 여 Azure AD 응용 프로그램 ID와 연결](#step-2)합니다.
 3.  서비스에서 게시자 ID를 나타내는 [Azure AD 액세스 토큰을 만듭니다](#step-3).
 4.  클라이언트 Windows 앱에서 사용자의 서비스로 다시 [Microsoft Store ID 키를 만들려면](#step-4) 현재 사용자 모드와 패스가 키의 id를 나타내는 합니다.
 5.  필요한 Azure AD 액세스 토큰 및 Microsoft Store ID 키를 획득한 후 [서비스에서 Microsoft Store 컬렉션 API 또는 구매 API를 호출합니다](#step-5).
@@ -72,14 +72,14 @@ ms.locfileid: "5940930"
 
 <span id="step-2"/>
 
-## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-windows-dev-center"></a>2 단계: Azure AD 응용 프로그램 ID를 Windows 개발자 센터의 클라이언트 앱과 연결
+## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-partner-center"></a>2 단계: Azure AD 응용 프로그램 ID 파트너 센터에서 클라이언트 앱과 연결
 
-Microsoft Store 컬렉션 API를 사용 하 여 또는 소유권과 앱 또는 추가 기능 구매를 구성 하는 API를 구매 하 여 전에 개발자 센터 대시보드에서 앱 (또는 추가 기능을 포함 하는 앱)를 Azure AD 응용 프로그램 ID를 연결 해야 합니다.
+Microsoft Store 컬렉션 API를 사용 하 여 또는 소유권과 앱 또는 추가 기능 구매를 구성 하는 API를 구매 하 여 전에 파트너 센터에 앱 (또는 추가 기능을 포함 하는 앱)을 사용 하 여 Azure AD 응용 프로그램 ID를 연결 해야 합니다.
 
 > [!NOTE]
 > 이 작업은 한 번만 수행하면 됩니다.
 
-1.  [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인하고 앱을 선택합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 하 고 앱을 선택 합니다.
 2.  **서비스** 에 이동 &gt; **제품 컬렉션 및 구매** 페이지 및 사용 가능한 **클라이언트 ID** 필드 중 하나에 Azure AD 응용 프로그램 ID를 입력 합니다.
 
 <span id="step-3"/>

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 50960a079e2c38d52d3a15403aef091ea99d7696
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 271d60e6fbc0bd6336aa8aa8ec9edbb2b965c7f4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5925457"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981004"
 ---
 # <a name="manage-targeting-profiles"></a>타기팅 프로필 관리
 
@@ -145,7 +145,7 @@ Authorization: Bearer <your access token>
 |--------------|--------|---------------|------|-------------|------------|
 |  id   |  정수   |  타기팅 프로필의 ID입니다.     |   예    |       |   아니요      |       
 |  name   |  문자열   |   대상 프로필의 이름입니다.    |    아니요   |      |  예     |       
-|  targetingType   |  문자열   |  다음 값 중 하나입니다. <ul><li>**자동**: 이 값을 지정하여 Microsoft가 개발자 센터의 앱 설정에 따라 타기팅 프로필을 선택할 수 있도록 허용합니다.</li><li>**수동**: 이 값을 지정하여 자신만의 타기팅 프로필을 정의합니다.</li></ul>     |  아니요     |  자동    |   예    |       
+|  targetingType   |  문자열   |  다음 값 중 하나입니다. <ul><li>**자동**: Microsoft가 파트너 센터에서 앱에 대 한 설정에 따라 타기 팅 프로필을 선택할 수 있도록이 값을 지정 합니다.</li><li>**수동**: 이 값을 지정하여 자신만의 타기팅 프로필을 정의합니다.</li></ul>     |  아니요     |  자동    |   예    |       
 |  age   |  배열   |   대상으로 지정할 사용자의 연령대를 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [연령 값](#age-values)을 참조하세요.    |    아니요    |  null    |     아니요    |       
 |  gender   |  배열   |  대상으로 지정할 사용자의 성별을 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [성별 값](#gender-values)을 참조하세요.       |  아니요    |  null    |     아니요    |       
 |  country   |  배열   |  대상으로 지정할 사용자의 국가 코드를 식별하는 하나 이상의 정수입니다. 정수의 전체 목록을 보려면 이 문서에 있는 [국가 코드 값](#country-code-values)을 참조하세요.    |  아니요    |  null   |      아니요   |       

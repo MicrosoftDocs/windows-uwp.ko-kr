@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 추가 기능 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fdfe811a90eae1e67ef7f626815be1ef78a4c61
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8a8a336d477e7d66222632821f0fa0855faae6f7
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5928594"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970117"
 ---
 # <a name="submit-responses-to-reviews"></a>리뷰에 대한 응답 제출
 
@@ -23,9 +23,9 @@ Microsoft Store 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 프
 리뷰를 제출하는 고객은 해당 리뷰에 대한 응답을 받지 않기로 선택할 수 있습니다. 고객이 응답을 받지 않겠다고 선택한 리뷰에 응답하려 하면 이 메서드의 응답 본문이 응답 시도가 실패한 것으로 나타냅니다. 이 메서드를 호출하기 전에 선택적으로 [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md) 메서드를 사용하여 지정된 리뷰에 응답할 수 있는지 여부를 확인할 수 있습니다.
 
 > [!NOTE]
-> 이 메서드를 사용하여 프로그래밍 방식으로 리뷰에 응답하는 이외에, [Windows 개발자 센터 대시보드를 사용](../publish/respond-to-customer-reviews.md)하여 리뷰에 응답할 수도 있습니다.
+> 이 메서드를 사용 하 여 프로그래밍 방식으로 리뷰에 응답, [파트너 센터를 사용 하 여](../publish/respond-to-customer-reviews.md)리뷰에 응답할 수도 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -67,7 +67,7 @@ Microsoft Store 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 프
 
 | 값        | 유형   | 설명           |  필수  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | 문자열 |  응답할 리뷰가 포함된 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 확인할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.   |  예  |
+| ApplicationId | 문자열 |  응답할 리뷰가 포함된 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.   |  예  |
 | ReviewId | 문자열 |  응답하려는 리뷰의 ID(GUID)입니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다.   |  예  |
 | ResponseText | 문자열 | 제출할 응답입니다. 응답은 [이 지침](../publish/respond-to-customer-reviews.md#guidelines-for-responses)을 따라 합니다.   |  예  |
 | SupportEmail | 문자열 | 고객이 직접 문의할 때 사용할 수 있는 앱 지원 이메일 주소입니다. 유효한 메일 주소여야 합니다.     |  예  |
@@ -146,7 +146,7 @@ Content-Type: application/json
 
 ## <a name="related-topics"></a>관련 항목
 
-* [개발자 센터 대시보드를 사용하여 고객 리뷰에 응답](../publish/respond-to-customer-reviews.md)
+* [파트너 센터를 사용 하 여 고객 리뷰에 응답](../publish/respond-to-customer-reviews.md)
 * [Microsoft Store 서비스를 사용하여 리뷰에 응답](respond-to-reviews-using-windows-store-services.md)
 * [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md)
 * [앱 리뷰 가져오기](get-app-reviews.md)
