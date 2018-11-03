@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 리뷰
 ms.localizationpriority: medium
-ms.openlocfilehash: 61ce463be2ef2d5e3328c132302704f50c336105
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 656f00ec8a7711a43c44790b04ea01dace4c4ee2
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926661"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988743"
 ---
 # <a name="get-app-reviews"></a>앱 리뷰 가져오기
 
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [검토 보고서](../publish/reviews-report.md)를 통해서도 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 JSON 형식으로 가져옵니다. 이 정보는 파트너 센터에서 [리뷰 보고서](../publish/reviews-report.md) 에서 사용할 수 있습니다.
 
 리뷰를 검색한 다음 Microsoft Store 리뷰 API에서 [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md) 및 [앱 리뷰에 응답 제출](submit-responses-to-app-reviews.md) 메서드를 사용하여 프로그래밍 방식으로 리뷰에 응답할 수 있습니다.
 

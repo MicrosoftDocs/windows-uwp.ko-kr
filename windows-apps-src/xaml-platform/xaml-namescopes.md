@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8fcbc1566d2b2b5ffc6889a57dd7656a3466d2a9
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919711"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988586"
 ---
 # <a name="xaml-namescopes"></a>XAML 이름 범위
 
@@ -32,7 +32,7 @@ XAML 이름 범위의 이름을 사용하는 가장 일반적인 경우는 개�
 
 기술적으로는 XAML 자체가 태그 컴파일러로 처리되는 동시에 코드 숨김을 위해 정의하는 partial 클래스와 XAML이 함께 컴파일됩니다. 태그에 정의된 각 개체 요소와 **Name** 또는 [x:Name 특성](x-name-attribute.md)은 XAML 이름과 일치하는 이름으로 내부 필드를 생성합니다. 이 필드는 처음에는 비어 있습니다. 그런 다음 클래스는 모든 XAML이 로드된 후에만 호출되는 **InitializeComponent** 메서드를 생성합니다. **InitializeComponent** 논리에서, 각 내부 필드는 동일한 이름 문자열에 대한 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) 반환 값으로 채워집니다. 컴파일 후 Windows 런타임 앱 프로젝트의 /obj 하위 폴더에서 각 XAML 페이지에 대해 만들어지는 ".g"(생성된(generated)) 파일을 보면 이 인프라를 직접 확인할 수 있습니다. 또한 필드 및 **InitializeComponent** 메서드를 리플렉션하거나 해당 인터페이스 언어 콘텐츠를 확인하면 결과 어셈블리의 멤버로 이 필드와 메서드를 볼 수 있습니다.
 
-**참고**VisualC + + 구성 요소 확장을 위해 특별히 (C + + /cli CX) 응용 프로그램을 XAML 파일의 루트 요소에 대 한 **X:name** 참조 경우 지원 필드는 생성 되지 않습니다. C++/CX 코드 숨김에서 루트 개체를 참조해야 하는 경우 다른 API나 트리 통과를 사용합니다. 예를 들어 알려진 명명된 자식 요소에 대해 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출한 다음 [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)를 호출할 수 있습니다.
+**참고**VisualC + + 구성 요소 확장에 대 한 구체적으로 (C + + CX) 앱의 경우 **X:name** 참조에 대 한 지원 필드는 XAML 파일의 루트 요소에 대해 만들어지지 않습니다. C++/CX 코드 숨김에서 루트 개체를 참조해야 하는 경우 다른 API나 트리 통과를 사용합니다. 예를 들어 알려진 명명된 자식 요소에 대해 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출한 다음 [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)를 호출할 수 있습니다.
 
 ## <a name="creating-objects-at-run-time-with-xamlreaderload"></a>XamlReader.Load로 런타임에 개체 만들기
 

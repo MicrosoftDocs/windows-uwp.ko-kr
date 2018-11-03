@@ -7,12 +7,12 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 변환, 채널
 ms.localizationpriority: medium
-ms.openlocfilehash: 60e166b70c6a2aacf20673b30461002f3aa61305
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ecb5d5dfbfcbabbd3fa3004c84e2a1a5fff9f2d6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5947654"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5987336"
 ---
 # <a name="get-app-conversions-by-channel"></a>채널별 앱 변환 가져오기
 
@@ -21,9 +21,9 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 
 * *변환*은 (Microsoft 계정으로 로그인한) 고객이 앱(금액 청구 또는 무료 제공 여부와는 관계 없음)에 대한 라이선스를 새로 획득했음을 의미합니다.
 * *채널*은 고객이 앱의 목록 페이지(예, 상점이나 [사용자 지정 앱 프로 모션 캠페인](../publish/create-a-custom-app-promotion-campaign.md)을 통해)에 도착한 방법입니다.
 
-이 정보는 Windows 개발자 센터 대시보드의 [구입 보고서](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel)를 통해서도 사용할 수 있습니다.
+이 정보는 파트너 센터에서 [구입 보고서](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel) 에서 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
