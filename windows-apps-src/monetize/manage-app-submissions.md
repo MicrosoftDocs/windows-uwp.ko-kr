@@ -1,36 +1,36 @@
 ---
 author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
-description: Microsoft Store 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다.
+description: Microsoft Store 제출 API에서에서 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 제출을 관리 합니다.
 title: 앱 제출 관리
 ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f95e91c1ef9e47ab3371a1481237dc510eddae7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921081"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5996676"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
 Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제출을 관리하는 데 사용할 수 있는 메서드를 제공합니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 > [!IMPORTANT]
-> Microsoft Store 제출 API를 사용하여 앱에 대한 제출을 생성하는 경우 개발자 센터 대시보드 대신 API만 사용하여 제출을 추가 변경해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> Microsoft Store 제출 API를 사용 하 여 앱에 대 한 제출을 생성 하는 경우 추가 변경 된 제출에 파트너 센터 대신 API를 사용 해야 합니다. 파트너 센터를 사용 하 여 원래 API를 사용 하 여 만든 제출을 변경을 변경 하거나 해당 제출 API를 사용 하 여 커밋할 수 없게 됩니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 > [!IMPORTANT]
-> [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)하기 위한 제출을 게시하거나 [LOB 앱](../publish/distribute-lob-apps-to-enterprises.md)에 대한 제출을 기업에 직접 게시하는 데 이 API를 사용할 수 없습니다. 두 시나리오 모두에서 Windows 개발자 센터 대시보드를 사용하여 제출을 게시해야 합니다.
+> [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)하기 위한 제출을 게시하거나 [LOB 앱](../publish/distribute-lob-apps-to-enterprises.md)에 대한 제출을 기업에 직접 게시하는 데 이 API를 사용할 수 없습니다. 이러한 시나리오 모두에 대 한 파트너 센터를 사용 하면 제출을 게시 해야 합니다.
 
 
 <span id="methods-for-app-submissions" />
 
 ## <a name="methods-for-managing-app-submissions"></a>앱 제출 관리 메서드
 
-앱 제출 가져오기, 생성, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. 이러한 메서드를 사용하려면 앱이 개발자 센터 계정에 이미 있어야 하고 앱에 대한 제출 한 개를 대시보드에 먼저 만들어야 합니다. 자세한 내용은 [전제 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 참조하세요.
+앱 제출 가져오기, 생성, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. 이러한 메서드를 사용 하려면 먼저 앱 파트너 센터 계정에 이미 있어야 하 고 파트너 센터에서 앱에 대 한 제출을 만들어야 합니다. 자세한 내용은 [전제 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 참조하세요.
 
 <table>
 <colgroup>
@@ -127,7 +127,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. 다음 메서드를 실행하여 [앱 제출을 커밋](commit-an-app-submission.md)합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다.
+5. 다음 메서드를 실행하여 [앱 제출을 커밋](commit-an-app-submission.md)합니다. 이 것을 경고 파트너 센터 제출을 완료 되 고 업데이트 계정에 지금 적용 해야 합니다.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
@@ -141,13 +141,13 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
 
     제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 Windows 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용 하 여 또는 파트너 센터를 방문 하 여 제출 진행 상황을 모니터링할 계속 수 있습니다.
 
 <span id="manage-gradual-package-rollout">
 
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>점진적 패키지 출시 관리 메서드
 
-앱 제출에서 업데이트된 패키지를 앱의 Windows10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. Windows 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
+앱 제출에서 업데이트된 패키지를 앱의 Windows10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 사용 하도록 설정 하 고 파트너 센터에서 점진적 패키지 출시를 관리 하는 방법에 대 한 지침을 비롯 한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조 하세요.
 
 또한 Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세스를 따르면 앱 제출에 대해 프로그래밍 방식으로 점진적 패키지 출시를 사용하도록 설정할 수도 있습니다.
 
@@ -339,7 +339,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값      | 유형   | 설명      |
 |------------|--------|-------------------|
-| id            | 문자열  | 제출의 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md), [모든 앱 가져오기](get-all-apps.md) 및 [앱 가져오기](get-an-app.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 개발자 센터 대시보드에서 만든 제출의 경우 이 ID는 대시보드에 있는 제출 페이지의 URL에도 사용할 수 있습니다.  |
+| id            | 문자열  | 제출의 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md), [모든 앱 가져오기](get-all-apps.md) 및 [앱 가져오기](get-an-app.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL에 사용할 수 있습니다.  |
 | applicationCategory           | 문자열  |   앱에 대한 [범주 및/또는 하위 범주](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table)를 지정하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader**처럼 밑줄(_) 문자를 사용하여 단일 문자열로 연결합니다.      |  
 | pricing           |  object  | 앱에 대한 가격 정보를 포함하는 [가격 리소스](#pricing-object)입니다.        |   
 | visibility           |  문자열  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>       |   
@@ -362,7 +362,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
 | allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  부울   |  Microsoft에서 [이후의 Windows10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
 | allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows10 장치 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
-| FriendlyName           |   문자열  |  개발자 센터 대시보드와 같이 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.       |  
+| FriendlyName           |   문자열  |  파트너 센터에 표시 된 대로 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.       |  
 | trailers           |  array |   앱 목록에 대한 비디오 예고편을 나타내는 최대 15개의 [예고편 리소스](#trailer-object) 가 포함된 배열입니다.<br/><br/>   |  
 
 
@@ -389,8 +389,8 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 > [!IMPORTANT]
 > **판매** 리소스는 더 이상 지원되지 않으며, 현재 Microsoft Store 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다. 앞으로 Microsoft Store 제출 API를 업데이트하여 앱 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
->    * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 가져올 수 있습니다.
->    * [PUT 메서드를 호출하여 앱 제출을 업데이트하는 경우](update-an-app-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 Windows 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 변경할 수 있습니다.
+>    * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) *판매* 값이 빈 상태로 표시됩니다. 파트너 센터를 사용 하 여 앱 제출에 대 한 판매 데이터를 가져오려면 계속 수 있습니다.
+>    * [PUT 메서드를 호출하여 앱 제출을 업데이트하는 경우](update-an-app-submission.md) *판매* 값의 정보는 무시됩니다. 앱 제출에 대 한 판매 데이터를 변경 하려면 파트너 센터를 사용 하 여 계속 수 있습니다.
 
 이 리소스의 값은 다음과 같습니다.
 
@@ -425,9 +425,9 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  copyrightAndTrademarkInfo                |   문자열      |  선택적 [저작권 및/또는 상표 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info)입니다.  |
 |  키워드                |  배열       |  검색 결과에 앱을 표시하는 데 도움이 되는 [키워드](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords)의 배열입니다.    |
 |  licenseTerms                |    문자열     | 앱에 대한 선택적 [사용 조건](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms)입니다.     |
-|  privacyPolicy                |   문자열      |   이 값은 더 이상 사용되지 않습니다. 앱의 개인 정보 취급 방침을 설정하거나 변경하려면 개발자 센터 대시보드의 [속성](../publish/enter-app-properties.md#privacy-policy-url) 페이지에서 이를 수행해야 합니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.       |
-|  supportContact                |   문자열      |  이 값은 더 이상 사용되지 않습니다. 앱의 지원 연락처 URL 또는 이메일 주소를 설정하거나 변경하려면 개발자 센터 대시보드의 [속성](../publish/enter-app-properties.md#support-contact-info) 페이지에서 이를 수행해야 합니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.        |
-|  websiteUrl                |   문자열      |  이 값은 더 이상 사용되지 않습니다. 앱의 웹 페이지 URL을 설정하거나 변경하려면 개발자 센터 대시보드의 [속성](../publish/enter-app-properties.md#website) 페이지에서 이를 수행해야 합니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.      |    
+|  privacyPolicy                |   문자열      |   이 값은 더 이상 사용되지 않습니다. 를 설정 하거나 앱에 대 한 개인 정보 취급 방침 URL을 변경 하려면 파트너 센터의 [속성](../publish/enter-app-properties.md#privacy-policy-url) 페이지에서이 수행 해야 있습니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.       |
+|  supportContact                |   문자열      |  이 값은 더 이상 사용되지 않습니다. 를 설정 하거나 앱의 지원 연락처 URL 또는 이메일 주소를 변경 하려면 파트너 센터의 [속성](../publish/enter-app-properties.md#support-contact-info) 페이지에서이 수행 해야 있습니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.        |
+|  websiteUrl                |   문자열      |  이 값은 더 이상 사용되지 않습니다. 를 설정 하거나 앱에 대 한 웹 페이지의 URL을 변경 하려면 파트너 센터의 [속성](../publish/enter-app-properties.md#website) 페이지에서이 수행 해야 있습니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.      |    
 |  설명               |    문자열     |   앱 목록에 대한 [설명](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description)입니다.   |     
 |  기능               |    배열     |  앱의 [기능](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features)을 나열하는 최대 20개 문자열의 배열입니다.     |
 |  releaseNotes               |  문자열       |  앱의 [릴리스 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes)입니다.    |
@@ -451,7 +451,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |-----------------|---------|------|
 |  fileName               |    문자열     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 이미지 파일의 이름입니다.    |     
 |  fileStatus               |   문자열      |  이미지 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
-|  id  |  string  | 이미지 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
+|  id  |  string  | 이미지 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
 |  description  |  문자열  | 이미지에 대한 설명입니다.  |
 |  imageType  |  string  | 이미지의 형식을 나타냅니다. 현재 다음 문자열을 지원하고 있습니다. <p/>[스크린샷 이미지](../publish/app-screenshots-and-images.md#screenshots): <ul><li>스크린샷(데스크톱 스크린샷에 이 값을 사용)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[스토어 로고](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>아이콘(1:1 300 x 300 픽셀 로고에 이 값을 사용)</li></ul><p/>[홍보 이미지](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Xbox 이미지](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[선택할 수 있는 홍보 이미지](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
@@ -460,7 +460,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 ### <a name="gaming-options-resource"></a>게임 옵션 리소스
 
-이 리소스에는 앱의 게임 관련 설정이 포함되어 있습니다. 이 리소스의 값은 개발자 센터 대시보드 제출의 [게임 설정](../publish/enter-app-properties.md#game-settings)과 일치합니다.
+이 리소스에는 앱의 게임 관련 설정이 포함되어 있습니다. 파트너 센터에서 제출에 대 한 [게임 설정](../publish/enter-app-properties.md#game-settings) 값이이 리소스에 해당합니다.
 
 ```json
 {
@@ -567,13 +567,13 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 이 리소스의 값은 다음과 같습니다.  
 
 > [!NOTE]
-> [update an app submission](update-an-app-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
+> [update an app submission](update-an-app-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 파트너 센터에 의해 채워집니다.
 
 | 값           | 유형    | 설명                   |
 |-----------------|---------|------|
 | fileName   |   문자열      |  패키지의 이름입니다.    |  
 | fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 개발자 센터에서 제공됩니다.   |     
+| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.   |     
 | 버전    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
 | architecture    |  문자열   |  패키지의 아키텍처(예: ARM)입니다.   |     
 | languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
@@ -639,13 +639,13 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | fallbackSubmissionId    |  문자열   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
 
 > [!NOTE]
-> *packageRolloutStatus* 및 *fallbackSubmissionId* 값은 개발자 센터에서 할당하며, 개발자가 설정할 필요가 없습니다. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다.
+> *PackageRolloutStatus* 및 *fallbackSubmissionId* 값은 파트너 센터에서 할당 하며 개발자가 설정할 필요가 없습니다. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다.
 
 <span id="trailer-object" />
 
 ### <a name="trailers-resource"></a>예고편 리소스
 
-이 리소스는 앱 목록의 비디오 예고편을 나타냅니다. 이 리소스의 값은 개발자 센터 대시보드 제출의 [예고편](../publish/app-screenshots-and-images.md#trailers) 옵션과 일치합니다.
+이 리소스는 앱 목록의 비디오 예고편을 나타냅니다. 이 리소스의 값은 파트너 센터에서 제출에 [예고편](../publish/app-screenshots-and-images.md#trailers) 옵션에 해당합니다.
 
 최대 15개의 예고편 리소스를 [앱 제출 리소스](#app-submission-object)의 *예고편* 배열에 추가할 수 있습니다. 제출용으로 예고편 비디오 파일과 미리 보기 이미지를 업로드하려면, 이 파일을 제출용 패키지 및 목록 이미지가 든 동일한 ZIP 보관 파일에 추가한 다음 ZIP 보관 파일을 제출용 SAS URI로 업로드 합니다. ZIP 보관 파일을 SAS URI로 업로드하는 것에 대한 자세한 내용은 [앱 제출 생성](#create-an-app-submission)을 참조하세요.
 
@@ -677,9 +677,9 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 유형    | 설명        |
 |-----------------|---------|------|
-|  id               |    string     |   예고편 ID입니다. 이 값은 개발자 센터에서 제공됩니다.   |
+|  id               |    string     |   예고편 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.   |
 |  videoFileName               |    string     |    제출용 파일이 든 ZIP 보관 파일의 예고편 비디오 파일 이름입니다.    |     
-|  videoFileId               |   string      |  예고편 비디오 파일 ID입니다. 이 값은 개발자 센터에서 제공됩니다.   |     
+|  videoFileId               |   string      |  예고편 비디오 파일 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.   |     
 |  trailerAssets               |   object      |  키와 값 쌍의 사전입니다. 여기서 각 키는 언어 코드이며 각 값은 예고편에 대한 지역에 특정적인 추가 자산이 포함된 [예고편 자산 리소스](#trailer-assets-object)입니다. 지원 언어 코드에 대한 자세한 내용은 [지원 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 
 > [!NOTE]
@@ -706,7 +706,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 유형    | 설명           |
 |-----------------|---------|------|
 |  fileName               |    string     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 미리 보기 이미지 파일의 이름입니다.    |     
-|  ID  |  string  | 미리 보기 이미지 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
+|  ID  |  string  | 미리 보기 이미지 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
 |  description  |  string  | 미리 보기 이미지에 대한 설명입니다. 이 값은 메타데이터입니다. 그리고 사용자에게 표시되지 않습니다.   |
 
 <span/>
@@ -726,7 +726,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  기본               |   기준 가격이 설정되지 않았습니다. 앱에 대한 기본 가격을 사용합니다.      |     
 |  NotAvailable              |   지정된 영역에 앱을 사용할 수 없습니다.    |     
 |  무료              |   앱은 무료입니다.    |    
-|  계층*xxx*               |   앱에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련된 시장별 가격을 포함하여 개발자 계정에 사용할 수 있는 기준 가격을 나열한 전체 표를 보려면 개발자 센터 대시보드에서 앱 제출에 대한 **가격 책정 및 가용성** 페이지로 이동하여 **지역/국가 및 사용자 지정 가격** 섹션에 있는 **표 보기** 링크를 클릭합니다(일부 개발자 계정의 경우, 이 링크는 **가격 책정** 섹션에 있음).    |
+|  계층*xxx*               |   앱에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>가격의 전체 표를 보려면 각 계층과 관련 된 시장별 가격을 포함 하 여, 개발자 계정에 사용할 수 있는 계층 파트너 센터에서 앱 제출에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **지역/국가 및 사용자 지정 가격** 섹션의 **표 보기** 링크를 클릭 (일부 개발자 계정의 경우,이 링크는 **가격 책정** 섹션에서).    |
 
 
 <span id="enterprise-licensing" />
@@ -736,7 +736,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 다음 값은 앱에 대한 조직 라이선스 동작을 나타냅니다. 이러한 옵션에 대한 자세한 내용은 [조직 라이선스 옵션](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing)을 참조하세요.
 
 > [!NOTE]
-> 제출 API를 통한 앱 제출에 대해 조직 라이선스 옵션을 구성할 수 있지만 [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)를 위한 제출을 게시하는 데 이 API를 사용할 수는 없습니다. 비즈니스용 Microsoft Store 및 교육용 Microsoft Store에 제출을 게시하려면 Windows 개발자 센터 대시보드를 사용해야 합니다.
+> 제출 API를 통한 앱 제출에 대해 조직 라이선스 옵션을 구성할 수 있지만 [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)를 위한 제출을 게시하는 데 이 API를 사용할 수는 없습니다. 비즈니스용 Microsoft 스토어 및 교육용 Microsoft 스토어에 제출을 게시 하려면 파트너 센터를 사용 해야 합니다.
 
 
 | 값           |  설명      |
@@ -775,4 +775,4 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 * [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [Microsoft Store 제출 API를 사용하여 앱 데이터 가져오기](get-app-data.md)
-* [개발자 센터 대시보드에서 앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [파트너 센터에서 앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)

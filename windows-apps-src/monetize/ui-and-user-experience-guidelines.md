@@ -8,12 +8,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례
 ms.localizationpriority: medium
-ms.openlocfilehash: 323190b01cad8a0832d57386f6bde9fde4f2180c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4d502c721f98269c1256510a6f91f8c6dc8cd0fb
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5942442"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994401"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
 
@@ -73,7 +73,7 @@ ms.locfileid: "5942442"
 
 * 사용자 개입 없이 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체를 바꾸거나 페이지를 강제로 새로 고치는 등 어떤 식으로든 배너 광고의 기본 제공되는 최소 새로 고침 타이머를 무시하는 경우.
 
-* 개발 및 테스트 중에, 또는 에뮬레이터에서 라이브 광고 단위(즉, Windows 개발자 센터 대시보드에서 가져온 광고 단위)를 사용하는 경우.
+* 라이브 광고 단위 (즉, 파트너 센터에서 얻을 수 있는 광고 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
 
 * 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
 
@@ -157,7 +157,7 @@ ms.locfileid: "5942442"
 
 * 단순히 일련의 광고에 대한 백업 광고를 위해 중간 광고 요청. 중간 광고를 요청한 후 [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트를 받은 경우 앱에 표시되는 다음 중간 광고는 [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 통해 표시할 준비가 된 광고여야 합니다.
 
-* 개발 및 테스트 중에, 또는 에뮬레이터에서 라이브 광고 단위(즉, Windows 개발자 센터 대시보드에서 가져온 광고 단위)를 사용하는 경우.
+* 라이브 광고 단위 (즉, 파트너 센터에서 얻을 수 있는 광고 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
 
 * 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
 

@@ -8,16 +8,16 @@ ms.date: 06/16/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드
 ms.localizationpriority: medium
-ms.openlocfilehash: af32a994f8dbfc7563c56f853bc0226f0da45940
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 047340d180e3de9f963dc76c85edaa6abea67327
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921429"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994472"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>앱의 오류에 대한 CAB 파일 다운로드
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여, 개발자 센터로 보고된 앱의 특정 오류와 관련된 CAB 파일을 다운로드합니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 CAB 파일만 다운로드할 수 있습니다. 또한 Windows 개발자 센터 대시보드의 [상태 보고서](../publish/health-report.md)의 **오류** 섹션에서도 CAB 파일을 다운로드할 수 있습니다.
+Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 파트너 센터에 보고 된 앱의 특정 오류와 연결 된 CAB 파일을 다운로드 합니다. 이 메서드는 지난 30일 동안 발생한 앱 오류에 대한 CAB 파일만 다운로드할 수 있습니다. CAB 파일 다운로드 파트너 센터에서 [상태 보고서](../publish/health-report.md) 의 **오류** 섹션에서 사용할 수 있습니다.
 
 이 메서드를 사용하려면 먼저 [앱의 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 사용하여 다운로드할 CAB 파일의 ID를 검색해야 합니다.
 
@@ -51,7 +51,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여, 개발자 센터
 
 | 매개 변수        | 유형   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | string | CAB 파일을 다운로드 하기 원하는 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 확인할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
+| applicationId | string | CAB 파일을 다운로드 하기 원하는 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | cabId | string | 다운로드하려는 CAB 파일의 고유한 ID입니다. 이 ID를 가져오려면 [앱에서 오류에 대한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md) 메서드를 사용하여 앱에서 특정 오류에 대한 세부 정보를 검색하고 해당 메서드의 응답 본문에 **cabId** 값을 사용합니다. |  예  |
 
  

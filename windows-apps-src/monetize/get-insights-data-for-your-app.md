@@ -7,16 +7,16 @@ ms.date: 07/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 사이트
 ms.localizationpriority: medium
-ms.openlocfilehash: ff70f38ff636b0b1d885981fb9e353ac9afe69c2
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3d74d1f9cbdd374dfd363e6da1e98aafcb226d5e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933264"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5997145"
 ---
 # <a name="get-insights-data"></a>정보 데이터 가져오기
 
-지정 된 날짜 범위 및 다른 선택 필터 동안 관련 구입, 상태 및 앱에 대 한 메트릭을 사용 된 인 사이트 데이터를 가져오는 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다. 이 정보는 Windows 개발자 센터 대시보드의 [인 사이트 보고서](../publish/insights-report.md) 에서 사용할 수 있습니다.
+지정 된 날짜 범위 및 다른 선택 필터 동안 관련 구입, 상태 및 앱에 대 한 메트릭을 사용 된 인 사이트 데이터를 가져오는 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다. 이 정보는 파트너 센터에서 [인 사이트 보고서](../publish/insights-report.md) 에서 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

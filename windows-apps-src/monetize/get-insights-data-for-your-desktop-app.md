@@ -7,16 +7,16 @@ ms.date: 07/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 사이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e1ecdf192f54c0158ce503a58aafb65108b8fdc
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8d0e117f8d71593874a7e65bdaf6590507db6456
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5931964"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990895"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 
-Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 [Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)에 추가한 데스크톱 응용 프로그램에 대 한 메트릭을 상태와 관련 된 데이터 통찰력을 얻으세요. 이 데이터는 Windows 개발자 센터 대시보드에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에서 사용할 수도 있습니다.
+Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 [Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)에 추가한 데스크톱 응용 프로그램에 대 한 메트릭을 상태와 관련 된 데이터 통찰력을 얻으세요. 이 데이터 파트너 센터에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에서 사용할 수도 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -46,7 +46,7 @@ Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 [Windows �
 
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | 정보 데이터 가져오기 하려는 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 [데스크톱 응용 프로그램의 개발자 센터 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504)(예: **상태 보고서**)를 열고 URL에서 제품 ID를 검색합니다. 이 매개 변수를 지정 하지 않으면 경우 응답 본문에는 계정에 등록 된 모든 앱에 대 한 인 사이트 데이터 포함 됩니다.  |  아니요  |
+| applicationId | string | 정보 데이터 가져오기 하려는 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 (예: **상태 보고서**) 모든 [파트너 센터에서 데스크톱 응용 프로그램에 대 한 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 를 열고 URL에서 제품 ID를 검색 합니다. 이 매개 변수를 지정 하지 않으면 경우 응답 본문에는 계정에 등록 된 모든 앱에 대 한 인 사이트 데이터 포함 됩니다.  |  아니요  |
 | startDate | date | 검색할 인 사이트 데이터의 날짜 범위에 대 한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
 | endDate | date | 검색할 인 사이트 데이터의 날짜 범위에 대 한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | filter | string  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 예를 들어 *필터 dataType eq '취득' =*. <p/><p/>현재이 메서드는 필터 **상태**만 지원합니다.  | 아니요   |
