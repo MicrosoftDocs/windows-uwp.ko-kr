@@ -15,11 +15,11 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f5a9756a8afc267c9ec8763af49ba02714c2b4f0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5946084"
+ms.locfileid: "5989822"
 ---
 # <a name="item-containers-and-templates"></a>항목 컨테이너 및 템플릿
 

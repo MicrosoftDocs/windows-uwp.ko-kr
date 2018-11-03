@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 추가 기능을 만듭니다.
+description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 PartnerCenter 계정에 등록 된 앱에 대 한 추가 기능 만들기.
 title: 추가 기능 만들기
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 만들기, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36b6be05d1efc1cbc23f26a509230750c8896c87
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d262a86c4a177095015c3f1391b19f1a7719d0a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939298"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992611"
 ---
 # <a name="create-an-add-on"></a>추가 기능 만들기
 
-Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 만듭니다.
+파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 바로 구매 또는 IAP)를 만들려면 Microsoft Store 제출 API에서에서이 메서드를 사용 합니다.
 
 > [!NOTE]
 > 이 메서드는 제출 없이 추가 기능을 만듭니다. 추가 기능에 대한 제출을 만들려면 [추가 기능 제출 관리](manage-add-on-submissions.md)의 메서드를 참조하세요.
@@ -99,7 +99,7 @@ Content-Type: application/json
 | 오류 코드 |  설명                                                                                                                                                                           |
 |--------|------------------|
 | 400  | 요청이 잘못되었습니다. |
-| 409  | 현재 상태 때문에 추가 기능을 만들 수 없거나 추가 기능이 [현재 Microsoft Store 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다. |   
+| 409  | 추가 기능의 현재 상태 때문 만들 수 없거나 또는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목

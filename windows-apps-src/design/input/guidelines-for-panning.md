@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 31725c6cb9a966f02f8d1f8d62ca980e72c95326
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0ca4bf518837f072fb58fc0a152e08a82cf5dfad
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939746"
+ms.locfileid: "5989630"
 ---
 # <a name="guidelines-for-panning"></a>이동에 대한 지침
 
@@ -84,7 +84,7 @@ ms.locfileid: "5939746"
 > <strong>Windows 10 Fall Creators Update - 동작 변경 사항</strong>
 > </div>
 > 이제는 기본적으로 텍스트를 선택하는 대신 터치, 터치 패드, 패시브 펜 등의 활성 펜이 UWP 앱을 스크롤/이동합니다.  
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [ScrollViewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) API 참조 항목을 참조하십시오.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [ScrollViewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) API 참조 항목을 참조 하세요.
 
 입력 장치에 따라 사용자는 다음 중 하나를 사용하여 이동 가능한 영역 내에서 이동합니다.
 

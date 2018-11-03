@@ -14,11 +14,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: daea428d6fad34116dac743655162c2f32315bea
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5944063"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990681"
 ---
 # <a name="swipe"></a>살짝 밀기
 

@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: 086025e46e0e5293e44dda61896fa3fd4ae6115b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5942973"
+ms.locfileid: "5989676"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>패키지 데스크톱 앱을 사용할 수 있는 UWP Api
 

@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 새 제출을 만듭니다.
+description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 새 제출을 만듭니다.
 title: 앱 제출 만들기
 ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출 만들기
 ms.localizationpriority: medium
-ms.openlocfilehash: 740e65d79636c9e5451e68fa84ce2eae4e3252c6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: fd97efca42049fd9f5adc4d051688074d91132fa
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5935696"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992067"
 ---
 # <a name="create-an-app-submission"></a>앱 제출 만들기
 
-Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 새 제출을 만듭니다. 이 메서드를 사용하여 새 제출을 성공적으로 만든 후 [제출을 업데이트](update-an-app-submission.md)하여 제출 데이터에 필요한 변경을 수행한 다음 수집 및 게시를 위해 [제출을 커밋](commit-an-app-submission.md)합니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 새 제출을 만듭니다. 이 메서드를 사용하여 새 제출을 성공적으로 만든 후 [제출을 업데이트](update-an-app-submission.md)하여 제출 데이터에 필요한 변경을 수행한 다음 수집 및 게시를 위해 [제출을 커밋](commit-an-app-submission.md)합니다.
 
 이 메서드가 Microsoft Store 제출 API를 사용하여 앱 제출을 만드는 프로세스에 적용되는 방법은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
 
@@ -188,7 +188,7 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 400  | 요청이 잘못되어 제출을 만들 수 없습니다. |
-| 409  | 앱의 현재 상태 때문에 제출을 만들 수 없거나 앱이 [현재 Microsoft Store 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다. |   
+| 409  | 앱의 현재 상태 때문 제출을 만들 수 없거나 또는 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목

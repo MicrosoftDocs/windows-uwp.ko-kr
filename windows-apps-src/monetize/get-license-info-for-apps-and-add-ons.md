@@ -8,12 +8,12 @@ ms.date: 12/04/2017
 ms.topic: article
 keywords: windows 10, uwp, 라이선스, 앱, 추가 기능, 앱에서 바로 구매, IAP, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 032f2419f39e50c023e2c301b70778f421f447f8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 545e052794a8649daa62872cf74b0986cb7bf4b9
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938308"
+ms.locfileid: "5990085"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 라이선스 정보 가져오기
 
@@ -26,8 +26,8 @@ ms.locfileid: "5938308"
 
 이 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
-* Windows 개발자 센터 대시보드에서 [앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 만들었으며, 이 앱은 Store에서 게시되었습니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
-* 앱 추가 기능에 대한 라이선스 정보를 얻고 싶다면, [개발자 센터 대시보드에서 추가 기능을 생성](../publish/add-on-submissions.md)해야 합니다.
+* [앱 제출을 만들지](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에서 드라이버와이 앱은 스토어에서 게시 합니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
+* 앱에 대 한 추가 기능에 대 한 라이선스 정보를 얻고 싶다면, 해야 [파트너 센터에서 추가 기능을 생성](../publish/add-on-submissions.md)합니다.
 
 이 예제의 코드에서는 다음과 같이 가정합니다.
 * 코드는 ```workingProgressRing```이라는 [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx)과 ```textBlock```이라는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 포함하는 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx)의 컨텍스트에서 실행됩니다. 해당 개체를 사용하여 각각 비동기 작업이 발생함을 나타내고 출력 메시지를 표시합니다.

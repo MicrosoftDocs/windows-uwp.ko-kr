@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 위치 기능
 ms.localizationpriority: medium
 ms.openlocfilehash: 2187bafa9fd2b4fdce049f3ef11d4e6766613de3
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943900"
+ms.locfileid: "5990270"
 ---
 # <a name="get-the-users-location"></a>사용자 위치 가져오기
 
