@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3fedb5a94fe9bd265502c107aba919a9f5aec643
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5922452"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5982435"
 ---
 # <a name="system-strings-validatation-uris"></a>시스템 문자열 유효성 검사 URI
  

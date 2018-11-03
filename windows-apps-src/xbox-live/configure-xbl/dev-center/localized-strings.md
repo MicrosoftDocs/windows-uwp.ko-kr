@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 지역화 된 문자열, Windows 개발자 센터
 ms.openlocfilehash: da81c21c858aaa62cc6bbe385f08dd6ab613c979
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5926301"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5987328"
 ---
 # <a name="configuring-localized-strings-on-windows-dev-center"></a>Windows 개발자 센터에서 지역화 된 문자열을 구성
 

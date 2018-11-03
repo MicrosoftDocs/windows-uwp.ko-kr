@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d6e74674334268ccf65f3055fdc4d53d9f5f3867
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5929776"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5989744"
 ---
 # <a name="post-usersxuidxuidfeedback"></a>POST (/users/xuid({xuid})/feedback)
 셸을 사용 하지 않고 게임에서 피드백 옵션을 추가 하려면 원하는 경우 타이틀에서 사용 합니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: aea8a1914a9466b7e24fd0214059a0dac5a6c3a7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5922881"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990821"
 ---
 # <a name="queryclipsresponse-json"></a>QueryClipsResponse(JSON)
 목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다. 

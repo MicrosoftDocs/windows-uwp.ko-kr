@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 타이틀 저장소, Windows 개발자 센터
 ms.openlocfilehash: c756dabe437f535a09418417e30a22565d22acdf
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5923694"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5983460"
 ---
 # <a name="configure-storage-for-you-title-on-windows-dev-center"></a>Windows 개발자 센터에서 하면 제목에 대 한 저장소를 구성 합니다.
 

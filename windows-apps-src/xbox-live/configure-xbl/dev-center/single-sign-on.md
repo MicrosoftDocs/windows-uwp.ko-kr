@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터, 대 한 single sign-on
 ms.openlocfilehash: 42f3e77e8f1f622d8c275769b6f77fdd85a1bff0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5927971"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5989701"
 ---
 # <a name="configure-single-sign-on-in-dev-center"></a>개발자 센터에 대 한 single sign-on 구성
 

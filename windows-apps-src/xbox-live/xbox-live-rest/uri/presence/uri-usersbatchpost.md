@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9187aa43d3d4ee3a76ec834ac0352b66fe59167f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5947387"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5986414"
 ---
 # <a name="post-usersbatch"></a>POST (/users/batch)
 사용자의 일괄 처리에 대 한 상태를 가져옵니다.

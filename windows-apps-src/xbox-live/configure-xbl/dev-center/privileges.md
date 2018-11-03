@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, Windows 개발자 센터 권한
 ms.openlocfilehash: be502aadbd5900838f143132171838cdf235c01c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5918378"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5975424"
 ---
 # <a name="configure-privileges-on-windows-dev-center"></a>Windows 개발자 센터에서 권한 구성
 

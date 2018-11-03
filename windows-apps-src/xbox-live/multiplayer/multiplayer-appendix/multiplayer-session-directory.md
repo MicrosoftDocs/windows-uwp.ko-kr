@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, mpsd, 멀티 플레이 세션 디렉터리입니다.
 ms.localizationpriority: medium
 ms.openlocfilehash: 05e42fcce988f7b3ac880082cd1300b6f4b9294f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5927320"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5996767"
 ---
 # <a name="multiplayer-session-directory-mpsd"></a>멀티 플레이 세션 디렉터리(MPSD)
 
@@ -70,7 +70,7 @@ XSAPI 라이브러리 MPSD와 클라이언트 간의 연결을 관리합니다. 
 
 | 참고                                                                                                                                                                                                                                                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| In former versions of XSAPI, titles called the **RealTimeActivityService.ConnectAsync Method** to create user connections to the real-time activity service. 2015 멀티 플레이어,이 메서드는 아무것도 하 고 연결 시 생성 됩니다. |
+| 타이틀은 XSAPI의 이전 버전에서는 실시간 활동 서비스 사용자 연결을 만들고자 **RealTimeActivityService.ConnectAsync 메서드** 를 호출 합니다. 2015 멀티 플레이어,이 메서드는 아무것도 하 고 연결 시 생성 됩니다. |
 
 ### <a name="subscribing-for-session-changes"></a>세션 변경에 대 한 구독
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어, 서비스 구성, 세션 템플릿, 사용자 지정 초대 문자열, 스마트 hopper
 ms.localizationpriority: medium
 ms.openlocfilehash: 44cf15cf63ce1ebbb7d205af44b07149e1ee3a4a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5925397"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5978067"
 ---
 # <a name="multiplayer-service-configuration"></a>멀티 플레이 서비스 구성
 Xbox Live를 제공 하는 서비스를 활용 하려면 제목에 대 한 순서로 먼저 서비스 구성을 정의 해야 합니다. 이 서비스 구성 Xbox Live 클라우드 서비스에 존재 하 고 Xbox Live 서비스 제목/게임을 실행 하는 모든 디바이스와 상호 작용 하는 방법을 정의 합니다.

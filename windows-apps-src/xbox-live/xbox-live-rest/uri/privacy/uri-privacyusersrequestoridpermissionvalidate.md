@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5aadd94fbee7fff63ff6c98dc2f71e5b50ed7343
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937506"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5974653"
 ---
 # <a name="usersrequestoridpermissionvalidate"></a>/users/{requestorId}/permission/validate
  

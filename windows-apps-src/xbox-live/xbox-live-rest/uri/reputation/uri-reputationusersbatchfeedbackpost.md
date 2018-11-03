@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4163e25559ef91ad0309ab6080ee4ed4f54c7c3e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5918491"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995937"
 ---
 # <a name="post-usersbatchfeedback"></a>POST (/users/batchfeedback)
 타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스에서 사용 합니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.

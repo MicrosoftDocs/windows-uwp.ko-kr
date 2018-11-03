@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 계정, 테스트 계정
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a8ffb0532cac1141706fe82b426ef41ab8cfaef
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5923318"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995622"
 ---
 # <a name="authorize-xbox-live-accounts-for-testing-in-your-environment"></a>테스트 환경에서 Xbox Live 계정에 권한을 부여합니다
 

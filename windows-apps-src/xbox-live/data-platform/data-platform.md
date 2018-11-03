@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 통계, 도전 과제, 순위표, 데이터 플랫폼
 ms.localizationpriority: medium
 ms.openlocfilehash: bcb71bf7707a03bab4924b0e263b54ba2dc1f46b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938714"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5982645"
 ---
 # <a name="xbox-live-data-platform---stats-leaderboards-achievements"></a>Xbox Live 데이터 플랫폼-통계, 순위표, 도전 과제
 

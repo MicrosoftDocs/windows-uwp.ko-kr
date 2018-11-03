@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d781f472dc9179f25002d3e103af2cedf3ebd931
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5944091"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5991410"
 ---
 # <a name="permissioncheckbatchrequest-json"></a>PermissionCheckBatchRequest(JSON)
 PermissionCheckBatchRequest 개체의 컬렉션입니다. 

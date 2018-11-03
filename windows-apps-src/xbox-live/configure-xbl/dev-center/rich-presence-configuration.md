@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 다양 한 상태 문자열을 Windows 개발자 센터
 ms.openlocfilehash: 8b5a538cc92da7011519af000e1fa899916d6eab
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5926709"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5976247"
 ---
 # <a name="configure-rich-presence-on-windows-dev-center"></a>Windows 개발자 센터에서 다양 한 상태를 구성 합니다.
 

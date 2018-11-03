@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 8 월, 새 이란 하나 xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 97d12d6a8f415144ff61e5df18757c6aa46397c7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5929707"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5975880"
 ---
 # <a name="whats-new-for-the-xbox-live-apis---august-2017"></a>새로운 기능 Xbox Live Api에 대 한-2017 년 8 월
 

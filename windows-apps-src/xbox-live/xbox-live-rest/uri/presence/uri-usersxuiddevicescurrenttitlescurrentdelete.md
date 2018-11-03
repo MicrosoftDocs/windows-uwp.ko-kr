@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 92d2586662121b48701c7eb33f3b8f91e5243bd6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5924423"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5968311"
 ---
 # <a name="delete-usersxuidxuiddevicescurrenttitlescurrent"></a>DELETE (/users/xuid({xuid})/devices/current/titles/current)
 [PresenceRecord](../../json/json-presencerecord.md) 만료 될 때까지 기다리는 대신 닫는 제목의 존재 여부를 제거 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

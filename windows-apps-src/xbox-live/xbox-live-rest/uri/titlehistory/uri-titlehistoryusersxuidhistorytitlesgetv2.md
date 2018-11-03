@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: bf858750d04e6be95e75d7c6c74d09cadde6789f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943128"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995333"
 ---
 # <a name="get-usersxuidxuidhistorytitles"></a>GET (/users/xuid({xuid})/history/titles)
 사용자가 잠금 해제 하거나 진행률에서 수행의 도전 과제 타이틀의 목록을 가져옵니다. 이 API는 사용자의 전체 기록 재생 또는 시작 타이틀을 반환 하지 않습니다. 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.

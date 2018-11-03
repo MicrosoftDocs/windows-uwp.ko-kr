@@ -1,24 +1,24 @@
 ---
 author: Xansky
 ms.assetid: 934F2DBF-2C7E-4B77-997D-17B9B0535D51
-description: Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터에 새롭거나 업데이트된 앱 제출을 커밋합니다.
+description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 앱 제출을 커밋합니다.
 title: 앱 제출 커밋
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출 커밋
 ms.localizationpriority: medium
-ms.openlocfilehash: 594fb7bdbf1e56243837d2e9e3ebe1aced7eceff
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 7a61fb1568cf85d01a31e5921fa757d3e8c767ff
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5932109"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995043"
 ---
 # <a name="commit-an-app-submission"></a>앱 제출 커밋
 
 
-Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터에 새롭거나 업데이트된 앱 제출을 커밋합니다. 커밋 작업은 제출 데이터가 업로드되었음(모든 관련된 패키지 및 이미지 포함)을 개발자 센터에 알려줍니다. 응답에서 개발자 센터는 수집 및 게시를 위해 제출 데이터에 대한 변경 사항을 커밋합니다. 커밋 작업이 성공하면 개발자 센터 대시보드에 제출의 변경 사항이 표시됩니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 앱 제출을 커밋합니다. 커밋 작업은 파트너 센터 (모든 관련 된 패키지 및 이미지 포함) 제출 데이터가 업로드 되었습니다. 파트너 센터에 대 한 응답에서 제출 데이터 수집 및 게시에 대 한 변경 내용을 커밋합니다. 커밋 작업이 성공 하면 변경 내용은 제출 하려면 파트너 센터에 표시 됩니다.
 
 커밋 작업이 Microsoft Store 제출 API를 사용하여 앱을 제출하는 프로세스에 적용되는 방법은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
 
@@ -51,7 +51,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 Windows 개발자
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | 필수. 커밋하려는 제출이 포함된 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
-| submissionId | string | 필수. 커밋하려는 제출의 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 개발자 센터 대시보드에서 만든 제출의 경우 이 ID는 대시보드에 있는 제출 페이지의 URL에도 사용할 수 있습니다.  |
+| submissionId | string | 필수. 커밋하려는 제출의 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL에 사용할 수 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -92,7 +92,7 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청 매개 변수가 잘못되었습니다. |
 | 404  | 지정된 제출을 찾을 수 없습니다. |
-| 409  | 지정된 제출을 찾았지만 현재 상태로 커밋할 수 없거나 앱이 [현재 Microsoft Store 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다. |
+| 409  | 지정 된 제출을 찾았지만 현재 상태로 커밋할 수 없거나 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |
 
 
 ## <a name="related-topics"></a>관련 항목

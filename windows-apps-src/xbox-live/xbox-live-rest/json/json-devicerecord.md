@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ecfaf3ff6ee83c2d577614dc613939669ef60d62
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5927788"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5987634"
 ---
 # <a name="devicerecord-json"></a>DeviceRecord(JSON)
 해당 유형 및 활성화 제목을 포함 하 여 장치에 대 한 정보. 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: e397f2f07bc62082cd542387fc1603e17be38694
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938445"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5980603"
 ---
 # <a name="connected-storage"></a>연결된 저장소
 연결 된 저장소는 타이틀 게임 플레이 데이터와 디바이스 간에 로밍 해야 하는 다른 관련 상태 데이터를 저장할 수 있도록 설계 되었습니다. 연결 된 저장소 API 타이틀을에 Xbox One 및 유니버설 Windows Platform(UWP) 로컬로 저장 되 고 인터넷에 연결 된 Xbox One 또는 UWP 제목 때마다 또한 클라우드로 동기화 제목 데이터를 저장, 로드 및 삭제할 수 있습니다. 저장 된 데이터 동기화 된 후 타이틀을 실행 하는 다른 장치에서 사용할 수 있습니다. 개발자는 홈에서 최상의 재생 환경을 제공 하려면 최대한 정확 하 게 제목 상태를 저장 하는 것이 좋습니다. 연결 된 저장소가 수 있도록 집에서 게임에서 진행 되는 다음 동일한 게임을 지 원하는 다른 장치에서 되었던 수 있는 게임 권한은 선택할 수 있습니다.

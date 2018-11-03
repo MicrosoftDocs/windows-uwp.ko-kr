@@ -1,23 +1,23 @@
 ---
 author: Xansky
-Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must define your experiment in the Dev Center dashboard.
-title: 대시보드에서 실험 정의
+Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must define your experiment in Partner Center.
+title: 파트너 센터에서 실험을 정의 합니다.
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: 2acbeb0f67985537524a352507910f5e526ae0bd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 98c1d48524bcc525f57f42e5364d27611602ab52
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939861"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995102"
 ---
-# <a name="define-your-experiment-in-the-dashboard"></a>대시보드에서 실험 정의
+# <a name="define-your-experiment-in-partner-center"></a>파트너 센터에서 실험을 정의 합니다.
 
-[개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 및 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 완료하면 프로젝트에서 실험을 만들 준비가 된 것입니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
+[프로젝트를 만들고 파트너 센터에서 원격 변수를 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 하 고 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 프로젝트에서 실험을 만들 준비가 됩니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
 
 실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
@@ -26,7 +26,7 @@ ms.locfileid: "5939861"
 
 ## <a name="create-your-experiment"></a>실험 만들기
 
-1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인합니다.
+1. [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인합니다.
 2. **앱**에서 실험을 만들 앱을 선택합니다.
 3. 탐색 창에서 **서비스**를 선택한 다음 **실험**을 선택합니다.
 4. **실험** 페이지에서 프로젝트 테이블에 실험을 추가할 프로젝트를 식별하고 해당 프로젝트에 대한 **실험 추가** 링크를 클릭합니다.
@@ -36,7 +36,7 @@ ms.locfileid: "5939861"
     > 고객에게 릴리스할 실험(즉, 고객에게 사용할 수 있는 앱 버전에 사용되는 프로젝트 ID와 연결된 실험)을 만들 경우 이 확인란을 선택하지 마세요. 활성 상태일 때 실험을 편집하면 실험 결과가 무효화됩니다.
 
 7. **프로젝트 이름** 드롭다운에서 현재 프로젝트가 자동으로 선택됩니다. 다른 프로젝트에 새 실험을 추가하려는 경우 여기서 해당 프로젝트를 선택할 수 있습니다. 그렇지 않으면 이 선택을 그대로 둡니다.
-8.   [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱을 코딩](code-your-experiment-in-your-app.md)하는 경우 변형 데이터를 받고 보기 및 변환 이벤트를 개발자 센터에 보고할 수 있도록 코드에서 이 ID를 참조해야 합니다.
+8.   [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. 때 [실험용 앱 코딩](code-your-experiment-in-your-app.md),이 ID를 참조 해야이 코드에서 변형 데이터를 수신 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있도록 합니다.
 9. **보기 이벤트** 섹션에서 **보기 이벤트 이름** 필드에 실험에 대한 [보기 이벤트](run-app-experiments-with-a-b-testing.md#terms)의 이름을 입력합니다.
 10. **목표와 전환 이벤트** 섹션에서 하나 이상의 실험 목표를 정의합니다.
   * **목표 이름** 필드에서 목표의 설명이 포함된 이름을 입력합니다. 실험을 실행한 후 이 이름은 실험에 대한 결과 요약에 표시됩니다.
@@ -44,7 +44,7 @@ ms.locfileid: "5939861"
   * **목표** 필드에서 전환 이벤트의 발생 횟수를 최대화 또는 최소화할지 여부에 따라 **최대화** 또는 **최소화**를 선택합니다. 이 정보는 실험 결과 요약에 사용됩니다.
 
 > [!NOTE]
-> 개발자 센터에서는 24시간 내의 각 사용자 보기에 대한 첫 번째 전환 이벤트만 보고합니다. 사용자가 24시간 내에 앱에서 여러 전환 이벤트를 트리거하는 경우 첫 번째 전환 이벤트만 보고됩니다. 이렇게 하면 목표가 전환을 수행하는 사용자의 수를 최대화하는 것일 때 단일 사용자가 샘플 그룹 사용자의 실험 결과를 왜곡시키지 않을 수 있습니다.
+> 파트너 센터 24 시간 동안에서 각 사용자 보기에 대 한 첫 번째 전환 이벤트만을 보고합니다. 사용자가 24시간 내에 앱에서 여러 전환 이벤트를 트리거하는 경우 첫 번째 전환 이벤트만 보고됩니다. 이렇게 하면 목표가 전환을 수행하는 사용자의 수를 최대화하는 것일 때 단일 사용자가 샘플 그룹 사용자의 실험 결과를 왜곡시키지 않을 수 있습니다.
 
 <span id="define-the-variations-and-settings-for-the-experiment" />
 
@@ -66,7 +66,7 @@ ms.locfileid: "5939861"
 
 실험에 대한 필수 필드 입력을 마치면 **저장**을 클릭하여 실험을 저장합니다.
 
-원하는 실험 매개 변수를 설정하고 활성화할 준비가 완료되어 앱에서 실험 데이터 수집을 시작할 수 있으면 **활성화**를 클릭합니다. 실험이 활성화된 경우 앱은 변형 변수를 검색하고 개발자 센터에 보기 및 전환 이벤트를 보고할 수 있습니다. 자세한 내용은 [개발자 센터 대시보드에서 실험 실행 및 관리](manage-your-experiment.md)를 참조하세요.
+원하는 실험 매개 변수를 설정하고 활성화할 준비가 완료되어 앱에서 실험 데이터 수집을 시작할 수 있으면 **활성화**를 클릭합니다. 실험 활성화 되 면 앱 변형 변수를 검색 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있습니다. 자세한 내용은 [실행 하 고 파트너 센터에서 실험 관리](manage-your-experiment.md)를 참조 하세요.
 
 > [!IMPORTANT]
 > 프로젝트는 한 번에 하나의 활성 실험만 포함할 수 있습니다. 실험을 만들 때 **편집 가능한 실험** 확인란을 선택하지 않은 경우 실험을 활성화한 후에는 더 이상 실험 매개 변수를 수정할 수 없습니다. 실험을 활성화하기 전 앱에서 실험을 코딩하는 것이 좋습니다.
@@ -89,12 +89,12 @@ ms.locfileid: "5939861"
 
 ## <a name="next-steps"></a>다음 단계
 
-개발자 센터 대시보드에서 실험을 정의하고 앱에 실험을 코딩하면 [개발자 센터 대시보드에서 실험을 실행하고 관리](manage-your-experiment.md)할 준비가 된 것입니다.
+파트너 센터에서 실험을 정의 하 고 앱에서 실험을 코딩 한 후 실행 하 [고 파트너 센터에서 실험을 관리할](manage-your-experiment.md)준비가 됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [프로젝트 만들기 및 파트너 센터에서 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
 * [실험용 앱 코딩](code-your-experiment-in-your-app.md)
-* [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
+* [파트너 센터에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)

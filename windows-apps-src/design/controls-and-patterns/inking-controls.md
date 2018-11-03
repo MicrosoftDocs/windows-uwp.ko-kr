@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
 ms.openlocfilehash: ed358f88470dfe1ba1c48cd3daf1ed54135ed987
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5936829"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994211"
 ---
 # <a name="inking-controls"></a>수동 입력 컨트롤
 

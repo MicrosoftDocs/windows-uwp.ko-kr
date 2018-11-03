@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f00618c3ecb51a0934b1b3f73a51553b49f153b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5944026"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5993328"
 ---
 # <a name="serviceerror-json"></a>ServiceError(JSON)
 서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보가 포함 되어 있습니다. 

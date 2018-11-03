@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 0622014160c3e0b675bd0cf53793eeb06ef907c5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5944229"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994435"
 ---
 # <a name="how-to-get-the-xbox-development-kit-xdk"></a>(XDK (Xbox 개발 키트)를 얻는 방법
 

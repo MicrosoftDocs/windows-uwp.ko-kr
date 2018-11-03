@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2997dd22b64103ed910f32dd2cc1430d3758fdfd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5936949"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5993057"
 ---
 # <a name="inventoryitem-json"></a>inventoryItem (JSON)
 핵심 인벤토리 항목을의 권리를 부여할 수 있습니다 표준 항목을 나타냅니다.

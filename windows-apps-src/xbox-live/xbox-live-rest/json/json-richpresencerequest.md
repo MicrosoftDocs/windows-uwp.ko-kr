@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 92e52e4ebb58abb3a522f81a5ae4cce6486785f0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945049"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5988680"
 ---
 # <a name="richpresencerequest-json"></a>RichPresenceRequest(JSON)
 다양 한 상태 정보를 사용 해야 하는 방법에 대 한 정보를 요청 합니다. 

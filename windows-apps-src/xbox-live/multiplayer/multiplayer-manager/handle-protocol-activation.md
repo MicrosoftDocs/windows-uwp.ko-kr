@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 프로토콜 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 9046686a9db1428935e834e28f02269d710cd8ad
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5921946"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5989668"
 ---
 # <a name="handle-protocol-activation"></a>프로토콜 활성화 처리
 

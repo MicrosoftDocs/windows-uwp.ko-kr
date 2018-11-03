@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 소셜 관리자, 예제
 ms.localizationpriority: medium
 ms.openlocfilehash: e3d65b55a351073ded99a2ec8d2d1e03f4ab3c34
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5947229"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5970654"
 ---
 # <a name="programming-social-services"></a>소셜 서비스 프로그래밍
 

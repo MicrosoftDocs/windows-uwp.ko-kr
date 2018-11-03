@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 멀티 플레이 2015, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: fa677b6bdc9d8649fac2cc9f13a5d0843062bb83
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939220"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5982658"
 ---
 # <a name="introduction-to-the-multiplayer-system"></a>멀티 플레이 시스템 소개
 

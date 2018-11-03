@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 313a97b4c8a2bd95d619cbe6491c3ecb6cac1c0b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5931477"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5991309"
 ---
 # <a name="get-usersxuidxuidachievementsscidachievementid"></a>GET (/users/xuid({xuid})/achievements/{scid}/{achievementid})
 도전 과제의 세부 정보를 가져옵니다. 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 멀티 플레이 2015 세션, mpsd
 ms.localizationpriority: medium
 ms.openlocfilehash: ad551d07d94f90d89f8abda0b188ea281b4930c2
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5922031"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5986535"
 ---
 # <a name="mpsd-session-details"></a>MPSD 세션 세부 정보
 

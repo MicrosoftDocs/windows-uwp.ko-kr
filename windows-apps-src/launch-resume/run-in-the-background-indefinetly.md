@@ -9,11 +9,11 @@ ms.date: 10/3/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: eb6e0735620c4a940d3414f22aaa4f09bb608424
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926551"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994771"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 

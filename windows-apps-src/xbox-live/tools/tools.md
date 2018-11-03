@@ -8,12 +8,12 @@ ms.date: 6/13/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 도구, 플레이어 초기화, live 추적 분석기, LTA, xbox live 계정 도구
 ms.localizationpriority: medium
-ms.openlocfilehash: 69c1a22c1984ae78a096b7a279225c0e658285e6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ff152f96d745b2ff1e076b34a7e2b91e5f1e5ab6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5927955"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994954"
 ---
 # <a name="development-tools-for-xbox-live"></a>Xbox live 개발 도구
 
@@ -23,7 +23,7 @@ ms.locfileid: "5927955"
 > 관리 파트너에서 다운로드에 포함 된 MatchSim 및 XboxLiveCompute 도구만 사용할 수 또는에 등록 된 파트너는 [ID@Xbox](http://www.xbox.com/Developers/id) 프로그램. 사용 가능한 개발자 프로그램에 대 한 자세한 내용은 [개발자 프로그램 개요](https://docs.microsoft.com/windows/uwp/xbox-live/developer-program-overview)를 참조 하십시오. 
 
 ## <a name="global-storage"></a>글로벌 저장소
-글로벌 타이틀 저장소 명단, 지도, 문제, 또는 아트 리소스 등의 모든 사용자가 읽을 수 있는 데이터를 저장 하는 데 사용 됩니다. [타이틀 저장소](../storage-platform/xbox-live-title-storage/xbox-live-title-storage.md)의 형식입니다. 테스트 샌드박스의 전역 타이틀 저장소를 관리 하는 글로벌 저장소 도구 사용 됩니다. 데이터는 Windows 개발자 센터 또는 Xbox 개발자 포털 (XDP)을 통해 정품에 계속 게시 합니다. 명령줄을 통해 사용할 수 있는 도구는 개발 도구의 일부로 (https://aka.ms/xboxliveuwptools) zip 합니다. [개발자 도구 라이브러리](https://www.nuget.org/packages/Microsoft.Xbox.Services.DevTools)를 사용 하 여 사용자 지정 도구를 만들 수 있습니다.
+글로벌 타이틀 저장소 명단, 지도, 문제, 또는 아트 리소스 등의 모든 사용자가 읽을 수 있는 데이터를 저장 하는 데 사용 됩니다. [타이틀 저장소](../storage-platform/xbox-live-title-storage/xbox-live-title-storage.md)의 형식입니다. 테스트 샌드박스의 전역 타이틀 저장소를 관리 하는 글로벌 저장소 도구 사용 됩니다. 데이터는 Windows 개발자 센터 또는 Xbox 개발자 포털 (XDP)을 통해 정품에 계속 게시 합니다. 명령줄을 통해 사용할 수 있는 도구는 [개발 도구](https://aka.ms/xboxliveuwptools) zip의 일환으로 합니다. [개발자 도구 라이브러리](https://www.nuget.org/packages/Microsoft.Xbox.Services.DevTools)를 사용 하 여 사용자 지정 도구를 만들 수 있습니다.
 
 ## <a name="multiplayer-session-history-viewer"></a>멀티 플레이 세션 기록 뷰어
 멀티 플레이어 세션 기록 뷰어 멀티 플레이 세션 문서 기록이 삭제 된 문서 등을 통해 모든 변경 기록 타임 라인을 볼 수가 있습니다. 이 도구를 사용 하 여 시간이 지남에 따라 변경 되 고 MPSD 세션 문서를 사용 하 여 일어나는지 더 깊게 이해를 제공 됩니다. 것이 [개발 도구](https://aka.ms/xboxliveuwptools) zip에서 독립 실행형 도구로 사용할 수 있습니다.

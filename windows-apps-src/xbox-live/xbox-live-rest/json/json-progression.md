@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 173c7dd42e0e5fda0d18e270c32a594171ebd7b6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5925462"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5976283"
 ---
 # <a name="progression-json"></a>Progression(JSON)
 도전 과제를 잠금 해제 방향으로 사용자의 진행 합니다. 
