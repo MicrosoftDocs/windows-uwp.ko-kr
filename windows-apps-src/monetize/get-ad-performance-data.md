@@ -8,21 +8,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 광고, 성과
 ms.localizationpriority: medium
-ms.openlocfilehash: 30f24b2494470f60371e466bb4d1e1878475d963
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 7310eeb04915933adc149165fa6774ed2f413814
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927587"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5982805"
 ---
 # <a name="get-ad-performance-data"></a>광고 성과 데이터 가져오기
 
 
 Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 광고 성능 집계 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
 
-이 메서드는 Windows 개발자 센터 대시보드의 [광고 성과 보고서](../publish/advertising-performance-report.md)에서 제공하는 데이터와 동일합니다.
+이 메서드는 파트너 센터에서 [광고 성과 보고서](../publish/advertising-performance-report.md) 를 제공 하는 동일한 데이터를 반환 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
@@ -118,12 +118,12 @@ Authorization: Bearer <your access token>
 | applicationId       | 문자열 | 광고 성과 데이터를 검색 중인 앱의 스토어 ID입니다.     |
 | applicationName     | string | 앱의 표시 이름                         |
 | adUnitId           | 문자열 | 광고 단위 ID입니다.        |
-| adUnitName           | 문자열 | 개발자 센터 대시보드에서 개발자가 지정한 광고 단위 이름입니다.              |
+| adUnitName           | 문자열 | 파트너 센터에서 개발자가 지정한 광고 단위의 이름입니다.              |
 | adProvider           |  문자열  |  광고 공급자의 이름입니다.   |
 | deviceType          | 문자열 | 광고가 제공된 디바이스 유형입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.                              |
 | 출시              | 문자열 | 광고가 제공된 시장의 ISO 3166 국가 코드입니다.             |
 | accountCurrencyCode     | 문자열 | 계정에 대한 통화 코드입니다.        |
-| pubCenterAppName       |  문자열  |   개발자 센터에서 앱과 연결된 pubCenter 앱의 이름입니다.   |
+| pubCenterAppName       |  문자열  |   파트너 센터에서 앱과 연결 된 pubCenter 앱의 이름입니다.   |
 | adProviderRequests        | int | 지정된 광고 공급자에 대한 광고 요청 수입니다.                 |
 | impressions           | int | 광고 노출 수입니다.        |
 | clicks            | int | 광고를 클릭한 횟수입니다.       |

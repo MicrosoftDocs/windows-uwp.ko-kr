@@ -8,17 +8,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 설치
 ms.localizationpriority: medium
-ms.openlocfilehash: 902ff653d0c573ba5ab094fa81607796b4f01aae
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 72efc20e218cdf718b67c949bd7c71108921bf9c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939215"
+ms.locfileid: "5978217"
 ---
 # <a name="get-app-installs"></a>앱 설치 받기
 
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 설치 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [구입 보고서](../publish/acquisitions-report.md)를 통해서도 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 설치 데이터를 JSON 형식으로 가져옵니다. 이 정보는 파트너 센터에서 [구입 보고서](../publish/acquisitions-report.md) 에서 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 

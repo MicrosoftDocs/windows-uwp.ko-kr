@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8699ee06da545e3b34711f496a887fd7aa2c935
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919721"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5978507"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
@@ -24,9 +24,9 @@ ms.locfileid: "5919721"
 새 앱을 만들면 기본적으로 다음 파일 시스템 위치에 액세스할 수 있습니다.
 
 ### <a name="application-install-directory"></a>응용 프로그램 설치 디렉터리
-응용 프로그램 사용자의 시스템에 설치 되어 있는 폴더입니다.
+앱이 사용자의 시스템에 설치 되어 있는 폴더.
 
-두 가지 기본 파일을 액세스할 수 및 폴더에 응용 프로그램 설치 디렉터리:
+두 가지 기본 액세스 파일 및 폴더 앱의 설치 디렉터리:
 
 1. 아래와 같이 앱의 설치 디렉터리를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
 
@@ -89,12 +89,12 @@ URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다.
 
 또한 다른 위치와는 달리 일부 [UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 [Microsoft Visual Studio의 C/C++ 표준 라이브러리 기능](http://msdn.microsoft.com/library/hh875057.aspx)을 사용하여 앱 설치 디렉터리에서 파일에 액세스할 수 있습니다.
 
-앱의 설치 디렉터리는 읽기 전용 위치입니다. 파일 선택기를 통해 설치 디렉토리에 대 한 액세스를 가질 수 없습니다.
+앱의 설치 디렉터리는 읽기 전용 위치입니다. 파일 선택기를 통해서는 설치 디렉터리에 액세스할 수 없습니다.
 
 ### <a name="application-data-locations"></a>응용 프로그램 데이터 위치
 앱이 데이터를 저장할 수 있는 폴더입니다. 이러한 폴더(로컬, 로밍 및 임시)는 앱이 설치될 때 만들어집니다.
 
-응용 프로그램 데이터 위치에서 파일 및 폴더에 액세스할 수 있는 두 가지 가지가 있습니다.
+앱의 데이터 위치에서 파일 및 폴더에 액세스 하는 두 가지 가지 있습니다.
 
 1.  [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) 속성을 사용하여 앱 데이터 폴더를 검색합니다.
 
@@ -161,7 +161,7 @@ URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니�
 
 또한 다른 위치와는 달리 일부 [UWP 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757) 및 Visual Studio의 일부 C/C++ 표준 라이브러리 기능을 사용하여 앱 데이터 위치에서 파일에 액세스할 수 있습니다.
 
-파일 선택기를 통해 로컬, 로밍 또는 임시 폴더를 액세스할 수 없습니다.
+파일 선택기를 통해서는 로컬, 로밍 또는 임시 폴더에 액세스할 수 없습니다.
 
 ### <a name="removable-devices"></a>이동식 장치
 또한 앱은 연결된 디바이스의 일부 파일에 기본적으로 액세스할 수 있습니다. 사용자가 카메라나 USB 썸 드라이브(thumb drive)와 같은 장치를 시스템에 연결할 때 앱이 [자동 실행 확장](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay)을 사용하여 자동으로 실행되는 경우 이것은 옵션입니다. 앱이 액세스할 수 있는 파일은 앱 매니페스트에서 파일 형식 연결 선언을 통해 지정한 특정 파일 형식으로 제한됩니다.
@@ -171,7 +171,7 @@ URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니�
 > [!NOTE]
 > 다른 이동식 장치에서 SD 카드에 액세스하는 방법에 대한 자세한 내용은 [SD 카드 액세스](access-the-sd-card.md)를 참조하세요.
 
-## <a name="locations-that-uwp-apps-can-access"></a>UWP 응용 프로그램에 액세스할 수 있는 위치
+## <a name="locations-that-uwp-apps-can-access"></a>UWP 앱에 액세스할 수 있는 위치
 ### <a name="users-downloads-folder"></a>사용자의 다운로드 폴더
 
 다운로드된 파일이 기본적으로 저장되는 폴더입니다.
@@ -257,7 +257,7 @@ createFolderTask.then([](StorageFolder^ newFolder)
 | 위치 | 접근 권한 값 | Windows.Storage API |
 |----------|------------|---------------------|
 | 사용자가 액세스 권한을 가지고 있는 모든 파일. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | broadFileSystemAccess<br><br>이는 제한된 접근 권한 값입니다. 처음 사용할 때 시스템은 사용자에게 액세스를 허용할지를 묻는 메시지를 표시합니다. 액세스는 설정 > 개인 정보 > 파일 시스템에서 구성할 수 있습니다. 이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br>이 접근 권한 값은 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스의 API에 대해 작동합니다. | 해당 없음 |
-| 문서 | DocumentsLibrary <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>-저장 하는 동안 자동으로 사용자의 OneDrive 열려있는 오프 라인 | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| 문서 | DocumentsLibrary <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>-열려 있는 동안 자동으로 사용자의 OneDrive에 파일 저장 오프 라인 | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | 음악     | MusicLibrary <br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | 사진  | PicturesLibrary<br> [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | 동영상    | VideosLibrary<br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   

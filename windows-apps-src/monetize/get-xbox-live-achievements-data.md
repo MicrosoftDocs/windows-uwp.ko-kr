@@ -7,16 +7,16 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 도전 과제
 ms.localizationpriority: medium
-ms.openlocfilehash: a589ee480ee025f2940de93efaf7e453af488690
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6b635a659a8516184998b5f0b05d2d7692a42af1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941639"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5979556"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Xbox Live 도전 과제 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데이터가 사용 가능한 최근 날짜, 해당 날짜 이전 30일 및 해당 날짜까지 게임의 총 수명 동안 [Xbox Live 지원 게임](../xbox-live/index.md)에 대한 각 도전 과제를 잠금 해제한 고객 수를 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [Xbox 분석 보고서](../publish/xbox-analytics-report.md)를 통해서도 확인할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데이터가 사용 가능한 최근 날짜, 해당 날짜 이전 30일 및 해당 날짜까지 게임의 총 수명 동안 [Xbox Live 지원 게임](../xbox-live/index.md)에 대한 각 도전 과제를 잠금 해제한 고객 수를 가져옵니다. 이 정보는 파트너 센터에서 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 에 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.

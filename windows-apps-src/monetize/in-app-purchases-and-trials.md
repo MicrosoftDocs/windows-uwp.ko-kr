@@ -8,12 +8,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: 17a93e10f7b440ac7c1926bc64bba4d9be248710
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 2c1c4ea1923ff81754b9c8ed8328ba6ec670a3f1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927721"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5979038"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱 내 구매 및 평가판
 
@@ -21,7 +21,7 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 * **앱에서 바로 구매**&nbsp;&nbsp;앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다.
 
-* **평가판 기능**&nbsp;&nbsp;Windows 개발자 센터 대시보드에서 [무료 평가판](../publish/set-app-pricing-and-availability.md#free-trial)으로 앱을 구성하면 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전을 구매하도록 유도할 수 있습니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
+* **평가판 기능**&nbsp;&nbsp;경우 [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial)를 유도할 수 있습니다 고객이 앱 정식 버전을 제외 하거나 평가 기간 동안 일부 기능을 제한 하 여 구매 하도록 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 이 문서에서는 앱에서 바로 구매와 평가판이 UWP 앱에서 작동하는 방식에 대해 간략하게 보여 줍니다.
 
@@ -31,12 +31,12 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 앱에서 바로 구매와 평가판 기능을 UWP 앱에 추가하는 데 사용할 수 있는 네임스페이스는 앱에서 대상을 지정한 Windows10 버전에 따라 서로 다른 두 가지가 있습니다. 두 네임스페이스의 API는 동일한 역할을 하지만 완전히 다르게 디자인되었으며 두 API 간에 코드가 호환되지 않습니다.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Windows10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임스페이스는 Microsoft Store 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Windows10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임 스페이스는 스토어 관리 소모 성 추가 기능, 등의 최신 추가 기능 유형을 지원 하며 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;모든 버전의 Windows 10은 이 네임이 스페이스에서 앱에서 바로 구매 및 평가판을 위한 이전 API도 지원합니다. **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 > [!IMPORTANT]
-> **Windows.ApplicationModel.Store** 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 앱에서 가능한 경우 **Windows.Services.Store** 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.ApplicationModel.Store** 네임스페이스는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램 또는 개발자 센터에서 개발 샌드박스를 사용하는 앱 또는 게임(예: Xbox Live와 통합되는 모든 게임)에서 지원되지 않습니다.
+> **Windows.ApplicationModel.Store** 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 앱에서 가능한 경우 **Windows.Services.Store** 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.ApplicationModel.Store** 네임 스페이스는 앱 또는 파트너 센터에서 개발 샌드박스를 사용 하는 게임 또는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 를 사용 하는 Windows 데스크톱 응용 프로그램에서 지원 되지 않습니다 (예를 들어,이 경우는 모든 게임에 대 한 Xbox Live와 통합).
 
 <span id="concepts" />
 
@@ -46,13 +46,13 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 추가 기능은 앱 컨텍스트에서 고객이 사용할 수 있는 제품 또는 기능입니다. 예를 들어 앱 또는 게임에서 사용할 통화, 게임용 새로운 지도 또는 무기, 광고 없이 앱을 사용하는 기능, 앱에서 이용할 수 있는 음악, 비디오 등의 디지털 콘텐츠(앱에서 해당 콘텐츠 유형을 제공하는 경우) 등이 포함됩니다. 모든 앱과 추가 기능에는 사용자가 앱 또는 추가 기능을 사용할 자격이 있는지 여부를 나타내는 관련 라이선스가 있습니다. 사용자가 앱 또는 추가 기능을 평가판으로 사용할 자격이 있으면 라이선스에서 평가판에 대한 추가 정보도 제공합니다.
 
-앱에서 고객에게 추가 기능을 제공하려면 스토어에서도 알고 있도록 [Windows 개발자 센터 대시보드에서 앱에 대한 추가 기능을 정의](../publish/add-on-submissions.md)해야 합니다. 그런 다음 **Windows.Services.Store** 또는 **Windows.ApplicationModel.Store** 네임스페이스에서 API를 사용하여 앱에서 바로 구매로 사용자에게 추가 기능을 판매용으로 제공할 수 있습니다.
+앱에서 고객에 게 추가 기능을 제공 해야 [파트너 센터에서 앱에 대 한 추가 기능을 정의](../publish/add-on-submissions.md) 스토어 에서도 알고 있도록 합니다. 그런 다음 **Windows.Services.Store** 또는 **Windows.ApplicationModel.Store** 네임스페이스에서 API를 사용하여 앱에서 바로 구매로 사용자에게 추가 기능을 판매용으로 제공할 수 있습니다.
 
 UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 | 추가 기능 유형 |  설명  |
 |---------|-------------------|
-| 지속형  |  [Windows 개발자 센터 대시보드](../publish/enter-iap-properties.md)에서 지정한 수명 동안 지속되는 추가 기능입니다. <p/><p/>기본적으로 지속형 추가 기능은 만료되지 않으므로 한 번만 구매할 수 있습니다. 추가 기능에 대해 특정 지속 기간을 지정하면 만료 후에 사용자가 추가 기능을 다시 구매할 수 있습니다. |
+| 지속형  |  해당 [파트너 센터에서 지정한](../publish/enter-iap-properties.md)수명 동안 지속 되는 추가 기능. <p/><p/>기본적으로 지속형 추가 기능은 만료되지 않으므로 한 번만 구매할 수 있습니다. 추가 기능에 대해 특정 지속 기간을 지정하면 만료 후에 사용자가 추가 기능을 다시 구매할 수 있습니다. |
 | 개발자 관리 소모성  |  구매하고, 사용하고, 모두 소비한 후 다시 구매할 수 있는 추가 기능입니다. 귀하는 추가 기능이 나타내는 항목의 사용자 잔액을 추적할 책임이 있습니다.<p/><p/>사용자가 추가 기능과 관련된 모든 항목을 소비할 때 귀하는 사용자 잔액을 유지하고 사용자가 항목을 모두 소비한 후 추가 기능 구매를 처리된 것으로 Microsoft Store에 보고할 책임이 있습니다. 사용자는 앱에서 이전 추가 기능 구매를 처리된 것으로 보고할 때까지 추가 기능을 다시 구매할 수 없습니다. <p/><p/>예를 들어 게임에서 추가 기능이 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱 또는 서비스에서 사용자의 남은 새 잔액인 90개 동전을 유지 관리해야 합니다. 사용자가 100개 동전을 모두 사용한 후 앱에서 추가 기능을 처리된 것으로 보고해야 하며, 그러면 사용자가 100개 동전 추가 기능을 다시 구매할 수 있습니다.    |
 | Microsoft Store 관리 소모성  |  언제든지 구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. Microsoft Store는 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다.<p/><p/>사용자가 추가 기능과 관련된 모든 항목을 사용할 때 해당 항목을 처리된 것으로 Microsoft Store에 보고해야 하며, Microsoft Store에서 사용자 잔액을 업데이트합니다. 사용자는 원하는 만큼 추가 기능을 구입할 수 있습니다(항목을 먼저 소비할 필요는 없음). 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. <p/><p/> 예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 50개 동전을 사용한 경우 앱은 추가 기능의 50개 단위가 처리되었다고 Microsoft Store에 보고하고 Microsoft Store에서 남은 잔액을 업데이트합니다. 그러면 사용자는 기능을 다시 구입하여 동전을 100개 획득하고, 동전을 총 150개 갖게 됩니다. <p/><p/>**참고**&nbsp;&nbsp;Microsoft Store에서 관리하는 소모품을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용해야 합니다.  |
 | 구독 | 고객이 계속 추가 기능을 이용하기 위해 반복적으로 계속 요금을 내는 지속적인 추가 기능. 고객은 추가 요금이 부과되지 않도록 언제든 구독을 취소할 수 있습니다. <p/><p/>**참고**&nbsp;&nbsp;구독 추가 기능을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용해야 합니다.  |
@@ -128,7 +128,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 방식을 고객에게 제공하려면
 
-1. 앱에서 고객이 구매할 수 있는 추가 기능을 제공하는 경우 [Windows 개발자 센터 대시보드에서 앱에 대한 추가 기능 제출을 만듭니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+1. 경우에 앱 추가 기능을 제공 고객이 구매할 수 있는 [파트너 센터에서 앱에 대 한 추가 기능 제출을 만듭니다 ](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
 2. 앱에서 코드를 기록하여 [앱이나 앱이 제공하는 추가 기능에 대한 제품 정보를 검색](get-product-info-for-apps-and-add-ons.md)한 다음 [라이선스가 활성 상태인지 확인](get-license-info-for-apps-and-add-ons.md)(사용자에게 앱이나 추가 기능을 사용할 수 있는 라이선스가 있는지 여부)합니다. 라이선스 활성화되지 않으면 판매를 위해 사용자에게 앱과 추가 기능을 제공하는 UI를 앱에서 바로 구매로 나타냅니다.
 
@@ -146,7 +146,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 **Windows.Services.Store** 네임스페이스를 사용하여 앱의 평가판 버전에서 기능을 제외하거나 제한하려면
 
-1. [앱을 Windows 개발자 센터 대시보드에서 무료 평가판 앱으로 구성합니다](../publish/set-app-pricing-and-availability.md#free-trial).
+1. [파트너 센터에서 무료 평가판으로 구성](../publish/set-app-pricing-and-availability.md#free-trial)합니다.
 
 2. 앱에서 코드를 기록하여 [앱이나 앱이 제공하는 추가 기능에 대한 제품 정보를 검색](get-product-info-for-apps-and-add-ons.md)한 다음 [앱과 연결된 라이선스가 평가판 라이선스인지 확인](get-license-info-for-apps-and-add-ons.md)합니다.
 
@@ -160,15 +160,15 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 앱에서 앱 내 구매 또는 평가판 기능을 구현하기 위해 **Windows.Services.Store** 네임스페이스의 API를 사용하고 있다면, 테스트 라이선스를 사용하기 위해 앱을 Store에 제출하고, 앱을 개발자 장치에 다운로드해야 합니다. 다음 프로세스로 코드를 테스트합니다.
 
-1. 앱이 아직 게시되지 않고 Store에서 사용할 수 없는 경우 앱이 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는지 확인하고, Windows 개발자 센터 대시보드에 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)하고 인증 프로세스를 전달해야 합니다. 테스트 하는 동안 [앱이 스토어에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다. [패키지 플라이트](../publish/package-flights.md)의 적절 한 구성을 note 하세요. 잘못 구성 된 패키지 플라이트 수 할 수 없습니다 다운로드할 수 있습니다.
+1. 앱에에서 없는 경우 아직 게시 되 고 사용할 수 있는 스토어, 파트너 센터에서 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구를 충족 하는지 확인 하 고 앱 인증 프로세스를 전달 하는지 확인 합니다. 테스트 하는 동안 [앱이 스토어에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다. [패키지 플라이트](../publish/package-flights.md)의 적절 한 구성을 note 하세요. 잘못 구성 된 패키지 플라이트 수 할 수 없습니다 다운로드할 수 있습니다.
 
 2. 그런 다음 아래 작업을 완료해야 합니다.
 
     * **Windows.Services.Store** 네임스페이스에서 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스 및 기타 관련 형식을 사용하는 앱에서 코드를 작성하여 [앱에서 바로 구매](#implement-iap) 또는 [평가판 기능](#implement-trial)을 구현합니다.
-    * 앱에서 고객이 구매할 수 있는 추가 기능을 제공하는 경우 [Windows 개발자 센터 대시보드에서 앱에 대한 추가 기능 제출을 만듭니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
-    * 앱의 평가판 버전에서 일부 기능을 제외하거나 제한하려면 앱을 [Windows 개발자 센터 대시보드에서 무료 평가판 앱으로 구성](../publish/set-app-pricing-and-availability.md#free-trial)합니다.
+    * [파트너 센터에서 앱에 대 한 추가 기능 제출을 만드는](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions)추가 기능 고객이 구매할 수 있는 앱을 제공 하는 경우 합니다.
+    * [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial)앱의 평가판 버전에서 일부 기능을 제외 하거나 제한 하려면.
 
-3. 프로젝트가 열리면 Visual Studio에서 **프로젝트 메뉴**를 클릭하고 **스토어**를 가리킨 다음 **스토어에 앱 연결**을 클릭합니다. 마법사의 지침에 따라 테스트에 사용하려는 Windows 개발자 센터 계정에서 앱 프로젝트를 앱에 연결합니다.
+3. 프로젝트가 열리면 Visual Studio에서 **프로젝트 메뉴**를 클릭하고 **스토어**를 가리킨 다음 **스토어에 앱 연결**을 클릭합니다. 앱이 테스트에 사용 하려는 파트너 센터 계정에 앱 프로젝트에 연결 마법사의 지침을 완료 합니다.
     > [!NOTE]
     > 스토어에서 프로젝트를 앱에 연결하지 않으면 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 메서드가 해당 반환 값의 **ExtendedError** 속성을 오류 코드 값 0x803F6107로 설정합니다. 이 값은 스토어에 앱에 대한 정보가 없음을 나타냅니다.
 4. 아직 수행하지 않은 경우 이전 단계에서 지정한 앱을 스토어에서 설치하고 앱을 한 번 실행한 다음 이 앱을 닫습니다. 이렇게 하면 앱에 대한 유효한 라이선스가 개발 장치에 설치됩니다.
@@ -227,7 +227,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 ### <a name="products-skus-and-availabilities"></a>제품, SKU 및 가용성
 
-스토어의 모든 제품에는 *SKU*가 하나 이상 있으며, 각 SKU에 *가용성*이 하나 이상 있습니다. 대부분의 개발자는 Windows 개발자 센터 대시보드에서 이러한 개념을 도외시하며 해당 앱이나 추가 기능에 대한 SKU 또는 가용성을 정의하지 않습니다. 그러나 일부 시나리오에서는 **Windows.Services.Store** 네임스페이스의 스토어 제품에 대한 개체 모델에는 SKU와 가용성이 포함되어 있으므로 이러한 개념에 대한 기본적인 이해가 도움이 될 수 있습니다.
+스토어의 모든 제품에는 *SKU*가 하나 이상 있으며, 각 SKU에 *가용성*이 하나 이상 있습니다. 이러한 개념 파트너 센터에서 대부분의 개발자 도외시 하며 대부분의 개발자는 Sku 또는 해당 앱 이나 추가 기능에 대 한 가용성을 정의 하지 않습니다. 그러나 일부 시나리오에서는 **Windows.Services.Store** 네임스페이스의 스토어 제품에 대한 개체 모델에는 SKU와 가용성이 포함되어 있으므로 이러한 개념에 대한 기본적인 이해가 도움이 될 수 있습니다.
 
 | 개체 |  설명  |
 |---------|-------------------|
@@ -243,8 +243,8 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 스토어에 있는 모든 제품의 스토어 ID는 12자의 영숫자 문자열입니다(예: ```9NBLGGH4R315```). 스토어 제품에 대한 스토어 ID를 얻는 몇 가지 방법입니다.
 
-* 앱의 경우 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 스토어 ID를 얻을 수 있습니다.
-* 추가 기능의 경우, 대시보드의 추가 기능 개요 페이지에서 스토어 ID를 얻을 수 있습니다.
+* 앱에 대 한 파트너 센터에서 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 스토어 ID를 얻을 수 있습니다.
+* 추가 기능을 파트너 센터에서 코드에 대 한 추가 기능 개요 페이지에서 스토어 ID를 얻을 수 있습니다.
 * 또한 어느 제품이든 제품에 해당되는 [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.storeid)를 사용해 프로그래밍 방식으로 스토어 ID를 얻을 수 있습니다.
 
 SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다른 스토어 ID가 있습니다.
@@ -258,10 +258,10 @@ SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다�
 
 ## <a name="how-to-use-product-ids-for-add-ons-in-your-code"></a>코드에서 추가 기능에 대한 제품 ID 사용 방법
 
-앱 상황에 맞는 추가 기능을 고객이 사용할 수 있도록 만들려면, 개발자 센터 대시보드에 [추가 기능 제출을 생성](../publish/add-on-submissions.md)할 때 추가 기능에 대한 [고유 제품 ID를 입력](../publish/set-your-add-on-product-id.md#product-id)해야 합니다. 코드에서 추기 기능을 참조시키기 위해 이 제품 ID를 사용할 수 있습니다. 그러나 앱에서 앱 내 구매에 사용하는 네임스페이스에 따라 제품 ID를 사용할 수 있는 특정 시나리오들이 있습니다.
+앱의 컨텍스트에서 고객에 게 추가 기능을 제공 하려는 경우 해야 [고유 제품 ID를 입력](../publish/set-your-add-on-product-id.md#product-id) 추가 기능에 대 한 경우 파트너 센터에서 [추가 기능 제출을 만듭니다](../publish/add-on-submissions.md) . 코드에서 추기 기능을 참조시키기 위해 이 제품 ID를 사용할 수 있습니다. 그러나 앱에서 앱 내 구매에 사용하는 네임스페이스에 따라 제품 ID를 사용할 수 있는 특정 시나리오들이 있습니다.
 
 > [!NOTE]
-> 추가 기능을 위해 개발자 센터 대시보드에 입력한 제품 ID는 추가 기능의 [스토어 ID](#store-ids)와 다릅니다. 스토어 ID는 개발자 센터가 생성합니다.
+> 제품 ID는 추가 기능에 대 한 파트너 센터에 입력 하는 것에 대 한 추가 기능 [스토어 ID](#store-ids)다릅니다. 스토어 ID는 파트너 센터에서 생성 됩니다.
 
 ### <a name="apps-that-use-the-windowsservicesstore-namespace"></a>Windows.Services.Store 네임스페이스를 사용하는 앱
 
@@ -272,7 +272,7 @@ SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다�
 
 ### <a name="apps-that-use-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱
 
-앱이 **Windows.ApplicationModel.Store** 네임스페이스를 사용하는 경우, 대부분의 작업에서 개발자 센터 대시보드에서 추가 기능에 지정한 제품 ID를 사용해야 합니다. 예를 들어,
+앱 **Windows.ApplicationModel.Store** 네임 스페이스를 사용 하는 경우 대부분의 작업에 대 한 파트너 센터에서 추가 기능에 할당 된 제품 ID를 사용 해야 합니다. 예를 들어,
 
 * 추가 기능을 나타내는 [ProductListing](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting)이나 추가 기능 라이선스를 나타내는 [ProductLicense](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense)를 식별하기 위해 제품 ID를 사용합니다. 제품 ID는 [ProductListing.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.ProductId) 및 [ProductLicense.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense.ProductId) 속성으로 표시됩니다.
 
