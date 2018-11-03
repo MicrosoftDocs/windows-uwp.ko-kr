@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b0ece9a25a2fd2892553d66847c39637e7faae70
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930558"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986266"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤의 수동 컨트롤
 

@@ -9,54 +9,54 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 730d5ae9062fe39533cd615facaf5beaa7d02ffd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919790"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5980324"
 ---
 # <a name="composition-brushes"></a>컴퍼지션 브러시
-UWP 응용 프로그램에서 화면에 보이는 모든 것은 브러시로 그려 졌 기 때문에 표시 됩니다. 브러시를 사용 하 여 간단 하 고 단색 색상에서 이미지 또는 드로잉을 복잡 한 효과 체인에 이르기까지 콘텐츠로 사용자 인터페이스 (UI) 개체를 그릴 수 있습니다. 여기서는 CompositionBrush 페인팅의 개념을 소개 합니다.
+모든 UWP 응용 프로그램에서 화면에 표시 브러시 그려 졌 기 때문에 표시 됩니다. 브러시를 사용 하 여 간단 하 고 단색 색에서 이미지 또는 복잡 한 효과 체인에 드로잉에 이르기까지 콘텐츠를 사용 하 여 사용자 인터페이스 (UI) 개체를 그릴 수 있습니다. 이 항목에서는 CompositionBrush 색칠의 개념을 소개 합니다.
 
-Note, UWP XAML 응용 프로그램을 사용 하 여 작업 하는 경우 [XAML 브러시](/windows/uwp/design/style/brushes) 또는 [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)는 UIElement를 그릴 수도 있습니다. 일반적으로 것이 쉽고 시나리오는 XAML 브러시에서 지원 되는 경우 XAML 브러시를 선택 하는 것이 좋습니다. 예를 들어, 텍스트 또는 이미지를 사용 하 여 도형의 채우기 변경 단추의 색에 애니메이션을 적용 합니다. 반면에 애니메이션된 9 개 모눈 늘이기 애니메이션된 마스크 또는 효과 체인에 페인트 처럼 브러시 XAML에서 지원 되지 않는 작업을 시도 하는 경우 사용할 수 있습니다 CompositionBrush는 [를 사용 하 여 한 UIElement를 그릴 XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+Note, XAML UWP 앱을 사용 하 여 작업을 할 때 [XAML 브러시](/windows/uwp/design/style/brushes) 또는 [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)UIElement를 선택할 수 있습니다. 일반적으로 것이 쉽고 시나리오는 XAML 브러시에서 지 원하는 경우 XAML 브러시를 선택 하는 것이 좋습니다. 예를 들어는 단추, 텍스트 또는 이미지를 사용 하 여 셰이프 채우기 변경의 색에 애니메이션을 적용 합니다. 반면, 애니메이션된 마스크는 애니메이션 효과 준된 그리드 stretch 또는 효과 체인을 사용 하 여 그리기 같은 XAML 브러시에서 지원 되지 않는 작업을 수행 하려는 경우 데 사용할 수는 CompositionBrush [를 사용 하 여 UIElement를 그리려면 XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
-시각적 계층을 사용 하는 경우는 CompositionBrush는 [SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual)의 영역을 그리는 데 사용 되어야 합니다.
+시각적 계층을 사용 하는 경우에 CompositionBrush [SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual)의 영역을 그리는 데 사용 되어야 합니다.
 
 -   [사전 요구 사항](./composition-brushes.md#prerequisites)
--   [CompositionBrush 사용 하 여 페인트](./composition-brushes.md#paint-with-a-compositionbrush)
-    -   [단색으로 그리기](./composition-brushes.md#paint-with-a-solid-color)
-    -   [선형 그라데이션으로 그리기](./composition-brushes.md#paint-with-a-linear-gradient)
-    -   [이미지를 사용 하 여 페인트](./composition-brushes.md#paint-with-an-image)
-    -   [사용자 지정 그리기를 사용 하 여 페인트](./composition-brushes.md#paint-with-a-custom-drawing)
-    -   [비디오를 사용 하 여 페인트](./composition-brushes.md#paint-with-a-video)
-    -   [필터 효과 사용 하 여 페인트](./composition-brushes.md#paint-with-a-filter-effect)
-    -   [불투명 마스크를 사용 하 여 CompositionBrush를 사용 하 여 페인트](./composition-brushes.md#paint-with-a-compositionbrush-with-opacity-mask-applied)
-    -   [NineGrid 스트레치를 사용 하는 CompositionBrush를 사용 하 여 페인트](./composition-brushes.md#paint-with-a-compositionbrush-using-ninegrid-stretch)
-    -   [배경 픽셀을 사용 하 여 페인트](./composition-brushes.md#paint-using-background-pixels)
+-   [CompositionBrush로 그리기](./composition-brushes.md#paint-with-a-compositionbrush)
+    -   [단색을 사용 하 여 그리려면](./composition-brushes.md#paint-with-a-solid-color)
+    -   [선형 그라데이션을 사용 하 여 그리려면](./composition-brushes.md#paint-with-a-linear-gradient)
+    -   [이미지를 사용 하 여 그리려면](./composition-brushes.md#paint-with-an-image)
+    -   [사용자 지정 그리기를 사용 하 여 그리려면](./composition-brushes.md#paint-with-a-custom-drawing)
+    -   [비디오를 사용 하 여 그리려면](./composition-brushes.md#paint-with-a-video)
+    -   [필터 효과 사용 하 여 그리려면](./composition-brushes.md#paint-with-a-filter-effect)
+    -   [불투명 마스크를 사용 하 여 CompositionBrush를 사용 하 여 그리려면](./composition-brushes.md#paint-with-a-compositionbrush-with-opacity-mask-applied)
+    -   [NineGrid stretch를 사용 하는 CompositionBrush를 사용 하 여 그리려면](./composition-brushes.md#paint-with-a-compositionbrush-using-ninegrid-stretch)
+    -   [배경 픽셀을 사용 하 여 그리려면](./composition-brushes.md#paint-using-background-pixels)
 -   [CompositionBrushes 결합](./composition-brushes.md#combining-compositionbrushes)
--   [XAML 브러시 및 CompositionBrush를 사용 하 여](./composition-brushes.md#using-a-xaml-brush-vs-compositionbrush)
+-   [XAML 브러시와 CompositionBrush를 사용 하 여](./composition-brushes.md#using-a-xaml-brush-vs-compositionbrush)
 -   [관련 항목](./composition-brushes.md#related-topics)
 
 ## <a name="prerequisites"></a>사전 요구 사항
-이 개요에서는 익숙한 기본 복합 응용 프로그램의 구조와 [시각적 계층 개요](visual-layer.md)에 설명 된 대로
+이 개요는 잘 알고 있다면 기본 컴퍼지션 응용 프로그램의 구조를 사용 하 여 [시각적 계층 개요](visual-layer.md)에 설명 된 대로 가정 합니다.
 
-## <a name="paint-with-a-compositionbrush"></a>CompositionBrush 사용 하 여 페인트
+## <a name="paint-with-a-compositionbrush"></a>CompositionBrush로 그리기
 
-[CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush) 는 "페인트" 해당 출력으로 영역을 합니다. 각 브러시의 출력 유형은 서로 다릅니다. 일부 브러시는 단색, 그라데이션, 이미지, 사용자 지정 그리기 또는 효과 사용 하 여 다른 사용자와 영역을 그리기. 다른 브러시의 동작을 수정 하는 특수 브러시도 있습니다. 예를 들어, 불투명 마스크 컨트롤은 CompositionBrush에 의해 어떤 영역을 그리는 데 사용할 수 또는 늘이기 영역 그리기는 CompositionBrush에 적용을 제어 하는 9 표를 사용할 수 있습니다. CompositionBrush는 다음 형식 중 하나로 사용할 수 있습니다.
+[CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush) ""로 영역을 칠합니다 출력 합니다. 각 브러시의 출력 유형은 서로 다릅니다. 일부 브러시 그라데이션, 이미지, 사용자 지정 그리기 또는 효과 사용 하 여 다른 단색으로 영역을 그립니다. 다른 브러시의 동작을 수정 하는 특수 브러시도 있습니다. 예를 들어 불투명 마스크를 제어는 CompositionBrush 하 여 어떤 영역을 그리는 데 사용할 수 또는 9 그리드 영역을 그릴 때에 CompositionBrush 적용 stretch 제어 데 사용할 수 있습니다. CompositionBrush 다음 유형 중 하나의 될 수 있습니다.
 
-|클래스                                   |세부 정보                                         |에 도입|
+|클래스                                   |세부 정보                                         |에 도입 된|
 |-------------------------------------|---------------------------------------------------------|--------------------------------------|
-|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |단색으로 영역을 그립니다.                        |Windows10 년 11 월 업데이트 (SDK 10586)|
-|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |[ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface) 프로그램 내용으로 영역을 그립니다.|Windows10 년 11 월 업데이트 (SDK 10586)|
-|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |복합 효과의 내용으로 영역을 그립니다. |Windows10 년 11 월 업데이트 (SDK 10586)|
-|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |불투명 마스크를 사용 하 여 CompositionBrush 사용 하 여 시각적 요소를 그립니다. |Windows10 기념 업데이트 (14393 SDK)
-|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |NineGrid 스트레치를 사용 하는 CompositionBrush를 사용 하 여 영역을 그립니다. |Windows10 기념 업데이트 SDK (14393)
-|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|선형 그라데이션으로 영역을 그립니다.                    |Windows 10 작성자 업데이트 (내부 미리 보기 SDK) 포함
-|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |두 응용 프로그램에서 배경 픽셀 또는 데스크톱에서 응용 프로그램의 창 뒤에 직접 픽셀을 샘플링 하 여 영역을 그립니다. CompositionEffectBrush와 같은 다른 CompositionBrush에 대 한 입력으로 사용 | 10 기념 업데이트가 (SDK 14393)
+|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |단색으로 영역을 칠합니다.                        |Windows10 11 월 업데이트 (10586 SDK)|
+|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |[ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface) 의 콘텐츠 영역을 칠합니다.|Windows10 11 월 업데이트 (10586 SDK)|
+|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |컴퍼지션 효과의 콘텐츠로 영역을 칠합니다. |Windows10 11 월 업데이트 (10586 SDK)|
+|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |불투명 마스크를 사용 하 여 CompositionBrush 콘텐츠로 시각적 개체 그립니다. |Windows10 1 주년 업데이트 (SDK 14393)
+|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |NineGrid stretch를 사용 하는 CompositionBrush를 사용 하 여 영역을 칠합니다. |Windows10 1 주년 업데이트 SDK (14393)
+|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|선형 그라데이션으로 영역을 칠합니다.                    |Windows 10 Fall Creators Update (Insider Preview SDK)
+|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |하거나 응용 프로그램에서 백그라운드 픽셀 또는 데스크톱 응용 프로그램의 창 바로 뒤 픽셀 샘플링 하 여 영역을 칠합니다. CompositionEffectBrush 같은 다른 CompositionBrush에 대 한 입력으로 사용 | Windows 10 1 주년 업데이트 (SDK 14393)
 
-### <a name="paint-with-a-solid-color"></a>단색으로 그리기
+### <a name="paint-with-a-solid-color"></a>단색을 사용 하 여 그리려면
 
-[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush) 는 단색으로 영역을 그립니다. 다양 한 방법으로 SolidColorBrush의 색을 지정할 수 있습니다. 예를 들어, 알파, 빨강, 파랑 및 녹색 (ARGB) 채널을 지정 하거나 [색](https://docs.microsoft.com/uwp/api/windows.ui.colors) 클래스에서 제공 하는 미리 정의 된 색 중 하나를 사용 하 여 있습니다.
+[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush) 단색으로 영역을 칠합니다. 다양 한 방법으로 SolidColorBrush의 색을 지정할 수 있습니다. 예를 들어 알파, 빨간색, 녹색 및 파랑 (ARGB) 채널을 지정 하거나 [색](https://docs.microsoft.com/uwp/api/windows.ui.colors) 클래스에서 제공 하는 미리 정의 된 색 중 하나를 사용할 수 있습니다.
 
 다음 그림 및 코드에서는 검은색 브러시로 선을 긋고 색상 값이 0x9ACD32인 단색 브러시로 칠한 사각형을 만드는 작은 시각적 트리를 보여 줍니다.
 
@@ -86,11 +86,11 @@ _colorVisual2.Offset = new Vector3(3, 3, 0);
 _container.Children.InsertAtBottom(_colorVisual2);
 ```
 
-### <a name="paint-with-a-linear-gradient"></a>선형 그라데이션으로 그리기
+### <a name="paint-with-a-linear-gradient"></a>선형 그라데이션을 사용 하 여 그리려면
 
-[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush) 는 선형 그라데이션으로 영역을 그립니다. 선형 그라데이션의 그라데이션 축 선을 통해 둘 이상의 색을 혼합합니다. GradientStop 개체를 사용 하 여 변화와 그 위치에 색상을 지정 합니다.
+[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush) 선형 그라데이션으로 영역을 칠합니다. 선형 그라데이션 줄은 그라데이션 축에서 두 개 이상의 색을 혼합합니다. GradientStop 개체를 사용 하 여 그라데이션 및 해당 위치에서 색을 지정 합니다.
 
-2 정지는 빨간색 및 노란색 색으로 칠해진는 LinearGradientBrush와 SpriteVisual는 다음 그림과 코드를 보여 줍니다.
+다음 그림 및 코드는 LinearGradientBrush를 사용 하 여 빨간색 및 노란색 색을 사용 하 여 2 중지로 채울 SpriteVisual 보여 줍니다.
 
 ![CompositionLinearGradientBrush](images/composition-compositionlineargradientbrush.png)
 
@@ -109,11 +109,11 @@ _gradientVisual.Brush = _redyellowBrush;
 _gradientVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-an-image"></a>이미지를 사용 하 여 페인트
+### <a name="paint-with-an-image"></a>이미지를 사용 하 여 그리려면
 
-[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) 에 ICompositionSurface로 렌더링 되는 픽셀을 사용 하 여 영역을 그립니다. 예를 들어, CompositionSurfaceBrush는 [LoadedImageSurface](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.loadedimagesurface) API를 사용 하 여 전자 ICompositionSurface 화면에 렌더링 된 이미지를 사용 하 여 영역을 그리는 데 사용할 수 있습니다.
+[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) 는 ICompositionSurface에 렌더링 된 픽셀을 사용 하 여 영역을 칠합니다. 예를 들어 한 CompositionSurfaceBrush [LoadedImageSurface](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.loadedimagesurface) API를 사용 하 여는 ICompositionSurface 표면에 렌더링 된 이미지를 사용 하 여 영역을 그리는 데 사용할 수 있습니다.
 
-SpriteVisual는 LoadedImageSurface를 사용 하는 ICompositionSurface에 렌더링 된는 licorice의 비트맵을 사용 하 여 그린 다음 그림과 코드를 보여 줍니다. CompositionSurfaceBrush의 속성을 늘이고 정렬 시각적 개체의 경계 내에서 비트맵을 사용할 수 있습니다.
+다음 그림 및 코드 SpriteVisual 그릴 비트맵으로 그려진 LoadedImageSurface를 사용 하는 ICompositionSurface에 렌더링 된 licorice 보여 줍니다. CompositionSurfaceBrush의 속성을 확대 하 고 정렬할 시각적 개체 경계 내에서 비트맵을 사용할 수 있습니다.
 
 ![CompositionSurfaceBrush](images/composition-compositionsurfacebrush.png)
 
@@ -135,10 +135,10 @@ _imageVisual.Brush = _imageBrush;
 _imageVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-a-custom-drawing"></a>사용자 지정 그리기를 사용 하 여 페인트
-[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) 는 [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm) (또는 D2D)를 사용 하 여 렌더링 되는 ICompositionSurface 파일에서 픽셀을 사용 하 여 영역을 그리는 데 사용할 수도 있습니다.
+### <a name="paint-with-a-custom-drawing"></a>사용자 지정 그리기를 사용 하 여 그리려면
+[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm) (또는 D2D)를 사용 하 여 렌더링 하는 ICompositionSurface에서 픽셀을 사용 하 여 영역을 그리는 데 사용할 수도 있습니다.
 
-Win2D를 사용 하는 SpriteVisual는 ICompositionSurface로 렌더링 된 텍스트를 사용 하 여 그린 다음 코드에서 보여줍니다. 참고 [Win2D NuGet](http://www.nuget.org/packages/Win2D.uwp) 패키지를 프로젝트에 포함 해야 하는 Win2D를 사용 하려면.
+다음 코드는 Win2D를 사용 하 여 실행 된 ICompositionSurface에 렌더링 된 텍스트를 사용 하 여 SpriteVisual 그린 보여 줍니다. 단, 프로젝트에 [Win2D NuGet](http://www.nuget.org/packages/Win2D.uwp) 패키지를 포함 해야 하는 Win2D를 사용 합니다.
 
 ```cs
 Compositor _compositor;
@@ -176,12 +176,12 @@ _drawingVisual.Brush = _drawingBrush;
 _drawingVisual.Size = new Vector2(156, 156);
 ```
 
-마찬가지로, CompositionSurfaceBrush는 데도 사용할 수 있습니다 Win2D interop를 사용 하는 SwapChain와 SpriteVisual는 그릴. [이 샘플](https://github.com/Microsoft/Win2D-Samples/tree/master/CompositionExample) 에 Win2D는 SpriteVisual에는 swapchain 그리는 데 사용 하는 방법의 예가 나와 있습니다.
+마찬가지로, 이러한는 CompositionSurfaceBrush Win2D interop을 사용 하는 작거나를 사용 하 여 SpriteVisual을 그리는 데 데도 수 있습니다. [이 샘플](https://github.com/Microsoft/Win2D-Samples/tree/master/CompositionExample) 는 작거나를 사용 하 여 SpriteVisual 그리려면 Win2D를 사용 하는 방법의 예제를 제공 합니다.
 
-### <a name="paint-with-a-video"></a>비디오를 사용 하 여 페인트
-[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) 는 [MediaPlayer](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) 클래스를 통해 로드 된 비디오를 사용 하 여 렌더링 되는 ICompositionSurface 파일에서 픽셀을 사용 하 여 영역을 그리는 데 사용할 수도 있습니다.
+### <a name="paint-with-a-video"></a>비디오를 사용 하 여 그리려면
+[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) [MediaPlayer](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) 클래스를 통해 로드 비디오를 사용 하 여 렌더링 하는 ICompositionSurface에서 픽셀을 사용 하 여 영역을 그리는 데 사용할 수도 있습니다.
 
-다음 코드는 SpriteVisual는 ICompositionSurface에 로드 된 비디오로 그리는 보여 줍니다.
+다음 코드는 SpriteVisual는 ICompositionSurface에 로드 된 비디오 보여 줍니다.
 
 ```cs
 Compositor _compositor;
@@ -207,11 +207,11 @@ _videoVisual.Brush = _videoBrush;
 _videoVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-a-filter-effect"></a>필터 효과 사용 하 여 페인트
+### <a name="paint-with-a-filter-effect"></a>필터 효과 사용 하 여 그리려면
 
-[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) 에 CompositionEffect의 출력을 사용 하 여 영역을 그립니다. 시각적 계층에서 효과 소스 콘텐츠 색, 그라데이션, 이미지, 비디오, swapchains, ui, 지역 또는 비주얼 트리 등의 컬렉션에 적용 된 애니메이션 필터 효과로 생각할 수 있습니다. 소스는 일반적으로 다른 CompositionBrush를 사용 하 여 지정 됩니다.
+[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) 는 CompositionEffect의 출력 영역을 칠합니다. 시각적 계층의 효과 색, 그라데이션, 이미지, 동영상, swapchains, ui, 지역 또는 시각 트리 소스 콘텐츠의 컬렉션에 적용 되는 애니메이션 필터 효과로 간주 될 수 있습니다. 소스 콘텐츠는 일반적으로 다른 CompositionBrush를 사용 하 여 지정 됩니다.
 
-다음 그림과 코드 그린 고양이 흑백 처리 필터 효과가 적용 된 이미지는 SpriteVisual를 보여 줍니다.
+다음 그림 및 코드 채도 감소 필터 효과가 적용 된 고양이 이미지와 함께 그린 SpriteVisual 보여 줍니다.
 
 ![CompositionEffectBrush](images/composition-cat-desaturated.png)
 
@@ -241,13 +241,13 @@ _effectVisual.Brush = _effectBrush;
 _effectVisual.Size = new Vector2(156, 156);
 ```
 
-CompositionBrushes를 사용 하 여 효과 만드는 방법에 대 한 자세한 내용은 [시각적 계층에서 효과](https://docs.microsoft.com/en-us/windows/uwp/composition/composition-effects) 참조 하십시오.
+CompositionBrushes를 사용 하 여 효과 만드는 방법에 대 한 자세한 내용은 [시각적 계층의 효과](https://docs.microsoft.com/en-us/windows/uwp/composition/composition-effects) 참조 하세요.
 
-### <a name="paint-with-a-compositionbrush-with-opacity-mask-applied"></a>불투명 마스크가 적용 된 CompositionBrush를 사용 하 여 페인트
+### <a name="paint-with-a-compositionbrush-with-opacity-mask-applied"></a>불투명 마스크를 적용 한 CompositionBrush를 사용 하 여 그리려면
 
-[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush) 는 불투명 마스크가 적용 된 CompositionBrush 사용 하 여 영역을 그립니다. 불투명 마스크의 모든 CompositionBrush CompositionColorBrush, CompositionLinearGradientBrush, CompositionSurfaceBrush, CompositionEffectBrush, 또는 CompositionNineGridBrush 형식의 수 있습니다. 불투명 마스크는 CompositionSurfaceBrush로 지정 해야 합니다.
+[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush) 적용 된 불투명 마스크를 사용 하 여는 CompositionBrush 영역을 칠합니다. 불투명 마스크의 소스 CompositionColorBrush, CompositionLinearGradientBrush, CompositionSurfaceBrush, CompositionEffectBrush, 또는 CompositionNineGridBrush 형식의 모든 CompositionBrush 수 있습니다. 불투명 마스크는 CompositionSurfaceBrush로 지정 되어야 합니다.
 
-다음 그림과 코드는 SpriteVisual를 CompositionMaskBrush로 그리는 보여 줍니다. 마스크는 마스크로 원의 이미지를 사용 하는 원 처럼 마스크는 CompositionLinearGradientBrush입니다.
+다음 그림 및 코드는 CompositionMaskBrush로 채울 SpriteVisual 보여 줍니다. 마스크는 원의 이미지를 사용 하 여 마스크로 원 처럼 보이도록 마스크는 CompositionLinearGradientBrush입니다.
 
 ![CompositionMaskBrush](images/composition-compositionmaskbrush.png)
 
@@ -273,11 +273,11 @@ _maskVisual.Brush = _maskBrush;
 _maskVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-a-compositionbrush-using-ninegrid-stretch"></a>NineGrid 스트레치를 사용 하는 CompositionBrush를 사용 하 여 페인트
+### <a name="paint-with-a-compositionbrush-using-ninegrid-stretch"></a>NineGrid stretch를 사용 하는 CompositionBrush를 사용 하 여 그리려면
 
-[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush) 는 눈금 9 비유를 사용 하 여 확장 하는 CompositionBrush 사용 하 여 영역을 그립니다. 9 개 모눈 비유에서는 중심 보다는 CompositionBrush의 가장자리 및 모서리를 다르게 늘릴 수 있습니다. 9 개 모눈 늘이기의 원본을 모든 유형의 CompositionColorBrush CompositionBrush, CompositionSurfaceBrush, 또는 CompositionEffectBrush 할 수 있습니다.
+[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush) 그리드 메타포를 사용 하 여 확장 하는 CompositionBrush 영역을 칠합니다. 그리드 메타포를 사용 하면 중심 보다는 CompositionBrush의 가장자리 및 모서리를 다르게 늘릴 수 있습니다. 모든 유형의 CompositionColorBrush CompositionBrush, CompositionSurfaceBrush, 또는 CompositionEffectBrush 그리드 stretch의 소스 수 있습니다.
 
-다음 코드는 SpriteVisual를 CompositionNineGridBrush로 그리는 보여 줍니다. 마스크의 9 눈금을 사용 하 여 확장 하는 CompositionSurfaceBrush입니다.
+다음 코드는 SpriteVisual는 CompositionNineGridBrush 보여 줍니다. 마스크는 그리드를 사용 하 여 확장 하는 CompositionSurfaceBrush입니다.
 
 ```cs
 Compositor _compositor;
@@ -306,11 +306,11 @@ _nineGridVisual.Brush = _ninegridBrush;
 _nineGridVisual.Size = new Vector2(100, 75);
 ```
 
-### <a name="paint-using-background-pixels"></a>배경 픽셀을 사용 하 여 페인트
+### <a name="paint-using-background-pixels"></a>배경 픽셀을 사용 하 여 그리려면
 
-[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush) 는 영역 뒤 콘텐츠로 영역을 그립니다. CompositionBackdropBrush는 그 자체로 사용 되지 않는 있지만 대신 한 EffectBrush와 같은 다른 CompositionBrush에 대 한 입력으로 사용 됩니다. 예를 들어, CompositionBackdropBrush는 흐림 효과에 대 한 입력을 사용 하 여 얼음된 유리 효과 얻을 수 있습니다.
+[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush) 영역 이면의 콘텐츠 영역을 칠합니다. CompositionBackdropBrush는 자체적으로 사용 되지 않는 하지만 대신는 EffectBrush 같은 다른 CompositionBrush에 대 한 입력으로 사용 됩니다. 예를 들어 한 CompositionBackdropBrush를 흐림 효과에 대 한 입력으로 사용 하 여 불투명된 한 유리 효과 얻을 수 있습니다.
 
-다음은 CompositionSurfaceBrush와 이미지 위에 서리로 덮인된 유리 오버레이 사용 하 여 이미지를 만드는 작은 시각적 트리를 보여 줍니다. 서리로 덮인된 유리 오버레이 이미지 위에 EffectBrush로 채워진 SpriteVisual를 배치 하 여 만들어집니다. EffectBrush는 흐림 효과에 대 한 입력으로는 CompositionBackdropBrush를 사용합니다.
+다음 코드는 CompositionSurfaceBrush 및 이미지 위에 불투명된 한 유리 오버레이 사용 하 여 이미지를 만드는 작은 시각적 트리를 보여 줍니다. 불투명된 한 유리 오버레이 EffectBrush 이미지 위에 채워진 SpriteVisual 전환 하 여 만들어집니다. EffectBrush 흐림 효과에 대 한 입력으로는 CompositionBackdropBrush를 사용합니다.
 
 ```cs
 Compositor _compositor;
@@ -363,7 +363,7 @@ _containerVisual.Children.InsertAtTop(_backdropVisual);
 ```
 
 ## <a name="combining-compositionbrushes"></a>CompositionBrushes 결합
-CompositionBrushes 많은 입력으로 다른 CompositionBrushes를 사용 합니다. 예를 들어, SetSourceParameter 메서드를 사용 하 여 용도 다른 CompositionBrush는 CompositionEffectBrush에 대 한 입력으로 설정 합니다. 아래 표에서 CompositionBrushes의 지원 되는 조합을 설명합니다. 메모는 지원 되지 않는 사용 하 여 예외를 throw 합니다.
+다른 CompositionBrushes 입력으로 사용 하는 다양 한 CompositionBrushes 합니다. 예를 들어 SetSourceParameter 메서드를 사용 하 여 사용할 수 다른 CompositionBrush는 CompositionEffectBrush에 대 한 입력으로 설정 합니다. 아래 표에 지원 되는 조합을 CompositionBrushes 설명합니다. 단, 지원 되지 않는 조합을 사용 하는 예외를 throw 합니다.
 
 <table>
 <tbody>
@@ -427,33 +427,33 @@ CompositionBrushes 많은 입력으로 다른 CompositionBrushes를 사용 합�
 </table>
 
 
-## <a name="using-a-xaml-brush-vs-compositionbrush"></a>XAML 브러시 및 CompositionBrush를 사용 하 여
+## <a name="using-a-xaml-brush-vs-compositionbrush"></a>XAML 브러시와 CompositionBrush를 사용 하 여
 
-다음 표에서 시나리오 및 XAML 또는 복합 브러시 사용 규정 여부는 UIElement 또는 응용 프로그램에 SpriteVisual를 그릴 때의 목록을 제공 합니다. 
+다음 표에서 시나리오 및 UIElement 또는 응용 프로그램에서 SpriteVisual을 그릴 때 XAML 또는 컴퍼지션 브러시 사용 여부 규정 목록을 제공 합니다. 
 
 > [!NOTE]
-> CompositionBrush는 XAML UIElement에 대 한 제안 되는 CompositionBrush는 XamlCompositionBrushBase를 사용 하 여 패키지 된 간주 됩니다.
+> CompositionBrush는 XAML UIElement에 대 한 제안 되는지는 CompositionBrush 또는 XamlCompositionBrushBase를 사용 하 여 패키지는 간주 됩니다.
 
-|시나리오                                                                   | XAML UIElement                                                                                                |컴포지션 SpriteVisual
+|시나리오                                                                   | XAML UIElement                                                                                                |컴퍼지션 SpriteVisual
 |---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|----------------------------------
-|단색으로 영역 그리기                                             |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
-|애니메이션된 색으로 영역 그리기                                          |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
-|정적 그라데이션으로 영역 그리기                                       |[LinearGradientBrush](https://msdn.microsoft.com/library/windows/apps/BR210108)                            |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
-|그라데이션 중지점이 애니메이션된으로 영역 그리기                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)                                                                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
-|이미지로 영역 그리기                                                |[ImageBrush](https://msdn.microsoft.com/library/windows/apps/BR210101)                                     |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
-|웹 페이지를 사용 하 여 영역 그리기                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |해당 없음
-|NineGrid 스트레치를 사용 하 여 이미지 영역 그리기                         |[이미지 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)                   |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
-|NineGrid 늘이기 애니메이션된으로 영역 그리기                               |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)                                                                                       |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
-|swapchain로 영역 그리기                                             |[SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)                                                                                                 |W swapchain interop / [CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
-|비디오로 영역 그리기                                                 |[MediaElement](https://msdn.microsoft.com/library/windows/apps/mt187272.aspx)                                                                                                  |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) 미디어 interop w /
-|사용자 정의 2D 드로잉으로 영역 그리기                                       |Win2D에서 [CanvasControl](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm)                                                                                                 |W Win2D interop / [CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
-|애니메이션이 적용 되지 않은 마스크 영역 그리기                                       |XAML [셰이프](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes) 를 사용 하 여 마스크를 정의 하려면   |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
-|애니메이션된 마스크를 사용 하 여 영역 그리기                                        |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)                                                                                           |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
-|애니메이션된 필터 효과로 영역 그리기                               |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)
-|배경 픽셀에 적용 된 효과로 영역 그리기        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)                                                                                        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)
+|단색으로 영역을 칠합니다                                             |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
+|애니메이션 효과 준된 색으로 영역을 칠합니다                                          |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
+|정적 그라데이션으로 영역을 칠합니다                                       |[LinearGradientBrush](https://msdn.microsoft.com/library/windows/apps/BR210108)                            |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
+|애니메이션 효과 준된 그라데이션 중지점으로 영역을 칠합니다                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)                                                                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
+|이미지를 사용 하 여 영역을 칠합니다                                                |[ImageBrush](https://msdn.microsoft.com/library/windows/apps/BR210101)                                     |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
+|웹 페이지를 사용 하 여 영역을 칠합니다                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |해당 없음
+|NineGrid stretch를 사용 하 여 이미지를 사용 하 여 영역을 칠합니다                         |[이미지 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)                   |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
+|애니메이션 효과 준된 NineGrid stretch로 영역을 칠합니다                               |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)                                                                                       |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
+|작거나로 영역을 칠합니다                                             |[SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)                                                                                                 |작거나 interop를 지 원하는 [CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
+|비디오를 사용 하 여 영역을 칠합니다                                                 |[MediaElement](https://msdn.microsoft.com/library/windows/apps/mt187272.aspx)                                                                                                  |미디어 interop를 지 원하는 [CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
+|사용자 지정 2D 그리기로 영역을 칠합니다                                       |Win2D에서 [CanvasControl](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm)                                                                                                 |Win2D interop를 지 원하는 [CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
+|애니메이션이 적용 되지 않은 마스크를 사용 하 여 영역을 칠합니다                                       |XAML [셰이프](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes) 를 사용 하 여 마스크를 정의 하려면   |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
+|애니메이션된 마스크를 사용 하 여 영역을 칠합니다                                        |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)                                                                                           |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
+|애니메이션 효과 준된 필터 효과로 영역을 칠합니다                               |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)
+|배경 픽셀에 적용 하는 효과 사용 하 여 영역을 칠합니다        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)                                                                                        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)
 
 ## <a name="related-topics"></a>관련 항목
 
-[컴포지션 네이티브 Direct2D 및 DirectX interop EndDraw 및 BeginDraw](composition-native-interop.md)
+[컴퍼지션 네이티브 DirectX 및 Direct2D interop BeginDraw 및 EndDraw를 사용 하 여](composition-native-interop.md)
 
-[XamlCompositionBrushBase 사용 하 여 XAML 브러시 interop](/windows/uwp/design/style/brushes#xamlcompositionbrushbase)
+[XamlCompositionBrushBase 사용 하 여 XAML 브러시 상호 운용성](/windows/uwp/design/style/brushes#xamlcompositionbrushbase)

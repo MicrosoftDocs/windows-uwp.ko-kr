@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, 셰이더
 ms.localizationpriority: medium
 ms.openlocfilehash: 30c925f9ebb07d578147dfba373fdeb3baa364fe
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5947704"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5985726"
 ---
 # <a name="glsl-to-hlsl-reference"></a>GLSL-HLSL 참조
 

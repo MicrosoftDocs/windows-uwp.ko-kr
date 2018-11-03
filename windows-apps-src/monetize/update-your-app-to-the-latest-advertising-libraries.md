@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이그레이션
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e57cc24554f851ba79cfc47e917b92b3ad3047e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 48fc818c1ae7a9a46912ff52c2b00b07f19c366e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5936526"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5985666"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>배너 광고용 최신 광고 라이브러리로 앱 업데이트
 
@@ -29,7 +29,7 @@ ms.locfileid: "5936526"
 
 * 앱의 **AdControl**이 새 광고를 요청하는 경우 컨트롤의 **ErrorOccurred** 이벤트가 발생하고 이벤트 인수의 **ErrorCode** 속성이 **NoAdAvailable** 값을 갖게 됩니다.
 
-* 해당 앱과 관련된 모든 광고 단위가 비활성화됩니다. 이처럼 비활성화된 광고 단위는 Windows 개발자 센터 계정에서 제거할 수 없습니다. [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 사용하도록 앱을 업데이트하는 경우 이러한 광고 단위를 무시하고 새 광고 단위를 만드세요.
+* 해당 앱과 관련된 모든 광고 단위가 비활성화됩니다. DePartnerv 센터 계정에서 이러한 비활성화 된 광고 단위를 제거할 수 없습니다. [Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp)를 사용하도록 앱을 업데이트하는 경우 이러한 광고 단위를 무시하고 새 광고 단위를 만드세요.
 
 * 두 개 이상의 앱에서 사용되는 광고 단위에도 더 이상 배너 광고가 제공되지 않습니다. 따라서 각 광고 단위를 한 앱에만 사용해야 합니다.
 
@@ -88,4 +88,4 @@ ms.locfileid: "5936526"
 
 앱을 테스트하여 앱이 예상대로 배너 광고를 표시하는지 확인합니다.
 
-앱의 이전 버전을 스토어에서 이미 사용할 수 있는 경우 개발자 센터 대시보드에서 업데이트된 앱에 대한 [새 제출을 만들어](../publish/app-submissions.md) 앱을 다시 게시합니다.
+앱의 이전 버전이 앱을 다시 게시할 파트너 센터에서 업데이트 된 앱에 대 한 [새 제출을 만들고](../publish/app-submissions.md) 스토어에서 이미 사용할 수 있습니다.

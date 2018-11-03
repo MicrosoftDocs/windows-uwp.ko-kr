@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4af6b0fb339ba1fde3ea94f456eac98be8a1db9b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930938"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986331"
 ---
 # <a name="use-the-compass"></a>나침반 사용
 

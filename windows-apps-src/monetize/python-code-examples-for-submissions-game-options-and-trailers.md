@@ -7,12 +7,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, python
 ms.localizationpriority: medium
-ms.openlocfilehash: 53267caadcb903ad7eebe31d3a38c5be57a34036
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 86c753e51d15b142cdcd7e54b3ed0304d13169b6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5941234"
+ms.locfileid: "5983901"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Python 샘플: 앱의 게임 옵션과 예고편 제출
 
@@ -30,7 +30,7 @@ ms.locfileid: "5941234"
 
 이 코드는 Microsoft Store 제출 API를 사용, 게임 옵션과 예고편이 포함된 앱 제출을 만들어 커밋하는 다른 예제 클래스와 기능을 호출합니다. 이 코드를 필요에 따라 조정하려면,
 
-* 앱 테넌트 ID에 ```tenant```를, 앱의 클라이언트 ID 및 키에 ```client``` 및 ```secret``` 변수를 할당합니다. 자세한 내용은 [Azure AD 응용 프로그램을 Windows 개발자 센터 계정과 연결하는 방법](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account)을 참조하세요.
+* 앱 테넌트 ID에 ```tenant```를, 앱의 클라이언트 ID 및 키에 ```client``` 및 ```secret``` 변수를 할당합니다. 자세한 내용은 [파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법을](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account) 참조 하세요.
 * ```application_id``` 변수를 제출을 만들고 싶은 앱의 [Store ID](in-app-purchases-and-trials.md#store-ids)에 할당합니다.
 
 > [!div class="tabbedCodeSnippets"]

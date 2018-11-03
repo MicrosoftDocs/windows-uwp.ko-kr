@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 장치 포털, 앱 관리자, 배포, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5944911"
+ms.locfileid: "5986583"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>느슨한 파일 등록을 통해 앱 배포 
 

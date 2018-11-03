@@ -8,18 +8,18 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 등급
 ms.localizationpriority: medium
-ms.openlocfilehash: 892e3ae8ffcc8277f09afe8d1aef41e9905c2f85
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6b118abe32fe350277e02ed1f1f1d721e4c1690e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5922860"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5983707"
 ---
 # <a name="get-app-ratings"></a>앱 등급 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 등급 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [검토 보고서](../publish/reviews-report.md)를 통해서도 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 등급 데이터를 JSON 형식으로 가져옵니다. 이 정보는 파트너 센터에서 [리뷰 보고서](../publish/reviews-report.md) 에서 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.

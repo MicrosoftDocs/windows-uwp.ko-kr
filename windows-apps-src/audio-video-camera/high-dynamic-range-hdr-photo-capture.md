@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cc81fdc03096dd8cac5e844a496b38da78eb6136
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5936496"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5984780"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
 

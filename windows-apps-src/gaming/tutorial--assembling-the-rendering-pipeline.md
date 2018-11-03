@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926260"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981688"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임워크 I: 렌더링 소개
 

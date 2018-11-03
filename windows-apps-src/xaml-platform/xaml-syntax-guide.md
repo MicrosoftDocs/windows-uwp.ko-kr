@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fe2460dfc5ab11a9168f1d1d87207d2b9490026
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5923293"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5983971"
 ---
 # <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 

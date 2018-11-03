@@ -1,25 +1,25 @@
 ---
 author: Xansky
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
-description: Microsoft Store 제출 API에서 이러한 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 데이터를 검색합니다.
+description: Microsoft Store 제출 API에서에서 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 데이터를 검색 합니다.
 title: 앱 데이터 가져오기
 ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 데이터
 ms.localizationpriority: medium
-ms.openlocfilehash: 96f30e38a05eefe3e51f0ba632585f269b96efb8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ecda61bff6fac407dbde175f584a09d6b871d989
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945123"
+ms.locfileid: "5985983"
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 
-Microsoft Store 제출 API에서 다음 메서드를 사용하여 개발자 센터 계정의 기존 앱에 대한 데이터를 가져옵니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
+Microsoft Store 제출 API에서에서 다음 메서드를 사용 하 여 파트너 센터 계정에 기존 앱의 데이터를 가져옵니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
-이러한 메서드를 사용하려면 먼저 앱이 개발자 센터 계정에 이미 있어야 합니다. 앱에 대한 제출을 만들거나 관리하려면 [앱 제출 관리](manage-app-submissions.md)의 메서드를 참조하세요.
+이러한 메서드를 사용 하려면 먼저 앱 파트너 센터 계정에 이미 있어야 합니다. 앱에 대한 제출을 만들거나 관리하려면 [앱 제출 관리](manage-app-submissions.md)의 메서드를 참조하세요.
 
 <table>
 <colgroup>
@@ -102,7 +102,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 개발자 센�
 | primaryName   | 문자열  | 앱의 기본 이름입니다.      |
 | packageFamilyName | 문자열  | 앱의 패키지 패밀리 이름입니다.      |
 | packageIdentityName          | 문자열  | 앱의 패키지 ID 이름입니다.                       |
-| publisherName       | 문자열  | 앱과 연결된 Windows 게시자 ID입니다. 이 ID는 Windows 개발자 센터 대시보드에서 앱의 [앱 ID](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) 페이지에 나타나는 **패키지/ID/게시자** 값에 해당합니다.       |
+| publisherName       | 문자열  | 앱과 연결된 Windows 게시자 ID입니다. 파트너 센터에서 앱에 대 한 [앱 id](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) 페이지에 표시 되는 **패키지/Identity/게시자** 값에 해당 합니다.       |
 | firstPublishedDate      | 문자열  | ISO 8601 형식으로 앱이 처음 게시된 날짜입니다.   |
 | lastPublishedApplicationSubmission       | 개체 | 앱의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.    |
 | pendingApplicationSubmission        | 개체  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |   
@@ -157,7 +157,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용하여 개발자 센�
 
 | 값           | 유형    | 설명           |
 |-----------------|---------|------------------------|
-| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
+| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 됩니다.  |
 | FriendlyName           | 문자열  | 개발자가 지정한 패키지 플라이트 이름입니다.   |
 | lastPublishedFlightSubmission       | 개체 | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |
 | pendingFlightSubmission        | 개체  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.  |    

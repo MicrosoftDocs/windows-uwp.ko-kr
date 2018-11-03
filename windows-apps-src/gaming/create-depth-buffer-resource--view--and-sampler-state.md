@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, direct3d, 깊이 버퍼
 ms.localizationpriority: medium
 ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926864"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5983846"
 ---
 # <a name="create-depth-buffer-device-resources"></a>깊이 버퍼 장치 리소스 만들기
 

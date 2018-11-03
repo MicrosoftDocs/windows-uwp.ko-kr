@@ -8,12 +8,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, HTML, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cd19b574d6128fa1f88196c8c35f368b12c3531
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 38f0b36769d13d119965e7d15c5812b9ba1d6ecd
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5947058"
+ms.locfileid: "5983931"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>HTML 및 JavaScript 문제 해결 가이드
 
@@ -48,7 +48,7 @@ ms.locfileid: "5947058"
     </head>
     ```
 
-3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 ID는 Windows 개발자 센터에서 가져온 응용 프로그램 ID 및 광고 단위 ID와 일치해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 파트너 센터에서 가져온 광고 단위 ID와 응용 프로그램 ID 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -273,7 +273,7 @@ ms.locfileid: "5947058"
     });  
     ```
 
-4.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 ID는 Windows 개발자 센터에서 가져온 응용 프로그램 ID 및 광고 단위 ID와 일치해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+4.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 파트너 센터에서 가져온 광고 단위 ID와 응용 프로그램 ID 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript

@@ -9,11 +9,11 @@ ms.date: 09/18/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1407187f9883f44bb9fdc56fd3ae80820b5920f8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5947522"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986029"
 ---
 # <a name="create-and-consume-an-app-service"></a>앱 서비스 만들기 및 사용
 

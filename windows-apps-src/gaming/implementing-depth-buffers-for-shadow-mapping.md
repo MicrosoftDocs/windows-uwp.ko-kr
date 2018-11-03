@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 섀도 볼륨, 깊이 버퍼, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 269f8423795d7c2515ce555cf8e65f14a8c63431
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919688"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5984764"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
 
@@ -57,7 +57,7 @@ ms.locfileid: "5919688"
 ## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Direct3D 9 데스크톱 포팅에 그림자 매핑 적용
 
 
-Windows8 adde d 깊이 비교 기능 수준 9\_1 및 9\_3 기능을 합니다. 이제 섀도 볼륨이 포함된 렌더링 코드를 DirectX 11로 마이그레이션할 수 있으므로 Direct3D 11 렌더러가 하위 수준인 기능 수준 9 디바이스와 호환됩니다. 이 연습에서는 깊이 테스트를 사용하여 Direct3D 11 앱이나 게임에서 기존의 섀도 볼륨을 구현할 수 있는 방법을 보여 줍니다. 코드에는 다음 프로세스가 포함됩니다.
+Windows8에서는 기능 수준 9 \ _ 1 및 9 \_3 d 깊이 비교 기능이 있습니다. 이제 섀도 볼륨이 포함된 렌더링 코드를 DirectX 11로 마이그레이션할 수 있으므로 Direct3D 11 렌더러가 하위 수준인 기능 수준 9 디바이스와 호환됩니다. 이 연습에서는 깊이 테스트를 사용하여 Direct3D 11 앱이나 게임에서 기존의 섀도 볼륨을 구현할 수 있는 방법을 보여 줍니다. 코드에는 다음 프로세스가 포함됩니다.
 
 1.  섀도 매핑을 위한 Direct3D 장치 리소스 만들기
 2.  깊이 맵을 만드는 렌더링 단계 추가
@@ -70,7 +70,7 @@ Windows8 adde d 깊이 비교 기능 수준 9\_1 및 9\_3 기능을 합니다. �
 ## <a name="prerequisites"></a>필수 조건
 
 
-[UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 아직 템플릿 필요 없지만,이 연습에서는 코드 샘플을 빌드하려면 Microsoft Visual Studio2015 필요 합니다.
+[UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿으로 아직 필요 하지 않지만이 연습에 대 한 코드 샘플을 작성 하려면 Microsoft Visual Studio2015가 필요 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

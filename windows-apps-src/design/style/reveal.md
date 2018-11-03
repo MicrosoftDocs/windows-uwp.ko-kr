@@ -13,11 +13,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: db71916c9297296c4d3bb89e05032c5f413f332e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924205"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986112"
 ---
 # <a name="reveal-highlight"></a>강조
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 92dc9437dc2417b8f3da99df7cd6d6eb0c8edd1b
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5922955"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981800"
 ---
 # <a name="lost-devices"></a>분실 장치
 

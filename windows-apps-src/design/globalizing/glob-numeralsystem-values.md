@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f02b1f389a118ee5505c40d8c6dde1ee9472a0f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5942830"
+ms.locfileid: "5981612"
 ---
 # <a name="numeralsystem-values"></a>NumeralSystem 값
 

@@ -7,17 +7,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 동시 사용
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e982d7c5eb1ff8365d2aa527f75d181905784a0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4506176dcd62a4699c57343c50dfc1b0e7a40b14
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927137"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5986155"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Xbox Live 동시 사용 데이터 가져오기
 
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 시간 범위 동안 매분, 매시간, 매일 [Xbox Live 지원 게임](../xbox-live/index.md)을 플레이하는 평균 고객 수에 대한 근 실시간 사용 데이터(5~15분의 대기 시간이 있음)를 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [Xbox 분석 보고서](../publish/xbox-analytics-report.md)를 통해서도 확인할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 시간 범위 동안 매분, 매시간, 매일 [Xbox Live 지원 게임](../xbox-live/index.md)을 플레이하는 평균 고객 수에 대한 근 실시간 사용 데이터(5~15분의 대기 시간이 있음)를 가져옵니다. 이 정보는 파트너 센터에서 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 에 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](../xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](../xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
