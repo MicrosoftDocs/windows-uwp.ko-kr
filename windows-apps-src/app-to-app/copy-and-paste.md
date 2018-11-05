@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f730d01ba019a220658bc94be5f0a18da6b217f5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992601"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6025628"
 ---
 # <a name="copy-and-paste"></a>복사 및 붙여넣기
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 592467707c67e82531af31c52ba38fbfb04080db
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5997384"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6044649"
 ---
 # <a name="post-jsonusersbatchscidssciddatapathandfilenamejson"></a>POST (/json/users/batch/scids/{scid}/data/{pathAndFileName},json)
 동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다. 파일 다운로드에 요청 URI에 의해 결정 됩니다. 요청 본문의 파일을 다운로드 하려면 사용자의 XUIDs 목록이 포함 되어 있습니다. 응답 본문에는 고유한 집합이 헤더를 사용 하 여 특정 사용자에 대 한 파일을 나타내는 각 부분을 사용 하 여 다중 파트 MIME 메시지를 됩니다. 성공 및 실패 혼합 수에 대 한 응답 부분에 대 한 두는 것이 가능 합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

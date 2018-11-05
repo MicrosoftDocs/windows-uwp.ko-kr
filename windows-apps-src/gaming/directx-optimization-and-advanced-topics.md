@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 최적화, 다중 샘플링, 스왑 체인
 ms.localizationpriority: medium
 ms.openlocfilehash: e1a9b16dcf8c40c2b1db4af172d97009563e677a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971012"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6025986"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>DirectX 게임에 대한 최적화 및 고급 항목
 

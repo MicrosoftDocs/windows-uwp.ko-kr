@@ -9,11 +9,11 @@ keywords: Windows 10 s, 항상 연결, 제한, ARM 기반 Windows10
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
 ms.openlocfilehash: 24afc8a876b976f21d0f4ebd5892ceef7c403018
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5990146"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6025874"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>ARM의 앱 및 환경 제한
 ARM 기반 Windows10은 다음과 같은 필수 제한 사항이 있습니다.
