@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8fc44300376efb5b56f390457e516f35a3ec4202
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973435"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036683"
 ---
 # <a name="get-file-properties"></a>파일 속성 가져오기
 
@@ -47,7 +47,7 @@ ms.locfileid: "5973435"
 
 많은 최상위 파일 속성은 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스의 구성원으로 액세스할 수 있습니다. 이러한 속성에는 파일 특성, 콘텐츠 형식, 만든 날짜, 표시 이름, 파일 형식 등이 포함됩니다.
 
-**참고** **picturesLibrary** 기능을 선언 해야 합니다.
+**참고**을 **picturesLibrary** 접근 권한 값을 선언 해야 합니다.
 
  
 

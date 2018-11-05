@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 사용자 지정, 앱, 홍보, 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989709"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037839"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 
@@ -47,7 +47,7 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>앱 구입이 변환으로 인정되는 방법 이해
 
-사용자 지정 캠페인 *변환*은 고객이 사용자 지정 캠페인을 통해 홍보된 URL을 클릭한 결과로 이루어진 구입입니다. [에 대 한 변환으로 인정 되는 및 [구입 보고서](acquisitions-report.md) 에 **캠페인 ID 별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에 대 한 변환으로 인정 되는 다른 시나리오는 프로그래밍 방식으로 캠페인 ID를 검색](#programmatically).
+사용자 지정 캠페인 *변환*은 고객이 사용자 지정 캠페인을 통해 홍보된 URL을 클릭한 결과로 이루어진 구입입니다. [에 대 한 변환으로 인정 되는 및 [구입 보고서](acquisitions-report.md) 에 **캠페인 ID 별 앱 페이지 보기 및 변환** 및 **총 캠페인 변환** 차트에 대 한 변환으로 인정 되는 다른 시나리오는 프로그래밍 방식으로 캠페인 ID를 검색](#programmatically)합니다.
 
 ### <a name="qualifying-conversions-in-the-acquisitions-report"></a>구입 보고서에서 변환으로 인정
 
@@ -195,4 +195,4 @@ public async Task<string> GetCampaignId()
 
 3.  URL을 여러 번 클릭하고 앱 페이지를 방문할 때마다 UWP 앱 또는 브라우저 페이지를 닫습니다. 앱 페이지 방문 중 **하나** 동안 앱을 구입하여 변환을 생성합니다. URL을 클릭한 총 횟수를 계산합니다.
 
-4. 예상 된 페이지 보기 및 변환 [구입 보고서](acquisitions-report.md)의 **총 캠페인 변환** 및 **캠페인 ID 별 앱 페이지 보기 및 변환** 차트에 표시 되며 앱의 코드를 테스트 수 있는지 여부를 확인 하는지 여부를 확인 합니다. 성공적으로 위에서 설명한 Api를 사용 하 여 캠페인 ID를 검색 합니다.
+4. 예상 된 페이지 보기 및 변환 [구입 보고서](acquisitions-report.md) **총 캠페인 변환** 및 **캠페인 ID 별 앱 페이지 보기 및 변환** 차트에 표시 되며 앱의 코드를 테스트 수 있는지 여부를 확인 하는지 여부를 확인 합니다. 성공적으로 위에서 설명한 Api를 사용 하 여 캠페인 ID를 검색 합니다.

@@ -9,11 +9,11 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972596"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035645"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
 
@@ -58,7 +58,7 @@ Windows10 버전 1607에서는 **Running in foreground** 및 **Running in backgr
 |**ClosedByUser** | 사용자가 태블릿 모드에서 닫기 제스처를 사용하거나 Alt+F4를 사용하여 앱을 닫았습니다. 사용자가 앱을 닫으면 먼저 일시 중단된 다음 종료됩니다. | 기본적으로 앱이 Terminated 상태로 진행하는 동일한 단계를 거쳤기 때문에 Terminated 상태와 동일한 방식으로 처리합니다.|
 |**Running** | 사용자가 앱을 다시 실행하려고 할 때 앱이 이미 열려 있었습니다. | 없음. 다른 앱 인스턴스가 실행되지 않았습니다. 이미 실행 중인 인스턴스가 활성화된 것뿐입니다. |
 
-**참고** *현재 사용자 세션* 은 Windows 로그온 기준입니다. 현재 사용자가 Windows를 로그오프, 종료 또는 다시 시작하지 않는 한 잠금 화면 인증, 사용자 전환 등의 이벤트가 발생해도 현재 사용자 세션이 유지됩니다. 
+**참고** *현재 사용자 세션* 은 Windows 로그온 기준으로 합니다. 현재 사용자가 Windows를 로그오프, 종료 또는 다시 시작하지 않는 한 잠금 화면 인증, 사용자 전환 등의 이벤트가 발생해도 현재 사용자 세션이 유지됩니다. 
 
 주의해야 할 한 가지 중요한 상황은 디바이스에 충분한 리소스가 있을 경우 운영 체제에서 응답성을 최적화하기 위해 해당 동작을 옵트인한 자주 사용하는 앱을 사전 실행한다는 것입니다. 사전 실행된 앱은 백그라운드에서 실행된 후 바로 일시 중단되므로 사용자가 앱으로 전환할 경우 앱을 실행하는 것보다 더 빠르게 다시 시작할 수 있습니다.
 
@@ -85,7 +85,7 @@ Windows10 버전 1607에서는 **Running in foreground** 및 **Running in backgr
 
 이러한 메서드에 대한 이벤트 데이터에는 활성화되기 전의 앱 상태를 알려주는, 위에서 살펴본 것과 동일한 [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) 속성이 포함되어 있습니다. 위의 [앱 실행](#app-launch) 섹션에서 설명한 것과 동일한 방식으로 상태와 수행해야 하는 작업을 해석합니다.
 
-**참고**컴퓨터의 관리자 계정을 사용 하 여 로그온 한 경우에 UWP 앱을 활성화할 수 없습니다.
+**참고**컴퓨터의 관리자 계정을 사용 하 여 로그온 하는 경우에 UWP 앱을 활성화할 수 없습니다.
 
 ## <a name="running-in-the-background"></a>백그라운드에서 실행 ##
 
@@ -183,9 +183,9 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 일반적으로 사용자는 앱을 닫을 필요가 없으며 Windows에서 관리합니다. 그러나 사용자는 닫기 제스처를 사용하거나 Alt+F4를 누르거나 Windows Phone에서 작업 전환기를 사용하여 앱을 닫도록 선택할 수 있습니다.
 
-사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows8.1 이상, 사용자가 앱이 닫힌 후 앱 화면에서 제거 되 및 않고 전환 목록 확실히 종료 되지.
+사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows8.1 이상, 사용자가 앱이 닫힌 후 앱 화면에서 제거 및 전환 목록 되었지만 명시적으로 중지 되었습니다.
 
-**사용자가 종료 동작:** 앱을 Windows에서 닫을 때 보다 사용자가 닫을 때와 다른 작업을 수행 해야 하는 경우 사용자 인지 Windows에서 앱을 종료 여부를 확인할 활성화 이벤트 처리기를 사용할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
+**닫힌 사용자 동작:** 앱을 Windows에서 닫을 때 보다 사용자가 닫을 때와 다른 작업을 수행 해야 하는 경우 사용자 인지 Windows 앱을 종료 여부를 확인할 활성화 이벤트 처리기를 사용할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
 
 반드시 필요한 경우가 아니면 앱이 자동으로 닫히지 않도록 하는 것이 좋습니다. 예를 들어 앱이 메모리 누수를 발견한 경우 사용자의 개인 데이터 보안을 위해 스스로 닫을 수 있습니다.
 

@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 6035463473eb6ddb1a3ec7fa554f9a12b8f764fc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976393"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037083"
 ---
 # <a name="performance-page-dev-home"></a>성능 페이지 (개발자 홈)
    
@@ -22,7 +22,7 @@ ms.locfileid: "5976393"
 개발자 홈의 **성능** 페이지에는 다양 한 디스크 작업 및 문제 해결을 위해 CPU 사용량 조건 시뮬레이트합니다.   
  ![개발자 홈의 성능 페이지](images/devhome_performance.png)   
   
-**성능** 페이지에는 다음 창이:   
+**성능** 페이지는 다음과 같은 창을 포함 되어 있습니다.   
  
    *  [디스크 시뮬레이션](#ID4EEB)  
    *  [CPU 시뮬레이션](#ID4EOB)  
@@ -44,7 +44,7 @@ ms.locfileid: "5976393"
 ## <a name="cpu-simulation"></a>CPU 시뮬레이션  
    
   
-**CPU 시뮬레이션** 창 CPU6에 대 한 작업을 시뮬레이션 (공유 core).   
+CPU6에 대 한 작업을 시뮬레이션 하는 **CPU 시뮬레이션** 창 (공유 core).   
   
 <a id="ID4EYB"></a>
 

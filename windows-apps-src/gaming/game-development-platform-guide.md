@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980882"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034642"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>UWP 앱용 게임 기술
 
@@ -21,10 +21,10 @@ ms.locfileid: "5980882"
 
 이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다.
 
-##  <a name="benefits-of-windows10-for-game-development"></a>게임 개발을 위한 Windows10의 이점
+##  <a name="benefits-of-windows10-for-game-development"></a>게임 개발에 대 한 Windows10의 이점
 
 
-Windows10에서 UWP의 도입 되면서, Windows10 제목 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 Windows10 클라이언트의 증가 마이그레이션할 수 있기 때문입니다. 이 두 가지의 조합은 Windows10 제목 아주 많은 고객이 Microsoft Store를 통해 연결할 수 있는 것을 의미 합니다.
+Windows10에 UWP 도입 되면서 Windows10 타이틀이 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 Windows10 클라이언트의 증가 마이그레이션할 수 있기 때문입니다. 이 두 가지의 조합은 Windows10 제목 아주 많은 고객이 Microsoft Store를 통해 연결할 수 있는 것을 의미 합니다.
 
 또한 Windows10 게임에 특히 유용한 많은 새로운 기능을 제공 합니다.
 
@@ -323,7 +323,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
 
 ## <a name="xbox-live-services"></a>Xbox Live 서비스
 
-[Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 모든 개발자를 UWP 게임에 Xbox Live를 통합 하 고 Xbox One 및 Windows10을 게시할 수 있습니다. 최소한의 개발 시간을 투자하여 로그인, 상태, 순위표 등의 Xbox Live 소셜 환경을 타이틀과 통합하세요. Xbox Live 소셜 기능은 5500만이 넘는 활성 사용자에게 인지도를 확산시켜 고객을 조직적으로 유치할 수 있도록 설계되었습니다.
+[Xbox Live 크리에이터 스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 개발자를 UWP 게임에 Xbox Live를 통합 하 고 Xbox One 및 Windows10을 게시할 수 있습니다. 최소한의 개발 시간을 투자하여 로그인, 상태, 순위표 등의 Xbox Live 소셜 환경을 타이틀과 통합하세요. Xbox Live 소셜 기능은 5500만이 넘는 활성 사용자에게 인지도를 확산시켜 고객을 조직적으로 유치할 수 있도록 설계되었습니다.
 
 훨씬 다양한 Xbox Live 기능을 사용하고 전용 마케팅 및 개발 지원을 이용하고 메인 Xbox One 스토어에 추천 앱으로 등록되고 싶다면 [ID@Xbox](http://www.xbox.com/developers/id) 프로그램에 지원하세요. Xbox Live 크리에이터스 프로그램 및 ID@Xbox프로그램에 제공되는 기능을 살펴보려면 [기능표](../xbox-live/developer-program-overview.md#feature-table)를 참조하세요.
 

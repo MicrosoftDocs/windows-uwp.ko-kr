@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d24f40c32cfcf3d0efe8597c4d955ae4146cf9e8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974261"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035781"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -45,7 +45,7 @@ Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 
 또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러링된 양식이 있습니다.
 
 ## <a name="using-the-icons"></a>아이콘 사용
-C# /vb/c + + 및 XAML 앱을 개발 하는 경우에 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)를 사용 하 여 Segoe MDL2 자산에서 지정 된 문자를 사용할 수 있습니다. 
+C# /vb/c + + 및 XAML 앱을 개발 하는 경우에 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)와 함께 Segoe MDL2 자산에서 지정 된 문자 모양을 사용할 수 있습니다. 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -57,7 +57,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-정적 리소스를 사용할 수도 있습니다 `SymbolThemeFontFamily` **Segoe MDL2 자산**글꼴 이름으로 지정 하는 대신 액세스할 수 있습니다.
+고정 리소스를 사용할 수도 있습니다 `SymbolThemeFontFamily` **Segoe MDL2 자산**글꼴 이름으로 지정 하지 않고 액세스할 수 있습니다.
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```

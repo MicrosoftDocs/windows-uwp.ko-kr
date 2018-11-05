@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b506b439ff98da873823bd586bb5388fe360b2ba
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990875"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035502"
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
 
@@ -33,7 +33,7 @@ ms.locfileid: "5990875"
 
 **입력.** 텍스트는 검색 입력의 가장 일반적인 모드 이며이 가이드의 핵심입니다. 다른 일반적인 입력 모드로는 음성과 카메라가 있지만 이들의 경우 일반적으로 장치 하드웨어와 연결하는 기능이 필요하며 추가 컨트롤 또는 앱 내 사용자 지정 UI가 필요할 수 있습니다.
 
-**0 입력.** 사용자가 입력된 필드를 활성화 되지만 사용자가 텍스트를 입력 한 전에 "0 입력된 캔버스." 라는 것 표시할 수 있습니다 0 입력 캔버스는 일반적으로 사용자가 쿼리를 입력하기 시작하면 [자동 제안](auto-suggest-box.md)이 이 콘텐츠를 대체하도록 앱 캔버스에 나타납니다. 최근 검색 기록, 인기 앱 검색, 문맥 검색 제안, 힌트 및 팁은 모두 0 입력 상태에 사용하기 좋은 후보입니다.
+**0 입력.** 사용자가 입력된 필드를 활성화 되지만 사용자가 텍스트를 입력 하기 전에 "0 입력된 캔버스." 라는 것 표시할 수 있습니다 0 입력 캔버스는 일반적으로 사용자가 쿼리를 입력하기 시작하면 [자동 제안](auto-suggest-box.md)이 이 콘텐츠를 대체하도록 앱 캔버스에 나타납니다. 최근 검색 기록, 인기 앱 검색, 문맥 검색 제안, 힌트 및 팁은 모두 0 입력 상태에 사용하기 좋은 후보입니다.
 
 ![0 입력 캔버스에 Cortana를 사용한 예](images/search-cortana-example.png)
 

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind-새 Windows 10-실행 짧은 시간 내에 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 합니다.
+description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind-새 Windows 10-실행 짧은 시간 내에 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 됩니다.
 title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9674aeed846fab53de3ecb057ebcc46dbda560c3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972847"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034610"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
-**참고**바인딩 **{x: Bind}** 를 사용 하 여 (및는 모든 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
+**참고**바인딩 **{x: Bind}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
 **{X: Bind}** 태그 확장 즉 Windows10에 대 한 새- **{Binding}** 하지 않아도 됩니다. **{x: Bind}** **{Binding}** 및 향상 된 디버깅을 지원 보다 적은 메모리로 짧은 시간에 실행 됩니다.
 
@@ -113,7 +113,7 @@ _참고: C# 스타일 캐스트 구문은 연결된 속성 구문보다 더 유�
 
 ## <a name="functions-in-binding-paths"></a>바인딩 경로의 함수
 
-Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것이 바인딩 태그에서 여러 시나리오 수 있도록 하는 강력한 기능입니다. 자세한 내용 [은 함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
+Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이것은 태그에서 몇 가지 시나리오를 활성화 하는 데이터 바인딩에 대 한 강력한 기능입니다. 세부 정보에 대 한 [함수 바인딩](../data-binding/function-bindings.md) 을 참조 하세요.
 
 ## <a name="event-binding"></a>이벤트 바인딩
 

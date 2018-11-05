@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 제품 보기
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e5d6376420a1ee4ac166330371cf6e058d3476e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979108"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035562"
 ---
 # <a name="query-for-products"></a>제품에 대한 쿼리
 
@@ -134,7 +134,7 @@ CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | devOfferId           | 문자열             | 앱에서 바로 구매 시 제공되는 ID입니다.              | 아니요       |
 | endDate              | datetime           | 항목의 종료 날짜입니다.              | 예      |
 | fulfillmentData      | 문자열             | 해당 없음         | 아니요       |
-| inAppOfferToken      | 문자열             | 파트너 센터에서 해당 항목에 할당 된 개발자가 지정한 제품 ID 문자열입니다. 예제에서는 제품 ID는 *product123*있습니다. | 아니요       |
+| inAppOfferToken      | 문자열             | 파트너 센터에서 해당 항목에 할당 된 개발자가 지정한 제품 ID 문자열입니다. 예: 제품 ID는 *product123*있습니다. | 아니요       |
 | itemId               | 문자열             | 사용자가 소유한 다른 항목에서 이 컬렉션 항목을 식별하는 ID입니다. 이 ID는 제품마다 고유합니다.   | 예      |
 | localTicketReference | 문자열             | 요청 본문에서 이전에 제공된 *localTicketReference*의 ID.                  | 예      |
 | modifiedDate         | datetime           | 이 항목을 마지막으로 수정한 날짜입니다.              | 예      |

@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 91a1ca0ee99833280aaa41ca4d9c94d043a78e0a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972431"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034712"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
@@ -89,7 +89,7 @@ Page1.xaml에 다음 콘텐츠를 추가합니다.
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   루트 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) , 그리고 그 이후 자식 요소로 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소는 `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소입니다.
+-   루트 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) 전후 자식 요소로 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소는 `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소입니다.
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
@@ -126,7 +126,7 @@ Page2.xaml에서 다음 콘텐츠를 추가합니다.
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   루트 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) , 그리고 그 이후 자식 요소로 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소는 `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소입니다.
+-   루트 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) 전후 자식 요소로 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소는 `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소입니다.
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
@@ -298,7 +298,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> 여기서 코드 앱의 초기 창 프레임에 대 한 탐색이 실패할 경우 앱 예외를 [**탐색**](https://msdn.microsoft.com/library/windows/apps/br242694) 의 반환 값을 사용 합니다. **Navigate**가 **true**를 반환하면 탐색이 수행됩니다.
+> 여기에 코드는 앱의 초기 창 프레임에 대 한 탐색이 실패할 경우 앱 예외를 [**탐색**](https://msdn.microsoft.com/library/windows/apps/br242694) 의 반환 값을 사용 합니다. **Navigate**가 **true**를 반환하면 탐색이 수행됩니다.
 
 이제 앱을 빌드하고 실행합니다. "Click to go to page 2"라는 링크를 클릭합니다. 맨 위의 "Page 2"라는 두 번째 페이지가 로드되어 프레임에 표시됩니다.
 
@@ -332,7 +332,7 @@ Page1.xaml에서, **HyperlinkButton** 추가한 다음 [**StackPanel**](https://
 </StackPanel>
 ```
 
-에 `HyperlinkButton_Click` Page1.xaml 코드 숨김 파일의 이벤트 처리기는 매개 변수 참조를 추가 합니다 `Text` 속성의는 `name` **TextBox** 는 `Navigate` 메서드.
+에 `HyperlinkButton_Click` Page1.xaml 코드 숨김 파일의 이벤트 처리기는 매개 변수 참조를 추가 합니다 `Text` 속성의는 `name` **TextBox** 에 `Navigate` 메서드.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

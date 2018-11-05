@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b6033a01ee811977b3a37f820217005fdbd80616
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996330"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036723"
 ---
 # <a name="xnull-markup-extension"></a>{x:Null} 태그 확장
 
@@ -32,7 +32,7 @@ XAML 태그에는 속성의 **null** 값을 지정합니다.
 
 초기 기본값은 종속성 속성 간에 다를 수 있으며 **null**이 아닐 수도 있습니다. 또한 많은 종속성 속성이 내부 구현 때문에 태그나 코드를 통해 **null**을 값으로 받을 수 없습니다. 이러한 경우 **{x:Null}** 로 XAML 특성 값을 설정하면 파서 예외가 발생할 수 있습니다.
 
-일부 Windows 런타임 형식은 nullable 형식입니다. nullable 형식에 기본값으로 **null**이 아직 포함되어 있지 않으면 XAML에서 **{x:Null}** 을 사용하여 **null** 값으로 설정할 수 있습니다. VisualC + + 구성 요소 확장을 사용 하는 경우 (C + + CX), nullable 형식으로 표현 됩니다 [**platform:: ibox<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/jj606120.aspx). Microsoft .NET 언어를 사용하는 경우 nullable 형식은 [**Nullable<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)로 표현됩니다.
+일부 Windows 런타임 형식은 nullable 형식입니다. nullable 형식에 기본값으로 **null**이 아직 포함되어 있지 않으면 XAML에서 **{x:Null}** 을 사용하여 **null** 값으로 설정할 수 있습니다. VisualC + + 구성 요소 확장을 사용 하는 경우 (C + + CX), nullable 형식으로 표현 됩니다 [**platform:: ibox<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/jj606120.aspx)합니다. Microsoft .NET 언어를 사용하는 경우 nullable 형식은 [**Nullable<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)로 표현됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 

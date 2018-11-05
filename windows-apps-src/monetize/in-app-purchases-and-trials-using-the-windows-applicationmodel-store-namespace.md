@@ -9,11 +9,11 @@ ms.topic: article
 keywords: uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 28fe27cc4464598414fec11d6812e2e9ea377aff
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978958"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036363"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 
@@ -22,7 +22,7 @@ ms.locfileid: "5978958"
 이 섹션의 문서에서는 몇 가지 일반적인 시나리오에서 **Windows.ApplicationModel.Store** 네임스페이스의 멤버를 사용하기 위한 자세한 지침과 코드 예제를 제공합니다. UWP 앱의 앱에서 바로 구매와 관련된 기본 개념의 개요를 보려면 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요. **Windows.ApplicationModel.Store** 네임스페이스를 사용하여 평가판 및 앱에서 바로 구매를 구현하는 방법을 보여 주는 전체 샘플은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)을 참조하세요.
 
 > [!IMPORTANT]
-> **Windows.ApplicationModel.Store** 네임스페이스는 새 기능에서 더 이상 업데이트되지 않습니다. 프로젝트가 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우(즉, Windows 10, 버전 1607 이상을 대상으로 함), [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요. **Windows.ApplicationModel.Store** 네임 스페이스는 앱 또는 파트너 센터에서 개발 샌드박스를 사용 하는 게임 또는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 를 사용 하는 Windows 데스크톱 응용 프로그램에서 지원 되지 않습니다 (예를 들어,이 경우는 모든 게임에 대 한 Xbox Live와 통합). 해당 제품은 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
+> **Windows.ApplicationModel.Store** 네임스페이스는 새 기능에서 더 이상 업데이트되지 않습니다. 프로젝트가 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우(즉, Windows 10, 버전 1607 이상을 대상으로 함), [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요. **Windows.ApplicationModel.Store** 네임 스페이스는 앱 또는 파트너 센터에서 개발 샌드박스를 사용 하는 게임 또는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 를 사용 하 여 Windows 데스크톱 응용 프로그램에서 지원 되지 않습니다 (예를 들어,이 대/소문자는 모든 게임에 대 한 Xbox Live와 통합). 해당 제품은 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>CurrentApp 및 CurrentAppSimulator 클래스 시작
 
@@ -390,7 +390,7 @@ WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다
 |  **AppId**  |    예   |  1   |   스토어에서 앱을 식별하는 GUID입니다. 테스트할 임의 GUID일 수 있습니다.        |
 |  **LinkUri**  |    예  |  1   |    스토어 목록 페이지의 URI입니다. 테스트할 임의의 유효한 URI일 수 있습니다.         |
 |  **CurrentMarket**  |    예  |  1   |    고객의 국가/지역입니다.         |
-|  **AgeRating**  |    예  |  1   |     앱의 최소 연령별 등급을 나타내는 정수입니다. 지정 하는 파트너 센터 앱을 제출할 때 동일한 값입니다. 스토어에서 사용되는 값은 3, 7, 12, 16입니다. 이러한 등급에 대한 자세한 내용은 [연령별 등급](../publish/age-ratings.md)을 참조하세요.        |
+|  **AgeRating**  |    예  |  1   |     앱의 최소 연령별 등급을 나타내는 정수입니다. 앱을 제출할 때 파트너 센터에서 지정한 것 같은 값입니다. 스토어에서 사용되는 값은 3, 7, 12, 16입니다. 이러한 등급에 대한 자세한 내용은 [연령별 등급](../publish/age-ratings.md)을 참조하세요.        |
 |  [MarketData](#marketdata-child-of-app)  |    예  |  1개 이상      |    지정된 국가/지역에 대한 앱 정보를 포함합니다. 앱이 나열되는 각 국가/지역에 대한 **MarketData** 요소를 포함해야 합니다.       |    |
 
 <span id="marketdata-child-of-app"/>
