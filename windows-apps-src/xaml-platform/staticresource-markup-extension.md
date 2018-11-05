@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83919cc46694279bc35e046c97acf27c64a196f5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978411"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030475"
 ---
 # <a name="staticresource-markup-extension"></a>{StaticResource} 태그 확장
 
@@ -77,7 +77,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>**{StaticResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
-Microsoft Visual Studio2013 XAML 페이지에서 **{StaticResource}** 태그 확장을 사용 하는 경우 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) 및 앱 수준([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
+Microsoft Visual Studio2013 **{StaticResource}** 태그 확장을 사용 하 여 XAML 페이지의 경우 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) 및 앱 수준([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
 
 리소스 키가 **{StaticResource}** 에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 리소스가 정의되어 있는 사전을 표시할 수 있습니다. 테마 리소스의 경우에는 디자인 타임의 generic.xaml에 적용됩니다.
 

@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 광고 네트워크, 앱 메타데이터
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
 ms.openlocfilehash: 9533b244174cc5770a68f866c722db1781fdd544
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5968853"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029900"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>광고 네트워크용 앱 메타데이터 API
 

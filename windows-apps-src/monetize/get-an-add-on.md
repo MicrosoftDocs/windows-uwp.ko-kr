@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9620b0b7cf4d1ecb583215b2ab0fafe0e82712bf
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5991685"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028964"
 ---
 # <a name="get-an-add-on"></a>추가 기능 가져오기
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 바로 구매 또는 IAP)에 대 한 정보를 검색 합니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 제품 또는 IAP)에 대 한 정보를 검색 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -99,7 +99,7 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 404  | 지정된 추가 기능을 찾을 수 없습니다. |
-| 409  | [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다.  |
+| 409  | [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)있는 파트너 센터 기능을 사용 합니다.  |
 
 
 ## <a name="related-topics"></a>관련 항목

@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3efbbd09cc066a7455ef8d60556345a2ed5b459c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986448"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028533"
 ---
 # <a name="view-app-identity-details"></a>앱 ID 세부 정보 보기
 
 
-**앱 id** 페이지에서 Microsoft Store에서 앱에 할당 된 고유 id와 관련 된 세부 정보를 볼 수 있습니다. 또한이 페이지에 나열 하는 앱의 스토어에 대 한 링크가 얻을 수 있습니다.
+**앱 id** 페이지에서 Microsoft Store에서 앱에 할당 된 고유 id와 관련 된 세부 정보를 볼 수 있습니다. 또한이 페이지에 나열 하는 앱의 스토어에 대 한 링크를 얻을 수 있습니다.
 
 이 정보를 찾으려면 앱 중 하나로 이동하여 왼쪽 탐색 메뉴에서 **앱 관리**를 확장합니다. 그리고 **앱 ID**를 선택하여 이들 세부 정보를 확인합니다.
 

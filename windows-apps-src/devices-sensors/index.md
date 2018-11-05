@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ca78338b501b8c24549b1348c051a02ea62a501
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989153"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030427"
 ---
 # <a name="devices-sensors-and-power"></a>디바이스, 센서 및 전원
 
@@ -35,6 +35,6 @@ ms.locfileid: "5989153"
 | [Bluetooth](bluetooth.md) | 이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용하는 방법을 비롯해 UWP(유니버설 Windows 플랫폼) 앱에 Bluetooth를 통합하는 방법에 대한 문서가 포함되어있습니다. | 
 | [인쇄 및 스캔](printing-and-scanning.md) | 이 섹션에서는 유니버설 Windows 앱에서 인쇄 및 스캔하는 방법을 설명합니다. | 
 | [3D 인쇄](3d-printing.md) | 이 섹션에서는 유니버설 Windows 앱에서 3D 인쇄 기능을 활용하는 방법을 설명합니다. |
-| [NFC 스마트 카드 앱 만들기](host-card-emulation.md) | Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다. 이는 MNO와 결합되어 있지 않은 다른 판매자 또는 개발자에 의해 가능한 결제 솔루션의 다양성을 제한합니다. Windows10 mobile에서는 호스트 카드 에뮬레이션 (HCE) 라는 새로운 카드 에뮬레이션 기술이 도입 되었습니다. HCE 기술을 통해 앱이 NFC 카드 판독기와 직접 통신할 수 있습니다. 이 항목은 호스트 카드 에뮬레이션 (HCE) Windows10 모바일 장치에서 작동 하는 방법 및 고객에 게는 MNO와 공동 작업 없이 실제 카드 대신 휴대폰을 통해 서비스에 액세스할 수 있도록는 HCE 앱을 개발 하는 방법을 보여 줍니다. |
+| [NFC 스마트 카드 앱 만들기](host-card-emulation.md) | Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다. 이는 MNO와 결합되어 있지 않은 다른 판매자 또는 개발자에 의해 가능한 결제 솔루션의 다양성을 제한합니다. Windows10 mobile에서는 호스트 카드 에뮬레이션 (HCE) 라는 새로운 카드 에뮬레이션 기술이 도입 되었습니다. HCE 기술을 통해 앱이 NFC 카드 판독기와 직접 통신할 수 있습니다. 이 항목에서는 호스트 카드 에뮬레이션 (HCE) Windows10 모바일 장치에서 작동 하는 방식 및 고객에 게는 MNO와 공동 작업 없이 실제 카드 대신 휴대폰을 통해 서비스에 액세스할 수 있도록는 HCE 앱을 개발 하는 방법을 보여 줍니다. |
 | [배터리 정보 가져오기](get-battery-info.md) | [<strong>Windows.Devices.Power</strong>](https://msdn.microsoft.com/library/windows/apps/Dn895017) 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다. |
 

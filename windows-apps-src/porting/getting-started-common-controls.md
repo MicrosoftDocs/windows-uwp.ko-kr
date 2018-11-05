@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: db2b4a74b5b40060779dd82764dcf2ed2799b285
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972149"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028248"
 ---
 # <a name="getting-started-common-controls"></a>시작: 공용 컨트롤
 

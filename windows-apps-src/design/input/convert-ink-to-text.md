@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 83142b0a3b24e25f8e7a922d800262f505cd8cc2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971350"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6027919"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
@@ -475,7 +475,7 @@ Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되�
 
 앱이 설치된 필기 인식 엔진 집합을 쿼리하고 그 중 하나를 사용할 수도 있고, 사용자가 기본 언어를 선택할 수도 있습니다.
 
-**참고**  으로 이동 하 여 사용자가 설치 된 언어 목록을 볼 수 **설정-&gt; 시간 및 언어**. 설치된 언어는 **언어** 아래에 나열됩니다.
+**참고**  으로 이동 하 여 사용자가 설치 된 언어 목록을 볼 수 **설정-&gt; 시간 및 언어**합니다. 설치된 언어는 **언어** 아래에 나열됩니다.
 
 새 언어 팩을 설치하고 해당 언어에 대해 필기 인식을 사용하도록 설정하려면 다음과 같이 하세요.
 

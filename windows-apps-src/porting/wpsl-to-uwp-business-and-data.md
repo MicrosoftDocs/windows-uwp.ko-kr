@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 301dcbe95d7509db07d5b7dd11a16460063bbffe
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969328"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6027853"
 ---
 #  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>WindowsPhone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
 
@@ -32,7 +32,7 @@ WindowsPhone Silverlight 앱은 앱이 포그라운드에 없는 동안 작업�
 
 백그라운드에서 대용량 데이터 파일을 전송 하는 WindowsPhone Silverlight 앱 **BackgroundTransferService** 클래스를 사용 합니다. UWP 앱은 [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스의 API를 사용하여 이 작업을 수행합니다. 이러한 기능은 비슷한 패턴으로 전송을 시작하지만 새로운 API에서는 기능과 성능이 개선되었습니다. 자세한 내용은 [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975)을 참조하세요.
 
-앱이 포그라운드에 있는 동안 오디오를 재생 하려면 **Microsoft.Phone.BackgroundAudio** 네임 스페이스의 관리 클래스를 사용 하는 WindowsPhone Silverlight 앱. UWP는 Windows Phone 스토어 앱 모델을 사용합니다. 자세한 내용은 [백그라운드 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140) 및 [백그라운드 오디오](http://go.microsoft.com/fwlink/p/?linkid=619997) 샘플을 참조하세요.
+WindowsPhone Silverlight 앱 **Microsoft.Phone.BackgroundAudio** 네임 스페이스의 관리 되는 클래스를 사용 하 여 앱이 포그라운드에 있는 동안 오디오를 재생 합니다. UWP는 Windows Phone 스토어 앱 모델을 사용합니다. 자세한 내용은 [백그라운드 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140) 및 [백그라운드 오디오](http://go.microsoft.com/fwlink/p/?linkid=619997) 샘플을 참조하세요.
 
 ## <a name="cloud-services-networking-and-databases"></a>클라우드 서비스, 네트워킹 및 데이터베이스
 
@@ -46,7 +46,7 @@ Windows 런타임 형식에 상대 URI가 아니라 절대 URI를 전달합니�
 
 ## <a name="launchers-and-choosers"></a>시작 관리자 및 선택자
 
-메일 작성, 사진 선택, 특정 종류 공유 등과 같은 일반 작업을 수행 하는 운영 체제와 상호 작용할 수는 WindowsPhone Silverlight 앱 시작 관리자 및 선택자 ( **Microsoft.Phone.Tasks** 네임 스페이스에서 찾을 수)를 사용 하 여의 다른 앱과 데이터를 제공 합니다. [Windows Phone Silverlight Windows10 네임 스페이스 및 클래스 매핑을](wpsl-to-uwp-namespace-and-class-mappings.md) 해당 UWP 형식을 찾습니다를 항목의 **Microsoft.Phone.Tasks** 를 검색 합니다. 여기에는 시작 관리자와 선택기라는 비슷한 메커니즘부터 앱 간 데이터 공유에 대한 계약 구현까지 포함됩니다.
+메일 작성, 사진 선택, 특정 종류 공유 등의 일반적인 작업을 수행 하는 운영 체제와 상호 작용할 수 WindowsPhone Silverlight 앱 시작 관리자와 선택기 ( **Microsoft.Phone.Tasks** 네임 스페이스에서 찾을 수)의 다른 앱과 데이터를 제공 합니다. [Windows Phone Silverlight Windows10 네임 스페이스 및 클래스 매핑을](wpsl-to-uwp-namespace-and-class-mappings.md) 해당 UWP 형식을 찾습니다를 항목의 **Microsoft.Phone.Tasks** 를 검색 합니다. 여기에는 시작 관리자와 선택기라는 비슷한 메커니즘부터 앱 간 데이터 공유에 대한 계약 구현까지 포함됩니다.
 
 WindowsPhone Silverlight 앱을 사용 하는 경우, 예를 들어 사진 선택자 작업은 유휴 상태로 전환 되거나 배치할 수 있습니다. UWP 앱은 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하는 동안 활성 및 실행 상태를 유지합니다.
 
@@ -103,7 +103,7 @@ UWP 해당 버전:
     string myFavoriteAuthor = propertySet.ContainsKey(key) ? (string)propertySet[key] : "<none>";
 ```
 
-**Windows.Storage** 네임 스페이스의 하위 집합을 사용할 수 있지만, 많은 WindowsPhone Silverlight 앱에 대 한 더 이상 지원 되지 **IsolatedStorageFile** 를 사용 하 여 i/o 클래스 파일을 수행 합니다. **IsolatedStorageFile** 을 사용 하는 가정할 합니다 WindowsPhone Silverlight 버전 파일을 먼저 읽기 및 쓰기의 및 이후 예제 다음과 같습니다.
+**Windows.Storage** 네임 스페이스의 하위 집합을 사용할 수 있지만, 많은 WindowsPhone Silverlight 앱에 대 한 더 이상 지원 되지 **IsolatedStorageFile** 를 사용 하 여 i/o 클래스 파일을 수행 합니다. **IsolatedStorageFile** 을 사용 하는 있다고 가정 합니다 WindowsPhone Silverlight 버전 파일을 먼저 읽기 및 쓰기의 및 이후 예제 다음과 같습니다.
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";

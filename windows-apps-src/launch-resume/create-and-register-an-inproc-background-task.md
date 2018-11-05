@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 백그라운드 작업
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 1eeac0239bd0c6df38f82fa185c1ed6f7eb3f9dc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995351"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028483"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>In-process 백그라운드 작업 만들기 및 등록
 

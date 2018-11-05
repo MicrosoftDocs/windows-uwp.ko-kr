@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
 ms.openlocfilehash: d28ed1fce79a815155180ab8a3c708e2c8bf8916
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970926"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029591"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -22,7 +22,7 @@ Windows 10 버전 1803부터 [Windows.Graphics.Capture](https://docs.microsoft.c
 화면 캡처를 통해 개발자는 최종 사용자가 캡처할 디스플레이 또는 응용 프로그램 창을 선택하기 위해 보안 시스템 UI를 호출하고 적극적으로 캡처된 항목 주위에 있는 시스템을 통해 노란색 알림 테두리가 표시됩니다. 여러 개의 동시 캡처 세션의 경우 캡처 중인 각 항목 주위에 노란색 테두리가 그려집니다.
 
 > [!NOTE]
-> 화면 캡처 Api는 데스크톱 및 Windows Mixed Reality 몰입 형 헤드셋 에서만 지원 됩니다.
+> 화면 캡처 Api는 데스크톱 및 Windows Mixed Reality 몰입 형 헤드셋에만 지원 됩니다.
 
 ## <a name="add-the-screen-capture-capability"></a>화면 캡처 기능 추가
 
@@ -70,7 +70,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. (예: **MainPage.xaml.cs**) 응용 프로그램의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 이렇게 하면 자동으로 하는 경우, 실행할 수 있습니다 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록 하지만:
+UI 코드 이기 때문에 UI 스레드에서 호출 해야 합니다. 응용 프로그램 (예: **MainPage.xaml.cs**)의 페이지에 대 한 코드 숨김 파일에서 호출 하는 경우 이렇게 하면 자동으로 하지만, 찾도록 할 수 있습니다 다음 코드를 사용 하 여 UI 스레드에서 실행 되도록:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -165,10 +165,10 @@ _framePool.FrameArrived += (s, a) =>
 
 ## <a name="putting-it-all-together"></a>요약
 
-다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예로 나와 있습니다. 이 샘플에서는 정해 졌 단추 프런트 엔드를 클릭할 때 **Button_ClickAsync** 메서드를 호출 합니다.
+다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예로 나와 있습니다. 이 샘플에서는 프런트 엔드에 단추가 있는 클릭 하면 **Button_ClickAsync** 메서드를 호출 합니다.
 
 > [!NOTE]
-> 이 코드 조각에서는 [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링 하기 위한 라이브러리를 사용 합니다. 해당 프로젝트에 대해 설정 하는 방법에 대 한 정보에 대 한 설명서를 참조 하세요.
+> 이 코드 조각에서는 [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), 2D 그래픽 렌더링 하기 위한 라이브러리를 사용 합니다. 프로젝트에 대해 설정 하는 방법에 대 한 내용은 해당 설명서를 참조 하세요.
 
 ```cs
 using Microsoft.Graphics.Canvas;

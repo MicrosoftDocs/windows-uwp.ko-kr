@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, 피드백 허브, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a92f839d122f6dbdf45693c99f984317421961d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987475"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030676"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 
-피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예: 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 피드백 허브를 통해 앱에 대 한 제출 되는 모든 고객 피드백 수집 되며 문제, 제안 및 좋아요를 하나의 보고서에서 고객이 제출한 볼 수 있도록 파트너 센터에서 [피드백 보고서](../publish/feedback-report.md) 에서 귀하에 게 제공 됩니다.
+피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예: 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 피드백 허브를 통해 앱에 대 한 제출 되는 모든 고객 피드백 수집 되어 문제, 제안 및 좋아요를 하나의 보고서에서 고객이 제출한 볼 수 있도록 파트너 센터에서 [피드백 보고서](../publish/feedback-report.md) 에서 귀하에 게 제공 됩니다.
 
 앱에서 피드백 허브를 시작하려면 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 제공하는 API를 사용합니다. 이 API를 사용하여 디자인 지침을 따르는 앱의 UI 요소에서 피드백 허브를 시작하는 것이 좋습니다.
 

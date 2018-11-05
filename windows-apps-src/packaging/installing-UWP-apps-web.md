@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982712"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029657"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>웹 페이지에서 UWP 앱 설치
 
@@ -33,7 +33,7 @@ ms.locfileid: "5982712"
 1. 웹 서버를 바이트 범위 요청 (HTTP/1.1)를 지원 해야 합니다.
     - HTTP/1.1 프로토콜을 지 원하는 서버 바이트 범위 요청에 대 한 지원이 있어야 합니다. 
 2. 웹 서버를 Windows 10 앱 패키지 콘텐츠 유형에 대해 알아야
-    - [웹 구성 파일](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types) 의 일부로 새 콘텐츠 형식을 선언 하는 방법은 다음과 같습니다.
+    - 다음은 [웹 구성 파일](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types) 의 일부로 새 콘텐츠 형식을 선언 하는 방법
 
 ### <a name="how-to-enable-this-on-a-webpage"></a>웹 페이지에서 이를 활성화하는 방법 
 웹 사이트에서 앱 패키지를 호스팅하려는 앱 개발자는 다음 단계를 따라야 합니다.

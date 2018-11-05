@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Microsoft Store 앱 실행
-description: 이 항목에서는 ms-windows-store URI 스키마에 대해 설명합니다. 앱이 URI 체계를 사용 하 여 Microsoft Store 앱을 실행 하는 저장소의 특정 페이지를 수 있습니다.
+description: 이 항목에서는 ms-windows-store URI 스키마에 대해 설명합니다. 앱은 스토어의 특정 페이지를 Microsoft Store 앱을 시작 하려면이 URI 체계를 사용할 수 있습니다.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.author: twhitney
 ms.date: 02/08/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987764"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030495"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Microsoft Store 앱 열기
 

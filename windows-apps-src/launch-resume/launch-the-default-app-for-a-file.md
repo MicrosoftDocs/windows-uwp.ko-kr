@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 736018fbf966b547c3dd41e245149d498c1231e3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973515"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028659"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>파일에 대한 기본 앱 시작
 
@@ -441,7 +441,7 @@ void MainPage::DefaultLaunch()
 > [!NOTE]
 > Windows 고려 같은 여러 가지 요소 예를 들어 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 앱 화면, 화면 방향 등에 수 있습니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 작업 동작이 보장되지 않습니다.
 
-**모바일 디바이스 패밀리:** [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 모바일 디바이스 패밀리에서 지원 되지 않습니다.
+**모바일 디바이스 패밀리:** [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 모바일 장치 패밀리에서 지원 되지 않습니다.
 
 ```csharp
 async void DefaultLaunch()

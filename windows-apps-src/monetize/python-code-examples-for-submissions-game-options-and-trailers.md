@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, python
 ms.localizationpriority: medium
 ms.openlocfilehash: 86c753e51d15b142cdcd7e54b3ed0304d13169b6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983901"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029258"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Python 샘플: 앱의 게임 옵션과 예고편 제출
 

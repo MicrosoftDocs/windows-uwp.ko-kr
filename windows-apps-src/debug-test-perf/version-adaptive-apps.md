@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b96fafe380c08c74c4e411c7d559cc961c6da1ed
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973243"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030346"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 앱: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 
@@ -62,7 +62,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 
 출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/Home/BuildWithWindows) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
 
- Windows 10 업데이트에 대 한 자세한 내용은 [Windows 10 릴리스 정보를](https://technet.microsoft.com/windows/release-info)참조 하세요. Windows 10에 대 한 중요 정보에 대 한 수명 주기 지원 [Windows 수명 주기 갖고 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)를 참조 하십시오.
+ Windows 10 업데이트에 대 한 자세한 내용은 [Windows 10 릴리스 정보를](https://technet.microsoft.com/windows/release-info)참조 하세요. Windows 10에 대 한 중요 정보에 대 한 지원 수명 주기 [Windows 수명 주기 정보 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)를 참조 하십시오.
 
 ## <a name="perform-api-checks"></a>API 검사 수행
 
