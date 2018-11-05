@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, Java
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a0df9fe873ab7d7330e06a18bb1816df3157d7a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970797"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039087"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java 샘플: 앱, 추가 기능, 플라이트 제출
 
@@ -70,7 +70,7 @@ ms.locfileid: "5970797"
 
 ## <a name="create-an-app-submission"></a>앱 제출 만들기
 
-다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 앱 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewApplicationSubmission``` 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 하 고 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewApplicationSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 앱 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewApplicationSubmission``` 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만듭니다 및 업데이트 하 고 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewApplicationSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 해당 메서드를 통해 [지정된 앱의 데이터 가져오기](get-an-app.md) 작업을 수행합니다.
 2. 다음으로 [앱의 현재 보류 중인 제출을 삭제](delete-an-app-submission.md)합니다(보류 중인 제출이 있을 경우).
@@ -85,7 +85,7 @@ ms.locfileid: "5970797"
 
 ## <a name="create-an-add-on-submission"></a>추가 기능 제출 만들기
 
-다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 추가 기능 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewInAppProductSubmission``` 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 및 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewInAppProductSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 추가 기능 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewInAppProductSubmission``` 메서드에서 마지막으로 게시 된 제출의 복제본으로 새 제출을 만든 다음 업데이트 및 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewInAppProductSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 해당 메서드를 통해 [지정된 추가 기능의 데이터 가져오기](get-an-add-on.md) 작업을 수행합니다.
 2. 다음으로 [추가 기능의 현재 보류 중인 제출을 삭제](delete-an-add-on-submission.md)합니다(보류 중인 제출이 있을 경우).
@@ -100,7 +100,7 @@ ms.locfileid: "5970797"
 
 ## <a name="create-a-package-flight-submission"></a>패키지 플라이트 제출 만들기
 
-다음 예제에서는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 패키지 플라이트 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewFlightSubmission``` 메서드는 마지막으로 게시 된 제출의 복제본으로 새 제출을 만들고 업데이트 및 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewFlightSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
+다음 예제에서는 Microsoft Store 제출 API에서 여러 메서드를 사용하여 패키지 플라이트 제출을 만드는 방법을 보여 줍니다. 이 작업을 수행 하는 ```SubmitNewFlightSubmission``` 메서드에서 마지막으로 게시 된 제출의 복제본으로 새 제출을 만든 다음 업데이트 및 파트너 센터에 복제 한 제출을 커밋합니다. ```SubmitNewFlightSubmission``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
 1. 먼저 이 메서드는 [지정된 패키지 플라이트의 데이터 가져오기](get-a-flight.md) 작업을 수행합니다.
 2. 다음으로 [패키지 플라이트의 현재 보류 중인 제출을 삭제](delete-a-flight-submission.md)합니다(보류 중인 제출이 있을 경우).

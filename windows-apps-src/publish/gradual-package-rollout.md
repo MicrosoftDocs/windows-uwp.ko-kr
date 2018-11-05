@@ -9,15 +9,15 @@ keywords: windows 10, uwp
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
 ms.localizationpriority: medium
 ms.openlocfilehash: ab2db3d34ed223b318d65ec497cc0feb7cb16342
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972375"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039699"
 ---
 # <a name="gradual-package-rollout"></a>점진적 패키지 배포
 
-제출 업데이트를 게시할 때 점진적으로 출시 하도록 업데이트 된 패키지 앱의 고객의 비율을 Windows 10 (Xbox 포함)에서 선택할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들 필요 없이 언제든지 비율을 늘리거나 업데이트를 중지할 수 있습니다. 
+제출에 대 한 업데이트를 게시할 때 점진적으로 출시 하도록 업데이트 된 패키지 앱의 고객의 비율을 Windows 10 (Xbox 포함)에서 선택할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들 필요 없이 언제든지 비율을 늘리거나 업데이트를 중지할 수 있습니다. 
 
 > [!IMPORTANT]
 > 출시 선택은 모든 패키지에 적용되지만 [비즈니스용 Microsoft 스토어](https://businessstore.microsoft.com/store) 또는 [교육용 Microsoft 스토어](https://educationstore.microsoft.com/store)를 통해 [스토어 관리(온라인) 라이선싱](organizational-licensing.md)으로 앱을 가져오는 고객을 포함하여, 패키지 플라이트(Windows.Desktop 빌드 10586 이상, Windows.Mobile 빌드 10586.63 이상 및 Xbox)를 지원하는 OS 버전을 실행하는 고객에게만 적용됩니다. 점진적 패키지 출시를 사용할 경우 아래 설명된 대로 패키지 출시를 완료할 때까지 이전 OS 버전 고객은 최신 제출에서 패키지를 가져오지 않습니다.

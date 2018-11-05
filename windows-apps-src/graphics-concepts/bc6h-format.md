@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: be88f06cd5893f2f67697a54754826440bdf7d18
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989696"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039153"
 ---
 # <a name="bc6h-format"></a>BC6H 형식
 
@@ -32,7 +32,7 @@ BC6H는 다음과 같은 DXGI\_FORMAT 열거 값으로 지정됩니다.
 -   **DXGI\_FORMAT\_BC6H\_UF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용하지 않습니다.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. 이 BC6H 형식은 16비트 부동 소수점 색 채널 값에 부호 비트를 사용합니다.
 
-**참고**  16 비트 부동 소수점 형식 색 채널에 대 한 "반" 부동 소수점 형식에 키라고도 됩니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
+**참고**  16 비트 부동 소수점 형식 색 채널에 대 한 "반" 부동 소수점 형식에 불리는 합니다. 이 형식의 비트 레이아웃은 다음과 같습니다.
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16(부호 없는 부동 소수점) | 5개의 지수 비트 + 11개의 가수 비트              |

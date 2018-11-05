@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fbf6e7ee8a224a6957428fddd11a2922adbecf4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969717"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6038523"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
@@ -23,7 +23,7 @@ ms.locfileid: "5969717"
 
 종속성 속성은 특수한 유형의 속성입니다. 구체적으로 말해, 속성의 값이 Windows 런타임의 일부인 전용 속성 시스템에 의해 추적되고 영향을 받는 속성입니다.
 
-종속성 속성을 지원하기 위해 이 속성을 정의하는 개체는 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)(즉, **DependencyObject** 기본 클래스가 어디서든 상속된 클래스)여야 합니다. 다양 한 UWP 앱의 xaml UI 정의에 사용 하는 유형 **DependencyObject** 하위 되 고 종속성 속성을 지원 합니다. 하지만 이름에 "XAML"이 포함되지 않은 Windows 런타임 네임스페이스에서 가져온 유형은 종속성 속성을 지원하지 않습니다. 이 유형의 속성은 속성 시스템의 종속성 동작을 가지지 않는 일반적인 속성입니다.
+종속성 속성을 지원하기 위해 이 속성을 정의하는 개체는 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)(즉, **DependencyObject** 기본 클래스가 어디서든 상속된 클래스)여야 합니다. 대부분의 XAML 사용 하 여 UWP 앱에 대 한 UI 정의에 사용 하는 형식은 **DependencyObject** 하위 하 고 종속성 속성을 지원 합니다. 하지만 이름에 "XAML"이 포함되지 않은 Windows 런타임 네임스페이스에서 가져온 유형은 종속성 속성을 지원하지 않습니다. 이 유형의 속성은 속성 시스템의 종속성 동작을 가지지 않는 일반적인 속성입니다.
 
 종속성 속성의 목적은 다른 입력(실행 중에 앱 내에서 발생하는 다른 속성, 이벤트 및 상태)을 기반으로 속성 값을 계산하는 체계적인 방법을 제공하는 것입니다. 이러한 다른 입력으로는 다음을 들 수 있습니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "5969717"
 - 리소스 및 스타일 같은 다중 사용 템플릿 지정 패턴
 - 개체 트리의 다른 요소와 부모-자식 관계를 맺음으로써 알게 된 값
 
-종속성 속성을 나타내거나 UI 및 C#, Microsoft Visual Basic 또는 VisualC + + 구성 요소 확장에 대 한 XAML 사용 하 여 Windows 런타임 앱을 정의 하기 위한 프로그래밍 모델의 특정 기능을 지원 (C + + CX) 코드. 이러한 기능은 다음과 같습니다.
+종속성 속성을 나타내거나 UI 및 C#, Microsoft Visual Basic 또는 VisualC + + 구성 요소 확장에 대 한 XAML 사용 하 여 Windows 런타임 앱을 정의 하기 위한 프로그래밍 모델의 특정 기능을 지원 (C + + CX) 코드에 대 한 합니다. 이러한 기능은 다음과 같습니다.
 
 - 데이터 바인딩
 - 스타일
@@ -164,7 +164,7 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 바인딩 연결은 대부분의 데이터 바인딩 시나리오에 필요한 여러 요소 중 하나입니다. 단방향 또는 양방향 바인딩이 적용되려면 원본 속성이 바인딩 시스템과 대상으로 전파되는 변경 알림을 지원해야 합니다. 사용자 지정 바인딩 원본의 경우 이는 속성이 종속성 속성이거나 개체가 [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx)를 지원해야 함을 의미합니다. 컬렉션은 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)를 지원해야 합니다. 특정 클래스는 해당 구현에서 이러한 인터페이스를 지원하므로 데이터 바인딩 시나리오를 위한 기본 클래스로 유용합니다. 이러한 클래스의 예는 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)입니다. 데이터 바인딩 및 데이터 바인딩과 속성 시스템의 관계에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
 > [!NOTE]
-> 형식은 나열 된 여기 Microsoft.NET 데이터 원본을 지원 합니다. C++/CX 데이터 원본은 변경 알림 또는 식별 가능한 동작에 대해 다른 인터페이스를 사용합니다. [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
+> 형식은 여기 나열 된 지원 Microsoft.NET 데이터 원본을 합니다. C++/CX 데이터 원본은 변경 알림 또는 식별 가능한 동작에 대해 다른 인터페이스를 사용합니다. [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
 ### <a name="styles-and-templates"></a>스타일 및 템플릿
 

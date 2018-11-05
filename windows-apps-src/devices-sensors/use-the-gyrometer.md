@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 84c27e35e7e9cc3763a4d1d86348da14f3a18910
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5991995"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039570"
 ---
 # <a name="use-the-gyrometer"></a>회전계 사용
 
@@ -33,7 +33,7 @@ ms.locfileid: "5991995"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트에 알고 있어야 합니다.
+응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트 잘 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 회전계를 지원해야 합니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984467"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039522"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 
@@ -140,11 +140,11 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 ## <a name="windows8-behavior"></a>Windows8 동작
 
-Windows8 **ThemeResource** 태그 확장을 지원 하지 않지만, Windows8.1부터 사용할 수 있습니다. 또한 Windows8은 Windows 런타임 앱에 대 한 테마 관련 리소스를 동적으로 전환을 지원 하지 않았습니다. XAML 템플릿 및 스타일에 대한 테마 변경을 반영하려면 앱을 다시 시작해야 합니다. 이 아니므로 좋은 사용자 환경을 **ThemeResource** 사용법으로 스타일을 사용할 수 있으며 사용자가 수행 하는 경우에 동적으로 테마를 전환할 수 있도록 앱은 다시 컴파일 및 대상 Windows8.1 하는 것이 좋습니다. 앱 Windows8 하지만 Windows8.1에서 실행 중인 Windows8 동작을 사용 하 여 계속 용으로 컴파일입니다.
+Windows8 **ThemeResource** 태그 확장을 지원 하지 않지만, Windows8.1부터 사용할 수 있습니다. 또한 Windows8은 Windows 런타임 앱에 대 한 테마 관련 리소스를 동적으로 전환을 지원 하지 않았습니다. XAML 템플릿 및 스타일에 대한 테마 변경을 반영하려면 앱을 다시 시작해야 합니다. 이 아니므로 좋은 사용자 환경을 **ThemeResource** 사용법으로 스타일을 사용할 수 있으며 사용자가 수행 하는 경우에 동적으로 테마를 전환할 수 있도록 앱은 다시 컴파일 및 대상 Windows8.1 하는 것이 좋습니다. 앱 Windows8 하지만 Windows8.1에서 실행 되 고 Windows8 동작을 사용 하 여 계속 용으로 컴파일입니다.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>**{ThemeResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
-Microsoft Visual Studio2013 XAML 페이지에서 **{ThemeResource}** 태그 확장을 사용 하는 경우 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{ThemeResource"를 입력하기 시작하면 즉시 [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)의 리소스 키가 표시됩니다.
+Microsoft Visual Studio2013 **{ThemeResource}** 태그 확장을 사용 하 여 XAML 페이지의 경우 Microsoft IntelliSense 드롭다운에서 가능한 키 값을 포함할 수 있습니다. 예를 들어 "{ThemeResource"를 입력하기 시작하면 즉시 [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)의 리소스 키가 표시됩니다.
 
 리소스 키가 **{ThemeResource}** 에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 테마 리소스가 정의되어 있는 디자인 타임용 generic.xaml을 표시할 수 있습니다. 테마 리소스는 테마당 한 번 이상 정의되기 때문에 **정의로 이동**은 파일에서 발견되는 첫 번째 정의(**Default**에 대한 정의)로 안내합니다. 다른 정의를 원하는 경우에는 파일 내에서 키 이름을 검색하고 다른 테마의 정의를 찾으면 됩니다.
 

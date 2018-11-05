@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972480"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039173"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX 11 포팅 FAQ
 
@@ -46,7 +46,7 @@ Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하�
 
 [DirectXTK(DirectX 도구 키트)](http://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11에 사용할 수 있는 도우미 클래스를 제공합니다.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>데스크톱 및 Microsoft Store에 대 한 코드 경로 유지 관리 하는 어떻게 하나요?
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>데스크톱 및 Microsoft Store에 대 한 코드 경로 유지 관리 하는 인가요?
 
 
 Chuck Walbourn의 문서 시리즈 [게임용 이중 용도 코딩 기술](http://go.microsoft.com/fwlink/p/?LinkID=286210) 이라는 데스크톱 및 Microsoft 스토어 코드 경로 간의 코드 공유에 대 한 지침을 제공 합니다.
@@ -123,7 +123,7 @@ Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하�
 ## <a name="how-do-i-debug-my-shaders"></a>셰이더를 디버그하는 방법은 무엇인가요?
 
 
-Microsoft Visual Studio2015 DirectX 그래픽용 진단 도구가 포함 됩니다. [DirectX 그래픽 디버그](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx)를 참조하세요.
+Microsoft Visual Studio2015 DirectX 그래픽용 진단 도구가 포함 되어 있습니다. [DirectX 그래픽 디버그](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx)를 참조하세요.
 
 ##  <a name="what-is-the-direct3d-11-equivalent-for-x-function"></a>*x* 함수에 해당하는 Direct3D 11의 함수는 무엇인가요?
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b3b4da17c8e616640205e5b8b9892a41bc2ea647
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993622"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6037820"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -51,7 +51,7 @@ Windows 10 Mobile 용 Microsoft 에뮬레이터는 Visual Studio 2015 이상 필
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터 실행
+## <a name="installing-uninstalling-and-running-the-emulator"></a>설치, 제거 및 에뮬레이터를 실행 합니다.
 
 ### <a name="installing"></a>설치
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
@@ -66,7 +66,7 @@ Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이�
 
 ### <a name="running"></a>Running
 
-에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 하기만 하면 됩니다.
+에뮬레이터에서 앱을 실행 하려면 Visual Studio에서 **실행** 하는 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 합니다.
 
 ![해상도, 크기 및 메모리와 사용 가능한 에뮬레이터](images/em-list.png)
 
@@ -633,7 +633,7 @@ Windows Phone 에뮬레이터의 프레임 속도 카운터를 사용하여 실�
 
 Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특정 네트워크 스위치를 삭제하는 도구인 XDECleanup.exe를 포함하며, 에뮬레이터(XDE) 이진 파일과 함께 제공됩니다. 잘못된 상태로 전환될 경우 이 도구를 사용하여 에뮬레이터 VM을 정리해야 합니다. 관리자 명령 프롬프트에서 도구를 실행합니다.`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **참고**XDECleanup.exe 삭제 모든 에뮬레이터 특정 Hyper-v Vm 하며 모든 VM 검사점 또는 삭제 상태를 저장 합니다.
+> **참고**XDECleanup.exe 삭제 모든 에뮬레이터 특정 Hyper-v Vm 및 것도 삭제 하는 모든 VM 검사점 또는 저장 된 상태도 합니다.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>모바일용 Windows 10 이미지 제거
 

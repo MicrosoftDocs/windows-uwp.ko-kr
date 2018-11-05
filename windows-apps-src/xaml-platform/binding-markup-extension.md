@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 02c856fd697bef958eb45a0f0f133e06f63a7f51
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973901"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039113"
 ---
 # <a name="binding-markup-extension"></a>{Binding} 태그 확장
 
 
 **참고**새 바인딩 메커니즘은 성능 및 개발자 생산성에 최적화 된 Windows10 사용할 수 있습니다. [{x:Bind} 태그 확장](x-bind-markup-extension.md)을 참조하세요.
 
-**참고**바인딩 **{Binding}** 를 사용 하 여 (및는 모든 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
+**참고**바인딩 **{Binding}** 를 사용 하 여 (및는 비교 **{x: Bind}** **{Binding}** 사이 대 한) 앱에서 데이터를 사용 하는 방법에 대 한 일반 정보에 대 한 [데이터 바인딩 심층 분석을](https://msdn.microsoft.com/library/windows/apps/mt210946)참조 하세요.
 
 **{Binding}** 태그 확장은 코드 등 데이터 원본에서 가져온 값에는 컨트롤에 데이터 바인딩 속성에 사용 됩니다. **{Binding}** 태그 확장은 XAML 로드 시 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스의 인스턴스로 변환됩니다. 이 바인딩 개체는 데이터 원본의 속성에서 값을 가져와서 컨트롤의 속성으로 푸시합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 업데이트하도록 바인딩 개체를 구성할 수 있습니다. 또한 필요한 경우 제어 값 변경을 원본 속성에 다시 적용하도록 구성할 수도 있습니다. 데이터 바인딩의 대상인 속성은 종속성 속성이어야 합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
@@ -81,7 +81,7 @@ ms.locfileid: "5973901"
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | 바인딩 소스 업데이트의 타이밍을 지정합니다. 지정하지 않을 경우 기본값은 **Default**입니다. |
 
-**참고**차이점 **Mode** 속성에 대 한 기본 값 **{Binding}** **{x: Bind}** 에서 태그를 변환 하 고 인식 하는 경우.
+**참고**차이점 **모드** 속성에 대 한 기본 값으로 변환 하는 태그에서 **{x: Bind}** **{Binding}** 다음의 주의 합니다.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 

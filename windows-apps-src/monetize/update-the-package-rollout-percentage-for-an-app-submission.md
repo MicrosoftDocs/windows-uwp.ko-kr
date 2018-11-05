@@ -9,11 +9,11 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
 ms.openlocfilehash: ee7657a1ebd08e70e6b5dac8a9a723637539066e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990855"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039673"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>앱 제출에 대한 출시 백분율 업데이트
 
@@ -88,7 +88,7 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 404  | 제출을 찾을 수 없습니다. |
-| 409  | 이 코드는 다음 오류 중 하나를 나타냅니다.<br/><br/><ul><li>제출이 점진적 배포 작업에 대해 유효한 상태가 아닙니다(이 메서드를 호출하기 전에 제출을 게시해야 하고 [packageRolloutStatus](manage-app-submissions.md#package-rollout-object) 값을 **PackageRolloutInProgress**로 설정해야 함).</li><li>제출이 지정된 앱에 속해 있지 않습니다.</li><li>앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)지 파트너 센터 기능을 사용 합니다.</li></ul> |   
+| 409  | 이 코드는 다음 오류 중 하나를 나타냅니다.<br/><br/><ul><li>제출이 점진적 배포 작업에 대해 유효한 상태가 아닙니다(이 메서드를 호출하기 전에 제출을 게시해야 하고 [packageRolloutStatus](manage-app-submissions.md#package-rollout-object) 값을 **PackageRolloutInProgress**로 설정해야 함).</li><li>제출이 지정된 앱에 속해 있지 않습니다.</li><li>앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)파트너 센터 기능을 사용 합니다.</li></ul> |   
 
 
 ## <a name="related-topics"></a>관련 항목

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, xbox 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b0e2bab0ce7d5525e8032809954ff656a74a61c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971542"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039298"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox 정보 API 참조   
 이 API를 사용 하 여 Xbox One 장치 정보에 액세스할 수 있습니다.
@@ -43,12 +43,12 @@ GET | /ext/xbox/info
 다음 필드가 있는 JSON 개체입니다.
 
 * OsVersion-(문자열) 운영 체제의 버전입니다.
-* OsEdition-(문자열)는 OS 버전과 같은 "2017 년 3 월" 또는 "1" QFE 2017 년 3 월 합니다.
+* OsEdition-(문자열)는 OS 버전 등 "2017 년 3 월" 또는 "1" QFE 2017 년 3 월 합니다.
 * ConsoleId-(문자열) 콘솔의 id입니다.
 * DeviceId-(문자열) 콘솔의 Xbox Live 장치 id입니다.
 * SerialNumber-(문자열) 콘솔의 일련번호 합니다.
-* DevMode-(문자열) 콘솔의 현재 개발자와 같은 모드를 "None" 또는 "소매".
-* ConsoleType-(문자열) 콘솔의 유형, 예: "Xbox One" 또는 "Xbox One S".
+* DevMode-(문자열) 콘솔의 현재 개발자와 같은 모드를 "None" 또는 "소매"입니다.
+* ConsoleType-예: "Xbox One" 또는 "Xbox One S" (문자열) 콘솔의 유형입니다.
 * DevkitCertificateExpirationTime-(숫자)는 UTC 시간 (초) 때 콘솔의 개발자 키트 인증서가 만료 됩니다.
 
 **상태 코드**
