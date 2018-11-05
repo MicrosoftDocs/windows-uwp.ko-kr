@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993698"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034414"
 ---
 # <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
@@ -132,7 +132,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
 
-일반적인 앱 UI 컨트롤의 **클릭** 이벤트에서와 같은 사용자 상호 작용에 대 한 응답으로 백그라운드 작업을 시작 됩니다.
+일반적인 앱에서 UI 컨트롤의 **Click** 이벤트와 같은 사용자 상호 작용에 대 한 응답으로 백그라운드 작업을 시작 됩니다.
 
 백그라운드 작업에서 조작의 진행률을 업데이트할 때 **OnProgress** 이벤트 처리기가 호출됩니다. 이때 진행률 정보로 UI를 업데이트할 수 있습니다.
 

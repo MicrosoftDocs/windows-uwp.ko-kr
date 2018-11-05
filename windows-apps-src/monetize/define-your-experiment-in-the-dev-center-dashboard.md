@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c1d48524bcc525f57f42e5364d27611602ab52
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995102"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033153"
 ---
 # <a name="define-your-experiment-in-partner-center"></a>파트너 센터에서 실험을 정의 합니다.
 
-[프로젝트를 만들고 파트너 센터에서 원격 변수를 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 하 고 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 프로젝트에서 실험을 만들 준비가 됩니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
+[프로젝트 만들기 및 파트너 센터에서 원격 변수를 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 하 고 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을를 프로젝트에서 실험을 만들 준비가 됩니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
 
 실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
@@ -36,7 +36,7 @@ ms.locfileid: "5995102"
     > 고객에게 릴리스할 실험(즉, 고객에게 사용할 수 있는 앱 버전에 사용되는 프로젝트 ID와 연결된 실험)을 만들 경우 이 확인란을 선택하지 마세요. 활성 상태일 때 실험을 편집하면 실험 결과가 무효화됩니다.
 
 7. **프로젝트 이름** 드롭다운에서 현재 프로젝트가 자동으로 선택됩니다. 다른 프로젝트에 새 실험을 추가하려는 경우 여기서 해당 프로젝트를 선택할 수 있습니다. 그렇지 않으면 이 선택을 그대로 둡니다.
-8.   [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. 때 [실험용 앱 코딩](code-your-experiment-in-your-app.md),이 ID를 참조 해야이 코드에서 변형 데이터를 수신 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있도록 합니다.
+8.   [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱 코딩](code-your-experiment-in-your-app.md)해야에서 참조할 때이 ID 코드 변형 데이터를 수신 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있도록 합니다.
 9. **보기 이벤트** 섹션에서 **보기 이벤트 이름** 필드에 실험에 대한 [보기 이벤트](run-app-experiments-with-a-b-testing.md#terms)의 이름을 입력합니다.
 10. **목표와 전환 이벤트** 섹션에서 하나 이상의 실험 목표를 정의합니다.
   * **목표 이름** 필드에서 목표의 설명이 포함된 이름을 입력합니다. 실험을 실행한 후 이 이름은 실험에 대한 결과 요약에 표시됩니다.
@@ -66,7 +66,7 @@ ms.locfileid: "5995102"
 
 실험에 대한 필수 필드 입력을 마치면 **저장**을 클릭하여 실험을 저장합니다.
 
-원하는 실험 매개 변수를 설정하고 활성화할 준비가 완료되어 앱에서 실험 데이터 수집을 시작할 수 있으면 **활성화**를 클릭합니다. 실험 활성화 되 면 앱 변형 변수를 검색 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있습니다. 자세한 내용은 [실행 하 고 파트너 센터에서 실험 관리](manage-your-experiment.md)를 참조 하세요.
+원하는 실험 매개 변수를 설정하고 활성화할 준비가 완료되어 앱에서 실험 데이터 수집을 시작할 수 있으면 **활성화**를 클릭합니다. 실험 활성화 되 면 앱 변형 변수를 검색 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있습니다. 자세한 내용은 [실행 및 관리 파트너 센터에서 실험을](manage-your-experiment.md)참조 하세요.
 
 > [!IMPORTANT]
 > 프로젝트는 한 번에 하나의 활성 실험만 포함할 수 있습니다. 실험을 만들 때 **편집 가능한 실험** 확인란을 선택하지 않은 경우 실험을 활성화한 후에는 더 이상 실험 매개 변수를 수정할 수 없습니다. 실험을 활성화하기 전 앱에서 실험을 코딩하는 것이 좋습니다.
@@ -89,7 +89,7 @@ ms.locfileid: "5995102"
 
 ## <a name="next-steps"></a>다음 단계
 
-파트너 센터에서 실험을 정의 하 고 앱에서 실험을 코딩 한 후 실행 하 [고 파트너 센터에서 실험을 관리할](manage-your-experiment.md)준비가 됩니다.
+파트너 센터에서 실험을 정의 하 고 앱에서 실험을 코딩 한 후 [실행 하 고 파트너 센터에서 실험을 관리할](manage-your-experiment.md)준비가 됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 

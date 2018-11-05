@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: 635ee4cbdd0139ec9e431726ea5b040713abe97d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972817"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031085"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 
@@ -279,9 +279,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>추가/해제된 알림의 포그라운드 이벤트
 
 > [!IMPORTANT] 
-> 알려진 문제: 포그라운드 이벤트가 CPU 루프 하면 최신 버전의 Windows, 및 이전에 그 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를에서는이 해결 됩니다.
+> 알려진 문제: 포그라운드 이벤트가 CPU 루프 하면 최신 버전의 Windows, 및 이전에 그 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를 것이 해결 됩니다.
 
-포그라운드 이벤트를 사용 하는 대신 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림을 받도록 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
+포그라운드 이벤트를 사용 하는 대신 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림의 받을 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -294,6 +294,6 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>백그라운드 작업에서 fixdelays 방법
+## <a name="howto-fixdelays-in-the-background-task"></a>백그라운드 작업에서 방법 fixdelays
 
-앱을 테스트하다 보면 백그라운드 작업이 지연되고 몇 분 동안 트리거되지 않는 경우를 종종 경험합니다. 이 문제를 해결 하려면 묻는 토고 시스템 설정-> 시스템-> 배터리 앱에서의 한 배터리 사용->, 목록에서 앱을 찾을, 선택 하 고, 항상 허용 됨 "백그라운드에서"로 변경 합니다.그러면 백그라운드 작업이 항상 트리거하도록 내에서 하면 알림 수신의 두 번째 주위.
+앱을 테스트하다 보면 백그라운드 작업이 지연되고 몇 분 동안 트리거되지 않는 경우를 종종 경험합니다. 이 문제를 해결 하려면 사용자 토고 시스템 설정-> 시스템-> 배터리 앱에서 배터리 사용-> 목록에서 앱을 찾을 선택 하 고 항상 허용 됨 "백그라운드에서"로 변경 합니다.이후 부터는 백그라운드 작업이 항상 트리거하도록 내에서 약 1 초의 알림 수신 합니다.

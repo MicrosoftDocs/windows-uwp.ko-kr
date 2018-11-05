@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 약속, 일정
 ms.localizationpriority: medium
 ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5997702"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034209"
 ---
 # <a name="manage-appointments"></a>약속 관리
 
@@ -284,7 +284,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**참고**Windows Phone 스토어 앱에 대 한 [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 함수 마찬가지로 [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 는 약속을 추가 하기 위해 표시 되는 대화 상자.
+**참고**Windows Phone 스토어 앱에 대 한 [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 함수 마찬가지로 [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 약속을 추가 하기 위해 표시 되는 대화 상자를 편집할 수 있다는 점에서 합니다.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>사용자의 일정에서 약속 바꾸기
 

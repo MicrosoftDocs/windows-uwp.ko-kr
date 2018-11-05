@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
 ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971085"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031562"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -1177,7 +1177,7 @@ XAudio2, XAPO 및 Windows Sonic을 사용하여 게임 내 오디오를 구현�
     </tr>
     <tr>
         <td>Windows Sonic을 게임에 통합하는 방법 알아보기(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox andWindows 용 공간 오디오 기능 소개</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox andWindows 용 오디오 기능 소개</a></td>
     </tr>
 </table>
 
@@ -1582,7 +1582,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>스트리밍 설치 및 선택적 패키지 사용 방법 알아보기(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">차세대 UWP 앱 배포: 확장, 스트림 밀 componentizedapps 빌드</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">차세대 UWP 앱 배포: 확장, 스트림 수 componentizedapps 빌드</a></td>
     </tr>
     <tr>
         <td>스트리밍 설치가 가능하도록 콘텐츠 나누기 및 그룹화</td>

@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
-description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 패키지 플라이트 제출을 커밋합니다.
+description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 패키지 플라이트 제출 커밋 합니다.
 title: 패키지 플라이트 제출 커밋
 ms.author: mhopkins
 ms.date: 04/17/2018
@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출 커밋
 ms.localizationpriority: medium
 ms.openlocfilehash: 58293a73589c7d2780360df24bcc24f38335f1e5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996162"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034189"
 ---
 # <a name="commit-a-package-flight-submission"></a>패키지 플라이트 제출 커밋
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 패키지 플라이트 제출을 커밋합니다. 커밋 작업은 파트너 센터 (모든 관련 된 패키지 포함) 제출 데이터가 업로드 되었습니다. 파트너 센터에 대 한 응답에서 제출 데이터 수집 및 게시에 대 한 변경 내용을 커밋합니다. 커밋 작업이 성공 하면 변경 내용은 제출 하려면 파트너 센터에 표시 됩니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 패키지 플라이트 제출 커밋 합니다. 커밋 작업은 파트너 센터 (모든 관련 된 패키지 포함) 제출 데이터가 업로드 되었습니다. 파트너 센터에 대 한 응답에서 제출 데이터 수집 및 게시에 대 한 변경 내용을 커밋합니다. 커밋 작업이 성공 하면 변경 내용은 제출 하려면 파트너 센터에 표시 됩니다.
 
 커밋 작업이 Microsoft Store 제출 API를 사용하여 패키지 플라이트 제출을 만드는 프로세스에 적용되는 방법은 [패키지 플라이트 제출 관리](manage-flight-submissions.md)를 참조하세요.
 
@@ -50,7 +50,7 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | 필수. 커밋하려는 패키지 플라이트 제출이 포함된 앱의 스토어 ID입니다. 앱에 대 한 스토어 ID는 파트너 센터에서 사용할 수 있습니다.  |
-| flightId | 문자열 | 필수. 커밋할 제출이 포함된 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 만든 플라이트에 대 한이 ID는도 파트너 센터에서 플라이트 페이지의 URL을 사용할 수 있습니다.  |
+| flightId | 문자열 | 필수. 커밋할 제출이 포함된 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 만든 플라이트 경우이 ID 파트너 센터에서 플라이트 페이지의 URL에 사용할 수 있는 이기도 합니다.  |
 | submissionId | string | 필수. 커밋할 제출의 ID입니다. 이 ID는 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL에 사용할 수 있습니다.  |
 
 

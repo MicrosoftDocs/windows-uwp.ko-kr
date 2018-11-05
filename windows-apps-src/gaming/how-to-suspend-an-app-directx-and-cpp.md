@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 일시 중지, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987833"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034123"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>앱 일시 중단 방법(DirectX 및 C++)
 
@@ -99,7 +99,7 @@ void App::Run()
 ## <a name="call-trim"></a>Trim() 호출
 
 
-Windows8.1부터 모든 DirectX UWP 앱 호출 해야 [**idxgidevice3:: Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) 일시 중단 시 합니다. 이 호출은 앱에 할당된 모든 임시 버퍼를 해제하도록 그래픽 드라이버에 알리는데, 그러면 일시 중단된 상태인 동안 메모리 리소스를 회수하기 위해 앱이 종료되는 가능성이 줄어듭니다. 이 Windows8.1 인증 요구 사항입니다.
+Windows8.1부터 모든 DirectX UWP 앱 호출 해야 [**idxgidevice3:: Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) 일시 중단 시 합니다. 이 호출은 앱에 할당된 모든 임시 버퍼를 해제하도록 그래픽 드라이버에 알리는데, 그러면 일시 중단된 상태인 동안 메모리 리소스를 회수하기 위해 앱이 종료되는 가능성이 줄어듭니다. Windows8.1에 대 한 인증 요구 사항입니다.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)

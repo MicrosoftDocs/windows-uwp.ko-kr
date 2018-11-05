@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 88210182f46fa8149e4b2d0278d7df89033e62b6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5968787"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031165"
 ---
 # <a name="web-authentication-broker"></a>웹 인증 브로커
 
@@ -89,7 +89,7 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. 만 Windows Phone 8.1을 대상으로 하는 앱을 위해 설계 하 고 Windows10로 시작 하는 사용 되지 않습니다.
+>[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. 만 Windows Phone 8.1을 대상으로 하는 앱에 대 한 설계 하 고 Windows10로 시작 하는 사용 되지 않습니다.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>SSO(Single Sign-On)로 연결
 

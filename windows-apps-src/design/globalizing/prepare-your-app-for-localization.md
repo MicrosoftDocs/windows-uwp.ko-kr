@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5975021"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031994"
 ---
 # <a name="make-your-app-localizable"></a>자신의 앱을 현지화 가능하도록 만들 수 있습니다.
 
@@ -98,7 +98,7 @@ ms.locfileid: "5975021"
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. 번역자 형식 문자열의 형식 항목의 순서를 바꿀 수 있도록 각 매개 변수의 의도 알고 있다고 확인 (예를 들어 "{1} {0}")는 대상 언어에 대 한 적절 합니다.
+이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. 번역자 형식 문자열의 형식 항목의 순서를 바꿀 수 있도록 각 매개 변수의 의도 알고 있다고 확인 (예를 들어 "{1} {0}")는 대상 언어.
 
 ## <a name="dont-over-localize"></a>과도한 지역화는 금지됩니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: babf91e681004942bb3b66eb43622742fa183125
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986059"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034239"
 ---
 # <a name="transcode-media-files"></a>미디어 파일 코드 변환
 
@@ -84,13 +84,13 @@ ms.locfileid: "5986059"
 
 
 ## <a name="encode-a-metadata-stream"></a>메타데이터 스트림 인코딩
-Windows 10, 버전 1803 부터는 시간이 제한 된 메타 데이터를 포함할 수 때 미디어 파일 코드 변환 합니다. 위의 비디오 코드 변환 예제와 달리 인코딩 프로필 만들기 메서드 [**MediaEncodingProfile.CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4)같은 기본 제공 미디어를 사용 하는 수동으로 만들어야 메타 데이터 인코딩 프로필을 인코딩하는 메타 데이터의 형식을 지원합니다 .
+Windows 10, 버전 1803부터 시간이 제한 된 메타 데이터를 포함할 수 때 미디어 파일 코드 변환 합니다. 위의 비디오 코드 변환 예제와 달리 인코딩 프로필 만들기 메서드 [**MediaEncodingProfile.CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4)같은 기본 제공 미디어를 사용 하는 수동으로 만들어야 인코딩하는 메타 데이터의 형식을 지원 하도록 메타 데이터 인코딩 프로필 .
 
-이 첫 번째 단계는 메타 데이터 incoding 프로필을 만드는 코드 변환 되도록 메타 데이터의 인코딩을 설명 하는 [**TimedMetadataEncodingProperties**] 개체를 만드는 것입니다. 하위 속성 메타 데이터의 형식을 지정 하는 GUID입니다. 각 메타 데이터 유형에 대 한 인코딩 세부 정보 독점 이며 Windows에서 제공 되지 않습니다. 이 예제에서는 GoPro 메타 데이터 (gprs)에 대 한 GUID 사용 됩니다. 다음으로 [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) 관련 된 메타 데이터 형식을 스트림 형식을 설명 하는 데이터의 이진 blob을 설정 하 라고 합니다. 다음, **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) 인코딩 속성에서 만들어집니다 트랙 레이블 이름과 메타 데이터 스트림을 식별 하 고 필요에 따라 스트림 이름을 UI에 표시 endcoded 스트림을 읽는 응용 프로그램을 허용 하도록 되어 있습니다. 
+메타 데이터 incoding 프로필을 만드는 첫 번째 단계가 코드 변환 되도록 메타 데이터의 인코딩을 설명 하는 [**TimedMetadataEncodingProperties**] 개체를 만드는 것입니다. 하위 속성에는 메타 데이터의 형식을 지정 하는 GUID입니다. 각 메타 데이터 형식에 대 한 인코딩 세부 독점 이며 Windows에서 제공 되지 않습니다. 이 예제는 GoPro 메타 데이터 (gprs)에 대 한 GUID 사용 됩니다. 다음으로 [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) 메타 데이터 형식에 관련 된 스트림 형식을 설명 하는 데이터의 이진 blob을 설정 하 라고 합니다. 다음을 **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) 인코딩 속성에서 만든 트랙 레이블 이름과 메타 데이터 스트림을 식별 하 고 필요에 따라 스트림 이름 UI에 표시할 endcoded 스트림을 읽는 응용 프로그램이 허용 하 고 합니다. 
  
 [!code-cs[GetStreamDescriptor](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetStreamDescriptor)]
 
-**TimedMetadataStreamDescriptor**를 만든 후 비디오, 오디오 및 메타 데이터 파일에 인코딩할 수를 설명 하는 **MediaEncodingProfile** 을 만들 수 있습니다. 마지막 예제에서 만든 **TimedMetadataStreamDescriptor** 이 예제에서는 도우미 함수에 전달 되 고 [**SetTimedMetadataTracks**](https://docs.microsoft.com/en-us/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks)를 호출 하 여 **MediaEncodingProfile** 에 추가 됩니다.
+**TimedMetadataStreamDescriptor**를 만든 후 비디오, 오디오 및 메타 데이터 파일에 인코딩할 수를 설명 하는 **MediaEncodingProfile** 을 만들 수 있습니다. 마지막 예제에서 만든 **TimedMetadataStreamDescriptor** 이 예제에서는 도우미 함수에 전달 하 고 [**SetTimedMetadataTracks**](https://docs.microsoft.com/en-us/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks)를 호출 하 여 **MediaEncodingProfile** 에 추가 됩니다.
 
 [!code-cs[GetMediaEncodingProfile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetMediaEncodingProfile)]
  

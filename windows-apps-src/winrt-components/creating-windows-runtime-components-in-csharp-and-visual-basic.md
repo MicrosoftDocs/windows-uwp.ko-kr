@@ -9,14 +9,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e3b9ed2d256fb9ea8d38690a703baf7fbd3e7f0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976949"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6031860"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
-.NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다. UWP(유니버설 Windows 플랫폼) 앱의 구성 요소를 C++, JavaScript, Visual Basic 또는 C#과 함께 사용할 수 있습니다. 이 항목에서는 구성 요소를 만들기 위한 규칙을 간략히 설명 하 고 Windows 런타임용.NET Framework 지원의 일부 측면을 설명 합니다. 일반적으로 이 지원은 .NET Framework 프로그래머에게 투명하게 디자인되었습니다. 그러나 JavaScript 또는 C++를 사용하는 구성 요소를 만들 때는 이러한 언어와 Windows 런타임을 지원하는 방식의 차이점을 알아야 합니다.
+.NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다. UWP(유니버설 Windows 플랫폼) 앱의 구성 요소를 C++, JavaScript, Visual Basic 또는 C#과 함께 사용할 수 있습니다. 이 항목에서는 구성 요소를 만들기 위한 규칙을 간략히 설명 하 고 Windows 런타임에 대 한.NET Framework 지원의 일부 측면을 설명 합니다. 일반적으로 이 지원은 .NET Framework 프로그래머에게 투명하게 디자인되었습니다. 그러나 JavaScript 또는 C++를 사용하는 구성 요소를 만들 때는 이러한 언어와 Windows 런타임을 지원하는 방식의 차이점을 알아야 합니다.
 
 Visual Basic 또는 C#을 사용하여 UWP 앱에서만 사용되는 구성 요소를 만드는데 해당 구성 요소에 UWP 컨트롤이 없는 경우 **Windows 런타임 구성 요소** 템플릿 대신 **클래스 라이브러리** 템플릿을 사용할 수 있습니다. 간단한 클래스 라이브러리일수록 제한이 적습니다.
 
@@ -27,7 +27,7 @@ Visual Basic 또는 C#을 사용하여 UWP 앱에서만 사용되는 구성 요�
 
 -   구성 요소에 있는 모든 공용 형식 및 멤버의 필드, 매개 변수 및 반환 값은 Windows 런타임 형식이어야 합니다.
 
-    이 제한에는 Windows 런타임 자체에서 제공하는 형식뿐 아니라 직접 만든 Windows 런타임 형식도 포함됩니다. 또한 다양한 .NET Framework 형식도 포함됩니다. 이러한 형식의 포함은 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 .NET Framework에서 제공하는 지원의 일부입니다. 기본 Windows 런타임 형식 대신 친숙한 .NET Framework 형식을 사용하여 코드가 나타납니다. 예를 들어 Int32 및 Double 등의 .NET Framework 기본 형식, DateTimeOffset 및 Uri와 같은 특정한 기본 형식, IEnumerable&lt;T&gt;Visual Basic의 IEnumerable(Of T))과 IDictionary&lt;TKey,TValue&gt; 등 일반적으로 사용되는 일부 제네릭 인터페이스 형식을 사용할 수 있습니다. (참고 이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식 이어야 합니다.) 이 섹션에서는 관리 코드에 전달 하 여 Windows 런타임 형식에 대해서는 설명 하 고 관리 전달이이 항목의 뒷부분에 Windows 런타임 형식.
+    이 제한에는 Windows 런타임 자체에서 제공하는 형식뿐 아니라 직접 만든 Windows 런타임 형식도 포함됩니다. 또한 다양한 .NET Framework 형식도 포함됩니다. 이러한 형식의 포함은 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 .NET Framework에서 제공하는 지원의 일부입니다. 기본 Windows 런타임 형식 대신 친숙한 .NET Framework 형식을 사용하여 코드가 나타납니다. 예를 들어 Int32 및 Double 등의 .NET Framework 기본 형식, DateTimeOffset 및 Uri와 같은 특정한 기본 형식, IEnumerable&lt;T&gt;Visual Basic의 IEnumerable(Of T))과 IDictionary&lt;TKey,TValue&gt; 등 일반적으로 사용되는 일부 제네릭 인터페이스 형식을 사용할 수 있습니다. (참고 이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식 이어야 합니다.) 이 섹션에서는 관리 코드에 전달 하 여 Windows 런타임 형식에 대해서는 설명 하 고 관리 전달이이 항목의 뒷부분에 Windows 런타임 형식입니다.
 
 -   공용 클래스와 인터페이스에는 메서드, 속성 및 이벤트가 포함될 수 있습니다. 이벤트에 대한 대리자를 선언하거나 EventHandler&lt;T&gt; 대리자를 사용할 수 있습니다. 공용 클래스 또는 인터페이스는 다음과 같은 특징이 있습니다.
 
@@ -90,13 +90,13 @@ C# 또는 Visual Basic에서 이러한 형식에 대한 언어 키워드를 제�
 | Windows.UI.Xaml.Data.PropertyChangedEventHandler | System.ComponentModel.PropertyChangedEventHandler |
 | Windows.UI.Xaml.Data.PropertyChangedEventArgs    | System.ComponentModel.PropertyChangedEventArgs    |
 
-하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 예를 들어 전달 하거나 사전을 반환&lt;int, string&gt; (Dictionary (Of Integer, String) Visual basic에서)을 IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt;, 또는 IEnumerable&lt; System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;합니다.
+하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 전달 하거나 사전 반환할 수 예를 들어&lt;int, string&gt; (Dictionary (Of Integer, String) Visual basic에서)을 IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt;, 또는 IEnumerable&lt; System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;합니다.
 
 **중요 한**JavaScript는 관리 형식이 구현한 인터페이스 목록에서 처음 나타나는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
 Windows 런타임에서 IMap&lt;K, V&gt; 및 IMapView&lt;K, V&gt;는 IKeyValuePair를 사용하여 반복됩니다. 관리 코드로 전달할 경우 IDictionary&lt;TKey, TValue&gt; 및 IReadOnlyDictionary&lt;TKey, TValue&gt;로 나타나므로 자연스럽게 System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;를 사용하여 열거합니다.
 
-인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 PropertySet 클래스가 구현한 IMap&lt;K, V&gt;는 관리 코드에서 IDictionary&lt;TKey, TValue&gt;로 나타납니다. PropertySet는 IMap&lt;K, V&gt; 대신 IDictionary&lt;TKey, TValue&gt;를 구현한 것처럼 나타나므로, 관리 코드에서 Add 메서드가 있는 것처럼 나타나고 .NET Framework 사전의 Add 메서드처럼 동작합니다. Insert 메서드가 있는 것처럼 나타나지는 않습니다. 이 항목의이 예제를 볼 수 있습니다 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
+인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 PropertySet 클래스가 구현한 IMap&lt;K, V&gt;는 관리 코드에서 IDictionary&lt;TKey, TValue&gt;로 나타납니다. PropertySet는 IMap&lt;K, V&gt; 대신 IDictionary&lt;TKey, TValue&gt;를 구현한 것처럼 나타나므로, 관리 코드에서 Add 메서드가 있는 것처럼 나타나고 .NET Framework 사전의 Add 메서드처럼 동작합니다. Insert 메서드가 있는 것처럼 나타나지는 않습니다. 이 예제에서는 항목에서 볼 수 있습니다 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)합니다.
 
 ## <a name="passing-managed-types-to-the-windows-runtime"></a>Windows 런타임에 관리 형식 전달
 이전 섹션에서 설명한 것처럼 일부 Windows 런타임 형식은 구성 요소의 멤버 서명 또는 IDE에 사용된 Windows 런타임 멤버 서명에서 .NET Framework 형식으로 나타납니다. 이러한 멤버에 .NET Framework 형식을 전달하거나 구성 요소 멤버의 반환 값으로 사용할 경우 다른 쪽의 코드에서는 해당 Windows 런타임 형식으로 나타납니다. JavaScript에서 구성 요소를 호출할 때의 효과에 대한 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)의 "구성 요소에서 관리 형식 반환" 섹션을 참조하세요.
@@ -244,14 +244,14 @@ Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습
 
 -   JavaScript에서 예외는 예외 메시지가 스택 추적으로 대체된 개체로 나타납니다. Visual Studio에서 앱을 디버그할 때 디버거 예외 대화 상자에서 원래 메시지 텍스트가 "WinRT 정보"로 식별되어 표시되는 것을 볼 수 있습니다. JavaScript 코드에서 원래 메시지 텍스트에 액세스할 수는 없습니다.
 
-    > **팁**현재 스택 추적에는 관리 예외 형식이 포함 되지만 추적을 구문 분석 예외 형식을 식별 하는 것이 좋습니다. 대신 이 섹션의 뒷부분에서 설명하는 HRESULT 값을 사용하세요.
+    > **팁**현재 스택 추적에는 관리 예외 형식이 포함 되어 있지만 추적을 구문 분석 예외 형식을 식별 하는 것이 좋습니다. 대신 이 섹션의 뒷부분에서 설명하는 HRESULT 값을 사용하세요.
 
 -   C++에서 예외는 플랫폼 예외로 나타납니다. 관리 예외의 HResult 속성을 특정 플랫폼 예외의 HRESULT에 매핑할 수 있는 경우 해당 예외가 사용됩니다. 그렇지 않은 경우 [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx) 예외가 발생됩니다. C++ 코드에서는 관리 예외의 메시지 텍스트를 사용할 수 없습니다. 특정 플랫폼 예외가 발생된 경우 해당 예외 형식에 대한 기본 메시지 텍스트가 나타납니다. 그렇지 않은 경우 메시지 텍스트가 나타나지 않습니다. [예외(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699896.aspx)를 참조하세요.
 -   C# 또는 Visual Basic에서 예외는 일반적인 관리 예외입니다.
 
 구성 요소에서 예외가 발생할 때 HResult 속성 값이 해당 구성 요소와 관련된 비공용 예외 형식을 발생시켜 JavaScript 또는 C++ 호출자에서 예외를 쉽게 처리하도록 할 수 있습니다. 예외 개체의 숫자 속성을 통해 HRESULT를 JavaScript 호출자에 사용하고 [COMException::HResult](https://msdn.microsoft.com/library/windows/apps/xaml/hh710415.aspx) 속성을 통해 C++ 호출자에 사용할 수 있습니다.
 
-> **참고**에 HRESULT에 음수 값을 사용 합니다. 양수 값은 성공으로 해석되어 JavaScript 또는 C++ 호출자에서 예외가 발생되지 않습니다.
+> **참고**에 대 한 HRESULT에 음수 값을 사용 합니다. 양수 값은 성공으로 해석되어 JavaScript 또는 C++ 호출자에서 예외가 발생되지 않습니다.
 
 ## <a name="declaring-and-raising-events"></a>이벤트 선언 및 발생
 이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx)를 이벤트 형식으로 사용하고 이벤트 인수 형식을 제네릭 형식 인수로 사용합니다. 일반적인 .NET Framework 응용 프로그램에서와 마찬가지로 이벤트를 발생시킵니다.
