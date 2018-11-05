@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 40230b2ffafd9f95b6e984f8cc287dd3157a0de1
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940866"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "5975196"
 ---
 # <a name="get-usersxuidxuidscidsscidstatsstatnamepeopleallfavorite"></a>GET (/users/xuid({xuid})/scids/{scid}/stats/{statname)/people/{all|favorite})
 소셜 순위표 순위 상태는 현재 사용자의 모든 알려진된 연락처 중 하나에 해당 사용자에 의해 즐겨 찾는 사용자 지정 된 연락처에만 (점수) 값을 반환 합니다.
