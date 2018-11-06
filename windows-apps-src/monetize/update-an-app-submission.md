@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출, 업데이트
 ms.localizationpriority: medium
 ms.openlocfilehash: 82311d96296b3b7c7db0a3485348b7d1bf4a734c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5991376"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049335"
 ---
 # <a name="update-an-app-submission"></a>앱 제출 업데이트
 
@@ -296,7 +296,7 @@ Content-Type: application/json
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 400  | 요청이 유효하지 않아서 제출을 업데이트할 수 없습니다. |
-| 409  | 앱의 현재 상태 때문에 제출을 업데이트할 수 없거나 또는 앱에서 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
+| 409  | 앱의 현재 상태 때문에 제출을 업데이트할 수 없거나 또는 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목

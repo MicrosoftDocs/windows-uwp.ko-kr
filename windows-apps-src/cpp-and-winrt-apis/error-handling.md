@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
 ms.openlocfilehash: 15432202e61322191e27e89920f7791878177c8b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979484"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048670"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
-이 항목에서는 설명 프로그래밍 하는 경우 오류를 처리 하기 위한 전략 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). 자세한 정보 및 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
+이 항목에서는 설명 프로그래밍 하는 경우 오류를 처리 하기 위한 전략 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다. 자세한 정보 및 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
 
 ## <a name="avoid-catching-and-throwing-exceptions"></a>예외 catch 및 throw 방지
 [예외로부터 안전 코드](/cpp/cpp/how-to-design-for-exception-safety)를 계속 쓰는 것이 좋지만 가능한 한 예외 catch 및 throw를 방지하는 것이 좋습니다. 예외에 대한 처리기가 없는 경우 Windows는 문제의 위치를 추적하는 데 도움이 되는 오류 보고서(크래시 미니덤프 포함)를 자동으로 생성합니다.
@@ -77,7 +77,7 @@ winrt::check_bool(::SetEvent(h.get()));
 [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool)에 전달한 값이 false인 경우 다음 순서의 작업이 발생합니다.
 
 - **winrt::check_bool**은 [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) 함수를 호출합니다.
-- **winrt:: throw_last_error** [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) 호출 스레드의 마지막 오류 코드 값을 검색 하려면를 호출 하 고 [**winrt:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수를 호출 합니다.
+- **winrt:: throw_last_error** 는 [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) 를 호출 하는 스레드의 마지막 오류 코드 값을 검색을 호출 하 고 [**winrt:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수를 호출 합니다.
 - **winrt::throw_hresult**는 오류 코드를 나타내는 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 개체(또는 표준 개체)를 사용하여 예외를 throw합니다.
 
 Windows API가 다양한 반환 값 형식을 사용하여 런타임 오류를 보고하기 때문에 **winrt::check_bool** 외에도 값을 확인하고 예외를 throw하기 위해 유용한 몇 가지 다른 도우미 함수가 있습니다.

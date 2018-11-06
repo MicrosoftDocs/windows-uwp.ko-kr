@@ -10,15 +10,15 @@ keywords: Windows 10, uwp, 게시, 판매, 배포, Microsoft Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
 ms.openlocfilehash: 229e1eab05e392a4091c9eee5bc9af948c678d96
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983500"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049454"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  
-[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하 여 Microsoft Store에 앱과 게임을 게시할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
+Microsoft Store에 앱 및 게임을 게시 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용할 수 있습니다. <a href="//developer.microsoft.com/store/register">지금 등록하세요!</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>

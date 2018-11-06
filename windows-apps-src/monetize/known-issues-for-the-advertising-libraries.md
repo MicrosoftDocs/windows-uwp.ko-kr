@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: d1b3b1fb68ed246d6a5a8334c5cf4d1c0754b719
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992562"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049190"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
@@ -42,7 +42,7 @@ ms.locfileid: "5992562"
 
 광고를 볼 수 없는 이유는 네트워크 오류를 포함하여 다양합니다. 다양한 이유는 다음과 같습니다.
 
-* 앱 코드에서 **AdControl** 의 크기 보다 크거나 작은 되는 크기를 사용 하 여 파트너 센터에서 광고 단위를 선택 합니다.
+* 앱 코드의 **AdControl** 의 크기 보다 크거나 작은 크기를 사용 하 여 파트너 센터에서 광고 단위를 선택 합니다.
 
 * 라이브 앱을 실행할 때 광고 단위 ID에 대해 [테스트 모드 값](set-up-ad-units-in-your-app.md#test-ad-units)을 사용하는 경우 광고가 표시되지 않습니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "5992562"
 
 * 테스트용으로 로드된 앱 또는 에뮬레이터에서 실행되는 앱에는 라이브 광고가 표시되지 않습니다.
 
-라이브 광고 단위 테스트 광고를 제공 하는 경우 광고 단위의 상태가 파트너 센터에서 **활성 및 테스트 광고 제공을** 표시 됩니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
+라이브 광고 단위가 테스트 광고를 제공 하는 경우 광고 단위의 상태가 파트너 센터에서 **활성 및 테스트 광고 제공을** 표시 됩니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
 
 
 <span id="reference_errors"/>

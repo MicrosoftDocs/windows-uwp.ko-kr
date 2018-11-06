@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 36f8956e2ca167d98bb8e6ecf35ce3d131d7b032
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978434"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049687"
 ---
 # <a name="import-media-from-a-device"></a>디바이스에서 미디어 가져오기
 

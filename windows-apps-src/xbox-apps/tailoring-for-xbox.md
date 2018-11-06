@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 604e6dc5381a36d4dbda70e3435e5cd6fa44cc04
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982699"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048160"
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 
@@ -24,7 +24,7 @@ ms.locfileid: "5982699"
 
 ### <a name="do-turn-off-mouse-mode"></a>*작업:* 마우스 모드 끄기
 
-Xbox 사용자는 컨트롤러를 선호 합니다. 컨트롤러 입력을 위해 최적화하려면 [마우스 모드를 사용하지 않도록 설정](how-to-disable-mouse-mode.md)하고 방향 탐색([X-Y 포커스](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction)라고도 함)을 사용합니다. 포커스 트래핑 및 액세스할 수 없는 UI에 주의 합니다.
+Xbox 사용자는 컨트롤러를 선호 합니다. 컨트롤러 입력을 위해 최적화하려면 [마우스 모드를 사용하지 않도록 설정](how-to-disable-mouse-mode.md)하고 방향 탐색([X-Y 포커스](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction)라고도 함)을 사용합니다. 포커스 트래핑 및 액세스할 수 없는 UI에 대 한 주의 하십시오.
 
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*작업:* 약 10피트 환경에 적합한 포커스 사각형 그리기
 
@@ -67,7 +67,7 @@ UWP 앱에 적용된 이러한 사례를 간략하게 보려면 이 동영상을
 
 ## <a name="app-dev-on-xbox"></a>Xbox에서 앱 개발
 
-**Xbox에서 앱 개발** 이벤트는 Xbox에서 앱을 작성 하는 데 새 개발자를 위한 멋진 출발점입니다.
+**Xbox에서 앱 개발** 이벤트는 개발자의 Xbox 앱 빌드를 위한 멋진 출발점입니다.
 
 * [기록 된 세션](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
 * [블로그 게시물](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)

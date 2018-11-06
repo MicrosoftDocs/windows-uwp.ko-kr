@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 삭제, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: ca534cfc7c38dba9d77749e17f15dd66766de7ca
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987820"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051749"
 ---
 # <a name="delete-an-add-on-submission"></a>추가 기능 제출 삭제
 
@@ -76,7 +76,7 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청 매개 변수가 잘못되었습니다. |
 | 404  | 지정된 제출을 찾을 수 없습니다. |
-| 409  | 지정 된 제출을 찾았지만 현재 상태에서 삭제할 수 없거나 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |
+| 409  | 지정 된 제출을 찾았지만 현재 상태로 삭제할 수 없거나 있는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)파트너 센터 기능을 사용 합니다. |
 
 
 ## <a name="related-topics"></a>관련 항목

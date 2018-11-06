@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: f9dcd76767662b5e40f587d7ac32ffd7d94a6053
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5975325"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049584"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
 

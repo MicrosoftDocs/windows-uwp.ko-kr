@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 0caa3f63d8a92c75bdce10cdb277967dca21fafb
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970863"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048703"
 ---
 # <a name="cryptography"></a>암호화
 

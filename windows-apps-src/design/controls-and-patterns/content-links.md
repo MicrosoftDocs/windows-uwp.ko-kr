@@ -13,11 +13,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 3939995aa2f29f4590c8c71a877b69f0cb81d2ec
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969179"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049802"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 
@@ -28,7 +28,7 @@ ms.locfileid: "5969179"
 > **중요 API**: [ContentLink 클래스](/uwp/api/windows.ui.xaml.documents.contentlink), [ContentLinkInfo 클래스](/uwp/api/windows.ui.text.contentlinkinfo), [RichEditTextRange 클래스](/uwp/api/windows.ui.text.richedittextrange)
 
 > [!NOTE]
-> 콘텐츠 링크를 위한 Api는 다음 네임 스페이스에 분산: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents, Windows.UI.Text 합니다.
+> 콘텐츠 링크에 대 한 Api는 다음 네임 스페이스에 분산 되어: Windows.UI.Xaml.Controls, Windows.UI.Xaml.Documents, Windows.UI.Text 합니다.
 
 
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 캡처, 비디오
 ms.localizationpriority: medium
 ms.openlocfilehash: ae52026d5fb1ab3c140edfdcd1f92f7d3d0fd143
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5997752"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049766"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a>MediaFrameSourceGroup을 사용하여 다양한 소스로부터 캡처
 

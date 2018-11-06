@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: e947314da1309c3f31af292bc70addbad8b0d4d9
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987929"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049273"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>앱에서 오류에 대한 세부 정보 가져오기
 
@@ -51,7 +51,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오
 
 | 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | 자세한 오류 데이터를 검색할 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
+| applicationId | 문자열 | 자세한 오류 데이터를 검색할 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | failureHash | 문자열 | 자세한 정보를 가져오려는 오류의 고유 ID입니다. 관심 있는 오류의 이 값을 가져오려면 [오류 보고 데이터 가져오기](get-error-reporting-data.md) 메서드를 사용하고 해당 메서드의 응답 본문에 **failureHash** 값을 사용합니다. |  예  |
 | startDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다.<p/><p/>**참고:**&nbsp;&nbsp;이 메서드는 지난 30 일 동안에서 발생 한 오류에 대 한 세부 정보에만 검색할 수 있습니다. |  아니요  |
 | endDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |

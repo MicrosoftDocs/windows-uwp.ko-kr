@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 37193d28bbb060bc7e315a15dd83fc0084a6b861
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984563"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049740"
 ---
 # <a name="data-binding"></a>데이터 바인딩
 
@@ -25,4 +25,4 @@ ms.locfileid: "5984563"
 | [데이터 바인딩 심층 분석](data-binding-in-depth.md) | 이 항목에서는 데이터 바인딩 기능에 대해 자세히 설명합니다. |
 | [디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터](displaying-data-in-the-designer.md) | Visual Studio 디자이너에서 컨트롤에 데이터를 채워 앱의 레이아웃, 템플릿 및 기타 시각적 속성을 작업할 수 있도록 하기 위해 다양한 방법으로 디자인 타임 샘플 데이터를 사용할 수 있습니다. 스케치(또는 프로토타입) 앱을 빌드하는 경우에도 샘플 데이터를 사용하면 정말 유용하고 시간을 절약할 수 있습니다. 스케치 또는 프로토타입에서 런타임에 샘플 데이터를 사용하면 실제 라이브 데이터에 연결하지 않더라도 아이디어를 설명할 수 있습니다. |
 | [계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | 체인으로 함께 바인딩된 [<strong>CollectionViewSource</strong>](https://msdn.microsoft.com/library/windows/apps/BR209833) 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다. |
-| [데이터 바인딩 및 MVVM](data-binding-and-mvvm.md) | 이 항목에서는 모델-보기-ViewModel (MVVM) UI 아키텍처 디자인 패턴을 설명 합니다. 데이터 바인딩 MVVM의 핵심 이며 UI 및 비 UI 코드 간의 느슨한 결합 수 있습니다. |
+| [데이터 바인딩 및 MVVM](data-binding-and-mvvm.md) | 이 항목에서는 모델-보기-ViewModel (MVVM) UI 아키텍처 디자인 패턴을 설명 합니다. 데이터 바인딩은 MVVM, 핵심 해지고 UI 및 비 UI 코드 간의 느슨한 결합 합니다. |

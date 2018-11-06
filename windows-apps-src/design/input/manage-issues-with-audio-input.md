@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 094acdbcb5c5b3bf45bad757344be5187ae37cbc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5994659"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048607"
 ---
 # <a name="manage-issues-with-audio-input"></a>오디오 입력 관련 문제 관리
 
