@@ -10,24 +10,24 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f00618c3ecb51a0934b1b3f73a51553b49f153b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993328"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6030704"
 ---
 # <a name="serviceerror-json"></a>ServiceError(JSON)
-서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보가 포함 되어 있습니다. 
+서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보를 포함 합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="serviceerror"></a>ServiceError
  
-ServiceError 개체에는 다음과 같이 지정 합니다.
+ServiceError 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| code| 32 비트의 부호 있는 정수 | 오류 유형입니다. 가능한 값 아래 표를 참조 하세요. | 
+| code| 32 비트 부호 있는 정수 | 오류 유형입니다. 가능한 값 아래 표를 참조 하세요. | 
 | 원본| string | 오류가 발생 하는 서비스의 이름입니다. 예를 들어, 값 <code>ReputationFD</code> 신뢰도 서비스에 오류가 했음을 나타냅니다. | 
 | description| string| 오류에 대 한 설명입니다. | 
  
@@ -42,7 +42,7 @@ ServiceError 개체에는 다음과 같이 지정 합니다.
 | 4000| 잘못 된 요청 본문의 JSON 문서 POST 요청이 실패 했습니다 유효성 검사를 사용 하 여 제출 합니다. 자세한 내용은 설명 필드를 참조 하세요. | 
 | 4100| 사용자는 하지 존재는 XUID 요청 URI에에서 포함 된 XBOX Live에 유효한 사용자를 표시 하지 않습니다.| 
 | 4500| 권한 부여 오류 호출자는 요청 된 작업을 수행 하도록 권한이 없습니다.| 
-| 5000| 서비스 오류는 내부 오류가 서비스| 
+| 5000| 서비스 오류 오류가 발생 했습니다 내부 서비스| 
 | 5300| 서비스 사용할 서비스 제공 되지 않습니다.| 
    
 <a id="ID4EQE"></a>

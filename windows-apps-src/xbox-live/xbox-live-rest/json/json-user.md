@@ -10,25 +10,25 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 255fe2918f10bb3b941cf2023ff358c58e191cbf
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5989454"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6022639"
 ---
 # <a name="user-json"></a>User(JSON)
-사용자 순위표 데이터를 포함합니다. 
+사용자 순위표 데이터가 들어 있습니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="user"></a>사용자
  
-사용자 개체에는 다음과 같이 지정 합니다.
+사용자 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| 게이머 태그| string| 게이머의 플레이어 (최대 15 자). 클라이언트는 플레이어를 식별 하는 경우 UI에서이 값을 사용 해야 합니다.| 
-| 순위| 32 비트의 부호 있는 정수| 순위표 데이터를 요청 하는 사용자를 기준으로 사용자의 순위를 지정 합니다.| 
+| 게이머 태그| string| 게이머 player (최대 15 자). 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다.| 
+| 순위| 32 비트 부호 있는 정수| 순위표 데이터를 요청 하는 사용자를 기준으로 사용자의 순위를 지정 합니다.| 
 | rating| string| 사용자의 평점입니다.| 
 | xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 사용자의 합니다.| 
   

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0454f364bf2612c88b8f212ba935872968ce2476
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992678"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6028601"
 ---
 # <a name="player-json"></a>Player(JSON)
 게임 세션에는 플레이어에 대 한 데이터를 포함합니다. 
@@ -23,14 +23,14 @@ ms.locfileid: "5992678"
  
 ## <a name="player"></a>플레이어
  
-플레이어 개체에는 다음과 같이 지정 합니다.
+플레이어 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| customData| 8 비트 부호 없는 정수의 배열| 1024 바이트의 Base64 인코딩된 게임 관련 플레이어 데이터입니다. 이 값은 서버에 불투명입니다.| 
-| 게이머 태그| string| 게이머-15 자 최대-플레이어의 합니다. 클라이언트는 플레이어를 식별 하는 경우 UI에서이 값을 사용 해야 합니다. | 
+| customData| 8 비트 부호 없는 정수의 배열| 1024 바이트의 Base64 인코딩된 플레이어 게임 관련 데이터입니다. 이 값은 서버에 불투명입니다.| 
+| 게이머 태그| string| 게이머-15 자-플레이어의 합니다. 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다. | 
 | isCurrentlyInSession| 부울 값| 플레이어가 현재 세션에 또는 세션 왼쪽 나타냅니다.| 
-| seatIndex| 32 비트의 부호 있는 정수| 세션에서 플레이어의 인덱스입니다.| 
+| seatIndex| 32 비트 부호 있는 정수| 세션에서 플레이어의 인덱스입니다.| 
 | xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 합니다.| 
   
 <a id="ID4E3C"></a>

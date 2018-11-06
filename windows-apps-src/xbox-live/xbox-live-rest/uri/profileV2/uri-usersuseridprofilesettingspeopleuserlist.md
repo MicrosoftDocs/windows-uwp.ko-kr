@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b7c5140838ccc29c9b60d80c7a1f52e4d6eb90a4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5985220"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6032573"
 ---
 # <a name="usersuseridprofilesettingspeopleuserlistsettingssettings"></a>/users/{userId}/profile/settings/people/{userList}?settings={settings}
-사용자 또는 사용자 모니커 지 사용자의 프로필에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
+사용자 또는 사용자가 사용자 모니커 지원에 대 한 프로 파일에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `profile.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -28,7 +28,7 @@ ms.locfileid: "5985220"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| userId| string| 'Xuid(12345)', 'gt(myGamertag)' 또는 '나' 수 있습니다.| 
+| userId| string| 'Xuid(12345)', 'gt(myGamertag)' 또는 'm e' 수 있습니다.| 
 | userList| string| 명명 된 목록에 대 한 설정을 가져오려면 사용자입니다. 현재 사용자가 지원 되는 유일한 목록입니다.| 
   
 <a id="ID4E1B"></a>
@@ -38,7 +38,7 @@ ms.locfileid: "5985220"
 
 [GET (/users/{userId}/profile/settings/people/{userList})](uri-usersuseridprofilesettingspeopleuserlistget.md)
 
-&nbsp;&nbsp;사용자 프로필을 가져오거나 사용자 모니커를 사용 하 여 사용자를 지원 합니다.
+&nbsp;&nbsp;사용자 프로필을 가져오거나 모니커 사용자와 사용자를 지원 합니다.
  
 <a id="ID4EEC"></a>
 

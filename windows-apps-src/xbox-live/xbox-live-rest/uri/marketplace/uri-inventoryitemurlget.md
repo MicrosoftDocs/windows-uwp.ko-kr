@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1aaef11864a513b42cb5a1c036e7699477884b4a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5989645"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6036171"
 ---
 # <a name="get-inventoryitemid"></a>GET (/inventory/{itemID})
 특정 인벤토리 항목에 대 한 세부 정보의 전체 집합을 제공합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
@@ -37,7 +37,7 @@ ms.locfileid: "5989645"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| itemID| string| 각 사용자에 게 단일 인벤토리 항목에 대 한 고유 ID| 
+| itemID| string| 단일 인벤토리 항목에 대 한 각 사용자에 게 고유한 ID| 
   
 <a id="ID4ELB"></a>
 
@@ -49,7 +49,7 @@ ms.locfileid: "5989645"
  
 ### <a name="sample-response"></a>예제 응답
  
-인증을 통과 하 고 적절 한 권한 부여 컨텍스트 할당 가정 GET 요청에 응답 항목 속성의 전체 집합을 사용 하 여 단일 인벤토리 항목입니다.
+인증을 통과 하 고 적절 한 권한을 컨텍스트를 할당 GET 요청에 대 한 응답에는 항목 속성의 전체 집합을 사용 하 여 단일 인벤토리 항목입니다.
  
 
 ```cpp

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 889db33ff81d3bf10743376118a0fab00ae44d8d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5994454"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6026318"
 ---
 # <a name="multiplayersessionrequest-json"></a>MultiplayerSessionRequest(JSON)
 **MultiplayerSession** 개체에 대 한 작업에 대 한 전달 되는 요청 JSON 개체입니다. 
@@ -28,8 +28,8 @@ MultiplayerSessionRequest JSON 개체에는 다음 사양을 있습니다.
 | --- | --- | --- | 
 | 상수| 개체| 세션에 대 한 상수를 생성 하기 위해 세션 템플릿을 사용 하 여 병합 된 읽기 전용으로 설정 합니다. | 
 | 속성 | 개체 | 세션 속성에 병합 될 변경 합니다.| 
-| members.me | 개체| 많은 작동 하는 속성과 상수 같은 최상위에 상응 합니다. PUT 메서드는 사용자가 세션의 구성원 차지 하며 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정을 요청 하는 멤버 세션에서 제거 됩니다. | 
-| 멤버 | 개체| 인덱스는 0부터 시작 하 여 키 입력 세션을 추가 하는 사용자를 나타내는 다른 개체입니다. 세션을 이미 멤버를 포함 하는 경우에 항상 요청에서 구성원 수 0을 사용 하 여 시작 합니다. 멤버는 요청에 나타나는 순서로 세션에 추가 됩니다. 구성원 속성 속한 고객만 사용자만 설정할 수 있습니다. | 
+| members.me | 개체| 상수 및 많은 작동 하는 속성 같은 최상위에 상응 합니다. PUT 메서드 사용자 세션의 구성원 이어야 하며 필요한 경우 사용자를 추가 합니다. "Me"를 null로 지정 하는 경우 요청 멤버 세션에서 제거 됩니다. | 
+| 멤버 | 개체| 사용자가 인덱스 0부터 시작 하 여 키 입력 세션에 추가할 수를 나타내는 다른 개체입니다. 세션을 이미 멤버를 포함 하는 경우에 항상 요청의 구성원 수를 0으로 시작 합니다. 멤버는 요청에 나타나는 순서 세션에 추가 됩니다. 구성원 속성 속한 고객만 사용자가만 설정할 수 있습니다. | 
 | 서버 | 개체| 업데이트 및 추가 세션을 나타내는 값의 연결 된 서버 참가자 설정 됩니다. 서버를 null로 지정 하는 경우 해당 서버 항목 세션에서 제거 됩니다. | 
   
 <a id="ID4EZ"></a>

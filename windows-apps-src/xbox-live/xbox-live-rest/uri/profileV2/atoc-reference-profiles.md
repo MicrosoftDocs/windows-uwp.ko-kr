@@ -10,15 +10,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f80fc17612e0e89432bd023237256885b44bb97
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5997092"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048142"
 ---
 # <a name="profiles-uris"></a>프로필 URI
  
-이 섹션에서는 *프로필*에 대 한 Xbox Live 서비스에서 프로필 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *프로필*에 대 한 Xbox Live 서비스에서 프로필 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 만 Windows 8에서 실행 되는 게임을 Xbox 360, 또는 Windows Phone 장치 수이 서비스를 사용 합니다.
  
@@ -31,11 +31,11 @@ ms.locfileid: "5997092"
 
 [/users/batch/profile/settings](uri-usersbatchprofilesettings.md)
 
-&nbsp;&nbsp;사용자 또는 사용자의 프로필에 액세스 합니다.
+&nbsp;&nbsp;사용자 또는 사용자에 대해 프로 파일에 액세스 합니다.
 
 [/users/{userId}/profile/settings/people/{userList}?settings={settings}](uri-usersuseridprofilesettingspeopleuserlist.md)
 
-&nbsp;&nbsp;사용자 또는 사용자 모니커 지 사용자의 프로필에 액세스 합니다.
+&nbsp;&nbsp;사용자 또는 사용자가 사용자 모니커 지원에 대 한 프로 파일에 액세스 합니다.
  
 <a id="ID4EYB"></a>
 

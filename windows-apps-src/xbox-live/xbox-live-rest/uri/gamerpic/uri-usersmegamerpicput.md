@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d9346303e82dea2dbbd60b542c4ee207dd40901
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990446"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6025663"
 ---
 # <a name="put-usersmegamerpic"></a>PUT (/users/me/gamerpic)
-1080 x 1080 gamerpic에 업로드합니다. 
+1080 x 1080 게이머 사진에 업로드합니다. 
   * [요청 본문](#ID4EQ)
   * [HTTP 상태 코드](#ID4EZ)
   * [응답 본문](#ID4EXC)
@@ -40,7 +40,7 @@ ms.locfileid: "5990446"
 | --- | --- | --- | 
 | 200| 확인| 성공적으로 다운로드 합니다.| 
 | 201| 만들어집니다.| 업로드 성공 했습니다.| 
-| 403| 금지| 권한 세션이 해지 됩니다.| 
+| 403| 금지| 권한이 세션이 해지 됩니다.| 
 | 500| 오류| 문제가 발생했습니다.| 
   
 <a id="ID4EXC"></a>

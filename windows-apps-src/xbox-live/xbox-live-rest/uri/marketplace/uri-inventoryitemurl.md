@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b551daee0f9b7eba898c2b04dcd150129b8e6d65
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5984950"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6044144"
 ---
 # <a name="inventoryitemid"></a>/inventory/{itemID}
-특정 인벤토리 항목에 대 한 세부 정보의 전체 집합 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
+특정 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.
  
 <a id="ID4ET"></a>
 
@@ -26,7 +26,7 @@ ms.locfileid: "5984950"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| itemID| string| 각 사용자에 게 단일 인벤토리 항목에 대 한 고유 ID| 
+| itemID| string| 단일 인벤토리 항목에 대 한 각 사용자에 게 고유한 ID| 
   
 <a id="ID4EPB"></a>
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: bd1d536cb4f7ba44208f2c298928b4fa4ed3074e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5979512"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6044128"
 ---
 # <a name="getclipresponse-json"></a>GetClipResponse(JSON)
 게임 클립을 래핑합니다. 
@@ -23,7 +23,7 @@ ms.locfileid: "5979512"
  
 ## <a name="getclipresponse"></a>GetClipResponse
  
-GetClipResponse 개체에는 다음과 같이 지정 합니다.
+GetClipResponse 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

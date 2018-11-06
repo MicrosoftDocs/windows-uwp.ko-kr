@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7701b54d7e48fda3fa106e2d170c368a2159e517
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5985570"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6039848"
 ---
 # <a name="gameclipvisibility-enumeration"></a>GameClipVisibility 열거형
 GameClipVisibility 열거형에 자세히 설명 합니다. 
@@ -26,7 +26,7 @@ GameClipVisibility 열거형에 자세히 설명 합니다.
 | <b>열거자</b>| <b>설명</b>| 
 | --- | --- | 
 | 없음| 표시 여부를 지정 하지 않습니다. 대부분의 경우 잘못 된 값입니다.| 
-| Default| 게임 클립 가시성 Xbox LIVE 개인 정보 설정에 따라 결정 합니다.| 
+| Default| 게임 클립 가시성 Xbox LIVE 개인 정보 설정에 따라 결정 됩니다.| 
 | 소유자| 게임 클립을 만든 원래 XUID에만 있습니다.| 
 | 제목| 게임 클립을 만든 원래 제목에만 있습니다.| 
 | Public| 게임 클립은 Xbox LIVE의 모든 사용자가 사용할 수 있습니다.| 

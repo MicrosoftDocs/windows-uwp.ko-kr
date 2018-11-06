@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 68237ed101870a8fed4b7b5fb298006f784a0910
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5972351"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6029862"
 ---
 # <a name="get-usersowneridpeopleavoid"></a>GET (/users/{ownerId}/people/avoid)
 사용자에 대 한 문제 방지 목록을 가져옵니다.
@@ -41,16 +41,16 @@ ms.locfileid: "5972351"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| ownerId| string| 필수. 해당 리소스에 액세스 하 고 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증된 된 사용자를 이어야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
+| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
 
 <a id="ID4EEB"></a>
 
 
 ## <a name="authorization"></a>권한 부여
 
-사용 권한 부여 클레임 | 클레임| 유형| 필수 여부| 예제 값|
+권한 부여 클레임 사용 | 클레임| 유형| 필수 여부| 예제 값|
 | --- | --- | --- | --- | --- | --- | --- |
-| Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|
+| Xuid| 64 비트 부호 있는 정수| 예| 1234567890|
 
 <a id="ID4EJC"></a>
 

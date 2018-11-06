@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 43579570ea86c79146d99e7c6b46570b67d68d2b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5968169"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6024504"
 ---
 # <a name="gamecliptype-enumeration"></a>GameClipType 열거형
 GameClipTypes 열거형에 자세히 설명 합니다. 
@@ -23,11 +23,11 @@ GameClipTypes 열거형에 자세히 설명 합니다.
  
 ## <a name="gamecliptypes"></a>GameClipTypes
  
-여러 값 가능한 되므로 플래그 열거형의 경우입니다.
+이것은 여러 값은 가능한 이므로 플래그 열거형입니다.
  
 | <b>열거자</b>| <b>설명</b>| 
 | --- | --- | 
-| 없음| 게임 클립 형식을 알 수 없거나 설정 하지 않습니다. (업로드할는 유효 하지 않습니다)| 
-| MetadataOnly| 게임 클립 자산 데이터-메타 데이터만 포함 되지 않습니다. (나중에 사용)| 
-| DeveloperInitiated| 게임 클립 개발자/타이틀에서 시작 됩니다.| 
+| 없음| 게임 클립 형식을 알 수 없거나 설정 하지 않습니다. (업로드할 유효 하지 않습니다)| 
+| MetadataOnly| 게임 클립 자산 데이터-메타 데이터만 포함 되지 않습니다. (예: 향후 사용)| 
+| DeveloperInitiated| 게임 클립 개발자/제목에서 시작 됩니다.| 
   

@@ -10,18 +10,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7808b8dc9a8b83553ae6b09e7008fab238409958
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5972436"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6022980"
 ---
 # <a name="delete-serviceconfigsscidhoppershoppernameticketsticketid"></a>DELETE (/serviceconfigs/{scid}/hoppers/{hoppername}/tickets/{ticketid})
 
-일치 티켓을 제거 합니다.
+일치 티켓을 제거합니다.
 
 > [!IMPORTANT]
-> 이 메서드는 계약 103 이상을 사용 하 여 사용 하기 위한 하며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 메서드는 계약 103 이상을 사용 하 여 사용 하기 위한 하며 Xbl 계약 버전 X의 헤더 요소: 103 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E2)
@@ -52,23 +52,23 @@ ms.locfileid: "5972436"
 
 ## <a name="authorization"></a>권한 부여
 
-| 형식| 필수| 설명| 누락 된 경우 응답|
+| 형식| 필수| 설명| 응답 없는 경우|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | XUID (사용자 ID)| 예| 요청 사용자 티켓에서 참조 하는 티켓 세션의 구성원 이어야 합니다.| 403|
-| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다.| 403|
+| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임에 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다.| 403|
 
 <a id="ID4EOC"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는 MPSD에 적용 되는 HTTP 상태 코드를 반환 합니다.  
+MPSD에 적용 되는 서비스에서 HTTP 상태 코드를 반환 합니다.  
 <a id="ID4EXC"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4ECD"></a>
 

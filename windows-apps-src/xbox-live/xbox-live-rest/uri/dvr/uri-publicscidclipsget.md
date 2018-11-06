@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c7c00e9322881aedafeddddcd5129ae0248e718
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5972423"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050339"
 ---
 # <a name="get-publicscidsscidclips"></a>GET (/public/scids/{scid}/clips)
-공개 클립 나열 되어 있습니다. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.
+공용 클립을 나열 합니다. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4ECB)
@@ -28,11 +28,11 @@ ms.locfileid: "5972423"
  
 ## <a name="remarks"></a>설명
  
-이 API는 public 목록 클립에 다양 한 방법으로 허용 합니다. 클립 목록 개인 정보 보호 검사 및 요청 XUID에 대 한 콘텐츠 격리 검사에 따라 반환 됩니다.
+이 API는 public 목록 클립에 다양 한 방법으로 허용 합니다. 클립의 목록이 개인 정보 보호 검사 및 요청 XUID에 대 한 콘텐츠 격리 검사에 따라 반환 됩니다.
  
-쿼리는 서비스 구성 id (서비스 안내) 당 최적화 됩니다. 필터 또는 아래에 나열 된 기본값 이외의 정렬 순서 지정 더 상황에 따라 시간이 오래 걸릴 수를 반환 합니다. 이 동영상의 더 큰 집합에 대 한 더 분명 하 게 합니다. 쿼리 오름차순으로 정렬 지정할 수 없습니다.
+쿼리는 서비스 구성 id (서비스 안내) 당 최적화 됩니다. 필터 또는 아래에 나열 된 기본값이 아닌 정렬 순서 추가로 지정 상황에 따라 시간이 오래 걸릴 수를 반환 합니다. 이 동영상의 더 큰 집합에 대 한 더 분명 하 게 합니다. 쿼리 오름차순으로 정렬 순서를 지정할 수 없습니다.
  
-한정자는 특정 컬렉션 ofpublic 클립을 다운로드 해야 합니다. 요청 사용자에 게 요청 된 서비스 안내에 액세스할 수 있어야, 그렇지 않은 경우 HTTP 403 반환 됩니다.
+한정자는 특정 컬렉션 ofpublic 클립을 해야 합니다. 요청 하는 사용자 요청 된 서비스 안내에 액세스할 수 있어야, 그렇지 않으면 HTTP 403 반환 됩니다.
   
 <a id="ID4ECB"></a>
 
@@ -42,7 +42,7 @@ ms.locfileid: "5972423"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | 서비스 안내| string| 기본 서비스 구성 공개 클립의 식별자입니다.| 
-| titleid| string| 공개 클립의 titleId 합니다. 동일한 uri는 서비스 안내도 지정할 수 없습니다. 기본 서비스 안내를 조회할 수를 지정 하는 경우 사용 됩니다.| 
+| titleid| string| 공용 클립의 titleId 합니다. 동일한 URI는 서비스 안내도 지정할 수 없습니다. 기본 서비스 안내를 조회할 수를 지정 하는 경우 사용 됩니다.| 
   
 <a id="ID4ENB"></a>
 
@@ -51,9 +51,9 @@ ms.locfileid: "5972423"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| <b>? achievementId = {achievementId}</b>| 최근 클립 지정된 <b>achievementId</b>일치 합니다.| 추가 정렬/필터링 하는 것은 지원 되지 않습니다.| 
-| <b>? greatestMomentId = {greatestMomentId}</b>| 최근 클립 지정된 <b>greatestMomentId</b>일치 합니다.| 추가 정렬/필터링 하는 것은 지원 되지 않습니다.| 
-| <b>? 한정자 = 생성 </b>| 최근| 필수.| 
+| <b>? achievementId = {achievementId}</b>| 가장 최근 클립 지정된 <b>achievementId</b>일치 합니다.| 추가 정렬/필터링 하는 것은 지원 되지 않습니다.| 
+| <b>? greatestMomentId = {greatestMomentId}</b>| 가장 최근 클립 지정된 <b>greatestMomentId</b>일치 합니다.| 추가 정렬/필터링 하는 것은 지원 되지 않습니다.| 
+| <b>? 한정자 = 생성 </b>| 가장 최근| 필수.| 
   
 <a id="ID4EDD"></a>
 

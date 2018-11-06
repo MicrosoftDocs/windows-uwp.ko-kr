@@ -1,7 +1,7 @@
 ---
 title: Xbox Live Api를 사용 하 여 XDK에 기본 제공
 author: KevinAsgari
-description: Xbox 개발자 키트 (XDK) 프로젝트의 기본 제공 Xbox Live Api를 사용 하는 방법을 알아봅니다.
+description: Xbox 개발자 키트 (XDK) 프로젝트에서 기본 제공 Xbox Live Api를 사용 하는 방법을 알아봅니다.
 ms.assetid: 539caca3-58bc-49d9-8432-ca8e57755be2
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -9,21 +9,21 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e127dd2adb53e8fdf5fb0469ce9deae5759eb899
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990249"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6024842"
 ---
 # <a name="using-xbox-live-apis-built-into-the-xdk"></a>Xbox Live Api를 사용 하 여 XDK에 기본 제공
 
 1. Visual Studio에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 "참조"를 선택 합니다.
 1. "새 참조 추가"를 선택 합니다.
-1. "Durango 클릭. <build number>" 및 왼쪽된 창에서 "확장"
+1. "Durango 클릭. <build number>" 왼쪽된 창에서 "확장" 및
 1. 중간에 중 하나를 선택 합니다.
-- WinRT XSAPI API를 사용 하려는 경우 "Xbox 서비스 API"을 선택 합니다.
+- XSAPI WinRT API를 사용 하려는 경우 "Xbox 서비스 API"을 선택 합니다.
 - C + + XSAPI API를 사용 하려는 경우 "Xbox 서비스 API Cpp"을 선택 합니다.
-1. 확인을 클릭
+1. 확인을 클릭 합니다.
 
-참고: 빌드 시스템 속성 파일을 지원 하지 않으면 수동으로 추가 해야 전처리기 정 및 라이브러리에 표시 된 대로
+참고: 빌드 시스템에서 속성 파일을 지원 하지 않으면 수동으로 추가 해야 전처리기 정 및 라이브러리에 표시 된 대로
 `%XboxOneExtensionSDKLatest%\ExtensionSDKs\Xbox.Services.API.Cpp\8.0\DesignTime\CommonConfiguration\Neutral\Xbox.Services.API.Cpp.props`

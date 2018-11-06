@@ -1,7 +1,7 @@
 ---
 title: 구성 blob 읽기
 author: KevinAsgari
-description: Xbox Live 타이틀 저장소에서 구성 blob 읽기 하는 방법을 알아봅니다.
+description: Xbox Live 타이틀 저장소에서 구성 blob 읽기는 방법을 알아봅니다.
 ms.assetid: ee62d221-69b9-4f52-9b5d-5a44d04de548
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -9,15 +9,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: be118ff3bc12cd3dd541d6889daa70c7e5a8eab3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5970760"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049992"
 ---
 # <a name="reading-a-configuration-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에서 구성 blob 읽기
 
-*구성 blob* 은 게임 데이터를 저장 하는 Xbox Live 타이틀 저장소에서 파일입니다. 데이터는 게임에 전달 되 고 하기 전에 필터링 할 수 있는 가상 노드를 포함 하는 JSON 개체입니다. 구성 blob에 대 한 자세한 내용은 **타이틀 저장소 Uri**를 참조 하세요.
+*구성 blob* 은 게임 데이터를 포함 하는 Xbox Live 타이틀 저장소에서 파일입니다. 데이터는 게임에 전달 되 고 하기 전에 필터링 할 수 있는 가상 노드를 포함 하는 JSON 개체입니다. 구성 blob에 대 한 자세한 내용은 **타이틀 저장소 Uri**를 참조 하세요.
 
 ### <a name="to-read-a-configuration-blob"></a>구성 blob 읽기
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 60938acedd58934ec8b758d435776f227e82b91d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995396"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6030242"
 ---
 # <a name="get-usersowneridsummary"></a>GET (/users/{ownerId}/summary)
 호출자의 관점에서 소유자에 대 한 요약 데이터를 가져옵니다.
@@ -35,7 +35,7 @@ ms.locfileid: "5995396"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| ownerId| string| 해당 리소스에 액세스 하 고 사용자의 식별자입니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다. 예제 값: <code>me</code>, <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>|
+| ownerId| string| 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다. 예제 값: <code>me</code>, <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>|
 
 <a id="ID4E2"></a>
 
@@ -53,7 +53,7 @@ ms.locfileid: "5995396"
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 권한 부여| 문자열| 에 대 한 데이터를 권한 부여 합니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x = [해시] [ 토큰]</b>.|
+| 권한 부여| 문자열| 에 대 한 데이터를 권한 부여 합니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x = [해시] [ 토큰]</b>합니다.|
 
 <a id="ID4EHD"></a>
 
@@ -62,7 +62,7 @@ ms.locfileid: "5995396"
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| x xbl-계약 버전| string| 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예제 값: 1|
+| xbl 계약 버전 x| string| 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 예제 값: 1|
 | 수락| string| 허용 되는 콘텐츠-형식입니다. 모든 응답 됩니다 <code>application/json</code>.|
 
 <a id="ID4EXE"></a>
@@ -70,7 +70,7 @@ ms.locfileid: "5995396"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4ECF"></a>
 
@@ -82,7 +82,7 @@ ms.locfileid: "5995396"
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 200| 확인| 세션을 검색 했습니다.|
-| 400| 잘못 된 요청| 사용자 Id 잘못 되었습니다.|
+| 400| 잘못 된 요청| 사용자 Id가 잘못 된 형식의 합니다.|
 | 403| 금지| 권한 부여 헤더에서 XUID 클레임을 분석할 수 없습니다.|
 
 <a id="ID4EZG"></a>
@@ -93,7 +93,7 @@ ms.locfileid: "5995396"
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Content-Length| string| 응답에 전송 되는 바이트 수입니다. 예제 값: 232 합니다.|
-| Content-Type| 문자열| 응답 본문의 MIME 형식입니다. <b>응용 프로그램/j</b>이어야 합니다.|
+| Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 이 <b>응용 프로그램/j</b>이어야 합니다.|
 
 <a id="ID4EGAAC"></a>
 

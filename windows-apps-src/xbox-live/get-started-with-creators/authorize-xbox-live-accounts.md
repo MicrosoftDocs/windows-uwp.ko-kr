@@ -9,15 +9,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 계정, 테스트 계정
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a8ffb0532cac1141706fe82b426ef41ab8cfaef
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995622"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6042839"
 ---
-# <a name="authorize-xbox-live-accounts-for-testing-in-your-environment"></a>테스트 환경에서 Xbox Live 계정에 권한을 부여합니다
+# <a name="authorize-xbox-live-accounts-for-testing-in-your-environment"></a>사용자 환경에서 테스트에 대 한 Xbox Live 계정에 권한을 부여합니다
 
-이 항목에서는 Xbox Live 계정 게시자 테스트 환경 설정 하는 프로세스를 통과
+이 항목에서는 Xbox Live 계정 게시자 테스트 환경 설정 프로세스를 통과
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -28,10 +28,10 @@ Xbox Live 테스트 계정에 권한을 부여 하려면 다음이 필요 합니
 ## <a name="navigate-to-the-xbox-test-account-page"></a>Xbox 테스트 계정 페이지로 이동
 개발자 센터의 계정 설정 섹션에 있는이
 
-이 섹션의 두 가지 방법 중 하나에 도달할 수 있다는
+이 섹션의 두 가지 방법 중 하나에 도달할 수 있습니다.
 
-1. 개발자 센터 대시보드에서 계정 보기로 이동할 수 있는 설정 기어 ⚙️을 클릭 합니다. 계정 보기의 왼쪽된 탐색에서 **Xbox 테스트 계정** 링크를 클릭 합니다.
-2. Xbox Live 크리에이터 스 구성 페이지에서 테스트 섹션을 찾아 자격이 **부여 Xbox Live 계정 테스트 환경에 대 한** 링크를 클릭 합니다.
+1. 개발자 센터 대시보드의 계정 보기를 사용 하 여 설정 기어 ⚙️을 클릭 합니다. 계정 보기의 왼쪽된 탐색에서 **Xbox 계정을 테스트** 링크를 클릭 합니다.
+2. Xbox Live 크리에이터 스 구성 페이지에서 테스트 섹션을 찾아 자격이 **테스트 환경에 대 한 권한을 부여 Xbox Live 계정** 링크를 클릭 합니다.
 
 
 ## <a name="authorize-an-xbox-live-account-for-your-test-environment"></a>테스트 환경에 대 한 Xbox Live 계정에 권한을 부여합니다
@@ -40,16 +40,16 @@ Xbox Live 테스트 계정에 권한을 부여 하려면 다음이 필요 합니
 
 ![Xbox Live 계정 추가](../images/creators_udc/add_test_account.png)
 
-* 모달 원하는 계정의 메일 주소를 입력할 수 있는 텍스트 상자를 사용 하 여 화면에 표시 해야
+* 원하는 계정의 메일 주소를 입력할 수 있는 텍스트 상자를 사용 하 여 화면으로 모달 팝 해야
 
 ![모달 계정을 Xbox Live 추가](../images/creators_udc/add_test_account_modal.png)
 
-* 메일 주소 있고 관련 된 Xbox Live 계정에 있는지 확인 하기 위한 추가 버튼을 클릭 합니다. 이 검사를 통과 하는 경우 모달 사라집니다 및 테스트 환경에 대 한 것을 나타내는 테이블에 새 계정이 성공적으로 인증 이제 표시 됩니다.
+* 전자 메일 주소 있고에 연결 된 Xbox Live 계정 확인 하기 위한 추가 단추를 클릭 합니다. 검사를 통과 하는 경우 모달 사라집니다 및 테스트 환경에 대 한 것을 나타내는 테이블에 새 계정이 성공적으로 인증 이제 표시 됩니다.
 
 ![Xbox Live 계정 성공 추가](../images/creators_udc/add_test_account_success.png)
 
 ## <a name="troubleshooting"></a>문제 해결
 
-모달에 입력 한 메일은 Xbox Live 계정 연결 되어 있는지 확인 하는 조회를 포함 하는 몇 가지 검사를 통해 실행 됩니다. 이러한 검사 중 하나라도 실패 하는 경우 계정 테이블에 추가 되지 및 되 고 따라서 권한이 없음 "죄송 하지만, 메일 주소를 추가 하는 문제 발생" 오류가 발생할 수 있습니다.
+모달에 입력 한 메일은 Xbox Live 계정 연결 되어 있는지 확인 하는 조회를 포함 하는 몇 가지 검사를 통해 실행 됩니다. 이러한 검사 중 하나라도 실패 계정 하지 테이블에 추가 되 고 따라서 권한이 없는 및 "죄송 하지만, 전자 메일 주소를 추가 하는 문제 발생" 오류가 발생할 수 있습니다.
 
 문제가 있는 경우 좋은 검사를 시도 [Xbox.com](http://www.xbox.com/live/)에서 계정으로 로그인 하는 것입니다. 로그인 할 수 없는 경우 다음 계정 하지 Xbox Live 계정이입니다.

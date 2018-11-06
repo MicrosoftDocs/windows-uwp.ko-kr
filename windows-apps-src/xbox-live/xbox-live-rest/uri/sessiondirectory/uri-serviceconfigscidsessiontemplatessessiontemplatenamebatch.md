@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c1f1add0104ad166620dbdff79936e6a99379df3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5986238"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6028862"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatenamebatch"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/batch
-세션 템플릿 수준에서 일괄 처리 쿼리를 만들고 게시 작업을 지원 합니다.
+세션 템플릿 수준에서 일괄 처리 쿼리를 만들려면 POST 작업을 지원 합니다.
 
 > [!IMPORTANT]
 > 이 메서드는 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위한 하 고 X Xbl-계약 버전의 헤더 요소가: 104/105 또는 나중에 모든 요청.
@@ -34,8 +34,8 @@ sessiondirectory.xboxlive.com
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 세션 템플릿 인스턴스의의 이름입니다. 2 부 세션 식별자입니다.|
+| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1의 세션 식별자입니다.|
+| sessionTemplateName| string| 현재 인스턴스의 세션 서식 파일의 이름입니다. 파트 2 세션 식별자입니다.|
 
 <a id="ID4E2B"></a>
 

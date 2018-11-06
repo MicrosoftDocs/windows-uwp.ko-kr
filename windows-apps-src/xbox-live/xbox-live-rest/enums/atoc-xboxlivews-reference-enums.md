@@ -10,15 +10,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: fa0a405d811f2ad6497149d62e08b974dc873575
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5980808"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6042816"
 ---
 # <a name="enumerations-used-in-javascript-object-notation-json-objects"></a>JSON(JavaScript Object Notation) 개체에 사용된 열거형
  
-Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개체를 정의 합니다. 서비스에서 사용 되는 많은 JavaScript Object Notation (JSON) 개체에 허용 되는 JavaScript Object Notation (JSON) 개체에 표시 되는 필드에 대 한 값으로 지정 하는 열거형 연결 되어 있습니다. 이 섹션에서는 JavaScript Object Notation (JSON) 개체에 사용 되는 열거형을 나열 합니다. 
+Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개체를 정의 합니다. 서비스에서 사용 되는 많은 JavaScript Object Notation (JSON) 개체에 허용 되는 JavaScript Object Notation (JSON) 개체에 표시 되는 필드에 대 한 값을 지정 하는 열거형 연결 되어 있습니다. 이 섹션에서는 JavaScript Object Notation (JSON) 개체에 사용 되는 열거형을 나열 합니다. 
  
 <a id="ID4EJB"></a>
 

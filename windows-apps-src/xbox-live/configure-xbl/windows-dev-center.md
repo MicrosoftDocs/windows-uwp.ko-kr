@@ -1,18 +1,18 @@
 ---
 title: 개발자 센터 서비스 구성
 author: KevinAsgari
-description: Windows 개발자 센터에서 Xbox Live 서비스를 구성 하는 방법에 자세히 설명 하는 항목에 대 한 링크를 제공 합니다.
+description: Windows 개발자 센터에서 Xbox Live 서비스를 구성 하는 방법에 자세히 설명 하는 항목에 링크를 제공 합니다.
 ms.author: kevinasg
 ms.date: 7/30/2018
 ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
 ms.openlocfilehash: ec865b56254b624655e29df43a42ebedd58e4cf0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5968279"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6032108"
 ---
 # <a name="windows-dev-center-service-configuration"></a>Windows 개발자 센터 서비스 구성
 
@@ -21,9 +21,9 @@ ms.locfileid: "5968279"
 > [!IMPORTANT]
 > 이러한 항목 타이틀에 Xbox Live 크리에이터 스 프로그램에 적용 되지 않습니다.
 
-게임 구성 페이지에 액세스 하기 위해 전체 Xbox Live 액세스에 대 한 활성화 되어야 합니다.
+게임 구성 페이지에 액세스 하기 위해 Xbox Live 전체 액세스에 대 한 활성화 되어야 합니다.
 
-Xbox Live 구성에 액세스 하려면 페이지, [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)타이틀을 선택한 후 이동 **서비스** > **Xbox Live**.
+Xbox Live 구성에 액세스 하려면 페이지, [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)타이틀을 선택한 후 이동 **서비스** > **Xbox Live**합니다.
 
 
 다음 항목에는 Windows 개발자 센터를 사용 하 여 Xbox Live를 구성 하는 방법을 설명 합니다.

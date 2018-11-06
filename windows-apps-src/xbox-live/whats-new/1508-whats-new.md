@@ -1,7 +1,7 @@
 ---
-title: 새로운 기능-2015 년 8 월 Xbox Live SDK에 대 한
+title: 새로운 기능-2015 년 8 월에 대 한 Xbox Live SDK
 author: KevinAsgari
-description: 새로운 기능-2015 년 8 월 Xbox Live SDK에 대 한
+description: 새로운 기능-2015 년 8 월에 대 한 Xbox Live SDK
 ms.assetid: a034867b-7cc0-4b97-89d5-3486e95a80b4
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -9,17 +9,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: eca9ac96aa132c395451dfd254fbf2bf274315aa
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5975943"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6039930"
 ---
-# <a name="whats-new-for-the-xbox-live-sdk---august-2015"></a>새로운 기능-2015 년 8 월 Xbox Live SDK에 대 한
+# <a name="whats-new-for-the-xbox-live-sdk---august-2015"></a>새로운 기능-2015 년 8 월에 대 한 Xbox Live SDK
 
 추가 된 항목에 대 한 [새로운 기능-2015 년 6 월](1506-whats-new.md) 문서를 참조 하십시오 2015 년 6 월 릴리스에서 합니다.
 
-Xbox Live SDK의 8 월 릴리스는 다음과 같은 업데이트가 포함 됩니다.
+Xbox Live SDK의 8 월 릴리스에 다음과 같은 업데이트가 포함 됩니다.
 
 ## <a name="os-and-tool-support"></a>운영 체제 및 도구 지원
 Xbox Live SDK는 이제 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [버전 14.0.23107.0]를 지원합니다.
@@ -30,14 +30,14 @@ Xbox Live SDK는 이제 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 201
 ## <a name="submit-batch-feedback-from-a-title"></a>타이틀에서 일괄 처리 피드백 제출
 다양 한 타이틀에서 한 번에 피드백 항목을 제출합니다.
 
-## <a name="newupdated-documentation"></a>새/업데이트 설명서
-이제 Xbox Live SDK 패키지 "문서" 폴더를 포함, 업데이트 된 API 참조와 새 "Xbox Live 프로그래밍 가이드"를 포함 합니다.
+## <a name="newupdated-documentation"></a>새/업데이트 된 설명서
+이제 Xbox Live SDK 패키지 "문서" 폴더가 포함, 업데이트 된 API 참조와 새 "Xbox Live 프로그래밍 가이드"를 포함 합니다.
 
 버그 수정 합니다.
 
 * 실시간으로 활동 서비스에서 구독을 제거 하는 동안 크래시
 * 게스트 계정으로 로그인 할 때 충돌
 * 액세스 위반이 네트워크 케이블을 분리 하는 경우
-* 이제 터널 오류 c + + Api에서 오류 코드를 제공
-* ETag 문제가 TitleStorageService::DownloadBlobAsync
+* 터널 오류 이제 c + + api에서 오류 코드를 제공
+* ETag TitleStorageService::DownloadBlobAsync 문제
 * 샘플 앱의 다양 한 버그가 수정 되었습니다.

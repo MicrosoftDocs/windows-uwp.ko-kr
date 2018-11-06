@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 91bcae367e42b3dc728b794d1e68550e86dcfeaa
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5984019"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6046765"
 ---
 # <a name="post-usersowneridpeoplexuids"></a>POST (/users/{ownerId}/people/xuids)
 컬렉션을 호출자의 사용자 로부터 XUID 사람을 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
@@ -43,14 +43,14 @@ ms.locfileid: "5984019"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| ownerId| string| 해당 리소스에 액세스 하 고 사용자의 식별자입니다. 인증된 된 사용자와 일치 해야 합니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다.| 
+| ownerId| string| 해당 리소스를 액세스 하는 사용자의 식별자입니다. 인증된 된 사용자와 일치 해야 합니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다.| 
   
 <a id="ID4EJB"></a>
 
  
 ## <a name="authorization"></a>권한 부여
  
-| 형식| 필수| 설명| 누락 된 경우 응답| 
+| 형식| 필수| 설명| 응답 없는 경우| 
 | --- | --- | --- | --- | --- | --- | --- | 
 | XUID| 예| 호출자가 사용자의 Xbox 사용자 ID (XUID).| 401 권한이 없음| 
   
@@ -61,9 +61,9 @@ ms.locfileid: "5984019"
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 권한 부여| 문자열입니다. Xbox LIVE에 대 한 데이터를 권한 부여 합니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x =&lt;userhash >;&lt; 토큰 ></b>.| 
+| 권한 부여| 문자열입니다. Xbox LIVE에 대 한 데이터를 권한 부여 합니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x =&lt;userhash >;&lt; 토큰 ></b>합니다.| 
 | Content-Length| 32 비트 부호 없는 정수입니다. 길이, 바이트, 요청 본문의입니다. 예제 값: 22.| 
-| Content-Type| 문자열입니다. 요청 본문의 MIME 형식입니다. <b>응용 프로그램/j</b>이어야 합니다.| 
+| Content-Type| 문자열입니다. 요청 본문의 MIME 형식입니다. 이 <b>응용 프로그램/j</b>이어야 합니다.| 
   
 <a id="ID4EBE"></a>
 
@@ -72,8 +72,8 @@ ms.locfileid: "5984019"
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 기본값: 1입니다.| 
-| 수락| 문자열입니다. 호출자는 응답에서 허용 하는 콘텐츠-형식입니다. 모든 응답은 <b>응용 프로그램/j</b>됩니다.| 
+| X RequestedServiceVersion| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 기본값: 1입니다.| 
+| 수락| 문자열입니다. 호출자는 응답에서 허용 하는 콘텐츠-형식입니다. 모든 응답은 <b>응용 프로그램/j</b>.| 
   
 <a id="ID4EHF"></a>
 
@@ -83,11 +83,11 @@ ms.locfileid: "5984019"
 <a id="ID4ENF"></a>
 
  
-### <a name="required-members"></a>필수 구성원
+### <a name="required-members"></a>필수 멤버
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| XuidList| 호출자의 사용자 컬렉션에서 반환 될 사용자를 식별 하는 XUIDs의 배열입니다. [XuidList (JSON)를](../../json/json-xuidlist.md)참조 하세요.| 
+| XuidList| 호출자의 사람들이 컬렉션에서 반환 될 사용자를 식별 하는 XUIDs의 배열입니다. [XuidList (JSON)를](../../json/json-xuidlist.md)참조 하세요.| 
   
 <a id="ID4EKG"></a>
 
@@ -101,7 +101,7 @@ ms.locfileid: "5984019"
  
 ### <a name="prohibited-members"></a>금지 된 멤버
  
-다른 모든 멤버는 요청에 사용할 수 없습니다.
+다른 모든 구성원 요청에 사용할 수 없습니다.
   
 <a id="ID4EAH"></a>
 
@@ -130,9 +130,9 @@ ms.locfileid: "5984019"
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 200| 확인| 성공 메서드 "얻는"입니다.| 
-| 204| 콘텐츠| 성공 방법은 "추가" 또는 "제거" 합니다.| 
-| 400| 잘못 된 요청| 메서드 매개 변수 누락 되거나 잘못 된 형식의 되었거나 사용자 Id 잘못 되었습니다.| 
+| 200| 확인| "가져오는" 방법은 때 성공 합니다.| 
+| 204| 콘텐츠 없음| 성공 방법은 "추가" 또는 "제거" 합니다.| 
+| 400| 잘못 된 요청| 메서드 매개 변수 누락 되거나 잘못 된 형식의 되었거나 사용자 Id가 잘못 된 형식의 합니다.| 
 | 403| 금지| 권한 부여 헤더에서 XUID 클레임을 분석할 수 없습니다.| 
   
 <a id="ID4ENBAC"></a>

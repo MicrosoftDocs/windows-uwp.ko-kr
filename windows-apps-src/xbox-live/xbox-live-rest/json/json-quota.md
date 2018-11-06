@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cb2283f5214d1d25e1aa0e8bcba17f4c51019fd
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5977506"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6022816"
 ---
 # <a name="quotainfo-json"></a>quotaInfo(JSON)
-제목 그룹에 대 한 할당량 정보를 포함합니다. 
+제목 그룹에 대 한 할당량 정보가 포함 되어 있습니다. 
 <a id="ID4EN"></a>
 
  
@@ -29,8 +29,8 @@ QuotaInfo 개체에는 다음 사양에 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| quotaBytes| 32 비트의 부호 있는 정수 | 바이트 제목에 사용할 수 있는 최대 수입니다.| 
-| usedBytes| 32 비트의 부호 있는 정수 | 제목에 사용 된 바이트 수입니다.| 
+| quotaBytes| 32 비트 부호 있는 정수 | 바이트 제목에 사용할 수 있는 최대 수입니다.| 
+| usedBytes| 32 비트 부호 있는 정수 | 제목에 사용 된 바이트 수입니다.| 
   
 <a id="ID4EXB"></a>
 

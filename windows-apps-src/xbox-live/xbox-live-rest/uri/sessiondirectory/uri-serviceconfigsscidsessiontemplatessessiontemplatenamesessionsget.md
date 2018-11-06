@@ -10,17 +10,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 861228c4b00cba6ee011b96f1f2d0493b7eafbfe
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5987111"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6032889"
 ---
 # <a name="get-serviceconfigsscidsessiontemplatessessiontemplatenamesessions"></a>GET (/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions)
 세션 템플릿 문서를 검색합니다.
 
 > [!IMPORTANT]
-> 이 URI 메서드에 필요 X Xbl-계약 버전의 헤더 요소: 104/105 또는 나중에 모든 요청.
+> 이 URI 메서드에 필요 Xbl 계약 버전 X의 헤더 요소: 104/105 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4EKB)
@@ -37,12 +37,12 @@ ms.locfileid: "5987111"
 
 
 > [!NOTE] 
-> 2015 멀티 플레이어 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsForUsersFilterAsync</b>하 여이 메서드가 호출 됩니다.  
+> 이 메서드는 2015 멀티 플레이어 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerService.GetSessionsForUsersFilterAsync</b>으로 호출 됩니다.  
 
 
 
 > [!NOTE] 
-> 이 메서드를 호출할 때마다 키워드, Xbox 사용자 ID 필터 또는 둘 다 포함 해야 합니다. 호출자에 <i>개인</i> 및 <i>예약</i> 매개 변수에 대 한 올바른 권한이 없는 경우 이러한 세션은 실제로 존재 여부 메서드 403의 오류 코드를 반환 합니다.  
+> 이 메서드를 호출할 때마다 키워드, Xbox 사용자 ID 필터 또는 둘 다 포함 해야 합니다. 호출자에 <i>개인</i> 및 <i>예약</i> 매개 변수에 대 한 올바른 권한이 없는 경우 그러한 세션은 실제로 존재 하는지 여부는 메서드 403의 오류 코드를 반환 합니다.  
 
 
 <a id="ID4EKB"></a>
@@ -53,33 +53,33 @@ ms.locfileid: "5987111"
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1 세션의 id.|
-| 키워드| string| 해당 문자열을 사용 하 여 식별 하는 단지 세션에 결과 필터링 하는 데 사용 하는 키워드입니다.|
-| xuid| GUID| 세션을 검색 하 고 사용자에 대 한 Xbox 사용자 Id. 사용자 세션에서 활성 상태 여야 합니다. |
-| 예약| string| 사용자가 수락 하지 않는 세션의 목록을 포함 하는 경우를 나타내는 값입니다. 이 매개 변수를만 설정할 수를 true로 합니다. 이 설정은 호출자가 세션에 대 한 서버 수준 액세스 이상의 호출자의 XUID Xbox 사용자 ID 필터와 일치 하도록 요청 합니다. |
-| 비활성| string| 세션의 목록을 포함 사용자가 수락 하지만 적극적으로 재생 되지 않는 경우를 나타내는 값입니다. 이 매개 변수를만 설정할 수를 true로 합니다. |
-| 개인| string| 세션의 목록을 개인 세션을 포함 하는 경우를 나타내는 값입니다. 이 매개 변수를만 설정할 수를 true로 합니다. 서버 간 쿼리 하는 경우 또는 고유한 세션을 쿼리 하는 경우에 유효 합니다. 호출자가 세션에 대 한 서버 수준 액세스 하려면이 매개 변수를 true로 설정 하거나 호출자의 XUID Xbox 사용자 ID 필터와 일치 하도록 요청 합니다. |
-| visibility| 문자열| 결과 필터링에 사용 되는 표시 상태를 나타내는 열거형 값. 현재이 매개 변수만 설정할 수 열기 열려 있는 세션을 포함 합니다. <b>MultiplayerSessionVisibility</b>를 참조 하세요. |
-| 버전| 문자열| 양의 정수 주요 세션 버전 또는 하위 세션을 나타내는 포함 하도록 합니다. 값은 100 나머지 요청의 계약 버전 보다 작거나 이어야 합니다. |
+| 키워드| string| 해당 문자열을 사용 하 여 식별 하는 정당한 세션에 대 한 결과 필터링 하는 데 사용 하는 키워드입니다.|
+| xuid| GUID| 세션을 검색 하는 사용자에 대 한 Xbox 사용자 Id입니다. 사용자는 세션에 활성 상태 여야 합니다. |
+| 예약| string| 세션 목록이 포함 사용자가 수락 하지 않는 경우를 나타내는 값입니다. 이 매개 변수를 설정할 수만 true로 합니다. 이 설정은 호출자가 세션에 대 한 서버 수준 액세스 이상의 호출자의 XUID Xbox 사용자 ID 필터와 일치 하도록 요청 합니다. |
+| 비활성| string| 세션 목록이 포함 사용자가 수락 하지만 적극적으로 재생 되지 않는 경우를 나타내는 값입니다. 이 매개 변수를 설정할 수만 true로 합니다. |
+| 개인| string| 세션 목록이 포함 개인 세션을 나타내는 값입니다. 이 매개 변수를 설정할 수만 true로 합니다. 서버 간 쿼리 하는 경우 또는 고유한 세션을 쿼리 하는 경우에 유효 합니다. 호출자가 세션에 대 한 서버 수준 액세스 하려면이 매개 변수를 true로 설정 하거나 호출자의 XUID Xbox 사용자 ID 필터와 일치 하도록 요청 합니다. |
+| visibility| 문자열| 결과 필터링에 사용 되는 표시 상태를 나타내는 열거형 값입니다. 현재이 매개 변수만 설정할 수 열기 열려 있는 세션을 포함 하도록 합니다. <b>MultiplayerSessionVisibility</b>를 참조 하세요. |
+| 버전| 문자열| 양의 정수 주요 세션 버전 또는 하위 세션을 나타내는 포함 하도록 합니다. 값은 100 나머지 요청의 계약 버전 이어야 합니다. |
 | 시험| string| 양의 정수 세션의 최대 수를 나타내는를 검색 합니다.|
 
 <a id="ID4EXB"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
-서비스는 MPSD에 적용 되는 HTTP 상태 코드를 반환 합니다.  
+MPSD에 적용 되는 서비스에서 HTTP 상태 코드를 반환 합니다.  
 <a id="ID4EAC"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4EKC"></a>
 
 
 ## <a name="response-body"></a>응답 본문
 
-이 메서드에서 반환 세션 참조, 일부 세션 포함 된 데이터 인라인의 JSON 배열입니다.
+이 메서드에서 반환 일부 세션 포함 된 데이터 인라인 세션 참조의 JSON 배열입니다.
 
 
 ```cpp

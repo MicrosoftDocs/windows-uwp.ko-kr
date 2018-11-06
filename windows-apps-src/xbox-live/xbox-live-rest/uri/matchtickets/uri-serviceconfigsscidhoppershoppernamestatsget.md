@@ -10,18 +10,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e072ffa2ced07982247cebd633564606d1e9bb4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5976905"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6023391"
 ---
 # <a name="get-serviceconfigsscidhoppersnamestats"></a>GET (/serviceconfigs/{scid}/hoppers/{name}/stats)
 
 hopper에 대 한 통계를 가져옵니다.
 
 > [!IMPORTANT]
-> 이 메서드는 계약 103 이상을 사용 하 여 사용 하기 위한 하며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 메서드는 계약 103 이상을 사용 하 여 사용 하기 위한 하며 Xbl 계약 버전 X의 헤더 요소: 103 또는 나중에 모든 요청.
 
   * [설명](#ID4ET)
   * [URI 매개 변수](#ID4E5)
@@ -50,23 +50,23 @@ hopper에 대 한 통계를 가져옵니다.
 
 ## <a name="authorization"></a>권한 부여
 
-| 형식| 필수| 설명| 누락 된 경우 응답|
+| 형식| 필수| 설명| 응답 없는 경우|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | XUID (사용자 ID)| 예| 요청 사용자 티켓에서 참조 하는 티켓 세션의 구성원 이어야 합니다. | 403|
-| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임의 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다. | 403|
-| 제목 ID/증명 구매/장치 유형| 예| 제목에 일치 하 되는 지정 된 제목 클레임, 장치 유형 조합에 대 한 연결을 허용 해야 합니다. | 403|
+| 남용 및 장치 유형| 예| 사용자의 deviceType 콘솔에 설정 된 경우 해당 클레임에 멀티 플레이 권한 있는 사용자만는 매치 메이 킹 서비스 호출을 할 수 있습니다. | 403|
+| 제목 ID/증명 구매/장치 유형| 예| 에 일치 하는 제목 지정 된 제목 클레임, 장치 유형 조합에 대 한 연결을 허용 해야 합니다. | 403|
 
 <a id="ID4E3C"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
-서비스는 MPSD에 적용 되는 HTTP 상태 코드를 반환 합니다.  
+MPSD에 적용 되는 서비스에서 HTTP 상태 코드를 반환 합니다.  
 <a id="ID4EFD"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4EQD"></a>
 
@@ -76,8 +76,8 @@ hopper에 대 한 통계를 가져옵니다.
 | 멤버| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | hopperName| string| 선택한 hopper의 이름입니다.|
-| waitTime| 32 비트의 부호 있는 정수| 평균 hopper (정수로 초) 시간 일치 합니다. |
-| 채우기| 32 비트의 부호 있는 정수| 사용자는 hopper 이후의 일치 항목을 기다리는 횟수입니다.|
+| waitTime| 32 비트 부호 있는 정수| 평균 일치 hopper (정수로 초)에 대 한 시간입니다. |
+| 채우기| 32 비트 부호 있는 정수| 사용자는 hopper 일치 항목을 기다리는 횟수입니다.|
 
 <a id="ID4E1D"></a>
 

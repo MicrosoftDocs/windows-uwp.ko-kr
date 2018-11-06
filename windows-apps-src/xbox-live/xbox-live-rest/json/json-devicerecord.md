@@ -10,24 +10,24 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ecfaf3ff6ee83c2d577614dc613939669ef60d62
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5987634"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6030445"
 ---
 # <a name="devicerecord-json"></a>DeviceRecord(JSON)
-해당 유형 및 활성화 제목을 포함 하 여 장치에 대 한 정보. 
+형식 및 활성화 타이틀을 포함 하는 장치에 대 한 정보를 제공 합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="devicerecord"></a>DeviceRecord
  
-DeviceRecord 개체에는 다음과 같이 지정 합니다.
+DeviceRecord 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| 유형| 문자열| 장치의 장치 유형입니다. 예를 들어 "D", "Xbox360", "MoLIVE" (Windows), "WindowsPhone", "WindowsPhone7" 및 "PC" (G4WL). 유형 (예: 예 iOS, Android 또는 웹 브라우저에 포함 된 제목) 알려진 없는 경우 "웹" 반환 됩니다.| 
+| 유형| 문자열| 디바이스의 장치 유형입니다. 예를 들어 "D", "Xbox360", "MoLIVE" (Windows), "WindowsPhone", "WindowsPhone7" 및 "PC" (G4WL). 유형 (예를 들어 iOS, Android 또는 웹 브라우저에 포함 된 제목) 알 수 없는 경우 "웹" 반환 됩니다.| 
 | 제목| [TitleRecord](json-titlerecord.md) 의 배열| 이 장치에서 활성 책의 목록입니다.| 
   
 <a id="ID4EWB"></a>

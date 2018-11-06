@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5383cfc5a39eadd8d4fd13cb1762e03e85d5c5e0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5986693"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6037501"
 ---
 # <a name="usersmegamerpic"></a>/users/me/gamerpic
-1080 x 1080 gamerpic에 액세스합니다.  
+1080 x 1080 게이머 사진에 액세스합니다.  
 <a id="ID4EQ"></a>
 
  
@@ -25,7 +25,7 @@ ms.locfileid: "5986693"
 
 [PUT (/users/me/gamerpic)](uri-usersmegamerpicput.md)
 
-&nbsp;&nbsp;1080 x 1080 gamerpic에 업로드합니다.
+&nbsp;&nbsp;1080 x 1080 게이머 사진에 업로드합니다.
  
 <a id="ID4E1"></a>
 

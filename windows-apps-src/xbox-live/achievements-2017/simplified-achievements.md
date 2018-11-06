@@ -9,35 +9,35 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 287770b04d58a1109a2bf64513b1ce12a647dbf1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992355"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6040566"
 ---
 # <a name="achievements-2017"></a>도전 과제 2017
 
-도전 과제 2017 시스템 게임 개발자를가 Xbox One, Windows 10, Windows 10 휴대폰, Android 및 iOS에서 새 Xbox Live 게임에 대 한 도전 과제를 잠금 해제를 직접 호출 모델을 사용할 수 있습니다.
+도전 과제 2017 시스템을 사용 하면 게임 개발자가 Xbox One, Windows 10, Windows 10 휴대폰, Android 및 iOS에서 새 Xbox Live 게임에 대 한 도전 과제를 잠금 해제를 직접 호출 모델을 사용 하도록 합니다.
 
 ## <a name="introduction"></a>소개
 
-Xbox One을 사용 하 여 게임 개발자가 간단 하 게 게임에서 원격 분석 이벤트를 전송 하 여 멀티 플레이어, 사용자 통계, 도전 과제, 풍부한 상태 등의 Xbox Live 기능에 대 한 데이터 드라이브를 강화 하는 새 Cloud-Powered 도전 과제 시스템을 도입 했습니다. 이 다양 한 새로운 혜택 열렸습니다 – 단일 이벤트 여러 Xbox Live 기능;에 대 한 데이터를 업데이트할 수 있습니다. 대신 클라이언트 서버에 거주 하 고 Xbox Live 구성 및 유도 합니다.
+Xbox One을 사용 하 여 간단 하 게 게임에서 원격 분석 이벤트를 전송 하 여 멀티 플레이어, 사용자 통계, 도전 과제, 풍부한 존재 여부 등의 Xbox Live 기능에 대 한 데이터를 강화 하는 게임 개발자를 강화 하는 새 Cloud-Powered 도전 과제 시스템을 도입 했습니다. 이 다양 한 새로운 혜택 열렸습니다 – 단일 이벤트 여러 Xbox Live 기능;에 대 한 데이터를 업데이트할 수 있습니다. 대신 클라이언트 서버에 거주 하는 Xbox Live 구성 및 유도 합니다.
 
 Xbox One 출시 이후 년에서 게임 개발자 피드백에 밀접 하 게 수신 하는 것 하 고 개발자가 다음 공유 일관 되 게 합니다.
 
-1.  **직접 호출 패턴을 통해 도전 과제를 잠금 해제를 요구 합니다.** 대부분의 개발자 Xbox의 이전 버전을 포함 한 다양 한 플랫폼에 대 한 게임을 빌드하고 도전 과제와 같은 시스템 이러한 플랫폼에서 직접 호출 메서드를 사용 합니다. Xbox One에 대 한 호출을 잠금 해제 직접 지원 및 해당 플랫폼 간 게임 개발 요구 사항 및 개발 시간 비용 다른 현재 생성 Xbox 플랫폼 용이 합니다.
+1.  **직접 호출 패턴을 통해 도전 과제를 잠금 해제를 요구 합니다.** 여러 개발자가 Xbox의 이전 버전을 비롯 한 다양 한 플랫폼에 대 한 게임 빌드하고 도전 과제와 같은 시스템 이러한 플랫폼에서 직접 호출 메서드를 사용 합니다. Xbox One에 대 한 호출을 잠금 해제 직접 지원 및 해당 플랫폼 간 게임 개발 요구 사항 및 개발 시간 비용 다른 현재 생성 Xbox 플랫폼 용이 합니다.
 
-2.  **구성 복잡성을 최소화 합니다.** 도전 과제의 Cloud-Powered 도전 과제 시스템 논리를 잠금 해제는 서비스 사용자에 대 한 도전 과제를 잠금 해제 하는 시기와 제목의 통계 데이터를 해석 하는 방법을 알 수 있도록 Xbox Live에서 구성 해야 합니다. 이 작업은 이전에 존재 하지 않는 한 도전 과제의 구성의 새 도전 과제 규칙 섹션을 통해 수행 되었습니다. 클라우드에서 논리를 잠금 해제 하지 매우 강력한 수 있지만, 디자인 및 도전 과제 타이틀의 만들기에는 복잡성이 추가 구성 요구 사항에 추가 합니다.
+2.  **구성 복잡성을 최소화 합니다.** 도전 과제의 Cloud-Powered 도전 과제 시스템 논리를 잠금 해제는 서비스 사용자에 대 한 도전 과제를 잠금 해제 하는 시기와 타이틀의 통계 데이터를 해석 하는 방법을 알 수 있도록 Xbox Live에서 구성 해야 합니다. 이 작업은 이전에 존재 하지 않는 한 도전 과제 구성의 새 도전 과제 규칙 섹션을 통해 수행 되었습니다. 클라우드에서 논리를 잠금 해제 하지 매우 강력한 수 있지만, 디자인 및 도전 과제 타이틀의 생성에는 복잡성이 추가 구성 요구 사항에 추가 합니다.
 
-3.  **문제 해결 하기가 어렵습니다.** Cloud-Powered 도전 과제 시스템 소개 다양 한 유용한 기능을 하는 동안 또한 어렵습니다 더 게임에 대 한 유효성 검사 및 도전 과제 완료 후 해당 도전 과제를 사용 하 여 문제를 해결 하는 개발자 규칙에 의해 직접 트리거되는 서비스에서 live 보다 게임 자체에서 직접 제어 됩니다.
+3.  **문제 해결 하기가 어렵습니다.** Cloud-Powered 도전 과제 시스템 다양 한 유용한 기능을 소개 하는 동안도 어렵습니다 더 게임에 대 한 유효성 검사 및 도전 과제 완료 후 해당 도전 과제를 사용 하 여 문제를 해결 하려면 개발자가 규칙에 의해 직접 트리거되는 서비스에서 live 보다 게임 자체에서 직접 제어 됩니다.
 
-게임 개발자가 반복적으로 공유 만족 하는 피드백 및 값 Cloud-Powered 도전 과제 시스템 함께 도입 된 특정 기능에 나오는 것.
+게임 개발자가 반복적으로 공유 만족 하는 피드백 및 값 Cloud-Powered 도전 과제 시스템 함께 도입 된 특정 기능에 나오는입니다.
 
-1.  도전 과제 진행, 실시간 업데이트, 개념 아트 보상 게시 등의 새 사용자 환경 기능이 피드를 잠금 해제 합니다.
+1.  도전 과제 진행, 실시간 업데이트, 개념 아트 보상 게시 등의 새 사용자 환경 기능이 피드로 잠금을 해제 합니다.
 
-2.  게임 패키지에 포함 해야 하는 로컬 구성 하는 대신 서비스 구성 등의 향상 된 기능 구성 (즉, gameconfig, XLAST, SPA, 등)을 쉽게 도전 과제를 편집할 수 있는 문자열 및 게임에 제공 된 후 이미지.
+2.  게임 패키지에 포함 되어야 하는 로컬 구성 하는 대신 서비스 구성 등의 향상 된 기능 구성 (즉, gameconfig, XLAST, SPA, 등)을 쉽게 도전 과제를 편집할 수 있는 문자열 및 게임에 제공 된 후 이미지입니다.
 
-도전 과제 2017에서 대체를 빌드하는 것 보다 쉽게 Xbox 게임 개발자가 통합, 도전 과제를 구성 하는 향후 제목을 사용 하 여 기존 Cloud-Powered 도전 과제 시스템의 도전 과제의 잠금을 해제 및에 업데이트를 합니다 게임 코드를 하 고 있는 성과가 예상 대로 작동 하는지 확인 합니다.
+도전 과제 2017로 대체를 빌드하는 것 향후 제목을 사용 하 여 Xbox 게임 개발자가 통합, 도전 과제를 구성 하는 데 훨씬 더 간단 하 게 하는 기존 Cloud-Powered 도전 과제 시스템의 도전 과제의 잠금을 해제 및 업데이트에 게임 코드를 하 고 도전 과제는 예상 대로 작동 하는지 확인 합니다.
 
 ## <a name="whats-different-with-achievements-2017"></a>도전 과제 2017을 사용 하 여 다른 란
 
@@ -54,21 +54,21 @@ Xbox One 출시 이후 년에서 게임 개발자 피드백에 밀접 하 게 �
 
 다음은 도전 과제 2017 시스템 사용 하 여 모든 제목의 요구 사항입니다.
 
-1.  **새 (아직 릴리스되지 않은) 타이틀 이어야 합니다.** 이미 릴리스된가 Cloud-Powered 도전 과제 시스템을 사용 하는 제목을 자격이 되지 않습니다. 자세한 내용을 보려면 참조 [이유는 기존 제목 "을 마이그레이션할 수" 새 도전 과제 2017 시스템에?](#_Why_can’t_existing)
+1.  **새 (아직 릴리스되지 않은) 타이틀 이어야 합니다.** 이미 해제가 Cloud-Powered 도전 과제 시스템을 사용 하는 제목을 자격이 없는 합니다. 자세한 내용을 보려면 참조 [이유 기존 제목 "을 마이그레이션할 수 없습니다" 새 도전 과제 2017 시스템에?](#_Why_can’t_existing)
 
-2.  **2016 년 8 월 XDK 사용 해야 이상.** Update_Achievement API는 2016 XDK 8 월에에서 출시 되었습니다.
+2.  **8 월 2016 XDK 사용 해야 이상.** Update_Achievement API는 2016 XDK 8 월에에서 출시 되었습니다.
 
-3.  **XDK 또는 UWP는 제목 이어야 합니다.** 도전 과제 2017 시스템은 Xbox 360, Windows를 포함 한 레거시 플랫폼에 사용할 수 없습니다 8.x 고객만 또는 나 Windows Phone 8 이상.
+3.  **XDK 또는 UWP 제목 이어야 합니다.** 도전 과제 2017 시스템은 Xbox 360, Windows를 포함 한 레거시 플랫폼에 사용할 수 없습니다 8.x 고객만 또는 나 Windows Phone 8 이상.
 
 ## <a name="updateachievement-api"></a>Update_Achievement API
 
 도전 과제는 XDP 이나 [UDC](../configure-xbl/dev-center/achievements-in-udc.md) 구성 하 고 개발자 샌드박스에 게시, 타이틀 Update_Achievement API를 호출 하 여이 잠금 수 있습니다.
 
-API는 고 XDK Xbox Live SDK 모두에서 사용할 수 있습니다.
+API가는 XDK와 Xbox Live SDK에서 사용할 수 있습니다.
 
 ### <a name="api-signature"></a>API 서명
 
-API 서명이 다음과 같습니다.
+API 서명은 다음과 같습니다.
 
 ```c++
 /// <summary>
@@ -96,7 +96,7 @@ API 서명이 다음과 같습니다.
         );
 ```
 
-`xbox::services::xbox_live_result<T>` 모든 c + + Xbox Live 서비스 API 호출에 대 한 호출이 반환 합니다.
+`xbox::services::xbox_live_result<T>` 모든 c + + Xbox Live API 호출에 대 한 호출이 반환 합니다.
 
 자세한 내용은 체크 아웃 Xfest 2015 대화 하 고, "XSAPI: c + +, 예외 없이!"<br>
 [비디오](http://go.microsoft.com/?linkid=9888207) |  [슬라이드](https://developer.xboxlive.com/en-us/platform/documentlibrary/events/Documents/Xfest_2015/Xbox_Live_Track/XSAPI_Cpp_No_Exceptions.pptx)
@@ -111,52 +111,52 @@ API 서명이 다음과 같습니다.
 
 -   지정 된 도전 과제 타이틀;에 대 한 사용자의 도전 과제 목록에 잠금 해제 됨으로 표시 됩니다.
 
--   잠금 해제 된 도전 과제 피드 사용자의 활동에 추가 됩니다.
+-   사용자의 피드를 잠금 해제 된 도전 과제 추가 됩니다.
 
-> *참고: 도전 과제 2017 시스템을 사용 하는 도전 과제 및 Cloud-Powered 도전 과제에 대 한 사용자 환경에서 표시 차이가 없습니다 생깁니다.*
+> *참고: 도전 과제 2017 시스템을 사용 하 여 도전 과제 및 Cloud-Powered 도전 과제에 대 한 사용자 환경에서 차이가 없습니다 표시 생깁니다.*
 
-사용자가 오프 라인으로 잠금 해제 요청 사용자의 장치에서 로컬로 지연 됩니다. 도전 과제 서비스 들이 곧 발송 될 때 사용자의 장치에 네트워크 연결, 요청은 자동으로 다시 – 참고: 어떠한 조치도 취하지 않습니다이 – 트리거하는 게임에서 필수 이며 위의 사용자 환경이 설명 된 대로 발생 합니다.
+사용자가 오프 라인으로 잠금 해제 요청 사용자의 장치에서 로컬로 대기 됩니다. 사용자의 장치 네트워크 연결는 요청을 자동으로 다시 만들었습니다 때 도전 과제 서비스로 전송 – 참고:이 – 트리거하는 게임에서 필요한 작업은 없습니다 및 위의 사용자 환경이 설명 된 대로 발생 합니다.
 
-### <a name="updating-completion-progress-via-updateachievement-api"></a>Update_Achievement API를 통해 업데이트 완료 진행률
+### <a name="updating-completion-progress-via-updateachievement-api"></a>Update_Achievement API를 통해 완료 진행률 업데이트
 
-도전 과제를 잠금 해제에 대 한 사용자의 진행률을 업데이트 하려면 1-100 사이의 적절 한 정수로 *percentComplete* 를 설정 합니다.
+도전 과제를 잠금 해제에 대 한 사용자의 진행률을 업데이트 하려면 1-100 사이의 적절 한 정수로 *완료율* 을 설정 합니다.
 
-도전 과제의 진행률만 늘릴 수 있습니다. *PercentComplete* 도전 과제의 마지막 *percentComplete* 값 보다 작거나 설정 되 면 업데이트 무시 됩니다. 예를 들어, 75 도전 과제의 *percentComplete* 이전에 설정 된, 25 값으로 업데이트를 보내는 무시 되 고 도전 과제 완료 75%로 표시 됩니다.
+도전 과제의 진행률만 늘릴 수 있습니다. *PercentComplete* 도전 과제의 마지막 *percentComplete* 값 보다 작거나 설정 되 면 업데이트 무시 됩니다. 예를 들어, 도전 과제의 *완료율* 75 이전에 설정 된, 25 값으로 업데이트를 보내는 무시 되 고 도전 과제 완료 75%로 표시 됩니다.
 
 *PercentComplete* 100으로 설정 되 면 도전 과제 잠금을 해제 됩니다.
 
-*PercentComplete* 100 보다 큰 수로 설정 되 면 정확히 100를 설정 하는 경우 API 작동 합니다.
+*PercentComplete* 100 보다 큰 수로 설정 된 경우 API는 정확히 100으로 설정 하는 경우 작동 합니다.
 
 ## <a name="frequently-asked-questions"></a>질문과 대답
 
-### <a name="span-idwhyarechallenges-classanchorspancan-i-ship-my-title-using-the-achievements-2017-system-yet"></a><span id="_Why_are_Challenges" class="anchor"></span>아직 도전 과제 2017 시스템을 사용 하 여 내 타이틀을 제공할 수 있나요?
+### <a name="span-idwhyarechallenges-classanchorspancan-i-ship-my-title-using-the-achievements-2017-system-yet"></a><span id="_Why_are_Challenges" class="anchor"></span>아직 도전 과제 2017 시스템을 사용 하 여 내 제목을 제공할 수 있나요?
 
-반드시! 모든 새 제목, 되며 도전 과제 2017을 활용 하는 것이 좋습니다 Cloud-Powered 도전 과제 시스템 대신 시스템입니다.
+당연히 있습니다. 모든 새 제목, 되며 도전 과제 2017을 활용 하는 것이 좋습니다 Cloud-Powered 도전 과제 시스템 대신 시스템입니다.
 
 ### <a name="why-are-challenges-not-supported-in-the-achievements-2017-system"></a>왜 과제에서에서 지원 되지 않는 도전 과제 2017 시스템?
 
-Xbox 게임에서 사용 현황 데이터에 대해서 설명 하였습니다 현재 구현 및 과제 표현의 대부분의 게임 개발자를 위한 필요 만족 하지 않습니다. 계속 개발자 입력과이 공간에 피드백을 수집 하 고 있는 개발자는 지점에서 더 많은 이자 향후 기능을 제공 하도록 노력 하겠습니다. 새로 릴리스된 Xbox 아레나 Xbox에 대 한 새로운 경쟁 기능을 도입 하는 기능의 예로 유사 하지만, 방향 게임입니다.
+Xbox 게임에서 사용 현황 데이터는 현재 구현 및 과제 표현의 대부분의 게임 개발자에 대 한 요구가 만족 하지 않습니다 살펴보았습니다. 계속 개발자 입력 및이 공간에 대 한 피드백을 수집 하 고 개발자 요구 사항 가진 지점에는 향후 기능을 제공 하도록 노력 하겠습니다. 새로 릴리스된 Xbox 아레나 Xbox에 대 한 새로운 경쟁 기능을 도입 하는 기능의 예는 유사 하지만, 방향 게임입니다.
 
 ### <a name="can-i-still-add-new-achievements-every-calendar-quarter-if-my-title-is-using-the-achievements-2017-system"></a>추가할 수 있습니까 여전히 새로운 도전 과제 모든 분기 내 제목 도전 과제 2017 시스템을 사용 하는 경우?
 
-그렇습니다. 도전 과제 정책을 변경 되지 않습니다.
+그렇습니다. 도전 과제 정책 변경 되지 않습니다.
 
-### <a name="span-idwhycantexisting-classanchorspanwhy-cant-existing-titles-migrate-onto-the-new-achievements-2017-system"></a><span id="_Why_can’t_existing" class="anchor"></span>왜 기존 제목 "을 마이그레이션할 수" 새 도전 과제 2017 시스템에?
+### <a name="span-idwhycantexisting-classanchorspanwhy-cant-existing-titles-migrate-onto-the-new-achievements-2017-system"></a><span id="_Why_can’t_existing" class="anchor"></span>왜 수 없는 기존 제목 "마이그레이션" 새 도전 과제 2017 시스템에 합니까?
 
-대부분의 기존 제목, 도전 과제 2017 시스템에 '마이그레이션' 업데이트 서비스 구성으로 제한 되지 않습니다 및 이러한 변경만 매우 수 있지만 호출 – 잠금 해제 도전 과제에 대 한 이벤트 쓰기 바꾸는 비용이 많이 드는 위험이 오류 및 분리 되어 회복할 수 없게 되 고 도전 과제 이어질 수 있는 의도 하지 않은 동작을 수행할 것입니다. 대신, 대부분의 기존 제목 기존 데이터를 사용 하 여 사용자에도 포함 합니다. 시스템은 Cloud-Powered 도전 과제에서 이미 사용 하는 라이브 게임으로 변환 하려고 개발자와 Xbox는 매우 비용이 많이 드는 노력 될 뿐 아니라 기존 사용자의 프로필 및/또는 게임 환경을 크게 피해갈 것.
+대부분의 기존 제목에 대 한 도전 과제 2017 시스템에 '마이그레이션' 업데이트 서비스 구성으로 제한 되지 않습니다 및 이러한 변경만 매우 수 있지만 호출 – 잠금 해제 바꾸는 도전 과제에 대 한 이벤트 쓰기 비용이 많이 드는 위험이 오류 및 분할 되어 회복할 수 없게 되더라도 도전 과제 야기 하는 의도 하지 않은 동작을 수행할 것입니다. 대신, 대부분의 기존 제목 기존 데이터를 사용 하 여 사용자에도 포함 합니다. 이미 시스템은 Cloud-Powered 도전 과제를 사용 하는 라이브 게임으로 변환 하려고 개발자와 Xbox 모두에 대 한 매우 비용이 많이 드는 노력을 될 뿐만 아니라 기존 사용자 프로필 및/또는 게임 환경을 크게 피해갈 것.
 
 ### <a name="if-my-title-was-released-using-the-cloud-powered-achievements-system-can-any-future-dlc-for-the-title-switch-to-achievements-2017"></a>내 제목 Cloud-Powered 도전 과제 시스템을 사용 하 여 릴리스된 경우 제목에 대 한 모든 향후 DLC 전환할 수 도전 과제 2017?
 
-타이틀에 대 한 모든 성과 동일한 도전 과제 시스템을 사용 해야 합니다. 제목에 대 한 모든 향후 도전 과제에 사용 해야 하는 시스템은 기본 게임의 도전 과제 도전 과제 시스템 사용 됩니다.
+모든 도전 과제 타이틀에 대 한 동일한 도전 과제 시스템을 사용 해야 합니다. 어떤 도전 과제 시스템을 사용 하 여 기본 게임의 도전 과제는 제목에 대 한 모든 향후 도전 과제에 대 한 사용 해야 하는 시스템입니다.
 
 ### <a name="while-testing-achievements-in-my-dev-sandbox-can-i-mix-and-match-between-using-the-achievements-2017-system-and-the-cloud-powered-achievements-system"></a>개발자 샌드박스 내에서 도전 과제를 테스트 하는 동안 도전 과제 2017 시스템과 Cloud-Powered 도전 과제 시스템을 사용 하 여 간의 혼합 일치 I 수 있습니까?
 
-아니요. 타이틀에 대 한 모든 성과 동일한 도전 과제 시스템을 사용 해야 합니다.
+아니요. 모든 도전 과제 타이틀에 대 한 동일한 도전 과제 시스템을 사용 해야 합니다.
 
 ### <a name="does-achievements-2017-also-include-offline-unlocks"></a>도전 과제 2017도는 오프 라인으로 잠금 해제?
 
-Update_Achievement API는 자동으로 오프 라인 잠금 해제 요청 큐 및 장치에 네트워크 연결, 현재 비슷합니다를 다시 설정 하는 경우 Xbox Live를 자동으로 동기화 됩니다를 장치 오프 라인 상태인 동안 도전 과제는 제목에 잠금 해제 하는 경우 클라우드 기반 도전 과제 시스템의 오프 라인 경험 합니다. 도전 과제를 잠금 해제 하는 동안 사용자가 오프 라인으로 발생 하지 합니다.
+Update_Achievement API 자동으로 잠금 해제 오프 라인 요청 큐 되 고 장치에 네트워크 연결, 현재 비슷합니다를 다시 설정 하는 경우 Xbox Live에 자동으로 동기화 됩니다를 장치 오프 라인 성과 제목에 잠금 해제 하는 경우 클라우드 기반 도전 과제 시스템의 오프 라인 경험 합니다. 도전 과제의 잠금을 해제는 사용자가 오프 라인 동안 발생 하지 합니다.
 
-### <a name="i-see-a-new-achievementupdate-event-in-xdp-if-my-title-uses-that-event-does-that-mean-it-has-achievements-2017"></a>I XDP에서 새 "AchievementUpdate" 이벤트를 참조 하세요. 내 제목 해당 이벤트를 사용 하는 경우 있다는 뜻 도전 과제 2017가?
+### <a name="i-see-a-new-achievementupdate-event-in-xdp-if-my-title-uses-that-event-does-that-mean-it-has-achievements-2017"></a>I XDP에서 새 "AchievementUpdate" 이벤트를 참조 하세요. 내 제목 해당 이벤트를 사용 하면 메시지의 의미는 도전 과제 2017가?
 
-*AchievementUpdate* 기본 이벤트 백 엔드 목적에 대 한 Xbox Live에 필요 합니다. 안전 하 게이 무시할 수 있습니다. 타이틀이 종류의 기본 이벤트를 사용 하 여 이벤트를 구성 하는 경우 해당 이벤트 쓰기 Xbox Live에서 무시 됩니다. 다른 기본 이벤트 형식을 사용 하 여 해당 이벤트를 구성 하는 Cloud-Powered 도전 과제 시스템의 기반이 되는 타이틀 계속 해야 합니다. 도전 과제 2017 시스템의 기반이 되는 타이틀 도전 과제 목적을 위해 *모든* 이벤트를 구성 하지 필요 합니다.
+Xbox Live 하 여 백 엔드 목적을 위해 *AchievementUpdate* 기본 이벤트 필요 합니다. 이 무시 해도 됩니다. 타이틀이 종류의 기본 이벤트를 사용 하 여 이벤트를 구성 하는 경우 해당 이벤트 쓰기 Xbox Live에서 무시 됩니다. 타이틀 Cloud-Powered 도전 과제 시스템에 내장 된 다른 기본 이벤트 형식을 사용 하 여 해당 이벤트를 구성 하려면 계속 해야 합니다. 도전 과제 2017 시스템에 내장 된 제목 도전 과제 목적에 대 *한* 이벤트를 구성 해야 합니다.

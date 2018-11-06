@@ -9,25 +9,25 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 95a265644897ce9469914782484796a622dcf971
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5981414"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6026331"
 ---
 # <a name="working-with-connected-storage-buffers"></a>연결 된 저장소 버퍼를 사용 하 여 작업
 
-연결 된 저장소 API는 응용 프로그램에서 데이터를 전달할 **Windows::Storage::Streams::Buffer** 인스턴스를 사용 합니다. WinRT 형식과 원시 포인터를 노출할 수 없습니다, 때문에 버퍼 인스턴스의 데이터에 액세스 **DataReader** 및 **DataWriter** 클래스를 통해 발생 합니다. 그러나 **버퍼** 는 또한 **IBufferByteAccess**, 버퍼 데이터에 직접 포인터 가져오고 수 있게 하는 COM 인터페이스를 구현 합니다.
+연결 된 저장소 API는 응용 프로그램에서 데이터를 전달 하 **Windows::Storage::Streams::Buffer** 인스턴스를 사용 합니다. WinRT 형식과 원시 포인터를 노출할 수 없습니다, 때문에 버퍼 인스턴스의 데이터에 대 한 액세스 **DataReader** 및 **DataWriter** 클래스를 통해 발생 합니다. 그러나 **버퍼** 는 또한 **IBufferByteAccess**, 직접 버퍼 데이터에 대 한 포인터를 가져올 수는 COM 인터페이스를 구현 합니다.
 
 ### <a name="to-get-a-pointer-to-a-buffer-instances-data"></a>버퍼 인스턴스의 데이터에 대 한 포인터를 가져오려면
 
-1.  **IUnknown**버퍼 인스턴스를 캐스팅 해도 **reinterpret\_cast** 를 사용 합니다.
+1.  **IUnknown**으로 버퍼 인스턴스를 캐스팅 **reinterpret\_cast** 를 사용 합니다.
 
 ```cpp
         IUnknown* unknown = reinterpret_cast<IUnknown*>(buffer);
 ```
 
-2.  **IUnknown** 인터페이스 **IBufferByteAccess** COM 인터페이스를 쿼리 합니다.
+2.  **IBufferByteAccess** COM 인터페이스에 대 한 **IUnknown** 인터페이스를 쿼리 합니다.
 
 ```cpp
         Microsoft::WRL::ComPtr<IBufferByteAccess> bufferByteAccess;
@@ -43,7 +43,7 @@ ms.locfileid: "5981414"
         bufferByteAccess->Buffer(&bytes);
 ```
 
-예를 들어 다음 코드 샘플에는 현재 시스템 시간을 보유 하는 버퍼를 만드는 방법을 보여 줍니다. 버퍼에 별도 용량 및 길이 값 이므로 용량 및 길이 모두 명시적으로 설정 합니다. 기본적으로 길이 0입니다.
+예를 들어 다음 코드 샘플에는 현재 시스템 시간을 보유 하는 버퍼를 만드는 방법을 보여 줍니다. 버퍼에 별도 용량 및 길이 값 이므로 용량 및 길이 명시적으로 설정 합니다. 기본적으로 길이 0입니다.
 
 ```cpp
     inline byte* GetBufferData(Windows::Storage::Streams::IBuffer^ buffer)

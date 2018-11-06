@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 131a1eb67d4a33c3fbd2f5f818499ffeea851f3d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993723"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6039465"
 ---
 # <a name="publicscidsscidclips"></a>/public/scids/{scid}/clips
-공개 클립 액세스 합니다. 이 URI 실제로 지정할 수 있으며 두 가지 형식 `/public/scids/{scid}/clips` 및 `/public/titles/{titleId}/clips`. 자세한 내용은 아래를 참조하세요. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.
+공용 클립 액세스 합니다. 두 가지 형태로 지정 수 실제로이 URI `/public/scids/{scid}/clips` 및 `/public/titles/{titleId}/clips`. 자세한 내용은 아래를 참조하세요. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.
  
   * [URI 매개 변수](#ID4E1)
  
@@ -29,7 +29,7 @@ ms.locfileid: "5993723"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | 서비스 안내| string| 기본 서비스 구성 공개 클립의 식별자입니다.| 
-| titleid| string| 공개 클립의 titleId 합니다. 동일한 uri는 서비스 안내도 지정할 수 없습니다. 기본 서비스 안내를 조회할 수를 지정 하는 경우 사용 됩니다.| 
+| titleid| string| 공용 클립의 titleId 합니다. 동일한 URI는 서비스 안내도 지정할 수 없습니다. 기본 서비스 안내를 조회할 수를 지정 하는 경우 사용 됩니다.| 
   
 <a id="ID4E6B"></a>
 
@@ -38,7 +38,7 @@ ms.locfileid: "5993723"
 
 [GET (/public/scids/{scid}/clips)](uri-publicscidclipsget.md)
 
-&nbsp;&nbsp;공개 클립 나열 되어 있습니다.
+&nbsp;&nbsp;공용 클립을 나열 합니다.
  
 <a id="ID4EJC"></a>
 

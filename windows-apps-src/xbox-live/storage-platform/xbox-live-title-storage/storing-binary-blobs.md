@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aa0598e724ffc0d919c9ad8b2ffdc3bb29d7d09
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992478"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6037584"
 ---
 # <a name="storing-a-binary-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소의 이진 blob 저장
 
@@ -31,7 +31,7 @@ ms.locfileid: "5992478"
 
 -   STSTokenString 편의 위해 자리 표시자 이며 인증 요청으로 반환 하는 토큰으로 대체 되어야 합니다.
 
-2.  이진 데이터를 보냅니다. HTTP를 통해 데이터를 전송 하므로 데이터 허용 문자 집합에 제약 되어야 합니다. 이미지, 오디오 데이터 등의 정보로 인코딩되어야 합니다. HTTP 호환 문자를 생성 하는 모든 인코딩 방법을 선택할 수 있습니다.
+2.  이진 데이터를 보냅니다. HTTP를 통해 데이터를 전송 하는 이후 데이터 허용 문자 집합으로 제약 되어야 합니다. 이미지, 오디오 데이터 등의 정보로 인코딩되어야 합니다. HTTP 호환 문자를 생성 하는 모든 인코딩 방법을 선택할 수 있습니다.
 d
 ```
   01EAEFBAD05903A4

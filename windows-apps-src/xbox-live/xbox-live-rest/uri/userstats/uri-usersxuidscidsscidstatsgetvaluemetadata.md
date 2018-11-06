@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 08cbb5710a2bcafc1edfdf78a8f96561961ef8cd
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5978647"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6038762"
 ---
 # <a name="get-usersxuidxuidscidsscidstatsincludevaluemetadata"></a>GET (/users/xuid({xuid})/scids/{scid}/stats?include=valuemetadata)
 사용자 지정 된 서비스 구성에 대 한 통계 값을와 관련 된 메타 데이터를 포함 하 여 지정 된 통계 목록을 가져옵니다.
@@ -35,9 +35,9 @@ ms.locfileid: "5978647"
 
 ## <a name="remarks"></a>설명
 
-? 포함 = valuemetadata 쿼리 매개 변수는 모델 및 경합 트랙의 시간을 얻는 데 자동차의 색 등의 사용자 통계 값와 관련 된 메타 데이터를 포함 하도록 응답 합니다.
+? 포함 = valuemetadata 쿼리 매개 변수는 응답 모델 및 경합 트랙에 시간을 얻는 데 자동차의 색 등의 사용자 통계 값와 관련 된 메타 데이터를 포함 하도록 합니다.
 
-응답에 값 메타 데이터를 포함 하려면 요청 호출 3 X Xbl-계약 버전 헤더 값도 설정 해야 합니다.
+응답에 값 메타 데이터를 포함 하도록 요청 호출 3 X Xbl-계약 버전 헤더 값도 설정 해야 합니다.
 
 <a id="ID4EAB"></a>
 
@@ -46,8 +46,8 @@ ms.locfileid: "5978647"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| xuid| GUID| Xbox 사용자 ID (XUID) 서비스 구성에 액세스할 수를 대신 하 여 해당 사용자의 합니다.|
-| 서비스 안내| GUID| 액세스 되는 리소스를 포함 하는 서비스 구성의 식별자.|
+| xuid| GUID| Xbox 사용자 ID (XUID) 서비스 구성에 액세스할 수 있는 대신 하 여 사용자의 합니다.|
+| 서비스 안내| GUID| 액세스 되는 리소스를 포함 하는 서비스 구성의 식별자입니다.|
 
 <a id="ID4ELB"></a>
 
@@ -56,18 +56,18 @@ ms.locfileid: "5978647"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- | --- |
-| statNames| string| 쉼표로 구분 된 목록 사용자 통계 이름입니다. 예를 들어 다음 URI는 URI에 지정 된 사용자 id를 대신 하 여 4 개의 통계를 요청 하는 서비스 알립니다. {: nomakrdown}<br/><br/>`https://userstats.xboxlive.com/users/xuid({xuid})/scids/{scid}/stats/wins,kills,kdratio,headshots?include=valuemetadata`| 
-| 포함 = valuemetadata| string| 응답에는 uset 시작 값과 관련 된 모든 값 메타 데이터를 나타냅니다.|
+| statNames| string| 쉼표로 사용자 통계 이름 목록입니다. 예를 들어 다음 URI는 4 개의 통계 URI에 지정 된 사용자 id를 대신 하 여 요청 된 서비스 알립니다. {: nomakrdown}<br/><br/>`https://userstats.xboxlive.com/users/xuid({xuid})/scids/{scid}/stats/wins,kills,kdratio,headshots?include=valuemetadata`| 
+| 포함 = valuemetadata| string| 응답에 uset 통계 값와 관련 된 값 메타 데이터가 포함 되어 있는지를 나타냅니다.|
 
 <a id="ID4EWC"></a>
 
 
 ## <a name="authorization"></a>권한 부여
 
-콘텐츠 격리 및 액세스 제어 시나리오에 구현 된 권한 부여 논리가 있습니다.
+권한 부여 논리 콘텐츠 격리 및 액세스 제어 시나리오에 대해 구현 있습니다.
 
-   * 순위표와 사용자 통계 호출자에 게 요청을 사용 하 여 유효한 XSTS 토큰 제출 된 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 데이터 플랫폼에서 지원 되는 클라이언트로 제한 됩니다.
-   * 제목 개발자 열리거나 XDP 또는 개발자 센터를 사용 하 여 제한으로 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐만 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
+   * 순위표와 사용자 통계 호출자가 요청을 사용 하 여 유효한 XSTS 토큰 전송 된 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 데이터 플랫폼에서 지원 되는 클라이언트로 제한 됩니다.
+   * 제목 개발자 열기 또는 XDP 또는 개발자 센터를 사용 하 여 제한 된 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
 
 검사에 대 한 의사 코드는 다음과 같습니다.
 
@@ -90,8 +90,8 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > ".|
-| X Xbl-계약 버전| string| 사용 하는 API의 어떤 버전을 나타냅니다. 이 값은 응답에서 값 메타 데이터를 포함 하려면 "3"으로 설정 되어야 합니다.|
+| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.|
+| Xbl 계약 버전 X| string| 버전을 사용 하는 API 나타냅니다. 이 값은 응답의 값 메타 데이터를 포함 하려면 "3"으로 설정 되어야 합니다.|
 
 <a id="ID4EDF"></a>
 
@@ -100,14 +100,14 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
 
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 기본값: 1입니다.|
+| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1입니다.|
 
 <a id="ID4EHG"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4ESG"></a>
 
@@ -121,11 +121,11 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
 | 200| 확인| 세션을 검색 했습니다.|
 | 304| 수정 되지 않음| 리소스 되지 요청 마지막으로 수정 합니다.|
 | 400| 잘못 된 요청| 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.|
-| 401| 권한 없음| 요청은 사용자 인증이 필요합니다.|
+| 401| 권한 없음| 필요한 사용자 인증을 요청 합니다.|
 | 403| 금지| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.|
 | 404| 찾을 수 없습니다.| 지정된 된 리소스를 찾을 수 없습니다.|
-| 406| 허용할 수 없음| 리소스 버전은 지원 되지 않습니다.|
-| 408| 요청 시간 제한| 리소스 버전 지원 되지 않습니다. MVC 계층에 의해 거부 되어야 합니다.|
+| 406| 허용할 수 없음| 리소스 버전이 지원 되지 않습니다.|
+| 408| 요청 시간 제한| 리소스 버전이 지원 되지 않습니다. MVC 계층에 의해 거부 되어야 합니다.|
 
 <a id="ID4EJCAC"></a>
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 039cc9cf1d7d1d77330ff280d7cff5619971b075
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5989017"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050463"
 ---
 # <a name="javascript-object-notation-json-object-reference"></a>JSON(JavaScript Object Notation) 개체 참조
  
@@ -41,7 +41,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [AggregateSessionsResponse(JSON)](json-aggregatesessionsresponse.md)
 
-&nbsp;&nbsp;사용자의 적합성에 대 한 세션에 대 한 집계 데이터를 포함합니다.
+&nbsp;&nbsp;사용자의 피트 니스 세션에 대 한 집계 데이터를 포함합니다.
 
 [BatchRequest(JSON)](json-batchrequest.md)
 
@@ -51,7 +51,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [DeviceRecord(JSON)](json-devicerecord.md)
 
-&nbsp;&nbsp;해당 유형 및 활성화 제목을 포함 하 여 장치에 대 한 정보.
+&nbsp;&nbsp;형식 및 활성화 타이틀을 포함 하는 장치에 대 한 정보를 제공 합니다.
 
 [Feedback(JSON)](json-feedback.md)
 
@@ -65,25 +65,25 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [GameClipThumbnail(JSON)](json-gameclipthumbnail.md)
 
-&nbsp;&nbsp;개별는 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 있을 수 있으며 적절 한 디스플레이 대 한 선택 클라이언트 그것은 개발자가 있습니다.
+&nbsp;&nbsp;개별 축소판에 관련 된 정보가 포함 되어 있습니다. 클립 당 여러 크기 수 있으며 디스플레이 대 한 적절 한 하나를 선택 하는 클라이언트에 게 됩니다.
 
 [GameClipUri(JSON)](json-gameclipuri.md)
 
 [GameMessage(JSON)](json-gamemessage.md)
 
-&nbsp;&nbsp;게임 세션의 메시지 큐 메시지에 대 한 데이터를 정의 하는 JSON 개체입니다.
+&nbsp;&nbsp;게임 세션의 메시지 큐에서 메시지에 대 한 데이터를 정의 하는 JSON 개체입니다.
 
 [GameResult(JSON)](json-gameresult.md)
 
-&nbsp;&nbsp;게임 세션의 결과 설명 하는 데이터를 표시 하는 JSON 개체입니다.
+&nbsp;&nbsp;게임 세션의 결과 설명 하는 데이터를 나타내는 JSON 개체입니다.
 
 [GameSession(JSON)](json-gamesession.md)
 
-&nbsp;&nbsp;멀티 플레이 세션에 대 한 게임 데이터를 표시 하는 JSON 개체입니다.
+&nbsp;&nbsp;멀티 플레이 세션에 대 한 게임 데이터를 나타내는 JSON 개체입니다.
 
 [GameSessionSummary(JSON)](json-gamesessionsummary.md)
 
-&nbsp;&nbsp;게임 세션에 대 한 요약 데이터를 표시 하는 JSON 개체입니다.
+&nbsp;&nbsp;게임 세션에 대 한 요약 데이터를 나타내는 JSON 개체입니다.
 
 [GetClipResponse(JSON)](json-getclipresponse.md)
 
@@ -91,7 +91,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [HopperStatsResults(JSON)](json-hopperstatsresults.md)
 
-&nbsp;&nbsp;hopper에 대 한 통계를 나타내는 하는 JSON 개체입니다.
+&nbsp;&nbsp;hopper에 대 한 통계를 나타내는 JSON 개체입니다.
 
 [InitialUploadRequest(JSON)](json-initialuploadrequest.md)
 
@@ -101,15 +101,15 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [inventoryItem (JSON)](json-inventoryitem.md)
 
-&nbsp;&nbsp;핵심 인벤토리 항목을의 권리를 부여할 수 있습니다 표준 항목을 나타냅니다.
+&nbsp;&nbsp;핵심 인벤토리 항목을 권리를 부여 수는 표준 항목을 나타냅니다.
 
 [LastSeenRecord(JSON)](json-lastseenrecord.md)
 
-&nbsp;&nbsp;시스템 사용자, 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 마지막 본 되는 시기에 대 한 정보.
+&nbsp;&nbsp;마지막으로 본 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 사용자를 때 시스템에 대 한 정보입니다.
 
 [MatchTicket(JSON)](json-matchticket.md)
 
-&nbsp;&nbsp;멀티 플레이 세션 디렉터리 (MPSD)를 통해 다른 플레이어를 찾는 데 플레이어가 일치 티켓을 나타내는 하는 JSON 개체입니다.
+&nbsp;&nbsp;멀티 플레이 세션 디렉터리 (MPSD)를 통해 다른 플레이어를 찾는 데 플레이어가 일치 티켓을 나타내는 JSON 개체입니다.
 
 [MediaAsset(JSON)](json-mediaasset.md)
 
@@ -121,11 +121,11 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [MultiplayerActivityDetails(JSON)](json-multiplayeractivitydetails.md)
 
-&nbsp;&nbsp;**Microsoft.Xbox.Services.Multiplayer.MultiplayerActivityDetails**나타내는 하는 JSON 개체입니다.
+&nbsp;&nbsp;**Microsoft.Xbox.Services.Multiplayer.MultiplayerActivityDetails**나타내는 JSON 개체입니다.
 
 [MultiplayerSessionReference(JSON)](json-multiplayersessionreference.md)
 
-&nbsp;&nbsp;**MultiplayerSessionReference**나타내는 하는 JSON 개체입니다. 
+&nbsp;&nbsp;**MultiplayerSessionReference**나타내는 JSON 개체입니다. 
 
 [MultiplayerSessionRequest(JSON)](json-multiplayersessionrequest.md)
 
@@ -133,11 +133,11 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [MultiplayerSession(JSON)](json-multiplayersession.md)
 
-&nbsp;&nbsp;**MultiplayerSession**나타내는 하는 JSON 개체입니다. 
+&nbsp;&nbsp;**MultiplayerSession**나타내는 JSON 개체입니다. 
 
 [PagingInfo(JSON)](json-paginginfo.md)
 
-&nbsp;&nbsp;데이터의 페이지에서 반환 하는 결과 위해 페이징 정보가 표시 됩니다.
+&nbsp;&nbsp;데이터 페이지에서 반환 되는 결과 페이징 정보가 들어 있습니다.
 
 [PeopleList(JSON)](json-peoplelist.md)
 
@@ -149,7 +149,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [PermissionCheckBatchResponse(JSON)](json-permissioncheckbatchresponse.md)
 
-&nbsp;&nbsp;다 수의 사용자에 대 한 권한 값 목록은 일괄 처리의 결과 확인합니다.
+&nbsp;&nbsp;여러 사용자에 대 한 권한 값의 목록에 대 한 권한 일괄 처리의 결과 확인합니다.
 
 [PermissionCheckBatchUserResponse(JSON)](json-permissioncheckbatchuserresponse.md)
 
@@ -157,15 +157,15 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [PermissionCheckResponse(JSON)](json-permissioncheckresponse.md)
 
-&nbsp;&nbsp;단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 검사의 결과입니다.
+&nbsp;&nbsp;단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 확인의 결과입니다.
 
 [PermissionCheckResult(JSON)](json-permissioncheckresult.md)
 
-&nbsp;&nbsp;단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 검사의 결과입니다.
+&nbsp;&nbsp;단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 확인의 결과입니다.
 
 [Person(JSON)](json-person.md)
 
-&nbsp;&nbsp;사용자가 시스템에서 단일 사용자에 대 한 메타 데이터입니다.
+&nbsp;&nbsp;사용자가 시스템에 단일 사용자에 대 한 메타 데이터입니다.
 
 [PersonSummary(JSON)](json-personsummary.md)
 
@@ -185,11 +185,11 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [Progression(JSON)](json-progression.md)
 
-&nbsp;&nbsp;도전 과제를 잠금 해제 방향으로 사용자의 진행 합니다.
+&nbsp;&nbsp;도전 과제를 잠금 해제 하는까지 사용자의 작업 진행 합니다.
 
 [Property(JSON)](json-property.md)
 
-&nbsp;&nbsp;매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 포함 됩니다.
+&nbsp;&nbsp;매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 들어 있습니다.
 
 [QueryClipsResponse(JSON)](json-queryclipsresponse.md)
 
@@ -197,15 +197,15 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [quotaInfo(JSON)](json-quota.md)
 
-&nbsp;&nbsp;제목 그룹에 대 한 할당량 정보를 포함합니다.
+&nbsp;&nbsp;제목 그룹에 대 한 할당량 정보가 포함 되어 있습니다.
 
 [Requirement(JSON)](json-requirement.md)
 
-&nbsp;&nbsp;도전 과제 및 모임 해당 방향으로 얼마나 사용자가 잠금 해제 조건입니다.
+&nbsp;&nbsp;도전 과제 및 충족 하는 방향으로 얼마나 이동할지 사용자가 잠금 해제 조건입니다.
 
 [ResetReputation(JSON)](json-resetreputation.md)
 
-&nbsp;&nbsp;사용자의 기존 점수를 변경 해야 하는 새 기본 평판 점수를 포함 되어 있습니다.
+&nbsp;&nbsp;사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다.
 
 [Reward(JSON)](json-reward.md)
 
@@ -213,15 +213,15 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [RichPresenceRequest(JSON)](json-richpresencerequest.md)
 
-&nbsp;&nbsp;다양 한 상태 정보를 사용 해야 하는 방법에 대 한 정보를 요청 합니다.
+&nbsp;&nbsp;다양 한 상태 정보를 사용 해야 하는 방법에 대 한 정보에 대 한 요청 합니다.
 
 [ServiceError(JSON)](json-serviceerror.md)
 
-&nbsp;&nbsp;서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보가 포함 되어 있습니다.
+&nbsp;&nbsp;서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보를 포함 합니다.
 
 [ServiceErrorResponse(JSON)](json-serviceerrorresponse.md)
 
-&nbsp;&nbsp;서비스 오류가 발생 하는 경우 적절 한 HTTP 오류 코드 반환 됩니다. 필요에 따라 서비스 아래에 정의 된 대로 ServiceErrorResponse 개체를 포함할 수도 있습니다. 프로덕션 환경에서 더 적은 데이터가 포함 될 수 있습니다.
+&nbsp;&nbsp;서비스 오류가 발생할 때 적절 한 HTTP 오류 코드 반환 됩니다. 필요에 따라 서비스 아래에 정의 된 대로 ServiceErrorResponse 개체를 포함할 수도 있습니다. 프로덕션 환경에서 더 적은 데이터가 포함 될 수 있습니다.
 
 [SessionEntry(JSON)](json-sessionentry.md)
 
@@ -233,15 +233,15 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [TitleBlob(JSON)](json-titleblob.md)
 
-&nbsp;&nbsp;저장소에서 제목에 대 한 정보가 포함 되어 있습니다.
+&nbsp;&nbsp;저장소에서 제목에 대 한 정보를 포함합니다.
 
 [TitleRecord(JSON)](json-titlerecord.md)
 
-&nbsp;&nbsp;이름 및 마지막으로 수정한 타임 스탬프를 포함 하 여 제목에 대 한 정보.
+&nbsp;&nbsp;이름 및 마지막으로 수정한 타임 스탬프를 포함 하 여 제목에 대 한 정보를 제공 합니다.
 
 [TitleRequest(JSON)](json-titlerequest.md)
 
-&nbsp;&nbsp;타이틀에 대 한 정보를 요청 합니다.
+&nbsp;&nbsp;타이틀에 대 한 정보에 대 한 요청 합니다.
 
 [UpdateMetadataRequest(JSON)](json-updatemetadatarequest.md)
 
@@ -249,7 +249,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [User(JSON)](json-user.md)
 
-&nbsp;&nbsp;사용자 순위표 데이터를 포함합니다.
+&nbsp;&nbsp;사용자 순위표 데이터가 들어 있습니다.
 
 [UserClaims(JSON)](json-userclaims.md)
 

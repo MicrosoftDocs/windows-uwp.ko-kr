@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d550147fe18a0233fd4f0a62ccb2826ef2a5c03
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5983249"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6026883"
 ---
 # <a name="delete-usersxuidxuidinboxmessageid"></a>DELETE (/users/xuid({xuid})/inbox/{messageId})
-사용자의 받은 편지함에서 사용자가 메시지를 삭제합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
+사용자의 받은 편지함의 사용자 메시지를 삭제합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4ECB)
@@ -25,14 +25,14 @@ ms.locfileid: "5983249"
   * [요청 본문](#ID4E1B)
   * [HTTP 상태 코드](#ID4EHC)
   * [JavaScript Object Notation (JSON) 응답](#ID4EAE)
-  * [리소스의 개인 정보 설정의 효과](#ID4EYF)
+  * [리소스에 대 한 개인 정보 설정의 효과](#ID4EYF)
  
 <a id="ID4EV"></a>
 
  
 ## <a name="remarks"></a>설명 
  
-Delete 작업이 idempotent입니다.
+삭제 작업 idempotent입니다.
  
 이 API는 지원만 콘텐츠 형식은 "application/json", 각 호출의 HTTP 헤더에 필요한 합니다. 
   
@@ -51,14 +51,14 @@ Delete 작업이 idempotent입니다.
  
 ## <a name="authorization"></a>권한 부여 
  
-사용자가 메시지를 삭제 하 고 고유한 사용자가 있어야 합니다.
+사용자는 사용자가 메시지를 삭제 하 고 있어야 합니다.
   
 <a id="ID4E1B"></a>
 
  
 ## <a name="request-body"></a>요청 본문 
  
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
   
 <a id="ID4EHC"></a>
 
@@ -70,8 +70,8 @@ Delete 작업이 idempotent입니다.
 | 코드| 설명| 
 | --- | --- | --- | --- | --- | 
 | 204| 성공 합니다.| 
-| 403| XUID 변환할 수 없으므로 또는 유효한 XUID 클레임을 찾을 수 없습니다.| 
-| 404| URI의 메시지 ID를 구문 분석할 수 없는 없거나는 XUID URI에 없습니다.| 
+| 403| XUID는 변환할 수 없으므로 또는 유효한 XUID 클레임을 찾을 수 없습니다.| 
+| 404| URI의 메시지 ID를 구문 분석할 수 없는 되었거나는 XUID URI에 없습니다.| 
 | 500| 일반 서버 쪽 오류가 발생 했습니다.| 
   
 <a id="ID4EAE"></a>
@@ -83,14 +83,14 @@ Delete 작업이 idempotent입니다.
  
 | 속성| 형식| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
-| errorSource| string| 오류 발생 나타냅니다.| 
+| errorSource| string| 오류가 발생 한 나타냅니다.| 
 | errorCode| int| (Null 일 수) 오류와 관련 된 숫자 코드입니다.| 
-| errorMessage| string| 오류 세부 정보를 표시 하도록 구성 된 경우 자세히 설명 합니다.| 
+| errorMessage| string| 오류 세부 정보를 표시 하도록 구성 된 경우에 자세히 설명 합니다.| 
   
 <a id="ID4EYF"></a>
 
  
-## <a name="effect-of-privacy-settings-on-resource"></a>리소스의 개인 정보 설정의 효과 
+## <a name="effect-of-privacy-settings-on-resource"></a>리소스에 대 한 개인 정보 설정의 효과 
  
 만 고유한 사용자 메시지를 삭제할 수 있습니다. 
   

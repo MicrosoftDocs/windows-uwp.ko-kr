@@ -10,18 +10,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 74712e5d20f1e74810f3123ec82dabc6b466ff1a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5970737"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6029146"
 ---
 # <a name="serviceconfigsscidhoppersnamestats"></a>/serviceconfigs/{scid}/hoppers/{name}/stats
 
 hopper에 대 한 통계를 검색 하기 위한 가져오기 작업을 지원 합니다.
 
 > [!IMPORTANT]
-> 이 URI에 계약 103 이상을 사용 하 여 사용 하며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 URI에 계약 103 이상을 사용 하 여 사용 하며 Xbl 계약 버전 X의 헤더 요소: 103 또는 나중에 모든 요청.
 
 <a id="ID4ER"></a>
 
@@ -32,7 +32,7 @@ momatch.xboxlive.com
 
 
 ## <a name="remarks"></a>설명
-이 URI 값 xuid, gt, 및 me 대상 사용자의 구성에서 소유자 식별자에 대 한 지원합니다. 티켓의 작성자만 티켓을 삭제 하거나 URI의 상태를 검색할 수 있습니다.  
+이 URI는 대상 사용자의 구성에서 소유자 식별자에 대 한 값 xuid, gt, 및 me를 지원합니다. 티켓의 작성자만 티켓을 삭제 하거나 URI의 상태를 검색할 수 있습니다.  
 <a id="ID4E6"></a>
 
 

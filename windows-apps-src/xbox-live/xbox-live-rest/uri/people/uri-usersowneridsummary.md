@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 99ce4bd9d444069af95c4f3c875cc12e4ff950cc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5991110"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6025735"
 ---
 # <a name="usersowneridsummary"></a>/users/{ownerId}/summary
 호출자의 관점에서 소유자에 대 한 요약 데이터에 액세스 합니다.
@@ -28,7 +28,7 @@ ms.locfileid: "5991110"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| ownerId| string| 해당 리소스에 액세스 하 고 사용자의 식별자입니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다. 예제 값: <code>me</code>, <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>|
+| ownerId| string| 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다. 예제 값: <code>me</code>, <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>|
 
 <a id="ID4ESB"></a>
 

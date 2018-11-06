@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 569aa173a0074fd147092716b9a36d53acaef0db
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5975193"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6028429"
 ---
 # <a name="usersowneridpeoplemute"></a>/users/{ownerId}/people/mute
 사용자에 대 한 음소거 목록에 액세스합니다.
@@ -28,7 +28,7 @@ ms.locfileid: "5975193"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| ownerId| string| 필수. 해당 리소스에 액세스 하 고 사용자의 식별자입니다. 가능한 값은 "me" <code>xuid({xuid})</code>, 또는 gt({gamertag}) 합니다. 인증된 된 사용자를 이어야 합니다. 예제 값: <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>. 최대 크기: 없음. |
+| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 "me" <code>xuid({xuid})</code>, 또는 gt({gamertag}) 합니다. 인증 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>, <code>gt(SomeGamertag)</code>. 최대 크기: 없음. |
 
 <a id="ID4ETB"></a>
 

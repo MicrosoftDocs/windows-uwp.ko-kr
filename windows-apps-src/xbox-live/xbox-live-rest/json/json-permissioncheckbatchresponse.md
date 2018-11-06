@@ -10,24 +10,24 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b9996c8631b44eafcee3d5300c330ed4d89a296
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990617"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6036220"
 ---
 # <a name="permissioncheckbatchresponse-json"></a>PermissionCheckBatchResponse(JSON)
-다 수의 사용자에 대 한 권한 값 목록은 일괄 처리의 결과 확인합니다. 
+여러 사용자에 대 한 권한 값의 목록에 대 한 권한 일괄 처리의 결과 확인합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="permissioncheckbatchresponse"></a>PermissionCheckBatchResponse
  
-PermissionCheckBatchResponse 개체에는 다음과 같이 지정 합니다.
+PermissionCheckBatchResponse 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| 응답| [PermissionCheckBatchUserResponse (JSON)](json-permissioncheckbatchuserresponse.md) 의 배열| 필수. 요청에서와 동일한 순서로 원래 요청에 요청 된 각 권한에 대 한 [PermissionCheckBatchUserResponse (JSON)](json-permissioncheckbatchuserresponse.md) 개체입니다.| 
+| 응답| [PermissionCheckBatchUserResponse (JSON)](json-permissioncheckbatchuserresponse.md) 의 배열| 필수. 요청에서와 동일한 순서로 원래 요청에 대 한 요청 된 각 권한에 대 한 [PermissionCheckBatchUserResponse (JSON)](json-permissioncheckbatchuserresponse.md) 개체입니다.| 
   
 <a id="ID4EQB"></a>
 

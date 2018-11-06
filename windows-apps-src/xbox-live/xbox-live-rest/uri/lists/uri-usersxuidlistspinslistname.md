@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b76637d0c88e4ef2bc8905ff1b4dd894fd819a0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992580"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6030592"
 ---
 # <a name="usersxuidxuidlistspinslistname"></a>/users/xuid(xuid)/lists/PINS/{listname}
-목록의 항목을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
+항목을 목록에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -43,7 +43,7 @@ ms.locfileid: "5992580"
 
 [GET](uri-usersxuidlistspinslistnameget.md)
 
-&nbsp;&nbsp;목록의 콘텐츠를 반환합니다.
+&nbsp;&nbsp;목록 내용을 반환합니다.
 
 [POST](uri-usersxuidlistspinslistnamepost.md)
 

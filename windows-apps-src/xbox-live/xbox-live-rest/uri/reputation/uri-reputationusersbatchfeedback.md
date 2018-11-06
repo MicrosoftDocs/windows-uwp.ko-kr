@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f6756cb057de1d5ad2e3e3f5039f55f4e52c12da
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5981956"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6026225"
 ---
 # <a name="usersbatchfeedback"></a>/users/batchfeedback
  
@@ -34,7 +34,7 @@ ms.locfileid: "5981956"
 
 [POST](uri-reputationusersbatchfeedbackpost.md)
 
-&nbsp;&nbsp;타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스에서 사용 합니다.
+&nbsp;&nbsp;타이틀의 인터페이스 외부에서 일괄 처리 형태로 피드백을 보내려면 타이틀의 서비스가 사용 합니다.
  
 <a id="ID4EJB"></a>
 

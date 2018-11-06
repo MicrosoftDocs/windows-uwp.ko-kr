@@ -10,15 +10,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f5615cb0a8a5fa15652724040057c43697fa0782
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5981355"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048119"
 ---
 # <a name="universal-resource-identifier-uri-reference"></a>URI(Universal Resource Identifier) 참조
 
-이 섹션에서는 Xbox Live 서비스를 사용한 Hypertext 전송 프로토콜 (HTTP) 메서드와 Uniform Resource Identifier (Uri)에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 Xbox Live 서비스를 사용한 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드와 Uniform Resource Identifier (Uri)에 대 한 세부 정보를 제공 합니다.
 
 <a id="ID4EAB"></a>
 
@@ -31,7 +31,7 @@ ms.locfileid: "5981355"
 
 [게임 서버 Universal Resource Identifier (URI) 참조](gsdk/atoc-gsdk-uri-reference.md)
 
-&nbsp;&nbsp;타이틀에 대 한 게임 서버 개발 키트 서버 인스턴스를 만드는 데 클라이언트에 의해 Uri입니다.
+&nbsp;&nbsp;클라이언트 제목에 대 한 게임 서버 개발 키트 서버 인스턴스를 만드는 데 사용 되는 Uri입니다.
 
 [게임 DVR URI](dvr/atoc-reference-dvr.md)
 
@@ -43,7 +43,7 @@ ms.locfileid: "5981355"
 
 [순위표 URI](leaderboard/atoc-reference-leaderboard.md)
 
-&nbsp;&nbsp;Uri 및 순위표 관련된 HTTP 메서드입니다.
+&nbsp;&nbsp;Uri 및 순위표에 대 한 관련된 HTTP 메서드입니다.
 
 [목록 URI](lists/atoc-reference-lists.md)
 
@@ -59,7 +59,7 @@ ms.locfileid: "5981355"
 
 [피플 URI](people/atoc-reference-people.md)
 
-&nbsp;&nbsp;Uri와 관련 된 HTTP 메서드는 사용자가 시스템입니다.
+&nbsp;&nbsp;Uri와 관련 된 HTTP 메서드 피플 시스템입니다.
 
 [상태 URI](presence/atoc-reference-presence.md)
 
@@ -79,7 +79,7 @@ ms.locfileid: "5981355"
 
 [세션 디렉터리 URI](sessiondirectory/atoc-reference-sessiondirectory.md)
 
-&nbsp;&nbsp;Uri 및 관련 된 HTTP 메서드 멀티 플레이어 세션 디렉터리 (MPSD).
+&nbsp;&nbsp;Uri 및 관련된 HTTP 메서드에 멀티 플레이어 세션 디렉터리 (MPSD).
 
 [도전 과제 타이틀 기록 URI](titlehistory/atoc-reference-titlehistoryv2.md)
 
@@ -91,11 +91,11 @@ ms.locfileid: "5981355"
 
 [시스템 문자열 유효성 검사 URI](stringserver/atoc-reference-systemstringsvalidate.md)
 
-&nbsp;&nbsp;시스템 리소스에 동의 문자열의 유효성을 검사입니다.
+&nbsp;&nbsp;시스템 리소스에서 동의 문자열의 유효성을 검사입니다.
 
 [사용자 URI](users/atoc-reference-users.md)
 
-&nbsp;&nbsp;Uri 및 사용자 관련된 HTTP 메서드입니다.
+&nbsp;&nbsp;Uri 및 사용자에 대 한 관련된 HTTP 메서드입니다.
 
 [사용자 통계 URI](userstats/atoc-reference-userstats.md)
 

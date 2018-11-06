@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1974a6a2affeca26bc52cd2fdfabf3364b20bd61
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5975134"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6040582"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefinersqueryrefinersubqueryrefinervalues"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryRefiner}/subQueryRefinerValues)
-지정 된 쿼리 구체화 값 (예: "subgenres 주어진 장르의")에 대 한 하위 값 목록을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+지정 된 쿼리 구체화 값 (예: "subgenres 주어진 장르의")에 대 한 하위 값의 목록을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4EDB)
@@ -27,7 +27,7 @@ ms.locfileid: "5975134"
  
 ## <a name="remarks"></a>설명
  
-쿼리 구체화 값에서 라는 **queryRefinerValue**를 전달할 수 URI 획에서 금지 문자로 쿼리 구체화 값을 허용 하도록 완료 되는 쿼리 문자열 매개 변수로 전달 됩니다.
+쿼리 구체화 값에서 **queryRefinerValue**, URI 획에 전달할 수를 사용할 수 없음 문자로 쿼리 구체화 값을 허용 하도록 수행할 라는 쿼리 문자열 매개 변수로 전달 됩니다.
  
 이 API는 음악에 대 한 에서만 지원 됩니다.
   

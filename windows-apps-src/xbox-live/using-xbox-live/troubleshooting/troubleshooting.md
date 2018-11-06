@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: ba30743f6b3e13d5aa3e62b9c385cf7281341b38
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5971484"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6022681"
 ---
 # <a name="troubleshooting-xbox-live"></a>Xbox Live 문제 해결
 
@@ -23,7 +23,7 @@ ms.locfileid: "5971484"
 
 [Xbox Live Api 문제 해결](troubleshooting-the-xbox-live-services-api.md)
 
-[Windows PC에서 Xbox Live 설치 문제 해결](troubleshooting-pc-setup.md)
+[Windows PC에서 Xbox Live 설정 문제 해결](troubleshooting-pc-setup.md)
 
 [Xbox Live 로그인 문제 해결](troubleshooting-sign-in.md)
 

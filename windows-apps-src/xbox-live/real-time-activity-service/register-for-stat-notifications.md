@@ -9,18 +9,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, rta, stat, 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: ba0d4501840f592d8098470b53df12b553321889
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5985062"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6024050"
 ---
 # <a name="how-to-register-for-stat-change-notifications"></a>통계 변경 알림 등록 하는 방법
 
-실시간 활동 (RTA)은 Xbox Live 서비스 구성을 통해 통계에 사용 됩니다.
+실시간 활동 (RTA) Xbox Live 서비스 구성을 통해 통계에 사용 됩니다.
 
-Microsoft 개발자 대시보드에서 서비스 구성을 구성한 경우 아래 통계 변경 알림 등록할 수 있습니다 **서비스 > Xbox Live > 플레이어 통계 > 상태 변경 알림**.
+Microsoft 개발자 대시보드에서 서비스 구성을 구성한 경우 아래 통계 변경 알림 등록할 수 있습니다 **서비스 > Xbox Live > 플레이어 통계 > 상태 변경 알림**합니다.
 
- 서비스 구성을 Xbox 개발자 포털 (XDP)에서 구성한 경우 XDP 설명서를 참조 하세요.
+ 서비스 구성 Xbox 개발자 포털 (XDP)에서 구성한, XDP 설명서를 참조 하세요.
 
  상태 데이터와 도전 과제 데이터 RTA에 대 한 자동으로 활성화 됩니다.

@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cc67b61d9130838802774460cd38ec08e2e349b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5981851"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6024560"
 ---
 # <a name="post-titlestitleidvariants"></a>POST (/titles/{titleId}/variants)
-지정 된 제목 id입니다.에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출 URI 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EZ)
   * [필요한 요청 헤더](#ID4EIB)
@@ -35,7 +35,7 @@ ms.locfileid: "5981851"
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleid| ID 요청을 실행 해야 하는 제목입니다.| 
+| titleid| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
   
 <a id="ID5EG"></a>
 
@@ -49,22 +49,22 @@ gameserverds.xboxlive.com
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-다음 표에 표시 된 헤더는 요청을 만들 때 필요 합니다.
+요청을 만들 때 다음 표에 표시 된 헤더는 필요 합니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터 형식입니다.| 
 | 호스트| gameserverds.xboxlive.com|  | 
 | Content-Length|  | 요청 개체의 길이입니다.| 
-| x xbl-계약 버전| 1| API 계약 버전입니다.| 
-| 권한 부여| XBL3.0 x = [해시]; [토큰]| 인증 토큰입니다.| 
+| xbl 계약 버전 x| 1| API 계약 버전입니다.| 
+| 권한 부여| XBL3.0 x = [해시]. [토큰]| 인증 토큰입니다.| 
   
 <a id="ID4EED"></a>
 
  
 ## <a name="optional-request-headers"></a>선택적 요청 헤더
  
-요청을 만들 때 다음 표에 표시 된 헤더는 옵션입니다.
+요청을 만들 때 다음 표에 표시 된 헤더는 선택적입니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -75,18 +75,18 @@ gameserverds.xboxlive.com
  
 ## <a name="authorization"></a>권한 부여
 
-요청이 유효한 Xbox Live 권한 부여 헤더를 포함 해야 합니다. 이 리소스에 액세스 하는 호출자에 게 허용 되지 않으면, 서비스 응답 403 반환 합니다. 헤더에 잘못 되었거나 누락 된 경우, 서비스 401 권한 없음 응답에 반환 합니다.
+요청이 유효한 Xbox Live 권한 부여 헤더를 포함 해야 합니다. 이 리소스에 액세스 하는 호출자에 게 허용 되지 않으면, 서비스 응답 403 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스 401 권한 없음 응답에 반환 합니다.
  
 <a id="ID4EEE"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-요청에는 다음 멤버가 포함 된 JSON 개체가 있어야 합니다.
+요청에는 다음 멤버가 포함 된 JSON 개체를 포함 해야 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| locale| 반환할 변형의의 로컬 합니다.| 
+| locale| 반환 변형의의 로컬 합니다.| 
 | maxVariants| 반환할 변형의의 최대 수입니다.| 
 | publisherOnly|  | 
 | 제한|  | 
@@ -117,7 +117,7 @@ gameserverds.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 응답 본문에는 데이터의 유형입니다.| 
+| 콘텐츠 유형| application/json| 응답 본문에는 데이터 형식입니다.| 
 | Content-Length|  | 응답 본문의 길이입니다.| 
   
 <a id="ID4EMG"></a>
@@ -156,7 +156,7 @@ gameserverds.xboxlive.com
 | gsiSetId| GSI 집합의 Id입니다.| 
 | gsiSetName| GSI 세트의 이름입니다.| 
 | selectionOrder|  | 
-| variantSchemaId| 집합은 GSI에 사용 되는 varaint 스키마의 id입니다.| 
+| variantSchemaId| 집합은 GSI에서 사용 되는 varaint 스키마의 id입니다.| 
  
 <a id="ID4EYBAC"></a>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox, 오류 처리
 ms.localizationpriority: medium
 ms.openlocfilehash: d1127811e44eecb03cfc9a9818733a2b2234d2c1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995898"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6023144"
 ---
 # <a name="winrt-api-error-handling"></a>WinRT API 오류 처리
 
@@ -57,9 +57,9 @@ WinRT API를 호출할 수 있습니다에서 C + + 예외를 사용 하 여 try
     }
 ```
 
-XSAPI 비동기 메서드는 메서드가 호출 될 때 동기적으로 실행 되는 일부 코드를 가지고지 않습니다.  동기 코드 입력된 인수 유효성을 검사 하 고 비동기 작업 또는 작업 시작 처럼 작동 합니다.  따라서도 비동기 메서드를 호출 일반 시나리오 (예: 프로그래머 오류, 네트워크 오류가 아니라)이 발생 하지 않아야 – 예외가 발생할 수 있습니다.  사항은이 가능성 및 프로그램을 인식 작성할 입력 유효성을 검사 하 고 개발 하는 동안 철저 하 게 코드를 테스트 하 여 합니다.  Try/catch 자체 호출 주위를 두거나 호출 스택의 한 높은 수준에 배치 여부 중요 한 점은 하나를입니다.
+XSAPI 비동기 메서드는 메서드가 호출 될 때 동기적으로 실행 되는 일부 코드를 가지고지 않습니다.  동기 코드 입력된 인수를 확인 하 고 비동기 작업 또는 작업을 시작 처럼 작동 합니다.  따라서이 일반 시나리오 (예: 프로그래머 오류, 네트워크 오류가 아니라)이 발생 하지 않아야도 비동기 메서드를 호출 – 예외가 발생할 수 있습니다.  사항은이 가능성과 프로그램을 인식 작성할 입력 유효성 검사 및 개발 중 철저 하 게 코드를 테스트 합니다.  Try/catch 자체 호출 주위를 두거나 호출 스택의 한 높은 수준에 배치 여부 중요 한 점은를 하나입니다.
 
-## <a name="help-my-game-crashes-when-i-call-xyz-xbox-service-api"></a>도움말! 게임 크래시 XYZ Xbox 서비스 API를 호출 하면
+## <a name="help-my-game-crashes-when-i-call-xyz-xbox-service-api"></a>도움말! 게임 크래시 XYZ Xbox 서비스 API를 호출 하는 경우
 
 따라서 게임 크래시 및 호출 스택 이라는 Xbox 서비스 API 호출을 이지만 됩니까?
 
@@ -77,7 +77,7 @@ msvcr110.dll!Concurrency::details::ThreadProxy::ThreadProxyMain(void * lpParamet
 ntdll.dll!RtlUserThreadStart(long (void *) * StartAddress, void * Argument) Line 822    C++
 ```
 
-이러한 호출 스택 매우 혼란 스 러 됩니다.  동시성이,이 동시성입니다.  오 Microsoft::Xbox::Services::Social::XboxUserProfile 이므로 호출 스택의 원인 해야 합니다.  실제로 이것은 잘못 된 Xbox 사용자 id에 대 한 GetUserProfileAsync 호출 하 여 생성 하는 호출 스택  이 스택 생성 하는 샘플 코드는 다음과 같습니다.
+이러한 호출 스택 매우 혼란 스 러 됩니다.  동시성이,이 동시성입니다.  오 Microsoft::Xbox::Services::Social::XboxUserProfile 이므로 호출, 스택의 원인 해야 합니다.  실제로, 이것은 잘못 된 Xbox 사용자 id에 대 한 GetUserProfileAsync 호출 하 여 생성 된 스택  이 호출 스택에서 생성 되는 샘플 코드는 다음과 같습니다.
 
 ```cpp
     auto pAsyncOp = requester->ProfileService->GetUserProfileAsync("abc123"); //passing invalid Xbox User Id;
@@ -92,13 +92,13 @@ ntdll.dll!RtlUserThreadStart(long (void *) * StartAddress, void * Argument) Line
     });
 ```
 
-에 스택 Concurrency::_ReportUnobservedException() 포함 되어 있습니까?  위의 스택에 다른 살펴보겠습니다.  이 중요 합니다.  에 스택 Concurrency:: _ReportUnobservedException()를 포함 하는 경우 게임 코드에서 버그를 발견 한 있습니다.
+프로그램 호출 스택 Concurrency::_ReportUnobservedException() 포함 되어 있습니까?  위의 호출 스택에 다른 살펴보겠습니다.  이 중요 합니다.  에 호출 스택 Concurrency:: _ReportUnobservedException() 포함 되어 있는 경우 게임 코드에서 버그를 발견 한 있습니다.
 
-PPL 다른 작업 하 여 따를 수 있는 작업을 만듭니다.  위의 예제에서는 create_task() 빌드 작업을 GetUserProfileAsync() 호출 하 고는.then () 다음 작업을 만듭니다.  이 종종 라고 선행 작업 (첫 번째) 및 연속 작업 (두 번째).  예제에서는 연속 작업 오류 처리가 없습니다.  런타임은은 작업이 예외를 throw 하 고는 예외 작업의 연속 중 하나에 없는 경우 앱을 종료 합니다.
+PPL 다른 작업 하 여 따를 수 있는 작업을 만듭니다.  위 예제에서 create_task() GetUserProfileAsync()를 호출 하는 작업 빌드되고는.then ()는 다음 작업을 만듭니다.  이 종종 라고 선행 작업 (첫 번째) 및 연속 작업 (두 번째).  이 예제에서는 연속 작업 오류 처리가 없습니다.  런타임은 예외를 throw 하는 작업 및 예외는 작업의 연속 중 하나에 발견 되지 경우 앱을 종료 합니다.
 
-연속 작업까지 살펴봤듯이 note 실제로 두 가지 종류가 있습니다.  한 가지 종류, 작업 기반 연속 작업을 이전 작업이 입력된 인수 변수로 사용 합니다.  이 작업이 항상 실행, 선행 작업 예외를 throw 하는 경우에 됩니다.  선행 작업의 결과 가져오려면 인수에.get()를 호출 해야 합니다.  두 번째 값 기반 이므로, 이전 작업의 출력을 받는 직접 – 제외 하 고 실제로 구문에 효과적은 한 가지 – 선행 예외를 throw 하는 경우 값 기반 연속 전혀 실행 되지 않습니다.
+연속 작업까지 살펴봤듯이 note 실제로 두 가지 종류가 있습니다.  한 가지 종류의 작업 기반 연속 작업 이전 작업이 입력된 인수 변수로 사용 합니다.  이 작업이 항상 실행, 선행 작업 예외가 발생 하는 경우에 됩니다.  선행 작업의 결과 얻으려면 인수에.get()를 호출 해야 합니다.  두 번째 값 기반 이므로, 이전 작업의 출력을 받는 직접 – 제외 하 고 실제로 구문에 효과적은 한 가지 – 선행 예외가 발생 하는 경우 값 기반 연속 전혀 실행 되지 않습니다.
 
-권장 사항: 충돌을 방지 하기 위해 사용 하 여 작업 기반 연속 작업 서라운드에서 모든 concurrency:: task::get() 또는 concurrency:: task::wait() 호출이 try/catch 블록에서 복구할 수 있는 오류를 처리 하 고 연속 작업 체인의 끝에.
+권장 사항: 충돌을 방지를 연속 작업 체인의 끝에 작업 기반 연속 작업을 사용 하 고 모든 concurrency:: task::get() 또는 concurrency:: task::wait() 서라운드 호출 try/catch 블록에서 복구할 수 있는 오류를 처리 합니다.
 
 몇 가지 예를 살펴보겠습니다.
 
@@ -154,7 +154,7 @@ PPL 다른 작업 하 여 따를 수 있는 작업을 만듭니다.  위의 예�
     });
 ```
 
-세 번째 해결 방법은-완전히 값 기반 연속 작업을 사용 하지만.get() 또는.wait() 다른 스레드에서 호출을 있습니다 예외를 catch 합니다.  간단한 예는 다음과 같습니다.
+세 번째 해결 방법은-완전히 값 기반 연속 작업을 사용 하 여 하지만.get() 또는.wait() 다른 스레드에서 호출을 예외를 발생 합니다.  간단한 예는 다음과 같습니다.
 
 ```cpp
     auto getProfileTask = create_task( pAsyncOp )
@@ -179,7 +179,7 @@ PPL 다른 작업 하 여 따를 수 있는 작업을 만듭니다.  위의 예�
     }
 ```
 
-**PPL 사용 하지 않는 경우** PPL 대신 AsyncOperationCompletionHandler 또는 AsyncActionCompletionHandler 사용 중인 경우 다음도 있으면 응용 프로그램 충돌에 제대로 수행 하는 경우 발생 하는 몇 가지 오류 처리입니다.  다음은 오류를 처리 하는 방법을 보여주는 예
+**PPL 사용 하지 않는 경우** PPL 대신 AsyncOperationCompletionHandler 또는 AsyncActionCompletionHandler 사용 중인 경우 다음도 있으면 제대로 수행 하는 경우 응용 프로그램 충돌 취소할 수 있는 몇 가지 오류 처리입니다.  다음은 오류를 처리 하는 방법을 보여 주는 예
 
 ```cpp
     try
@@ -219,9 +219,9 @@ PPL 다른 작업 하 여 따를 수 있는 작업을 만듭니다.  위의 예�
     }
 ```
 
-**GetNextAsync() 및 예외** 페이징 Api를 사용 하 여?  모든 AchievementResult, LeaderboardResult, InventoryItemResult, 및 TitleStorageBlobMetadataResult 개체 결과의 다음 페이지를 요청 하는 GetNextAsync() 메서드를 포함 합니다.  데이터가 더 이상 사용할 수 있으며, 경우 특별 한 경우에는 GetNextAsync()를 호출할 때 예외 트리거됩니다.  동기 GetNextAsync() 실행 중 예외가 발생 합니다.  이 경우 GetNextAsync 메서드가 INET_E_DATA_NOT_AVAILABLE (0x800C0007)를 throw 합니다.
+**GetNextAsync() 및 예외** 페이징 Api를 사용 하 여?  모든 AchievementResult, LeaderboardResult, InventoryItemResult, 및 TitleStorageBlobMetadataResult 개체 결과의 다음 페이지를 요청 하는 GetNextAsync() 메서드를 포함 합니다.  더 이상 데이터를 사용할 수 있는 경우 특별 한 경우는 GetNextAsync()를 호출할 때 예외 트리거됩니다.  동기 GetNextAsync() 실행 중 예외가 발생 합니다.  이 경우 GetNextAsync 메서드 INET_E_DATA_NOT_AVAILABLE (0x800C0007)를 throw합니다.
 
-권장 사항: GetNextAsync() 메서드 try/catch 블록에 있게 호출 하 고 적절 하 게 INET_E_DATA_NOT_AVAILABLE 경우 처리를 배치 해야 합니다.
+권장 사항: 메서드 try/catch 블록에서 호출 하 고 처리 INET_E_DATA_NOT_AVAILABLE GetNextAsync() 줄 바꿈 확인 합니다.
 
 ```cpp
     try

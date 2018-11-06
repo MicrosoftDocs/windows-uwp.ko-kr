@@ -1,7 +1,7 @@
 ---
 title: 순서도-서비스 품질 관리
 author: KevinAsgari
-description: Xbox Live 멀티 플레이어 관리자 순서도-매치를 사용 하 고 서비스 품질 관리
+description: Xbox Live 멀티 플레이어 관리자 순서도-매치 메이 킹 사용 및 관리 서비스 품질
 ms.assetid: 48f32957-1e15-4178-84dc-69af3ea0edb4
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, mpm, 멀티 플레이어, 서비스, qos, 멀티 플레이어 관리자 순서도의 품질
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b88d3d8823bce3f60506c3c28f891acd1ad8a50
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5968320"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6039812"
 ---
 # <a name="flowchart---use-matchmaking-and-manage-quality-of-service"></a>순서도-매치를 사용 하 고 서비스 품질 관리
 

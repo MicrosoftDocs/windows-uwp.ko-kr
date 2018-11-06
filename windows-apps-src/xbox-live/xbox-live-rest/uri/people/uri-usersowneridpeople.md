@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5191249e3ee0cdea9ca07f8f3bfbdd15992a3145
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5987499"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6029025"
 ---
 # <a name="usersowneridpeople"></a>/users/{ownerId}/people
-호출자의 사용자 컬렉션에 액세스합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
+호출자의 사람들이 컬렉션에 액세스합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -28,7 +28,7 @@ ms.locfileid: "5987499"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| ownerId| string| 해당 리소스에 액세스 하 고 사용자의 식별자입니다. 인증된 된 사용자와 일치 해야 합니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다.| 
+| ownerId| string| 해당 리소스를 액세스 하는 사용자의 식별자입니다. 인증된 된 사용자와 일치 해야 합니다. 가능한 값은 "me", xuid({xuid}), 또는 gt({gamertag}) 합니다.| 
   
 <a id="ID4EOB"></a>
 

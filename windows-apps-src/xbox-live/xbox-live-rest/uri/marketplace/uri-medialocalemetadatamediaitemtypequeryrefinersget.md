@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 103ca7677777cd874cc0b5a4e771952e6ac03498
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5983880"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6025754"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefiners"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners)
-지정 된 미디어 항목 유형에 대 한 쿼리 구체화 나열 되어 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
+지정 된 미디어 항목 형식에 대 한 쿼리 구체화를 나열합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -29,7 +29,7 @@ ms.locfileid: "5983880"
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
 | marketplaceId| string| 필수. 문자열 <b>Windows.Xbox.ApplicationModel.Store.Configuration.MarketplaceId</b>에서 가져온 값입니다.| 
-| mediaitemtype| string| 필수. 값 중 하나로 [GET (/media/ {marketplaceId} / /metadata/mediagroups/ {mediagroup} / mediaItemTypes)](uri-medialocalemetadatamediagroupsmediaitemtypesget.md).| 
+| mediaitemtype| string| 필수. 값 중 하나로 [GET (/media/ {marketplaceId} / /metadata/mediagroups/ {mediagroup} / mediaItemTypes)](uri-medialocalemetadatamediagroupsmediaitemtypesget.md)합니다.| 
   
 <a id="ID4EAB"></a>
 

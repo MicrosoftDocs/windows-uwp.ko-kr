@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 755d30796c7e948a2fe97e84986a74a461795f83
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992023"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6023598"
 ---
 # <a name="usersowneridclips"></a>/users/{ownerId}/clips
 사용자의 클립의 액세스 목록입니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -28,7 +28,7 @@ ms.locfileid: "5992023"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| ownerId| string| 해당 리소스에 액세스 하 고 사용자의 사용자 id입니다. 지원 되는 형식: "me" 또는 "xuid(123456789)". 최대 길이: 16입니다.| 
+| ownerId| string| 해당 리소스를 액세스 하는 사용자의 사용자 id입니다. 지원 되는 형식: "me" 또는 "xuid(123456789)"입니다. 최대 길이: 16입니다.| 
   
 <a id="ID4EVB"></a>
 

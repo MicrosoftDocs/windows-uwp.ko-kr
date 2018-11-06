@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9eff98593c122001cab591b9f45793aa6649736a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5981510"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6032451"
 ---
 # <a name="game-server-universal-resource-identifier-uri-reference"></a>게임 서버 Universal Resource Identifier (URI) 참조
-타이틀에 대 한 게임 서버 개발 키트 서버 인스턴스를 만드는 데 클라이언트에 의해 Uri입니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+클라이언트 제목에 대 한 게임 서버 개발 키트 서버 인스턴스를 만드는 데 사용 되는 Uri입니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
 <a id="ID4EY"></a>
 
@@ -26,7 +26,7 @@ ms.locfileid: "5981510"
 
 [/qosservers](uri-qosservers.md)
 
-&nbsp;&nbsp;URI를 사용 하 여 Xbox Live 계산 사용 하기 위해 사용할 수 있는 QoS 서버의 목록을 가져올 수 클라이언트에 의해 호출 합니다.
+&nbsp;&nbsp;URI를 사용 하 여 Xbox Live 계산에 사용 하기 위해 사용할 수 있는 QoS 서버 목록을 가져올 수 클라이언트에 의해 호출 합니다.
 
 [/titles/{titleId}/clusters](uri-titlestitleidclusters.md)
 
@@ -38,9 +38,9 @@ ms.locfileid: "5981510"
 
 [/titles/{titleId}/sessionhosts](uri-titlestitleidsessionhosts.md)
 
-&nbsp;&nbsp;지정 된 제목 id에 할당 하는 Xbox Live 계산 sessionhost를 요청 합니다.
+&nbsp;&nbsp;지정 된 제목 id에 대 한 할당할 Xbox Live 계산 sessionhost을 요청 합니다.
 
 [/titles/{titleId}/sessions/{sessionId}/allocationStatus](uri-titlestitleidsessionssessionidallocationstatus.md)
 
-&nbsp;&nbsp;지정 된 제목 id와 세션 id가에 대 한 티켓 요청 상태를 가져옵니다.
+&nbsp;&nbsp;지정 된 제목 id와 세션 id에 대 한 티켓 요청 상태를 가져옵니다.
  

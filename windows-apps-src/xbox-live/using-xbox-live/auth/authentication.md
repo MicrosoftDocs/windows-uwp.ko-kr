@@ -1,7 +1,7 @@
 ---
 title: 인증
 author: KevinAsgari
-description: 타이틀에 Xbox Live 사용자는 로그인 하는 방법을 알아봅니다.
+description: 타이틀에 Xbox Live 사용자가 로그인 하는 방법을 알아봅니다.
 ms.assetid: 7a9dfb3c-1ccc-4948-a218-37101069c91a
 ms.author: kevinasg
 ms.date: 04/04/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 인증에 로그인
 ms.localizationpriority: medium
 ms.openlocfilehash: f74453ee618fe19d1e6c32e99c5710abc65a6037
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5977411"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6029276"
 ---
 # <a name="authentication"></a>인증
 

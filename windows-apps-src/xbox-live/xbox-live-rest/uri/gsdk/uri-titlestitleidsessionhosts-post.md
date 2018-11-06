@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dbbc7baf12daea485dec22389846e5e4acec16c1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5976576"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6023909"
 ---
 # <a name="post-titlestitle-idsessionhosts"></a>POST (/titles/{Title Id}/sessionhosts)
 새 클러스터 요청을 만듭니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.
@@ -32,7 +32,7 @@ ms.locfileid: "5976576"
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleId| ID 요청을 실행 해야 하는 제목입니다.| 
+| titleId| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
   
 <a id="ID5EG"></a>
 
@@ -46,27 +46,27 @@ gameserverms.xboxlive.com
  
 ## <a name="required-request-headers"></a>필요한 요청 헤더
  
-다음 표에 표시 된 헤더는 요청을 만들 때 필요 합니다.
+요청을 만들 때 다음 표에 표시 된 헤더는 필요 합니다.
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터 형식입니다.| 
   
 <a id="ID4E5B"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-요청에는 다음 멤버가 포함 된 JSON 개체가 있어야 합니다.
+요청에는 다음 멤버가 포함 된 JSON 개체를 포함 해야 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | 
-| sessionId| 이 호출자가 지정한 식별자입니다. 할당 되 고 반환 되는 세션 호스트에 할당 됩니다. 나중에이 식별자는 특정 sessionhost를 참조할 수 있습니다. 전역 고유 해야 합니다 (예: GUID).| 
+| sessionId| 이 호출자가 지정한 식별자입니다. 할당 되 고 반환 되는 세션 호스트에 할당 됩니다. 나중에이 식별자가 특정 sessionhost를 참조할 수 있습니다. 고유한 이어야 합니다 (예: GUID).| 
 | SandboxId| 샌드박스 원하는 세션 호스트에 할당 해야 합니다.| 
 | cloudGameId| 클라우드 게임 식별자입니다.| 
-| 위치| 순서가 지정 된 목록 세션에서 할당을 원하는 기본 위치입니다.| 
+| 위치| 순서가 지정 된 목록에서 할당할 세션 원하는 기본 위치입니다.| 
 | sessionCookie| 이 지정 된 호출자 불투명 문자열입니다. sessionhost와 연결 하 고 게임 코드에서 참조할 수 있습니다. 이 멤버를 사용 하 여 (최대 크기는 4KB) 서버를 클라이언트에서 적은 양의 정보를 전달 합니다.| 
-| gameModelId| 게임 모드 식별자.| 
+| gameModelId| 게임 모드 식별자입니다.| 
  
 <a id="ID4EDD"></a>
 
@@ -149,14 +149,14 @@ gameserverms.xboxlive.com
  
 ## <a name="remarks"></a>설명
  
-다음 응답 코드를 받는 경우 제목을 해야 서비스에 대 한 호출을 다시 시도:
+다음과 같은 응답 코드를 받는 경우 제목을 다시 호출 서비스에만 해야:
  
    * 200-성공-응답을 반환 합니다.
-   * 400-잘못 된 매개 변수 또는 잘못 된 요청 본문 합니다.
+   * 400-잘못 된 요청 본문 또는 매개 변수가 잘못 되었습니다.
    * 401-권한이 없음
    * 404-제목 id에 할당 된 모든 구독 필요는 없습니다.
-   * 409-동일한는 요청 (동일한 sessionId) 대략 동시 때이 응답 가능 합니다. 할당 요청 작업이 수행 하 고 세션 호스트에 이미 지정된 sessionId 이미 활성 상태인 경우에서는 해당 sessionhost 자세히 설명 하는 정보를 반환 합니다. 하지만 세션 호스트 없는 경우 활성 아직 충돌을 받게 됩니다.
-   * 500-예기치 않은 서버 오류.
+   * 409-대략 동시에 동일한 요청 (동일한 sessionId) 결정이 응답 가능한 됩니다. 할당 요청 작업이 수행 하 고 세션 호스트에 이미 지정된 sessionId 이미 활성 상태인 경우에서는 해당 sessionhost 자세히 설명 하는 정보를 반환 합니다. 하지만 세션 호스트 없는 경우 활성 아직 충돌이 발생 합니다.
+   * 500-예기치 않은 서버 오류입니다.
    * 503-sessionhosts StandingBy 없습니다. 이러한 리소스 중 일부는 무료 때 요청을 다시 시도 합니다.
    
 <a id="ID4EFG"></a>

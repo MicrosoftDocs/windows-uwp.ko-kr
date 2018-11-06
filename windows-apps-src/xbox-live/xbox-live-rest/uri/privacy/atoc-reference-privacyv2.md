@@ -10,15 +10,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 953fd4b76224eed0950d7f8efc6322272a7c8b38
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5978311"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6046413"
 ---
 # <a name="privacy-uris"></a>개인 정보 URI
  
-이 섹션에서는 *개인 정보 보호*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *개인 정보 보호*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 만 Windows 8에서 실행 되는 게임을 Xbox 360, 또는 Windows Phone 장치 수이 서비스를 사용 합니다.
  

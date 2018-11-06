@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e4cdec869727cb6182d86616782c640020a0b7ac
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5974093"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6047207"
 ---
 # <a name="titlerecord-json"></a>TitleRecord(JSON)
-이름 및 마지막으로 수정한 타임 스탬프를 포함 하 여 제목에 대 한 정보. 
+이름 및 마지막으로 수정한 타임 스탬프를 포함 하 여 제목에 대 한 정보를 제공 합니다. 
 <a id="ID4EN"></a>
 
  
@@ -25,15 +25,15 @@ ms.locfileid: "5974093"
  
 TitleRecord는 DeviceRecord 또는 LastSeenRecord, 있어야 하지만 둘 다 포함 되어 있지 않을 수 있습니다.
  
-TitleRecord 개체에는 다음과 같이 지정 합니다.
+TitleRecord 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | id| 32 비트 부호 없는 정수| 레코드의 TitleId 합니다.| 
-| name| 문자열| 지역화 된 이름 제목입니다.| 
-| activity| [ActivityRecord](json-activityrecord.md)| 제목에서 사용자의 활동입니다. 깊이 "all"는 경우에 반환 합니다.| 
-| lastModified| DateTime| UTC 타임 스탬프 레코드를 마지막으로 업데이트 하는 경우입니다.| 
-| 배치| string| 사용자 인터페이스 내에서 앱의 위치입니다. 가능성 "fill", "전체", ", 사이드 상태가" 또는 "background" 포함 됩니다. 기본값은 앱을 배치할 수 없는 장치에 대 한 "전체".| 
+| name| 문자열| 제목의 지역화 된 이름입니다.| 
+| activity| [ActivityRecord](json-activityrecord.md)| 제목에 있는 사용자의 활동입니다. 깊이 "all" 인 경우에 반환 합니다.| 
+| lastModified| DateTime| UTC 타임 스탬프 레코드에 마지막으로 업데이트할 때입니다.| 
+| 배치| string| 사용자 인터페이스 내에서 앱의 위치입니다. 예를 들어 "fill", "전체", "스냅" 또는 "background"입니다. 기본값은 앱을 배치할 수 없는 장치에 대 한 "전체".| 
 | 상태| string| 상태 제목입니다. "활성" 또는 "비활성" 될 수 있습니다 (기본값). 제목 활동 및 비활성 자체 기준을 기반으로 상태를 설정 합니다.| 
   
 <a id="ID4E6C"></a>

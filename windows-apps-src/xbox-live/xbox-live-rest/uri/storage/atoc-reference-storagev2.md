@@ -10,15 +10,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e17bb64fd31c8a3cf86b57453e709e15b0cf7e6f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5985019"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6046462"
 ---
 # <a name="title-storage-uris"></a>타이틀 저장소 URI
  
-이 섹션에서는 *타이틀 저장소*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *타이틀 저장소*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 모든 플랫폼에서 실행 되는 게임이이 서비스를 사용할 수 있습니다.
  
@@ -39,11 +39,11 @@ ms.locfileid: "5985019"
 
 [/global/scids/{scid}/data/{pathAndFileName},{type}](uri-globalscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;파일을 다운로드합니다.
+&nbsp;&nbsp;파일을 다운로드 합니다.
 
 [/json/users/batch/scids/{scid}/data/{pathAndFileName},json](uri-jsonusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;여러 사용자가 동일한 파일 이름으로에서 여러 파일을 다운로드합니다.
 
 [/json/users/xuid({xuid})/scids/{scid}](uri-jsonusersxuidscidsscid.md)
 
@@ -67,11 +67,11 @@ ms.locfileid: "5985019"
 
 [/sessions/{sessionId}/scids/{scid}/data/{pathAndFileName},{type}](uri-sessionssessionidscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;파일을 다운로드합니다.
+&nbsp;&nbsp;파일을 다운로드 합니다.
 
 [/trustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}](uri-trustedplatformusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;여러 사용자가 동일한 파일 이름으로에서 여러 파일을 다운로드합니다.
 
 [/trustedplatform/users/xuid({xuid})/scids/{scid}](uri-trustedplatformusersxuidscidsscid.md)
 
@@ -87,7 +87,7 @@ ms.locfileid: "5985019"
 
 [/untrustedplatform/users/batch/scids/{scid}/data/{pathAndFileName},{type}](uri-untrustedplatformusersbatchscidssciddatapathandfilenametype.md)
 
-&nbsp;&nbsp;동일한 파일 이름으로 다 수의 사용자에서 여러 파일을 다운로드합니다.
+&nbsp;&nbsp;여러 사용자가 동일한 파일 이름으로에서 여러 파일을 다운로드합니다.
 
 [/untrustedplatform/users/xuid({xuid})/scids/{scid}](uri-untrustedplatformusersxuidscidsscid.md)
 

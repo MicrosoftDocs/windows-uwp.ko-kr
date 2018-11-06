@@ -10,20 +10,20 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 173c7dd42e0e5fda0d18e270c32a594171ebd7b6
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5976283"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6032019"
 ---
 # <a name="progression-json"></a>Progression(JSON)
-도전 과제를 잠금 해제 방향으로 사용자의 진행 합니다. 
+도전 과제를 잠금 해제 하는까지 사용자의 작업 진행 합니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="progression"></a>진행
  
-진행은 개체에는 다음과 같이 지정 합니다.
+진행은 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

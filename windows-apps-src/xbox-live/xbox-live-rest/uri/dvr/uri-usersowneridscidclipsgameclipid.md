@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a1dc20b484b4125327f7357c79f3a64d6cf5001
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5974354"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6023844"
 ---
 # <a name="usersowneridscidsscidclipsgameclipid"></a>/users/{ownerId}/scids/{scid}/clips/{gameClipId}
 찾으면 모든 Id에 알려진 경우 시스템에서 단일 게임 클립에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -28,7 +28,7 @@ ms.locfileid: "5974354"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| ownerId| string| 해당 리소스에 액세스 하 고 사용자의 사용자 id입니다. 지원 되는 형식: "me" 또는 "xuid(123456789)". 최대 길이: 16입니다.| 
+| ownerId| string| 해당 리소스를 액세스 하는 사용자의 사용자 id입니다. 지원 되는 형식: "me" 또는 "xuid(123456789)"입니다. 최대 길이: 16입니다.| 
 | 서비스 안내| string| 액세스 되는 리소스의 서비스 구성 ID입니다. 인증된 된 사용자의 서비스 안내 일치 해야 합니다.| 
 | gameClipId| string| GameClip ID 액세스 되는 리소스입니다.| 
   

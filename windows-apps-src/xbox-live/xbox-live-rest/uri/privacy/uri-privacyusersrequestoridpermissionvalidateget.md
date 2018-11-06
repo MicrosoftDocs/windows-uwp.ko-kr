@@ -10,14 +10,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0ec0b8b4de64a5580ffdd83407602ee410da9c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5976872"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6037640"
 ---
 # <a name="get-usersrequestoridpermissionvalidate"></a>GET (/users/{requestorId}/permission/validate)
-대상 사용자를 사용 하 여 지정 된 작업을 수행 하려면 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.
+대상 사용자를 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.
 
   * [URI 매개 변수](#ID4EQ)
   * [쿼리 문자열 매개 변수](#ID4E2)
@@ -35,7 +35,7 @@ ms.locfileid: "5976872"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| requestorId| string| 필수. 작업을 수행 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code> 및 <code>me</code>. 사용자 로그인 해야 합니다. 예제 값: <code>xuid(0987654321)</code>.|
+| requestorId| string| 필수. 작업을 수행 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code> 및 <code>me</code>. 로그인 한 사용자 여야 합니다. 예제 값: <code>xuid(0987654321)</code>.|
 
 <a id="ID4E2"></a>
 
@@ -44,7 +44,7 @@ ms.locfileid: "5976872"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- | --- |
-| 설정| 문자열 열거형| 검사할 PermissionId 값입니다. 예제 값: "CommunicateUsingText".|
+| 설정| 문자열 열거형| 검사할 PermissionId 값입니다. 예제 값: "CommunicateUsingText"입니다.|
 | target| string| 수행할 작업은 대상 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 예제 값: <code>xuid(0987654321)</code>|
 
 <a id="ID4EDC"></a>
@@ -52,9 +52,9 @@ ms.locfileid: "5976872"
 
 ## <a name="authorization"></a>권한 부여
 
-사용 권한 부여 클레임 | 클레임| 유형| 필수 여부| 예제 값|
+권한 부여 클레임 사용 | 클레임| 유형| 필수 여부| 예제 값|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|
+| Xuid| 64 비트 부호 있는 정수| 예| 1234567890|
 
 <a id="ID4EID"></a>
 
@@ -64,14 +64,14 @@ ms.locfileid: "5976872"
 | 헤더| 유형| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: <code>XBL3.0 x=&lt;userhash>;&lt;token></code>|
-| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트된 됩니다. 예제 값: 1입니다.|
+| X RequestedServiceVersion| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다. 예제 값: 1입니다.|
 
 <a id="ID4ETE"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
 
 <a id="ID4E5E"></a>
 

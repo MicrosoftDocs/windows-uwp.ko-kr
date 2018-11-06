@@ -10,27 +10,27 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d4889ced5f8942c080b3336bda8c0d8d9b25af2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996790"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6042149"
 ---
 # <a name="lastseenrecord-json"></a>LastSeenRecord(JSON)
-시스템 사용자, 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 마지막 본 되는 시기에 대 한 정보. 
+마지막으로 본 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 사용자를 때 시스템에 대 한 정보입니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="lastseenrecord"></a>LastSeenRecord
  
-LastSeenRecord 개체에는 다음과 같이 지정 합니다.
+LastSeenRecord 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| deviceType| string| 사용자가 마지막 표시 한 디바이스의 유형.| 
+| deviceType| string| 사용자가 마지막 현재 디바이스의 유형.| 
 | titleId| 32 비트 부호 없는 정수| 식별자는 사용자가 마지막 현재 제목입니다.| 
 | titleName| string| 이름에는 사용자가 마지막 현재 제목입니다.| 
-| 타임 스탬프| DateTime| 사용자의 마지막으로 표시 된 시기를 나타내는 UTC 타임 스탬프입니다.| 
+| 타임 스탬프| DateTime| 사용자의 마지막 제공 된 시기를 나타내는 UTC 타임 스탬프입니다.| 
   
 <a id="ID4EHC"></a>
 

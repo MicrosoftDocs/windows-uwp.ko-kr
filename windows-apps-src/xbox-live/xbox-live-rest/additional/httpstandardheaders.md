@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b1d86a870e32457b903053c7a8c3b1d722c9c559
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5988811"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6027466"
 ---
 # <a name="standard-http-request-and-response-headers"></a>표준 HTTP 요청 및 응답 헤더
  
@@ -27,11 +27,11 @@ ms.locfileid: "5988811"
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | 
-| x xbl-계약 버전| 1| API 계약 버전입니다. 모든 Xbox Live 서비스 요청에 필요합니다.| 
+| xbl 계약 버전 x| 1| API 계약 버전입니다. 모든 Xbox Live 서비스 요청에 필요합니다.| 
 | 권한 부여| STSTokenString| STS 인증 토큰입니다. 이 헤더에 대 한 값은 <b>GetTokenAndSignatureResult.Token</b> 속성에서 검색 됩니다. | 
-| Content-Type| 응용 프로그램/xml, 응용 프로그램/j, multipart/양식-데이터 또는 응용 프로그램/x-으로-양식-urlencoded| 요청으로 전송 되는 콘텐츠 유형을 지정 합니다.| 
-| Content-Length| 정수 값| POST 요청에서 전송 되는 데이터의 길이 지정 합니다.| 
-| Accept Language | 문자열| 반환 되는 모든 문자열을 지역화 하는 방법을 지정 합니다. 유효한 언어/로캘 조합 목록은 <a href="http://msdn.microsoft.com/en-us/library/bb975829.aspx">Xbox 360 프로그래밍 고급</a> 를 참조 하세요.| 
+| Content-Type| 응용 프로그램/xml, 응용 프로그램/j, multipart/양식 데이터 또는 응용 프로그램/x-으로-양식-urlencoded| 요청으로 전송 되는 콘텐츠 유형을 지정 합니다.| 
+| Content-Length| 정수 값| POST 요청에 전송 되는 데이터의 길이 지정 합니다.| 
+| Accept Language | 문자열| 반환 하는 문자열을 지역화 하는 방법을 지정 합니다. 유효한 언어/로캘 조합 목록은 <a href="http://msdn.microsoft.com/en-us/library/bb975829.aspx">고급 Xbox 360 프로그래밍</a> 을 참조 하세요.| 
   
 <a id="ID4E6C"></a>
 

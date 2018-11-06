@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0dc5fed7a9bbf18f04683875ba6a847601459f61
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5986359"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048213"
 ---
 # <a name="serviceconfigsscidsessiontemplatessessiontemplatenamesessionssessionnamemembersme"></a>/serviceconfigs/{scid}/sessiontemplates/{sessionTemplateName}/sessions/{sessionName}/members/me
 세션 구성원을 제거 하려면 삭제 작업을 지원 합니다.
@@ -28,7 +28,7 @@ sessiondirectory.xboxlive.com
  
 ## <a name="remarks"></a>설명
 
-모든 세션 멤버 리소스 작업 Xbox 사용자 ID (XUID) 사용자 클레임과 권한 부여 해야 합니다.
+모든 세션 멤버 리소스 작업 Xbox 사용자 ID (XUID) 사용자 클레임과 권한 부여 필요 합니다.
 
 <a id="ID4EAB"></a>
 
@@ -37,8 +37,8 @@ sessiondirectory.xboxlive.com
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1 세션 식별자입니다.|
-| sessionTemplateName| string| 현재 세션 템플릿 인스턴스의의 이름입니다. 2 부 세션 식별자입니다.|
+| 서비스 안내| GUID| 서비스 구성 id (서비스 안내)입니다. 파트 1의 세션 식별자입니다.|
+| sessionTemplateName| string| 현재 인스턴스의 세션 서식 파일의 이름입니다. 파트 2 세션 식별자입니다.|
 | 세션| GUID| 세션의 고유 ID입니다. 3 부 세션 식별자입니다.|
 
 <a id="ID4EOC"></a>
