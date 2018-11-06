@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 82b44cfab560cc7954ace22d703b0fba87883f91
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5973906"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6046528"
 ---
 # <a name="titlestitleidvariants"></a>/titles/{titleId}/variants
 URI는 제목에 대 한 사용 가능한 변형 가져오려면 클라이언트에 의해 호출 됩니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -30,7 +30,7 @@ URI는 제목에 대 한 사용 가능한 변형 가져오려면 클라이언트
  
 | 매개 변수| 설명| 
 | --- | --- | 
-| titleid| ID 요청을 실행 해야 하는 제목입니다.| 
+| titleid| 요청에서 작동 해야 하는 타이틀의 ID입니다.| 
   
 <a id="ID4EIB"></a>
 
@@ -46,5 +46,5 @@ gameserverds.xboxlive.com
   
 [POST](uri-titlestitleidvariants-post.md)
  
-&nbsp;&nbsp;지정 된 제목 id입니다.에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출 URI
+&nbsp;&nbsp;URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출
    

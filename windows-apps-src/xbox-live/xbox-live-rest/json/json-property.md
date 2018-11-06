@@ -10,25 +10,25 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d37054d03f6ebe8299db78673dc631c9b4b4bc16
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5972779"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049108"
 ---
 # <a name="property-json"></a>Property(JSON)
-매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 포함 됩니다.
+매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 들어 있습니다.
 <a id="ID4EN"></a>
 
 
 ## <a name="property"></a>속성
 
-속성 개체에는 다음과 같이 지정 합니다.
+속성 개체에는 다음 사양을 있습니다.
 
 | 멤버| 유형| 설명|
 | --- | --- | --- |
 | id| string| 이 속성에 대 한 id입니다.|
-| type| 32 비트의 부호 있는 정수 | 속성의 유형입니다. 지원 되는 값은: <ul><li>0 = 정수</li><li>1 = string</li></ul>| 
+| type| 32 비트 부호 있는 정수 | 속성의 형식입니다. 지원 되는 값은. <ul><li>0 = 정수</li><li>1 = string</li></ul>| 
 | value| string| 이 속성의 값입니다.|
 
 <a id="ID4EGC"></a>

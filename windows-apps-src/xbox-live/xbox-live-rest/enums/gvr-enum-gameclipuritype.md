@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 33d757c2d5fc985e4944f11aaaaccf53fabb0401
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996368"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049156"
 ---
 # <a name="gameclipuritype-enumeration"></a>GameClipUriType 열거형
 GameClipUriType 열거형에 자세히 설명 합니다. 
@@ -26,7 +26,7 @@ GameClipUriType 열거형에 자세히 설명 합니다.
 | <b>열거자</b>| <b>설명</b>| 
 | --- | --- | 
 | 없음| 게임 클립 URI 형식 알 수 없는 경우 되었거나 설정 되지 않습니다.| 
-| 원문 언어| 게임 클립 URI는 처리 되지 않은 형태로 원래 게임 클립의 위치입니다.| 
+| 원문 언어| 게임 클립 URI 처리 되지 않은 형태로 원래 게임 클립의 위치를입니다.| 
 | 다운로드| 게임 클립 URI는 다운로드 가능한 클립의 위치입니다.| 
 | SmoothStreaming| 게임 클립 URI는 IIS 부드러운 스트리밍 URL (매니페스트 포인터).| 
 | Ahls| 게임 클립 URL Apple Http 라이브 스트리밍 URL입니다.| 

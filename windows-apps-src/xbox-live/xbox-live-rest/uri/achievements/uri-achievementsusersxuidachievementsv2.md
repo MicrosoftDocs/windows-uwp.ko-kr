@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 094476d4e846fb7e4194f67d3de6bd1d9c7316df
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5991796"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048207"
 ---
 # <a name="usersxuidxuidachievements"></a>/users/xuid({xuid})/achievements
  
@@ -38,7 +38,7 @@ ms.locfileid: "5991796"
 
 [GET](uri-achievementsusersxuidachievementsgetv2.md)
 
-&nbsp;&nbsp;도전 과제 제목, 사용자가 잠금 해제 된 또는 진행 중에서 사용자가 해당 정의의 목록을 가져옵니다.
+&nbsp;&nbsp;도전 과제 제목, 사용자가 잠금 해제 된 또는 진행 중에서 사용자가 이러한에 정의 된 목록을 가져옵니다.
  
 <a id="ID4EKC"></a>
 

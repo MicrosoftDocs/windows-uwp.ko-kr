@@ -10,20 +10,20 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 79ac86b1cd99b8d1a6074b6aaadc8b6a62eec6db
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5994992"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6047250"
 ---
 # <a name="permissioncheckresponse-json"></a>PermissionCheckResponse(JSON)
-단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 검사의 결과입니다. 
+단일 대상 사용자에 대해 하나의 권한 설정에 대 한 명의 사용자가 확인의 결과입니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="permissioncheckresponse"></a>PermissionCheckResponse
  
-PermissionCheckResponse 개체에는 다음과 같이 지정 합니다.
+PermissionCheckResponse 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 

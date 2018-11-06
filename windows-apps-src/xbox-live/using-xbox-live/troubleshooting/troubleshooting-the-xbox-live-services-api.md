@@ -9,17 +9,17 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결, 오류, 로그
 ms.localizationpriority: medium
 ms.openlocfilehash: fad6a36c3678a6b3c48dcbd78d9c19ed843a118f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995501"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050434"
 ---
 # <a name="troubleshooting-the-xbox-live-apis"></a>Xbox Live Api 문제 해결
 
 ## <a name="code"></a>Code
 
-Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진단 하기가 어렵습니다. 추가 오류 정보-모든 RESTful 호출 로깅 같은-서버를 사용할 수 있습니다. 이 데이터를 수신 하도록 응답 거 연결 하 고 디버그 추적을 활성화 합니다. 응답 로깅을 사용 하면 Fiddler 추적 하는 유용한으로 이기도 HTTP 트래픽 및 웹 서비스 응답 코드를 볼 수 있습니다.
+Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진단 하기가 어렵습니다. 추가 오류 정보-모든 RESTful 호출의 로깅 같은-서버를 사용할 수 있습니다. 이 데이터를 수신 하도록 응답으로 거 연결 하 고 디버그 추적을 활성화 합니다. 응답 로깅을 사용 하면 유용한 Fiddler 추적 이기도 HTTP 트래픽 및 웹 서비스 응답 코드를 볼 수 있습니다.
 
 ### <a name="c"></a>C++
 
@@ -33,7 +33,7 @@ Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진�
                 );
 ```
 
-디버그 출력 고유한 로그 파일을 리디렉션할 수도 같이:
+디버그 출력 고유한 로그 파일을 리디렉션할 수도 되도록 합니다.
 
 ```cpp
 

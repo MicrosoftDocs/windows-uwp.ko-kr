@@ -1,5 +1,5 @@
 ---
-title: 순서도-친구와 재생
+title: 친구와 플레이-순서도
 author: KevinAsgari
 description: Xbox Live 멀티 플레이어 관리자 순서도-친구와 멀티 플레이/협동 게임을 실행 합니다.
 ms.assetid: ead5b172-6410-4aae-97fc-3c295745d27e
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 866b4da39314e120906a8e2de841432d09bfe2ef
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5988020"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049433"
 ---
 # <a name="flowchart---play-a-multiplayerco-op-game-with-friends"></a>순서도-친구와 멀티 플레이/협동 게임 플레이
 

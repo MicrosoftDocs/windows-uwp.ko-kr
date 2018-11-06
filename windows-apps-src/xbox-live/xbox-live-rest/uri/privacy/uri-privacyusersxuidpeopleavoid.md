@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f4e7523790f527cc8c5816a01dd10ae92112af8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992326"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050646"
 ---
 # <a name="usersowneridpeopleavoid"></a>/users/{ownerId}/people/avoid
 사용자에 대 한 문제 방지 목록에 액세스
@@ -28,7 +28,7 @@ ms.locfileid: "5992326"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- |
-| ownerId| string| 필수. 해당 리소스에 액세스 하 고 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증된 된 사용자를 이어야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
+| ownerId| string| 필수. 해당 리소스를 액세스 하는 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 인증 된 사용자 여야 합니다. 예제 값: <code>xuid(2603643534573581)</code>. 최대 크기: 없음. |
 
 <a id="ID4ERB"></a>
 

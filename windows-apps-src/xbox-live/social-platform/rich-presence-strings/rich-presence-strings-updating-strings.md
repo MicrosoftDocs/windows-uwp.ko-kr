@@ -6,30 +6,30 @@ ms.assetid: eb2bb82e-8730-4d74-9b33-95d133360e44
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 다양 한 상태, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 상태, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dd235edd7f47f0a2d9b42be28bd974042de5739
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5979666"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050357"
 ---
 # <a name="rich-presence-updating-strings"></a>다양 한 상태 문자열 업데이트
 
-다양 한 상태 문자열 타이틀을 업데이트 하려면 JSON 개체에 적절 한 매개 변수를 사용 하 여 작성 제목 URI를 호출할 수 있습니다. 이 restful 호출은 Xbox 서비스 Api도 래핑됩니다. **Microsoft.Xbox.Services.Presence Namespace** 관련된 API에 대 한 정보를 참조 하세요.
+타이틀에서 다양 한 상태 문자열을 업데이트 하려면 JSON 개체에 적절 한 매개 변수를 사용 하 여 쓰기 제목 URI를 호출할 수 있습니다. 이 restful 호출은 Xbox 서비스 Api도 래핑됩니다. **Microsoft.Xbox.Services.Presence Namespace** 관련된 API에 대 한 정보를 참조 하세요.
 
 URI는 다음과 같습니다.
 
           POST /users/xuid({xuid})/devices/current/titles/current
 
-다음은 다양 한 상태 문자열을 설정 하기 위한 필드만입니다. 여기에 나열 되지 제목에 대 한 쓰기 현재 상태에 관련 된 선택적 필드가 다른입니다.
+다음은 다양 한 상태 문자열을 설정 하기 위한 필드만입니다. 여기에 나열 되지 제목에 대 한 쓰기 현재 상태와 관련 된 선택적 필드가 다른입니다.
 
 ## <a name="titlerequest-object"></a>TitleRequest 개체
 
 속성 | 형식 | 필수 | 설명
 ---|---|---|---
-작업|ActivityRequest|N|제목에서 정보 (다양 한 상태 및 미디어 정보를 사용 가능한 경우)를 설명 하는 레코드
+작업|ActivityRequest|N|제목에서 정보 (다양 한 상태 및 미디어 정보를 사용할 수 있는 경우)를 설명 하는 레코드
 
 ## <a name="activityrequest-object"></a>ActivityRequest 개체
 
@@ -42,14 +42,14 @@ richPresence|RichPresenceRequest|N|사용 해야 하는 다양 한 상태 문자
 속성 | 형식 | 필수 | 설명
 ---|---|---|---
 Id|문자열|예|FriendlyName 사용 해야 하는 다양 한 상태 문자열
-서비스 안내|문자열|예|다양 한 상태 문자열 정의 되어 있는 알려주는 서비스 안내 합니다.
+서비스 안내|문자열|예|다양 한 상태 문자열 정의 된 알려주는 서비스 안내 합니다.
 
 예를 들어 있는 xuid 12345 사용자에 대 한 다양 한 상태를 업데이트 하고자 내 통화 같이 모습:
 
           POST /users/xuid(12345)/devices/current/titles/current
 
 
-다음 JSON 본문:
+다음과 같은 JSON 본문:
 
 ```json
           {
@@ -64,21 +64,21 @@ Id|문자열|예|FriendlyName 사용 해야 하는 다양 한 상태 문자열
           }
 ```
 
-래퍼 API를 사용 하 여, 이것이 **PresenceService.SetPresenceAsync 메서드** 호출
+래퍼 API를 사용 하 여 이것이 **PresenceService.SetPresenceAsync 메서드** 를 호출
 
-관리 경우 데이터 플랫폼 최신 때마다 다양 한 상태 문자열을 다시 설정 필요가 다음 빈 변경에 맞게 데이터. 위 예제에서 현재 지도 사용 하 여 원하는 알고 있습니다. 현재 상태에서는 사용자가 현재 값에 맞게 문자열 하려고 할 때 데이터 플랫폼의 데이터를 찾습니다. 따라서 플레이어를 지도에서 전환 하는 경우에 맵을 필요가 데이터 플랫폼에 적절 한 이벤트를 받을 만큼 게임에 다양 한 상태 문자열을 다시 설정 합니다. 데이터 플랫폼을 통해 해당 방법을 찾아야 데이터에 대 한 몇 초 걸릴을 염두에 두어야 합니다.
+관리 경우 데이터 플랫폼 최신 때마다 다양 한 상태 문자열을 다시 설정 하지 않아도 됩니다. 그런 다음 빈 변경에 맞게 데이터. 위 예제에서 현재 지도 사용 하 여 원하는 알아야 합니다. 현재 상태에서는 사용자가 현재 값에 맞게 문자열을 읽을 때 데이터 플랫폼의 데이터를 찾습니다. 따라서 플레이어에서 지도를 전환 하는 경우에 맵을 필요가 데이터 플랫폼에 적절 한 이벤트를 보내는으로 게임에 다양 한 상태 문자열을 다시 설정 합니다. 데이터 플랫폼을 통해 해당 방법을 찾아야 데이터에 대 한 몇 초 걸릴을 염두에 두어야 합니다.
 
-그런 다음 사용자 12345의 다양 한 상태를 읽고 하려고 사용자 서비스는 로캘에 관계를 요청 하는 살펴보고 반환 하기 전에 문자열을 적절 하 게 서식을 지정 합니다.
+그런 다음 사용자 사용자 12345의 다양 한 상태를 읽고 하려고 하는 경우 서비스는 로캘에 관계를 요청 하는 살펴보고 반환 되기 전에 적절 하 게 문자열 형식을 지정 합니다.
 
 이 경우 사용자가 EN-US 문자열을 가정해 보겠습니다. 다음과 같이 작동 풍부한 존재 읽기 (이 호출에 대 한 자세한 내용은 참조 **가져오기 (/users/xuid({xuid}))**
 
           GET /users/xuid(12345)?level=all
 
-이 API 래퍼는 **PresenceService.GetPresenceAsync 방법** 입니다.
+이 대 한 래퍼입니다 API는 **PresenceService.GetPresenceAsync 방법** 입니다.
 
 일어나는 해당 xuid 12345는 사용자의 PresenceRecord 해줘야는 다음과 같습니다. 및 세부 정보 수준을 "all" 되도록 요청 하 고 있습니다. "모든"가 지정 하는 경우 다양 한 상태 하지 반환 됩니다.
 
-및 다음 JSON 응답에 반환 합니다.
+하 고 다음 JSON 응답에 반환 합니다.
 
 ```json
           {

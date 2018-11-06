@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 106fe8e79752125a8c30670e226aebd689c3d240
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5970447"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049159"
 ---
 # <a name="additional-reference"></a>추가 참조
 
@@ -27,11 +27,11 @@ ms.locfileid: "5970447"
 
 [권한 부여 유형](authorizationtypes.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 인증 형식에 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 권한 부여 형식을 설명 합니다.
 
 [데이터 형식 개요](datatypeoverview.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 식별 관련 데이터 형식에 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 식별 관련 데이터 형식을 설명 합니다.
 
 [보조 EDS API](eds-apis.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "5970447"
 
 [EDS 공통 헤더](edscommonheaders.md)
 
-&nbsp;&nbsp;많은 EDS Api에 공통 요청 및 응답 헤더를 설명합니다.
+&nbsp;&nbsp;일반적으로 많은 EDS Api 요청 및 응답 헤더를 설명합니다.
 
 [EDS 매개 변수](edsparameters.md)
 
@@ -49,7 +49,7 @@ ms.locfileid: "5970447"
 
 [EDS 쿼리 구체화](edsqueryrefiners.md)
 
-&nbsp;&nbsp;많은 EDS Api에 공통 쿼리 구체화를 설명합니다.
+&nbsp;&nbsp;많은 EDS Api에 공통 쿼리 구체화에 설명 합니다.
 
 [비디오에 대한 EDS 역방향 조회](edsreverselookup.md)
 
@@ -69,7 +69,7 @@ ms.locfileid: "5970447"
 
 [표준 HTTP 상태 코드](httpstatuscodes.md)
 
-&nbsp;&nbsp;서비스에서 반환 하는 표준 HTTP 상태 코드를 설명 합니다.
+&nbsp;&nbsp;서비스에 의해 반환 되는 표준 HTTP 상태 코드에 설명 합니다.
 
 <a id="ID4ECC"></a>
 

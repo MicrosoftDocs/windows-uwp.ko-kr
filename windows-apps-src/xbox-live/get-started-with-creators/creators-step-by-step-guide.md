@@ -9,25 +9,25 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: 5590476c6188a9fb3402da53ecb051abd09433aa
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5983371"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6040704"
 ---
 # <a name="step-by-step-guide-to-integrate-xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램을 통합하는 방법에 대한 단계별 가이드
 
-이 섹션에서는 Xbox live 타이틀을 설정 하 고 실행 얻을 수는 데 도움이 됩니다.
+이 섹션은 Xbox live 타이틀 보드 설정 하 고 실행 하는 데 도움이 됩니다.
 
 ## <a name="1-ensure-you-have-a-title-created-on-dev-center"></a>1. 개발자 센터에서 만든 타이틀이 있는지 확인
 모든 Xbox Live 타이틀은 로그인하고 Xbox Live 서비스 전화를 걸기 전에 개발자 센터에서 정의되어야 합니다.  [새 크리에이터스 타이틀 만들기](create-and-test-a-new-creators-title.md)에서 이 작업을 수행하는 방법을 설명합니다.
 
 ## <a name="2-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>2. IDE 또는 게임 엔진 설정 적절 한 가이드를 따라
-플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 따라 수 있으며 진행 하면서 Xbox Live의 기본 사항을 알아봅니다.
+플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 수행 하 고 진행 하면서 Xbox Live의 기본 사항을 알아볼 수 있습니다.
 
 * [Visual Studio로 크리에이터스 타이틀 개발](develop-creators-title-with-visual-studio.md)은 Visual Studio 프로젝트를 개발자 센터의 Xbox Live 구성과 연결하는 방법을 설명합니다.
 
-* [Unity로 크리에이터 스 타이틀 개발](develop-creators-title-with-unity.md) 하면 새 Xbox Live 만들려면 Unity 제목을 사용 하는 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 표시 됩니다.
+* [Unity로 크리에이터 스 타이틀 개발](develop-creators-title-with-unity.md) 하면 새 Xbox Live를 만들려면 Unity 제목을 사용 하는 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 표시 됩니다.
 
 ## <a name="3-xbox-live-concepts"></a>3. Xbox Live 개념
 타이틀을 만들었으면 타이틀 개발 경험에 영향을 주는 Xbox Live 개념에 대해 알아 두어야 합니다.
@@ -45,4 +45,4 @@ ms.locfileid: "5983371"
 
 ## <a name="5-release-your-title"></a>5. 타이틀을 릴리스 합니다.
 
-Xbox Live 크리에이터 스 프로그램을 사용 하는 경우이 프로세스는 다른 UWP 해제 차이가 없습니다.  프로세스에 대 한 자세한 내용은 [Windows 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 볼 수 있습니다.
+Xbox Live 크리에이터 스 프로그램을 사용 하는 경우이 프로세스는 다른 UWP를 해제 하면 차이가 없습니다.  프로세스에 대 한 자세한 내용은 [Windows 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 볼 수 있습니다.

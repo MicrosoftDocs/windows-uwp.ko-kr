@@ -10,18 +10,18 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 29bbde83fd5480575ff4f9ff6620ab3bf5a15797
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5991194"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6041695"
 ---
 # <a name="serviceconfigsscidhoppershoppername"></a>/serviceconfigs/{scid}/hoppers/{hoppername}
 
 일치 티켓 만들기를 게시 작업을 지원 합니다.
 
 > [!IMPORTANT]
-> 이 URI에 계약 103 이상을 사용 하 여 사용 하며 X Xbl-계약 버전의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 URI에 계약 103 이상을 사용 하 여 사용 하며 Xbl 계약 버전 X의 헤더 요소: 103 또는 나중에 모든 요청.
 
 <a id="ID4ER"></a>
 

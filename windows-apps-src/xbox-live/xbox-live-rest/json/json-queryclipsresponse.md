@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: aea8a1914a9466b7e24fd0214059a0dac5a6c3a7
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990821"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050574"
 ---
 # <a name="queryclipsresponse-json"></a>QueryClipsResponse(JSON)
 목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다. 
@@ -23,12 +23,12 @@ ms.locfileid: "5990821"
  
 ## <a name="queryclipsresponse"></a>QueryClipsResponse
  
-QueryClipsResponse 개체에는 다음과 같이 지정 합니다.
+QueryClipsResponse 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | <b>gameClips</b>| GameClip의 배열| 요청 제한이 (<b>maxItems</b>) 쿼리를 충족 하는 게임 클립의 배열입니다.| 
-| <b>pagingInfo</b>| PagingInfo| 필요한 연속 작업 및 목록에는 후속 호출에 대 한 페이징 하는 요청 제한을 초과 (<b>maxItems</b>) 정보를 포함 합니다.| 
+| <b>pagingInfo</b>| PagingInfo| 필요한 연속 작업 및 목록에 대 한 후속 호출에 대 한 페이징 하는 요청 제한을 초과 (<b>maxItems</b>) 정보를 포함 합니다.| 
   
 <a id="ID4E2B"></a>
 
