@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 평점, 리뷰
 ms.localizationpriority: medium
 ms.openlocfilehash: c00e69ed7d5057db4f835f3d91320806067d86e1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981192"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050458"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>앱에 대한 평점 및 리뷰 요청
 
@@ -20,10 +20,10 @@ ms.locfileid: "5981192"
 * 앱의 컨텍스트에서 평점 및 리뷰 대화 상자를 직접 표시할 수 있습니다.
 * 프로그래밍 방식으로 Microsoft Store에서 앱의 평점 및 리뷰 페이지를 열 수 있습니다.
 
-평점 및 리뷰 데이터를 분석할 준비가 되 면 파트너 센터에서 데이터를 볼 또는 Microsoft Store 분석 API를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
+평점 및 리뷰 데이터를 분석할 준비가 되 면 파트너 센터에서 데이터를 볼 하거나 Microsoft Store 분석 API를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
 
 > [!IMPORTANT]
-> 앱 내 평점 함수를 추가할 때 모든 리뷰 별 평점 선택한 상관 없이 저장소의 등급 메커니즘에 사용자를 보내야 합니다. 사용자의 피드백 또는 의견을 수집 하는 경우 관련이 없는 앱 평점 또는 리뷰 스토어에서 직접 앱 개발자에 게 전송 되는 명확 해야 합니다. 개발자 준수 [Fraudulent 또는 악의적인 활동에](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities)관한 자세한 내용은 참조 하세요.
+> 앱 내 평점 함수를 추가할 때 모든 리뷰 별 평점 선택한 상관 없이 저장소의 등급 메커니즘에 사용자를 보내야 합니다. 사용자의 피드백 또는 의견을 수집 하는 경우에 관련이 없는 앱 평점 또는 리뷰를 스토어에서 직접 앱 개발자에 게 전송 되는 일반 이어야 합니다. 개발자 준수 [Fraudulent 또는 악의적인 활동에](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities)관한 자세한 내용은 참조 하세요.
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>앱에서 평점 및 리뷰 대화 상자 표시
 

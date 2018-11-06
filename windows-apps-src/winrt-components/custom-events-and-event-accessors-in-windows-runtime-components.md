@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5990219"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050442"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
 
@@ -33,7 +33,7 @@ Visual Basic 및 C# 컴파일러를 사용하면 이 프로세스를 간단히 �
 
 NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패턴을 보여 줍니다. 이 예제에서는 이벤트 인수 개체 NumberChangedEventArgs의 생성자가 변경된 숫자 값을 나타내는 단일 정수 매개 변수를 사용합니다.
 
-> **참고**Windows 런타임 구성 요소에서 선언 된 일반 이벤트에 대해 컴파일러를 사용할 동일한 패턴입니다.
+> **참고**이 Windows 런타임 구성 요소에서 선언 된 일반 이벤트에 대해 컴파일러를 사용할 동일한 패턴입니다.
 
  
 > [!div class="tabbedCodeSnippets"]
@@ -110,11 +110,11 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
 -   [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) 메서드는 이벤트 처리기 대리자에 대한 토큰을 생성하고, 대리자를 테이블에 저장하고, 호출 목록에 추가하고, 토큰을 반환합니다.
 -   [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) 메서드 오버로드는 테이블과 호출 목록에서 대리자를 제거합니다.
 
-    >**참고**AddEventHandler 및 removeeventhandler (eventregistrationtoken) 메서드는 스레드 보안을 테이블을 잠급니다.
+    >**참고**AddEventHandler 및 removeeventhandler (eventregistrationtoken) 메서드는 스레드 보안을 위해 테이블을 잠급니다.
 
 -   [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) 속성은 현재 이벤트를 처리하도록 등록된 모든 이벤트 처리기를 포함하는 대리자를 반환합니다. 이 대리자를 사용하여 이벤트를 발생시키거나 Delegate 클래스의 메서드를 사용하여 처리기를 개별적으로 호출합니다.
 
-    >**참고**이 문서의 앞부분에서 제공 하는 예제에 표시 된 패턴에 따라 호출 하기 전에 대리자를 임시 변수로 복사 하는 것이 좋습니다. 이렇게 하면 하나의 스레드가 마지막 처리기를 제거하여 다른 스레드가 대리자를 호출하려고 하기 전에 대리자가 null이 되는 경합 상태를 방지할 수 있습니다. 대리자는 변경할 수 없으므로 복사는 유효합니다.
+    >**참고**이 문서의 앞부분에서 제공 되는 예제에 표시 된 패턴에 따라 호출 하기 전에 대리자를 임시 변수로 복사 하는 것이 좋습니다. 이렇게 하면 하나의 스레드가 마지막 처리기를 제거하여 다른 스레드가 대리자를 호출하려고 하기 전에 대리자가 null이 되는 경합 상태를 방지할 수 있습니다. 대리자는 변경할 수 없으므로 복사는 유효합니다.
 
 직접 작성한 코드를 접근자에 적절히 배치합니다. 스레드 보안이 중요한 경우 코드에 대한 잠금을 직접 제공해야 합니다.
 

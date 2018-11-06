@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d4aaca880caf30b46cb1ed26d66700bb12d76404
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973658"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049977"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
 
@@ -61,13 +61,13 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 > [!NOTE]
 > Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))는 ControlTemplate에서 X:bind를 사용 하려면 이상. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-Windows 10, 버전 1809부터 **X:bind** 태그 확장을 사용할 수는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 **TemplateBinding** 을 사용 하는 곳입니다. 
+Windows 10, 버전 1809부터 **X:bind** 태그 확장을 사용할 수 **TemplateBinding** [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 사용 되는 곳입니다. 
 
-[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 속성 (옵션 아님) 필요한 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우에 있습니다.
+[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 속성이 필요 (옵션 아님)에 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우.
 
-**X: Bind** 지원 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)에서 원활 하 게으로 양방향 바인딩을으로 두 [함수 바인딩](../data-binding/function-bindings.md) 을 사용할 수 있습니다.
+**X:bind** 지원 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)에서 원활 하 게으로 양방향 바인딩을으로 두 [함수 바인딩](../data-binding/function-bindings.md) 을 사용할 수 있습니다.
 
-이 예제에서는 **TextBlock.Text** 속성 **Button.Content.ToString**로 평가 합니다. ControlTemplate에서 TargetType 데이터 소스 역할을 하 고 부모 TemplateBinding와 동일한 결과 수행 합니다.
+이 예제에서는 **TextBlock.Text** 속성 **Button.Content.ToString**으로 계산 됩니다. ControlTemplate에서 TargetType 데이터 소스 역할을 하 고 부모 TemplateBinding와 동일한 결과 수행 합니다.
 
 ```xaml
 <ControlTemplate TargetType="Button">

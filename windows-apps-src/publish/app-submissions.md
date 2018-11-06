@@ -9,23 +9,23 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5990021"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051424"
 ---
 # <a name="app-submissions"></a>앱 제출
 
 
 [이름을 예약하여 앱을 만들면](create-your-app-by-reserving-a-name.md) 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 **제출**을 만듭니다.
 
-앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 돌아올 하 고 되었고 필요할 때마다 작업을 업데이트 하면 제출에 저장 됩니다.
+앱이 완성되고 게시할 준비가 되면 제출을 시작하거나 한 줄 코드를 작성하기 전이라도 정보 입력을 시작할 수 있습니다. 다시 하 고 되었고 필요할 때마다 작업을 업데이트 하면 제출에 저장 됩니다.
 
 > [!NOTE]
 > Microsoft Store에 앱을 제출 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 활성 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100) 있어야 합니다.
 
-앱이 게시 된 후에 파트너 센터에서 또 다른 제출을 만들어서 업데이트 된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시 된 앱에 대 한 새 제출을 만들려면 해당 **개요** 페이지에 표시 된 최근 제출 옆에 있는 **업데이트** 를 클릭 합니다. 수도 있습니다 [스토어에서 앱 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) 이렇게 (및이 사용할 수 있게 나중에 다시 원할 경우) 하는 경우.
+앱이 게시 된 후에 파트너 센터에서 또 다른 제출을 만들어서 업데이트 된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 게시 된 앱에 대 한 새 제출을 만들려면 **개요** 페이지에 표시 된 최근 제출 옆에 있는 **업데이트** 를 클릭 합니다. 수도 있습니다 [스토어에서 앱을 제거](guidance-for-app-package-management.md#removing-an-app-from-the-store) 이렇게 (및 다음 사용할 수 있도록 나중에 다시 원할 경우) 하는 경우.
 
 > [!NOTE]
 > 설명서의이 섹션에는 파트너 센터에서 앱 제출을 만드는 방법을 설명 합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
@@ -102,7 +102,7 @@ ms.locfileid: "5990021"
 ] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Xbox 이미지**     | Xbox에 게시 하는 경우에 최적의 표시를 위해 필요 합니다.        | [Xbox 이미지
 ] (앱-스크린샷을-및-images.md #xbox 이미지) |
-| **추가 필드**  | 선택 사항                                    | [추가 필드](create-app-store-listings.md#supplemental-fields) 
+| **보조 필드**  | 선택 사항                                    | [보조 필드](create-app-store-listings.md#supplemental-fields) 
 | **검색어**              | 선택 사항                                    | [검색어](create-app-store-listings.md#search-terms)         |
 | **저작권 및 상표 정보** | 선택 사항                                 | [저작권 및 상표 정보](create-app-store-listings.md#copyright-and-trademark-info) |
 | **추가 사용 조건**  | 선택 사항                                    | [추가 사용 조건](create-app-store-listings.md#additional-license-terms) |

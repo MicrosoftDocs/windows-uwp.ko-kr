@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 96f22cb971f5c8266653a6b3c3f4bcc7dd61546d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5986994"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6050056"
 ---
 # <a name="xbox-live-page-dev-home"></a>Xbox Live 페이지 (개발자 홈)
    
@@ -22,7 +22,7 @@ ms.locfileid: "5986994"
 개발자 홈의 **Xbox Live** 페이지 멀티 플레이 정보를 캡처하고 Xbox Live 서비스의 현재 상태를 표시 합니다.   
  ![개발자 홈의 Xbox Live 페이지](images/devhome_live.png)   
   
-**Xbox Live** 페이지에는 다음 창이:   
+**Xbox Live** 페이지는 다음과 같은 창을 포함 되어 있습니다.   
  
    *  [XBTrace (advancedmp)](#ID4EPB)  
    *  [Xbox Live 상태](#ID4E3B)  

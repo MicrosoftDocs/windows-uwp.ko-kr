@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7327304e2b42ff5ff71be136220b58e99c6228d2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971370"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051474"
 ---
 # <a name="rasterizer-ordered-view-rov"></a>ROV(정렬된 래스터라이저 뷰)
 

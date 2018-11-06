@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 범주, 하위 범주, 장르, 범주, 장르
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c3ea799d030b64c5b4cc67f75cbdd664a8b83da
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996581"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049822"
 ---
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 
@@ -22,7 +22,7 @@ ms.locfileid: "5996581"
 
 앱을 가장 잘 설명하는 범주를 선택해야 합니다. 원할 경우 하위 범주를 선택합니다(사용 가능한 경우). 사용할 범주 또는 하위 범주가 확실하지 않거나 정확하게 일치하는 범주 또는 하위 범주를 찾을 수 없는 경우, 고객이 개발자의 앱과 같은 앱을 찾으려고 할 때 확인할 가능성이 큰 범주 또는 하위 범주를 선택합니다.
 
-**게임** 범주를 선택 하면 하나 이상의 하위 범주 ( *장르* 게임용 이라고 함)를 선택 해야 합니다. 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
+**게임** 범주를 선택 하면 하나 이상의 하위 범주 ( *장르* 게임에 대 한 호출)를 선택 해야 합니다. 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
 
 > [!IMPORTANT] 
 > **게임** 범주에 앱을 게시하는 경우, 새로 제출할 때 다른 범주를 선택할 수 없습니다. 계속 **게임** 범주로 게시해야 합니다(단, 새로 제출할 때 장르 선택 항목은 변경할 수 있음). 마찬가지로, 이전에 다른 범주에 게시한 앱을 업데이트할 때 **게임** 범주를 선택할 수 없습니다.
