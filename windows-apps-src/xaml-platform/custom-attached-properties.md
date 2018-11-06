@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: de2d319f536b2c9d25d53e0b1ec2886831c66e12
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5994866"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046256"
 ---
 # <a name="custom-attached-properties"></a>사용자 지정 연결된 속성
 
@@ -33,7 +33,7 @@ ms.locfileid: "5994866"
 정의 클래스가 아닌 클래스에 사용할 수 있는 속성 설정 메커니즘이 있어야 하는 이유가 있는 경우 연결된 속성을 만들 수 있습니다. 이러한 경우에 대한 가장 일반적인 시나리오는 레이아웃 및 서비스 지원입니다. 기존 레이아웃 속성에 대한 예로는 [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/hh759773) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772)이 있습니다. 레이아웃 시나리오에서는 레이아웃 제어 요소의 자식 요소로 존재하는 요소가 해당 부모 요소에 대한 레이아웃 요구 사항을 개별적으로 표시하고 각각 해당 부모가 연결된 속성으로 정의하는 속성 값을 설정할 수 있습니다. Windows 런타임 API의 서비스 지원 시나리오 예로는 [**ScrollViewer.IsZoomChainingEnabled**](https://msdn.microsoft.com/library/windows/apps/br209561) 같은 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)의 연결된 속성 집합이 있습니다.
 
 > [!WARNING]
-> Windows 런타임 XAML 구현의 기존 제한 점은 사용자 지정 연결 된 속성을 애니메이션할 수 없다는입니다.
+> Windows 런타임 XAML 구현의 기존 제한 점은 사용자 지정 연결 된 속성을 애니메이션할 수입니다.
 
 ## <a name="registering-a-custom-attached-property"></a>사용자 지정 연결된 속성 등록
 
@@ -44,7 +44,7 @@ ms.locfileid: "5994866"
 사용자 지정 연결된 속성 정의가 사용자 지정 종속성 속성과 가장 다른 부분은 접근자 또는 래퍼 정의 방식입니다. [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명 된 래퍼 기술을 사용 하는 대신도 제공 해야 정적 **가져오기 * PropertyName* 및 **설정 * * * PropertyName* 메서드도 접근자로 연결 된 속성에 대 한 합니다. 비XAML 시나리오에서는 다른 호출자도 접근자를 사용하여 값을 설정할 수 있으나 접근자는 주로 XAML 파서에서 사용합니다.
 
 > [!IMPORTANT]
-> 접근자를 올바르게 정의 하지 않는 경우 XAML 프로세서가 연결 된 속성에 액세스할 수 없는 및 사용 하려는 사람은 아 XAML 파서 오류가 발생 합니다. 디자인 및 코딩 도구도 참조된 어셈블리에서 사용자 지정 종속성 속성이 발견되는 경우 "\*Property" 규칙에 따라 식별자를 명명하는 경우가 많습니다.
+> 접근자를 올바르게 정의 하지 않는 경우 XAML 프로세서가 연결 된 속성에 액세스할 수 없습니다 및 사용 하려는 사람 아 XAML 파서 오류가 발생 합니다. 디자인 및 코딩 도구도 참조된 어셈블리에서 사용자 지정 종속성 속성이 발견되는 경우 "\*Property" 규칙에 따라 식별자를 명명하는 경우가 많습니다.
 
 ## <a name="accessors"></a>접근자
 
@@ -232,7 +232,7 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 ```
 
 > [!NOTE]
-> C + +로 XAML UI를 작성 하는 경우 해당 형식을 XAML 페이지에서는 언제 든 지 연결된 된 속성을 정의 하는 사용자 지정 형식에 대 한 헤더 포함 해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
+> C + +로 XAML UI를 작성 하는 경우 해당 형식을 XAML 페이지에서는 언제 든 지 연결 된 속성을 정의 하는 사용자 지정 형식에 대 한 헤더 포함 해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
 
 ## <a name="value-type-of-a-custom-attached-property"></a>사용자 지정 연결된 속성의 값 형식
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 삭제
 ms.localizationpriority: medium
 ms.openlocfilehash: 23e90a322f347375cfdb33eca9315a5ca538fd4c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995276"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040991"
 ---
 # <a name="delete-a-package-flight"></a>패키지 플라이트 삭제
 
@@ -48,7 +48,7 @@ Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | 필수. 삭제할 패키지 플라이트가 포함된 앱의 스토어 ID입니다. 앱에 대 한 스토어 ID는 파트너 센터에서 사용할 수 있습니다.  |
-| flightId | 문자열 | 필수. 삭제할 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 만든 플라이트에 대 한이 ID는도 파트너 센터에서 플라이트 페이지의 URL을 사용할 수 있습니다.  |
+| flightId | 문자열 | 필수. 삭제할 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 만든 플라이트 경우이 ID 파트너 센터에서 플라이트 페이지의 URL에 사용할 수 있는 이기도 합니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -77,7 +77,7 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청 매개 변수가 잘못되었습니다. |
 | 404  | 지정된 패키지 플라이트를 찾을 수 없습니다.  |
-| 409  | 지정 된 패키지 플라이트 찾았지만 현재 상태에서 삭제할 수 없거나 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
+| 409  | 지정 된 패키지 플라이트 찾았지만 현재 상태로 삭제할 수 없거나 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목

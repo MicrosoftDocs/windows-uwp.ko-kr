@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 응답 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 466455a5e8da9364206245f1e0ac10acfed07ee7
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5968647"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6044909"
 ---
 # <a name="get-response-info-for-reviews"></a>리뷰에 대한 응답 정보 가져오기
 
@@ -49,7 +49,7 @@ ms.locfileid: "5968647"
 
 | 매개 변수        | 유형   | 설명                                     |  필수  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | 문자열 | 응답할 수 있는지 확인하려는 리뷰가 포함된 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
+| applicationId | 문자열 | 응답할 수 있는지 확인하려는 리뷰가 포함된 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
 | reviewId | 문자열 | 응답하려는 리뷰의 ID(GUID)입니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다. <br/>이 매개 변수를 생략하면, 이 메서드에 대한 응답 본문에 지정된 앱의 리뷰에 응답할 수 있는 권한이 있는지 표시됩니다. |  아니요  |
 
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 14259fb6949eaa100d51fbdbda6f96bd07a4fa80
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992311"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042441"
 ---
 # <a name="opengl-es-20-to-direct3d-11-reference"></a>OpenGL ES 2.0에서 Direct3D 11로 포팅 시 참조 항목
 

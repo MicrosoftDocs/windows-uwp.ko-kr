@@ -10,17 +10,17 @@ keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 252b1309f1218a872ea49dcce7048b890a6139b4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974760"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041583"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Windows 10 패키지로 만든된 데스크톱 응용 프로그램 통합
 
 확장을 사용 하 여 미리 정의 된 방법으로 Windows 10 패키지로 만든된 데스크톱 응용 프로그램 통합.
 
-예를 들어, 확장을 사용 하 여 방화벽 예외를 만드는, 응용 프로그램 파일 형식에 대 한 기본 응용 프로그램을 확인 하거나 앱의 패키지 버전을 시작 타일을 가리킵니다. 확장을 사용하려면 앱의 패키지 매니페스트 파일에 일부 XML을 추가하기만 하면 됩니다. 코드가 필요하지 않습니다.
+예를 들어, 확장을 사용 하 여 방화벽 예외를 만들거나 응용 프로그램 파일 형식에 대 한 기본 응용 프로그램을 만들기 시작 타일 앱의 패키지 버전을 가리킵니다. 확장을 사용하려면 앱의 패키지 매니페스트 파일에 일부 XML을 추가하기만 하면 됩니다. 코드가 필요하지 않습니다.
 
 여기서는 이러한 확장과 이를 통해 수행할 수 있는 작업을 설명합니다.
 
@@ -94,7 +94,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a>데스크톱 앱 대신 파일 패키지 된 응용 프로그램 만들기
 
-사용자가 특정 유형의 데스크톱 버전의 앱을 여는 대신 파일에 대해 기본적으로 새 패키지 된 응용 프로그램 열리는지 확인을 만들 수 있습니다.
+사용자가 특정 유형의 데스크톱 버전의 앱을 여는 대신 파일에 대해 기본적으로 새 응용 프로그램 패키지를 열을 만들 수 있습니다.
 
 이를 위해 파일 연결을 상속하려는 각 애플리케이션의 [프로그래밍 ID (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx)를 지정합니다.
 
@@ -121,7 +121,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation`` 값입니다.
 |이름 |앱에 대한 고유 ID입니다. 이 ID는 파일 형식 연결과 관련된 해시된 [프로그래밍 ID (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx)를 생성하는 데 내부적으로 사용됩니다. 앱의 이후 버전에서 변경을 관리하는 데 이 ID를 사용할 수 있습니다. |
-|MigrationProgId |응용 프로그램, 구성 요소 및 파일 연결을 상속 하려는 데스크톱 응용 프로그램의 버전을 설명 하는 [프로그래밍 id (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) .|
+|MigrationProgId |응용 프로그램, 구성 요소 및 파일 연결을 상속 하려는 데스크톱 응용 프로그램의 버전을 설명 하는 [프로그래밍 id (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx)|
 
 #### <a name="example"></a>예
 
@@ -280,7 +280,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ### <a name="open-certain-types-of-files-directly-by-using-a-url"></a>URL을 사용하여 특정 형식의 파일을 직접 열기
 
-사용자가 특정 유형의 데스크톱 버전의 앱을 여는 대신 파일에 대해 기본적으로 새 패키지 된 응용 프로그램 열리는지 확인을 만들 수 있습니다.
+사용자가 특정 유형의 데스크톱 버전의 앱을 여는 대신 파일에 대해 기본적으로 새 응용 프로그램 패키지를 열을 만들 수 있습니다.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -305,7 +305,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation`` 값입니다.
 |이름 |앱에 대한 고유 ID입니다. |
-|UseUrl |URL 대상에서 직접 파일을 열 것인지 여부를 나타냅니다. 이 값을 설정 하지 않으면 응용 프로그램 로컬로 URL 원인 첫 번째 다운로드 파일 시스템을 사용 하 여 파일을 열려고 시도 합니다. |
+|UseUrl |URL 대상에서 직접 파일을 열 것인지 여부를 나타냅니다. 이 값을 설정 하지 않으면 응용 프로그램 로컬 URL 원인 첫 번째 다운로드 파일 시스템을 사용 하 여 파일을 열려고 시도 합니다. |
 |매개 변수 |선택적 매개 변수입니다. |
 |FileType |관련 파일 확장명입니다. |
 
@@ -342,7 +342,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ### <a name="create-firewall-exception-for-your-app"></a>앱에 대한 예외 방화벽 만들기
 
-응용 프로그램 포트를 통한 통신에 필요한 경우에 방화벽 예외 목록에 응용 프로그램을 추가할 수 있습니다.
+응용 프로그램 포트를 통한 통신에 필요한 경우 응용 프로그램의 방화벽 예외 목록에 추가할 수 있습니다.
 
 #### <a name="xml-namespace"></a>XML 네임스페이스
 
@@ -456,7 +456,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 사용자가 파일을 구성하고 친숙한 방식으로 상호 작용하는 데 도움이 됩니다.
 
-* [사용자가 선택 하 고 동시에 여러 파일을 열 때 응용 프로그램의 동작을 정의 합니다.](#define)
+* [사용자가 선택 하 고 동시에 여러 파일을 열 때 응용 프로그램의 동작 방식을 정의 합니다.](#define)
 * [파일 탐색기 내에서 미리 보기 이미지에 파일 내용을 보여 줍니다.](#show)
 * [파일 탐색기의 미리 보기 창에 파일 내용을 보여 줍니다.](#preview)
 * [사용자가 파일 탐색기에서 "종류(Kind)" 열을 사용하여 파일을 그룹화하도록 합니다.](#enable)
@@ -465,7 +465,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 <a id="define" />
 
-### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>사용자가 선택 하 고 동시에 여러 파일을 열 때 응용 프로그램의 동작을 정의 합니다.
+### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>사용자가 선택 하 고 동시에 여러 파일을 열 때 응용 프로그램의 동작 방식을 정의 합니다.
 
 사용자가 여러 파일을 동시에 열 때 응용 프로그램의 동작 방식을 지정 합니다.
 
@@ -502,7 +502,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 패키지 데스크톱 앱에는 일반 데스크톱 앱과 동일한 세 가지 옵션이 있습니다.
 
  * ``Player``: 응용 프로그램은 한 번 활성화 됩니다. 선택한 파일이 모두 인수 매개 변수로 응용 프로그램에 전달 됩니다.
- * ``Single``응용 프로그램: 처음 선택한 파일을 한 번 활성화 됩니다. 다른 파일은 무시됩니다.
+ * ``Single``응용 프로그램: 처음 선택한 파일에 대해 한 번 활성화 됩니다. 다른 파일은 무시됩니다.
  * ``Document``선택한 각 파일에 대 한 응용 프로그램의: 새로운 별도 인스턴스가 활성화 됩니다.
 
  다른 파일 형식 및 작업에 대해 다른 기본 설정을 설정할 수 있습니다. 예를 들어 *Document* 모드로 *문서*를, *Player* 모드로 *이미지*를 열고 싶을 수 있습니다.
@@ -847,7 +847,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 <a id="start" />
 
-## <a name="start-your-application-in-different-ways"></a>다른 방법으로 응용 프로그램 시작
+## <a name="start-your-application-in-different-ways"></a>다른 방법으로 응용 프로그램을 시작 합니다.
 
 * [프로토콜을 사용 하 여 응용 프로그램을 시작 합니다.](#protocol)
 * [별칭을 사용 하 여 응용 프로그램을 시작 합니다.](#alias)
@@ -859,7 +859,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ### <a name="start-your-application-by-using-a-protocol"></a>프로토콜을 사용 하 여 응용 프로그램을 시작 합니다.
 
-프로토콜 연결을 사용하면 다른 프로그램 및 시스템 구성 요소들을 패키지 앱에서 상호 운영할 수 있습니다. 패키지 된 응용 프로그램 프로토콜을 사용 하 여 시작 되 면 적절 하 게 동작할 수 있도록 해당 활성화 이벤트 인수에 전달할 특정 매개 변수를 지정할 수 있습니다. 매개 변수는 완전 신뢰 패키지 앱에서만 지원됩니다. UWP 앱은 매개 변수를 사용할 수 없습니다.  
+프로토콜 연결을 사용하면 다른 프로그램 및 시스템 구성 요소들을 패키지 앱에서 상호 운영할 수 있습니다. 프로토콜을 사용 하 여 패키지 된 응용 프로그램이 시작 될 때 적절 하 게 동작할 수 있도록 해당 활성화 이벤트 인수에 전달할 특정 매개 변수를 지정할 수 있습니다. 매개 변수는 완전 신뢰 패키지 앱에서만 지원됩니다. UWP 앱은 매개 변수를 사용할 수 없습니다.  
 
 #### <a name="xml-namespace"></a>XML 네임스페이스
 
@@ -909,7 +909,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 ### <a name="start-your-application-by-using-an-alias"></a>별칭을 사용 하 여 응용 프로그램을 시작 합니다.
 
-사용자 및 기타 프로세스 응용 프로그램을 시작 앱의 전체 경로 지정할 필요 없이 별칭을 사용할 수 있습니다. 별칭 이름을 지정할 수 있습니다.
+사용자 및 기타 프로세스 응용 프로그램을 시작으로 앱의 전체 경로 지정할 필요 없이 별칭을 사용할 수 있습니다. 별칭 이름을 지정할 수 있습니다.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -966,7 +966,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 시작 작업을 통해 응용 프로그램을 사용자가 로그온 할 때마다 자동으로 실행 파일을 실행 합니다.
 
 > [!NOTE]
-> 사용자가이 시작 작업을 등록 한 번 이상 응용 프로그램 시작 됩니다.
+> 사용자가이 시작 작업이 등록을 한 번 이상 응용 프로그램을 시작 됩니다.
 
 응용 프로그램이 여러 개의 시작 작업을 선언할 수 있습니다. 각 작업은 독립적으로 시작됩니다. 모든 시작 작업은 작업 관리자의 **시작** 탭에 나타나며 앱 매니페스트에 지정된 이름과 해당 앱 아이콘이 함께 표시됩니다. 작업 관리자는 작업의 시작 영향을 자동으로 분석합니다.
 
@@ -994,7 +994,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 |-------|-------------|
 |범주 |항상 ``windows.startupTask`` 값입니다.|
 |실행 파일 |시작하려는 실행 파일에 대한 상대 경로입니다. |
-|TaskId |작업의 고유 ID입니다. 응용 프로그램이이 식별자를 사용 하 여 프로그래밍 방식으로 사용 하거나 시작 작업을 사용 하지 않도록 설정 [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) 클래스의 Api를 호출할 수 있습니다. |
+|TaskId |작업의 고유 ID입니다. 이 식별자를 사용 하 여 응용 프로그램 프로그래밍 방식으로 사용 하도록 설정 하 여 시작 작업을 사용 하지 않도록 설정 하거나 [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) 클래스의 Api를 호출할 수 있습니다. |
 |활성화 |작업이 처음에 활성화 또는 비활성화 상태로 시작할 것인지를 나타냅니다. 사용하는 작업은 다음번에 사용자가 로그온할 때 실행됩니다(사용자가 사용하지 않도록 설정하지 않는 한). |
 |DisplayName |작업 관리자에 표시되는 작업의 이름입니다. ```ms-resource```를 사용해 이 문자열을 지역화할 수 있습니다. |
 
@@ -1025,7 +1025,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 ### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>사용자가 자신의 PC에 장치를 연결할 때 응용 프로그램을 시작할 수 있도록
 
-사용자가 자신의 PC에 장치를 연결 하는 경우 자동 실행 옵션으로 응용 프로그램을 제공할 수 있습니다.
+사용자가 PC에 장치를 연결할 때 자동 실행 옵션으로 응용 프로그램을 제공할 수 있습니다.
 
 #### <a name="xml-namespace"></a>XML 네임스페이스
 
@@ -1051,7 +1051,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 |ActionDisplayName |PC에 연결하는 디바이스로 사용자가 수행할 수 있는 작업을 나타내는 문자열(예: "파일 가져오기" 또는 "비디오 재생"). |
 |ProviderDisplayName | 응용 프로그램 또는 서비스를 나타내는 문자열 (예: "Contoso 동영상 플레이어"). |
 |ContentEvent |사용자에게 ``ActionDisplayName``및 ``ProviderDisplayName``을 알리는 메시지가 표시하는 콘텐츠 이벤트의 이름. 콘텐츠 이벤트는 카메라 메모리 카드, 썸 드라이브(thumb drive) 또는 DVD 같은 볼륨 장치가 PC에 삽입될 때 발생합니다. 이러한 이벤트의 전체 목록은 [여기](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)에서 찾을 수 있습니다.  |
-|동사 |동사 설정은 선택한 옵션에 대 한 응용 프로그램에 전달 되는 값을 식별 합니다. 자동 실행 이벤트에 대해 여러 개의 시작 작업을 지정하고 동사 설정을 사용하여 사용자가 앱에 대해 선택한 옵션을 확인할 수 있습니다. 앱에 전달된 시작 이벤트 인수의 verb 속성을 확인하여 사용자가 선택한 옵션을 알 수 있습니다. 동사 설정에는 예약된 open을 제외한 모든 값을 사용할 수 있습니다. |
+|동사 |동사 설정은 선택한 옵션에 대 한 응용 프로그램에 전달 된 값을 식별 합니다. 자동 실행 이벤트에 대해 여러 개의 시작 작업을 지정하고 동사 설정을 사용하여 사용자가 앱에 대해 선택한 옵션을 확인할 수 있습니다. 앱에 전달된 시작 이벤트 인수의 verb 속성을 확인하여 사용자가 선택한 옵션을 알 수 있습니다. 동사 설정에는 예약된 open을 제외한 모든 값을 사용할 수 있습니다. |
 |DropTargetHandler |[IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현 하는 응용 프로그램의 클래스 ID. 이동식 미디어의 파일은 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 구현의 [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) 메서드에 전달됩니다.  |
 |매개 변수 |모든 콘텐츠 이벤트에 대해 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현할 필요가 없습니다. 모든 콘텐츠 이벤트에 대해 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현하는 대신 명령줄 매개 변수를 제공할 수 있습니다. 이러한 이벤트에 대해 자동 실행은 이러한 명령줄 매개 변수를 사용 하 여 응용 프로그램을 시작 합니다. 앱의 초기화 코드에서 매개 변수를 분석하여 이 매개 변수가 자동 실행에서 시작되었는지 확인한 다음 사용자 지정 구현을 제공할 수 있습니다. |
 |DeviceEvent |사용자에게 ``ActionDisplayName``및 ``ProviderDisplayName``을 알리는 메시지가 표시하는 장치 이벤트의 이름. 장치 이벤트는 장치가 PC에 연결될 때 발생합니다. 장치 이벤트는 ``WPD`` 문자열로 시작하며 [여기](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 나열되어 있는 것을 찾을 수 있습니다. |
@@ -1084,16 +1084,16 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 ### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a>Microsoft Store에서 업데이트를 받은 후 자동으로 다시 시작
 
-사용자가 업데이트를 설치할 때 응용 프로그램 열려 있으면 응용 프로그램을 닫습니다.
+사용자가에 대 한 업데이트를 설치할 때 응용 프로그램 열려 있으면 응용 프로그램을 닫습니다.
 
-업데이트가 완료 된 후 다시 시작 하는 응용 프로그램을 하려는 경우 다시 시작 하려는 모든 프로세스에서 [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) 함수를 호출 합니다.
+해당 응용 프로그램의 업데이트가 완료 된 후 다시 시작을 원한다 면 다시 시작 하려는 모든 프로세스에서 [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) 함수를 호출 합니다.
 
 응용 프로그램의 각 활성 창은 [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) 메시지를 받습니다. 이 시점에서 응용 프로그램을 필요한 경우 명령줄을 업데이트할 [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) 함수를 호출할 수 있습니다.
 
 응용 프로그램의 각 활성 창은 [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) 메시지를 받으면 응용 프로그램 데이터를 저장 하 고 종료 해야 합니다.
 
 >[!NOTE]
-활성 창은 응용 프로그램 [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) 메시지를 처리 하지 않는 경우 [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) 메시지를 받을 수도 있습니다.
+응용 프로그램 [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) 메시지를 처리 하지 않는 경우 활성 창은 [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) 메시지를 받을 수도 있습니다.
 
 이 시점에서 응용 프로그램은 자체 프로세스를 30 초 또는 플랫폼 닫거나 종료 합니다.
 
@@ -1103,17 +1103,17 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 다른 앱과 통합하고, 다른 프로세스를 시작하거나 정보를 공유합니다.
 
-* [응용 프로그램에서 인쇄를 지 원하는 응용 프로그램에 인쇄 대상으로 표시 하도록](#printing)
+* [인쇄를 지 원하는 응용 프로그램에 인쇄 대상으로 표시 하는 응용 프로그램 만들기](#printing)
 * [다른 Windows 응용 프로그램과 글꼴을 공유합니다.](#fonts)
 * [유니버설 Windows 플랫폼(UWP) 앱에서 Win32 프로세스를 시작합니다.](#win32-process)
 
 <a id="printing" />
 
-### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>응용 프로그램에서 인쇄를 지 원하는 응용 프로그램에 인쇄 대상으로 표시 하도록
+### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>인쇄를 지 원하는 응용 프로그램에 인쇄 대상으로 표시 하는 응용 프로그램 만들기
 
 사용자가 원하는 메모장 등의 다른 응용 프로그램에서 데이터를 인쇄 하는 경우 앱의 사용 가능한 인쇄 대상 목록에 인쇄 대상으로 표시 하는 응용 프로그램을 만들 수 있습니다.
 
-응용 프로그램 사양 XPS (XML Paper) 형식에서으로 인쇄 데이터를 수신 하도록 수정 해야 합니다.
+사양 XPS (XML Paper) 형식으로 인쇄 데이터를 받을 수 있도록 응용 프로그램을 수정 해야 합니다.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -1258,9 +1258,9 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
 </Package>
 ```
-이 확장 모든 장치에서 실행 되는 유니버설 Windows 플랫폼 사용자 인터페이스를 구현 하려는 경우 유용할 수 있습니다 싶으면 완전 신뢰 모드에서 계속 실행 되도록 Win32 응용 프로그램의 구성 요소.
+이 확장 모든 장치에서 실행 되는 유니버설 Windows 플랫폼 사용자 인터페이스를 구현 하려는 경우에 유용할 수 있습니다 하지만 완전 신뢰 모드에서 계속 실행 되도록 Win32 응용 프로그램의 구성 요소가 있습니다.
 
-Win32 앱 용 Windows 앱 패키지를 만듭니다. 그런 다음, UWP 앱의 패키지 파일에 이 확장을 추가합니다. 이 확장 Windows 앱 패키지의 실행 파일을 시작 해야 할 있음을 나타냅니다.  UWP 앱과 Win32 앱 간에 통신을 원하는 경우에는 하나 이상의 [앱 서비스](../launch-resume/app-services.md)를 설정할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/)를 참조하세요.
+Win32 앱 용 Windows 앱 패키지를 만듭니다. 그런 다음, UWP 앱의 패키지 파일에 이 확장을 추가합니다. 이 확장은 Windows 앱 패키지의 실행 파일을 시작 하려면 나타냅니다.  UWP 앱과 Win32 앱 간에 통신을 원하는 경우에는 하나 이상의 [앱 서비스](../launch-resume/app-services.md)를 설정할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

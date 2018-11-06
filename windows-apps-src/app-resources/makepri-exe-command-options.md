@@ -8,27 +8,27 @@ ms.date: 04/10/2018
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d47bbe87e9319def2e8c6500fd954f2a291e18
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c777996dceeb443c25fcf526e3a029fca00047c1
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996340"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043486"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
 [MakePri.exe](compile-resources-manually-with-makepri.md)에는 `createconfig`, `dump`, `new`, `resourcepack` 및 `versioned` 명령 집합이 있습니다. 이 항목에서는 이들의 사용에 대한 명령줄 옵션을 자세히 설명합니다.
 
 > [!NOTE]
-> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **앱을 관리 하는 UWP 용 Windows SDK** 옵션을 선택 하면 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **앱을 관리 하는 UWP 용 Windows SDK** 옵션을 선택 하는 때 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
-## <a name="getting-help-from-the-command-line"></a>명령줄에서 도움말
+## <a name="getting-help-from-the-command-line"></a>명령줄에서 도움말 보기
 
-실행할 수 있습니다 `MakePri.exe help` 또는 `MakePri.exe /?` 하 여 MakePri.exe로 사용할 수 있는 명령을 봅니다. 또한 실행할 수 있습니다 `MakePri.exe <command> /?` 명령에 대 한 하 고, 매우 드문 경우이 특성을 보려면도 `MakePri.exe <command> <option>` 옵션에 대 한 세부 정보가 표시를 합니다.
+실행할 수 있습니다 `MakePri.exe help` 또는 `MakePri.exe /?` 하 여 MakePri.exe로 사용할 수 있는 명령을 봅니다. 실행할 수 있습니다 `MakePri.exe <command> /?` 명령에 대 한 하 고, 매우 드문 경우이 특성을 보려면도 `MakePri.exe <command> <option>` 하는 옵션에 대 한 세부 정보가 표시 됩니다.
 
 ## <a name="makepri-commands"></a>MakePri 명령
 
-```
+```console
 C:\>makepri help
 
 Usage:
@@ -67,7 +67,7 @@ Help:
 
 `createconfig` 명령은 사용자가 지정하는 한정자 기본값을 정의하는 초기화된 새 PRI 구성 파일을 만듭니다. `MakePri.exe createconfig /?`를 실행하여 이 명령에 대한 자세한 도움말을 봅니다.
 
-```
+```console
 C:\>makepri createconfig /?
 
 Usage:
@@ -119,7 +119,7 @@ Help:
 > [!NOTE]
 > 스키마가 없는 리소스 팩은 PRI config 파일에서 *omitSchemaFromResourcePacks* 스위치를 사용하여 생성한 것입니다. 스키마가 없는 리소스 팩을 덤프하려면 `/es <main_package_PRI_file>` 스위치를 사용하세요. 주 파일을 지정하지 않으면 오류 메시지 "*패키지의 resources.pri가 손상되었으므로 암호화에 실패했습니다(오류 PRI222: 0xdef0000f - 지정되지 않은 오류 발생함)*"가 표시됩니다.
 
-```
+```console
 C:\>makepri dump /?
 
 Usage:
@@ -168,7 +168,7 @@ Help:
 
 `new` 명령은 구성 파일의 지침대로 프로젝트에 파일을 인덱싱하여 새 PRI 파일을 만듭니다. `MakePri.exe new /?`를 실행하여 이 명령에 대한 자세한 도움말을 봅니다.
 
-```
+```console
 C:\>makepri new /?
 
 Usage:
@@ -240,7 +240,7 @@ Help:
 
 `resourcepack` 명령은 구성 파일의 지침대로 프로젝트에 파일을 인덱싱하여 새 PRI 파일을 만듭니다. 리소스 팩 PRI 파일에는 이미 기존 PRI 파일에 지정된 리소스의 추가 변형만 포함되어 있습니다. `MakePri.exe resourcepack /?`를 실행하여 이 명령에 대한 자세한 도움말을 봅니다.
 
-```
+```console
 C:\>makepri resourcepack /?
 
 Usage:
@@ -307,7 +307,7 @@ Help:
 
 `versioned` 명령은 구성 파일의 지침대로 프로젝트에 파일을 인덱싱하여 버전이 지정된 PRI 파일을 만듭니다. `MakePri.exe versioned /?`를 실행하여 이 명령에 대한 자세한 도움말을 봅니다.
 
-```
+```console
 C:\>makepri versioned /?
 
 Usage:
@@ -412,7 +412,7 @@ MakePri는 인덱서 메타데이터 파일에 리소스 팩 관련 정보를 �
 
 `resourcepack` 및 `versioned`의 경우 /IndexFile(if)에 대한 입력 매개 변수로 PRI 파일을 제공하는 대신 스키마 파일을 제공할 수 있습니다.
 
-```
+```console
 /IndexFile(if) <FILEPATH>
 ```
 
@@ -420,40 +420,40 @@ MakePri는 인덱서 메타데이터 파일에 리소스 팩 관련 정보를 �
 
 ## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) 옵션
 
-인덱스 옵션을 사용 하 여 (/ io)와 `new`, `resourcepack`, 및 `versioned` 리소스 인덱서의 동작을 보다 세밀된 하 게 제어를 제공 하는 옵션을 지정 합니다. 인덱스 옵션은 기본적으로 비활성화 됩니다.
+인덱스 옵션을 사용 하 여 (/ io)와 `new`, `resourcepack`, 및 `versioned` 리소스 인덱서의 동작을 보다 세부적된으로 제어를 제공 하는 옵션을 지정 합니다. 인덱스 옵션은 기본적으로 비활성화 됩니다.
 
-```
+```console
 /IndexOptions(io) <OPTIONS>
 ```
 
-**옵션** 에 다음 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
+**옵션** 은 다음과 같은 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
 
-- HiddenFiles(hf) + /. (+) 인덱싱하거나 (-)를 무시 숨김 파일 및 폴더.
-- LinkedFiles(lf) + /. (+) 인덱싱하거나 (-)를 무시 파일 및 폴더를 연결 합니다.
+- + /-HiddenFiles(hf) 합니다. (+) 인덱싱하거나 (-)를 무시 숨김 파일 및 폴더.
+- + /-LinkedFiles(lf) 합니다. (+) 인덱싱하거나 (-)를 무시 파일 및 폴더를 연결 합니다.
 
 ## <a name="47mappingfilemf-option"></a>/MappingFile(mf) 옵션
 
 `new`, `resourcepack`, 및 `versioned`와 매핑 파일 옵션(/mf)을 사용하여 매핑 파일을 생성할 수 있습니다. [MakeAppx.exe](../packaging/create-app-package-with-makeappx-tool.md)는 매핑 파일을 사용하여 앱 패키지를 생성합니다.
 
-```
+```console
 /MappingFile(mf) <MAPPINGFILETYPE>
 ```
 
 **MAPPINGFILETYPE**은 매핑 파일의 형식을 지정하는 토큰입니다. 지원되는 유효한 형식은 `appx`뿐입니다.
 
-```
+```console
 /mf appx
 ```
 
 다음은 주 매핑 파일 콘텐츠의 예입니다.
 
-```
+```console
 "ResourceDimensions"                   "language-de-de"
 ```
 
 다음은 리소스 팩 매핑 파일 콘텐츠의 예입니다.
 
-```
+```console
 "ResourceId"                           "Resources184.la5decaf08"
 "ResourceDimensions"                   "language-de-de"
 ```
@@ -462,7 +462,7 @@ MakePri는 인덱서 메타데이터 파일에 리소스 팩 관련 정보를 �
 
 팩 리소스를 만든 경우 MakePRI.exe에서 출력 요약은 더 자세한 양식을 띱니다. 예를 들면 다음과 같습니다.
 
-```
+```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack
 Language Qualifiers: fr-FR, de-DE
 
@@ -489,7 +489,7 @@ Successfully Completed
 
 덮어쓰기 옵션(/o)을 제공하지 않고 지정된 출력 파일 이미 있는 경우 MakePri.exe는 덮어쓰기 전에 확인이 필요합니다.
 
-```
+```console
 Following file(s) already exist at output location:
 <file(s)>
 Overwrite these file(s)? [Y]es (any other key to cancel):
@@ -515,7 +515,7 @@ Overwrite these file(s)? [Y]es (any other key to cancel):
 
 `resourcepack` 및 `versioned`의 경우 /IndexFile(if)에 대한 입력 매개 변수로 PRI 파일을 제공하는 대신 스키마 파일을 제공할 수 있습니다.
 
-```
+```console
 /SchemaFile(sf) <FILEPATH>
 ```
 
@@ -545,7 +545,7 @@ Overwrite these file(s)? [Y]es (any other key to cancel):
 
 (`new` 명령에 대한) 주 버전(/vma) 옵션은 더 이상 사용되지 않으며 이를 사용하면 경고 메시지가 표시됩니다.
 
-```
+```console
 'VersionMajor (vma)' input parameter has been deprecated. Please specify major version in the configuration file using 'majorVersion' attribute on 'resources' node.
 ```
 

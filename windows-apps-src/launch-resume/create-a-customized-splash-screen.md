@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 80242b95e64f0d642df0284c94455d60825f6daf
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992996"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046421"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>시작 화면을 더 오래 표시
 
@@ -75,7 +75,7 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
     </Grid>
 ```
 
-**참고**이 코드 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 의 너비를 20 픽셀로 설정 합니다. 수동으로 너비를 앱에 적합한 값으로 설정할 수 있지만 20픽셀 미만의 너비에서는 컨트롤이 렌더링되지 않습니다.
+**참고**이 코드는 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 의 너비를 20 픽셀로 설정 합니다. 수동으로 너비를 앱에 적합한 값으로 설정할 수 있지만 20픽셀 미만의 너비에서는 컨트롤이 렌더링되지 않습니다.
 
  
 
@@ -419,7 +419,7 @@ namespace SplashScreenExample
 }
 ```
 
-App.xaml.cs:이 프로젝트 시각적 Studio2015에서 UWP 앱 **빈 앱 (XAML)** 프로젝트 템플릿을 사용 하 여 생성 된 합니다. `OnNavigationFailed` 및 `OnSuspending` 이벤트 처리기가 모두 자동으로 생성되며 연장된 시작 화면을 구현하기 위해 변경할 필요가 없습니다. 이 항목에서는 `OnLaunched`만 수정합니다.
+App.xaml.cs:이 프로젝트 Visual Studio2015에서 UWP 앱 **빈 앱 (XAML)** 프로젝트 템플릿을 사용 하 여 생성 된 합니다. `OnNavigationFailed` 및 `OnSuspending` 이벤트 처리기가 모두 자동으로 생성되며 연장된 시작 화면을 구현하기 위해 변경할 필요가 없습니다. 이 항목에서는 `OnLaunched`만 수정합니다.
 
 앱에 프로젝트 템플릿을 사용하지 않은 경우 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 탐색을 사용하지 않는 수정된 `OnLaunched`의 예제를 보려면 4단계: [시작 활성화 처리기 수정](#modify-the-launch-activation-handler)을 참조하세요.
 

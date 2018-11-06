@@ -2,23 +2,23 @@
 author: PatrickFarley
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: 디버깅, 테스트 및 성능
-description: Microsoft Visual Studio 및 기타 도구를 사용 하 여 디버그 및 앱을 테스트 하 고, Microsoft Store 인증 프로세스에 대 한 준비를 합니다.
+description: Microsoft Visual Studio 및 기타 도구를 사용 하 여 디버그 앱을 테스트 하 고 Microsoft Store 인증 프로세스에 대 한 준비를 합니다.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a6651c6d1117648522f95c7e7c85aad11ceed42f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993764"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040330"
 ---
 # <a name="debugging-testing-and-performance"></a>디버깅, 테스트 및 성능
 
 
-이 섹션에서는 Microsoft Visual Studio 디버그, 테스트 및 앱을 최적화를 사용 하는 방법을 보여 줍니다. (디바이스 모니터링 및 구성)에 대해 Windows Device Portal을 Windows 앱 인증 키트 (Microsoft Store에 앱을 준비)와 같은 도구를 포함 되어 있습니다.
+이 섹션에서는 디버그, 테스트 및 앱을 최적화 하려면 Microsoft Visual Studio를 사용 하는 방법을 보여 줍니다. (디바이스 모니터링 및 구성)에 대해 Windows Device Portal을 Windows 앱 인증 키트 (Microsoft Store 앱을 준비)와 같은 도구를 포함 되어 있습니다.
 
 | 항목 | 설명 |
 |-------|-------------|

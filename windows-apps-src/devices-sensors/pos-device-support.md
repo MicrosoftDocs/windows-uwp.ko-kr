@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df6e2c15260759f164a37b68365e0268633b22d5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981034"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042368"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 
@@ -77,9 +77,9 @@ Honeywell 통해 2D 바코드를 지원 하기 위해 ¹ Upgradable <br/>
 ### <a name="windows-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows 장치
 | 제조업체   | 모델 | 운영 체제 |
 |----------------|-------|------------------|
-| Innowi         | ChecOut-M | Windows10   |
+| Innowi         | ChecOut M | Windows10   |
 
-### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows Mobile 장치
+### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>Windows Mobile 장치를 기본 제공 바코드 스캐너
 | 제조업체   | 모델 | 운영 체제 |
 |----------------|-------|------------------|
 | Bluebird       | EF400 | Windows Mobile   |

@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
-description: 이 섹션에서는 기존 앱을 유니버설 Windows 플랫폼 (UWP) 고객이 모든 유형의 장치에 설치할 수 있는 단일 Windows10 앱 패키지를 만들 수 있습니다 포트 하는 방법을 설명 합니다. 앱은 흥미로운 새 하드웨어, 엄청난 수익 창출 기회, 최신 API 집합, 적응 UI 컨트롤, 마우스/키보드, 터치 및 음성을 포함하여 다양한 입력 양식을 활용할 수 있습니다.
+description: 이 섹션에서는 기존 앱을 UWP 유니버설 Windows 플랫폼 () 고객이 모든 유형의 장치에 설치할 수 있는 단일 Windows10 앱 패키지를 만들 수 있는 포트 하는 방법을 설명 합니다. 앱은 흥미로운 새 하드웨어, 엄청난 수익 창출 기회, 최신 API 집합, 적응 UI 컨트롤, 마우스/키보드, 터치 및 음성을 포함하여 다양한 입력 양식을 활용할 수 있습니다.
 title: Windows10으로 앱 포팅
 ms.author: stwhi
 ms.date: 02/08/2017
@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bb5c6ae373e4e35e640223fe08a5a49f2e7a5dd3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993257"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045938"
 ---
 # <a name="porting-apps-to-windows10"></a>Windows10으로 앱 포팅
 
 
-이 섹션에서는 기존 앱을 유니버설 Windows 플랫폼 (UWP) 고객이 모든 유형의 장치에 설치할 수 있는 단일 Windows10 앱 패키지를 만들 수 있습니다 포트 하는 방법을 설명 합니다. 앱은 흥미로운 새 하드웨어, 엄청난 수익 창출 기회, 최신 API 집합, 적응 UI 컨트롤, 마우스/키보드, 터치 및 음성을 포함하여 다양한 입력 양식을 활용할 수 있습니다.
+이 섹션에서는 기존 앱을 UWP 유니버설 Windows 플랫폼 () 고객이 모든 유형의 장치에 설치할 수 있는 단일 Windows10 앱 패키지를 만들 수 있는 포트 하는 방법을 설명 합니다. 앱은 흥미로운 새 하드웨어, 엄청난 수익 창출 기회, 최신 API 집합, 적응 UI 컨트롤, 마우스/키보드, 터치 및 음성을 포함하여 다양한 입력 양식을 활용할 수 있습니다.
 
 WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할 수 있는 기술입니다. WinRT 및 UWP 앱에 대한 배경 정보는 [UWP(유니버설 Windows 플랫폼) 앱이란?](https://msdn.microsoft.com/library/windows/apps/dn726767)을 참조할 수 있습니다.
 

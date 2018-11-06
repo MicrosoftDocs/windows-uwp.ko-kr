@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d7acfdb6312770f51d8870549218344ad8c4330
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5985307"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041623"
 ---
 # <a name="generate-a-3mf-package"></a>3MF 패키지 생성
 
@@ -30,7 +30,7 @@ ms.locfileid: "5985307"
 
 3D 제조 형식은 제조(3D 인쇄)를 위한 용도로 XML을 사용하여 3D 모델의 모양과 구조를 설명하는 규칙 집합입니다. 3D 제조 디바이스에 필요한 모든 정보를 제공하려는 목표로 부분 집합(일부는 필수이고 일부는 선택임)과 해당하는 관계를 정의합니다. 3D 제조 형식을 준수하는 데이터 집합은 .3mf 확장명의 파일로 저장할 수 있습니다.
 
-Windows10에서 **Windows.Graphics.Printing3D** 네임 스페이스의 [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) 클래스는 단일.3mf 파일과 유사 하며 다른 클래스 파일의 특정 XML 요소에 매핑합니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
+Windows10, **Windows.Graphics.Printing3D** 네임 스페이스의 [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) 클래스는 단일.3mf 파일과 유사 하 고 다른 클래스는 파일의 특정 XML 요소에 매핑합니다. 이 가이드에서는 3MF 문서의 주요 부분을 각각 만들고 프로그래밍 방식으로 설정하는 방법과 3MF 재료 확장을 활용하는 방법 그리고 **Printing3D3MFPackage** 개체를 변환하고 .3mf 파일로 저장할 수 있는 방법을 설명합니다. 3MF 또는 3MF 재료 확장의 표준에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요.
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 

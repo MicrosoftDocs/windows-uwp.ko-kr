@@ -1,6 +1,6 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: 간단한 UWP C# 및 MonoGame로 작성, Microsoft Store 용 게임
+description: 간단한 UWP 게임에 대 한 C# 및 MonoGame로 작성 된 Microsoft Store
 author: muhsinking
 ms.author: mukin
 ms.date: 03/06/2017
@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d43094ba679ebe5439996373626522590e3fcc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995240"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042134"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -42,7 +42,7 @@ Visual Studio 2017에서 프로젝트를 열고 샘플을 실행 하려면 **F5*
 
 이 작업을 마쳤으면 MonoGame 설정에 대한 다음 섹션으로 넘어가서 단계별 코드 연습을 살펴봅니다.
 
-**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 MonoGame 2d 게임을 개발의 모든 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
+**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 monogame으로 2d 게임을 개발 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
 
 ## <a name="set-up-monogame-project"></a>MonoGame 프로젝트 설정
 1. [MonoGame.net](http://www.monogame.net/)에서 Visual Studio용 **MonoGame 3.6**을 다운로드합니다.
@@ -68,7 +68,7 @@ Visual Studio 2017에서 프로젝트를 열고 샘플을 실행 하려면 **F5*
 
 **protected override void UnloadContent()** 이 메서드는 비 콘텐츠-관리자 콘텐츠를 언로드하는 데 사용됩니다. 여기서는 이 메서드는 사용할 일이 없습니다.
 
-**protected override void Update (GameTime gameTime)** 이 메서드는 게임 루프 주기 마다 한 번 호출 됩니다. 게임에 사용되는 개체 또는 변수의 상태를 여기서 업데이트합니다. 개체의 위치, 속도, 색 등이 포함됩니다. 또한 사용자 입력이 처리 하는 위치입니다. 즉, 이 메서드는 화면에 개체를 그리는 것을 제외한 게임 논리의 모든 부분을 처리합니다.
+**protected override void Update (GameTime gameTime)** 이 메서드는 게임 루프 주기 마다 한 번씩 호출 됩니다. 게임에 사용되는 개체 또는 변수의 상태를 여기서 업데이트합니다. 개체의 위치, 속도, 색 등이 포함됩니다. 또한 사용자 입력이 처리 하는 위치입니다. 즉, 이 메서드는 화면에 개체를 그리는 것을 제외한 게임 논리의 모든 부분을 처리합니다.
 **protected override void Draw(GameTime gameTime)** 이 메서드는 Update 메서드가 제공하는 위치를 사용하여 화면에 개체를 그립니다.
 
 ## <a name="draw-a-sprite"></a>스프라이트 그리기
@@ -430,7 +430,7 @@ void KeyboardHandler()
 
 두 번째는 게임이 시작되지 않은 상태에서 **스페이스바**를 누르면 게임을 시작하는 문입니다.
 
-세 번째는 **스페이스바**를 누르면 **dY** 속성을 변경하여 공룡 아바타가 점프하게 만드는 문입니다. 플레이어가 점프할 수 없습니다 "땅"에 (dino.y = screenHeight * SKYRATIO)에 점프 하지 것입니다 경우 한 번 누르는 대신 space 키를 누르고 되 고 합니다. 이렇게 하면 게임이 시작되자마자 공룡이 점프하는 것을 방지하고, 게임을 시작하는 동일한 키 동작에 공룡 등에 올라탑니다.
+세 번째는 **스페이스바**를 누르면 **dY** 속성을 변경하여 공룡 아바타가 점프하게 만드는 문입니다. "땅"에 없는 플레이어 점프할 참고 (dino.y = screenHeight * SKYRATIO)에 점프 하지 것입니다 경우 한 번 누르는 대신 space 키를 누르고 되 고 합니다. 이렇게 하면 게임이 시작되자마자 공룡이 점프하는 것을 방지하고, 게임을 시작하는 동일한 키 동작에 공룡 등에 올라탑니다.
 
 마지막으로 if/else 절은 왼쪽 또는 오른쪽 화살표 키가 눌렸는지 검사하고, 눌렸으면 그에 따라 공룡의 **dX** 속성을 변경합니다.
 
@@ -486,7 +486,7 @@ dino.Draw(spriteBatch);
 
 MonoGame에서 새 **spriteBatch.Draw** 호출은 이전 호출 위에 그립니다. 이 브로콜리 및 공룡 스프라이트 그려집니다 기존의 풀밭 스프라이트 위에 있습니다 수 숨길 수 없습니다 뒤 위치에 관계 없이 것을 의미 합니다.
 
-이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계를 잘 따라 아바타를 움직일 게임 창 내에 있어야 하 고 브로콜리 빨라져 속도가 생성 해야 합니다.
+이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계에 따라 게임 창 내에서 이동 아바타 있어야 하 고 브로콜리 빨라져 속도가 생성 해야 합니다.
 
 ![플레이어 아바타 및 장애물](images/monogame-tutorial-2.png)
 
@@ -650,7 +650,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 이렇게 하면 우리가 **SpriteClass**에 만든 **RectangleCollision** 메서드가 호출되고, 만약 true 값이 반환되면 게임이 끝난 것으로 플래그가 지정됩니다.
 
 ### <a name="4-add-user-input-for-resetting-the-game"></a>4. 게임 초기화를 위한 사용자 입력 추가
-사용자가 Enter 키를 누를 경우 게임을 다시 설정 하는 **KeyboardHandler** 메서드에이 코드를 추가 합니다.
+Enter 키를 누를 경우 게임을 다시 설정 하려면 사용자가 **KeyboardHandler** 메서드에이 코드를 추가 합니다.
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
@@ -686,7 +686,7 @@ if (gameOver)
 ![게임 종료](images/monogame-tutorial-4.png)
 
 ## <a name="publish-to-the-microsoft-store"></a>Microsoft Store에 게시
-이 게임은 UWP 앱을 구축 이므로이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
+이 게임을 UWP 앱으로 구축, 이므로이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
 
 Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.
 
@@ -694,4 +694,4 @@ Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/regist
 
 앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.
+자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.

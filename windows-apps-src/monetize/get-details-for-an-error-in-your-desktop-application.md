@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: 922ab18bfebfbe539788ade3caa7626919d6b19a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976186"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046058"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오류에 대한 자세한 데이터를 JSON 형식으로 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다. 자세한 오류 데이터 파트너 센터에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 에서 제공 됩니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오류에 대한 자세한 데이터를 JSON 형식으로 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다. 자세한 오류 데이터 파트너 센터에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 에서 사용할 수도 있습니다.
 
 이 메서드를 사용하려면 먼저 [오류 보고 데이터 가져오기](get-error-reporting-data.md) 메서드를 통해 자세한 정보를 가져오려는 오류 ID를 검색해야 합니다.
 

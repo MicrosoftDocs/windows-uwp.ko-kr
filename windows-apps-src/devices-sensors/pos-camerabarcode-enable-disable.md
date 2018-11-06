@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 35666f64c88ad56b8f5bd3052ebbee069ccaecfc
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5997369"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041173"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a>Windows와 함께 배송된 소프트웨어 디코더를 활성화 또는 비활성화
 Windows 10 버전 1803에서는 기본적으로 소프트웨어 디코더가 설치 및 활성화됩니다.  카메라 바코드 스캐너를 사용하고 싶지 않거나 Windows.Devices.PointOfService.BarcodeScanner API에서 작동하는 타사 디코더를 구입했고 둘 모두를 사용하고 싶지 않은 경우에는 Windows와 함께 배송된 소프트웨어 디코더를 비활성화할 수 있습니다.

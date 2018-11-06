@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7475910adffd24e4484b539f65633dfb8fc054a8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974111"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045027"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>사진 및 비디오 캡처를 위한 수동 카메라 컨트롤
 
@@ -337,7 +337,7 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 
 **ManipulationDelta** 이벤트에 대한 처리기에서 사용자의 손가락 모으기 제스처의 변화에 따라 확대/축소 배율을 업데이트합니다. [**ManipulationDelta.Scale**](https://msdn.microsoft.com/library/windows/apps/br242016) 값은 손가락 모으기 크기가 약간 증가하면 1.0보다 약간 더 큰 숫자가 되고 손가락 모으기 크기가 약간 감소하면 1.0보다 약간 더 작은 숫자가 되도록 손가락 모으기 제스처의 크기 변경을 나타냅니다. 이 예제에서는 확대/축소 컨트롤의 현재 값에 배율 델타를 곱합니다.
 
-확대/축소 배율을 설정하기 전에 해당 값이 디바이스에서 지원되는 최소값([**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817) 속성으로 지정)보다 작지 않은지 확인해야 합니다. 또한 해당 값은 [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) 값보다 작거나 같아야 합니다. 마지막으로 확대/축소 [**단계**](https://msdn.microsoft.com/library/windows/apps/dn633818) 속성에 의해 표시 된 대로 장치에서 지원 하 고 확대/축소 단계 크기의 배수가 있는지 확인 해야 합니다. 확대/축소 배율이 이러한 요구를 충족하지 못하면 캡처 디바이스에서 확대/축소 수준을 설정하려고 할 때 예외가 발생됩니다.
+확대/축소 배율을 설정하기 전에 해당 값이 디바이스에서 지원되는 최소값([**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817) 속성으로 지정)보다 작지 않은지 확인해야 합니다. 또한 해당 값은 [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) 값보다 작거나 같아야 합니다. 마지막으로 확대/축소 배율을 [**단계**](https://msdn.microsoft.com/library/windows/apps/dn633818) 속성으로 표시 된 대로 장치에서 지 원하는 확대/축소 단계 크기의 배수가 인지 확인 해야 합니다. 확대/축소 배율이 이러한 요구를 충족하지 못하면 캡처 디바이스에서 확대/축소 수준을 설정하려고 할 때 예외가 발생됩니다.
 
 새 [**ZoomSettings**](https://msdn.microsoft.com/library/windows/apps/dn926722) 개체를 만들어 캡처 디바이스의 확대/축소 수준을 설정합니다. [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn926723) 속성을 [**ZoomTransitionMode.Smooth**](https://msdn.microsoft.com/library/windows/apps/dn926726)로 설정한 다음 [**Value**](https://msdn.microsoft.com/library/windows/apps/dn926724) 속성을 원하는 확대/축소 배율로 설정합니다. 마지막으로 [**ZoomControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn926719)를 호출하여 디바이스에 대해 새 확대/축소 값을 설정합니다. 디바이스는 새 확대/축소 값으로 원활하게 전환됩니다.
 

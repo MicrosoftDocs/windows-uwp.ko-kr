@@ -12,17 +12,17 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: ba0ed6cb2fe2b932dcb3011ff7cf9cf7ce197182
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5997161"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042873"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
 UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 패키지를 만들어야 합니다. Microsoft Store를 통해 앱을 배포하지 않는 경우, 앱 패키지를 장치에 직접 사이드로드하거나 [웹 설치](installing-UWP-apps-web.md)를 통해 배포할 수 있습니다. 이 문서에서는 Visual Studio를 사용하여 UWP 앱 패키지를 구성, 생성, 테스트하는 프로세스에 대해 설명합니다. 기간 업무(LOB) 앱 관리 및 배포에 대한 자세한 내용은 [엔터프라이즈 앱 관리](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management)를 참조하세요.
 
-Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 전체 앱 패키지 업로드 파일을 제출할 수 있습니다. 이러한 옵션 중에서 패키지 업로드 파일 제출은 최상의 환경을 제공합니다. 
+Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 완전 한 앱 패키지 업로드 파일을 제출할 수 있습니다. 이러한 옵션 중에서 패키지 업로드 파일 제출은 최상의 환경을 제공합니다. 
 
 ## <a name="types-of-app-packages"></a>앱 패키지의 유형
 
@@ -42,7 +42,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 Windows 개발자 센터에 �
 3.  [앱 패키지 업로드 파일을 만듭니다](#create-an-app-package-upload-file). Visual Studio 앱 패키지 마법사를 사용하여 앱 패키지를 만든 다음 Windows 앱 인증 키트를 사용하여 인증합니다.
 4.  [앱 패키지 사이드로드](#sideload-your-app-package). 앱을 장치에 사이드로드한 후에 앱이 예상대로 작동하는지 테스트할 수 있습니다.
 
-위의 단계를 완료한 후에는 앱을 배포할 수 있습니다. 내부 사용자 전용 이므로 판매 하지 않으려는 줄 업무 (LOB) 앱을 있으면 경우 모든 Windows10 장치에 설치 하기 위해이 앱 테스트용으로 로드할 수 있습니다.
+위의 단계를 완료한 후에는 앱을 배포할 수 있습니다. 내부 사용자 전용 이므로 판매 하지 않으려는 업무-(lob 기간 업무) 앱이 있는 경우 모든 Windows10 장치에 설치 하기 위해이 앱 테스트용으로 로드할 수 있습니다.
 
 ## <a name="before-packaging-your-app"></a>앱을 패키징하기 전에
 
@@ -143,12 +143,12 @@ Windows 10 1주년 업데이트에 도입된 앱 패키지는 앱 패지 파일�
 > 앱 설치 관리자는 장치가 앱을 신뢰하는 것으로 간주합니다. 개발자나 기업용 앱을 사이드로드하는 경우, 장치의 신뢰할 수 있는 사람 또는 신뢰할 수 있는 판매자 인증 기관 Microsoft Store에 서명 인증서를 설치해야 합니다. 방법을 모를 경우 [테스트 인증서 설치](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates)를 참조하세요.
 
 ### <a name="sideload-your-app-on-previous-versions-of-windows"></a>이전 버전 Windows에 앱 사이드로드
-UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하지 않습니다. 일반적으로 Microsoft Store에서 UWP 앱을 다운로드하고, 장치에 앱을 설치합니다. Microsoft Store에 게시하지 않고도 앱을 설치할 수 있습니다(사이드로드). 이렇게 하면 설치 하 고 앱 패키지를 사용 하 여 테스트 앱 파일을 생성 합니다. Microsoft Store에서 판매하지 않을 앱(예: LOB(기간 업무) 앱)이 있는 경우에는 회사 내의 다른 사용자가 사용할 수 있도록 이 앱을 사이드로드할 수 있습니다.
+UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하지 않습니다. 일반적으로 Microsoft Store에서 UWP 앱을 다운로드하고, 장치에 앱을 설치합니다. Microsoft Store에 게시하지 않고도 앱을 설치할 수 있습니다(사이드로드). 이렇게 하면 설치 및 앱 패키지를 사용 하 여 테스트 앱 파일을 생성 합니다. Microsoft Store에서 판매하지 않을 앱(예: LOB(기간 업무) 앱)이 있는 경우에는 회사 내의 다른 사용자가 사용할 수 있도록 이 앱을 사이드로드할 수 있습니다.
 
 다음 목록은 사이드로드을 로드하는 데 요구되는 사항입니다.
 
 -   [디바이스를 개발에 사용하도록 설정](https://msdn.microsoft.com/library/windows/apps/Dn706236)해야 합니다.
--   테스트용으로 로드 하려면 Windows10 모바일 장치에서 앱 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용 합니다.
+-   Windows10 모바일 장치에서 앱을 테스트용으로 로드할 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용 합니다.
 
 **데스크톱, 노트북 또는 태블릿에 사이드로드**
 
@@ -170,5 +170,5 @@ UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하�
 
     앱 패키지가 설치되면 PowerShell 창에 **앱이 설치되었습니다**라는 메시지가 나타납니다.
 
-    **팁**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭, 완전 한 원이 나타날 때까지 계속 누르고 있다가 손가락을 저장할 화면 터치 합니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
+    **팁**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭 완전 한 원이 나타날 때까지 누르고 있다가 손가락을 원하는 화면을 터치 합니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
 4.  시작 버튼을 클릭한 다음 앱 이름을 입력해 검색한 후 시작합니다.

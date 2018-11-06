@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10 uwp, 광고, 광고, 연습
 ms.localizationpriority: medium
 ms.openlocfilehash: 55d6c7c0cbc1999c0b4afc33cb84479294d2b18f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978260"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041896"
 ---
 # <a name="best-practices-for-ads-in-apps"></a>앱 광고 모범 사례
 

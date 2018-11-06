@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 92b81c79eb1be9e21aa7c306ef31b0b3bb62e7d1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971197"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042543"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView 및 GridView 데이터 가상화
 
@@ -29,7 +29,7 @@ ms.locfileid: "5971197"
 -   데이터 집합의 소스(로컬 디스크, 네트워크 또는 클라우드)
 -   앱의 전체 메모리 소비
 
-**참고**ListView 및 GridView 사용자가 이동/스크롤 신속 하 게 하는 동안 일시적으로 자리 표시자 화면 효과 표시 하는 기능이 기본적으로 사용은 주의 해야 합니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
+**참고**ListView 및 GridView 사용자가 이동/스크롤 신속 하 게 하는 동안 일시적으로 자리 표시자 화면 효과 표시 하는 기능은 기본적으로 사용 되도록 합니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
 
 증분 및 임의 액세스 데이터 가상화 기술에 대한 자세한 내용은 다음과 같습니다.
 

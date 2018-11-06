@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 984653ad20fc40035528ab7e32b904e64d6ff8c5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988922"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040538"
 ---
 # <a name="draw-shapes"></a>셰이프 그리기
 
@@ -143,7 +143,7 @@ layoutRoot.Children.Add(polygon1);
 
 ![렌더링된 다각형](images/shapes-polygon.jpg)
 
-**팁**는 [**지점**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값은 종종 셰이프의 정점 선언이 아닌 다른 시나리오에 대 한 XAML에서 한 형식으로 사용 됩니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)에 대한 API 참조 항목을 참조하세요.
+**팁** [**지점**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값은 종종 셰이프의 정점 선언이 아닌 다른 시나리오에 대 한 XAML에서 한 형식으로 사용 됩니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)에 대한 API 참조 항목을 참조하세요.
 
 ## <a name="line"></a>선
 
@@ -171,7 +171,7 @@ layoutRoot.Children.Add(line1);
 
 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)은 **Polyline**의 마지막 점이 첫 번째 점에 연결되지 않는다는 것을 제외하고, 점 집합에 의해 셰이프의 경계가 정의된다는 점에서 [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon)과 유사합니다.
 
-**참고**  는 동일한 시작점을 명시적으로 사용할 수 있습니다 및 [**포인트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 끝점 설정 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)있지만 경우 아마도 수를 사용한 [**다각형**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) 대신 합니다.
+**참고**  동일한 시작 지점을 명시적으로 가지기 및 [**포인트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 끝점 설정 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)있지만 경우 아마도 수를 사용한 [**다각형**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) 대신 합니다.
 
 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: 12789767694e4ab3fa13efec4a31c8db4acd5420
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989196"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040412"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>XAML과 C# 문제 해결 가이드
 
@@ -39,7 +39,7 @@ ms.locfileid: "5989196"
 
 1.  Package.appxmanifest에서**인터넷(클라이언트)** 기능이 선택되어 있는지 확인합니다.
 
-2.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 파트너 센터에서 가져온 광고 단위 ID와 응용 프로그램 ID 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+2.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 응용 프로그램 ID와 광고 단위 ID는 파트너 센터에서 가져온 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -175,7 +175,7 @@ ms.locfileid: "5989196"
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 파트너 센터에서 가져온 광고 단위 ID와 응용 프로그램 ID 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 응용 프로그램 ID와 광고 단위 ID는 파트너 센터에서 가져온 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs

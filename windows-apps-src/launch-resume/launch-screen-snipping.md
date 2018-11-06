@@ -1,39 +1,39 @@
 ---
 author: QuinnRadich
 title: 화면 캡처 시작
-description: 이 항목에서는 ms-screenclip 및 ms-screensketch URI 스키마를 설명합니다. 앱 캡처 및 스케치 응용 프로그램을 실행 하거나 새 캡처를 열고 이러한 URI 체계를 사용할 수 있습니다.
+description: 이 항목에서는 ms screenclip 및 ms screensketch URI 스키마를 설명합니다. 앱 캡처 및 스케치 앱을 시작 하거나 새 캡처를 열고 이러한 URI 체계를 사용할 수 있습니다.
 ms.author: quradic
 ms.date: 8/1/2017
 ms.topic: article
 keywords: windows 10, uwp, uri, 캡처, 스케치
 ms.localizationpriority: medium
 ms.openlocfilehash: 64df8d9768fa20a6d6819e93fe06904feede6223
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982377"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042167"
 ---
 # <a name="launch-screen-snipping"></a>화면 캡처 시작
 
-**ms-screenclip:** 및 **ms-screensketch:** URI 스키마를 사용 하면 캡처 또는 스크린샷을 편집을 시작할 수 있습니다.
+**ms screenclip:** 및 **ms screensketch:** URI 스키마를 사용 하면 캡처 또는 스크린샷을 편집을 시작할 수 있습니다.
 
 ## <a name="open-a-new-snip-from-your-app"></a>앱에서 새 캡처를 엽니다.
 
-**ms-screenclip:** URI에 앱이 자동으로 열고, 하 고 새 캡처를 시작할 수 있도록 합니다. 결과 캡처는 사용자의 클립보드에 복사 됩니다 하지만 자동으로 앱에 다시 전달 되지 않습니다.
+**ms screenclip:** URI에 앱이 자동으로 열고, 하 고 새 캡처를 시작할 수 있도록 합니다. 결과 캡처는 사용자의 클립보드에 복사 됩니다 하지만 자동으로 앱에 다시 전달 되지 않습니다.
 
-**ms-screenclip:** 다음 매개 변수를 사용 합니다.
+**ms screenclip:** 다음 매개 변수를 사용 합니다.
 
 | 매개 변수 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
 | 원본 | 문자열 | 아니요 | URI를 시작 하는 소스를 나타내는 자유형 문자열입니다. |
-| delayInSeconds | int | 아니요 | 1 ~ 30의 정수 값입니다. 지연 되는 URI 호출 및 캡처 시작 되는 시기 사이 전체 초를 지정 합니다. |
+| delayInSeconds | int | 아니요 | 1 ~ 30의 정수 값입니다. 지연 되는 URI 호출과 캡처 시작 되는 시기 간에 전체 초 단위로 지정 합니다. |
 
 ## <a name="launching-the-snip--sketch-app"></a>캡처 및 스케치 앱 시작
 
-**ms-screensketch:** URI를 사용 하면 프로그래밍 방식으로 캡처 및 스케치 앱을 실행 하 고 주석에 해당 앱의 특정 이미지를 열 수 있습니다.
+**ms screensketch:** URI를 사용 하면 프로그래밍 방식으로 캡처 및 스케치 앱을 실행 하 고 주석에 대 한 해당 앱의 특정 이미지를 열 수 있습니다.
 
-**ms-screensketch:** 다음 매개 변수를 사용 합니다.
+**ms screensketch:** 다음 매개 변수를 사용 합니다.
 
 | 매개 변수 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |

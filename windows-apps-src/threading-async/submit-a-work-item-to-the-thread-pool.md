@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
 ms.openlocfilehash: fe73520782b18fb7419807695296bc6487f9c018
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989350"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040310"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
@@ -33,7 +33,7 @@ ms.locfileid: "5989350"
 선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 사용할 수 있습니다.
 
 >[!NOTE]
->[**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) 를 사용 하 여 UI 스레드에 액세스 하 여 작업 항목의 진행률을 표시 합니다.
+>[**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) 를 사용 하 여 UI 스레드에 액세스 하 고 작업 항목의 진행률을 표시 합니다.
 
 다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
 
@@ -352,7 +352,7 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-[항목 샘플 작업 만들기는 ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) Windows8.1, 용으로 작성 된의이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap Windows10 앱에서 소스 코드를 다시 사용 합니다.
+[항목 샘플 작업 만들기는 ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) Windows8.1를 위해 작성의이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap Windows10 앱에서 소스 코드를 다시 사용 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

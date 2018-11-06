@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
 ms.openlocfilehash: d943a43629860f666c9ec9eb7f0b3bb406b1b1b5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989590"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040370"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 
-이 항목에서는 생성 하 고 사용 하 여 Windows 런타임 비동기 개체를 사용 하는 둘 다 수 방법 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+이 항목에서는 생성 하 고 사용 하 여 Windows 런타임 비동기 개체를 사용 하는 둘 다 수 방법 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다.
 
 ## <a name="asynchronous-operations-and-windows-runtime-async-functions"></a>비동기 작업 및 Windows 런타임 "비동기" 함수
 
@@ -27,9 +27,9 @@ ms.locfileid: "5989590"
 - [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation_tresult_)
 - [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
 
-각 비동기 작업 형식은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스에서 해당하는 형식으로 프로젝션됩니다. C++/WinRT에는 내부의 await 어댑터 구조체도 포함됩니다. 작성할 수 직접 않지만 구조체 덕분에 사용 하지는 `co_await` 비동기 작업 형식 중 하나를 반환 하는 함수의 결과 협조적 문을 합니다. 또한 이러한 형식을 반환하는 사용자 고유의 코루틴을 작성하는 것도 가능합니다.
+각 비동기 작업 형식은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스에서 해당하는 형식으로 프로젝션됩니다. C++/WinRT에는 내부의 await 어댑터 구조체도 포함됩니다. 작성할 수 직접 않지만 구조체 덕분에 사용 하지 않는는 `co_await` 비동기 작업 형식 중 하나를 반환 하는 함수의 결과 협조적 문을 합니다. 또한 이러한 형식을 반환하는 사용자 고유의 코루틴을 작성하는 것도 가능합니다.
 
-비동기 Windows 함수의 예로는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다. 이 비동기 함수는 비동기 작업 개체로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) 형식을 반환합니다. 몇 가지 방법을 살펴보겠습니다&mdash;첫 번째 차단 하 고 다음 비차단&mdash;사용 하 여 C + + WinRT 하는 등의 API를 호출 합니다.
+비동기 Windows 함수의 예로는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다. 이 비동기 함수는 비동기 작업 개체로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) 형식을 반환합니다. 몇 가지 방법을 살펴보겠습니다&mdash;첫 번째 차단 하 고 다음 비차단&mdash;사용 하 여 C + +는 등의 API를 호출 하는 WinRT 합니다.
 
 ## <a name="block-the-calling-thread"></a>호출 스레드 차단
 
@@ -68,7 +68,7 @@ int main()
 C++/WinRT는 C++ 코루틴을 프로그래밍 모델에 통합하여 결과를 협조적으로 기다릴 수 있는 자연스러운 방법을 제공합니다. 사용자는 코루틴을 작성하여 고유의 Windows 런타임 비동기 작업을 생성할 수 있습니다. 아래 코드 예제에서는 **ProcessFeedAsync**가 코루틴입니다.
 
 > [!NOTE]
-> **Get** 함수가 존재 C + + /winrt 프로젝션 모든 C + 내에서 함수를 호출할 수 있도록 **winrt::Windows::Foundation::IAsyncAction**입력 + WinRT 프로젝트. **가져오기** 는 실제 Windows 런타임 형식의 **IAsyncAction**응용 프로그램 이진 인터페이스 (ABI) 표면의 일부가 되지 않으므로 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 인터페이스의 구성원으로 나열 된 함수를 찾지 않습니다.
+> **Get** 함수가 존재 C + + /winrt 프로젝션 모든 C + 내에서 함수를 호출할 수 있도록 **winrt::Windows::Foundation::IAsyncAction**입력 + WinRT 프로젝트입니다. 실제 Windows 런타임 형식 **IAsyncAction**응용 프로그램 이진 인터페이스 (ABI) 표면에 속하지 않는 **가져오기** 때문에 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 인터페이스의 구성원으로 나열 된 함수를 찾지 않습니다.
 
 ```cppwinrt
 // main.cpp
@@ -256,9 +256,9 @@ IASyncAction DoWorkAsync(Param const value);
 
 ## <a name="offloading-work-onto-the-windows-thread-pool"></a>Windows 스레드 풀에서 오프로딩 작업
 
-코 루틴은 다른 같은 함수 호출자 함수 돌아갑니다 실행 될 때까지 차단 됩니다. 반환할 코 루틴에 대 한 첫 번째 기회는 첫 번째 `co_await`, `co_return`, 또는 `co_yield`합니다.
+코 루틴은 다른와 같은 함수 호출자 함수 돌아갑니다 실행 될 때까지 차단 됩니다. 반환할 코 루틴에 대 한 첫 번째 기회는 첫 번째 및 `co_await`, `co_return`, 또는 `co_yield`합니다.
 
-작업을 수행 하기 전에 호출자에 실행을 반환 해야 하는 코 루틴에서 컴퓨팅 바인딩된 작업 (즉, 일시 중단 지점 도입) 호출자가 차단 되지 않도록 합니다. 는 아직 수행 하는 경우 `co_await`-연산 일부 다른 작업을 할 수 있습니다 `co_await` [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수입니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
+이 수행 하기 전에 호출자에 실행을 반환 해야 하는 코 루틴에서 컴퓨팅 바인딩된 작업 (즉, 일시 중단 지점 도입) 호출자가 차단 되지 않도록 합니다. 는 아직 수행 하는 경우 `co_await`-연산 일부 기타 작업을 할 수 있습니다 `co_await` [**winrt:: resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수입니다. 컨트롤이 호출자에 반환되며 즉시 스레드 풀 스레드에서 실행이 다시 시작합니다.
 
 구현에 사용되는 스레드 풀은 낮은 수준의 [Windows 스레드 풀](https://msdn.microsoft.com/library/windows/desktop/ms686766)이므로 이상적으로 효율적입니다.
 
@@ -291,7 +291,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 }
 ```
 
-**TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. 이렇게 하려면 [**winrt:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) 개체를 인스턴스화하고, 백그라운드 작업을 수행 하 고 다음 `co_await` 호출 컨텍스트에로 다시 전환 하려면 **apartment_context** 합니다.
+**TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. 이렇게 하려면 [**winrt:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) 개체를 인스턴스화하고, 백그라운드 작업을 수행 했다가 `co_await` **apartment_context** 호출 컨텍스트에 다시 전환할 수 있습니다.
 
 ```cppwinrt
 IAsyncAction DoWorkAsync(TextBlock const& textblock)
@@ -309,7 +309,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 
 위의 코루틴이 **TextBlock**을 만든 UI 스레드에서 호출되는 한 이 기술은 작동합니다. 앱에서 이것이 확실한 경우는 많습니다.
 
-수 있는 확실 하지 않는 경우 스레드 호출에 대해 경우를 다루는 UI를 업데이트 하는 보다 일반적인 솔루션 `co_await` [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수 하 여 특정 전경 스레드로 전환 합니다. 아래의 코드 예제에서 **TextBlock**(해당 [**발송자**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher) 속성에 액세스하여)과 연관된 발송자 개체를 전달하여 전경 스레드를 지정합니다. **winrt::resume_foreground**의 구현이 코루틴에서 이후에 오는 작업을 실행하는 해당 발송자 개체에서 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출합니다.
+수 하면 확실 하지 스레드 호출에 대해 다루는 UI를 업데이트 하는 일반적인 솔루션 `co_await` [**winrt:: resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수 하 여 특정 전경 스레드로 전환 합니다. 아래의 코드 예제에서 **TextBlock**(해당 [**발송자**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher) 속성에 액세스하여)과 연관된 발송자 개체를 전달하여 전경 스레드를 지정합니다. **winrt::resume_foreground**의 구현이 코루틴에서 이후에 오는 작업을 실행하는 해당 발송자 개체에서 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출합니다.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
@@ -326,9 +326,9 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 
 ## <a name="execution-contexts-resuming-and-switching-in-a-coroutine"></a>실행 컨텍스트, 다시 시작 및 코 루틴에서 전환
 
-광범위 하 게 말해서 코 루틴에서 일시 중단 지점, 후 실행의 원래 스레드 수 사라지고 재개 모든 스레드에서 발생할 수 있습니다 (즉, 모든 스레드 수 메서드를 호출 **완료** 비동기 작업에 대 한).
+대체로 코 루틴에서 일시 중단 지점, 후 실행의 원래 스레드 수 사라지고 재개 모든 스레드에서 발생할 수 있습니다 (즉, 모든 스레드에서 호출할 수 **Completed** 메서드 비동기 작업에 대 한).
 
-그러나 있습니다 `co_await` 4 개의 Windows 런타임 비동기 작업 형식 (**IAsyncXxx**) 한 후 C + + WinRT 시점에 호출 컨텍스트를 캡처합니다 하면 `co_await`합니다. 며 연속 작업을 다시 시작할 때 해당 컨텍스트에서 여전히 여러분이 수 있게 합니다. C + + WinRT 호출 컨텍스트에 이미 고 있는지 확인 하 고, 그렇지 않은 경우 전환 하 여이 수행 합니다. 전에 단일 스레드 아파트 (STA) 스레드는 경우 `co_await`, 다음 나중에; 동일한 계정에 수 전에 다중 스레드 아파트 (MTA) 스레드는 경우 `co_await`, 다음 나중에 수 있습니다.
+그러나 있습니다 `co_await` 4 개의 Windows 런타임 비동기 작업 형식 (**IAsyncXxx**) 후 C + + WinRT 시점에 호출 컨텍스트를 캡처합니다 하면 `co_await`합니다. 며 연속 작업을 다시 시작할 때 해당 컨텍스트에 남아 있는 수 있게 합니다. C + + WinRT 호출 컨텍스트에서 이미 고 있는지 확인 하 고, 그렇지 않은 경우 전환 하 여이 수행 합니다. 전에 단일 스레드 아파트 (STA) 스레드는 경우 `co_await`, 다음 나중에; 동일한 계정에 수 전에 다중 스레드 아파트 (MTA) 스레드는 경우 `co_await`, 다음 나중에 하나에 수 있습니다.
 
 ```cppwinrt
 IAsyncAction ProcessFeedAsync()
@@ -342,7 +342,7 @@ IAsyncAction ProcessFeedAsync()
 }
 ```
 
-이 동작은 의존할 수 있는 이유 때문에 C + + WinRT 이러한 코드 조각을 (대기 어댑터) c + + 코 루틴 언어 지원에 해당 Windows 런타임 비동기 작업 형식에 맞게 코드를 제공 합니다. 나머지 awaitable 형식 C + + WinRT는 단순히 스레드 풀 래퍼 및/또는 도우미; 따라서 스레드 풀에 완료 합니다.
+이 동작에 의존할 수 있는 이유 때문에 C + + WinRT c + + 코 루틴 언어 지원 (이러한 코드 조각을 대기 어댑터 라고 함)에 해당 Windows 런타임 비동기 작업 형식에 맞게 코드를 제공 합니다. 나머지 awaitable 형식 C + + WinRT는 단순히 스레드 풀 래퍼 및/또는 도우미입니다. 따라서 스레드 풀에 완료 합니다.
 
 ```cppwinrt
 using namespace std::chrono;
@@ -355,9 +355,9 @@ IAsyncOperation<int> return_123_after_5s()
 }
 ```
 
-경우 하면 `co_await` 다른 형식&mdash;내 에서도 C + + /winrt 코 루틴 구현 체&mdash;다른 라이브러리 어댑터를 제공 하 고 해당 어댑터 재개 및 컨텍스트에 측면에서 수행할 작업을 이해 해야 합니다.
+경우 하면 `co_await` 다른 형식&mdash;내 에서도 C + + /winrt 코 루틴 구현 체&mdash;다른 라이브러리의 어댑터를 제공 하 고 해당 어댑터 재개 및 컨텍스트에 측면에서 수행할 작업을 이해 해야 합니다.
 
-최소한으로 컨텍스트 전환에 유지 하려면이 항목에서 이미 살펴본 기법 중 일부를 사용할 수 있습니다. 몇 가지를 수행 하는 일러스트레이션 살펴보겠습니다. 이 다음 의사 코드 예제에서는 이미지를 로드 하는 Windows 런타임 API를 호출 하 고 해당 이미지를 처리 하는 백그라운드 스레드에 상단의 UI에서 이미지를 표시 하려면 UI 스레드를 반환 하는 이벤트 처리기의 윤곽선 보여 줍니다.
+최소 나타날 때까지 아래로 컨텍스트 전환에 유지 하려면이 항목에서 이미 살펴본 기법 중 일부를 사용할 수 있습니다. 몇 가지를 수행 하는 일러스트레이션 살펴보겠습니다. 이 다음 의사 코드 예제에서는 이미지를 로드 하는 Windows 런타임 API를 호출 하 고 해당 이미지를 처리 하도록 백그라운드 스레드에 상단의 다음 UI에서 이미지를 표시 하는 UI 스레드를 반환 하는 이벤트 처리기의 개요를 보여 줍니다.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
@@ -383,7 +383,7 @@ IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEven
 }
 ```
 
-이 시나리오에 대 한 약간의 **StorageFile::OpenAsync**호출 주변 ineffiency 있습니다. 배경 필요한 컨텍스트 스위치는 스레드 (있도록 처리기 호출자에 실행을 반환할 수 있습니다)에서 재시작 이후는 C + + WinRT UI 스레드 컨텍스트를 복원 합니다. 하지만 경우 필요한 경우가 아니라면 UI를 업데이트 하려고 합니다. 될 때까지 UI 스레드를 켜야 합니다. 호출 *하기 전에* **winrt:: resume_background**우리의 호출 것으로 인 한 부담이 더 불필요 한 상황에 맞는 백 앞과 스위치는 더 많은 Windows 런타임 Api입니다. 솔루션 그 전에 *모든* Windows 런타임 Api를 호출 되지 않습니다. **Winrt:: resume_background**후 모든 이동 합니다.
+이 시나리오에 대 한 약간의 **StorageFile::OpenAsync**호출 주위 ineffiency 있습니다. 배경 필요한 컨텍스트 스위치는 스레드 (있도록 처리기 호출자에 실행을 반환할 수 있습니다)에서 재시작 이후는 C + + WinRT UI 스레드 컨텍스트를 복원 합니다. 하지만 경우 필요한 경우가 아니라면 UI를 업데이트 하려고 될 때까지 UI 스레드를 켜야 합니다. 호출 *하기 전에* **winrt:: resume_background**우리의 호출 초래 하는 더 불필요 한 백 앞 컨텍스트 전환 더 많은 Windows 런타임 Api입니다. 솔루션 그 전에 *모든* Windows 런타임 Api를 호출 되지 않습니다. **Winrt:: resume_background**후 모든 이동 합니다.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
@@ -407,10 +407,10 @@ IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEven
 }
 ```
 
-직접 쓸 수를 더 고급, 특정 작업을 수행 하려는 경우 await 어댑터 합니다. 예를 들어, 원하는 경우는 `co_await` 비동기 작업에서 완료 하는 동일한 스레드에서 다시 시작 (따라서 스위치가 없는 상황에 맞는), 작성 하 여 시작할 수 다음 await 어댑터 아래 표시 된 것과 비슷한 합니다.
+직접 쓸 수 있는 다음 더 발전 특정 작업을 수행 하려는 경우 await 어댑터 합니다. 예를 들어, 원하는 경우는 `co_await` 에서 비동기 작업이 완료 된 동일한 스레드에서 다시 시작 (따라서 스위치가 없는 상황에 맞는)를 작성 하 여 시작할 수 있는 다음 await 어댑터 아래 표시 된 것과 비슷한 합니다.
 
 > [!NOTE]
-> 아래의 코드 예제는 교육 목적 으로만; 제공 됩니다. 시작 하는 것은 이해 어떻게 작동 하는 어댑터를 기다립니다. 개발 하 고 고유한 테스트 하는 것이 좋습니다 고유한 코드 베이스에서이 기술을 사용 하려는 경우 await 어댑터 struct(s) 합니다. 예를 들어 **complete_on_any**, **complete_on_current**및 **complete_on(dispatcher)** 작성할 수 있습니다. 템플릿 매개 변수로 **IAsyncXxx** 형식을 사용 하는 템플릿을 만들어 고려해 야 합니다.
+> 아래 코드 예제에서는 교육 목적 으로만; 제공 시작할 수는 이해 어떻게 작동 하는 어댑터를 기다립니다. 개발 하 고 고유한 테스트 하는 것이 좋습니다 고유한 코드 베이스에서이 기술을 사용 하려는 경우 await 어댑터 struct(s) 합니다. 예를 들어 **complete_on_any**, **complete_on_current**및 **complete_on(dispatcher)** 작성할 수 있습니다. 템플릿 매개 변수로 **IAsyncXxx** 형식을 사용 하는 템플릿을 만들어 고려해 야 합니다.
 
 ```cppwinrt
 struct no_switch
@@ -442,25 +442,25 @@ private:
 };
 ```
 
-**No_switch** 를 사용 하는 방법을 이해 await 어댑터, c + + 컴파일러를 발견 한 경우 소식을 먼저 해야는 `co_await` 함수를 찾고 식 **await_ready**, **await_suspend**및 **await_resume**호출 합니다. C + + WinRT 라이브러리는 기본적으로 같이 적절 한 동작을 얻을 수 있도록 이러한 기능을 제공 합니다.
+**No_switch** 를 사용 하는 방법을 이해 하려면 await 어댑터, c + + 컴파일러를 발견 한 경우 소식을 먼저 해야는 `co_await` 함수를 찾고 식 **await_ready**, **await_suspend**및 **await_resume**호출 합니다. C + + WinRT 라이브러리는 기본적으로 다음과 같은 적절 한 동작을 얻을 수 있도록 이러한 기능을 제공 합니다.
 
 ```cppwinrt
 IAsyncAction async{ ProcessFeedAsync() };
 co_await async;
 ```
 
-사용 하 여 **no_switch** await 어댑터, 단지 변경 하는 유형을 `co_await` **no_switch**, 다음과 같은 **IAsyncXxx** 에서 식입니다.
+사용 하 여 **no_switch** await 어댑터 정당한 변경 하는 형식의 `co_await` 식에서 **IAsyncXxx** **no_switch**, 다음과 같은입니다.
 
 ```cppwinrt
 IAsyncAction async{ ProcessFeedAsync() };
 co_await static_cast<no_switch>(async);
 ```
 
-그런 다음 **IAsyncXxx**일치 하는 세 개의 **await_xxx** 함수를 찾고 대신 c + + 컴파일러 **no_switch**일치 하는 기능에 대해 찾습니다.
+그런 다음 **IAsyncXxx**일치 하는 세 개의 **await_xxx** 함수를 찾고 대신 c + + 컴파일러 **no_switch**일치 하는 함수에 대 한 찾습니다.
 
-## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>비동기 작업을 취소 콜백을 취소
+## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>취소 콜백 및 비동기 작업을 취소합니다.
 
-비동기 프로그래밍에 대 한 Windows 런타임 기능 인플라이트 비동기 작업 또는 작업을 취소할 수 있도록 합니다. 다음은 파일의 잠재적으로 큰 컬렉션을 검색 하려면 [**StorageFolder::GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) 호출 하는 예 및 결과 비동기 작업 개체 데이터 멤버에 저장 합니다. 사용자가 작업을 취소 하는 옵션입니다.
+비동기 프로그래밍에 대 한 Windows 런타임 기능 인플라이트 비동기 작업 또는 작업을 취소할 수 있도록 합니다. 다음은 파일의 잠재적으로 큰 컬렉션을 검색 하려면 [**StorageFolder::GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) 호출 하는 예 및 데이터 멤버에 결과 비동기 작업 개체를 저장 합니다. 사용자는 작업을 취소할 수 있습니다.
 
 ```cppwinrt
 // MainPage.xaml
@@ -510,7 +510,7 @@ private:
 };
 ```
 
-취소 구현 측면, 간단한 예제를 사용 하 여 시작 해 보겠습니다.
+취소 구현 측면에 대 한 간단한 예제를 사용 하 여 시작 해 보겠습니다.
 
 ```cppwinrt
 // pch.h
@@ -547,11 +547,11 @@ int main()
 }
 ```
 
-메시지가 표시 됩니다 **ImplicitCancellationAsync** 인쇄 하나의 까지의 3 초 동안 초당 자동으로 때마다 다음 위의 예제를 실행 하는 경우 취소 되 고 결과로 종료 합니다. 이 작동에 발생 하기 때문에 `co_await` 식 코 루틴 취소 되었는지 여부를 확인 합니다. 도달한 경우 다음이 short-circuits입니다. 하 고 있지 않으면 다음이 일시 중단 정상적으로 합니다.
+메시지가 표시 됩니다 **ImplicitCancellationAsync** 인쇄 하나의 까지의 3 초 동안 초당 자동으로 시간 후 위의 예제를 실행 하는 경우 취소 되 고의 결과로 종료 합니다. 이 작동에 발생 하기 때문에 `co_await` 식 코 루틴 취소 되었는지 여부를 확인 합니다. 도달한 경우 다음이 short-circuits입니다. 하 고 있지 않으면 다음 그 일시 중단 정상적으로 합니다.
 
-코 루틴 일시 중단 된 동안에 물론 취소 발생할 수 있습니다. 코 루틴에 다시 시작 될 때에 다른 부딪치는 또는 `co_await`, 취소에 대 한 확인 됩니다. 이 문제는 취소에 대 한 응답 잠재적으로 너무 거친-세분화 된 대기 시간 중 하나입니다.
+코 루틴을 일시 중단 된 동안에 물론 취소 발생할 수 있습니다. 코 루틴에 다시 시작 될 때에 다른 잠금을 해제 `co_await`, 취소에 대 한 확인 됩니다. 이 문제는 취소에 대 한 응답 잠재적으로 너무 거친-세분화 된 대기 시간 중 하나입니다.
 
-따라서 다른 옵션은 사용자 코 루틴이 내에서 취소에 대 한 명시적으로 폴링합니다. 위 예제는 아래 목록에 코드를 사용 하 여 업데이트 합니다. 이 새로운 예제에서는 **ExplicitCancellationAsync** [**winrt::get_cancellation_token**](/uwp/cpp-ref-for-winrt/get-cancellation-token) 함수에 의해 반환 되는 개체를 검색 하 고 사용 하 여 주기적으로 코 루틴이 취소 되었는지 여부를 확인 합니다. 취소 되지 않은 있기만 코 루틴이 무한; 취소 되 면 루프와 함수 정상적으로 종료 합니다. 이전 예제에서는 하지만 여기 종료 명시적으로 발생과 컨트롤에서 결과 동일 합니다.
+따라서 다른 옵션은 사용자 코 루틴이 내에서 취소에 대 한 명시적으로 폴링합니다. 위의 예제에서는 아래 목록에 코드를 사용 하 여 업데이트 합니다. 새이 예제에서는 **ExplicitCancellationAsync** [**winrt::get_cancellation_token**](/uwp/cpp-ref-for-winrt/get-cancellation-token) 함수에 의해 반환 되는 개체를 검색 하 고 사용 하 여 주기적으로 코 루틴이 취소 되었는지 여부를 확인 합니다. 취소 되지 않은으로 코 루틴이 무한입니다. 취소 되 면 루프와 함수 정상적으로 종료 합니다. 앞의 예제 이지만 여기 종료 명시적으로 바뀌면 및 제어 결과 동일 합니다.
 
 ```cppwinrt
 ...
@@ -575,13 +575,13 @@ IAsyncAction MainCoroutineAsync()
 ...
 ```
 
-고객을 대신 코 루틴 생성 하는 **IAsyncAction** 의 정보를 사용 하 여 취소 토큰을 검색 **winrt::get_cancellation_token** 대기 합니다. 해당 토큰에서 함수 호출 연산자를 사용 하 여 취소 상태를 쿼리하려고 수 있습니다&mdash;취소에 기본적으로 폴링합니다. 일부 컴퓨팅 바인딩된 작업을 수행 하거나 큰 컬렉션을 반복 하는 경우 적절 한 기술입니다.
+고객을 대신 코 루틴 생성 하는 **IAsyncAction** 의 정보를 사용 하 여 취소 토큰을 검색 **winrt::get_cancellation_token** 대기 합니다. 해당 토큰에서 함수 호출 연산자를 사용 하 여 취소 상태를 쿼리할 수 있습니다&mdash;취소에 기본적으로 폴링합니다. 일부 컴퓨팅 바인딩된 작업을 수행 하거나 큰 컬렉션을 반복 하는 경우 적절 한 기술입니다.
 
-### <a name="register-a-cancellation-callback"></a>취소 콜백 등록
+### <a name="register-a-cancellation-callback"></a>취소 콜백을 등록합니다
 
-Windows 런타임의 취소 다른 비동기 개체에 흐름 자동으로 하지 않습니다. 하지만&mdash;Windows sdk 버전 10.0.17763.0 (Windows 10, 버전 1809)&mdash;취소 콜백의 등록할 수 있습니다. 이 선점형 후크 기울기 취소 전파할 수 및 통합 기존 동시성 라이브러리를 사용할 수 있게 합니다.
+Windows 런타임 취소 다른 비동기 개체에 자동으로 전달 하지 않습니다. 하지만&mdash;Windows sdk 버전 10.0.17763.0 (Windows 10, 버전 1809)&mdash;취소 콜백의 등록할 수 있습니다. 이 선점형 후크 기울기 취소 전파할 수 및 통합 기존 동시성 라이브러리를 사용할 수 있게 합니다.
 
-이 다음 코드 예제에서는 **NestedCoroutineAsync** 작업을 수행 하지만 없는 특수 취소 논리는 것입니다. **CancellationPropagatorAsync** 은 중첩 된 코 루틴이;에 래퍼 래퍼 pre-emptively 취소를 전달합니다.
+다음 코드 예제에서는이 **NestedCoroutineAsync** 작업을 수행 하지만 없는 특수 취소 논리는 것입니다. **CancellationPropagatorAsync** 은 중첩 된 코 루틴;에 래퍼 래퍼 pre-emptively 취소를 전달합니다.
 
 ```cppwinrt
 // pch.h
@@ -631,11 +631,11 @@ int main()
 }
 ```
 
-**CancellationPropagatorAsync** 자체 취소 콜백에 대 한 람다 함수를 등록 하 고 대기 다음 (중단) 중첩 된 작업이 완료 될 때까지 합니다. 때 또는 **CancellationPropagatorAsync** 취소 된 경우에 중첩 된 코 루틴을 취소를 전파 됩니다. 취소; 폴링 필요가 없음 나는 취소 무기한 차단 합니다. 이 메커니즘은 C + 아무것도 알고 있는 코 루틴 또는 동시성 라이브러리를 사용 하 여 interop를 사용할 수 있을 만큼 유연 + WinRT 합니다.
+**CancellationPropagatorAsync** 취소 콜백은 람다 함수를 등록 하 고 대기 다음 (중단) 중첩 된 작업이 완료 될 때까지 합니다. 또는 **CancellationPropagatorAsync** 작업이 취소 될 때 중첩 된 코 루틴을 취소를 전파 됩니다. 취소; 폴링 필요가 없음 나는 취소 무기한 차단 합니다. 이 메커니즘은 C + 아무것도 알고 있는 코 루틴 또는 동시성 라이브러리와의 상호 운용성을 사용할 수 있을 만큼 유연 + WinRT 합니다.
 
 ## <a name="reporting-progress"></a>진행률 보고
 
-사용자 코 루틴이 [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)또는 [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)중 하나를 반환 하는 경우 다음 [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) 함수에 의해 반환 되는 개체를 검색을 사용 하 여 진행률을 다시 진행률 보고 처리기입니다. 코드 예제는 다음과 같습니다.
+사용자 코 루틴이 [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)또는 [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)중 하나를 반환 하는 경우 다음 [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) 함수에 의해 반환 되는 개체를 검색을 사용 하 여 진행률을 다시 진행률 보고를 처리기입니다. 코드 예제는 다음과 같습니다.
 
 ```cppwinrt
 // pch.h
@@ -695,7 +695,7 @@ int main()
 ```
 
 > [!NOTE]
-> 비동기 작업 또는 작업에 대 한 둘 이상의 *완료 처리기* 를 구현 하는 것이 올바르지 합니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다가 경우 두 번째 실패 합니다. 두 완료 처리기는 다음 두 가지 중 하나는 적절 한; 두 동일한 비동기 개체에 대 한 합니다.
+> 비동기 작업 또는 작업에 대 한 개 이상의 *완료 처리기* 를 구현 하려면 올바르지 않습니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다 있는 경우 두 번째 실패 합니다. 어느 완료 처리기는 다음 두 가지 중 하나는 적절 한; 두 동일한 비동기 개체에 대 한 합니다.
 
 ```cppwinrt
 auto async_op_with_progress{ CalcPiTo5DPs() };
@@ -712,9 +712,9 @@ double pi{ co_await async_op_with_progress };
 
 완료 처리기에 대 한 자세한 내용은 [비동기 작업을 위한 대리자 형식](handle-events.md#delegate-types-for-asynchronous-actions-and-operations)을 참조 하세요.
 
-## <a name="fire-and-forget"></a>시작 되 고 것을 잊지합니다
+## <a name="fire-and-forget"></a>발생 한 것을 잊지합니다
 
-경우에 따라 다른 작업을 동시에 수행할 수 있는 작업을 해야 하 고 해당 작업이 완료 될 때까지 기다리는 필요가 없습니다 (없는 다른 작업에 따라 다름), 필요도 없습니다 값을 반환 하도록 합니다. 이 경우 작업을 실행 하 고 기억 수 있습니다. 반환 형식이 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget) (대신 **concurrency:: task**또는 Windows 런타임 비동기 작업 형식 중 하나)는 코 루틴을 작성 하 여 수행할 수 있습니다.
+경우에 따라 다른 작업을 동시에 수행할 수 있는 작업이 하 고 해당 작업이 완료 되기를 기다리는 필요가 없습니다 (다른 작업 시간에 따라 다름), 필요도 없습니다 값을 반환 합니다. 이 경우 작업을 실행 하 고 기억 수 있습니다. 반환 형식이 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget) (대신 **concurrency:: task**또는 Windows 런타임 비동기 작업 형식 중 하나)는 코 루틴을 작성 하 여 수행할 수 있습니다.
 
 ```cppwinrt
 // pch.h

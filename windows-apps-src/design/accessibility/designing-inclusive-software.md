@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f2a28d2a401ae132772c3948b3c4299184d4f858
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992855"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043183"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Windows 10용 포괄 소프트웨어 디자인  
 

@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 그래픽, 진단, 도구, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
-ms.locfileid: "5984011"
+ms.locfileid: "6040619"
 ---
 # <a name="graphics-diagnostics-tools"></a>그래픽 진단 도구
 
 
 
-Windows10, 그래픽 진단 도구 된 이제 Windows 내에서 사용할 수 있는 선택적 기능으로 합니다. 런타임 및 Visual Studio에서 제공하는 그래픽 진단 기능을 사용하여 DirectX 앱 또는 게임을 개발하려면 다음과 같이 선택적 그래픽 도구 기능을 설치합니다.
+Windows10, 그래픽 진단 도구 된 이제 Windows에서 사용할 수 있는 선택적 기능으로 합니다. 런타임 및 Visual Studio에서 제공하는 그래픽 진단 기능을 사용하여 DirectX 앱 또는 게임을 개발하려면 다음과 같이 선택적 그래픽 도구 기능을 설치합니다.
 
 1.  **설정**으로 이동한 **앱**선택 **선택적 기능 관리를**차례로 클릭 합니다.
 2.  **기능 추가**를 클릭합니다.   

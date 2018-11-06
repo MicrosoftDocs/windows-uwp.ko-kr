@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
 ms.openlocfilehash: c42255ec42432d0674533492e141c4a48f3bb9ff
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973336"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046783"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
@@ -33,7 +33,7 @@ ms.locfileid: "5973336"
 
 새 키를 만들려면
 
-1.  브라우저에서 Bing 지도 개발자 센터로 이동 ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  브라우저에서 Bing 지도 개발자 센터 이동 ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
 
 2.  로그인하라는 메시지가 표시되면 Microsoft 계정을 입력하고 **로그인**을 클릭합니다.
 

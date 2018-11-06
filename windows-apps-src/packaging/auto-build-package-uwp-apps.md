@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fd82e4574ab6c6aff30d762f2eacc0d62fd6bdf
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996063"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040818"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -254,7 +254,7 @@ CI_MyUWPApp_1.1.2501.0
 
 다음으로 [HockeyApp을 VSTS(Visual Studio Team Services) 또는 TFS(Team Foundation Server)와 함께 사용하는 방법](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs) 가이드를 사용하여 HockeyApp 연결을 구성합니다. Microsoft 계정, 소셜 미디어 계정 또는 메일 주소만 사용해도 HockeyApp 계정을 설정할 수 있습니다. 무료 요금제에서는 앱 2개, 소유자 한 명, 데이터 무제한을 제공합니다.
 
-그런 다음 수동으로 만들거나, 기존 앱 패키지 파일을 업로드 하 여 HockeyApp 앱을 만들 수 있습니다. 자세한 내용은 [새 앱을 만드는 방법](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app)을 참조하세요.  
+그런 다음, 수동으로 만들거나, 기존 앱 패키지 파일을 업로드 하 여 HockeyApp 앱을 만들 수 있습니다. 자세한 내용은 [새 앱을 만드는 방법](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app)을 참조하세요.  
 
 기존 앱 패키지 파일을 사용 하려면 빌드 단계를 추가 하 고 빌드 단계의 이진 파일 경로 매개 변수를 설정 합니다. 
 
@@ -293,7 +293,7 @@ Microsoft Store API와 통합하는 Microsoft Store용 Visual Studio Team Servic
 
 Azure AD(Active Directory)를 사용하여 개발자 센터 계정에 연결한 다음 AD에 요청을 인증할 수 있는 앱을 만들어야 합니다. 작업을 수행하는 확장 페이지의 지침에 따라 수행할 수 있습니다. 
 
-확장을 구성한 후에 빌드 작업을 추가 하 고 앱 ID와 업로드 파일의 위치를 사용 하 여 구성할 수 있습니다.
+확장을 구성한 후에 빌드 작업을 추가 하 고 응용 프로그램 ID와 업로드 파일의 위치를 사용 하 여 구성할 수 있습니다.
 
 ![개발자 센터 구성](images/building-screen17.png) 
 
@@ -314,10 +314,10 @@ AppxPackages\MyUWPApp__$(AppxVersion)_x86_x64_ARM_bundle.appxupload
 
 Microsoft Store에 게시하지 않고 앱을 배포하려는 경우 장치에서 앱 패키지에 서명하는 데 사용된 인증서를 신뢰하는 한 장치에 앱을 직접 사이드로드할 수 있습니다. 
 
-앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대해 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가 및는 다음 설치 하거나 앱 패키지 파일을 업데이트 합니다.
+앱을 설치하려면 `Add-AppDevPackage.ps1` PowerShell 스크립트를 사용하세요. 이 스크립트는 로컬 컴퓨터에 대 한 신뢰할 수 있는 루트 인증 섹션에 인증서를 추가 및는 다음 설치 하거나 앱 패키지 파일을 업데이트 합니다.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Windows10 1주년 업데이트를 사용하여 앱을 사이드로드
-Windows 10 1 주년 업데이트 앱 패키지 파일을 두 번 클릭 하 고 대화 상자에서 설치 단추를 선택 하 여 앱을 설치할 수 있습니다. 
+Windows 10 1 주년 업데이트에서 앱 패키지 파일을 두 번 클릭 하 고 대화 상자에서 설치 단추를 선택 하 여 앱을 설치할 수 있습니다. 
 
 ![rs1에서 사이드로드](images/building-screen18.png) 
 

@@ -5,14 +5,14 @@ title: 배너 광고
 ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
-keywords: windows 10, uwp, 광고, 광고, AdControl, 배너 광고
+keywords: windows 10, uwp, 광고, AdControl, 광고, 배너 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a8a08f81328be5dcf28a3f73a592e88e1edd135
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978530"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046906"
 ---
 # <a name="banner-ads"></a>배너 광고
 

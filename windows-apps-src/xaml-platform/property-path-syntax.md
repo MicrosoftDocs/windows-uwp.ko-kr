@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a94782165027c2194f677dfdbb9f2dec11541080
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984162"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045393"
 ---
 # <a name="property-path-syntax"></a>속성 경로 구문
 
@@ -94,7 +94,7 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 일반적인 시나리오는 아니지만 연결된 속성에 애니메이션 유형과 일치하는 속성 값이 있으면 연결된 속성을 애니메이션할 수 있습니다. 연결된 속성을 식별하는 이름에는 점이 이미 포함되어 있으므로 점이 개체-속성 단계로 처리되지 않도록 하려면 연결된 속성 이름을 괄호로 묶어야 합니다. 예를 들어 개체의 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) 연결된 속성을 애니메이션하도록 지정하는 문자열은 속성 경로 "(Grid.Row)"를 사용합니다.
 
-**참고**이 예제에서는 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) 의 값은 **Int32** 속성 형식. 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)를 정의했습니다.
+**참고**이 예제에서는 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) 의 값은 **Int32** 속성 유형입니다. 따라서 **Double** 애니메이션으로 애니메이션할 수 없습니다. 대신 [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344)가 "0" 또는 "1" 같은 정수로 설정된 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) 구성 요소가 있는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)를 정의했습니다.
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>애니메이션 대상 속성 경로의 속성에 대한 규칙
 

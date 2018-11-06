@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f88cccc3f32449d09c01450bf159b3fca6a3d59f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983205"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040072"
 ---
 # <a name="introduction-to-textures"></a>텍스처 소개
 

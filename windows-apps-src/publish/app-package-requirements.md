@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c76cb26d91ecd1f72b71f90b9ef464cdf52ba55
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5977105"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045087"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -59,7 +59,7 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 > 매니페스트의 값은 대/소문자를 구분합니다. 공백과 기타 문장 부호도 일치해야 합니다. 값을 주의해서 입력하고 검토하여 올바른지 확인합니다.
 
 
-앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle, 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
+앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle에서 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
 
 > [!TIP]
 > 패키지를 제출하기 전에 반드시 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 실행합니다. 그러면 매니페스트에 인증 또는 제출 오류를 발생시킬 수 있는 문제가 있는지 확인하는 데 도움이 될 수 있습니다.

@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, Xbox One 추가 기능 구입
 ms.localizationpriority: medium
 ms.openlocfilehash: e703c0c07e981ebf21ad3388ad178eabdd5c068d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970491"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043150"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Xbox One 추가 기능 획득 가져오기
 
-이 메서드를 사용 하 여 Microsoft Store 분석 API에서 집계 추가 기능 구입 데이터를 JSON 형식에 대 한 가져오기는 Xbox One 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 상태로 XDP 분석 파트너 센터 대시보드에서 사용할 수 있었던.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 집계 추가 기능 구입 데이터를 JSON 형식에 대 한 가져오려면 Xbox One 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -48,7 +48,7 @@ ms.locfileid: "5970491"
 
 | 매개 변수        | 유형   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | string | 취득 데이터를 검색할 Xbox One 게임의 *제품 Id* 입니다. 게임의 *제품 Id* 를 가져오려면 XDP 분석 프로그램에 게임을 찾아 URL에서 *제품 Id* 를 검색 합니다. 또는 파트너 센터 분석 보고서에서 구입 데이터를 다운로드 하는 경우 *productId* .tsv 파일에 포함 됩니다. |  예  |
+| applicationId | string | 구입 데이터를 검색할 Xbox One 게임의 *제품 Id* 입니다. 게임의 *제품 Id* 를 가져오려면 XDP 분석 프로그램에 게임을 찾아 URL에서 *제품 Id* 를 검색 합니다. 또는 파트너 센터 분석 보고서에서 구입 데이터를 다운로드 하는 경우 *제품 Id* 는.tsv 파일에 포함 됩니다. |  예  |
 | addonProductId | string | 추가 기능 구입 데이터를 검색 하려는 *productId* 합니다.  | 예  |
 | startDate | date | 검색할 추가 기능 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | endDate | date | 검색할 추가 기능 구입 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
@@ -62,7 +62,7 @@ ms.locfileid: "5970491"
 
 ### <a name="request-example"></a>요청 예제
 
-다음 예제에서는 추가 기능 구입 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. 추가 기능 또는 앱에 대 한 적절 한 스토어 ID를 사용 하 여 *addonProductId* 및 *응용 프로그램 Id* 값을 바꿉니다.
+다음 예제에서는 추가 기능 구입 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. 추가 기능 또는 앱에 대 한 적절 한 스토어 ID로 *addonProductId* 및 *응용 프로그램 Id* 값을 바꿉니다.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/addonacquisitions?addonProductId=BRRT4NJ9B3D2&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -97,16 +97,16 @@ Authorization: Bearer <your access token>
 |---------------------|---------|---------------------|
 | date                | 문자열  | 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
 | addonProductId      | string  | 구입 데이터를 검색할 추가 기능의 *제품 Id* 입니다.                                                                                                                                                                 |
-| addonProductName    | 문자열  | 추가 기능의 표시 이름입니다. 이 값에에서만 나타납니다 응답 데이터 *aggregationLevel* 매개 변수는 **하루**에로 설정 된 경우 *groupby* 매개 변수에 **addonProductName** 필드를 지정 하지 않는 한 합니다.                                                                                                                                                                                                            |
+| addonProductName    | 문자열  | 추가 기능의 표시 이름입니다. 이 값에에서만 나타납니다 응답 데이터 *aggregationLevel* 매개 변수는 **하루**설정 된 경우 *groupby* 매개 변수에서 **addonProductName** 필드를 지정 하지 않는 한 합니다.                                                                                                                                                                                                            |
 | applicationId       | string  | 추가 기능 구입 데이터를 검색 하려는 앱의 *제품 Id* 입니다.                                                                                                                                                           |
 | applicationName     | 문자열  | 게임의 표시 이름입니다.                                                                                                                                                                                                             |
 | deviceType          | 문자열  | <p>취득을 완료한 장치 유형을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"PC"</li><li>"Phone"</li><li>"콘솔"</li><li>"IoT"</li><li>"서버"</li><li>"태블릿"</li><li>"홀로그램"</li><li>"알 수 없음"</li></ul>                                                                                                  |
-| storeClient         | 문자열  | <p>취득이 발생한 Microsoft Store의 버전을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"Windows Phone 스토어 (클라이언트)"</li><li>"Microsoft Store (클라이언트)" (또는 "Windows 스토어 (클라이언트)" 2018 년 3 월 23 데이터를 쿼리 하는 경우)</li><li>"Microsoft Store (웹)" (또는 "Windows 스토어 (웹)" 2018 년 3 월 23 데이터를 쿼리 하는 경우)</li><li>"조직에서 대량 구매"</li><li>"기타"</li></ul>                                                                                            |
+| storeClient         | 문자열  | <p>취득이 발생한 Microsoft Store의 버전을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"Windows Phone 스토어 (클라이언트)"</li><li>"Microsoft Store (클라이언트)" (또는 "Windows 스토어 (클라이언트)" 2018 년 3 월 23 일에 대 한 데이터를 쿼리 하는 경우)</li><li>"Microsoft Store (웹)" (또는 "Windows 스토어 (웹)" 2018 년 3 월 23 일에 대 한 데이터를 쿼리 하는 경우)</li><li>"조직에서 대량 구매"</li><li>"기타"</li></ul>                                                                                            |
 | osVersion           | 문자열  | 구입이 발생한 OS 버전입니다. 이 메서드에 대 한이 값은 항상 "Windows 10".                                                                                                   |
 | market              | 문자열  | 구입이 발생한 시장의 ISO 3166 국가 코드입니다.                                                                                                                                                                  |
 | gender              | 문자열  | <p>취득한 사용자의 성별을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"m"</li><li>"f"</li><li>"알 수 없음"</li></ul>                                                                                                    |
 | age            | 문자열  | <p>취득한 사용자 연령 그룹을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"보다 작은 13"</li><li>"13 17"</li><li>"18-24"</li><li>"25 34"</li><li>"35-44"</li><li>"44-55"</li><li>"55 보다 큰"</li><li>"알 수 없음"</li></ul>                                                                                                 |
-| acquisitionType     | 문자열  | <p>취득 유형을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"무료"</li><li>"평가판"</li><li>"결제"</li><li>"홍보 코드"</li><li>"Iap"</li><li>"구독 Iap"</li><li>"개인 대상 그룹"</li><li>"사전 순서"</li><li>"Xbox Game Pass" (또는 "Game Pass" 2018 년 3 월 23 데이터를 쿼리 하는 경우)</li><li>"디스크"</li><li>"선불된 코드"</li><li>"사전 순서 비용을 지불"</li><li>"사전 순서를 취소"</li><li>"사전 순서 하지 못했습니다."</li></ul>                                                                                                    |
+| acquisitionType     | 문자열  | <p>취득 유형을 나타내는 다음 문자열 중 하나입니다.</p> <ul><li>"무료"</li><li>"평가판"</li><li>"결제"</li><li>"홍보 코드"</li><li>"Iap"</li><li>"구독 Iap"</li><li>"개인 대상 그룹"</li><li>"이전 순서"</li><li>"Xbox Game Pass" (또는 "Game Pass" 2018 년 3 월 23 일에 대 한 데이터를 쿼리 하는 경우)</li><li>"디스크"</li><li>"선불된 코드"</li><li>"부과 전 순서"</li><li>"이전 순서를 취소"</li><li>"이전 순서 하지 못했습니다."</li></ul>                                                                                                    |
 | acquisitionQuantity | 정수 | 발생한 구입 횟수입니다.                        |
 
 

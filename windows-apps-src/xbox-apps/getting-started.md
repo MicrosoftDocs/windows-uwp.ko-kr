@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b45386d93d37d00b8448a4f4a3548be6de7f685b
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5975856"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6042454"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Xbox One에서 UWP 앱 개발 시작
 
@@ -33,11 +33,11 @@ UWP(유니버설 Windows 플랫폼) 개발에 대해 PC 및 Xbox One을 성공�
 
 1.  Visual Studio 2017 또는 Visual Studio 2015 업데이트 3 설치 합니다.
 
-    Visual Studio 2015 업데이트 3을 설치 하는 경우 **사용자 지정** 설치를 선택 하 고 **유니버설 Windows 앱 개발 도구** 확인란을 선택 – 기본 설치의 일부가 아니기 있는지 확인 합니다. C++ 개발자인 경우 **사용자 지정 설치**를 선택하고 **C++** 를 선택해야 합니다.
+    Visual Studio 2015 업데이트 3을 설치 하는 경우 **사용자 지정** 설치를 선택 하 고 **유니버설 Windows 앱 개발 도구** 확인란을 선택 – 기본 설치의 일부가 아니기에 있는지 확인 합니다. C++ 개발자인 경우 **사용자 지정 설치**를 선택하고 **C++** 를 선택해야 합니다.
 
-    Visual Studio 2017을 설치하는 경우 **유니버설 Windows 플랫폼 개발** 작업을 선택하도록 하세요. 오른쪽에 **요약** 창에서 c + + 개발자, **유니버설 Windows 플랫폼 개발**중인 **c + + 유니버설 Windows 플랫폼 도구** 확인란을 선택 하면 있는지을 확인 합니다. 이 기본 설치 포함 되지 않습니다.
+    Visual Studio 2017을 설치하는 경우 **유니버설 Windows 플랫폼 개발** 작업을 선택하도록 하세요. 오른쪽에 **요약** 창에서 c + + 개발자 경우 **유니버설 Windows 플랫폼 개발**중인 **c + + 유니버설 Windows 플랫폼 도구** 확인란을 선택 하면 있는지을 확인 합니다. 기본 설치의 일부가 아닙니다.
 
-    자세한 내용은 [Xbox 개발 환경에서의 UWP 설정](development-environment-setup.md)참조 하세요.
+    자세한 내용은 [Xbox 개발 환경에서의 UWP 설정](development-environment-setup.md)을 참조 하세요.
 
 2.  최신 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 설치 합니다.
 
@@ -50,7 +50,7 @@ UWP(유니버설 Windows 플랫폼) 개발에 대해 PC 및 Xbox One을 성공�
 
 ## <a name="setting-up-your-xbox-one-console"></a>Xbox One 콘솔 설정
 
-1.  Xbox One에서 개발자 모드를 활성화합니다. 앱을 다운로드 하 고 정품 인증 코드를 가져온 다음 개발자 센터 계정에 [Xbox One 본체 관리](https://partner.microsoft.com/xboxactivate) 페이지에 입력 합니다. 자세한 내용은 [Xbox One 개발자 모드 활성화](devkit-activation.md)를 참조하세요. 
+1.  Xbox One에서 개발자 모드를 활성화합니다. 앱을 다운로드 하 고 활성화 코드를 가져온 다음 개발자 센터 계정에 [Xbox One 본체 관리](https://partner.microsoft.com/xboxactivate) 페이지에 입력 합니다. 자세한 내용은 [Xbox One 개발자 모드 활성화](devkit-activation.md)를 참조하세요. 
 
 2.  **개발자 모드 활성화** 앱을 열고 **전환 및 다시 시작을**선택 합니다. 축하합니다. 이제 개발자 모드의 Xbox One을 사용할 수 있습니다.
   
@@ -62,9 +62,9 @@ UWP(유니버설 Windows 플랫폼) 개발에 대해 PC 및 Xbox One을 성공�
 
 ## <a name="creating-your-first-project-in-visual-studio"></a>Visual Studio에서 첫 번째 프로젝트 만들기
 
-자세한 내용은 [Xbox 개발 환경에서의 UWP 설정](development-environment-setup.md)참조 하세요.
+자세한 내용은 [Xbox 개발 환경에서의 UWP 설정](development-environment-setup.md)을 참조 하세요.
 
-1.  **에 대 한 C#**: 새 유니버설 Windows 프로젝트를 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 만들고 **속성**을 선택 합니다. **디버그** 탭을 선택, **원격 컴퓨터**에 **대상 장치** 를 변경 하 고, **원격 컴퓨터** 필드에 IP 주소 또는 Xbox One 본체의 호스트 이름을 입력 합니다 **에서 **유니버설 (암호화 되지 않은 프로토콜)를** 선택 인증 모드** 드롭다운 목록입니다.   
+1.  **에 대 한 C#**: 새 유니버설 Windows 프로젝트를 만들고 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 및 **속성**을 선택 합니다. **디버그** 탭을 선택 **원격 컴퓨터**를 **대상 장치** 를 변경 **원격 컴퓨터** 필드에 IP 주소 또는 Xbox One 본체의 호스트 이름을 입력 하 고는 **에서 **유니버설 (암호화 되지 않은 프로토콜)를** 선택 합니다. 인증 모드** 드롭다운 목록입니다.   
 
     본체에서 개발자 홈(홈 오른쪽에 있는 큰 타일)을 시작하고 왼쪽 위 모서리를 보면 Xbox One IP 주소를 찾을 수 있습니다. 개발자 홈에 대한 자세한 내용은 [Xbox One 도구 소개](introduction-to-xbox-tools.md)를 참조하세요.  
 

@@ -1,24 +1,24 @@
 ---
 author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: 만들기 Hello World 앱 C + + CX (Windows10)
-description: Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + + Windows10, Windows10를 실행 하는 휴대폰에 포함 하 여 실행 되는 앱을 개발 하려면 CX 합니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
+title: 만들기는 Hello World 앱 C + + CX (Windows10)
+description: Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + + /CX Windows10를 실행 하는 휴대폰 포함 Windows10에서 실행 되는 앱을 개발할 합니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
 ms.author: jken
 ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bc2258557c492956130424069e6e0c4b73f28056
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976331"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045762"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>C + "Hello world" 앱 만들기 + CX
 
 > [!IMPORTANT]
-> 이 자습서에서는 C + + CX 합니다. Microsoft에서 릴리스 하는 C + + WinRT:는 최신 표준 C + + 17 언어 프로젝션으로 Windows 런타임 (WinRT) Api에 대 한 합니다. 이 언어에 대 한 자세한 내용은 참조 [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
+> 이 자습서에서는 C + + CX 합니다. Microsoft에서 릴리스 하는 C + + WinRT:는 최신 표준 C + + 17 언어 프로젝션으로 Windows 런타임 (WinRT) Api에 대 한 합니다. 이 언어에 대 한 자세한 내용은 참조 [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)합니다. 
 
 Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + +에서 응용 프로그램 언어 XAML (Extensible Markup) 정의 된 UI 사용 하 여 Windows10에서 실행 되는 앱을 개발 하는 CX 합니다.
 
@@ -28,7 +28,7 @@ Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + +에서 응용 �
 ## <a name="before-you-start"></a>시작하기 전에
 
 -   이 자습서를 완료 하려면 Windows10를 실행 하는 컴퓨터에서 Visual StudioCommunity 2017 또는 Visual Studio2017의 비 Community 버전 중 하나를 사용 해야 합니다. 다운로드하려면 [도구 얻기](http://go.microsoft.com/fwlink/p/?LinkId=532666)를 참조하세요.
--   C +에 대 한 기본 이해에 있다고 가정 + CX, XAML, 개념 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595)에서 설명 합니다.
+-   C +에 대 한 기본 이해에 있다고 가정 + CX, XAML, 및 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595)에 설명 된 개념입니다.
 -   여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃으로 재설정하려면 메뉴 모음에서 **창** > **창 레이아웃 다시 설정**을 선택합니다.
 
 ## <a name="comparing-c-desktop-apps-to-windows-apps"></a>C++ 데스크톱 앱과 Windows 스토어 앱 비교
@@ -45,7 +45,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 -   여전히 Visual Studio 디버거, 프로파일러 및 기타 개발 도구를 사용합니다.
 
--   여전히 Visual C++ 컴파일러를 사용하여 네이티브 컴퓨터 코드로 컴파일되는 앱을 만듭니다. UWP 앱에서 C + + CX 관리 되는 런타임 환경에서 실행 하지 마세요.
+-   여전히 Visual C++ 컴파일러를 사용하여 네이티브 컴퓨터 코드로 컴파일되는 앱을 만듭니다. UWP 앱에서 C + + CX 관리 되는 런타임 환경에서 만든 실행 되지 않습니다.
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -63,7 +63,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 ## <a name="hello-world-store-app-in-ccx"></a>Hello World 스토어 앱에서 C + + CX
 
-첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. Windows8.1 및 Windows Phone 8.1 용 앱을 개발한, Windows 앱에 대 한 개, 공유 코드용 및 휴대폰 앱에 대 한 Visual Studio에서 세 개의 프로젝트를 사용 해야 했던 것을 기억 수 있습니다. Windows10 유니버설 Windows 플랫폼 (UWP)을 사용 하면 등 Windows10, 태블릿, 휴대폰, VR 디바이스를 실행 하는 데스크톱 및 노트북 컴퓨터를 비롯 한 모든 장치에서 실행 되는 단 하나의 프로젝트를 사용할 수 있습니다.
+첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. Windows8.1 및 Windows Phone 8.1 용 앱을 개발한, Windows 앱에 대 한 개, 공유 코드용 및 휴대폰 앱에 대 한 Visual Studio에서 세 개의 프로젝트를 사용 해야 했던 기억 수 있습니다. Windows10 유니버설 Windows 플랫폼 (UWP)을 사용 하면 등 Windows10, 태블릿, 휴대폰, VR 디바이스를 실행 하는 데스크톱 및 노트북 컴퓨터를 비롯 한 모든 장치에서 실행 되는 단 하나의 프로젝트를 할 수 있습니다.
 
 다음과 같은 기본 사항부터 시작하겠습니다.
 
@@ -71,7 +71,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 -   생성되는 프로젝트 및 파일을 이해하는 방법.
 
--   VisualC + + 구성 요소 확장에서 이러한 확장을 이해 하는 방법 (C + + CX)를 사용 하는 경우 및 합니다.
+-   VisualC + + 구성 요소 확장의 확장을 이해 하는 방법 (C + + CX)를 사용 하는 경우 및 합니다.
 
 **Visual Studio에서 솔루션 만들기**
 
@@ -406,7 +406,7 @@ MainPage::MainPage()
 
 ## <a name="next-steps"></a>다음 단계
 
-Windows8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트를가 경우 Windows10를 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://msdn.microsoft.com/library/windows/apps/Mt188203) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525)을 참조하세요.
+Windows8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트를 있으면 Windows10를 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://msdn.microsoft.com/library/windows/apps/Mt188203) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525)을 참조하세요.
 
 기존 응용 프로그램의 새 UWP UI를 만드는 등의 목적으로 UWP 앱과 통합하려는 기존 C++ 코드가 있는 경우 [방법: 유니버설 Windows 프로젝트에서 C++ 코드 사용](http://go.microsoft.com/fwlink/p/?LinkId=619623)을 참조하세요.
 
