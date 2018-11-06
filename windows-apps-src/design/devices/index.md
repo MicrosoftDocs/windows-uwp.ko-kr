@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f5e6c96c67052f1933bf4fb69988ae1eae27ee0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5997472"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047970"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
 
@@ -131,7 +131,7 @@ UI 고려 사항
 
 모든 컴퓨팅 장치에서 가장 널리 사용되는 휴대폰은 제한된 화면 공간 및 기본 입력만으로 많은 작업을 수행할 수 있습니다. 휴대폰의 크기는 다양하며 큰 휴대폰을 패블릿이라고 합니다. 패블릿의 앱 환경은 휴대폰과 유사하지만 패블릿의 화면 공간 확대로 콘텐츠 사용에서 몇 가지 주요 사항이 변경되었습니다.
 
-호환 Windows10 모바일 장치를 위한 새 환경인 휴대폰용 Continuum을 사용 하 여 사용자가 휴대폰을 모니터를 연결 하 고도를 사용 하 여 마우스와 키보드 휴대폰을 노트북 처럼 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](http://go.microsoft.com/fwlink/p/?LinkID=699431)를 참조하세요.)
+호환 가능한 Windows10 모바일 장치에 대 한 새 환경인 휴대폰용 Continuum을 사용 하 여 사용자가 휴대폰을 모니터를 연결 하 고도를 사용 하 여 마우스와 키보드 휴대폰을 노트북 처럼 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](http://go.microsoft.com/fwlink/p/?LinkID=699431)를 참조하세요.)
 
 화면 크기
 -   휴대폰의 경우 4~5인치

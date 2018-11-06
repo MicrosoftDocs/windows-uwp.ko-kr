@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 19a59110fa094aeae3d40dca1372fde9889c108e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5972304"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047804"
 ---
 # <a name="create-an-experiment-project-in-partner-center"></a>파트너 센터에서 실험 프로젝트 만들기
 
@@ -32,7 +32,7 @@ ms.locfileid: "5972304"
   1. **원격 변수** 섹션이 축소된 경우 섹션 제목에서 **표시**를 클릭합니다.
   2. **변수 추가**를 클릭하여 이 프로젝트의 모든 실험에 사용할 수 있게 하려는 각 변수를 새로 만들고 변수 이름과 변수 기본값을 입력합니다.
   3. 변수 추가를 마쳤으면 **저장**을 클릭합니다.
-3. **SDK 통합** 섹션에서 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 해야에서 참조할 때이 프로젝트 ID 코드 변형 데이터를 수신 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있도록 합니다.
+3. **SDK 통합** 섹션에서 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱을 코딩](code-your-experiment-in-your-app.md)해야에서 참조할 때이 프로젝트 ID 코드 변형 데이터를 수신 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있도록 합니다.
 
 > [!NOTE]
 > 프로젝트에서 실험이 활성화된 경우에는 원격 변수를 편집, 추가 또는 제거할 수 없습니다. 이 제한 사항은 활성 실험의 컨트롤 그룹에 대해 데이터 무결성을 보호하는 데 도움이 됩니다.

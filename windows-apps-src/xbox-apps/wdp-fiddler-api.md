@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982466"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047225"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler 설정 API 참조   
 REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하거나 사용하지 않을 수 있습니다.
@@ -42,7 +42,7 @@ GET | /ext/fiddler
 
 **응답**   
 
-- JSON 부울 속성 IsProxyEnabled 어떤 지정자 여부는 프록시를 사용할 수 있는지 여부.
+- JSON 부울 속성 IsProxyEnabled 어떤 지정자 프록시 사용 되는지 여부입니다.
 
 **상태 코드**
 

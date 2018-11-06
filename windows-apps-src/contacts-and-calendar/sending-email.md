@@ -9,11 +9,11 @@ ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a28809210f71bf523e3cc5f9c8da1db9fbcc90c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980416"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046976"
 ---
 # <a name="send-email"></a>메일 보내기
 
@@ -49,7 +49,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 ```
 
 >[!NOTE]
-> 첨부 파일에 추가 하는 메일 [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) 클래스를 사용 하 여 메일 앱에만 표시 됩니다. 사용자가 다른 메일 프로그램의 기본 메일 프로그램으로 구성 된 경우 첨부 파일 없이 작성 창이 나타납니다. 알려진된 문제입니다.
+> 첨부 파일에 추가 하는 메일 [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) 클래스를 사용 하 여 메일 앱에만 표시 됩니다. 사용자의 기본 메일 프로그램으로 구성 된 메일 프로그램 있으면 첨부 파일 없이 작성 창이 표시 됩니다. 알려진된 문제입니다.
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 

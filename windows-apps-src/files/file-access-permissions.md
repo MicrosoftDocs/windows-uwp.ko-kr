@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8699ee06da545e3b34711f496a887fd7aa2c935
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978507"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046836"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
@@ -24,9 +24,9 @@ ms.locfileid: "5978507"
 새 앱을 만들면 기본적으로 다음 파일 시스템 위치에 액세스할 수 있습니다.
 
 ### <a name="application-install-directory"></a>응용 프로그램 설치 디렉터리
-앱이 사용자의 시스템에 설치 되어 있는 폴더.
+사용자의 시스템에서 앱을 설치 하는 폴더입니다.
 
-두 가지 기본 액세스 파일 및 폴더 앱의 설치 디렉터리:
+파일을 액세스할 수 있는 두 가지 주요 방법이 되며 폴더 앱의 설치 디렉터리 합니다.
 
 1. 아래와 같이 앱의 설치 디렉터리를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
 

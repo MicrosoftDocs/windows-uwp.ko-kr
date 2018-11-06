@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c537ef3b2a5d002644cc554eae72b89a1799b0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980793"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046866"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
 
@@ -220,7 +220,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 카메라 메모리 카드나 카메라의 다른 저장 장치를 PC에 삽입합니다. 그런 다음 자동 실행 옵션 목록에서 package.appxmanifest 파일에 지정한 콘텐츠 이벤트 옵션 중 하나를 선택합니다. 이 샘플 코드에서는 카메라 메모리 카드의 DCIM 폴더에 있는 사진을 표시하거나 복사하기만 합니다. 카메라 메모리 카드에서 사진을 AVCHD 또는 PRIVATE\\ACHD 폴더에 저장하는 경우 그에 따라 코드를 업데이트해야 합니다.
-    **참고**루트에 **DCIM** 폴더 있으며 이미지 DCIM 폴더에 하위 폴더에 있는 경우 플래시 드라이브는 카메라 메모리 카드가 없는 경우 하는 경우 사용할 수 있습니다.
+    **참고**는 카메라 메모리 카드가 없는 경우 루트에 **DCIM** 폴더 있고 DCIM 폴더에 하위 이미지를 포함 된 경우 플래시 드라이브를 사용할 수 있습니다.
 
 ## <a name="register-for-an-autoplay-device"></a>장치 자동 실행을 위해 등록
 

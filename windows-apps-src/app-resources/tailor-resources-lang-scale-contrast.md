@@ -8,12 +8,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 563807798cefe083fa1de85dc1f7e4c3ae679211
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 018740b9ceaa10425ec71f6a2775d547b7c30e82
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992519"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048482"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -39,7 +39,7 @@ ms.locfileid: "5992519"
 
 다음은 한정자를 사용하여 자산 파일이 포함된 폴더의 이름을 지정하는 예입니다. 한정자당 여러 개의 자산 파일이 있는 경우 폴더 이름에 한정자를 사용하세요. 이렇게 하면 한정자를 폴더 수준에서 한 번 설정하고 한정자는 폴더 안의 모든 항목에 적용됩니다.
 
-```
+```console
 \Assets\Images\contrast-standard\<logo.png, and other image files>
 \Assets\Images\contrast-high\<logo.png, and other image files>
 \Assets\Images\contrast-black\<logo.png, and other image files>
@@ -52,7 +52,7 @@ ms.locfileid: "5992519"
 
 폴더를 만들고 이름을 지정하는 대신 한정자를 사용하여 리소스 파일 자체의 이름을 지정할 수 있습니다. 한정자당 하나의 리소스 파일만 있는 경우 이 작업을 수행하는 것이 좋습니다. 예를 들면 다음과 같습니다.
 
-```
+```console
 \Assets\Images\logo.contrast-standard.png
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.contrast-black.png
@@ -68,7 +68,7 @@ ms.locfileid: "5992519"
 ## <a name="actual-and-neutral-qualifier-matches"></a>실제 및 중립적 한정자 일치
 *모든* 한정자 값에 대한 리소스 파일을 제공할 필요가 없습니다. 예를 들어 고대비 및 표준 대비에 대해 하나의 시각적 자산만 필요하다면 이러한 자산의 이름을 다음과 같이 지정할 수 있습니다.
 
-```
+```console
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.png
 ```
@@ -81,7 +81,7 @@ ms.locfileid: "5992519"
 
 고대비와 표준 대비에 대해 각각 하나의 자산 집합만 필요하면 파일 이름 대신 폴더 이름을 사용할 수 있습니다. 이 경우 폴더 이름을 완전히 생략하면 중립적인 일치를 얻을 수 있습니다.
 
-```
+```console
 \Assets\Images\contrast-high\<logo.png, and other images to load when high contrast theme is not None>
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
@@ -92,7 +92,7 @@ ms.locfileid: "5992519"
 
 한정자를 폴더 및 파일 이름으로 결합할 수 있습니다. 예를 들어 고대비 모드가 켜진 경우 *및* 디스플레이 배율 인수가 400인 경우 앱에 이미지 자산을 로드해야 할 수 있습니다. 이를 수행하는 한 가지 방법은 중첩된 폴더를 사용하는 것입니다.
 
-```
+```console
 \Assets\Images\contrast-high\scale-400\<logo.png, and other image files>
 ```
 
@@ -100,7 +100,7 @@ ms.locfileid: "5992519"
 
 또 다른 옵션은 하나의 폴더 이름에 여러 개의 한정자를 결합하는 것입니다.
 
-```
+```console
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
@@ -108,7 +108,7 @@ ms.locfileid: "5992519"
 
 동일한 형식의 파일 이름에 여러 한정자를 결합할 수 있습니다.
 
-```
+```console
 \Assets\Images\logo.contrast-high_scale-400.png
 ```
 
@@ -160,14 +160,14 @@ public void SetLicenseLevel(BrandID brand)
 
 하지만 마지막 수단으로 devicefamily 한정자를 사용하여 XAML 보기가 포함된 폴더의 이름을 지정할 수 있습니다(XAML 보기는 UI 레이아웃과 컨트롤이 포함된 XAML 파일).
 
-```
+```console
 \devicefamily-desktop\<MainPage.xaml, and other markup files to load when running on a desktop computer>
 \devicefamily-mobile\<MainPage.xaml, and other markup files to load when running on a phone>
 ```
 
 또는 파일 이름을 지정할 수 있습니다.
 
-```
+```console
 \MainPage.devicefamily-desktop.xaml
 \MainPage.devicefamily-mobile.xaml
 ```
@@ -203,21 +203,21 @@ public void SetLicenseLevel(BrandID brand)
 
 일반적으로 `language` 한정자를 사용하여 리소스 파일(`.resw`)을 포함하는 폴더의 이름을 지정합니다.
 
-```
+```console
 \Strings\language-en\Resources.resw
 \Strings\language-ja\Resources.resw
 ```
 
 `language` 한정자의 `language-` 부분을 생략할 수 있습니다(한정자 이름). 다른 유형의 한정자로는 이 작업을 수행할 수 없으며, 폴더 이름으로만 수행할 수 있습니다.
 
-```
+```console
 \Strings\en\Resources.resw
 \Strings\ja\Resources.resw
 ```
 
 폴더 이름을 지정하는 대신 `language` 한정자를 사용하여 리소스 파일 자체의 이름을 지정할 수 있습니다.
 
-```
+```console
 \Strings\Resources.language-en.resw
 \Strings\Resources.language-ja.resw
 ```
@@ -234,7 +234,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 다음은 폴더 수준에서 한정자를 설정하는 예입니다.
 
-```
+```console
 \Assets\Images\scale-100\<logo.png, and other image files>
 \Assets\Images\scale-200\<logo.png, and other image files>
 \Assets\Images\scale-400\<logo.png, and other image files>
@@ -242,7 +242,7 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 이 예는 파일 수준에서 설정합니다.
 
-```
+```console
 \Assets\Images\logo.scale-100.png
 \Assets\Images\logo.scale-200.png
 \Assets\Images\logo.scale-400.png

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: a72d13689b278c1048cab6b1fcb4fd788658602c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981869"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048041"
 ---
 # <a name="support-your-app-with-background-tasks"></a>백그라운드 작업을 사용하여 앱 지원
 
@@ -33,7 +33,7 @@ Windows10 버전 1607부터 백그라운드에서 오디오를 재생하는 작�
 
 In-process 백그라운드 지원은 쓰기 백그라운드 작업을 단순화하기 위해 Windows10 버전 1607에서 처음 소개되었습니다. 그러나 Out of Process 백그라운드 작업도 계속 작성할 수 있습니다. In Process 및 Out of Process 백그라운드 작업을 작성하는 경우에 대한 자세한 내용은 [백그라운드 작업 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
-Out of process 백그라운드 작업은 없기 때문에 백그라운드 프로세스 앱 프로세스가 문제가 발생 하는 경우에 훨씬 복원성이 큽니다. 그러나 가격으로 앱과 백그라운드 작업 간의 프로세스 간 통신 관리가 더 복잡 합니다.
+Out of process 백그라운드 작업은 없기 때문에 백그라운드 프로세스 앱 프로세스에 문제가 있는 경우에 훨씬 복원성이 큽니다. 그러나 가격으로 앱과 백그라운드 작업 간의 프로세스 간 통신을 관리 하는 더 복잡 합니다.
 
 Out of process 백그라운드 작업은 OS가 별도 프로세스 (backgroundtaskhost.exe)에서 실행 되는 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현 하는 경량 클래스로 구현 됩니다. [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용 하 여 백그라운드 작업을 등록 합니다. 클래스 이름은 백그라운드 작업을 등록할 때 진입점을 지정하는 데 사용됩니다.
 
@@ -44,7 +44,7 @@ In-process 백그라운드 작업을 빠르게 시작하려면 [In-process 백�
 Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 > [!TIP]
-> Windows10 부터는 더 이상 해야에 대 한 백그라운드 작업을 등록 하기 위한 필수 조건으로 잠금 화면에서 앱을 배치 합니다.
+> Windows10 부터는 더 이상 해야 하기 위해 백그라운드 작업을 등록 잠금 화면에서 앱을 배치 합니다.
 
 ## <a name="background-tasks-for-system-events"></a>시스템 이벤트에 대한 백그라운드 작업
 
@@ -75,9 +75,9 @@ Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-proce
 
 백그라운드 작업에 **InternetAvailable** 조건을 추가[BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)하여 네트워크 스택이 실행될 때까지 백그라운드 작업의 트리거를 지연시킵니다. 이 조건은 네트워크를 사용할 수 있을 때까지 백그라운드 작업이 실행 전원을 절약 됩니다. 이 조건은 실시간 정품 인증을 제공하지 않습니다.
 
-백그라운드 작업이 네트워크에 연결에 필요한 경우 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 백그라운드 작업을 실행 하는 동안 네트워크 가동 되도록 설정 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업 **IsNetworkRequested**설정 하지 않으면, 다음 백그라운드 작업이 됩니다 네트워크 연결 된 대기 상태 모드 (예: 휴대폰 화면이 꺼져 있습니다.)에 액세스할 수 없으므로
+백그라운드 작업이 네트워크에 연결에 필요한 경우 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 백그라운드 작업을 실행 하는 동안 네트워크 가동 되도록 설정 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업 **IsNetworkRequested**을 설정 하지 않으면 다음 백그라운드 작업이 됩니다 (예: 휴대폰 화면이 꺼져 있습니다.) 연결 된 대기 상태 모드에 있을 때 네트워크에 액세스할 수
  
-백그라운드 작업 조건에 대 한 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)참조 하세요.
+백그라운드 작업 조건에 대 한 자세한 정보에 대 한 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)참조 하세요.
 
 ## <a name="application-manifest-requirements"></a>응용 프로그램 매니페스트 요구 사항
 
@@ -141,7 +141,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 배터리 절약 모드가 켜져 있을 때 앱이 계속해서 백그라운드 작업을 실행하고 푸시 알림을 받을 수 있도록 앱에 예외를 적용하지 않으면, 배터리 절약 모드를 사용하도록 설정한 경우 장치가 외부 전원에 연결되어 있지 않고 배터리가 지정된 전원 잔량보다 적을 때 백그라운드 작업이 실행되지 않습니다. 백그라운드 작업을 등록할 수는 있습니다.
 
-하지만 엔터프라이즈 앱 및 Microsoft Store에 게시 되지 것입니다 하는 앱에 대 한 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행 하는 기능을 사용 하는 방법을 알아보려면 [무기한 백그라운드에서 실행](run-in-the-background-indefinetly.md) 을 참조 합니다.
+하지만 엔터프라이즈 앱 및 Microsoft Store에 게시 되지 것입니다 앱에 대 한 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행 하는 기능을 사용 하는 방법을 알아보려면 [무기한으로 백그라운드에서 실행](run-in-the-background-indefinetly.md) 을 참조 합니다.
 
 ## <a name="background-task-resource-guarantees-for-real-time-communication"></a>백그라운드 작업 리소스는 실시간 통신을 보장합니다.
 
@@ -169,7 +169,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)  
 [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 
-앱 실행 중에 백그라운드 작업 등록을 확인 합니다. 앱의 그룹화 백그라운드 작업 BackgroundTaskBuilder.AllTasks에 있는지 확인 합니다. 존재 하지 않은 것을 다시 등록 합니다. 더 이상 필요 하지는 모든 작업을 등록 취소 합니다. 이렇게 하면 모든 백그라운드 작업 등록은 최신 앱이 실행 될 때마다 합니다.
+앱 실행 중 백그라운드 작업 등록을 확인 합니다. 앱의 그룹화 백그라운드 작업 BackgroundTaskBuilder.AllTasks에 있는지 확인 합니다. 존재 하지 않은 것을 다시 등록 합니다. 더 이상 필요 없는 모든 작업을 등록 취소 합니다. 이렇게 하면 모든 백그라운드 작업 등록은 최신 앱이 실행 될 때마다.
 
 ## <a name="related-topics"></a>관련 항목
 
