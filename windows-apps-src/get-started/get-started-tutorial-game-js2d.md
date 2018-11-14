@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: 597451826958c355dad9f9380dbdc1264bc87883
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044450"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6263991"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -26,13 +26,13 @@ ms.locfileid: "6044450"
 ## <a name="introduction"></a>소개
 
 
-Microsoft Store에 앱을 게시 공유 (하거나 판매할!)는 수백만 명의 사람들과 각종 디바이스를 사용 하 여 합니다.  
+Microsoft Store에 앱을 게시 공유 (하거나 판매할!) 수백만 명의 사람들과 각종 디바이스.  
 
 Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 앱으로 작성 해야 합니다. 한편 UWP는 매우 유연하며 다양한 언어와 프레임워크를 지원합니다. 이를 입증하듯, 이 샘플은 JavaScript로 작성된 간단한 게임으로 여러 CreateJS 라이브러리를 사용하며, 스프라이트를 그리고 게임 루프를 만들고 키보드와 마우스를 지원하고 다양한 화면 크기에 맞게 조정하는 방법을 보여줍니다.
 
 이 프로젝트는 Visual Studio를 사용하여 JavaScript로 빌드되었습니다. 몇 가지 사소한 변경 작업을 수행하면 웹 사이트에 호스트하거나 다른 플랫폼에 맞게 조정할 수도 있습니다. 
 
-**참고:** 이 완전 한 (또는 뛰어난) 게임이 아니며, JavaScript 및 제 3 자 라이브러리를 사용 하 여 앱을 Microsoft Store에 게시할 준비가 되도록 하는 방법을 보여주기 위해 설계 되었습니다.
+**참고:** 이 완전 한 (또는 뛰어난) 게임이 아니며, JavaScript 및 제 3 자 라이브러리를 사용 하 여 Microsoft Store에 게시할 수 있는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -63,7 +63,7 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 
 이제 게임을 실행할 수 있습니다!
 
-**F5** 키를 눌러 앱을 실행합니다. 창이 하나 열리고 목가적인 (스파스) 경우는 가로에 낯익은 공룡이 서 보일 것입니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
+**F5** 키를 눌러 앱을 실행합니다. 창이 열리고 목가적인 () 경우 가로에 낯익은 공룡이 서 보일 것입니다. 이제 계속 진행하면서 앱을 검사하고, 몇 가지 중요한 부분에 대해 설명하고, 나머지 기능의 잠금을 해제합니다.
 
 ![닌자 고양이를 등에 업고 있는 평범한 공룡](images/JS2D_3.png)
 
@@ -71,7 +71,7 @@ Microsoft Store에 앱을 게시 하려면 UWP (유니버설 Windows 플랫폼) 
 
 ## <a name="walkthough"></a>연습
 
-F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 되며 답 "별로 없습니다",으로 많은 코드는 현재 주석입니다. 지금 까지는 공룡 그리고 스페이스바를 눌러야 글자만 무성의 모두 표시 됩니다. 
+F5 키로 게임을 시작했으면 이제 어떻게 될지 궁금하실 것입니다. 및 많은 코드는 현재 주석으로 "별로 없습니다", 됩니다. 지금까지 공룡 그리고 스페이스바를 눌러야 글자만 무성의 모두 표시 됩니다. 
 
 ### <a name="1-setting-the-stage"></a>1 스테이지 설정
 
@@ -259,7 +259,7 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 
 ## <a name="publishing-to-the-microsoft-store"></a>Microsoft Store에 게시
 
-(다듬어야 수 있는!) Microsoft Store에 게시할 수는 UWP 앱을 만들었으니 이제 
+(먼저 개선 가정!) Microsoft Store에 게시할 수는 UWP 앱을 만들었으니 이제 
 
 몇 가지 단계를 처리해야 합니다.
 
@@ -267,7 +267,7 @@ Gamestate는 게임에 일반적으로 사용되는 디자인 패턴입니다. �
 2. 앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 3. 앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.
+자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.
 
 ## <a name="suggestions-for-other-features"></a>다른 기능에 대한 제안.
 

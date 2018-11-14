@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, uri, 캡처, 스케치
 ms.localizationpriority: medium
 ms.openlocfilehash: 64df8d9768fa20a6d6819e93fe06904feede6223
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042167"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264644"
 ---
 # <a name="launch-screen-snipping"></a>화면 캡처 시작
 
