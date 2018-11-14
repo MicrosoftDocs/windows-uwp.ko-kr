@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 499bb0b32e494441e547421094f42fbc6156044a
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6253975"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6650852"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>앱 설치 관리자 파일 관련 설치 문제 해결
 

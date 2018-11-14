@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, basicloader
 ms.localizationpriority: medium
 ms.openlocfilehash: cde8d7b368fb3ee660bd5696f983070738397b6f
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6201472"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6652657"
 ---
 # <a name="complete-code-for-basicloader"></a>BasicLoader의 전체 코드
 

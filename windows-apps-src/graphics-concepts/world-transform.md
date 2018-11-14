@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9c6ada4bd964a9430d6ef47bd46f954ca76c404a
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6459590"
+ms.locfileid: "6646955"
 ---
 # <a name="world-transform"></a>월드 변환
 

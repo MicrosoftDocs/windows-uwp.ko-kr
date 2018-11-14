@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0628dcfc5ece046ca728763876e8e00c9a2d5904
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6189776"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6658459"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 

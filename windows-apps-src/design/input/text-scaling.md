@@ -10,11 +10,11 @@ ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ce3ec15a45f812162c7aab0cb9683183d7196ae3
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6462322"
+ms.locfileid: "6648970"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 

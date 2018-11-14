@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e98b9942dfc14604c061a036cd3c9803abaf3915
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451935"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654737"
 ---
 # <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a>SRV(셰이더 리소스 뷰) 및 UAV(순서가 지정되지 않은 액세스 뷰)
 

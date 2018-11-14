@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 테스트용으로 로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 4caf4333bb3d442779aedac2028b0996cbd17645
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6279497"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6660799"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>앱 설치 관리자 파일을 사용하여 관련 집합 설치
 

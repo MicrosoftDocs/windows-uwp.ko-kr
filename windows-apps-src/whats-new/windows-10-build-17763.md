@@ -8,11 +8,11 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1503b6816a1ebd687ddd320c550c4476a4c5a038
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6447807"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6672403"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>빌드 17763 개발자를 위한 Windows 10의 새로운 란
 

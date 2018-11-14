@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지, Azure 웹 서버
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ea002686199b992af45af775f53c96fd108a13
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6265404"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6645998"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Azure 웹앱에서 UWP 앱 설치
 

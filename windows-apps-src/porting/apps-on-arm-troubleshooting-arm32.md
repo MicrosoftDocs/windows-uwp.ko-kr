@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10 s, 항상 연결, ARM 기반 ARM32 앱, ARM 기반 Windows 10, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 4eaeccb8b4003bb835ee4700d1df57cd8cefcda0
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6464007"
+ms.locfileid: "6663483"
 ---
 # <a name="troubleshooting-arm32-uwp-apps"></a>ARM32 UWP 앱 문제 해결
 >[!IMPORTANT]

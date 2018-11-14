@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c883de1e05b827b6f1c37ad1f911f930b7019ad6
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6448708"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6662509"
 ---
 # <a name="launch-an-app-through-file-activation"></a>파일 활성화를 통해 앱 실행
 

@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6277170"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6465299"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 템플릿 및 패턴 사용
 

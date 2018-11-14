@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 클라우드의 알림 센터, 알림 미러링, 알림, 크로스 디바이스
 ms.localizationpriority: medium
 ms.openlocfilehash: c36b5ffcbb016e5b89fa1c960a7493767192296c
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6470494"
+ms.locfileid: "6658189"
 ---
 # <a name="notification-mirroring"></a>알림 미러링
 

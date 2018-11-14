@@ -1,34 +1,33 @@
 ---
 author: Xansky
-ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
-description: Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오류에 대한 자세한 데이터를 가져올 수 있습니다.
-title: 앱에서 오류에 대한 세부 정보 가져오기
+description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임입니다.
+title: 게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기
 ms.author: mhopkins
-ms.date: 06/05/2018
+ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: e947314da1309c3f31af292bc70addbad8b0d4d9
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 33733af7f323817bc82d49800c2dc17c5f7b9887
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6662657"
+ms.locfileid: "6469374"
 ---
-# <a name="get-details-for-an-error-in-your-app"></a>앱에서 오류에 대한 세부 정보 가져오기
+# <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오류에 대한 자세한 데이터를 JSON 형식으로 가져올 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다. 자세한 오류 데이터는 파트너 센터에서 [상태 보고서](../publish/health-report.md) 의 **오류** 섹션 에서도 사용할 수 있습니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 개발자 센터 대시보드에서 사용할 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다.
 
-이 메서드를 사용하려면 먼저 [오류 보고 데이터 가져오기](get-error-reporting-data.md) 메서드를 통해 자세한 정보를 가져오려는 오류 ID를 검색해야 합니다.
+이 메서드를 사용 하려면 먼저에 자세한 정보를 원하는 오류 ID를 검색 먼저 [Xbox One 게임 한 오류 보고 데이터를 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
 * 아직 완료하지 않은 경우 Microsoft Store 분석 API에 대한 모든 [필수 조건](access-analytics-data-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-* 자세한 정보를 가져오려는 오류 ID를 가져옵니다. 이 ID를 가져오려면 [오류 보고 데이터 가져오기](get-error-reporting-data.md) 메서드를 사용하고 해당 메서드의 응답 본문에 **failureHash** 값을 사용합니다.
+* 자세한 정보를 가져오려는 오류 ID를 가져옵니다. 이 ID를 가져오려면 [Xbox One에 대 한 오류 보고 데이터를 게임 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 하 고 해당 메서드의 응답 본문에 **failureHash** 값을 사용 합니다.
 
 ## <a name="request"></a>요청
 
@@ -37,7 +36,7 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오
 
 | 메서드 | 요청 URI                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/failuredetails``` |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failuredetails``` |
 
 
 ### <a name="request-header"></a>요청 헤더
@@ -49,11 +48,11 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 형식   |  설명      |  필수  
+| 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | 자세한 오류 데이터를 검색할 앱의 스토어 ID입니다. 스토어 ID는 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. |  예  |
-| failureHash | 문자열 | 자세한 정보를 가져오려는 오류의 고유 ID입니다. 관심 있는 오류의 이 값을 가져오려면 [오류 보고 데이터 가져오기](get-error-reporting-data.md) 메서드를 사용하고 해당 메서드의 응답 본문에 **failureHash** 값을 사용합니다. |  예  |
-| startDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다.<p/><p/>**참고:**&nbsp;&nbsp;이 메서드는 지난 30 일 동안에서 발생 한 오류에 대 한 세부 정보에만 검색할 수 있습니다. |  아니요  |
+| applicationId | string | 오류 세부 정보를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 개발자 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
+| failureHash | 문자열 | 자세한 정보를 가져오려는 오류의 고유 ID입니다. 관심 있는 오류의이 값을 얻기 위해 [게임에 Xbox One에 대 한 오류 보고 데이터를 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 하 고 해당 메서드의 응답 본문에 **failureHash** 값을 사용 합니다. |  예  |
+| startDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
 | endDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
 | skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색할 수 있습니다. 예를 들어 top=10 및 skip=0이면 데이터의 처음 10개 행을 검색하고 top=10 및 skip=10이면 데이터의 다음 10개 행을 검색하는 방식입니다. |  아니요  |
@@ -63,13 +62,13 @@ Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오
 
 ### <a name="request-example"></a>요청 예제
 
-다음 예제에서는 자세한 오류 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *applicationId* 값을 앱의 스토어 ID로 바꿉니다.
+다음 예제에서는 게임에서 Xbox One에 대 한 자세한 오류 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. 게임에 대 한 제품 ID를 사용 하 여 *응용 프로그램 Id* 값을 바꿉니다.
 
 ```syntax
-GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/failuredetails?applicationId=9NBLGGGZ5QDR&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0 HTTP/1.1
+GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failuredetails?applicationId=BRRT4NJ9B3D1&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
-GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/failuredetails?applicationId=9NBLGGGZ5QDR&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0&filter=market eq 'US' and deviceType eq 'Windows.Desktop' HTTP/1.1
+GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failuredetails?applicationId=BRRT4NJ9B3D1&failureHash=012e33e3-dbc9-b12f-c124-9d9810f05d8b&startDate=2016-11-05&endDate=2016-11-06&top=10&skip=0&filter=market eq 'US' and deviceType eq 'Windows.Desktop' HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
@@ -93,7 +92,7 @@ Authorization: Bearer <your access token>
 
 | 값           | 유형    | 설명     |
 |-----------------|---------|----------------------------|
-| applicationId   | 문자열  | 자세한 오류 데이터를 검색한 앱의 Store ID입니다.      |
+| applicationId   | string  | 자세한 오류 데이터를 검색 하는 Xbox One 게임의 제품 ID입니다.      |
 | failureHash     | string  | 오류의 고유 식별자입니다.     |
 | failureName     | 문자열  | 오류 이름은 하나 이상의 문제 클래스, 예외/버그 확인 코드, 오류가 발생한 이미지의 이름 및 관련된 기능 이름 등 네 부분으로 구성됩니다.           |
 | date            | string  | 오류 데이터에 대한 날짜 범위의 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
@@ -101,11 +100,11 @@ Authorization: Bearer <your access token>
 | cabExpirationTime  | string  | CAB 파일이 만료되고 더 이상 다운로드할 수 없는 ISO 8601 형식의 날짜 및 시간입니다.   |
 | market          | string  | 장치 지역의 ISO 3166 국가 코드입니다.     |
 | osBuild         | 문자열  | 오류가 발생한 OS의 빌드 번호입니다.       |
-| packageVersion  | 문자열  | 이 오류와 연결된 앱 패키지의 버전입니다.    |
-| deviceModel           | 문자열  | 오류가 발생했을 때 앱을 실행한 장치 모델을 지정하는 문자열입니다.   |
-| osVersion       | 문자열  | 오류가 발생한 OS 버전을 나타내는 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows10</strong></li><li><strong>알 수 없음</strong></li></ul>    |
-| osRelease       | 문자열  |  오류가 발생한 OS 릴리스 또는 플라이팅 링(OS 버전 내 하위 집단)을 나타내는 다음 문자열 중 하나입니다.<p/><p>Windows 10:</p><ul><li><strong>버전 1507</strong></li><li><strong>버전 1511</strong></li><li><strong>버전 1607</strong></li><li><strong>버전 1703</strong></li><li><strong>버전 1709</strong></li><li><strong>버전 1803</strong></li><li><strong>릴리스 미리 보기</strong></li><li><strong>초기 참가자</strong></li><li><strong>이후 참가자</strong></li></ul><p/><p>Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Windows Server 2016:</p><ul><li><strong>버전 1607</strong></li></ul><p>Windows 8.1:</p><ul><li><strong>업데이트 1</strong></li></ul><p>Windows 7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>OS 릴리스 또는 플라이팅 링을 알 수 없는 경우 이 필드의 값은 <strong>알 수 없음</strong>입니다.</p>    |
-| deviceType      | 문자열  | 오류가 발생했을 때 앱을 실행한 장치 유형을 지정하는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>홀로그램</strong></li><li><strong>알 수 없음</strong></li></ul>     |
+| packageVersion  | string  | 이 오류와 연결 된 게임 패키지의 버전입니다.    |
+| deviceModel           | 문자열  | 게임이 오류가 발생할 때 실행 된 Xbox One 콘솔을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>Microsoft Xbox 하나</strong></li><li><strong>Microsoft Xbox One S</strong></li><li><strong>Microsoft Xbox One X</strong></li></ul>  |
+| osVersion       | 문자열  | 오류가 발생한 OS 버전입니다. 항상 **Windows 10**값입니다.    |
+| osRelease       | 문자열  |  Windows 10 OS 릴리스 또는 플 라이팅 링 (집단는 OS 버전 내) 오류가 발생 하는 다음 문자열 중 하나입니다.<p/><ul><li><strong>버전 1507</strong></li><li><strong>버전 1511</strong></li><li><strong>버전 1607</strong></li><li><strong>버전 1703</strong></li><li><strong>버전 1709</strong></li><li><strong>버전 1803</strong></li><li><strong>릴리스 미리 보기</strong></li><li><strong>초기 참가자</strong></li><li><strong>이후 참가자</strong></li></ul><p>OS 릴리스 또는 플라이팅 링을 알 수 없는 경우 이 필드의 값은 <strong>알 수 없음</strong>입니다.</p>    |
+| deviceType      | 문자열  | 오류가 발생한 디바이스 유형입니다. 이것이 항상 **콘솔**값입니다.     |
 | cabDownloadable           | 부울  | 이 사용자에 대해 CAB 파일을 다운로드할 수 있는지 여부를 나타냅니다.   |
 
 
@@ -117,19 +116,19 @@ Authorization: Bearer <your access token>
 {
   "Value": [
     {
-      "applicationId": "9NBLGGGZ5QDR ",
+      "applicationId": "BRRT4NJ9B3D1",
       "failureHash": "012345-5dbc9-b12f-c124-9d9810f05d8b",
-      "failureName": "STOWED_EXCEPTION_System.UriFormatException_exe!ContosoGame.GroupedItems+_ItemView_ItemClick_d__9.MoveNext",
+      "failureName": "STOWED_EXCEPTION_System.UriFormatException_exe!ContosoSports.GroupedItems+_ItemView_ItemClick_d__9.MoveNext",
       "date": "2018-02-05 09:11:25",
       "cabId": "133637331323",
       "cabExpirationTime": "2016-12-05 09:11:25",
       "market": "US",
-      "osBuild": "10.0.10240",
+      "osBuild": "10.0.17134",
       "packageVersion": "1.0.2.6",
-      "deviceModel": "Contoso Computer",
+      "deviceModel": "Microsoft-Xbox One",
       "osVersion": "Windows 10",
-      "osRelease": "Version 1507",
-      "deviceType": "PC",
+      "osRelease": "Version 1803",
+      "deviceType": "Console",
       "cabDownloadable": false
     }
   ],
@@ -140,8 +139,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [상태 보고서](../publish/health-report.md)
 * [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [오류 보고 데이터 가져오기](get-error-reporting-data.md)
-* [앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)
-* [앱의 오류에 대한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)
+* [Xbox One에 대 한 데이터를 보고 하는 오류를 게임 가져오기](get-error-reporting-data-for-your-xbox-one-game.md)
+* [Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)
+* [Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)

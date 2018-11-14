@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f0270ca3f1fac959f2ccc49352739e9ccd0f41cb
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6259904"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6658264"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 

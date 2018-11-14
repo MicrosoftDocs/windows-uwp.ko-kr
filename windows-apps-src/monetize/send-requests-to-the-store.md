@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
 ms.openlocfilehash: 6762d31ea7ebaeb966cd60f121591ba1534517a3
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6452193"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654806"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Microsoft Store에 요청 보내기
 

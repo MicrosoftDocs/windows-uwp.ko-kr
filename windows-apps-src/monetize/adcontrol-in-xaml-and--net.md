@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 광고 관리, XAML, .net, 연습
 ms.localizationpriority: medium
 ms.openlocfilehash: b2346fceaae3996de8aa54640c206b5fcd8c4a87
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6461336"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6669662"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>XAML 및 .NET의 AdControl
 

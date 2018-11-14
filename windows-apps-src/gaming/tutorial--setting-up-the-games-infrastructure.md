@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6276923"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6445368"
 ---
 # <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 

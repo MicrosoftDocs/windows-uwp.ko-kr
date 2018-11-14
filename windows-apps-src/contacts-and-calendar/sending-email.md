@@ -9,11 +9,11 @@ ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a28809210f71bf523e3cc5f9c8da1db9fbcc90c
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6467112"
+ms.locfileid: "6654997"
 ---
 # <a name="send-email"></a>메일 보내기
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7884c7187bf127e15aaaed38a55e5f9827a3990d
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6252611"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6670596"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>UI 스레드 응답 유지
 

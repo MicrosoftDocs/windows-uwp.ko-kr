@@ -14,11 +14,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d19d18d55c973644f5c3f99ae3d442e6dbf3a724
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6261092"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6649220"
 ---
 # <a name="inverted-lists"></a>반전된 목록
 

@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a3e87fea7dfce66b16ccdf04ef13950c092660c8
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6252220"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6669264"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>게임 패드 및 리모컨 조작
 

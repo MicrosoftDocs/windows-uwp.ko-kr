@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0486fbab829b7c4ce501f9ac20dac97e6abef595
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6282244"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6458574"
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 

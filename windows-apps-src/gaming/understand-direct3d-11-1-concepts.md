@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, direct3d 9, direct3d 11, 변경 사항
 ms.localizationpriority: medium
 ms.openlocfilehash: 969d8f2620adbc289c1f4c89242e0282901357c2
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6257842"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6446120"
 ---
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Direct3D 9부터 Direct3D 11의 주요 변경 사항
 

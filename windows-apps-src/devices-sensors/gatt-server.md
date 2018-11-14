@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b8a941b7b80bd5d34e88798ec586d9c1d52e2887
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6271422"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6662463"
 ---
 # <a name="bluetooth-gatt-server"></a>Bluetooth GATT 서버
 

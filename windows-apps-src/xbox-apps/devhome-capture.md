@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 1866c4f94c5ef681080ae2a5658c6edba11ec44b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024437"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6452609"
 ---
 # <a name="media-capture-page-dev-home"></a>미디어 캡처 페이지 (개발자 홈)
    
@@ -22,7 +22,7 @@ ms.locfileid: "6024437"
 개발자 홈의 **미디어 캡처** 페이지 제목 콘솔에서 현재 실행 중인 비디오를 캡처합니다.   
  ![개발자 홈의 캡처 페이지](images/devhome_capture.png)   
   
-**미디어 캡처** 페이지를 다음 창을 포함 되어 있습니다.   
+**미디어 캡처** 페이지는 다음과 같은 창을 포함 되어 있습니다.   
  
    *  [비디오 캡처](#ID4EHB)  
 
@@ -34,7 +34,7 @@ ms.locfileid: "6024437"
 ## <a name="video-capture"></a>비디오 캡처  
    
   
-**비디오 캡처** 창을 개발자 콘솔에서 비디오 스트림을 기록 하는 도구가 포함 되어 있습니다. 또한 콘솔에서 마지막 몇 초 동안의 비디오를 캡처할 수 있습니다.   
+**비디오 캡처** 창을 개발자 콘솔에서 비디오 스트림을 기록 있는 도구가 포함 되어 있습니다. 콘솔에서 마지막 몇 초의 비디오를 캡처할 수 있습니다.   
   
 <a id="ID4ERB"></a>
 

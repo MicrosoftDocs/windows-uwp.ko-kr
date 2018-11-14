@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: a128535617c97e73b5a389db827fcf8c579b7f13
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6447714"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6658355"
 ---
 # <a name="create-random-numbers"></a>난수 만들기
 

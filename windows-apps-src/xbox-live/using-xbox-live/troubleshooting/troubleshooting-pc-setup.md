@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 9484a324b060bbbf3e31dab0ace915bd4c551ebb
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6192404"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6279378"
 ---
 # <a name="troubleshooting-xbox-live-setup-on-windows-pc"></a>Windows PC에서 Xbox Live 설정 문제 해결
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f6f777669959721405fc5c77ef134e3726291b9c
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6454521"
+ms.locfileid: "6646808"
 ---
 # <a name="pipeline-access-to-streaming-resources"></a>스트리밍 리소스에 대한 파이프라인 액세스
 
