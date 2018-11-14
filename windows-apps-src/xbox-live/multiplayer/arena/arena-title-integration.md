@@ -8,12 +8,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트 참가
 ms.localizationpriority: medium
-ms.openlocfilehash: b4171aac6cb7643a79454b7fc40b92a16e7ef75e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 3da29f8e93ed8ce98648cad4711e35577f6d4823
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6043112"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200066"
 ---
 # <a name="arena-title-integration-guide"></a>아레나 타이틀 통합 가이드
 
@@ -326,7 +326,7 @@ void Sample::LaunchReturnUi(Uri ^returnUri, String ^returnPfn, User ^currentUser
 
 ## <a name="configuring-a-title-for-arena"></a>아레나 타이틀 구성
 
-아레나에 대 한 타이틀을 사용 하려면 몇 가지 추가 단계가 필요한 Xbox 개발자 포털 (XDP) 또는 유니버설 개발자 센터 (UDC)에서 구성 합니다.
+아레나에 대 한 타이틀을 사용 하려면 몇 가지 추가 단계가 필요한 Xbox 개발자 포털 (XDP) 또는 [파트너 센터](https://partner.microsoft.com/dashboard)에서 구성 합니다.
 
 ### <a name="enabling-arena-for-your-title"></a>아레나 타이틀에 대 한 설정
 
@@ -341,9 +341,9 @@ void Sample::LaunchReturnUi(Uri ^returnUri, String ^returnPfn, User ^currentUser
 * **아레나 플랫폼** – 기반이 토너먼트 타이틀에 대 한 재생할 수 있는 플랫폼을 선택할 수 있습니다.
 * **토너먼트 자산** – (이전 섹션에서 '멀티 플레이어 및 매치 메이 킹'.) 이 타이틀에 대 한 토너먼트 이미지입니다.
 
-아레나는 Xbox Live 서비스 **토너먼트** 메뉴에 있는 Windows 개발자 센터에서 사용할 수도 있습니다.
+또한 아레나 Xbox Live 서비스 **토너먼트** 메뉴에 있는 파트너 센터에서 사용할 수 있습니다.
 
-![Windows 개발자 센터에서 아레나 메뉴](../../images/arena/Arena_On_WDC.JPG)
+![파트너 센터에서 아레나 메뉴](../../images/arena/Arena_On_WDC.JPG)
 
 변경 내용을 적용에 대 한 서비스 구성을 게시 해야 합니다. 아레나 구성 셀프 서비스 현재 UDC 통해 지원 되지 않습니다. UDC 서비스 구성에 대 한를 사용 하는 경우에 개발 계정 관리자와 상관 없이 별도 등록이 아레나를 사용 하 여 작동 합니다.
 

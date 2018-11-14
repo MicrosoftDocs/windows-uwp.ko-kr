@@ -7,18 +7,18 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: dde635624101fdcf0803770bc69e7922f56f704e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 4bc64b0a6919180b6041bdbf4f81463019d274eb
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031582"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6261581"
 ---
 # <a name="start-coding"></a>코딩 시작
 
 ![앱 빌드](images/build-your-app.png)
 
-[UWP 플랫폼](universal-application-platform-guide.md)을 시작합니다! 이 페이지에서 만들려는 Windows 10 앱 코딩을 시작하는 데 필요한 올바른 정보를 안내합니다.
+[UWP 플랫폼](universal-application-platform-guide.md)을 시작합니다! 이 페이지에서 안내 올바른 정보를 만들려는 Windows 10 앱 코딩을 시작 해야 합니다.
 
 개발을 시작하기 전에 [설정해야 합니다](get-set-up.md).
 

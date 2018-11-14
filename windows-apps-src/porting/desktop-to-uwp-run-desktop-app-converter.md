@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: f964c8ac4a579fe4c360967c6bc9e613659a668b
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 7fc8c8e68e4b20498f84b4d20d84eca0dbfa7237
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6469796"
+ms.locfileid: "6650901"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Desktop App Converter를 사용 하 여 데스크톱 응용 프로그램 패키지
 
@@ -122,7 +122,7 @@ Desktop App Converter (DAC) 및 Microsoft Store를 통해 서비스 배포를 �
 매개 변수를 사용 하 여 응용 프로그램의 패키지 이름, 게시자 및 버전 번호를 지정 합니다.
 
 > [!NOTE]
-> Microsoft Store에서 앱 이름을 예약한 경우에는 Windows 개발자 센터 대시보드를 사용하여 이름과 게시자를 알 수 있습니다. 다른 시스템에 앱을 사이드로드할 계획이라면 선택한 게시자 이름이 앱 로그인에 사용하는 인증서의 이름과 일치되는 경우에 한해 고유한 이름을 제공할 수 있습니다.
+> Microsoft Store에서 앱 이름을 예약한 경우에 [파트너 센터](https://partner.microsoft.com/dashboard)를 사용 하 여 패키지 이름과 게시자를 얻을 수 있습니다. 다른 시스템에 앱을 사이드로드할 계획이라면 선택한 게시자 이름이 앱 로그인에 사용하는 인증서의 이름과 일치되는 경우에 한해 고유한 이름을 제공할 수 있습니다.
 
 ### <a name="a-quick-look-at-command-parameters"></a>명령 매개 변수를 빠르게 확인
 
@@ -145,7 +145,7 @@ DesktopAppConverter.exe
 * [설치 관리자 (.msi) 파일이 있는 응용 프로그램 패키지](#installer-conversion)
 * [설정 실행 파일이 있는 응용 프로그램 패키지](#setup-conversion)
 * [설치 관리자가 없는 응용 프로그램 패키지](#no-installer-conversion)
-* [앱 패키징, 앱 서명, Microsoft Store 제출 준비](#optional-parameters)
+* [앱 패키징, 서명, 및 스토어 제출 준비](#optional-parameters)
 
 <a id="installer-conversion" />
 
@@ -158,7 +158,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.msi -Destination C:\O
 ```
 
 > [!IMPORTANT]
-> 그러나 여기에서 염두에 두어야 할 중요한 두 가지 사항이 있습니다. 먼저 설치 관리자가 독립 폴더에 위치하고 해당 설치 관리자와 관련된 파일만 같은 폴더에 있는지 확인합니다. 변환기는 격리된 Windows 환경에 해당 폴더의 내용을 모두 복사합니다. <br> 그 다음으로 개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다.  
+> 그러나 여기에서 염두에 두어야 할 중요한 두 가지 사항이 있습니다. 먼저 설치 관리자가 독립 폴더에 위치하고 해당 설치 관리자와 관련된 파일만 같은 폴더에 있는지 확인합니다. 변환기는 격리된 Windows 환경에 해당 폴더의 내용을 모두 복사합니다. <br> 둘째, 파트너 센터 번호로 시작 하는 패키지에 id를 할당 하는 경우도 <i>-AppId</i> 매개 변수를 전달 하는 마침표 구분) (후 문자열 접미사를 사용 하 여 그 매개 변수의 값으로 있는지 확인 합니다.  
 
 **비디오**
 
@@ -176,7 +176,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.msi -Destination C:\O
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1
 ```
 >[!IMPORTANT]
->개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다.
+>파트너 센터 번호로 시작 하는 패키지에 id를 할당 하는 경우에 <i>-AppId</i> 매개 변수를 전달 하 고 있는지만 마침표 구분) (후 문자열 접미사를 사용 하 여 그 매개 변수의 값으로 확인 합니다.
 
 ``InstallerArguments`` 매개 변수는 선택적 매개 변수입니다. 그러나 Desktop App Converter를 무인된 모드에서 실행 되도록 설치 관리자가 필요 하므로 응용 프로그램에 자동으로 실행할 수 있는 자동 플래그가 필요한 경우 사용 해야 할 수 있습니다. ``/S`` 플래그는 매우 일반적인 자동 플래그이지만, 설치 파일을 만드는 데 사용한 설치 관리자 기술에 따라 사용하는 플래그가 달라질 수 있습니다.
 
@@ -197,7 +197,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyApp\ -AppExecutable MyApp.exe 
 ```
 
 >[!IMPORTANT]
->개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다.
+>파트너 센터 번호로 시작 하는 패키지에 id를 할당 하는 경우에 <i>-AppId</i> 매개 변수를 전달 하 고 있는지만 마침표 구분) (후 문자열 접미사를 사용 하 여 그 매개 변수의 값으로 확인 합니다.
 
 **비디오**
 
@@ -213,7 +213,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyApp\ -AppExecutable MyApp.exe 
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1 -MakeAppx -Sign -Verbose -Verify
 ```
 >[!IMPORTANT]
->개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다.
+>파트너 센터 번호로 시작 하는 패키지에 id를 할당 하는 경우에 <i>-AppId</i> 매개 변수를 전달 하 고 있는지만 마침표 구분) (후 문자열 접미사를 사용 하 여 그 매개 변수의 값으로 확인 합니다.
 
 ``Sign`` 매개 변수는 인증서를 생성 하 고 된 응용 프로그램에 로그인 합니다. 앱을 실행하려면 생성된 인증서를 설치해야 합니다. 자세한 내용은 이 가이드의 [패키지 앱 실행](#run-app) 섹션을 참조하세요.
 
@@ -271,13 +271,13 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 |-MakeAppx [&lt;SwitchParameter&gt;]  |선택 사항 |스위치(있는 경우)는 출력에 대해 MakeAppx를 호출하도록 이 스크립트에 지시합니다. |
 |-MakeMSIX [&lt;SwitchParameter&gt;]  |선택 사항 |있는 경우에이 스크립트 MSIX 패키지로 출력 패키지를 통해 하는 스위치입니다. |
 |<a id="identity-params" /><strong>패키지 ID 매개 변수</strong>||
-|-PackageName &lt;String&gt; |필수 |유니버설 Windows 앱 패키지의 이름. 개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다. |
+|-PackageName &lt;String&gt; |필수 |유니버설 Windows 앱 패키지의 이름. 파트너 센터 번호로 시작 하는 패키지에 id를 할당 하는 경우에 <i>-AppId</i> 매개 변수를 전달 하 고 있는지만 마침표 구분) (후 문자열 접미사를 사용 하 여 그 매개 변수의 값으로 확인 합니다. |
 |-Publisher &lt;String&gt; |필수 |유니버설 Windows 앱 패키지의 게시자 |
 |-Version &lt;Version&gt; |필수 |유니버설 Windows 앱 패키지의 버전 번호 |
 |<a id="manifest-params" /><strong>패키지 매니페스트 매개 변수</strong>||
 |-AppExecutable &lt;String&gt; |선택 사항 |응용 프로그램의 주 실행 파일(예: "MyApp.exe")의 이름입니다. 이 매개 변수는 설치 관리자 없이 변환할 경우 필요합니다. |
 |-AppFileTypes &lt;String&gt;|선택 사항 |응용 프로그램과 연결될 쉼표로 구분된 파일 형식 목록 예제: -AppFileTypes "'.md', '.markdown'".|
-|-AppId &lt;String&gt; |선택 사항 |응용 프로그램 ID를 Windows 앱 패키지 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다. 대부분의 경우에는 *PackageName*을 사용해도 괜찮습니다. 그러나 개발자 센터가 번호로 시작하는 패키지에 ID를 할당하는 경우 <i>-AppId</i> 매개 변수에서도 전달하는지 그리고 그 매개 변수의 값으로 문자열 접미사만 사용하는지 확인합니다. |
+|-AppId &lt;String&gt; |선택 사항 |응용 프로그램 ID를 Windows 앱 패키지 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다. 대부분의 경우에는 *PackageName*을 사용해도 괜찮습니다. 그러나 파트너 센터 번호로 시작 하는 패키지에 id를 할당 하는 경우도 <i>-AppId</i> 매개 변수를 전달 하는 마침표 구분) (후 문자열 접미사를 사용 하 여 그 매개 변수의 값으로 있는지 확인 합니다. |
 |-AppDisplayName &lt;String&gt;  |선택 사항 |응용 프로그램 표시 이름을 Windows 앱 패키지 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다. |
 |-AppDescription &lt;String&gt; |선택 사항 |응용 프로그램 설명을 Windows 앱 패키지 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다.|
 |-PackageDisplayName &lt;String&gt; |선택 사항 |패키지 표시 이름을 Windows 앱 패키지 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다. |

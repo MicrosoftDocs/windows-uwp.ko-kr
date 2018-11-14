@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c414b7e95a81d1ac6307229c49b87072059d3a15
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 61447108b6abf2f6e6a68c12bb0aaf2b8ababd34
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6044891"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207053"
 ---
 # <a name="advanced-xbox-live-sandboxes"></a>고급 Xbox Live 샌드박스
 
@@ -43,7 +43,7 @@ Microsoft에서만 채울 수 있는 시스템 샌드박스 두 가지: 인증�
 
 ## <a name="initial-setup-for-a-title"></a>타이틀에 대 한 초기 설정
 
-제목을은 Xbox 개발자 포털 (XDP) 또는 Windows 개발자 센터에서 생성 합니다. 제목 ID 및 제품 ID 및 서비스 구성 ID (서비스 안내)이 할당 됩니다.
+제목을은 Xbox 개발자 포털 (XDP) 또는 파트너 센터에서 생성 합니다. 제목 ID 및 제품 ID 및 서비스 구성 ID (서비스 안내)이 할당 됩니다.
 
 이러한 새로운 환경에서 제목이 나 자체적으로 제품 것을 의미 Xbox Live에 아무 것도. 단일 품목이 동시 소매 및 개발 사용을 지원 해야 하 하 고 필요한 차이점은 유지 관리 하기 위해 책의 *인스턴스* 를 지원 해야 합니다. 제목 인스턴스 샌드박스에서 있으며 샌드박스 형태로입니다.
 
@@ -119,11 +119,11 @@ Microsoft에서만 채울 수 있는 시스템 샌드박스 두 가지: 인증�
 
 Xbox One에서 개발자 계정을 적용 되도록 하는 특수 규칙을 사용 하 여 방금 표준 Microsoft 계정 (MSA) 됩니다. 개발에 대 한 Xbox Live에 사용 됩니다. 개발자 계정:
 
--   XDP 또는 Windows 개발자 센터에서 만들어야 합니다.
+-   XDP 또는 파트너 센터에서 만들어야 합니다.
 
 -   게시자가 생성 하는 경우 외부 개발자 역할을 할당 됩니다.
 
--   XDP 계정 또는 개발자 계정을 만든 Windows 개발자 센터 계정에 연결 됩니다.
+-   XDP 계정 또는 개발자 계정을 만든 파트너 센터 계정에 연결 됩니다.
 
 -   로그인 할 수만 개발자 키트를 합니다. 소매 장치에서 개발자 계정으로 로그인 거부 됩니다.
 

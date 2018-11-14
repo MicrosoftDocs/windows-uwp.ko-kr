@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: df9c4764b8f7d752a132d6759054660f481cce55
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026006"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6462839"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>서비스 지점 장치 클레임 및 모델을 사용 하도록 설정
 
@@ -21,7 +21,7 @@ ms.locfileid: "6026006"
 성공적으로 PointOfService 장치 개체를 만들었으면 입력 또는 출력에 장치를 사용하기 전에 먼저 장치 유형에 대한 적절한 클레임 메서드를 사용하여 요청해야 합니다.  클레임은 응용 프로그램에 장치의 여러 기능에 대한 독점적인 액세스를 부여하여 한 응용 프로그램이 다른 응용 프로그램의 장치 사용을 방해하지 않도록 합니다.  한 번에 하나의 응용 프로그램만 PointOfService 장치에 대한 단독 사용을 주장할 수 있습니다. 
 
 > [!Note]
-> 클레임 작업 장치에 대 한 단독 잠금을 설정 하지만 작동 상태로에 배치 하지 않습니다.  자세한 내용은 [I/O 작업에 대 한 장치 사용](#Enable-device-for-I/O-operations) 을 참조 하세요.
+> 클레임 작업 장치에 대 한 단독 잠금을 설정 하지만 작동 상태에 배치 하지 않습니다.  자세한 내용은 [I/O 작업에 대 한 장치 사용](#Enable-device-for-I/O-operations) 을 참조 하세요.
 
 ### <a name="apis-used-to-claim--release"></a>클레임 / 해제 Api를 사용
 
@@ -36,7 +36,7 @@ ms.locfileid: "6026006"
 
 ## <a name="enable-device-for-io-operations"></a>I/O 작업에 대 한 장치를 사용 하도록 설정
 
-클레임 작업 설정 된 독점 권한을 장치에 작동 상태로에 배치 하지 않습니다.  이벤트를 수신 하거나 출력 작업을 수행 하려면 **EnableAsync**를 사용 하 여 장치를 활성화 해야 합니다.  반대로, **DisableAsync** 장치나 수행 출력에서 이벤트를 수신 대기를 중지를 호출할 수 있습니다.  디바이스의 상태를 확인 하려면 **IsEnabled** 를 사용할 수도 있습니다.
+클레임 작업 설정 된 독점 권한을 장치에 작동 상태에 배치 하지 않습니다.  이벤트를 수신 하거나 모든 출력 작업을 수행 하려면 **EnableAsync**를 사용 하 여 장치를 활성화 해야 합니다.  반대로, 장치 또는 수행 출력에서 이벤트를 수신 대기를 중지 **DisableAsync** 호출할 수 있습니다.  디바이스의 상태를 확인 하려면 **IsEnabled** 를 사용할 수도 있습니다.
 
 ### <a name="apis-used-enable--disable"></a>사용 되는 Api 사용/사용 안 함
 
@@ -49,7 +49,7 @@ ms.locfileid: "6026006"
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-¹ 라인 디스플레이 I/O 작업에 대 한 장치를 명시적으로 사용 하도록 설정 하면 컴파일할 수 있습니다.  I/O를 수행 하는 PointOfService LineDisplay Api를 통해 사용 하면 자동으로 수행 됩니다.
+¹ 라인 디스플레이 I/O 작업에 대 한 장치를 명시적으로 사용 하도록 설정 하 필요 하지 않습니다.  I/O를 수행 하는 PointOfService LineDisplay Api를 통해 사용 하면 자동으로 수행 됩니다.
 
 ## <a name="code-sample-claim-and-enable"></a>코드 샘플: 클레임 및 사용
 
@@ -95,7 +95,7 @@ Windows는 멀티태스킹 환경이기 때문에 동일한 컴퓨터의 여러 
 
 활성 클레임이 있는 응용 프로그램이 즉시 **RetainDevice**로 응답하지 않는 경우 해당 응용 프로그램이 일시 중단되었거나 장치가 필요하지 않은 것으로 간주되며 클레임이 취소되고 새 응용 프로그램에 제공됩니다. 
 
-첫 번째 단계 **RetainDevice**를 사용 하 여 **ReleaseDeviceRequested** 이벤트에 응답 하는 이벤트 처리기를 만드는 것입니다.  
+첫 번째 단계와 **RetainDevice** **ReleaseDeviceRequested** 이벤트에 응답 하는 이벤트 처리기를 만드는 것입니다.  
 
 ```Csharp
     /// <summary>
@@ -109,7 +109,7 @@ Windows는 멀티태스킹 환경이기 때문에 동일한 컴퓨터의 여러 
     }
 ```
 
-그런 다음 클레임 장치와 연결에서 이벤트 처리기를 등록
+그런 다음 클레임 장치와 관련에서 이벤트 처리기를 등록
 
 ```Csharp
     BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);
