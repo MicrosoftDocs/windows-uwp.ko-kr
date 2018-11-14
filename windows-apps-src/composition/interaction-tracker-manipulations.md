@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a991d692b4ba4c7a221932218a7d25e48fe16ca
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025309"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6259461"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>InteractionTracker를 사용한 사용자 지정 조작 경험
 
@@ -61,7 +61,7 @@ InteractionTracker는 Windows.UI.Composition.Interactions 네임스페이스 105
 
 ### <a name="interactiontracker-state-machine"></a>InteractionTracker 상태 시스템
 
-앞서 언급 했 듯이 InteractionTracker는 상태 시스템으로 4 개의 상태 – 각각 다른 fourstates 중 하나로 전환할 수 있습니다. (InteractionTracker가 이러한 상태 사이에서 전환하는 방식에 대한 자세한 내용은 [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker) 클래스 설명서를 참조하세요.)
+앞서 언급 했 듯이 InteractionTracker는 상태 시스템으로 4 단계의 – 각각 다른 fourstates 중 하나로 전환할 수 있습니다. (InteractionTracker가 이러한 상태 사이에서 전환하는 방식에 대한 자세한 내용은 [InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker) 클래스 설명서를 참조하세요.)
 
 | 상태 | 설명 |
 |-------|-------------|
