@@ -1,36 +1,36 @@
 ---
 title: 도전 과제 2017
 author: PhillipLucas
-description: 도전 과제 보상을 제공 하도록 Microsoft 개발자 센터에서 구성 하는 방법을 설명 합니다.
+description: 도전 과제 보상을 제공 하는 파트너 센터에서 구성 하는 방법을 설명 합니다.
 ms.assetid: ''
 ms.author: kevinasg
 ms.date: 11/10/2017
 ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
-ms.openlocfilehash: b39c4ef33db0792856f06aaf282b7804012984a5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: d5e84e2e124a8ca6cac814dfb05120a8e6137ac3
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6044937"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6280433"
 ---
-# <a name="configure-achievements-2017-on-dev-center"></a>도전 과제 2017 개발자 센터에서 구성
+# <a name="configure-achievements-2017-in-partner-center"></a>파트너 센터에서 도전 과제 2017 구성
 
 > [!IMPORTANT]
 > 도전 과제에만 적용 됨 ID@Xbox 또는 파트너 관리 합니다. Xbox Live 크리에이터 스 프로그램에 참여 하는 게임을 지원 하지 않습니다.
 
-연결 된 게임은 [도전 과제 2017](../../achievements-2017/simplified-achievements.md) 구성 하려면 [Microsoft 개발자 센터](https://developer.microsoft.com/dashboard) 를 사용할 수 있습니다. 다음을 수행 하 여 새 도전 과제를 추가 합니다.
+연결 된 게임은 [도전 과제 2017](../../achievements-2017/simplified-achievements.md) 구성 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용할 수 있습니다. 다음을 수행 하 여 새 도전 과제를 추가 합니다.
 
 1. **서비스**아래의 타이틀에 대 한 도전 과제 섹션으로 이동 > **Xbox Live** > **도전 과제**입니다.
 2. **새 도전 과제** 단추를 클릭 하 고 양식을 작성 합니다.  완료 되 면 **저장**을 클릭 합니다.
 
-![Microsoft 개발자 센터에서 새 도전 과제를 만들려면 스크린샷](../../images/dev-center/achievement-table.png)
+![파트너 센터에서 새 도전 과제를 만들 스크린샷](../../images/dev-center/achievement-table.png)
 
 ## <a name="description"></a>설명
-설명 섹션은 이름과 설명을 잠김/잠금 해제 됨 등에 도전 과제의 기본 사항을 입력할 수 있습니다. [Microsoft 개발자 센터](https://developer.microsoft.com/dashboard)에서 **지역화 된 문자열** 서비스 구성 섹션에 액세스 하 여 도전 과제를 지역화 지원을 추가할 수 있습니다.
+설명 섹션은 이름과 설명을 잠김/잠금 해제 됨 등에 도전 과제의 기본 사항을 입력할 수 있습니다. [파트너 센터](https://partner.microsoft.com/dashboard)에서 **지역화 된 문자열** 서비스 구성 섹션에 액세스 하 여 도전 과제를 지역화 지원을 추가할 수 있습니다.
 
-![Microsoft 개발자 센터에서 새 도전 과제를 구성할 때 설명 필드의 스크린샷](../../images/dev-center/achievements-2.png)
+![파트너 센터에서 새 도전 과제를 구성할 때 설명 필드의 스크린샷](../../images/dev-center/achievements-2.png)
 
 **도전 과제 이름** 필드에는 도전 과제의 공용 전면 이름입니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "6044937"
 ## <a name="details"></a>세부 정보
 세부 정보 섹션 (있는 경우) 이미지 등의 중요 한 정보, 도전 과제의 유형, 게이머 점수 보상을 연결 하는 및 잠금 해제 될 때까지 도전 과제를 숨길지 여부.
 
-![Microsoft 개발자 센터에서 새 도전 과제를 구성할 때 세부 사항 필드의 스크린샷](../../images/dev-center/achievements-3.png)
+![파트너 센터에서 새 도전 과제를 구성할 때 세부 사항 필드의 스크린샷](../../images/dev-center/achievements-3.png)
 
 **이미지 아이콘** 필드에는 도전 과제와 함께 표시 될 이미지입니다. 1920 x 1080 png 이어야 합니다.
 
@@ -54,19 +54,19 @@ ms.locfileid: "6044937"
 **도전 과제 딥 링크** 사용 방법은 도전 과제를 획득 될 위치에서 게임의 지점에 연결할 수 있는 도전 과제에서 매개 변수를 다시 가져올 수 있습니다. 딥 링크 가져오기 API 응답에 반환 됩니다. 지정 된 URL을 포함 해야 합니다 `ms-xbl-{titleID}://` 접두사입니다.
 
 > [!TIP]
-> 도전 과제 딥 링크 게임의 16 진수 TitleId 필요합니다. [Microsoft 개발자 센터](https://developer.microsoft.com/dashboard)에서 [Xbox Live 설치](xbox-live-setup.md) 화면에서 찾을 수 있습니다.
+> 도전 과제 딥 링크 게임의 16 진수 TitleId 필요합니다. [파트너 센터](https://developer.microsoft.com/dashboard)에서 [Xbox Live 설치](xbox-live-setup.md) 화면에서 찾을 수 있습니다.
 
 ## <a name="additional-rewards"></a>추가 보상
 경우에 따라 플레이어는 도전 과제를 잠금 해제는 게임에서 보상 또는 아트 워크를 제공 하는 것이 좋습니다. 정의할 수 있습니다 보상 합니다 (있는 경우) 관련 된 **추가 보상** 섹션에서 성과. 성과 각 보상 유형 중 두 가지 추가 보상-포함 될 수 있습니다. 자세한 내용은 [도전 과제 보상](../../achievements-2017/achievement-rewards.md) 문서에 있습니다.
 
 새 보상을 만들려면 **추가 보상** 섹션에서 **추가 보상** 단추를 클릭 하 고 양식을 작성 합니다.
 
-![Microsoft 개발자 센터에서 달성 한 도전 과제 보상 추가의 스크린샷](../../images/dev-center/achievement-reward.png)
+![파트너 센터에서 달성 한 도전 과제 보상 추가의 스크린샷](../../images/dev-center/achievement-reward.png)
 
 ### <a name="reward-details"></a>보상 세부 정보
 새 보상 연결할 보상 세부 정보를 입력 합니다. 완료 되 면 **추가**클릭 합니다.
 
-![Microsoft 개발자 센터에서 수상 자세한 성과 구성의 스크린샷](../../images/dev-center/achievements-5.png)
+![파트너 센터에서 수상 자세한 성과 구성의 스크린샷](../../images/dev-center/achievements-5.png)
 
 도전 과제 보상 만들 수 있는 경우 채널은 다음과 같습니다.
 

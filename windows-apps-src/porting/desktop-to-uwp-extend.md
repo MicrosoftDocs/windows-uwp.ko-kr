@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d76d93f496f86e63027cff9e7adb64251074ba57
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6164316"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6282054"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 응용 프로그램 확장
 

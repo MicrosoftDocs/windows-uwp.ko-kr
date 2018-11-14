@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 482092e43acd6999361640e598a44391ac3f11a5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023116"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6271332"
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 
@@ -33,7 +33,7 @@ ms.locfileid: "6023116"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트에 알고 있어야 합니다.
+응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트 잘 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 가속도계를 지원해야 합니다.
 

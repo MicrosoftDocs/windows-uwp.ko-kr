@@ -8,16 +8,16 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ad4070d84ca8df2a991eb3d44c7b1c1d7188c13a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: b0c97e2b5b4f9561385f7854ea2ee13292278fc8
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6031814"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6275797"
 ---
 # <a name="xbox-one-multiplayer-session-directory"></a>Xbox One 멀티 플레이 세션 디렉터리
 
-이 항목에서는 새 Xbox One 멀티 플레이 세션 디렉터리 (MPSD) 서비스를 사용 하 여 멀티 플레이 세션 만들기의 개요를 제공 합니다. 세션 템플릿에도 직접를 Xbox 개발 포털 (XDP)을 제출 하는 Xbox One 제목 개발자 향해 주로 용지가 리디렉션됩니다. MPSD 서비스 물론 Windows 개발자 센터를 사용 하 여 구성할 수 있지만이 문서의 하지 초점 합니다. 용어 및 개념의 멀티 플레이 세션 문제 해결 및 MPSD 구성, 사용량, 관련 알아두는 것입니다.
+이 항목에서는 새 Xbox One 멀티 플레이 세션 디렉터리 (MPSD) 서비스를 사용 하 여 멀티 플레이 세션 만들기의 개요를 제공 합니다. 세션 템플릿에도 직접를 Xbox 개발 포털 (XDP)을 제출 하는 Xbox One 제목 개발자 향해 주로 용지가 리디렉션됩니다. MPSD 서비스 뿐만 파트너 센터를 사용 하 여 구성할 수 있지만이 문서의 하지에 집중 합니다. 용어 및 개념의 멀티 플레이 세션 문제 해결 및 MPSD 구성, 사용량, 관련 알아두는 것입니다.
 
 ## <a name="revision-summary"></a>요약 수정
 

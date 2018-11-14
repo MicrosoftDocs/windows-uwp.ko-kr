@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b39f68d6f5f00f8e33a080b77614b9ba11627989
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042785"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6204555"
 ---
 # <a name="mvvm-and-language-performance-tips"></a>MVVM 및 언어 성능 팁
 

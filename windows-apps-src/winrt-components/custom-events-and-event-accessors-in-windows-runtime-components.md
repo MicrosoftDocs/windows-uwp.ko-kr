@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050442"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163907"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
 

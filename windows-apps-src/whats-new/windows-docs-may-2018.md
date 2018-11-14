@@ -8,11 +8,11 @@ ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 74fc017453472b515e597b73ee8bb582376f6b12
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045413"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163891"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018 년 5 월 Windows 개발자 문서의 새로운
 

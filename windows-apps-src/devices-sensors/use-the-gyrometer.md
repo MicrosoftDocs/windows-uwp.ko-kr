@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 84c27e35e7e9cc3763a4d1d86348da14f3a18910
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039570"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266338"
 ---
 # <a name="use-the-gyrometer"></a>회전계 사용
 

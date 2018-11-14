@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ccff2dce0a57e5f3219f306fa029f84162bf4974
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037768"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6162987"
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
