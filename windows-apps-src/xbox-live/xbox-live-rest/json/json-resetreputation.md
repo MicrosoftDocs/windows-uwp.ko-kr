@@ -10,25 +10,25 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cf6db0ec47e92023fb43c7599fac3dcc9cdd9f0a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6051857"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6254358"
 ---
 # <a name="resetreputation-json"></a>ResetReputation(JSON)
-사용자의 기존 점수를 변경 해야 하는 새 기본 평판 점수를 포함 되어 있습니다. 
+사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다. 
 <a id="ID4EN"></a>
 
  
 ## <a name="resetreputation"></a>ResetReputation
  
-ResetReputation 개체에는 다음과 같이 지정 합니다.
+ResetReputation 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
 | fairplayReputation| 숫자| 원하는 Fairplay 평판 점수 (유효한 범위 0 ~ 75) 사용자에 대 한 새로운 기본 합니다.| 
-| commsReputation| 숫자| 원하는 사용자 (유효한 범위 0 ~ 75)에 대 한 의사 소통 평판 점수 새로운 기본 합니다.| 
+| commsReputation| 숫자| 원하는 의사 소통 평판 점수 (유효한 범위 0 ~ 75) 사용자에 대 한 새로운 기본 합니다.| 
 | userContentReputation| 숫자| 원하는 UserContent 평판 점수 (유효한 범위 0 ~ 75) 사용자에 대 한 새로운 기본 합니다.| 
   
 <a id="ID4E4B"></a>

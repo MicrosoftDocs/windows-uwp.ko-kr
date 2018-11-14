@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ba7cd6130561b18aff49500780670544367dc1f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 06b0bd764f7bd15eb67e4f6356ff56d869e6fd58
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6024079"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6257903"
 ---
 # <a name="step-by-step-guide-to-integrate-xbox-live-for-managed-partners-and-idxbox-members"></a>관리 파트너에 대 한 Xbox Live를 통합 하는 단계별 가이드 및 ID@Xbox 멤버
 
@@ -27,13 +27,13 @@ Xbox 개발 키트 (XDK), 유니버설 Windows 플랫폼 (UWP), 또는 크로스
   - Xbox One에 대 한 [Xbox One의 UWP](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) 및 특히 [Xbox One의 UWP 앱 및 게임에 대 한 시스템 리소스](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation) 참조
 - 크로스 플레이 게임은 일반적으로 Xbox One 및 XDK와 UWP 경로 사용 하 여 Windows PC를 대상으로 하는 게임입니다.
 
-## <a name="2-ensure-you-have-a-title-created-on-dev-center-or-xdp"></a>2. 개발자 센터 또는 XDP에서 만든 타이틀이 있는지 확인
-모든 Xbox Live 타이틀에 로그인 및 Xbox Live 서비스 호출이 수는 개발자 센터 또는 Xbox 개발자 포털 (XDP)에서 정의 되어야 합니다.  [새 타이틀 만들기](create-a-new-title.md) 에서는이 작업을 수행 하는 방법을 보여 줍니다.
+## <a name="2-ensure-you-have-a-title-created-in-partner-center-or-xdp"></a>2. XDP 또는 파트너 센터에서 만든 타이틀이 있는지 확인
+모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출할 수 있게 됩니다 파트너 센터 또는 Xbox 개발자 포털 (XDP)에서 정의 되어야 합니다.  [새 타이틀 만들기](create-a-new-title.md) 에서는이 작업을 수행 하는 방법을 보여 줍니다.
 
 ## <a name="3-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>3. IDE 또는 게임 엔진 설정 적절 한 가이드를 따라
 플랫폼 및 엔진에 대 한 적절 한 시작 가이드를 수행 하 고 진행 하면서 Xbox Live의 기본 사항을 알아볼 수 있습니다.
 
-* [UWP 게임에 대 한 Visual Studio를 사용 하 여 시작](get-started-with-visual-studio-and-uwp.md) Visual Studio 프로젝트를 개발자 센터의 Xbox Live 구성과 연결 하는 방법을 표시 됩니다.
+* [UWP 게임에 대 한 Visual Studio를 사용 하 여 시작](get-started-with-visual-studio-and-uwp.md) Visual Studio 프로젝트를 파트너 센터에서 Xbox Live 구성과 연결 하는 방법을 표시 됩니다.
 
 * [Unity UWP 게임을 사용 하 여 시작](partner-add-xbox-live-to-unity-uwp.md) 하면 새 Xbox Live를 만들려면 Unity 제목을 사용 하는 방법 제목, 순위표 등의 기능을 추가 하 고 기본 Visual Studio 프로젝트를 생성 표시 됩니다.
 

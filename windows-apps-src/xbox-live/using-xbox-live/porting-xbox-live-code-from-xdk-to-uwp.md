@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 40389232f5a1f6ab606720068fe8c9ac80fd5093
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 91a30a81123902d7b4b2f8311ae1f24bd23b3e43
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6142416"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209571"
 ---
 # <a name="porting-xbox-live-code-from-the-xbox-developer-kit-xdk-to-universal-windows-platform-uwp"></a>Xbox Live 코드 포팅 Xbox 개발자 키트 (XDK)에서 유니버설 Windows 플랫폼 (UWP)
 
@@ -27,17 +27,17 @@ Windows 개발 컴퓨터를 준비 하 고이 문서에서 다루는 다른 항�
 
 <a name="_Setting_up_and"></a>
 
-## <a name="setting-up-and-configuring-your-project-in-dev-center-and-xdp"></a>설정 및 개발자 센터 및 XDP 프로젝트 구성
+## <a name="setting-up-and-configuring-your-project-in-partner-center-and-xdp"></a>설정 및 파트너 센터 및 XDP 프로젝트 구성
 
-Xbox Live 서비스를 사용 하는 UWP 제목 [Windows 개발자 센터](https://dev.windows.com/en-us) 또는 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com/)에서 구성 해야 합니다. 최신 정보에 대 한 Xbox Live 프로그래밍 가이드에서 [Xbox Live SDK](https://developer.xboxlive.com/en-us/live/development/Pages/Downloads.aspx)에 포함 된 [새로운 또는 기존 UWP 프로젝트에 Xbox Live 추가](../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 참조 하세요.
+Xbox Live 서비스를 사용 하는 UWP 제목 [파트너 센터](https://partner.microsoft.com/dashboard)에서 구성 해야 합니다. 최신 정보에 대 한 Xbox Live 프로그래밍 가이드에서 [Xbox Live SDK](https://developer.xboxlive.com/en-us/live/development/Pages/Downloads.aspx)에 포함 된 [새로운 또는 기존 UWP 프로젝트에 Xbox Live 추가](../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 참조 하세요.
 
 타이틀에 Xbox Live 서비스를 사용 하기 위한 다음이 단계를 포함 하는 해당 페이지에 대 한 항목:
 
--   Windows 개발자 센터에서 UWP 앱 프로젝트를 만듭니다.
+-   파트너 센터에서 UWP 앱 프로젝트를 만듭니다.
 
 -   XDP를 사용 하 여 Xbox Live 사용에 대 한 프로젝트를 설정 합니다.
 
--   개발자 센터 제품 XDP 제품에 연결 합니다.
+-   파트너 센터 제품 XDP 제품에 연결 합니다.
 
 -   XDP (샌드박스에 Xbox Live 타이틀을 실행 하는 경우 필요 함)에서 개발자 계정을 만듭니다.
 
@@ -77,7 +77,7 @@ Xbox Live 서비스를 사용 하는 UWP 제목 [Windows 개발자 센터](https
 
 Appxmanifest.xml 파일의 Xbox 및 UWP 버전 간의 가장 일반적인 변경이합니다.
 
-1. 패키지 Id UWP에서 개발 하는 동안에 중요 합니다. Id 이름 및 게시자 모두 *일치 해야* UWP 앱에 대 한 개발자 센터에 정의 된 것입니다.
+1. 패키지 Id UWP에서 개발 하는 동안에 중요 합니다. Id 이름 및 게시자 모두 *일치 해야* UWP 앱에 대 한 파트너 센터에 정의 된 것입니다.
 
 1. 패키지 종속성 섹션에는 필요 합니다. 예:
 
@@ -382,7 +382,7 @@ Windows에서는 한 번에 하나의 로그인 사용자와 함께 작업할 �
 
 ### <a name="supporting-multiplayer-cross-play-between-xbox-one-and-pc-uwp"></a>Xbox One 및 PC UWP 멀티 플레이 크로스 플레이 지원합니다.
 
-XDP에서 새 세션 템플릿 요구 사항 외에도 ( [개발자 센터 및 XDP 프로젝트 구성 및 설정](#_Setting_up_and)참조), 크로스 플레이 세션 가입 기능에 대 한 새 제한이 함께 제공 됩니다. "None" 세션 조인 제한 더 이상 사용할 수 없습니다. "열어" 또는 "로컬" (기본 제한은 "로컬" 임)를 사용 해야 합니다.
+XDP에서 새 세션 템플릿 요구 사항 외에도 ( [을 설정 하 고 파트너 센터 및 XDP 프로젝트 구성](#_Setting_up_and)참조), 크로스 플레이 세션 가입 기능에 대 한 새 제한이 함께 제공 됩니다. "None" 세션 조인 제한 더 이상 사용할 수 없습니다. "열어" 또는 "로컬" (기본 제한은 "로컬" 임)를 사용 해야 합니다.
 
 또한 가입 및 읽기 제한 기본값 "로컬" 필수 **userAuthorizationStyle** 기능으로 인해 Windows 10 멀티 플레이어 합니다.
 
