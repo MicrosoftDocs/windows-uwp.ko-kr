@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dc7d3d70291d29102af614f29fd4531523a961e1
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6151093"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184670"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 

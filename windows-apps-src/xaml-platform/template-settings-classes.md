@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052228"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183884"
 ---
 # <a name="template-settings-classes"></a>Template settings 클래스
 
@@ -97,7 +97,7 @@ ms.locfileid: "6052228"
 
 이 템플릿에는 많은 XAML이 있으므로 일부만 발췌했습니다. 또한 각각 동일한 [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752) 속성을 사용하는 여러 상태 및 테마 애니메이션 중 하나에 불과합니다. [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)의 경우 바인딩을 통해 **ComboBoxTemplateSettings** 값을 사용하여 공유 값을 기반으로 해당 위치에서 템플릿의 관련 애니메이션을 중지 및 시작하므로 부드럽게 전환됩니다.
 
-**참고**  **TemplateSettings** 값을 사용 하 여 컨트롤 템플릿의 일부로 수행을 값의 형식과 일치 하는 속성을 설정 하는 있는지 확인 합니다. 그렇지 않으면 바인딩의 대상 형식이 **TemplateSettings** 값의 다른 소스 형식으로부터 변환될 수 있도록 바인딩에 대한 값 변환기를 만들어야 합니다. 자세한 내용은 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)를 참조하세요.
+**참고**  **TemplateSettings** 값을 사용 하 여 컨트롤 템플릿의 일부로 수행을 값의 형식과 일치 하는 속성을 설정 하 고 있는지 확인 합니다. 그렇지 않으면 바인딩의 대상 형식이 **TemplateSettings** 값의 다른 소스 형식으로부터 변환될 수 있도록 바인딩에 대한 값 변환기를 만들어야 합니다. 자세한 내용은 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

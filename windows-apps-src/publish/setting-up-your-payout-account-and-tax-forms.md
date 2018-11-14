@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f652ae186ced996c103a60aa8f13956a5da59ca
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6151399"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6201092"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 

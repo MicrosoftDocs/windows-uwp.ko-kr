@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
 ms.openlocfilehash: f9d9d6a2aafe1b81ff331bac92662b111eb48956
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029345"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184231"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩
 

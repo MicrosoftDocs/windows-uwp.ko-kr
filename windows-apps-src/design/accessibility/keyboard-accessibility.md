@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c5e018ee56b6a0d26bf2159f62801aa4ab5c3c
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6185898"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264200"
 ---
 # <a name="keyboard-accessibility"></a>키보드 접근성  
 

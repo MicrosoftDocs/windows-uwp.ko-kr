@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx 9, directx 11, 포트
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e867129b5f684c7e77aebefcbe9a3f68b47b031
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035761"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183072"
 ---
 # <a name="moving-from-directx-9-to-directx-11-and-universal-windows-platform-uwp"></a>DirectX 9에서 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 이동
 

@@ -1,30 +1,30 @@
 ---
 title: 지역화 문자열
 author: shrutimundra
-description: Windows 개발자 센터에서 문자열 지역화 하는 방법을 알아봅니다
+description: 파트너 센터에서 문자열 지역화 하는 방법을 알아봅니다
 ms.assetid: e0f307d2-ea02-48ea-bcdf-828272a894d4
 ms.author: kevinasg
 ms.date: 11/17/2017
 ms.topic: article
 ms.localizationpriority: medium
-keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 지역화 된 문자열, Windows 개발자 센터
-ms.openlocfilehash: da81c21c858aaa62cc6bbe385f08dd6ab613c979
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 지역화 된 문자열, 파트너 센터
+ms.openlocfilehash: b7d8f53656f60932c0f27f492f3769ddae8434ba
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6024096"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182157"
 ---
-# <a name="configuring-localized-strings-on-windows-dev-center"></a>Windows 개발자 센터에서 지역화 된 문자열을 구성합니다.
+# <a name="configuring-localized-strings-in-partner-center"></a>파트너 센터에서 지역화 된 문자열을 구성합니다.
 
 이 페이지는 게임에서 지 원하는 모든 언어에 모든 Xbox Live 구성 지역화를 사용할 수 있습니다. 모든 후속 Xbox Live 페이지 중 하나에서 만든 서비스 구성 파일을 다운로드 하는 추가 됩니다.
 
-게임와 관련 된 모든 언어로 지역화 된 문자열을 구성 하려면 [Windows 개발자 센터](https://developer.microsoft.com/dashboard) 를 사용할 수 있습니다. 다음을 수행 하 여 구성을 추가 합니다.
+게임와 관련 된 모든 언어로 지역화 된 문자열을 구성 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용할 수 있습니다. 다음을 수행 하 여 구성을 추가 합니다.
 
 1. **서비스**아래의 타이틀에 대 한 **지역화 된 문자열** 섹션으로 이동 > **Xbox Live** > **지역화 된 문자열**입니다.
 2. 로컬 컴퓨터에서 localization.xml 파일을 다운로드 하는 **다운로드** 단추를 클릭 합니다.
 
-![개발자 센터에서 지역화 된 문자열 구성 페이지의 스크린샷](../../images/dev-center/localized-strings/localized-strings-1.png)
+![파트너 센터에서 지역화 된 문자열 구성 페이지의 스크린샷](../../images/dev-center/localized-strings/localized-strings-1.png)
 
 3. 복제 하 여 지역화 된 문자열을 추가할 수는 <Value locale="en-US">Maze 재생</Value> 태그 및 선택한 언어로 지역화 된 문자열의 값을 로캘 값을 변경 합니다. 최소 하나의 값 태그 내 개발자 표시 로캘 오류를 방지할 수 있어야 합니다.
 

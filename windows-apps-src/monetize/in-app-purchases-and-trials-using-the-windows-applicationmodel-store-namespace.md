@@ -9,11 +9,11 @@ ms.topic: article
 keywords: uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 28fe27cc4464598414fec11d6812e2e9ea377aff
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6153185"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208915"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 

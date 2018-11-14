@@ -8,11 +8,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d54df07cd5f2ccc32098b17fd7c656900cba978
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6154295"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264276"
 ---
 # <a name="tutorial-create-a-user-interface"></a>자습서: 사용자 인터페이스 만들기
 

@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b45386d93d37d00b8448a4f4a3548be6de7f685b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 4761b668877af6380ad176e56fb84410a4f509fc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042454"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185023"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Xbox One에서 UWP 앱 개발 시작
 
@@ -50,7 +50,7 @@ UWP(유니버설 Windows 플랫폼) 개발에 대해 PC 및 Xbox One을 성공�
 
 ## <a name="setting-up-your-xbox-one-console"></a>Xbox One 콘솔 설정
 
-1.  Xbox One에서 개발자 모드를 활성화합니다. 앱을 다운로드 하 고 활성화 코드를 가져온 다음 개발자 센터 계정에 [Xbox One 본체 관리](https://partner.microsoft.com/xboxactivate) 페이지에 입력 합니다. 자세한 내용은 [Xbox One 개발자 모드 활성화](devkit-activation.md)를 참조하세요. 
+1.  Xbox One에서 개발자 모드를 활성화합니다. 앱을 다운로드 하 고, 활성화 코드 및 파트너 센터 계정에 [Xbox One 본체 관리](https://partner.microsoft.com/xboxactivate) 페이지에 입력 합니다. 자세한 내용은 [Xbox One 개발자 모드 활성화](devkit-activation.md)를 참조하세요. 
 
 2.  **개발자 모드 활성화** 앱을 열고 **전환 및 다시 시작을**선택 합니다. 축하합니다. 이제 개발자 모드의 Xbox One을 사용할 수 있습니다.
   

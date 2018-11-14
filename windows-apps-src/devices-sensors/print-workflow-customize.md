@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: f58c0c8397831595c237b7bd9fe4eafb25594ab3
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6156979"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209815"
 ---
 # <a name="customize-the-print-workflow"></a>인쇄 워크플로 사용자 지정
 

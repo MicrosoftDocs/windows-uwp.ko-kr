@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 31e04f1711d83679ac0b41c74c1c391b26bc7969
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6149981"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6265787"
 ---
 # <a name="post-usersxuidxuiddevicescurrenttitlescurrent"></a>POST (/users/xuid({xuid})/devices/current/titles/current)
 사용자의 현재 상태를 사용 하 여 타이틀을 업데이트 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

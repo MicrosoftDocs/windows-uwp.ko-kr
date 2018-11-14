@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, xbox, xbox live
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4c1767d02a32886998af03a6408e2f4c2426c
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6187000"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6248869"
 ---
 # <a name="what-is-xbox-live"></a>Xbox Live란 무엇인가요?
 
