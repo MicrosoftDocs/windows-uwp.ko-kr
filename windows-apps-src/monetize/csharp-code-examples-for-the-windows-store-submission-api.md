@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 495bf2e58fafd9e321937bd6fdb3be8c8dea68e2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026326"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6267962"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\# 샘플: 앱, 추가 기능, 플라이트 제출
 
@@ -77,7 +77,7 @@ ms.locfileid: "6026326"
 1. 먼저 이 메서드는 [새 추가 기능 만들기](create-an-add-on.md) 작업을 수행합니다.
 2. 다음으로 [추가 기능의 새 제출 만들기](create-an-add-on-submission.md) 작업을 수행합니다.
 3. 제출할 아이콘이 포함된 ZIP 보관 파일을 Azure Blob Storage에 업로드합니다.
-4. 그런 다음이 [파트너 센터에 새 제출을 커밋합니다](commit-an-add-on-submission.md).
+4. 다음으로 [파트너 센터에 새 제출을 커밋합니다](commit-an-add-on-submission.md).
 5. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태를 확인](get-status-for-an-add-on-submission.md)합니다.
 
 > [!div class="tabbedCodeSnippets"]

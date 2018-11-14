@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, mpsd, 멀티 플레이 세션 디렉터리입니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 05e42fcce988f7b3ac880082cd1300b6f4b9294f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6d39435f7f6669a0bdb953e0501f69fc80c4d179
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050949"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205856"
 ---
 # <a name="multiplayer-session-directory-mpsd"></a>멀티 플레이 세션 디렉터리(MPSD)
 
@@ -213,7 +213,7 @@ MPSD 호출 매치 메이 킹 WinRT API 및 멀티 플레이 WinRT API를 사용
 
 ### <a name="using-the-multiplayer-rest-api-to-interact-with-mpsd"></a>멀티 플레이어 REST API를 사용 하 여 MPSD 상호 작용할 수
 
-제목, 또는 해당 서비스 멀티 플레이 REST API 및 매치 메이 킹 REST API에 대 한 표준 HTTP 호출에 사용할 수 있습니다. REST 기능을 직접 사용 하는 경우 호출자 문제 삭제, 배치, 게시, 및 대부분의 작업에 대 한 세션 디렉터리 Uri에 대 한 호출을 가져오기. PUT 요청에서 요청 본문은 기존 세션에 병합 됩니다. 기존 세션에 없는 경우 요청 본문 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 또는 [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)에 저장 된 세션 템플릿 함께 새 세션을 만들려면 사용 됩니다. 모든 필드는 선택 사항 및만 델타를 지정 해야 합니다. 따라서 {} 은 0 델타를 사용 하 여 유효한 PUT 요청 합니다.
+제목, 또는 해당 서비스 멀티 플레이 REST API 및 매치 메이 킹 REST API에 대 한 표준 HTTP 호출에 사용할 수 있습니다. REST 기능을 직접 사용 하는 경우 호출자 문제 삭제, 배치, 게시, 및 대부분의 작업에 대 한 세션 디렉터리 Uri에 대 한 호출을 가져오기. PUT 요청에서 요청 본문은 기존 세션에 병합 됩니다. 기존 세션에 없는 경우 요청 본문 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 또는 [파트너 센터](https://partner.microsoft.com/dashboard)에 저장 된 세션 템플릿 함께 새 세션을 만들려면 사용 됩니다. 모든 필드는 선택 사항 및만 델타를 지정 해야 합니다. 따라서 {} 은 0 델타를 사용 하 여 유효한 PUT 요청 합니다.
 
 서버의 공식 세션 복사본이 영향을 주지 않고 병합의 결과 반환 하는 가상 PUT 요청을 수행 하려면 쿼리 문자열을 추가할 수 있습니다 "? nocommit = true" PUT 요청 합니다.
 
@@ -277,7 +277,7 @@ MPSD 호출 매치 메이 킹 WinRT API 및 멀티 플레이 WinRT API를 사용
 #### <a name="display-available-sessions-and-templates"></a>사용 가능한 세션 및 템플릿 표시
 
 1.  로그인 한 사용자 멤버인 해당 서비스 안내에서 세션의 목록을 표시 하는 서비스 도구에서 안내를 클릭 합니다.
-2.  이 동일한 페이지에는 서비스 안내 클릭 하 고 세션 템플릿 및 지역화 문자열은 서비스 안내에 대 한 서비스 구성을 표시 수 있습니다. 이러한 항목은 [XDP](https://xdp.xboxlive.com) 또는 [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)를 통해 수집 되며 합니다.
+2.  이 동일한 페이지에는 서비스 안내 클릭 하 고 세션 템플릿 및 지역화 문자열은 서비스 안내에 대 한 서비스 구성을 표시 수 있습니다. 이러한 항목은 [XDP](https://xdp.xboxlive.com) 또는 [파트너 센터](https://partner.microsoft.com/dashboard)를 통해 수집 되며 합니다.
 
 
 #### <a name="display-the-full-contents-of-a-session"></a>세션의 전체 내용을 표시합니다

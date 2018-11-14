@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fe2460dfc5ab11a9168f1d1d87207d2b9490026
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035339"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6164466"
 ---
 # <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 
@@ -278,7 +278,7 @@ Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다
 -   정규화된 형식은 작동하지 않으므로 사용하지 마세요. 예를 들어 다음은 잘못된 XAML입니다. `<Button Visibility="Visibility.Visible"/>`.
 -   상수의 값을 사용하지 마세요. 다시 말해서 열거형이 정의된 방식에 의해 명시적으로 또는 암시적으로 영향을 받는 열거형의 정수 값을 사용하지 마세요. 작동하는 것처럼 보일지도 모르지만, 일시적인 구현 정보에 의존하게 되므로 XAML 또는 코드에서 사용하면 좋지 않습니다. 예를 들어 다음과 같이 사용하지 마세요.`<Button Visibility="1"/>`.
 
-**참고**xaml 및 열거형을 사용 하는 Api에 대 한 참조 항목에서 **구문의** **속성 값** 섹션에는 열거형 형식의 링크를 클릭 합니다. 그러면 해당 열거형의 명명된 상수를 찾을 수 있는 열거형 페이지로 연결됩니다.
+**참고**을 XAML을 사용 하는 열거형 Api에 대 한 참조 항목에서 **구문의** **속성 값** 섹션에는 열거형 형식의 링크를 클릭 합니다. 그러면 해당 열거형의 명명된 상수를 찾을 수 있는 열거형 페이지로 연결됩니다.
 
 열거형은 깃발 모양이 될 수 있습니다. 즉, **FlagsAttribute**를 사용하여 특성이 지정됩니다. 플래그 수준의 열거형에 대한 값의 조합을 XAML 특성 값으로 지정해야 할 경우 각 열거형 상수 이름을 쉼표(,)로 구분하고 공백 문자 없이 사용할 수 있습니다. Windows 런타임 XAML 어휘에서는 플래그 수준의 특성이 일반적이지 않지만, [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934)는 XAML에서 플래그 수준의 열거형 값 설정이 지원되는 예입니다.
 

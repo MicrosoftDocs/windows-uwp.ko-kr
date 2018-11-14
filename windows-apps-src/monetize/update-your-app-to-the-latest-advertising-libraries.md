@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이�
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
 ms.openlocfilehash: 48fc818c1ae7a9a46912ff52c2b00b07f19c366e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024105"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207883"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>배너 광고용 최신 광고 라이브러리로 앱 업데이트
 
@@ -88,4 +88,4 @@ ms.locfileid: "6024105"
 
 앱을 테스트하여 앱이 예상대로 배너 광고를 표시하는지 확인합니다.
 
-앱의 이전 버전이 앱을 다시 게시할 파트너 센터에서 업데이트 된 앱에 대 한 [새 제출을 만들고](../publish/app-submissions.md) 스토어에서 이미 사용할 수 있습니다.
+이전 버전의 앱이 앱을 다시 게시할 파트너 센터에서 업데이트 된 앱에 대 한 [새 제출을 만들고](../publish/app-submissions.md) 스토어에서 이미 사용할 수 있습니다.

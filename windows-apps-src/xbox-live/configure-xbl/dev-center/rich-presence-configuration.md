@@ -1,20 +1,20 @@
 ---
-title: 개발자 센터에서 다양 한 상태 구성
+title: 파트너 센터에서 다양 한 상태 구성
 author: aablackm
-description: Windows 개발자 센터에서 다양 한 상태 문자열을 구성 하는 방법에 알아봅니다.
+description: 파트너 센터에서 다양 한 상태 문자열을 구성 하는 방법에 알아봅니다.
 ms.author: aablackm
 ms.date: 02/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, Windows 개발자 센터, 다양 한 상태 문자열
-ms.openlocfilehash: 8b5a538cc92da7011519af000e1fa899916d6eab
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 다양 한 상태 문자열, 파트너 센터
+ms.openlocfilehash: cb16b7e8c3776f2509207f15a6c26341f9028fe5
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6035650"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264406"
 ---
-# <a name="configure-rich-presence-on-windows-dev-center"></a>Windows 개발자 센터에서 다양 한 상태를 구성 합니다.
+# <a name="configure-rich-presence-in-partner-center"></a>파트너 센터에서 다양 한 상태를 구성 합니다.
 
 다양 한 상태 문자열 사용자의 게임에서 활동을 표시합니다. 플레이어의 게이머는 **친구 및 클럽** 목록에도 자신의 Xbox Live 사용자 프로필와 마찬가지로 아래 표시 됩니다. 구성 된 다양 한 상태 문자열 재생 중인 이름에 게임에 추가 됩니다. BubblePop 라는 게임을 만들고 다양 한 상태 문자열 "친구와 Popping 풍선"를 구성 하는 경우에 구성 된 문자열은 상태로 "BubblePop-친구와 Popping 풍선"를 만듭니다. 아래는 다양 한 상태 문자열 컨텍스트에서 표시 되는 방식을 확인할 수 있습니다.
 
@@ -35,17 +35,17 @@ Xbox Live 스크린샷에 **마지막 외침** 및 **Lucha Uno** 사용자가 �
 
 - Windows 개발 계정이 있어야 합니다.
 - 개발 계정에 등록 해야 합니다 ID@Xbox 프로그램 또는 관리 파트너 개발자 계정으로 합니다.
-- 타이틀은 개발자 센터에 등록 해야 하 고 Xbox Live가 지원 됩니다.
+- 타이틀은 파트너 센터에 등록 해야 하 고 Xbox Live가 지원 됩니다.
 
-다양 한 상태 문자열을 사용 하려면 먼저 개발자 센터 대시보드에서 구성 해야 합니다.
+다양 한 상태 문자열을 사용 하려면 먼저 파트너 센터에서 구성 해야 합니다.
 
 ## <a name="rich-presence-configuration-page"></a>서식 있는 존재 구성 페이지
 
-다양 한 상태 문자열 [developer.microsoft.com](https://developer.microsoft.com/windows)에서 액세스할 수 있는 개발자 센터 대시보드에서 타이틀에 Xbox Live 서비스의 일환으로 구성 됩니다.
+다양 한 상태 문자열은 [파트너 센터](https://partner.microsoft.com/dashboard)에서 타이틀에 Xbox Live 서비스의 일환으로 구성 됩니다.
 
 다음 지침을 사용 하 여 다양 한 상태 구성 페이지로 이동 합니다.
 
-1. [개발자 센터 대시보드에서](https://developer.microsoft.com/windows) developer.microsoft.com으로 이동 합니다.
+1. Developer.microsoft.com에서 [파트너](https://partner.microsoft.com/dashboard) 센터로 이동 합니다.
 2. 요청에 로그인 하면 등록 된 Windows 개발자 계정으로 로그인 합니다.
 3. 제목이 나 앱 **개요** 페이지에서 활성화 Xbox Live를 선택 합니다. 다양 한 상태 문자열 구성에 사용할 수는 크리에이터 스 프로그램 타이틀을 선택 하지 마십시오.
 4. **서비스** 드롭다운 클릭 하 고 Xbox Live를 선택 합니다.

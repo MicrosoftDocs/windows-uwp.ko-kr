@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 398c44db6a391008605ed6fa4dad877bcead035d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027207"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268724"
 ---
 # <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
 
@@ -195,7 +195,7 @@ ms.locfileid: "6027207"
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **읽기 액세스를 위해 사용자의 파일 선택 열고 파일 스트림을 원본으로 설정의** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)및 다음 파일을 재생 합니다.
+3.  **읽기 액세스에 대 한 사용자의 파일 선택 열고 파일 스트림을 원본으로 설정의** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)및 다음 파일을 재생 합니다.
     ```cs
     if (file != null)
     {

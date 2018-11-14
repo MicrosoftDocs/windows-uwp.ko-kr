@@ -1,32 +1,32 @@
 ---
-title: 개발자 센터에서 액세스 정책 구성
+title: 파트너 센터에서 액세스 정책 구성
 author: KevinAsgari
-description: 다른 앱, 게임 및 Xbox Live 설정에 액세스 하는 서비스를 허용 하려면 개발자 센터에서 액세스 정책을 구성 하는 방법을 설명 합니다.
+description: 다른 앱, 게임 및 Xbox Live 설정에 액세스 하는 서비스를 허용 하려면 파트너 센터에서 액세스 정책을 구성 하는 방법을 설명 합니다.
 ms.assetid: ''
 ms.author: kevinasg
 ms.date: 02/21/2018
 ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
-ms.openlocfilehash: 3975d3252c1891d8d36303b038cce8df93c89d08
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 525249475a9fc8a22d976398cf277620de6655e1
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6042657"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187469"
 ---
-# <a name="configure-access-policies-on-dev-center"></a>개발자 센터에서 액세스 정책 구성
+# <a name="configure-access-policies-in-partner-center"></a>파트너 센터에서 액세스 정책 구성
 
-[Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview) 를 사용 하 여 다른 서비스, 게임 및 앱 타이틀의 Xbox Live 설정 및 데이터에 액세스할 수 있도록 수 있습니다. 예를 들어, 순위표, 웹 사이트에서 표시 하는 웹 서비스를 할 수 있습니다 또는 보거나 저장 된 게임 데이터를 수정 하는 게임의 타이틀 저장소에 액세스할 수 있는 도우미 앱을 할 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하 여 다른 서비스, 게임 및 앱 타이틀의 Xbox Live 설정 및 데이터에 액세스할 수 있도록 합니다. 예를 들어, 순위표, 웹 사이트에서 표시 하는 웹 서비스를 할 수 있습니다 또는 보거나 저장 된 게임 데이터를 수정 하는 게임의 타이틀 저장소에 액세스할 수 있는 도우미 앱을 할 수 있습니다.
 
-기본적으로 설정 및 Xbox Live 서비스에 저장 된 데이터 자체 제목에만 액세스할 수 있습니다. 개발자 센터에서 액세스 정책을 구성 하 여이 변경할 수 있습니다.
+기본적으로 설정 및 Xbox Live 서비스에 저장 된 데이터 자체 제목에만 액세스할 수 있습니다. 파트너 센터에서 액세스 정책을 구성 하 여이 변경할 수 있습니다.
 
 > [!NOTE]
 > 이 항목에서는 Xbox Live 크리에이터 스 프로그램 제목에 적용 되지 않습니다.
 
 다음을 수행 하 여 구성을 추가 합니다.
 
-1. **서비스**에 이동 타이틀 [개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)에서 선택한 후 > **Xbox Live**합니다.
+1. **서비스**에 이동 타이틀 [파트너 센터](https://partner.microsoft.com/dashboard)에서 선택한 후 > **Xbox Live**합니다.
 
 2. **액세스 정책**에 대 한 링크를 클릭 합니다.
 

@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 커밋, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044766"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203101"
 ---
 # <a name="commit-an-add-on-submission"></a>추가 기능 제출 커밋
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 추가 기능 (라고도 앱에서 바로 구매 또는 IAP) 제출을 커밋합니다. 커밋 작업은 파트너 센터 (모든 관련 된 아이콘 포함) 제출 데이터가 업로드 되었습니다. 파트너 센터에 대 한 응답에서 제출 데이터 수집 및 게시에 대 한 변경 내용을 커밋합니다. 커밋 작업이 성공 하면 변경 내용은 제출 하려면 파트너 센터에 표시 됩니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 추가 기능 (라고도 앱에서 제품 또는 IAP) 제출을 커밋합니다. 커밋 작업은 파트너 센터 (모든 관련 된 아이콘 포함) 제출 데이터가 업로드 되었습니다. 파트너 센터에 대 한 응답에서 제출 데이터 수집 및 게시에 대 한 변경 내용을 커밋합니다. 커밋 작업이 성공 하면 변경 내용은 제출 하려면 파트너 센터에 표시 됩니다.
 
 커밋 작업이 Microsoft Store 제출 API를 사용하여 추가 기능을 제출하는 프로세스에 적용되는 방법은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
 
@@ -91,7 +91,7 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청 매개 변수가 잘못되었습니다. |
 | 404  | 지정된 제출을 찾을 수 없습니다. |
-| 409  | 지정 된 제출을 찾았지만 현재 상태로 커밋할 수 없거나 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |
+| 409  | 지정 된 제출을 찾았지만 현재 상태로 커밋할 수 없거나 있는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)파트너 센터 기능을 사용 합니다. |
 
 
 ## <a name="related-topics"></a>관련 항목

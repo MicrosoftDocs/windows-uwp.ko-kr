@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b6bf357ccfd6b835dff0e54eb2d6d34f81ba291
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023709"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182209"
 ---
 # <a name="get-globalscidsscid"></a>GET (/global/scids/{scid})
 이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
@@ -40,7 +40,7 @@ ms.locfileid: "6023709"
  
 ## <a name="authorization"></a>권한 부여
  
-요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자에 게가이 리소스에 액세스 하는 허용 되지 않으면, 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더에 잘못 되었거나 누락 된 경우, 서비스는 401 무단된 응답을 반환 합니다. 
+요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자에 게가이 리소스에 액세스 하는 허용 되지 않으면, 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스는 401 무단된 응답을 반환 합니다. 
   
 <a id="ID4ENB"></a>
 
@@ -49,15 +49,15 @@ ms.locfileid: "6023709"
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| x xbl-계약 버전| 1| API 계약 버전입니다.| 
-| 권한 부여| XBL3.0 x = [해시]; [토큰]| STS 인증 토큰입니다. STSTokenString 인증 요청으로 반환 하는 토큰으로 바뀝니다. 권한 부여 헤더를 만들고 STS 토큰을 검색 하는 방법에 대 한 자세한 내용은 Authenticating 요청과 권한 부여 Xbox LIVE 서비스를 참조 하세요.| 
+| xbl 계약 버전 x| 1| API 계약 버전입니다.| 
+| 권한 부여| XBL3.0 x = [해시]. [토큰]| STS 인증 토큰입니다. STSTokenString 인증 요청으로 반환 하는 토큰으로 바뀝니다. 권한 부여 헤더를 만들고 STS 토큰을 검색 하는 방법에 대 한 자세한 내용은 Authenticating 요청과 권한 부여 Xbox LIVE 서비스를 참조 하세요.| 
   
 <a id="ID4EWC"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청의 본문에 전송 됩니다.
+개체가이 요청 본문에 전송 됩니다.
   
 <a id="ID4EBD"></a>
 
@@ -71,13 +71,13 @@ ms.locfileid: "6023709"
 | 200| 확인 | 요청이 성공 했습니다.| 
 | 201| 생성 | 엔터티를 만들었습니다.| 
 | 400| 잘못 된 요청 | 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
-| 401| 권한 없음 | 요청은 사용자 인증이 필요합니다.| 
+| 401| 권한 없음 | 필요한 사용자 인증을 요청 합니다.| 
 | 403| 금지 | 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
 | 404| 찾을 수 없습니다. | 지정된 된 리소스를 찾을 수 없습니다.| 
-| 406| 허용할 수 없음 | 리소스 버전은 지원 되지 않습니다.| 
+| 406| 허용할 수 없음 | 리소스 버전이 지원 되지 않습니다.| 
 | 408| 요청 시간 제한 | 요청을 완료 하는 데 너무 오래 걸렸습니다.| 
 | 500| 내부 서버 오류 | 서버에서 요청을 수행할 수 있는 예상치 못한 상황이 발생 했습니다.| 
-| 503| 사용할 수 없는 서비스 | 요청을 제한, 초 (예: 5 초) 클라이언트를 다시 시도 된 후 다시 시도 합니다.| 
+| 503| 사용할 수 없는 서비스 | 요청을 제한, 클라이언트 재시도 값 (예: 5 초)을 초에서 후 다시 시도 합니다.| 
   
 <a id="ID4EUAAC"></a>
 
