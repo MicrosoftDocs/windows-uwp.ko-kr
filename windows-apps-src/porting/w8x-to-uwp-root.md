@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eebd0467696b78458835425f7feac903ba435f42
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6205138"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6466696"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x에서 UWP로 이동
 

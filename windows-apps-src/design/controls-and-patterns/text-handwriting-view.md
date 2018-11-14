@@ -13,11 +13,11 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: aa235086f2410fb97ea60e35fb03c586824928a2
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6194177"
+ms.locfileid: "6256237"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용 하 여 텍스트 입력
 

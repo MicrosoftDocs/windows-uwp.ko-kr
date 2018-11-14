@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 백그라운드 작업
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 1eeac0239bd0c6df38f82fa185c1ed6f7eb3f9dc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028483"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264523"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>In-process 백그라운드 작업 만들기 및 등록
 
@@ -70,7 +70,7 @@ In-process 백그라운드 작업의 경우 `TaskEntryPoint.`를 설정하지 �
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>OnBackgroundActivated()에서 백그라운드 작업 코드 배치
 
-이 발생 하는 경우 백그라운드 트리거에 응답할 [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 백그라운드 작업 코드를 넣습니다. **OnBackgroundActivated** [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)마찬가지로 처리할 수 있습니다. 메서드에 **Run** 메서드가 제공 하는 모든 항목이 포함 된 [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) 매개를 변수가 있습니다. 예 App.xaml.cs에서:
+백그라운드 트리거가 발생할 때 응답을 [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 백그라운드 작업 코드를 넣습니다. **OnBackgroundActivated** [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)마찬가지로 처리할 수 있습니다. 이 메서드의 **Run** 메서드가 제공 하는 모든 항목이 포함 된 [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) 매개 변수. 예 App.xaml.cs에서:
 
 ``` cs
 using Windows.ApplicationModel.Background;

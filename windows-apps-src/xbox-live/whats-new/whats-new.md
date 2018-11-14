@@ -7,12 +7,12 @@ ms.date: 10/23/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 22c70f0dee1226057a69cb876dac4f4512b378b5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: bf536298f075535bf9f5e5198573a87db33dd2a4
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6023523"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198277"
 ---
 # <a name="whats-new-for-xbox-live"></a>Xbox Live의 새로운 기능
 또한 모든 Xbox Live Api에 최근 코드 변경 내용을 보려면 [Xbox Live API GitHub 커밋 기록](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인할 수 있습니다.
@@ -121,7 +121,7 @@ Xbox Live Api는 유니버설 Windows 플랫폼 (UWP) 및 Xbox One 모두 제목
 
 #### <a name="data-platform-2017"></a>데이터 플랫폼 2017
 
-간소화 된 통계 API가 도입 되었습니다.  일반적으로 XDP 또는 개발자 센터에 정의 된 통계 규칙에 해당 하는 이벤트를 보내는 했으며 클라우드에서 시작 값을 업데이트는 이러한.  우리 통계 2013으로이 모델을 참조 하세요.
+간소화 된 통계 API가 도입 되었습니다.  일반적으로 해당 통계 규칙 XDP 또는 파트너 센터에서 정의 하는 이벤트를 보내는 했으며 클라우드에서 시작 값을 업데이트는 이러한.  우리 통계 2013으로이 모델을 참조 하세요.
 
 통계 2017을 사용 하 여 타이틀 통계 값의 컨트롤에서 이제 됩니다.  단순히 가장 최근의 시작 값을 사용 하 여 API를 호출 하 고 이벤트에 대 한 필요 없이 직접 서비스 보내집니다 합니다.  이 사용 하는 새 `StatsManager` API를에 더 많은 [플레이어 통계](../leaderboards-and-stats-2017/player-stats.md) 를 읽을 수 있습니다
 
@@ -144,7 +144,7 @@ Xbox Live 크리에이터 스 프로그램은 개발자에 게 더 광범위 하
 |[Xbox Live 서비스 구성](../xbox-live-service-configuration.md) | Xbox Live 타이틀에 대 한 서비스 구성에 대 한 업데이트 된 정보
 | [구성 Xbox Live Unity의](../get-started-with-creators/configure-xbox-live-in-unity.md) | Xbox Live 크리에이터 스 프로그램 개발자 용 Unity 설치에 대 한 새로운 정보 |
 | [Xbox Live 샌드박스](../xbox-live-sandboxes.md) | Xbox Live 샌드박스 및 콘텐츠 격리 하는 간단한 가이드 |
-| [Xbox Live 테스트 계정](../xbox-live-test-accounts.md) | 방법에 대 한 정보 테스트 계정 작업 및 Windows 개발자 센터에서이 만드는 방법 |
+| [Xbox Live 테스트 계정](../xbox-live-test-accounts.md) | 방법에 대 한 정보 테스트 계정 작업 및 파트너 센터에서이 생성 하는 방법 |
 
 ## <a name="archived"></a>보관
 

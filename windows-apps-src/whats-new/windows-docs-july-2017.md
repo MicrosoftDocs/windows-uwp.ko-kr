@@ -8,11 +8,11 @@ ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036393"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6206491"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
 

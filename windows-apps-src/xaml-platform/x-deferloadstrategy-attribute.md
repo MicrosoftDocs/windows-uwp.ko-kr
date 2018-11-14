@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cd958ba5f9025430be2736329c5a909233461039
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6202405"
+ms.locfileid: "6254195"
 ---
 # <a name="xdeferloadstrategy-attribute"></a>x:DeferLoadStrategy 특성
 

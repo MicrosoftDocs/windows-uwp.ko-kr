@@ -8,12 +8,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 패키징
 ms.localizationpriority: medium
-ms.openlocfilehash: d8728094292f1de81eb90752ee496090df4cb6e0
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: fa18ff3c5910dfb3a0f4c2f89407cda1fc736146
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6183495"
+ms.locfileid: "6250791"
 ---
 # <a name="packaging-apps"></a>앱 패키징
 
@@ -34,4 +34,4 @@ ms.locfileid: "6183495"
 | [WinAppDeployCmd.exe 도구를 사용하여 앱 설치](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 Windows10 Mobile 디바이스로 Windows10 컴퓨터에서 UWP 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다. 이 도구를 사용 하 여 Windows10 모바일 장치를 해당 앱에 대 한 Microsoft Visual Studio 또는 솔루션 없이 동일한 서브넷에서 사용 가능 하거나 USB로 연결 되 면 앱 패키지를 배포할 수 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다. |
 | [UWP 앱에 대한 자동화된 빌드 설정](auto-build-package-uwp-apps.md) | 자동화된 빌드 프로세스의 일부로 앱을 패키징하려는 경우 이 항목에서 VSTS(Visual Studio Team Services)를 사용하여 수행하는 방법을 보여 줍니다. |
 | [앱 접근 권한 값 선언](app-capability-declarations.md) | 사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP 앱의 [패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/BR211474)에서 접근 권한 값을 선언해야 합니다. |
-| [Microsoft Store에서 패키지 업데이트 다운로드 및 설치](self-install-package-updates.md) | UWP 앱은 프로그래밍 방식으로 패키지 업데이트를 확인하고 업데이트를 설치할 수 있습니다. 앱은 Windows 개발자 센터 대시보드에 필수로 표시된 패키지를 쿼리하고 필수 업데이트가 설치될 때까지 기능을 사용하지 않도록 할 수 있습니다.  |
+| [Microsoft Store에서 패키지 업데이트 다운로드 및 설치](self-install-package-updates.md) | UWP 앱은 프로그래밍 방식으로 패키지 업데이트를 확인하고 업데이트를 설치할 수 있습니다. 또한 앱 파트너 센터에서 필수로 표시 된 패키지에 대 한 쿼리 하 고 필수 업데이트가 설치 될 때까지 기능을 사용 하지 않도록 설정할 수 있습니다.  |

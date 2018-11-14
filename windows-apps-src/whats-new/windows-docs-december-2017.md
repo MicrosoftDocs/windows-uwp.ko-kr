@@ -8,11 +8,11 @@ ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 112e9f60e38bc5a665d9011f35b9e92189f15f80
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6195337"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6460906"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 

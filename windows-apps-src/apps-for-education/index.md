@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 교육
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
 ms.openlocfilehash: d55aaab22ff51112ca69d1ead72e31468d7fb1ab
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6181200"
+ms.locfileid: "6253732"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>교육용 유니버설 Windows 앱 개발
 ![시험에 응시 앱 스크린샷](images/take-a-test-screen-small.png)

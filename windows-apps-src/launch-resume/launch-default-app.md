@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a5a0af7b7227f149722cf34a368fc588198880ef
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035319"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6460700"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -246,4 +246,4 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 | URI 스키마 | 결과 |
 |------------|---------|
-| msnweather://forecast?la= \[latitude\] 및 lo = \ [longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에 있는 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 가리킵니다.<br> `longitude` 경도 위치를 가리킵니다.<br> |
+| msnweather://forecast?la= \[latitude\] & lo = \ [longitude\] | 위치 지리적 좌표를 기반으로 예측 페이지에서 날씨 앱을 실행 합니다.<br>`latitude` latitude 위치를 나타냅니다.<br> `longitude` 경도 위치를 나타냅니다.<br> |

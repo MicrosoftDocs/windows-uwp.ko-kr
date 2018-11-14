@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 풍부한 상태, 모범 사례
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b671ef58850fde91f2bf19167672cc20157959a
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6194768"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6261626"
 ---
 # <a name="rich-presence-best-practices"></a>다양 한 상태에 대 한 유용한 정보
 

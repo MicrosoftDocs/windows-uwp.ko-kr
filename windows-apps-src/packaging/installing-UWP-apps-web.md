@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6261823"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6460815"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>웹 페이지에서 UWP 앱 설치
 

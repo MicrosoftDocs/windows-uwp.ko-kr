@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 대기 시간, dxgi, 스왑 체인, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 51a1dd6d7f1c39d82201d3b9741276a54e4c06a8
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6189350"
+ms.locfileid: "6254505"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>DXGI 1.3 스왑 체인으로 대기 시간 단축
 

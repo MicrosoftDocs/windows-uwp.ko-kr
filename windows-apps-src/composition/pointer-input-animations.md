@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: b69899761e1c4a139fd2b15d6810440df5192487
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6150551"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6197918"
 ---
 # <a name="pointer-based-animations"></a>포인터 기반 애니메이션
 

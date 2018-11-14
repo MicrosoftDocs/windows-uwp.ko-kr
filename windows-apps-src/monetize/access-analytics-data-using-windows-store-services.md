@@ -8,12 +8,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
-ms.openlocfilehash: 8656270b81e0aae46c5d4f3a7b651135c163f76d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 80ca7d66489f936e8097e9466f74032fbfb78eaf
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051557"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6257982"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -115,7 +115,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
-| 취득 |  <ul><li>[Xbox One 게임 취득 가져오기](get-xbox-one-game-acquisitions.md)</li></ul> |
+| 취득 |  <ul><li>[Xbox One 게임 취득 가져오기](get-xbox-one-game-acquisitions.md)</li><li>[Xbox One 추가 기능 획득 가져오기](get-xbox-one-add-on-acquisitions.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>하드웨어 및 드라이버의 메서드
 

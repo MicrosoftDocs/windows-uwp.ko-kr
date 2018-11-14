@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 18fd4d481d30eda68acaf4e48e4d1c1bf4ed7d24
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6205616"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6446268"
 ---
 # <a name="get-set-up"></a>설정 방법
 

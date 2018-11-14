@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 도구, 플레이어 재설정, live 추적 분석기, LTA, xbox live 계정 도구
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f2e4b8b0ac5940eb09b1c0b5361846b1ae66c01
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6207008"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6254200"
 ---
 # <a name="development-tools-for-xbox-live"></a>Xbox live 개발 도구
 

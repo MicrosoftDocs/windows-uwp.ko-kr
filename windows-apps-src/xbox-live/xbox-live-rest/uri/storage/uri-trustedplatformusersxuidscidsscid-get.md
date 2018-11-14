@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bac7b0bfb3152ce186d3e349fbcb20766d61c6f
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6208519"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6258479"
 ---
 # <a name="get-trustedplatformusersxuidxuidscidsscid"></a>GET (/trustedplatform/users/xuid({xuid})/scids/{scid})
 이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

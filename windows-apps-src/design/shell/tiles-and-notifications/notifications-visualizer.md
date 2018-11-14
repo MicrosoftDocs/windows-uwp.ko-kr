@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 59a2e93f7c09266b0e33d58bf6a2571e60c7a607
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6182386"
+ms.locfileid: "6254581"
 ---
 # <a name="notifications-visualizer"></a>알림 시각화 도우미
 
