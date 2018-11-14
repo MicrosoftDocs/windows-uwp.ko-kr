@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트 참가
 ms.localizationpriority: medium
 ms.openlocfilehash: 3da29f8e93ed8ce98648cad4711e35577f6d4823
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6200066"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264492"
 ---
 # <a name="arena-title-integration-guide"></a>아레나 타이틀 통합 가이드
 

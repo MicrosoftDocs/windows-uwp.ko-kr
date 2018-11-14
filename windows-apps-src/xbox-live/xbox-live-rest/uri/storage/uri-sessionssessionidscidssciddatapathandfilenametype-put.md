@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: bac258c7adada5beb4c233a2ca11265f57529676
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6199528"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6281279"
 ---
 # <a name="put-sessionssessionidscidssciddatapathandfilenametype"></a>PUT (/sessions/{sessionId}/scids/{scid}/data/{pathAndFileName},{type})
 파일을 업로드합니다. 데이터는 데이터 및 메타 데이터 보내집니다 단일 메시지에서 또는 일련의 작은 블록에 데이터 및 메타 데이터를 전송 하는 다중 블록 업로드로 전체 업로드에 업로드할 수 있습니다. 단일 메시지로 메가바이트 4 보다 작은 파일을 보낼 수 있습니다. 다중 블록 업로드 json 종류의 데이터에 대 한 지원 되지 않습니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 보류 중인 업데이트, 대기 중 업데이트, 다단계 대화형 작업, 다단계 조작
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d21c96676eec1b8b1a1f4397880af937dd8f4b6
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6446964"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6262817"
 ---
 # <a name="toast-with-pending-update-activation"></a>보류 중인 업데이트 활성화를 적용한 알림
 

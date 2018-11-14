@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 38fa1ad62b2e76dceda79744c59eb59ddc50ea90
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050972"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272407"
 ---
 # <a name="handleshandleidsession"></a>/handles/{handleId}/session
 GET 및 PUT 작업 세션에 대 한 핸들을 해제를 사용 하 여 지원 합니다. 

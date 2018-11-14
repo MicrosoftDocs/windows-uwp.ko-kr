@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e91c707b31de859d61ae926518c40812758320e
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6264180"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6443902"
 ---
 # <a name="anisotropic-texture-filtering"></a>이방성 텍스처 필터링
 

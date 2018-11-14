@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 990357eef8ef0ea8ec43822090a5133a10f8ec6c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6038466"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6262429"
 ---
 # <a name="xuidlist-json"></a>XuidList(JSON)
 작업을 수행 하는 XUIDs의 목록입니다. 

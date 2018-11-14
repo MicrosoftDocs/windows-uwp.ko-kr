@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 멀티 플레이 2015, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: e845d1d714b42e1c1989b442a9c232f610b72ae4
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6207050"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264056"
 ---
 # <a name="multiplayer-how-tos"></a>멀티 플레이 방법
 

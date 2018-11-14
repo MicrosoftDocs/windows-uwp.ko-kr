@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d4121bd402b048ee6102ed3be30b94a66e274273
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6270708"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6471944"
 ---
 # <a name="texture-blending"></a>텍스처 혼합
 

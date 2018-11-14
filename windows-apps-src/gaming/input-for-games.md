@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10 uwp, 게임, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6249452"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6447997"
 ---
 # <a name="input-for-games"></a>게임용 입력 시스템
 

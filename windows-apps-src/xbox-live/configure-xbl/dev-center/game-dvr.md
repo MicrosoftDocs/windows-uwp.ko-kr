@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox live, Xbox, 게임, uwp, windows 10, Xbox one 게임 DVR, 파트너 센터
 ms.openlocfilehash: 1c1e9f46b33ce6c5c5e1c5ba72128e0b1a217c9b
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6181042"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6261130"
 ---
 # <a name="configuring-game-dvr-in-partner-center"></a>파트너 센터에서 게임 DVR 구성
 

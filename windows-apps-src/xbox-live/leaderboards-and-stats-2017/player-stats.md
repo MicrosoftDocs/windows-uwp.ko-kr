@@ -8,12 +8,12 @@ ms.date: 07/30/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 플레이어 통계, 순위표
 ms.localizationpriority: medium
-ms.openlocfilehash: 3cc6855a572a1636e92f3bcbf0a8e0d9a96a8bb4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: ff2428697d66136ddc6fec0f1b7eb73789bc9c5b
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6048408"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266736"
 ---
 # <a name="player-stats"></a>플레이어 통계
 
@@ -35,7 +35,7 @@ Xbox One의 출시와 Xbox Live 도입 새 이벤트 구동 통계 모델, 플�
 
 2013과 2017에 대 한 통계를 업데이트 및 구성에 대해 살펴보겠습니다. 몇 가지 일반 rpg에서 통계를 만들겠습니다. 하 고 어떤 이유로 사망 몬스터 추적 하기 원하는 가정해 보겠습니다.
 
-통계 2013에서 타이틀 플레이어에 의해 수행 되는 작업에 대 한 정보를 포함 하는 *이벤트* 를 전송 하는 합니다. 이 이벤트 플레이어가 적 장착 검 하는 동안 작업은 오크를 앞 될 됩니다. 이 이벤트에 포함 된 정보의 일부는 slay 작업이 수행 된, 일 slayed가는 오크, 전투 유형 된 근거리, 사용 무기 였 고 검 수 있습니다. 통계 2013 다양 한 사용자의 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts) 또는 [Windows 개발자 센터](https://developer.microsoft.com/en-us/windows)및 업데이트 통계, 또한 이벤트에 따라으로 구성에서 개발자가 구성 된 규칙을 통해이 정보를 실행 됩니다. 통계 2013에서 서비스는를 추적 해야 slaying 통계에 대 한 값. 여러 통계와 같은, 파괴의 수, 처치 orcs의 수 및 소드 파괴 수가 소드 이벤트와 slay 오크 업데이트 못했습니다.
+통계 2013에서 타이틀 플레이어에 의해 수행 되는 작업에 대 한 정보를 포함 하는 *이벤트* 를 전송 하는 합니다. 이 이벤트 플레이어가 적 장착 검 하는 동안 작업은 오크를 앞 될 됩니다. 이 이벤트에 포함 된 정보의 일부는 slay 작업이 수행 된, 일 slayed가는 오크, 전투 유형 된 근거리, 사용 무기 였 고 검 수 있습니다. 통계 2013 다양 한 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts) 또는 [파트너 센터](https://partner.microsoft.com/dashboard)및 업데이트 통계, 또한 이벤트에 따라으로 구성에 개발자에 의해 구성 된 규칙을 통해이 정보를 실행 됩니다. 통계 2013에서 서비스는를 추적 해야 slaying 통계에 대 한 값. 여러 통계와 같은, 파괴의 수, 처치 orcs의 수 및 소드 파괴 수가 소드 이벤트와 slay 오크 업데이트 못했습니다.
 
 통계 2017 년 통계에 실제 값을 전송 하는 것이 됩니다. 소드 예제를 사용 하 여 slay 오크, 타이틀 한 전반적인 파괴, 검 파괴과 개별적으로 처치 orcs 수를 추적 하 고 각 통계에 대 한 업데이트 된 번호 서비스를 보내기 하겠습니다. 서비스에 올바른 통계를 보내도록 타이틀 최대 반드시 이므로 의미 하는 번호를 보낼 때 되도록 최소한의 유효성 검사 합니다. 통계 2017 서비스를 게임 세션 시작 시 통계 값 회수을 사용할 수 있는 동안에 세션 진행 중인 동안는 상태 값을 확인 하지 통계 2017 서비스를 사용 해야 합니다.
 

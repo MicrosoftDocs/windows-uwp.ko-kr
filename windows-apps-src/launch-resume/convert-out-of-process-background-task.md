@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: 47008fd7ba0b7724aa8fbdc2dd6cbd55288faea0
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6467781"
+ms.locfileid: "6650941"
 ---
 # <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
 
