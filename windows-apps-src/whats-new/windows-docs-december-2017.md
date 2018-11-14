@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 112e9f60e38bc5a665d9011f35b9e92189f15f80
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 394dbdb5ae9065aa9424a470ad2e9295ddd63c8d
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6460906"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671969"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 
@@ -48,7 +48,7 @@ Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아
 
 Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 내용을 알아보세요](https://docs.microsoft.com/en-us/collaborate).
 
-![개발자 센터 대시보드의 Microsoft Collaborate](images/microsoft_collaborate_screenshot.PNG)
+![Microsoft은 파트너 센터에서 공동 작업](images/microsoft_collaborate_screenshot.PNG)
 
 ### <a name="package-desktop-applications-with-uwp-projects"></a>UWP 프로젝트가 있는 데스크톱 응용 프로그램 패키지
 

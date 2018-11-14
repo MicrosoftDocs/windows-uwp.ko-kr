@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c4d36fa22953bc4745b631303aae62985a5aa05
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6444600"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671617"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
@@ -148,7 +148,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>매개 변수가 있는 대리자와는 ABI에서 간단한 신호
 
-응용 프로그램 이진 인터페이스 (ABI)에서 이벤트에 액세스할 수 있어야 합니다&mdash;: 구성 요소와 그 소비 응용 프로그램을 사용 하 여 이러한&mdash;이벤트는 Windows 런타임 대리자 형식을 사용 해야 합니다. 위의 예제에는 [**Windows::Foundation::EventHandler\ < T\ >**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식을 사용합니다. [**< TSender, TResult\ > TypedEventHandler\**](/uwp/api/windows.foundation.eventhandler) 은 Windows 런타임 대리자 형식의 또 다른 예입니다.
+응용 프로그램 이진 인터페이스 (ABI)에서 이벤트에 액세스할 수 있어야 합니다&mdash;: 구성 요소와 그 소비 응용 프로그램을 사용 하 여 이러한&mdash;이벤트는 Windows 런타임 대리자 형식을 사용 해야 합니다. 사용 하 여 위의 예는 [**Windows::Foundation::EventHandler\<T\ >**](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식입니다. [**TypedEventHandler\<TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) 는 Windows 런타임 대리자 형식의 또 다른 예입니다.
 
 이러한 두 대리자 형식에 대 한 형식 매개 변수 형식 매개 변수가 Windows 런타임 형식 이어야 너무 하므로, ABI 통과 해야 합니다. 등의 숫자 및 문자열 기본 형식 뿐만 아니라 첫 번째 및 제 3 자 런타임 클래스를 포함 합니다. 컴파일러에 도움이 되는 "*WinRT 형식 이어야 합니다.*" 오류 제약 조건의 잊을 경우.
 
