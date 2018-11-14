@@ -8,16 +8,16 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: a506eec99aabaddac6251eb6548a671ecd283d0b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: a687aa7ed1115692f765e516dc8c8b15504b709e
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6281120"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6648205"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
-![유니버설 Windows 플랫폼 앱은 다양한 디바이스에서 실행되며, 적응형 사용자 인터페이스, 자연스러운 사용자 입력, 하나의 스토어, 하나의 개발자 센터, 다양한 클라우드 서비스를 지원합니다.](images/universalapps-overview.png)
+![유니버설 Windows 플랫폼 앱 다양 한 장치에서 실행, 적응형 사용자 인터페이스, 자연 스러운 사용자 입력, 하나의 스토어, 파트너 센터 지원 및 클라우드 서비스](images/universalapps-overview.png)
 
 UWP 앱은 다음과 같습니다.
 
@@ -132,9 +132,9 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. 흐름 디자인 시
 - 앱이 음성 명령에 응답할 수 있도록 [앱에 Cortana를 추가](https://mva.microsoft.com/training-courses/integrating-cortana-in-your-apps-8487?l=20D3s5Xz_5904984382)하는 방법을 알아보세요.
 - [푸시 알림](https://msdn.microsoft.com/library/windows/apps/mt187203) 및 [앱에서 바로 구매](https://msdn.microsoft.com/library/windows/apps/mt219684)를 계획에 포함시킵니다. 이러한 기능은 장치 간에 작동해야 합니다.
 
-### <a name="submit-your-app-to-the-store"></a>스토어에 앱을 제출
+### <a name="submit-your-app-to-the-store"></a>스토어에 앱 제출
 
-새로운 통합 Windows 개발자 센터 대시보드에서는 모든 Windows 장치용 앱을 한곳에서 관리하고 제출할 수 있습니다. Microsoft Store에 게시하기 위해 앱을 제출하는 방법은 [통합 Windows 개발자 센터 대시보드 사용](../publish/using-the-windows-dev-center-dashboard.md)을 참조하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하 여 관리 하 고 모든 한곳에서 Windows 장치용 앱을 제출할 수 있습니다. [Windows 앱 게시 및 게임](../publish/index.md) Microsoft Store에 게시 하기 위해 앱을 제출 하는 방법을 참조 하세요.
 
 새 기능 덕분에 프로세스는 간소화되고 더 세부적으로 제어할 수 있습니다. 자세한 [분석 보고서](https://msdn.microsoft.com/library/windows/apps/mt148522), 통합된 [지급 세부 정보](https://msdn.microsoft.com/library/windows/apps/dn986925), [앱을 홍보하고 고객 참여를 유도](https://msdn.microsoft.com/library/windows/apps/mt148526)하는 방법 등을 알아볼 수 있습니다.
 

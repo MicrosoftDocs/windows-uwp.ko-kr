@@ -7,12 +7,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, 작업, 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: d22212e4fc3d01ced50b557c4ec4a1e9619ebe61
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: c7d7aa9abe1aa78241e8920a81dda681b6256559
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6030835"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208699"
 ---
 # <a name="xbox-arena-operations-portal"></a>Xbox 아레나 작업 포털
 
@@ -33,7 +33,7 @@ Xbox 아레나 포털 플레이어 만든 토너먼트 이외의 기능을 제�
 
 * 초대 전용 토너먼트 만들기
 * 어떤 국가 및 지역은 토너먼트에 참여할 수를 지정 합니다.
-* 개발자 센터를 통해 게시 아트 자산을 사용자 지정 된 선택
+* 파트너 센터를 통해 게시 아트 자산을 사용자 지정 된 선택
 * 상이 토너먼트 사용 약관 및 prizing 플래그 (토너먼트는 여러분에 대 한 상품 보상는 플레이어를 나타내는 아이콘) 설정
 * 제목 또는 일치 하는 설정에 대 한 관련된 제목 서비스에 의해 해석 되는 사용자 지정 된 게임 모드 만들기
 * 개발자 샌드박스에서 토너먼트 만들기
