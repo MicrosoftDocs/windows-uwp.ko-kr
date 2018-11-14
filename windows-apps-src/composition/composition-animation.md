@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 38f9d0daf230007d1d32a7d2187d54baa90986e5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038707"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6188260"
 ---
 # <a name="composition-animations"></a>컴퍼지션 애니메이션
 

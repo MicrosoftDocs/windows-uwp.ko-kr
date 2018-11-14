@@ -8,11 +8,11 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 파일, 파일 io, 파일, 파일 읽기, 파일 쓰기, 파일 만들기, 텍스트 쓰기, 텍스트 읽기
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ac4d3f157343182097e67dc8825dde940302c3
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6253871"
+ms.locfileid: "6198507"
 ---
 # <a name="work-with-files"></a>파일 작업
 

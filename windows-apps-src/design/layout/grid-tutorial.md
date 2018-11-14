@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
 ms.openlocfilehash: 0327437c809455cf191dcfc572e4a5145b73eb49
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6196306"
+ms.locfileid: "6258176"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>자습서: Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기
 

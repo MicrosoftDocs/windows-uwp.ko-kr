@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 프로그래밍
 ms.localizationpriority: medium
 ms.openlocfilehash: d201caefedca0d810f78d893ea779bd6b814f007
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6148497"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6204830"
 ---
 # <a name="game-programming-resources"></a>게임 프로그래밍 리소스
 

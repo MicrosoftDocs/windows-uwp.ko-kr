@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bb5c6ae373e4e35e640223fe08a5a49f2e7a5dd3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045938"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209642"
 ---
 # <a name="porting-apps-to-windows10"></a>Windows10으로 앱 포팅
 

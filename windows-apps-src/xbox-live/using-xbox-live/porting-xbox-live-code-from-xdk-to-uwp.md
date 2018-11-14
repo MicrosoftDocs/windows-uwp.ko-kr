@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox xdk, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 91a30a81123902d7b4b2f8311ae1f24bd23b3e43
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6258214"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209571"
 ---
 # <a name="porting-xbox-live-code-from-the-xbox-developer-kit-xdk-to-universal-windows-platform-uwp"></a>Xbox Live 코드 포팅 Xbox 개발자 키트 (XDK)에서 유니버설 Windows 플랫폼 (UWP)
 

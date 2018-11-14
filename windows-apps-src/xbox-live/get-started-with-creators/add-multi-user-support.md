@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, unity, 다중 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: 73dcb6bb177cd8d6c2e2e532e6f1b7a62ade7adc
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6150080"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6251031"
 ---
 # <a name="add-multi-user-support-to-your-unity-game"></a>Unity 게임에 다중 사용자 지원 추가
 > [!IMPORTANT]

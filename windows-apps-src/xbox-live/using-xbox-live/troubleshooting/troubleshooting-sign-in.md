@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 로그인 한 xbox, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: ca291312345646bb48691615854503f5121c8888
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 49806ea48b8af691d5b161e21426c73d65712408
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6153177"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193233"
 ---
 # <a name="troubleshooting-xbox-live-sign-in"></a>Xbox Live 로그인 문제 해결
 
@@ -31,7 +31,7 @@ ms.locfileid: "6153177"
 
 #### <a name="developer-account-doesnt-have-access-to-the-right-sandbox-for-run-time-access"></a>개발자 계정 런타임 액세스에 대 한 올바른 샌드박스를 액세스할 수 없는
 
-* 테스트 계정 (개발 계정 라고도 함) 또는 권한 있는 개발자 계정에 로그인 하는 개발 중인 제목에 대 한 사용 되어야 합니다.  로그인 중 하나를 사용 하 여를 시도 중인 또는 다른 테스트 계정에 XDP 만들어집니다 있는지 확인 [https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts](https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts). Windows 개발자 센터에에 대 한 xbox live 관련된 개발자 계정의 권한을 부여할 수 있습니다.[https://partner.microsoft.com/en-us/xboxconfig/TestAccounts/Creator](https://partner.microsoft.com/en-us/xboxconfig/TestAccounts/Creator)
+* 테스트 계정 (개발 계정 라고도 함) 또는 권한 있는 개발자 계정에 로그인 하는 개발 중인 제목에 대 한 사용 되어야 합니다.  로그인 중 하나를 사용 하 여를 시도 중인 또는 다른 테스트 계정에 XDP 만들어집니다 있는지 확인 [https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts](https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts). 파트너 센터에서 xbox live 관련된 개발자 계정의 권한을 부여할 수 있습니다.[https://partner.microsoft.com/en-us/xboxconfig/TestAccounts/Creator](https://partner.microsoft.com/en-us/xboxconfig/TestAccounts/Creator)
 * 계정에 타이틀에 게시 된 샌드박스에 액세스할 수 있는지 확인 합니다.  XDP에서 만든 테스트 계정을 만들고 XDP 계정의 사용 권한을 상속합니다
 
 #### <a name="your-device-is-not-on-the-correct-sandbox"></a>디바이스가 켜져 있지 않으면 올바른 샌드박스
@@ -40,7 +40,7 @@ ms.locfileid: "6153177"
 
 #### <a name="your-titles-service-configuration-is-not-published-to-the-correct-development-sandbox"></a>올바른 개발 샌드박스를 게시 되지 타이틀의 서비스 구성
 
-타이틀의 서비스 구성 개발 샌드박스에 게시 되어 있는지 확인 합니다.  하면 수 없습니다에 로그인 Xbox Live에 지정 된 개발 샌드박스 제목에 대 한 하지 않는 한 제목이 동일한 샌드박스에 게시 된 합니다.  이 작업을 수행 하는 방법에 대해서는 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/setting_up_service_configuration_03_31_16.aspx#PublishServiceConfig) 를 참조 하십시오. Windows 개발자 센터 구성 게시 하는 방법은 [개발자 센터 문서](../../get-started-with-creators/xbox-live-service-configuration-creators.md#publish-your-xbox-live-service-configuration) 를 읽을 수 있습니다.
+타이틀의 서비스 구성 개발 샌드박스에 게시 되어 있는지 확인 합니다.  하면 수 없습니다에 로그인 Xbox Live에 지정 된 개발 샌드박스 제목에 대 한 하지 않는 한 제목이 동일한 샌드박스에 게시 된 합니다.  이 작업을 수행 하는 방법에 대해서는 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/setting_up_service_configuration_03_31_16.aspx#PublishServiceConfig) 를 참조 하십시오. 파트너 센터 구성 게시 하는 방법은 [파트너 센터 설명서](../../get-started-with-creators/xbox-live-service-configuration-creators.md#publish-your-xbox-live-service-configuration) 를 읽을 수 있습니다.
 
 ### <a name="ids-configured-incorrectly"></a>잘못 구성 된 Id
 
@@ -48,10 +48,10 @@ ID 게임을 구성 하는 데 필요한 몇 가지 있습니다.  만들려는 
 
 주의 사항은 다음과 같습니다.
 
-* 앱 ID XDP 또는 개발자 센터에 올바르게 입력 확인
-* 프로그램 PFN XDP 또는 개발자 센터에 올바르게 입력 확인
+* 앱 ID XDP 또는 파트너 센터에 올바르게 입력 확인
+* 프로그램 PFN XDP 또는 파트너 센터에 올바르게 입력 확인
 * 다시 확인 만든는 xboxservices.config Visual Studio 프로젝트와 동일한 디렉터리에 [새로운 또는 기존 UWP 프로젝트에 Xbox Live 추가](../../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 가이드에 설명 된 대로 합니다.
-* 프로그램 appxmanifest에서 "패키지 Id" 올바른지 확인 합니다.  이 "패키지/Id/이름" 앱 Id 섹션에서 Windows 개발자 센터에서으로 Windows 개발자 센터에 표시 됩니다.
+* 프로그램 appxmanifest에서 "패키지 Id" 올바른지 확인 합니다.  이 "패키지/Id/이름" 앱 Id 섹션에서으로 파트너 센터에 표시 됩니다.
 
 ### <a name="title-id-or-scid-not-configured-correctly"></a>제목 ID 또는 서비스 안내 올바르게 구성 되지 않음
 
@@ -82,9 +82,9 @@ UWP 응용 프로그램을 개발 하는 경우에 Xbox 앱을 사용 하 여 �
 
 ![솔루션 탐색기에서 pfx 파일](../../images/troubleshooting/pfx_file.png)
 
-Visual Studio는 자동으로 하면 하지 않았던 로그인 경우 Windows 개발자 센터에 앱 프로 비전에 사용 되는 Microsoft 계정을 사용 하 여 Visual Studio로, 개인 Microsoft 계정 또는 도메인 계정에 따라 서명 pfx 파일을 생성 합니다. Appx 패키지를 빌드할 때 Visual Studio는 자동으로 생성 된 pfx 패키지에 서명 및 "publisher" 부분 package.appxmanifest에서 패키지 id 변경 하는 사용 합니다. 결과적으로, 생성 된 비트 (특히 appxmanifest.xml)을 사용 하려는 보다 다른 패키지 id를 갖게 됩니다. 
+Visual Studio는 자동으로 하면 하지 않았던 로그인 경우 파트너 센터에서 앱을 프로 비전에 사용 되는 Microsoft 계정을 사용 하 여 Visual Studio로, 개인 Microsoft 계정 또는 도메인 계정에 따라 서명 pfx 파일을 생성 합니다. Appx 패키지를 빌드할 때 Visual Studio는 자동으로 생성 된 pfx 패키지에 서명 및 "publisher" 부분 package.appxmanifest에서 패키지 id 변경 하는 사용 합니다. 결과적으로, 생성 된 비트 (특히 appxmanifest.xml)을 사용 하려는 보다 다른 패키지 id를 갖게 됩니다. 
 
-2. 개발자 센터에서 사용자 package.appxmanifest 타이틀 같은 응용 프로그램 id로 설정 되어 있는지 확인 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 저장소에 표시 된 대로... 앱 스토어와 연결할->는 아래 스크린샷. 또는 수동으로 편집 하 여 package.appxmanifest 합니다. 자세한 내용은 [UWP 게임에 대 한 Visual Studio 시작](../../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 을 참조 하세요.
+2. 파트너 센터에서 사용자 package.appxmanifest 타이틀 같은 응용 프로그램 id로 설정 되어 있는지 확인 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 저장소에 표시 된 대로... 앱 스토어와 연결할->는 아래 스크린샷. 또는 수동으로 편집 하 여 package.appxmanifest 합니다. 자세한 내용은 [UWP 게임에 대 한 Visual Studio 시작](../../get-started-with-partner/get-started-with-visual-studio-and-uwp.md) 을 참조 하세요.
 
 ![스토어 연결](../../images/troubleshooting/appxmanifest_binding.png)
 
@@ -92,11 +92,11 @@ Visual Studio는 자동으로 하면 하지 않았던 로그인 경우 Windows �
 
 요약 하자면, 장치 또는 사용자 지정된 제목에 대 한 액세스는 하지을 의미 합니다.
 
-1. 이 테스트 계정 로그인을 시도를 사용 하지 않는 또는 테스트 계정으로 로그인 하는 동일한 샌드박스를 액세스할 수 없는 의미할 수 있습니다. 지침 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/creating_development_accounts_03_31_16.aspx) 에서 테스트 계정 만들기에 다시 확인 하 고 [개발자 센터 설명서.](../../xbox-live-test-accounts.md) 필요한 경우에 적절 한 샌드박스에 액세스할 수 있는 새 테스트 계정을 만듭니다.
+1. 이 테스트 계정 로그인을 시도를 사용 하지 않는 또는 테스트 계정으로 로그인 하는 동일한 샌드박스를 액세스할 수 없는 의미할 수 있습니다. 지침 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/creating_development_accounts_03_31_16.aspx) 에서 테스트 계정 만들기에 다시 확인 하 고 [파트너 센터 설명서.](../../xbox-live-test-accounts.md) 필요한 경우에 적절 한 샌드박스에 액세스할 수 있는 새 테스트 계정을 만듭니다.
 
 Windows 10에서 기존 사용자 계정을 제거 해야 할 수는 시작 메뉴에서 설정으로 이동 하 고 계정에 진행 하 여 수행할 수 있습니다.
 
-2. 타이틀은 게시 되지 않았다는 점에 샌드박스를 사용 하 여 시도 하는 다시 확인 합니다. 이 작업을 수행 하는 방법에 대 한 내용은 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/setting_up_service_configuration_03_31_16.aspx#PublishServiceConfig) 또는 [개발자 센터 문서](../../xbox-live-service-configuration.md#sandbox-ids) 를 참조 하세요.
+2. 타이틀은 게시 되지 않았다는 점에 샌드박스를 사용 하 여 시도 하는 다시 확인 합니다. 이 작업을 수행 하는 방법에 대 한 내용은 [XDP 설명서](https://developer.xboxlive.com/en-us/xdphelp/development/xdpdocs/Pages/setting_up_service_configuration_03_31_16.aspx#PublishServiceConfig) 또는 [파트너 센터 설명서](../../xbox-live-service-configuration.md#sandbox-ids) 를 참조 하세요.
 
 ### <a name="0x87dd0005-unexpected-or-unknown-title"></a>0x87DD0005 예기치 않은 또는 알 수 없는 제목
 
