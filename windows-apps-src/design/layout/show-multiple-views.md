@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 048b62e5131852c917b6ec6cd66273760509ef02
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6263066"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6664894"
 ---
 # <a name="show-multiple-views-for-an-app"></a>앱에 대한 여러 보기 표시
 

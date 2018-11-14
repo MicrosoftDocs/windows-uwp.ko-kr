@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 89e9fff8f041c4beb2a897c7be75b2f6e009f809
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034844"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6646398"
 ---
 # <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 구매 사용
 
@@ -54,7 +54,7 @@ ms.locfileid: "6034844"
     * "RainbowThemePack"
 
   > [!NOTE]
-  > 코드에서 사용 하는 앱에서 바로 판매 토큰 때 지정한 [제품 ID](../publish/set-your-add-on-product-id.md#product-id) 값 같아야 합니다. [파트너 센터에서 앱에 대 한 해당 추가 기능을 정의](../publish/add-on-submissions.md)합니다.
+  > 코드에서 사용 하는 앱에서 바로 판매 토큰에는 시기를 지정 [제품 ID](../publish/set-your-add-on-product-id.md#product-id) 값과 일치 해야 [파트너 센터에서 앱에 해당 추가 기능을 정의](../publish/add-on-submissions.md)합니다.
 
 2.  **조건부 블록에 기능 코딩**
 

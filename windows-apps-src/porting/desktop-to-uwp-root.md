@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
-ms.openlocfilehash: 184cd246019bacc6419580cd47d2904374606031
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b5ebbb628add9474412441ff507e7429f3bfd3ab
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451697"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6661180"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>데스크톱 응용 프로그램 패키지 (데스크톱 브리지)
 
@@ -90,7 +90,7 @@ Visual Studio로 매우 쉽게 패키지를 만들 수 있습니다. 패키징 �
 
 :heavy_check_mark: 마법사를 사용하여 패키지를 생성합니다.
 
-: heavy_check_mark: Windows 개발자 센터 대시보드에 이미 예약 된 이름에서 응용 프로그램 id를 쉽게 할당 합니다.
+: heavy_check_mark: [파트너 센터](https://partner.microsoft.com/dashboard)에서 이미 예약 된 이름에서 응용 프로그램 id를 쉽게 할당 합니다.
 
 [Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지](desktop-to-uwp-packaging-dot-net.md) 를 참조 하세요.
 

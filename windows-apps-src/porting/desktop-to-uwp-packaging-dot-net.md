@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f87b17ff4452417a06817ee5128d66af4b0e53b
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: cc71a58594c8794369bedd7f415518100892ff67
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6195109"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6667298"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Visual Studio를 사용 하 여 데스크톱 응용 프로그램 패키지
 
-Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습니다. 그런 다음 이 패키지를 Microsoft Store에 게시하거나, 하나 이상의 PC에서 사이드로드할 수 있습니다.
+Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습니다. 그런 다음 패키지를 Microsoft 스토어 또는 테스트용으로 로드, 하나 이상의 Pc를 게시할 수 있습니다.
 
 최신 버전의 Visual Studio는 앱을 패키징하는 데 필수적이었던 수동 단계를 모두 제거하는 패키징 프로젝트의 새 버전을 제공합니다. 패키징 프로젝트를 추가하고 데스크톱 프로젝트를 참조한 다음 F5 키를 눌러 앱을 디버깅하면 됩니다. 수동 조정이 필요하지 않습니다. 이 새로운 간소화된 환경은 이전 버전의 Visual Studio에서 사용할 수 있는 환경에 대해 상당히 향상되었습니다.
 
@@ -66,7 +66,7 @@ Visual Studio를 사용하여 데스크톱 앱용 패키지를 만들 수 있습
 
 7. [앱 패키지 만들기](../packaging/packaging-uwp-apps.md) 마법사를 사용해 appxupload 파일을 생성합니다.
 
-   Microsoft Store에 직접 해당 파일을 업로드할 수 있습니다.
+   스토어에 직접 해당 파일을 업로드할 수 있습니다.
 
 **비디오**
 

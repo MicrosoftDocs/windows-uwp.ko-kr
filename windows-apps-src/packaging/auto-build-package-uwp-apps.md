@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 78cb7240fd11cee77556078f10500ca1a2087f0e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 775e780be823b6e7b80eda9f488d69fe4fc29edf
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6194847"
+ms.locfileid: "6258186"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -292,7 +292,7 @@ Microsoft Store 제출 패키지를 생성하려면 Visual Studio에서 Microsof
 
 Microsoft Store 연결 마법사는 Microsoft Store 연결 정보를 포함하는 Package.StoreAssociation.xml 파일을 생성합니다. GitHub와 같은 공용 리포지토리에 소스 코드를 저장하는 경우 이 파일에는 해당 계정에 대한 예약된 앱 이름이 모두 포함됩니다. 이 파일을 공개하기 전에 제외하거나 삭제할 수 있습니다.
 
-앱을 게시하는 데 사용된 개발자 센터 계정에 액세스할 수 없으면 [타사 앱을 빌드 중인 경우 Microsoft Store 앱을 패키징하는 방법은 무엇인가요?](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97) 문서의 지침에 따라 수행하면 됩니다.
+이 문서의 지침에에서 따르면 앱을 게시 하는 데 사용 된 파트너 센터 계정에 액세스할 수 없는 경우: [타사 앱을 빌드? 스토어 앱을 패키징하는 방법을](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97)합니다.
 
 그런 다음 빌드 단계에서 다음 매개 변수를 포함하고 있는지 확인해야 합니다.
 
@@ -306,11 +306,11 @@ Microsoft Store 연결 마법사는 Microsoft Store 연결 정보를 포함하�
 
 Microsoft Store API와 통합하는 Microsoft Store용 Visual Studio Team Services 확장을 사용하여 Microsoft Store에 appxupload 패키지를 보냅니다.
 
-Azure AD(Active Directory)를 사용하여 개발자 센터 계정에 연결한 다음 AD에 요청을 인증할 수 있는 앱을 만들어야 합니다. 작업을 수행하는 확장 페이지의 지침에 따라 수행할 수 있습니다.
+다음 요청을 인증 하려면 광고에서 앱을 만드는 및 사용 하 여 Azure Active Directory (AD), 파트너 센터 계정에 연결 해야 합니다. 작업을 수행하는 확장 페이지의 지침에 따라 수행할 수 있습니다.
 
 확장을 구성한 후에 빌드 작업을 추가 하 고 응용 프로그램 ID와 업로드 파일의 위치를 사용 하 여 구성할 수 있습니다.
 
-![개발자 센터 구성](images/building-screen17.png)
+![파트너 센터 구성](images/building-screen17.png)
 
 여기서 `Package File` 매개 변수 값은 다음과 같습니다.
 

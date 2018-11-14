@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044716"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266832"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
-Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. 우리의 광고 수익 창출 플랫폼은 다양 한 많은 인기 광고 네트워크를 사용 하 여 앱 및 지원 비율은 조정에 원활 하 게 통합할 수 있는 광고 형식 제공 합니다. 우리의 플랫폼 OpenRTB, 방대한 2.x, MRAID 2 및 3 VPAID 표준을 준수 이며 자 IAS와 호환 됩니다. 
+Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. 우리의 광고 수익 창출 플랫폼은 다양 한 많은 인기 광고 네트워크를 사용 하 여 앱 및 지원 비율은 조정에 원활 하 게 통합할 수 있는 광고 형식 제공 합니다. 우리의 플랫폼 OpenRTB, 방대한 2.x, MRAID 2 및 3 VPAID 표준 규격인 및 안전한 IAS와 호환 됩니다. 
 
 <br/>
 
@@ -92,7 +92,7 @@ Microsoft Advertising SDK는 앱에서 사용할 수 있는 여러 유형의 광
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>3단계: 광고 단위 생성 및 조정 구성
 
-앱 테스트를 완료 하 고 스토어에 제출할 준비를 마쳤으면, 파트너 센터의 [앱에서 바로 광고](../publish/in-app-ads.md) 페이지에 광고 단위를 만듭니다. 그런 다음, 이 광고 단위를 사용하도록 앱 코드를 업데이트하면 앱에 실제 광고가 게재됩니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+앱 테스트를 완료 한 후 스토어에 제출할 준비가 되었습니다. 파트너 센터의 [인 앱 광고](../publish/in-app-ads.md) 페이지에 광고 단위를 만듭니다. 그런 다음, 이 광고 단위를 사용하도록 앱 코드를 업데이트하면 앱에 실제 광고가 게재됩니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
 기본적으로 앱에는 유료 광고에 대한 Microsoft 네트워크의 광고가 표시됩니다. 광고 수익을 극대화하기 위해 Taboola 및 Smaato 등 추가 유료 광고 네트워크의 광고를 표시하도록 광고 단위에 대한 [광고 조정](ad-mediation-service.md)을 사용할 수 있습니다. Microsoft 앱 홍보 캠페인에 광고를 제공하여 앱 홍보 기능을 향상시킬 수 있습니다.
 

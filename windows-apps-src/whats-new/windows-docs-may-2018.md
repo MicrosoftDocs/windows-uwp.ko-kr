@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 74fc017453472b515e597b73ee8bb582376f6b12
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 2dc2f8e65ec9ed4e05b6b62e9fc28bbc75f28075
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6464374"
+ms.locfileid: "6650553"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018 년 5 월 Windows 개발자 문서의 새로운
 
@@ -114,11 +114,11 @@ Sets 기능은 Windows Insider preview 빌드에 사용할 수 있습니다. Set
 
 ### <a name="advertising-performance-report"></a>광고 성과 보고서
 
-개발자 센터 대시보드에서 [광고 성과 보고서](../publish/advertising-performance-report.md) 에 이제 가시성 메트릭을 제공합니다. [광고 단위 가시성 최적화](../monetize/optimize-ad-unit-viewability.md) 문서 광고의 가시성을 최적화 하기 위한 권장 사항을 제공에 추가 했습니다.
+이제 파트너 센터에서 [광고 성과 보고서](../publish/advertising-performance-report.md) 가시성 메트릭을 제공합니다. [광고 단위 가시성 최적화](../monetize/optimize-ad-unit-viewability.md) 문서 광고의 가시성을 최적화 하기 위한 권장 사항을 제공에 추가 했습니다.
 
 ### <a name="targeted-push-notifications"></a>대상된 푸시 알림
 
-이제 개발자 센터 대시보드에 있는 [알림](../publish/send-push-notifications-to-your-apps-customers.md) 페이지는 그래프 및 세계 지도 보기에서 모든 알림을 대 한 자세한 분석 데이터를 제공합니다.
+이제 파트너 센터에서 [알림](../publish/send-push-notifications-to-your-apps-customers.md) 페이지는 그래프 및 세계 지도 보기에서 모든 알림을 대 한 자세한 분석 데이터를 제공합니다.
 
 ## <a name="videos"></a>비디오
 
