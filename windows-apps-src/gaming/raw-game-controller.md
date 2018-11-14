@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 입력, 원시 게임 컨트롤러
 ms.localizationpriority: medium
 ms.openlocfilehash: c57db3f9604e20d0dc83d6c3cf2ced87b1f5dcc1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041570"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6465489"
 ---
 # <a name="raw-game-controller"></a>원시 게임 컨트롤러
 

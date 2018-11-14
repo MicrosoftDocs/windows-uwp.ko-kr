@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지오펜싱
 ms.localizationpriority: medium
 ms.openlocfilehash: 86104f00ed0189290fd0cd718042573d9d592cc3
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6657161"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6471864"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>지오펜싱 앱에 대한 지침
 

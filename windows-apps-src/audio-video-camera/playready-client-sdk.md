@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 773216dc392f7bb234e232f3dd3e7c2190a22de1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 79c1cd5b83c013bdf601022aa7fec9e661b80857
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6450991"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6660480"
 ---
 # <a name="playready-drm"></a>PlayReady DRM
 
@@ -513,10 +513,10 @@ Windows 10 버전 1703부터, 디코드 코덱, 해상도, 출력 보호(HDCP)�
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Xbox One에서 PlayReady DRM 사용
 
-Xbox One의 UWP 앱에서 PlayReady DRM을 사용하려면 먼저 앱을 게시하는 데 사용할 개발자 센터 계정을 등록하여 PlayReady를 사용할 권한을 부여해야 합니다. 다음 두 가지 방법 중 하나로 이 작업을 수행할 수 있습니다.
+Xbox One에서 UWP 앱에서 PlayReady DRM을 사용 하려면 PlayReady를 사용 하 여 인증을 위해 앱을 게시 하는 데 사용 중인 [파트너 센터](https://partner.microsoft.com/dashboard) 계정에 등록 해야 먼저 합니다. 다음 두 가지 방법 중 하나로 이 작업을 수행할 수 있습니다.
 
 * Microsoft의 담당자에게 권한을 요청하도록 합니다.
-* 개발자 센터 계정과 회사 이름을 [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com)으로 보내 권한 부여를 신청합니다.
+* 하 여 파트너 센터 계정과 회사 이름을 보내 권한 부여를 신청 [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
 
 권한을 부여받으면 추가 `<DeviceCapability>`를 앱 매니페스트에 추가해야 합니다. 현재 앱 매니페스트 디자이너에서 사용할 수 있는 설정이 없으므로 수동으로 추가해야 합니다. 구성하려면 다음 단계를 따르세요.
 

@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5971a586269a53c973653fcfc45409c7b5057dfe
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 0efeb16866628a4d318964f9b1a7a293c7679be8
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6164127"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6442540"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---april-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 4 월
 
@@ -29,7 +29,7 @@ Xbox Live SDK는 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [
 
 ## <a name="documentation"></a>설명서
 - [로그인 문제 해결 가이드](../using-xbox-live/troubleshooting/troubleshooting-sign-in.md) 로그인 오류 뿐 아니라 단계 오류 코드에 따라 수행 하려면 디버그 하려면 몇 가지 일반적인 전략을 나열 합니다.
-- Xbox One 개발자를 위한 [시장](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/xbox-marketplace/marketplace-and-downloadable-content) 문서만 이제에서 찾을 수 있습니다 프로그래밍 가이드입니다.  UWP 개발자는 Windows 개발자 센터 스토어에 대 한 설명서에 대 한 참조를 계속 합니다.
+- Xbox One 개발자를 위한 [시장](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/xbox-marketplace/marketplace-and-downloadable-content) 문서만 이제에서 찾을 수 있습니다 프로그래밍 가이드입니다.  UWP 개발자는 파트너 센터 스토어에 대 한 설명서에 대 한 참조를 계속 합니다.
 - 유니버설 Windows 플랫폼에는 Xbox One 제목 가져오기에 관심이 있는 경우를 참조할 수 [XDK UWP 포팅 가이드에](../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md) 있습니다.
 - 다양 한 Xbox Live 서비스 끝점 및 시나리오 뿐 아니라 제한은 기능에 대 한 정보에 대 한 적용 이러한 방법에 대 한 설명에 대 한 [세분화 속도 제한](../using-xbox-live/best-practices/fine-grained-rate-limiting.md) 문서를 참조 하십시오.
 

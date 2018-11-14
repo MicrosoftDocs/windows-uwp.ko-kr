@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1367c880bd6dde573ab4fc30733ed9d1fefa6b0b
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6454168"
+ms.locfileid: "6660941"
 ---
 # <a name="handle-device-orientation-with-mediacapture"></a>MediaCapture를 사용하여 디바이스 방향 처리
 앱이 사용자 디바이스의 파일에 저장하거나 온라인으로 공유하는 등 앱 외부에서 보려는 사진 또는 비디오를 캡처하는 경우 다른 앱이나 디바이스에서 이미지를 표시할 때 올바른 방향으로 표시되도록 적절한 방향 메타데이터를 사용하여 이미지를 인코드하는 것이 중요합니다. 디바이스 섀시 방향, 디스플레이 방향, 섀시의 카메라 배치(전면 또는 후면 카메라) 등 고려할 여러 가지 변수가 있기 때문에 미디어 파일에 포함할 올바른 방향 데이터를 결정하는 작업은 복잡할 수 있습니다. 

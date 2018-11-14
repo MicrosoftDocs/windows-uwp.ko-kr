@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047408"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6453584"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Direct3D 11에 OpenGL ES 2.0 매핑
 

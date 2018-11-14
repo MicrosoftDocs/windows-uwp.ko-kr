@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, directx, 포트
 ms.localizationpriority: medium
 ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6268413"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6463423"
 ---
 # <a name="plan-your-directx-port"></a>DirectX 포트 계획
 

@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 ms.localizationpriority: medium
 ms.openlocfilehash: f58fa4c3a9a1abd407f635f27de3a545c3aafc6c
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6671006"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6277282"
 ---
 # <a name="media-capture-api-reference"></a>미디어 캡처 API 참조 #
 

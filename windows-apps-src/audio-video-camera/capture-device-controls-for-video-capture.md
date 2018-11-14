@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 91f9d21f6df09bf8f3cad3e5a43f3ed94049338e
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6250728"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6467669"
 ---
 # <a name="manual-camera-controls-for-video-capture"></a>비디오 캡처를 위한 수동 카메라 컨트롤
 

@@ -14,11 +14,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b5d2a55610b6cec2f9026a5834b00ad7015a9c6
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6266816"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6472004"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 

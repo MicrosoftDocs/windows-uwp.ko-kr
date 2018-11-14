@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6eca73beae6634d1809c0e9e779d80a43b495a65
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6283275"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6655843"
 ---
 # <a name="lighting-overview"></a>조명 개요
 

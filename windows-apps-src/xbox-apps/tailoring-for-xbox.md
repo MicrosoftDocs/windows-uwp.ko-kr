@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 604e6dc5381a36d4dbda70e3435e5cd6fa44cc04
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673670"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6281682"
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 

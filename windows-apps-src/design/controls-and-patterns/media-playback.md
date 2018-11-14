@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 6df7d7dc7d35ed46f3f741bd1783b5af2755f0a2
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6256529"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6656691"
 ---
 # <a name="media-player"></a>미디어 플레이어
 
@@ -304,7 +304,7 @@ private DisplayRequest appDisplayRequest = null;
 [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)는 [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx) 속성을 통해 오디오 및 비디오 재생을 제어하기 위한 다양한 속성, 메서드 및 이벤트를 제공합니다. 전체 속성, 메서드 및 이벤트 목록을 보려면 [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) 참조 페이지를 참조하세요.
 
 ### <a name="advanced-media-playback-scenarios"></a>고급 미디어 재생 시나리오
-재생 목록 재생, 오디오 언어 전환 또는 사용자 지정 메타데이터 트랙 만들기와 같은 복잡한 미디어 재생 시나리오의 경우에는 [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) 또는 [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx)로 설정합니다. 다양한 고급 미디어 기능 사용 방법은 개발자 센터의 [미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) 페이지를 참조하세요.
+재생 목록 재생, 오디오 언어 전환 또는 사용자 지정 메타데이터 트랙 만들기와 같은 복잡한 미디어 재생 시나리오의 경우에는 [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)를 [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) 또는 [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx)로 설정합니다. 다양 한 고급 미디어 기능 사용 하는 방법에 자세한 정보에 대 한 [미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) 페이지를 참조 하세요.
 
 ### <a name="enable-full-window-video-rendering"></a>전체 창 동영상 렌더링을 사용하도록 설정
 

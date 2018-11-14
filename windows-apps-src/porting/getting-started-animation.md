@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4822a436225bea92fdf1e981ad33378996adefe4
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6259240"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6463143"
 ---
 # <a name="getting-started-animation"></a>시작: 애니메이션
 

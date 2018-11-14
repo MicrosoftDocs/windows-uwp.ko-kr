@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 028cc9586180f2d94337282c3ed0cd58317b539b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6254185"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6653858"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 

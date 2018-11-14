@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, direct3d 11, 초기화, 포팅, direct3d 9
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f6aa5bca3ecc242e90b42081a0111358afdfa9b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6276110"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6652137"
 ---
 # <a name="initialize-direct3d-11"></a>Direct3D 11 초기화
 

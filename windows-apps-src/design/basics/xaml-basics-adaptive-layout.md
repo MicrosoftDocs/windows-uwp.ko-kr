@@ -8,11 +8,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 000aa2d8f3684aa813b85076d9124a87a71b6a8c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024271"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6455778"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 

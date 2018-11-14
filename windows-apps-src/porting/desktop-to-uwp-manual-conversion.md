@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b063bf5997bbb1fc082c8d9fefcf0f435262bf1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b309064c0110084d5445e8680d65f9935a3f69fe
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6445182"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654407"
 ---
 # <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 
@@ -85,7 +85,7 @@ ms.locfileid: "6445182"
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Windows 스토어에서 응용 프로그램 이름, 예약한 경우 Windows 개발자 센터 대시보드를 사용 하 여 이름과 게시자를 얻을 수 있습니다. 다른 시스템 응용 프로그램을 사이드 로드 계획이, 선택 인증서의 이름과 일치 하는 게시자 이름이 앱 로그인에 사용으로 이러한 고유한 이름을 제공할 수 있습니다.
+> Microsoft Store에 응용 프로그램 이름, 예약한 경우 [파트너 센터](https://partner.microsoft.com/dashboard)를 사용 하 여 이름과 게시자를 얻을 수 있습니다. 다른 시스템 응용 프로그램을 사이드 로드 계획이, 선택 인증서의 이름과 일치 하는 게시자 이름이 앱 로그인에 사용으로 이러한 고유한 이름을 제공할 수 있습니다.
 
 ### <a name="properties"></a>특성
 

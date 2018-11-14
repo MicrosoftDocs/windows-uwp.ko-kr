@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b7c20e0e6cf56afa7e2193739401bf49e0403a2
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6467230"
+ms.locfileid: "6654987"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성 바인딩
 XAML 컨트롤에 효과적으로 바인딩되는 속성은 *관찰 가능한* 속성으로 알려져 있습니다. 이 아이디어는 *관찰자 패턴*이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는 관찰 가능한 속성을 구현 하는 방법을 보여 줍니다 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), XAML 컨트롤을 바인딩하는 방법.
@@ -208,7 +208,7 @@ namespace Bookstore
 
 파일을 저장합니다. 프로젝트는 순간 완료 될 때까지 빌드 없습니다 수 있지만 **MainPage** 런타임 클래스가 구현 되는 소스 코드 파일을 다시 생성 하는 것은 이제 빌드 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`). 이제 빌드 해 보시기 합니다. 이 단계에서 표시 되는 수 빌드 오류가 **'MainViewModel': 'winrt::Bookstore::implementation::MainPage'의 구성원이 아닙니다**합니다.
 
-include를 생략 하면 `BookstoreViewModel.idl` (의 목록이 표시 `MainPage.idl` 위에), 다음 오류가 표시 됩니다 **예상 \ < "MainViewModel" 근처**합니다. 동일한 네임 스페이스의 모든 종류를 유지 하 고 있는지 확인 하 여: 코드 목록에 표시 되는 네임 스페이스입니다.
+include를 생략 하면 `BookstoreViewModel.idl` (의 목록이 표시 `MainPage.idl` 위에), 다음 **"MainViewModel" 근처 \< 예상**오류가 표시 됩니다. 동일한 네임 스페이스의 모든 종류를 유지 하 고 있는지 확인 하 여: 코드 목록에 표시 되는 네임 스페이스입니다.
 
 것으로 예상 하는 오류를 해결 하려면 이제 해야 생성 된 파일에서 **MainViewModel** 속성 접근자 스텁을 복사 (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` 및 `MainPage.cpp`)로 `\Bookstore\Bookstore\MainPage.h` 및 `MainPage.cpp`.
 
