@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 통계, 도전 과제, 순위표, 디자인
 ms.localizationpriority: medium
-ms.openlocfilehash: 21d5e23a6123d8f6fd759973d4afd90ce9a9f9d0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 4bcf2c0697f932e8ad121fe0e3cc52c221b7ed5f
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6044630"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182196"
 ---
 # <a name="designing-xbox-live-experiences"></a>Xbox Live 경험을 디자인
 
@@ -77,6 +77,6 @@ _경합 2015_, 구성 하려는 도전 과제의 하위 집합 다음과 같습�
 * 대부분의 자동차 수집
 
 ## <a name="next-steps"></a>다음 단계
-이제 효과적으로 통계, 순위표 및 도전 과제를 디자인 하는 방법을 알게 타이틀에서 이러한 구현을 시작할 이제 시작할 수 있습니다.  다음의 몇몇 섹션은 개발자 센터에서 구성으로 시작 하는 종단 간 프로세스를 설명 합니다.
+이제 효과적으로 통계, 순위표 및 도전 과제를 디자인 하는 방법을 알게 타이틀에서 이러한 구현을 시작할 이제 시작할 수 있습니다.  다음의 몇몇 섹션은 파트너 센터에서 구성으로 시작 하는 종단 간 프로세스를 설명 합니다.
 
 [플레이어 통계](../leaderboards-and-stats-2017/player-stats.md) 를 참조 하세요.

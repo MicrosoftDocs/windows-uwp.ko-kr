@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044043"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183469"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임워크 I: 렌더링 소개
 
@@ -618,7 +618,7 @@ __ID3D11Buffer__ 인터페이스에서 모든 버퍼 형식이 캡슐화되므�
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX 그래픽 Infrastructure (DXGI)는 Direct3D 10 되는 하위 수준 작업 중 일부를 캡슐화 하는 WindowsVista에 도입 된 새로운 하위 시스템 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 [DirectX Graphics Infrastructure(DXGI): 모범 사례 - 다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)을 참조하세요.
+Microsoft DirectX 그래픽 Infrastructure (DXGI)는 Direct3D 10 되는 하위 수준 작업 중 일부를 캡슐화 WindowsVista에 도입 된 새로운 하위 시스템 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 [DirectX Graphics Infrastructure(DXGI): 모범 사례 - 다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)을 참조하세요.
 
 ### <a name="feature-level"></a>기능 수준
 
@@ -628,7 +628,7 @@ Microsoft DirectX 그래픽 Infrastructure (DXGI)는 Direct3D 10 되는 하위 �
 
 기능 수준을 사용하면 디바이스를 만들 때 요청하고자 하는 기능 수준에 맞게 디바이스를 생성하려고 시도할 있습니다. 디바이스 생성이 진행되면 기능 수준이 지원되는 것이고, 그렇지 않으면 하드웨어에서 기능 수준이 지원되지 않는 것입니다. 더 낮은 기능 수준에서 디바이스를 다시 생성해 보거나 응용 프로그램을 종료하는 방법을 선택할 수 있습니다. 예를 들어 12\_0 기능 수준에는 Direct3D 11.3 또는 Direct3D 12와 셰이더 모델 l 5.1이 필요합니다. 자세한 내용은 [Direct3D 기능 수준: 각 기능 수준에 대한 개요](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview)를 참조하세요.
 
-기능 수준을 사용 Direct3D9, Microsoft Direct3D10 또는 Direct3D11, 응용 프로그램을 개발 하 고 9, 10 또는 11 하드웨어 (일부 예외)에서 실행할 수 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx)을 참조하세요.
+기능 수준을 사용 하면 Direct3D9, Microsoft Direct3D10 또는 Direct3D11, 응용 프로그램을 개발 하 고 9, 10 또는 11 하드웨어 (일부 예외)에서 실행할 수 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx)을 참조하세요.
 
 ### <a name="stereo-rendering"></a>스테레오 렌더링
 

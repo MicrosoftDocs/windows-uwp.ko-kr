@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 186300b160c611eae58566d51ef50bc6920e2ad0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 9484a324b060bbbf3e31dab0ace915bd4c551ebb
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6041901"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6192404"
 ---
 # <a name="troubleshooting-xbox-live-setup-on-windows-pc"></a>Windows PC에서 Xbox Live 설정 문제 해결
 
@@ -31,6 +31,6 @@ Windows 10 PC에서 컴퓨터는 다음이 단계를 사용 하 여 올바르게
 1. 빌드 대상 플랫폼 "Win32" 또는 "x64"로 변경 합니다.
 1. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 모든를 다시 빌드하십시오.
 1. 디버거에서 응용 프로그램을 실행 합니다.
-1. 또는에 로그인 [Xbox 개발자 포털](https://xdp.xboxlive.com)에서 만든 개발 계정을 사용 하 여 [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)에서 권한을 부여한 소매 개발자 계정을 사용 하 여 합니다.
+1. 로그인 [Xbox 개발자 포털](https://xdp.xboxlive.com)에서 만든 개발 계정 또는 소매 개발자 계정 [파트너 센터](https://partner.microsoft.com/dashboard)에서 승인 합니다.
 1. Xbox Live 정보에 액세스 하려면 앱 권한을 부여 합니다.
 1. 앱에 정보를 검색할 수 게이머 태그를 볼 수 있는지 확인 하십시오.

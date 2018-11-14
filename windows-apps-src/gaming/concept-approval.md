@@ -8,12 +8,12 @@ ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 개념 승인
 ms.localizationpriority: medium
-ms.openlocfilehash: a14a9b3f1e059019afa042a47dcaeb9373a69934
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 9b63e3002d6816b30a71c775cfcf87817d4f9879
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025008"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183964"
 ---
 # <a name="concept-approval"></a>개념 승인
 
@@ -23,7 +23,7 @@ ms.locfileid: "6025008"
 
 이 과정은 [ID@Xbox](http://www.xbox.com/Developers/id)를 통해 또는 관리 파트너로서 Xbox에 게임을 게시하는 경우에만 필요합니다. [Xbox Live 크리에이터스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)에 참여하여 UWP(유니버설 Windows 플랫폼) 게임을 만드는 경우에는 Xbox에 직접 게시할 수 있으므로 이 과정이 필요 없습니다. 그러나 이 프로그램을 통해 만든 게임은 스토어의 별도 섹션에 추천 게임으로 소개됩니다. 자신의 게임을 우수 AAA 게임과 함께 추천 게임으로 소개하고 싶거나 XDK(Xbox 개발 키트)를 사용하여 보다 집약적인 게임을 만들고 싶은 경우에는 개념 승인 과정을 통과해야 합니다.
 
-Windows 데스크톱 또는 모바일 장치용 게임을 개발하는 경우(또는 모든 장치를 대상으로 하며 게임이 *아닌* UWP 앱을 게시하려는 경우)에도 개념 승인이 필요 없습니다. 이 경우 [개발자 계정](https://go.microsoft.com/fwlink/?LinkId=817223)만 있으면 자유롭게 대시보드를 통해 앱을 구성하고 스토어에 제출할 수 있습니다.
+Windows 데스크톱 또는 모바일 장치용 게임을 개발하는 경우(또는 모든 장치를 대상으로 하며 게임이 *아닌* UWP 앱을 게시하려는 경우)에도 개념 승인이 필요 없습니다. [개발자 계정](https://go.microsoft.com/fwlink/?LinkId=817223)에 필요한 모든 것은 및 자유롭게 구성 하 고 파트너 센터를 통해 스토어에 앱을 제출할 수 있습니다.
 
 ## <a name="submit-your-concept-for-approval"></a>승인을 위해 개념 제출
 

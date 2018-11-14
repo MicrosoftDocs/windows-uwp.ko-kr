@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024232"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6148961"
 ---
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 
@@ -229,7 +229,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>이동 및 그리기 명령을 생성하는 디자인 도구
 
-Blend for Microsoft Visual Studio2015에서에서 **펜** 도구 및 다른 그리기 도구를 사용 하는 이동 된 [**경로**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 생성 및 그리기 명령을 일반적으로 합니다.
+Blend for Visual Studio2015 Microsoft에서에서 **펜** 도구 및 다른 그리기 도구를 사용 하는 이동 사용 하는 [**경로**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 생성 및 그리기 명령을 일반적으로 합니다.
 
 컨트롤에 대한 Windows 런타임 XAML 기본 템플릿에 정의된 일부 컨트롤 파트에 기존 이동 및 그리기 명령 데이터가 있을 수 있습니다. 예를 들어 일부 컨트롤은 이동 및 그리기 명령으로 정의된 데이터가 포함된 [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)을 사용합니다.
 

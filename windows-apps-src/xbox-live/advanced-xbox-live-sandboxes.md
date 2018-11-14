@@ -8,20 +8,21 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, 하나는 xbox, xdk, 관리 되는 파트너, 샌드박스, 콘텐츠 격리
 ms.localizationpriority: medium
-ms.openlocfilehash: 025a6ecbf4431ff465a70e8a11324d170748d117
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 335a214976b0a7d8382c0c7ea3845e5e485889eb
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6033330"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6160840"
 ---
 # <a name="advanced-xbox-live-sandboxes"></a>고급 Xbox Live 샌드박스
 
-> **참고** 이 문서에서는 샌드박스의 고급 사용법을 설명 하 고 주로 큰 게임 스튜디오 여러 팀 및 복잡 한 사용 권한 요구 사항에 적용 됩니다.  Xbox Live 크리에이터 스 프로그램의 일부인 경우 또는 ID@Xbox [Xbox Live 샌드박스 소개](xbox-live-sandboxes.md) 를 살펴보는 것이 좋습니다 개발자
+> [!NOTE]
+> 이 문서에서는 샌드박스의 고급 사용법을 설명 하 고 주로 큰 게임 스튜디오 여러 팀 및 복잡 한 사용 권한 요구 사항에 적용 됩니다.  Xbox Live 크리에이터 스 프로그램의 일부인 경우 또는 ID@Xbox [Xbox Live 샌드박스 소개](xbox-live-sandboxes.md) 를 살펴보는 것이 좋습니다 개발자
 
 Xbox Live *샌드박스* 를 개발에 대 한 전체 개인 환경을 제공합니다. 이 문서에서는 샌드박스 이란, 존재 이유, 게시자에 적용 되는 방식 및 Xbox 가속화할 어떻게 영향을 설명 합니다. 이 문서의 대상 사용자는 게시자가 Xbox One 콘텐츠를 빌드하고 샌드박스를 사용 합니다.
 
-## <a name="summary"></a>요약
+## <a name="isolate-content-on-xbox-live"></a>Xbox Live의 콘텐츠를 격리 합니다.
 
 Xbox Live에서 모든 시험판 (개발 중인 및 베타), 인증 및 콘텐츠 소매 상주 하는 단일 프로덕션 환경만 있습니다.
 
@@ -83,7 +84,8 @@ Microsoft에서만 채울 수 있는 시스템 샌드박스 두 가지: 인증�
 
 *런타임 액세스*등 Xbox 콘솔에서 액세스-개발자, 테스터, 검토자 및 결국 고객이 제품 인스턴스를 재생 하 고 실행 하도록 허용 합니다.
 
-**참고** 런타임 액세스 가능 하기 위해 제품 인스턴스 샌드박스에서 배치 되어야 합니다. 빌드는 샌드박스에서 배치 되 면 XDP 사용자 또는 해당 샌드박스에 액세스 권한이 부여 된 devkit 장치 인스턴스를 실행할 수 있습니다. 이렇게 하려면 로그온 할 Xbox One의 개발자 계정 중 하나를 사용 하 여 Xbox 콘솔을 통해 등 특수 그 함수를 런타임 액세스에 대 한 가상으로 사용자 계정.
+> [!NOTE]
+> 런타임 액세스 가능 하기 위해 제품 인스턴스 샌드박스에서 배치 되어야 합니다. 빌드는 샌드박스에서 배치 되 면 XDP 사용자 또는 해당 샌드박스에 액세스 권한이 부여 된 devkit 장치 인스턴스를 실행할 수 있습니다. 이렇게 하려면 로그온 할 Xbox One의 개발자 계정 중 하나를 사용 하 여 Xbox 콘솔을 통해 등 특수 그 함수를 런타임 액세스에 대 한 가상으로 사용자 계정.
 
 샌드박스에 대 한 논의 하 고 때 Xbox Live에서 실행 되는 콘텐츠에 대 한 런타임 액세스에 대 한 논의 하 고 일반적으로 합니다. Xbox Live 서비스에 액세스 하려면 제목 ID가 필요 합니다. 제목 ID를 포함 하는 프로그램 **appxmanifest** , 콘솔은 Xbox live 제목 ID 보냅니다. Xbox Live 보안 서비스는 제공 하지 않습니다 다시 토큰 주체 (장치 또는 사용자) 제목에 대 한 액세스 부여 되어 했습니다.
 
@@ -135,7 +137,8 @@ Xbox One에서 개발자 계정을 적용 되도록 하는 특수 규칙을 사�
 
 따라서 샌드박스에 사용자 그룹을 할당 적절 한 사용자 그룹에 사용자 그룹 추가 하 고 보안 주체 그룹이 설정 샌드박스를 지 원하는 기본 리소스를 사용 하 여 정책 설정 가져오기 한다는 점에서 XDP 사용자와 개발자 계정이 연결 합니다.
 
-**참고** 샌드박스에 액세스 하기 위해 만든 사용자 그룹은 XDP에서 제품 그룹 및 제품에 대 한 구성 데이터에 액세스 하지 못하도록 하는 데 사용 되는 동일한 사용자 그룹.
+> [!NOTE]
+> 샌드박스에 액세스 하기 위해 만든 사용자 그룹은 XDP에서 제품 그룹 및 제품에 대 한 구성 데이터에 액세스 하지 못하도록 하는 데 사용 되는 동일한 사용자 그룹.
 
 ### <a name="device-setup"></a>장치 설정
 
@@ -225,9 +228,9 @@ Xbox One에서 개발자 계정을 적용 되도록 하는 특수 규칙을 사�
 
 ## <a name="organizing-your-sandboxes"></a>에 샌드박스를 구성합니다.
 
-이 섹션에서는 게시자 수 샌드박스를 구성 하는 방법의 예를 제공 합니다. 게시자는 샌드박스를 사용 하 여 데이터를 구성 하는 방법을 이해 해야 합니다.
+이 섹션에서는 게시자 수 샌드박스를 구성 하는 방법의 예를 제공 합니다. 게시자는 샌드박스를 사용 하 여 데이터를 구성 하는 방법을 이해 해야 합니다.  
 
-**참고** 콘텐츠 격리를 사용 하 여 런타임 액세스 관리만 표시 아래 예제입니다.
+콘텐츠 격리를 사용 하 여 런타임 액세스 관리만 표시 아래 예제입니다.
 
 ### <a name="scenario-1-two-titles-one-sandbox"></a>시나리오 1: 두 제목, 하나의 샌드박스
 
@@ -263,7 +266,8 @@ Xbox One에서 개발자 계정을 적용 되도록 하는 특수 규칙을 사�
 
 또한 재무 사용자 (그룹 C)에 디자인 타임 TitleX에 액세스할 수 있습니다. 재무 사용자 그룹은 일반적으로 타이틀의 런타임 디버깅, 수행 하지 때문에 구분 합니다.
 
-**참고** 조직에 관계 없이 XDP 사용자는 둘 이상의 사용자 그룹에 속할 수 있습니다.
+> [!NOTE]
+> 조직에 관계 없이 XDP 사용자는 둘 이상의 사용자 그룹에 속할 수 있습니다.
 
 ![](images/sandboxes/sandboxes_image7.png)
 
@@ -310,6 +314,25 @@ Xbox One에서 개발자 계정을 적용 되도록 하는 특수 규칙을 사�
 -   공급 업체 디바이스 그룹 C XLDP.3 샌드박스에 대 한 액세스를 제공 되는 공급 업체 전용 사용자 그룹입니다.
 
 ![](images/sandboxes/sandboxes_image9.png)
+
+## <a name="determine-the-sandbox-your-device-is-targeting"></a>장치를 대상으로 하는 샌드박스를 결정 합니다.
+
+Xbox Live Api 런타임 시 타이틀을 대상으로 하는 어떤 샌드박스를 식별할 수 있도록 앱 구성 단일 항목이 포함 되어 있습니다. 이 작업의 **샌드박스** 속성에 액세스 하 여 수행 됩니다 `xbox::services::xbox_live_app_config`.
+
+C + + XDK
+```cpp
+auto appConfig = xbox::services::xbox_live_app_config::get_app_config_singleton();
+string_t sandbox = appConfig->sandbox;
+```
+
+C# WinRT
+```csharp
+XboxLiveAppConfiguration appConfig = XboxLiveAppConfiguration.SingletonInstance;
+string sandbox = appConfig.Sandbox;
+```
+
+> [!NOTE]
+> 사용자가 로그인 때까지 샌드박스 속성 값을 지정 됩니다.
 
 ## <a name="summary"></a>요약
 

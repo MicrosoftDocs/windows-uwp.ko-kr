@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035226"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142097"
 ---
 # <a name="ambient-lighting"></a>주변 조명
 
@@ -46,7 +46,7 @@ Cₐ의 값은 다음 중 하나입니다.
 -   vertex color2(AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2이고 꼭짓점 선언에 두 번째 꼭짓점 색을 제공할 경우)
 -   재질 주변 색
 
-**참고**  AMBIENTMATERIALSOURCE 옵션을 사용 하는 및 꼭 짓 점 색을 제공 하지 않을 경우 재질 주변 색이 사용 됩니다.
+**참고**  AMBIENTMATERIALSOURCE 옵션을 사용 하 고 꼭 짓 점 색을 제공 하지 않을 경우 재질 주변 색이 사용 됩니다.
 
  
 

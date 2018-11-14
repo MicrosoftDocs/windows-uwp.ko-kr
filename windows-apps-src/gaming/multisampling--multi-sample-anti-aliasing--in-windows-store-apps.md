@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 다중 샘플링, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b967ae1709849bbe5bc944b00d9e30f22052aeb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034949"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6147357"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
 
@@ -32,7 +32,7 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 1.  다중 샘플링에 어떤 DXGI 형식을 사용할 수 있는지 알아보려면 [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497)를 호출합니다. 게임에 사용할 수 있는 렌더링 대상 형식을 제공합니다. 렌더링 대상과 해제 대상은 모두 같은 형식을 사용해야 하므로 [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134)과 **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**를 모두 확인합니다.
 
-    **기능 수준 9:** 기능 수준 9 디바이스 [다중 샘플링 된 렌더링 대상 형식에 대 한 지원을 보장](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget)있지만 지원은 다중 샘플 해제 대상에 대 한 지원을 보장 되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
+    **기능 수준 9:** 기능 수준 9 디바이스 [다중 샘플링 된 렌더링 대상 형식에 대 한 지원을 보장](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget)있지만 해결 다중 샘플 해제 대상에 대 한 지원을 보장 되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
 
     다음 코드는 DXGI\_FORMAT 값에 대해 다중 샘플링 지원 여부를 확인합니다.
 
@@ -84,7 +84,7 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
     }
     ```
 
-    > **참고**  사용 하 여 [**id3d11device2:: checkmultisamplequalitylevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) 대신에 대 한 다중 샘플 지원을 확인 해야 할 경우 타일 식 리소스 버퍼.
+    > **참고**  사용 [**id3d11device2:: checkmultisamplequalitylevels1**](https://msdn.microsoft.com/library/windows/desktop/dn280494) 대신에 대 한 다중 샘플 지원을 확인 해야 할 경우 타일 식 리소스 버퍼입니다.
 
      
 

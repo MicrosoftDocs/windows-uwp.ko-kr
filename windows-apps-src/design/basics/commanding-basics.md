@@ -12,19 +12,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 028cc9586180f2d94337282c3ed0cd58317b539b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044796"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182698"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a>UWP 앱의 명령 디자인 기본 사항
 
-유니버설 Windows 플랫폼 (UWP) 앱에서 *명령 요소* 는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 해 주는 대화형 UI 요소입니다. *명령 인터페이스* 일반적인 명령 요소, 호스트 하는 명령 화면, 지 원하는 조작 및 제공 환경으로 구성 됩니다.
+유니버설 Windows 플랫폼 (UWP) 앱에서 *명령 요소* 는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 해 주는 대화형 UI 요소는 합니다. *명령 인터페이스* 일반적인 명령 요소, 호스트 하는 명령 화면, 지 원하는 조작 및 제공 환경으로 구성 됩니다.
 
-## <a name="provide-the-best-command-experience"></a>최상의 명령 환경을 제공합니다
+## <a name="provide-the-best-command-experience"></a>명령 최상의 환경을 제공 합니다.
 
-명령 인터페이스의 가장 중요 한 측면은 어떤에 사용자가 수행할 수 있도록 합니다. 앱의 기능을 계획할 수 있게 할 사용자 환경 및 이러한 작업을 수행 하는 데 필요한 단계를 고려 합니다. 이러한 경험의 초안을 완료 했으면를 구현 하는 도구와 상호 작용에 대 한 결정을 만들 수 있습니다.
+명령 인터페이스의 가장 중요 한 측면은 어떤에 사용자가 수행할 수 있도록 합니다. 앱의 기능을 계획할 수 있게 할 사용자 환경 및 이러한 작업을 수행 하는 데 필요한 단계를 고려 합니다. 이러한 경험의 초안을 완료 했으면 구현 하는 도구와 상호 작용에 대 한 결정을 만들 수 있습니다.
 
 다음은 몇 가지 일반적인 응용 프로그램 환경입니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "6044796"
 - 파일 열기, 저장, 삭제
 - 콘텐츠 편집이나 만들기
 
-명령 환경 디자인을 사용 하 여 발휘 합니다. 선택 하는 앱 입력 장치 지원 하 고 각 장치에 앱의 응답 방식입니다. 광범위 한 기본 설정과 기능을 지원 하 여 사용할 수 있는, 노트북 및 가능한로 액세스할 수 있는 앱을 확인 합니다.
+명령 환경 디자인 발휘 합니다. 선택 하는 앱 입력 장치 지원 하 고 각 장치에 앱의 응답 방식입니다. 광범위 한 기본 설정과 기능을 지원 하 여 사용할 수 있는, 노트북 및 가능한로 액세스할 수 있는 앱을 확인 합니다.
 
 
 
@@ -44,7 +44,7 @@ When designing a command interface, the most important decision is choosing what
 
 ## <a name="choose-the-right-command-elements"></a>올바른 명령 요소를 선택 합니다.
 
-명령 인터페이스에서 올바른 요소를 사용 하 여 앱을 직관적으로 사용 하기 쉬운 혼란 스러운 앱이 어렵고 간의 차이 만들 수 있습니다. 명령 요소 집합을 포괄적인 유니버설 Windows 플랫폼 (UWP)에서 사용할 수 있습니다. 가장 일반적인 UWP 명령 요소 중 일부 목록은 다음과 같습니다.
+명령 인터페이스에서 올바른 요소를 사용 하 여 앱을 직관적으로 사용 하기 쉬운 혼란 스러운 앱이 어렵고 간의 차이 만들 수 있습니다. 포괄적인 명령 요소 집합을 유니버설 Windows 플랫폼 (UWP)에서 사용할 수 있습니다. 가장 일반적인 UWP 명령 요소 중 일부 목록은 다음과 같습니다.
 
 :::row:::
     :::column:::
@@ -104,7 +104,7 @@ When designing a command interface, the most important decision is choosing what
 
 항상 사용자가 콘텐츠를 직접 조작할 수 있도록 하려고 하지 않고 통해 콘텐츠를 끌어서 놓기를 목록 항목을 다시 정렬 같은 아니라 위쪽 및 아래쪽 명령 단추에 대해 실행 되는 명령입니다. 
 
-그러나이 하지 못할 수도 있습니다 특정 입력된 장치 또는 특정 사용자 기능 및 기본 수용 하는 경우. 이러한 경우 최대한 많은 명령 어포던스를 제공 하 고 앱의 명령 화면에 이러한 명령 요소를 배치 합니다.
+그러나이 하지 못할 수도 있습니다 특정 입력된 장치 또는 특정 사용자 기능 및 기본 설정을 제어 하는 경우. 이러한 경우 최대한 많은 명령 어포던스를 제공 하 고 앱의 명령 화면에 이러한 명령 요소를 배치 합니다.
 
 가장 일반적인 명령 표면 중 일부 목록은 다음과 같습니다.
 
@@ -142,9 +142,9 @@ When designing a command interface, the most important decision is choosing what
         <p>UWP also provides a set of traditional menus and context menus; for more info, see the <a href="../controls-and-patterns/menus.md">menus and context menus overview</a>.</p>
 :::row-end:::
 
-## <a name="provide-command-feedback"></a>명령 피드백 제공 
+## <a name="provide-command-feedback"></a>명령 피드백을 제공 합니다. 
 
-명령 피드백은 상호 작용이 나 명령 된 감지 된, 해석 및 처리 된 방법을 했으며 여부 성공 여부 사용자에 게 통신 합니다. 이렇게 하면 사용자가 어떤 수행한 및 수행할 수 있는 다음 이해 됩니다. 피드백을 UI에 자연스럽게 통합해서 사용자에게 방해가 없도록 만들거나 정말 필요한 경우를 제외하면 추가 작업을 할 필요가 없도록 만드는 것이 좋습니다.
+명령 피드백을 감지 된 상호 작용이 나 명령, 해석 및 처리 된 방법을 했으며 여부 성공 여부 사용자에 게 통신 합니다. 이렇게 하면 사용자가 어떤 수행한 및 수행할 수 있는 다음 이해 됩니다. 피드백을 UI에 자연스럽게 통합해서 사용자에게 방해가 없도록 만들거나 정말 필요한 경우를 제외하면 추가 작업을 할 필요가 없도록 만드는 것이 좋습니다.
 
 > [!NOTE]
 > 반드시 필요한 경우가 있고 피드백을 다른 곳에서 사용할 수 없는 경우가 아니면 피드백을 제공 하지 마십시오. 값을 추가 하는 경우가 아니면 응용 프로그램 UI를 깔끔하고 간결 하 게 유지 유지 합니다.
@@ -168,7 +168,7 @@ When designing a command interface, the most important decision is choosing what
     :::column span="2":::
         <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">플라이 아웃</a> 은 플라이 아웃 바깥쪽 아무 곳 이나 클릭 또는 탭 하 여 해제할 수 있는 경량의 상황에 맞는 팝업입니다.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">플라이 아웃</a> 은 누르거나 플라이 아웃 바깥쪽 아무 곳 이나 클릭 하 여 해제할 수 있는 경량의 상황에 맞는 팝업입니다.
 :::row-end:::
 
 :::row:::
@@ -187,7 +187,7 @@ When designing a command interface, the most important decision is choosing what
 
 ### <a name="when-to-confirm-or-undo-actions"></a>작업을 확인하거나 실행 취소하는 경우
 
-응용 프로그램의 UI는, 얼마나 잘 디자인 모든 사용자에 게 신중한 작업을 수행 합니다. 앱의 작업을 확인을 요구 하거나 최근 작업을 취소 하는 방법을 제공 하 여 이러한 상황에서 유용 합니다.
+응용 프로그램의 UI는, 얼마나 잘 디자인 신중한 작업을 수행 하는 모든 사용자가 있습니다. 앱의 작업을 확인을 요구 하거나 최근 작업을 취소 하는 방법을 제공 하 여 이러한 상황에서 유용 합니다.
 
 :::row:::
     :::column:::

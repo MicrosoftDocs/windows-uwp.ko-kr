@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어, 연결, 스마트
 ms.localizationpriority: medium
-ms.openlocfilehash: f5a26e0a111d9df5e13127b9ece79678b9399ddc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 68997bc3a7ff6a7b1dfa67862ece49020539dba3
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6038031"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181428"
 ---
 # <a name="smartmatch-matchmaking"></a>스마트 매치 매치 메이킹
 
@@ -28,7 +28,7 @@ ms.locfileid: "6038031"
 
 XSAPI 라는 [멀티 플레이어 관리자 API를](../multiplayer-manager/multiplayer-manager-api-overview.md)래핑하는 스마트 매치 메이 킹 서비스를 제공 합니다.  고급 API 사용에 대 한 **MatchmakingService 클래스**참조할 수 있지만 멀티 플레이어 관리자를 사용 하 여 구현 하는 것이 불가능 매치 메이 킹 시나리오가 있을 경우 하십시오 피드백을 제공 해 주세요에 댐을 통해 키를 누릅니다.  사용 되는 API, 관계 없이이 문서의 개념 정보 적용 됩니다.
 
-스마트 매치 메이 킹 함께 재생 하려면 사용자 정보 및 사용자에 대 한 매치 메이 킹 요청에 따라 플레이어를 그룹화 합니다. 매치 메이 킹은 서버 기반 사용자가 서비스에 대 한 요청을 제공 하 고 일치 하는 경우 나중에 관한 알림을 의미 합니다. Xbox One 용 타이틀을 빌드할 때 [사용 하 여 스마트 매치 매치 메이 킹](using-smartmatch-matchmaking.md)에 설명 된 대로 스마트를 사용할 수 있습니다. 또는 [고유한 매치 메이 킹 서비스를 사용 하 여](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/multiplayer-and-networking/using-your-own-matchmaking-service)에 설명 된 대로 고유한 매치 메이 킹 서비스를 수 있습니다. 참고 Xbox Live 개발에 사용 되는 Microsoft 개발자 센터 계정 있다고는이 링크에 액세스 해야 합니다.
+스마트 매치 메이 킹 함께 재생 하려면 사용자 정보 및 사용자에 대 한 매치 메이 킹 요청에 따라 플레이어를 그룹화 합니다. 매치 메이 킹은 서버 기반 사용자가 서비스에 대 한 요청을 제공 하 고 일치 하는 경우 나중에 관한 알림을 의미 합니다. Xbox One 용 타이틀을 빌드할 때 [사용 하 여 스마트 매치 매치 메이 킹](using-smartmatch-matchmaking.md)에 설명 된 대로 스마트를 사용할 수 있습니다. 또는 [고유한 매치 메이 킹 서비스를 사용 하 여](https://developer.microsoft.com/en-us/games/xbox/docs/xboxlive/xbox-live-partners/multiplayer-and-networking/using-your-own-matchmaking-service)에 설명 된 대로 고유한 매치 메이 킹 서비스를 수 있습니다. 참고 Xbox Live 개발에 사용 되는 [파트너 센터](https://partner.microsoft.com/dashboard) 계정이 있다고는이 링크에 액세스 해야 합니다.
 
 ### <a name="about-smartmatch"></a>스마트 정보
 
@@ -105,7 +105,7 @@ Hopper 규칙 매치 메이 킹 서비스 함께 그룹화 하는 플레이어�
 
 제목 일치 티켓 세션 내에서 각 구성원에 대해 멤버 당 특성을 지정합니다. 이러한 속성 이름을 "matchAttrs"를 사용 하 여 MultiplayerSession.SetCurrentUserMemberCustomPropertyJson 메서드를 호출 하 여 설정 됩니다. 이 호출은 특성에 배치 /members/ {인덱스} / 속성/사용자 지정/matchAttrs 티켓 세션 내에서 각 플레이어에 필드.
 
-매치 메이 킹 프로세스 "병합" 각 당 구성원은 hopper에 대 한 UI는 Xbox Live 구성과 해당 특성에 대해 지정 된 결합 방법에 따라 단일 티켓 수준 특성으로 합니다. [XDP](https://xdp.xboxlive.com) 또는 [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)에서를 구성할 수 있습니다.
+매치 메이 킹 프로세스 "병합" 각 당 구성원은 hopper에 대 한 UI는 Xbox Live 구성과 해당 특성에 대해 지정 된 결합 방법에 따라 단일 티켓 수준 특성으로 합니다. [XDP](https://xdp.xboxlive.com) 또는 [파트너 센터](https://partner.microsoft.com/dashboard)에서를 구성할 수 있습니다.
 
 
 ### <a name="making-the-match"></a>일치를 수행합니다.
@@ -175,7 +175,7 @@ Hopper 규칙 매치 메이 킹 서비스 함께 그룹화 하는 플레이어�
 
 ### <a name="configuration-of-smartmatch-matchmaking-runtime-operations"></a>스마트 매치 메이 킹 런타임 작업 구성
 
-스마트 매치 메이 킹의 모든 구성이 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 또는 [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)를 통해 발생합니다. 구성을 사용 하 여 ServiceConfiguration-&gt;제목에 대 한 멀티 플레이어 및 매치 메이 킹 섹션입니다.
+스마트 매치 메이 킹의 모든 구성이 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 또는 [파트너 센터](https://partner.microsoft.com/dashboard)를 통해 발생합니다. 구성을 사용 하 여 ServiceConfiguration-&gt;제목에 대 한 멀티 플레이어 및 매치 메이 킹 섹션입니다.
 
 
 #### <a name="matchmaking-session-template-configuration"></a>매치 메이 킹 세션 템플릿 구성
@@ -190,7 +190,7 @@ Hopper 규칙 매치 메이 킹 서비스 함께 그룹화 하는 플레이어�
 
 대상 세션에 대 한 matchmade 게임 플레이에 사용 되는 템플릿을 사용 해야 합니다. 게임 플레이 시작 하기 전에 피어 간의 QoS 검사를 활성화 하 고 "게임 플레이" 접근 권한 값을 사용 하 여 표시 되어야 합니다 있는 설정에 있어야 합니다.
 
-구성 XDP 또는 개발자 센터에 대 한 UI 사용 하 여 각 세션 하나 이상의 hoppers, 세션은 해당 hopper에서 함께 일치 하는 방법을 결정 하는 각 포함 규칙에 매핑할 수 있습니다. 자세한 내용은 매치 메이 킹에 대 한 기본 Hopper 구성을 참조 하세요.
+구성 XDP 또는 파트너 센터에 대 한 UI 사용 하 여 각 세션 하나 이상의 hoppers, 세션은 해당 hopper에서 함께 일치 하는 방법을 결정 하는 각 포함 규칙에 매핑할 수 있습니다. 자세한 내용은 매치 메이 킹에 대 한 기본 Hopper 구성을 참조 하세요.
 
 
 #### <a name="basic-hopper-configuration-for-matchmaking"></a>매치 메이 킹에 대 한 기본 Hopper 구성
@@ -426,7 +426,7 @@ Hopper 규칙 매치 메이 킹 서비스 함께 그룹화 하는 플레이어�
 
 ### <a name="configuring-team-rules"></a>팀 규칙 구성
 
-팀 규칙을 설정 하려면 선택한 구성 플랫폼 (XDP 또는 개발자 센터)에서 하나를 만들어 시작 합니다. 게임에서이 hopper에서 일치 하는 티켓 만들기 것으로 예상 팀 크기를 입력 합니다. 예를 들어 게임에서 4v4 기대 하는 경우 만들어야 두 개의 항목을 각각 4와 다른 이름을의 최대 크기를 기대 합니다. 최소 팀 크기 뿐-경우 사용 팀에서 더 적은 플레이어와 게임을 재생할 수 있습니다. 그렇지 않은 경우 최소 및 최대 값과 동일 해야 합니다.
+팀 규칙을 설정 하려면 선택한 구성 플랫폼 (XDP 또는 파트너 센터)에서 하나를 만들어 시작 합니다. 게임에서이 hopper에서 일치 하는 티켓 만들기 것으로 예상 팀 크기를 입력 합니다. 예를 들어 게임에서 4v4 기대 하는 경우 만들어야 두 개의 항목을 각각 4와 다른 이름을의 최대 크기를 기대 합니다. 최소 팀 크기 뿐-경우 사용 팀에서 더 적은 플레이어와 게임을 재생할 수 있습니다. 그렇지 않은 경우 최소 및 최대 값과 동일 해야 합니다.
 
 
 #### <a name="using-team-rules"></a>팀 규칙을 사용 하 여

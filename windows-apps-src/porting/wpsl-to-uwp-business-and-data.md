@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 301dcbe95d7509db07d5b7dd11a16460063bbffe
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027853"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191701"
 ---
 #  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>WindowsPhone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
 
@@ -28,7 +28,7 @@ UWP(유니버설 Windows 플랫폼)는 실질적이고 일관되게 반응하는
 
 ## <a name="background-processing"></a>후순위 처리
 
-WindowsPhone Silverlight 앱은 앱이 포그라운드에 없는 동안 작업을 수행 하는 관리 되는 **ScheduledTaskAgent** 개체를 사용할 수 있습니다. UWP 앱은 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 비슷한 방식으로 백그라운드 작업을 만들고 등록합니다. 백그라운드 작업의 작동을 구현하는 클래스를 정의합니다. 시스템에서는 클래스의 [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드를 호출하여 작업을 실행함으로써 백그라운드 작업을 주기적으로 실행합니다. UWP 앱에서는 앱 패키지 매니페스트에서 **백그라운드 작업** 선언을 설정합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103)을 참조하세요.
+WindowsPhone Silverlight 앱은 앱이 포그라운드에 있는 동안 작업을 수행 하는 관리 되는 **ScheduledTaskAgent** 개체를 사용할 수 있습니다. UWP 앱은 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 비슷한 방식으로 백그라운드 작업을 만들고 등록합니다. 백그라운드 작업의 작동을 구현하는 클래스를 정의합니다. 시스템에서는 클래스의 [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드를 호출하여 작업을 실행함으로써 백그라운드 작업을 주기적으로 실행합니다. UWP 앱에서는 앱 패키지 매니페스트에서 **백그라운드 작업** 선언을 설정합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103)을 참조하세요.
 
 백그라운드에서 대용량 데이터 파일을 전송 하는 WindowsPhone Silverlight 앱 **BackgroundTransferService** 클래스를 사용 합니다. UWP 앱은 [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스의 API를 사용하여 이 작업을 수행합니다. 이러한 기능은 비슷한 패턴으로 전송을 시작하지만 새로운 API에서는 기능과 성능이 개선되었습니다. 자세한 내용은 [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975)을 참조하세요.
 
@@ -48,11 +48,11 @@ Windows 런타임 형식에 상대 URI가 아니라 절대 URI를 전달합니�
 
 메일 작성, 사진 선택, 특정 종류 공유 등의 일반적인 작업을 수행 하는 운영 체제와 상호 작용할 수 WindowsPhone Silverlight 앱 시작 관리자와 선택기 ( **Microsoft.Phone.Tasks** 네임 스페이스에서 찾을 수)의 다른 앱과 데이터를 제공 합니다. [Windows Phone Silverlight Windows10 네임 스페이스 및 클래스 매핑을](wpsl-to-uwp-namespace-and-class-mappings.md) 해당 UWP 형식을 찾습니다를 항목의 **Microsoft.Phone.Tasks** 를 검색 합니다. 여기에는 시작 관리자와 선택기라는 비슷한 메커니즘부터 앱 간 데이터 공유에 대한 계약 구현까지 포함됩니다.
 
-WindowsPhone Silverlight 앱을 사용 하는 경우, 예를 들어 사진 선택자 작업은 유휴 상태로 전환 되거나 배치할 수 있습니다. UWP 앱은 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하는 동안 활성 및 실행 상태를 유지합니다.
+WindowsPhone Silverlight 앱 예를 들어 사진 선택자 작업을 사용할 때 전환 되거나 유휴 상태로 전환 될 수 있습니다. UWP 앱은 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하는 동안 활성 및 실행 상태를 유지합니다.
 
 ## <a name="monetization-trial-mode-and-in-app-purchases"></a>수익 창출(평가 모드 및 앱에서 바로 구매)
 
-코드를 포팅할 필요가 하지 않도록 WindowsPhone Silverlight 앱을 UWP [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스 대부분의 체험 모드 및 앱에서 바로 구매 기능을 사용할 수 있습니다. 하지만 WindowsPhone Silverlight 앱을 구매에 대 한 앱을 제공할 **MarketplaceDetailTask.Show** 호출 합니다.
+코드를 포팅할 필요가 하지 않도록 WindowsPhone Silverlight 앱을 UWP [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스 대부분의 체험 모드 및 앱에서 바로 구매 기능을 사용할 수 있습니다. 하지만 WindowsPhone Silverlight 앱 **MarketplaceDetailTask.Show** 구매에 대 한 앱 제공을 호출 합니다.
 
 ```csharp
     private void Buy()
@@ -84,7 +84,7 @@ C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱에서 타일, 
 
 ## <a name="storage-file-access"></a>저장소(파일 액세스)
 
-앱 설정을 격리 된 저장소에 키-값 쌍으로 저장 하는 WindowsPhone Silverlight 코드는 쉽게 포팅 됩니다. 다음은 이전 및 이후 예제에서는 먼저 합니다 WindowsPhone Silverlight 버전:
+앱 설정을 격리 된 저장소에 키-값 쌍으로 저장 하는 WindowsPhone Silverlight 코드는 쉽게 포팅 됩니다. 다음은 및 이후 예제 먼저 합니다 WindowsPhone Silverlight 버전:
 
 ```csharp
     var propertySet = IsolatedStorageSettings.ApplicationSettings;

@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어, 연결, 스마트
 ms.localizationpriority: medium
-ms.openlocfilehash: b14c6b0351363217cd5c7010af1eabdc148a0b9a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: c013995c29b0916d10291a954a22787c3dfa9716
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6025547"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182624"
 ---
 # <a name="using-smartmatch-matchmaking"></a>스마트 매치를 사용 하 여
 
@@ -44,7 +44,7 @@ ms.locfileid: "6025547"
 
 제목 일치 티켓 세션 내에서 각 구성원에 대해 멤버 당 특성을 지정합니다. 이러한 **MultiplayerSession.SetCurrentUserMemberCustomPropertyJson 메서드**를 호출 "matchAttrs"의 속성 이름을 사용 하 여 설정 됩니다. 이 호출은 특성에 배치 /members/ {인덱스} / 속성/사용자 지정/matchAttrs 티켓 세션 내에서 각 플레이어에 필드.
 
-매치 메이 킹 프로세스 "병합" 구성원 단위 각는 hopper에 대 한 Xbox Live 구성과 해당 특성에 대해 지정 된 결합 방법에 따라 단일 티켓 수준 특성으로 합니다. [XDP](https://xdp.xboxlive.com) 또는 [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)에서를 구성할 수 있습니다.
+매치 메이 킹 프로세스 "병합" 구성원 단위 각는 hopper에 대 한 Xbox Live 구성과 해당 특성에 대해 지정 된 결합 방법에 따라 단일 티켓 수준 특성으로 합니다. [XDP](https://xdp.xboxlive.com) 또는 [파트너 센터](https://partner.microsoft.com/dashboard)에서를 구성할 수 있습니다.
 
 
 ## <a name="making-the-match"></a>일치를 수행합니다.

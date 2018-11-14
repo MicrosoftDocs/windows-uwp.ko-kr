@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 서비스 구성, 상황에 맞는 검색, 브로드캐스트 게임 클립
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e1b63693ac3d6d1cb68a15a2c32bf730cf54dec
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 0e310eb0a38f64796d773075bdc9ca9034e7e536
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6036174"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198346"
 ---
 # <a name="configuring-contextual-search"></a>상황에 맞는 검색 구성
 
@@ -35,7 +35,7 @@ ms.locfileid: "6036174"
 예를 들어 SinglePlayerMap 등 MultiplayerMap 통계를 콘텐츠 필터링을 사용 하는 플레이어 중 하나에 한 번에 되도록 겪게 됩니다.  그러나 두 값 모두 언제 든 지 서비스에서 쿼리할 수 제공 됩니다.  것을 하나를 설정 하면 정리 다른 중요 합니다.  문자열 기반 통계에 대해 빈 문자열은 (옵션으로 UI 구성에는 포함 하지 마세요 확인).
 
 ### <a name="configuring-a-stat-for-contextual-search"></a>상태는 상황에 맞는 검색 구성
-설정한 후 이벤트 및 통계를 해당 전원 태그 상황에 맞는 검색에 대 한 타이틀을 구성 하는 것은 쉽습니다.  아직 친숙 하지 않은 경우 상황에 맞는 검색 설정에서 다른 기존 XDP 또는 Windows 개발자 센터 설명서를 참조 하세요.
+설정한 후 이벤트 및 통계를 해당 전원 태그 상황에 맞는 검색에 대 한 타이틀을 구성 하는 것은 쉽습니다.  아직 친숙 하지 않은 경우 상황에 맞는 검색 설정에서 다른 기존 XDP 또는 파트너 센터 설명서를 참조 하세요.
 
 ![](../images/contextual_search/config02.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "6036174"
 
   ![](../images/contextual_search/config03.png)
 
-  인스턴스 지원 되는 유일한 상태 참고-통계 템플릿 허용 되지 않습니다.  또한 (XDP 또는 Windows 개발자 센터의 통계 부분에서 구성) 통계 인스턴스에 대해 설정한 가시성 알고 있어야 합니다.  **열린** 으로 표시 된 통계는 제 3 자 환경에 표시 됩니다.
+  인스턴스 지원 되는 유일한 상태 참고-통계 템플릿 허용 되지 않습니다.  또한 (XDP 또는 파트너 센터의 통계 부분에서 구성) 통계 인스턴스에 대해 설정한 가시성 알고 있어야 합니다.  **열린** 으로 표시 된 통계는 제 3 자 환경에 표시 됩니다.
 
 2. 통계에 우선 순위를 선택 합니다. 이것이 검색 환경을/알고리즘에 대 한 다른 기준으로이 상태의 중요성을 설명 하는 방법입니다.  허용 되는 값은 1-10 (1은 가장 높은).  0 또는 무시 하도록이 빈 상태로 둡니다.
 3. 표시 이름을 추가 합니다.  최종 사용자에 게 노출 되는 지역화 가능한 문자열입니다.

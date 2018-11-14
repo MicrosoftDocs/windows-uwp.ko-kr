@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, 하나는 xbox, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e4645de174bb572b75a8d5a5dcbb4091a693e75
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6039356"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146645"
 ---
 # <a name="using-xim-c"></a>XIM (c + +)를 사용 하 여
 
