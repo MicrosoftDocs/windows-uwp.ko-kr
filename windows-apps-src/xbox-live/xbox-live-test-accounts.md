@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 테스트 계정, xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: 2316a40e9524240b20645419ca8952d27374ca04
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 20aea3164ab438251181c146ea351ede7ebc9960
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6022928"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6199918"
 ---
 # <a name="xbox-live-test-accounts"></a>Xbox Live 테스트 계정
 
@@ -41,8 +41,8 @@ ms.locfileid: "6022928"
 
 경우는 ID@Xbox 개발자는 다음 만들 수도 용도로 테스트 계정에서 개발 샌드박스 합니다.  한 번에 여러 테스트 계정을 만들 수도 있습니다.
 
-개발자 센터에서 테스트 계정 관리 페이지로 이동 합니다.
-1. 개발자 센터 대시보드로 이동
+파트너 센터에서 테스트 계정 관리 페이지로 이동 합니다.
+1. [파트너 센터로](https://partner.microsoft.com/dashboard) 이동
 2. 맨 위에 있는 기어 아이콘을 클릭 계정 설정으로 이동 하려면 오른쪽
 3. "테스트 계정"를 클릭 합니다.
 

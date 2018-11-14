@@ -8,12 +8,12 @@ ms.date: 08/29/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 멀티 플레이 2015, xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b28c0f587e28a7f46ad5810e8af62b30e5577c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: e845d1d714b42e1c1989b442a9c232f610b72ae4
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6030367"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207050"
 ---
 # <a name="multiplayer-how-tos"></a>멀티 플레이 방법
 
@@ -95,7 +95,7 @@ MPSD 세션 변경 알림을 받도록, 제목 아래 절차를 수행할 수 �
     {
       XboxLiveContext^ xboxLiveContext = ref new Microsoft::Xbox::Services::XboxLiveContext(User::Users->GetAt(0));
 
-      // Values found in Xbox Developer Portal(XDP) or Windows Dev Center configuration
+      // Values found in Xbox Developer Portal(XDP) or Partner Center configuration
       MultiplayerSessionReference^ multiplayerSessionReference = ref new MultiplayerSessionReference(
         "c83c597b-7377-4886-99e3-2b5818fa5e4f", // serviceConfigurationId
         "team-deathmatch", // sessionTemplateName

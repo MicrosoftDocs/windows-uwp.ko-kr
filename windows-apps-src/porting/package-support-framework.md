@@ -1,19 +1,19 @@
 ---
-author: normesta
+author: hickeys
 Description: Fix issues that prevent your desktop application from running in an MSIX container
 Search.Product: eADQiWindows 10XVcnh
 title: MSIX 컨테이너에서 실행 되는 데스크톱 응용 프로그램을 방해 하는 문제 해결
-ms.author: normesta
+ms.author: hickeys
 ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f17bb6bbefb2fd3266edac20ca1f23af76eb0a3c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: fe869cee0d59eb099e3cb828dfee4eccd27a56ae
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030972"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194714"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>MSIX 패키지 패키지 지원 프레임 워크를 사용 하 여 런타임 수정 적용
 
@@ -90,7 +90,7 @@ Windows SDK에서 및 다음 단계를 수행 하 여 몇 가지 간단한 도�
 
 .Msix (또는.appx) 파일을 이미 있는 경우 패키지에 대 한 준비 영역으로 지원할 수 있는 레이아웃 폴더에 해당 콘텐츠 압축을 풉니다 수 있습니다. Sdk 설치 경로에 따라 makemsix 도구를 사용 하 여 명령 프롬프트에서 이렇게 하려면,이 찾습니다 makemsix.exe 도구에서 Windows 10 PC는: x86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makemsix.exe x64: C:\Program Files ( x86) \Windows Kits\10\bin\x64\makemsix.exe
 
-```
+```ps
 makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
 
 ```
@@ -109,14 +109,13 @@ makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContent
 
 이 위치에서 Nuget 명령줄 도구를 설치: https://www.nuget.org/downloads. 그런 다음 Nuget 명령줄에서이 명령을 실행 합니다.
 
-```
+```ps
 nuget install Microsoft.PackageSupportFramework
 ```
 
 #### <a name="get-the-package-by-using-visual-studio"></a>Visual Studio를 사용 하 여 패키지를 가져옵니다.
 
 Visual Studio에서 솔루션 또는 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 Nuget 패키지 관리 명령 중 하나를 선택 합니다.  **Microsoft.PackageSupportFramework** 또는 **PSF** Nuget.org에서 패키지를 찾을 수를 검색 합니다. 그런 다음 설치 합니다.
-
 
 ### <a name="add-the-package-support-framework-files-to-your-package"></a>패키지에 지원 프레임 워크 패키지 파일 추가
 
@@ -186,6 +185,7 @@ Visual Studio에서 솔루션 또는 프로젝트 노드를 마우스 오른쪽 
     ]
 }
 ```
+
 다음은 config.json 스키마에 대 한 가이드입니다.
 
 | 배열 | key | 값 |
@@ -199,18 +199,17 @@ Visual Studio에서 솔루션 또는 프로젝트 노드를 마우스 오른쪽 
 
 `applications`, `processes`, 및 `fixups` 키는 배열입니다. 즉, 둘 이상의 응용 프로그램, 프로세스 및 수정을 DLL 지정 하는 config.json 파일을 사용할 수 있습니다.
 
-
 ### <a name="package-and-test-the-app"></a>패키지 및 앱 테스트
 
 그런 다음 패키지를 만듭니다.
 
-```
+```ps
 makeappx pack /d PackageContents /p PSFSamplePackageFixup.msix
 ```
 
 그런 다음 서명 합니다.
 
-```
+```ps
 signtool sign /a /v /fd sha256 /f ExportedSigningCertificate.pfx PSFSamplePackageFixup.msix
 ```
 
@@ -221,7 +220,7 @@ PowerShell을 사용 하 여 패키지를 설치 합니다.
 >[!NOTE]
 > 먼저 패키지를 제거 해야 합니다.
 
-```
+```ps
 powershell Add-MSIXPackage .\PSFSamplePackageFixup.msix
 ```
 
@@ -277,7 +276,6 @@ Visual Studio를 사용 하 여 런타임 수정 디버그, 런타임 수정 확
 
 솔루션의 구성 이들 각이 프로젝트를 만드는 단계를 살펴보겠습니다.
 
-
 ### <a name="create-a-package-solution"></a>패키지 솔루션 만들기
 
 데스크톱 응용 프로그램에 대 한 솔루션 없는 경우에 Visual Studio에서 새 **빈 솔루션** 을 만듭니다.
@@ -296,7 +294,7 @@ Windows 응용 프로그램 패키징 프로젝트에 대 한 자세한 내용�
 
 **솔루션 탐색기**패키징 프로젝트를 마우스 오른쪽 단추로 클릭, **편집**, 선택 하 고 프로젝트 파일의 맨 아래에 추가:
 
-```
+```xml
 <Target Name="PSFRemoveSourceProject" AfterTargets="ExpandProjectReferences" BeforeTargets="_ConvertItems">
 <ItemGroup>
   <FilteredNonWapProjProjectOutput Include="@(_FilteredNonWapProjProjectOutput)">
@@ -400,6 +398,7 @@ PSF 시작 관리자 프로젝트 및 데스크톱 응용 프로그램 프로젝
     ]
 }
 ```
+
 각 키에 대 한 값을 제공 합니다. 이 표를 가이드로 사용 합니다.
 
 | 배열 | key | 값 |
@@ -460,6 +459,7 @@ Visual Studio에서 만든이 가이드 앞부분의 런타임 수정 프로젝�
 #define FIXUP_DEFINE_EXPORTS
 #include <fixup_framework.h>
 ```
+
 >[!IMPORTANT]
 >있는지 확인 합니다 `FIXUP_DEFINE_EXPORTS` 매크로 포함 문을 앞에 나타납니다.
 
@@ -524,25 +524,27 @@ Visual Studio를 사용 하 여 다른 문제는 디버거를 통해 시작 된 
 
 대상 응용 프로그램 시작 하위 프로세스를 디버깅 하려면 시작 ``WinDbg``.
 
-```
+```ps
 windbg.exe -plmPackage PSFSampleWithFixup_1.0.59.0_x86__7s220nvg1hg3m -plmApp PSFSample
 ```
 
 에 ``WinDbg`` 프롬프트 자식 디버깅을 사용 하도록 설정 하 고 적절 한 중단점을 설정 합니다.
 
-```
+```ps
 .childdbg 1
 g
 ```
+
 (대상 응용 프로그램이 시작 하 고 디버거를 중단 될 때까지 실행)
 
-```
+```ps
 sxe ld fixup.dll
 g
 ```
+
 (수정을 DLL이 로드 될 때까지 실행)
 
-```
+```ps
 bp ...
 ```
 
@@ -554,4 +556,3 @@ bp ...
 **질문에 대한 답변 찾기**
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
-

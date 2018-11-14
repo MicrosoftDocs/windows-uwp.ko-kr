@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: f695e281c754eaa81f9851ab814520f57fc249ab
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031562"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186584"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -104,26 +104,16 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
     </tr>        
 </table>
 
-### <a name="windows-dev-center"></a>Windows 개발자 센터
+### <a name="partner-center"></a>파트너 센터
 
-Windows 개발자 센터에서 개발자 계정을 등록하는 작업은 Windows 게임을 게시하기 위한 첫 번째 단계입니다. 개발자 계정을 사용하여 게임의 이름을 예약하고, 무료 또는 유료 게임을 모든 Windows 장치용 Microsoft Store에 제출할 수 있습니다. 개발자 계정을 사용하여 게임 및 게임 내 제품을 관리하고, 자세하게 분석하며, 전 세계 플레이어를 위해 멋진 환경을 만드는 서비스를 사용하도록 설정할 수 있습니다. 
+[파트너 센터에서 개발자 계정을 등록](https://developer.microsoft.com/store/register) 하는 것은 Windows 게임을 게시 하기 위한 첫 번째 단계입니다. 개발자 계정을 사용하여 게임의 이름을 예약하고, 무료 또는 유료 게임을 모든 Windows 장치용 Microsoft Store에 제출할 수 있습니다. 개발자 계정을 사용하여 게임 및 게임 내 제품을 관리하고, 자세하게 분석하며, 전 세계 플레이어를 위해 멋진 환경을 만드는 서비스를 사용하도록 설정할 수 있습니다. 
 
-또한 Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. 개발자 센터 계정에 등록하기 전에 적합한 프로그램이 있는지 먼저 살펴볼 것을 권장합니다. 자세한 내용은 [개발자 프로그램](#developer-programs)을 참조하세요.
+또한 Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. 파트너 센터 계정에 등록 하기 전에 적합 한 경우 보는 것이 좋습니다. 자세한 내용은 [개발자 프로그램](#developer-programs)을 참조하세요.
 
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>개발자 계정 등록</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/bg124287">등록 준비</a></td>
-    </tr> 
-</table>
 
 ### <a name="developer-programs"></a>개발자 프로그램
 
-Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. Xbox One 게임을 개발하고 게임에 Xbox Live 기능을 통합하시려면 개발자 프로그램에 참여하는 방안을 고려해 보세요. 또한 Microsoft Store에 게임을 게시하려면 Windows 개발자 센터에서 개발자 계정을 만들어야 합니다.
+Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. Xbox One 게임을 개발하고 게임에 Xbox Live 기능을 통합하시려면 개발자 프로그램에 참여하는 방안을 고려해 보세요. Microsoft Store에 게임을 게시 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 개발자 계정을 생성 해야 합니다.
 
 #### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
 
@@ -146,7 +136,7 @@ Xbox Live 크리에이터스 프로그램을 통해 누구든지 Xbox Live를 �
 
 #### <a name="idxbox"></a>ID@Xbox
 
-ID@Xbox 프로그램을 사용하면 정규 게임 개발자가 Windows 및 Xbox One에 게임을 직접 게시할 수 있습니다. Xbox One용 개발 또는 Windows10 게임에 게이머 점수, 도전 과제 및 순위표와 같은 Xbox Live 기능을 추가하려는 경우 ID@Xbox에 등록합니다. ID@Xbox 개발자로 등록하여 창의력을 발휘하고 성공 가능성을 극대화하는 데 필요한 도구와 지원을 받으시기 바랍니다. Windows 개발자 센터에서 개발자 계정을 등록하기 전에 ID@Xbox에 지원하세요.
+ID@Xbox 프로그램을 사용하면 정규 게임 개발자가 Windows 및 Xbox One에 게임을 직접 게시할 수 있습니다. Xbox One용 개발 또는 Windows10 게임에 게이머 점수, 도전 과제 및 순위표와 같은 Xbox Live 기능을 추가하려는 경우 ID@Xbox에 등록합니다. ID@Xbox 개발자로 등록하여 창의력을 발휘하고 성공 가능성을 극대화하는 데 필요한 도구와 지원을 받으시기 바랍니다. 에 적용 하는 것이 좋습니다 ID@Xbox 파트너 센터에서 개발자 계정에 등록 하기 전에 먼저 합니다.
 
 <table>
     <colgroup>
@@ -1368,9 +1358,9 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
 </table>
  
 
-### <a name="enable-in-app-product-iap-purchases"></a>IAP(앱에서 바로 구매 제품) 구매 사용
+### <a name="enable-in-app-product-add-on-purchases"></a>(추가) 앱에서 바로 제품 구매 사용
 
-IAP(앱에서 바로 구매 제품)는 플레이어가 게임 내에서 구입할 수 있는 보충 항목입니다. IAP는 새 추가 기능, 게임 수준, 항목 또는 플레이어가 즐길 수 있는 다른 모든 사항이 될 수 있습니다. IAP를 적절하게 사용하면 게임 환경을 개선하는 한편 수익을 얻을 수 있습니다. Windows 개발자 센터 대시보드를 통해 게임의 IAP를 정의 및 게시하고 게임 코드에서 앱에서 바로 구매를 사용하도록 합니다.
+추가 기능 (앱에서 바로 제품)는 플레이어가 게임에서 구입할 수 있는 보충 항목입니다. 추가 기능에는 게임 수준, 항목 또는 플레이어가 즐길 수 있는 다른 모든 사항이 될 수 있습니다. 추가 기능 적절 하 게 사용, 게임 환경을 개선 하는 동안 수익을 제공할 수 있습니다. 파트너 센터를 통해 게임의 추가 기능을 게시 및 게임 코드에서 앱에서 바로 구매를 정의 합니다.
 
 <table>
     <colgroup>
@@ -1378,20 +1368,20 @@ IAP(앱에서 바로 구매 제품)는 플레이어가 게임 내에서 구입�
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>앱에서 바로 구매 지속형 제품</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219684">앱에서 바로 구매 제품 구매 사용</a></td>
+        <td>지속형 추가 기능</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219684">앱에서 바로 구매 제품 사용</a></td>
     </tr>
     <tr>
-        <td>앱에서 바로 구매 소모성 제품</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219683">앱에서 바로 구매 소모성 제품 사용</a></td>
+        <td>소모 성 추가 기능</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219683">앱에서 바로 소모성 제품 구매 사용</a></td>
     </tr>
     <tr>
-        <td>앱에서 바로 구매 제품 세부 정보 및 제출</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">IAP 제출</a></td>
+        <td>추가 기능 세부 정보 및 제출</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">추가 기능 제출</a></td>
     </tr>
     <tr>
-        <td>게임에 대한 IAP 판매 및 인구 통계 모니터링</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">IAP 구입 보고서</a></td>
+        <td>추가 기능 판매 및 게임에 대 한 인구 통계 모니터링</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">추가 기능 구입 보고서</a></td>
     </tr>
 </table>
  
@@ -1548,7 +1538,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
 
 ### <a name="publishing"></a>게시
 
-게임 패키지를 게시하고 관리하는 데 새 통합 Windows 개발자 센터 대시보드를 사용하게 됩니다.
+게시 하 고 게임 패키지를 관리 하는 [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 합니다.
 
 <table>
     <colgroup>
@@ -1556,15 +1546,15 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Windows 개발자 센터 앱 게시</td>
+        <td>파트너 센터 앱 게시</td>
         <td><a href="https://dev.windows.com/publish">Windows 앱 게시</a></td>
     </tr>
     <tr>
-        <td>Windows 개발자 센터 고급 게시(GDN)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Windows 개발자 센터 대시보드 고급 게시 가이드</a></td>
+        <td>파트너 센터 고급 게시 (GDN)</td>
+        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">파트너 센터 고급 게시 가이드</a></td>
     </tr>
     <tr>
-        <td>AAD(Azure Active Directory)를 사용하여 개발자 센터 계정에 사용자 추가</td>
+        <td>Azure Active Directory (AAD)를 사용 하 여 파트너 센터 계정에 사용자 추가</td>
         <td><a href="https://docs.microsoft.com/windows/uwp/publish/manage-account-users">계정 사용자 관리</a></td>
     </tr>   
     <tr>
@@ -1590,7 +1580,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </tr>
     <tr>
         <td>DLC 게임 콘텐츠 같은 선택적 패키지 만들기</td>
-        <td><a href="../packaging/optional-packages.md">선택적 패키지 및 관련 집합 제작</a></td>
+        <td><a href="../packaging/optional-packages.md">선택형 패키지 및 관련 집합 제작</a></td>
     </tr>
     <tr>
         <td>UWP 게임 패키징</td>
@@ -1664,7 +1654,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
 
 개발을 완료하고 게임을 제공한 후에도 "게임 오버"가 아닙니다. 한 버전의 개발은 완료된 것일 수 있지만 마켓플레이스에서 게임의 여정은 시작에 불과합니다. 사용 및 오류 보고를 모니터링하고, 사용자 피드백에 응답하며, 게임에 대한 업데이트를 게시하길 원할 것입니다.
 
-### <a name="windows-dev-center-analytics-and-promotion"></a>Windows 개발자 센터 분석 및 홍보
+### <a name="partner-center-analytics-and-promotion"></a>파트너 센터 분석 및 홍보
 
 <table>
     <colgroup>
@@ -1673,10 +1663,10 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>개발자 센터 앱</td>
-        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">게시된 앱의 성능을 확인하는 개발자 센터 Windows10 앱</a></td>
+        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">앱이 게시 된 앱의 성능을 확인 하도록</a></td>
     </tr>  
     <tr>
-        <td>Windows 개발자 센터 분석</td>
+        <td>파트너 센터 분석</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">앱 성능 분석</a></td>
     </tr>
     <tr>

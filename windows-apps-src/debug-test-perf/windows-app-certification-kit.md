@@ -9,17 +9,17 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: f228cb4783c33bc0ea2acecba79893939cadd91e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025717"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196708"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
 
 
-앱을 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 또는 [Microsoft Store에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비를 할 해야 유효성을 검사 하 고 테스트 로컬로 먼저 합니다. 이 항목에서는 설치 하 고 안전 하 고 효율적으로 앱은 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 실행 하는 방법을 보여 줍니다.
+앱을 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 받기, [Microsoft Store에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비의 유효성을 검사 해야 하며 테스트 로컬로 먼저. 이 항목에서는 설치 하 고 안전 하 고 효율적으로 앱은 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 실행 하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -88,7 +88,7 @@ ms.locfileid: "6025717"
 
 Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 성능을 기반으로 합니다.
 
-테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 앱의 성능에는 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)을 충족 하는 경우를 확인 하려면 Intel Atom 프로세서 기반 컴퓨터 화면 해상도 1366x768 (또는 더 높은) 및 회전을 사용 하 여 하드 절전 컴퓨터에서 앱을 테스트 하는 권장 드라이브 (반도체 하드 드라이브) 반대입니다.
+테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 앱의 성능에는 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944)을 충족 하는 경우를 확인 하려면 Intel Atom 프로세서 기반 컴퓨터 화면 해상도 1366x768 (또는 더 높은) 및 회전을 사용 하 여 하드 등의 절전 컴퓨터에서 앱을 테스트 하는 권장 드라이브 (반도체 하드 드라이브) 반대입니다.
 
 저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 버전의 앱 최신 성능 요구 사항을 준수 하는지 확인 하려면 Windows 앱 인증 키트를 사용 하 여 앱 테스트 및 최신 [Microsoft Store 정책](https://msdn.microsoft.com/library/windows/apps/Dn764944) 참조 하세요.
 

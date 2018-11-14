@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 9f1e41c3e09d9a711ce9174a5a658a55c7c44abd
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044533"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6158545"
 ---
 # <a name="handle-file-activation"></a>파일 활성화 처리
 
@@ -33,7 +33,7 @@ ms.locfileid: "6044533"
 
 다음 단계에서는 사용자 지정 파일 형식인 .alsdk를 등록하는 방법 및 사용자가 .alsdk 파일을 시작할 때 앱을 활성화하는 방법을 보여 줍니다.
 
-> **참고**UWP 앱에서 특정 Uri 및 파일 확장명은 예약 되어 사용 하기 위해 기본 제공 앱과 운영 체제에서. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 자세한 내용은 [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md)을 참조하세요.
+> **참고**UWP 앱에서 특정 Uri 및 파일 확장명은 예약 되어 사용에 대 한 기본 제공 앱과 운영 체제에서. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 자세한 내용은 [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md)을 참조하세요.
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>1단계: 패키지 매니페스트에서 확장점 지정
 
@@ -125,9 +125,9 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 > [!NOTE]
 > 파일 계약을 통해 시작 하는 경우 다시 돌아가도록 해야 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작 된 화면에 있습니다.
 
-새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML **프레임** 을 만들어야 하는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대 한 탐색 백 스택에 앱 일시 중단 될 때 현재 창에 포함 될 수 있는 이전 콘텐츠가 포함 되지 않습니다. 시작 및 파일 계약에 단일 XAML **프레임** 을 사용 하려는 경우 새 페이지를 탐색 하기 전에 **프레임**의 탐색 저널에서 페이지 취소 해야 합니다.
+새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML **프레임** 을 만드는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대 한 탐색 백 스택에 앱 일시 중단 될 때 현재 창에 포함 될 수 있는 이전 콘텐츠가 포함 되지 않습니다. 시작 및 파일 계약에 단일 XAML **프레임** 을 사용 하려는 경우 새 페이지를 탐색 하기 전에 **프레임**의 탐색 저널에서 페이지 취소 해야 합니다.
 
-파일 활성화를 통해 앱 시작 되 면 사용자는 앱의 최상위 페이지로 다시 이동할 수 있도록 UI를 포함 하는 것이 좋습니다.
+파일 활성화를 통해 앱을 실행 하는 경우 사용자는 앱의 최상위 페이지로 다시 이동할 수 있도록 UI를 포함 하는 것이 좋습니다.
 
 ## <a name="remarks"></a>설명
 

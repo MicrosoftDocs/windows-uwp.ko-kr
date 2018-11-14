@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b1711c29486b0a8d50c2dbed4c0240886febc084
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044312"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6259591"
 ---
 # <a name="guidelines-for-panning"></a>이동에 대한 지침
 
@@ -78,7 +78,7 @@ ms.locfileid: "6044312"
 
 ## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
-터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. 필요한 경우가 아니면 구분은 API의 일부 장치별 WindowsUI 하 여, 조작을 모두 이동으로 지칭 했습니다.
+터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. 구분 되거나 아니면 API에서 필요한 일부 디바이스 별 WindowsUI, 조작을 모두 이동으로 지칭 했습니다.
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update - 동작 변경 사항</strong>

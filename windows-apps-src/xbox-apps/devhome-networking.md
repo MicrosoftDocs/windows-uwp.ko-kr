@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 5968a2dad76343a1aa589caadf62ec3cd823aed0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025110"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252979"
 ---
 # <a name="networking-page-dev-home"></a>네트워킹 페이지 (개발자 홈)
    
@@ -22,7 +22,7 @@ ms.locfileid: "6025110"
 개발자 홈의 **네트워킹** 페이지 문제 해결을 위해 다양 한 네트워킹 조건을 시뮬레이트합니다. 또한 네트워크 패킷 추적을 시작할 수 있습니다.   
  ![개발자 홈의 네트워킹 페이지](images/devhome_networking.png)   
   
-**네트워킹** 페이지에는 다음 창이:   
+**네트워킹** 페이지는 다음과 같은 창을 포함 되어 있습니다.   
  
    *  [네트워크 시뮬레이션](#ID4EEB)  
    *  [XBTrace (netcap)](#ID4EOB)  
@@ -35,7 +35,7 @@ ms.locfileid: "6025110"
 ## <a name="network-simulation"></a>네트워크 시뮬레이션  
    
   
-**네트워크 시뮬레이션** 창이 다양 한 대역폭 프로필에 대해 테스트 하는 네트워크 시뮬레이션을 실행 합니다.   
+**네트워크 시뮬레이션** 창 다양 한 대역폭 프로필에 대해 테스트 하는 네트워크 시뮬레이션을 실행 합니다.   
   
 <a id="ID4EOB"></a>
 

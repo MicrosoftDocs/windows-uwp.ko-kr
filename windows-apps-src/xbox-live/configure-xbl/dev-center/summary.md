@@ -8,16 +8,16 @@ ms.date: 10/19/2018
 ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox live, Xbox, 게임, uwp, windows 10, Xbox one xbox live 요약, 요약 하면, 게시, xbox live 기록, 명령 모음, 기록 탭 요약 표
-ms.openlocfilehash: c2f8f661b55d105e1f1410bafd09903f55882aaa
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: ef146e77a12c3c658e4e55cf468b3dae433e6f9b
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6038397"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209804"
 ---
 # <a name="the-xbox-live-configuration-summary-page"></a>Xbox Live 구성 요약 페이지
 
-타이틀에 Xbox Live를 구성 하는 [파트너 센터](https://developer.microsoft.com/dashboard) 를 사용할 수 있습니다. 파트너 센터를 사용 하 여 각 타이틀의 샌드박스 서비스 구성을 관리할 수 있습니다.
+타이틀에 Xbox Live를 구성 하려면 [파트너 센터](https://developer.microsoft.com/dashboard) 를 사용할 수 있습니다. 파트너 센터를 사용 하 여 각 타이틀의 샌드박스 서비스 구성을 관리할 수 있습니다.
 Xbox Live 타이틀 측면을 구성, 제목에 대 한 Xbox Live 섹션으로 이동 하기 위해 **서비스**아래에 > **Xbox Live**합니다. 이 페이지에서 선택한 샌드박스에서 현재 구성의 스냅숏을 찾을 수 있습니다. 어떻게 구성 되어도 해당 샌드박스에 게시의 구체적인된 분류를 찾을 수 있습니다.
 
 ## <a name="sandbox-selector"></a>샌드박스 선택기

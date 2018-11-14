@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023691"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189400"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
  
@@ -53,7 +53,7 @@ WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱�
 
 ### <a name="important-notes"></a>중요 정보
 
--   앱의 알림 채널 URI가 항상 동일하게 유지된다고 보장하지 않습니다. 앱이 실행될 때마다 새 채널을 요청하고 URI 변경 시 해당 서비스를 업데이트하는 것이 좋습니다. 개발자는 채널 URI를 수정하지 않아야 하며 블랙 박스 문자열로 간주해야 합니다. 이때 채널 URI는 30일이 경과하면 만료됩니다. Windows10 앱이 해당 채널을 백그라운드에서에서 정기적으로 갱신 하는 경우의 다운로드 [푸시 및 정기 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=231476) Windows8.1 및 해당 소스 코드 및/또는 보여 패턴을 다시 사용할 수 있습니다.
+-   앱의 알림 채널 URI가 항상 동일하게 유지된다고 보장하지 않습니다. 앱이 실행될 때마다 새 채널을 요청하고 URI 변경 시 해당 서비스를 업데이트하는 것이 좋습니다. 개발자는 채널 URI를 수정하지 않아야 하며 블랙 박스 문자열로 간주해야 합니다. 이때 채널 URI는 30일이 경과하면 만료됩니다. Windows10 앱이 해당 채널을 백그라운드에서에서 정기적으로 갱신 하는 경우 다운로드 [푸시 및 정기 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=231476) Windows8.1에 대 한 및 해당 소스 코드 및/또는 보여 패턴을 다시 사용할 수 있습니다.
 -   클라우드 서비스와 클라이언트 앱 간의 인터페이스는 개발자가 구현합니다. 앱은 고유 서비스를 사용하여 인증 프로세스를 거치고 HTTPS 같은 보안 프로토콜을 통해 데이터를 전송하는 것이 좋습니다.
 -   클라우드 서비스는 항상 채널 URI가 "notify.windows.com" 도메인을 사용하는지 확인합니다. 다른 도메인에서는 이 서비스가 알림을 채널로 푸시하지 않아야 합니다. 앱에 대한 콜백이 손상되는 경우 악의적인 공격자가 채널 URI를 제출하여 WNS를 스푸핑할 수 있습니다. 도메인을 검사하지 않으면 클라우드 서비스에서 자신도 모르게 이러한 공격자에게 정보를 공개할 수도 있습니다.
 -   클라우드 서비스에서 만료된 채널에 알림을 전달하려고 시도하면 WNS에서 [응답 코드 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes)을 반환합니다. 이 코드에 대처하려면 서비스에서 해당 URI에 더 이상 알림을 보내려고 시도하지 않아야 합니다.
@@ -162,12 +162,12 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 ## <a name="push-notifications-and-battery-saver"></a>푸시 알림 및 배터리 절약 모드
 
 
-배터리 절약 모드는 디바이스의 백그라운드 활동을 제한하여 배터리 사용 시간을 연장합니다. Windows10 지정된 된 임계값 아래로 떨어질 때 자동으로 켜 지도록 배터리 절약 모드를 설정할 수 있습니다. 배터리 절약 모드가 작동되면 에너지를 절약하기 위해 푸시 알림 받기가 사용되지 않습니다. 그러나 이 경우에는 몇 가지 예외가 있습니다. ( **설정** 앱에 있음) 다음 Windows10 배터리 절약 모드 설정 하면 배터리 절약 모드가 켜져 있어도 푸시 알림을 받도록 앱을 허용 합니다.
+배터리 절약 모드는 디바이스의 백그라운드 활동을 제한하여 배터리 사용 시간을 연장합니다. Windows10를 자동으로 지정된 된 임계값 아래로 떨어질 때 배터리 절약 모드를 설정할 수 있습니다. 배터리 절약 모드가 작동되면 에너지를 절약하기 위해 푸시 알림 받기가 사용되지 않습니다. 그러나 이 경우에는 몇 가지 예외가 있습니다. ( **설정** 앱에 있음) 다음 Windows10 배터리 절약 모드 설정 하면 배터리 절약 모드가 켜져 있어도 푸시 알림을 받도록 앱을 허용 합니다.
 
 -   **배터리 절약 모드에 있는 동안 앱에서 푸시 알림 허용**: 이 설정을 사용하면 배터리 절약 모드가 켜져 있는 동안 모든 앱에서 푸시 알림을 받을 수 있습니다. 이 설정은 Windows10 데스크톱 버전 (Home, Pro, Enterprise 및 Education)에 적용 되는 참고 합니다.
 -   **항상 허용**: 이 설정을 사용하면 배터리 절약 모드가 켜져 있는 동안 특정 앱이 백그라운드에서 실행할 수 있습니다(푸시 알림 받기 포함). 이 목록은 사용자가 수동으로 유지합니다.
 
-이러한 두 설정의 상태를 확인할 수 있는 방법은 없지만 배터리 절약 모드의 상태는 확인할 수 있습니다. Windows10에서 배터리 절약 모드 상태를 확인 하려면 [**EnergySaverStatus**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) 속성을 사용 합니다. 앱에서 [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) 이벤트를 사용하여 배터리 절약 모드의 변경에도 수신 대기할 수 있습니다.
+이러한 두 설정의 상태를 확인할 수 있는 방법은 없지만 배터리 절약 모드의 상태는 확인할 수 있습니다. Windows10에서 배터리 절약 모드 상태를 확인 [**EnergySaverStatus**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) 속성을 사용 합니다. 앱에서 [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) 이벤트를 사용하여 배터리 절약 모드의 변경에도 수신 대기할 수 있습니다.
 
 앱에서 푸시 알림을 상당한 많이 받는 경우 사용자에게 배터리 절약 모드가 켜져 있는 동안 알림을 받을 수 없음을 알려 **배터리 절약 모드 설정**을 쉽게 조정할 수 있게 합니다. Windows10에서 배터리 절약 모드 설정 URI 체계를 사용 하 여 `ms-settings:batterysaver-settings`, 설정 앱에 대 한 편리한 링크를 제공할 수 있습니다.
 

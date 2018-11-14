@@ -2,25 +2,25 @@
 author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
-description: Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 Windows10 디바이스로 Windows10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다.
+description: Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 모든 Windows10 장치 Windows10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다.
 ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 13468ce3b74992c026d94223b5e67aea99d79991
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044083"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152073"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>WinAppDeployCmd.exe 도구를 사용하여 앱 설치
 
 
-Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 Windows10 디바이스로 Windows10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다. 이 도구를 사용 하 여 Windows10 디바이스가 해당 앱에 대 한 Microsoft Visual Studio 또는 솔루션 없이 동일한 서브넷에서 사용 가능 하거나 USB로 연결 되 면 앱 패키지를 배포할 수 있습니다. 또한 원격 PC 또는 Xbox One에 먼저 패키징하지 않고 앱을 배포할 수도 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다.
+Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 모든 Windows10 장치 Windows10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다. 이 도구를 사용 하 여 Windows10 디바이스가 해당 앱에 대 한 Microsoft Visual Studio 또는 솔루션 없이 동일한 서브넷에서 사용 가능 하거나 USB로 연결 되 면 앱 패키지를 배포할 수 있습니다. 또한 원격 PC 또는 Xbox One에 먼저 패키징하지 않고 앱을 배포할 수도 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다.
 
-명령 프롬프트 또는 스크립트 파일에서 WinAppDeployCmd 도구를 실행 하려면 설치 Windows10 SDK 하기만 하면 됩니다. WinAppDeployCmd.exe로 앱을 설치 하는 경우이를 사용 하 여.appx/.msix 파일 또는 AppxManifest (느슨한 파일)에 대 한 앱을 Windows10 장치에 테스트용으로 로드 합니다. 이 명령은 앱에 필요한 인증서를 설치하지 않습니다. Windows10 장치 앱을 실행 하려면 개발자 모드에 있을 하거나 이미 있는 해당 인증서를 설치 해야 합니다.
+명령 프롬프트 또는 스크립트 파일에서 WinAppDeployCmd 도구를 실행 하려면 설치 Windows10 SDK 하기만 하면 됩니다. WinAppDeployCmd.exe로 앱을 설치 하는 경우이를 사용 하 여.appx/.msix 파일 또는 AppxManifest (느슨한 파일)에 대 한 Windows10 장치에 앱을 테스트용으로 로드 합니다. 이 명령은 앱에 필요한 인증서를 설치하지 않습니다. Windows10 장치 앱을 실행 하려면 개발자 모드에 있을 하거나 이미 있는 해당 인증서를 설치 해야 합니다.
 
 모바일 디바이스에 배포하려면 먼저 패키지를 만들어야 합니다. 자세한 내용은 [여기](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)를 참조하세요.
 
@@ -28,7 +28,7 @@ Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 Windows10 디바이�
 > [!NOTE]
 > 버전 15063 이상의 SDK에서 SDK는 특정 버전의 폴더에 나란히 설치되어 있습니다.  14393 및 이하를 포함한 SDK는 부모 폴더에 직접 기록됩니다.
 
-먼저, Windows10 디바이스가 동일한 서브넷에 연결 하거나 USB 연결을 사용 하 여 Windows10 컴퓨터에 직접 연결 합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
+먼저, 동일한 서브넷에 Windows10 장치 연결 하거나 USB 연결을 사용 하 여 Windows10 컴퓨터에 직접 연결 합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
 
 ## <a name="winappdeploycmd-syntax-and-options"></a>WinAppDeployCmd 구문 및 옵션
 

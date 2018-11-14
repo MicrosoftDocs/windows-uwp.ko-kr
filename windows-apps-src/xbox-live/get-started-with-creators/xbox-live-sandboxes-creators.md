@@ -8,16 +8,16 @@ ms.date: 10/30/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: bb11578fcc641c34b4337d90ee37d4084b16da55
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: d82447801d499c6339775882b9363883430726fa
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6136436"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183077"
 ---
 # <a name="xbox-live-sandboxes-introduction"></a>Xbox Live 샌드박스 소개
 
-[Xbox Live 서비스 구성](xbox-live-service-configuration-creators.md) 문서의 [Windows 개발자 센터](http://dev.windows.com)에 제목에 대 한 정보를 구성 해야 설명 된 것. 이 정보는 통계, 순위표, 지역화, 등과 같은 작업이 포함 됩니다. Xbox Live 서비스 구성 변경 내용을 게시 개발자 센터에서 개발 샌드박스에 변경 내용을 Xbox Live의 나머지 부분에서 획득 및 제목에 액세스할 수 해야 합니다.
+[Xbox Live 서비스 구성](xbox-live-service-configuration-creators.md) 문서의 [파트너 센터](https://partner.microsoft.com/dashboard)에서 타이틀에 대 한 정보를 구성 해야 설명 된 것. 이 정보는 통계, 순위표, 지역화, 등과 같은 작업이 포함 됩니다. Xbox Live 서비스 구성 변경 내용을 게시 파트너 센터에서 개발 샌드박스에 변경 내용을 Xbox Live의 나머지 부분에서 획득 및 제목에 액세스할 수 해야 합니다.
 
 개발 샌드박스를 사용 하면 격리 된 환경에서 타이틀 변경 내용에 작업할 수 있습니다. 샌드박스 여러 가지 이점을 제공합니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "6136436"
 
 ## <a name="finding-out-about-your-sandbox"></a>샌드박스에 대해 알아보기
 
-타이틀 만들기 샌드박스를 만들어집니다. **Windows 개발자 센터** 에서 제품을 열고 탐색 **서비스**하 여 샌드박스 ID를 찾을 수 > **Xbox Live**합니다. 페이지 맨 위에 있는 **샌드박스 ID** 를 나열 됩니다.
+타이틀 만들기 샌드박스를 만들어집니다. **파트너 센터** 에서 제품을 열고 탐색 **서비스**하 여 샌드박스 ID를 찾을 수 > **Xbox Live**합니다. 페이지 맨 위에 있는 **샌드박스 ID** 를 나열 됩니다.
 
 ![](../images/getting_started/devcenter_sandbox_id.png)
 

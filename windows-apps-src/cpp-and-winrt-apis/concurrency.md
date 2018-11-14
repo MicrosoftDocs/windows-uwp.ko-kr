@@ -7,12 +7,12 @@ ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: d943a43629860f666c9ec9eb7f0b3bb406b1b1b5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 18eddbc9356f126e887ae2731ea87381352ea061
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040370"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208945"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 
@@ -282,7 +282,7 @@ IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
 이 시나리오는 이전 시나리오에 확장됩니다. 스레드 풀에 일부 작업을 오프로드했으면 UI(사용자 인터페이스)에 진행 상태를 표시해야 합니다.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock const& textblock)
+IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -294,7 +294,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 **TextBlock**을 이를 만든 스레드, 즉 UI 스레드에서 업데이트해야 하기 때문에 위의 코드는 [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/hresult-wrong-thread) 예외를 throw합니다. 한 가지 방법은 원래 코루틴이 호출된 스레드 컨텍스트를 캡처하는 것입니다. 이렇게 하려면 [**winrt:: apartment_context**](/uwp/cpp-ref-for-winrt/apartment-context) 개체를 인스턴스화하고, 백그라운드 작업을 수행 했다가 `co_await` **apartment_context** 호출 컨텍스트에 다시 전환할 수 있습니다.
 
 ```cppwinrt
-IAsyncAction DoWorkAsync(TextBlock const& textblock)
+IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     winrt::apartment_context ui_thread; // Capture calling context.
 
@@ -313,7 +313,7 @@ IAsyncAction DoWorkAsync(TextBlock const& textblock)
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
-IAsyncAction DoWorkAsync(TextBlock const& textblock)
+IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     co_await winrt::resume_background();
     // Do compute-bound work here.
@@ -361,7 +361,7 @@ IAsyncOperation<int> return_123_after_5s()
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
-IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /* args */)
 {
     // We begin in the UI context.
 
@@ -387,7 +387,7 @@ IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEven
 
 ```cppwinrt
 #include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
-IAsyncAction MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /* args */)
 {
     // We begin in the UI context.
 
@@ -480,7 +480,7 @@ struct MainPage : MainPageT<MainPage>
         InitializeComponent();
     }
 
-    IAsyncAction OnWork(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    IAsyncAction OnWork(IInspectable /* sender */, RoutedEventArgs /* args */)
     {
         workButton().Content(winrt::box_value(L"Working..."));
 

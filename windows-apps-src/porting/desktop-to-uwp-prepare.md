@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a0b3a9f5ce7c03b8add9cc459bade684b9daf21
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: ba89ab06062f5ba40bb96f4d558bd89a16e591d1
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034176"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205188"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>데스크톱 응용 프로그램 패키징 준비
 
 이 문서에는 데스크톱 앱을 패키지로 만들기 전에 알아야 할 사항이 나열되어 있습니다. 응용 프로그램 패키징 프로세스를 준비 하는 데 많은 작업을 수행 해야 할 수 있지만 아래 항목은 응용 프로그램에 적용 되는 경우 패키징 전에 문제를 해결 해야 합니다. Microsoft Store는 라이선스 및 자동 업데이트를 처리하므로 코드베이스에서 이러한 작업들과 관련된 기능을 자유롭게 제거할 수 있습니다.
 
 >[!IMPORTANT]
->데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 수 있습니다 (데스크톱 브리지도 알려진 Windows 10 버전 1607에에서 도입 그렇지 하며 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트에만 사용할 수 있습니다 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
+>데스크톱 응용 프로그램 (데스크톱 브리지 라고도 함)에 대 한 Windows 앱 패키지를 생성 하는 기능은 Windows 10 버전 1607에에서 도입 되었으며 Windows 10 1 주년 업데이트 (10.0;를 대상으로 하는 프로젝트 에서만 사용할 수 있습니다. 빌드 14393) 또는 Visual Studio의 최신 릴리스 합니다.
 
 + __응용 프로그램 버전의.NET 4.6.2 이전 필요__합니다. 응용 프로그램.NET 4.6.2에서 실행 되는지 확인 해야 합니다. 4.6.2 이전 버전을 요구하거나 재배포할 수 없습니다. Windows 10 1주년 업데이트에서 제공되는 .NET 버전입니다. 이 버전에서 작동 하는 응용 프로그램을 확인 하면 응용 프로그램이 Windows 10의 향후 업데이트와 호환 되도록 계속 됩니다.  응용 프로그램이.NET Framework 4.0 이상을 대상으로 하는 경우.NET 4.6.2에서 실행 해야 하는 하지만 여전히 테스트 해야 합니다.
 

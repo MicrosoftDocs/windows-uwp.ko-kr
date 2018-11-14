@@ -8,12 +8,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 25dfb486eca6135526dc6c0081e77b5bc9dbbbeb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: b8136aa4d07204d2c97fec393439a17d3660f934
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6041882"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6199961"
 ---
 # <a name="xbox-live-service-configuration-for-the-creators-program"></a>크리에이터스 프로그램에 대한 Xbox Live 서비스 구성
 
@@ -25,13 +25,13 @@ ms.locfileid: "6041882"
 
 하지만 이런 상황은 대 한 Xbox Live에 순위표에 대 한 알 수 있도록 몇 가지 일회성 구성을 수행 해야 합니다. 예를 들어를 오름차순 또는 내림차순 값, 값 정렬할 수는 여부 및 데이터의 어떤 부분은 것 해야 수 정렬 합니다.
 
-Xbox Live 크리에이터 스 프로그램에 대 한 [개발자 센터](http://dev.windows.com) 에서 발생 하는이 구성 및 설정 하는 방법을 알아보려면 [하기 시작 된 Xbox Live](get-started-with-xbox-live-creators.md) 를 읽을 수 있습니다.
+Xbox Live 크리에이터 스 프로그램에 대 한 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 발생 하는이 구성 및 설정 하는 방법을 알아보려면 [하기 시작 된 Xbox Live](get-started-with-xbox-live-creators.md) 를 읽을 수 있습니다.
 
 ## <a name="get-your-ids"></a>사용자 id
 
 Xbox Live 서비스를 사용 하려면 제목 및 개발 환경을 구성 하는 몇 가지 Id를 가져오는 해야 합니다. Xbox Live 서비스 구성을 업데이트 하 여이 얻을 수 있습니다.
 
-개발자 센터에서 타이틀을 현재 되어 있지 않으면 [만들기 및 테스트 새 크리에이터 스 타이틀](create-and-test-a-new-creators-title.md) 지침에 대 한 참조입니다.
+파트너 센터에서 타이틀을 현재 되어 있지 않으면 [만들기 및 테스트 새 크리에이터 스 타이틀](create-and-test-a-new-creators-title.md) 지침에 대 한 참조입니다.
 
 ### <a name="critical-ids"></a>중요 한 Id
 

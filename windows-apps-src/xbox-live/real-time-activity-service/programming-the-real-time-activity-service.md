@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 실시간으로 활동
 ms.localizationpriority: medium
-ms.openlocfilehash: d34b1fd2a40508d100e39b784d24b5604237d499
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: bfe40908297922568bc9c63a5b3bf0e6254bf901
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6048245"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6251143"
 ---
 # <a name="programming-the-real-time-activity-service-using-c-apis"></a>C + + Api를 사용 하 여 실시간 활동 서비스 프로그래밍
 
@@ -50,7 +50,7 @@ void Example_RealTimeActivity_ConnectAsync()
 
 ### <a name="creating-a-statistic"></a>통계 만들기
 
-XDK 개발자 또는 작업 인 경우 XDP에 통계를 만들 크로스 플레이 제목에 있습니다.  Windows 10에서 실행 되는 순수 UWP 하는 경우 개발자 센터에서 통계를 만들어야 합니다.
+XDK 개발자 또는 작업 인 경우 XDP에 통계를 만들 크로스 플레이 제목에 있습니다.  Windows 10에서 실행 되는 순수 UWP 하는 경우 파트너 센터에서 통계를 만듭니다.
 
 #### <a name="xdk-developers"></a>XDK 개발자
 
@@ -58,10 +58,10 @@ XDP에는 상태를 만드는 방법에 대 한 자세한 내용은 [XDP 설명�
 
 #### <a name="uwp-developers"></a>UWP 개발자
 
-크로스 플레이 제목 되지 않은 Windows 10의 UWP 개발 하는 경우에 [Windows 개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)에서 사용자 통계를 정의 합니다. 개발자 센터에서 통계를 구성 하는 방법은 [개발자 센터 통계 구성 문서](../leaderboards-and-stats-2017/player-stats-configure-2017.md) 를 읽습니다.
+크로스 플레이 제목 되지 않은 Windows 10의 UWP 개발 하는 경우에 [파트너 센터](https://partner.microsoft.com/dashboard)에서 사용자 통계를 정의 합니다. 파트너 센터에서 통계를 구성 하는 방법은 [파트너 센터 통계 구성 문서](../leaderboards-and-stats-2017/player-stats-configure-2017.md) 를 읽습니다.
 
 > [!NOTE]
-> 통계 2013 개발자는 자신의 댐을 [개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)의 [통계 2013 구성](https://developer.microsoft.com/en-us/games/xbox/docs/xdk/windows-configure-stats-2013) 관한 정보에 대 한 문의 해야 합니다.
+> 통계 2013 개발자는 자신의 댐을 [파트너 센터](https://partner.microsoft.com/dashboard)에서 [통계 2013 구성](https://developer.microsoft.com/en-us/games/xbox/docs/xdk/windows-configure-stats-2013) 관한 정보에 대 한 문의 해야 합니다.
 
 ### <a name="disconnecting-from-the-real-time-activity-service"></a>실시간 활동 서비스에서 연결 끊기
 
@@ -78,7 +78,7 @@ void Example_RealTimeActivity_Disconnect()
 
 ## <a name="subscribing-to-a-statistic-from-the-real-time-activity"></a>실시간 활동에서 통계에 가입
 
-응용 프로그램 가입 하는 실시간 활동 (RTA)를 Xbox 개발자 포털 (XDP) 또는 Windows 개발자 센터에서 구성 통계 변경 될 때 업데이트를 가져옵니다.
+응용 프로그램 가입 하는 실시간 활동 (RTA)를 Xbox 개발자 포털 (XDP) 또는 파트너 센터에서 구성 통계 변경 될 때 업데이트를 가져옵니다.
 
 ### <a name="subscribing-to-a-statistic-from-the-real-time-activity-service"></a>실시간 활동 서비스에서 통계에 가입
 
@@ -97,7 +97,7 @@ void Example_RealTimeActivity_SubscribeToStatisticChangeAsync()
     // Call to subscribe to an individual statistic.  Once the subscription is complete, the handler will be called with the initial value of the statistic.
     auto statisticResults = xboxLiveContext->user_statistics_service().subscribe_to_statistic_change(
         User::Users->GetAt(0)->XboxUserId->Data(),
-        L"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx",    // Get SCID from "Product Details" page in XDP or the Xbox Live Setup page in Dev Center
+        L"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx",    // Get SCID from "Product Details" page in XDP or the Xbox Live Setup page in Partner Center
          L"YourStat"
         );
 

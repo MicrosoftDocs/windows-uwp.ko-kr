@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 네트워킹, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: cc30a66db3fb01edebf4705ecb2e85ea4dbb94d6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030936"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258369"
 ---
 # <a name="networking-for-games"></a>게임의 네트워킹
 

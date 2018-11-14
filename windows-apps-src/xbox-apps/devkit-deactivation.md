@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 72ff0c79a12e6f9726abda638dfe02aa30ee54e6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 8708e127eb7cb7f1654b2911457074e20c82b665
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047950"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209395"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Xbox One 개발자 모드 비활성화
 
@@ -72,11 +72,11 @@ ms.locfileid: "6047950"
    
     ![다시 설정 및 모두 제거](images/devkit-deactivation-4.png)
 
-## <a name="deactivate-your-console-using-windows-dev-center"></a>Windows 개발자 센터를 사용하여 콘솔 비활성화
+## <a name="deactivate-your-console-using-partner-center"></a>파트너 센터를 사용 하 여 콘솔 비활성화
 
-어떤 이유로든 콘솔에 액세스할 수 없는 경우 Windows 개발자 센터를 사용하여 콘솔에서 개발자 모드를 비활성화할 수도 있습니다.
+어떤 이유로 든 콘솔에 액세스할 수 없는 경우 파트너 센터를 사용 하 여 콘솔에서 개발자 모드를 비활성화할 수도 있습니다.
 
-1. 개발자 센터에서 [Xbox One 본체 관리](https://partner.microsoft.com/xboxdevices) 페이지로 이동합니다. 개발자 센터 계정으로 로그인하라는 메시지가 표시될 수 있습니다.
+1. 파트너 센터에서 [Xbox One 본체 관리](https://partner.microsoft.com/xboxdevices) 페이지로 이동 합니다. 로그인 하 라는 메시지가 표시 될 수 있습니다.
 
 2. 콘솔 목록에서 일련 번호, 콘솔 ID 또는 디바이스 ID와 일치하는 비활성화하려는 콘솔을 찾습니다.  
 

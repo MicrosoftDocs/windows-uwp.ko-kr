@@ -8,18 +8,18 @@ ms.date: 11/28/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ba9339ac9e383c9f4ac8107b79caa947cb09615
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 6e9809a8abea46d8aade53f26a0b8fd63d803021
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6139319"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184333"
 ---
 # <a name="get-started-using-visual-studio-for-uwp-games"></a>Visual Studio를 사용 하 여 UWP 게임
 
 ## <a name="requirements"></a>요구 사항
 
-1. **[개발자 센터 개발자 프로그램](https://developer.microsoft.com/store/register)** 에 등록 합니다.
+1. **[파트너 센터 개발자 프로그램](https://developer.microsoft.com/store/register)** 에 등록 합니다.
 2. **[Windows 10](https://microsoft.com/windows)** 입니다.
 3. **유니버설 Windows 앱 개발 도구**를 사용 하 여 **[visual Studio](https://www.visualstudio.com/)** 지정 합니다. 최소 UWP 앱에 대 한 버전은 Visual Studio 2015 업데이트 3입니다. 개발자 및 보안 업데이트에 대 한 Visual Studio의 최신 버전을 사용 하는 것이 좋습니다. 
 4. ** [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) v10.0.10586.0** 이상.
@@ -27,9 +27,9 @@ ms.locfileid: "6139319"
 > [!IMPORTANT]
 > Windows 10 SDK 버전 10.0.15063.0 (크리에이터 스 업데이트 라고도 함)를 사용 하는 경우 visual Studio 2017이 필요 이상.
 
-## <a name="create-a-new-product-on-microsoft-dev-center"></a>Microsoft 개발자 센터에서 새 제품 만들기
+## <a name="create-a-new-product-in-partner-center"></a>파트너 센터에서 새 제품 만들기
 
-모든 Xbox Live 타이틀에 로그인 및 Xbox Live 서비스 호출이 수 [Microsoft 개발자 센터](https://developer.microsoft.com/store) 에서 만든 제품이 있어야 합니다. 자세한 내용은 [UDC 제목 만들기](create-a-new-title.md) 를 참조 하세요.
+모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출할 수 있게 됩니다 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 만든 제품이 있어야 합니다. 자세한 내용은 [UDC 제목 만들기](create-a-new-title.md) 를 참조 하세요.
 
 ## <a name="configuring-your-development-device"></a>개발 장치 구성
 
@@ -115,7 +115,7 @@ Xbox Live 플랫폼 확장 SDK를 설치한 후 Visual Studio에서에 대 한 �
 
 ### <a name="4-associate-your-visual-studio-project-with-your-uwp-app"></a>4. UWP 앱을 Visual Studio 프로젝트를 연결 합니다.
 
-게임 수에 대 한 로그인, Microsoft 개발자 센터에서 만든 제품 연결 되어야 합니다. 스토어 연결 마법사를 사용 하 여 Visual Studio에서 게임을 연결할 수 있습니다. Visual Studio에서 다음을 수행 합니다.
+게임 수에 대 한 로그인, 파트너 센터에서 만든 제품 연결 되어야 합니다. 스토어 연결 마법사를 사용 하 여 Visual Studio에서 게임을 연결할 수 있습니다. Visual Studio에서 다음을 수행 합니다.
 
 1.  기본 프로젝트 (시작 프로젝트)를 마우스 오른쪽 단추로 클릭, **저장소**를 클릭 > **... 스토어에 앱 연결**
 2.  로그인 요청 하 고 지시에 따라 앱을 만드는 데 **Windows 개발자 계정** 으로 합니다.
@@ -140,7 +140,7 @@ Xbox Live 서비스에 게 서비스 구성 파일을 프로젝트에 추가 해
 3. 파일을 마우스 오른쪽 단추로 클릭 하 고, **속성** 선택 되었는지 확인 합니다.
     1. **빌드 작업** 은 **콘텐츠**를 설정 하 고  
     2. **출력 디렉터리로 복사** **항상 복사로**설정 됩니다.
-5.  타이틀에 적용할 수 있는 값 **TitleId** 및 **PrimaryServiceConfigId** 교체 다음 템플릿 사용 하 여 구성 파일을 편집 합니다. Microsoft 개발자 센터에서 루트 Xbox Live 페이지에서 올바른 값을 가져올 수 있습니다. Microsoft 개발자 센터에서 **서비스 안내**으로 **PrimaryServiceConfigId** 나타납니다.
+5.  타이틀에 적용할 수 있는 값 **TitleId** 및 **PrimaryServiceConfigId** 교체 다음 템플릿 사용 하 여 구성 파일을 편집 합니다. 파트너 센터에서 루트 Xbox Live 페이지에서 올바른 값을 가져올 수 있습니다. 파트너 센터에서 **서비스 안내**으로 **PrimaryServiceConfigId** 나타납니다.
 
 ```json
     {

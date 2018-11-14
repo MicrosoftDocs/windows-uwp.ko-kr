@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e15014e39ed6d980cbe80daa0a129ff83a021b9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024588"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6157734"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대해 Windows 런타임 8.x를 UWP로 포팅
 
@@ -71,7 +71,7 @@ bool isDeviceFamilyNameKnown = qualifiers.TryGetValue("DeviceFamily", out device
 ## <a name="location"></a>위치
 
 
-Windows10에서 해당 앱 패키지 매니페스트에서 위치 기능을 선언 하는 응용 프로그램 실행 되 면 시스템은 최종 사용자의 동의에 묻습니다. 이 앱은 Windows Phone 스토어 앱 또는 Windows10 앱 인지 true입니다. 따라서 앱에서 고유한 사용자 지정 동의 확인 프롬프트가 표시되거나 켜기-끄기 토글이 제공되면 최종 사용자에게 한 번만 묻도록 제거할 수 있습니다.
+Windows10에서 해당 앱 패키지 매니페스트에서 위치 기능을 선언 하는 응용 프로그램 실행 되 면 시스템은 최종 사용자 동의 묻습니다. 이 앱은 Windows Phone 스토어 앱 또는 Windows10 앱 인지 true입니다. 따라서 앱에서 고유한 사용자 지정 동의 확인 프롬프트가 표시되거나 켜기-끄기 토글이 제공되면 최종 사용자에게 한 번만 묻도록 제거할 수 있습니다.
 
  
 

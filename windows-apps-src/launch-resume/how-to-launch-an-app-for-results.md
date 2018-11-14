@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024321"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200650"
 ---
 # <a name="launch-an-app-for-results"></a>결과를 위한 앱 실행
 
@@ -27,7 +27,7 @@ ms.locfileid: "6024321"
 
 다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이것은 *결과에 의한 앱 시작*이라고 합니다. 여기에 있는 예제에서는 [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)를 사용하여 결과를 위해 앱을 실행하는 방법을 보여줍니다.
 
-새로운 앱 간 통신 Api Windows10에서 시작 하는 앱과 exchange 데이터 및 파일 Windows 앱 (및 Windows 웹 앱) 수 있게 합니다. 이렇게 하면 여러 앱에서 매시업 솔루션을 빌드할 수 있습니다. 이러한 새 API를 사용하면 이전에는 여러 앱을 사용해야 했던 복잡한 작업도 원활하게 처리할 수 있습니다. 예를 들어 앱에서 소셜 네트워킹 앱을 실행하여 연락처를 선택하거나 체크 아웃 앱을 실행하여 지급 프로세스를 완료할 수 있습니다.
+새로운 앱 간 통신 Windows10의 Api를 확인 앱과 exchange 데이터 및 파일을 시작 하려면 Windows 앱 (과 Windows 웹 앱). 이렇게 하면 여러 앱에서 매시업 솔루션을 빌드할 수 있습니다. 이러한 새 API를 사용하면 이전에는 여러 앱을 사용해야 했던 복잡한 작업도 원활하게 처리할 수 있습니다. 예를 들어 앱에서 소셜 네트워킹 앱을 실행하여 연락처를 선택하거나 체크 아웃 앱을 실행하여 지급 프로세스를 완료할 수 있습니다.
 
 결과를 위해 시작할 앱은 시작된 앱이라고 합니다. 앱을 시작하는 앱은 호출 앱이라고 합니다. 이 예에서는 호출 앱과 시작된 앱을 모두 작성합니다.
 

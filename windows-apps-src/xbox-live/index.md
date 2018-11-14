@@ -7,18 +7,18 @@ ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, xbox, xbox live
 ms.localizationpriority: medium
-ms.openlocfilehash: 66906737de1183425320f8a46b8d0642a3210122
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 83c4c1767d02a32886998af03a6408e2f4c2426c
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6160509"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187000"
 ---
 # <a name="what-is-xbox-live"></a>Xbox Live란 무엇인가요?
 
 Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게임 네트워크입니다. Xbox Live 기능 및 서비스를 활용 하기 위해 Windows 10 또는 Xbox One 게임에 Xbox Live를 추가할 수 있습니다.
 
-Xbox Live 크리에이터 스 프로그램을 사용 하 여 Windows 개발자 센터 계정을 가진 사람은 누구나 Windows 10 Pc와 Xbox One 콘솔에서 실행할 수 있는 Xbox Live가 지원 UWP (유니버설 Windows 플랫폼) 게임을 빌드할 수 있습니다.
+Xbox Live 크리에이터 스 프로그램을 사용 하 여 [파트너 센터](https://partner.microsoft.com/dashboard) 계정을 가진 사람은 누구나 Windows 10 Pc와 Xbox One 콘솔에서 실행할 수 있는 Xbox Live가 지원 UWP (유니버설 Windows 플랫폼) 게임을 빌드할 수 있습니다.
 
 멀티 플레이, 도전 과제 및 네이티브 Xbox 콘솔 개발을 포함 하 여 전체 Xbox Live 경험을 활용 하고자 하는 게임 개발자를 위한 추가 개발자 프로그램을 [개발자 프로그램 개요](developer-program-overview.md)에 자세히 설명 되어 있습니다.
 

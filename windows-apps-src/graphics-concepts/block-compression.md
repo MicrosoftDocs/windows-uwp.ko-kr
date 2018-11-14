@@ -4,20 +4,19 @@ description: 블록 압축은 성능 향상을 위해 텍스처 크기와 메모
 ms.assetid: 2FAD6BE8-C6E4-4112-AF97-419CD27F7C73
 keywords:
 - 블록 압축
-author: michaelfromredmond
-ms.author: mithom
+author: hickeys
+ms.author: hickeys
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c959ced5ada9145ca494dd023c9aa802d7dccc2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 8ff4c88a46c1e89df96b48d82da333432790e461
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024331"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205874"
 ---
 # <a name="block-compression"></a>블록 압축
-
 
 블록 압축은 성능 향상을 위해 텍스처 크기와 메모리 공간을 줄이는 손실 허용 텍스처 압축 기술입니다. 블록이 압축된 텍스처는 색당 32비트인 텍스처보다 작을 수 있습니다.
 
@@ -29,13 +28,12 @@ ms.locfileid: "6024331"
 
 ## <a name="span-idbasicsspanspan-idbasicsspanspan-idbasicsspanhow-block-compression-works"></a><span id="Basics"></span><span id="basics"></span><span id="BASICS"></span>블록 압축의 작동 방식
 
-
 블록 압축은 색 데이터를 저장하는 데 필요한 메모리 양을 줄이는 기술입니다. 일부 색을 원래 크기로 저장하고 다른 색은 인코딩 체계를 사용하여 저장하여 이미지 저장에 필요한 메모리 양을 크게 줄일 수 있습니다. 압축된 데이터를 하드웨어에서 자동으로 디코딩하므로 압축된 텍스처를 사용해도 성능에는 영향이 없습니다.
 
 다음 두 가지 예제를 통해 압축이 어떻게 작동하는지 알 수 있습니다. 첫 번째 예제에서는 압축되지 않은 데이터 저장 시 사용되는 메모리 양을 설명하고, 두 번째 예제에서는 압축된 데이터 저장 시 사용되는 메모리 양을 설명합니다.
 
--   [압축되지 않은 데이터 저장](#storing-uncompressed-data)
--   [압축된 데이터 저장](#storing-compressed-data)
+- [압축되지 않은 데이터 저장](#storing-uncompressed-data)
+- [압축된 데이터 저장](#storing-compressed-data)
 
 ### <a name="span-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoring-uncompressed-dataspanstoring-uncompressed-data"></a><span id="Storing_Uncompressed_Data"></span><span id="storing_uncompressed_data"></span><span id="STORING_UNCOMPRESSED_DATA"></span><span id="storing-uncompressed-data"></span>압축되지 않은 데이터 저장
 
@@ -61,14 +59,13 @@ ms.locfileid: "6024331"
 
 ## <a name="span-idusingblockcompressionspanspan-idusingblockcompressionspanspan-idusingblockcompressionspanusing-block-compression"></a><span id="Using_Block_Compression"></span><span id="using_block_compression"></span><span id="USING_BLOCK_COMPRESSION"></span>블록 압축 사용
 
-
 블록이 압축된 형식을 지정하는 것을 제외하고는, 압축되지 않은 텍스처와 같은 방식으로 블록이 압축된 텍스처를 만듭니다.
 
 그런 다음 뷰를 만들어 파이프라인에 텍스처를 바인딩합니다. 블록이 압축된 텍스처는 셰이더 단계에 대한 입력으로만 사용할 수 있으므로 셰이더 리소스 뷰를 만듭니다.
 
 압축되지 않은 텍스처를 사용할 때와 같은 방식으로 블록이 압축된 텍스처를 사용합니다. 응용 프로그램에서 블록이 압축된 데이터에 대한 메모리 포인터를 가져올 경우 MIP 맵의 메모리 패딩을 고려해야 합니다. MIP 맵의 메모리 패딩으로 인해 선언된 크기가 실제 크기와 달라지기 때문입니다.
 
--   [가상 크기와 물리적 크기](#virtual-size-versus-physical-size)
+- [가상 크기와 물리적 크기](#virtual-size-versus-physical-size)
 
 ### <a name="span-idvirtualsizespanspan-idvirtualsizespanspan-idvirtualsizespanspan-idvirtual-size-versus-physical-sizespanvirtual-size-versus-physical-size"></a><span id="Virtual_Size"></span><span id="virtual_size"></span><span id="VIRTUAL_SIZE"></span><span id="virtual-size-versus-physical-size"></span>가상 크기와 물리적 크기
 
@@ -86,7 +83,6 @@ ms.locfileid: "6024331"
 
 ## <a name="span-idcompressionalgorithmsspanspan-idcompressionalgorithmsspanspan-idcompressionalgorithmsspancompression-algorithms"></a><span id="Compression_Algorithms"></span><span id="compression_algorithms"></span><span id="COMPRESSION_ALGORITHMS"></span>압축 알고리즘
 
-
 Direct3D의 블록 압축 기술은 압축되지 않은 텍스처 데이터를 4×4 블록으로 나누고 각 블록을 압축한 다음 데이터를 저장합니다. 이러한 이유로 압축할 텍스처의 차원은 4의 배수여야 합니다.
 
 ![블록 압축](images/d3d10-compression-1.png)
@@ -103,13 +99,11 @@ Direct3D는 여러 압축 체계를 구현하며 각 압축 체계는 저장된 
 | 1분 색             | 1분(8)                     | [BC4](#bc4)                    |
 | 2분 색             | 2분(8:8)                  | [BC5](#bc5)                    |
 
- 
-
--   [BC1](#bc1)
--   [BC2](#bc2)
--   [BC3](#bc3)
--   [BC4](#bc4)
--   [BC5](#bc5)
+- [BC1](#bc1)
+- [BC2](#bc2)
+- [BC3](#bc3)
+- [BC4](#bc4)
+- [BC5](#bc5)
 
 ### <a name="span-idbc1spanspan-idbc1spanbc1"></a><span id="BC1"></span><span id="bc1"></span>BC1
 
@@ -121,14 +115,14 @@ Direct3D는 여러 압축 체계를 구현하며 각 압축 체계는 저장된 
 
 색 인덱스(a–p)는 색상표에서 원래 색을 조회하는 데 사용됩니다. 색상표에는 4가지 색이 있습니다. 처음 2개의 색인 color\_0과 color\_1은 최소 색과 최대 색입니다. 다른 2개의 색인 color\_2와 color\_3은 선형 보간으로 계산된 중간 색입니다.
 
-```
+```cpp
 color_2 = 2/3*color_0 + 1/3*color_1
 color_3 = 1/3*color_0 + 2/3*color_1
 ```
 
 4가지 색에는 블록 a–p에 저장되는 2비트 인덱스 값이 할당됩니다.
 
-```
+```cpp
 color_0 = 00
 color_1 = 01
 color_2 = 10
@@ -139,7 +133,7 @@ color_3 = 11
 
 이 알고리즘은 1비트 알파도 들어 있는 데이터에도 적용됩니다. 유일한 차이점은 color\_3은 투명 색을 나타내는 0으로 설정되고 color\_2는 color\_0과 color\_1의 선형 혼합이라는 점입니다.
 
-```
+```cpp
 color_2 = 1/2*color_0 + 1/2*color_1;
 color_3 = 0;
 ```
@@ -166,7 +160,7 @@ BC3 형식은 알파 인덱스(a–p)를 사용하여 8개의 값이 들어 있�
 
 알고리즘은 2개의 참조 알파 값을 검사하여 보간된 알파 값의 수를 결정합니다. alpha\_0이 alpha\_1보다 크면 BC3이 6개의 알파 값을 보간하고, 그렇지 않으면 4개의 알파 값을 보간합니다. BC3이 4개의 알파 값만 보간하는 경우 2개의 추가 알파 값을 설정합니다(완전 투명을 나타내는 0과 완전 불투명을 나타내는 255). BC3은 지정된 텍셀에 대한 원래 알파와 가장 일치하는 보간된 알파 값에 해당하는 비트 코드를 저장하여 4×4 텍셀 영역의 알파 값을 압축합니다.
 
-```
+```cpp
 if( alpha_0 > alpha_1 )
 {
   // 6 interpolated alpha values.
@@ -201,14 +195,14 @@ BC4 형식으로 각 색에 대해 8비트를 사용하여 1분 색 데이터를
 
 알고리즘에서 2개의 참조 값을 검사하여 보간된 색 값의 수를 결정합니다. red\_0이 red\_1보다 크면 BC4가 6개의 색 값을 보간하고, 그렇지 않으면 4개의 색 값을 보간합니다. BC4가 4개의 색 값만 보간하는 경우 2개의 추가 색 값을 설정합니다(완전 투명을 나타내는 0.0f와 완전 불투명을 나타내는 1.0f). BC4는 지정된 텍셀에 대한 원래 알파와 가장 일치하는 보간된 알파 값에 해당하는 비트 코드를 저장하여 4×4 텍셀 영역의 알파 값을 압축합니다.
 
--   [BC4\_UNORM](#bc4-unorm)
--   [BC4\_SNORM](#bc4-snorm)
+- [BC4\_UNORM](#bc4-unorm)
+- [BC4\_SNORM](#bc4-snorm)
 
 ### <a name="span-idbc4unormspanspan-idbc4unormspanspan-idbc4-unormspanbc4unorm"></a><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>BC4\_UNORM
 
 다음 코드 샘플과 같이 1분 데이터의 보간이 수행됩니다.
 
-```
+```cpp
 unsigned word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -239,7 +233,7 @@ else
 
 DXGI\_FORMAT\_BC4\_SNORM은 똑같습니다. 단, 데이터가 SNORM 범위에서 인코딩되고 4개의 색 값이 보간된다는 점이 다릅니다. 다음 코드 샘플과 같이 1분 데이터의 보간이 수행됩니다.
 
-```
+```cpp
 signed word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -259,8 +253,8 @@ else
   red_3 = (3*red_0 + 2*red_1)/5.0f; // bit code 011
   red_4 = (2*red_0 + 3*red_1)/5.0f; // bit code 100
   red_5 = (1*red_0 + 4*red_1)/5.0f; // bit code 101
-  red_6 = -1.0f;                     // bit code 110
-  red_7 =  1.0f;                     // bit code 111
+  red_6 = -1.0f;                    // bit code 110
+  red_7 =  1.0f;                    // bit code 111
 }
 ```
 
@@ -270,8 +264,8 @@ else
 
 BC5 형식으로 각 색에 대해 8비트를 사용하여 2분 색 데이터를 저장합니다. BC5는 [BC1](#bc1)보다 정확하므로 DXGI\_FORMAT\_BC5\_UNORM 형식을 사용하여 \[0 ~ 1\] 범위에 부동 소수점 데이터를 저장하고 DXGI\_FORMAT\_BC5\_SNORM 형식을 사용하여 \[-1 ~ +1\] 범위에 부동 소수점 데이터를 저장하는 데 이상적입니다. 가능한 최대 데이터 형식을 사용하는 4×4 텍스처의 경우 이 압축 기술은 필요한 메모리를 32바이트(16가지 색 × 2분/색 × 1바이트/분)에서 16바이트로 줄입니다.
 
--   [BC5\_UNORM](#bc5-unorm)
--   [BC5\_SNORM](#bc5-snorm)
+- [BC5\_UNORM](#bc5-unorm)
+- [BC5\_SNORM](#bc5-snorm)
 
 알고리즘은 4×4 블록의 텍셀에 작용합니다. 다음 다이어그램과 같이 알고리즘은 2분 모두에 대해 16개의 색을 저장하는 각 분(red\_0, red\_1, green\_0 및 green\_1)에 대해 2개의 참조 색을 저장하고 각 분(빨강 a-p 및 녹색 a-p)에 대해 16개의 3비트 색 인덱스를 저장합니다.
 
@@ -285,7 +279,7 @@ BC5 형식으로 각 색에 대해 8비트를 사용하여 2분 색 데이터를
 
 다음 코드 샘플과 같이 1분 데이터의 보간이 수행됩니다. 녹색 분에 대한 계산은 비슷합니다.
 
-```
+```cpp
 unsigned word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -316,7 +310,7 @@ else
 
 DXGI\_FORMAT\_BC5\_SNORM은 똑같습니다. 단, 데이터가 SNORM 범위에서 인코딩되며 4개의 데이터 값이 보간될 때 2개의 추가 값이 -1.0f와 1.0f라는 점이 다릅니다. 다음 코드 샘플과 같이 1분 데이터의 보간이 수행됩니다. 녹색 분에 대한 계산은 비슷합니다.
 
-```
+```cpp
 signed word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -345,19 +339,18 @@ else
 
 ## <a name="span-iddifferencesspanspan-iddifferencesspanspan-iddifferencesspanformat-conversion"></a><span id="Differences"></span><span id="differences"></span><span id="DIFFERENCES"></span>형식 변환
 
-
 Direct3D는 동일한 비트 너비의 선구조화된 형식의 텍스처와 블록이 압축된 텍스처 간의 복사를 가능하게 합니다.
 
 몇 가지 형식 유형 간에 리소스를 복사할 수 있습니다. 이러한 유형의 복사 작업은 리소스 데이터를 다른 형식 유형으로 재해석하는 일종의 형식 변환을 수행합니다. 데이터 재해석과 더 일반적인 유형의 변환 작동 방식 간의 차이를 보여 주는 이 예제를 살펴보세요.
 
-```
+```cpp
 FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
 'f'을 'u' 유형으로 재해석하려면 [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx)를 사용합니다.
 
-```
+```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
@@ -365,7 +358,7 @@ memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 
 더 일반적인 유형의 변환을 수행하려면 할당을 사용합니다.
 
-```
+```cpp
 u = f; // 'u' becomes 1.
 ```
 
@@ -415,9 +408,6 @@ u = f; // 'u' becomes 1.
 </tbody>
 </table>
 
- 
-
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
-
 
 [압축된 텍스처 리소스](compressed-texture-resources.md)

@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Microsoft Store에서 패키지 업데이트 다운로드 및 설치
-description: 개발자 센터 대시보드에 패키지를 필수로 표시하고 패키지 업데이트를 다운로드 및 설치하도록 앱에 코드를 작성하는 방법을 알아봅니다.
+description: 파트너 센터에서 패키지를 필수로 표시 하 고 앱에서 패키지 업데이트 다운로드 및 설치 하기 위해 코드를 작성 하는 방법을 알아봅니다.
 ms.author: mcleans
 ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5a6cc57a7af63d9aee3685d5bfc3e3fd72fac0a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: a2bc0cfbdd722a4842758be0f3b794aafe808bc3
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052068"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6255333"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 
-Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store의 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. Windows 개발자 센터 대시보드에서 필수로 표시한 패키지를 쿼리하고 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 할 수 있습니다.
+Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store의 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 파트너 센터에서 필수로 표시 하 고 필수 업데이트가 설치 될 때까지 앱에서 기능을 해제 하는 패키지에 대 한 쿼리할 수 있습니다.
 
 Windows 10 버전 1803에 도입된 추가 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드를 사용하면 자동으로(사용자에게 알림 UI를 표시하지 않고) 패키지 업데이트를 다운로드 및 설치하고, [선택적 패키지](optional-packages.md)를 제거하고, 앱의 다운로드 및 설치 큐의 패키지에 대한 정보를 확인할 수 있습니다.
 
@@ -195,14 +195,14 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>필수 패키지 업데이트
 
-Windows 10 버전 1607 이상을 대상으로 하는 앱을 위해 패키지 제출을 만들 때 [해당 패키지를 필수로 표시](../publish/upload-app-packages.md#mandatory-update)하고 필수가 되는 날짜/시간을 표시할 수 있습니다. 이 속성이 설정되고 앱에서 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
+[패키지를 필수로 표시할](../publish/upload-app-packages.md#mandatory-update) 수 있는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 대 한 파트너 센터에서 패키지 제출을 만들 때 날짜 및 필수가 되는 시간입니다. 이 속성이 설정되고 앱에서 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
 
 > [!NOTE]
 > Microsoft는 패키지 업데이트를 위한 필수 상태를 적용하지 않으며, OS는 필수 앱 업데이트를 설치해야 할 사용자를 나타내기 위한 UI를 제공하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 앱 업데이트를 적용합니다.  
 
 패키지 제출을 필수로 표시하려면
 
-1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인하고 앱 개요 페이지로 이동합니다.
+1. [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 하 고 앱에 대 한 개요 페이지로 이동 합니다.
 2. 필수로 만들 패키지 업데이트가 포함된 제출의 이름을 클릭합니다.
 3. 제출의 **패키지** 페이지로 이동합니다. 이 페이지 하단에서 **이 업데이트를 필수로 설정하세요.** 를 선택한 다음 패키지 업데이트가 필수가 되는 날짜와 시간을 선택합니다. 이 옵션은 제출의 모든 UWP 패키지에 적용됩니다.
 
