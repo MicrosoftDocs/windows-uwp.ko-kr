@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스, 테스트
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e51364ee87ee592420c88ac5808d24d010cfa25
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 822ce0a3c4e0e0475b4dd01e405ccc9b90799654
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6041519"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6248623"
 ---
 # <a name="create-a-new-xbox-live-creators-program-title-and-publish-to-the-test-environment"></a>새 Xbox Live 크리에이터 스 프로그램 타이틀 만들기 및 테스트 환경에 게시
 
@@ -21,30 +21,30 @@ ms.locfileid: "6041519"
 
 Xbox Live 코드를 작성 하기 전에 서비스 구성 포털에서 새 타이틀을 설치 해야 합니다.  [Xbox Live 서비스 구성](../xbox-live-service-configuration.md)에서 서비스 구성에 대해 자세히 알아볼 수 있습니다.
 
-이 문서는 Windows 개발자 센터에서 구성 하는 제목, 새 프로젝트를 만든 및 Xbox Live 테스트를 위해 준비 하는 데 필요한 모든 안내 합니다. 이 문서에서는 다음을 가정합니다.
+이 문서는 [파트너 센터](https://partner.microsoft.com/dashboard)에서 구성 하는 제목, 새 프로젝트를 만든 및 Xbox Live 테스트를 위해 준비 하는 데 필요한 모든 안내 합니다. 이 문서에서는 다음을 가정합니다.
 
 1. Xbox Live 크리에이터 스 프로그램을 사용 하는 합니다.
 2. 유니버설 Windows 플랫폼 (UWP) 타이틀을 개발 하는 합니다.  UWP 타이틀이 Xbox One, Windows 10 데스크톱 Pc 및 모바일에서 실행할 수 있습니다.
-3. 타이틀을 구성 하는 Windows 개발자 센터에서 [http://dev.windows.com/](http://dev.windows.com).  잘 모르겠으면, Windows 개발자 센터를 사용 해야 합니다.
+3. 타이틀을 구성 하는 [파트너 센터](https://partner.microsoft.com/dashboard)에서.
 4. 개발 컴퓨터에 Windows 10을 실행 중입니다.
 
 > [!NOTE]
 > Xbox Live 크리에이터 스 프로그램의 일부인 경우 위의 가정 하는 귀하에 게 적용 하 고이 문서와 함께 따라야 합니다.
 
-## <a name="dev-center-setup"></a>개발자 센터 설치
+## <a name="partner-center-setup"></a>파트너 센터 설치
 
-모든 Xbox Live 기능을 사용 하 여 필수 조건으로 [Windows 개발자 센터](http://dev.windows.com) 에서 생성 한 Xbox Live가 지원 제목이 필요 합니다.
+모든 Xbox Live 기능을 사용 하 여 필수 조건으로 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 생성 한 Xbox Live가 지원 제목이 필요 합니다.
 
 ### <a name="create-a-microsoft-account"></a>Microsoft 계정 만들기
 Microsoft 계정 (MSA 라고도)를 설정 하지 않은 경우 먼저 [Microsoft 계정으로 로그인](https://go.microsoft.com/fwlink/p/?LinkID=254486)시 만들라는 해야 합니다. Office 365 계정이, Outlook.com, 사용 또는 Xbox Live 계정을-MSA 이미 있어야 합니다.
 
 ### <a name="register-as-an-app-developer"></a>앱 개발자로 등록
-개발자 센터에서 새 타이틀 만들기 전에 앱 개발자로 등록 해야 합니다.
+파트너 센터에서 새 타이틀 만들기 전에 앱 개발자로 등록 해야 합니다.
 
 을 등록 하려면 [앱 개발자로 등록](https://developer.microsoft.com/store/register) 으로 이동 하 고 등록 프로세스를 수행 합니다.
 
 ### <a name="create-a-new-uwp-title"></a>새 UWP 타이틀 만들기
-개발자 센터에서 정의 하는 UWP 제목을 할 수 있습니다. 이렇게 하면 첫 번째 이동 하면 [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/).
+파트너 센터에 정의 된 UWP 제목을 할 수 있습니다. 이렇게 하면 첫 번째 이동 하면 [파트너 센터](https://partner.microsoft.com/dashboard)에 있습니다.
 
 다음으로 새 타이틀을 만듭니다. 이름을 예약 해야 합니다.
 
@@ -87,7 +87,7 @@ Xbox Live 구성 페이지에서 개발 샌드박스를 현재 Xbox Live 구성�
 
 승인된 장치 및 사용자의 개발 샌드박스 게임에 대 한 Xbox Live 구성과 액세스할 수 있습니다.
 
-기본적으로 모든 Xbox One 개발 콘솔 개발자 센터 계정에 추가한는 개발 샌드박스에 액세스할을 수 있습니다.  Xbox One 콘솔에 추가 하려면 [Xbox One 본체 관리](https://partner.microsoft.com/XboxDevices)으로 이동 합니다. 개발자 센터 계정에 이미 있는 경우 **계정 설정**으로 이동할 수 있습니다 > **계정 설정** > **개발자 장치** > **Xbox One 개발 콘솔**.
+기본적으로 모든 Xbox One 개발 콘솔 파트너 센터 계정에 추가한는 개발 샌드박스에 액세스할을 수 있습니다.  Xbox One 콘솔에 추가 하려면 [Xbox One 본체 관리](https://partner.microsoft.com/XboxDevices)으로 이동 합니다. 파트너 센터 계정에 이미 있는 경우 **계정 설정**으로 이동할 수 있습니다 > **계정 설정** > **개발자 장치** > **Xbox One 개발 콘솔**.
 
 또한 개발 샌드박스에 액세스할 수 있는 일반 Xbox Live 계정 권한을 부여할 수 있습니다.  개발 샌드박스를 Xbox Live 계정 액세스 권한을 부여, [계정 관리](https://developer.microsoft.com/xboxtestaccounts/configurecreators)로 이동 합니다.
 

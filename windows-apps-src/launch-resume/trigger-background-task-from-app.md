@@ -8,11 +8,11 @@ ms.topic: article
 keywords: 백그라운드 작업 트리거 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 6846cfe77272a78eff7ddc05c9a7e48dddd21fc2
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6185983"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6452828"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>앱 내에서 백그라운드 작업 트리거
 

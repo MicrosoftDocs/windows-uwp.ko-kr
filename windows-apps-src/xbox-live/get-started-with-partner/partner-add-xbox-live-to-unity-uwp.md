@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 Unity
 ms.localizationpriority: medium
-ms.openlocfilehash: d34ded59574566252d3ff5a7e3f408ab74d51371
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: ba2460e64d63892aa1ff02d2178f2632109b3655
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6034625"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6201680"
 ---
 # <a name="add-xbox-live-support-to-unity-for-uwp-with-net-scripting-backend-for-idxbox-and-managed-partners"></a>에 대 한.NET 스크립팅 백 엔드를 사용 하 여 UWP 용 Unity에 Xbox Live 지원 추가 ID@Xbox 관리 파트너 및
 
@@ -156,7 +156,7 @@ Note Unity는 Unity 프로젝트이 문제를 방지 하기 위해 업데이트 
 
 a) 컴퓨터로 설정 되는 개발자 샌드박스 합니다.  Xbox Live SDK의 \Tools 폴더에서 SwitchSandbox.cmd 스크립트를 사용 하 여이 작업을 수행 합니다.
 
-b) 서명 하는 Xbox Live 개발자 샌드박스에 액세스 권한이 있는 계정으로 로그인 합니다.  일반 정품 Xbox Live 계정에 액세스할을 수 없습니다.  XDP 또는 개발자 센터를 사용 하 여 테스트 계정을 만들 수 있습니다.
+b) 서명 하는 Xbox Live 개발자 샌드박스에 액세스 권한이 있는 계정으로 로그인 합니다.  일반 정품 Xbox Live 계정에 액세스할을 수 없습니다.  XDP 또는 파트너 센터를 사용 하 여 테스트 계정을 만들 수 있습니다.
 
 UWP 앱에서 c) package.appxmanfiest 올바른 Id로 설정 됩니다.  이 작업을 수동으로 편집할 수 있지만이 문제를 해결 하는 가장 쉬운 방법은 Visual Studio에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 "저장"을 선택 하는 \ | "스토어를 사용 하 여 연결 앱"입니다.
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2778014220dc0e75e286e2b6e4af56ea8a2412b2
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6146155"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208673"
 ---
 # <a name="session-directory-uris"></a>세션 디렉터리 URI
 

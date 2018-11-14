@@ -7,12 +7,12 @@ ms.date: 9/30/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f454c7e7386ba829cf6c99edc0b5b8f2d831f00
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: f38604ea7fc25038bdd4b07b952e4dbab151bf56
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025193"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268838"
 ---
 # <a name="optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 선택적 패키지
  
@@ -26,7 +26,7 @@ ms.locfileid: "6025193"
 최신 개발 도구를 다운로드하는 방법은 [Windows 10용 다운로드 및 도구](https://developer.microsoft.com/windows/downloads)를 참조하세요. 
 
 > [!NOTE]
-> 선택적 패키지 및 관련 집합을 사용하는 앱을 Microsoft Store에 제출하려면 권한이 필요합니다. Microsoft Store에 제출되지 않은 경우에는 선택적 패키지 및 관련 집합을 개발자 센터 권한 없이 기간 업무(LOB)나 엔터프라이즈 앱에서 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
+> 선택적 패키지 및 관련 집합을 사용하는 앱을 Microsoft Store에 제출하려면 권한이 필요합니다. 선택적 패키지 및 관련된 집합을 스토어에 제출 되지 않은 경우 파트너 센터 권한 없이 줄의 lob (기간 업무) 나 엔터프라이즈 앱에 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
 
 ## <a name="c-optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 C++ 선택적 패키지
 

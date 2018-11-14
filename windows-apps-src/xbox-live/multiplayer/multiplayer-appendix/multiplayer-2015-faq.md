@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: e9c6778ebc90d917a883a437d905112cf32a6829
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6046689"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6250174"
 ---
 # <a name="multiplayer-2015-faq-and-troubleshooting"></a>멀티 플레이 2015 FAQ 및 문제 해결
 

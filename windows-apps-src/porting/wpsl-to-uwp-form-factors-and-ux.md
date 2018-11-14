@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 809cf2691a2bc7b7c72d4ba031fa4c6b45335dde
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045642"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6265417"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>폼 팩터 및 UX에 대 한 WindowsPhone Silverlight를 UWP로 포팅
 

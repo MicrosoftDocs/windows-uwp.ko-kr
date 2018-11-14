@@ -8,12 +8,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 59cd664e268e9e62786728aeb122ec52acd721c0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 75ba42674ca1ea460698fcce6e67bb3528589797
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031355"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6251612"
 ---
 # <a name="uri-schemes"></a>URI 스키마
 
@@ -253,9 +253,9 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 자세한 내용과 예는 [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md) 및 [언어, 배율, 고대비에 대한 타일 및 알림 메시지](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)를 참조하세요.
 
-`ms-resource`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 기본 retrieval.does는 *ignoreCase*가 `true`로 설정된 [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628)입니다.
+`ms-resource`의 경로 구성 요소는 일반 URI와 같이 대/소문자를 구분합니다. 그러나 기본 검색 수행 [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) *ignoreCase* 설정 `true`합니다.
 
-URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 Hello#World.resw라는 리소스 파일에서 문자열 리소스를 검색하려면 이 URI를 사용합니다.
+URI의 표준화된 형태는 대소문자와 퍼센트 디코드(두자리 16진수가 따르는 "%" 기호) RFC 3986 예약되지 않은 문자를 유지합니다. 문자 "?", "#", "/", "*", '”'(큰따옴표)는 파일 또는 폴더 이름 같은 데이터를 나타내는 경로에 %로 인코딩되어야 합니다. 검색하기 전에 모든 퍼센트로 인코딩된 문자를 디코딩합니다. 따라서 라는 리소스 파일에서 문자열 리소스를 검색 하려면 `Hello#World.resw`을이 URI를 사용 합니다.
 
 ```xml
 ms-resource:///Hello%23World/String1

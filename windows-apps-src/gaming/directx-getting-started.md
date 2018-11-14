@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 66cbc3d281fef68937fd8af2e41a7f04d92d8977
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047069"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196718"
 ---
 # <a name="directx-getting-started"></a>DirectX: 시작
 

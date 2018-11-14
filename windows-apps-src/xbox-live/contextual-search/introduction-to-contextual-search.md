@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 상황에 맞는 검색, 브로드캐스트, 게임 클립
 ms.localizationpriority: medium
-ms.openlocfilehash: dba22050f53ece134cb805bad60746e55f952476
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 17d24b31087db9c73f6b286a140c6dcf3a7e1eb4
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6022906"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6192460"
 ---
 # <a name="contextual-search"></a>상황에 맞는 검색
 
@@ -27,4 +27,4 @@ ms.locfileid: "6022906"
 * 작업에서 새 surface DLC
 * 연관성이 작성자 설명을 제공합니다
 
-단순히 XDP 또는 창 개발자 센터에서 구성 하 여 타이틀에 대 한 상황에 맞는 검색 자동으로 밝게 표시 됩니다 브로드캐스트 응용 프로그램을 즉시 Xbox 셸 및 Cortana에서 나중에.  또한 제목 게임을 종료 하지 않고 사용자를 위한 차별화 된 환경을 사용 하는 게임에서 직접 검색 Api를 활용할 수 있습니다.  통합 수준에 상관 없이 타이틀에 대 한 상당한 양의 값 및 노출을 생성할 수 있습니다.
+단순히 XDP 또는 파트너 센터에서 구성 하 여 타이틀에 대 한 상황에 맞는 검색 자동으로 밝게 표시 됩니다 브로드캐스트 응용 프로그램을 즉시 Xbox 셸 및 Cortana에서 나중에.  또한 제목 게임을 종료 하지 않고 사용자를 위한 차별화 된 환경을 사용 하는 게임에서 직접 검색 Api를 활용할 수 있습니다.  통합 수준에 상관 없이 타이틀에 대 한 상당한 양의 값 및 노출을 생성할 수 있습니다.

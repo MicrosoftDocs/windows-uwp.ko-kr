@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, visual studio, 도구, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6205894"
+ms.locfileid: "6259601"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>게임 프로그래밍용 Visual Studio 도구
 

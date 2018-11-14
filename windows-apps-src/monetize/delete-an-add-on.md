@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 삭제, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 53c7125b48c32c8e39861f933f80fb88d6d904be
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043506"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183330"
 ---
 # <a name="delete-an-add-on"></a>추가 기능 삭제
 

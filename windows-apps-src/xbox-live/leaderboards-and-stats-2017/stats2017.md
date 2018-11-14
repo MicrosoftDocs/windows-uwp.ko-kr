@@ -7,12 +7,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 플레이어 통계, 순위표, 통계 2017
 ms.localizationpriority: medium
-ms.openlocfilehash: f395c12214acbbbc410047277185f2f2ea829767
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 462c6a92468964cadbd6852e39711dccfff49e35
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6042709"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187393"
 ---
 # <a name="stats-2017"></a>통계 2017
 
@@ -22,7 +22,7 @@ ms.locfileid: "6042709"
 
 ## <a name="configured-stats-and-featured-leaderboards"></a>구성 된 통계 및 순위표 추천된
 
-[Windows 개발 센터 대시보드의](https://developer.microsoft.com/en-us/dashboard/windows/overview)통계 구성 됩니다. 통계를 구성 하려면 이미 구성 된 제목을 해야 합니다. 제목을 구성 되지 않은 경우를 읽어 이렇게 하는 방법을 알아볼 수 있습니다 [만들기 및 테스트 새 크리에이터 스 타이틀](../get-started-with-creators/create-and-test-a-new-creators-title.md).  Windows 개발자 센터에서 구성한 통계 그림과 같이 타이틀의 GameHub에 표시 됩니다.
+[Windows 개발 센터 대시보드의](https://developer.microsoft.com/en-us/dashboard/windows/overview)통계 구성 됩니다. 통계를 구성 하려면 이미 구성 된 제목을 해야 합니다. 제목을 구성 되지 않은 경우를 읽어 이렇게 하는 방법을 알아볼 수 있습니다 [만들기 및 테스트 새 크리에이터 스 타이틀](../get-started-with-creators/create-and-test-a-new-creators-title.md).  파트너 센터에서 구성 통계 그림과 같이 타이틀의 GameHub에 표시 됩니다.
 
 아래 이미지에서 노란색으로 *기능 통계* 를 강조 표시 됩니다.
 ![공식 클럽 페이지 소셜 순위표](../images/omega/gamehub_featuredstats.png)

@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: de2d319f536b2c9d25d53e0b1ec2886831c66e12
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046256"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6255035"
 ---
 # <a name="custom-attached-properties"></a>사용자 지정 연결된 속성
 

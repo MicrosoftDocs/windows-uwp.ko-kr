@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, azure ad, azure 테넌트, aad 테넌트, azure ad 테넌트, 테넌트 관리, 테넌트
 ms.localizationpriority: medium
 ms.openlocfilehash: a76021f53417d30b91db282a194f6dc6ca268c1f
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6188001"
+ms.locfileid: "6250781"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>파트너 센터 계정에 Azure Active Directory 연결
 

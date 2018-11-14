@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 232770ab4b746663a105982605d1cedcb92adbe3
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6187120"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272001"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a>(개발자 홈) 콘솔의 개발자 홈
    

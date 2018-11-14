@@ -1,24 +1,24 @@
 ---
-title: 개발자 센터에서 저장소 구성 제목
+title: 파트너 센터에서 저장소 구성 제목
 author: aablackm
-description: Windows 개발자 센터에서 타이틀 저장소를 구성 하는 방법에 알아봅니다.
+description: 파트너 센터에서 타이틀 저장소를 구성 하는 방법에 알아봅니다.
 ms.author: aablackm
 ms.date: 04/24/2018
 ms.topic: article
 ms.localizationpriority: medium
-keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 타이틀 저장소, Windows 개발자 센터
-ms.openlocfilehash: c756dabe437f535a09418417e30a22565d22acdf
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 타이틀 저장소, 파트너 센터
+ms.openlocfilehash: 38abe0188dff74bdf0584bcb6664c5f6453e7e42
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6155236"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191927"
 ---
-# <a name="configure-storage-for-you-title-on-windows-dev-center"></a>Windows 개발자 센터에서 하면 제목에 대 한 저장소를 구성 합니다.
+# <a name="configure-storage-for-you-title-in-partner-center"></a>파트너 센터에서 하면 제목에 대 한 저장소를 구성 합니다.
 
 Xbox Live 타이틀 저장소 서비스를 통해 클라우드 게임와 관련 된 데이터를 저장할 수 있습니다. 타이틀 저장소 구성 페이지를 사용 하면 어떤 유형의 클라우드 저장소 서비스 게임은 허용, 뿐 아니라 글로벌 저장소에 사용할 파일을 업로드를 확인할 수 있습니다.
 
-**Xbox Live**를 선택 하는 Xbox Live 타이틀 저장소로 이동 [Windows 개발자 센터 대시보드](https://developer.microsoft.com/en-us/dashboard/windows/overview) **개요** 또는 **제품** **서비스** 를 열어에서 앱을 선택 하 여 구성 페이지 드롭다운을 찾을 수 있습니다. 크리에이터 스 프로그램의 개발자 타이틀 저장소 구성 옵션을 보려면 해당 구성 페이지의 **클라우드 저장 및 저장소** 섹션에서 **옵션 표시** 를 클릭 해야 합니다. 전체 집합을 사용할 수 있는 Xbox Live 기능을 가진 **타이틀 저장소** 링크가 타이틀 저장소 구성 페이지로 이동 해야 합니다.
+**Xbox Live**를 선택 하는 Xbox Live 타이틀 저장소로 이동 [파트너](https://partner.microsoft.com/dashboard) **개요** 또는 **제품** **서비스** 를 열어에서 앱을 선택 하 여 구성 페이지 드롭다운을 찾을 수 있습니다. 크리에이터 스 프로그램의 개발자 타이틀 저장소 구성 옵션을 보려면 해당 구성 페이지의 **클라우드 저장 및 저장소** 섹션에서 **옵션 표시** 를 클릭 해야 합니다. 전체 집합을 사용할 수 있는 Xbox Live 기능을 가진 **타이틀 저장소** 링크가 타이틀 저장소 구성 페이지로 이동 해야 합니다.
 
 타이틀 저장소 구성에는 두 개의 주요 부분에 있습니다. 타이틀 저장소 설정 섹션 및 글로벌 저장소 파일 관리 섹션입니다.
 
@@ -34,7 +34,7 @@ Xbox Live 타이틀 저장소 서비스를 통해 클라우드 게임와 관련 
 
 |저장소 유형 |설명 |사용 예제  |
 |---------|---------|---------|
-|글로벌             |모든 장치에서 읽을 수 및 모든 사용자가 액세스할 수 있는 Windows 개발자 센터에 데이터 업로드 된 합니다. 만 작성할 수를 Windows 개발자 센터에 개발자 업로드 합니다. | 게임에서 뉴스 피드를 통해 모든 사용자에 대 한 업데이트를 알립니다.     |
+|글로벌             |모든 장치에서 읽을 수 있는 모든 사용자가 액세스할 수는 파트너 센터에 데이터 업로드 된 합니다. 만 작성할 수를 파트너 센터로 개발자 업로드 합니다. | 게임에서 뉴스 피드를 통해 모든 사용자에 대 한 업데이트를 알립니다.     |
 |연결된 저장소  |XboxOne 및 Windows 10 게임에 게임 데이터의 백그라운드 동기화를 허용 합니다. 강력한 장애 조치 게임 서비스를 저장 합니다. 모든 장치에서 읽을 수, Xbox One 및 Windows 10 장치에 쓸 수 있습니다    | 별도 콘솔에서 재생할 수 있도록 하는 개별 사용자에 대 한 파일을 저장 합니다.         |
 |범용          |네트워크를 통해 읽기/쓰기 액세스 Xbox 360 또는 Windows Phone 되지 않은 장치에 액세스할 수 있는 blob 저장소입니다. Android 및 IOS 디바이스에서 읽을 수 있습니다.      | 재생 또는 여러 Windows 디바이스에서 액세스할 수 있도록 다른 상태를 저장 합니다.        |
 |신뢰할 수 있는            |Xbox One, Xbox 360 및 Windows Phone 쓸 수 있는 네트워크 액세스할 수 있는 blob 저장소. 모든 장치에서 읽을 수 있습니다. Android 및 IOS에서 읽을 수 있습니다.     | 멀티 플레이어에 플레이어의 순위를 저장 합니다.        |

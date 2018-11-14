@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 319343a06eeb49fc4ec0ca2fcd340f655654f718
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6157339"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190546"
 ---
 # <a name="legacy-background-media-playback"></a>레거시 백그라운드 미디어 재생
 

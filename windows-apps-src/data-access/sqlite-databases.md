@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
 ms.openlocfilehash: 77911b101f488bb7bfef82b9cc480679ce15b1f3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027474"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184530"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용해 사용자 장치에서 경량 데이터베이스의 데이터를 저장하고 검색할 수 있습니다. 이 가이드는 그 방법을 보여줍니다.

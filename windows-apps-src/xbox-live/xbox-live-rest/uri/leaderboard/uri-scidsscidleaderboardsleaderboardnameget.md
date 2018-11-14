@@ -9,12 +9,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b1460f544e82394f48a54030f8da70fb9224c4a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: b8cdb579bbec7b9dd536403a4295b2bd90ce2826
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6023569"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6251158"
 ---
 # <a name="get-scidsscidleaderboardsleaderboardname"></a>GET (/scids/{scid}/leaderboards/{leaderboardname})
  
@@ -72,7 +72,7 @@ GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한
 권한 부여 논리 콘텐츠 격리 및 액세스 제어 시나리오에 대해 구현 있습니다.
  
    * 순위표와 사용자 통계 호출자가 요청을 사용 하 여 유효한 XSTS 토큰 전송 된 모든 플랫폼에서 클라이언트에서 읽을 수 있습니다. 쓰기는 데이터 플랫폼에서 지 원하는 클라이언트로 분명히 제한 됩니다.
-   * 제목 개발자 열기 또는 XDP 또는 개발자 센터를 사용 하 여 제한 된 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 개발자 센터를 통해 관리 됩니다.
+   * 제목 개발자 열기 또는 XDP 또는 파트너 센터를 사용 하 여 제한 된 통계를 표시할 수 있습니다. 순위표 통계가 엽니다. 사용자가 해당 샌드박스에 인증으로 열기 통계 Smartglass, 뿐 아니라 iOS, Android, Windows, Windows Phone 및 웹 응용 프로그램에서 액세스할 수 있습니다. 사용자 권한 부여 샌드박스에 XDP 또는 파트너 센터를 통해 관리 됩니다.
   
 검사에 대 한 의사 코드는 다음과 같습니다.
  

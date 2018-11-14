@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030495"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200842"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Microsoft Store 앱 열기
 

@@ -9,11 +9,11 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제
 ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac0ebcef45bc19bd38381a3c6fdfa5d02276be6
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6147458"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6250983"
 ---
 # <a name="finalize-the-rollout-for-an-app-submission"></a>앱 제출에 대한 출시 완료
 

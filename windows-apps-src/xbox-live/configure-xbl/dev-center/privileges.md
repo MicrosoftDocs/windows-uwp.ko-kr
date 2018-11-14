@@ -1,20 +1,20 @@
 ---
-title: 개발자 센터에 대 한 권한 구성
+title: 파트너 센터에서 권한 구성
 author: aablackm
-description: Windows 개발자 센터에서 권한을 구성 하는 방법을 알아봅니다
+description: 파트너 센터에서 권한을 구성 하는 방법을 알아봅니다
 ms.author: aablackm
 ms.date: 04/09/2018
 ms.topic: article
 ms.localizationpriority: medium
-keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 권한으로 Windows 개발자 센터
-ms.openlocfilehash: be502aadbd5900838f143132171838cdf235c01c
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 권한, 파트너 센터
+ms.openlocfilehash: f51fd7f9da1758d28301031ecd10d3d7650c1121
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6161406"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207927"
 ---
-# <a name="configure-privileges-on-windows-dev-center"></a>Windows 개발자 센터에서 권한 구성
+# <a name="configure-privileges-in-partner-center"></a>파트너 센터에서 권한 구성
 
 권한을 구성 페이지 스트리밍 [Mixer](https://mixer.com/)같은 서비스를 스트리밍 타이틀에서 게이머가 제한 여부를 결정 합니다. 이 페이지에는 변경, 기본적으로 게임 브로드캐스트 스트리밍 모든 플랫폼에서 제한 하지는 브로드캐스트를 제한 하려는 경우 필요 합니다. 두 가지 방법으로 브로드캐스트를 제한할 수 있습니다. **기본** 섹션에 있는 확인란을 선택 하 여 모든 곳에서 브로드캐스트를 해제 하거나 수 또는 **샌드박스 재정의** 섹션에서 샌드박스를 추가 하 여 샌드박스에서 브로드캐스트를 제한할 수 있습니다.
 

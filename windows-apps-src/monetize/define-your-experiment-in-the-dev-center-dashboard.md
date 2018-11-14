@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c1d48524bcc525f57f42e5364d27611602ab52
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6149789"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6259432"
 ---
 # <a name="define-your-experiment-in-partner-center"></a>파트너 센터에서 실험을 정의 합니다.
 

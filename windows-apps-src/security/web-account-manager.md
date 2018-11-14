@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: 71a5cddcd5ccb5185cda422c3df16797f5765688
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028059"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6267058"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -177,7 +177,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 * OneDrive 범위의 경우 [OneDrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조하세요. 
 
 > [!TIP]
-> 필요에 따라 앱 (기본 전자 메일 주소를 사용 하 여 사용자 필드를 채우는)에 로그인 힌트 또는 로그인 환경에 관련 된 기타 특수 속성을 사용 하는 경우 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 됩니다. 이렇게 하면 시스템에 캐시의 계정 불일치를 방지 하는 웹 계정을 캐싱의 경우 속성을 무시 합니다.
+> 필요에 따라 앱 (기본 전자 메일 주소를 사용 하 여 사용자 필드를 채우는)에 로그인 힌트 또는 로그인 환경을 관련 된 기타 특수 속성을 사용 하는 경우 **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 됩니다. 이렇게 하면 시스템에 캐시의 계정 불일치를 방지 하는 웹 계정을 캐싱의 경우 속성을 무시 합니다.
 
 엔터프라이즈 앱을 개발하는 경우 AAD(Azure Active Directory) 인스턴스에 연결하고 일반 MSA 서비스 대신 Microsoft Graph API를 사용하려고 할 것입니다. 이 시나리오에서는 다음 코드를 대신 사용합니다. 
 
@@ -337,7 +337,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="remove-a-stored-account"></a>저장된 계정 제거
 
-웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이렇게이 하면 이러한 수 효과적으로 "로그 아웃" 앱의: 시작 시 사용자 계정 정보가 자동으로 로드 더 이상 됩니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
+웹 계정을 유지하는 경우 사용자가 자신의 계정을 앱과 분리하는 것을 허용하려고 할 수 있습니다. 이렇게이 하면 이러한 수 효과적으로 "로그 아웃" 응용 프로그램의: 시작 시 사용자 계정 정보가 자동으로 로드 더 이상 됩니다. 이렇게 하려면 먼저 스토리지에서 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)

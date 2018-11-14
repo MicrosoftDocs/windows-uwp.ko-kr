@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b5a2174c0d413ae528a69250cab6051bfd247546
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6181754"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264021"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypequeryrefinersqueryrefinername"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryrefinername})
 지정 된 쿼리 구체화 이름에 대 한 및 미디어 항목 유형 지정 된 허용 되는 값을 나열합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

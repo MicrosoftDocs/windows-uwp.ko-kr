@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 62310191b17910d0ff980d6f4cc54170de7077b2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051020"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6253956"
 ---
 # <a name="app-settings-and-data"></a>앱 설정 및 데이터
 

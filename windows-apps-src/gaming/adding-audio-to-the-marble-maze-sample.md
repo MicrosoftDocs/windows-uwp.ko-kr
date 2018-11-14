@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 오디오, 게임, 샘플
 ms.localizationpriority: medium
 ms.openlocfilehash: 89612e3fbc4ef2ccb855f7709820f9445d0fd77c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033907"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209914"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Marble Maze 샘플에 오디오 추가
 

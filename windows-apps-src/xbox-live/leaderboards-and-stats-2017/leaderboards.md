@@ -8,12 +8,12 @@ ms.date: 09/28/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 25b0b16963147328a7ababf58634bcd9c134637a
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 69fd69f596204b07f3b8c2d78f27a26a7be9fe94
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6160654"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6249791"
 ---
 # <a name="leaderboards"></a>순위표
 
@@ -368,7 +368,7 @@ m_statsManager->get_leaderboard(user, statName, leaderboardQuery);
 ```
 
 > [!IMPORTANT]
-> `statName` 에서 사용 되는 `GetLeaderboard()` 호출의 대/소문자 구분 되는 [Windows 개발자 센터 대시보드에서](https://developer.microsoft.com/en-us/dashboard/windows/overview)타이틀에 대 한 구성 상태 이름과 동일 해야 합니다.
+> `statName` 에서 사용 되는 `GetLeaderboard()` 호출의 대/소문자 구분은 [파트너 센터](https://partner.microsoft.com/dashboard)타이틀에 대 한 구성 상태 이름과 동일 해야 합니다.
 
 ### <a name="4-read-the-leaderboard-data"></a>4. 순위표 데이터 읽기
 
@@ -538,7 +538,7 @@ statManager.GetLeaderboard(xboxLiveUser, statName, leaderboardQuery);
 ```
 
 > [!IMPORTANT]
-> `statName` 에서 사용 되는 `GetLeaderboard()` 호출의 대/소문자 구분 되는 [Windows 개발자 센터 대시보드에서](https://developer.microsoft.com/en-us/dashboard/windows/overview)타이틀에 대 한 구성 상태 이름과 동일 해야 합니다.
+> `statName` 에서 사용 되는 `GetLeaderboard()` 호출의 대/소문자 구분은 [파트너 센터](https://partner.microsoft.com/dashboard)타이틀에 대 한 구성 상태 이름과 동일 해야 합니다.
 
 ### <a name="4-read-leaderboard-data"></a>4. 읽기 순위표 데이터
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, rta, stat, 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: ba0d4501840f592d8098470b53df12b553321889
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6145291"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6260703"
 ---
 # <a name="how-to-register-for-stat-change-notifications"></a>통계 변경 알림 등록 하는 방법
 

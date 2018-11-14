@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cb39036ccc75f4caec5a0fa6f961d2462ce5bda
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6152401"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191831"
 ---
 # <a name="activityrequest-json"></a>ActivityRequest(JSON)
 하나 이상의 사용자의 다양 한 상태에 대 한 정보에 대 한 요청 합니다. 

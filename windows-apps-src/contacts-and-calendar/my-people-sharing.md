@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7084c4dde7bdf2d59842a04fe9fd52bc029c264a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039486"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6199402"
 ---
 # <a name="my-people-sharing"></a>내 피플 공유
 

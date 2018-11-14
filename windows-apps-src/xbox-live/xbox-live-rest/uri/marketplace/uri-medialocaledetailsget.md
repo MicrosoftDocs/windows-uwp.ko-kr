@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f0cb0fdd3d50a45f4cbeeedacc38bada5874c86
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6182896"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6250563"
 ---
 # <a name="get-mediamarketplaceiddetails"></a>GET (/media/{marketplaceId}/details)
 반환 제품 세부 정보 및 메타 데이터에 대 한 하나 이상의 항목입니다.

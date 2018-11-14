@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9126d33c18ede90e9c20339d9a793f3ab2835e76
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026914"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196847"
 ---
 # <a name="launch-an-app-with-a-uri"></a>URI를 사용하여 앱 실행
 
@@ -29,7 +29,7 @@ ms.locfileid: "6026914"
 | [UWP 앱 시작](launch-store-app.md) | 이 항목에서는 ms-windows-store URI 스키마에 대해 설명합니다. 이 URI 스키마로 UWP 앱을 실행하여 Microsoft Store의 특정 페이지를 표시할 수 있습니다. |
 | [Windows 지도 앱 실행](launch-maps-app.md) | 앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. |
 | [피플 앱 실행](launch-people-apps.md) | 이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다. |
-| [화면 캡처 시작](launch-screen-snipping.md) | 새 캡처를 열거나 캡처 및 스케치 앱을 열고 URI 스키마를 사용 하는 방법을 알아봅니다. |
+| [화면 캡처 시작](launch-screen-snipping.md) | URI 스키마를 사용 하 여 캡처 및 스케치 앱을 열고 하거나 새 캡처를 열려고 하는 방법을 알아봅니다. |
 | [앱 URI 처리기를 사용 하 여 웹 사이트에 대해 앱을 사용 하도록 설정](web-to-app-linking.md) | 웹 사이트 기능에 대 한 앱을 지원 하 여 앱 참여를 강화 합니다. |
 
 ## <a name="related-topics"></a>관련 항목

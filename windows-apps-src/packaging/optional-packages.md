@@ -8,12 +8,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 선택적 패키지, 관련된 집합, 패키지 확장, visual studio
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a782ba90fbf350d9a18098d342c05c75dca6ceb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: c21b84467151493836186d1d55ab5e4e542899ec
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033718"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6259125"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>선택적 패키지 및 관련 집합 제작
 선택적 패키지에는 주 패키지에 통합할 수 있는 콘텐츠가 포함되어 있습니다. 이러한 크기 제한에 대 한 대규모 앱 분할 다운로드 가능한 콘텐츠 (DLC)에 유용 하거나 추가 콘텐츠를 전달 하는 것에 대 한 원래 앱에서 분리 합니다.
@@ -29,7 +29,7 @@ ms.locfileid: "6033718"
 모든 최신 개발 도구를 가져오려면 [Windows 10 용 다운로드 및 도구를](https://developer.microsoft.com/windows/downloads)참조 하세요.
 
 > [!NOTE]
-> Microsoft Store에 선택적 패키지 및 관련된 집합을 사용 하는 앱을 제출 하려면 권한이 필요 합니다. Microsoft Store에 제출되지 않은 경우에는 선택적 패키지 및 관련 집합을 개발자 센터 권한 없이 기간 업무(LOB)나 엔터프라이즈 앱에서 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
+> Microsoft Store에 선택적 패키지 및 관련된 집합을 사용 하는 앱을 제출 하려면 권한이 필요 합니다. 선택적 패키지 및 관련된 집합을 스토어에 제출 되지 않은 경우 파트너 센터 권한 없이 줄의 lob (기간 업무) 나 엔터프라이즈 앱에 사용할 수 있습니다. 선택적 패키지 및 관련 집합을 사용한 앱을 제출할 권한을 얻는 방법은 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
 
 ### <a name="code-sample"></a>코드 샘플
 이 문서를 읽고 하는 동안에 어떻게 선택적 패키지 실습 이해 하기 위해 GitHub의 [코드 샘플 선택적 패키지와](https://github.com/AppInstaller/OptionalPackageSample) 함께 수행 하 고 Visual Studio 내에서 설정 작업 관련 좋습니다.

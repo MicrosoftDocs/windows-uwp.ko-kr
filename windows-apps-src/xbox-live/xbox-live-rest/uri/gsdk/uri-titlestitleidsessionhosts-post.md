@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dbbc7baf12daea485dec22389846e5e4acec16c1
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6149501"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6201635"
 ---
 # <a name="post-titlestitle-idsessionhosts"></a>POST (/titles/{Title Id}/sessionhosts)
 새 클러스터 요청을 만듭니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d64e4a2d4251aca6bbce39b5f24e3e5f35295b8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6048680"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6253315"
 ---
 # <a name="receive-data"></a>데이터 수신
 

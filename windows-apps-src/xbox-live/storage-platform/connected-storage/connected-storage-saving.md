@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: d8c29a3371383209ef2c13eaf2b2ffc69b7e0455
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6182460"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6255275"
 ---
 # <a name="use-connected-storage-to-save-data"></a>연결 된 저장소를 사용 하 여 데이터를 저장 합니다.
 

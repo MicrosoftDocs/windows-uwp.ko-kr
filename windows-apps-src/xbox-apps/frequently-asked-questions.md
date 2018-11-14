@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b2ea47f819d3a187621615ee3a85be5af895d3b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: a5ac814dfb86259791de2632587a1cfd0d456a37
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049388"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184826"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -61,15 +61,15 @@ Xbox는 이제 x86 앱 개발이나 x86 Microsoft Store로의 앱 전송을 지�
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Xbox One을 팔고 개발자 모드에서 종료했습니다. 개발자 모드를 비활성화하는 방법은 무엇인가요?
 
-Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터에서 비활성화할 수 있습니다. 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-using-windows-dev-center) 항목의 **Windows 개발자 센터를 사용하여 콘솔 비활성화** 섹션을 참조하세요. 
+Xbox one에 대 한 액세스 더 이상 있는 경우 Windows 파트너 센터에서 비활성화할 수 없습니다. 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-using-partner-center) 항목의 **파트너 센터를 사용 하 여 콘솔 비활성화** 섹션을 참조 하세요. 
 
-### <a name="i-left-the-developer-program-using-windows-dev-center-but-im-in-still-developer-mode-what-do-i-do"></a>Windows 개발자 센터를 사용하여 개발자 프로그램을 종료했지만 개발자 모드에 계속 있습니다. 어떻게 해야 하나요?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>파트너 센터를 사용 하 여 개발자 프로그램 퇴사 하지만 여전히 개발자 모드에서 있음. 어떻게 해야 하나요?
 
 개발자 홈을 시작하고 **Leave developer mode(개발자 모드 나가기)** 단추를 선택합니다. 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다. 
 
 ### <a name="can-i-publish-my-app"></a>내 앱을 게시할 수 있나요?
 
-[개발자 계정](https://developer.microsoft.com/store/register)이 있는 경우 개발자 센터를 통해 [앱을 게시](../publish/index.md)할 수 있습니다. 정품 Xbox One 본체에서 만들고 테스트한 UWP 앱은 현재 Windows가 수행하는 동일한 수집, 검토 및 게시 프로세스를 진행하며 최신 Xbox One 표준을 충족하는지 추가적으로 검토합니다.
+[개발자 계정이](https://developer.microsoft.com/store/register)있는 경우 파트너 센터를 통해 [앱을 게시할](../publish/index.md) 수 있습니다. 정품 Xbox One 본체에서 만들고 테스트한 UWP 앱은 현재 Windows가 수행하는 동일한 수집, 검토 및 게시 프로세스를 진행하며 최신 Xbox One 표준을 충족하는지 추가적으로 검토합니다.
 
 ### <a name="can-i-publish-my-game"></a>내 게임을 게시할 수 있나요?
 

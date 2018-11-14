@@ -8,12 +8,12 @@ ms.date: 5/30/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 개발자 프로그램, 크리에이터 스
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb9c9aa4267e7485b8e1583ff011b6d1cd6070e
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: faf010e2a61199d56a1ae5b9ed08fd373f89cd80
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6157199"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6252304"
 ---
 # <a name="developer-program-overview"></a>개발자 프로그램 개요
 
@@ -28,7 +28,7 @@ Xbox Live 크리에이터 스 프로그램 타이틀 만들기 [유니버설 Win
 Xbox One에서 게이머 큐 레이트 스토어 환경을 제공 하는 Xbox에서 Microsoft Store의 새 크리에이터 스 컬렉션 섹션에 Xbox Live 크리에이터 스 프로그램을 통해 게시 된 게임을 판매 합니다. 개발 및 게임과 알아야 하며 예상 게이머에 게 제공 되는 큐 레이트 스토어 경험 콘솔을 출시할 수 누구 든 지 개방형 플랫폼을 보장 하는 사이 균형을 제공 합니다. Windows 10에서 타이틀 간의 모든 다른 Xbox Live 게임 Microsoft Store에 게시 됩니다.
 
 ### <a name="publishing-and-certification"></a>게시 및 인증
-Xbox Live 크리에이터 스 프로그램의 일환으로 게임을 해제 하려면 [개발자 센터 개발자 프로그램](https://developer.microsoft.com/store/register) 에 등록 해야 합니다. 두 가지 방법으로 게임을 따라야 하는 요구 사항:
+Xbox Live 크리에이터 스 프로그램의 일환으로 게임을 해제 하려면 [파트너 센터 개발자 프로그램](https://developer.microsoft.com/store/register) 에 등록 해야 합니다. 두 가지 방법으로 게임을 따라야 하는 요구 사항:
 
 1. Xbox Live 로그인을 통합 하 고 사용자 id (게이머 태그, 게이머 사진 등)을 표시 합니다. 다른 모든 Xbox Live 서비스는 선택적입니다.
 2. 표준 [Microsoft Store 정책](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx)에 따릅니다.

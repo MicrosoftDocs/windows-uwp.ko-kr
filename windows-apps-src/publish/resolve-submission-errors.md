@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ba47bdf964cab66182aadc6dafb0ae6d34c3ea7
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6145029"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189280"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 

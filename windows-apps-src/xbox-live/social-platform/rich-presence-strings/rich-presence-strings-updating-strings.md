@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 상태, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dd235edd7f47f0a2d9b42be28bd974042de5739
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6149245"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6208270"
 ---
 # <a name="rich-presence-updating-strings"></a>다양 한 상태 문자열 업데이트
 

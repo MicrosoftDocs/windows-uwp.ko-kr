@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eef1edc4e5c725756cdef788bf555f706621741d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038737"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190906"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>앱이 백그라운드로 이동할 때 메모리 회수
 

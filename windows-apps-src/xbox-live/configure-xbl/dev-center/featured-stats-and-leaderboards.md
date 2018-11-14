@@ -1,29 +1,29 @@
 ---
 title: 주요 통계 및 순위표 2017
 author: shrutimundra
-description: Windows 개발자 센터에서 Xbox Live 기능을 갖춘 통계 및 순위표 2017 구성 하는 방법을 알아봅니다
+description: 파트너 센터에서 Xbox Live 기능을 갖춘 통계 및 순위표 2017을 구성 하는 방법에 알아봅니다.
 ms.assetid: e0f307d2-ea02-48ea-bcdf-828272a894d4
 ms.author: kevinasg
 ms.date: 10/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 추천 통계 및 순위표, 순위표, 통계 2017, Windows 개발자 센터
-ms.openlocfilehash: 7db8efe28c6dc85c129823ec8f6b0ddac69b49f4
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 추천 통계 및 순위표, 순위표, 통계 2017 년 파트너 센터
+ms.openlocfilehash: eebf1e96601f7bb576088f71239196f0bb5a124c
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6159711"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6188159"
 ---
-# <a name="configuring-featured-stats-and-leaderboards-2017-on-windows-dev-center"></a>Windows 개발자 센터에서 주요 통계 및 순위표 2017 구성
+# <a name="configuring-featured-stats-and-leaderboards-2017-in-partner-center"></a>파트너 센터의 주요 통계 및 순위표 2017 구성
 
-게임 통계 서비스와 상호 작용을, 상태는 [Windows 개발자 센터](https://developer.microsoft.com/dashboard)에서 정의 해야 합니다. 모든 주요 통계를 순위표로 자동으로 작동 하도록 낮추는 GameHub에 표시 됩니다. 원시 값 저장 됩니다. 게임을 새 값을 제공할지 여부를 확인 하는 것에 대 한 논리를 소유 하는 반면,
+게임 통계 서비스와 상호 작용을, 상태는 [파트너 센터](https://partner.microsoft.com/dashboard)에서 정의 해야 합니다. 모든 주요 통계를 순위표로 자동으로 작동 하도록 낮추는 GameHub에 표시 됩니다. 원시 값 저장 됩니다. 게임을 새 값을 제공할지 여부를 확인 하는 것에 대 한 논리를 소유 하는 반면,
 
 ![게임 허브의 도전 과제 페이지의 스크린샷](../../images/dev-center/featured-stats-and-leaderboards/featured-stats-and-leaderboards-2.png) 위 그림 주요 통계 타이틀의 GameHub에서 어떻게 보이는지 보여 줍니다. 주요 통계는 내에서 빨간색 상자를 표시 합니다.
 
 데이터 플랫폼 2017을 사용 하 여 플레이어의 GameHub 페이지에서 추천 하는 소셜 순위표에 사용 되는 상태를 구성 하기만 하면 됩니다.
 
-추천된 상태 및 순위표 연결 된 게임을 구성 하려면 Windows 개발자 센터를 사용할 수 있습니다. 다음을 수행 하 여 구성을 추가 합니다.
+추천된 상태 및 순위표 연결 된 게임을 구성 하려면 파트너 센터를 사용할 수 있습니다. 다음을 수행 하 여 구성을 추가 합니다.
 
 1. **서비스**아래의 타이틀에 대 한 **주요 통계 및 순위표** 섹션으로 이동 > **Xbox Live** > **주요 통계 및 순위표**합니다.
 2. 모달 폼 열리는 **New** 단추를 클릭 합니다. 입력 되 면 **저장**을 클릭 합니다.

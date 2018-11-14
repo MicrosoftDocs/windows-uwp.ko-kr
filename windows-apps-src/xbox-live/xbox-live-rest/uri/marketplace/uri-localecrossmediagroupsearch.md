@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a5a672c2b9abf986ac46850c8d43ad9ff927871
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6031934"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268139"
 ---
 # <a name="mediamarketplaceidcrossmediagroupsearch"></a>/media/{marketplaceId}/crossMediaGroupSearch
 여러 다른 미디어 그룹에서 항목을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 멀티 플레이 2015 세션, mpsd
 ms.localizationpriority: medium
-ms.openlocfilehash: ad551d07d94f90d89f8abda0b188ea281b4930c2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: e3678d983cc75a2b6c7855279a1b96fb526440d1
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6034793"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272877"
 ---
 # <a name="mpsd-session-details"></a>MPSD 세션 세부 정보
 
@@ -31,7 +31,7 @@ ms.locfileid: "6034793"
 
 ## <a name="session-overview"></a>세션 개요
 
-멀티 플레이어 세션 디렉터리 (MPSD) 세션 세션 이름을 가진 및 세션에 대 한 기본 설정을 제공 하는 JSON 문서가 세션 서식 파일의 인스턴스로 식별 됩니다. 템플릿은은 GUID는 서비스 구성 id (서비스 안내)를 사용 하 여 서비스 구성의 일부입니다. [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 에서이 템플릿을 찾을 수 있고 [Windows 개발자 센터](https://partner.microsoft.com/dashboard/windows/overview) 서비스 구성 수집, 관리 및 보안 정책을 사용 하는 개발자 지향 리소스입니다. 세션 MPSD 통해 액세스 되 면, 사용자 권한 부여 XDP 또는 Windows 개발자 센터를 통해 개발자가 설정할 액세스 정책에 따라 서비스 구성에 대해 수행 됩니다. 세션 멤버십 유효성 검사와 같은 보조 액세스 검사 세션 서비스 구성에 대 한 액세스 권한이 부여 된 후에 로드 될 때 세션 수준에서 수행 됩니다.
+멀티 플레이어 세션 디렉터리 (MPSD) 세션 세션 이름을 가진 및 세션에 대 한 기본 설정을 제공 하는 JSON 문서가 세션 서식 파일의 인스턴스로 식별 됩니다. 템플릿은은 GUID는 서비스 구성 id (서비스 안내)를 사용 하 여 서비스 구성의 일부입니다. [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com) 및 [파트너 센터](https://partner.microsoft.com/dashboard)에서이 템플릿을 찾을 수 있습니다. 서비스 구성은 수집, 관리 및 보안 정책에 사용 되는 개발자 지향 리소스입니다. 세션 MPSD 통해 액세스 되 면, 사용자 권한 부여 XDP 또는 파트너 센터를 통해 개발자가 설정할 액세스 정책에 따라 서비스 구성에 대해 수행 됩니다. 세션 멤버십 유효성 검사와 같은 보조 액세스 검사 세션 서비스 구성에 대 한 액세스 권한이 부여 된 후에 로드 될 때 세션 수준에서 수행 됩니다.
 
 이 항목에서는 템플릿을 사용 하 여 계약 버전 107, Xbox One에 대 한 현재 MPSD에서 사용 되는 버전을 가정 합니다. 계약 버전 105 (104와 동일)를 기반으로 템플릿을 정의한 경우 107 버전을 지원 하기 위해 이러한 변경 해야 합니다. 자세한 내용은 [일반적인 멀티 플레이 2015 마이그레이션 문제](common-issues-when-adapting-multiplayer.md)를 참조 하세요.
 
@@ -175,7 +175,7 @@ https://{authority}/serviceconfigs/{service-config-id}/sessiontemplates/{session
 
 세션의 구성을 제어 하는 방법은 두 가지가 있습니다.
 
--   세션 템플릿 XDP 또는 Windows 개발자 센터를 통해 수집을 사용 합니다.
+-   세션 템플릿 XDP 또는 파트너 센터를 통해 수집을 사용 합니다.
 -   멀티 플레이어 및 매치 메이 킹 WinRT Api 또는 REST Api에 대 한 호출을 사용 합니다. 템플릿을 사용 해야 하지만 템플릿을 구성 하려는 값을 포함할 필요가 없습니다. 참고 타이틀 템플릿에서 이미 설정 되어 상수를 재정의할 수 없습니다.
 
 자체 세션을 정의 하는 별도 JSON 문서 제공 됩니다. 또한 개발자는 특정 제목에 필요한 모든 WinRT 래퍼 기능을 구현 해야 합니다. JSON 문서 및 WinRT 래퍼 코드의 내용을 서로 정확 하 게 반영 해야 및 템플릿 계약 최신 반영 해야 합니다.
@@ -193,7 +193,7 @@ https://{authority}/serviceconfigs/{service-config-id}/sessiontemplates/{session
 
 ## <a name="session-capabilities"></a>세션 기능
 
-MPSD 세션에서의 MPSD 해당 세션에 적용 해야 하는 동작을 구성 하는 상수는 기능입니다. 가장 일반적으로 세션 템플릿에서 접근 권한 값을 설정 하려면 XDP 및 Windows 개발자 센터 사용 합니다. /Constants/system/capabilities 개체에 설정 됩니다. 기능은 필요한 경우 빈 기능 개체를 사용 합니다.
+MPSD 세션에서의 MPSD 해당 세션에 적용 해야 하는 동작을 구성 하는 상수는 기능입니다. 가장 일반적으로 세션 템플릿에서 접근 권한 값을 설정 하려면 XDP 및 파트너 센터 사용 합니다. /Constants/system/capabilities 개체에 설정 됩니다. 기능은 필요한 경우 빈 기능 개체를 사용 합니다.
 
 | 참고                                                                                                       |
 |-------------------------------------------------------------------------------------------------------------------------|

@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 65afbaa4440a5bce43ca6d48126e6cc2b8316466
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023671"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194493"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
 
-[Windows 앱 인증 키트](windows-app-certification-kit.md) 는 다양을 한 앱은 Microsoft Store에 게시할 준비가 되도록 하는 데 도움이 되는 테스트가 포함 되어 있습니다. 테스트 하 여 조건을 세부 정보를 사용 하 여 아래 나열 되 고 오류가 발생할 경우 작업을 제안 합니다.
+[Windows 앱 인증 키트](windows-app-certification-kit.md) 는 다양을 한 앱은 Microsoft Store에 게시할 준비가 되도록 하는 데 도움이 되는 테스트가 포함 되어 있습니다. 테스트 하 여 조건을 세부 정보를 사용 하 여 아래 나열 된 및 오류가 발생할 경우 작업을 제안 합니다.
 
 ## <a name="deployment-and-launch-tests"></a>배포 및 시작 테스트
 
@@ -246,7 +246,7 @@ AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤
 
 기본 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커를 사용하여 파일을 빌드했고 링커에서 */appcontainer* 플래그를 사용하는지 확인하세요.
 
-관리 되는 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커를 Microsoft Visual Studio와 같은 UWP 앱을 빌드하는 데 사용 해야 합니다.
+관리 되는 실행 파일이 테스트에 실패할 경우 최신 컴파일러 및 링커 Microsoft Visual Studio와 같은 UWP 앱을 빌드하는 데 사용 해야 합니다.
 
 **설명**
 

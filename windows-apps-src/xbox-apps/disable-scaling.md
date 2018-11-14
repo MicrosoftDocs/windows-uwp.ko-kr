@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
 ms.localizationpriority: medium
 ms.openlocfilehash: 82b42b25d3894a82e92af9a520ee5f951a5ba344
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026165"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6253362"
 ---
 # <a name="how-to-turn-off-scaling"></a>크기 조정을 끄는 방법   
 기본적으로 응용 프로그램은 XAML 앱의 경우 200%로, HTML 앱의 경우 150%로 크기가 조정됩니다. 기본 배율 인수를 끌 수 있습니다. 이렇게 하면 응용 프로그램에서 디바이스의 실제 픽셀 크기(1910 x 1080 픽셀)를 사용합니다.   

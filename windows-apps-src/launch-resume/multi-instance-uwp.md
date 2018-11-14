@@ -8,11 +8,11 @@ ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c70d696c1211cfa4f929178f0cf0d9da76ae74c2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041071"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6201079"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>다중 인스턴스 유니버설 Windows 앱 만들기
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지오코딩, 지도, 위치
 ms.localizationpriority: medium
 ms.openlocfilehash: bdd956dece4435ceb8e14121ec2b545095af3a11
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043416"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200872"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>지오코딩 및 리버스 지오코딩 수행
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7204c01cc80c50dacb2009b2138a7c046974dc62
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043446"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6260219"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a>MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처
 
