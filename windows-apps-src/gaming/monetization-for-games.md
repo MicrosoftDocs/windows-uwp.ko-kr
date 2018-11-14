@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 수익 창출
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6d31aac20454536c6c25d0a8e2dc2f768ea9aabc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046996"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189117"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 
@@ -29,7 +29,7 @@ ms.locfileid: "6046996"
 
 ## <a name="worldwide-distribution-channel"></a>전 세계 배포 채널
 
-Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상의 국가 및 지역에서 전 세계 다양 한 형식의 결제 Visa, Mastercard, PayPal 등을 통해 한 지원 합니다. 전체 국가 및 지역 목록에 대해서는 [지역/국가 및 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 참조하세요.
+Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상의 국가 및 지역에서 전 세계 다양 한 형식의 결제 Visa, Mastercard, PayPal 등을 통해 한 지원 합니다. 국가 및 지역의 전체 목록, [지역/국가 선택 정의](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)참조 하세요.
 
 ## <a name="set-a-price-for-your-game"></a>게임에 대한 가격 설정
 
@@ -39,8 +39,8 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 
 ### <a name="base-price"></a>기본 가격
 
-게임의 기본 가격은 게임이 _유료_로 분류되는지, _무료_로 분류되는지를 결정합니다. [개발자 센터 대시보드](https://developer.microsoft.com/windows)를 사용하여 국가 및 지역에 따라 기본 가격을 구성할 수 있습니다.
-가격을 결정하는 프로세스에는 [다른 국가로 판매할 때의 세금 책임](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) 및 [특정 시장에 대한 가격 고려 사항](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets)이 포함될 수 있습니다. [특정 시장에 대한 사용자 지정 가격을 설정](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)할 수도 있습니다. 자세한 내용은 [가격 책정 및 지역/국가 선택 정의](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)를 참조하세요.
+게임의 기본 가격은 게임이 _유료_로 분류되는지, _무료_로 분류되는지를 결정합니다. [파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하 여 국가 및 지역에 따라 기본 가격을 구성할 수 있습니다.
+가격을 결정하는 프로세스에는 [다른 국가로 판매할 때의 세금 책임](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) 및 [특정 시장에 대한 가격 고려 사항](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets)이 포함될 수 있습니다. [특정 시장에 대한 사용자 지정 가격을 설정](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets)할 수도 있습니다.
 
 ### <a name="sale-price"></a>판매 가격
 
@@ -49,7 +49,7 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 
 ## <a name="in-game-purchases"></a>게임에서 바로 구매
 
-게임에서 바로 구매는 게임 내에서 제품을 구매하는 것을 말합니다. 일반적으로 _앱에서 바로 구매_라고도 알려져 있습니다. Microsoft 스토어에서 이러한 제품 _추가 기능을_이라고 합니다. [추가 기능은 Windows 개발자 센터 대시보드를 통해 게시](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions)됩니다. 또한 게임 코드에서 추가 기능을 사용하도록 설정해야 합니다.
+게임에서 바로 구매는 게임 내에서 제품을 구매하는 것을 말합니다. 일반적으로 _앱에서 바로 구매_라고도 알려져 있습니다. Microsoft 스토어에서 이러한 제품 _추가 기능을_이라고 합니다. 파트너 센터를 통해 [추가 기능에 게시 됩니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) . 또한 게임 코드에서 추가 기능을 사용하도록 설정해야 합니다.
 
 ### <a name="types-of-add-ons"></a>추가 기능 유형
 
@@ -60,7 +60,7 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 ### <a name="create-in-game-purchases"></a>게임에서 바로 구매 만들기
 
 최신 앱에서 바로 구매 및 라이선스 정보 API는 Windows SDK(Windows10, 버전 1607부터)의 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있습니다. 1607 이상 릴리스를 대상으로 하는 새 게임을 개발하는 경우 __Windows.Services.Store__ 네임스페이스가 최신 추가 기능 유형을 지원하 고 더 나은 성능을 제공하기 때문에 권장됩니다.
-또한 이 네임스페이스는 향후 제공될 제품 유형은 물론, Windows 개발자 센터 및 스토어에서 지원하는 기능과 호환되도록 디자인되었습니다. 이전 버전의 Windows 10용으로 개발할 때는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 대신 사용합니다.
+이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 된 것입니다. 이전 버전의 Windows 10용으로 개발할 때는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 대신 사용합니다.
 
 자세한 내용은 [앱에서 바로 구매 및 평가판](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요.
 
@@ -93,14 +93,14 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 1. Visual Studio에서 게임 솔루션을 엽니다.
 2. Visual Studio 내에서 __프로젝트__ > __스토어__ > __앱 패키지 만들기...__ 로 이동합니다.
 3. 에 대 한 합니다 __Microsoft 스토어에 업로드할 패키지를 원하는?__ 옵션을 __예__를 선택 합니다.
-4. 개발자 센터 개발자 계정으로 로그인합니다. 또는 개발자 계정이 없으면 [등록](https://developer.microsoft.com/store/register)합니다.
+4. [파트너 센터](https://partner.microsoft.com/dashboard) 개발자 계정에 로그인 합니다. 또는 개발자 계정이 없으면 [등록](https://developer.microsoft.com/store/register)합니다.
 5. 업로드 패키지를 만들 앱을 선택합니다. 앱 제출을 아직 만들지 않은 경우 새 앱 이름을 제공하여 새 제출을 만듭니다. 자세한 내용은 [이름을 예약하여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)를 참조하세요.
 6. 패키지가 성공적으로 만들어진 후에 __Windows 앱 인증 키트 시작__을 클릭하여 테스트 프로세스를 시작합니다.
 7. 모든 오류를 수정하여 게임 패키지를 만듭니다.
 
 #### <a name="publish-the-game-as-hidden"></a>게임을 숨김으로 게시
 
-1. [개발자 센터](https://developer.microsoft.com/store)로 이동한 후 로그인합니다.
+1. [파트너](https://partner.microsoft.com/dashboard) 센터로 이동한 다음에 로그인 합니다.
 2. __대시보드 개요__ 또는 __모든 앱__ 페이지에서 사용하려는 앱을 클릭합니다. 앱 제출을 아직 만들지 않은 경우 __새 앱 만들기__를 클릭하고 이름을 예약합니다.
 3. __앱 개요__ 페이지에서 __제출 시작__을 클릭합니다.
 4. 새 제출을 구성합니다. 제출 페이지에서 다음을 수행합니다.
@@ -120,7 +120,7 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 Visual Studio에서 게임 솔루션을 연 상태로 다음 작업을 수행합니다.
 
 1. __프로젝트__ > __스토어__ > __응용 프로그램을 스토어에 연결...__ 로 이동합니다.
-2. 개발자 센터 개발자 계정으로 로그인하고 이 솔루션을 연결할 앱 이름을 선택합니다.
+2. 파트너 센터 개발자 계정에 로그인 하 고이 솔루션을 연결할 앱 이름을 선택 합니다.
 3. __Package.appxmanifest.xml 파일__을 두 번 클릭하고 __패키징__으로 이동하여 게임이 올바르게 연결되었는지 확인합니다.
 
 스토어에 게시하여 라이브 상태로 등록된 게임에 솔루션을 연결한 경우 활성 라이선스가 솔루션에 적용되므로 게임용 추가 기능을 더욱 쉽게 만들 수 있습니다. 자세한 내용은 [앱 패키징](https://msdn.microsoft.com/windows/uwp/packaging/index)을 참조하세요.
@@ -129,7 +129,7 @@ Visual Studio에서 게임 솔루션을 연 상태로 다음 작업을 수행합
 
 추가 기능을 만들 때 적절한 게임 제출에 연결하고 있는지 확인합니다. 추가 기능과 연결된 모든 다양한 정보를 구성하는 방법에 대한 자세한 내용은 [추가 기능 제출](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions)을 참조하세요.
 
-1. [개발자 센터](https://developer.microsoft.com/store)로 이동한 후 로그인합니다.
+1. [파트너](https://partner.microsoft.com/dashboard) 센터로 이동한 다음에 로그인 합니다.
 2. __대시보드 개요__ 또는 __모든 앱__ 페이지에서 추가 기능을 구현하려는 앱을 클릭합니다.
 3. __앱 개요__ 페이지의 __추가 기능__ 섹션에서 __새 추가 기능 만들기__를 선택합니다.
 4. 추가 기능에 대한 제품 유형으로 __개발자 관리 소모 __, __스토어 관리 소모성__ 또는 __지속성__ 중 하나를 선택합니다.

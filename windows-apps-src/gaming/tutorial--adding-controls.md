@@ -8,19 +8,19 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: 4aaacee011b3732b8d1456935239d7a4a5405a4d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: bc5873486bdd9c4adf4ea74b10a240617143ad23
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035170"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193617"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-좋은 UWP(유니버설 Windows 플랫폼) 게임은 다양한 인터페이스를 지원합니다. 플레이어는 Xbox 컨트롤러가 연결 된 PC는 실제 단추가 없는 태블릿에 Windows10 있을 또는 고성능 마우스 및 게임 키보드가 있는 최신 데스크톱 게임 리그 합니다. 게임에서 컨트롤은 [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) 클래스에 구현되어 있습니다. 이 클래스는 세 가지 유형의 입력(마우스 및 키보드, 터치, 게임 패드) 모두를 단일 컨트롤러에 집계합니다. 그 결과로 1인칭 슈팅 게임에서 여러 디바이스에서 작동하는 장르 표준 이동 - 보기 컨트롤러를 사용할 수 있게 되었습니다.
+좋은 UWP(유니버설 Windows 플랫폼) 게임은 다양한 인터페이스를 지원합니다. 플레이어는 Xbox 컨트롤러가 연결 된 PC는 실제 단추가 없는 태블릿에 Windows10 있을 또는 고성능 마우스 및 게임용 키보드가 있는 최신 데스크톱 게임 리그 합니다. 게임에서 컨트롤은 [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) 클래스에 구현되어 있습니다. 이 클래스는 세 가지 유형의 입력(마우스 및 키보드, 터치, 게임 패드) 모두를 단일 컨트롤러에 집계합니다. 그 결과로 1인칭 슈팅 게임에서 여러 디바이스에서 작동하는 장르 표준 이동 - 보기 컨트롤러를 사용할 수 있게 되었습니다.
 
 > [!NOTE]
 > 컨트롤에 대한 자세한 내용은 [게임용 이동 - 보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) 및 [게임용 터치 컨트롤](tutorial--adding-touch-controls-to-your-directx-game.md)을 참조하세요.
@@ -401,7 +401,7 @@ window->PointerReleased +=
 
 
 
-여기에서 **MoveLookController**는 이벤트를 실행한 포인터의 포인터 ID를 보기 영역에 해당되는 특정 변수에 할당합니다. 보기 영역에서 터치가 발생하는 경우에는 **m\_lookPointerID** 변수가 이벤트를 실행시킨 포인터 ID로 설정됩니다. 부울 변수 **m\_lookInUse**는 아직 컨트롤이 해제되지 않았음을 나타내도록 설정됩니다.
+여기에서 **MoveLookController**는 이벤트를 실행한 포인터의 포인터 ID를 보기 영역에 해당되는 특정 변수에 할당합니다. 보기 영역에서 발생 하는 터치의 경우 **m\_lookPointerID** 변수가 이벤트를 발생 시킨 포인터 ID로 설정 됩니다. 부울 변수 **m\_lookInUse**는 아직 컨트롤이 해제되지 않았음을 나타내도록 설정됩니다.
 
 이제 게임 샘플이 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 터치 스크린 이벤트를 처리하는 방법에 대해 살펴보겠습니다.
 
@@ -577,7 +577,7 @@ window->KeyUp +=
 
 
 
-[**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103) 메서드에서 게임 패드가 [추가](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) 상태인지 [제거](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) 상태인지 판단하기 위해 2개의 이벤트가 새로 추가되었습니다. 이러한 이벤트는 **m_gamepadsChanged** 속성을 업데이트합니다. 이 경우에 알려진된 게임 패드의 목록이 변경 되었는지 확인 하려면 **UpdatePollingDevices** 메서드에서 사용 됩니다. 
+[**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103) 메서드에서 게임 패드가 [추가](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) 상태인지 [제거](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) 상태인지 판단하기 위해 2개의 이벤트가 새로 추가되었습니다. 이러한 이벤트는 **m_gamepadsChanged** 속성을 업데이트합니다. **UpdatePollingDevices** 메서드에서 알려진된 게임 패드의 목록이 변경 되었는지 여부를 확인 하려면 사용 됩니다. 
 
 ```cpp
     // Detect gamepad connection and disconnection events.

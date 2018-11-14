@@ -1,19 +1,19 @@
 ---
 title: 새 타이틀 만들기
 author: KevinAsgari
-description: Windows 개발자 센터 UDC (유니버설)를 사용 하 여 Xbox Live에 대 한 새 타이틀을 만드는 방법을 알아봅니다.
+description: 파트너 센터를 사용 하 여 Xbox Live에 대 한 새 타이틀을 만드는 방법을 알아봅니다.
 ms.assetid: b8bd69e6-887a-4b1f-a42d-8affdbec0234
 ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: abf35c30b1e9e1aae24cee5ee2969456a98d13e9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: b072ba3112a363111bce751069bccebfaf7465da
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6038136"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191940"
 ---
 # <a name="create-a-new-title-for-xbox-live"></a>Xbox Live에 대 한 새 타이틀 만들기
 
@@ -24,29 +24,29 @@ ms.locfileid: "6038136"
 이 문서에서는 다음과 같은 가정이 프로세스를 설명 합니다.
 
 1. 유니버설 Windows 플랫폼 (UWP) 타이틀을 개발 하는 합니다.  Xbox One, Windows 10 데스크톱 Pc 및 모바일에 UWP 타이틀이 실행
-2. 타이틀을 구성 하는 Windows 개발자 센터에서 [http://dev.windows.com/](http://dev.windows.com).  잘 모르겠으면, Windows 개발자 센터를 사용 해야 합니다.
+2. 타이틀을 구성 하는 [파트너 센터](https://partner.microsoft.com/dashboard)에서.
 3. Visual Studio를 사용 하는 사용자 지정 게임 엔진은 Unity와 합니다.
 4. 개발 컴퓨터에 Windows 10을 실행 중입니다.
 
-해당 위의 않는 경우이 문서의 나머지 부분에서는 Windows 개발자 센터, 새 프로젝트를 만든 및 Xbox Live 로그인 코드 작성 되어 테스트에 구성 된 제목 하는 데 필요한 모든 안내 합니다.
+해당 위의 않는 경우이 문서의 나머지 부분에서는 제목을 새 프로젝트를 만든 및 Xbox Live 로그인 코드 작성 되어 테스트 된 파트너 센터에서 구성 하는 데 필요한 모든 안내 합니다.
 
 > [!NOTE]
 > Xbox Live 크리에이터 스 프로그램의 일부인 경우 위의 가정 하는 귀하에 게 적용 하 고이 문서와 함께 수행 해야 합니다.
 
-## <a name="dev-center-setup"></a>개발자 센터 설치
+## <a name="partner-center-setup"></a>파트너 센터 설치
 
-모든 Xbox Live 기능 작업을 필수 조건으로 [Windows 개발자 센터](http://dev.windows.com) 에서 생성 한 Xbox Live가 지원 제목이 필요 합니다.
+모든 Xbox Live 기능 작업을 필수 조건으로 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 생성 한 Xbox Live가 지원 제목이 필요 합니다.
 
 ### <a name="create-a-microsoft-account"></a>Microsoft 계정 만들기
 처음에 하나씩 만들 해야 Microsoft 계정 (MSA 라고도)를 설정 하지 않은 경우 [https://go.microsoft.com/fwlink/p/?LinkID=254486](https://go.microsoft.com/fwlink/p/?LinkID=254486).  Office 365 계정이, Outlook.com, 사용 또는 Xbox Live 계정을-MSA 이미 있어야 합니다.
 
 ### <a name="register-as-an-app-developer"></a>앱 개발자로 등록
-개발자 센터에서 새 타이틀 만들기를 허용할지 전에 앱 개발자로 등록 해야 합니다.
+파트너 센터에서 새 타이틀을 만들 수 앱 개발자로 등록 해야 합니다.
 
 Go 등록을 https://developer.microsoft.com/en-us/store/register 등록 프로세스를 따릅니다.
 
 ### <a name="create-a-new-uwp-title"></a>새 UWP 타이틀 만들기
-그런 다음 개발자 센터에서 정의 하는 UWP 제목을 해야 합니다.  이렇게 하면 첫 번째 이동 하면 대시보드에
+그런 다음 파트너 센터에 정의 된 UWP 제목을 해야 합니다.  이렇게 하면 첫 번째 이동 하면 대시보드에
 
 ![](../images/getting_started/first_xbltitle_dashboard.png)
 
@@ -56,7 +56,7 @@ Go 등록을 https://developer.microsoft.com/en-us/store/register 등록 프로�
 <p>
 </p>
 
-대시보드를 클릭 한 후 새 타이틀을 만듭니다.  이름을 예약 해야 합니다.
+그런 다음 새 타이틀을 만듭니다.  이름을 예약 해야 합니다.
 
 ![](../images/getting_started/first_xbltitle_newapp.png)
 

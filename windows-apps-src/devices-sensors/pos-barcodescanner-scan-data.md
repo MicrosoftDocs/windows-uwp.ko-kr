@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: caeda47e51c74976bd76708c60938d2dfc745d54
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047019"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151175"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>바코드 데이터 받기 및 인식하기
 

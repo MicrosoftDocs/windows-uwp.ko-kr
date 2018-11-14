@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, 게임 옵션, 예고편, 고급 목록, java
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e8c9c18840b15efa3aeea7e04ea0546c623fd37
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6051988"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151379"
 ---
 # <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Java 샘플: 앱의 게임 옵션과 예고편 제출
 

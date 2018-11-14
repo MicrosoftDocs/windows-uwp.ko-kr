@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 971e828f4642a0a9c47994b1c7c0bfdbc5f01ad3
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024837"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183580"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -126,7 +126,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 다음 시나리오는 현재 구독 추가 기능에서 지원되지 않습니다.
 
 * 현재 스토어를 통해 직접 고객에게 구독을 판매하는 기능은 지원되지 않습니다. 구독은 디지털 제품의 앱에서 바로 구매에만 사용할 수 있습니다.
-* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](http://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 변경하려면, 고객은 앱에서 현재 구독을 취소한 다음 다른 구독 기간으로 구독을 구매해야 합니다.
+* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](http://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 전환 하려면 고객이 현재 구독을 취소 하 고 앱에서 다른 구독 기간으로 구독을 구매 해야 합니다.
 * 현재 구독 추가 기능은 계층 전환을 지원하지 않습니다(예를 들어, 고객은 기본 구독에서 기능이 더 많은 프리미엄 구독으로 전환할 수 없음).
 * 현재 구독 추가 기능에서는 [영업](../publish/put-apps-and-add-ons-on-sale.md) 및 [홍보 코드](../publish/generate-promotional-codes.md)를 지원하지 않습니다.
 

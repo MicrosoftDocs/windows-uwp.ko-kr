@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결, 오류, 로그
 ms.localizationpriority: medium
 ms.openlocfilehash: fad6a36c3678a6b3c48dcbd78d9c19ed843a118f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050434"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6195784"
 ---
 # <a name="troubleshooting-the-xbox-live-apis"></a>Xbox Live Api 문제 해결
 

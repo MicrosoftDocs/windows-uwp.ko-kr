@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030218"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189898"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
 

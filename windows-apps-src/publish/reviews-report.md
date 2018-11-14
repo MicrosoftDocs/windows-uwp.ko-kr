@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 검토, 주석, 검토자
 ms.localizationpriority: medium
 ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030175"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6195984"
 ---
 # <a name="reviews-report"></a>리뷰 보고서
 

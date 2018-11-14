@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f3205bfa2da1b83fe2c341b1c810f155e796b804
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032184"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149614"
 ---
 # <a name="sensor-orientation"></a>센서 방향
 

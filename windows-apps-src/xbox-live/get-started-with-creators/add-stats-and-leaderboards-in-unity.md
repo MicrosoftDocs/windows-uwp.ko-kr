@@ -8,12 +8,12 @@ ms.date: 10/19/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 크리에이터 스 하나 Unity xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: f6e7a89f694c174a0c93fb45eb7642d70456c895
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: ce81cd20b817efed09e341b04dc667e39567ebed
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6035723"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182841"
 ---
 # <a name="add-player-stats-and-leaderboards-to-your-unity-project"></a>플레이어 통계 및 순위표 Unity 프로젝트에 추가
 
@@ -50,7 +50,7 @@ ms.locfileid: "6035723"
 
 플레이어 상태를 추가 하는 장면에 상태의 데이터 형식과 일치 하는 프리 팹을 끌면 됩니다. Unity의 상태에 대 한 관리자에서 세 가지 값을 지정할 수 있습니다.
 
-* ID는 상태입니다. 이 Windows 개발자 센터에서 구성 된 ID와 일치 해야 하며 대/소문자 구분 합니다.
+* ID는 상태입니다. 이 파트너 센터에서 구성 된 ID와 일치 해야 하며 대/소문자 구분 합니다.
 * 표시 이름 (이 이름은 StatPanel prefab UI에 표시 됩니다.) 상태입니다.
 * 장면 시작 될 때 시작의 초기 값입니다.
 

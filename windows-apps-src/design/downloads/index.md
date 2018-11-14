@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 42f223b858861cf0f965c5b7ea8778426a8340af
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038291"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185888"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  

@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 제한, xbox, 속도 제한
 ms.localizationpriority: medium
-ms.openlocfilehash: b4af61b6fc629e45366a935cc82688afb0e72193
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: a639fb503111e9949ffa02fcccd68087bba61279
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6041879"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193508"
 ---
 # <a name="xbox-live-fine-grained-rate-limiting"></a>Xbox Live 세분화 된 속도 제한
 
@@ -93,7 +93,7 @@ Xbox Live 동일한 고품질 경험에 관계 없이 합리적인이 재생 하
 
 ## <a name="implemented-limits"></a>구현된 제한
 
-다음 서비스가 **월**2016의 위치에 이러한 제한 적용 FGRL 제한을 구현 했습니다. 다시 말해, 이러한 제한이 되므로 동일한 모든 샌드박스 및 제목 **Xbox 개발자 플랫폼 또는 개발자 센터를 통해 게시 되어 월 2016 이전에 제공 된 모든 제목 레거시 것으로 간주 하 고 따라서 제외 됩니다.**
+다음 서비스가 **월**2016의 위치에 이러한 제한 적용 FGRL 제한을 구현 했습니다. 다시 말해, 이러한 제한이 되므로 동일한 모든 샌드박스 및 제목 **Xbox 개발자 플랫폼 또는 파트너 센터를 통해 게시 되어 월 2016 이전에 제공 된 모든 제목 레거시 것으로 간주 하 고 따라서 제외 됩니다.**
 
 | **이름** | **버스트 제한** (제목 및 사용자별 15 초) | **제한 유지** (제목 및 사용자별 300 초) | **인증 제한** (10 x Sustained, 제목 및 사용자별 300 초) |
 |----------------------------|---------------------------|----------------------------|----------------------------|

@@ -1,21 +1,21 @@
 ---
-title: 개발자 센터에 대 한 single sign-on 구성
+title: 파트너 센터에 대 한 single sign-on 구성
 author: KevinAsgari
-description: 구성 하는 방법 대 한 single sign-on 제목을 사용자를 자신의 Xbox Live id입니다.를 사용 하 여 서비스에 로그인 할 수 있도록 개발자 센터에서 설명 합니다.
+description: 구성 하는 방법 대 한 single sign-on 제목을 사용자를 자신의 Xbox Live id입니다.를 사용 하 여 서비스에 로그인 할 수 있도록 파트너 센터에서 설명 합니다.
 ms.assetid: ''
 ms.author: kevinasg
 ms.date: 02/21/2018
 ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터, 대 한 single sign-on
-ms.openlocfilehash: 42f3e77e8f1f622d8c275769b6f77fdd85a1bff0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 01714289ff12d096a17c5474f6a7619680481aa3
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6042052"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6182867"
 ---
-# <a name="configure-single-sign-on-in-dev-center"></a>개발자 센터에 대 한 single sign-on 구성
+# <a name="configure-single-sign-on-in-partner-center"></a>파트너 센터에 대 한 single sign-on 구성
 
 대 한 single sign-on 타이틀을 사용 하 여 자신의 Xbox Live 로그인 사용 하 여 서비스에 로그인 하는 플레이어 수 있습니다. Xbox Live 서비스에 특정 다른 계정 자격 증명을 사용 하 여 한 번 로그인 할 필요 없이 앱 또는 서비스에 대 한 게임 실행에 서명 하는 플레이어 수 있습니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "6042052"
 
 다음을 수행 하 여 구성을 추가 합니다.
 
-1. **서비스**에 이동 타이틀 [개발자 센터](https://developer.microsoft.com/dashboard/windows/overview)에서 선택한 후 > **Xbox Live**합니다.
+1. **서비스**에 이동 타이틀 [파트너 센터](https://partner.microsoft.com/dashboard)에서 선택한 후 > **Xbox Live**합니다.
 
 2. **Xbox Live 대 한 single sign-on에**대 한 링크를 클릭 합니다.
 

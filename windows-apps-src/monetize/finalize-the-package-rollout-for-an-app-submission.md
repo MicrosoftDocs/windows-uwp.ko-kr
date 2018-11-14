@@ -9,11 +9,11 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제
 ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac0ebcef45bc19bd38381a3c6fdfa5d02276be6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044192"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6147458"
 ---
 # <a name="finalize-the-rollout-for-an-app-submission"></a>앱 제출에 대한 출시 완료
 
@@ -26,7 +26,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 앱 제출에 대
 
 * 아직 완료하지 않은 경우 Microsoft Store 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-* 파트너 센터 계정에는 앱에 대 한 제출을 만듭니다. 파트너 센터에서 이렇게 하려면 또는 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용 하 여이 수행할 수 있습니다.
+* 파트너 센터 계정에서 앱에 대 한 제출을 만듭니다. 파트너 센터에서 이렇게 하려면 또는 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용 하 여이 수행할 수 있습니다.
 * 제출에 대한 점진적 패키지 출시를 사용하도록 설정합니다. 이 [파트너 센터에서](../publish/gradual-package-rollout.md)수행할 수 있는 또는 [Microsoft Store 제출 API를 사용 하](manage-app-submissions.md#manage-gradual-package-rollout)여이 수행할 수 있습니다.
 
 ## <a name="request"></a>요청

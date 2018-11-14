@@ -8,12 +8,12 @@ ms.date: 12/13/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: e037101ac5f75107770db6be93cb0c6687edfbd9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: e36999f9fcd2bb0ca289c7866fa8b6ebe8209e63
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6033670"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194983"
 ---
 # <a name="get-started-with-the-xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램 시작
  
@@ -21,13 +21,13 @@ Xbox Live 크리에이터스 프로그램은 개념 승인 없이 간단한 인�
 
 Xbox Live 크리에이터스 프로그램 게임은 유니버설 Windows 플랫폼(UWP) 응용 프로그램이어야 합니다. Xbox One의 경우 [Xbox One의 UWP](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) 그리고 특히 [Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation)를 참조하세요. Xbox Live 크리에이터스 프로그램을 통해 게시된 게임은 도전 과제 또는 온라인 멀티 플레이어 서비스에 액세스할 수 없습니다. 지원되는 서비스의 전체 목록은 [개발자 프로그램 개요 기능 테이블](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/developer-program-overview#feature-table)을 참조하세요.
 
-## <a name="1-ensure-you-have-a-title-created-on-dev-center"></a>1. 개발자 센터에서 만든 타이틀이 있는지 확인
-모든 Xbox Live 타이틀은 로그인하고 Xbox Live 서비스 전화를 걸기 전에 개발자 센터에서 정의되어야 합니다.  [새 크리에이터스 타이틀 만들기](create-and-test-a-new-creators-title.md)에서 이 작업을 수행하는 방법을 설명합니다.
+## <a name="1-ensure-you-have-a-title-created-in-partner-center"></a>1. 파트너 센터에서 만든 타이틀이 있는지 확인
+모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출할 수 있게 됩니다 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 정의 되어야 합니다.  [새 크리에이터스 타이틀 만들기](create-and-test-a-new-creators-title.md)에서 이 작업을 수행하는 방법을 설명합니다.
 
 ## <a name="2-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>2. 적절한 가이드를 따라 IDE 또는 게임 엔진 설정
 플랫폼 및 엔진에 대한 적절한 "시작 가이드"를 따라 진행하면서 Xbox Live의 기본 사항을 알아봅니다.
 
-* [Visual Studio로 크리에이터스 타이틀 개발](develop-creators-title-with-visual-studio.md)은 Visual Studio 프로젝트를 개발자 센터의 Xbox Live 구성과 연결하는 방법을 설명합니다.
+* [Visual Studio로 크리에이터 스 타이틀 개발](develop-creators-title-with-visual-studio.md) 에서는 Visual Studio 프로젝트를 파트너 센터에서 Xbox Live 구성과 연결 하는 방법을 보여 줍니다.
 * [Unity로 크리에이터스 타이틀 개발](develop-creators-title-with-unity.md)은 새 Xbox Live 지원 Unity 게임을 만들고, 단일 사용자와 여러 사용자 로그인을 처리하고, 순위표 및 통계 같은 기능을 추가하고, 기본 Visual Studio 프로젝트를 생성하는 방법을 설명합니다.
 
 Unity는 설명서를 제공하는 유일한 타사 게임 엔진이며 [Construct(2 & 3)](https://www.scirra.com/construct2) 및 [Game Maker Studio](https://www.yoyogames.com/gamemaker) 게임 엔진 또한 Xbox Live를 각각 Construct 또는 Game Maker Studio 게임에 통합하는 것을 돕는 설명서를 제공합니다.

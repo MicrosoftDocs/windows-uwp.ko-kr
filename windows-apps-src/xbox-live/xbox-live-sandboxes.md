@@ -8,18 +8,18 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 35d2e102e80e7d415562e2917d626152331f3fff
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 60452c65a00aca134cfa33aa6378da06b94ac865
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049436"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6195299"
 ---
 # <a name="xbox-live-sandboxes-intro"></a>Xbox Live 샌드박스 소개
 
-[Xbox Live 서비스 구성](xbox-live-service-configuration.md)정보를 구성 해야 온라인으로 타이틀에 대 한 일반적으로 [Windows 개발자 센터](http://dev.windows.com)에서 설명 했습니다.  이 정보에 타이틀에서 플레이어의 잠금을 해제할 수 도전 과제를 표시 하려는 순위표, 매치 메이 킹 구성 등이 포함 됩니다.
+[Xbox Live 서비스 구성](xbox-live-service-configuration.md)정보를 구성 해야 온라인으로 타이틀에 대 한 일반적으로 [파트너 센터](https://partner.microsoft.com/dashboard)에서 설명 했습니다.  이 정보에 타이틀에서 플레이어의 잠금을 해제할 수 도전 과제를 표시 하려는 순위표, 매치 메이 킹 구성 등이 포함 됩니다.
 
-서비스 구성을 변경한 경우 이러한 변경 내용을 Xbox Live의 나머지 부분에서 획득 하 고 타이틀 볼 수 있습니다 전에 개발자 센터에서 게시 해야 합니다.
+서비스 구성을 변경한 경우 이러한 변경 내용을 Xbox Live의 나머지 부분에서 획득 하 고 타이틀 볼 수 있습니다 전에 파트너 센터에서 게시 해야 합니다.
 
 개발 샌드박스 섞어를 게시 합니다.  이러한 격리 된 환경에서 타이틀 변경 내용에 사용할 수 있습니다.  이러한에 설명 된 몇 가지 이점이 제공의 섹션입니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "6049436"
 
 대부분의 개발자 샌드박스 하나만 필요 합니다.  다행히 샌드박스 타이틀을 만들 때 드립니다 만들어집니다.
 
-1. 개발자 센터 대시보드에서 여기로 이동 하 여 샌드박스에 대해 알아보려면:
+1. 다음 파트너 센터로 이동 하 여 샌드박스에 대해 알아보려면:
 ![](images/getting_started/first_xbltitle_dashboard.png)
 
 1. 타이틀에서 클릭 합니다.

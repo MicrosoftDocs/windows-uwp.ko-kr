@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e68f8f48ca9ba67a29c8a52a5d59767a080f642b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026079"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196193"
 ---
 # <a name="flyouts"></a>플라이아웃
 
@@ -32,7 +32,7 @@ ms.locfileid: "6026079"
 
 * [도구 설명](../tooltips.md) 또는 [상황에 맞는 메뉴](../menus.md) 대신에 플라이아웃을 사용하지 마세요. 도구 설명을 사용하여 지정된 시간 후에 숨겨지는 간단한 설명을 표시합니다. 복사 및 붙여넣기 등 UI 요소에 관련된 상황별 작업을 위한 상황에 맞는 메뉴를 사용합니다.
 
-사용 하는 경우에 권장 플라이 아웃 및 대화 상자 (유사한 컨트롤)를 사용 하는 경우 참조 [대화 상자 및 플라이 아웃](index.md)하세요. 
+사용 시기에 대 한 권장 사항에 대 한 플라이 아웃 및 대화 상자 (유사한 컨트롤)를 사용 하는 경우에 [대화 상자 및 플라이 아웃](index.md)참조 하세요. 
 
 ## <a name="examples"></a>예
 

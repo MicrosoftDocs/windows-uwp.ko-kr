@@ -1,20 +1,20 @@
 ---
-author: normesta
+author: hickeys
 Description: You can use extensions to integrate your packaged desktop app with Windows 10 in predefined ways.
 Search.Product: eADQiWindows 10XVcnh
 title: Windows 10과 앱 통합(데스크톱 브리지)
-ms.author: normesta
+ms.author: hickeys
 ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
-ms.openlocfilehash: 252b1309f1218a872ea49dcce7048b890a6139b4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6761ec38b470b798740cbabc72a648f51557edbc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041583"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196399"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Windows 10 패키지로 만든된 데스크톱 응용 프로그램 통합
 
@@ -86,6 +86,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
   </Applications>
 </Package>
 ```
+
 #### <a name="related-sample"></a>관련 샘플
 
 [전환/마이그레이션/제거와 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
@@ -146,6 +147,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
   </Applications>
 </Package>
 ```
+
 #### <a name="related-sample"></a>관련 샘플
 
 [전환/마이그레이션/제거와 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
@@ -194,8 +196,8 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap3:FileTypeAssociation Name="Contoso">
             <uap:SupportedFileTypes>
-              <uap:FileType>.txt</uap:FileType>
-              <uap:FileType>.avi</uap:FileType>
+            <uap:FileType>.txt</uap:FileType>
+            <uap:FileType>.avi</uap:FileType>
             </uap:SupportedFileTypes>
           </uap3:FileTypeAssociation>
         </uap:Extension>
@@ -223,14 +225,13 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/2
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
-
 #### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
     <FileTypeAssociation Name="[AppID]">
         <SupportedVerbs>
-              <Verb Id="[ID]" Extended="[Extended]" Parameters="[parameters]">"[verb label]"</Verb>
+           <Verb Id="[ID]" Extended="[Extended]" Parameters="[parameters]">"[verb label]"</Verb>
         </SupportedVerbs>
     </FileTypeAssociation>
 </Extension>
@@ -272,6 +273,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
   </Applications>
 </Package>
 ```
+
 #### <a name="related-sample"></a>관련 샘플
 
 [전환/마이그레이션/제거와 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
@@ -294,7 +296,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
     <FileTypeAssociation Name="[AppID]" UseUrl="true" Parameters="%1">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
-        </SupportedFileTypes> 
+        </SupportedFileTypes>
     </FileTypeAssociation>
 </Extension>
 ```
@@ -324,7 +326,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
               <uap:SupportedFileTypes>
                 <uap:FileType>.txt</uap:FileType>
                 <uap:FileType>.doc</uap:FileType>
-              </uap:SupportedFileTypes> 
+              </uap:SupportedFileTypes>
             </uap3:FileTypeAssociation>
           </uap:Extension>
         </Extensions>
@@ -351,8 +353,8 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 #### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
 
 ```XML
-<Extension Category="windows.firewallRules">  
-  <FirewallRules Executable="[executable file name]">  
+<Extension Category="windows.firewallRules">
+  <FirewallRules Executable="[executable file name]">
     <Rule
       Direction="[Direction]"
       IPProtocol="[Protocol]"
@@ -360,10 +362,11 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
       LocalPortMax="LocalPortMax"
       RemotePortMin="RemotePortMin"
       RemotePortMax="RemotePortMax"
-      Profile="[Profile]"/>  
-  </FirewallRules>  
+      Profile="[Profile]"/>
+  </FirewallRules>
 </Extension>
 ```
+
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules)에서 찾으세요.
 
 |이름 |설명 |
@@ -378,8 +381,6 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 |RemotePortMax |원격 포트 번호의 범위 내에 있는 최상위 포트 번호입니다 |
 |프로필 |네트워크 종류 |
 
-
-
 #### <a name="example"></a>예
 
 ```XML
@@ -387,15 +388,15 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
   xmlns:desktop2="http://schemas.microsoft.com/appx/manifest/desktop/windows10/2"
   IgnorableNamespaces="desktop2">
   <Extensions>
-    <desktop2:Extension Category="windows.firewallRules">  
-      <desktop2:FirewallRules Executable="Contoso.exe">  
-          <desktop2:Rule Direction="in" IPProtocol="TCP" Profile="all"/>  
-          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="domain"/>  
-          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="public"/>  
+    <desktop2:Extension Category="windows.firewallRules">
+      <desktop2:FirewallRules Executable="Contoso.exe">
+          <desktop2:Rule Direction="in" IPProtocol="TCP" Profile="all"/>
+          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="domain"/>
+          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="public"/>
           <desktop2:Rule Direction="out" IPProtocol="UDP" LocalPortMin="1339" LocalPortMax="1340" RemotePortMin="15"
-                         RemotePortMax="19" Profile="domainAndPrivate"/>  
-          <desktop2:Rule Direction="out" IPProtocol="GRE" Profile="private"/>  
-      </desktop2:FirewallRules>  
+                         RemotePortMax="19" Profile="domainAndPrivate"/>
+          <desktop2:Rule Direction="out" IPProtocol="GRE" Profile="private"/>
+      </desktop2:FirewallRules>
   </desktop2:Extension>
 </Extensions>
 </Package>
@@ -416,6 +417,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 #### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
+
 앱 매니페스트의 패키지 수준에서 이 확장을 선언합니다.
 
 ```XML
@@ -483,11 +485,12 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
         <SupportedVerbs>
             <Verb Id="Edit" MultiSelectModel="[SelectionModel]">Edit</Verb>
         </SupportedVerbs>
-          <SupportedFileTypes>
-                <FileType>"[FileExtension]"</FileType>
+        <SupportedFileTypes>
+            <FileType>"[FileExtension]"</FileType>
         </SupportedFileTypes>
 </Extension>
 ```
+
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)에서 찾으세요.
 
 |이름 |설명 |
@@ -501,9 +504,9 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 패키지 데스크톱 앱에는 일반 데스크톱 앱과 동일한 세 가지 옵션이 있습니다.
 
- * ``Player``: 응용 프로그램은 한 번 활성화 됩니다. 선택한 파일이 모두 인수 매개 변수로 응용 프로그램에 전달 됩니다.
- * ``Single``응용 프로그램: 처음 선택한 파일에 대해 한 번 활성화 됩니다. 다른 파일은 무시됩니다.
- * ``Document``선택한 각 파일에 대 한 응용 프로그램의: 새로운 별도 인스턴스가 활성화 됩니다.
+* ``Player``: 응용 프로그램은 한 번 활성화 됩니다. 선택한 파일이 모두 인수 매개 변수로 응용 프로그램에 전달 됩니다.
+* ``Single``응용 프로그램: 처음 선택한 파일에 대해 한 번 활성화 됩니다. 다른 파일은 무시됩니다.
+* ``Document``선택한 각 파일에 대 한 응용 프로그램의: 새로운 별도 인스턴스가 활성화 됩니다.
 
  다른 파일 형식 및 작업에 대해 다른 기본 설정을 설정할 수 있습니다. 예를 들어 *Document* 모드로 *문서*를, *Player* 모드로 *이미지*를 열고 싶을 수 있습니다.
 
@@ -525,7 +528,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
               <uap3:Verb Id="Preview" MultiSelectModel="Document">Preview</uap3:Verb>
             </uap2:SupportedVerbs>
             <uap:SupportedFileTypes>
-                <uap:FileType>.txt</uap:FileType>
+              <uap:FileType>.txt</uap:FileType>
             </uap:SupportedFileTypes>
         </uap:Extension>
       </Extensions>
@@ -689,6 +692,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     </FileTypeAssociation>
 </Extension>
 ```
+
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)에서 찾으세요.
 
 |이름 |설명 |
@@ -726,6 +730,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
   </Applications>
 </Package>
 ```
+
 <a id="make-file-properties" />
 
 ### <a name="make-file-properties-available-to-search-index-property-dialogs-and-the-details-pane"></a>검색, 색인, 속성 대화 상자, 세부 정보 창에서 파일 속성을 사용할 수 있도록 합니다.
@@ -748,6 +753,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     </uap:FileTypeAssociation>
 </uap:Extension>
 ```
+
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)에서 찾으세요.
 
 |이름 |설명 |
@@ -833,7 +839,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
                 <ThumbnailProviderHandler Clsid ="20000000-0000-0000-0000-000000000001"/>
                 <ExtendedPropertyhandler Clsid ="20000000-0000-0000-0000-000000000001"/>
                 <desktop:CloudFilesContextMenus>
-                    <desktop:Verb Id ="keep" Clsid=     
+                    <desktop:Verb Id ="keep" Clsid=
                        "20000000-0000-0000-0000-000000000001">
                        Always keep on this device</desktop:Verb>
                 </desktop:CloudFilesContextMenus>
@@ -859,19 +865,18 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ### <a name="start-your-application-by-using-a-protocol"></a>프로토콜을 사용 하 여 응용 프로그램을 시작 합니다.
 
-프로토콜 연결을 사용하면 다른 프로그램 및 시스템 구성 요소들을 패키지 앱에서 상호 운영할 수 있습니다. 프로토콜을 사용 하 여 패키지 된 응용 프로그램이 시작 될 때 적절 하 게 동작할 수 있도록 해당 활성화 이벤트 인수에 전달할 특정 매개 변수를 지정할 수 있습니다. 매개 변수는 완전 신뢰 패키지 앱에서만 지원됩니다. UWP 앱은 매개 변수를 사용할 수 없습니다.  
+프로토콜 연결을 사용하면 다른 프로그램 및 시스템 구성 요소들을 패키지 앱에서 상호 운영할 수 있습니다. 프로토콜을 사용 하 여 패키지 된 응용 프로그램이 시작 될 때 적절 하 게 동작할 수 있도록 해당 활성화 이벤트 인수에 전달할 특정 매개 변수를 지정할 수 있습니다. 매개 변수는 완전 신뢰 패키지 앱에서만 지원됩니다. UWP 앱은 매개 변수를 사용할 수 없습니다.
 
 #### <a name="xml-namespace"></a>XML 네임스페이스
 
 http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-
 
 #### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
 
 ```XML
 <Extension
     Category="windows.protocol">
-    <Protocol
+  <Protocol
       Name="[Protocol name]"
       Parameters="[Parameters]" />
 </Extension>
@@ -896,15 +901,16 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
       <Extensions>
         <uap3:Extension
           Category="windows.protocol">
-        <uap3:Protocol
-          Name="myapp-cmd"
-          Parameters="/p &quot;%1&quot;" />
+          <uap3:Protocol
+            Name="myapp-cmd"
+            Parameters="/p &quot;%1&quot;" />
         </uap3:Extension>
       </Extensions>
     </Application>
   </Applications>
 </Package>
 ```
+
 <a id="alias" />
 
 ### <a name="start-your-application-by-using-an-alias"></a>별칭을 사용 하 여 응용 프로그램을 시작 합니다.
@@ -916,7 +922,6 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
-
 #### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
 
 ```XML
@@ -925,8 +930,8 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
     Executable="[ExecutableName]"
     EntryPoint="Windows.FullTrustApplication">
     <AppExecutionAlias>
-            <desktop:ExecutionAlias Alias="[AliasName]" />
-      </AppExecutionAlias>
+        <desktop:ExecutionAlias Alias="[AliasName]" />
+    </AppExecutionAlias>
 </Extension>
 ```
 
@@ -949,9 +954,9 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
         Category="windows.appExecutionAlias"
         Executable="exes\launcher.exe"
         EntryPoint="Windows.FullTrustApplication">
-        <uap3:AppExecutionAlias>
-            <desktop:ExecutionAlias Alias="Contoso.exe" />
-        </uap3:AppExecutionAlias>
+      <uap3:AppExecutionAlias>
+        <desktop:ExecutionAlias Alias="Contoso.exe" />
+      </uap3:AppExecutionAlias>
   </uap3:Extension>
 ...
 </Package>
@@ -983,7 +988,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
     Category="windows.startupTask"
     Executable="[ExecutableName]"
     EntryPoint="Windows.FullTrustApplication">
-    <StartupTask
+  <StartupTask
       TaskId="[TaskID]"
       Enabled="true"
       DisplayName="[DisplayName]" />
@@ -1011,7 +1016,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
           Category="windows.startupTask"
           Executable="bin\MyStartupTask.exe"
           EntryPoint="Windows.FullTrustApplication">
-          <desktop:StartupTask
+        <desktop:StartupTask
           TaskId="MyStartupTask"
           Enabled="true"
           DisplayName="My App Service" />
@@ -1021,6 +1026,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
  </Package>
 ```
+
 <a id="autoplay" />
 
 ### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>사용자가 자신의 PC에 장치를 연결할 때 응용 프로그램을 시작할 수 있도록
@@ -1030,7 +1036,6 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 #### <a name="xml-namespace"></a>XML 네임스페이스
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
-
 
 #### <a name="elements-and-attributes-of-this-extension"></a>이 확장의 요소 및 특성
 
@@ -1080,6 +1085,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </Applications>
 </Package>
 ```
+
 <a id="updates" />
 
 ### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a>Microsoft Store에서 업데이트를 받은 후 자동으로 다시 시작
@@ -1156,6 +1162,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 </Applications>
 </Package>
 ```
+
 이 확장을 사용하는 샘플은 [여기](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/PrintToPDF)를 참조하세요.
 
 <a id="fonts" />
@@ -1179,7 +1186,6 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 ```
 
 전체 스키마 참조는 [여기](https://review.docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts)에서 찾으세요.
-
 
 |이름 |설명 |
 |-------|-------------|
@@ -1206,6 +1212,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
   </Applications>
 </Package>
 ```
+
 <a id="win32-process" />
 
 ### <a name="start-a-win32-process-from-a-universal-windows-platform-uwp-app"></a>유니버설 Windows 플랫폼(UWP) 앱에서 Win32 프로세스를 시작합니다.
@@ -1258,6 +1265,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
 </Package>
 ```
+
 이 확장 모든 장치에서 실행 되는 유니버설 Windows 플랫폼 사용자 인터페이스를 구현 하려는 경우에 유용할 수 있습니다 하지만 완전 신뢰 모드에서 계속 실행 되도록 Win32 응용 프로그램의 구성 요소가 있습니다.
 
 Win32 앱 용 Windows 앱 패키지를 만듭니다. 그런 다음, UWP 앱의 패키지 파일에 이 확장을 추가합니다. 이 확장은 Windows 앱 패키지의 실행 파일을 시작 하려면 나타냅니다.  UWP 앱과 Win32 앱 간에 통신을 원하는 경우에는 하나 이상의 [앱 서비스](../launch-resume/app-services.md)를 설정할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/)를 참조하세요.
