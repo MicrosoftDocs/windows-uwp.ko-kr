@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
 ms.localizationpriority: medium
 ms.openlocfilehash: ab2db3d34ed223b318d65ec497cc0feb7cb16342
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6153458"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6278045"
 ---
 # <a name="gradual-package-rollout"></a>점진적 패키지 배포
 

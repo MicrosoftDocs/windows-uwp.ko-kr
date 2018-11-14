@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b5a9c86e9fd56bab3e4eb30206f64debdf6ac9bf
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: ef85dfa85f6beaabc038a1bec1c9a66cf6ea4148
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6038273"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194820"
 ---
 # <a name="configure-your-xbox-development-console"></a>Xbox 개발 콘솔 구성
 
@@ -40,4 +40,4 @@ ms.locfileid: "6038273"
 
 ## <a name="sign-in-with-a-development-account"></a>개발 계정으로 로그인
 
-에서는 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts) 또는 [Windows 개발자 센터](https://developer.microsoft.com/en-us/windows) 에서 로그인 하는 데 사용 하는 개발 계정을 만들 수 있습니다.
+에서는 [Xbox 개발자 포털 (XDP)](https://xdp.xboxlive.com/User/Contact/MyAccess?selectedMenu=devaccounts) 또는 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 로그인 하는 데 사용 하는 개발 계정을 만들 수 있습니다.

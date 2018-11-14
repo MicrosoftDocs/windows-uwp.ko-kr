@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: b7f700ab97566ad9ec03d0595c55721dd9a9be98
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6202213"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6276689"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>앱 활성화 방법(DirectX 및 C++)
 

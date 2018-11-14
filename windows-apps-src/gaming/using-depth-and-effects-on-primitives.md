@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 깊이, 효과, 기본 형식, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: f81c441910cd0d0205641a119c243cb22d0b695e
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6151103"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268992"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>기본 형식에 깊이 및 효과 사용
 

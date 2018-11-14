@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c954efde29603b0f1d8fef2c80378c87b954e02
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6148994"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6187548"
 ---
 # <a name="bring-custom-c-games-to-uwp-on-xbox"></a>사용자 지정 c + + 게임을을 UWP 가져옵니다 Xbox에서
 

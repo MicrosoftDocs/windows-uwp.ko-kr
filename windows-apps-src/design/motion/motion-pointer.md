@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c54218582b3ef31df07a5969ad5e83be7af2952
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026349"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6282935"
 ---
 # <a name="pointer-click-animations"></a>포인터 클릭 애니메이션
 

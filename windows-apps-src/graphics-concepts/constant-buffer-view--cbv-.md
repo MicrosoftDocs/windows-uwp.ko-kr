@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cca90c705c7bb4dd1c7e283a9c3ed267cd282b56
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6147574"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6195397"
 ---
 # <a name="constant-buffer-view-cbv"></a>CBV(상수 버퍼 뷰)
 
