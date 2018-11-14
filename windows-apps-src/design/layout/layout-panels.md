@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 623ca1484091f9f15b5a6dbedb85ed9d5149154e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6196682"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6674364"
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 

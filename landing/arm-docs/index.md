@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.topic: article
 keywords: ARM, ARM, ARM64 드라이버 빌드 win32 ARM64 앱 빌드에 Windows 10
 ms.openlocfilehash: 83f2a0d03040a682e6965558174294fe27e21bfb
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6454426"
+ms.locfileid: "6661827"
 ---
 # <a name="windows-10-on-arm"></a>ARM 기반 Windows 10
 Windows 10 ARM 프로세서로 구동 되는 Pc에서 실행 됩니다. 이 페이지는 앱 개발 시작 및 플랫폼에 대해 알아볼 수에 대 한 정보를 제공 합니다. 또한 페이지의 맨 아래에 있는 링크를 사용 하 여 피드백을 제공 하기 위해 새.

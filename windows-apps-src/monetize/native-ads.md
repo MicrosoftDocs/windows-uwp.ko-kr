@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 기본 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: 36b96add3aa785ad20ddd1c42cd46e498d0264a6
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6262160"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671393"
 ---
 # <a name="native-ads"></a>기본 광고
 

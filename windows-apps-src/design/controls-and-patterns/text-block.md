@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 423634acc2d3806b4652618331fafd68c908e477
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6275569"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6665536"
 ---
 # <a name="text-block"></a>텍스트 블록
 
