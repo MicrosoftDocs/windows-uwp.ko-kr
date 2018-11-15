@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, 알림, 컬렉션, 그룹, ux, ux 지침, 지침, 알림, 알림, 알림 센터, noninterruptive, 유효 알림, 로깅됩니다 nonintrusive 알림, 관리, 구성
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ac7eab73f2bcfa57ac37ea6da99e1da6b235159
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 849c8ffc66661546a088a3d89747e6690a763e71
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6273616"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6666586"
 ---
 # <a name="toast-notification-ux-guidance"></a>알림 알림 UX 지침
 알림은 부분이 최신 수명; 사용자의 생산성을 하 고 모든 업데이트를 사용 하 여 계속 현재 뿐만 아니라 앱 및 웹 사이트, 약속 된 데 도움이 됩니다. 그러나 알림 overbearing 유용 하 고 사용자 중심 방식으로 설계 되지 않은 경우 주입 식에서 신속 하 게 끌 수 있습니다. 알림은 해제 되 고 로부터 하나 마우스 오른쪽 단추로 클릭 하 고 것 같지 않은 해제 되 면은 켜 집니다 다시 합니다.  따라서 되는지 확인 알림을 사용자의 화면 공간 및 시간의 정중 하므로이 참여 채널을 열어 둘 수 있습니다.
@@ -59,7 +59,7 @@ ctionable 알림은 사용자가 생산성 느낌 작업을 수행 하 고 앱 �
 ## <a name="other-resources"></a>다른 리소스
 이러한 4 개의 점을 위의 지침 및 첫 번째 및 제 3 자 실험 했으므로 분석, 원격 분석을 통해 효과적인 발견 했습니다. 하지만 유의는 이러한 지침은: 지침.  우리는 확신이 사용자 중심 생각을 하 고 고유한 데이터로 학습 대체할 수 아무것도 하지만 알림의 생산성을 향상 시킵니다 이러한 규칙의 데 도움이 됩니다.  
 
-UWP 앱에 현재 알림을 보내는 경우 [개발자 센터](https://developer.microsoft.com/en-us/windows)에서 알림을 변경 사항에 분석을 볼 수 있습니다! 이 데이터는 [Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) 또는 [WNS Api](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)를 사용 하는 경우 무료 제공 됩니다. 이러한 메트릭 됩니다 보다 잘 이해할 windows 플랫폼에서 알림을 처리에 사용자가 알림을와 상호 작용 하는 방법. 왼쪽 면 참여에 메뉴로 이동 하 여이 대시보드에 액세스 > 알림, 알림 페이지 내에서 "분석" 탭을 클릭 합니다.  이 개발자 센터 포털에서 알림을 전송으로 동일한 위치에 있습니다.
+UWP 앱에 현재 알림을 보내는 경우 [파트너 센터](https://partner.microsoft.com/dashboard)에서 알림을 변경 사항에 분석을 볼 수 있습니다! 이 데이터는 [Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) 또는 [WNS Api](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)를 사용 하는 경우 무료 제공 됩니다. 이러한 메트릭 됩니다 보다 잘 이해할 windows 플랫폼에서 알림을 처리에 사용자가 알림을와 상호 작용 하는 방법. 왼쪽 면 참여에 메뉴로 이동 하 여이 데이터에 액세스 > 알림, 알림 페이지 내에서 "분석" 탭을 클릭 합니다.  이 파트너 센터에서 알림을 전송으로 동일한 위치에 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 

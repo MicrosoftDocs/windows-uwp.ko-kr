@@ -7,12 +7,12 @@ ms.author: twhitney
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 37b7ed35edecb95deb4b3ba568227f4cd8e32d9a
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 8e99796decfa5ed434fddee3be4340380e2376a2
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6455355"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654053"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 
@@ -157,7 +157,7 @@ Microsoft 계정을 사용하여 응용 프로그램 또는 서비스를 인증�
 ## <a name="summary"></a>요약
 
 [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) API를 사용하여 앱을 타임라인 및 Cortana에 표시할 수 있습니다.
-* [Windows 개발자 센터](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)에서 **UserActivity** API에 대해 자세히 알아보세요.
+* [ **UserActivity** API에 대 한 자세한 내용을 보려면](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * [샘플 코드](https://github.com/Microsoft/project-rome)를 확인합니다.
 * [더 정교한 적응형 카드](http://adaptivecards.io/)를 참조하세요.
 * [Microsoft Graph](https://developer.microsoft.com/graph/)를 통해 iOS, Android 또는 웹 서비스에서 **UserActivity**를 게시합니다.

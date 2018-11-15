@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 크로스 플레이, 재생 위치
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4a8a71ecb8461ae875c19104af1a6a712330d1
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6282543"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6837512"
 ---
 # <a name="get-started-with-cross-play-games"></a>크로스 플레이 게임 시작
 

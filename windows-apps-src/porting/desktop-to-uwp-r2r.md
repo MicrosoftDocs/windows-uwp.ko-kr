@@ -8,19 +8,19 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, 컴파일러 네이티브 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: 231d5aa895cb4cf63ade01660df61e32424e67c7
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b7965c42a5d8ff99fc0dc9e28213d92bdcf715b2
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6444727"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6656791"
 ---
 # <a name="optimize-your-net-desktop-apps-with-native-images"></a>기본 이미지를 사용 하 여.NET 데스크톱 앱을 최적화 합니다.
 
 > [!NOTE]
 > 일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.
 
-바이너리를 미리 컴파일하여.NET Framework 응용 프로그램의 시작 시간을 개선할 수 있습니다. 패키지 및 Windows 스토어를 통해 배포 하는 큰 응용 프로그램에서이 기술을 사용할 수 있습니다. 경우에 따라 20% 성능 개선을 관찰 했습니다. [기술 개요](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md)에서이 기술에 대해 자세히 알아볼 수 있습니다.
+바이너리를 미리 컴파일하여.NET Framework 응용 프로그램의 시작 시간을 개선할 수 있습니다. 패키지 및 Microsoft Store를 통해 배포 하는 큰 응용 프로그램에서이 기술을 사용할 수 있습니다. 경우에 따라 20% 성능 개선을 관찰 했습니다. [기술 개요](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md)에서이 기술에 대해 자세히 알아볼 수 있습니다.
 
 [NuGet 패키지](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler)를 네이티브 이미지 컴파일러의 미리 보기 버전을 출시 했습니다 했습니다. .NET Framework 4.6.2 버전을 대상으로 하는.NET Framework 응용 프로그램에이 패키지를 적용할 수 이상. 이 패키지는 응용 프로그램에서 사용 되는 모든 이진 파일에 기본 페이로드를 포함 하는 사후 빌드 단계를 추가 합니다. 이전 버전이 여전히 MSIL 코드를 로드 하는 동안 응용 프로그램이.NET 4.7.2 이상 실행이 최적화 된 페이로드를 로드 됩니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "6444727"
 
 1. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **Configuration Manager**를 선택 합니다.
 
-2. 선택 **< 새로 만들기. >** **플랫폼** 드롭다운 메뉴 이름 옆의 실행 파일을 생성 하는 프로젝트입니다.
+2. Select **<New입니다. >** **플랫폼** 드롭다운 메뉴 이름 옆의 실행 파일을 생성 하는 프로젝트입니다.
 
 3. **새 프로젝트 플랫폼** 대화 상자에서 드롭다운 목록에서 **복사 설정** **을 모든 CPU**로 설정 되어 있는지 확인 합니다.
 

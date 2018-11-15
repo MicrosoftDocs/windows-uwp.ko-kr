@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a86aa5a78bc4df9deaeea239356345c33736d942
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6651439"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6834464"
 ---
 # <a name="stream-output-so-stage"></a>SO(스트림 출력) 단계
 
