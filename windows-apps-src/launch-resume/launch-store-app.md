@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: ecb99c16d413e5e9869215f2d048ad6d9d52206f
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6454118"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668478"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Microsoft Store 앱 열기
 
@@ -43,7 +43,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">제품에 대한 PDP(제품 세부 정보 페이지)를 실행합니다. <p>저장소 ID는 Windows 10 고객에게 권장되고 모든 OS 버전에서 작동하지만 이전 방식(예: PFN)도 여전히 지원됩니다.</p>
-<p>이러한 값은 각 앱에 대한 앱 관리 섹션의 <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">앱 ID</a> 페이지에 있는 Windows 개발자 센터 대시보드에서 확인할 수 있습니다.</p>
+<p>이러한 값은 각 앱에 대 한 앱 관리 섹션의 <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">앱 id</a> 페이지에 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 찾을 수 있습니다.</p>
 </td>
 <td>
 스토어 ID <p>(권장)</p>
