@@ -8,16 +8,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 센터, 계정 설정, 프로필, 계정 프로필, 개발자 계정, 개발자 계정 설정
 ms.localizationpriority: medium
-ms.openlocfilehash: 90bf81f23bcffe05278d12bab7abb2425f7eb773
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 0acbf8378d2cffa7c083e1da06ed0775df69d60e
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6670649"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6974638"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>계정 설정 및 프로필 정보 관리
 
-확인 하 고 개발자 계정 설정 및 프로필 정보는 [파트너 센터](https://partner.microsoft.com/dashboard)의 **계정 설정** 섹션에서 업데이트할 수 있습니다. 
+확인 하 고 개발자 계정 설정 및 프로필 정보 [파트너 센터](https://partner.microsoft.com/dashboard)의 **계정 설정** 섹션에서 업데이트할 수 있습니다. 
 
 > [!NOTE]
 > **메시지 센터** (파트너 센터의 위쪽에 메시지 아이콘을 선택 하 여 액세스할 수 있습니다)는 알림 기본 설정 (예: 유형을 알림 및 수신 방법)을 관리할 수 있습니다.
