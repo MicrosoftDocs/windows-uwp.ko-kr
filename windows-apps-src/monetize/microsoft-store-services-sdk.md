@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f29062e00701f578b63f79935d17b1203afc0f
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6856594"
+ms.locfileid: "6978972"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Microsoft Store Services SDK를 사용하여 고객과 소통
 
@@ -144,4 +144,4 @@ Microsoft Store Services SDK의 Microsoft.Services.Store.Engagement.dll 라이�
 * [A/B 테스트로 실험 실행](run-app-experiments-with-a-b-testing.md)
 * [앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)
 * [파트너 센터 푸시 알림을 받도록 앱 구성](configure-your-app-to-receive-dev-center-notifications.md)
-* [파트너 센터에 대 한 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)
+* [파트너 센터에 대해 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)
