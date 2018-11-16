@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
 ms.openlocfilehash: 82ff87e4621d7dda3c3fd37d95d3d8d7812024e6
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6859538"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6996200"
 ---
 # <a name="author-com-components-with-cwinrt"></a>C++/WinRT으로 COM 구성 요소 작성
 

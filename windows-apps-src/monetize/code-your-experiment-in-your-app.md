@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: c9212f3a120e03bd436b77e0dd66be4367ded8e1
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6857132"
+ms.locfileid: "6971905"
 ---
 # <a name="code-your-app-for-experimentation"></a>실험용 앱 코딩
 
@@ -106,7 +106,7 @@ ms.locfileid: "6857132"
 ## <a name="related-topics"></a>관련 항목
 
 * [프로젝트 만들기 및 파트너 센터에서 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [파트너 센터에서 실험을 정의 합니다.](define-your-experiment-in-the-dev-center-dashboard.md)
+* [파트너 센터에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
 * [파트너 센터에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)

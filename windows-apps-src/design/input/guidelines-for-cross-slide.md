@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c9234463ad011cc0b4d289bba9fe1ff1873ed46
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838897"
+ms.locfileid: "6978202"
 ---
 # <a name="guidelines-for-cross-slide"></a>교차 방향으로 밀기에 대한 지침
 

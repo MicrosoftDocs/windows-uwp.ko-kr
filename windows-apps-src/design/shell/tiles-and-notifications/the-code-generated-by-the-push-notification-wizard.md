@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b39211c4b21a68fc0e563f73805805dcf1f4641
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6846396"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6989668"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
  

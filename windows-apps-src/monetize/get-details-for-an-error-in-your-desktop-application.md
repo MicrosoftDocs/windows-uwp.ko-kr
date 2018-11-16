@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: 922ab18bfebfbe539788ade3caa7626919d6b19a
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6853910"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6995064"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기
 
@@ -102,7 +102,7 @@ Authorization: Bearer <your access token>
 | osBuild         | 문자열  | 오류가 발생한 OS의 빌드 번호입니다.       |
 | applicationVersion         | 문자열  |   오류가 발생한 응용 프로그램 실행 파일의 버전입니다.     |
 | deviceModel           | 문자열  | 오류가 발생했을 때 앱을 실행한 장치 모델을 지정하는 문자열입니다.   |
-| osVersion       | 문자열  | 데스크톱 응용 프로그램이 설치된 OS 버전을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>Windows 7</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows10</strong></li><li><strong>WindowsServer 2016</strong></li><li><strong>Windows Server 1709</strong></li><li><strong>알 수 없음</strong></li></ul>    |
+| osVersion       | 문자열  | 데스크톱 응용 프로그램이 설치된 OS 버전을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>Windows 7</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>WindowsServer 2016</strong></li><li><strong>Windows Server 1709</strong></li><li><strong>알 수 없음</strong></li></ul>    |
 | osRelease       | 문자열  |  오류가 발생한 OS 릴리스 또는 플라이팅 링(OS 버전 내 하위 집단)을 나타내는 다음 문자열 중 하나입니다.<p/><p>Windows 10:</p><ul><li><strong>버전 1507</strong></li><li><strong>버전 1511</strong></li><li><strong>버전 1607</strong></li><li><strong>버전 1703</strong></li><li><strong>버전 1709</strong></li><li><strong>버전 1803</strong></li><li><strong>릴리스 미리 보기</strong></li><li><strong>초기 참가자</strong></li><li><strong>이후 참가자</strong></li></ul><p/><p>Windows Server 1709:</p><ul><li><strong>RTM</strong></li></ul><p>Windows Server 2016:</p><ul><li><strong>버전 1607</strong></li></ul><p>Windows 8.1:</p><ul><li><strong>업데이트 1</strong></li></ul><p>Windows 7:</p><ul><li><strong>Service Pack 1</strong></li></ul><p>OS 릴리스 또는 플라이팅 링을 알 수 없는 경우 이 필드의 값은 <strong>알 수 없음</strong>입니다.</p>    |
 | deviceType      | 문자열  | 오류가 발생한 장치 유형을 나타내는 다음 문자열 중 하나입니다. <p/><ul><li><strong>PC</strong></li><li><strong>서버</strong></li><li><strong>알 수 없음</strong></li></ul>     |
 | cabDownloadable           | 부울  | 이 사용자에 대해 CAB 파일을 다운로드할 수 있는지 여부를 나타냅니다.   |

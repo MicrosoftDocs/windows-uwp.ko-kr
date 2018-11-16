@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6848927"
+ms.locfileid: "6972431"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사용 하 여
 
@@ -200,11 +200,11 @@ UWP XAML API를 호스팅 몇 가지 형식 및 멤버 이러한 작업을 수�
 
 사용자가 부모 UI 요소의 크기를 변경 하는 경우 예상 대로 표시 UWP 컨트롤 하는지 필요한 레이아웃 변경을 처리 해야 합니다. 다음은 몇 가지 중요 한 시나리오를 고려해 야 합니다.
 
-1. **Windows.UI.Xaml.UIElement의 [**측정**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 메서드를 호출 하는 부모 UI 요소를 표시 하는 **Windows.UI.Xaml.UIElement** **DesktopWindowXamlSource**에서 호스팅하는 데 필요한 사각형 영역의 크기를 가져오려면 해야 하는 경우 **. 예:
+1. **Windows.UI.Xaml.UIElement의 [**측정**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 메서드를 호출 하는 부모 UI 요소를 표시 하는 **Windows.UI.Xaml.UIElement** **DesktopWindowXamlSource**에서 호스팅하는 데 필요한 사각형 영역의 크기를 가져오려면 해야 하는 경우 **. 예를 들면 다음과 같습니다.
     * WPF 응용 프로그램에서의 호스트 **DesktopWindowXamlSource** [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) [**MeasureOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) 메서드에서이 수행할 수 있습니다.
     * Windows Forms 응용 프로그램에서 **DesktopWindowXamlSource**를 호스트 하는 [**컨트롤**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) 의 [**GetPreferredSize**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.getpreferredsize) 메서드에서이 수행할 수 있습니다.
 
-2. 부모 UI 요소 변경, 크기 호출 **Windows.UI.Xaml.UIElement** 루트의 [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 메서드는 **DesktopWindowXamlSource**에서 호스팅하는 합니다. 예:
+2. 부모 UI 요소 변경, 크기 호출 **Windows.UI.Xaml.UIElement** 루트의 [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 메서드는 **DesktopWindowXamlSource**에서 호스팅하는 합니다. 예를 들면 다음과 같습니다.
     * WPF 응용 프로그램에서 **DesktopWindowXamlSource**호스팅하는 [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) 개체의 [**ArrangeOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.arrangeoverride) 메서드에서 이렇게 할 수 있습니다.
     * Windows Forms 응용 프로그램에서 수행할 수 있습니다이 [**컨트롤**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) 의 [**SizeChanged**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.sizechanged) 이벤트 처리기에서 해당 호스트 **DesktopWindowXamlSource**.
 

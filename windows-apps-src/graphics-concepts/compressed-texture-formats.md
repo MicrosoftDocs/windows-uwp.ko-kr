@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dd0ff85198107263fba458bd97c0323a7049d20
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838768"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6993976"
 ---
 # <a name="compressed-texture-formats"></a>압축된 텍스처 형식
 

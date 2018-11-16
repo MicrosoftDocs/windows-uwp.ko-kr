@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d10478d76be88138d1382793bd8b5e0d5b3ef41a
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6847423"
+ms.locfileid: "6987150"
 ---
 # <a name="stencil-formats-not-supported-with-streaming-resources"></a>스트리밍 리소스에서 지원되지 않는 스텐실 형식
 
