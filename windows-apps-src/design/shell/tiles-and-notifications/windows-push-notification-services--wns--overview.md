@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 633fd26a7dfc799f9b9c9058f88ba6b1fa40ac57
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6458548"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6842289"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
  
@@ -38,7 +38,7 @@ ms.locfileid: "6458548"
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>앱을 등록하고 클라우드 서비스용 자격 증명 받기
 
 
-WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱을 등록해야 합니다. 이렇게 하면 클라우드 서비스가 WNS로 인증하는 데 사용할 자격 증명을 앱에 제공합니다. 이러한 자격 증명은 패키지 SID(보안 식별자)와 비밀 키로 구성됩니다. 이 등록을 수행하려면 [Windows 개발자 센터](http://go.microsoft.com/fwlink/p/?linkid=511146)로 이동하여 **대시보드**를 선택합니다. 앱을 만든 후에는 **앱 관리 - WNS/MPNS** 페이지의 지침에 따라 자격 증명을 검색할 수 있습니다. Live Services 솔루션을 사용하려면 이 페이지의 **라이브 서비스 사이트** 링크를 따라 이동합니다.
+WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱을 등록해야 합니다. 이렇게 하면 클라우드 서비스가 WNS로 인증하는 데 사용할 자격 증명을 앱에 제공합니다. 이러한 자격 증명은 패키지 SID(보안 식별자)와 비밀 키로 구성됩니다. 이 등록을 수행 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인 합니다. 앱을 만든 후에는 **앱 관리 - WNS/MPNS** 페이지의 지침에 따라 자격 증명을 검색할 수 있습니다. Live Services 솔루션을 사용하려면 이 페이지의 **라이브 서비스 사이트** 링크를 따라 이동합니다.
 
 각 앱에는 해당 클라우드 서비스에 사용할 고유 자격 증명 집합이 있습니다. 이 자격 증명은 다른 앱에 알림을 보내는 데 사용할 수 없습니다.
 

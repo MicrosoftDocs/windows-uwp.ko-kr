@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 02eb9179cbc4a5fed5d1f6dc37622491859a7552
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648024"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6846006"
 ---
 # <a name="tier-3"></a>계층 3
 

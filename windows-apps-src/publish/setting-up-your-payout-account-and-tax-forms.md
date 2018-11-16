@@ -8,12 +8,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f652ae186ced996c103a60aa8f13956a5da59ca
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 767ea7ca6a5f226fda75d97c3497ae77a5819626
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665925"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845654"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
@@ -44,8 +44,8 @@ Microsoft Store의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 
  
 **지급 계좌를 설정하려면**
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard)오른쪽 상단 모서리에서 아이콘을 선택 하 여 **계정 설정** 으로 이동 합니다.
-2.  **계정 설정** 페이지의 왼쪽 탐색 메뉴에서 **지급 계좌**를 클릭합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)오른쪽 상단 모서리에서 **계정 설정** 아이콘을 선택 하 고 **개발자 설정**을 선택 합니다.
+2.  왼쪽된 탐색 메뉴에서 **지급 계좌**를 선택 합니다.
 
    > [!NOTE]
    > 이는 중요한 정보이므로 다시 로그인하라는 메시지가 표시될 수 있습니다.
@@ -136,8 +136,8 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
  
 **세금 프로필을 완성하려면**
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard)오른쪽 상단 모서리에 있는 **계정 설정** 아이콘을 클릭 합니다.
-2.  **계정 설정** 페이지의 왼쪽 탐색 메뉴에서 **세금 프로필**을 클릭합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)오른쪽 상단 모서리에서 **계정 설정** 아이콘을 선택 하 고 **개발자 설정**을 선택 합니다.
+2.  왼쪽된 탐색 메뉴에서 **세금 프로필**을 선택 합니다.
 
    > [!NOTE]
    > 이는 중요한 정보이므로 다시 로그인하라는 메시지가 표시될 수 있습니다.

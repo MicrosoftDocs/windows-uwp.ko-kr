@@ -7,12 +7,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2efea81f3520e6fb1a797394656587d2a29201aa
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: e6060e8da2ab4308deb3896b3ad209ab1093b056
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6459151"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6970426"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>효과 및 Windows UI를 사용 하 여 환경을 조정
 
@@ -118,7 +118,7 @@ API는 기존 코드 몇 가지 간단한 단계에 추가할 수 있습니다.
 
 ## <a name="fast-vs-slow-effects"></a>빠른 느린 효과 비교
 
-CompositionCapabilties API에서 제공 된 [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) 및 [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) 메서드의 피드백에 따라, 응용 프로그램 최적화 된 다른 효과 자신의 대 한 비용이 많이 드는 또는 지원 되지 않는 효과를 결정할 수 있습니다. 디바이스. 일부 효과 일관 되 게 다른 것 보다 더 많은 리소스 집약적 것으로 알려진 제한적으로 사용 해야 및 기타 효과 더욱 자유롭게 사용할 수 있습니다. 하지만 모든 효과 대해 주의 때 사용할지 체인 및 일부 시나리오 또는 조합으로 애니메이션 효과 그래프의 성능 특성을 변경할 수 있습니다. 다음은 개별 효과 대 한 몇 가지 대략 성능 특성을입니다.
+CompositionCapabilities API에서 제공 된 [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) 및 [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) 메서드의 피드백에 따라, 응용 프로그램 최적화 된 다른 효과 자신의 대 한 비용이 많이 드는 또는 지원 되지 않는 효과를 결정할 수 있습니다. 디바이스. 일부 효과 일관 되 게 다른 것 보다 더 많은 리소스 집약적 것으로 알려진 제한적으로 사용 해야 및 기타 효과 더욱 자유롭게 사용할 수 있습니다. 하지만 모든 효과 대해 주의 때 사용할지 체인 및 일부 시나리오 또는 조합으로 애니메이션 효과 그래프의 성능 특성을 변경할 수 있습니다. 다음은 개별 효과 대 한 몇 가지 대략 성능 특성을입니다.
 
 - 고성능 영향을 미칠 수 있는 효과 다음과 같습니다 – 가우시안 흐림, 그림자 마스크, BackDropBrush, HostBackDropBrush, 및 시각적 계층입니다. 이러한 저사양 장치 [(기능 수준 9.1 9.3)](https://msdn.microsoft.com/library/windows/desktop/ff476876(v=vs.85).aspx)에 대 한 권장 되지 않습니다 및 고급 장치에서 신중 하 게 사용 해야 합니다.
 - 색 매트릭스를 특정 혼합 효과 BlendModes (광도, 색상, 채도 및 색조)를 포함 하는 중간 크기 성능에 미치는 영향을 사용 하 여 효과 추천, SceneLightingEffect, 및 (시나리오에 따라) BorderEffect 합니다. 이러한 효과 저사양 장치에서 특정 시나리오를 사용 하 여 작동할 수 있지만 주의 체인 하 고 애니메이션을 적용 하는 경우 사용 해야 합니다. 두 개 이하의 사용을 제한 하 고만 전환에 애니메이션 효과 주는 것이 좋습니다.

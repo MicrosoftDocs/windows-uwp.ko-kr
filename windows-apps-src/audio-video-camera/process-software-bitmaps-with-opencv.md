@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
 ms.openlocfilehash: b9f1f2050590267d0a98779eba11bbe0b363da0c
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6834673"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6970105"
 ---
 # <a name="process-bitmaps-with-opencv"></a>OpenCV로 비트맵 처리
 

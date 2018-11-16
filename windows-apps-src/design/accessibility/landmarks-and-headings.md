@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 250ed555e6fcf7dc40d31d89a40fa7a96295aacf
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6669875"
+ms.locfileid: "6836441"
 ---
 # <a name="landmarks-and-headings"></a>랜드마크 및 머리글
 

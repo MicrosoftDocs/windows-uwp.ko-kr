@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 패키징
 ms.localizationpriority: medium
 ms.openlocfilehash: 0268e858ecbcaaee95796fa590d4a9994dcfb505
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6658277"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6838808"
 ---
 # <a name="manual-app-packaging"></a>수동 앱 패키징
 

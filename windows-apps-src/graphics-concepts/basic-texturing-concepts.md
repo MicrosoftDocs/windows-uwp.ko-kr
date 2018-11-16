@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c48b7b007c1af1eaf6013d5f6e99468713d50745
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6837543"
 ---
 # <a name="basic-texturing-concepts"></a>기본 텍스처 지정 개념
 

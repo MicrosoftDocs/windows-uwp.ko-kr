@@ -9,11 +9,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a94a07eb80e0b181e49a74beba7690d8a57bfaa6
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6672708"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845700"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 

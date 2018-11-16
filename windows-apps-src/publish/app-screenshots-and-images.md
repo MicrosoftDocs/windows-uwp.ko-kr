@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bd5a92f1e8dfe762ac3433bf64f9fe705644a9f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 4899e117096cf6d03c497fec79038e6d96aca3fd
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6669078"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6840960"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 
@@ -65,7 +65,7 @@ Store에서 더 많은 사용자 정의 디스플레이 만들기 위해 Store �
 
 ### <a name="916-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>9:16 포스터 아트(720 x 1080 또는 1440 x 2160 픽셀)
 
-이는 Windows 10 및 Xbox 장치의 고객을 위한 주 로고 이미지로도 사용되기 때문에 적절한 표시를 위해 이 이미지를 제공할 것을 **적극 권장**합니다. 이를 포함시키지 않으면 목록이 적절하게 표시되지 않을 수 있으며, Store를 검색하는 동안 고객에게 표시되는 다른 목록과 일치하지 않게 됩니다. 이 이미지는 검색 결과나 편집본 컬렉션에서 사용될 수도 있습니다.
+이는 Windows 10 및 Xbox 장치의 고객을 위한 주 로고 이미지로도 사용되기 때문에 적절한 표시를 위해 이 이미지를 제공할 것을 **적극 권장**합니다. 목록을 않으면 하 고 저장소를 검색 하는 동안 고객에 게 표시 하는 다른 목록과 일치 하지 못하기 좋은 나타나지 않을 수 있습니다. 이 이미지는 검색 결과나 편집본 컬렉션에서 사용될 수도 있습니다.
 
 이 이미지에는 앱의 이름이 포함되어 있어야 하고, 이미지의 텍스트는 사용 가능한 가독성 요구 사항(4.51 대비 비율)을 충족해야 합니다. 텍스트 오버레이가 이 이미지의 하단 1/4 부분에 표시될 수 있으므로 텍스트나 키 이미지가 거기에 포함되어 있어서는 안 됩니다.
 

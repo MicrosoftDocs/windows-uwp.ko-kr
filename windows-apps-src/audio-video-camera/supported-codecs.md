@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 57a604b1b3996019bcf6e39bc88c9a59a74cb51c
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6654621"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6841380"
 ---
 # <a name="supported-codecs"></a>지원되는 코덱
 

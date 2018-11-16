@@ -1,7 +1,7 @@
 ---
 author: Xansky
 Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must define your experiment in Partner Center.
-title: 파트너 센터에서 실험을 정의 합니다.
+title: 파트너 센터에서 실험 정의
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 ms.author: mhopkins
 ms.date: 02/08/2017
@@ -9,13 +9,13 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c1d48524bcc525f57f42e5364d27611602ab52
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6837461"
+ms.locfileid: "6973281"
 ---
-# <a name="define-your-experiment-in-partner-center"></a>파트너 센터에서 실험을 정의 합니다.
+# <a name="define-your-experiment-in-partner-center"></a>파트너 센터에서 실험 정의
 
 [프로젝트 만들기 및 파트너 센터에서 원격 변수를 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 하 고 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을를 프로젝트에서 실험을 만들 준비가 됩니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
 

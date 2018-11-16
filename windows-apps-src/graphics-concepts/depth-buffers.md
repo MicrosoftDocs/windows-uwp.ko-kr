@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: fb7ff4b23f9735347ce75e2e565c1b420ec936d6
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6458322"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6843193"
 ---
 # <a name="depth-buffers"></a>깊이 버퍼
 

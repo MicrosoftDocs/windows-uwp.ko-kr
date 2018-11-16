@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: da2a3fc507915f3ed20b718f5a40cca3d0ba5e0b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6248863"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6834229"
 ---
 # <a name="post-itemid"></a>POST ({itemID})
 전체 또는 일부 소모 성 인벤토리 항목의 사용 되었는지 나타냅니다 점감 수량 요청 된 양만큼 소모 성입니다.

@@ -9,11 +9,11 @@ keywords: Windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
 ms.openlocfilehash: 7534b6764bc98c415b557d100d869df186453626
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6446944"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6839203"
 ---
 # <a name="introduction-to-multi-user-applications"></a>다중 사용자 응용 프로그램 소개
 

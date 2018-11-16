@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 37193d28bbb060bc7e315a15dd83fc0084a6b861
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6674324"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6840947"
 ---
 # <a name="data-binding"></a>데이터 바인딩
 

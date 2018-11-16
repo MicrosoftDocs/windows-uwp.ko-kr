@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a4e2bbac12ddd3b60b2e4dd78f37b8934a8afea8
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6651219"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845191"
 ---
 # <a name="output-merger-om-stage"></a>OM(출력 병합기) 단계
 

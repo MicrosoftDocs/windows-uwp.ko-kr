@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8219f1600297dfa60345fe8130e8954558b8ac61
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6651609"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6844695"
 ---
 # <a name="getting-started-getting-around-in-visual-studio"></a>시작: Visual Studio 둘러보기
 

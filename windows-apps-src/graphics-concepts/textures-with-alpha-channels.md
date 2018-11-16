@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: eef41642d371f3a8be451c2687eee007608c3b2e
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6273832"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6840533"
 ---
 # <a name="textures-with-alpha-channels"></a>알파 채널을 사용하는 텍스처
 
