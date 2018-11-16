@@ -12,12 +12,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: cf3a69de36f1292dd6ccabb945a33a893064bd02
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 0c34dda3039a9b6a66428266e37f81b41695fbc0
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6647515"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849515"
 ---
 # <a name="combo-box"></a>콤보 상자
 
@@ -224,7 +224,7 @@ TextSubmitted 이벤트에는 이러한 조건이 충족 될 때 발생 합니�
 
 ### <a name="sample---validate-input-and-use-locally"></a>샘플-입력 유효성을 검사 하 고 로컬로 사용
 
-이 리터럴의 예 글꼴 크기 선택을 글꼴 크기 램프 해당 값의 집합을 포함 하지만 사용자 목록에 없는 글꼴 크기를 입력할 수 있습니다.
+이 예제에서는 글꼴 크기 선택을 글꼴 크기 램프 해당 값의 집합을 포함 하지만 사용자 목록에 없는 글꼴 크기를 입력할 수 있습니다.
 
 사용자 목록, 글꼴 크기 업데이트 하지만 값에 있지 않은 값을 추가 하는 경우 글꼴 크기의 목록에 추가 되지 않습니다.
 

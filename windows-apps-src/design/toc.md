@@ -170,7 +170,6 @@
 ### [언어, 배율, 대비에 대한 타일, 알림 메시지 지원](shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
 ## [작업 표시줄에 앱 고정](shell/pin-to-taskbar.md)
 ## [제목 표시줄 사용자 지정](shell/title-bar.md)
-## [Sets용 설계](shell/design-for-sets.md)
 
 ## 알림
 ### 알림 메시지
