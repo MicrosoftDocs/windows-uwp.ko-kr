@@ -12,12 +12,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f9d56090e8fc1de83eeb4e8a68ca1830692c5b2f
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.openlocfilehash: c116a6131889e1d87642165f4e1d9883d78add33
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6854943"
+ms.locfileid: "6981159"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -85,7 +85,6 @@ ms.locfileid: "6854943"
 
 앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 비교적 투명 한 아크릴을 사용 하는 것이 좋습니다.
  - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
- - 창이 주 앱 콘텐츠와 함께 나란히 열리는 경우 [60% 배경 아크릴](#acrylic-theme-resources)이어야 합니다.
 
 ![앱에서 가로 명령을 사용 하 여 지도 앱](images/Maps_In_App_Acrylic_1.png)
 
@@ -93,7 +92,7 @@ ms.locfileid: "6854943"
 
 ### <a name="vertical-panes"></a>세로 창
 
-세로 창이 나 앱의 콘텐츠 해제 섹션의 데 도움이 되는 표면에 대 한 불투명 한 배경 아크릴 대신 사용 하는 것이 좋습니다. 서로 다른 창에는 콘텐츠 위에 열면, 같은 NavigationView의 **Collapsed** 또는 **최소** 모드 좋습니다 인 앱 아크릴을 사용 하 여 사용자가 열이 창은 페이지의 컨텍스트를 유지 하기 위해.
+세로 창이 나 앱의 콘텐츠 해제 섹션의 데 도움이 되는 표면에 대 한 불투명 한 배경 아크릴 대신 사용 하는 것이 좋습니다. 서로 다른 창에는 콘텐츠 위에 열면, 같은 NavigationView의 **컴팩트** 기간 또는 **최소** 모드에서 것이 좋습니다 인 앱 아크릴을 사용 하 여 사용자가 열이 창은 페이지의 컨텍스트를 유지 하기 위해.
 
 ### <a name="transient-surfaces"></a>임시 표면
 
