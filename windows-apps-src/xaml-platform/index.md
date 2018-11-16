@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: fe9bad5afabca3ef0b9c782446e581aea61fe4dc
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6670855"
+ms.locfileid: "6834926"
 ---
 # <a name="xaml-platform"></a>XAML 플랫폼
 

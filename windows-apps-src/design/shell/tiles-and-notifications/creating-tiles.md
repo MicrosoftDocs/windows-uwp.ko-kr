@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f4388b67335bce497987ab22e3b281cf86e029af
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6661721"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6855747"
 ---
 # <a name="tiles-for-uwp-apps"></a>UWP 앱의 타일
 

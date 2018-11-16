@@ -7,12 +7,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, azure ad, azure 테넌트, aad 테넌트, azure ad 테넌트, 테넌트 관리, 테넌트
 ms.localizationpriority: medium
-ms.openlocfilehash: a76021f53417d30b91db282a194f6dc6ca268c1f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 9f44d5bc0e07ab40a396c103d2a8ba6db5427ae8
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648268"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853638"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>파트너 센터 계정에 Azure Active Directory 연결
 
@@ -47,7 +47,7 @@ ms.locfileid: "6648268"
 
 파트너 센터 계정과 연결할 새 Azure AD를 설정 해야 할 경우 다음이 단계를 따르세요.
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard)에서 대시보드의 오른쪽 위 모서리) (근처 기어 아이콘을 선택 하 고 **개발자 설정**를 선택 합니다. **설정** 메뉴의 **테 넌 트**를 선택 합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)대시보드의 오른쪽 위 모서리) (근처 기어 아이콘을 선택 하 고 **개발자 설정**를 선택 합니다. **설정** 메뉴의 **테 넌 트**를 선택 합니다.
 2.  **새 Azure AD 만들기**를 선택합니다.
 3.  새 Azure AD에 대한 디렉터리 정보를 입력합니다.
     - **도메인 이름**: Azure AD 도메인에 사용할 고유한 이름으로 ".onmicrosoft.com"과 함께 사용합니다. 예를 들어 "example"을 입력한 경우 Azure AD 도메인은 "example.onmicrosoft.com"이 됩니다.
