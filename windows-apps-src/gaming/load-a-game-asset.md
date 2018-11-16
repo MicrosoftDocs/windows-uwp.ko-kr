@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 리소스 로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "6989858"
+ms.locfileid: "7128803"
 ---
 # <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 

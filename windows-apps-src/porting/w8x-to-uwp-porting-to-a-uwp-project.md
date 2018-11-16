@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a4e0ff78f2872e572c370411a1aad38ccbd7fb6a
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6971703"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7118807"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅
 

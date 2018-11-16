@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d4a362a3a7be06e48c64ce3e4d43ff917b9b24c5
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6970587"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7103031"
 ---
 # <a name="graphics-pipeline"></a>그래픽 파이프라인
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치
 ms.localizationpriority: medium
 ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6986313"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7119099"
 ---
 # <a name="ad-campaign-report"></a>광고 캠페인 보고서
 

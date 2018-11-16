@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스, 테스트
 ms.localizationpriority: medium
 ms.openlocfilehash: 822ce0a3c4e0e0475b4dd01e405ccc9b90799654
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6198512"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7119269"
 ---
 # <a name="create-a-new-xbox-live-creators-program-title-and-publish-to-the-test-environment"></a>새 Xbox Live 크리에이터 스 프로그램 타이틀 만들기 및 테스트 환경에 게시
 

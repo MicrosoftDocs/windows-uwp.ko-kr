@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: a72d13689b278c1048cab6b1fcb4fd788658602c
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6980214"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7100739"
 ---
 # <a name="support-your-app-with-background-tasks"></a>백그라운드 작업을 사용하여 앱 지원
 

@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: 581c2bc4204a7eab002ef2680e335a4109716d74
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "6994275"
+ms.locfileid: "7118877"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 

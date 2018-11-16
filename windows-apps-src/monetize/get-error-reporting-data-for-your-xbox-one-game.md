@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 070cb8929ac7a3b0f5041abc0383afb71182223d
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 45e494b3e93e2dd6ac23ef1562c32485bf2e7ddb
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6980845"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7099960"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Xbox One에 대 한 데이터를 보고 하는 오류를 게임 가져오기
 
-Xbox 개발자 포털 (XDP)을 통해 수집 된 되었고 XDP 분석 개발자 센터 대시보드에서 사용할 수 있는 게임에 Xbox One에 대 한 집계 오류 보고 데이터를 가져오려면 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다.
+Xbox 개발자 포털 (XDP)을 통해 수집 된 되었고 XDP 분석 파트너 센터 대시보드에서 사용할 수 있는 게임에 Xbox One에 대 한 집계 오류 보고 데이터를 가져오려면 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다.
 
 [Xbox One에서 오류에 대 한 세부 정보를 게임 가져오기](get-details-for-an-error-in-your-xbox-one-game.md), [Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md), 및 [Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 하 여 추가 오류 정보를 검색할 수 있습니다.
 
@@ -49,7 +49,7 @@ Xbox 개발자 포털 (XDP)을 통해 수집 된 되었고 XDP 분석 개발자 
 
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | 오류 보고 데이터를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 개발자 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
+| applicationId | string | 오류 보고 데이터를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 파트너 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
 | startDate | date | 검색할 오류 보고 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜입니다. *aggregationLevel*이 **day**, **week** 또는 **month**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정해야 합니다. *aggregationLevel*이 **hour**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정하거나 ```yyyy-mm-dd hh:mm:ss``` 형식의 날짜 및 시간을 지정할 수 있습니다.  |  아니요  |
 | endDate | date | 검색할 오류 보고 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. *aggregationLevel*이 **day**, **week** 또는 **month**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정해야 합니다. *aggregationLevel*이 **hour**인 경우 이 매개 변수는 ```mm/dd/yyyy``` 형식의 날짜를 지정하거나 ```yyyy-mm-dd hh:mm:ss``` 형식의 날짜 및 시간을 지정할 수 있습니다. |  아니요  |
 | top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 21b51e50415e85f8cb1ddca6c358c8d27aa5f0fe
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6978781"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7102975"
 ---
 # <a name="tools-for-profiling-and-performance"></a>프로파일링 및 성능 도구
 

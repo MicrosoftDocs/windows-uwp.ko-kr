@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신
 ms.localizationpriority: medium
 ms.openlocfilehash: e3042d7dac5fd9ef3e99c874dc4ca1937db94fff
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6259056"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7119223"
 ---
 # <a name="using-game-chat-2-c"></a>게임 채팅 2 (c + +)를 사용 하 여
 
@@ -103,7 +103,7 @@ chat_manager::singleton_instance().remove_user(chatUserD);
 
 게임 채팅 2는 고유한 전송 계층을; 없습니다. 이 앱에서 제공 되어야 합니다. 이 플러그 인 앱의 일반, 자주 호출을 통해 관리 되는 `chat_manager::start_processing_data_frames()` 및 `chat_manager::finish_processing_data_frames()` 메서드 쌍. 이러한 메서드는 게임 채팅 2 앱에 보내는 데이터를 제공 하는 방법. 이러한 전용 네트워킹 스레드에서 자주 폴링됩니다 수 있도록 신속 하 게 작동 하도록 설계 되었습니다. 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 모든 대기 중인된 데이터를 검색 하는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_data_frames()` 가 호출 모든 배열에서 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 적절 한 원격 앱 인스턴스에 데이터를 제공 해야 합니다. 한 번 모두 완료 합니다 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예:
+때 `chat_manager::start_processing_data_frames()` 가 호출 모든 배열에서 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 적절 한 원격 앱 인스턴스에 데이터를 제공 해야 합니다. 한 번 모두 완료 합니다 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t dataFrameCount;
@@ -129,7 +129,7 @@ chat_manager::singleton_instance().finish_processing_data_frames(dataFrames);
 
 앱의 일반, 자주 호출을 통해 받은 문자 메시지 등의 앱에 대 한 업데이트를 제공 하는 게임 채팅 2는 `chat_manager::start_processing_state_changes()` 및 `chat_manager::finish_processing_state_changes()` 메서드 쌍. 이러한 UI 렌더링 루프에서 매 프레임 마다 그래픽 호출할 수 있습니다 되도록 신속 하 게 작동 하도록 설계 되었습니다. 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 대기 중인된 모든 변경 내용을 검색 하는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 됩니다 `game_chat_state_change` 포인터를 구성 합니다. 앱 보다 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 배열 반복 해야 합니다. 모든 완료 한 번 `game_chat_state_change` 현재 사용할 수 있는 개체를 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 다시 해당 배열 전달 해야 `chat_manager::finish_processing_state_changes()`. 예:
+때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 됩니다 `game_chat_state_change` 포인터를 구성 합니다. 앱 보다 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 배열 반복 해야 합니다. 모든 완료 한 번 `game_chat_state_change` 현재 사용할 수 있는 개체를 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 다시 해당 배열 전달 해야 `chat_manager::finish_processing_state_changes()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t stateChangeCount;
@@ -162,7 +162,7 @@ chat_manager::singleton_instance().finish_processing_state_changes(gameChatState
 
 ## <a name="text-chat"></a>텍스트 채팅
 
-사용 하 여 텍스트 채팅을 보내려면 `chat_user::chat_user_local::send_chat_text()`. 예:
+사용 하 여 텍스트 채팅을 보내려면 `chat_user::chat_user_local::send_chat_text()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 chatUserA->local()->send_chat_text(L"Hello");
@@ -178,7 +178,7 @@ chatUserA->local()->send_chat_text(L"Hello");
 
 ### <a name="text-to-speech"></a>텍스트 음성 변환
 
-사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` 'true' 반환 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예:
+사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` 'true' 반환 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 chat_userA->local()->synthesize_text_to_speech(L"Hello");

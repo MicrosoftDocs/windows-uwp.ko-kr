@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 연락처, 일정, 약속, 메일 메시지
 ms.localizationpriority: medium
 ms.openlocfilehash: c020a871863df6fac3dabc3ffab4bafc57227b50
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "6996310"
+ms.locfileid: "7101417"
 ---
 # <a name="contacts-my-people-and-calendar"></a>연락처, 내 피플 및 일정
 

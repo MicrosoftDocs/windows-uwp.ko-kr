@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: e3d4a09524f1ebc0e944036bd9458b1b32ee04d3
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6985224"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7128963"
 ---
 # <a name="manage-delivery-lines"></a>배달 라인 관리
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1aebe3d9aac460d444a5dffcd63142300c022b7
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6975124"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7102749"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML 네임스페이스 및 네임스페이스 매핑
 

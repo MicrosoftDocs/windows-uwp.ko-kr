@@ -8,11 +8,11 @@ ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e99796decfa5ed434fddee3be4340380e2376a2
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "6994670"
+ms.locfileid: "7129063"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 

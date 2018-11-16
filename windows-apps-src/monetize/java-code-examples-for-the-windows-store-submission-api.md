@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, Java
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a0df9fe873ab7d7330e06a18bb1816df3157d7a
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6979720"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7100053"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java 샘플: 앱, 추가 기능, 플라이트 제출
 

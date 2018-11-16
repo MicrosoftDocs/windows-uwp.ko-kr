@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f5e6c96c67052f1933bf4fb69988ae1eae27ee0
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6984278"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7111712"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
 

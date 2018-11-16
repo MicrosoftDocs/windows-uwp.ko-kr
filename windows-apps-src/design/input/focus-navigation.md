@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f4c86847e02c4ba987f8b1dcc42016145b175193
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6981112"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7119403"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>키보드, 게임 패드, 원격 제어 및 접근성 도구에 대한 포커스 탐색
 
