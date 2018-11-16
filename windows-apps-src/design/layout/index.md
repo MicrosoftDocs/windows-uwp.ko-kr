@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dd8717b50460f5353bea67840a337a063f6603a
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6453564"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6858191"
 ---
 # <a name="layout"></a>레이아웃
 

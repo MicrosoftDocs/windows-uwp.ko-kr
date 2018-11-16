@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 203a08e2fddfd2c650738a8b37e4a0ae5b52b3d9
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6276231"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848952"
 ---
 # <a name="multiplayer-manager-flowcharts"></a>멀티 플레이어 관리자 순서도
 

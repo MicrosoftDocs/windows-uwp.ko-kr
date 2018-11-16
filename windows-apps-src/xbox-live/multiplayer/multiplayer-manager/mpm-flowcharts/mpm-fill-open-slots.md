@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bf9a6ad5ce7f2641ad8f3d23efd01b7fd80c559
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6274714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6852098"
 ---
 # <a name="flowchart---fill-open-slots-in-a-multiplayer-game"></a>순서도-멀티 플레이 게임에서 열린 슬롯 채우기
 

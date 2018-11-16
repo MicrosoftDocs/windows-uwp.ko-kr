@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ecc1a61b7db339c7c0c46168255d32bfbc241a1
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6278209"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848868"
 ---
 # <a name="epson-escpos-with-formatting"></a>서식 지정을 사용하는 Epson ESC/POS
 

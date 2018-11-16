@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2af9aec9742a950f7bd35794ff4d10763e6c2c5c
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6649370"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853126"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 

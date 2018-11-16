@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c379097efaef65357bc1c6b036695ef84671ea6
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6672844"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6981327"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>백그라운드 작업에서 라이브 타일 업데이트
 

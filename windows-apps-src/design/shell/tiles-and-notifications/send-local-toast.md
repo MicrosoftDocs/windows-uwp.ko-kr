@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
 ms.openlocfilehash: 95f72180038b6ccbed5f399c2cd58081915baf2c
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6646543"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6856808"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 

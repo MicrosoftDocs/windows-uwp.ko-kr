@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Store 목록 가져오기, Store 목록 내보내기, 가져오기 내보내기, Store 목록 csv
 ms.localizationpriority: medium
 ms.openlocfilehash: 9df66baa1b5771055894b2e3accc0c8a9dff8a60
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6443030"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6850651"
 ---
 # <a name="import-and-export-store-listings"></a>Store 목록 가져오기 및 내보내기
 

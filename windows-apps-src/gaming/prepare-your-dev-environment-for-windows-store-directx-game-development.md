@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 템플릿, 도구, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: ac33b242e2351c21ea22aa9bbb6bf74693e8d4ef
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6840644"
+ms.locfileid: "6978082"
 ---
 # <a name="project-templates-and-tools-for-games"></a>게임용 프로젝트 템플릿 및 도구
 

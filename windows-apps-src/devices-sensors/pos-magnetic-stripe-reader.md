@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스, pos, 자기 띠 판독기의 지점
 ms.localizationpriority: medium
 ms.openlocfilehash: 11653c10310726c79de9deef17a570207045ec4a
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845108"
 ---
 # <a name="magnetic-stripe-reader"></a>자기 띠 판독기
 

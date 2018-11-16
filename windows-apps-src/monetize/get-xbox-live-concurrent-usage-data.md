@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 동시 사용
 ms.localizationpriority: medium
 ms.openlocfilehash: 4506176dcd62a4699c57343c50dfc1b0e7a40b14
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6654862"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6858648"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Xbox Live 동시 사용 데이터 가져오기
 

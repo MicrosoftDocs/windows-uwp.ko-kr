@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 6decdd4325a1c3cf854e340799b9d2f4a3272e6c
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6675941"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6862766"
 ---
 ## <a name="support-and-feedback"></a>지원 및 피드백
 

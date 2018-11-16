@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 516a15c17546d9f9b5e7cb7f8c0651f1372275ae
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665365"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849734"
 ---
 # <a name="textures"></a>텍스처
 

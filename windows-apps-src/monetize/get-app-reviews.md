@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 리뷰
 ms.localizationpriority: medium
 ms.openlocfilehash: 656f00ec8a7711a43c44790b04ea01dace4c4ee2
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6472084"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849564"
 ---
 # <a name="get-app-reviews"></a>앱 리뷰 가져오기
 

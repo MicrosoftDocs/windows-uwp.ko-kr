@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox live, Xbox, 게임, uwp, windows 10, Xbox one, 파트너 센터, Xbox Live 설정
 ms.openlocfilehash: 8d3aa7c7407dc3d3fd3f2bcdf9640b605c734447
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6261173"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851712"
 ---
 # <a name="configure-xbox-live-setup-in-partner-center"></a>파트너 센터에서 Xbox Live 설정 구성
 

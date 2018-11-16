@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store 컬렉션 API, Microsoft Store 구매 API, 제품 보기, 제품 권한 부여
 ms.localizationpriority: medium
 ms.openlocfilehash: 21be5f50a78dd1bd1ef7c549add04a3b7c494dd1
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6649676"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851424"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 

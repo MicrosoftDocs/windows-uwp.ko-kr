@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b853a4ac5afa03759094327c2b80d266751b8ec
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838970"
+ms.locfileid: "6980320"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>개발자를 위한 Windows 10 빌드 15063의 새로운 기능
 

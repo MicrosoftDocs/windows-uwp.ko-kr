@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 데이터
 ms.localizationpriority: medium
 ms.openlocfilehash: ecda61bff6fac407dbde175f584a09d6b871d989
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6662161"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6858872"
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 

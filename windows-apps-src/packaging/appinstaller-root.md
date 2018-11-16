@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: f3da1f4f393eea1362b6e59d2ad7e9a2a97bc33b
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838519"
+ms.locfileid: "6968357"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a>앱 설치 관리자를 사용하여 UWP 앱 설치
 

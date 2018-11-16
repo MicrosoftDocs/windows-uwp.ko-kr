@@ -13,11 +13,11 @@ design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 14d5120632833e91e82ed7dd717ba04a9abb0efb
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6645847"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6844850"
 ---
 # <a name="content-transition-animations"></a>콘텐츠 전환 애니메이션
 

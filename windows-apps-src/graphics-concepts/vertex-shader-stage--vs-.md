@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b9c67220c282ef1677559d586013c14366967a
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6646565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6858690"
 ---
 # <a name="vertex-shader-vs-stage"></a>VS(꼭짓점 셰이더) 단계
 

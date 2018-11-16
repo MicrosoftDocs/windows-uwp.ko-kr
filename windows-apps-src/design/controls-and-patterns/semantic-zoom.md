@@ -14,11 +14,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 17391b48b7b75209321f35ffd20610e17e3935c4
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6469925"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6858253"
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
 ms.openlocfilehash: ab6cae6bc923cf03e777170eb4804d749573fb91
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665839"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849135"
 ---
 # <a name="tax-details-for-paid-apps"></a>유료 앱의 세금 세부 정보
 

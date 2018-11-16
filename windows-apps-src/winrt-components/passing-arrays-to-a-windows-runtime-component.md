@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e01c9e5698ec1d7a23298b46f6bde9e1bbf36b04
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6667403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6855285"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Windows 런타임 구성 요소에 배열 전달
 

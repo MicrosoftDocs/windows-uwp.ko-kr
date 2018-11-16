@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6266832"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851567"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fd7377294e0d460720f6a16e71981ab0924ac9a
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648755"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6852262"
 ---
 # <a name="launch-the-windows-maps-app"></a>Windows 지도 앱 실행
 

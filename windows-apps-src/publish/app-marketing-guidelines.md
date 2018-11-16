@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 38dfdbc94112caa5e3fff7c1605fecece83b202d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6656181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6859083"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store 앱에 대 한 지침을 마케팅
 

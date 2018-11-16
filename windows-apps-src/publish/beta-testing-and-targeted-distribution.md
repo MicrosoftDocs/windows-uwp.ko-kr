@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 베타 테스트, 제한 배포, 베타, 베타들, 테스트, 테스터
 ms.localizationpriority: medium
 ms.openlocfilehash: 49641007f939faf333ea5aca357266225f8484c8
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6662343"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6850033"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>베타 테스트 및 대상이 지정된 배포
 

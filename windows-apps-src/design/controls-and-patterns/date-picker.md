@@ -16,11 +16,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f258ff63d2cf9badfc1066f46c97ecc14b90f5f
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6459564"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6846132"
 ---
 # <a name="date-picker"></a>날짜 선택기
 

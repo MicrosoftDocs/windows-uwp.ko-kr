@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10 uwp, 광고, 광고, 연습
 ms.localizationpriority: medium
 ms.openlocfilehash: eed52167655e16b3245bdb5f918244f95b378676
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6442970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849495"
 ---
 # <a name="implement-ads-in-your-app"></a>앱에 광고 구현
 

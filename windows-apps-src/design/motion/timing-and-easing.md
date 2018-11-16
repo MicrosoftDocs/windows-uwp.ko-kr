@@ -13,11 +13,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 9983c62804dad4f0202fc83e3f9b5f23714352d2
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6654043"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6861026"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 

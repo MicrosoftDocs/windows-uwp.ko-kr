@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e4486cc1d9c7f037b79fc6183f88216c88ef1884
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6669675"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6856930"
 ---
 # <a name="diffuse-light-maps"></a>확산 조명 맵
 

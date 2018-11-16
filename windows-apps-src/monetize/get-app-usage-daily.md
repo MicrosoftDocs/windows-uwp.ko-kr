@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 사용
 ms.localizationpriority: medium
 ms.openlocfilehash: 24542f165c0caa2c07db1866c96603916c6ac750
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6646742"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6847870"
 ---
 # <a name="get-daily-app-usage"></a>일일 앱 사용 현황 가져오기
 

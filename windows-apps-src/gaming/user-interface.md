@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: d27e4bb0d643b859958f887133a128572ca31225
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6667202"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6844582"
 ---
 # <a name="directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿
 

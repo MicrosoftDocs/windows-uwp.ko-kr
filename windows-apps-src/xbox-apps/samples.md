@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be6cfbc40fc645bfb66ef2f0fb9b8b5f2976da8
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838509"
+ms.locfileid: "6985666"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>Xbox One의 UWP 샘플
 

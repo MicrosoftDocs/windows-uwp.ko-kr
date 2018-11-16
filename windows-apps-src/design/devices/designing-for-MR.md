@@ -15,12 +15,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f392d1d6c8eaa309e1774e8a98671a7743fdc9d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: e6bba6c22b7f0055a93bfd1826bc3a2acc0f2164
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665023"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6968387"
 ---
 # <a name="designing-for-mixed-reality"></a>혼합 현실을 위한 디자인
 
@@ -86,7 +86,7 @@ HoloLens와 혼합 현실 플랫폼 모두 키보드 및 마우스가 지원됩�
 * [Clicker 장치](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories)(HoloLens 전용)
 * [모션 컨트롤러](https://developer.microsoft.com/windows/mixed-reality/motion_controllers)(혼합 현실 장치 전용, 위 그림 참조)
 
-위 컨트롤러는 가상 개체와 일어나는 상호 작용이 자연스럽고 정확하게 보일 수 있도록 지원합니다. 일부 상호 작용은 아무런 대가 없이 지원됩니다. 예를 들어, HoloLens에서 제스처를 선택하거나, 혹은 모션 컨트롤러의 Windows 키 또는 트리거를 클릭하면 마찬가지로 사용자 코딩 없이 기대하는 입력 응답을 생성합니다.
+위 컨트롤러는 가상 개체와 일어나는 상호 작용이 자연스럽고 정확하게 보일 수 있도록 지원합니다. 일부 상호 작용은 아무런 대가 없이 지원됩니다. 예를 들어 HoloLens 제스처를 선택 하거나에서 예상한 다시, 혹은 코딩할 필요 없이 입력된 응답 생성 모션 컨트롤러의 Windows 키 또는 트리거를 클릭 합니다.
 
 그 밖에 추가로 제공되는 정보나 입력 방식을 활용하려면 코드를 추가해야 하는 경우도 있습니다. 예를 들어, 개체 위치나 버튼 누르기를 고려하여 코드를 작성하는 경우에는 모션 컨트롤러를 사용해 제어를 세분화하여 개체를 조작할 수 있습니다.
 

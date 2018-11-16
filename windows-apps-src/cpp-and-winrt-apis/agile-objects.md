@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체, agility, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2fa129a60c7dfcc170a9ddeec318a062fb8cbe56
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6671688"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6858968"
 ---
 # <a name="agile-objects-in-cwinrt"></a>C++/WinRT의 Agile 개체
 
