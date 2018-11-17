@@ -12,12 +12,13 @@ pm-contact: sewen
 design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: aa235086f2410fb97ea60e35fb03c586824928a2
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.custom: RS5
+ms.openlocfilehash: dd0031affaf5ae48553479660d91ae610e7f1acb
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6980716"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7169779"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용 하 여 텍스트 입력
 
@@ -318,6 +319,7 @@ private double GetPopupVerticalOffset()
 모든 XAML 프레임 워크 컨트롤과 마찬가지로 구체적인 요구 사항에 대 한 시각적 구조와 [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) 의 시각적 동작을 지정할 수 있습니다.
 
 사용자 지정 템플릿을 [사용자 지정 전송 컨트롤을 만드는](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/custom-transport-controls) 방법 또는 [사용자 지정 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)체크아웃 만드는 전체 예제를 확인 합니다.
+
 
 
 

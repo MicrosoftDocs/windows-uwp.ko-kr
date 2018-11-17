@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5d3ab7b50721b969859006831b33e9b00e300f
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7105756"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7167944"
 ---
 #  <a name="troubleshooting-porting-windowsphone-silverlight-to-uwp"></a>UWP로 포팅 WindowsPhone Silverlight 문제 해결
 

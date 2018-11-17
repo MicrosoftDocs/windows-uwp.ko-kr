@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 그림자 맵, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: a9c53578fc67c13aafa1c8e39ad1d2910981081d
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6980480"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7170575"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>다양한 하드웨어에서 그림자 맵 지원
 

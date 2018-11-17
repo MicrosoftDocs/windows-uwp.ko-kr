@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d2a9745e35f19066b094b2be187620858166dbd5
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7128644"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7168339"
 ---
 # <a name="fade-animations"></a>페이드 애니메이션
 

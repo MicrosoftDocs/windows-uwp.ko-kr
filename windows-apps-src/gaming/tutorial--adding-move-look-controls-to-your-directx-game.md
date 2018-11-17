@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 이동-보기, 컨트롤
 ms.localizationpriority: medium
 ms.openlocfilehash: 219d014eb03803ace440dc1c1773043a9ecbc99f
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7119119"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7171117"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임용 이동-보기 컨트롤
 

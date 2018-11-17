@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f7d99aadb9f83d2820cd81fa3a4433c6fab8ee82
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "6994374"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7170901"
 ---
 # <a name="stream-output-view-sov"></a>SOV(스트림 출력 뷰)
 
