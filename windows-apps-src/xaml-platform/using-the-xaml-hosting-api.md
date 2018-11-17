@@ -7,17 +7,19 @@ ms.date: 09/21/2018
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 69eb9f72d6b4cf01185f7e4886a7ed5c30a669df
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6972431"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7145343"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사용 하 여
 
 > [!NOTE]
-> 호스팅 API UWP XAML은 현재 개발자 미리 보기를 사용할 수 있습니다. 하지만 이제 프로토타입 작성 하는 코드에서이 API를 사용해는 것이 좋습니다, 사용 하는 것 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이 API는 성숙 안정화 나중에 Windows 릴리스를 계속 합니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.
+> UWP XAML 호스팅 API 및 XAML 제도 개발자 미리 보기를 현재 사용할 수 있습니다. 하지만 직접 사용해 프로토타입 작성 하는 코드에서 이제 새, 사용 하는 이러한 프로덕션 코드에서이 시간에 하지 않는 것이 좋습니다. 이러한 기능은 성숙 안정화 나중에 Windows 릴리스를 계속 됩니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.
+>
+> API 및 XAML 제도 호스팅 XAML에 대 한 피드백을 있는 경우에 피드백을 보내 XamlIslandsFeedback@microsoft.com. 통찰력과 시나리오는 저희에 게 매우 중요 합니다.
 
 Windows 10 Insider Preview SDK에서 17709 빌드할 비 UWP 데스크톱 응용 프로그램 (WPF, Windows Forms, 및 c + + Win32 응용 프로그램 포함) 창 핸들 (와 연결 된 모든 UI 요소에서 호스트 UWP 컨트롤에 *UWP XAML 호스팅 API를* 사용할 수 있습니다. HWND)입니다. 이 API를 사용 하면 비 UWP만 UWP 컨트롤을 통해 사용할 수 있는 최신 Windows 10 UI 기능을 사용 하 여 데스크톱 응용 프로그램. 예를 들어, 비 UWP 데스크톱 응용 프로그램은 [Windows 잉크](../design/input/pen-and-stylus-interactions.md)지원 및 [Fluent 디자인 시스템](../design/fluent-design-system/index.md) 을 사용 하는 호스트 UWP 컨트롤에이 API를 사용할 수 있습니다.
 

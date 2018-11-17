@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 517a1cbb8ec2cafe49ded53bce34e17537bc5efc
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: ad1e3339fe50087c3a3d8cdcf3a99f27c1c868df
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6968217"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7147017"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-xbox-one-game"></a>Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드
 
-Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 Xbox 개발자 포털 (XDP)을 통해 수집 된 Xbox One 게임의 특정 오류와 관련 있으며 XDP 분석 개발자 센터 대시보드에서 사용할 수 있는 CAB 파일을 다운로드 합니다. 이 메서드는 지난 30 일 동안에서 발생 한 오류에 대 한 CAB 파일만 다운로드할 수 있습니다.
+Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 Xbox 개발자 포털 (XDP)을 통해 수집 된 Xbox One 게임의 특정 오류와 관련 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있는 CAB 파일을 다운로드 합니다. 이 메서드는 지난 30 일 동안에서 발생 한 오류에 대 한 CAB 파일만 다운로드할 수 있습니다.
 
 이 메서드를 사용 하려면 먼저에 다운로드 하려는 CAB 파일의 ID를 검색 먼저 [Xbox One 게임에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
 
@@ -50,7 +50,7 @@ Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 Xbox 개�
 
 | 매개 변수        | 유형   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | string | CAB 파일을 다운로드 하는 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 개발자 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
+| applicationId | string | CAB 파일을 다운로드 하는 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 파트너 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
 | cabId | string | 다운로드하려는 CAB 파일의 고유한 ID입니다. 이 ID를 가져오려면 [Xbox One에서 오류에 대 한 세부 정보를 게임 가져오기](get-details-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 하 여 앱에서 특정 오류에 대 한 세부 정보를 검색 하 고 해당 메서드의 응답 본문에 **cabId** 값을 사용 합니다. |  예  |
 
  

@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c32a02532ab544e7697d59fa4f1ca93231183d3
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6974618"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7150597"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Xbox의 UWP에 HTML 게임 가져오기
 Xbox One은 HTML 5 게임에 훌륭한 플랫폼입니다. HTML 5 게임은 [Edge](https://developer.microsoft.com/microsoft-edge/) 브라우저 엔진에서 실행됩니다. Edge는 속도가 빠르며 WebGL, 캔버스 등의 HTML 5 및 CSS 3 기능을 완전히 지원합니다.

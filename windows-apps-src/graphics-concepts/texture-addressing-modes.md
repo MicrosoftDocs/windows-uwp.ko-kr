@@ -14,11 +14,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e817dcc92741ca2e738784f387cfe49399a108c
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6979475"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7148427"
 ---
 # <a name="texture-addressing-modes"></a>텍스처 주소 지정 모드
 

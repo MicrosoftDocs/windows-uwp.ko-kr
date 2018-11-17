@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 65952caabfdacd9419f7633ef0b7bcb9ca813629
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6259801"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7144076"
 ---
 # <a name="xbox-live-multiplayer-concepts"></a>Xbox Live 멀티 플레이 개념
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, xbox 통합된 멀티 플레이어, xim, 채팅
 ms.localizationpriority: medium
 ms.openlocfilehash: b5e67e75a981a6abc88b877983e544293055e90b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6264766"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7148753"
 ---
 # <a name="using-xim-as-a-dedicated-chat-solution-via-out-of-band-reservations"></a>대역 외 예약을 통해 전용 채팅 솔루션으로 XIM 사용
 
@@ -37,7 +37,7 @@ ms.locfileid: "6264766"
 
 대역의 예약을 사용 하려면이 모드에서 만든 새 XIM 네트워크에 이동 해야 수집된 참가자 중 하나입니다. 사용자가 디바이스의 참여 한 피어 선택 합니다. 게임 호스트 또는 서버 프로세스를 시작 하기 위해 자연 스러운 선택 이며의 개념을 이미 있을 수 있지만 그럴 필요는 없습니다. 가장 빠른 연결 설치 시간을 달성 하기 위해 "열기" 네트워크 액세스 종류를 보고 하는 장치 선택 않는 것이 좋습니다. 참조는 `Windows::Networking::XboxLive` 자세한 내용은 플랫폼 설명서.
 
-XIM 초기화 및 표준 XIM 사용 연습에 표시 된 대로 의도 한 로컬 Xbox 사용자 Id를 선언 하 여 네트워크의 대역 예약을 통해 관리 수행 되지만 메서드를 호출 하는 대신 같은 XIM 이동 `xim::move_to_new_network()`을 호출 `xim::move_to_network_using_out_of_band_reservation()` null 예약 문자열입니다. 예:
+XIM 초기화 및 표준 XIM 사용 연습에 표시 된 대로 의도 한 로컬 Xbox 사용자 Id를 선언 하 여 네트워크의 대역 예약을 통해 관리 수행 되지만 메서드를 호출 하는 대신 같은 XIM 이동 `xim::move_to_new_network()`을 호출 `xim::move_to_network_using_out_of_band_reservation()` null 예약 문자열입니다. 예를 들면 다음과 같습니다.
 
 ```cpp
  xim::singleton_instance().initialize(myServiceConfigurationId, myTitleId);
@@ -45,7 +45,7 @@ XIM 초기화 및 표준 XIM 사용 연습에 표시 된 대로 의도 한 로�
  xim::singleton_instance().move_to_network_using_out_of_band_reservation(nullptr);
 ```
 
-표준 `xim_move_to_network_starting_state_change`, `xim_player_joined_state_change`, 및 `xim_move_to_network_succeeded_state_change` 일반적인에서 상태 변경 사항을 처리 하는 동안 시간이 지남에 따라 제공 될 예정 `xim::start_processing_state_changes()` 및 `xim::finish_processing_state_changes()` 루프 합니다. 예:
+표준 `xim_move_to_network_starting_state_change`, `xim_player_joined_state_change`, 및 `xim_move_to_network_succeeded_state_change` 일반적인에서 상태 변경 사항을 처리 하는 동안 시간이 지남에 따라 제공 될 예정 `xim::start_processing_state_changes()` 및 `xim::finish_processing_state_changes()` 루프 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
  uint32_t stateChangeCount;
