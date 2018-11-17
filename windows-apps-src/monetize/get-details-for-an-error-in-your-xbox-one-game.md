@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: 33733af7f323817bc82d49800c2dc17c5f7b9887
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 6f665b99b7f64e41597a5767d58b86ac8e85c6bd
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6978352"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7155539"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기
 
-이 메서드를 사용 하 여 Microsoft Store 분석 API에서 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 개발자 센터 대시보드에서 사용할 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다.
 
 이 메서드를 사용 하려면 먼저에 자세한 정보를 원하는 오류 ID를 검색 먼저 [Xbox One 게임 한 오류 보고 데이터를 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "6978352"
 
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | 오류 세부 정보를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 개발자 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
+| applicationId | string | 오류 세부 정보를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 파트너 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
 | failureHash | 문자열 | 자세한 정보를 가져오려는 오류의 고유 ID입니다. 관심 있는 오류의이 값을 얻기 위해 [게임에 Xbox One에 대 한 오류 보고 데이터를 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 하 고 해당 메서드의 응답 본문에 **failureHash** 값을 사용 합니다. |  예  |
 | startDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
 | endDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |

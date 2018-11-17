@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 알림, 컬렉션, 그룹, ux, ux 지침, 지침, 알림, 알림, 알림 센터, noninterruptive, 유효 알림, 로깅됩니다 nonintrusive 알림, 관리, 구성
 ms.localizationpriority: medium
 ms.openlocfilehash: 849c8ffc66661546a088a3d89747e6690a763e71
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6971270"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7158550"
 ---
 # <a name="toast-notification-ux-guidance"></a>알림 알림 UX 지침
 알림은 부분이 최신 수명; 사용자의 생산성을 하 고 모든 업데이트를 사용 하 여 계속 현재 뿐만 아니라 앱 및 웹 사이트, 약속 된 데 도움이 됩니다. 그러나 알림 overbearing 유용 하 고 사용자 중심 방식으로 설계 되지 않은 경우 주입 식에서 신속 하 게 끌 수 있습니다. 알림은 해제 되 고 로부터 하나 마우스 오른쪽 단추로 클릭 하 고 것 같지 않은 해제 되 면은 켜 집니다 다시 합니다.  따라서 되는지 확인 알림을 사용자의 화면 공간 및 시간의 정중 하므로이 참여 채널을 열어 둘 수 있습니다.

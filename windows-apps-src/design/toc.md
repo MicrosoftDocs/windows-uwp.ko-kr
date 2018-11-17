@@ -30,7 +30,6 @@
 ## 변환
 ### [개요](layout/transforms.md)
 ### [3D 원근감 효과](layout/3-d-perspective-effects.md)
-## [Z-깊이 및 그림자](layout/depth-shadow.md)
 
 # 컨트롤
 ## [개요](controls-and-patterns/index.md)

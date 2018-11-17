@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: df3af90bda9d972a891dce67730f8f320b7607c1
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 78e65ad78079762ea5aabb95ddcaf4ce508b89bc
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6976824"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7173546"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기
 
-이 메서드를 사용 하 여 Microsoft Store 분석 API에서 Xbox One에서 오류에 대 한 스택 추적을 게임 가져오려면 Xbox 개발자 포털 (XDP)을 통해 수집 된 되었고 XDP 분석 개발자 센터 대시보드에서 사용할 수 있는. 이 메서드는 지난 30일 동안 발생한 오류에 대한 스택 추적만 다운로드할 수 있습니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 Xbox One에서 오류에 대 한 스택 추적을 게임 가져오려면 Xbox 개발자 포털 (XDP)을 통해 수집 된 되었고 XDP 분석 파트너 센터 대시보드에서 사용할 수 있는. 이 메서드는 지난 30일 동안 발생한 오류에 대한 스택 추적만 다운로드할 수 있습니다.
 
 이 메서드를 사용 하려면 먼저에 스택 추적을 검색 하려는 오류와 관련 된 CAB 파일의 ID를 검색 먼저 [Xbox One 게임에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "6976824"
 
 | 매개 변수        | 유형   |  설명      |  필수  |
 |---------------|--------|---------------|------|
-| applicationId | string | 스택 추적을 검색 하는 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 개발자 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
+| applicationId | string | 스택 추적을 검색 하는 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 파트너 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
 | cabId | 문자열 | 스택 추적을 검색하려는 오류와 연결된 CAB 파일의 고유 ID입니다. 이 ID를 가져오려면 [Xbox One에서 오류에 대 한 세부 정보를 게임 가져오기](get-details-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 하 여 앱에서 특정 오류에 대 한 세부 정보를 검색 하 고 해당 메서드의 응답 본문에 **cabId** 값을 사용 합니다. |  예  |
 
  
