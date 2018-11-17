@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10 s, 항상 연결, x86 ARM 기반 에뮬레이션, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 01ef13f6f27b45a4cc41244e4ebed0a54804fc8e
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6971763"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7146582"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>x86 데스크톱 앱의 문제 해결
 >[!IMPORTANT]

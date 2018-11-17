@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1735b7fcedd358c290b289b97417e0ea3a6c090b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6248666"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7172519"
 ---
 # <a name="usertitle-json"></a>UserTitle(JSON)
 사용자가 제목 데이터가 들어 있습니다. 
