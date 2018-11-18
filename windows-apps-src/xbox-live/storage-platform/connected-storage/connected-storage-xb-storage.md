@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a741dbb202f9c5573342bb15098fc4553a7edc7
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6262530"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161505"
 ---
 # <a name="managing-local-connected-storage"></a>연결 된 로컬 저장소 관리
 연결 된 저장 게임 데이터가 클라우드에 저장을 사용 하는 동안 다시 피도 연결 된 저장소 서비스는 로컬 저장소 구성 요소입니다. PC 또는 콘솔에 인지 클라우드로 동기화 된 데이터를 포함 하는 연결 된 저장소 데이터의 로컬 캐시. XDK 또는 UWP 제목 만드는 인지 로컬 저장소 연결 된 데이터를 관리할 수 있도록 하는 도구입니다.
@@ -113,7 +113,7 @@ Xbstorage에 다음 6 개의 명령을 개발자는 자신의 Xbox One 개발 �
 
 연결 된 저장소 공간에서 데이터를 **출력**하 여 지정 된 파일을 내보냅니다.    파일은 데이터가 포함 된 XML 파일. 예를 생성 하는 방법을 보려면 [xbstorage 생성](#xbstorage_generate) 을 참조 하세요. 파일의 XML 형식에 대 한 자세한 내용은이 항목의 뒷부분에 [가져오기 및 내보내기 파일 형식](#xbstorage_fileformat)참조 하세요. 연결 된 저장소 공간을 지정 하는 방법은 두 가지가 있습니다.
 
-- **/Context** 매개 변수를 사용 하 여 파일 이름을 지정 하는 경우 \ < infile > 올바르게 채워지는 **ContextDescription** 섹션에 다음 해당 파일 연결 된 저장소 공간을 지정 하는 데 사용 됩니다.
+- **/Context** 매개 변수를 사용 하 고 파일 이름을 지정 하 여 \<infile > 올바르게 채워지는 **ContextDescription** 섹션에 해당 파일 연결 된 저장소 공간을 지정 하는 데 사용 됩니다.
 - 저장소 공간 또는 부분적으로 지정할 수도 **/context** 파일에 지정 된 저장소 공간의 각 요소 보다 우선 명령줄 매개 변수를 통해 합니다.
 
 사용 예:
@@ -148,7 +148,7 @@ Xbstorage에 다음 6 개의 명령을 개발자는 자신의 Xbox One 개발 �
 연결 된 저장소 공간에서 모든 데이터를 삭제합니다.
 연결 된 저장소 공간을 지정 하는 방법은 두 가지가 있습니다.
 
-- **/Context** 매개 변수를 사용 하 여 파일 이름을 지정 하는 경우 \ < infile > 올바르게 채워지는 **ContextDescription** 섹션에 다음 해당 파일 연결 된 저장소 공간을 지정 하는 데 사용 됩니다.
+- **/Context** 매개 변수를 사용 하 고 파일 이름을 지정 하 여 \<infile > 올바르게 채워지는 **ContextDescription** 섹션에 해당 파일 연결 된 저장소 공간을 지정 하는 데 사용 됩니다.
 - 저장소 공간 또는 부분적으로 지정할 수도 **/context** 파일에 지정 된 저장소 공간의 각 요소 보다 우선 명령줄 매개 변수를 통해 합니다.
 
 사용 예:
@@ -447,7 +447,7 @@ XML 파일 **가져오기**, **내보내기**및 *xbstorage* 도구를 사용 �
   </XbConnectedStorageSpace>
 ```
 
-대체 하는 **가져오기**, **내보내기**및 *gamesaveutil* **생성** 에 대 한이 xml 서식을 지정 하는 데 필요한 변경은 \ < 계정 > 구성원 노드는 \ < ContextDescription > 노드는 \ < PackageFamilyName > 노드.
+\<Account 바꾸려면 **가져오기**, **내보내기**및 *gamesaveutil* **생성** 에 대 한이 xml 서식을 지정 하는 데 필요한 유일한 변경 내용이 >는 \<ContextDescription의 구성원 노드 >는 \<PackageFamilyName 노드와 > 노드.
 이렇게 하면 변경 됩니다는 \ < ContextDescription > 노드가:
 
 ```xml

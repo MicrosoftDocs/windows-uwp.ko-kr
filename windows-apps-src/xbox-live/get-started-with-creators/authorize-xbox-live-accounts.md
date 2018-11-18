@@ -8,12 +8,12 @@ ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 계정, 테스트 계정
 ms.localizationpriority: medium
-ms.openlocfilehash: 6add43ecabacb8e62e055954dd502fdf9d25a903
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 7899f332794661a6203a0035040db6914b7e8100
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6259024"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7158100"
 ---
 # <a name="authorize-xbox-live-accounts-for-testing-in-your-environment"></a>사용자 환경에서 테스트에 대 한 Xbox Live 계정에 권한을 부여합니다
 
@@ -26,13 +26,13 @@ Xbox Live 테스트 계정에 권한을 부여 하려면 다음이 필요 합니
 * [Xbox Live 계정](https://support.xbox.com/browse/my-account/manage-account/Create%20account)
 
 ## <a name="navigate-to-the-xbox-test-account-page"></a>Xbox 테스트 계정 페이지로 이동
+
 파트너 센터의 계정 설정 섹션에 있는이
 
 이 섹션의 두 가지 방법 중 하나에 도달할 수 있습니다.
 
-1. 파트너 센터에서 계정 보기를 사용 하 여 설정 기어 ⚙️을 클릭 합니다. 계정 보기의 왼쪽된 탐색에서 **Xbox 계정을 테스트** 링크를 클릭 합니다.
+1. [파트너 센터](https://partner.microsoft.com/dashboard/windows/overview)대시보드의 오른쪽 상단에 설정 기어 ⚙️ 클릭 하 고 드롭다운 메뉴에서 **개발자 설정** 를 선택 합니다. Xbox Live 드롭다운 및 **Xbox 테스트 계정** 연결을 선택 하는 화면의 왼쪽 탐색 메뉴가 열립니다.
 2. Xbox Live 크리에이터 스 구성 페이지에서 테스트 섹션을 찾아 자격이 **테스트 환경에 대 한 권한을 부여 Xbox Live 계정** 링크를 클릭 합니다.
-
 
 ## <a name="authorize-an-xbox-live-account-for-your-test-environment"></a>테스트 환경에 대 한 Xbox Live 계정에 권한을 부여합니다
 

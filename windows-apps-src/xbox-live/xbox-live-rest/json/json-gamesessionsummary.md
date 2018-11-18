@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e7f91062ca9bbc19bd56cfc2773aece95e7fc30
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6253922"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7163629"
 ---
 # <a name="gamesessionsummary-json"></a>GameSessionSummary(JSON)
 게임 세션에 대 한 요약 데이터를 나타내는 JSON 개체입니다. 

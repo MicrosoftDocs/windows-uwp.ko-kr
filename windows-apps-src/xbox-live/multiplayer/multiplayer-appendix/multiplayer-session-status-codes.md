@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 멀티 플레이 2015, 상태 코드, 세션
 ms.localizationpriority: medium
 ms.openlocfilehash: 31e8e73008505457949fd8123b1c4bd1452785ef
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6442574"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7149793"
 ---
 # <a name="multiplayer-session-status-codes"></a>멀티 플레이 세션 상태 코드
 

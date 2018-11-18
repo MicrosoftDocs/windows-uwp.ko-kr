@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 68237ed101870a8fed4b7b5fb298006f784a0910
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6471703"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7147234"
 ---
 # <a name="get-usersowneridpeopleavoid"></a>GET (/users/{ownerId}/people/avoid)
 사용자에 대 한 문제 방지 목록을 가져옵니다.

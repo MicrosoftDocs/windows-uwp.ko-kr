@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e4cdec869727cb6182d86616782c640020a0b7ac
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6267378"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7168062"
 ---
 # <a name="titlerecord-json"></a>TitleRecord(JSON)
 이름 및 마지막으로 수정한 타임 스탬프를 포함 하 여 제목에 대 한 정보를 제공 합니다. 

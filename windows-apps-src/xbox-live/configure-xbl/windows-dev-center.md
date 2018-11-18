@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
 ms.openlocfilehash: e43d62610774552cce4153c7b8eca9be5406281b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6259759"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7149872"
 ---
 # <a name="partner-center-service-configuration"></a>파트너 센터 서비스 구성
 

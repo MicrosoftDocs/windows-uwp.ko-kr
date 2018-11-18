@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c8cd21fdd3b11aa7307465782bcc10e27488aedb
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6250196"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7163611"
 ---
 # <a name="scidsscidleaderboardsleaderboardname"></a>/scids/{scid}/leaderboards/{leaderboardname}
 미리 정의 된 전역 순위표에 액세스합니다. 이러한 Uri에 대 한 도메인은 `leaderboards.xboxlive.com`.

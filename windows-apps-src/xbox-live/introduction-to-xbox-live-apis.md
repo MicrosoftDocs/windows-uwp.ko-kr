@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5751ad77607f989963b94d8b0ea2dee574098fe0
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6471647"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7160560"
 ---
 # <a name="introduction-to-xbox-live-apis"></a>Xbox Live API 소개
 
@@ -82,7 +82,7 @@ winrt::Microsoft::Xbox::Services::XboxLiveContext xblContext(cppWinrtUser);
 - Xbox One XDK 플랫폼 및 유니버설 Windows 플랫폼 (UWP) x86, x64 및 ARM 아키텍처를 대상으로 하는 응용 프로그램을 지원 합니다.
 - 오류는 std::error_code 통해 처리 됩니다.
 - C + + 11 기반된 API는 더 나은 성능 및 향상 된 디버깅에 대 한 c + + 게임 엔진에 사용 하도록 권장된 API입니다.
-- Xbox Live 크리에이터 스 프로그램에 사용 하는 경우 XSAPI 헤더를 포함 하기 전에 XBOX_LIVE_CREATORS_SDK를 정의 합니다. 이 해당 Xbox Live 크리에이터 스 프로그램 개발자가 사용할 수 있는 API 노출 영역을 제한 하 고 로그인 메서드가 타이틀 크리에이터 스 프로그램에 대 한 작동할 수를 변경 합니다.  예:
+- Xbox Live 크리에이터 스 프로그램에 사용 하는 경우 XSAPI 헤더를 포함 하기 전에 XBOX_LIVE_CREATORS_SDK를 정의 합니다. 이 해당 Xbox Live 크리에이터 스 프로그램 개발자가 사용할 수 있는 API 노출 영역을 제한 하 고 로그인 메서드가 타이틀 크리에이터 스 프로그램에 대 한 작동할 수를 변경 합니다.  예를 들면 다음과 같습니다.
 
 ```c++
 #define XBOX_LIVE_CREATORS_SDK
@@ -91,7 +91,7 @@ winrt::Microsoft::Xbox::Services::XboxLiveContext xblContext(cppWinrtUser);
 
 - C + + WinRT도 지원 됩니다.  자세한 내용은 C + +에서 WinRT를 확인할 수 있습니다[https://moderncpp.com/2016/10/13/cppwinrt-available-on-github/](https://moderncpp.com/2016/10/13/cppwinrt-available-on-github/)
 
-사용 하 여 C + + XSAPI 헤더를 포함 하기 전에 XSAPI c + + API를 사용 하 여 WinRT XSAPI_CPPWINRT를 정의 합니다.  예:
+사용 하 여 C + + XSAPI 헤더를 포함 하기 전에 XSAPI c + + API를 사용 하 여 WinRT XSAPI_CPPWINRT를 정의 합니다.  예를 들면 다음과 같습니다.
 
 ```c++
 #define XSAPI_CPPWINRT

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 444f765101c1067b6a13125099040c64197848e4
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6252159"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7163626"
 ---
 # <a name="profile-json"></a>Profile(JSON)
 사용자에 대 한 개인 프로필 설정 합니다. 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b1d86a870e32457b903053c7a8c3b1d722c9c559
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6250084"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7166072"
 ---
 # <a name="standard-http-request-and-response-headers"></a>표준 HTTP 요청 및 응답 헤더
  

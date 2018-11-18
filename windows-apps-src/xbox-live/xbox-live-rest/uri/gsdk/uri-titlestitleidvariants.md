@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 82b44cfab560cc7954ace22d703b0fba87883f91
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6833611"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7159251"
 ---
 # <a name="titlestitleidvariants"></a>/titles/{titleId}/variants
 URI는 제목에 대 한 사용 가능한 변형 가져오려면 클라이언트에 의해 호출 됩니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

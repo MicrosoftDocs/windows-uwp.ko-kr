@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b6a0856c23ebaf06eab7ef7fc1688e06cc445b4b
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6834242"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7163602"
 ---
 # <a name="initialuploadrequest-json"></a>InitialUploadRequest(JSON)
 POST GameClip 본문 요청을 업로드 합니다. 

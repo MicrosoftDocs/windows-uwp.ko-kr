@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8e905e44c4682daf0e7b0827efc8974513b828
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6272637"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7166718"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---june-2015"></a>새로운 기능-2015 년 6 월에 대 한 Xbox Live SDK
 
@@ -61,7 +61,7 @@ C + + SDK의 모든 이벤트 처리기에서 단일 변경 되었습니다 `voi
 
 각 `add_*_handler()` 지금 메서드가 반환 되는 `function_context` 개체입니다. 이벤트 처리기를 제거 하는 경우에 전달 해야 합니다 `function_context` 개체.
 
-예:
+예를 들면 다음과 같습니다.
 ```
 function_context subscriptionLostContext = xbox_live_context()->multiplayer_service().add_multiplayer_subscription_lost_handler(...);
 

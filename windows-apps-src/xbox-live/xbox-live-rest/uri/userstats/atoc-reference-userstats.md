@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f850cfcb99df079698a685399680bfdb6e32c813
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6282804"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7164376"
 ---
 # <a name="user-statistics-uris"></a>사용자 통계 URI
  

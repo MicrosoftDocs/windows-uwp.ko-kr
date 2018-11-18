@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a8ec59202300912d4646b0e759e7bbf037853608
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6259288"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7159228"
 ---
 # <a name="sessionentry-json"></a>SessionEntry(JSON)
 피트 니스 세션에 대 한 데이터를 포함합니다. 

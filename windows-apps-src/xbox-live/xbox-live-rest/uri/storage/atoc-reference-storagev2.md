@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e17bb64fd31c8a3cf86b57453e709e15b0cf7e6f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6662186"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7157322"
 ---
 # <a name="title-storage-uris"></a>타이틀 저장소 URI
  

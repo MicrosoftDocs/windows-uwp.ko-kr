@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b187435c81c2cd9a185c3378b787eda41806d88
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6265164"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7151383"
 ---
 # <a name="mediamarketplaceidmetadatamediagroups"></a>/media/{marketplaceId}/metadata/mediaGroups
 지정 된 EDS 버전에 대 한 지원 되는 모든 mediaGroups 나열 되어 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

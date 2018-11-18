@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
 ms.openlocfilehash: b7b77ed3318f7e12adc5f35053b310034159e720
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6831796"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161840"
 ---
 # <a name="participant-user-scenarios"></a>참가자 사용자 시나리오
 
@@ -22,7 +22,7 @@ Xbox 아레나 및 Xbox 타이틀 협업 및 향후 경쟁 간의 균형을 여�
 
 Xbox 아레나, Xbox 소셜 기능 및 아레나 Api 토너먼트 진행 요구를 충족 이상의 못합니다. 결합 흥미로운 공동 작업 및 경쟁 환경으로 이어질 합니다.
 
-예:
+예를 들면 다음과 같습니다.
 
 * 게임 내 토너먼트 홍보 크리에이티브 과제 영감을 찾고 있는 기존 팬에 대 한 가시성을 발생 시킵니다.
 

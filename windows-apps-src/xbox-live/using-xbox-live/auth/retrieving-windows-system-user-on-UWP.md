@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 시스템 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: bd783c4e1614cc558f80472765a77138d1abf409
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6276283"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7166666"
 ---
 # <a name="retrieving-the-windows-system-user-in-a-universal-windows-platform-uwp-title"></a>유니버설 Windows 플랫폼 (UWP) 제목에 Windows 시스템 사용자 검색
 

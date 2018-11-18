@@ -7,12 +7,12 @@ ms.date: 5/2/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신
 ms.localizationpriority: medium
-ms.openlocfilehash: 467e4ca69550e6cebdd0b20711dd0e7a6abd305d
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 2c00ade176d4ee9ec405b5554ddd311bf81abed7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6262716"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7147772"
 ---
 # <a name="migration-from-game-chat-to-game-chat-2"></a>게임 채팅 2에 게임 채팅에서 마이그레이션
 
@@ -177,7 +177,7 @@ chatManager->ProcessIncomingChatMessage(packetBuffer, remoteIdentifier);
 
 마찬가지로, Game Chat 2 없는 자체 전송 계층입니다. 이 앱에서 제공 되어야 합니다. 앱의 일반, 자주 호출을 통해 나가는 패킷을 처리 되는 `chat_manager::start_processing_data_frames()` 및 `chat_manager::finish_processing_data_frames()` 메서드 쌍. 이러한 메서드는 게임 채팅 2 앱에 보내는 데이터를 제공 하는 방법. 이러한 전용 네트워킹 스레드에서 자주 폴링됩니다 수 있도록 신속 하 게 작동 하도록 설계 되었습니다. 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 모든 대기 중인된 데이터를 검색 하는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_data_frames()` 가 호출 모든 배열에서 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 적절 한 원격 앱 인스턴스에 데이터를 제공 해야 합니다. 한 번 모두 완료 합니다 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예:
+때 `chat_manager::start_processing_data_frames()` 가 호출 모든 배열에서 대기 중인된 데이터를 보고 하는 `game_chat_data_frame` 포인터를 구성 합니다. 앱 배열에 대해 반복 하 고 대상 "끝점"를 검사 하 고 앱의 네트워킹 계층을 사용 하 여 적절 한 원격 앱 인스턴스에 데이터를 제공 해야 합니다. 한 번 모두 완료 합니다 `game_chat_data_frame` 구조를 다시 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 배열 전달 해야 할 `chat_manager:finish_processing_data_frames()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t dataFrameCount;
@@ -235,7 +235,7 @@ auto token = chatManager->OnTextMessageReceived +=
 
 앱의 일반, 자주 호출을 통해 받은 문자 메시지 등의 앱에 대 한 업데이트를 제공 하는 게임 채팅 2는 `chat_manager::start_processing_state_changes()` 및 `chat_manager::finish_processing_state_changes()` 메서드 쌍. 이러한 UI 렌더링 루프에서 매 프레임 마다 그래픽 호출할 수 있습니다 되도록 신속 하 게 작동 하도록 설계 되었습니다. 네트워크 타이밍 또는 다중 스레드 콜백 복잡성 예측 불가능성 상관 없이 대기 중인된 모든 변경 내용을 검색 하는 편리한 위치를 제공 합니다.
 
-때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 됩니다 `game_chat_state_change` 포인터를 구성 합니다. 앱 보다 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 배열 반복 해야 합니다. 모든 완료 한 번 `game_chat_state_change` 현재 사용할 수 있는 개체를 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 다시 해당 배열 전달 해야 `chat_manager::finish_processing_state_changes()`. 예:
+때 `chat_manager::start_processing_state_changes()` 는 호출 대기 중인된 모든 업데이트의 배열에 보고 됩니다 `game_chat_state_change` 포인터를 구성 합니다. 앱 보다 구체적인 해당 형식에 대 한 기본 구조를 검사, 기본 구조를 입력 하 고 적절 하 게 해당 업데이트를 처리 합니다. 자세한 내용은 해당를 캐스팅 배열 반복 해야 합니다. 모든 완료 한 번 `game_chat_state_change` 현재 사용할 수 있는 개체를 호출 하 여 리소스를 해제 하 여 게임 채팅 2에 다시 해당 배열 전달 해야 `chat_manager::finish_processing_state_changes()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t stateChangeCount;
@@ -306,7 +306,7 @@ chatUser->GenerateTextMessage(L"Hello", true);
 
 ### <a name="text-to-speech---game-chat-2"></a>게임 채팅 2-텍스트 음성 변환
 
-사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` 'true' 반환 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예:
+사용자가 사용 하도록 설정 하는 텍스트 음성 변환 하는 경우 `chat_user::chat_user_local::text_to_speech_conversion_preference_enabled()` 'true' 반환 됩니다. 이 상태 감지 되 면 앱 텍스트 입력의 메서드를 제공 해야 합니다. 실제 또는 가상 키보드에서 제공 하는 텍스트 입력을 구성한 후에 문자열을 전달 합니다 `chat_user::chat_user_local::synthesize_text_to_speech()` 메서드. 게임 채팅 2은 검색 하 고 문자열 및 사용자의 음성 액세스할 수 있는 기본 설정에 따라 오디오 데이터를 합성 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 chat_userA->local()->synthesize_text_to_speech(L"Hello");
@@ -411,7 +411,7 @@ switch (chatUser->chat_indicator())
 
 ### <a name="game-chat"></a>게임 채팅
 
-게임 채팅 정보 눌러서 권한 및 개인 정보 보호를 노출 합니다 `RestrictionMode` 속성입니다. 검사 하 여 검색할 수 있습니다 `GameChatUser::RestrictionMode`.
+게임 채팅을 통해 권한 및 개인 정보를 노출 합니다 `RestrictionMode` 속성입니다. 검사 하 여 검색할 수 있습니다 `GameChatUser::RestrictionMode`.
 
 ### <a name="game-chat-2"></a>게임 채팅 2
 

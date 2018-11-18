@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, xbox, xbox live, xbox 하나
 ms.localizationpriority: low
 ms.openlocfilehash: 4958cdf5ee0fd0788118dc818564c2c8538dd716
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6835730"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7147560"
 ---
 # <a name="testing-on-the-xbox-one-console"></a>Xbox One 콘솔에서 테스트
 

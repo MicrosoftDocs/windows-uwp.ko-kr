@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 권한, 파트너 센터
 ms.openlocfilehash: f51fd7f9da1758d28301031ecd10d3d7650c1121
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6833291"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7153858"
 ---
 # <a name="configure-privileges-in-partner-center"></a>파트너 센터에서 권한 구성
 

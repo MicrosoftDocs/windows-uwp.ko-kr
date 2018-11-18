@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b175c76a610df13f7527327bdb490bc7a8399a2
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6843049"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7150311"
 ---
 # <a name="flowchart---play-a-multiplayer-game-by-using-smartmatch-matchmaking"></a>스마트 매치를 사용 하 여 멀티 플레이어 게임을 플레이-순서도
 

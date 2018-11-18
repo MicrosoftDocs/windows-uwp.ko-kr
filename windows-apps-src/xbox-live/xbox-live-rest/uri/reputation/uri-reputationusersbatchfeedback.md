@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: f6756cb057de1d5ad2e3e3f5039f55f4e52c12da
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6264044"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7171333"
 ---
 # <a name="usersbatchfeedback"></a>/users/batchfeedback
  

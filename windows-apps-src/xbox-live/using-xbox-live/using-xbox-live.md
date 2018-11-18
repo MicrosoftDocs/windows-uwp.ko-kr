@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b076aa0816600be65b92e2d59a76f07485b7d4ff
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7119330"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7157774"
 ---
 # <a name="using-xbox-live"></a>Xbox Live를 사용 하 여
 

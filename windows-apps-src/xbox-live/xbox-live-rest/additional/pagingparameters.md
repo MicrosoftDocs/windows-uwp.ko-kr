@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 337093fe7c75efee1be1ff18f94249b6693cdf84
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6277670"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161567"
 ---
 # <a name="paging-parameters"></a>페이징 매개 변수
  

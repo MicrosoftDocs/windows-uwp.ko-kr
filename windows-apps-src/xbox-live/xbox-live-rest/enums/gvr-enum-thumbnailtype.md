@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: dd588da7172894cfa094f503ce8749b74cb2b30c
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6251164"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7163623"
 ---
 # <a name="thumbnailtype-enumeration"></a>ThumbnailType 열거형
 ThumbnailType 열거형에 자세히 설명 합니다. 

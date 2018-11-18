@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, ux
 ms.localizationpriority: medium
 ms.openlocfilehash: 84944060bac0a14e78cb4a5b28bbc848a71d7602
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6257618"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7160619"
 ---
 # <a name="xbox-arena"></a>Xbox 아레나
 
@@ -48,7 +48,7 @@ Xbox 아레나 만들고 온라인 토너먼트 경쟁 게임 재미를 광범�
 
 타이틀을 제공 해야 하는 초기 사용자 환경에는 간단 하 고 가능한 경쟁 형식의 많은 작업할 수 있을 만큼 유연 합니다. 사용자 환경 지침을 조정할 수 및 요구 사항에 맞게 타이틀의 UI 흐름 및 원활한 사용자를 위해 경험을.
 
-예:
+예를 들면 다음과 같습니다.
 
 * 필요한 정보를 제공 한다는 점에서 세부 정보 페이지에서 같은 위치를 사용할 수 있거나 팝업 주 화면에 표시 하려면 없습니다.
 

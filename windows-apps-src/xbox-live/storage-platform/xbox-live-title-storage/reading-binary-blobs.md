@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: 5dc5e429ab36621db1c5525ae7f1a8dc5da3b4fc
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6835652"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7157863"
 ---
 # <a name="reading-a-binary-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소의 이진 blob 읽기
 

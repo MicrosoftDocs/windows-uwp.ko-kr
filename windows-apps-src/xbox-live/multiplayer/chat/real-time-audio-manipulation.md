@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신, 버퍼 조작, 오디오 조작
 ms.localizationpriority: medium
 ms.openlocfilehash: cd0a88c5d3ae50cb7dd86585507c951cc061503d
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6279870"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7165594"
 ---
 # <a name="real-time-audio-manipulation"></a>실시간 오디오 조작
 
@@ -38,7 +38,7 @@ ms.locfileid: "6279870"
 
 ## <a name="processing-audio-stream-state-changes"></a>오디오 스트림 상태 변경 내용 처리
 
-오디오 스트림을 통해의 상태에 대 한 업데이트를 제공 하는 게임 채팅 2 `game_chat_stream_state_change` 구조입니다. 이러한 업데이트에 대 한 스트림이 업데이트 및 업데이트 된 방법을 정보를 저장 합니다. 이러한 업데이트에 대 한 호출을 통해 폴링할 수는 `chat_manager::start_processing_stream_state_changes()` 및 `chat_manager::finish_processing_stream_state_changes()` 메서드 쌍. 이 메서드 쌍을 최신, 대기 중인 오디오 스트림의 모든 상태 업데이트 제공 배열로 `game_chat_stream_state_change` 포인터를 구성 합니다. 앱의 배열을 반복 하 고 각 업데이트를 적절 하 게 처리 해야 합니다. 한 번 사용 가능한 모든 `game_chat_stream_state_change` 업데이트 처리 되어, 해당 배열을 통해 Game Chat 2에 다시 전달 되어야 `chat_manager::finish_processing_stream_state_changes()`. 예:
+오디오 스트림을 통해의 상태에 대 한 업데이트를 제공 하는 게임 채팅 2 `game_chat_stream_state_change` 구조입니다. 이러한 업데이트에 대 한 스트림이 업데이트 및 업데이트 된 방법을 정보를 저장 합니다. 이러한 업데이트에 대 한 호출을 통해 폴링할 수는 `chat_manager::start_processing_stream_state_changes()` 및 `chat_manager::finish_processing_stream_state_changes()` 메서드 쌍. 이 메서드 쌍을 최신, 대기 중인 오디오 스트림의 모든 상태 업데이트 제공 배열로 `game_chat_stream_state_change` 포인터를 구성 합니다. 앱의 배열을 반복 하 고 각 업데이트를 적절 하 게 처리 해야 합니다. 한 번 사용 가능한 모든 `game_chat_stream_state_change` 업데이트 처리 되어, 해당 배열을 통해 Game Chat 2에 다시 전달 되어야 `chat_manager::finish_processing_stream_state_changes()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t streamStateChangeCount;

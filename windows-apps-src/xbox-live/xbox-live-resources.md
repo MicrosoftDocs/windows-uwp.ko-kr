@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, xbox, xbox 실시간으로 리소스, API 참조
 ms.localizationpriority: medium
 ms.openlocfilehash: 392269add8d54873726f225e5314e7f14bd92923
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6258639"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161754"
 ---
 # <a name="xbox-live-resources"></a>Xbox Live 리소스
 

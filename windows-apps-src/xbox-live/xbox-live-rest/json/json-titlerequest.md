@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ab030f1f8086bc33243b4a764ccafd8747ea6c81
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6264116"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7163489"
 ---
 # <a name="titlerequest-json"></a>TitleRequest(JSON)
 타이틀에 대 한 정보에 대 한 요청 합니다. 

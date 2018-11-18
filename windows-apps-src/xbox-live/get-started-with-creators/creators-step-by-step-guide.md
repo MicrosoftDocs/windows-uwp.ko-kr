@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c4d7d03bc218d7507c8c2971bf76946a9fca6b4
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6849186"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161925"
 ---
 # <a name="step-by-step-guide-to-integrate-xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램을 통합하는 방법에 대한 단계별 가이드
 

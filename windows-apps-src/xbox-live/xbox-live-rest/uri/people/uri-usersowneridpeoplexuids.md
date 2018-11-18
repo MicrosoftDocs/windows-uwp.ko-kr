@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d2b915e185462e65f68fefce009d6081e7cddf37
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6833753"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7152051"
 ---
 # <a name="usersowneridpeoplexuids"></a>/users/{ownerId}/people/xuids
 XUID 하 여 호출자의 사람들이 컬렉션에서 사용자를 액세스 합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.

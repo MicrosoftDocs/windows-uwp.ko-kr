@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ef948a581c52f4b8ef781457b8e30851abf77723
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6658087"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7148961"
 ---
 # <a name="xbox-live-storage-platform---connected-storage-title-storage"></a>Xbox Live 저장소 플랫폼-연결 된 저장소, 타이틀 저장소
 

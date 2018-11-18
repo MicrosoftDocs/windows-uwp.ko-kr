@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 개발자 프로그램, 크리에이터 스
 ms.localizationpriority: medium
 ms.openlocfilehash: faf010e2a61199d56a1ae5b9ed08fd373f89cd80
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6996518"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7169562"
 ---
 # <a name="developer-program-overview"></a>개발자 프로그램 개요
 
@@ -169,7 +169,7 @@ ID@Xbox타이틀은 작성자 컬렉션으로 고객에 게 큰 노출할 수와
 </tr>
 
 <tr>
-<td>Privacy</td>
+<td>개인 정보</td>
 <td>음을 소거 하거나 차단 하는 플레이어 또는 다른 플레이어 허용</td>
 <td class="xbl-features-optional">선택 사항</td>
 <td class="xbl-features-optional">선택 사항</td>

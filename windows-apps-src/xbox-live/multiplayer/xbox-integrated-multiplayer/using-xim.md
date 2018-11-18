@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, 하나는 xbox, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e4645de174bb572b75a8d5a5dcbb4091a693e75
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6250180"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7169422"
 ---
 # <a name="using-xim-c"></a>XIM (c + +)를 사용 하 여
 
@@ -104,7 +104,7 @@ XIM의 핵심은 앱의 일반, 자주 호출 하는 `xim::start_processing_stat
 1. 기본 구조 캐스트할 더 자세한 유형에 해당 합니다.
 1. 해당 업데이트를 적절 하 게 처리 합니다.
 
-한 번 모두 완료 합니다 `xim_state_change` 현재 사용할 수 있는 구조를 다시 호출 하 여 리소스를 해제 하는 XIM에 해당 배열 전달 해야 `xim::finish_processing_state_changes()`. 예:
+한 번 모두 완료 합니다 `xim_state_change` 현재 사용할 수 있는 구조를 다시 호출 하 여 리소스를 해제 하는 XIM에 해당 배열 전달 해야 `xim::finish_processing_state_changes()`. 예를 들면 다음과 같습니다.
 
 ```cpp
 uint32_t stateChangeCount;
@@ -193,7 +193,7 @@ bool isXimActivation;
 isXimActivation = xim::singleton_instance().extract_protocol_activation_information(uriString, &activationInfo);
 ```
 
-XIM 활성화 인지를 식별 'local_xbox_user_id' 필드는 채워진의 로컬 사용자를 확인 하려는 경우 `xim_protocol_activation_information` 구조는 로그인 하 고 지정 된 사용자가 `xim::set_intended_local_xbox_user_ids()`. 다음에 대 한 호출을 사용 하 여 지정 된 XIM 네트워크에 이동을 시작할 수 있습니다 `xim::move_to_network_using_protocol_activated_event_args()` 동일한 URI 문자열을 사용 합니다. 예:
+XIM 활성화 인지를 식별 'local_xbox_user_id' 필드는 채워진의 로컬 사용자를 확인 하려는 경우 `xim_protocol_activation_information` 구조는 로그인 하 고 지정 된 사용자가 `xim::set_intended_local_xbox_user_ids()`. 다음에 대 한 호출을 사용 하 여 지정 된 XIM 네트워크에 이동을 시작할 수 있습니다 `xim::move_to_network_using_protocol_activated_event_args()` 동일한 URI 문자열을 사용 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 xim::singleton_instance().move_to_network_using_protocol_activated_event_args(uriString);

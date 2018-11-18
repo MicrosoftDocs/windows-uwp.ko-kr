@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0900786f4aeb8e2baf1bfe7a9fcc302ac857f91a
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6263908"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7151855"
 ---
 # <a name="add-and-compile-the-xbox-live-apis-source-in-your-uwp-project"></a>UWP 프로젝트에서 Xbox Live Api 소스 추가 및 컴파일
 
