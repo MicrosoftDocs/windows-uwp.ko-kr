@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 멀티 플레이 2015, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 257dea8d3a69195b81e23dd43f304eabf99779ca
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6664528"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7173343"
 ---
 # <a name="updated-flows-for-multiplayer-game-invites"></a>멀티 플레이 게임 초대를 위한 업데이트 된 흐름
 

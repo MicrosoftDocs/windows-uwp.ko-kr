@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox, 오프 라인
 ms.localizationpriority: medium
 ms.openlocfilehash: a552f275a69fde67f22d25a79b5b8c318c4f8dc3
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6837629"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7168606"
 ---
 # <a name="best-practices-for-offline"></a>오프라인을 위한 모범사례
 

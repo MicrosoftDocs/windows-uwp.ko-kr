@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
 ms.openlocfilehash: 8af1979a92821a62a625ea9d637a7dbcf9a59edb
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7112004"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7169930"
 ---
 # <a name="play-a-multiplayer-game-with-friends"></a>친구와 멀티 플레이 게임
 
