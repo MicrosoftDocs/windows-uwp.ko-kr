@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 다시 시작, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 1149bebfd837e3d4051b5e0fca10aac248d909c5
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149970"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307413"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>앱 다시 시작 방법(DirectX 및 C++)
 

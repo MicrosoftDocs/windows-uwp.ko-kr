@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 범주, 하위 범주, 장르, 범주, 장르
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c3ea799d030b64c5b4cc67f75cbdd664a8b83da
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7166054"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7286574"
 ---
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 

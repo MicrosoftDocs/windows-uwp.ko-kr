@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 ms.localizationpriority: medium
 ms.openlocfilehash: 61967f0aa81c49cb4e81b11bedac84c318be1840
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7162148"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307383"
 ---
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 9513ed03f70a0b5efca0472bb4b0598a33a05fc2
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7147568"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307513"
 ---
 # <a name="international-fonts"></a>국가별 글꼴
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 72f58521e01d46437ba44453b94d12a82bb3e639
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7156271"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7288129"
 ---
 # <a name="texture-resources"></a>텍스처 리소스
 

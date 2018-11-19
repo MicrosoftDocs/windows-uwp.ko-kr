@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, COM 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
 ms.openlocfilehash: a07c9877a6d6d953e578d927959b1202444ede21
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7150768"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307433"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT로 작성된 COM 구성 요소 사용
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, xbox 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b0e2bab0ce7d5525e8032809954ff656a74a61c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7153494"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7287593"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox 정보 API 참조   
 이 API를 사용 하 여 Xbox One 장치 정보에 액세스할 수 있습니다.

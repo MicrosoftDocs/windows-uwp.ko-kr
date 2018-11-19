@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 00f8d4314d67828fa30007d3b8af4c4e1d06c154
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7144909"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307181"
 ---
 # <a name="enumerate-devices-over-a-network"></a>네트워크를 통해 디바이스 열거
 

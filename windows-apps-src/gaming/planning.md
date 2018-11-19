@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 계획, 접근성, 클라우드, 수익 창출, 패키지, 기술, 개념, 승인
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d350077e3199bdc875d4ad89559cb88ae8950c9
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7171017"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7290266"
 ---
 # <a name="planning-for-uwp-games"></a>UWP 게임 계획
 

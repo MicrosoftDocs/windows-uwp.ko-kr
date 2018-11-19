@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 76af980aeb759905259a043fdb9b4b828a90d819
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7172709"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307573"
 ---
 # <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
  
