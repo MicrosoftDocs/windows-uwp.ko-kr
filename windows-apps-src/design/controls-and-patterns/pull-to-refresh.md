@@ -15,11 +15,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b1dd6bd1bc165a79ba123c94e63e1dcfa58ec21
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7147621"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7304385"
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 

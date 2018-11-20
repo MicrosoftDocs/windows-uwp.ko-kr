@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, glsl, 포트
 ms.localizationpriority: medium
 ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7171977"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7306684"
 ---
 # <a name="port-the-glsl"></a>GLSL 포팅
 

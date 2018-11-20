@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: de519f37c5eacfa64f23d0f438701d4ae9dbc934
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7168518"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7303810"
 ---
 # <a name="product-declarations"></a>제품 선언
 
