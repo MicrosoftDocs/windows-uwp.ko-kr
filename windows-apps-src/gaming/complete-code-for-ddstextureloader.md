@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, ddstextureloader
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ba0de548cb1c4222783ae4245e1aacba4ab09e2
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7171842"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7299563"
 ---
 # <a name="complete-code-for-ddstextureloader"></a>DDSTextureLoader의 전체 코드
 

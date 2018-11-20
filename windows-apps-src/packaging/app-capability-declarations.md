@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f0270ca3f1fac959f2ccc49352739e9ccd0f41cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: bb692aaada7296f230e1243a3ce515b471f1ba98
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7152681"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7296968"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -208,7 +208,7 @@ ms.locfileid: "7152681"
 | **시스템 펌웨어 및 BIOS** | **smbios** 접근 권한 값을 통해 앱은 BIOS 데이터 및 시스템 펌웨어 데이터에 액세스할 수 있습니다. |
 | **권한 수준이 완전 신뢰** | **RunFullTrust** 제한 된 접근 권한 값을 완전 신뢰 권한 수준에서 사용자의 컴퓨터에서 실행할 수 있습니다. 이 접근 권한이 값은 [FullTrustProcessLauncher](https://docs.microsoft.com/uwp/api/windows.applicationmodel.fulltrustprocesslauncher) API 사용 해야 합니다.<br /><br />이 접근 권한이 값을 appx 또는 msix 패키지로 제공 되는 모든 데스크톱 응용 프로그램에 필요한 이기도 ( [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)마찬가지로), Desktop App Converter (DAC)를 사용 하 여 이러한 앱을 패키징할 때 자동으로 매니페스트의 표시 됩니다 또는 Visual Studio 합니다. |
 | **권한 상승** | **AllowElevation** 제한 된 접근 권한 값은 기존 데스크톱에 필요한 기능을 시작 하거나 앱의 수명 동안 자동 승격을 유지 하기 위해 Microsoft 파트너와 엔터프라이즈에서 생성 된 앱 수 있습니다.<br/><br/>Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. 엔터프라이즈에서는 비즈니스용 Microsoft 스토어를 통해 자신의 개인 저장소를 통해 배포 된 비즈니스 라인 앱에 대 한만 승인 됩니다.  |
-| **Windows 팀 장치 자격 증명** | **TeamEditionDeviceCredentials** 제한 된 접근 권한 값을 Windows 10 버전 1703 이상을 실행 하는 Surface Hub 디바이스에서 디바이스 계정 자격 증명을 요청 하는 Api에 액세스할 수 있습니다.<br/><br/>Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. |
+| **Windows 팀 장치 자격 증명** | **TeamEditionDeviceCredential** 제한 된 접근 권한 값을 Windows 10 버전 1703 이상을 실행 하는 Surface Hub 디바이스에서 디바이스 계정 자격 증명을 요청 하는 Api에 액세스할 수 있습니다.<br/><br/>Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. |
 | **Windows 팀 응용 프로그램 보기** | **TeamEditionView** 제한 된 접근 권한 값을 Windows 10 버전 1703 이상을 실행 하는 Surface Hub 디바이스에는 응용 프로그램 보기 호스팅에 대 한 Api에 액세스할 수 있습니다.<br/><br/>Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. |
 | **카메라 처리 확장** | **CameraProcessingExtension** 제한 된 접근 권한 값을 직접 카메라의 제어 없이 카메라에서 캡처한 이미지를 처리할 수 있습니다.<br /><br />이 접근 권한이 값은 [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) 네임 스페이스의 Api를 호출 해야 합니다.<br /><br />Microsoft Store 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다. |
 | **데이터 사용량 관리*** | **NetworkDataUsageManagement** 제한 된 접근 권한 값을 네트워크 데이터 사용 정보를 수집할 수 있습니다.<br /><br />이 접근 권한이 값은 [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync)호출 해야 합니다.<br /><br />Microsoft Store 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다. |

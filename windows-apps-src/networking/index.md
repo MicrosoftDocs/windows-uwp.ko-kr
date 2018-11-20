@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e01ac3a0dcab0bc82835b97d70477bf585ab4570
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7173155"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7298827"
 ---
 # <a name="networking-and-web-services"></a>네트워킹 및 웹 서비스
 
