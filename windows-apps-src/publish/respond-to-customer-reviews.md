@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 응답을 응답 검토
 ms.localizationpriority: medium
-ms.openlocfilehash: 32ded7cc66cda75fbb6edb9ab9d84c21c2d02cff
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 9552e9dede62d4d89b71f031cd2ff2c76964d0cb
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158560"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7305034"
 ---
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
@@ -23,7 +23,7 @@ ms.locfileid: "7158560"
 앱 리뷰를 보고 응답을 제공 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에서 앱을 찾습니다. 왼쪽된 탐색 메뉴에서 *분석*확장 * 다음 [리뷰 보고서](reviews-report.md)를 표시 하려면 **리뷰** 클릭 합니다. 응답을 제공 하기 위해 **검토에 응답** 을 선택 합니다.
 
 > [!TIP]
-> 파트너 센터를 사용 하 여 리뷰에 응답을 하는 것 외에도 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)을 사용 하 여 또는에 리뷰 [프로그래밍 방식으로](../monetize/submit-responses-to-app-reviews.md)응답할 수 있습니다.
+> 파트너 센터를 사용 하 여 리뷰에 응답, 이외에 리뷰 [프로그래밍 방식으로](../monetize/submit-responses-to-app-reviews.md)응답할 수 있습니다.
 
 기본적으로 응답 원래 고객 리뷰 바로 아래 스토어에 게시 됩니다. 이러한 응답은 Windows 10 장치에서 스토어를 보는 모든 고객에 게 표시 됩니다. 리뷰를 남긴 고객은 Windows 10 버전 1803 이상을 실행 하는 장치를 사용 하 여 메일 응답을 받지 않도록 선택 하지 않은 경우 메일에서 응답의 복사본을 해당 고객에 게도 보낼 수 됩니다.  고객에 게 전자 메일에 포함 된 응답을 제출 하려면 유효한 메일 주소를 제공 해야 합니다. 그런 다음 직접 문의할 때이 전자 메일 주소를 사용할 수 있습니다.
 

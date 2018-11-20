@@ -14,11 +14,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f5fccf10a28e1c2dd7f0f6001d2c64ca2354f76
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7171341"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7300251"
 ---
 # <a name="flip-view"></a>대칭 이동 보기
 

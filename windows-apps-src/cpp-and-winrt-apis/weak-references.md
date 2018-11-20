@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 강력 하 �
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: a27f0e6868826e88069e3ffd1fbdcd87242ec216
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7148089"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7302195"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>강력 하 고 약한 참조를 C + + WinRT
 

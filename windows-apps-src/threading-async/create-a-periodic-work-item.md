@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 정기 작업 항목, 스레딩, 타이머
 ms.localizationpriority: medium
 ms.openlocfilehash: 4afa137b01738c42f8e15c95ef09ec921d1e44ae
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7173766"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7306147"
 ---
 # <a name="create-a-periodic-work-item"></a>정기 작업 항목 만들기
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 샘플, 응용 프로그램, 사진, 편집기
 ms.localizationpriority: medium
 ms.openlocfilehash: 60bfcd79ed2d659aff8d435bd397df05eb45af72
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7148279"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7301804"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>사진 편집기 C++/WinRT 샘플 응용 프로그램
 [사진 편집기 C++/WinRT 샘플 응용 프로그램](https://github.com/Microsoft/Windows-appsample-photo-editor) GitHub 리포지토리에서 샘플 응용 프로그램을 복제 또는 다운로드할 수 있습니다.

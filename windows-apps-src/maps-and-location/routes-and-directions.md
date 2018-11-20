@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 경로, 지도, 위치, 길 찾기
 ms.localizationpriority: medium
 ms.openlocfilehash: 69283f6b53f3a8483376e3b8fe77a4491d4b01b1
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7173776"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7306289"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
 
