@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 메시, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: e3ae6416217efa16d70b65b8ff55e36654a11557
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7290689"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7441933"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>기본 메시 만들기 및 표시
 
