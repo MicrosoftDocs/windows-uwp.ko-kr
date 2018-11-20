@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 5f11afbafc424a4ed7f2c973f0417c792ab7da65
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 08bf867b6690a84f89b61cac9942b8ad6c27cd99
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7160181"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7280631"
 ---
 # <a name="use-a-maintenance-trigger"></a>유지 관리 트리거 사용
 
@@ -35,7 +35,7 @@ ms.locfileid: "7160181"
 
 백그라운드 작업 클래스를 작성하는 방법은 [in-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
-새 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) 개체를 만듭니다. 두 번째 매개 변수인 *OneShot*은 유지 관리 작업이 한 번만 실행되는지, 아니면 정기적으로 계속 실행되는지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
+새 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 개체를 만듭니다. 두 번째 매개 변수인 *OneShot*은 유지 관리 작업이 한 번만 실행되는지, 아니면 정기적으로 계속 실행되는지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
 
 > [!NOTE]
 > *FreshnessTime* 15 분 미만으로 설정 되 면 백그라운드 작업을 등록 하려고 하면 예외가 throw 됩니다.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 75ba42674ca1ea460698fcce6e67bb3528589797
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7160103"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7286154"
 ---
 # <a name="uri-schemes"></a>URI 스키마
 

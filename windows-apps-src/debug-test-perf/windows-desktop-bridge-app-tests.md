@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 8363bc3085e9d6ec4e1a86751b691266b12b365c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163406"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7283118"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 

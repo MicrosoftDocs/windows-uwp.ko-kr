@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: a29c4aeb5a5928e04e0018d68884fdb4a4876332
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7156829"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7282637"
 ---
 # <a name="export-restrictions-on-cryptography"></a>암호화에 대한 내보내기 제한
 

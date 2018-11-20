@@ -8,12 +8,12 @@ ms.date: 08/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 검토, 주석, 검토자
 ms.localizationpriority: medium
-ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: e5deef6d5e67c1236fb88f93269fcf91bb50243c
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158254"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7281785"
 ---
 # <a name="reviews-report"></a>리뷰 보고서
 
@@ -22,7 +22,7 @@ ms.locfileid: "7158254"
 
 파트너 센터 또는 [보고서를 다운로드](download-analytic-reports.md) 를 오프 라인으로이 데이터를 볼 수 있습니다. 또는 [Microsoft Store 분석 REST API의](../monetize/access-analytics-data-using-windows-store-services.md)에서 [앱 리뷰 가져오기](../monetize/get-app-reviews.md) 메서드를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
 
-고객 리뷰에서를 [이 페이지에서 직접](respond-to-customer-reviews.md)프로그래밍 방식으로 [Microsoft Store 리뷰 API를 통해](../monetize/submit-responses-to-app-reviews.md), 또는 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)을 사용 하 여 응답할 수 있습니다.
+고객 리뷰가 [이 페이지에서 직접](respond-to-customer-reviews.md) 또는 프로그래밍 방식으로 [Microsoft Store를 통해 리뷰 API에](../monetize/submit-responses-to-app-reviews.md)응답할 수 있습니다.
 
 > [!TIP]
 > 지난 30일 간의 모든 앱에 대한 리뷰, 평점 및 사용자 피드백을 빨리 확인하려면 왼쪽 탐색 메뉴에서 **참여**를 확장하고 **리뷰 및 피드백**을 선택합니다. 
@@ -114,7 +114,7 @@ ms.locfileid: "7158254"
 
 ## <a name="responding-to-customer-reviews"></a>고객 리뷰에 응답
 
-다양 한 고객 리뷰에 응답을 보낼 [파트너 센터](https://partner.microsoft.com/dashboard), [Microsoft Store 리뷰 API](../monetize/submit-responses-to-app-reviews.md), 또는 [개발자 센터 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) 을 사용할 수 있습니다. 자세한 내용은 [고객 리뷰에 응답](respond-to-customer-reviews.md)을 참조하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard) 또는 [Microsoft Store 리뷰 API](../monetize/submit-responses-to-app-reviews.md) 를 사용 하 여 다양 한 고객 리뷰에 응답을 보낼 수 있습니다. 자세한 내용은 [고객 리뷰에 응답](respond-to-customer-reviews.md)을 참조하세요.
 
 다음은 표시되는 평점 및 리뷰에 따라 고려할 수 있는 몇 가지 추가 작업입니다.
 

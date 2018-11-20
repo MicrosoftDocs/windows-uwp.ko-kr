@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 설명, 설명, Store 목록, 마케팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 382bfe760165b4dee3fbdbb63166648c2e475325
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163204"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7279682"
 ---
 # <a name="write-a-great-app-description"></a>호소력 있는 앱 설명 쓰기
 

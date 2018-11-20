@@ -10,11 +10,11 @@ keywords: Windows 10, uwp, 게시, 판매, 배포, Microsoft Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
 ms.openlocfilehash: 229e1eab05e392a4091c9eee5bc9af948c678d96
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7168349"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7286793"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
  

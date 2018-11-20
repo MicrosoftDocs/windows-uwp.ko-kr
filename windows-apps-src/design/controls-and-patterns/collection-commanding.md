@@ -15,11 +15,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f06d7015fcb208b55fe0cb57b96eaecbc99317cc
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7172161"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7285293"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>컬렉션 및 리스트에 대한 상황에 맞는 명령
 

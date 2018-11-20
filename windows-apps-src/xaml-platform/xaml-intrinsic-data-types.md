@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 18cf7a63dea7a1913293e5cd174b8f6c69b5baf6
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7161457"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7282790"
 ---
 # <a name="xaml-intrinsic-data-types"></a>XAML 기본 데이터 형식
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d948dee234ad6c49da847324422737b1bae27e30
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149133"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7281524"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>카메라 프레임 분석 효과
 

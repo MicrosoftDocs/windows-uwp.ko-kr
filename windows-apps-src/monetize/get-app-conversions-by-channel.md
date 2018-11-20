@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 변환, 채널
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb5d5dfbfcbabbd3fa3004c84e2a1a5fff9f2d6
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7159090"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7280768"
 ---
 # <a name="get-app-conversions-by-channel"></a>채널별 앱 변환 가져오기
 

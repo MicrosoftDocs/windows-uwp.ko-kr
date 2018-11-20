@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9684db2495e974c23d81b21e9a4a2e764d390255
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7164250"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7280735"
 ---
 # <a name="hosting-a-camera-barcode-scanner-preview-in-your-application"></a>응용 프로그램에서 카메라 바코드 스캐너에 대한 미리 보기 호스팅
 ## <a name="step-1-setup-your-camera-preview"></a>1단계: 카메라 미리 보기 설정

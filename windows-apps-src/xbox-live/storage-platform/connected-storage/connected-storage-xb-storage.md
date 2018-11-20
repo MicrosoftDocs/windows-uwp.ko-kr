@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a741dbb202f9c5573342bb15098fc4553a7edc7
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7161505"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307272"
 ---
 # <a name="managing-local-connected-storage"></a>연결 된 로컬 저장소 관리
 연결 된 저장 게임 데이터가 클라우드에 저장을 사용 하는 동안 다시 피도 연결 된 저장소 서비스는 로컬 저장소 구성 요소입니다. PC 또는 콘솔에 인지 클라우드로 동기화 된 데이터를 포함 하는 연결 된 저장소 데이터의 로컬 캐시. XDK 또는 UWP 제목 만드는 인지 로컬 저장소 연결 된 데이터를 관리할 수 있도록 하는 도구입니다.

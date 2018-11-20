@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a5a0af7b7227f149722cf34a368fc588198880ef
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7172023"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7282481"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 

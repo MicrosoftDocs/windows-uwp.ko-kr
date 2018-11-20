@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a991d692b4ba4c7a221932218a7d25e48fe16ca
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7164106"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7285847"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a>InteractionTracker를 사용한 사용자 지정 조작 경험
 

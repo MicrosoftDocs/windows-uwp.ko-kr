@@ -9,11 +9,11 @@ keywords: Windows 10, UWP, 버전, 빌드, 버전, Windows, 선택, 업데이트
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e2b241d0369d50e600a5497811ac7d4bbb823bc
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7152864"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7282739"
 ---
 # <a name="choose-a-uwp-version"></a>UWP 버전 선택
 

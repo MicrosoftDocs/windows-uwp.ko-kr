@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fb88fc3a764a89dfe7ac8a9c399149b6b98eca5
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7161408"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7282804"
 ---
 # <a name="customresource-markup-extension"></a>{CustomResource} 태그 확장
 

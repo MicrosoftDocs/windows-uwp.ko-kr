@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 199f9def3150373fed2b3c7d8e711c1eeda6e721
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7148545"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7285163"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>앱 리소스 및 리소스 관리 시스템
 

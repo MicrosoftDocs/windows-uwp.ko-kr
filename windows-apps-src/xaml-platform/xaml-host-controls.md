@@ -9,11 +9,11 @@ keywords: Windows 10, uwp, windows 양식, wpf
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 267c04cb039a43d598238a55e7d480c99211dc62
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7162261"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7287860"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>데스크톱 응용 프로그램의 UWP 컨트롤
 

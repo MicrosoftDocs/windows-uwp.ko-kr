@@ -9,11 +9,11 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7157471"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7286220"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
 

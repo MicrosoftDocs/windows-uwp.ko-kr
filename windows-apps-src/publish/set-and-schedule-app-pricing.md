@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 가격 책정, 앱 가격 책정, 앱 가격, 앱 판매, 가격 변경, 가격 사용자 지정, 가격, 비용, 기본 가격 재정의, 자유 형식 가격, 자유 형식
 ms.localizationpriority: medium
 ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163971"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7288795"
 ---
 # <a name="set-and-schedule-app-pricing"></a>앱 가격 설정 및 예약
 

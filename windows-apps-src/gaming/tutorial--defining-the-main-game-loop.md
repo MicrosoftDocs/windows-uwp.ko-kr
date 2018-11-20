@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 주 개체
 ms.localizationpriority: medium
 ms.openlocfilehash: b94d7139f35b3a18edd66af9959a0958d0bdcbc1
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7173042"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7279086"
 ---
 # <a name="define-the-main-game-object"></a>주 게임 개체 정의
 

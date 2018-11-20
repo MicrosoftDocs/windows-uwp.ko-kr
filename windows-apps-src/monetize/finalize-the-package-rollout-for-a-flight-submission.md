@@ -9,11 +9,11 @@ keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 플라�
 ms.assetid: e4a645f6-1f00-4af5-80d6-d2ee179acc8a
 ms.localizationpriority: medium
 ms.openlocfilehash: 560576dd60c42f48c625b8c4c55a2b0c85ce511c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7154668"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7284388"
 ---
 # <a name="finalize-the-rollout-for-a-flight-submission"></a>플라이트 제출에 대한 출시 마무리
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, uwp, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 보내기, 데스크톱 브리지, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f1cd95d6dfff6b4c9038fd5a773d1438b1b7176
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7167339"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7284607"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 

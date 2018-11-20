@@ -14,11 +14,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f9bb6daeb01e264cf9cdb0fa9ee9c66738fec972
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7165300"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7286949"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 

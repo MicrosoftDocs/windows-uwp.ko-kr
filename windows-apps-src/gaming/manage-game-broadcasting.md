@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, 게임, 브로드캐스팅
 ms.localizationpriority: medium
 ms.openlocfilehash: ae70c29927925abcf948435ed768871ba2427fd9
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7145125"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7289350"
 ---
 # <a name="manage-game-broadcasting"></a>게임 브로드캐스팅 관리
 이 문서는 UWP 앱에 대한 게임 브로드캐스팅을 관리하는 방법을 보여 줍니다. 사용자는 Windows에 기본 제공되는 시스템 UI를 사용하여 브로드캐스트를 시작해야 합니다. 하지만 Windows 10 버전 1709부터 앱에서 시스템 브로드캐스팅 UI를 시작하고 브로드캐스팅이 시작 및 중지될 때 알림을 받을 수 있습니다.

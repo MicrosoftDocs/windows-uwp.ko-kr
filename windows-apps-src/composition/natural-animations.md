@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 537e722917f00d590428dd2b5ee2d24e023e52b6
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7164230"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7278345"
 ---
 # <a name="natural-motion-animations"></a>자연스러운 동작 애니메이션
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
 ms.openlocfilehash: 0606c3b1b0b36dadb888166310f8b347d40a480a
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7168664"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7289763"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>원격 세션을 통해 디바이스 연결
 

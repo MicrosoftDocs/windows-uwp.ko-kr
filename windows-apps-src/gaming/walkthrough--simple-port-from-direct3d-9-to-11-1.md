@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7168867"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7282292"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 

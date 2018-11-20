@@ -9,11 +9,11 @@ keywords: 시작, uwp, windows 10, 학습 트랙, 데이터 바인딩, 목록
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 6f9710e613a1fa7abc1793e016c7bbebdbd2cda3
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7171371"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7278841"
 ---
 # <a name="display-customers-in-a-list"></a>목록에서 고객 표시
 
