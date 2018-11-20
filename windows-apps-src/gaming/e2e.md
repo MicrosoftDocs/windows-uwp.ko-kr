@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: f695e281c754eaa81f9851ab814520f57fc249ab
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 7481c1d0f64ccb25168200cdf5e6ccc068f769b9
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7155401"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7291637"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -247,8 +247,8 @@ Windows10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는 
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Windows 앱 개발자 포럼</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Microsoft Store 및 앱 포럼</a></td>
+        <td>게시 앱 및 게임 개발자 포럼</td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">게시 및 앱에서 광고</a></td>
     </tr>
     <tr>
         <td>UWP 앱 개발자 포럼</td>
@@ -1661,10 +1661,6 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     <col width="50%" />
     <col width="50%" />
     </colgroup>
-    <tr>
-        <td>개발자 센터 앱</td>
-        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">앱이 게시 된 앱의 성능을 확인 하도록</a></td>
-    </tr>  
     <tr>
         <td>파트너 센터 분석</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">앱 성능 분석</a></td>
