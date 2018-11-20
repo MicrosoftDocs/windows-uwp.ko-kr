@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 586f4ea2ac8e7fceffd347bd53f40ac531bbb114
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7144053"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7432387"
 ---
 # <a name="get-usersowneridclips"></a>GET (/users/{ownerId}/clips)
 사용자의 클립의 목록을 검색 합니다.

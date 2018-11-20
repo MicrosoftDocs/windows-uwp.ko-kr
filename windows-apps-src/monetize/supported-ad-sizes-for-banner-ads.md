@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 광고, 광고, 크기, 배너
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f23be9a58a138a82cc4510039a1c0899ef092a2
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7287963"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7421671"
 ---
 # <a name="supported-banner-ad-sizes"></a>지원되는 배너 광고 크기
 

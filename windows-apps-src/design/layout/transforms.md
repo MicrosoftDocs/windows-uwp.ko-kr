@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cfc7c34363bc05e13e618deccc44fada6dec96f
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7146791"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7432075"
 ---
 # <a name="transforms-overview"></a>변환 개요
 

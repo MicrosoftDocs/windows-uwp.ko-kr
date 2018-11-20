@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: bb78941f2ab9cab4395dbb1ba5eb8fb3b09dee08
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7144031"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7442050"
 ---
 # <a name="activityrecord-json"></a>ActivityRecord(JSON)
 하나 이상의 사용자의 다양 한 상태에 대 한 서식이 지정 된 및 지역화 된 문자열입니다. 

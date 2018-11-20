@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: a078d096a9cffe26e9b342250726dd75cdf48817
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7294925"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7420580"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>기존 ScrollViewer 경험 향상
 

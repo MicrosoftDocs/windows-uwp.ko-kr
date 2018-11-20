@@ -8,12 +8,12 @@ ms.date: 03/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 제품 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e5d6376420a1ee4ac166330371cf6e058d3476e
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.openlocfilehash: 2ed5e4b34f3ad46daaaac8310b6eced8639bde27
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7306776"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7441682"
 ---
 # <a name="query-for-products"></a>제품에 대한 쿼리
 
@@ -61,7 +61,7 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클�
 | modifiedAfter     | datetime     | 지정한 경우 서비스는 이 날짜 이후 수정된 제품만 반환합니다.        | 아니요       |
 | parentProductId   | 문자열       | 지정한 경우 서비스는 지정된 앱에 해당하는 추가 기능만 반환합니다.      | 아니요       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | 지정한 경우 서비스는 제공된 제품/SKU 쌍에 해당하는 제품만 반환합니다. 자세한 내용은 아래 표를 참조하세요.      | 아니요       |
-| productTypes      | 문자열       | 지정한 경우 서비스는 지정된 제품 형식과 일치하는 제품만 반환합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 아니요       |
+| productTypes      | 목록&lt;string&gt;       | 쿼리 결과에 반환 하는 제품 유형을 지정 합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 예       |
 | validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니요       |
 
 
