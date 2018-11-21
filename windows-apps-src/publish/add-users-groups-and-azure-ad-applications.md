@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, azure ad 응용 프로그램, aad, 사용자, 그룹, 여러 사용자, 다중 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: 2821132944a20260d0005f8925c23ab48581a9e2
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7299381"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7426919"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>사용자, 그룹, 파트너 센터 계정에 Azure AD 응용 프로그램 추가
 

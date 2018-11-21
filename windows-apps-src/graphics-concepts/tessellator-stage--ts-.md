@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d57c60e8cba9be75e936c55800bac93f8df3e30
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7282259"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7425874"
 ---
 # <a name="tessellator-ts-stage"></a>TS(분할기) 단계
 

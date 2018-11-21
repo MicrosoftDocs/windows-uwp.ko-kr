@@ -14,11 +14,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: bce437a9c9ba6bac8beb0ba705020065bad29b83
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7296314"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7424267"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 

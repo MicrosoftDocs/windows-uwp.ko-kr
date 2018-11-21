@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0b85293ada8619246c3c23ef2103ead5f40c23
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7289483"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7426079"
 ---
 # <a name="controller-api-reference"></a>컨트롤러 API 참조   
 연결된 실제 컨트롤러 수를 얻고 REST API를 사용하여 이를 끌 수 있습니다.
