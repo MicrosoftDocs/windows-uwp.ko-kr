@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 그래픽, 진단, 도구, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7306756"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7433900"
 ---
 # <a name="graphics-diagnostics-tools"></a>그래픽 진단 도구
 
