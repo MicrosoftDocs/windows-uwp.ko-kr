@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c4659ee4200915a7cc82f46c90f0e53965f322d5
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7428042"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7559606"
 ---
 # <a name="geometry-shader-gs-stage"></a>GS(기하 도형 셰이더) 단계
 
