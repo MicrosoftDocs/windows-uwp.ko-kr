@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 지역화 가능, 지역화, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: ac69701eca128d327dfd80cfddc7fad41c50c50e
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7307191"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7435488"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>레이아웃 및 글꼴 조정, RTL 지원
 RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 설계합니다. 텍스트 흐름 방향은 스크립트가 작성되고 표시되는 방향이며 페이지의 UI 요소는 눈으로 스캔됩니다.

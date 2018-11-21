@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7303263"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7441012"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 

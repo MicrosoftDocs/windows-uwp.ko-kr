@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 811c2c978d04e7636bb5f52a2ebf7587193c4786
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7307257"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7439673"
 ---
 # <a name="create-add-on-store-listings"></a>추가 기능 저장소 목록 만들기
 

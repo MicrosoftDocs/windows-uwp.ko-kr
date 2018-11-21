@@ -7,12 +7,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, 패키징, 패키지 구성, 플랫 번들
 ms.localizationpriority: medium
-ms.openlocfilehash: b877996dd5fa32ac764fb587092f501320931527
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.openlocfilehash: 8d95591f12b61054a654b9b1284bdd90d74a937b
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7293903"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7436802"
 ---
 # <a name="flat-bundle-app-packages"></a>플랫 번들 앱 패키지 
 
@@ -36,7 +36,7 @@ MakeAppx.exe를 사용 하 여 플랫 번들을 만들려면 명령을 사용 �
 명령 구문의 예는 다음과 같습니다.
 
 ```syntax
-MakeAppx bundle [options] /d <content directory> /fb <output flat bundle name>
+MakeAppx bundle [options] /d <content directory> /fb /p <output flat bundle name>
 ```
 
 MakeAppx.exe를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도구로 앱 패키지 만들기](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)를 참조하세요.

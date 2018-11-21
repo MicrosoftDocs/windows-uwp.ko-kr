@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: c3861d5a135e0ee7a688a93a57cce801a05cf9a5
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7288076"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438737"
 ---
 # <a name="manage-add-ons"></a>추가 기능 관리
 

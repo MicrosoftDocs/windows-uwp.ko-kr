@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 320445022fa836e05d04e93b85d333ef1ad40a53
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7297675"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7434640"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>다국어 앱 도구 키트 4.0 FAQ 및 문제 해결
 

@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: f79e641b377f0e34ece8f0be434fae11cba621a6
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7279443"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7435428"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램 배포
 

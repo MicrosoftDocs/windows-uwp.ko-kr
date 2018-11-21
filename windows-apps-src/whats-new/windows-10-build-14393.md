@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
 ms.openlocfilehash: a350ff9cd5a2a3ec22637eabbcfc55b693cdd283
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7282907"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438270"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>개발자용 Windows 10 빌드 14393의 새로운 기능
 

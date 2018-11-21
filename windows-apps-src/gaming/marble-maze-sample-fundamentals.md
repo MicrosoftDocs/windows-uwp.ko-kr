@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 기본 사항
 ms.localizationpriority: medium
 ms.openlocfilehash: f595c8f429c93a13d6342c281a90f3b0f5741621
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7280109"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7434703"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Marble Maze 샘플 기본 사항
 

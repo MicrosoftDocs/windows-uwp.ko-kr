@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 71fb45842e8aaa4200e2597ac0736d911ac9bf34
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7282587"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7439819"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 

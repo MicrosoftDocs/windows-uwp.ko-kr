@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 상태
 ms.localizationpriority: medium
 ms.openlocfilehash: e2013a081898dbf46958190da1df01adaac9d820
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7295677"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7436189"
 ---
 # <a name="get-the-status-of-an-add-on-submission"></a>추가 기능 제출 상태 가져오기
 

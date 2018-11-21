@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d7c3c4a9e46ce38298d7dcdd50477c4de0e9960c
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7291498"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7436473"
 ---
 # <a name="animations-in-xaml"></a>XAML의 애니메이션
 

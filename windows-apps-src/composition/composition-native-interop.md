@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c5ba97e8e4a3f875e3afbc5a9067ab19b34a35d
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7295302"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7439168"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>DirectX 및 Direct2D를 사용하여 컴퍼지션 네이티브 상호 운용
 

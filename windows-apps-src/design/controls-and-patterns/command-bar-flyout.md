@@ -15,11 +15,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b92b74ba65a683143e273961ed25ce478a6e81f
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7303704"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438111"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 

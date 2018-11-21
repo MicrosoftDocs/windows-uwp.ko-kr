@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: f1544ee3404e77ec7565c626a6ca96e439832c90
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7287880"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438835"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 제품 정보 가져오기
 

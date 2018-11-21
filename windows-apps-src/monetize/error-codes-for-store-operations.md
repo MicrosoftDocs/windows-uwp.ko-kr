@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, Iap, 추가 기능, 오류 코드
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a4eff890da48bd60405cadee2d7ecb92bb1b2fa
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7296045"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438806"
 ---
 # <a name="error-codes-for-store-operations"></a>Store 작업에 대한 오류 코드
 

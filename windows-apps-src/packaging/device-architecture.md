@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 패키징, 아키텍처, 패키지 구성
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e265df32a8c4168cddced905e7b0712e4601264
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7301652"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7436944"
 ---
 # <a name="app-package-architectures"></a>앱 패키지 아키텍처
 

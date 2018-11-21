@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 다중 샘플링, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b967ae1709849bbe5bc944b00d9e30f22052aeb
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7283670"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7435260"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
 

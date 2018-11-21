@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 9342b4ce35cb50037813ed2210e2d7246411ad92
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7280167"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7440246"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>패키징 레이아웃으로 패키지 만들기  
 

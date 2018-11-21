@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
 ms.openlocfilehash: 18eddbc9356f126e887ae2731ea87381352ea061
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7284953"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7434450"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 

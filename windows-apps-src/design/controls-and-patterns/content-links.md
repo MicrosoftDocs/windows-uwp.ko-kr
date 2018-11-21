@@ -13,11 +13,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 3939995aa2f29f4590c8c71a877b69f0cb81d2ec
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7291110"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7440494"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 

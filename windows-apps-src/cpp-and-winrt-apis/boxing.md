@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 박싱, 스칼라, 값
 ms.localizationpriority: medium
 ms.openlocfilehash: f4b99f587fbd517b677d85b50abb26fdf072b359
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7301335"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7437934"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>C++/WinRT를 사용해 스칼라 값을 IInspectable로 박싱(boxing) 및 언박싱(unboxing)
  

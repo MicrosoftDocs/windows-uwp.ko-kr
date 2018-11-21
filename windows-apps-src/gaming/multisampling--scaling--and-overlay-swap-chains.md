@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 스왑 체인 크기 조정, 오버레이, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7304785"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7437186"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>스왑 체인 크기 조정 및 오버레이
 
