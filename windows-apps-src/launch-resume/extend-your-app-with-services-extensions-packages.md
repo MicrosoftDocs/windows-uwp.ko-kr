@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 확장하기, 구성 요소화, 앱 서비스, 패키지, 확장
 ms.localizationpriority: medium
 ms.openlocfilehash: 624d52ff96fb2537afa3affb2d842aa29e1e6667
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7297555"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7440025"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>서비스, 확장 및 패키지로 앱 확장
 

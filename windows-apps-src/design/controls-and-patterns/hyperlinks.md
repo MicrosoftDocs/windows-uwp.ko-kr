@@ -15,11 +15,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e6679f789f2530a34a2bf527556c144e7a8e03c3
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7279525"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7440084"
 ---
 # <a name="hyperlinks"></a>하이퍼링크
 

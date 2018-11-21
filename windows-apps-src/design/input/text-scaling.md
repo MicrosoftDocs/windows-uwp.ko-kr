@@ -11,11 +11,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3110615e43ffa4839d9be6ebf5113fc9d8b7c05f
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7290409"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438448"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 
