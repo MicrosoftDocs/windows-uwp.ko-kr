@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 485dc6f93cb0fd83601b3202ef9965e625b2a0b4
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7438894"
+ms.locfileid: "7557861"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>iOS 개발자용 UWP 시작
 

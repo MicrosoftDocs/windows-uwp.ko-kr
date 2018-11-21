@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ce5e0d272e14b9c69f660c8c7de6a838fa7956ac
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7422679"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7559785"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>복잡 한 유니버설 Windows 플랫폼 (UWP) 앱 빌드
 

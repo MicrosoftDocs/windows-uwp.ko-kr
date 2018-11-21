@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 2215231b21700fc17b08c2149316f9a59f8d1f04
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7430778"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7577392"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>사용자 프로필 언어와 앱 매니페스트 언어 이해
 Windows 사용자는 **설정** > **시간 및 언어** > **지역 및 언어**를 사용하여 기본 설정 표시 언어의 정렬된 목록 또는 기본 설정 표시 언어 하나를 구성할 수 있습니다. 언어에는 지역별 변수가 포함될 수 있습니다. 예를 들어 스페인에서 사용하는 스페인어, 멕시코에서 사용하는 스페인어, 미국에서 사용하는 스페인어 및 기타 스페인어를 선택할 수 있습니다.

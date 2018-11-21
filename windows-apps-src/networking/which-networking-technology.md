@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c617f3ec6d189f3ee75fcf2fd0ff96d386ec32c
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7418518"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7559224"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 

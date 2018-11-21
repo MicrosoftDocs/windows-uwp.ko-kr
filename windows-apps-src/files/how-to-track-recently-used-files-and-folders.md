@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 12b8a6462f6cc39ba85cddfaa7a92212955a79f5
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7434115"
+ms.locfileid: "7559659"
 ---
 # <a name="track-recently-used-files-and-folders"></a>최근에 사용한 파일 및 폴더 추적
 

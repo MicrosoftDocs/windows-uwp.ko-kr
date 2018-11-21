@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ca8bd73ce7b71ddbe4a159a4d3e089c5adb9ad87
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7146291"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7582066"
 ---
 # <a name="put-handleshandle-idsession"></a>PUT (/handles/{handle-id}/session)
 만들거나 핸들을 해제 하 여 세션을 업데이트 합니다.

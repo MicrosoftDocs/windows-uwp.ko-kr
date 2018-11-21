@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
 ms.openlocfilehash: bf9bbc2962bc0d11f9969bf41840be515c9c0881
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7432479"
+ms.locfileid: "7559351"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 

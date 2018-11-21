@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 커밋, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419469"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7577481"
 ---
 # <a name="commit-an-add-on-submission"></a>추가 기능 제출 커밋
 
