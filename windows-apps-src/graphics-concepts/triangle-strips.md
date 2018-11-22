@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f0f65868d4dec67bf77a329d4b952c20ec44a
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7423079"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7581613"
 ---
 # <a name="triangle-strips"></a>삼각형 스트립
 

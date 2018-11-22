@@ -14,11 +14,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 758678a7fb65e32d4d3d411956aadfdab515df43
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7420557"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7581699"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>UWP 앱의 응시 상호 작용 및 눈 추적
 

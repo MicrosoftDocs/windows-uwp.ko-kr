@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c745b99104495b4d0b3c60202c378285dbfdd7b6
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7417159"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7581882"
 ---
 # <a name="get-battery-information"></a>배터리 정보 가져오기
 

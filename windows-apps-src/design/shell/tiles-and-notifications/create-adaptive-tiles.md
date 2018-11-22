@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f0af7dc153f75826444a517d4958bfeba53b103d
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7444769"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7581258"
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
