@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 버퍼, 유니폼, 꼭짓점 특성
 ms.localizationpriority: medium
 ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7440371"
+ms.locfileid: "7566484"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp. 앱에서 바로 구매, IAP, 영수증, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ed79a3ac50fb3a6cbe735e0ea713256845d39441
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7431681"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7563159"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>영수증을 사용하여 제품 구매 확인
 

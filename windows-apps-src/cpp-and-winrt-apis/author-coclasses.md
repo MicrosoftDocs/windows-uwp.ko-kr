@@ -9,11 +9,11 @@ keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM,
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: f9de523b88853d1c9fc4e2449d28478c4dc6c49e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7434880"
+ms.locfileid: "7565534"
 ---
 # <a name="author-com-components-with-cwinrt"></a>C++/WinRT으로 COM 구성 요소 작성
 

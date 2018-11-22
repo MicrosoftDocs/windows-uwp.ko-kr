@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, .net, unity
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b795ed47249eee1f9dc21b195d46f450997019e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7435310"
+ms.locfileid: "7562562"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Unity 및 UWP에서 누락된 .NET API
 

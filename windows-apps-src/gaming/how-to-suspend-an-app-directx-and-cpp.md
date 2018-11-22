@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 일시 중지, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7443846"
+ms.locfileid: "7567083"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>앱 일시 중단 방법(DirectX 및 C++)
 

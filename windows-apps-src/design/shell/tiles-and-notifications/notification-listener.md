@@ -10,12 +10,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 635ee4cbdd0139ec9e431726ea5b040713abe97d
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: c67f3531d248ef46a162b992850d0240c37ba21a
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7416829"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7568096"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 
@@ -259,7 +259,7 @@ foreach (UserNotification userNotification in userNotifications)
         toBeRemoved.Remove(userNotification.Id);
     }
  
-    // Othwerise it's a new notification
+    // Otherwise it's a new notification
     else
     {
         // Display it on the Wearable
@@ -296,4 +296,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>백그라운드 작업에서 방법 fixdelays
 
-앱을 테스트하다 보면 백그라운드 작업이 지연되고 몇 분 동안 트리거되지 않는 경우를 종종 경험합니다. 이 문제를 해결 하려면 사용자 토고 시스템 설정-> 시스템-> 배터리 앱에서 배터리 사용-> 목록에서 앱을 찾을 선택 하 고 항상 허용 됨 "백그라운드에서"로 변경 합니다.이후 부터는 백그라운드 작업이 항상 트리거하도록 내에서 약 1 초의 알림 수신 합니다.
+앱을 테스트할 때 백그라운드 작업이 때로는 지연 되 고 몇 분 동안 트리거되지 않는 하다 보면 합니다. 시스템 설정으로 사용자 토고 프롬프트 지연을 해결 하려면 시스템-> 배터리-> 배터리 사용 하 여 앱-> 목록에서 앱을 찾을 선택 하 고 항상 허용 됨 "백그라운드에서."로 설정이후 부터는 백그라운드 작업이 항상 트리거하도록 내에서 약 1 초의 알림 수신 합니다.

@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d2317b419a2679d13e846690bbaca0eb212a245e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7432019"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7562825"
 ---
 # <a name="programmatic-focus-navigation"></a>프로그래밍 방식 포커스 탐색
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
 ms.openlocfilehash: eaf4c8e2641359e6d9a92444f66a1b6d4e5e5881
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7445129"
+ms.locfileid: "7563439"
 ---
 # <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a>이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결
 

@@ -14,11 +14,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 52ec77bd6199e0388d9ee9911c7a01e9fbe77fad
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7424386"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7568554"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
 

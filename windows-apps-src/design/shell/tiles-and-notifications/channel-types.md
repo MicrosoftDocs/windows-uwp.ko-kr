@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: db2cf1c732669a2ae45b8a5eb427e8864446c800
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7417692"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7568754"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>올바른 푸시 알림 채널 유형 선택
 

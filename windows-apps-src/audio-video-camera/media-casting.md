@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: da0bb4d25166dd62372d5902ff89221d20189c22
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7445772"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7562745"
 ---
 # <a name="media-casting"></a>미디어 캐스팅
 

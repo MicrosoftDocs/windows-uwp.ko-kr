@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e7b0f06711b4a908f8990dfb16968400c685c15f
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7428860"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7563406"
 ---
 # <a name="copying-and-accessing-resource-data"></a>리소스 데이터 복사 및 액세스
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 약속, 일정
 ms.localizationpriority: medium
 ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7417401"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7562128"
 ---
 # <a name="manage-appointments"></a>약속 관리
 
