@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bad800f3858cdfdf3def3a9a04854f078b3af399
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7425428"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7569017"
 ---
 # <a name="guidelines-for-targeting"></a>타기팅에 대한 지침
 

@@ -12,11 +12,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 95452a11f2c8ee15d54a4717701bc2b63e5c2c34
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7422496"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7574343"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
