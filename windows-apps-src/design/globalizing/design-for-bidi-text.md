@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 세계화, 지역화, 현지화, 오른쪽에서 왼쪽, 왼쪽에서 오른쪽,
 ms.localizationpriority: medium
 ms.openlocfilehash: 24e4c5dfce4aa3e773ab8c334ca732ac5ed53030
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7417129"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7580188"
 ---
 # <a name="design-your-app-for-bidirectional-text"></a>양방향 텍스트를 위한 앱 디자인
 

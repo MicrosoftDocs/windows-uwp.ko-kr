@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 32d8e7d858ff28a6ef6a9af517e0a584c6106cd5
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7438254"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7578479"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 

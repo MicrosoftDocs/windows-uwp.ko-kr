@@ -9,14 +9,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: f7e211ebfa28421340e716c0176cab80a9511671
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 7d73c89602db877b35d357d15393e089db9ae027
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419320"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7576387"
 ---
-#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
+# <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
 Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니버설 Windows 플랫폼)로 이동하려는 개발자의 경우 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있는 이 리소스를 참조하세요.
 

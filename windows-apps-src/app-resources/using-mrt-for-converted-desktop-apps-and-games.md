@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리
 ms.localizationpriority: medium
 ms.openlocfilehash: 927e0c5438ea11b751fba40cb76210d0bce112d4
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7445992"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7576812"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 

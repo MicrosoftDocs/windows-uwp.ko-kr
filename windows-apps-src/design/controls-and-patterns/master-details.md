@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b30835e31e86c0c98d0c134ed28adca4413650c9
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7434955"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7579610"
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 

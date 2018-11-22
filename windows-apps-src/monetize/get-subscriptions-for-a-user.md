@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: b8fe6262ca6ef52ca94ade2c56b18f5e71951f07
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7418761"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7579451"
 ---
 # <a name="get-subscriptions-for-a-user"></a>사용자의 구독 가져오기
 

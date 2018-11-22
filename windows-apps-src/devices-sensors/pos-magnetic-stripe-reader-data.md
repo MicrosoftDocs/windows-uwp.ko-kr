@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스, pos, 자기 띠 판독기의 지점
 ms.localizationpriority: medium
 ms.openlocfilehash: a130243fb5a77277e4e8a326316cd30bab2cd96e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7440903"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7578256"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>자기 띠 데이터 가져오기 및 이해
 

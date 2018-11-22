@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 사용, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
 ms.openlocfilehash: c6f22d9aafada5bab8deaef246f64a7447569c82
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7444266"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7578914"
 ---
 # <a name="usage-report"></a>사용 보고서
 

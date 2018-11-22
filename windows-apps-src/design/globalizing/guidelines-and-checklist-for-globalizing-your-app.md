@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: 177332515db26eca7cef7a7be75c5752a239a8f1
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7431186"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7578130"
 ---
 # <a name="guidelines-for-globalization"></a>세계화 지침
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7422327"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7576838"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>UWP 앱용 게임 기술
 

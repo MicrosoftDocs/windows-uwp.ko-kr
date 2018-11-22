@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: 536679068d66a279e158790bf0fcc0f8757709cc
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7436559"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7579362"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Windows as a service용 응용 프로그램 개발
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 중간, javascript, 샘플 코드
 ms.localizationpriority: medium
 ms.openlocfilehash: 1921725e5b598a2e5e79ed90c607414e4efe574e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7421691"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7575812"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>JavaScript의 중간 광고 샘플 코드
 

@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 717c819aaa732cf8d29e0a701a1fec81485f48ac
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419502"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7581175"
 ---
 # <a name="handle-app-resume"></a>앱 다시 시작 처리
 

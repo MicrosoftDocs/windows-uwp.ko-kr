@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, UWP, 앱 설치 관리자, AppInstaller, 사이드 로드, 관련 AWS 설정, 선택적 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: f24abac93e2444a3c9f454c8883902e5db4d31be
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7438428"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7579088"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>웹 설치에 대해 AWS에서 UWP 앱 패키지 호스트
 

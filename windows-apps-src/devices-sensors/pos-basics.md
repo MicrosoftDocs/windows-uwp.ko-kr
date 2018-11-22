@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 46dd1f615e42f6e89ee9a92cb980299e9a0e5205
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419678"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7580673"
 ---
 # <a name="getting-started-with-point-of-service"></a>서비스 지점 시작하기
 

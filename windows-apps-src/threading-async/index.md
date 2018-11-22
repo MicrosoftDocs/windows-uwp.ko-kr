@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 비동기, 스레드, 스레딩
 ms.localizationpriority: medium
 ms.openlocfilehash: f01142695b676ebadea2f227cf5f8beb65ba6f9c
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7446062"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7576457"
 ---
 # <a name="threading-and-async-programming"></a>스레딩 및 비동기 프로그래밍
 스레드 및 비동기 프로그래밍을 사용하면 앱이 병렬 스레드에서 비동기식으로 작업할 수 있습니다.

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0129b44b6f1c6c8b18555e3e0e0b350a695cabe1
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7429858"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7576287"
 ---
 # <a name="streaming-resource-creation-parameters"></a>스트리밍 리소스 생성 매개 변수
 

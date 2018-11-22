@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱
 ms.localizationpriority: medium
 ms.openlocfilehash: a689f540cb939cea3549b6660f2daf9a70f9b1f6
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7438960"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7576707"
 ---
 # <a name="get-all-apps"></a>모든 앱 가져오기
 

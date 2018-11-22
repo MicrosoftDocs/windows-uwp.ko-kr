@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, sd 카드, 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: 498b43dc82100102c90fc7a920bed1538a164afc
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7437637"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7578509"
 ---
 # <a name="access-the-sd-card"></a>SD 카드에 액세스
 

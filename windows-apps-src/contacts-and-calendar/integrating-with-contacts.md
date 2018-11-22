@@ -10,11 +10,11 @@ keywords: windows 10, uwp, 연락처, 연락처 카드, 주석
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
 ms.openlocfilehash: eb1c01a4fe370f899da185dc39b7d3abe6a1904e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7417169"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7579913"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>연락처 카드의 작업에 앱 연결
 
