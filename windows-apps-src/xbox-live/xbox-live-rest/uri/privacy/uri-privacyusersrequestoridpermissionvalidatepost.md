@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0848aaa74fcecec599c701d944c54defae1fa011
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7150016"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7553419"
 ---
 # <a name="post-usersrequestoridpermissionvalidate"></a>POST (/users/{requestorId}/permission/validate)
 대상 사용자의 집합을 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답의 집합을 가져옵니다.

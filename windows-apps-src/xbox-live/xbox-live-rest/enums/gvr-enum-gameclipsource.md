@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 470ee6056beaa96ff120ade912680d09908531d6
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163558"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7581658"
 ---
 # <a name="gameclipsource-enumeration"></a>GameClipSource 열거형
 GameClipSource 열거형에 자세히 설명 합니다. 

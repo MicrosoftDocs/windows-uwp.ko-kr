@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9766222ea3a1c8671eadd42458b1c5aceaf0f587
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7157896"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7559485"
 ---
 # <a name="usersxuidxuidachievementsscidachievementid"></a>/users/xuid({xuid})/achievements/{scid}/{achievementid}
 해당 구성 된 메타 데이터와 사용자 고유의 데이터를 포함 하 여 도전 과제에 대 한 세부 정보를 반환 합니다. 

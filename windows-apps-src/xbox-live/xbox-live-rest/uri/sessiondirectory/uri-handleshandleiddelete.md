@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: da73760969e7a4a9e268644555d0790980b16123
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7172117"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7579249"
 ---
 # <a name="delete-handleshandleid"></a>DELETE (/handles/{handleId})
 핸들 id 지정 핸들을 삭제 합니다.

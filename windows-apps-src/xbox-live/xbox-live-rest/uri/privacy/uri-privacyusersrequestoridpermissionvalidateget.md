@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0ec0b8b4de64a5580ffdd83407602ee410da9c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7166926"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7552610"
 ---
 # <a name="get-usersrequestoridpermissionvalidate"></a>GET (/users/{requestorId}/permission/validate)
 대상 사용자를 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b072ba3112a363111bce751069bccebfaf7465da
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163794"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7554557"
 ---
 # <a name="create-a-new-title-for-xbox-live"></a>Xbox Live에 대 한 새 타이틀 만들기
 

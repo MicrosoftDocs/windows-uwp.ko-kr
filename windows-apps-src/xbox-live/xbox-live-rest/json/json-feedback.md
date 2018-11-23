@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 287287879f6b7f2334d23a9ff1836a61ddd1ce42
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7307226"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7581362"
 ---
 # <a name="feedback-json"></a>Feedback(JSON)
 플레이어에 대 한 피드백 정보를 포함합니다.

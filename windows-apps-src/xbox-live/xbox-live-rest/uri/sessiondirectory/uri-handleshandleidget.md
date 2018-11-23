@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 39d39db0fa17c85dfad3dcca7526d13618835135
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7165123"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7562199"
 ---
 # <a name="get-handleshandle-id"></a>GET (/handles/{handle-id})
 핸들이 지정 핸들 id를 검색 합니다.

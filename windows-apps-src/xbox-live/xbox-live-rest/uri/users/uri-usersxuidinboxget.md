@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3649e07fb8860c3519971ab64fe494fe738f902d
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158728"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7570890"
 ---
 # <a name="get-usersxuidxuidinbox"></a>GET (/users/xuid({xuid})/inbox)
 서비스에서 지정된 된 수의 사용자 메시지 요약을 검색합니다.

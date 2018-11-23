@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어, 멀티 플레이어 관리자 순서도, 게임 초대
 ms.localizationpriority: medium
 ms.openlocfilehash: 512e0d33fb71d85486b1e12513977af250c431c6
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7169787"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7555584"
 ---
 # <a name="send-game-invites"></a>게임 초대 보내기
 

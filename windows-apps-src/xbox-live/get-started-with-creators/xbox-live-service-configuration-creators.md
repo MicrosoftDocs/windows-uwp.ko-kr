@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b8136aa4d07204d2c97fec393439a17d3660f934
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7146448"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7580811"
 ---
 # <a name="xbox-live-service-configuration-for-the-creators-program"></a>크리에이터스 프로그램에 대한 Xbox Live 서비스 구성
 

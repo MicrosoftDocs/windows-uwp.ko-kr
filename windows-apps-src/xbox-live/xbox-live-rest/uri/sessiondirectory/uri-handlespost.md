@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: aa749dac2638dbdb1f474300e9799e3e67827079
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7147387"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7554351"
 ---
 # <a name="post-handles"></a>POST (/handles)
 사용자의 현재 활동에 대 한 멀티 플레이 세션을 설정 하 고 필요한 경우 세션 멤버를 초대 합니다.

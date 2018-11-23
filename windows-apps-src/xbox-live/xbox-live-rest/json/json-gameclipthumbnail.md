@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fae93f76d9c8647b2d4264463b434d86897e2a5
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7169549"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7575606"
 ---
 # <a name="gameclipthumbnail-json"></a>GameClipThumbnail(JSON)
 개별 축소판에 관련 된 정보가 포함 되어 있습니다. 클립 당 여러 크기 수 있으며 디스플레이 대 한 적절 한 하나를 선택 하는 클라이언트에 게 됩니다. 

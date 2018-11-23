@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ba5336ed0bf734eff60a4bbffca3397fd1ea3eb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7166894"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7554237"
 ---
 # <a name="verifystringresult-json"></a>VerifyStringResult(JSON)
 [/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 된 각 문자열에 해당 되는 결과 코드.

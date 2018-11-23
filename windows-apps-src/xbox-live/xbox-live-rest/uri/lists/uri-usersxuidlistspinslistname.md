@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b76637d0c88e4ef2bc8905ff1b4dd894fd819a0
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7153562"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7579582"
 ---
 # <a name="usersxuidxuidlistspinslistname"></a>/users/xuid(xuid)/lists/PINS/{listname}
 항목을 목록에 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eplists.xboxlive.com`.

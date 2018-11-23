@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 추천 통계 및 순위표, 순위표, 통계 2017 년 파트너 센터
 ms.openlocfilehash: eebf1e96601f7bb576088f71239196f0bb5a124c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7153660"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7557370"
 ---
 # <a name="configuring-featured-stats-and-leaderboards-2017-in-partner-center"></a>파트너 센터의 주요 통계 및 순위표 2017 구성
 

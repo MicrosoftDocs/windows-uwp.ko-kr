@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 23a3e42d6181cef25dc05f607334677e9913c5c7
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7157578"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7574122"
 ---
 # <a name="post-batch"></a>POST (/batch)
 여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 GET 방법으로 작동 하는 메서드를 게시 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a0b7a3d90e5a69807e3ac9532a58a845568c93f2
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7154454"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7563754"
 ---
 # <a name="updatemetadatarequest-json"></a>UpdateMetadataRequest(JSON)
 클립에 대 한 업데이트 해야 하는 메타 데이터입니다. 

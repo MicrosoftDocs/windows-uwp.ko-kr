@@ -8,12 +8,12 @@ ms.date: 11/17/2017
 ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 지역화 된 문자열, 파트너 센터
-ms.openlocfilehash: b7d8f53656f60932c0f27f492f3769ddae8434ba
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: af7583985e06de4e8a7a9c8e9905eb232f4677bf
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7171741"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7554643"
 ---
 # <a name="configuring-localized-strings-in-partner-center"></a>파트너 센터에서 지역화 된 문자열을 구성합니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "7171741"
 
 ![파트너 센터에서 지역화 된 문자열 구성 페이지의 스크린샷](../../images/dev-center/localized-strings/localized-strings-1.png)
 
-3. 복제 하 여 지역화 된 문자열을 추가할 수는 <Value locale="en-US">Maze 재생</Value> 태그 및 선택한 언어로 지역화 된 문자열의 값을 로캘 값을 변경 합니다. 최소 하나의 값 태그 내 개발자 표시 로캘 오류를 방지할 수 있어야 합니다.
+3. 복제 하 여 지역화 된 문자열을 추가할 수는 <Value locale="en-US">Maze 재생</Value> 태그 및 선택한 언어로 지역화 된 문자열의 값을 로캘 값을 변경 합니다. 오류가 발생 하지 않도록 개발자 디스플레이 로캘 내에서 하나 이상의 값 태그가 있어야 합니다.
 
 ![지역화 된 문자열 편집](../../images/dev-center/localized-strings/localized-strings.gif)
 

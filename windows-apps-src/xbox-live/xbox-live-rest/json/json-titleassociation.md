@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c90dbca0e16cf1dcebc53fd8fa90006ca7ae7caf
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7169640"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7581959"
 ---
 # <a name="titleassociation-json"></a>TitleAssociation(JSON)
 도전 과제와 연결 된 제목입니다. 

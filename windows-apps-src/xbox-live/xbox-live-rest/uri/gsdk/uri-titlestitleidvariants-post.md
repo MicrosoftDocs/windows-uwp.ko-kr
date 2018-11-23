@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cc67b61d9130838802774460cd38ec08e2e349b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6276581"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7558700"
 ---
 # <a name="post-titlestitleidvariants"></a>POST (/titles/{titleId}/variants)
 URI의 id입니다. 지정 된 제목에 대 한 게임 변형의 목록을 검색 하는 클라이언트에 의해 호출 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

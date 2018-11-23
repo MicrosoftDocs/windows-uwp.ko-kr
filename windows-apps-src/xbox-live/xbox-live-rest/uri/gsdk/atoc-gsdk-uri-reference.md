@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 9eff98593c122001cab591b9f45793aa6649736a
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7150004"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7552688"
 ---
 # <a name="game-server-universal-resource-identifier-uri-reference"></a>게임 서버 Universal Resource Identifier (URI) 참조
 클라이언트 제목에 대 한 게임 서버 개발 키트 서버 인스턴스를 만드는 데 사용 되는 Uri입니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.

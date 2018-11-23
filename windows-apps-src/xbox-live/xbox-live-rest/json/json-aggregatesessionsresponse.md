@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 590acdd89d83fa21a401b5573053ba341f7f05c7
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7166254"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7581282"
 ---
 # <a name="aggregatesessionsresponse-json"></a>AggregateSessionsResponse(JSON)
 사용자의 피트 니스 세션에 대 한 집계 데이터를 포함합니다. 

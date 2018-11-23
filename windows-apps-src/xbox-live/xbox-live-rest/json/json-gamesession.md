@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: a62dd48857ed9c7ba8601d5ca08179c6a32b0db5
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7152204"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7574991"
 ---
 # <a name="gamesession-json"></a>GameSession(JSON)
 멀티 플레이 세션에 대 한 게임 데이터를 나타내는 JSON 개체입니다. 

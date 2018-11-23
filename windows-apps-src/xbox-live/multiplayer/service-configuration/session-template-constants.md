@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어 세션 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: 17c7fa48ee637dbca20b67872113a8d43e04da84
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7170277"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7557532"
 ---
 # <a name="session-template-constants"></a>세션 템플릿 상수
 

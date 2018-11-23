@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: cdadf2533ee12c92f2b486408b9305d2919acb66
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163937"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7570105"
 ---
 # <a name="put-jsonusersxuidxuidscidssciddatapathandfilenamejson"></a>PUT (/json/users/xuid({xuid})/scids/{scid}/data/{pathAndFileName},json)
 파일을 업로드합니다. 다중 블록 업로드 json 종류의 데이터에 대 한 지원 되지 않습니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

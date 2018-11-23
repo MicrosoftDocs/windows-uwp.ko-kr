@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 인증에 로그인
 ms.localizationpriority: medium
 ms.openlocfilehash: f74453ee618fe19d1e6c32e99c5710abc65a6037
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7168733"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7567739"
 ---
 # <a name="authentication"></a>Authentication
 

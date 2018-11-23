@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅 2, 게임 채팅, 음성 통신, 버퍼 조작, 오디오 조작
 ms.localizationpriority: medium
 ms.openlocfilehash: cd0a88c5d3ae50cb7dd86585507c951cc061503d
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7165594"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7577486"
 ---
 # <a name="real-time-audio-manipulation"></a>실시간 오디오 조작
 

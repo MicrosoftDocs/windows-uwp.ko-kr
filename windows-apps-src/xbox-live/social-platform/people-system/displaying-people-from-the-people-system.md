@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e02b11a12c77c3be3d1ae2951d6c174c0ac6283
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7442007"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7580920"
 ---
 # <a name="display-people-from-the-people-system"></a>사용자가 시스템에서 사용자를 표시 합니다.
 

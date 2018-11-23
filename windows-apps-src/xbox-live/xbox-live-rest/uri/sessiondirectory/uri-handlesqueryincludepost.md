@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2caffd029e5b5c79eb411678621643a48f65e1f1
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7148887"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7572809"
 ---
 # <a name="post-handlesqueryincluderelatedinfo"></a>POST (/handles/query?include=relatedInfo)
 세션 관련된 정보를 포함 하는 세션 핸들에 대 한 쿼리를 만듭니다.

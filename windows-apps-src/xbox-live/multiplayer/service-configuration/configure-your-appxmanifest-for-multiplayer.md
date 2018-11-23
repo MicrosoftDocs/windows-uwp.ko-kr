@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 프로토콜 활성화, 멀티 플레이어
 ms.localizationpriority: medium
 ms.openlocfilehash: 35cdb8765ba40e1a6d4a7c624b1a81f37a8f7fa0
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7165581"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7552906"
 ---
 # <a name="configure-your-appxmanifest-for-multiplayer"></a>멀티 플레이용 AppXManifest 프로그램 구성
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b551daee0f9b7eba898c2b04dcd150129b8e6d65
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7169676"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7552613"
 ---
 # <a name="inventoryitemid"></a>/inventory/{itemID}
 특정 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `inventory.xboxlive.com`.

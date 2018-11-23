@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: 629bc38e8d5e5afa4c9d78349587585d0701b3de
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149115"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7574922"
 ---
 # <a name="storing-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에 JSON blob 저장
 

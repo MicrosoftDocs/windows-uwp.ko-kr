@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 718c5847a1588e492c5d290d042dd4d5a9ca4283
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7162404"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7581582"
 ---
 # <a name="userclaims-json"></a>UserClaims(JSON)
 현재 인증 된 사용자에 대 한 정보를 반환합니다. 

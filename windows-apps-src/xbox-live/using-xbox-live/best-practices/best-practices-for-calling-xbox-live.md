@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 모범 사례, xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a28595b74fc316950d6d5b93b234ffa7a26e550
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7146382"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7559343"
 ---
 # <a name="best-practices-for-calling-xbox-live"></a>Xbox Live를 호출 하기 위한 모범 사례
 

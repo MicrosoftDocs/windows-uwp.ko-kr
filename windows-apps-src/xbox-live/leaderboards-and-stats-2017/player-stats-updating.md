@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 플레이어 통계, 통계 2017
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f61858347955bde007d97420cfb33d8e0298fd2
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7169110"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7556402"
 ---
 # <a name="updating-stats-2017"></a>통계 2017 업데이트
 

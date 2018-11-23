@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c039a2c78824de64c503786d911bb3427e53cf64
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7164160"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7554759"
 ---
 # <a name="game-session-and-game-party-visibility-and-joinability"></a>게임 세션 및 타사 게임 유형과 파티
 

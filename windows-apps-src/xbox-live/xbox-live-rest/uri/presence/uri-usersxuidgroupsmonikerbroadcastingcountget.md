@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: c33977a2cc7a96db07bb48fd0902663b306e71a5
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163483"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7564299"
 ---
 # <a name="get-usersxuidxuidgroupsmonikerbroadcastingcount-"></a>GET (/users/xuid({xuid})/groups/{moniker}/broadcasting/count )
 지정 된 URI에 표시 되는 XUID와 관련 된 그룹 모니커 브로드캐스트 사용자의 수를 검색 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b19cb41aabfa9f0c629784f86ece4ca28bd8929
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7146109"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7574119"
 ---
 # <a name="get-usersmegroupsmoniker-"></a>GET (/users/me/groups/{moniker} )
 그룹의 PresenceRecord를 가져옵니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 파트너,ID@Xbox
 ms.localizationpriority: medium
 ms.openlocfilehash: 74b343ce248201b997f5bcd357095154e221092f
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7144028"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7573826"
 ---
 # <a name="get-started-with-xbox-live-as-a-managed-partner-or-an-idxbox-developer"></a>Xbox Live 관리 파트너로 시작 또는 ID@Xbox 개발자
 

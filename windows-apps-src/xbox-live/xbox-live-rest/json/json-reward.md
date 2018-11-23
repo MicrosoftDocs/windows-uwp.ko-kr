@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 41b8aafc25c3f8ae8ca677f8049235f327c0e36e
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163843"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7581851"
 ---
 # <a name="reward-json"></a>Reward(JSON)
 도전 과제와 관련 된 보상입니다.

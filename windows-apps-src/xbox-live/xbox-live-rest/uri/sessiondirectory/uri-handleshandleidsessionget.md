@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: ef2559177bcecb7c1c23fbc1f08bed065cf4bae9
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7157542"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7557425"
 ---
 # <a name="get-handleshandleidsession"></a>GET (/handles/{handleId}/session)
 지정 된 핸들 식별자에 대 한 세션 개체를 가져옵니다.

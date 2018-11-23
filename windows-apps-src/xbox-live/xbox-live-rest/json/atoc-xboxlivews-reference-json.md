@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 039cc9cf1d7d1d77330ff280d7cff5619971b075
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7159277"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7558762"
 ---
 # <a name="javascript-object-notation-json-object-reference"></a>JSON(JavaScript Object Notation) 개체 참조
  

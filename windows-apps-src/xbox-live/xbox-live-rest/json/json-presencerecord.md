@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: febf5e377c73572e4e231f830d737b4e704d262e
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7160583"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7563741"
 ---
 # <a name="presencerecord-json"></a>PresenceRecord(JSON)
 단일 사용자의 온라인 상태에 대 한 데이터를 제공 합니다.

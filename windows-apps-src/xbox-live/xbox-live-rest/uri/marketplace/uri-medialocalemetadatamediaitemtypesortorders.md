@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 59b2e59315d9b787f75221391c39cdc6a0faf89b
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7150275"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7563243"
 ---
 # <a name="mediamarketplaceidmetadatamediaitemtypesmediaitemtypesortorders"></a>/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/sortorders
 사용 가능한 액세스 주문 주어진된 mediaitem 형식과 EDS의 특정된 버전에 대 한 정렬합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

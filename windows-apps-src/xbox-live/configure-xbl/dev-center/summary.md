@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox live, Xbox, 게임, uwp, windows 10, Xbox one xbox live 요약, 요약 하면, 게시, xbox live 기록, 명령 모음, 기록 탭 요약 표
 ms.openlocfilehash: ef146e77a12c3c658e4e55cf468b3dae433e6f9b
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149436"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7569072"
 ---
 # <a name="the-xbox-live-configuration-summary-page"></a>Xbox Live 구성 요약 페이지
 

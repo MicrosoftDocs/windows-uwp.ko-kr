@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0efeb16866628a4d318964f9b1a7a293c7679be8
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7150994"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7574968"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---april-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 4 월
 

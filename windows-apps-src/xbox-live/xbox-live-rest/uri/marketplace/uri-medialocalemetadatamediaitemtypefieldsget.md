@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d6ac92839e9969df807d39b01f1ec5a67de3e30
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7441971"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7553133"
 ---
 # <a name="get-mediamarketplaceidmetadatamediaitemtypesmediaitemtypefields"></a>GET (/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields)
 지정 된 mediaitemtype 및 EDS의 특정된 버전에 대 한 데이터를 예상할 수 있는 하나 필드가 나와 있습니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

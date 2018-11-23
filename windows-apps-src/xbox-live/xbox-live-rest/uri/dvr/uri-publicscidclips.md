@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 131a1eb67d4a33c3fbd2f5f818499ffeea851f3d
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7157162"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7566277"
 ---
 # <a name="publicscidsscidclips"></a>/public/scids/{scid}/clips
 공용 클립 액세스 합니다. 두 가지 형태로 지정 수 실제로이 URI `/public/scids/{scid}/clips` 및 `/public/titles/{titleId}/clips`. 자세한 내용은 아래를 참조하세요. 이 URI에 대 한 도메인은 `gameclipsmetadata.xboxlive.com`.

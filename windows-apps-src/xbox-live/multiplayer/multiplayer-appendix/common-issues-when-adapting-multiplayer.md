@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 0704fe3919a84df718c9c1fba44a4fff85ee02ca
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7162022"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7577545"
 ---
 # <a name="common-issues-when-adapting-your-multiplayer-2014-title-to-multiplayer-2015"></a>멀티 플레이 2014 타이틀 멀티 플레이 2015에 적응 때 일반적인 문제
 

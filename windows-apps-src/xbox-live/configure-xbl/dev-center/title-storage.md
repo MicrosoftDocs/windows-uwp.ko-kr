@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: medium
 keywords: Xbox Live, Xbox, 게임, uwp, windows 10, Xbox one, 타이틀 저장소, 파트너 센터
 ms.openlocfilehash: 38abe0188dff74bdf0584bcb6664c5f6453e7e42
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7162888"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7554366"
 ---
 # <a name="configure-storage-for-you-title-in-partner-center"></a>파트너 센터에서 하면 제목에 대 한 저장소를 구성 합니다.
 

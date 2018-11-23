@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: d61d8f23936dc40648637df793d7610159498ac0
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7159643"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7558697"
 ---
 # <a name="mediamarketplaceiddetails"></a>/media/{marketplaceId}/details
 반환 제품 세부 정보 및 메타 데이터에 대 한 하나 이상의 항목입니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

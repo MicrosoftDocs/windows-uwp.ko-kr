@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 NuGet
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a1212a1d05ab3dab502c34bdd5c814030e9d638
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149257"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7562288"
 ---
 # <a name="use-the-xbox-live-api-nuget-package-to-develop-xdk-titles"></a>Xbox Live API NuGet 패키지를 사용 하 여 XDK 타이틀 개발
 

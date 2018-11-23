@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aa0598e724ffc0d919c9ad8b2ffdc3bb29d7d09
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149000"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7554439"
 ---
 # <a name="storing-a-binary-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소의 이진 blob 저장
 

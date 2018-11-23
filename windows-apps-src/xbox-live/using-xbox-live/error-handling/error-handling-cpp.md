@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox, 오류 처리
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a9947180764d196579569536ec979fc31f3570d
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7170132"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7564022"
 ---
 # <a name="c-api-error-handling"></a>C++ API 오류 처리
 

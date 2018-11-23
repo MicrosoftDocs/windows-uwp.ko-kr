@@ -9,11 +9,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: e36999f9fcd2bb0ca289c7866fa8b6ebe8209e63
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7164886"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7576199"
 ---
 # <a name="get-started-with-the-xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램 시작
  

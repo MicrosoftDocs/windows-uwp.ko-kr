@@ -10,11 +10,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: bbdf869cffae575f53555b31d9ed66647d3d09b2
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7441925"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7565939"
 ---
 # <a name="usersmeconsumablesitemid"></a>/users/me/consumables/{itemID}
 특정 소모 성 인벤토리 항목에 대 한 세부 정보의 전체 집합을 액세스 합니다.

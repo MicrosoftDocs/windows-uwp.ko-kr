@@ -8,11 +8,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 게임 채팅, 게임 채팅 2, 음성 통신
 ms.localizationpriority: medium
 ms.openlocfilehash: 211769593fb2801aee31cfcd8b20869fab27314e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7445641"
+ms.lasthandoff: 11/23/2018
+ms.locfileid: "7552860"
 ---
 # <a name="game-chat-2-overview"></a>게임 채팅 2 개요
 
