@@ -1,18 +1,16 @@
 ---
-author: M-Stahl
 title: 디바이스 포털 Xbox 정보 API 참조
 description: Xbox 장치 정보에 액세스 하는 방법을 알아봅니다.
-ms.author: mstahl
 ms.date: 11/7/2017
 ms.topic: article
 keywords: windows 10, uwp, xbox 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b0e2bab0ce7d5525e8032809954ff656a74a61c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d7901890e1cc8fab24742e8785562d13d2fe182a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557233"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694598"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox 정보 API 참조   
 이 API를 사용 하 여 Xbox One 장치 정보에 액세스할 수 있습니다.

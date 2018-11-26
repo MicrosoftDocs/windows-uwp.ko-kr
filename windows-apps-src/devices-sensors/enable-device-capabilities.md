@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
 title: 장치 기능 사용
 description: 이 자습서에서는 Microsoft Visual Studio에서 디바이스 접근 권한 값을 선언하는 방법을 설명합니다. 이를 통해 앱에서 카메라, 마이크, 위치 센서 및 기타 디바이스를 사용할 수 있습니다.
-ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a7250c41795373b089f7a4c76b603c169b1e4dc3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e1a2884cd3db458685ebdd393c31aed88ee36a35
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553550"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693094"
 ---
 # <a name="enable-device-capabilities"></a>디바이스 기능 사용
 

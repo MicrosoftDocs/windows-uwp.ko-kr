@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: DirectX 포트 계획
 description: DirectX 9에서 11 DirectX 및 UWP(유니버설 Windows 플랫폼)로 게임 포팅 프로젝트를 계획하세요. 그래픽 코드를 업그레이드 하 고 Windows 런타임 환경에서 게임을 저장합니다.
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, directx, 포트
 ms.localizationpriority: medium
-ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: abbcd688df01b779a1cb3ab9e30bd13709926be4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580039"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691444"
 ---
 # <a name="plan-your-directx-port"></a>DirectX 포트 계획
 

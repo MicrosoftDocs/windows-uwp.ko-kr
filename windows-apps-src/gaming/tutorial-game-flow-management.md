@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 게임 흐름 관리
 description: 게임 상태를 초기화하고, 이벤트를 처리하고, 게임 업데이트 루프를 설정하는 방법을 알아보세요.
 ms.assetid: 6c33bf09-b46a-4bb5-8a59-ca83ce257eb3
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 610b794c0ded6791e93c14d8960366132afd973b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c6d13b848a9e5d2dfc145431f732187c35c46ab6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577279"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692331"
 ---
 # <a name="game-flow-management"></a>게임 흐름 관리
 

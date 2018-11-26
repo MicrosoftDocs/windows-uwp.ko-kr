@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: XAML 이름 범위에는 개체의 XAML 정의 이름과 이에 해당하는 인스턴스 항목 사이의 관계가 저장됩니다. 이 개념은 다른 프로그래밍 언어 및 기술에서 사용되는 이름 범위라는 용어의 보다 넓은 의미에 가깝습니다.
 title: XAML 이름 범위
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fcbc1566d2b2b5ffc6889a57dd7656a3466d2a9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ffe6119e9cac162486d23472f5d5876924b7ef9e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579999"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694291"
 ---
 # <a name="xaml-namescopes"></a>XAML 이름 범위
 

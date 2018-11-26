@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 title: 패키지 서명용 인증서 만들기
 description: PowerShell 도구로 앱 패키지 서명용 인증서를 만들고 내보냅니다.
-ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
-ms.openlocfilehash: 419fa90dfd21c42d256aeea8848862b8c5eb3628
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 963c73bb7667ced5bbe9e33fef0cac561fe1183a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580713"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692624"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>패키지 서명용 인증서 만들기
 

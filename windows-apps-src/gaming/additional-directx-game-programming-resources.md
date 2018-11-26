@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 게임 프로그래밍 리소스
 description: Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스를 확인하세요.
 ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 프로그래밍
 ms.localizationpriority: medium
-ms.openlocfilehash: d201caefedca0d810f78d893ea779bd6b814f007
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d75495f75459122f5a5b01d7a82450c72cd2bb1c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557173"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692964"
 ---
 # <a name="game-programming-resources"></a>게임 프로그래밍 리소스
 

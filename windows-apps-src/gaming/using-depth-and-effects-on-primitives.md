@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 기본 요소에 깊이 및 효과 사용
 description: 여기서는 기본 형식에 깊이, 원근, 색 및 기타 효과를 사용하는 방법에 대해 설명합니다.
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 깊이, 효과, 기본 형식, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f81c441910cd0d0205641a119c243cb22d0b695e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 02911338da858e3718235736cee7969a7bdebae2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558322"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691504"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>기본 형식에 깊이 및 효과 사용
 
@@ -34,7 +32,6 @@ ms.locfileid: "7558322"
 
 <a name="instructions"></a>지침
 ------------
-
 ### <a name="1-defining-cube-variables"></a>1. 큐브 변수 정의
 
 먼저 큐브에 대해 **SimpleCubeVertex** 및 **ConstantBuffer** 구조를 정의해야 합니다. 이러한 구조는 큐브에 대한 꼭짓점 위치와 색을 지정하고 큐브를 보는 방법도 지정합니다. [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)을 사용하여 [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) 및 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 선언하고 **ConstantBuffer**의 인스턴스를 선언합니다.

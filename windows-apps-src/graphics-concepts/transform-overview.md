@@ -2,18 +2,16 @@
 title: 변환 개요
 description: 매트릭스 변환은 수많은 하위 수준의 3D 그래픽 연산을 처리합니다.
 ms.assetid: B5220EE8-2533-4B55-BF58-A3F9F612B977
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32f55b0a387221b792e37072f129edddf285195b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b6be8ee8aa67196581907087d99e0324d741a00
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573718"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693034"
 ---
 # <a name="transform-overview"></a>변환 개요
 

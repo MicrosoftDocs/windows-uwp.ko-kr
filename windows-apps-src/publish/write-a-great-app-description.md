@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: A great description can make your app stand out in the Microsoft Store and help encourage customers to download it.
 title: 호소력 있는 앱 설명 쓰기
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 설명, 설명, Store 목록, 마케팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 382bfe760165b4dee3fbdbb63166648c2e475325
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a6cea0103d484cc84f9c253a08f07ed3d69b67f3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574950"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694544"
 ---
 # <a name="write-a-great-app-description"></a>호소력 있는 앱 설명 쓰기
 

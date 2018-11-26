@@ -1,18 +1,16 @@
 ---
-author: JoshuaPartlow
 description: 사진 편집기는 C++/WinRT 언어 프로젝션을 사용한 개발을 보여 주는 UWP 샘플 응용 프로그램입니다. 샘플 응용 프로그램을 사용하여 사진 라이브러리에서 사진을 검색한 다음 다양한 사진 효과를 사용하여 선택한 이미지를 편집합니다.
 title: 사진 편집기 C++/WinRT 샘플 응용 프로그램
-ms.author: wdg-dev-content
 ms.date: 06/08/2018
 ms.topic: article
 keywords: Windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 샘플, 응용 프로그램, 사진, 편집기
 ms.localizationpriority: medium
-ms.openlocfilehash: 60bfcd79ed2d659aff8d435bd397df05eb45af72
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8c6f668ef3d92f968e75659b0ba1937abadb079c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578844"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694912"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>사진 편집기 C++/WinRT 샘플 응용 프로그램
 [사진 편집기 C++/WinRT 샘플 응용 프로그램](https://github.com/Microsoft/Windows-appsample-photo-editor) GitHub 리포지토리에서 샘플 응용 프로그램을 복제 또는 다운로드할 수 있습니다.

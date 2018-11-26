@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Just as people use a combination of voice and gesture when communicating with each other, multiple types and modes of input can also be useful when interacting with an app.
 title: 여러 입력 디자인 지침
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 670caf5c519fcf1b7ff57b47781541d98358aa50
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c67430680854e7940d12af15ecd3c07dcd976802
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574193"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693554"
 ---
 # <a name="multiple-inputs"></a>여러 입력
 

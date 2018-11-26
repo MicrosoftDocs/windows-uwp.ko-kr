@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: 네트워크 및 웹 서비스에 액세스하는 기술입니다.
 title: 네트워킹 및 웹 서비스
-ms.author: stwhi
 ms.date: 11/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e01ac3a0dcab0bc82835b97d70477bf585ab4570
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 26324637fdf54b48fa441d28065bf437fbf74b26
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573433"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692844"
 ---
 # <a name="networking-and-web-services"></a>네트워킹 및 웹 서비스
 

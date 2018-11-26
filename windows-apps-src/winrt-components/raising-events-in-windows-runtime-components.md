@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Windows 런타임 구성 요소에서 이벤트 발생
 ms.assetid: 3F7744E8-8A3C-4203-A1CE-B18584E89000
 description: JavaScript는 이벤트를 받을 수 있도록 백그라운드 스레드에서 사용자 정의 대리자 형식의 이벤트를 발생 하는 방법.
-ms.author: misatran
 ms.date: 07/19/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dddd170f5f056de18c4729b6b6b5b4b6cbcea7b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 851f8a25055c90dfd592d5a68c733258bcd5f7b5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570183"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692824"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 이벤트 발생
 > [!NOTE]

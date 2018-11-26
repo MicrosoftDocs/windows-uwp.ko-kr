@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: 서비스 지점 시작하기
 description: 이 문서는 PointOfService UWP API 시작에 대한 정보를 포함하고 있습니다.
-ms.author: jken
 ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 46dd1f615e42f6e89ee9a92cb980299e9a0e5205
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b4ff9443c40cf44e171bf898b627de3e2819034
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580673"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692361"
 ---
 # <a name="getting-started-with-point-of-service"></a>서비스 지점 시작하기
 

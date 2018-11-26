@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 3848cd72-eccd-400e-93ff-13649cd81b6c
 description: 이 문서에서는 재생을 위한 레거시 백그라운드 미디어 모델을 사용하여 앱에 대한 지원을 제공하고 새 모델로의 마이그레이션을 위한 지침을 제공합니다.
 title: 레거시 백그라운드 미디어 재생
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 319343a06eeb49fc4ec0ca2fcd340f655654f718
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ea8d387becaef171175fd5e91bfc3a1402e79faa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560122"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692974"
 ---
 # <a name="legacy-background-media-playback"></a>레거시 백그라운드 미디어 재생
 

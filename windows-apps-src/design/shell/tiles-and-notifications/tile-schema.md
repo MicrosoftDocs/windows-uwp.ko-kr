@@ -1,21 +1,19 @@
 ---
-author: andrewleader
 Description: The following article describes all of the properties and elements within tile content.
 title: 타일 콘텐츠 스키마
 ms.assetid: 7CBC3BD5-D9C3-4781-8BD0-1F28039E1FA8
 label: Tile content schema
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 07/28/2017
 ms.topic: article
 keywords: windows 10, uwp, 타일, 타일 알림, 타일 콘텐츠, 스키마, 타일 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 3cdcf8b609b76283ba680ec9ca4d2502624e2024
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 02ac975ae3893b1d3d591133862d0ff3733cca6b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581459"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693304"
 ---
 # <a name="tile-content-schema"></a>타일 콘텐츠 스키마
 

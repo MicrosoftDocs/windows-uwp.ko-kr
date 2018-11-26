@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 패키지 출시 백분율을 업데이트합니다.
 title: 플라이트 제출에 대한 출시 백분율 업데이트
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 플라이트 제출, 업데이트, 백분율
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b65f4071fb9a05754ef68d98b8e2da1435c0153
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 025db5cb0beb36a5b4a3ca1b765b5da3434c9d7a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559302"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692464"
 ---
 # <a name="update-the-rollout-percentage-for-a-flight-submission"></a>플라이트 제출에 대한 출시 백분율 업데이트
 

@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: 현재 활성 테마에 따라 서로 다른 리소스를 검색하는 추가 시스템 논리를 통해 리소스에 대한 참조를 평가하여 XAML 특성의 값을 제공합니다.
 title: ThemeResource 태그 확장
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568441"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691296"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource} 태그 확장
 

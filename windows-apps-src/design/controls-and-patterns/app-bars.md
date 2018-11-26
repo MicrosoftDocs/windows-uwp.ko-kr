@@ -1,11 +1,9 @@
 ---
-author: QuinnRadich
 Description: Command bars give users easy access to your app's most common tasks.
 title: 명령 모음
 label: App bars/command bars
 template: detail.hbs
 op-migration-status: ready
-ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -15,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d3c8aad90e028ece42128e86f5e255be7fd29177
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1bf828fab97a5dddc26d669b771bb831b65c140f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568774"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694480"
 ---
 # <a name="command-bar"></a>명령 모음
 

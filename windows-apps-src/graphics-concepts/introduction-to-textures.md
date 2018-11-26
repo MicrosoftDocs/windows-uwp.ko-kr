@@ -4,17 +4,15 @@ description: 텍스처 리소스는 텍셀을 저장할 수 있는 데이터 구
 ms.assetid: 6F3C76A8-F762-4296-AE02-BFBD6476A5A8
 keywords:
 - 텍스처 소개
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f88cccc3f32449d09c01450bf159b3fca6a3d59f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3cd5ca66635b57b79c2fca3e6ff10b8debb43fd0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555648"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693673"
 ---
 # <a name="introduction-to-textures"></a>텍스처 소개
 

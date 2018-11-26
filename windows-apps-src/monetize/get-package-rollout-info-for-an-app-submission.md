@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 앱 제출에 대한 패키지 출시 정보를 받습니다.
 title: 앱 제출에 대한 출시 정보 가져오기
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 앱 제출
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 247c4e58740450bb9846c543e883ac62a8009429
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 301973fd231570f0fe63b8838971906c25e2d55c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565448"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692116"
 ---
 # <a name="get-rollout-info-for-an-app-submission"></a>앱 제출에 대한 출시 정보 가져오기
 

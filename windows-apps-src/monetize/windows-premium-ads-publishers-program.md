@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Windows 프리미엄 광고 게시자 프로그램 파트너 광고 네트워크 premium을 대상으로 지정할 수 있는 광고 지원 앱 큐 레이트 컬렉션 이루어져 광고에 최고를 산출 합니다. 이 프로그램에는 앱은 사용량, 참여 및 경험의 관점에서 클래스에서 가장 좋습니다.
 title: Windows 프리미엄 광고 게시자 프로그램
-ms.author: mhopkins
 ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 0975749e07d8bdc625820d694d08a6d8f8e29932
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 638854066c02edb923c8d4153f2125142d6b966b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571760"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692614"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Windows 프리미엄 광고 게시자 프로그램
 

@@ -4,17 +4,15 @@ description: Direct3D에서 텍스처 리소스는 메모리 리소스에 대한
 ms.assetid: 18DABFCE-8A36-4C4E-B08E-10428B05D701
 keywords:
 - 텍스처 뷰
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9506b86fc16861984e539c52bdd92eed544079a8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9167db4648dd193acaff0a224f3378486d171ad
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559566"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692070"
 ---
 # <a name="texture-views"></a>텍스처 뷰
 

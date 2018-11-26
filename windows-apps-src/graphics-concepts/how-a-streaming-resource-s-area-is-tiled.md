@@ -6,17 +6,15 @@ keywords:
 - 스트리밍 리소스 영역의 타일링 방법
 - 리소스 영역, 타일링
 - 크기 표, 리소스, 타일링
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 49ad096389c27fb65970424569c7c1d2ea0cb097
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7251d4595a3e87a8629d6e717bb4f52e5b7c35fe
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581902"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693254"
 ---
 # <a name="how-a-streaming-resources-area-is-tiled"></a>스트리밍 리소스 영역의 타일링 방법
 

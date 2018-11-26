@@ -1,20 +1,18 @@
 ---
-author: andrewleader
 Description: Learn how to create multi-step interactions in your notifications.
 title: 보류 중인 업데이트 활성화를 적용한 알림
 label: Toast with pending update activation
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 12/14/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림, 보류 중인 업데이트, 대기 중 업데이트, 다단계 대화형 작업, 다단계 조작
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d21c96676eec1b8b1a1f4397880af937dd8f4b6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b1574ee2913bd2889af204aae1089dc170df95b8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568083"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693014"
 ---
 # <a name="toast-with-pending-update-activation"></a>보류 중인 업데이트 활성화를 적용한 알림
 

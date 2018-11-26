@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: DirectX 11 포팅 FAQ
 description: UWP(유니버설 Windows 플랫폼)로 게임을 포팅하는 방법에 대한 질문과 대답입니다.
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 31c165d47beea8ee0e31a3213bdd0dbf0c2bc3d7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574689"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692644"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX 11 포팅 FAQ
 

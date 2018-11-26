@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 title: 원격 디바이스에서 앱 실행
 description: 프로젝트 로마를 사용하여 원격 장치에서 앱을 시작하는 방법을 알아봅니다.
-ms.author: pafarley
 ms.date: 02/12/2018
 ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: cbd548e0c591c679ecfbee88793c51e2a2ca2b37
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 26a67816195105572d9f690599b9a880ece90c98
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565862"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691714"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>원격 디바이스에서 앱 실행
 

@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
 description: 이 섹션에서는 기존 앱을 UWP 유니버설 Windows 플랫폼 () 고객이 모든 유형의 장치에 설치할 수 있는 단일 Windows10 앱 패키지를 만들 수 있는 포트 하는 방법을 설명 합니다. 앱은 흥미로운 새 하드웨어, 엄청난 수익 창출 기회, 최신 API 집합, 적응 UI 컨트롤, 마우스/키보드, 터치 및 음성을 포함하여 다양한 입력 양식을 활용할 수 있습니다.
 title: Windows10으로 앱 포팅
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb5c6ae373e4e35e640223fe08a5a49f2e7a5dd3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eefebbd7087070f85ead09e562f154f43ed49e37
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580852"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692794"
 ---
 # <a name="porting-apps-to-windows10"></a>Windows10으로 앱 포팅
 

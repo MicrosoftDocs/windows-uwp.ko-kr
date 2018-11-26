@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: AdScheduler 클래스를 사용하여 비디오 콘텐츠에 광고를 표시하는 방법을 알아봅니다.
 title: 비디오 콘텐츠에 광고 표시
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 158817aa0abea1ddb1247188ec69389a7682e899
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 29e2c46636445adac496d0f2149e956c5703c20d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562845"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691361"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 

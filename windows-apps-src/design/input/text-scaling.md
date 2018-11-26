@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Build UWP apps and custom/templated controls that support platform text scaling.
 title: 텍스트 크기 조정
 label: Text scaling
 template: detail.hbs
 keywords: UWP, 텍스트, 크기 조정, 접근성, "액세스 접근성" 표시 "큰 만들기 텍스트", 사용자 조작, 입력
-ms.author: kbridge
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3110615e43ffa4839d9be6ebf5113fc9d8b7c05f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f81c435690c7bf17066be5f49de4994f146fc5c9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571435"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694050"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 

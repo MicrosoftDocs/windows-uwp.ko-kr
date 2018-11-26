@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: DirectX 게임용 2D 그래픽
 description: 2D 비트맵 그래픽의 사용 및 효과와 게임에서 사용하는 방법에 대해 검토합니다.
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, games, directx, 2d, 그래픽
 ms.localizationpriority: medium
-ms.openlocfilehash: 8628588cdc20179e9505e45694d43788eb1d7cb6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1154abc4305307d87f15fbe0c0e5461e3a15e27e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570396"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691734"
 ---
 # <a name="2d-graphics-for-directx-games"></a>DirectX 게임용 2D 그래픽
 

@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
 title: 백그라운드 작업 최적화
 description: 시스템과 연동하여 배터리에 효율적인 방식으로 백그라운드 작업을 사용하는 UWP 앱을 만듭니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 932dd3c89933eab9baefe6ff2c45359db6efbb14
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 71a56bc23b4b727d5be2ed35fb77afae03f0689c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555569"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691034"
 ---
 # <a name="optimize-background-activity"></a>백그라운드 작업 최적화
 
