@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 뉴스와 변경 C + + WinRT 합니다.
 title: 새로운 C + + WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 뉴스, 어떤의 새
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1a10c9445f5909242675df6b3f2eaefab1aedcb3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 87ab438de08ed5d6165343e7b9c4a559f37b351e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577859"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695427"
 ---
 # <a name="whats-new-in-cwinrt"></a>새로운 C + + WinRT
 

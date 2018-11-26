@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
 description: 이 문서에서는 SceneAnalysisEffect 및 FaceDetectionEffect를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다.
 title: 카메라 프레임 분석 효과
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d948dee234ad6c49da847324422737b1bae27e30
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9714488473bf4bdc118fd56129ea67e00019dcb1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555048"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695923"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>카메라 프레임 분석 효과
 

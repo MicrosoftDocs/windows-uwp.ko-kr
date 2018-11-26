@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 연결합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
 title: xClass 특성
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6746969b1b717183894d6b941be41c9aca452960
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8eb1238499355cf37b3f5113dbb10c456de55961
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573751"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694792"
 ---
 # <a name="xclass-attribute"></a>x:Class 특성
 

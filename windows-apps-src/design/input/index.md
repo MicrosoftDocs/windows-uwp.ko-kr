@@ -1,22 +1,20 @@
 ---
 description: 펜, Surface Dial 및 기타 입력 유형에 맞게 앱을 최적화하세요.
 title: 입력 및 조작
-author: Karl-Bridge-Microsoft
 keywords: 앱 입력, UWP 응용 프로그램 사용자 지정
 label: Input and interactions
 layout: LandingPage
 template: detail.hbs
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: a69ebdb983fe8c023f2940a38ea6152d569f987c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4f66d808cafcc6fba89cebde352d191335068925
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555698"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695787"
 ---
 # <a name="input-and-interactions"></a>입력 및 조작
 

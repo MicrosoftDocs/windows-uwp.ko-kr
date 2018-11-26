@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Microsoft Advertising 라이브러리의 AdControl 클래스에 의해 생성되는 오류를 처리하는 방법을 알아봅니다.
 title: 광고 오류 처리
-ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: a9fa05ed2ee946fcec9ffb5ff21abd9011db0f2a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a6c14ecf8e8909ab6cd95a54ca8144fbf8a8d912
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577379"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712487"
 ---
 # <a name="handle-ad-errors"></a>광고 오류 처리
 

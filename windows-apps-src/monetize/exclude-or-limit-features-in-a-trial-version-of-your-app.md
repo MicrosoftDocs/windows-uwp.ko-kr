@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: If you enable customers to use your app for free during a trial period, you can entice your customers to upgrade to the full version of your app by excluding or limiting some features during the trial period.
 title: 평가판의 기능 제외 또는 제한
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
 keywords: windows 10, uwp, 평가판, 앱에서 바로 구매, IAP, Windows.ApplicationModel.Store
-ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 48fb632d0491d333f8c4a7c5e775041ec31aeee3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 36d7ada6567db95609203f8f163b78631e141b4f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560425"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712467"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 

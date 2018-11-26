@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
 description: 이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다. 특정 해상도 또는 프레임 속도를 지원하는 프로필, 여러 카메라에 대한 동시 액세스를 지원하는 프로필, HDR을 지원하는 프로필 선택 등의 작업이 포함됩니다.
 title: 카메라 프로필을 사용하여 카메라 기능 검색 및 선택
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1af7453e8bfea973a67dc878438050accc01fb4c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fe876b362f09eaca68d84516d413d3f458edf0a6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555038"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706762"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>카메라 프로필을 사용하여 카메라 기능 검색 및 선택
 

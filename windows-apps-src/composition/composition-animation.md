@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: 컴퍼지션 애니메이션
 description: 키 프레임 및 식 애니메이션을 사용하여 많은 컴퍼지션 개체와 효과 속성에 애니메이션 효과를 줄 수 있으므로 UI 요소의 속성을 시간에 따라 또는 계산을 기준으로 변경할 수 있습니다.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f9d0daf230007d1d32a7d2187d54baa90986e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566079"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712762"
 ---
 # <a name="composition-animations"></a>컴퍼지션 애니메이션
 

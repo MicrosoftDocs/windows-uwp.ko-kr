@@ -1,19 +1,17 @@
 ---
 title: 세션 템플릿 상수
-author: KevinAsgari
 description: Xbox Live 멀티 플레이 세션 템플릿에 정의 된 시스템 상수를 설명 합니다.
 ms.assetid: d51b2f12-1c56-4261-8692-8f73459dc462
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어 세션 템플릿
 ms.localizationpriority: medium
-ms.openlocfilehash: 17c7fa48ee637dbca20b67872113a8d43e04da84
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5bb4c6f39bab8779b5675a7b9c81b883965676c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7557532"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719954"
 ---
 # <a name="session-template-constants"></a>세션 템플릿 상수
 

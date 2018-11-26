@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: URI에 대한 기본 앱 실행
 description: URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다.
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
-ms.author: twhitney
 ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5a0af7b7227f149722cf34a368fc588198880ef
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572012"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696487"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 

@@ -1,19 +1,17 @@
 ---
-author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
 title: XAML UI에 대한 3D 원근감 효과
 description: 원근 변형을 사용하여 Windows 런타임 앱의 콘텐츠에 3D 효과를 적용할 수 있습니다. 예를 들어 아래와 같이 개체가 회전하면서 다가오거나 멀어지는 환상 효과를 만들 수 있습니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f0b50ca4cb3f74c7c8e8bccb4fceb58e0151bcf2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c1858938d04a024799224daf74ade4df3629a854
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556145"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719164"
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>XAML UI에 대한 3D 원근감 효과
 

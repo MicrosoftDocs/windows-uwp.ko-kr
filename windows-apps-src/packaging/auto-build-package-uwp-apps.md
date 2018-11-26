@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 title: UWP 앱에 대한 자동화된 빌드 설정
 description: 자동화된 빌드를 구성하여 사이드로드/Microsoft Store 패키지를 생성하는 방법
-ms.author: hickeys
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 775e780be823b6e7b80eda9f488d69fe4fc29edf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566197"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693074"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 

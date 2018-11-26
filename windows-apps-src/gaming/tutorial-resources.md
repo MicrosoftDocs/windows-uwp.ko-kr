@@ -1,18 +1,16 @@
 ---
-author: joannaleecy
 title: 게임 샘플 확장
 description: UWP DirectX 게임에서 XAML 오버레이를 구현하는 방법을 자세히 알아보세요.
 keywords: DirectX, XAML
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cb837965746eb1c2c7deab613eec239a83cac294
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7cb1c9f9cf6cbc6cce0c5d4547ed503bb9a06e56
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565130"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696232"
 ---
 # <a name="extend-the-game-sample"></a>게임 샘플 확장
 

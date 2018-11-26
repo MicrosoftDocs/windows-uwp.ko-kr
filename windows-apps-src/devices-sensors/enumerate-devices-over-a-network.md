@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
 title: 네트워크를 통해 디바이스 열거
 description: 로컬로 연결된 디바이스를 검색하는 것 외에 Windows.Devices.Enumeration API를 사용하여 무선 및 네트워크 프로토콜을 통해 디바이스를 열거할 수 있습니다.
-ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 00f8d4314d67828fa30007d3b8af4c4e1d06c154
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e80d16b3338291c756b543018812e9db1370a4ac
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567539"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698332"
 ---
 # <a name="enumerate-devices-over-a-network"></a>네트워크를 통해 디바이스 열거
 

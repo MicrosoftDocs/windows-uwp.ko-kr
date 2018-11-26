@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: 앱 패키지 아키텍처
 description: UWP 앱 패키지를 빌드할 때 사용해야 할 프로세스 아키텍처에 대해 알아봅니다.
-ms.author: lahugh
 ms.date: 7/13/2017
 ms.topic: article
 keywords: windows 10, uwp, 패키징, 아키텍처, 패키지 구성
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e265df32a8c4168cddced905e7b0712e4601264
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 15b1b8531390cf1b83c15e0aec1d371266417a87
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573297"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712693"
 ---
 # <a name="app-package-architectures"></a>앱 패키지 아키텍처
 

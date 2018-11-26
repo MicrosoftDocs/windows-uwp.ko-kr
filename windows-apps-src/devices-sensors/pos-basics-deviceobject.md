@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: PointOfService 장치 개체
 description: PointOfService 장치 개체 만들기에 대해 알아보기
-ms.author: jken
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 31af943ab4a9231f58fb2e3d5489e9ae80d8d565
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aba44cec7081d05f66e90b2540f0e9609b87ab83
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561647"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698582"
 ---
 # <a name="pointofservice-device-objects"></a>PointOfService 장치 개체
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: AC74B4FA-5554-4C03-9683-86EE48546C05
 description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 추가 기능 제출을 커밋합니다.
 title: 추가 기능 제출 커밋
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 커밋, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f0d7ed15d3328ceffa9aa65a38c129f735c41ba
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577481"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694932"
 ---
 # <a name="commit-an-add-on-submission"></a>추가 기능 제출 커밋
 

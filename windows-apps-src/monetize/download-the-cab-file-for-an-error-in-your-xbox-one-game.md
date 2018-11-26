@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 Xbox One 게임에서 오류에 대 한 CAB 파일을 다운로드 합니다.
 title: Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드
-ms.author: mhopkins
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드
 ms.localizationpriority: medium
-ms.openlocfilehash: ad1e3339fe50087c3a3d8cdcf3a99f27c1c868df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 736219533a254e6380c10600e97f707f15e37de6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561150"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712507"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-xbox-one-game"></a>Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드
 

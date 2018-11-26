@@ -1,20 +1,18 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Simulate and automate input from devices such as keyboard, mouse, touch, pen, and gamepad in your UWP apps.
 title: 입력 삽입을 통해 사용자 입력 시뮬레이트
 label: Input injection
 template: detail.hbs
 keywords: 장치, 디지타이저, 입력, 조작, 삽입
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aa83e202078336884ff2e1924ebc223bbe13dcdd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: de3f0b1377d4f4209dc012ff56adb2de9c68625f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572655"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694654"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
 

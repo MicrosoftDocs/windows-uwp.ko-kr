@@ -1,9 +1,7 @@
 ---
-author: stevewhims
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: 데이터 바인딩 심층 분석
 description: 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다.
-ms.author: stwhi
 ms.date: 10/05/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -11,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 0d7f6667aeb2f6c7c07f8f4c2d5944f559ebe0d8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dcaad17df5c036069dcdd729e662e5418db7646e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563471"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720209"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 

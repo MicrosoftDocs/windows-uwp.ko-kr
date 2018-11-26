@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
 description: 이 문서에서는 AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 및 낮은 조명 사진을 캡처하는 방법을 보여 줍니다.
 title: HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cc81fdc03096dd8cac5e844a496b38da78eb6136
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a4c5005885d150fdd4f6a41b3fb2586e2728bbd5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557928"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695870"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
 

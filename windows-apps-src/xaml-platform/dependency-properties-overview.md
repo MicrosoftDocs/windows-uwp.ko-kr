@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: 이 항목에서는 UI의 XAML 정의와 함께 C++, C# 또는 Visual Basic을 사용하여 Windows 런타임 앱을 작성할 때 사용할 수 있는 종속성 속성 시스템에 대해 설명합니다.
 title: 종속성 속성 개요
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fbf6e7ee8a224a6957428fddd11a2922adbecf4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 92e8b0b0d68b1dc4110818977024d3040194a376
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566262"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712189"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 

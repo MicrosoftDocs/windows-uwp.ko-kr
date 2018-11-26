@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 title: 지오코딩 및 리버스 지오코딩 수행
 description: 이 가이드에서는 Windows.Services.Maps 네임 스페이스에 있는 MapLocationFinder 클래스의 메서드를 호출 하 여 (리버스 지 오 코딩) 주소를 지리적 위치로 변환 하 고 (지 오 코딩) 지리적 위치를 주소를 변환 하는 방법을 보여 줍니다.
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
-ms.author: pafarley
 ms.date: 07/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 지오코딩, 지도, 위치
 ms.localizationpriority: medium
-ms.openlocfilehash: bdd956dece4435ceb8e14121ec2b545095af3a11
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578236"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706900"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>지오코딩 및 리버스 지오코딩 수행
 

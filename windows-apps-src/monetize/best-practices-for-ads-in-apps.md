@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
 description: UX 지침 및 오류 처리를 비롯하여 앱 광고의 모범 사례에 대해 알아봅니다.
 title: 앱 광고 모범 사례
-ms.author: mhopkins
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10 uwp, 광고, 광고, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d6c7c0cbc1999c0b4afc33cb84479294d2b18f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3084c72d32967d691054b452f5f5f2e903bedd5b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559110"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720259"
 ---
 # <a name="best-practices-for-ads-in-apps"></a>앱 광고 모범 사례
 

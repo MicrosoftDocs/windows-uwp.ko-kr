@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Review this list to help avoid issues that frequently prevent apps from getting certified, or that might be identified during a spot check after the app is published.
 title: 일반적인 인증 실패 방지
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f37412ac88b001f412a1495f2b4efa029cf4d3a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0b8ef16d9fe789c2c386b27ffe221aa797a3b5ef
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569619"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694000"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 

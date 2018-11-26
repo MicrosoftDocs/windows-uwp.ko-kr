@@ -4,17 +4,15 @@ description: 장치 상태가 상태 개체로 그룹화되어 상태 변경 비
 ms.assetid: D998745C-2B75-4E59-9923-AD1A17A92E05
 keywords:
 - 상태 개체
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b0333d77e635961d51d3d5bb45cdf2def646fb8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3437119979073a5cec27948fc90f954e06c2fc93
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573197"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707124"
 ---
 # <a name="state-objects"></a>상태 개체
 

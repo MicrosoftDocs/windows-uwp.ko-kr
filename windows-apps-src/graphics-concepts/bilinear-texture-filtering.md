@@ -4,17 +4,15 @@ description: 쌍선형 필터링은 샘플링 점에 가장 가까운 4텍셀의
 ms.assetid: 0851AD28-8246-4547-A663-47884DDDFC3E
 keywords:
 - 쌍선형 텍스처 필터링
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 48e16162a76b1a599c1a43e763243be4348810af
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 437650883b4782ca02c0daf24cc8ebed01d954f6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568594"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707345"
 ---
 # <a name="bilinear-texture-filtering"></a>쌍선형 텍스처 필터링
 

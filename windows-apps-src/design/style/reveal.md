@@ -1,9 +1,7 @@
 ---
-author: mijacobs
 description: 표시는 앱의 대화형 요소에 깊이와 포커스를 더해주는 조명 효과입니다.
 title: 강조
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 08/9/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: db71916c9297296c4d3bb89e05032c5f413f332e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8278b126ed209148a2e44ea464e04073dcefc829
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576407"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698232"
 ---
 # <a name="reveal-highlight"></a>강조
 

@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: 사용자 지정 리소스 조회 구현에서 제공하는 리소스에 대한 참조를 평가하여 XAML 특성에 대한 값을 제공합니다. 리소스 조회는 CustomXamlResourceLoader 클래스 구현으로 수행됩니다.
 title: CustomResource 태그 확장
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6fb88fc3a764a89dfe7ac8a9c399149b6b98eca5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7eabcb188aa1687d36d4b4e6f432783aa68969de
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579660"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696418"
 ---
 # <a name="customresource-markup-extension"></a>{CustomResource} 태그 확장
 

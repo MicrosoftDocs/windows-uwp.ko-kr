@@ -4,17 +4,15 @@ description: '발광 조명은 개체(예: 불빛)에서 발산하는 빛입니�
 ms.assetid: 262EB9E2-DF96-401F-93D6-51A7BB60074B
 keywords:
 - 발광 조명
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ce2082479261cd96fb1c5bafd5f2df06bf6f239
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ba112e04518d3e1ee05e7ee8e23e633d4cf59748
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575509"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692934"
 ---
 # <a name="emissive-lighting"></a>발광 조명
 

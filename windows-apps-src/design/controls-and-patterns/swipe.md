@@ -1,5 +1,4 @@
 ---
-author: jwmsft
 pm-contact: kisai
 design-contact: ksulliv
 dev-contact: Shmazlou
@@ -8,17 +7,16 @@ Description: Swipe commanding is a touch accelerator for context menus.
 title: 살짝 밀기
 label: Swipe
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: daea428d6fad34116dac743655162c2f32315bea
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a75723177e697d3fe4cdae270aba29eabcabf470
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575729"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719418"
 ---
 # <a name="swipe"></a>살짝 밀기
 

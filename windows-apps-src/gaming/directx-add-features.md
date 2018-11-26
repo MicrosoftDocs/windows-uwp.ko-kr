@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: DirectX 게임에 기능 추가
 description: DirectX 게임에 기능을 추가합니다.
 ms.assetid: 78e17048-a4a5-47d3-b250-19375b6f186c
-ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx xaml, 화면 회전, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: be3f8e57a592512335a826c142876d1ff3c53e5b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 432e7716363f6a51254e1476dac38f713c94fb69
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557223"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712219"
 ---
 # <a name="add-features-to-directx-games"></a>DirectX 게임에 기능 추가
 

@@ -1,19 +1,17 @@
 ---
 title: 멀티 플레이어 관리자 순서도
-author: KevinAsgari
 description: Xbox Live 멀티 플레이어 관리자 순서도에 대 한 링크를 제공합니다.
 ms.assetid: 0e81ab13-9285-4b72-a6ce-f15add559128
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 멀티 플레이어 관리자, 순서도
 ms.localizationpriority: medium
-ms.openlocfilehash: 203a08e2fddfd2c650738a8b37e4a0ae5b52b3d9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 397c8a0fa95299326c56b2633db5532a70aca0ba
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563463"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720039"
 ---
 # <a name="multiplayer-manager-flowcharts"></a>멀티 플레이어 관리자 순서도
 

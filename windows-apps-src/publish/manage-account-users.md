@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Add users to your Partner Center account and assign them roles with specific permissions.
 title: 계정 사용자 관리
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 계정 사용자, azure ad, 여러 사용자, 여러 사용자 관리
 ms.localizationpriority: medium
-ms.openlocfilehash: 01517ebd2cc4b86fa1ac440446a5cc59172014b3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 282b1eb087fa081b621437206f338ed4b6d3569b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555295"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696222"
 ---
 # <a name="manage-account-users"></a>계정 사용자 관리
 

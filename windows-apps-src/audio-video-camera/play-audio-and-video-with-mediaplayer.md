@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 58af5e9d-37a1-4f42-909c-db7cb02a0d12
 description: 이 문서에서는 MediaPlayer를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다.
 title: MediaPlayer를 사용하여 오디오 및 비디오 재생
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b83be1dee4e23fa6974e39fbfb0f9ce26529274
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4d33a2bf1505618dca4e0e54c2bd9a534f58bcfc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557504"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706562"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 

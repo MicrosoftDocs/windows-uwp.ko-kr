@@ -1,19 +1,17 @@
 ---
 title: 순위표
-author: aablackm
 description: 순위표 Xbox Live를 사용 하 여 플레이어를 비교 하는 방법을 알아봅니다.
 ms.assetid: 132604f9-6107-4479-9246-f8f497978db7
-ms.author: aablackm
 ms.date: 09/28/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 69fd69f596204b07f3b8c2d78f27a26a7be9fe94
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8fd7e30b99418fda614a888d9269548cdc57a88a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7565377"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719987"
 ---
 # <a name="leaderboards"></a>순위표
 

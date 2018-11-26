@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 관성 한정자를 사용하여 끌기 지점 만들기
 description: InteractionTracker의 InertiaModifier 기능을 사용하여 지정된 지점으로 끄는 동작 경험을 만드는 방법에 대해 알아봅니다.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 20c10b1cc621da834a8a7c411e75eb92b1944b5a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f99ebc4b98c87a4bc6d77fd2c626f481563e50c5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562412"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712348"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>관성 한정자로 끌기 지점 만들기
 

@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 선언적 XAML 태그 형식으로 UI를 정의 하는 방법이 매우 원활 하 게 WindowsPhone Silverlight에서에서 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다.
 title: WindowsPhone Silverlight XAML 및 UI를 UWP로 포팅
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d219a09ccca74c9fc513b7510c40ce0b90ad9f52
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 153d73a75b48d61cb490a903c6657c42638c6674
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553810"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707144"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>WindowsPhone Silverlight XAML 및 UI를 UWP로 포팅
 

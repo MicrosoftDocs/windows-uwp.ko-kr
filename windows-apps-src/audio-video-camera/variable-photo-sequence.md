@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
 description: 이 문서에서는 가변 사진 시퀀스를 캡처하여 여러 이미지 프레임을 빠른 속도로 연속으로 캡처하고 서로 다른 초점, 플래시, ISO, 노출 및 노출 보정 설정을 사용하도록 각 프레임을 구성할 수 있도록 하는 방법을 보여 줍니다.
 title: 가변 사진 시퀀스
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 91a7d69d945b2ba2452d5bc477b6c17bf1dc6845
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 208a61b565c0522d3e9ce88f3938f57dfa1fbddd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561667"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695777"
 ---
 # <a name="variable-photo-sequence"></a>가변 사진 시퀀스
 

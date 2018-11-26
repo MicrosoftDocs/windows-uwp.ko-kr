@@ -1,10 +1,8 @@
 ---
-author: Jwmsft
 Description: Use the pull-to-refresh control to get new content into a list.
 title: 당겨서 새로 고침
 label: Pull-to-refresh
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, uwp
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b1dd6bd1bc165a79ba123c94e63e1dcfa58ec21
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2efd091d90a856e45d76c0b1357f30417812160a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578894"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693702"
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 

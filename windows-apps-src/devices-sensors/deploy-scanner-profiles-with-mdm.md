@@ -1,19 +1,17 @@
 ---
 title: MDM을 사용한 바코드 스캐너 프로필 배포
-author: PatrickFarley
 description: MDM 서버를 사용하여 바코드 스캐너 프로필을 배포할 수 있습니다.
 ms.assetid: 99ED3BD8-022C-40C2-9C65-F599186548FE
-ms.author: pafarley
 ms.date: 09/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cfd9692620273952483ec7da65a69b643cb5bf4f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dbcaa683e2c7a2bb18d88fcba03e10fa951d4459
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568023"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719098"
 ---
 # <a name="deploy-barcode-scanner-profiles-with-mdm"></a>MDM을 사용한 바코드 스캐너 프로필 배포
 

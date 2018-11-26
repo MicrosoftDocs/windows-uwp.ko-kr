@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: 바코드 스캐너 카메라에 대한 미리 보기 호스팅
 description: 응용 프로그램에서 카메라 바코드 스캐너에 대한 미리 보기를 호스팅하는 방법에 대한 자세한 내용
-ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 9684db2495e974c23d81b21e9a4a2e764d390255
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0eb7b1b620fcfa16576d84eaa2564408394d59de
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553200"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698712"
 ---
 # <a name="hosting-a-camera-barcode-scanner-preview-in-your-application"></a>응용 프로그램에서 카메라 바코드 스캐너에 대한 미리 보기 호스팅
 ## <a name="step-1-setup-your-camera-preview"></a>1단계: 카메라 미리 보기 설정

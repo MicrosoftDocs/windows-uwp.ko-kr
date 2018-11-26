@@ -4,17 +4,15 @@ description: 사용 플래그는 성능이 가장 좋은 메모리 영역에 리
 ms.assetid: 6A09702D-0FF2-4EA6-A353-0F95A3EE34E2
 keywords:
 - 리소스 데이터 복사 및 액세스
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e7b0f06711b4a908f8990dfb16968400c685c15f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3d4364bf9973b69587ae042a809d026b553ee2ea
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563406"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695062"
 ---
 # <a name="copying-and-accessing-resource-data"></a>리소스 데이터 복사 및 액세스
 

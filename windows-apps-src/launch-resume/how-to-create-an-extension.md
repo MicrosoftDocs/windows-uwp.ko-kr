@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: 앱 확장 만들기 및 사용
 description: 사용자가 Microsoft Store에서 설치할 수 있는 패키지를 통해 앱을 확장할 수 있는 UWP(유니버설 Windows 플랫폼) 추가 앱 정보를 작성하고 호스팅할 수 있습니다.
 keywords: 앱 확장, 앱 서비스, 백그라운드
-ms.author: twhitney
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c4c326dbafa719273c4535a42d58184c7ce360fe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 99ba3ee5f62ed9455e95d9e760abdba6009e5027
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569391"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712368"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 

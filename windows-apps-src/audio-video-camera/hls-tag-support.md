@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 66a9cfe2-b212-4c73-8a36-963c33270099
 description: 이 문서에서는 UWP 앱에서 지원되는 HLS(HTTP 라이브 스트리밍) 프로토콜 태그를 보여 줍니다.
 title: HLS(HTTP 라이브 스트리밍) 태그 지원
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d8e90f98dd79150cf19727fe31e51278a88a198
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7c6664d13e76a5774172094d632de9db25109fdc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572978"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696155"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>HLS(HTTP 라이브 스트리밍) 태그 지원
 다음 표에서는 UWP 앱에서 지원되는 HLS 태그를 보여 줍니다.

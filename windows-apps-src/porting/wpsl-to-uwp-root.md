@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 여러분이 WindowsPhone Silverlight 앱과 개발자 Windows10를 이동 하는 멋진 활용 자신의 기술과 소스 코드를 생성할 수 있습니다.
 title: WindowsPhone Silverlight에서 UWP로 이동
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb2617fc3fbd14d17635435c8bfd6d58817a7a1b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 17d107e7886838071567a1368c6b542ae5ecfad0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567267"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719036"
 ---
 #  <a name="move-from-windowsphone-silverlight-to-uwp"></a>WindowsPhone Silverlight에서 UWP로 이동
 

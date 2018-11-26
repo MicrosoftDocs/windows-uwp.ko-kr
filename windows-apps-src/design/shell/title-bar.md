@@ -1,20 +1,18 @@
 ---
-author: jwmsft
 description: 앱의 퍼스낼리티와 일치하도록 데스크톱 앱의 제목 표시줄을 사용자 지정하세요.
 title: 제목 표시줄 사용자 지정
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ebe590f98afef031ab183589fc7dcfc29cd9493
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 88c613456525648883735850fe831cb3b67f145c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557365"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698492"
 ---
 # <a name="title-bar-customization"></a>제목 표시줄 사용자 지정
 

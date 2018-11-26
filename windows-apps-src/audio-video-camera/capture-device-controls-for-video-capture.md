@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
 description: 이 문서에서는 수동 디바이스 컨트롤을 사용하여 HDR 비디오, 노출 우선 순위 등의 향상된 비디오 캡처 시나리오를 가능하게 하는 방법을 보여 줍니다.
 title: 비디오 캡처를 위한 수동 카메라 컨트롤
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 91f9d21f6df09bf8f3cad3e5a43f3ed94049338e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f144ef398fc55e79d2f0190c61214cdf1aa93b68
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576081"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696076"
 ---
 # <a name="manual-camera-controls-for-video-capture"></a>비디오 캡처를 위한 수동 카메라 컨트롤
 

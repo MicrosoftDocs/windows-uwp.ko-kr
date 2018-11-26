@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 게임 프로젝트 설정
 description: 게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다.
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 설정, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560833"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696467"
 ---
 # <a name="set-up-the-game-project"></a>게임 프로젝트 설정
 
@@ -141,7 +139,7 @@ void App::Run()
 
 ## <a name="review-the-included-libraries-and-headers"></a>포함된 라이브러리 및 헤더를 검토합니다.
 
-There are a few files we haven't looked at yet. 이 파일은 Direct3D 게임 개발 시나리오에 공통적으로 적용되는 추가 도구 및 지원을 제공합니다. 기본 DirectX 게임 프로젝트와 함께 제공되는 전체 파일 목록은 [DirectX 게임 프로젝트 템플릿](user-interface.md#template-structure)을 참조하세요.
+아직 살펴보지 않은 몇 개의 파일이 있습니다. 이 파일은 Direct3D 게임 개발 시나리오에 공통적으로 적용되는 추가 도구 및 지원을 제공합니다. 기본 DirectX 게임 프로젝트와 함께 제공되는 전체 파일 목록은 [DirectX 게임 프로젝트 템플릿](user-interface.md#template-structure)을 참조하세요.
 
 | 템플릿 원본 파일         | 파일 폴더            | 설명 |
 |------------------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

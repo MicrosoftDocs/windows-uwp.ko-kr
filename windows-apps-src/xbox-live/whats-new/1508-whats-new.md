@@ -1,19 +1,17 @@
 ---
 title: 새로운 기능-2015 년 8 월에 대 한 Xbox Live SDK
-author: KevinAsgari
 description: 새로운 기능-2015 년 8 월에 대 한 Xbox Live SDK
 ms.assetid: a034867b-7cc0-4b97-89d5-3486e95a80b4
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: eca9ac96aa132c395451dfd254fbf2bf274315aa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a454b7339035475416934c2f921dae65283c340c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7555166"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719975"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---august-2015"></a>새로운 기능-2015 년 8 월에 대 한 Xbox Live SDK
 

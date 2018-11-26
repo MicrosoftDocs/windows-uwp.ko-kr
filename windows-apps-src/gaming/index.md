@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 게임 프로그래밍
 description: UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. 새 게임을 시작하거나 기존 게임을 포팅하는 방법에 대해 알아봅니다.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
-ms.author: mtoepke
 ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 1642251ac7019d8bdf0216487eb7085d616863cf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2dddead7dcc2eedbe4e32fa4bfd749bed60ba796
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565554"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712868"
 ---
 # <a name="game-programming"></a>게임 프로그래밍
 

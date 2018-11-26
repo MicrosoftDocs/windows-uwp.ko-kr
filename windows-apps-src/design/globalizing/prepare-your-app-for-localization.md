@@ -1,20 +1,18 @@
 ---
-author: stevewhims
 Description: A localized app is one that can be localized to other markets, languages, or regions without uncovering any functional defects in the app. The most essential property of a localizable app is that its executable code has been cleanly separated from its localizable resources.
 title: 자신의 앱을 현지화 가능하도록 만들 수 있습니다.
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
-ms.author: stwhi
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c0df06458bf70599be657fe2812b2fb3e2b44ed6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561826"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720139"
 ---
 # <a name="make-your-app-localizable"></a>자신의 앱을 현지화 가능하도록 만들 수 있습니다.
 

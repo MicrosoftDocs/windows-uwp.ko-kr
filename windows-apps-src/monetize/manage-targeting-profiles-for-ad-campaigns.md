@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인 타기팅 프로필을 관리합니다.
 title: 타기팅 프로필 관리
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 271d60e6fbc0bd6336aa8aa8ec9edbb2b965c7f4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0d84c6eb678bf884709e13ecefd81e64097ee738
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573473"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712845"
 ---
 # <a name="manage-targeting-profiles"></a>타기팅 프로필 관리
 

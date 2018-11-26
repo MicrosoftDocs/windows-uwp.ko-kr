@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: 이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다.
 title: 오디오, 비디오 및 카메라
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ed222b9ebefd0035064717f78fb91518d3164d13
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6aecc5b9a43d6cb00b42b1535a196afd8a138af9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573277"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706651"
 ---
 # <a name="audio-video-and-camera"></a>오디오, 비디오 및 카메라
 

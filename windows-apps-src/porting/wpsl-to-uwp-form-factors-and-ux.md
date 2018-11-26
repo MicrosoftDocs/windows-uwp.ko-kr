@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이스에서 일반적인 모양과 느낌을 공유합니다. 사용자 인터페이스, 입력 및 조작 패턴이 매우 비슷하고, 디바이스 간에 이동하면 친숙한 환경이 제공됩니다.
 title: 폼 팩터 및 UX에 대 한 WindowsPhone Silverlight를 UWP로 포팅
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 809cf2691a2bc7b7c72d4ba031fa4c6b45335dde
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0897bd2636f13cfb02568847c0ba40b2d6b218f3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555345"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706880"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>폼 팩터 및 UX에 대 한 WindowsPhone Silverlight를 UWP로 포팅
 

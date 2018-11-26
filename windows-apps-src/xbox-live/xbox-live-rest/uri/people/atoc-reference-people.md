@@ -2,19 +2,17 @@
 title: 피플 URI
 assetID: e4e6e3c9-7051-a90b-be1c-931816a22b36
 permalink: en-us/docs/xboxlive/rest/atoc-reference-people.html
-author: KevinAsgari
 description: " 피플 URI"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f2108f0384a77de1c4cb9de94f3cc620957ca83a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b52d0db46fe53d46dc831769c73c948d18d9c2c0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7559941"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720013"
 ---
 # <a name="people-uris"></a>피플 URI
  

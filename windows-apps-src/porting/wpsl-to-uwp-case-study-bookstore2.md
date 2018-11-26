@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Bookstore에 제공 된 정보를 기반으로 하는이 사례 연구는 데이터는 LongListSelector에서 그룹화 된 표시 하는 WindowsPhone Silverlight 앱으로 시작 합니다.
 title: WindowsPhone Silverlight에서 UWP 사례 연구, Bookstore2
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e518439ddd4e131c2d045f4467670b42a392fca
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5b75da7d50135ee8d40f8ed44f0239edb54dcf65
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577494"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719545"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight를 UWP로 이동 사례 연구: Bookstore2
 
@@ -275,8 +273,8 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
 **CollectionViewSource.Source**을(를) '저자들'에 바인딩할 때 중요한 것은 바로 '저자들' 속의 각 '저자'는 *무엇*의 그룹이라는 점입니다. 이 경우에 '저자'가 BookSku의 그룹이라는 점을 **CollectionViewSource**에서 결정하도록 맡깁니다. 이 경우 실행되지만 유연하지 않습니다. '저자'가 BookSku 그룹 *그리고* 저자가 살았던 주소 그룹 *둘 다*이길 바라는 경우에는 어떻게 할까요? '저자'는 양 그룹이 동시에 *될 수 없습니다*. 그러나 '저자'가 가질 수 있는 그룹 수에는 *제한이 없습니다*. 다음과 같이 하면 해결할 수 있습니다. 현재 사용하고 있는 *~는 그룹이다* 패턴 대신 또는 그에 추가로 *~그룹이 있다* 패턴을 사용하는 것입니다. 방법은 다음과 같습니다.
 
 -   저자를 변경하여 그것이 더 이상 **List&lt;T&gt;** 에서 파생되지 않도록 합니다.
--   `private ObservableCollection<BookSku> bookSkus = new ObservableCollection<BookSku>();` 이 필드를 ‘저자’에 추가합니다.
--   `public ObservableCollection<BookSku> BookSkus { get { return this.bookSkus; } }` 이 속성을 '저자'에 추가합니다.
+-   이 필드를 추가 합니다. 
+-   이 속성을 추가 합니다. 
 -   물론 위의 두 단계를 반복하여 필요한 만큼의 '저자들'을 추가할 수 있습니다.
 -   AddBookSku 메서드의 구현을 `this.BookSkus.Add(bookSku);`(으)로 변경합니다.
 -   이제 '작성자'가 하나 이상의 그룹을 *가졌으므로*, **CollectionViewSource**과(와) 통신해야 합니다. 이렇게 하려면 이 속성을 **CollectionViewSource**에 추가합니다. `ItemsPath="BookSkus"`

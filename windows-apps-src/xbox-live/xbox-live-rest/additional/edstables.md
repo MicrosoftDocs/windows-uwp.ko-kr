@@ -2,19 +2,17 @@
 title: EDS 테이블
 assetID: 7fc0e498-9a45-61b9-a9b2-b7ceb8994e25
 permalink: en-us/docs/xboxlive/rest/edstables.html
-author: KevinAsgari
 description: " EDS 테이블"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cb33b2bdbbccfa447b48c161a8ee18a53f9e619
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d15066da96078dcbae290f9edddb772d1963ee25
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552974"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707106"
 ---
 # <a name="eds-tables"></a>EDS 테이블
 

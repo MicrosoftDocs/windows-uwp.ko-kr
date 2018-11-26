@@ -1,19 +1,17 @@
 ---
-author: payzer
 title: Xbox 개발자 모드 도우미
 description: Xbox 개발자 모드 도우미 앱에 대한 정보를 제공합니다.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 ms.localizationpriority: medium
-ms.openlocfilehash: 0054b71276eec33f87ff1ae51dff0d58c0efcfce
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b04272c99d9062be2eaea27aa5b107e6078872f8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569309"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696580"
 ---
 # <a name="xbox-dev-mode-companion"></a>Xbox 개발자 모드 도우미
 

@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: a128edc8-8a80-4645-ac29-908ede2d1c72
 description: '이 문서에서는 MediaFrameReader와 MediaCapture를 사용하여 색, 깊이, 적외선 카메라, 오디오 장치, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다.'
 title: MediaFrameReader를 사용하여 미디어 프레임 처리
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d4c752438af3425fffc69ecf71ff0dc8abe5963
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554714"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706674"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 

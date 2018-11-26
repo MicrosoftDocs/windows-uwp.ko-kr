@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출을 업데이트합니다.
 title: 패키지 플라이트 제출 업데이트
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 업데이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 670522e9842ca5e048777a1168caa1efbca6ce94
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fe1e88383d6562526d77aea8c75891216cd75ade
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560869"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712703"
 ---
 # <a name="update-a-package-flight-submission"></a>패키지 플라이트 제출 업데이트
 

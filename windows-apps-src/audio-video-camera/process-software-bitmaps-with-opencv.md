@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: ''
 description: 이 문서에서는 OpenCV(오픈 소스 컴퓨터 비전 라이브러리)와 함께 SoftwareBitmap 클래스를 사용하는 방법에 대해 설명합니다.
 title: OpenCV로 비트맵 처리
-ms.author: lahugh
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: b9f1f2050590267d0a98779eba11bbe0b363da0c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 45f76744070a7557939d1d7f2307113852737072
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560777"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706736"
 ---
 # <a name="process-bitmaps-with-opencv"></a>OpenCV로 비트맵 처리
 

@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: 스칼라 값은 **IInspectable**이 필요한 함수로 전달되기 전에 참조 클래스 개체 내에서 래핑되어야 합니다. 이러한 래핑 프로세스를 두고 값을 *박싱(boxing)* 한다고 합니다.
 title: C++/WinRT를 사용해 스칼라 값을 IInspectable로 박싱(boxing) 및 언박싱(unboxing)
-ms.author: stwhi
 ms.date: 04/10/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 박싱, 스칼라, 값
 ms.localizationpriority: medium
-ms.openlocfilehash: f4b99f587fbd517b677d85b50abb26fdf072b359
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 5c86d1ac8ce83ea092ce0e2730ea0e9d4a201b94
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7437934"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720269"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>C++/WinRT를 사용해 스칼라 값을 IInspectable로 박싱(boxing) 및 언박싱(unboxing)
  

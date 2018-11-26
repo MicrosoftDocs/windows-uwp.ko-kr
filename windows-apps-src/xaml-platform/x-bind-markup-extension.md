@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: XBind 태그 확장은 고성능 바인딩 대신 하 여입니다. xBind-새 Windows 10-실행 짧은 시간 내에 바인딩 및 디버깅 더 나은 지원 보다 적은 메모리로 됩니다.
 title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9674aeed846fab53de3ecb057ebcc46dbda560c3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5407849c15da25adc29fa97c0215b9734a5d3258
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580998"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694852"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 

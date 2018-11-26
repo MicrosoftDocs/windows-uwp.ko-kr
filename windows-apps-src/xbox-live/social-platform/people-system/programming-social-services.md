@@ -1,19 +1,17 @@
 ---
 title: 소셜 서비스 프로그래밍
-author: KevinAsgari
 description: Xbox Live 소셜 관리자 API를 사용 하는 방법의 코드 예제를 제공 합니다.
 ms.assetid: 101d059a-e03f-472c-8300-800aa5730ee2
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 소셜 관리자, 예제
 ms.localizationpriority: medium
-ms.openlocfilehash: e3d65b55a351073ded99a2ec8d2d1e03f4ab3c34
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5039d9ed205cadfee3b2e64527a1f58f1624accc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563609"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719938"
 ---
 # <a name="programming-social-services"></a>소셜 서비스 프로그래밍
 

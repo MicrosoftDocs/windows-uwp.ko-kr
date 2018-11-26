@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: 화면 캡처
 description: Windows.Graphics.Capture 네임스페이스는 디스플레이 또는 응용 프로그램 창에서 프레임을 획득하고 비디오 스트림 또는 스냅숏을 만들어 공동 작업 및 대화형 환경을 빌드하기 위해 API를 제공합니다.
 ms.assetid: 349C959D-9C74-44E7-B5F6-EBDB5CA87B9F
-ms.author: elcowle
 ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
-ms.openlocfilehash: d28ed1fce79a815155180ab8a3c708e2c8bf8916
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 14273f919cacfb27671ba72022ab6c8ff0a2f0ef
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7428589"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698312"
 ---
 # <a name="screen-capture"></a>화면 캡처
 

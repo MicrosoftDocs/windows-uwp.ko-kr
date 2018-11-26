@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
 description: Microsoft Store 프로 모션 API를 사용 하 여 프로그래밍 방식으로 사용자 또는 사용자 조직의 파트너 센터 계정에 등록 된 앱에 대 한 홍보용 광고 캠페인을 관리 합니다.
 title: 스토어 서비스를 사용하여 광고 캠페인 실행
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 81e77fb01347c2a6ec2630e08f3a00ee6cf47de7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 038003714d6543580f618b381ac7f4ecbde22da9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575265"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698352"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용하여 광고 캠페인 실행
 

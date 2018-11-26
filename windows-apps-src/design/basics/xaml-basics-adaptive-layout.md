@@ -1,18 +1,16 @@
 ---
-author: muhsinking
 title: 적응형 레이아웃 만들기 자습서
 description: 이 문서는 XAML의 적응형 레이아웃의 기본 사항에 대해 설명합니다.
 keywords: XAML, UWP, 시작
-ms.author: mukin
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 000aa2d8f3684aa813b85076d9124a87a71b6a8c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556782"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695092"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 

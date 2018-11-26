@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임입니다.
 title: 게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기
-ms.author: mhopkins
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f665b99b7f64e41597a5767d58b86ac8e85c6bd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569365"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712607"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기
 

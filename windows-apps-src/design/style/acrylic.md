@@ -1,9 +1,7 @@
 ---
-author: mijacobs
 description: 투명 한 텍스처를 만드는 브러시 유형입니다.
 title: 아크릴 소재
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 08/9/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c116a6131889e1d87642165f4e1d9883d78add33
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 336e4e64cc0b1819081a7e42b6e3e2d099355248
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568232"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698652"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 

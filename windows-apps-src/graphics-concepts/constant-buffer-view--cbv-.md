@@ -4,17 +4,15 @@ description: 상수 버퍼에는 셰이더 상수 데이터가 포함됩니다. 
 ms.assetid: 99AEC6B0-A43B-4B61-8C3A-ECC8DE1B69A7
 keywords:
 - CBV(상수 버퍼 뷰)
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cca90c705c7bb4dd1c7e283a9c3ed267cd282b56
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 33e850ba16be7a8d2621f061015d39c8b334cab2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572293"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712308"
 ---
 # <a name="constant-buffer-view-cbv"></a>CBV(상수 버퍼 뷰)
 

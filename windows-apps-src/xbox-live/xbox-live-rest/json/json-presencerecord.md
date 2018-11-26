@@ -2,19 +2,17 @@
 title: PresenceRecord(JSON)
 assetID: 414e6ef5-f7bd-70d0-7386-7aa1c3a56e21
 permalink: en-us/docs/xboxlive/rest/json-presencerecord.html
-author: KevinAsgari
 description: " PresenceRecord(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: febf5e377c73572e4e231f830d737b4e704d262e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6d531352c4336e00c93a91e7c945602ab69695f2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563741"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707294"
 ---
 # <a name="presencerecord-json"></a>PresenceRecord(JSON)
 단일 사용자의 온라인 상태에 대 한 데이터를 제공 합니다.

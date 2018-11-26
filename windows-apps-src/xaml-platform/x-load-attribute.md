@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: xLoad 특성
-description: xLoad 동적 생성 및 제거가 요소 및 자식의 시작 시간 및 메모리 사용량을 줄일 수 있습니다. 
-ms.author: jimwalk
+description: xLoad 동적 생성 및 제거가 요소 및 자식의 시작 시간 및 메모리 사용량을 줄일 수 있습니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d9659d183c020c579aa0a21fe179a69c1d9997c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577826"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693164"
 ---
 # <a name="xload-attribute"></a>x:Load 특성
 

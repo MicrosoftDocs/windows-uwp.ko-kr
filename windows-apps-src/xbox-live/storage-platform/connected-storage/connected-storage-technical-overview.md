@@ -1,19 +1,17 @@
 ---
 title: 연결된 저장소 기술 개요
-author: aablackm
 description: 연결 된 저장소의 내부 작업 심층 분석 합니다.
 ms.assetid: a0bacf59-120a-4ffc-85e1-fbeec5db1308
-ms.author: aablackm
 ms.date: 02/27/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: 8740d9287ff63ba113266d6c7cf39f2a21823d4b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6eddd11a370b8dcadc5108fe00539c2c6d1d9d1a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563792"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692416"
 ---
 # <a name="connected-storage"></a>연결된 저장소
 
@@ -76,7 +74,6 @@ Xbox One는 각각 고유한 장점과 제약 조건을 사용 하 여 여러 �
 
 <a name="connected-storage"></a>연결 된 저장소
 -----------------
-
 연결 된 저장소는 Xbox One 게임 플레이 데이터를 저장 하는 기타 관련 앱 상태-데이터 콘솔 간에 로밍 해야 하는 앱을 위해 설계 되었습니다. Xbox one 특정 연결 된 저장소 API 저장 하 고 해당 데이터를 업로드 하는 데 도움이 됩니다. API는 Xbox One 응용 프로그램 모델와 함께에서 작동합니다.
 
 연결 된 저장소 API는 다음과 같은 기능을 제공합니다.
@@ -96,7 +93,6 @@ Xbox One는 각각 고유한 장점과 제약 조건을 사용 하 여 여러 �
 
 <a name="xbox-live-title-storage"></a>Xbox Live 타이틀 저장소
 -----------------------
-
 타이틀 저장소 서비스는 다음과 같은 기능을 사용 하 여 데이터 저장소에 대 한 플랫폼 간 REST API를 제공합니다.
 
 -   사용자, 앱 및 다양 한 플랫폼 간에 공유할 데이터를 제공 합니다.
@@ -118,7 +114,6 @@ Xbox One는 각각 고유한 장점과 제약 조건을 사용 하 여 여러 �
 
 <a name="local-temporary-storage"></a>로컬 임시 저장소
 -----------------------
-
 콘솔에서 앱에 다음과 같은 특성을 사용 하 여 로컬 임시 저장소에 액세스할 수 있습니다.
 
 -   2GB T:\\ 경로 통해 액세스할 수 있는 전용된 하드 드라이브 저장소의.
@@ -129,7 +124,6 @@ Xbox One는 각각 고유한 장점과 제약 조건을 사용 하 여 여러 �
 
 <a name="configuring-your-app-for-connected-storage"></a>연결 된 저장소에 대 한 앱 구성
 ------------------------------------------
-
 연결 된 저장소 API를 사용 하면 읽기 및 쓰기 작업을 연결 된는 Xbox Live 기본 서비스 구성 ID (서비스 안내), AppXManifest.xml 앱의 매니페스트 파일에 정의 된 모든:
 
 ```xml

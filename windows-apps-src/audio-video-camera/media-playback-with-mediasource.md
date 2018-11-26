@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: 이 문서에서는 MediaSource 사용 방법을 보여 줍니다. 이 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다.
 title: 미디어 항목, 재생 목록 및 트랙
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 73b6a19e2385f1a9b8afa4672df50d17ac16ec97
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3c3929c2b3765bd90dbe0be687834e94b4f222fc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557465"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695956"
 ---
 # <a name="media-items-playlists-and-tracks"></a>미디어 항목, 재생 목록 및 트랙
 

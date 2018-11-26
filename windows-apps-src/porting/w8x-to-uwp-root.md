@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 유니버설 8.1 앱 및 \#8212;whether 있는 경우를 대상으로 Windows8.1, Windows Phone 8.1 또는 둘 다 \#8212;then은 소스 코드 및 기술이 원활 하 게 포팅 Windows10 나와 있습니다.
 title: Windows 런타임 8.x에서 UWP로 이동'
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eebd0467696b78458835425f7feac903ba435f42
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573097"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693751"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x에서 UWP로 이동
 

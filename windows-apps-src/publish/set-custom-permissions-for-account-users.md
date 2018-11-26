@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Set roles or custom permissions for account users.
 title: 계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580437"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719623"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 

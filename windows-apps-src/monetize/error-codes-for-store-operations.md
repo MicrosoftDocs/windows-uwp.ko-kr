@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: 이 문서에서는 앱과 앱에서 바로 구매, 라이선스 및 자동 설치 앱 업데이트를 포함 하 여 추가 기능에 대 한 스토어 작업에 대 한 일반적인 오류 코드를 설명 합니다.
 title: Store 작업에 대한 오류 코드
-ms.author: mhopkins
 ms.date: 08/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, Iap, 추가 기능, 오류 코드
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4eff890da48bd60405cadee2d7ecb92bb1b2fa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ba505b30076c356a39ae195e1d187cbc49d8a66a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582193"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720309"
 ---
 # <a name="error-codes-for-store-operations"></a>Store 작업에 대한 오류 코드
 

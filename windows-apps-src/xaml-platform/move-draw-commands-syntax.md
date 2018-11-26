@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: 경로 도형을 XAML 특성 값으로 지정하는 데 사용할 수 있는 이동 및 그리기 명령(미니 언어)에 대해 알아봅니다.
 title: 이동 및 그리기 명령 구문
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 604ad25bb65486b3b388a9a03d7503b0c1ce9c03
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555404"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720349"
 ---
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 

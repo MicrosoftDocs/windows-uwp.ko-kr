@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: At build time, the Resource Management System creates an index of all the different variants of the resources that are packaged up with your app. At run-time, the system detects the user and machine settings that are in effect and loads the resources that are the best match for those settings.
 title: 리소스 관리 시스템
 template: detail.hbs
-ms.author: stwhi
 ms.date: 10/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563693"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695721"
 ---
 # <a name="resource-management-system"></a>리소스 관리 시스템
 리소스 관리 시스템에는 빌드 시 및 런타임 시 기능이 모두 있습니다. 빌드 시 시스템은 앱과 함께 패키지되는 모든 여러 변형의 리소스의 인덱스를 만듭니다. 이 인덱스는 패키지 리소스 색인, 즉 PRI이며 앱 패키지에 포함되어 있습니다. 실행 시 시스템은 적용 중인 사용자와 시스템 설정을 감지하고 PRI의 정보를 확인하고 자동으로 이러한 설정에 대한 최적의 일치인 리소스를 로드합니다.

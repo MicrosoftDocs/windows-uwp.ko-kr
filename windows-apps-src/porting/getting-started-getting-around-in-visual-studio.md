@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Visual Studio 둘러보기
 title: Visual Studio 둘러보기
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8219f1600297dfa60345fe8130e8954558b8ac61
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 82cb45dae1a4b9b1a9db8fabc044edf8157f1eb1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573443"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719124"
 ---
 # <a name="getting-started-getting-around-in-visual-studio"></a>시작: Visual Studio 둘러보기
 

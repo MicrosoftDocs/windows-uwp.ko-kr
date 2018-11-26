@@ -1,20 +1,18 @@
 ---
-author: normesta
 Description: Run your packaged app and see how it looks without having to sign it. Then, set breakpoints and step through code. When you're ready to test your app in a production environment, sign your app and then install it.
 Search.Product: eADQiWindows 10XVcnh
 title: 패키지 데스크톱 앱 실행, 디버그, 테스트(데스크톱 브리지)
-ms.author: normesta
 ms.date: 08/31/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
-ms.openlocfilehash: 041bf37072b595c0889bd1493857e508e27c510c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 20351737e17dce7654385d6843280005cae9800c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572869"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720329"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>실행, 디버그 및 데스크톱 응용 프로그램 패키지를 테스트 합니다.
 

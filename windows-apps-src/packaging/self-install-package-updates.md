@@ -1,19 +1,17 @@
 ---
-author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 description: 파트너 센터에서 패키지를 필수로 표시 하 고 앱에서 패키지 업데이트 다운로드 및 설치 하기 위해 코드를 작성 하는 방법을 알아봅니다.
-ms.author: mcleans
 ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a2bc0cfbdd722a4842758be0f3b794aafe808bc3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571806"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720179"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 

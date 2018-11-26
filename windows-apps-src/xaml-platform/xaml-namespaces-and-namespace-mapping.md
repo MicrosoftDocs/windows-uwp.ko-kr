@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: 이 항목에서는 대부분의 XAML 파일 루트 요소에 있는 XML/XAML 네임스페이스(xmlns) 매핑에 대해 설명합니다. 사용자 지정 유형 및 어셈블리를 위해 유사한 매핑을 생성하는 방법도 설명합니다.
 title: XAML 네임스페이스 및 네임스페이스 매핑
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a1aebe3d9aac460d444a5dffcd63142300c022b7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6178e2072721ad8514ba7ddfc0ae8f99ab59d34c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582213"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693194"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML 네임스페이스 및 네임스페이스 매핑
 

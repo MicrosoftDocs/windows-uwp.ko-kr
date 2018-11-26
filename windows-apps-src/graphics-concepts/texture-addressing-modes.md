@@ -8,17 +8,15 @@ keywords:
 - 미러 텍스처 주소 모드
 - 클램프 텍스처 주소 모드
 - 테두리 색 텍스처 주소 모드
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e817dcc92741ca2e738784f387cfe49399a108c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5e263876f414e5683ffc8a5645a12e5031b3d6fb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564597"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696761"
 ---
 # <a name="texture-addressing-modes"></a>텍스처 주소 지정 모드
 

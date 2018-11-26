@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 비동기 프로그래밍(DirectX 및 C++)
 description: 이 항목에서는 비동기 프로그래밍과 스레딩을 DirectX와 함께 사용할 때 고려할 여러 사항에 대해 설명합니다.
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 비동기 프로그래밍, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f395136ff7f331f58b9c8e0ac1ee9efea296c02
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8551a49512d4b17ab1bab704596d9e5389de3eb6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560975"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712931"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>비동기 프로그래밍(DirectX 및 C++)
 

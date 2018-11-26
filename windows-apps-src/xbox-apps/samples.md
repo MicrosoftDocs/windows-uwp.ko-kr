@@ -1,19 +1,17 @@
 ---
-author: Mtoepke
 title: Xbox One의 UWP 샘플
 description: 좋은 Xbox One 및 TV 환경을 빌드하는 데 도움이 되는 샘플 및 라이브러리입니다.
-ms.author: scotmi
 ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.localizationpriority: medium
-ms.openlocfilehash: 3be6cfbc40fc645bfb66ef2f0fb9b8b5f2976da8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b0f793dfb1c261ed967e79ab2a64e09306a57917
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555256"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706975"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>Xbox One의 UWP 샘플
 

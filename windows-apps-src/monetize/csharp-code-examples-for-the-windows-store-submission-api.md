@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: 이 섹션의 C# 코드 예제를 사용하여 Microsoft Store 제출 API를 사용하는 방법에 대해 자세히 알아봅니다.
 title: C# 샘플 - 앱, 추가 기능, 플라이트 제출
-ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 495bf2e58fafd9e321937bd6fdb3be8c8dea68e2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565627"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712447"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\# 샘플: 앱, 추가 기능, 플라이트 제출
 

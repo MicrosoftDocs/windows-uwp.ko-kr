@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 연습 - Direct3D 9에서 DirectX 11 및 UWP로 포팅
 description: 이 포팅 연습에서는 간단한 렌더링 프레임워크를 Direct3D 9에서 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 가져오는 방법을 보여 줍니다.
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c7569c6b2f041f5535e0eabe934a91da86b60b9a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572585"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712169"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 

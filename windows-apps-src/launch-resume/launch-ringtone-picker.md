@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: ms-tonepicker 스키마
 description: 이 항목에서는 ms-tonepicker URI 스키마에 대해 설명하고 이를 사용해 톤 선택기를 표시하여 톤을 선택하고, 톤을 저장하고, 톤의 식별 이름을 가져오는 방법을 설명합니다.
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 ms.localizationpriority: medium
-ms.openlocfilehash: 61967f0aa81c49cb4e81b11bedac84c318be1840
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 293c755ecaf81ce80fab148a8aca92a7e3a8fa48
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568834"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696276"
 ---
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a>ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장
 

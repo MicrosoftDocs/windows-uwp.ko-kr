@@ -1,21 +1,19 @@
 ---
-author: QuinnRadich
 Description: Design external help pages for detailed instructions and advice about your app.
 title: 외부 도움말 페이지 디자인에 대한 지침
 label: External help
 template: detail.hbs
-ms.author: quradic
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 56afd553-c520-4a28-b63d-2e1b3c1d3606
 ms.localizationpriority: medium
-ms.openlocfilehash: 88e6fb03ccefca0e6067db58b9343ee76fa72ba3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eaca2af3a497de75beaffe5d3af4a261b24d8ba4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559094"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694339"
 ---
 # <a name="external-help-pages"></a>외부 도움말 페이지
 

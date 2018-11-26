@@ -1,19 +1,17 @@
 ---
 title: 파트너 센터에서 액세스 정책 구성
-author: KevinAsgari
 description: 다른 앱, 게임 및 Xbox Live 설정에 액세스 하는 서비스를 허용 하려면 파트너 센터에서 액세스 정책을 구성 하는 방법을 설명 합니다.
 ms.assetid: ''
-ms.author: kevinasg
 ms.date: 02/21/2018
 ms.topic: article
 ms.localizationpriority: medium
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, udc, 유니버설 개발자 센터
-ms.openlocfilehash: 525249475a9fc8a22d976398cf277620de6655e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ae26c18abdac30ff988e90ee5c56f178bf14b74a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7575903"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712913"
 ---
 # <a name="configure-access-policies-in-partner-center"></a>파트너 센터에서 액세스 정책 구성
 

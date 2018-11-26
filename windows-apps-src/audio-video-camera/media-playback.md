@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 25553c4d-fa4f-4130-af9b-97f993fefd43
 description: 이 섹션에서는 오디오 및 비디오를 재생하는 유니버설 Windows 앱을 만드는 방법에 대한 정보를 제공합니다.
 title: 미디어 재생
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dbcd2a4f9cec02882c62c7d6493746931b7919a8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: acfc63e06ed1259adfb56836eac790a1f03d7853
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573267"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696129"
 ---
 # <a name="media-playback"></a>미디어 재생
 

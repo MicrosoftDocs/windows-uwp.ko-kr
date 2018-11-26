@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Use handwriting recognition and ink analysis to recognize Windows Ink strokes as text and shapes.
 title: Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keywords: Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, 필기 인식, 사용자 조작, 입력
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 83142b0a3b24e25f8e7a922d800262f505cd8cc2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b25a37fb06688e7841490e00d1c83640d3155d50
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569133"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692884"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
@@ -274,7 +272,6 @@ private void DrawText(string recognizedText, Rect boundingRect)
 | ![분석 전](images/ink/ink-analysis-raw2-small.png) | ![분석 후](images/ink/ink-analysis-analyzed2-small.png) |
 
 ---
-
 ## <a name="constrained-handwriting-recognition"></a>제한된 필기 인식
 
 이전 섹션([잉크 분석을 통한 자유 형식 인식](#free-form-recognition-with-ink-analysis))에서는 [잉크 분석 API](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.analysis)를 사용하여 InkCanvas 영역 내에서 임의의 잉크 스트로크를 인식하는 방법을 살펴보았습니다.

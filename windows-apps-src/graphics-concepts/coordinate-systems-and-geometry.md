@@ -4,17 +4,15 @@ description: Direct3D 응용 프로그램을 프로그래밍하려면 3D 기하 
 ms.assetid: E82EB0A9-0678-496B-96B3-8993BA580099
 keywords:
 - 좌표계 및 기하 도형
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ce3b1ebfc2f18a06ff4fa960c91749f61f5011d9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 962002d635c3e6edbf1f9581a4cbc57fbd5b1d96
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553164"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696729"
 ---
 # <a name="coordinate-systems-and-geometry"></a>좌표계 및 기하 도형
 

@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: You can generate promotional codes for an app or add-on that you have published in the Microsoft Store.
 title: 홍보 코드 생성
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fe89f65ff4f3278b0ba88ef4c5ca9d22bc67817
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555668"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719581"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 

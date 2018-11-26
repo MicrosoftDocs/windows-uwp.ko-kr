@@ -1,18 +1,16 @@
 ---
-author: daneuber
 title: 컴퍼지션 조명
 description: 3D 동적 조명 응용 프로그램에 추가 하는 컴퍼지션 조명 Api는 사용할 수 있습니다.
-ms.author: jimwalk
 ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c5c7bfcb06eb673b0516cef7882685ebd19ddb97
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d8c33504fcc785aa2f1fc94796e47fe097fbea96
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573077"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706723"
 ---
 # <a name="using-lights-in-windows-ui"></a>Windows UI에 광원을 사용 하 여
 

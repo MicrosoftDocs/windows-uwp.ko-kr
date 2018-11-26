@@ -1,20 +1,18 @@
 ---
-author: stevewhims
 Description: This topic defines the terms user profile language list, app manifest language list, and app runtime language list. We'll be using these terms in this topic and other topics in this feature area, so it's important to know what they mean.
 title: 사용자 프로필 언어와 앱 매니페스트 언어 이해
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
-ms.author: stwhi
 ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 2215231b21700fc17b08c2149316f9a59f8d1f04
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1443730e343bc00563142e937d534282b9b34524
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577392"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720079"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>사용자 프로필 언어와 앱 매니페스트 언어 이해
 Windows 사용자는 **설정** > **시간 및 언어** > **지역 및 언어**를 사용하여 기본 설정 표시 언어의 정렬된 목록 또는 기본 설정 표시 언어 하나를 구성할 수 있습니다. 언어에는 지역별 변수가 포함될 수 있습니다. 예를 들어 스페인에서 사용하는 스페인어, 멕시코에서 사용하는 스페인어, 미국에서 사용하는 스페인어 및 기타 스페인어를 선택할 수 있습니다.

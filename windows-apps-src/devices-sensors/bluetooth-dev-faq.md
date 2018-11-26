@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Bluetooth 개발자 FAQ
 description: 이 문서에는 UWP Bluetooth API와 관련된 FAQ가 포함되어 있습니다.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 03ee8074a64b210d33498c8de135a76900d968f0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 03b72b5722a3ece0165fc63e7ce4abc1238bc135
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553311"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718863"
 ---
 # <a name="bluetooth-developer-faq"></a>Bluetooth 개발자 FAQ
 

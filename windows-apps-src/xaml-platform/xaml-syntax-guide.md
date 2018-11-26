@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: XAML 구문 규칙에 대해 설명하고 XAML 구문에 사용 가능한 선택 사항 및 제한 사항을 나타내는 용어에 대해서 설명합니다.
 title: XAML 구문 가이드
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fe2460dfc5ab11a9168f1d1d87207d2b9490026
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579813"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693354"
 ---
 # <a name="xaml-syntax-guide"></a>XAML 구문 가이드
 

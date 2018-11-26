@@ -1,18 +1,16 @@
 ---
-author: adwilso
 Description: Windows Push Notification Services (WNS) enables third-party developers to send toast, tile, badge, and raw updates from their own cloud service. There are many ways to send the notifications depending on the needs of your application
 title: 올바른 푸시 알림 채널 유형 선택
-ms.author: mijacobs
 ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db2cf1c732669a2ae45b8a5eb427e8864446c800
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 075eaf5c02e5bddb4b87d7e4aaf931cbfde53cdd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568754"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698512"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>올바른 푸시 알림 채널 유형 선택
 

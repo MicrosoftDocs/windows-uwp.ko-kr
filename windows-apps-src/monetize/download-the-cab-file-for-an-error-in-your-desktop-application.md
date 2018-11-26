@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 데스크톱 응용 프로그램의 오류에 대한 CAB 파일을 다운로드합니다.
 title: 데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
-ms.author: mhopkins
 ms.date: 03/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
-ms.openlocfilehash: f9dcd76767662b5e40f587d7ac32ffd7d94a6053
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1e3535f18b8127ea18bca234cdcc9b695e89ebfd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582353"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712527"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램의 오류에 대한 CAB 파일 다운로드
 

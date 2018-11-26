@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Direct3D 11에 OpenGL ES 2.0 매핑
 description: 처음으로 OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요.
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e09dcb1830e62d17983f564771b4808d132179a0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581633"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712282"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Direct3D 11에 OpenGL ES 2.0 매핑
 

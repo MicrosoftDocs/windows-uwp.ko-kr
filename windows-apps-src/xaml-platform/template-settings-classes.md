@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Template settings 클래스
 title: Template settings 클래스
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2b44aaf741c188658c7a639422b0d091f8db6e3e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580371"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720429"
 ---
 # <a name="template-settings-classes"></a>Template settings 클래스
 

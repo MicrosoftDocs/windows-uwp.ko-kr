@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: Offer consumable in-app products&\#8212;items that can be purchased, used, and purchased again&\#8212;through the Store commerce platform to provide your customers with a purchase experience that is both robust and reliable.
 title: 앱에서 바로 구매 소모성 제품 사용
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
 keywords: uwp, 소모성, 추가 기능, 앱에서 바로 구매, IAP, Windows.ApplicationModel.Store
-ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c41801362a03bb8d1d5e06b3ada876014237b1f7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5588558eff3e9c9b2954f0726995765a2862c43b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564735"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712587"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>앱에서 바로 구매 소모성 제품 사용
 

@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: 가속도계 사용
 description: 가속도계를 사용하여 사용자의 동작에 응답하는 방법을 알아봅니다.
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 482092e43acd6999361640e598a44391ac3f11a5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 77ee3191bc41fca672a055a708523578390860b4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579382"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719000"
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 꼭짓점 버퍼 및 데이터 포팅
 description: 이 단계에서는 메시를 포함하는 꼭짓점 버퍼 및 셰이더가 꼭짓점을 지정된 순서로 트래버스할 수 있게 하는 인덱스 버퍼를 정의합니다.
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 꼭짓점 버퍼, 데이터, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: b32747a4e11d258f71d4e55e41b7f54bb5e99246
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558593"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712270"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>꼭짓점 버퍼 및 데이터 포팅
 

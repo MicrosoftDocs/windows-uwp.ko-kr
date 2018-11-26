@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Windows 앱 인증 키트 테스트
 description: Windows 앱 인증 키트는 다양을 한 앱은 Microsoft Store에 게시할 준비가 되었는지 확인 하는 데 도움이 되는 테스트가 포함 되어 있습니다.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 65afbaa4440a5bce43ca6d48126e6cc2b8316466
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 55c11232847e2e7aa4827da0e3816f0cc34e9bed
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577186"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720219"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 

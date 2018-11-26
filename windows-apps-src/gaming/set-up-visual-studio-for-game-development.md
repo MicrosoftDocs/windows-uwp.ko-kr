@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 게임 프로그래밍용 Visual Studio 도구
 description: Visual Studio에서 사용할 수 있는 DirectX 관련 도구 개요.
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, visual studio, 도구, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5a3938f486d52942031944b1184a711ddbc579db
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576011"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719927"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>게임 프로그래밍용 Visual Studio 도구
 
