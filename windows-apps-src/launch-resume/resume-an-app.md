@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: 앱 다시 시작 처리
 description: 시스템에서 앱을 다시 시작할 때 표시 콘텐츠를 새로 고치는 방법을 알아봅니다.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
-ms.author: twhitney
 ms.date: 07/06/2018
 ms.topic: article
 keywords: Windows 10, uwp
@@ -13,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 717c819aaa732cf8d29e0a701a1fec81485f48ac
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f424a274d3e96b58f32875620f3165ccfac82ba6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581175"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699268"
 ---
 # <a name="handle-app-resume"></a>앱 다시 시작 처리
 

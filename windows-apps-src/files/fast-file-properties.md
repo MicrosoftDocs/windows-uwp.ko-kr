@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: UWP의 파일 속성에 빠르게 액세스
 description: UWP 앱에서 사용할 라이브러리에서 파일 및 속성 목록을 효율적으로 수집합니다.
-ms.author: lahugh
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 파일, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: e2f63e848820361a64a2a96348a8e1cc2419f233
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 772abd3696850be202593c582e6338a04de38537
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578359"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702977"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>UWP의 파일 속성에 빠르게 액세스 
 

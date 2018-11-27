@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: 컴퍼지션 효과
 description: 효과 API를 통해 개발자가 UI를 렌더링하는 방식을 사용자 지정할 수 있습니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b943807f6102c80af76fecb650087f4f2e91b9c6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 75af433d80364485b0c12a9540c0d7bb471c4e28
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563762"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697346"
 ---
 # <a name="composition-effects"></a>컴퍼지션 효과
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: BasicReaderWriter의 전체 코드
 description: 일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다.
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, basicreaderwriter
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a5d644a2a141a83316575a235805fa56657bf3a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 60c2bf74de1e56004f1f705f317bc6bd1bb34b26
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558780"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696950"
 ---
 # <a name="complete-code-for-basicreaderwriter"></a>BasicReaderWriter의 전체 코드
 

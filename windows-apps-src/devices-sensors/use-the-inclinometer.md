@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: 경사계 사용
 description: 경사계를 사용하여 피치, 롤 및 요를 확인하는 방법을 알아봅니다.
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dd335d56fb2a01ed1b9255f974bcaacd47f623f5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bfd617c3c08cdcb7815010648c6036a5f39ee3ab
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565097"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703843"
 ---
 # <a name="use-the-inclinometer"></a>경사계 사용
 

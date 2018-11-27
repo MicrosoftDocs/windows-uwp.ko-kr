@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 2017년 9월 Windows 문서의 새로운 내용 - UWP 앱 개발
 description: 2017년 9월 Windows 10 개발자 설명서에 추가된 새로운 기능, 동영상 및 개발자 지침
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 1709
-ms.author: quradic
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 436b610be942b33849b6da31cf5f9353a505a700
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c3fe097be63fef790b9dcc4cedd6ee457e3c79f5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565210"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708453"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>2017년 9월 Windows 개발자 문서의 새로운 내용
 

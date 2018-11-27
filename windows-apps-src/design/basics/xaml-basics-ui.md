@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 사용자 인터페이스 만들기 자습서
 description: 이 문서는 XAML의 사용자 인터페이스 빌드 기본 사항에 대해 설명합니다.
 keywords: XAML, UWP, 시작
-ms.author: jimwalk
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d54df07cd5f2ccc32098b17fd7c656900cba978
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1bae8455f1062b3ad62aeac3807c6c58ae274a1b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571628"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700961"
 ---
 # <a name="tutorial-create-a-user-interface"></a>자습서: 사용자 인터페이스 만들기
 

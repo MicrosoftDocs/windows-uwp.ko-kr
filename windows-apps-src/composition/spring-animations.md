@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 스프링 애니메이션
 description: 자연스러운 스프링 동작 애니메이션을 사용하는 방법에 대해서 알아봅니다.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b28653fc7746075c57f862b0c885beac6d4934f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9e00aa383bcce17b7cd6b67514647c2f6137cc32
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563317"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703640"
 ---
 # <a name="spring-animations"></a>스프링 애니메이션
 

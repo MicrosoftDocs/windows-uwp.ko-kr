@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 소매 데모 (RDX) 기능을 앱 추가
 description: 소매 판매 바닥에 앱을 표시 하는 데 도움이 소매 데모 모드에 대 한 앱을 준비 합니다.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
-ms.author: joanlee
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 소매 데모 앱
 ms.localizationpriority: medium
-ms.openlocfilehash: ee0344d521b4c31449a2291517b20a09280818fc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9d6baaff5ca2af781e72c9b4643fa1ea0624e0eb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564317"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702867"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>소매 데모 (RDX) 기능을 앱 추가
 

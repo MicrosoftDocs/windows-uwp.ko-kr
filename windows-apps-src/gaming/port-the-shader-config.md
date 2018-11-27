@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 셰이더 개체 포팅
 description: OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다.
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 셰이더, direct3d, opengl
 ms.localizationpriority: medium
-ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f061d31ca779cb4c6cbe76f163e190996a6985cb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571838"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696824"
 ---
 # <a name="port-the-shader-objects"></a>셰이더 개체 포팅
 

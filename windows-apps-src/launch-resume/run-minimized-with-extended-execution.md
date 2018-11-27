@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 description: 확장 실행을 사용하여 앱이 최소화된 상태에서 계속 실행되도록 하는 방법을 알아봅니다.
 title: 확장 실행을 사용하여 앱 일시 중단 연기
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 확장 실행, 최소화, ExtendedExecutionSession, 백그라운드 작업, 응용 프로그램 수명 주기, 잠금 화면
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
-ms.openlocfilehash: 30e05259306a222a3cb18268aeb58a8380f6d4d2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8cc67a7593a340ada8f807fc0fb0c1b846c6f05b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566418"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699354"
 ---
 # <a name="postpone-app-suspension-with-extended-execution"></a>확장 실행을 사용하여 앱 일시 중단 연기
 

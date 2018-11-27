@@ -1,20 +1,18 @@
 ---
-author: andrewleader
 Description: Special tile templates are unique templates that are either animated, or just allow you to do things that aren't possible with adaptive tiles.
 title: 특수 타일 템플릿
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 74b915e4d698503a13c5066348f4e46ebd3125c8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566652"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698142"
 ---
 # <a name="special-tile-templates"></a>특수 타일 템플릿
  

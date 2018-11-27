@@ -1,9 +1,7 @@
 ---
-author: QuinnRadich
 description: 사용자가 콘텐츠 및 서비스에 대한 만족도를 반영하는 평점을 확인 및 설정할 수 있도록 해줍니다.
 title: 평점 컨트롤
 template: detail.hbs
-ms.author: quradic
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,12 +10,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 45cea3986f149714b1f0f14743bdecd83f8b6782
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c1da476f55d1b57048eae8a0027a91c4e6ab8b57
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575555"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705715"
 ---
 # <a name="rating-control"></a>평점 컨트롤
 

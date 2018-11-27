@@ -1,9 +1,7 @@
 ---
-author: jwmsft
 description: XAML 연결된 속성을 종속성 속성으로 구현하는 방법 및 연결된 속성을 XAML에서 사용 가능하게 하는 데 필요한 접근자 규칙을 정의하는 방법에 대해 설명합니다.
 title: 사용자 지정 연결된 속성
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
-ms.author: jimwalk
 ms.date: 07/18/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: de2d319f536b2c9d25d53e0b1ec2886831c66e12
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a92e1ad1c5bfb3960950b976da46ca16490d097e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573207"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702727"
 ---
 # <a name="custom-attached-properties"></a>사용자 지정 연결된 속성
 

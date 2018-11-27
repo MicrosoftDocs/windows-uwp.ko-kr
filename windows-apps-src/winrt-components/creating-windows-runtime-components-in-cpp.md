@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: C++로 Windows 런타임 구성 요소 만들기
 description: 이 항목에서는 C +를 사용 하는 방법을 보여 줍니다. + C#, Visual Basic, c + + 또는 Javascript를 사용 하 여 빌드한 유니버설 Windows 앱에서 호출할 수 있는 구성 요소는 Windows 런타임 구성 요소를 만드는 CX 합니다.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
-ms.author: misatran
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e6a7e7a29d766cc226b3e4afd4376a6c5c9ec42a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4dacca1cff943001c03f9f432404b6dab2fb5b94
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553963"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701622"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>C++/CX로 Windows 런타임 구성 요소 만들기
 > [!NOTE]

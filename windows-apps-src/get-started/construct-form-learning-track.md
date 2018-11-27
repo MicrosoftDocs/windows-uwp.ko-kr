@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 title: 학습 트랙 - 양식 생성 및 구성
 description: 앱에서 강력한 양식을 만들기 위해 필요한 것에 대해 알아봅니다.
-ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c624a3c666dcc405ee2375738c605ae147b7d9d3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0cb42552139fd706dd9e87d61c24f8fe2c2d51f7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575235"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697083"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 

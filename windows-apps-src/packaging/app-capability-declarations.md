@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: 앱 접근 권한 값 선언
 description: '사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 패키지 매니페스트에서 접근 권한 값을 선언해야 합니다.'
-ms.author: misatran
 ms.date: 09/20/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb692aaada7296f230e1243a3ce515b471f1ba98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ca3a56d97a77ef5a377d8d7b0c22bb94e4ab34a9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582183"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698059"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 

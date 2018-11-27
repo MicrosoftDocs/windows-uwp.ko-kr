@@ -4,17 +4,15 @@ description: 전역 조명 수식의 확산 및 반사 조명 구성 요소에�
 ms.assetid: F61D4ACB-09AB-4087-9E2D-224E472D6196
 keywords:
 - 감쇠 및 스포트라이트 계수
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 65b9f6700ddd11c41193820a5247a90c2382c98b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8126ac8fa738a2b8a9680d215179fe23f77c5d44
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581719"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701906"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>감쇠 및 스포트라이트 계수
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 깊이 버퍼 장치 리소스 만들기
 description: 섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 장치 리소스를 만드는 방법을 알아봅니다.
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, direct3d, 깊이 버퍼
 ms.localizationpriority: medium
-ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f5ce1ec522a194111e175e41f82c4275cda4fbf5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579461"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702451"
 ---
 # <a name="create-depth-buffer-device-resources"></a>깊이 버퍼 장치 리소스 만들기
 

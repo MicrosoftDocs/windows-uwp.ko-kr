@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 패키지 출시 정보를 받습니다.
 title: 패키지 제출에 대한 출시 정보 가져오기
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 플라이트 제출
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 97051f3953b215dcf2ae2a2af00b55b435b726c8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4e60ecfccecda850a5c83e5840626e1b789a068d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572115"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697566"
 ---
 # <a name="get-rollout-info-for-a-flight-submission"></a>패키지 제출에 대한 출시 정보 가져오기
 

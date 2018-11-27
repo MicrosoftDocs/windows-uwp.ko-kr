@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: 공용 컨트롤 시작
 title: 공용 컨트롤 시작
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db2b4a74b5b40060779dd82764dcf2ed2799b285
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 05cf78d7dec260b990d2ce71662e3db6eb07d07f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578864"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703936"
 ---
 # <a name="getting-started-common-controls"></a>시작: 공용 컨트롤
 

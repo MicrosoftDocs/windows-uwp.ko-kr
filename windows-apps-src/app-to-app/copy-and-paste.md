@@ -2,18 +2,16 @@
 description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다.
 title: 복사 및 붙여넣기
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f730d01ba019a220658bc94be5f0a18da6b217f5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ba498a9bc6541f45f01e74b1ea90f4f9a1bfde90
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569780"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701239"
 ---
 # <a name="copy-and-paste"></a>복사 및 붙여넣기
 

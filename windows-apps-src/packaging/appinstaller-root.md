@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: 앱 설치 관리자를 사용하여 UWP 앱 설치
 description: 이 섹션에는 앱 설치 관리자에 관한 문서 및 앱 설치 관리자의 기능을 사용하는 방법에 대한 링크가 포함되어 있습니다.
-ms.author: lahugh
 ms.date: 06/05/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: f3da1f4f393eea1362b6e59d2ad7e9a2a97bc33b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ca72f9570c5ecef4a93b03f297ecb1d5064c5bef
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565957"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703247"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a>앱 설치 관리자를 사용하여 UWP 앱 설치
 

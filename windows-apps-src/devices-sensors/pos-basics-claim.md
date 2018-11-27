@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: PointOfService 장치 클레임 및 모델을 사용 하도록 설정
 description: PointOfService 클레임에 알아보고 모델을 사용 하도록 설정
-ms.author: jken
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: df9c4764b8f7d752a132d6759054660f481cce55
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582313"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698967"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>서비스 지점 장치 클레임 및 모델을 사용 하도록 설정
 

@@ -1,18 +1,16 @@
 ---
-author: PatrickFarley
 title: 사용자 활동 모범 사례
 description: 이 가이드를 만들고 사용자 활동을 업데이트 하기 위한 권장 되는 방법을 설명 합니다.
 keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의 마지막 종료 지점부터 시작, cortana 내 마지막 종료 지점부터 시작, 프로젝트 로마
-ms.author: pafarley
 ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 199499e8737d638301f32d01a00ac603e3f5348f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 33103ebfc7ee3e26a11de781af7981bce78b349c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577674"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699321"
 ---
 # <a name="user-activities-best-practices"></a>사용자 활동 모범 사례
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 앱 다시 시작 방법(DirectX 및 C++)
 description: 이 항목에서는 시스템이 UWP(유니버설 Windows 플랫폼) DirectX 앱을 다시 시작할 때 중요한 응용 프로그램 데이터를 복원하는 방법을 보여 줍니다.
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 다시 시작, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 1149bebfd837e3d4051b5e0fca10aac248d909c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f0aa60061ae9fc14392bfe4beb0693ba50fda0df
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576527"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702584"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>앱 다시 시작 방법(DirectX 및 C++)
 

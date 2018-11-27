@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 게임의 수익 창출
 description: Windows 10에서 UWP(유니버설 Windows 플랫폼) 게임에 대한 배너 광고, 중간 동영상 광고 및 앱에서 바로 구매를 구현합니다.
 ms.assetid: 79f4e177-d8e7-45d3-8a78-31d4c2fe298a
-ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 수익 창출
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d31aac20454536c6c25d0a8e2dc2f768ea9aabc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561766"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697123"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 

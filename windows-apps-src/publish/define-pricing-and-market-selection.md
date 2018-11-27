@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Microsoft Store reaches customers in over 200 countries and regions around the world.
 title: 시장 선택 정의
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
-ms.openlocfilehash: ef7136868fc9c212640c142db2751bd6e9a0b179
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5f99ca0db7b6e1f46c45ac8713c83ad34c02078f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564284"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699387"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
@@ -368,7 +366,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>Taiwan *</td>
+    <td>대만*</td>
     <td>타지키스탄</td>
   </tr>
   <tr>

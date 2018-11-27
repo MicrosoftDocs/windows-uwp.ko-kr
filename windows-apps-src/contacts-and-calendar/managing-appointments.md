@@ -1,19 +1,17 @@
 ---
-author: normesta
 description: Windows.ApplicationModel.Appointments 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다.
 title: 약속 관리
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
-ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 약속, 일정
 ms.localizationpriority: medium
-ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 805383d243008f839b04c98906edd3beb52d581a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562128"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706148"
 ---
 # <a name="manage-appointments"></a>약속 관리
 

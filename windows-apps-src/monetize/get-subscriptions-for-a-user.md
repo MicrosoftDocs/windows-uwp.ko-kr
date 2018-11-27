@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 94B5B2E9-BAEE-4B7F-BAF1-DA4D491427D7
 description: Microsoft Store 구매 API에서 이 메서드를 사용하여 특정 사용자에게 사용 권한이 부여된 구독을 가져옵니다.
 title: 사용자의 구독 가져오기
-ms.author: mhopkins
 ms.date: 07/10/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: b8fe6262ca6ef52ca94ade2c56b18f5e71951f07
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b568531ce0807ebc5be0d27a78b94547e8473ae6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579451"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698192"
 ---
 # <a name="get-subscriptions-for-a-user"></a>사용자의 구독 가져오기
 

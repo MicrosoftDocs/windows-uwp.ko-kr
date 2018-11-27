@@ -1,10 +1,8 @@
 ---
-author: mijacobs
 description: 사람의 아바타 이미지가 있으면 이를 표시하고, 없으면 사람의 이니셜이나 일반 글자 모양을 표시합니다.
 title: 인물 사진 컨트롤
 template: detail.hbs
 label: Parallax View
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,12 +11,12 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: eadc0763e7f99930bee3d2a388a881c52e89f609
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 43c570fc3e0187fbf6e559ad794a2a63e608a252
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559586"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697906"
 ---
 # <a name="person-picture-control"></a>인물 사진 컨트롤
 

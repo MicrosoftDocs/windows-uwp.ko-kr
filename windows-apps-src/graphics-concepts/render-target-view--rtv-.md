@@ -4,17 +4,15 @@ description: 렌더링 대상을 사용하면 화면에 렌더링될 백 버퍼�
 ms.assetid: 9BA8FC35-9A51-438D-BFEA-02E254D6C93E
 keywords:
 - RTV(렌더링 대상 뷰)
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 168c02be356d140abdbca20c5fc4301009da7944
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b6ab15d94267baa0606cfbcff10eae471ce3dad5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563116"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704291"
 ---
 # <a name="render-target-view-rtv"></a>RTV(렌더링 대상 뷰)
 

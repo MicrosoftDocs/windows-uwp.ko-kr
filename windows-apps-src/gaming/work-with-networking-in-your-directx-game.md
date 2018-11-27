@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 게임의 네트워킹
 description: 네트워킹 기능을 개발하고 DirectX 게임에 통합하는 방법을 알아봅니다.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 네트워킹, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: cc30a66db3fb01edebf4705ecb2e85ea4dbb94d6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2697564e703cfe290e33f204125346f3e8bad8ac
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579214"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702013"
 ---
 # <a name="networking-for-games"></a>게임의 네트워킹
 

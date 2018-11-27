@@ -1,19 +1,17 @@
 ---
-author: Mtoepke
 title: Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 description: Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제를 나열합니다.
-ms.author: mstahl
 ms.date: 03/29/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 798192dd898af5a7107087b4a9708e1a1d0cb9b5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 55068ef3f0a0a0d01c61746bde02ddb7aa4ef885
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566994"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701661"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 

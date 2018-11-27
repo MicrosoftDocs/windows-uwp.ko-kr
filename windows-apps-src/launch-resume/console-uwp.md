@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: 유니버설 Windows 플랫폼 콘솔 앱 만들기
 description: 이 항목에서는 콘솔 창에서 실행되는 UWP 앱을 작성하는 방법을 설명합니다.
 keywords: 콘솔 uwp
-ms.author: twhitney
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e5923176f5f9fff1a6e4f30a7ba2419e99c074b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 111ef4d5e8830485a5de3b44d69826df256d1c4d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564053"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699192"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>유니버설 Windows 플랫폼 콘솔 앱 만들기
 

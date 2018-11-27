@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: OpenGL ES 2.0 Direct3D 11 참조
 description: OpenGL ES 2.0에서 Direct3D 11로 포팅할 때 API 매핑 및 간단한 코드 샘플을 보려면 다음 참조 항목을 사용하세요.
 ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 14259fb6949eaa100d51fbdbda6f96bd07a4fa80
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e3b86054048aaa6aa80f37f66ebc57ab9b8e6b50
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563943"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707759"
 ---
 # <a name="opengl-es-20-to-direct3d-11-reference"></a>OpenGL ES 2.0에서 Direct3D 11로 포팅 시 참조 항목
 

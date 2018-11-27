@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: OpenGL ES 2.0에서 Direct3D 11로 포팅
 description: OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으로 포팅하는 방법에 대한 문서, 개요 및 설명이 포함되어 있습니다.
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11, 포트, 그래픽
 ms.localizationpriority: medium
-ms.openlocfilehash: 6421f5a5a71828d5234a11bab9e442a5accecda5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9af5e42a27e21b8a4300edc4b8171f7abc64bac7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581038"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696874"
 ---
 # <a name="port-from-opengl-es-20-to-direct3d-11"></a>OpenGL ES 2.0에서 Direct3D 11로 포팅
 

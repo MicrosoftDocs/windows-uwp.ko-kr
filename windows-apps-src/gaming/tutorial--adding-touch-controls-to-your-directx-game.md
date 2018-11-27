@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 게임용 터치 컨트롤
 description: DirectX를 사용하는 UWP(유니버설 Windows 플랫폼) C++ 게임에 기본 터치 컨트롤을 추가하는 방법을 알아봅니다.
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 터치, 컨트롤, directx, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: 53c4a91f3ef20c11783796c3ca362f74b3f39adb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562389"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697013"
 ---
 # <a name="touch-controls-for-games"></a>게임용 터치 컨트롤
 

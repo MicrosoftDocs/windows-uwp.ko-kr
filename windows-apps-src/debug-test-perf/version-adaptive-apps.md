@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 버전 적응 앱
 description: 이전 버전과 호환성을 유지하면서 새로운 API를 활용하는 방법을 알아봅니다.
-ms.author: jimwalk
 ms.date: 09/17/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b96fafe380c08c74c4e411c7d559cc961c6da1ed
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8bbe7875fcd35003b1ec35b02da0f1a86a54ef31
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568904"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701983"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 앱: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 

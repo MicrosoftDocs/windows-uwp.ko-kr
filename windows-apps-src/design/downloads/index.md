@@ -2,19 +2,17 @@
 description: UWP 앱 사용자 인터페이스 레이아웃 및 컨트롤 디자인을 위한 최신 다운로드 및 도구를 가져옵니다.
 keywords: UWP 앱 레이아웃, UI, 사용자 인터페이스 디자인, 다운로드, UWP 도구
 title: UWP 앱에 대한 디자인 도구 키트 및 샘플
-author: mijacobs
-ms.author: mijacobs
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0fa34fe60296db7f2df61526409042e77f0c3469
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8ffcbbcc73db049498eb09ea60061f93cd7b09f2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562612"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704995"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  

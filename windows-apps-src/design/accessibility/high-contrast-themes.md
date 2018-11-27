@@ -1,20 +1,18 @@
 ---
-author: Xansky
 description: 고대비 테마가 활성 상태일 때 UWP(유니버설 Windows 플랫폼) 앱을 사용하는 데 필요한 단계에 대해 설명합니다.
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: 고대비 테마
 template: detail.hbs
-ms.author: mhopkins
 ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cf8b634cfc7ba66cde107150b54ecec76b2861d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e4e8d5f49d10219a06a36fdfbe7ec3abe236109a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577694"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700471"
 ---
 # <a name="high-contrast-themes"></a>고대비 테마  
 

@@ -1,5 +1,4 @@
 ---
-author: jken
 Description: Design your app so that it looks good and functions well in Mixed Reality.
 title: 혼합 현실을 위한 디자인
 ms.assetid: ''
@@ -7,7 +6,6 @@ label: Designing for Mixed Reality
 template: detail.hbs
 isNew: true
 keywords: Mixed Reality, Hololens, 증강 현실, 응시, 음성, 컨트롤러
-ms.author: jken
 ms.date: 2/5/2018
 ms.topic: article
 pm-contact: chigy
@@ -15,12 +13,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: e6bba6c22b7f0055a93bfd1826bc3a2acc0f2164
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e6aebac45dc32933f55d917c0b1153cba952d819
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553780"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700583"
 ---
 # <a name="designing-for-mixed-reality"></a>혼합 현실을 위한 디자인
 

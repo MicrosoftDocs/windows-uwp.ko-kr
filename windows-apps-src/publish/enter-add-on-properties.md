@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
 title: 추가 기능 속성 입력
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
-ms.openlocfilehash: fa0559c79b758373347427c0aa88b351c0fbddf0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 17025282aec18da01f14431996a3942ffdd90312
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570629"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699513"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 

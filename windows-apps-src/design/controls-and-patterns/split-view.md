@@ -1,11 +1,9 @@
 ---
-author: QuinnRadich
 title: 분할 보기
 ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
 description: 분할 보기 컨트롤에는 확장/축소 가능한 창 및 콘텐츠 영역이 있습니다.
 label: Split view
 template: detail.hbs
-ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c5efe23955d1064eae639bf6e9ddd0a3a83dc315
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 826b408135b85b1903ce345c480015797b814255
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560624"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698099"
 ---
 # <a name="split-view-control"></a>분할 보기 컨트롤
 

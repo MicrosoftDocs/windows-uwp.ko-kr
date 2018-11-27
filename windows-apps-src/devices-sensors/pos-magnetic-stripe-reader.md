@@ -1,18 +1,16 @@
 ---
-author: eliotcowley
 title: 자기 띠 판독기
 description: UWP 설명서 자기 띠 판독기에 대 한 인덱스 항목입니다.
-ms.author: elcowle
 ms.date: 10/04/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스, pos, 자기 띠 판독기의 지점
 ms.localizationpriority: medium
-ms.openlocfilehash: 11653c10310726c79de9deef17a570207045ec4a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ed1fb5b393f96a793ff90ec0df354e04de270ccf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577206"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704384"
 ---
 # <a name="magnetic-stripe-reader"></a>자기 띠 판독기
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출을 업데이트합니다.
 title: 추가 기능 제출 업데이트
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 업데이트, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b363132924af5fca976fda814b185155292385e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fd0bb8df9b9fc36216da72e4ad01ebd2e650ad1a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566438"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698029"
 ---
 # <a name="update-an-add-on-submission"></a>추가 기능 제출 업데이트
 

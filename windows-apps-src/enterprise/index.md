@@ -2,18 +2,16 @@
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
 description: 이 로드맵은 Windows10 및 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 주요 엔터프라이즈 기능 개요를 제공합니다.
 title: Enterprise
-author: awkoren
-ms.author: alkoren
 ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ffdc88449c025ba0a590ccc2bbd3f0c05346630f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b3106df6d8a1fd85b92aa06dd5c5cf7a7f79ded5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579078"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696709"
 ---
 # <a name="enterprise"></a>Enterprise
 

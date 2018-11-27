@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 파일 작업
 description: 유니버설 Windows 플랫폼에서 파일을 작업하는 방법을 알아보세요.
-ms.author: twhitney
 ms.date: 05/01/2018
 ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 파일, 파일 io, 파일, 파일 읽기, 파일 쓰기, 파일 만들기, 텍스트 쓰기, 텍스트 읽기
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 68240e5b3d2fb476b731853e6a7d020ecd9e2887
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556955"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707874"
 ---
 # <a name="work-with-files"></a>파일 작업
 

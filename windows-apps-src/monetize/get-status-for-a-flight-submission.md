@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C78176D6-47BB-4C63-92F8-426719A70F04
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출 상태를 가져옵니다.
 title: 패키지 플라이트 제출 상태 가져오기
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 상태
 ms.localizationpriority: medium
-ms.openlocfilehash: 4378df5333e29dfe570ff50efd37b0361b9a6ca9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1cd898c51d694d2dd60185623126c7f566af0f55
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560604"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697396"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a>패키지 플라이트 제출 상태 가져오기
 

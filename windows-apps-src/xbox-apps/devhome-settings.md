@@ -1,20 +1,18 @@
 ---
-author: v-angraf
 ms.assetid: ec3945e7-cfb1-b91a-7ae6-e767a7227f8a
 title: 설정 페이지 (개발자 홈)
 description: Xbox one 개발자 홈 앱의 설정 페이지에 대 한 정보를 제공합니다.
-ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
-ms.openlocfilehash: ec27464c2bcece46e4a658cc59ac8ef0b7f390f7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558074"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698868"
 ---
 # <a name="settings-page-dev-home"></a>설정 페이지 (개발자 홈)
    

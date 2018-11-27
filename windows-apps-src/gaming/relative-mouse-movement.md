@@ -1,19 +1,17 @@
 ---
-author: scottmill
 title: 상대 마우스 이동
 description: 시스템 커서를 사용하지 않고 절대 화면 좌표를 반환하지 않는 상대 마우스 컨트롤을 사용하여 게임에서 마우스 이동 사이의 픽셀 델타를 추적합니다.
-ms.author: scotmi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 마우스, 입력
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
-ms.openlocfilehash: adf3b629095f633521b99133ce1961e5c8408ef5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 71985841e6c0fa764201c179fb12408581823e5e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575100"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697646"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>상대 마우스 이동 및 CoreWindow
 

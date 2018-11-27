@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: DirectX 프로그래밍의 기본 사항
 description: DirectX 프로그래밍의 기본 사항.
 ms.assetid: 05a1bc59-f32e-44a0-8902-94cf1e099b1b
-ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 로드, 래스터화, 메시, 비트맵, 2D, 3D
 ms.localizationpriority: medium
-ms.openlocfilehash: 7947f1e0684bc76c95fe8099f5ef123f2a32566e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: afd08d62182bd0980f43ce1c4578c1181f8a6d2f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578874"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696834"
 ---
 # <a name="fundamentals-of-directx-programming"></a>DirectX 프로그래밍의 기본 사항
 

@@ -2,18 +2,16 @@
 title: 인증서 소개
 description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서의 인증서 사용에 대해 설명합니다.
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 8caae5110b137245fd15fcc6e1b3cb61025d72ef
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2ee96628fd90ec9eea998abf312c5da11bff3826
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578602"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704021"
 ---
 # <a name="intro-to-certificates"></a>인증서 소개
 

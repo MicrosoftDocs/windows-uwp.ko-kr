@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 2017년 12월 Windows 문서의 새로운 내용 - UWP 앱 개발
 description: 2017년 12월 Windows 10 개발자 설명서에 추가된 새로운 기능, 동영상 및 개발자 지침
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 12월
-ms.author: quradic
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 394dbdb5ae9065aa9424a470ad2e9295ddd63c8d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c9b4c834c646aed7953dc2b0f992dea579d8b9fd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560904"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701038"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 

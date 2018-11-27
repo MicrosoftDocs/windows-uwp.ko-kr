@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Learn how your app's packages are made available to your customers, and how to manage specific package scenarios.
 title: 앱 패키지 관리 지침
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e625522b0e9fd03fda49eb28bbedb20c00c15634
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0548ae9f9b3b33808cd7420eb542bcbac6a1a431
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573678"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704793"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 

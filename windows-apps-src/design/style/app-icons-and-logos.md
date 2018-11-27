@@ -1,9 +1,7 @@
 ---
-author: mijacobs
 Description: How to create app icons/logos that represent your app in the Start menu, app tiles, the taskbar, the Microsoft Store, and more.
 title: 앱 아이콘 및 로고
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -11,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 95452a11f2c8ee15d54a4717701bc2b63e5c2c34
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7083152efb4cf871f8abebf6d2970d2da4ba06e9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574343"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698132"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 

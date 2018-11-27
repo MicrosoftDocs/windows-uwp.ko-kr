@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: HoloLens용 디바이스 포털
 description: HoloLens용 Windows Device Portal을 사용하여 HoloLens 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다.
-ms.author: pafarley
 ms.date: 09/26/2017
 ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 017a3061fbb72c45bd46ed4e1f134c022284ecfe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2607b40e53ab4a6fa1dbca389348d2de9108e4b0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564343"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699927"
 ---
 # <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 

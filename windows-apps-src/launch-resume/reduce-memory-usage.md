@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 ms.assetid: 3a3ea86e-fa47-46ee-9e2e-f59644c0d1db
 description: 이 문서에서는 앱이 백그라운드로 이동할 때 메모리를 줄이는 방법을 보여 줍니다.
 title: 앱이 백그라운드 상태로 이동할 때 메모리 사용량 줄이기
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eef1edc4e5c725756cdef788bf555f706621741d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c9716483d7df51c2c02d2f9c88e5a4cec05437cc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579803"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700391"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>앱이 백그라운드로 이동할 때 메모리 회수
 

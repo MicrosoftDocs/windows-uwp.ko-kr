@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: 웹 설치에 대해 AWS에서 UWP 앱 패키지 호스트
 description: 앱 설치 관리자 앱을 통해 앱 설치의 유효성을 검사 하도록 AWS 웹 서버를 설정 하는 것에 대 한 자습서
-ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, Windows 10, UWP, 앱 설치 관리자, AppInstaller, 사이드 로드, 관련 AWS 설정, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: f24abac93e2444a3c9f454c8883902e5db4d31be
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 53fe01a1c1a825377e886e042b4eef3868cbf5eb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579088"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696200"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>웹 설치에 대해 AWS에서 UWP 앱 패키지 호스트
 

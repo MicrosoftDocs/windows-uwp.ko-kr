@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출에 대한 데이터를 가져옵니다.
 title: 추가 기능 제출 가져오기
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: ad6381562b37b1a759a575e070edd6b1bf63402d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a87f0e694434774db215f3f5323588f94ec0465b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565839"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697576"
 ---
 # <a name="get-an-add-on-submission"></a>추가 기능 제출 가져오기
 

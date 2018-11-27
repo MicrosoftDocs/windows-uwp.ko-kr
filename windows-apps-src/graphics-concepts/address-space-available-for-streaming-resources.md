@@ -4,17 +4,15 @@ description: 이 섹션에서는 스트리밍 리소스에 사용할 수 있는 
 ms.assetid: 145EB4A3-3910-4126-BC7E-A4CF53E2A098
 keywords:
 - 스트리밍 리소스에 사용할 수 있는 주소 공간
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b6e3f8080d33f9aadf22d5d5b1ebdd9a4739e16
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 35a591d805870df97ee03169b20e664316e094a7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576061"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697536"
 ---
 # <a name="address-space-available-for-streaming-resources"></a>스트리밍 리소스에 사용할 수 있는 주소 공간
 

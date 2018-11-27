@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 자연스러운 동작 애니메이션
 description: 자연스러운 동작 애니메이션과 앱 UI에서 애니메이션을 사용하는 방법에 대해서 알아봅니다.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 537e722917f00d590428dd2b5ee2d24e023e52b6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7fde0cbf5335b4f5c3da2f21f692fc2c23455776
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580978"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697716"
 ---
 # <a name="natural-motion-animations"></a>자연스러운 동작 애니메이션
 

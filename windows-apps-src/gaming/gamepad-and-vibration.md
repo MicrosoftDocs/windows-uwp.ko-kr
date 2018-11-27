@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: 게임 패드 및 진동
 description: Windows.Gaming.Input 게임 패드 API를 사용하여 진동 및 임펄스 명령을 검색하고 읽고 게임 패드로 전송하세요.
 ms.assetid: BB03BB8E-255F-4AE8-AC43-1E519CA860FE
-ms.author: wdg-dev-content
 ms.date: 09/06/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 패드, 진동
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ea8afb0a9e66ccb4ea603bd78dc5030ca18babe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562095"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702907"
 ---
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 

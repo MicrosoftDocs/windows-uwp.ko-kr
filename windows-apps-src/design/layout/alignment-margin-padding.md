@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 Description: Use alignment, margin, and padding properties to arrange the layout of elements on a page.
 title: 레이아웃 맞춤, 여백 및 안쪽 여백
-ms.author: quradic
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ea8a02835a90235bc17efe60ee6e4fd214ffffa7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eb8d430619ad05cea1212b48850f52f27056c658
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574426"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704251"
 ---
 # <a name="alignment-margin-padding"></a>맞춤, 여백, 안쪽 여백
 

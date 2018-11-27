@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 렌더링 소개
 description: 그래픽을 표시할 렌더링 파이프라인을 조립하는 방법을 알아봅니다. 렌더링 소개
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567585"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702501"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임워크 I: 렌더링 소개
 

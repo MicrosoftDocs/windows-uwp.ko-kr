@@ -1,8 +1,6 @@
 ---
-author: daneuber
 title: XAML 조명
 description: 조명 개체는 SceneLightingEffect와 함께 동적 조명 및 반사를 시뮬레이트하기 위해 사용됩니다.
-ms.author: jimwalk
 ms.date: 06/28/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,12 +10,12 @@ dev_langs:
 - vb
 - cppcx
 - cppwinrt
-ms.openlocfilehash: fae2a222ae20c64e8e8adb2abfa973d62216239e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7d66eaa77f86deffd59ebc81360ccb8183afd7d6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580248"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700501"
 ---
 # <a name="xaml-lighting"></a>XAML 조명
 

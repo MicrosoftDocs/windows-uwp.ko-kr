@@ -4,17 +4,15 @@ description: TS(분할기) 단계에서는 기하 도형 패치를 나타내는 
 ms.assetid: 2F006F3D-5A04-4B3F-8BC7-55567EFCFA6C
 keywords:
 - TS(분할기) 단계
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d57c60e8cba9be75e936c55800bac93f8df3e30
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7768d63405281d3155affc6c9f09c62568761718
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562062"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702033"
 ---
 # <a name="tessellator-ts-stage"></a>TS(분할기) 단계
 

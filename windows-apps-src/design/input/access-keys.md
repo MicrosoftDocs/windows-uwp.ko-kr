@@ -1,11 +1,9 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Learn how to improve both the usability and the accessibility of your UWP app by providing an intuitive way for users to quickly navigate and interact with an app's visible UI through a keyboard instead of a pointer device (such as touch or mouse).
 title: 선택키 설계 지침
 label: Access keys design guidelines
 keywords: 키보드, 선택키, 키팁, 키 팁, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 조작
 template: detail.hbs
-ms.author: kbridge
 ms.date: 06/08/2018
 ms.topic: article
 pm-contact: miguelrb
@@ -13,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 844e5d8e9442192d75f2aac07a7a2f82dd0196f3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bd71e4715b26f9e06326690d3642b4d19e23d292
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568192"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699953"
 ---
 # <a name="access-keys"></a>선택키
 

@@ -1,19 +1,17 @@
 ---
-author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: 엔터프라이즈 공유 저장소
 description: 엔터프라이즈 공유 저장소는 LOB(기간 업무) 앱의 로컬 데이터 위치를 정의하여 데이터를 공유합니다.
-ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5236767d4c02d873106c7b1799c8428d84cccd53
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 006507d4665f5578310b8d3e31fb8f7fba4117a2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553447"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696993"
 ---
 # <a name="enterprise-shared-storage"></a>엔터프라이즈 공유 저장소
 

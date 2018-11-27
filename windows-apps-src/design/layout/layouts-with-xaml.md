@@ -1,18 +1,16 @@
 ---
-author: muhsinking
 Description: XAML gives you a flexible layout system to create a responsive UI.
 title: XAML을 사용한 반응형 레이아웃
-ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c75687cdc745468deec41a686d0d8b9d2f0ba9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 82a528b3ec98f56e1079e11ec1123d86de15d50f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565322"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701648"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 

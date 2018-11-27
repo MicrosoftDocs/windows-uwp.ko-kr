@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
 description: 이 문서에는 오디오 디바이스와 관련된 DeviceInformation 속성이 나열되어 있습니다.
 title: 오디오 장치 정보 속성
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d612a259785c8ba29ab975ba910c4f3e7df61d6f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 443bcc3c0280aca85de31d8c9f3704302432cb76
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555025"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701485"
 ---
 # <a name="audio-device-information-properties"></a>오디오 장치 정보 속성
 

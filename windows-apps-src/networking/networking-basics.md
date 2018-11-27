@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.
 title: 네트워킹 기본 사항
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
-ms.author: stwhi
 ms.date: 06/01/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 50ac9fcf984fa6c4ebad7e480ebfc2d002256e26
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 173164106e068e3fa081c8d7ddf7838d5b3d18db
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582243"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697766"
 ---
 # <a name="networking-basics"></a>네트워킹 기본 사항
 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.

@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Unity 및 UWP에서 누락된 .NET API
 description: Unity에서 UWP 게임을 빌드할 때 누락된 .NET API와 일반적인 문제에 대한 해결 방법에 대해 알아보세요.
 ms.assetid: 28A8B061-5AE8-4CDA-B4AB-2EF0151E57C1
-ms.author: elcowle
 ms.date: 2/21/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, .net, unity
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b795ed47249eee1f9dc21b195d46f450997019e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 323d710a18ab738f89ed691cd56309ae827a7a14
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562562"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708353"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Unity 및 UWP에서 누락된 .NET API
 

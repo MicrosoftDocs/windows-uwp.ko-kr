@@ -2,18 +2,16 @@
 title: 데이터 인코드 및 디코드
 description: 이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 base64 및 16진수 데이터를 인코딩 및 디코딩하는 방법을 보여 줍니다.
 ms.assetid: 2CC23863-E840-48F4-B087-0479045743AC
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 76c43f5b72b47c9ce88a0ee12223ff099127ff8f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3c4e694dca3c84c7e94e513d8bb10a3f405bbc86
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570639"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704925"
 ---
 # <a name="encode-and-decode-data"></a>데이터 인코드 및 디코드
 

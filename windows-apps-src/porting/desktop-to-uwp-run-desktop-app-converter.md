@@ -1,20 +1,18 @@
 ---
-author: normesta
 Description: Run the Desktop Converter App to package a Windows desktop application (like Win32, WPF, and Windows Forms).
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop App Converter를 사용해 앱을 패키지로 만들기(데스크톱 브리지)
-ms.author: normesta
 ms.date: 08/21/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fc8c8e68e4b20498f84b4d20d84eca0dbfa7237
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ca618dde24c1eed254d89c2d84734b7e3aec6306
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565895"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699619"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Desktop App Converter를 사용 하 여 데스크톱 응용 프로그램 패키지
 

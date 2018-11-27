@@ -1,9 +1,7 @@
 ---
-author: jwmsft
 description: XAML의 연결된 속성에 대한 개념을 설명하고 몇 가지 예를 제공합니다.
 title: 연결된 속성 개요
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,12 +10,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: a0950bfc9d90ba893be8ca52cc295b38b142798e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 265a99e7abbb9b2f4c3341f90aecc3661ce3ffbf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555579"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704031"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 

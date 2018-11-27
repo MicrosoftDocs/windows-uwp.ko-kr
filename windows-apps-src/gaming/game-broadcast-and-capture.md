@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 title: 게임 브로드캐스트 및 캡처
 description: 이 섹션은 UWP 앱에 게임 캡처 및 브로드캐스트 기능을 추가하는 것에 대한 정보를 제공합니다.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: ad42b62d627dd4a506fc4ff451f6365d4133fd70
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 03b3c48fedcc99d2d667712bfdd51ad1d75f7fbd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555688"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703037"
 ---
 # <a name="game-broadcast-and-capture"></a>게임 브로드캐스트 및 캡처
 

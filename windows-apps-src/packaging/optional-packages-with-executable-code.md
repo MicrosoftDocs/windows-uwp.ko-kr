@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: 실행 가능한 코드가 있는 선택적 패키지
 description: Visual Studio를 사용하여 실행 코드로 선택적 패키지를 사용하는 방법을 알아보세요.
-ms.author: lahugh
 ms.date: 9/30/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: f38604ea7fc25038bdd4b07b952e4dbab151bf56
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 795155ab38be11987d978d8c3843a73b7d359277
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567913"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697416"
 ---
 # <a name="optional-packages-with-executable-code"></a>실행 가능한 코드가 있는 선택적 패키지
  

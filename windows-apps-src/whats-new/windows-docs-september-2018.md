@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 2018 년 9 월 Windows 문서의 새로운-UWP 앱 개발
 description: 새로운 기능, 동영상, 샘플 및 개발자 지침 2018 년 9 월에 대 한 Windows 10 개발자 설명서에 추가한 합니다.
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10 년 9 월
-ms.author: quradic
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 918fd0208d6af17c25ad184a856b2a87a6f61791
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560112"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701883"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>2018 년 9 월 Windows 개발자 문서의 새로운
 

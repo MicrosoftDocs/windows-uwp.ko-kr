@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: DirectX UWP(유니버설 Windows 플랫폼) 게임 만들기
 description: 이 자습서 집합에서는 DirectX 및 C++를 사용하여 기본 UWP(유니버설 Windows 플랫폼) 게임을 만드는 방법을 알아봅니다.
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
 keywords: DirectX 게임 샘플, 게임 샘플, UWP(유니버설 Windows 플랫폼), Direct3D 11 게임
-ms.author: joanlee
 ms.date: 12/01/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c589eeb71d93619b92254207ddc5eb1b1494a55
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dc602e2dd29231c1e6554d7ef55e9666a373fa31
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575453"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702511"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>DirectX로 작성된 간단한 UWP(유니버설 Windows 플랫폼) 게임 만들기
 

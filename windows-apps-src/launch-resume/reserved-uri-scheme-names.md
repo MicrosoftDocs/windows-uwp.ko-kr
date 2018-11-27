@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 예약된 파일 및 URI 체계 이름
 description: 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 91732a6c4abc082283dc397fb87ad38d9de452b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 81bd9f699e899f895d55b2b2132681824ed40b7b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554654"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704574"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>예약된 파일 및 URI 체계 이름
 

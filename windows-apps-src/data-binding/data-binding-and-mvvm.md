@@ -1,19 +1,17 @@
 ---
-author: KarlErickson
 ms.assetid: F46306EC-DFF3-4FF0-91A8-826C1F8C4A52
 title: 데이터 바인딩 및 MVVM
 description: 데이터 바인딩 모델-보기-ViewModel (MVVM) UI 아키텍처 디자인 패턴의 핵심 이며 UI 및 비 UI 코드 간의 느슨한 결합을 통해 수 있습니다.
-ms.author: karler
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a70603c26c7123af50fc920d327ccef332b7ed6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 931f2fcbcdbf58b9dc2ca40403d7466b620a8991
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564639"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700096"
 ---
 # <a name="data-binding-and-mvvm"></a>데이터 바인딩 및 MVVM
 

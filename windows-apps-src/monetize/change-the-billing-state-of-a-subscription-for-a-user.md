@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Microsoft Store 구매 API에서 이 메서드를 사용하여 사용자의 구독 청구 상태를 변경할 수 있습니다.
 title: 사용자의 구독 청구 상태 변경
-ms.author: mhopkins
 ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 구매 API, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: 8daec4928867c92734fc3f6322836eb923aeda21
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9e4cf27331a218c0c0ef06ee1a80c141b889504a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567890"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699966"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>사용자의 구독 청구 상태 변경
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 앱 일시 중단 방법(DirectX 및 C++)
 description: 이 항목에서는 시스템이 UWP(유니버설 Windows 플랫폼) DirectX 앱을 일시 중단할 때 중요한 시스템 상태 및 앱 데이터를 저장하는 방법을 보여 줍니다.
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 일시 중지, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0b588d6bf6e7cbf43651d94a7fd46e9a767c6f09
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567083"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697886"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>앱 일시 중단 방법(DirectX 및 C++)
 

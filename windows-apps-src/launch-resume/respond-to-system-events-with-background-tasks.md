@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: 백그라운드 작업으로 시스템 이벤트에 응답
 description: SystemTrigger 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
-ms.author: twhitney
 ms.date: 07/06/2018
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
@@ -12,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: f65751e894d45bab5b39382c7bec43d5f06f18b2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c3773a486a1b7a29fc2a171c473edf38f6f3a7f1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557676"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699288"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>백그라운드 작업으로 시스템 이벤트에 응답
 

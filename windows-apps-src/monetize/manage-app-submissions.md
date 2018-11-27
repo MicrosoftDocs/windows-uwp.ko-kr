@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: Microsoft Store 제출 API에서에서 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱 제출을 관리 합니다.
 title: 앱 제출 관리
-ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575430"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698009"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 

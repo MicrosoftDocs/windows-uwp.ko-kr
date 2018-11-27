@@ -4,17 +4,15 @@ description: 블록 압축은 성능 향상을 위해 텍스처 크기와 메모
 ms.assetid: 2FAD6BE8-C6E4-4112-AF97-419CD27F7C73
 keywords:
 - 블록 압축
-author: hickeys
-ms.author: hickeys
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ff4c88a46c1e89df96b48d82da333432790e461
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b7726067055b92ae51c01d4d056a2a11624204db
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572625"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701226"
 ---
 # <a name="block-compression"></a>블록 압축
 
