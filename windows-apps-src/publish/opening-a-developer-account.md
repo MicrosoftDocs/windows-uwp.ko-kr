@@ -1,19 +1,17 @@
 ---
-author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: 개발자 계정 열기
 description: Microsoft Store 및 다른 Microsoft 프로그램용 파트너 센터에서 Winodws 개발자 계정에 등록 하는 방법에 대 한 개요는 다음과 같습니다.
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b34bdfae8faf7fee2b2eae373483eb9e4dea1972
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e1c2567393e6d6bfab75b2db068f0b61f7fb6893
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576041"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7709746"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 

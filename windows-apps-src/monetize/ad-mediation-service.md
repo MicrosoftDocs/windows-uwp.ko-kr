@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Microsoft 광고 조정 서비스로 여러 광고 네트워크에서 광고를 표시해 광고 수익과 앱 홍보 기능을 극대화 할 수 있습니다.
 title: Microsoft 광고 조정 서비스
-ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 keywords: Windows 10 uwp, 광고, 광고, 광고 조정
 ms.localizationpriority: medium
-ms.openlocfilehash: 9adae5b000277b774536c8b307cc1bc055ce3bc4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565740"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711450"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft 광고 조정 서비스
 

@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: 이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다.
 title: 비트맵 이미지 만들기, 편집 및 저장
-ms.author: lahugh
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc7d3d70291d29102af614f29fd4531523a961e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8c7959231596829e20dc8afea654b2d51977abe4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563858"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711348"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 

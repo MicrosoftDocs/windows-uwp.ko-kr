@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 370f2c14-4f1e-47b3-9197-24205ab255a3
 description: 이 문서에는 UWP 앱에 사용할 수 있는 카메라 기능 및 사용 방법을 보여 주는 방법 문서의 링크가 나와 있습니다.
 title: 카메라
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d330a762844e4889d0da9ae5457acc8d9f0c2b91
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e28a4a7abaacd8b2de60c6163055bd9d667ba412
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554856"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711374"
 ---
 # <a name="camera"></a>카메라
 

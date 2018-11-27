@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: 앱에서 대규모 앱에서 바로 구매 제품 카탈로그를 제공하는 경우 이 항목에 설명된 프로세스를 선택적으로 수행하여 카탈로그를 관리할 수 있습니다.
 title: 앱에서 바로 구매 제품의 큰 카탈로그 관리
-ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 카탈로그, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: f57adf62939c28794e3ecdf6e59f2c4763de9c21
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2335e09253570d09c33422d2f5ba4179697e4ea7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581028"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710301"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>앱에서 바로 구매 제품의 큰 카탈로그 관리
 

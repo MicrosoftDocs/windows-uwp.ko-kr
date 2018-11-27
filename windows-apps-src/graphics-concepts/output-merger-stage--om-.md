@@ -4,17 +4,15 @@ description: OM(출력 병합기) 단계는 다양한 유형의 출력 데이터
 ms.assetid: ED2DC4A0-2B92-47AF-884A-BFC2183C78B8
 keywords:
 - OM(출력 병합기) 단계
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a4e2bbac12ddd3b60b2e4dd78f37b8934a8afea8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 63a77048bed3ad27f2040a672d93380d0250f9aa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555738"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705319"
 ---
 # <a name="output-merger-om-stage"></a>OM(출력 병합기) 단계
 

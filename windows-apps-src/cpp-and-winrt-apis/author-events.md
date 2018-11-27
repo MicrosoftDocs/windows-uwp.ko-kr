@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: 이번 항목에서는 이벤트가 발생하는 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 구성 요소를 사용하여 이벤트를 처리하는 앱에 대해서도 설명합니다.
 title: C++/WinRT의 이벤트 작성
-ms.author: stwhi
 ms.date: 07/18/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c4d36fa22953bc4745b631303aae62985a5aa05
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 31f076ca259d10cc5bd49daea66741ead6e117c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579750"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710673"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 

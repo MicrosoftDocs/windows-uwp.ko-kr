@@ -4,17 +4,15 @@ description: 다음 섹션 Direct3D가 데이터 형식 간 변환을 처리하�
 ms.assetid: B50AB8DE-CAED-465B-B18C-81F3A984B8AC
 keywords:
 - 데이터 형식 변환
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a6ceb1e779f8622d3e358bc131b21f6ec66ac2f8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 08c6dda8759a6e1452daf7cf0a3cd3e5db9ea1e6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555592"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710182"
 ---
 # <a name="data-type-conversion"></a>데이터 형식 변환
 

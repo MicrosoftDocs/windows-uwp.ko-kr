@@ -1,17 +1,16 @@
 ---
 title: x86 데스크톱 앱의 문제 해결
 description: ARM을 기반으로 실행되는 경우 x86 앱 관련 일반적인 문제 및 이를 해결하는 방법.
-ms.author: misatran
 ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, x86 ARM 기반 에뮬레이션, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 01ef13f6f27b45a4cc41244e4ebed0a54804fc8e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 396bb0bf2c5ba5236e0e46e7b474867ffacb8c75
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566066"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711113"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>x86 데스크톱 앱의 문제 해결
 >[!IMPORTANT]

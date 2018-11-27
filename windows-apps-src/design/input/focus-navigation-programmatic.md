@@ -1,10 +1,8 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Learn how to programmatically manage focus navigation with keyboard, gamepad, and accessibility tools in a UWP app.
 title: 키보드, 게임 패드 및 접근성 도구를 사용한 프로그래밍 방식 포커스 탐색
 label: Programmatic focus navigation
 keywords: 키보드, 게임 컨트롤러, 원격 제어, 탐색, 탐색 전략, 입력, 사용자 조작, 접근성, 유용성
-ms.author: kbridge
 ms.date: 03/19/2018
 ms.topic: article
 pm-contact: miguelrb
@@ -12,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d2317b419a2679d13e846690bbaca0eb212a245e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 64a15526b32be52b0fc667dc6f8b549d6faae8f1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562825"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708493"
 ---
 # <a name="programmatic-focus-navigation"></a>프로그래밍 방식 포커스 탐색
 

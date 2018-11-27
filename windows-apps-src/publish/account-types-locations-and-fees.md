@@ -1,19 +1,17 @@
 ---
-author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: 계정 유형, 위치 및 수수료
 description: 여러 국가 및 지역의 개별 개발자 계정과 회사 개발자 계정을 제공합니다.
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
-ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3163b4c89cc1d0bf3e4adfdea39222dfcb5a3ee1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581709"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709301"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 

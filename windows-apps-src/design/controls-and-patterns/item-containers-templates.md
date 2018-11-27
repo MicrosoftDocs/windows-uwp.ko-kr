@@ -1,10 +1,8 @@
 ---
-author: muhsinking
 Description: Use templates to modify the look of items in ListView or GridView controls.
 title: 항목 컨테이너 및 템플릿
 label: Item containers and templates
 template: detail.hbs
-ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f5a9756a8afc267c9ec8763af49ba02714c2b4f0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1dcf0176e20e498f8c6744a542010b5197689b8a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573938"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711143"
 ---
 # <a name="item-containers-and-templates"></a>항목 컨테이너 및 템플릿
 

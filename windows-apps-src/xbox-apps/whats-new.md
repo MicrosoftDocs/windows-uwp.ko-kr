@@ -1,19 +1,17 @@
 ---
-author: v-angraf
 title: Xbox One의 UWP에 대한 새로운 기능
 description: Xbox One의 UWP 앱에 대한 새로운 기능을 강조하여 설명합니다.
-ms.author: v-angraf
 ms.date: 03/29/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
-ms.openlocfilehash: cc2168014e714de0b43b6ffffe84126764f0a4a3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570037"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709806"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>개발자를 위한 Xbox One의 UWP 최신 업데이트의 새로운 기능
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 앱 활성화 방법(DirectX 및 C++)
 description: 이 항목에서는 UWP(유니버설 Windows 플랫폼) DirectX 앱에 대한 활성화 환경을 정의하는 방법을 보여 줍니다.
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: b7f700ab97566ad9ec03d0595c55721dd9a9be98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 51c2435c8edeac2431198b7b5f3d9b1a307b5b78
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579025"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708233"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>앱 활성화 방법(DirectX 및 C++)
 

@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Packages page is where you upload all of the package files (.appxupload, .appx, .appxbundle, and/or .xap) for the app that you're submitting.
 title: 앱 패키지 업로드
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
-ms.author: wdg-dev-content
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
-ms.openlocfilehash: f02ca7c43443289ef9d2d0562be25f277068685b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6a77cb67891b3cfcb814e66fd14db9e79a0bff1c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577319"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711440"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 

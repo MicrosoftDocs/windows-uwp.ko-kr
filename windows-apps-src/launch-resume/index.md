@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 실행, 다시 시작 및 백그라운드 작업
 description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다.
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
-ms.author: twhitney
 ms.date: 10/04/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업을 앱 서비스에 연결 된 장치, 원격 시스템
 ms.localizationpriority: medium
-ms.openlocfilehash: bb036f0150095e6f02857d227e73b1c7f29b23df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d12113329381c6602edf87a11fc1cc6b822dab4e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565690"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710542"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 

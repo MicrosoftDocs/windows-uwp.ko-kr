@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 기존 ScrollViewer 경험 향상
 description: XAML ScrollViewer 및 ExpressionAnimations를 사용하여 동적 입력 기반의 동작 경험을 만드는 방법에 대해서 알아봅니다.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: a078d096a9cffe26e9b342250726dd75cdf48817
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568734"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7710878"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>기존 ScrollViewer 경험 향상
 

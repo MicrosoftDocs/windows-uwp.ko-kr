@@ -4,17 +4,15 @@ description: 광원으로 조명했을 때 고 반사성 재질을 사용하는 
 ms.assetid: 9B3AC5EC-DDAA-4671-BC81-0E3C79D87A81
 keywords:
 - 반사 조명 맵
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bd9db0afa914ef7a56dbd55c938129b86a43743
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7d88989be04704395c056f1bae058e2aefd1a2a4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564662"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707591"
 ---
 # <a name="specular-light-maps"></a>반사 조명 맵
 

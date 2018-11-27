@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 title: 탐색 시작
 description: 탐색 시작
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cb4550a7da3b9b547a1d723d5ae8da260149ba2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 63a39dfcfaab8b42afc98b7fe786a05908d49d16
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567797"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711213"
 ---
 # <a name="getting-started-navigation"></a>시작: 탐색
 

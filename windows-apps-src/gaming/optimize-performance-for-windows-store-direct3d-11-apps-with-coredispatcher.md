@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: UWP DirectX 게임에 대한 입력 대기 시간 최적화
 description: 입력 대기 시간은 게임 환경에 큰 영향을 줄 수 있으며, 최적화하면 게임에 더 세련된 느낌을 줄 수 있습니다.
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 입력 대기 시간
 ms.localizationpriority: medium
-ms.openlocfilehash: a2e92dc10dbcdc3a511c1b1a1271ae759cc03c60
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576825"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708844"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 

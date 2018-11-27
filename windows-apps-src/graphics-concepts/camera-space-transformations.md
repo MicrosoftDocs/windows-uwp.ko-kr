@@ -4,17 +4,15 @@ description: 카메라 공간의 꼭짓점은 세계 좌표 뷰 매트릭스로 
 ms.assetid: 86EDEB95-8348-4FAA-897F-25251B32B076
 keywords:
 - 카메라 공간 변환
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9de6759fb15aef4b32a5e9022a27cab09af300f8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b35fb71e51044ee6be6ed90001e3b5614c8cb45
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567172"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7710387"
 ---
 # <a name="camera-space-transformations"></a>카메라 공간 변환
 

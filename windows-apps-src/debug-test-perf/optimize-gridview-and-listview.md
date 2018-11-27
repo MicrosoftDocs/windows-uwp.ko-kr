@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: ListView 및 GridView UI 최적화
 description: UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 ListView 및 GridView의 성능과 시작 시간을 개선합니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 25eeea58e1e03eedfca3aaafda1cee13cac1f3c4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5f8ddbdd1e8079e4b5bf945455bfa2efe7094203
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563426"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705679"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>ListView 및 GridView UI 최적화
 

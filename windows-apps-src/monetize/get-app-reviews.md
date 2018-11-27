@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 가져옵니다.
 title: 앱 리뷰 가져오기
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 리뷰
 ms.localizationpriority: medium
-ms.openlocfilehash: 656f00ec8a7711a43c44790b04ea01dace4c4ee2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 084158c0eb20f1d2a03c0e178064ac168c689872
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557094"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707954"
 ---
 # <a name="get-app-reviews"></a>앱 리뷰 가져오기
 

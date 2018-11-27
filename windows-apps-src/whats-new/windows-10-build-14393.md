@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 title: 개발자, 도구 및 기능을 위한 Windows 10의 새로운 기능
 description: Windows10 빌드 14393 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 신규, Windows10, 1607, 7월, 최신, 14393
-ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
-ms.openlocfilehash: a350ff9cd5a2a3ec22637eabbcfc55b693cdd283
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7aff0812da6b7c3d8e55bc31ed196211f54252e3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570223"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709716"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>개발자용 Windows 10 빌드 14393의 새로운 기능
 

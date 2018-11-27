@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: UI 스레드 응답 유지
 description: 사용자는 컴퓨터 유형에 관계없이 계산하는 동안 앱이 계속 응답할 것으로 기대합니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7884c7187bf127e15aaaed38a55e5f9827a3990d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8cd5df1d22189698f6544af4ab72c09425531602
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578798"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7710018"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>UI 스레드 응답 유지
 

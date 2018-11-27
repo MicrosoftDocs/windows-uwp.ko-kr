@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: DirectX 프로그래밍
 description: DirectX를 사용한 UWP 게임 프로그래밍입니다.
 ms.assetid: ba77b081-b8c0-4674-b8bf-7a94466a67f7
-ms.author: joanlee
 ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 개요, 프로그래밍, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: e422dab7f06e314d849cacc361b51d2f68f0de98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 83ac401892761e1e6433d337babbce00dc559b98
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554929"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707719"
 ---
 # <a name="directx-programming"></a>DirectX 프로그래밍
 

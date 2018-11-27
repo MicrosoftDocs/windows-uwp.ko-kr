@@ -1,12 +1,10 @@
 ---
-author: Jwmsft
 Description: A password box is a text input box that conceals the characters typed into it for the purpose of privacy.
 title: 암호 상자에 대한 지침
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
 label: Password box
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -14,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c9e283c8f5c116e300b98d7e4078d91e4dac207e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 981fc39cf724e4153dba18d6d23a0e8607f83fc8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572605"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710235"
 ---
 # <a name="password-box"></a>암호 상자
 

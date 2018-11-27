@@ -1,9 +1,7 @@
 ---
-author: stevewhims
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: 데이터 바인딩 개요
 description: 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다.
-ms.author: stwhi
 ms.date: 10/05/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cppcx
-ms.openlocfilehash: 581c2bc4204a7eab002ef2680e335a4109716d74
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cc8e4d1753333579b016a44adf9429d355d29fb6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558900"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710715"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 

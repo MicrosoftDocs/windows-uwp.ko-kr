@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: This topic describes the new Windows UI for rotation and provides user experience guidelines that should be considered when using this new interaction mechanism in your UWP app.
 title: 회전
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cc2e48239fd2f0e3d9299417a0d96d33acdc122
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578702"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711023"
 ---
 # <a name="rotation"></a>회전
 

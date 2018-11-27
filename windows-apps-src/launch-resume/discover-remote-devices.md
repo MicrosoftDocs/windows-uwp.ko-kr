@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 title: 원격 장치 검색
 description: 프로젝트 로마를 사용하여 앱에서 원격 장치를 검색하는 방법을 알아봅니다.
 ms.assetid: 5b4231c0-5060-49e2-a577-b747e20cf633
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e6d3d4a549c5e815464ef696a938b44dbe6128c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7788cb546eddf77292210b5b1e8268239504a843
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561130"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706226"
 ---
 # <a name="discover-remote-devices"></a>원격 장치 검색
 앱에서 무선 네트워크, Bluetooth 및 클라우드 연결을 사용하여 검색 장치와 동일한 Microsoft 계정으로 로그온된 Windows 장치를 검색할 수 있습니다. 특별한 소프트웨어가 설치되어 있지 않아도 원격 장치를 검색할 수 있습니다.

@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Visual Studio에서 새 Windows10 프로젝트를 만들고 파일에 복사 하 여 포팅 프로세스를 시작 합니다.
 title: WindowsPhone Silverlight 프로젝트를 UWP 프로젝트로 포팅
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d1224c1707d3e86c9ddd309ecf06bd0c0767fb83
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 55c4347b85d94d183d44599f7d34bc750d34d181
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575749"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7711831"
 ---
 # <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>WindowsPhone Silverlight 프로젝트를 UWP 프로젝트로 포팅
 

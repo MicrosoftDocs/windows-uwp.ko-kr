@@ -1,18 +1,16 @@
 ---
-author: libbymc
 title: REST API 백 엔드를 사용하는 단일 페이지 생성
 description: 인기 있는 웹 기술을 사용하여 Microsoft Store용으로 호스트된 웹앱 빌드
 keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
-ms.author: libbymc
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 140f28949bea6b4f67730bd7f6afaed4bcfb9935
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 601478e2479dddc06b6f8f55bc607fd58f07a3b7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571883"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708253"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 생성
 

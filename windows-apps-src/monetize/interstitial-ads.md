@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: Microsoft Advertising SDK를 사용하여 Windows 10용 UWP 앱에 중간 광고를 포함하는 방법을 알아봅니다.
 title: 중간 광고
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 27ef8173db2976d58f9ccd0422a1217e2bd91d13
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c1860fe51035699aaa55d014c2f76a95c7622061
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573698"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708393"
 ---
 # <a name="interstitial-ads"></a>중간 광고
 

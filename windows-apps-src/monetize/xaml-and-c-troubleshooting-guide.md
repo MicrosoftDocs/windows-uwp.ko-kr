@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: XAML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 알아봅니다.
 title: XAML과 C# 문제 해결 가이드
-ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 12789767694e4ab3fa13efec4a31c8db4acd5420
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4d92795ac7de2ab09fd0b3b86e05aa33669c54dd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564189"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707990"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>XAML과 C# 문제 해결 가이드
 

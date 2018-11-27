@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API를 위한 완전한 표준 C++17 언어 프로젝션입니다.
 title: C++/WinRT
-ms.author: stwhi
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f711ebc8d0d2e8dda87355a7894c9d311c6bbc2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 664fd22fc954403776e1becc31563a06d5fdd15b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574764"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710149"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 

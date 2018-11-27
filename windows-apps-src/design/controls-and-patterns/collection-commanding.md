@@ -1,11 +1,9 @@
 ---
-author: mijacobs
 description: 이 문서에서는 상황에 맞는 명령을 사용하여 모든 입력 형식에 대한 최상의 환경을 제공하는 방식으로 이러한 종류의 작업을 구현하는 방법을 보여 줍니다.
 title: 상황에 맞는 명령
 ms.assetid: ''
 label: Contextual commanding in collections
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f06d7015fcb208b55fe0cb57b96eaecbc99317cc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568814"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711163"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>컬렉션 및 리스트에 대한 상황에 맞는 명령
 

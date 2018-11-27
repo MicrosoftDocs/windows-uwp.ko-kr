@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
 description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 지정 된 날짜 범위 및 다른 선택적 필터에 대 한 월별 앱 사용 현황 데이터를 가져옵니다.
 title: 월별 앱 사용 현황 가져오기
-ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 사용
 ms.localizationpriority: medium
-ms.openlocfilehash: 585e44a884bc90c5c7e69458ad5d024d7f26a79f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 48ad049b3f310f8b375a28d9695dd9280d686c43
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567188"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710702"
 ---
 # <a name="get-monthly-app-usage"></a>월별 앱 사용 현황 가져오기
 

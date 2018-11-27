@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: 다중 인스턴스 유니버설 Windows 앱 만들기
 description: 이 항목에서는 다중 인스턴스를 지원하는 UWP 앱을 작성하는 방법을 설명합니다.
 keywords: 다중 인스턴스 uwp
-ms.author: twhitney
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c70d696c1211cfa4f929178f0cf0d9da76ae74c2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6cceac0cf4b9cc4c13c0e99ce5beffad70787256
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582463"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710625"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>다중 인스턴스 유니버설 Windows 앱 만들기
 

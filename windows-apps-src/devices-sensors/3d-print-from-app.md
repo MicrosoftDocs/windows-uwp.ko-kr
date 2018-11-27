@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 title: 앱에서 3D 인쇄
 description: 유니버설 Windows 앱에 3D 인쇄 기능을 추가하는 방법을 알아봅니다. 이 항목에서는 3D 모델이 인쇄 가능하고 올바른 형식인지 확인한 다음 3D 인쇄 대화 상자를 시작하는 방법을 설명합니다.
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 818e1338a1d36d24990f22316dc2072c2c0d7cc5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a51312cc9be466c6847ec7f2d98b29da1c8e5c9f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574406"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708513"
 ---
 # <a name="3d-printing-from-your-app"></a>앱에서 3D 인쇄
 

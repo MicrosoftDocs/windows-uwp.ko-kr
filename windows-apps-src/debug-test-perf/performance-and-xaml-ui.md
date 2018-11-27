@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: 성능
 description: 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dfc4e5d3d2741cf36a1a9aae8c0c22feed5305e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b65a62c2a6182e3b120f8ae8cb6b5fe3a0bf45aa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580145"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710585"
 ---
 # <a name="performance"></a>성능
 

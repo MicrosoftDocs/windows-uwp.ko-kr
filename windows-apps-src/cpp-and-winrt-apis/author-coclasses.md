@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: C + + WinRT 하는 데 유용한 클래식 COM 구성 요소 작성 것 처럼 Windows 런타임 클래스를 작성 하는 데 도움이 됩니다.
 title: C++/WinRT으로 COM 구성 요소 작성
-ms.author: stwhi
 ms.date: 09/06/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f9de523b88853d1c9fc4e2449d28478c4dc6c49e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e6b77f8be6c75070336ad48f0c6471fc0a824a4c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565534"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710768"
 ---
 # <a name="author-com-components-with-cwinrt"></a>C++/WinRT으로 COM 구성 요소 작성
 

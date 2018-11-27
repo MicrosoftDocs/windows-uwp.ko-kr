@@ -1,19 +1,17 @@
 ---
-author: JnHs
 title: 광고 캠페인 보고서
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 파트너 센터에서 광고 캠페인 보고서에는 앱 홍보 광고 캠페인의 성과 볼 수 있습니다.
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치
 ms.localizationpriority: medium
-ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f99c9af9fd3f8c9a94b79b3324fea6ebbd710c5b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573662"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7711463"
 ---
 # <a name="ad-campaign-report"></a>광고 캠페인 보고서
 

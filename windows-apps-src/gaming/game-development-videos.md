@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 게임 개발 동영상
 description: GDC 및 //build 같은 회의의 게임 개발 동영상 모음입니다.
 ms.assetid: 75643d92-293a-4d97-bc5f-2cb4217cb385
-ms.author: joanlee
 ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, 동영상, GDC, build
 ms.localizationpriority: medium
-ms.openlocfilehash: 83865ca17801d51fdd611e6ad0187da98a4bec9e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564971"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708213"
 ---
 # <a name="game-development-videos"></a>게임 개발 동영상
 

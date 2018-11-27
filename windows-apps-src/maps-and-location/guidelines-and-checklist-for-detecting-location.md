@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 Description: This topic describes performance guidelines for apps that require access to a user's location.
 title: 위치 인식 앱에 대한 지침
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 위치, 지도, 지리적 위치
 ms.localizationpriority: medium
-ms.openlocfilehash: d0101124febc52da379d2e829e86bdbba7583851
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e5150188c99bfc448bf85df6a6dabbbb4c60bd49
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582273"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709601"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>위치 인식 앱에 대한 지침
 

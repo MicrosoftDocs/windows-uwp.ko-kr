@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: NFC 스마트 카드 앱 만들기
 description: Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf8d5f1587cc27082944cf0fc63edc274cb2bc7d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ed6d9e21f3fed4a5f1d02a3b45fa08917a96117f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577737"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708183"
 ---
 # <a name="create-an-nfc-smart-card-app"></a>NFC 스마트 카드 앱 만들기
 

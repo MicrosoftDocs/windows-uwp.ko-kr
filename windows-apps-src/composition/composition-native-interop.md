@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
 title: 컴퍼지션 네이티브 상호 운용
 description: Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있는 네이티브 상호 운용 인터페이스를 제공합니다.
-ms.author: jimwalk
 ms.date: 06/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c5ba97e8e4a3f875e3afbc5a9067ab19b34a35d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2f5eabfaf8e526899c17b2d0da688a5135133f65
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554843"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7711309"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>DirectX 및 Direct2D를 사용하여 컴퍼지션 네이티브 상호 운용
 

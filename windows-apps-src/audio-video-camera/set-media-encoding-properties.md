@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
 description: 이 문서에서는 IMediaEncodingProperties 인터페이스를 사용하여 카메라 미리 보기 스트림과 캡처한 사진 및 동영상의 해상도 및 프레임 속도를 설정하는 방법을 보여 줍니다.
 title: MediaCapture용 형식, 해상도 및 프레임 속도 선택
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ba07f897111e27dc895aa187172841cac4b44f73
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f81ab1ef635bf4cfb20c289d6998c242f7aa47fc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569922"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711389"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>MediaCapture용 형식, 해상도 및 프레임 속도 선택
 

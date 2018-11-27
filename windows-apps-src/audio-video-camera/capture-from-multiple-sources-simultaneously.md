@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: ''
 description: 이 문서에서는 여러 소스에서 동시에 비디오를 캡처하여, 다수의 비디오 트랙이 내장된 하나의 파일로 보내는 방법을 설명합니다.
 title: MediaFrameSourceGroup을 사용하여 다양한 소스로부터 캡처
-ms.author: drewbat
 ms.date: 09/12/2017
 ms.topic: article
 keywords: windows 10, uwp, 캡처, 비디오
 ms.localizationpriority: medium
-ms.openlocfilehash: ae52026d5fb1ab3c140edfdcd1f92f7d3d0fd143
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a654739490043b9f821e7906fa8cf9e3e7259fed
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554680"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706423"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a>MediaFrameSourceGroup을 사용하여 다양한 소스로부터 캡처
 

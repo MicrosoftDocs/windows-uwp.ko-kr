@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: 이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다.
 title: UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a398b621ff309af8c6f8252613d3ea106d96485
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563251"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7710038"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 

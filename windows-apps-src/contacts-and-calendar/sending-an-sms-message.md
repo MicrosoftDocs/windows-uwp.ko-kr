@@ -1,19 +1,17 @@
 ---
-author: normesta
 description: 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다.
 title: SMS 메시지 보내기
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: 연락처, SMS, 보내기
-ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 427eb1b895269727d82e42d5abc3ae1f1da1a35d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578216"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706089"
 ---
 # <a name="send-an-sms-message"></a>SMS 메시지 보내기
 

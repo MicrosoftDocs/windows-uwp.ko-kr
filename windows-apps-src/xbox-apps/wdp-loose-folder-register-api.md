@@ -1,19 +1,17 @@
 ---
-author: WilliamsJason
 title: 디바이스 포털 느슨한 폴더 등록 API 참조
 description: 프로그래밍 방식으로 느슨한 폴더 등록 API에 액세스하는 방법을 알아봅니다.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.localizationpriority: medium
-ms.openlocfilehash: cb80e2dbd7ebdfbb05bd642b9875a9cd7cc356f3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8bf4d62f390a5d324952ef2852a76803f4619fdc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564356"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709561"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a>느슨한 폴더에 앱 등록  
 

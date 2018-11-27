@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Windows 데스크톱 브리지 앱 테스트
 description: 데스크톱 브리지의 기본 제공 테스트를 사용 하 여 데스크톱 앱이 UWP 앱의 변환에 대 한 최적화 되었는지 확인 합니다.
-ms.author: pafarley
 ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 8363bc3085e9d6ec4e1a86751b691266b12b365c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: df80fda8cf8b8c2f33a8ed0155363141fc299655
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557183"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710162"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 

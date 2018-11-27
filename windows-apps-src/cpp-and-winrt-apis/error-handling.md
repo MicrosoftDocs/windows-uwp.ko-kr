@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: 이 항목은 C++/WinRT로 프로그래밍하는 경우 오류를 처리하기 위한 전략을 소개합니다.
 title: C++/WinRT를 통한 오류 처리
-ms.author: stwhi
 ms.date: 05/21/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
-ms.openlocfilehash: 15432202e61322191e27e89920f7791878177c8b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c6f7135e85ab63ddfe92bd0de8c656b58fb1a020
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570731"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710845"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 

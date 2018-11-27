@@ -1,18 +1,16 @@
 ---
-author: daneuber
 title: 컴퍼지션 조정
 description: 컴퍼지션 Api를 사용 하 여 UI를 조정 하 고, 성능 최적화를 위해 사용자 설정 및 디바이스 특성을 수용 합니다.
-ms.author: jimwalk
 ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e6060e8da2ab4308deb3896b3ad209ab1093b056
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e6252ce3d2e213602250f6c24f8867767accecbe
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561058"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707458"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>효과 및 Windows UI를 사용 하 여 환경을 조정
 

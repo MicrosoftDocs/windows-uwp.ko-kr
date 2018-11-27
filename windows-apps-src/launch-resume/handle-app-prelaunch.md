@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 앱 사전 실행 처리
 description: OnLaunched 메서드를 재정의하고 CoreApplication.EnablePrelaunch(true)를 호출하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
-ms.author: twhitney
 ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a13ec942080d7fe517a10b837bea9ae8fae27750
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554009"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710748"
 ---
 # <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 데스크톱 응용 프로그램에 대 한 정보 데이터 가져오기.
 title: 데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
-ms.author: mhopkins
 ms.date: 07/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 사이트
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bf3407e94270b8c067d6e4ab088d33990ae22abb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5545d27668b23e5b7ae91201421dfa4c92f9c8ed
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563956"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707977"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 

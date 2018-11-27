@@ -1,21 +1,19 @@
 ---
 description: UWP 앱에 컨트롤 &amp; 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 가져옵니다. 앱에서 사용할 45가지 이상의 강력한 컨트롤을 찾습니다.
 title: UWP 컨트롤 및 패턴 - Windows 앱 개발
-author: mijacobs
 keywords: UWP 컨트롤, 사용자 인터페이스, 앱 컨트롤
 label: Controls & patterns
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: e28d557280ab253a09d5697f369c694e490d3c7d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c2f1a2b5ae514222ed6ef06cc7099a0261747dbc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564577"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709842"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>UWP 앱의 컨트롤 및 패턴
  

@@ -1,21 +1,19 @@
 ---
-author: Xansky
 Description: Lists the Microsoft UI Automation control patterns, the classes that clients use to access them, and the interfaces providers use to implement them.
 ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: 컨트롤 패턴 및 인터페이스
 label: Control patterns and interfaces
 template: detail.hbs
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e48045e27e8ee7796f5dda2afb691a9f6e5371b2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 87afe086ca28e27a39f5508a2bea5ea9fcb1c6a5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568494"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709680"
 ---
 # <a name="control-patterns-and-interfaces"></a>컨트롤 패턴 및 인터페이스  
 

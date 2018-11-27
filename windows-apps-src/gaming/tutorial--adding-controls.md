@@ -1,19 +1,17 @@
 ---
-author: abbycar
 title: 컨트롤 추가
 description: 이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을 구현하는 방법 및 기본 터치, 마우스 및 게임 컨트롤러 컨트롤을 개발하는 방법을 살펴보겠습니다.
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
-ms.author: abigailc
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: bc5873486bdd9c4adf4ea74b10a240617143ad23
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 01c0d1361dcc0858a54792adc0d17408ed281c99
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553690"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711904"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 

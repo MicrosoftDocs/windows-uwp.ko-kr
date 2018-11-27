@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
 description: Windows.Media.Editing 네임스페이스의 API를 사용하면 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발할 수 있습니다.
 title: 미디어 컴퍼지션 및 편집
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f32d63bf03a469d8282262c358153140587d9033
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1e342094509dd5d8fb06657d147ac6468a5f8cd6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565647"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711322"
 ---
 # <a name="media-compositions-and-editing"></a>미디어 컴퍼지션 및 편집
 

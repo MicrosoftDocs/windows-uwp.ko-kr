@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: 디버깅, 테스트 및 성능
 description: Microsoft Visual Studio 및 기타 도구를 사용 하 여 디버그 앱을 테스트 하 고 Microsoft Store 인증 프로세스에 대 한 준비를 합니다.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a6651c6d1117648522f95c7e7c85aad11ceed42f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 757de9201d1cb7f753419024271f2be5c1aa67f4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555850"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710648"
 ---
 # <a name="debugging-testing-and-performance"></a>디버깅, 테스트 및 성능
 

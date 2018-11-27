@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: C++/WinRT에서는 표준 C++ 데이터 형식을 사용하여 Windows 런타임 API를 호출할 수 있습니다.
 title: 표준 C++ 데이터 형식 및 C++/WinRT
-ms.author: stwhi
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
-ms.openlocfilehash: 5aa6e17fcd95813b6abe05e9e42ad7c86657159f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7b0b529bbf397b76acb1eb589095a84f5c85745c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557729"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710255"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>표준 C++ 데이터 형식 및 C++/WinRT
 

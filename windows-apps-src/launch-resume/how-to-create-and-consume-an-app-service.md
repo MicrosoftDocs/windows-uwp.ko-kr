@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 앱 서비스 만들기 및 사용
 description: 다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 방법과 해당 서비스를 사용하는 방법을 알아봅니다.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 keywords: 앱 간 통신, 프로세스 간 통신, IPC, 백그라운드 메시징, 백그라운드 통신, 앱, 앱 서비스
-ms.author: twhitney
 ms.date: 09/18/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1407187f9883f44bb9fdc56fd3ae80820b5920f8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 34414d20a25e59a2569417c75ebfae90727d830d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556332"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7710512"
 ---
 # <a name="create-and-consume-an-app-service"></a>앱 서비스 만들기 및 사용
 

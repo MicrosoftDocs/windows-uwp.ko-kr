@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: 이번 항목에서는 C++/CX 개체와 C++/WinRT 개체를 서로 변환하는 데 사용할 수 있는 두 가지 도우미 함수에 대해서 설명합니다.
 title: C++/WinRT와 C++/CX 사이의 상호 운용성
-ms.author: stwhi
 ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3cc69065ef2898aebafc832da1639985231d60
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 71cc7a24be7afd7a6221e8e474161b453b5ee19a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561384"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710136"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 사이의 상호 운용성
 

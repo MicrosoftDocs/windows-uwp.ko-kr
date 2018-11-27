@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: 컴퍼지션 브러시
 description: 브러시는 해당 출력으로 Visual 영역을 그립니다. 각 브러시의 출력 유형은 서로 다릅니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 730d5ae9062fe39533cd615facaf5beaa7d02ffd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8c995c5a9513bea44664bcb395cd604ba2668c3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557319"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708818"
 ---
 # <a name="composition-brushes"></a>컴퍼지션 브러시
 모든 UWP 응용 프로그램에서 화면에 표시 되는 브러시 그려 때문에 표시 됩니다. 브러시를 사용 하 여 간단 하 고 단색 색에서 이미지 또는 복잡 한 효과 체인에 드로잉에 이르기까지 콘텐츠를 사용 하 여 사용자 인터페이스 (UI) 개체를 그릴 수 있습니다. 이 항목에서는 CompositionBrush 색칠의 개념을 소개 합니다.

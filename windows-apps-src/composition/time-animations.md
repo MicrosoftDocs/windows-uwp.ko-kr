@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 시간 애니메이션
 description: KeyFrame Animation 클래스를 사용하여 시간이 지남에 따라 UI를 변경합니다.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: bf6d3f16c7b240ca370c01a787fef09862f35863
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0a1fe8c1fcb641c3bc79f1f058befe6f4b44044a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570004"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710964"
 ---
 # <a name="time-based-animations"></a>시간 기반 애니메이션
 

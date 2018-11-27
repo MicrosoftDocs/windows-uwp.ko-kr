@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: 테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
 description: 이 백서는 업무에 중요 한 핵심 작업을 담당 하는 기존 코드를 사용 하 여 쉽게 터치.NET 앱 엔드가 Windows10에서 지원 하는 기업 대상 기능을 설명 합니다.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 3228cd80e7a9e8efb5dca1ec3a2d469e40a52c8a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d9665ba3af10091ddc652198d5340e00456a65a7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575865"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711103"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>테스트용으로 로드하는 UWP 앱의 조정된 Windows 런타임 구성 요소
 

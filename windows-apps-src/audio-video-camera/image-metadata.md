@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
 description: 이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 GeotagHelper 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다.
 title: 이미지 메타데이터
-ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3e2f10174412b49ce60f3da6a4bb73b2efc4411
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2ab1279a8744d6dc9cddc88abaa064058f1259c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711273"
 ---
 # <a name="image-metadata"></a>이미지 메타데이터
 

@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: 가비지 수집 성능 향상
 description: C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .NET 가비지 수집기의 자동 메모리 관리를 사용합니다. 이 섹션에는 UWP 앱에서 .NET 가비지 수집기에 대한 동작 및 성능 모범 사례가 요약되어 있습니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 31279de84b8f00e4489a7aae962caa231bb16dc1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6d3940f519706fba6d795d60344cbd83337ae482
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553890"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710562"
 ---
 # <a name="improve-garbage-collection-performance"></a>가비지 수집 성능 향상
 

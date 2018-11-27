@@ -2,18 +2,16 @@
 title: 앱 간에 공유 인증서
 description: 사용자 ID 및 암호 조합 이상의 보안 인증이 필요한 UWP(유니버설 Windows 플랫폼) 앱은 인증을 위해 인증서를 사용할 수 있습니다.
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
-author: PatrickFarley
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 044b1b60b80cec1fc40adda6b9b6d44bee34ce7c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1caa7361011b535a0dd63da53e0aba2eadff72be
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570356"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711400"
 ---
 # <a name="share-certificates-between-apps"></a>앱 간에 공유 인증서
 
