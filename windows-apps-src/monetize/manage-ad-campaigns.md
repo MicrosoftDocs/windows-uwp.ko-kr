@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 7b07a6ca-4be1-497c-a901-0a2da3762555
 description: Microsoft Store 프로모션 API에서 이 메서드를 사용하여 프로모션 광고 캠페인을 제작, 편집하고 가져옵니다.
 title: 광고 캠페인 관리
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c86c0d5d1a10442c7addeed11cdbfc37846f337
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573919"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7715715"
 ---
 # <a name="manage-ad-campaigns"></a>광고 캠페인 관리
 

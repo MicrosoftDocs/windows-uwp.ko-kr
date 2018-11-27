@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 주 게임 개체 정의
 description: 이제 게임 샘플의 주 개체 및 해당 개체가 구현하는 규칙이 게임 월드와 조작하도록 변환되는 방식을 자세히 살펴봅니다.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 주 개체
 ms.localizationpriority: medium
-ms.openlocfilehash: b94d7139f35b3a18edd66af9959a0958d0bdcbc1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 96aefc8b053dd7490f47910ca5bb79989855e1a3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573811"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713124"
 ---
 # <a name="define-the-main-game-object"></a>주 게임 개체 정의
 

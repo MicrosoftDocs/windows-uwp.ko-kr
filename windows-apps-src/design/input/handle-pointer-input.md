@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Receive, process, and manage input data from pointing devices such as touch, mouse, pen/stylus, and touchpad, in your Universal Windows Platform (UWP) applications.
 title: 포인터 입력 처리
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
 keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 조작
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ba685f30eb0cf94314996587073a82440cf6c951
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f1030e6cddf5a0ded289545de752d926789314ed
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577596"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716631"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 

@@ -4,17 +4,15 @@ description: BC7 형식은 RGB 및 RGBA 데이터의 고품질 압축에 사용�
 ms.assetid: 788B6E8C-9A1F-45F9-BE49-742285E8D8A6
 keywords:
 - BC7 형식
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 70380dd0bd07cfe0c81e8339f8606029663b47d4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2c55a12dfa7757a48874b6857c95af592e818c2b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563106"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711934"
 ---
 # <a name="bc7-format"></a>BC7 형식
 

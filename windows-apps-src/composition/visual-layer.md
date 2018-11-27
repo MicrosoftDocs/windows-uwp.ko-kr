@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: 시각적 계층
 description: Windows.UI.Composition API는 프레임워크 계층(XAML)과 그래픽 계층(DirectX) 간의 컴퍼지션 계층에 대한 액세스를 제공합니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 599c2625bffff40a30f26bfb40f7cce9c97acdd1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571392"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716131"
 ---
 # <a name="visual-layer"></a>시각적 계층
 

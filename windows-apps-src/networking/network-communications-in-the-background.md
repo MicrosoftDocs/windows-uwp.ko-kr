@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 네트워크 통신을 계속하려면 백그라운드가 아닌 상태에서 앱이 백그라운드 작업을 사용하고 소켓 브로커나 컨트롤 채널 트리거를 사용할 수 있습니다.
 title: 백그라운드 네트워크 통신
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
-ms.author: stwhi
 ms.date: 06/14/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 34fad804bb36ad1b4ce92a56772c33318e10faa8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f206700360b6590a88b76f04531c9c6b1e94414f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555385"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713570"
 ---
 # <a name="network-communications-in-the-background"></a>백그라운드 네트워크 통신
 네트워크 통신을 포그라운드에 없을 때 계속 해 서 앱 백그라운드 작업 및 이러한 두 옵션 중 하나를 사용할 수 있습니다.

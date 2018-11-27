@@ -4,17 +4,15 @@ description: 리소스를 스트리밍 리소스로 만들면 리소스를 구�
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
 keywords:
 - 타일 풀에 대한 매핑
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713457"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>타일 풀에 대한 매핑
 

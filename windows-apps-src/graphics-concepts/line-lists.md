@@ -4,17 +4,15 @@ description: 선 목록은 격리된 선 세그먼트의 목록입니다. 선 �
 ms.assetid: 42BF32A1-3535-42A3-82C5-3945CB309F2C
 keywords:
 - 선 목록
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a514fb072dd95b9de2c29e097e8387c0f1068a4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 43013dc820c0f0f67df2e9502d3c57c77e03f250
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581653"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7715881"
 ---
 # <a name="line-lists"></a>선 목록
 

@@ -1,19 +1,17 @@
 ---
-author: Karl-Bridge-Microsoft
 ms.assetid: ''
 title: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 description: UWP 앱에 Surface Dial(및 기타 휠 장치)에 대한 지원을 추가하는 단계별 자습서입니다.
 keywords: 다이얼, 방사형, 자습서
-ms.author: kbridge
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3df0f37fda62a7b673e28a6198758365886b6783
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d8729826c2f372b3d3b5607ce828aaf515e47f3d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579428"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713636"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>자습서: UWP 앱에서 Surface Dial(및 기타 휠 장치) 지원
 

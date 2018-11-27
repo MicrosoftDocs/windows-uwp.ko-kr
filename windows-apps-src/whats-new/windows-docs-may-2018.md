@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 2018 년 5 월 Windows 문서의 새로운-UWP 앱 개발
 description: 새로운 기능, 동영상 및 개발자 지침 2018 년 5 월에 대 한 Windows 10 개발자 설명서 및 Microsoft 빌드 회의에 추가한 합니다.
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 5 월 빌드
-ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dc2f8e65ec9ed4e05b6b62e9fc28bbc75f28075
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 20bb514a15963befb5b96a1b01a6c057e8f27482
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581833"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711615"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018 년 5 월 Windows 개발자 문서의 새로운
 

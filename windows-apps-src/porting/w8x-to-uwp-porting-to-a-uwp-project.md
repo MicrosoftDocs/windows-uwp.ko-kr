@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다.
 title: Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a4e0ff78f2872e572c370411a1aad38ccbd7fb6a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 428f6787dfeb18d7ebf02f96acea2a6ab55c7fe7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576141"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7714865"
 ---
 # <a name="porting-a-windows-runtime-8x-project-to-a-uwp-project"></a>Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅
 

@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: To view performance data for the ad units in your apps, use the advertising performance report in Partner Center.
 title: 광고 성과 보고서
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cc47e934ca75eb581808483f7875fea901943b3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555519"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714888"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 

@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 시작 화면 추가
 description: Microsoft Visual Studio를 사용하여 앱의 시작 화면 이미지와 배경색을 설정합니다.
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
-ms.author: twhitney
 ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 143b96171091406fb91954685143e4f86c036ffb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 882ee548754b9fa498697a8d75a12a23f86fc9de
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560042"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715871"
 ---
 # <a name="add-a-splash-screen"></a>시작 화면 추가
 

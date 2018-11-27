@@ -1,20 +1,18 @@
 ---
-author: v-angraf
 ms.assetid: a56156e4-7adb-bf37-527b-fc3243e04b46
 title: (개발자 홈) 콘솔의 개발자 홈
 description: Xbox one 개발자 홈 앱에 대 한 정보를 제공합니다.
-ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 232770ab4b746663a105982605d1cedcb92adbe3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4113df37446d93883cf395e7c1e86b1de6c1b328
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556576"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711496"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a>(개발자 홈) 콘솔의 개발자 홈
    

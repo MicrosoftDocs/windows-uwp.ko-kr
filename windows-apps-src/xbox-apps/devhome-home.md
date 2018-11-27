@@ -1,20 +1,18 @@
 ---
-author: v-angraf
 ms.assetid: 94bb7ad9-cf50-61a8-ad42-48b9bdb9ed36
 title: 홈 페이지 (개발자 홈)
 description: Xbox one 개발자 홈 앱의 홈 페이지에 대 한 정보를 제공합니다.
-ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
-ms.openlocfilehash: b95637b38aafeb4111ecb25279dcec448ca3c30f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555083"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714503"
 ---
 # <a name="home-page-dev-home"></a>홈 페이지 (개발자 홈)
    

@@ -1,10 +1,8 @@
 ---
-author: QuinnRadich
 Description: A button gives the user a way to trigger an immediate action.
 title: 단추
 label: Buttons
 template: detail.hbs
-ms.author: quradic
 ms.date: 10/2/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -15,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8b793af0b3252243d9482ed6228e10d489a14ed3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5b755533cd4f0720477988781e6cc955b532f1a9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565921"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715297"
 ---
 # <a name="buttons"></a>단추
 

@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: 이미 정의된 리소스에 대한 참조를 평가하여 모든 XAML 특성에 대한 값을 제공합니다. 리소스는 ResourceDictionary에 정의되며 StaticResource 사용은 ResourceDictionary의 리소스 키를 참조합니다.
 title: StaticResource 태그 확장
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 83919cc46694279bc35e046c97acf27c64a196f5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 012827165aaa4067c9844af0491afb77a53c5f50
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573609"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7715159"
 ---
 # <a name="staticresource-markup-extension"></a>{StaticResource} 태그 확장
 

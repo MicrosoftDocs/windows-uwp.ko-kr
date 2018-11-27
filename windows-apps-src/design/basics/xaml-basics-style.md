@@ -1,18 +1,16 @@
 ---
-author: mijacobs
 title: 사용자 지정 스타일 만들기
 description: 이 문서는 XAML의 UI 요소 스타일의 기본 사항에 대해 설명합니다.
 keywords: XAML, UWP, 시작
-ms.author: mijacobs
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 11f279de206a84e61144789ba43a268f2b896fee
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: a1eacc42720e7bce4290476676b0864fbd8a3694
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7439125"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716996"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 

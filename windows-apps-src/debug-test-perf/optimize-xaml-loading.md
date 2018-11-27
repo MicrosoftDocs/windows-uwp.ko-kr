@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: XAML 태그 최적화
 description: 메모리에서 개체를 생성하기 위해 XAML 태그를 구문 분석하는 작업은 복잡한 UI의 경우 시간이 많이 걸립니다. 다음은 XAML 태그 구문 분석 및 로드 시간과 앱의 메모리 효율성을 개선하기 위해 수행할 수 있는 몇 가지 작업입니다.
-ms.author: jimwalk
 ms.date: 08/10/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 884825f2e9639f620d8db4e6110791fddf2d7e77
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ec88af01e46788ea9f24760af7f9a3b81281ba8d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560365"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716003"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 

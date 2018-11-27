@@ -1,19 +1,17 @@
 ---
-author: mcleanbyron
 description: 이 가이드에서는 WPF 및 Windows Forms 응용 프로그램에서 직접 Fluent 기반 UWP UI를 만들 수 있습니다.
 title: 데스크톱 응용 프로그램의 UWP 컨트롤
-ms.author: mcleans
 ms.date: 09/21/2018
 ms.topic: article
 keywords: Windows 10, uwp, windows 양식, wpf
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 267c04cb039a43d598238a55e7d480c99211dc62
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bd22aa761d4a9a79c95c7bc424ab1d2a31ca6cdf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566898"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711798"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>데스크톱 응용 프로그램의 UWP 컨트롤
 

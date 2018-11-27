@@ -1,19 +1,17 @@
 ---
-author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
 title: 디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 description: 앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다.
-ms.author: markl
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 269d51ec6005bcd61ac01a66d72c34bdb2901add
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569123"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715363"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================

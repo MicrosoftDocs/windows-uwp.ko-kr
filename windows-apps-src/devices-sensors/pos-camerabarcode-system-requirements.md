@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: 카메라 바코드 스캐너 시스템 요구 사항
 description: 이 문서에는 UWP 앱에서 카메라 바코드 스캐너를 사용하기 위한 요구 사항이 나와 있습니다.
-ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: d63dc1af00716b8e60532341826a698f97ec9d32
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aea2a339c450f50ca3ae6f6250d056b4a1e70aa1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572369"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714189"
 ---
 # <a name="camera-barcode-scanner-system-requirements"></a>카메라 바코드 스캐너 시스템 요구 사항
 Windows 10, 버전 1803부터는 유니버설 Windows 응용 프로그램에서 기준 카메라 렌즈를 통해 바코드를 읽을 수 있습니다.

@@ -2,18 +2,16 @@
 title: 암호화
 description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에 사용할 수 있는 암호화 기능에 대한 개요를 제공합니다. 특정 작업에 대한 자세한 내용은 이 문서의 끝에 있는 표를 참조하세요.
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 0caa3f63d8a92c75bdce10cdb277967dca21fafb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 156c4cc62e1997f5d647c06c87e226fe519de168
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568361"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715343"
 ---
 # <a name="cryptography"></a>암호화
 

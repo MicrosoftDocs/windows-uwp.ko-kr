@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: SourceModifier로 당겨서 새로 고침
 description: SourceModifiers를 사용하여 사용자 지정 당겨서 새로 고침 컨트롤 만들기
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 997082d2ed7375d99a7be1543901d1dd854be1a0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 834f631cd5c4b8696e75f83f194b95f809b1cf8a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566665"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715005"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>SourceModifier로 당겨서 새로 고침
 

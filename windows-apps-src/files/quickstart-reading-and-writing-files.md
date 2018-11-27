@@ -1,9 +1,7 @@
 ---
-author: laurenhughes
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: 파일 만들기, 쓰기 및 읽기
 description: StorageFile 개체를 사용하여 파일을 읽고 씁니다.
-ms.author: lahugh
 ms.date: 06/28/2018
 ms.topic: article
 keywords: Windows 10, uwp
@@ -13,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 9bc19460fe1b9b9c6b637606a737e1157d98feef
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6079ea8ca844efc912b970c00c6907d98378dd07
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577176"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714354"
 ---
 # <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 

@@ -2,18 +2,16 @@
 title: Windows Hello
 description: 이 문서에서는 Windows 10 운영 체제의 일부로 제공되는 새로운 Windows Hello 기술에 대해 설명하고, 개발자가 이 기술을 구현함으로써 UWP(유니버설 Windows 플랫폼) 앱 및 백 엔드 서비스를 보호하는 방법을 살펴봅니다. 여기서는 기존 자격 증명의 사용으로 발생되는 위협 요소를 완화할 수 있는 이러한 기술의 특징에 대해 중점적으로 설명하고 Windows 10 롤아웃의 일부로 이러한 기술을 디자인 및 배포하는 방법에 대한 지침을 제공합니다.
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
-author: PatrickFarley
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b2ee216059163e7232d65eb515645d9e7db56b3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ccffc523dd1196c208c2fe0abdb7297c19892279
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581973"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716016"
 ---
 # <a name="windows-hello"></a>Windows Hello
 

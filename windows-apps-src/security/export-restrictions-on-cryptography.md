@@ -2,18 +2,16 @@
 title: 암호화에 대한 내보내기 제한
 description: 이 정보를 사용하여 앱이 Microsoft Store에 나열될 수 없는 방식으로 암호화를 사용하는지 확인할 수 있습니다.
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: a29c4aeb5a5928e04e0018d68884fdb4a4876332
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566760"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715313"
 ---
 # <a name="export-restrictions-on-cryptography"></a>암호화에 대한 내보내기 제한
 

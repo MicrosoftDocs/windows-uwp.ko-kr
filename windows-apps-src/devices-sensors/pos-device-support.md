@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: 서비스 지점 하드웨어 지원
 description: 이 문서에는 각각의 서비스 지점 장치 클래스에서 하드웨어 지원에 대한 정보가 포함
-ms.author: jken
 ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: df6e2c15260759f164a37b68365e0268633b22d5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6ffb8ea583aade51ae1cc5049a423d734359722c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582403"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714302"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 

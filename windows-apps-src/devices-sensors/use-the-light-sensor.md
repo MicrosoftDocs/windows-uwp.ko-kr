@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: 광원 센서 사용
 description: 주변 광원 센서를 사용하여 광원 변화를 탐지하는 방법을 알아봅니다.
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e6f7f838e5640f873593ac2e08c6a9b30f5258e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 47092c128fe3a3855d7e32706451545b357c39c4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561904"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7713929"
 ---
 # <a name="use-the-light-sensor"></a>광원 센서 사용
 

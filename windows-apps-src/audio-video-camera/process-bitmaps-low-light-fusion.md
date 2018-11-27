@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 description: 이 문서에서는 LowLightFusion 클래스를 사용하여 비트맵을 처리하는 방법에 대해 설명합니다.
 title: Low Light Fusion API로 비트맵 처리
-ms.author: lahugh
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, low light fusion, 비트맵, 이미지 처리
 ms.localizationpriority: medium
-ms.openlocfilehash: aa1fa0ae298bf9f0403a3a565f44010b022ba1f6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e0677d2e4ce5e412c158b8a00da3a6338bae6c46
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562918"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713377"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a>LowLightFusion API로 비트맵 처리
 

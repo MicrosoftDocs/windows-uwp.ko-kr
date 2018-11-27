@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 스왑 체인 확장 및 오버레이
 description: 모바일 디바이스에서 보다 신속한 렌더링을 위해 크기 조정된 스왑 체인을 만들고 오버레이 스왑 체인(사용 가능한 경우)을 사용하여 시각적 품질을 향상시키는 방법을 알아봅니다.
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 스왑 체인 크기 조정, 오버레이, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 12aede6c4af61c4b86d1f1090a2ec3d0e5ecce68
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564557"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713144"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>스왑 체인 크기 조정 및 오버레이
 

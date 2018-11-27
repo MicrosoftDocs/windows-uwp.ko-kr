@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: 포인터 기반 애니메이션
 description: 포인터의 위치를 사용하여 "커서만 따르는" 동적 경험을 창출하는 방법에 대해서 알아봅니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: b69899761e1c4a139fd2b15d6810440df5192487
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3512d47c8b3e689b0baadec26c1d8f0f510e03ef
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573340"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713427"
 ---
 # <a name="pointer-based-animations"></a>포인터 기반 애니메이션
 

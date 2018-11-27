@@ -366,7 +366,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   <tr>
     <td>스웨덴*</td>
     <td>스위스*</td>
-    <td>대만*</td>
+    <td>Taiwan *</td>
     <td>타지키스탄</td>
   </tr>
   <tr>

@@ -1,11 +1,9 @@
 ---
-author: Jwmsft
 ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
 Description: Text block is the primary control for displaying read-only text in apps.
 title: 텍스트 블록
 label: Text block
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10 uwp
@@ -13,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 423634acc2d3806b4652618331fafd68c908e477
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f02e40c74e11bbc7a5cb308b71ce819d45891a2e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566974"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7713317"
 ---
 # <a name="text-block"></a>텍스트 블록
 

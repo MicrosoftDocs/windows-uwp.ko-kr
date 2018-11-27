@@ -1,20 +1,18 @@
 ---
-author: andrewleader
 Description: Learn how to use notification mirroring on your toast notifications.
 title: 알림 미러링
 label: Notification mirroring
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 12/15/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림, 클라우드의 알림 센터, 알림 미러링, 알림, 크로스 디바이스
 ms.localizationpriority: medium
-ms.openlocfilehash: c36b5ffcbb016e5b89fa1c960a7493767192296c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dc870601159a80bc6d03a287fd19f082e968e09e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713666"
 ---
 # <a name="notification-mirroring"></a>알림 미러링
 

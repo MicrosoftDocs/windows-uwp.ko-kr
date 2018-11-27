@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Marble Maze 샘플에 입력 및 대화형 작업 추가
 description: 입력 장치에서 작업을 할 때 고려해야 할 주요 사항에 대해 알아보세요.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
-ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 샘플
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7e9a3f655b8be1b93334ed8decf9fe6fa8bbf2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aee239f76c3d4431426f0bc9fe519a59f8f48838
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565236"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714049"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Marble Maze 샘플에 입력 및 대화형 작업 추가
 

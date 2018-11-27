@@ -1,18 +1,16 @@
 ---
-author: mcleanbyron
 description: 이 문서에는 데스크톱 응용 프로그램에서 UWP XAML UI를 호스트 하는 방법을 설명 합니다.
 title: 호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사용 하 여
-ms.author: mcleans
 ms.date: 09/21/2018
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 69eb9f72d6b4cf01185f7e4886a7ed5c30a669df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b6883b605bed0b259cd70d1f6dc0264476eddd40
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571923"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711984"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사용 하 여
 

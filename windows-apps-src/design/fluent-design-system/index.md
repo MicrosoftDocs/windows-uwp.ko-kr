@@ -1,19 +1,17 @@
 ---
 description: 흐름 디자인은 무엇이고, 어떻게 앱에 통합하는지 알아봅니다.
 title: Windows 용 fluent 디자인 시스템
-author: mijacobs
 keywords: uwp 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스, 흐름 디자인 시스템
-ms.author: mijacobs
 ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c61eb71a82234a1339295536140121d80f83a033
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570800"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715587"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 앱 작성자
 

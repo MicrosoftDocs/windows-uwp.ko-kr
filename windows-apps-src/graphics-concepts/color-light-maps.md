@@ -4,17 +4,15 @@ description: 컬러 조명 맵은 조명 지도에 RGB 데이터를 사용해 �
 ms.assetid: 6116D7C0-D614-4CF4-952E-A987ED9BD9D7
 keywords:
 - 컬러 조명 맵
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 757fbf93aa364e4143af0b5d5f2fc3f63a2f9c0c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e866b3841a610d4027ba9e91005591ef18c707e3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582263"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711785"
 ---
 # <a name="color-light-maps"></a>컬러 조명 맵
 

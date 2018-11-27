@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 ms.assetid: 16AB1111-4BA8-4352-B796-E97AA9243E31
 title: 개발자 계정 만들기
 description: 지금 개발자 계정에 등록하여 Microsoft Store에 앱을 제출하고 다른 Microsoft 프로그램에 참여하세요.
-ms.author: quradic
 ms.date: 4/04/2018
 ms.topic: article
 keywords: windows 10, uwp, 등록, 개발자 계정
 ms.localizationpriority: medium
-ms.openlocfilehash: dc7f887018dc550ff28101acc6187c9b06235f1f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6c15f6df30477f11c8b20afd08fa1c1cd55b34b3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563056"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715851"
 ---
 # <a name="create-a-developer-account"></a>개발자 계정 만들기
 

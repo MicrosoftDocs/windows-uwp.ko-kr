@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Add-ons (or in-app products) are published through Partner Center.
 title: 추가 기능 제출
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품, iap 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 28fd2e104de12cc297ce5d28ddd18b0ce550a5d0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3dc3e9b928c544b8552abc6c289c682694f623c0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563884"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714940"
 ---
 # <a name="add-on-submissions"></a>추가 기능 제출
 

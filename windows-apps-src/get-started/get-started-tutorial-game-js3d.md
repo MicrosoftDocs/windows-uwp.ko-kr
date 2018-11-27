@@ -1,19 +1,17 @@
 ---
 title: '시작 자습서: JavaScript로 작성된 3D UWP 게임'
 description: JavaScript와 three.js로 작성 된 Microsoft Store 용 UWP 게임
-author: abbycar
-ms.author: abigailc
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 0183e19135758f73dfea9b63535437ff9b66011a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5f707e72e73398ae21cd391da16a0f2b40dcd7ee
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553973"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713583"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
 

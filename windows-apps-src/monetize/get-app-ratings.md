@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 등급 데이터를 가져옵니다.
 title: 앱 등급 가져오기
-ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 등급
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b118abe32fe350277e02ed1f1f1d721e4c1690e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 32f32d3389a340c25d99ec0f0a68e0c20af89c2b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561410"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715748"
 ---
 # <a name="get-app-ratings"></a>앱 등급 가져오기
 

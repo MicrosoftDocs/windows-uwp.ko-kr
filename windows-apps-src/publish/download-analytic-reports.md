@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: You can download .tsv files that contain your analytics data so that you can review your stats and info offline.
 title: 분석 보고서 다운로드
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 371fbed113af10c8e5b388a8f271d99df4b4c4e9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9b6bc75d2747a750c324aa979cd132774cf091f5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555708"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714914"
 ---
 # <a name="download-analytics-reports"></a>분석 보고서 다운로드
 

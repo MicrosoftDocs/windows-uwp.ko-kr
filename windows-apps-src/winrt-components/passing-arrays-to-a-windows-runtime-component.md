@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Windows 런타임 구성 요소에 배열 전달
 description: UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력용이며 입력과 출력 모두의 매개 변수는 아닙니다. 다시 말해서, 메서드에 전달되는 배열의 콘텐츠 및 배열 자체는 입력 또는 출력용입니다.
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e01c9e5698ec1d7a23298b46f6bde9e1bbf36b04
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 60c2e2221cd174ffd75a45d6fe8e2f66744d67a0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553072"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711698"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a>Windows 런타임 구성 요소에 배열 전달
 

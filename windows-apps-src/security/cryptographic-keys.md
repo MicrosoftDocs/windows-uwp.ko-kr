@@ -2,18 +2,16 @@
 title: 암호화 키
 description: 이 문서에서는 표준 키 파생 함수를 사용하여 키를 파생하는 방법과 대칭 및 비대칭 키를 사용하여 콘텐츠를 암호화하는 방법을 보여 줍니다.
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a47ba36c84176e83a81dd234d05315aa1e2525
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2b74eccd5f6138e5a9d670aa3a0a93239813cf4d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714622"
 ---
 # <a name="cryptographic-keys"></a>암호화 키
 

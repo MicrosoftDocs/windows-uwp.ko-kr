@@ -1,12 +1,13 @@
 ---
-author: JordanEllis6809
 title: Unity - UWP 프로젝트 버전 제어
 description: Unity UWP 프로젝트 버전 관리.
-ms.openlocfilehash: 3b796c31e6b284cea628ba68a34799cf9317ee2e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.locfileid: "220402"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711635"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: UWP 프로젝트 버전 제어
 
@@ -48,19 +49,19 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 
 ## <a name="folders"></a>폴더  
 
-`Assets` | ***포함*** | Windows 스토어 이미지 포함  
-`Data`   | ***무시*** | Unity에서 프로젝트를 컴파일하는 위치(장면, 셰이더, 스크립트, Prefabs 등)  
-`Dependencies` | ***포함*** | 이 폴더는 모든 UWP 종속성을 유지하기 위해 만든 폴더(예: XboxLiveSDK.dll)  
-`Properties` | ***포함*** | 개발자가 수정할 수 있는 추가 고급 설정이 포함됨  
-`Unprocessed` | ***무시*** | Unity `.dll` 및 `.pdb` 파일이 포함됨  
+`Assets` | ***포함*** | Microsoft 스토어 이미지 포함  
+`Data`   | ***무시*** | Unity (장면, 셰이더, 스크립트, 프리 팹 등) 하도록 프로젝트를 컴파일합니다  
+`Dependencies` | ***포함*** | 이 폴더는 (예: XboxLiveSDK.dll) 모든 UWP 종속성을 유지 하기 위해 만든  
+`Properties` | ***포함*** | 개발자가 수정할 수 있는 고급 설정이 포함 되어 있습니다.  
+`Unprocessed` | ***무시*** | Unity 포함 `.dll` 및 `.pdb` 파일  
 
 ## <a name="files"></a>파일  
 
-`App.cs` | ***포함*** | UWP 응용 프로그램에 대한 진입점입니다. 다른 원본 파일을 사용하여 수정 및 확장될 수 있습니다.  
-`Package.appxmanifest` | ***포함*** | AppX의 패키지 매니페스트  
-`project.json` | ***포함*** | `*.csproj`가 종속된 NuGet 패키지 설명  
-`ScrapyardPhoenix.csproj` | ***포함*** | UWP 빌드 대상을 설명합니다. UWP 프로젝트에 종속성을 추가하는 경우 이 `*.csproj` 파일에 해당 정보가 포함됩니다.  
-`ScrapyardPhoenix.csproj.user` | ***무시*** | 이 파일에 로컬 사용자 정보가 포함됨
+`App.cs` | ***포함*** | UWP 응용 프로그램에 대 한 진입점 수정 및 다른 원본 파일을 사용 하 여 확장 될 수 있습니다.  
+`Package.appxmanifest` | ***포함*** | AppX에 대 한 앱 패키지 매니페스트 소스 파일  
+`project.json` | ***포함*** | NuGet 패키지 설명에 `*.csproj` 에 따라 달라 집니다.  
+`ScrapyardPhoenix.csproj` | ***포함*** | UWP 빌드 대상을 설명합니다. 프로젝트를 UWP 앱에 종속성을 추가 하는 경우이 `*.csproj` 파일에는 해당 정보가 포함 됩니다  
+`ScrapyardPhoenix.csproj.user` | ***무시*** | 이 파일에 로컬 사용자 정보가 포함 되어 있습니다.
 
 ## <a name="resulting-gitignore"></a>결과 .gitignore
 

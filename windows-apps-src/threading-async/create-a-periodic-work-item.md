@@ -1,19 +1,17 @@
 ---
-author: normesta
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: 정기 작업 항목 만들기
 description: 주기적으로 반복되는 작업 항목을 만드는 방법을 알아봅니다.
-ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 정기 작업 항목, 스레딩, 타이머
 ms.localizationpriority: medium
-ms.openlocfilehash: 4afa137b01738c42f8e15c95ef09ec921d1e44ae
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 92142bcf084b6504e4c694ca33d2dc8532f1acca
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715224"
 ---
 # <a name="create-a-periodic-work-item"></a>정기 작업 항목 만들기
 

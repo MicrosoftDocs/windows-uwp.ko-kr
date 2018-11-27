@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 038903d6-efab-4da6-96b5-046c7431e6e7
 description: Microsoft Store 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 응답을 제출합니다.
 title: 리뷰에 대한 응답 제출
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 추가 기능 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a8a336d477e7d66222632821f0fa0855faae6f7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c08dcda52940f0218b6fdb5be147f058eca7479a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568106"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713247"
 ---
 # <a name="submit-responses-to-reviews"></a>리뷰에 대한 응답 제출
 

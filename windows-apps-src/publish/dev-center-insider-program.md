@@ -1,19 +1,17 @@
 ---
 title: 개발자 센터 참가자 프로그램
 description: 모든 개발자가 사용할 수 있도록 제공되기 전에 새로운 개발자 센터 기능을 미리 사용해 보고 의견을 보내주세요.
-author: JnHs
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10 uwp, 참가자, 개발 센터 참가자, 미리 보기 기능
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: medium
-ms.openlocfilehash: 950c80967851c858212fecc6999c93b55dd439de
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ad70e986a35767c687d863a7db0754bd980be5db
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715211"
 ---
 # <a name="dev-center-insider-program"></a>개발자 센터 참가자 프로그램
 

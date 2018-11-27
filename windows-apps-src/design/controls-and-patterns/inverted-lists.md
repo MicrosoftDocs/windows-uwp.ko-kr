@@ -1,10 +1,8 @@
 ---
-author: muhsinking
 Description: Use an inverted list to add new items at the bottom.
 title: 반전된 목록
 label: Inverted lists
 template: detail.hbs
-ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d19d18d55c973644f5c3f99ae3d442e6dbf3a724
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 12f86c0d4f8980cea375b9a0a8a6876510c795b0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575961"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716337"
 ---
 # <a name="inverted-lists"></a>반전된 목록
 

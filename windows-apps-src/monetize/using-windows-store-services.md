@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
 description: Microsoft Store는 특정 유형의 사용자 또는 사용자 조직의 파트너 센터 계정에 등록 된 앱에 대 한 데이터를 프로그래밍 방식으로 액세스 하기 위해 REST Api를 통해 호출할 수 있는 여러 서비스를 노출 합니다.
 title: Microsoft Store 서비스
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d13c5c9428a38dd212e59688d2b4b5eae187ea4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: af221b8962e0029dbd8686ffbf3f8a37f825e058
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571505"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713297"
 ---
 # <a name="microsoft-store-services"></a>Microsoft Store 서비스
 

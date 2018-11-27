@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: GLSL 포팅
 description: 버퍼 및 셰이더 개체를 만들고 구성하는 코드를 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, glsl, 포트
 ms.localizationpriority: medium
-ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554032"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713084"
 ---
 # <a name="port-the-glsl"></a>GLSL 포팅
 
@@ -60,7 +58,6 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 <a name="instructions"></a>지침
 ------------
-
 ### <a name="step-1-port-the-vertex-shader"></a>1단계: 꼭짓점 셰이더 포팅
 
 간단한 OpenGL ES 2.0 예제에서는 꼭짓점 셰이더에는 상수 model-view-projection 4x4 행렬 및 두 개의 4좌표 벡터라는 세 개의 입력이 있습니다. 이러한 두 벡터는 꼭짓점 위치 및 해당 색상을 포함합니다. 셰이더는 위치 벡터를 원근 좌표로 변환하고 래스터화를 위해 이를 gl\_Position 내장 항목에 할당합니다. 또한 꼭짓점 색상은 래스터화 중에 보간을 위해 다양한 변수에 복사됩니다.
@@ -160,10 +157,8 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
 [꼭짓점 버퍼 및 데이터 포팅](port-the-vertex-buffers-and-data-config.md) 다음 단계
 ---------
-
 [화면에 그리기](draw-to-the-screen.md) 설명
 -------
-
 HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 문제를 해결하고 최적화 기회를 이용할 수 있습니다. 기회가 되면 [변수 구문(HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Direct3D 11의 버퍼 소개](https://msdn.microsoft.com/library/windows/desktop/ff476898) 및 [방법: 상수 버퍼 만들기](https://msdn.microsoft.com/library/windows/desktop/ff476896)를 확인해 보세요. 그렇지 않은 경우 의미 체계 및 상수 버퍼에 대해 고려할 몇 가지 시작 팁이 있습니다.
 
 -   항상 렌더러의 Direct3D 구성 코드를 다시 확인하여 상수 버퍼의 구조가 HLSL의 상수 구조체 선언과 일치하고, 구성 요소 스칼라가 두 선언에서 일치하는지 확인합니다.

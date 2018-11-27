@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: ListView 및 GridView 데이터 가상화
 description: 데이터 가상화를 통해 ListView 및 GridView 성능과 시작 시간이 향상됩니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92b81c79eb1be9e21aa7c306ef31b0b3bb62e7d1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 411d19ba26dca1edff91fb7e5b432aa4da3bd120
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577425"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715521"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView 및 GridView 데이터 가상화
 

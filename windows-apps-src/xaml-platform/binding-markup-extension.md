@@ -1,20 +1,18 @@
 ---
-author: jwmsft
 description: Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인스턴스로 변환됩니다.
 title: Binding 태그 확장
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c35f8794cb77d7a05f2861e1d4d45023dc216129
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b197ea668ec73711b7a9c63e516b4ec9a5f54d62
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572645"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713989"
 ---
 # <a name="binding-markup-extension"></a>{Binding} 태그 확장
 

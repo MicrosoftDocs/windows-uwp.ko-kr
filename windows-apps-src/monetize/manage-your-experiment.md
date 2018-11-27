@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: After you define your experiment in Partner Center and code your experiment in your app, you are ready to active your experiment and use Partner Center to review the results of your experiment.
 title: 파트너 센터에서 실험 관리
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d1cdb80a2278850f18cecc631fef0b5dff0fefc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6e5c0d0ca1b1d771df2b224cc41ec5a37e267bc9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566145"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713550"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a>파트너 센터에서 실험 관리
 

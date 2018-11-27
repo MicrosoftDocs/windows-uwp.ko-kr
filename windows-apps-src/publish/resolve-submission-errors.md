@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: If you encounter errors after submitting your app to the Store, you must resolve them in order to continue the certification process.
 title: 제출 오류 해결
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ba47bdf964cab66182aadc6dafb0ae6d34c3ea7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9911323010f691d1fa59c35306a7173cd08a0faa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557266"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716055"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 

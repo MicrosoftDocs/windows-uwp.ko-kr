@@ -1,19 +1,17 @@
 ---
 title: Windows Hello 도우미(IoT) 장치에서 Windows 잠금 해제
 description: 'Windows Hello 도우미 장치는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. Windows Hello 도우미 장치 프레임워크를 사용하면 도우미 장치는 생체 인식을 사용할 수 없는 경우(예: Windows 10 데스크톱에 얼굴 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Windows Hello에 풍부한 환경을 제공할 수 있습니다.'
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bf1ae02a1c1937c02b6c750872dc784d28cd8e0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b33cf07ef10d0891f2747a06caf098b7d37b62f3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582153"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716731"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Windows Hello 도우미(IoT) 장치에서 Windows 잠금 해제
 

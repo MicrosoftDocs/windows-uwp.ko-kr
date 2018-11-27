@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: SD 카드에 액세스
 description: 중요하지 않은 데이터는 옵션인 microSD 카드에 저장하고 액세스할 수 있습니다. 특히 내부 저장 용량이 제한적인 저가대의 장치에서는 이 기능이 유용합니다.
-ms.author: lahugh
 ms.date: 03/08/2017
 ms.topic: article
 keywords: windows 10, uwp, sd 카드, 저장소
 ms.localizationpriority: medium
-ms.openlocfilehash: 498b43dc82100102c90fc7a920bed1538a164afc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ef97ed489f2dc35aece83821633a583dfba77e2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578509"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713074"
 ---
 # <a name="access-the-sd-card"></a>SD 카드에 액세스
 

@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 파일에 대한 기본 앱 시작
 description: 파일에 대한 기본 앱 시작 방법을 학습합니다.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
-ms.author: twhitney
 ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 736018fbf966b547c3dd41e245149d498c1231e3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f8e59ae5fb20ce8e1a900f7c1415a699715215e0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566155"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7712017"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>파일에 대한 기본 앱 시작
 

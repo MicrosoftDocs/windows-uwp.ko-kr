@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Extend the basic functionality of Cortana with voice commands that activate a UWP app and execute a single action.
 title: Cortana 조작
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
 template: detail.hbs
 keywords: Cortana, Cortana 캔버스, Cortana 디자인, 사용자 인터페이스, 음성 명령, VCD
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 67be6cacee3b0062118d51105eec9037dd29135b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cf8b8c095f96217375eb05d0128a31fc28ab47df
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577507"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715244"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a>UWP 앱에서 Cortana 조작
 

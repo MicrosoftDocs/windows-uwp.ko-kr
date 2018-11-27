@@ -1,9 +1,7 @@
 ---
-author: QuinnRadich
 Description: The Pivot control enables touch-swiping between a small set of content sections.
 title: 피벗
 template: detail.hbs
-ms.author: quradic
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,12 +10,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 386fba3cec00de6c443daa60409fe3bb74621fa1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 48aff6bd0b5f6ce955168bdc5faef67b7f43925e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577339"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713706"
 ---
 # <a name="pivot"></a>피벗
 

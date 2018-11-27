@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 렌더링 프레임워크 변환
 description: 기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 렌더링 프레임 워크, 변환, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575624"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713816"
 ---
 # <a name="convert-the-rendering-framework"></a>렌더링 프레임워크 변환
 

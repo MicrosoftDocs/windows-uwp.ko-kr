@@ -1,18 +1,16 @@
 ---
-author: eliotcowley
 title: 자기 띠 데이터 가져오기 및 이해
 description: 자기 띠에서 데이터를 해석 하는 방법에 알아봅니다.
-ms.author: elcowle
 ms.date: 10/04/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스, pos, 자기 띠 판독기의 지점
 ms.localizationpriority: medium
-ms.openlocfilehash: a130243fb5a77277e4e8a326316cd30bab2cd96e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1805213c7c30ccbc67fb96098f11480703589bb4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578256"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714289"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>자기 띠 데이터 가져오기 및 이해
 

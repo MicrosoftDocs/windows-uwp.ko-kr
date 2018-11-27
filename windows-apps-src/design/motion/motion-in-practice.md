@@ -1,10 +1,8 @@
 ---
-author: jwmsft
 Description: Learn how Fluent motion fundamentals come together in your app.
 title: 동작 중인 움직임 - UWP 앱의 애니메이션
 label: Motion in practice
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 889abda830d0721392d9a1b0dac17ea10c3e8604
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 355c760e173bd101b2865c300824de44b6434ee4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577249"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711924"
 ---
 # <a name="bringing-it-together"></a>통합
 

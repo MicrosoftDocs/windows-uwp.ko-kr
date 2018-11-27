@@ -1,18 +1,16 @@
 ---
-author: Mtoepke
 title: Xbox One에서 UWP 앱 개발 시작
 description: UWP 개발에 대해 PC 및 Xbox One을 설정하는 방법
-ms.author: scotmi
 ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4761b668877af6380ad176e56fb84410a4f509fc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4a8f217322d6d10b91ebc82c3434c88e9d11128f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579015"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711811"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Xbox One에서 UWP 앱 개발 시작
 

@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: NFC
 description: 이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱에 NFC를 통합하는 방법을 설명한 문서가 포함되어 있습니다.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.assetid: 15a113b5-8231-41c9-b724-ce5add813967
 ms.localizationpriority: medium
-ms.openlocfilehash: 01e8e5a94092312b953dd2a183cd6902a1df5505
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3f71cc75c0eca8564069c9f4ba634d9b42b63ee7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565594"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714328"
 ---
 # <a name="nfc"></a>NFC
 

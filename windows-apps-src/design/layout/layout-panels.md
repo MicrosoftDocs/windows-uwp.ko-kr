@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 Description: Use layout panels to arrange and group UI elements in your app.
 title: UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널
-ms.author: quradic
 ms.date: 04/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 623ca1484091f9f15b5a6dbedb85ed9d5149154e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 01fed50a00c26ca53b6ee703451f424811ba0e03
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568794"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714745"
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 

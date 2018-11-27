@@ -1,22 +1,20 @@
 ---
-author: PatrickFarley
 Description: Describes the structure of the 3D Manufacturing Format file type and how it can be created and manipulated with the Windows.Graphics.Printing3D API.
 MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: 3MF 패키지 생성
 ms.assetid: 968d918e-ec02-42b5-b50f-7c175cc7921b
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d7acfdb6312770f51d8870549218344ad8c4330
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ac71b1fd876c5fec67bcdc292f407a04211de88c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714373"
 ---
 # <a name="generate-a-3mf-package"></a>3MF 패키지 생성
 
