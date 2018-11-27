@@ -4,17 +4,15 @@ description: 스트리밍 리소스 텍스처 샘플링 기능에는 매핑된 �
 ms.assetid: C2B2DD69-8354-417A-894D-6235A8B48B53
 keywords:
 - 스트리밍 리소스 텍스처 샘플링 기능
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0066d38aaa3f5802ff5b1d380d405e60d90cad49
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8b6290fba9d4194df78c39902b8d96e952134682
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558162"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718401"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>스트리밍 리소스 텍스처 샘플링 기능
 

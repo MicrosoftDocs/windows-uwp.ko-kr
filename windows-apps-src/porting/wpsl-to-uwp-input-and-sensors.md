@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다.
 title: I/O, 디바이스 및 앱 모델에 대 한 WindowsPhone Silverlight를 UWP로 포팅 '
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a0041fd154a4ce32930e10e21175706e8e7ad988
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559815"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717520"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대 한 WindowsPhone Silverlight를 UWP로 포팅
 

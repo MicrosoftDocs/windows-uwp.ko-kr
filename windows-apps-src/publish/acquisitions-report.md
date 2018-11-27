@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Acquisitions report in Partner Center lets you see who has acquired and installed your app, along with demographic and platform details.
 title: 구입 보고서
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 구매, 앱 판매, 앱 다운로드, 설치, 깔때기, 획득, 변환, 채널, 앱 페이지 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: bbd84b32a4e94687ff50f553137a86885094a7d6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 33d5885c5161793807bf32f62ff2df4bab5b2c1d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569146"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716849"
 ---
 # <a name="acquisitions-report"></a>구입 보고서
 

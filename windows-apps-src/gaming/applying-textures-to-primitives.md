@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 기본 요소에 텍스처 적용
 description: 여기에서는 원형에 깊이 및 효과 사용에서 만든 큐브를 사용해 원시 텍스처 데이터를 로드하고 3D 원형에 적용합니다.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 텍스처, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 252613bbea7f4cdb720758d3435cf0920dd93efa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 437c861e6d3017d83b520732dd0e279d882835c5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577747"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717656"
 ---
 # <a name="apply-textures-to-primitives"></a>기본 요소에 텍스처 적용
 
@@ -34,7 +32,6 @@ ms.locfileid: "7577747"
 
 <a name="instructions"></a>지침
 ------------
-
 ### <a name="1-defining-variables-for-a-textured-cube"></a>1. 텍스처 처리된 큐브용 변수 정의
 
 먼저 텍스처 처리된 큐브에 대해 **BasicVertex** 및 **ConstantBuffer** 구조를 정의해야 합니다. 이러한 구조는 큐브에 대한 꼭짓점 위치, 방향 및 텍스처를 지정하고 큐브를 보는 방법도 지정합니다. 그렇지 않으면 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서와 유사한 변수를 선언합니다.

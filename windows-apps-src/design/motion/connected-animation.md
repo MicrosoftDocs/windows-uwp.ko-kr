@@ -1,9 +1,7 @@
 ---
-author: mijacobs
 description: 연결된 애니메이션을 사용하면 두 가지 보기 간에 전환되는 동작에 애니메이션 효과를 적용하여 역동적이고 매력적인 탐색 환경을 만들 수 있습니다.
 title: 연결된 애니메이션
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 10/04/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -11,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 51cf9dd0d28590d86bf05cc16634e465e260626c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ce639faac66e93b65a398e6d9cdc700546fc68ab
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554598"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7717819"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>UWP 앱에 대한 연결된 애니메이션
 

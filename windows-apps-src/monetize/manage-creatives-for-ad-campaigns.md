@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: c5246681-82c7-44df-87e1-a84a926e6496
 description: Microsoft Store 프로모션 API에서 이 메서드를 사용하여 홍보용 광고 캠페인 크리에이티브를 관리합니다.
 title: 크리에이티브 관리
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 97a7ac89585cbcf7a4609aee16978d36be027a24
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572952"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718053"
 ---
 # <a name="manage-creatives"></a>크리에이티브 관리
 

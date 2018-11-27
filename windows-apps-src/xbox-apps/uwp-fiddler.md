@@ -1,19 +1,17 @@
 ---
-author: WilliamsJason
 title: UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법
 description: 프리웨어 Fiddler 도구를 사용하여 UWP Xbox One 개발 키트의 네트워크 트래픽을 확인하는 방법을 설명합니다.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b0c91c2e7fa6e3076e53b0d3ae2e8d3713c81c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c27891b47bb9f7774799c912cc6f4cae3cea92bc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558048"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7717739"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법
 
@@ -74,7 +72,7 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
 2. **사용 안 함**을 클릭합니다.
 
 > [!NOTE]
-> Fiddler가 설치된 각 PC마다 다른 Fiddler 루트 인증서를 사용합니다. 개발 키트용 Fiddler 프록시를 제공하는 데 사용되는 PC가 두 대 이상인 경우 두 PC 간에 전환할 때 새 루트 인증서를 선택해야 합니다. If you are using only one PC, you need to select the root certificate only the first time you enable Fiddler. IP 주소 및 포트는 여전히 지정해야 합니다.
+> Fiddler가 설치된 각 PC마다 다른 Fiddler 루트 인증서를 사용합니다. 개발 키트용 Fiddler 프록시를 제공하는 데 사용되는 PC가 두 대 이상인 경우 두 PC 간에 전환할 때 새 루트 인증서를 선택해야 합니다. PC를 한 대만 사용하는 경우 Fiddler를 처음 사용할 때만 루트 인증서를 선택하면 됩니다. IP 주소 및 포트는 여전히 지정해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 - [Fiddler 설정 API 참조](wdp-fiddler-api.md)

@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 88132B6F-FB50-4B03-BC21-233988746230
 title: 인쇄 미리 보기 UI 사용자 지정
 description: 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 71fb45842e8aaa4200e2597ac0736d911ac9bf34
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570787"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718524"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 

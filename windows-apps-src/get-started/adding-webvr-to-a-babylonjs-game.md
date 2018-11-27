@@ -1,18 +1,16 @@
 ---
 title: 3D Babylon.js 게임에 WebVR 지원 추가
 description: 기존 3D Babylon.js 게임에 WebVR 지원을 추가 하는 방법을 알아봅니다.
-author: abbycar
-ms.author: abigailc
 ms.date: 11/29/2017
 ms.topic: article
 keywords: webvr, edge, 웹 개발, babylon, babylonjs, babylon.js, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 72681c3f91fc2dcbfcc4e4531359d6d668e18b80
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3e2081f0dbe163dcbcf35d83ea111caf573dacfb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553268"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718348"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>3D Babylon.js 게임에 WebVR 지원 추가
 

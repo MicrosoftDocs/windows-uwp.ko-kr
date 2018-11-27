@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: 레이싱 휠 및 힘 피드백
 description: Windows.Gaming.Input 레이싱 휠 API를 사용하여 여러 기능의 감지와 확인, 레이싱 휠에 대한 힘 피드백 명령 읽기와 보내기 작업을 수행할 수 있습니다.
 ms.assetid: 6287D87F-6F2E-4B67-9E82-3D6E51CBAFF9
-ms.author: wdg-dev-content
 ms.date: 05/09/2018
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 레이싱 휠, 힘 피드백
 ms.localizationpriority: medium
-ms.openlocfilehash: 20b4b35bb729ee49dbfd3f2b2b2a029a4319521c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 90d12caca103648824ceb36a4ca4968754beb7f2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579131"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717882"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>레이싱 휠 및 힘 피드백
 

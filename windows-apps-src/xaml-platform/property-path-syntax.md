@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: PropertyPath 클래스 및 문자열 구문을 사용하여 XAML이나 코드에서 PropertyPath 값을 인스턴스화할 수 있습니다.
 title: 속성 경로 구문
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a94782165027c2194f677dfdbb9f2dec11541080
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f0f49792a92010f97c8388540fd63c38eed5f75e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574094"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717716"
 ---
 # <a name="property-path-syntax"></a>속성 경로 구문
 

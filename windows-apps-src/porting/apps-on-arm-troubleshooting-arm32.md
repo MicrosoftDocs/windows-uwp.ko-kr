@@ -1,18 +1,16 @@
 ---
 title: ARM32 UWP 앱 문제 해결
-author: msatranjr
 description: ARM을 기반으로 실행되는 경우 ARM32 앱 관련 일반적인 문제 및 이를 해결하는 방법.
-ms.author: misatran
 ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, ARM 기반 ARM32 앱, ARM 기반 Windows 10, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 4eaeccb8b4003bb835ee4700d1df57cd8cefcda0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6858f9add2430dc83d468b98d4147cc205dd372e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553281"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716347"
 ---
 # <a name="troubleshooting-arm32-uwp-apps"></a>ARM32 UWP 앱 문제 해결
 >[!IMPORTANT]

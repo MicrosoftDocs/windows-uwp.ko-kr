@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 96C090C1-88F8-42E7-AED1-AFA9031E952B
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 앱 제출을 삭제합니다.
 title: 앱 제출 삭제
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출, 삭제
 ms.localizationpriority: medium
-ms.openlocfilehash: da2533eb8b6e45e4426a1d25931638466547e01b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5d582f79d57fb8b3648d8c872f700d998a2fec1a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570416"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718146"
 ---
 # <a name="delete-an-app-submission"></a>앱 제출 삭제
 

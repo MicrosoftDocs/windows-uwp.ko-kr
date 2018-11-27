@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
 description: Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다.
 title: Visual Studio에서 프로젝트 만들기
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b10d615146c8989231c4fe36ad9588716c59c34
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b6ea9fdf2e504e1ceee71658eab308751e1745c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566340"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716937"
 ---
 # <a name="getting-started-creating-a-project"></a>시작: 프로젝트 만들기
 

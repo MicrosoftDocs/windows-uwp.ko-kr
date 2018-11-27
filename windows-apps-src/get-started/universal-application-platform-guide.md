@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: UWP(유니버설 Windows 플랫폼) 앱이란?
 description: 이 가이드에서는 Windows 10을 실행하는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
-ms.author: twhitney
 ms.date: 5/7/2018
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: a687aa7ed1115692f765e516dc8c8b15504b709e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c174bb81deb84d3638a948555e045168c89f02a7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576874"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717779"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 

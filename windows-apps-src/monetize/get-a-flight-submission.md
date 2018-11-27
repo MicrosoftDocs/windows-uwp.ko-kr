@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다.
 title: 패키지 플라이트 제출 가져오기
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: f9f40219503c0a57f76fcee81858acf51f59b1df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7fcbdaa90f09ba1a813612d6104268c4930c9a6d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562502"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718275"
 ---
 # <a name="get-a-package-flight-submission"></a>패키지 플라이트 제출 가져오기
 

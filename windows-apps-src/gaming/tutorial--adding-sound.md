@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: 소리 추가
 description: XAudio2 Api를 사용 하 여 재생 게임 음악 및 사운드 효과 간단한 사운드 엔진을 개발 합니다.
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 사운드
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d1c95fe883cf2517855a3b6f1c4dfc6c9b6dd9a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 94044e3d10df15cb1cb256d86ced798395e6af6f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568043"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717859"
 ---
 # <a name="add-sound"></a>소리 추가
 

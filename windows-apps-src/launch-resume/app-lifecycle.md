@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Windows10 UWP 앱 수명 주기
 description: 이 항목에서는 활성화된 시점부터 닫힐 때까지의 Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기에 대해 설명합니다.
 keywords: 앱 수명 주기 일시 중단됨 다시 시작 실행 활성화
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
-ms.author: twhitney
 ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574283"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718431"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
 

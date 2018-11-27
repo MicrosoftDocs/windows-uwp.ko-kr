@@ -1,11 +1,9 @@
 ---
-author: Jwmsft
 Description: Use a tooltip to reveal more info about a control before asking the user to perform an action.
 title: 도구 설명
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10 uwp
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 87001cb99a7d5cb1a150bceed3f6c9ba187caa94
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 651914cfb2abd4326c6ac6295f10ad359925d465
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568149"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716196"
 ---
 # <a name="tooltips"></a>도구 설명
 

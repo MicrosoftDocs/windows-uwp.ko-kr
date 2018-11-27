@@ -2,18 +2,16 @@
 title: Windows Hello 로그인 서비스 만들기
 description: 이제 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존 사용자 이름 및 암호 인증 시스템의 대안으로 Windows Hello를 사용하는 방법을 안내해드리는 전체 과정의 제2부를 시작하겠습니다.
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
-author: PatrickFarley
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 839d44c992977fdad8863203b84116b2faeba76d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: de4d8fc797efe2a0dde7340f42208a97bccf0b10
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556397"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717092"
 ---
 # <a name="create-a-windows-hello-login-service"></a>Windows Hello 로그인 서비스 만들기
 

@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: 게임 컨트롤러의 레지스트리 데이터
 description: 컨트롤러를 UWP 게임에 사용할 수 있도록 PC의 레지스트리에 추가할 수 있는 데이터에 대해 알아보세요.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
-ms.author: wdg-dev-content
 ms.date: 06/25/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 레지스트리, 사용자 지정
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bbd4074c52514b9cb66fd6f2dd189421f61d5ee
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3d30c19a7fd7641d76e810912d33a96dbbeb3132
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577047"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717924"
 ---
 # <a name="registry-data-for-game-controllers"></a>게임 컨트롤러의 레지스트리 데이터
 

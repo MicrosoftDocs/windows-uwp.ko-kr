@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: C++/WinRT 사용 속도를 높이기 위해 이 항목은 단순한 코드 예제를 안내합니다.
 title: C++/WinRT 시작
-ms.author: stwhi
 ms.date: 10/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cb8e18904f61976103689c8d83475ec248eb38b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cc98f61acc3b5dccdc4869b646337fdf9a6e701a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570971"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716232"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 

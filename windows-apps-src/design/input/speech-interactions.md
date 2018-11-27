@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Incorporate speech into your apps using Cortana voice commands, speech recognition, and speech synthesis.
 title: 음성 조작
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
 keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4006cdedffdbc601b498ce64caddfdefcbf4877a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dfd829881892eece08c30fcd665bdf21a1f43471
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566474"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717869"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -213,7 +211,7 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 | [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md) | 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다. |
 | [연속 받아쓰기 사용](enable-continuous-dictation.md) |긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다. |
 | [오디오 입력 관련 문제 관리](manage-issues-with-audio-input.md) | 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다. |
-| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input. |
+| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다. |
 
 ## <a name="related-articles"></a>관련 문서
 

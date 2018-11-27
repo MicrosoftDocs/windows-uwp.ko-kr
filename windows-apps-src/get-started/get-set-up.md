@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: 설정 방법
 description: 생각보다 쉽게 설정할 수 있습니다. 다음이 지침에 따라 하 고 Windows10에 대 한 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 시작 합니다.
-ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18fd4d481d30eda68acaf4e48e4d1c1bf4ed7d24
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f3d14467856aee733f2e11d057db0deb873269ff
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576427"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716794"
 ---
 # <a name="get-set-up"></a>설정 방법
 

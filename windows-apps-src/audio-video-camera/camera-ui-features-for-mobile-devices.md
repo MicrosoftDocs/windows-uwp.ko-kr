@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: c43d4af3-9a1a-4eae-a137-1267c293c1b5
 description: 이 문서에서는 모바일 디바이스에만 존재하는 특수한 카메라 UI 기능을 활용하는 방법을 보여 줍니다.
 title: 모바일 장치용 카메라 UI 기능
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 062ca589b2a63db1f56ada4e2df4f99bc7f8b0fb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1bf27de9c9b1bce2b35918b2a9d1357d2f3ba20b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576111"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716571"
 ---
 #<a name="camera-ui-features-for-mobile-devices"></a>모바일 장치용 카메라 UI 기능
 

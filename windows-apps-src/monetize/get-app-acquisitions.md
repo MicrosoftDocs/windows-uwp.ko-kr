@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 취득 데이터를 가져옵니다.
 title: 앱 집계 정보 가져오기
-ms.author: mhopkins
 ms.date: 03/23/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 앱 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c2e972b46c830dd6c9ea778e525f0abceda3e99
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4ef5c9cedcb828f6c7df8a294fc4aad87e9f74ae
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562592"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718318"
 ---
 # <a name="get-app-acquisitions"></a>앱 집계 정보 가져오기
 

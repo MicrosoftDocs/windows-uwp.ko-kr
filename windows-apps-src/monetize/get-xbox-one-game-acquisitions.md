@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 조건에서 Xbox One 게임의 집계 취득 데이터를 가져옵니다.
 title: Xbox One 게임 취득 가져오기
-ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox One 게임 취득
 ms.localizationpriority: medium
-ms.openlocfilehash: 200f18e443e8a130a7e5c673b03c146b73c9083b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 348430f7ceee66a9c4e82f258a70e57d8f344943
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559513"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717898"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Xbox One 게임 취득 가져오기
 

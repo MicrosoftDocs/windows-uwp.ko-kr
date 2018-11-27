@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: 선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 유니버설 8.1 앱에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다.
 title: Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b5a3425c49a30ddb96fcb7a8a2c8b83fbb6dff3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5ddeee438e946dd28a78d59d163f59cb1114aa65
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568461"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717839"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 

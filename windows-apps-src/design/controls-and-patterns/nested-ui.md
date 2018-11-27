@@ -1,10 +1,8 @@
 ---
-author: muhsinking
 Description: Use nested UI to enable multiple actions on a list item
 title: 목록 항목의 중첩된 UI
 label: Nested UI in list items
 template: detail.hbs
-ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, uwp
@@ -13,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f9bb6daeb01e264cf9cdb0fa9ee9c66738fec972
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8edb38b8ae91d836e283a8eb37830850bf504db4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564113"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718554"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 

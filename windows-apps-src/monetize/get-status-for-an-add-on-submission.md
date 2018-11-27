@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 55315F38-6EC5-4889-A14E-7D8EC282FE98
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 추가 기능 제출의 상태를 가져옵니다.
 title: 추가 기능 제출 상태 가져오기
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 상태
 ms.localizationpriority: medium
-ms.openlocfilehash: e2013a081898dbf46958190da1df01adaac9d820
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1bfec8232fe8e410e65997098954e35d3f5fdc1b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564858"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718235"
 ---
 # <a name="get-the-status-of-an-add-on-submission"></a>추가 기능 제출 상태 가져오기
 

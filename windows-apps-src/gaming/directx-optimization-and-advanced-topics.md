@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: DirectX 게임에 대한 최적화 및 고급 항목
 description: DirectX 게임 프로그래밍에 대한 최적화 및 고급 항목입니다.
 ms.assetid: b5f29fb2-3bcf-43b2-9a68-f8819473bf62
-ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 최적화, 다중 샘플링, 스왑 체인
 ms.localizationpriority: medium
-ms.openlocfilehash: e1a9b16dcf8c40c2b1db4af172d97009563e677a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9618a35ecd8f9d1a37b627494c0f00a5ed84806
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567459"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717540"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>DirectX 게임에 대한 최적화 및 고급 항목
 

@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: 이 항목에서는 C++/WinRT를 통해 Windows 런타임 비동기 개체를 생성하고 사용하는 방법에 대해서 설명합니다.
 title: C++/WinRT로 동시성 및 비동기 작업
-ms.author: stwhi
 ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기식, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 18eddbc9356f126e887ae2731ea87381352ea061
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5f49d630d20c9f21f67baa4824b2d52ae3bcb446
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574741"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716370"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT로 동시성 및 비동기 작업
 

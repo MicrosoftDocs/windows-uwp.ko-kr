@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: ''
 description: 이 문서에서는 MediaFrameReader 클래스와 함께 OpenCV(오픈 소스 컴퓨터 비전 라이브러리)를 사용하는 방법을 설명합니다.
 title: MediaFrameReader와 함께 OpenCV 사용
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b139d0b8747931f7cac9885d441122af97f7dad
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a603899776879cb7c8dc2439c3c22906db0b8038
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554909"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7716551"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader와 OpenCV(오픈 소스 컴퓨터 비전 라이브러리) 사용
 

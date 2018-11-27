@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 셰이더 및 그리기 기본 요소 만들기
 description: 여기에서는 HLSL 소스 파일을 사용해 셰이더를 컴파일하고 만드는 방법을 설명합니다. 이 셰이더를 사용하면 디스플레이에 원형을 그릴 수 있습니다.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 셰이더, 기본 형식, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 475a69837796b0b64be27c96f10b42d5b61390c1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5173adc26e0730ccb80f93fe0c12af286b0c1a49
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558431"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717686"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a>셰이더 및 그리기 기본 요소 만들기
 

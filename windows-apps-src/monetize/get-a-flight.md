@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 87708690-079A-443D-807E-D2BF9F614DDF
 description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱을 위한 패키지 플라이트의 데이터를 가져옵니다.
 title: 패키지 플라이트 가져오기
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 09fd5c703e4a601ad28a05156aec9133444cfd9e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c4ff6c929a7264b5dece0057701c8348fe5d39be
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568202"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717973"
 ---
 # <a name="get-a-package-flight"></a>패키지 플라이트 가져오기
 

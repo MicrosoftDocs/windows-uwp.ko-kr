@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: As you submit your app, you have the option to use the Notes for certification page to provide additional info to the certification testers. This info can help ensure that your app is tested correctly.
 title: 인증에 대한 참고 사항
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10 UWP, 테스터에 대한 노트
 ms.localizationpriority: medium
-ms.openlocfilehash: ab3ba2eb08c01bac3b9c0536ce11b8e2bea96054
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d47933ac3482f610fb8fe28b7fb52238ac7ca294
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554424"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717789"
 ---
 # <a name="notes-for-certification"></a>인증에 대한 참고 사항
 

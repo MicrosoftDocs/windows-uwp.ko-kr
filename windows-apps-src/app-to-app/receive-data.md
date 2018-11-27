@@ -2,18 +2,16 @@
 description: 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP(유니버설 Windows 플랫폼) 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다.
 title: 데이터 수신
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d64e4a2d4251aca6bbce39b5f24e3e5f35295b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e17b9ddd5833899a83e24d24c74f9c620a28f5c8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563274"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716751"
 ---
 # <a name="receive-data"></a>데이터 수신
 

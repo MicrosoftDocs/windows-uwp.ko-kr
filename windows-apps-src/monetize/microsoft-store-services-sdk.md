@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: The Microsoft Store Services SDK provides libraries and tools that you can use to add features to your apps that help you make more money and gain customers.
 title: Microsoft Store Services SDK를 사용하여 고객과 소통
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
-ms.author: mhopkins
 ms.date: 08/21/2017
 ms.topic: article
 keywords: Windows 10, uwp, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: b5f29062e00701f578b63f79935d17b1203afc0f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8394a1a44173541e8982a660591e84b25b985205
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567519"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718454"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Microsoft Store Services SDK를 사용하여 고객과 소통
 

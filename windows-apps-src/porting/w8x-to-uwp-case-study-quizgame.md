@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: 이 항목에서는 작동 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows10 유니버설 Windows 플랫폼 (UWP) 앱으로 포팅하는 사례 연구를 제공 합니다.
 title: Windows 런타임 8.x에서 UWP로 이동 사례 연구, QuizGame 피어 투 피어 샘플 앱
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 69aae85f4e0bb01833114ae5b2cbfab45e9dd84d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ce39e87f3c5c9e11f3e9ddb1424d606356ee3c8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568003"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717477"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows 런타임 8.x에서 UWP 사례 연구: QuizGame 샘플 앱
 

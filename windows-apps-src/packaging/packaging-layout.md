@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: 패키징 레이아웃으로 패키지 만들기
 description: 패키징 레이아웃은 앱 패키징 구조를 설명하는 단일 문서입니다. 앱(기본 및 선택)의 번들, 번들의 패키지, 패키지의 파일을 지정합니다.
-ms.author: lahugh
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 9342b4ce35cb50037813ed2210e2d7246411ad92
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3e54b74cf3052fdeb5b70cc90f59ab0ea59aef76
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574940"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718381"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>패키징 레이아웃으로 패키지 만들기  
 

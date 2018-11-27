@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 9F0A59A1-FAD7-4AD5-B78B-C1280F215D23
 description: Microsoft Store 대상 제품 API를 사용하여 앱의 현재 사용자가 사용할 수 있는 대상 제품을 가져옵니다.
 title: 스토어 서비스를 사용하여 대상 제품 관리
-ms.author: mhopkins
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품
 ms.localizationpriority: medium
-ms.openlocfilehash: dbfefefdb7f7b96dbe99b35656b610b393ab3afa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576547"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718514"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>스토어 서비스를 사용하여 대상 제품 관리
 

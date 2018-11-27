@@ -1,23 +1,21 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Learn how accelerator keys can improve the usability and accessibility of UWP apps.
 title: 바로 가기 키
 label: Keyboard accelerators
 template: detail.hbs
 keywords: 키보드, 바로 가기, 바로 가기 키, 키보드 바로 가기 키, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 조작, 게임 패드, 원격
-ms.author: kbridge
 ms.date: 10/10/2017
 ms.topic: article
 pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: dcbb27a87b48a124fe4463578bc32d908f399ccb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567133"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717646"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
