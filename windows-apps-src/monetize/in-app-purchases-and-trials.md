@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: UWP 앱에서 ‘앱에서 바로 구매’ 및 평가판을 사용하도록 설정하는 방법을 알아봅니다.
 title: 앱에서 바로 구매 및 평가판
-ms.author: mhopkins
 ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c1c4ea1923ff81754b9c8ed8328ba6ec670a3f1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566207"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718328"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱 내 구매 및 평가판
 

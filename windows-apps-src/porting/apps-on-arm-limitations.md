@@ -1,19 +1,17 @@
 ---
 title: ARM의 앱 및 환경 제한
-author: msatranjr
 description: ARM에서 제대로 작동하지 않는 앱에 대한 문제 해결 단계입니다.
-ms.author: misatran
 ms.date: 02/15/2018
 ms.topic: article
 keywords: Windows 10 s, 항상 연결, 제한, ARM 기반 Windows10
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: 24afc8a876b976f21d0f4ebd5892ceef7c403018
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5fa05e1dfd04208ba547a692473fc3df136e6e4f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580829"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716255"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>ARM의 앱 및 환경 제한
 ARM 기반 Windows10은 다음과 같은 필수 제한 사항이 있습니다.

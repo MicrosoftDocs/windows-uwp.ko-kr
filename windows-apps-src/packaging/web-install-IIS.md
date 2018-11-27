@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: IIS 서버에서 UWP 앱 설치
 description: 이 자습서에서는 웹 앱 수 있는 앱 패키지를 호스트할 호출 및 확인 효과적으로 앱 설치 관리자를 사용 하 여 IIS 서버를 설정 하는 방법에 설명 합니다.
-ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 앱 설치 관리자, AppInstaller, 사이드 로드, 관련 IIS 서버 설정, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 2898a3450f75379492bae1ade5c85581cc8e5a4e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b447093ba54f2c979d35793a6a4eaa7538ee4892
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575637"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716953"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>IIS 서버에서 UWP 앱 설치
 

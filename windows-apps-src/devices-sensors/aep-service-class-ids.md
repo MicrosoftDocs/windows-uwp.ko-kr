@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: AEP 서비스 클래스 ID
 description: AEP(연결 끝점) 서비스는 디바이스에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다.
-ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f103ee3c281ca95abcaee76cdc6f88b74a49eb1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: faa9e3f8936e8650af905678ce7434c4b9967be0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568391"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718371"
 ---
 # <a name="aep-service-class-ids"></a>AEP 서비스 클래스 ID
 

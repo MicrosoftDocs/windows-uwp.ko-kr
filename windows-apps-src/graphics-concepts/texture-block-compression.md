@@ -4,17 +4,15 @@ description: Direct3D 11에서 텍스처에 대한 블록 압축(BC) 지원 기�
 ms.assetid: 63506C46-BF14-464B-B20C-8B8F359E7AFE
 keywords:
 - 텍스처 블록 압축
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 46c58da3dbe425b055855423aa9e9cebaa06f929
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dec33768eff90b9bd35a3ea60f3158fce663345e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575225"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716278"
 ---
 # <a name="texture-block-compression"></a>텍스처 블록 압축
 

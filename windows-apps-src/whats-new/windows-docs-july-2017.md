@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: 2017년 7월 Windows 문서의 새로운 내용 - UWP 앱 개발
 description: 2017년 7월 Windows 10 개발자 설명서에 추가된 새로운 기능, 샘플 및 개발자 지침
 keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10
-ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dd00d1aba0e6a58cd2128c90b2c7f714d3f8f802
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579541"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717353"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
 
