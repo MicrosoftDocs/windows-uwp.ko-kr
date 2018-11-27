@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
 description: Windows 응용 프로그램 배포 (WinAppDeployCmd.exe)는 모든 Windows10 장치 Windows10 PC에서 유니버설 Windows 플랫폼 (UWP) 앱을 배포 하는 데 사용할 수 있는 명령줄 도구입니다.
-ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 13468ce3b74992c026d94223b5e67aea99d79991
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ec673236f41d4128e6aa5702f4d54f43c55890ab
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570376"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707818"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>WinAppDeployCmd.exe 도구를 사용하여 앱 설치
 

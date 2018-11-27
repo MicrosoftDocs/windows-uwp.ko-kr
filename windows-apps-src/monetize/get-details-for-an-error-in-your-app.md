@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 앱의 특정 오류에 대한 자세한 데이터를 가져올 수 있습니다.
 title: 앱에서 오류에 대한 세부 정보 가져오기
-ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: e947314da1309c3f31af292bc70addbad8b0d4d9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5176e123d57b8bcc5d4981acc91b22329ad4c643
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566043"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702957"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>앱에서 오류에 대한 세부 정보 가져오기
 

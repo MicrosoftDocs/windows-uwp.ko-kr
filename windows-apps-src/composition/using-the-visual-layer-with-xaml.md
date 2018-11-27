@@ -1,19 +1,17 @@
 ---
-author: jaster
 ms.assetid: b7a4ac8a-d91e-461b-a060-cc6fcea8e778
 title: XAML로 시각적 계층 사용
 description: 시각적 계층 API를 기존 XAML 콘텐츠와 함께 사용하여 고급 애니메이션 및 효과를 만드는 기술을 알아봅니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f25cda10d5fde88bbe2cff75406cc0454780a5b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ae9bc0f6d53181a88b02ecda19b3aed745febe40
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569879"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706193"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>시각적 계층을 XAML과 함께 사용
 

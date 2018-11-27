@@ -1,19 +1,17 @@
 ---
-author: JnHs
 description: Windows 앱에서 실행되는 앱용 광고 캠페인을 만드는 것 외에 다른 채널을 사용하여 앱을 홍보할 수도 있습니다.
 title: 사용자 지정 앱 홍보 캠페인 만들기
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 사용자 지정, 앱, 홍보, 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578818"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704620"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 

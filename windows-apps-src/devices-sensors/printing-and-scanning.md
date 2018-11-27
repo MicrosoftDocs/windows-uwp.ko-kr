@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
 title: 인쇄 및 스캔
 description: 이 섹션에서는 유니버설 Windows 앱에서 인쇄 및 스캔하는 방법을 설명합니다.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 인쇄, 3dprinting, 3d 인쇄
 ms.localizationpriority: medium
-ms.openlocfilehash: 51afa49dac094bdd203e080c682e681f752d15e4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5cfc91ae6f74117c6c3414691137b334cfd0dc4f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580291"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704534"
 ---
 # <a name="printing-and-scanning"></a>인쇄 및 스캔
 

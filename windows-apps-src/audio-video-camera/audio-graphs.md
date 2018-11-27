@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
 description: 이 문서에서는 Windows.Media.Audio 네임스페이스의 API를 사용하여 오디오 라우팅, 믹싱 및 처리 시나리오에 대한 오디오 그래프를 만드는 방법을 보여 줍니다.
 title: 오디오 그래프
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cdd1548a4d120027afd06a178cc338c88cb5cc4b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0211e451c3e700da34d24e39a5045f9e046020a8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565882"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701206"
 ---
 # <a name="audio-graphs"></a>오디오 그래프
 

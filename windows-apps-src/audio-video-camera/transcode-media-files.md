@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
 description: 동영상 파일을 한 형식에서 다른 형식으로 코드 변환하려면 Windows.Media.Transcoding API를 사용할 수 있습니다.
 title: 미디어 파일 코드 변환
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: babf91e681004942bb3b66eb43622742fa183125
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1a6eb19ca5954b3ce71ecbaefe3339bee78f8717
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573177"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706413"
 ---
 # <a name="transcode-media-files"></a>미디어 파일 코드 변환
 

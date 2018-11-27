@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: 웹 페이지에서 UWP 앱 설치
 description: 이 섹션에서는 사용자가 웹 페이지에서 직접 앱을 설치할 수 있도록 하기 위해 필요한 단계를 검토합니다.
-ms.author: lahugh
 ms.date: 11/16/2017
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지
 ms.localizationpriority: medium
-ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 515beebd55049ecb4d0c6747fa7d37e76577ef7f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582203"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708123"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>웹 페이지에서 UWP 앱 설치
 

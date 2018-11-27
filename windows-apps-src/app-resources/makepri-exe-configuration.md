@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: This topic describes the schema of the MakePri.exe XML configuration file.
 title: MakePri.exe 구성 파일
 template: detail.hbs
-ms.author: stwhi
 ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 3becb43fb1f173926ce4873aa61368f095bef5d4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ef0e8834310e77084c0bb4a8aad22786a89fb312
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563370"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701183"
 ---
 # <a name="makepriexe-configuration-file"></a>MakePri.exe 구성 파일
 

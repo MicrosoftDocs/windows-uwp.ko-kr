@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: XAML 항목에 효과적으로 바인딩되는 컬렉션은 *관찰 가능한* 컬렉션으로 알려져 있습니다. 이번 항목에서는 관찰 가능한 컬렉션을 구현하여 사용하는 방법과 XAML 항목에 바인딩하는 방법에 대해서 설명합니다.
 title: XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: f9d9d6a2aafe1b81ff331bac92662b111eb48956
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9df7c96549254ab8318fd9a7c8224c6e87701747
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578652"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705689"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML 항목 컨트롤, C++/WinRT 컬렉션 바인딩
 

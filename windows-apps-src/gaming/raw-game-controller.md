@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: 원시 게임 컨트롤러
 description: Windows.Gaming.Input 원시 게임 컨트롤러 API를 사용하여 거의 모든 유형의 게임 컨트롤러 입력을 읽을 수 있습니다.
 ms.assetid: 2A466C16-1F51-4D8D-AD13-704B6D3C7BEC
-ms.author: wdg-dev-content
 ms.date: 03/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 입력, 원시 게임 컨트롤러
 ms.localizationpriority: medium
-ms.openlocfilehash: c57db3f9604e20d0dc83d6c3cf2ced87b1f5dcc1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7b5f4d49ad49cf9f9065fe17788456e9dd2a4a4e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577899"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702604"
 ---
 # <a name="raw-game-controller"></a>원시 게임 컨트롤러
 

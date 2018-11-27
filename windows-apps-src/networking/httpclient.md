@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: HttpClient와 Windows.Web.Http 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c874c690826dfa74b8dcb2312204cd549db3db2b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 706432123d8a778af558d0c3e426ad4f5120bdba
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567943"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703187"
 ---
 # <a name="httpclient"></a>HttpClient
 

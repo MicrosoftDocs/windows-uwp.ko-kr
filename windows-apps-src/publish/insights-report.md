@@ -1,18 +1,16 @@
 ---
-author: jnHs
 Description: The Insights report in Partner Center highlights significant changes about your apps.
 title: 인사이트 보고서
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 통찰력, 추세, 예외, 변칙, 데이터 변경
 ms.localizationpriority: medium
-ms.openlocfilehash: 324666095c26eb8d05732ce7e1ad3217b210d406
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 95cb43c45731c88ec758806aef91c3d7d8f36ad6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573958"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702564"
 ---
 # <a name="insights-report"></a>인사이트 보고서
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: 게임 루프 포팅
 description: IFrameworkView를 작성하여 전체 화면 CoreWindow를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다.
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563736"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707617"
 ---
 # <a name="port-the-game-loop"></a>게임 루프 포팅
 

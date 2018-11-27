@@ -4,17 +4,15 @@ description: 리소스는 3D 파이프라인에서 사용하는 데이터의 모
 ms.assetid: 6BAD6287-2930-42F8-BF51-69A379D1D2C3
 keywords:
 - 리소스 선택
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ddac5d69ce0c562129255832adfc49380946510
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ccc99395dba2f2d1894db81fb48abb59f9a8ba4f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561677"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705257"
 ---
 # <a name="choosing-a-resource"></a>리소스 선택
 

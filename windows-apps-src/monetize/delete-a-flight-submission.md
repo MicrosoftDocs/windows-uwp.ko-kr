@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 1A69A388-B1CC-4D2C-886B-EA07E6E60252
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출을 삭제합니다.
 title: 패키지 플라이트 제출 삭제
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 삭제, 패키지 플라이트
 ms.localizationpriority: medium
-ms.openlocfilehash: 2196a6b7023a062905ae721ebdb536e2c8044057
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1222c730f4e7819037ee42fc0897cf2924586b25
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564153"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707894"
 ---
 # <a name="delete-a-package-flight-submission"></a>패키지 플라이트 제출 삭제
 

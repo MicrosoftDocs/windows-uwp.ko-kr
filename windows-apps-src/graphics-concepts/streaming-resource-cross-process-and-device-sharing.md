@@ -4,17 +4,15 @@ description: 타일 풀은 일반적인 리소스와 마찬가지로 다른 프�
 ms.assetid: D035AF4B-D71B-4F20-9A98-7C360BF9B285
 keywords:
 - 스트리밍 리소스 프로세스 및 장치 간 공유
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a2f9bc985b69b71bedfd8d198f2a313f073b81a7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a0bff43cfd26c43bb5f75f37a66c55e556429470
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571851"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703257"
 ---
 # <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>스트리밍 리소스 프로세스 및 장치 간 공유
 

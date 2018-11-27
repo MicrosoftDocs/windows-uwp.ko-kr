@@ -4,17 +4,15 @@ description: Direct3D 전체에서 꼭짓점은 위치 및 방향을 설명합�
 ms.assetid: 94EC3D59-43FC-4509-A233-916E9FA8381E
 keywords:
 - 벡터, 꼭짓점 및 사원수
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2373d18b51015652bc1ef3035402e1da95a54abf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8942e53b7372e2e8b3cf4ed05f89b4187bdfc4be
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563497"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704351"
 ---
 # <a name="vectors-vertices-and-quaternions"></a>벡터, 꼭짓점 및 사원수
 

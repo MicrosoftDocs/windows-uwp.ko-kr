@@ -4,17 +4,15 @@ description: Direct3D 파트는 고정 함수 기하 도형 파이프라인을 �
 ms.assetid: 0DF2A99A-335C-4D14-9720-6D7996DD635A
 keywords:
 - 변환
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9eb129609b2fa8564b04d128c3cb06251b044360
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a29d42a9254ca47402a38ea71c8c1ef69de5c6c7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572671"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708996"
 ---
 # <a name="transforms"></a>변환
 

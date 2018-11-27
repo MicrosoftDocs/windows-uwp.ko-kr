@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 Description: This article describes how to create a Windows Runtime component that implements the IBasicAudioEffect interface to allow you to create custom effects for audio streams.
 title: 사용자 지정 오디오 효과
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: a9c62dac489be07a08acc4ad17ecb79bcc54f57a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5278a845e56f1df76cc663bbb0c517b589a23524
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569793"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701465"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 

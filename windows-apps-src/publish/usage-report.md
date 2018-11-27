@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Usage report in Partner Center lets you see how customers are using your app.
 title: 사용 보고서
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 사용, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
-ms.openlocfilehash: c6f22d9aafada5bab8deaef246f64a7447569c82
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0d0be1399ebc00ffda57ecf27a72be994fa994ce
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578914"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701680"
 ---
 # <a name="usage-report"></a>사용 보고서
 

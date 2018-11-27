@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: 게임 입력 장치 사용 방법
 description: 입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 알아봅니다.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
-ms.author: elcowle
 ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10 uwp, 게임, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: ed0d611c761315e42decb89e1a5a5ad84f4b067a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 73e0ba3e563b57c2e392809097567b7e6739c90d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563749"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707696"
 ---
 # <a name="input-practices-for-games"></a>게임용 입력 시스템
 

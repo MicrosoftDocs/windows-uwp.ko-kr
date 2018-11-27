@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: DirectX 게임에 리소스 로드
 description: 대부분의 게임은 특정 시점에 로컬 저장소 또는 몇몇 다른 데이터 스트림에서 셰이더, 텍스처, 미리 정의된 메시 또는 기타 그래픽 데이터 등, 리소스와 자산을 로드합니다.
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 리소스 로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ca16dd6115bbbe84529928ca58ee0d3074498728
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554628"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703137"
 ---
 # <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 

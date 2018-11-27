@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: BasicLoader의 전체 코드
 description: 메시, 텍스처 및 여러 셰이더 개체 등, 일반적인 그래픽 리소스를 변환하고 로드하는 클래스 및 메서드의 전체 코드입니다.
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, basicloader
 ms.localizationpriority: medium
-ms.openlocfilehash: cde8d7b368fb3ee660bd5696f983070738397b6f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cfcec2550455df8afe5870f9b760e1f7225f847c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572575"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707643"
 ---
 # <a name="complete-code-for-basicloader"></a>BasicLoader의 전체 코드
 

@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: 서비스 지점
 description: 이 섹션에는 서비스 지점 네임스페이스의 다양한 기능을 사용하는 방법에 대한 문서가 포함되어 있습니다.
-ms.author: jken
 ms.date: 10/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9450a5980ee83c41c60e630c616ba620e0ac4930
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a0c55f1b739ef88ec65b7fd44655406415bc0468
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567963"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708733"
 ---
 # <a name="point-of-service"></a>서비스 지점
 이 섹션에는 [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice)를 사용하여 유니버설 Windows 응용 프로그램에서 소매 및 병원 환경에서 찾아볼 수 있는 주변 장치와 상호 작용 방법에 대한 문서가 포함되어 있습니다.

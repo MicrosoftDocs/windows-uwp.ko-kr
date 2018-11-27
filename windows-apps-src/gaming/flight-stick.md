@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: 플라이트 스틱
 description: Windows.Gaming.Input 플라이트 스틱 API를 사용하여 스틱 플라이트에서 입력을 읽을 수 있습니다.
 ms.assetid: DC633F6B-FDC9-4D6E-8401-305861F31192
-ms.author: wdg-dev-content
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 플라이트 스틱
 ms.localizationpriority: medium
-ms.openlocfilehash: ebe7695b3f16271f3adedae658c0d62d38d7c078
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5eceb30c62f1e803397aff71d59b560c39736cf9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564248"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707538"
 ---
 # <a name="flight-stick"></a>플라이트 스틱
 

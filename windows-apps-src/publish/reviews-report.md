@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Reviews report in Partner Center lets you see the reviews (comments) that customers entered when rating your app in the Store.
 title: 리뷰 보고서
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
-ms.author: wdg-dev-content
 ms.date: 08/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 검토, 주석, 검토자
 ms.localizationpriority: medium
-ms.openlocfilehash: e5deef6d5e67c1236fb88f93269fcf91bb50243c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7ec883e7bcb98d69673b520df918e085182d35ec
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573483"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705702"
 ---
 # <a name="reviews-report"></a>리뷰 보고서
 

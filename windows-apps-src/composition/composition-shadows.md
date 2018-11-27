@@ -1,18 +1,16 @@
 ---
-author: daneuber
 title: 컴퍼지션 그림자
 description: 그림자 Api를 사용 하 여 UI 콘텐츠를 사용자 지정 가능한 그림자를 추가할 수 있습니다.
-ms.author: jimwalk
 ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c2f42235e6a74747059723841d3082037b558c7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9541ea1c00d473bc4881a80d8597625592e278f9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572243"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703177"
 ---
 # <a name="shadows-in-windows-ui"></a>Windows UI의 그림자
 

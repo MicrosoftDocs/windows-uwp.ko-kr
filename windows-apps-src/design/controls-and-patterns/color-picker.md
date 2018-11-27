@@ -1,10 +1,8 @@
 ---
-author: Jwmsft
 Description: A color picker lets a user browse through and select colors.
 title: 색 선택
 label: Color Picker
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f2b6270fcd7bc3dcf45d6e80dd547ee783d8e9ae
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ea3cfc10eb221ae0de8429cf299a4ca5b4d53716
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579979"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700278"
 ---
 # <a name="color-picker"></a>색 선택
 

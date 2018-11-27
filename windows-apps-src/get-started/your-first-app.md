@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: 첫 번째 앱 만들기
 description: 즐겨 쓰는 프로그래밍 언어를 사용 하 여 Windows10 유니버설 Windows 플랫폼 (UWP) 앱을 만듭니다.
-ms.author: quradic
 ms.date: 1/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 64da4418e25f77f49854c054d9cb468f0d89f16c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6cd4d60e6eb3eee7253997938882e6fbdf9fba69
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577553"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703317"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 

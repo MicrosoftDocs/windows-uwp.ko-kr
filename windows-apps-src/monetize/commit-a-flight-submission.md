@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
 description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 패키지 플라이트 제출 커밋 합니다.
 title: 패키지 플라이트 제출 커밋
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출 커밋
 ms.localizationpriority: medium
-ms.openlocfilehash: 58293a73589c7d2780360df24bcc24f38335f1e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 820e10695cce2d6242a51b0017d2fe3981cf77b1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581492"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702657"
 ---
 # <a name="commit-a-package-flight-submission"></a>패키지 플라이트 제출 커밋
 

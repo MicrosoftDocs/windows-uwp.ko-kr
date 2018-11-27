@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 title: Windows10 버전 1607 API 변경 사항
 description: 개발자는 다음 목록을 사용하여 Windows10 버전 1607에서 변경되었거나 새로운 네임스페이스를 식별할 수 있습니다.
 keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, Windows 10, 1607, 14393, 1주년
-ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 ms.localizationpriority: medium
-ms.openlocfilehash: 58c6ea939e96a2172c9f008d2238d5a84c228afe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1635ab0d7043057c09a3e9ac451ccdba1410b471
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553830"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706245"
 ---
 # <a name="new-apis-in-windows-10-build-14393"></a>Windows 10 빌드 14393의 새로운 API
 

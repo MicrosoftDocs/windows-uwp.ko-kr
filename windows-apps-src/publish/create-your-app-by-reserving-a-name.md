@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The first step in creating a new app in Partner Center is reserving an app name. See how to reserve app names and find suggestions for choosing a great name for your app.
 title: 이름을 예약하여 앱 만들기
 keywords: Windows 10, UWP, 이름 예약, 앱 이름, 앱 이름들, 이름들, 제품 이름, 이름 지정, 예약 이름, 제목, 이름들, 제목들
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a94a07eb80e0b181e49a74beba7690d8a57bfaa6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b00ace982bb39b99816013a8491b5b75be765833
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573317"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704639"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 

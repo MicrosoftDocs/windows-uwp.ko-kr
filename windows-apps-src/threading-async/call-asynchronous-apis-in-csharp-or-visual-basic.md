@@ -1,19 +1,17 @@
 ---
-author: normesta
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: C# 또는 Visual Basic에서 비동기식 API 호출
 description: UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다.
-ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, C#, Visual Basic, 비동기
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d9bd5265d72a7a478de8c094cd900072e46a143
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 899af2ffd26419d4c8906d703d6708d202f8c150
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571641"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704892"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>C# 또는 Visual Basic에서 비동기식 API 호출
 

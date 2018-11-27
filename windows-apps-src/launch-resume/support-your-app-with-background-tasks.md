@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: 백그라운드 작업을 사용하여 앱 지원
 description: 이 섹션의 항목에서는 트리거에 대한 응답으로 백그라운드에서 경량 코드가 실행되도록 하는 방법을 보여 줍니다.
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
-ms.author: twhitney
 ms.date: 08/21/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: a72d13689b278c1048cab6b1fcb4fd788658602c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2413a27c12a9b36f0fd57482492414e7b5a379b6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568944"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705607"
 ---
 # <a name="support-your-app-with-background-tasks"></a>백그라운드 작업을 사용하여 앱 지원
 

@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Marble Maze 샘플 기본 사항
 description: 이 문서에서는 Marble Maze 프로젝트;의 기본 특성 설명 예를 들어 Windows 런타임 환경에서 Visual c + +를 사용 하는 방법, 생성 및 구성 하는 방법 및 빌드 방법입니다.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
-ms.author: elcowle
 ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 기본 사항
 ms.localizationpriority: medium
-ms.openlocfilehash: f595c8f429c93a13d6342c281a90f3b0f5741621
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577024"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704132"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Marble Maze 샘플 기본 사항
 

@@ -1,18 +1,16 @@
 ---
-author: eliotcowley
 title: 소프트웨어 트리거 사용
 description: 소프트웨어에서의 스캔 작업을 제어 하는 방법을 알아봅니다.
-ms.author: elcowle
 ms.date: 08/29/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 03fbed5a0145a093b1e7a2535012077644aaf2e2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2b6f06ea66767a1bcdd7e20fa05aa7af275eb892
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570499"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708792"
 ---
 # <a name="use-a-software-trigger"></a>소프트웨어 트리거 사용
 

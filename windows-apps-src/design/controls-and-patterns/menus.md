@@ -1,10 +1,8 @@
 ---
-author: mijacobs
 Description: Menus and context menus display a list of commands or options when the user requests them.
 title: 메뉴 및 상황에 맞는 메뉴
 label: Menus and context menus
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, uwp
@@ -15,12 +13,12 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b03a1a7f8670029a12cf2a9537516d4f23a3c64f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9edf7bcb2ad76ed02887dfffc3e72d0d47f5aa1a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579939"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705893"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 

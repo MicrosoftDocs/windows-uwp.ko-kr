@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: 장치 간 사용자 활동 계속 수행
 description: 이 항목에서는 여러 장치에서 사용자가 앱에서 수행하고 있었던 작업을 다시 시작하도록 돕는 방법에 대해 설명합니다.
 keywords: 사용자 활동, 사용자 활동, 타임라인, cortana 사용자의 마지막 종료 지점부터 시작, cortana 내 마지막 종료 지점부터 시작, 프로젝트 로마
-ms.author: twhitney
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e99796decfa5ed434fddee3be4340380e2376a2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 98a7697715b456498db3ee5642e2743ae228b3cb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561855"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708060"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>장치 간 사용자 활동 계속 수행
 

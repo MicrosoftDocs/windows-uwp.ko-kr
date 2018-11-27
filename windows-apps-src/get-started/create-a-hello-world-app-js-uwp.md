@@ -1,19 +1,17 @@
 ---
-author: GrantMeStrength
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
 title: "\"Hello, world\" 앱 만들기(JS)"
 description: 이 자습서에서는 JavaScript 및 HTML을 만드는 간단한 및 \#0034; 사용 하는 방법 Hello, world 및 \#0034; 유니버설 Windows 플랫폼 (UWP) Windows10에서 대상으로 하는 앱을 선택 합니다.
-ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d8fb1dc486c039007c3ea0d4ee36d72c0c511f9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c5b99c95167940c1ae51dbe96a3e43dc6fb0af34
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576001"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705804"
 ---
 # <a name="create-a-hello-world-app-js"></a>"Hello, world" 앱 만들기(JS)
 

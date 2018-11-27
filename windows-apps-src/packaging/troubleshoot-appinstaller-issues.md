@@ -1,18 +1,16 @@
 ---
-author: ridomin
 title: 앱 설치 관리자 파일 관련 설치 문제 해결
 description: 앱 설치 관리자 파일로 응용 프로그램을 사이드로드할 때 일반적인 문제.
-ms.author: rmpablos
 ms.date: 5/2/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 499bb0b32e494441e547421094f42fbc6156044a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579640"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701574"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>앱 설치 관리자 파일 관련 설치 문제 해결
 

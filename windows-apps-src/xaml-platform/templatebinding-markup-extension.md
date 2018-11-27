@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결합니다. TemplateBinding은 XAML의 ControlTemplate 정의 내에서만 사용할 수 있습니다.
 title: TemplateBinding 태그 확장
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
-ms.author: jimwalk
 ms.date: 10/29/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d4aaca880caf30b46cb1ed26d66700bb12d76404
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ade10b4d5e2653eb214d93c2c9166e6a3e3defc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554091"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702331"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
 

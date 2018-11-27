@@ -1,10 +1,8 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Customize the built-in handwriting view for ink to text input that is supported by UWP text controls such as the TextBox, RichEditBox (and controls like the AutoSuggestBox that provide a similar text input experience).
 title: 필기 보기를 사용 하 여 텍스트 입력
 label: Text input with the handwriting view
 template: detail.hbs
-ms.author: kbridge
 ms.date: 10/13/18
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,12 +11,12 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dd0031affaf5ae48553479660d91ae610e7f1acb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3660586b856205721bfa8e9cbb3e72df4fd3ad43
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556702"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705863"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용 하 여 텍스트 입력
 

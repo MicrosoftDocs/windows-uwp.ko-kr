@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Windows 런타임 형식의 .NET Framework 매핑
 description: 다음 표에는 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 간에 .NET Framework가 수행하는 매핑이 나열되어 있습니다.
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1869038ad98b8b4103b9706534a2d456f17e734
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ef98f3f4a9d20e836d5f9bddbc111a232f864bf5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559391"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701635"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>Windows 런타임 형식의 .NET Framework 매핑
 

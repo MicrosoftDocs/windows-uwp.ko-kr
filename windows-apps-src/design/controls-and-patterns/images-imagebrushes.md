@@ -1,21 +1,19 @@
 ---
-author: Jwmsft
 Description: Learn how to integrate images into your app, including how to use the APIs of the two main XAML classes, Image and ImageBrush.
 title: 이미지 및 이미지 브러시
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c0fcd158dac77b3b3322167b82131e51f62390f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: af6dff9c0cf8aad1f9d7df7f94cc2af099a2ca1e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568308"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705985"
 ---
 # <a name="images-and-image-brushes"></a>이미지 및 이미지 브러시
 

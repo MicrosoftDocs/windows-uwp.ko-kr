@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Microsoft Store 제출 API에서 이 메서드를 사용하여 패키지 플라이트에 대한 패키지 출시를 중지합니다.
 title: 플라이트에 대한 출시 중지
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 패키지 출시, 플라이트 제출, 중지
 ms.assetid: f8ee0687-a421-48e7-a6eb-3fd5633c352b
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ca3b457158ee1f509591c89ee6ac2819c819326
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 74c95e36d0bc4c9848be1e336b2e34c41dc0631f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571083"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703297"
 ---
 # <a name="halt-the-rollout-for-a-flight"></a>플라이트에 대한 출시 중지
 

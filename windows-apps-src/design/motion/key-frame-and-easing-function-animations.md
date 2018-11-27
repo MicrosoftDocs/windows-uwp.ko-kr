@@ -1,19 +1,17 @@
 ---
-author: Jwmsft
 title: 키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: 선형 키 프레임 애니메이션, KeySpline 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술입니다.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2076866cc31f50bd7ccfc6730bca5be96ffdc7c3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 145912f08075678c98dfb34ac491e123577c69e3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571222"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703982"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 

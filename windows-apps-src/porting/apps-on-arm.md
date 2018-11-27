@@ -1,18 +1,16 @@
 ---
 title: ARM 기반 Windows 10
-author: msatranjr
 description: 이 문서에서는 환경 및 앱 ARM에서 실행되는 방식과 제한 사항이 무엇인지, 자세히 알아볼 수 있는 위치에 대한 개요를 제공합니다.
-ms.author: misatran
 ms.date: 02/15/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, ARM, ARM64, x86 에뮬레이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f62a873e84f200a019bde23038ae10b21150072
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bdbd0e4f3ab2d060cdb0b2519117e4f14725347f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558262"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706295"
 ---
 # <a name="windows-10-on-arm"></a>ARM 기반 Windows10
 원래 Windows 10 Mobile과 달리 원래 Windows 10은 x86 및 x64 프로세서 기반 PC에서만 실행할 수 있었습니다. 이제 Fall Creators Update로 Windows 10 데스크톱(Pro 및 S 에디션)부터는 ARM64 프로세서로 구동되는 컴퓨터에서 실행될 수 있습니다. ARM CPU 아키텍처의 절전 특징은 하루 종일 배터리 사용 시간을 유지하고 모바일 데이터 네트워크를 지원할 수 있게 합니다. 이러한 PC는 훌륭한 응용 프로그램의 호환성을 제공하고 기존 x86 win32 응용 프로그램을 수정하지 않고 실행할 수 있도록 합니다. 예: Adobe Reader. 자세한 내용 또는 데모는 [항상 연결된 PC에 대한 Channel 9 비디오](https://channel9.msdn.com/Events/Build/2017/P4171)를 확인하세요. 

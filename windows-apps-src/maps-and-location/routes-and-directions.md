@@ -1,19 +1,17 @@
 ---
-author: normesta
 title: 지도에 경로 및 길 찾기 표시
 description: 경로 및 길 찾기를 요청하고 앱에 표시합니다.
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
-ms.author: normesta
 ms.date: 09/20/2017
 ms.topic: article
 keywords: windows 10, uwp, 경로, 지도, 위치, 길 찾기
 ms.localizationpriority: medium
-ms.openlocfilehash: 69283f6b53f3a8483376e3b8fe77a4491d4b01b1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dd93a092ee0db0821e9326d0f9ffa86890850b87
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582323"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702797"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
 

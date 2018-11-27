@@ -1,11 +1,9 @@
 ---
-author: Jwmsft
 Description: Consider how often we read text in our daily lives - in email, a book, a road sign, the prices on a menu, tire pressure markings, or posters on a street pole.
 title: 텍스트 컨트롤
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 10/01/2018
 ms.topic: article
 keywords: Windows 10 uwp
@@ -13,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: fa990d7e4733c90b7ea46cec881ea502dd6a11b2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 467be141d2c198bc95c93771ffa9cf2ad8fd6c0d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558930"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705850"
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
 

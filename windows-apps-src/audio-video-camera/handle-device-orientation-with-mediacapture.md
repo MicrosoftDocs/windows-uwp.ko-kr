@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: af3941c0-3508-4ba2-a79e-fc71657c605f
 description: 이 문서에서는 도우미 클래스를 사용하여 사진 및 비디오를 캡처할 때 디바이스 방향을 처리하는 방법을 보여 줍니다.
 title: MediaCapture를 사용하여 디바이스 방향 처리
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1367c880bd6dde573ab4fc30733ed9d1fefa6b0b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 866a3b02d67409d03fccf427663de65cc94919b2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560787"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701392"
 ---
 # <a name="handle-device-orientation-with-mediacapture"></a>MediaCapture를 사용하여 디바이스 방향 처리
 앱이 사용자 디바이스의 파일에 저장하거나 온라인으로 공유하는 등 앱 외부에서 보려는 사진 또는 비디오를 캡처하는 경우 다른 앱이나 디바이스에서 이미지를 표시할 때 올바른 방향으로 표시되도록 적절한 방향 메타데이터를 사용하여 이미지를 인코드하는 것이 중요합니다. 디바이스 섀시 방향, 디스플레이 방향, 섀시의 카메라 배치(전면 또는 후면 카메라) 등 고려할 여러 가지 변수가 있기 때문에 미디어 파일에 포함할 올바른 방향 데이터를 결정하는 작업은 복잡할 수 있습니다. 

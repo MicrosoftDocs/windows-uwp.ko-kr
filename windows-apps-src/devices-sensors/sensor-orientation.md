@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: 센서 방향
 description: Accelerometer, Gyrometer, Compass, Inclinometer 및 OrientationSensor 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 장치의 가로 방향에서 정의되고 사용자가 돌릴 때 장치와 함께 회전합니다.
-ms.author: mukin
 ms.date: 05/24/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3205bfa2da1b83fe2c341b1c810f155e796b804
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a4c7f1ad75e1e0544486049f9bd721d8a82edf03
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554127"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704594"
 ---
 # <a name="sensor-orientation"></a>센서 방향
 

@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 추가 기능 채널 데이터별 집계 변환을 가져옵니다.
 title: 채널별 추가 기능 변환 가져오기
-ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 추가 기능 변환, 채널
 ms.localizationpriority: medium
-ms.openlocfilehash: 0cf4e0f2cad0ea497e7d97c9b415ab385703c5c4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b1cbc33b2ce53ea7f851e78433b74b103e5a035
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568514"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705267"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>채널별 추가 기능 변환 가져오기
 

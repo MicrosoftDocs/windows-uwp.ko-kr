@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: Microsoft Store 구매 API에서 이 메서드를 사용하여 지정된 사용자에게 무료 앱 또는 추가 기능에 대한 권한을 부여합니다.
 title: 무료 제품에 대한 권한 부여
-ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 구매 API, 제품 권한 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: 27503148d4406cb0ba1c2ce9782ca7131c8ce081
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 75edbe720e2e4483432d3d865650e5d7e7a24b40
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578539"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703457"
 ---
 # <a name="grant-free-products"></a>무료 제품에 대한 권한 부여
 

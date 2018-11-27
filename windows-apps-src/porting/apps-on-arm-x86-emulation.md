@@ -1,18 +1,16 @@
 ---
 title: ARM에서 x86 및 ARM32 에뮬레이션이 작동하는 방식
-author: msatranjr
 description: ARM 기반 x86 앱의 에뮬레이션 개요.
-ms.author: misatran
 ms.date: 02/15/2018
 ms.topic: article
 keywords: windows 10 s, 항상 연결, ARM 기반 x86 에뮬레이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b596ab9abd31fa10d0ca07dec973082b495262e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 22b8d55fa2074d18ed3e5f3fe9fa3ab8161637be
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559480"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700874"
 ---
 # <a name="how-x86-emulation-works-on-arm"></a>ARM에서 x86 에뮬레이션이 작동하는 방식
 x86 앱에 대한 에뮬레이션으로 ARM에서 사용 가능한 Win32 앱을 풍부한 에코시스템으로 만들 수 있습니다. 이렇게 하면 사용자에게 앱을 전혀 수정하지 않고 기존 x86 win32 앱을 실행하는 놀라운 환경을 제공할 수 있습니다. 앱은 특정 API([IsWoW64Process2](https://msdn.microsoft.com/en-us/library/windows/desktop/mt804318.aspx))를 호출하지 않는 한 ARM 기반 Windows PC에서 실행되고 있는지 알지 못합니다.

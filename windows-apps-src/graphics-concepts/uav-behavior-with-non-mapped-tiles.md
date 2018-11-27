@@ -4,17 +4,15 @@ description: UAV(정렬되지 않은 액세스 보기) 읽기 및 쓰기 동작�
 ms.assetid: CDB224E2-CC07-4568-9AAC-C8DC74536561
 keywords:
 - 매핑되지 않은 타일을 사용하는 UAV 동작
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a5418de3646f70a815f5c482f9063ea3e48ddfa1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c72931d2f6bf1e892e174bc409f20a042d5e4c92
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576327"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704331"
 ---
 # <a name="span-iddirect3dconceptsuavbehaviorwithnon-mappedtilesspanuav-behavior-with-non-mapped-tiles"></a><span id="direct3dconcepts.uav_behavior_with_non-mapped_tiles"></span>매핑되지 않은 타일을 사용하는 UAV 동작
 

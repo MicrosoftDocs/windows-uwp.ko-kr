@@ -4,17 +4,15 @@ description: Direct3D 조명 모델은 주변, 확산, 반사 및 발광 조명�
 ms.assetid: D0521F56-050D-4EDF-9BD1-34748E94B873
 keywords:
 - 조명의 수학
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 19734964c9b4ab087f7d5fd6ea749b57cccce26c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 38a65a3532fe401f31fbf0da656aff1a141fa71a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574813"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709478"
 ---
 # <a name="mathematics-of-lighting"></a>조명의 수학
 
