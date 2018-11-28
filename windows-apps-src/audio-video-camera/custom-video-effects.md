@@ -10,11 +10,11 @@ keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
 ms.openlocfilehash: a9e796eee76025e7697c08669e6942e0d69206f7
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7695890"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840134"
 ---
 # <a name="custom-video-effects"></a>사용자 지정 비디오 효과
 

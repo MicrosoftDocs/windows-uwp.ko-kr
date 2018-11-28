@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
 ms.openlocfilehash: c72137b8419526b65dc3c6cb75a511a7a6f50a82
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693980"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847803"
 ---
 # <a name="xbox-live-page-dev-home"></a>Xbox Live 페이지 (개발자 홈)
    

@@ -7,11 +7,11 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699331"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847915"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용 하 여 웹 사이트에 대해 앱을 사용 하도록 설정
 

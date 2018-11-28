@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 추가 기능 취득
 ms.localizationpriority: medium
 ms.openlocfilehash: cd7e907994943dbce83d195e80a15770833f7e4b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703337"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839388"
 ---
 # <a name="get-add-on-acquisitions"></a>추가 기능 구입 정보 가져오기
 

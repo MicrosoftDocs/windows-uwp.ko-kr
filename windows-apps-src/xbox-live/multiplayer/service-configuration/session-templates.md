@@ -1,19 +1,17 @@
 ---
 title: 멀티 플레이 세션 템플릿
-author: KevinAsgari
 description: Xbox Live 멀티 플레이 세션 템플릿에 알아봅니다.
 ms.assetid: 178c9863-0fce-4e6a-9147-a928110b53a2
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어 세션 템플릿
 ms.localizationpriority: medium
-ms.openlocfilehash: 0296aaa21d9e3d873b7edff3026ea22f9b5b2b67
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0bbe4f6a3afe2d39fb18b4d4bad13e2aa91d246e
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7572017"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840718"
 ---
 # <a name="multiplayer-session-templates"></a>멀티 플레이 세션 템플릿
 

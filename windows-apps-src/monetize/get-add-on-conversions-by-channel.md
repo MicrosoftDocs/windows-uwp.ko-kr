@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 추가 기능 변환, 채널
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b1cbc33b2ce53ea7f851e78433b74b103e5a035
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705267"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7845958"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>채널별 추가 기능 변환 가져오기
 

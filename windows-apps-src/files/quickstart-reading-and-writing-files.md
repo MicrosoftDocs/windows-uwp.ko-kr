@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 6079ea8ca844efc912b970c00c6907d98378dd07
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714354"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7850924"
 ---
 # <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 

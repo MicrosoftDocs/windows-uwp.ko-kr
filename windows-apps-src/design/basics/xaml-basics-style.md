@@ -6,11 +6,11 @@ ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a1eacc42720e7bce4290476676b0864fbd8a3694
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7849316"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 

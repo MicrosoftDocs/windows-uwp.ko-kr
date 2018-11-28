@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 상태, 클라이언트 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b996d85776cb49d45cc5b699709b4eb107e7086
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848727"
 ---
 # <a name="get-xbox-live-health-data"></a>Xbox Live 상태 데이터 가져오기
 

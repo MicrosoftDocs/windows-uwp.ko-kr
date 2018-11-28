@@ -13,11 +13,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f65ed68db51ea173dfec3c06a9dc81a7f7735afd
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7842464"
 ---
 # <a name="calendar-date-and-time-controls"></a>달력, 날짜 및 시간 컨트롤
 

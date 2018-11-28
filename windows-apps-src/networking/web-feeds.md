@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b5312614c7060118fdb4678aa80ae51d6734486
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7853999"
 ---
 # <a name="rssatom-feeds"></a>RSS/Atom 피드
 

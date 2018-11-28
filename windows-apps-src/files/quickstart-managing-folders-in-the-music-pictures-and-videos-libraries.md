@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692301"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855531"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
 

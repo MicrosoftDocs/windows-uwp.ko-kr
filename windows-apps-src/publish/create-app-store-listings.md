@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
 ms.localizationpriority: medium
 ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694359"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7835298"
 ---
 # <a name="create-app-store-listings"></a>앱 Store 목록 만들기
 

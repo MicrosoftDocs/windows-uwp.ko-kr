@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 화면 방향, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eb86cfaefe7112d408a17a54bf4f4b482c218be8
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712547"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7842823"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>화면 방향 지원(DirectX 및 C++)
 

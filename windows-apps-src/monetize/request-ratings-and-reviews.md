@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 평점, 리뷰
 ms.localizationpriority: medium
 ms.openlocfilehash: 377b71dba2fb62dfc562b56d40e65e43b0bd49c9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7847359"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>앱에 대한 평점 및 리뷰 요청
 

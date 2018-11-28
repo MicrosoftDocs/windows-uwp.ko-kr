@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
 ms.openlocfilehash: 2537bad82fc4a17b964f5871ab6ae1434c417f66
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711884"
+ms.locfileid: "7844733"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>타이머를 사용하여 작업 항목 제출
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7251d4595a3e87a8629d6e717bb4f52e5b7c35fe
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693254"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851726"
 ---
 # <a name="how-a-streaming-resources-area-is-tiled"></a>스트리밍 리소스 영역의 타일링 방법
 

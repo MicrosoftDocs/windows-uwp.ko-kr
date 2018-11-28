@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b6f06ea66767a1bcdd7e20fa05aa7af275eb892
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7708792"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838181"
 ---
 # <a name="use-a-software-trigger"></a>소프트웨어 트리거 사용
 

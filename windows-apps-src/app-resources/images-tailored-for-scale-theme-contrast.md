@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f4749b8560624ed58f43b33fe3373d909919347
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7709776"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7849329"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
 앱은 [디스플레이 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 이미지 리소스 파일(또는 기타 자산 파일)을 로드할 수 있습니다. 이러한 이미지는 명령적 코드 또는 XAML 태그에서 참조할 수 있으며 예를 들어 **이미지**의 **Source** 속성입니다. 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`의 파일)에 표시될 수도 있습니다. 예를 들면 Visual Studio 매니페스트 디자이너의 시각적 자산 탭에 앱 아이콘으로 또는 타일 또는 알림에 표시됩니다. 이미지의 파일 이름에 한정자를 사용하고 선택적으로 이를 [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)를 사용하여 동적으로 로드하여 디스플레이 배율, 테마, 고대비, 언어 및 다른 컨텍스트에 대한 사용자의 런타임 설정과 가장 적합한 가장 적절한 이미지 파일이 로드되도록 할 수 있습니다.

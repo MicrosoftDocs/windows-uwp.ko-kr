@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
 ms.openlocfilehash: e986880ccedfdb4648b1554c35c23a8a841fe820
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7841523"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 

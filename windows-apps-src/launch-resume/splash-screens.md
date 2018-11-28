@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: df3fc8f54a4174006fd28f319d7cab09142a81fd
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720199"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847958"
 ---
 # <a name="splash-screens"></a>시작 화면
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26cde97f82e6962d530721f1e0230138e5917016
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694942"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855431"
 ---
 # <a name="relativesource-markup-extension"></a>{RelativeSource} 태그 확장
 

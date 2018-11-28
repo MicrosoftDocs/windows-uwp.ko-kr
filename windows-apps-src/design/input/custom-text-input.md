@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 161278dc5fe0bb8c7d4c790def6a9f7ba88b83d2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7841818"
 ---
 # <a name="custom-text-input"></a>사용자 지정 텍스트 입력
 

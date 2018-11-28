@@ -5,12 +5,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a68e78bef540717d4f4c33d3132748fa727b4068
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 551f8b925ffd56950ba893da7b81fefb4579f558
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7714089"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840016"
 ---
 # <a name="bluetooth-gatt-server"></a>Bluetooth GATT 서버
 
@@ -31,7 +31,7 @@ ms.locfileid: "7714089"
 일반적으로 Windows 클라이언트 역할을 수행 합니다. 그럼에도 불구 하 고 다양 한 시나리오 에서도 Bluetooth LE GATT 서버 역할을 하는 Windows 필요는 발생 합니다. IoT 디바이스, 대부분 플랫폼 간 BLE 통신에 대 한 거의 모든 시나리오는 Windows를 GATT 서버 필요 합니다. 또한 근처 착용 식 장치에 알림 보내기도이 기술이 필요로 하는 일반적인 시나리오 해 왔습니다.  
 > [GATT 클라이언트 문서](gatt-client.md) 에 설명 된 모든 개념을 계속 하기 전에 명확 하 고 있는지 확인 합니다.  
 
-서버 작업은 서비스 공급자와의 GattLocalCharacteristic를 중심으로 합니다. 이러한 두 클래스에서 선언 하 고, 구현, 원격 장치에 대 한 데이터의 계층 구조를 노출 하는 데 필요한 기능을 제공 합니다.
+서버 작업은 서비스 공급자와의 GattLocalCharacteristic를 중심으로 합니다. 이러한 두 클래스에서 선언 하 고, 구현, 원격 장치에 대 한 데이터의 계층을 노출 하는 데 필요한 기능을 제공 합니다.
 
 ## <a name="define-the-supported-services"></a>지원 되는 서비스를 정의 합니다.
 앱에는 Windows에서 게시할 수 있는 하나 이상의 서비스 선언할 수 있습니다. 각 서비스 UUID 고유 하 게 식별 됩니다. 
@@ -68,7 +68,7 @@ ms.locfileid: "7714089"
 
 > 브로드캐스트는 현재 지원 되지 않습니다.  브로드캐스트 GattCharacteristicProperty 지정 하면 예외가 발생 합니다.
 
-### <a name="build-up-the-heirarchy-of-services-and-characteristics"></a>서비스 및 특성 계층 구조 구축
+### <a name="build-up-the-hierarchy-of-services-and-characteristics"></a>서비스 및 특성의 계층 구조 구축
 만들고 광고 루트 기본 서비스 정의 하는 GattServiceProvider 사용 됩니다.  각 서비스에 직접 ServiceProvider 개체 GUID를 이용 하는 것이 필요 합니다. 
 
 ```csharp

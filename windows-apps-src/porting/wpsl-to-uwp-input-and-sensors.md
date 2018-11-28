@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7717520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7850447"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대 한 WindowsPhone Silverlight를 UWP로 포팅
 

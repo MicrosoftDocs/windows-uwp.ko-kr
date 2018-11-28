@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7706383"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7852752"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법
 리소스를 요청하는 경우 현재 리소스 컨텍스트와 어느 정도 일치하는 몇 가지 후보가 있을 수 있습니다. 리소스 관리 시스템은 모든 후보를 분석하고 반환할 최적의 후보를 결정합니다. 이 작업은 모든 후보의 순위를 지정할 모든 한정자를 고려하여 수행됩니다.

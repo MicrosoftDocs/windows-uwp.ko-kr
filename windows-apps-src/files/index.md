@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 241ee0de885dd1b2e40b6ce51c21312dbcb9f655
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 811a9b42efe83cf89fd3df89e5c43c72274af36f
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692142"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844090"
 ---
  # <a name="files-folders-and-libraries"></a>파일, 폴더 및 라이브러리
 
@@ -29,6 +29,7 @@ ms.locfileid: "7692142"
 | [Microsoft OneDrive 파일의 가용성 확인](quickstart-determining-availability-of-microsoft-onedrive-files.md) | [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다. |
 | [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | 음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다. |
 | [최근에 사용한 파일 및 폴더 추적](how-to-track-recently-used-files-and-folders.md) | 사용자가 자주 액세스하는 파일을 앱의 MRU(최근에 사용한 목록)에 추가하여 추적할 수 있습니다. 플랫폼은 마지막으로 액세스한 시간을 기반으로 항목을 정렬하고 목록의 25개 항목 제한에 도달한 경우 가장 오래된 항목을 제거하여 MRU를 자동으로 관리합니다. 모든 앱에는 자체 MRU가 있습니다. |
+| [백그라운드에서 파일 시스템의 변경 내용을 추적합니다](change-tracking-filesystem.md) | 앱이 실행 되지 않을 경우에 파일 시스템에 변경 내용을 추적 합니다.|
 | [SD 카드에 액세스](access-the-sd-card.md) | 특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다. |
 | [파일 액세스 권한](file-access-permissions.md) | 앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다. |
 | [UWP의 파일 속성에 빠르게 액세스](fast-file-properties.md) | UWP 앱에서 사용할 라이브러리에서 파일 및 속성 목록을 효율적으로 수집합니다. |

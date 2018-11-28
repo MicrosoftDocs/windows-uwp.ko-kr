@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 타일, 타일 알림, 타일 콘텐츠, 스키마, 타일 페이로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ac975ae3893b1d3d591133862d0ff3733cca6b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693304"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848493"
 ---
 # <a name="tile-content-schema"></a>타일 콘텐츠 스키마
 

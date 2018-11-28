@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 06dd8355cd0afd3889c0db2c337c93b5fbedf0fa
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703923"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854059"
 ---
 # <a name="devices-sensors-and-power"></a>디바이스, 센서 및 전원
 
