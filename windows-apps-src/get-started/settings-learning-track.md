@@ -7,11 +7,11 @@ keywords: 시작, uwp, windows 10, 학습 트랙, 설정, 설정 저장, 설정 
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7710215"
+ms.locfileid: "7826748"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>UWP 앱의 설정 저장 및 로드
 

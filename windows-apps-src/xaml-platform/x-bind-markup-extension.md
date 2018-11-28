@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5407849c15da25adc29fa97c0215b9734a5d3258
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 1c0eb1eb798cceb5c7a534c3aed1b8988bd1a42b
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694852"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855401"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
@@ -143,7 +143,7 @@ Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리�
 | **모드** | “OneTime”, “OneWay” 또는 “TwoWay” 문자열 중 하나로 바인딩 모드를 지정합니다. 기본값은 "OneTime"입니다. 이 값은 **{Binding}** 에 대한 기본값(대부분의 경우 "OneWay"임)과 다릅니다. |
 | **TargetNullValue** | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
 | **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
-| **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. TextBox.Text를 제외한 모든 속성의 기본값은 PropertyChanged이며, TextBox.Text는 LostFocus입니다.|
+| **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. TextBox.Text 제외한 모든 속성의 기본값은 PropertyChanged; TextBox.Text는 LostFocus입니다.|
 
 > [!NOTE]
 > **{Binding}** 에서 **{x:Bind}** 로 태그를 변환하는 경우 **모드** 속성에 대한 기본값의 차이에 주의하세요.
@@ -154,7 +154,7 @@ Windows10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리�
 
 **{x:Bind}** 는 생성된 코드를 사용하여 이점을 제공하기 때문에 컴파일 타임에 형식 정보가 필요합니다. 즉, 사전에 형식을 모르는 속성에 바인딩할 수 없습니다. 따라서 **Object** 형식이고 런타임에 변경될 수 있는 **DataContext** 속성에서 **{x:Bind}** 를 사용할 수 없습니다.
 
-데이터 템플릿에서 **{x:Bind}** 를 사용할 때는 아래 예제와 같이 **x:DataType** 값을 설정하여 바인딩할 형식을 나타내야 합니다. 형식을 인터페이스 또는 기본 클래스 형식으로 설정한 다음 필요한 경우 캐스트를 사용하여 전체 식을 구성할 수 있습니다.
+**{X: Bind}** 를 사용 하 여 데이터 템플릿을 사용 하 여,에 바인딩되지 **X:datatype** 값을 설정 하 여 [예제](#examples) 섹션에 표시 된 대로 형식을 나타내야 합니다. 형식을 인터페이스 또는 기본 클래스 형식으로 설정한 다음 필요한 경우 캐스트를 사용하여 전체 식을 구성할 수 있습니다.
 
 컴파일된 바인딩은 코드 생성에 따라 다릅니다. 따라서 리소스 사전의 **{x:Bind}** 를 사용하는 경우 리소스 사전에는 코드 숨김 클래스가 있어야 합니다. 코드 예제에 대해서는 [{x:Bind}를 사용하는 리소스 사전](../data-binding/data-binding-in-depth.md#resource-dictionaries-with-x-bind)을 참조하세요.
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, win32
 ms.localizationpriority: medium
 ms.openlocfilehash: b6883b605bed0b259cd70d1f6dc0264476eddd40
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711984"
+ms.locfileid: "7837565"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>호스팅 API는 데스크톱 응용 프로그램에서 UWP XAML을 사용 하 여
 

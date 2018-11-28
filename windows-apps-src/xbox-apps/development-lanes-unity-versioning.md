@@ -3,11 +3,11 @@ title: Unity - UWP 프로젝트 버전 제어
 description: Unity UWP 프로젝트 버전 관리.
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711635"
+ms.locfileid: "7837081"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: UWP 프로젝트 버전 제어
 

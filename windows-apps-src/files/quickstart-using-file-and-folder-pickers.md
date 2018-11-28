@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ed2c1715ebb682aed3da4b55ef94cc0c60f8391
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830657"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
 

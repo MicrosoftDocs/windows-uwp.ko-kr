@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 샘플
 ms.localizationpriority: medium
 ms.openlocfilehash: aee239f76c3d4431426f0bc9fe519a59f8f48838
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714049"
+ms.locfileid: "7830637"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Marble Maze 샘플에 입력 및 대화형 작업 추가
 

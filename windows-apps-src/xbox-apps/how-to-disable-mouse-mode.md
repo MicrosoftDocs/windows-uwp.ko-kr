@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e4b8868f416494daf978d65d4a4ccde02d6ccf5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702261"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830463"
 ---
 # <a name="how-to-disable-mouse-mode"></a>마우스 모드를 사용하지 않도록 설정하는 방법
 모든 응용 프로그램은 기본적으로 마우스 모드를 사용합니다. 즉, 옵트아웃(opt out)하지 않은 모든 응용 프로그램은 콘솔의 Edge 브라우저에 있는 것과 유사한 마우스 포인터를 받게 됩니다. 마우스 모드를 끄고 방향 컨트롤러 탐색에 최적화하는 것이 좋습니다.   

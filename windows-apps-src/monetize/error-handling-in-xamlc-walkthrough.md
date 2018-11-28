@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b2ffd15a07dc6f1018bd28cf9799e1e5209c0b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7718043"
+ms.locfileid: "7827503"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>XAML/C#에서 오류 처리 연습
 

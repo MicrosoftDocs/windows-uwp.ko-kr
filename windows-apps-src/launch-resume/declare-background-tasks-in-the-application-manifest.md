@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: 4527cface4681bf4866249c6398d43e6af782725
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700491"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7834015"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 

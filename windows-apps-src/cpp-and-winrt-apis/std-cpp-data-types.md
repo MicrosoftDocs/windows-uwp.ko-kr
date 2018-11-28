@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b0b529bbf397b76acb1eb589095a84f5c85745c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7710255"
+ms.locfileid: "7855391"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>표준 C++ 데이터 형식 및 C++/WinRT
 

@@ -8,11 +8,11 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dc109fe2e684dd3bc1fef62cece5cac3ab50d246
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697186"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7831638"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>MakeAppx.exe 도구를 사용하여 앱 패키지 만들기
 

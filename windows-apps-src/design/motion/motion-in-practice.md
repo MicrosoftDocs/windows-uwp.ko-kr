@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 355c760e173bd101b2865c300824de44b6434ee4
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7711924"
+ms.locfileid: "7829409"
 ---
 # <a name="bringing-it-together"></a>통합
 

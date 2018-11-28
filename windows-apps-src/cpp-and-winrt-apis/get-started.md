@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: cc98f61acc3b5dccdc4869b646337fdf9a6e701a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716232"
+ms.locfileid: "7836587"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 

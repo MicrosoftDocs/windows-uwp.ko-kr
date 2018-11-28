@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 53539c73137b40d154db00fa9e340d81412764da
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694588"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7826718"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 

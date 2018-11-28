@@ -9,11 +9,11 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697206"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7836960"
 ---
 # <a name="package-a-desktop-application-manually"></a>데스크톱 응용 프로그램을 수동으로 패키징
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, opengl, direct3d 11, 포트, 그래픽
 ms.localizationpriority: medium
 ms.openlocfilehash: 9af5e42a27e21b8a4300edc4b8171f7abc64bac7
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696874"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827572"
 ---
 # <a name="port-from-opengl-es-20-to-direct3d-11"></a>OpenGL ES 2.0에서 Direct3D 11로 포팅
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720479"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832063"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 

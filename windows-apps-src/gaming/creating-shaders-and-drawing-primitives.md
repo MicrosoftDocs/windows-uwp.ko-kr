@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 셰이더, 기본 형식, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5173adc26e0730ccb80f93fe0c12af286b0c1a49
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7717686"
+ms.locfileid: "7831137"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a>셰이더 및 그리기 기본 요소 만들기
 

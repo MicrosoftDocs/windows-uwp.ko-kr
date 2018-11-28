@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
 ms.openlocfilehash: 03b72b5722a3ece0165fc63e7ce4abc1238bc135
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7718863"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854541"
 ---
 # <a name="bluetooth-developer-faq"></a>Bluetooth 개발자 FAQ
 

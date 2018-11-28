@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
 ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7707630"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829776"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 

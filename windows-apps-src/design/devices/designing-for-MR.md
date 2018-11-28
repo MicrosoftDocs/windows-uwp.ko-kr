@@ -14,11 +14,11 @@ dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
 ms.openlocfilehash: e6aebac45dc32933f55d917c0b1153cba952d819
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700583"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827388"
 ---
 # <a name="designing-for-mixed-reality"></a>혼합 현실을 위한 디자인
 

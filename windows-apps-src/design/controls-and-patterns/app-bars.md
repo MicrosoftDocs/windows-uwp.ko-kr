@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bf828fab97a5dddc26d669b771bb831b65c140f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694480"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7834566"
 ---
 # <a name="command-bar"></a>명령 모음
 

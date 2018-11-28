@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a1fe8c1fcb641c3bc79f1f058befe6f4b44044a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7710964"
+ms.locfileid: "7828500"
 ---
 # <a name="time-based-animations"></a>시간 기반 애니메이션
 

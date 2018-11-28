@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d9b2a894746cc9f26a0ebb3df90c967a73914c3c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694398"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827715"
 ---
 # <a name="interaction-primer"></a>조작 입문서
 

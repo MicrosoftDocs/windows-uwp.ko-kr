@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
 ms.openlocfilehash: e8a2b0125944a8a4db66b41d26fcd4a0aa35b5b2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714980"
+ms.locfileid: "7828015"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>날짜/시간 숫자 형식 세계화
 

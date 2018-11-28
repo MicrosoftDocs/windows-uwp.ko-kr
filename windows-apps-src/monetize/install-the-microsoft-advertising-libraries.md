@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 광고, 설치, SDK, 광고 라이브러리
 ms.localizationpriority: medium
 ms.openlocfilehash: 2066d055f7abf0e9a34e245d9c6a95e14596d362
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7847339"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK 설치
 

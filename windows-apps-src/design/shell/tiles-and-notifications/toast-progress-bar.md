@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 진행률 표시줄, 알림 진행률 표시줄, 알림, 알림 데이터 바인딩
 ms.localizationpriority: medium
 ms.openlocfilehash: 853e9c1672f1933789c961838734a67b3e816b6a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714009"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848387"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>알림 진행률 표시줄 및 데이터 바인딩
 

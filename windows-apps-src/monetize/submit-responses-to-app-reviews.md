@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 추가 기능 취득
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dcda52940f0218b6fdb5be147f058eca7479a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7713247"
+ms.locfileid: "7828664"
 ---
 # <a name="submit-responses-to-reviews"></a>리뷰에 대한 응답 제출
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830577"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 

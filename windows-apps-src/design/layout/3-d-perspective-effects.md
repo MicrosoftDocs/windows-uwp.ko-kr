@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c1858938d04a024799224daf74ade4df3629a854
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719164"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7836888"
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>XAML UI에 대한 3D 원근감 효과
 

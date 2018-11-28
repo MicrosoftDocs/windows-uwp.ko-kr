@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 대상 제품, 제품, 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: e894e81b560f071cf42198f09aad0b2b82eae2cd
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705309"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830317"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>대상 제품을 사용하여 참여 및 변환 최대화
 

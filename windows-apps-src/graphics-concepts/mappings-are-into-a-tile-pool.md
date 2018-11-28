@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7713457"
+ms.locfileid: "7833457"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>타일 풀에 대한 매핑
 

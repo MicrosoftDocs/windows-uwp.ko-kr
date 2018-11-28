@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698462"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7846899"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>언어, 배율, 고대비에 대한 타일 및 알림 메시지
 

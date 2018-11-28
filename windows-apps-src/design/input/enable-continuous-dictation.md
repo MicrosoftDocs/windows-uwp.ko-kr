@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 839dc024204ec9b76ffe621a35cbbbaffc248d02
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705035"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7845067"
 ---
 # <a name="continuous-dictation"></a>연속 받아쓰기
 

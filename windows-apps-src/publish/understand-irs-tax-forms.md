@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, 조세, irs, 미국 국세청, 세금, 소득세, 109
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696171"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854105"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 

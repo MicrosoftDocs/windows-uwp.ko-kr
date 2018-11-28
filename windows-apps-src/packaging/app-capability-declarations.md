@@ -2,16 +2,16 @@
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: 앱 접근 권한 값 선언
 description: '사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 패키지 매니페스트에서 접근 권한 값을 선언해야 합니다.'
-ms.date: 09/20/2018
+ms.date: 11/26/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3a56d97a77ef5a377d8d7b0c22bb94e4ab34a9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: f31381dd4bfcecd33d4934b4bcd1a9af0ff8411a
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698059"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832378"
 ---
 # <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
@@ -187,8 +187,9 @@ ms.locfileid: "7698059"
 | **UI 자동화**| **uiAutomation** 접근 권한 값을 통해 내레이터 같은 UI 자동화 클라이언트는 UI 자동화 서버 또는 공급자에 연결할 수 있습니다.<br /><br />이 접근 권한 값은 **Windows.Xbox.Media.Capture.Broadcaster** 네임스페이스의 일부 API를 사용하는 데 필요합니다. |
 |**게임 바 서비스**| **gameBarServices**는 퍼스트 파티 Microsoft Store의 업데이트 가능한 수신함 UMA로 제한됩니다.<br /><br />이 접근 권한 값은 [**Windows.Media.Capture.GameBarsSrvices**](https://docs.microsoft.com/uwp/api/windows.media.capture.gamebarservices) 클래스를 사용하는 데 필요합니다.<br /><br />Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. |
 |**앱 캡처 서비스**| **appCaptureServices** 용량은 Microsoft와 계약상 관계를 체결한 당사자로 제한됩니다. 이러한 관계는 Xbox 서비스 및 bizdev의 도움으로 진행 중에 있는 파트너 계약에 따라 부여됩니다.<br /><br />이 접근 권한 값은 [**Windows.Media.Capture.AppCaptureServices**](https://docs.microsoft.com/uwp/api/windows.media.capture.appcaptureservices) 클래스를 사용하는 데 필요합니다. |
-|**앱 브로드캐스트 서비스**| **appBroadcastServices** 접근 권한 값은 Microsoft와 계약상 관계를 체결한 당사자로 제한됩니다. 이러한 관계는 Xbox 서비스 및 bizdev의 도움으로 진행 중에 있는 파트너 계약에 따라 부여됩니다.<br /> <br /><br />이 접근 권한 값은 [**Windows.Media.capture.AppBroadcastServices**](https://docs.microsoft.com/uwp/api/windows.media.capture.appbroadcastservices) 클래스를 사용하는 데 필요합니다.<br /><br />Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. |
+|**앱 브로드캐스트 서비스**| **appBroadcastServices** 접근 권한 값은 Microsoft와 계약상 관계를 체결한 당사자로 제한됩니다. 이러한 관계는 Xbox 서비스 및 bizdev의 도움으로 진행 중에 있는 파트너 계약에 따라 부여됩니다.<br /> <br />이 접근 권한 값은 [**Windows.Media.capture.AppBroadcastServices**](https://docs.microsoft.com/uwp/api/windows.media.capture.appbroadcastservices) 클래스를 사용하는 데 필요합니다.<br /><br />Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. |
 |**오디오 장치 구성**| **audioDeviceConfiguration** 이 접근 권한 값을 통해 애플리케이션은 오디오 드라이버에 노출된 오디오 효과를 쿼리, 구성, 활성화 및 비활성화할 수 있습니다. <br /> <br />이 접근 권한 값은 [**Windows.Media.Devices.AudioDeviceModulesManager**](https://docs.microsoft.com/uwp/api/windows.media.devices.audiodevicemodulesmanager) 클래스를 사용하는 데 필요합니다.<br /><br />Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. 이는 **AudioDeviceModulesManager**를 통해 애플리케이션이 해당 시스템의 모든 오디오 효과에 액세스할 수 있기 때문입니다. 잠재적으로, 디바이스의 오디오 성능에 부정적인 영향을 미치도록 오디오 효과를 설정할 수 있습니다. |
+| **백그라운드 미디어 기록** | **BackgroundMediaRecording** 접근 권한 값은 기록 앱이 백그라운드에 있는 동안 미디어를 사용 하도록 설정 하려면 [**MediaCapture**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture) 및 [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/windows.media.audio.audiograph.aspx) 클래스 같은 미디어 관련 Api의 동작을 변경 합니다. |
 |**미리 보기 잉크 작업 영역**| **previewInkWorkspace** 접근 권한 값을 통해 앱은 잉크 작업 영역 내에 호스트된 미리 보기 잉크 네임스페이스에 액세스할 수 있습니다. 일반적으로 이는 디바이스에서 화이트보드 응용 프로그램을 교체하기 위해 OEM에서 사용됩니다.<br /> <br />이 접근 권한 값은 [**Windows.ApplicationModel.Preview.InkWorkspace**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.preview.inkworkspace) 네임스페이스의 API에 필요합니다. |
 |**시작 화면 관리**| **startScreenManagement** 접근 권한 값을 통해 앱은 타일을 시작 화면으로 자동으로 고정합니다. 또한 앱은 백그라운드에서 고정할 수 있습니다. **startScreenManagement** 접근 권한 값을 가지고 있지 않으면 어떤 API도 차단되지 않으며, **startScreenManagement**를 사용하면 앱이 핀 API를 사용할 때 셸에 어떤 UI도 표시되지 않습니다. |
 |**Cortana 사용 권한**| **cortanaPermissions** 접근 권한 값을 통해 앱은 사용자가 디바이스에서 Cortana에 부여한 사용 권한을 열거합니다. 이 접근 권한 값을 통해 앱은 디바이스에서 Cortana 사용 권한을 부여 및 호출할 수 있습니다. **cortanaPermissions** 사용하기 위해서는 사용 권한을 부여하기 전에 디바이스가 법적 텍스트를 표시해야 합니다. 따라서 앱은 사용 권한 변경의 법적 결과를 사용자에게 알릴 책임이 있습니다.<br /> <br /><br />이 접근 권한 값은 **HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search\(*)** 레지스트리 설정에 대한 읽기 권한을 얻기 위해 필요합니다.<br /><br />Microsoft Store에 제출 하는 응용 프로그램에서이 접근 권한이 값을 선언 하지 않는 것이 좋습니다. 대부분의 경우,이 접근 권한이 값의 사용을 승인 되지 않습니다. |

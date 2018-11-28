@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 14b26274dd005813fe5c8ced2d90f6380e4d7f21
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696251"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827401"
 ---
 # <a name="optimize-animations-media-and-images"></a>애니메이션, 미디어 및 이미지 최적화
 

@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, 세그먼트, 세그먼트들, 대상 그룹, 고객
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: d0df23f0da4efe01877c45e5b2b6b5f4e2142a92
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714450"
+ms.locfileid: "7831104"
 ---
 # <a name="create-customer-segments"></a>고객층 만들기
 

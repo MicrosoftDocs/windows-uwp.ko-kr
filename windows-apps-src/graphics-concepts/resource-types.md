@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4138fd7275f7e1f9addb7685ff0846e756701003
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704364"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7843780"
 ---
 # <a name="resource-types"></a>리소스 종류
 

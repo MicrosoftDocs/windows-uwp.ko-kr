@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, xaml 상호 운용성
 ms.localizationpriority: medium
 ms.openlocfilehash: 058a1458f8990e5f70e7ed0ea4ef1a2b5f4a4956
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702471"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7842570"
 ---
 # <a name="directx-and-xaml-interop"></a>DirectX 및 XAML 상호 운용성
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7710123"
+ms.locfileid: "7846227"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 

@@ -2,19 +2,17 @@
 title: DELETE (/untrustedplatform/users/xuid({xuid})/scids/{scid}/data/{pathAndFileName},{type})
 assetID: f390cc37-6a30-962c-ccd5-e1528a91d30b
 permalink: en-us/docs/xboxlive/rest/uri-untrustedplatformusersxuidscidssciddatapathandfilenametype-delete.html
-author: KevinAsgari
 description: " DELETE (/untrustedplatform/users/xuid({xuid})/scids/{scid}/data/{pathAndFileName},{type})"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b7ee9f657722efd8a89508b1f841b759560b5c4c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4af180d758d14a2726046a6221889acc33efc897
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552751"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829094"
 ---
 # <a name="delete-untrustedplatformusersxuidxuidscidssciddatapathandfilenametype"></a>DELETE (/untrustedplatform/users/xuid({xuid})/scids/{scid}/data/{pathAndFileName},{type})
 파일을 삭제 합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

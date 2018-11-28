@@ -9,11 +9,11 @@ pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702371"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839731"
 ---
 # <a name="page-transitions"></a>페이지 전환
 

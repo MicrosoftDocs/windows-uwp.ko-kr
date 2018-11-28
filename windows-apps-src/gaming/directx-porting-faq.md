@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c165d47beea8ee0e31a3213bdd0dbf0c2bc3d7
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692644"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7826874"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX 11 포팅 FAQ
 

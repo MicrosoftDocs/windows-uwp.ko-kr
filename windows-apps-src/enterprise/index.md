@@ -6,26 +6,18 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b3106df6d8a1fd85b92aa06dd5c5cf7a7f79ded5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 6cce98591cdaa78a887d7a5fb495e999a4ffc453
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833163"
 ---
 # <a name="enterprise"></a>Enterprise
 
-이 로드맵은 Windows10Universal Windows 플랫폼 (UWP) 앱에 대 한 주요 엔터프라이즈 기능 개요를 제공합니다.
+이 문서에서는 Windows 10 앱에 대 한 유니버설 Windows 플랫폼 (UWP)에서 제공 하는 주요 엔터프라이즈 기능의 개요를 제공 합니다.
 
-**참고**이 문서는 개발자를 대상으로 엔터프라이즈 UWP 앱을 작성 합니다. 일반 UWP 개발에 대한 자세한 내용은 [Windows 10 앱 사용 방법 가이드](https://msdn.microsoft.com/library/windows/apps/mt244352)를 참조하세요. WPF, Windows Forms 또는 Win32 개발에 대한 자세한 내용은 [데스크톱 개발자 센터](https://dev.windows.com/desktop)를 참조하세요. Windows 10 배포 또는 엔터프라이즈 보안 기능 관리 등의 IT 전문가 리소스에 대한 자세한 내용은 [TechNet의 Windows 10](https://msdn.microsoft.com/library/dn986868)을 참조하세요.
-
-빌드 시이 프레젠테이션에서 [신속 하 게 구성 LOB 응용 프로그램 UWP 및 Visual Studio를 사용 하 여](https://channel9.msdn.com/Events/Build/2018/BRK3502) 보여 줍니다 된는 발전 중 일부를 보여 주는이 응용 프로그램의 버전이 있나요
-
-앞에 세우고 사항:
-
-## <a name="whats-new-for-enterprise-applications"></a>엔터프라이즈 응용 프로그램에 대 한 새로운 기능
-
-다음 몇 가지 도구, 라이브러리 및 매우 만들어져 있는 접근 권한 값은 최근에 합니다.
+## <a name="whats-new-and-recent-for-enterprise-applications"></a>새로운 기능 및 엔터프라이즈 응용 프로그램에 대 한 최근
 
 > [!div class="checklist"]
 > * [Windows Template Studio](#template-studio)
@@ -36,6 +28,8 @@ ms.locfileid: "7696709"
 > * [.NET Standard 2.0](#standard)
 > * [SQL Server 연결](#sql-server)
 > * [MSIX 배포](#MSIX)
+
+세부 정보에서 이러한 기능 중 일부를 보여 주는 비디오를 [신속 하 게 구성 LOB 응용 프로그램을 UWP 및 Visual Studio를](https://channel9.msdn.com/Events/Build/2018/BRK3502)참조 하세요.
 
 <a id="template-studio" />
 
@@ -110,7 +104,7 @@ MSIX는 모든 Windows 앱에 최신 패키징 환경을 제공 하는 Windows �
 
 MSIX은을 안정적으로 하도록 작성 하는 패키징 형식.msi,.appx, App-v 및 ClickOnce 설치 기술을의 조합을 기반으로 합니다.
 
-![MSIX 아이콘](images/WinUI_MSIX_2col_740x417.png)
+![MSIX 아이콘](images/MSIX-App-Package.ico)
 
 [MSIX 문서](https://docs.microsoft.com/windows/msix/)를 참조 하세요.
 
@@ -181,14 +175,10 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 
 ## <a name="enterprise-uwp-samples"></a>엔터프라이즈 UWP 샘플
 
-소개 텍스트 여기에 표시 됩니다.
-
-작업-음성 채팅 아니므로 및/또는 Karl 함께 엔터프라이즈에 초점을 맞춘 더 많은 샘플을 가져옵니다.
-
 | 항목 |  설명 |
 |------ |--------------|
-| [VanArsdel 인벤토리 샘플](https://github.com/Microsoft/InventorySample) | 데스크톱 응용 프로그램에서 최신 Windows 기능을 사용 하는 방법을 보여 주는 업무용 시나리오에 초점을 샘플 Windows 10 응용 프로그램 (유니버설 Windows 플랫폼을 사용 하 여). 샘플은를 기반으로 만들고 VanArsdel 가상 회사에 대 한 고객, 주문 및 제품을 관리 합니다.
-MVVM을 강조 표시 SQL 데이터베이스, Entity Framework 합니다. 다른 사용자를 나열 합니다.|
+| [VanArsdel 인벤토리 샘플](https://github.com/Microsoft/InventorySample) | 비즈니스 라인 시나리오를 보여 주는 UWP 샘플 앱 샘플은를 기반으로 만들고 VanArsdel 가상 회사에 대 한 고객, 주문 및 제품을 관리 합니다. |
+| [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Azure Active Directory (AAD) 인증, UI 컨트롤 (데이터 표 포함), Sqlite 및 SQL Azure 데이터베이스 통합, Entity Framework 및 클라우드 API 서비스 등 엔터프라이즈 개발자에 게 유용한 기능을 보여 주는 UWP 샘플 앱 샘플은를 기반으로 만들고 가상 Contoso 회사에 대 한 고객 계정, 주문 및 제품을 관리 합니다. |
 
 ## <a name="patterns-and-practices"></a>패턴 및 사례
 

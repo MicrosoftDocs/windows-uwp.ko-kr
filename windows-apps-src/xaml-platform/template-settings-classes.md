@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b44aaf741c188658c7a639422b0d091f8db6e3e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720429"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7843126"
 ---
 # <a name="template-settings-classes"></a>Template settings 클래스
 

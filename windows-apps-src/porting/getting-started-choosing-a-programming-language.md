@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a9544c1eecc4c1a86552d053694872743a17142c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693915"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829641"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>시작: 프로그래밍 언어 선택
 

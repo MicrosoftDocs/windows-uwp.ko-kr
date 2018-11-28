@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: caf0e8e63716f6ba140ef9346257687f0e7293bb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699453"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7831273"
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
 

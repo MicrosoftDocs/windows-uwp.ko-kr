@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c7055748eb8905341d9f90c47e6141c9c9c599e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697776"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830297"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Visual Studio를 사용하여 앱 설치 관리자 파일 만들기
 

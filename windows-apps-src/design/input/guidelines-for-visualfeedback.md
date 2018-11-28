@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b043ec71eb7d5883a1b22c4f0d8f43824034d454
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827827"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 

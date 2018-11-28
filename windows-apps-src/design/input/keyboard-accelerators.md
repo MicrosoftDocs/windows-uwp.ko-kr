@@ -11,11 +11,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7717646"
+ms.locfileid: "7831628"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 

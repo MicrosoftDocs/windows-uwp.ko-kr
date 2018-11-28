@@ -13,11 +13,11 @@ dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 22e2321c301535fe89f2a7bba13497d51c6d8b78
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7718179"
+ms.locfileid: "7827378"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 

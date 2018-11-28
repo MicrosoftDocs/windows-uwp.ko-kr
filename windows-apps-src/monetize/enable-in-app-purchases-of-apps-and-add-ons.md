@@ -7,11 +7,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a64a52005221c418ea82e8fffa9ecf94b6d1bef3
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720169"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829588"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>앱에서 바로 앱 및 추가 기능 구매 사용
 

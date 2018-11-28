@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
 ms.openlocfilehash: f2aad1b4d6abf9a05af9b9a938188c69d9cae7c8
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696527"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7841662"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 

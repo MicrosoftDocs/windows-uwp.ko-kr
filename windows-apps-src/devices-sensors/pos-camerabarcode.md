@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: c946d9f72107dd787efec34b12272402fc660cbf
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694510"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7841262"
 ---
 # <a name="camera-barcode-scanner"></a>카메라 바코드 스캐너
 카메라 바코드 스캐너는 Windows가 컴퓨터에 연결된 카메라(들)를 소프트웨어 디코더에 페어링하는 과정에서 역동적으로 생성됩니다.  카메라와 디코더를 페어링할 때마다 바코드 스캐너가 완벽하게 작동합니다.   
