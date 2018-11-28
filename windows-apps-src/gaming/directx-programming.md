@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 개요, 프로그래밍, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 83ac401892761e1e6433d337babbce00dc559b98
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7971575"
 ---
 # <a name="directx-programming"></a>DirectX 프로그래밍
 
