@@ -1,18 +1,16 @@
 ---
 title: 연결 된 저장소 모범 사례
-author: aablackm
 description: 최상의 성능을 얻으려면 및 연결 된 저장소에서 경험 하는 방법에 대 한 권장 사항
-ms.author: aablackm
 ms.date: 02/27/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox 하나 연결 된 저장소
 ms.localizationpriority: medium
-ms.openlocfilehash: f8c72ca14ed4bda118994a765cb0624a0e3b190a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dbdb8f95e9afc44a3280d897e74f74d327f94b97
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7558101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7825898"
 ---
 # <a name="connected-storage-best-practices"></a>연결된 저장소 모범 사례
 

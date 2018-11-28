@@ -1,19 +1,17 @@
 ---
 title: Xbox Live API 소개
-author: KevinAsgari
 description: Xbox Live 서비스와 상호 작용 하는 데 사용할 수 있는 다양 한 API 모델에 알아봅니다.
 ms.assetid: 5918c3a2-6529-4f07-b44d-51f9861f91ec
-ms.author: kevinasg
 ms.date: 06/05/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5751ad77607f989963b94d8b0ea2dee574098fe0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 118c451bb4e015d578620647f09ff23724701da0
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7577499"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7825960"
 ---
 # <a name="introduction-to-xbox-live-apis"></a>Xbox Live API 소개
 

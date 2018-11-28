@@ -1,19 +1,17 @@
 ---
 title: 통계 및 순위표 2017 구성
-author: KevinAsgari
 description: 데이터 플랫폼 2017을 사용 하 여 파트너 센터에서 Xbox Live 기능을 갖춘 통계 및 순위표를 구성 하는 방법을 알아봅니다.
 ms.assetid: e0f307d2-ea02-48ea-bcdf-828272a894d4
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: caea254143561d3e38b6583db90945118671e435
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ea2baf4bc27e6d1cfd5beb9ef0386acda72a39d2
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7567062"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7825660"
 ---
 # <a name="configuring-featured-stats-or-leaderboards-in-partner-center-with-data-platform-2017"></a>데이터 플랫폼 2017 사용 하 여 파트너 센터에서 주요 통계 또는 순위표 구성
 

@@ -2,19 +2,17 @@
 title: /users/batch
 assetID: db4c796a-8660-85ff-b92d-085245523f5c
 permalink: en-us/docs/xboxlive/rest/uri-usersbatch.html
-author: KevinAsgari
 description: " /users/batch"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a300dff23a76a3554850f4a5fa7dcddc5bc274b1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2e00c74ec370b4e3c87877258b1a6b7e82073106
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552710"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7826982"
 ---
 # <a name="usersbatch"></a>/users/batch
 사용자의 일괄 처리에 대 한 액세스 존재 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.

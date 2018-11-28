@@ -1,19 +1,17 @@
 ---
 title: Unity 게임에 다중 사용자 지원 추가
-author: KevinAsgari
 description: 다중 사용자 지원의 Xbox Live Unity 플러그 인을 사용 하 여 Unity 게임에 추가
 ms.assetid: ''
-ms.author: heba
 ms.date: 07/14/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, unity, 다중 사용자
 ms.localizationpriority: medium
-ms.openlocfilehash: 73dcb6bb177cd8d6c2e2e532e6f1b7a62ade7adc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 483a0e966be756de483bf7e2ab8458647397687b
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7574856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7825992"
 ---
 # <a name="add-multi-user-support-to-your-unity-game"></a>Unity 게임에 다중 사용자 지원 추가
 > [!IMPORTANT]

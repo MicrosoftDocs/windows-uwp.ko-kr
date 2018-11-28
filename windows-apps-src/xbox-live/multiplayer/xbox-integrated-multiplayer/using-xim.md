@@ -1,18 +1,16 @@
 ---
 title: XIM (c + +)를 사용 하 여
-author: KevinAsgari
 description: C + +를 사용 하 여 Xbox 통합 멀티 플레이어 (XIM)를 사용 하는 방법을 알아봅니다.
-ms.author: kevinasg
 ms.date: 04/24/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, 하나는 xbox, xbox 통합된 멀티 플레이어
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e4645de174bb572b75a8d5a5dcbb4091a693e75
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eb01ac741a40b54e00efb5a602ec39c24f2990e0
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7558254"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7827011"
 ---
 # <a name="using-xim-c"></a>XIM (c + +)를 사용 하 여
 

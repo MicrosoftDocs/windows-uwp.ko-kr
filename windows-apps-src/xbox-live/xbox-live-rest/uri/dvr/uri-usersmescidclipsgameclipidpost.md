@@ -2,19 +2,17 @@
 title: POST (/users/me/scids/{scid}/clips/{gameClipId})
 assetID: 410aecad-57f9-c3dc-f35f-19c4d8dfb704
 permalink: en-us/docs/xboxlive/rest/uri-usersmescidclipsgameclipidpost.html
-author: KevinAsgari
 description: " POST (/users/me/scids/{scid}/clips/{gameClipId})"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 71066e3ac2be19747983265b8bdb2b7b91a36211
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 89f3b53631f5570ab6d0d0619f6678fc3e3c2dd2
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7559050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7825859"
 ---
 # <a name="post-usersmescidsscidclipsgameclipid"></a>POST (/users/me/scids/{scid}/clips/{gameClipId})
 사용자의 데이터에 대 한 게임 클립 메타 데이터를 업데이트 합니다. 이러한 Uri에 대 한 도메인은 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.

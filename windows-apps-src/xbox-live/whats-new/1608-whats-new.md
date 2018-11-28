@@ -1,19 +1,17 @@
 ---
 title: 새로운 기능에 대 한 Xbox Live SDK-2016 년 8 월
-author: KevinAsgari
 description: 새로운 기능에 대 한 Xbox Live SDK-2016 년 8 월
 ms.assetid: fa52e7bd-2c2c-4c25-94ab-761036a7ca79
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: fd78e2ff061f8cf1268a340ad63d954993f563fc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2a498fea1ed0974935a273c9ee72ba2c95d15959
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7555153"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7826995"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---august-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 8 월
 

@@ -2,19 +2,17 @@
 title: EDS 쿼리 구체화
 assetID: ab5c066a-a48b-3042-351d-d0a15f663276
 permalink: en-us/docs/xboxlive/rest/edsqueryrefiners.html
-author: KevinAsgari
 description: " EDS 쿼리 구체화"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 52cbb5240c686d79d2b0532e46d7bf2f6dd85066
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c00ff971e05003ec88c47d3803e565f6e9406c47
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7559416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7825984"
 ---
 # <a name="eds-query-refiners"></a>EDS 쿼리 구체화
  

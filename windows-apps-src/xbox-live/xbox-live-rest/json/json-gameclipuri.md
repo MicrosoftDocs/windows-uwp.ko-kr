@@ -2,19 +2,17 @@
 title: GameClipUri(JSON)
 assetID: 03c097e8-7f29-1026-7a77-5c785b8511e9
 permalink: en-us/docs/xboxlive/rest/json-gameclipuri.html
-author: KevinAsgari
 description: " GameClipUri(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: db92c3e405029d76264b0e1e9b159ae2650d6650
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9b7c30815a2d6e9a8bcac0730f0330ea41624c3e
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7561112"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7825663"
 ---
 # <a name="gameclipuri-json"></a>GameClipUri(JSON)
  
