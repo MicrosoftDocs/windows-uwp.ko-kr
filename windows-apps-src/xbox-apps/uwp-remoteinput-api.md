@@ -3,11 +3,11 @@ title: 장치 포털 원격 입력 API 참조
 description: Xbox에서 원격으로 컨트롤러, 키보드 및 마우스 입력을 전송하는 방법을 알아보세요.
 ms.localizationpriority: medium
 ms.openlocfilehash: e0db86ad50bfb1cb27f516243542a554e710c3ea
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7719636"
+ms.locfileid: "7837318"
 ---
 # <a name="remote-input-api-reference"></a>원격 입력 API 참조   
 이 API를 통해 원격으로 실시간으로 컨트롤러, 키보드 및 마우스 입력을 보낼 수 있습니다.
