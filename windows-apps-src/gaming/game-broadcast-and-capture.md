@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 03b3c48fedcc99d2d667712bfdd51ad1d75f7fbd
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703037"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854371"
 ---
 # <a name="game-broadcast-and-capture"></a>게임 브로드캐스트 및 캡처
 

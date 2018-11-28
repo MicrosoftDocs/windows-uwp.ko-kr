@@ -7,11 +7,11 @@ keywords: Windows 10 uwp, 참가자, 개발 센터 참가자, 미리 보기 기�
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: medium
 ms.openlocfilehash: ad70e986a35767c687d863a7db0754bd980be5db
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715211"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7853710"
 ---
 # <a name="dev-center-insider-program"></a>개발자 센터 참가자 프로그램
 

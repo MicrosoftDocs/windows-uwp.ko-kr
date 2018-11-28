@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b0747dd3b8992ab456bdb00a4dc7157211eb8ba
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712749"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854019"
 ---
 # <a name="get-file-properties"></a>파일 속성 가져오기
 

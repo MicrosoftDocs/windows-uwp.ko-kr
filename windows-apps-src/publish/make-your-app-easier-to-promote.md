@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 홍보용, 홍보, 추천, 전시, Microsoft Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ea7c7d8a132d1c2996d023f1413523f806d0b5bf
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712249"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855591"
 ---
 # <a name="make-your-app-easier-to-promote"></a>앱을 홍보하기 쉽게 만들기
 

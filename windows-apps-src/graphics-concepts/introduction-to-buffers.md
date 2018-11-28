@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: deeae0cc66a7e75da2e44c0d2aba2a9ed459b824
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719946"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855541"
 ---
 # <a name="introduction-to-buffers"></a>버퍼 소개
 
