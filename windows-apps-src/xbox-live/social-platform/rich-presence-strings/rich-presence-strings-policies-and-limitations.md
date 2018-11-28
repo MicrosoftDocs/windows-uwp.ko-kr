@@ -1,19 +1,17 @@
 ---
 title: 다양 한 상태 정책 및 제한 사항
-author: KevinAsgari
 description: 정책 및 Xbox Live 다양 한 상태 시스템의 제한 사항에 알아봅니다.
 ms.assetid: 0ad21a75-0524-45a8-8d8a-0dec0f7d6d6f
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 풍부한 상태, 정책
 ms.localizationpriority: medium
-ms.openlocfilehash: ae44a0b5619023848437c95bcfcd8025375189df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f85974c0ccb38f3c33fb214ddaf24b98dd8dcdd0
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7569432"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840793"
 ---
 # <a name="rich-presence-policies-and-limitations"></a>다양 한 상태 정책 및 제한 사항
 

@@ -3,11 +3,11 @@ title: 디바이스 포털 네트워크 자격 증명 API 참조
 description: 추가, 제거 또는 네트워크 자격 증명을 프로그래밍 방식으로 업데이트 하는 방법을 알아봅니다.
 ms.localizationpriority: medium
 ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705105"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7836238"
 ---
 # <a name="network-credentials-api-reference"></a>네트워크 자격 증명 API 참조
 추가, 제거 또는이 REST API를 사용 하 여 devkit에서 저장 된 네트워크 자격 증명을 업데이트 수 있습니다.
