@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 레이싱 휠, 힘 피드백
 ms.localizationpriority: medium
 ms.openlocfilehash: 90d12caca103648824ceb36a4ca4968754beb7f2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854421"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992424"
 ---
 # <a name="racing-wheel-and-force-feedback"></a>레이싱 휠 및 힘 피드백
 

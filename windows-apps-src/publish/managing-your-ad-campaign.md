@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ead654573d16628e5dd07c58c937d4f71cb7f84c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855371"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990073"
 ---
 # <a name="manage-your-ad-campaign"></a>광고 캠페인 관리
 
 
-[파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽된 탐색 메뉴에서 **모집** 확장 하 고 **광고 캠페인**을 선택 합니다. 앱과 연결된 모든 광고 캠페인과 각 광고 캠페인의 노출 수, 클릭 수 및 설치 수가 표시됩니다. 노출 수, 클릭 수 및 설치 수에 대한 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)에서 이러한 용어에 대한 정의를 참조하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **광고 캠페인**을 선택 합니다. 앱과 연결된 모든 광고 캠페인과 각 광고 캠페인의 노출 수, 클릭 수 및 설치 수가 표시됩니다. 노출 수, 클릭 수 및 설치 수에 대한 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)에서 이러한 용어에 대한 정의를 참조하세요.
 
 광고 캠페인 목록을 필터링하려면 **섹션 필터** 드롭다운을 클릭하고 다음 필터에서 선택합니다.
 

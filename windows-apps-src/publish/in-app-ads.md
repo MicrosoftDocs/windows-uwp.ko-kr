@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e212e16039d49e3ffd08aa5886d48c61ee24e9e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7841758"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986743"
 ---
 # <a name="in-app-ads"></a>인앱 광고
 
@@ -21,7 +21,7 @@ ms.locfileid: "7841758"
 * 이전에 게시 한 Windows 8.x 및 사용 하는 Windows Phone 8.x 앱의 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)합니다.
 
 > [!IMPORTANT]
-> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+> 2018 년 10 월 31 일 기준 제품 새로 만든 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 이러한 SDK를 앱과 통합하여 광고를 표시하는 방법에 대한 자세한 내용은 [Microsoft Advertising SDK를 사용하여 앱에 광고 표시](../monetize/display-ads-in-your-app.md)를 참조하세요.
 
@@ -37,7 +37,7 @@ ms.locfileid: "7841758"
 4.  **광고 단위 유형** 드롭다운 목록에서 광고 유형을 선택합니다.
 
     * 앱에서 배너 광고를 표시 하는 **배너**를 선택 합니다.
-    * 앱에서 동영상 중간 광고 또는 배너 중간 광고를 표시 하는, **동영상 중간 광고** 또는 **배너 중간 광고** (수를 표시 하려는 중간 광고 유형에 대 한 적절 한 옵션을 선택 하세요)를 선택 합니다.
+    * 동영상 중간 광고 또는 배너 중간 광고 응용 프로그램를 표시 하는 경우 **동영상 중간 광고** 또는 **배너 중간 광고** (수를 표시 하려는 중간 광고의 유형에 대 한 적절 한 옵션을 선택 하세요)을 선택 합니다.
     * 앱에서 기본 광고를 표시 하는 경우 **기본**선택 합니다.
 
 5. **장치 패밀리** 드롭다운 목록에서 광고 단위가 사용될 앱의 대상이 되는 장치 패밀리를 선택합니다. 사용 가능한 옵션은 **UWP(Windows 10)**, **PC/태블릿(Windows 8.1)** 또는 **모바일(Windows Phone 8.x)** 입니다.
@@ -86,7 +86,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 1. [광고 단위를 만들거나](#create-ad-unit) [기존 광고 단위를 선택](#available-ad-units)합니다.
 2. **인 앱 광고** 페이지에서 설정을 구성 및 **조정 설정** 섹션으로 이동 합니다.
 
-    * 기본적으로 **Microsoft 내 설정 최적화** 확인란이 선택 되어 있습니다. 이 옵션을 사용하는 것이 좋습니다. 이 옵션은 기계 학습 알고리즘을 사용, 자동으로 앱이 지원하는 지역/국가에서 광고 수익을 극대화 하는 데 도움이 되는 앱의 광고 조정 설정을 선택합니다. 이 옵션을 사용 하는 경우에 구성에 사용 하려는 광고 네트워크를 선택할 수 있습니다. 구성의 일부로 하지 않으려면 앱 선택한 광고 네트워크의 광고를 수신만 되는지 알고리즘 보장 하는 광고 네트워크 선택 취소 합니다.
+    * 기본적으로 **Microsoft 내 설정 최적화** 확인란이 선택 되어 있습니다. 이 옵션을 사용하는 것이 좋습니다. 이 옵션은 기계 학습 알고리즘을 사용, 자동으로 앱이 지원하는 지역/국가에서 광고 수익을 극대화 하는 데 도움이 되는 앱의 광고 조정 설정을 선택합니다. 이 옵션을 사용 하는 경우에 구성에 사용 하려는 광고 네트워크를 선택할 수 있습니다. 구성의 일부로 하지 않으려면 알고리즘 앱 선택한 광고 네트워크에서 광고를 수신만 보장 하는 광고 네트워크 선택 취소 합니다.
     * 고유의 광고 조정 설정을 선택 하려는 경우 **수정 기본 설정**을 선택 합니다.
 
     > [!NOTE]
@@ -110,7 +110,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 |  광고 네트워크  |  설명  |  지원되는 광고 유형  |
 |--------------|---------------|---------------------|
-| Oath 및 AppNexus |  네트워크, Oath, AppNexus 파트너를 통해 광고를 제공 하는 Microsoft에서 관리 하는 광고 네트워크입니다.<p/>**참고**: Oath 및 AppNexus는 항상 순위 먼저 **유료 광고 네트워크** 목록에서 배너 광고 단위에 대 한 낮은 이런이 유형의 광고에서는 순위를 변경할 수 없습니다. | 배너, 동영상 중간 광고 |
+| Oath 및 AppNexus |  네트워크, Oath, AppNexus 파트너를 통해 광고를 제공 하는 Microsoft에서 관리 하는 광고 네트워크입니다.<p/>**참고**: Oath 및 AppNexus는 항상 먼저 목록에서 지정 **유료 광고 네트워크** 에 대 한 배너 광고 단위 및 낮은 이런이 유형의 광고에서는 순위를 변경할 수 없습니다. | 배너, 동영상 중간 광고 |
 | AppNexus(직접) | [AppNexus](https://www.appnexus.com)에서 광고를 제공 하려면이 옵션을 선택 합니다. | 동영상 중간 광고, 기본  |
 | Microsoft 앱 설치 광고 | Windows 에코시스템에서 [앱에 대해 홍보 광고 캠페인을 생성](create-an-ad-campaign-for-your-app.md)하는 다른 개발자가 생성한 앱 설치 광고 또는 앱 Re-engagement 광고를 지원하려면 이 옵션을 선택합니다.  |  배너, 배너 중간 광고, 기본  |
 | MSN 콘텐츠 권장 사항 |  MSN 콘텐츠 권장 사항에서 광고를 제공 하려면이 옵션을 선택 합니다. |  배너, 배너 중간 광고  |
@@ -152,7 +152,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 ## <a name="coppa-compliance"></a>COPPA 준수
 
-앱에는 [스토어에서](../publish/the-app-certification-process.md#in-the-store) 단계 **COPPA 규정 준수** 섹션 광고 단위에 대해 선택한 앱에 도달한 제출이 하나 이상 있는 경우 페이지의 맨 아래에 표시를 [광고 단위를 생성](#create-ad-unit) 하거나 [기존 광고 단위를 선택](#available-ad-units)하는 경우 인증 프로세스입니다.
+앱에는 [스토어에서](../publish/the-app-certification-process.md#in-the-store) 단계 **COPPA 규정 준수** 섹션 광고 단위에 대 한 선택한 앱에 도달한 제출이 하나 이상 있는 경우 페이지 맨 아래에 표시를 [광고 단위를 생성](#create-ad-unit) 하거나 [기존 광고 단위를 선택](#available-ad-units) 인증 프로세스입니다.
 
 “COPPA”(아동에 관한 온라인 개인 정보 보호법)를 위해 귀하의 앱이 13세 미만 아동을 대상으로 하는 경우 이 섹션의 **이 응용 프로그램은 13세 미만 아동을 대상으로 합니다**를 선택해야 합니다. 이 옵션을 선택하면 Microsoft는 앱에 광고를 제공할 때 동작 광고 서비스를 사용하지 않도록 설정하는 단계를 진행합니다.
 

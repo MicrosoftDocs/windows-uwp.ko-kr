@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: deeae0cc66a7e75da2e44c0d2aba2a9ed459b824
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855541"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991939"
 ---
 # <a name="introduction-to-buffers"></a>버퍼 소개
 
@@ -36,7 +36,7 @@ Direct3D 11에서 지 원하는 버퍼 리소스 종류는 다음과 같습니�
 
 꼭 짓 점 버퍼는 기 하 도형을 정의 하는 데 꼭 짓 점 데이터를 포함 합니다. 꼭지점 데이터에는 위치 좌표, 색상 데이터, 텍스처 좌표 데이터, 법선 데이터 등이 포함되어 있습니다.
 
-꼭 짓 점 버퍼의 간단한 예는 위치 데이터 포함 합니다. 다음 그림과 같이 표현할 수 있습니다.
+꼭 짓 점 버퍼의 간단한 예만 위치 데이터를 포함 하는. 다음 그림과 같이 표현할 수 있습니다.
 
 ![위치 데이터를 포함한 꼭짓점 버퍼의 그림](images/d3d10-resources-single-element-vb2.png)
 
@@ -51,33 +51,33 @@ Direct3D 11에서 지 원하는 버퍼 리소스 종류는 다음과 같습니�
 -   오프셋 - 버퍼 시작부터 첫 번째 꼭짓점의 데이터까지 바이트 수입니다.
 -   BaseVertexLocation - 오프셋부터 해당 그리기 호출에 사용된 첫 번째 꼭짓점까지 바이트 수입니다.
 
-꼭 짓 점 버퍼를 만들기 전에 레이아웃을 정의 해야 합니다. 입력 레이아웃 개체를 만든 후 [입력 어셈블러 (IA) 단계](input-assembler-stage--ia-.md)에 바인딩합니다.
+꼭 짓 점 버퍼를 만들기 전에 레이아웃을 정의 해야 합니다. 입력 레이아웃 개체를 만든 후 [IA (입력 어셈블러) 단계](input-assembler-stage--ia-.md)에 바인딩합니다.
 
 ### <a name="span-idindexbufferspanspan-idindexbufferspanspan-idindexbufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>인덱스 버퍼
 
-인덱스 버퍼는 꼭 짓 점 버퍼에 대 한 정수 오프셋을 포함 하며 더 효율적으로 원형 렌더링 사용 됩니다. 인덱스 버퍼는 16비트 또는 32비트 인덱스의 순차 집합을 포함하며, 각 인덱스는 꼭짓점 버퍼에서 꼭짓점을 식별하는 데 사용됩니다. 인덱스 버퍼는 다음 그림과 같이 시각화할 수 있습니다.
+인덱스 버퍼는 꼭 짓 점 버퍼에 대 한 정수 오프셋을 포함 하 고 더 효율적으로 원형 렌더링 사용 됩니다. 인덱스 버퍼는 16비트 또는 32비트 인덱스의 순차 집합을 포함하며, 각 인덱스는 꼭짓점 버퍼에서 꼭짓점을 식별하는 데 사용됩니다. 인덱스 버퍼는 다음 그림과 같이 시각화할 수 있습니다.
 
 ![인덱스 버퍼의 그림](images/d3d10-index-buffer.png)
 
 인덱스 버퍼에 저장된 순차 인덱스는 다음 매개 변수로 배치됩니다.
 
 -   오프셋-인덱스 버퍼의 기본 주소 점까지에서 바이트 수입니다.
--   StartIndexLocation-첫 번째 인덱스 버퍼 요소에서 기본 주소 및 오프셋을 지정 합니다. 시작 위치 렌더링 하려면 첫 번째 인덱스를 나타냅니다.
+-   StartIndexLocation-첫 번째 인덱스 버퍼 요소에서 기본 주소 및 오프셋을 지정 합니다. 시작 위치 렌더링 첫 번째 인덱스를 나타냅니다.
 -   IndexCount - 렌더링할 인덱스 수입니다.
 
 인덱스 버퍼의 시작 인덱스 버퍼 기준 주소 오프셋 (바이트) + StartIndexLocation = \ * ElementSize (바이트)입니다.
 
-이 계산 ElementSize 각 인덱스 버퍼 요소에는 2 개 또는 4 바이트의 크기를입니다.
+이 계산 ElementSize 각 인덱스 버퍼 요소에는 2 개 또는 4 바이트의 크기입니다.
 
 ### <a name="span-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshader-constant-bufferspanconstant-buffer"></a><span id="Shader_Constant_Buffer"></span><span id="shader_constant_buffer"></span><span id="SHADER_CONSTANT_BUFFER"></span><span id="shader-constant-buffer"></span>상수 버퍼
 
-상수 버퍼를 사용 하면 파이프라인에 셰이더 상수 데이터를 효율적으로 제공할 수 있습니다. 스트림 출력 단계의 결과를 저장할 상수 버퍼를 사용할 수 있습니다. 개념적으로 상수 버퍼는 다음 그림과에서 같이 단일 요소 꼭 짓 점 버퍼 처럼 보입니다.
+상수 버퍼를 사용 하면 파이프라인에 셰이더 상수 데이터를 효율적으로 제공할 수 있습니다. 스트림 출력 단계의 결과를 저장할 상수 버퍼를 사용할 수 있습니다. 개념적으로 다음 그림과에서 같이 상수 버퍼는 단일 요소 꼭 짓 점 버퍼 처럼 보입니다.
 
 ![셰이더 상수 버퍼의 그림](images/d3d10-shader-resource-buffer.png)
 
 각 요소는 저장된 데이터의 형식에 의해 결정되는 1~4개 구성 요소 상수를 저장합니다.
 
-상수 버퍼는 단일 바인딩 플래그를 다른 바인딩 플래그와 함께 사용할 수 없으며만 사용할 수 있습니다.
+상수 버퍼는 다른 바인딩 플래그와 함께 사용할 수 없으며 단일 바인딩 플래그를만 사용할 수 있습니다.
 
 셰이더 상수 버퍼에서 셰이더를 읽으려면 HLSL 로드 함수를 사용 합니다. 각 셰이더 단계는 최대 15개의 셰이더 상수 버퍼를 허용하며 각 버퍼는 최대 4,096개 상수를 보관할 수 있습니다.
 

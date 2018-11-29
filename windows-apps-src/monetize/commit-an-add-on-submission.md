@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출 커밋, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: efab4412486566ae817eb66e78f5407533a30d5b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7838465"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990779"
 ---
 # <a name="commit-an-add-on-submission"></a>추가 기능 제출 커밋
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 추가 기능 (라고도 앱에서 제품 또는 IAP) 제출을 커밋합니다. 커밋 작업은 파트너 센터 (모든 관련 된 아이콘 포함) 제출 데이터가 업로드 되었습니다. 파트너 센터에 대 한 응답에서 제출 데이터 수집 및 게시에 대 한 변경 내용을 커밋합니다. 커밋 작업이 성공 하면 변경 내용은 제출 하려면 파트너 센터에 표시 됩니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터에 새롭거나 업데이트 된 추가 기능 (라고도 앱에서 바로 구매 또는 IAP) 제출을 커밋합니다. 커밋 작업은 파트너 센터 (모든 관련 된 아이콘 포함) 제출 데이터가 업로드 되었습니다. 파트너 센터에 대 한 응답에서 제출 데이터 수집 및 게시에 대 한 변경 내용을 커밋합니다. 커밋 작업이 성공 하면 변경 내용은 제출 하려면 파트너 센터에 표시 됩니다.
 
 커밋 작업이 Microsoft Store 제출 API를 사용하여 추가 기능을 제출하는 프로세스에 적용되는 방법은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
 

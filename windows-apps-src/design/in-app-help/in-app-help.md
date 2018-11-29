@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4783d28e4da6c06df0d0676f4a7d28ef3995481a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7838776"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991479"
 ---
 # <a name="in-app-help-pages"></a>앱 내 도움말 페이지
 
@@ -45,7 +45,7 @@ ms.locfileid: "7838776"
 팝업은 상황에 맞는 도움말에 효과적이며, 사용자가 시도하는 특정 작업과 관련된 지침 및 조언을 표시합니다.
 
 -   **한 가지 문제에 집중:** 팝업에서는 도움말 페이지보다 공간이 훨씬 더 제한됩니다. 도움말 팝업이 효과적이려면 단일 작업을 가리켜야 합니다.
--   **가시성이 중요함:** 도움말 팝업은 한 위치에서만 볼 수 있으므로 방해 없이 사용자에게 명확하게 표시되도록 합니다. If the user misses it, they might move away from the popup in search of a help page.
+-   **가시성이 중요함:** 도움말 팝업은 한 위치에서만 볼 수 있으므로 방해 없이 사용자에게 명확하게 표시되도록 합니다. 사용자가 보지 못할 경우 도움말 페이지를 검색하기 위해 팝업을 벗어날 수도 있습니다.
 -   **너무 많은 리소스 사용 금지:** 도움말이 지연되거나 느리게 로드되면 안 됩니다. 팝업에 동영상 또는 오디오 파일이나 고해상도 이미지를 사용하면 사용자에게 도움이 아니라 불편을 줄 가능성이 더 큽니다.
 
 #### <a name="descriptions"></a>설명

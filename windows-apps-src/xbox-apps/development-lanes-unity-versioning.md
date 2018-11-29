@@ -3,11 +3,11 @@ title: Unity - UWP 프로젝트 버전 제어
 description: Unity UWP 프로젝트 버전 관리.
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837081"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992015"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: UWP 프로젝트 버전 제어
 
@@ -50,7 +50,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 ## <a name="folders"></a>폴더  
 
 `Assets` | ***포함*** | Microsoft 스토어 이미지 포함  
-`Data`   | ***무시*** | Unity (장면, 셰이더, 스크립트, 프리 팹 등) 하도록 프로젝트를 컴파일합니다  
+`Data`   | ***무시*** | Unity (장면, 셰이더, 스크립트, 프리 팹 등)를 프로젝트에서 컴파일하는 위치  
 `Dependencies` | ***포함*** | 이 폴더는 (예: XboxLiveSDK.dll) 모든 UWP 종속성을 유지 하기 위해 만든  
 `Properties` | ***포함*** | 개발자가 수정할 수 있는 고급 설정이 포함 되어 있습니다.  
 `Unprocessed` | ***무시*** | Unity 포함 `.dll` 및 `.pdb` 파일  
@@ -61,7 +61,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 `Package.appxmanifest` | ***포함*** | AppX에 대 한 앱 패키지 매니페스트 소스 파일  
 `project.json` | ***포함*** | NuGet 패키지 설명에 `*.csproj` 에 따라 달라 집니다.  
 `ScrapyardPhoenix.csproj` | ***포함*** | UWP 빌드 대상을 설명합니다. 프로젝트를 UWP 앱에 종속성을 추가 하는 경우이 `*.csproj` 파일에는 해당 정보가 포함 됩니다  
-`ScrapyardPhoenix.csproj.user` | ***무시*** | 이 파일에 로컬 사용자 정보가 포함 되어 있습니다.
+`ScrapyardPhoenix.csproj.user` | ***무시*** | 이 파일에는 로컬 사용자 정보가 포함 되어 있습니다.
 
 ## <a name="resulting-gitignore"></a>결과 .gitignore
 

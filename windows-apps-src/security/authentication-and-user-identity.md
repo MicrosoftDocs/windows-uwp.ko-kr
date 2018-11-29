@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d23f54a371a883de8b56d03ddd153ab2d91c230
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849293"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991641"
 ---
 # <a name="authentication-and-user-identity"></a>인증 및 사용자 ID
 
@@ -21,7 +21,7 @@ UWP(유니버설 Windows 플랫폼) 앱에는 [웹 인증 브로커](web-authent
 
 Facebook, Twitter, Flickr 등과 같이 타사 ID 공급자 서비스에 대한 일반적인 앱 연결의 경우에는 [웹 인증 브로커](web-authentication-broker.md)를 사용합니다. 더 편리하게 사용하려면 [자격 증명 보관](credential-locker.md)을 사용하여 사용자의 로그인 정보를 저장하고 로밍합니다.
 
-Windows10를 사용 하는 엔터프라이즈가 [Microsoft Passport 및 Windows Hello](microsoft-passport.md)는 높은 2 단계 인증을 사용 하 여 고려해 야 합니다. Microsoft Passport를 사용할 수 없는 경우 [스마트 카드](smart-cards.md) 및 [지문 생체 인식](fingerprint-biometrics.md)을 통해 추가적으로 보안을 강화할 수 있습니다.
+Windows10를 사용 하는 엔터프라이즈가 [Microsoft Passport 및 Windows Hello](microsoft-passport.md)는 높은 보안 수준의 2 단계 인증을 사용 하 여 고려해 야 합니다. Microsoft Passport를 사용할 수 없는 경우 [스마트 카드](smart-cards.md) 및 [지문 생체 인식](fingerprint-biometrics.md)을 통해 추가적으로 보안을 강화할 수 있습니다.
 
 <table>
 <tr><th>항목</th><th>설명</th></tr>

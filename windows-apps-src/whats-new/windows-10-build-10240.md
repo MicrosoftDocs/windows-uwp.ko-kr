@@ -7,17 +7,17 @@ ms.topic: article
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
 ms.openlocfilehash: 75c5c34f3dec48bbee2feccde5b60cde45a241f9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7841189"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992447"
 ---
 # <a name="whats-new-in-windows10-for-developers-build-10240"></a>개발자를 위한 새로운 Windows10, 빌드 10240
 
 Windows10 빌드 10240 및 업데이트된 SDK는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)한 후 [새 유니버설 Windows 앱을 만들](../get-started/create-uwp-apps.md)거나 [Windows에서 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
-Windows10 빌드 10240에에서 있습니다 (Windows 10 버전 1507 라고도 함)에 대 한 새로운 기능 살펴보기 기능으로는 다음과 같습니다.
+Windows10 빌드 10240에에서 있습니다 (Windows 10 버전 1507 라고도 함)에 대 한 새로운 기능으로 기능 살펴보기 다음과 같습니다.
 
 ## <a name="adaptive-layouts"></a>적응형 레이아웃
 

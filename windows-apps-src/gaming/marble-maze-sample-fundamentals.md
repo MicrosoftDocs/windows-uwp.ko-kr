@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 기본 사항
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7854990"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991206"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Marble Maze 샘플 기본 사항
 
@@ -29,7 +29,7 @@ ms.locfileid: "7854990"
 -   Windows 런타임은 보다 현대적이고 개체 지향적인 방식으로 UWP 앱을 개발할 수 있도록 클래스와 인터페이스를 제공합니다.
 -   개체 참조에 캐럿(^) 기호를 사용하여 Windows 런타임 변수의 수명을 관리하고, [Microsoft::WRL::ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class)을 사용하여 COM 개체의 수명을 관리하고, [std::shared\_ptr](https://docs.microsoft.com/cpp/standard-library/shared-ptr-class) 또는 [std::unique\_ptr](https://docs.microsoft.com/cpp/standard-library/unique-ptr-class)을 사용하여 다른 모든 힙 할당 C++ 개체의 수명을 관리합니다.
 -   대부분의 경우 결과 코드 대신 예외 처리를 사용하여 예기치 않은 오류를 처리합니다.
--   코드 분석 도구와 함께 [SAL 주석](https://docs.microsoft.com/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) 를 사용 하 여 앱의 오류를 찾는 데 도움이 됩니다.
+-   코드 분석 도구와 함께 [SAL 주석](https://docs.microsoft.com/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) 를 사용 하 여 앱에서 오류를 찾는 데 도움이 됩니다.
 
 ## <a name="creating-the-visual-studio-project"></a>Visual Studio 프로젝트 만들기
 
@@ -42,7 +42,7 @@ Marble Maze에 대한 Visual Studio 프로젝트를 만들 때는 기존 프로�
 
 2. **새 프로젝트** 창 왼쪽된 사이드바에서에서 선택 **설치 됨 > 템플릿 > Visual c + +** 합니다.
 
-3. 중간 목록에서 **DirectX 11 앱 (유니버설 Windows)을**선택 합니다. 이 옵션을 보이지 않으면 설치 필수 구성 요소 없을 수 있습니다&mdash; [워크 로드 및 구성 요소 추가 또는 제거 하 여 Visual Studio 2017 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) 추가 구성 요소를 설치 하는 방법에 대 한 정보를 참조 하세요.
+3. 중간 목록에서 **DirectX 11 앱 (유니버설 Windows)을**선택 합니다. 이 옵션을 보이지 않으면 설치 필수 구성 요소가 없을 수 있습니다&mdash; [워크 로드 및 구성 요소 추가 또는 제거 하 여 Visual Studio 2017 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) 추가 구성 요소를 설치 하는 방법에 대 한 정보를 참조 하세요.
 
 4. **이름**, 저장 된 파일에 대 한 **위치** 및 **솔루션 이름**, 프로젝트를 지정 하 고 **확인**을 클릭 합니다.
 
@@ -70,7 +70,7 @@ Visual Studio 맨 위에 있는 드롭다운 메뉴의 녹색 재생 단추 왼�
 -   터치, A 또는 시작을 사용 하 여 단추는 컨트롤러 또는 마우스를 메뉴 항목을 선택 합니다.
 -   터치, 가속도계, 왼쪽 엄지스틱 또는 마우스를 사용하여 미로를 기울입니다.
 -   터치, A 또는 시작을 사용 하 여 단추는 컨트롤러 또는 마우스를 최고 등의 메뉴를 닫습니다 점수 테이블 합니다.
--   컨트롤러 또는 키보드에서 P 키에서 시작 단추를 사용 하 여 일시 중지 또는 게임을 계속 합니다.
+-   컨트롤러 또는 키보드에서 P 키에서 시작 단추를 사용 하 여 일시 중지 하거나 게임을 다시 시작 합니다.
 -   컨트롤러의 뒤로 단추 또는 키보드의 Home 키를 사용하여 게임을 다시 시작합니다.
 -   최고 점수 테이블에 표시 된 경우, 컨트롤러 또는 키보드의 Home 키에서 뒤로 단추를 사용 하 여 모든 점수를 지웁니다.
 
@@ -84,7 +84,7 @@ JavaScript와 .NET에서 Windows 런타임 API를 호출하려면 해당 언어�
 > [!IMPORTANT]
 > Windows 런타임 개체를 만들거나 Windows 런타임 구성 요소를 만드는 경우 **^** 및 **ref new**만 사용하면 됩니다. Windows 런타임을 사용하지 않는 핵심 응용 프로그램 코드를 작성하는 경우 표준 C++ 구문을 사용할 수 있습니다.
 
-Marble Maze는 **^** 을 **Microsoft::WRL::ComPtr**과 함께 사용하여 힙 할당 개체를 관리하고 메모리 누수를 최소화합니다. 사용 하는 것이 좋습니다 ^ Windows 런타임 변수의 수명을 **ComPtr** (예: 사용 하는 경우 DirectX), COM 변수 및 **std::shared\_ptr** 또는 그 외의 수명을 관리 **std::unique\_ptr** 수명을 관리 관리 힙 할당 c + + 개체입니다.
+Marble Maze는 **^** 을 **Microsoft::WRL::ComPtr**과 함께 사용하여 힙 할당 개체를 관리하고 메모리 누수를 최소화합니다. 사용 하는 것이 좋습니다 ^ Windows 런타임 변수의 수명을 **ComPtr** (예: 사용 하는 경우 DirectX), COM 변수 및 **std::shared\_ptr** 또는 그 외의 수명을 관리 **std::unique\_ptr** 수명을 관리를 관리 하려면 힙 할당 c + + 개체입니다.
 
  
 
@@ -111,7 +111,7 @@ Marble Maze는 예기치 않은 오류를 처리하는 주요 방법으로 예�
         );
     ```
 
--   **HRESULT** 는 예기치 않은 오류를 사용 하지는 것이 좋지만에 더 중요 코드 흐름을 제어 하는 데 예외 처리의 사용을 방지할 수 있습니다. 따라서 필요한 경우 **HRESULT** 반환 값을 사용하여 코드 흐름을 제어하는 것이 좋습니다.
+-   **HRESULT** 는 예기치 않은 오류를 사용 하지는 것이 좋지만에 코드 흐름을 제어 하는 데 예외 처리의 사용을 방지 하기 위해 더 중요 합니다. 따라서 필요한 경우 **HRESULT** 반환 값을 사용하여 코드 흐름을 제어하는 것이 좋습니다.
 
 ###  <a name="sal-annotations"></a>SAL 주석
 
@@ -119,7 +119,7 @@ Marble Maze는 예기치 않은 오류를 처리하는 주요 방법으로 예�
 
 Microsoft SAL(소스 코드 주석 언어)을 사용하여 함수가 해당 매개 변수를 사용하는 방법을 설명하거나 주석을 달 수 있습니다. SAL 주석은 반환 값에 대해서도 설명합니다. SAL 주석은 C/C++ 코드 분석 도구와 함께 작동하여 C 및 C++ 소스 코드에서 가능한 결함을 검색합니다. 도구에서 보고하는 일반적인 코딩 오류에는 버퍼 오버런, 초기화되지 않은 메모리, null 포인터 역참조, 메모리 및 리소스 누수 등이 포함됩니다.
 
-[BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h)에 선언 되어 있는 **basicloader:: Loadmesh** 메서드를 고려 합니다. 이 메서드를 사용 하 여 `_In_` *파일 이름* 입력된 매개 변수를 지정 하려면 (및 따라서는에서 읽을 수만) `_Out_` *vertexBuffer* 및 *indexBuffer* 출력 매개 변수를 지정 하려면 (및 따라서만에 기록 됩니다) 및 `_Out_opt_` 지정 *vertexCount* 및 *indexCount* 는 선택적 출력 매개 변수 (및를 작성할 수 있습니다). *vertexCount* 및 *indexCount*는 선택적 출력 매개 변수이므로 **nullptr**이 될 수 있습니다. C/C++ 코드 분석 도구는 이 메서드 호출을 검사하여 전달되는 매개 변수가 이러한 조건을 충족하는지 확인합니다.
+[BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h)에 선언 되어 있는 **basicloader:: Loadmesh** 메서드를 고려 합니다. 이 메서드를 사용 하 여 `_In_` *파일 이름* 입력된 매개 변수를 지정 하 (및 따라서만 읽을에서) `_Out_` *vertexBuffer* 및 *indexBuffer* 출력 매개 변수를 지정 하려면 (및 따라서만 쓰여집니다) 및 `_Out_opt_` 지정 *vertexCount* 및 *indexCount* 는 선택적 출력 매개 변수 (및를 작성할 수 있습니다). *vertexCount* 및 *indexCount*는 선택적 출력 매개 변수이므로 **nullptr**이 될 수 있습니다. C/C++ 코드 분석 도구는 이 메서드 호출을 검사하여 전달되는 매개 변수가 이러한 조건을 충족하는지 확인합니다.
 
 ```cpp
 void LoadMesh(

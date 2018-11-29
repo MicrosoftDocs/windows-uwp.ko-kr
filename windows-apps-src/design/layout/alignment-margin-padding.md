@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: eb8d430619ad05cea1212b48850f52f27056c658
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834035"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990426"
 ---
 # <a name="alignment-margin-padding"></a>맞춤, 여백, 안쪽 여백
 

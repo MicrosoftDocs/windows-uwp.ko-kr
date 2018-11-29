@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827454"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991453"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -82,7 +82,7 @@ VSTS에서 첫 번째 빌드 정의를 만들려면 빌드 탭으로 이동한 �
 
 #### <a name="configure-the-build-solution-build-task"></a>솔루션 빌드에 대한 빌드 작업 구성
 
-이 작업은 이진 파일을 작업 폴더에 있는 출력 앱 패키지 파일을 생성 된 솔루션을 컴파일합니다.
+이 작업은 이진 파일을 작업 폴더에 있는 출력 앱 패키지 파일을 생성 하는 솔루션을 컴파일합니다.
 이 작업에서는 MSbuild 인수가 사용됩니다.  이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요.
 
 |**MSBuild 인수**|**값**|**설명**|
@@ -268,7 +268,7 @@ CI_MyUWPApp_1.1.2501.0
 다음으로 [HockeyApp을 VSTS(Visual Studio Team Services) 또는 TFS(Team Foundation Server)와 함께 사용하는 방법](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs) 가이드를 사용하여 HockeyApp 연결을 구성합니다.
 Microsoft 계정, 소셜 미디어 계정 또는 메일 주소만 사용해도 HockeyApp 계정을 설정할 수 있습니다. 무료 요금제에서는 앱 2개, 소유자 한 명, 데이터 무제한을 제공합니다.
 
-그런 다음, 수동으로 만들거나, 기존 앱 패키지 파일을 업로드 하 여 HockeyApp 앱을 만들 수 있습니다. 자세한 내용은 [새 앱을 만드는 방법](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app)을 참조하세요.
+그런 다음 수동으로 만들거나, 기존 앱 패키지 파일을 업로드 하 여 HockeyApp 앱을 만들 수 있습니다. 자세한 내용은 [새 앱을 만드는 방법](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app)을 참조하세요.
 
 기존 앱 패키지 파일을 사용 하려면 빌드 단계를 추가 하 고 빌드 단계의 이진 파일 경로 매개 변수를 설정 합니다.
 
@@ -290,7 +290,7 @@ Microsoft Store 제출 패키지를 생성하려면 Visual Studio에서 Microsof
 
 Microsoft Store 연결 마법사는 Microsoft Store 연결 정보를 포함하는 Package.StoreAssociation.xml 파일을 생성합니다. GitHub와 같은 공용 리포지토리에 소스 코드를 저장하는 경우 이 파일에는 해당 계정에 대한 예약된 앱 이름이 모두 포함됩니다. 이 파일을 공개하기 전에 제외하거나 삭제할 수 있습니다.
 
-이 문서의 지침에에서 따르면 앱을 게시 하는 데 사용 된 파트너 센터 계정에 액세스할 수 없는 경우: [타사 앱을 빌드? 스토어 앱을 패키징하는 방법을](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97)합니다.
+이 문서의 지침에에서 따르면 앱을 게시 하는 데 사용 된 파트너 센터 계정에 대 한 액세스를 설정 하지 않은 경우: [타사 앱을 빌드? 스토어 앱을 패키징하는 방법을](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97)합니다.
 
 그런 다음 빌드 단계에서 다음 매개 변수를 포함하고 있는지 확인해야 합니다.
 

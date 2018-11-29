@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826844"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989161"
 ---
 # <a name="export-restrictions-on-cryptography"></a>암호화에 대한 내보내기 제한
 
@@ -33,7 +33,7 @@ ms.locfileid: "7826844"
 
 먼저 앱이 EAR(수출 관리 규정)에서 통제되는 암호화 유형을 사용하는지 확인합니다. 이 질문에는 아래 목록에 표시된 예가 포함되지만 가능한 모든 암호화 응용이 목록에 포함되어 있는 것은 아닙니다.
 
-> **중요 한**앱을 하지만 모든 소프트웨어 라이브러리, 유틸리티 및 앱을 포함 하거나 연결 하는 운영 체제 구성 요소에 대해 작성 한 코드 뿐 아니라는 것이 좋습니다.
+> **중요 한**앱을 하지만 모든 소프트웨어 라이브러리, 유틸리티 및 앱을 포함 하거나 연결 하는 운영 체제 구성 요소에 대 한 작성 한 코드 뿐 아니라는 것이 좋습니다.
 
 -   디지털 서명 사용(예: 인증 또는 무결성 검사)
 -   앱이 사용하거나 액세스하는 데이터 또는 파일 암호화

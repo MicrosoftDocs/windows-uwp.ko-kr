@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 목록, 설명, Microsoft Store 페이지, 릴리스 노트, 제목
 ms.localizationpriority: medium
 ms.openlocfilehash: a913c522450a8d28c03066c922df2e3e2972f92f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835298"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987817"
 ---
 # <a name="create-app-store-listings"></a>앱 Store 목록 만들기
 
@@ -21,9 +21,9 @@ ms.locfileid: "7835298"
 **Store 목록**의 많은 필드가 옵션이지만 목록이 돋보이도록 다양한 이미지와 가능한 많은 정보를 제공하는 것이 좋습니다. **Store 목록** 단계가 완료된 것으로 간주되는 데 필요한 최소 요구 사항은 텍스트 설명과 하나 이상의 [스크린샷](app-screenshots-and-images.md#screenshots)입니다.
 
 > [!TIP]
-> 하면 필요에 따라 [Store 목록 가져오기 및 내보내기](import-and-export-store-listings.md) .csv 파일 대신 제공 정보 및 파트너 센터에서 직접 파일을 업로드에서 오프 라인으로 목록 정보를 입력 하 고 하려는 경우. 가져오기 및 내보내기 옵션을 사용할 수 있는 기능은 한 번에 여러 번 업데이트를 수행할 수 있기 때문에 목록이 다양한 언어로 되어 있는 경우에 특히 편리할 수 있습니다. 
+> 하면 필요에 따라 [Store 목록 가져오기 및 내보내기](import-and-export-store-listings.md) .csv 파일을 사용 하는 것이 아니라 제공 정보 및 파트너 센터에서 직접 파일을 업로드에서 오프 라인으로 목록 정보를 입력 하 고 하려는 경우. 가져오기 및 내보내기 옵션을 사용할 수 있는 기능은 한 번에 여러 번 업데이트를 수행할 수 있기 때문에 목록이 다양한 언어로 되어 있는 경우에 특히 편리할 수 있습니다. 
 
-이전에 게시 된 앱에 Windows에서 지 원하는 경우 8.x 및/또는 Windows Phone 8.x 또는 이전에 해당 고객에 게 표시 하도록 [플랫폼별 스토어 목록을 만들](create-platform-specific-store-listings.md) 수 있습니다. 
+이전에 게시 된 앱 지원 Windows 8.x 및/또는 Windows Phone 8.x 또는 이전에 해당 고객에 게 표시 하도록 [플랫폼별 스토어 목록을 만들](create-platform-specific-store-listings.md) 수 있습니다. 
 
 ## <a name="store-listing-languages"></a>Microsoft Store 목록 언어
 
@@ -48,12 +48,12 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 이 드롭다운 상자는 이름 (앱에 대 한 이름을 여러 개 예약 않은) 하는 경우 스토어 목록에 사용 해야를 지정할 수 있습니다.
 
-업로드 한 패키지 스토어 목록이와 동일한 언어로 작업을 진행 중, 해당 패키지에 사용할 이름을 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 업로드 한 후 새 제출을 만들 때 다른 예약 된 이름을 선택할 수 있습니다.
+업로드 한 경우 스토어 목록이와 동일한 언어로 패키지 작업을 진행 중, 해당 패키지에 사용한 이름이 선택 됩니다. 이미 게시 된 후 필요한 [앱](manage-app-names.md#rename-an-app-that-has-already-been-published) 이름을 변경 하는 경우 새 이름을 사용 하는 패키지를 업로드 한 후 새 제출을 만들 때 다른 예약 된 이름을 선택할 수 있습니다.
 
 언어에 대 한 패키지를 업로드 하지 않은 작업 중인 및 둘 이상의 이름을 예약한, 이름을 나타내야 해당 언어에 연결된 된 패키지가 없으므로 예약 된 앱 이름 중 하나를 선택 해야 합니다.
 
 > [!NOTE]
-> **제품 이름** 만 선택 하면 작업 중인 스토어 목록 언어에서에 적용 됩니다. 고객이; 앱을 설치 하는 경우 표시 되는 이름을 영향을 주지 않습니다. 설치 패키지의 매니페스트에에서 해당 이름을 제공 됩니다. 혼동을 피하기 위해 각 언어 패키지 및 스토어 목록에 동일한 이름을 사용 하는 것이 좋습니다.
+> 스토어 언어에서 목록에서 작업할 때에 선택한 **제품 이름** 적용 됩니다. 고객이; 앱을 설치 하는 경우 표시 되는 이름을 영향을 주지 않습니다. 설치 패키지의 매니페스트에에서 해당 이름을 제공 됩니다. 혼동을 피하기 위해 각 언어 패키지 및 스토어 목록에 동일한 이름을 사용 하는 것이 좋습니다.
 
 ## <a name="description"></a>설명
 
@@ -65,7 +65,7 @@ Microsoft Store 목록에 대한 언어를 추가 또는 제거하려면 제출 
 
 ## <a name="whats-new-in-this-version"></a>이 버전의 새로운 기능
 
-앱을 처음으로 제출하려는 경우에는 이 필드를 비워둡니다. 기존 앱에 대 한 업데이트, 최신 버전에서 변경 된 내용 고객 수입니다. 이 필드는 1,500자로 제한됩니다 (전에는 이 필드가 **릴리스 정보**라고 불림).
+앱을 처음으로 제출하려는 경우에는 이 필드를 비워둡니다. 기존 앱에 대 한 업데이트, 최신 릴리스에서 변경 된 내용 고객 수입니다. 이 필드는 1,500자로 제한됩니다 (전에는 이 필드가 **릴리스 정보**라고 불림).
 
 ## <a name="product-features"></a>제품 기능
 

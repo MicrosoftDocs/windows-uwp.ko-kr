@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835845"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990446"
 ---
 # <a name="manage-ad-campaigns"></a>광고 캠페인 관리
 
 [Microsoft Store 프로모션 API](run-ad-campaigns-using-windows-store-services.md)에서 이 메서드를 사용하여 앱의 프로모션 광고 캠페인을 제작, 편집하여 가져옵니다. 이 메서드를 사용해 제작한 캠페인은 한 앱에만 연결할 수 있습니다.
 
->**참고**&nbsp;&nbsp;파트너 센터에서 프로그래밍 방식으로 제작한 캠페인에 액세스할 수 및 또한 만들기 및 파트너 센터를 사용 하 여 광고 캠페인을 관리할 수 있습니다. 파트너 센터에서 광고 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
+>**참고**&nbsp;&nbsp;도 만들기 및 파트너 센터를 사용 하 여 광고 캠페인을 관리할 수 및 파트너 센터에서 프로그래밍 방식으로 제작한 캠페인을 액세스할 수 있습니다. 파트너 센터에서 광고 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
 
 이러한 메서드를 사용해 캠페인을 만들거나 업데이트하면 일반적으로 다음 메서드 중 하나 이상을 호출하여 캠페인에 연결된 *배달 라인*, *대상 프로필*, *크리에이티브*를 관리할 수 있습니다. 광고 캠페인, 배달 라인, 대상 프로필, 크리에이티브 간의 관계에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api)을 참조하세요.
 

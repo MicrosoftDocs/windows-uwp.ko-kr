@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10 uwp, 광고, 광고, 광고 단위, 테스트
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d01434e508d4a5067ffd66bdf86b3083b43016
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839208"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991384"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>앱에서 광고 단위 설정
 
@@ -19,7 +19,7 @@ ms.locfileid: "7839208"
 
 앱에 테스트 광고가 표시되는지 확인하기 위해 테스트 중에 사용할 수 있는 [테스트 광고 단위 값](#test-ad-units)이 제공됩니다. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 게시한 후에 앱에서 테스트 값을 사용하려고 하면 앱에 광고가 수신되지 않습니다.
 
-UWP 앱 테스트를 완료 한 후 파트너 센터에 제출할 준비가 [인 앱 광고](../publish/in-app-ads.md) 페이지 파트너 센터에서 [라이브 광고 단위를 생성](#live-ad-units) 해야 하 고이 광고 단위에 대 한 응용 프로그램 ID 및 광고 단위 ID 값을 사용 하도록 앱 코드를 업데이트 합니다.
+UWP 앱 테스트를 완료 한 후 파트너 센터에 제출할 준비를 마쳤으면 [인 앱 광고](../publish/in-app-ads.md) 페이지 파트너 센터에서 [라이브 광고 단위를 생성](#live-ad-units) 해야 하 고이 광고 단위에 대 한 응용 프로그램 ID 및 광고 단위 ID 값을 사용 하도록 앱 코드를 업데이트 합니다.
 
 앱의 코드에서 응용 프로그램 ID와 광고 단위 ID 값을 할당하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 * [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)
@@ -52,7 +52,7 @@ UWP 앱 테스트를 완료 한 후 파트너 센터에 제출할 준비가 [인
 
 파트너 센터에서 라이브 광고 단위를 가져와 앱에서 사용:
 
-1.  파트너 센터의 **인 앱 광고** 페이지에 [광고 단위 만들기](../publish/in-app-ads.md#create-ad-unit) 가 있습니다. 엡에서 사용하는 광고 컨트롤에 대해 올바른 광고 단위 유형을 지정해야 합니다.
+1.  파트너 센터의 **앱에서 바로 광고** 페이지에 [광고 단위 만들기](../publish/in-app-ads.md#create-ad-unit) 를 합니다. 엡에서 사용하는 광고 컨트롤에 대해 올바른 광고 단위 유형을 지정해야 합니다.
     > [!NOTE]
     > [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, 광고 단위의 광고 조정을 사용하는 방법도 있습니다. 광고 조정을 통해 기타 유료 광고 네트워크의 광고와 Microsoft 앱 프로모션 캠페인 광고 등 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 홍보 기능을 최대화할 수 있습니다. 기본적으로 앱에서 지원하는 시장에서 광고 수익을 극대화할 수 있도록 기계 학습 알고리즘을 사용하여 앱에 대한 광고 조정 설정이 자동으로 선택되지만, 원한다면 조정 설정을 수동으로 구성할 수 있습니다.
 

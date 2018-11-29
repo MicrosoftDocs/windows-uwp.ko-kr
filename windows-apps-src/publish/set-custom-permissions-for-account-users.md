@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7844703"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992348"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 
@@ -43,7 +43,7 @@ ms.locfileid: "7844703"
 
 | 역할                 | 설명              |
 |----------------------|--------------------------|
-| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 파트너 센터에서 사용자 관리 포함이 되지만를 만들고 Azure AD 테 넌 트에 사용자를 삭제할 수는 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자가 관리자 역할이 할당 되었지만 조직의 전역 관리자 권한은 없는 경우 Azure AD 되지는지 않습니다 새 사용자를 만들거나 (사용자의 파트너 센터 역할은 변경할 수 있음) 하지만 디렉터리에서 사용자를 삭제할 수 없습니다. <p> 파트너 센터 계정을 이면 둘 이상의 Azure AD 테 넌 트와 연결 관리자 수 없는 사용자에 대 한 전체 세부 정보 표시 (이름, 성, 암호 복구 메일을 포함 하 여 Azure AD 전역 관리자 인지 여부 및) 묶인 경우 제외 해당 테 넌 트에 대 한 전역 관리자 권한이 있는 계정 가진 사용자와 동일한 테 넌 트에 로그인 합니다. 그러나 추가 하 고 파트너 센터 계정과 연결 된 모든 테 넌 트에서 사용자를 제거할 수 있습니다. |
+| 관리자              | 세금 및 지급액 설정 변경을 제외하고 계정에 대한 모든 권한이 있습니다. 파트너 센터에서 사용자 관리 포함이 되지만를 만들고 Azure AD 테 넌 트에 사용자를 삭제할 수는 Azure AD에서 계정의 사용 권한에 따라 다릅니다. 즉, 사용자가 관리자 역할이 할당 되었지만 조직의 전역 관리자 권한은 없는 경우 Azure AD 하지 볼 수 있도록 새 사용자를 만들거나 사용자를 삭제할 디렉터리에서 (사용자의 파트너 센터 역할은 변경할 수 있음). <p> 파트너 센터 계정 이면 둘 이상의 Azure AD 테 넌 트와 연결 하는 경우 관리자 수 없는 사용자에 대 한 전체 세부 정보 표시 (이름, 성, 암호 복구 메일을 포함 하 여 Azure AD 전역 관리자 인지 여부 및) 묶인 경우 제외 해당 테 넌 트에 대 한 전역 관리자 권한이 있는 계정 가진 사용자와 동일한 테 넌 트에 로그인 합니다. 그러나 추가 하 고 파트너 센터 계정과 연결 된 모든 테 넌 트에서 사용자를 제거할 수 있습니다. |
 | 개발자            | 패키지를 업로드하고 앱 및 추가 기능을 제출할 수 있으며 원격 분석 세부 사항에 대한 [사용 보고서](usage-report.md)를 볼 수 있습니다. [장치 간 환경](https://go.microsoft.com/fwlink/?linkid=874042) 기능에 액세스할 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
 | 비즈니스 기여자 | [상태](health-report.md) 및 [사용](usage-report.md) 보고서를 볼 수 있습니다. 제품을 만들거나 제출할 수 없고, 계정 설정을 변경하거나 재무 정보를 볼 수 없습니다.   |
 | 재무 기여자  | [지급 보고서](payout-summary.md), 재무 정보 및 구입 보고서를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.    |
@@ -189,7 +189,7 @@ ms.locfileid: "7844703"
     <tbody>
     <tr><td align="left">    <b>홍보 코드</b>     </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문과 사용 정보를 볼 수 있습니다.         </td><td>    제품 및 추가 기능에 대한 <a href="generate-promotional-codes.md">홍보 코드</a> 주문을 보고 관리하고 만들 수 있으며, 사용 정보를 볼 수 있습니다.          </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td><td>    해당 없음(상위 제품에 대한 설정이 모든 추가 기능에 적용됨)     </td></tr>
     <tr><td align="left">    <b>대상 제품</b>     </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 볼 수 있습니다.         </td><td>    제품에 대한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상 제품</a>을 확인하고 관리하고 만들 수 있습니다.          </td><td>    해당 없음     </td><td>    해당 없음      </td></tr>
-    <tr><td align="left">    <b>고객에게 문의</b>  </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대한 응답</a> 및 <a href="respond-to-customer-reviews.md">고객 리뷰에 대한 응답</a>을 볼 수 있습니다. 제품에 대해 생성된 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림</a>을 볼 수 있습니다.    </td><td>    <b>고객 의견</b> 권한 부여 된 뿐만 아니라 <a href="respond-to-customer-feedback.md">고객 피드백에 응답</a> 하 고 <a href="respond-to-customer-reviews.md">고객 리뷰에 응답할</a>수 있습니다. 제품에 대해 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림을 만들고 보낼</a> 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
+    <tr><td align="left">    <b>고객에게 문의</b>  </td><td>    <b>고객 의견</b> 권한도 부여된 경우에 한해 <a href="respond-to-customer-feedback.md">고객 의견에 대한 응답</a> 및 <a href="respond-to-customer-reviews.md">고객 리뷰에 대한 응답</a>을 볼 수 있습니다. 제품에 대해 생성된 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림</a>을 볼 수 있습니다.    </td><td>    <b>고객 의견</b> 부여 된 뿐만 아니라 <a href="respond-to-customer-feedback.md">고객 피드백에 응답</a> 하 고 <a href="respond-to-customer-reviews.md">고객 리뷰에 응답할</a>수 있습니다. 제품에 대해 <a href="send-push-notifications-to-your-apps-customers.md">대상이 지정된 알림을 만들고 보낼</a> 수도 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
     <tr><td align="left">    <b>실험</b></td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a> 및 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험(A/B 테스트)</a>을 만들고 관리하고 볼 수 있으며, 실험 데이터를 볼 수 있습니다.     </td><td>    해당 없음  </td><td>    해당 없음                 </td></tr>
     <tr><td align="left">    <b>Microsoft Store 영업 이벤트</b>&nbsp;*</td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td><td>    제품에 대한 영업 이벤트 상태를 볼 수 있습니다.   </td><td>    영업 이벤트에 제품을 추가하고 할인을 구성할 수 있습니다.      </td></tr>
     </tbody>

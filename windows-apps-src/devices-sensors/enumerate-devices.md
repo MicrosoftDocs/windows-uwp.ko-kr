@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f6348cc713d4fb93dfed9310eea9d3fd1025a2de
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829752"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990789"
 ---
 # <a name="enumerate-devices"></a>디바이스 열거
 
@@ -123,7 +123,7 @@ async void enumerateSnapshot(){
 
 백그라운드 작업으로 장치를 감시하는 작업은 위에서 설명한 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) 만들기와 유사합니다. 실제로 이전 섹션에 설명된 대로 먼저 일반 **DeviceWatcher** 개체를 만들어야 합니다. 이 개체를 만들었으면 [**DeviceWatcher.Start**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.start) 대신 [**GetBackgroundTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx)를 호출합니다. **GetBackgroundTrigger**를 호출할 때 받고 싶은 알림의 종류 즉, 추가, 제거 또는 업데이트를 지정해야 합니다. 업데이트 또는 제거를 요청하려면 추가도 요청해야 합니다. 트리거를 등록하면 **DeviceWatcher**가 백그라운드에서 즉시 실행되기 시작합니다. 이때부터 기준에 일치하는 응용 프로그램에 대한 새로운 알림을 받을 때마다 백그라운드 작업이 트리거되고 응용 프로그램을 마지막으로 트리거한 이후의 최신 변경 내용을 제공합니다.
 
-**중요 한** [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) 응용 프로그램을 트리거합니다 처음 감시자 **EnumerationCompleted** 상태에 도달 하면 됩니다. 따라서 초기 결과가 모두 포함됩니다. 이후 응용 프로그램을 트리거할 때는 마지막 트리거 이후 발생한 추가, 업데이트 및 제거 알림만 포함됩니다. 이와 약간 다르게 포그라운드 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) 개체의 경우 초기 결과가 한번에 하나씩 제공되지 않고 **EnumerationCompleted**에 도달한 후 번들로만 제공됩니다.
+**중요 한** [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) 응용 프로그램을 트리거하는 처음으로 감시자 **EnumerationCompleted** 상태에 도달 하면 됩니다. 따라서 초기 결과가 모두 포함됩니다. 이후 응용 프로그램을 트리거할 때는 마지막 트리거 이후 발생한 추가, 업데이트 및 제거 알림만 포함됩니다. 이와 약간 다르게 포그라운드 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) 개체의 경우 초기 결과가 한번에 하나씩 제공되지 않고 **EnumerationCompleted**에 도달한 후 번들로만 제공됩니다.
 
  
 

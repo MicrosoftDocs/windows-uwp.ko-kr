@@ -7,20 +7,20 @@ ms.topic: article
 keywords: Windows 10, uwp, 데이터, 데이터베이스, 관계형, 표, SQLite
 ms.localizationpriority: medium
 ms.openlocfilehash: eb5adbdd3ae12d039d934e8d0cbe468ae5c1187c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846390"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989569"
 ---
 # <a name="data-access"></a>데이터 액세스
 
-SQLite 데이터베이스를 사용 하 여 사용자의 장치에서 데이터를 저장할 수 있습니다. 또한 서비스 계층의 모든 종류를 사용 하지 않고 앱을 SQL Server 데이터베이스에 직접 연결할 수 있습니다.
+SQLite 데이터베이스를 사용 하 여 사용자의 장치에서 데이터를 저장할 수 있습니다. 또한 모든 종류의 서비스 계층을 사용 하지 않고 앱을 SQL Server 데이터베이스에 직접 연결할 수 있습니다.
 
 | 항목 | 설명|
 |-------|------------|
-| [UWP 앱에서 SQLite 데이터베이스 사용](sqlite-databases.md) | SQLite를 사용 하 여 저장 하 고 사용자가 장치에서 경량 데이터베이스에서 데이터를 검색 하는 방법을 보여 줍니다. SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. |
-| [UWP 앱에서 SQL server 데이터베이스 사용](sql-server-databases.md) | SQL Server 데이터베이스에 직접 연결 하 고 저장 한 다음 [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임 스페이스의 클래스를 사용 하 여 데이터를 검색 하는 방법을 보여 줍니다. 서비스 계층은 필요하지 않습니다. |
+| [UWP 앱에서 SQLite 데이터베이스 사용](sqlite-databases.md) | SQLite를 사용 하 여 저장 하 고 사용자가 장치에서 경량 데이터베이스에 데이터를 검색 하는 방법을 보여 줍니다. SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. |
+| [UWP 앱에서 SQL server 데이터베이스 사용](sql-server-databases.md) | SQL Server 데이터베이스에 직접 연결 하 고 저장 한 다음, [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) 네임 스페이스의 클래스를 사용 하 여 데이터를 검색 하는 방법을 보여 줍니다. 서비스 계층은 필요하지 않습니다. |
 
 ## <a name="related-topics"></a>관련 항목
 

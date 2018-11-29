@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 데이터
 ms.localizationpriority: medium
-ms.openlocfilehash: 312729c25d5d9f34471c7154a84273bcbf844da4
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 54f5989f0aa2fb5eeed26f16ab9e07671e26832c
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720229"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992388"
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 
@@ -100,7 +100,7 @@ Microsoft Store 제출 API에서에서 다음 메서드를 사용 하 여 파트
 | primaryName   | 문자열  | 앱의 기본 이름입니다.      |
 | packageFamilyName | 문자열  | 앱의 패키지 패밀리 이름입니다.      |
 | packageIdentityName          | 문자열  | 앱의 패키지 ID 이름입니다.                       |
-| publisherName       | 문자열  | 앱과 연결된 Windows 게시자 ID입니다. 파트너 센터에서 앱에 대 한 [앱 id](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) 페이지에 표시 되는 **패키지/Identity/게시자** 값에 해당 합니다.       |
+| publisherName       | 문자열  | 앱과 연결된 Windows 게시자 ID입니다. 파트너 센터의 앱에 대 한 [앱 id](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) 페이지에 표시 되는 **패키지/Identity/게시자** 값에 해당 합니다.       |
 | firstPublishedDate      | 문자열  | ISO 8601 형식으로 앱이 처음 게시된 날짜입니다.   |
 | lastPublishedApplicationSubmission       | 개체 | 앱의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.    |
 | pendingApplicationSubmission        | 개체  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |   
@@ -109,7 +109,7 @@ Microsoft Store 제출 API에서에서 다음 메서드를 사용 하 여 파트
 
 <span id="add-on-object" />
 
-### <a name="add-on-resouce"></a>추가 기능 리소스
+### <a name="add-on-resource"></a>추가 기능 리소스
 
 이 리소스는 추가 기능에 대한 정보를 제공합니다.
 

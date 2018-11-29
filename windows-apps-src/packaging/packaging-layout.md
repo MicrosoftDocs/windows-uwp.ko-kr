@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e54b74cf3052fdeb5b70cc90f59ab0ea59aef76
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835438"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988310"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>패키징 레이아웃으로 패키지 만들기  
 
@@ -143,7 +143,7 @@ ms.locfileid: "7835438"
 
 선택적 패키지 각각에는 고유한 패키지 패밀리 이름이 있으며 **PackageFamily** 요소로 정의해야 합니다. **선택적** 특성은 **true**로 지정해야 합니다. **RelatedSet** 특성은 선택적 패키지가 관련 집합 내에 있는지 여부, 즉 선택적 패키지가 주 패키지 내에서 업데이트되어야 하는지 여부를 지정하는 데 사용됩니다(기본적으로 true입니다).
 
-**PrebuiltPackage** 요소 포함 되거나 빌드되는 앱 번들 파일에서 참조 될 패키징 레이아웃에 정의 되어 있지 않은 패키지를 추가 하려면 사용 됩니다. 이 경우 다른 DLC 선택적 패키지가 여기에 포함 되어 있는 기본 앱 번들 파일 참조 하 고 관련된 집합의 일부로 가질 수 있습니다.
+**PrebuiltPackage** 요소를 사용 하면 포함 되거나 만들려는 앱 번들 파일에서 참조 될 패키징 레이아웃에 정의 되어 있지 않은 패키지를 추가 합니다. 이 경우 다른 DLC 선택적 패키지가 여기에 포함 되어 있으므로 기본 앱 번들 파일 참조 하 고 관련된 집합의 일부로 가질 수 있습니다.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>패키징 레이아웃과 MakeAppx.exe로 앱 패키지 빌드

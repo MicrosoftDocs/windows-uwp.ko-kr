@@ -1,23 +1,23 @@
 ---
 ms.assetid: ec3945e7-cfb1-b91a-7ae6-e767a7227f8a
 title: 설정 페이지 (개발자 홈)
-description: Xbox one 개발자 홈 앱의 설정 페이지에 대 한 정보를 제공합니다.
+description: Xbox One 용 개발자 홈 앱의 설정 페이지에 대 한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a0a94a7a8e22ee63cb126bb50ad1c74837c4f55
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7847562"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989841"
 ---
 # <a name="settings-page-dev-home"></a>설정 페이지 (개발자 홈)
    
   
-개발자 홈의 **설정** 페이지 개발 콘솔에 대 한 다양 한 설정에 액세스할 수 있습니다.   
+개발자 홈의 **설정** 페이지 개발 콘솔에 대 한 다양 한 설정에 대 한 액세스를 제공 합니다.   
  ![개발자 홈의 설정 페이지](images/devhome_settings.png)   
   
 **설정** 페이지에 다음과 같은 창을 포함 되어 있습니다.   
@@ -26,7 +26,7 @@ ms.locfileid: "7847562"
    *  [OS 복구 업데이트 설정](#ID4EOB)  
    *  [Visual Studio](#ID4EYB)  
    *  [디버그 설정](#ID4ECC)  
-   *  [무인 설치 스크립트 구성](#ID4EMC)  
+   *  [무인된 스크립트 구성](#ID4EMC)  
    *  [기본 홈 경험](#ID4E3C)  
 
  
@@ -70,10 +70,10 @@ ms.locfileid: "7847562"
 
    
 
-## <a name="unattended-script-configuration"></a>무인 설치 스크립트 구성  
+## <a name="unattended-script-configuration"></a>무인된 스크립트 구성  
    
   
-**무인 설치 스크립트 구성** 창 Xbox One 본체에 대 한 설치 스크립트를 관리합니다.   
+**무인 설치 스크립트 구성** 창 Xbox One 콘솔에 대 한 설치 스크립트를 관리합니다.   
   
 <a id="ID4E3C"></a>
 
@@ -82,7 +82,7 @@ ms.locfileid: "7847562"
 ## <a name="default-home-experience"></a>기본 홈 경험  
    
   
-**기본 홈 경험** 창 정품 홈 화면 또는 [(개발자 홈) 콘솔의 개발자 홈](dev-home.md) 화면 콘솔 시작 될 때 표시 되는지 여부를 결정 합니다.   
+**기본 홈 경험** 창 정품 홈 화면이 나 [(개발자 홈) 콘솔의 개발자 홈](dev-home.md) 화면 콘솔 시작 될 때 표시 되는지 여부를 결정 합니다.   
   
 <a id="ID4EJD"></a>
 

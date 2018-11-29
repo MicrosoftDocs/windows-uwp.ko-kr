@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, games, directx, 2d, 그래픽
 ms.localizationpriority: medium
 ms.openlocfilehash: 1154abc4305307d87f15fbe0c0e5461e3a15e27e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849121"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992045"
 ---
 # <a name="2d-graphics-for-directx-games"></a>DirectX 게임용 2D 그래픽
 

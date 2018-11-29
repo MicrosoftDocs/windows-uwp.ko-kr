@@ -1,5 +1,5 @@
 ---
-description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 데스크톱 응용 프로그램에 대 한 정보 데이터 가져오기.
+description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 데스크톱 응용 프로그램에 대 한 인 사이트 데이터를 가져옵니다.
 title: 데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 ms.date: 07/31/2018
 ms.topic: article
@@ -7,15 +7,15 @@ keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 인 
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5545d27668b23e5b7ae91201421dfa4c92f9c8ed
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853285"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988709"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>데스크톱 응용 프로그램에 대한 정보 데이터 가져오기
 
-[Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)을 추가 하는 데스크톱 응용 프로그램에 대 한 상태 메트릭 데이터와 관련 된 정보를 가져오려면 Microsoft Store 분석 API에서에서이 메서드를 사용 합니다. 이 데이터는 또한 파트너 센터에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에서 사용할 수 있습니다.
+Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 [Windows 데스크톱 응용 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)을 추가 하는 데스크톱 응용 프로그램에 대 한 상태 메트릭 데이터와 관련 된 통찰력을 얻으세요. 이 데이터는 또한 파트너 센터에서 데스크톱 응용 프로그램에 대 한 [상태 보고서](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) 에서 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -45,7 +45,7 @@ ms.locfileid: "7853285"
 
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | 정보 데이터 가져오기 하려는 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 (예: **상태 보고서**) 모든 [파트너 센터에서 데스크톱 응용 프로그램에 대 한 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 를 열고 URL에서 제품 ID를 검색 합니다. 이 매개 변수를 지정 하지 않으면 경우 응답 본문에는 계정에 등록 된 모든 앱에 대 한 정보 데이터 포함 됩니다.  |  아니요  |
+| applicationId | string | 정보 데이터 가져오기 하려는 데스크톱 응용 프로그램의 제품 ID입니다. 데스크톱 응용 프로그램의 제품 ID를 가져오려면 (예: **상태 보고서**) 모든 [파트너 센터에서 데스크톱 응용 프로그램에 대 한 분석 보고서](https://msdn.microsoft.com/library/windows/desktop/mt826504) 를 열고 URL에서 제품 ID를 검색 합니다. 이 매개 변수를 지정 하지 않으면 경우 응답 본문에는 계정에 등록 된 모든 앱에 대 한 인 사이트 데이터 포함 됩니다.  |  아니요  |
 | startDate | date | 검색할 인 사이트 데이터의 날짜 범위에 대 한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
 | endDate | date | 검색할 인 사이트 데이터의 날짜 범위에 대 한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | filter | string  | 응답에서 행을 필터링하는 하나 이상의 문입니다. 각 문에는 응답 본문의 필드 이름 및 **eq** 또는 **ne** 연산자와 연결된 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 문자열 값은 *filter* 매개 변수에서 단일 따옴표로 묶여야 합니다. 예를 들어 *필터 dataType eq '취득' =* 합니다. <p/><p/>현재이 메서드는 필터 **상태**만 지원합니다.  | 아니요   |
@@ -75,9 +75,9 @@ Authorization: Bearer <your access token>
 
 | 값               | 유형   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | 인 사이트 데이터를 검색 한 데스크톱 응용 프로그램의 제품 ID입니다.     |
-| insightDate                | string | 특정 메트릭 변경을 식별 하는 날짜입니다. 이 날짜는 크게 증가 검색 하는 요일 끝을 나타내는 또는 그 전에 주에 비해 메트릭이 감소 합니다. |
-| 데이터 형식     | string | 이 정보는 일반 분석 영역을 지정 하는 문자열입니다. 현재이 메서드는 **상태**만 지원 합니다.    |
+| applicationId       | string | 제품 ID를 검색 한 인 사이트 데이터 데스크톱 응용 프로그램입니다.     |
+| insightDate                | string | 특정 메트릭 변경을 식별 하는 날짜입니다. 이 날짜는 크게 증가 감지 하는 주의 끝을 나타내는 또는 그 전에 주에 비해 메트릭이 감소 합니다. |
+| 데이터 형식     | string | 이 정보는 일반 분석 영역을 지정 하는 문자열입니다. 현재이 메서드는 **상태**만 지원합니다.    |
 | insightDetail          | array | 하나 이상의 [InsightDetail 값](#insightdetail-values) 현재 통찰력에 대 한 세부 정보를 나타내는 합니다.    |
 
 
@@ -85,11 +85,11 @@ Authorization: Bearer <your access token>
 
 | 값               | 유형   | 설명                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | 현재 통찰력 또는 현재 차원에 설명 하는 메트릭을 나타내는 문자열입니다. 현재이 메서드는 **적중 횟수**값만 지원 합니다.  |
-| SubDimensions         | array |  통찰력에 대 한 단일 메트릭을 설명 하는 하나 이상의 개체입니다.   |
+| FactName           | string | 미터법 현재 통찰력 또는 현재 치수를 설명 하는 나타내는 문자열입니다. 현재이 메서드는 **적중 횟수**값만 지원합니다.  |
+| SubDimensions         | array |  단일 메트릭은 통찰력을 설명 하는 하나 이상의 개체입니다.   |
 | PercentChange            | string |  메트릭은 전체 고객 기반에서 변경 된 백분율입니다.  |
-| DimensionName           | string |  현재 차원에 설명 된 메트릭의 이름입니다. **EventType**, **시장**, **DeviceType**및 **PackageVersion**을 예로 들 수 있습니다.   |
-| DimensionValue              | string | 미터법 현재 차원에서 설명 하는 값입니다. 예를 들어 **DimensionName** **EventType**인 경우에 **크래시** 또는 **중단** **DimensionValue** 수 있습니다.   |
+| DimensionName           | string |  현재 차원에 설명 된 메트릭의 이름입니다. **EventType**, **지역/국가**, **DeviceType**및 **PackageVersion**을 예로 들 수 있습니다.   |
+| DimensionValue              | string | 현재 차원에 설명 된 메트릭의 값입니다. 예를 들어 **DimensionName** **EventType**인 경우에 **크래시** 또는 **중단** **DimensionValue** 수 있습니다.   |
 | FactValue     | string | 통찰력은 감지 된 날짜에 메트릭의 절대 값입니다.  |
 | 방향 | string |  방향 변경 내용 (**양수** 또는 **음수**)입니다.   |
 | Date              | 문자열 |  현재 통찰력 또는 현재 차원 관련 된 변경 내용을 확인 하는 날짜입니다.   |

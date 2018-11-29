@@ -1,22 +1,22 @@
 ---
-description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임입니다.
-title: 게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기
+description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임 합니다.
+title: 게임에서 Xbox One에 오류에 대 한 세부 정보를 가져오기
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827777"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992195"
 ---
-# <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기
+# <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에서 Xbox One에 오류에 대 한 세부 정보를 가져오기
 
-이 메서드를 사용 하 여 Microsoft Store 분석 API에서 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다.
 
-이 메서드를 사용 하려면 먼저에 자세한 정보를 원하는 오류 ID를 검색 먼저 [Xbox One 게임 한 오류 보고 데이터를 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
+이 메서드를 사용 하려면 먼저에 자세한 정보를 원하는 오류 ID를 검색 먼저 [Xbox One 게임에 대 한 데이터를 보고 하는 오류 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -99,8 +99,8 @@ Authorization: Bearer <your access token>
 | market          | string  | 장치 지역의 ISO 3166 국가 코드입니다.     |
 | osBuild         | 문자열  | 오류가 발생한 OS의 빌드 번호입니다.       |
 | packageVersion  | string  | 이 오류와 연결 된 게임 패키지의 버전입니다.    |
-| deviceModel           | 문자열  | 게임이 오류가 발생할 때 실행 된 Xbox One 콘솔을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>Microsoft Xbox 하나</strong></li><li><strong>Microsoft Xbox One S</strong></li><li><strong>Microsoft Xbox One X</strong></li></ul>  |
-| osVersion       | 문자열  | 오류가 발생한 OS 버전입니다. 항상 **Windows 10**값입니다.    |
+| deviceModel           | 문자열  | 게임을 실행 한 오류가 발생할 때 Xbox One 콘솔을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>Microsoft Xbox 하나</strong></li><li><strong>Microsoft Xbox One S</strong></li><li><strong>Microsoft Xbox One X</strong></li></ul>  |
+| osVersion       | 문자열  | 오류가 발생한 OS 버전입니다. 이것이 항상 **Windows 10**값입니다.    |
 | osRelease       | 문자열  |  Windows 10 OS 릴리스 또는 플 라이팅 링 (집단는 OS 버전 내) 오류가 발생 하는 다음 문자열 중 하나입니다.<p/><ul><li><strong>버전 1507</strong></li><li><strong>버전 1511</strong></li><li><strong>버전 1607</strong></li><li><strong>버전 1703</strong></li><li><strong>버전 1709</strong></li><li><strong>버전 1803</strong></li><li><strong>릴리스 미리 보기</strong></li><li><strong>초기 참가자</strong></li><li><strong>이후 참가자</strong></li></ul><p>OS 릴리스 또는 플라이팅 링을 알 수 없는 경우 이 필드의 값은 <strong>알 수 없음</strong>입니다.</p>    |
 | deviceType      | 문자열  | 오류가 발생한 디바이스 유형입니다. 이것이 항상 **콘솔**값입니다.     |
 | cabDownloadable           | 부울  | 이 사용자에 대해 CAB 파일을 다운로드할 수 있는지 여부를 나타냅니다.   |

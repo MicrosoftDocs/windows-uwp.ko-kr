@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, 사용
 ms.localizationpriority: medium
 ms.openlocfilehash: 48ad049b3f310f8b375a28d9695dd9280d686c43
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849420"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990663"
 ---
 # <a name="get-monthly-app-usage"></a>월별 앱 사용 현황 가져오기
 
-Microsoft Store 분석 API에서이 메서드를 사용 하 여 (지난 90 일만)는 지정 된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램에 대 한 집계 사용 현황 데이터 (Xbox 멀티 플레이 포함 하지 않음)를 JSON 형식으로 가져옵니다. 이 정보는 파트너 센터에서 [사용 보고서](../publish/usage-report.md) 에서 사용할 수 있습니다.
+Microsoft Store 분석 API에서이 메서드를 사용 하 여 (지난 90 일만)는 지정 된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램 (멀티 플레이어 Xbox 제외) 집계 사용 현황 데이터를 JSON 형식으로 가져옵니다. 이 정보는 파트너 센터에서 [사용 보고서](../publish/usage-report.md) 에서 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -85,13 +85,13 @@ Authorization: Bearer <your access token>
 | applicationId             | string  | 사용 현황 데이터를 검색할 앱의 스토어 ID입니다.                            |
 | applicationName           | string  | 앱의 표시 이름                                                                |
 | 출시                    | string  | 고객이 앱을 사용한 시장의 ISO 3166 국가 코드입니다.                   |
-| packageVersion            | string  | 사용량 발생 한 패키지의 버전입니다.                                            |
-| deviceType                | string  | 다음 문자열 중 하나 나타내는 사용량 발생 한 디바이스 유형입니다.<ul><li>**PC**</li><li>**Phone**</li><li>**콘솔**</li><li>**태블릿**</li><li>**IoT**</li><li>**서버**</li><li>**홀로그램**</li><li>**알 수 없음**</li></ul>                                                                                                                           |
+| packageVersion            | string  | 사용량 발생 하는 패키지의 버전입니다.                                            |
+| deviceType                | string  | 다음 문자열 중 하나 나타내는 사용 발생 한 디바이스 유형입니다.<ul><li>**PC**</li><li>**Phone**</li><li>**콘솔**</li><li>**태블릿**</li><li>**IoT**</li><li>**서버**</li><li>**홀로그램**</li><li>**알 수 없음**</li></ul>                                                                                                                           |
 | subscriptionName          | 문자열  | Xbox Game Pass 통해 사용 했는지를 나타냅니다.                                              |
 | monthlySessionCount       | long    | 해당 달 동안 사용자 세션 수입니다.                                              |
 | engagementDurationMinutes | double  | 사용자가 적극적으로 측정 고유한 기간의 시간, 앱이 시작할 때 앱 (프로세스 시작)를 사용 하 여 있고 때 (프로세스 종료) 또는 일정 기간의 비활성 상태 후 종료 있는 분입니다.                               |
 | monthlyActiveUsers        | long    | 해당 월의 앱을 사용 하 여 고객의 수입니다.                                           |
-| monthlyActiveDevices      | long    | 일정 기간의 비활성 상태 후 또는 고유한 기간의 시간, 앱이 시작할 때 (프로세스 시작)에 대 한 앱을 실행 하 고 (프로세스 종료) 시점까지 장치의 수입니다.                                                        |
+| monthlyActiveDevices      | long    | 일정 기간의 비활성 상태 후 또는 고유한 기간의 시간, 앱이 시작할 때 (프로세스 시작)에 대 한 앱을 실행 하 고 (프로세스 종료) 하는 경우 종료 장치의 수입니다.                                                        |
 | monthlyNewUsers           | long    | 처음으로 해당 월에 대 한 앱을 사용한 고객의 수입니다.                    |
 | averageDailyActiveUsers   | double  | 매일 앱을 사용 하는 고객의 평균 수입니다.                             |
 | averageDailyActiveDevices | double  | 매일 모든 사용자가 앱과 상호 작용 하는 데 사용 되는 장치의 평균 수입니다. |

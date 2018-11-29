@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
 ms.openlocfilehash: 442b3b9328212a5115384b5175b519b76286dd28
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839528"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991302"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
 
@@ -744,7 +744,7 @@ rhproxy가 시작된 것으로 출력에 나타나면 rhproxy가 제대로 로�
 
 rhproxy가 실행 중이면 사용자 모드에서 액세스가 가능한 디바이스 인터페이스가 생성된 것입니다. 몇 가지 명령줄 도구를 사용하여 디바이스를 열거하고 이들이 존재하는지 확인하게 됩니다.
 
-복제는 [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) 저장소 및 빌드는 `GpioTestTool`, `I2cTestTool`, `SpiTestTool`, 및 `Mincomm` 샘플입니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
+복제는 [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) 리포지토리를 빌드는 `GpioTestTool`, `I2cTestTool`, `SpiTestTool`, 및 `Mincomm` 샘플입니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
 
 ```ps
 I2cTestTool.exe -list

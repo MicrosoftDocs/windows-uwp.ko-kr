@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 47092c128fe3a3855d7e32706451545b357c39c4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7841443"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992942"
 ---
 # <a name="use-the-light-sensor"></a>광원 센서 사용
 
@@ -31,7 +31,7 @@ ms.locfileid: "7841443"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트 잘 알고 있어야 합니다.
+응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트에 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 주변 광원 센서를 지원해야 합니다.
 
