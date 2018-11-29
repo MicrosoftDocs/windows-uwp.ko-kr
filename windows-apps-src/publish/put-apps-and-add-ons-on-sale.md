@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c844c37bab8a135468d74558e8dc053b18d48cc
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848351"
+ms.locfileid: "7974455"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>앱 및 추가 기능 판매
 
-Microsoft Store에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다. 낮은 가격대 또는 백분율을 기반으로 하는 할인 가격에 제품을 제공할 수 있습니다. 및 다른 제품 중 하나를 소유 하는 고객에 대 한 단독 제품을 확인 하거나, 모든 사용자에 게 할인을 제공할 것인지 선택할 수 있습니다.
+Microsoft Store에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다. 낮은 가격대 또는 백분율을 기반으로 하는 할인 가격에 제품을 제공할 수 있습니다. 하 고, 모든 사용자에 게 할인을 제공할 이나 다른 제품 중 하나를 소유 하는 고객에 대 한 단독 제품을 하는지 여부를 선택할 수 있습니다.
 
 > [!NOTE]
 > 구독 추가 기능에 대 한 할인 판매 가격 정책은 지원 되지 않습니다.

@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 839dc024204ec9b76ffe621a35cbbbaffc248d02
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7845067"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978482"
 ---
 # <a name="continuous-dictation"></a>연속 받아쓰기
 
@@ -68,7 +68,7 @@ private StringBuilder dictatedTextBuilder;
 - 연속 인식 이벤트 처리기에서 앱의 UI를 업데이트하는 경우 UI 스레드 디스패처를 가져옵니다.
 - 음성 인식기를 초기화합니다.
 - 기본 제공 받아쓰기 문법을 컴파일합니다.
-    **참고**  음성 인식에 인식할 수 있는 어휘를 정의 하려면 이상의 제약 조건이 필요 합니다. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
+    **참고**  음성 인식에 하나 이상의 제약 조건이 인식할 수 있는 어휘를 정의 하려면 필요 합니다. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
 - 인식 이벤트에 대한 이벤트 수신기를 설정합니다.
 
 이 예제에서는 [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) 페이지 이벤트에서 음성 인식을 초기화합니다.
@@ -125,7 +125,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  그런 다음 [**Confidence**](https://msdn.microsoft.com/library/windows/apps/dn631434) 속성을 확인합니다. 신뢰도 값이 [**Medium**](https://msdn.microsoft.com/library/windows/apps/dn631409) 이상인 경우 StringBuilder에 텍스트를 추가합니다. 또한 입력을 수집할 때 UI를 업데이트합니다.
 
-    **참고** [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트는 UI를 직접 업데이트할 수 없는 백그라운드 스레드에서 발생 합니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
+    **참고** [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트가 백그라운드 스레드에서 UI를 직접 업데이트할 수 없습니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -165,7 +165,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  이벤트 처리기는 Status 속성을 확인하여 인식에 성공했는지 여부를 알아봅니다. 또한 사용자가 말하기를 중지하는 경우도 처리합니다. [**TimeoutExceeded**](https://msdn.microsoft.com/library/windows/apps/dn631433)는 사용자가 말하기를 마친 것을 의미하므로, 대개 인식에 성공한 것으로 간주됩니다. 한층 뛰어난 환경을 구현하기 위해 코드에서 이런 경우를 처리해야 합니다.
 
-    **참고** [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트는 UI를 직접 업데이트할 수 없는 백그라운드 스레드에서 발생 합니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
+    **참고** [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트가 백그라운드 스레드에서 UI를 직접 업데이트할 수 없습니다. 처리기가 UI를 업데이트해야 하는 경우(\[음성 및 TTS 샘플\]에서와 마찬가지로) 디스패처의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 통해 UI 스레드 업데이트를 디스패치해야 합니다.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,

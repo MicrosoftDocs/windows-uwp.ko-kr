@@ -8,16 +8,16 @@ ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8ffcbbcc73db049498eb09ea60061f93cd7b09f2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830707"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977412"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  
 
-디자인 및 UI 관련 다운로드가 Fluent 디자인/UWP 앱에 대 한 합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
+디자인 및 Fluent 디자인/UWP 앱에 대 한 UI 관련 다운로드 합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
 
 
 ## <a name="design-toolkits"></a>디자인 도구 키트
@@ -111,10 +111,10 @@ Fluent XAML 테마 편집기는 Fluent 디자인 시스템의 유연성을 설�
 
 ![VanArsdel 이미지](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-승 합 차 Arsdel, Ltd. 종단 간 UWP 샘플 앱은 Microsoft Fluent 디자인 시스템의 다음 진행할 보여 주기 위해 고안 되었습니다. Ux 프레임 워크 및 컴퍼지션 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 에서 향상 된 밀도 및 새 컨트롤의 광범위 한 사용을 쉽습니다. 샘플 관리 하 고 (이 경우 램프)에서 IoT 장치 구입 풍부 하 고 생산적인 환경을 구축 하는 방법을 보여 줍니다.<br>
+승 합 차 Arsdel, Ltd. 종단 간 UWP 샘플 응용 프로그램은 Microsoft Fluent 디자인 시스템 차세대 보여 주기 위해 고안 되었습니다. 향상 된 밀도 및 새 컨트롤의 광범위 한 사용 ux 프레임 워크 및 컴퍼지션의 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 는. 관리 및 IoT 장치 (이 경우 램프)에서 구매에 대 한 풍부한, 생산성 환경을 구축 하는 방법을 보여 줍니다.<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">VanArsdel 샘플 다운로드</a> <br><a href="https://github.com/microsoft/vanarsdel">GitHub에서 VanArsdel 샘플 확인</a>
 
-![캐스팅 이미지 빌드](images/buildcast.png)
+![캐스트 이미지 빌드](images/buildcast.png)
 **BuildCast**<br>
 BuildCast는 Fluent 디자인 시스템을 UWP 소개 하기 위해 제작 된 종단 간 샘플입니다. 이 샘플에서는 Channel 9 및 일부 Windows 기술 매니아 피드에서 가장 인기 있는 샘플을 비롯한 비디오 팟캐스트를 검색하고 다운로드하고 재생할 수 있습니다. 또한 잉크 메모, 책갈피 및 원격 재생을 제공합니다. 이 샘플은 <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Fluent 디자인으로 멋진 앱 만들기</a> 동안 2017 빌드 회의에서 처음 제공되었습니다. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">BuildCast 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/BuildCast">GitHub에서 BuildCast 샘플 확인</a>

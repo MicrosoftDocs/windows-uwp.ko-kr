@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fcbaa0a3db826ef971878acd6a553dd7a836508
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978143"
 ---
 # <a name="optical-zoom-and-resizing"></a>광학 줌 및 크기 조정
 
@@ -37,7 +37,7 @@ ms.locfileid: "7834305"
 
 ![손가락을 모아서 개체를 축소하고 벌려서 확대](images/objectresize.png)
 
-**참고**  광학 줌 [시맨틱 줌](../controls-and-patterns/semantic-zoom.md)과 혼동 하지 않아야 합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
+**참고**  광 확대/축소 [시맨틱 줌](../controls-and-patterns/semantic-zoom.md)과 혼동 하지 않아야 합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
 
  
 

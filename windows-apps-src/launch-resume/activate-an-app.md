@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975955"
 ---
 # <a name="handle-app-activation"></a>앱 활성화 처리
 
@@ -264,7 +264,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) 속성 앱 주 또는 보조 타일에서 시작 된 있는지 여부를 결정 하 고 해당 정보를 기반으로 새로 제공 또는 앱 환경을 다시 해야 하는지 여부를 결정을 확인할 수 있습니다.
+> 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) 속성 주 또는 보조 타일에서 시작 했다고 있는지 여부를 결정 하 고 해당 정보를 기반을 새로 제공 또는 앱 환경을 다시 해야 하는지 여부를 결정을 확인할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [Windows.ApplicationModel.Activation](https://msdn.microsoft.com/library/windows/apps/br224766)

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aec7ed4f97a0ce4733cfba450770de86a84d6ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7845802"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974234"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
@@ -30,7 +30,7 @@ ms.locfileid: "7845802"
 > 이 API를 사용 하 여 앱, 패키지 플라이트 또는 추가 기능에 대 한 제출을 생성 하는 경우에 파트너 센터에 있는 것이 아니라만 API를 사용 하 여 제출을 추가 변경 하려면 해야 합니다. 파트너 센터를 사용 하 여 원래 API를 사용 하 여 만든 제출을 변경을 변경 하거나 해당 제출 API를 사용 하 여 커밋할 수 없게 됩니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 > [!IMPORTANT]
-> [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)하기 위한 제출을 게시하거나 [LOB 앱](../publish/distribute-lob-apps-to-enterprises.md)에 대한 제출을 기업에 직접 게시하는 데 이 API를 사용할 수 없습니다. 이러한 시나리오 모두 사용 해야 파트너 센터에서 제출을 게시 합니다.
+> [비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)하기 위한 제출을 게시하거나 [LOB 앱](../publish/distribute-lob-apps-to-enterprises.md)에 대한 제출을 기업에 직접 게시하는 데 이 API를 사용할 수 없습니다. 이러한 시나리오 모두 사용 해야 파트너 센터에 제출 게시 합니다.
 
 > [!NOTE]
 > 필수 앱 업데이트 및 Microsoft Store 관리 소모성 추가 기능을 사용하는 앱 또는 추가 기능에 이 API를 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Microsoft Store 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 앱 또는 추가 기능에 대 한 제출을 관리 하려면 파트너 센터를 사용 해야 합니다.
@@ -41,7 +41,7 @@ ms.locfileid: "7845802"
 
 Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않으면 추가 요금 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않은 경우 추가 비용 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
 * [파트너 센터 계정과 Azure AD 응용 프로그램 연결](#associate-an-azure-ad-application-with-your-windows-dev-center-account) 해야 하 고 ID, 클라이언트 ID 및 키 테 넌 트를 가져와야 합니다. 이러한 값은 Microsoft Store 제출 API에 대한 호출에 사용하는 Azure AD 액세스 토큰을 가져오는 데 필요합니다.
 
@@ -49,7 +49,7 @@ Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 
 
   * 파트너 센터에서 앱 아직 존재 하지 않는 경우 [파트너 센터에서 해당 이름을 예약 하 여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)해야 합니다. Microsoft Store 제출 API를 사용 하 여; 파트너 센터에서 앱을 만들 수 없습니다. 을 만드는 파트너 센터에서 작업 해야 있으며 다음 그 후 사용할 수 있습니다 API를 앱에 액세스 하 고 그에 대 한 제출을 프로그래밍 방식으로 만들 합니다. 그러나 해당 제출을 만들기 전에 API를 사용하여 프로그래밍 방식으로 추가 기능 및 패키지 플라이트를 만들 수 있습니다.
 
-  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 첫 번째 [파트너 센터에서 앱에 대 한 제출을 만들려면](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 설문지에 답변 하기를 포함 해야 합니다. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
+  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 첫 번째 [파트너 센터의 앱에 대 한 제출을 만들려면](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 설문지에 답변 하기를 포함 해야 합니다. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
 
   * 앱 제출을 만들거나 업데이트하는 중이고 앱 패키지를 포함해야 하는 경우 [앱 패키지를 준비합니다](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
 
@@ -59,9 +59,9 @@ Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 
 
 <span id="associate-an-azure-ad-application-with-your-windows-dev-center-account" />
 
-### <a name="how-to-associate-an-azure-ad-application-with-your-partner-center-account"></a>Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하는 방법
+### <a name="how-to-associate-an-azure-ad-application-with-your-partner-center-account"></a>파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법
 
-Microsoft Store 제출 API를 사용 하려면 먼저 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 해야, ID 및 클라이언트 ID는 응용 프로그램에 대 한 테 넌 트 검색 및 키를 생성 합니다. Azure AD 응용 프로그램은 Microsoft Store 제출 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+Microsoft Store 제출 API를 사용 하려면 먼저 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 해야, ID 및 클라이언트 ID는 응용 프로그램에 대 한 테 넌 트를 검색 및 키를 생성 합니다. Azure AD 응용 프로그램은 Microsoft Store 제출 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
 
 > [!NOTE]
 > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.

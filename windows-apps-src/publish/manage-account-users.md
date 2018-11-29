@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp, 계정 사용자, azure ad, 여러 사용자, 여러 사용자 관리
 ms.localizationpriority: medium
 ms.openlocfilehash: 282b1eb087fa081b621437206f338ed4b6d3569b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973258"
 ---
 # <a name="manage-account-users"></a>계정 사용자 관리
 
-Azure Active Directory를 사용 하 여 추가 하 고 [파트너 센터](https://partner.microsoft.com/dashboard) 계정에 추가 사용자를 관리할 수 있습니다. 각 사용자가 갖는 역할 또는 사용자 지정 권한을 정의할 수 있습니다. 또한 사용자 그룹 또는 Azure AD 응용 프로그램에 역할을 할당할 수 있습니다.
+Azure Active Directory를 사용 하 여 추가 하 고 [파트너 센터](https://partner.microsoft.com/dashboard) 계정에 사용자를 관리할 수 있습니다. 각 사용자가 갖는 역할 또는 사용자 지정 권한을 정의할 수 있습니다. 또한 사용자 그룹 또는 Azure AD 응용 프로그램에 역할을 할당할 수 있습니다.
 
 추가 하 고 계정 사용자를 관리 하려면 먼저 조직의 Azure Active Directory를 파트너 센터 계정에를 연결 해야 합니다. 
 
 이 섹션에는 다음을 수행하는 방법이 설명되어 있습니다.
 
 -   [파트너 센터 계정에 Azure Active Directory 연결](associate-azure-ad-with-dev-center.md)
--   [사용자, 그룹, 파트너 센터 계정에 Azure AD 응용 프로그램 추가](add-users-groups-and-azure-ad-applications.md)
+-   [사용자, 그룹 및 Azure AD 응용 프로그램을 파트너 센터 계정에 추가 합니다.](add-users-groups-and-azure-ad-applications.md)
 -   [계정 사용자에 대한 역할 및 사용자 지정 권한 설정](set-custom-permissions-for-account-users.md)
 
 > [!TIP]

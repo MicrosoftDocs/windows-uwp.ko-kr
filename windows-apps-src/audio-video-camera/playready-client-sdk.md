@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4fac02f892c66a1bcf0b08986ae00a3a162b44ca
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979646"
 ---
 # <a name="playready-drm"></a>PlayReady DRM
 
@@ -28,7 +28,7 @@ PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어
 
 ## <a name="whats-new-in-playready-drm"></a>PlayReady DRM의 새로운 기능
 
-다음 목록에는 새로운 기능과 변경 내용이 Windows10 용 PlayReady DRM을 설명 합니다.
+다음은 새로운 기능과 변경 내용이 Windows10 용 PlayReady DRM을 설명 합니다.
 
 -   HWDRM(하드웨어 디지털 권한 관리)이 추가되었습니다.
 
@@ -398,14 +398,14 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
 PlayReady 보호된 UWP 앱 만들기를 시작하기 전에 다음 소프트웨어를 시스템에 설치해야 합니다.
 
 -   Windows10 합니다.
--   컴파일하는 샘플의 PlayReady DRM에 대 한 UWP 앱에 대 한, 경우에 Microsoft Visual Studio2015 사용 해야 하거나 나중에 샘플을 컴파일해야 합니다. 여전히 Microsoft Visual Studio2013를 Windows8.1 스토어 앱 용 PlayReady DRM의 샘플을 컴파일하는 데 사용할 수 있습니다.
+-   Microsoft Visual Studio2015 사용 해야 컴파일하는 경우 샘플 PlayReady DRM에 대 한 UWP 앱에 대 한, 또는 나중 샘플을 컴파일해야 합니다. 여전히 Microsoft Visual Studio2013를 Windows8.1 스토어 앱 용 PlayReady DRM의 샘플을 컴파일하는 데 사용할 수 있습니다.
 
 <!--This is no longer available-->
 <!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
 ## <a name="playready-uwp-app-migration-guide"></a>PlayReady UWP 앱 마이그레이션 가이드
 
-이 섹션에 기존 PlayReady Windows 8.x 스토어 앱 Windows10 마이그레이션하는 방법에 대 한 정보를 포함 합니다.
+이 섹션에는 Windows10 기존 PlayReady Windows 8.x 스토어 앱으로 마이그레이션하는 방법에 대 한 정보가 포함 됩니다.
 
 Windows10에서 PlayReady UWP 앱에 대 한 네임 스페이스 [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454) **Microsoft.Media.PlayReadyClient** 에서 변경 되었습니다. 즉, 코드에서 이전 네임스페이스를 검색하여 새 네임스페이스로 바꿔야 합니다. 여전히 winmd 파일을 참조합니다. 파일은 Windows10 운영 체제에서 windows.media.winmd의 일부입니다. 이 파일은 TH의 Windows SDK의 일부로 windows.winmd에 있습니다. UWP의 경우 windows.foundation.univeralappcontract.winmd에서 참조됩니다.
 
@@ -511,7 +511,7 @@ Windows 10 버전 1703부터, 디코드 코덱, 해상도, 출력 보호(HDCP)�
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Xbox One에서 PlayReady DRM 사용
 
-Xbox One에서 UWP 앱에서 PlayReady DRM을 사용 하려면 PlayReady를 사용 하 여 인증을 위해 앱을 게시 하는 데 사용 중인 [파트너 센터](https://partner.microsoft.com/dashboard) 계정에 등록 해야 먼저 합니다. 다음 두 가지 방법 중 하나로 이 작업을 수행할 수 있습니다.
+Xbox One에서 UWP 앱에서 PlayReady DRM을 사용 하려면 먼저 해야 PlayReady를 사용 하 여 인증을 위해 앱을 게시 하는 데 사용 중인 [파트너 센터](https://partner.microsoft.com/dashboard) 계정에 등록 합니다. 다음 두 가지 방법 중 하나로 이 작업을 수행할 수 있습니다.
 
 * Microsoft의 담당자에게 권한을 요청하도록 합니다.
 * 하 여 파트너 센터 계정과 회사 이름을 보내 권한 부여를 신청 [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).

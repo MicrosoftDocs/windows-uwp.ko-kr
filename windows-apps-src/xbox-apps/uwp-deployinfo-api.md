@@ -3,11 +3,11 @@ title: 디바이스 포털 배포 정보 API 참조
 description: 프로그래밍 방식으로 배포 정보 API에 액세스하는 방법을 알아봅니다.
 ms.localizationpriority: medium
 ms.openlocfilehash: c44089313b100880b419e9b55a26101e877496f3
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832662"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973964"
 ---
 # <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>설치된 하나 이상의 패키지에 대한 배포 정보를 요청합니다.
 

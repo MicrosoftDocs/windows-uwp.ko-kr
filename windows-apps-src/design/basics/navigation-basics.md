@@ -11,11 +11,11 @@ keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4eb31ed1f802b8827c124958438ceb6c5902aee1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848654"
+ms.locfileid: "7978595"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -55,7 +55,7 @@ ms.locfileid: "7848654"
 
 ### <a name="consistency"></a>일관성
 
-탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일 됩니다 탐색할 수 있도록 예측 가능 하 고 직관적인 사용자에 대 한 합니다.
+탐색은 사용자 경험과 일관되어야 합니다. 사용자는 익숙한 및 아이콘에 대 한 표준 규칙을 다음 [표준 컨트롤](#use-the-right-controls) 을 사용 하 여, 위치 및 스타일은 탐색 예측 가능 하 고 직관적인 사용자를 위해로 합니다.
 
 ![페이지 구성 요소 이미지](images/nav/page-components.svg)
 
@@ -185,10 +185,10 @@ ms.locfileid: "7848654"
         Use top navigation when:
 
         - 화면의 탐색 옵션을 모두 표시 하려고 합니다.
-        - 원하는 앱의 콘텐츠에 대 한 더 많은 공간.
-        - 아이콘 탐색 범주를 명확히 설명할 수 없습니다.
+        - 앱의 콘텐츠에 대 한 더 많은 공간이 필요 합니다.
+        - 아이콘 탐색 범주를 명확 하 게 나타내는 수 없습니다.
         
-        사용 시기를 탭 합니다.
+        사용 하 여 탭 하는 경우:
 
         - 탐색 기록 및 페이지 상태를 유지 하려고 합니다.
         - 사용자가 탭 자주 전환할 것으로 예상 합니다.

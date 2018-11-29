@@ -7,31 +7,31 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976980"
 ---
 # <a name="create-and-run-your-first-experiment"></a>첫 번째 실험 만들기 및 실행
 
 이 연습에서는 다음을 수행합니다.
-* 텍스트 및 색의 앱 단추를 나타내는 여러 원격 변수를 정의 하는 파트너 센터에서 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms) 를 만듭니다.
+* 텍스트 및 앱 단추의 색을 나타내는 여러 원격 변수를 정의 하는 파트너 센터에서 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms) 를 만듭니다.
 * 파트너 센터에 변환 이벤트 데이터를 다시 및 원격 변수 값을 검색 하 고이 데이터를 사용 하 여 단추의 배경색을 변경 하려면 보기를 기록 하는 코드를 사용 하 여 앱을 만듭니다.
 * 앱 단추의 배경색을 변경하면 단추 클릭 수가 늘어나는지 여부를 테스트하도록 프로젝트에 실험을 만듭니다.
 * 실험 데이터를 수집하는 앱을 실행합니다.
-* 파트너 센터에서 실험 결과 검토 하 고 앱의 모든 사용자에 대해 사용 하도록 설정 하려면 변형을 선택 실험을 완료 합니다.
+* 파트너 센터에서 실험 결과 검토 하 고 앱의 모든 사용자에 대해 사용 하도록 설정 하려면 변형을 선택한 실험을 완료 합니다.
 
-개요 A / B 테스트 파트너 센터를 사용 하 여 참조 [A로 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
+개요는 A / B 테스트 파트너 센터를 사용 하 여 참조 [A로 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 연습을 수행 하려면 파트너 센터 계정이 있어야 하 고에 설명 된 대로 개발 컴퓨터를 구성 해야 [A로 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
+이 연습을 수행 하려면 파트너 센터 계정이 있어야 하 고 개발 컴퓨터에 설명 된 대로 구성 해야 [A로 앱 실험 실행 / B 테스트](run-app-experiments-with-a-b-testing.md)합니다.
 
 ## <a name="create-a-project-with-remote-variables-in-partner-center"></a>파트너 센터에서 원격 변수로 프로젝트 만들기
 
 1. [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인합니다.
-2. 실험을 만드는 데 사용할 파트너 센터에서 앱 이미 있는 경우 파트너 센터에서 해당 앱을 선택 합니다. 아직 [이름을 예약 하 여 새 앱 만들기](../publish/create-your-app-by-reserving-a-name.md) 를 파트너 센터에 앱이 있는 하 고 파트너 센터에서 앱을 선택 작업을 수행 합니다.
+2. 실험을 만드는 데 사용할 파트너 센터에서 앱 이미 있는 경우 파트너 센터에서 해당 앱을 선택 합니다. 수행 아직 있는 경우 앱 [이름을 예약 하 여 새 앱 만들기](../publish/create-your-app-by-reserving-a-name.md) 파트너 센터에서 파트너 센터에서 앱을 선택 합니다.
 3. 탐색 창에서 **서비스**를 클릭한 다음 **실험**을 클릭합니다.
 4. 다음 페이지의 **프로젝트** 섹션에서 **새 프로젝트** 단추를 클릭합니다.
 5. **새 프로젝트** 페이지에서 새 프로젝트에 대한 이름 **Button Click Experiments**를 입력합니다.
@@ -51,7 +51,7 @@ ms.locfileid: "7839398"
 5. **솔루션 탐색기**에서 MainPage.xaml을 두 번 클릭하여 앱에서 기본 페이지에 대한 디자이너를 엽니다.
 6. **도구 상자**에서 페이지로 **단추**를 끌어다 놓습니다.
 7. 디자이너에서 단추를 두 번 클릭하여 코드 파일을 열고 **Click** 이벤트에 대한 이벤트 처리기를 추가합니다.  
-8. 코드 파일의 전체 내용을 다음 코드로 바꿉니다. 할당은 ```projectId``` [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 이전 섹션에서 파트너 센터에서 가져온 변수입니다.
+8. 코드 파일의 전체 내용을 다음 코드로 바꿉니다. 할당 합니다 ```projectId``` [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 이전 섹션에서 파트너 센터에서 가져온 변수입니다.
     [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
 9. 코드 파일을 저장하고 프로젝트를 빌드합니다.

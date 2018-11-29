@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp, 파일, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: 772abd3696850be202593c582e6338a04de38537
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842590"
+ms.locfileid: "7975525"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>UWP의 파일 속성에 빠르게 액세스 
 
 라이브러리에서 파일 및 속성 목록을 신속하게 수집하고 앱에서 해당 속성을 사용하는 방법에 대해 알아봅니다.  
 
 필수 구성 요소 
-- **비동기 프로그래밍 유니버설 Windows 플랫폼 (UWP) 앱에 대 한**  C# 또는 Visual Basic에서 비동기 앱을 작성, [C# 또는 Visual Basic에서 비동기식 Api 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조 하는 방법을 알아볼 수 있습니다.     C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
-- **라이브러리에 대 한 액세스 권한**  이러한 예제의 코드에서는 **picturesLibrary** 기능이 필요 하지만 파일 위치 해야 할 수 있으며 다른 기능이 하거나 아무 기능도 전혀 합니다. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
+- **유니버설 Windows 플랫폼 (UWP) 앱에 대 한 프로그래밍 비동기**  C# 또는 Visual Basic에서 비동기 앱을 작성, [C# 또는 Visual Basic에서 비동기식 Api 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조 하는 방법을 알아볼 수 있습니다.     C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
+- **라이브러리에 대 한 액세스 권한**  이러한 예제의 코드에서는 **picturesLibrary** 기능이 필요 하지만 파일 위치 수는 다른 기능이 하거나 아무 기능도 필요 전혀 합니다. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
 - **단순 파일 열거**  이 예제에서는 [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) 를 사용 하 여 몇 가지 고급 열거 속성을 설정 합니다. 작은 디렉터리에 대한 단순 파일 목록을 가져오는 방법에 대한 자세한 내용은 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)를 참조하세요. 
 
 ## <a name="usage"></a>용도  

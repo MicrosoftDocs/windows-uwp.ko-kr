@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 리뷰 API, 추가 기능 취득
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dcda52940f0218b6fdb5be147f058eca7479a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828664"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973278"
 ---
 # <a name="submit-responses-to-reviews"></a>리뷰에 대한 응답 제출
 
@@ -21,7 +21,7 @@ Microsoft Store 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 프
 리뷰를 제출하는 고객은 해당 리뷰에 대한 응답을 받지 않기로 선택할 수 있습니다. 고객이 응답을 받지 않겠다고 선택한 리뷰에 응답하려 하면 이 메서드의 응답 본문이 응답 시도가 실패한 것으로 나타냅니다. 이 메서드를 호출하기 전에 선택적으로 [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md) 메서드를 사용하여 지정된 리뷰에 응답할 수 있는지 여부를 확인할 수 있습니다.
 
 > [!NOTE]
-> 이 메서드를 사용 하 여 프로그래밍 방식으로 리뷰에 응답, [파트너 센터를 사용 하 여](../publish/respond-to-customer-reviews.md)리뷰에 응답할 수도 있습니다.
+> 이 메서드를 사용 하 여 프로그래밍 방식으로 리뷰에 응답를 [파트너 센터를 사용 하 여](../publish/respond-to-customer-reviews.md)리뷰에 응답할 수도 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -69,7 +69,7 @@ Microsoft Store 리뷰 API에서 이 메서드를 사용하여 앱 리뷰에 프
 | ReviewId | 문자열 |  응답하려는 리뷰의 ID(GUID)입니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다.   |  예  |
 | ResponseText | 문자열 | 제출할 응답입니다. 응답은 [이 지침](../publish/respond-to-customer-reviews.md#guidelines-for-responses)을 따라 합니다.   |  예  |
 | SupportEmail | 문자열 | 고객이 직접 문의할 때 사용할 수 있는 앱 지원 이메일 주소입니다. 유효한 메일 주소여야 합니다.     |  예  |
-| IsPublic | 부울 |  **True**를 지정 하는 경우 응답 앱의 스토어 목록에 고객 리뷰 바로 아래에 표시 되 고 모든 고객에 게 표시 됩니다. 메일 응답 수신을 하는 것이 옵트아웃 되지 않은 경우 **false** 및 사용자 지정 응답 메일을 통해 고객에 게 새로 보내고 앱의 스토어 목록에 다른 고객에 게 표시 되지 않습니다. **False** 및 사용자가 메일 응답을 받지 않도록 선택 함 지정 하면 오류가 반환 됩니다.   |  예  |
+| IsPublic | 부울 |  **True**를 지정 하면 응답 앱의 스토어 목록에 고객 리뷰 바로 아래에 표시 되 고 모든 고객에 게 표시 됩니다. 메일 응답 수신을 하는 것이 옵트아웃 되지 않은 경우 **false** 및 사용자가 지정한 응답 전자 메일을 통해 고객에 게 새로 보내지고 앱의 스토어 목록에 다른 고객에 게 표시 되지 않습니다. **False** 및 사용자가 메일 응답을 받지 않도록 선택 함 지정 하면 오류가 반환 됩니다.   |  예  |
 
 
 ### <a name="request-example"></a>요청 예제

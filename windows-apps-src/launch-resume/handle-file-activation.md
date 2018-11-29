@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977145"
 ---
 # <a name="handle-file-activation"></a>파일 활성화 처리
 
@@ -125,7 +125,7 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 
 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML **프레임** 을 만드는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대 한 탐색 백 스택에 앱 일시 중단 될 때 현재 창에 포함 될 수 있는 이전 콘텐츠가 포함 되지 않습니다. 시작 및 파일 계약에 단일 XAML **프레임** 을 사용 하려는 경우 새 페이지를 탐색 하기 전에 **프레임**의 탐색 저널에서 페이지 취소 해야 합니다.
 
-파일 활성화를 통해 앱을 실행 하는 경우 사용자는 앱의 최상위 페이지로 다시 이동할 수 있도록 UI를 포함 하는 것이 좋습니다.
+파일 활성화를 통해 앱이 시작 되 면 사용자가 앱의 최상위 페이지로 다시 이동할 수 있는 UI를 포함 하는 것이 좋습니다.
 
 ## <a name="remarks"></a>설명
 

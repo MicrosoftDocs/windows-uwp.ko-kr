@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972907"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
@@ -45,7 +45,7 @@ Visual Studio는 **디버그**, **프로세스에 연결**을 차례로 선택�
 UWP 앱은 Windows 8.1 이상에서 개발하고 컴파일할 수 있지만 실행하려면 Windows 10이 필요합니다. Windows 8.1 PC에서 UWP 앱을 개발하는 경우 호스트 및 대상 컴퓨터가 모두 동일한 LAN에 있다면 다른 Windows 10 디바이스에서 실행되는 UWP 앱을 원격으로 디버그할 수 있습니다. 이렇게 하려면 두 컴퓨터에서 모두 [Visual Studio용 원격 도구](https://www.visualstudio.com/downloads/)를 다운로드하여 설치합니다. 설치된 버전이 설치한 Visual Studio의 기존 버전과 일치해야 하며 선택한 아키텍처(x86, x64)도 대상 앱의 아키텍처와 일치해야 합니다.   
 
 ## <a name="package-layout"></a>패키지 레이아웃
-Visual Studio 2015 업데이트 3 부터는 하 여 UWP 앱에 대 한 레이아웃 패스를 지정 하는 개발자 용 옵션이 추가 되었습니다. 이 옵션은 앱을 빌드할 때 패키지 레이아웃을 복사할 디스크의 위치를 결정합니다. 기본적으로 이 속성은 프로젝트의 루트 디렉터리를 기준으로 설정됩니다. 이 속성을 수정하지 않으면 이전 버전의 Visual Studio와 동일한 동작이 유지됩니다.
+Visual Studio 2015 업데이트 3 부터는 UWP 앱에 대 한 레이아웃 패스를 지정 하는 개발자 용 옵션이 추가 되었습니다. 이 옵션은 앱을 빌드할 때 패키지 레이아웃을 복사할 디스크의 위치를 결정합니다. 기본적으로 이 속성은 프로젝트의 루트 디렉터리를 기준으로 설정됩니다. 이 속성을 수정하지 않으면 이전 버전의 Visual Studio와 동일한 동작이 유지됩니다.
 
 이 속성은 프로젝트의 **디버그** 속성에서 수정할 수 있습니다.
 
@@ -73,7 +73,7 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 
 ### <a name="c-and-javascript"></a>C++ 및 JavaScript
 
-C + + 또는 JavaScriptUWP 앱에 대 한 원격 컴퓨터 대상을 지정 합니다.
+C + + 또는 JavaScriptUWP 앱에 대 한 원격 컴퓨터 대상을 지정:
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
 2. **디버깅** 설정으로 이동하여 **실행할 디버거**에서 **원격 컴퓨터**를 선택합니다.
@@ -132,7 +132,7 @@ Visual Studio 2015 업데이트 3과 Windows 10 1 주년 업데이트 릴리스�
 
 ### <a name="requirements"></a>요구 사항
 고급 원격 배포 옵션을 활용하려면 다음 요구 사항을 충족해야 합니다.
-* Visual Studio 2015 업데이트 3 또는 일부 이상 Visual Studio 릴리스 설치 된 Windows 10 도구 1.4.1 이상 (Windows 10 1 주년 업데이트 SDK 포함)는 모든을 얻을 수 있도록 업데이트로 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다 합니다 최신 개발 및 보안 기능입니다.
+* Visual Studio 2015 업데이트 3 또는 일부 이상 Visual Studio 릴리스 설치 된 Windows 10 도구 1.4.1 이상 (Windows 10 1 주년 업데이트 SDK 포함)는 모든 얻게 되도록 업데이트로 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다 합니다 최신 개발 및 보안 기능입니다.
 * Windows 10 1주년 업데이트 Xbox 원격 디바이스 또는 Windows 10 크리에이터스 업데이트 PC를 대상으로 지정 
 * 유니버설 인증 모드 사용
 
@@ -201,7 +201,7 @@ Windows10, 사전 실행 및 앱 [사전 실행](https://msdn.microsoft.com/libr
 
   앱이 실행될 때 디버깅 세션이 자동으로 시작되도록 배포를 구성하려면 다음을 수행하세요.
 
-  -   C# 및 Visual Basic**디버그** 속성 페이지를 **실행 하지 않지만 시작 되 면 내 코드 디버그** 확인란을 선택 합니다.
+  -   C# 및 Visual Basic**디버그** 속성 페이지에서 **실행 하지 않지만 시작 되 면 내 코드 디버그** 확인란을 선택 합니다.
   -   JavaScript 및 C++ **디버깅** 속성 페이지에서, **응용 프로그램 실행** 값을 **예**로 설정합니다.
 
 ## <a name="symbols"></a>기호

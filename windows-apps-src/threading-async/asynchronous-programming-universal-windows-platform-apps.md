@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 비동기
 ms.localizationpriority: medium
 ms.openlocfilehash: 50e8bae0db888b947c568deb50fa5f2fc227e734
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972693"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 이 항목에서는 유니버설 Windows 플랫폼 (UWP) 및 C#, Microsoft Visual Basic.NET, c + + 및 JavaScript에서의 표현의 비동기 프로그래밍을 설명 합니다.
@@ -21,7 +21,7 @@ ms.locfileid: "7847076"
 완료하는 데 오랜 시간이 걸릴 수 있는 메서드의 경우 비동기 프로그램이 표준이며 UWP에서도 예외가 아닙니다. JavaScript, C#, Visual Basic 및 c + + 각 비동기 메서드에 언어 지원을 제공합니다.
 
 ## <a name="asynchronous-programming-in-the-uwp"></a>UWP의 비동기 프로그래밍
-[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) Api 및 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) Api 같은 많은 UWP 기능에는 비동기 Api로 표시 됩니다. 규칙에 따라 비동기 Api의 이름은 실행의 일부가 컨트롤 호출자에 반환 된 후 수행할 가능성이 나타내기 위해 "Async"로 끝납니다.
+[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) Api 및 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) Api 같은 많은 UWP 기능에는 비동기 Api로 표시 됩니다. 규칙에 따라 비동기 Api의 이름은 실행의 일부가 컨트롤이 호출자에 게 반환 되는 수행할 수 있음을 나타냅니다 "Async"로 끝납니다.
 
 UWP(유니버설 Windows 플랫폼) 앱에 비동기 API를 사용할 경우 코드는 일관된 방식으로 비차단 호출을 만듭니다. 개발자 고유의 API 정의에 이러한 비동기 패턴을 구현하면 호출자는 예측 가능한 방식으로 코드를 이해하고 사용할 수 있습니다.
 
@@ -55,7 +55,7 @@ UWP 비동기 패턴을 사용하면 명시적으로 스레드를 관리하는 �
 C# 또는 Visual Basic으로 작성된 일반적인 코드 세그먼트는 동기식으로 실행됩니다. 즉, 실행된 줄은 다음 줄이 실행되기 전에 완료됩니다. 이전의 Microsoft .NET 프로그래밍 모델에서는 비동기 실행이 가능했지만 그 결과 코드는 코드가 수행하려는 작업에 초점을 두는 대신 비동기 코드 실행의 기술을 강조하는 경향이 있습니다. UWP, .NET Framework, C#, Visual Basic 컴파일러에 코드에서 비동기 기술을 추출하는 기능이 추가되었습니다. .NET 및 UWP의 경우 코드가 작업을 수행하는 방법 및 시기 대신 수행할 작업에 초점을 둔 비동기 코드를 작성할 수 있습니다. 비동기 코드는 동기 코드와 상당히 유사하게 보입니다. 자세한 내용은 [C# 또는Visual Basic에서 비동기식 API 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)을 참조하세요.
 
 ## <a name="asynchronous-patterns-in-uwp-with-cwinrt"></a>C +로 작성 된 UWP의 비동기 패턴 + WinRT
-C + + 코 루틴 및 **co_await** 연산자 사용 WinRT 합니다. 자세한 내용은 및 코드 예제를 참조 하세요 [비동기 프로그래밍 C + + WinRT](../cpp-and-winrt-apis/concurrency.md)합니다.
+C + + /winrt 및 사용 하 여 코 루틴 **co_await** 연산자입니다. 자세한 내용은 및 코드 예제를 참조 하세요 [비동기 프로그래밍 C + + WinRT](../cpp-and-winrt-apis/concurrency.md).
 
 ## <a name="asynchronous-patterns-in-uwp-with-ccx"></a>C +로 작성 된 UWP의 비동기 패턴 + CX
 C++/CX에서 비동기 프로그래밍은 [**task class**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx) 및 해당 [**then method**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx)를 기반으로 합니다. 구문은 JavaScript promise의 구문과 유사합니다. **task class** 및 관련 유형 또한 스레드 컨텍스트에 대한 취소 및 관리 접근 권한 값을 제공합니다. 자세한 내용은 참조 [비동기 프로그래밍 C + + CX](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)합니다.

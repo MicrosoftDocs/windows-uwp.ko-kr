@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978263"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
@@ -24,7 +24,7 @@ ms.locfileid: "7830577"
 ### <a name="application-install-directory"></a>응용 프로그램 설치 디렉터리
 사용자의 시스템에서 앱을 설치 하는 폴더입니다.
 
-파일을 액세스할 수 있는 두 가지 주요 방법이 되며 폴더 앱의 설치 디렉터리 합니다.
+두 가지 기본 액세스 파일 및 폴더에 앱의 설치 디렉터리:
 
 1. 아래와 같이 앱의 설치 디렉터리를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
 
@@ -169,7 +169,7 @@ URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니�
 > [!NOTE]
 > 다른 이동식 장치에서 SD 카드에 액세스하는 방법에 대한 자세한 내용은 [SD 카드 액세스](access-the-sd-card.md)를 참조하세요.
 
-## <a name="locations-that-uwp-apps-can-access"></a>UWP 앱에 액세스할 수 있는 위치
+## <a name="locations-that-uwp-apps-can-access"></a>UWP 앱에서 액세스할 수 있는 위치
 ### <a name="users-downloads-folder"></a>사용자의 다운로드 폴더
 
 다운로드된 파일이 기본적으로 저장되는 폴더입니다.

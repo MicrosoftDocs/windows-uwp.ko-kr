@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979235"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 
@@ -195,7 +195,7 @@ Kinect 센서를 콘솔에 연결해야 이 설정을 변경할 수 있습니다
 
 ### <a name="game-event-data"></a>게임 이벤트 데이터
 
-**게임 이벤트 데이터** 페이지에서 Xbox One에서 현재 기록 된 이벤트에 대 한 Windows (ETW 추적) 게임 이벤트 수가 실시간 그래프에 해당 스트림 볼 수 있습니다. (이벤트 이름, 발생 한 이벤트 및 게임 타이틀) 세부 정보를 볼 수도 있습니다 시스템에 기록 된 게임 이벤트 인 경우 데이터 그래프 아래의 데이터 테이블에서 각 이벤트를 설명 합니다. 테이블은 기록 된 이벤트에 있는 경우에 사용할 수만 있습니다.
+**게임 이벤트 데이터** 페이지에서 Xbox One에서 현재 기록 된 이벤트에 대 한 Windows (ETW 추적) 게임 이벤트 수가 실시간 그래프에 해당 스트림 볼 수 있습니다. (이벤트 이름, 발생 한 이벤트 및 게임 제목) 세부 정보를 볼 수도 있습니다 시스템에 기록 된 게임 이벤트 인 경우 데이터 그래프 아래 데이터 테이블에서 각 이벤트를 설명 합니다. 테이블은 이벤트가 기록 하는 경우에 사용할 수만 있습니다.
 
 ![게임 이벤트 데이터](images/device-portal-xbox-22.PNG)
 

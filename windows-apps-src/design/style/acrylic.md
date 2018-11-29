@@ -11,11 +11,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 336e4e64cc0b1819081a7e42b6e3e2d099355248
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827546"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979127"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -68,14 +68,14 @@ ms.locfileid: "7827546"
 
  ![인앱 아크릴](images/AppAcrylic_DarkTheme.png)
 
- 아크릴 표면을 레이어로 쌓아 올립니다 레이어: 여러 겹의 배경 아크릴은 방해가 만들 수 있습니다.
+ 아크릴 표면을 레이어로 쌓아 올립니다 계층: 여러 겹의 배경 아크릴은 방해가 만들 수 있습니다.
 
 ## <a name="when-to-use-acrylic"></a>아크릴을 사용하는 경우
 
 * NavigationView 이나 인라인 명령 요소 같은 UI를 지원 하기 위한 인 앱 아크릴을 사용 합니다. 
 * 상황에 맞는 메뉴, 플라이 아웃 빛 dimsissable UI 등의 임시 UI 요소에 대 한 배경 아크릴을 사용 합니다.<br />아크릴을 사용 하 여 임시 시나리오에서 임시 UI를 트리거한 콘텐츠와 함께 시각적 관계를 유지 하는 데 도움이 됩니다.
 
-인 앱 아크릴 탐색 표면에를 사용 하는 경우에 아크릴 창 앱의 흐름을 개선 하기 위해 아래에 콘텐츠를 확장 하는 것이 좋습니다. NavigationView를 사용 하 여에서는이를 자동으로 수행 합니다. 그러나 스트라이핑 효과를 여러 가지 아크릴을 가장자리에 배치 하지 마십시오 두 흐린된 표면 사이의 원치 않는 경계선이 만들 수이 합니다. 아크릴, 디자인의 시각적 조화 도구 이지만 잘못 사용할 경우 시각적 노이즈가 발생할 수 있습니다.
+인 앱 아크릴을 탐색 표면에 사용 하는 경우에 아크릴 창 앱의 흐름을 개선 하기 위해 아래에 콘텐츠를 확장 하는 것이 좋습니다. NavigationView를 사용 하 여에서는이를 자동으로 수행 합니다. 하지만 스트라이핑 효과, 여러 가지 아크릴을 가장자리에 배치 하지 마십시오 두 흐린된 표면 간에 원치 않는 경계선 만들이 수 있습니다. 아크릴, 디자인의 시각적 조화 도구 이지만 잘못 사용할 경우 짐이 발생할 수 있습니다.
 
 앱에 아크릴을 통합 하는 가장 좋은 방법을 결정 하려면 다음 사용 패턴을 고려 하세요.
 
@@ -84,13 +84,13 @@ ms.locfileid: "7827546"
 앱이 NavigationView를 활용할 수 없는 아크릴을 직접 추가 하려는 경우 색조 불투명도 60% 비교적 투명 한 아크릴을 사용 하는 것이 좋습니다.
  - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
 
-![앱에서 가로 명령을 사용 하 여 지도 앱](images/Maps_In_App_Acrylic_1.png)
+![앱에서 가로 명령 사용 하 여 지도 앱](images/Maps_In_App_Acrylic_1.png)
 
-또한 콘텐츠 확장 또는 스크롤 아크릴에서 맨 위에 있는 것 생깁니다 앱 몰입 형 하 고 원활한 환경을.
+또한 콘텐츠 확장 또는 스크롤 아크릴에서 맨 위에 있는 것 됩니다 앱은 더 몰입 형 하 고 원활한 환경을 제공 합니다.
 
-### <a name="vertical-panes"></a>세로 창
+### <a name="vertical-panes"></a>서로 다른 창
 
-세로 창이 나 앱의 콘텐츠 해제 섹션의 데 도움이 되는 표면에 대 한 불투명 한 배경 아크릴 대신 사용 하는 것이 좋습니다. 서로 다른 창에는 콘텐츠 위에 열면, 같은 NavigationView의 **컴팩트** 기간 또는 **최소** 모드에서 것이 좋습니다 인 앱 아크릴을 사용 하 여 사용자가 열이 창은 페이지의 컨텍스트를 유지 하기 위해.
+세로 창이 나 앱의 콘텐츠 오프 섹션의 데 도움이 되는 표면에 대 한 불투명 배경 아크릴 대신 사용 하는 것이 좋습니다. 서로 다른 창에는 콘텐츠 위에 열면, 같은 NavigationView의 **컴팩트** 기간 또는 **최소** 모드 좋습니다 인 앱 아크릴을 사용 하 여 사용자가 열이 창은 페이지의 컨텍스트를 유지 하기 위해.
 
 ### <a name="transient-surfaces"></a>임시 표면
 
@@ -98,10 +98,10 @@ ms.locfileid: "7827546"
 
 ![정보는 플라이 아웃을 사용 하 여 메일 앱 패턴](images/Mail_TransientContextMenu.png)
 
-다양 한 컨트롤은 기본적으로 아크릴을 사용 합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 및 빛 dimiss 팝업을 사용 하 여 유사한 컨트롤이 모든 써서 임시 아크릴 호출 되는 경우.
+컨트롤의 상당수는 기본적으로 아크릴을 사용 합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 및 빛 dimiss 팝업을 사용 하 여 유사한 컨트롤이 모든 써서 임시 아크릴 호출 되는 경우.
 
 > [!Note]
-> 아크릴 표면 렌더링 GPU 형 장치 전력 소비를 증가 하 고 배터리 사용 시간을 줄일 수 있는입니다. 아크릴 효과 장치가 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 있습니다 비활성화 자동으로 선택 합니다.
+> 아크릴 표면 렌더링은 GPU를 많이 사용, 배터리 사용 시간을 단축 하 고 장치 전력 소비를 높일 수 있는 합니다. 아크릴 효과 장치 배터리 절약 모드를 입력 하 고 사용자가 모든 앱의 아크릴 효과 비활성화할 수 있습니다 비활성화 자동으로 선택 합니다.
 
 ## <a name="usability-and-adaptability"></a>유용성 및 적응성
 아크릴은 다양한 디바이스 및 컨텍스트에 맞춰 자동으로 모양을 바꿉니다.
@@ -191,7 +191,7 @@ ms.locfileid: "7827546"
 ## <a name="custom-acrylic-brush"></a>사용자 지정 아크릴 브러시
 브랜딩을 표시하거나 페이지의 다른 요소와 시각적으로 균형을 맞추기 위해 앱의 아크릴에 컬러 색조를 추가할 수 있습니다. 회색조 대신 컬러를 표시하려면 다음 속성을 사용하여 사용자 고유의 아크릴 브러시를 정의해야 합니다.
  - **TintColor**: 색/색조 오버레이 계층입니다. RGB 컬러 값과 알파 채널 불투명도를 모두 지정하는 방안을 고려해 보세요.
- - **TintOpacity**: 색조 계층의 불투명도입니다. 서로 다른 색상에 다른 translucencies 더 멋지게 보일 수 있습니다 있지만 시작 점으로 80% 불투명도 권장 합니다.
+ - **TintOpacity**: 색조 계층의 불투명도입니다. 좋습니다 80% 불투명도를 시작 점으로 하지만 서로 다른 색상에 다른 translucencies 더 멋지게 보일 수 있습니다.
  - **BackgroundSource**: 배경 아크릴과 인앱 아크릴 중에서 원하는 것을 지정하는 플래그입니다.
  - **FallbackColor**: 단색 배터리 절약 모드에서 아크릴을 대체 합니다. 배경 아크릴의 경우 앱이 활성 데스크톱 창에 없거나 앱이 휴대폰 및 Xbox에서 실행 중인 경우 대체 색이 아크릴도 대체합니다.
 

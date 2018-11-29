@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
 ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834708"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974224"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
-이 자습서에서는 간단한을 만들려면 XAML과 C#을 사용 하는 방법을 "Hello, world" 앱 Windows10에서 유니버설 Windows 플랫폼 (UWP) 용입니다. Microsoft Visual Studio의 단일 프로젝트를 사용 하 여 모든 Windows10 장치에서 실행 되는 앱을 빌드할 수 있습니다.
+이 자습서에서는 간단한을 만들려면 XAML과 C#을 사용 하는 방법을 "Hello, world" 앱 Windows10에서 유니버설 Windows 플랫폼 (UWP)에 대 한 합니다. Microsoft Visual Studio의 단일 프로젝트를 사용 하 여 모든 Windows10 장치에서 실행 되는 앱을 빌드할 수 있습니다.
 
 여기에 배울 내용은 다음과 같습니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "7834708"
 
 2.  **파일** 메뉴에서 선택 **새로 만들기 > 프로젝트** *새 프로젝트* 대화 상자를 엽니다.
 
-3.  왼쪽에 있는 템플릿 목록에서 선택 **설치 됨 > Visual C# > Windows 유니버설** UWP 프로젝트 템플릿 목록을 볼 수 있습니다.
+3.  왼쪽에 있는 템플릿 목록에서 선택 **설치 됨 > Visual C# > Windows 유니버설** UWP 프로젝트 템플릿 목록이 표시 됩니다.
 
     (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 **새 프로젝트** 대화 상자에서 *Visual Studio 설치 관리자 열기*를 클릭하여 UWP 지원을 추가할 수 있습니다. 참조 [설정](get-set-up.md)합니다.)
 
@@ -83,7 +83,7 @@ ms.locfileid: "7834708"
 -   App.xaml은 앱 전체에서 사용되는 리소스를 선언하는 파일입니다.
 -   App.xaml.cs는 App.xaml의 코드 숨김 파일입니다. 모든 코드 숨김 페이지와 같이 여기에는 `InitializeComponent` 메서드를 호출하는 생성자가 포함되어 있습니다. `InitializeComponent` 메서드는 작성하지 않습니다. 이 메서드는 Visual Studio에서 생성되며 그 주요 목적은 XAML 파일에 선언된 요소를 초기화하는 것입니다.
 -   App.xaml.cs는 앱의 진입점입니다.
--   App.xaml.cs는 [활성화](../launch-resume/activate-an-app.md) 와 앱의 [일시 중단](../launch-resume/suspend-an-app.md) 처리 하는 방법을도 포함 되어 있습니다.
+-   App.xaml.cs는 [정품 인증](../launch-resume/activate-an-app.md) 및 앱의 [일시 중단](../launch-resume/suspend-an-app.md) 처리 하는 방법을도 포함 되어 있습니다.
 
 *MainPage.xaml*
 
@@ -93,7 +93,7 @@ ms.locfileid: "7834708"
 
 *Package.appxmanifest*
 -   이름, 설명, 타일, 시작 페이지 등 앱을 설명하는 매니페스트 파일입니다.
--   종속성, 리소스 및 앱에 포함 된 파일의 목록이 포함 되어 있습니다.
+-   종속성, 리소스 및 응용 프로그램에 포함 된 파일의 목록이 포함 되어 있습니다.
 
 *로고 이미지 집합*
 -   Assets/Square150x150Logo.scale-200.png와 Wide310x150Logo.scale 200.png 시작 메뉴에서 앱을 (보통 또는 전체 크기)를 나타냅니다.
@@ -222,7 +222,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-메서드 서명을 이제 **비동기** 키워드를 포함 하거나 앱을 실행 하려고 할 때 오류가 발생 받게 있는지 확인 합니다.
+이 메서드 서명을 이제 **비동기** 키워드를 포함 하거나 앱을 실행 하려고 할 때 오류가 받게 있는지 확인 합니다.
 
 ### <a name="what-did-we-just-do"></a>방금 어떤 작업을 수행했나요?
 

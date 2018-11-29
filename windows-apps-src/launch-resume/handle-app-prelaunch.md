@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843832"
+ms.locfileid: "7978432"
 ---
 # <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 
@@ -35,7 +35,7 @@ XAML 프로젝트(C#, VB, C++)와 WinJS의 기본 템플릿은 Visual Studio 201
 
 ## <a name="detect-and-handle-prelaunch"></a>사전 실행 감지 및 처리
 
-앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 수신합니다. 이 플래그를 사용 하 여 [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)를 다음과 같이 수정에 표시 된 대로 앱을 명시적으로 시작할 때을 실행만 해야 하는 코드를 실행 합니다.
+앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 수신합니다. 이 플래그를 사용 하 여 [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)를 다음과 같이 수정에 표시 된 대로 사용자가 앱을 명시적으로 시작을 실행만 해야 하는 코드를 실행 합니다.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -110,9 +110,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-참고는 `TryEnablePrelaunch()` 위에 작동 합니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 는 리모컨이 JIT (컴파일)에 전체 메서드 컴파일 하려고 메서드를 호출할 때 되므로이 기능에 대 한 아웃 합니다. 앱의 지원 하지 않는 Windows 10 버전에서 실행 중인 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 팩터링 앱 플랫폼에서 지 결정 하는 경우에 라고 하는 메서드를 호출 하 여 `CoreApplication.EnablePrelaunch()`,이 문제를 방지 하는 것입니다.
+참고는 `TryEnablePrelaunch()` 위에 작동 합니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 는 포함이 기능으로 JIT (컴파일)에 전체 메서드 컴파일 하려고 메서드를 호출할 때 하기 때문입니다. 앱이 지원 하지 않는 Windows 10 버전에서 실행 하는 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 예상 되는 앱 플랫폼에서 지 결정 하는 경우에 라고 하는 메서드를 호출 하 여 `CoreApplication.EnablePrelaunch()`,이 문제를 방지 하는 것입니다.
 
-위 예제에서 코드도 앱 옵트아웃 사전 실행의 Windows 10, 버전 1511에서 실행 해야 하는 경우 주석 수 있습니다. 자동으로 옵트인 된 모든 UWP 앱 버전 1511에서에서으로 사전 실행 하지 않을 앱에 적합 합니다.
+위 예제에서 코드도 앱 옵트아웃 사전 실행의 Windows 10, 버전 1511에서 실행 해야 하는 경우 주석 수 있습니다. 자동으로 옵트인 된 모든 UWP 앱 버전 1511에서는으로 사전 실행 하지 않을 앱에 적합 합니다.
 
 ## <a name="use-the-visibilitychanged-event"></a>VisibilityChanged 이벤트 사용
 

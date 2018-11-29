@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e46ef0e459ede5fd1185d78186968735d886e63
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975086"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>브러시를 사용하여 배경, 전경 및 윤곽선 그리기
 
@@ -37,7 +37,7 @@ ms.locfileid: "7826429"
 
 ### <a name="predefined-color-names"></a>미리 정의된 색 이름
 
-[**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx), [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) 등의 미리 정의된 색 이름을 사용할 수 있습니다. 이름이 지정된 256개 색을 사용할 수 있습니다. XAML 파서가 올바른 색 채널을 통해 색 이름을 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 구조로 변환합니다. 명명 된 256 개 색 계단식 스타일 시트, Level3 *X11* 색 이름을 기반으로 하므로 하면 이미 알고 있을 명명 된 색이이 목록은 이전 웹 개발 또는 디자인 경험이 있는 경우 (CSS3) 사양.
+[**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx), [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) 등의 미리 정의된 색 이름을 사용할 수 있습니다. 이름이 지정된 256개 색을 사용할 수 있습니다. XAML 파서가 올바른 색 채널을 통해 색 이름을 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 구조로 변환합니다. 명명 된 256 개 색 계단식 스타일 시트, Level3 *X11* 색 이름을 기반으로 하므로 있습니다 이미 알고 있을 명명 된 색이이 목록을 사용 하 여 이전에 웹 개발 또는 디자인 경험이 있는 경우 (CSS3) 사양.
 
 다음은 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) 속성을 미리 정의된 색 [**Red**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.red.aspx)로 설정하는 예입니다.
 

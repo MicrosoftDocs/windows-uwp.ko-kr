@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출 만들기
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7976320"
 ---
 # <a name="create-a-package-flight-submission"></a>패키지 플라이트 제출 만들기
 
@@ -28,7 +28,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 앱에 대한 패
 
 * 아직 완료하지 않은 경우 Microsoft Store 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-* 앱을 위한 패키지 플라이트를 만듭니다. 파트너 센터에서 이렇게 하려면 하거나 [패키지 플라이트 만들기](create-a-flight.md) 메서드를 사용 하 여이 수행할 수 있습니다.
+* 앱에 대 한 패키지 플라이트를 만듭니다. 파트너 센터에서 이렇게 하려면 하거나 [패키지 플라이트 만들기](create-a-flight.md) 메서드를 사용 하 여이 수행할 수 있습니다.
 
 ## <a name="request"></a>요청
 

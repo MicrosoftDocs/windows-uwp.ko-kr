@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 142ee642806ebba41d6ddb4d49fe55217e7a0e2e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7975850"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>시작 화면을 더 오래 표시
 
@@ -28,7 +28,7 @@ ms.locfileid: "7837773"
 
 이러한 권장 사항을 따라 연장된 시작 화면이 기본 시작 화면을 정확하게 모방하도록 합니다.
 
--   연장된 시작 화면 페이지가 앱 매니페스트의 시작 화면에 대해 지정된 이미지(앱 시작 화면 이미지)와 일치하는 620 x 300 픽셀 이미지를 사용해야 합니다. Microsoft Visual Studio2015에서 시작 화면 설정 **시작 화면** 에서 앱 매니페스트 (Package.appxmanifest 파일)의 **시각적 자산** 탭에 저장 됩니다.
+-   연장된 시작 화면 페이지가 앱 매니페스트의 시작 화면에 대해 지정된 이미지(앱 시작 화면 이미지)와 일치하는 620 x 300 픽셀 이미지를 사용해야 합니다. Microsoft Visual Studio2015에서 시작 화면 설정은 앱 매니페스트 (Package.appxmanifest 파일)의 **시각적 자산** 탭의 **시작 화면** 섹션에 저장 됩니다.
 -   연장된 시작 화면은 앱 매니페스트에서 시작 화면에 대해 지정된 배경색(앱 시작 화면 배경)과 일치하는 배경색을 사용해야 합니다.
 -   코드에서 [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 사용하여 기본 시작 화면과 동일한 화면 좌표에 앱 시작 화면 이미지를 배치해야 합니다.
 -   [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 통해 연장된 시작 화면의 항목 위치를 변경하여 코드에서 화면이 회전되거나 앱이 화면의 다른 앱으로 이동되는 경우 등의 창 크기 조정 이벤트에 응답해야 합니다.
@@ -219,7 +219,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
 8.  **(선택 사항) 저장된 세션 상태를 복원하는 클래스 메서드 추가**
 
-    4단계, [시작 활성화 처리기 수정](#modify-the-launch-activation-handler)에서 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드에 추가한 코드로 인해 앱을 시작할 때 연장된 시작 화면이 표시됩니다. 연장 된 시작 화면 클래스 시작 앱 실행과 관련 된 모든 메서드를 통합 하려면를 ExtendedSplash.xaml.cs 파일 앱의 상태를 복원 하는 메서드를 추가 하는 것을 고려할 수 있습니다.
+    4단계, [시작 활성화 처리기 수정](#modify-the-launch-activation-handler)에서 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드에 추가한 코드로 인해 앱을 시작할 때 연장된 시작 화면이 표시됩니다. 연장 된 시작 화면 클래스에 앱 시작 실행과 관련 된 모든 메서드를 통합 하려면를 ExtendedSplash.xaml.cs 파일 앱의 상태를 복원 하는 메서드를 추가 하는 것을 고려할 수 있습니다.
 
     ```cs
     void RestoreState(bool loadState)
@@ -290,7 +290,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 ### <a name="extendedsplashxamlcs"></a>ExtendedSplash.xaml.cs
 
-유의 합니다 `DismissExtendedSplash` 방법에 대 한 click 이벤트 처리기에서 호출 되는 `DismissSplash` 단추입니다. 앱에는 `DismissSplash` 단추가 필요하지 않습니다. 대신, 앱이 리소스 로드를 완료하고 기본 페이지로 이동하려는 경우 `DismissExtendedSplash`를 호출합니다.
+유의 합니다 `DismissExtendedSplash` 에 대 한 click 이벤트 처리기에서 호출 되어야 합니다 `DismissSplash` 단추 합니다. 앱에는 `DismissSplash` 단추가 필요하지 않습니다. 대신, 앱이 리소스 로드를 완료하고 기본 페이지로 이동하려는 경우 `DismissExtendedSplash`를 호출합니다.
 
 ```cs
 using System;

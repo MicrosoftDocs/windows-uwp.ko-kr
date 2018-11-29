@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827421"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973228"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하는 앱 또는 Microsoft Store에 게시 한 추가 기능에 대 한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 앱 또는 추가 기능 또는 Windows10 [베타 테스트](beta-testing-and-targeted-distribution.md) 하기 위한 사용자 대 한 무료 액세스를 제공 하 여 고객 서비스 시나리오를 해결할에 홍보 코드를 사용할 수 있습니다. 
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하는 앱 또는 Microsoft Store에 게시 한 추가 기능에 대 한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 앱 또는 추가 기능 또는 Windows10를 사용 하 여 [베타 테스트](beta-testing-and-targeted-distribution.md) 를 사용자에 게 대 한 무료 액세스를 제공 하 여 고객 서비스 시나리오를 해결할에 홍보 코드를 사용할 수 있습니다. 
 
 각 홍보 코드에 고유한 교환 가능 URL이 고객이 코드를 교환 하 고 Microsoft Store에서 앱 또는 추가 기능을 설치 하기 위해 클릭할 수 있는 합니다.  사용자가 홍보 코드를 사용하여 설치하기 전에 앱은 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과해야 합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "7827421"
 -   **3k. 홍보 코드** 섹션을 포함하여 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 정의된 요구 사항을 따라야 합니다.
 
 > [!NOTE]
-> 앱 고객에 게 사용할 수 없는 경우에 홍보 코드를 사용할 수 있습니다 (즉, 선택한 경우에 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** 된 취득 중지 **: 직접 링크가 있는 고객은 제품의 스토어를 확인할 수 목록에 있지만 다운로드 가능, 과거 제품을 소유 또는 홍보 코드가 있고 Windows 10 장치를 사용 하는 경우** 제출의 [검색 기능](choose-visibility-options.md#discoverability) 섹션의 옵션). 이 옵션을 사용 하 여 고객이 홍보 코드를 사용 하 여 제품을 취득 하려면 Windows 10 (Xbox 포함) 이어야 합니다.
+> 앱 고객에 게 사용할 수 없는 경우에 홍보 코드를 사용할 수 있습니다 (즉, 선택한 경우에 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** **취득 중지를 사용 하 여: 직접 링크가 있는 고객은 제품의 스토어를 확인할 수 목록에 있지만 다운로드 가능, 과거 제품을 소유 또는 홍보 코드가 있고 Windows 10 장치를 사용 하는 경우** 제출의 [검색 기능](choose-visibility-options.md#discoverability) 섹션의 옵션). 이 옵션을 사용 하 여 고객이 홍보 코드를 사용 하 여 제품을 취득 하려면 Windows 10 (Xbox 포함) 이어야 합니다.
 
 
 ## <a name="order-promotional-codes"></a>홍보 코드 주문
@@ -62,7 +62,7 @@ ms.locfileid: "7827421"
 
 접수된 홍보 코드 주문을 다운로드하고 사용자에게 코드를 배포하려면
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard)의 왼쪽된 탐색 메뉴에서 **모집** 확장 한 다음 선택 **홍보 코드.**
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)의 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 선택한 **홍보 코드.**
 2.  홍보 코드 주문에 대해 **다운로드** 링크를 클릭하고 생성된 파일을 컴퓨터에 저장합니다. 이 파일에는 탭으로 구분된 값(TSV) 형식으로 홍보 코드 주문에 대한 정보가 포함되어 있습니다.
 3.  선택한 편집기에서 .tsv 파일을 엽니다. 최상의 환경을 위해 Microsoft Excel 같은 표 형식 구조에서 데이터를 표시할 수 있는 응용 프로그램에서 .tsv 파일을 엽니다. 그러나 아무 텍스트 편집기에서나 파일을 열 수 있습니다.
 

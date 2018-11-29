@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973364"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱 내 구매 및 평가판
 
@@ -19,7 +19,7 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 * **앱에서 바로 구매**&nbsp;&nbsp;앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다.
 
-* **평가판 기능**&nbsp;&nbsp;경우 [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial)를 유도할 수 있습니다 고객이 제외 하거나 평가 기간 동안 일부 기능을 제한 하 여 전체 버전의 앱을 구매 하도록 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
+* **평가판 기능**&nbsp;&nbsp;경우 [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial)를 유도할 수 있습니다 고객이 제외 하거나 평가 기간 동안 일부 기능을 제한 하 여 앱의 정식 버전을 구매 하도록 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 이 문서에서는 앱에서 바로 구매와 평가판이 UWP 앱에서 작동하는 방식에 대해 간략하게 보여 줍니다.
 
@@ -29,12 +29,12 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 앱에서 바로 구매와 평가판 기능을 UWP 앱에 추가하는 데 사용할 수 있는 네임스페이스는 앱에서 대상을 지정한 Windows10 버전에 따라 서로 다른 두 가지가 있습니다. 두 네임스페이스의 API는 동일한 역할을 하지만 완전히 다르게 디자인되었으며 두 API 간에 코드가 호환되지 않습니다.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Windows10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임 스페이스는 소모 성 추가 기능 스토어 관리 등의 최신 추가 기능 유형을 지원 하며 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Windows10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임 스페이스 소모 성 추가 기능 스토어 관리 등의 최신 추가 기능 유형을 지원 하며 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;모든 버전의 Windows 10은 이 네임이 스페이스에서 앱에서 바로 구매 및 평가판을 위한 이전 API도 지원합니다. **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 > [!IMPORTANT]
-> **Windows.ApplicationModel.Store** 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 앱에서 가능한 경우 **Windows.Services.Store** 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.ApplicationModel.Store** 네임 스페이스는 앱 또는 파트너 센터에서 개발 샌드박스를 사용 하는 게임 또는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 를 사용 하 여 Windows 데스크톱 응용 프로그램에서 지원 되지 않습니다 (예를 들어,이 대/소문자는 모든 게임에 대 한 Xbox Live와 통합).
+> **Windows.ApplicationModel.Store** 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 앱에서 가능한 경우 **Windows.Services.Store** 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.ApplicationModel.Store** 네임 스페이스는 앱 또는 파트너 센터에서 개발 샌드박스를 사용 하는 게임 또는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 를 사용 하 여 Windows 데스크톱 응용 프로그램에서 지원 되지 않습니다 (예를 들어,이 경우는 모든 게임에 대 한 Xbox Live와 통합).
 
 <span id="concepts" />
 
@@ -158,7 +158,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 앱에서 앱 내 구매 또는 평가판 기능을 구현하기 위해 **Windows.Services.Store** 네임스페이스의 API를 사용하고 있다면, 테스트 라이선스를 사용하기 위해 앱을 Store에 제출하고, 앱을 개발자 장치에 다운로드해야 합니다. 다음 프로세스로 코드를 테스트합니다.
 
-1. 앱에에서 없는 경우 아직 게시 되 고 사용할 수 있는 스토어, 앱의 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족 하는지, 파트너 센터에서 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 및 앱 인증 프로세스를 전달 하는지 확인 합니다. 테스트 하는 동안 [앱이 스토어에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다. [패키지 플라이트](../publish/package-flights.md)의 적절 한 구성을 note 하세요. 잘못 구성 된 패키지 플라이트 수 할 수 없습니다 다운로드할 수 있습니다.
+1. 앱에에서 없는 경우 아직 게시 되 고 사용할 수 있는 스토어, 앱은 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족 하는지, 파트너 센터에서 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) 하 고 앱 인증 프로세스를 전달 하는지 확인 합니다. 테스트 하는 동안 [앱이 스토어에서 검색이 되지 않도록 구성](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)할 수 있습니다. [패키지 플라이트](../publish/package-flights.md)의 적절 한 구성을 note 하세요. 잘못 구성 된 패키지 플라이트 수 할 수 없습니다 다운로드할 수 있습니다.
 
 2. 그런 다음 아래 작업을 완료해야 합니다.
 
@@ -270,7 +270,7 @@ SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다�
 
 ### <a name="apps-that-use-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱
 
-앱 **Windows.ApplicationModel.Store** 네임 스페이스를 사용 하는 경우 대부분의 작업에 대 한 파트너 센터에서 추가 기능에 할당 된 제품 ID를 사용 해야 합니다. 예를 들어,
+앱 **Windows.ApplicationModel.Store** 네임 스페이스를 사용 하는 경우에 대부분의 작업에 대 한 파트너 센터에서 추가 기능에 할당 된 제품 ID를 사용 해야 합니다. 예를 들어,
 
 * 추가 기능을 나타내는 [ProductListing](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting)이나 추가 기능 라이선스를 나타내는 [ProductLicense](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense)를 식별하기 위해 제품 ID를 사용합니다. 제품 ID는 [ProductListing.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.ProductId) 및 [ProductLicense.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense.ProductId) 속성으로 표시됩니다.
 

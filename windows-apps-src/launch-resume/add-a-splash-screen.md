@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 882ee548754b9fa498697a8d75a12a23f86fc9de
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7841473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979401"
 ---
 # <a name="add-a-splash-screen"></a>시작 화면 추가
 
@@ -37,7 +37,7 @@ Visual Studio 템플릿을 사용하여 앱을 만드는 경우 기본 이미지
 
 4. UWP 앱에 대해 새로운 시작 화면 이미지를 선택하려면 **크기 조정된 자산** 아래의 **1240x600 px** 레이블 옆에 표시되는 줄임표 단추를 누릅니다. 시작 화면 이미지로 사용하려는 1240x600 픽셀 이미지(.png, .jpg 또는 .jpeg)를 선택합니다.
 
-    **중요 한**선택 하면 시작 화면 이미지는 1x 배율 인수를 사용 하는 620x300 픽셀 이어야 합니다. 또한 스플래시 화면을 디자인할 때는 화면 가운데에 표시되고 화면보다 작아야 한다는 것에 주의해야 합니다. Windows Phone 스토어 앱용 시작 화면과 같이 화면을 모두 채우지 않습니다.
+    **중요 한**선택 하는 시작 화면 이미지는 1x 배율 인수를 사용 하는 620x300 픽셀 이어야 합니다. 또한 스플래시 화면을 디자인할 때는 화면 가운데에 표시되고 화면보다 작아야 한다는 것에 주의해야 합니다. Windows Phone 스토어 앱용 시작 화면과 같이 화면을 모두 채우지 않습니다.
 
 5. Windows Phone 스토어 앱에 대해 새로운 시작 화면 이미지를 선택하려면 **크기 조정된 자산** 아래의 **1152x1920 px** 레이블 옆에 표시되는 줄임표 단추를 누릅니다. 시작 화면 이미지로 사용하려는 1152x1920 픽셀 이미지(.png, .jpg 또는 .jpeg)를 선택합니다.
 

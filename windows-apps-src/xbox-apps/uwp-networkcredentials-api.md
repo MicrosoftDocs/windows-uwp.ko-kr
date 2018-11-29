@@ -3,14 +3,14 @@ title: 디바이스 포털 네트워크 자격 증명 API 참조
 description: 추가, 제거 또는 네트워크 자격 증명을 프로그래밍 방식으로 업데이트 하는 방법을 알아봅니다.
 ms.localizationpriority: medium
 ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836238"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974098"
 ---
 # <a name="network-credentials-api-reference"></a>네트워크 자격 증명 API 참조
-추가, 제거 또는이 REST API를 사용 하 여 devkit에서 저장 된 네트워크 자격 증명을 업데이트 수 있습니다.
+추가, 제거 또는이 REST API를 사용 하 여 devkit에서 저장 된 네트워크 자격 증명을 업데이트할 수 있습니다.
 
 ## <a name="get-existing-credentials"></a>기존 자격 증명을 가져오기
 
@@ -51,7 +51,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-## <a name="add-or-update-stored-credentials-for-a-user"></a>추가 하거나 업데이트 저장 된 사용자 자격 증명
+## <a name="add-or-update-stored-credentials-for-a-user"></a>추가 하거나 업데이트는 사용자에 대 한 자격 증명 저장
 
 **요청**
 
@@ -65,7 +65,7 @@ POST | /ext/networkcredential
 
 | URI 매개 변수      | 설명     | 
 | ------------------ |-----------------|
-| NetworkPath        | 공유 네트워크 경로 추가 하는 자격 증명에 액세스 해야 합니다. |
+| NetworkPath        | 공유 네트워크 경로 추가 하는 자격 증명에 액세스할 수 있습니다. |
 <br>
 
 **요청 헤더**
@@ -76,7 +76,7 @@ POST | /ext/networkcredential
 
 - 다음과 같은 JSON 요소가 있습니다.
 * NetworkPath-네트워크 공유에 대 한 경로입니다.
-* 사용자 이름-자격 증명을 저장 하는 사용자 이름입니다.
+* 사용자 이름-에서 자격 증명을 저장 하는 사용자 이름입니다.
 * 암호-이 사용자에 대 한 새 드라이버나 업데이트 된 암호입니다.
 
 **응답**   

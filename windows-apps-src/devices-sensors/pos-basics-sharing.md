@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 53dc22b2aa35b5e69854f6fb489ff6a454c73bf6
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853398"
+ms.locfileid: "7980542"
 ---
 # <a name="pointofservice-device-sharing"></a>PointOfService 장치 공유
 
-각 컴퓨터에 연결 된 전용된 주변 아닌 공유 주변 장치에 여러 Pc 의존할 환경에서 다른 컴퓨터와 네트워크 또는 Bluetooth로 연결 된 주변 장치를 공유 하는 방법을 알아봅니다.
+각 컴퓨터에 연결 된 전용된 주변 보다는 공유 주변 장치에 여러 Pc 의존할 환경에서 다른 컴퓨터와 네트워크 또는 Bluetooth로 연결 된 주변 장치를 공유 하는 방법을 알아봅니다.
 
 ## <a name="device-sharing"></a>장치 공유
 
-네트워크 및 Bluetooth 연결 된 PointOfService 주변 장치는 일반적으로 사용 환경 wheere 여러 클라이언트 장치 하루 종일 동일한 주변 장치를 공유 하 고 있습니다.  사용 중인 소매 또는 음식 서비스 환경에서 주변 장치에 연결 하는 클라이언트 장치에 대 한 수의 지연에 영향이 효율성 연결 고객과 거래를 닫을 수 및 다음 단계로 넘어갑니다. 준비 주방으로 고객의 주문 세부 정보를 전송 하는 영수증 프린터 주방 프린터로 사용 위치 빠른 서비스 식당 시나리오에서에 여러 클라이언트 장치에서 고객 주문 라인 생깁니다.  순서가 완료 되 면 각 클라이언트 장치 공유 프린터와 주방 순서를 즉시 인쇄할 수 있어야 합니다.
+네트워크 및 Bluetooth 연결 된 PointOfService 주변 장치는 일반적으로 사용 환경 wheere 여러 클라이언트 장치 하루 종일 동일한 주변 장치를 공유 됩니다.  사용 중인 소매 또는 음식 서비스 환경에서 주변 장치에 연결 하는 클라이언트 장치에 대 한 수의 지연에 영향이 효율성 동료 고객과 거래를 닫을 수 및 다음 단계로 넘어갑니다. 준비 주방으로 고객의 주문 세부 정보를 전송 하는 영수증 프린터 주방 프린터로 사용 위치 빠른 서비스 식당 시나리오에서에 고객의 주문 수행 하는 여러 클라이언트 장치 생깁니다.  순서가 완료 되 면 각 클라이언트 장치 공유 프린터와 즉시 주방 순서를 인쇄할 수 있어야 합니다.
 
 이러한 환경에서 것이 중요 응용 프로그램을 완전히 **삭제** 를 장치 개체에 대 한 다른 동일한 장치를 요청할 수 있도록 합니다.
 
