@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
 ms.openlocfilehash: c6f7135e85ab63ddfe92bd0de8c656b58fb1a020
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978615"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
-이 항목에서는 설명 프로그래밍 하는 경우 오류를 처리 하기 위한 전략 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)합니다. 자세한 정보 및 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
+이 항목에서는 설명 프로그래밍 하는 경우 오류를 처리 하기 위한 전략 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). 자세한 정보 및 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
 
 ## <a name="avoid-catching-and-throwing-exceptions"></a>예외 catch 및 throw 방지
 [예외로부터 안전 코드](/cpp/cpp/how-to-design-for-exception-safety)를 계속 쓰는 것이 좋지만 가능한 한 예외 catch 및 throw를 방지하는 것이 좋습니다. 예외에 대한 처리기가 없는 경우 Windows는 문제의 위치를 추적하는 데 도움이 되는 오류 보고서(크래시 미니덤프 포함)를 자동으로 생성합니다.

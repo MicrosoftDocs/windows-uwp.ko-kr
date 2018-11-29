@@ -7,15 +7,15 @@ keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: 97dd249165877591743892a136d51e0969dd902a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7841868"
+ms.locfileid: "7979092"
 ---
 # <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>out of process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅
 
-Out of process (OOP) 백그라운드 작업 프로세스 활동을 포팅하는 가장 간단한 방법은 응용 프로그램 내 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와서 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)에서 시작 하는 것입니다. 여기 설명 된 기술을 in-process 백그라운드 작업; OOP 백그라운드 작업에서 shim 만들기에 대 한 아닙니다. 그에 대 한 다시 (또는 포팅) OOP 버전일 프로세스의 버전입니다.
+In-process 활동에 (OOP) out of process 백그라운드 작업을 포팅하는 가장 간단한 방법은 응용 프로그램 내 [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와서 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)에서 시작 하는 것입니다. 되 고 여기에 설명 된 기술을 in-process 백그라운드 작업; shim OOP 백그라운드 작업에서 만들기에 대 한 않습니다. 정보를 다시 작성 하거나 포팅 프로세스에서 버전 OOP 버전일 합니다.
 
 앱에 여러 백그라운드 작업이 있는 경우 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation)에서 `BackgroundActivatedEventArgs.TaskInstance.Task.Name`을 사용하여 시작되는 작업을 식별하는 방법을 보여 줍니다.
 

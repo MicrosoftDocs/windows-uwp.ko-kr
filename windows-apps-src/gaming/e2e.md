@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
 ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829776"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7980562"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows10 게임 개발 가이드
 
@@ -106,7 +106,7 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
 
 [파트너 센터에서 개발자 계정을 등록](https://developer.microsoft.com/store/register) 하는 것은 Windows 게임을 게시 하기 위한 첫 번째 단계입니다. 개발자 계정을 사용하여 게임의 이름을 예약하고, 무료 또는 유료 게임을 모든 Windows 장치용 Microsoft Store에 제출할 수 있습니다. 개발자 계정을 사용하여 게임 및 게임 내 제품을 관리하고, 자세하게 분석하며, 전 세계 플레이어를 위해 멋진 환경을 만드는 서비스를 사용하도록 설정할 수 있습니다. 
 
-또한 Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. 파트너 센터 계정에 등록 하기 전에 적합 한 경우 보는 것이 좋습니다. 자세한 내용은 [개발자 프로그램](#developer-programs)을 참조하세요.
+또한 Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. 파트너 센터 계정에 등록 하기 전에 적합 한 프로그램이 있는지 보는 것이 좋습니다. 자세한 내용은 [개발자 프로그램](#developer-programs)을 참조하세요.
 
 
 ### <a name="developer-programs"></a>개발자 프로그램
@@ -1165,7 +1165,7 @@ XAudio2, XAPO 및 Windows Sonic을 사용하여 게임 내 오디오를 구현�
     </tr>
     <tr>
         <td>Windows Sonic을 게임에 통합하는 방법 알아보기(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox andWindows 용 오디오 기능 소개</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Xbox andWindows 용 공간 오디오 기능 소개</a></td>
     </tr>
 </table>
 
@@ -1358,7 +1358,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
 
 ### <a name="enable-in-app-product-add-on-purchases"></a>(추가) 앱에서 바로 제품 구매 사용
 
-추가 기능 (앱에서 바로 제품)는 플레이어가 게임에서 구입할 수 있는 보충 항목입니다. 추가 기능에는 게임 수준, 항목 또는 플레이어가 즐길 수 있는 다른 모든 사항이 될 수 있습니다. 추가 기능 적절 하 게 사용, 게임 환경을 개선 하는 동안 수익을 제공할 수 있습니다. 파트너 센터를 통해 게임의 추가 기능을 게시 및 게임 코드에서 앱에서 바로 구매를 정의 합니다.
+추가 기능 (앱에서 바로 제품)는 플레이어가 게임에서 구입할 수 있는 보충 항목입니다. 추가 기능에는 게임 수준, 항목 또는 플레이어가 즐길 수 있는 다른 모든 사항이 될 수 있습니다. 추가 기능 적절 하 게 사용, 게임 환경을 개선 하는 동안 수익을 제공할 수 있습니다. 파트너 센터를 통해 게임의 추가 기능을 게시 및 게임의 코드에서 앱에서 바로 구매를 정의 합니다.
 
 <table>
     <colgroup>
@@ -1448,7 +1448,7 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
     </tr>
     <tr>
         <td>D3D12 개발을 위한 디버깅 및 유효성 검사 도구(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003">D3D12 성능 조정 및 PIX 및 GPUValidation 디버깅</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003">D3D12 성능 조정 및 PIX and GPUValidation로 디버깅</a></td>
     </tr>
     <tr>
         <td>그래픽 및 성능 최적화(동영상)</td>
@@ -1570,7 +1570,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </colgroup>
     <tr>
         <td>스트리밍 설치 및 선택적 패키지 사용 방법 알아보기(동영상)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">차세대 UWP 앱 배포: 확장, 스트림 수 componentizedapps 빌드</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">차세대 UWP 앱 배포: 확장, 스트림 밀 componentizedapps 빌드</a></td>
     </tr>
     <tr>
         <td>스트리밍 설치가 가능하도록 콘텐츠 나누기 및 그룹화</td>

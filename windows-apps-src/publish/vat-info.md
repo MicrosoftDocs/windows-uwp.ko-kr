@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 90447f63cf28660eaffc0dff4e28524f8ef4372a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828762"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981141"
 ---
 # <a name="vat-info"></a>VAT 정보
 
 
-파트너 센터 등록 프로세스 중에 VAT ID 번호를 제공 하기 위해 해야 하는 경우 다음은 정보 시작할 수 있습니다.
+파트너 센터 등록 프로세스 중에 VAT ID 번호를 제공 하기 위해 해야 하는 경우 몇 가지 정보를 시작 하는 다음과 같습니다.
 
 ## <a name="understanding-vat-numbers"></a>VAT 번호 이해
 

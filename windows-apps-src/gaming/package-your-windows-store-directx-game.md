@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, directx, 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974676"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
 
@@ -84,12 +84,12 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
      
 
 -   [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) 및 [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
--   Microsoft Visual Studio2015에서 선택 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
+-   Microsoft Visual Studio2015 선택 **프로젝트에는 스토어->... 앱 패키지 만들기->** 는 패키지를 만듭니다.
 
 ## <a name="defining-scaling-factor-resource-packs"></a>배율 인수 리소스 팩 정의
 
 
-세 가지 사용자 인터페이스 배율 인수를 제공 하는 Windows10: 1.0 x, 1.4 x 및 1.8 x 합니다. 각 디스플레이의 배율 값은 화면 크기, 화면 해상도 및 화면과 사용자 간의 예상 평균 거리 등 다양한 요인에 따라 설치 중에 설정됩니다. 사용자는 가독성을 높이기 위해 배율 인수를 조정할 수도 있습니다. 최상의 환경을 구현하려면 게임이 DPI 인식 및 배율 인수 인식이어야 합니다. 이러한 인식은 부분적으로 세 가지 배율 인수에 대해 각각 중요한 시각적 자산 버전을 만들어야 함을 의미합니다. 포인터 조작과 적중 테스트도 포함됩니다.
+세 가지 사용자 인터페이스 배율 인수를 제공 하는 Windows10: 1.0 x, 1.4 x 및 1.8 x. 각 디스플레이의 배율 값은 화면 크기, 화면 해상도 및 화면과 사용자 간의 예상 평균 거리 등 다양한 요인에 따라 설치 중에 설정됩니다. 사용자는 가독성을 높이기 위해 배율 인수를 조정할 수도 있습니다. 최상의 환경을 구현하려면 게임이 DPI 인식 및 배율 인수 인식이어야 합니다. 이러한 인식은 부분적으로 세 가지 배율 인수에 대해 각각 중요한 시각적 자산 버전을 만들어야 함을 의미합니다. 포인터 조작과 적중 테스트도 포함됩니다.
 
 각 UWP 앱 배율 인수에 대한 리소스 팩을 지원하도록 앱을 구성하는 경우 다음 작업을 해야 합니다.
 

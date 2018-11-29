@@ -7,23 +7,23 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842803"
+ms.locfileid: "7972524"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
 
 
-앱을 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 받기, [Microsoft Store에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비의 유효성을 검사 해야 하며 테스트 로컬로 먼저. 이 항목에서는 설치 하 고 안전 하 고 효율적으로 앱은 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 실행 하는 방법을 보여 줍니다.
+앱을 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 받기, [Microsoft Store에 게시](https://msdn.microsoft.com/library/windows/apps/Hh694062)에 대 한 준비의 유효성을 검사 하 고 테스트 해야 것 로컬로 먼저 합니다. 이 항목에서는 설치 하 고 안전 하 고 효율적으로 앱은 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666) 실행 하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
 유니버설 Windows 앱을 테스트하기 위한 필수 구성 요소:
 
--   설치 하 고 Windows10 실행 해야 합니다.
+-   설치 하 고 Windows10를 실행 해야 합니다.
 -   [Windows 앱 인증 키트 버전 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666)Windows10에 대 한 Windows 소프트웨어 개발 키트 (SDK)에 포함 된 설치 해야 합니다.
 -   [개발을 위해 디바이스를 사용](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)하도록 설정해야 합니다.
 -   테스트할 Windows 앱을 컴퓨터에 배포해야 합니다.
@@ -78,7 +78,7 @@ ms.locfileid: "7842803"
 
 3.  테스트가 완료되면 `[report file name]`이라는 보고서 파일을 열고 테스트 결과를 검토합니다.
 
-**참고**Windows 앱 인증 키트는 서비스에서 실행할 수 있지만 서비스는 활성 사용자 세션에서 키트 프로세스를 시작 해야 하며 Session0에서 실행 될 수 없습니다.
+**참고**는 서비스에서 Windows 앱 인증 키트를 실행할 수 있지만 서비스는 활성 사용자 세션에서 키트 프로세스를 시작 해야 하며 Session0에서 실행 될 수 없습니다.
 
 **참고**  Windows 앱 인증 키트 명령줄에 대 한 자세한 내용은 다음 명령을 입력 `appcert.exe /?`
 

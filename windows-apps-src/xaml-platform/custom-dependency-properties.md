@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 9c362cfde71ef3bb75840216c787403846d3da95
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831542"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979606"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -166,7 +166,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> C + + 코드 CX, 개인 필드는 이유와 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 표면는 공개 읽기 전용 속성은 종속성 속성을 사용 하는 다른 호출자가 속성 시스템 유틸리티를 필요로 하는 Api를 사용할 수도 수 있도록 하는 이유는 가 공개 식별자입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
+> C + + 코드 CX, 개인 필드 이유와 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 표면을 공개 읽기 전용 속성은 종속성 속성을 사용 하는 다른 호출자가 속성 시스템 유틸리티를 필요로 하는 Api를 사용할 수도 수 있도록 하는 이유는 가 공개 식별자입니다. 식별자를 개인 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 또는 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)및 [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
 
 ## <a name="dependency-property-name-conventions"></a>종속성 속성 이름 규칙
 
@@ -472,7 +472,7 @@ Windows 런타임은 사용자 지정 종속성 속성을 읽기 전용으로 �
 
 ### <a name="registering-the-dependency-properties-for-ccx-apps"></a>C++/CX 앱의 종속성 속성 등록
 
-C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. (VisualC + + 구성 요소 확장 (C + + CX) C# 컴파일러 클래스에 정적 이니셜라이저를 할당 하 고 따라서 **DllMain** 로드 잠금 문제를 방지 하는 반면 루트 범위에서 정적 이니셜라이저 코드를 **DllMain**직접 배치 합니다.). 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325)(`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
+C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. (VisualC + + 구성 요소 확장 (C + + CX) 정적 이니셜라이저 코드를 삽입 하는 루트 범위에서 직접 **DllMain**C# 컴파일러는 클래스에 정적 이니셜라이저를 할당 하 고 따라서 **DllMain** 로드 잠금 문제를 방지 하는 반면.). 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325)(`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 

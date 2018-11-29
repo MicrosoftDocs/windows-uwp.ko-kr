@@ -1,23 +1,23 @@
 ---
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: 설정 방법
-description: 생각보다 쉽게 설정할 수 있습니다. 다음이 지침에 따라 하 고 Windows10에 대 한 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 시작 합니다.
+description: 생각보다 쉽게 설정할 수 있습니다. 다음이 지침에 따라 및 Windows10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들기 시작 합니다.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f3d14467856aee733f2e11d057db0deb873269ff
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828265"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979809"
 ---
 # <a name="get-set-up"></a>설정 방법
 
 ![Visual Studio 사용 준비](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-생각보다 쉽게 시작할 수 있습니다. 다음이 지침에 따라 하 고 Windows10에 대 한 유니버설 Windows 플랫폼 (UWP) 앱 만들기를 시작 합니다.
+생각보다 쉽게 시작할 수 있습니다. 다음이 지침에 따라 및 Windows10 용 유니버설 Windows 플랫폼 (UWP) 앱을 만들기 시작 합니다.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Visual Studio 다운로드 또는 업데이트
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e418e5a159df44d6ff6e15e4faa972164447f5ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852022"
+ms.locfileid: "7978542"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
@@ -127,7 +127,7 @@ Windows10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 �
 
 ### <a name="mobile-operators"></a>통신사
 
-Windows10 광범위 한 개발자 그룹에 장치 제조업체 및 통신사에만 노출 이전에 일부 Api를 노출 합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
+Windows10 광범위 한 개발자에 게 장치 제조업체 및 통신사에만 노출 이전에 일부 Api를 노출 합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="network-operations"></a>네트워크 운영
 

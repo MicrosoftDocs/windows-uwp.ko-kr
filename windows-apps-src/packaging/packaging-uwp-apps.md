@@ -10,11 +10,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: eaee9d28d8e927e3fbc9d56c8aa7c24422d1484a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7841347"
+ms.locfileid: "7981737"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -31,7 +31,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 [파트너 센터](https://par
     앱 번들은 각각 특정 장치 아키텍처를 지원하기 위해 구축된 여러 앱 패키지를 포함할 수 있는 패키지 유형입니다. 예를 들어 앱 번들은 x86, x64, 및 ARM 구성에 대해 세 개의 개별 앱 패키지를 포함할 수 있습니다. 앱 번들은 앱이 가장 광범위한 장치에서 사용할 수 있도록 허용하기 때문에 가능한 경우 생성되어야 합니다.  
 
 - **앱 패키지 업로드 파일(.appxupload)**  
-    다양한 프로세서 아키텍처를 지원하기 위해 여러 앱 패키지 또는 앱 번들을 포함할 수 있는 단일 파일. 또한 앱이 Microsoft Store에 게시된 후 업로드 파일은 [앱 성능을 분석할](https://docs.microsoft.com/windows/uwp/publish/analytics) 기호 파일을 포함합니다. 게시를 위해 파트너 센터에 제출 하려는 의도로 Visual Studio를 사용 하 여 앱을 패키징하는 경우이 파일을 자동으로 생성 됩니다. 것 **만** 유효한 앱 패키지 파트너 센터 제출 Visual Studio를 사용 하 여 만들 수 있는 이들은 유의 해야 합니다.
+    다양한 프로세서 아키텍처를 지원하기 위해 여러 앱 패키지 또는 앱 번들을 포함할 수 있는 단일 파일. 또한 앱이 Microsoft Store에 게시된 후 업로드 파일은 [앱 성능을 분석할](https://docs.microsoft.com/windows/uwp/publish/analytics) 기호 파일을 포함합니다. 게시에 대 한 파트너 센터에 제출 하려는 의도로 Visual Studio를 사용 하 여 앱을 패키징하는 경우이 파일을 자동으로 생성 됩니다. 것 **만** 유효한 앱 패키지 파트너 센터 제출 Visual Studio를 사용 하 여 만들 수 있는 ' 이라는 점에 유의 해야 합니다.
 
 다음은 앱 패키지를 준비해 만드는 단계에 대한 개요입니다.
 
@@ -79,9 +79,9 @@ Microsoft Store를 통해 앱을 배포하는 경우 Visual Studio는 Microsoft 
 Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix), 앱 번들 (.appxbundle 또는.msixbundle), 또는 업로드 패키지 (.appxupload) 및 [파트너 센터에 패키지 된 앱 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)만들어야 합니다. 앱 패키지 또는 앱 번들만 파트너 센터에 제출할 수 있지만 업로드 패키지를 제출할 수 있습니다.
 
 >[!NOTE]
-> 앱 패키지 업로드 파일 (.appxupload)은 Visual Studio를 사용 하 여 만들 수 있는 파트너 센터에 대 한 유효한 앱 패키지의 **만** 유형입니다. 다른 유효한 [앱 패키지는 Visual Studio를 사용하지 않고 수동으로 만들 수 있습니다](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
+> 앱 패키지 업로드 파일 (.appxupload)은 Visual Studio를 사용 하 여 만들 수 있는 파트너 센터에 대 한 유효한 앱 패키지의 **만** 유형. 다른 유효한 [앱 패키지는 Visual Studio를 사용하지 않고 수동으로 만들 수 있습니다](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
 
-**앱 패키지 만들기** 마법사를 사용하여 만들 수 있습니다. Visual Studio를 사용 하 여 파트너 센터 제출에 적합 한 패키지를 만들려면 다음이 단계를 따르세요.
+**앱 패키지 만들기** 마법사를 사용하여 만들 수 있습니다. Visual Studio를 사용 하 여 파트너 센터 제출에 적합 한 패키지를 만들려면 다음이 단계를 수행 합니다.
 
 **앱 패키지 업로드 파일을 만들려면**
 
@@ -91,10 +91,10 @@ Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.ms
 
     **앱 패키지 만들기** 마법사가 나타납니다.
 
-3.  다음을 클릭 한 다음 파트너 센터에 업로드할 패키지를 빌드할지 묻는 첫 번째 대화 상자에서 예를 선택 합니다.  
+3.  다음을 클릭 한 다음 파트너 센터에 업로드할 패키지를 빌드할지 첫 번째 대화 상자에서 예를 선택 합니다.  
     ![표시되는 패키지 만들기 대화 창](images/packaging-screen3.jpg)
 
-    아니요를 선택 하면 Visual Studio에서 파트너 센터 제출에 대 한 앱 패키지 업로드 (.appxupload) 파일을 생성 하지 않습니다. 내부 장치에서만 실행하거나 테스트 목적으로 앱을 사이드로드하려는 경우에는 이 옵션을 선택하면 됩니다. 사이드로드에 대한 자세한 내용은 [디바이스를 개발에 사용하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)을 참조하세요.
+    아니요를 선택 하는 경우 Visual Studio는 파트너 센터 제출에 대 한 앱 패키지 업로드 (.appxupload) 파일을 생성 되지 않습니다. 내부 장치에서만 실행하거나 테스트 목적으로 앱을 사이드로드하려는 경우에는 이 옵션을 선택하면 됩니다. 사이드로드에 대한 자세한 내용은 [디바이스를 개발에 사용하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)을 참조하세요.
 4.  파트너 센터 개발자 계정으로 로그인 합니다. 아직 개발자 계정이 없으면 마법사를 사용하여 만들 수 있습니다.
 5.  패키지에 대 한 앱 이름을 선택 하거나 하면 예약 하지 않은 파트너 센터의 경우 새 이름을 예약 합니다.  
     ![앱 이름 선택이 표시된 앱 패키지 만들기 창](images/packaging-screen4.jpg)
@@ -168,5 +168,5 @@ UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하�
 
     앱 패키지가 설치되면 PowerShell 창에 **앱이 설치되었습니다**라는 메시지가 나타납니다.
 
-    **팁**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭 완전 한 원이 나타날 때까지 누르고 있다가 손가락을 원하는 화면을 터치 합니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
+    **팁**: 태블릿에서 바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭, 완전 한 원이 나타날 때까지 계속 누르고 있다가 손가락을 저장할 화면을 터치 합니다. 손가락을 뗀 후에 바로 가기 메뉴가 나타납니다.
 4.  시작 버튼을 클릭한 다음 앱 이름을 입력해 검색한 후 시작합니다.

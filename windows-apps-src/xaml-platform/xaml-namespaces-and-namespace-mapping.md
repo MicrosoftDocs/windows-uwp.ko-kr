@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6178e2072721ad8514ba7ddfc0ae8f99ab59d34c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848301"
+ms.locfileid: "7981942"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML 네임스페이스 및 네임스페이스 매핑
 
@@ -61,7 +61,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 -   **d:DesignHeight 및 d:DesignWidth 특성:** 경우에 따라 두 특성은 Visual Studio 또는 다른 XAML 디자이너 화면에서 만드는 XAML 파일의 루트에 적용됩니다. 예를 들어 앱 프로젝트에 새 **UserControl**을 추가할 경우 만들어지는 XAML의 [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) 루트에 이 특성이 설정됩니다. 두 특성을 사용하여 XAML 콘텐츠 컴퍼지션을 쉽게 디자인할 수 있으므로 XAML 콘텐츠를 컨트롤 인스턴스나 큰 UI 페이지의 다른 부분에 사용할 경우 발생할 수 있는 레이아웃 제약 조건을 어느 정도 예상할 수 있습니다.
 
-   **참고**Microsoft Silverlight에서 XAML을 마이그레이션하는 경우 이러한 특성이 전체 UI 페이지를 나타내는 루트 요소에 있을 합니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
+   **참고**Microsoft Silverlight에서 XAML을 마이그레이션하는 경우 전체 UI 페이지를 나타내는 루트 요소에 이러한 특성을 가질 수 있습니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
 
 -   **d:DataContext 특성:** 페이지 루트나 컨트롤에 이 특성을 설정하면 특성이 없을 경우 개체에 포함되는 명시적 또는 상속된 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)를 재정의할 수 있습니다.
 -   **d:DesignSource 특성:** [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833)에 대해 디자인 타임 데이터 원본을 지정하고 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835)를 재정의합니다.

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 광고 관리, javascript, HTML
 ms.localizationpriority: medium
 ms.openlocfilehash: 08b834343aafb91fee1e75f9df7ed2a752992fa2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7978721"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>HTML 5 및 JavaScript의 AdControl
 
@@ -56,7 +56,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 8.  default.html 파일(또는 프로젝트에 해당하는 다른 html 파일)의 **&lt;body&gt;** 섹션을 **AdControl**에 대한 **div**를 포함하도록 수정합니다. [테스트 광고 단위 값](set-up-ad-units-in-your-app.md#test-ad-units)에 **AdControl**의 **applicationId**와 **adUnitId** 속성을 할당합니다. 또한 [배너 광고에 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나가 되도록 컨트롤의 **높이**와 **너비**를 조정합니다.
 
     > [!NOTE]
-    > 모든 **AdControl**에는 컨트롤할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 해야 스토어에 앱을 게시 하기 전에 [대체 이러한 테스트 값을 라이브 값](#release) 파트너 센터에서.
+    > 모든 **AdControl**에는 컨트롤할 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전 [대체 이러한 테스트 값을 라이브 값](#release) 파트너 센터에서.
 
     ``` HTML
     <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"
@@ -115,15 +115,15 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 
 1. 앱에 사용할 배너 광고는 [배너 광고에 대한 지침](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads)을 따라야 합니다.
 
-1.  파트너 센터에서 이동 [인 앱 광고](../publish/in-app-ads.md) 페이지와 [광고 단위를 생성](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
+1.  파트너 센터에서 이동 [인 앱 광고](../publish/in-app-ads.md) 페이지 및 [광고 단위를 생성](set-up-ad-units-in-your-app.md#live-ad-units)합니다. 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
     > [!NOTE]
     > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP 광고 단위를 만들 때 광고 단위에 대 한 응용 프로그램 ID 값에 항상 (예: Store ID 값은 9NBLGGH4R315와) 앱에 대 한 스토어 ID와 일치 합니다.
 
 2. [인앱 광고](../publish/in-app-ads.md) 페이지의 [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, **AdControl**의 광고 조정을 사용하는 방법도 있습니다. 광고 조정을 통해 Taboola 및 Smaato 같은 기타 유료 광고 네트워크와 Microsoft 앱 프로모션 캠페인에 대한 광고를 포함하여 여러 광고 네트워크의 광고를 표시하여 광고 수익과 앱 프로모션 기능을 최대화할 수 있습니다.
 
-3.  코드에서 테스트 광고 단위 값을 (**applicationId** 및 **adUnitId**) 파트너 센터에서 생성 한 라이브 값으로 바꿉니다.
+3.  코드에서 테스트 광고 단위 값을 (**응용 프로그램 Id** 및 **adUnitId**) 파트너 센터에서 생성 한 라이브 값으로 바꿉니다.
 
-4.  파트너 센터를 사용 하 여 스토어에 [앱 제출](../publish/app-submissions.md)
+4.  파트너 센터를 사용 하 여 스토어에 [제출 앱을](../publish/app-submissions.md) 합니다.
 
 5.  파트너 센터에서 [광고 성과 보고서](../publish/advertising-performance-report.md) 를 검토 합니다.             
 

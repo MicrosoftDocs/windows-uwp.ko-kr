@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 371b64a6161911242acd5b9abf97cfa7d2f05358
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7831658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7981365"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
@@ -62,7 +62,7 @@ class ColorEntry
 
 함수 경로는 다른 속성 경로처럼 지정되며 점(.), 인덱서 또는 함수를 찾을 캐스트를 포함할 수 있습니다.
 
-정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 사용 하는 정적 함수를 코드 숨김에서 바인딩할 구문은 아래 합니다.
+정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 사용 하 여는 정적 함수를 코드 숨김에서 바인딩할 구문은 아래 합니다.
 
 ```xaml
 <Page 
@@ -104,7 +104,7 @@ public class MyPage : Page
 - 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
 - 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
 
-바인딩 엔진은 다음 주요 업데이트를 Windows 10부터 함수 이름으로 발생 하는 속성 변경 알림을에 반응 및 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
+Windows 10으로 다음 주요 업데이트부터 바인딩 엔진은 고 대응 하 고 함수 이름으로 발생 하는 속성 변경 알림을 필요에 따라 바인딩이 다시 평가 합니다. 예를 들면 다음과 같습니다. 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">
@@ -173,7 +173,7 @@ public class Person:INotifyPropertyChanged
 
 ### <a name="two-way-function-bindings"></a>양방향 함수 바인딩
 
-양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이 방법은 **BindBack** 바인딩 속성을 사용 합니다. 에 함수 아래 예에서는 값 모델로 다시 푸시 해야 하는 인수 하나를 수행 해야 합니다.
+양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이렇게 **BindBack** 바인딩 속성을 사용 합니다. 에 함수 아래 예에서는 값 모델로 다시 푸시 해야 하는 인수 하나를 수행 해야 합니다.
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 751cda36fc58d0e6add9204327a74ec947c9fc53
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7849384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7979053"
 ---
 # <a name="xfieldmodifier-attribute"></a>x:FieldModifier 특성
 
@@ -30,7 +30,7 @@ ms.locfileid: "7849384"
 
 ## <a name="remarks"></a>설명
 
-**x:FieldModifier** 특성의 값은 프로그래밍 언어에 따라 다릅니다. 유효한 값은 **private**, **public**, **protected**, **internal** 또는 **friend**입니다. C#, Microsoft Visual Basic 또는 VisualC + + 구성 요소 확장 (C + + CX), 문자열을 제공할 수 값 "public" 또는 "Public"입니다. 파서가이 특성 값에 대/소문자를 적용 하지 않습니다.
+**x:FieldModifier** 특성의 값은 프로그래밍 언어에 따라 다릅니다. 유효한 값은 **private**, **public**, **protected**, **internal** 또는 **friend**입니다. C#, Microsoft Visual Basic 또는 VisualC + + 구성 요소 확장 (C + + CX), 문자열을 제공할 수 있습니다 "public" 또는 "Public"; 값 파서가이 특성 값에 대/소문자를 적용 하지 않습니다.
 
 **Private** 액세스가 기본값입니다.
 

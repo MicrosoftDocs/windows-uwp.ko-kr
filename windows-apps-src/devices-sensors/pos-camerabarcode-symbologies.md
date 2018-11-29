@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb40528ee0104a2e25b5e95499c4404057eba1f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836471"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7982028"
 ---
 # <a name="symbologies"></a>기호
 이 항목에는 UPC/EAN, Code 39, Code 128, Interleaved 2 of 5, Databar Omnidirectional, Databar Stacked, QR 코드 및 GS1DWCode를 포함하여 Windows 10과 함께 배송되는 소프트웨어 바코드 디코더에서 지원되는 기호 각각에 샘플 바코드를 제공합니다.

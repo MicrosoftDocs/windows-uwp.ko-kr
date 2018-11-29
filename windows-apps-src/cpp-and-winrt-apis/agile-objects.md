@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체, agility, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 2711779f2f5fc13be19a4a10224b110564716477
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843714"
+ms.locfileid: "7978665"
 ---
 # <a name="agile-objects-in-cwinrt"></a>C++/WinRT의 Agile 개체
 
-대부분의 경우에는 Windows 런타임 클래스의 인스턴스 (과 마찬가지 방법 대부분의 표준 c + + 개체) 모든 스레드에서 액세스할 수 있습니다. Windows 런타임 클래스는 *agile*입니다. 적은 수의 Windows와 함께 제공 되는 Windows 런타임 클래스는 agile, 하지만 해당 스레딩 모델 및 마샬링 동작을 고려 수행 해야 하는 사용 하면 (마샬링를 전달 하는 데이터 아파트 경계를 넘어). 모든 Windows 런타임 개체가 agile, 좋은 기본값이 하므로 자체 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 유형은 기본적으로 agile입니다.
+대부분의 경우 Windows 런타임 클래스의 인스턴스 (과 마찬가지 방법 대부분의 표준 c + + 개체) 모든 스레드에서 액세스할 수 있습니다. 이러한 Windows 런타임 클래스는 *agile*입니다. 적은 수의 Windows와 함께 제공 되는 Windows 런타임 클래스는 agile, 하지만 사용할 경우의 스레딩 모델 및 마샬링 동작 고려해 (마샬링를 전달 하는 데이터 아파트 경계에서). 모든 Windows 런타임 개체가 agile, 좋은 기본 하므로 자체 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 유형은 기본적으로 agile입니다.
 
 하지만 옵트아웃으로 Agile을 선택하지 않을 수도 있습니다. 예를 들어, 단일 스레드 아파트처럼 경우에 따라 형식 개체가 상주해야 하는 이유가 존재하기 때문입니다. 이는 일반적으로 다시 표시 요구 사항과 관련이 있습니다. 하지만 점차 사용자 인터페이스(UI) API 조차도 Agile 개체를 제공하고 있습니다. 일반적으로 Agility는 가장 간단하면서 성능이 뛰어난 옵션입니다. 또한 활성화 팩터리를 구현할 때 해당하는 런타임 클래스가 Agile하지 않더라도 Agile을 설정해야 합니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "7843714"
 
 ## <a name="code-examples"></a>코드 예제
 
-런타임 클래스의 구현 예제를 사용 하는 방법을 C + + WinRT agility를 지원 합니다.
+런타임 클래스를 구현 하는 예제를 사용 하는 방법을 C + + WinRT agility를 지원 합니다.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -85,7 +85,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, winrt::non_agile>
 
 variadic 매개 변수 팩에서 마커 구조체가 표시되는 경우는 중요하지 않습니다.
 
-Agility를 옵트아웃 여부 직접 **IMarshal** 구현할 수 있습니다. **Winrt:: non_agile** 마커를 사용 하 여 기본 agility 구현을 방지 하 고 직접 **IMarshal** 을 구현할 수 예를 들어&mdash;아마도 기능을 지 원하는 값으로 마샬링해야 합니다.
+Agility를 옵트아웃 여부에 직접 **IMarshal** 구현할 수 있습니다. **Winrt:: non_agile** 마커를 사용 하 여 기본 agility 구현을 방지 하 고 직접 **IMarshal** 을 구현할 수 예를 들어&mdash;아마도 기능을 지 원하는 값으로 마샬링해야 합니다.
 
 ## <a name="agile-references-winrtagileref"></a>Agile 참조(winrt::agile_ref)
 
