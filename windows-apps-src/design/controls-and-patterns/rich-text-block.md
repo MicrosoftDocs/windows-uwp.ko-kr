@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d71a7995bc56a87e6a9b0fc53ff35fdebe82596
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7974382"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8196942"
 ---
 # <a name="rich-text-block"></a>서식 있는 텍스트 블록
 

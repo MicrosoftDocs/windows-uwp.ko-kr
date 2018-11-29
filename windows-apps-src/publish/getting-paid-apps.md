@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, uwp, 결제, 앱 판매, 앱 수익, 지급액, Microsoft Store 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
 ms.openlocfilehash: 91289948f2f4745456b9cebe587cf75366a4877b
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993196"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197066"
 ---
 # <a name="getting-paid"></a>지급 받기
 앱, 추가 기능 및 광고 수익에 대 한 지급을 받는 방법에 대 한 중요 한 정보는 다음과 같습니다.
 
 > [!IMPORTANT]
-> Microsoft Store의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정 하 고 필요한 세금 양식을 입력](setting-up-your-payout-account-and-tax-forms.md)해야 합니다.
+> Microsoft 스토어의 앱 판매에서 번 돈을 받으려면, 먼저 [지급 계좌를 설정](setting-up-your-payout-account-and-tax-forms.md)하 고 필요한 세금 양식을 입력 해야 합니다.
 
 ## <a name="store-fee"></a>Microsoft Store 수수료
 

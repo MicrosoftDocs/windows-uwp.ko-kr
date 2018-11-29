@@ -1,18 +1,18 @@
 ---
 ms.assetid: 5aeb009c-1f2f-7c04-4477-cbe92c473174
 title: 네트워킹 페이지 (개발자 홈)
-description: Xbox one 개발자 홈 앱의 네트워킹 페이지에 대 한 정보를 제공합니다.
+description: Xbox One 용 개발자 홈 앱의 네트워킹 페이지에 대 한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d82b350cccfd90509f3b9f031de2785e91e0dc
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964799"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197304"
 ---
 # <a name="networking-page-dev-home"></a>네트워킹 페이지 (개발자 홈)
    

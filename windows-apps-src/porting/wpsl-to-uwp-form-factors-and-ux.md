@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0897bd2636f13cfb02568847c0ba40b2d6b218f3
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993489"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197728"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>폼 팩터 및 UX에 대 한 WindowsPhone Silverlight를 UWP로 포팅
 
@@ -30,7 +30,7 @@ Windows 앱은 PC, 모바일 장치 및 기타 여러 종류의 장치에서 일
 
 객관적으로 화면은 인치 단위 및 실제(원시) 픽셀로 측정됩니다. 이 두 메트릭을 모두 알면 적합한 인치당 픽셀 수를 알 수 있습니다. 이것이 바로 픽셀 밀도이며, DPI(인치당 도트 수) 또는 PPI(인치당 픽셀 수)라고도 합니다. DPI의 역은 픽셀의 실제 크기로 1인치의 몇 분의 1에 불과합니다. 픽셀 밀도를 *해상도*라고도 하지만, 해상도는 막연히 픽셀 수를 나타내는 데 주로 사용됩니다.
 
-시청 거리가 증가하면 모든 객관적 메트릭은 더 작아지는 것처럼 *보이고* 화면의 *유효 크기*와 *유효 해상도*로 확인됩니다. 가장 가까운 위치에서 사용되는 것은 휴대폰이고 그다음이 태블릿, PC 모니터의 순이며, [Surface Hub](http://www.microsoft.com/microsoft-surface-hub) 장치와 TV가 가장 멀리서 사용됩니다. 이를 보완하기 위해 디바이스가 시청 거리에서 객관적으로 더 커지는 경향이 있습니다. UI 요소에서 크기를 설정할 때 유효 픽셀(epx)이라는 단위로 해당 크기를 설정합니다. 및 UI 요소의 최상의 보기 환경을 제공 하기 위해 실제 픽셀로 최상의 크기를 계산 하는 장치에서 일반적인 가시 거리와 DPI 계정에 Windows10 걸립니다. [보기/유효 픽셀, 가시거리 및 배율 인수](wpsl-to-uwp-porting-xaml-and-ui.md)를 참조하세요.
+시청 거리가 증가하면 모든 객관적 메트릭은 더 작아지는 것처럼 *보이고* 화면의 *유효 크기*와 *유효 해상도*로 확인됩니다. 가장 가까운 위치에서 사용되는 것은 휴대폰이고 그다음이 태블릿, PC 모니터의 순이며, [Surface Hub](http://www.microsoft.com/microsoft-surface-hub) 장치와 TV가 가장 멀리서 사용됩니다. 이를 보완하기 위해 디바이스가 시청 거리에서 객관적으로 더 커지는 경향이 있습니다. UI 요소에서 크기를 설정할 때 유효 픽셀(epx)이라는 단위로 해당 크기를 설정합니다. 및 UI 요소에 최상의 보기 환경을 제공 하기 위해 실제 픽셀로 최상의 크기를 계산 하는 장치에서 일반적인 가시 거리와 DPI 계정에 Windows10 걸립니다. [보기/유효 픽셀, 가시거리 및 배율 인수](wpsl-to-uwp-porting-xaml-and-ui.md)를 참조하세요.
 
 그렇다고 해도 각 환경을 확인할 수 있도록 여러 디바이스에서 앱을 테스트하는 것이 좋습니다.
 
@@ -50,7 +50,7 @@ Windows 앱은 PC, 모바일 장치 및 기타 여러 종류의 장치에서 일
 
 모바일 버전처럼 보이도록 앱을 광학적으로 확대하면 장치 및 추가 공간을 활용할 수 없을 뿐만 아니라 사용자에게도 도움이 되지 않습니다. 동일한 콘텐츠를 더 크게 표시하는 것보다 더 많은 콘텐츠를 표시하는 것을 고려해야 합니다. 패블릿에서도 더 많은 행의 콘텐츠를 표시할 수 있습니다. 추가 공간을 사용하여 광고 등과 같은 다른 콘텐츠를 표시하거나, 목록 상자를 목록 보기로 변경하고 항목을 여러 열로 줄 바꿈(가능한 경우)하여 공간을 그런 식으로 사용할 수 있습니다. [목록 및 그리드 보기 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt186889)을 참조하세요.
 
-목록 보기 및 그리드 보기 같은 새 컨트롤 외에도 WindowsPhone Silverlight에서 설정 된 레이아웃 형식의 대부분 유니버설 Windows 플랫폼 (UWP)에서 해당 항목을 갖고 있습니다. 예를 들어 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)입니다. 이러한 형식을 사용하는 대부분의 UI는 쉽게 포팅할 수 있지만, 항상 다른 크기의 장치에서 자동으로 크기를 조정하고 다시 배치하도록 이러한 레이아웃 패널의 동적 레이아웃 기능 활용 방법을 찾아야 합니다.
+목록 보기 및 그리드 보기 같은 새 컨트롤 외에도 WindowsPhone Silverlight에서 설정 된 레이아웃 유형의 대부분 유니버설 Windows 플랫폼 (UWP)에서 해당 항목을 갖고 있습니다. 예를 들어 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)입니다. 이러한 형식을 사용하는 대부분의 UI는 쉽게 포팅할 수 있지만, 항상 다른 크기의 장치에서 자동으로 크기를 조정하고 다시 배치하도록 이러한 레이아웃 패널의 동적 레이아웃 기능 활용 방법을 찾아야 합니다.
 
 시스템 컨트롤 및 레이아웃 패널에 내장 된 동적 레이아웃 하는 것을 [적응 Visual State Manager](wpsl-to-uwp-porting-xaml-and-ui.md)이라는 새로운 Windows10 기능을 사용할 수 있습니다.
 
