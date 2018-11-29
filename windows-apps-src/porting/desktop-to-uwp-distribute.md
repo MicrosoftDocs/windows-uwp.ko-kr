@@ -1,31 +1,31 @@
 ---
 Description: Distribute a packaged desktop application (Desktop Bridge)
 Search.Product: eADQiWindows 10XVcnh
-title: Microsoft 스토어 또는 테스트용으로 로드에 패키지 된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
+title: Microsoft 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe216b70b7c10f254c0e3b7b18275a72d46215c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967005"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200096"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>패키지로 만든된 데스크톱 응용 프로그램 배포
 
-Microsoft 스토어 또는 테스트용으로 로드에 패키지 된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
+Microsoft 스토어 또는 테스트용으로 로드 패키지로 만든된 데스크톱 응용 프로그램 게시, 하나 이상의 장치에 있습니다.  
 
 > [!NOTE]
-> 패키지 된 응용 프로그램에 사용자를 전환할 수 있는 방법에 대 한 계획 있으십니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [패키지된 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
+> 패키지 된 응용 프로그램에 사용자를 전환할 수 있는 방법에 대 한 계획 있습니까? 앱을 배포하기 전에 몇 가지 아이디어를 얻고 싶다면 이 가이드의 [패키지된 앱으로 사용자 전환](#transition-users) 섹션을 참조하세요.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Microsoft Store에 게시 하 여 응용 프로그램 배포
 
 [Microsoft Store](https://www.microsoft.com/store/apps)는 고객이 앱을 다운로드할 수 있는 편리한 방법입니다.
 
-가장 광범위 한 사용자에 도달 하려면 Microsoft Store에 응용 프로그램을 게시 합니다. 또한 조직 고객에 게 [비즈니스용 Microsoft 스토어](https://www.microsoft.com/business-store)를 통해에 내부적으로 배포할 응용 프로그램을 얻을 수 있습니다.
+가장 광범위 한 사용자에 도달 하려면 Microsoft Store에 응용 프로그램을 게시 합니다. 또한 조직 고객에 게 [비즈니스용 Microsoft 스토어](https://www.microsoft.com/business-store)를 통해 조직에 내부적으로 배포 하려면 응용 프로그램을 취득할 수 있습니다.
 
 Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 이 요구 사항에 대한 자세한 내용은 [제한된 접근 권한 값](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities)을 참조하세요.
 
@@ -38,24 +38,24 @@ Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 �
 
 ## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Microsoft 스토어에 배치 하지 않고 응용 프로그램을 배포 합니다.
 
-스토어를 사용 하지 않고 응용 프로그램 배포는, 하나 이상의 장치에 앱을 수동으로 배포할 수 있습니다.
+스토어를 사용 하지 않고 응용 프로그램을 배포는, 경우 하나 이상의 장치에 앱을 수동으로 배포할 수 있습니다.
 
 배포 경험에 대한 강력한 제어를 원하거나 Microsoft Store 인증 프로세스에 참여하고 싶지 않은 경우에 적합한 방법입니다.
 
-를 저장소에 배치 하지 않고 다른 장치에 응용 프로그램을 배포 하려면 인증서 얻기, 이러한 장치에 응용 프로그램 및 다음 해당 인증서를 테스트용으로 로드를 사용 하 여 응용 프로그램에 서명 해야 합니다.
+를 스토어에 배치 하지 않고 다른 장치에 응용 프로그램을 배포 하려면 인증서 얻기, 장치에서 이러한 응용 프로그램 및 다음 해당 인증서를 테스트용으로 로드를 사용 하 여 응용 프로그램에 서명 해야 합니다.
 
 [인증서를 만들거나](../packaging/create-certificate-package-signing.md) [Verisign](https://www.verisign.com/) 같은 인기 공급자로부터 구입할 수 있습니다.
 
-Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 응용 프로그램에 있기 때문에 응용 프로그램을 배포 하기 전에 스토어 제출 프로세스를 진행 해야 하므로 Microsoft Store에서 서명입니다.
+Windows 10 S를 실행 하는 장치에 응용 프로그램을 배포 하려는 경우 응용 프로그램에 장치에서 이러한 응용 프로그램을 배포 하기 전에 저장소 제출 프로세스를 진행 해야 하므로 Microsoft Store에서 서명입니다.
 
 인증서를 만드는 경우에는 앱을 실행하는 각 장치의 **신뢰할 수 있는 루트** 또는 **신뢰할 수 있는 사용자** 인증서 저장소에 이를 설치해야 합니다. 인기 공급자로부터 인증서를 구입하는 경우에는 다른 시스템에 앱 이외에 어떤 것도 설치할 필요가 없습니다.  
 
 > [!IMPORTANT]
 > 인증서의 게시자 이름이 앱 게시자 이름과 일치하는지 확인합니다.
 
-인증서를 사용 하 여 응용 프로그램에 서명 하려면 [서명 응용 프로그램 패키지 SignTool을 사용 하 여](../packaging/sign-app-package-using-signtool.md)참조 하세요.
+인증서를 사용 하 여 응용 프로그램에 서명 하려면 [SignTool을 사용 하 여 응용 프로그램 패키지 사이 니 지](../packaging/sign-app-package-using-signtool.md)를 참조 하세요.
 
-테스트용으로 로드 다른 장치에 응용 프로그램이 [Windows 10에서 테스트용으로 로드 LOB 앱을](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)참조 하세요.
+테스트용으로 로드 다른 장치에 응용 프로그램이 [Windows 10에서 Sideload LOB 앱을](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10)참조 하세요.
 
 **비디오**
 

@@ -7,13 +7,13 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993449"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200551"
 ---
-# <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 앱 작성자
+# <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 응용 프로그램 작성자
 
 ![Fluent 디자인 헤더](images/fluentdesign-app-header.jpg)
 
@@ -36,11 +36,11 @@ Fluent 환경은 동작이나 의도에 반응하여 필요한 것을 이해하�
 Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활용합니다. 조명, 그림자, 동작, 깊이, 질감 등을 사용하여 직관적이고 본능적으로 느낄 수 있도록 정보를 구성합니다.
 
 
-## <a name="applying-fluent-design-to-your-app-with-uwp"></a>UWP 사용 하 여 앱에 흐름 디자인을 적용
+## <a name="applying-fluent-design-to-your-app-with-uwp"></a>Fluent 디자인을 UWP 사용 하 여 앱에 적용
 
-![흐름 디자인 로고](images/fluentdesign_header.png)
+![Fluent 디자인 로고](images/fluentdesign_header.png)
 
-디자인 지침에는 앱에 흐름 디자인 원칙을 적용 하는 방법을 설명 합니다. 어떤 유형의 앱? 모든 플랫폼에 적용할 수 다양 한 지침을 하는 동안 UWP (유니버설 Windows 플랫폼) 흐름 디자인을 지원 하기 위해 만들었습니다.
+디자인 지침에는 앱에 Fluent 디자인 원칙을 적용 하는 방법을 설명 합니다. 어떤 유형의 앱? 모든 플랫폼에 적용할 수 다양 한 지침을 하는 동안 UWP (유니버설 Windows 플랫폼) 흐름 디자인을 지원 하기 위해 만들었습니다.
 
 흐름 디자인은 UWP에 기본적으로 적용됩니다. 이러한 기능 중에서 유효 픽셀이나 범용 입력 시스템 같은 일부 기능은 자동입니다. 이 기능을 활용하기 위해 추가 코드를 작성할 필요가 없습니다. 아크릴 같은 다른 기능은 선택 사항입니다. 즉 추가할 코드를 직접 작성하여 앱에 추가하면 됩니다.
 
