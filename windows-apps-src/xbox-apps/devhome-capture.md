@@ -1,18 +1,18 @@
 ---
 ms.assetid: 67934477-337a-5235-b0de-8ac038177267
 title: 미디어 캡처 페이지 (개발자 홈)
-description: Xbox one 개발자 홈 앱의 미디어 캡처 페이지에 대 한 정보를 제공합니다.
+description: Xbox One 용 개발자 홈 앱의 미디어 캡처 페이지에 대 한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 348b937b7967cbde80c0bc25a502e727a04e8af0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7840811"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988436"
 ---
 # <a name="media-capture-page-dev-home"></a>미디어 캡처 페이지 (개발자 홈)
    
@@ -32,7 +32,7 @@ ms.locfileid: "7840811"
 ## <a name="video-capture"></a>비디오 캡처  
    
   
-**비디오 캡처** 창을 개발자 콘솔에서 비디오 스트림을 기록 있는 도구가 포함 되어 있습니다. 콘솔에서 마지막 몇 초의 비디오를 캡처할 수 있습니다.   
+**비디오 캡처** 창에는 개발자 콘솔에서 비디오 스트림을 기록 하는 도구가 포함 되어 있습니다. 콘솔에서 마지막 몇 초의 비디오를 캡처할 수 있습니다.   
   
 <a id="ID4ERB"></a>
 

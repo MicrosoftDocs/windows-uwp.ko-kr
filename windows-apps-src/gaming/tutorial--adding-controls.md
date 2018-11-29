@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 01c0d1361dcc0858a54792adc0d17408ed281c99
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846805"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991180"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 
@@ -575,7 +575,7 @@ window->KeyUp +=
 
 
 
-[**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103) 메서드에서 게임 패드가 [추가](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) 상태인지 [제거](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) 상태인지 판단하기 위해 2개의 이벤트가 새로 추가되었습니다. 이러한 이벤트는 **m_gamepadsChanged** 속성을 업데이트합니다. **UpdatePollingDevices** 메서드에서 알려진된 게임 패드의 목록이 변경 되었는지 여부를 확인 하려면 사용 됩니다. 
+[**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103) 메서드에서 게임 패드가 [추가](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) 상태인지 [제거](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) 상태인지 판단하기 위해 2개의 이벤트가 새로 추가되었습니다. 이러한 이벤트는 **m_gamepadsChanged** 속성을 업데이트합니다. 이 경우에 알려진된 게임 패드의 목록이 변경 되었는지 확인 하려면 **UpdatePollingDevices** 메서드에서 사용 됩니다. 
 
 ```cpp
     // Detect gamepad connection and disconnection events.

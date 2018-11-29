@@ -1,18 +1,18 @@
 ---
 ms.assetid: 94bb7ad9-cf50-61a8-ad42-48b9bdb9ed36
 title: 홈 페이지 (개발자 홈)
-description: Xbox one 개발자 홈 앱의 홈 페이지에 대 한 정보를 제공합니다.
+description: Xbox One 용 개발자 홈 앱의 홈 페이지에 대 한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833531"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985929"
 ---
 # <a name="home-page-dev-home"></a>홈 페이지 (개발자 홈)
    
@@ -38,7 +38,7 @@ ms.locfileid: "7833531"
 **바로 가기** 창 자주 수행 하는 작업에 대 한 빠른 액세스를 제공 하는 다음 단추를 포함 합니다.   
  
    *  **Visual Studio 표시 핀:** 컴퓨터에 Visual Studio 설치를 사용 하 여 개발 콘솔 페어링 하는 데 사용할 수 있는 코드를 표시 합니다.   
-   *  **변경 샌드박스:** 콘솔이 있는 샌드박스를 변경할 수 있습니다.   
+   *  **변경 샌드박스:** 콘솔에는 샌드박스를 변경할 수 있습니다.   
    *  **다시 시작 콘솔:** 개발 콘솔을 다시 시작합니다.   
    *  **개발자 모드 나가기:** 정품 모드로 콘솔을 반환 하 고 콘솔을 다시 부팅 합니다.   
    *  **시작 홈:** 정품 홈 화면을 실행합니다.   
@@ -73,7 +73,7 @@ ms.locfileid: "7833531"
    *  콘솔에 등록 된 사용자의 목록을 봅니다.  
    *  한 번의 클릭으로 사용자 또는 축소를 서명 합니다.  
    *  사용자 및 게스트 계정을 추가 합니다.  
-   *  사용자 및 게스트 계정 세부 정보 보기  
+   *  사용자 및 게스트 계정 세부 정보를 보고 합니다.  
 
   
 <a id="ID4EFE"></a>

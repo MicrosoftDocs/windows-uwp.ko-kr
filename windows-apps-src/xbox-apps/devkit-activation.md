@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a75d3822f6ddac06387c7233692b2c26222612e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7843431"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987336"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 
@@ -42,7 +42,7 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
 6.  [파트너 센터](https://partner.microsoft.com/dashboard) 계정 자격 증명으로 로그인 합니다.
 
-7.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드 활성화 되 면 파트너 센터 계정에 연결 된 정품 인증 중 하나를 사용 나타납니다.
+7.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드 활성화 되 면 파트너 센터 계정에 연결 된 정품 인증 중 하나를 사용 알려줍니다.
 
     ![활성화 8단계](images/activation-step-8-rs2.png)    
     

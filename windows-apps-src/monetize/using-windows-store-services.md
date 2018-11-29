@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스
 ms.localizationpriority: medium
 ms.openlocfilehash: af221b8962e0029dbd8686ffbf3f8a37f825e058
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848407"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987554"
 ---
 # <a name="microsoft-store-services"></a>Microsoft Store 서비스
 
@@ -22,9 +22,9 @@ Microsoft Store는 특정 유형의 사용자 또는 사용자 조직의 파트�
 
 | 항목            | 설명                 |
 |------------------|-----------------------------|
-| [분석 데이터 액세스](access-analytics-data-using-windows-store-services.md) | *Microsoft Store 분석 API* 사용 하 여 프로그래밍 방식으로 앱에 대 한 분석 데이터를 검색 합니다. 이 API를 사용하면 앱 및 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 구입, 앱 오류, 앱 평점 및 리뷰에 대한 데이터와 앱에서 바로 광고, 홍보용 광고 캠페인의 성능 데이터를 검색할 수 있습니다. |
+| [분석 데이터 액세스](access-analytics-data-using-windows-store-services.md) | *Microsoft Store 분석 API* 사용 하 여 프로그래밍 방식으로 앱에 대 한 분석 데이터를 검색할 수 있습니다. 이 API를 사용하면 앱 및 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 구입, 앱 오류, 앱 평점 및 리뷰에 대한 데이터와 앱에서 바로 광고, 홍보용 광고 캠페인의 성능 데이터를 검색할 수 있습니다. |
 | [리뷰에 응답](respond-to-reviews-using-windows-store-services.md) | *Microsoft Store 리뷰 API*를 사용하여 Microsoft Store의 앱 리뷰에 프로그래밍 방식으로 응답할 수 있습니다. 이 API는 파트너 센터를 사용 하지 않고 많은 리뷰에 응답 하는 대량 하려는 개발자에 특히 유용 합니다.  |
-| [광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md) | *Microsoft Store 프로 모션 API* 사용 하 여 프로그래밍 방식으로 앱에 대 한 홍보용 광고 캠페인을 관리 합니다. 이 API를 사용하여 대상 지정 및 창작 광고와 같은 캠페인 및 기타 관련 자산을 만들고 업데이트하고 모니터링할 수 있습니다. 이 API는 원하는 dhboard 파트너 센터를 사용 하지 않고 대량의 캠페인을 만드는 사용자 개발자에 게 특히 유용 합니다. |
+| [광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md) | *Microsoft Store 프로 모션 API* 사용 하 여 프로그래밍 방식으로 앱에 대 한 홍보용 광고 캠페인을 관리 합니다. 이 API를 사용하여 대상 지정 및 창작 광고와 같은 캠페인 및 기타 관련 자산을 만들고 업데이트하고 모니터링할 수 있습니다. 이 API는는 대량의 캠페인을 만들고 dhboard 파트너 센터를 사용 하지 않고 만들려는 개발자에 게 특히 유용 합니다. |
 | [제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md) | *Microsoft Store 제출 API* 사용 하 여 프로그래밍 방식으로 쿼리하고 앱, 추가 기능 및 사용자 또는 사용자 조직의 파트너 센터 계정에 대 한 패키지 플라이트에 대 한 제출을 만듭니다. 이 API는 계정에서 많은 앱 또는 추가 기능을 관리하고 이러한 자산의 제출 프로세스를 자동화 및 최적화하려는 경우 유용합니다. |
 | [대상 제품 관리 ](manage-targeted-offers-using-windows-store-services.md) | *Microsoft Store 대상 제품 API* 사용 하 여 프로그래밍 방식으로 성공적인 앱에서 추가 기능 구매와 연결 된 대상된 제품을 요청 합니다. |
 | [서비스에서 제품 권한 관리](view-and-grant-products-from-a-service.md)  | 사용 하 여 *Microsoft Store 컬렉션 API* 및 *Microsoft Store 구매 API* 소유권 정보에 액세스 이러한 제품에 대 한 서비스에서 소모 성 제품을 처리 됨으로 보고할 수 스토어에서 앱과 추가 기능 카탈로그 있는 경우 사용자 및 사용자에 게 무료 제품에 대 한 권리를 부여 합니다.  |

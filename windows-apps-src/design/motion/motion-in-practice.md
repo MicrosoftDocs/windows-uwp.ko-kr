@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 355c760e173bd101b2865c300824de44b6434ee4
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829409"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985282"
 ---
 # <a name="bringing-it-together"></a>통합
 
@@ -80,10 +80,10 @@ ms.locfileid: "7829409"
 
 ## <a name="implicit-animations"></a>암시적 애니메이션
 
-> 암시적 애니메이션 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))이 필요 이상.
+> 암시적 애니메이션에는 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 필요 이상.
 
 
-암시적 애니메이션은 자동으로 매개 변수를 변경 하는 동안 이전 및 새 값 사이의 보간에 따라 Fluent 움직임을 달성 하는 간단한 방법입니다.
+암시적 애니메이션은 자동으로 매개 변수를 변경 하는 동안 이전 및 새 값 사이의 보간 하 여 Fluent 움직임을 달성 하는 간단한 방법입니다.
 
 다음 속성 변경에 암시적으로 애니메이션할 수 있습니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "7829409"
 - [테두리](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)
   - **Background**
 
-변경 내용을 암시적으로 애니메이션 효과 줄 수 있는 각 속성을 해당 _전환_ 속성이 있습니다. 속성에 애니메이션 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표에서 각각에 대해 사용할 전환 종류와 _전환_ 속성을 보여줍니다.
+각 속성을 변경 암시적으로 애니메이션 효과 줄 수 있는 해당 _전환_ 속성이 있습니다. 속성에 애니메이션을 전환 유형을 해당 _전환_ 속성에 할당 합니다. 이 표는 _전환_ 속성과 각각에 대해 사용할 전환 형식을 보여 줍니다.
 
 | 애니메이션 효과 준된 속성 | 전환 속성 | 암시적 전환 유형 |
 | -- | -- | -- |

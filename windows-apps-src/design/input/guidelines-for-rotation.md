@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7854704"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990506"
 ---
 # <a name="rotation"></a>회전
 
@@ -44,7 +44,7 @@ ms.locfileid: "7854704"
 
 ![회전에서 지원되는 다양한 손가락 동작을 보여 주는 다이어그램](images/ux-rotate-positions.png)
 
-**참고**  간단히 말해서 및 대부분의 경우 회전 지점이 않는 두 개의 터치 포인트 중 하나 (예: 그리기 또는 레이아웃 응용 프로그램)에 접촉 지점과 관련 되지 않은 회전 지점을 지정할 수 있습니다. 다음 이미지는 이러한 방식으로 회전 지점이 제한되지 않을 경우 사용자 환경이 어떻게 저하될 수 있는지를 보여 줍니다.
+**참고**  직관적으로, 및 대부분의 경우, 회전 지점이 않는 두 개의 터치 포인트 중 하나 (예: 그리기 또는 레이아웃 응용 프로그램)에 접촉 지점과 관련 되지 않은 회전 지점을 지정할 수 있습니다. 다음 이미지는 이러한 방식으로 회전 지점이 제한되지 않을 경우 사용자 환경이 어떻게 저하될 수 있는지를 보여 줍니다.
 
 첫 번째 그림은 엄지손가락과 집게손가락의 터치 지점을 보여 줍니다. 집게손가락은 나무를 터치하고 엄지손가락은 통나무를 터치하고 있습니다.
 
@@ -88,7 +88,7 @@ Windows8 세 가지 유형의 회전 지원: 무료, 제한 형 및 조합 합�
 <td align="left">조합형 회전</td>
 <td align="left"><p>조합형 회전은 제한된 회전에 의해 적용된 각각의 90도 끌기 지점에서 구역을 통한 자유형 회전(<a href="guidelines-for-panning.md">이동에 대한 지침</a>의 이동 경로와 비슷)을 지원합니다. 사용자가 90도 구역 중 하나 밖에서 개체를 놓으면 개체는 해당 위치에 그대로 남아 있고 그렇지 않은 경우 자동으로 끌기 지점으로 회전합니다.</p>
 <div class="alert">
-<strong>참고</strong>사용자 인터페이스 이동 경로 대상 주변 영역이 특정 값 이나 선택에 영향을 미칠 위치로 이동을 제한 하는 기능입니다.
+<strong>참고</strong>사용자 인터페이스 이동 경로 대상 주변 영역이 있는 특정 값 이나 선택에 영향을 미칠 위치로 이동을 제한 하는 기능.
 </div>
 <div>
  

@@ -7,18 +7,18 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a203ef79fc6ebb45107cd9ac9d79cadf330f7a5d
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851766"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991430"
 ---
 # <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 구매 사용
 
 앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱 내 구매를 할 수 있도록 만드는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.Services.Store** 네임 스페이스는 스토어 관리 소모 성 추가 기능 및 구독 등의 최신 추가 기능 유형을 지원 하며 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 되었습니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임 스페이스를 사용 하 여 앱에서 바로 제품 구매를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [이 문서](enable-in-app-purchases-of-apps-and-add-ons.md)를 참조 하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱 내 구매를 할 수 있도록 만드는 방법을 설명합니다. 이 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 대신 사용하는 것이 좋습니다. **Windows.Services.Store** 네임 스페이스 스토어 관리 소모 성 추가 기능 및 구독 등의 최신 추가 기능 유형을 지원 하며 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 되었습니다. **Windows.Services.Store** 네임스페이스는 Windows 10 버전, 1607에 도입되었으며 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 또는 Visual Studio의 최신 릴리스를 대상으로 하는 프로젝트에만 사용할 수 있습니다. **Windows.Services.Store** 네임 스페이스를 사용 하 여 앱에서 바로 제품 구매를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [이 문서](enable-in-app-purchases-of-apps-and-add-ons.md)를 참조 하세요.
 
 > [!NOTE]
 > 앱의 평가판에서는 앱에서 바로 구매 제품을 제공할 수 없습니다. 앱 평가판을 사용하는 고객은 처음 사용자용 앱 버전을 구매한 경우에만 앱에서 바로 구매 제품을 구입할 수 있습니다.
@@ -52,7 +52,7 @@ ms.locfileid: "7851766"
     * "RainbowThemePack"
 
   > [!NOTE]
-  > 코드에서 사용 하는 앱에서 바로 판매 토큰에는 시기를 지정 [제품 ID](../publish/set-your-add-on-product-id.md#product-id) 값과 일치 해야 [파트너 센터에서 앱에 해당 추가 기능을 정의](../publish/add-on-submissions.md)합니다.
+  > 코드에서 사용 하는 앱에서 바로 판매 토큰 때 지정한 [제품 ID](../publish/set-your-add-on-product-id.md#product-id) 값 같아야 합니다. [파트너 센터에서 앱에 해당 추가 기능을 정의](../publish/add-on-submissions.md)합니다.
 
 2.  **조건부 블록에 기능 코딩**
 

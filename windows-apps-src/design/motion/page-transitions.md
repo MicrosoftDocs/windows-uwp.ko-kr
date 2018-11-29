@@ -9,11 +9,11 @@ pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839731"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989390"
 ---
 # <a name="page-transitions"></a>페이지 전환
 
@@ -56,9 +56,9 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>가로 슬라이드
 
-가로 밀기를 사용 하 여 나란히 형제 페이지를 표시 합니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤 상단 탐색에 대 한이 애니메이션을 자동으로 사용 하지만 고유한 가로 탐색 환경을 작성 하는 경우 가로 SlideNavigationTransitionInfo 슬라이드를 구현할 수 있습니다.
+가로 밀기를 사용 하 여 서로 형제 페이지를 표시 합니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤은 상단 탐색에 대 한이 애니메이션을 자동으로 사용 하지만 고유한 가로 탐색 환경을 작성 하는 경우 가로 SlideNavigationTransitionInfo 슬라이드를 구현할 수 있습니다.
 
-듯한은 사용자 서로 옆에 있는 페이지 간 탐색은입니다. 
+듯한은 사용자는 서로 옆에 있는 페이지 간 탐색입니다. 
 
 ```csharp
 // Navigate to the right, ie. from LeftPage to RightPage

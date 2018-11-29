@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ac6dd17f31dab1898aa394f901613d268c159b06
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839851"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986457"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>백그라운드 작업 실행 조건 설정
 
@@ -27,7 +27,7 @@ ms.locfileid: "7839851"
 
 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.
 
-경우에 따라 백그라운드 작업에는 특정 한 조건을 충족 성공 하려면 백그라운드 작업에 대 한 필요 합니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)에 지정된 조건을 하나 이상 지정할 수 있습니다. 트리거가 된 후 조건을 확인 합니다. 백그라운드 작업은 다음 대기, 하지만 모든 필요한 조건이 충족 될 때까지 실행 되지 않습니다.
+경우에 따라 백그라운드 작업에는 특정 한 조건을 충족 성공 하려면 백그라운드 작업에 대 한 필요 합니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)에 지정된 조건을 하나 이상 지정할 수 있습니다. 트리거가 발생 했음을 후 조건을 확인 됩니다. 백그라운드 작업은 다음 대기, 되지만 모든 필요한 조건이 충족 될 때까지 실행 되지 않습니다.
 
 백그라운드 작업에 조건을 설정 하면 작업이 불필요 하 게 실행 하지 못하도록 하 여 배터리 사용 시간과 CPU 저장 합니다. 예를 들어 백그라운드 작업이 타이머에 따라 실행되고 인터넷 연결이 필요한 경우 작업을 등록하기 전에 **InternetAvailable** 조건을 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에 추가합니다. 그러면 타이머가 경과*되고* 인터넷을 사용할 수 있을 때 백그라운드 작업만 실행하여 작업에서 시스템 리소스와 배터리를 불필요하게 사용하는 것을 방지할 수 있습니다.
 
@@ -107,7 +107,7 @@ BackgroundTaskRegistration ^ task = taskBuilder->Register();
 > [!NOTE]
 > 백그라운드 작업에 충돌 하는 조건을 추가할 필요가 주의 해야 합니다.
 
-다음 코드 조각은 만들고 백그라운드 작업 등록의 컨텍스트에서 여러 조건을 보여 줍니다.
+다음 코드 조각은 만들고 백그라운드 작업을 등록의 컨텍스트에서 여러 조건을 보여 줍니다.
 
 ```csharp
 // Set up the background task.

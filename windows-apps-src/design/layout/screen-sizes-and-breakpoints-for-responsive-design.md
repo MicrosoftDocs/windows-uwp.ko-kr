@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7849717"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7987052"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 
-UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 장치 및 각 장치에 대 한 UI를 최적화 하는 것이 아니라 Windows10 에코 시스템 화면 크기가 매우 많기, 몇 가지 주요 너비 카테고리 ("중단점"이 라고도 함)에 대 한 디자인을 것이 좋습니다. 
+UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 장치 대상 및 화면 크기가 각 장치에 대 한 UI를 최적화 하는 것이 아니라 Windows10 에코 시스템의 거 대 한 번호로 ("중단점"이 라고도 함) 몇 가지 주요 너비 카테고리에 맞게 설계를 것이 좋습니다. 
 - 소형(640px 이하)
 - 중간(641px ~ 1007px)
 - 대형(1008px 이상)
@@ -100,6 +100,6 @@ UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 
 - 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 도킹 모드로 전환합니다.
 
 >[!TIP] 
-> [**Continuum**](http://go.microsoft.com/fwlink/p/?LinkID=699431)사용 하 여 사용자가 노트북 처럼 작동 하는 휴대폰을 모니터, 마우스 및 키보드에 호환 가능한 Windows10 모바일 장치를 연결할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
+> [**Continuum**](http://go.microsoft.com/fwlink/p/?LinkID=699431)사용 하 여 사용자가 노트북 처럼 작동 하는 휴대폰을 모니터, 마우스 및 키보드를 호환 되는 Windows10 모바일 장치를 연결할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
 
 

@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a86d0b29b39ecb4d2793e641c8c53f6c2a4e3c0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 9ffcbc3d1c11c8f756b6307b15b87c14b09f65c4
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830367"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989230"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 템플릿 및 패턴 사용
 
@@ -39,7 +39,7 @@ var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatt
 
 이 템플릿은 현재 컨텍스트의 언어와 지역 값을 기반으로 포맷터를 만듭니다. 형식 템플릿의 구성 요소 순서는 상관이 없습니다. 포맷터는 현재 언어에 맞는 순서로 표시합니다. 따라서 영어(미국)는 "January 1"이고, 프랑스어(프랑스)는 "1 janvier"이며, 일본어(일본)의 경우는 "1月1日"입니다.
 
-반면 형식 패턴은 문화권마다 다릅니다. 형식 템플릿의 형식 패턴에 액세스해 봅시다.
+반면 형식 패턴은 문화권마다 다릅니다. 형식 템플릿의 형식 패턴에 액세스 해 보겠습니다.
 
 ```csharp
 IReadOnlyList<string> monthDayPatterns = dateFormatter.Patterns;
@@ -59,7 +59,7 @@ Ja-JP: "{month.integer}月{day.integer}日"
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-위의 포맷터는 괄호 안에 개별 구성 요소에 대 한 문화권별 값을 반환 합니다. {}. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
+위의 포맷터 대괄호 개별 구성 요소에 대 한 문화권별 값을 반환 합니다. {}. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
 
 ``` syntax
 En-US: January 1
