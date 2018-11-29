@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: c7569c6b2f041f5535e0eabe934a91da86b60b9a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993599"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8188978"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 
@@ -68,7 +68,7 @@ ms.locfileid: "7993599"
 ## <a name="prerequisites"></a>필수 조건
 
 
-[UWP DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요 하지 않지만이 연습에 대 한 코드 샘플을 로드 하려면 Microsoft Visual Studio2015 필요 합니다.
+[UWP DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요 하지 않지만이 연습에 대 한 코드 샘플을 로드 하려면 Microsoft Visual Studio2015가 필요 합니다.
 
 이 연습에 나온 DirectX 11 및 UWP 프로그래밍 개념을 더 잘 이해하려면 [포팅 개념 및 고려 사항](porting-considerations.md)을 참조하세요.
 

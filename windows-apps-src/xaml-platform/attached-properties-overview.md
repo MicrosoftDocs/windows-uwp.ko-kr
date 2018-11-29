@@ -11,11 +11,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 265a99e7abbb9b2f4c3341f90aecc3661ce3ffbf
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969611"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8209521"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -72,7 +72,7 @@ Windows 런타임의 연결된 속성은 종속성 속성으로 구현되므로 
 
 ### <a name="using-the-xaml-accessor-pattern"></a>XAML 접근자 패턴 사용
 
-XAML 프로세서는 XAML이 개체 트리로 구문 분석될 때 연결된 속성 값을 설정할 수 있어야 합니다. 연결 된 속성의 소유자 형식 형태로 명명 된 전용된 접근자 메서드를 구현 해야 **가져오기 * PropertyName* 및 **설정 * * * PropertyName*합니다. 이러한 전용 접근자 메서드는 코드에서 연결된 속성을 가져오거나 설정하는 방법이기도 합니다. 코드 관점에서 연결된 속성은 속성 접근자 대신 메서드 접근자가 있는 보조 필드와 유사하며, 이 보조 필드는 특정하게 정의될 필요 없이 어떠한 개체에서도 존재할 수 있습니다.
+XAML 프로세서는 XAML이 개체 트리로 구문 분석될 때 연결된 속성 값을 설정할 수 있어야 합니다. 연결 된 속성의 소유자 형식은 형태로 명명 된 전용된 접근자 메서드를 구현 해야 **가져오기 * * * PropertyName* 및 **설정 * * * PropertyName*합니다. 이러한 전용 접근자 메서드는 코드에서 연결된 속성을 가져오거나 설정하는 방법이기도 합니다. 코드 관점에서 연결된 속성은 속성 접근자 대신 메서드 접근자가 있는 보조 필드와 유사하며, 이 보조 필드는 특정하게 정의될 필요 없이 어떠한 개체에서도 존재할 수 있습니다.
 
 다음 예에서는 XAML 접근자 API를 통해 코드에서 연결된 속성을 설정하는 방법을 보여 줍니다. 이 예에서 `myCheckBox`는 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 클래스의 인스턴스입니다. 마지막 행은 실제로 값을 설정하는 코드이고 그전의 여러 행에서는 인스턴스와 인스턴스의 부모-자식 관계를 설정합니다. 주석으로 처리되지 않은 마지막 행은 속성 시스템을 사용하는 경우 구문입니다. 주석으로 처리된 마지막 행은 XAML 접근자 패턴을 사용하는 경우 구문입니다.
 

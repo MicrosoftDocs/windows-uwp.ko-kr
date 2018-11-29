@@ -7,11 +7,11 @@ keywords: windows 10, uwp, Microsoft Store Services SDK, 이벤트 기록
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b338fd3b34d530ad365b0377d6b6c6c65398b7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993409"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191958"
 ---
 # <a name="log-custom-events-for-partner-center"></a>파트너 센터에 대해 사용자 지정 이벤트 로깅
 
@@ -20,7 +20,7 @@ ms.locfileid: "7993409"
 앱에서 사용자 지정 이벤트를 기록하려면 Microsoft Store Services SDK에서 제공한 [로그](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드에 사용자 지정 이벤트 문자열을 전달합니다. 파트너 센터에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report) 의 **사용자 지정 이벤트** 섹션에서 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토할 수 있습니다.
 
 > [!NOTE]
-> 파트너 센터에 로그온 하는 사용자 지정 이벤트 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)와 관련 되지 않으며 **이벤트**뷰어에서 표시 되지 않습니다.
+> 파트너 센터에 로그인 하는 사용자 지정 이벤트 [Windows 이벤트](https://msdn.microsoft.com/library/windows/desktop/aa964766.aspx)와 관련 되지 않으며 **이벤트**뷰어에서 표시 되지 않습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 

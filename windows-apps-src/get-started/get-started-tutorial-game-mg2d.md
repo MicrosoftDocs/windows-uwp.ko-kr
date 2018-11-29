@@ -1,17 +1,17 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: 간단한 UWP 게임에 대 한 C# 및 MonoGame로 작성 된 Microsoft Store
+description: 간단한 UWP 게임에 대 한 Microsoft Store, C# 및 MonoGame로 작성
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832259"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8189887"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -40,7 +40,7 @@ Visual Studio 2017에서 프로젝트를 열고 샘플을 실행 하려면 **F5*
 
 이 작업을 마쳤으면 MonoGame 설정에 대한 다음 섹션으로 넘어가서 단계별 코드 연습을 살펴봅니다.
 
-**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 monogame으로 2d 게임을 개발 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
+**참고:** 이 샘플에서 만드는 게임은 완전한(또는 재미를 위한) 게임이 아닙니다 유일한 목적은 MonoGame 2d 게임을 개발의 핵심 개념을 보여주는입니다. 이 코드를 자유롭게 사용하고 필요에 따라 개선하셔도 되고, 기본 사항을 익힌 후 처음부터 새로 시작하셔도 됩니다!
 
 ## <a name="set-up-monogame-project"></a>MonoGame 프로젝트 설정
 1. [MonoGame.net](http://www.monogame.net/)에서 Visual Studio용 **MonoGame 3.6**을 다운로드합니다.
@@ -324,7 +324,7 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 브로콜리 이미지는 우리가 화면에 표시하려는 크기보다 훨씬 더 큽니다. 따라서 원래 크기의 0.2배로 줄이겠습니다.
 
 ### <a name="5-program-obstacle-behaviour"></a>5. 장애물 동작
-화면 밖 어딘가에서 브로콜리가 생성되어 플레이어 아바타가 있는 방향으로 이동하면 플레이어가 브로콜리를 피하도록 해야 합니다. 이렇게 하려면이 메서드를 **Game1.cs** 클래스에 추가 합니다.
+화면 밖 어딘가에서 브로콜리가 생성되어 플레이어 아바타가 있는 방향으로 이동하면 플레이어가 브로콜리를 피하도록 해야 합니다. 이를 위해이 메서드를 **Game1.cs** 클래스에 추가 합니다.
 
 ```CSharp
 public void SpawnBroccoli()
@@ -484,7 +484,7 @@ dino.Draw(spriteBatch);
 
 MonoGame에서 새 **spriteBatch.Draw** 호출은 이전 호출 위에 그립니다. 이 브로콜리 및 공룡 스프라이트 그려집니다 기존의 풀밭 스프라이트 위에 있습니다 수 숨길 수 없습니다 뒤 위치에 관계 없이 것을 의미 합니다.
 
-이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계에 따라 게임 창 내에서 이동 아바타 있어야 하 고 브로콜리 빨라져 속도가 생성 해야 합니다.
+이제 게임을 실행하고 화살표 키와 스페이스바로 공룡을 움직여 보세요. 위의 단계를 수행 하는 경우 아바타를 움직일 게임 창 내에서 수 있어야 하 고 브로콜리 빨라져 속도가 생성 해야 합니다.
 
 ![플레이어 아바타 및 장애물](images/monogame-tutorial-2.png)
 
@@ -648,7 +648,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 이렇게 하면 우리가 **SpriteClass**에 만든 **RectangleCollision** 메서드가 호출되고, 만약 true 값이 반환되면 게임이 끝난 것으로 플래그가 지정됩니다.
 
 ### <a name="4-add-user-input-for-resetting-the-game"></a>4. 게임 초기화를 위한 사용자 입력 추가
-Enter 키를 누를 경우 게임을 다시 설정 하려면 사용자가 **KeyboardHandler** 메서드에이 코드를 추가 합니다.
+사용자가 Enter 키를 누를 경우 게임을 다시 설정 하는 **KeyboardHandler** 메서드에이 코드를 추가 합니다.
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
@@ -692,4 +692,4 @@ Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/regist
 
 앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
-자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/en-us/store/publish-apps)참조 하세요.
+자세한 내용은 [UWP 앱을 게시](https://developer.microsoft.com/en-us/store/publish-apps)를 참조 하세요.

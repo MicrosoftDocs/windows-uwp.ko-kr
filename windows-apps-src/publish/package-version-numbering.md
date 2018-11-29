@@ -7,32 +7,32 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a8ce14094733ef5598c510198f4268744cb581e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969359"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8203963"
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
 제공하는 각 패키지에는 버전 번호가 있어야 합니다(app 매니페스트 내 [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **Version** 속성 값으로 제공됨). Microsoft Store에서는 버전 번호와 관련된 특정 규칙을 적용하며, 이는 OS 버전마다 약간 다르게 작동합니다.
 
 > [!NOTE]
-> 이 항목에서는 "패키지"를 참조 하지만.msix/.appx와.msixbundle/.appxbundle 파일에 대 한 버전 번호는 동일한 규칙이 적용 설명이 없는 한.
+> 이 항목에서는 "패키지"를 참조 하지만.msix/.appx와.msixbundle/.appxbundle 파일에 대 한 버전 번호는 동일한 규칙이 적용 언급 하지 않는 한 합니다.
 
 
 ## <a name="version-numbering-for-windows10-packages"></a>버전 번호 Windows10 패키지
 
 > [!IMPORTANT]
-> Windows 10 (UWP) 패키지에 대 한 버전 번호의 마지막 (네 번째) 섹션 스토어 사용을 위해 예약 되며 (하지만 스토어가이 섹션의 값을 변경할 수 있습니다) 패키지를 빌드할 때 0 이어야 합니다. 다른 섹션은 0과 65535 (0이 될 수 없는 첫 번째 섹션) 제외 사이의 정수로 설정 되어야 합니다.
+> Windows 10 (UWP) 패키지에 대 한 버전 번호의 마지막 (네 번째) 섹션 스토어 사용을 위해 예약 되며 (하지만 스토어는이 섹션의 값을 변경할 수 있습니다) 패키지를 빌드할 때 0 이어야 합니다. 다른 섹션은 0과 65535 (0이 될 수 없는 첫 번째 섹션)를 제외한 사이의 정수로 설정 되어야 합니다.
 
 게시 된 제출에서 UWP 패키지를 선택할 때 Microsoft Store는 항상 고객의 Windows 10 장치에 적용할 수 있는 가장 높은 버전의 패키지를 사용 합니다. 따라서 특정 장치 유형의 고객에게 제공되는 패키지에 대한 유연성 및 제어 기능이 향상됩니다. 특히, 이러한 패키지를 순서에 상관없이 제출할 수 있습니다. 이후의 각 제출에서 더 높은 버전의 패키지를 제공하지 않아도 됩니다.
 
 동일한 버전 번호를 사용 하 여 여러 UWP 패키지를 제공할 수 있습니다. 그러나 버전 번호를 공유하는 패키지는 아키텍처가 같을 수 없습니다. 스토어에서 각 패키지에 사용하는 전체 ID는 고유해야 하기 때문입니다. 자세한 내용은 [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)를 참조하세요.
 
-동일한 버전 번호를 사용 하는 여러 UWP 패키지를 제공할 때 (스토어에 게 고객의 디바이스에 제공할 패키지를 결정) 하는 경우 어떤 단추가 순위를 지정 인지를 결정 하는 아키텍처 (x86, ARM, 중립 순 x64)에서 사용 됩니다. 동일한 버전 번호를 사용하는 앱 번들의 등급을 매길 때 번들 내 가장 높은 아키텍처 등급이 고려됩니다. x64 패키지를 포함하는 앱 번들은 x86 패키지만 포함하는 앱 번들보다 등급이 높습니다.
+동일한 버전 번호를 사용 하는 여러 UWP 패키지를 제공한 경우 적합 한 때 순위를 지정 (스토어에 게 고객의 디바이스에 제공할 패키지를 결정)를 결정 하 아키텍처 (x86, ARM, 중립 순 x64)에서 사용 됩니다. 동일한 버전 번호를 사용하는 앱 번들의 등급을 매길 때 번들 내 가장 높은 아키텍처 등급이 고려됩니다. x64 패키지를 포함하는 앱 번들은 x86 패키지만 포함하는 앱 번들보다 등급이 높습니다.
 
-이는 시간에 따라 앱을 진화시킬 수 있는 뛰어난 유연성을 제공합니다. 업로드 하 고 낮은 버전 번호를 사용 하 여 이전에 지원 하지 않는 Windows 10 장치에 대 한 지원을 추가 하는 새 패키지를 제출, 있는 하드웨어 또는 OS 기능을 활용 하기 위해 종속성이 엄격한 더 높은 버전의 패키지를 추가할 수 있습니다. 기본 기존 고객의 일부 또는 전부에 업데이트로 제공 되는 더 높은 버전의 패키지를 추가할 수 있습니다.
+이는 시간에 따라 앱을 진화시킬 수 있는 뛰어난 유연성을 제공합니다. 업로드 및 낮은 버전 번호를 사용 하 여 이전에 지원 하지 않는 Windows 10 장치에 대 한 지원을 추가 하는 새 패키지를 제출, 있는 하드웨어 또는 OS 기능을 활용 하려면 종속성이 엄격한 더 높은 버전의 패키지를 추가할 수 있습니다. 기본 기존 고객의 일부 또는 전부에 업데이트로 제공 되는 더 높은 버전의 패키지를 추가할 수 있습니다.
 
 다음 예제에서는 여러 제출을 통해 고객에게 의도된 패키지를 전달하기 위해 버전 번호를 관리하는 방법을 보여 줍니다.
 
@@ -54,28 +54,28 @@ Windows10를 사용 하면 모든 곳에서 실행 되는 코드 베이스를 �
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>버전 번호를 사용하여 새 패키지를 이전에 제공된 패키지로 롤백
 
-패키지의 복사본을 유지 하는 경우 앱의 패키지 롤백할 스토어에서 이전 Windows10 패키지로 릴리스에 문제가 발견 해야 하는 경우를 해야 합니다. 이 방법은 문제를 해결 하는 데 시간이 걸릴 하는 동안 고객에 게 방편 임시입니다.
+패키지의 복사본을 유지 하는 경우 롤백하려면 앱의 패키지 스토어에서 이전 Windows10 패키지로 릴리스를 사용 하 여 문제를 검색 해야 하는 경우 옵션을 해야 합니다. 이 방법은 문제를 해결 하는 시간 동안 고객에 게 방편 임시입니다.
 
 이렇게 하려면 새 [제출](app-submissions.md)을 만듭니다. 문제가 있는 패키지를 제거하고 스토어에서 제공할 이전 패키지를 업로드합니다. 롤백하려는 패키지를 이미 받은 고객은 문제가 있는 패키지를 계속 유지하게 됩니다(이전 패키지는 이전 버전 번호를 가지기 때문). 그러나 다른 사람은 스토어에서 앱을 사용할 수 있는 동안 문제가 있는 패키지를 얻지 못하게 됩니다.
 
-문제가 있는 패키지를 이미 받은 고객에 대 한 문제를 해결 하면 잘못 된 패키지 보다 더 높은 버전 번호의 새 Windows10 패키지를 제출할 수 있습니다. 제출에 대한 인증 프로세스가 완료되면 모든 고객이 새 패키지(버전 번호가 더 높으므로)로 업데이트됩니다.
+문제가 있는 패키지를 이미 받은 고객에 대 한 문제를 해결 하면 최대한 빨리 잘못 된 패키지 보다 더 높은 버전 번호를 가진 새 Windows10 패키지를 제출할 수 있습니다. 제출에 대한 인증 프로세스가 완료되면 모든 고객이 새 패키지(버전 번호가 더 높으므로)로 업데이트됩니다.
 
 
 ## <a name="version-numbering-for-windows81-and-earlier-and-windows-phone-81-packages"></a>버전 번호에 대 한 Windows8.1 () 및 Windows Phone 8.1 패키지
 
 > [!IMPORTANT]
-> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+> 2018 년 10 월 31 일 기준 제품 새로 만든 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 Windows Phone 8.1을 대상으로 하는 .appx 패키지의 경우 새 제출의 패키지 버전 번호는 항상 마지막 제출(또는 이전 제출)에 포함된 패키지보다 높아야 합니다.
 
-Windows8 및 Windows8.1를 대상으로 하는.appx 패키지에 대 한 아키텍처별으로 동일한 규칙이 적용: 새 제출에서 패키지의 버전 번호는 동일한 아키텍처에 대 한 스토어에 마지막으로 게시 된 패키지 보다 항상 해야 합니다.
+아키텍처별으로 동일한 규칙이 적용 Windows8 및 Windows8.1를 대상으로 하는.appx 패키지에 대 한: 새 제출에서 패키지의 버전 번호는 동일한 아키텍처에 대 한 스토어에 마지막으로 게시 된 패키지 보다 클 수 항상 해야 합니다.
 
-또한 Windows8.1 패키지의 버전 번호를 항상 동일한 앱에 대 한 Windows8 패키지의 버전 번호 보다 클 수 있어야 합니다. 즉, 제출 하는 모든 Windows8 패키지의 버전 번호는 동일한 앱에 대 한 제출 된 모든 Windows8.1 패키지의 버전 번호 보다 작아야 합니다.
+또한 Windows8.1 패키지의 버전 번호 항상 동일한 앱에 대 한 Windows8 패키지의 버전 번호 보다 클 수 있어야 합니다. 즉, 제출 하는 모든 Windows8 패키지의 버전 번호는 동일한 앱에 대 한 제출 된 모든 Windows8.1 패키지의 버전 번호 보다 작아야 합니다.
 
 > [!NOTE]
-> 앱 패키지 Windows10도 있으면 Windows10 패키지의 버전 번호 Windows8, Windows8.1, 및/또는 Windows Phone 8.1 패키지 보다 높아야 합니다. 자세한 내용은 [Windows10 이전에 게시 된 앱에 대 한 추가 패키지](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)를 참조 하세요.
+> 앱 패키지 Windows10가, Windows10 패키지의 버전 번호 Windows8, Windows8.1, 및/또는 Windows Phone 8.1 패키지 보다 높아야 합니다. 자세한 내용은 [Windows10 이전에 게시 된 앱에 대 한 추가 패키지](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)를 참조 하세요.
 
-Windows8 및 Windows8.1 대상으로 하는 패키지에 대 한 다른 버전 번호 업데이트 시나리오에서 발생 하는 상황의 몇 가지 예는 다음과 같습니다.
+Windows8 및 Windows8.1을 대상으로 하는 패키지에 대 한 다른 버전 번호 업데이트 시나리오에서 발생 하는 상황의 몇 가지 예는 다음과 같습니다.
 
 | 스토어에 있는 앱의 현재 버전  | 업로드할 버전 | 새 버전이 Store에 나열된 후 새 구입에 설치되는 버전 | 새 버전이 Store에 나열된 후 고객에게 이미 앱이 있는 경우 업데이트되는 버전 |
 |---------------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------|----------|

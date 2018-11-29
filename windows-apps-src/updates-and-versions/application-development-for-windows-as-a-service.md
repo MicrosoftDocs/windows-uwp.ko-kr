@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: e0a0bef4496e9b6aa327a8da404e88bcbd791e70
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969701"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8189580"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Windows as a service용 응용 프로그램 개발
 
@@ -28,7 +28,7 @@ Insider Preview 빌드로 배포된 빌드는 Windows 엔지니어링 팀에게 
 
 Microsoft에서는 Windows 참가자에게 Insider Preview 빌드를 릴리스하지만 다음과 같은 두 가지 유형의 Windows 10 릴리스를 지속적으로 일반 사용자에게 널리 게시합니다.
 
-**기능 업데이트** Windows10 이미 실행 중인 디바이스에 새로운 최신 기능, 환경 및 특징을 설치 합니다. 되기 때문에 기능 업데이트는 windows 전체 복사본이 들어도 사용 및 새 디바이스 Windows7 또는 Windows8.1를 실행 하는 기존 디바이스에서 Windows10를 설치 하려면 운영 체제가 설치 되지 않은 설치 되어 있습니다. Microsoft는 평균적으로 매년 업데이트를 게시할 예정입니다. 
+**기능 업데이트** Windows10 이미 실행 중인 장치에 새로운 최신 기능, 환경 및 특징을 설치 합니다. 되기 때문에 기능 업데이트의 Windows 전체 복사본이 들어도 사용 및 새 디바이스 Windows7 또는 Windows8.1를 실행 하는 기존 디바이스에서 Windows10를 설치 하려면 운영 체제가 설치 되어 있습니다. Microsoft는 평균적으로 매년 업데이트를 게시할 예정입니다. 
 
 **품질 업데이트**는 보안 문제 해결 방법과 기타 중요한 버그 수정을 제공합니다. 품질 업데이트는 매월 한 번 이상의 빈도로 현재 지원되는 각 기능을 개선하기 위해 제공됩니다. Microsoft는 업데이트 화요일(패치 화요일이라고도 함)에 품질 업데이트를 계속 게시합니다. 또한 Microsoft 고객의 요구를 해결 하는 데 필요한 때 업데이트 화요일 프로세스 외도 Windows10에 대 한 추가 품질 업데이트를 게시할 수 있습니다.
 
@@ -60,11 +60,11 @@ Windows as a service 모델에서 Microsoft는 기본 OS의 호환성을 유지�
 
 다음 섹션에서는 Microsoft가 기본 OS의 호환성을 유지하기 위해 수행하는 단계에 대한 추가 정보를 확인할 수 있습니다. 결합된 OS 및 앱 에코시스템의 호환성을 유지하기 위해 수행할 수 있는 단계에 대한 지침도 제공됩니다. Windows Insider Preview 빌드를 활용하여 Windows 빌드를 릴리스하기 전에 앱 성능 저하를 감지하는 방법에 대한 섹션이 있습니다. 마지막으로, 계측 및 원격 분석 기반 접근 방식을 사용하여 Windows 빌드의 품질을 높이는 방법을 설명합니다. ISV도 앱 포트폴리오에 이와 유사한 접근 방식을 사용하는 것이 좋습니다.
 
-## <a name="key-changes-since-windows7-to-ensure-app-compatibility"></a>앱 호환성을 보장 하기 Windows7 이후의 주요 변경 내용
+## <a name="key-changes-since-windows7-to-ensure-app-compatibility"></a>앱 호환성을 보장 하기 Windows7 이후 주요 변경 내용
 
 Microsoft는 호환성이 개발자에게 중요하다는 것을 알고 있습니다. ISV와 개발자는 앱이 지원되는 모든 버전의 Windows OS에서 예상대로 실행될 것을 확인하려고 합니다. 소비자와 기업은 여기에 많은 투자를 하므로 구입한 앱이 계속 작동할 것을 확인하려고 합니다. Microsoft는 호환성이 구매 결정의 주요 기준임을 알고 있습니다. 모범 사례에 따라 잘 작성된 앱은 새로운 Windows 버전이 릴리스될 때 코드 변동이 훨씬 더 적으며 조각화를 줄입니다. 이러한 앱은 유지 관리를 위한 엔지니어링 투자를 줄이고 출시 시간을 단축합니다.
 
-Windows7 시간 범위에서 호환성은 사후 접근 방식 이었습니다 되었습니다. Windows8, 바라 시작 했으며, 작업 해당 호환성 Windows 내에서 디자인 하기 보다 보충 합니다. Windows10 날짜에 운영 체제의 가장 호환 하 여 디자인 버전입니다. 이러한 구현을 가능하게 했던 몇 가지 주요 방법은 다음과 같습니다.
+Windows7 시간 범위에서 호환성은 사후 접근 방식 이었습니다 했습니다. Windows8, 바라 시작 했으며, 작업 해당 호환 되도록 Windows 내에서 디자인 하기 보다는 보충 합니다. Windows10 날짜를 운영 체제의 가장 호환 하 여 디자인 버전입니다. 이러한 구현을 가능하게 했던 몇 가지 주요 방법은 다음과 같습니다.
 -   **앱 원격 분석**: 호환성 테스트를 알리기 위해 Windows 에코시스템에서 앱 인기를 이해하는 데 도움이 됩니다.
 -   **ISV 파트너 관계**: 외부 파트너와 직접 작업하여 데이터를 제공하고 사용자가 경험하는 문제를 해결하도록 돕습니다.
 -   **디자인 검토, 업스트림 검색**: 기능 팀과 협력하여 Windows의 주요 변경 수를 줄입니다. 호환성 검토는 기능 팀이 통과해야 하는 게이트입니다.
@@ -73,7 +73,7 @@ Windows7 시간 범위에서 호환성은 사후 접근 방식 이었습니다 �
 
 ## <a name="best-practices-for-app-compatibility"></a>앱 호환성에 대한 모범 사례
 
-Microsoft는 진단 및 사용 현황 데이터를 사용하여 문제를 식별 및 해결하고, 제품 및 서비스를 개선하며, 사용자에게 개인 설정된 환경을 제공합니다. 수집하는 사용 현황 데이터는 Windows 에코시스템의 PC에서 실행하는 앱까지 확장됩니다. 고객이 사용하는 항목에 따라 목록을 작성하여 이러한 앱, 디바이스 및 드라이버를 새 버전의 Windows OS에 대해 테스트합니다. Windows10 가장 호환 되는 버전의 Windows-날짜, 90%를 사용 하 여 되었습니다 수천 개의 인기 앱에 대 한 호환성. Windows 호환성 팀은 협력하여 해결 방법을 찾을 수 있도록 자주 ISV 파트너에게 연락하여 문제가 발견된 경우 피드백을 제공합니다. 공동 고객이 생산성이나 엔터테인먼트를 위해 사용하는 앱 또는 OS의 기능 손실 없이 원활하게 Windows를 업데이트할 수 있도록 해야 합니다.
+Microsoft는 진단 및 사용 현황 데이터를 사용하여 문제를 식별 및 해결하고, 제품 및 서비스를 개선하며, 사용자에게 개인 설정된 환경을 제공합니다. 수집하는 사용 현황 데이터는 Windows 에코시스템의 PC에서 실행하는 앱까지 확장됩니다. 고객이 사용하는 항목에 따라 목록을 작성하여 이러한 앱, 디바이스 및 드라이버를 새 버전의 Windows OS에 대해 테스트합니다. Windows10 가장 호환 되는 버전의 Windows 날짜, 90%를 사용 하 여 있었던 수천 개의 인기 앱에 대 한 호환성. Windows 호환성 팀은 협력하여 해결 방법을 찾을 수 있도록 자주 ISV 파트너에게 연락하여 문제가 발견된 경우 피드백을 제공합니다. 공동 고객이 생산성이나 엔터테인먼트를 위해 사용하는 앱 또는 OS의 기능 손실 없이 원활하게 Windows를 업데이트할 수 있도록 해야 합니다.
 
 다음 섹션에는 몇 되도록 하는 앱 Windows10와 호환 되는 Microsoft 권장 모범 사례가 포함 되어 있습니다.
 
@@ -100,7 +100,7 @@ OS 버전 Windows10에서는 증가 했습니다. 즉, 내부 버전 번호가 1
 
 ### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>UWP(유니버설 Windows 플랫폼) 및 Centennial 앱 개발
 
-모든 Win32 앱 ISV는 앞으로 [UWP(유니버설 Windows 플랫폼)](http://go.microsoft.com/fwlink/?LinkID=780560) 및 특히 [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562) 앱을 개발하는 것이 좋습니다. 기존의 Win32 설치 관리자를 사용하지 않고 이러한 앱 패키지를 개발할 경우 유용한 이점이 있습니다. UWP 앱도 지원 됩니다, [Microsoft Store](http://go.microsoft.com/fwlink/?LinkID=780563)쉽게 일관 된 버전으로 사용자를 자동으로 업데이트할 수 있으므로 지원 비용을 절감.
+모든 Win32 앱 ISV는 앞으로 [UWP(유니버설 Windows 플랫폼)](http://go.microsoft.com/fwlink/?LinkID=780560) 및 특히 [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562) 앱을 개발하는 것이 좋습니다. 기존의 Win32 설치 관리자를 사용하지 않고 이러한 앱 패키지를 개발할 경우 유용한 이점이 있습니다. UWP 앱도 지원 됩니다, [Microsoft Store](http://go.microsoft.com/fwlink/?LinkID=780563)쉽게 일관 된 버전으로 사용자를 자동으로 업데이트할 수 있으므로 지원 비용을 절감할.
 
 Win32 앱 형식이 Centennial 모델에서 작동하지 않는 경우 올바른 설치 관리자를 사용하고 완벽하게 테스트하는 것이 좋습니다. 설치 관리자는 사용자 또는 고객의 첫 번째 앱 경험이므로 제대로 작동하도록 해야 합니다. 제대로 작동하지 않거나 모든 시나리오에 대해 완벽하게 테스트되지 않은 경우가 많습니다. [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/?LinkID=780565)는 사용자보다 먼저 Win32 앱의 설치 및 제거를 테스트하고 문서화되지 않은 API 및 다른 기본 성능 관련 모범 사례 문제를 식별하는 데 도움이 됩니다.
 
@@ -119,7 +119,7 @@ Windows OS Insider Preview 빌드는 최종 빌드를 일반 사용자에게 릴
 ### <a name="step-1-become-a-windows-insider-and-participate-in-flighting"></a>1단계: Windows 참가자 등록 및 Insider Preview 빌드에 참여
 [Windows 참가자](http://go.microsoft.com/fwlink/p/?LinkId=521639)는 플랫폼의 기능과 특징을 개선하는 데 도움이 되는 피드백을 통해 Windows 미래를 구체화할 수 있습니다. 활기찬 커뮤니티로, 여기서 다른 매니아에 연결하고, 포럼에 가입하고, 조언을 주고받고, 예정된 참가자 전용 이벤트에 대해 알아볼 수 있습니다.
 
-수 있으므로 Windows10, Windows10 Mobile, 최신 Windows SDK 및 에뮬레이터의 미리 보기에 대 한 액세스를 빌드, 멋진 앱을 개발 하는 유니버설 Windows 플랫폼 및 Microsoft Store의 새로운 기능을 탐색 자유롭게 모든 도구를 사용 해야 합니다.
+수 있으므로 Windows10, Windows10 Mobile, 최신 Windows SDK 및 에뮬레이터의 미리 보기에 대 한 액세스를 빌드, 멋진 앱을 개발 하 고 유니버설 Windows 플랫폼 및 Microsoft Store의 새로운 기능을 탐색 하는 데 사용할 수 있는 모든 도구를 사용 해야 합니다.
 
 Windows용 유니버설 드라이버를 개발할 수 있도록 하드웨어 개발 키트의 Preview 빌드를 사용하여 멋진 하드웨어를 빌드할 좋은 기회이기도 합니다. IoT Core Insider Preview도 지원되는 IoT 개발 보드에서 제공되므로 유니버설 Windows 플랫폼을 사용하여 멋진 연결된 솔루션을 빌드할 수 있습니다.
 
@@ -134,9 +134,9 @@ Windows 참가자로 등록하기 전에 다음과 같은 참가자 조건을 �
 ### <a name="step-2-test-your-scenarios"></a>2단계: 시나리오 테스트
 
 Insider Preview 빌드로 업데이트한 후 테스트 및 피드백 수집을 시작하는 데 도움이 되는 몇 가지 샘플 테스트 사례는 다음과 같습니다. 대체로 이러한 테스트에 대해 x86 및 AMD64 시스템을 둘 다 확인해야 합니다.
-**새로 설치 테스트:** 새로 Windows10의 설치, 앱이 제대로 작동 확인 합니다. 앱이 이 테스트와 업그레이드 테스트에 실패할 경우 앱의 기본 OS 변경 내용 또는 버그로 인한 문제일 가능성이 큽니다. 조사 후 기본 OS 변경 내용으로 인해 문제가 발생한 경우 Windows 참가자 프로그램을 사용하여 피드백을 제공하고 협력해서 해결 방법을 찾아야 합니다.
+**새로 설치 테스트:** 새로 Windows10의 설치, 앱이 완벽 하 게 작동 하는지 확인 합니다. 앱이 이 테스트와 업그레이드 테스트에 실패할 경우 앱의 기본 OS 변경 내용 또는 버그로 인한 문제일 가능성이 큽니다. 조사 후 기본 OS 변경 내용으로 인해 문제가 발생한 경우 Windows 참가자 프로그램을 사용하여 피드백을 제공하고 협력해서 해결 방법을 찾아야 합니다.
 
-**업그레이드 테스트:** Windows10으로 하위 수준 (즉, Windows7 또는 Windows8.1) windows 버전에서 업그레이드 한 후 앱이 작동 하는지 확인 합니다. 업그레이드 중에 앱에서 롤백이 발생하지 않아야 하며, 업그레이드 후에 앱이 예상대로 계속 작동해야 합니다. 이는 원활한 업그레이드 환경을 구현하는 데 중요합니다.
+**업그레이드 테스트:** Windows10으로 하위 수준 버전의 Windows (즉, Windows7 또는 Windows8.1)에서 업그레이드 한 후 앱이 작동 하는지 확인 합니다. 업그레이드 중에 앱에서 롤백이 발생하지 않아야 하며, 업그레이드 후에 앱이 예상대로 계속 작동해야 합니다. 이는 원활한 업그레이드 환경을 구현하는 데 중요합니다.
 
 **다시 설치 테스트:** 하위 수준 OS에서 Windows10으로 PC를 업그레이드 한 후 앱을 다시 설치 하 여 앱 기능을 복원할 수 있는지 확인 합니다. 앱이 업그레이드 테스트를 통과하지 못했으며 이러한 문제의 원인을 파악할 수 없는 경우 다시 설치하면 손실된 기능을 복원할 수 있습니다. 통과 다시 설치 테스트는 앱의 일부가 수 마이그레이션되지 않았을 Windows10를 나타냅니다.
 

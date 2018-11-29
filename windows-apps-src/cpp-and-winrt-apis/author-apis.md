@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fd543d7c3ad9dec878cc02b14a79c254d91b4be
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968771"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190900"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 통한 API 작성
 
@@ -278,7 +278,7 @@ iclosable.Close();
 
 **MyType** 클래스는 구현체이기 때문에 프로젝션에 포함되지 않습니다. 하지만 이런 식으로 가상 함수를 호출하는 오버헤드 없이 구현체 메서드를 직접 호출할 수 있습니다. 위의 예제에서는 **MyType::ToString**이 **IStringable**에서 프로젝션된 메서드와 동일한 서명을 사용하지만 응용 프로그램 이진 인터페이스(ABI)를 거치지 않고 비가상 메서드를 직접 호출합니다. **com_ptr**은 포인터를 **MyType** 구조체에 고정시키기 때문에 사용자가 `myimpl` 변수 및 화살표 연산자를 통해 **MyType**의 다른 내부 세부 정보에 액세스할 수 있습니다.
 
-인터페이스 개체를 사용 해야 하 고 구현에 인터페이스 임을 알고 있는 경우, 다음 돌아갈 수 있습니다 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 함수 템플릿을 사용 하 여 구현 됩니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
+인터페이스 개체가 하 고 인터페이스 구현에 임을 알고 있는 경우, 다음 돌아갈 수 있습니다 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) 함수 템플릿을 사용 하 여 구현 합니다. 다시 말하지만 이는 가상 함수 호출을 피하여 구현체에 직접 이를 수 있는 기법입니다.
 
 > [!NOTE]
 > Windows SDK 버전 10.0.17763.0 (Windows 10, 버전 1809)를 설치 하지 [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)대신 [**winrt:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) 호출에 필요한 다음 나중에 경우.
@@ -311,7 +311,7 @@ myimpl.Close();
 IClosable ic1 = myimpl.as<IClosable>(); // error
 ```
 
-구현체 형식 인스턴스가 있을 때 이 인스턴스를 해당하는, 프로젝션된 형식이 필요한 함수에게 전달해야 한다면 그렇게 할 수 있습니다. 구현 체 형식에는 변환 연산자가 존재 (에서 생성 된 구현 체 형식에는 `cppwinrt.exe` 도구)는이 가능 하 게 합니다.
+구현체 형식 인스턴스가 있을 때 이 인스턴스를 해당하는, 프로젝션된 형식이 필요한 함수에게 전달해야 한다면 그렇게 할 수 있습니다. 구현 체 형식에는 변환 연산자가 존재 (구현 체 형식에 의해 생성 된 하는 `cppwinrt.exe` 도구)는이 가능 하 게 합니다.
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>비기본 생성자를가지고 있는 유형에 서 파생
 [**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) 비기본 생성자의 예로 나와 있습니다. 기본 생성자가 없기 때문에 **ToggleButtonAutomationPeer**를 생성하려면 *소유자*를 전달해야 합니다. 결과적으로 **ToggleButtonAutomationPeer**에서 파생시키는 경우에는 *소유자*를 가져와 기본 클래스로 전달하는 생성자를 입력해야 합니다. 실제로 표시되는 모습은 다음과 같습니다.

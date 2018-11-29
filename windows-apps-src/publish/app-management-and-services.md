@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968425"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191666"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
@@ -37,19 +37,19 @@ ms.locfileid: "7968425"
 
 ## <a name="maps"></a>지도
 
-Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. Bing 지도 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 정보, [지도 인증 키 요청](../maps-and-location/authentication-key.md) 에 대 한 자세한 내용은 참조 하세요. 
+Windows10 또는 Windows8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](http://go.microsoft.com/fwlink/p/?LinkId=614880)를 방문하세요. Bing 지도 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 정보를 [지도 인증 키 요청](../maps-and-location/authentication-key.md) 에 대 한 자세한 내용은 참조 하세요. 
 
-Windows Phone 8.1 이하의 이전에 게시 된 앱에 대 한 **지도** 페이지를 사용 합니다. 이러한 앱에서 지도 서비스를 사용 하려면 앱의 코드에 포함 하려면 지도 서비스 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰을 가져올**을 클릭할 때 지도 서비스 응용 프로그램 ID (**ApplicationID**)를 생성 하 고 앱에 대 한 인증 토큰 (**AuthenticationToken**) 서비스를 매핑합니다. 하면 패키지 하기 전에 코드에 이러한 값을 추가 하 고 앱을 제출 해야 합니다. 자세한 내용은 [지도 컨트롤을 페이지에 추가하는 방법(Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882)을 참조하세요.
+Windows Phone 8.1 이하의 이전에 게시 된 앱에 대 한 **지도** 페이지를 사용 합니다. 이러한 앱에서 지도 서비스를 사용 하려면 앱의 코드에 포함 하는 지도 서비스 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰을 가져올**을 클릭할 때 지도 서비스 응용 프로그램 ID (**응용 프로그램 Id**)를 생성 하 고 앱에 대 한 인증 토큰 (**AuthenticationToken**) 서비스를 매핑합니다. 하면 패키지 하기 전에 코드에 이러한 값을 추가 하 고 앱을 제출 해야 합니다. 자세한 내용은 [지도 컨트롤을 페이지에 추가하는 방법(Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882)을 참조하세요.
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
-연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하려면 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
+연결 된 입력 해야 앱과 추가 기능에 대 한 소유권 정보에 액세스 하는 Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하려면 Azure AD 클라이언트 Id 다음과 같습니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
 
 자세한 내용은 [서비스에서 제품 권리 유형 관리](../monetize/view-and-grant-products-from-a-service.md)를 참조하세요.
 
 ## <a name="administrator-consent"></a>관리자 동의
 
-f 제품 Azure AD와 통합 되 고 관리자 동의 필요로 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api를 호출 하면 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 관리자를에 게 테 넌 트의 모든 사용자를 대신 하 여 제품의 조직 부여 동의 대 한 앱을 구입 하는 있습니다.
+f 제품 Azure AD와 통합 되 고 관리자 동의 해야 하는 [응용 프로그램 사용 권한이 나 위임 된 사용 권한을](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 요청 하는 Api를 호출 하면 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 해당 조직 부여 동의 테 넌 트의 모든 사용자를 대신해 제품에 대 한 앱을 구입 하는 관리자가 있습니다.
 
 자세한 정보는 [전체 테 넌 트에 대 한 동의 요청](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant)을 참조 하세요.
 

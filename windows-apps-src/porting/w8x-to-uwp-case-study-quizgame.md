@@ -7,26 +7,26 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ce39e87f3c5c9e11f3e9ddb1424d606356ee3c8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964432"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8192369"
 ---
-# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows 런타임 8.x에서 UWP 사례 연구: QuizGame 샘플 앱
+# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: QuizGame 샘플 앱
 
 
 
 
 이 항목에서는 작동 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows10Universal Windows 플랫폼 (UWP) 앱으로 포팅하는 사례 연구를 제공 합니다.
 
-유니버설 8.1 앱은 동일한 앱의 두 가지 버전 빌드입니다: Windows8.1에 대 한 하나의 앱 패키지 및 Windows Phone 8.1 용 앱 패키지 합니다. QuizGame의 WinRT 8.1 버전에서는 유니버설 Windows 앱 프로젝트 정렬을 사용하지만 다른 접근 방식을 취하여 두 플랫폼에 대해 기능상 서로 다른 앱을 빌드합니다. Windows8.1 앱 패키지 호스트 역할을 퀴즈 게임 세션에 대 한 Windows Phone 8.1 앱 패키지 호스트는 클라이언트의 역할을 재생 되는 동안 합니다. 퀴즈 게임 세션의 두 절반은 피어 투 피어 네트워킹을 통해 통신합니다.
+유니버설 8.1 앱은 동일한 앱의 두 가지 버전 빌드입니다: Windows8.1에 대 한 하나의 앱 패키지 및 Windows Phone 8.1 용 앱 패키지 합니다. QuizGame의 WinRT 8.1 버전에서는 유니버설 Windows 앱 프로젝트 정렬을 사용하지만 다른 접근 방식을 취하여 두 플랫폼에 대해 기능상 서로 다른 앱을 빌드합니다. Windows8.1 앱 패키지 호스트 역할을 퀴즈 게임 세션에 대 한 Windows Phone 8.1 앱 패키지는 호스트에 클라이언트의 역할을 재생 되는 동안 합니다. 퀴즈 게임 세션의 두 절반은 피어 투 피어 네트워킹을 통해 통신합니다.
 
-두 절반을 각각 PC와 휴대폰에 맞게 맞춤화하면 합리적입니다. 그러나 선택하는 거의 모든 디바이스에서 호스트와 클라이언트를 둘 다 실행할 수 있다면 훨씬 더 낫지 않을까요? 이 경우 사례 연구, 포팅할 앱 위치 각각 빌드되 사용자가 다양 한 장치에 설치할 수 있는 단일 앱 패키지로 Windows10 모두 합니다.
+두 절반을 각각 PC와 휴대폰에 맞게 맞춤화하면 합리적입니다. 그러나 선택하는 거의 모든 디바이스에서 호스트와 클라이언트를 둘 다 실행할 수 있다면 훨씬 더 낫지 않을까요? 이 경우 사례 연구, 포팅할 앱에 각각 빌드되 사용자가 다양 한 장치에 설치할 수 있는 단일 앱 패키지로 Windows10 모두 합니다.
 
 앱에서는 보기 및 보기 모델을 활용하는 패턴을 사용합니다. 이렇게 명확하게 분리한 결과, 앞으로 살펴보게 되겠지만 이 앱의 포팅 프로세스는 매우 간단합니다.
 
-**참고**이 샘플을 전송 및 수신 사용자 지정 UDP 네트워크 구성 하는 것으로 가정 그룹 멀티 캐스트 패킷을 (대부분의 홈 네트워크는, 회사 네트워크 못할 수 있지만). 샘플에서는 TCP 패킷도 보내고 받습니다.
+**참고**이 예제에서는 네트워크를 사용자 지정 UDP 주고받을 구성 가정 그룹 멀티 캐스트 패킷을 (대부분의 홈 네트워크는, 회사 네트워크 못할 수 있지만). 샘플에서는 TCP 패킷도 보내고 받습니다.
 
  
 
@@ -38,7 +38,7 @@ ms.locfileid: "7964432"
 
 [QuizGame 유니버설 8.1 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532953). 포팅하기 전 앱의 초기 상태입니다. 
 
-[Windows10 앱을 다운로드 QuizGame10 합니다](http://go.microsoft.com/fwlink/?linkid=532954). 포팅한 직후 앱의 상태입니다. 
+[QuizGame10 Windows10 앱을 다운로드](http://go.microsoft.com/fwlink/?linkid=532954)합니다. 포팅한 직후 앱의 상태입니다. 
 
 [GitHub에서 이 샘플의 최신 버전을 참조하세요](https://github.com/Microsoft/Windows-appsample-quizgame).
 
@@ -86,7 +86,7 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다.
 
-이러한 옵션에 따라 quizgame.windows를 QuizGameHost 라는 새 Windows10 프로젝트입니다. 및 quizgame.windowsphone을 QuizGameClient 라는 새 Windows10 프로젝트입니다. 이러한 프로젝트는 유니버설 디바이스 패밀리를 대상으로 하므로 모든 디바이스에서 실행됩니다. 또한 QuizGame.Shared 원본 파일 등을 자체 폴더에 유지하고 해당 공유 파일을 두 개의 새 프로젝트에 연결합니다. 이전과 마찬가지로, 모든 항목을 하나의 솔루션에 유지하고 이름을 QuizGame10으로 지정합니다.
+이러한 옵션에 따라 quizgame.windows를 QuizGameHost 라는 새 Windows10 프로젝트. 및 quizgame.windowsphone을 QuizGameClient 라는 새 Windows10 프로젝트. 이러한 프로젝트는 유니버설 디바이스 패밀리를 대상으로 하므로 모든 디바이스에서 실행됩니다. 또한 QuizGame.Shared 원본 파일 등을 자체 폴더에 유지하고 해당 공유 파일을 두 개의 새 프로젝트에 연결합니다. 이전과 마찬가지로, 모든 항목을 하나의 솔루션에 유지하고 이름을 QuizGame10으로 지정합니다.
 
 **QuizGame10 솔루션**
 
@@ -177,7 +177,7 @@ QuizGameHost Windows10 앱 넓은 창 (큰 화면이 있는 장치 수만)에서
 ## <a name="universal-styling"></a>범용 스타일 지정
 
 
-Windows10, 단추에 하지 동일한 터치 대상 패딩이 해당 템플릿에 있는 표시 알 수 있습니다. 두 가지 사소한 변경으로 이 문제를 해결할 수 있습니다. 먼저, QuizGameHost 및 QuizGameClient 둘 다에서 app.xaml에 이 태그를 추가합니다.
+Windows10에 단추가 없는 동일한 터치 대상 패딩이 해당 템플릿에 알 수 있습니다. 두 가지 사소한 변경으로 이 문제를 해결할 수 있습니다. 먼저, QuizGameHost 및 QuizGameClient 둘 다에서 app.xaml에 이 태그를 추가합니다.
 
 ```xml
 <Style TargetType="Button">

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2175ce19824068a850ff70340b467f09e5c76540
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966403"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8192857"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Texture2D 및 Texture2DArray 하위 리소스 타일링
 

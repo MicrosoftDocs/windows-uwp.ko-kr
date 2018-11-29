@@ -8,27 +8,27 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968051"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8194565"
 ---
 # <a name="special-tile-templates"></a>특수 타일 템플릿
  
 
-특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. 각 특수 타일 템플릿은 특별히 용으로 빌드된 Windows10, 아이콘 타일 템플릿을 제외 하 고 Windows10에 대 한 업데이트 된 클래식 특수 템플릿인 합니다. 이 문서에서는 세 가지 특수 타일 템플릿인 아이콘, 사진 및 피플에 대해 설명합니다.
+특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. 각 특수 타일 템플릿은 특히 용으로 빌드된 Windows10, 아이콘 타일 템플릿을 제외 하 고 Windows10에 대 한 업데이트 된 클래식 특수 템플릿인 합니다. 이 문서에서는 세 가지 특수 타일 템플릿인 아이콘, 사진 및 피플에 대해 설명합니다.
 
 ## <a name="iconic-tile-template"></a>아이콘 타일 템플릿
 
 
-아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows10 휴대폰과 태블릿/데스크톱 둘 다에서 템플릿을 지원합니다.
+아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows10은 휴대폰과 태블릿/데스크톱 둘 다에서 템플릿을 지원 합니다.
 
 ![작은 크기 및 중간 크기 메일 타일](images/iconic-template-mail-2sizes.png)
 
 ### <a name="how-to-create-an-iconic-tile"></a>아이콘 타일을 만드는 방법
 
-다음 단계를 사용 가린다는 Windows10 아이콘 타일을 만들기 위해 알아야 할 수 있습니다. 대략적으로 설명하면, 아이콘 이미지 자산이 필요하며, 아이콘 템플릿을 사용하여 타일에 알림을 보내고, 마지막으로 타일에 표시할 번호를 제공하는 배지 알림을 보냅니다.
+다음 단계를 Windows10에 대 한 아이콘 타일을 만들기 위해 알아야 할 모든 설명 합니다. 대략적으로 설명하면, 아이콘 이미지 자산이 필요하며, 아이콘 템플릿을 사용하여 타일에 알림을 보내고, 마지막으로 타일에 표시할 번호를 제공하는 배지 알림을 보냅니다.
 
 ![아이콘 타일의 개발자 흐름](images/iconic-template-dev-flow.png)
 
@@ -184,7 +184,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>피플 타일 템플릿
 
 
-Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이드되는 원 안의 이미지 컬렉션을 표시하는 특수 타일 템플릿을 사용합니다. 이 타일 템플릿은 Windows10 빌드 10572부터 사용할 수 있었던 및 모든 사용자가 앱에서 사용할 수입니다.
+Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이드되는 원 안의 이미지 컬렉션을 표시하는 특수 타일 템플릿을 사용합니다. 이 타일 템플릿은 사용할 수 있는 Windows10 빌드 10572부터 되었으며 누구 든 지 앱에서 사용 하 여 시작 합니다.
 
 피플 타일 템플릿은 다음 크기의 타일에서 작동합니다.
 

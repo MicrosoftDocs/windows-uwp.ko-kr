@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 19045e84f1ca3396321dd4f8c4e76da24dc9a588
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968343"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8192018"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>WindowsPhone Silverlight를 UWP로 이동 사례 연구: Bookstore1
 
 
-이 항목에서는 매우 간단한 WindowsPhone Silverlight 앱은 Windows10Universal Windows 플랫폼 (UWP) 앱을 포팅하는 사례 연구를 제공 합니다. Windows10를 만들 수 있습니다 단일 앱 패키지는이 사례 연구에서 작업을 어떻게 수행 되 고 고객이 다양 한 장치에 설치할 수 있습니다. [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+이 항목에서는 매우 간단한 WindowsPhone Silverlight 앱을 Windows10Universal Windows 플랫폼 (UWP) 앱으로 포팅하는 사례 연구를 제공 합니다. Windows10를 만들 수 있습니다 단일 앱 패키지는이 사례 연구에서 작업을 어떻게 수행 되는 및 고객이 광범위 한 장치에 설치할 수 있습니다. [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
 
 포팅할 앱은 보기 모델에 바인딩되는 **ListBox**로 구성됩니다. 보기 모델에는 제목, 저자 및 책 표지를 보여주는 책 목록이 있습니다. 책 표지 이미지에는 **빌드 작업**이 **콘텐츠**로 설정되어 있고 **출력 디렉터리로 복사**가 **복사 안 함**으로 설정되어 있습니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "7968343"
 
 ## <a name="downloads"></a>다운로드
 
-[WindowsPhone Silverlight 앱을 다운로드 Bookstore1WPSL8 합니다](http://go.microsoft.com/fwlink/?linkid=517053).
+[다운로드 Bookstore1WPSL8 합니다 WindowsPhone Silverlight 앱](http://go.microsoft.com/fwlink/?linkid=517053).
 
 [Bookstore1Universal\_10 Windows10 앱을 다운로드](http://go.microsoft.com/fwlink/?linkid=532950)합니다.
 
@@ -78,7 +78,7 @@ MainPage.xaml에서 다음과 같은 변경 내용이 필요합니다.
 
 기본적으로 모든 방향이 지원됩니다. 명시적으로 제한 합니다 WindowsPhone Silverlight 앱 세로 전용 하지만, 따라서 부채 항목 \#1 및 \#2 지급 되 새 프로젝트에서 앱 패키지 매니페스트로 하 고 **지원 되는 방향**에서 **세로** 확인 하 여 합니다.
 
-이 앱의 경우 상태 표시줄(이전의 시스템 트레이)이 기본적으로 표시되므로 항목 #\3은 부채가 아닙니다. 항목 \#4 및 \#5를 사용 하는 WindowsPhone Silverlight 스타일에 해당 하는 네 가지 유니버설 Windows 플랫폼 (UWP) **TextBlock** 스타일을 찾는 필요 합니다. 에뮬레이터에서 WindowsPhone Silverlight 앱을 실행 하 고 정렬 [텍스트](wpsl-to-uwp-porting-xaml-and-ui.md) 섹션의 그림과 비교 수 있습니다. 및 WindowsPhone Silverlight 시스템 스타일의 속성을 참조이 테이블을 만들 수 있습니다.
+이 앱의 경우 상태 표시줄(이전의 시스템 트레이)이 기본적으로 표시되므로 항목 #\3은 부채가 아닙니다. 항목 \#4 및 \#5를 사용 하는 WindowsPhone Silverlight 스타일에 해당 하는 네 가지 유니버설 Windows 플랫폼 (UWP) **TextBlock** 스타일을 찾는 필요 합니다. 에뮬레이터에서 WindowsPhone Silverlight 앱을 실행 하 고 정렬 [텍스트](wpsl-to-uwp-porting-xaml-and-ui.md) 섹션의 그림과 비교 수 있습니다. 및 WindowsPhone Silverlight 시스템 스타일의 속성에서이 테이블을 만들 수 있습니다.
 
 | Windows Phone Silverlight 스타일 키 | UWP 스타일 키          |
 |-------------------------------------|------------------------|
