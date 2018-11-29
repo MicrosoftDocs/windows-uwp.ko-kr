@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c5b99c95167940c1ae51dbe96a3e43dc6fb0af34
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833703"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982875"
 ---
 # <a name="create-a-hello-world-app-js"></a>"Hello, world" 앱 만들기(JS)
 
-이 자습서에서는 JavaScript 및 HTML을 만드는 간단한 사용 하는 방법을 "Hello, world" 앱에는 유니버설 Windows 플랫폼 (UWP)에 Windows10 대상으로 합니다. Microsoft Visual Studio의 단일 프로젝트를 사용 하 여 모든 Windows10 장치에서 실행 되는 앱을 빌드할 수 있습니다.
+이 자습서에서는 JavaScript 및 HTML을 만드는 간단한 사용 하는 방법을 "Hello, world" 앱 유니버설 Windows 플랫폼 (UWP)에서 Windows10 대상으로 합니다. Microsoft Visual Studio의 단일 프로젝트를 사용 하 여 모든 Windows10 장치에서 실행 되는 앱을 빌드할 수 있습니다.
 
 > [!NOTE]
 > 이 자습서에서는 Visual Studio Community 2017을 사용합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.

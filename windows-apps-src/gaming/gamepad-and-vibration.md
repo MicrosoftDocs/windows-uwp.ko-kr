@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 패드, 진동
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852838"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982446"
 ---
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 
@@ -23,13 +23,13 @@ ms.locfileid: "7852838"
 * 게임 패드가 추가 또는 제거된 사실을 감지하는 방법
 * 하나 이상의 게임 패드에서 입력을 읽는 방법
 * 진동 및 임펄스 명령을 전송하는 방법
-* 게임 패드 UI 탐색 장치로 동작 하는 방법
+* 게임 패드가 UI 탐색 장치로 동작 하는 방법
 
 ## <a name="gamepad-overview"></a>게임 패드 개요
 
 Xbox 무선 컨트롤러 및 Xbox 무선 컨트롤러 S와 같은 게임 패드는 범용 게임 입력 장치입니다. 게임 패드는 Xbox One의 표준 입력 장치로, 키보드와 마우스를 선호하지 않는 Windows 게이머가 사용하는 경우가 많습니다. 게임 패드는 Windows 10 및 Xbox UWP 앱에서 [Windows.Gaming.Input][] 네임스페이스로 지원됩니다.
 
-방향 패드 (또는 D 패드); Xbox One 게임 패드는 설치 되어 있습니다. **A**, **B**, **X**, **Y**, **보기**및 **메뉴** 단추입니다. 왼쪽 및 오른쪽 섬, 범퍼 및 트리거 한 총 4 개의 진동 모터가 합니다. 두 섬스틱(thumbstick)은 X 및 Y 축에서 이중 아날로그 판독값을 제공하며, 안쪽으로 눌리면 버튼 역할도 합니다. 각 트리거는 얼마나 것 끌어오는 다시 나타내는 아날로그 판독값을 제공 합니다.
+Xbox One 게임 패드 방향 패드 (또는 D 패드); 설치 **A**, **B**, **X**, **Y**, **보기**및 **메뉴** 단추 왼쪽 및 오른쪽 섬, 범퍼 및 트리거 한 총 4 개의 진동 모터가 합니다. 두 섬스틱(thumbstick)은 X 및 Y 축에서 이중 아날로그 판독값을 제공하며, 안쪽으로 눌리면 버튼 역할도 합니다. 각 트리거는 얼마나 것 끌어오는 다시 나타내는 아날로그 판독값을 제공 합니다.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
@@ -48,7 +48,7 @@ Xbox One 게임 패드는 강력한 게임 패드 진동과 미세한 게임 패
 
 ### <a name="thumbstick-deadzones"></a>섬스틱(thumbstick) 데드존
 
-중앙 위치에 서 있는 섬스틱(thumbstick)은 매번 X 축과 Y 축에 동일한 중립 판독값을 이상적으로 생성합니다. 하지만 섬스틱(thumbstick)의 기계력과 민감도로 인해 중앙 위치의 실제 판독값은 이상적인 중립값의 근사치일 뿐이며 후속 판독값마다 달라질 수 있습니다. 이러한 이유로 항상 작은 _데드 존_를 사용 해야&mdash;무시 되는 이상적 중앙 위치 근처의 값 범위&mdash;제조상의 차이, 기계적 마모 또는 기타 게임 패드 문제를 보완 하기 위해 합니다.
+중앙 위치에 서 있는 섬스틱(thumbstick)은 매번 X 축과 Y 축에 동일한 중립 판독값을 이상적으로 생성합니다. 하지만 섬스틱(thumbstick)의 기계력과 민감도로 인해 중앙 위치의 실제 판독값은 이상적인 중립값의 근사치일 뿐이며 후속 판독값마다 달라질 수 있습니다. 이러한 이유로 항상 사용 해야 작은 _데드 존_&mdash;무시 되는 이상적 중앙 위치 근처의 값 범위&mdash;제조상의 차이, 기계적 마모 또는 기타 게임 패드 문제를 보완 하기 위해 합니다.
 
 큰 데드존은 의도한 입력과 의도치 않은 입력을 구분하기 위한 간단한 전략입니다.
 
@@ -94,9 +94,9 @@ UI 탐색 컨트롤러로 게임 패드는 탐색 명령의 [필수 집합](ui-n
 
 ### <a name="the-gamepads-list"></a>게임 패드 목록
 
-[Gamepad][] 클래스는 정적 속성 [Gamepads][]를 제공하는데, 이는 현재 연결된 게임 패드의 읽기 전용 목록입니다. 연결 된 게임 패드 중 일부에 관심이 있기, 때문에 것이 좋습니다 통해 액세스 하는 대신 자체 컬렉션을 유지 관리 하는 `Gamepads` 속성입니다.
+[Gamepad][] 클래스는 정적 속성 [Gamepads][]를 제공하는데, 이는 현재 연결된 게임 패드의 읽기 전용 목록입니다. 연결 된 게임 패드 중 일부에 관심이 있기를 때문에 것이 좋습니다 통해 액세스 하는 대신 자체 컬렉션을 유지 관리 하는 합니다 `Gamepads` 속성입니다.
 
-다음 예제에서는 연결된 모든 게임 패드를 새 컬렉션에 복사합니다. 참고 백그라운드에서 다른 스레드에서 됩니다 ( [GamepadAdded][] 및 [GamepadRemoved][] 이벤트)에서이 컬렉션에 액세스 하기 때문에 할 경우 잠금을 읽거나 컬렉션을 업데이트 하는 코드를 배치 합니다.
+다음 예제에서는 연결된 모든 게임 패드를 새 컬렉션에 복사합니다. 참고 백그라운드 스레드에서 됩니다 ( [GamepadAdded][] 및 [GamepadRemoved][] 이벤트)에서이 컬렉션에 액세스 하기 때문에 할 경우 잠금을 읽거나 컬렉션을 업데이트 하는 코드를 배치 합니다.
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -179,7 +179,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-다음 예제에서는 제거 된 게임 패드의 추적을 중지 합니다. 또한; 제거할 때 추적 하는 게임 패드 어떻게 처리 해야 이 코드만 한 게임 패드에서 입력을 추적 하 고 간단 하 게 설정 하는 예를 들어 `nullptr` 제거 됩니다. 모든 프레임에 게임 패드, 활성 상태 이면과 게임 패드 컨트롤러에 연결 되 고 연결이 끊어진 경우의 입력을 수집 중인 하면 업데이트를 확인 해야 합니다.
+다음 예제에서는 제거 된 게임 패드의 추적을 중지 합니다. 제거할 때 추적 되 고 게임 패드 어떻게 처리 해야 이 코드만 한 게임 패드에서 입력을 추적 하 고 간단 하 게 설정 하는 예를 들어 `nullptr` 제거 됩니다. 모든 프레임에 게임 패드 비활성 상태일 경우과 게임 패드 컨트롤러에 연결 되 고 연결이 끊어진 경우의 입력을 수집 중인 하면 업데이트를 확인 해야 합니다.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -219,7 +219,7 @@ Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
 };
 ```
 
-자세한 내용은 [게임용 입력을](input-practices-for-games.md) 참조 하세요.
+자세한 내용은 [게임에 대 한 입력 사례](input-practices-for-games.md) 를 참조 하세요.
 
 ### <a name="users-and-headsets"></a>사용자 및 헤드셋
 
@@ -253,7 +253,7 @@ GamepadReading reading = gamepad.GetCurrentReading();
 
 ### <a name="reading-the-thumbsticks"></a>섬스틱(thumbstick) 읽기
 
-각 섬스틱(thumbstick)은 X 축과 Y 축에 -1.0과 +1.0 사이의 아날로그 판독값을 제공합니다. X 축에서 -1.0 값은 맨 왼쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 오른쪽 위치에 해당합니다. Y 축에서 -1.0 값은 맨 아래쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 위쪽 위치에 해당합니다. 양 축 값은 약 0.0 스틱이 중앙 위치에 있지만 달라 정밀 값은 후속 판독값;까지 이러한 변동을 완화 하기 위한 전략이이 섹션의 뒷부분에 설명 되어 있습니다.
+각 섬스틱(thumbstick)은 X 축과 Y 축에 -1.0과 +1.0 사이의 아날로그 판독값을 제공합니다. X 축에서 -1.0 값은 맨 왼쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 오른쪽 위치에 해당합니다. Y 축에서 -1.0 값은 맨 아래쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 위쪽 위치에 해당합니다. 양 축 값은 약 0.0 스틱이 중앙 위치에 있지만 다릅니다 정확한 값은 후속 판독값;까지 이러한 변동을 완화 하기 위한 전략이이 섹션의 뒷부분에 설명 되어 있습니다.
 
 왼쪽 섬스틱(thumbstick)의 X 축 값은 [GamepadReading][] 구조의 `LeftThumbstickX` 속성에서 읽어들이고, Y 축 값은 `LeftThumbstickY` 속성에서 읽어들입니다. 오른쪽 섬스틱(thumbstick)의 X 축 값은 `RightThumbstickX` 속성에서 읽어들이고, Y 축 값은 `RightThumbstickY` 속성에서 읽어들입니다.
 
@@ -331,7 +331,7 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>버튼 읽기
 
-각 게임 패드 버튼&mdash;4 방향 D-패드, 왼쪽 및 오른쪽 범퍼, 왼쪽 및 오른쪽 섬 스틱 누르기, **A**, **B**, **X**, **Y**, **보기**및 **메뉴**&mdash;디지털 읽기를 제공 합니다. 누름 (아래) 또는 놓음 (위)에 있는지 여부를 나타냅니다. 버튼 판독값은 효율을 위해 개별 부울 값으로 표현 되지 않는 대신, 모두 압축 [GamepadButtons][] 열거로 표현 되는 단일 비트 필드로 합니다.
+각 게임 패드 버튼&mdash;4 방향 D-패드, 왼쪽 및 오른쪽 범퍼, 왼쪽 및 오른쪽 섬 누르기, **A**, **B**, **X**, **Y**, **보기**및 **메뉴**&mdash;디지털 읽기를 제공 합니다. 누름 (아래) 또는 놓음 (위)에 있는지 여부를 나타냅니다. 버튼 판독값은 효율을 위해 개별 부울 값으로 표현 되지 않는 대신, 모두 압축 [GamepadButtons][] 열거로 표현 되는 단일 비트 필드로 합니다.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
@@ -370,7 +370,7 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 }
 ```
 
-때로는 하려고 하에서 단추 전환 하는 시기를 결정에 릴리스된 놓았는지 누름에 여러 단추의 눌 렸 거 나 놓였는지 또는 일련의 버튼이 특정 방식으로 정렬 된 경우&mdash;리고 일부 합니다. 이러한 각 상태를 검색하는 방법에 대한 자세한 내용은 [버튼 전환 검색](input-practices-for-games.md#detecting-button-transitions) 및 [복잡한 버튼 정렬 검색](input-practices-for-games.md#detecting-complex-button-arrangements)을 참조하세요.
+경우에 따라 하려는 경우에서 단추 전환 하는 시기를 결정에 릴리스된 놓았는지 누름에 여러 개의 눌 렸 거 나 놓였는지 또는 일련의 버튼이 특정 방식으로 정렬 된 경우&mdash;리고 일부 합니다. 이러한 각 상태를 검색하는 방법에 대한 자세한 내용은 [버튼 전환 검색](input-practices-for-games.md#detecting-button-transitions) 및 [복잡한 버튼 정렬 검색](input-practices-for-games.md#detecting-complex-button-arrangements)을 참조하세요.
 
 ## <a name="run-the-gamepad-input-sample"></a>게임 패드 입력 샘플 실행
 

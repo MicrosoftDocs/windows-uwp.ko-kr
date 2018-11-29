@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp, 지오코딩, 지도, 위치
 ms.localizationpriority: medium
 ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842956"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982967"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>지오코딩 및 리버스 지오코딩 수행
 
-이 가이드에서 Windows.Services.Maps [** [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출 하 여 주소 (리버스 지 오 코딩) 지리적 위치를 변환 하 고 (지 오 코딩) 지리적 위치를 주소를 변환 하는 방법을 보여 줍니다. **](https://msdn.microsoft.com/library/windows/apps/dn636979)네임 스페이스입니다.
+이 가이드에서 Windows.Services.Maps [** [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출 하 여 거리 주소 (리버스 지 오 코딩) 지리적 위치를 변환 하 고 (지 오 코딩) 지리적 위치를 주소를 변환 하는 방법을 보여 줍니다. **](https://msdn.microsoft.com/library/windows/apps/dn636979)네임 스페이스입니다.
 
 > [!TIP]
 > 앱에서 지도 사용에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](hhttps://github.com/Microsoft/Windows-universal-samples) 에서 [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) 샘플을 다운로드 합니다.
 
 지 오 코딩 및 리버스 지 오 코딩에 관련 된 클래스는 다음과 같이 구성 됩니다.
 
--   [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스는 지 오 코딩 ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925))를 처리 하 고 리버스 지 오 코딩 ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928))는 방법이 포함 되어 있습니다.
+-   [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스는 지 오 코딩 ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925))를 처리 하 고 리버스 지 오 코딩 ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)) 하는 메서드도를 포함 되어 있습니다.
 -   이러한 두 메서드는 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 인스턴스를 반환 합니다.
 -   [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 의 [**위치**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체의 컬렉션을 노출 합니다. 
 -   [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 주소를 나타내는 [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) 개체를 노출 하는 [**주소**](https://msdn.microsoft.com/library/windows/apps/dn636929) 속성 및 지리적 위치를 나타내는 [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) 를 노출 하는 [**지점**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) 속성을 둘 다 있어야 합니다.
@@ -32,7 +32,7 @@ ms.locfileid: "7842956"
 
 ## <a name="get-a-location-geocode"></a>위치 가져오기(지오코드)
 
-이 섹션에는 주소 또는 장소 이름 (지 오 코딩) 지리적 위치로 변환 하는 방법을 보여 줍니다.
+이 섹션에서는 거리 주소나 장소 이름을 지리적 위치 (지 오 코딩) 변환 하는 방법을 보여 줍니다.
 
 1.  장소 이름 또는 주소를 사용 하 여 [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) 메서드의 오버 로드 중 하나를 호출 합니다.
 2.  [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) 메서드 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 개체를 반환합니다.

@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7829108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7982516"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>iOS 개발자용 UWP 시작
 
 
-여러분이 Windows10 개발을 고려 하는 iOS 개발자, 이러한 문서는 시작 하기에 적합 합니다. 일부의 앱 작성을 시작할 때 알고 해야 개념을 소개 합니다은 하 고 Microsoft Store에서 작업을 게시 하는 방법을 설명 합니다.
+여러분이 Windows10 개발을 고려 하는 iOS 개발자,이 문서는 시작 하기에 적합 합니다. 일부 앱 작성을 시작할 때 알고 해야 하는 개념을 소개 합니다은 하 고 Microsoft Store에서 작업을 게시 하는 방법을 설명 합니다.
 
 이 섹션에서는 점진적으로 시작하면서 Microsoft Visual Studio 및 C# 프로그래밍 언어를 사용하여 간단한 앱을 만드는 방법을 살펴보고 특히 현재 사용하는 도구에 따라 프로세스가 어떻게 달라지는지에 대해 설명합니다. C#을 잘 몰라도 됩니다. 다른 프로그래밍 언어와 도구도 사용할 수 있으며, 이 내용은 [시작: 프로그래밍 언어 선택](getting-started-choosing-a-programming-language.md)에서 살펴보겠습니다.
 

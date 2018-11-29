@@ -7,25 +7,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 52745a4fcd6b5a6b33982595f8c7c65c0bee3c32
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842316"
+ms.locfileid: "7982114"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
 .NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다. UWP(유니버설 Windows 플랫폼) 앱의 구성 요소를 C++, JavaScript, Visual Basic 또는 C#과 함께 사용할 수 있습니다. 이 항목에서는 구성 요소를 만들기 위한 규칙을 간략히 설명 하 고 Windows 런타임에 대 한.NET Framework 지원의 일부 측면을 설명 합니다. 일반적으로 이 지원은 .NET Framework 프로그래머에게 투명하게 디자인되었습니다. 그러나 JavaScript 또는 C++를 사용하는 구성 요소를 만들 때는 이러한 언어와 Windows 런타임을 지원하는 방식의 차이점을 알아야 합니다.
 
 Visual Basic 또는 C#을 사용하여 UWP 앱에서만 사용되는 구성 요소를 만드는데 해당 구성 요소에 UWP 컨트롤이 없는 경우 **Windows 런타임 구성 요소** 템플릿 대신 **클래스 라이브러리** 템플릿을 사용할 수 있습니다. 간단한 클래스 라이브러리일수록 제한이 적습니다.
 
-이 항목에서는 다음 섹션을 포함합니다.
+이 항목에는 다음 섹션이 포함 됩니다.
 
 ## <a name="declaring-types-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 형식 선언
 내부적으로, 구성 요소의 Windows 런타임 형식에서는 유니버설 Windows 앱에 허용되는 .NET Framework 기능을 사용할 수 있습니다. (자세한 내용은 [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx) 개요를 참조하세요.) 외부적으로 형식의 멤버는 해당 매개 변수 및 반환 값에 대해 Windows 런타임 형식만 표시할 수 있습니다. 다음 목록에서는 Windows 런타임 구성 요소에서 표시되는 .NET Framework 형식에 대한 제한을 설명합니다.
 
 -   구성 요소에 있는 모든 공용 형식 및 멤버의 필드, 매개 변수 및 반환 값은 Windows 런타임 형식이어야 합니다.
 
-    이 제한에는 Windows 런타임 자체에서 제공하는 형식뿐 아니라 직접 만든 Windows 런타임 형식도 포함됩니다. 또한 다양한 .NET Framework 형식도 포함됩니다. 이러한 형식의 포함은 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 .NET Framework에서 제공하는 지원의 일부입니다. 기본 Windows 런타임 형식 대신 친숙한 .NET Framework 형식을 사용하여 코드가 나타납니다. 예를 들어 Int32 및 Double 등의 .NET Framework 기본 형식, DateTimeOffset 및 Uri와 같은 특정한 기본 형식, IEnumerable&lt;T&gt;Visual Basic의 IEnumerable(Of T))과 IDictionary&lt;TKey,TValue&gt; 등 일반적으로 사용되는 일부 제네릭 인터페이스 형식을 사용할 수 있습니다. (참고 이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식 이어야 합니다.) 이 섹션에서는 관리 코드에 전달 하 여 Windows 런타임 형식에 대해서는 설명 하 고 관리 전달이이 항목의 뒷부분에 Windows 런타임 형식입니다.
+    이 제한에는 Windows 런타임 자체에서 제공하는 형식뿐 아니라 직접 만든 Windows 런타임 형식도 포함됩니다. 또한 다양한 .NET Framework 형식도 포함됩니다. 이러한 형식의 포함은 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 .NET Framework에서 제공하는 지원의 일부입니다. 기본 Windows 런타임 형식 대신 친숙한 .NET Framework 형식을 사용하여 코드가 나타납니다. 예를 들어 Int32 및 Double 등의 .NET Framework 기본 형식, DateTimeOffset 및 Uri와 같은 특정한 기본 형식, IEnumerable&lt;T&gt;Visual Basic의 IEnumerable(Of T))과 IDictionary&lt;TKey,TValue&gt; 등 일반적으로 사용되는 일부 제네릭 인터페이스 형식을 사용할 수 있습니다. (참고 이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식 이어야 합니다.) 이 섹션에서는 관리 코드에 전달 하 여 Windows 런타임 형식에 대해서는 설명 및 관리 전달이이 항목의 뒷부분에서 Windows 런타임 형식입니다.
 
 -   공용 클래스와 인터페이스에는 메서드, 속성 및 이벤트가 포함될 수 있습니다. 이벤트에 대한 대리자를 선언하거나 EventHandler&lt;T&gt; 대리자를 사용할 수 있습니다. 공용 클래스 또는 인터페이스는 다음과 같은 특징이 있습니다.
 
@@ -88,13 +88,13 @@ C# 또는 Visual Basic에서 이러한 형식에 대한 언어 키워드를 제�
 | Windows.UI.Xaml.Data.PropertyChangedEventHandler | System.ComponentModel.PropertyChangedEventHandler |
 | Windows.UI.Xaml.Data.PropertyChangedEventArgs    | System.ComponentModel.PropertyChangedEventArgs    |
 
-하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 전달 하거나 사전 반환할 수 예를 들어&lt;int, string&gt; (Dictionary (Of Integer, String) Visual basic에서)을 IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt;, 또는 IEnumerable&lt; System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;합니다.
+하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 예를 들어 전달 하거나 사전을 반환&lt;int, string&gt; (Dictionary (Of Integer, String) Visual basic에서)을 IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt;, 또는 IEnumerable&lt; System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;합니다.
 
 **중요 한**JavaScript는 관리 형식이 구현한 인터페이스 목록에서 처음 나타나는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
 Windows 런타임에서 IMap&lt;K, V&gt; 및 IMapView&lt;K, V&gt;는 IKeyValuePair를 사용하여 반복됩니다. 관리 코드로 전달할 경우 IDictionary&lt;TKey, TValue&gt; 및 IReadOnlyDictionary&lt;TKey, TValue&gt;로 나타나므로 자연스럽게 System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;를 사용하여 열거합니다.
 
-인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 PropertySet 클래스가 구현한 IMap&lt;K, V&gt;는 관리 코드에서 IDictionary&lt;TKey, TValue&gt;로 나타납니다. PropertySet는 IMap&lt;K, V&gt; 대신 IDictionary&lt;TKey, TValue&gt;를 구현한 것처럼 나타나므로, 관리 코드에서 Add 메서드가 있는 것처럼 나타나고 .NET Framework 사전의 Add 메서드처럼 동작합니다. Insert 메서드가 있는 것처럼 나타나지는 않습니다. 이 예제에서는 항목에서 볼 수 있습니다 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)합니다.
+인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 PropertySet 클래스가 구현한 IMap&lt;K, V&gt;는 관리 코드에서 IDictionary&lt;TKey, TValue&gt;로 나타납니다. PropertySet는 IMap&lt;K, V&gt; 대신 IDictionary&lt;TKey, TValue&gt;를 구현한 것처럼 나타나므로, 관리 코드에서 Add 메서드가 있는 것처럼 나타나고 .NET Framework 사전의 Add 메서드처럼 동작합니다. Insert 메서드가 있는 것처럼 나타나지는 않습니다. 이 예제에서 항목을 볼 수 있습니다 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)합니다.
 
 ## <a name="passing-managed-types-to-the-windows-runtime"></a>Windows 런타임에 관리 형식 전달
 이전 섹션에서 설명한 것처럼 일부 Windows 런타임 형식은 구성 요소의 멤버 서명 또는 IDE에 사용된 Windows 런타임 멤버 서명에서 .NET Framework 형식으로 나타납니다. 이러한 멤버에 .NET Framework 형식을 전달하거나 구성 요소 멤버의 반환 값으로 사용할 경우 다른 쪽의 코드에서는 해당 Windows 런타임 형식으로 나타납니다. JavaScript에서 구성 요소를 호출할 때의 효과에 대한 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)의 "구성 요소에서 관리 형식 반환" 섹션을 참조하세요.

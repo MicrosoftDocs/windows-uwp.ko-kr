@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 인쇄
 ms.localizationpriority: medium
 ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7848664"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7984599"
 ---
 # <a name="customize-the-print-preview-ui"></a>인쇄 미리 보기 UI 사용자 지정
 
@@ -48,7 +48,7 @@ ms.locfileid: "7848664"
 
 단, 이 메서드를 사용하여 수정한 사항은 인쇄 미리 보기 UI에만 적용됩니다. 사용자는 인쇄 미리 보기 UI에서 **기타 설정**을 탭하여 프린터에서 지원하는 모든 옵션에 항상 액세스할 수 있습니다.
 
-**참고**은 선택한 프린터에서 지 원하는 옵션만 인쇄 미리 보기 UI에에서 표시 됩니다 앱 표시 될 인쇄 옵션을 지정할 수 있지만 합니다. 선택한 프린터가 지원하지 않는 옵션은 인쇄 UI에 표시되지 않습니다.
+**참고**은 선택한 프린터에서 지 원하는 옵션만 인쇄 미리 보기 UI에에서 표시 됩니다 앱 표시 될 인쇄 옵션에서는 지정할 수 있지만 합니다. 선택한 프린터가 지원하지 않는 옵션은 인쇄 UI에 표시되지 않습니다.
 
  
 
@@ -96,7 +96,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**중요 한**인쇄 미리 보기에서 **더 많은 설정** 링크를 포함 하 여 UI에서 모든 인쇄 옵션이 제거 [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()를 호출 합니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
+**중요 한**에서 인쇄 미리 보기 UI에 **기타 설정** 링크를 포함 하 여 모든 인쇄 옵션이 제거 [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)()를 호출 합니다. 인쇄 미리 보기 UI에 표시할 옵션을 추가해야 합니다.
 
 ### <a name="specify-default-options"></a>기본 옵션 지정
 

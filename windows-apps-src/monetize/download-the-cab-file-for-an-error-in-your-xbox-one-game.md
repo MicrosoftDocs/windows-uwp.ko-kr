@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 분석 API, CAB 다운로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 736219533a254e6380c10600e97f707f15e37de6
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834843"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985230"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-xbox-one-game"></a>Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드
 
-Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 Xbox 개발자 포털 (XDP)을 통해 수집 된 Xbox One 게임의 특정 오류와 관련 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있는 CAB 파일을 다운로드 합니다. 이 메서드는 지난 30 일 동안에서 발생 한 오류에 대 한 CAB 파일만 다운로드할 수 있습니다.
+Microsoft Store 분석 API에서에서이 메서드를 사용 하는 Xbox 개발자 포털 (XDP)을 통해 수집 된 Xbox One 게임의 특정 오류와 관련 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있는 CAB 파일을 다운로드 합니다. 이 메서드는 지난 30 일 동안에서 발생 한 오류에 대 한 CAB 파일만 다운로드할 수 있습니다.
 
 이 메서드를 사용 하려면 먼저에 다운로드 하려는 CAB 파일의 ID를 검색 먼저 [Xbox One 게임에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
 
@@ -69,5 +69,5 @@ Authorization: Bearer <your access token>
 
 * [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [Xbox One에 대 한 데이터를 보고 하는 오류를 게임 가져오기](get-error-reporting-data-for-your-xbox-one-game.md)
-* [게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기](get-details-for-an-error-in-your-xbox-one-game.md)
+* [게임에서 Xbox One에 오류에 대 한 세부 정보를 가져오기](get-details-for-an-error-in-your-xbox-one-game.md)
 * [Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)

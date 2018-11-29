@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 22e2321c301535fe89f2a7bba13497d51c6d8b78
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 368454e32ba2c88994161f6c7deb554fff73972a
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827378"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983389"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
@@ -87,7 +87,7 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 </Page>
 ```
 
-이 XAML은 스크롤 뷰어에 이미지를 배치하고 확대/축소를 사용하도록 설정하는 방법을 보여 줍니다.
+이 XAML은 가로 스크롤 스크롤 뷰어에 이미지를 배치 하 고 확대/축소를 사용 하는 방법을 보여 줍니다.
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"

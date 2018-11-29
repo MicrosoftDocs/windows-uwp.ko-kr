@@ -7,11 +7,11 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830974"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7982265"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Windows10 UWP(유니버설 Windows 플랫폼) 앱 수명 주기
 
@@ -183,7 +183,7 @@ suspending 이벤트 처리기가 앱 상태를 저장하기에 가장 적합합
 
 사용자가 앱을 닫았음을 나타내는 이벤트는 없습니다. 사용자가 앱을 닫으면 먼저 일시 중단되어 상태를 저장할 수 있는 기회를 제공합니다. Windows8.1 이상, 사용자가 앱이 닫힌 후 앱 화면에서 제거 및 전환 목록 되었지만 명시적으로 중지 되었습니다.
 
-**닫힌 사용자 동작:** 앱을 Windows에서 닫을 때 보다 사용자가 닫을 때와 다른 작업을 수행 해야 하는 경우 사용자 인지 Windows 앱을 종료 여부를 확인할 활성화 이벤트 처리기를 사용할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
+**사용자가 종료 동작:** 앱을 Windows에서 닫을 때 보다 사용자가 닫을 때와 다른 작업을 수행 해야 하는 경우 사용자 인지 Windows에서 앱을 종료 여부를 확인할 활성화 이벤트 처리기를 사용할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
 
 반드시 필요한 경우가 아니면 앱이 자동으로 닫히지 않도록 하는 것이 좋습니다. 예를 들어 앱이 메모리 누수를 발견한 경우 사용자의 개인 데이터 보안을 위해 스스로 닫을 수 있습니다.
 

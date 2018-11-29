@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 51807b96d80245b8dc5b22f1f376f603285d518a
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853192"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983872"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 
@@ -54,7 +54,7 @@ ms.locfileid: "7853192"
 
 ## <a name="product-id"></a>제품 ID
 
-원하는 제품 형식에 관계 없이 추가 기능 고유의 제품 ID를 입력해야 합니다. 이 이름은 파트너 센터에서 추가 기능을 식별 하는 데 사용 됩니다 하 고 [코드에서 추가 기능을 참조](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code)하기 위해이 식별자를 사용할 수 있습니다.
+원하는 제품 형식에 관계 없이 추가 기능 고유의 제품 ID를 입력해야 합니다. 이 이름은 파트너 센터에서 추가 기능을 식별 하는 하 고 [코드에서 추가 기능을 참조](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code)하기 위해이 식별자를 사용할 수 있습니다.
 
 다음은 제품 ID를 선택할 때 유의해야 하는 몇 가지 사항입니다.
 

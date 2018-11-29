@@ -1,5 +1,5 @@
 ---
-description: C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 대 한 합니다.
+description: C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 합니다.
 title: 이벤트 및 라우트된 이벤트 개요
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.date: 07/12/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f24543c1afcd9c154788cc4be03434384f00f0c
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833992"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983983"
 ---
 # <a name="events-and-routed-events-overview"></a>이벤트 및 라우트된 이벤트 개요
 
@@ -19,7 +19,7 @@ ms.locfileid: "7833992"
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
 -   [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
 
-C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 대 한 합니다. 이벤트 처리기를 XAML에서 UI 요소 선언의 일부로 할당하거나 코드에서 처리기를 추가할 수 있습니다. Windows 런타임은 *라우트된 이벤트*를 지원합니다. 이 기능을 통해 특정 입력 이벤트와 데이터 이벤트가 이벤트를 발생시킨 개체가 아닌 다른 개체에 의해 처리될 수 있습니다. 라우트된 이벤트는 컨트롤 템플릿을 정의하거나 페이지 또는 레이아웃 컨테이너를 사용하는 경우 유용합니다.
+C#, Visual Basic 또는 VisualC + + 구성 요소 확장을 사용 하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 설명 (C + + CX) 프로그래밍 언어와 XAML UI 정의 합니다. 이벤트 처리기를 XAML에서 UI 요소 선언의 일부로 할당하거나 코드에서 처리기를 추가할 수 있습니다. Windows 런타임은 *라우트된 이벤트*를 지원합니다. 이 기능을 통해 특정 입력 이벤트와 데이터 이벤트가 이벤트를 발생시킨 개체가 아닌 다른 개체에 의해 처리될 수 있습니다. 라우트된 이벤트는 컨트롤 템플릿을 정의하거나 페이지 또는 레이아웃 컨테이너를 사용하는 경우 유용합니다.
 
 ## <a name="events-as-a-programming-concept"></a>프로그래밍 개념으로서의 이벤트
 
@@ -43,7 +43,7 @@ XAML에서 이벤트를 연결하려면 이미 정의했거나 나중에 코드 
   Click="ShowUpdatesButton_Click"/>
 ```
 
-**팁** *이벤트 연결* 은 프로그래밍 용어입니다. 이벤트가 발생하면 명명된 처리기 메서드가 호출되어야 함을 나타내는 데 사용하는 프로세스 또는 코드를 나타냅니다. 대부분의 절차적 코드 모델에서 이벤트 연결은 이벤트와 메서드 둘 다를 명명하고 일반적으로 대상 개체 인스턴스와 관련된 암시적이거나 명시적인 "AddHandler" 코드입니다. XAML에서 "AddHandler"는 암시적이며, 이벤트 연결은 이벤트를 개체 요소의 속성 이름으로 명명하고 처리기를 해당 속성의 값으로 명명하는 작업으로만 구성됩니다.
+**팁** *이벤트 연결* 은은 프로그래밍 용어입니다. 이벤트가 발생하면 명명된 처리기 메서드가 호출되어야 함을 나타내는 데 사용하는 프로세스 또는 코드를 나타냅니다. 대부분의 절차적 코드 모델에서 이벤트 연결은 이벤트와 메서드 둘 다를 명명하고 일반적으로 대상 개체 인스턴스와 관련된 암시적이거나 명시적인 "AddHandler" 코드입니다. XAML에서 "AddHandler"는 암시적이며, 이벤트 연결은 이벤트를 개체 요소의 속성 이름으로 명명하고 처리기를 해당 속성의 값으로 명명하는 작업으로만 구성됩니다.
 
 실제 처리기는 모든 앱 코드 및 코드 숨김에 사용하는 프로그래밍 언어로 작성합니다. `Click="ShowUpdatesButton_Click"` 특성을 사용하여 XAML의 태그가 컴파일되고 구문 분석될 때 IDE의 빌드 작업에 포함된 XAML 태그 컴파일 단계와 앱이 로드될 때 이벤트 XAML 런타임 구문 분석 작업에서 `ShowUpdatesButton_Click`이라는 메서드를 앱 코드의 일부로 발견할 수 있다는 계약을 만들었습니다. `ShowUpdatesButton_Click` 은 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 모든 처리기에 대해 대리자를 기반으로 호환되는 메서드 서명을 구현하는 메서드여야 합니다. 예를 들어 이 코드에서는 `ShowUpdatesButton_Click` 처리기를 정의합니다.
 
@@ -80,7 +80,7 @@ void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, W
 
 이 예제에서 `ShowUpdatesButton_Click` 메서드는 [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812) 대리자를 기반으로 합니다. MSDN 참조 페이지에서 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 메서드에 대한 구문에 이름이 지정된 대리자를 확인하게 되므로 이 대리자를 사용할 대리자로 알고 있는 것이 좋습니다.
 
-**팁**Visual Studio는 이벤트 처리기 이름을 지정 하 고 XAML을 편집 하는 동안 처리기 메서드를 정의 하는 편리한 방법을 제공 합니다. XAML 텍스트 편집기에서 이벤트 특성 이름을 제공하는 경우 Microsoft IntelliSense 목록이 표시될 때까지 잠시 기다려 주세요. 목록에서 **&lt;새 이벤트 처리기&gt;** 를 클릭하면 Microsoft Visual Studio에서 요소의 **x:Name**(또는 형식 이름), 이벤트 이름 및 숫자 접미사를 기반으로 메서드 이름을 제안합니다. 그런 다음, 선택한 이벤트 처리기 이름을 마우스 오른쪽 단추로 클릭하고 **이벤트 처리기 탐색**을 클릭할 수 있습니다. 이렇게 하면 XAML 페이지에 대한 코드 숨김 파일의 코드 편집기 보기에 표시된 것처럼 새로 삽입된 이벤트 처리기 정의로 바로 이동합니다. 이벤트 처리기에는 이벤트에서 사용하는 *sender* 매개 변수와 이벤트 데이터 클래스를 비롯한 올바른 서명이 이미 있습니다. 올바른 서명이 포함된 처리기 메서드가 코드 숨김에 이미 있는 경우에도 해당 메서드의 이름이 자동 완성 드롭다운에 **&lt;새 이벤트 처리기&gt;** 옵션과 함께 표시됩니다. IntelliSense 목록 항목을 클릭하지 않고 바로 가기로 Tab 키를 누를 수도 있습니다.
+**팁**Visual Studio는 이벤트 처리기의 이름을 하 고 XAML을 편집 하는 동안 처리기 메서드를 정의 하는 편리한 방법을 제공 합니다. XAML 텍스트 편집기에서 이벤트 특성 이름을 제공하는 경우 Microsoft IntelliSense 목록이 표시될 때까지 잠시 기다려 주세요. 목록에서 **&lt;새 이벤트 처리기&gt;** 를 클릭하면 Microsoft Visual Studio에서 요소의 **x:Name**(또는 형식 이름), 이벤트 이름 및 숫자 접미사를 기반으로 메서드 이름을 제안합니다. 그런 다음, 선택한 이벤트 처리기 이름을 마우스 오른쪽 단추로 클릭하고 **이벤트 처리기 탐색**을 클릭할 수 있습니다. 이렇게 하면 XAML 페이지에 대한 코드 숨김 파일의 코드 편집기 보기에 표시된 것처럼 새로 삽입된 이벤트 처리기 정의로 바로 이동합니다. 이벤트 처리기에는 이벤트에서 사용하는 *sender* 매개 변수와 이벤트 데이터 클래스를 비롯한 올바른 서명이 이미 있습니다. 올바른 서명이 포함된 처리기 메서드가 코드 숨김에 이미 있는 경우에도 해당 메서드의 이름이 자동 완성 드롭다운에 **&lt;새 이벤트 처리기&gt;** 옵션과 함께 표시됩니다. IntelliSense 목록 항목을 클릭하지 않고 바로 가기로 Tab 키를 누를 수도 있습니다.
 
 ## <a name="defining-an-event-handler"></a>이벤트 처리기 정의
 
@@ -147,9 +147,9 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**참고** **Handles** 키워드 대신 인스턴스 처리 방법을 홍보 일반적으로 Visual Studio와 XAML 디자인 화면입니다. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
+**참고** **Handles** 키워드 대신 인스턴스 처리 방법을 홍보 일반적으로 Visual Studio와 XAML 디자인 화면. 이는 XAML에서 이벤트 처리기 연결을 설정하는 것이 일반적인 디자이너-개발자 워크플로의 일부이고 **Handles** 키워드 방법이 XAML에서 이벤트 처리기를 연결하는 것과 호환되지 않기 때문입니다.
 
-C + + /CX를 사용 하 여 있습니다는 **+=** 구문을 하지만 기본 C# 양식에서 차이가 있습니다.
+C + + /CX를 사용 하 여 있습니다 합니다 **+=** 구문을 하지만 C# 기본 형식에서 차이가 있습니다.
 
 -   대리자 유추가 없으므로 대리자 인스턴스에 대해 **ref new**를 사용해야 합니다.
 -   대리 생성자에 두 매개 변수가 있고 대상 개체가 첫 번째 매개 변수로 필요합니다. 일반적으로 **this**를 지정합니다.
@@ -234,7 +234,7 @@ DHTML(동적 HTML) 또는 HTML5와 같은 웹 기술을 알고 있는 경우 이
 
 경우에 따라 *sender*가 관심 대상이 아니고, 포인터 이벤트 발생 시 가능한 자식 개체 중 포인터가 가리키는 개체 또는 키보드 키를 눌렀을 때 포커스를 받는 더 큰 UI의 개체 등과 같은 정보에 관심이 있을 수 있습니다. 이런 경우, [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) 속성 값을 사용할 수 있습니다. 경로의 모든 지점에서 **OriginalSource**는 처리기가 연결된 개체 대신 이벤트를 발생시킨 원래 개체를 보고합니다. 그러나 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 입력 이벤트의 경우 원래 개체는 종종 페이지 수준 UI 정의 XAML에서 즉시 표시되지 않는 개체입니다. 대신 이 원본 개체는 컨트롤의 템플릿 기반 부분일 수 있습니다. 예를 들어 사용자가 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)의 가장자리에 포인터를 놓으면 대부분의 포인터 이벤트의 경우 **OriginalSource**는 **Button** 자체가 아니라 [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465)의 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) 템플릿 요소입니다.
 
-**팁**는 입력 이벤트 버블링 템플릿 기반 컨트롤을 만드는 경우에 특히 유용 합니다. 템플릿이 있는 컨트롤에는 소비자가 적용한 새 템플릿이 있을 수 있습니다. 소비자는 작업 템플릿을 다시 만들려고 하다가 기본 템플릿에서 선언된 일부 이벤트 처리를 자신도 모르게 제거할 수 있습니다. 이 경우 클래스 정의에 있는 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) 재정의의 일부로서 처리기를 연결하여 여전히 컨트롤 수준의 이벤트 처리를 제공할 수 있습니다. 그런 다음 인스턴스화에서 컨트롤의 루트까지 버블링된 입력 이벤트를 catch할 수 있습니다.
+**팁**입력 이벤트 버블링는 템플릿 기반 컨트롤을 만드는 경우에 특히 유용 합니다. 템플릿이 있는 컨트롤에는 소비자가 적용한 새 템플릿이 있을 수 있습니다. 소비자는 작업 템플릿을 다시 만들려고 하다가 기본 템플릿에서 선언된 일부 이벤트 처리를 자신도 모르게 제거할 수 있습니다. 이 경우 클래스 정의에 있는 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737) 재정의의 일부로서 처리기를 연결하여 여전히 컨트롤 수준의 이벤트 처리를 제공할 수 있습니다. 그런 다음 인스턴스화에서 컨트롤의 루트까지 버블링된 입력 이벤트를 catch할 수 있습니다.
 
 ### <a name="the-handled-property"></a>**Handled** 속성
 

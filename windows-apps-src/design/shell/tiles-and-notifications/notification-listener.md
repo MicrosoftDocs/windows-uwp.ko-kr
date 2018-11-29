@@ -8,16 +8,16 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, uwp, 알림 수신기, usernotificationlistener, 설명서, 액세스 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: c0717fb3d1db42483214e8396d436c47c23744ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833693"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983895"
 ---
 # <a name="notification-listener-access-all-notifications"></a>알림 수신기: 모든 알림에 액세스
 
-알림 수신기는 사용자의 알림에 대한 액세스를 제공합니다. 스마트 워치 및 기타 착용식 장치는 알림 수신기를 사용하여 휴대 전화의 알림을 착용식 장치로 전송할 수 있습니다. 홈 자동화 앱은 호출 수신 시 표시등이 깜박이게 만드는 등, 알림 수신기를 사용하여 알림 수신 시 특정 작업을 수행할 수 있습니다. 
+알림 수신기는 사용자의 알림에 대한 액세스를 제공합니다. 스마트 워치 및 기타 착용식 장치는 알림 수신기를 사용하여 휴대 전화의 알림을 착용식 장치로 전송할 수 있습니다. 홈 자동화 앱 깜박이게는 호출 수신 시 표시등이 만드는 등, 알림 수신 시 특정 작업을 수행 하려면 알림 수신기를 사용할 수 있습니다. 
 
 > [!IMPORTANT]
 > **1주년 업데이트 필요**: 알림 수신기를 사용하려면 SDK 15063을 대상으로 하고 빌드 14393 이상을 실행하고 있어야 합니다.
@@ -277,9 +277,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>추가/해제된 알림의 포그라운드 이벤트
 
 > [!IMPORTANT] 
-> 알려진 문제: 포그라운드 이벤트가 CPU 루프 하면 최신 버전의 Windows, 및 이전에 그 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를 것이 해결 됩니다.
+> 알려진 문제: 포그라운드 이벤트가 CPU 루프 하면 최신 버전의 Windows 및 이전에 그 전에 작동 하지 않습니다. 포그라운드 이벤트를 사용 하지 마세요. Windows에 대 한 향후 업데이트를에서는이 해결 됩니다.
 
-포그라운드 이벤트를 사용 하는 대신 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림의 받을 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
+포그라운드 이벤트를 사용 하는 대신 [단일 프로세스 모델](../../../launch-resume/create-and-register-an-inproc-background-task.md) 백그라운드 작업에 대 한 앞의 코드를 사용 합니다. 백그라운드 작업은 변경 이벤트 알림을 받도록 두 앱이 종료 되거나 실행 중인 동안 수 있습니다.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -294,4 +294,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>백그라운드 작업에서 방법 fixdelays
 
-앱을 테스트할 때 백그라운드 작업이 때로는 지연 되 고 몇 분 동안 트리거되지 않는 하다 보면 합니다. 시스템 설정으로 사용자 토고 프롬프트 지연을 해결 하려면 시스템-> 배터리-> 배터리 사용 하 여 앱-> 목록에서 앱을 찾을 선택 하 고 항상 허용 됨 "백그라운드에서."로 설정이후 부터는 백그라운드 작업이 항상 트리거하도록 내에서 약 1 초의 알림 수신 합니다.
+앱을 테스트할 때 백그라운드 작업이 때로는 지연 되 고 몇 분 동안 트리거되지 않는 알 수 있습니다. 시스템 설정 사용자 토고 프롬프트 지연을 해결 하려면 시스템-> 배터리-> 배터리 사용 하 여 앱-> 목록에서 앱을 찾을 선택 하 고 항상 허용 됨 "백그라운드에서."로 설정그러면 백그라운드 작업 항상 트리거하도록 내에서 약 1 초의 알림 수신 합니다.

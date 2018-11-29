@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7832063"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7984443"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
@@ -424,10 +424,10 @@ MakePri는 인덱서 메타데이터 파일에 리소스 팩 관련 정보를 �
 /IndexOptions(io) <OPTIONS>
 ```
 
-**옵션** 은 다음과 같은 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
+**옵션** 에 다음 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
 
-- + /-HiddenFiles(hf) 합니다. (+) 인덱싱하거나 (-)를 무시 숨김 파일 및 폴더.
-- + /-LinkedFiles(lf) 합니다. (+) 인덱싱하거나 (-)를 무시 파일 및 폴더를 연결 합니다.
+- HiddenFiles(hf) + /. (+) 인덱싱하거나 (-)를 무시 숨김 파일 및 폴더.
+- LinkedFiles(lf) + /. 인덱스 (+) 또는 무시 (-) 파일 및 폴더를 연결 합니다.
 
 ## <a name="47mappingfilemf-option"></a>/MappingFile(mf) 옵션
 
