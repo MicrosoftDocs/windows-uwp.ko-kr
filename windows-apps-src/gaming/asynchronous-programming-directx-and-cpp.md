@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 비동기 프로그래밍, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 8551a49512d4b17ab1bab704596d9e5389de3eb6
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7982782"
+ms.locfileid: "8200106"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>비동기 프로그래밍(DirectX 및 C++)
 

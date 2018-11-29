@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, 패키징, 패키지 레이아웃, 자산 패키지
 ms.localizationpriority: medium
 ms.openlocfilehash: 9241ffeb6b232c5b5be3098b114f6c7bf00bcf0d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971925"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200205"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>자산 패키지 및 패키지 접기를 사용하여 개발 
 
@@ -25,7 +25,7 @@ ms.locfileid: "7971925"
 
 패키지 접기가 개발 프로세스에 어떤 영향도 미치지 않는 방법을 이해하기 위해 먼저 자산 패키지 또는 리소스 패키지를 사용하여 앱을 여러 개의 패키지로 분할 때 발생하는 일을 알아보겠습니다. 
 
-대략적으로 앱의 파일을 아키텍처 패키지가 아닌 다른 패키지로 분할하면 코드가 실행되는 위치를 기준으로 해당 파일에 직접 액세스할 수 없습니다. 이러한 패키지가 모두 아키텍처 패키지가 설치된 다른 디렉터리에 설치되기 때문입니다. 예를 들어 게임을 만들고 있다면 및로 게임을 현지화 프랑스어 및 독일어 용으로 빌드된 x86 및 x64 컴퓨터를 다음 게임의 앱 번들 내에 이러한 앱 패키지 파일이 있어야 합니다.
+대략적으로 앱의 파일을 아키텍처 패키지가 아닌 다른 패키지로 분할하면 코드가 실행되는 위치를 기준으로 해당 파일에 직접 액세스할 수 없습니다. 이러한 패키지가 모두 아키텍처 패키지가 설치된 다른 디렉터리에 설치되기 때문입니다. 예를 들어 게임을 만들고 있다면 및로 게임을 현지화 프랑스어와 독일어 용으로 빌드된 x86 및 x64 컴퓨터를 다음 게임의 앱 번들 내에 이러한 앱 패키지 파일이 있어야 합니다.
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx

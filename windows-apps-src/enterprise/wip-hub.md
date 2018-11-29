@@ -10,11 +10,11 @@ keywords: windows 10, uwp, Windows Information Protection, 엔터프라이즈 �
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
 ms.openlocfilehash: b65da20c8931f74800f817ecba0139b14d0447ad
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7984433"
+ms.locfileid: "8199532"
 ---
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 

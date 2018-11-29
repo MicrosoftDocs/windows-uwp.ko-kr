@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, 광고, 광고, 크기, 배너
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bc59026f8e2ba9b736db8514508ca9ccfad62f8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968841"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197971"
 ---
 # <a name="supported-banner-ad-sizes"></a>지원되는 배너 광고 크기
 
-배너 광고 크기는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 지원 됩니다. 앱에서 **AdControl** 개체를 인스턴스화할 때 이러한 지원 되는 크기 중 하 나와 일치 하도록 height 및 width 속성을 설정 되어 있는지 확인 합니다.
+배너 광고 크기는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 지원 됩니다. 앱에서 **AdControl** 개체를 인스턴스화할 때 이러한 지원 되는 크기 중 하 나와 일치 하도록 height 및 width 속성을 설정 해야 합니다.
 
 * 160x600
 * 300x50

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ffb8ea583aade51ae1cc5049a423d734359722c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965158"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8199688"
 ---
 # <a name="supported-point-of-service-peripherals"></a>지원되는 서비스 지점 주변 장치
 
@@ -67,7 +67,7 @@ ms.locfileid: "7965158"
 
 
 Honeywell 통해 2D 바코드를 지원 하기 위해 ¹ Upgradable <br/>
-² 최소 펌웨어 016 (2018.01.18)가 필요 합니다. 업그레이드할 Zebra [123Scan](http://www.zebra.com/123Scan)사용 합니다. 
+² 최소 펌웨어 016 (2018.01.18)가 필요 합니다. 업그레이드 가능한 Zebra [123Scan](http://www.zebra.com/123Scan)를 사용 하 여 합니다. 
 
 
 <hr>
@@ -77,7 +77,7 @@ Honeywell 통해 2D 바코드를 지원 하기 위해 ¹ Upgradable <br/>
 |----------------|-------|------------------|
 | Innowi         | ChecOut M | Windows 10   |
 
-### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>Windows Mobile 장치를 기본 제공 바코드 스캐너
+### <a name="windows-mobile-devices-with-built-in-barcode-scanner"></a>기본 제공 바코드 스캐너를 사용 하 여 Windows Mobile 장치
 | 제조업체   | 모델 | 운영 체제 |
 |----------------|-------|------------------|
 | Bluebird       | EF400 | Windows Mobile   |

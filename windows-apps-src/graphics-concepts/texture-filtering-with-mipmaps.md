@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 474f97f32439c389be8283bb10e0c0ed716b3f69
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7982341"
+ms.locfileid: "8197807"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Mipmap을 사용하는 텍스처 필터링
 
