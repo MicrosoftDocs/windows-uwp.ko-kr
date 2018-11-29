@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c1df6a4b72b7c73cac41e66ef1074975db0d979
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967280"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8215107"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
@@ -350,7 +350,7 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-[항목 샘플 작업 만들기는 ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) Windows8.1를 위해 작성의이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 win\_unap Windows10 앱에서 소스 코드를 다시 사용 합니다.
+[항목 샘플 작업 만들기는 ThreadPool](http://go.microsoft.com/fwlink/p/?LinkID=328569) Windows8.1, 용으로 작성 된의이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 다시 win\_unap Windows10 앱에서 소스 코드를 사용 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

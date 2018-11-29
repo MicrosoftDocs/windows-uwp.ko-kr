@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 604ad25bb65486b3b388a9a03d7503b0c1ce9c03
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967384"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8214910"
 ---
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 
@@ -79,7 +79,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 대문자 **M**은 *startPoint*가 절대 좌표임을 나타내고, 소문자 **m**은 *startPoint*가 이전 점의 오프셋이거나 이전 점이 없는 경우 (0,0)임을 나타냅니다.
 
-**참고**법적 이동 명령 뒤의 다중 포인트를 지정 하는 것입니다. 선 명령을 지정한 경우처럼 해당 점으로 선이 그려집니다. 하지만 이는 권장 스타일이 아니므로, 대신 전용 선 명령을 사용하세요.
+**참고**는 이동 명령 뒤의 다중 포인트를 지정할 수 있습니다. 선 명령을 지정한 경우처럼 해당 점으로 선이 그려집니다. 하지만 이는 권장 스타일이 아니므로, 대신 전용 선 명령을 사용하세요.
 
 **그리기 명령**
 
@@ -227,7 +227,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>이동 및 그리기 명령을 생성하는 디자인 도구
 
-Blend for Visual Studio2015 Microsoft에서에서 **펜** 도구 및 다른 그리기 도구를 사용 하는 이동 사용 하는 [**경로**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 생성 및 그리기 명령을 일반적으로 합니다.
+Blend for Visual Studio2015 Microsoft에서에서 **펜** 도구 및 다른 그리기 도구를 사용 하는 이동을 사용 하는 [**경로**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 생성 및 그리기 명령을 일반적으로 합니다.
 
 컨트롤에 대한 Windows 런타임 XAML 기본 템플릿에 정의된 일부 컨트롤 파트에 기존 이동 및 그리기 명령 데이터가 있을 수 있습니다. 예를 들어 일부 컨트롤은 이동 및 그리기 명령으로 정의된 데이터가 포함된 [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)을 사용합니다.
 

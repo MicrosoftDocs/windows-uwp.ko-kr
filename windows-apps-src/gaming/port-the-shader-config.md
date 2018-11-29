@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 셰이더, direct3d, opengl
 ms.localizationpriority: medium
 ms.openlocfilehash: f061d31ca779cb4c6cbe76f163e190996a6985cb
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970067"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8203704"
 ---
 # <a name="port-the-shader-objects"></a>셰이더 개체 포팅
 
@@ -25,7 +25,7 @@ ms.locfileid: "7970067"
 
 OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다.
 
-> **참고**  Direct3D 프로젝트를 새로 작성 했습니까? 그렇지 않은 경우 지침에 따라 [UWP(유니버설 Windows 플랫폼)용 새 DirectX 11 프로젝트를 만듭니다](user-interface.md). 이 연습에서는 화면에 그리기 위한 DXGI 및 Direct3D 리소스를 만들었다고 가정합니다. 이 리소스는 템플릿으로 제공됩니다.
+> **참고**  Direct3D 프로젝트를 새로 했나요? 그렇지 않은 경우 지침에 따라 [UWP(유니버설 Windows 플랫폼)용 새 DirectX 11 프로젝트를 만듭니다](user-interface.md). 이 연습에서는 화면에 그리기 위한 DXGI 및 Direct3D 리소스를 만들었다고 가정합니다. 이 리소스는 템플릿으로 제공됩니다.
 
  
 

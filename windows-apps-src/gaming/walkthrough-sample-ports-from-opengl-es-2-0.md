@@ -4,11 +4,11 @@ description: 이 항목에서는 각각 복잡한 정도가 다른 다양한 Ope
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aefd725c1a73bac3212bf80036462c9bcb7dcc9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7977230"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8189567"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a>OpenGL ES 2.0에서의 연습 샘플 포팅
 

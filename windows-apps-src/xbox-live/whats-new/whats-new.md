@@ -1,18 +1,16 @@
 ---
 title: Xbox Live에 대 한 새로운 기능
-author: PhillipLucas
 description: Xbox Live SDK에 대 한 새로운 기능
-ms.author: aablackm
 ms.date: 10/23/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: bf536298f075535bf9f5e5198573a87db33dd2a4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 33e5b6afbf0d60679bfce1789be2d965fd881f1c
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7554161"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8217902"
 ---
 # <a name="whats-new-for-xbox-live"></a>Xbox Live의 새로운 기능
 또한 모든 Xbox Live Api에 최근 코드 변경 내용을 보려면 [Xbox Live API GitHub 커밋 기록](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인할 수 있습니다.
@@ -44,11 +42,11 @@ C Api 일부 Xbox Live 기능을 사용할 수 있습니다. 새로운 API 계�
 
 #### <a name="in-game-clubs"></a>게임의 클럽
 
-이제 개발자 "게임의 클럽"을 만들 수 있습니다. 게임의 클럽 개발자가 완전히 사용자 지정할 수 있으며 내부와 외부 게임에서 사용할 수 있다는 점에서 표준 Xbox 클럽에서 다릅니다. 게임 개발자가 신속 하 게 모든 종류의 고유한 요구 사항에 맞는 팀, 부족, 명, 길드 등과 같은 게임 내에서 영구 그룹 시나리오를 빌드하는 데 사용할 수 있습니다.
+이제 개발자 "게임의 클럽"을 만들 수 있습니다. 게임의 클럽 표준 Xbox 클럽 점에서 다릅니다 개발자가 완전히 사용자 지정할 수 있으며 내부와 외부 게임에서 사용할 수 있습니다. 게임 개발자가 신속 하 게 모든 종류의 고유한 요구 사항에 맞는 팀, 부족, 명, 길드 등과 같은 게임 내에서 영구 그룹 시나리오를 빌드하는 데 사용할 수 있습니다.
 
-피드 LFG, 및 Mixer 자유롭게 Xbox 콘솔, PC, 또는 iOS/Android 장치를 채팅 같은 클럽 기능을 사용 하 여 게임을 서로 연결 하는 Xbox live 멤버를 유지 하는 모든 Xbox 환경에서 외부 게임에서 게임의 클럽 액세스할 수 있습니다.
+피드 LFG, 및 Mixer 자유롭게 Xbox 콘솔, PC, 또는 iOS/Android 장치를 채팅 같은 클럽 기능을 사용 하 여 게임을 서로 연결 하는 Xbox live 멤버를 유지 하는 모든 Xbox 환경에서 게임 외부 게임의 클럽 액세스할 수 있습니다.
 
-Api는 작성 및 게임 내에서 직접 게임의 클럽을 관리할 수 있습니다. 이러한 Api는 xbox::services::clubs 네임 스페이스에 존재 합니다.
+Api는 만들기 및 관리 게임 내에서 직접 게임의 클럽 수입니다. 이러한 Api는 xbox::services::clubs 네임 스페이스에 존재 합니다.
 
 ## <a name="july-2017"></a>2017년 7월
 
@@ -60,9 +58,9 @@ Api는 작성 및 게임 내에서 직접 게임의 클럽을 관리할 수 있�
 이러한 새 토너먼트 Api는 다음과 같은 시나리오를 사용 합니다.
 
 * 현재 타이틀에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
-* 서비스에서 한 토너먼트에 대 한 세부 정보를 검색 합니다.
+* 서비스에서는 토너먼트에 대 한 세부 정보를 검색 합니다.
 * 토너먼트에 대 한 팀의 목록을 검색 서비스를 쿼리 합니다.
-* 서비스에서 한 토너먼트에 대 한 팀에 대 한 세부 정보를 검색 합니다.
+* 서비스에서는 토너먼트에 대 한 팀에 대 한 세부 정보를 검색 합니다.
 * 실시간으로 활동 (RTA) 구독을 사용 하 여 토너먼트 및 팀에 변경 내용을 추적 합니다.
 
 ## <a name="june-2017"></a>2017년 6월
@@ -81,7 +79,7 @@ Api는 작성 및 게임 내에서 직접 게임의 클럽을 관리할 수 있�
 
 #### <a name="bug-fixes"></a>버그 수정
 
-* 여러 버그가 수정 되었습니다. 전체 목록은 [GitHub 커밋 내역](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인 합니다.
+* 다양 한 버그가 수정 되었습니다. 전체 목록은 [GitHub 커밋 내역](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인 합니다.
 
 ## <a name="may-2017"></a>2017년 5월
 
@@ -89,11 +87,11 @@ Api는 작성 및 게임 내에서 직접 게임의 클럽을 관리할 수 있�
 
 #### <a name="multiplayer"></a>멀티 플레이
 
-* 이제 검색 핸들을 쿼리 응답에 사용자 지정 세션 속성이 포함 됩니다.
+* 이제 검색 핸들을 쿼리 응답에는 사용자 지정 세션 속성이 포함 됩니다.
 
 #### <a name="bug-fixes"></a>버그 수정
 
-* 고정 "잘못 된 json" 대신 유효한 HTTP 오류 코드를 반환 합니다.
+* 유효한 HTTP 오류 코드 대신 반환 "잘못 된 json" 고정 합니다.
 
 ## <a name="april-2017"></a>2017년 4월
 
@@ -101,18 +99,18 @@ Api는 작성 및 게임 내에서 직접 게임의 클럽을 관리할 수 있�
 
 #### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-Xbox Live Api는 유니버설 Windows 플랫폼 (UWP) 및 Xbox One 모두 제목에 대 한 Visual Studio 2017을 지원 하도록 업데이트 되었습니다.
+Xbox Live Api 유니버설 Windows 플랫폼 (UWP) 및 Xbox One 모두 제목에 대 한 Visual Studio 2017을 지원 하도록 업데이트 되었습니다.
 
 #### <a name="tournaments"></a>토너먼트
 
-새 Api가 토너먼트 지원 하기 위해 추가 되었습니다. 이제 사용할 수는 `xbox::services::tournaments::tournament_service` 타이틀에서 토너먼트 서비스에 액세스 하는 클래스입니다.
+새 Api가 토너먼트 지원 하기 위해 추가 되었습니다. 이제 사용할 수는 `xbox::services::tournaments::tournament_service` 타이틀에서 토너먼트 서비스에 액세스 하는 클래스.
 
 이러한 새 토너먼트 Api는 다음과 같은 시나리오를 사용 합니다.
 
 * 현재 타이틀에 대 한 모든 기존 토너먼트 찾으려면 서비스를 쿼리 합니다.
-* 서비스에서 한 토너먼트에 대 한 세부 정보를 검색 합니다.
+* 서비스에서는 토너먼트에 대 한 세부 정보를 검색 합니다.
 * 토너먼트에 대 한 팀의 목록을 검색 서비스를 쿼리 합니다.
-* 서비스에서 한 토너먼트에 대 한 팀에 대 한 세부 정보를 검색 합니다.
+* 서비스에서는 토너먼트에 대 한 팀에 대 한 세부 정보를 검색 합니다.
 * 실시간으로 활동 (RTA) 구독을 사용 하 여 토너먼트 및 팀에 변경 내용을 추적 합니다.
 
 ## <a name="march-2017"></a>2017년 3월
@@ -123,7 +121,7 @@ Xbox Live Api는 유니버설 Windows 플랫폼 (UWP) 및 Xbox One 모두 제목
 
 간소화 된 통계 API가 도입 되었습니다.  일반적으로 해당 통계 규칙 XDP 또는 파트너 센터에서 정의 하는 이벤트를 보내는 했으며 클라우드에서 시작 값을 업데이트는 이러한.  우리 통계 2013으로이 모델을 참조 하세요.
 
-통계 2017을 사용 하 여 타이틀 통계 값의 컨트롤에서 이제 됩니다.  단순히 가장 최근의 시작 값을 사용 하 여 API를 호출 하 고 이벤트에 대 한 필요 없이 직접 서비스 보내집니다 합니다.  이 사용 하는 새 `StatsManager` API를에 더 많은 [플레이어 통계](../leaderboards-and-stats-2017/player-stats.md) 를 읽을 수 있습니다
+통계 2017을 사용 하 여 타이틀 통계 값의 컨트롤에서 이제 됩니다.  가장 최근의 시작 값을 사용 하 여 API를 호출 하면 및 이벤트에 대 한 필요 없이 직접 서비스 보내집니다.  이 사용 하 여 새 `StatsManager` API를에 더 많은 [플레이어 통계](../leaderboards-and-stats-2017/player-stats.md) 를 읽을 수 있습니다
 
 #### <a name="github"></a>GitHub
 
@@ -137,14 +135,14 @@ Xbox Live 크리에이터 스 프로그램은 개발자에 게 더 광범위 하
 
 ### <a name="documentation"></a>설명서
 
-다음 새 문서를 가지 있습니다.
+다음 새 문서 가지가 있습니다.
 
 | 문서 | 설명 |
 |---------|-------------|
 |[Xbox Live 서비스 구성](../xbox-live-service-configuration.md) | Xbox Live 타이틀에 대 한 서비스 구성에 대 한 업데이트 된 정보
-| [구성 Xbox Live Unity의](../get-started-with-creators/configure-xbox-live-in-unity.md) | Xbox Live 크리에이터 스 프로그램 개발자 용 Unity 설치에 대 한 새로운 정보 |
+| [구성 Xbox Live Unity에서](../get-started-with-creators/configure-xbox-live-in-unity.md) | Xbox Live 크리에이터 스 프로그램 개발자 용 Unity 설치에 대 한 새로운 정보 |
 | [Xbox Live 샌드박스](../xbox-live-sandboxes.md) | Xbox Live 샌드박스 및 콘텐츠 격리 하는 간단한 가이드 |
-| [Xbox Live 테스트 계정](../xbox-live-test-accounts.md) | 방법에 대 한 정보 테스트 계정 작업 및 파트너 센터에서이 생성 하는 방법 |
+| [Xbox Live 테스트 계정](../xbox-live-test-accounts.md) | 직장 계정 및 파트너 센터에서 만드는 방법에는 방법에 대 한 정보 테스트 |
 
 ## <a name="archived"></a>보관
 

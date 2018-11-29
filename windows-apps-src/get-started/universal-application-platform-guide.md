@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
 ms.openlocfilehash: c174bb81deb84d3638a948555e045168c89f02a7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971349"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8195425"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -35,9 +35,9 @@ UWP 앱은 마이크, 위치, 웹캠, USB 장치, 파일 및 등에 대한 액�
 
 ## <a name="a-common-api-surface-across-all-devices"></a>모든 디바이스에서의 공통 API 표면
 
-Windows10는 유니버설 Windows 플랫폼 (UWP) Windows10 실행 되는 모든 장치에 공통 앱 플랫폼을 제공 하는 소개 합니다. UWP 핵심 API는 모든 Windows 장치에서 같습니다. 앱이 핵심 Api만 사용 하는 경우 데스크톱 PC, Xbox, 혼합 현실 헤드셋을 대상으로 하 고 등 했는지 여부에 관계 없이 모든 Windows10 장치에서 실행 됩니다.
+Windows10 유니버설 Windows 플랫폼 (UWP), Windows10를 실행 하는 모든 장치에 공통 앱 플랫폼을 제공 하는 소개 합니다. UWP 핵심 API는 모든 Windows 장치에서 같습니다. 앱이 핵심 Api만 사용 하는 경우 데스크톱 PC, Xbox, 혼합 현실 헤드셋을 대상으로 하 고 등 했는지 여부에 관계 없이 모든 Windows10 장치에서 실행 됩니다.
 
-C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 Api는 모든 Windows10 장치에서 구현 됩니다.
+C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 Api는 모든 Windows10 디바이스에서 구현 됩니다.
 
 ## <a name="extension-sdks-expose-the-unique-capabilities-of-specific-device-types"></a>확장 SDK는 특정 디바이스 유형의 고유한 기능을 노출
 
@@ -149,10 +149,10 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. 흐름 디자인 시
 - Windows 10 사용자를 위한 최신 환경을 기존 데스크톱 앱에 추가하고 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하여 이를 Microsoft Store에 배포하는 방법을 알아보세요.
 
 ## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Windows 런타임 Api에 유니버설 Windows 플랫폼의 관계
-유니버설 Windows 플랫폼 (UWP) 앱을 빌드할 경우 많은 거리 및 용어 "유니버설 Windows 플랫폼 (UWP)" 및 "Windows 런타임 (WinRT)" 또는 더 동일한 것으로 간주 밖의 편의 얻을 수 있습니다. 하지만 ** 기술의 내부적 모양과 결정 방금 차이 아이디어 간에 수 있습니다. 에 대 한 싶은 경우, 다음이 마지막 섹션 적합 합니다.
+유니버설 Windows 플랫폼 (UWP) 앱을 빌드할 경우 많은 거리와 차이가 동의어로 "유니버설 Windows 플랫폼 (UWP)" 및 "Windows 런타임 (WinRT)" 용어 취급 밖의 편의 얻을 수 있습니다. 하지만 ** 기술의 내부적 모양과 결정 방금 차이 아이디어 간에 수 있습니다. 궁금 하는 경우 다음이 마지막 섹션 적합 합니다.
 
-Windows 런타임 및 WinRT Api는 Windows Api의 발전 된 형태입니다. 원래 Windows 평면을 C-스타일 Win32 Api를 통해 프로그래밍 되었습니다. COM Api ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) 을 중요 예제 되 고)에 추가 되었습니다. Windows Forms, WPF,.NET, 및 관리 되는 언어 가져온 자신만의 Windows 앱 및 API 기술의 자신의 버전을 작성 합니다. Windows 런타임 이면 내부적으로 COM.의 다음 단계 실제 응용 프로그램 이진 인터페이스 (ABI) 계층에서 COM에 표시 됩니다. 하지만 Windows 런타임 여러 다른 프로그래밍 언어로 멋진 범위에서 호출 되도록 설계 되었습니다. 및 해당 언어의 각 더욱 자연스럽 게 되는 방식으로 호출할 수 있습니다. 이 위해 Windows 런타임에 대 한 액세스를 통해 언어 프로젝션 일명 사용할 활성화 됩니다. Windows 런타임 언어 프로젝션에 C#, Visual Basic로, 표준 c + +, JavaScript, 등에 있습니다. 또한 적절 하 게 패키지 한 번 ( [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)참조)을 멋진 다양 한 응용 프로그램 모델 중 하나에 내장 된 앱에서 WinRT Api를 호출할 수 있습니다: Win32,.NET, WinForms 및 WPF 합니다.
+Windows 런타임 및 WinRT Api는 Windows Api의 발전 된 형태입니다. 원래 Windows 평면을 C-스타일 Win32 Api를 통해 프로그래밍 되었습니다. COM Api ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) 을 중요 예제 되 고)에 추가 되었습니다. Windows Forms, WPF,.NET 및 관리 되는 언어 상태가 자신만의 Windows 앱 및 API 기술의 자신의 버전을 작성 합니다. Windows 런타임 이면 내부적으로 COM.의 다음 단계 실제 응용 프로그램 이진 인터페이스 (ABI) 계층에서 COM에 표시 됩니다. 하지만 Windows 런타임 여러 다른 프로그래밍 언어로 멋진 범위에서 호출 되도록 설계 되었습니다. 및 해당 언어의 각 더욱 자연스럽 게 되는 방식으로 호출할 수 있습니다. 이 위해 Windows 런타임에 대 한 액세스를 통해 언어 프로젝션 일명 사용할 활성화 됩니다. Windows 런타임 언어 프로젝션에 C#, Visual Basic로, 표준 c + +, JavaScript, 등에 있습니다. 또한 적절 하 게 패키지 한 번 ( [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)참조)을 멋진 다양 한 응용 프로그램 모델 중 하나에 내장 된 앱에서 WinRT Api를 호출할 수 있습니다: Win32,.NET, WinForms 및 WPF 합니다.
 
-및 물론, UWP 앱에서 WinRT Api를 호출할 수 있습니다. UWP는 Windows 런타임 기반 응용 프로그램 모델입니다. 기술적으로 UWP 응용 프로그램 모델을 기반으로 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)하지만 프로그래밍 언어 선택에 따라 해당 세부 정보, 숨겨져 있을 수 있습니다. 값 제안의 관점에서이 항목에 설명 된 대로 UWP 있지 않다가 선택 하면 Microsoft Store에 게시 하 고 수 있는 멋진 다양 한 장치 폼 팩터 중 하나에서 실행 하는 단일 바이너리를 작성 합니다. UWP 앱의 장치 범위를 호출 하는 응용 프로그램을 제한 하는 또는 조건부로 호출 UWP Api의 하위 집합에 따라 달라 집니다.
+및 물론, UWP 앱에서 WinRT Api를 호출할 수 있습니다. UWP는 Windows 런타임 기반 응용 프로그램 모델입니다. 기술적으로 UWP 응용 프로그램 모델을 기반으로 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)하지만 프로그래밍 언어 선택에 따라, 세부 정보를 숨길 수 있습니다. 값 제안의 관점에서이 항목에 설명 된 대로 UWP를 선택 하면 Microsoft Store에 게시 하 고 수 있는 좋은 다양 한 장치 폼 팩터 중 하나에서 실행 하는 단일 바이너리를 작성 하는 합니다. UWP 앱의 장치 범위를 호출 하는 응용 프로그램을 제한 하는 또는 조건부로 호출 UWP Api의 하위 집합에 따라 달라 집니다.
 
-다행히이 섹션에서는 기본적인 Windows 런타임 Api 및 메커니즘 및 유니버설 Windows 플랫폼의 비즈니스 가치 기술 간의 차이점을 설명 하는 완료 했습니다.
+지금까지이 섹션에서는 기본적인 Windows 런타임 Api 및 메커니즘 및 유니버설 Windows 플랫폼의 비즈니스 가치 기술 간의 차이점을 설명 하는 완료 했습니다.
