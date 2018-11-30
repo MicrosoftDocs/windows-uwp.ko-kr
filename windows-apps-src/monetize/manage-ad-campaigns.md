@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7990446"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211008"
 ---
 # <a name="manage-ad-campaigns"></a>광고 캠페인 관리
 

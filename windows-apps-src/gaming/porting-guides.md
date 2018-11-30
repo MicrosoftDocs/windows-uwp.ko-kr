@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 포팅, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 6eaa057c700c69621fd66090618ca7c945522d57
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993379"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211609"
 ---
 # <a name="game-porting-guides"></a>게임 포팅 가이드
 

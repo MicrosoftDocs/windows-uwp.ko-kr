@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0194ccba43e2ba5270b9ff8eacf045ca140af6cb
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7979974"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212633"
 ---
 # <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
