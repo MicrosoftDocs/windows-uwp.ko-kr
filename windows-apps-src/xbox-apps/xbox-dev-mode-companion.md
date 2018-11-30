@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 ms.localizationpriority: medium
 ms.openlocfilehash: b04272c99d9062be2eaea27aa5b107e6078872f8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967785"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217815"
 ---
 # <a name="xbox-dev-mode-companion"></a>Xbox 개발자 모드 도우미
 

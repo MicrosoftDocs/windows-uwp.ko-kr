@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 삭제, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 837cbc19268a88be986068f4a5e60002a1eb55e2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964733"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217704"
 ---
 # <a name="delete-an-add-on"></a>추가 기능 삭제
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 제품 또는 IAP) 삭제 합니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 바로 구매 또는 IAP) 삭제 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

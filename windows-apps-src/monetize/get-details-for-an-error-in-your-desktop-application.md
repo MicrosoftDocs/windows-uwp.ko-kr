@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보, 데스크톱 응용 프로그램
 ms.localizationpriority: medium
 ms.openlocfilehash: 1451d0196b1bffa6b49f44c556502c1e086aeff0
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7986637"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217730"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a>데스크톱 응용 프로그램에서 오류에 대한 세부 정보 가져오기
 

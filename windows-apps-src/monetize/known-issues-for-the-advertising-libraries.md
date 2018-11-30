@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b32b390cc4ca6af5b03a22e30323ded5aeac516
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972349"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217288"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
@@ -40,7 +40,7 @@ ms.locfileid: "7972349"
 
 광고를 볼 수 없는 이유는 네트워크 오류를 포함하여 다양합니다. 다양한 이유는 다음과 같습니다.
 
-* 앱 코드의 **AdControl** 의 크기 보다 크거나 작은 크기를 사용 하 여 파트너 센터에서 광고 단위를 선택 합니다.
+* 앱의 코드에서 **AdControl** 의 크기 보다 크거나 작은 크기를 사용 하 여 파트너 센터에서 광고 단위를 선택 합니다.
 
 * 라이브 앱을 실행할 때 광고 단위 ID에 대해 [테스트 모드 값](set-up-ad-units-in-your-app.md#test-ad-units)을 사용하는 경우 광고가 표시되지 않습니다.
 
