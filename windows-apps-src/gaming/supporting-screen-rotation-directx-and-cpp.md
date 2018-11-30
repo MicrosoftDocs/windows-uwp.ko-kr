@@ -1,23 +1,23 @@
 ---
 title: 화면 방향 지원(DirectX 및 C++)
-description: 여기에서는 Windows10 디바이스의 그래픽 하드웨어가 효율적 이면 서 효과적으로 사용 되도록 UWP DirectX 앱에서 화면 회전을 처리 하기 위한 모범 사례 설명 하겠습니다.
+description: 여기에서는 Windows10 디바이스의 그래픽 하드웨어가 효율적 이면 서 효과적으로 사용 되도록 UWP DirectX 앱에서 화면 회전을 처리 하는 것에 대 한 유용한 설명 하겠습니다.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 화면 방향, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eb86cfaefe7112d408a17a54bf4f4b482c218be8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965340"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205895"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>화면 방향 지원(DirectX 및 C++)
 
 
 
-[**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리할 때 UWP(유니버설 Windows 플랫폼) 앱은 여러 화면 방향을 지원할 수 있습니다. 여기에서는 Windows10 디바이스의 그래픽 하드웨어가 효율적 이면 서 효과적으로 사용 되도록 UWP DirectX 앱에서 화면 회전을 처리 하기 위한 모범 사례 설명 하겠습니다.
+[**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리할 때 UWP(유니버설 Windows 플랫폼) 앱은 여러 화면 방향을 지원할 수 있습니다. 여기에서는 Windows10 디바이스의 그래픽 하드웨어가 효율적 이면 서 효과적으로 사용 되도록 UWP DirectX 앱에서 화면 회전을 처리 하는 것에 대 한 유용한 설명 하겠습니다.
 
 시작하기 전에 그래픽 하드웨어는 장치 방향에 관계없이 항상 같은 방향으로 픽셀 데이터를 출력한다는 점을 기억해 두세요. Windows10 장치 (특정 유형의 센서 또는 소프트웨어 토글)는 현재 디스플레이 방향을 확인 하 고 사용자가 디스플레이 설정을 변경할 수 있도록 합니다. 이 Windows10 인해 자체 있는지 "수직" 장치의 방향에 따라 이미지의 회전을 처리 합니다. 기본적으로 앱은 방향에서 달라진 점(예: 창 크기)이 있다는 알림을 받게 됩니다. 이 경우 Windows10 최종 디스플레이 대 한 이미지를 즉시 회전 합니다. 네 개의 특정 화면 방향 (나중에 설명) 중 세 가지 Windows10를 사용 하 여 추가적인 그래픽 리소스와 계산 최종 이미지를 표시 합니다.
 
@@ -25,14 +25,14 @@ UWP DirectX 앱에서 [**DisplayInformation**](https://msdn.microsoft.com/librar
 
 Windows10 네 가지 특정 디스플레이 방향 모드를 정의합니다.
 
--   가로-기본 디스플레이 방향에 대 한 Windows10, 및 기준 또는 각도 (0도) 회전에 대 한 것으로 간주 됩니다.
+-   가로-기본 디스플레이 방향에 대 한 Windows10, 및 기준 또는 각도 (0도) 회전을 위한 것으로 간주 됩니다.
 -   세로 - 디스플레이가 시계 방향으로 90도(또는 시계 반대 방향으로 270도) 회전된 상태입니다.
 -   가로, 대칭 이동 - 디스플레이가 180도 회전된 상태입니다(위아래가 뒤집힘)
 -   세로, 대칭 이동 - 디스플레이가 시계 방향으로 270도(또는 시계 반대 방향으로 90도) 회전된 상태입니다.
 
-다른 디스플레이 방향을 회전 Windows10 내부적으로 새 방향으로 그려지는 이미지에 맞게 회전 작업을 수행 하 고 립 이미지가 화면에 표시 합니다.
+다른 디스플레이 방향을 회전 Windows10 내부적으로 새 방향으로 그려지는 이미지에 맞게 회전 작업을 수행 하 고는 립 이미지가 화면에 표시 합니다.
 
-또한 Windows10 한 방향에서 이동 하는 경우 원활한 사용자 경험을 만들려면 자동 전환 애니메이션을 표시 합니다. 디스플레이 방향이 전환될 때 사용자에게는 이러한 전환이 표시된 화면 이미지의 고정된 확대/축소 및 회전 애니메이션으로 표시됩니다. 시간은 Windows10 하 여 새 방향에서 레이아웃에 대 한 앱에 할당 됩니다.
+또한 Windows10 부드러운 사용자 환경이 생성 될 때 한 방향에서 이동에 대 한 자동 전환 애니메이션을 표시 합니다. 디스플레이 방향이 전환될 때 사용자에게는 이러한 전환이 표시된 화면 이미지의 고정된 확대/축소 및 회전 애니메이션으로 표시됩니다. 시간은 Windows10 하 여 새 방향에서 레이아웃에 대 한 앱에 할당 됩니다.
 
 화면 방향의 변화를 처리하는 일반적인 프로세스는 다음과 같습니다.
 
@@ -330,7 +330,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 0.5f를 추가하여 가장 가까운 정수 값으로 반올림합니다.
 
-부연하지만 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 좌표는 항상 DIP로 정의됩니다. Windows10 및 이전 버전의 Windows에 대 한 DIP는 1/96 인치의 및 *최대*OS의 정의에 맞춰집니다으로 정의 됩니다. 디스플레이 방향이 세로 모드로 회전되면 앱은 **CoreWindow**의 너비와 높이를 대칭 이동하며 렌더링 대상 크기(경계)가 그에 따라 변경되어야 합니다. Direct3D의 좌표는 항상 물리적 픽셀로 되어 있으므로 이러한 값을 Direct3D에 전달하여 스왑 체인을 설정하기 전에 **CoreWindow**의 DIP 값을 정수 픽셀 값으로 변환해야 합니다.
+부연하지만 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 좌표는 항상 DIP로 정의됩니다. Windows10 및 이전 버전의 Windows에 대 한 DIP는 1/96 인치, 및 *최대*OS의 정의에 맞춰집니다으로 정의 됩니다. 디스플레이 방향이 세로 모드로 회전되면 앱은 **CoreWindow**의 너비와 높이를 대칭 이동하며 렌더링 대상 크기(경계)가 그에 따라 변경되어야 합니다. Direct3D의 좌표는 항상 물리적 픽셀로 되어 있으므로 이러한 값을 Direct3D에 전달하여 스왑 체인을 설정하기 전에 **CoreWindow**의 DIP 값을 정수 픽셀 값으로 변환해야 합니다.
 
 프로세스 측면에서 볼 때 단순히 스왑 체인 크기를 조정하는 경우보다 좀 더 많은 작업을 수행하게 됩니다. 즉, 표시를 위해 이미지를 작성하기 전에 이미지의 Direct2D 및 Direct3D 구성 요소를 실제로 회전하고 결과를 새 방향으로 렌더링했음을 스왑 체인에 알립니다. 다음에서는 **DX::DeviceResources::CreateWindowSizeDependentResources**에 대한 코드 예제에 표시된 대로 이 프로세스를 보다 자세히 설명합니다.
 
@@ -345,7 +345,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
     -   가로, 대칭 이동(DXGI\_MODE\_ROTATION\_ROTATE180)
     -   세로, 대칭 이동(DXGI\_MODE\_ROTATION\_ROTATE90)
 
-    디스플레이 방향을 결정 하기 위한 (예: [**:: Orientationchanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)결과) Windows10에서 제공 하는 데이터를 토대로 올바른 행렬이 선택 하 고 화면의 각 픽셀 (Direct2D) 또는 꼭 짓 점 좌표 곱해 져 있어야 합니다. (Direct3D)는 장면에서 효과적으로 회전 시킵니다 화면 방향에 맞춥니다. (Direct2D에서는 화면 원점이 왼쪽 위 구석으로 정의되지만 Direct3D에서는 원점이 창의 논리적 중심으로 정의됩니다.)
+    디스플레이 방향을 결정 하기 위한 (예: [**:: Orientationchanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)결과) Windows10에서 제공 하는 데이터를 토대로 올바른 행렬이 선택 하 고 화면의 각 픽셀 (Direct2D) 또는 꼭 짓 점 좌표 곱해 져 있어야 합니다. (Direct3D)는 장면에서 효과적으로 회전 방향 화면에 정렬 합니다. (Direct2D에서는 화면 원점이 왼쪽 위 구석으로 정의되지만 Direct3D에서는 원점이 창의 논리적 중심으로 정의됩니다.)
 
 > **참고**  를 정의 하는 방법과 회전에 사용 되는 2 차원 변환에 대 한 자세한 내용은 [화면 회전 (2 차원)에 대 한 정의 행렬](#appendix-a-applying-matrices-for-screen-rotation-2-d)을 참조 하세요. 회전에 사용되는 3차원 변환에 대한 자세한 내용은 [화면 회전을 위한 행렬 정의(3차원)](#appendix-b-applying-matrices-for-screen-rotation-3-d)를 참조하세요.
 

@@ -14,25 +14,25 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9edf7bcb2ad76ed02887dfffc3e72d0d47f5aa1a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971451"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8201307"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
-메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 명령 또는 옵션 목록을 표시합니다. 메뉴 플라이 아웃을 사용 하 여 단일, 인라인 메뉴를 표시 합니다. 앱 창의 맨 위에 있는 일반적으로 가로 행에서 일련의 메뉴를 표시 하려면 메뉴 모음을 사용 합니다. 각 메뉴 메뉴 항목 및 하위 메뉴에 있을 수 있습니다.
+메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 명령 또는 옵션 목록을 표시합니다. 메뉴 플라이 아웃을 사용 하 여 단일, 인라인 메뉴를 표시 합니다. 메뉴 모음을 사용 하 여 앱 창의 위쪽에 일반적으로 가로 행에서 일련의 메뉴를 표시 합니다. 각 메뉴 메뉴 항목 및 하위 메뉴에 있을 수 있습니다.
 
 ![일반적인 상황에 맞는 메뉴 예](images/contextmenu_rs2_icons.png)
 
 | **Windows UI 라이브러리 가져오기** |
 | - |
-| 이 컨트롤은 Windows UI 라이브러리 새 컨트롤 및 UWP 앱에 대 한 UI 기능을 포함 하는 NuGet 패키지의 일부로 포함 됩니다. 설치 지침을 비롯 한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조 하세요. |
+| 이 컨트롤은 Windows UI 라이브러리 새 컨트롤 및 UWP 앱에 대 한 UI 기능을 포함 하는 NuGet 패키지의 일부로 포함 합니다. 설치 지침을 비롯 한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조 하세요. |
 
 | **플랫폼 Api** | **Windows UI 라이브러리 Api** |
 | - | - |
-| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [메뉴 모음 클래스](/uwp/api/windows.ui.xaml.controls.menubar) [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout) [FlyoutBase.AttachedFlyout 속성](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [메뉴 모음 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [메뉴 모음 클래스](/uwp/api/windows.ui.xaml.controls.menubar) [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout 속성](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout) | [메뉴 모음 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -42,15 +42,15 @@ ms.locfileid: "7971451"
 
 ### <a name="menubar-vs-menuflyout"></a>메뉴 모음 및 MenuFlyout
 
-캔버스에서 UI 요소에 연결 된 플라이 아웃에 메뉴를 표시 하려면 메뉴 항목을 호스트 하는 MenuFlyout 컨트롤을 사용 합니다. 일반적인 메뉴 또는 상황에 맞는 메뉴로 메뉴 플라이 아웃을 호출할 수 있습니다. 메뉴 플라이 아웃 단일 최상위 메뉴 (및 선택적 하위 메뉴)를 호스팅합니다.
+캔버스에서 UI 요소에 연결 된 플라이 아웃에 메뉴를 표시 하려면 호스트 메뉴 항목을 MenuFlyout 컨트롤을 사용 합니다. 일반 메뉴 또는 상황에 맞는 메뉴 메뉴 플라이 아웃을 호출할 수 있습니다. 메뉴 플라이 아웃 단일 최상위 메뉴 (및 선택적 하위 메뉴)를 호스트합니다.
 
-가로 행에 일련의 여러 최상위 수준에 맞는 메뉴를 표시 하려면 메뉴 모음을 사용 합니다. 일반적으로 앱 창의 맨 위에 있는 메뉴 모음을 배치 합니다.
+가로 행에 일련의 여러 최상위 메뉴를 표시 하려면 메뉴 모음을 사용 합니다. 일반적으로 앱 창의 맨 위에 있는 메뉴 모음을 배치 합니다.
 
 ### <a name="menubar-vs-commandbar"></a>CommandBar 및 메뉴 모음
 
-메뉴 모음과 CommandBar 둘 다은 사용자에 게 명령을 노출 하는 데 사용할 수 있는 표면을 나타냅니다. 메뉴 모음에 더 많은 조직이 나 허용 되는 CommandBar 보다 그룹화 할 수 있는 앱에 대 한 명령 집합을 노출 하는 빠르고 간단한 방법을 제공 합니다.
+메뉴 모음과 CommandBar 둘 다 사용자에 게 명령을 노출 하는 데 사용할 수 있는 표면을 나타냅니다. 메뉴 모음에는 더 많은 조직 또는 허용 되는 CommandBar 보다 그룹화 할 수 있는 앱에 대 한 명령 집합을 노출 하는 빠르고 간단한 방법을 제공 합니다.
 
-메뉴 모음 CommandBar와 함께에서 사용할 수도 있습니다. 자주 사용 되는 명령을 강조 표시 하는 명령 및 CommandBar의 대부분을 제공 하는 메뉴 모음을 사용 합니다.
+메뉴 모음 CommandBar와 함께에서 사용할 수도 있습니다. 자주 사용 되는 명령을 강조 표시 하는 명령을과 CommandBar 제공 하는 메뉴 모음을 사용 합니다.
 
 ## <a name="examples"></a>예
 
@@ -70,14 +70,14 @@ ms.locfileid: "7971451"
 
 ## <a name="menus-vs-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
-메뉴 및 상황에 맞는 메뉴에는 모양과 포함할 수 있는 항목에 비슷합니다. 실제로 동일한 컨트롤 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)을 만들기 위해 사용할 수 있습니다. 차이점은 사용자가 액세스할 수 있도록 하는 방법입니다.
+메뉴 및 상황에 맞는 메뉴는 모양과 포함할 수 있는 항목 및 유사 합니다. 실제로 동일한 컨트롤인 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)을 만들기 위해 사용할 수 있습니다. 차이점은 사용자가 액세스할 수 있도록 하는 방법입니다.
 
 메뉴 또는 상황에 맞는 메뉴는 언제 사용해야 하나요?
 
 - 호스트 요소가 단추이거나 또는 주 역할이 추가 명령을 제공하는 일부 다른 명령 요소인 경우 메뉴를 사용합니다.
 - 호스트 요소가 주요 목적과 형식이 다른 일부 요소를 사용하는 경우(예: 텍스트 또는 이미지 표시) 상황에 맞는 메뉴를 사용합니다.
 
-예를 들어, 필터링 및 정렬 목록에 대 한 옵션을 제공 하는 메뉴 단추에 사용 합니다. 이 시나리오에서 단추 컨트롤의 주요 목적은 메뉴에 대한 액세스를 제공하는 것입니다.
+예를 들어, 필터링 및 정렬 목록에 대 한 옵션을 제공 하기 위해 단추에 메뉴를 사용 합니다. 이 시나리오에서 단추 컨트롤의 주요 목적은 메뉴에 대한 액세스를 제공하는 것입니다.
 
 ![메일 메뉴의 예](images/Mail_Menu.png)
 
@@ -138,7 +138,7 @@ ms.locfileid: "7971451"
 - [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx)—옵션 켜기 또는 끄기
 - [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx)—메뉴 항목을 시각적으로 구분
 
-이 예제에서는 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030) 을 만들고 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 사용할 수 있는 대부분의 컨트롤을 사용 하 여 MenuFlyout 상황에 맞는 메뉴로 표시 합니다.
+이 예제에서는 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030) 만들고 대부분의 컨트롤에서 사용할 수 있는 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 사용 하 여 MenuFlyout 상황에 맞는 메뉴로 표시 합니다.
 
 ````xaml
 <Rectangle
@@ -216,9 +216,9 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-menu-bar"></a>메뉴 모음 만들기
 
-> **미리 보기**: [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 나 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)메뉴 모음에 필요 합니다.
+> **미리 보기**: 메뉴 모음에 [최신 Windows 10 Insider Preview 빌드 및 SDK](https://insider.windows.com/for-developers/) 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)필요 합니다.
 
-동일한 요소를 사용 하 여 같이 메뉴 플라이 아웃 메뉴 모음에서 메뉴를 만들 수 있습니다. 그러나 MenuFlyoutItem 개체를 MenuFlyout에 그룹화 하는 대신 그룹화 있습니다 MenuBarItem 요소에서. 각 MenuBarItem 최상위 수준 메뉴의 메뉴 모음에 추가 됩니다.
+동일한 요소를 사용 하 여 같이 메뉴 플라이 아웃 메뉴 모음에서 메뉴를 만들 수 있습니다. 그러나 MenuFlyoutItem 개체를 MenuFlyout에 그룹화 하는 대신 그룹화 있습니다 MenuBarItem 요소에서. 각 MenuBarItem 최상위 메뉴의 메뉴 모음에 추가 됩니다.
 
 ![메뉴 모음의 예](images/menu-bar-submenu.png)
 

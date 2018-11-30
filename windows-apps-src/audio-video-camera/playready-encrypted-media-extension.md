@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970698"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8201764"
 ---
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
@@ -25,7 +25,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 
 이 섹션에서는 목록을 변경 하는 PlayReady eme 암호화 된 미디어 확장 () Windows10에서 PlayReady 콘텐츠 보호를 사용 하도록 설정 합니다.
 
-다음 목록에는 새로운 기능과 변경 내용이 PlayReady 암호화 된 미디어 확장 Windows10에 대 한 설명 합니다.
+다음은 새로운 기능과 변경 내용이 PlayReady 암호화 된 미디어 확장 Windows10에 대 한 설명 합니다.
 
 -   하드웨어 DRM(디지털 권한 관리)이 추가되었습니다.
 

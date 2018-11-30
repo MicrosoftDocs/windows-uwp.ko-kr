@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bfd617c3c08cdcb7815010648c6036a5f39ee3ab
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965105"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202670"
 ---
 # <a name="use-the-inclinometer"></a>경사계 사용
 
@@ -31,7 +31,7 @@ ms.locfileid: "7965105"
 
  ## <a name="prerequisites"></a>사전 요구 사항
 
-응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트 잘 알고 있어야 합니다.
+응용 프로그램 언어 XAML (Extensible Markup), Microsoft VisualC # 및 이벤트에 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 경사계를 지원해야 합니다.
 

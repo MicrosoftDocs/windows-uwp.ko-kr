@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7981556"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206676"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler 설정 API 참조   
 REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하거나 사용하지 않을 수 있습니다.

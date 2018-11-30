@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 포트, 꼭짓점 버퍼, 데이터, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964743"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8204937"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a>꼭짓점 버퍼 및 데이터 포팅
 

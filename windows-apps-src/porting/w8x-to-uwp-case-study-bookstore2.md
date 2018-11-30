@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 156f780e5637852d554488adfeeb9d688fa4a4d7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967371"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200744"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
 
@@ -49,9 +49,9 @@ Windows Phone의 Bookstore2\_81, 축소 보기
 
 ##  <a name="porting-to-a-windows10-project"></a>Windows10 프로젝트로 포팅
 
-Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstore2\_81.Windows 프로젝트 Windows8.1에 대 한 앱 패키지 빌드하고 bookstore2_\81.windowsphone 프로젝트는 Windows Phone 8.1 용 앱 패키지를 빌드합니다. Bookstore2\_81.Shared는 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
+Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstore2\_81.Windows 프로젝트 앱 패키지 용 Windows8.1, 빌드하고 bookstore2_\81.windowsphone 프로젝트는 Windows Phone 8.1 용 앱 패키지를 빌드합니다. Bookstore2\_81.Shared는 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
-이전 사례 연구와 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명 된 것과) (of 살펴보겠습니다 옵션 포트로 것 처럼 프로젝트의 내용을 Shared는 Windows10를 대상으로 하는 유니버설 디바이스 패밀리입니다.
+포트 하는 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명 된 것과) (of 살펴보겠습니다 옵션 이전 사례 연구와 마찬가지로 프로젝트의 내용을 Shared는 Windows10를 대상으로 하는 범용 디바이스 패밀리입니다.
 
 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore2Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore2\_81에서 Bookstore2Universal\_10으로 복사할 파일입니다.
 
@@ -63,7 +63,7 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 **Windows 프로젝트에서**
 
--   BookstoreStyles.xaml을 복사합니다. 이 파일에 있는 모든 리소스 키를 Windows10 앱; 해결할 수 있으므로이 가장 좋은 시작 지점으로 사용 됩니다. 해당 하는 WindowsPhone 파일의 일부 되지 않습니다.
+-   BookstoreStyles.xaml을 복사합니다. 사용할 것이 좋은 시작 지점으로; Windows10 앱에서이 파일에 있는 모든 리소스 키를 해결할 수 있으므로 해당 하는 WindowsPhone 파일의 일부 되지 않습니다.
 -   SeZoUC.xaml 및 SeZoUC.xaml.cs를 복사합니다. 넓은 창에 적합한 이 보기의 Windows 버전으로 시작한 후 나중에 작은 창에 맞게 그리고 결과적으로 더 작은 디바이스에 맞게 조정합니다.
 
 방금 복사한 소스 코드 및 태그 파일을 편집하고 Bookstore2\_81 네임스페이스에 대한 참조를 Bookstore2Universal\_10으로 변경합니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델과 다른 명령적 코드에서 코드를 변경할 필요가 없습니다. 그렇지만 실행 중인 앱 버전을 더 쉽게 식별하려면 **Bookstore2Universal\_10.BookstoreViewModel.AppName** 속성에 의해 반환된 값을 "Bookstore2\_81"에서 "BOOKSTORE2UNIVERSAL\_10"으로 변경하세요.
@@ -72,13 +72,13 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 ![데스크톱 디바이스에서 실행 중인 초기 소스 코드가 변경된 Windows 10 앱, 확대 보기](images/w8x-to-uwp-case-studies/c02-05-desk10-zi-initial-source-code-changes.png)
 
-확대 보기, 데스크톱 디바이스에서 실행 중인 초기 소스 코드가 변경 된 Windows10 앱
+확대 보기는 데스크톱 장치에서 실행 중인 초기 소스 코드가 변경 된 Windows10 앱
 
 ![데스크톱 디바이스에서 실행 중인 초기 소스 코드가 변경된 Windows 10 앱, 축소 보기](images/w8x-to-uwp-case-studies/c02-06-desk10-zo-initial-source-code-changes.png)
 
 데스크톱 장치에서는 축소 보기에서 실행 중인 초기 소스 코드가 변경 된 Windows10 앱
 
-보는 것이 약간 어려워지는 문제가 있긴 하지만 보기 모델, 확대 및 축소 보기는 다 함께 올바르게 작동됩니다. 한 가지 문제는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)이 스크롤되지 않는 것입니다. Windows10에서 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 의 기본 스타일이 세로로 배치 하면 (및 Windows10 디자인 지침을 사용 하는 것에 이렇게 새로운 포팅된 앱에서 권장) 때문입니다. 하지만 가로 스크롤 설정은 Bookstore2\_81 프로젝트에서 복사한 사용자 지정 항목 패널 템플릿 (8.1 용으로 디자인 된 앱) 결과적으로 적용 되는 Windows10 기본 스타일의 세로 스크롤 설정과 충돌 포팅한 Windows10 앱. 두 번째 문제는 앱이 다양한 크기의 창과 작은 디바이스에서 최상의 환경을 제공하도록 해당 사용자 인터페이스를 아직 조정하지 않은 것입니다. 세 번째 문제는 올바른 스타일 및 브러시가 사용되지 않아 텍스트의 상당 부분(축소하기 위해 클릭할 수 있는 그룹 헤더를 포함하여)이 표시되지 않는 것입니다. 따라서 다음 세 섹션([SemanticZoom 및 GridView 디자인 변경](#semanticzoom-and-gridview-design-changes), [적응 UI](#adaptive-ui), [범용 스타일 지정](#universal-styling))에서 이러한 세 가지 문제를 바로잡겠습니다.
+보는 것이 약간 어려워지는 문제가 있긴 하지만 보기 모델, 확대 및 축소 보기는 다 함께 올바르게 작동됩니다. 한 가지 문제는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)이 스크롤되지 않는 것입니다. Windows10에서 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 의 기본 스타일이 세로로 배치 하면 (및 Windows10 디자인 지침을 사용 하는 것에서 새로운 포팅된 앱에는 것이 좋습니다.) 때문입니다. 하지만 가로 스크롤 설정은 Bookstore2\_81 프로젝트에서 복사한 사용자 지정 항목 패널 템플릿 (8.1 용으로 디자인 된 앱)은 결과적으로 적용 되는 Windows10 기본 스타일의 세로 스크롤 설정과 충돌 포팅한 Windows10 앱. 두 번째 문제는 앱이 다양한 크기의 창과 작은 디바이스에서 최상의 환경을 제공하도록 해당 사용자 인터페이스를 아직 조정하지 않은 것입니다. 세 번째 문제는 올바른 스타일 및 브러시가 사용되지 않아 텍스트의 상당 부분(축소하기 위해 클릭할 수 있는 그룹 헤더를 포함하여)이 표시되지 않는 것입니다. 따라서 다음 세 섹션([SemanticZoom 및 GridView 디자인 변경](#semanticzoom-and-gridview-design-changes), [적응 UI](#adaptive-ui), [범용 스타일 지정](#universal-styling))에서 이러한 세 가지 문제를 바로잡겠습니다.
 
 ## <a name="semanticzoom-and-gridview-design-changes"></a>SemanticZoom 및 GridView 디자인 변경
 
@@ -163,7 +163,7 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 ![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기](images/w8x-to-uwp-case-studies/c02-09-mob10-zi-ported.png)
 
-모바일 장치에서 확대 보기에서 실행 되는 포팅된 Windows10 앱
+확대 보기는 모바일 장치에서 실행 되는 포팅된 Windows10 앱
 
 ![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기](images/w8x-to-uwp-case-studies/c02-10-mob10-zo-ported.png)
 

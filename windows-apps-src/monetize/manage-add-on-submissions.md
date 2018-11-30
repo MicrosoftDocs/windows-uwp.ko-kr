@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 45fc2274ac22eee4a4c249397f25c1b0405cb856
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967313"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200664"
 ---
 # <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
 Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 앱에 대한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 제출을 관리할 수 있습니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 > [!IMPORTANT]
-> Microsoft Store 제출 API를 사용 하 여 추가 기능에 대 한 제출을 생성 하는 경우에 추가 변경 된 제출에 파트너 센터에서 변경 하는 것이 아니라 API를 사용 하 여만 해야 합니다. 파트너 센터를 사용 하 여 원래 API를 사용 하 여 만든 제출을 변경을 변경 하거나 해당 제출 API를 사용 하 여 커밋할 수 없게 됩니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> Microsoft Store 제출 API를 사용 하 여 추가 기능에 대 한 제출을 생성 하는 경우에 추가로 변경 된 제출에 파트너 센터에서 변경 하는 것이 아니라 API를 사용 하 여만 해야 합니다. 파트너 센터를 사용 하 여 원래 API를 사용 하 여 만든 제출을 변경을 변경 하거나 해당 제출 API를 사용 하 여 커밋할 수 없게 됩니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-add-on-submissions" />
 
 ## <a name="methods-for-managing-add-on-submissions"></a>추가 기능 제출 관리 메서드
 
-추가 기능 제출의 가져오기, 만들기, 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다. 이러한 메서드를 사용 하려면 먼저 추가 기능이 파트너 센터 계정에 이미 있어야 합니다. 파트너 센터에 설명 된 [추가 기능 관리의](manage-add-ons.md)Microsoft Store 제출 API 메서드를 사용 하 여 또는 [제품 유형과 제품 ID를 정의](../publish/set-your-add-on-product-id.md) 하 여 추가 기능을 만들 수 있습니다.
+추가 기능 제출의 가져오기, 만들기, 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다. 이러한 메서드를 사용 하려면 먼저 추가 기능이 파트너 센터 계정에 이미 있어야 합니다. [제품 유형과 제품 ID를 정의](../publish/set-your-add-on-product-id.md) 하 여 또는에 설명 된 [추가 기능 관리의](manage-add-ons.md)Microsoft Store 제출 API 메서드를 사용 하 여 파트너 센터에서 추가 기능을 만들 수 있습니다.
 
 <table>
 <colgroup>
@@ -133,7 +133,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
     제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용 하 여 또는 파트너 센터를 방문 하 여 제출 진행 상황을 모니터링할 계속 수 있습니다.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용 하 여 또는 파트너 센터를 방문 하 여 제출 진행 상황을 모니터링할 할 수 있습니다.
 
 <span/>
 
@@ -243,7 +243,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | status  | 문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다. |
 | fileUploadUrl           | 문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [추가 기능 제출 만들기](#create-an-add-on-submission)를 참조하세요.  |
-| FriendlyName  | 문자열  |  파트너 센터에 표시 된 대로 제출의 식별 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
+| FriendlyName  | 문자열  |  파트너 센터에 표시 된 대로 제출의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
 
 <span id="listing-object" />
 
@@ -290,7 +290,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 > [!IMPORTANT]
 > **판매** 리소스는 더 이상 지원되지 않으며, 현재 Microsoft Store 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다. 앞으로 Microsoft Store 제출 API를 업데이트하여 추가 기능 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
->    * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md) *판매* 값이 빈 상태로 표시됩니다. 파트너 센터를 사용 하 여 추가 기능 제출에 대 한 판매 데이터를 가져올 계속 수 있습니다.
+>    * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md) *판매* 값이 빈 상태로 표시됩니다. 파트너 센터를 사용 하 여 추가 기능 제출에 대 한 판매 데이터를 가져올 할 수 있습니다.
 >    * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md) *판매* 값의 정보는 무시됩니다. 추가 기능 제출에 대 한 판매 데이터를 변경 하려면 파트너 센터를 사용 하 여 계속 수 있습니다.
 
 이 리소스의 값은 다음과 같습니다.
@@ -352,7 +352,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  기본               |   기준 가격이 설정되지 않았습니다. 추가 기능에 대한 기본 가격을 사용합니다.      |     
 |  NotAvailable              |   지정된 영역에 추가 기능을 사용할 수 없습니다.    |     
 |  무료              |   추가 기능은 무료입니다.    |    
-|  계층*xxxx*               |   추가 기능에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련 된 시장별 가격을 포함 하 여, 개발자 계정에 사용할 수 있는 계층 가격의 전체 표를 보려면 파트너 센터에서 앱 제출에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **지역/국가 및 사용자 지정 가격** 섹션의 **표 보기** 링크를 클릭 (일부 개발자 계정의 경우,이 링크는 **가격 책정** 섹션에서).     |
+|  계층*xxxx*               |   추가 기능에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>가격의 전체 표를 보려면 각 계층과 관련 된 시장별 가격을 포함 하 여 개발자 계정에 사용할 수 있는 계층 파트너 센터에서 앱 제출에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **지역/국가 및 사용자 지정 가격** 섹션의 **표 보기** 링크를 클릭 (일부 개발자 계정의 경우,이 링크는 **가격 책정** 섹션에서).     |
 
 <span id="submission-status-code" />
 

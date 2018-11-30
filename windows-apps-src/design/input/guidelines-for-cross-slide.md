@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f6a37af19c9e3e9beaebbadfcc71f3ad01e3087c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965839"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207097"
 ---
 # <a name="guidelines-for-cross-slide"></a>교차 방향으로 밀기에 대한 지침
 
@@ -56,7 +56,7 @@ ms.locfileid: "7965839"
 
 단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다. 자세한 내용은 [ListView 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/hh465382)를 참조하세요.
 
-**참고**웹 브라우저나 전자 판독기와 같이 양방향 콘텐츠 영역 이동할 수 있는 경우에서 시간이 제한 된 길게와 상호 작용 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 사용 해야 합니다.
+**참고**콘텐츠 영역 웹 브라우저나 전자 판독기와 같이 두 방향으로 이동할 수 있는 경우에서 시간이 제한 된 길게와 상호 작용 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 하 사용 해야 합니다.
 
  
 

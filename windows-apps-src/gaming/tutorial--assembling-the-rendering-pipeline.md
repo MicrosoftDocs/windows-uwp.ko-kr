@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
 ms.openlocfilehash: 6724aedf898706dd4c5bf728616c918d64b2fb32
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967529"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202583"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임워크 I: 렌더링 소개
 
@@ -616,7 +616,7 @@ __ID3D11Buffer__ 인터페이스에서 모든 버퍼 형식이 캡슐화되므�
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX 그래픽 Infrastructure (DXGI)는 Direct3D 10 되는 하위 수준 작업 중 일부를 캡슐화 WindowsVista에 도입 된 새로운 하위 시스템 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 [DirectX Graphics Infrastructure(DXGI): 모범 사례 - 다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)을 참조하세요.
+Microsoft DirectX 그래픽 Infrastructure (DXGI)는 Direct3D 10 되는 하위 수준 작업 중 일부를 캡슐화 하는 WindowsVista에 도입 된 새로운 하위 시스템 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 [DirectX Graphics Infrastructure(DXGI): 모범 사례 - 다중 스레딩](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)을 참조하세요.
 
 ### <a name="feature-level"></a>기능 수준
 

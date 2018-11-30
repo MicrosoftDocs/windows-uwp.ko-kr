@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게시, 전처리, 인증, 릴리스, 보류 중, 제출, 게시, 상태, 시간
 ms.localizationpriority: medium
 ms.openlocfilehash: 733d5ff882d7ed7c574f6fe6fedd28b79c3913d9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7986252"
+ms.locfileid: "8200654"
 ---
 # <a name="the-app-certification-process"></a>앱 인증 프로세스
 

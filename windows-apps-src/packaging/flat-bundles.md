@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, 패키징, 패키지 구성, 플랫 번들
 ms.localizationpriority: medium
 ms.openlocfilehash: b7066b7f2e5bd72ebee3169e03c7940b6fef4dba
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969551"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8201154"
 ---
 # <a name="flat-bundle-app-packages"></a>플랫 번들 앱 패키지 
 
 > [!IMPORTANT]
 > Microsoft Store에 앱을 제출하고자 하는 경우 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)에 문의하여 플랫 번들에 대한 승인을 얻어야 합니다.
 
-플랫 번들은 앱의 패키지 파일을 번들로 개선된 된 방법입니다. 일반적인 Windows 앱 패키지 파일은를 번들에 포함 해야 하는 다단계 패키징 구조를 사용 하는 앱 번들 파일, 플랫 번들 앱 번들 외부에 있을 수 있으므로 앱 패키지 파일을 참조 하 여이 필요를 제거 합니다. 앱 패키지 파일이 더 이상 번들에 포함 됩니다, 될 수 있으며 병렬 처리의 결과 제한 시간이 게시가 (각 앱 패키지 파일을 동시에 처리할 수 없습니다) 이므로, 업로드 및 빨라지며 최종적으로 개발 반복 합니다.
+플랫 번들은 앱의 패키지 파일을 번들로 개선된 된 방법입니다. 일반적인 Windows 앱 패키지 파일은를 번들 내에 포함 해야 하는 여러 수준의 패키징 구조를 사용 하는 앱 번들 파일, 플랫 번들 앱 번들 외부에 있을 수 있으므로 앱 패키지 파일을 참조 하 여이 필요를 제거 합니다. 앱 패키지 파일이 더 이상 번들에 포함 됩니다, 될 수 있으며 병렬 처리의 결과 제한 시간이 게시가 (각 앱 패키지 파일을 동시에 처리할 수 없습니다) 이므로, 업로드 및 빨라지며 최종적으로 개발 반복 합니다.
 
 ![플랫 번들 다이어그램](images/bundle-combined.png)
 
@@ -43,4 +43,4 @@ MakeAppx.exe를 만드는 방법에 대한 자세한 내용은 [MakeAppx.exe 도
 또는 압축 레이아웃을 사용하여 플랫 번들을 만들 수 있습니다. 이 작업을 수행하려면 앱 번들 매니페스트의 **PackageFamily** 요소에 있는 **FlatBundle** 특성을 **true**로 설정합니다. 패키징 레이아웃에 대한 자세한 내용은 [패키징 레이아웃으로 패키지 만들기](packaging-layout.md)를 참조하세요.
 
 ## <a name="how-to-deploy-a-flat-bundle"></a>플랫 번들을 배포하는 방법 
-플랫 번들을 배포하기 전에 앱 번들뿐만 아니라 동일한 인증서를 사용하여 각 앱 패키지에 서명해야 합니다. 모든 앱 패키지 파일 (.appx/.msix)이 이제 독립 파일이 며 더 이상 앱 번들 (.appxbundle/.msixbundle) 파일에 포함 되지 않은 않기 때문입니다. 패키지가 서명 되 면 앱 번들 파일을 가리키고 (앱 패키지를 앱 번들에서 기대 하는 것으로 가정) 앱을 배포 하려면 PowerShell에서 [Add-appxpackage cmdlet](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) 을 사용 합니다. 
+플랫 번들을 배포하기 전에 앱 번들뿐만 아니라 동일한 인증서를 사용하여 각 앱 패키지에 서명해야 합니다. 모든 앱 패키지 파일 (.appx/.msix)이 이제 독립 파일이 며 더 이상 앱 번들 (.appxbundle/.msixbundle) 파일에 포함 되지 않은 때문입니다. 패키지가 서명 되 면 PowerShell에서 [Add-appxpackage cmdlet](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) 앱 번들 파일을 가리키고 앱을 배포 합니다 (앱 패키지는 앱 번들에서 기대 하는 경우)을 사용 합니다. 

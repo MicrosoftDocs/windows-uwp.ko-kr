@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출 만들기
 ms.localizationpriority: medium
 ms.openlocfilehash: a90be116a9d85eeae7cb7c44c2bbfe96da472f65
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971549"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207823"
 ---
 # <a name="create-an-app-submission"></a>앱 제출 만들기
 
@@ -186,7 +186,7 @@ Authorization: Bearer <your access token>
 | 오류 코드 |  설명   |
 |--------|------------------|
 | 400  | 요청이 잘못되어 제출을 만들 수 없습니다. |
-| 409  | 앱의 현재 상태 때문에 제출을 만들 수 있습니다 또는 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
+| 409  | 제출을 만들 수 없습니다 앱의 현재 상태 때문 또는 앱은 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목

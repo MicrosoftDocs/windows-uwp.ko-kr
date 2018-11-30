@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: b197ea668ec73711b7a9c63e516b4ec9a5f54d62
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970333"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206070"
 ---
 # <a name="binding-markup-extension"></a>{Binding} 태그 확장
 
@@ -80,7 +80,7 @@ ms.locfileid: "7970333"
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | 바인딩 소스 업데이트의 타이밍을 지정합니다. 지정하지 않을 경우 기본값은 **Default**입니다. |
 
-**참고**차이점 **모드** 속성에 대 한 기본 값으로 변환 하는 태그에서 **{x: Bind}** **{Binding}** 다음의 주의 합니다.
+**참고**차이점 **모드** 속성에 대 한 기본 값으로 변환 하는 태그에서 **{x: Bind}** **{Binding}** 다음 알고 있어야 합니다.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 

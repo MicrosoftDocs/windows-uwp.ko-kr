@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 섀도 볼륨, 깊이 버퍼, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 2feecb3080efefb2f9625fd8b66c5b722ad02a45
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964186"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8202514"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
 
@@ -68,7 +68,7 @@ Windows8에서는 기능 수준 9 \_1 및 9 \_3 d 깊이 비교 기능이 있습
 ## <a name="prerequisites"></a>필수 조건
 
 
-[UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요 하지 않지만이 연습에 대 한 코드 샘플을 작성 하려면 Microsoft Visual Studio2015 필요 합니다.
+[UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 템플릿을 아직 필요 하지 않지만이 연습에 대 한 코드 샘플을 작성 하려면 Microsoft Visual Studio2015가 필요 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -1,24 +1,24 @@
 ---
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: 만들기는 Hello World 앱 C + + CX (Windows10)
-description: Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + + /CX Windows10를 실행 하는 휴대폰 포함 Windows10에서 실행 되는 앱을 개발할 합니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
+title: 만들기 Hello World 앱 C + + CX (Windows10)
+description: Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + + /CX Windows10를 실행 하는 휴대폰 포함 Windows10에서 실행 되는 앱을 개발 합니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
 ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6954f935440f75a728c3f3601ade884bbee7b6bc
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969206"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207650"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>C + "Hello world" 앱 만들기 + CX
 
 > [!IMPORTANT]
-> 이 자습서에서는 C + + CX 합니다. Microsoft에서 릴리스 하는 C + + WinRT:는 최신 표준 C + + 17 언어 프로젝션으로 Windows 런타임 (WinRT) Api에 대 한 합니다. 이 언어에 대 한 자세한 내용은 참조 [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)합니다. 
+> 이 자습서에서는 C + + CX 합니다. Microsoft에서 릴리스 하는 C + + WinRT:는 최신 표준 C + + 17 언어 프로젝션으로 Windows 런타임 (WinRT) Api에 대 한 합니다. 이 언어에 대 한 자세한 내용은 참조 [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
 
-Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + +에서 응용 프로그램 언어 XAML (Extensible Markup) 정의 된 UI 사용 하 여 Windows10에서 실행 되는 앱을 개발 하는 CX 합니다.
+Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + + /CX에서 응용 프로그램 언어 XAML (Extensible Markup)에 정의 된 UI 사용 하 여 Windows10에서 실행 되는 앱을 개발할 합니다.
 
 > [!NOTE]
 > 이 자습서에서는 Visual Studio Community 2017을 사용 합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
@@ -26,7 +26,7 @@ Microsoft Visual Studio2017를 사용 하 여 사용할 수 C + +에서 응용 �
 ## <a name="before-you-start"></a>시작하기 전에
 
 -   이 자습서를 완료 하려면 Windows10를 실행 하는 컴퓨터에서 Visual StudioCommunity 2017 또는 Visual Studio2017의 비 Community 버전 중 하나를 사용 해야 합니다. 다운로드하려면 [도구 얻기](http://go.microsoft.com/fwlink/p/?LinkId=532666)를 참조하세요.
--   C +에 대 한 기본 이해에 있다고 가정 + CX, XAML, 및 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595)에 설명 된 개념입니다.
+-   C +에 대 한 기본 이해에 있다고 가정 + CX, XAML, [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595)에서 개념입니다.
 -   여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃으로 재설정하려면 메뉴 모음에서 **창** > **창 레이아웃 다시 설정**을 선택합니다.
 
 ## <a name="comparing-c-desktop-apps-to-windows-apps"></a>C++ 데스크톱 앱과 Windows 스토어 앱 비교
@@ -61,7 +61,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 ## <a name="hello-world-store-app-in-ccx"></a>Hello World 스토어 앱에서 C + + CX
 
-첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. Windows8.1 및 Windows Phone 8.1 용 앱을 개발한, Windows 앱에 대 한 개, 공유 코드용 및 휴대폰 앱에 대 한 Visual Studio에서 세 개의 프로젝트를 사용 해야 했던 기억 수 있습니다. Windows10 유니버설 Windows 플랫폼 (UWP)을 사용 하면 등 Windows10, 태블릿, 휴대폰, VR 디바이스를 실행 하는 데스크톱 및 노트북 컴퓨터를 비롯 한 모든 장치에서 실행 되는 단 하나의 프로젝트를 할 수 있습니다.
+첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. Windows8.1 및 Windows Phone 8.1 용 앱을 개발한, Windows 앱에 대 한 개, 공유 코드용 및 휴대폰 앱에 대 한 Visual Studio에서 세 개의 프로젝트를 사용 해야 했던 기억 수 있습니다. Windows10 유니버설 Windows 플랫폼 (UWP)을 사용 하면 등 Windows10, 태블릿, 휴대폰, VR 디바이스는 디바이스를 실행 하는 데스크톱 및 노트북 컴퓨터를 비롯 한 모든 장치에서 실행 되는 단 하나의 프로젝트를 사용할 수 있습니다.
 
 다음과 같은 기본 사항부터 시작하겠습니다.
 
@@ -69,7 +69,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 -   생성되는 프로젝트 및 파일을 이해하는 방법.
 
--   VisualC + + 구성 요소 확장의 확장을 이해 하는 방법 (C + + CX)를 사용 하는 경우 및 합니다.
+-   VisualC + + 구성 요소 확장에서 이러한 확장을 이해 하는 방법 (C + + CX)를 사용 하는 경우 및 합니다.
 
 **Visual Studio에서 솔루션 만들기**
 
@@ -307,7 +307,7 @@ MainPage::MainPage()
 
 어떤 테마를 사용해야 할까요? 어느 것이든 원하는 것을 사용하면 됩니다. 주로 이미지 또는 동영상을 표시하는 앱에는 어두운 테마를 사용하는 것이 좋고, 텍스트가 많이 들어 있는 앱에는 밝은 테마를 사용하는 것이 좋습니다. 사용자 지정 색 구성표를 사용하려는 경우 앱의 모양과 느낌에 가장 잘 맞는 테마를 사용하세요. 이 자습서의 나머지 부분에서는 스크린샷에 밝은 테마를 사용합니다.
 
-**참고**테마는 앱이 시작 하 고 앱이 실행 중인 동안에 변경할 수 없습니다 될 때 적용 됩니다.
+**참고**테마는 앱 시작 되 고 앱이 실행 중인 동안에 변경할 수 없습니다 될 때 적용 됩니다.
 
 ### <a name="using-system-styles"></a>시스템 스타일 사용
 
