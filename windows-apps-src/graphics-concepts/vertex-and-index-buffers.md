@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d2ea6ce4060957ade5dd1007389be51176440f04
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972623"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8210233"
 ---
 # <a name="vertex-and-index-buffers"></a>꼭짓점 및 인덱스 버퍼
 

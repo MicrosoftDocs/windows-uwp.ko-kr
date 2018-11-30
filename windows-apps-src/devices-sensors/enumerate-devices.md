@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f6348cc713d4fb93dfed9310eea9d3fd1025a2de
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7990789"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8210679"
 ---
 # <a name="enumerate-devices"></a>디바이스 열거
 

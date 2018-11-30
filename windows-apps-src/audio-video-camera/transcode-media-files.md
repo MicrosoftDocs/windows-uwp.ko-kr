@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a6eb19ca5954b3ce71ecbaefe3339bee78f8717
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971088"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207748"
 ---
 # <a name="transcode-media-files"></a>미디어 파일 코드 변환
 
@@ -84,7 +84,7 @@ ms.locfileid: "7971088"
 ## <a name="encode-a-metadata-stream"></a>메타데이터 스트림 인코딩
 Windows 10, 버전 1803부터 시간이 제한 된 메타 데이터를 포함할 수 때 미디어 파일 코드 변환 합니다. 위의 비디오 코드 변환 예제와 달리 인코딩 프로필 만들기 메서드 [**MediaEncodingProfile.CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4)같은 기본 제공 미디어를 사용 하는 수동으로 만들어야 인코딩하는 메타 데이터의 형식을 지원 하도록 메타 데이터 인코딩 프로필 .
 
-메타 데이터 incoding 프로필을 만드는 첫 번째 단계가 코드 변환 되도록 메타 데이터의 인코딩을 설명 하는 [**TimedMetadataEncodingProperties**] 개체를 만드는 것입니다. 하위 속성에는 메타 데이터의 형식을 지정 하는 GUID입니다. 각 메타 데이터 형식에 대 한 인코딩 세부 독점 이며 Windows에서 제공 되지 않습니다. 이 예제는 GoPro 메타 데이터 (gprs)에 대 한 GUID 사용 됩니다. 다음으로 [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) 메타 데이터 형식에 관련 된 스트림 형식을 설명 하는 데이터의 이진 blob을 설정 하 라고 합니다. 다음을 **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) 인코딩 속성에서 만든 트랙 레이블 이름과 메타 데이터 스트림을 식별 하 고 필요에 따라 스트림 이름 UI에 표시할 endcoded 스트림을 읽는 응용 프로그램이 허용 하 고 합니다. 
+이 첫 번째 단계는 메타 데이터 incoding 프로필을 만드는 코드 변환 되도록 메타 데이터의 인코딩을 설명 하는 [**TimedMetadataEncodingProperties**] 개체를 만드는 것입니다. 하위 속성에는 메타 데이터의 형식을 지정 하는 GUID입니다. 각 메타 데이터 유형에 대 한 인코딩 세부 정보 독점 이며 Windows에서 제공 되지 않습니다. 이 예제에서는 GoPro 메타 데이터 (gprs)에 대 한 GUID 사용 됩니다. 다음으로 [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) 메타 데이터 형식 관련 된 스트림 형식을 설명 하는 데이터의 이진 blob을 설정 하 라고 합니다. 다음을 **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) 인코딩 속성에서 만든 endcoded 스트림을 메타 데이터 스트림을 식별 하 고 필요에 따라 스트림 이름 UI에 표시를 읽는 응용 프로그램이 허용 하는 트랙 레이블 및 이름. 
  
 [!code-cs[GetStreamDescriptor](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetStreamDescriptor)]
 

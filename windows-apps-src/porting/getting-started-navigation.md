@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 63a39dfcfaab8b42afc98b7fe786a05908d49d16
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967463"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205498"
 ---
 # <a name="getting-started-navigation"></a>시작: 탐색
 
@@ -20,7 +20,7 @@ ms.locfileid: "7967463"
 
 iOS는 앱 내 탐색에 도움이 되는 **UINavigationController** 클래스를 제공합니다. 보기를 푸시하고 팝업하여 앱을 정의하는 **UIViewControllers** 계층을 만들 수 있습니다.
 
-에 여러 보기를 포함 하는 Windows10 앱 반면, 웹 사이트 방식의 탐색 합니다. 사용자는 컨트롤을 클릭하여 앱 페이지를 탐색할 수 있습니다. 자세한 내용은 [탐색 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)을 참조하세요.
+여러 보기를 포함 하는 Windows10 앱 반면, 웹 사이트 방식를 탐색 합니다. 사용자는 컨트롤을 클릭하여 앱 페이지를 탐색할 수 있습니다. 자세한 내용은 [탐색 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)을 참조하세요.
 
 Windows10 앱에서이 탐색을 관리 하는 방법 중 하나는 [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스를 사용 하는 것입니다. 다음 연습에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
@@ -64,7 +64,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
 이제 프로그램을 실행합니다. "Go To Page" 단추를 탭하여 다른 페이지로 이동한 다음 뒤로 화살표 단추를 탭하여 이전 페이지로 돌아갑니다.
 
-페이지 탐색은 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스에 의해 관리됩니다. **PushViewController** 및 **popViewController** 메서드를 사용 하는 ios에서 **UINavigationController** 클래스,으로 UWP 앱에 대 한 **프레임** 클래스 [**탐색**](https://msdn.microsoft.com/library/windows/apps/br242694) 및 [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) 메서드를 제공 합니다. 또한 **Frame** 클래스에는 [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693)라는 메서드가 있으며, 예상할 수 있는 작업을 수행합니다.
+페이지 탐색은 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스에 의해 관리됩니다. **PushViewController** 및 **popViewController** 메서드를 사용 하는 ios에서 **UINavigationController** 클래스,으로 UWP 앱에 대 한 **프레임** 클래스 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 및 [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568) 메서드를 제공 합니다. 또한 **Frame** 클래스에는 [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693)라는 메서드가 있으며, 예상할 수 있는 작업을 수행합니다.
 
 이 연습에서는 페이지를 탐색할 때마다 BlankPage의 새 인스턴스를 만듭니다. 이전 인스턴스는 자동으로 삭제되거나 *해제*됩니다. 매번 새 인스턴스가 만들어지지 않도록 하려면 BlankPage.xaml.cs 파일에서 BlankPage 클래스의 생성자에 다음 코드를 추가합니다. 그러면 [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) 동작을 사용하도록 설정됩니다.
 

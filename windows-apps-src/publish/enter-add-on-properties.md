@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 17025282aec18da01f14431996a3942ffdd90312
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969339"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8208587"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -84,7 +84,7 @@ ms.locfileid: "7969339"
 이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Services.Store)의 [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords) 속성을 사용합니다.)
 
 > [!NOTE]
-> 키워드는 Windows8 및 Windows8.1 대상으로 하는 패키지를 사용할 수 없습니다.
+> 키워드는 Windows8 및 Windows8.1을 대상으로 하는 패키지를 사용할 수 없습니다.
 
 <span id="custom-developer-data" />
 
@@ -97,7 +97,7 @@ ms.locfileid: "7969339"
 이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Services.Store)의 [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag) 속성을 사용합니다.)
 
 > [!NOTE]
-> **사용자 지정 개발자 데이터** 필드가 Windows8 및 Windows8.1 대상으로 하는 패키지를 사용할 수 있습니다.
+> **사용자 지정 개발자 데이터** 필드 Windows8 및 Windows8.1을 대상으로 하는 패키지를 사용할 수 없는 경우
 
  
 

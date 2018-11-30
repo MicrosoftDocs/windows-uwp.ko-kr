@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 920ff8e295959ad6ea66cdb3b673217ff19b89e2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969428"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8210545"
 ---
 # <a name="storyboarded-animations"></a>스토리보드 애니메이션
 
@@ -149,7 +149,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 ### <a name="fromtoby-are-nullable"></a>nullable인 From/To/By
 
-앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. VisualC + + 구성 요소 확장 (C + + CX) **Nullable** 형식 갖고 있지 않으므로 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) 대신 사용 합니다.
+앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. VisualC + + 구성 요소 확장 (C + + CX)는 **Nullable** 형식 대신 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) 사용 되므로 필요는 없습니다.
 
 ### <a name="other-properties-of-an-animation"></a>애니메이션의 다른 속성
 

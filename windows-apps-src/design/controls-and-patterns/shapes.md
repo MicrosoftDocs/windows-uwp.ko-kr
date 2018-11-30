@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a576add7a080874fb0f042748bef7472e04ac817
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968353"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205767"
 ---
 # <a name="draw-shapes"></a>셰이프 그리기
 
@@ -169,7 +169,7 @@ layoutRoot.Children.Add(line1);
 
 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)은 **Polyline**의 마지막 점이 첫 번째 점에 연결되지 않는다는 것을 제외하고, 점 집합에 의해 셰이프의 경계가 정의된다는 점에서 [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon)과 유사합니다.
 
-**참고**  동일한 시작 지점을 명시적으로 가지기 및 [**포인트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 끝점 설정 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)있지만 경우 아마도 수를 사용한 [**다각형**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) 대신 합니다.
+**참고**  동일한 시작 지점을 명시적으로 있을 수 및 [**포인트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 끝점 설정 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)있지만 경우 아마도 수를 사용한 [**다각형**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) 대신 합니다.
 
 [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
 

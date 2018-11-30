@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07f5c6ef180cb4abe90a705e73be8d99ecbd2ca7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966840"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8204648"
 ---
 # <a name="bitmapencoder-options-reference"></a>BitmapEncoder 옵션 참조
 

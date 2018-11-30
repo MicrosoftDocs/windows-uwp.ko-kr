@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx xaml, 화면 회전, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 432e7716363f6a51254e1476dac38f713c94fb69
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7977702"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8205370"
 ---
 # <a name="add-features-to-directx-games"></a>DirectX 게임에 기능 추가
 

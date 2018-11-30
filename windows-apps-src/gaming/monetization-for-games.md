@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 수익 창출
 ms.localizationpriority: medium
 ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965410"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207423"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 
@@ -27,7 +27,7 @@ ms.locfileid: "7965410"
 
 ## <a name="worldwide-distribution-channel"></a>전 세계 배포 채널
 
-Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상의 국가 및 지역에서 전 세계 다양 한 형식의 결제 Visa, Mastercard, PayPal 등을 통해 한 지원 합니다. 국가 및 지역의 전체 목록, [지역/국가 선택 정의](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)참조 하세요.
+Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상의 국가 및 지역에서 전 세계 다양 한 형식의 결제 Visa, Mastercard, PayPal 등을 통해 청구에 대 한 지원 합니다. 국가 및 지역의 전체 목록, [지역/국가 선택 정의](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)참조 하세요.
 
 ## <a name="set-a-price-for-your-game"></a>게임에 대한 가격 설정
 
@@ -47,18 +47,18 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 
 ## <a name="in-game-purchases"></a>게임에서 바로 구매
 
-게임에서 바로 구매는 게임 내에서 제품을 구매하는 것을 말합니다. 일반적으로 _앱에서 바로 구매_라고도 알려져 있습니다. Microsoft 스토어에서 이러한 제품 _추가 기능을_이라고 합니다. 파트너 센터를 통해 [추가 기능에 게시 됩니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) . 또한 게임 코드에서 추가 기능을 사용하도록 설정해야 합니다.
+게임에서 바로 구매는 게임 내에서 제품을 구매하는 것을 말합니다. 일반적으로 _앱에서 바로 구매_라고도 알려져 있습니다. Microsoft Store에서 이러한 제품 _추가 기능_을 호출 됩니다. 파트너 센터를 통해 [추가 기능에 게시 됩니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) . 또한 게임 코드에서 추가 기능을 사용하도록 설정해야 합니다.
 
 ### <a name="types-of-add-ons"></a>추가 기능 유형
 
 스토어에는 _지속성_ 또는 _소모성_의 두 가지 추가 기능 유형을 만들 수 있습니다. 지속성은 지정된 기간 동안 지속되며 만료될 때까지 한 번만 구입할 수 있는 항목을 나타냅니다. 소모성은 반복해서 구입하여 사용할 수 있는 항목을 나타냅니다.
 
-소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, _개발자가 관리하는지_ 또는 _스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows10 버전 1607부터 사용할 수 있음). ; 게이머의 항목 잔액을 추적 하는 것에 대 한 책임은 개발자 관리 소모 성 스토어 관리 소모 성, Microsoft Store의 경우 추적 항목 잔액 드립니다. 자세한 내용은 [소모성 추가 기능 개요](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons)를 참조하세요.
+소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, _개발자가 관리하는지_ 또는 _스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows10 버전 1607부터 사용할 수 있음). 개발자 관리 소모 성 담당 하는 게이머; 항목 잔액을 추적 스토어 관리 소모 성, Microsoft Store의 경우 추적 항목 잔액 있습니다. 자세한 내용은 [소모성 추가 기능 개요](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons)를 참조하세요.
 
 ### <a name="create-in-game-purchases"></a>게임에서 바로 구매 만들기
 
 최신 앱에서 바로 구매 및 라이선스 정보 API는 Windows SDK(Windows10, 버전 1607부터)의 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있습니다. 1607 이상 릴리스를 대상으로 하는 새 게임을 개발하는 경우 __Windows.Services.Store__ 네임스페이스가 최신 추가 기능 유형을 지원하 고 더 나은 성능을 제공하기 때문에 권장됩니다.
-이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 된 것입니다. 이전 버전의 Windows 10용으로 개발할 때는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 대신 사용합니다.
+또한 이후 제품 및 파트너 센터 및 스토어에서 지 원하는 기능 유형과 호환 되도록 설계 된 것입니다. 이전 버전의 Windows 10용으로 개발할 때는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 대신 사용합니다.
 
 자세한 내용은 [앱에서 바로 구매 및 평가판](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials)을 참조하세요.
 
@@ -90,7 +90,7 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 
 1. Visual Studio에서 게임 솔루션을 엽니다.
 2. Visual Studio 내에서 __프로젝트__ > __스토어__ > __앱 패키지 만들기...__ 로 이동합니다.
-3. 에 대 한 합니다 __Microsoft 스토어에 업로드할 패키지를 원하는?__ 옵션을 __예__를 선택 합니다.
+3. 에 대 한 합니다 __Microsoft Store에 업로드할 패키지를 작성 하 시겠습니까?__ 옵션, __예__를 선택 합니다.
 4. [파트너 센터](https://partner.microsoft.com/dashboard) 개발자 계정에 로그인 합니다. 또는 개발자 계정이 없으면 [등록](https://developer.microsoft.com/store/register)합니다.
 5. 업로드 패키지를 만들 앱을 선택합니다. 앱 제출을 아직 만들지 않은 경우 새 앱 이름을 제공하여 새 제출을 만듭니다. 자세한 내용은 [이름을 예약하여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)를 참조하세요.
 6. 패키지가 성공적으로 만들어진 후에 __Windows 앱 인증 키트 시작__을 클릭하여 테스트 프로세스를 시작합니다.
@@ -102,7 +102,7 @@ Microsoft Store 게임을 만들 수 다운로드할 수 있는 200 개 이상�
 2. __대시보드 개요__ 또는 __모든 앱__ 페이지에서 사용하려는 앱을 클릭합니다. 앱 제출을 아직 만들지 않은 경우 __새 앱 만들기__를 클릭하고 이름을 예약합니다.
 3. __앱 개요__ 페이지에서 __제출 시작__을 클릭합니다.
 4. 새 제출을 구성합니다. 제출 페이지에서 다음을 수행합니다.
-    * __가격 책정 및 가용성__을 클릭합니다. __표시 여부__ 섹션에서 '__이 앱 숨기기 및 판매 중지...__' 보장 하기 위해 개발 팀만 게임에 대 한 액세스에 선택 합니다. 자세한 내용은 [배포 및 표시 여부](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility)를 참조하세요.
+    * __가격 책정 및 가용성__을 클릭합니다. __표시 여부__ 섹션에서 '__이 앱 숨기기 및 판매 중지...__' 개발 팀만 게임에 대 한 액세스에 선택 합니다. 자세한 내용은 [배포 및 표시 여부](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility)를 참조하세요.
     * __속성__을 클릭합니다. __범주 및 하위 범주__ 섹션에서 __게임__을 선택한 다음 게임에 적합한 하위 범주를 선택합니다.
     * __연령별 등급__을 클릭합니다. 질문지를 정확하게 작성합니다.
     * __패키지__를 클릭합니다. 이전 단계에서 만든 게임 패키지를 업로드합니다.

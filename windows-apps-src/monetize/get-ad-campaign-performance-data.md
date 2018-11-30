@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 1190ec43c5b98eabd897a3bed3788aaf6eb0cb7d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970320"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8208224"
 ---
 # <a name="get-ad-campaign-performance-data"></a>광고 캠페인 성과 데이터 가져오기
 
 
 Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터에 대해 응용 프로그램에 대한 홍보성 광고 캠페인 성과 집계 요약 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
 
-이 메서드는 파트너 센터에서 [광고 캠페인 보고서](../publish/app-install-ads-reports.md) 를 제공 하는 동일한 데이터를 반환 합니다. 광고 캠페인에 대한 자세한 내용은 [앱 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조하세요.
+이 메서드는 파트너 센터에서 [광고 캠페인 보고서](../publish/app-install-ads-reports.md) 에서 제공 하는 동일한 데이터를 반환 합니다. 광고 캠페인에 대한 자세한 내용은 [앱 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조하세요.
 
 광고 캠페인을 만들고, 업데이트하고, 세부 정보를 검색하려면 [Microsoft Store 프로모션 API](run-ad-campaigns-using-windows-store-services.md)의 [광고 캠페인 관리](manage-ad-campaigns.md) 메서드를 사용할 수 있습니다.
 
