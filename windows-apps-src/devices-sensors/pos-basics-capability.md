@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: 832881919a3ed1f44c0912703ede5948c5b10d11
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8212051"
+ms.locfileid: "8326699"
 ---
 # <a name="pointofservice-device-capability"></a>PointOfService 장치 접근 권한 값
 응용 프로그램 패키지 매니페스트에서 접근 권한 값을 선언하여 PointOfService API에 대한 액세스를 요청합니다. 대부분의 접근 권한 값은 매니페스트 디자이너를 사용하여, 또는 Microsoft Visual Studio에서 선언하거나 수동으로 추가할 수 있습니다.  
