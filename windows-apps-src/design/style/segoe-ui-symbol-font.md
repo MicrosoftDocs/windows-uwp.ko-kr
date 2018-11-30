@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 076e4b0ddf30a23271bbb6b488f235f7233b28c2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7846061"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217684"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -55,7 +55,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-고정 리소스를 사용할 수도 있습니다 `SymbolThemeFontFamily` **Segoe MDL2 자산**글꼴 이름으로 지정 하지 않고 액세스할 수 있습니다.
+정적 리소스를 사용할 수도 있습니다 `SymbolThemeFontFamily` **Segoe MDL2 자산**글꼴 이름으로 지정 하지 않고 액세스할 수 있습니다.
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
