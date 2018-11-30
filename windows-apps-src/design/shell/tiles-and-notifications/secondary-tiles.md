@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보조 타일
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f95699fd6eb0803824c9bcdea46d275ab4383ac
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966741"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8214279"
 ---
 # <a name="secondary-tiles"></a>보조 타일
 
@@ -66,7 +66,7 @@ ms.locfileid: "7966741"
 * 사용자가 언제든지 상위 앱을 삭제하지 않고도 보조 타일을 삭제할 수 있습니다.
 * 보조 타일은 런타임에 만들 수 있습니다. 앱 타일은 설치 중에만 만들 수 있습니다.
 * 플라이아웃은 보조 타일을 추가하기 전에 사용자에게 확인을 요청합니다.
-* 사용자 요청을 통해 프로그래밍 방식으로 잠금 화면에 대해 선택할 수 없습니다. 사용자가 PC 설정의 개인 설정 페이지를 통해 보조 타일을 수동으로 추가 해야 합니다.
+* 사용자 요청을 통해 프로그래밍 방식으로 잠금 화면에 대해 선택할 수 없습니다. 사용자가 PC 설정에서 개인 설정 페이지를 통해 보조 타일을 수동으로 추가 해야 합니다.
 
 알림 보내기의 경우 보조 타일에 사용되는 타일 및 배지 업데이트와 푸시 알림 채널에 대한 특정 메서드가 제공됩니다. 이는 기본 타일에 사용되는 버전과 비슷합니다. CreateBadgeUpdaterForApplication과 CreateBadgeUpdaterForSecondaryTile을 예로 들 수 있습니다.
 

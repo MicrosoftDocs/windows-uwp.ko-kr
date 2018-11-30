@@ -1,5 +1,5 @@
 ---
-description: 선언적 XAML 태그 형식으로 UI를 정의 하는 방법이 매우 원활 하 게 WindowsPhone Silverlight에서에서 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다.
+description: 선언적 XAML 태그 형식으로 UI를 정의 하는 방법 매우 원활 하 게 WindowsPhone Silverlight에서에서 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다.
 title: WindowsPhone Silverlight XAML 및 UI를 UWP로 포팅
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
 ms.date: 02/08/2017
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 153d73a75b48d61cb490a903c6657c42638c6674
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969784"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211831"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>WindowsPhone Silverlight XAML 및 UI를 UWP로 포팅
 
@@ -19,7 +19,7 @@ ms.locfileid: "7969784"
 
 이전 항목에서는 [문제 해결](wpsl-to-uwp-troubleshooting.md)에 대해 살펴보았습니다.
 
-선언적 XAML 태그 형식으로 UI를 정의 하는 방법이 매우 원활 하 게 WindowsPhone Silverlight에서에서 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다. 시스템 리소스 키 참조를 업데이트하고 일부 요소 형식 이름을 변경하고 "clr-namespace"를 "using"으로 변경한 경우 태그의 많은 부분이 호환됩니다. 또한 표시 계층의 대부분의 명령적 코드(보기 모델, UI 요소를 조작하는 코드)는 쉽게 포팅됩니다.
+선언적 XAML 태그 형식으로 UI를 정의 하는 방법 매우 원활 하 게 WindowsPhone Silverlight에서에서 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 합니다. 시스템 리소스 키 참조를 업데이트하고 일부 요소 형식 이름을 변경하고 "clr-namespace"를 "using"으로 변경한 경우 태그의 많은 부분이 호환됩니다. 또한 표시 계층의 대부분의 명령적 코드(보기 모델, UI 요소를 조작하는 코드)는 쉽게 포팅됩니다.
 
 ## <a name="a-first-look-at-the-xaml-markup"></a>XAML 태그 살펴보기
 
@@ -68,19 +68,19 @@ UWP에서는 "System" 접두사 선언을 생략하고 이미 선언된 "x" 접�
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-**BitmapImage** 가 WindowsPhone Silverlight 및 using **System.Windows.Media.Imaging** 네임 스페이스에 동일한 파일에서 지시문 **BitmapImage** 위의 코드 조각 에서처럼 네임 스페이스 자격 부여 없이 사용할 수 있습니다. 다음과 같은 경우 Visual Studio에서 형식 이름(**BitmapImage**)을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **Resolve** 명령을 사용하여 새 네임스페이스 지시문을 파일에 추가할 수 있습니다. 이 경우 UWP에서 형식이 있는 위치에 [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) 네임스페이스가 추가됩니다. **System.Windows.Media.Imaging** using 지시문만 제거하면 위의 코드 조각에서처럼 코드를 포팅할 수 있습니다. 확인을 완료 하는 경우 모든 WindowsPhone Silverlight 네임 스페이스를 제거 됩니다.
+**BitmapImage** 가 WindowsPhone Silverlight 및 using **System.Windows.Media.Imaging** 네임 스페이스에 동일한 파일에 대 한 지시문 **BitmapImage** 위의 코드 조각 에서처럼 네임 스페이스 자격 부여 없이 사용할 수 있습니다. 다음과 같은 경우 Visual Studio에서 형식 이름(**BitmapImage**)을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **Resolve** 명령을 사용하여 새 네임스페이스 지시문을 파일에 추가할 수 있습니다. 이 경우 UWP에서 형식이 있는 위치에 [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) 네임스페이스가 추가됩니다. **System.Windows.Media.Imaging** using 지시문만 제거하면 위의 코드 조각에서처럼 코드를 포팅할 수 있습니다. 확인을 완료 하는 경우 모든 WindowsPhone Silverlight 네임 스페이스를 제거 됩니다.
 
 이 경우처럼 단순히 이전 네임스페이스의 형식을 새 네임스페이스의 동일한 형식으로 매핑할 경우 Visual Studio의 **Find and Replace** 명령을 사용하여 소스 코드를 대량 변경할 수 있습니다. 형식의 새 네임스페이스를 검색하려면 **Resolve** 명령을 사용하는 것이 좋습니다. 다른 예로 모든 "System.Windows"를 "Windows.UI.Xaml"로 바꿀 수 있습니다. 기본적으로 해당 네임스페이스를 참조하는 모든 using 지시문과 모든 정규화된 형식 이름을 포팅합니다.
 
 모든 이전 using 지시문을 제거하고 새 지시문을 추가한 후 Visual Studio의 **Organize Usings** 명령을 사용하여 지시문을 정렬하고 사용되지 않는 지시문을 제거할 수 있습니다.
 
-때로는 명령적 코드 수정이 매개 변수 형식 변경과 같은 사소한 것일 수 있습니다. 다른 경우 8.x 앱 용 Windows 런타임 용.NET Api 대신 UWP Api를 사용 해야 합니다. 지원 되는 Api를 식별 하 [.NET에 대 한 Windows 런타임 8.x 앱 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) 및 [Windows 런타임 참조](https://msdn.microsoft.com/library/windows/apps/br211377)와 함께에서이 포팅 가이드의 나머지 부분을 사용 합니다.
+때로는 명령적 코드 수정이 매개 변수 형식 변경과 같은 사소한 것일 수 있습니다. 다른 경우 8.x 앱 용 Windows 런타임 용.NET Api 대신 UWP Api를 사용 해야 합니다. 지원 되는 Api를 식별, [.NET에 대 한 Windows 런타임 8.x 앱 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx) 및 [Windows 런타임 참조](https://msdn.microsoft.com/library/windows/apps/br211377)와 함께에서이 포팅 가이드의 나머지 부분을 사용 합니다.
 
 프로젝트 빌드 단계로 진행하려면 필수가 아닌 코드에 주석이나 설명을 추가할 수 있습니다. 그런 다음 문제를 한 번에 하나씩 반복하고 이 섹션의 다음 항목과 이전 [문제 해결](wpsl-to-uwp-troubleshooting.md) 항목을 참조하여 모든 빌드 및 런타임 문제를 해결하고 포팅을 완료합니다.
 
 ## <a name="adaptiveresponsive-ui"></a>적응/반응형 UI
 
-Windows10 앱 잠재적으로 광범위 한 디바이스에서 실행 될 수도 있으므로-각각 고유한 화면 크기와 해상도-앱을 포팅하는 최소한의 단계 이상을 진행 하는 것이 좋습니다 및 모양을 보기 좋게 해당 장치에서 UI를 조정 하는 것이 좋습니다. 적응 Visual State Manager 기능을 사용하여 동적으로 창 크기를 검색하고 그 결과에 따라 레이아웃을 변경할 수 있으며, 이러한 작업을 수행하는 방법에 대한 예제는 Bookstore2 사례 연구 항목의 [적응 UI](wpsl-to-uwp-case-study-bookstore2.md) 섹션에 나와 있습니다.
+Windows10 앱 잠재적으로 다양 한 장치에서 실행 될 수도 있으므로-각각 고유한 화면 크기와 해상도-앱을 포팅하는 최소한의 단계 이상을 진행 하는 것이 좋습니다 및 해당 디바이스에서 최상 확인 UI를 조정 하는 것이 좋습니다. 적응 Visual State Manager 기능을 사용하여 동적으로 창 크기를 검색하고 그 결과에 따라 레이아웃을 변경할 수 있으며, 이러한 작업을 수행하는 방법에 대한 예제는 Bookstore2 사례 연구 항목의 [적응 UI](wpsl-to-uwp-case-study-bookstore2.md) 섹션에 나와 있습니다.
 
 ## <a name="alarms-and-reminders"></a>알람 및 미리 알림
 
@@ -94,7 +94,7 @@ UWP 앱에서 키 프레임 애니메이션 또는 시작/종료 애니메이션
 
 ## <a name="back-button-handling"></a>뒤로 단추 처리
 
-Windows10 앱에서는 뒤로 단추를 처리 하는 단일 접근 방법을 사용할 수 및 모든 장치에서 작동 합니다. 모바일 장치에서는 단추가 장치의 용량성 단추로 또는 셸의 단추로 제공됩니다. 데스크톱 장치에서는 앱 내에서 뒤로 탐색이 가능할 때마다 앱의 크롬에 단추를 추가합니다. 그러면 해당 단추는 태블릿 모드의 작업 표시줄에 또는 창으로 표시된 앱의 제목 표시줄에 표시됩니다. 뒤로 단추 이벤트는 모든 디바이스 패밀리에서 범용 개념이며, 하드웨어 또는 소프트웨어에서 구현된 단추는 동일한 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트를 발생시킵니다.
+Windows10 앱에서는 뒤로 단추를 처리 하는 단일 접근 방법을 사용할 수 있으며 모든 장치에서 작동 합니다. 모바일 장치에서는 단추가 장치의 용량성 단추로 또는 셸의 단추로 제공됩니다. 데스크톱 장치에서는 앱 내에서 뒤로 탐색이 가능할 때마다 앱의 크롬에 단추를 추가합니다. 그러면 해당 단추는 태블릿 모드의 작업 표시줄에 또는 창으로 표시된 앱의 제목 표시줄에 표시됩니다. 뒤로 단추 이벤트는 모든 디바이스 패밀리에서 범용 개념이며, 하드웨어 또는 소프트웨어에서 구현된 단추는 동일한 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트를 발생시킵니다.
 
 아래 예제는 모든 디바이스 패밀리에서 작동하며, 동일한 처리가 모든 페이지에 적용되고 확인 탐색(예: 저장되지 않은 변경에 대한 경고)이 필요 없는 경우에 적합합니다.
 
@@ -163,7 +163,7 @@ UWP 앱의 바인딩 관련 기능에는 현재 다음과 같은 제한이 있�
 -   [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 메서드는 [**CultureInfo**](https://msdn.microsoft.com/library/system.globalization.cultureinfo.aspx) 개체 대신 언어 문자열을 매개 변수로서 가져옵니다.
 -   [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 클래스는 정렬과 필터링, 그리고 작업을 달리 그룹화하는 기능을 기본적으로 지원하지 않습니다. 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946) 및 [데이터 바인딩 샘플](http://go.microsoft.com/fwlink/p/?linkid=226854)을 참조하세요.
 
-동일한 바인딩 기능이 대개 여전히 지원 되지만 Windows10 새 옵션을 제공 하 고 바인딩 이라는 메커니즘 성능이 컴파일된 바인딩 {x: Bind} 태그 확장을 사용 합니다. [XAML 데이터 바인딩의 새로운 향상 기능을 통해 앱 성능 개선](http://channel9.msdn.com/Events/Build/2015/3-635)(영문) 및 [x:Bind 샘플](http://go.microsoft.com/fwlink/p/?linkid=619989)(영문)을 참조하세요.
+동일한 바인딩 기능이 대개 여전히 지원 되지만 Windows10 새 옵션을 제공 및 바인딩 이라는 메커니즘 성능이 컴파일된 바인딩 {x: Bind} 태그 확장을 사용 합니다. [XAML 데이터 바인딩의 새로운 향상 기능을 통해 앱 성능 개선](http://channel9.msdn.com/Events/Build/2015/3-635)(영문) 및 [x:Bind 샘플](http://go.microsoft.com/fwlink/p/?linkid=619989)(영문)을 참조하세요.
 
 ## <a name="binding-an-image-to-a-view-model"></a>이미지를 보기 모델에 바인딩
 
@@ -194,12 +194,12 @@ WindowsPhone Silverlight 앱 **Microsoft.Phone.Controls** 네임 스페이스와
 | ApplicationBarMenuItem | 해당하는 UWP 속성은 메뉴 항목 텍스트로 설정된 [AppBarButton.Label](https://msdn.microsoft.com/library/windows/apps/dn279261)입니다. |
 | ContextMenu(Windows Phone Toolkit에서) | 단일 선택 플라이아웃의 경우 [Flyout](https://msdn.microsoft.com/library/windows/apps/dn279496)을 사용합니다. |
 | ControlTiltEffect.TiltEffect 클래스 | UWP 애니메이션 라이브러리의 애니메이션은 공용 컨트롤의 기본 스타일로 기본 제공됩니다. [포인터 동작 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432)을 참조하세요. |
-| 그룹화된 데이터를 포함하는 LongListSelector | 작동 하며 콘서트에서 사용할 수 있는 두 가지 방법으로 WindowsPhone Silverlight LongListSelector 작동 합니다. 첫째, 키로 그룹화된 데이터(예: 머리글자 문자로 그룹화된 이름 목록)를 표시할 수 있습니다. 둘째, 두 시맨틱 보기 즉, 그룹화된 항목 목록(예: 이름)과 그룹 키 목록(예: 머리글자 문자) 간에 "확대/축소"할 수 있습니다. UWP를 사용하면 [목록 및 그리드 보기 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt186889)에 따라 그룹화된 데이터를 표시할 수 있습니다. |
-| 플랫 데이터를 포함하는 LongListSelector | 성능상의 이유로 매우 긴 목록의 경우 그룹화 되지 않은 플랫 데이터에 대해서도 목록 상자를 대신 WindowsPhone Silverlight LongListSelector 좋습니다 했습니다. UWP 앱에서는 데이터를 그룹화할 수 있는지 여부와 상관없이 긴 항목 목록에 대해 [GridView](https://msdn.microsoft.com/library/windows/apps/br242705)가 우선적으로 사용됩니다. |
+| 그룹화된 데이터를 포함하는 LongListSelector | 동시에 사용할 수 있는 두 가지 방법으로 WindowsPhone Silverlight LongListSelector 작동 합니다. 첫째, 키로 그룹화된 데이터(예: 머리글자 문자로 그룹화된 이름 목록)를 표시할 수 있습니다. 둘째, 두 시맨틱 보기 즉, 그룹화된 항목 목록(예: 이름)과 그룹 키 목록(예: 머리글자 문자) 간에 "확대/축소"할 수 있습니다. UWP를 사용하면 [목록 및 그리드 보기 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt186889)에 따라 그룹화된 데이터를 표시할 수 있습니다. |
+| 플랫 데이터를 포함하는 LongListSelector | 성능상의 이유로 매우 긴 목록의 경우 좋다고 권장 하였습니다 WindowsPhone Silverlight 대신 LongListSelector 그룹화 되지 않은 플랫 데이터에 대해서도 목록 상자. UWP 앱에서는 데이터를 그룹화할 수 있는지 여부와 상관없이 긴 항목 목록에 대해 [GridView](https://msdn.microsoft.com/library/windows/apps/br242705)가 우선적으로 사용됩니다. |
 | Panorama | WindowsPhone Silverlight Panorama 컨트롤 허브 컨트롤에 대 한 [Windows 런타임 8.x 앱의 허브 컨트롤에 대 한 지침](https://msdn.microsoft.com/library/windows/apps/dn449149) 및 지침에 매핑됩니다. <br/> Panorama 컨트롤은 마지막 섹션에서 첫 번째 섹션까지 래핑하며, 해당 배경 이미지는 섹션을 기준으로 시차 효과를 내면서 이동합니다. [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843) 섹션은 주변을 래핑하지 않으며 시차 효과가 사용되지 않습니다. |
-| Pivot | UWP 해당 WindowsPhone Silverlight Pivot 컨트롤의 [Windows.UI.Xaml.Controls.Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241)입니다. 모든 디바이스 패밀리에서 사용할 수 있습니다. |
+| Pivot | UWP 해당 하는 WindowsPhone Silverlight Pivot 컨트롤 [Windows.UI.Xaml.Controls.Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241)입니다. 모든 디바이스 패밀리에서 사용할 수 있습니다. |
 
-**참고**  PointerOver 시각적 상태는 사용자 지정 스타일/템플릿에서 Windows10 앱에서 하지만 WindowsPhone Silverlight 앱에 없습니다. 이유는 기존 사용자 지정 스타일/템플릿이 적절 하지 않을 Windows10 앱을 사용 하는 시스템 리소스 키를 포함 하 여 집합을 사용 하는 시각적 상태 및 Windows10 기본 스타일을 수행한 성능 개선의 변경에 대 한 다른 이유는 / 템플릿입니다. Windows10에 대 한 컨트롤의 기본 템플릿의 복사본을 편집한 편집 하 고 되도록 스타일 및 템플릿 사용자 지정을 다시 적용 하는 것이 좋습니다.
+**참고**  PointerOver 시각적 상태는 사용자 지정 스타일/템플릿에서 Windows10 앱 에서만 WindowsPhone Silverlight 앱. 이유는 기존 사용자 지정 스타일/템플릿이 적절 하지 않을 Windows10 포함 하 여 앱을 사용 하는 시스템 리소스 키를 사용 하는 시각적 상태 및 Windows10 기본 스타일에 대 한 성능 향상의 집합으로 변경에 대 한 다른 이유는 / 템플릿입니다. 컨트롤의 기본 서식 파일 복사본을 편집한 Windows10에 대 한 편집 하 고는 스타일 및 템플릿 사용자 지정을 다시 적용 하는 것이 좋습니다.
 
 UWP 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://msdn.microsoft.com/library/windows/apps/mt185405), [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/mt185406) 및 [컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn611856)을 참조하세요.
 
@@ -249,7 +249,7 @@ WindowsPhone Silverlight 앱에서는 방법은 전경 브러시로 채운 (비�
     <Image Source="Assets/winrt_check.png" Stretch="None"/>
 ```
 
-WindowsPhone Silverlight **UIElement.Clip** 속성 **기 하 도형** 으로 표현할 수 및 **StreamGeometry** 미니 언어로 XAML 태그에서 일반적으로 직렬화 됩니다 있는 모양이 될 수 있습니다. UWP에서는 [**Clip**](https://msdn.microsoft.com/library/windows/apps/br208919) 속성의 형식이 [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/br210259)이므로 직사각형 영역만 자를 수 있습니다. 미니 언어로 직사각형을 정의하도록 허용하는 것은 너무 관대한 것입니다. 따라서 태그에서 클리핑 영역을 포팅하려면 **Clip** 특성 구문을 바꾸고 다음과 비슷한 속성 요소 구문으로 만듭니다.
+WindowsPhone Silverlight **UIElement.Clip** 속성 **기 하 도형** 표현할 수 있는 **StreamGeometry** 미니 언어로 XAML 태그에서 일반적으로 직렬화 됩니다 모양이 될 수 있습니다. UWP에서는 [**Clip**](https://msdn.microsoft.com/library/windows/apps/br208919) 속성의 형식이 [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/br210259)이므로 직사각형 영역만 자를 수 있습니다. 미니 언어로 직사각형을 정의하도록 허용하는 것은 너무 관대한 것입니다. 따라서 태그에서 클리핑 영역을 포팅하려면 **Clip** 특성 구문을 바꾸고 다음과 비슷한 속성 요소 구문으로 만듭니다.
 
 ```xml
     <UIElement.Clip>
@@ -317,11 +317,11 @@ WindowsPhone Silverlight 앱에서 기본 글꼴 패밀리는 맑은 고딕입�
 
 ## <a name="theme-changes"></a>테마 변경
 
-WindowsPhone Silverlight 앱에 대 한 기본 테마는 기본적으로 어둡습니다. Windows10 장치에 대 한 기본 테마를 변경 되었지만 App.xaml에서 요청된 된 테마를 선언 하 여 사용 되는 테마를 제어할 수 있습니다. 예를 들어 모든 디바이스에서 어두운 테마를 사용하려면 루트 응용 프로그램 요소에 `RequestedTheme="Dark"`를 추가합니다.
+WindowsPhone Silverlight 앱의 경우 기본 테마는 기본적으로 어둡습니다. Windows10 장치에 대 한 기본 테마를 변경 되었지만 App.xaml에서 요청된 된 테마를 선언 하 여 사용 되는 테마를 제어할 수 있습니다. 예를 들어 모든 디바이스에서 어두운 테마를 사용하려면 루트 응용 프로그램 요소에 `RequestedTheme="Dark"`를 추가합니다.
 
 ## <a name="tiles"></a>타일
 
-UWP 앱에 대 한 타일 일부의 차이점이 있지만 WindowsPhone Silverlight 앱에 대 한 라이브 타일에 유사한 동작이 있습니다. 예를 들어 **Microsoft.Phone.Shell.ShellTile.Create** 메서드를 호출하여 보조 타일을 만드는 코드를 포팅해야 [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606)를 호출할 수 있습니다. 다음은 및 이후 예제 먼저 합니다 WindowsPhone Silverlight 버전:
+UWP 앱에 대 한 타일 일부의 차이점이 있지만 WindowsPhone Silverlight 앱에 대 한 라이브 타일에 유사한 동작이 있습니다. 예를 들어 **Microsoft.Phone.Shell.ShellTile.Create** 메서드를 호출하여 보조 타일을 만드는 코드를 포팅해야 [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606)를 호출할 수 있습니다. 다음은 이전 및 이후 예제에서는 먼저 합니다 WindowsPhone Silverlight 버전:
 
 
 ```csharp
@@ -362,15 +362,15 @@ UWP 해당 버전:
 
 ## <a name="view-or-effective-pixels-viewing-distance-and-scale-factors"></a>보기 또는 유효 픽셀, 가시거리 및 배율 인수
 
-WindowsPhone Silverlight 앱 및 Windows10 앱 크기 및 실제 물리적 크기에서 UI 요소의 레이아웃 및 디바이스의 해상도 추상화 방식에서 서로 다릅니다. WindowsPhone Silverlight 앱이 보기 픽셀을 사용 합니다. Windows10, 보기 픽셀의 개념에 유효 픽셀의 구체화 되었습니다. 다음은 해당 용어에 대한 설명, 해당 용어의 의미, 이 개념이 제공하는 추가적인 가치입니다.
+WindowsPhone Silverlight 앱과 Windows10 앱 크기 및 실제 물리적 크기에서 UI 요소의 레이아웃 및 장치의 해상도 추상화 방식에서 서로 다릅니다. WindowsPhone Silverlight 앱이 작업을 수행 하려면 보기 픽셀을 사용 합니다. Windows10, 보기 픽셀의 개념 유효 픽셀의 구체화 되었습니다. 다음은 해당 용어에 대한 설명, 해당 용어의 의미, 이 개념이 제공하는 추가적인 가치입니다.
 
 “해상도”라는 용어는 일반적으로 생각하는 픽셀 수가 아닌 픽셀 밀도 기준을 의미합니다. “유효 해상도”는 장치의 가시거리와 물리적 픽셀 크기의 차이를 고려하여 이미지 또는 문자 모양을 구성하는 물리적 픽셀 수를 눈으로 확인할 수 있는 방법입니다(픽셀 밀도는 물리적 픽셀 크기의 역). 유효 해상도는 사용자 중심이므로 환경을 구축하는 데 유용한 메트릭입니다. 모든 요소를 이해하고 UI 요소의 크기를 제어하여 유용한 사용자 환경을 구축할 수 있습니다.
 
-WindowsPhone Silverlight 앱에서 모든 휴대폰 화면의 480 보기 픽셀 너비는, 예외 없이 물리적 픽셀 수에 관계 없이 화면의 아니고 어떤와 픽셀 밀도 또는 물리적 크기. 즉, **이미지** 요소와 `Width="48"` WindowsPhone Silverlight 앱을 실행할 수 있는 휴대폰 화면 너비의 정확히 1/10 됩니다.
+WindowsPhone Silverlight 앱에서 모든 휴대폰 화면의 480 보기 픽셀 너비는, 예외 없이 물리적 픽셀 수에 관계 없이 화면의 일부만 어떤와 픽셀 밀도 또는 물리적 크기. 즉, 사용 하 여 **이미지** 요소 `Width="48"` WindowsPhone Silverlight 앱을 실행할 수 있는 휴대폰 화면 너비의 정확히 1/10 됩니다.
 
-Windows10 앱은 *하지* 는 모든 장치는 일부 경우 고정 유효 픽셀의 수입니다. UWP 앱을 실행할 수 있는 다양한 장치를 고려할 때 이는 당연합니다. 장치마다 유효 픽셀 수가 다릅니다. 가장 작은 장치의 경우 320epx에서부터 중간 크기 모니터의 경우 최대 1024epx 이상의 상당한 너비에 이르기까지 다양합니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 고정 크기로 UI 요소의 속성을 설정할 수 있는 경우가 몇 가지 있습니다. 배율 인수는 앱이 실행되는 장치와 사용자가 지정한 디스플레이 설정에 따라 앱에 자동으로 적용됩니다. 또한 배율 인수는 고정 크기의 모든 UI 요소를 유지하여 다양한 화면 크기에서 사용자에게 거의 일정한 크기의 터치(및 읽기) 대상을 제공하는 역할을 합니다. 또한 동적 레이아웃과 함께 사용되면서 장치에 따라 UI의 크기를 광학적으로 조정하는 것이 아니라 사용 가능한 공간에 적절한 콘텐츠 양을 맞추기 위해 필요한 작업을 수행합니다.
+Windows10 앱을 고정 *하지* 는 일부 장치는 일부 경우 유효 픽셀 너비의 합니다. UWP 앱을 실행할 수 있는 다양한 장치를 고려할 때 이는 당연합니다. 장치마다 유효 픽셀 수가 다릅니다. 가장 작은 장치의 경우 320epx에서부터 중간 크기 모니터의 경우 최대 1024epx 이상의 상당한 너비에 이르기까지 다양합니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 고정 크기로 UI 요소의 속성을 설정할 수 있는 경우가 몇 가지 있습니다. 배율 인수는 앱이 실행되는 장치와 사용자가 지정한 디스플레이 설정에 따라 앱에 자동으로 적용됩니다. 또한 배율 인수는 고정 크기의 모든 UI 요소를 유지하여 다양한 화면 크기에서 사용자에게 거의 일정한 크기의 터치(및 읽기) 대상을 제공하는 역할을 합니다. 또한 동적 레이아웃과 함께 사용되면서 장치에 따라 UI의 크기를 광학적으로 조정하는 것이 아니라 사용 가능한 공간에 적절한 콘텐츠 양을 맞추기 위해 필요한 작업을 수행합니다.
 
-480이 이전에 고정된 너비 때문에 휴대폰 크기 화면의 및 해당 값에 대 한 픽셀은 유효 픽셀에서 일반적으로 더 작은 이제 뷰에, 대략 치수 합니다 WindowsPhone Silverlight 앱에 0.8의 인수 곱해 야 합니다.
+480이 이전에 고정된 폭 때문에 휴대폰 크기 화면의 및 해당 값에 대 한 픽셀은 유효 픽셀에서 일반적으로 더 작은 이제 뷰에, 대략 치수 합니다 WindowsPhone Silverlight 앱에 0.8의 인수 곱해 야 합니다.
 
 앱이 모든 디스플레이에서 최상의 환경을 제공하므로, 각기 특정 배율 인수에 적합한 여러 가지 크기로 각 비트맵 자산을 만드는 것이 좋습니다. 100%, 200% 및 400% 배율의 자산을 제공(해당하는 우선 순위로)하면 대부분의 경우에 중간 배율에서 좋은 결과가 나옵니다.
 
@@ -378,7 +378,7 @@ Windows10 앱은 *하지* 는 모든 장치는 일부 경우 고정 유효 픽�
 
 복잡한 아트워크가 있으면 훨씬 더 큰 크기로 자산을 제공할 수 있습니다. 벡터 아트를 시작하면 모든 배율에서 고품질의 자산을 생성하기가 비교적 쉽습니다.
 
-모든 배율 인수를 지원 하도록 하지만 전체 Windows10 앱에 대 한 배율 인수 목록은 100%, 125%, 150%, 200%, 250%, 300% 및 400%는 권장 하지 않습니다. 여러 배율의 자산을 제공하면 스토어에서 각 장치에 맞는 올바른 크기의 자산을 선택하고 해당 자산만 다운로드됩니다. 스토어에서 장치의 DPI에 따라 다운로드할 자산을 선택합니다.
+배율 인수를 모두 지 원하는 하려고 하지만 전체 Windows10 앱에 대 한 배율 인수 목록은 100%, 125%, 150%, 200%, 250%, 300% 및 400%는 권장 하지 않습니다. 여러 배율의 자산을 제공하면 스토어에서 각 장치에 맞는 올바른 크기의 자산을 선택하고 해당 자산만 다운로드됩니다. 스토어에서 장치의 DPI에 따라 다운로드할 자산을 선택합니다.
 
 자세한 내용은 [UWP 앱용 반응형 디자인 101](https://msdn.microsoft.com/library/windows/apps/dn958435)을 참조하세요.
 

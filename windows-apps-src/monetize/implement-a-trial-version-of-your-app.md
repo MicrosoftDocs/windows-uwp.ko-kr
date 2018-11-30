@@ -7,15 +7,15 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 796266565965a62d3f168b48893d62e1cdd7df44
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970239"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212603"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>앱의 평가판 구현
 
-경우 [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial) 하는 고객은 평가 기간 동안 앱 작업을 무료로 사용할 수, 고객이 제외 하거나 평가 기간 동안 일부 기능을 제한 하 여 앱의 정식 버전으로 업그레이드 하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
+경우 [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial) 하면 고객 평가 기간 동안 앱을 무료로 사용할 수, 고객이 제외 하거나 평가 기간 동안 일부 기능을 제한 하 여 앱의 정식 버전으로 업그레이드 하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 이 문서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 멤버를 사용하여 사용자에게 앱의 평가판 라이선스가 있는지 확인하고 앱이 실행되는 동안 라이선스 상태가 변경되면 알림을 받는 방법을 설명합니다. 
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0072aa814e0bcb22806cad764b5f365770961ac3
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970087"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213457"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight를 UWP API로 매핑
 
@@ -23,7 +23,7 @@ ms.locfileid: "7970087"
 **테이블을 사용 하는 방법:** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡한 모든 경우에 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
 
 **참고**Windows10 보다 훨씬 더.NET Framework는 Windows Phone 스토어 앱을 지원 합니다. 예를 들어 Windows10 여러 System.ServiceModel.\* 네임 스페이스 뿐만 아니라 System.Net, System.Net.NetworkInformation 및 System.Net.Sockets에 있습니다.
-또한 Windows10 앱의 이점을 활용할 수에서.NET 네이티브는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술인 합니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
+또한 Windows10 앱에서는 이점을 활용할 수에서.NET 네이티브는 MSIL을 기본적으로 실행 가능 컴퓨터 코드로 변환 하는 미리 컴파일 기술인 합니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
 
 | WindowsPhone Silverlight | Windows 런타임 |
 | ------------------------- | --------------- |

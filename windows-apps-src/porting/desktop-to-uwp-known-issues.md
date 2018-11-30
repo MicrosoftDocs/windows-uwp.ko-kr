@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7973527"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213348"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>패키지 데스크톱 응용 프로그램을 사용 하 여 알려진된 문제
 
