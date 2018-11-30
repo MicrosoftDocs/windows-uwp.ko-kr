@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b0b529bbf397b76acb1eb589095a84f5c85745c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965935"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211305"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>표준 C++ 데이터 형식 및 C++/WinRT
 
-와 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 일부 c + + 표준 라이브러리 데이터 형식이 포함 된 표준 c + + 데이터 형식을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다. Api에 표준 문자열을 전달할 수 있습니다 (참조 [문자열 처리 C + + WinRT](strings.md)), 목록 및 표준 컨테이너 의미가 같은 컬렉션 것으로 예상 되는 Api에 이니셜라이저를 전달할 수 있습니다.
+와 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), 일부 c + + 표준 라이브러리 데이터 형식이 포함 된 표준 c + + 데이터 형식을 사용 하 여 Windows 런타임 Api를 호출할 수 있습니다. Api에 표준 문자열을 전달할 수 있습니다 (참조 [문자열 처리 C + + WinRT](strings.md)), 목록 및 표준 컨테이너 의미가 같은 컬렉션을 사용 하는 Api에 이니셜라이저를 전달할 수 있습니다.
 
 ## <a name="standard-initializer-lists"></a>표준 이니셜라이저 목록
 이니셜라이저 목록(**std::initializer_list**)은 C++ 표준 라이브러리 구문을 말합니다. 이니셜라이저 목록은 일부 Windows 런타임 생성자와 메서드를 호출할 때 사용할 수 있습니다. 예를 들어, 목록 하나로 [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes)를 호출할 수 있습니다.
@@ -128,8 +128,8 @@ dataWriter.WriteBytes(fromRange); // the array_view is passed to WriteBytes.
 
 더 많은 예제와 정보를 보려면 [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) API 참조 항목을 참조하세요.
 
-## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt; ** 및 표준 반복 구문
-[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) 형식의 컬렉션을 반환 하는 Windows 런타임 API의 예는 [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (프로젝션에 C + + /winrt **winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). 표준 반복 구문으로이 이와 같은 사용 범위 기반 `for`.
+## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt; ** 표준 반복 구문
+[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) 형식의 컬렉션을 반환 하는 Windows 런타임 API의 예로 나와 [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (프로젝션에 C + + /winrt **winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). 표준 반복 구문으로이 이와 같은 사용 범위 기반 `for`.
 
 ```cppwinrt
 // main.cpp
@@ -150,7 +150,7 @@ void PrintFeed(SyndicationFeed const& syndicationFeed)
 ```
 
 ## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>비동기 Windows 런타임 Api를 사용 하 여 c + + 코
-비동기 Windows 런타임 Api를 호출할 때 [병렬 패턴 라이브러리 (PPL)를](/cpp/parallel/concrt/parallel-patterns-library-ppl) 사용 하 여 계속 수 있습니다. 그러나 대부분의 경우 c + + 코 비동기 개체와 상호 작용 하기 위한 효율적이 고 더 쉽게 코딩 된 방법을 제공 합니다. 자세한 내용은 및 코드 예제를 참조 하세요 [동시성 및 비동기 작업을 사용 하 여 C + + WinRT](concurrency.md)합니다.
+비동기 Windows 런타임 Api를 호출할 때 [병렬 패턴 라이브러리 (PPL)를](/cpp/parallel/concrt/parallel-patterns-library-ppl) 사용 하 여 계속 수 있습니다. 그러나 대부분의 경우 c + + 코 비동기 개체와 상호 작용을 효율적이 고 더 쉽게 코딩 된 방법을 제공 합니다. 자세한 내용은 및 코드 예제를 참조 하세요 [동시성 및 비동기 작업을 사용 하 여 C + + WinRT](concurrency.md).
 
 ## <a name="important-apis"></a>중요 API
 * [IVector&lt;T&gt; 인터페이스](/uwp/api/windows.foundation.collections.ivector_t_)

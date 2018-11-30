@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ab17adc80a643c04ac7793945486c3ff975fde5
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967130"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213818"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>OEM용 사전 설치 패키지 생성
 
@@ -20,7 +20,7 @@ ms.locfileid: "7967130"
 
 ## <a name="important-preinstall-policy--limitations"></a>중요 사전 설치 정책 및 제한 사항
 
-사전 설치 앱을 스토어에 연결 하 고 앱 업데이트를 받을 수 있도록 최신 스토어 라이선스를 보유 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 통해 받아야 합니다.
+사전 설치 앱 스토어에 연결 하 고 앱 업데이트를 받을 수 있도록 최신 스토어 라이선스를 보유 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 통해 인증을 받아야 합니다.
 
 사전 설치되어 있는 앱은 모든 시장에 제공되고 무료를 유지해야 합니다.
 
