@@ -1,22 +1,22 @@
 ---
-description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 Xbox One에서 오류에 대 한 스택 추적을 게임 가져옵니다.
+description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기.
 title: Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: fd43305c54245c3281a0e840d3df4c5c87ff7ad8
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969591"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8194446"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기
 
-이 메서드를 사용 하 여 Microsoft Store 분석 API에서 Xbox One에서 오류에 대 한 스택 추적을 게임 가져오려면 Xbox 개발자 포털 (XDP)을 통해 수집 된 되었고 XDP 분석 파트너 센터 대시보드에서 사용할 수 있는. 이 메서드는 지난 30일 동안 발생한 오류에 대한 스택 추적만 다운로드할 수 있습니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 Xbox One에서 오류에 대 한 스택 추적을 게임 가져오려면 Xbox 개발자 포털 (XDP)을 통해 수집 된 상태로 XDP 분석 파트너 센터 대시보드에서 사용할 수 있었던. 이 메서드는 지난 30일 동안 발생한 오류에 대한 스택 추적만 다운로드할 수 있습니다.
 
-이 메서드를 사용 하려면 먼저에 스택 추적을 검색 하려는 오류와 관련 된 CAB 파일의 ID를 검색 먼저 [Xbox One 게임에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
+이 메서드를 사용 하려면 먼저에 스택 추적을 검색 하려는 오류와 연결 된 CAB 파일의 ID를 검색 먼저 [Xbox One 게임에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -81,7 +81,7 @@ Authorization: Bearer <your access token>
 |-----------------|---------|----------------|
 | level            | 문자열  |  호출 스택에서 이 요소가 나타내는 프레임 번호입니다.  |
 | image   | 문자열  |   이 스택 프레임에서 호출되는 함수를 포함하는 실행 파일 또는 라이브러리 이미지의 이름입니다.           |
-| function | 문자열  |  이 스택 프레임에서 호출된 함수 이름입니다. 이 게임 실행 파일 또는 라이브러리에 대 한 기호를 포함 하는 경우에 사용할 수 있습니다.              |
+| function | 문자열  |  이 스택 프레임에서 호출된 함수 이름입니다. 이것이 게임 실행 파일 또는 라이브러리에 대 한 기호를 포함 하는 경우에 사용할 수 있습니다.              |
 | offset     | 문자열  |  함수의 시작 부분을 기준으로 현재 명령의 바이트 오프셋입니다.      |
 
 
@@ -121,5 +121,5 @@ Authorization: Bearer <your access token>
 
 * [Microsoft Store 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [Xbox One에 대 한 데이터를 보고 하는 오류를 게임 가져오기](get-error-reporting-data-for-your-xbox-one-game.md)
-* [게임에 Xbox One에서 오류에 대 한 세부 정보를 가져오기](get-details-for-an-error-in-your-xbox-one-game.md)
+* [게임에서 Xbox One에 오류에 대 한 세부 정보를 가져오기](get-details-for-an-error-in-your-xbox-one-game.md)
 * [Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)
