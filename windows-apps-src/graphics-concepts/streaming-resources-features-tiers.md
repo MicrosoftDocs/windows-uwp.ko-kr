@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c872d289c67161e414671d3d509401f0539a7675
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8195146"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8341462"
 ---
 # <a name="streaming-resources-features-tiers"></a>스트리밍 리소스 기능 계층
 

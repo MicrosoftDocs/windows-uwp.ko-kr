@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 145912f08075678c98dfb34ac491e123577c69e3
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8197817"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8336313"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 

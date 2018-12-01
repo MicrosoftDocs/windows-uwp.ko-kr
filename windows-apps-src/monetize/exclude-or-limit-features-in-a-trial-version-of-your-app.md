@@ -7,11 +7,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d7ada6567db95609203f8f163b78631e141b4f
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8189374"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338087"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 

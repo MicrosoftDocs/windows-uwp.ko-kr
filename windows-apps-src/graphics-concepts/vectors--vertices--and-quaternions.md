@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8942e53b7372e2e8b3cf4ed05f89b4187bdfc4be
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8217536"
+ms.locfileid: "8340698"
 ---
 # <a name="vectors-vertices-and-quaternions"></a>벡터, 꼭짓점 및 사원수
 

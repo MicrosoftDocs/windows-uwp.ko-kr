@@ -6,11 +6,11 @@ ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5196503a4a50d1565d00b9ac0e48e6c2d0b6e426
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8194190"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8336064"
 ---
 # <a name="design-basics-for-uwp-apps"></a>UWP 앱의 디자인 기본 사항
 

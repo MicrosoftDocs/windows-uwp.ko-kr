@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: b197ea668ec73711b7a9c63e516b4ec9a5f54d62
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8206070"
+ms.locfileid: "8342071"
 ---
 # <a name="binding-markup-extension"></a>{Binding} 태그 확장
 

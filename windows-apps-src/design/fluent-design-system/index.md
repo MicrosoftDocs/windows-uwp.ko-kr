@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8200551"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8337309"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 응용 프로그램 작성자
 

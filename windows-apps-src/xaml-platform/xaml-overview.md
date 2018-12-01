@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 639f552a240cf8d28d1a2a0ce530315671128746
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8214995"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8336719"
 ---
 # <a name="xaml-overview"></a>XAML 개요
 

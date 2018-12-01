@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 위치, 지도, 지리적 위치
 ms.localizationpriority: medium
 ms.openlocfilehash: e5150188c99bfc448bf85df6a6dabbbb4c60bd49
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8196082"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8332639"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>위치 인식 앱에 대한 지침
 

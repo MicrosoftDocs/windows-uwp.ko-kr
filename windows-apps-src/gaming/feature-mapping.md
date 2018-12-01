@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8193165"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338563"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 

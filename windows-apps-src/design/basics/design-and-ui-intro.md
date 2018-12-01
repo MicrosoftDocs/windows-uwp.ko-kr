@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0006d20c1db7da16b885e82fb3f066b081e27349
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8199565"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8336372"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
