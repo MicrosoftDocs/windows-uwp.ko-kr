@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: dd7dfb621d84a3ce1d934c358ab60683caee9238
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8215687"
+ms.locfileid: "8343854"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
@@ -361,7 +361,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 알림이나 알림 내의 단추에 백그라운드 활성화를 지정하면 포그라운드 앱을 활성화하는 대신 백그라운드 작업이 실행됩니다.
 
-백그라운드 작업에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](/launch-resume/support-your-app-with-background-tasks.md)을 참조하세요.
+백그라운드 작업에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
 
 빌드 14393 이상을 대상으로 하는 경우 처리 중인 백그라운드 작업을 사용하여 작업을 크게 단순화할 수 있습니다. 이전 버전의 Windows에서는 처리 중인 백그라운드 작업이 실행되지 않습니다. 이 코드 샘플에서는 처리 중인 백그라운드 작업을 사용하겠습니다.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지오펜스, 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: adcce5716a2982cf2c08e98ee337dbad20bddf28
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8201294"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338881"
 ---
 # <a name="set-up-a-geofence"></a>지오펜스 설정
 

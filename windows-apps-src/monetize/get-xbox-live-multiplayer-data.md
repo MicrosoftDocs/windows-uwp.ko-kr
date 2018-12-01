@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 멀티플레이
 ms.localizationpriority: medium
 ms.openlocfilehash: 74f1a64bde32fe68a51527527a0b049d811d0853
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8201004"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8337103"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Xbox Live 멀티플레이 데이터 가져오기
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 구매, 앱 판매, 앱 다운로드, 설치, 깔때기, 획득, 변환, 채널, 앱 페이지 보기
 ms.localizationpriority: medium
 ms.openlocfilehash: 33d5885c5161793807bf32f62ff2df4bab5b2c1d
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8196354"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8344768"
 ---
 # <a name="acquisitions-report"></a>구입 보고서
 

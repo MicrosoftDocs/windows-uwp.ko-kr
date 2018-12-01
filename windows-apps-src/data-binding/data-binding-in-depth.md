@@ -10,11 +10,11 @@ dev_langs:
 - csharp
 - cppwinrt
 ms.openlocfilehash: dcaad17df5c036069dcdd729e662e5418db7646e
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8195286"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8345570"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 

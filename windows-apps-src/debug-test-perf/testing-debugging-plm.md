@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b3e37d4de3a346e0f29909727a46d3b31f9d59d
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8207456"
+ms.locfileid: "8339077"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
 

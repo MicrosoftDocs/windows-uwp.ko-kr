@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8188701"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8346639"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에서 Xbox One에 오류에 대 한 세부 정보를 가져오기
 
