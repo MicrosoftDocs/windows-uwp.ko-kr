@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cd5df1d22189698f6544af4ab72c09425531602
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 0bc555030c2f5202e5c128c1d1a2fe45b5b71b4b
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8214798"
+ms.locfileid: "8347430"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>UI 스레드 응답 유지
 
@@ -50,7 +50,7 @@ UI 요소는 UI 스레드에서만 액세스할 수도 있습니다. 백그라�
 ```csharp
 public class AsyncExample
 {
-    private async void NextMove-Click(object sender, RoutedEventArgs e)
+    private async void NextMove_Click(object sender, RoutedEventArgs e)
     {
         // The await causes the handler to return immediately.
         await System.Threading.Tasks.Task.Run(() => ComputeNextMove());
@@ -71,7 +71,7 @@ public class AsyncExample
 > public class Example
 > {
 >     // ...
->     private async void NextMove-Click(object sender, RoutedEventArgs e)
+>     private async void NextMove_Click(object sender, RoutedEventArgs e)
 >     {
 >         await Task.Run(() => ComputeNextMove());
 >         // Update the UI with results
@@ -87,7 +87,7 @@ public class AsyncExample
 > ```vb
 > Public Class Example
 >     ' ...
->     Private Async Sub NextMove-Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+>     Private Async Sub NextMove_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 >         Await Task.Run(Function() ComputeNextMove())
 >         ' update the UI with results
 >     End Sub
@@ -99,7 +99,7 @@ public class AsyncExample
 > End Class
 > ```
 
-이 예제에서는 UI 스레드의 응답을 유지하기 위해 `NextMove-Click` 처리기가 **await**에서 반환합니다. 그러나 백그라운드 스레드에서 실행되는 `ComputeNextMove`가 완료된 후에는 해당 처리기에서 실행이 다시 선택됩니다. 처리기의 나머지 코드는 결과와 함께 UI를 업데이트합니다.
+이 예제에서는 UI 스레드의 응답을 유지하기 위해 `NextMove_Click` 처리기가 **await**에서 반환합니다. 그러나 백그라운드 스레드에서 실행되는 `ComputeNextMove`가 완료된 후에는 해당 처리기에서 실행이 다시 선택됩니다. 처리기의 나머지 코드는 결과와 함께 UI를 업데이트합니다.
 
 > **참고**비슷한 시나리오에 사용할 수 있는 UWP에 대 한 [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) 및 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) API 이기도 합니다. 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/Mt187340)을 참조하세요.
 

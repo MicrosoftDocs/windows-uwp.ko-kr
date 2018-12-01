@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 35a591d805870df97ee03169b20e664316e094a7
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8217092"
+ms.locfileid: "8349194"
 ---
 # <a name="address-space-available-for-streaming-resources"></a>스트리밍 리소스에 사용할 수 있는 주소 공간
 

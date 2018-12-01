@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 데이터
 ms.localizationpriority: medium
-ms.openlocfilehash: 54f5989f0aa2fb5eeed26f16ab9e07671e26832c
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8198756"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8348825"
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 
@@ -19,44 +19,12 @@ Microsoft Store 제출 API에서에서 다음 메서드를 사용 하 여 파트
 
 이러한 메서드를 사용 하려면 먼저 앱 파트너 센터 계정에 이미 있어야 합니다. 앱에 대한 제출을 만들거나 관리하려면 [앱 제출 관리](manage-app-submissions.md)의 메서드를 참조하세요.
 
-<table>
-<colgroup>
-<col width="10%" />
-<col width="30%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">메서드</th>
-<th align="left">URI</th>
-<th align="left">설명</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications</td>
-<td align="left"><a href="get-all-apps.md">모든 앱에 대한 데이터 가져오기</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}</td>
-<td align="left"><a href="get-an-app.md">특정 앱에 대한 데이터 가져오기</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts</td>
-<td align="left"><a href="get-add-ons-for-an-app.md">앱에 대한 추가 기능 가져오기</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights</td>
-<td align="left"><a href="get-flights-for-an-app.md">앱의 패키지 플라이트 가져오기</a></td>
-</tr>
-</tbody>
-</table>
-
-<span/>
+| 메서드 | URI                                                                                             | 설명                                                 |
+|------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [모든 앱에 대한 데이터 가져오기](get-all-apps.md)               |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [특정 앱에 대한 데이터 가져오기](get-an-app.md)                |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)         |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) |
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -180,13 +148,12 @@ Microsoft Store 제출 API에서에서 다음 메서드를 사용 하 여 파트
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 유형    | 설명                 |
-|-----------------|---------|------------------------------|
-| id            | 문자열  | 제출의 ID입니다.    |
-| resourceLocation   | 문자열  | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.            |
- 
-<span/>
+| 값              | 유형   | 설명               |
+|--------------------|--------|---------------------------|
+| id                 | 문자열 | 제출의 ID입니다. |
+| resourceLocation   | 문자열 | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다. |
 
+ 
 ## <a name="related-topics"></a>관련 항목
 
 * [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
