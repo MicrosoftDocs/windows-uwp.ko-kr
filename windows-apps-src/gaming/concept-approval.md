@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 개념 승인
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e4ecdbb77e1e3df10963a59dff38d4ecf215126
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8213971"
+ms.locfileid: "8331455"
 ---
 # <a name="concept-approval"></a>개념 승인
 
