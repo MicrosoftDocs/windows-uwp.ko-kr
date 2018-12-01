@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 486eb4adc1151bac1bf6a04a8f54b67530b426a3
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8207466"
+ms.locfileid: "8340903"
 ---
 # <a name="swap-chains"></a>스왑 체인
 

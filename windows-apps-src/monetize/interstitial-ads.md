@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 광고 관리, 중간 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: c1860fe51035699aaa55d014c2f76a95c7622061
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8198106"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8332965"
 ---
 # <a name="interstitial-ads"></a>중간 광고
 

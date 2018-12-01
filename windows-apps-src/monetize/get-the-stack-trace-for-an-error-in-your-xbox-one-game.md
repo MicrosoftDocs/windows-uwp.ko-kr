@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 스택 추적, 오류
 ms.localizationpriority: medium
 ms.openlocfilehash: fd43305c54245c3281a0e840d3df4c5c87ff7ad8
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8194446"
+ms.locfileid: "8332830"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Xbox One에서 오류에 대 한 스택 추적을 게임 가져오기
 

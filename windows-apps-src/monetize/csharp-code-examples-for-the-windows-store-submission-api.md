@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8217956"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8336802"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\# 샘플: 앱, 추가 기능, 플라이트 제출
 

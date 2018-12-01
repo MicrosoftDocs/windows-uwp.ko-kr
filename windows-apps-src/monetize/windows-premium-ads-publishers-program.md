@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: 638854066c02edb923c8d4153f2125142d6b966b
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8207074"
+ms.locfileid: "8332695"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Windows 프리미엄 광고 게시자 프로그램
 

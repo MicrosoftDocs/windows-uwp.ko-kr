@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ddeee438e946dd28a78d59d163f59cb1114aa65
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8208164"
+ms.locfileid: "8331723"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 
@@ -438,7 +438,7 @@ Windows 런타임 8.x 앱에서 앱이 비활성화 되 고 다시 활성화 때
 
 Windows Phone 스토어 앱 및 Windows10 앱에서는 뒤로 단추를 누를 때 축소 보기가 사라집니다. Windows 런타임 8.x 앱에 대 한 경우 기본 제공 뒤로 단추 처리 되지 질문에 게 적용 하지 않습니다.
 
-## <a name="settings"></a>Settings
+## <a name="settings"></a>설정
 
 Windows 런타임 8.x **SettingsPane** 클래스 Windows10 적합 하지 않습니다. 대신, 설정 페이지를 빌드하는 것 외에도 사용자가 앱 내에서 해당 페이지에 액세스할 수 있는 방법을 제공해야 합니다. 탐색 창에 고정된 마지막 항목으로 최상위 수준에 이 앱 설정 페이지를 표시하는 것이 좋지만 전체 옵션 집합은 다음과 같습니다.
 

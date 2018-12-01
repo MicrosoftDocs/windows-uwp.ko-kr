@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림, 클라우드의 알림 센터, 유니버셜 해제, 알림, 크로스 디바이스, 한 번 해제 모든 경우에 해제
 ms.localizationpriority: medium
 ms.openlocfilehash: 0dc87e8856e35d60660c2643b70b820b2857b488
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8209501"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8339352"
 ---
 # <a name="universal-dismiss"></a>유니버설 해제
 

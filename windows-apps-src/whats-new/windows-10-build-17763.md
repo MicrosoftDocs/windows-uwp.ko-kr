@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dc18577015db5384c2a1f13e8a48758634a053a5
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8213526"
+ms.locfileid: "8338961"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>빌드 17763 개발자를 위한 Windows 10의 새로운 란
 
@@ -45,7 +45,7 @@ C++/WinRT | [C + + WinRT](https://aka.ms/cppwinrt) 많은 새로운 기능, 변�
 C + + WinRT 코드 예제 | 추가한 250 C + + WinRT 코드 목록 항목에서 문서를 함께 기존 C + + CX 코드 예제입니다.
 영향을 주는 지침 | UWP 설명서에 대 한 [관련 지침](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) 을 업데이트 했습니다. 이 새로운 지침 워크플로와 우리의 문서에 기여를 외부에 대 한 설명합니다.
 DirectX 그래픽 Infastructure (DXGI) | 새 Windows 10에서 표시 하는 경우 모범 사례에 대 한 문서 제공 하 고 누락 된 DXGI Api에 대 한 설명서에 추가 되었습니다. </br> * [최상의 성능을 위해 DXGI 대칭 이동 모델을 사용 하 여](https://docs.microsoft.com/windows/desktop/direct3ddxgi/for-best-performance--use-dxgi-flip-model): 성능 및 최신 버전의 Windows에 대 한 프레젠테이션 스택의 효율성을 극대화 하는 방법에 지침을 제공 합니다. </br> * [IDXGIOutput6::CheckHardwareCompositionSupport 메서드](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-idxgioutput6-checkhardwarecompositionsupport): 하드웨어 확장을 지원 하는지 응용 프로그램에 알립니다. </br> * [DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS 열거형](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_hardware_composition_support_flags): 지원 되는 수준을 하드웨어 컴퍼지션의에 대해 설명 합니다.
-시작 | Windows 10에 익숙하지 않은 개발자 수 다음과 같은 일반적인 작업을 수행 하는 방법에 정보 및 지침을 제공 하는 새 항목을 사용 하 여 [시작](../get-started/index.md) 콘텐츠 revitalized 되었습니다가: </br> * [양식 작성](../get-started/construct-form-learning-track.md) </br> * [목록에서 고객 표시](../get-started/display-customers-in-list-learning-track.md) </br> * [설정 저장 및 로드](../get-started/settings-learning-track.md) </br> * [파일 작업](../get-started/fileio-learning-track.md)
+시작하기 | Windows 10에 익숙하지 않은 개발자 수 다음과 같은 일반적인 작업을 수행 하는 방법에 정보 및 지침을 제공 하는 새 항목을 사용 하 여 [시작](../get-started/index.md) 콘텐츠 revitalized 되었습니다가: </br> * [양식 작성](../get-started/construct-form-learning-track.md) </br> * [목록에서 고객 표시](../get-started/display-customers-in-list-learning-track.md) </br> * [설정 저장 및 로드](../get-started/settings-learning-track.md) </br> * [파일 작업](../get-started/fileio-learning-track.md)
 지도 스타일 시트 편집기 | 대화형 응용 프로그램에 추가 하는 지도의 모양을 사용자 지정 하려면 새 [지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft?rtc=1#activetab=pivot:overviewtab) 응용 프로그램을 사용 합니다.
 Microsoft 알아봅니다. | [Microsoft 학습 사이트](https://www.microsoft.com/learning/default.aspx) 는 새 Microsoft 개발자에 게 새로운 실습 학습 및 교육 기회를 제공합니다. 현재 Microsoft 학습 교육 및 Microsoft 365, Microsoft Azure, Office 365 및 Windows Server에 대 한 인증을 제공합니다.
 메모장 | [메모장 업데이트 된](http://aka.ms/ant-man)확대/축소를 추가, 찾기/바꾸기, 랩어라운드 및 Unix/Linux (LF) 및 Mac (CR) 줄의 끝에 대 한 지원 합니다.

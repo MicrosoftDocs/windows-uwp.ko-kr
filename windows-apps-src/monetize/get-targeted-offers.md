@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품 가져오기
 ms.localizationpriority: medium
 ms.openlocfilehash: 71cd6ce3b9736b812f8ccdf4d21d35357928c63c
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8210515"
+ms.locfileid: "8336759"
 ---
 # <a name="get-targeted-offers"></a>대상 제품 가져오기
 

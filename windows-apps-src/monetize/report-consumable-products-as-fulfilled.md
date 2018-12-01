@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 처리, 소모성
 ms.localizationpriority: medium
 ms.openlocfilehash: e3271dd26a4e7eaa23d63efa3b75cf321480528d
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8207916"
+ms.locfileid: "8331034"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>소모성 제품을 처리됨으로 보고
 

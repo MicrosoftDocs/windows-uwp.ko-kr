@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 오디오, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: fd106e07e6359e9289074cb62cec6bf7458ac5bc
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8215994"
+ms.locfileid: "8331971"
 ---
 # <a name="audio-for-games"></a>게임의 오디오
 

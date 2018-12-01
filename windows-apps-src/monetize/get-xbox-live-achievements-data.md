@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 도전 과제
 ms.localizationpriority: medium
 ms.openlocfilehash: 23a99c637dfd466ba21169626315803dec60e4e8
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8191547"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8340160"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Xbox Live 도전 과제 데이터 가져오기
 

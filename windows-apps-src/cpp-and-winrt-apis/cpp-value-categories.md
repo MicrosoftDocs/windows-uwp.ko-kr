@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 표준, c + +, cpp, winrt, 프로젝션, 이동, 전�
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1860f562233ceefa6d9ebb3741378b3265b4c3a9
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8190512"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8334420"
 ---
 # <a name="value-categories-and-references-to-them"></a>값 범주 및 참조
 이 항목에서는 c + +에 존재 하는 값 (및 값에 대 한 참조)의 다양 한 범주를 설명 합니다. 여러분 봤 *lvalue* 및 *rvalue*하지만이 항목에서는 제공 하는 용어로 부분이 간주 하지 않을 수도 있습니다. 하 고 다른 종류의 값을 너무 않습니다.

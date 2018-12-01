@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 4914a448432206e2418fe110c0b49517a7145e0b
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8203769"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8331667"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>리소스 관리 시스템이 언어 태그를 일치하는 방법
 

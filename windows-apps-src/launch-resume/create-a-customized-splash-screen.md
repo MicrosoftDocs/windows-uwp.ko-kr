@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 142ee642806ebba41d6ddb4d49fe55217e7a0e2e
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8215550"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338430"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>시작 화면을 더 오래 표시
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 사용자 역할, 사용자 권한, 역할 사용자 지정, 사용자 액세스, 권한 사용자 지정, 표준 역할
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8212082"
+ms.locfileid: "8341383"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대한 역할 또는 사용자 지정 권한 설정
 

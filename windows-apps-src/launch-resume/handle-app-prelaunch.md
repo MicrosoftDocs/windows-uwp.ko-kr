@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8191819"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8340975"
 ---
 # <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 
