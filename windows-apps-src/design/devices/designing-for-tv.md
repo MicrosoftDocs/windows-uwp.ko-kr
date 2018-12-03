@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b09e90ea71872421a0caf1edcc1a03ce25fef42
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466468"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -832,7 +832,7 @@ UWP에는 포커스 화면 효과를 [VisibleBounds](https://msdn.microsoft.com/
 > [!NOTE]
 > 이 코드 조각은 `ListView`용으로 특별히 작성되었습니다. `GridView` 스타일의 경우 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) 및 [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) 둘 다의 [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) 특성을 `GridView`로 설정합니다.
 
-보다 세부적으로 제어 하는 방법에 대 한 항목 할지, 응용 프로그램이 대상 버전 1803 또는 이상을 [UIElement.BringIntoViewRequested 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. **ListView**에 대 한 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 에 넣을 수/**GridView** 다음 코드 조각 에서처럼 내부 **ScrollViewer** 는 전에 catch:
+보다 세부적으로 제어 하는 방법에 대 한 항목 할지, 응용 프로그램이 대상 버전 1803 하거나 나중에 [UIElement.BringIntoViewRequested 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. **ListView**에 대 한 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 에 넣을 수/**GridView** 다음 코드 조각 에서처럼 내부 **ScrollViewer** 는 전에 catch 합니다.
 
 ```xaml
 <GridView x:Name="gridView">

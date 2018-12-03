@@ -7,16 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 757de9201d1cb7f753419024271f2be5c1aa67f4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467016"
 ---
 # <a name="debugging-testing-and-performance"></a>디버깅, 테스트 및 성능
 
 
-이 섹션에서는 Microsoft Visual Studio 디버그, 테스트 및 앱을 최적화를 사용 하는 방법을 보여 줍니다. (디바이스 모니터링 및 구성)에 대해 Windows Device Portal을 Windows 앱 인증 키트 (Microsoft Store 앱을 준비)와 같은 도구를 포함 되어 있습니다.
+이 섹션에서는 Microsoft Visual Studio 디버그, 테스트 및 앱을 최적화를 사용 하는 방법을 보여 줍니다. (디바이스 모니터링 및 구성)에 대해 Windows Device Portal을 Windows 앱 인증 키트 (Microsoft 스토어에 앱을 준비)와 같은 도구를 포함 되어 있습니다.
 
 | 항목 | 설명 |
 |-------|-------------|

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ad801dee43607b4fb6e75bd30f612682e1214ff
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336739"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465462"
 ---
 # <a name="mouse-interactions"></a>마우스 조작
 
@@ -65,7 +65,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 명령 선택</p></td>
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 탐색 모음 (사용 가능한 경우) 및 글로벌 명령이 포함된 앱 바를 표시합니다. 요소를 마우스 오른쪽 단추로 클릭하여 선택하고 선택한 요소에 대한 상황에 맞는 명령이 포함된 앱 바를 표시합니다.</p>
 <div class="alert">
-<strong>참고</strong>를 선택 또는 앱 바 명령이 적합 한 UI 동작이 아닌 경우 상황에 맞는 메뉴를 표시 합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
+<strong>참고</strong>선택 또는 앱 바 명령이 적합 한 UI 동작이 아닌 경우 상황에 맞는 메뉴를 표시 하려면 마우스 오른쪽 단추로 클릭 합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
 </div>
 <div>
  

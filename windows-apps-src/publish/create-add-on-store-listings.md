@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a8b32abae4938081610db2cfc2ded25adadab95d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336034"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467937"
 ---
 # <a name="create-add-on-store-listings"></a>추가 기능 저장소 목록 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "8336034"
 
 ## <a name="store-listing-languages"></a>스토어 목록 언어
 
-Store 목록 정보를 입력하기 전에 [언어](supported-languages.md)를 하나 이상 지정해야 합니다. 하나 이상의 언어에 대한 **스토어 목록** 페이지를 완료해야 합니다. 원하는 모든 언어에 대 한 스토어 목록에 앱을 만드는 것이 좋습니다.
+Store 목록 정보를 입력하기 전에 [언어](supported-languages.md)를 하나 이상 지정해야 합니다. 하나 이상의 언어에 대한 **스토어 목록** 페이지를 완료해야 합니다. 지 원하는 모든 언어에 대 한 스토어 목록에 앱을 만드는 것이 좋습니다.
 
 추가 기능 제출의 **Store 목록** 섹션에서 **언어 추가/제거**를 클릭한 후, 다음 페이지에서 **언어 관리**를 클릭합니다. 추가할 언어의 확인란을 선택한 다음 **업데이트**를 클릭합니다. 선택한 언어는 페이지의 **Store 목록 언어** 섹션에 표시됩니다.
 

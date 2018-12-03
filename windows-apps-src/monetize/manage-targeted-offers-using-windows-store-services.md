@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 27d99d2008352ff291f0cb620afab8ccb8f6977c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346715"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470704"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>스토어 서비스를 사용하여 대상 제품 관리
 
-*대상된 제품* 을 만드는 경우 합니다 **참여 > 대상 제품** 사용에 대 한 앱 내 환경을 구현 하는 *Microsoft Store 대상 제품 API* 앱 코드에 도움이 되는 정보를 검색 하는 파트너 센터에서 앱에 대 한 페이지는 대상된 제품입니다. 대상 제품 및 대시보드에서 대상 제품을 만드는 방법에 대한 자세한 내용은 [대상 제품을 사용하여 참여 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)를 참조하세요.
+*대상된 제품* 을 만드는 경우 합니다 **참여 > 대상 제품** 사용에 대 한 앱 내 환경을 구현 하는 *Microsoft Store 대상 제품 API* 앱 코드에 도움이 되는 정보를 검색 하는 파트너 센터에서 앱의 페이지는 대상된 제품입니다. 대상 제품 및 대시보드에서 대상 제품을 만드는 방법에 대한 자세한 내용은 [대상 제품을 사용하여 참여 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)를 참조하세요.
 
 대상 제품 API는 사용자가 대상 제품의 고객 세그먼트에 포함되는지 여부에 따라 현재 사용자에게 제공되는 대상 제품을 가져오는 데 사용할 수 있는 간단한 REST API입니다. 이 API를 앱 코드에 사용하려면 다음 단계를 따릅니다.
 

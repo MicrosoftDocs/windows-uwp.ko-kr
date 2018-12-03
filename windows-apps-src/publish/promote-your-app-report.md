@@ -1,21 +1,21 @@
 ---
 title: 광고 캠페인 보고서
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: 파트너 센터에서 광고 캠페인 보고서에는 앱 홍보 광고 캠페인 성과 확인할 수 있습니다.
+description: 파트너 센터에서 광고 캠페인 보고서 앱 홍보 광고 캠페인의 성과 볼 수 있습니다.
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 홍보, 앱, 캠페인, 보고서, 설치
 ms.localizationpriority: medium
 ms.openlocfilehash: f99c9af9fd3f8c9a94b79b3324fea6ebbd710c5b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340800"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470823"
 ---
 # <a name="ad-campaign-report"></a>광고 캠페인 보고서
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **광고 캠페인** 보고서에는 앱 홍보 [광고 캠페인](create-an-ad-campaign-for-your-app.md) 의 성과 확인할 수 있습니다. 보고서를 보려면 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **광고 캠페인**을 선택 합니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 **광고 캠페인** 보고서 앱 홍보 [광고 캠페인](create-an-ad-campaign-for-your-app.md) 의 성과 확인할 수 있습니다. 보고서를 보려면 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **광고 캠페인**을 선택 합니다.
 
 ## <a name="definitions"></a>정의
 

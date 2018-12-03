@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335772"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468165"
 ---
 # <a name="manage-ad-campaigns"></a>광고 캠페인 관리
 
 [Microsoft Store 프로모션 API](run-ad-campaigns-using-windows-store-services.md)에서 이 메서드를 사용하여 앱의 프로모션 광고 캠페인을 제작, 편집하여 가져옵니다. 이 메서드를 사용해 제작한 캠페인은 한 앱에만 연결할 수 있습니다.
 
->**참고**&nbsp;&nbsp;도 만들기 및 파트너 센터를 사용 하 여 광고 캠페인을 관리할 수 및 파트너 센터에서 프로그래밍 방식으로 제작한 캠페인을 액세스할 수 있습니다. 파트너 센터에서 광고 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
+>**참고**&nbsp;&nbsp;도 만들기 및 파트너 센터를 사용 하 여 광고 캠페인을 관리할 수 및 프로그래밍 방식으로 제작한 캠페인 파트너 센터에서 액세스할 수 있습니다. 파트너 센터에서 광고 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
 
 이러한 메서드를 사용해 캠페인을 만들거나 업데이트하면 일반적으로 다음 메서드 중 하나 이상을 호출하여 캠페인에 연결된 *배달 라인*, *대상 프로필*, *크리에이티브*를 관리할 수 있습니다. 광고 캠페인, 배달 라인, 대상 프로필, 크리에이티브 간의 관계에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 광고 캠페인 실행](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api)을 참조하세요.
 
@@ -31,7 +31,7 @@ ms.locfileid: "8335772"
 
 * 아직 완료하지 않은 경우 Microsoft Store 프로모션 API의 [필수 조건](run-ad-campaigns-using-windows-store-services.md#prerequisites)을 모두 완료합니다.
 
-  >**참고**&nbsp;&nbsp;필수 구성의 일부로 해당 [파트너 센터에서 하나 이상의 유료 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md) 및 해야 하나 이상의 결제 방법을 추가 해야 광고 캠페인에 대 한 파트너 센터에서. 이 API를 사용 하 여 만든 광고 캠페인의 배달 라인 됩니다 파트너 센터에서 **광고 캠페인** 페이지에서 선택 된 기본 결제 방법 요금을 청구 자동으로 합니다.
+  >**참고**&nbsp;&nbsp;필수 일부로 해야 해당 [파트너 센터에서 하나 이상의 유료 광고 캠페인을 생성](../publish/create-an-ad-campaign-for-your-app.md) 하 고 있는 하나 이상의 결제 방법을 추가 해야 광고 캠페인에 대 한 파트너 센터에서. 이 API를 사용 하 여 만든 광고 캠페인의 배달 라인 파트너 센터에서 **광고 캠페인** 페이지에서 선택 된 기본 결제 방법 요금을 청구 자동으로 됩니다.
 
 * 이 메서드의 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 

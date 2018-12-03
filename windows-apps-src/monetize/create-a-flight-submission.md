@@ -1,17 +1,17 @@
 ---
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
-description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 새 패키지 플라이트 제출을 만듭니다.
+description: 파트너 센터 계정에 등록 된 앱에 대 한 새 패키지 플라이트 제출을 만들려면 Microsoft Store 제출 API에서에서이 메서드를 사용 합니다.
 title: 패키지 플라이트 제출 만들기
 ms.date: 08/03/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출 만들기
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346725"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468597"
 ---
 # <a name="create-a-package-flight-submission"></a>패키지 플라이트 제출 만들기
 
