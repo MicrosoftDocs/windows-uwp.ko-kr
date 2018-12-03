@@ -31,7 +31,7 @@ ms.locfileid: "8347383"
 
 ## <a name="remarks"></a>설명
 
-사용자, 시스템 및 FriendRequest 메시지 유형에 대만 get 작업을 수행할 수 있습니다.
+The get operation can only be performed on the User, System, and FriendRequest message types.
 
 이 URI Xbox.com에서 새로 고침이 필요합니다. 현재 Xbox 360 사용자가 로그 아웃 될 때까지 및에서 다시 읽기/읽지 않은 상태를 업데이트 되지 않습니다.
 
