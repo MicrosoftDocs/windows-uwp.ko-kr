@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10 s, 항상 연결, 호환성 문제 해결사, ARM의 windows
 ms.localizationpriority: medium
 ms.openlocfilehash: 763b00a5790274d81b6daa2838ef926936e458db
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8461422"
 ---
 # <a name="program-compatibility-troubleshooter-on-arm"></a>ARM의 프로그램 호환성 문제 해결사
 x86 앱을 지원하는 에뮬레이션은 ARM64 기반 Windows 10을 위해 만들어진 새 기능입니다. 때때로 에뮬레이션은 최상의 환경을 제공하지 않는 최적화를 수행합니다. 프로그램 호환성 문제 해결사를 사용하여 사용자 x86에 대한 에뮬레이션을 전환하여 기본 최적화를 줄이고 잠재적으로 호환성을 늘릴 수 있습니다.
