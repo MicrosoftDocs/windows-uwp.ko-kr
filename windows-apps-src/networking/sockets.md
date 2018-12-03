@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d75afd17d5aa7edf64fda36b3a35b3a101c1d89
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332549"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472344"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 지속 시간이 긴 연결이든 설정된 연결이 필요하지 않든 클라이언트와 서버 간 또는 피어 투 피어 응용 프로그램에 대한 UDP 및 TCP 소켓 클래스를 제공합니다.
@@ -1202,7 +1202,7 @@ private async void BatchedSendsCSharpOnly(Windows.Networking.Sockets.StreamSocke
 }
 ```
 
-이 다음 예는 C#뿐 아니라 모든 UWP 언어에 대한 적절합니다. 이는 전송을 일괄 처리하는 [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) 및 [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream)의 동작에 의존합니다. 기술을은 Windows10, 부터는 출력 스트림의 모든 작업이 완료 된 후에 반환 보장 하는 해당 출력 스트림에 [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) 를 호출 합니다.
+이 다음 예는 C#뿐 아니라 모든 UWP 언어에 대한 적절합니다. 이는 전송을 일괄 처리하는 [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.OutputStream) 및 [**DatagramSocket.OutputStream**](/uwp/api/windows.networking.sockets.datagramsocket.OutputStream)의 동작에 의존합니다. 기술을은 Windows10를 기준으로 출력 스트림의 모든 작업이 완료 된 후에 반환 보장 하는 해당 출력 스트림에 [**FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.FlushAsync) 를 호출 합니다.
 
 ```csharp
 // An implementation of batched sends suitable for any UWP language.

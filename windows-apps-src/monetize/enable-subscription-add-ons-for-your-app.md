@@ -6,11 +6,11 @@ ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f46c566712f7f0c2bca45db5a107738c4104e037
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345200"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472420"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -69,7 +69,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 이러한 예제의 필수 조건은 다음과 같습니다.
 * **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
 * [앱 제출을 만들지](https://docs.microsoft.com/windows/uwp/publish/app-submissions) 파트너 센터에서 드라이버와이 앱은 스토어에서 게시 합니다. 테스트 하는 동안 스토어에서 검색이 되지 않도록 앱을 구성할 수도 있습니다. 자세한 내용은 [테스트 가이드](in-app-purchases-and-trials.md#testing)를 참조하세요.
-* 파트너 센터에서 [만든 앱에 대 한 구독 추가 기능을](../publish/add-on-submissions.md) 했습니다.
+* 파트너 센터에서 [앱에 대 한 구독 추가 기능을 생성](../publish/add-on-submissions.md) 을 했습니다.
 
 이 예제의 코드는 다음과 같이 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
@@ -124,7 +124,7 @@ UWP 앱 구독 추가 기능은 다음 기능을 지원합니다.
 다음 시나리오는 현재 구독 추가 기능에서 지원되지 않습니다.
 
 * 현재 스토어를 통해 직접 고객에게 구독을 판매하는 기능은 지원되지 않습니다. 구독은 디지털 제품의 앱에서 바로 구매에만 사용할 수 있습니다.
-* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](http://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 전환 하려면 고객이 현재 구독을 취소 하 고 앱에서 다른 구독 기간으로 구독을 구매 해야 합니다.
+* 고객은 Microsoft 계정의 [http://account.microsoft.com/services](http://account.microsoft.com/services) 페이지에서 구독을 전환할 수 없습니다. 다른 구독 기간으로 전환 하려면 고객이 현재 구독을 취소 하 고 한 앱에서 다른 구독 기간으로 구독을 구매 해야 합니다.
 * 현재 구독 추가 기능은 계층 전환을 지원하지 않습니다(예를 들어, 고객은 기본 구독에서 기능이 더 많은 프리미엄 구독으로 전환할 수 없음).
 * 현재 구독 추가 기능에서는 [영업](../publish/put-apps-and-add-ons-on-sale.md) 및 [홍보 코드](../publish/generate-promotional-codes.md)를 지원하지 않습니다.
 

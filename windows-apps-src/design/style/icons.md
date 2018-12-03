@@ -12,11 +12,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0f881c470d92ea1eafb08f24e6cf1fd06f4fc75e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329284"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465498"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
 
@@ -136,7 +136,7 @@ ms.locfileid: "8329284"
 
 ## <a name="make-the-icon-do-something"></a>아이콘으로 작업을 수행하도록 만들기
 
-아이콘을 구성한 후 다음 단계는 명령이 나 탐색 작업을 연결 하 여 작업을 수행 하기 위해입니다. 이 작업을 수행 하는 가장 좋은 방법은 단추나 명령 모음에 아이콘을 추가 하는 것입니다. 
+아이콘이 있는 경우 다음 단계는 명령이 나 탐색 작업을 연결 하 여 작업을 수행 하기 쉽게입니다. 이 작업을 수행 하는 가장 좋은 방법은 단추나 명령 모음에 아이콘을 추가 하는 것입니다. 
 
 ![명령 모음 이미지](images/icons/app-bar-desktop.svg)
 

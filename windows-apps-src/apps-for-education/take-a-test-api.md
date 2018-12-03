@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f308e42e1dbb1d3654d3fc557a9d5e29ef6f6b0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8472400"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
 
@@ -28,7 +28,7 @@ ms.locfileid: "8350496"
 
 ### <a name="security-namespace"></a>보안 네임스페이스
 
-보안 네임 스페이스를 사용 하면 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인, MAC 및 IP 주소를 얻을 고 캐시 된 웹 리소스를 지울 수 있습니다.
+보안 네임 스페이스를 사용 하면 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인 하, MAC 및 IP 주소를 받아야 및 캐시 된 웹 리소스를 지울 수 있습니다.
 
 | 메서드 | 설명   |
 |--------|---------------|
