@@ -2,22 +2,20 @@
 title: /users/xuid({xuid})/deleteuserdata
 assetID: 1925da6f-f6c1-ae5b-5af9-e143b70e6717
 permalink: en-us/docs/xboxlive/rest/uri-usersxuiddeleteuserdata.html
-author: KevinAsgari
 description: " /users/xuid({xuid})/deleteuserdata"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5eaba6a02fa2ebb00ef4861a5bf37963796b78b5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: efcf214c366edb891e13301da0eedbc87627ca79
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7561491"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8324030"
 ---
 # <a name="usersxuidxuiddeleteuserdata"></a>/users/xuid({xuid})/deleteuserdata
-테스트 사용자에 대 한 안전도 데이터를 완전히 다시 설정합니다. 만 테스트 합니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`. 이 URI는 항상 10443 포트에서 호출 됩니다.
+테스트 사용자에 대 한 안전도 데이터를 완전히 다시 설정합니다. 만 테스트 합니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`. 이 URI가 항상 10443 포트에서 호출 됩니다.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -28,7 +26,7 @@ ms.locfileid: "7561491"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 해당 데이터를 삭제 하 고 사용자의 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 데이터를 삭제 하 고 사용자의 합니다.| 
   
 <a id="ID4EYB"></a>
 

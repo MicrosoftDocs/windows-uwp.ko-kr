@@ -2,19 +2,17 @@
 title: ServiceError(JSON)
 assetID: 81c43f6e-bfff-c4b5-d25c-eace22649f01
 permalink: en-us/docs/xboxlive/rest/json-serviceerror.html
-author: KevinAsgari
 description: " ServiceError(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f00618c3ecb51a0934b1b3f73a51553b49f153b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: da3d682a1b66d25a12f21a93e9596d13afae7f90
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563876"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8337552"
 ---
 # <a name="serviceerror-json"></a>ServiceError(JSON)
 서비스에 대 한 호출에 실패 한 경우 반환 된 오류에 대 한 정보를 포함 합니다. 
@@ -39,11 +37,11 @@ ServiceError 개체에는 다음 사양을 있습니다.
 | 값| 설명| 
 | --- | --- | --- | --- | --- | 
 | 0| 성공 오류 없음| 
-| 4000| 잘못 된 요청 본문의 JSON 문서 POST 요청이 실패 했습니다 유효성 검사를 사용 하 여 제출 합니다. 자세한 내용은 설명 필드를 참조 하세요. | 
-| 4100| 사용자는 하지 존재는 XUID 요청 URI에에서 포함 된 XBOX Live에 유효한 사용자를 표시 하지 않습니다.| 
+| 4000| 잘못 된 요청 본문 JSON 문서 POST 요청이 실패 했습니다 유효성 검사를 사용 하 여 제출 합니다. 자세한 내용은 설명 필드를 참조 하세요. | 
+| 4100| 사용자는 하지 존재 The XUID 요청 URI에에서 포함 된 XBOX Live에 유효한 사용자를 표시 하지 않습니다.| 
 | 4500| 권한 부여 오류 호출자는 요청 된 작업을 수행 하도록 권한이 없습니다.| 
-| 5000| 서비스 오류 오류가 발생 했습니다 내부 서비스| 
-| 5300| 서비스 사용할 서비스 제공 되지 않습니다.| 
+| 5000| 서비스 오류는 내부 오류가 서비스| 
+| 5300| 서비스 사용할 수 없는 서비스 제공 되지 않습니다.| 
    
 <a id="ID4EQE"></a>
 

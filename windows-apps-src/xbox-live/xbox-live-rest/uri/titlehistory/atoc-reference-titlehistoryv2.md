@@ -2,23 +2,21 @@
 title: 도전 과제 타이틀 기록 URI
 assetID: a7499a25-d957-2ab9-fe47-f2615e5f2ea5
 permalink: en-us/docs/xboxlive/rest/atoc-reference-titlehistoryv2.html
-author: KevinAsgari
 description: " 도전 과제 타이틀 기록 URI"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 2267537ed250ac50ac0acdde477c6a6ad3814ea3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6bb37b1567349ef0684d1001da3f65b0a2b2694c
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7559099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8351701"
 ---
 # <a name="achievement-title-history-uris"></a>도전 과제 타이틀 기록 URI
  
-이 섹션에서는 관련 도전 과제 *타이틀 기록*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다. 모든 플랫폼에서 실행 되는 게임이 기록 정보를 읽을 수 있습니다.
+이 섹션에서는 관련 도전 과제 *타이틀 기록*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다. 모든 플랫폼에서 실행 되는 게임 기록이 정보를 읽을 수 있습니다.
  
 이러한 Uri에 대 한 도메인 achievements.xboxlive.com입니다.
  

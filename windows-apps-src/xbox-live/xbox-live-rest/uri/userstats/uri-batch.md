@@ -8,14 +8,14 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e8ea66b8d59ad7bd415626f218e0b7f49093f00
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855057"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8332605"
 ---
 # <a name="batch"></a>/batch
-여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 액세스합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
+여러 제목에서 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 액세스합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
   
 <a id="ID4EV"></a>
 
@@ -24,7 +24,7 @@ ms.locfileid: "7855057"
 
 [POST](uri-batchpost.md)
 
-&nbsp;&nbsp;여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 GET 방법으로 작동 하는 메서드를 게시 합니다.
+&nbsp;&nbsp;GET 메서드가 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 여러 타이틀에서 작동 하는 메서드를 게시 합니다.
  
 <a id="ID4E6"></a>
 

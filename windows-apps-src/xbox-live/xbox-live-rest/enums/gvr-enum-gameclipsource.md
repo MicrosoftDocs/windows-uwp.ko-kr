@@ -2,22 +2,20 @@
 title: GameClipSource 열거형
 assetID: 8dcfbf10-0fb1-86f9-a67b-047e83ee9192
 permalink: en-us/docs/xboxlive/rest/gvr-enum-gameclipsource.html
-author: KevinAsgari
 description: " GameClipSource 열거형"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 470ee6056beaa96ff120ade912680d09908531d6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b154191e58b1c419947afea988cacc8638b73d0f
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7581658"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8343425"
 ---
 # <a name="gameclipsource-enumeration"></a>GameClipSource 열거형
-GameClipSource 열거형에 자세히 설명 합니다. 
+GameClipSource 열거형에 자세히 설명합니다. 
 <a id="ID4ET"></a>
 
  
@@ -25,9 +23,9 @@ GameClipSource 열거형에 자세히 설명 합니다.
  
 | <b>열거자</b>| <b>설명</b>| 
 | --- | --- | 
-| 없음| 게임 클립 소스를 알 수 없거나 설정 하지 않습니다. (업로드할 유효 하지 않습니다)| 
+| 없음| 게임 클립 소스 알 수 없거나 설정 하지 않습니다. (업로드할 유효 하지 않습니다)| 
 | 콘솔| 게임 클립 Xbox 콘솔 플랫폼에서 발생 합니다.| 
 | TitleDirect| 게임 클립의 제목 시작 합니다.| 
 | 중간 | 게임 클립 도전 과제 형식입니다.| 
-| UserInitiated | 게임 클립 편집기와 같은 중간 앱에서 시작 됩니다.| 
+| UserInitiated | 게임 클립 편집기 같은 중간 앱에서 시작 됩니다.| 
   

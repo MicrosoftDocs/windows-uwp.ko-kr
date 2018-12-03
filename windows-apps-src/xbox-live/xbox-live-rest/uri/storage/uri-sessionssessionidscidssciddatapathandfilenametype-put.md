@@ -2,22 +2,20 @@
 title: PUT (/sessions/{sessionId}/scids/{scid}/data/{pathAndFileName},{type})
 assetID: 40005e52-cd24-38ed-cfed-2c590cc2276f
 permalink: en-us/docs/xboxlive/rest/uri-sessionssessionidscidssciddatapathandfilenametype-put.html
-author: KevinAsgari
 description: " PUT (/sessions/{sessionId}/scids/{scid}/data/{pathAndFileName},{type})"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: bac258c7adada5beb4c233a2ca11265f57529676
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 95e3c9498de3657093377447deabc76e27a2bd07
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7560001"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8330759"
 ---
 # <a name="put-sessionssessionidscidssciddatapathandfilenametype"></a>PUT (/sessions/{sessionId}/scids/{scid}/data/{pathAndFileName},{type})
-파일을 업로드합니다. 데이터는 데이터 및 메타 데이터 보내집니다 단일 메시지에서 또는 일련의 작은 블록에 데이터 및 메타 데이터를 전송 하는 다중 블록 업로드로 전체 업로드에 업로드할 수 있습니다. 단일 메시지로 메가바이트 4 보다 작은 파일을 보낼 수 있습니다. 다중 블록 업로드 json 종류의 데이터에 대 한 지원 되지 않습니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
+파일을 업로드 합니다. 데이터는 데이터 및 메타 데이터 전송 되는 단일 메시지 또는 일련의 작은 블록에 데이터 및 메타 데이터를 전송 하는 여러 블록 업로드로 전체 업로드를 업로드할 수 있습니다. 4 개의 메가바이트 보다 작은 파일만 단일 메시지로 보낼 수 있습니다. 다중 블록 업로드 json 종류의 데이터에 대 한 지원 되지 않습니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EX)
   * [권한 부여](#ID4EEB)
@@ -37,15 +35,15 @@ ms.locfileid: "7560001"
 | --- | --- | --- | 
 | sessionId| string| 조회 세션의 ID입니다.| 
 | 서비스 안내| guid| 조회 서비스 구성의 ID입니다.| 
-| pathAndFileName| string| 항목에 액세스할 수에 대 한 경로 파일 이름입니다. 경로 부분 (최대 및 최종 슬래시 포함)에 대 한 유효한 문자 (A-z) 대문자, 소문자 (a-z), 숫자 (0-9), 밑줄 (_)를 포함 하며 슬래시 (/) 합니다. 경로 부분 비어 있을 수 있습니다. 사용할 수 있는 문자 (A-z) 대문자, 소문자 (a-z), 숫자 (0-9) (최종 슬래시 후 모든) 파일 이름 부분 포함 밑줄 (_), 마침표 (.) 및 하이픈 (-). 파일 이름 수 없는 비워 둘 수, 마침표 또는 두 개의 연속 된 마침표 합니다.| 
-| 유형| 문자열| 데이터의 형식입니다. 가능한 값은 이진 또는 json 합니다.| 
+| pathAndFileName| string| 항목에 액세스할 수에 대 한 경로 파일 이름입니다. 사용할 수 있는 문자를 포함 하 여 최종 슬래시 경로 부분에 대 한 (A Z) 대문자, 소문자 (a-z), 숫자 (0-9), 밑줄 (_)를 포함 하 고 슬래시 (/). 경로 부분 비어 있을 수 있습니다. 사용할 수 있는 문자 (A-z) 대문자, 소문자 (a-z), 숫자 (0-9) (최종 슬래시 다음의 모든) 파일 이름 부분 포함 밑줄 (_), 마침표 (.) 및 하이픈 (-). 파일 이름 수 비워 둘 수, 마침표 없거나 두 개의 연속 마침표를 포함 합니다.| 
+| 유형| 문자열| 데이터의 형식입니다. 가능한 값은 이진 파일 또는 json 합니다.| 
   
 <a id="ID4EEB"></a>
 
  
 ## <a name="authorization"></a>권한 부여 
  
-요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자에 게가이 리소스에 액세스 하는 허용 되지 않으면, 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스는 401 무단된 응답을 반환 합니다. 
+요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자가이 리소스에 액세스 하는 허용 되지 않으면, 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스는 401 무단된 응답을 반환 합니다. 
   
 <a id="ID4ERB"></a>
 
@@ -65,7 +63,7 @@ ms.locfileid: "7560001"
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | clientFileTime| DateTime| 마지막으로 날짜/시간 모든 클라이언트에 있는 파일의 파일을 업로드 합니다.| 
 | displayName| string| 사용자에 게 표시 해야 하는 파일 이름입니다.| 
-| continuationToken| 문자열| 이전 업로드 요청 응답의 연속 토큰입니다. 첫 번째 블록 이면이 지정할 수 없습니다. | 
+| continuationToken| 문자열| 이전 업로드 요청을 응답의 연속 토큰입니다. 첫 번째 블록 이면이 지정할 수 없습니다. | 
 | finalBlock| 부울| 파일의 마지막 블록에 대해 true로 설정 합니다. 다른 모든 블록에 대 한 false로 설정 합니다.| 
   
 <a id="ID4ENE"></a>
@@ -85,22 +83,22 @@ ms.locfileid: "7560001"
  
 | 헤더| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| If-Match| 작업을 완료 하려면 기존 항목 일치 해야 하는 ETag를 지정 합니다.| 
-| If-None-Match| 작업을 완료 하려면 모든 기존 항목을 일치 해야 하는 ETag를 지정 합니다.| 
+| If-Match| 작업을 완료 하는 기존 항목 일치 하는 ETag를 지정 합니다.| 
+| If-None-Match| 작업을 완료 하려면 모든 기존 항목을와 일치 해야 하는 ETag를 지정 합니다.| 
   
 <a id="ID4EZG"></a>
 
  
 ## <a name="request-body"></a>요청 본문 
  
-요청 본문에 업로드 되는 파일의 내용을 포함 되어 있습니다. 단일 메시지 업로드가 본문 파일의 전체 내용을입니다. 다중 블록 업로드가 본문에 쿼리 문자열 매개 변수 지정 된 파일의 일부입니다. 
+요청 본문에 업로드할 파일의 내용을 포함 되어 있습니다. 단일 메시지 업로드가 본문 파일의 전체 내용을입니다. 다중 블록 업로드가 본문에 쿼리 문자열 매개 변수 지정 된 파일의 일부입니다. 
   
 <a id="ID4EEH"></a>
 
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드 
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -109,18 +107,18 @@ ms.locfileid: "7560001"
 | 400| 잘못 된 요청 | 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
 | 401| 권한 없음 | 필요한 사용자 인증을 요청 합니다.| 
 | 403| 금지 | 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
-| 404| 찾을 수 없습니다. | 지정된 된 리소스를 찾을 수 없습니다.| 
-| 406| 허용할 수 없음 | 리소스 버전이 지원 되지 않습니다.| 
+| 404| 찾을 수 없음 | 지정된 된 리소스를 찾을 수 없습니다.| 
+| 406| 허용할 수 없음 | 리소스 버전은 지원 되지 않습니다.| 
 | 408| 요청 시간 제한 | 요청을 완료 하는 데 너무 오래 걸렸습니다.| 
 | 500| 내부 서버 오류 | 서버에서 요청을 수행할 수 있는 예상치 못한 상황이 발생 했습니다.| 
-| 503| 사용할 수 없는 서비스 | 요청을 제한, 클라이언트 재시도 값 (예: 5 초)을 초에서 후 다시 시도 합니다.| 
+| 503| 사용할 수 없는 서비스 | 요청을 제한, 초 (예: 5 초) 클라이언트를 다시 시도 값 후 다시 시도 합니다.| 
   
 <a id="ID4EXEAC"></a>
 
  
 ## <a name="response-body"></a>응답 본문 
  
-호출은 다중 블록 요청 성공 하는 경우 서비스는 다음 블록을 사용 하 여 전달할 continution 토큰을 반환 합니다.
+호출 다중 블록 요청을 성공적으로 수행 하는 경우 서비스는 다음 블록을 이용한 전달할 continution 토큰을 반환 합니다.
  
 <a id="ID4EDFAC"></a>
 

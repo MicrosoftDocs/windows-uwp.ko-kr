@@ -1,19 +1,17 @@
 ---
 title: UWP 프로젝트에 Xbox Live Api 소스 추가
-author: KevinAsgari
 description: UWP 프로젝트에서 Xbox Live Api 소스 추가 및 컴파일 하는 방법을 알아봅니다.
 ms.assetid: 744f87dc-510b-4a26-b2c0-74fc70b8453b
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 0900786f4aeb8e2baf1bfe7a9fcc302ac857f91a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2ca7d0aca0f05a56f51d13f8ae27c1c0ccd6e39e
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7561277"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8332766"
 ---
 # <a name="add-and-compile-the-xbox-live-apis-source-in-your-uwp-project"></a>UWP 프로젝트에서 Xbox Live Api 소스 추가 및 컴파일
 
@@ -21,6 +19,6 @@ ms.locfileid: "7561277"
 
 경우 XSAPI 직접 빌드 하려는 경우:
 1. 오류 코드에서 제공 되는 위치를 이해 하는 문제를 디버그 해야 합니다.
-1. 전에 수 있는 문제를 해결 하려면 소스 코드 패치를 제공 하 QFE를 배포할 수 있습니다.
+1. 전에 수 있는 문제를 해결 하려면 소스 코드 패치를 제공 QFE를 배포할 수 했습니다.
 
 XSAPI 프로젝트를 직접 컴파일하려면 GitHub 프로젝트 사이트의 지침을 따릅니다.

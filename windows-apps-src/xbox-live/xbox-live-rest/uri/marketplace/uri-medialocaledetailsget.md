@@ -2,19 +2,17 @@
 title: GET (/media/{marketplaceId}/details)
 assetID: 7c222fc7-d70a-84ac-5aaf-f22d186f7a43
 permalink: en-us/docs/xboxlive/rest/uri-medialocaledetailsget.html
-author: KevinAsgari
 description: " GET (/media/{marketplaceId}/details)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f0cb0fdd3d50a45f4cbeeedacc38bada5874c86
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5c5be8f144f9c39076ba880223af08a30404c759
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7574056"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8336202"
 ---
 # <a name="get-mediamarketplaceiddetails"></a>GET (/media/{marketplaceId}/details)
 반환 제품 세부 정보 및 메타 데이터에 대 한 하나 이상의 항목입니다.
@@ -30,7 +28,7 @@ ms.locfileid: "7574056"
 
 ## <a name="remarks"></a>설명
 
-**SandboxId** 는 이제는 XToken 클레임이에서 검색 하 고 적용 합니다. **SandboxId** 없는 경우 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
+이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
 
 <a id="ID4ECB"></a>
 
@@ -48,11 +46,11 @@ ms.locfileid: "7574056"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- | --- |
-| id| string]| 필수. 모든 세부 정보는 반환 됩니다 (최대 10) Id. 참고 하는 ID 모든 URL에서 잘못 된 문자가 포함 (Id는 일반적으로 ProviderContentId 형식 자체 Url 전체 및 따라서 잘못 된 문자가 포함) 엔터테인먼트 검색 서비스 (EDS)에 전송할 제대로 URL로 인코딩된 이어야 <b>합니다</b> . 또한이 수 있음을 단일 값 ID 형식이 ProviderContentId note 합니다. 둘 이상의 ProviderContentId 원한다 면 여러 번 호출 EDS 연결할 수 있어야 합니다.|
-| IdType| string| 선택 사항입니다. 형식에 'id' 매개 변수에 전달 되는 Id입니다. 유효한 값은 다음과 같습니다. <ul><li><b>정식</b> (Bing/시장) </li><li><b>ZuneCatalog</b></li><li><b>ZuneMediaInstance</b> (예: 132kb WMA 음악 파일) </li><li><b>AMG</b></li><li><b>MediaNet</b> (이전 MusiWave) </li><li><b>XboxHexTitle</b> (앱이 콘솔에서 재생) </li></ul>|
+| id| string]| 필수. 모든 세부 정보는 반환 됩니다 (최대 10) Id. 참고 하는 ID 모든 포함 하는 URL에 잘못 된 문자 (Id는 일반적으로 ProviderContentId 형식 자체 Url 전체 및 따라서 잘못 된 문자가 포함) 엔터테인먼트 검색 서비스 (EDS)에 전송할 제대로 URL 인코딩 이어야 <b>합니다</b> . 또한이 수 있음을 단일 값 ID 형식이 ProviderContentId note 합니다. 둘 이상의 ProviderContentId 원한다 면 여러 번 호출 EDS를 만들어야 합니다.|
+| IdType| string| 선택 사항입니다. 형식에 'id' 매개 변수에 전달 되는 Id입니다. 유효한 값은 다음과 같습니다. <ul><li><b>정식</b> (Bing/Marketplace) </li><li><b>ZuneCatalog</b></li><li><b>ZuneMediaInstance</b> (예: 132kb WMA 음악 파일) </li><li><b>AMG</b></li><li><b>MediaNet</b> (이전 MusiWave) </li><li><b>XboxHexTitle</b> (앱이 콘솔에서 재생) </li></ul>|
 | DesiredMediaItemTypes| string| <b>필요한 경우 MediaGroup 전달 되지 않습니다. 둘 다를 전달 되어야 합니다.</b> 미디어 항목 typs id입니다. 모든 제공 Id 같은 종류를 공유 해야 합니다. 여러 종류, 필요한 경우 위의 IdType에 설명 된 대로 가능한 모든 형식에 전달 합니다. 이 값의 기본값은 "알 수 없음" 존재 없는 경우 모든 ID 형식에 대 한 valied 되지 않습니다. |
 | MediaGroup| string| <b>필요한 경우 DesiredMediaItemTypes 전달 되지 않습니다. 둘 다를 전달 되어야 합니다.</b>|
-| ConditionSets| string| <b>선택 사항</b>입니다. 클라이언트는 키-값 쌍이 쿼리 문자열을 통해 지정 하는 조건 집합에 따라 <b>가용성</b> 정리를 요청할 수 있습니다. 가용성 조건 집합에 일치에 사용 됩니다. 조건 집합에 맞게 사용할 수 있는 키 목록은 다음과 같습니다. <ul><li><b>플랫폼</b>: 제품의 빌드될 위치 및 재생할 수 있습니다.</li><li><b>구독</b>: 목록 (실버 또는 골드)이이 가용성에 대 한 지원 되는 구독입니다.</li><li><b>EntitlementIds</b>: 사용자가 게임을 구입 후 추적 합니다.</li></ul> | 
+| ConditionSets| string| <b>선택 사항</b>입니다. 클라이언트는 조건 집합, 즉이 쿼리 문자열을 통해 지정 된 키-값 쌍에 따라 <b>가용성</b> 정리를 요청할 수 있습니다. 가용성 조건 집합에 일치에 사용 됩니다. 조건 집합에 맞게 사용할 수 있는 키의 목록은 다음과 같습니다. <ul><li><b>플랫폼</b>: 여기서 제품 빌드되고 재생할 수 있습니다.</li><li><b>구독</b>: 목록 (실버 또는 골드)이이 가용성에 대 한 지원 되는 구독입니다.</li><li><b>EntitlementIds</b>: 사용자가 게임을 구입 후 추적 합니다.</li></ul> | 
 
 <a id="ID4EYF"></a>
 
@@ -64,7 +62,7 @@ ms.locfileid: "7574056"
 
 ### <a name="sample-response"></a>예제 응답
 
-아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/details?ids=6c5402e4-3cd5-4b29-a9c4-bec7d2c7514a&mediaGroup=GameType`.
+아래 JSON 코드 호출에 대 한 응답에는 `/media/en-us/details?ids=6c5402e4-3cd5-4b29-a9c4-bec7d2c7514a&mediaGroup=GameType`.
 
 
 ```cpp

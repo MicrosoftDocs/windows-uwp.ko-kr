@@ -2,19 +2,17 @@
 title: 추가 참조
 assetID: 2ed55e24-4a4f-625b-7cbb-f10855382bb4
 permalink: en-us/docs/xboxlive/rest/atoc-xboxlivews-reference-additional.html
-author: KevinAsgari
 description: " 추가 참조"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 106fe8e79752125a8c30670e226aebd689c3d240
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fdb0bd26ebe97b5f93a04e31b1cb1921c4059516
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552670"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8329763"
 ---
 # <a name="additional-reference"></a>추가 참조
 
@@ -27,7 +25,7 @@ ms.locfileid: "7552670"
 
 [권한 부여 유형](authorizationtypes.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 권한 부여 형식을 설명 합니다.
+&nbsp;&nbsp;Xbox Live 서비스에서 사용 되는 표준 인증 형식에 설명 합니다.
 
 [데이터 형식 개요](datatypeoverview.md)
 
@@ -35,21 +33,21 @@ ms.locfileid: "7552670"
 
 [보조 EDS API](eds-apis.md)
 
-&nbsp;&nbsp;보조 EDS Api에 설명 합니다.
+&nbsp;&nbsp;보조 EDS Api에 설명합니다.
 
 [EDS 권한 부여](edsauthorization.md)
 
 [EDS 공통 헤더](edscommonheaders.md)
 
-&nbsp;&nbsp;일반적으로 많은 EDS Api 요청 및 응답 헤더를 설명합니다.
+&nbsp;&nbsp;많은 EDS Api에 공통 요청 및 응답 헤더를 설명합니다.
 
 [EDS 매개 변수](edsparameters.md)
 
-&nbsp;&nbsp;많은 EDS Api에 공통 매개 변수를 설명 합니다.
+&nbsp;&nbsp;많은 EDS Api에 공통 매개 변수를 설명합니다.
 
 [EDS 쿼리 구체화](edsqueryrefiners.md)
 
-&nbsp;&nbsp;많은 EDS Api에 공통 쿼리 구체화에 설명 합니다.
+&nbsp;&nbsp;많은 EDS Api에 공통 쿼리 구체화를 설명합니다.
 
 [비디오에 대한 EDS 역방향 조회](edsreverselookup.md)
 
@@ -69,7 +67,7 @@ ms.locfileid: "7552670"
 
 [표준 HTTP 상태 코드](httpstatuscodes.md)
 
-&nbsp;&nbsp;서비스에 의해 반환 되는 표준 HTTP 상태 코드에 설명 합니다.
+&nbsp;&nbsp;서비스에 의해 반환 되는 표준 HTTP 상태 코드를 설명 합니다.
 
 <a id="ID4ECC"></a>
 

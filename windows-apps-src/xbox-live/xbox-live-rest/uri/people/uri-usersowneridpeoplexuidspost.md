@@ -2,19 +2,17 @@
 title: POST (/users/{ownerId}/people/xuids)
 assetID: e20bfb58-9c3b-14ed-6462-85d42fa6fe1a
 permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeoplexuidspost.html
-author: KevinAsgari
 description: " POST (/users/{ownerId}/people/xuids)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 91bcae367e42b3dc728b794d1e68550e86dcfeaa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1cb160f3276d215e3aba5dfd671c67fa17d883b5
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7557496"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8323964"
 ---
 # <a name="post-usersowneridpeoplexuids"></a>POST (/users/{ownerId}/people/xuids)
 컬렉션을 호출자의 사용자 로부터 XUID 사람을 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
@@ -34,7 +32,7 @@ ms.locfileid: "7557496"
  
 ## <a name="remarks"></a>설명
  
-게시 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한 결과 재현 됩니다이 모든 리소스를 수정 하지 않습니다.
+POST 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한 결과 재현 됩니다이 모든 리소스를 수정 하지 않습니다.
   
 <a id="ID4E5"></a>
 
@@ -50,7 +48,7 @@ ms.locfileid: "7557496"
  
 ## <a name="authorization"></a>권한 부여
  
-| 형식| 필수| 설명| 응답 없는 경우| 
+| 형식| 필수| 설명| 누락 된 경우 응답| 
 | --- | --- | --- | --- | --- | --- | --- | 
 | XUID| 예| 호출자가 사용자의 Xbox 사용자 ID (XUID).| 401 권한이 없음| 
   
@@ -63,7 +61,7 @@ ms.locfileid: "7557496"
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 권한 부여| 문자열입니다. Xbox LIVE에 대 한 데이터를 권한 부여 합니다. 일반적으로 암호화 된 XSTS 토큰입니다. 예제 값: XBL3.0 <b>x =&lt;userhash >;&lt; 토큰 ></b>합니다.| 
 | Content-Length| 32 비트 부호 없는 정수입니다. 길이, 바이트, 요청 본문의입니다. 예제 값: 22.| 
-| Content-Type| 문자열입니다. 요청 본문의 MIME 형식입니다. 이 <b>응용 프로그램/j</b>이어야 합니다.| 
+| Content-Type| 문자열입니다. 요청 본문의 MIME 형식입니다. <b>응용 프로그램/j</b>이어야 합니다.| 
   
 <a id="ID4EBE"></a>
 
@@ -87,7 +85,7 @@ ms.locfileid: "7557496"
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| XuidList| 호출자의 사람들이 컬렉션에서 반환 될 사용자를 식별 하는 XUIDs의 배열입니다. [XuidList (JSON)를](../../json/json-xuidlist.md)참조 하세요.| 
+| XuidList| 호출자의 사용자 컬렉션에서 반환 될 사용자를 식별 하는 XUIDs의 배열입니다. [XuidList (JSON)를](../../json/json-xuidlist.md)참조 하세요.| 
   
 <a id="ID4EKG"></a>
 
@@ -101,7 +99,7 @@ ms.locfileid: "7557496"
  
 ### <a name="prohibited-members"></a>금지 된 멤버
  
-다른 모든 구성원 요청에 사용할 수 없습니다.
+다른 모든 멤버는 요청에 사용할 수 없습니다.
   
 <a id="ID4EAH"></a>
 
@@ -126,12 +124,12 @@ ms.locfileid: "7557496"
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| "가져오는" 방법은 때 성공 합니다.| 
-| 204| 콘텐츠 없음| 성공 방법은 "추가" 또는 "제거" 합니다.| 
+| 204| 콘텐츠| 성공 방법은 "추가" 또는 "제거" 합니다.| 
 | 400| 잘못 된 요청| 메서드 매개 변수 누락 되거나 잘못 된 형식의 되었거나 사용자 Id가 잘못 된 형식의 합니다.| 
 | 403| 금지| 권한 부여 헤더에서 XUID 클레임을 분석할 수 없습니다.| 
   

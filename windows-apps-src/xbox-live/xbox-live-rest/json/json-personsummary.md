@@ -2,19 +2,17 @@
 title: PersonSummary(JSON)
 assetID: 22fedb5f-5602-98d8-04a6-786fe3905921
 permalink: en-us/docs/xboxlive/rest/json-personsummary.html
-author: KevinAsgari
 description: " PersonSummary(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 33b1cb2adaafba2370e27eb98a10a5143166f0ce
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a787992507405a70185140e879be731d72806eff
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7561099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8345529"
 ---
 # <a name="personsummary-json"></a>PersonSummary(JSON)
 [Person (JSON)](json-person.md) 개체의 컬렉션입니다. 
@@ -27,7 +25,7 @@ PersonSummary 개체에는 다음 사양을 있습니다.
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| hasCallerMarkedTargetAsFavorite| 부울 값| 여부 호출자를 즐겨찾기로 대상 표시가 됩니다. 예제 값: true| 
+| hasCallerMarkedTargetAsFavorite| 부울 값| 호출자가 표시 여부 대상으로 합니다. 예제 값: true| 
 | hasCallerMarkedTargetAsKnown| 부울 값| 호출자가 것으로 표시 여부 대상 알려진 합니다. 예제 값: true| 
 | isCallerFollowingTarget| 부울 값| 여부 호출자 대상 팔 로우 합니다. 예제 값: true| 
 | isTargetFollowingCaller| 부울 값| 여부 대상 호출자 팔 로우 합니다. 예제 값: true| 

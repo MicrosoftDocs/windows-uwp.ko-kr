@@ -8,15 +8,15 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
 ms.openlocfilehash: b52d0db46fe53d46dc831769c73c948d18d9c2c0
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8341712"
 ---
 # <a name="people-uris"></a>피플 URI
  
-이 섹션에서는 *사용자가* 시스템에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *사용자가* 시스템에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 서비스를 사용할 수 있습니다.
  
@@ -29,15 +29,15 @@ Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 
 
 [/users/{ownerId}/people](uri-usersowneridpeople.md)
 
-&nbsp;&nbsp;호출자의 사람들이 컬렉션에 액세스합니다.
+&nbsp;&nbsp;호출자의 사용자 컬렉션에 액세스합니다.
 
 [/users/{ownerId}/people/{targetid}](uri-usersowneridpeopletargetid.md)
 
-&nbsp;&nbsp;호출자의 사람들이 컬렉션에서 대상 ID로 사람에 액세스 합니다.
+&nbsp;&nbsp;호출자의 사용자 컬렉션에서 대상 ID로 사람에 액세스 합니다.
 
 [/users/{ownerId}/people/xuids](uri-usersowneridpeoplexuids.md)
 
-&nbsp;&nbsp;XUID 하 여 호출자의 사람들이 컬렉션에서 사용자를 액세스 합니다.
+&nbsp;&nbsp;XUID 하 여 호출자의 사용자 컬렉션에서 사용자를 액세스 합니다.
 
 [/users/{ownerId}/summary](uri-usersowneridsummary.md)
 

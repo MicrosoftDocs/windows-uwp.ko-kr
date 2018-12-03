@@ -2,19 +2,17 @@
 title: GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
 assetID: 613ba53f-03cb-5ed3-a5ba-be59e5a146d1
 permalink: en-us/docs/xboxlive/rest/uri-titlestitleidsessionssessionidallocationstatus-get.html
-author: KevinAsgari
 description: " GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 4da982d9ce3c1f24b00c62a3668253f086b41f55
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 793d634bc1e3dc431b3797759751afb6dfd9c00a
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7562275"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8349380"
 ---
 # <a name="get-titlestitleidsessionssessionidallocationstatus"></a>GET (/titles/{titleId}/sessions/{sessionId}/allocationStatus)
 해당 세션 Id로 식별 sessionhost 할당 상태를 반환 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
@@ -52,7 +50,7 @@ ms.locfileid: "7562275"
 | status| 대기, 충족, 또는 중단을 나타냅니다.| 
 | sessionHostId| 세션 호스트 id입니다.| 
 | sessionId| (할당 시) 제공 클라이언트 세션 id입니다.| 
-| secureContext| 보안 장치 주소입니다.| 
+| secureContext| 장치 보안 주소입니다.| 
 | portMappings| 인스턴스에 대 한 포트 매핑을 합니다.| 
 | 지역| 인스턴스의 위치입니다.| 
 | ticketId| (왼쪽에 대 한 이전 버전과 호환성) 현재 세션 ID입니다.| 
@@ -108,5 +106,5 @@ ms.locfileid: "7562275"
    * 400-잘못 된 매개 변수를 포함 하는 요청 
    * 401-권한이 없음 
    * 404-제목 ID 또는 티켓 ID 잘못 되었거나 찾을 수 없습니다. 
-   * 500-예기치 않은 서버 오류입니다. 
+   * 500-예기치 않은 서버 오류. 
     

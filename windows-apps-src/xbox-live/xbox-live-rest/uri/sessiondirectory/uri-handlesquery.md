@@ -2,25 +2,23 @@
 title: /handles/query
 assetID: e00d31ad-b9ba-8e52-1333-83192eab0446
 permalink: en-us/docs/xboxlive/rest/uri-handlesquery.html
-author: KevinAsgari
 description: " /handles/query"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d4ce38768923f9adb2cdb8e2237e9afcb774433b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eaa148972ce1e65056470a6c4082cb4e50de3f09
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7571025"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8328124"
 ---
 # <a name="handlesquery"></a>/handles/query
 세션 핸들에 대 한 쿼리를 만드는 게시 작업을 지원 합니다. 
 
 > [!NOTE] 
-> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상와 함께 사용 합니다.  
+> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
 
  
 <a id="ID4EQ"></a>
@@ -32,7 +30,7 @@ sessiondirectory.xboxlive.com
 
  
 ## <a name="remarks"></a>설명
-이 URI 핸들에 대 한 쿼리를 지원합니다. 쿼리 문자열 및 일괄 처리는 세션 쿼리 핸들 쿼리 쿼리 프로세서 스타일을 사용 합니다. 최대 100 핸들 지원 됩니다.  
+이 URI 처리에 대 한 쿼리를 지원합니다. 쿼리 문자열 및 일괄 처리는 세션 쿼리 핸들 쿼리 쿼리 프로세서 스타일을 사용 합니다. 최대 100 핸들 지원 됩니다.  
 <a id="ID4E2"></a>
 
  

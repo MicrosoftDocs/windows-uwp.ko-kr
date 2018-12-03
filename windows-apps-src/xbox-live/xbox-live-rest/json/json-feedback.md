@@ -2,19 +2,17 @@
 title: Feedback(JSON)
 assetID: 726117c1-f01b-18c0-3b75-a7a7d27d84a2
 permalink: en-us/docs/xboxlive/rest/json-feedback.html
-author: KevinAsgari
 description: " Feedback(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 287287879f6b7f2334d23a9ff1836a61ddd1ce42
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9cc1cb4ecc12219d54af1c4ab420671f2bbfa81f
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7581362"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8332446"
 ---
 # <a name="feedback-json"></a>Feedback(JSON)
 플레이어에 대 한 피드백 정보를 포함합니다.
@@ -45,35 +43,35 @@ ms.locfileid: "7581362"
    * "개인" 의미 SLS 개인 정보 보호 서비스에만 피드백을 보낼 수 있습니다.
    * "None" 의미 피드백 감사 SLS 평판 서비스에서 내부적으로 생성 되 고 모든 호출자가 보낼 수 없습니다.
 
-| 유형| 전송한| 메모|
+| 유형| 보낸| 메모|
 | --- | --- | --- | --- | --- | --- |
 | CommsAbusiveVoice| 사용자| 사용자 피드백 보고서 부적절 한 음성 채팅에서 제목을 내에서 그리고 Xbox 대시보드에서 보내기 됩니다. |
-| CommsInappropriateVideo| 사용자가 파트너| 사용자 및 파트너 제목을 내에서 그리고 Xbox 대시보드에서 부적절 한 비디오를 보고 하는 피드백을 보냅니다. |
-| CommsMuted| 개인 정보| 사용자가 다른 플레이어 음소거, 개인 정보 보호 평판 서비스에이 피드백을 보냅니다. |
+| CommsInappropriateVideo| 사용자, 파트너| 사용자 및 파트너 제목을 내에서 그리고 Xbox 대시보드에서 부적절 한 비디오를 보고 하는 피드백을 보냅니다. |
+| CommsMuted| 개인 정보| 사용자가 다른 플레이어 음소거, 개인 정보가이 피드백 평판 서비스에 보냅니다. |
 | CommsPhishing| 사용자| 사용자가 피싱 메시지를 보고 하려면이 피드백을 보냅니다. |
-| CommsPictureMessage| 사용자| 받은 편지함 서비스를 기반으로 한 사진의 통신 발신자의 신뢰도 업데이트 하 고 적용 팀에 게 피드백을 보고 있는 신뢰도 서비스를 호출 합니다. |
+| CommsPictureMessage| 사용자| 받은 편지함 서비스를 기반으로 한 사진의 통신 발신자의 신뢰도 업데이트 하 고 적용 팀에 피드백을 보고 하는 신뢰도 서비스를 호출 합니다. |
 | CommsSpam| 사용자| 사용자가이 피드백 스팸 메시지를 보고 합니다. |
-| CommsTextMessage| 사용자| 받은 편지함 서비스 발신자의 신뢰도 업데이트 하 고 적용 팀에 게 피드백을 보고 있는 신뢰도 서비스를 호출 합니다. **참고:** 받은 편지함 UI는 사용자가 메시지에 플래그 지정 하도록 허용 하는 단추가 있어야 합니다. |
-  | CommsVoiceMessage | 사용자 | 받은 편지함 서비스 음성 메시지의 통신에 따라 발신자의 신뢰도 업데이트 하 고 적용 팀에 게 피드백을 보고 있는 신뢰도 서비스를 호출 합니다.  |
-  | FairPlayBlock | 개인 정보 | 개인 정보 사용자 다른 플레이어를 차단할 때 평판 서비스에이 피드백을 보냅니다.  |
-  | FairPlayCheater | 사용자가 파트너 | 타이틀 사용자 부정이 결정 하는 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
-  | FairPlayConsoleBanRequest | 파트너 | 파트너는 Xbox Live에서 콘솔 사용을 금지 하 권장 사항으로이 피드백을 보냅니다.  |
-  | FairPlayIdler | 사용자가 파트너 | 타이틀 경우 사용자가 대표 유휴 의도적으로 원형 후 라운드 일반적으로 게임을 결정 하는 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
-  | FairPlayKicked | 사용자가 파트너 | 사용자 (시작) 게임에서 투표가 감지 하는 제목을 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
-  | FairPlayKillsTeammates | 사용자가 파트너 | 플레이어 killls 때 자동으로 확인할 수 있는 타이틀 자신의 팀 동료 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
-  | FairPlayQuitter | 사용자가 파트너 | 사용자가 게임을 조기에 종료를 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
-  | FairPlayTampering | 사용자가 파트너 | 사용자가 디스크에 콘텐츠를 사용 하 여 변조를 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
-  | FairPlayUnblock | 개인 정보 | 개인 정보는 사용자가 다른 플레이어를 차단 하는 경우 신뢰도 서비스에이 피드백을 보냅니다.  |
+| CommsTextMessage| 사용자| 받은 편지함 서비스 발신자의 신뢰도 업데이트 하 고 적용 팀에 피드백을 보고 하는 신뢰도 서비스를 호출 합니다. **참고:** 받은 편지함 UI는 사용자가 메시지에 플래그 지정 하도록 허용 하는 단추가 있어야 합니다. |
+  | CommsVoiceMessage | 사용자 | 받은 편지함 서비스 음성 메시지의 통신에 따라 발신자의 신뢰도 업데이트 하 고 적용 팀에 피드백을 보고 하는 신뢰도 서비스를 호출 합니다.  |
+  | FairPlayBlock | 개인 정보 | 개인 정보 사용자 차단 다른 플레이어 평판 서비스에이 피드백을 보냅니다.  |
+  | FairPlayCheater | 사용자, 파트너 | 사용자가 부정 행위를 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
+  | FairPlayConsoleBanRequest | 파트너 | 파트너는 콘솔에서 Xbox Live 사용을 금지 하 권장 사항으로이 피드백을 보냅니다.  |
+  | FairPlayIdler | 사용자, 파트너 | 타이틀 경우 사용자가 대표 유휴 의도적으로 반올림, 후 라운드 일반적으로 게임을 결정 하는 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
+  | FairPlayKicked | 사용자, 파트너 | 사용자 (시작) 게임에서 투표 된 경우를 감지 하는 제목을 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
+  | FairPlayKillsTeammates | 사용자, 파트너 | 플레이어 killls 때 자동으로 확인할 수 있는 타이틀 하면 팀 동료 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
+  | FairPlayQuitter | 사용자, 파트너 | 사용자가 게임을 초기 종료를 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
+  | FairPlayTampering | 사용자, 파트너 | 디스크에 콘텐츠를 사용 하 여 사용자를 변조를 결정 하는 타이틀 사용자 개입 없이이 피드백을 보낼 수 있습니다.  |
+  | FairPlayUnblock | 개인 정보 | 개인은 사용자는 다른 플레이어를 차단 하는 경우 평판 서비스에이 피드백을 보냅니다.  |
   | FairPlayUserBanRequest | 파트너 | 파트너는 Xbox Live에서 사용자를 금지 하 권장 사항으로이 피드백을 보냅니다.  |
   | InternalAmbassadorScoreUpdated | 없음 | 호출자가 사용에 대 한 하지는 내부 피드백 유형입니다.  |
   | InternalReputationReset | 없음 | 호출자가 사용에 대 한 하지는 내부 피드백 유형입니다.  |
   | InternalReputationUpdated | 없음 | 호출자가 사용에 대 한 하지는 내부 피드백 유형입니다.  |
-  | PositiveHelpfulPlayer | 사용자가 파트너 | 사용자 및 파트너 게임, 포럼, 등에 내에서 유용한 동료 플레이어에 대 한 양의 정보를 제출 하려면이 피드백을 보냅니다.  |
-  | PositiveHighQualityUGC | 사용자가 파트너 | 사용자 및 파트너가이 피드백을 보내기 제목에는 게임 내에서 공유 UGC 양수 피드백을 제출 하는 사용자를 허용 해야 나타내는 예를 들어 Forza에서 설치를 조정 합니다.  |
-  | PositiveSkilledPlayer | 사용자가 파트너 | 사용자 및 파트너 제목 MPSD 세션의 끝에 MVP에 응답할 수 있도록 할 수 있는지를 나타내는이 피드백을 보냅니다.  |
-  | UserContentGamerpic | 사용자 | 사용자가 보고 게이머 카드에서 직접 부적절 한 게이머 그림은이 피드백을 보냅니다.  |
+  | PositiveHelpfulPlayer | 사용자, 파트너 | 사용자 및 파트너 게임, 포럼, 등에 내에서 유용한 동료 플레이어에 대 한 양의 정보를 제출 하려면이 피드백을 보냅니다.  |
+  | PositiveHighQualityUGC | 사용자, 파트너 | 사용자 및 파트너가이 피드백을 보내기 타이틀 게임 내에서 공유 UGC에 긍정적인 피드백을 제출 하는 사용자를 허용 해야 나타내는 예를 들어 Forza에서 설치를 조정 합니다.  |
+  | PositiveSkilledPlayer | 사용자, 파트너 | 사용자 및 파트너 타이틀 MPSD 세션의 끝에 MVP에 응답할 수 있도록 할 수는 나타내기 위해이 피드백을 보냅니다.  |
+  | UserContentGamerpic | 사용자 | 사용자는 부적절 한 게이머 사진 게이머 카드에서 직접 보고이 피드백을 보냅니다.  |
   | UserContentGamertag | 사용자 | 사용자는 부적절 한 게이머 태그 게이머 카드에서 직접 보고이 피드백을 보냅니다.  |
-  | UserContentInappropriateUGC | 사용자가 파트너 | 사용자 및 파트너 제목을 사용자는 게임 내에서 부적절 한 공유 UGC 플래그 Forza의 예를 들어 그리기 작업을 허용 해야 나타내기 위해이 피드백을 보냅니다.  |
+  | UserContentInappropriateUGC | 사용자, 파트너 | 사용자 및 파트너 타이틀 해야 사용자가 수 있도록 게임 내에서 부적절 한 공유 UGC 플래그 Forza의 예를 들어 그리기 작업을 나타내기 위해이 피드백을 보냅니다.  |
   | UserContentPersonalInfo | 사용자 | 사용자가 한 소개 및 게이머 카드에서 직접 개인 정보를 보고 하려면이 피드백을 보냅니다.  |
 
 <a id="ID4EFEAC"></a>

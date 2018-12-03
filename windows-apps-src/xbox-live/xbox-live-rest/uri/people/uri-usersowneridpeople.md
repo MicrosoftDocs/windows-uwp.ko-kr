@@ -2,22 +2,20 @@
 title: /users/{ownerId}/people
 assetID: 9745a93c-720e-606d-bff2-ad0ec610ed98
 permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeople.html
-author: KevinAsgari
 description: " /users/{ownerId}/people"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5191249e3ee0cdea9ca07f8f3bfbdd15992a3145
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c3980ca2d755d9fceb4b9059f8c5f529a7c16218
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7579285"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8332573"
 ---
 # <a name="usersowneridpeople"></a>/users/{ownerId}/people
-호출자의 사람들이 컬렉션에 액세스합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
+호출자의 사용자 컬렉션에 액세스합니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  

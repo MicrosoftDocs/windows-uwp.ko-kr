@@ -2,22 +2,20 @@
 title: GameClipState 열거형
 assetID: 97fe5c1e-f7b5-537e-69eb-8284b69cd3e1
 permalink: en-us/docs/xboxlive/rest/gvr-enum-gameclipstate.html
-author: KevinAsgari
 description: " GameClipState 열거형"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ce2ec90377dcd78797fa5708577f24028c3ccf2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f7b20224eeab1b98c7c80f0e4b551420b5a15e7d
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7577944"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8335323"
 ---
 # <a name="gameclipstate-enumeration"></a>GameClipState 열거형
-GameClipState 열거형에 자세히 설명 합니다. 
+GameClipState 열거형에 자세히 설명합니다. 
 <a id="ID4ET"></a>
 
  
@@ -27,7 +25,7 @@ GameClipState 열거형에 자세히 설명 합니다.
 | --- | --- | 
 | 없음 | 게임 클립 서비스 상태를 알 수 없거나 설정 하지 않습니다.| 
 | PendingUpload | 게임 클립 서비스 자산 업로드 기다리고 있습니다.| 
-| PendingDelete | 게임 클립 삭제 큐입니다. (사실이 "삭제").| 
+| PendingDelete | 게임 클립 삭제 큐입니다. (효과적으로 의미 "삭제").| 
 | 처리됨 | 게임 클립 모든 처리가 완료 합니다.| 
 | 처리 중| 게임 클립 처리 되 고 (인코딩, 미리 보기 등.).| 
 | 게시| 게임 클립 자산을 게시 하 고 됩니다.| 

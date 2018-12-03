@@ -2,23 +2,21 @@
 title: 마켓플레이스 URI
 assetID: 27b6035f-84b9-67a8-6a12-85c450d18a58
 permalink: en-us/docs/xboxlive/rest/atoc-reference-marketplace.html
-author: KevinAsgari
 description: " 마켓플레이스 URI"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 96055bd7a2d4169c15e37b55aa70a94fab128a59
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9fd8112c6e16b3e9d9fb70c34381e88ba5aa6273
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7574053"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8330550"
 ---
 # <a name="marketplace-uris"></a>마켓플레이스 URI
 
-이 섹션에서는 *마켓플레이스* 서비스, 라고도 엔터테인먼트 검색 서비스 (EDS)에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *marketplace* 서비스, 라고도 엔터테인먼트 검색 서비스 (EDS)에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
 
 Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 서비스를 사용할 수 있습니다.
 
@@ -71,7 +69,7 @@ Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaItemType}/fields](uri-medialocalemetadatamediaitemtypefields.md)
 
-&nbsp;&nbsp;지정 된 mediaitemtype 및 EDS의 특정된 버전에 대 한 데이터를 예상할 수 있는 하나 액세스 필드입니다.
+&nbsp;&nbsp;지정 된 mediaitemtype 및 EDS의 특정된 버전에 대 한 데이터를 예상할 수 있는 하나 액세스 필드.
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners](uri-medialocalemetadatamediaitemtypequeryrefiners.md)
 
@@ -79,7 +77,7 @@ Xbox 360, Windows Phone 디바이스 또는 Xbox.com 실행 된 게임에만이 
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryrefinername}](uri-medialocalemetadatamediaitemtypequeryrefinersqueryrefinername.md)
 
-&nbsp;&nbsp;지정 된 쿼리 구체화 이름에 대 한 및 미디어 항목 유형 지정 된 허용 되는 값에 액세스합니다.
+&nbsp;&nbsp;지정 된 쿼리 구체화 이름 및 미디어 항목 유형 지정 된 허용 되는 값에 액세스합니다.
 
 [/media/{marketplaceId}/metadata/mediaItemTypes/{mediaitemtype}/queryrefiners/{queryRefiner}/subQueryRefinerValues](uri-medialocalemediaitemtypequeryrefinersubqueryrefinervalues.md)
 

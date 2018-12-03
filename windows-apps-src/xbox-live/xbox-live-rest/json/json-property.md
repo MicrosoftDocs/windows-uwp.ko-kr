@@ -2,22 +2,20 @@
 title: Property(JSON)
 assetID: 93de547e-d936-6fcc-92cb-e4dd284dd609
 permalink: en-us/docs/xboxlive/rest/json-property.html
-author: KevinAsgari
 description: " Property(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d37054d03f6ebe8299db78673dc631c9b4b4bc16
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7e2a721886509c49c60d663d491f8d49bc3c95e9
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7556466"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8349130"
 ---
 # <a name="property-json"></a>Property(JSON)
-매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 들어 있습니다.
+매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 포함 되어 있습니다.
 <a id="ID4EN"></a>
 
 
@@ -28,7 +26,7 @@ ms.locfileid: "7556466"
 | 멤버| 유형| 설명|
 | --- | --- | --- |
 | id| string| 이 속성에 대 한 id입니다.|
-| type| 32 비트 부호 있는 정수 | 속성의 형식입니다. 지원 되는 값은. <ul><li>0 = 정수</li><li>1 = string</li></ul>| 
+| type| 32 비트 부호 있는 정수 | 속성의 유형입니다. 지원 되는 값은: <ul><li>0 = 정수</li><li>1 = string</li></ul>| 
 | value| string| 이 속성의 값입니다.|
 
 <a id="ID4EGC"></a>

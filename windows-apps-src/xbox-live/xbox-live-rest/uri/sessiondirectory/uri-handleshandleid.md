@@ -2,25 +2,23 @@
 title: /handles/{handleId}
 assetID: 5b722d3e-fe80-fec5-a26b-8b3db6422004
 permalink: en-us/docs/xboxlive/rest/uri-handleshandleid.html
-author: KevinAsgari
 description: " /handles/{handleId}"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 1711cf9ffeaafaa3bf20ac455dc9314245546b9a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3a312d3744e96755a899d73307a47c01e3dc79fd
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7577062"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8349354"
 ---
 # <a name="handleshandleid"></a>/handles/{handleId}
-식별자로 지정 하는 세션 핸들에 대 한 작업을 삭제 하 고 지원 합니다. 
+세션 핸들 식별자로 지정 하 고 삭제 작업을 지원 합니다. 
 
 > [!NOTE] 
-> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상와 함께 사용 합니다.  
+> 이 URI 2015 멀티 플레이어에서 사용 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
 
  
 <a id="ID4EQ"></a>
@@ -44,11 +42,11 @@ sessiondirectory.xboxlive.com
 
 [DELETE (/handles/{handleId})](uri-handleshandleiddelete.md)
 
-&nbsp;&nbsp;핸들 id 지정 핸들을 삭제 합니다.
+&nbsp;&nbsp;핸들 id 지정 처리를 삭제 합니다.
 
 [GET (/handles/{handle-id})](uri-handleshandleidget.md)
 
-&nbsp;&nbsp;핸들이 지정 핸들 id를 검색 합니다.
+&nbsp;&nbsp;핸들 id 지정 핸들을 검색 합니다.
  
 <a id="ID4E4B"></a>
 

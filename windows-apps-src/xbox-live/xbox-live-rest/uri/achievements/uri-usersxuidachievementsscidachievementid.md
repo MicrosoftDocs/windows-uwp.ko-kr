@@ -2,22 +2,20 @@
 title: /users/xuid({xuid})/achievements/{scid}/{achievementid}
 assetID: 656a6d63-1a11-b0a5-63d2-2b010abd62e7
 permalink: en-us/docs/xboxlive/rest/uri-usersxuidachievementsscidachievementid.html
-author: KevinAsgari
 description: " /users/xuid({xuid})/achievements/{scid}/{achievementid}"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 9766222ea3a1c8671eadd42458b1c5aceaf0f587
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 00c577f60b67f15f75c47b5e737ca12819695110
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7559485"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8339663"
 ---
 # <a name="usersxuidxuidachievementsscidachievementid"></a>/users/xuid({xuid})/achievements/{scid}/{achievementid}
-해당 구성 된 메타 데이터와 사용자 고유의 데이터를 포함 하 여 도전 과제에 대 한 세부 정보를 반환 합니다. 
+도전 과제, 구성 된 메타 데이터 및 사용자 관련 데이터에 대 한 세부 정보를 반환 합니다. 
 
 > [!NOTE] 
 > 플랫폼에 대해서만 지원 합니다. 

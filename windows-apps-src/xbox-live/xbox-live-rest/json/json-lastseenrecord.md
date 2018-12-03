@@ -2,22 +2,20 @@
 title: LastSeenRecord(JSON)
 assetID: 6a93202c-801c-03c6-8386-6acd0f366780
 permalink: en-us/docs/xboxlive/rest/json-lastseenrecord.html
-author: KevinAsgari
 description: " LastSeenRecord(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d4889ced5f8942c080b3336bda8c0d8d9b25af2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e06de31cabaedb68ed57d3d4f2ff30614ceb6317
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7564612"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8333121"
 ---
 # <a name="lastseenrecord-json"></a>LastSeenRecord(JSON)
-마지막으로 본 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 사용자를 때 시스템에 대 한 정보입니다. 
+시스템 사용자, 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 마지막 본 되는 시기에 대 한 정보입니다. 
 <a id="ID4EN"></a>
 
  
@@ -30,7 +28,7 @@ LastSeenRecord 개체에는 다음 사양을 있습니다.
 | deviceType| string| 사용자가 마지막 현재 디바이스의 유형.| 
 | titleId| 32 비트 부호 없는 정수| 식별자는 사용자가 마지막 현재 제목입니다.| 
 | titleName| string| 이름에는 사용자가 마지막 현재 제목입니다.| 
-| 타임 스탬프| DateTime| 사용자의 마지막 제공 된 시기를 나타내는 UTC 타임 스탬프입니다.| 
+| 타임 스탬프| DateTime| 사용자의 마지막 표시 된 시기를 나타내는 UTC 타임 스탬프입니다.| 
   
 <a id="ID4EHC"></a>
 

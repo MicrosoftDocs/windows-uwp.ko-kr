@@ -2,19 +2,17 @@
 title: /sessions/{sessionId}/scids/{scid}
 assetID: a33a1002-3b0b-2a7f-f74a-334f66541172
 permalink: en-us/docs/xboxlive/rest/uri-sessionssessionidscidsscid.html
-author: KevinAsgari
 description: " /sessions/{sessionId}/scids/{scid}"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 923c2e2f1570e00bc686fa2e8387094692f98e93
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8ae3ade71d4b7847d671fe7f01cdc31b0014f766
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7569426"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8332492"
 ---
 # <a name="sessionssessionidscidsscid"></a>/sessions/{sessionId}/scids/{scid}
 이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

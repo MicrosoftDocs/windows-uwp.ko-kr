@@ -2,25 +2,23 @@
 title: JSON(JavaScript Object Notation) 개체 참조
 assetID: 8efcc6f3-d88a-1b15-bcfc-d79a24581b0a
 permalink: en-us/docs/xboxlive/rest/atoc-xboxlivews-reference-json.html
-author: KevinAsgari
 description: " JSON(JavaScript Object Notation) 개체 참조"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 039cc9cf1d7d1d77330ff280d7cff5619971b075
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 703b0750dabfdad55d55534bbe7a66a69d988f53
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7558762"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8336856"
 ---
 # <a name="javascript-object-notation-json-object-reference"></a>JSON(JavaScript Object Notation) 개체 참조
  
 JavaScript Object Notation (JSON)은 웹에서 데이터를 캡슐화 하는 데 경량, 표준 기반, 개체 지향 표기법을 제공 합니다.
  
-Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개체를 정의 합니다. 이 섹션에서는 Xbox Live 서비스와 함께 사용 되는 각 JSON 개체에 대 한 참조 정보를 제공 합니다.
+Xbox Live 서비스, 요청 및 응답 서비스에서 사용 되는 JSON 개체를 정의 합니다. 이 섹션에서는 Xbox Live 서비스와 함께 사용 되는 각 JSON 개체에 대 한 참조 정보를 제공 합니다.
  
 <a id="ID4EHB"></a>
 
@@ -65,7 +63,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [GameClipThumbnail(JSON)](json-gameclipthumbnail.md)
 
-&nbsp;&nbsp;개별 축소판에 관련 된 정보가 포함 되어 있습니다. 클립 당 여러 크기 수 있으며 디스플레이 대 한 적절 한 하나를 선택 하는 클라이언트에 게 됩니다.
+&nbsp;&nbsp;개별는 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 있을 수 있으며 적절 한 디스플레이 대 한 선택 클라이언트 그것은 개발자가 합니다.
 
 [GameClipUri(JSON)](json-gameclipuri.md)
 
@@ -75,7 +73,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [GameResult(JSON)](json-gameresult.md)
 
-&nbsp;&nbsp;게임 세션의 결과 설명 하는 데이터를 나타내는 JSON 개체입니다.
+&nbsp;&nbsp;게임 세션의 결과 설명 하는 데이터를 표시 하는 JSON 개체입니다.
 
 [GameSession(JSON)](json-gamesession.md)
 
@@ -105,7 +103,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [LastSeenRecord(JSON)](json-lastseenrecord.md)
 
-&nbsp;&nbsp;마지막으로 본 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 사용자를 때 시스템에 대 한 정보입니다.
+&nbsp;&nbsp;시스템 사용자, 사용자가 없는 유효한 DeviceRecord 때 사용할 수 있는 마지막 본 되는 시기에 대 한 정보입니다.
 
 [MatchTicket(JSON)](json-matchticket.md)
 
@@ -149,11 +147,11 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [PermissionCheckBatchResponse(JSON)](json-permissioncheckbatchresponse.md)
 
-&nbsp;&nbsp;여러 사용자에 대 한 권한 값의 목록에 대 한 권한 일괄 처리의 결과 확인합니다.
+&nbsp;&nbsp;여러 사용자에 대 한 권한 값의 목록에 대 한 일괄 처리의 결과 확인합니다.
 
 [PermissionCheckBatchUserResponse(JSON)](json-permissioncheckbatchuserresponse.md)
 
-&nbsp;&nbsp;단일 대상 사용자에 대 한 권한 값의 목록 일괄 처리 권한의 이유를 확인합니다.
+&nbsp;&nbsp;단일 대상 사용자에 대 한 권한 값의 목록 일괄 처리의 이유를 확인합니다.
 
 [PermissionCheckResponse(JSON)](json-permissioncheckresponse.md)
 
@@ -165,7 +163,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [Person(JSON)](json-person.md)
 
-&nbsp;&nbsp;사용자가 시스템에 단일 사용자에 대 한 메타 데이터입니다.
+&nbsp;&nbsp;사용자가 시스템에서 한 사람에 대 한 메타 데이터입니다.
 
 [PersonSummary(JSON)](json-personsummary.md)
 
@@ -189,23 +187,23 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [Property(JSON)](json-property.md)
 
-&nbsp;&nbsp;매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 들어 있습니다.
+&nbsp;&nbsp;매치 메이 킹 요청 조건에 대 한 클라이언트에서 제공한 속성 데이터가 포함 되어 있습니다.
 
 [QueryClipsResponse(JSON)](json-queryclipsresponse.md)
 
-&nbsp;&nbsp;목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다.
+&nbsp;&nbsp;목록에 대 한 페이징 정보와 함께 반환 게임 클립의 목록을 래핑합니다.
 
 [quotaInfo(JSON)](json-quota.md)
 
-&nbsp;&nbsp;제목 그룹에 대 한 할당량 정보가 포함 되어 있습니다.
+&nbsp;&nbsp;제목 그룹에 대 한 할당량 정보를 포함합니다.
 
 [Requirement(JSON)](json-requirement.md)
 
-&nbsp;&nbsp;도전 과제 및 충족 하는 방향으로 얼마나 이동할지 사용자가 잠금 해제 조건입니다.
+&nbsp;&nbsp;도전 과제 및 거리에 맞춰 사용자가 잠금 해제 조건입니다.
 
 [ResetReputation(JSON)](json-resetreputation.md)
 
-&nbsp;&nbsp;사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다.
+&nbsp;&nbsp;사용자의 기존 점수를 변경 해야 하는 새 기본 평판 점수를 포함 되어 있습니다.
 
 [Reward(JSON)](json-reward.md)
 
@@ -221,7 +219,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [ServiceErrorResponse(JSON)](json-serviceerrorresponse.md)
 
-&nbsp;&nbsp;서비스 오류가 발생할 때 적절 한 HTTP 오류 코드 반환 됩니다. 필요에 따라 서비스 아래에 정의 된 대로 ServiceErrorResponse 개체를 포함할 수도 있습니다. 프로덕션 환경에서 더 적은 데이터가 포함 될 수 있습니다.
+&nbsp;&nbsp;서비스 오류가 발생 하는 경우 적절 한 HTTP 오류 코드 반환 됩니다. 필요에 따라 서비스 아래에 정의 된 대로 ServiceErrorResponse 개체를 포함할 수도 있습니다. 프로덕션 환경에서 더 적은 데이터가 포함 될 수 있습니다.
 
 [SessionEntry(JSON)](json-sessionentry.md)
 
@@ -249,7 +247,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [User(JSON)](json-user.md)
 
-&nbsp;&nbsp;사용자 순위표 데이터가 들어 있습니다.
+&nbsp;&nbsp;사용자 순위표 데이터를 포함합니다.
 
 [UserClaims(JSON)](json-userclaims.md)
 
@@ -269,7 +267,7 @@ Xbox Live 서비스를 요청 및 응답 서비스에서 사용 되는 JSON 개�
 
 [VerifyStringResult(JSON)](json-verifystringresult.md)
 
-&nbsp;&nbsp;[/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 된 각 문자열에 해당 되는 결과 코드.
+&nbsp;&nbsp;[/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 하는 각 문자열에 해당 되는 결과 코드.
 
 [XuidList(JSON)](json-xuidlist.md)
 

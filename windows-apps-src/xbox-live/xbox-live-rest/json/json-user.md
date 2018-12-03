@@ -2,22 +2,20 @@
 title: User(JSON)
 assetID: dbc733e4-0348-0e3d-1f55-17b465e599d6
 permalink: en-us/docs/xboxlive/rest/json-user.html
-author: KevinAsgari
 description: " User(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 255fe2918f10bb3b941cf2023ff358c58e191cbf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5c1b3a34ef329696d51e615dd79d57783a132d05
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7566719"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8347655"
 ---
 # <a name="user-json"></a>User(JSON)
-사용자 순위표 데이터가 들어 있습니다. 
+사용자 순위표 데이터를 포함합니다. 
 <a id="ID4EN"></a>
 
  
@@ -27,7 +25,7 @@ ms.locfileid: "7566719"
  
 | 멤버| 유형| 설명| 
 | --- | --- | --- | 
-| 게이머 태그| string| 게이머 player (최대 15 자). 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다.| 
+| 게이머 태그| string| 게이머의 플레이어 (최대 15 자). 플레이어를 식별할 때 클라이언트 UI에서이 값을 사용 해야 합니다.| 
 | 순위| 32 비트 부호 있는 정수| 순위표 데이터를 요청 하는 사용자를 기준으로 사용자의 순위를 지정 합니다.| 
 | rating| string| 사용자의 평점입니다.| 
 | xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 사용자의 합니다.| 

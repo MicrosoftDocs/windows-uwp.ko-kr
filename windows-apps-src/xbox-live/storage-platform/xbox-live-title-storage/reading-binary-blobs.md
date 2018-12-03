@@ -1,23 +1,21 @@
 ---
 title: 이진 blob 읽기
-author: KevinAsgari
-description: Xbox Live 타이틀 저장소의 이진 blob 읽기에 대해 알아봅니다.
+description: Xbox Live 타이틀 저장소의 이진 blob 읽기 하는 방법을 알아봅니다.
 ms.assetid: 9b8e0c35-0cea-4491-bf30-22fad224f11b
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 타이틀 저장소
 ms.localizationpriority: medium
-ms.openlocfilehash: 5dc5e429ab36621db1c5525ae7f1a8dc5da3b4fc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e2a0be72142a3e11c7c680cfc998287f396c2afc
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7555140"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8340450"
 ---
 # <a name="reading-a-binary-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소의 이진 blob 읽기
 
-1.  타이틀 저장소에서 데이터 읽기를 *GET* 메서드를 사용 하 여 요청을 보냅니다. 이 예제에서는 전역 타이틀 저장소를 사용 합니다.
+1.  타이틀 저장소에서 데이터 읽기를 *GET* 메서드를 사용 하 여 요청을 보냅니다. 이 예제에서는 글로벌 타이틀 저장소를 사용 합니다.
 
         GET https://titlestorage.xboxlive.com/global/scids/{scid}/data/userinfo.bin,binary
         Content-Type: application/octet-stream

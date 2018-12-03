@@ -2,19 +2,17 @@
 title: Xbox Live Services RESTful 참조
 assetID: 527db3b0-5ebd-eeca-4330-2074199c82ff
 permalink: en-us/docs/xboxlive/rest/atoc-xboxlivews-reference.html
-author: KevinAsgari
 description: " Xbox Live Services RESTful 참조"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f58c9028d506b6f2773529e3c1e8f8fdfbff4d6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2076cf7b909083072904128a8f53c200a681ee8e
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7554989"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8334590"
 ---
 # <a name="xbox-live-services-restful-reference"></a>Xbox Live Services RESTful 참조
 
@@ -39,4 +37,4 @@ Xbox Live 서비스는 게임 및 플레이어 정보를 관리 하기 위한 �
 
 [추가 참조](additional/atoc-xboxlivews-reference-additional.md)
 
-&nbsp;&nbsp;Xbox Live 서비스에 대 한 보충 참조 자료 합니다. 권한 부여 유형, 데이터 형식, 표준 HTTP 상태 코드 및 헤더, 페이징 매개 변수 및 엔터테인먼트 검색 서비스 (EDS)에 대 한 정보가 포함 됩니다.
+&nbsp;&nbsp;Xbox Live 서비스에 대 한 보충 참고 자료입니다. 권한 부여 유형, 데이터 형식, 표준 HTTP 상태 코드 및 헤더, 페이징 매개 변수 및 엔터테인먼트 검색 서비스 (EDS)에 대 한 정보가 포함 됩니다.

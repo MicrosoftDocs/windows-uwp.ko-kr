@@ -2,19 +2,17 @@
 title: MediaAsset(JSON)
 assetID: 858c720a-1648-738b-bb43-f050e7cac19e
 permalink: en-us/docs/xboxlive/rest/json-mediaasset.html
-author: KevinAsgari
 description: " MediaAsset(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b50cb58f6c6262d653e90e1e6ca9666cecadf680
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 42a2a6e62494bd8fd5872e7664da8ac71cccbf57
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7556502"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8344203"
 ---
 # <a name="mediaasset-json"></a>MediaAsset(JSON)
 도전 과제 또는 해당 보상와 관련 된 미디어 자산입니다.
@@ -27,8 +25,8 @@ MediaAsset 개체에는 다음 사양을 있습니다.
 
 | 멤버| 유형| 설명|
 | --- | --- | --- |
-| name| 문자열| "Tile01"와 같은 MediaAsset의 이름입니다.|
-| type| MediaAssetType 열거형| 미디어 자산 유형 <ul><li>아이콘 (0): 도전 과제 아이콘입니다.</li><li>아트 (1): 디지털 아트 자산입니다.</li></ul> | 
+| name| 문자열| "Tile01" 등의 MediaAsset의 이름입니다.|
+| type| MediaAssetType 열거형| 미디어 자산 유형: <ul><li>아이콘 (0): 성과 아이콘입니다.</li><li>아트 (1): 디지털 아트 자산입니다.</li></ul> | 
 | url| string| URL은 MediaAsset입니다.|
 
 <a id="ID4EFC"></a>

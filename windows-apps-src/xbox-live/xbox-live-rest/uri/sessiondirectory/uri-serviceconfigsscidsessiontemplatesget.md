@@ -2,25 +2,23 @@
 title: GET (/serviceconfigs/{scid}/sessiontemplates)
 assetID: 5172c7be-371b-f0b1-d1d0-f0981eb2bfa7
 permalink: en-us/docs/xboxlive/rest/uri-serviceconfigsscidsessiontemplatesget.html
-author: KevinAsgari
 description: " GET (/serviceconfigs/{scid}/sessiontemplates)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f9b20801b9c687d64fdf5d02e22a7cac60535d7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5cb51ea751ca843dfc2a08cda2e79f79409d97b5
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7562910"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8342668"
 ---
 # <a name="get-serviceconfigsscidsessiontemplates"></a>GET (/serviceconfigs/{scid}/sessiontemplates)
 MPSD 세션 템플릿 집합을 검색합니다.
 
 > [!IMPORTANT]
-> 이 URI 메서드에 필요 Xbl 계약 버전 X의 헤더 요소: 104/105 또는 나중에 모든 요청.
+> 이 URI 메서드에 필요 X Xbl-계약 버전의 헤더 요소: 104/105 또는 나중에 모든 요청.
 
   * [URI 매개 변수](#ID4ET)
   * [HTTP 상태 코드](#ID4E5)
@@ -35,19 +33,19 @@ MPSD 세션 템플릿 집합을 검색합니다.
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- |
 | 서비스 안내| GUID| 서비스 구성 식별자 (서비스 안내)입니다. 파트 1 세션의 id.|
-| sessionTemplateName| string| 현재 인스턴스의 세션 서식 파일의 이름입니다. 파트 2 세션의 id. |
+| sessionTemplateName| string| 현재 인스턴스 세션 서식 파일의 이름입니다. 파트 2 세션의 id. |
 
 <a id="ID4E5"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
-MPSD에 적용 되는 서비스에서 HTTP 상태 코드를 반환 합니다.  
+서비스는 MPSD에 적용 되는 HTTP 상태 코드를 반환 합니다.  
 <a id="ID4EFB"></a>
 
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4EQB"></a>
 

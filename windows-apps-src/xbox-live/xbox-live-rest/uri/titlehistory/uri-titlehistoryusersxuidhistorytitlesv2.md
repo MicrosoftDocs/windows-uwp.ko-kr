@@ -2,23 +2,21 @@
 title: /users/xuid({xuid})/history/titles
 assetID: 2f8eb79a-42c2-0267-cbf2-8682bb28f270
 permalink: en-us/docs/xboxlive/rest/uri-titlehistoryusersxuidhistorytitlesv2.html
-author: KevinAsgari
 description: " /users/xuid({xuid})/history/titles"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b404b6b48139236397e765f885caef953acd87ff
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7bb528f139e9db97f886f57fb98461ce15e77a42
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7560232"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8341933"
 ---
 # <a name="usersxuidxuidhistorytitles"></a>/users/xuid({xuid})/history/titles
  
-이 유니버설 리소스 식별자 (URI) 사용자의 관련 도전 과제 타이틀 기록에 액세스할 수 있습니다.
+이 유니버설 리소스 식별자 (URI)는 사용자의 관련 도전 과제 타이틀 기록에 액세스할 수 있습니다.
  
 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
  

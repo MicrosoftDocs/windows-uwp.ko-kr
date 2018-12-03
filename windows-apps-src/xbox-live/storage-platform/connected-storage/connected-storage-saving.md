@@ -1,19 +1,17 @@
 ---
 title: 연결 된 저장소를 사용 하 여 데이터를 저장 합니다.
-author: aablackm
 description: 연결 된 저장소를 사용 하 여 데이터를 저장 하는 방법을 알아봅니다.
 ms.assetid: ccf7488c-5d55-480e-b3aa-412220d03104
-ms.author: aablackm
 ms.date: 02/27/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 연결 된 저장소, xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: d8c29a3371383209ef2c13eaf2b2ffc69b7e0455
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4140e3bbe0f0ab229e3637008e01892f4179292e
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7564394"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8348958"
 ---
 # <a name="use-connected-storage-to-save-data"></a>연결 된 저장소를 사용 하 여 데이터를 저장 합니다.
 
@@ -21,11 +19,11 @@ ms.locfileid: "7564394"
 데이터는 비동기적으로 만들어 저장는 `ConnectedStorageContainer` 에 `ConnectedStorageSpace` 사용자 및 호출에 대 한는 `SubmitUpdatesAsync` 컨테이너에 대 한 메서드.
 
 > [!IMPORTANT]
-> 연결 된 저장소 컨테이너 간에 데이터 종속성 안전 하지 않습니다. 예를 들어 하나의 컨테이너 클라우드로 업로드 완료할 수, 동안 다른 업로드 하기 위한 대기 중인 남아 있을 수 있습니다. 사용자가 다른 콘솔을 이동한 동기화 작업은 첫 번째 컨테이너를 동기화 하 고 있는 첫 번째 컨테이너 없이 두 번째 콘솔에 액세스할 수를 허용 합니다.
+> 연결 된 저장소 컨테이너 간에 데이터 종속성 안전 하지 않습니다. 예를 들어 하나의 컨테이너 클라우드로 업로드 완료할 수, 동안 다른 업로드 하기 위한 대기 중인 남아 있을 수 있습니다. 다른 콘솔으로 이동 하는 사용자를 동기화 작업 수 첫 번째 컨테이너를 동기화 하 고 있는 첫 번째 컨테이너 없이 두 번째 콘솔에 액세스할 수 있습니다.
 
 ## <a name="to-save-data-to-connected-storage"></a>데이터 연결 된 저장소를 저장 하려면
 
-1.  검색 한 `ConnectedStorageSpace` 를 호출 하 여 사용자에 대 한 개체 `GetForUserAsync`.
+1.  검색은 `ConnectedStorageSpace` 를 호출 하 여 사용자에 대 한 개체 `GetForUserAsync`.
 
     반환 된 XDK 예제에서 `ConnectedStorageSpace` 쉽게 관리할 수 있도록 지도에 추가 되는 개체 `ConnectedStorageSpace` 여러 사용자에 대 한 개체입니다.
 
@@ -122,14 +120,14 @@ void SaveCheckpoint(Windows::Storage::Streams::IBuffer^ buffer, User^ user)
 }
 ```
 
-XDK 연결 된 저장소 Api XDK.chm 파일 경로 아래에 설명 된 찾을 수 있습니다: **Xbox ONE XDK >> API 참조 >> 플랫폼 API 참조 >> 시스템 API 참조 >> Windows.Xbox.Storage**합니다.
+XDK 연결 된 저장소 Api XDK.chm 파일 경로 아래에 설명 된 찾을 수 있습니다: **Xbox ONE XDK >> API 참조 >> 플랫폼 API 참조 >> 시스템 API 참조 >> Windows.Xbox.Storage**.
 XDK Api도 [developer.microsoft.com 사이트](https://developer.microsoft.com/en-us/games/xbox/docs/xdk/storage-xbox-microsoft-n)에 문서화 되어 있습니다.
 XDK Api에 대 한 링크는 Microsoft Account(MSA) Xbox 개발자 Kit(XDK) 액세스 가능 하도록 설정 되어 있어야 합니다.
-Windows.Xbox.Storage에는 Xbox One 본체에 대 한 연결 된 저장소 네임 스페이스의 이름입니다.
+Windows.Xbox.Storage에는 Xbox One 콘솔에 대 한 연결 된 저장소 네임 스페이스의 이름입니다.
 
 ## <a name="c-uwp-sample"></a>C# UWP 샘플
 
-XDK 게임 및 UWP 앱 다른 Api을 사용할 수 있는 동안 XDK API 후 UWP API는 매우 밀접 하 게 모델링 됩니다. 데이터를 저장 하는 일부 네임 스페이스 및 클래스 이름 변경을 메모 하는 동안 같은 기본 단계를 수행 하려면 여전히 해야 합니다. 네임 스페이스를 사용 하는 대신 `Windows::Xbox::Storage` 사용 `Windows.Gaming.XboxLive.Storage`. 클래스 `ConnectedStorageSpace`을 하는 것 `GameSaveProvider`. 클래스 `ConnectedStorageContainer` 는 `GameSaveContainer`. 이러한 변경 내용은 [포팅 Xbox Live 코드에서 XDK에서 UWP로](../../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md)의 연결 된 저장소 섹션에 자세히 설명 됩니다.
+XDK 게임 및 UWP 앱에 다른 Api를 사용할 수, XDK API 후 UWP API는 매우 밀접 하 게 모델링 됩니다. 데이터를 저장 하는 일부 네임 스페이스 및 클래스 이름 변경을 메모 하는 동안 같은 기본 단계를 수행 하려면 여전히 해야 합니다. 네임 스페이스를 사용 하는 대신 `Windows::Xbox::Storage` 사용 `Windows.Gaming.XboxLive.Storage`. 클래스 `ConnectedStorageSpace`을 하는 것 `GameSaveProvider`. 클래스 `ConnectedStorageContainer` 에 해당 하는 `GameSaveContainer`. 이러한 변경 내용은 [포팅 Xbox Live 코드에서 XDK에서 UWP로](../../using-xbox-live/porting-xbox-live-code-from-xdk-to-uwp.md)의 연결 된 저장소 섹션에서 자세히 설명 됩니다.
 
 ```csharp
 //Namespace Required

@@ -2,22 +2,20 @@
 title: POST (/batch)
 assetID: f5997c8e-82c7-0fba-9991-ce1116db4830
 permalink: en-us/docs/xboxlive/rest/uri-batchpost.html
-author: KevinAsgari
 description: " POST (/batch)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 23a3e42d6181cef25dc05f607334677e9913c5c7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a854fc830c87afbf675a379599916bf3db919539
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7574122"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8332743"
 ---
 # <a name="post-batch"></a>POST (/batch)
-여러 제목 간 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 GET 방법으로 작동 하는 메서드를 게시 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
+GET 메서드가 여러 플레이어 통계에 대 한 복잡 한 배치 요청에 대 한 여러 타이틀에서 작동 하는 메서드를 게시 합니다. 이러한 Uri에 대 한 도메인은 `userstats.xboxlive.com`.
  
 <a id="ID4ET"></a>
 
@@ -40,7 +38,7 @@ ms.locfileid: "7574122"
  
 ## <a name="remarks"></a>설명
  
-호출자의 사용자, 서비스 구성 Id (SCIDs) 및 통계를 검색 하려는 SCIDs 당 통계 이름 목록은 배열 메시지 본문을 제공 합니다.
+호출자의 사용자, 서비스 구성 Id (SCIDs) 및 통계를 검색 하려는 SCIDs 당 통계 이름 목록을 배열 메시지 본문을 제공 합니다.
  
 하는 경우가 더 간단 하며 단일 통계를 검토 하는 데 유용 [GET](uri-usersxuidscidsscidstatsget.md) 메서드를 하기 전에 읽고이 더 복잡 한 배치 모드 페이지.
   
@@ -75,7 +73,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | 
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.| 
+| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > ".| 
   
 <a id="ID4E3D"></a>
 
@@ -84,7 +82,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1입니다.| 
+| X RequestedServiceVersion|  | 이 요청은 전송 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 기본값: 1입니다.| 
   
 <a id="ID4EAF"></a>
 
@@ -96,7 +94,7 @@ If (!checkAccess(serviceConfigId, resource, CLAIM[userid, deviceid, titleid]))
  
 ### <a name="sample-request"></a>샘플 요청
  
-POST 본문은 다음 두 개의 서로 다른 사용자에 대 한 두 개의 다른 SCIDs에서 4 개의 통계를 요청 되는 서비스를 알립니다.
+POST 본문은 다음 두 가지 다른 사용자에 대 한 두 개의 다른 SCIDs에서 4 개의 통계 요청 되는 서비스에 알립니다.
  
 
 ```cpp
@@ -131,7 +129,7 @@ POST 본문은 다음 두 개의 서로 다른 사용자에 대 한 두 개의 �
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -140,8 +138,8 @@ POST 본문은 다음 두 개의 서로 다른 사용자에 대 한 두 개의 �
 | 400| 잘못 된 요청| 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
 | 401| 권한 없음| 필요한 사용자 인증을 요청 합니다.| 
 | 403| 금지| 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
-| 404| 찾을 수 없습니다.| 지정된 된 리소스를 찾을 수 없습니다.| 
-| 406| 허용할 수 없음| 리소스 버전이 지원 되지 않습니다.| 
+| 404| 찾을 수 없음| 지정된 된 리소스를 찾을 수 없습니다.| 
+| 406| 허용할 수 없음| 리소스 버전은 지원 되지 않습니다.| 
 | 408| 요청 시간 제한| 리소스 버전이 지원 되지 않습니다. MVC 계층에 의해 거부 되어야 합니다.| 
   
 <a id="ID4ENBAC"></a>

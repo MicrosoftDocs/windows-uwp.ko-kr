@@ -2,19 +2,17 @@
 title: /users/xuid({xuid})/outbox
 assetID: 0b66b885-15ff-be55-f8be-e6e9d85d087e
 permalink: en-us/docs/xboxlive/rest/uri-usersxuidoutbox.html
-author: KevinAsgari
 description: " /users/xuid({xuid})/outbox"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a10fbb4b2008a3c953d101111d064c6f06491e10
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 88f3f3753aeac99db0a8a53e0a2ddde21d034ac5
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7566605"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8324076"
 ---
 # <a name="usersxuidxuidoutbox"></a>/users/xuid({xuid})/outbox
 사용자에 게 보내기 전용 액세스 메시징 제공 Xbox LIVE 서비스에 대 한 편지함 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
@@ -37,7 +35,7 @@ ms.locfileid: "7566605"
 
 [POST (/users/xuid({xuid})/outbox)](uri-usersxuidoutboxpost.md)
 
-&nbsp;&nbsp;수신자의 목록에 지정 된 메시지를 보냅니다. 
+&nbsp;&nbsp;받는 사람 목록에 지정 된 메시지를 보냅니다. 
  
 <a id="ID4EFC"></a>
 

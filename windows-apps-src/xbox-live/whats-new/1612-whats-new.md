@@ -1,19 +1,17 @@
 ---
 title: 새로운 기능에 대 한 Xbox Live SDK-2016 년 12 월
-author: KevinAsgari
 description: 새로운 기능에 대 한 Xbox Live SDK-2016 년 12 월
 ms.assetid: 28fd8784-abef-4999-8f47-80f5bec19dcd
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 7af884a873b83abb4a560fad504b45961267956c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2a9c04dd2bfb62cdee0a4c786d7af1b0895bce33
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7554700"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8326305"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---december-2016"></a>새로운 기능에 대 한 Xbox Live SDK-2016 년 12 월
 
@@ -27,7 +25,7 @@ ms.locfileid: "7554700"
 
 ### <a name="multiplayer"></a>멀티 플레이
 
-* [XIM (Xbox 통합 멀티 플레이어)는](../multiplayer/xbox-integrated-multiplayer.md) 이제 프로덕션 준비가 되 면 및 XDK 및 UWP (PC) 개발에 사용할 수 있습니다.  XIM는 쉽게 실시간 멀티 플레이어 네트워킹 및 채팅 통신 Xbox Live 서비스의 기능을 통해 게임에 추가 하기 위한 독립적인된 인터페이스입니다.
+* [XIM (Xbox 통합 멀티 플레이어)는](../multiplayer/xbox-integrated-multiplayer.md) 이제 프로덕션 준비가 되 면 및 XDK 및 UWP (PC 내부) 개발에 사용할 수 있습니다.  XIM는 쉽게 실시간 멀티 플레이어 네트워킹 및 채팅 통신 Xbox Live 서비스의 기능을 통해 게임에 추가 하기 위한 독립적인된 인터페이스입니다.
 
 ## <a name="documentation"></a>설명서
 * [XIM](../multiplayer/xbox-integrated-multiplayer.md)에 대 한 업데이트 된 설명서가 있습니다.

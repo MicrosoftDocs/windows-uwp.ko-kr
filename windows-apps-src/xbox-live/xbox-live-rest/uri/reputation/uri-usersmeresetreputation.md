@@ -2,19 +2,17 @@
 title: /users/me/resetreputation
 assetID: 24de66b1-5514-b880-f47a-aff2c1d30f7b
 permalink: en-us/docs/xboxlive/rest/uri-usersmeresetreputation.html
-author: KevinAsgari
 description: " /users/me/resetreputation"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: d2e3e0eef31daae4bf1fe7d8b6f4f1fba0e1ff92
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f43244e39d825e75d6c6cd71fd9633ca158a7a16
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563266"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8338023"
 ---
 # <a name="usersmeresetreputation"></a>/users/me/resetreputation
 적용 팀을 현재 사용자의 평판 점수에 액세스할 수 있습니다. 이러한 Uri에 대 한 도메인은 `reputation.xboxlive.com`.
@@ -26,7 +24,7 @@ ms.locfileid: "7563266"
 
 [POST (/users/me/resetreputation)](uri-usersmeresetreputationpost.md)
 
-&nbsp;&nbsp;일부 임의의 값에는 계정 하이재킹 (예) 후 현재 사용자의 평판 점수를 설정 하는 적용 팀을 수 있습니다.
+&nbsp;&nbsp;있습니다 적용 하는 계정 하이재킹 (예) 후 현재 사용자의 평판 점수 일부 임의의 값으로 설정 됩니다.
  
 <a id="ID4E6"></a>
 

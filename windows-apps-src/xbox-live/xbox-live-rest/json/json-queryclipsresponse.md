@@ -2,22 +2,20 @@
 title: QueryClipsResponse(JSON)
 assetID: 5d668588-54d6-3cf3-20ad-bb2600a156b3
 permalink: en-us/docs/xboxlive/rest/json-queryclipsresponse.html
-author: KevinAsgari
 description: " QueryClipsResponse(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: aea8a1914a9466b7e24fd0214059a0dac5a6c3a7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 23955d311d57fa3454bdb84df67ddae07a0c8548
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7556340"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8326101"
 ---
 # <a name="queryclipsresponse-json"></a>QueryClipsResponse(JSON)
-목록에 대 한 페이징 정보와 함께 반환 게임 클립 목록을 래핑합니다. 
+목록에 대 한 페이징 정보와 함께 반환 게임 클립의 목록을 래핑합니다. 
 <a id="ID4EN"></a>
 
  

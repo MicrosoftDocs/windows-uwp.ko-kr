@@ -2,19 +2,17 @@
 title: TitleAssociation(JSON)
 assetID: 05f4edbb-cc3d-c17d-0979-aac9e44a4988
 permalink: en-us/docs/xboxlive/rest/json-titleassociation.html
-author: KevinAsgari
 description: " TitleAssociation(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c90dbca0e16cf1dcebc53fd8fa90006ca7ae7caf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 21a583e7556f98b827a63de3948f43d76f25c907
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7581959"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8339608"
 ---
 # <a name="titleassociation-json"></a>TitleAssociation(JSON)
 도전 과제와 연결 된 제목입니다. 

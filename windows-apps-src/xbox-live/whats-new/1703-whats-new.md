@@ -1,19 +1,17 @@
 ---
 title: 새로운 기능에 대 한 Xbox Live SDK-2017 년 3 월
-author: KevinAsgari
 description: 새로운 기능에 대 한 Xbox Live SDK-2017 년 3 월
 ms.assetid: 03180585-6f87-4929-acfc-750bd78988a0
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bc55367100cb05c2cce1e85d3629fa9c7c8173f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: be8127e01d8eaae96a1d71f71967a653c00b0280
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7558749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8351549"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---march-2017"></a>새로운 기능에 대 한 Xbox Live SDK-2017 년 3 월
 
@@ -25,7 +23,7 @@ ms.locfileid: "7558749"
 
 간소화 된 통계 API가 도입 되었습니다.  일반적으로 해당 통계 규칙 XDP 또는 파트너 센터에서 정의 하는 이벤트를 보내는 했으며 클라우드에서 시작 값을 업데이트는 이러한.  우리 통계 2013으로이 모델을 참조 하세요.
 
-통계 2017을 사용 하 여 타이틀 통계 값의 컨트롤에서 이제 됩니다.  단순히 가장 최근의 시작 값을 사용 하 여 API를 호출 하 고 이벤트에 대 한 필요 없이 직접 서비스 보내집니다 합니다.  이 사용 하는 새 `StatsManager` API를에 더 많은 [플레이어 통계](../leaderboards-and-stats-2017/player-stats.md) 를 읽을 수 있습니다
+통계 2017을 사용 하 여 타이틀 통계 값의 컨트롤에서 이제 됩니다.  가장 최근의 시작 값을 사용 하 여 API를 호출 하면 및 이벤트에 대 한 필요 없이 직접 서비스 보내집니다.  이 사용 하 여 새 `StatsManager` API를에 더 많은 [플레이어 통계](../leaderboards-and-stats-2017/player-stats.md) 를 읽을 수 있습니다
 
 ### <a name="github"></a>GitHub
 
@@ -39,11 +37,11 @@ Xbox Live 크리에이터 스 프로그램은 개발자에 게 더 광범위 하
 
 ## <a name="documentation"></a>설명서
 
-다음 새 문서를 가지
+다음과 같은 새 문서
 
 | 문서 | 설명 |
 |---------|-------------|
 |[Xbox Live 서비스 구성](../xbox-live-service-configuration.md) | Xbox Live 타이틀에 대 한 서비스 구성에 대 한 업데이트 된 정보
-| [구성 Xbox Live Unity의](../get-started-with-creators/configure-xbox-live-in-unity.md) | Xbox Live 크리에이터 스 프로그램 개발자 용 Unity 설치에 대 한 새로운 정보 |
+| [구성 Xbox Live Unity에서](../get-started-with-creators/configure-xbox-live-in-unity.md) | Xbox Live 크리에이터 스 프로그램 개발자 용 Unity 설치에 대 한 새로운 정보 |
 | [Xbox Live 샌드박스](../xbox-live-sandboxes.md) | Xbox Live 샌드박스 및 콘텐츠 격리 하는 간단한 가이드 |
-| [Xbox Live 테스트 계정](../xbox-live-test-accounts.md) | 방법에 대 한 정보 테스트 계정 작업 및 파트너 센터에서이 생성 하는 방법 |
+| [Xbox Live 테스트 계정](../xbox-live-test-accounts.md) | 직장 계정 및 파트너 센터에서 만드는 방법에는 방법에 대 한 정보 테스트 |

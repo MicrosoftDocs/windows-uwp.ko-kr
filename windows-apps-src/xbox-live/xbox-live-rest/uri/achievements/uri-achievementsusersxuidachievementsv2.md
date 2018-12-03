@@ -2,19 +2,17 @@
 title: /users/xuid({xuid})/achievements
 assetID: 4dd89962-ab73-c25b-7a11-3ed35475492e
 permalink: en-us/docs/xboxlive/rest/uri-achievementsusersxuidachievementsv2.html
-author: KevinAsgari
 description: " /users/xuid({xuid})/achievements"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 094476d4e846fb7e4194f67d3de6bd1d9c7316df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6d4ac8c1fbf3d5f3fcc645e284059c1644495d62
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552872"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8326157"
 ---
 # <a name="usersxuidxuidachievements"></a>/users/xuid({xuid})/achievements
  
@@ -29,7 +27,7 @@ ms.locfileid: "7552872"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 인 (리소스)에 액세스 하 고 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
+| xuid| 64 비트 부호 없는 정수| Xbox 사용자 ID (XUID) 인 (리소스)에 액세스 하는 사용자의 합니다. 인증된 된 사용자의 XUID 일치 해야 합니다.| 
   
 <a id="ID4EAC"></a>
 
@@ -38,7 +36,7 @@ ms.locfileid: "7552872"
 
 [GET](uri-achievementsusersxuidachievementsgetv2.md)
 
-&nbsp;&nbsp;도전 과제 제목, 사용자가 잠금 해제 된 또는 진행 중에서 사용자가 이러한에 정의 된 목록을 가져옵니다.
+&nbsp;&nbsp;제목, 사용자가 잠금 해제 된 또는 사용자가 진행 중에서에 정의 된 도전 과제의 목록을 가져옵니다.
  
 <a id="ID4EKC"></a>
 

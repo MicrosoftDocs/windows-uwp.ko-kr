@@ -1,19 +1,17 @@
 ---
 title: Xbox Live 문제 해결
-author: KevinAsgari
 description: Xbox Live 개발 문제를 해결 하는 다양 한 방법에 알아봅니다.
 ms.assetid: 5e96199b-9177-4789-9c80-79f6b83a2db4
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: ba30743f6b3e13d5aa3e62b9c385cf7281341b38
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ba8006b235da2ae4beded9a2b559419b126fca44
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7564045"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8328425"
 ---
 # <a name="troubleshooting-xbox-live"></a>Xbox Live 문제 해결
 

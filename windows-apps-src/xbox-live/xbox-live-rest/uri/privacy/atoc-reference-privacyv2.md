@@ -2,23 +2,21 @@
 title: 개인 정보 URI
 assetID: 5eff3264-ef2a-5ec4-2e68-e5f4be2c0a47
 permalink: en-us/docs/xboxlive/rest/atoc-reference-privacyv2.html
-author: KevinAsgari
 description: " 개인 정보 URI"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 953fd4b76224eed0950d7f8efc6322272a7c8b38
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 588d949671c52965549d963e200355dac720d513
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7554289"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8336466"
 ---
 # <a name="privacy-uris"></a>개인 정보 URI
  
-이 섹션에서는 *개인 정보 보호*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *개인 정보 보호*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
 만 Windows 8에서 실행 되는 게임을 Xbox 360, 또는 Windows Phone 장치 수이 서비스를 사용 합니다.
  

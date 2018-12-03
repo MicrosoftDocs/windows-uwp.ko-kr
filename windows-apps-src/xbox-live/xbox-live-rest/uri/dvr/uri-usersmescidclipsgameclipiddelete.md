@@ -2,19 +2,17 @@
 title: DELETE (/users/me/scids/{scid}/clips/{gameClipId})
 assetID: 486fac60-6884-2e3f-9ef8-8de5da0ad8af
 permalink: en-us/docs/xboxlive/rest/uri-usersmescidclipsgameclipiddelete.html
-author: KevinAsgari
 description: " DELETE (/users/me/scids/{scid}/clips/{gameClipId})"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 04083701697bd799ed11e0ae31952256a70b1ac3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 391e4d79a389c358dea83509b52782d086201ffc
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552650"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8348292"
 ---
 # <a name="delete-usersmescidsscidclipsgameclipid"></a>DELETE (/users/me/scids/{scid}/clips/{gameClipId})
 이러한 Uri에 대 한 도메인은 삭제 게임 클립 `gameclipsmetadata.xboxlive.com` 및 `gameclipstransfer.xboxlive.com`해당 URI의 기능에 따라 합니다.
@@ -35,7 +33,7 @@ ms.locfileid: "7552650"
  
 ## <a name="remarks"></a>설명
  
-GameClips 서비스에서 사용자의 비디오를 삭제 하기 위한 메커니즘을 제공 합니다. 삭제 시 모든 메타 데이터 및 실제 비디오 자산 (생성 및 원본) 시스템에서 제거 됩니다. 영구 작업입니다. 
+GameClips 서비스에서 사용자의 비디오를 삭제 하기 위한 메커니즘을 제공 합니다. 삭제 시 모든 메타 데이터와 실제 비디오 자산 (생성 및 원래) 시스템에서 제거 됩니다. 영구 작업입니다. 
 
 > [!NOTE] 
 > 지정 된 소유자 ID 호출자가 성공 삭제 요청에 대 한 인증 토큰에 일치 해야 합니다. 
@@ -79,29 +77,29 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| Accept-Encoding| string| Encodings 허용 압축 합니다. 예제 값: gzip만 줄이기 identity 합니다.| 
-| ETag| string| 최적화 캐시에 사용 됩니다. 예제 값: "686897696a7c876b7e"입니다.| 
+| Accept-Encoding| string| Encodings 허용 압축 합니다. 예제 값: gzip만 줄이기, identity 합니다.| 
+| ETag| string| 캐시 최적화에 사용 됩니다. 예제 값: "686897696a7c876b7e".| 
   
 <a id="ID4ENF"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
   
 <a id="ID4EYF"></a>
 
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 204| 확인| 클립 성공적으로 삭제 됩니다.| 
+| 204| 확인| 클립의 성공적으로 삭제 합니다.| 
 | 401| 권한 없음| 요청에 인증 토큰 형식으로 문제가 있습니다.| 
 | 403| 금지| 일부 클레임 누락 된 필요 합니다.| 
-| 404| 찾을 수 없습니다.| URL에 지정 된 클립 없기 때문에 (또는 짧게 지워졌습니다).| 
+| 404| 찾을 수 없음| URL에 지정 된 클립 없기 때문에 (또는 두 번 삭제).| 
 | 503| 허용할 수 없음| 서비스 또는 일부 다운스트림 종속성 다운 되었습니다. 표준 백오프 동작을 사용 하 여 다시 시도 합니다.| 
   
 <a id="ID4EIAAC"></a>
@@ -115,7 +113,7 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
 | Content-Type| 문자열| 응답 본문의 MIME 형식입니다. 예: <b>응용 프로그램/j</b>합니다.| 
 | 캐시 제어| string| 정중 요청 캐싱 동작을 지정 합니다.| 
 | 수락| string| 콘텐츠 형식의 허용 되는 값입니다. 예: <b>응용 프로그램/j</b>합니다.| 
-| 다시 시도 후| string| 사용할 수 없는 서버의 경우 나중에 다시 시도 하는 클라이언트에 지시 합니다.| 
+| 다시 시도 후| string| 클라이언트는 사용할 수 없는 서버의 경우 나중에 다시 시도 하도록 지시 합니다.| 
 | 다| string| 응답을 캐시 하는 방법을 다운스트림 프록시에 지시 합니다.| 
   
 <a id="ID4E2CAC"></a>
@@ -125,16 +123,16 @@ Xuid 클레임만이 메서드에 대 한 필요 합니다.
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| Etag| string| 최적화 캐시에 사용 됩니다. 예: "686897696a7c876b7e"입니다.| 
+| Etag| string| 캐시 최적화에 사용 됩니다. 예: "686897696a7c876b7e"입니다.| 
   
 <a id="ID4E2DAC"></a>
 
  
 ## <a name="response-body"></a>응답 본문
  
-성공 시 (콘텐츠 없음) 204 HTTP 상태 코드를 사용 하 여 서비스에서 응답 합니다. 하려고 하는 동일한 개체를 삭제 하거나 존재 하지 않는 개체는 404를 반환 합니다.
+성공 시 (콘텐츠 없음) 204 HTTP 상태 코드를 사용 하 여 서비스에서 응답 합니다. 하려고 동일한 개체를 삭제 하거나 존재 하지 않는 개체 404 반환 됩니다.
  
-오류가 발생 하는 경우 **ServiceErrorResponse** 개체가 반환 됩니다.
+오류가 발생 하면 **ServiceErrorResponse** 개체가 반환 됩니다.
   
 <a id="ID4EJEAC"></a>
 

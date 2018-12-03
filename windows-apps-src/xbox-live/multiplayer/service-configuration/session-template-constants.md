@@ -7,11 +7,11 @@ ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one 멀티 플레이어 세션 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb4c6f39bab8779b5675a7b9c81b883965676c2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719954"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8347177"
 ---
 # <a name="session-template-constants"></a>세션 템플릿 상수
 
@@ -23,43 +23,43 @@ ms.locfileid: "7719954"
 --|-- | -- | --
 버전 | 세션 템플릿의 버전입니다. | 1-n | none
 maxMembersCount | 멀티 플레이 활동에 대 한 지원 되는 총 세션 멤버 슬롯의 수입니다. | 1-일반 101 + 큰 세션에 대 한 세션에 대 한 100 | 100
-visibility | 다른 사용자가 세션에 참가 하거나 볼 수 있습니다 경우를 나타내는 세션의 표시 상태. | 개인, 표시, 열기 | 열기
-inviteProtocol | "Game"이이 상수를 설정 하면 초대 받은 세션에 초대 하는 경우 알림 메시지를 받을 수 있습니다. | 게임, tournamentgame, 채팅, gameparty | none
-reservedRemovalTimeout  | 밀리초에서 멤버 예약에 대 한 시간 제한 합니다. 값 0 즉시 실행 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 30000
-inactiveRemovalTimeout  | 비활성 밀리초에서 고려해 야 할 구성원에 대 한 시간 제한 합니다. 값 0 즉시 실행 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 0
-readyRemovalTimeout | 밀리초에서 준비 고려해 야 할 구성원에 대 한 시간 제한 합니다. 값 0 즉시 실행 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 180000
-sessionEmptyTimeout | 밀리초에서는 빈 세션에 대 한 시간 제한 합니다. 값 0 즉시 실행 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 0
-[**capabilities**](#capabilities) | 세션의 기능을 지정합니다. 아래 접근 권한 값 섹션을 참조 하세요. | 해당 없음 | 해당 없음
-[**메트릭**](#metrics) | 정의 된 제목 품질 서비스 요구 사항, 대기 시간 및 대역폭 속도, 세션의 멤버를 충족 해야 하는 등의 집합을 지정 합니다.  | 해당 없음 | 해당 없음
+visibility | 다른 사용자가 참조 수 또는 세션에 참가할 경우를 나타내는 세션의 표시 상태. | 개인, 표시, 열기 | 열기
+inviteProtocol | 이 상수를 "game"를 설정 초대 받은 세션에 초대 하는 경우 알림 메시지를 받을 수 있습니다. | 게임, tournamentgame, 채팅, gameparty | none
+reservedRemovalTimeout  | 밀리초에서 멤버 예약에 대 한 시간 제한 합니다. 값 0는 즉시 제한 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 30000
+inactiveRemovalTimeout  | 비활성 시간 (밀리초)에서 고려해 야 할 구성원에 대 한 시간 제한 합니다. 값 0는 즉시 제한 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 0
+readyRemovalTimeout | 밀리초에서 준비 고려해 야 할 구성원에 대 한 시간 제한 합니다. 값 0는 즉시 제한 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 180000
+sessionEmptyTimeout | 밀리초에서는 빈 세션에 대 한 시간 제한 합니다. 값 0는 즉시 제한 시간을 나타냅니다. 시간 제한 null 이면 무한 간주 됩니다. | 0-n null | 0
+[**capabilities**](#capabilities) | 세션의 기능을 지정 합니다. 아래 접근 권한 값 섹션을 참조 하세요. | 해당 없음 | 해당 없음
+[**메트릭**](#metrics) | 대기 시간 및 대역폭 속도, 세션의 멤버를 충족 해야 하는 등의 서비스 요구 사항을 정의 제목 품질의 집합을 지정 합니다.  | 해당 없음 | 해당 없음
 [**memberInitialization**](#memberInitialization) | 새 멤버 세션에 참가할 때 적용 되는 시간 제한 및 초기화 요구 사항을 지정 합니다. 아래 멤버 초기화 섹션을 참조 하세요. | 해당 없음 | 해당 없음
 [**peerToPeerRequirements**](#peerToPeerRequirements) | 피어 투 피어 메시 연결에 대 한 서비스 요구 사항 중 네트워크 품질을 지정합니다. 피어 투 피어 요구 사항 섹션 아래를 참조 하세요. |해당 없음 | 해당 없음
-[**peerToHostRequirements**](#peerToHostRequirements) | 피어 호스트 연결에 대 한 서비스 요구 사항의 네트워크 품질을 지정합니다. 피어 호스트 요구 사항 섹션 아래를 참조 하세요. | 해당 없음 | 해당 없음
+[**peerToHostRequirements**](#peerToHostRequirements) | 호스트 연결에 대 한 피어에 대 한 서비스 요구 사항 중 네트워크 품질을 지정합니다. 피어 호스트 요구 사항 섹션 아래를 참조 하세요. | 해당 없음 | 해당 없음
 [**measurementServerAddresses**](#measurementserveraddresses) | QoS 측정 값을 결정 하는 데 사용 되는 잠재적인 데이터 센터의 컬렉션을 지정 합니다. 아래 measurementServerAddresses 섹션을 참조 하세요. | 해당 없음 | 해당 없음
 [**cloudComputePackage**](#cloudComputePackage) | ? | 해당 없음 | 해당 없음
-[**중재**](#arbitration) | 토너먼트에서 중재 결과 제출 하는 구성원에 대 한 시간 제한을 지정 합니다. 아래 cloudComputePackage 섹션을 참조 하세요. | 해당 없음 | 해당 없음
-[**broadcastViewerTitleIds**](#broadcastViewerTitleIds) | 제목 세션에 대 한 읽기 액세스 항상 해야 하는 Id의 목록을 지정 합니다. 아래 broadcastViewerTitleIds 섹션을 참조 하세요. | 해당 없음 | 해당 없음
-[**ownershipPolicies**](#ownershipPolicies) | 세션 소유권과 관련 정책을 지정 합니다. 아래 OwnershipPolicies 섹션을 참조 하세요. | 해당 없음 | 해당 없음
+[**중재**](#arbitration) | 토너먼트에서 중재 결과 제출 하는 멤버에 대 한 시간 제한을 지정 합니다. 아래 cloudComputePackage 섹션을 참조 하세요. | 해당 없음 | 해당 없음
+[**broadcastViewerTitleIds**](#broadcastViewerTitleIds) | 제목 세션에 대 한 읽기 항상 해야 하는 Id의 목록을 지정 합니다. 아래 broadcastViewerTitleIds 섹션을 참조 하세요. | 해당 없음 | 해당 없음
+[**ownershipPolicies**](#ownershipPolicies) | 세션 소유권 관련 정책을 지정 합니다. 아래 OwnershipPolicies 섹션을 참조 하세요. | 해당 없음 | 해당 없음
 
 
 ## <a name="capabilities"></a>capabilities
-선택적으로 세션 템플릿에서 설정 된 부울 값은 기능입니다. 기능은 필요한 경우 빈 '기능' 개체 수 없도록 기능 세션 만들기에 지정 되 고 제목 동적 세션 기능에서 원하는 암호 복잡도 하지 않는 한 템플릿을 여야 합니다.
+필요에 따라 세션 템플릿에서 설정 된 부울 값은 기능입니다. 기능은 필요한 경우에 제목 동적 세션 기능에서 원하는 암호 복잡도 하지 않는 한 세션 만들기에 지정 되 고에서 기능을 방지 하기 위해 빈 '기능' 개체 템플릿에서 이어야 합니다.
 
 접근 권한 값 |  description | 유효한 값 | 기본값
 -- | -- | -- | -- |
-연결 | 세션 피어 연결을 지원 하는지 나타냅니다. 이 값이 false 이면 다음 세션 모든 메트릭을 사용할 수 없습니다 및 세션 멤버는 해당 SecureDeviceAddress 설정할 수 없습니다. 큰 세션에서 설정할 수 없습니다. | true 인 false | false
+연결 | 세션 피어 연결을 지원 하는지 나타냅니다. 이 값이 false 이면 다음 세션 모든 메트릭을 활성화할 수 없습니다 및 세션 멤버는 해당 SecureDeviceAddress 설정할 수 없습니다. 큰 세션에서 설정할 수 없습니다. | true 인 false | false
 suppressPresenceActivityCheck | True 인 경우 현재 상태 검사를 끕니다. | true 인 false | false
-게임 플레이 | 세션이 설정/메뉴 시간 로비 또는 매치 메이 킹와 같은 것이 아니라 실제 게임 플레이 나타내는지 여부를 나타냅니다. True 인 경우 게임 플레이 모드로 세션 되어 있습니다. | true 인 false | false
+게임 플레이 | 세션이 설정/메뉴 시간 로비 또는 매치 메이 킹와 같은 것이 아니라 실제 게임 플레이 나타내는지 여부를 나타냅니다. True 인 경우 게임 플레이 모드에서 세션이 됩니다. | true 인 false | false
 큼 | 세션 큰 세션 (100 개 이상의 구성원) 인지 여부를 나타냅니다. 큰 세션 멀티 플레이어 관리자와 함께 사용에 대 한 지원 되지 않습니다. | true 인 false | false
-connectionRequiredForActiveMembers | 구성원 활성화할 수에 대 한 연결이 순서에 필요한 경우 나타냅니다. | true 인 false | false
-cloudCompute | 클라이언트가 세션을 대신 하 여 클라우드 컴퓨팅 인스턴스를 할당할 수 있는지를 요청할 수 있습니다. | true 인 false | false
+connectionRequiredForActiveMembers | 멤버를 활성화할 수에 대 한 연결이 순서에 필요한 경우 나타냅니다. | true 인 false | false
+cloudCompute | 클라이언트가 세션을 대신 하 여 클라우드 컴퓨팅 인스턴스 할당을 요청할 수 있습니다. | true 인 false | false
 autoPopulateServerCandidates | 자동으로 계산 하 고 'serverMeasurements'에서 'serverConnectionStringCandidates'를 설정 합니다. 큰 세션에서이 접근 권한이 값을 설정할 수 없습니다. | true 인 false | false
-userAuthorizationStyle | 세션에서 강력한 제목 identity 없이 플랫폼 호출을 지원 하는지 나타냅니다. 큰 세션에서이 접근 권한이 값을 설정할 수 없습니다.</br></br>설정의 `userAuthorizationStyle` 접근 권한 값을 `true` 기본값은 `readRestriction` 및 `joinRestriction`세션의 `local` 대신 `none`합니다. 즉, 제목 검색 핸들을 사용 하거나 게임 세션에 대 한 핸들을 전송 해야 합니다.| true 인 false | false
-crossplay | 세션 PC와 Xbox One 디바이스 간에 교차 플레이 지원 하는지 나타냅니다. | true 인 false | false
-브로드캐스트 | 세션 브로드캐스트를 나타냅니다. 세션의 이름에는 방송국 xuid 이어야 합니다. "큰" 기능이 필요합니다. | true 인 false | false
-팀 | 세션 토너먼트 팀을 나타낸다는 것을 나타냅니다. '큰' 또는 '게임 플레이' 세션에서이 접근 권한이 값을 설정할 수 없습니다. | true 인 false | false
+userAuthorizationStyle | 세션에서 강력한 제목 identity 없이 플랫폼 호출을 지원 하는지 나타냅니다. 큰 세션에서이 접근 권한이 값을 설정할 수 없습니다.</br></br>설정의 `userAuthorizationStyle` 접근 권한 값을 `true` 기본값은 `readRestriction` 및 `joinRestriction`세션의 `local` 대신 `none`합니다. 즉, 타이틀 검색 핸들을 사용 하거나 게임 세션에 대 한 핸들을 전송 해야 합니다.| true 인 false | false
+crossplay | 세션 PC 및 Xbox One 디바이스 간에 교차 플레이 지원 하는지 나타냅니다. | true 인 false | false
+브로드캐스트 | 세션 브로드캐스트를 나타냅니다. 세션의 이름에는 방송국의 xuid 이어야 합니다. "큰" 기능이 필요합니다. | true 인 false | false
+팀 | 세션 토너먼트 팀을 나타냅니다. '큰' 또는 '게임 플레이' 세션에서이 접근 권한이 값을 설정할 수 없습니다. | true 인 false | false
 중재 | '중재' 서버 항목을 추가 하는 서비스 사용자가 세션을 만들어야 함을 나타냅니다. '게임 플레이' 필요 하지만 '큰' 세션을 설정할 수 없습니다. | true 인 false | false
 hasOwners | 세션 소유자 되 고 특정 멤버에 따라 보안 정책에 있음을 나타냅니다. | true 인 false | false
-검색 | 세션 검색 핸들의 대상 세션 수 있음을 나타냅니다. 'UserAuthorizationStyle' 접근 권한 값을 설정 하는 경우 다음 '검색 가능한' 접근 권한 값 설정할 수 없습니다 'hasOwners' 접근 권한 값이 설정 되지 않은 경우. | true 인 false | false
+검색 | 세션 검색 핸들의 대상 세션 수 있음을 나타냅니다. 'UserAuthorizationStyle' 접근 권한 값을 설정 하는 경우 다음 '검색 가능한' 기능 설정할 수 없습니다 'hasOwners' 접근 권한 값이 설정 되지 않은 경우. | true 인 false | false
 
 예제:
 
@@ -83,7 +83,7 @@ hasOwners | 세션 소유자 되 고 특정 멤버에 따라 보안 정책에 �
 ```
 
 ## <a name="metrics"></a>메트릭
-경우는 `metrics` 속성을 지정 하지 않으면, 기본적으로 품질 서비스 요구 사항 충족 하기 위해 필요한 값입니다.  
+경우는 `metrics` 속성을 지정 하지 않으면, 기본적으로 품질 서비스 요구 사항 충족 해야 하는 값입니다.  
 지정 된 경우 값 품질 서비스 요구 사항 충족 하기 위해 충분 한 이어야 합니다.
 이 요소는만 유효 세션에는 `connectivity` 접근 권한 값을 설정 합니다.
 
@@ -105,17 +105,17 @@ bandwidthUp | | true 인 false | 설명을 참조 하세요.
 ```
 
 ## <a name="memberinitialization"></a>memberInitialization
-경우에 `memberInitialization` 개체에서 설정 되 면 세션에 클라이언트 시스템 또는 다음 세션 만들기 초기화를 수행 및/또는 새 멤버로 세션에 참가 제목 것으로 예상 합니다.  
+경우에 `memberInitialization` 개체에서 설정 되 면 세션에 클라이언트 시스템 또는 세션 만들기를 수행 하는 초기화를 수행 및/또는 새 멤버로 세션에 참가할 제목 것으로 예상 합니다.  
 시간 제한 및 초기화 단계는 모든 메트릭을 설정 된 경우 QoS 측정 값을 포함 한 세션에서 자동으로 추적 됩니다.  
-'InitializationEpisode' 구성원에 대 한 세션의 예약 및 준비 시간 초과가 재정의 하는 이러한 시간 제한을 설정 합니다.  
-큰 세션에서 지정할 수 없습니다.
+'InitializationEpisode' 구성원에 대 한 세션의 예약 및 준비 시간 제한을 재정의 하는 이러한 시간 제한을 설정 합니다.  
+큰 세션에 지정할 수 없습니다.
 
 요소  | 설명 | 유효한 값 | 기본값
 -- | -- | -- | --
-joinTimeout | 세션에 참가 하는 구성원 밀리 초 수를 나타냅니다. 가입에 실패 하는 사용자의 예약 제거 됩니다.</br>**참고:** 기본 기간은 일반 제목 실행을 위해 충분 한 이지만 제목을 MPSD 흐름 하는 동안 디버깅 하는 경우 시간 제한에 가입 시킬 수 있습니다. 이러한 시나리오에 대 한 재정의 하 고 세션에 대 한이 기본값을 증가 합니다.| 0-n | 10000
-measurementTimeout | 세션 구성원 측정을 업로드 하는 밀리 초 수를 나타냅니다. 측정 업로드에 실패 하는 구성원 "제한" 이라는 오류 이유로 표시 됩니다.  | 0-n | 30000
-evaluationTimeout | 측정 값을 업로드 하는 외부 평가 밀리 초 수를 나타냅니다. | 0-n | 5000
-externalEvaluation | True 인 경우에 제목 코드 조인을 기반 QoS 측정 값으로는 사용자의 평가 수행 하는 나타냅니다. 멀티 플레이 서비스는 모든 QoS 논리를 수행 하지 않습니다 및 제목 초기화 단계를 진행 하는 것에 대 한 책임이 있습니다. 제목은은 일반적으로 이렇게 할 필요가 없습니다. | true 인 false | false
+joinTimeout | 구성원 세션에 참가 하는 시간 (밀리초) 수를 나타냅니다. 가입에 실패 하는 사용자의 예약 제거 됩니다.</br>**참고:** 기본 기간은 일반 제목 실행을 위해 충분 한 이지만 제목을 MPSD 흐름 하는 동안 디버깅 하는 경우 시간 초과 가입 시킬 수 있습니다. 이러한 시나리오에 대 한 재정의 하 고 세션에 대 한이 기본값을 증가 합니다.| 0-n | 10000
+measurementTimeout | 세션 구성원에서 측정을 업로드 하는 시간 (밀리초) 수를 나타냅니다. 구성원 측정 업로드 하지 않는 한 "제한" 이라는 오류 이유 표시 됩니다.  | 0-n | 30000
+evaluationTimeout | 외부 평가 측정을 업로드 하는 시간 (밀리초) 수를 나타냅니다. | 0-n | 5000
+externalEvaluation | True 인 경우에 제목 코드 조인을 기반 QoS 측정 값으로는 사용자의 평가 수행 하는 나타냅니다. 멀티 플레이 서비스는 모든 QoS 논리를 수행 하지 않습니다 및 제목이 너무 초기화 단계를 진행 해야 합니다. 제목은은 일반적으로 이렇게 할 필요가 없습니다. | true 인 false | false
 membersNeededToStart | 초기화 에피소드 0만에 대 한 세션을 시작 하는 데 필요한 멤버의 수입니다. | 1-maxMembersCount | 1
 
 예제:
@@ -135,7 +135,7 @@ membersNeededToStart | 초기화 에피소드 0만에 대 한 세션을 시작 �
 피어 투 피어 네트워크 요구 사항 | 설명 | 기본값
 -- | -- |--
 latencyMaximum | 두 하는 클라이언트 간에 밀리초 최대 대기 합니다. | 250
-bandwidthMinimum | 최소 대역폭 두 하는 클라이언트 간에 k b / 초 단위로 합니다. | 10000
+bandwidthMinimum | 두 하는 클라이언트 간에 k b / 초 최소 대역폭. | 10000
 
 예제:
 ```json
@@ -152,7 +152,7 @@ bandwidthMinimum | 최소 대역폭 두 하는 클라이언트 간에 k b / 초 
 -- | -- | -- | --
 latencyMaximum | 호스트에 연결 하는 피어에 대 한 밀리초 최대 대기 합니다. | | 250
 bandwidthDownMinimum | K b / 초 피어 호스트에서 전송 된 정보에 대 한 최소 대역폭. | | 100000
-bandwidthUpMinimum | K b / 초 호스트에 피어 로부터 전송 된 정보에 대 한 최소 대역폭. | | 1000
+bandwidthUpMinimum | K b / 초 호스트에 피어에서 전송 된 정보에 대 한 최소 대역폭. | | 1000
 hostSelectionMetric | 호스트를 선택 하는 메트릭을 사용 되는지 나타냅니다. | bandwidthup, bandwidthdown, 대역폭 및 대기 시간 | 대기 시간
 
 예제:
@@ -167,7 +167,7 @@ hostSelectionMetric | 호스트를 선택 하는 메트릭을 사용 되는지 �
 
 ## <a name="measurementserveraddresses"></a>measurementServerAddresses
 평가 해야 하는 잠재적인 서버 연결 문자열 집합입니다. 연결 문자열 소문자 여야 합니다.
-큰 세션에서 지정할 수 없습니다.
+큰 세션에 지정할 수 없습니다.
 
 연결 문자열은 다음 형식으로 정의 됩니다.
 
@@ -196,9 +196,9 @@ secureDeviceAddress | Base 64 인코딩된 서버의 주소를 보안 장치
 
 클라우드 컴퓨팅 속성 | 설명
 -- | -- | -- | --
-titleId | 클라우드 ID를 할당 하는 패키지를 계산 타이틀을 나타냅니다.
+titleId | 클라우드 ID를 할당 하는 패키지를 계산 제목을 나타냅니다.
 gsiSet | 할당할 클라우드 컴퓨팅 패키지의 GSI 집합을 나타냅니다.
-변형 | 클라우드 컴퓨팅 패키지 할당할 variant를 나타냅니다.
+변형 | 변형 할당에 클라우드 컴퓨팅 패키지의 압축을 나타냅니다.
 
 예제:
 ```json
@@ -210,12 +210,12 @@ gsiSet | 할당할 클라우드 컴퓨팅 패키지의 GSI 집합을 나타냅�
 ```
 
 ## <a name="arbitration"></a>중재
-중재 프로세스에 대 한 시간 제한을 지정합니다. 해야 하는 `arbitration` 접근 권한 값을 설정 합니다. 중재가 시작 시간은 */servers/arbitration/constants/system/startTime* 요소에서 세션에서 정의 됩니다.
+조정 프로세스에 대 한 시간 제한을 지정합니다. 해야 하는 `arbitration` 접근 권한 값을 설정 합니다. 중재 시작 시간은 */servers/arbitration/constants/system/startTime* 요소에서 세션에서 정의 됩니다.
 
 timeout | 설명 | 유효한 값 | default
 -- | -- | -- | --
-forfeitTimeout | 중재가 시작 시간은 밀리초 시간을 나타내는 하는 TBD | 0-n | 60000
-arbitrationTimeout | 밀리초 중재가 시작 시간부터 중재 결과 시간이 초과 하는 시간을 나타냅니다. 이 값 보다 작은 `forfeitTimeout` 값 | 0-n | 300000
+forfeitTimeout | 중재 시작 시간은 밀리초 시간을 나타냅니다 하는 TBD | 0-n | 60000
+arbitrationTimeout | 밀리초 중재 시작 시간부터 중재 결과 시간이 초과 하는 시간을 나타냅니다. 이 값 보다 작은 `forfeitTimeout` 값 | 0-n | 300000
 
 예제:
 ```json
@@ -227,7 +227,7 @@ arbitrationTimeout | 밀리초 중재가 시작 시간부터 중재 결과 시�
 
 ## <a name="broadcastviewertitleids"></a>broadcastViewerTitleIds
 
-배열을 제목 브로드캐스트 세션에 대 한 읽기 액세스 항상 해야 하는 타이틀의 Id 지정 합니다.
+배열을 제목 브로드캐스트 세션에 대 한 읽기 항상 해야 하는 타이틀의 Id 지정 합니다.
 
 예제:
 ```json
@@ -239,7 +239,7 @@ arbitrationTimeout | 밀리초 중재가 시작 시간부터 중재 결과 시�
 
 소유권 정책 | 설명 | 유효한 값 | default
 -- | -- | -- | --
-마이그레이션 | 마지막 소유자가 세션을 종료할 때 발생 하는 동작을 나타냅니다. "Endsession"에 마이그레이션 정책이 설정 된 경우 만료 세션 합니다. 마이그레이션 정책을 "가장 오래 된"으로 설정, 세션의 새 소유자가 가장 오래 된 조인 시간으로 멤버를 선택 합니다. | "오래 된", "endsession" | "endsession"
+마이그레이션 | 마지막 소유자가 세션을 종료할 때 발생 하는 동작을 나타냅니다. "Endsession"에 마이그레이션 정책이 설정 된 경우 만료 세션 합니다. 에 "가장 오래 된" 마이그레이션 정책이 설정 된 경우 가장 오래 된 가입 시간을 사용 하 여 세션의 새 소유자가 될 멤버를 선택 합니다. | "가장 오래 된", "endsession" | "endsession"
 
 예제:
 ```json

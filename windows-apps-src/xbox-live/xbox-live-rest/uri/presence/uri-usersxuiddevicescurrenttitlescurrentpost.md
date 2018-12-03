@@ -2,19 +2,17 @@
 title: POST (/users/xuid({xuid})/devices/current/titles/current)
 assetID: d5e2d12d-ba75-2d04-2805-c69a4c143f73
 permalink: en-us/docs/xboxlive/rest/uri-usersxuiddevicescurrenttitlescurrentpost.html
-author: KevinAsgari
 description: " POST (/users/xuid({xuid})/devices/current/titles/current)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 31e04f1711d83679ac0b41c74c1c391b26bc7969
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b29a0bc796712d7b7c44a1fe8512f99bf09eb4fc
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7569848"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8325515"
 ---
 # <a name="post-usersxuidxuiddevicescurrenttitlescurrent"></a>POST (/users/xuid({xuid})/devices/current/titles/current)
 사용자의 현재 상태를 사용 하 여 타이틀을 업데이트 합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
@@ -32,9 +30,9 @@ ms.locfileid: "7569848"
  
 ## <a name="remarks"></a>설명
  
-이 URI는 추가 하 고 상태, 다양 한 상태 및 제목에 대 한 미디어 상태 데이터를 업데이트 비 콘솔 플랫폼에서 모든 타이틀에서 사용할 수 있습니다.
+이 URI는 추가 하 고 현재 상태, 다양 한 상태 및 제목에 대 한 미디어 상태 데이터를 업데이트 비 콘솔 플랫폼에서 모든 타이틀에서 사용할 수 있습니다.
  
-**SandboxId** 는 이제는 XToken 클레임이에서 검색 하 고 적용 합니다. **SandboxId** 없는 경우 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
+이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
   
 <a id="ID4EEB"></a>
 
@@ -50,13 +48,13 @@ ms.locfileid: "7569848"
  
 ## <a name="authorization"></a>권한 부여
  
-| 형식| 필수| 설명| 응답 없는 경우| 
+| 형식| 필수| 설명| 누락 된 경우 응답| 
 | --- | --- | --- | --- | --- | --- | --- | 
 | XUID| 예| 호출자의 Xbox 사용자 ID (XUID)| 403 사용할 수 없음| 
 | titleId| 예| titleId 제목| 403 사용할 수 없음| 
-| deviceId| Windows 및 웹 제외한 모든 컴퓨터에 대 한 예| 호출자의 deviceId| 403 사용할 수 없음| 
-| deviceType| 웹 제외한 모든 예| 호출자의 deviceType| 403 사용할 수 없음| 
-| sandboxId| 호출에서 오는 예 | 호출자의 샌드박스| 403 사용할 수 없음| 
+| deviceId| Windows 및 웹을 제외 하 고 모든 예| 호출자의 deviceId| 403 사용할 수 없음| 
+| deviceType| 웹을 제외 하 고 모든 예| 호출자의 deviceType| 403 사용할 수 없음| 
+| sandboxId| 오는 호출에 대 한 예 | 호출자의 샌드박스| 403 사용할 수 없음| 
   
 <a id="ID4ENE"></a>
 
@@ -65,8 +63,8 @@ ms.locfileid: "7569848"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > "입니다.| 
-| xbl 계약 버전 x| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 예제 값: 3, vnext 합니다.| 
+| 권한 부여| 문자열| HTTP 인증에 대 한 자격 증명을 인증 합니다. 예제 값: "XBL3.0 x =&lt;userhash >; &lt;토큰 > ".| 
+| xbl 계약 버전 x| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 예제 값: 3, vnext 합니다.| 
 | Content-Type| 문자열| 예제 값 요청 본문의 mime 형식: 응용 프로그램/j 합니다.| 
 | Content-Length| string| 요청 본문의 길이입니다. 예제 값: 312 합니다.| 
 | 호스트| 문자열| 도메인 이름 서버입니다. 예제 값: presencebeta.xboxlive.com 합니다.| 
@@ -78,7 +76,7 @@ ms.locfileid: "7569848"
  
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| X RequestedServiceVersion|  | 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 인증 토큰의 클레임 헤더의 유효성을 확인 한 후 서비스는 합니다. 기본값: 1입니다.| 
+| X RequestedServiceVersion|  | 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청만으로 라우팅되는 서비스의 인증 토큰을 클레임 헤더의 유효성을 확인 한 후에 있습니다. 기본값: 1입니다.| 
   
 <a id="ID4ERH"></a>
 

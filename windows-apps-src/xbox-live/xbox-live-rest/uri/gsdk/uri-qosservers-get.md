@@ -2,22 +2,20 @@
 title: GET (/qosservers)
 assetID: 8b940c1b-947c-eab3-78ed-4384f57ea0bd
 permalink: en-us/docs/xboxlive/rest/uri-qosservers-get.html
-author: KevinAsgari
 description: " GET (/qosservers)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 95a6a912e663773d427a6786a6af7b1fdf26c548
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 02d24dbf1d189b759784dbbfa7052e2c218ec27e
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7557109"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8326331"
 ---
 # <a name="get-qosservers"></a>GET (/qosservers)
-URI를 사용 하 여 Xbox Live 계산에 사용 하기 위해 사용할 수 있는 QoS 서버 목록을 가져올 수 클라이언트에 의해 호출 합니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
+URI를 사용 하 여 Xbox Live 계산에 사용 하기 위해 사용할 수 있는 QoS 서버 목록을 가져올 수 클라이언트에 의해 호출 됩니다. 이러한 Uri에 대 한 도메인은 `gameserverds.xboxlive.com` 및 `gameserverms.xboxlive.com`.
  
   * [필요한 요청 헤더](#ID4EBB)
   * [필요한 응답 헤더](#ID4EUC)
@@ -39,7 +37,7 @@ gameserverds.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 제출 되는 데이터 형식입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
 | 호스트| gameserverds.xboxlive.com|  | 
 | Content-Length|  | 요청 개체의 길이입니다.| 
 | xbl 계약 버전 x| 1| API 계약 버전입니다.| 
@@ -53,7 +51,7 @@ gameserverds.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 응답 본문에는 데이터 형식입니다.| 
+| 콘텐츠 유형| application/json| 응답 본문에는 데이터의 유형입니다.| 
 | Content-Length|  | 응답 본문의 길이입니다.| 
   
 <a id="ID4EVD"></a>
@@ -67,7 +65,7 @@ gameserverds.xboxlive.com
 | --- | --- | --- | --- | --- | --- | --- | --- | 
 | qosservers| 서버 정보의 배열입니다.| 
 | serverFqdn| 정규화 된 도메인 이름 서버입니다.| 
-| serverSecureDeviceAddress| 서버 보안 장치 주소입니다.| 
+| serverSecureDeviceAddress| 장치 보안 주소 서버입니다.| 
 | targetLocation| 지리적 위치 서버입니다.| 
  
 <a id="ID4EUE"></a>

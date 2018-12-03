@@ -1,19 +1,17 @@
 ---
 title: 다양 한 상태 프로그래밍
-author: KevinAsgari
 description: Xbox Live 멤버의 온라인 상태 상태 설정에 코드 예제를 제공 합니다.
 ms.assetid: 7e6e7b69-d7c3-42fa-bcc4-6d68947f6fdb
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 풍부한 상태, xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: 640ae98c947280732165c7e63d951a91a2f65a3b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0a113dc140500c982ddf22e25308eaafeaed66d6
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552885"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8327172"
 ---
 # <a name="programming-rich-presence"></a>다양 한 상태 프로그래밍
 

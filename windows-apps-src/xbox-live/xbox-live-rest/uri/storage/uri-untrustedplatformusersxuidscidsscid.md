@@ -2,19 +2,17 @@
 title: /untrustedplatform/users/xuid({xuid})/scids/{scid}
 assetID: 76170b1e-d697-7716-4038-dbc7231bdfb0
 permalink: en-us/docs/xboxlive/rest/uri-untrustedplatformusersxuidscidsscid.html
-author: KevinAsgari
 description: " /untrustedplatform/users/xuid({xuid})/scids/{scid}"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a92286e6dd8484315b8d9ce0696e5192502e954
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 50c79b76eb08a2d9413911686cda1a065b6eca64
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7560150"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8337875"
 ---
 # <a name="untrustedplatformusersxuidxuidscidsscid"></a>/untrustedplatform/users/xuid({xuid})/scids/{scid}
 이 저장소 유형에 대 한 할당량 정보를 검색합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.

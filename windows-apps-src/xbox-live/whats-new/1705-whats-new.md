@@ -1,19 +1,17 @@
 ---
 title: 새로운 기능에 대 한 Xbox Live Api-월 2017
-author: KevinAsgari
 description: 새로운 기능에 대 한 Xbox Live Api-월 2017
 ms.assetid: ''
-ms.author: kevinasg
 ms.date: 04/27/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 새로운 기능, xbox, 2017 수 있습니다.
 ms.localizationpriority: medium
-ms.openlocfilehash: 91a82cf53a92af15d09d8291d1d3e7448144bb52
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 17ffe89c215d61372ae2df88392c5ab6c20a658e
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7558104"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8342435"
 ---
 # <a name="whats-new-for-the-xbox-live-apis---may-2017"></a>새로운 기능에 대 한 Xbox Live Api-월 2017
 
@@ -25,8 +23,8 @@ ms.locfileid: "7558104"
 
 ### <a name="multiplayer"></a>멀티 플레이
 
-* 이제 활동 핸들 및 검색 쿼리는 응답에서 사용자 지정 세션 속성이 포함 됩니다.
+* 이제 활동 핸들 및 검색 쿼리 응답에는 사용자 지정 세션 속성이 포함 됩니다.
 
 ### <a name="bug-fixes"></a>버그 수정
 
-* 고정 "잘못 된 json" 대신 유효한 HTTP 오류 코드를 반환 합니다.
+* 유효한 HTTP 오류 코드 대신 반환 "잘못 된 json" 고정 합니다.

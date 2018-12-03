@@ -2,19 +2,17 @@
 title: /users/xuid({xuid})/feedback
 assetID: 86c9663c-650b-bb0c-743c-8280ee3a82f7
 permalink: en-us/docs/xboxlive/rest/uri-reputationusersxuidfeedback.html
-author: KevinAsgari
 description: " /users/xuid({xuid})/feedback"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: defd8161211065318242077dde02d8a6f777ac0b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7bf186091eacfcdb39c41bf256000990613d3685
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7575280"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8327103"
 ---
 # <a name="usersxuidxuidfeedback"></a>/users/xuid({xuid})/feedback
  
@@ -27,7 +25,7 @@ ms.locfileid: "7575280"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| xuid| ulong| Xbox 사용자 ID (XUID) 보고 중인 사용자입니다.| 
+| xuid| ulong| Xbox 사용자 ID (XUID) 보고 되 고 있는 사용자의 합니다.| 
   
 <a id="ID4EZB"></a>
 

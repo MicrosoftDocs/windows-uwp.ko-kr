@@ -2,22 +2,20 @@
 title: VerifyStringResult(JSON)
 assetID: 272c688e-179e-c7e9-086b-e76d0d4bcb57
 permalink: en-us/docs/xboxlive/rest/json-verifystringresult.html
-author: KevinAsgari
 description: " VerifyStringResult(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ba5336ed0bf734eff60a4bbffca3397fd1ea3eb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b01793222be80efccdca1f24f5226a2e9ff78064
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7554237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8341718"
 ---
 # <a name="verifystringresult-json"></a>VerifyStringResult(JSON)
-[/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 된 각 문자열에 해당 되는 결과 코드.
+[/System/strings/validate](../uri/stringserver/uri-systemstringsvalidate.md)에 제출 하는 각 문자열에 해당 되는 결과 코드.
 <a id="ID4ER"></a>
 
 

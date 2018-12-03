@@ -2,19 +2,17 @@
 title: GET (/users/{ownerId}/people)
 assetID: c948d031-ec19-7571-31ef-23cb9c5ebfaf
 permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeopleget.html
-author: KevinAsgari
 description: " GET (/users/{ownerId}/people)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a9761e3e9dff2cef330c48674a62b33f63fbd096
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6c8672188a93b2e8d27a081ae068387e7ee7aa42
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7557165"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8327361"
 ---
 # <a name="get-usersowneridpeople"></a>GET (/users/{ownerId}/people)
 호출자의 사용자 컬렉션을 가져옵니다.
@@ -54,16 +52,16 @@ GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- | --- |
-| 보기| string| 보기와 관련 된 사용자를 반환 합니다. 기본값은 "all"입니다. 가능한 값은: <ul><li><b>모든</b> -사용자의 사용자 목록에서 모든 사용자를 반환 합니다. 기본값입니다.</li><li><b>즐겨찾기</b> -즐겨찾기에 추가 특성을 가진 사용자의 사용자 목록에서 모든 사용자를 반환 합니다.</li><li><b>LegacyXboxLiveFriends</b> -레거시 Xbox LIVE 친구는 또한 사용자의 사용자 목록에서 모든 사람을 반환 합니다.</li></br>**참고:**  호출 하는 사용자의 소유 사용자 다르면 **모든** 값만 지원 됩니다.|
+| 보기| string| 보기와 관련 된 사용자를 반환 합니다. 기본값은 "all". 가능한 값은 다음과 같습니다. <ul><li><b>모든</b> -사용자의 사용자 목록에서 모든 사용자를 반환 합니다. 기본값입니다.</li><li><b>즐겨찾기</b> -즐겨찾기에 추가 특성을 가진 사용자의 사용자 목록에서 모든 사용자를 반환 합니다.</li><li><b>LegacyXboxLiveFriends</b> -레거시 Xbox LIVE 친구는 또한 사용자의 사용자 목록에서 모든 사용자를 반환 합니다.</li></br>**참고:**  호출 하는 사용자의 소유 사용자 다르면 **모든** 값만 지원 됩니다.|
 | startIndex| 32 비트 부호 없는 정수| 지정된 된 인덱스에서 시작 하는 항목을 반환 합니다.  
-| maxItems| 32 비트 부호 없는 정수| 시작 인덱스에서 시작 컬렉션에서 반환 하는 사용자의 최대 수입니다. 서비스는 <b>maxItems</b> 더 존재 하 고 (경우에 결과의 마지막 페이지 아직 반환 되지 않은) <b>maxItems</b> 보다 적은 반환할 수 있습니다 기본값을 제공할 수 있습니다.|
+| maxItems| 32 비트 부호 없는 정수| 시작 인덱스에서 시작 컬렉션에서 반환 하는 사용자의 최대 수입니다. 서비스는 <b>maxItems</b> 존재 이며 (경우에 결과의 마지막 페이지 아직 반환 되지 않은) <b>maxItems</b> 보다 적은 반환할 수 있습니다 기본값을 제공할 수 있습니다.|
 
 <a id="ID4ERD"></a>
 
 
 ## <a name="authorization"></a>권한 부여
 
-| 형식| 필수| 설명| 응답 없는 경우|
+| 형식| 필수| 설명| 누락 된 경우 응답|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | XUID| 예| 호출자가 사용자의 Xbox 사용자 ID (XUID).| 401 권한이 없음|
 
@@ -91,14 +89,14 @@ GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4EJH"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -121,7 +119,7 @@ GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한
 
 ## <a name="response-body"></a>응답 본문
 
-호출 되 면 서비스가 호출자의 사람들이 컬렉션과 호출자의 사용자 컬렉션을 포함 하는 배열에서 사용자의 총 수를 반환 합니다. [PeopleList (JSON)를](../../json/json-peoplelist.md)참조 하세요.
+호출 되 면 서비스 호출자의 사람들이 컬렉션과 호출자의 사용자 컬렉션을 포함 하는 배열에서 사용자의 총 수를 반환 합니다. [PeopleList (JSON)를](../../json/json-peoplelist.md)참조 하세요.
 
 <a id="ID4EZCAC"></a>
 

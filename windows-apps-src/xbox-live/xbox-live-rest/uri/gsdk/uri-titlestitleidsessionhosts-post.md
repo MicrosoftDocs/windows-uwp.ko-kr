@@ -2,19 +2,17 @@
 title: POST (/titles/{Title Id}/sessionhosts)
 assetID: 8558b336-1af9-8143-9752-477ceb3a8e4e
 permalink: en-us/docs/xboxlive/rest/uri-titlestitleidsessionhosts-post.html
-author: KevinAsgari
 description: " POST (/titles/{Title Id}/sessionhosts)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: dbbc7baf12daea485dec22389846e5e4acec16c1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 47e3ecbf0a519b92ae467199e5d454523864310a
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7577006"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8342432"
 ---
 # <a name="post-titlestitle-idsessionhosts"></a>POST (/titles/{Title Id}/sessionhosts)
 새 클러스터 요청을 만듭니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.
@@ -50,21 +48,21 @@ gameserverms.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
-| 콘텐츠 유형| application/json| 제출 되는 데이터 형식입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
   
 <a id="ID4E5B"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-요청에는 다음 멤버가 포함 된 JSON 개체를 포함 해야 합니다.
+요청에는 다음 멤버가 포함 된 JSON 개체가 있어야 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | 
-| sessionId| 이 호출자가 지정한 식별자입니다. 할당 되 고 반환 되는 세션 호스트에 할당 됩니다. 나중에이 식별자가 특정 sessionhost를 참조할 수 있습니다. 고유한 이어야 합니다 (예: GUID).| 
+| sessionId| 이 호출자가 지정한 식별자입니다. 할당 되 고 반환 된 세션 호스트에 할당 됩니다. 나중에이 식별자가 특정 sessionhost를 참조할 수 있습니다. 전역 고유 해야 합니다 (예: GUID).| 
 | SandboxId| 샌드박스 원하는 세션 호스트에 할당 해야 합니다.| 
 | cloudGameId| 클라우드 게임 식별자입니다.| 
-| 위치| 순서가 지정 된 목록에서 할당할 세션 원하는 기본 위치입니다.| 
+| 위치| 순서가 지정 된 목록 세션에서 할당을 원하는 기본 위치입니다.| 
 | sessionCookie| 이 지정 된 호출자 불투명 문자열입니다. sessionhost와 연결 하 고 게임 코드에서 참조할 수 있습니다. 이 멤버를 사용 하 여 (최대 크기는 4KB) 서버를 클라이언트에서 적은 양의 정보를 전달 합니다.| 
 | gameModelId| 게임 모드 식별자입니다.| 
  
@@ -110,7 +108,7 @@ gameserverms.xboxlive.com
 | 호스트 이름| 인스턴스의 호스트 이름입니다.| 
 | portMappings| 포트 매핑을 합니다.| 
 | 지역| 인스턴스 지역에서 호스팅됩니다.| 
-| secureContext| 보안 장치 주소입니다.| 
+| secureContext| 장치 보안 주소입니다.| 
  
 <a id="ID4ESE"></a>
 
@@ -152,11 +150,11 @@ gameserverms.xboxlive.com
 다음과 같은 응답 코드를 받는 경우 제목을 다시 호출 서비스에만 해야:
  
    * 200-성공-응답을 반환 합니다.
-   * 400-잘못 된 요청 본문 또는 매개 변수가 잘못 되었습니다.
+   * 400-잘못 된 매개 변수 또는 잘못 된 요청 본문 합니다.
    * 401-권한이 없음
    * 404-제목 id에 할당 된 모든 구독 필요는 없습니다.
    * 409-대략 동시에 동일한 요청 (동일한 sessionId) 결정이 응답 가능한 됩니다. 할당 요청 작업이 수행 하 고 세션 호스트에 이미 지정된 sessionId 이미 활성 상태인 경우에서는 해당 sessionhost 자세히 설명 하는 정보를 반환 합니다. 하지만 세션 호스트 없는 경우 활성 아직 충돌이 발생 합니다.
-   * 500-예기치 않은 서버 오류입니다.
+   * 500-예기치 않은 서버 오류.
    * 503-sessionhosts StandingBy 없습니다. 이러한 리소스 중 일부는 무료 때 요청을 다시 시도 합니다.
    
 <a id="ID4EFG"></a>

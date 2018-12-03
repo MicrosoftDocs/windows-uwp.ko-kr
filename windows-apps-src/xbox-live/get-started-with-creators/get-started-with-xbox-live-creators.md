@@ -1,19 +1,17 @@
 ---
 title: Xbox Live 크리에이터스 프로그램 시작
-author: KevinAsgari
 description: Xbox Live 크리에이터스 프로그램을 시작하는 데 도움이 되는 링크를 제공합니다.
 ms.assetid: 2a744405-7ee4-42b4-8f36-9916e8c3a530
-ms.author: kevinasg
 ms.date: 12/13/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: e36999f9fcd2bb0ca289c7866fa8b6ebe8209e63
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cce9d34679884d48475b7a7ae0fa8286204a6289
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7576199"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8339853"
 ---
 # <a name="get-started-with-the-xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램 시작
  
@@ -22,7 +20,7 @@ Xbox Live 크리에이터스 프로그램은 개념 승인 없이 간단한 인�
 Xbox Live 크리에이터스 프로그램 게임은 유니버설 Windows 플랫폼(UWP) 응용 프로그램이어야 합니다. Xbox One의 경우 [Xbox One의 UWP](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) 그리고 특히 [Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation)를 참조하세요. Xbox Live 크리에이터스 프로그램을 통해 게시된 게임은 도전 과제 또는 온라인 멀티 플레이어 서비스에 액세스할 수 없습니다. 지원되는 서비스의 전체 목록은 [개발자 프로그램 개요 기능 테이블](https://docs.microsoft.com/en-us/windows/uwp/xbox-live/developer-program-overview#feature-table)을 참조하세요.
 
 ## <a name="1-ensure-you-have-a-title-created-in-partner-center"></a>1. 파트너 센터에서 만든 타이틀이 있는지 확인
-모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출할 수 있게 됩니다 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 정의 되어야 합니다.  [새 크리에이터스 타이틀 만들기](create-and-test-a-new-creators-title.md)에서 이 작업을 수행하는 방법을 설명합니다.
+모든 Xbox Live 타이틀 전에 로그인 및 Xbox Live 서비스를 호출 하는 수 있게 됩니다 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 정의 되어야 합니다.  [새 크리에이터스 타이틀 만들기](create-and-test-a-new-creators-title.md)에서 이 작업을 수행하는 방법을 설명합니다.
 
 ## <a name="2-follow-the-appropriate-guide-to-setup-your-ide-or-game-engine"></a>2. 적절한 가이드를 따라 IDE 또는 게임 엔진 설정
 플랫폼 및 엔진에 대한 적절한 "시작 가이드"를 따라 진행하면서 Xbox Live의 기본 사항을 알아봅니다.

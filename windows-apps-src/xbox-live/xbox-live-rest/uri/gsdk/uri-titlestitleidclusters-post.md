@@ -2,19 +2,17 @@
 title: POST (/titles/{titleId}/clusters)
 assetID: 0977b0b0-872d-f7ad-9ba0-30d56cff4912
 permalink: en-us/docs/xboxlive/rest/uri-titlestitleidclusters-post.html
-author: KevinAsgari
 description: " POST (/titles/{titleId}/clusters)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: c87af8cb76ce452c067edddb55c382d8c604ca25
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 91d7c49628914f887c5d2243942e10e47d47b095
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7578009"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8332779"
 ---
 # <a name="post-titlestitleidclusters"></a>POST (/titles/{titleId}/clusters)
 Xbox Live 계산 서버 인스턴스를 만드는 클라이언트 수 있는 URI입니다. 이러한 Uri에 대 한 도메인은 `gameserverms.xboxlive.com`.
@@ -52,7 +50,7 @@ gameserverms.xboxlive.com
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | 
 | 사용자 에이전트|  | 사용자 에이전트 요청에 대 한 정보를 제공 합니다.| 
-| 콘텐츠 유형| application/json| 제출 되는 데이터 형식입니다.| 
+| 콘텐츠 유형| application/json| 제출 되는 데이터의 유형입니다.| 
 | 호스트| gameserverms.xboxlive.com|  | 
 | Content-Length|  | 요청 개체의 길이입니다.| 
 | xbl 계약 버전 x| 1| API 계약 버전입니다.| 
@@ -63,19 +61,19 @@ gameserverms.xboxlive.com
  
 ## <a name="authorization"></a>권한 부여
  
-요청이 유효한 Xbox Live 권한 부여 헤더를 포함 해야 합니다. 이 리소스에 액세스 하는 호출자에 게 허용 되지 않으면, 서비스 응답 403 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스 401 권한 없음 응답에 반환 합니다.
+요청이 유효한 Xbox Live 권한 부여 헤더를 포함 해야 합니다. 이 리소스에 액세스 하는 호출자에 게 허용 되지 않으면, 서비스 응답 403 반환 합니다. 헤더에 잘못 되었거나 누락 된 경우, 서비스 401 권한 없음 응답에 반환 합니다.
   
 <a id="ID4EWD"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-요청에는 다음 멤버가 포함 된 JSON 개체를 포함 해야 합니다.
+요청에는 다음 멤버가 포함 된 JSON 개체가 있어야 합니다.
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | 
 | sessionId| MPSD 세션 식별자입니다.| 
-| abortIfQueued| 선택적 매개 변수 되는 즉시 수행 되지 수 것 경우 리소스에 대 한이 세션을 큐에 대기 하지 GSMS true로 설정에 지시 합니다. 응답 개체는이 값이 true 이기 때문에 요청이 중단 되 면 <code>"fulfillmentState" : "Aborted"</code>. | 
+| abortIfQueued| 선택적 매개 변수 되는 즉시 수행 되지 수 것 하는 경우 리소스에 대 한이 세션을 큐에 대기 하지 GSMS true로 설정에 지시 합니다. 응답 개체는이 값이 true 이기 때문에 요청이 중단 되 면 <code>"fulfillmentState" : "Aborted"</code>. | 
  
 <a id="ID4ERE"></a>
 
@@ -102,8 +100,8 @@ gameserverms.xboxlive.com
  
 | 헤더| 값| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| 캐시 제어|  | 요청/응답 체인에 따라 모든 캐싱 메커니즘이 따라야 하는 지시문입니다.| 
-| 콘텐츠 유형| application/json| 응답에는 데이터의 형식입니다.| 
+| 캐시 제어|  | 요청/응답 체인에 따라 모든 캐싱 메커니즘이 따라야 하는 지시문을 선택 합니다.| 
+| 콘텐츠 유형| application/json| 응답에는 데이터의 유형입니다.| 
 | Content-Length|  | 응답 본문의 길이입니다.| 
 | 콘텐츠 유형 옵션 X|  |  | 
 | X XblCorrelationId|  | 응답 본문의 mime 형식입니다.| 
@@ -118,8 +116,8 @@ gameserverms.xboxlive.com
  
 | 멤버| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-| pollIntervalMilliseconds| 완료 폴링 하려면 밀리초에서 간격을 권장 합니다. 이 외에 걸리는 예상 시간도 클러스터 준비 될 때 참고 하지만 아니라 구독 및 요청 및이 행 속도로 현재 풀을 제공 하는 상태 업데이트에 대 한 호출자 폴링하지 빈도 대 한 권장 사항.| 
-| fulfillmentState| 제공된 된 세션 리소스를 즉시 할당 된, 여부 "수행", 향후 리소스의 가용성에 대 한 큐에 추가 "대기" 나타냅니다 또는 중단, "중단"을 요청을 수행 하지 못하기 때문 즉시 요청 "true"로 지정 된 abortIfQueued 합니다. | 
+| pollIntervalMilliseconds| 완료 폴링 하려면 밀리초에서 간격을 권장 합니다. 이 외에 예상 클러스터 준비가 될 때 참고 하지만 아니라 구독 및 요청 및이 행 속도로 현재 풀을 제공 하는 상태 업데이트에 대 한 호출자 폴링하지 빈도 대 한 권장 합니다.| 
+| fulfillmentState| 제공 된 세션 리소스를 즉시 할당 된, 여부 "수행", 향후 리소스의 가용성에 대 한 큐에 추가 "대기" 나타냅니다 또는 중단, "중단"을 요청을 수행 하지 못하기 때문 즉시 요청 "true"로 지정 된 abortIfQueued 합니다. | 
  
 <a id="ID4EWH"></a>
 

@@ -1,23 +1,21 @@
 ---
 title: JSON blob 읽기
-author: KevinAsgari
-description: Xbox Live 타이틀 저장소에서 JSON blob 읽기는 방법을 알아봅니다.
+description: Xbox Live 타이틀 저장소에서 JSON blob 읽기 하는 방법을 알아봅니다.
 ms.assetid: 3697af16-d054-4835-af7f-7fee8c628345
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c1115f1faf22438ddac07fe2b38c27e9ddeb7ae
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 30d2b9f6539e73df1c5ea5ae18b3d1a6ca061d60
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7558267"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8341699"
 ---
-# <a name="reading-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에서 JSON blob 읽기
+# <a name="reading-a-json-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에 JSON blob 읽기
 
-1.  타이틀 저장소에서 데이터 읽기를 *GET* 메서드를 사용 하 여 요청을 보냅니다. 이 예제에서는 전역 타이틀 저장소를 사용 합니다.
+1.  타이틀 저장소에서 데이터 읽기를 *GET* 메서드를 사용 하 여 요청을 보냅니다. 이 예제에서는 글로벌 타이틀 저장소를 사용 합니다.
 
         GET https://titlestorage.xboxlive.com/global/scids/{scid}/data/surprise.json,json
         Content-Type: application/octet-stream

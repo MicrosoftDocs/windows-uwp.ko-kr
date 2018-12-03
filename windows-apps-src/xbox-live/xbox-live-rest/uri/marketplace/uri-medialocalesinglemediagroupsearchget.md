@@ -2,19 +2,17 @@
 title: GET (media/{marketplaceId}/singleMediaGroupSearch)
 assetID: 52096f6d-e670-dc07-b191-039ea80c6291
 permalink: en-us/docs/xboxlive/rest/uri-medialocalesinglemediagroupsearchget.html
-author: KevinAsgari
 description: " GET (media/{marketplaceId}/singleMediaGroupSearch)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 581fec6739c64d9d6cd093d8b8f58b1488b82680
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9295459c3eb715f1120d4287e69c596654d65fa
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7560909"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8338644"
 ---
 # <a name="get-mediamarketplaceidsinglemediagroupsearch"></a>GET (media/{marketplaceId}/singleMediaGroupSearch)
 단일 미디어 그룹 내의 항목에 대 한 검색을 허용 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -29,9 +27,9 @@ ms.locfileid: "7560909"
  
 ## <a name="remarks"></a>설명
  
-이 검색에서 반환 된 데이터의 페이지가 아닌 순차적으로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신 액세스할 수 있습니다. 이 API는 쿼리 구체화를 수락합니다. 
+무작위로 skipItems 매개 변수를 사용 하 여 연속 토큰을 사용 하는 대신이 검색에서 반환 된 데이터 페이지에 액세스할 수 있습니다. 이 API는 쿼리 구체화를 수락합니다. 
  
-**SandboxId** 는 이제는 XToken 클레임이에서 검색 하 고 적용 합니다. **SandboxId** 없는 경우 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
+이제 **SandboxId** 는 XToken 클레임이에서 검색 이며 적용 합니다. **SandboxId** 없으면 엔터테인먼트 검색 서비스 (EDS) 400 잘못 된 요청 오류를 throw 합니다.
   
 <a id="ID4EEB"></a>
 
@@ -61,7 +59,7 @@ ms.locfileid: "7560909"
  
 ### <a name="sample-response"></a>예제 응답
  
-아래 JSON 코드 호출에 대 한 응답에서은 `/media/en-us/singleMediaGroupSearch?q=vector&desiredMediaItemTypes=DGame&fields=all`.
+아래 JSON 코드 호출에 대 한 응답에는 `/media/en-us/singleMediaGroupSearch?q=vector&desiredMediaItemTypes=DGame&fields=all`.
  
 
 ```cpp

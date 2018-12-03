@@ -2,22 +2,20 @@
 title: GET (/users/{ownerId}/people/{targetid})
 assetID: 2fd37b8e-b886-14f2-3399-59f530d85e4e
 permalink: en-us/docs/xboxlive/rest/uri-usersowneridpeopletargetidget.html
-author: KevinAsgari
 description: " GET (/users/{ownerId}/people/{targetid})"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: b9c821e9d2cecc0b9a6bd02da650d40385a3fd91
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 408b4df30f53e27b04e2a1e654e9686d2b359637
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7562202"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8345056"
 ---
 # <a name="get-usersowneridpeopletargetid"></a>GET (/users/{ownerId}/people/{targetid})
-호출자의 사람들이 컬렉션에서 대상 ID로 사용자를 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
+호출자의 사용자 컬렉션에서 대상 ID로 사용자를 가져옵니다. 이러한 Uri에 대 한 도메인은 `social.xboxlive.com`.
  
   * [설명](#ID4EV)
   * [URI 매개 변수](#ID4E5)
@@ -51,7 +49,7 @@ GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한
  
 ## <a name="authorization"></a>권한 부여
  
-| 형식| 필수| 설명| 응답 없는 경우| 
+| 형식| 필수| 설명| 누락 된 경우 응답| 
 | --- | --- | --- | --- | --- | --- | --- | 
 | XUID| 예| 호출자가 사용자의 Xbox 사용자 ID (XUID).| 401 권한이 없음| 
   
@@ -79,21 +77,21 @@ GET 작업 않으므로 한 번 또는 여러 번 실행 하는 경우 동일한
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
   
 <a id="ID4EBF"></a>
 
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | 200| 확인| 성공 합니다.| 
 | 400| 잘못 된 요청| 사용자 Id가 잘못 된 형식의 합니다.| 
 | 403| 금지| 권한 부여 헤더에서 XUID 클레임을 분석할 수 없습니다.| 
-| 404| 찾을 수 없습니다.| 대상 사용자가 소유자의 사용자 목록에서 찾을 수 없습니다.| 
+| 404| 찾을 수 없음| 대상 사용자가 소유자의 사용자 목록에서 찾을 수 없습니다.| 
   
 <a id="ID4EDH"></a>
 

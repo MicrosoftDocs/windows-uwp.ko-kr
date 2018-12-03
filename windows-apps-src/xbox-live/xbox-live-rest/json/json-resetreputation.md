@@ -2,22 +2,20 @@
 title: ResetReputation(JSON)
 assetID: 15edb5e7-a00b-4188-9b49-9db5774c4a10
 permalink: en-us/docs/xboxlive/rest/json-resetreputation.html
-author: KevinAsgari
 description: " ResetReputation(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: cf6db0ec47e92023fb43c7599fac3dcc9cdd9f0a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d09c8bbc1130f91dfea3d4c35e391dcf9adcf127
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7577039"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8324634"
 ---
 # <a name="resetreputation-json"></a>ResetReputation(JSON)
-사용자의 기존 점수 변경할 수는 새 기본 평판 점수를 포함 되어 있습니다. 
+사용자의 기존 점수를 변경 해야 하는 새 기본 평판 점수를 포함 되어 있습니다. 
 <a id="ID4EN"></a>
 
  

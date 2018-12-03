@@ -2,19 +2,17 @@
 title: GET (/users/xuid({xuid})/history/titles)
 assetID: c0a6cb3b-bab6-03b8-a79e-87defaaa6421
 permalink: en-us/docs/xboxlive/rest/uri-titlehistoryusersxuidhistorytitlesgetv2.html
-author: KevinAsgari
 description: " GET (/users/xuid({xuid})/history/titles)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: bf858750d04e6be95e75d7c6c74d09cadde6789f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cadbf38385bbc321ef5bf23eb93c3fbc5c1a2417
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582095"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8345215"
 ---
 # <a name="get-usersxuidxuidhistorytitles"></a>GET (/users/xuid({xuid})/history/titles)
 타이틀을 사용자가 잠금 해제 하거나 해당 도전 과제에서 진행 될의 목록을 가져옵니다. 이 API는 사용자의 전체 기록 재생 또는 시작 타이틀을 반환 하지 않습니다. 이러한 Uri에 대 한 도메인은 `achievements.xboxlive.com`.
@@ -62,14 +60,14 @@ ms.locfileid: "7582095"
 | 헤더| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | <b>X RequestedServiceVersion</b>| string| 이 요청 전달 되어야 하는 Xbox LIVE 서비스의 이름/번호를 빌드하십시오. 요청 헤더, 인증 토큰 등의 클레임의 유효성을 확인 한 후 해당 서비스에만 라우트됩니다 됩니다.| 
-| <b>xbl 계약 버전 x</b>| 32 비트 부호 없는 정수| 있는 경우 고 2로 설정 V2 버전이이 API의 사용 됩니다. 그렇지 않으면 V1 합니다.| 
+| <b>xbl 계약 버전 x</b>| 32 비트 부호 없는 정수| 있는 경우를 2로 설정 하면이 API의 V2 버전 사용 됩니다. 그렇지 않으면 V1 합니다.| 
   
 <a id="ID4ERF"></a>
 
  
 ## <a name="request-body"></a>요청 본문
  
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
   
 <a id="ID4EDG"></a>
 

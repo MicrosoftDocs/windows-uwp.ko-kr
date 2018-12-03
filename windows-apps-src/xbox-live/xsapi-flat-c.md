@@ -1,24 +1,22 @@
 ---
 title: Xbox Live C Api
-author: KevinAsgari
 description: Xbox Live 서비스와 상호 작용 하는 데 사용할 수 있는 기본 C API 모델에 알아봅니다.
-ms.author: kevinasg
 ms.date: 06/05/2018
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, c, xsapi
 ms.localizationpriority: medium
-ms.openlocfilehash: b8d48fbaa35ddfb81b8aba77e4129c19e2a55af7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a1c73661b561d586f9e28957c7caa6a1b1f9cb03
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7561972"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8349553"
 ---
 # <a name="introduction-to-the-xbox-live-c-apis"></a>Xbox Live C Api 소개
 
 2018 년 6 월에에서 새 플랫 C API 계층 XSAPI에 추가 되었습니다. 이 새로운 API 계층에는 c + + 및 WinRT API 계층을 사용 하 여 발생 하는 몇 가지 문제가 해결 되었습니다.
 
-아직 C API 모든 XSAPI 기능을 다루지 않습니다 하지만 추가 기능에서 작업 중인 합니다. 모든 3 API 계층, C, c + + 및 WinRT는 계속 지원 해야 하 고 추가 기능 시간이 지남에 따라 추가 해야 합니다.
+아직 C API 모든 XSAPI 기능을 다루지 않습니다 하지만 추가 기능에서 작업 중인 합니다. 모든 3 API 계층, C, c + + 및 WinRT는 계속 지원 하 고 추가 기능 시간이 지남에 따라 추가 해야 합니다.
 
 > [!NOTE]
 > 현재 C Api (XDK (Xbox 개발자 키트)를 사용 하 여 제목을 가진 에서만 작동 합니다. 지금은 UWP 게임을 지원 하지 않습니다.
@@ -33,7 +31,7 @@ C API는 현재 다음과 같은 기능 및 서비스를 지원합니다.
 - 소셜
 - 소셜 관리자
 
-## <a name="benefits-of-the-c-api-for-xsapi"></a>XSAPI에 대 한 C API의 이점
+## <a name="benefits-of-the-c-api-for-xsapi"></a>XSAPI C API의 이점
 
 - 타이틀을 XSAPI를 호출할 때 메모리 할당을 제어할 수 있습니다.
 - 타이틀을 XSAPI를 호출할 때 처리 스레드를 완전히 제어할 수 있습니다.
@@ -43,7 +41,7 @@ C + + XSAPI 함께 C Api를 사용할 수 있지만 c + + Api를 사용 하 여 
 
 ### <a name="managing-memory-allocations"></a>메모리 할당을 관리
 
-새로운 C API를 사용 하 여 XSAPI 메모리를 할당 하려고 할 때마다 호출 되는 함수 콜백을 지정할 수 있습니다. 콜백 함수를 지정 하지 않으면 XSAPI 표준 메모리 할당 루틴을 사용 합니다.
+새 C API를 사용 하 여 XSAPI 메모리를 할당 하려고 할 때마다 호출 되는 함수 콜백을 지정할 수 있습니다. 콜백 함수를 지정 하지 않으면 XSAPI 표준 메모리 할당 루틴을 사용 합니다.
 
 메모리 루틴을 수동으로 지정 하려면 다음을 수행할 수 있습니다.
 
@@ -52,7 +50,7 @@ C + + XSAPI 함께 C Api를 사용할 수 있지만 c + + Api를 사용 하 여 
   - 호출 `XblInitialize()` 라이브러리 인스턴스를 초기화 합니다.  
 - 게임 실행 중:
   - 할당의 모든 새 C Api에서에서 호출 XSAPI는 또는 무료 메모리 XSAPI 지정된 된 메모리 처리 콜백을 호출 하면 됩니다.  
-- 때 게임 종료 합니다.
+- 게임 종료 하는 경우:
   - 호출 `XblCleanup()` XSAPI 라이브러리와 관련 된 모든 리소스를 확보 합니다.
   - 게임의 사용자 지정 메모리 관리자를 정리 합니다.
 
@@ -62,9 +60,9 @@ C API는 개발자가 스레딩 모델을 완전히 제어할 수 있는 패턴�
 
 ## <a name="migrating-code-to-use-c-xsapi"></a>C XSAPI를 사용 하 여 코드 마이그레이션
 
-하므로 한 번에 하나의 기능을 마이그레이션하는 것이 좋습니다 XSAPI C Api는 프로젝트의 XSAPI c + + Api와 함께 사용할 수 있습니다.
+하므로 한 번에 하나의 기능으로 마이그레이션하는 것이 좋습니다 XSAPI C Api는 프로젝트의 XSAPI c + + Api와 함께 사용할 수 있습니다.
 
-C Api 및 c + + Api 되므로 실제로 씬 래퍼 다른 진입점 마찬가지로 공통 핵심 기능을 변경 해야 합니다. 그러나 C Api만 이용 하는 사용자 지정 메모리 및 스레드 관리 기능 걸릴 수 있습니다.
+C Api 및 c + + Api 되므로 실제로 씬 래퍼는 공통 핵심 진입점 마찬가지로 기능 변경 되지 않도록 합니다. 그러나 C Api만 사용자 지정 메모리 및 스레드 관리 기능 걸릴 수 있습니다.
 
 > [!IMPORTANT]
 > C Api를 사용 하 여 XSAPI WinRT Api를 혼합할 수 없습니다.

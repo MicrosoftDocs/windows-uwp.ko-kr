@@ -2,19 +2,17 @@
 title: GameClip(JSON)
 assetID: 204cb702-4ce4-85a8-f231-3b4fb243405f
 permalink: en-us/docs/xboxlive/rest/json-gameclip.html
-author: KevinAsgari
 description: " GameClip(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a0882125e1cf7f82be6273e5f456d22cdf79891e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7b9f846c9335a3c8213b7e213b354f71fdd855e4
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7554145"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8326858"
 ---
 # <a name="gameclip-json"></a>GameClip(JSON)
  
@@ -32,12 +30,12 @@ GameClip 개체에는 다음 사양을 있습니다.
 | <b>dateRecorded</b>| DateTime| 날짜 및 UTC (ISO 8601 형식)에서 녹음/녹화 시작 된 시간입니다.| 
 | <b>lastModified</b>| DateTime| 마지막으로 수정한 시간 게임 클립 또는 UTC (ISO 8601 형식)에 메타 데이터입니다.| 
 | <b>userCaption</b>| string| 사용자가 입력 한 지역화 되지 않은 문자열 게임 클립에 대해입니다.| 
-| <b>type</b>| GameClipTypes| 클립의 형식입니다. 여러 값 수 및 그렇다면 쉼표로 구분 됩니다.| 
+| <b>type</b>| GameClipTypes| 클립의 유형입니다. 여러 값 및 그렇다면 쉼표로 구분 됩니다.| 
 | <b>원본</b>| GameClipSource| 어떻게 클립 였던 수 있습니다.| 
 | <b>visibility</b>| GameClipVisibility| 시스템에서 게시 되 면 게임 클립의 표시 여부입니다.| 
 | <b>durationInSeconds</b>| 32 비트 부호 없는 정수| 몇 초만에 게임 클립의 기간입니다.| 
 | <b>서비스 안내</b>| string| 게임 클립 연결 된 서비스 안내 합니다.| 
-| <b>rating</b>| 배정밀도 부동 소수점 숫자| 연결 된 게임 클립 0.0에서 5.0 범위에 대 한 평점입니다.| 
+| <b>rating</b>| 배정밀도 부동 소수점 숫자| 0.0에서 5.0 범위에 대 한 게임 클립와 관련 된 평점입니다.| 
 | <b>ratingCount</b>| 32 비트 부호 없는 정수| 이 클립 등급이 횟수입니다.| 
 | <b>레이아웃</b>| 32 비트 부호 없는 정수| 게임 클립와 관련 된 보기의 수입니다.| 
 | <b>titleData</b>| string| 제목 관련 속성 모음입니다.| 

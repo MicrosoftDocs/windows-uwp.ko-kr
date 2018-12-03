@@ -2,19 +2,17 @@
 title: /users/me/groups/{moniker}
 assetID: 3d319a19-da5e-a485-985d-46dcff4bb521
 permalink: en-us/docs/xboxlive/rest/uri-usersmegroupsmoniker.html
-author: KevinAsgari
 description: " /users/me/groups/{moniker}"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c8701e87274195e206f779263afc339a089d7f8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c2da31f0f9c4673c818df216a3438cdcfd504894
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552691"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8322524"
 ---
 # <a name="usersmegroupsmoniker"></a>/users/me/groups/{moniker}
 PresenceRecord 내 그룹에 대 한 액세스합니다. 이러한 Uri에 대 한 도메인은 `userpresence.xboxlive.com`.
@@ -28,7 +26,7 @@ PresenceRecord 내 그룹에 대 한 액세스합니다. 이러한 Uri에 대 �
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | 
-| 모니커| string| 사용자의 그룹을 정의 하는 문자열입니다. 현재만 허용된 모니커 대문자 'P' "사람"입니다.| 
+| 모니커| string| 사용자의 그룹을 정의 하는 문자열입니다. 현재 허용 된 유일한 모니커 대문자 'P'를 사용 하 여 "사람" 인 경우| 
   
 <a id="ID4ERB"></a>
 

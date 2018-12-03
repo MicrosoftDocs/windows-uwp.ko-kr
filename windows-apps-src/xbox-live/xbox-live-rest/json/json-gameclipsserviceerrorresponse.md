@@ -2,19 +2,17 @@
 title: GameClipsServiceErrorResponse(JSON)
 assetID: dd606f0f-d52d-f88f-0fff-41c15837f9ed
 permalink: en-us/docs/xboxlive/rest/json-gameclipsserviceerrorresponse.html
-author: KevinAsgari
 description: " GameClipsServiceErrorResponse(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 70cc7d7796a9f58cc092e85f4ae28b46c0ee17e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 01db596d7cb866d568000eff85254c3f5d668398
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563990"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8348368"
 ---
 # <a name="gameclipsserviceerrorresponse-json"></a>GameClipsServiceErrorResponse(JSON)
 /Users/ {ownerId} {서비스 안내} /scids/ /clips/ {gameClipId}에 대 한 응답의 선택적 부분/uri/형식 / {gameClipUriType} API입니다. 

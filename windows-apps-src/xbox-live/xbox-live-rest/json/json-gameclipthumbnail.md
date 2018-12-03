@@ -2,22 +2,20 @@
 title: GameClipThumbnail(JSON)
 assetID: 3ed87fc1-734c-d8b5-d908-0ae3359769ed
 permalink: en-us/docs/xboxlive/rest/json-gameclipthumbnail.html
-author: KevinAsgari
 description: " GameClipThumbnail(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fae93f76d9c8647b2d4264463b434d86897e2a5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a491b70b8e34c1c736667b50271af7b970b6bb2a
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7575606"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8349852"
 ---
 # <a name="gameclipthumbnail-json"></a>GameClipThumbnail(JSON)
-개별 축소판에 관련 된 정보가 포함 되어 있습니다. 클립 당 여러 크기 수 있으며 디스플레이 대 한 적절 한 하나를 선택 하는 클라이언트에 게 됩니다. 
+개별는 미리 보기와 관련 된 정보를 포함 합니다. 클립 당 여러 크기 있을 수 있으며 적절 한 디스플레이 대 한 선택 클라이언트 그것은 개발자가 합니다. 
 <a id="ID4EN"></a>
 
  

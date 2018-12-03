@@ -2,19 +2,17 @@
 title: TitleRequest(JSON)
 assetID: 43aeb6f9-726d-9260-e2ba-f005ea688bf1
 permalink: en-us/docs/xboxlive/rest/json-titlerequest.html
-author: KevinAsgari
 description: " TitleRequest(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: ab030f1f8086bc33243b4a764ccafd8747ea6c81
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a90f42c2f830ba6f04f77a1acaba067a2746a062
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7576964"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8322642"
 ---
 # <a name="titlerequest-json"></a>TitleRequest(JSON)
 타이틀에 대 한 정보에 대 한 요청 합니다. 
@@ -30,7 +28,7 @@ TitleRequest 개체에는 다음 사양을 있습니다.
 | id| 32 비트 부호 없는 정수| 제목의 식별자입니다.| 
 | activity| [ActivityRequest](json-activityrequest.md)| 제목 정보를 사용할 수 있는 경우 다양 한 상태 및 미디어 정보를 포함 합니다.| 
 | 상태| string| 여부는 사용자가 활성 인지 여부. 이 필드는 사용자가 비활성으로 표시 해야 합니다. 기본값은 "활성".| 
-| 배치| string| 배치 모드 제목입니다. 가능한 값 "전체", "fill", "스냅" 또는 "background" 포함 됩니다. 기본값은 "전체".| 
+| 배치| string| 배치 모드 제목입니다. 가능한 값 "전체", "fill", ", 사이드 상태가" 또는 "background"를 포함 합니다. 기본값은 "전체".| 
   
 <a id="ID4EJC"></a>
 

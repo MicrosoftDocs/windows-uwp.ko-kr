@@ -2,22 +2,20 @@
 title: PermissionCheckBatchUserResponse(JSON)
 assetID: c587dbc1-9436-4d55-afcb-deb47e3c2664
 permalink: en-us/docs/xboxlive/rest/json-permissioncheckbatchuserresponse.html
-author: KevinAsgari
 description: " PermissionCheckBatchUserResponse(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: da918cbbf76a757e16aea10cf4fbc6b2646de9fc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c9e20cc195ad737a7e847a8ad41b76247220adfe
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7564631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8341857"
 ---
 # <a name="permissioncheckbatchuserresponse-json"></a>PermissionCheckBatchUserResponse(JSON)
-단일 대상 사용자에 대 한 권한 값의 목록 일괄 처리 권한의 이유를 확인합니다. 
+단일 대상 사용자에 대 한 권한 값의 목록 일괄 처리의 이유를 확인합니다. 
 <a id="ID4EN"></a>
 
  

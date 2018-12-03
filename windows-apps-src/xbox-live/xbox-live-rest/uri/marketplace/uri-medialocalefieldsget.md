@@ -2,19 +2,17 @@
 title: GET (/media/{marketplaceId}/fields)
 assetID: 1d535344-8522-0fd1-4daa-cd0f0a0f1121
 permalink: en-us/docs/xboxlive/rest/uri-medialocalefieldsget.html
-author: KevinAsgari
 description: " GET (/media/{marketplaceId}/fields)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 26d172c54dec94990918780bd67b9d47954f8552
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4358eef1ce025180e0da85683018b018a8f8db4d
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7560216"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8325874"
 ---
 # <a name="get-mediamarketplaceidfields"></a>GET (/media/{marketplaceId}/fields)
 필드 토큰을 가져옵니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.
@@ -35,13 +33,13 @@ ms.locfileid: "7560216"
    * Id
    * 이름
   
-자세한 정보를 가져오려면 Api는 데이터의 추가 조각을 반환할지를 지정 하는 **필드** 매개 변수를 수락 합니다. 많은 가능한 필드를 각 API 호출에 대 한 전체에 자신의 이름을 지정 하는 요청 크게 볼록 합니다. 대신, 이름은 다른 Api로 전달 되는 훨씬 더 작은 값을 생성할이 API에 전달할 수 있습니다.
+자세한 정보를 가져오려면 Api는 데이터의 추가 조각을 반환할지를 지정 하는 **필드** 매개 변수를 수락 합니다. 많은 가능한 필드 인 각 API 호출에 대 한 전체에 자신의 이름을 지정 하는 요청 크게 볼록 합니다. 대신, 이름은 다른 Api로 전달 되는 훨씬 더 작은 값을 생성할이 API에 전달할 수 있습니다.
  
-이 매개 변수를 허용 하는 모든 API를 제공된 된 값에는 모든 지정 된 미디어 항목 형식에 대 한 모든 필드의 상위 집합 해야 합니다. 서로 다른 미디어 항목 형식에 대 한 필드를 지정 하는 것이 불가능 합니다. 그러나 필드 하나 이상의 미디어 항목 형식을 다른을 제외한이 적용 되는 경우에 표시 됩니다 미디어 항목 형식 데이터 존재 하는 위치 (예를 들어, "AvatarBodyType"에 대 한 호출에 포함 된 경우 [가져오기 (/media/ {marketplaceId} /fields)]()만 AvatarItems 됩니다 필드가 포함).
+이 매개 변수를 허용 하는 모든 API를 제공 된 값에는 모든 지정 된 미디어 항목 종류의 모든 필드의 상위 집합 해야 합니다. 서로 다른 미디어 항목 형식에 대 한 필드를 지정 하는 것이 불가능 합니다. 하지만 필드 하나 이상의 미디어 항목 형식을 다른을 제외한이 적용 되는 경우에 표시 됩니다 미디어 항목 형식 데이터 있는 ("AvatarBodyType"에 대 한 호출에 포함 된 경우 예를 들어 [GET (/media/ {marketplaceId} /fields)]()만 AvatarItems 됩니다 필드가 포함).
  
-이 API에서 반환 된 값은 매우 캐시할-사실, EDS의 배포 사이 제외 하 고 변경 되지 않아야 합니다. 필요한 캐싱의 경우 캐시 마지막 사용자의 세션 보다 더 이상 것이 좋습니다.
+이 API에서 반환 되는 값은 매우 캐시할-사실, EDS의 배포 사이 제외 하 고 변경 되지 않아야 합니다. 필요한 캐싱의 경우 캐시 마지막 사용자의 세션 보다 더 이상 것이 좋습니다.
  
-실제 필드 이름은 적용 하는 것 외에도이 API 수락 "모든" 유효한 값으로 합니다. 이렇게 하면 각 필드를 지정할 수 있는 값을 생성 됩니다. "All" 값의 사용은 디버깅 및 테스트 목적으로 개발에 대 한 것이 좋습니다.
+실제 필드 이름은 적용 하는 것 외에도이 API가 허용 "모든" 유효한 값으로 합니다. 이렇게 하면 각 필드를 지정할 수 있는 값을 생성 됩니다. "All" 값의 사용은 디버깅 및 테스트 목적으로 개발에 대 한 것이 좋습니다.
  
 보낼 수 있습니다 `desired={list of fields separated by a '.'}` **필드** 토큰을 허용 하는 모든 api.
  
@@ -63,7 +61,7 @@ ms.locfileid: "7560216"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| 원하는| string| 필수. '.' -최소 집합 외에도 반환 되어야 하는 필드 목록은 구분 합니다. 지정 된 모든 필드 (데이터 단순히 없거나 특정 항목에 대 한) 각 개체에 대해 반환 보장이 하지만 여기에 지정 되지 않은 최소한 외부 필드가 반환 됩니다. | 
+| 원하는| string| 필수. '.' -필드 세트로 외에도 반환할지 목록을 구분 합니다. 지정 된 모든 필드 (데이터 단순히 없거나 특정 항목에 대 한)는 각 개체에 대해 반환 될 보장이 하지만 여기에 지정 되지 않은 최소한 외부 필드가 반환 됩니다. | 
   
 <a id="ID4EMD"></a>
 

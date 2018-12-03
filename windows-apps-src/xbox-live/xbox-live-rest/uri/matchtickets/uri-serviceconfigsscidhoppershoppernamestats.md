@@ -2,26 +2,24 @@
 title: /serviceconfigs/{scid}/hoppers/{name}/stats
 assetID: 56bb4398-445b-e8c5-a4ce-1651576ee7e7
 permalink: en-us/docs/xboxlive/rest/uri-serviceconfigsscidhoppershoppernamestats.html
-author: KevinAsgari
 description: " /serviceconfigs/{scid}/hoppers/{name}/stats"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 74712e5d20f1e74810f3123ec82dabc6b466ff1a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 04376505b76296e052ea431f2a4e5fcfeac7b9e4
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7571118"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8326355"
 ---
 # <a name="serviceconfigsscidhoppersnamestats"></a>/serviceconfigs/{scid}/hoppers/{name}/stats
 
 hopper에 대 한 통계를 검색 하기 위한 가져오기 작업을 지원 합니다.
 
 > [!IMPORTANT]
-> 이 URI에 계약 103 이상을 사용 하 여 사용 하며 Xbl 계약 버전 X의 헤더 요소: 103 또는 나중에 모든 요청.
+> 이 URI 계약 103 이상을 사용 하 여 사용 하기 위한 및 X Xbl-계약 버전의 헤더 요소가: 103 또는 나중에 모든 요청.
 
 <a id="ID4ER"></a>
 

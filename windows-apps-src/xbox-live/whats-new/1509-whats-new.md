@@ -1,19 +1,17 @@
 ---
 title: 새로운 기능-2015 년 9 월에 대 한 Xbox Live SDK
-author: KevinAsgari
 description: 새로운 기능-2015 년 9 월에 대 한 Xbox Live SDK
 ms.assetid: 84b82fde-f6f3-4dc2-b2df-c7c7313a2cc3
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: cf5908dface210a1baffc18876fb349441618745
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c618a738dc2670d3d3de1fa2f4c4108c24130eb0
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552869"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8347079"
 ---
 # <a name="whats-new-for-the-xbox-live-sdk---september-2015"></a>새로운 기능-2015 년 9 월에 대 한 Xbox Live SDK
 
@@ -37,20 +35,20 @@ Xbox Live SDK는 Windows 10 RTM [버전 10.0.10240] 및 Visual Studio 2015 RTM [
 <p/>
 
 * AppInsights를 사용 하 여 write_in_game_event()를 사용 하 여 작성 하는 이벤트를 볼 수 있습니다.
-* 이 설명서 곧 제공 될 앞으로 있었지만 하십시오 작업할 액세스에 댐을
+* 이 설명서 곧 제공 될 앞으로 않는다는 전제 하에 하세요 협력에 댐을 액세스
 
 ## <a name="logging"></a>로깅
-* xbox::services에서 service_call_logging_config: 실험적
-* 시작 하 고 콘솔에 xbTrace.exe 통해 추적을 중지 하려면 register_for_protocol_activation theservice_call_logging_config 클래스에서 호출 해야 합니다.  한 번에 사용자 게임 초기화 하는 동안이 호출을 수행 합니다.
+* xbox::services에서 service_call_logging_config:: 실험적
+* 시작 하 고 콘솔에 xbTrace.exe 통해 추적을 중지 하려면 register_for_protocol_activation theservice_call_logging_config 클래스에서 호출 해야 합니다.  한 번에 게임에 초기화 하는 동안이 호출을 수행 합니다.
 
 ## <a name="resync-for-rta"></a>RTA에 대 한 동기화
-* 재 동기화 RTA 서비스는 사용자 정보 만료 된 있을 때 발생할 수 있습니다.
+* 재 동기화 RTA 서비스는 사용자가 정보를 만료 된 있을 때 발생할 수 있습니다.
 * 타이틀에 등록 하는 구독에 대 한 해당 HTTP 호출을 호출 해야
 * 다시 하지 않아도 제목
 * 추가 된 xbox::services::real_time_activity_service::add_resync_handler
 * 제거 된 xbox::services::real_time_activity_service::remove_resync_handler
 * 추가 된 http_status_429_too_many_requests
-* 제목을 너무 많은 http 요청을 보내는 데 제한 되는 경우이 오류가 표시 됩니다.
+* 제목이 너무 많은 http 요청을 보내는 데 조정 됩니다. 하면이 오류가 표시 됩니다.
 
 ## <a name="documentation"></a>설명서
 * Xbox Live 서비스 2.0 API로 마이그레이션

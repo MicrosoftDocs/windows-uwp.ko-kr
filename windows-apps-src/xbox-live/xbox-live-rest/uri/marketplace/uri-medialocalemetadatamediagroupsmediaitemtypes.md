@@ -2,19 +2,17 @@
 title: /media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaItemTypes
 assetID: fc096def-ac64-76c6-09f8-8f33a6bb47a0
 permalink: en-us/docs/xboxlive/rest/uri-medialocalemetadatamediagroupsmediaitemtypes.html
-author: KevinAsgari
 description: " /media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaItemTypes"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: f1bf5600afdb9778dd210c99f0eddcc758136b3b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d014cbcf4e42e2f07c3cc32ceeb557a3c8537871
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7561198"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8322809"
 ---
 # <a name="mediamarketplaceidmetadatamediagroupsmediagroupmediaitemtypes"></a>/media/{marketplaceId}/metadata/mediaGroups/{mediagroup}/mediaItemTypes
 EDS의 지정 된 버전에 대 한 미디어 그룹당 사용할 수 있는 mediaItemTypes에 액세스합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

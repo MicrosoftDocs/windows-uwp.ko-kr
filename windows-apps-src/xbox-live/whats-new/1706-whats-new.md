@@ -1,23 +1,21 @@
 ---
-title: 새로운 기능-2017 년 6 월에 Xbox Live Api
-author: KevinAsgari
-description: 새로운 기능-2017 년 6 월에 Xbox Live Api
+title: 새로운 기능-2017 년 6 월자 Xbox Live api
+description: 새로운 기능-2017 년 6 월자 Xbox Live api
 ms.assetid: ''
-ms.author: kevinasg
 ms.date: 06/13/2017
 ms.topic: article
-keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 6 월자 하나 새로운, xbox
+keywords: xbox live, xbox, 게임, uwp, windows 10, 2017 년 6 월자 하나 새로운 기능, xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: 185e073551cf07aa72652fbfe601f51a78e28a0f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ac9b5ff2ebc96f690a5fab281d385d21ccb1e0a3
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7559419"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8339847"
 ---
-# <a name="whats-new-for-the-xbox-live-apis---june-2017"></a>새로운 기능에 대 한 Xbox Live Api-2017 년 6 월
+# <a name="whats-new-for-the-xbox-live-apis---june-2017"></a>새로운 기능-2017 년 6 월자 Xbox Live Api에 대 한
 
-추가 된 항목에 대 한 [새로운-월 2017](1705-whats-new.md) 문서를 참조 하십시오 2017 5 월 릴리스에서 합니다.
+추가 된 항목에 대 한 [새로운-월 2017](1705-whats-new.md) 문서를 참조 하십시오 월 2017 릴리스에서 합니다.
 
 또한 모든 Xbox Live Api에 최근 코드 변경 내용을 보려면 [Xbox Live API GitHub 커밋 기록](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인할 수 있습니다.
 
@@ -35,4 +33,4 @@ ms.locfileid: "7559419"
 
 ### <a name="bug-fixes"></a>버그 수정
 
-* 여러 버그가 수정 되었습니다. 전체 목록은 [GitHub 커밋 내역](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인 합니다.
+* 다양 한 버그가 수정 되었습니다. 전체 목록은 [GitHub 커밋 내역](https://github.com/Microsoft/xbox-live-api/commits/master) 을 확인 합니다.

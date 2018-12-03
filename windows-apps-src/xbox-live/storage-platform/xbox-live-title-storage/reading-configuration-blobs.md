@@ -1,19 +1,17 @@
 ---
 title: 구성 blob 읽기
-author: KevinAsgari
-description: Xbox Live 타이틀 저장소에서 구성 blob 읽기는 방법을 알아봅니다.
+description: Xbox Live 타이틀 저장소에서 구성 blob 읽기 하는 방법을 알아봅니다.
 ms.assetid: ee62d221-69b9-4f52-9b5d-5a44d04de548
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: be118ff3bc12cd3dd541d6889daa70c7e5a8eab3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 71607f05f07ee4a98f73a19c28c85dc325041a10
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7580386"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8329980"
 ---
 # <a name="reading-a-configuration-blob-in-xbox-live-title-storage"></a>Xbox Live 타이틀 저장소에서 구성 blob 읽기
 
@@ -21,7 +19,7 @@ ms.locfileid: "7580386"
 
 ### <a name="to-read-a-configuration-blob"></a>구성 blob 읽기
 
-1.  사용 하 여 요청 보내기는 타이틀 저장소에서 데이터 읽기에 메서드가 아래 합니다.
+1.  사용 하 여 요청 보내기는 아래 메서드 타이틀 저장소에서 데이터를 읽을 수 있습니다.
 
         GET https://titlestorage.xboxlive.com/global/scids/{scid}/data/config.json,config              
         Content-Type: application/octet-stream

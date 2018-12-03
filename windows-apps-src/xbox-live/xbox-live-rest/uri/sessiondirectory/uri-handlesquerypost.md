@@ -2,19 +2,17 @@
 title: POST (/handles/query)
 assetID: a1a47d49-5c3f-8021-a213-13eb8bddf16a
 permalink: en-us/docs/xboxlive/rest/uri-handlesquerypost.html
-author: KevinAsgari
 description: " POST (/handles/query)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 058612c7b8dc8b5576b471482655f28e17608481
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7540c117931c01c24c79cef6c8ab6540cb65bbcb
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7572692"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8338297"
 ---
 # <a name="post-handlesquery"></a>POST (/handles/query)
 세션 핸들에 대 한 쿼리를 만듭니다.
@@ -52,13 +50,13 @@ ms.locfileid: "7572692"
 
 | <b>매개 변수</b>| <b>유형</b>| <b>설명</b>|
 | --- | --- | --- | --- |
-| 키워드| string| 예를 들어 "foo"가, 키워드는는 해야 또는에서 찾을 수 세션 템플릿 검색 하려는 경우. |
-| xuid| 64 비트 부호 없는 정수| 예를 들어 "123", 쿼리에서 포함 하는 세션에 대 한 하는 Xbox 사용자 ID입니다. 기본적으로 사용자를 포함할 수에 대 한 세션에서 활성화 이어야 합니다. |
-| 예약| 부울| 세션을 포함 하려면 사용자 예약된 플레이어로 설정 되어 있지만 활성 플레이어 되기까지 가입 하지 않았습니다. 이 매개 변수는 자신의 세션 쿼리할 때 또는 특정 사용자의 세션-서버를 쿼리 하는 경우에 사용 됩니다. |
-| 비활성| 부울| 사용자가 수락 하지만 적극적으로 재생 되지 세션을 포함 하는 경우 사용자가 "준비" 하지만 "비활성" 세션 비활성으로 계산 됩니다. |
-| 개인| 부울| 개인 세션을 포함 하는 경우 true입니다. 이 매개 변수는 자신의 세션 쿼리할 때 또는 특정 사용자의 세션-서버를 쿼리 하는 경우에 사용 됩니다. |
-| visibility| 문자열| 세션에 대 한 가시성 상태입니다. 가능한 값은 <b>MultiplayerSessionVisibility에</b>의해 정의 됩니다. 이 매개 변수는 "열기"로 설정 되 면 쿼리만 열려 있는 세션을 포함 해야 합니다. <i>개인</i> 매개 변수를 설정 해야 "개인"으로 설정 되 면 true로 합니다. |
-| 버전| 32 비트 부호 있는 정수| 포함 되어야 하는 최대 세션 버전입니다. 예를 들어 2의 주요 세션 버전과 해당 세션을 지정 하는 값 2 또는 덜 포함 되어야 합니다. 버전 번호는 요청 계약 버전 mod 100 보다 작거나 이어야 합니다. |
+| 키워드| string| 예를 들어 "foo"가, 키워드는는에 있어야 세션이 나 템플릿 검색 하려는 경우. |
+| xuid| 64 비트 부호 없는 정수| 예를 들어 "123", 세션 쿼리에서 포함 하도록 하는 Xbox 사용자 ID입니다. 기본적으로 사용자를 포함 하는 세션에서 활성 상태 여야 합니다. |
+| 예약| 부울| 세션을 포함 하려면 사용자 예약 된 플레이어로 설정 되어 있지만 되는 활성 플레이어에 가입 되지 않은 했습니다. 이 매개 변수는 자신의 세션 쿼리할 때 또는 특정 사용자의 세션-서버를 쿼리 하는 경우에 사용 됩니다. |
+| 비활성| 부울| 사용자는 수락 하지만 적극적으로 재생 되지 세션을 포함 하는 경우 사용자가 "준비" 하지만 "비활성" 세션 비활성으로 계산 됩니다. |
+| 개인| 부울| 개인 세션을 포함 하는 경우 이 매개 변수는 자신의 세션 쿼리할 때 또는 특정 사용자의 세션-서버를 쿼리 하는 경우에 사용 됩니다. |
+| visibility| 문자열| 세션에 대 한 상태를 표시 합니다. 가능한 값은 <b>MultiplayerSessionVisibility에</b>의해 정의 됩니다. 이 매개 변수는 "열기"로 설정 되 면 쿼리만 열려 있는 세션을 포함 해야 합니다. <i>개인</i> 매개 변수를 설정 해야 "개인"으로 설정 되 면 true로 합니다. |
+| 버전| 32 비트 부호 있는 정수| 포함 되어야 하는 최대 세션 버전입니다. 예를 들어 2의 주요 세션 버전을 사용 하 여 해당 유일한 세션을 지정 하는 값 2 또는 덜 포함 되어야 합니다. 버전 번호는 요청의 계약 버전 mod 100 보다 작거나 이어야 합니다. |
 | 시험| 32 비트 부호 있는 정수| 검색할 세션의 최대 수입니다. 이 숫자는 0과 100 사이 여야 합니다. |
 
 
@@ -68,7 +66,7 @@ ms.locfileid: "7572692"
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
-MPSD에 적용 되는 서비스에서 HTTP 상태 코드를 반환 합니다.  
+서비스는 MPSD에 적용 되는 HTTP 상태 코드를 반환 합니다.  
 <a id="ID4EIF"></a>
 
 
@@ -97,7 +95,7 @@ MPSD에 적용 되는 서비스에서 HTTP 상태 코드를 반환 합니다.
 
 ## <a name="response-body"></a>응답 본문
 
-핸들은 각 구조에 포함 된 고유 ID를 사용 하 여 핸들 구조의 배열로 검색 됩니다.
+각 구조에 포함 된 고유 ID를 사용 하 여 핸들 핸들 구조의 배열을 검색 됩니다.
 
 
 ```cpp

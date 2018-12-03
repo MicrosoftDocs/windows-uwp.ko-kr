@@ -2,25 +2,23 @@
 title: 목록 URI
 assetID: 84dcbd11-86a0-8a1e-7db9-bcecf9b7f853
 permalink: en-us/docs/xboxlive/rest/atoc-reference-lists.html
-author: KevinAsgari
 description: " 목록 URI"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 63c84b68f990392d17342e333b18e5f5d38d2266
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a6f1e743542e70ee96ad93ee1cf2a7f2c3ed7158
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7579569"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8326393"
 ---
 # <a name="lists-uris"></a>목록 URI
  
-이 섹션에서는 *핀*에 대 한 Xbox Live 서비스에서 유니버설 리소스 식별자 (URI) 주소 및 관련된 하이퍼텍스트 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
+이 섹션에서는 *핀*에 대 한 Xbox Live 서비스에서 유니버설 URI (Resource Identifier) 주소 및 관련된 Hypertext 전송 프로토콜 (HTTP) 메서드에 대 한 세부 정보를 제공 합니다.
  
-게임 및 Xbox 360, Windows Phone 장치의 SmartGlass, 또는 Xbox.com에서 실행 중인 응용 프로그램에이 서비스를 사용할 수 있습니다.
+게임 및 Xbox 360에서, Windows Phone 디바이스, SmartGlass, 또는 Xbox.com에서 실행 중인 응용 프로그램에이 서비스를 사용할 수 있습니다.
  
 이러한 Uri에 대 한 도메인 eplists.xboxlive.com입니다.
  
@@ -35,7 +33,7 @@ ms.locfileid: "7579569"
 
 [/users/xuid(xuid)/lists/PINS/{listname}/ContainsItems](uri-usersxuidlistspinslistnamecontainsitems.md)
 
-&nbsp;&nbsp;전체 목록을 검색 하지 않고 일련의 항목 (itemId에 의해 지정) 목록에 포함 되어 있는지 여부를 결정 합니다.
+&nbsp;&nbsp;전체 목록을 검색 하지 않고 일련의 항목 (itemId 지정한) 목록에 포함 되어 있는지 여부를 결정 합니다.
 
 [/users/xuid(xuid)/lists/PINS/{listname}/index({index})?insertIndex={insertIndex}](uri-usersxuidlistspinslistnameindex.md)
 

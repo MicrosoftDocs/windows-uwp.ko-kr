@@ -2,19 +2,17 @@
 title: POST (/system/strings/validate)
 assetID: 6a59bc0b-8edd-87bf-efaf-f16efa3bedf7
 permalink: en-us/docs/xboxlive/rest/uri-systemstringsvalidatepost.html
-author: KevinAsgari
 description: " POST (/system/strings/validate)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c3364d3020627aa0d0826a390bf5c4f0b633af8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 70e86567f449674c7a046e072437d9ee715dc6d6
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7555075"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8340228"
 ---
 # <a name="post-systemstringsvalidate"></a>POST (/system/strings/validate)
 유효성 검사에 대 한 문자열의 배열 받아들이고 같은 크기의 결과 배열을 반환 합니다. 이러한 Uri에 대 한 도메인은 `client-strings.xboxlive.com`.
@@ -30,14 +28,14 @@ ms.locfileid: "7555075"
  
 ## <a name="remarks"></a>설명
  
-각 결과 해당 문자열 Xbox LIVE에 허용 되 고 해당 하는 경우 잘못 된 문자열을 포함 하는지 여부를 나타냅니다.
+각 결과 해당 문자열 Xbox LIVE에 허용 되는 해당 하는 경우 잘못 된 문자열을 포함 하는지 여부를 나타냅니다.
  
 동일한 문자열은 항상 동일한 결과 제공 됩니다. 실패 결과 받을 경우 결과 분석 하 고 그에 따라 문자열을 수정 합니다.
  
  
 
 > [!NOTE] 
-> <b>VerifyStringResult</b> 결과만 문자열에서 잘못 된 첫 번째 단어를 보고 합니다. 단어 문자열 내에서 잘못 된 추가 수 있습니다. 문자열을 사용할 수 있도록 잘못 된 단어를 교체 하려는 경우에 잘못 된 단어 또는 하위 문자열을 대체 하 고 잘못 된 문자열을 추가 하는 문자열을 다시 확인 해야 합니다.  
+> <b>VerifyStringResult</b> 결과만 문자열에서 잘못 된 첫 번째 단어를 보고 합니다. 문자열에서 단어를 잘못 된 추가 수 있습니다. 문자열을 사용할 수 있도록 잘못 된 단어를 교체 하려는 경우에 잘못 된 단어 또는 하위 문자열을 대체 하 고 잘못 된 문자열을 추가 하는 문자열을 다시 확인 해야 합니다.  
 
  
   
@@ -83,7 +81,7 @@ ms.locfileid: "7555075"
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | 

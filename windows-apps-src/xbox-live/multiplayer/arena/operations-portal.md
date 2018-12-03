@@ -1,18 +1,16 @@
 ---
 title: Xbox 아레나 작업 포털
-author: KevinAsgari
 description: 작업 포털을 사용 하 여 Xbox 토너먼트를 관리 하는 방법을 알아봅니다.
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 아레나, 토너먼트, 작업, 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: c7d7aa9abe1aa78241e8920a81dda681b6256559
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0203625c9ea14ec185b8b67ff655719e99f067cf
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7570441"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8328922"
 ---
 # <a name="xbox-arena-operations-portal"></a>Xbox 아레나 작업 포털
 
@@ -27,16 +25,16 @@ Xbox 아레나 작업 포털 만들기 및 관리에 통합 된 Xbox 아레나 �
 
 ## <a name="features"></a>기능
 
-Xbox 아레나 포털 플레이어 만든 토너먼트 이외의 기능을 제공합니다. 다음 목록은 토너먼트 만든 플레이어를 통해 제공 되는 추가 기능을 설명 합니다.
+Xbox 아레나 포털 플레이어 만든 토너먼트 이외의 기능을 제공합니다. 다음 목록에서는 플레이어 토너먼트 생성을 통해 제공 되는 추가 기능을 설명 합니다.
 
-#### <a name="tournament-creation-features"></a>토너먼트 만들기 기능은 다음과 같습니다.
+#### <a name="tournament-creation-features"></a>토너먼트 생성 기능:
 
 * 초대 전용 토너먼트 만들기
 * 어떤 국가 및 지역은 토너먼트에 참여할 수를 지정 합니다.
 * 파트너 센터를 통해 게시 아트 자산을 사용자 지정 된 선택
-* 상이 토너먼트 사용 약관 및 prizing 플래그 (토너먼트는 여러분에 대 한 상품 보상는 플레이어를 나타내는 아이콘) 설정
-* 제목 또는 일치 하는 설정에 대 한 관련된 제목 서비스에 의해 해석 되는 사용자 지정 된 게임 모드 만들기
-* 개발자 샌드박스에서 토너먼트 만들기
+* Prizing 플래그 (토너먼트는 여러분에 대 한 상품 보상는 플레이어를 나타내는 아이콘) 및 상품 토너먼트 사용 약관 설정
+* 제목이 나 일치 하는 설정에 대 한 관련된 제목 서비스에서 해석 하는 사용자 지정 된 게임 모드 만들기
+* 개발자 샌드박스의 토너먼트 만들기
 
 #### <a name="tournament-management-features"></a>토너먼트 관리 기능은 다음과 같습니다.
 
@@ -46,9 +44,9 @@ Xbox 아레나 포털 플레이어 만든 토너먼트 이외의 기능을 제�
 
 ## <a name="get-setup-with-the-xbox-arena-operations-portal"></a>Xbox 아레나 작업 포털 설정
 
-설치 프로그램을 가져오려면 연산자로 포털에서 등록 하는 방법에 대 한 자세한 내용은 Microsoft 계정 관리자에 게 문의 해야 합니다. 팀의 구성원은 Microsoft 계정을 사용 하 여 로그인 하는 데 사용할 수 있는 링크를 제공할 수 있습니다.
+설치 프로그램을 가져오려면 연산자로 포털에서 등록 하는 방법에 대 한 자세한 내용은 Microsoft 계정 관리자에 게 문의 해야 합니다. 팀의 구성원은 자신의 Microsoft 계정을 사용 하 여 로그인 하는 데 사용할 수 있는 링크를 제공할 수 있습니다.
 
-로그인 후 Microsoft 계정 관리자를 자동으로 생성 연산자를 가져오는 단계 진행 됩니다. 여기에서 초기 로그인 프로세스를 진행 되 면 팀에서 추가 사용자를 추가할 수 있습니다. 포털의 역할 관리 섹션을 통해 팀의 각 구성원에 대해 개별화 된 액세스를 설정할 수도 있습니다.
+로그인 후 Microsoft 계정 관리자를 자동으로 생성 연산자를 가져오는 단계 진행 됩니다. 여기에서 초기 로그인 프로세스를 통과 한 후 팀에서 추가 사용자를 추가할 수 있습니다. 포털의 역할 관리 섹션을 통해 팀의 각 구성원에 대해 개별화 된 액세스를 설정할 수도 있습니다.
 
 > [!IMPORTANT]  
-> 여러 사용자 계정을 공유를 만들 수는 없습니다, 각 사용자 해야 자신의 개별 자격 증명으로 로그인 합니다.
+> 여러 사용자 계정을 공유를 만들 수는 없습니다, 해야 하는 각 사용자를 자신의 개별 자격 증명으로 로그인 합니다.

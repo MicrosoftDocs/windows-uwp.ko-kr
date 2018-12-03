@@ -1,19 +1,17 @@
 ---
 title: Xbox Live 서비스 API 문제 해결
-author: KevinAsgari
 description: Xbox Live Api를 사용 하 여 문제를 해결 하는 동안 추가 오류 정보를 기록 하는 방법을 알아봅니다.
 ms.assetid: 3827bba1-902f-4f2d-ad51-af09bd9354c4
-ms.author: kevinasg
 ms.date: 04/04/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, 하나는 xbox, 문제 해결, 오류, 로그
 ms.localizationpriority: medium
-ms.openlocfilehash: fad6a36c3678a6b3c48dcbd78d9c19ed843a118f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 67735d83e5ff301ee4434a6917fce814cabe8309
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563665"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8341295"
 ---
 # <a name="troubleshooting-the-xbox-live-apis"></a>Xbox Live Api 문제 해결
 
@@ -23,7 +21,7 @@ Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진�
 
 ### <a name="c"></a>C++
 
-다음 코드 예제에서는 응답 로깅을 사용 및 디버그 오류 수준을 Verbose (설정할 수도 있습니다 디버그 오류 수준을 추적 호출이 실패만 표시 하려면 오류 또는 추적을 사용 하지 않도록 설정 안 함)로 설정 합니다. Visual Studio에서 프로젝트를 실행할 때 결과 디버그 출력 창에 전송 됩니다.  
+다음 코드 예제에서는 응답 로깅을 사용 및 디버그 오류 수준을 Verbose (설정할 수도 있습니다 디버그 오류 수준을 추적 호출이 실패만 표시 하려면 오류 또는 추적을 사용 하지 않도록 설정 꺼짐)으로 설정 합니다. Visual Studio에서 프로젝트를 실행할 때 결과 디버그 출력 출력 창에 전송 됩니다.  
 
 ```cpp
 
@@ -33,7 +31,7 @@ Xbox Live 서비스 API 계층에서 오류만을 사용 하 여 오류를 진�
                 );
 ```
 
-디버그 출력 고유한 로그 파일을 리디렉션할 수도 되도록 합니다.
+디버그 출력 고유한 로그 파일을 리디렉션할 수도 같이:
 
 ```cpp
 

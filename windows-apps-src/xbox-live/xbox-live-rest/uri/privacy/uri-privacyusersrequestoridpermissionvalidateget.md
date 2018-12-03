@@ -2,19 +2,17 @@
 title: GET (/users/{requestorId}/permission/validate)
 assetID: 8d22c668-af9a-1d24-8d65-830c2ce913d7
 permalink: en-us/docs/xboxlive/rest/uri-privacyusersrequestoridpermissionvalidateget.html
-author: KevinAsgari
 description: " GET (/users/{requestorId}/permission/validate)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0ec0b8b4de64a5580ffdd83407602ee410da9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 07ccac63b3e6681ea35405314b0cd8b93aa60f9a
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7552610"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8341667"
 ---
 # <a name="get-usersrequestoridpermissionvalidate"></a>GET (/users/{requestorId}/permission/validate)
 대상 사용자를 사용 하 여 지정 된 작업을 수행 하는 사용자가 허용 되는지 여부에 대 한 예 또는 아니요 응답을 가져옵니다.
@@ -44,7 +42,7 @@ ms.locfileid: "7552610"
 
 | 매개 변수| 유형| 설명|
 | --- | --- | --- | --- | --- | --- |
-| 설정| 문자열 열거형| 검사할 PermissionId 값입니다. 예제 값: "CommunicateUsingText"입니다.|
+| 설정| 문자열 열거형| 검사할 PermissionId 값입니다. 예제 값: "CommunicateUsingText".|
 | target| string| 수행할 작업은 대상 사용자의 식별자입니다. 가능한 값은 <code>xuid({xuid})</code>. 예제 값: <code>xuid(0987654321)</code>|
 
 <a id="ID4EDC"></a>
@@ -54,7 +52,7 @@ ms.locfileid: "7552610"
 
 권한 부여 클레임 사용 | 클레임| 유형| 필수 여부| 예제 값|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Xuid| 64 비트 부호 있는 정수| 예| 1234567890|
+| Xuid| 64 비트의 부호 있는 정수| 예| 1234567890|
 
 <a id="ID4EID"></a>
 
@@ -71,19 +69,19 @@ ms.locfileid: "7552610"
 
 ## <a name="request-body"></a>요청 본문
 
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
 
 <a id="ID4E5E"></a>
 
 
 ## <a name="http-status-codes"></a>HTTP 상태 코드
 
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
 
 | Code| 이유 구문| 설명|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 200| 확인| 세션을 검색 했습니다.|
-| 400| 요청이 잘못되었습니다.| 예: 잘못 된 설정 Id, 잘못 된 Uri, 등.|
+| 400| 요청이 잘못되었습니다.| 예: 잘못 된 설정 Id, 잘못 된 Uri 등.|
 | 404| URI에 지정 된 사용자가 존재 하지 않습니다.| 지정된 된 리소스를 찾을 수 없습니다.|
 
 <a id="ID4ETG"></a>

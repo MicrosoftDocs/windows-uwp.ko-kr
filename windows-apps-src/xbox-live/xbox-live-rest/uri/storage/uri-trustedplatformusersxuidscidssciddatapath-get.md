@@ -2,19 +2,17 @@
 title: GET (/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path})
 assetID: 0ab5de2f-35cd-1712-8c07-2049f5f27daf
 permalink: en-us/docs/xboxlive/rest/uri-trustedplatformusersxuidscidssciddatapath-get.html
-author: KevinAsgari
 description: " GET (/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path})"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: acd52695c8e691e99188e546c81f1d90d46f35b1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a045faf4cd81c4a7e0f1c9ca51ba454bb972b9f3
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7574145"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8329748"
 ---
 # <a name="get-trustedplatformusersxuidxuidscidssciddatapath"></a>GET (/trustedplatform/users/xuid({xuid})/scids/{scid}/data/{path})
 지정된 된 경로에 파일 정보를 나열합니다. 이러한 Uri에 대 한 도메인은 `titlestorage.xboxlive.com`.
@@ -36,7 +34,7 @@ ms.locfileid: "7574145"
 | --- | --- | --- | 
 | xuid| 64 비트의 부호 없는 정수| Xbox 사용자 ID (XUID) 플레이어의 요청 하 게 합니다.| 
 | 서비스 안내| guid| 조회 서비스 구성의 ID입니다.| 
-| path| string| 반환할 데이터 항목의 경로입니다. 일치 하는 모든 디렉터리와 하위 가져오기 반환 됩니다. 사용할 수 있는 문자 (A-z) 대문자, 소문자 (a-z), 숫자 (0-9), 밑줄 (_) 및 슬래시 (/)를 포함합니다. 비어 있을 수 있습니다. 최대 길이는 256 자입니다.| 
+| path| string| 반환할 데이터 항목의 경로입니다. 일치 하는 모든 디렉터리와 하위 가져오기 반환 됩니다. 사용할 수 있는 문자 (A-z) 대문자, 소문자 (a-z), 숫자 (0-9), 밑줄 (_) 및 슬래시 (/)를 포함 합니다. 비어 있을 수 있습니다. 256의 최대 길이입니다.| 
   
 <a id="ID4ECB"></a>
 
@@ -45,7 +43,7 @@ ms.locfileid: "7574145"
  
 | 매개 변수| 유형| 설명| 
 | --- | --- | --- | --- | --- | --- | 
-| skipItems| int| 예를 들어 컬렉션에서 N + 1에서 시작 하는 항목을 건너뛰고 N 항목을 반환 합니다.| 
+| skipItems| int| 예를 들어 컬렉션에 N + 1에서 시작 하는 항목을 건너뛰고 N 항목을 반환 합니다.| 
 | continuationToken| 문자열| 지정 된 연속 토큰에서 시작 하는 항목을 반환 합니다. ContinuationToken 매개 변수 모두 제공 되는 경우 skipItems 보다 우선 합니다. 즉, continuationToken 매개 변수가 있으면 skipItems 매개 변수는 무시 됩니다.| 
 | maxItems| int| 최대 skipItems continuationToken 항목의 범위를 반환할 수와 결합할 수 있는 컬렉션에서 반환할 항목 수입니다. 서비스 수 기본값을 제공 maxItems 존재 하지 maxItems, 보다 적은 반환 될 수 있는 경우 결과의 마지막 페이지 아직 반환 되지 않은 경우에 합니다. | 
   
@@ -54,7 +52,7 @@ ms.locfileid: "7574145"
  
 ## <a name="authorization"></a>권한 부여 
  
-요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자에 게가이 리소스에 액세스 하는 허용 되지 않으면, 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스는 401 무단된 응답을 반환 합니다. 
+요청이 유효한 Xbox LIVE 권한 부여 헤더를 포함 해야 합니다. 호출자가이 리소스에 액세스 하는 허용 되지 않으면, 서비스는 403 사용할 수 없음 응답을 반환 합니다. 헤더 잘못 되었거나 누락 된 경우 서비스는 401 무단된 응답을 반환 합니다. 
   
 <a id="ID4EDD"></a>
 
@@ -71,14 +69,14 @@ ms.locfileid: "7574145"
  
 ## <a name="request-body"></a>요청 본문 
  
-개체가이 요청 본문에 전송 됩니다.
+개체가이 요청의 본문에 전송 됩니다.
   
 <a id="ID4EZE"></a>
 
  
 ## <a name="http-status-codes"></a>HTTP 상태 코드 
  
-서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스와 함께 사용 하는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
+서비스는이 리소스에서이 메서드를 사용 하 여 요청에 대 한 응답으로이 섹션의 상태 코드 중 하나를 반환 합니다. Xbox Live 서비스 사용 되는 표준 HTTP 상태 코드의 전체 목록을, [표준 HTTP 상태 코드](../../additional/httpstatuscodes.md)를 참조 하세요.
  
 | Code| 이유 구문| 설명| 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
@@ -87,11 +85,11 @@ ms.locfileid: "7574145"
 | 400| 잘못 된 요청 | 서비스 잘못 된 요청을 이해 하지 못했습니다. 일반적으로 잘못 된 매개 변수입니다.| 
 | 401| 권한 없음 | 필요한 사용자 인증을 요청 합니다.| 
 | 403| 금지 | 사용자 또는 서비스에 대 한 요청을 허용 되지 않습니다.| 
-| 404| 찾을 수 없습니다. | 지정된 된 리소스를 찾을 수 없습니다.| 
-| 406| 허용할 수 없음 | 리소스 버전이 지원 되지 않습니다.| 
+| 404| 찾을 수 없음 | 지정된 된 리소스를 찾을 수 없습니다.| 
+| 406| 허용할 수 없음 | 리소스 버전은 지원 되지 않습니다.| 
 | 408| 요청 시간 제한 | 요청을 완료 하는 데 너무 오래 걸렸습니다.| 
 | 500| 내부 서버 오류 | 서버에서 요청을 수행할 수 있는 예상치 못한 상황이 발생 했습니다.| 
-| 503| 사용할 수 없는 서비스 | 요청을 제한, 클라이언트 재시도 값 (예: 5 초)을 초에서 후 다시 시도 합니다.| 
+| 503| 사용할 수 없는 서비스 | 요청을 제한, 초 (예: 5 초) 클라이언트를 다시 시도 값 후 다시 시도 합니다.| 
   
 <a id="ID4EMCAC"></a>
 

@@ -2,22 +2,20 @@
 title: /users/xuid({xuid})/inbox
 assetID: 352740c6-42e2-0000-495d-bf384dc3e941
 permalink: en-us/docs/xboxlive/rest/uri-usersxuidinbox.html
-author: KevinAsgari
 description: " /users/xuid({xuid})/inbox"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 890ee500cc29ca6766830e7a8b648865dfbb159d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8ded70b32dfd291d17a43a1741b26710f681a397
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7563863"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8329862"
 ---
 # <a name="usersxuidxuidinbox"></a>/users/xuid({xuid})/inbox
-사용자에 대 한 액세스의 Xbox LIVE 서비스 받은 편지함 메시지를 제공 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
+Xbox LIVE 서비스에 대 한 사용자에 대 한 액세스 받은 편지함 메시징 제공 합니다. 이러한 Uri에 대 한 도메인은 `msg.xboxlive.com`.
  
   * [URI 매개 변수](#ID4EV)
  
@@ -42,7 +40,7 @@ ms.locfileid: "7563863"
 
 [DELETE (/users/xuid({xuid})/inbox/{messageId})](uri-usersxuidinboxmessageiddelete.md)
 
-&nbsp;&nbsp;사용자의 받은 편지함의 사용자 메시지를 삭제합니다.
+&nbsp;&nbsp;사용자의 받은 편지함에서 사용자 메시지를 삭제합니다.
 
 [GET (/users/xuid({xuid})/inbox/{messageId})](uri-usersxuidinboxmessageidget.md)
 

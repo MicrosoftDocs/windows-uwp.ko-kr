@@ -2,19 +2,17 @@
 title: /media/{marketplaceId}/crossMediaGroupSearch
 assetID: 5c8c28a1-a492-2817-7164-eef9ae2f3fd1
 permalink: en-us/docs/xboxlive/rest/uri-localecrossmediagroupsearch.html
-author: KevinAsgari
 description: " /media/{marketplaceId}/crossMediaGroupSearch"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a5a672c2b9abf986ac46850c8d43ad9ff927871
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 301c350ad757546d03eaf5fce3e09692db632f34
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7566358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8342543"
 ---
 # <a name="mediamarketplaceidcrossmediagroupsearch"></a>/media/{marketplaceId}/crossMediaGroupSearch
 여러 다른 미디어 그룹에서 항목을 액세스 합니다. 이러한 Uri에 대 한 도메인은 `eds.xboxlive.com`.

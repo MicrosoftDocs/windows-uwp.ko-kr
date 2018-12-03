@@ -2,25 +2,23 @@
 title: MultiplayerActivityDetails(JSON)
 assetID: f982aa5e-2694-4ef9-bc55-6c099a3cf9ec
 permalink: en-us/docs/xboxlive/rest/json-multiplayeractivitydetails.html
-author: KevinAsgari
 description: " MultiplayerActivityDetails(JSON)"
-ms.author: kevinasg
 ms.date: 10/12/2017
 ms.topic: article
 keywords: xbox live, xbox, 게임, uwp, windows 10, xbox one
 ms.localizationpriority: medium
-ms.openlocfilehash: a23b4f984bc7edef77af7e020b62fcc7d8fcbf9f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 188bcebb8d6bff879f30dcc83d7039fbcbfae0b2
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2018
-ms.locfileid: "7559442"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "8334412"
 ---
 # <a name="multiplayeractivitydetails-json"></a>MultiplayerActivityDetails(JSON)
 **Microsoft.Xbox.Services.Multiplayer.MultiplayerActivityDetails**나타내는 JSON 개체입니다. 
 
 > [!NOTE] 
-> 이 개체 2015 멀티 플레이어에서 구현 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 용도가 템플릿 계약 104/105 이상와 함께 사용 합니다.  
+> 이 개체 2015 멀티 플레이어에서 구현 되 고 및 나중 멀티 플레이 해당 버전에만 적용 됩니다. 템플릿 계약 104/105 이상을 사용 하 여 사용 하기 위해 위함입니다.  
 
  
 <a id="ID4ES"></a>
@@ -32,11 +30,11 @@ MultiplayerActivityDetails JSON 개체에는 다음 사양을 있습니다.
 | 멤버| 유형| 설명| 
 | --- | --- | --- | --- | 
 | SessionReference| MultiplayerSessionReference| 세션에 대 한 개인 식별 정보를 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionReference</b> 개체입니다.| 
-| HandleId| 64 비트 부호 없는 정수| 해당 활동에 해당 핸들 ID입니다.| 
+| HandleId| 64 비트 부호 없는 정수| 활동에 해당 핸들 ID입니다.| 
 | TitleId| 32 비트 부호 없는 정수| 해당 활동에 가입 하기 위해 시작 해야 하는 제목 ID입니다.| 
 | 표시 여부| MultiplayerSessionVisibility| 세션의 표시 상태를 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionVisibility</b> 값입니다.| 
-| JoinRestriction| MultiplayerSessionJoinRestriction| 세션에 대 한 조인 제한 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionJoinRestriction</b> 값입니다. 이 제한 사항은 표시 여부 필드 "열기"로 설정 된 경우 적용 됩니다.| 
-| 닫힘| 부울 값| 세션이 false 및 결합 하 고, 그렇지 않으면 닫히면 일시적으로 true입니다.| 
+| JoinRestriction| MultiplayerSessionJoinRestriction| 세션에 대 한 가입 제한 나타내는 <b>Microsoft.Xbox.Services.Multiplayer.MultiplayerSessionJoinRestriction</b> 값입니다. 표시 여부 필드 "열기"로 설정 된 경우이 제한에 적용 됩니다.| 
+| 닫힘| 부울 값| 닫혀 있는 경우 세션 일시적으로 false 및 결합 하 고, 그렇지 않은 경우 true입니다.| 
 | OwnerXboxUserId| 64 비트 부호 없는 정수| 해당 활동을 소유 하는 멤버의 Xbox 사용자 ID입니다.| 
 | MaxMembersCount| 32 비트 부호 없는 정수| 총 슬롯의 수입니다.| 
 | MembersCount| 32 비트 부호 없는 정수| 취소가 슬롯의 수입니다.| 
