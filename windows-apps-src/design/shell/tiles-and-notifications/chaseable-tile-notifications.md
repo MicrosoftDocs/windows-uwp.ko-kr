@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp, 추적형 타일, 라이브 타일, 추적형 타일 알림
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344928"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478162"
 ---
 # <a name="chaseable-tile-notifications"></a>추적형 타일 알림
 
@@ -111,7 +111,7 @@ LaunchActivatedEventArgs 개체에는 추적형 알림을 활성화하는 [TileA
 
 [TileActivatedInfo 개체](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)에는 마지막 15분 내에 타일에 표시되었던 알림 목록이 수록된 [RecentlyShownNotifications](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo.RecentlyShownNotifications)라는 속성이 포함되어 있습니다. 목록의 첫 번째 항목은 현재 타일에 있는 알림을 나타내며, 후속 항목은 사용자가 현재 알림 이전에 본 알림을 나타냅니다. 타일이 삭제된 경우 이 목록은 비어 있습니다.
 
-각 ShownTileNotificationhas는 Argumentsproperty 합니다. Argumentsproperty 페이로드는 argumentsstring 포함 되지 않은 경우 null 또는 타일 알림 페이로드를에서 argumentsstring 초기화 됩니다.
+각 ShownTileNotificationhas는 Argumentsproperty 합니다. 타일 알림 페이로드에에서 argumentsstring 초기화 또는 페이로드는 argumentsstring 포함 되지 않은 경우 null는 Argumentsproperty 됩니다.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)

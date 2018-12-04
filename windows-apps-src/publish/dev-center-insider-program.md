@@ -7,15 +7,15 @@ keywords: Windows 10 uwp, 참가자, 개발 센터 참가자, 미리 보기 기�
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: medium
 ms.openlocfilehash: ad70e986a35767c687d863a7db0754bd980be5db
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323079"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478007"
 ---
 # <a name="dev-center-insider-program"></a>개발자 센터 참가자 프로그램
 
-[등록 된 개발자는](http://go.microsoft.com/fwlink/?LinkID=615100),으로에서는 개발자 센터 참가자 프로그램에 참여 하 여 사용할 수 있도록 하는 기능에 영향을 미칠 수 있습니다. 이 프로그램에 참여하면 모든 개발자가 사용할 수 있도록 제공되기 전에 새로운 기능을 미리 사용해 볼 수 있습니다. 의견을 보내주시면에 이러한 기능에 대시보드의 오른쪽 위 모서리에 있는 물음표 아이콘 아래의 피드백 링크를 사용 하 여는 것이 좋습니다. 개발자 센터 참가자로부터 받은 모든 피드백은 면밀히 검토된 후 우선적으로 고려됩니다.
+[등록 된 개발자는](http://go.microsoft.com/fwlink/?LinkID=615100),으로에서는 개발자 센터 참가자 프로그램에 참여 하 여 사용할 수 있도록 하는 기능에 영향을 미칠 수 있습니다. 이 프로그램에 참여하면 모든 개발자가 사용할 수 있도록 제공되기 전에 새로운 기능을 미리 사용해 볼 수 있습니다. 사용자 의견을 제시할 이러한 기능에 대시보드의 오른쪽 위 모서리에 있는 물음표 아이콘 아래의 피드백 링크를 사용 하 여 하는 것이 좋습니다. 개발자 센터 참가자로부터 받은 모든 피드백은 면밀히 검토된 후 우선적으로 고려됩니다.
 
 프로그램에 참여 하려면 **계정 설정** 페이지에서 옵트인 합니다. 언제든지 옵트아웃(opt out)할 수 있습니다.
 
