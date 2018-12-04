@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 7818d9e251233c757618d60abaa156d294afb4b5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340007"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476630"
 ---
 # <a name="define-your-experiment-in-partner-center"></a>파트너 센터에서 실험 정의
 
-[프로젝트를 만들고 파트너 센터에서 원격 변수를 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 하 고 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 준비가 프로젝트에서 실험을 만듭니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
+[프로젝트를 만들고 파트너 센터에서 원격 변수를 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 하 고 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 프로젝트에서 실험을 만들 준비가 됩니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
 
 실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
@@ -87,7 +87,7 @@ ms.locfileid: "8340007"
 
 ## <a name="next-steps"></a>다음 단계
 
-파트너 센터에서 실험을 정의 하 고 앱에서 실험을 코딩 [실행 하 고 파트너 센터에서 실험을 관리할](manage-your-experiment.md)준비가 됩니다.
+파트너 센터에서 실험을 정의 하 고 앱에서 실험을 코딩 한 후 실행 하 [고 파트너 센터에서 실험을 관리할](manage-your-experiment.md)준비가 됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 

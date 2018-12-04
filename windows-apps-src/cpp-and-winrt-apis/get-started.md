@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 얻기, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: cc98f61acc3b5dccdc4869b646337fdf9a6e701a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345967"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476991"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
-사용 하 여 속도를 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt),이 항목은 단순한 코드 예제를 기반으로 새 안내 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트. 이 항목에서는 또한 표시 하는 방법을 [추가 C + + /winrt 지원을 Windows 데스크톱 응용 프로그램 프로젝트를](#modify-a-windows-desktop-application-project-to-add-cwinrt-support)합니다.
+사용 하 여 속도를 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt),이 항목은 단순한 코드 예제를 기반으로 새 안내 **Windows 콘솔 응용 프로그램 (C + + WinRT)** 프로젝트입니다. 이 항목에서는 또한 표시 하는 방법을 [추가 C + + /winrt 지원을 Windows 데스크톱 응용 프로그램 프로젝트를](#modify-a-windows-desktop-application-project-to-add-cwinrt-support)합니다.
 
 > [!IMPORTANT]
-> Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803) 한 다음 새로 만든 C + + WinRT 프로젝트 컴파일 오류가 있는 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 다른 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 C/C++** > **언어** >  **추가 옵션****명령줄** 다음 삭제).
+> Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803) 한 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류가 있는 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 및 기타 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** > **언어** >  **추가 옵션****명령줄** 삭제).
 
 ## <a name="a-cwinrt-quick-start"></a>C++/WinRT 빠른 시작
 
@@ -118,19 +118,19 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt
 
 ## <a name="modify-a-windows-desktop-application-project-to-add-cwinrt-support"></a>수정 Windows 데스크톱 응용 프로그램 프로젝트를 추가 하는 C + + /winrt 지원은
 
-이 섹션 표시 추가 하는 방법을 C + + /winrt 지원을 포함 될 수 있는 Windows 데스크톱 응용 프로그램 프로젝트를 합니다. 하지 않는 경우 기존 Windows 데스크톱 응용 프로그램 프로젝트를 만드는 첫 번째 하 여 이러한 단계를 실행할 수 있습니다. 예를 들어 Visual Studio를 열고 **Visual c + +** 만들기 \> **Windows 데스크톱** \> **Windows 데스크톱 응용 프로그램** 프로젝트.
+이 섹션 표시 추가 하는 방법을 C + + /winrt 지원을 포함 될 수 있는 Windows 데스크톱 응용 프로그램 프로젝트를 합니다. 하지 않는 경우 기존 Windows 데스크톱 응용 프로그램 프로젝트를 만드는 첫 번째 하 여 이러한 단계를 실행할 수 있습니다. 예를 들어 Visual Studio를 열고 **Visual c + +** 만들기 \> **Windows 데스크톱** \> **Windows 데스크톱 응용 프로그램** 프로젝트입니다.
 
 ### <a name="set-project-properties"></a>프로젝트 속성 설정
 
-프로젝트 속성 **일반**로 이동 \> **Windows SDK 버전**선택 **모든 구성** 및 **모든 플랫폼**입니다. **Windows SDK 버전** 10.0.17134.0 (Windows 10, 버전 1803)으로 설정 되어 있는지 확인 이상.
+프로젝트 속성 **일반**로 이동 \> **Windows SDK 버전**및 선택 **모든 구성** 및 **모든 플랫폼**입니다. **Windows SDK 버전** 10.0.17134.0 (Windows 10, 버전 1803)으로 설정 되어 있는지 확인 이상.
 
 사용자는 영향을 받지 않도록 확인 [새 프로젝트 컴파일되지 않습니다 이유?](/windows/uwp/cpp-and-winrt-apis/faq)합니다.
 
-때문에 C + + /winrt가 C + + 17 표준의 기능을 사용, **C/c + +** 프로젝트 속성을 설정 > **언어** > **c + + 언어 표준** *ISO C + + 17 표준 (/ /std: + + 17)*.
+때문에 C + + /winrt가 C + + 17 표준의 기능을 사용, **C/c + +** 프로젝트 속성을 설정 > **언어** > **c + + 언어 표준** *ISO C + + 17 표준 (/ /std: + + 17)* 합니다.
 
 ### <a name="the-precompiled-header"></a>미리 컴파일된 헤더
 
-이름 바꾸기에 `stdafx.h` 및 `stdafx.cpp` 를 `pch.h` 및 `pch.cpp`각각 합니다. **C/c + +** 프로젝트 속성을 설정 > **미리 컴파일된 헤더** >  *pch.h***미리 컴파일된 헤더 파일** 입니다.
+이름 변경에 `stdafx.h` 및 `stdafx.cpp` 를 `pch.h` 및 `pch.cpp`각각 합니다. **C/c + +** 프로젝트 속성을 설정 > **미리 컴파일된 헤더** >  *pch.h***미리 컴파일된 헤더 파일** 입니다.
 
 모든 replace `#include "stdafx.h"` 와 `#include "pch.h"`.
 
@@ -146,11 +146,11 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT가 [**winrt
 
 C + + /winrt 언어 프로젝션에 특정 Windows 런타임 무료 (비 구성원) 함수 및 진입점에 따라 달라이 필요한 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리에 연결 합니다. 이 섹션에서는 링커 만족 하는 방법을 설명 합니다.
 
-Visual Studio 사용자를 추가 하려면 첫 번째 옵션은 프로젝트 모든 C + + /winrt MSBuild 속성 및 대상입니다. 편집 프로그램 `.vcxproj` 파일을 찾고 `<PropertyGroup Label="Globals">` 해당 속성 그룹 내에서 속성을 설정 및 `<CppWinRTEnabled>true</CppWinRTEnabled>`합니다.
+Visual studio에 추가 하는 첫 번째 옵션은 프로젝트 모든 C + + /winrt MSBuild 속성 및 대상입니다. 편집에 `.vcxproj` 파일을 찾고 `<PropertyGroup Label="Globals">` 해당 속성 그룹 내에서 속성을 설정 및 `<CppWinRTEnabled>true</CppWinRTEnabled>`합니다.
 
 프로젝트 연결 설정을 사용 하 여 명시적으로 연결할 수 또는 `WindowsApp.lib`.
 
-또는 소스 코드에서 수행할 수 있습니다 (에서 `pch.h`예를 들어,)이 있습니다.
+또는 소스 코드에서 수행할 수 있습니다 (의 `pch.h`, 예를 들어) 다음과 같이 합니다.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")

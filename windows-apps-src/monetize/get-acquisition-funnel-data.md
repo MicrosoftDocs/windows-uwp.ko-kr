@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 취득 깔때기
 ms.localizationpriority: medium
 ms.openlocfilehash: d9ccbb081ef6f39ad795105ee2449de4d8442ab3
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330935"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477001"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>앱 취득 깔때기 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 취득 깔때기형 데이터를 가져옵니다. 이 정보는 파트너 센터에서 [구입 보고서](../publish/acquisitions-report.md#acquisition-funnel) 에서 사용할 수 있습니다.
+Microsoft Store 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 취득 깔때기형 데이터를 가져옵니다. 이 정보는 파트너 센터에서 [구입 보고서](../publish/acquisitions-report.md#acquisition-funnel) 에 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
