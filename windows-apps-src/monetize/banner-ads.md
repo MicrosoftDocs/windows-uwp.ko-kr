@@ -3,14 +3,14 @@ description: UWP 앱에서 배너 광고를 사용 하는 방법을 알아봅니
 title: 배너 광고
 ms.date: 08/23/2017
 ms.topic: article
-keywords: windows 10, uwp, 광고, AdControl, 광고, 배너 광고
+keywords: windows 10, uwp, 광고, 광고, AdControl, 배너 광고
 ms.localizationpriority: medium
 ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325721"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "8486776"
 ---
 # <a name="banner-ads"></a>배너 광고
 

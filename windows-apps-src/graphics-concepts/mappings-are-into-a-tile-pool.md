@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333491"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485545"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>타일 풀에 대한 매핑
 
@@ -31,7 +31,7 @@ ms.locfileid: "8333491"
 
 각 페이지 테이블 항목이 64비트라고 가정합시다.
 
-최악의 페이지 테이블에 대 한 크기, 스트리밍 리소스는 생성는 128 비트-요소당 (예를 들어 RGBA float)를 사용 하 여 되므로 64KB 타일 가정해 Direct3D11에서 리소스 제한을 지정 된 단일 표면에 대 한 적중만 4096 픽셀을 포함 합니다. 64비트 테이블 항목을 사용하여 완전히 채우는 경우(mipmap은 포함하지 않음), 지원되는 최대 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 크기(16384\*16384\*2048)에는 페이지 테이블에 약 1GB의 저장소가 필요합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
+최악의 페이지 테이블에 대 한 크기 스트리밍 리소스는 생성는 128 비트-요소당 (예를 들어 RGBA float)를 사용 하 여 되므로 64KB 타일 가정해 Direct3D11에서 리소스 제한을 지정 하는 단일 surface 적중만 4096 픽셀을 포함 합니다. 64비트 테이블 항목을 사용하여 완전히 채우는 경우(mipmap은 포함하지 않음), 지원되는 최대 [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526) 크기(16384\*16384\*2048)에는 페이지 테이블에 약 1GB의 저장소가 필요합니다. mipmap을 추가하면 완전히 매핑된(최악의 경우) 페이지 테이블 저장소가 1/3 정도, 즉 1.3GB까지 증가합니다.
 
 이 경우 약 10.6 테라바이트의 주소 지정 가능 메모리에 액세스할 수 있습니다. 그러나 주소 지정 가능 메모리의 크기에 제한을 두어 테라바이트 범위 정도로 그 공간을 줄일 수 있습니다.
 

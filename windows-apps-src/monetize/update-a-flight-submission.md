@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출, 업데이트
 ms.localizationpriority: medium
 ms.openlocfilehash: fe1e88383d6562526d77aea8c75891216cd75ade
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485455"
 ---
 # <a name="update-a-package-flight-submission"></a>패키지 플라이트 제출 업데이트
 
@@ -49,8 +49,8 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 패키지 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | string | 필수. 패키지 플라이트 제출을 업데이트하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
-| flightId | 문자열 | 필수. 제출을 업데이트하려는 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 생성 된 비행이이 ID 파트너 센터에서 플라이트 페이지의 URL을 제공 됩니다.  |
-| submissionId | string | 필수. 업데이트할 제출의 ID입니다. 이 ID는 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL에 사용할 수 있습니다.  |
+| flightId | 문자열 | 필수. 제출을 업데이트하려는 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다. 파트너 센터에서 생성 된 비행이이 ID는도 파트너 센터에서 플라이트 페이지의 URL을 사용할 수 있습니다.  |
+| submissionId | string | 필수. 업데이트할 제출의 ID입니다. 이 ID는 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 생성 된 제출에 대해이 ID는 또한 파트너 센터에서 제출 페이지의 URL을 사용할 수 있습니다.  |
 
 
 ### <a name="request-body"></a>요청 본문
@@ -59,7 +59,7 @@ Microsoft Store 제출 API에서 이 메서드를 사용하여 기존 패키지 
 
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightPackages           | 배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 응답 본문의 값에 대한 자세한 내용은 [플라이트 패키지 리소스](manage-flight-submissions.md#flight-package-object)를 참조하세요. 이 메서드를 호출하여 앱 제출을 업데이트할 때는 요청 본문에 이러한 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 파트너 센터에 의해 채워집니다. |
+| flightPackages           | 배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 응답 본문의 값에 대한 자세한 내용은 [플라이트 패키지 리소스](manage-flight-submissions.md#flight-package-object)를 참조하세요. 이 메서드를 호출하여 앱 제출을 업데이트할 때는 요청 본문에 이러한 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 파트너 센터에서 채워집니다. |
 | packageDeliveryOptions    | 개체  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 [패키지 배달 옵션 개체](manage-flight-submissions.md#package-delivery-options-object)를 참조하세요.  |
 | targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |

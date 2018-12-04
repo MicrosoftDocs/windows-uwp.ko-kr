@@ -1,23 +1,23 @@
 ---
 title: 보안
-description: 이 섹션에 Windows10 보안 유니버설 Windows 플랫폼 (UWP) 앱을 빌드에 대 한 문서가 포함 되어 있습니다.
+description: 이 섹션에서는 Windows10 보안 유니버설 Windows 플랫폼 (UWP) 앱을 빌드에 대 한 문서가 포함 되어 있습니다.
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: 88e45740f457086a925674b37baacc8fc7b4e9b6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484908"
 ---
 # <a name="security"></a>보안
 
 
 
-이 섹션에 Windows10 보안 유니버설 Windows 플랫폼 (UWP) 앱을 빌드에 대 한 문서가 포함 되어 있습니다.
+이 섹션에서는 Windows10 보안 유니버설 Windows 플랫폼 (UWP) 앱을 빌드에 대 한 문서가 포함 되어 있습니다.
 
 ## <a name="introduction"></a>소개 
 

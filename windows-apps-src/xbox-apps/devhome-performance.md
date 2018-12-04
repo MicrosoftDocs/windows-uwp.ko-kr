@@ -1,18 +1,18 @@
 ---
 ms.assetid: d40056bc-76bc-c123-4d36-973ec46d11fc
 title: 성능 페이지 (개발자 홈)
-description: Xbox One 용 개발자 홈 앱의 성능 페이지에 대 한 정보를 제공합니다.
+description: Xbox one 개발자 홈 앱의 성능 페이지에 대 한 정보를 제공합니다.
 ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 589084a7da23b037fe61ea5e4c9e52dffb1c29be
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333877"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485229"
 ---
 # <a name="performance-page-dev-home"></a>성능 페이지 (개발자 홈)
    
@@ -33,7 +33,7 @@ ms.locfileid: "8333877"
 ## <a name="disk-simulation"></a>디스크 시뮬레이션  
    
   
-**디스크 시뮬레이션** 창 시스템 또는 다른 앱에서 디스크 활동을 시뮬레이트합니다.   
+**디스크 시뮬레이션** 창 시스템 또는 다른 앱에서 디스크 작업을 시뮬레이션 합니다.   
   
 <a id="ID4EOB"></a>
 

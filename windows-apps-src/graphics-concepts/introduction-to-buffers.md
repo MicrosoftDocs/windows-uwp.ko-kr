@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: deeae0cc66a7e75da2e44c0d2aba2a9ed459b824
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8333139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486654"
 ---
 # <a name="introduction-to-buffers"></a>버퍼 소개
 
@@ -21,7 +21,7 @@ ms.locfileid: "8333139"
 
 버퍼 요소는 1 ~ 4 개 구성 요소 구성 됩니다. 버퍼 요소에는 압축된 데이터 값(R8G8B8A8 표면 값), 8비트 정수 하나 또는 32비트 부동 소수점 값 네 개가 포함될 수 있습니다.
 
-버퍼는 구조화되지 않은 리소스로 생성됩니다. 구조화 되지 않았기 때문에 버퍼는 mipmap 수준을 포함할 수 없습니다, 읽었을 때 필터링 얻을 수 없는 및 다중 샘플링 될 수 없습니다.
+버퍼는 구조화되지 않은 리소스로 생성됩니다. 구조화 되지 않았기 때문에 버퍼는 mipmap 수준을 포함할 수 없습니다, 읽었을 때 필터링 가져올 수 없는 및 다중 샘플링 될 수 없습니다.
 
 ## <a name="span-idbuffertypesspanspan-idbuffertypesspanspan-idbuffertypesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>버퍼 유형
 
@@ -34,9 +34,9 @@ Direct3D 11에서 지 원하는 버퍼 리소스 종류는 다음과 같습니�
 
 ### <a name="span-idvertexbufferspanspan-idvertexbufferspanspan-idvertexbufferspanspan-idvertex-bufferspanvertex-buffer"></a><span id="Vertex_Buffer"></span><span id="vertex_buffer"></span><span id="VERTEX_BUFFER"></span><span id="vertex-buffer"></span>꼭 짓 점 버퍼
 
-꼭 짓 점 버퍼는 기 하 도형을 정의 하는 데 꼭 짓 점 데이터를 포함 합니다. 꼭지점 데이터에는 위치 좌표, 색상 데이터, 텍스처 좌표 데이터, 법선 데이터 등이 포함되어 있습니다.
+꼭 짓 점 버퍼 기 하 도형을 정의 하는 데 꼭 짓 점 데이터를 포함 합니다. 꼭지점 데이터에는 위치 좌표, 색상 데이터, 텍스처 좌표 데이터, 법선 데이터 등이 포함되어 있습니다.
 
-꼭 짓 점 버퍼의 간단한 예만 위치 데이터를 포함 하는. 다음 그림과 같이 표현할 수 있습니다.
+꼭 짓 점 버퍼의 간단한 예는 위치 데이터 포함 합니다. 다음 그림과 같이 표현할 수 있습니다.
 
 ![위치 데이터를 포함한 꼭짓점 버퍼의 그림](images/d3d10-resources-single-element-vb2.png)
 
@@ -44,14 +44,14 @@ Direct3D 11에서 지 원하는 버퍼 리소스 종류는 다음과 같습니�
 
 ![위치, 일반 및 텍스처 데이터가 포함된 꼭짓점 버퍼의 그림](images/d3d10-vertex-buffer-element.png)
 
-이 꼭 짓 점 버퍼에는 꼭 짓 점별 데이터가 포함 되어 각 꼭 짓 점 세 개의 요소 (위치, 일반 및 텍스처 좌표)를 저장합니다. 위치 및 일반 좌표는 일반적으로 32비트 부동 소수점 3개를 사용하여 지정되고 텍스처 좌표는 32비트 부동 소수점 2개를 사용하여 지정됩니다.
+이 꼭 짓 점 버퍼 꼭 짓 점별 데이터를 포함합니다. 각 꼭 짓 점 세 개의 요소 (위치, 일반 및 텍스처 좌표)를 저장합니다. 위치 및 일반 좌표는 일반적으로 32비트 부동 소수점 3개를 사용하여 지정되고 텍스처 좌표는 32비트 부동 소수점 2개를 사용하여 지정됩니다.
 
 꼭 짓 점 버퍼에서 데이터에 액세스 하는 꼭 짓 점 액세스와 다음 추가 버퍼 매개 변수를 알아야 할:
 
 -   오프셋 - 버퍼 시작부터 첫 번째 꼭짓점의 데이터까지 바이트 수입니다.
 -   BaseVertexLocation - 오프셋부터 해당 그리기 호출에 사용된 첫 번째 꼭짓점까지 바이트 수입니다.
 
-꼭 짓 점 버퍼를 만들기 전에 레이아웃을 정의 해야 합니다. 입력 레이아웃 개체를 만든 후 [IA (입력 어셈블러) 단계](input-assembler-stage--ia-.md)에 바인딩합니다.
+꼭 짓 점 버퍼를 만들기 전에 레이아웃을 정의 해야 합니다. 입력 레이아웃 개체를 만든 후 [입력 어셈블러 (IA) 단계](input-assembler-stage--ia-.md)에 바인딩합니다.
 
 ### <a name="span-idindexbufferspanspan-idindexbufferspanspan-idindexbufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>인덱스 버퍼
 
@@ -71,13 +71,13 @@ Direct3D 11에서 지 원하는 버퍼 리소스 종류는 다음과 같습니�
 
 ### <a name="span-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshader-constant-bufferspanconstant-buffer"></a><span id="Shader_Constant_Buffer"></span><span id="shader_constant_buffer"></span><span id="SHADER_CONSTANT_BUFFER"></span><span id="shader-constant-buffer"></span>상수 버퍼
 
-상수 버퍼를 사용 하면 파이프라인에 셰이더 상수 데이터를 효율적으로 제공할 수 있습니다. 스트림 출력 단계의 결과를 저장할 상수 버퍼를 사용할 수 있습니다. 개념적으로 다음 그림과에서 같이 상수 버퍼는 단일 요소 꼭 짓 점 버퍼 처럼 보입니다.
+상수 버퍼를 사용 하면 파이프라인에 셰이더 상수 데이터를 효율적으로 제공할 수 있습니다. 스트림 출력 단계의 결과를 저장 하는 상수 버퍼를 사용할 수 있습니다. 개념적으로 다음 그림과에서 같이 상수 버퍼는 단일 요소 꼭 짓 점 버퍼 처럼 보입니다.
 
 ![셰이더 상수 버퍼의 그림](images/d3d10-shader-resource-buffer.png)
 
 각 요소는 저장된 데이터의 형식에 의해 결정되는 1~4개 구성 요소 상수를 저장합니다.
 
-상수 버퍼는 다른 바인딩 플래그와 함께 사용할 수 없으며 단일 바인딩 플래그를만 사용할 수 있습니다.
+상수 버퍼는 단일 바인딩 플래그를 다른 바인딩 플래그와 함께 사용할 수 없으며만 사용할 수 있습니다.
 
 셰이더 상수 버퍼에서 셰이더를 읽으려면 HLSL 로드 함수를 사용 합니다. 각 셰이더 단계는 최대 15개의 셰이더 상수 버퍼를 허용하며 각 버퍼는 최대 4,096개 상수를 보관할 수 있습니다.
 

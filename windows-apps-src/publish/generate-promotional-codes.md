@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, uwp, 프로모션 코드, 토큰
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329467"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485753"
 ---
 # <a name="generate-promotional-codes"></a>홍보 코드 생성
 
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하는 앱 또는 Microsoft Store에 게시 한 추가 기능에 대 한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 앱 또는 추가 기능 또는 Windows10를 사용 하 여 [베타 테스트](beta-testing-and-targeted-distribution.md) 를 사용자에 게 대 한 무료 액세스를 제공 하 여 고객 서비스 시나리오를 해결할에 홍보 코드를 사용할 수 있습니다. 
+[파트너 센터](https://partner.microsoft.com/dashboard) 를 사용 하는 앱 또는 Microsoft Store에 게시 한 추가 기능에 대 한 홍보 코드를 생성할 수 있습니다. 홍보 코드를 사용하면 영향력 있는 고객이 앱 또는 추가 기능에 무료로 액세스할 수 있습니다. 또한 앱 또는 추가 기능 또는 Windows10를 사용 하 여 [베타 테스트](beta-testing-and-targeted-distribution.md) 를 사용자에 게 무료 액세스를 제공 하 여 고객 서비스 시나리오를 해결할에 홍보 코드를 사용할 수 있습니다. 
 
 각 홍보 코드에 고유한 교환 가능 URL이 고객이 코드를 교환 하 고 Microsoft Store에서 앱 또는 추가 기능을 설치 하기 위해 클릭할 수 있는 합니다.  사용자가 홍보 코드를 사용하여 설치하기 전에 앱은 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과해야 합니다.
 
@@ -36,12 +36,12 @@ ms.locfileid: "8329467"
 -   **3k. 홍보 코드** 섹션을 포함하여 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 정의된 요구 사항을 따라야 합니다.
 
 > [!NOTE]
-> 앱 고객에 게 사용할 수 없는 경우에 홍보 코드를 사용할 수 있습니다 (즉, 선택한 경우에 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** **취득 중지를 사용 하 여: 직접 링크가 있는 고객은 제품의 스토어를 확인할 수 목록에 있지만 다운로드 가능, 과거 제품을 소유 또는 홍보 코드가 있고 Windows 10 장치를 사용 하는 경우** 제출의 [검색 기능](choose-visibility-options.md#discoverability) 섹션의 옵션). 이 옵션을 사용 하 여 고객이 홍보 코드를 사용 하 여 제품을 취득 하려면 Windows 10 (Xbox 포함) 이어야 합니다.
+> 앱 고객에 게 사용할 수 없는 경우에 홍보 코드를 사용할 수 있습니다 (즉, 선택한 경우에 **사용할 수 있지만 스토어에서 검색 되지 않는이 제품으로 설정** 된 취득 중지 **: 직접 링크가 있는 고객은 제품의 저장소를 확인할 수 목록에 있지만 다운로드 가능, 과거 제품을 소유 또는 홍보 코드가 있고 Windows 10 장치를 사용 하는 경우** 제출의 [검색 기능](choose-visibility-options.md#discoverability) 섹션의 옵션). 이 옵션을 사용 하 여 고객에 게 홍보 코드를 사용 하 여 제품을 취득 하려면 Windows 10 (Xbox 포함) 이어야 합니다.
 
 
 ## <a name="order-promotional-codes"></a>홍보 코드 주문
 
-앱 또는 추가 기능에 대 한 홍보 코드를 주문.
+앱 또는 추가 기능에 대 한 홍보 코드를 주문 합니다.
 
 1.  [파트너 센터](https://partner.microsoft.com/dashboard)의 왼쪽된 탐색 메뉴에서 **모집** 를 확장 하 고 **홍보 코드**를 선택 합니다.
 
@@ -88,7 +88,7 @@ ms.locfileid: "8329467"
 
 ## <a name="code-redemption-user-experience"></a>코드 교환 사용자 환경
 
-고객에 게 홍보 코드 (또는 교환 가능 URL)를 배포한 후에 제품을 무료로 얻을 수 URL을 클릭할 수 있습니다. 교환 가능 URL을 클릭하면 <https://account.microsoft.com/billing/redeem>에서 인증된 **코드 교환** 페이지가 시작됩니다. 이 페이지에는 교환하려는 앱에 대한 설명이 포함되어 있습니다. 고객이 Microsoft 계정으로 로그인하지 않은 경우, 로그인 메시지가 표시됩니다. 고객은 <https://account.microsoft.com/billing/redeem>을 방문하여 직접 코드를 입력할 수 있습니다.
+고객에 게 홍보 코드 (또는 교환할 수 있는 URL)를 배포한 후 제품을 무료로 다운로드 URL을 클릭할 수 있습니다. 교환 가능 URL을 클릭하면 <https://account.microsoft.com/billing/redeem>에서 인증된 **코드 교환** 페이지가 시작됩니다. 이 페이지에는 교환하려는 앱에 대한 설명이 포함되어 있습니다. 고객이 Microsoft 계정으로 로그인하지 않은 경우, 로그인 메시지가 표시됩니다. 고객은 <https://account.microsoft.com/billing/redeem>을 방문하여 직접 코드를 입력할 수 있습니다.
 
 > [!IMPORTANT]
 > (**사용할 수 있지만, Microsoft Store에서 검색되지 않는 제품으로 설정**한 경우에도)제품 게시 프로세스를 완료한 후, 고객에게 홍보 코드를 배포하는 것이 좋습니다. 게시되지 않은 제품에 홍보 코드를 사용하려 시도할 경우 오류 메시지가 표시됩니다.

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, direct3d 9, direct3d 11, 변경 사항
 ms.localizationpriority: medium
 ms.openlocfilehash: ecdd8591efb3920d2cfe333aa8ec02c65c1a1465
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328864"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8486641"
 ---
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Direct3D 9부터 Direct3D 11의 주요 변경 사항
 
@@ -105,7 +105,7 @@ Direct3D는 하드웨어 지원을 결정할 수 있는, 기능 수준이라는 
 
 Direct3D 9에서는 SetVertexShaderConstant 및 SetPixelShaderConstant를 통해 공유 배열을 사용하여 셰이더의 상수를 관리했습니다. Direct3D 11에서는 꼭짓점 버퍼 또는 인덱스 버퍼와 같은 리소스인 상수 버퍼를 사용합니다. 상수 버퍼는 효율적으로 업데이트되도록 디자인되었습니다. 모든 셰이더 상수를 단일 전역 배열로 구성하는 대신 상수를 논리적 그룹으로 구성한 후 하나 이상의 상수 버퍼를 통해 관리합니다. Direct3D 9 게임을 Direct3D 11로 포팅할 경우 상수 버퍼를 적절히 업데이트할 수 있도록 구성해야 합니다. 예를 들어, 매 프레임마다 업데이트되지 않는 셰이더 상수를 별도의 상수 버퍼로 그룹화하면 더 동적인 셰이더 상수와 함께 해당 데이터를 계속해서 그래픽 어댑터에 업로드할 필요가 없습니다.
 
-> **참고**  대부분의 Direct3D 9 응용 프로그램 셰이더를 광범위 하 게 사용 했지만 경우에 따라 레거시 고정 함수 동작 사용 하기도 합니다. Direct3D 11은 프로그램 가능 음영 모델만 사용합니다. Direct3D 9의 레거시 고정 함수 기능은 더 이상 사용되지 않습니다.
+> **참고**  대부분의 Direct3D 9 응용 프로그램 하 게 셰이더를 광범위 하 게 사용 했지만 경우에 따라 레거시 고정 함수 동작 사용 하기도 합니다. Direct3D 11은 프로그램 가능 음영 모델만 사용합니다. Direct3D 9의 레거시 고정 함수 기능은 더 이상 사용되지 않습니다.
 
  
 

@@ -6,20 +6,20 @@ ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cceac0cf4b9cc4c13c0e99ce5beffad70787256
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485000"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>다중 인스턴스 유니버설 Windows 앱 만들기
 
 이 항목에서는 다중 인스턴스 유니버설 Windows 플랫폼(UWP) 앱을 만드는 방법을 설명합니다.
 
-Windows 10, 버전 1803 (10.0; 빌드 17134) 낮춘, UWP 앱 여러 인스턴스를 지원 하기 위해에서 선택할 수 있습니다. 다중 인스턴스 UWP 앱의 인스턴스를 실행 중이며 후속 정품 인증을 요청하는 경우 플랫폼은 기존 인스턴스를 활성화하지 않습니다. 대신 다른 프로세스에서 실행 중인 인스턴스를 새로 만듭니다.
+Windows 10, 버전 1803 (10.0; 빌드 17134) 낮춘, UWP 앱에 여러 인스턴스를 지원 하도록에서 선택할 수 있습니다. 다중 인스턴스 UWP 앱의 인스턴스를 실행 중이며 후속 정품 인증을 요청하는 경우 플랫폼은 기존 인스턴스를 활성화하지 않습니다. 대신 다른 프로세스에서 실행 중인 인스턴스를 새로 만듭니다.
 
 > [!IMPORTANT]
-> 다중 인스턴스는 JavaScript 응용 프로그램에 대 한 지원 하지만 다중 인스턴스 리디렉션 되었습니다. 다중 인스턴스 리디렉션은 JavaScript 응용 프로그램에 대 한 지원 되지 않으므로, [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) 클래스 이러한 응용 프로그램에 대 한 유용 하지 않습니다.
+> 다중 인스턴스는 JavaScript 응용 프로그램에 대 한 지원 하지만 다중 인스턴스 리디렉션 되었습니다. 다중 인스턴스 리디렉션은 JavaScript 응용 프로그램에 대해 지원 되지 않으므로, [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) 클래스 이러한 응용 프로그램에 대 한 유용 하지 않습니다.
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>다중 인스턴스 동작 옵트인
 
@@ -27,7 +27,7 @@ Windows 10, 버전 1803 (10.0; 빌드 17134) 낮춘, UWP 앱 여러 인스턴스
 
 두 템플릿이 설치됩니다. **다중 인스턴스 UWP 앱**은 다중 인스턴스 앱을 만드는 템플릿을 제공하고 **다중 인스턴스 리디렉션 UWP 앱**은 새 인스턴스를 시작하거나 이미 시작된 인스턴스를 선택적으로 활성화하기 위해 빌드할 수 있는 추가 논리를 제공합니다. 예를 들어 동일한 문서를 편집할 때 한 번에 한 인스턴스에서만 편집되게 하려는 경우 새 인스턴스를 시작하지 않고 해당 파일이 열려 있는 인스턴스를 포그라운드로 가져옵니다.
 
-두 템플릿 추가 `SupportsMultipleInstances` 에 `package.appxmanifest` 파일. 네임 스페이스 접두사를 참고 `desktop4` 및 `iot2`: 데스크톱을 대상으로 하는 유일한 프로젝트나 사물 인터넷 (IoT) 프로젝트 다중 인스턴스를 지원 합니다.
+두 템플릿 추가 `SupportsMultipleInstances` 에 `package.appxmanifest` 파일입니다. 네임 스페이스 접두사를 참고 `desktop4` 및 `iot2`: 데스크톱을 대상으로 하는 유일한 프로젝트나 사물 인터넷 (IoT) 프로젝트 다중 인스턴스를 지원 합니다.
 
 ```xml
 <Package
@@ -58,7 +58,7 @@ Windows 10, 버전 1803 (10.0; 빌드 17134) 낮춘, UWP 앱 여러 인스턴스
 
 **다중 인스턴스 리디렉션 UWP 앱** 템플릿은 위에 표시된 대로 package.appxmanifest 파일에 `SupportsMultipleInstances`를 추가하고 `Main()` 함수가 포함된 프로젝트에 **Program.cs**(또는 C++ 버전의 템플릿을 사용하는 경우 **Program.cpp**)를 추가합니다. 활성화를 리디렉션하는 논리가 `Main` 함수로 들어 갑니다. **Program.cs** 템플릿은 다음과 같습니다.
 
-[**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 기본 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸 기본 설정에서 제공 하는 경우 해당 인스턴스를 활성화 한 다음 리디렉션할 수 있습니다 또는 선택 하는 경우 무시할 수 있습니다.
+[**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) 속성이 있을 경우이 정품 인증 요청에 대 한 셸 제공 기본 인스턴스를 나타냅니다 (또는 `null` 경우 없는). 셸에서 기본 설정을 제공 하는 경우 해당 인스턴스를 활성화 한 다음 리디렉션할 수 있습니다 또는 선택 하는 경우 무시할 수 있습니다.
 
 ``` csharp
 public static class Program

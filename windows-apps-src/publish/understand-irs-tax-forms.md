@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, 조세, irs, 미국 국세청, 세금, 소득세, 109
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a5e70278d655bce4ced48b33c4711762a7cce7f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346672"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485803"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
@@ -23,11 +23,11 @@ ms.locfileid: "8346672"
 
 | IRS 세금 양식 | 설명 | 사용 가능한 시기 |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄본 켜거나 **년 1 월 31**일 전에 소인이 수는 및.pdf [파트너 센터](https://partner.microsoft.com/dashboard) 에서 사용할 수 있습니다 (에서 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
-|1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄본 또는 **3 월 15**일 이전에 소인이 수는 및.pdf 파트너 센터에서 사용할 수 있습니다 (에서 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
+|1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄본 또는 **1 월 31**일 이전에 소인이 수는 및.pdf [파트너 센터](https://partner.microsoft.com/dashboard) 에서 사용할 수 있습니다 (에서 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
+|1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄본 또는 **3 월 15**일 이전에 소인이 수는 및.pdf 파트너 센터에서 사용할 수 있습니다 (에 **계정 설정 > 세금 프로필**) 사본은 동일한 시기 |
 
 > [!NOTE]
-> IRS 세금 양식에서 사용 하 여 주소 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)에 대 한 주소에서 제공 됩니다. 주소가 변경된 경우 **세금 프로필**에서 주소를 업데이트하세요.
+> IRS 세금 양식에서 사용 하 여 주소 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)에서 주소에서 제공 됩니다. 주소가 변경된 경우 **세금 프로필**에서 주소를 업데이트하세요.
 
 다음 주소에서 세금 양식 전송 됩니다.
 
@@ -38,11 +38,11 @@ ms.locfileid: "8346672"
 <tr><td>광고</td><td>Microsoft Online inc.</td><td>6100 김철수도로<br>89511 Reno, NV USA</td></tr>
 <table> 
 
-**비 미국 시민:**
+**이외 시민:**
 <table>
 <tr><th>비즈니스 그룹</th><th>법인</th><th>주소</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft 아일랜드 작업 제한 (지불 Microsoft 아일랜드 통해 Microsoft corporation 역할 Microsoft Corporation에 대 한 자격 갖춘된 중간을)</td><td>Microsoft 위<br>사우스&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 더블린 18 아일랜드</td></tr>
-<tr><td>광고 *</td><td>Microsoft 아일랜드 작업 제한 (지불 Microsoft 아일랜드 통해 Microsoft Online inc Microsoft Online inc.에 대 한 지급 에이전트 역할을)</td><td>Microsoft 위<br>사우스&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 더블린 18 아일랜드</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft 아일랜드 작업 제한 (지불 Microsoft 아일랜드를 통해 Microsoft corporation 역할 Microsoft Corporation에 대 한 자격 갖춘된 중간을)</td><td>Microsoft 위<br>사우스&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 더블린 18 아일랜드</td></tr>
+<tr><td>광고 *</td><td>Microsoft 아일랜드 작업 제한 (지불 Microsoft 아일랜드를 통해 Microsoft Online inc Microsoft Online inc.에 대 한 지급 에이전트 역할을)</td><td>Microsoft 위<br>사우스&nbsp;군&nbsp;비즈니스&nbsp;Park<br>Leopardstown, 더블린 18 아일랜드</td></tr>
 <tr><td>광고</td><td>Microsoft Online inc.</td><td>6100 김철수도로<br>89511 Reno, NV USA</td></tr>
 <tr><td colspan="3">* 다음 국가 수익 광고 수익의 주요 구성 Microsoft 아일랜드 작업 제한 통해 지급: 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, 체코 공화국, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 맨 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카 공화국, 스페인, 스웨덴, 스위스, 영국</td></tr>
 </table>
@@ -75,7 +75,7 @@ ms.locfileid: "8346672"
     <td valign="top">&nbsp;</td>
   </tr>
   <tr>
-     <th>앱에서 광고를 판매 하는 미국 국적의 개발자 내가 및... </th>
+     <th>앱에서 광고를 판매 하는 미국 국적의 개발자 저는 및... </th>
      <th> 수령하게 되는 양식</th>
   </tr>
   <tr> 
@@ -104,7 +104,7 @@ ms.locfileid: "8346672"
     <td valign="top"><b>W8 양식을 작성할 때 제 지급금에 세금이 원천징수된 이유는 무엇입니까?</b></td>
     <td valign="top">둘 중 하나에 해당할 경우 세금이 원천징수됩니다.<br>
      1. W8의 조세 조약 섹션을 올바르게 작성하지 않은 경우 또는<br>
-     2. 미국과 조세 조약을 맺지 않은 국가에 거주하는 경우<br><br>언제 든 지 W8 양식을 업데이트를 제출 하려면 파트너 센터를 방문 수 있습니다.<br><br><b>참고</b>: 모든 수입 세금 원천 징수가 적용 됩니다.</td>
+     2. 미국과 조세 조약을 맺지 않은 국가에 거주하는 경우<br><br>언제 든 지 W8 양식을 업데이트 하 여 제출 하려면 파트너 센터를 방문 수 있습니다.<br><br><b>참고</b>: 모든 수입 세금 원천 징수가 적용 됩니다.</td>
   </tr>
   <tr>
     <td valign="top"><b>유효한 조약 정보로 W8 양식을 업데이트하여 제출했습니다. 원천징수된 세금을 Microsoft에서 환불해 줄 수 있나요?</b></td>

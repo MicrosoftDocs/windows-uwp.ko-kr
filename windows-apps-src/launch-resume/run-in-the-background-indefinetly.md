@@ -2,16 +2,16 @@
 title: 백그라운드에서 무기한 실행
 description: extendedExecutionUnconstrained 기능을 사용하여 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행하세요.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: 백그라운드 작업, 확장 된 실행, 리소스, 제한, 백그라운드 작업
+keywords: 백그라운드 작업을 실행, 리소스, 제한, 백그라운드 작업 확장
 ms.date: 10/3/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: aedd948fe58efcc3edc160db971478189d9cb4ad
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348402"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485219"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
