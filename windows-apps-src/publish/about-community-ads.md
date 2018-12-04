@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f8acf83e2b39ece5fcd46c3d89d921e4f3013b67
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334952"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8478109"
 ---
 # <a name="about-community-ads"></a>커뮤니티 광고 정보
 
@@ -33,7 +33,7 @@ ms.locfileid: "8334952"
 UWP 앱에 대 한 커뮤니티 광고에 옵트인 하려면:
 
 1. **조정**설정 아래로 스크롤하여 앱에서 사용 중인 광고 단위를 선택 합니다.
-2. **Microsoft 내 설정을 최적화** 를 선택한 경우 광고 단위에 대 한 커뮤니티 광고 자동으로 활성화 됩니다. 그렇지 않은 경우 **대상** 드롭다운 목록에서 기준 구성을 또는 지역/국가 특정 구성을 선택 하 고 **다른 광고 네트워크** 목록에서 **Microsoft 커뮤니티 광고** 확인란을 선택 합니다.
+2. **Microsoft 내 설정을 최적화** 를 선택한 경우 광고 단위에 대 한 커뮤니티 광고 자동으로 활성화 됩니다. 그렇지 않은 경우 **대상** 드롭다운 목록에서 기준 구성을 또는 지역/국가 특정 구성 선택 하 고 **다른 광고 네트워크** 목록에서 **Microsoft 커뮤니티 광고** 확인란을 선택 합니다.
 
     > [!NOTE]
     > 유료 네트워크 및 커뮤니티 광고를 포함 하 여 다른 광고 네트워크에서 표시 하려는 광고의 비율을 지정 하려면 **가중치** 필드를 사용할 수 있습니다.
