@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
 ms.localizationpriority: medium
 ms.openlocfilehash: 038003714d6543580f618b381ac7f4ecbde22da9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345397"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479141"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용하여 광고 캠페인 실행
 
@@ -23,10 +23,10 @@ ms.locfileid: "8345397"
 2.  Microsoft Store 프로모션 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Microsoft Store 프로모션 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.
 3.  [Microsoft Store 프로모션 API를 호출합니다](#call-the-windows-store-promotions-api).
 
-또는 만들기 하 고 파트너 센터를 사용 하 여 광고 캠페인 및 파트너 센터에서 API에 액세스할 수도 있습니다 Microsoft Store 프로 모션을 통해 프로그래밍 방식으로 만드는 광고 캠페인도 관리할 수 있습니다. 파트너 센터에서 광고 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
+또는 만들기 하 고 파트너 센터를 사용 하 여 광고 캠페인 및 파트너 센터에서 API에 액세스할 수도 있습니다 Microsoft Store 프로 모션을 통해 프로그래밍 방식으로 만든 모든 광고 캠페인을 관리할 수 있습니다. 파트너 센터에서 광고 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
 
 > [!NOTE]
-> 파트너 센터 계정이 있는 개발자 Microsoft Store 프로 모션 API를 사용 하 여 앱에 대 한 광고 캠페인을 관리할 수 있습니다. 광고회사는 광고주를 대리하여 광고 캠페인을 실행하기 위해 이 API에 대 한 액세스를 요청할 수도 있습니다. 이 API에 대한 자세한 내용을 알기 원하거나 이 API에 대한 액세스를 요청하려는 광고회사는 storepromotionsapi@microsoft.com으로 요청을 보내시기 바랍니다.
+> 파트너 센터 계정이 있는 개발자 Microsoft Store 프로 모션 API를 사용 하 여 하 여 앱에 대 한 광고 캠페인을 관리할 수 있습니다. 광고회사는 광고주를 대리하여 광고 캠페인을 실행하기 위해 이 API에 대 한 액세스를 요청할 수도 있습니다. 이 API에 대한 자세한 내용을 알기 원하거나 이 API에 대한 액세스를 요청하려는 광고회사는 storepromotionsapi@microsoft.com으로 요청을 보내시기 바랍니다.
 
 <span id="prerequisites" />
 
@@ -34,11 +34,11 @@ ms.locfileid: "8345397"
 
 Microsoft Store 프로모션 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
 
-* 사용자 수를 성공적으로 만들고이 API를 사용 하 여 광고 캠페인을 시작 하기 전에 첫 번째 [파트너 센터에서 **광고 캠페인** 페이지를 사용 하 여 하나의 유료 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 수행 해야 하 고이 페이지에서 하나 이상의 결제 방법을 추가 해야 합니다. 이렇게 하면 이 API를 사용하여 광고 캠페인의 청구 가능한 배달 라인을 성공적으로 만들 수 있습니다. 이 API를 사용 하 여 만든 광고 캠페인의 배달 라인 됩니다 파트너 센터에서 **광고 캠페인** 페이지에서 선택 된 기본 결제 방법 요금을 청구 자동으로 합니다.
+* 사용자 수를 성공적으로 만들고이 API를 사용 하 여 광고 캠페인을 시작 하기 전에 첫 번째 [파트너 센터에서 **광고 캠페인** 페이지를 사용 하 여 하나의 유료 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 수행 해야 하 고이 페이지에서 하나 이상의 결제 방법을 추가 해야 합니다. 이렇게 하면 이 API를 사용하여 광고 캠페인의 청구 가능한 배달 라인을 성공적으로 만들 수 있습니다. 이 API를 사용 하 여 만든 광고 캠페인의 배달 라인 파트너 센터에서 **광고 캠페인** 페이지에서 선택 된 기본 결제 방법 요금을 청구 자동으로 됩니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않은 경우 추가 비용 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않으면 추가 요금 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
-* 파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하 고, ID 및 클라이언트 ID는 응용 프로그램에 대 한 테 넌 트를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 프로모션 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+* 파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하 고, 트 ID 및 클라이언트 ID를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 프로모션 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
     > [!NOTE]
     > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 메시, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330520"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479510"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>기본 메시 만들기 및 표시
 
@@ -257,7 +257,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **참고**하므로 일반적으로 선언 투영 행렬 장치별 리소스를 설정할 때 곱셈 결과가 현재 2-d 뷰포트 크기 매개 변수와 일치 해야 합니다 (픽셀 높이 및 너비를 사용 하 여 해당 되는 디스플레이)입니다. 변경되면 그에 따라 x 및 y 좌표 값을 조정해야 합니다.
+> **참고**하면 일반적으로 투영 매트릭스를 선언 장치별 리소스를 설정할 때 곱셈 결과가 현재 2-d 뷰포트 크기 매개 변수와 일치 해야 합니다 (픽셀 높이 및 너비를 사용 하 여 해당 되는 디스플레이)입니다. 변경되면 그에 따라 x 및 y 좌표 값을 조정해야 합니다.
 
  
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 기술, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: c6d2ebad640849cd81d6a2704f89ca1f05cc1b27
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8349317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481501"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>UWP 앱용 게임 기술
 
@@ -22,7 +22,7 @@ ms.locfileid: "8349317"
 ##  <a name="benefits-of-windows10-for-game-development"></a>게임 개발을 위한 Windows10의 이점
 
 
-Windows10에서 UWP의 도입 되면서, Windows10 타이틀이 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 Windows10 클라이언트의 증가 마이그레이션할 수 있기 때문입니다. 이 두 가지의 조합은 Windows10 타이틀 거 대 한 다양 한 Microsoft Store를 통해 고객에 연결할 수 있는 것을 의미 합니다.
+Windows10에 UWP 도입 되면서 Windows10 타이틀이 모든 Microsoft 플랫폼을 확장할 수 있습니다 됩니다. 이전 버전의 Windows에서 무료 마이그레이션 Windows10 클라이언트의 증가 마이그레이션할 수 있기 때문입니다. 이 두 가지의 조합은 Windows10 타이틀 아주 많은 고객이 Microsoft Store를 통해 연결할 수 있는 것을 의미 합니다.
 
 또한 Windows10 게임에 특히 유용한 많은 새로운 기능을 제공 합니다.
 

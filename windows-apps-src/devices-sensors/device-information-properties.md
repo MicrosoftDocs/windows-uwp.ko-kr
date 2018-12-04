@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ca733ef88eb8b575b8974f71f9395800d5de3875
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330721"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482273"
 ---
 # <a name="device-information-properties"></a>디바이스 정보 속성
 
@@ -34,7 +34,7 @@ ms.locfileid: "8330721"
 속성을 요청할 때 사용자에게 친숙한 이름의 공용 속성만 요청할 수 있는 것은 아닙니다. 기본 GUID와 PID(속성 ID)를 지정하면 개별 디바이스나 드라이버에서 제공하는 사용자 지정 속성을 비롯하여 사용 가능한 모든 속성을 요청할 수 있습니다. 사용자 지정 속성을 지정하는 형식은 "`{GUID} PID`"입니다. 예: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`"입니다. 
 
 > [!Note]
-> 장치 드라이버의 장치 속성 키 헤더 파일에서 Guid 속성 목록을 찾을 수 있습니다.
+> 장치 드라이버의 장치 속성 키 헤더 파일의 Guid 속성 목록을 찾을 수 있습니다.
 
 일부 속성은 모든 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind) 개체에서 공통적으로 사용되지만 대부분은 특정 종류에 고유합니다. 다음 섹션에는 몇 가지 공통 속성이 개별 **DeviceInformationKind**별로 정렬되어 있습니다. 여러 종류가 서로 어떤 관련성을 가지는지에 대한 자세한 내용은 **DeviceInformationKind**를 참조하세요.
 

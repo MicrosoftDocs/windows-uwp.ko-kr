@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482528"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -82,7 +82,7 @@ VSTS에서 첫 번째 빌드 정의를 만들려면 빌드 탭으로 이동한 �
 
 #### <a name="configure-the-build-solution-build-task"></a>솔루션 빌드에 대한 빌드 작업 구성
 
-이 작업은 이진 파일을 작업 폴더에 있는 출력 앱 패키지 파일을 생성 하는 솔루션을 컴파일합니다.
+이 작업은 이진 파일을 작업 폴더에 있는 출력 앱 패키지 파일을 생성 솔루션 파일로 컴파일하여 합니다.
 이 작업에서는 MSbuild 인수가 사용됩니다.  이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요.
 
 |**MSBuild 인수**|**값**|**설명**|
@@ -280,7 +280,7 @@ Microsoft 계정, 소셜 미디어 계정 또는 메일 주소만 사용해도 H
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-HockeyApp 작업을 사용 하면 기호 파일의 경로를 지정할 수, 이지만 번들과 기호를 포함 하는 것이 좋습니다.
+HockeyApp 작업을 사용 하면 기호 파일의 경로를 지정할 수, 이지만 번들을 사용 하 여 기호를 포함 하는 것이 좋습니다.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Microsoft Store에 패키지를 제출하는 연속 배포 빌드 설정
 
@@ -304,9 +304,9 @@ Microsoft Store 연결 마법사는 Microsoft Store 연결 정보를 포함하�
 
 Microsoft Store API와 통합하는 Microsoft Store용 Visual Studio Team Services 확장을 사용하여 Microsoft Store에 appxupload 패키지를 보냅니다.
 
-다음 요청을 인증 하려면 광고에서 앱을 만드는 및 사용 하 여 Azure Active Directory (AD), 파트너 센터 계정에 연결 해야 합니다. 작업을 수행하는 확장 페이지의 지침에 따라 수행할 수 있습니다.
+파트너 센터 계정으로 Azure Active Directory (AD)를 연결한 다음 요청을 인증 하려면 광고에서 앱을 만드는 해야 합니다. 작업을 수행하는 확장 페이지의 지침에 따라 수행할 수 있습니다.
 
-확장을 구성한 후에 빌드 작업을 추가 하 고 응용 프로그램 ID와 업로드 파일의 위치를 사용 하 여 구성할 수 있습니다.
+확장을 구성한 후에 빌드 작업을 추가 하 고 앱 ID와 업로드 파일의 위치를 사용 하 여 구성할 수 있습니다.
 
 ![파트너 센터 구성](images/building-screen17.png)
 
@@ -338,7 +338,7 @@ Windows 10 1 주년 업데이트에서 앱 패키지 파일을 두 번 클릭 �
 >[!NOTE]
 > 이 메서드는 인증서 또는 관련된 종속성을 설치하지 않습니다.
 
-VSTS 또는 HockeyApp 등 웹 사이트에서 Windows 앱 패키지를 배포 하려는 경우 브라우저에서 신뢰할 수 있는 사이트 목록에 해당 사이트를 추가 해야 합니다. 그렇지 않으면 파일이 잠금 상태로 표시됩니다.
+VSTS 또는 HockeyApp 등 웹 사이트에서 Windows 앱 패키지를 배포 하려는 경우 해당 사이트의 브라우저에서 신뢰할 수 있는 사이트 목록에 추가 해야 합니다. 그렇지 않으면 파일이 잠금 상태로 표시됩니다.
 
 <span id="certificates-best-practices"/>
 

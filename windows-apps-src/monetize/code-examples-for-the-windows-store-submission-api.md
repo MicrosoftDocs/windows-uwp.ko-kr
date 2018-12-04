@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제
 ms.localizationpriority: medium
 ms.openlocfilehash: f60668ba81bbaefe2c190f7212618684797366bf
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324385"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483465"
 ---
 # <a name="code-examples-for-the-submission-api"></a>제출 API에 대한 코드 예제
 
-이 섹션에서는 [Microsoft Store 제출 API](create-and-manage-submissions-using-windows-store-services.md) 사용 하 여 여러 다른 프로그래밍 언어로 대 한 코드 예제를 제공 합니다.
+이 섹션에서는 [Microsoft Store 제출 API](create-and-manage-submissions-using-windows-store-services.md) 사용 하 여 여러 다른 프로그래밍 언어에서에 대 한 코드 예제를 제공 합니다.
 
 > [!NOTE]
-> 아래에 나열 된 코드 예제 외에 Microsoft Store 제출 API 위에 명령줄 인터페이스를 구현 하는 오픈 소스 PowerShell 모듈도 제공 합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Microsoft Store 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+> 아래에 나열 된 코드 예제 외에도 Microsoft Store 제출 API 위에 명령줄 인터페이스를 구현 하는 오픈 소스 PowerShell 모듈도 제공 합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Microsoft Store 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다. 자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
 
 ## <a name="app-submissions-add-on-submissions-and-package-flight-submissions"></a>앱 제출, 추가 기능 제출, 패키지 플라이트 제출
 

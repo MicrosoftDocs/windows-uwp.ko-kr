@@ -8,11 +8,11 @@ ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8ffcbbcc73db049498eb09ea60061f93cd7b09f2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351557"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480338"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱에 대한 디자인 도구 키트 및 샘플
  
@@ -97,7 +97,7 @@ ms.locfileid: "8351557"
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Adobe Photoshop 용 타일 및 아이콘 생성기** 이 Adobe Photoshop 용 작업이 집합 단 7 파일에서 68 권장된 타일 및 아이콘 자산을 생성 합니다. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">타일 및 아이콘 생성기 다운로드</a></p>
+      **Adobe Photoshop 용 타일 및 아이콘 생성기** 이 Adobe Photoshop 용 작업이 집합이 단 7 파일에서 68 권장된 타일 및 아이콘 자산을 생성 합니다. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">타일 및 아이콘 생성기 다운로드</a></p>
     :::column-end:::
 :::row-end:::
 
@@ -106,12 +106,12 @@ ms.locfileid: "8351557"
 
 ![Fluent XAML 테마 편집기 이미지](images/XamlThemeEditor_screenshot.png)
 **XAML 테마 편집기 흐름**<br>
-Fluent XAML 테마 편집기는 Fluent 디자인 시스템의 유연성을 설명 하는 데 도움이 되는 도구 뿐만 아니라 유니버설 Windows 플랫폼 응용 프로그램에서 사용 하는 ResourceDictionary 프레임 워크에 대 한 XAML 태그를 생성 하 여 앱 개발 프로세스를 지원 합니다. (데 드는)입니다.
+Fluent XAML 테마 편집기는 Fluent 디자인 시스템의 유연성을 설명 하는 데 도움이 되는 도구 뿐만 아니라 유니버설 Windows 플랫폼 응용 프로그램에서 사용 하는 ResourceDictionary 프레임 워크에 대 한 XAML 태그를 생성 하 여 응용 프로그램 개발 프로세스를 지원 합니다. (데 드는)입니다.
 <a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">도구 샘플 다운로드</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">GitHub의 도구 확인</a>
 
 ![VanArsdel 이미지](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-승 합 차 Arsdel, Ltd. 종단 간 UWP 샘플 응용 프로그램은 Microsoft Fluent 디자인 시스템 차세대 보여 주기 위해 고안 되었습니다. 향상 된 밀도 및 새 컨트롤의 광범위 한 사용 ux 프레임 워크 및 컴퍼지션의 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 는. 관리 및 IoT 장치 (이 경우 램프)에서 구매에 대 한 풍부한, 생산성 환경을 구축 하는 방법을 보여 줍니다.<br>
+승 합 차 Arsdel, Ltd. 종단 간 UWP 샘플 응용 프로그램 차세대 Microsoft Fluent 디자인 시스템을 보여 주기 위해 고안 되었습니다. 향상 된 밀도 및 새 컨트롤의 광범위 한 사용 ux 프레임 워크 및 컴퍼지션의 강력한 기본 기능 뿐만 아니라 <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows UI 라이브러리</a> 는. 관리 및 IoT 장치 (이 경우 램프)에서 구매에 대 한 풍부한, 생산성 환경을 구축 하는 방법을 보여 줍니다.<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">VanArsdel 샘플 다운로드</a> <br><a href="https://github.com/microsoft/vanarsdel">GitHub에서 VanArsdel 샘플 확인</a>
 
 ![캐스트 이미지 빌드](images/buildcast.png)

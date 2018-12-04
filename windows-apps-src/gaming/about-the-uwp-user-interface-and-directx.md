@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, directx, 앱 개체
 ms.localizationpriority: medium
 ms.openlocfilehash: e12ad6ce221440e8840006b3883980721b899ae6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324560"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484944"
 ---
 # <a name="the-app-object-and-directx"></a>앱 개체 및 DirectX
 
@@ -19,7 +19,7 @@ ms.locfileid: "8324560"
 
 DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI 사용자 인터페이스 요소 및 개체를 거의 사용하지 않습니다. 더 정확히 말하면 그러한 요소 및 개체는 Windows 런타임 스택의 하위 수준에서 실행되므로 앱 개체에 직접 액세스하여 상호 작용하는 보다 본질적인 방식으로 사용자 인터페이스 프레임워크와 상호 작용해야 합니다. 이러한 상호 작용이 발생하는 경우와, DirectX 개발자로서 UWP 앱 개발에 이 모델을 효율적으로 사용하는 방법에 대해 학습합니다.
 
-[Direct3D 그래픽 용어](../graphics-concepts/index.md) 낯선 그래픽 조건이 나 읽는 동안 발생 하는 개념에 대 한 정보를 참조 하세요.
+낯선 그래픽 조건이 나 읽는 동안 발생 하는 개념에 대 한 정보에 대 한 [Direct3D 그래픽 용어](../graphics-concepts/index.md) 를 참조 하세요.
 
 ## <a name="the-important-core-user-interface-namespaces"></a>중요한 핵심 사용자 인터페이스 네임스페이스
 

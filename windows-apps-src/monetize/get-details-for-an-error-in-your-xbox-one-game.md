@@ -1,22 +1,22 @@
 ---
-description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임 합니다.
-title: 게임에서 Xbox One에 오류에 대 한 세부 정보를 가져오기
+description: Microsoft Store 분석 API에서에서이 메서드를 사용 하 여 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임입니다.
+title: 게임에서 Xbox One 오류에 대 한 세부 정보를 가져오기
 ms.date: 11/06/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, 오류, 세부 정보
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b713e3c6c2f7b82e5779e4785cc6b2e320b24f0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346639"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484661"
 ---
-# <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에서 Xbox One에 오류에 대 한 세부 정보를 가져오기
+# <a name="get-details-for-an-error-in-your-xbox-one-game"></a>게임에서 Xbox One 오류에 대 한 세부 정보를 가져오기
 
-이 메서드를 사용 하 여 Microsoft Store 분석 API에서 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 대 한 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 자세한 데이터를 가져올 특정 오류에 대 한 Xbox One에 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 파트너 센터 대시보드에서 사용할 수 있습니다. 이 메서드는 지난 30일 동안 발생한 오류에 대한 세부 정보만 검색할 수 있습니다.
 
-이 메서드를 사용 하려면 먼저에 자세한 정보를 원하는 오류 ID를 검색 먼저 [Xbox One 게임에 대 한 데이터를 보고 하는 오류 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 해야 합니다.
+이 메서드를 사용 하려면 먼저 자세한 정보를 원하는 오류 ID를 검색할 [오류 보고 Xbox One 게임에 대 한 데이터 가져오기](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 먼저 사용 해야 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -49,7 +49,7 @@ ms.locfileid: "8346639"
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | string | 오류 세부 정보를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 Xbox 개발자 포털(XDP)에서 사용자 게임으로 이동한 후 URL에서 제품 ID를 검색합니다. 또는 Windows 파트너 센터 분석 보고서에서 상태 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다. |  예  |
-| failureHash | 문자열 | 자세한 정보를 가져오려는 오류의 고유 ID입니다. 관심 있는 오류의이 값을 얻기 위해 [게임에 Xbox One에 대 한 오류 보고 데이터를 get](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 하 고 해당 메서드의 응답 본문에 **failureHash** 값을 사용 합니다. |  예  |
+| failureHash | 문자열 | 자세한 정보를 가져오려는 오류의 고유 ID입니다. 관심 있는 오류의이 값을 얻기 위해 [게임에 Xbox One에 대 한 오류 보고 데이터를 가져오는](get-error-reporting-data-for-your-xbox-one-game.md) 메서드를 사용 하 고 해당 메서드의 응답 본문에 **failureHash** 값을 사용 합니다. |  예  |
 | startDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜보다 30일 전입니다. |  아니요  |
 | endDate | date | 검색할 자세한 오류 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | top | int | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |
@@ -100,9 +100,9 @@ Authorization: Bearer <your access token>
 | osBuild         | 문자열  | 오류가 발생한 OS의 빌드 번호입니다.       |
 | packageVersion  | string  | 이 오류와 연결 된 게임 패키지의 버전입니다.    |
 | deviceModel           | 문자열  | 게임을 실행 한 오류가 발생할 때 Xbox One 콘솔을 나타내는 다음 문자열 중 하나입니다.<p/><ul><li><strong>Microsoft Xbox 하나</strong></li><li><strong>Microsoft Xbox One S</strong></li><li><strong>Microsoft Xbox One X</strong></li></ul>  |
-| osVersion       | 문자열  | 오류가 발생한 OS 버전입니다. 이것이 항상 **Windows 10**값입니다.    |
+| osVersion       | 문자열  | 오류가 발생한 OS 버전입니다. 항상 **Windows 10**값입니다.    |
 | osRelease       | 문자열  |  Windows 10 OS 릴리스 또는 플 라이팅 링 (집단는 OS 버전 내) 오류가 발생 하는 다음 문자열 중 하나입니다.<p/><ul><li><strong>버전 1507</strong></li><li><strong>버전 1511</strong></li><li><strong>버전 1607</strong></li><li><strong>버전 1703</strong></li><li><strong>버전 1709</strong></li><li><strong>버전 1803</strong></li><li><strong>릴리스 미리 보기</strong></li><li><strong>초기 참가자</strong></li><li><strong>이후 참가자</strong></li></ul><p>OS 릴리스 또는 플라이팅 링을 알 수 없는 경우 이 필드의 값은 <strong>알 수 없음</strong>입니다.</p>    |
-| deviceType      | 문자열  | 오류가 발생한 디바이스 유형입니다. 이것이 항상 **콘솔**값입니다.     |
+| deviceType      | 문자열  | 오류가 발생한 디바이스 유형입니다. 항상 **콘솔**값입니다.     |
 | cabDownloadable           | 부울  | 이 사용자에 대해 CAB 파일을 다운로드할 수 있는지 여부를 나타냅니다.   |
 
 

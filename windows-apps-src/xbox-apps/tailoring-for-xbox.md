@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e64feb8938be3e7338c87acdf8fd18fb13e525b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342121"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479274"
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 
@@ -65,7 +65,7 @@ UWP 앱에 적용된 이러한 사례를 간략하게 보려면 이 동영상을
 
 ## <a name="app-dev-on-xbox"></a>Xbox에서 앱 개발
 
-**Xbox에서 앱 개발** 이벤트는 Xbox에서 앱을 작성 하는 데 새 개발자를 위한 멋진 출발점입니다.
+**Xbox에서 앱 개발** 이벤트는 개발자 Xbox에서 앱 빌드를 위한 멋진 출발점입니다.
 
 * [기록 된 세션](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
 * [블로그 게시물](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)

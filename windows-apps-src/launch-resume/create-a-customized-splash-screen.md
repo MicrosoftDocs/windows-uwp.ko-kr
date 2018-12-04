@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 142ee642806ebba41d6ddb4d49fe55217e7a0e2e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338430"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482830"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>시작 화면을 더 오래 표시
 
@@ -24,7 +24,7 @@ ms.locfileid: "8338430"
 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하지만 사용자 지정할 수 있습니다. 실시간 로드 정보를 표시할지 또는 앱에 초기 UI를 준비할 추가 시간을 제공할지에 관계없이 연장된 시작 화면을 사용하여 시작 환경을 정의할 수 있습니다.
 
 > [!NOTE]
-> 이 항목의 "연장 된 시작 화면" 구가 오랜된 기간에 대 한 화면에 유지 하는 시작 화면을 가리킵니다. [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스에서 파생되는 하위 클래스를 의미하는 것은 아닙니다.
+> 이 항목의 "연장 된 시작 화면" 구가 오랜된 기간에 대 한 화면에 유지 하는 시작 화면을 나타냅니다. [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스에서 파생되는 하위 클래스를 의미하는 것은 아닙니다.
 
 이러한 권장 사항을 따라 연장된 시작 화면이 기본 시작 화면을 정확하게 모방하도록 합니다.
 
@@ -58,7 +58,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 -   [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 요소를 추가합니다. 기본 시작 화면에 대해 선택한 것과 동일한 600x320 픽셀 이미지를 연장된 시작 화면에 사용합니다.
 -   (옵션) 진행률 컨트롤을 추가하여 사용자에게 앱이 로드되고 있음을 표시합니다. 이 항목에서는 확정되었거나 확정되지 않은 [**ProgressBar**](https://msdn.microsoft.com/library/windows/apps/br227529) 대신 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)을 추가합니다.
 
-다음 예제에서는 이러한 추가 및 변경 된 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) 를 보여 줍니다.
+다음 예제에서는 이러한 추가 및 변경 사항을 [**그리드**](https://msdn.microsoft.com/library/windows/apps/br242704) 를 보여 줍니다.
 
 ```xaml
     <Grid Background="#464646">
@@ -213,13 +213,13 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
     ```
 
     > [!NOTE]
-    > 가져오기 전에 이미지 위치 확인 클래스 변수 (`splash`)의 예와 같이 유효한 [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 개체를 포함 합니다.
+    > 가져오기 전에 이미지 위치 하는지 클래스 변수 (`splash`)의 예와 같이 유효한 [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 개체를 포함 합니다.
 
      
 
 8.  **(선택 사항) 저장된 세션 상태를 복원하는 클래스 메서드 추가**
 
-    4단계, [시작 활성화 처리기 수정](#modify-the-launch-activation-handler)에서 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드에 추가한 코드로 인해 앱을 시작할 때 연장된 시작 화면이 표시됩니다. 연장 된 시작 화면 클래스에 앱 시작 실행과 관련 된 모든 메서드를 통합 하려면를 ExtendedSplash.xaml.cs 파일 앱의 상태를 복원 하는 메서드를 추가 하는 것을 고려할 수 있습니다.
+    4단계, [시작 활성화 처리기 수정](#modify-the-launch-activation-handler)에서 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드에 추가한 코드로 인해 앱을 시작할 때 연장된 시작 화면이 표시됩니다. 앱 시작 연장 된 시작 화면 클래스와 관련 된 모든 메서드를 통합 하려면를 ExtendedSplash.xaml.cs 파일 앱의 상태를 복원 하는 메서드를 추가 하는 것을 고려할 수 있습니다.
 
     ```cs
     void RestoreState(bool loadState)
@@ -290,7 +290,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 ### <a name="extendedsplashxamlcs"></a>ExtendedSplash.xaml.cs
 
-유의 합니다 `DismissExtendedSplash` 에 대 한 click 이벤트 처리기에서 호출 되어야 합니다 `DismissSplash` 단추 합니다. 앱에는 `DismissSplash` 단추가 필요하지 않습니다. 대신, 앱이 리소스 로드를 완료하고 기본 페이지로 이동하려는 경우 `DismissExtendedSplash`를 호출합니다.
+`DismissExtendedSplash` 에 대 한 click 이벤트 처리기에서 메서드를 호출 합니다 `DismissSplash` 단추입니다. 앱에는 `DismissSplash` 단추가 필요하지 않습니다. 대신, 앱이 리소스 로드를 완료하고 기본 페이지로 이동하려는 경우 `DismissExtendedSplash`를 호출합니다.
 
 ```cs
 using System;

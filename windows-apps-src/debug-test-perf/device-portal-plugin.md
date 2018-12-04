@@ -4,14 +4,14 @@ title: Device Portal에 대한 사용자 지정 플러그 인 작성
 description: Windows Device Portal을 사용하여 웹 페이지를 호스팅하고 진단 정보를 제공하는 UWP 앱을 작성하는 방법을 알아보세요.
 ms.date: 03/24/2017
 ms.topic: article
-keywords: windows 10, uwp, 디바이스 포털
+keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325114"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480918"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Device Portal에 대한 사용자 지정 플러그 인 작성
 
@@ -108,7 +108,7 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-요청 처리 루프를 완료 하기 위해 앱에서 처리 해야 하는 두 가지 이벤트가: **Closed**, 때마다에 대 한 Device Portal 서비스 종료 되 고 [**RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), 들어오는 HTTP을 표시 하는 요청 하 고 기본 제공 Device Portal 공급자의 기능입니다. 
+요청 처리 루프를 완료 하기 위해 앱에서 처리 해야 하는 두 가지 이벤트가: **Closed**, 때마다에 대 한 Device Portal 서비스가 종료 되 고 [**RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), 들어오는 HTTP을 표시 하는 요청 하 고 기본 제공 Device Portal 공급자의 기능입니다. 
 
 ## <a name="handle-the-requestreceived-event"></a>RequestReceived 이벤트 처리
 플러그 인의 지정된 처리기 경로에 요청된 모든 HTTP 요청에 대해 **RequestReceived** 이벤트가 한 번 발생합니다. Device Portal 공급자가에 대한 요청 처리 루프는 NodeJS Express의 요청 처리 루프와 비슷합니다. 요청 및 응답 개체는 이벤트에 함께 제공되고 처리기는 응답 개체를 작성하여 응답합니다. Device Portal 공급자에서 **RequestReceived** 이벤트 및 처리기는 [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) 및 [**HttpResponseMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpresponsemessage) 개체를 사용합니다.   

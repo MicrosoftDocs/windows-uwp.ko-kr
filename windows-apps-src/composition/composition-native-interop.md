@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f5eabfaf8e526899c17b2d0da688a5135133f65
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335025"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484360"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>DirectX 및 Direct2D를 사용하여 컴퍼지션 네이티브 상호 운용
 
@@ -39,11 +39,11 @@ Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있
 
 ## <a name="usage-example"></a>사용 예제
 
-다음 코드 예제는 상호 운영성 시나리오를 보여 줍니다. 이 예제에서는 interop 머리글과 COM 기반 DirectWrite 및 Direct2D Api를 사용 하 여 텍스트를 렌더링 하는 코드의 종류와 함께 Windows 컴퍼지션의 Windows 런타임 기반 노출 영역에서 형식을 결합 합니다. 이 예제에서는 이러한 기술 간의 상호 운용을 원활한 되도록 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 및 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 를 사용 합니다. 이 예제에서는 DirectWrite를 사용 하 여 텍스트를 배치 하 고 Direct2D 렌더링을 사용 합니다. 컴퍼지션 그래픽 장치는 초기화 시 직접 Direct2D 장치를 사용합니다. 이렇게 하면 **BeginDraw** 이 응용 프로그램을 Direct2D 컨텍스트를 만들어 각 그리기 작업에서 반환 된 ID3D11Texture2D 인터페이스를 래핑하는 것 보다 훨씬 더 효율적는 **ID2D1DeviceContext** 인터페이스 포인터를 반환할 수 있습니다.
+다음 코드 예제는 상호 운용 시나리오를 보여 줍니다. 이 예제에서는 interop 머리글과 COM 기반 DirectWrite 및 Direct2D Api를 사용 하 여 텍스트를 렌더링 하는 코드의 종류와 함께 Windows 컴퍼지션의 Windows 런타임 기반 노출 영역에서 형식을 결합 합니다. 이 예제에서는 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 및 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 를 사용 하 여 원활한 이러한 기술 간의 상호 작용할 수 있도록 합니다. 이 예제에서는 DirectWrite를 사용 하 여 텍스트를 배치 하 고 Direct2D 렌더링을 사용 합니다. 컴퍼지션 그래픽 장치는 초기화 시 직접 Direct2D 장치를 사용합니다. 이렇게 하면 **BeginDraw** 이 응용 프로그램 각 그리기 작업에서 반환 된 ID3D11Texture2D 인터페이스를 래핑하는 Direct2D 컨텍스트를 만들어 보다 훨씬 더 효율적는 **ID2D1DeviceContext** 인터페이스 포인터를 반환할 수 있습니다.
 
-아래 코드 예제를 두 가지 있습니다. 첫 번째는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 예제입니다 (완료) 하 여 다음 C + + CX 코드 예제 (이 예제에서는 DirectWrite 및 Direct2D 부분을 생략).
+아래의 코드 예제 2 가지 있습니다. 첫 번째는 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 예제입니다 (완료) 하 여 다음 C + + (이 예제에서는 DirectWrite 및 Direct2D 부분을 생략)는 CX 코드 예제입니다.
 
-사용 하 여 C + + WinRT 아래 코드 예제에서는 먼저 새 만듭니다 **Core App (C + + WinRT)** Visual Studio에서 프로젝트 (요구 사항에 대 한 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-and-the-vsix)). 프로젝트를 만들 때 대상 버전 **Windows 10, 버전 1803 (10.0;으로 선택 빌드 17134)** 합니다. 이 코드는 빌드 및 테스트 버전입니다. 내용을 `App.cpp` 소스 코드 파일, 아래 코드 목록을 사용 하 여 다음 빌드 및 실행 합니다. 응용 프로그램 렌더링 문자열 "Hello, World!" 투명 배경에서 검은색 텍스트입니다.
+사용 하 여 C + + WinRT 아래 코드 예제에서는 먼저 새 만듭니다 **Core App (C + + WinRT)** Visual Studio에서 프로젝트 (요구 사항에 대 한 참조 [Visual Studio 지원 C + + /winrt 및 VSIX](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-and-the-vsix)). 프로젝트를 만드는 동안 대상 버전 **Windows 10, 버전 1803 (10.0;으로 선택 빌드 17134)**. 이 코드는에 대 한 빌드 및 테스트의 버전입니다. 내용을 `App.cpp` 소스 코드 파일, 아래 코드 목록을 사용 하 여 다음 빌드 및 실행 합니다. 응용 프로그램이 렌더링 문자열 "Hello, World!" 투명 배경에서 검은색 텍스트입니다.
 
 ```cppwinrt
 // App.cpp

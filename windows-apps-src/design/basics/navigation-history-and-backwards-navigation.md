@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d5ca79220bf2f5c93f7b8f04a787662470f87a06
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8339220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479430"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
@@ -43,7 +43,7 @@ UWP(유니버설 Windows 플랫폼)에서 앱 내에서 그리고 장치에 따�
 Style="{StaticResource NavigationBackButtonNormalStyle}"/>
 ```
 
-앱의 이동 UI 요소를 최소화 하려면, 백스택에 아무 것도 없을 때 사용할 수 없는 뒤로 단추를 표시하세요. 하지만 앱은 backstack 있을 수 없는 것으로 예상 하는 경우에 뒤로 단추를 전혀 표시 필요가 없습니다.
+앱의 이동 UI 요소를 최소화 하려면, 백스택에 아무 것도 없을 때 사용할 수 없는 뒤로 단추를 표시하세요. 하지만 앱은 백 스택에 있을 수 없는 것으로 예상 하는 경우에 뒤로 단추를 전혀 표시 필요가 없습니다.
 
 ![뒤로 단추 상태](images/back-nav/BackDisabled.png)
 
@@ -167,7 +167,7 @@ namespace winrt::PageNavTest::implementation
 }
 ```
 
-위의 단일 페이지 탐색을 처리 뒤로 합니다. 뒤로 탐색에서 특정 페이지를 제외 하거나 페이지를 표시 하기 전에 페이지 수준 코드를 실행 하려는 경우 각 페이지에서 탐색을 처리할 수 있습니다.
+위, 단일 페이지 탐색을 처리 뒤로 합니다. 뒤로 탐색에서 특정 페이지를 제외 하거나 페이지를 표시 하기 전에 페이지 수준 코드를 실행 하려는 경우 각 페이지에서 탐색을 처리할 수 있습니다.
 
 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대 한 전역 수신기를 등록 합니다 뒤로 전체 앱에 대 한 탐색을 처리 하는 `App.xaml` 코드 숨김 파일.
 
@@ -284,9 +284,9 @@ bool App::On_BackRequested()
 
 이전에는 UWP 앱이 뒤로 탐색을 지원하기 위해 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용했습니다. 이전 버전과 호환성을 보장 하기 지원 해야 하는 API는 계속 하지만 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)의존 더 이상 권장 합니다. 대신 앱은 인-앱 뒤로 단추를 호출해야 합니다.
 
-앱 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용 하 여 계속 되 면 UI는 시스템 렌더링 시스템 뒤로 단추:
+앱이 계속 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용 하 여, UI는 시스템 렌더링 시스템 뒤로 단추:
 
-- 앱이 **없는 탭**에 뒤로 단추가 제목 표시줄 내부 렌더링 됩니다. 뒤로 단추에 대 한 시각적 환경과 사용자 상호 작용은 이전 빌드에서 변경 되지 않습니다.
+- 앱이 **없는 탭**인 경우 뒤로 단추가 제목 표시줄 내부 렌더링 됩니다. 뒤로 단추에 대 한 시각적 환경과 사용자 상호 작용은 이전 빌드에서 변경 되지 않습니다.
 
     ![제목 표시줄 뒤로 단추](images/nav-back-pc.png)
 
@@ -301,11 +301,11 @@ bool App::On_BackRequested()
 
 시스템 뒤로 표시줄은 탭 밴드와 앱의 콘텐츠 영역 사이 삽입 되는 "밴드"입니다. 밴드는 앱의 가로를 따라 흐르며 왼쪽 가장자리에 뒤로 단추가 표시됩니다. 밴드는 뒤로 단추에 대 한 적절 한 터치 대상 크기 32 픽셀의 세로 높이입니다.
 
-시스템 뒤로 표시줄은 뒤로 단추 표시 여부에 따라 동적으로 나타납니다. 뒤로 단추가 표시 된 경우, 시스템 뒤로 표시줄이 삽입은 탭 밴드 32 픽셀 앱 콘텐츠를 이동 합니다. 뒤로 단추 숨겨진 경우, 시스템 뒤로 표시줄이 동적으로 제거 되 면 32 픽셀 탭 밴드를 충족 하도록 하 여 앱 콘텐츠 이동 합니다. 위나 앱의 UI를 사용 하지 않으려면 [앱 내 뒤로 단추](#back-button)를 사용 하는 것이 좋습니다.
+시스템 뒤로 표시줄은 뒤로 단추 표시 여부에 따라 동적으로 나타납니다. 뒤로 단추에 표시 된 경우, 시스템 뒤로 표시줄이 삽입 되 면 앱 콘텐츠를 탭 밴드 32 픽셀 이동 합니다. 뒤로 단추 숨겨진 경우, 시스템 뒤로 표시줄은 동적으로 제거 32 픽셀 탭 밴드를 충족 하도록 하 여 앱 콘텐츠 이동 합니다. 위나 앱의 UI를 사용 하지 않으려면 [앱 내 뒤로 단추](#back-button)를 사용 하는 것이 좋습니다.
 
-[제목 표시줄 사용자 지정](../shell/title-bar.md) 을 통해 앱 탭 및 시스템 뒤로 모두 수행할 모음입니다. [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)사용 하 여 배경색 및 전경색 속성을 지정 하는 앱 경우 색을 적용할 탭 및 시스템 뒤로 표시줄.
+[제목 표시줄 사용자 지정](../shell/title-bar.md) 은 앱 탭 및 시스템 뒤로 모두에 적용할 수 모음입니다. [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)사용 하 여 배경색 및 전경색 속성을 지정 하는 앱 경우 색상이 탭 및 시스템 뒤로 부과 모음입니다.
 
-[제목 표시줄 사용자 지정](../shell/title-bar.md) 을 통해 앱 탭 및 시스템 뒤로 모두 수행할 모음입니다. [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)사용 하 여 배경색 및 전경색 속성을 지정 하는 앱 경우 색을 적용할 탭 및 시스템 뒤로 표시줄.
+[제목 표시줄 사용자 지정](../shell/title-bar.md) 은 앱 탭 및 시스템 뒤로 모두에 적용할 수 모음입니다. [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar)사용 하 여 배경색 및 전경색 속성을 지정 하는 앱 경우 색상이 탭 및 시스템 뒤로 부과 모음입니다.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>사용자 지정 뒤로 탐색 동작 지침
 
@@ -330,16 +330,16 @@ bool App::On_BackRequested()
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하지 않고 동일한 피어 그룹의 페이지 간</strong>
-<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 화면에 더는 두 페이지로 직접 이동할 수를 제공 하는 탐색 요소 (예: <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>).</p></td>
+<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 화면에 더는 두 페이지로 직접 이동할 탐색 요소 (예: <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>).</p></td>
 <td style="vertical-align:top;"><strong>예</strong>
-<p>다음 그림에서 사용자가 동일한 피어 그룹의 두 페이지 사이 이동 하 고 탐색이 탐색 기록에 추가 해야 합니다.</p>
+<p>다음 그림에서 사용자가 동일한 피어 그룹에 두 페이지 사이 이동 하 고 탐색이 탐색 기록에 추가 해야 합니다.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하여 페이지 간, 동일한 피어 그룹</strong>
 <p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지 모두 동일한 탐색 요소 <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>같은에서 표시 됩니다.</p></td>
 <td style="vertical-align:top;"><strong>유동적입니다.</strong>
-<p>예, 두 주목할 만한 예외가 탐색 기록에 추가 합니다. 앱의 사용자가 자주 피어 그룹 간을 전환할 것으로 예상 또는 탐색 계층 구조를 유지 하려는 경우 추가 하지 마십시오 탐색 기록에 있습니다. 이 경우 사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다. </p>
+<p>예, 앱은 두 가지 예외를 사용 하 여 탐색 기록에 추가 합니다. 앱의 사용자가 자주 피어 그룹 간을 전환할 것으로 예상 또는 탐색 계층 구조를 유지 하려는 경우 추가 하지 마십시오 탐색 기록에 있습니다. 이 경우 사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">

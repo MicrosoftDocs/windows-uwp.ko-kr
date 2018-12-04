@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c812cea510865da68760788a723830fe0940c21
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340662"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480193"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Xbox 개발 환경에서의 UWP 설정
 
@@ -23,7 +23,7 @@ Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워
 
 ## <a name="visual-studio-setup"></a>Visual Studio 설치
 
-1. Visual Studio 2017, Visual Studio 2015 업데이트 3 또는 Visual Studio의 최신 릴리스를 설치 합니다. 설치에 대한 자세한 내용은 [Windows 10용 다운로드 및 도구](https://dev.windows.com/downloads)를 참조하세요. 개발자와 보안에 대 한 최신 업데이트를 받을 수 있도록 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다.
+1. Visual Studio 2017, Visual Studio 2015 업데이트 3 또는 Visual Studio의 최신 버전을 설치 합니다. 설치에 대한 자세한 내용은 [Windows 10용 다운로드 및 도구](https://dev.windows.com/downloads)를 참조하세요. 개발자와 보안에 대 한 최신 업데이트를 받을 수 있도록 Visual Studio의 최신 버전을 사용 하는 것이 좋습니다.
 
 2. Visual Studio 2017을 설치하는 경우 **유니버설 Windows 플랫폼 개발** 작업을 선택하도록 하세요. C++ 개발자인 경우에도 **유니버설 Windows 플랫폼 개발** 아래의 오른쪽 **요약** 창의 **C++ 유니버설 Windows 플랫폼 도구** 확인란을 선택하도록 하세요. 이는 기본 설치에 포함되지 않습니다.
 

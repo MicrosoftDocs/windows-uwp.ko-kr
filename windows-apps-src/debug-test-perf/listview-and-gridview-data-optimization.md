@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 411d19ba26dca1edff91fb7e5b432aa4da3bd120
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340770"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484729"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView 및 GridView 데이터 가상화
 
@@ -27,7 +27,7 @@ ms.locfileid: "8340770"
 -   데이터 집합의 소스(로컬 디스크, 네트워크 또는 클라우드)
 -   앱의 전체 메모리 소비
 
-**참고**ListView 및 GridView 사용자가 이동/스크롤 신속 하 게 하는 동안 일시적으로 자리 표시자 화면 효과 표시 하는 기능이 기본적으로 사용은 주의 해야 합니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
+**참고**기능 ListView 및 GridView 사용자가 이동/스크롤 신속 하 게 하는 동안 일시적으로 자리 표시자 화면 효과 표시 하는 기본적으로 사용 됩니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
 
 증분 및 임의 액세스 데이터 가상화 기술에 대한 자세한 내용은 다음과 같습니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "8340770"
 
 이와 같은 데이터 원본은 지속적으로 확장될 수 있는 메모리 내 목록입니다. 항목 컨트롤은 표준 [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) 인덱서 및 개수 속성을 사용하는 항목을 요청합니다. 개수는 데이터 집합의 실제 크기가 아니라 항목 수를 로컬로 나타내야 합니다.
 
-항목 컨트롤이 기존 데이터의 끝에 가까워지면 [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems)를 호출합니다. **true**를 반환하면 로드할 권장 항목 수를 전달하는 [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync)를 호출합니다. 데이터를 로드하는 위치(로컬 디스크, 네트워크 또는 클라우드)에 따라 권장 개수와 다른 개수의 항목을 로드하도록 선택할 수 있습니다. 예를 들어 서비스에서 50개 항목의 일괄 처리를 지원하지만 항목 컨트롤에서 10개를 요청하는 경우 50개를 로드할 수 있습니다. 백 엔드에서 데이터를 로드하고 목록에 추가한 후 항목 컨트롤이 새 항목을 인식하도록 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)를 통해 변경 알림을 발생시킵니다. 또한 실제로 로드한 항목 수를 반환합니다. 권장 개수보다 적은 항목을 로드하거나 항목 컨트롤이 중간에 훨씬 멀리 이동/스크롤된 경우 추가 항목에 대해 데이터 원본가 다시 호출되고 주기가 계속됩니다. Windows8.1에 대 한 [XAML 데이터 바인딩 샘플](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) 을 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 더 알아볼 수 있습니다.
+항목 컨트롤이 기존 데이터의 끝에 가까워지면 [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems)를 호출합니다. **true**를 반환하면 로드할 권장 항목 수를 전달하는 [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync)를 호출합니다. 데이터를 로드하는 위치(로컬 디스크, 네트워크 또는 클라우드)에 따라 권장 개수와 다른 개수의 항목을 로드하도록 선택할 수 있습니다. 예를 들어 서비스에서 50개 항목의 일괄 처리를 지원하지만 항목 컨트롤에서 10개를 요청하는 경우 50개를 로드할 수 있습니다. 백 엔드에서 데이터를 로드하고 목록에 추가한 후 항목 컨트롤이 새 항목을 인식하도록 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)를 통해 변경 알림을 발생시킵니다. 또한 실제로 로드한 항목 수를 반환합니다. 권장 개수보다 적은 항목을 로드하거나 항목 컨트롤이 중간에 훨씬 멀리 이동/스크롤된 경우 추가 항목에 대해 데이터 원본가 다시 호출되고 주기가 계속됩니다. Windows8.1에 대 한 [XAML 데이터 바인딩 샘플](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) 을 다운로드 하 고 Windows10 앱에서 해당 소스 코드를 다시 사용 하 여 더 배울 수 있습니다.
 
 ## <a name="random-access-data-virtualization"></a>임의 액세스 데이터 가상화
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1a6047a7c462961f40ae8913881125e2331bb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323347"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480256"
 ---
 # <a name="xname-attribute"></a>x:Name 특성
 

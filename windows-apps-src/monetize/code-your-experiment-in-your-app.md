@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: f0d977d41cea873fc0f5e00bea8d0259586517d5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480402"
 ---
 # <a name="code-your-app-for-experimentation"></a>실험용 앱 코딩
 
-하면 [프로젝트 만들기 및 파트너 센터에서 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)유니버설 Windows 플랫폼 (UWP) 앱에서 코드를 업데이트할 준비가:
+하면 [프로젝트를 만들고 파트너 센터에서 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)유니버설 Windows 플랫폼 (UWP) 앱에서 코드를 업데이트할 준비가:
 * 파트너 센터에서 원격 변수 값을 수신 합니다.
 * 원격 변수를 사용하여 사용자를 위한 앱 환경 구성
-* 사용자가 실험을 표시 하 고 ( *변환*라고도 함) 원하는 작업을 수행 하는 때를 표시 하는 파트너 센터에 이벤트를 기록 합니다.
+* 사용자가 실험을 볼 하 고 ( *변환*라고도 함) 원하는 작업을 수행 하는 경우를 표시 하는 파트너 센터에 이벤트를 기록 합니다.
 
 앱에 이 동작을 추가하려면 Microsoft Store Services SDK에서 제공하는 API를 사용합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "8332117"
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>변형 데이터를 가져와 실험에 대한 보기 이벤트 기록
 
-프로젝트에서 실험에서 수정할 기능에 대한 코드를 찾습니다. 변형에 대 한 데이터를 검색 하는 코드를 추가 하 고이 데이터를 사용 하 여는 테스트할 기능의 동작을 수정한 다음 a 실험에 대 한 보기 이벤트를 기록 / B 테스트 서비스 파트너 센터에 있습니다.
+프로젝트에서 실험에서 수정할 기능에 대한 코드를 찾습니다. 변형에 대 한 데이터를 검색 하는 코드를 추가 하 고이 데이터를 사용 하 여, 테스트할 기능의 동작을 수정 하려면 다음 a 실험에 대 한 보기 이벤트를 기록 / B 테스트 서비스 파트너 센터에 있습니다.
 
 필요한 특정 코드는 앱에 따라 달라지긴 하지만 다음 예제에서는 기본 프로세스를 보여 줍니다. 전체 코드 예제를 보려면 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
@@ -68,7 +68,7 @@ ms.locfileid: "8332117"
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet4)]
 
-5. [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 개체의 [GetBoolean](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean), [GetDouble](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble), [GetInt32](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32) 또는 [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) 메서드를 사용하여 변형 할당 값을 가져올 수 있습니다. 각 메서드에서 첫 번째 매개 변수는 검색할 변형의 이름 (이 크기는 파트너 센터에 입력 하는 변형 동일한 이름). 두 번째 매개 변수 (예를 들어, 네트워크에 연결 되지 않은 경우), 파트너 센터에서 지정 된 값을 가져올 수 없는 경우 메서드에서 반환 하는 기본 값 이며 캐시 된 변형의 버전을 사용할 수 없는.
+5. [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 개체의 [GetBoolean](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean), [GetDouble](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble), [GetInt32](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32) 또는 [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) 메서드를 사용하여 변형 할당 값을 가져올 수 있습니다. 각 메서드에서 첫 번째 매개 변수는 검색할 변형의 이름 (이 이름은 같은 파트너 센터에 입력 하는 변형). 두 번째 매개 변수는 (예를 들어, 네트워크에 연결 되지 않은 경우), 파트너 센터에서 지정 된 값을 검색할 수 없는 경우 메서드에서 반환 하는 기본값 되며 캐시 된 변형의 버전 사용할 수 없습니다.
 
     다음 예제에서는 [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring)을 사용하여 *buttonText*라는 변수를 가져오고 기본 변수 값인 **Grey Button**을 지정합니다.
 
@@ -86,9 +86,9 @@ ms.locfileid: "8332117"
 
 ## <a name="log-conversion-events-to-partner-center"></a>파트너 센터에 변환 이벤트 기록
 
-다음으로 [전환 이벤트](run-app-experiments-with-a-b-testing.md#terms) 를 기록 하는 코드를 추가 / B 테스트 서비스 파트너 센터에 있습니다. 사용자가 실험에 대한 목표를 이루었을 때 코드에 변환 이벤트를 기록해야 합니다. 필요한 특정 코드는 앱에 따라 달라지지만 일반적인 단계는 다음과 같습니다. 전체 코드 예제를 보려면 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
+다음으로, a [전환 이벤트](run-app-experiments-with-a-b-testing.md#terms) 를 기록 하는 코드를 추가 / B 테스트 서비스 파트너 센터에 있습니다. 사용자가 실험에 대한 목표를 이루었을 때 코드에 변환 이벤트를 기록해야 합니다. 필요한 특정 코드는 앱에 따라 달라지지만 일반적인 단계는 다음과 같습니다. 전체 코드 예제를 보려면 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
-1. 사용자가 실험 목표 중 하나에 도달할 때 실행되는 코드에서 [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) 메서드를 다시 호출하고 실험의 전환 이벤트 이름과 [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 개체를 전달합니다. 이 파트너 센터에서 실험에 대 한 입력 변환 이벤트 이름과 일치 해야 합니다.
+1. 사용자가 실험 목표 중 하나에 도달할 때 실행되는 코드에서 [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) 메서드를 다시 호출하고 실험의 전환 이벤트 이름과 [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 개체를 전달합니다. 이 파트너 센터에서 실험에 대 한 입력 하는 변환 이벤트 이름과 일치 해야 합니다.
 
     다음 예제에서는 단추에 대한 **Click** 이벤트 처리기에서 이름이 **userClickedButton**인 전환 이벤트를 기록합니다. 이 예제에서 실험 목표는 사용자가 단추를 클릭하도록 하는 것입니다.
 

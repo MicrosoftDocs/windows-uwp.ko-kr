@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 6740e6ce35277fa7f7f088c312f8b9ee1f5281c3
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479773"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI와 앱 패키지 매니페스트에 문자열 지역화
 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요.
@@ -33,7 +33,7 @@ ms.locfileid: "8327598"
     1. 프로젝트 노드에서 새 폴더를 만들고 이름을 "Strings"로 지정합니다.
     2. `Strings` 아래에 새 하위 폴더를 만들고 이름을 "en-US"로 지정합니다.
     3. `en-US`아래에서 새 리소스 파일(.resw)을 만들고 이름이 "Resources.resw"인지 확인합니다.
-    <br>**참고**포트 하려는.NET 리소스 파일 (.resx)가 경우 [XAML 및 UI 포팅](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)참조 하세요.
+    <br>**참고** [XAML 및 UI 포팅](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization)포팅 하려는.NET 리소스 파일 (.resx)가 표시 됩니다.
 3.  `Resources.resw`를 열고 이러한 문자열 리소스를 추가합니다.
 
     `Strings/en-US/Resources.resw`
@@ -59,7 +59,7 @@ XAML 요소에 문자열 리소스 식별자를 할당할 해당 식별자에 �
 
 리소스 파일에서 **너비**를 설정하는 대신 콘텐츠에 동적으로 크기를 맞추는 컨트롤을 허용하도록 할 수 있습니다.
 
-**참고** [연결 된 속성](../xaml-platform/attached-properties-overview.md)에 대 한.resw 파일의 이름 열에 특수 구문이 필요 합니다. 예를 들어 "Greeting" 식별자에 대한 [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) 연결된 속성에 대한 값을 설정하려면 이름 열에서 이를 입력합니다.
+**참고** [연결 된 속성](../xaml-platform/attached-properties-overview.md)을.resw 파일의 이름 열에 특수 구문이 필요 합니다. 예를 들어 "Greeting" 식별자에 대한 [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) 연결된 속성에 대한 값을 설정하려면 이름 열에서 이를 입력합니다.
 
 ```xml
 Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
@@ -88,7 +88,7 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md) 프로젝트 내에서 동일할 코드를 사용할 수 있습니다. 런타임 시 라이브러리를 호스팅하는 앱의 리소스가 로드됩니다. 앱에는 뛰어난 지역화 수준이 있을 가능성이 높으므로 라이브러리를 호스팅하는 앱에서 리소스를 로드하는 것이 좋습니다. 라이브러리는 리소스를 제공한 다음 호스팅 앱에 이러한 리소스를 입력으로 교체하는 옵션을 제공해야 합니다.
 
-리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점으로 슬래시 ("/")를 사용 하 여 리소스 이름에서 문자입니다. 속성 식별자는 예를 들어 점; 포함 따라서이 substition 코드에서 그 중 하나를 로드 하기 위해 수행 해야 합니다.
+리소스 이름을 분할 하는 경우 (포함 된 "." 문자), 다음 바꾸기 점선 슬래시 ("/")를 사용 하 여 리소스 이름에서 문자입니다. 속성 식별자 예 포함 되는 점입니다. 따라서이 substition 코드에서 중 하나를 로드 하기 위해 수행 해야 합니다.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
@@ -257,27 +257,27 @@ private void RefreshUIText()
 ## <a name="loading-strings-from-a-class-library-or-a-windows-runtime-library"></a>클래스 라이브러리 또는 Windows 런타임 라이브러리에서 문자열 로드
 참조 클래스 라이브러리(유니버설 Windows) 또는 [Windows 런타임 라이브러리(유니버설 Windows)](../winrt-components/index.md)의 문자열 리소스는 일반적으로 빌드 과정에서 포함되는 패키지의 하위 폴더에 추가됩니다. 이러한 문자열의 리소스 식별자는 대개 *LibraryName/ResourcesFileName/ResourceIdentifier*의 형식을 띱니다.
 
-라이브러리는 자체 리소스에 대한 ResourceLoader를 가져올 수 있습니다. 예를 들어 다음 코드는 라이브러리 또는 참조 하는 앱이 라이브러리의 문자열 리소스에 대 한 ResourceLoader를 가져오는 방법을 보여 줍니다.
+라이브러리는 자체 리소스에 대한 ResourceLoader를 가져올 수 있습니다. 예를 들어 다음 코드는 라이브러리 또는 참조 하는 앱이 라이브러리의 문자열 리소스에 대 한 ResourceLoader 가져오는 방법을 보여 줍니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ContosoControl/Resources");
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Windows 런타임 라이브러리 (유니버설 Windows), 기본 네임 스페이스를 분할 하는 경우에 대 한 (포함 된 "." 문자), 리소스 맵 이름에 점이 사용 합니다.
+Windows 런타임 라이브러리 (유니버설 Windows), 기본 네임 스페이스를 분할 하는 경우 (포함 된 "." 문자), 리소스 맵 이름에 점이 사용 합니다.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-클래스 라이브러리 (유니버설 Windows)에 대 한 수행할 필요가 없습니다. 확실 하지에서 [MakePri.exe](makepri-exe-command-options.md) 구성 요소 또는 라이브러리의 PRI 파일을 덤프를 사용할 수 있습니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
+클래스 라이브러리 (유니버설 Windows)에 대해 수행할 필요가 없습니다. 확실 하지에서 [MakePri.exe](makepri-exe-command-options.md) 구성 요소 또는 라이브러리의 PRI 파일을 덤프를 사용할 수 있습니다. 각 리소스의 `uri` 덤프 파일에 표시 됩니다.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>다른 패키지에서 문자열 로드
-앱 패키지에 대 한 리소스를 관리 하 고 패키지를 통해 액세스 현재[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에서 다양 한 구성 요소는 해당 ownResourceMapsubtrees [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)통해 액세스할 수 있을 수 있습니다.
+앱 패키지에 대 한 리소스를 관리 하 고 패키지를 통해 액세스 현재[**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)에서 액세스할 수 있는 최상위[**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 소유 합니다. 각 패키지 내에서 다양 한 구성 요소는 ownResourceMapsubtrees [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)통해 액세스할 수 있을 수 있습니다.
 
 프레임워크 패키지는 절대 리소스 식별자 URI로 자체 리소스에 액세스할 수 있습니다. [URI 스키마](uri-schemes.md)도 참조하세요.
 

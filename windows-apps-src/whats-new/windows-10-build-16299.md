@@ -6,11 +6,11 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: bd333cecc5f9141b3fd34593ea10d17fe6face1e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8331296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479562"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>개발자용 Windows 10 빌드 16299의 새로운 기능
 
@@ -78,7 +78,7 @@ EdgeHTML 16 | Microsoft Edge 및 JS 기반 유니버설 Windows 플랫폼 앱을
 
 특징 | 설명
  :------ | :------
-계정 관리 | 이제 더 많은 유연성을 제공 하면 여러 계정 사용자를 추가 하려면 [파트너 센터 계정과 Azure AD 테 넌 트를 연결](../publish/associate-azure-ad-with-dev-center.md) 합니다. 단일 파트너 센터 계정에 여러 Azure AD 테 넌 트를 연결 하거나 단일 연결 수를 둘 이상의 파트너 센터 계정과 Azure AD 테 넌 트 합니다.
+계정 관리 | 이제 더 많은 유연성을 제공 하면 여러 계정 사용자를 추가 하려면 [파트너 센터 계정과 Azure AD 테 넌 트를 연결](../publish/associate-azure-ad-with-dev-center.md) 합니다. 단일 파트너 센터 계정에 여러 Azure AD 테 넌 트를 연결 하거나 단일 연결 수를 둘 이상의 파트너 센터 계정과 Azure AD 테 넌 트입니다.
 광고 | Microsoft Advertising SDK를 사용하여 이제 앱에서 [기본 광고](../monetize/native-ads.md)를 표시할 수 있습니다. 기본 광고는 제목, 이미지, 설명, 행동 촉구 텍스트 등의 각 광고 크리에이티브 조각이 앱과 통합할 수 있는 개별 요소로 앱에 제공되는 구성 요소 기반 광고입니다. 현재 기본 광고는 파일럿 프로그램에 참여하고 있는 개발자만 사용할 수 있지만, 조만간 모든 개발자가 이 기능을 사용할 수 있도록 지원할 계획입니다.
 가격 책정 및 가용성 |  새 가격 책정 및 가용성 옵션을 사용하면 [가격 변경을 예약](../publish/set-and-schedule-app-pricing.md)하고 [정확한 출시 날짜를 설정](../publish/configure-precise-release-scheduling.md)할 수 있습니다.
 Store 분석 API | [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md)에서 이제 [앱 오류에 대한 CAB 파일을 다운로드](../monetize/download-the-cab-file-for-an-error-in-your-app.md)할 수 있는 방법을 제공합니다.

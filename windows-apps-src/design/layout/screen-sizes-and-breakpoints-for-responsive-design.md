@@ -7,15 +7,15 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0959c9bc09782538cdb15a68c46b0797d4b7d230
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335085"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482674"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 
-UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 장치 대상 및 화면 크기가 각 장치에 대 한 UI를 최적화 하는 것이 아니라 Windows10 에코 시스템의 거 대 한 번호로 ("중단점"이 라고도 함) 몇 가지 주요 너비 카테고리에 맞게 설계를 것이 좋습니다. 
+UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 장치 및 각 장치에 대 한 UI를 최적화 하는 것이 아니라 Windows10 에코 시스템 화면 크기가 매우 많기, 몇 가지 주요 너비 카테고리 ("중단점"이 라고도 함)에 대 한 디자인을 것이 좋습니다. 
 - 소형(640px 이하)
 - 중간(641px ~ 1007px)
 - 대형(1008px 이상)

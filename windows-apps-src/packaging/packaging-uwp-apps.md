@@ -10,11 +10,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: eaee9d28d8e927e3fbc9d56c8aa7c24422d1484a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335822"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8480989"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Visual Studio를 사용하여 UWP 앱 패키징
 
@@ -31,7 +31,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 [파트너 센터](https://par
     앱 번들은 각각 특정 장치 아키텍처를 지원하기 위해 구축된 여러 앱 패키지를 포함할 수 있는 패키지 유형입니다. 예를 들어 앱 번들은 x86, x64, 및 ARM 구성에 대해 세 개의 개별 앱 패키지를 포함할 수 있습니다. 앱 번들은 앱이 가장 광범위한 장치에서 사용할 수 있도록 허용하기 때문에 가능한 경우 생성되어야 합니다.  
 
 - **앱 패키지 업로드 파일(.appxupload)**  
-    다양한 프로세서 아키텍처를 지원하기 위해 여러 앱 패키지 또는 앱 번들을 포함할 수 있는 단일 파일. 또한 앱이 Microsoft Store에 게시된 후 업로드 파일은 [앱 성능을 분석할](https://docs.microsoft.com/windows/uwp/publish/analytics) 기호 파일을 포함합니다. 게시에 대 한 파트너 센터에 제출 하려는 의도로 Visual Studio를 사용 하 여 앱을 패키징하는 경우이 파일을 자동으로 생성 됩니다. 것 **만** 유효한 앱 패키지 파트너 센터 제출 Visual Studio를 사용 하 여 만들 수 있는 ' 이라는 점에 유의 해야 합니다.
+    다양한 프로세서 아키텍처를 지원하기 위해 여러 앱 패키지 또는 앱 번들을 포함할 수 있는 단일 파일. 또한 앱이 Microsoft Store에 게시된 후 업로드 파일은 [앱 성능을 분석할](https://docs.microsoft.com/windows/uwp/publish/analytics) 기호 파일을 포함합니다. 게시를 위해 파트너 센터에 제출 하려는 의도로 Visual Studio를 사용 하 여 앱을 패키징하는 경우이 파일에 자동으로 생성 됩니다. 것 **만** 유효한 앱 패키지 파트너 센터 제출은 Visual Studio를 사용 하 여 만들 수 있는 유의 해야 합니다.
 
 다음은 앱 패키지를 준비해 만드는 단계에 대한 개요입니다.
 
@@ -44,7 +44,7 @@ Windows 10에서 앱 패키지, 앱 번들 또는 [파트너 센터](https://par
 
 ## <a name="before-packaging-your-app"></a>앱을 패키징하기 전에
 
-1.  **앱을 테스트합니다.** 파트너 센터 제출에 대 한 앱을 패키지 하기 전에 지원 하려는 모든 디바이스 패밀리에서 예상 대로 작동 하는지 확인 해야 합니다. 이러한 장치 패밀리에는 데스크톱, 모바일, Surface Hub, Xbox, IoT 장치 등이 포함될 수 있습니다.
+1.  **앱을 테스트합니다.** 파트너 센터 제출에 대 한 앱을 패키지 하기 전에 지원 하려는 모든 장치 패밀리에서 예상 대로 작동 하는지 확인 해야 합니다. 이러한 장치 패밀리에는 데스크톱, 모바일, Surface Hub, Xbox, IoT 장치 등이 포함될 수 있습니다.
 2.  **앱을 최적화합니다.** Visual Studio의 프로파일링 도구와 디버깅 도구를 사용하여 UWP 앱의 성능을 최적화할 수 있습니다. 예를 들어 UI 응답성을 위한 타임라인 도구, 메모리 사용 도구, CPU 사용 도구 등을 사용할 수 있습니다. 이러한 도구에 대한 자세한 내용은 [프로파일링 도구 살펴보기](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour)를 참조하세요.
 3.  **.NET 네이티브 호환성(VB 앱 및 C# 앱)을 확인합니다.** 유니버설 Windows 플랫폼에는 앱의 런타임 성능을 개선하는 기본 컴파일러가 있습니다. 이 변경으로 인해, 이 컴파일 환경에서 앱을 테스트해야 합니다. 기본적으로 **릴리스** 빌드 구성에서는 .NET 네이티브 도구 체인을 사용하므로, 이 **릴리스** 구성을 사용하여 앱을 테스트하고 앱이 예상대로 작동하는지 확인해야 합니다. .NET 네이티브에서 흔히 발생할 수 있는 디버깅 문제에 대해서는 [여기 Debugging .NET Native Windows Universal Apps](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)에서 자세히 설명합니다.
 
@@ -79,7 +79,7 @@ Microsoft Store를 통해 앱을 배포하는 경우 Visual Studio는 Microsoft 
 Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.msix), 앱 번들 (.appxbundle 또는.msixbundle), 또는 업로드 패키지 (.appxupload) 및 [파트너 센터에 패키지 된 앱 제출](https://docs.microsoft.com/windows/uwp/publish/app-submissions)만들어야 합니다. 앱 패키지 또는 앱 번들만 파트너 센터에 제출할 수 있지만 업로드 패키지를 제출할 수 있습니다.
 
 >[!NOTE]
-> 앱 패키지 업로드 파일 (.appxupload)은 Visual Studio를 사용 하 여 만들 수 있는 파트너 센터에 대 한 유효한 앱 패키지의 **만** 유형. 다른 유효한 [앱 패키지는 Visual Studio를 사용하지 않고 수동으로 만들 수 있습니다](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
+> 앱 패키지 업로드 파일 (.appxupload)은 Visual Studio를 사용 하 여 만들 수 있는 파트너 센터에 대 한 유효한 앱 패키지의 **만** 유형입니다. 다른 유효한 [앱 패키지는 Visual Studio를 사용하지 않고 수동으로 만들 수 있습니다](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
 
 **앱 패키지 만들기** 마법사를 사용하여 만들 수 있습니다. Visual Studio를 사용 하 여 파트너 센터 제출에 적합 한 패키지를 만들려면 다음이 단계를 수행 합니다.
 
@@ -91,10 +91,10 @@ Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.ms
 
     **앱 패키지 만들기** 마법사가 나타납니다.
 
-3.  다음을 클릭 한 다음 파트너 센터에 업로드할 패키지를 빌드할지 첫 번째 대화 상자에서 예를 선택 합니다.  
+3.  다음을 클릭 한 다음 파트너 센터에 업로드할 패키지를 빌드할지 묻는 첫 번째 대화 상자에서 예를 선택 합니다.  
     ![표시되는 패키지 만들기 대화 창](images/packaging-screen3.jpg)
 
-    아니요를 선택 하는 경우 Visual Studio는 파트너 센터 제출에 대 한 앱 패키지 업로드 (.appxupload) 파일을 생성 되지 않습니다. 내부 장치에서만 실행하거나 테스트 목적으로 앱을 사이드로드하려는 경우에는 이 옵션을 선택하면 됩니다. 사이드로드에 대한 자세한 내용은 [디바이스를 개발에 사용하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)을 참조하세요.
+    아니요를 선택 하면 Visual Studio에서 파트너 센터 제출에 대 한 앱 패키지 업로드 (.appxupload) 파일을 생성 하지 않습니다. 내부 장치에서만 실행하거나 테스트 목적으로 앱을 사이드로드하려는 경우에는 이 옵션을 선택하면 됩니다. 사이드로드에 대한 자세한 내용은 [디바이스를 개발에 사용하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)을 참조하세요.
 4.  파트너 센터 개발자 계정으로 로그인 합니다. 아직 개발자 계정이 없으면 마법사를 사용하여 만들 수 있습니다.
 5.  패키지에 대 한 앱 이름을 선택 하거나 하면 예약 하지 않은 파트너 센터의 경우 새 이름을 예약 합니다.  
     ![앱 이름 선택이 표시된 앱 패키지 만들기 창](images/packaging-screen4.jpg)
@@ -102,7 +102,7 @@ Microsoft Store를 통해 앱을 배포 하려면 앱 패키지 (.appx 또는.ms
     ![패키지 구성이 표시된 앱 패키지 만들기 창](images/packaging-screen5.jpg)
 
 
-7.  앱이 게시 된 후 파트너 센터에서 [앱 성능 분석을](https://docs.microsoft.com/windows/uwp/publish/analytics) 얻으려면 전체 PDB 기호 파일을 포함 합니다. 버전 번호 또는 패키지 출력 위치 등 추가 세부 정보를 구성합니다.
+7.  앱이 게시 된 후 파트너 센터에서 [분석 앱 성능](https://docs.microsoft.com/windows/uwp/publish/analytics) 에 전체 PDB 기호 파일을 포함 합니다. 버전 번호 또는 패키지 출력 위치 등 추가 세부 정보를 구성합니다.
 9.  **만들기**를 클릭하여 앱 패키지를 만듭니다. 3 단계에서 **예** 를 선택 하 고 파트너 센터 제출에 대 한 패키지를 만드는 경우 마법사는 패키지 업로드 (.appxupload) 파일을 만듭니다. 3단계에서 **아니요**를 선택한 경우 마법사는 6단계의 선택에 따라 단일 앱 패키지 또는 앱 번들을 만듭니다.
 10. 앱이 성공적으로 패키지되면 이 대화 상자가 표시됩니다.  
     ![유효성 검사 옵션이 표시된 패키지 만들기 완료 창](images/packaging-screen6.jpg)
@@ -141,12 +141,12 @@ Windows 10 1주년 업데이트에 도입된 앱 패키지는 앱 패지 파일�
 > 앱 설치 관리자는 장치가 앱을 신뢰하는 것으로 간주합니다. 개발자나 기업용 앱을 사이드로드하는 경우, 장치의 신뢰할 수 있는 사람 또는 신뢰할 수 있는 판매자 인증 기관 Microsoft Store에 서명 인증서를 설치해야 합니다. 방법을 모를 경우 [테스트 인증서 설치](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates)를 참조하세요.
 
 ### <a name="sideload-your-app-on-previous-versions-of-windows"></a>이전 버전 Windows에 앱 사이드로드
-UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하지 않습니다. 일반적으로 Microsoft Store에서 UWP 앱을 다운로드하고, 장치에 앱을 설치합니다. Microsoft Store에 게시하지 않고도 앱을 설치할 수 있습니다(사이드로드). 이렇게 하면 설치 및 앱 패키지를 사용 하 여 테스트 앱 파일을 생성 합니다. Microsoft Store에서 판매하지 않을 앱(예: LOB(기간 업무) 앱)이 있는 경우에는 회사 내의 다른 사용자가 사용할 수 있도록 이 앱을 사이드로드할 수 있습니다.
+UWP 앱 패키지의 경우, 데스크톱 앱처럼 장치에 앱을 설치하지 않습니다. 일반적으로 Microsoft Store에서 UWP 앱을 다운로드하고, 장치에 앱을 설치합니다. Microsoft Store에 게시하지 않고도 앱을 설치할 수 있습니다(사이드로드). 이렇게 하면 설치 하 고 앱 패키지를 사용 하 여 테스트 앱 파일을 생성 합니다. Microsoft Store에서 판매하지 않을 앱(예: LOB(기간 업무) 앱)이 있는 경우에는 회사 내의 다른 사용자가 사용할 수 있도록 이 앱을 사이드로드할 수 있습니다.
 
 다음 목록은 사이드로드을 로드하는 데 요구되는 사항입니다.
 
 -   [디바이스를 개발에 사용하도록 설정](https://msdn.microsoft.com/library/windows/apps/Dn706236)해야 합니다.
--   Windows10 모바일 장치에서 앱을 테스트용으로 로드할 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용 합니다.
+-   테스트용으로 로드 하려면 Windows10 모바일 장치에서 앱 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용 합니다.
 
 **데스크톱, 노트북 또는 태블릿에 사이드로드**
 

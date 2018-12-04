@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f707e72e73398ae21cd391da16a0f2b40dcd7ee
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479500"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
 
@@ -24,11 +24,11 @@ ms.locfileid: "8336177"
 
 다음 과정으로 넘어가기 전에 우리가 만들 앱을 먼저 살펴보고 싶은 분들은 CodePen에서 확인하실 수 있습니다.
 
-<iframe height='300' scrolling='no' title='최종 공룡 게임' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Dino game final</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='최종 Dino 게임' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/NpKejy/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/NpKejy/'>Dino game final</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 > [!NOTE] 
-> 이 전체 게임의 경우 JavaScript 및 타사 라이브러리를 사용 하 여 Microsoft Store에 게시할 수 있는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
+> 이 전체 게임의 경우 JavaScript 및 타사 라이브러리를 사용 하 여 Microsoft Store에 게시 하는 앱을 만드는 방법을 보여주기 위해 설계 되었습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -486,7 +486,7 @@ animate();
 
 드디어 주변을 **둘러보는** 기능이 생기기는 했지만 가장 중요한 요소는 **이동** 기능입니다. 이제부터 약간의 수학이 나오고 벡터가 나옵니다. 사실 수학이 전혀 들어가지 않은 3D 그래픽이란 불가능하죠.
 
-<iframe height='300' scrolling='no' title='둘러볼' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Look around</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='전' src='//codepen.io/MicrosoftEdgeDocumentation/embed/gmwbMo/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/gmwbMo/'>Look around</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 
@@ -698,7 +698,7 @@ var instructions = document.getElementById('instructions');
 
 드디어 공룡 모델이 로드되었습니다. 확인해 보세요!
 
-<iframe height='300' scrolling='no' title='공룡이 추가합니다.' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adding the dino</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='공룡이 추가' src='//codepen.io/MicrosoftEdgeDocumentation/embed/xqOwBw/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/xqOwBw/'>Adding the dino</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 ### <a name="7-move-that-dino"></a>7. 공룡 이동!
@@ -844,7 +844,7 @@ function animatePlayer(delta) {
 
 플레이어 충돌 감지를 구현했으니 벽을 뚫고 지나갈 수 있는지 직접 테스트해 보세요!
 
-<iframe height='300' scrolling='no' title='-충돌 플레이어를 이동합니다.' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
+<iframe height='300' scrolling='no' title='플레이어가-충돌 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/qraOeO/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qraOeO/'>Moving the player - collision</a> by Microsoft Edge Docs(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)를 참조하세요.
 </iframe>
 
 
@@ -931,7 +931,7 @@ function getRandomInt(min, max) {
 
 드디어 끝났습니다! 미로를 돌아다닐 수 있는 AI를 탑재한 공룡이 완성되었습니다!
 
-<iframe height='300' scrolling='no' title='Dino-collision 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>펜 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>dino-collision 이동</a> 하 여 Microsoft Edge 문서를 참조 하세요 (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) <a href='https://codepen.io'>CodePen</a>에 있습니다.
+<iframe height='300' scrolling='no' title='Dino-collision 이동' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/bqwMXZ/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>참조는 펜 <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/bqwMXZ/'>dino-collision 이동</a> 하 여 Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) <a href='https://codepen.io'>CodePen</a>에 있습니다.
 </iframe>
 
 ### <a name="10-starting-the-chase"></a>10. 추적 시작
@@ -1081,10 +1081,10 @@ function lockChange() {
 
 
 ## <a name="publishing-to-the-microsoft-store"></a>Microsoft Store에 게시
-UWP 앱을 만들었으니 이제 됩니다 (더 다듬어야 수 있는!) Microsoft Store에 게시할 수 프로세스에 몇 가지 단계가 있습니다.
+(다듬어야 수 있는!) Microsoft Store에 게시할 수는 UWP 앱을 만들었으니 이제 프로세스에 몇 가지 단계가 있습니다.
 
 1.  Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
 2.  앱 제출 [검사 목록](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 3.  앱을 제출하여 [인증](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
-자세한 내용은 [UWP 앱을 게시](https://developer.microsoft.com/store/publish-apps)를 참조 하세요.
+자세한 내용은 [게시 하는 UWP 앱을](https://developer.microsoft.com/store/publish-apps)참조 하세요.
 

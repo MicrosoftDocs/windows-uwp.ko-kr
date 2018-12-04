@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cb6a2466ea201c9b5047f7eb159477a0d584429
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8351042"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484195"
 ---
 # <a name="direct3d-graphics-glossary"></a>Direct3D 그래픽 용어
 
 
-Microsoft Direct3D 그래픽 용어를 정의 합니다. Direct3D 게임 및 앱 개발에 사용 되는 높은 수준의 일반적인 3D 컴퓨터 그래픽 용어에,이 용어를 정의 합니다.
+Microsoft Direct3D 그래픽 용어를 정의 합니다. Direct3D 게임 및 앱 개발에 사용 되는 높은 수준의 일반적인 3D 컴퓨터 그래픽 용어에,이 용어 정의 합니다.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 

@@ -1,23 +1,23 @@
 ---
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: 이 문서에서는 설명 VisualC + + 구성 요소 확장의 비동기 메서드를 사용 하는 것이 좋습니다 (C + + CX) ppltasks.h의 concurrency 네임 스페이스에 정의 된 task 클래스를 사용 하 여 합니다.
+description: 이 문서에서는 VisualC + + 구성 요소 확장의 비동기 메서드는 권장된 방법 설명 (C + + CX) ppltasks.h의 concurrency 네임 스페이스에 정의 된 task 클래스를 사용 하 여 합니다.
 title: C++의 비동기 프로그래밍
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 비동기, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 84f0da2f0b9642a817f4efb5b6d30a968c0803ff
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334922"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8482458"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>C++/CX의 비동기 프로그래밍
 > [!NOTE]
 > 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
-이 문서에서는 설명 VisualC + + 구성 요소 확장의 비동기 메서드를 사용 하는 것이 좋습니다 (C + + CX)를 사용 하 여는 `task` 에 정의 된 클래스는 `concurrency` ppltasks.h에서 네임 스페이스 합니다.
+이 문서에서는 VisualC + + 구성 요소 확장의 비동기 메서드는 권장된 방법에 설명 (C + + CX)를 사용 하 여는 `task` 에 정의 된 클래스는 `concurrency` ppltasks.h에서 네임 스페이스입니다.
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>UWP(유니버설 Windows 플랫폼) 비동기 형식
 UWP(유니버설 Windows 플랫폼)는 비동기 메서드를 호출하기 위한 잘 정의된 모델의 역할을 하며 그러한 메서드를 사용하는 데 필요한 유형을 제공합니다. UWP 비동기 모델에 익숙하지 않을 경우 이 문서의 나머지 부분을 읽기 전에 [비동기 프로그래밍][AsyncProgramming]을 읽으세요.

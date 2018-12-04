@@ -8,15 +8,15 @@ keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481843"
 ---
-# <a name="known-issues-with-packaged-desktop-applications"></a>패키지 데스크톱 응용 프로그램을 사용 하 여 알려진된 문제
+# <a name="known-issues-with-packaged-desktop-applications"></a>패키지 데스크톱 응용 프로그램의 알려진된 문제
 
-이 문서에서는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 때 발생할 수 있는 알려진된 문제를 포함 합니다.
+이 문서에서는 데스크톱 응용 프로그램용 Windows 앱 패키지를 만들 때 발생할 수 있는 알려진된 문제가 포함 되어 있습니다.
 
 <a id="app-converter" />
 
@@ -52,7 +52,7 @@ ms.locfileid: "8329163"
 
 애플리케이션의 실행 파일에 대문자 **.EXE** 확장명이 있는 경우 이런 오류가 발생할 수 있습니다. 하지만이 확장명의 대/소문자 표기 응용 프로그램의 실행 여부에 영향을 DAC에서이 오류가 발생할 수 있습니다.
 
-이 문제를 해결하려면 패키징 시 **-AppExecutable** 플래그를 지정하고 주 실행 파일의 확장명으로 소문자 ".exe"를 사용해 보십시오(예: MYAPP.exe).    또는 대/소문자를 소문자로 응용 프로그램의 모든 실행 파일에 대 한 대/소문자 표기를 변경할 수 있습니다 (예:에서. EXE를.exe로)입니다.
+이 문제를 해결하려면 패키징 시 **-AppExecutable** 플래그를 지정하고 주 실행 파일의 확장명으로 소문자 ".exe"를 사용해 보십시오(예: MYAPP.exe).    또는 모든 실행 파일에서 소문자를 소문자로 응용 프로그램에서 변경할 수 있습니다 (예:에서. EXE를.exe로)입니다.
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>손상되거나 잘못된 형식의 Authenticode 서명
 
@@ -119,7 +119,7 @@ Windows 앱 패키지 매니페스트의 게시자 항목이 서명한 인증서
 
 **옵션 3: CertUtil**
 
-PFX 파일의 명령줄에서 **certutil** 을 실행 하 고 출력에서 *제목* 필드를 복사 합니다.
+PFX 파일에서 **certutil** 명령줄에서 실행 하 고 출력에서 *제목* 필드를 복사 합니다.
 
 ```cmd
 certutil -dump <cert_file.pfx>
@@ -129,13 +129,13 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>잘못 된 PE 인증서 (0x800700C1)
 
-이 패키지 손상 된 인증서가 있는 이진 파일을 포함 하는 경우 발생할 수 있습니다. 다음은 일부의 이유 이유이 발생할 수 있습니다.
+이 패키지에 손상 된 인증서가 있는 이진 파일을 포함 하는 경우 발생할 수 있습니다. 다음은 몇 가지 이유는이 발생할 수 있는 이유입니다.
 
-* 인증서의 시작 이미지의 끝에 아닙니다.  
+* 인증서의 시작 이미지의 끝에 되지 않습니다.  
 
 * 인증서의 크기는 양수 하지 않습니다.
 
-* 인증서 시작 후 되지 합니다 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조.
+* 후 인증서 시작 하지는 `IMAGE_NT_HEADERS32` 후 또는 32 비트 실행 파일에 대 한 구조는 `IMAGE_NT_HEADERS64` 64 비트 실행 파일에 대 한 구조.
 
 * 인증서 포인터 WIN_CERTIFICATE 구조에 대 한 제대로 정렬 되지 않습니다.
 

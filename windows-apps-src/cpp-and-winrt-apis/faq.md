@@ -6,14 +6,14 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
 ms.openlocfilehash: b162fbaaeda8e1ded1f0d3e1d75c840dfa543f4c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347637"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484287"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT 질문과 대답
-작성 하 고 사용 하 여 Windows 런타임 Api를 사용 하는 방법에 대 한 될 수 있는 질문에 대답 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+작성 하 고 사용 하 여 Windows 런타임 Api를 사용할 수 있는 질문에 대 한 답변 [C + + WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 > [!NOTE]
 > 표시된 오류 메시지에 대한 질문이 있는 경우 [C++/WinRT 문제 해결](troubleshooting.md) 항목도 참조하세요.
@@ -22,9 +22,9 @@ ms.locfileid: "8347637"
 
 참조 [방법을 대상을 C + + Windows SDK의 최신 버전으로 WinRT 프로젝트](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)합니다.
 
-## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트 컴파일되지 하는 이유 Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 17134 버전
+## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트는 이유는 컴파일되지 않습니다. Visual Studio 2017을 사용 하 고 (15.8.0 버전 이상), 및 SDK 17134 버전
 
-Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803) 한 다음 새로 만든 C + + WinRT 프로젝트 컴파일 오류가 있는 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 다른 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 C/C++** >  **추가 옵션****명령줄** 다음 삭제).
+Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으로 하는 Windows SDK 버전 10.0.17134.0 (Windows 10, 버전 1803) 한 다음 새로 생성 된 C + + WinRT 프로젝트 컴파일 오류가 있는 하지 못할 수도 있습니다 "C3861*오류: 'from_abi': 식별자 하지 발견*", 및 기타 오류 *base.h*에서 발생 합니다. 해결 방법은 대상 중 하나는 이후 (자세한 준수) 버전의 Windows SDK 또는 설정 프로젝트 속성 **C/c + +** > **언어** > **적합성 모드: 아니요** (또한 경우 **허용 /-** 프로젝트 속성 **에에서 표시 됩니다 C/C++** >  **추가 옵션****명령줄** 삭제).
 
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsixhttpsakamscppwinrtvsix"></a>[C++/WinRT Visual Studio Extension(VSIX)](https://aka.ms/cppwinrt/vsix)의 요구 사항은 무엇입니까?
 [VSIX](https://aka.ms/cppwinrt/vsix)는 최소 Windows SDK 대상 버전인 10.0.17134.0(Windows 10, 버전 1803)이 적용됩니다. Visual Studio 2017(버전 15.6 이상. 15.7 이상 권장) 또한 필요합니다. `.vcxproj` 파일에서 `<PropertyGroup Label="Globals">`이 `<CppWinRTEnabled>true</CppWinRTEnabled>`로 설정되어 있는지 확인하여 VSIX를 사용하는 프로젝트를 식별할 수 있습니다. 자세한 내용은 [C++/WinRT에 대한 Visual Studio 지원 및 VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)를 참조하세요.
@@ -49,7 +49,7 @@ Visual Studio 2017을 사용 하는 경우 (15.8.0 버전 이상)를 대상으�
 #pragma comment(lib, "windowsapp")
 ```
 
-것이 중요 한 대체 동적 연결 라이브러리 대신 **WindowsApp.lib** 에 연결 하 여 수 있는 링커 오류를 해결, 그렇지 않은 경우 응용 프로그램 및 Visual Studio에서 사용 하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 전달 하지 않습니다. Microsoft Store 제출 (따라서 것을 Microsoft Store에 성공적으로 수집 되려면 응용 프로그램에 대 한 가능한 의미)의 유효성을 검사를 합니다.
+것이 중요 한 대체 동적 연결 라이브러리 대신 **WindowsApp.lib** 에 연결 하 여 수 있는 링커 오류를 해결, 그렇지 않은 경우 응용 프로그램 및 Visual Studio에서 사용 하는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 전달 하지 않습니다. Microsoft Store 제출 (따라서 것 Microsoft Store에 성공적으로 수집 되려면 응용 프로그램에 대 한 가능한 의미)의 유효성을 검사를 합니다.
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>내가 [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable)을 구현해야 합니까? 만약 그렇다면 어떻게 구현합니까?
 소멸자에서 리소스 공간을 확보하는 런타임 클래스가 있다고 가정할 때, 이 런타임 클래스가 구현하는 컴파일 단위 외부에서 사용하도록 설계된 경우에는(여기에서 런타임 클래스는 Windows 런타임 클라이언트 앱에서 일반 용도로 사용하는 Windows 런타임 구성 요소임) 결정적 완료(deterministic finalization)가 부족한 언어를 기준으로 런타임 클래스의 사용을 지원할 수 있도록 **IClosable**을 구현하는 것이 바람직합니다. 소멸자가 호출되든, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.Close)가 호출되든, 혹은 둘 다 호출되든 상관없이 리소스 공간이 확보되는지 확인하세요. **IClosable::Close**는 임의 횟수로 호출될 수 있습니다.
@@ -93,9 +93,9 @@ Visual Studio는 C++/WinRT를 지원하고 추천하는 개발 도구입니다. 
 
 ## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>읽기 전용 속성에 대해 생성 된 구현 함수 없는 이유는 `const` 한정자?
 
-이미 예상 하시 [MIDL 3.0](/uwp/midl-3/)의 읽기 전용 속성을 선언 합니다 `cppwinrt.exe` 구현 함수를 생성할 수 있는 도구 `const`-자격을 갖춘 (const 함수 const를 *이* 포인터를 처리 하는 데 사용).
+이미 예상 하시 [MIDL 3.0](/uwp/midl-3/)의 읽기 전용 속성을 선언 하는 경우는 `cppwinrt.exe` 구현 함수를 생성할 수 있는 도구 `const`-자격을 갖춘 (const 함수 const를 *이* 포인터를 처리 하는 데 사용).
 
-가능한 경우 상수를 사용 하 여 확실히 권장 하지만 `cppwinrt.exe` 자체 도구는 구현에 대 한 함수 지역과 const 고 있는 경우가 이유 하려고 하지 않습니다. 이 예제와 같이 const 구현 기능 확인을 선택할 수 있습니다.
+가능한 경우 상수를 사용 하 여 확실히 권장 되지만 `cppwinrt.exe` 도구 자체는 구현에 대 한 함수 지역과 const 고 하지 수 있는 이유 하려고 하지 않습니다. 이 예제와 같이 const 확인 구현 기능 중 하나를 선택할 수 있습니다.
 
 ```cppwinrt
 struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation::IStringable>
@@ -107,9 +107,9 @@ struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation
 };
 ```
 
-제거할 수 있습니다 `const` **ToString** 에서 한정자 해야 구현에서 일부 개체 상태를 변경 해야 합니다. 하지만 각각에 멤버의 두 함수 const 또는 비 const 만듭니다. 즉, 하지 오버 로드를 구현 하는 함수에서 `const`.
+제거할 수 있습니다 `const` **ToString** 한정자 사용 해야 할 결정 구현에서 일부 개체 상태를 변경 해야 합니다. 하지만 각각에 멤버의 두 함수 const 또는 비 const 만듭니다. 즉, 하지 오버 로드를 구현 하는 함수에서 `const`.
 
-다른 다른 구현 기능 외에도 배치 const 위치에 그림은 Windows 런타임 함수 프로젝션을 합니다. 이 코드를 살펴보겠습니다.
+기타 다른 구현 기능 외에도 배치 const 경우 기능을 Windows 런타임 함수 프로젝션에는 그림. 이 코드를 것이 좋습니다.
 
 ```cppwinrt
 int main()
@@ -119,19 +119,19 @@ int main()
 }
 ```
 
-**ToString** 위의 호출, Visual Studio에서 **선언 이동** 명령을 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + WinRT 다음과 같이 표시 됩니다.
+**ToString** 위의에 대 한 호출에 대 한 Visual Studio에서 **선언으로 이동** 명령을 표시 하는 Windows 런타임 **IStringable::ToString** 의 프로젝션에 C + + WinRT 다음과 같이 표시 됩니다.
 
 ```
 winrt::hstring ToString() const;
 ```
 
-프로젝션 기능은 const 방법에 관계 없이 자격을 얻으려면 부분이 구현 합니다. 내부적으로 프로젝션 응용 프로그램 이진 인터페이스 (ABI)는 시간과 COM 인터페이스 포인터를 통해 호출을 호출합니다. 프로젝션 된 **ToString** 상호 작용 하는 유일한 상태는 해당 COM 인터페이스 포인터; 이며 확실히 함수 const 이므로 해당 포인터를 수정할 필요가 없습니다. 이렇게 하면은 **IStringable**에 대 한 참조를 통해 호출할 **IStringable** 참조에 대 한 변경 되지 않습니다 및 const 있어도 **ToString** 호출할 수 있음을 보장 보증 있습니다.
+프로젝션 기능은 자격을 구현 하는 방법을 관계 없이 const 합니다. 백그라운드에서 프로젝션 응용 프로그램 이진 인터페이스 (ABI)는 시간과 COM 인터페이스 포인터를 통해 호출을 호출합니다. 프로젝션 된 **ToString** 상호 작용 하는 유일한 상태는 해당 COM 인터페이스 포인터; 이며 확실히 함수 const 이므로 해당 포인터를 수정할 필요가 없습니다. 이렇게 하면은 **IStringable**에 대 한 참조를 통해 호출할 **IStringable** 참조에 대 한 변경 되지 않습니다 및 const 있어도 **ToString** 을 호출할 수 있음을 보장 보증 있습니다.
 
-이해 하는 이러한 예제 `const` 구현 세부 C + + WinRT 프로젝션 및 구현 합니다. 사용자에 대 한 코드 관리를 구성 합니다. 문제는 `const` 에 COM (멤버 함수)에 대 한 Windows 런타임 ABI 합니다.
+이해 하는 이러한 예제 `const` 구현 세부 C + + WinRT 프로젝션 및 구현 합니다. 이러한 구성의 편의 위한 코드 관리 합니다. 문제는 `const` COM 및 Windows 런타임 ABI (멤버 함수)에 대 한 대.
 
 ## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>C +에 대 한 코드 크기 감소에 대 한 권장 사항이 있습니까 + WinRT 바이너리?
 
-Windows 런타임 개체를 사용 하 여 생성 하는 데 필요한 것 보다 더 많은 이진 코드 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래 표시 된 코딩 패턴 하면 안 됩니다.
+Windows 런타임 개체 작업을 생성 하는 데 필요한 것 보다 더 많은 이진 코드 하 여 응용 프로그램에 부정적인 영향을 가질 수 있으므로 아래 표시 된 코딩 패턴을 하지 않아야 합니다.
 
 ```cppwinrt
 anobject.b().c().d();
@@ -139,7 +139,7 @@ anobject.b().c().e();
 anobject.b().c().f();
 ```
 
-Windows 런타임 환경에서 컴파일러는의 값을 캐시할 수 `c()` 또는 전화를 간접 참조를 통해 호출 되는 각 메서드에 대 한 인터페이스 ('. '). 사용자가 개입 하지 않는 한는 더 많은 가상 호출 및 참조 카운트 오버 헤드가 발생 합니다. 위의 패턴 엄격 하 게 필요한 배의 코드를 쉽게 생성할 수 있습니다. 대신, 수 어디서 나 아래 표시 된 패턴을 선호 합니다. 훨씬 적은 코드를 생성 및 런타임 성능이 크게도 향상 시킬 수 있습니다.
+Windows 런타임 환경에서 컴파일러는의 값을 캐시할 수 `c()` 또는 전화를 간접 참조를 통해 호출 되는 각 메서드에 대 한 인터페이스 ('. '). 사용자가 개입 하지 않는 한는 더 많은 가상 호출 및 참조 카운트 오버 헤드가 발생 합니다. 위의 패턴 엄격 하 게 필요한 배의 코드를 쉽게 생성할 수 있습니다. 대신, 수 어디서 나 아래 표시 된 패턴을 선호 합니다. 훨씬 더 적은 코드를 생성 하 고 런타임 성능이 크게도 향상 시킬 수 있습니다.
 
 ```cppwinrt
 auto a{ anobject.b().c() };
@@ -148,7 +148,7 @@ a.e();
 a.f();
 ```
 
-위에 표시 된 권장된 패턴을 적용할 뿐 아니라 C + + WinRT 있지만 모든 Windows 런타임 언어 프로젝션입니다.
+위에 표시 된 권장된 패턴 적용할 뿐 아니라 C + + WinRT 하지만 모든 Windows 런타임 언어 프로젝션입니다.
 
 > [!NOTE]
-> 이 항목에는 질문에 응답 하지 않은 경우 [Visual Studio c + + 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)방문 하 여 또는 사용 하 여 도움말을 찾을 수 합니다 [ `c++-winrt` Stack Overflow에서 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)합니다.
+> 이 항목에는 질문에 응답 하지 않을 경우, [Visual Studio c + + 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)방문 하 여 또는 사용 하 여 도움말을 검색할 수는 [ `c++-winrt` Stack Overflow에서 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)합니다.

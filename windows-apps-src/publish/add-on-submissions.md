@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품, iap 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dc3e9b928c544b8552abc6c289c682694f623c0
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347215"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484058"
 ---
 # <a name="add-on-submissions"></a>추가 기능 제출
 
@@ -19,7 +19,7 @@ ms.locfileid: "8347215"
 
 추가 기능 [파트너 센터](https://partner.microsoft.com/dashboard)를 통해 게시 하 고 활성 [개발자 계정이](http://go.microsoft.com/fwlink/p/?LinkId=615100)있어야 합니다. 또한 앱 코드에서 [추가 기능을 사용](../monetize/in-app-purchases-and-trials.md)해야 합니다.
 
-추가 기능 제출 프로세스의 첫 번째 단계 [제품 유형과 제품 ID를 정의](set-your-add-on-product-id.md)하 여 파트너 센터에서 추가 기능을 만드는 것입니다. 그 후 Microsoft Store를 통해 추가 기능을 구매할 수 있도록 제출을 만들 수 있습니다. [앱을 제출](app-submissions.md)할 때 추가 기능을 함께 제출하거나 개별적으로 작업할 수 있습니다. 또한 앱을 다시 제출할 필요 없이 앱이 스토어에 나열된 후에 추가 기능을 [업데이트](#updating-an-add-on-after-publication)할 수 있습니다.
+추가 기능 제출 프로세스의 첫 번째 단계 [제품 유형과 제품 ID를 정의](set-your-add-on-product-id.md)하 여 파트너 센터에서 추가 기능을 생성 하는 것입니다. 그 후 Microsoft Store를 통해 추가 기능을 구매할 수 있도록 제출을 만들 수 있습니다. [앱을 제출](app-submissions.md)할 때 추가 기능을 함께 제출하거나 개별적으로 작업할 수 있습니다. 또한 앱을 다시 제출할 필요 없이 앱이 스토어에 나열된 후에 추가 기능을 [업데이트](#updating-an-add-on-after-publication)할 수 있습니다.
 
 > [!NOTE]
 > 설명서의이 섹션에는 파트너 센터에서 추가 기능을 제출 하는 방법을 설명 합니다. 또는 [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 추가 기능 제출을 자동화할 수 있습니다.
@@ -83,9 +83,9 @@ ms.locfileid: "8347215"
 
 언제든지 게시된 추가 기능을 변경할 수 있습니다. 추가 기능 변경 내용은 제출 되며 일반적으로 가격이 나 설명 업데이트 같은 추가 기능 변경을 위해 전체 앱을 업데이트할 필요가 없는 앱에 개별적으로 게시 됩니다.
 
-업데이트를 제출 하려면 파트너 센터에 대 한 추가 기능 페이지로 이동 하 고 **업데이트**를 클릭 합니다. 이렇게 하면 시작 점으로 이전 제출의 정보를 사용 하 여 추가 기능에 대 한 새 제출을 만들어집니다. 변경, 선택한 후 **스토어에 제출**을 클릭 합니다.
+업데이트를 제출 하려면 파트너 센터에 대 한 추가 기능 페이지로 이동 하 고 **업데이트**를 클릭 합니다. 시작 지점으로 이전 제출의 정보를 사용 하 여 추가 기능에 대 한 새 제출을 만들어집니다. 하는 **스토어에 제출**을 클릭 한 다음 변경 내용을 확인 합니다.
 
-이전에 제공한 추가 기능을 제거하려면 새 제출을 만들고 [배포 및 표시](set-add-on-pricing-and-availability.md) 옵션을 **Store에서 숨김** 및 **취득 중지** 옵션으로 변경하면 됩니다. 추가 기능에 대 한 참조도 제거 하려면 필요에 따라 앱의 코드를 업데이트 해야 합니다. (이전에 게시 된 앱이 이전 버전 Windows 8.1 지원 하는 경우에 특히이 표시 설정이 적용 되지 않음 해당 고객에 게).
+이전에 제공한 추가 기능을 제거하려면 새 제출을 만들고 [배포 및 표시](set-add-on-pricing-and-availability.md) 옵션을 **Store에서 숨김** 및 **취득 중지** 옵션으로 변경하면 됩니다. 추가 기능에 대 한 참조를 제거 하려면 필요에 따라 앱의 코드를 업데이트 해야 합니다. (이전에 게시 된 앱이 이전 버전 Windows 8.1 지원 하는 경우에 특히이 표시 설정이 적용 되지 않음 해당 고객에 게).
 
 > [!IMPORTANT]
 > 이전에 게시 된 앱은 Windows에서 고객에 게 사용할 수 있는 경우 8.x를 만들고 추가 기능 업데이트가 해당 고객에 게 표시 되 게 하려면 새 앱 제출을 게시 해야 합니다. 마찬가지로 앱이 게시된 후 Windows8.x가 대상으로 지정된 앱에 새 추가 기능을 추가할 경우 해당 추가 기능을 참조하도록 앱 코드를 업데이트하고 앱을 다시 제출해야 합니다. 그러지 않으면 새 추가 기능이 Windows8.x의 고객에게 표시되지 않습니다.

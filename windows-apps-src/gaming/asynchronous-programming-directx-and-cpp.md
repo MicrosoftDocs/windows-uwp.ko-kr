@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 비동기 프로그래밍, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 8551a49512d4b17ab1bab704596d9e5389de3eb6
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8332034"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484651"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>비동기 프로그래밍(DirectX 및 C++)
 
@@ -36,7 +36,7 @@ DirectX를 처음 배우는 사용자인 경우 또는 숙련된 사용자라도
 
 앱은 여러 동시 스레드에서 이러한 구성 요소를 처리할 수 있습니다. 수 메가바이트(또는 수백 메가바이트)의 자산을 로드하거나 스트리밍하는 동안 게임 또는 앱이 대화형 상태일 수 있으므로 파일 I/O, 특히 자산 로드에는 비동기 로드가 큰 도움이 됩니다. 이러한 스레드를 만들고 관리하는 가장 쉬운 방법은 PPLTasks.h에 정의된 **concurrency** 네임스페이스에 포함된 대로 [병렬 패턴 라이브러리](https://msdn.microsoft.com/library/dd492418.aspx)와 **task** 패턴을 사용하는 것입니다. [병렬 패턴 라이브러리](https://msdn.microsoft.com/library/dd492418.aspx)를 사용하면 여러 코어 및 하이퍼 스레드 CPU가 직접 활용되며 인식된 로드 시간에서 CPU 계산이나 네트워크 처리가 많아서 발생하는 지연 및 문제에 이르기까지 모든 기능이 향상될 수 있습니다.
 
-> **참고**  에서 유니버설 Windows 플랫폼 (UWP) 앱의 사용자 인터페이스 (STA)는 단일 스레드 아파트에서 완전히 실행 됩니다. [XAML interop](directx-and-xaml-interop.md)를 사용하여 DirectX 게임에 대한 UI를 만드는 경우 STA를 사용하여 컨트롤에만 액세스할 수 있습니다.
+> **참고**  에 유니버설 Windows 플랫폼 (UWP) 앱 사용자 인터페이스 완전히 단일 스레드 아파트 (STA)에서 실행 됩니다. [XAML interop](directx-and-xaml-interop.md)를 사용하여 DirectX 게임에 대한 UI를 만드는 경우 STA를 사용하여 컨트롤에만 액세스할 수 있습니다.
 
  
 

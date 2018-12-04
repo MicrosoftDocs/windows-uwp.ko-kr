@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
 ms.openlocfilehash: f30ff39b0dcb54cd50808381bcb30e58e7dfe07d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352217"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484340"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -157,7 +157,7 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 ```
 
 > [!NOTE]
-> 위의 코드 예제에서 `Button::Click_revoker` 에 대 한 형식 별칭은 `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. 비슷한 패턴이 모든 C++/WinRT 이벤트에 적용됩니다. 각 Windows 런타임 이벤트에 이벤트 취소 자의 반환 하 고 취소의 형식이 이벤트 소스의 구성원 revoke 함수가 오버 로드 합니다. 따라서 또 다른 예로 되려면 [**corewindow:: Sizechanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) 이벤트에 **CoreWindow::SizeChanged_revoker**형식의 값을 반환 하는 등록 함수 오버 로드 합니다.
+> 위의 코드 예제에서 `Button::Click_revoker` 에 대 한 형식 별칭은 `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. 비슷한 패턴이 모든 C++/WinRT 이벤트에 적용됩니다. 각 Windows 런타임 이벤트에 이벤트 취소 자의 반환 하 고 취소의 입력 이벤트 소스의 구성원 인 revoke 함수가 오버 로드 합니다. 따라서 또 다른 예로 할 [**corewindow:: Sizechanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) 이벤트에 **CoreWindow::SizeChanged_revoker**형식의 값을 반환 하는 등록 함수 오버 로드 합니다.
 
 
 페이지 탐색 시나리오에서는 처리기 취소를 고려할 수 있습니다. 페이지 탐색 후 다른 페이지 탐색이 반복될 경우에는 페이지에서 다른 페이지를 탐색할 때 처리기를 취소할 수 있습니다. 또는 동일한 페이지 인스턴스를 다시 사용하는 경우에는 토큰 값을 확인하여 아직 설정되지 않은 경우에만 등록합니다(`if (!m_token){ ... }`). 세 번째 옵션은 이벤트 취소자를 데이터 멤버로 페이지에 저장하는 것입니다. 마지막으로 네 번째 옵션은 이번 항목 후반에 설명하겠지만 람다 함수에서 강한 또는 약한 참조를 *this* 개체로 캡처하는 것입니다.
@@ -200,9 +200,9 @@ void ProcessFeedAsync()
 위의 "코루틴" 주석에서도 알 수 있듯이 비동기 작업에서 완료된 이벤트에 대리자를 사용하지 않아도 코루틴을 더욱 자연스럽게 사용할 수 있다는 것을 알 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
 
 > [!NOTE]
-> 비동기 작업 또는 작업에 대 한 둘 이상의 *완료 처리기* 를 구현 하는 것이 올바르지 합니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다 있는 경우 두 번째 실패 합니다.
+> 비동기 작업 또는 작업에 대 한 둘 이상의 *완료 처리기* 의 구현 올바르지 않습니다. 완료 된 이벤트에 대 한 단일 대리자 하거나 할 수 있습니다 `co_await` 것입니다. 둘 다 있는 경우 두 번째 실패 합니다.
 
-코 루틴 대신 대리자를 사용 하 여 스틱, 경우 간단한 구문을 선택할 수 있습니다.
+코 루틴 대신 대리자를 사용 하 여 고정을 하는 경우 간단한 구문을 선택할 수 있습니다.
 
 ```cppwinrt
 async_op_with_progress.Completed(

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328184"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483302"
 ---
 # <a name="rotation"></a>회전
 
@@ -88,7 +88,7 @@ Windows8 세 가지 유형의 회전 지원: 무료, 제한 형 및 조합 합�
 <td align="left">조합형 회전</td>
 <td align="left"><p>조합형 회전은 제한된 회전에 의해 적용된 각각의 90도 끌기 지점에서 구역을 통한 자유형 회전(<a href="guidelines-for-panning.md">이동에 대한 지침</a>의 이동 경로와 비슷)을 지원합니다. 사용자가 90도 구역 중 하나 밖에서 개체를 놓으면 개체는 해당 위치에 그대로 남아 있고 그렇지 않은 경우 자동으로 끌기 지점으로 회전합니다.</p>
 <div class="alert">
-<strong>참고</strong>사용자 인터페이스 이동 경로 대상 주변 영역이 있는 특정 값 이나 선택에 영향을 미칠 위치로 이동을 제한 하는 기능.
+<strong>참고</strong>사용자 인터페이스 이동 경로 대상 주변 영역이 특정 값 이나 선택에 영향을 미칠 위치로 이동을 제한 하는 기능입니다.
 </div>
 <div>
  

@@ -7,13 +7,13 @@ keywords: windows 10, uwp
 ms.assetid: 6ae36021-94d3-43df-9e96-69a93cfe8b56
 ms.localizationpriority: medium
 ms.openlocfilehash: 23dfb8843ed8e70fc6f979bd778a517d0c30327a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8351293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483509"
 ---
-# <a name="bring-custom-c-games-to-uwp-on-xbox"></a>사용자 지정 c + + 게임을을 UWP 가져옵니다 Xbox에서
+# <a name="bring-custom-c-games-to-uwp-on-xbox"></a>사용자 지정 c + + 게임을을 UWP 가져옵니다 xbox
 
 사용자 지정 C++ 엔진을 작성하는 경우 Xbox One은 C++를 완전히 지원합니다. 
 

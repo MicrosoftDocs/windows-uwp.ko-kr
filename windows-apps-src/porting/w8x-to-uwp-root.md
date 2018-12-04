@@ -1,5 +1,5 @@
 ---
-description: 유니버설 8.1 앱 및 \#8212;whether 있는 경우를 대상으로 Windows8.1, Windows Phone 8.1 또는 둘 다 \#8212;then은 소스 코드 및 기술이 원활 하 게 포팅 Windows10 있습니다.
+description: 유니버설 8.1 앱 및 \#8212;whether 있는 경우를 대상으로 Windows8.1, Windows Phone 8.1 또는 둘 다 \#8212;then은 소스 코드 및 기술이 원활 하 게 포팅 Windows10 나와 있습니다.
 title: Windows 런타임 8.x에서 UWP로 이동'
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.date: 02/08/2017
@@ -7,28 +7,28 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324959"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479864"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x에서 UWP로 이동
 
 
-유니버설 8.1 앱이 있는 경우-Windows8.1, Windows Phone 8.1 또는 둘 다 대상으로 하는지 여부 등는 소스 코드 및 기술이 원활 하 게 포팅 Windows10 찾을 수 있습니다. Windows10를 사용 하 여 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 적응 UI 개념에 대 한 자세한 배경 Windows10, [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조 합니다.
+유니버설 8.1 앱이 있는 경우-Windows8.1, Windows Phone 8.1 또는 둘 다 대상으로 하는지 여부 등는 소스 코드 및 기술이 원활 하 게 포팅 Windows10 찾을 수 있습니다. Windows10를 사용 하 여 고객에 게 모든 종류의 장치에 설치할 수 있는 단일 앱 패키지는 유니버설 Windows 플랫폼 (UWP) 앱을 만들 수 있습니다. 추가적인 배경 정보에 Windows10, UWP 앱 및 적응 코드 및이 포팅 가이드에서 언급할 적응 UI 개념 [UWP 앱 가이드](https://msdn.microsoft.com/library/windows/apps/dn894631)를 참조 합니다.
 
-포팅하는 동안 알게 Windows10 이전 플랫폼 뿐 아니라 XAML 태그, UI 프레임 워크 및 도구를 사용 하 여 대부분의 Api 공유 하 고 있다는 사실을 확인할 모든 항목이 이미 익숙하다는 합니다. 이전과 마찬가지로 C++, C# 및 Visual Basic 중에서 XAML UI 프레임워크와 함께 사용할 프로그래밍 언어를 선택할 수 있습니다. 처음에 현재 앱을 사용해서 수행할 작업을 정확히 계획할 때는 앱 및 프로젝트 종류를 고려해야 합니다. 이 내용은 다음 섹션에서 설명합니다.
+포팅하는 동안 있습니다 Windows10 이전 플랫폼 뿐 아니라 XAML 태그, UI 프레임 워크 및 도구를 사용 하 여 대부분의 Api 공유 하 고 있다는 사실을 확인할 수 있는 모든 항목이 이미 익숙하다는 합니다. 이전과 마찬가지로 C++, C# 및 Visual Basic 중에서 XAML UI 프레임워크와 함께 사용할 프로그래밍 언어를 선택할 수 있습니다. 처음에 현재 앱을 사용해서 수행할 작업을 정확히 계획할 때는 앱 및 프로젝트 종류를 고려해야 합니다. 이 내용은 다음 섹션에서 설명합니다.
 
 ## <a name="if-you-have-a-universal-81-app"></a>유니버설 8.1 앱이 있는 경우
 
 유니버설 8.1 앱은 8.1 유니버설 앱 프로젝트에서 빌드합니다. 프로젝트의 이름을 AppName\_81이라고 하겠습니다. 여기에는 다음과 같은 하위 프로젝트가 포함되어 있습니다.
 
--   AppName\_81.Windows. 이것이 Windows8.1 용 앱 패키지를 빌드하는 프로젝트입니다.
+-   AppName\_81.Windows. Windows8.1 용 앱 패키지를 빌드하는 프로젝트입니다.
 -   AppName\_81.WindowsPhone. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
 -   AppName\_81.Shared. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
-8.1 유니버설 Windows 앱에서 동일한 기능을 제공 하는 종종-동일한 코드 및 태그를 사용 하 여-Windows8.1 및 Windows Phone 8.1 형식. 앱 단일 Windows10 앱 유니버설 디바이스 패밀리를 대상으로 하는 (및 가장 넓은 범위의 장치에 설치할 수 있는)에 적합 됩니다. 공유 프로젝트의 콘텐츠를 기본적으로 포팅하게 되며, 다른 두 프로젝트에는 콘텐츠가 거의 없거나 전혀 없으므로 포팅할 필요가 없습니다.
+8.1 유니버설 Windows 앱에서 동일한 기능을 제공 하는 종종-동일한 코드 및 태그를 사용 하 여-Windows8.1 및 Windows Phone 8.1 형식입니다. 앱 유니버설 디바이스 패밀리를 대상으로 하는 번째이자 광범위 한 디바이스에 설치할 수 있는 단일 Windows10 앱에 적합 됩니다. 공유 프로젝트의 콘텐츠를 기본적으로 포팅하게 되며, 다른 두 프로젝트에는 콘텐츠가 거의 없거나 전혀 없으므로 포팅할 필요가 없습니다.
 
 다른 경우는 Windows8.1 및/또는 Windows Phone 8.1 양식 앱에는 고유한 기능이 포함 되어 있습니다. 또는 동일한 기능을 포함하지만 다른 기법이나 기술을 사용하여 이러한 기능을 구현하기도 합니다. 유니버설 디바이스 패밀리를 대상으로 하는 단일 앱으로 포팅하도록 선택할 수 있는 앱(앱 자체를 다른 장치에 맞게 조정하려는 경우) 또는 둘 이상의 앱으로 포팅하도록 선택할 수 있는 앱(예: 데스크톱 디바이스 패밀리 대상 앱 및 모바일 디바이스 패밀리 대상 앱). 유니버설 8.1 앱의 특성에 따라 어떤 옵션이 가장 적합한지 결정합니다.
 

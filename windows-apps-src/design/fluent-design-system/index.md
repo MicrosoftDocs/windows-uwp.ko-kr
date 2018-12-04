@@ -7,11 +7,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7c5d2c1b112b96dc86d1dfef3015f9b52f43cb83
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337309"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479357"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Fluent 디자인 시스템에 대 한 Windows 응용 프로그램 작성자
 
@@ -19,7 +19,7 @@ ms.locfileid: "8337309"
 
 ## <a name="introduction"></a>소개
 
-Fluent 디자인 시스템에는 적응형 공감 다우 며 멋진 사용자 인터페이스는 시스템 이기도 합니다.
+Fluent 디자인 시스템은 적응형 공감 다우 며 멋진 사용자 인터페이스에 대 한 시스템입니다.
 
 ## <a name="principles"></a>원칙
 
@@ -36,11 +36,11 @@ Fluent 환경은 동작이나 의도에 반응하여 필요한 것을 이해하�
 Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활용합니다. 조명, 그림자, 동작, 깊이, 질감 등을 사용하여 직관적이고 본능적으로 느낄 수 있도록 정보를 구성합니다.
 
 
-## <a name="applying-fluent-design-to-your-app-with-uwp"></a>Fluent 디자인을 UWP 사용 하 여 앱에 적용
+## <a name="applying-fluent-design-to-your-app-with-uwp"></a>UWP 사용 하 여 앱에 흐름 디자인 적용
 
-![Fluent 디자인 로고](images/fluentdesign_header.png)
+![흐름 디자인 로고](images/fluentdesign_header.png)
 
-디자인 지침에는 앱에 Fluent 디자인 원칙을 적용 하는 방법을 설명 합니다. 어떤 유형의 앱? 모든 플랫폼에 적용할 수 다양 한 지침을 하는 동안 UWP (유니버설 Windows 플랫폼) 흐름 디자인을 지원 하기 위해 만들었습니다.
+디자인 지침에는 앱에 흐름 디자인 원칙을 적용 하는 방법을 설명 합니다. 어떤 유형의 앱? 모든 플랫폼에 적용할 수 다양 한 지침을 하는 동안 UWP (유니버설 Windows 플랫폼) 흐름 디자인을 지원 하기 위해 만들었습니다.
 
 흐름 디자인은 UWP에 기본적으로 적용됩니다. 이러한 기능 중에서 유효 픽셀이나 범용 입력 시스템 같은 일부 기능은 자동입니다. 이 기능을 활용하기 위해 추가 코드를 작성할 필요가 없습니다. 아크릴 같은 다른 기능은 선택 사항입니다. 즉 추가할 코드를 직접 작성하여 앱에 추가하면 됩니다.
 
@@ -48,7 +48,7 @@ Fluent 환경은 실제 세상의 요소를 통합하여 근본적인 것을 활
 
 <!-- To apply Fluent Design to your app, follow our guidelines and use UWP (Universal Windows Platform) you can use UWP UI features combined with best practices for creating apps that perform beautifully on all types of Windows-powered devices. -->
 
-디자인 지침 뿐만 아니라 Fluent 디자인 기사도 보여 줍니다 발생할 디자인 하는 코드를 작성 하는 방법. UWP XAML 사용자 인터페이스를 만드는 쉽게 태그 기반 언어를 사용 합니다. 예를 들면 다음과 같습니다.
+디자인 지침 뿐만 아니라 Fluent 디자인 기사도 하는 방법을 보여 발생할 디자인 하는 코드를 작성 합니다. UWP XAML 사용자 인터페이스를 만드는 더 쉽게 태그 기반 언어를 사용 합니다. 예를 들면 다음과 같습니다.
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4">

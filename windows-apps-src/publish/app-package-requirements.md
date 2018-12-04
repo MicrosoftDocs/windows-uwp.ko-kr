@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원되는 버전, 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c04ac5aa12fc67cf911d575540b05f96753519b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483189"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -57,7 +57,7 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 > 매니페스트의 값은 대/소문자를 구분합니다. 공백과 기타 문장 부호도 일치해야 합니다. 값을 주의해서 입력하고 검토하여 올바른지 확인합니다.
 
 
-앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용 합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle, 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
+앱 번들 (.msixbundle 또는.appxbundle)은 다른 매니페스트를 사용합니다. 앱 번들 매니페스트에 대한 세부 정보와 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 검토하세요. .Msixbundle 또는.appxbundle, 각각의 매니페스트에 포함 패키지는 동일한 요소 및 특성 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 사용 해야 합니다.
 
 > [!TIP]
 > 패키지를 제출하기 전에 반드시 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 실행합니다. 그러면 매니페스트에 인증 또는 제출 오류를 발생시킬 수 있는 문제가 있는지 확인하는 데 도움이 될 수 있습니다.
@@ -73,7 +73,7 @@ Visual Studio를 사용하여 패키지를 만들지 않는 경우에는 [패키
 | 블록 맵 해시     | SHA2-256 알고리즘                                                   |
 
 > [!IMPORTANT]
-> 2018 년 10 월 31 일 기준 제품 새로 만든 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
+> 새로 만든 제품 2018 년 10 월 31 일 기준 Windows 8.x/Windows를 대상으로 하는 패키지를 포함할 수 없습니다 Phone 8.x 이전 버전입니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97)을 참조 하세요.
 
 ## <a name="supported-versions"></a>지원되는 버전
 

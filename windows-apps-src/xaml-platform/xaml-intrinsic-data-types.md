@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 26f4153b59c618a4559549ba7fa9ca0f99c4ab64
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8331246"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481906"
 ---
 # <a name="xaml-intrinsic-data-types"></a>XAML 기본 데이터 형식
 
@@ -31,7 +31,7 @@ Windows 런타임용 XAML이 언어 수준 지원을 제공하는 형식은 다�
 
 이러한 XAML 언어 primitive는 대개 사용자 XAML에서 **x:** 접두사가 사용되는 개체 요소를 정의하는 경우에만 사용됩니다. 다른 모든 XAML 언어 기능은 일반적으로 특성 폼에 사용되거나 태그 확장으로 사용됩니다.
 
-**참고**통상적으로 XAML 및 다른 모든 XAML 언어 요소에 대 한 언어 primitive는 "x:" 접두사와 함께 표시 됩니다. 이는 XAML 언어 요소가 실제 태그에서 일반적으로 어떻게 사용되는지를 보여 줍니다. 이는 XAML용 설명서 및 XAML 사양에서도 준수됩니다.
+**참고**통상적으로 XAML 및 다른 모든 XAML 언어 요소에 대 한 언어 primitive "x:" 접두사와 함께 표시 됩니다. 이는 XAML 언어 요소가 실제 태그에서 일반적으로 어떻게 사용되는지를 보여 줍니다. 이는 XAML용 설명서 및 XAML 사양에서도 준수됩니다.
 
 ## <a name="other-xaml-primitives"></a>기타 XAML primitive
 

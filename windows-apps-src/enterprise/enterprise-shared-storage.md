@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 006507d4665f5578310b8d3e31fb8f7fba4117a2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8337239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483895"
 ---
 # <a name="enterprise-shared-storage"></a>엔터프라이즈 공유 저장소
 

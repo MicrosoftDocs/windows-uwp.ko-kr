@@ -7,23 +7,23 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325599"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483043"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용 하 여 웹 사이트에 대해 앱을 사용 하도록 설정
 
-웹 사이트에 대 한 앱 브라우저를 여는 대신 앱이 시작 사용자가 웹 사이트에 대 한 링크를 열면 수 있도록 웹 사이트를 사용 하 여 앱을 연결 합니다. 앱 설치 되어 있지 않으면 브라우저에서 웹 사이트 정상적으로 열립니다. 확인된 콘텐츠 소유자만 링크를 등록할 수 있기 때문에 사용자는 이 환경을 신뢰할 수 있습니다. 사용자의 등록 된 웹과 앱 연결의 모든 설정으로 이동 하 여 확인할 수 > 앱 > 웹 사이트에 대 한 앱.
+웹 사이트에 대 한 앱 브라우저를 여는 대신 앱이 시작 사용자가 웹 사이트에 대 한 링크를 열면 되도록 웹 사이트를 사용 하 여 앱을 연결 합니다. 앱 설치 되어 있지 않으면 브라우저에서 웹 사이트 정상적으로 열립니다. 확인된 콘텐츠 소유자만 링크를 등록할 수 있기 때문에 사용자는 이 환경을 신뢰할 수 있습니다. 사용자는 설정으로 이동 하 여 모든 등록된의 웹과 앱 연결 확인 수 > 앱 > 웹 사이트에 대 한 앱.
 
 웹과 앱 연결 수를 사용 하도록 설정 해야 합니다.
 - 매니페스트 파일에서 앱이 처리할 URI를 식별합니다.
-- 앱과 웹 사이트 간의 연결을 정의 하는 JSON 파일입니다. 앱과 같은 호스트 루트 앱 패키지 패밀리 이름을 사용 하 여 매니페스트 선언과 합니다.
+- 앱과 웹 사이트 간의 연결을 정의 하는 JSON 파일입니다. 앱과 같은 호스트 루트 응용 프로그램 패키지 패밀리 이름을 사용 하 여 매니페스트 선언과 합니다.
 - 앱의 활성화를 처리합니다.
 
 > [!Note]
-> Windows 10 크리에이터 스 업데이트부터 Microsoft Edge에서 지원 되는 링크 해당 앱이 실행 됩니다. 지원 되는 링크 (예: Internet Explorer, 등) 다른 브라우저에서 검색 환경에서에 유지 됩니다.
+> Windows 10 크리에이터 스 업데이트부터 Microsoft Edge에서 지원 되는 링크 해당 앱이 실행 됩니다. (예: Internet Explorer, 등) 다른 브라우저에서 지원 되는 링크에서 검색 환경을 유지 됩니다.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>앱 매니페스트에서 http 및 https 링크를 처리하도록 등록
 
@@ -164,7 +164,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 -   PFN(패키지 패밀리 이름): 앱의 PFN
 -   파일 경로: 로컬 유효성 검사용 JSON 파일(예: C:\\SomeFolder\\windows-app-web-link)
 
-도구 아무것도 반환 하지 않는 경우 해당 파일을 업로드 하는 경우 유효성 검사 작동 합니다. 오류 코드가 작동 하지 않습니다.
+도구 아무것도 반환 하지 않는 경우 해당 파일을 업로드 하는 경우 유효성 검사 작동 합니다. 오류 코드를 작동 하지 않습니다.
 
 다음 레지스트리 키를 테스트용으로 로드 된 앱에 대 한 로컬 유효성 검사의 일환으로 일치 하는 경로 강제로 설정할 수 있습니다.
 
@@ -198,4 +198,4 @@ AppModel\SystemAppData\YourApp\AppUriHandlers`
 [웹과 앱 예제 프로젝트](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [windows.protocol 등록](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 [URI 활성화 처리](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-[연결 시작 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) 에에서는 launchuriasync () API를 사용 하는 방법을 보여 줍니다.
+[연결 시작 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) 에서는 launchuriasync () API를 사용 하는 방법을 보여 줍니다.

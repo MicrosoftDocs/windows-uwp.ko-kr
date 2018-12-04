@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: c130706c39df4955575f283808f47b1b94a25ff8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8331690"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8479582"
 ---
 # <a name="rich-edit-box"></a>서식 있는 편집 상자
 
