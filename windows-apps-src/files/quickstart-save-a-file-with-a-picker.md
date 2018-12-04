@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a7e278df29a531e5bf1d0d92946cd0199f85515d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347666"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469517"
 ---
 # <a name="save-a-file-with-a-picker"></a>선택기를 사용하여 파일 저장
 
@@ -105,4 +105,4 @@ savePicker.SuggestedFileName = "New Document";
 
 예제에서는 파일이 유효한지 확인하고 자체 파일 이름을 씁니다. [파일 만들기, 쓰기 및 읽기](quickstart-reading-and-writing-files.md)도 참조하세요.
 
-**팁**저장 된 파일을 다른 처리를 수행 하기 전에 유효한 지 확인 항상 확인 해야 합니다. 그런 다음 파일을 앱에 맞게 저장하고 선택한 파일이 잘못된 경우 적절한 동작을 제공할 수 있습니다.
+**팁**항상 저장 된 파일을 다른 처리를 수행 하기 전에 유효 있는지 확인 해야 합니다. 그런 다음 파일을 앱에 맞게 저장하고 선택한 파일이 잘못된 경우 적절한 동작을 제공할 수 있습니다.

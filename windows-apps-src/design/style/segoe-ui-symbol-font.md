@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 076e4b0ddf30a23271bbb6b488f235f7233b28c2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351630"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473813"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -43,7 +43,7 @@ Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 
 또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러링된 양식이 있습니다.
 
 ## <a name="using-the-icons"></a>아이콘 사용
-C# /vb/c + + 및 XAML 앱을 개발 하는 경우에 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)와 함께 Segoe MDL2 자산에서 지정 된 문자 모양을 사용할 수 있습니다. 
+C# /vb/c + + 및 XAML 앱을 개발 하는 경우 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)와 함께 Segoe MDL2 자산에서 지정 된 문자 모양을 사용할 수 있습니다. 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>

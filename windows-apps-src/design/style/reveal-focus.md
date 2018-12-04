@@ -10,11 +10,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 311e5714c5428fac6509564fd00784299a02f630
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351181"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470849"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
@@ -22,17 +22,17 @@ ms.locfileid: "8351181"
 
 포커스 표시는 [10 피트 환경을](/windows/uwp/design/devices/designing-for-tv), Xbox One 및 텔레비전 화면 등의 대 한 조명 효과입니다. 사용자가 게임 패드 또는 키보드 포커스를 이동하면 버튼과 같이 포커스 맞출 수 있는 요소의 테두리를 애니메이션화합니다. 기본적으로 꺼져 있지만 설정하는 방법은 간단합니다. 
 
-(대화형 요소를 강조 표시 하는 조명에 영향 강조 표시 효과 대 한 참조 [문서 강조 표시](/windows/uwp/design/style/reveal)합니다.)
+(강조 표시 효과, 대화형 요소를 강조 표시 하는 조명에 영향 [강조 표시 문서](/windows/uwp/design/style/reveal)참조).
 
 
 > **중요한 API**: [Application.FocusVisualKind 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind), [FocusVisualKind enum](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind), [Control.UseSystemFocusVisuals 속성](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
 
 ## <a name="how-it-works"></a>작동 방식
-표시는 요소의 테두리 애니메이션된 빛을 추가 하 여 포커스가 있는 요소에 포커스 나타난:
+표시는 요소의 테두리는 애니메이션된 빛을 추가 하 여 포커스가 있는 요소에 포커스 나타난:
 
 ![Visual 표시](images/traveling-focus-fullscreen-light-rf.gif)
 
-사용자 수 기울이지 못할 수 없는 전체 TV 화면에 완전히 집중 10 피트 시나리오에서 특히 유용 합니다. 
+이 사용자 수 기울이지 못할 수 없는 전체 TV 화면에 완전히 집중 10 피트 시나리오에서 특히 유용 합니다. 
 
 ## <a name="examples"></a>예
 
@@ -63,18 +63,18 @@ ms.locfileid: "8351181"
     }
 ```
 
-**FocusVisualKind** 속성을 설정 하면 시스템 포커스 표시 효과 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본값)로 설정 하는 모든 컨트롤에 자동으로 적용 합니다. 
+**가** 속성을 설정 하면 시스템은 자동으로 포커스 표시 효과 [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) 속성이 **True** (대부분의 컨트롤에 대 한 기본 값)으로 설정 되는 모든 컨트롤에 적용 합니다. 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>기본적으로 포커스 표시에 없는 이유는? 
-알 수 있듯이 앱이 Xbox에서 실행 중인 것을 감지할 때 포커스 표시를 켜는 상당히 쉽습니다. 그렇다면 왜 시스템에서 자동으로 켜지지 않는 것일까요? 포커스 표시는 포커스 화면 효과의 크기를 늘리는, 때문에 UI 레이아웃을 사용 하 여 문제가 발생할 수 있습니다. 경우에 따라 앱에 대 한 최적화 하기 위해 포커스 표시 효과 사용자 지정 합니다.
+알 수 있듯이 앱이 Xbox에서 실행 중임을 감지할 때 포커스 표시를 켜는 상당히 쉽습니다. 그렇다면 왜 시스템에서 자동으로 켜지지 않는 것일까요? 포커스 표시는 포커스 화면 효과의 크기를 늘리기, 때문에 UI 레이아웃을 사용 하 여 문제가 발생할 수 있습니다. 경우에 따라 앱에 대 한 최적화 하기 위해 포커스 표시 효과 사용자 지정 해야 합니다.
 
 ## <a name="customizing-reveal-focus"></a>포커스 표시 사용자 지정
 
-각 컨트롤에 대 한 포커스 화면 효과 속성만 수정 하 여 포커스 표시 효과 사용자 지정할 수 있습니다: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)및 [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). 이러한 속성을 사용하면 포커스 영역의 색과 두께를 사용자 지정할 수 있습니다. (이들은 [높은 가시성 포커스 화면 효과](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals)를 만드는 데 사용하는 속성과 동일합니다.) 
+각 컨트롤에 대 한 포커스 시각적 속성을 수정 하 여 포커스 표시 효과 사용자 지정할 수 있습니다: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)및 [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). 이러한 속성을 사용하면 포커스 영역의 색과 두께를 사용자 지정할 수 있습니다. (이들은 [높은 가시성 포커스 화면 효과](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals)를 만드는 데 사용하는 속성과 동일합니다.) 
 
 Customzing를 시작 하기 전에, 유용 포커스 표시를 구성 하는 구성 요소에 대해 좀 더 알아야 합니다.
 
-기본 포커스 표시 화면 효과를 세 부분이: 기본 테두리, 보조 테두리, 그리고 표시 빛입니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부*에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부*에서 실행됩니다. 포커스 표시 빛의 두께 기본 테두리의 두께 비례 하 고 *외부* 기본 테두리 실행 됩니다.
+기본 포커스 표시 화면 효과를 세 부분: 기본 테두리, 보조 테두리, 그리고 표시 빛입니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부*에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부*에서 실행됩니다. 포커스 표시 빛의 두께 기본 테두리의 두께 비례 하 고 *외부* 기본 테두리 실행 됩니다.
 
 고정 요소 외에도 포커스 표시 화면 효과 애니메이션된 빛을 움직이는 때 포커스를 이동할 때 포커스 방향으로 이동 하는 기능.
 

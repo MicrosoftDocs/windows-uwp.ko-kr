@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
 ms.openlocfilehash: d492bc7dde990404552689516731850974c31a7c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323829"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468102"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Microsoft Store에 요청 보내기
 
@@ -77,7 +77,7 @@ public async Task<bool> AddUserToFlightGroup()
 |  *requestKind*                   |  디바이스의 최상위 플라이트 그룹을 반환하려면 7을 지정하고, 현재 사용자 및 디바이스의 최상위 플라이트 그룹을 반환하려면 8을 지정합니다. *requestKind* 매개 변수에는 8을 사용하는 것이 좋습니다. 왜냐하면 이 값은 현재 사용자와 디바이스의 구성원 전체 중에서 최상위 플라이트 그룹을 반환하기 때문입니다.  |
 |  *parametersAsJson*                   |  아래 예제에 표시된 데이터를 포함하는 JSON 형식 문자열을 전달합니다.  |
 
-다음 예제는 JSON 형식 데이터를 *parametersAsJson* 매개 변수로 전달하는 것을 보여 줍니다. *유형* 필드를 *GetRemoteVariables* 문자열에 할당해야 합니다. 파트너 센터에서 원격 변수를 정의한 프로젝트 ID를 *projectId* 필드를 할당 합니다.
+다음 예제는 JSON 형식 데이터를 *parametersAsJson* 매개 변수로 전달하는 것을 보여 줍니다. *유형* 필드를 *GetRemoteVariables* 문자열에 할당해야 합니다. 파트너 센터에서 원격 변수를 정의한 프로젝트 id *projectId* 필드를 할당 합니다.
 
 ```json
 { 

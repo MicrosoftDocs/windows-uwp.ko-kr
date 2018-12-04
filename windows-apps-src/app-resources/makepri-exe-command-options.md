@@ -7,22 +7,22 @@ ms.topic: article
 keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8324711"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465777"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
 [MakePri.exe](compile-resources-manually-with-makepri.md)에는 `createconfig`, `dump`, `new`, `resourcepack` 및 `versioned` 명령 집합이 있습니다. 이 항목에서는 이들의 사용에 대한 명령줄 옵션을 자세히 설명합니다.
 
 > [!NOTE]
-> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **앱을 관리 하는 UWP 용 Windows SDK** 옵션을 선택 하는 때 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> MakePri.exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **Windows SDK UWP 앱의 관리** 옵션을 선택 하면 설치 됩니다. 경로에 설치 된 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 메모가 다른 아키텍처에 대 한 폴더에 따라 합니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
 
 ## <a name="getting-help-from-the-command-line"></a>명령줄에서 도움말 보기
 
-실행할 수 있습니다 `MakePri.exe help` 또는 `MakePri.exe /?` 하 여 MakePri.exe로 사용할 수 있는 명령을 봅니다. 실행할 수 있습니다 `MakePri.exe <command> /?` 명령에 대 한 하 고, 매우 드문 경우이 특성을 보려면도 `MakePri.exe <command> <option>` 하는 옵션에 대 한 세부 정보가 표시 됩니다.
+실행할 수 있습니다 `MakePri.exe help` 또는 `MakePri.exe /?` 하 여 MakePri.exe로 사용할 수 있는 명령을 봅니다. 실행할 수 있습니다 `MakePri.exe <command> /?` 명령에 대 한 하 고, 매우 드물지만에서 세부 사항을 보려면,에 `MakePri.exe <command> <option>` 옵션에 대 한 세부 사항을 볼 수 있습니다.
 
 ## <a name="makepri-commands"></a>MakePri 명령
 
@@ -418,16 +418,16 @@ MakePri는 인덱서 메타데이터 파일에 리소스 팩 관련 정보를 �
 
 ## <a name="47indexoptionsio-option"></a>& #47;IndexOptions(io) 옵션
 
-인덱스 옵션을 사용 하 여 (/ io)와 `new`, `resourcepack`, 및 `versioned` 리소스 인덱서의 동작을 보다 세부적된으로 제어를 제공 하는 옵션을 지정 합니다. 인덱스 옵션은 기본적으로 비활성화 됩니다.
+인덱스 옵션 옵션을 사용 하 여 (/ io)와 `new`, `resourcepack`, 및 `versioned` 리소스 인덱서의 동작을 보다 세부적된으로 제어를 제공 하는 옵션을 지정 합니다. 인덱스 옵션은 기본적으로 비활성화 됩니다.
 
 ```console
 /IndexOptions(io) <OPTIONS>
 ```
 
-**옵션** 에 다음 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
+**옵션** 은 다음과 같은 옵션으로 이루어진 쉼표로 구분 된 목록입니다.
 
 - HiddenFiles(hf) + /. (+) 인덱싱하거나 (-)를 무시 숨김 파일 및 폴더.
-- LinkedFiles(lf) + /. 인덱스 (+) 또는 무시 (-) 파일 및 폴더를 연결 합니다.
+- LinkedFiles(lf) + /. (+) 인덱싱하거나 (-)를 무시 파일 및 폴더를 연결 합니다.
 
 ## <a name="47mappingfilemf-option"></a>/MappingFile(mf) 옵션
 

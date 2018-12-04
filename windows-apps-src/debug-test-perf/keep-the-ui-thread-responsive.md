@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0bc555030c2f5202e5c128c1d1a2fe45b5b71b4b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347430"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465669"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>UI 스레드 응답 유지
 
@@ -41,7 +41,7 @@ UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 
 
 신속하게 반환하도록 이벤트 처리기를 작성합니다. 적지 않은 작업을 수행해야 하는 경우 백그라운드 스레드에서 작업을 예약하고 반환합니다.
 
-C#의 **await** 연산자, Visual Basic의 **Await** 연산자 또는 C++의 대리자를 사용하여 작업을 비동기 방식으로 예약할 수 있습니다. 그러나 이렇게 해도 예약한 작업이 백그라운드 스레드에서 실행된다고 보장할 수 없습니다. UWP(유니버설 Windows 플랫폼) API 일정은 대부분 백그라운드에서 작동하지만 **await**만 사용하거나 대리자를 사용하여 앱 코드를 호출하면 해당 대리자가 메서드가 UI 스레드에서 실행됩니다. 백그라운드 스레드에서 앱 코드를 실행하려면 명시적으로 지정해야 합니다. C# 및 Visual Basic에서 [**Task.Run**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.run.aspx)를 코드를 전달 하 여이 수행할 수 있습니다.
+C#의 **await** 연산자, Visual Basic의 **Await** 연산자 또는 C++의 대리자를 사용하여 작업을 비동기 방식으로 예약할 수 있습니다. 그러나 이렇게 해도 예약한 작업이 백그라운드 스레드에서 실행된다고 보장할 수 없습니다. UWP(유니버설 Windows 플랫폼) API 일정은 대부분 백그라운드에서 작동하지만 **await**만 사용하거나 대리자를 사용하여 앱 코드를 호출하면 해당 대리자가 메서드가 UI 스레드에서 실행됩니다. 백그라운드 스레드에서 앱 코드를 실행하려면 명시적으로 지정해야 합니다. C# 및 Visual Basic 코드 [**Task.Run**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.run.aspx)를 전달 하 여이 수행할 수 있습니다.
 
 UI 요소는 UI 스레드에서만 액세스할 수도 있습니다. 백그라운드 작업을 시작하기 전에 UI 스레드를 사용하여 UI 요소에 액세스하거나 백그라운드 스레드에서 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) 또는 [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918)를 사용합니다.
 
@@ -101,7 +101,7 @@ public class AsyncExample
 
 이 예제에서는 UI 스레드의 응답을 유지하기 위해 `NextMove_Click` 처리기가 **await**에서 반환합니다. 그러나 백그라운드 스레드에서 실행되는 `ComputeNextMove`가 완료된 후에는 해당 처리기에서 실행이 다시 선택됩니다. 처리기의 나머지 코드는 결과와 함께 UI를 업데이트합니다.
 
-> **참고**비슷한 시나리오에 사용할 수 있는 UWP에 대 한 [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) 및 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) API 이기도 합니다. 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/Mt187340)을 참조하세요.
+> **참고**비슷한 시나리오에 사용할 수 있는 UWP 용 [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) 및 [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) API 이기도 합니다. 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/Mt187340)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

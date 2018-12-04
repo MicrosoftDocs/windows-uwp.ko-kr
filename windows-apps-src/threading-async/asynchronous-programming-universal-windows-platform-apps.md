@@ -1,27 +1,27 @@
 ---
 ms.assetid: 23FE28F1-89C5-4A17-A732-A722648F9C5E
 title: 비동기 프로그래밍
-description: 이 항목에서는 유니버설 Windows 플랫폼 (UWP) 및 C#, Microsoft Visual Basic.NET, c + + 및 JavaScript에서의 표현의 비동기 프로그래밍을 설명 합니다.
+description: 이 항목에서는 유니버설 Windows 플랫폼 (UWP) 및 C#, Microsoft Visual Basic.NET, c + + 및 JavaScript에서의 표현의 비동기 프로그래밍에 대해 설명 합니다.
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 비동기
 ms.localizationpriority: medium
 ms.openlocfilehash: 50e8bae0db888b947c568deb50fa5f2fc227e734
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469921"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
-이 항목에서는 유니버설 Windows 플랫폼 (UWP) 및 C#, Microsoft Visual Basic.NET, c + + 및 JavaScript에서의 표현의 비동기 프로그래밍을 설명 합니다.
+이 항목에서는 유니버설 Windows 플랫폼 (UWP) 및 C#, Microsoft Visual Basic.NET, c + + 및 JavaScript에서의 표현의 비동기 프로그래밍에 대해 설명 합니다.
 
 비동기 프로그래밍을 사용하면 앱이 오랜 시간이 소요되는 작업을 수행할 때 응답 가능 상태를 유지하는 데 도움이 됩니다. 예를 들어 인터넷에서 콘텐츠를 다운로드하는 앱은 콘텐츠가 도착할 때까지 몇 초간 기다려야 할 수 있습니다. UI 스레드에서 동기 메서드를 사용하여 콘텐츠를 검색할 경우 메서드가 반환할 때까지 앱이 차단됩니다. 앱은 사용자 조작에 반응하지 않으며, 사용자는 앱이 반응하지 않는 것처럼 보이므로 불만을 느낄 수 있습니다. 따라서 더 좋은 방법은 비동기 프로그래밍을 사용하여 작업이 완료되기를 기다리는 동안에도 앱이 계속 실행되고 UI에 응답하는 것입니다.
 
 완료하는 데 오랜 시간이 걸릴 수 있는 메서드의 경우 비동기 프로그램이 표준이며 UWP에서도 예외가 아닙니다. JavaScript, C#, Visual Basic 및 c + + 각 비동기 메서드에 언어 지원을 제공합니다.
 
 ## <a name="asynchronous-programming-in-the-uwp"></a>UWP의 비동기 프로그래밍
-[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) Api 및 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) Api 같은 많은 UWP 기능에는 비동기 Api로 표시 됩니다. 규칙에 따라 비동기 Api의 이름은 실행의 일부가 컨트롤이 호출자에 게 반환 되는 수행할 수 있음을 나타냅니다 "Async"로 끝납니다.
+[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) Api 및 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) Api 등의 다양 한 UWP 기능, 비동기 Api로 표시 됩니다. 규칙에 따라 비동기 Api의 이름은 실행의 일부가 컨트롤이 호출자에 게 반환 되는 수행할 수 있음을 나타냅니다 "Async"로 끝납니다.
 
 UWP(유니버설 Windows 플랫폼) 앱에 비동기 API를 사용할 경우 코드는 일관된 방식으로 비차단 호출을 만듭니다. 개발자 고유의 API 정의에 이러한 비동기 패턴을 구현하면 호출자는 예측 가능한 방식으로 코드를 이해하고 사용할 수 있습니다.
 

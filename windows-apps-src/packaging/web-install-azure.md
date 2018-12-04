@@ -1,24 +1,22 @@
 ---
 title: Azure 웹 서버에서 UWP 앱 설치
 description: 이 자습서에서는 Azure 웹 서버를 설정하고, 웹 앱이 앱 패키지를 호스트할 수 있는지 확인하고, 효과적으로 앱 설치 관리자를 호출 및 사용하는 방법에 대해 설명합니다.
-ms.date: 09/30/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: Windows 10, uwp 앱 설치 관리자, AppInstaller, 사이드로드, 관련 집합, 선택적 패키지, Azure 웹 서버
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f0e4fe6cd2b05c2de4648a410ba43ce27e48922
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: 074a8e9941d4314bb35c28b0ee296e9d86fa23a5
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469214"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Azure 웹앱에서 UWP 앱 설치
 
 앱 설치 관리자 앱을 사용하여 개발자 및 IT 전문가가 자신의 CDN(콘텐츠 배달 네트워크)에서 Windows 10 앱을 호스트하여 배포할 수 있습니다. Microsoft Store에 자신의 앱을 게시하고 싶지 않거나 게시할 필요가 없지만 여전히 Windows 10 패키지 및 배포 플랫폼을 활용하고자 하는 기업에 유용합니다.
 
 이 항목에서는 UWP 앱 패키지를 호스트하기 위해 Azure 웹 서버를 구성하는 단계 및 앱 패키지를 설치하기 위해 앱 설치 관리자 앱을 사용하는 방법을 설명합니다.
-
-이 자습서에서는 IIS 서버를 설정하여 로컬로 웹 응용 프로그램이 앱 패키지를 제대로 호스트하고 앱 설치 관리자 앱을 효율적으로 호출 및 사용할 수 있는지 확인하는 작업에 대해 다룹니다. 앱 설치 관리자 웹 설치 요구 사항에 맞는지 확인하기 위해 필드(Azure 및 AWS)의 인기 있는 클라우드 웹 서비스에서 제대로 웹 응용 프로그램을 호스트하는 자습서도 있습니다. 이 단계별 자습서에는 전문 지식이 필요하지 않으며 매우 쉽게 따라 할 수 있습니다. 
 
 ## <a name="setup"></a>설정
 

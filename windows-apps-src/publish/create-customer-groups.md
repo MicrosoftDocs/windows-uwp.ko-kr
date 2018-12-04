@@ -7,15 +7,15 @@ keywords: Windows 10, uwp, 고객 그룹, 세그먼트, 플라이트 그룹, 알
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
 ms.openlocfilehash: b757c304398c60bd539eb3c023892b68138880db
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350536"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470087"
 ---
 # <a name="create-customer-groups"></a>고객 그룹 만들기
 
-앱의 고객의 하위 집합을 포함 하는 *고객 그룹* 을 만들 수 있습니다. 이러한 그룹 프로 모션, 테스트 및 다른 용도 대 한 대상 고객에 게 사용할 수 있습니다.
+앱의 고객의 하위 집합을 포함 하는 *고객 그룹* 을 만들 수 있습니다. 이러한 그룹 프로 모션, 테스트 및 다른 용도로 대상 고객에 게 사용할 수 있습니다.
 
 을 보고 하려면 고객 그룹 만들기 [파트너 센터](https://partner.microsoft.com/dashboard)왼쪽된 탐색 메뉴에서 **참여** 를 확장 한 다음 **고객 그룹**을 선택 합니다.
 

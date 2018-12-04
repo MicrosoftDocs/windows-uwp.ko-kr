@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9940367054ae8771355012492434e12aa97d43ad
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8466204"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
@@ -48,7 +48,7 @@ ms.locfileid: "8329988"
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-[**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) 및 [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) 에서 반환 된 값을 사용 하 여 장치에서 사용 가능한 프레임 소스 그룹 때 알림을 받도록 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) 를 만들 수도 있습니다. 는 외부 카메라는 연결 되어 있을 때와 같은 변경 됩니다. 자세한 내용은 [**장치 열거**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
+장치에서 사용 가능한 프레임 소스 그룹 때 알림을 받도록 [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) 및 [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) 에서 반환 된 값을 사용 하 여 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) 를 만들 수도 있습니다. 외부 카메라 연결 되어 때와 같은 변경 됩니다. 자세한 내용은 [**장치 열거**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
 
 [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup)에는 그룹에 포함된 프레임 원본을 설명하는 [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체 컬렉션이 있습니다. 장치에서 사용할 수 있는 프레임 원본 그룹을 검색한 후에는 원하는 프레임 원본을 노출하는 그룹을 선택할 수 있습니다.
 
