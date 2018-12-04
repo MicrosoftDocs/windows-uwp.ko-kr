@@ -11,15 +11,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 48aff6bd0b5f6ce955168bdc5faef67b7f43925e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334263"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475678"
 ---
 # <a name="pivot"></a>피벗
 
-[피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤을 사용 하면 콘텐츠 섹션의 작은 집합 간의 터치 살짝 밀기 합니다.
+[피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤 콘텐츠 섹션의 작은 집합 간의 터치 살짝 수 있습니다.
 
 > **중요 Api**: [Pivot 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
@@ -45,18 +45,18 @@ ms.locfileid: "8334263"
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-일반적인 상단 탐색 및 탭 패턴을 구현 하려면 [NavigationView](navigationview.md)를 자동으로 다양 한 화면 크기를 조정할 수 있도록 하는 사용자 지정에 대 한를 사용 하는 것이 좋습니다.
+일반적인 상단 탐색 및 탭 패턴을 위해 [NavigationView](navigationview.md)를 자동으로 다양 한 화면 크기를 조정할 수 있도록 하는 사용자 지정에 대 한를 사용 하는 것이 좋습니다.
 
-그러나 탐색 터치 살짝 밀기에 필요한 경우 피벗을 사용 하는 것이 좋습니다.
+그러나 탐색을 위해 터치 살짝 밀기, 피벗을 사용 하 여 것이 좋습니다.
 
 NavigationView 및 피벗 컨트롤 간의 주요 차이점에 기본 오버플로 동작을 탐색 API:
 
 - 피벗 항목을 NavigationView의 드롭다운 메뉴를 사용 하는 동안 사용자가 모든 항목을 볼 수 있도록 오버플로 컨베이어 벨트 오버플로.
-- 피벗 탐색 동작 보다 잘 제어에 대 한 사용 하면 NavigationView 콘텐츠 섹션 간 탐색을 처리 합니다.
+- 피벗 NavigationView를 사용 하면 탐색 동작을 보다 잘 제어 하는 동안 콘텐츠 섹션 간 탐색을 처리 합니다.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>피벗 대신 NavigationView를 사용 합니다.
 
-앱의 UI가 피벗 컨트롤을 사용 하는 경우 다음으로 변환할 수 있습니다 피벗 NavigationView 아래 코드를 사용 하 여 합니다.
+앱의 UI가 피벗 컨트롤을 사용 하는 경우 다음을 변환할 수 있습니다 피벗 NavigationView 아래 코드를 사용 하 여 합니다.
 
 이 XAML은 3 개의 [만들기 피벗 컨트롤](#create-a-pivot-control)피벗 예제와 마찬가지로 콘텐츠 섹션이 있는 NavigationView를 만듭니다.
 
@@ -83,7 +83,7 @@ NavigationView 및 피벗 컨트롤 간의 주요 차이점에 기본 오버플�
 </Page>
 ```
 
-NavigationView는 사용자 지정 탐색을 좀 더 잘 제어할 및 해당 코드 숨김 필요 합니다. 위의 XAML 권의 다음 코드 숨김을 사용:
+NavigationView 더 많은 탐색 사용자 지정 컨트롤을 제공 하 고 해당 코드 숨김에 필요 합니다. 위의 XAML 권의 다음 코드 숨김을 사용:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -112,7 +112,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-이 코드는 콘텐츠 섹션 간에 터치 살짝 밀기 경험-피벗 컨트롤의 기본 제공 탐색 경험을 모방합니다. 그러나 알 수 있듯이 사용자 지정할 수 있습니다 애니메이션된 전환, 탐색 매개 변수 및 스택 기능을 포함 하는 몇 가지 지점이 합니다.
+이 코드는 콘텐츠 섹션 간에 터치 살짝 경험-피벗 컨트롤의 기본 제공 탐색 경험을 모방합니다. 그러나 알 수 있듯이 사용자 지정할 수 있습니다 애니메이션된 전환, 탐색 매개 변수 및 스택 기능을 포함 하는 몇 가지 요소입니다.
 
 ## <a name="create-a-pivot-control"></a>피벗 컨트롤 만들기
 

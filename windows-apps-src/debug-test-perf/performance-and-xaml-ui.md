@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b65a62c2a6182e3b120f8ae8cb6b5fe3a0bf45aa
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348445"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476799"
 ---
 # <a name="performance"></a>성능
 
 
 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기에 측정하고 프로젝트의 수명 주기 동안 목표를 달성할 수 있는지 확인합니다. 이 섹션에서는 성능 워크플로를 구성하고, 애니메이션 결함 및 프레임 속도 문제를 해결하고, 시작 시간과 페이지 탐색 시간 및 메모리 사용량을 조정하는 방법을 설명합니다.
 
-하지 않은 경우, 아직 단계는 앞에서 설명한 것 성능이 크게 향상 Windows10 대상에 앱을 이식 것입니다. 여러 XAML 최적화 (예를 들어 [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783))은 Windows10 앱에서 사용할 수만 있습니다. [Windows10 포인팅 앱](https://msdn.microsoft.com/library/windows/apps/Mt238321) 및 [유니버설 Windows 플랫폼으로 전환](http://channel9.msdn.com/Events/Build/2015/3-741)//build/ 세션을 참조 하세요.
+않았으면 지금 단계는 앞에서 설명한 것 상당한 성능 향상을 대상으로 Windows10 앱을 이식 것입니다. 여러 XAML 최적화 (예를 들어 [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783))은 Windows10 앱에서 사용할 수만 있습니다. [Windows10 포인팅 앱](https://msdn.microsoft.com/library/windows/apps/Mt238321) 및 [유니버설 Windows 플랫폼으로 전환](http://channel9.msdn.com/Events/Build/2015/3-741)//build/ 세션을 참조 하세요.
 
 | 항목 | 설명 |
 |-------|-------------|

@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 639f552a240cf8d28d1a2a0ce530315671128746
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336719"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475308"
 ---
 # <a name="xaml-overview"></a>XAML 개요
 
@@ -252,6 +252,6 @@ XAML은 흔히 Visual Studio와 같은 IDE 및 해당 XAML 디자인 화면 중 
 
 앱이 실제로 실행되고 나면, 디자인 타임에 XAML 구문 분석 오류가 검색되지 않은 채로 지나간 경우 이러한 오류는 CLR(공용 언어 런타임)에 의해 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)으로 보고됩니다. 런타임 **XamlParseException**에 대해 수행할 수 있는 작업에 대한 자세한 내용은 [C# 또는 Visual Basic으로 작성된 Windows 런타임 앱의 예외 처리](https://msdn.microsoft.com/library/windows/apps/dn532194)를 참조하세요.
 
-**참고**앱을 사용 하 여 C + + /CX 코드를 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)얻지 합니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
+**참고**앱을 사용 하 여 C + + /CX 코드를 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)다운로드 하지 않습니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
 
 Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 시작](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)을 참조하세요.

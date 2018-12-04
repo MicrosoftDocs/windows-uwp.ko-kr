@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8327438"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476128"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 
 
 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 **광고 성과 보고서** 커뮤니티 광고를 포함 하 여 [광고 단위](in-app-ads.md) 에 수행 하는 방법을 보여 줍니다. 이 보고서에는 [광고 조정](in-app-ads.md#mediation)을 사용하는 UWP 앱의 여러 광고 공급자의 데이터가 포함되어 있습니다.
 
-이 보고서를 보려면 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **광고 성과**를 선택합니다. 파트너 센터에서이 데이터를 보거나 보고서 데이터를 다운로드 하 고 페이지에 있는 화살표 아이콘을 클릭 하 여 오프 라인으로 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [광고 성과 데이터 가져오기](../monetize/get-ad-performance-data.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+이 보고서를 보려면 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **광고 성과**를 선택합니다. 파트너 센터에서이 데이터를 보거나 보고서 데이터를 다운로드 하는 페이지에 있는 화살표 아이콘을 클릭 하 여 오프 라인으로 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [광고 성과 데이터 가져오기](../monetize/get-ad-performance-data.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 광고 성과 보고서를 볼 때는 다양한 소스에서 새 데이터를 수신하고 처리하기 때문에 지난 3일간의 보고 데이터가 변경될 수 있다는 사실에 유의하세요. 뿐만 아니라 최대 90일 이전까지 데이터를 다시 지정할 수 있습니다.
 

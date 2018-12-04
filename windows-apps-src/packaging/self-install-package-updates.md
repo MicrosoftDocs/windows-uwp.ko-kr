@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326063"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476065"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 
-Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store의 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 파트너 센터에서 필수로 표시 하 고 필수 업데이트가 설치 될 때까지 앱에서 기능을 비활성화 하는 패키지에 대 한 쿼리할 수 있습니다.
+Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store의 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 파트너 센터에서 필수로 표시 하 고 필수 업데이트가 설치 될 때까지 앱의 기능을 사용 하지 않도록 하는 패키지에 대 한 쿼리할 수 있습니다.
 
 Windows 10 버전 1803에 도입된 추가 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드를 사용하면 자동으로(사용자에게 알림 UI를 표시하지 않고) 패키지 업데이트를 다운로드 및 설치하고, [선택적 패키지](optional-packages.md)를 제거하고, 앱의 다운로드 및 설치 큐의 패키지에 대한 정보를 확인할 수 있습니다.
 
@@ -193,7 +193,7 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>필수 패키지 업데이트
 
-[패키지를 필수로 표시할](../publish/upload-app-packages.md#mandatory-update) 수 있는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 대 한 파트너 센터에서 패키지 제출을 만들 때 날짜 및 시간 필수가 되는 합니다. 이 속성이 설정되고 앱에서 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
+[패키지를 필수로 표시할](../publish/upload-app-packages.md#mandatory-update) 수 있는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 대 한 파트너 센터에서 패키지 제출을 만들 때 날짜 및 필수가 되는 시간입니다. 이 속성이 설정되고 앱에서 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
 
 > [!NOTE]
 > Microsoft는 패키지 업데이트를 위한 필수 상태를 적용하지 않으며, OS는 필수 앱 업데이트를 설치해야 할 사용자를 나타내기 위한 UI를 제공하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 앱 업데이트를 적용합니다.  
