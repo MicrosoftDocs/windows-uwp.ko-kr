@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0194ccba43e2ba5270b9ff8eacf045ca140af6cb
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8338282"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473143"
 ---
 # <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
@@ -124,7 +124,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-일반적인 앱은 앱이 처음 시작, **OnNavigatedTo** 이벤트 등의 백그라운드 작업을 등록 합니다.
+앱이 처음 시작 된, **OnNavigatedTo** 이벤트 등 일반적인 앱은 백그라운드 작업을 등록 합니다.
 
 **MediaProcessingTrigger** 개체의 [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071) 메서드를 호출하여 백그라운드 작업을 시작합니다. 이 메서드에서 반환한 [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007) 개체를 통해 백그라운드 작업이 성공적으로 시작되었는지 알 수 있으며, 제대로 시작되지 않은 경우에는 백그라운드 작업을 시작하지 못한 이유를 알 수 있습니다. 
 

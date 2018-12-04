@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c45ad71643b0d75efcb130c1175952822197a161
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471621"
 ---
 # <a name="identify-input-devices"></a>입력 장치 식별
 
@@ -27,7 +27,7 @@ UWP(유니버설 Windows 플랫폼) 장치에 연결된 입력 장치를 식별�
 
 [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 하나 이상의 연결된 마우스가 제공하는 속성을 검색하는 데 사용되는 [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) 클래스가 포함되어 있습니다. 새 **MouseCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**여기에 설명 된 속성에 의해 반환 되는 값은 감지 된 모든 마우스를 기반: 이상의 마우스가 특정 접근 권한 값을 지원 하 고 숫자 속성이 하나에 의해 노출 값을 반환 하는 경우 부울 속성이 0이 아닌 값을 반환 마우스 합니다.
+**참고**여기에 설명 된 속성에 의해 반환 되는 값은 감지 된 모든 마우스 기반: 이상의 마우스가 특정 접근 권한 값을 지원 하 고 숫자 속성이 하나에 의해 노출 값을 반환 하는 경우 부울 속성이 0이 아닌 값을 반환 마우스 합니다.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 터치 디지타이저가 연결되었는지 여부를 검색하는 데 사용되는 [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) 클래스가 포함되어 있습니다. 새 **TouchCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**여기에 설명 된 속성에 의해 반환 되는 값은 모든 감지 된 터치 디지타이저를 기반: 이상의 디지타이저가 특정 접근 권한 값을 지원 하 고 숫자 속성이 값을 반환 하는 경우 부울 속성이 0이 아닌 값을 반환 모든 디지타이저 하나가 제공합니다.
+**참고**여기에 설명 된 속성에 의해 반환 되는 값은 모든 감지 된 터치 디지타이저를 기반: 이상의 디지타이저가 특정 접근 권한 값을 지원 하 고 숫자 속성 값을 반환 하는 경우 부울 속성이 0이 아닌 값을 반환 모든 디지타이저 하나가 노출 합니다.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 감지된 장치 지원 포인터 입력(터치, 터치 패드, 마우스 또는 펜)을 지원하는 장치가 연결되어 있는지 여부를 검색하는 데 사용되는 [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) 클래스가 포함되어 있습니다. 새 **PointerDevice** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**여기에 설명 된 속성에 의해 반환 되는 값은 장치를 기반으로 모든 감지 된 포인터: 하나 이상의 장치가 특정 접근 권한 값을 지원 하 고 숫자 속성이 노출 값을 반환 하는 경우 부울 속성이 0이 아닌 값을 반환 모든 포인터 장치 하나가 있습니다.
+**참고**여기에 설명 된 속성에 의해 반환 되는 값은 장치를 기반으로 모든 검색 된 포인터: 하나 이상의 장치가 특정 접근 권한 값을 지원 하 고 숫자 속성이 노출 값을 반환 하는 경우 부울 속성이 0이 아닌를 반환 모든 포인터 장치 하나가 있습니다.
 
 다음 코드에서는 표를 사용하여 각 포인터 장치의 속성과 값을 표시합니다.
 

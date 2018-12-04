@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox One 게임 취득
 ms.localizationpriority: medium
 ms.openlocfilehash: 348430f7ceee66a9c4e82f258a70e57d8f344943
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8326631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471721"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Xbox One 게임 취득 가져오기
 
-이 메서드를 사용 하 여 Microsoft Store 분석 API에서 집계 취득 데이터를 가져오기 위해 JSON 형식에서 Xbox One 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 대시보드에 사용할 수 있습니다.
+이 메서드를 사용 하 여 Microsoft Store 분석 API에서 집계 취득 데이터를 가져오기 위해 JSON 형식에서에서 Xbox One 게임을 Xbox 개발자 포털 (XDP)을 통해 수집 된 있으며 XDP 분석 대시보드에 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -45,7 +45,7 @@ ms.locfileid: "8326631"
 
 | 매개 변수        | 유형   |  설명      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | 문자열 | 취득 데이터를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 XDP 분석 프로그램에서 게임을 찾아서 URL에서 제품 ID를 검색 합니다. 또는 파트너 센터 분석 보고서에서 구입 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다.  |  예  |
+| applicationId | 문자열 | 취득 데이터를 검색할 Xbox One 게임의 제품 ID입니다. 게임의 제품 ID를 가져오려면 XDP 분석 프로그램에 게임을 찾아서 URL에서 제품 ID를 검색 합니다. 또는 파트너 센터 분석 보고서에서 구입 데이터를 다운로드 하는 경우 제품 ID는.tsv 파일에 포함 됩니다.  |  예  |
 | startDate | date | 검색할 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | endDate | date | 검색할 구입 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다. |  아니요  |
 | top | int | 반환할 데이터의 행 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니요  |

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 714da78a8860eec92bce9389185f52a58e45b44e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473349"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
 
@@ -218,7 +218,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 카메라 메모리 카드나 카메라의 다른 저장 장치를 PC에 삽입합니다. 그런 다음 자동 실행 옵션 목록에서 package.appxmanifest 파일에 지정한 콘텐츠 이벤트 옵션 중 하나를 선택합니다. 이 샘플 코드에서는 카메라 메모리 카드의 DCIM 폴더에 있는 사진을 표시하거나 복사하기만 합니다. 카메라 메모리 카드에서 사진을 AVCHD 또는 PRIVATE\\ACHD 폴더에 저장하는 경우 그에 따라 코드를 업데이트해야 합니다.
-    **참고**카메라 메모리 카드를 설정 하지 않은 경우 루트에 **DCIM** 폴더 있고 DCIM 폴더에 하위 폴더가 있는 경우 이미지를 포함 된 경우 플래시 드라이브를 사용할 수 있습니다.
+    **참고**카메라 메모리 카드를 설정 하지 않은 경우 루트에 **DCIM** 폴더 있으며 이미지 DCIM 폴더에 하위 폴더에 포함 된 경우 플래시 드라이브를 사용할 수 있습니다.
 
 ## <a name="register-for-an-autoplay-device"></a>장치 자동 실행을 위해 등록
 
@@ -227,7 +227,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱은 **WPD\\ImageSourceAutoPlay** 이벤트에 대한 처리기로 등록됩니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://msdn.microsoft.com/library/windows/hardware/ff597729)를 참조하세요.
 
-**중요 한** [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) Api는 [데스크톱 장치 제품군](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 앱은 Pc와 같은 데스크톱 디바이스 패밀리의 Windows10 장치 에서만 이러한 Api를 사용할 수 있습니다.
+**중요 한** [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) Api는 [데스크톱 장치 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)입니다. 앱은 Pc와 같은 데스크톱 디바이스 패밀리의 Windows10 장치 에서만 이러한 Api를 사용할 수 있습니다.
 
  
 
@@ -407,7 +407,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 컴퓨터에 카메라를 연결합니다. 그런 다음 옵션의 자동 실행 목록에서 앱을 선택합니다.
-    **참고** **WPD\\ImageSource** 자동 실행 장치 이벤트에 대 한 일부 카메라에서는 알립니다.
+    **참고** **WPD\\ImageSource** 자동 실행 장치 이벤트에 대 한 일부 카메라에서는 보급 합니다.
 
 ## <a name="configure-removable-storage"></a>이동식 저장소 구성
 

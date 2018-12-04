@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 61918f8f81137dad4db9bf627b7c87e0c05ace8d
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471651"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Windows 10에서 Mac 설정
 
@@ -24,7 +24,7 @@ ms.locfileid: "8330649"
 
 **참고**디스크 또는 USB 플래시 드라이브에 Windows10 부팅 가능 이미지가 필요 합니다. MSDN 구독자인 경우 MSDN 구독자 다운로드 센터에서 설치 이미지를 다운로드할 수 있습니다. 구독자가 아닌 경우 [Microsoft Store](http://apps.microsoft.com/windows/app)에서 설치 프로그램을 구입할 수 있습니다. 이미 Windows를 실행하고 있으며 업그레이드하려는 경우에는 [이 위치](http://go.microsoft.com/fwlink/?LinkId=623906)에서 다운로드하는 것이 유용할 수도 있습니다.
 
-실행 중인 Windows가 있으면 다음 [Windows10을 위한 개발자 다운로드](https://developer.microsoft.com/en-us/windows/downloads) 에서 Visual Studio의 최신 릴리스 설치 및 앱 작성을 시작할 수 있습니다!
+실행 중인 Windows가 있으면 다음 [Windows10을 위한 개발자 다운로드](https://developer.microsoft.com/en-us/windows/downloads) 에서 Visual Studio의 최신 버전 설치 및 앱을 작성할 수 있습니다!
 
 **참고**Visual Studio 장치 에뮬레이터를 사용 하려는 경우 64 비트 (x64) 버전의 Windows10 Pro 이상을 설치 **해야 합니다** . 하지만 일부 이전 Mac은 64비트 Windows를 실행할 수 없습니다. Apple에 문의하여 이 [Apple 지원 페이지](http://go.microsoft.com/fwlink/p/?LinkID=397959)에서 하드웨어가 호환되는지 확인하세요.
 
