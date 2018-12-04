@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, 화면 방향, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: eb86cfaefe7112d408a17a54bf4f4b482c218be8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8335175"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475230"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>화면 방향 지원(DirectX 및 C++)
 
@@ -19,7 +19,7 @@ ms.locfileid: "8335175"
 
 [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리할 때 UWP(유니버설 Windows 플랫폼) 앱은 여러 화면 방향을 지원할 수 있습니다. 여기에서는 Windows10 디바이스의 그래픽 하드웨어가 효율적 이면 서 효과적으로 사용 되도록 UWP DirectX 앱에서 화면 회전을 처리 하는 것에 대 한 유용한 설명 하겠습니다.
 
-시작하기 전에 그래픽 하드웨어는 장치 방향에 관계없이 항상 같은 방향으로 픽셀 데이터를 출력한다는 점을 기억해 두세요. Windows10 장치 (특정 유형의 센서 또는 소프트웨어 토글)는 현재 디스플레이 방향을 확인 하 고 사용자가 디스플레이 설정을 변경할 수 있도록 합니다. 이 Windows10 인해 자체 있는지 "수직" 장치의 방향에 따라 이미지의 회전을 처리 합니다. 기본적으로 앱은 방향에서 달라진 점(예: 창 크기)이 있다는 알림을 받게 됩니다. 이 경우 Windows10 최종 디스플레이 대 한 이미지를 즉시 회전 합니다. 네 개의 특정 화면 방향 (나중에 설명) 중 세 가지 Windows10를 사용 하 여 추가적인 그래픽 리소스와 계산 최종 이미지를 표시 합니다.
+시작하기 전에 그래픽 하드웨어는 장치 방향에 관계없이 항상 같은 방향으로 픽셀 데이터를 출력한다는 점을 기억해 두세요. Windows10 장치 (특정 유형의 센서 또는 소프트웨어 토글)는 현재 디스플레이 방향을 확인 하 고 사용자가 디스플레이 설정을 변경할 수 있도록 합니다. 이 Windows10 인해 자체 있는지 "수직" 장치의 방향에 따라 이미지의 회전을 처리 합니다. 기본적으로 앱은 방향에서 달라진 점(예: 창 크기)이 있다는 알림을 받게 됩니다. 이 경우 Windows10 최종 표시에 대 한 이미지를 즉시 회전 합니다. 4 개의 특정 화면 방향 (나중에 설명) 중 세 가지 Windows10를 사용 하 여 추가적인 그래픽 리소스와 계산 최종 이미지를 표시 합니다.
 
 UWP DirectX 앱에서 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) 개체는 앱이 쿼리할 수 있는 기본 디스플레이 방향 데이터를 제공합니다. 기본 방향은 디스플레이의 픽셀 너비가 높이보다 큰 *가로*이고, 대체 방향은 디스플레이가 한쪽 방향으로 90도 회전하여 너비가 높이보다 작아지는 *세로*입니다.
 
@@ -30,9 +30,9 @@ Windows10 네 가지 특정 디스플레이 방향 모드를 정의합니다.
 -   가로, 대칭 이동 - 디스플레이가 180도 회전된 상태입니다(위아래가 뒤집힘)
 -   세로, 대칭 이동 - 디스플레이가 시계 방향으로 270도(또는 시계 반대 방향으로 90도) 회전된 상태입니다.
 
-다른 디스플레이 방향을 회전 Windows10 내부적으로 새 방향으로 그려지는 이미지에 맞게 회전 작업을 수행 하 고는 립 이미지가 화면에 표시 합니다.
+다른 디스플레이 방향을 회전, Windows10 내부적으로 새 방향으로 그려지는 이미지에 맞게 회전 작업을 수행 하 고 립 이미지가 화면에 표시 합니다.
 
-또한 Windows10 부드러운 사용자 환경이 생성 될 때 한 방향에서 이동에 대 한 자동 전환 애니메이션을 표시 합니다. 디스플레이 방향이 전환될 때 사용자에게는 이러한 전환이 표시된 화면 이미지의 고정된 확대/축소 및 회전 애니메이션으로 표시됩니다. 시간은 Windows10 하 여 새 방향에서 레이아웃에 대 한 앱에 할당 됩니다.
+또한 Windows10 한 방향에서 이동 하는 경우 원활한 사용자 환경을 만들기 위해 자동 전환 애니메이션을 표시 합니다. 디스플레이 방향이 전환될 때 사용자에게는 이러한 전환이 표시된 화면 이미지의 고정된 확대/축소 및 회전 애니메이션으로 표시됩니다. 시간은 Windows10 하 여 새 방향에서 레이아웃에 대 한 앱에 할당 됩니다.
 
 화면 방향의 변화를 처리하는 일반적인 프로세스는 다음과 같습니다.
 
@@ -345,9 +345,9 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
     -   가로, 대칭 이동(DXGI\_MODE\_ROTATION\_ROTATE180)
     -   세로, 대칭 이동(DXGI\_MODE\_ROTATION\_ROTATE90)
 
-    디스플레이 방향을 결정 하기 위한 (예: [**:: Orientationchanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)결과) Windows10에서 제공 하는 데이터를 토대로 올바른 행렬이 선택 하 고 화면의 각 픽셀 (Direct2D) 또는 꼭 짓 점 좌표 곱해 져 있어야 합니다. (Direct3D)는 장면에서 효과적으로 회전 방향 화면에 정렬 합니다. (Direct2D에서는 화면 원점이 왼쪽 위 구석으로 정의되지만 Direct3D에서는 원점이 창의 논리적 중심으로 정의됩니다.)
+    디스플레이 방향을 결정 (예: [**:: Orientationchanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)결과) Windows10에서 제공 하는 데이터를 토대로 올바른 행렬이 선택 하 고 화면의 각 픽셀 (Direct2D) 또는 꼭 짓 점 좌표 곱해 져 있어야 합니다. (Direct3D)는 장면에서 효과적으로 회전 시킵니다 화면 방향에 맞춥니다. (Direct2D에서는 화면 원점이 왼쪽 위 구석으로 정의되지만 Direct3D에서는 원점이 창의 논리적 중심으로 정의됩니다.)
 
-> **참고**  를 정의 하는 방법과 회전에 사용 되는 2 차원 변환에 대 한 자세한 내용은 [화면 회전 (2 차원)에 대 한 정의 행렬](#appendix-a-applying-matrices-for-screen-rotation-2-d)을 참조 하세요. 회전에 사용되는 3차원 변환에 대한 자세한 내용은 [화면 회전을 위한 행렬 정의(3차원)](#appendix-b-applying-matrices-for-screen-rotation-3-d)를 참조하세요.
+> **참고**  를 정의 하는 방법과 회전에 사용 되는 2 차원 변환에 대 한 자세한 내용은 [(2 차원) 화면 회전을 위한 행렬 정의](#appendix-a-applying-matrices-for-screen-rotation-2-d)참조 하세요. 회전에 사용되는 3차원 변환에 대한 자세한 내용은 [화면 회전을 위한 행렬 정의(3차원)](#appendix-b-applying-matrices-for-screen-rotation-3-d)를 참조하세요.
 
  
 
@@ -383,10 +383,10 @@ resizeManager->NotifyLayoutCompleted();
 사용자가 디스플레이 방향을 회전, Windows10 애니메이션은 독립적인 표시 앱 피드백으로 사용자에 게 합니다. 이 애니메이션의 세 부분이 다음 순서로 나타납니다.
 
 -   Windows10에서 원래 이미지가 축소 합니다.
--   Windows10 새 레이아웃을 다시 작성 하는 데 걸리는 시간에 대 한 이미지를 보유 합니다. 앱에는 이러한 시간이 필요하지 않으므로 사용자는 이 시간을 단축하려고 할 것입니다.
+-   Windows10 새 레이아웃을 다시 작성 하는 데 걸리는 시간에 대 한 이미지를 저장 합니다. 앱에는 이러한 시간이 필요하지 않으므로 사용자는 이 시간을 단축하려고 할 것입니다.
 -   레이아웃 시간이 만료되거나 레이아웃 완료 알림이 수신되면 Windows는 이미지를 회전한 다음 새 방향으로 크로스페이드하면서 확대/축소합니다.
 
-세 번째 글머리 기호에서 제안 된 앱 [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605)호출할 때 Windows10 제한 시간은 중지, 회전 애니메이션을 완료 및 새 디스플레이 방향으로 그리기가 앱에 컨트롤을 반환 합니다. 전체적으로 앱은 약간 더 유연해지고 더 빠르게 응답하는 것처럼 느껴지고 좀 더 효율적으로 작동하는 효과를 얻게 됩니다.
+세 번째 글머리 기호에서 제안 된 앱 [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605)호출 하면 Windows10 제한 시간은 중지, 회전 애니메이션을 완료 및 새 디스플레이 방향으로 그리기가 앱에 컨트롤을 반환 합니다. 전체적으로 앱은 약간 더 유연해지고 더 빠르게 응답하는 것처럼 느껴지고 좀 더 효율적으로 작동하는 효과를 얻게 됩니다.
 
 ## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>부록 A: 화면 회전을 위한 행렬 적용(2차원)
 
