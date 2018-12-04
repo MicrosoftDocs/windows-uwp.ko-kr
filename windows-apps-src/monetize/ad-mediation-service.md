@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10 uwp, 광고, 광고, 광고 조정
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348660"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475582"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft 광고 조정 서비스
 
@@ -28,7 +28,7 @@ ms.locfileid: "8348660"
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>광고 네트워크 관계의 복잡성 관리  
 
-이 작업을 할 필요가 없도록 광고 조정 서비스는 다양한 광고 네트워크에 통합되어 있습니다. 광고 조정 설정을 수정할 수 후 Microsoft Advertising SDK를 사용 하 여 앱에서 광고를 표시 하려면 [파트너 센터에서](../publish/in-app-ads.md#mediation-settings) 여러 광고 네트워크의 광고를 표시 합니다. 코드를 변경하지 않고 새 광고 네트워크에서 광고를 표시하는 혜택을 얻을 수 있습니다.
+이 작업을 할 필요가 없도록 광고 조정 서비스는 다양한 광고 네트워크에 통합되어 있습니다. Microsoft Advertising SDK를 사용 하 여 앱에서 광고를 표시 하도록 광고 조정 설정을 수정할 수 있습니다 [파트너 센터에서](../publish/in-app-ads.md#mediation-settings) 여러 광고 네트워크의 광고를 표시 합니다. 코드를 변경하지 않고 새 광고 네트워크에서 광고를 표시하는 혜택을 얻을 수 있습니다.
 
 귀하를 대신하여 광고 네트워크와의 종단 간 관계를 관리합니다. 광고 네트워크 통합에서 광고 제공까지 귀하가 더 이상 추가 작업할 필요 없이 Microsoft가 보고 및 지급을 모두 담당합니다.
 

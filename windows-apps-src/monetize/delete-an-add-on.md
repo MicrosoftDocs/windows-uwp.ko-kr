@@ -1,21 +1,21 @@
 ---
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능을 삭제 합니다.
+description: Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 삭제 합니다.
 title: 추가 기능 삭제
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 삭제, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 837cbc19268a88be986068f4a5e60002a1eb55e2
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352167"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474822"
 ---
 # <a name="delete-an-add-on"></a>추가 기능 삭제
 
-Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 바로 구매 또는 IAP) 삭제 합니다.
+Microsoft Store 제출 API에서에서이 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 (라고도 앱에서 제품 또는 IAP) 삭제 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -73,7 +73,7 @@ Authorization: Bearer <your access token>
 |--------|------------------|
 | 400  | 요청이 잘못되었습니다. |
 | 404  | 지정된 추가 기능을 찾을 수 없습니다.  |
-| 409  | 지정 된 추가 기능의 현재 상태에서 삭제할 수 없거나 있는 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)파트너 센터 기능을 사용 합니다. |   
+| 409  | 지정 된 추가 기능의 현재 상태에서 삭제할 수 없거나 [Microsoft Store 제출 API에서 지원 되지 않는 현재](create-and-manage-submissions-using-windows-store-services.md#not_supported)는 파트너 센터 기능을 사용 합니다. |   
 
 
 ## <a name="related-topics"></a>관련 항목
