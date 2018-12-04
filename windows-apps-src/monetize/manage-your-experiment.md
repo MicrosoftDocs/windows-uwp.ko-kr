@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e5c0d0ca1b1d771df2b224cc41ec5a37e267bc9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328446"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470995"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a>파트너 센터에서 실험 관리
 
@@ -24,7 +24,7 @@ ms.locfileid: "8328446"
 
 ## <a name="activate-your-experiment"></a>실험 활성화
 
-파트너 센터에서 실험 매개 변수를 사용 하 여 만족 스 러 우면 앱 코드를 업데이트 하는 경우 앱에서 실험 데이터 수집을 시작할 수 있도록 실험을 활성화할 준비가 된 것입니다. 실험 활성화 되 면 앱 변형 변수를 검색 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있습니다.
+파트너 센터에서 실험 매개 변수를 사용 하 여 만족 스 러 우면 하 고 앱 코드 업데이트를 앱에서 실험 데이터 수집을 시작할 수 있도록 실험을 활성화할 준비가 된 것입니다. 실험 활성화 되 면 앱 변형 변수를 검색 하 고 파트너 센터에 보기 및 변환 이벤트를 보고할 수 있습니다.
 
 1. [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인합니다.
 2. **앱**에서 활성화하려는 실험이 있는 앱을 선택합니다.

@@ -9,17 +9,17 @@ keywords: windows 10, uwp
 ms.assetid: c87e2f06-339d-4413-b585-172752964f56
 ms.localizationpriority: medium
 ms.openlocfilehash: b39507fb1333fdb642601c6b4828c3d160c6ceb5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342769"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468033"
 ---
 # <a name="instructional-ui-guidelines"></a>사용 안내 UI 지침
 
 
 
-상황에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. In these cases, you need to present instructions to the user through the user interface (UI), so that they can use those features they might have missed.
+상황에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 사용할 수 있도록 UI(사용자 인터페이스)를 통해 사용자에게 지침을 제공해야 합니다.
 
 ## <a name="when-to-use-instructional-ui"></a>사용 안내 UI를 사용하는 경우
 

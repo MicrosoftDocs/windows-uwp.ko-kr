@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 컬렉션 API, 제품 보기
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0f7f8c0f682eaa129f44eaa421fabd63dbfce4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8340281"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468132"
 ---
 # <a name="query-for-products"></a>제품에 대한 쿼리
 
@@ -59,7 +59,7 @@ Microsoft Store 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클�
 | modifiedAfter     | datetime     | 지정한 경우 서비스는 이 날짜 이후 수정된 제품만 반환합니다.        | 아니요       |
 | parentProductId   | 문자열       | 지정한 경우 서비스는 지정된 앱에 해당하는 추가 기능만 반환합니다.      | 아니요       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | 지정한 경우 서비스는 제공된 제품/SKU 쌍에 해당하는 제품만 반환합니다. 자세한 내용은 아래 표를 참조하세요.      | 아니요       |
-| productTypes      | 목록&lt;문자열&gt;       | 쿼리 결과에 반환 하는 제품 유형을 지정 합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 예       |
+| productTypes      | 목록&lt;string&gt;       | 쿼리 결과에 반환 하는 제품 유형을 지정 합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.     | 예       |
 | validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니요       |
 
 
@@ -132,7 +132,7 @@ CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | devOfferId           | 문자열             | 앱에서 바로 구매 시 제공되는 ID입니다.              | 아니요       |
 | endDate              | datetime           | 항목의 종료 날짜입니다.              | 예      |
 | fulfillmentData      | 문자열             | 해당 없음         | 아니요       |
-| inAppOfferToken      | 문자열             | 파트너 센터에서 항목에 할당 된 개발자가 지정한 제품 ID 문자열입니다. 예제에서는 제품 ID는 *product123*있습니다. | 아니요       |
+| inAppOfferToken      | 문자열             | 파트너 센터에 있는 항목에 할당 된 개발자가 지정한 제품 ID 문자열입니다. 예제에서는 제품 ID는 *product123*있습니다. | 아니요       |
 | itemId               | 문자열             | 사용자가 소유한 다른 항목에서 이 컬렉션 항목을 식별하는 ID입니다. 이 ID는 제품마다 고유합니다.   | 예      |
 | localTicketReference | 문자열             | 요청 본문에서 이전에 제공된 *localTicketReference*의 ID.                  | 예      |
 | modifiedDate         | datetime           | 이 항목을 마지막으로 수정한 날짜입니다.              | 예      |

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334816"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465925"
 ---
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
@@ -34,7 +34,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 -   비영구적 라이선스를 미리 취득할 수 있습니다.
 -   한 메시지로 여러 라이선스를 취득할 수 있습니다.
 
-    Windows8.1와 여러 키 id (Keyid)를 사용 하 여 PlayReady 개체를 사용 하거나 [콘텐츠 암호 해독 모델 데이터 (CDMData)를](https://go.microsoft.com/fwlink/p/?LinkID=626819) 사용 하 여 여러 keyid와 함께 수 있습니다.
+    Windows8.1와 여러 키 id (Keyid)를 사용 하 여 PlayReady 개체를 사용 하거나 여러 keyid와 함께 [콘텐츠 암호 해독 모델 데이터 (CDMData)를](https://go.microsoft.com/fwlink/p/?LinkID=626819) 사용 합니다.
 
     > [!NOTE]
     > Windows10, 여러 키 id 아래에서 지원 됩니다 &lt;KeyID&gt; CDMData의 합니다.

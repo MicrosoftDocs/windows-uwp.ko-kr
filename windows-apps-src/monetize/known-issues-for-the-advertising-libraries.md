@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
 ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471382"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
@@ -46,7 +46,7 @@ ms.locfileid: "8344649"
 
 * 30분 이내에 새 광고 단위 ID를 만든 경우 서버가 시스템을 통해 새 데이터를 전파할 때까지 광고가 표시되지 않을 수 있습니다. 이전에 광고를 표시했던 기존 ID는 광고를 즉시 표시합니다.
 
-앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. 해당 페이지에서 **연락처**를 선택 합니다.
+앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. 해당 페이지에서 **사용자 의견**을 선택 합니다.
 
 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=401266)에서 질문을 게시할 수도 있습니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "8344649"
 
 * 테스트용으로 로드된 앱 또는 에뮬레이터에서 실행되는 앱에는 라이브 광고가 표시되지 않습니다.
 
-라이브 광고 단위가 테스트 광고를 제공 하는 경우 광고 단위의 상태가 파트너 센터에서 **활성 및 테스트 광고 제공을** 표시 됩니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
+라이브 광고 단위 테스트 광고를 제공 하는 경우 광고 단위의 상태가 파트너 센터에서 **활성 및 테스트 광고 제공을** 표시 됩니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
 
 
 <span id="reference_errors"/>

@@ -1,13 +1,13 @@
 ---
-title: 디바이스 포털 네트워크 자격 증명 API 참조
+title: 장치 포털 네트워크 자격 증명 API 참조
 description: 추가, 제거 또는 네트워크 자격 증명을 프로그래밍 방식으로 업데이트 하는 방법을 알아봅니다.
 ms.localizationpriority: medium
 ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8346536"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469069"
 ---
 # <a name="network-credentials-api-reference"></a>네트워크 자격 증명 API 참조
 추가, 제거 또는이 REST API를 사용 하 여 devkit에서 저장 된 네트워크 자격 증명을 업데이트할 수 있습니다.
@@ -51,7 +51,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-## <a name="add-or-update-stored-credentials-for-a-user"></a>추가 하거나 업데이트는 사용자에 대 한 자격 증명 저장
+## <a name="add-or-update-stored-credentials-for-a-user"></a>추가 하거나 업데이트 저장 된 사용자 자격 증명
 
 **요청**
 
@@ -107,7 +107,7 @@ DELETE | /ext/networkcredential
 
 | URI 매개 변수      | 설명     | 
 | ------------------ |-----------------|
-| NetworkPath        | 저장 된 자격 증명 제거 하 여 공유의 네트워크 경로입니다. |
+| NetworkPath        | 저장 된 자격 증명을 제거 하 여 공유의 네트워크 경로입니다. |
 <br>
 
 **요청 헤더**

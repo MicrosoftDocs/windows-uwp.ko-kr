@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
 ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465514"
 ---
 # <a name="export-restrictions-on-cryptography"></a>암호화에 대한 내보내기 제한
 
@@ -21,7 +21,7 @@ ms.locfileid: "8323749"
 
 미국 상무부의 BIS(Bureau of Industry and Security)에서는 특정 유형의 암호화를 사용하는 기술의 수출을 규제합니다. 앱 파일은 미국에 저장되므로 Microsoft Store에 나열된 모든 앱은 이러한 법과 규정을 따라야 합니다. 미국 외부에 배포하기 위해 다른 나라에서 앱 개발자가 업로드한 앱도 이러한 규정을 따라야 합니다. 따라서 모든 앱 개발자는 Microsoft Store에 앱을 제출할 때 이러한 규정에 따라 제한되는 기술이 앱에 포함되지 않도록 해야 합니다.
 
-> **참고**여기에 제공 된 정보는 일부 지침을 제공 하지만 앱 모든 관련 법률 및 규정을 준수 하는지 확인 하려면 Microsoft Store에 앱을 게시 하는 앱 개발자의 책임입니다.
+> **참고**여기에 제공 된 정보 일부 지침을 제공 하지만 앱 모든 관련 법률 및 규정을 준수 하는지 확인 하려면 Microsoft Store에 앱을 게시 하는 앱 개발자의 책임입니다.
 
  
 

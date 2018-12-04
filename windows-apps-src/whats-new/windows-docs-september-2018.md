@@ -1,16 +1,16 @@
 ---
 title: 2018 년 9 월 Windows 문서의 새로운-UWP 앱 개발
 description: 새로운 기능, 동영상, 샘플 및 개발자 지침 2018 년 9 월에 대 한 Windows 10 개발자 설명서에 추가한 합니다.
-keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 9 월
+keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10 년 9 월
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8351108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470734"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>2018 년 9 월 Windows 개발자 문서의 새로운
 
@@ -26,13 +26,13 @@ Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=
 
 [The Windows.AI.MachineLearning API 참조](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) 최신 Windows 참가자 SDK에 대 한 업데이트 되었습니다.
 
-[The Windows-기계 학습 GitHub 리포지토리](https://github.com/Microsoft/Windows-Machine-Learning) 최신 SDK와 함께 작동 하는 새 샘플으로 업데이트 되었습니다.
+[The Windows 컴퓨터 학습 GitHub 리포지토리](https://github.com/Microsoft/Windows-Machine-Learning) 최신 SDK와 함께 작동 하는 새 샘플으로 업데이트 되었습니다.
 
 ![Windows Machine Learning 그래픽](images/winml-graphic.png)
 
 ### <a name="windows-ui-library"></a>Windows UI 라이브러리
 
-[The Windows UI 라이브러리](https://aka.ms/winui-docs) 는 UWP 앱에 대 한 컨트롤 및 기타 사용자 인터페이스 요소를 제공 하는 NuGet 패키지의 집합입니다. 사용자가 최신 OS 버전 없는 경우에 앱이 작동 하므로 이러한 패키지를 이전 버전의 Windows 10과 호환 됩니다.
+[The Windows UI 라이브러리](https://aka.ms/winui-docs) 는 UWP 앱에 대 한 컨트롤 및 기타 사용자 인터페이스 요소를 제공 하는 NuGet 패키지의 집합입니다. 앱이 사용자에 게 최신 OS 버전 없는 경우에 작동 하므로 이러한 패키지를 이전 버전의 Windows 10과 호환 됩니다.
 
 Windows UI 라이브러리에 대 한 자세한 내용은 참조 [NuGet 패키지에 포함 된 API 네임 스페이스의이 목록은.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
@@ -40,19 +40,19 @@ Windows UI 라이브러리에 대 한 자세한 내용은 참조 [NuGet 패키�
 
 ### <a name="how-blur-effects-work"></a>어떻게 효과 작업 흐림 효과
 
-우리의 작성자 esteemed Mike Jacobs 중 하나는 일련의 중간의 문서에서는 사진 앱 및 게임 디자인 비전에서 흐림 효과 대 한 시작 했습니다. 이 어디에서 나 시각 효과 대 한 자세히 알고 싶은 경우 [비전 및 사진에 첫 번째 문서](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) 를 확인 하 고 [앤티앨리어싱을 그래픽에서 두 번째.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+우리의 작성자 esteemed Mike Jacobs 중 하나에서 사진 앱 및 게임 디자인 비전 흐림 효과 대 한 미디어에 대 한 문서를 시작 했습니다. 이 흔히 볼 수 있는 시각적 효과 대해 자세히 알고 싶은 경우 [비전 및 사진에 첫 번째 문서](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) 를 확인 하 고 [앤티앨리어싱 그래픽에서에서 두 번째.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
-![흐림 작업](images/blur-example.jpg)
+![중인 흐림](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>영향을 주는 지침
 
-UWP 설명서에 대 한 [관련 지침](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) 을 업데이트 했습니다. 이 새로운 지침 워크플로와 우리의 문서에 기여를 외부에 대 한 설명합니다.
+UWP 설명서에 대 한 [영향을 주는 대 한 지침이](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) 업데이트 되었습니다. 이 새로운 지침 워크플로와 우리의 문서에 기여를 외부에 대 한 설명합니다.
 
 ## <a name="videos"></a>비디오
 
 ### <a name="one-dev-question"></a>개발자 질문
 
-개발자 질문 동영상 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 설명합니다. 최신 질문을 검토 하는 다음과 같습니다.
+개발자 질문 비디오 시리즈 오랜 기간 사용해 온 Microsoft 개발자는 일련의 Windows 개발 팀 문화 및 기록에 대 한 질문을 설명합니다. 최신 질문을 검토 하는 다음과 같습니다.
 
 Aaron Gustafson:
 
@@ -60,7 +60,7 @@ Aaron Gustafson:
 
 Chris Heilmann
 
-* [webhint 도구에 4 동영상](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [webhint 도구에 4 개의 동영상](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, lob, 엔터프라이즈 앱, 비즈니스용 Store, 교육용 Store, 엔터프라이즈
 ms.localizationpriority: medium
 ms.openlocfilehash: eecd7a3ff86de5db9693bf6ce597e2b1e00bb4ad
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342261"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470150"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>엔터프라이즈에 LOB 앱 배포
 
@@ -92,7 +92,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 비즈니스용 Microsoft 스토어와 교육용 Microsoft 스토어를 통해 엔터프라이즈가 앱을 사용할 수 있도록 하면 앱이 스토어에서 서명되었고 표준 스토어 정책을 준수함을 보장할 수 있습니다.
 
-경우에 따라 회사 (예: 규제 준수 때문 이거나 앱 추가 기능이 필요한) 파트너 센터를 통해 제출 되는 LOB 앱 하지 않을. 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
+경우에 따라 회사 LOB 앱 (예: 규제 준수 때문 이거나 앱 추가 기능이 필요한) 파트너 센터를 통해 제출 되는 것 수 있습니다. 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
 
 자세한 내용은 [Windows 10에서 LOB 앱을 테스트용으로 로드](http://go.microsoft.com/fwlink/p/?LinkId=623433)를 참조하세요.
 

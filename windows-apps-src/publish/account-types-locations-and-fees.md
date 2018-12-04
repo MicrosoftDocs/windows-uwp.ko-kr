@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
 ms.openlocfilehash: 3163b4c89cc1d0bf3e4adfdea39222dfcb5a3ee1
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350142"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470212"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
-Windows 제품 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 두 명 프로그램 및 회사 계정에서 많은 [국가 및 지역](#developer-account-and-app-submission-markets). 두 유형의 계정 액세스할 수 있도록 스토어에 앱을 게시 하 고 다른 Microsoft 프로그램에 참여 하도록 합니다.
+Windows는 모두 개인 제품 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 프로그래밍 하 고 회사 계정 여러 [국가 및 지역](#developer-account-and-app-submission-markets). 어떤 유형의 계정이 액세스할 수 있도록 스토어에 앱을 게시 하 고 추가적인 Microsoft 프로그램에 참여 합니다.
 
 > [!NOTE]
 > 개발자 계정 열기, 개발자 계정에 사용할 원하는 Microsoft 계정을 사용 하 여 [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 해야 합니다. 선택에 따라 나중에 [계정에 사용자를 추가](manage-account-users.md) 할 수 있습니다.
@@ -37,7 +37,7 @@ Windows 제품 [파트너 센터](https://partner.microsoft.com/dashboard) 에�
 
 ## <a name="account-verification"></a>계정 확인
 
-등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 검증 되기 되지만 [앱 이름을 예약](create-your-app-by-reserving-a-name.md) 하면 기다리는 동안 회사 계정에서 앱을 제출할 수 없는 계속 빌드 및 앱을 테스트 하 고 제출을 준비 합니다.
+등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 검증 되기 되지만 [앱 이름을 예약](create-your-app-by-reserving-a-name.md) 하면 기다리는 동안 회사 계정에서 앱을 제출할 수 계속 빌드 및 앱을 테스트 하 고 제출을 준비 합니다.
 
 **계정 설정** 페이지에서 확인 상태를 점검할 수 있습니다. 
 

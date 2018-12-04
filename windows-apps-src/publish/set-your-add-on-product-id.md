@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, iap, 내구성, 소모품, 구독, 제품 종류, 제품 id, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 51807b96d80245b8dc5b22f1f376f603285d518a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352067"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467049"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 
@@ -63,6 +63,6 @@ ms.locfileid: "8352067"
 -   제품 ID는 100자 이내여야 합니다.
 -   제품 ID에는 다음 문자를 사용할 수 없습니다. **&lt; &gt; \* % & : \\ ? + ,**
 -   고객은 제품 id입니다. 표시 합니다. 나중에 고객에게 표시할 [제목 및 설명](create-add-on-descriptions.md)을 입력할 수 있습니다.
--   이전에 게시 된 앱이 지 원하는 Windows Phone 8.1 또는 이전에 사용 해야 영숫자 문자, 마침표 및/또는 밑줄만 제품 id 다른 종류의 문자를 사용하면 Windows Phone 8.1 이하를 실행하는 고객이 추가 기능을 구매할 수 없습니다.
+-   Windows Phone 8.1 이전에 게시 된 앱을 지 원하는 경우 이전에 사용 해야 영숫자 문자, 마침표 및/또는 밑줄만 제품 id 다른 종류의 문자를 사용하면 Windows Phone 8.1 이하를 실행하는 고객이 추가 기능을 구매할 수 없습니다.
 
  

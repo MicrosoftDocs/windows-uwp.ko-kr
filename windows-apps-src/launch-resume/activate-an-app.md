@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342274"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8474011"
 ---
 # <a name="handle-app-activation"></a>앱 활성화 처리
 
@@ -40,7 +40,7 @@ ms.locfileid: "8342274"
 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의합니다. 사용자가 앱을 실행하면 이 메서드가 호출됩니다. [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) 매개 변수는 이전 앱 상태 및 활성화 인수를 포함합니다.
 
 > [!NOTE]
-> Windows, 시작 타일이 나 앱 목록에서 일시 중단 된 앱을 시작 해도이 메서드가 호출 되지 않습니다.
+> Windows에서는 시작 타일이 나 앱 목록에서 일시 중단 된 앱을 시작 해도이 메서드가 호출 되지 않습니다.
 
 ```csharp
 using System;
@@ -264,7 +264,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) 속성 주 또는 보조 타일에서 시작 했다고 있는지 여부를 결정 하 고 해당 정보를 기반을 새로 제공 또는 앱 환경을 다시 해야 하는지 여부를 결정을 확인할 수 있습니다.
+> 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) 속성 주 또는 보조 타일에서 시작 했다고 있는지 여부를 결정 하 고 여부 하면 해야 또는 앱 환경을 다시 해당 정보를 기반으로 결정을 확인할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [Windows.ApplicationModel.Activation](https://msdn.microsoft.com/library/windows/apps/br224766)

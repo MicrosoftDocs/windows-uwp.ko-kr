@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b8c4777e1c34bca36200bf6e8a96c35d6a0b1079
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343586"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470077"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
 
@@ -31,7 +31,7 @@ Visual Basic 및 C# 컴파일러를 사용하면 이 프로세스를 간단히 �
 
 NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패턴을 보여 줍니다. 이 예제에서는 이벤트 인수 개체 NumberChangedEventArgs의 생성자가 변경된 숫자 값을 나타내는 단일 정수 매개 변수를 사용합니다.
 
-> **참고**이 Windows 런타임 구성 요소에서 선언 된 일반 이벤트에 대해 컴파일러를 사용할 동일한 패턴입니다.
+> **참고**Windows 런타임 구성 요소에서 선언 된 일반 이벤트에 대해 컴파일러를 사용할 동일한 패턴입니다.
 
  
 > [!div class="tabbedCodeSnippets"]
@@ -99,7 +99,7 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
 
 정적(Visual Basic의 Shared) GetOrCreateEventRegistrationTokenTable 메서드는 나중에 EventRegistrationTokenTable&lt;T&gt; 개체의 이벤트 인스턴스를 만듭니다. 토큰 테이블 인스턴스를 포함할 클래스 수준 필드를 이 메서드에 전달합니다. 필드가 비어 있으면 메서드가 테이블을 만들고 테이블에 대한 참조를 필드에 저장하고 테이블에 대한 참조를 반환합니다. 필드에 이미 토큰 테이블 참조가 있는 경우 메서드가 해당 참조를 반환하기만 합니다.
 
-> **중요 한**스레드 보안을 위해 EventRegistrationTokenTable 이벤트의 인스턴스를 포함 하는 필드를&lt;T&gt; 는 클래스 수준 필드 여야 합니다. 클래스 수준 필드인 경우 GetOrCreateEventRegistrationTokenTable 메서드를 사용하면 여러 스레드에서 토큰 테이블을 만들려고 할 때 모든 스레드에서 동일한 테이블 인스턴스를 가져올 수 있습니다. 지정된 이벤트의 경우 GetOrCreateEventRegistrationTokenTable 메서드로의 모든 호출에서 동일한 클래스 수준 필드를 사용해야 합니다.
+> **중요 한**스레드 보안을 EventRegistrationTokenTable 이벤트의 인스턴스를 포함 하는 필드를&lt;T&gt; 는 클래스 수준 필드 여야 합니다. 클래스 수준 필드인 경우 GetOrCreateEventRegistrationTokenTable 메서드를 사용하면 여러 스레드에서 토큰 테이블을 만들려고 할 때 모든 스레드에서 동일한 테이블 인스턴스를 가져올 수 있습니다. 지정된 이벤트의 경우 GetOrCreateEventRegistrationTokenTable 메서드로의 모든 호출에서 동일한 클래스 수준 필드를 사용해야 합니다.
 
 제거 접근자 및 [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) 메서드(C#의 OnRaiseEvent 메서드)에서 GetOrCreateEventRegistrationTokenTable 메서드를 호출하면 이벤트 처리기 대리자가 추가되기 전에 이러한 메서드가 호출되는 경우 예외가 발생하지 않습니다.
 
@@ -108,11 +108,11 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
 -   [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) 메서드는 이벤트 처리기 대리자에 대한 토큰을 생성하고, 대리자를 테이블에 저장하고, 호출 목록에 추가하고, 토큰을 반환합니다.
 -   [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) 메서드 오버로드는 테이블과 호출 목록에서 대리자를 제거합니다.
 
-    >**참고**AddEventHandler 및 removeeventhandler (eventregistrationtoken) 메서드는 스레드 보안을 위해 테이블을 잠급니다.
+    >**참고**AddEventHandler 및 removeeventhandler (eventregistrationtoken) 메서드는 스레드 보안을 테이블을 잠급니다.
 
 -   [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) 속성은 현재 이벤트를 처리하도록 등록된 모든 이벤트 처리기를 포함하는 대리자를 반환합니다. 이 대리자를 사용하여 이벤트를 발생시키거나 Delegate 클래스의 메서드를 사용하여 처리기를 개별적으로 호출합니다.
 
-    >**참고**이 문서의 앞부분에서 제공 되는 예제에 표시 된 패턴에 따라 호출 하기 전에 대리자를 임시 변수로 복사 하는 것이 좋습니다. 이렇게 하면 하나의 스레드가 마지막 처리기를 제거하여 다른 스레드가 대리자를 호출하려고 하기 전에 대리자가 null이 되는 경합 상태를 방지할 수 있습니다. 대리자는 변경할 수 없으므로 복사는 유효합니다.
+    >**참고**이 문서의 앞부분에서 제공 하는 예제에 표시 된 패턴에 따라 호출 하기 전에 대리자를 임시 변수로 복사 하는 것이 좋습니다. 이렇게 하면 하나의 스레드가 마지막 처리기를 제거하여 다른 스레드가 대리자를 호출하려고 하기 전에 대리자가 null이 되는 경합 상태를 방지할 수 있습니다. 대리자는 변경할 수 없으므로 복사는 유효합니다.
 
 직접 작성한 코드를 접근자에 적절히 배치합니다. 스레드 보안이 중요한 경우 코드에 대한 잠금을 직접 제공해야 합니다.
 

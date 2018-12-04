@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, visual studio, 도구, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a3938f486d52942031944b1184a711ddbc579db
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348127"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468466"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>게임 프로그래밍용 Visual Studio 도구
 
@@ -45,7 +45,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 자세한 내용은 [텍스처 및 이미지 작업](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx)을 참조하세요.
 
-> **참고**이미지 편집기는 전체 기능의 이미지 편집 앱에 대 한 대체용 없습니다 하지만 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
+> **참고**이미지 편집기는 전체 기능의 이미지 편집 앱에 대 한 대체용이 아니지 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
 
  
 
@@ -64,7 +64,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 자세한 내용은 [3D 모델 작업](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx)을 참조하세요.
 
-> **참고**모델 편집기는 전체 기능의 모델 편집 앱에 대 한 대체용 없습니다 하지만 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
+> **참고**모델 편집기는 전체 기능의 모델 편집 앱에 대 한 대체용이 아니지 단순한 여러 가지 보기 및 편집 시나리오에 적합 합니다.
 
  
 

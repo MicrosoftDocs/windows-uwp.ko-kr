@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aec7ed4f97a0ce4733cfba450770de86a84d6ee
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469851"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
@@ -41,15 +41,15 @@ ms.locfileid: "8323029"
 
 Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않은 경우 추가 비용 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않으면 추가 요금 없이 [파트너 센터에서 Azure AD를 새로 만들](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
-* [파트너 센터 계정과 Azure AD 응용 프로그램 연결](#associate-an-azure-ad-application-with-your-windows-dev-center-account) 해야 하 고 ID, 클라이언트 ID 및 키 테 넌 트를 가져와야 합니다. 이러한 값은 Microsoft Store 제출 API에 대한 호출에 사용하는 Azure AD 액세스 토큰을 가져오는 데 필요합니다.
+* [파트너 센터 계정과 Azure AD 응용 프로그램 연결](#associate-an-azure-ad-application-with-your-windows-dev-center-account) 해야 하 고 테 넌 트 ID, 클라이언트 ID 및 키 가져와야 합니다. 이러한 값은 Microsoft Store 제출 API에 대한 호출에 사용하는 Azure AD 액세스 토큰을 가져오는 데 필요합니다.
 
 * Microsoft Store 제출 API에서 사용하도록 앱을 준비합니다.
 
-  * 파트너 센터에서 앱 아직 존재 하지 않는 경우 [파트너 센터에서 해당 이름을 예약 하 여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)해야 합니다. Microsoft Store 제출 API를 사용 하 여; 파트너 센터에서 앱을 만들 수 없습니다. 을 만드는 파트너 센터에서 작업 해야 있으며 다음 그 후 사용할 수 있습니다 API를 앱에 액세스 하 고 그에 대 한 제출을 프로그래밍 방식으로 만들 합니다. 그러나 해당 제출을 만들기 전에 API를 사용하여 프로그래밍 방식으로 추가 기능 및 패키지 플라이트를 만들 수 있습니다.
+  * 파트너 센터에서 앱 아직 존재 하지 않는 경우 [파트너 센터에서 해당 이름을 예약 하 여 앱 만들기](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)해야 합니다. 파트너 센터에서 앱을 만들려면 Microsoft Store 제출 API를 사용할 수 없습니다. 을 만드는 파트너 센터에서 작업 해야 있으며 다음 그 후 사용할 수 있습니다 API를 앱에 액세스 하 고 그에 대 한 제출을 프로그래밍 방식으로 만들 합니다. 그러나 해당 제출을 만들기 전에 API를 사용하여 프로그래밍 방식으로 추가 기능 및 패키지 플라이트를 만들 수 있습니다.
 
-  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 첫 번째 [파트너 센터의 앱에 대 한 제출을 만들려면](https://msdn.microsoft.com/windows/uwp/publish/app-submissions), [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 설문지에 답변 하기를 포함 해야 합니다. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
+  * 이 API를 사용 하 여 지정된 된 앱에 대 한 제출을 만들기 전에 첫 번째 [파트너 센터의 앱에 대 한 개의 제출을](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 설문지에 답변 하기를 포함 해야 합니다. 이 작업을 수행한 후 API를 사용하여 프로그래밍 방식으로 이 앱에 대한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 대해 API를 사용하기 전에 추가 기능 제출 또는 패키지 플라이트 제출을 만들 필요는 없습니다.
 
   * 앱 제출을 만들거나 업데이트하는 중이고 앱 패키지를 포함해야 하는 경우 [앱 패키지를 준비합니다](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements).
 
@@ -61,7 +61,7 @@ Microsoft Store 제출 API를 호출하는 코드 작성을 시작하기 전에 
 
 ### <a name="how-to-associate-an-azure-ad-application-with-your-partner-center-account"></a>파트너 센터 계정과 Azure AD 응용 프로그램을 연결 하는 방법
 
-Microsoft Store 제출 API를 사용 하려면 먼저 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 해야, ID 및 클라이언트 ID는 응용 프로그램에 대 한 테 넌 트를 검색 및 키를 생성 합니다. Azure AD 응용 프로그램은 Microsoft Store 제출 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+Microsoft Store 제출 API를 사용 하려면 먼저 파트너 센터 계정과 Azure AD 응용 프로그램을 연결 해야, 트 ID 및 클라이언트 ID를 검색 및 키를 생성 합니다. Azure AD 응용 프로그램은 Microsoft Store 제출 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
 
 > [!NOTE]
 > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.

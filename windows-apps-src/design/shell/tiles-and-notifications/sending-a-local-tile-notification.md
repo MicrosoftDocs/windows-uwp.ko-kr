@@ -8,16 +8,16 @@ ms.topic: article
 keywords: Windows 10 uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8468973"
 ---
 # <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
  
 
-보조 타일은 프로그래밍 방식으로 생성 하 고 앱 코드에서 정의 하는 동안 Windows10의 기본 앱 타일은 앱 매니페스트에서 정의 됩니다. 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다. 로컬 알림은 웹 서버에서 푸시되거나 끌어온 알림이 아니라 앱 코드에서 전송된 알림입니다.
+Windows10의 기본 앱 타일은 보조 타일은 프로그래밍 방식으로 생성 하 고 앱 코드에서 정의 하는 동안 앱 매니페스트에 정의 됩니다. 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다. 로컬 알림은 웹 서버에서 푸시되거나 끌어온 알림이 아니라 앱 코드에서 전송된 알림입니다.
 
 ![기본 타일 및 알림 타일](images/sending-local-tile-01.png)
 

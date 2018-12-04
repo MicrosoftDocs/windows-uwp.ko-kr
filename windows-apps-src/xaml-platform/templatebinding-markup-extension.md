@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ade10b4d5e2653eb214d93c2c9166e6a3e3defc
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470509"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding} 태그 확장
 
@@ -57,11 +57,11 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 ### <a name="xbind-in-controltemplate"></a>ControlTemplate에서 X:bind
 
 > [!NOTE]
-> Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))는 ControlTemplate에서 X:bind를 사용 하려면 이상. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> Windows 10 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))는 ControlTemplate에서 X:bind를 사용 하려면 이상. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-Windows 10, 버전 1809부터 **X:bind** 태그 확장을 사용할 수 **TemplateBinding** [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 사용 되는 곳입니다. 
+Windows 10, 버전 1809부터 **X:bind** 태그 확장을 사용할 수는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에서 **TemplateBinding** 을 사용 하는 곳입니다. 
 
-[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 속성이 필요 (옵션 아님)에 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우.
+[TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 속성 (옵션 아님) 필요한 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) **X:bind**를 사용 하는 경우에 있습니다.
 
 **X: Bind** 지원 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391)에서 원활 하 게으로 양방향 바인딩을으로 두 [함수 바인딩](../data-binding/function-bindings.md) 을 사용할 수 있습니다.
 
