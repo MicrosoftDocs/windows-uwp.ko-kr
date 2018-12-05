@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, 데스크톱 브리지, 보조 타일, 고정, 고정하기, 빠른 시작, 코드 샘플, 예, 보조타일, 데스크톱 응용 프로그램, win32, winforms, wpf
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e713f37cd5e5fbf4b2771e76fb7e132b5976629
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8467720"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706523"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>데스크톱 응용 프로그램에서 보조 타일 고정
 

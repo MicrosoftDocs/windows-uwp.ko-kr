@@ -6,11 +6,11 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: da8bc3b441a1b619e086934f277cb14be6bcc37a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8473683"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712941"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018 년 8 월 Windows 개발자 문서의 새로운
 
@@ -50,7 +50,7 @@ Mozilla Developer Network 설명서 브라우저 간 웹 개발을 위한 [레�
 
 250 추가한 [C + + WinRT](../cpp-and-winrt-apis/index.md) 코드와 함께 제공 된 기존 C + 우리의 문서에는 항목에 대 한 목록을 + CX 코드 예제입니다.
 
-### <a name="project-rome"></a>프로젝트 로마
+### <a name="project-rome"></a>Project Rome
 
 [프로젝트 "로마" 문서](https://docs.microsoft.com/windows/project-rome/) 사이트 기능 중심 접근 방식으로 재구성 되었습니다 했습니다. 이 해야 쉽게 개발자가 여러 플랫폼에서 원하는 기능을 구현 하 고, 원하는 내용을 찾을 수 있습니다.
 

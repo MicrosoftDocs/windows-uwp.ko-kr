@@ -2,11 +2,11 @@
 title: UWP(유니버설 Windows 플랫폼) 앱에서 PGO(프로필 기반 최적화) 실행
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d7321f0ef49c12ac4506fb72fab937fde77f740
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8480328"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707066"
 ---
 # <a name="running-profile-guided-optimization-on-universal-windows-platform-apps"></a>유니버설 Windows 플랫폼 앱에서 프로필 기반 최적화 실행 
  

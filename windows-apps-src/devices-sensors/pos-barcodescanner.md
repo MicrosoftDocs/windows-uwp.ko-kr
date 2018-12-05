@@ -7,11 +7,11 @@ keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7a4021a2a0fb6c84755730e4f0e9917b10e94ec8
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461497"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706553"
 ---
 # <a name="barcode-scanner"></a>바코드 스캐너
 
@@ -21,7 +21,7 @@ ms.locfileid: "8461497"
 
 |항목 |설명 |
 |------|------------|
-| [바코드 스캐너 구성](../devices-sensors/pos-barcodescanner-configure.md)  | 의도 한 응용 프로그램에 대 한 바코드 스캐너를 구성 하는 방법을 알아봅니다. |
+| [바코드 스캐너 구성](../devices-sensors/pos-barcodescanner-configure.md)  | 원하는 응용 프로그램에 대 한 바코드 스캐너를 구성 하는 방법을 알아봅니다. |
 | [소프트웨어 트리거 사용](../devices-sensors/pos-barcodescanner-software-trigger.md) | 소프트웨어에서의 스캔 작업을 제어 하는 방법을 알아봅니다. |
 | [기호 처리](pos-barcodescanner-symbologies.md) | 바코드 스캐너가 지원하는 바코드 유형과 응용 프로그램의 바코드 스캐너에서 인식하는 바코드 유형의 컨트롤을 결정하는 방법을 알아보세요. |
 | [바코드 데이터 받기 및 인식하기](pos-barcodescanner-scan-data.md) | 스캔 바코드 데이터를 해석 하는 방법에 알아봅니다. |

@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ad66d8797234d01673518256d6f5376ce93245f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461858"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709785"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -53,7 +53,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)은 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결하는 특별 바인딩입니다. TemplateBinding은 XAML의 ControlTemplate 정의 내에서만 사용할 수 있습니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
 
 > [!NOTE]
-> Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))부터 [**X:bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그 확장을 사용할 수 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)장소에서 사용 합니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
+> Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk))부터 [**X:bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그 확장을 사용할 수 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)곳에서 사용 합니다. 자세한 내용은 [TemplateBinding 태그 확장](../../xaml-platform/templatebinding-markup-extension.md)을 참조하세요.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -200,7 +200,7 @@ XAML 컨트롤의 스타일과 템플릿을 문서화하는 항목은 앞에서 
 
 XAML 예제의 일부 속성에서 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하는 리소스 참조를 봤을 것입니다. 이 기술은 단일 컨트롤 템플릿이 현재 활성화된 테마에 따라 값이 달라질 수 있는 리소스를 사용할 수 있도록 합니다. 테마의 주요 목적은 사용자가 시스템 전체에 어둡거나 밝거나 고대비 테마를 적용할 것인지 선택할 수 있게 하는 것이므로 이 기술은 특히 브러시와 색에 중요합니다. XAML 리소스 시스템을 사용하는 앱은 앱 UI의 테마 선택 항목이 사용자 시스템의 테마 선택을 반영하도록 해당 테마에 적합한 리소스 집합을 사용할 수 있습니다.
 
- # # 샘플 코드를 다운로드 합니다.
+ # # 샘플 코드 다운로드
 
 * [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [사용자 지정 텍스트 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)

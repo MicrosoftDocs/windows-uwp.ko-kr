@@ -7,15 +7,15 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8fd6d2c41cd2f632f22819f452b2f203fd8ac309
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464239"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8710076"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Windows 10의 새로운 Api 17763 빌드
 
-신규 및 업데이트 API 네임 스페이스 내용이 사용할 수 있는 Windows 10 빌드 17763의에서 개발자 들에 (10 월 2018 라고도 업데이트 또는 버전 1809). 아래는 이 릴리스에서 추가 또는 수정된 네임스페이스에 게시된 설명서의 전체 목록입니다.
+신규 및 업데이트 API 네임 스페이스가 제공 되었습니다 개발자가 Windows 10 빌드 17763에서에서 (월 2018 라고도 업데이트 또는 버전 1809). 아래는 이 릴리스에서 추가 또는 수정된 네임스페이스에 게시된 설명서의 전체 목록입니다.
 
 이전의 공개 릴리스에 추가 된 Api에 대 한 정보를 [Windows 10 년 4 월 업데이트의 새로운 Api](windows-10-build-17134-api-diff.md)를 참조 하세요.
 
@@ -1801,7 +1801,7 @@ BrushTransition <br> BrushTransition. #ctor <br> BrushTransition.Duration
 
 ColorPaletteResources <br> ColorPaletteResources.Accent <br> ColorPaletteResources.AltHigh <br> ColorPaletteResources.AltLow <br> ColorPaletteResources.AltMedium <br> ColorPaletteResources.AltMediumHigh <br> ColorPaletteResources.AltMediumLow <br> ColorPaletteResources.BaseHigh <br> ColorPaletteResources.BaseLow <br> ColorPaletteResources.BaseMedium <br> ColorPaletteResources.BaseMediumHigh <br> ColorPaletteResources.BaseMediumLow <br> ColorPaletteResources.ChromeAltLow <br> ColorPaletteResources.ChromeBlackHigh <br> ColorPaletteResources.ChromeBlackLow <br> ColorPaletteResources.ChromeBlackMedium <br> ColorPaletteResources.ChromeBlackMediumLow <br> ColorPaletteResources.ChromeDisabledHigh <br> ColorPaletteResources.ChromeDisabledLow <br> ColorPaletteResources.ChromeGray <br> ColorPaletteResources.ChromeHigh <br> ColorPaletteResources.ChromeLow <br> ColorPaletteResources.ChromeMedium <br> ColorPaletteResources.ChromeMediumLow <br> ColorPaletteResources.ChromeWhite <br> ColorPaletteResources. #ctor <br> ColorPaletteResources.ErrorText <br> ColorPaletteResources.ListLow <br> ColorPaletteResources.ListMedium
 
-#### [<a name="datatemplate"></a>DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)
+#### [<a name="datatemplate"></a>데이터 템플릿](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)
 
 DataTemplate.GetElement <br> DataTemplate.RecycleElement
 
