@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: f0d977d41cea873fc0f5e00bea8d0259586517d5
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.openlocfilehash: edd0fbcf841dc9d8fa43873da95dc08b276a5418
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8687603"
+ms.locfileid: "8734476"
 ---
 # <a name="code-your-app-for-experimentation"></a>실험용 앱 코딩
 
@@ -64,7 +64,7 @@ ms.locfileid: "8687603"
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet3)]
 
-4. [IsStale](htthttps://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.isstale) 속성을 검사하여 캐시된 변형 할당을 서버의 원격 변형 할당으로 새로 고쳐야 할지 여부를 확인합니다. 새로 고쳐야 하는 경우 서버에서 업데이트된 변형 할당을 확인하는 정적 [GetRefreshedVariationAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getrefreshedvariationasync) 메서드를 호출하고 로컬에 캐시된 변형을 새로 고칩니다.
+4. [IsStale](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.isstale) 속성을 검사하여 캐시된 변형 할당을 서버의 원격 변형 할당으로 새로 고쳐야 할지 여부를 확인합니다. 새로 고쳐야 하는 경우 서버에서 업데이트된 변형 할당을 확인하는 정적 [GetRefreshedVariationAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getrefreshedvariationasync) 메서드를 호출하고 로컬에 캐시된 변형을 새로 고칩니다.
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet4)]
 

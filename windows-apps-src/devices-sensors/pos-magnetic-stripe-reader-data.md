@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스, pos, 자기 띠 판독기 지점
 ms.localizationpriority: medium
 ms.openlocfilehash: 1805213c7c30ccbc67fb96098f11480703589bb4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8459618"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8733935"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>자기 띠 데이터 가져오기 및 이해
 
@@ -18,13 +18,13 @@ ms.locfileid: "8459618"
 
 ## <a name="subscribe-to-datareceived-events"></a>구독 * DataReceived 이벤트
 
-판독기 민된 카드를 인식 하면 때마다 발생는 세 가지 이벤트 중 하나:
+리더 민된 카드를 인식 될 때마다 발생는 세 가지 이벤트 중 하나:
 
 * [AamvaCardDataReceived 이벤트](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): 자동차 카드 살짝 민 때 발생 합니다.
 * [BankCardDataReceived 이벤트](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): 은행 카드로 살짝 민 때 발생 합니다.
 * [VendorSpecificDataReceived 이벤트](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): 공급 업체별 카드 살짝 민 때 발생 합니다.
 
-응용 프로그램만 자기 띠 판독기에 의해 지원 되는 이벤트를 구독 해야 합니다. 어떤 유형의 카드 [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes
+응용 프로그램만 자기 띠 판독기에서 지원 되는 이벤트를 구독 해야 합니다. 어떤 유형의 카드 [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes
 )사용 지원 되는 것을 볼 수 있습니다.
 
 다음 코드에서는 세 가지 구독 ***DataReceived** 이벤트:
@@ -78,13 +78,13 @@ private void Reader_BankCardDataReceived(
 
 그러나 *인수* 매개 변수의 속성인 **보고서** 개체를 통해 **VendorSpecificDataReceived** 이벤트에서 모든 데이터를 포함 하 여 일부 데이터를 검색 해야 합니다. 이 [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport)형식입니다.
 
-어떤 유형의 카드 미 된를 파악 하기 [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) 속성을 사용할 수 있으며 [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)및 [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4)에서 데이터를 해석 하는 방법을 알리는 데 사용 합니다.
+[CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) 속성을 사용 하 여 어떤 유형의 카드 미 된를 파악 하 고를 사용 하 여에 [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)및 [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4)에서 데이터를 해석 하는 방법을 알릴 수 있습니다.
 
-각 트랙에서 데이터 [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) 개체로 표시 됩니다. 이 클래스에서 다음과 같은 유형의 데이터를 가져올 수 있습니다.
+각 트랙에서 데이터 [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) 개체로 표현 됩니다. 이 클래스에서 다음과 같은 유형의 데이터를 가져올 수 있습니다.
 
-* [데이터](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.data): 원시 또는 디코딩된 데이터.
-* [DiscretionaryData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.discretionarydata): 임의 데이터. 
-* [EncryptedData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.encrypteddata): 암호화 된 데이터.
+* [데이터](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.data): 원시 또는 디코딩된 데이터입니다.
+* [DiscretionaryData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.discretionarydata): 임의 데이터입니다. 
+* [EncryptedData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.encrypteddata): 암호화 된 데이터입니다.
 
 다음 코드 조각은 보고서 및 추적 데이터를 가져오고 카드 종류를 확인 합니다.
 
