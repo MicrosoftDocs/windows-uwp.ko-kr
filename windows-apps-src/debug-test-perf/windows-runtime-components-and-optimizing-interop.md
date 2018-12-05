@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 37bcf2ff6eee6c272339fdc997ee7bbb046f85e9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8487325"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706791"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>UWP 구성 요소 및 interop 최적화
 
@@ -30,7 +30,7 @@ UWP에는 UWP 앱을 만들 수 있는 모든 언어에서 액세스 가능한 �
 
 C# 또는 Visual Basic으로 UWP 앱을 개발할 때 자주 사용하는 두 가지 API 집합은 UWP API와 UWP 앱용 .NET API입니다. 일반적으로 UWP에 정의되는 형식은 "Windows"로 시작하는 네임스페이스에 있고 .NET 형식은 "System"으로 시작하는 네임스페이스에 있습니다. 그러나 예외가 있습니다. UWP 앱용 .NET의 형식을 사용할 때는 상호 운용성이 필요하지 않습니다. UWP를 사용하는 영역에서 성능이 저조할 경우 UWP 앱용 .NET API를 사용하여 성능을 높일 수도 있습니다.
 
-**참고**  C# 또는 Visual Basic에서 사용 하면 상호 운용성의 경계를 교차 하므로 Windows10 사용 하 여 제공 되는 UWP 구성 요소의 대부분 c + +에서 구현 됩니다. 언제나 그렇듯 코드 변경에 투자하기 전에 UWP 구성 요소의 사용이 앱의 성능에 영향을 주는지 확인하기 위해 앱을 측정해 봐야 합니다.
+**참고**  Windows10와 함께 제공 되는 UWP 구성 요소의 대부분은 c + +에서 구현 되기 때문에 C# 또는 Visual Basic에서 사용 하면 상호 운용성의 경계를 교차 합니다. 언제나 그렇듯 코드 변경에 투자하기 전에 UWP 구성 요소의 사용이 앱의 성능에 영향을 주는지 확인하기 위해 앱을 측정해 봐야 합니다.
 
 이 항목에서 "UWP 구성 요소"는 C#이나 Visual Basic이 아닌 언어로 만든 구성 요소를 의미합니다.
 

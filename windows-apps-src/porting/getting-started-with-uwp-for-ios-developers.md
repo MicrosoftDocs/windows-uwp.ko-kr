@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458793"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713612"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>iOS 개발자용 UWP 시작
 
 
-여러분이 Windows10 개발을 고려 하는 iOS 개발자,이 문서는 시작 하기에 적합 합니다. 일부 앱 작성을 시작할 때 알고 해야 하는 개념을 소개 합니다은 하 고 Microsoft Store에서 작업을 게시 하는 방법을 설명 합니다.
+여러분이 Windows10 개발을 고려 하는 iOS 개발자,이 문서는 시작 하기에 적합 합니다. 소개 몇 가지 개념 앱 작성을 시작할 때 알고 해야 하 고 Microsoft Store에서 작업을 게시 하는 방법을 설명 합니다.
 
 이 섹션에서는 점진적으로 시작하면서 Microsoft Visual Studio 및 C# 프로그래밍 언어를 사용하여 간단한 앱을 만드는 방법을 살펴보고 특히 현재 사용하는 도구에 따라 프로세스가 어떻게 달라지는지에 대해 설명합니다. C#을 잘 몰라도 됩니다. 다른 프로그래밍 언어와 도구도 사용할 수 있으며, 이 내용은 [시작: 프로그래밍 언어 선택](getting-started-choosing-a-programming-language.md)에서 살펴보겠습니다.
 
-Windows10은 데스크톱, 노트북, 태블릿, 휴대폰 장치에서 흥미로운 앱을 만들기 위한 새로운 플랫폼을 소개 합니다. UWP(유니버설 Windows 플랫폼) 앱은 많은 고유한 기능을 제공하므로 iOS 앱을 직접 포팅하면 이러한 기능을 사용하지 못할 수 있습니다. 따라서 새 컨트롤 및 기능을 사용하여 개발자로서 생활을 더 편리하게 하고 새 앱을 가능하게 만드는 방법을 확인하는 것이 좋습니다.
+Windows10 등 데스크톱, 랩톱, 태블릿, 휴대폰 장치에서 흥미로운 앱을 만들기 위한 새로운 플랫폼을 소개 합니다. UWP(유니버설 Windows 플랫폼) 앱은 많은 고유한 기능을 제공하므로 iOS 앱을 직접 포팅하면 이러한 기능을 사용하지 못할 수 있습니다. 따라서 새 컨트롤 및 기능을 사용하여 개발자로서 생활을 더 편리하게 하고 새 앱을 가능하게 만드는 방법을 확인하는 것이 좋습니다.
 
 앱을 포팅하지만 말고 **reimagine**하여 새로운 기능 및 새 장치를 활용하는 것이 좋습니다. 공통 분모에 안주 하지 Cortana를 사용 하 여 라이브 타일, 알림 및 상호 작용 등 고유한 Windows10 기능을 사용 하는 풍부한 환경을 만들어.
 
