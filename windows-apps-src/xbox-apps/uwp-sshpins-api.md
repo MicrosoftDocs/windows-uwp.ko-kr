@@ -3,11 +3,11 @@ title: 장치 포털 SSH 핀 API 참조
 description: 신뢰할 수 있는 모든 SSH 핀을 프로그래밍 방식으로 제거하는 방법을 알아보세요.
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ddf15d3cdb4089a8ef010a4ae46d247a06a10d7
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8705237"
+ms.locfileid: "8741211"
 ---
 # <a name="ssh-pins-api-reference"></a>SSH 핀 API 참조
 이 REST API를 사용하여 devkit에서 신뢰할 수 있는 모든 SSH 핀을 제거할 수 있습니다.
