@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: b49ba463e39d09b915ce3925f94ae7d9f11a9a47
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8697811"
+ms.locfileid: "8735200"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>카메라 바코드 스캐너 시작하기
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>1단계: 앱 매니페스트에 기능 선언 추가

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 ms.openlocfilehash: e0ae12bbb2bad1fbcd663f5be8f26656d640afc8
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8687005"
+ms.locfileid: "8731742"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 

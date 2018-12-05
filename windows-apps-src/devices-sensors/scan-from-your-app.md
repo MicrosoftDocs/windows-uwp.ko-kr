@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 74c01c21ae65f9e93638e2ce1df604591043a729
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8468142"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8744426"
 ---
 # <a name="scan-from-your-app"></a>앱에서 스캔
 

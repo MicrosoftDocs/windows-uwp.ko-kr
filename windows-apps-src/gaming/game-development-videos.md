@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 동영상, GDC, build
 ms.localizationpriority: medium
 ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8691594"
+ms.locfileid: "8750171"
 ---
 # <a name="game-development-videos"></a>게임 개발 동영상
 

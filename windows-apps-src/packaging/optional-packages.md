@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 선택적 패키지, 관련된 집합, 패키지 확장, visual studio
 ms.localizationpriority: medium
-ms.openlocfilehash: e19f9673090501d59e260a698f9968a8f98f1cd5
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.openlocfilehash: f62d6c99acc75033403fac7a498308cea6f7d3f8
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8699045"
+ms.locfileid: "8750249"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>선택적 패키지 및 관련 집합 제작
 선택적 패키지에는 주 패키지에 통합할 수 있는 콘텐츠가 포함되어 있습니다. 이러한 크기 제한에 대 한 많은 앱을 분할 다운로드 가능한 콘텐츠 (DLC)에 대 한 유용한 하거나 추가 콘텐츠를 전달 하는 것에 대 한 원래 앱에서 분리 합니다.
@@ -34,7 +34,7 @@ ms.locfileid: "8699045"
 
 ## <a name="optional-packages"></a>선택적 패키지
 Visual Studio에서 선택적 패키지를 만들려면 해야 합니다.
-1. 앱의 **대상 플랫폼 최소 버전** 설정 되어 있는지 확인: 10.0.15063.0 합니다.
+1. 앱의 **대상 플랫폼 최소 버전** 설정 되어 있는지 확인: 10.0.15063.0 이상.
 2. **주 패키지** 프로젝트에서 열고는 `Package.appxmanifest` 파일입니다. "패키징" 탭을 찾아 기록해 **패키지 패밀리 이름**에 "_" 문자 하기 전에 모든 합니다.
 3. **선택적 패키지** 프로젝트에서 마우스 오른쪽 단추로 클릭 합니다 `Package.appxmanifest` 을 선택 하 고 **다른 프로그램으로 열기 > XML (텍스트) 편집기**.
 4. 찾아는 `<Dependencies>` 파일에서 요소입니다. 다음을 추가 합니다.
@@ -62,6 +62,7 @@ Visual Studio는 선택적 패키지를 배포할 때마다 주 패키지를 다
 2. 창에서 ".txt"에 대 한 설치 된 템플릿 검색 하 고 새 텍스트 파일을 추가 합니다.
 > [!IMPORTANT]
 > 새 텍스트 파일 이름: `Bundle.Mapping.txt`.
+
 3. 에 `Bundle.Mapping.txt` 파일을 외부 패키지 또는 선택적 패키지 프로젝트에 대 한 상대 경로 지정 합니다. 샘플 `Bundle.Mapping.txt` 파일은 다음과 같이 보입니다.
 
 ```syntax
@@ -75,7 +76,7 @@ Visual Studio는 선택적 패키지를 배포할 때마다 주 패키지를 다
 
 솔루션에 이런 방식이으로 구성 되 면 Visual Studio는 번들 매니페스트를 주 패키지에 대 한 모든 관련된 집합에 대 한 필수 메타 데이터를 사용 하 여 만듭니다. 
 
-선택적 패키지와 같은 `Bundle.Mapping.txt` Windows 10 버전 1703에서 관련된 집합에 대 한 파일 에서만 작동 합니다. 또한 앱의 대상 플랫폼 최소 버전 10.0.15063.0를 설정 해야 합니다.
+선택적 패키지와 같은 `Bundle.Mapping.txt` 파일 관련된 집합에 대 한 Windows 10, 버전 1703 이상 에서만 작동 합니다. 또한 앱의 대상 플랫폼 최소 버전 이상 10.0.15063.0으로 설정 해야 합니다.
 
 ## 알려진 문제<a name="known_issues"></a>
 

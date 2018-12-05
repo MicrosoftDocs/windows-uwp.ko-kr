@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 3660586b856205721bfa8e9cbb3e72df4fd3ad43
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8712169"
+ms.locfileid: "8744235"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용 하 여 텍스트 입력
 
