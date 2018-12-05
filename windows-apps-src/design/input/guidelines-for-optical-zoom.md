@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fcbaa0a3db826ef971878acd6a553dd7a836508
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8458896"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8695943"
 ---
 # <a name="optical-zoom-and-resizing"></a>광학 줌 및 크기 조정
 
@@ -37,7 +37,7 @@ ms.locfileid: "8458896"
 
 ![손가락을 모아서 개체를 축소하고 벌려서 확대](images/objectresize.png)
 
-**참고**  광 확대/축소 [시맨틱 줌](../controls-and-patterns/semantic-zoom.md)과 혼동 하지 않아야 합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
+**참고**  광학 줌 [시맨틱 줌](../controls-and-patterns/semantic-zoom.md)과 혼동 하지 않아야 합니다. 두 조작에 모두 동일한 제스처가 사용되지만 시맨틱 줌은 단일 보기(예: 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범) 내에 구성된 콘텐츠의 표시와 탐색을 나타냅니다.
 
  
 
@@ -65,7 +65,7 @@ ms.locfileid: "8458896"
     -   크기 조정이 가능한 항목이 크기 조정이 가능한 캔버스나 아트 보드에 표시될 수 있는 그리기 응용 프로그램
     -   맵과 같은 포함 개체가 있는 웹 페이지
 
-    **참고**  콘텐츠 영역의 모든 터치 지점이 크기 조정이 가능한 개체 안에 있는 경우가 아니면 항상에서 조정 합니다.
+    **참고**  콘텐츠 영역의 모든 터치 지점이 크기 조정이 가능한 개체 안에 있는 경우가 아니면 항상에서 크기입니다.
 
      
 

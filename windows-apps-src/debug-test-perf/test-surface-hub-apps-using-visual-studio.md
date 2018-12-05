@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b40fd56a85be6dce441324a427790cda28f9d7ac
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462341"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694807"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Visual Studio를 사용하여 Surface Hub 앱 테스트
 Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터는 Surface Hub와 동일한 사용자 인터페이스를 사용 하지 않지만 앱의 모양 및 Surface Hub의 화면 크기와 해상도 사용 하 여이 동작을 테스트 하는 데 유용 합니다.
@@ -85,7 +85,7 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
    > [!NOTE]
    > Surface Hub에서 설정 앱에 액세스 하려면 관리자 권한이 필요 합니다.
 
-2. 이동 **업데이트 및 보안 \ > 개발자를 위한**합니다.
+2. 이동 **업데이트 및 보안 \ > 개발자를 위한**.
 
 3. **개발자 모드**를 선택하고 경고 프롬프트를 수락합니다.
 
@@ -93,7 +93,7 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
 배포 프로세스에 대 한 자세한 내용은 일반적으로 [UWP 앱 배포 및 디버깅](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)을 참조 합니다.
 
    > [!NOTE]
-   > 하지만이 기능 최신 가장 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다 Visual Studio 2015 업데이트 1 이상이 필요 합니다. 최신 Visual Studio 인스턴스는 모든 최신 개발 하 고 보안 업데이트 gibe 됩니다.
+   > 이 기능 최신 가장 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다 되지만 Visual Studio 2015 업데이트 1 이상이 필요 합니다. 최신 Visual Studio 인스턴스는 모든 최신 개발 하 고 보안 업데이트 gibe 됩니다.
 
 1. **디버깅 시작** 단추 옆에 있는 디버그 대상 드롭다운으로 이동하여 **원격 컴퓨터**를 선택합니다.
 
@@ -106,7 +106,7 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
    > [!TIP] 
    > 개발자 모드를 사용 하도록 설정한 후 시작 화면에 Surface Hub의 IP 주소를 찾을 수 있습니다.
 
-3. 선택 **디버깅 시작 (F5)을** 배포 하 고 Surface Hub에서 앱을 디버그 하거나 Ctrl + f 5를 눌러 앱을 배포만 합니다.
+3. 배포 하 고 Surface Hub에서 앱을 디버그 하는 **디버깅 시작 (F5)** 를 선택 하거나 Ctrl + f 5를 눌러 앱 배포만 합니다.
 
    > [!TIP]
    > Surface Hub 시작 화면을 표시 하는 경우 아무 단추나 선택 하 여 해제 합니다.

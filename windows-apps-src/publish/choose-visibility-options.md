@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 표시 여부, 개인 대상, 사용 가능, 검색 가능
 ms.localizationpriority: medium
 ms.openlocfilehash: a002037e85f179e4a2dbe3dfdaf4bc3579e110e4
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462387"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8692167"
 ---
 # <a name="choose-visibility-options"></a>표시 여부 옵션 선택
 
@@ -58,7 +58,7 @@ ms.locfileid: "8462387"
 - 조직 라이선싱 설정에 관계 없이 개인 대상 그룹의 사용자라해도 비즈니스용 Microsoft Store 및/또는 교육용 Microsoft Store를 통해 앱을 사용할 수 없습니다.
 - Store는 개인 대상 그룹에 추가한 Microsoft 계정으로 로그인한 사용자만 앱을 보고 사용할 수 있도록 하고 있지만, 개인 대상 그룹에 속하지 않은 사용자가 정보나 스크린샷을 공유하지 못하도록 막을 수 없습니다. 기밀성이 중요한 경우에는 개인 대상 그룹에 앱에 대한 세부 정보를 다른 사람과 공유하지 않을 것이라고 믿는 사용자만 포함시켜야 합니다.
 - 테스터에게 피드백을 제공하는 방법을 알고 있어야 합니다. 다른 고객들이 피드백을 볼 수 있기 때문에 피드백 허브에 피드백을 남기지 못하도록 하고 싶을 수 있습니다. 이들이 다른 방법으로 이메일을 전송하거나 피드백을 제공하도록 링크를 포함시키는 것이 좋습니다.
-- 개인 대상에서 다른 사람이 작성한 모든 리뷰를 확인할 수 있습니다. 하지만 이들 리뷰는 **공중 대상**으로 제출이 이동한 후에도 앱의 Store 목록에 게시되지 않습니다. 개인 대상 [리뷰 보고서](reviews-report.md)를 확인 하 여 작성 한 리뷰를 읽을 수 있지만이 데이터를 다운로드 하거나 [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md) 사용 하 여 이러한 리뷰에 프로그래밍 방식으로 액세스할 수 없습니다.
+- 개인 대상에서 다른 사람이 작성한 모든 리뷰를 확인할 수 있습니다. 하지만 이들 리뷰는 **공중 대상**으로 제출이 이동한 후에도 앱의 Store 목록에 게시되지 않습니다. [리뷰 보고서](reviews-report.md)를 보는 대상이 작성 한 리뷰를 읽을 수 있지만이 데이터를 다운로드 하거나 [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md) 사용 하 여 이러한 리뷰에 프로그래밍 방식으로 액세스할 수 없습니다.
 - **개인 대상**에서 **공중 대상**으로 앱을 이동할 때 Microsoft Store 목록에 표시되는 **릴리스 날짜**는 공중 대상에 처음 앱이 게시된 날짜입니다.
 
 ## <a name="discoverability"></a>검색 기능
@@ -71,7 +71,7 @@ ms.locfileid: "8462387"
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 
-이는 기본 옵션입니다. 이 옵션을 앱의 직접 링크를 통해 또는 검색 포함, 찾아보기, 큐 레이트 목록에 다른 메서드로 고객용 스토어에 앱을 원하는 경우 선택한 상태로 둡니다. 
+이는 기본 옵션입니다. 이 옵션을 선택한 경우 앱의 직접 링크를 통해 또는 검색 포함, 찾아보기, 큐 레이트 목록에 다른 방법을 사용 하 여 고객에 대 한 스토어에 앱을 둡니다. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Store에서 사용할 수 있지만 검색되지 않는 제품으로 설정
 

@@ -9,11 +9,11 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b6e0c6a751116ad03c4e8d69cb02e7147938097
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462200"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693745"
 ---
 # <a name="speech-recognition"></a>음성 인식
 
@@ -26,17 +26,17 @@ ms.locfileid: "8462200"
 
 ## <a name="configure-speech-recognition"></a>음성 인식 구성
 
-음성 인식 앱을 지원 하기 위해 사용자 해야 연결가 장치에 마이크를 사용 하도록 설정 및 사용 하려면 앱에 대 한 권한을 부여 Microsoft 개인 정보 보호 정책을 적용 합니다.
+앱을 사용 하 여 음성 인식 기능을 지원 하기 위해 사용자 해야 연결가 장치에 마이크를 사용 하도록 설정 및 사용 하려면 앱에 대 한 권한을 부여 Microsoft 개인 정보 보호 정책을 적용 합니다.
 
-자동으로 액세스 하 고 마이크를 사용할 수 있는 권한을 요청 하는 시스템 대화 상자를 사용 하 여 사용자를 입력 하도록의 오디오 피드 ( [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897) 아래 표시 된 예제)만 설정 **마이크** [장치 접근 권한 값](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) [앱 패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)에 있습니다. 자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)를 참조 하세요.
+자동으로 액세스 하 고 마이크를 사용할 수 있는 권한을 요청 하는 시스템 대화 상자를 사용 하 여 사용자를 입력 하도록의 오디오 피드 ( [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897) 아래 표시 된 예제)만 설정 **마이크** [장치 기능](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) [앱 패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)에 있습니다. 자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조 하세요.
 
 ![마이크 액세스에 대 한 개인 정보 취급 방침](images/speech/privacy.png)
 
-앱 설정에 승인 된 응용 프로그램 목록에 추가 되는 마이크에 대 한 액세스 권한을 부여 하는 예를 클릭 하면-> 개인 정보-> 마이크 페이지. 하지만 사용자는 언제 든 지가이 설정을 사용 하지 않으려면 선택할 수, 사용 하기 전에 앱에서 마이크에 대 한 액세스에 있는지 확인 해야 합니다.
+앱 설정에 허용 된 응용 프로그램 목록에 추가 되는 마이크에 대 한 액세스에 권한을 부여 하는 예를 클릭 하면-> 개인 정보-> 마이크 페이지. 그러나 언제 든 지가이 설정을 사용 하지 않으려면 선택 하는 사용자 수를 사용 하기 전에 앱에서 마이크에 대 한 액세스에는 확인 해야 합니다.
 
-Cortana, 받아쓰기를 지원 하려는 경우, 다른 음성 인식 서비스 (예: 항목 제약 조건에 정의 된는 [미리 정의 된 문법](#predefined-grammars) ) 또한 확인 해야 하는 **온라인 음성 인식** (설정-> 개인 정보-> 음성)는 사용할 수 있습니다.
+Cortana, 받아쓰기를 지원 하려는 경우, 다른 음성 인식 서비스 (예: 항목 제약 조건에 정의 된 경우 [미리 정의 된 문법](#predefined-grammars) ) 또한 확인 해야 하는 **온라인 음성 인식** (-> 개인 정보 설정-> 음성)은 사용할 수 있습니다.
 
-이 조각 마이크 존재 하 고 사용할 수 있는 권한이 있으면 앱 어떻게 확인할 수를 보여 줍니다.
+이 조각은 마이크 존재 하 고 사용할 수 있는 권한이 있으면 앱 어떻게 확인할 수 있습니다.
 
 ```csharp
 public class AudioCapturePermissions
@@ -220,7 +220,7 @@ var AudioCapturePermissions = WinJS.Class.define(
 
 받아쓰기 문법과 같은 웹 검색 문법에는 사용자가 말할 수 있는 매우 많은 단어 및 구가 포함되어 있습니다. 그러나 웹 검색 문법은 사람들이 일반적으로 웹을 검색할 때 사용하는 용어를 인식하도록 최적화되어 있습니다.
 
-**참고**고 온라인 미리 정의 된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있기 때문에 (디바이스)에 없는 성능 하지 않을 디바이스에 설치 된 사용자 지정 문법에서와 마찬가지로 빠릅니다.     
+**참고**고에 미리 정의 된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있기 때문에 (디바이스)에 없는 성능 하지 빠르지 장치에 설치 하는 사용자 지정 문법을 사용 하는 것입니다.     
 
 이러한 미리 정의된 문법은 최대 10초의 음성 입력을 인식하는 데 사용할 수 있으며 특별한 작성 작업이 필요하지 않습니다. 그러나 네트워크에 연결되어 있어야 합니다.
 

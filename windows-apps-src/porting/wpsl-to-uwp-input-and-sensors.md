@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464812"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696170"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대 한 WindowsPhone Silverlight를 UWP로 포팅
 
@@ -22,7 +22,7 @@ ms.locfileid: "8464812"
 
 ## <a name="application-lifecycle-process-lifetime-management"></a>응용 프로그램 수명 주기(프로세스 수명 관리)
 
-WindowsPhone Silverlight 앱에 저장 하 고 삭제 하 고 이후에 다시 활성화를 지원 하기 위해 응용 프로그램의 상태와 보기 상태를 복원 하는 코드가 들어 있습니다. 유니버설 Windows 플랫폼 (UWP) 앱의 응용 프로그램 수명 주기는 주기가 WindowsPhone Silverlight 앱과는 둘 다 사용할 수 있는 리소스를 최대화 한다는 동일한 목적으로 설계 되었기에 사용자가 선택한 모든 앱에는 언제 든 지 포그라운드 합니다. 코드는 새 시스템에 맞게 무리 없이 쉽게 조정됩니다.
+WindowsPhone Silverlight 앱에 저장 하 고 삭제 하 고 이후에 다시 활성화를 지원 하기 위해 응용 프로그램의 상태와 보기 상태를 복원 하는 코드가 들어 있습니다. 유니버설 Windows 플랫폼 (UWP) 앱의 응용 프로그램 수명 주기는 주기가 WindowsPhone Silverlight 앱과는 둘 다 사용할 수 있는 리소스를 최대화 한다는 동일한 목적으로 설계 되었기에 사용자가 선택한 모든 앱에는 언제 든 지 포그라운드로 합니다. 코드는 새 시스템에 맞게 무리 없이 쉽게 조정됩니다.
 
 **참고**  자동으로 **다시** 하드웨어 단추를 누르면 WindowsPhone Silverlight 앱을 종료 합니다. 모바일 디바이스에서 하드웨어 **뒤로** 단추를 눌러도 UWP 앱이 자동으로 종료되지는 *않습니다*. 대신 앱이 일시 중단된 후 종료될 수 있습니다. 하지만 이러한 세부 정보는 응용 프로그램 수명 주기 이벤트에 적절히 응답하도록 앱에 투명하게 적용됩니다.
 
@@ -32,9 +32,9 @@ WindowsPhone Silverlight 앱에 저장 하 고 삭제 하 고 이후에 다시 �
 
 ## <a name="camera"></a>Camera
 
-WindowsPhone Silverlight 카메라 캡처 코드 **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**또는 **Microsoft.Phone.Tasks.CameraCaptureTask** 클래스를 사용 합니다. 해당 코드를 UWP(유니버설 Windows 플랫폼)로 포팅하기 위해 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스를 사용할 수 있습니다. 코드 예제는 [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) 항목을 참조하세요. 해당 메서드를 사용 하는 사진을 저장소 파일에 캡처할 수 있습니다 하며[**장치 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747) **마이크** 및 **웹캠**을 앱 패키지 매니페스트에서 설정할 수 있습니다.
+WindowsPhone Silverlight 카메라 캡처 코드 **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**또는 **Microsoft.Phone.Tasks.CameraCaptureTask** 클래스를 사용 합니다. 해당 코드를 UWP(유니버설 Windows 플랫폼)로 포팅하기 위해 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스를 사용할 수 있습니다. 코드 예제는 [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) 항목을 참조하세요. 이 메서드를 사용 하면 사진을 저장소 파일에 캡처할 수 및[**장치 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747) **마이크** 및 **웹캠**을 앱 패키지 매니페스트에 설정할 필요 합니다.
 
-다른 옵션은 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스, **마이크** 및 **웹캠**을[**장치 접근 권한 값**](https://msdn.microsoft.com/library/windows/apps/dn934747)도 필요 합니다.
+또 다른 옵션은 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스, **마이크** 및 **웹캠**을[**장치 접근 권한 값**](https://msdn.microsoft.com/library/windows/apps/dn934747)도 필요 합니다.
 
 필터 앱은 UWP 앱에 대해 지원되지 않습니다.
 

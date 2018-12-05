@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, 게임, 캡처, 오디오, 비디오, 메타데이터
 ms.localizationpriority: medium
 ms.openlocfilehash: c4d4d764395d7f383e9cefcb9d8b1121db098780
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486882"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696263"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처
 이 문서는 앱 등에서 게임 플레이 이벤트가 동기화되는 동적 환경을 만들 수 있도록 게임 비디오, 오디오, 스크린샷을 캡처하는 방법과 시스템이 캡처된 미디어 및 브로드캐스트 미디어에 포함할 메타데이터를 전송하는 방법에 대해 설명합니다. 
@@ -57,7 +57,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 [!code-cpp[GetAppRecordingManager](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetGetAppRecordingManager)]
 
 ## <a name="determine-if-your-app-can-currently-record"></a>현재 앱이 기록할 수 있는지 여부 확인
-현재 기기가 녹음/녹화의 하드웨어 요구 사항을 충족하지 않거나 다른 앱이 현재 브로드캐스팅 중인 경우를 포함하여 현재 사용자의 앱이 오디오 또는 비디오를 캡처하지 못하는 이유가 여러 가지 있을 수 있습니다. 녹음/녹화를 시작하기 전에 현재 앱이 녹음/녹화를 지원하는지 확인할 수 있습니다. **AppRecordingManager** 개체의 **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** 메서드를 호출한 다음 반환된 **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)** 개체의 **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** 속성을 확인합니다. **CanRecord** 즉 앱이 기록할 현재 없습니다 **false**를 반환 하는 경우 **[세부 정보](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** 속성 이유를 확인할 수 있습니다. 이유에 따라 사용자에게 상태를 표시하거나 앱 녹음/녹화 사용에 대한 지침을 표시할 수 있습니다.
+현재 기기가 녹음/녹화의 하드웨어 요구 사항을 충족하지 않거나 다른 앱이 현재 브로드캐스팅 중인 경우를 포함하여 현재 사용자의 앱이 오디오 또는 비디오를 캡처하지 못하는 이유가 여러 가지 있을 수 있습니다. 녹음/녹화를 시작하기 전에 현재 앱이 녹음/녹화를 지원하는지 확인할 수 있습니다. **AppRecordingManager** 개체의 **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** 메서드를 호출한 다음 반환된 **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)** 개체의 **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** 속성을 확인합니다. **CanRecord** 앱 현재 기록할 수 없는 의미 **false**를 반환 하는 경우 **[세부 정보](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** 속성 이유를 확인할 수 있습니다. 이유에 따라 사용자에게 상태를 표시하거나 앱 녹음/녹화 사용에 대한 지침을 표시할 수 있습니다.
 
 
 
@@ -143,7 +143,7 @@ UWP 앱에서 게임 플레이를 캡처하는 방법은 두 가지가 있습니
 [!code-cpp[RaceComplete](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetRaceComplete)]
 
 ### <a name="manage-metadata-cache-storage-limit"></a>메타데이터 캐시 저장 공간 제한 관리
-**AppCaptureMetadataWriter**로 쓴 메타데이터는 관련 미디어 스트림에 쓰여질 때까지 시스템에 의해 캐시됩니다. 시스템은 각 앱의 메타데이터 캐시에 대한 크기 제한을 정의합니다. 캐시 크기 제한에 도달하며 시스템은 캐시된 메타데이터 지우기를 시작합니다. **[AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 우선 순위를 사용 하 여 메타 데이터를 삭제 하기 전에 **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 우선 순위 값으로 작성 된 메타 데이터를 삭제 합니다.
+**AppCaptureMetadataWriter**로 쓴 메타데이터는 관련 미디어 스트림에 쓰여질 때까지 시스템에 의해 캐시됩니다. 시스템은 각 앱의 메타데이터 캐시에 대한 크기 제한을 정의합니다. 캐시 크기 제한에 도달하며 시스템은 캐시된 메타데이터 지우기를 시작합니다. **[AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 우선 순위를 사용 하 여 메타 데이터를 삭제 하기 전에 **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** 우선 순위 값을 사용 하 여 작성 된 메타 데이터를 삭제 합니다.
 
 언제든지 **[RemainingStorageBytesAvailable](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.RemainingStorageBytesAvailable)** 을 호출하여 앱의 메타데이터 캐시의 바이트 수를 확인할 수 있습니다. 직접 앱 정의 임계값을 설정하고 이후에 캐시에 쓰는 메타데이터의 양을 줄이도록 선택할 수 있습니다. 다음 예는 이러한 패턴의 간단한 구현을 나타냅니다.
 

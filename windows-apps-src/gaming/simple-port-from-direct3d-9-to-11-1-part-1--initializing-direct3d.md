@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 게임, direct3d 11, 초기화, 포팅, direct3d 9
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aaf6dcc001a09e33588ac18898767b9cf92819c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460773"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696332"
 ---
 # <a name="initialize-direct3d-11"></a>Direct3D 11 초기화
 
@@ -125,7 +125,7 @@ Direct3D 11에는 DXGI(DirectX 그래픽 인프라)를 호출하는 장치 API�
 
 Direct3D 장치는 DXGI에 대한 COM 인터페이스를 구현합니다. 먼저 해당 인터페이스를 가져오고 이 인터테이스를 사용하여 장치를 호스트하는 DXGI 어댑터를 요청합니다. 그런 다음 DXGI 어댑터를 사용하여 DXGI 팩터리를 만듭니다.
 
-> **참고**  COM 인터페이스 되어 첫 번째 응답 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 사용할 수 있습니다. 대신 [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) 포인터 스마트를 사용해야 합니다. 그런 다음 [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx) 메서드를 호출하고 올바른 인터페이스 유형의 빈 COM 포인터를 제공합니다.
+> **참고**  COM 인터페이스는 첫 번째 응답 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 사용할 수 있도록 합니다. 대신 [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) 포인터 스마트를 사용해야 합니다. 그런 다음 [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx) 메서드를 호출하고 올바른 인터페이스 유형의 빈 COM 포인터를 제공합니다.
 
  
 
@@ -149,7 +149,7 @@ dxgiAdapter->GetParent(
 
 이제 DXGI 팩터리가 있으므로 이 팩터리를 사용하여 스왑 체인을 만들 수 있습니다. 스왑 체인 매개 변수를 정의하도록 하겠습니다. 화면 형식을 지정해야 합니다. Direct2D와 호환되므로 [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059)을 선택하겠습니다. 이 예제에서 사용되지 않기 때문에 디스플레이 배율, 다중 샘플링 및 스테레오 렌더링을 끄겠습니다. CoreWindow에서 직접 실행 중이기 때문에 너비와 높이가 0으로 설정된 상태로 두고 전체 화면 값을 자동으로 가져올 수 있습니다.
 
-> **참고**  항상 UWP 앱에 대 한 d3d11\_sdk\_version으로 설정 하려면 *SDKVersion* 매개 변수를 설정 합니다.
+> **참고**  항상 UWP 앱에 대 한 d3d11\_sdk\_version으로 설정 하 고 *SDKVersion* 매개 변수를 설정 합니다.
 
  
 
